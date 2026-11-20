@@ -1,24 +1,24 @@
-# Estado de registro — compensación aritmética de un bloque completo
+# Recorded state — arithmetic compensation of a full block
 
-Estado: PROVED casos indicados; signo global OPEN. Goal activo. Ningún paper modificado.
+Status: PROVED indicated cases; global sign OPEN. Goal active. No paper modified.
 
-## Progreso verificado de la ronda
+## Verified progress of the round
 
-POWER_ARITHMETIC_BLOCK_007 y POWER_BLOCK_AUDIT_007 prueban W[h]>||h||²/10000 sobre TODO V12=exp(-31.5y) por polinomios de grado<=11 (extensión cero a y<=0). Incluye todos los cruces y toda la cola prima; no es sólo el vector escogido en006. Certificado racional exacto reejecutado por constructor, coordinación y auditor: AP+contacto2>.0008 menos1e−8, cola en norma<.0006. El test006 pertenece a este bloque y tiene AP negativa; la prueba atraviesa una región donde la contribución aritmética es necesaria.
+POWER_ARITHMETIC_BLOCK_007 and POWER_BLOCK_AUDIT_007 prove W[h]>||h||²/10000 on ALL of V12=exp(-31.5y) times polynomials of degree<=11 (zero extension to y<=0). It includes all cross terms and the whole prime tail; it is not only the vector chosen in006. Exact rational certificate re-run three times independently: AP+contact2>.0008 minus1e−8, tail in norm<.0006. The test006 belongs to this block and has negative AP; the proof crosses a region where the arithmetic contribution is necessary.
 
-Resultados acumulados válidos: todas las ternas a_i>=32 con margen1/20 (004); confluencia4 con margen1/5 y transporte AP local de todos numeradores (005); escalera fija32..37 certificada (003); puente de aproximación en norma de forma (002). Nada de esto se extrapola a todos los órdenes.
+Accumulated valid results: all triples a_i>=32 with margin1/20 (004); confluence4 with margin1/5 and local AP transport of all numerators (005); fixed ladder32..37 certified (003); approximation bridge in form norm (002). None of this is extrapolated to all orders.
 
-## Dos patrones falsos descartados con pruebas
+## Two false patterns discarded with proofs
 
-- POWER_HIGH_ORDER_PM_NOGO_007: a tasa31.5 y n=2^17, el Rayleigh AP de numerador1 decrece al aumentar cualquier polo. Refuta la monotonía numeratorfixed universal AP, no la monotonía de eigenvalores ni el signo.
-- POWER_PRIME_PATTERN_FALSIFIER_008, auditado en POWER_AUDIT_008: en la misma familia confluente fija, el test f=(D²−1/4)[y^(n−1)e^-31.5y], n=2^17, tiene A=B=0, ARCH<−3.83||f||², y cada contacto primo-potencia<=1024 empeora el déficit. La cola posterior queda abierta; no se afirma signo negativo completo. Así el hecho de que2 repare el bloque12 NO constituye un patrón universal de primos reparadores.
+- POWER_HIGH_ORDER_PM_NOGO_007: at rate31.5 and n=2^17, the AP Rayleigh quotient with numerator1 decreases when any pole is raised. It refutes universal numeratorfixed AP monotonicity, not eigenvalue monotonicity nor the sign.
+- POWER_PRIME_PATTERN_FALSIFIER_008, audited in POWER_AUDIT_008: in the same fixed confluent family, the test f=(D²−1/4)[y^(n−1)e^-31.5y], n=2^17, has A=B=0, ARCH<−3.83||f||², and each prime-power contact<=1024 worsens the deficit. The later tail remains open; no full negative sign is claimed. Thus the fact that2 repairs block12 does NOT constitute a universal pattern of repairing primes.
 
-## Requisitos pendientes, sin cambio de alcance
+## Pending requirements, with no change of scope
 
-1. Cuatro exponentes arbitrarios>=32: sólo hay rango alto anterior y vecindad confluente/local; uniformidad no probada.
-2. Todos los órdenes sobre familia densa: abierto. El puente sí está probado, pero los márgenes de bloques finitos no prueban uniformidad ni paso al límite sin signo de todos ellos.
-3. Cierre del signo del Paper47: no obtenido. No editar papers ni declarar goal completo.
+1. Four arbitrary exponents>=32: only an earlier high range and a confluent/local neighbourhood exist; uniformity not proved.
+2. All orders on a dense family: open. The bridge is proved, but the margins of finite blocks do not prove uniformity nor passage to the limit without the sign of all of them.
+3. Closure of the sign of Paper47: not obtained. Do not edit papers nor declare the goal complete.
 
-## Próximo problema útil
+## Next useful problem
 
-Buscar una identidad o desigualdad para la suma aritmética COMPLETA que conserve la autocorrelación de signos mixtos. No repetir monotonía AP en dimensión ni la inferencia desde contactos favorables de un vector. El test008 deja una obligación (TAIL) explícita pero no una solución: habrá que compararla con residuos ya registrados antes de proponer nueva construcción. El registro anterior sobre positividad bloque12 es progreso matemático real, no cierre.
+Look for an identity or inequality for the FULL arithmetic sum that keeps the mixed-sign autocorrelation. Do not repeat AP monotonicity in dimension nor the inference from favourable contacts of a vector. The test008 leaves an explicit obligation (TAIL) but not a solution: it will have to be compared with already recorded residues before proposing a new construction. The earlier record on block12 positivity is real mathematical progress, not closure.

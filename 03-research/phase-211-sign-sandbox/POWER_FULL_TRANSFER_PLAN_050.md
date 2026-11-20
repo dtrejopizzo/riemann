@@ -1,55 +1,55 @@
-# POWER_FULL_TRANSFER_PLAN_050 — Alcance MULTI y contactos necesarios para la comparación de cola
+# POWER_FULL_TRANSFER_PLAN_050 — MULTI scope and contacts needed for the tail comparison
 
-Estado: EXPLORACIÓN SUPERADA por POWER_FULL_TWELVE_050. Los cálculos de este plan siguen siendo válidos, pero la obligación E_(2,3) propuesta como siguiente paso fue evitada mediante el margen reforzado0.02 y el transporte por trece polos con numerador cero. No tratar NEXT como la obligación vigente. Papers intactos.
+Status: EXPLORATION SUPERSEDED by POWER_FULL_TWELVE_050. The computations of this plan remain valid, but the obligation E_(2,3) proposed as the next step was avoided via the reinforced margin0.02 and transport through thirteen poles with zero numerator. Do not treat NEXT as the current obligation. Papers untouched.
 
-## Antecedentes y diferencia
+## Antecedents and difference
 
-Consultados ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID, CROSSWORD-TO-D y COMMON_TRANSFER010§6, GEOMETRIC_TRANSFER015§6, ARITHMETIC_BLOCK007 y R12_TRANSPORT049. El filtro múltiple con pesos positivos es anterior; la consecuencia que ahora se puede aplicar es que049 y007 han probado TODA su órbita E2 positiva. No se reintenta una ordenación universal de contactos ni se supone que el contacto3 tenga signo favorable. La construcción posible siguiente debe conservarlo exactamente en matrices, y pagar sólo la cola desde4.
+Consulted ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID, CROSSWORD-TO-D and COMMON_TRANSFER010§6, GEOMETRIC_TRANSFER015§6, ARITHMETIC_BLOCK007 and R12_TRANSPORT049. The multiple filter with positive weights is earlier; the consequence that can now be applied is that049 and007 have proved their ENTIRE E2 orbit positive. A universal ordering of contacts is not retried, nor is contact3 assumed to have a favorable sign. The next possible construction must keep it exactly in matrices, and pay only the tail from4.
 
-## Corolario MULTI que ya se obtiene
+## MULTI corollary already obtained
 
-Sea u=63/2 y F0=P(s)/(s+u)^12, gradoP<12. La base007 y049 demuestran, con c=1/2500,
+Let u=63/2 and F0=P(s)/(s+u)^12, degreeP<12. The base007 and049 prove, with c=1/2500,
 
-    E2[Q^jF0]>c||Q^jF0||², TODOS j≥0.
+    E2[Q^jF0]>c||Q^jF0||², ALL j≥0.
 
-Para tasas arbitrarias finitas v1,...,v12≥u, sea F=P/∏(s+vi). MULTI015 demuestra
+For arbitrary finite rates v1,...,v12≥u, let F=P/∏(s+vi). MULTI015 proves
 
     E2[F]=Σw_j E2[Q^jF0],
     ||F||²=Σw_j||Q^jF0||²,
     Σw_j z^j=∏[ri/(1−(1−ri)z)], ri=u²/vi².
 
-Los pesos son no negativos y suman1. La convergencia absoluta se conserva para E2 por la misma continuidad usada en049. Así
+The weights are nonnegative and sum to1. Absolute convergence is preserved for E2 by the same continuity used in049. Thus
 
-    E2[F] > ||F||²/2500, TODOS los doce polos≥u.         (MULTI-E2)
+    E2[F] > ||F||²/2500, ALL twelve poles≥u.         (MULTI-E2)
 
-No hace falta iterar R12 en bases intermedias. Esta consecuencia es para ARCH+POLAR+contacto2, no para W completo.
+There is no need to iterate R12 on intermediate bases. This consequence is for ARCH+POLAR+contact2, not for the full W.
 
-## Cálculo previo de cola, antes de otro certificado finito
+## Preliminary tail computation, before another finite certificate
 
-COMMON_TRANSFER010§6 prueba uniformemente en esos doce polos, con α=2/3 y σ=21,
+COMMON_TRANSFER010§6 proves uniformly on those twelve poles, with α=2/3 and σ=21,
 
     ||exp(21y)f||² ≤ B ||f||²,
     B=Σ_(j=0)^11 Σ_(k=0)^j binom(j,k)²(2/3)^(2k)/(1/3)^(2j+1)
      =1282776893780652,
     sqrt(B)<35815875.
 
-Por Cauchy, |c_f(logn)|≤sqrt(B)n^−21||f||². Para todo entero M≥3 y cotas L≥logM, s≤sqrt(M),
+By Cauchy, |c_f(logn)|≤sqrt(B)n^−21||f||². For every integer M≥3 and bounds L≥logM, s≤sqrt(M),
 
     |Σ_(n≥M)2Λ(n)n^−1/2 c_f(logn)|/||f||²
       ≤ (2·35815875/s)M^−21[L+ML/20+M/400].             (TAIL-M)
 
-En efecto n^−21.5≤n^−21/s, Λ(n)≤logn y logx·x^−21 es decreciente desde3. La comparación por primer término más integral da exactamente el corchete indicado. No se elimina ningún primo o potencia de primo en el rango.
+Indeed n^−21.5≤n^−21/s, Λ(n)≤logn and logx·x^−21 is decreasing from3. The comparison by first term plus integral gives exactly the indicated bracket. No prime or prime power in the range is removed.
 
-Sólo se evalúan los tres cortes adyacentes que corresponden a conservar contactos2, luego2,3, luego2,3,4:
+Only the three adjacent cuts are evaluated, corresponding to keeping contacts2, then2,3, then2,3,4:
 
-| Cola | L | s | Majorante TAIL-M |
+| Tail | L | s | TAIL-M majorant |
 |---|---|---|---|
 | n≥3 | 11/10 | 17/10 | <0.005126 |
 | n≥4 | 7/5 | 2 | <0.000013763 |
 | n≥5 | 17/10 | 11/5 | <0.000000146 |
 
-La primera cota calculada es mayor que c=0.0004; no permite concluir W desde MULTI-E2. Esto es insuficiencia de ESE majorante, no una cota inferior para la cola real ni necesidad absoluta de conservar3 bajo cualquier método. La segunda sí es menor que c. Por tanto el mínimo conjunto inicial de contactos que esta comparación justifica intentar es{2,3}: si se prueba
+The first computed bound is larger than c=0.0004; it does not allow concluding W from MULTI-E2. This is an insufficiency of THAT majorant, not a lower bound for the real tail nor an absolute necessity of keeping3 under any method. The second is less than c. Hence the minimal initial set of contacts that this comparison justifies attempting is{2,3}: if one proves
 
-    E_(2,3)[Q^jF0]≥||Q^jF0||²/2500, TODOS j≥0,F0∈V12, (NEXT)
+    E_(2,3)[Q^jF0]≥||Q^jF0||²/2500, ALL j≥0,F0∈V12, (NEXT)
 
-MULTI y TAIL-4 darían W[F]>(1/2500−0.000013763)||F||² para todos los doce polos. No sería necesario incluir4 para ese margen. NEXT sigue OPEN aquí; requiere un nuevo corte highpass analítico y el segmento exhaustivo que éste determine. El contacto3 no se ha separado por valor absoluto en esos bloques ni supuesto favorable. No se ha ejecutado una campaña para escoger índices o contactos.
+MULTI and TAIL-4 would give W[F]>(1/2500−0.000013763)||F||² for all twelve poles. It would not be necessary to include4 for that margin. NEXT remains OPEN here; it requires a new analytic highpass cut and the exhaustive segment it determines. Contact3 has not been separated by absolute value in those blocks nor assumed favorable. No campaign was run to choose indices or contacts.

@@ -1,115 +1,115 @@
-# POWER_CONFLUENT_THIRTEEN_052 — Pivote real de V13 y contactos adversos en la dirección complementaria
+# POWER_CONFLUENT_THIRTEEN_052 — Real pivot of V13 and adverse contacts in the complementary direction
 
-Estado: PROVED, certificado racional PASS y revisión independiente aprobada en POWER_CONFLUENT_THIRTEEN_AUDIT_052.md. Sólo V13 confluyente de tasa63/2; no trece polos arbitrarios. Papers intactos.
+Status: PROVED, rational certificate PASS and independent review approved in POWER_CONFLUENT_THIRTEEN_AUDIT_052.md. Only confluent V13 of rate63/2; not thirteen arbitrary poles. Papers untouched.
 
-## 1. Resultado y diferencia respecto a051
+## 1. Result and difference with respect to051
 
-Sea u=63/2 y V13={P(s)/(s+u)^13:gradoP<13}, con funciones causales y coeficientes reales. Conservando ARCH, POLAR y TODOS los contactos,
+Let u=63/2 and V13={P(s)/(s+u)^13:degP<13}, with causal functions and real coefficients. Keeping ARCH, POLAR and ALL contacts,
 
-    W[f] > ||f||²/4000,   f∈V13 no nulo.                (FULL13)
+    W[f] > ||f||²/4000,   f∈V13 nonzero.                (FULL13)
 
-La información adicional no es sólo otro bloque positivo: se cuantifica el pivote complementario a ZERO13 y se identifica el signo real de sus contactos2 y3. En una dirección racional que minimiza el Schur de E2 hasta el error intervalar certificado, ARCH+POLAR es positivo, mientras ambos contactos son adversos. El contacto2 consume casi todo ese beneficio: no es un contacto reparador en esta dirección.
+The additional information is not just another positive block: the pivot complementary to ZERO13 is quantified and the real sign of its contacts2 and3 is identified. In a rational direction minimizing the Schur complement of E2 up to the certified interval error, ARCH+POLAR is positive, while both contacts are adverse. Contact2 consumes almost all of that benefit: it is not a repairing contact in this direction.
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D, con las entradas Schur/W-lin y STATE051. Revisados ARITHMETIC_BLOCK007, R12_ENDPOINT048, FULL_TWELVE050 y su auditoría.051 ya deduplicó la fórmula abstracta de Schur y mostró que positividad en codimensión1 no basta. La diferencia actual es evaluar el acoplamiento de ESTA forma real y sus contactos, en el ÚNICO bloque siguiente V13, sin barrer dimensiones o tasas.
+Consulted the project rules, ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D, with the Schur/W-lin and STATE051 entries. Reviewed ARITHMETIC_BLOCK007, R12_ENDPOINT048, FULL_TWELVE050 and its audit.051 already deduplicated the abstract Schur formula and showed that positivity in codimension1 does not suffice. The current difference is to evaluate the coupling of THIS real form and its contacts, in the SINGLE next block V13, without sweeping dimensions or rates.
 
-## 2. E2 ya positiva, pero el majorante de cola007 no cabe
+## 2. E2 already positive, but the tail majorant007 does not fit
 
-En la base Laguerre ortonormal e_0,...,e_12 de048, E2=ARCH+POLAR+contacto2 tiene matriz Toeplitz real T2. El certificado exacto demuestra
+In the orthonormal Laguerre basis e_0,...,e_12 of048, E2=ARCH+POLAR+contact2 has real Toeplitz matrix T2. The exact certificate proves
 
     E2[f] > (3/10000)||f||².                             (E2)
 
-El menor autovalor flotante, utilizado sólo para diagnosticar este bloque único antes de certificarlo, fue aproximadamente0.000305571086. No se utiliza ese valor en la prueba.
+The smallest floating eigenvalue, used only to diagnose this single block before certifying it, was approximately0.000305571086. That value is not used in the proof.
 
-La adaptación directa a dimensión13 del majorante de cola desde3 de007 da aproximadamente0.002331781986, mayor que el margen anterior. El nuevo grado12 requiere justificar monotonía con log3>16/15, en lugar del bound log3>1 que bastaba para grado11: para 0≤r≤12,
+The direct adaptation to dimension13 of the tail majorant from3 of007 gives approximately0.002331781986, larger than the previous margin. The new degree12 requires justifying monotonicity with log3>16/15, instead of the bound log3>1 that sufficed for degree11: for 0≤r≤12,
 
     1/log3 +63r/(63log3−40) < 32.
 
-El bound16/15 se obtiene de los primeros términos positivos de atanh para log3. Esta insuficiencia del majorante no afirma que la cola real tenga ese tamaño ni que E2 sea insuficiente en la forma completa.
+The bound16/15 is obtained from the first positive atanh terms for log3. This insufficiency of the majorant does not claim that the real tail has that size nor that E2 is insufficient in the complete form.
 
-Se retuvo entonces EXACTAMENTE el siguiente contacto3, según la instrucción de la tarea; no se buscaron otros contactos.
+EXACTLY the next contact3 was then retained, as planned; no other contacts were sought.
 
-## 3. E23 y cola completa desde4
+## 3. E23 and complete tail from4
 
-Escribir E23=E2−(2log3/sqrt3)c(log3). Las bandas del contacto n son
+Write E23=E2−(2log3/sqrt3)c(log3). The bands of contact n are
 
     diagonal: −2(logn)n^−32,
-    banda k≥1: −(logn)n^−32 [L_k(63logn)−L_(k−1)(63logn)],
+    band k≥1: −(logn)n^−32 [L_k(63logn)−L_(k−1)(63logn)],
 
-para n=2,3; el factor sqrt(n) ya está absorbido exactamente junto con exp(−u logn). El logaritmo de3 se encierra por atanh con argumento1/2 y resto positivo, sin exponenciales flotantes.
+for n=2,3; the factor sqrt(n) is already absorbed exactly together with exp(−u logn). The logarithm of3 is enclosed by atanh with argument1/2 and positive remainder, without floating exponentials.
 
-El verificador tools/power_confluent_thirteen_052_verify.py extiende007 a trece bandas. ARCH usa las mismas sumas de potencias a partir de16 y colas Euler con resto explícito; POLAR es racional exacto. Los centros de T2 y T23 tienen denominador10^15 y su error de operador es<ε=10^−10, por suma de filas. Dos LDL racionales verifican
+The verifier tools/power_confluent_thirteen_052_verify.py extends007 to thirteen bands. ARCH uses the same power sums from16 on and Euler tails with explicit remainder; POLAR is exact rational. The centers of T2 and T23 have denominator10^15 and their operator error is<ε=10^−10, by row sums. Two rational LDLs verify
 
     Tc2−(3/10000+ε)I>0,
     Tc23−(7/25000+ε)I>0.
 
-Así E23[f]>(7/25000)||f||²=0.00028||f||².
+Thus E23[f]>(7/25000)||f||²=0.00028||f||².
 
-Para la cola n≥4 se conserva la cancelación polinómica de007: todos los coeficientes de
+For the tail n≥4 the polynomial cancellation of007 is kept: all coefficients of
 
     (−1)^k [L_k(40+y)−L_(k−1)(40+y)], 0≤k≤12,
 
-son no negativos (L_−1=0). Cada término se limita usando Λ(n)≤logn y el primer término más la integral de
+are nonnegative (L_−1=0). Each term is bounded using Λ(n)≤logn and the first term plus the integral of
 
     (logx)(63logx−40)^r x^−32, x≥4, 0≤r≤12.
 
-La derivada logarítmica tiene signo negativo porque log4>4/3 y
+The logarithmic derivative has negative sign because log4>4/3 and
 
     1/(4/3)+63·12/(63·4/3−40)<32.
 
-Con log4<7/5, las integrales se evalúan exactamente mediante el cambio x=4exp(t) y los momentos ∫_0∞t^r exp(−31t)dt=r!/31^(r+1). El resultado es una cota racional por banda; la suma de filas certificada es
+With log4<7/5, the integrals are evaluated exactly via the change x=4exp(t) and the moments ∫_0∞t^r exp(−31t)dt=r!/31^(r+1). The result is a rational bound per band; the certified row sum is
 
-    ||cola_(n≥4)|| <1/100000=0.00001.                    (TAIL)
+    ||tail_(n≥4)|| <1/100000=0.00001.                    (TAIL)
 
-La evaluación decimal de ese majorante es aproximadamente0.0000090179619783; la prueba usa sólo fracciones. La cola incluye TODOS los primos y potencias primas restantes. De E23 y TAIL,
+The decimal evaluation of that majorant is approximately0.0000090179619783; the proof uses only fractions. The tail includes ALL remaining primes and prime powers. From E23 and TAIL,
 
     W[f]>(7/25000−1/100000)||f||²
          >||f||²/4000,
 
-probando FULL13.
+proving FULL13.
 
-## 4. Pivote complementario real y error de sus cruces
+## 4. Real complementary pivot and error of its crossings
 
-Sea ell_j=(−1)^j y h=ell, con ||h||²=13. La restricción ZERO13 es H=ell⊥, pues la evaluación de Laplace en0 es un múltiplo de Σ(−1)^jz_j. Sus columnas racionales son
+Let ell_j=(−1)^j and h=ell, with ||h||²=13. The restriction ZERO13 is H=ell⊥, since the Laplace evaluation at0 is a multiple of Σ(−1)^jz_j. Its rational columns are
 
     C_i=e_i−(−1)^i e_12, i=0,...,11.
 
-Para una matriz T, definir
+For a matrix T, define
 
     A=CᵀTC, g=CᵀTh, d=hᵀTh,
     sigma(T)=(d−gᵀA^−1g)/13.
 
-Es el mínimo de la forma sobre h/√13+H. No es el menor autovalor de T. El subbloque A es positivo por los resultados anteriores; los cálculos aquí también comprueban sus pivotes al resolverlo. Para T2 central:
+It is the minimum of the form on h/√13+H. It is not the smallest eigenvalue of T. The subblock A is positive by the previous results; the computations here also check its pivots when solving it. For central T2:
 
     d/13 ∈(0.12337,0.12338),
     gᵀA^−1g/13 ∈(0.12296,0.12298).
 
-La cancelación de ambos términos deja un margen pequeño. Para encerrar el pivote de la matriz exacta se calcula sigma(Tc−εI) y sigma(Tc+εI). La orientación es válida porque sigma es el ínfimo de formas evaluadas sobre el MISMO espacio afín, y la restricción sigue positiva. El certificado obtiene
+The cancellation of both terms leaves a small margin. To enclose the pivot of the exact matrix one computes sigma(Tc−εI) and sigma(Tc+εI). The orientation is valid because sigma is the infimum of forms evaluated on the SAME affine space, and the restriction remains positive. The certificate obtains
 
     0.0004054 <sigma(E2)<0.0004055,
     0.0003834 <sigma(E23)<0.0003836.                     (PIVOTS)
 
-El contacto3 reduce el pivote; no lo repara.
+Contact3 reduces the pivot; it does not repair it.
 
-Para la forma completa, TAIL implica Tc23−(ε+0.00001)I≤TW≤Tc23+(ε+0.00001)I. Aplicar el mismo principio del ínfimo da
+For the complete form, TAIL implies Tc23−(ε+0.00001)I≤TW≤Tc23+(ε+0.00001)I. Applying the same infimum principle gives
 
     0.0003 <sigma(W)<0.0005.                             (FULL-PIVOT)
 
-Éste es un control real del cruce con TODOS los contactos, no una conclusión extraída sólo de la positividad codimensional de050.
+This is a real control of the crossing with ALL contacts, not a conclusion drawn only from the codimensional positivity of050.
 
-## 5. Qué términos sostienen y consumen este margen
+## 5. Which terms sustain and consume this margin
 
-Sea x=h−CA^−1g el vector RACIONAL definido por el centro Tc2, sin redondear sus coordenadas. Su componente sobre ell es h, y el mínimo anterior es xᵀTc2x/13. Evaluando los componentes intervalares originales sobre este MISMO vector, el verificador demuestra
+Let x=h−CA^−1g be the RATIONAL vector defined by the center Tc2, without rounding its coordinates. Its component on ell is h, and the previous minimum is xᵀTc2x/13. Evaluating the original interval components on this SAME vector, the verifier proves
 
     ARCH[x]/13+POLAR[x]/13 ∈(0.01839,0.01841),
-    contacto2[x]/13 ∈(−0.01800,−0.01798),
-    contacto3[x]/13 <0.                                 (COMPONENTS)
+    contact2[x]/13 ∈(−0.01800,−0.01798),
+    contact3[x]/13 <0.                                 (COMPONENTS)
 
-Estas cifras son energías de y=x/√13, cuyo coeficiente sobre el complemento unitario h/√13 es1; y NO tiene norma1. No son cocientes de Rayleigh divididos por ||x||². No se mezclan minimizadores de componentes distintos. Las fracciones y sus productos se mantienen exactos. El vector minimiza el Schur del CENTRO, mientras PIVOTS encierra el mínimo de la forma exacta; no se atribuye a x una optimalidad exacta no probada.
+These figures are energies of y=x/√13, whose coefficient on the unit complement h/√13 is1; y does NOT have norm1. They are not Rayleigh quotients divided by ||x||². Minimizers of distinct components are not mixed. The fractions and their products are kept exact. The vector minimizes the Schur complement of the CENTER, while PIVOTS encloses the minimum of the exact form; no unproved exact optimality is attributed to x.
 
-El dato revela dos funciones diferentes del contacto2. ARCH+POLAR es indefinida en V12 por el test auditado006, luego también en V13 por inclusión; allí la aritmética2 repara otras direcciones. Sin embargo, en la dirección complementaria de este Schur,2 es adverso y casi cancela el AP positivo.3 también es adverso. Conservar3 exactamente mejora el certificado al evitar el exceso del majorante absoluto de cola007, NO porque3 aporte energía positiva.
+The datum reveals two different roles of contact2. ARCH+POLAR is indefinite on V12 by the audited test006, hence also on V13 by inclusion; there arithmetic2 repairs other directions. However, in the complementary direction of this Schur complement,2 is adverse and almost cancels the positive AP.3 is also adverse. Keeping3 exactly improves the certificate by avoiding the excess of the absolute tail majorant007, NOT because3 contributes positive energy.
 
-Esto exige controlar los cruces y la dirección de cada contacto, en lugar de asumir que un mismo primo es reparador en todas las direcciones. El margen full queda positivo gracias al balance cuantificado y a la pequeña cola desde4.
+This requires controlling the crossings and the direction of each contact, instead of assuming that the same prime repairs in all directions. The full margin remains positive thanks to the quantified balance and the small tail from4.
 
-## 6. Alcance
+## 6. Scope
 
-Se decide el signo de V13 CONFLUYENTE y su pivote respecto a ZERO13, con toda la aritmética. La cobertura050 para doce polos arbitrarios se conserva. No se infiere positividad para trece polos arbitrarios: faltaría una ganancia completa apropiada de catorce polos o una extensión de órbita que no se prueba aquí. No se continuó con V14,V15,... ni se realizó una campaña de contactos.
+The sign of CONFLUENT V13 and its pivot with respect to ZERO13 are decided, with all the arithmetic. The coverage050 for twelve arbitrary poles is kept. Positivity for thirteen arbitrary poles is not inferred: an appropriate complete gain of fourteen poles or an orbit extension not proved here would be missing. V14,V15,... were not pursued nor was a campaign of contacts carried out.

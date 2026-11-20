@@ -1,23 +1,23 @@
-# En los propios primos de la banda el error absoluto supera el presupuesto de raíz
+# At the primes of the band themselves the absolute error exceeds the square-root budget
 
-Para el ajuste concreto de 274–275, sean U=⌊√N⌋ e Y=U/(C log²(2N)), tomando C suficientemente grande en la construcción. Para todo x suficientemente grande se cumple incondicionalmente
+For the concrete fit of 274–275, let U=⌊√N⌋ and Y=U/(C log²(2N)), taking C sufficiently large in the construction. For all sufficiently large x one has unconditionally
 
     Σ_(Y<p≤U) log(p) |R(p)| ≫ N^(3/4)/log(2N).
 
-La constante depende del peso fijo. En particular un argumento que mayore el escalar firmado de 275 sumando el módulo de cada término no puede alcanzar la cota buscada para esta construcción.
+The constant depends on the fixed weight. In particular, an argument that bounds the signed scalar of 275 by summing the modulus of each term cannot reach the sought bound for this construction.
 
-**Momento forzado de la respuesta continua.** Antes de la reparación puntual escribir T(y)=Σ_(l≥1) S(ly) para y real positivo, con S de 274. En los enteros de la banda coincide exactamente con R: todas las filas de reparación tienen extremos ≤Y o ≤6. Para y>U vale T(y)=w(y/x) incluso fuera de los enteros, por inversión finita de Möbius en el argumento real. Escribir I=∫S. La cuadratura de 274 en y=1 da |I|≪x log²(2N)exp(−c√U); para 0<y≤Y la misma periodización da |T(y)−I/y|≪x log²(2N)y^(−1)exp(−c√(U/y)). Agrandando C, su integral con peso y^(−1/2) hasta Y es O(N^(−2)), como se ve poniendo z=√(U/y).
+**Forced moment of the continuous response.** Before the pointwise repair write T(y)=Σ_(l≥1) S(ly) for real positive y, with S from 274. At the integers of the band it coincides exactly with R: all repair rows have endpoints ≤Y or ≤6. For y>U one has T(y)=w(y/x) even off the integers, by finite Möbius inversion in the real argument. Write I=∫S. The quadrature of 274 at y=1 gives |I|≪x log²(2N)exp(−c√U); for 0<y≤Y the same periodization gives |T(y)−I/y|≪x log²(2N)y^(−1)exp(−c√(U/y)). Enlarging C, its integral with weight y^(−1/2) up to Y is O(N^(−2)), as one sees by putting z=√(U/y).
 
-Para Re s>1 la transformada de T es ζ(s)∫S(t)t^(s−1)dt, por cambio de variable en cada sumando. La prolongación al sustraer I/y en (0,U) añade el término I U^(s−1)/(s−1) a la transformada de la diferencia. Evaluar en ρ=1/2+iγ₁, el primer cero crítico conocido. Los términos que contienen I en [Y,U] y en la prolongación son O(N^(−2)). Resulta
+For Re s>1 the transform of T is ζ(s)∫S(t)t^(s−1)dt, by a change of variable in each summand. The continuation obtained by subtracting I/y on (0,U) adds the term I U^(s−1)/(s−1) to the transform of the difference. Evaluate at ρ=1/2+iγ₁, the first known critical zero. The terms containing I on [Y,U] and in the continuation are O(N^(−2)). One gets
 
     ∫_Y^U T(y)y^(ρ−1)dy = −x^ρ H(ρ)+O(N^(−2)).
 
-Aquí H(ρ)≠0: para la primera ordenada entre 14 y 15, λγ₁ log(2)/2 está estrictamente entre π y 2π, y los factores de uniformes de anchura total 10^(−6)log 2 tampoco tienen un cero allí. Su producto converge a un valor no nulo. Como |y^(ρ−1)|≤1/√Y, obtenemos ∫_Y^U |T(y)|dy ≫ √(xY). La identidad de Mellin es clásica; lo que se necesita además es pasar el piso a las muestras primas efectivas.
+Here H(ρ)≠0: for the first ordinate, between 14 and 15, λγ₁ log(2)/2 lies strictly between π and 2π, and the uniform factors of total width 10^(−6)log 2 have no zero there either. Their product converges to a nonzero value. Since |y^(ρ−1)|≤1/√Y, we obtain ∫_Y^U |T(y)|dy ≫ √(xY). The Mellin identity is classical; what is needed in addition is to transfer the floor to the effective prime samples.
 
-**Transferencia a primos sin asumir RH.** Para t≥U/4 la fórmula de 274 da |S'''(t)|≪x log²(2N)/t⁴. En la parte de inversión sólo hay O(x/t) índices d activos, todos con d/x≤2/t; las derivadas del corte contribuyen en t comparable con U. Los correctores también viven en esa escala y tienen amplitud O(x log²(2N)/U). Para t<U/4 la función es cero. Sumando l³|S'''(ly)| y usando l≤2x/y se obtiene |T'''(y)|≪x log³(2N)/y⁴ para y∈[Y,U].
+**Transfer to primes without assuming RH.** For t≥U/4 the formula of 274 gives |S'''(t)|≪x log²(2N)/t⁴. In the inversion part there are only O(x/t) active indices d, all with d/x≤2/t; the derivatives of the cutoff contribute for t comparable to U. The correctors also live at that scale and have amplitude O(x log²(2N)/U). For t<U/4 the function is zero. Summing l³|S'''(ly)| and using l≤2x/y one obtains |T'''(y)|≪x log³(2N)/y⁴ for y∈[Y,U].
 
-Partir [Y,U] en celdas de longitudes entre H₀=U^(7/10) y 2H₀. En cada celda elegir tres subintervalos interiores de longitud un décimo de la celda, con separación al menos otro décimo. Cada subintervalo tiene masa prima Σlog p ≫H₀ uniformemente por 238, pues H₀/U^(5/8)→∞ y H₀/Y→0. En cada uno elegir un primo que minimice |T(p)|. Interpolar cuadráticamente T en esos tres primos. En toda la celda los coeficientes de Lagrange son O(1) por la separación, y el resto es O(H₀³ sup|T'''|). Tras integrar y sumar, las contribuciones de los nodos cuestan a lo sumo una constante por la suma ponderada de |T(p)| en toda la banda. El error total es
+Split [Y,U] into cells of lengths between H₀=U^(7/10) and 2H₀. In each cell choose three interior subintervals of length one tenth of the cell, with separation at least another tenth. Each subinterval has prime mass Σlog p ≫H₀ uniformly by 238, since H₀/U^(5/8)→∞ and H₀/Y→0. In each, choose a prime minimizing |T(p)|. Interpolate T quadratically at those three primes. On the whole cell the Lagrange coefficients are O(1) by the separation, and the remainder is O(H₀³ sup|T'''|). After integrating and summing, the contributions of the nodes cost at most a constant times the weighted sum of |T(p)| over the whole band. The total error is
 
     O(U H₀³ x log³(2N)/Y⁴) = O(U^(11/10) log¹¹(2N)) = o(√(xY)).
 
-Esto prueba la cota en los propios primos. El resultado estudia el tamaño absoluto para este ajuste; deja abierta la cota inferior unilateral del escalar E(x). Tampoco impone la misma obstrucción a combinaciones sin la interpolación continua usada aquí.
+This proves the bound at the primes themselves. The result studies the absolute size for this fit; it leaves open the one-sided lower bound for the scalar E(x). Nor does it impose the same obstruction on combinations without the continuous interpolation used here.

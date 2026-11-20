@@ -1,31 +1,31 @@
-# Estado016 — localización exacta del hueco de descenso
+# State016 — exact localisation of the descent gap
 
-Estado: resultados estructurales y obstrucciones PROVED; signo global OPEN. Goal activo. Papers intactos. Sustituye STATE015 como resumen vigente.
+Status: structural results and obstructions PROVED; global sign OPEN. Goal active. Papers untouched. Replaces STATE015 as the current summary.
 
-## Lo que sigue probado
+## What remains proved
 
-Ocho polos arbitrarios >=63/2: W>norma²/1000. Bloque confluente fijo de dimensión12: certificado separado. Puente fuerte: basta probar todos los bloques confluentes de una tasa, sin margen uniforme en dimensión. Teorema015: cada órbita Q^k V_N es uniformemente positiva para k suficientemente grande con N fijo. No están probados todos los bloques iniciales.
+Eight arbitrary poles >=63/2: W>norm²/1000. Fixed confluent block of dimension12: separate certificate. Strong bridge: it suffices to prove all confluent blocks of one rate, without a uniform margin in dimension. Theorem015: each orbit Q^k V_N is uniformly positive for k large enough with N fixed. Not all initial blocks are proved.
 
-## Nuevo patrón exacto
+## New exact pattern
 
-POWER_DESCENT_016 prueba W[f]=W[Qf]+W[Lf], Q=s/(s+u), L=u/(s+u), con polar y peine completos. En consecuencia cada orden fijo de diferencias finitas de W[Q^k f] tiene signo alternado eventualmente. No se afirma monotonía global de Rayleigh.
+POWER_DESCENT_016 proves W[f]=W[Qf]+W[Lf], Q=s/(s+u), L=u/(s+u), with full polar and comb. Consequently each fixed order of finite differences of W[Q^k f] eventually has alternating sign. No global Rayleigh monotonicity is claimed.
 
-El refinamiento binomial conserva la energía original. Sus pesos de norma son exactamente una mezcla de distribuciones Binomial(m,p), p=tau²/(u²+tau²), bajo la medida espectral de f. El error para observables Lipschitz es <=Lip/(2sqrt(m)). El borde con un número fijo de factores L tiene masa Y contribución energética tendientes a cero. Ese borde es precisamente lo cubierto directamente por015. La obligación de signo permanece en el interior, donde crecen juntos ambos índices.
+The binomial refinement keeps the original energy. Its norm weights are exactly a mixture of Binomial(m,p) distributions, p=tau²/(u²+tau²), under the spectral measure of f. The error for Lipschitz observables is <=Lip/(2sqrt(m)). The edge with a fixed number of factors L has mass AND energy contribution tending to zero. That edge is precisely what015 covers directly. The sign obligation remains in the interior, where both indices grow together.
 
-## Por qué dos extrapolaciones no funcionan
+## Why two extrapolations do not work
 
-POWER_JOINT_SCALE_016: para F=s^k/(s+u)^(N+k), Z=tau²/(u²+tau²) tiene ley Beta(k+1/2,N−1/2). Si k/N->c>0, los contactos normalizados tienden a cos(u sqrt(c)t), no necesariamente a0. Puede elegirse c en cualquier cono lineal para que el contacto2 tienda a1. No es un contraejemplo al signo completo.
+POWER_JOINT_SCALE_016: for F=s^k/(s+u)^(N+k), Z=tau²/(u²+tau²) has law Beta(k+1/2,N−1/2). If k/N->c>0, the normalised contacts tend to cos(u sqrt(c)t), not necessarily to0. c can be chosen in any linear cone so that the contact2 tends to1. It is not a counterexample to the full sign.
 
-La media temporal es (N−1/2)/u para TODO k, y la varianza para k>=1 es (N−1/2)[1+1/(4(k−1/2))]/u². Jensen impide uniformizar los pesos exponenciales usados015 en N, cualquiera sea el crecimiento de k. Centrar tampoco uniformiza simultáneamente los dos pesos opuestos. Quedan abiertas estimaciones que exploten cancelación y los conos de positividad mismos.
+The temporal mean is (N−1/2)/u for ALL k, and the variance for k>=1 is (N−1/2)[1+1/(4(k−1/2))]/u². Jensen prevents making the exponential weights used in015 uniform in N, whatever the growth of k. Centring does not make the two opposite weights uniform simultaneously either. Estimates exploiting cancellation and the positivity cones themselves remain open.
 
-POWER_DESCENT_AUDIT_016: los ceros high-pass imponen momentos ordinarios nulos, funcionales continuos en la norma ponderada usada. Ni siquiera los datos primitivos son aproximables por esa unión: (1/4−D²)g, g compacto positivo, tiene momentos Tate nulos pero integral ordinaria positiva. Si k tiende a infinito y hay límite fuerte común, ese límite sólo puede ser0. Esto limita ese puente topológico, no toda aproximación posible.
+POWER_DESCENT_AUDIT_016: the high-pass zeros impose vanishing ordinary moments, continuous functionals in the weighted norm used. Not even the primitive data are approximable by that union: (1/4−D²)g, g compact positive, has vanishing Tate moments but positive ordinary integral. If k tends to infinity and there is a common strong limit, that limit can only be0. This limits that topological bridge, not every possible approximation.
 
-## Falsificador de una inferencia, no de la forma real
+## Falsifier of an inference, not of the real form
 
-W_4=W−4norma² conserva mezclas, particiones y positividad eventual015, pero su valor normalizado sobre e^(-63y/2) es <-1. Verificador racional tools/power_descent_016_verify.py reproducido PASS. Por tanto estructura+cola no implica signo inicial; el descenso necesita una estimación adicional sensible al multiplicador real. No se afirma que W_4 conserve los certificados iniciales de W.
+W_4=W−4norm² keeps mixtures, partitions and eventual positivity015, but its normalised value on e^(-63y/2) is <-1. Rational verifier tools/power_descent_016_verify.py reproduced PASS. Hence structure+tail does not imply initial sign; the descent needs an additional estimate sensitive to the real multiplier. It is not claimed that W_4 keeps the initial certificates of W.
 
-## Revisión y siguiente obligación
+## Review and next obligation
 
-Root revisó las identidades de DESCENT, las fórmulas completas de JOINT_SCALE y los lemas de momentos del auditor. La revisión independiente final de ambos memos está APROBADA en POWER_DESCENT_AUDIT_016 §§6–8; los lemas propios del auditor fueron revisados por root. No se utilizó una campaña numérica.
+The identities of DESCENT, the full formulas of JOINT_SCALE and the moment lemmas of the audit were reviewed. The final independent review of both memos is APPROVED in POWER_DESCENT_AUDIT_016 §§6–8; the audit's own lemmas were reviewed as well. No numerical campaign was used.
 
-La siguiente construcción debe tratar el interior de la partición con el peine firmado completo o aportar una corrección controlada de momentos. No repetir densidad de colas, desaparición uniforme de contactos en conos lineales ni pesos exponenciales uniformes en N. La escala cuadrática espectral y los conos de signo siguen OPEN: no han sido refutados. El objetivo global no está completado ni bloqueado.
+The next construction must treat the interior of the partition with the full signed comb or supply a controlled moment correction. Do not repeat tail density, uniform disappearance of contacts in linear cones, nor exponential weights uniform in N. The quadratic spectral scale and the sign cones remain OPEN: they have not been refuted. The global objective is neither completed nor blocked.

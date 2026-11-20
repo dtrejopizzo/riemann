@@ -1,67 +1,67 @@
-# POWER_PACKET_SCOPE_AUDIT_009 — Familia Tate racional, paquetes centrales y alcance del puente
+# POWER_PACKET_SCOPE_AUDIT_009 — Rational Tate family, central packets and scope of the bridge
 
-Estado: PROVED concentración, identidades y auditoría de puente; OPEN desigualdad aritmética finita. No se modifica ningún paper ni se utiliza una reducción espectral externa.
+Status: PROVED concentration, identities and bridge audit; OPEN finite arithmetic inequality. No paper is modified and no external spectral reduction is used.
 
-## 1. Antecedentes concretos, con su alcance
+## 1. Concrete antecedents, with their scope
 
-Leídos ROUTES-TRIED-INDEX/06 (R2 y R5), Paper47 lem:wit-conc, prop:wit-Egamma, prop:Egamma-exact y rem:critical; phase188/L2_BUILD_008_GROUND_STATE_AND_T0.md, L2_BUILD_009_ARITHMETIC_INPUT_FOR_T0.md, L2_BUILD_010_REGULARIZED_CENTRE_VALUE.md y N_BUILD_013_E_GAMMA_C_COLLAPSES.md. Se consideran sólo sus formulaciones de forma y fluctuación; no se emplean argumentos de otra naturaleza para desestimar vías.
+Read ROUTES-TRIED-INDEX/06 (R2 and R5), Paper47 lem:wit-conc, prop:wit-Egamma, prop:Egamma-exact and rem:critical; phase188/L2_BUILD_008_GROUND_STATE_AND_T0.md, L2_BUILD_009_ARITHMETIC_INPUT_FOR_T0.md, L2_BUILD_010_REGULARIZED_CENTRE_VALUE.md and N_BUILD_013_E_GAMMA_C_COLLAPSES.md. Only their formulations of form and fluctuation are considered; arguments of another nature are not used to dismiss routes.
 
-R2 trabaja con una función compacta clamped por ventana, ground/near-ground de una forma arquimediana. R5 trabaja con paquetes compactos que concentran en una frecuencia. La presente familia f_n=(D²-1/4)y^(n-1)e^(-uy), u31.5 fijo, no es idéntica a ninguna de ellas para n finito: tiene semirrecta exponencial, polos racionales y autocorrelación exponencial por polinomio. Sin embargo su límite central y el umbral de fluctuación son del mismo tipo E0 ya registrado; no aparece una holgura asintótica nueva.
+R2 works with a compact function clamped by window, ground/near-ground of an archimedean form. R5 works with compact packets concentrating at one frequency. The present family f_n=(D²-1/4)y^(n-1)e^(-uy), u31.5 fixed, is not identical to either of them for finite n: it has an exponential half-line, rational poles and autocorrelation exponential times polynomial. However its central limit and the fluctuation threshold are of the same type E0 already recorded; no new asymptotic slack appears.
 
-## 2. Concentración central demostrada y umbral coincidente
+## 2. Proved central concentration and coinciding threshold
 
-Su probabilidad espectral p_n es proporcional a (tau²+1/4)^2/(u²+tau²)^n. Las fórmulas beta para la medida base de POWER_PRIME_PATTERN_FALSIFIER_008 muestran, para u fijo y n grande,
+Its spectral probability p_n is proportional to (tau²+1/4)^2/(u²+tau²)^n. The beta formulas for the base measure of POWER_PRIME_PATTERN_FALSIFIER_008 show, for fixed u and large n,
 
     E_n tau² = u²/(2n)(1+O(1/n)),
     E_n tau^4 = O(n^-2).
 
-Se obtiene expandiendo los momentos exactos M2,M4,M6 (y M8 para la segunda línea) en los cocientes de reponderación. En particular p_n converge débilmente a delta0, y
+This is obtained by expanding the exact moments M2,M4,M6 (and M8 for the second line) in the reweighting quotients. In particular p_n converges weakly to delta0, and
 
     rho_n(t)=c_fn(t)/||f_n||² ->1
 
-localmente uniformemente: 0<=1-rho_n(t)<=t² E_n tau²/2. La desigualdad global m0<=m(tau)<=m0+17tau² da Arch_n->C0; el multiplicador acotado 1/(tau²+1/4) da e_n->4.
+locally uniformly: 0<=1-rho_n(t)<=t² E_n tau²/2. The global inequality m0<=m(tau)<=m0+17tau² gives Arch_n->C0; the bounded multiplier 1/(tau²+1/4) gives e_n->4.
 
-La identidad Tate de eliminación del término principal vale también aquí, porque las integrales exponenciales convergen absolutamente y A=B=0. Si S_n es el peine normalizado y Fcal_n su fluctuación respecto de densidad2e^(t/2), entonces
+The Tate identity eliminating the main term also holds here, because the exponential integrals converge absolutely and A=B=0. If S_n is the normalized comb and Fcal_n its fluctuation relative to density2e^(t/2), then
 
     S_n=Fcal_n-e_n,
     W_n=Arch_n+e_n-Fcal_n.
 
-Por tanto el umbral del problema límite es C0+4, exactamente el centro E0 de R2/R5. La condición necesaria de signo produce limsup Fcal_n<=C0+4. No se demuestra aquí que esta condición límite baste para los signos finitos, ni que la media aritmética converja. La convergencia local de rho_n a1 no permite intercambiar la suma infinita del peine: sus pesos no son sumables uniformemente en n. Esa es una obligación matemática real, no una razón para abandonar el caso finito.
+Hence the threshold of the limit problem is C0+4, exactly the centre E0 of R2/R5. The necessary sign condition produces limsup Fcal_n<=C0+4. It is not proved here that this limit condition suffices for the finite signs, nor that the arithmetic mean converges. The local convergence of rho_n to1 does not allow interchanging the infinite comb sum: its weights are not uniformly summable in n. That is a real mathematical obligation, not a reason to abandon the finite case.
 
-## 3. Palanca finita distinta: una recurrencia exacta que todavía exige signo
+## 3. Different finite lever: an exact recurrence that still requires a sign
 
-Para n suficientemente grande defina
+For n sufficiently large define
 
     J_n(t)=integral_R exp(i tau t)(tau²+1/4)^2/(u²+tau²)^n d tau,
     rho_n(t)=J_n(t)/J_n(0), w(tau)=1/(u²+tau²).
 
-La normalización y derivación bajo la integral dan
+Normalization and differentiation under the integral give
 
     p_(n+1)=w p_n/E_n[w],
     J_(n+1)(t)=-(1/(2nu)) partial_u J_n(t),
     rho_(n+1)(t)-rho_n(t)
         =-partial_u rho_n(t)/[2nu E_n(w)].
 
-El paso de n es por tanto explícito, con constantes de normalización racionales en u gracias a las integrales beta. Para la parte arquimediana,
+The step in n is therefore explicit, with normalization constants rational in u thanks to the beta integrals. For the archimedean part,
 
     Arch_(n+1)-Arch_n=Cov_n(m,w)/E_n(w)<=0,
 
-porque m crece y w decrece en |tau|. Para la forma completa,
+because m increases and w decreases in |tau|. For the complete form,
 
     W_(n+1)-W_n
        =Arch_(n+1)-Arch_n
         -sum_(q>=2)2Lambda(q)q^-1/2[rho_(n+1)(logq)-rho_n(logq)].
 
-Cada suma a n finito converge absolutamente por el decaimiento exponencial por polinomio. No tiene signo automático. Una desigualdad unilateral que controle esta diferencia, o una razón renormalizada que preserve no negatividad, sería un avance diferente del mero valor límite E0. No se encontró en las búsquedas dirigidas una prueba previa de ese paso exacto para la familia racional presente. Esta novedad es local y acotada; las identidades de reponderación y covariance son elementales conocidas.
+Each sum at finite n converges absolutely by the exponential-times-polynomial decay. It has no automatic sign. A one-sided inequality controlling this difference, or a renormalized ratio preserving nonnegativity, would be a different advance from the mere limit value E0. The targeted searches did not find a previous proof of this exact step for the present rational family. This novelty is local and limited; the reweighting and covariance identities are elementary and known.
 
-No se propone exigir que W_n sea creciente: el sentido apropiado de una inducción debe ser demostrado y compatible con sus márgenes. Tampoco el signo de esta única cadena controlaría por sí solo todos los numeradores de cada grado.
+It is not proposed to require W_n to be increasing: the appropriate direction of an induction must be proved and compatible with its margins. Nor would the sign of this single chain by itself control all numerators of each degree.
 
-## 4. Reauditoría del puente: sin defecto encontrado
+## 4. Re-audit of the bridge: no defect found
 
-POWER_BRIDGE_002 se revisó otra vez en sus dos rutas. En la norma B, las traslaciones G(y+logn) son contracciones de la norma intrínseca H^(1/4), y los coeficientes n^-5/4 son sumables. No se deriva Z término a término: se evita la serie potencialmente divergente de derivadas. La extensión por cero para t<1/2 es estándar y controla el salto en el extremo; la constante de Hardy fraccionaria se invoca explícitamente como herramienta conocida.
+POWER_BRIDGE_002 was reviewed again along its two routes. In the norm B, the translations G(y+logn) are contractions of the intrinsic norm H^(1/4), and the coefficients n^-5/4 are summable. Z is not differentiated term by term: the potentially divergent series of derivatives is avoided. Extension by zero for t<1/2 is standard and controls the jump at the endpoint; the fractional Hardy constant is invoked explicitly as a known tool.
 
-Para datos PW_N C², dos integraciones por partes en h y xh dan rho,rho'=O(X^-2); el split de diferencias demuestra pertenencia a B sin suponer una tercera derivada. La aproximación C1 tras z=e^-y usa funciones compactas suaves y produce exactamente exponentes32+k; converge fuertemente en B. La continuidad de gamma, peine y momentos se controla por separado.
+For PW_N C² data, two integrations by parts in h and xh give rho,rho'=O(X^-2); the difference split proves membership in B without assuming a third derivative. The C1 approximation after z=e^-y uses smooth compact functions and produces exactly exponents32+k; it converges strongly in B. Continuity of gamma, comb and moments is controlled separately.
 
-Para un test F compacto suave arbitrario, trasladarlo a soporte(0,L) conserva la forma completa: la autocorrelación es invariante y los dos momentos se multiplican por factores recíprocos. La inversión u(y)=sum mu(n)n^-1/2 h(y+logn) es FINITA, y al aplicar Z la suma de divisores también es finita, de modo que Zrho=h exactamente. El dato inverso es suave hasta0 y compacto en la semirrecta, así pertenece a B. No se le exige valor cero en0. Todo este paso vale sin suponer el signo buscado.
+For an arbitrary smooth compact test F, translating it to support(0,L) preserves the complete form: the autocorrelation is invariant and the two moments are multiplied by reciprocal factors. The inversion u(y)=sum mu(n)n^-1/2 h(y+logn) is FINITE, and applying Z the divisor sum is also finite, so that Zrho=h exactly. The inverse datum is smooth up to0 and compact on the half-line, so it belongs to B. It is not required to vanish at0. This whole step holds without assuming the sought sign.
 
-Así la positividad de TODOS los tamaños de la escalera fija sí sería suficiente para todos los tests compactos y, por núcleo de forma en cada ventana, para el dominio pertinente. Se extiende de tests reales a complejos por separar partes real e imaginaria, ya que la forma tiene núcleo real. El puente no aporta el signo de la escalera, no justifica extrapolar V12 a más modos y no vuelve densa la unión de planos pequeños ya positivos.
+Thus positivity for ALL sizes of the fixed ladder would indeed suffice for all compact tests and, by the form kernel in each window, for the relevant domain. It extends from real to complex tests by separating real and imaginary parts, since the form has a real kernel. The bridge does not supply the sign of the ladder, does not justify extrapolating V12 to more modes and does not make dense the union of small planes already positive.

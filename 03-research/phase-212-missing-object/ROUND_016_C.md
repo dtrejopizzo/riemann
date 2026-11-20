@@ -1,127 +1,127 @@
-# Ronda 16, memo C: positividad por reflexión, desigualdades de correlación y dominación gaussiana como fuente del signo
+# Round 16, memo C: reflection positivity, correlation inequalities and Gaussian domination as source of the sign
 
-Resumen. Se pasaron por la puerta tres fuentes de signo de la mecánica estadística que no son «suma de
-cuadrados con pesos positivos»: (a) positividad por reflexión de Osterwalder–Schrader (OS) con
-reconstrucción por matriz de transferencia; (b) GKS, Griffiths, Ginibre, FKG, cuatro funciones y Lee–Yang
-sobre el retículo de divisores; (c) dominación gaussiana y cotas infrarrojas. Las tres son **repetición**,
-leídas en primaria. La descomposición par/impar `a_T = D ± R` que propone la asignación es, literalmente, el
-Lema 1 de `phase-193-creation-campaign/CA_A_007_SEED_TRIAGE_HOMOTOPY_TRIPLES_RP.md` §3. La no negatividad
-de `R` (la mitad de Hankel) es falsa para todo peine con un átomo (Teorema 2, mismo archivo, PROVED). Según la
-regla del filtro, el memo no construye. Tampoco encontré una idea vecina que pueda defender (§4).
+Summary. Three sources of sign from statistical mechanics that are not «sum of
+squares with positive weights» were put through the gate: (a) Osterwalder–Schrader (OS) reflection positivity with
+transfer-matrix reconstruction; (b) GKS, Griffiths, Ginibre, FKG, four functions and Lee–Yang
+on the divisor lattice; (c) Gaussian domination and infrared bounds. All three are **repetition**,
+read in primary sources. The even/odd decomposition `a_T = D ± R` proposed by the assignment is, literally,
+Lemma 1 of `phase-193-creation-campaign/CA_A_007_SEED_TRIAGE_HOMOTOPY_TRIPLES_RP.md` §3. The non-negativity
+of `R` (the Hankel half) is false for every comb with an atom (Theorem 2, same file, PROVED). By the
+filter rule, the memo does not build. Nor did I find a neighbouring idea I can defend (§4).
 
-Lectura en primaria: `CA_A_007_SEED_TRIAGE_HOMOTOPY_TRIPLES_RP.md` §§3–5 y `CA_A_007_REVIEW.md`
-(encabezado y fila del Lema 1); `phase-200-sign-object/K1_OSG_001.md` §1b y la entrada propuesta para el índice;
-`phase-6-osterwalder-schrader-reflection/README.md` y `M-OS-2-S2-local-REFUTATION.md` §2;
-`CA_J_000_SEEDS.md`, filas J6 y J7; índice `README.md`, frente J de la fase 193;
-`RULES_AVOID.md` M3, M5, W4 e Y; `ROUND_009_G3.md`, fila 17; grid, entrada 52;
-`ANNEX_PHASE_193_LABELS.md`, J6 y J7. Grep en `03-research` y `05-meta-and-planning` de «reflection positiv»,
+Primary reading: `CA_A_007_SEED_TRIAGE_HOMOTOPY_TRIPLES_RP.md` §§3–5 and `CA_A_007_REVIEW.md`
+(header and row of Lemma 1); `phase-200-sign-object/K1_OSG_001.md` §1b and the proposed index entry;
+`phase-6-osterwalder-schrader-reflection/README.md` and `M-OS-2-S2-local-REFUTATION.md` §2;
+`CA_J_000_SEEDS.md`, rows J6 and J7; index `README.md`, front J of phase 193;
+`RULES_AVOID.md` M3, M5, W4 and Y; `ROUND_009_G3.md`, row 17; grid, entry 52;
+`ANNEX_PHASE_193_LABELS.md`, J6 and J7. Grep in `03-research` and `05-meta-and-planning` for «reflection positiv»,
 «Osterwalder», «chessboard», «GKS», «FKG», «Lee–Yang», «four functions», «infrared», «Gaussian domination»,
-«dominación gaussiana» y «Fröhlich». Los aciertos pertinentes son los anteriores; los demás usan esas palabras
-de paso. No releí `CA_J_001` ni `CA_J_002` completos: su contenido se toma del índice y del grid
-(lectura indirecta).
+«dominación gaussiana» and «Fröhlich». The relevant hits are the above; the others use those words
+in passing. I did not reread `CA_J_001` or `CA_J_002` in full: their content is taken from the index and the grid
+(indirect reading).
 
-## 0. Filtro de cuatro puntos
+## 0. Four-point filter
 
-1. **Antecedente más cercano.**
-   - (a) `CA_A_007` §3. Lema 1: para `F = f + Θf` con `f` en `(0,T)`, `𝔞(F) = 2𝔞(f) + 2H_K(f)`, con
-     `H_K(f) = ∬ f(t)f(s)K(t+s)` y `K` el núcleo de ventana (parte arquimediana menos el peine
-     `Σ (v_n/2)δ_{±log n}`): «RP is the Hankel half of the Toeplitz form». Teorema 2: `H_K` no es `≥ 0` en
-     `(0,T)` si `T > ½ log n_0` para algún átomo `n_0`. La reflexión en el borde `x = T` es `K1_OSG_001`
-     (NO-GO; es el Teorema 2 conjugado por una traslación). La reflexión multiplicativa `n ↦ 1/n` es la
-     simetrización por la ecuación funcional (`CA_A_007` §3, último párrafo; L2_026, NG-D4). La positividad
-     por lugar es la fase 6, S2.1 (`G_p` indefinida).
-   - (b) Frente J de la fase 193 (`CA_J_002`, Teorema 1.3). El ciclo aditivo `m → m+1 → … → 2m`, cerrado
-     por la arista multiplicativa `(m, 2m)`, está frustrado, así que ningún gauge `±1` vuelve ferromagnético
-     a `𝔸_M`. Eso deja sin entrada a GKS, Ginibre, GHS, Lebowitz y FK. En FKG, la clase de igualdad sobre el
-     retículo de divisores son los vectores de producto de Euler (`CA_E_001`), así que FKG es ciega. Lee–Yang
-     y Rayleigh fuerte están en M3/M5 y en `INV_M_001`.
-   - (c) `CA_J_000`, fila J7: «DISCARD: requires RP ⇒ dies with J6».
-2. **Objeto nuevo propuesto por la asignación.** Hay tres afirmaciones. Primero, el espectro de
-   «transferencia» de la parte arquimediana. Segundo, que el peine entre como una interacción de la forma
-   `−Σ(θA_i)A_i` que preserve RP. Tercero, una cota infrarroja «interacción ≤ parte libre», uniforme en `T`.
-3. **¿Evita la dificultad del antecedente?** No, en ninguno de los tres casos.
-   - La primera afirmación es correcta pero no es nueva (§1). Además es ciega: sólo usa la parte arquimediana,
-     que es la misma en los tres controles.
-   - La segunda choca con el Teorema 2 (§2).
-   - La tercera presupone RP, o bien es el enunciado mismo (§3).
-4. **Enlace global.** El único enlace que se escribe es `𝔞_T(f) ≥ |H_K(f)|` sobre los dos sectores de
-   paridad. Es la positividad de `a_T` restringida a pares e impares, es decir, la forma misma (J3). No hay
-   una desigualdad nueva.
+1. **Closest antecedent.**
+   - (a) `CA_A_007` §3. Lemma 1: for `F = f + Θf` with `f` on `(0,T)`, `𝔞(F) = 2𝔞(f) + 2H_K(f)`, with
+     `H_K(f) = ∬ f(t)f(s)K(t+s)` and `K` the window kernel (archimedean part minus the comb
+     `Σ (v_n/2)δ_{±log n}`): «RP is the Hankel half of the Toeplitz form». Theorem 2: `H_K` is not `≥ 0` on
+     `(0,T)` if `T > ½ log n_0` for some atom `n_0`. Reflection at the edge `x = T` is `K1_OSG_001`
+     (NO-GO; it is Theorem 2 conjugated by a translation). The multiplicative reflection `n ↦ 1/n` is the
+     symmetrization by the functional equation (`CA_A_007` §3, last paragraph; L2_026, NG-D4). Positivity
+     per place is phase 6, S2.1 (`G_p` indefinite).
+   - (b) Front J of phase 193 (`CA_J_002`, Theorem 1.3). The additive cycle `m → m+1 → … → 2m`, closed
+     by the multiplicative edge `(m, 2m)`, is frustrated, so no `±1` gauge makes `𝔸_M`
+     ferromagnetic. That leaves GKS, Ginibre, GHS, Lebowitz and FK without entry. In FKG, the equality class on the
+     divisor lattice are the Euler-product vectors (`CA_E_001`), so FKG is blind. Lee–Yang
+     and strong Rayleigh are in M3/M5 and in `INV_M_001`.
+   - (c) `CA_J_000`, row J7: «DISCARD: requires RP ⇒ dies with J6».
+2. **New object proposed by the assignment.** There are three claims. First, the
+   «transfer» spectrum of the archimedean part. Second, that the comb enters as an interaction of the form
+   `−Σ(θA_i)A_i` preserving RP. Third, an infrared bound «interaction ≤ free part», uniform in `T`.
+3. **Does it avoid the difficulty of the antecedent?** No, in none of the three cases.
+   - The first claim is correct but not new (§1). Moreover it is blind: it uses only the archimedean part,
+     which is the same in the three controls.
+   - The second collides with Theorem 2 (§2).
+   - The third presupposes RP, or else is the statement itself (§3).
+4. **Global link.** The only link that can be written is `𝔞_T(f) ≥ |H_K(f)|` on the two parity
+   sectors. It is the positivity of `a_T` restricted to evens and odds, i.e. the form itself (J3). There is
+   no new inequality.
 
-Por la regla del filtro, la construcción se detiene aquí.
+By the filter rule, the construction stops here.
 
-## 1. El núcleo arquimediano es completamente monótono (correcto, conocido, ciego)
+## 1. The archimedean kernel is completely monotone (correct, known, blind)
 
-**Observación 1 (PROVED; elemental).** Para `u > 0`, `1/(2 sinh(u/2)) = Σ_{k≥0} e^{−(k+½)u}` y
-`1/(2 cosh(u/2)) = Σ_{k≥0} (−1)^k e^{−(k+½)u}`. Sumando,
-`K(u) = 2 Σ_{j≥0} e^{−(2j+½)u}`: es la transformada de Laplace de la medida positiva `2Σ_j δ_{2j+½}`. Por
-lo tanto `H_{K_arch}(f) = 2 Σ_j |∫ f(t) e^{−(2j+½)t} dt|² ≥ 0`. Esto es RP de la parte arquimediana,
-con «energías» `2j+½`.
+**Observation 1 (PROVED; elementary).** For `u > 0`, `1/(2 sinh(u/2)) = Σ_{k≥0} e^{−(k+½)u}` and
+`1/(2 cosh(u/2)) = Σ_{k≥0} (−1)^k e^{−(k+½)u}`. Adding,
+`K(u) = 2 Σ_{j≥0} e^{−(2j+½)u}`: it is the Laplace transform of the positive measure `2Σ_j δ_{2j+½}`. Hence
+`H_{K_arch}(f) = 2 Σ_j |∫ f(t) e^{−(2j+½)t} dt|² ≥ 0`. This is RP of the archimedean part,
+with «energies» `2j+½`.
 
-No es nuevo. `K1_OSG_001` construye exactamente el «CM Hankel square of the poles of Γ_ℝ». Además, por el
-Lema K (`RULES_AVOID` W4), la positividad que sale de una medida positiva vale para todo peso: es ciega en
-`c = 2`, al borrar una potencia de primo y para Beurling. Una prueba de RP que sólo use esto no ve el peine.
+It is not new. `K1_OSG_001` builds exactly the «CM Hankel square of the poles of Γ_ℝ». Moreover, by
+Lemma K (`RULES_AVOID` W4), positivity coming from a positive measure holds for every weight: it is blind at
+`c = 2`, on deleting a prime power and for Beurling. A proof of RP using only this does not see the comb.
 
-## 2. El peine como interacción que preserva RP: falsificado por el Teorema 2
+## 2. The comb as an RP-preserving interaction: falsified by Theorem 2
 
-En el sector par la forma es `2𝔞_T(f) + 2H_K(f)` y en el impar `2𝔞_T(f) − 2H_K(f)` (Lema 1 de `CA_A_007`
-aplicado a `f ± Θf`; PROVED allí). Con `D = 2𝔞_T(f)` y `R = 2H_K(f)`, el esquema OS pedía `R ≥ 0`. La
-contribución del peine a `R` es `−Σ_n (v_n/2) ∫ f(t) f(log n − t) dt`: una forma de Hankel de núcleo
-`−Σ (v_n/2) δ(t + s − log n)`. Por el criterio de Widom–Bernstein, un núcleo de Hankel `h(t+s)` es `≥ 0` sobre
-una semirrecta si y sólo si `h` es la transformada de Laplace de una medida positiva (CITED). Un peine de
-deltas con signo negativo no lo es. El Teorema 2 de `CA_A_007` da la prueba directa, también en ventana
-finita: `f_ε` concentrada en `½ log n_0` da `H_K(f_ε) → −v_{n_0}/2`, porque la parte continua contribuye
+In the even sector the form is `2𝔞_T(f) + 2H_K(f)` and in the odd one `2𝔞_T(f) − 2H_K(f)` (Lemma 1 of `CA_A_007`
+applied to `f ± Θf`; PROVED there). With `D = 2𝔞_T(f)` and `R = 2H_K(f)`, the OS scheme required `R ≥ 0`. The
+contribution of the comb to `R` is `−Σ_n (v_n/2) ∫ f(t) f(log n − t) dt`: a Hankel form with kernel
+`−Σ (v_n/2) δ(t + s − log n)`. By the Widom–Bernstein criterion, a Hankel kernel `h(t+s)` is `≥ 0` on
+a half-line if and only if `h` is the Laplace transform of a positive measure (CITED). A comb of
+deltas with negative sign is not. Theorem 2 of `CA_A_007` gives the direct proof, also in a finite
+window: `f_ε` concentrated at `½ log n_0` gives `H_K(f_ε) → −v_{n_0}/2`, because the continuous part contributes
 `O(ε)`.
 
-Sobre la forma `−Σ(θA_i)A_i`: en OS, una interacción preserva RP cuando entra en el peso de Boltzmann como
-`exp(+Σ(θA_i)A_i)`. Al nivel cuadrático eso es sumar a `R` un término de la forma `+Σ|⟨A_i, f⟩|²`. En `a_T`,
-el peine entra con el signo opuesto (`−v_n c_F`), justamente el que destruye RP. Ninguna elección de
-reflexión lo arregla:
-- la traslación del centro es el caso de `K1_OSG_001`;
-- la inversión `n ↦ 1/n` es la ecuación funcional (NG-D4);
-- las reflexiones por primo `θ_p` son el tablero de `CA_J_001`, que fuerza `𝖡` constante con dos primos.
+On the form `−Σ(θA_i)A_i`: in OS, an interaction preserves RP when it enters the Boltzmann weight as
+`exp(+Σ(θA_i)A_i)`. At the quadratic level that means adding to `R` a term of the form `+Σ|⟨A_i, f⟩|²`. In `a_T`,
+the comb enters with the opposite sign (`−v_n c_F`), precisely the one that destroys RP. No choice of
+reflection fixes it:
+- translation of the centre is the case of `K1_OSG_001`;
+- the inversion `n ↦ 1/n` is the functional equation (NG-D4);
+- the per-prime reflections `θ_p` are the chessboard of `CA_J_001`, which forces constant `𝖡` with two primes.
 
-**Controles.** El Teorema 2 vale para todo peine con un átomo, incluidos `2Λ`, el peine con un borrado y
-Beurling. RP es falsa en los cuatro casos. No falla en «el paso que se rompe en `c = 2`»; falla en todas
-partes. Por eso no es un mecanismo de signo (Lema T).
+**Controls.** Theorem 2 holds for every comb with an atom, including `2Λ`, the comb with a deletion and
+Beurling. RP is false in all four cases. It does not fail at «the step that breaks at `c = 2`»; it fails
+everywhere. Hence it is not a sign mechanism (Lemma T).
 
-**Dominancia en los dos sectores.** La exigencia `𝔞_T(f) ≥ |H_K(f)|` (Toeplitz domina a Hankel) es una
-cota de tipo Cauchy–Schwarz de OS. Sin RP no hay Cauchy–Schwarz para `⟨θ·,·⟩`. Como enunciado, es
-`a_T ≥ 0` en cada sector de paridad, donde `P_T` impone una sola condición por sector (`∫F cosh(t/2) = 0` en el
-par, `∫F sinh(t/2) = 0` en el impar). Es la reducción por paridad ya conocida (thm:parityschur, `CA_A_007`
-§2), luego J3. La matriz Toeplitz−Hankel de la fase 205 es esa misma forma en coordenadas, no una fuente de
-signo. Ese archivo no se releyó: lectura indirecta, por la memoria del proyecto.
+**Dominance in the two sectors.** The requirement `𝔞_T(f) ≥ |H_K(f)|` (Toeplitz dominates Hankel) is an
+OS Cauchy–Schwarz-type bound. Without RP there is no Cauchy–Schwarz for `⟨θ·,·⟩`. As a statement, it is
+`a_T ≥ 0` in each parity sector, where `P_T` imposes a single condition per sector (`∫F cosh(t/2) = 0` in the
+even one, `∫F sinh(t/2) = 0` in the odd one). It is the already known parity reduction (thm:parityschur, `CA_A_007`
+§2), hence J3. The Toeplitz−Hankel matrix of phase 205 is that same form in coordinates, not a source of
+sign. That file was not reread: indirect reading, from the project memory.
 
-## 3. Dominación gaussiana y cotas infrarrojas
+## 3. Gaussian domination and infrared bounds
 
-La dominación gaussiana de Fröhlich–Simon–Spencer (CITED) deduce `Z(h) ≤ Z(0)` de RP mediante el tablero,
-y de ahí una cota infrarroja. Sin RP del objeto completo no hay entrada: así se descartó J7. El formato de
-llegada, «parte de primos ≤ Arch» uniforme en `T`, es `a_T ≥ 0` para todo `T`. Escrito sin RP, es el
-enunciado mismo (J3), no una herramienta.
+Fröhlich–Simon–Spencer Gaussian domination (CITED) deduces `Z(h) ≤ Z(0)` from RP via the chessboard,
+and from there an infrared bound. Without RP of the full object there is no entry: this is how J7 was discarded. The
+target format, «prime part ≤ Arch» uniform in `T`, is `a_T ≥ 0` for all `T`. Written without RP, it is the
+statement itself (J3), not a tool.
 
-## 4. Idea vecina
+## 4. Neighbouring idea
 
-Busqué una variante que cambie la clase de métodos y no sólo la reflexión. No la encontré. Las
-posibilidades revisadas fueron:
-- RP con un núcleo de Hankel `h` que dependa de `Λ` de forma no lineal. Para tener RP, `h` debería ser de
-  Laplace positivo, y entonces sería ciego por el Lema K.
-- Positividad «condicional»: RP sólo sobre el subespacio ortogonal a los modos `δ_{log n}`. Es el borde o
-  el portador con condiciones adicionales, el caso de `K1_OSG_001` (i), donde el hueco sólo protege
-  productos.
-- Una reflexión no lineal en `F`. No conozco una teoría de reconstrucción OS para ella, y no la invento sin
-  mecanismo.
+I looked for a variant that changes the class of methods and not just the reflection. I did not find one. The
+possibilities reviewed were:
+- RP with a Hankel kernel `h` depending on `Λ` nonlinearly. To have RP, `h` would have to be positive
+  Laplace, and then it would be blind by Lemma K.
+- «Conditional» positivity: RP only on the subspace orthogonal to the modes `δ_{log n}`. It is the boundary or
+  the carrier with additional conditions, the case of `K1_OSG_001` (i), where the gap only protects
+  products.
+- A reflection nonlinear in `F`. I know of no OS reconstruction theory for it, and I do not invent one without
+  mechanism.
 
-En lugar de proponer algo sin mecanismo, lo registro como ausencia. Siguen sin excluir, según `RULES_AVOID`
-X e Y: la positividad de Hadamard que acople primos mediante `m ≈ kn` y el potencial `V(x,F)` convexo sólo
-para el peso verdadero. Este memo no los ataca.
+Instead of proposing something without mechanism, I record it as an absence. Still unexcluded, according to `RULES_AVOID`
+X and Y: Hadamard positivity coupling primes through `m ≈ kn` and the potential `V(x,F)` convex only
+for the true weight. This memo does not attack them.
 
-## 5. Estado
+## 5. Status
 
-- (a) OS/RP con reconstrucción por transferencia: **repetición** (`CA_A_007` §3, `K1_OSG_001`, fase 6, `CA_J_001`).
-  La no negatividad de la mitad de Hankel con el peine es **NO-GO** (PROVED allí, para todo peine con un átomo).
-- (b) GKS, Griffiths, Ginibre, FKG, cuatro funciones y Lee–Yang: **repetición** (frente J de la fase 193,
+- (a) OS/RP with transfer reconstruction: **repetition** (`CA_A_007` §3, `K1_OSG_001`, phase 6, `CA_J_001`).
+  Non-negativity of the Hankel half with the comb is **NO-GO** (PROVED there, for every comb with an atom).
+- (b) GKS, Griffiths, Ginibre, FKG, four functions and Lee–Yang: **repetition** (front J of phase 193,
   `CA_J_002`, `CA_E_001`, M3).
-- (c) Dominación gaussiana y cotas infrarrojas: **repetición** (J7). Sin RP, el formato de llegada es J3.
-- Observación 1 (núcleo `K` completamente monótono, exponentes `2j+½`): PROVED, pero ya está en `K1_OSG_001`
-  y es ciega.
-- Nada nuevo para anotar en el índice como ruta cerrada.
+- (c) Gaussian domination and infrared bounds: **repetition** (J7). Without RP, the target format is J3.
+- Observation 1 (completely monotone kernel `K`, exponents `2j+½`): PROVED, but already in `K1_OSG_001`
+  and blind.
+- Nothing new to record in the index as a closed route.

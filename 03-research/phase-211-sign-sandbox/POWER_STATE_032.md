@@ -1,29 +1,29 @@
-# Estado032 — Decisión rigurosa del candidato211,1
+# State032 — Rigorous decision of the candidate211,1
 
-Estado: resultado PROVED y auditado. Sustituye STATE031 como resumen vigente. Goal activo; signo global OPEN; papers intactos.
+Status: result PROVED and audited. Replaces STATE031 as the current summary. Goal active; global sign OPEN; papers untouched.
 
-## Único átomo pendiente decidido
+## Single pending atom decided
 
-POWER_CONTACT_DECISION_032 demuestra para F(s)=s/(s+63/2)^212, N211,k1,u31.5:
+POWER_CONTACT_DECISION_032 proves for F(s)=s/(s+63/2)^212, N211,k1,u31.5:
 
     3.4·10^-15 < W[f]/||f||² < 4.5·10^-15.
 
-Se incluyen ARCH, polar, todas las potencias primas hasta512 y TODA la cola restante. El candidato no es un contraejemplo. No se extrapola a N vecinos, a una fila, a u variable ni a una ventana T.
+ARCH, polar, all prime powers up to512 and the WHOLE remaining tail are included. The candidate is not a counterexample. Nothing is extrapolated to neighbouring N, to a row, to variable u or to a window T.
 
-CONTACT_BALANCE021 había dejado un parcial hasta300 aproximadamente−6.08·10^-14, con cola favorable aún mayor que esa escala en su cota superior. Nunca certificó W negativo. El cambio de signo032 procede de incorporar contactos omitidos; no se atribuye a error de la cuadratura anterior. La nueva fórmula elimina, además, la incertidumbre analítica de esa cuadratura.
+CONTACT_BALANCE021 had left a partial sum up to300 of approximately−6.08·10^-14, with a favourable tail even larger than that scale in its upper bound. It never certified W negative. The sign change032 comes from incorporating omitted contacts; it is not attributed to an error of the earlier quadrature. The new formula also removes the analytic uncertainty of that quadrature.
 
-## Método exacto y evidencia
+## Exact method and evidence
 
-POWER_ARCH_EXACT_032 demuestra fórmulas estables para ARCH_N0 y ARCH_N1, con coeficientes positivos y corchetes Hurwitz positivos. Para el átomo concreto usa16 sumandos por serie, ocho Bernoulli y un resto integral absoluto, no la hipótesis del siguiente término. El intervalo final de ARCH tiene ancho<10^-18.
+POWER_ARCH_EXACT_032 proves stable formulas for ARCH_N0 and ARCH_N1, with positive coefficients and positive Hurwitz brackets. For the concrete atom it uses16 summands per series, eight Bernoulli numbers and an absolute integral remainder, not the next-term hypothesis. The final ARCH interval has width<10^-18.
 
-Los contactos se evalúan mediante un polinomio en logq y el factor EXACTO q^-32. Se enumeran todas las potencias primas hasta un único corte512 por divisiones enteras. Horner con potencias divididas y aritmética racional exterior da ancho del peine finito<10^-40. El polar es una fracción exacta. La cola es positiva por019 y tiene mayorante racional<1.1·10^-15 mediante integrales de monomios logarítmicos.
+The contacts are evaluated through a polynomial in logq and the EXACT factor q^-32. All prime powers up to a single cutoff512 are enumerated by integer divisions. Horner with divided powers and outer rational arithmetic gives width of the finite comb<10^-40. The polar is an exact fraction. The tail is positive by019 and has a rational majorant<1.1·10^-15 via integrals of logarithmic monomials.
 
-POWER_CONTACT_AUDIT_032 aprueba todas las normalizaciones, fórmulas y restos. Root leyó ambas pruebas y reprodujo módulos y certificado principal: PASS. Un fallo preliminar de redondeo del recíproco q^-32 se corrigió dividiendo los extremos racionales antes de crear el intervalo; sólo el código corregido fue aceptado y auditado.
+POWER_CONTACT_AUDIT_032 approves all normalisations, formulas and remainders. Both proofs were read and the modules and main certificate reproduced: PASS. A preliminary rounding failure of the reciprocal q^-32 was corrected by dividing the rational endpoints before creating the interval; only the corrected code was accepted and audited.
 
-## Cobertura y obligación restante
+## Coverage and remaining obligation
 
-A la cobertura anterior se añade este átomo puntual positivo N211,k1,u31.5. Siguen las filas N1..5 para todo k, el cono k>=10000N² a esa tasa, ocho polos arbitrarios y bloque fijo12. Las regiones029 de tasas crecientes conservan su alcance separado. No se prueba el signo de todos N,k ni una nueva ventana T.
+To the earlier coverage this positive pointwise atom N211,k1,u31.5 is added. Rows N1..5 for all k, the cone k>=10000N² at that rate, eight arbitrary poles and fixed block12 remain. The regions029 of increasing rates keep their separate scope. The sign of all N,k and a new window T are not proved.
 
-El presupuesto global031 con primitiva aritmética firmada sigue válido y abierto en su complemento. La decisión032 muestra que una cancelación de componentes de orden1 puede dejar un margen positivo del orden10^-15: las cotas gruesas no deben confundirse con el signo del balance real. Tampoco una decisión puntual sustituye una desigualdad uniforme.
+The global budget031 with signed arithmetic primitive remains valid and open on its complement. The decision032 shows that a cancellation of components of order1 can leave a positive margin of order10^-15: coarse bounds must not be confused with the sign of the real balance. Nor does a pointwise decision replace a uniform inequality.
 
-La continuación necesita extraer de las fórmulas exactas una compensación estructural de todos los contactos o resolver el promedio firmado031; no lanzar una campaña de más puntos.
+The continuation needs to extract from the exact formulas a structural compensation of all contacts or resolve the signed average031; not launch a campaign of more points.

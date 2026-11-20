@@ -1,66 +1,66 @@
-# Revisión de la ronda 4 (meta SP-161 con pesos con signo y cuatro zonas no excluidas)
+# Review of round 4 (meta SP-161 with signed weights and four non-excluded zones)
 
-Memos revisadas: `ROUND_004_A.md` … `ROUND_004_E.md`. Cada demostración etiquetada PROVED se rehízo salvo
-donde se indica. Ninguna memo pasa la puerta de selección: no hay candidata lista para construcción.
-Signo global OPEN. Ningún resultado de esta ronda lleva signo.
+Memos reviewed: `ROUND_004_A.md` … `ROUND_004_E.md`. Every proof labelled PROVED was redone except
+where indicated. No memo passes the selection gate: there is no candidate ready for construction.
+Global sign OPEN. No result of this round carries a sign.
 
-## Veredictos
+## Verdicts
 
-| Zona | Memo | Veredicto | Comprobado | Corrección o reserva |
+| Zone | Memo | Verdict | Checked | Correction or reservation |
 |---|---|---|---|---|
-| A meta L161.1 con pesos con signo; pesos de criba | 004_A | ACEPTADO | (4.2) coeficientes de S_N*S_N; Lema 1 (G(q) = 0 para q ≥ 2 por el par coprimo (q, q−1), inversión sobre múltiplos, w = δ_{N=1}); Prop. 2 (c_N(2p) = −2); Lema 3 (inducción λ = μ en [1, N]) | (4.1) usa las convenciones de R161_001 §1, citadas. La observación sobre el «Möbius del sistema» es ARGUED |
-| B defecto de divisores cuadrático que suma | 004_B | ACEPTADO CON RESERVA | Lema 1: minimizar en ℓ la forma a_T − ⟨ℓ, η⟩ + ⟨ℓ, Kℓ⟩ da η ∈ ran K y a_T ≥ ¼⟨η, K⁺η⟩ | El cambio de variables ⟨e, γ⟩ = ⟨ℓ, U^{−T}γ⟩ y el caso Q(u) = 0 del Lema 2(c) no se rehicieron aquí. Las violaciones con núcleos naturales son NUMÉRICO con valores tomados de 211 ROUND_017_A; el caso T grande es CONDITIONAL |
-| C resto de Möbius truncado | 004_C | ACEPTADO CON RESERVA | Lema 3 (multiplicadores); Lema 4; Lema 5: φ = (¼ − ∂²)ψ_ε ∈ P_T, ‖φ‖² ≍ h²ε^{−3}, momentos O(hε), y c_N(p^j) = −1 cuando p^{j−1} ≤ N < p^j, de donde la constante diagonal κ_N > 0 | El Lema 2 (forma cerrada de R_0) no se rehízo. La indefinición de R es NUMÉRICO (T = 1, T = 1.5) |
-| D casi-divisibilidad en (S) | 004_D | ACEPTADO CON CORRECCIONES | Lema A; Lema B (1 ⊲ 2 ⊲ 6 y no 1 ⊲ 6 si 2T_0 < log(7/6)); Lema C(a)–(c) (analiticidad contra el término v_2 en d = log 2) | En el Lema C(d), el paso del núcleo continuo a su muestreo en logaritmos de enteros para excluir matrices semiseparables es ARGUED. N_BUILD_022, L2_BUILD_031, CA_K_001/002 y la fase 202 no fueron abiertas en primaria por la memo |
-| E formas indefinidas e inercia | 004_E | ACEPTADO CON RESERVA | Lemas 2, 3 y 5 (constancia de índices para \|c − 1\| < λ_A(T)/Σ\|v_n\|); citas P47 thm:parityschur, prop:polarcap, subsec:inertia-excl confirmadas | La Prop. 1(c) es PROVED en dimensión finita y ARGUED para formas no acotadas. Fases 155 (ronda 5) y 156, R161_023, 061–063 y R170_854 no fueron abiertas en primaria por la memo |
+| A meta L161.1 with signed weights; sieve weights | 004_A | ACCEPTED | (4.2) coefficients of S_N*S_N; Lemma 1 (G(q) = 0 for q ≥ 2 by the coprime pair (q, q−1), inversion over multiples, w = δ_{N=1}); Prop. 2 (c_N(2p) = −2); Lemma 3 (induction λ = μ on [1, N]) | (4.1) uses the conventions of R161_001 §1, cited. The remark on the "Möbius of the system" is ARGUED |
+| B quadratic divisor defect that adds | 004_B | ACCEPTED WITH RESERVATION | Lemma 1: minimizing in ℓ the form a_T − ⟨ℓ, η⟩ + ⟨ℓ, Kℓ⟩ gives η ∈ ran K and a_T ≥ ¼⟨η, K⁺η⟩ | The change of variables ⟨e, γ⟩ = ⟨ℓ, U^{−T}γ⟩ and the case Q(u) = 0 of Lemma 2(c) were not redone here. The violations with natural kernels are NUMERICAL with values taken from 211 ROUND_017_A; the large-T case is CONDITIONAL |
+| C truncated Möbius remainder | 004_C | ACCEPTED WITH RESERVATION | Lemma 3 (multipliers); Lemma 4; Lemma 5: φ = (¼ − ∂²)ψ_ε ∈ P_T, ‖φ‖² ≍ h²ε^{−3}, moments O(hε), and c_N(p^j) = −1 when p^{j−1} ≤ N < p^j, whence the diagonal constant κ_N > 0 | Lemma 2 (closed form of R_0) was not redone. The indefiniteness of R is NUMERICAL (T = 1, T = 1.5) |
+| D near-divisibility in (S) | 004_D | ACCEPTED WITH CORRECTIONS | Lemma A; Lemma B (1 ⊲ 2 ⊲ 6 and not 1 ⊲ 6 if 2T_0 < log(7/6)); Lemma C(a)–(c) (analyticity against the term v_2 at d = log 2) | In Lemma C(d), the passage from the continuous kernel to its sampling at logarithms of integers to exclude semiseparable matrices is ARGUED. N_BUILD_022, L2_BUILD_031, CA_K_001/002 and phase 202 were not opened in the primary sources by the memo |
+| E indefinite forms and inertia | 004_E | ACCEPTED WITH RESERVATION | Lemmas 2, 3 and 5 (constancy of indices for \|c − 1\| < λ_A(T)/Σ\|v_n\|); citations P47 thm:parityschur, prop:polarcap, subsec:inertia-excl confirmed | Prop. 1(c) is PROVED in finite dimension and ARGUED for unbounded forms. Phases 155 (round 5) and 156, R161_023, 061–063 and R170_854 were not opened in the primary sources by the memo |
 
-## Resultados que se anotan (todos sin signo)
+## Results recorded (all without sign)
 
-R4-a (PROVED, `ROUND_004_A.md` Lema 1 y corolario). Clase: pesos reales w_N de soporte finito en el
-índice de corte, test S_N𝓕F, con la exigencia de L161.1 de que el interior telescope. El único peso es
-w = δ_{N=1} y la identidad es a_T = a_T. Telescopar el interior exige Σw = 1; cancelar la cola de
-hipérbola en primos grandes exige Σw = 0. Cierra la rama con signo de R161_002 §§4–5. No excluye tests
-distintos, pesos dependientes de F, ni telescopar después de comprimir a la ventana.
+R4-a (PROVED, `ROUND_004_A.md` Lemma 1 and corollary). Class: real weights w_N of finite support in the
+cutoff index, test S_N𝓕F, with the requirement of L161.1 that the interior telescope. The only weight is
+w = δ_{N=1} and the identity is a_T = a_T. Telescoping the interior requires Σw = 1; cancelling the hyperbola
+tail at large primes requires Σw = 0. Closes the signed branch of R161_002 §§4–5. Does not exclude
+different tests, F-dependent weights, nor telescoping after compressing to the window.
 
-R4-b (PROVED, `ROUND_004_A.md` Prop. 2, Lema 3, (4.3)–(4.4)). La identidad de Möbius de `ROUND_003_6.md` no
-es instancia de L161.1. M^λS_N = I + exterior exactamente si y sólo si λ = μ en [1, N]; con pesos de
-Selberg o Barban–Vehov aparece un bloque interior I^λ sin signo. El «cuadrado de Selberg» es la forma A_M
-sobre un vector fuera de P_T. Los pesos de criba no elevan el grado en el peso. Antecedentes: fase 200
+R4-b (PROVED, `ROUND_004_A.md` Prop. 2, Lemma 3, (4.3)–(4.4)). The Möbius identity of `ROUND_003_6.md` is not
+an instance of L161.1. M^λS_N = I + exterior exactly if and only if λ = μ on [1, N]; with Selberg or
+Barban–Vehov weights an interior block I^λ without sign appears. The "Selberg square" is the form A_M
+on a vector outside P_T. Sieve weights do not raise the degree in the weight. Antecedents: phase 200
 (Q1–Q3, MULT_GAUGE R-MOM, GG_001), R162_1003 §4.
 
-R4-c (PROVED, `ROUND_004_B.md` Lemas 0–1). Formato a_T^{(a)}(F) + 𝔇_a(F) ≥ 0 para todo peso a, con 𝔇
-cuadrático semidefinido en los átomos y nulo en Λ: equivale, para cada F, a η(F) ∈ ran K(F) y
-a_T(F) ≥ ¼⟨η, K⁺η⟩. Es el objetivo con margen; el término de segundo orden no paga el primer jet.
-Antecedente: fase 197 BARRIER_D2_001 Teor. 1. No excluye K no acotado, clases de pesos que no contienen
-un entorno de Λ, ni defectos no polinómicos.
+R4-c (PROVED, `ROUND_004_B.md` Lemmas 0–1). Format a_T^{(a)}(F) + 𝔇_a(F) ≥ 0 for every weight a, with 𝔇
+quadratic, semidefinite in the atoms and zero at Λ: equivalent, for each F, to η(F) ∈ ran K(F) and
+a_T(F) ≥ ¼⟨η, K⁺η⟩. It is the target with margin; the second-order term does not pay for the first jet.
+Antecedent: phase 197 BARRIER_D2_001 Thm. 1. Does not exclude unbounded K, weight classes that do not contain
+a neighbourhood of Λ, nor non-polynomial defects.
 
-R4-d (PROVED, `ROUND_004_C.md` Lemas 3–5). Clase 𝒯_inv de inversos aproximados invariantes por traslación:
-a_T + R_b tiene símbolo Re P̂_b · s_M; dos escrituras manifiestas de a_T + R ≥ 0 y −R ≥ 0 se suman en un
-certificado de a_T en el que el inverso no aparece. Para el Möbius truncado con M ≥ N², N ≥ 4, R ≤ 0 es
-falso sobre P_T. Antecedente: fase 200 A_MU_FACTORIZATION_001 (d). No excluye inversos comprimidos a la
-ventana (recorridos en R170_878–883) ni el bloque cociente de Z_CARRIER (Lema Z.2, OPEN).
+R4-d (PROVED, `ROUND_004_C.md` Lemmas 3–5). Class 𝒯_inv of translation-invariant approximate inverses:
+a_T + R_b has symbol Re P̂_b · s_M; two manifest writings of a_T + R ≥ 0 and −R ≥ 0 add up to a
+certificate of a_T in which the inverse does not appear. For the truncated Möbius with M ≥ N², N ≥ 4, R ≤ 0 is
+false on P_T. Antecedent: phase 200 A_MU_FACTORIZATION_001 (d). Does not exclude inverses compressed to the
+window (covered in R170_878–883) nor the quotient block of Z_CARRIER (Lemma Z.2, OPEN).
 
-R4-e (PROVED salvo el punto ARGUED indicado, `ROUND_004_D.md` Lemas A–C). El soporte de Div + Near no es un
-orden parcial; para razones grandes llena el semiorden de umbral y no depende del peso. 𝖡 no es
-totalmente positiva ni de Pólya ni una transformada de Laplace en (0, ∞). Pivotes determinados por el
-patrón de soporte: NO-GO de clase. No excluye W con valores de fórmula propia ni el cierre de {𝔸_M} bajo
-complemento de Schur con un peso transformado explícito.
+R4-e (PROVED except for the ARGUED point indicated, `ROUND_004_D.md` Lemmas A–C). The support of Div + Near is not a
+partial order; for large ratios it fills the threshold semiorder and does not depend on the weight. 𝖡 is not
+totally positive, nor Pólya, nor a Laplace transform on (0, ∞). Pivots determined by the
+support pattern: class NO-GO. Does not exclude W with values given by its own formula nor the closure of {𝔸_M} under
+Schur complement with an explicit transformed weight.
 
-R4-f (PROVED, `ROUND_004_E.md` Lemas 2, 3, 5, 6). Una cota superior del índice negativo es una positividad
-sobre un subespacio de codimensión finita. En cada ventana con λ_A(T) > 0 los índices de inercia son
-constantes para c en un entorno de 1: un conteo de inercia no distingue c = 1. El formato de Pontryagin
-ya está en P47 thm:parityschur y prop:polarcap. Los conteos crecientes en T son de la forma arquimediana
-sin peine.
+R4-f (PROVED, `ROUND_004_E.md` Lemmas 2, 3, 5, 6). An upper bound on the negative index is a positivity
+on a subspace of finite codimension. In every window with λ_A(T) > 0 the inertia indices are
+constant for c in a neighbourhood of 1: an inertia count does not distinguish c = 1. The Pontryagin format
+is already in P47 thm:parityschur and prop:polarcap. The counts increasing in T come from the archimedean form
+without comb.
 
-## Lo que la ronda deja sin excluir, y sin objeto escrito
+## What the round leaves unexcluded, and without a written object
 
-1. Cierre de la familia {𝔸_M} bajo complemento de Schur con un peso transformado explícito (R4-e). Debe
-   cotejarse antes con R3-b y con la fase 70 (E70_10–12).
-2. El «Möbius del sistema» μ_a, coeficientes del inverso de la serie del peso, no polinomial en c (R4-b).
-3. Telescopar después de comprimir a la ventana con los cuadrados de fuga de C_T; contabilidad
+1. Closure of the family {𝔸_M} under Schur complement with an explicit transformed weight (R4-e). Must
+   first be cross-checked with R3-b and with phase 70 (E70_10–12).
+2. The "Möbius of the system" μ_a, coefficients of the inverse of the weight series, non-polynomial in c (R4-b).
+3. Telescoping after compressing to the window with the leakage squares of C_T; accounting
    R161_032 (4.2).
-4. El bloque cociente de Z_CARRIER (Lema Z.2).
-5. Un conteo por principio del argumento de una función explícita de un parámetro espectral distinta de
+4. The quotient block of Z_CARRIER (Lemma Z.2).
+5. A count by the argument principle of an explicit function of a spectral parameter other than
    det Γ_T(z) (R4-f).
-6. Sin cambios respecto de `REVIEW_003.md`: generadores distintos de la dilatación pura; VIR–LB y
-   VIR–DET; salida A de R161_033.
+6. Unchanged with respect to `REVIEW_003.md`: generators other than pure dilation; VIR–LB and
+   VIR–DET; exit A of R161_033.

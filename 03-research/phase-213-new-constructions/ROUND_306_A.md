@@ -1,27 +1,27 @@
-# El signo en cortes logarítmicos fijos detecta cualquier cero exterior
+# The sign at fixed logarithmic cutoffs detects any exterior zero
 
-Para t∈[1,2], k>4 fijos y x grande, definir y=x/(log x)^k. Se tiene la equivalencia
+For fixed t∈[1,2], k>4 and large x, define y=x/(log x)^k. One has the equivalence
 
-    RH ⇔ para cada t∈[1,2] y cada k>4 se cumple eventualmente R_t(x,y)<0.
+    RH ⇔ for each t∈[1,2] and each k>4 one eventually has R_t(x,y)<0.
 
-Basta exigirlo en la sucesión k=4+1/n. No se exige uniformidad del umbral en t ni en n. Si hay un cero exterior, para casi todo t y todo k suficientemente próximo a 4 por arriba hay x arbitrariamente grandes con R_t(x,y)>0. Este converse añade la dirección ausente en el falsificador de 305. La estimación eventual incondicional en estos cortes sigue abierta.
+It suffices to require it along the sequence k=4+1/n. No uniformity of the threshold in t or in n is required. If there is an exterior zero, then for almost every t and every k sufficiently close to 4 from above there are arbitrarily large x with R_t(x,y)>0. This converse adds the direction missing in the falsifier of 305. The unconditional eventual estimate at these cutoffs remains open.
 
-**Dirección bajo RH.** El transporte exacto de 305 vale en toda la banda y 292 da |B_t(v)|≪_σ v^σ para σ>1/2 (aquí B_t es el sumatorio). El cambio desde √x hasta y cuesta O_σ(x(log x)^(−1−k(1−σ))). Elegir σ con k(1−σ)>2. En √x el equivalente de 294 es −2D_t''(1)x/log³x, con D_t''(1)>0, donde D_t es la serie de Dirichlet de b_t. Por tanto ese equivalente se conserva.
+**Direction under RH.** The exact transport of 305 holds over the whole band and 292 gives |B_t(v)|≪_σ v^σ for σ>1/2 (here B_t is the partial sum). The change from √x to y costs O_σ(x(log x)^(−1−k(1−σ))). Choose σ with k(1−σ)>2. At √x the asymptotic of 294 is −2D_t''(1)x/log³x, with D_t''(1)>0, where D_t is the Dirichlet series of b_t. Hence that asymptotic is preserved.
 
-**Expansión en la escala móvil.** Escribir z=(log x)^k, L=z^(1/k), F(z)=−L R_t(x,x/z)/(2x) para z suficientemente grande, extendida por cero desde 1 hasta ese umbral. Al sumar primero el primo grande, el PNT en las dos clases, con resto de potencia logarítmica arbitraria y |t|≤2, sustituye los dos extremos por li(x/m)−li(x/z) para cada m≤z, con el factor −2 de la definición de R. La norma Σ_(m≤z)|b_t(m)|/m es O(log^4(2z)); log(x/z) es comparable a L. Para cada entero fijo M se obtiene
+**Expansion on the moving scale.** Write z=(log x)^k, L=z^(1/k), F(z)=−L R_t(x,x/z)/(2x) for sufficiently large z, extended by zero from 1 up to that threshold. Summing the large prime first, the PNT in the two classes, with remainder of arbitrary logarithmic power and |t|≤2, replaces the two endpoints by li(x/m)−li(x/z) for each m≤z, with the factor −2 from the definition of R. The norm Σ_(m≤z)|b_t(m)|/m is O(log^4(2z)); log(x/z) is comparable to L. For each fixed integer M one obtains
 
     F(z)=Σ_(0≤j<M) z^(−j/k) H_j(z) + O_(M,k)(z^(−M/k)(1+log z)^(M+5)),
     H_j(z)=Σ_(m≤z) b_t(m)[P_j(log m)/m−P_j(log z)/z],
     P_j(u)=Σ_(r=0)^j (j!/r!) u^r.
 
-En efecto expandir L li(x/m)/x en 1/L uniformemente para log m≤log z, y análogamente en el extremo z. El polinomio satisface P_j−P_j'=u^j. En particular H₀ es el perfil J de la frecuencia respectiva. La expansión es de la función firmada, antes de tomar signos.
+Indeed expand L li(x/m)/x in 1/L uniformly for log m≤log z, and similarly at the endpoint z. The polynomial satisfies P_j−P_j'=u^j. In particular H₀ is the profile J of the respective frequency. The expansion is of the signed function, before taking signs.
 
-**Mellin y detección.** Con transformada ∫₁^∞ f(z) z^(−1−s) dz se tiene exactamente
+**Mellin and detection.** With transform ∫₁^∞ f(z) z^(−1−s) dz one has exactly
 
     Mellin(H_j)(s) = (−∂_s)^j [D_t(1+s)/(1+s)] / s.
 
-En efecto H_j(1)=0, su derivada entre enteros es B_t(z)(log z)^j/z² y es continua en cada entero. Integrar por partes, inicialmente en Re s>0. Así cada corrección desplaza sus singularidades hacia la izquierda en j/k. La expansión anterior continúa el Mellin de F meromórficamente en Re s>max(−M/k,−1/2); la modificación compacta sólo añade una función entera. En los puntos reales s>−2/k es regular: D_t es regular en el eje real de esa región y su cero doble en 1 hace removibles los denominadores s+j/k para j=0,1. Para j≥2 esos puntos ya están fuera del intervalo.
+Indeed H_j(1)=0, its derivative between integers is B_t(z)(log z)^j/z² and it is continuous at each integer. Integrate by parts, initially in Re s>0. Thus each correction shifts its singularities to the left by j/k. The above expansion continues the Mellin transform of F meromorphically to Re s>max(−M/k,−1/2); the compact modification only adds an entire function. At the real points s>−2/k it is regular: D_t is regular on the real axis of that region and its double zero at 1 makes the denominators s+j/k removable for j=0,1. For j≥2 those points are already outside the interval.
 
-Dado un cero exterior ρ de ζ, elegir t tal que D_t tenga polo en ρ; por 292 esto vale para casi todo t. Elegir k>4 con Re ρ−1>−2/k y M>k/2. Entre los puntos ρ+j/k, j entero no negativo, que sean polos de D_t, tomar el más a la derecha, w (la serie es holomorfa a la derecha de 1). En s=w−1, no real, el Mellin de H₀ tiene polo. Todas las correcciones son regulares allí por la elección de w. En consecuencia F tiene un Mellin con singularidad no real a la derecha de −2/k, pese a ser regular en todos los puntos reales de ese tramo. Si F fuera eventualmente de signo fijo, Landau aplicado tras descartar un compacto obligaría al Mellin a converger y ser holomorfo en todo ese semiplano. La contradicción prueba ambas oscilaciones. Incluso restar a F una constante por z^(−2/k) conserva el argumento, pues el polo real añadido queda en la frontera. Esto evita confundir un cruce minúsculo de H₀ con el cambio efectivo de signo en el sumatorio aritmético.
+Given an exterior zero ρ of ζ, choose t such that D_t has a pole at ρ; by 292 this holds for almost every t. Choose k>4 with Re ρ−1>−2/k and M>k/2. Among the points ρ+j/k, j a nonnegative integer, that are poles of D_t, take the rightmost one, w (the series is holomorphic to the right of 1). At s=w−1, not real, the Mellin transform of H₀ has a pole. All corrections are regular there by the choice of w. Consequently F has a Mellin transform with a nonreal singularity to the right of −2/k, despite being regular at all real points of that range. If F were eventually of fixed sign, Landau, applied after discarding a compact set, would force the Mellin transform to converge and be holomorphic on that whole half-plane. The contradiction proves both oscillations. Even subtracting from F a constant times z^(−2/k) preserves the argument, since the added real pole lies on the boundary. This avoids confusing a tiny crossing of H₀ with the effective sign change in the arithmetic partial sum.
 
-**Fila cero.** El mismo argumento en t=0 usa el cero de orden cuatro de D₀ en 1 y el término negativo de orden x/L⁵ de 302. Detecta cada polo efectivo w de D₀ con Re w>1−4/k en k>8; un cero compartido y cancelado con L puede ser invisible en esa fila. La banda [1,2] en el enunciado principal evita esa salvedad.
+**Row zero.** The same argument at t=0 uses the order-four zero of D₀ at 1 and the negative term of order x/L⁵ of 302. It detects each effective pole w of D₀ with Re w>1−4/k for k>8; a zero shared and cancelled with L may be invisible in that row. The band [1,2] in the main statement avoids that caveat.

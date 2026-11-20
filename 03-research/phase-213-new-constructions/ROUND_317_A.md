@@ -1,31 +1,31 @@
-# Corte en la raíz por dos convoluciones sucesivas de orden uno
+# Cut at the root by two successive order-one convolutions
 
-Sea c_t=b_t*1 y C_t(v)=Σ_(m≤v)c_t(m); conservar B_t para el sumatorio de b_t. Para cualquier D=x^o(1), q=⌊D⌋+1, hay pesos firmados explícitos g(n) tales que
+Let c_t=b_t*1 and C_t(v)=Σ_(m≤v)c_t(m); keep B_t for the summatory function of b_t. For any D=x^o(1), q=⌊D⌋+1, there are explicit signed weights g(n) such that
 
     C_t(x)+Σ_(D<n≤√x)g(n) C_t(x/n) = O_ε(x^(1/2+ε))
 
-uniformemente para 0≤t≤2. El techo integrado unilateral de 292 para B_t vale como criterio equivalente al signo también con C_t. Por tanto en este criterio de un solo saldo las dilataciones conservadas tienen argumentos entre √x y x/D. Para el saldo original B_t se obtiene el mismo recorte usando dos tipos de saldos intermedios, B_t y C_t. No se usa una estimación del problema del divisor.
+uniformly for 0≤t≤2. The one-sided integrated ceiling of 292 for B_t is also valid as a criterion equivalent to the sign with C_t. Hence in this single-balance criterion the retained dilations have arguments between √x and x/D. For the original balance B_t the same truncation is obtained using two types of intermediate balances, B_t and C_t. No estimate for the divisor problem is used.
 
-**Qué cuenta C.** Sus factores locales son c_t(p)=1−2u_p y c_t(p^e)=(1−u_p)²=cos²(t log p) para todo e≥2. En particular,
+**What C counts.** Its local factors are c_t(p)=1−2u_p and c_t(p^e)=(1−u_p)²=cos²(t log p) for all e≥2. In particular,
 
-    c₀(n)=(−3)^(#{p≡2 mod 3: p divide n exactamente una vez}).
+    c₀(n)=(−3)^(#{p≡2 mod 3: p divides n exactly once}).
 
-Esto incluye el primo 2. La serie de C es G_t²L(s−it,χ)L(s+it,χ)/ζ(s) por 292. Bajo RH la misma prueba Mellin de 292 con una sola potencia del recíproco da |C_t(x)|≪_ε x^(1/2+ε) uniformemente en [1,2]. Ante un cero exterior, el numerador sigue siendo no nulo para casi toda frecuencia y se puede localizar un promedio positivo suave que conserve ese polo. No hay polos reales en s>1/2. El argumento unilateral de Landau de 292 prueba la recíproca con el promedio de las partes positivas de C_t. Esta equivalencia es para la familia en frecuencia; no se atribuye a la fila explícita t=0 por sí sola.
+This includes the prime 2. The series of C is G_t²L(s−it,χ)L(s+it,χ)/ζ(s) by 292. Under RH the same Mellin proof of 292 with a single power of the reciprocal gives |C_t(x)|≪_ε x^(1/2+ε) uniformly on [1,2]. Given an exterior zero, the numerator remains nonzero for almost every frequency and one can localize a smooth positive average that preserves that pole. There are no real poles in s>1/2. Landau's one-sided argument of 292 proves the converse with the average of the positive parts of C_t. This equivalence is for the family in frequency; it is not attributed to the explicit row t=0 by itself.
 
-**Criba de orden uno.** Escribir a=(μ 1_[1,D])*(δ₁−qδ_q) como sucesión de Dirichlet y g=1*a. Entonces g(1)=1, g(n)=0 en 2≤n≤D y Σ|a(d)|≤(1+q)D. Para cualquier v,
+**Order-one sieve.** Write a=(μ 1_[1,D])*(δ₁−qδ_q) as a Dirichlet sequence and g=1*a. Then g(1)=1, g(n)=0 for 2≤n≤D and Σ|a(d)|≤(1+q)D. For any v,
 
     |Σ_(n≤v)g(n)| = |Σ_(d≤D)μ(d)(⌊v/d⌋−q⌊v/(qd)⌋)| ≤ qD.
 
-En efecto, cada diferencia de pisos es un residuo entre 0 y q−1. Este techo independiente de v sustituye el error de potencia de 316. Si F es el sumatorio de b_t o c_t y f sus coeficientes, ambos satisfacen |f(m)|≪_ε m^ε por los valores locales. Para X≤x y V=√x, el intercambio exacto de 311 da
+Indeed, each difference of floors is a residue between 0 and q−1. This v-independent ceiling replaces the power error of 316. If F is the summatory function of b_t or c_t and f its coefficients, both satisfy |f(m)|≪_ε m^ε by the local values. For X≤x and V=√x, the exact exchange of 311 gives
 
     |Σ_(X/V<n≤X)g(n)F(X/n)| ≤ 2qD Σ_(m≤V)|f(m)| ≪_ε x^(1/2+ε).
 
-Las pérdidas subpotenciales en D,q pueden absorberse en cualquier ε. Aplicamos esto sólo para X=x o x/d con d≤qD, así que X/V>D para x grande.
+The subpower losses in D,q can be absorbed into any ε. We apply this only for X=x or x/d with d≤qD, so X/V>D for large x.
 
-**Cierre de las dos identidades.** Definir I_F(X)=Σ_(D<n≤X/V)g(n)F(X/n). Sea U el sumatorio de los coeficientes de D_t(s)ζ(s)², con techo de raíz uniforme por 309. Como g*c_t=a*(1*c_t), la media completa de C en X es Σ_d a(d)U(X/d), de tamaño O_ε(x^(1/2+ε)). Retirar la cola prueba C_t(X)+I_C(X)=O_ε(x^(1/2+ε)), también en los X=x/d requeridos. Para B, la misma convolución exacta da la media Σ_d a(d) C_t(x/d). Sustituir las identidades de C en esos puntos, absorbiendo Σ|a(d)|=x^o(1), da
+**Closing the two identities.** Define I_F(X)=Σ_(D<n≤X/V)g(n)F(X/n). Let U be the summatory function of the coefficients of D_t(s)ζ(s)², with uniform root ceiling by 309. Since g*c_t=a*(1*c_t), the full mean of C at X is Σ_d a(d)U(X/d), of size O_ε(x^(1/2+ε)). Removing the tail proves C_t(X)+I_C(X)=O_ε(x^(1/2+ε)), also at the required X=x/d. For B, the same exact convolution gives the mean Σ_d a(d) C_t(x/d). Substituting the identities for C at those points, absorbing Σ|a(d)|=x^o(1), gives
 
     B_t(x)+I_B(x)+Σ_d a(d) I_C(x/d)=O_ε(x^(1/2+ε)).
 
-Todos los sumatorios dentro de las dos I se evalúan en argumentos ≥√x y <x/D. El criterio de un tipo requiere un piso integrado para I_C; el de dos tipos requiere ese piso para la combinación escrita. Ninguno de esos pisos se deduce de acotar los residuos de las divisiones.
+All the summatory functions inside the two I are evaluated at arguments ≥√x and <x/D. The one-type criterion requires an integrated floor for I_C; the two-type one requires that floor for the written combination. Neither of these floors follows from bounding the residues of the divisions.
 
-**Cotejo con el corpus.** La ronda 049 ya confinó dos factores cerca de la raíz en una suma suavizada distinta, usando inversión finita sobre filas de divisibilidad y control de cuadratura. La inversión finita también es clásica aquí. La ganancia específica respecto de 316 es la cota elemental y uniforme para la cola de los sumatorios ordinarios de 292 mediante el saldo intermedio c_t, con identidad punto a punto en x, sin signo nuevo para el tramo que queda.
+**Cross-check with the corpus.** Round 049 already confined two factors near the root in a different smoothed sum, using finite inversion over divisibility rows and quadrature control. Finite inversion is also classical here. The specific gain over 316 is the elementary and uniform bound for the tail of the ordinary summatory functions of 292 via the intermediate balance c_t, with a pointwise identity in x, with no new sign for the remaining stretch.

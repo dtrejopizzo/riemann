@@ -1,25 +1,25 @@
-# POWER_HIGHPASS_DIAGONAL_DENSITY_AUDIT_094 — Auditoría independiente
+# POWER_HIGHPASS_DIAGONAL_DENSITY_AUDIT_094 — Independent audit
 
-Estado: **APROBADO / PROVED**, fuente `POWER_HIGHPASS_DIAGONAL_DENSITY_094.md` leída íntegramente. Revisor mapa; root aprobó independientemente. Papers intactos.
+Status: **APPROVED / PROVED**, source `POWER_HIGHPASS_DIAGONAL_DENSITY_094.md` read in full. Approved independently by two checks. Papers untouched.
 
-## Isometría y objeto
+## Isometry and object
 
-El factorCayley sqrt(2u)/(s+u) tiene módulo cuadrado2u/(u²+tau²), exactamente |dtheta/dtau|. ConPlancherel1/(2pi), el mapa esunitarioH²disco↔L²causal. Su basepolinomial corresponde aLaguerre; la completitud se apoya en elpuenteconfluente014, no en una afirmación de continuidadW. Vncorresponde aTODOSlos polinomiosgrado<n yQ=(1+z)/2. El factor2^-r no alteraSni distancias. La afirmación vale paraUNIÓNdeespacios, no suenvolventelineal ni un cono de sumas de bloques diferentes.
+The Cayley factor sqrt(2u)/(s+u) has squared modulus 2u/(u²+tau²), exactly |dtheta/dtau|. With Plancherel 1/(2pi), the map is unitary H² disc↔causal L². Its polynomial basis corresponds to Laguerre; completeness relies on the confluent bridge 014, not on a continuity claim for W. Vn corresponds to ALL polynomials of degree<n and Q=(1+z)/2. The factor 2^-r alters neither S nor distances. The statement holds for the UNION of spaces, not its linear span nor a cone of sums of different blocks.
 
-## Proyección y determinante
+## Projection and determinant
 
-ElGram binomial incluye correctamente los ceros fuera de rango y esPDpor la integralpositiva. Elvector de emparejamientos con1 esdelta0; por tanto la normacuadrada deproyección es(G^-1)00, cociente delminorprincipalDn−1/Dn. Dodgson tiene las esquinas desplazadas(a−1,b+1),(a+1,b−1) correctas. Los casos a0/b0triangulares fijan los bordes sin factoriales negativos. Elproducto cruzado se telescopa y el factorrestante es el cociente preciso de los factoresconsecutivos. Dn−2>0 conocido porinducción permite dividir sin circularidad. AsíA(n,r)es exacta, incluidon1/r0.
+The binomial Gram matrix correctly includes the out-of-range zeros and is PD by the positive integral. The vector of pairings with 1 is delta0; hence the squared norm of the projection is (G^-1)00, the quotient of principal minors Dn−1/Dn. Dodgson has the correct shifted corners (a−1,b+1),(a+1,b−1). The triangular cases a0/b0 fix the boundaries without negative factorials. The cross product telescopes and the remaining factor is the precise quotient of consecutive factors. Dn−2>0, known by induction, allows dividing without circularity. Thus A(n,r) is exact, including n1/r0.
 
-ElproductoA=prod(n+j)/(n+r+j) da las dos cotaslog con orientacióncorrecta. Elupper se declaraSóLOr>=1: evita0/0enn1r0; en r0A=1directamente. A→1siysólorsi r²/n→0 a lo largonden→infinito, distinguiendo r<n y r>=n.
+The product A=prod(n+j)/(n+r+j) gives the two log bounds with correct orientation. The upper bound is declared ONLY for r>=1: this avoids 0/0 at n1r0; at r0, A=1 directly. A→1 if and only if r²/n→0 along n→infinity, distinguishing r<n and r>=n.
 
-## Densidad de la UNIÓN
+## Density of the UNION
 
-La suficiencia aproxima cada monomio mediantez^mS_(n−m,r(n)) dentro del MISMO S_(n,r(n)); se pueden sumar sin salir delbloque. La estimación cuantitativa conserva la normaisométrica delshift. Subsucesiónr²/n→0 y densidadpolinomial dan aproximaciónporunúnicobloquepara cada objetivo, sinanidamiento.
+Sufficiency approximates each monomial through z^mS_(n−m,r(n)) inside the SAME S_(n,r(n)); they can be summed without leaving the block. The quantitative estimate keeps the isometric norm of the shift. A subsequence r²/n→0 and polynomial density give approximation by a single block for each target, without nesting.
 
-Para necesidad, laguniformedist(1,S)>=d en n>=N se deduce correctamente delupperlog. Las excepcionesfinitas, incluso r0quecontienen1, se tratan conH*=1+(d/2)zM, Mmayorquetodos sus gradosmáximos. zM es ortogonal aCADA bloqueexcepcional, asídist>=d/2; para n>=N la triangular daelmismobound. Se prueba nodensidaddeTODAlalaunión, no sólo unfallodeaproximar1fuera de excepciones.
+For necessity, the uniform gap dist(1,S)>=d for n>=N is correctly deduced from the log upper bound. The finite exceptions, even r0 ones containing 1, are handled with H*=1+(d/2)zM, M larger than all their maximal degrees. zM is orthogonal to EACH exceptional block, so dist>=d/2; for n>=N the triangle inequality gives the same bound. Non-density of the WHOLE union is proved, not just a failure to approximate 1 outside the exceptions.
 
-La distanciauniforme>1/2 para r>=n es correcta. Añadirfinitorangosconfluentesdelamisma tasa no reparaUNIÓN,con testigocausalCayleyde1+zM/4. Esto no incluyecontinuasvariacionesdetasa ni combinacioneslinealesinterbloque.
+The uniform distance>1/2 for r>=n is correct. Adding finitely many confluent ranges at the same rate does not repair the UNION, with the causal Cayley witness of 1+zM/4. This does not include continuous variations of rate nor inter-block linear combinations.
 
-## Diferencia y límites
+## Difference and limits
 
-Consultados los tresregistros,016/029/054/059/060/puentes. El objeto esL²SINpeso,tasafija,numeradorescompletos, condistanciaEXACTAyumbralr²/n.016tratabalanormacomúnponderada; no se reintentaese puente. NoWstrong: aun si launiónfueraL²densa, haríafaltacontinuidaddeLAformaCOMPLETA en una topologíasuficiente. La nodensidaddelconoactual tampoco excluye suenvolventelineal, cruces/controlfirmado/mezclas odescensocompensado. No nuevaW/T ni imposibilidadglobal.
+Consulted the three records, 016/029/054/059/060/bridges. The object is UNWEIGHTED L², fixed rate, complete numerators, with EXACT distance and threshold r²/n. 016 treated the common weighted norm; that bridge is not retried. No strong W: even if the union were L² dense, continuity of THE COMPLETE form in a sufficient topology would be needed. Non-density of the current cone does not exclude its linear span, crossings/signed control/mixtures or compensated descent either. No new W/T nor global impossibility.

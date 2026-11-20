@@ -1,232 +1,232 @@
-# Ronda 3, opción 1 — Familias de funcionales que ven la ventana y no son la modal theta (memo de selección)
+# Round 3, option 1 — Families of functionals that see the window and are not the theta modal one (selection memo)
 
-Objetivo (★): λ_A(T) ≥ 0 para todo T, con las definiciones de `../phase-211-sign-sandbox/STATEMENT_001.md`.
-Pregunta: ¿hay una familia por ventana, no recorrida, en la que la incidencia Σ_{d|k}Λ(d) = log k actúe sobre
-funcionales que no conmutan con traslaciones, de modo que la fuga que resta la truncación (`REVIEW_002_BC.md`,
-Lema B-1) quede compensada exactamente por un término de borde con signo, específico de Λ? En particular, ¿da la
-malla de Nyquist un cuadrado en los valores muestreados F̂(ω_k)?
-Notación: Q = 1_{I_T}, R = 1 − Q, U_a la traslación por a en ℝ, ω_k = πk/(2T) (P47 thm:nyq; el encargo escribe
-πj/T, que es la subred par), s_k = s_T(ω_k) con el símbolo truncado de thm:nyq, N = e^{2T}.
-Abreviaturas: «GRAM», «GLOBAL» como en `ROUND_002_B.md`. Etiquetas: PROVED / CITED / CONDITIONAL / ARGUED /
-OPEN / NO-GO / NUMÉRICO.
+Goal (★): λ_A(T) ≥ 0 for every T, with the definitions of `../phase-211-sign-sandbox/STATEMENT_001.md`.
+Question: is there a per-window family, not yet explored, in which the incidence Σ_{d|k}Λ(d) = log k acts on
+functionals that do not commute with translations, so that the leakage subtracted by truncation (`REVIEW_002_BC.md`,
+Lemma B-1) is compensated exactly by a boundary term with sign, specific to Λ? In particular, does the
+Nyquist mesh give a square in the sampled values F̂(ω_k)?
+Notation: Q = 1_{I_T}, R = 1 − Q, U_a the translation by a on ℝ, ω_k = πk/(2T) (P47 thm:nyq; the task writes
+πj/T, which is the even sublattice), s_k = s_T(ω_k) with the truncated symbol of thm:nyq, N = e^{2T}.
+Abbreviations: «GRAM», «GLOBAL» as in `ROUND_002_B.md`. Labels: PROVED / CITED / CONDITIONAL / ARGUED /
+OPEN / NO-GO / NUMERICAL.
 
-## Cotejo
+## Cross-check
 
-### Qué se buscó
+### What was searched
 
-grep (sin distinguir mayúsculas) en `03-research/` (todas las fases), `04-papers/47…/main.tex`, el grid, el
-crucigrama y los `ANNEX_*.md` de esta fase, por: truncated translation, traslaciones truncadas, compressed
+grep (case-insensitive) in `03-research/` (all phases), `04-papers/47…/main.tex`, the grid, the
+crossword and the `ANNEX_*.md` of this phase, for: truncated translation, traslaciones truncadas, compressed
 dilation, Wiener–Hopf, Toeplitz–Hankel, Nyquist, malla de Nyquist, omega_k, Shannon, prolate, Slepian, boundary
-jet, collar, leakage, fuga, time-limited, band-limited, Paley–Wiener, de Branges, reproducing kernel; y, dentro
-de los archivos con «Nyquist», por divisor / incidence / mcd / gcd / Λ∗1. Las mayores concentraciones: Nyquist
-en 60, 155, 159, 186, 193, 211; collar en 101, 121, 124, 161, 162, 163, 170; prolate/leakage en 72, 106, 114,
-116, 186, 199, 200, 211; de Branges/Paley–Wiener en 159, 160, 60, 64. Abiertos en primaria: P47 thm:nyq,
+jet, collar, leakage, fuga, time-limited, band-limited, Paley–Wiener, de Branges, reproducing kernel; and, within
+the files with «Nyquist», for divisor / incidence / mcd / gcd / Λ∗1. The largest concentrations: Nyquist
+in 60, 155, 159, 186, 193, 211; collar in 101, 121, 124, 161, 162, 163, 170; prolate/leakage in 72, 106, 114,
+116, 186, 199, 200, 211; de Branges/Paley–Wiener in 159, 160, 60, 64. Opened in primary: P47 thm:nyq,
 lem:nyq-sampling, prop:nyq-alias, prop:nyq-LK, prop:nearfree, rem:boxes, thm:coer-schur, eq:collar;
-R186_052 §§0–1, R186_053 §§0–1, R186_117/118 (veredictos); 204 `P1_BBSTAR_001.md` §3; 211 `ROUND_005_C.md`
-§§1, 5.2–5.3 y su ficha en `ANNEX_211_FILES_6.md` (con las de ROUND_001_C, ROUND_002_A, ROUND_005_A,
-ROUND_006_B); 191 `SPEC_B_SELECTED_FREQUENCY.md` §1. No abiertos en primaria (sólo por anexo o por el
-listado del grep): fases 60, 72, 114, 116 (salvo lo que cita `REVIEW_002_BC.md`), 121, 124, 155, 159, 161,
-170 (salvo por `RULES_AVOID.md` §I), 199, 200. Una búsqueda sin coincidencias no prueba novedad.
+R186_052 §§0–1, R186_053 §§0–1, R186_117/118 (verdicts); 204 `P1_BBSTAR_001.md` §3; 211 `ROUND_005_C.md`
+§§1, 5.2–5.3 and its entry in `ANNEX_211_FILES_6.md` (with those of ROUND_001_C, ROUND_002_A, ROUND_005_A,
+ROUND_006_B); 191 `SPEC_B_SELECTED_FREQUENCY.md` §1. Not opened in primary (only via annex or via the
+grep listing): phases 60, 72, 114, 116 (except what `REVIEW_002_BC.md` cites), 121, 124, 155, 159, 161,
+170 (except via `RULES_AVOID.md` §I), 199, 200. A search without hits does not prove novelty.
 
-### Inventario de familias por ventana ya escritas
+### Inventory of per-window families already written
 
-| # | Familia | Dónde | Qué dio | Por qué se detuvo |
+| # | Family | Where | What it gave | Why it stopped |
 |---|---|---|---|---|
-| 1 | Traslaciones truncadas término a término B_nF = Qτ_{log n}F − F | 204 `P1_BBSTAR_001` §3, Prop. 3.1 | 𝒲 = Σ(v_n/2)‖B_nF‖² + [arch − ⟨F,wF⟩], w ≥ ½Σv_n | resto cuesta la masa del peine (PROVED mód. prop:primeblind); lineal en Λ |
-| 2 | Traslaciones truncadas agrupadas en base fija | misma memo, §3 («grouped Cholesky of A_MU (b) / C8: indexed, not retried»); `REVIEW_002_BC` Lema B-1 | Q_B = clase (i) − fuga | resto no examinado; residuo K3 no agrupado: «clase vacía de candidatas», OPEN |
-| 3 | Palabras de traslaciones truncadas, Krylov del peine | 211 ROUND_005_A Lema 3.2, Prop. 3.3 (Π² = Qσ_v²Q − 𝔏*𝔏); ROUND_006_B Prop. 4.1–4.3 (halo/fuga, constante ½) | [Λ∗Λ indefinido] + [valor medio ≥ 0] − [fuga] | NO-GO de clase para j acotado y generadores v-homogéneos (cΛ actúa sólo por el haz) |
-| 4 | J_T comprimido, B_T^{−1/2}J_TB_T^{−1/2}, funcionales ⟨F,c⟩, ⟨F,s⟩ | R170_301 §§2–5 (vía `REVIEW_002_BC` B.1.5) | E_T = Γ_T + 2A_T I − J_T + 2\|c⟩⟨c\| | genérico; falsificador a₂ = 100 |
-| 5 | Muestreo de Nyquist: identidad diagonal en las muestras | P47 thm:nyq, prop:nyq-alias, prop:nyq-LK | a_T = (1/4T)Σ_k s_k\|F̂(ω_k)\|² | reformulación (N); 191 SPEC_B §1 la clasifica REF-D |
-| 6 | Álgebra de Nyquist: dos estructuras de espín, conos, Herglotz del peine muestreado | R186_052 Teor. 1.2, 2.1–2.4, 3.1–3.5, §4; R186_053 Teor. 2.1 | a_T = ½[s(D_per) + s(D_anti)]; cono circulante falla en toda ventana | «contact with the sign: none»; Bochner–Herglotz en ℤ es positividad en el círculo, no en la semicircunferencia; M₁ |
-| 7 | Bloque negativo de Nyquist y complemento de Schur | 211 ROUND_001_C Teor. 1, Prop. 4; ROUND_002_A Teor. F, Prop. M, Cor. M1–M2 | (L2′); muestra profunda ⟹ casi-coincidencias n′^{q_n} ≈ n^{q_{n′}} | ningún criterio sobre las muestras solas decide (Prop. 4); Schur sólo con piso NO-GO |
-| 8 | Respuestas del peine en la malla con Λ∗1 = log | 211 ROUND_005_C Prop. 2 (Πφ_q = φ_qψ_q, polinomios de Dirichlet torcidos por Λ en la malla), §5.3 | identidad de Selberg en las entradas cúbicas; cotas de factores de Euler locales | NO-GO de clase (§5.3(iv)): identidades del peine válidas en todo sistema de Beurling o para a_P, aplicadas sobre E_T |
-| 9 | Collar / operador de borde 𝓔_N | P47 eq:collar, thm:PCfinite, prop:GEgap; R170_840 Teor. 6.1, 862, 863, 870 (vía `RULES_AVOID` §I) | 𝓞B_N = D_N𝓞 − 𝓔_N | ley bilateral de collar NO-GO por composición lineal (840); pared de paridad (870); conversión de la cola en cuadrados: `ROUND_002_A` + `REVIEW_002_A` |
-| 10 | Jets de borde y de Tate | 121 atlas («two Tate jets»), R170_862–863, 211 LEDGER C21 (presupuesto de borde (EB_C), OPEN) | inercia de Pontryagin; presupuesto de borde | sin signo; (EB_C) OPEN |
-| 11 | Proyección sobre P_T, funcionales A, B, exponenciales de Tate a trozos | P47 thm:coer-schur, prop:AM; 211 ROUND_005_C Lema 1 (gauge de Tate) | reducción exacta a S_{T,k} finita | reformulación (L2) |
-| 12 | Prolatos / Slepian / Paley–Wiener / de Branges de la ventana | fases 72, 114, 155, 159, 186 (R186_044), 199, 200, 211 | sector prolato, kernels reproductores | `RULES_AVOID` C1: «Sonin, prolatos, semilocal como fuente de signo» cerrados |
-| 13 | Resonadores (tests ciegos a casi-coincidencias) | P47 prop:nearfree, rem:boxes | a_T(F_b) ≥ c_0‖F_b‖²; Σ_{d\|m}Λ(d) = log m entra en el test de Schur | barrera: no informan del signo (rem:boxes) |
+| 1 | Truncated translations term by term B_nF = Qτ_{log n}F − F | 204 `P1_BBSTAR_001` §3, Prop. 3.1 | 𝒲 = Σ(v_n/2)‖B_nF‖² + [arch − ⟨F,wF⟩], w ≥ ½Σv_n | remainder costs the mass of the comb (PROVED mod. prop:primeblind); linear in Λ |
+| 2 | Truncated translations grouped in a fixed basis | same memo, §3 («grouped Cholesky of A_MU (b) / C8: indexed, not retried»); `REVIEW_002_BC` Lemma B-1 | Q_B = class (i) − leakage | remainder not examined; ungrouped residue K3: «empty class of candidates», OPEN |
+| 3 | Words of truncated translations, Krylov of the comb | 211 ROUND_005_A Lemma 3.2, Prop. 3.3 (Π² = Qσ_v²Q − 𝔏*𝔏); ROUND_006_B Prop. 4.1–4.3 (halo/leakage, constant ½) | [Λ∗Λ indefinite] + [mean value ≥ 0] − [leakage] | class NO-GO for bounded j and v-homogeneous generators (cΛ acts only through the bundle) |
+| 4 | Compressed J_T, B_T^{−1/2}J_TB_T^{−1/2}, functionals ⟨F,c⟩, ⟨F,s⟩ | R170_301 §§2–5 (via `REVIEW_002_BC` B.1.5) | E_T = Γ_T + 2A_T I − J_T + 2\|c⟩⟨c\| | generic; falsifier a₂ = 100 |
+| 5 | Nyquist sampling: diagonal identity in the samples | P47 thm:nyq, prop:nyq-alias, prop:nyq-LK | a_T = (1/4T)Σ_k s_k\|F̂(ω_k)\|² | reformulation (N); 191 SPEC_B §1 classifies it REF-D |
+| 6 | Nyquist algebra: two spin structures, cones, Herglotz of the sampled comb | R186_052 Thm. 1.2, 2.1–2.4, 3.1–3.5, §4; R186_053 Thm. 2.1 | a_T = ½[s(D_per) + s(D_anti)]; circulant cone fails in every window | «contact with the sign: none»; Bochner–Herglotz on ℤ is positivity on the circle, not on the half-circle; M₁ |
+| 7 | Negative Nyquist block and Schur complement | 211 ROUND_001_C Thm. 1, Prop. 4; ROUND_002_A Thm. F, Prop. M, Cor. M1–M2 | (L2′); deep sample ⟹ near-coincidences n′^{q_n} ≈ n^{q_{n′}} | no criterion on the samples alone decides (Prop. 4); Schur only with floor NO-GO |
+| 8 | Responses of the comb on the mesh with Λ∗1 = log | 211 ROUND_005_C Prop. 2 (Πφ_q = φ_qψ_q, Dirichlet polynomials twisted by Λ on the mesh), §5.3 | Selberg identity in the cubic entries; bounds of local Euler factors | class NO-GO (§5.3(iv)): comb identities valid in every Beurling system or for a_P, applied on E_T |
+| 9 | Collar / boundary operator 𝓔_N | P47 eq:collar, thm:PCfinite, prop:GEgap; R170_840 Thm. 6.1, 862, 863, 870 (via `RULES_AVOID` §I) | 𝓞B_N = D_N𝓞 − 𝓔_N | two-sided collar law NO-GO by linear composition (840); parity wall (870); conversion of the tail into squares: `ROUND_002_A` + `REVIEW_002_A` |
+| 10 | Boundary and Tate jets | 121 atlas («two Tate jets»), R170_862–863, 211 LEDGER C21 (boundary budget (EB_C), OPEN) | Pontryagin inertia; boundary budget | without sign; (EB_C) OPEN |
+| 11 | Projection onto P_T, functionals A, B, piecewise Tate exponentials | P47 thm:coer-schur, prop:AM; 211 ROUND_005_C Lemma 1 (Tate gauge) | exact reduction to finite S_{T,k} | reformulation (L2) |
+| 12 | Prolates / Slepian / Paley–Wiener / de Branges of the window | phases 72, 114, 155, 159, 186 (R186_044), 199, 200, 211 | prolate sector, reproducing kernels | `RULES_AVOID` C1: «Sonin, prolates, semilocal as a source of sign» closed |
+| 13 | Resonators (tests blind to near-coincidences) | P47 prop:nearfree, rem:boxes | a_T(F_b) ≥ c_0‖F_b‖²; Σ_{d\|m}Λ(d) = log m enters the Schur test | barrier: they give no information on the sign (rem:boxes) |
 
-Sobre la pregunta concreta (incidencia en la malla de Nyquist): **está escrita** en 211 ROUND_005_C. Prop. 2
-identifica las respuestas del peine en la malla con polinomios de Dirichlet torcidos por Λ; §5.3(i) usa la
-multiplicatividad de forma no lineal (Selberg sobre las entradas cúbicas, cuyo corte depende sólo de N = mn) y
-§5.3(iv) cierra con NO-GO de clase el uso de Λ∗1 = log, Selberg y los factores de Euler locales como mecanismo
-de signo sobre E_T, porque esas identidades valen literalmente en sistemas de Beurling y para a_P, donde (SL_T)
-falla (ejemplo NUMÉRICO 0.24 y 0.51). La lectura de la identidad Σ_{n<N}(log n)n^{−s} = Σ_{dm<N}Λ(d)(dm)^{−s}
-evaluada en s_k = ½ + iω_k es thm:PCfinite (fila K1) en la malla.
+On the concrete question (incidence on the Nyquist mesh): **it is written** in 211 ROUND_005_C. Prop. 2
+identifies the responses of the comb on the mesh with Dirichlet polynomials twisted by Λ; §5.3(i) uses
+multiplicativity non-linearly (Selberg on the cubic entries, whose cutoff depends only on N = mn) and
+§5.3(iv) closes with a class NO-GO the use of Λ∗1 = log, Selberg and the local Euler factors as a sign
+mechanism on E_T, because those identities hold literally in Beurling systems and for a_P, where (SL_T)
+fails (NUMERICAL example 0.24 and 0.51). The reading of the identity Σ_{n<N}(log n)n^{−s} = Σ_{dm<N}Λ(d)(dm)^{−s}
+evaluated at s_k = ½ + iω_k is thm:PCfinite (row K1) on the mesh.
 
-### (1) Antecedente más cercano
+### (1) Closest antecedent
 
-Para la malla: 211 `ROUND_005_C.md` Prop. 2 y §5.3 (leído en primaria), con R186_052 §4 (el peine muestreado
-es de tipo positivo, sin signo) y P47 thm:nyq. Para las traslaciones truncadas agrupadas: 204 `P1_BBSTAR_001.md`
-§3 y `REVIEW_002_BC.md` Lema B-1. Para el borde: P47 eq:collar y R170_840 Teor. 6.1.
+For the mesh: 211 `ROUND_005_C.md` Prop. 2 and §5.3 (read in primary), with R186_052 §4 (the sampled comb
+is of positive type, without sign) and P47 thm:nyq. For the grouped truncated translations: 204 `P1_BBSTAR_001.md`
+§3 and `REVIEW_002_BC.md` Lemma B-1. For the boundary: P47 eq:collar and R170_840 Thm. 6.1.
 
-### (2) Objeto realmente nuevo
+### (2) Genuinely new object
 
-Ninguno que lleve signo. Lo que esta memo añade son tres restricciones PROVED (§1) que delimitan dónde puede
-estar un V_T por ventana y qué hace la fuga, y una descripción exacta de por qué la malla separa la incidencia
-de la ventana (§2). Con ellas, lo que faltaría escribir de un candidato es: una familia de funcionales acotados
-en la norma N_T (Lema E), soportados en el collar (T − log I, T) (Lema F), que acoplen nodos distintos de la
-malla con coeficientes que dependan de los valores Λ(n) del peine (Lema S); ℋ_T, V_T, ρ_T de tal familia no
-están escritos y no sé escribirlos.
+None that carries a sign. What this memo adds are three PROVED restrictions (§1) that delimit where a
+per-window V_T can be and what the leakage does, and an exact description of why the mesh separates the incidence
+from the window (§2). With them, what would remain to be written for a candidate is: a family of functionals bounded
+in the norm N_T (Lemma E), supported in the collar (T − log I, T) (Lemma F), that couple distinct nodes of the
+mesh with coefficients depending on the values Λ(n) of the comb (Lemma S); ℋ_T, V_T, ρ_T of such a family are not
+written and I do not know how to write them.
 
-### (3) Por qué el cambio evitaría la dificultad del antecedente
+### (3) Why the change would avoid the difficulty of the antecedent
 
-No la evita. La dificultad registrada en ROUND_005_C §5.3 es que las identidades del peine que se usan valen en
-todo sistema de Beurling y para a_P. La incidencia en la malla es exactamente una de ellas (Lema S: actúa nodo
-a nodo, como identidad de polinomios de Dirichlet en el mismo s_k). Pasar de E_T a la malla completa no cambia
-la clase de identidades.
+It does not avoid it. The difficulty recorded in ROUND_005_C §5.3 is that the comb identities used hold in
+every Beurling system and for a_P. The incidence on the mesh is exactly one of them (Lemma S: it acts node
+by node, as an identity of Dirichlet polynomials at the same s_k). Passing from E_T to the complete mesh does not change
+the class of identities.
 
-### (4) Identidad que conectaría con la positividad global
+### (4) Identity that would connect with global positivity
 
-Sólo reformulaciones ya registradas: thm:nyq (diagonal en las muestras), (L2′) de ROUND_001_C, y, para las
-traslaciones truncadas, Lema B-1. El Lema F de abajo dice qué parte de ρ_T es la obligación de signo: en el
-interior es una forma de símbolo s_T − σ_B sobre P_{T′}.
+Only reformulations already recorded: thm:nyq (diagonal in the samples), (L2′) of ROUND_001_C, and, for the
+truncated translations, Lemma B-1. Lemma F below says which part of ρ_T is the sign obligation: in the
+interior it is a symbol form s_T − σ_B on P_{T′}.
 
-### (5) Líneas que se rompen para cΛ y a_P
+### (5) Lines that break for cΛ and a_P
 
-No hay paso de signo, luego no hay línea de signo que señalar. La única línea que deja de ser cierta es la
-sustitución Σ_{d|n}a(d) = log n en el valor de cada nodo (c log n para cΛ; el logaritmo de la parte P-rugosa
-para a_P): rompe la identidad linealmente, como el separador; no rompe una desigualdad. Por `OBJECT_SPEC.md` §4
-la familia no está lista para construcción.
+There is no sign step, hence no sign line to point to. The only line that ceases to be true is the
+substitution Σ_{d|n}a(d) = log n in the value of each node (c log n for cΛ; the logarithm of the P-rough part
+for a_P): it breaks the identity linearly, like the separator; it does not break an inequality. By `OBJECT_SPEC.md` §4
+the family is not ready for construction.
 
-**Veredicto del cotejo: repetición para la malla con incidencia (ROUND_005_C §5.3; K1) y para las traslaciones
-truncadas agrupadas en base fija (P1_BBSTAR §3; B-1). Sin mecanismo nuevo.** Las piezas de §1 son cortas y
-completas; se escriben porque delimitan el terreno y no requieren derivación adicional.
+**Cross-check verdict: repetition for the mesh with incidence (ROUND_005_C §5.3; K1) and for the truncated
+translations grouped in a fixed basis (P1_BBSTAR §3; B-1). No new mechanism.** The pieces of §1 are short and
+complete; they are written because they delimit the terrain and require no additional derivation.
 
-## 1. Tres restricciones PROVED sobre un V_T por ventana
+## 1. Three PROVED restrictions on a per-window V_T
 
-En todo lo que sigue, (G) es a_T(F) = ‖V_TF‖² + ρ_T(F) sobre P_T ∩ 𝒟_T con ρ_T ≥ 0.
+In all that follows, (G) is a_T(F) = ‖V_TF‖² + ρ_T(F) on P_T ∩ 𝒟_T with ρ_T ≥ 0.
 
-**Norma de control.** Sea N_T(F)² := (1/2π)∫(1 + log(2 + |τ|))|F̂(τ)|² dτ. Existe C_T con
-|a_T(F)| ≤ C_T N_T(F)² en 𝒟_T. *Demostración.* |m(τ)| ≤ C + log(2 + |τ|) (asintótica de ψ; CITED, P47
-lem:mbounds) y |Σ_{log n<2T} v_n cos(τ log n)| ≤ 𝒜_T = Σ v_n; luego |s_T(τ)| ≤ C_T(1 + log(2 + |τ|)). ∎
+**Control norm.** Let N_T(F)² := (1/2π)∫(1 + log(2 + |τ|))|F̂(τ)|² dτ. There exists C_T with
+|a_T(F)| ≤ C_T N_T(F)² on 𝒟_T. *Proof.* |m(τ)| ≤ C + log(2 + |τ|) (asymptotics of ψ; CITED, P47
+lem:mbounds) and |Σ_{log n<2T} v_n cos(τ log n)| ≤ 𝒜_T = Σ v_n; hence |s_T(τ)| ≤ C_T(1 + log(2 + |τ|)). ∎
 
-**Lema E (NO-GO con clase, PROVED).** Si vale (G), entonces V_T es acotado de (P_T ∩ 𝒟_T, N_T) en ℋ_T. En
-particular ninguna componente escalar de V_T (ningún ⟨V_TF, e⟩, e ∈ ℋ_T) puede ser, sobre las funciones lisas
-hasta el borde, de la forma αF^{(j)}(T−) + (funcional N_T-acotado) con α ≠ 0, j ≥ 0; lo mismo en −T y en
-cualquier punto interior.
+**Lemma E (NO-GO with class, PROVED).** If (G) holds, then V_T is bounded from (P_T ∩ 𝒟_T, N_T) into ℋ_T. In
+particular no scalar component of V_T (no ⟨V_TF, e⟩, e ∈ ℋ_T) can be, on functions smooth
+up to the boundary, of the form αF^{(j)}(T−) + (N_T-bounded functional) with α ≠ 0, j ≥ 0; likewise at −T and at
+any interior point.
 
-*Demostración.* ‖V_TF‖² ≤ a_T(F) ≤ C_T N_T(F)² por ρ_T ≥ 0. Para la segunda parte, sea φ ∈ C^∞[0,∞) con
-soporte en [0,1] y φ^{(j)}(0) = (−1)^j, y g_λ(t) := λ^{−j}φ(λ(T − t)) en I_T. Entonces g_λ^{(j)}(T−) = 1, y
-|ĝ_λ(τ)| ≤ λ^{−j−1}‖φ‖_1 para |τ| ≤ λ, |ĝ_λ(τ)| ≤ Cλ^{−j}/|τ| para |τ| > λ (una integración por partes: el
-término de borde en T es λ^{−j}φ(0) y ‖g_λ′‖_1 = λ^{−j}‖φ′‖_1), de modo que N_T(g_λ)² ≤ C(λ^{−2j−1} log λ) → 0. Fijense h_1, h_2 ∈ C_c^∞(−T, 0)
-con det[A(h_i), B(h_i)] ≠ 0 (existen porque e^{t/2} y e^{−t/2} son linealmente independientes en (−T,0)) y
-F_λ := g_λ − a_λh_1 − b_λh_2 ∈ P_T con |a_λ| + |b_λ| ≤ C(|A(g_λ)| + |B(g_λ)|) ≤ Cλ^{−j−1}. Entonces
-N_T(F_λ) → 0 (N_T es una norma) y F_λ^{(j)}(T−) = 1. Si ⟨V_TF, e⟩ = αF^{(j)}(T−) + β(F) con β N_T-acotado,
-|α| ≤ |⟨V_TF_λ, e⟩| + |β(F_λ)| ≤ (C_T^{1/2}‖e‖ + ‖β‖)N_T(F_λ) → 0, contradicción. ∎
+*Proof.* ‖V_TF‖² ≤ a_T(F) ≤ C_T N_T(F)² by ρ_T ≥ 0. For the second part, let φ ∈ C^∞[0,∞) with
+support in [0,1] and φ^{(j)}(0) = (−1)^j, and g_λ(t) := λ^{−j}φ(λ(T − t)) on I_T. Then g_λ^{(j)}(T−) = 1, and
+|ĝ_λ(τ)| ≤ λ^{−j−1}‖φ‖_1 for |τ| ≤ λ, |ĝ_λ(τ)| ≤ Cλ^{−j}/|τ| for |τ| > λ (one integration by parts: the
+boundary term at T is λ^{−j}φ(0) and ‖g_λ′‖_1 = λ^{−j}‖φ′‖_1), so that N_T(g_λ)² ≤ C(λ^{−2j−1} log λ) → 0. Fix h_1, h_2 ∈ C_c^∞(−T, 0)
+with det[A(h_i), B(h_i)] ≠ 0 (they exist because e^{t/2} and e^{−t/2} are linearly independent on (−T,0)) and
+F_λ := g_λ − a_λh_1 − b_λh_2 ∈ P_T with |a_λ| + |b_λ| ≤ C(|A(g_λ)| + |B(g_λ)|) ≤ Cλ^{−j−1}. Then
+N_T(F_λ) → 0 (N_T is a norm) and F_λ^{(j)}(T−) = 1. If ⟨V_TF, e⟩ = αF^{(j)}(T−) + β(F) with β N_T-bounded,
+|α| ≤ |⟨V_TF_λ, e⟩| + |β(F_λ)| ≤ (C_T^{1/2}‖e‖ + ‖β‖)N_T(F_λ) → 0, contradiction. ∎
 
-Clase declarada: V_T con alguna componente que no es N_T-acotada sobre P_T ∩ 𝒟_T. Consecuencia: los
-«funcionales de borde» admisibles son promedios de collar ∫F φ con φ ∈ L² (en rigor, con φ̂ en el dual de N_T),
-no valores ni jets. Es la contrapartida por ventana de R-cont (que no aplica aquí: `OBJECT_SPEC.md` §3 la
-restringe al portador de escalas enteras de A_0 y a la holomorfía de z ↦ P_z; L²(I_T) con la malla fija no es
-ese caso). Las muestras F̂(ω_k) sí son N_T-acotadas (|F̂(ω)|² ≤ 2T‖F‖²), luego el Lema E no las excluye.
+Declared class: V_T with some component that is not N_T-bounded on P_T ∩ 𝒟_T. Consequence: the admissible
+«boundary functionals» are collar averages ∫F φ with φ ∈ L² (strictly, with φ̂ in the dual of N_T),
+not values or jets. It is the per-window counterpart of R-cont (which does not apply here: `OBJECT_SPEC.md` §3
+restricts it to the integer-scale carrier of A_0 and to the holomorphy of z ↦ P_z; L²(I_T) with the fixed mesh is not
+that case). The samples F̂(ω_k) are N_T-bounded (|F̂(ω)|² ≤ 2T‖F‖²), hence Lemma E does not exclude them.
 
-**Lema F (localización de la fuga, PROVED).** Sea ℓ_i = x_iQU_{log i}, x_i ∈ ℂ, con x_i = 0 para i > I, y
-Q_B como en `REVIEW_002_BC.md` Lema B-1 (σ_B(τ) = Σ_dΛ(d)|Σ_{d|i}x_i i^{iτ}|²). Sea T′ := T − ½log I > 0. Si
-a_T = Q_B + ρ_T con ρ_T ≥ 0 sobre P_T, entonces para todo F ∈ P_{T′} ∩ 𝒟_{T′}
+**Lemma F (localization of the leakage, PROVED).** Let ℓ_i = x_iQU_{log i}, x_i ∈ ℂ, with x_i = 0 for i > I, and
+Q_B as in `REVIEW_002_BC.md` Lemma B-1 (σ_B(τ) = Σ_dΛ(d)|Σ_{d|i}x_i i^{iτ}|²). Let T′ := T − ½log I > 0. If
+a_T = Q_B + ρ_T with ρ_T ≥ 0 on P_T, then for every F ∈ P_{T′} ∩ 𝒟_{T′}
 
     a_{T′}(F) ≥ (1/2π)∫σ_B(τ)|F̂(τ)|² dτ.
 
-En particular, toda sucesión casi-minimizante de a_{T′} sobre P_{T′} (‖F‖ = 1) cumple
+In particular, every almost-minimizing sequence of a_{T′} on P_{T′} (‖F‖ = 1) satisfies
 (1/2π)∫σ_B|F̂|² ≤ λ_A(T′) + o(1).
 
-*Demostración.* Para G ∈ P_{T′}, sea F := U_{−c}G con c = ½log I (soporte en (−T, T − log I)). (a) P_T: A(F) =
-e^{−c/2}A(G), B(F) = e^{c/2}B(G), luego F ∈ P_T. (b) Fuga nula: para i ≤ I, U_{log i}F tiene soporte en
-(−T + log i, T − log I + log i) ⊂ I_T, así RΣ_{d|i}x_iU_{log i}F = 0 y, por Lema B-1, Q_B(F) =
-(1/2π)∫σ_B|F̂|². (c) a_T es invariante por traslación (forma de símbolo), y sobre L²(I_{T′}) coincide con
-a_{T′}: los términos del peine con 2T′ ≤ log n < 2T aportan v_n Re c_G(log n) = 0 porque sop c_G ⊂ [−2T′, 2T′]
-y c_G(±2T′) = 0. (d) |F̂| = |Ĝ|. Entonces a_{T′}(G) = a_T(F) = Q_B(F) + ρ_T(F) ≥ (1/2π)∫σ_B|Ĝ|². ∎
+*Proof.* For G ∈ P_{T′}, let F := U_{−c}G with c = ½log I (support in (−T, T − log I)). (a) P_T: A(F) =
+e^{−c/2}A(G), B(F) = e^{c/2}B(G), hence F ∈ P_T. (b) Zero leakage: for i ≤ I, U_{log i}F has support in
+(−T + log i, T − log I + log i) ⊂ I_T, so RΣ_{d|i}x_iU_{log i}F = 0 and, by Lemma B-1, Q_B(F) =
+(1/2π)∫σ_B|F̂|². (c) a_T is translation invariant (symbol form), and on L²(I_{T′}) it coincides with
+a_{T′}: the comb terms with 2T′ ≤ log n < 2T contribute v_n Re c_G(log n) = 0 because sop c_G ⊂ [−2T′, 2T′]
+and c_G(±2T′) = 0. (d) |F̂| = |Ĝ|. Then a_{T′}(G) = a_T(F) = Q_B(F) + ρ_T(F) ≥ (1/2π)∫σ_B|Ĝ|². ∎
 
-Lectura. En la familia de traslaciones truncadas agrupadas, la fuga sólo actúa sobre la masa de F en el collar
-(T − log I, T). Sobre el interior, (G) exige una positividad de la forma de símbolo s_T − σ_B ≤ s_T en la
-ventana T′, es decir (★) en T′ con margen (1/2π)∫σ_B|F̂|² ≥ 0 (cf. Lema B-2). Como λ_A(T′) ≤ 4·10⁹T′e^{−15.449T′}
-para T′ ≥ 1 (P47 cor:margin1, CITED), los cuadrados agrupados tienen que anularse casi exactamente sobre los
-casi-minimizantes de todas las ventanas más cortas. Si además los x_i no dependen de T y se exige (G) para
-todo T (O5), esa condición vale para todo T′ grande. No es imposibilidad: no excluye σ_B pequeño donde
-|F̂*|² vive. Respuesta a la pregunta del encargo: una compensación «fuga = término de borde con signo» sólo
-puede ocurrir en el collar de longitud log I junto al borde derecho (y, simétricamente, con traslaciones
-negativas, junto al izquierdo); fuera de él no hay ni fuga ni borde.
+Reading. In the family of grouped truncated translations, the leakage acts only on the mass of F in the collar
+(T − log I, T). On the interior, (G) requires a positivity of the symbol form s_T − σ_B ≤ s_T in the
+window T′, that is (★) at T′ with margin (1/2π)∫σ_B|F̂|² ≥ 0 (cf. Lemma B-2). Since λ_A(T′) ≤ 4·10⁹T′e^{−15.449T′}
+for T′ ≥ 1 (P47 cor:margin1, CITED), the grouped squares must vanish almost exactly on the
+almost-minimizers of all shorter windows. If in addition the x_i do not depend on T and (G) is required for
+every T (O5), that condition holds for every large T′. It is not an impossibility: it does not exclude σ_B small where
+|F̂*|² lives. Answer to the question of the task: a compensation «leakage = boundary term with sign» can only
+occur in the collar of length log I next to the right boundary (and, symmetrically, with negative
+translations, next to the left one); outside it there is neither leakage nor boundary.
 
-**Lema S (la incidencia en la malla es local en el nodo, PROVED).** (i) La operación n ↦ dn multiplica el modo
-e^{iω_k log n} por d^{iω_k}: sobre las muestras es diag(d^{iω_k}), restricción a la malla del multiplicador
-e^{iτ log d}, es decir la rotación del círculo 𝕋_{4T} por log d. (ii) Para 0 ≤ a < 2T y F ∈ L²(I_T),
-QU_a^{𝕋}F = QU_aF (la parte que da la vuelta cae en (−2T, a − 3T) ⊂ ℝ∖I_T). (iii) La identidad
-Σ_{n<N}(log n)n^{−s} = Σ_{dm<N}Λ(d)d^{−s}m^{−s} en s = s_k relaciona valores en el mismo nodo k. (iv) En la
-identidad thm:nyq a_T es diagonal en las muestras, y lo que acopla nodos distintos es sólo la restricción de que
-(F̂(ω_k))_k esté en la imagen de la compresión a la semicircunferencia, una matriz de Toeplitz sin Λ (núcleo
-sinc; R186_053 Lema 1.1). *Demostración.* (i), (iii): directas. (ii): U_a^{𝕋}F tiene soporte en (−T + a, T + a)
-módulo 4T; los puntos de (2T, T + a) pasan a (−2T, a − 3T) y a − 3T < −T. (iv): lem:nyq-sampling (i)–(ii). ∎
+**Lemma S (the incidence on the mesh is local at the node, PROVED).** (i) The operation n ↦ dn multiplies the mode
+e^{iω_k log n} by d^{iω_k}: on the samples it is diag(d^{iω_k}), the restriction to the mesh of the multiplier
+e^{iτ log d}, that is the rotation of the circle 𝕋_{4T} by log d. (ii) For 0 ≤ a < 2T and F ∈ L²(I_T),
+QU_a^{𝕋}F = QU_aF (the part that wraps around falls in (−2T, a − 3T) ⊂ ℝ∖I_T). (iii) The identity
+Σ_{n<N}(log n)n^{−s} = Σ_{dm<N}Λ(d)d^{−s}m^{−s} at s = s_k relates values at the same node k. (iv) In the
+identity thm:nyq a_T is diagonal in the samples, and what couples distinct nodes is only the constraint that
+(F̂(ω_k))_k be in the image of the compression to the half-circle, a Toeplitz matrix without Λ (sinc
+kernel; R186_053 Lemma 1.1). *Proof.* (i), (iii): direct. (ii): U_a^{𝕋}F has support in (−T + a, T + a)
+modulo 4T; the points of (2T, T + a) pass to (−2T, a − 3T) and a − 3T < −T. (iv): lem:nyq-sampling (i)–(ii). ∎
 
-**Consecuencias de los lemas (PROVED, una línea cada una).**
-- Si V_T es un multiplicador en el índice de muestras, (V_TF)_k = x_kF̂(ω_k), entonces ρ_T tiene muestras
-  s_k − |x_k|² ≤ s_k: es el Lema B-2 en el círculo. (Por thm:nyq, ρ_T(F) = (1/4T)Σ(s_k − |x_k|²)|F̂(ω_k)|².)
-- Por (i)–(ii), toda familia construida con la incidencia actuando sobre los modos y con Q está en el álgebra
-  generada por multiplicadores del círculo y traslaciones truncadas de la recta: es la de las filas 2–3 del
-  inventario, no una familia nueva.
-- Toda componente de V_T que factorice por (A(F), B(F)) es nula sobre P_T (proyección sobre P_T, fila 11).
-- Una incidencia sobre los índices de nodo (cuadrados Σ_dΛ(d)|Σ_{d|j}x_jF̂(ω_j)|², es decir [log mcd(j,l)] en
-  la malla) no contiene los pesos v_n del peine: es la misma para Λ, cΛ, a_P y cada modelo de la batería, y toda
-  la dependencia en el peine queda en ρ_T. No hay relación aritmética entre el índice j y los n del peine (la
-  fase es πj log n/(2T)). Es una energía auxiliar sin mecanismo de signo (`RULES_AVOID.md` A4); no la excluyo.
+**Consequences of the lemmas (PROVED, one line each).**
+- If V_T is a multiplier in the sample index, (V_TF)_k = x_kF̂(ω_k), then ρ_T has samples
+  s_k − |x_k|² ≤ s_k: it is Lemma B-2 on the circle. (By thm:nyq, ρ_T(F) = (1/4T)Σ(s_k − |x_k|²)|F̂(ω_k)|².)
+- By (i)–(ii), every family built with the incidence acting on the modes and with Q is in the algebra
+  generated by multipliers of the circle and truncated translations of the line: it is that of rows 2–3 of the
+  inventory, not a new family.
+- Every component of V_T that factors through (A(F), B(F)) is zero on P_T (projection onto P_T, row 11).
+- An incidence on the node indices (squares Σ_dΛ(d)|Σ_{d|j}x_jF̂(ω_j)|², that is [log mcd(j,l)] on
+  the mesh) does not contain the weights v_n of the comb: it is the same for Λ, cΛ, a_P and each model of the battery, and all
+  the dependence on the comb remains in ρ_T. There is no arithmetic relation between the index j and the n of the comb (the
+  phase is πj log n/(2T)). It is an auxiliary energy without sign mechanism (`RULES_AVOID.md` A4); I do not exclude it.
 
-## 2. Frente a O6, prop:nearfree y K1
+## 2. Against O6, prop:nearfree and K1
 
-- **O6.** Las muestras ven las casi-coincidencias: una muestra profunda s_k ≪ 0 exige ω_k log n ≈ 0 mod 2π para
-  muchos n a la vez, lo que fuerza n′^{q_n} ≈ n^{q_{n′}} (211 ROUND_002_A Cor. M1–M2, CITED). Pero las ven en el
-  valor s_k, no en un acoplamiento entre nodos (Lema S(iv)); por eso un V_T diagonal en las muestras no aporta
-  nada (consecuencia 1) y uno no diagonal acopla nodos sólo a través de la matriz sin Λ o de una aritmética del
-  índice sin peine.
-- **prop:nearfree.** Los resonadores tienen a_T ≥ c_0‖F‖² con Σ_{d|m}Λ(d) = log m usado en un test de Schur
-  (P47, prueba de prop:nearfree; rem:boxes): uso lineal y acotado del separador, sin signo sobre los vectores
-  que ven Near. Una familia por ventana útil tendría que vivir donde prop:nearfree no da nada: vectores
-  N_T-acotados (Lema E) con masa en el collar (Lema F) que vean casi-coincidencias. No tengo tal familia.
-- **K1.** La lectura en la malla de la incidencia hiperbólica es thm:PCfinite en s_k; su residuo es el de K1 y
-  K1′ (cola H_{M,N} sumada con E_N y Tate), sin objeto.
+- **O6.** The samples see the near-coincidences: a deep sample s_k ≪ 0 requires ω_k log n ≈ 0 mod 2π for
+  many n at once, which forces n′^{q_n} ≈ n^{q_{n′}} (211 ROUND_002_A Cor. M1–M2, CITED). But they see them in the
+  value s_k, not in a coupling between nodes (Lemma S(iv)); that is why a V_T diagonal in the samples contributes
+  nothing (consequence 1) and a non-diagonal one couples nodes only through the matrix without Λ or through an arithmetic of the
+  index without comb.
+- **prop:nearfree.** The resonators have a_T ≥ c_0‖F‖² with Σ_{d|m}Λ(d) = log m used in a Schur test
+  (P47, proof of prop:nearfree; rem:boxes): linear and bounded use of the separator, without sign on the vectors
+  that see Near. A useful per-window family would have to live where prop:nearfree gives nothing:
+  N_T-bounded vectors (Lemma E) with mass in the collar (Lemma F) that see near-coincidences. I have no such family.
+- **K1.** The reading on the mesh of the hyperbolic incidence is thm:PCfinite at s_k; its residue is that of K1 and
+  K1′ (tail H_{M,N} added to E_N and Tate), without object.
 
-## Resultado
+## Result
 
-**Sin mecanismo nuevo** (repetición de 211 ROUND_005_C §5.3, de K1 y de P1_BBSTAR §3 / Lema B-1). Además, una
-pieza **NO-GO con clase PROVED** (Lema E: componentes no N_T-acotadas, en particular valores y jets de borde) y
-dos piezas **PROVED** sin signo (Lema F: la fuga de traslaciones truncadas agrupadas sólo actúa en un collar y el
-resto interior es (★) en T′ con margen; Lema S: la incidencia en la malla es local en el nodo y su álgebra con Q
-es la de traslaciones truncadas).
+**No new mechanism** (repetition of 211 ROUND_005_C §5.3, of K1 and of P1_BBSTAR §3 / Lemma B-1). In addition, one
+**NO-GO piece with PROVED class** (Lemma E: non-N_T-bounded components, in particular boundary values and jets) and
+two **PROVED** pieces without sign (Lemma F: the leakage of grouped truncated translations acts only in a collar and the
+interior remainder is (★) at T′ with margin; Lemma S: the incidence on the mesh is local at the node and its algebra with Q
+is that of truncated translations).
 
-## Qué se probó
+## What was proved
 
-- Lema E (NO-GO, clase: V_T con alguna componente no acotada en N_T sobre P_T ∩ 𝒟_T).
-- Lema F (localización de la fuga; condición necesaria sobre casi-minimizantes de ventanas más cortas).
-- Lema S y sus cuatro consecuencias (multiplicadores de muestras ⟹ resto con muestras ≤ s_k; la incidencia en
-  los modos no genera una familia nueva; funcionales de Tate nulos en P_T; incidencia en índices de nodo
-  independiente del peine).
-Nada de esto es avance de signo.
+- Lemma E (NO-GO, class: V_T with some component not bounded in N_T on P_T ∩ 𝒟_T).
+- Lemma F (localization of the leakage; necessary condition on almost-minimizers of shorter windows).
+- Lemma S and its four consequences (sample multipliers ⟹ remainder with samples ≤ s_k; the incidence on
+  the modes does not generate a new family; Tate functionals zero on P_T; incidence on node indices
+  independent of the comb).
+None of this is sign progress.
 
-## Qué falló y por qué
+## What failed and why
 
-- En la malla, la incidencia de divisores vive en el valor de cada nodo y la ventana en una matriz sin Λ que
-  acopla nodos; no encontré operación que las junte en un cuadrado, y la que junta valores en un nodo ya fue
-  usada y cerrada por la clase Beurling/a_P (ROUND_005_C §5.3(iv)).
-- Los términos de borde puntuales están prohibidos (Lema E); los de collar son lineales en F y, como componentes
-  de V_T, aportan cuadrados sin signo propio; la ley bilateral de collar por composición lineal está cerrada
-  (R170_840 Teor. 6.1, CITED vía `RULES_AVOID` I6).
-- La fuga del Lema B-1 sólo ayuda en el collar (Lema F); en el interior el resto exige más que (★) en T′.
+- On the mesh, the divisor incidence lives in the value of each node and the window in a matrix without Λ that
+  couples nodes; I found no operation that joins them into a square, and the one that joins values at a node was already
+  used and closed by the Beurling/a_P class (ROUND_005_C §5.3(iv)).
+- Pointwise boundary terms are forbidden (Lemma E); collar ones are linear in F and, as components
+  of V_T, contribute squares without their own sign; the two-sided collar law by linear composition is closed
+  (R170_840 Thm. 6.1, CITED via `RULES_AVOID` I6).
+- The leakage of Lemma B-1 helps only in the collar (Lemma F); in the interior the remainder requires more than (★) at T′.
 
-## Qué queda NO excluido
+## What remains NOT excluded
 
-- Funcionales de collar N_T-acotados con coeficientes que dependan de los valores Λ(n) (fuera de la hipótesis
-  «ℓ_i independientes de los pesos»); ninguno escrito.
-- Acoplamientos no diagonales entre muestras de Nyquist con coeficientes que dependan del peine (no la
-  aritmética del índice de nodo, que es independiente de él); ninguno escrito.
-- Traslaciones truncadas agrupadas con x_i elegidos de modo que σ_B sea pequeño sobre los casi-minimizantes
-  (Lema F lo exige, no lo prohíbe), con la compensación de la fuga en el collar; sin objeto.
-- Familias sobre 𝔸_M y la formulación (S); compensación conjunta D + E (GLOBAL); el residuo K3 no agrupado de
-  P1_BBSTAR (clase vacía de candidatas, no NO-GO).
-- Las fases listadas como no abiertas en primaria en el Cotejo.
+- N_T-bounded collar functionals with coefficients depending on the values Λ(n) (outside the hypothesis
+  «ℓ_i independent of the weights»); none written.
+- Non-diagonal couplings between Nyquist samples with coefficients depending on the comb (not the
+  arithmetic of the node index, which is independent of it); none written.
+- Grouped truncated translations with x_i chosen so that σ_B is small on the almost-minimizers
+  (Lemma F requires it, does not forbid it), with the compensation of the leakage in the collar; without object.
+- Families on 𝔸_M and the formulation (S); joint compensation D + E (GLOBAL); the ungrouped residue K3 of
+  P1_BBSTAR (empty class of candidates, not NO-GO).
+- The phases listed as not opened in primary in the Cross-check.
 
-## Siguiente paso concreto
+## Concrete next step
 
-Ninguno dentro de esta opción con objeto. Para el registro (esta memo no edita otros archivos): fila de ledger
-«K2″, familias por ventana distintas de la modal (traslaciones truncadas agrupadas, Nyquist, borde, P_T): sin
-mecanismo nuevo; NO-GO PROVED para componentes no N_T-acotadas (valores y jets de borde); fuga localizada en el
-collar (Lema F); incidencia en la malla local en el nodo (Lema S)». Condición de reapertura: un acoplamiento entre
-nodos de Nyquist, o un funcional de collar N_T-acotado, cuyos coeficientes dependan de los valores Λ(n) y cuya
-identidad con a_T no valga en un sistema de Beurling ni para a_P, señalando la línea.
+None within this option with an object. For the record (this memo does not edit other files): ledger row
+«K2″, per-window families different from the modal one (grouped truncated translations, Nyquist, boundary, P_T): no
+new mechanism; NO-GO PROVED for non-N_T-bounded components (boundary values and jets); leakage localized in the
+collar (Lemma F); incidence on the mesh local at the node (Lemma S)». Reopening condition: a coupling between
+Nyquist nodes, or an N_T-bounded collar functional, whose coefficients depend on the values Λ(n) and whose
+identity with a_T does not hold in a Beurling system nor for a_P, pointing out the line.

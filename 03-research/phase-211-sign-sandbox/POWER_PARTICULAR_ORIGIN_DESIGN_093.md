@@ -1,28 +1,28 @@
-# POWER_PARTICULAR_ORIGIN_DESIGN_093 — Diseño previo y decisión de un único signo particular
+# POWER_PARTICULAR_ORIGIN_DESIGN_093 — Prior design and decision of a single particular sign
 
-**Auditoría independiente:** diseño, literal y fuente final aprobados en `POWER_PARTICULAR_ORIGIN_AUDIT_093.md`; constructor37905 exit0/PASS, reproducción independiente root94506 exit0/FULL PASS128 y hash coincidente.
+**Independent audit:** design, literal and final source approved in `POWER_PARTICULAR_ORIGIN_AUDIT_093.md`; run37905 exit0/PASS, independent reproduction94506 exit0/FULL PASS128 and matching hash.
 
-Estado: **PROVED PUNTUAL por constructor exit0/PASS; auditoría matemática del diseño y literal aprobada antes de la corrida, lectura final pendiente.** Todos los parámetros siguientes fueron fijados antes de ejecutar. Se conservan el diseño previo y sus condiciones; el resultado está en§6. Papers intactos.
+Status: **PROVED POINTWISE by run exit0/PASS; mathematical audit of design and literal approved before the run, final reading pending.** All the following parameters were fixed before execution. The prior design and its conditions are kept; the result is in§6. Papers untouched.
 
-## 1. Objeto específico y antecedentes
+## 1. Specific object and antecedents
 
-Consultados las reglas del proyecto, README ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D, y073/077/078/087/089/090/092.092 descarta una eliminación universal globalmente invertible; no decide el signo para K particular. Aquí se comprueba una condición necesaria de ese signo en UN punto, utilizando la selección global de K por sus dos bordes. No otro pivote, parámetro o malla de signos.
+Consulted the project rules, README ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D, and073/077/078/087/089/090/092.092 discards a universal globally invertible elimination; it does not decide the sign for particular K. Here a necessary condition of that sign is checked at ONE point, using the global selection of K by its two boundary conditions. No other pivot, parameter or sign grid.
 
-Con w=tPhi,v=−Phi', a=M'(0),c=1/a, K''=v−cw,K(0)=K(infinito)=0, escribir Phi/Phi0=sum a_j t^(2j). Entonces
+With w=tPhi,v=−Phi', a=M'(0),c=1/a, K''=v−cw,K(0)=K(infinity)=0, write Phi/Phi0=sum a_j t^(2j). Then
 
     W(w,v,w'',K)=64 Phi0^4 t^10[Dpart+O(t²)],
     Dpart=P kappa+Qc+R,
     kappa=K'(0)/Phi0=c tau0−1,
     tau0=I1/Phi0, a=I2/I0, Ir=integral_0^infinito t^r Phi(t)dt.
 
-Las columnas de la matriz que determina Dpart tienen las filas
+The columns of the matrix determining Dpart have the rows
 
     [1,−2a1,6a1,kappa],
     [a1,−4a2,20a2,−(2a1+c)/6],
     [2a2,−12a3,84a3,−(4a2+ca1)/10],
     [6a3,−48a4,432a4,−(6a3+ca2)/7].
 
-Se reutilizan los intervalos racionales de a1,...,a4 y Phi0 de087, sin modificar su script. Los coeficientes exactos son
+The rational intervals of a1,...,a4 and Phi0 from087 are reused, without modifying its script. The exact coefficients are
 
     P=192(6a1a3a4−8a2²a4+3a2a3²),
     Q=(16/35)(126a1³a4−51a1²a2a3+10a1a2³
@@ -30,83 +30,83 @@ Se reutilizan los intervalos racionales de a1,...,a4 y Phi0 de087, sin modificar
     R=−(192/35)(28a1²a2a4−20a1²a3²+2a1a2²a3
           −70a1a3a4+56a2²a4−15a2a3²).
 
-Se decidirá el signo de
+The sign of
 
     NUM=Q Phi0 I0+P I1 I0+(R−P)Phi0 I2
-       =Phi0 I0 a Dpart.
+       =Phi0 I0 a Dpart
 
-El factor es positivo. El assert final aceptará NUM>0 **o** NUM<0; no se predetermina el signo. Si no separa0, el resultado será inconcluso con estos parámetros, sin ajustes exploratorios.
+will be decided. The factor is positive. The final assert will accept NUM>0 **or** NUM<0; the sign is not predetermined. If it does not separate0, the result will be inconclusive with these parameters, without exploratory adjustments.
 
-## 2. Parámetros fijados y bound complejo uniforme
+## 2. Fixed parameters and uniform complex bound
 
-Integrar sólo [0,2] con128paneles de longitud1/64, semiancho h=1/128, centros dyádicos(2j+1)/128,j=0,...,127. Precisión512bits, Taylor grado64, cap65,16modos theta. Radio complejo de Cauchy r=1/32, razón h/r=1/4.
+Integrate only [0,2] with128 panels of length1/64, half-width h=1/128, dyadic centres(2j+1)/128,j=0,...,127. Precision512bits, Taylor degree64, cap65,16 theta modes. Complex Cauchy radius r=1/32, ratio h/r=1/4.
 
-En los discos alrededor de esos centros, usar el recinto mayor
+On the discs around those centres, use the larger region
 
     −1/32<=Re t<=65/32, |Im t|<=1/32, |t|<3.
 
-Con y=pi exp(2t), e<3,pi<4, exp(−1/16)>15/16 y cos(1/16)>511/512:
+With y=pi exp(2t), e<3,pi<4, exp(−1/16)>15/16 and cos(1/16)>511/512:
 
     Re y>3(15/16)(511/512)>5/2,
     |y|<4 exp(65/16)<4*256=1024,
     |exp(5t/2)|<exp(325/64)<exp(6)<3^6<1024.
 
-Para cada modo theta
+For each theta mode
 
     Phi_m=pi exp(5t/2)m²(2m²y−3)exp(−m²y),
 
-queda |Phi_m|<2^24 m^4 8^(−m²), pues exp(5/2)>8 (exp2>7,exp(1/2)>3/2). La suma de m^4 8^(−m²) es menor que1/4: primer término1/8 y todas las razones son menores que1/2. Así |Phi|<2^22 y para r=0,1,2,
+one has |Phi_m|<2^24 m^4 8^(−m²), since exp(5/2)>8 (exp2>7,exp(1/2)>3/2). The sum of m^4 8^(−m²) is less than1/4: first term1/8 and all ratios are less than1/2. Thus |Phi|<2^22 and for r=0,1,2,
 
     |t^r Phi(t)|<9*2^22<10^8.
 
-La cola COMPLETA de modos m>=17 tiene bound
+The COMPLETE tail of modes m>=17 has bound
 
     EPS=2^25*17^4/8^289,
 
-por razón consecutiva <=(18/17)^4/8^35<1/2. En cada centro se añaden errores outward EPS*32^k a TODOS los coeficientes Phi[k],k=0,...,64, ANTES de multiplicar por t^r.
+by consecutive ratio <=(18/17)^4/8^35<1/2. At each centre outward errors EPS*32^k are added to ALL coefficients Phi[k],k=0,...,64, BEFORE multiplying by t^r.
 
-## 3. Cuadratura Taylor y su error exacto
+## 3. Taylor quadrature and its exact error
 
-Se evalúan jets sólo en centros exactos, sin bolas de parámetro. Para cada t^rPhi se integra exactamente el polinomio Taylor grado64 en el panel simétrico: los términos impares se anulan y el término k par aporta2coef[k]h^(k+1)/(k+1). La aritmética arb mantiene todo redondeo outward.
+Jets are evaluated only at exact centres, without parameter balls. For each t^rPhi the Taylor polynomial of degree64 is integrated exactly on the symmetric panel: odd terms vanish and the even term k contributes2coef[k]h^(k+1)/(k+1). The arb arithmetic keeps all rounding outward.
 
-El error puntual de la serie completa en un panel está acotado por10^8(1/4)^65/(1−1/4). Integrando y sumando los paneles, cuya longitud total es2,
+The pointwise error of the complete series on a panel is bounded by10^8(1/4)^65/(1−1/4). Integrating and summing over the panels, whose total length is2,
 
     REM=2*10^8*4^(−65)/(1−1/4)<10^(−28).
 
-Este resto se añade simétricamente al momento truncado. Es independiente de los valores observados y de los errores de la cola theta ya incluidos en los coeficientes.
+This remainder is added symmetrically to the truncated moment. It is independent of the observed values and of the theta tail errors already included in the coefficients.
 
-## 4. Cola temporal completa t>2
+## 4. Complete time tail t>2
 
-Para t>=2, pi>3,pi<4 y una suma geométrica de todos los modos dan
+For t>=2, pi>3,pi<4 and a geometric sum over all modes give
 
     Phi(t)<64 exp(9t/2−3exp(2t)).
 
-En efecto se domina el factor2m²y−3 por8m²exp(2t), y sum m^4 exp(−3m²exp(2t))<2exp(−3exp(2t)). El assert racional Taylor de exp4>54 fija
+Indeed the factor2m²y−3 is dominated by8m²exp(2t), and sum m^4 exp(−3m²exp(2t))<2exp(−3exp(2t)). The rational Taylor assert of exp4>54 fixes
 
     Phi(2)<64*3^9*2^(−162)<2^(−140).
 
-La derivada logarítmica del mayorante es9/2−6exp(2t)<−300. Por ello, con s=t−2,
+The logarithmic derivative of the majorant is9/2−6exp(2t)<−300. Hence, with s=t−2,
 
     Phi(2+s)<2^(−140)exp(−300s),
     (2+s)^r<=4exp(2s), r=0,1,2,
     0<integral_2^infinito t^rPhi(t)dt<2^(−140).
 
-Se añade el intervalo positivo[0,2^(−140)] a cada momento; no se aplica el bound042, que requería un rango de N diferente.
+The positive interval[0,2^(−140)] is added to each moment; the bound042, which required a different range of N, is not applied.
 
-## 5. Condiciones de implementación y alcance
+## 5. Implementation conditions and scope
 
-ctx.prec=512,ctx.cap=65 explícitos. Exigir Phi.prec>=65 y coeficientes0..64 finitos en todos los centros. Añadir las colas antes de multiplicar t o t². Convertir los intervalos racionales087 a arb usando ambos extremos y redondeo exterior, sin tomar decimales. Verificar I0,I1,I2 y Phi0 estrictamente positivos antes de cualquier cociente opcional. NUM es el test principal y conserva sus factores positivos sin divisiones innecesarias.
+ctx.prec=512,ctx.cap=65 explicit. Require Phi.prec>=65 and finite coefficients0..64 at all centres. Add the tails before multiplying by t or t². Convert the rational intervals of087 to arb using both endpoints and outward rounding, without taking decimals. Verify I0,I1,I2 and Phi0 strictly positive before any optional quotient. NUM is the main test and keeps its positive factors without unnecessary divisions.
 
-El resultado sólo decide el jet de la solución particular real en el origen. Si NUM>0, refuta esa condición suficiente cerca0, no la forma W. Si NUM<0, sólo la verifica cerca0 sin radio certificado; no prueba el signo global de QF ni un nuevo orden de generadores.
+The result only decides the jet of the real particular solution at the origin. If NUM>0, it refutes that sufficient condition near0, not the form W. If NUM<0, it only verifies it near0 without certified radius; it does not prove the global sign of QF nor a new order of generators.
 
 
-## 6. Resultado constructor, reproducción y alcance final
+## 6. Run result, reproduction and final scope
 
-Tras aprobación independiente del diseño y del literal por mapa y root, la ÚNICA corrida constructora37905 terminó exit0/PASS128paneles con los parámetros anteriores, sin modificación durante la corrida. El assert que aceptaba cualquiera de los dos signos obtuvo
+After independent approval of the design and of the literal, the SINGLE run37905 ended exit0/PASS128 panels with the above parameters, without modification during the run. The assert accepting either of the two signs obtained
 
     PASS093: particular-origin determinant sign NEGATIVE.
 
-Salida intervalar outward de Arb:
+Outward interval output of Arb:
 
     I0 [0.124280194547078527478193434921 +/- 5.46e-31]
     I1 [0.021528707625566523248989621992 +/- 6.74e-31]
@@ -116,20 +116,20 @@ Salida intervalar outward de Arb:
     NUM [-55.56138101164184468956750 +/- 9.92e-24]
     Dpart [-21658.19847758362431307814 +/- 2.30e-21].
 
-El signo probado proviene de la comparación estricta intervalar del script, no de sustituir los centros de estos intervalos. Los momentos incluyen tanto los errores de cuadratura como TODAS las colas theta y la cola temporal. El pequeño radio de NUM/Dpart incluye la propagación de los jets racionales087 y las dependencias perdidas conservadoramente; no se excluyen errores comunes por cancelación informal.
+The proved sign comes from the strict interval comparison of the script, not from substituting the centres of these intervals. The moments include both the quadrature errors and ALL theta tails and the time tail. The small radius of NUM/Dpart includes the propagation of the rational jets of087 and conservatively lost dependencies; common errors are not excluded by informal cancellation.
 
-Por Dpart<0 y analiticidad,
+By Dpart<0 and analyticity,
 
-    W_t(w,v,w'',K)<0 para todo t>0 suficientemente pequeño.
+    W_t(w,v,w'',K)<0 for all sufficiently small t>0.
 
-Este resultado **verifica**, y no refuta, la condición local particular requerida en esa vecindad. No proporciona un radio de vecindad, un signo en todo t>0, una invariancia de cono, ni una reparación de la carta Delta de092. Para F=K/w, el signo equivalente de ((F'/B')'/J)' queda verificado localmente por los factores positivos del Wronskiano; no se ha probado globalmente. No cambia la cobertura de W ni el número de generadores; el objetivo global sigue OPEN.
+This result **verifies**, and does not refute, the required particular local condition on that neighbourhood. It provides neither a neighbourhood radius, a sign for all t>0, a cone invariance, nor a repair of the Delta chart of092. For F=K/w, the equivalent sign of ((F'/B')'/J)' is verified locally by the positive factors of the Wronskian; it has not been proved globally. It does not change the coverage of W nor the number of generators; the global goal remains OPEN.
 
-Comando reproducible desde la raíz del repositorio:
+Reproducible command from the root of the repository:
 
     python3 03-research/phase-211-sign-sandbox/tools/power_particular_origin_093_verify.py
 
-SHA256 del script sin cambios durante la corrida:
+SHA256 of the script, unchanged during the run:
 
     57c0656deb1767e00a4de674a0f5f6556886eca06edbc93ae1ef8488b032c67e.
 
-El script087 importado permanece intacto, hash f8f28e5f33659ec7245e23906ab11addc5a04243f1d502a8a070dbf12d13d7b7. La reproducción independiente y lectura final se registrarán en la auditoría093.
+The imported script087 remains intact, hash f8f28e5f33659ec7245e23906ab11addc5a04243f1d502a8a070dbf12d13d7b7. The independent reproduction and final reading will be recorded in audit093.

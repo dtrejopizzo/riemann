@@ -1,28 +1,28 @@
-# POWER_PRIME_AUDIT_014 — Revisión del filtro acoplado con aritmética
+# POWER_PRIME_AUDIT_014 — Review of the filter coupled with arithmetic
 
-Estado: PROVED identidades y falsificador universal de E2; OPEN sus desigualdades restringidas y completas. Revisa POWER_PRIME_TRANSFER_014.md. Papers intactos.
+Status: PROVED identities and universal falsifier of E2; OPEN its restricted and full inequalities. Reviews POWER_PRIME_TRANSFER_014.md. Papers untouched.
 
-La identidad |H(i tau)|²-R0=(1-R0)tau²/(v²+tau²) es exacta. La inversa del complemento es delta-Pv con Pv=(v/2)e^(-v|t|), de masa1; por ello la diferencia temporal de autocorrelaciones, su fórmula de segunda diferencia y el signo firmado del núcleo son correctos. Se mantiene el factor1-R0 en todos los pasos.
+The identity |H(i tau)|²-R0=(1-R0)tau²/(v²+tau²) is exact. The inverse of the complement is delta-Pv with Pv=(v/2)e^(-v|t|), of mass1; hence the time difference of autocorrelations, its second-difference formula and the signed sign of the kernel are correct. The factor1-R0 is kept in all steps.
 
-El cambio polar es r0-R0=-(1-R0)/[4(v²-1/4)]. Esto produce exactamente T2, sin normalizar por una norma nueva de forma incorrecta. Para la suma completa de contactos se justifica trabajar en tiempo: cada correlación racional y su diferencia es exponencial por polinomio, y la suma ponderada por Lambda converge absolutamente. No se supone un símbolo puntual infinito de cosenos convergente.
+The polar change is r0-R0=-(1-R0)/[4(v²-1/4)]. This produces exactly T2, without normalising incorrectly by a new norm. For the full sum of contacts working in time is justified: each rational correlation and its difference is exponential times polynomial, and the sum weighted by Lambda converges absolutely. A convergent pointwise infinite symbol of cosines is not assumed.
 
-El falsificador universal de E2 se revisó independientemente. La medida de su derivada tiene numerador tau²(tau²+1/4)^2 y denominador(u²+tau²)^(n+1). Acotar el normalizador por M2/16 deja
+The universal falsifier of E2 was reviewed independently. The measure of its derivative has numerator tau²(tau²+1/4)^2 and denominator(u²+tau²)^(n+1). Bounding the normaliser by M2/16 leaves
 
     E tau²<=16M8/M2+8M6/M2+M4/M2
        <1680/128³+120/128²+3/128<1/25.
 
-Los factores de momentos beta y sus denominadores exactos son correctos. La cota w2<-4+18tau² sigue de m0<-4,m-m0<=17tau²,cos>=1-x²/2,v2<1,log2<1. En v65/2, el cociente de densidades respecto del caso derivado en u es entre u²/v² y1; el segundo momento aumenta a lo sumo por(v/u)^2 y permanece<1/20. Así la integral de T2 es estrictamente negativa y el fallo de E2new>=R0E2old queda certificado para un movimiento explícito. Este test no tiene base E2 positiva y no refuta la versión restringida a V12.
+The beta moment factors and their exact denominators are correct. The bound w2<-4+18tau² follows from m0<-4,m-m0<=17tau²,cos>=1-x²/2,v2<1,log2<1. At v65/2, the ratio of densities with respect to the case derived at u lies between u²/v² and1; the second moment increases at most by(v/u)^2 and remains<1/20. Thus the integral of T2 is strictly negative and the failure of E2new>=R0E2old is certified for an explicit movement. This test has no positive E2 base and does not refute the version restricted to V12.
 
-## Identidad completa nueva de §6
+## New full identity of §6
 
-Sea G(s)=sF0(s)/(s+v). Su densidad es tau²/(v²+tau²)|F0|² y sus momentos satisfacen
+Let G(s)=sF0(s)/(s+v). Its density is tau²/(v²+tau²)|F0|² and its moments satisfy
 
     Polar[G]=-Polar[f0]/[4(v²-1/4)].
 
-Cada término de la forma depende linealmente de esa autocorrelación, y el polar coincide con esa misma identidad. Por tanto
+Each term of the form depends linearly on that autocorrelation, and the polar coincides with that same identity. Therefore
 
     W[fv]-R0W[f0]=(1-R0)W[G]
 
-es EXACTA para la forma completa, al igual que su versión E2. El contraejemplo del memo sólo prueba E2[G]<0: la cola de contactos que distingue W de E2 no está evaluada y no puede inferirse W[G]<0. La identidad establece un objetivo acoplado legítimo para los subespacios G; no demuestra su signo.
+is EXACT for the full form, as is its E2 version. The counterexample of the memo only proves E2[G]<0: the tail of contacts that distinguishes W from E2 is not evaluated and W[G]<0 cannot be inferred. The identity establishes a legitimate coupled target for the subspaces G; it does not prove its sign.
 
-La condición R12 es suficiente para el primer movimiento desde la base declarada, pero no para una secuencia global de movimientos si no se comprueba en los espacios intermedios. La advertencia del constructor es correcta. Ningún falsificador aquí cierra esas restricciones ni el signo completo.
+The condition R12 is sufficient for the first movement from the declared base, but not for a global sequence of movements unless it is checked on the intermediate spaces. The warning in the original memo is correct. No falsifier here closes those restrictions or the full sign.

@@ -1,112 +1,112 @@
-# POWER_ENERGY_GROUP_037 — Dilatación crítica y agrupación firmada en la banda energética
+# POWER_ENERGY_GROUP_037 — Critical dilation and signed grouping on the energy band
 
-Estado: **PROVED**, revisión independiente aprobada en POWER_GROUP_AUDIT_037.md y verificador PASS reproducido. Tasa FIJA u=63/2. Papers intactos.
+Status: **PROVED**, independent review approved in POWER_GROUP_AUDIT_037.md and verifier PASS reproduced. FIXED rate u=63/2. Papers untouched.
 
-Resultados: (i) cotas uniformes de la dilatación gamma real en el centro energético; (ii) falsificador analítico de contracción ABSOLUTA de la inversión Möbius para TODOS N>=2^16; (iii) desigualdad FIRMADA cuantitativa de agrupación por cualquier conjunto FINITO de primos, con error explícito y condición suficiente de signo. No se estima aún el residuo infinito ni se afirma signo de W.
+Results: (i) uniform bounds on the real gamma dilation at the energy centre; (ii) analytic falsifier of ABSOLUTE contraction of the Möbius inversion for ALL N>=2^16; (iii) quantitative SIGNED grouping inequality for any FINITE set of primes, with explicit error and sufficient sign condition. The infinite residue is not yet estimated and no sign of W is claimed.
 
-## 1. Corpus y diferencia precisa
+## 1. Corpus and precise difference
 
-Consultados ROUTES-TRIED-INDEX/README.md, R162_2300_MASTER_GRID.md, CROSSWORD-TO-D.md y STATE036; leídos LOW_TABLE018, SIGNED_MEAN019, INVERSE_KERNEL020, UNIFORM_CUTOFF026, GAMMA_WEIGHT031, PRIME_BALANCE033 y MOVING_BALANCE036.
+Consulted ROUTES-TRIED-INDEX/README.md, R162_2300_MASTER_GRID.md, CROSSWORD-TO-D.md and STATE036; read LOW_TABLE018, SIGNED_MEAN019, INVERSE_KERNEL020, UNIFORM_CUTOFF026, GAMMA_WEIGHT031, PRIME_BALANCE033 and MOVING_BALANCE036.
 
-La cancelación principal polar–peine y las identidades de divisores ya pertenecen018/019: no se presentan como desigualdades nuevas. La diferencia aquí es evaluar su recuperación en el MISMO perfil gamma, en la banda ENERGÉTICA real localizada036. Allí la dilatación de la inversión es crítica1/m, a diferencia del régimen contractivo m^(-2) de033. Se prueba ese límite y, después, se agrupa el signo Möbius ANTES del error gamma para obtener una desigualdad local explícita, no sólo otra representación.
+The main polar–comb cancellation and the divisor identities already belong to018/019: they are not presented as new inequalities. The difference here is to evaluate their recovery on the SAME gamma profile, on the real ENERGY band localized036. There the dilation of the inversion is critical1/m, unlike the contractive regime m^(-2) of033. That limit is proved and, afterwards, the Möbius sign is grouped BEFORE the gamma error to obtain an explicit local inequality, not merely another representation.
 
-La comparación no introduce un error relativo polinomial como si compensara por sí solo la diferencia pequeña entre componentes exponenciales. La precisión necesaria del residuo completo sigue siendo una obligación abierta.
+The comparison does not introduce a polynomial relative error as if it compensated by itself the small difference between exponential components. The necessary precision of the complete residue remains an open obligation.
 
-## 2. Perfil gamma real y centro energético
+## 2. Real gamma profile and energy centre
 
-Con d=N−1>=1, conserve rho_N(t)=C_N(t)/C_N(0), q_N=−rho_N'/rho_N y
+With d=N−1>=1, keep rho_N(t)=C_N(t)/C_N(0), q_N=−rho_N'/rho_N and
 
     H_N(x)=−(d/dx)[x^(-1/2)rho_N(logx)]
           =x^(-3/2)rho_N(logx)[1/2+q_N(logx)]>0.
 
-UNIFORM_CUTOFF026 y GAMMA_WEIGHT031 prueban exactamente
+UNIFORM_CUTOFF026 and GAMMA_WEIGHT031 prove exactly
 
     q'=q²+(2d/t)q−u²,
     0<q'<M_N:=u²/(2N−3), q(0)=0.
 
-Defina
+Define
 
     t_N=d/(u²−1/4)=d/992,
     x_N=e^(t_N).
 
-Es el centro crítico natural de la energía e^(t/2)rho_N(t): la raíz positiva de la ecuación Riccati sin el término q' es1/2 en t_N. En general, para beta>0,
+It is the natural critical centre of the energy e^(t/2)rho_N(t): the positive root of the Riccati equation without the term q' is1/2 at t_N. In general, for beta>0,
 
     q_N(d beta)=sqrt(beta^(-2)+u²)−beta^(-1)+O(M_N),
 
-con error acotado por M_N dividido por2sqrt(beta^(-2)+u²), al factorizar el cuadrático. Por tanto el modo de e^(t/2)rho_N(t), donde q=1/2, satisface t/d->1/992. Esto es compatible con m/d->1/32 en036: la integral Laplace positiva condicionada al índice tiene escala temporal m/(u−1/2), y31·32=992. El centro no es un punto elegido mediante una campaña.
+with error bounded by M_N divided by2sqrt(beta^(-2)+u²), on factoring the quadratic. Hence the mode of e^(t/2)rho_N(t), where q=1/2, satisfies t/d->1/992. This is compatible with m/d->1/32 in036: the positive Laplace integral conditioned on the index has time scale m/(u−1/2), and31·32=992. The centre is not a point chosen by a campaign.
 
-Más precisamente, en t_N la Riccati se factoriza:
+More precisely, at t_N the Riccati equation factors:
 
     q'=(q−1/2)(q+1984+1/2).
 
-Como q'>0 y q>0, se obtiene la cota REAL
+Since q'>0 and q>0, one obtains the REAL bound
 
     1/2<q_N(t_N)<=1/2+M_N/1985.                          (CENTER)
 
-## 3. Dilatación crítica con resto uniforme
+## 3. Critical dilation with uniform remainder
 
-Para m>=1 real, escriba ell=logm y
+For real m>=1, write ell=logm and
 
     D_N(m)=m H_N(mx_N)/H_N(x_N).
 
-La identidad exacta es
+The exact identity is
 
     D_N(m)=m^(-1/2)rho_N(t_N+ell)/rho_N(t_N)
                     ·[1/2+q_N(t_N+ell)]/[1/2+q_N(t_N)].
 
-CENTER y0<q'<M_N dan para0<=s<=ell
+CENTER and0<q'<M_N give for0<=s<=ell
 
     1/2<=q_N(t_N+s)<=1/2+M_N(1/1985+s),
     1<=[1/2+q_N(t_N+ell)]/[1/2+q_N(t_N)]<=1+M_Nell.
 
-Integrar el primer bound y combinar ambos prueba
+Integrating the first bound and combining both proves
 
     m^(-1)exp{−M_N[ell/1985+ell²/2]}
       <=D_N(m)<=m^(-1)(1+M_Nell).                        (DILATE)
 
-En particular, para cada m fijo, D_N(m)->1/m cuando N crece. No se toma un valor absoluto del residuo aritmético para deducir un signo.
+In particular, for each fixed m, D_N(m)->1/m as N grows. No absolute value of the arithmetic residue is taken to deduce a sign.
 
-También, usando exp(−z)>=1−z,
+Also, using exp(−z)>=1−z,
 
     |D_N(m)−1/m|
        <=(M_N/m)[a ell+ell²/2],
     a=1+1/1985.                                         (ERROR)
 
-Éste es el resto gamma que permite la agrupación firmada del§5.
+This is the gamma remainder that allows the signed grouping of§5.
 
-## 4. Falsificador de la contracción ABSOLUTA propuesta
+## 4. Falsifier of the proposed ABSOLUTE contraction
 
-El inverso completo019 es h_N(x)=sum_(m>=1)mu(m)mH_N(mx), absolutamente convergente para cada N. Un paso suficiente natural sería exigir
+The complete inverse019 is h_N(x)=sum_(m>=1)mu(m)mH_N(mx), absolutely convergent for each N. A natural sufficient step would be to require
 
     sum_(m>=2)|mu(m)|D_N(m)<1
 
-en el centro energético. Ese paso es FALSO uniformemente para TODOS N>=2^16.
+at the energy centre. That step is FALSE uniformly for ALL N>=2^16.
 
-Prueba sin tabla Möbius. Para R ENTERO, la cantidad A(R) de enteros libres de cuadrados<=R satisface A(R)>R/4: los no libres están contenidos en la unión de múltiplos de k²,k>=2, cuyo número es <R sum_(k>=2)k^(-2)<3R/4. Se usó1/4+int_2^infty x^(-2)dx=3/4. Sumación por partes DISCRETA da
+Proof without a Möbius table. For INTEGER R, the number A(R) of squarefree integers<=R satisfies A(R)>R/4: the non-squarefree ones are contained in the union of multiples of k²,k>=2, whose number is <R sum_(k>=2)k^(-2)<3R/4. We used1/4+int_2^infty x^(-2)dx=3/4. DISCRETE summation by parts gives
 
     sum_(m=1)^R |mu(m)|/m
       =A(R)/R+sum_(n=1)^(R−1) A(n)/[n(n+1)]
       >H_R/4>logR/4.
 
-Restar el término m1 prueba
+Subtracting the term m1 proves
 
     sum_(m=2)^R |mu(m)|/m>(1/4)logR−1.
 
-Fije R=2^18, SIN enumerar sus enteros. Para N>=2^16, el verificador racional prueba
+Fix R=2^18, WITHOUT enumerating its integers. For N>=2^16, the rational verifier proves
 
     M_N[(logR)/1985+(logR)²/2]<2/3<log2,
     (1/4)logR−1>2.
 
-Por DILATE, D_N(m)>1/(2m) para TODO2<=m<=R. Por tanto
+By DILATE, D_N(m)>1/(2m) for ALL2<=m<=R. Hence
 
     sum_(m>=2)|mu(m)|D_N(m)
       >=sum_(m=2)^R |mu(m)|D_N(m)>1.                     (ABS-FAIL)
 
-De hecho esta suma absoluta no admite un bound uniforme en N: para cada R fijo su límite parcial es sum_(m=2)^R|mu(m)|/m y estas sumas crecen sin cota. ABS-FAIL sólo refuta el paso de contracción por valores absolutos en este régimen. No afirma que la suma FIRMADA no contraiga, que h_N sea negativo o que W sea negativo.
+In fact this absolute sum admits no bound uniform in N: for each fixed R its partial limit is sum_(m=2)^R|mu(m)|/m and these sums grow without bound. ABS-FAIL only refutes the contraction step by absolute values in this regime. It does not claim that the SIGNED sum does not contract, that h_N is negative or that W is negative.
 
-## 5. Agrupación aritmética FINITA antes de tomar errores
+## 5. FINITE arithmetic grouping before taking errors
 
-Sea Q un producto FINITO de primos distintos. Defina sobre el perfil REAL
+Let Q be a FINITE product of distinct primes. Define on the REAL profile
 
     K_(N,Q)(m)=sum_(b|Q)mu(b)D_N(mb),
     U_Q=prod_(p|Q)(1−1/p)>0,
@@ -114,60 +114,60 @@ Sea Q un producto FINITO de primos distintos. Defina sobre el perfil REAL
     mu_Q=sum_(p|Q)logp/(p+1),
     sigma_Q²=sum_(p|Q)p(logp)²/(p+1)².
 
-Aquí mu_Q es un promedio logarítmico, no la función Möbius. ERROR, aplicado DESPUÉS de conservar el signo de la suma principal, prueba
+Here mu_Q is a logarithmic average, not the Möbius function. ERROR, applied AFTER keeping the sign of the main sum, proves
 
     |K_(N,Q)(m)−U_Q/m|
       <=(M_N V_Q/m) E_Q(logm),                           (SIGNED)
     E_Q(ell)=a(ell+mu_Q)
                     +(1/2)[(ell+mu_Q)²+sigma_Q²].
 
-Prueba. La contribución principal es exactamente sum_(b|Q)mu(b)/(mb)=U_Q/m. Para el resto se suma ERROR con1/b. La probabilidad b|Q con peso(1/b)/V_Q incluye cada primo p independientemente con probabilidad1/(p+1). Sus momentos son Elogb=mu_Q y Var(logb)=sigma_Q²; expandir la cuadrática de ERROR da SIGNED.
+Proof. The main contribution is exactly sum_(b|Q)mu(b)/(mb)=U_Q/m. For the remainder ERROR is summed with1/b. The probability b|Q with weight(1/b)/V_Q includes each prime p independently with probability1/(p+1). Its moments are Elogb=mu_Q and Var(logb)=sigma_Q²; expanding the quadratic of ERROR gives SIGNED.
 
-Ésta no es sólo la identidad de un producto Euler. Es una desigualdad con un resto gamma UNIFORME en N,m y una condición de signo comprobable:
+This is not merely the identity of an Euler product. It is an inequality with a gamma remainder UNIFORM in N,m and a checkable sign condition:
 
     M_N V_Q E_Q(logM)<=U_Q/2
       ⇒ U_Q/(2m)<=K_(N,Q)(m)<=3U_Q/(2m), 1<=m<=M.         (WINDOW)
 
-E_Q crece en ell>=0, lo que justifica extender la condición del extremo a todo el intervalo. Para Q fijo, WINDOW permite intervalos logM de orden sqrt(N) con constante suficientemente pequeña. Traducidos a x=x_Nm, son una parte derecha de la banda energética real. No se concluye positividad del inverso completo.
+E_Q increases in ell>=0, which justifies extending the condition at the endpoint to the whole interval. For fixed Q, WINDOW allows intervals logM of order sqrt(N) with sufficiently small constant. Translated to x=x_Nm, they are a right part of the real energy band. Positivity of the complete inverse is not concluded.
 
-La ganancia concreta es que la constante principal1/m se sustituye por U_Q/m mediante cancelación Möbius exacta, conservando error explícito. El exponente crítico m^(-1) NO cambia. Para Q creciente debe verificarse también la degradación de U_Q/V_Q y del resto; el§8 analiza una elección explícita sin atribuir signo a FULL.
+The concrete gain is that the main constant1/m is replaced by U_Q/m via exact Möbius cancellation, keeping an explicit error. The critical exponent m^(-1) does NOT change. For growing Q the degradation of U_Q/V_Q and of the remainder must also be verified; §8 analyzes an explicit choice without attributing a sign to FULL.
 
-## 6. Dónde permanece el resto infinito
+## 6. Where the infinite residue remains
 
-La agrupación completa, todavía con TODOS los enteros aritméticos, es
+The complete grouping, still with ALL arithmetic integers, is
 
     h_N(x_N)/H_N(x_N)
       =sum_((m,Q)=1)mu(m)K_(N,Q)(m).                    (FULL)
 
-Cada entero libre de cuadrados se descompone de modo único en un divisor b de Q y un m coprimo con Q. Las series originales son absolutas para N fijo, así que esta reordenación es legítima.
+Each squarefree integer decomposes uniquely into a divisor b of Q and an m coprime with Q. The original series are absolute for fixed N, so this reordering is legitimate.
 
-Pero el mayorante de ERROR/SIGNED, de orden(logm)²/m, NO es sumable sobre todo m. Por tanto no puede sumarse hasta infinito ni usarse para borrar el complemento de WINDOW. Tampoco el signo de K_(N,Q) en una ventana hace no negativa la suma exterior de mu(m), que conserva sus signos.
+But the majorant of ERROR/SIGNED, of order(logm)²/m, is NOT summable over all m. Hence it cannot be summed to infinity nor used to erase the complement of WINDOW. Nor does the sign of K_(N,Q) on a window make the exterior sum of mu(m), which keeps its signs, non-negative.
 
-La identidad conocida de018/019 relaciona el residuo conjunto con este inverso y B:
+The known identity of018/019 relates the joint residue to this inverse and B:
 
     P_N−Pi_N=2Lminus_N−F_N,
     F_N=2int_1^infty h_N(x)B(x)dx.
 
-SIGNED no se registra como una cota ya obtenida de F_N: falta controlar el complemento aritmético firmado, además de integrar la banda con sus pesos reales. La precisión de la diferencia polar−peine no se deduce de un error relativo polinomial frente a componentes de fase lambda^N.
+SIGNED is not recorded as an already obtained bound on F_N: one still needs to control the signed arithmetic complement, in addition to integrating the band with its real weights. The precision of the polar−comb difference is not deduced from a polynomial relative error against components of phase lambda^N.
 
-## 7. Resultado y siguiente obligación
+## 7. Result and next obligation
 
-Quedan demostrados dos hechos sustanciales sobre una propuesta concreta: el paso de contracción ABSOLUTA falla en el centro energético real para una familia infinita de N; la agrupación FINITA firmada sí tiene un principal positivo y un error gamma explícito que preserva su signo bajo WINDOW. No se introdujo un modelo ficticio ni se alteró Lambda o mu.
+Two substantial facts about a concrete proposal are proved: the ABSOLUTE contraction step fails at the real energy centre for an infinite family of N; the signed FINITE grouping does have a positive main term and an explicit gamma error that preserves its sign under WINDOW. No fictitious model was introduced and Lambda or mu were not altered.
 
-El residuo infinito sigue abierto. La continuación constructiva debe combinar esa cancelación con un bound firmado del complemento, sin sumar un error no sumable ni convertir el signo de un grupo finito en el de FULL. No se afirma signo W, nueva cobertura o cierre global.
+The infinite residue remains open. The constructive continuation must combine that cancellation with a signed bound on the complement, without summing a non-summable error nor converting the sign of a finite group into that of FULL. No sign of W, new coverage or global closure is claimed.
 
-Verificador: tools/power_energy_group_037_verify.py; Fraction/intervalos exactos para constantes y umbrales, PASS. Las identidades de divisores y las cotas uniformes están probadas analíticamente. No se evalúa W en ningún N nuevo ni se enumera una campaña Möbius. La revisión independiente confirma el núcleo y la extensión adversarial del§8. Papers intactos.
+Verifier: tools/power_energy_group_037_verify.py; Fraction/exact intervals for constants and thresholds, PASS. The divisor identities and the uniform bounds are proved analytically. W is not evaluated at any new N nor is a Möbius campaign enumerated. The independent review confirms the core and the adversarial extension of§8. Papers untouched.
 
-## 8. Una elección Q creciente: grupos positivos, resto absoluto aún dominante
+## 8. A growing choice of Q: positive groups, absolute remainder still dominant
 
-Revisión adversarial complementaria, sobre la MISMA propuesta SIGNED. Permitir que Q crezca sí preserva una cancelación local para una elección explícita, pero no paga el complemento por triángulo. Este resultado no invalida una agrupación FIRMADA ulterior.
+Complementary adversarial review, on the SAME proposal SIGNED. Letting Q grow does preserve a local cancellation for an explicit choice, but does not pay the complement by the triangle inequality. This result does not invalidate a further SIGNED grouping.
 
-Para TODOS N>=2^80 tome
+For ALL N>=2^80 take
 
     K=floor(N^(1/8)), Q=prod_(p<=K)p,
     ell=3N^(1/4), M=exp(ell).
 
-Aquí K>=1024. Las cotas elementales (sin estimaciones asintóticas de primos) son
+Here K>=1024. The elementary bounds (without asymptotic prime estimates) are
 
     U_Q>=prod_(n=2)^K(1−1/n)=1/K,
     V_Q<=prod_(n=2)^K(1+1/n)=(K+1)/2,
@@ -176,51 +176,51 @@ Aquí K>=1024. Las cotas elementales (sin estimaciones asintóticas de primos) s
     logQ<=KlogK<=K²<=N^(1/4),
     mu_Q<=logQ, sigma_Q²<=log²Q.
 
-Por tanto V_Q/U_Q<=K(K+1)/2<=N^(1/4). SIGNED implica, UNIFORMEMENTE en1<=m<=M,
+Hence V_Q/U_Q<=K(K+1)/2<=N^(1/4). SIGNED implies, UNIFORMLY in1<=m<=M,
 
     |K_(N,Q)(m)−U_Q/m|<=epsilon_N U_Q/m,
     epsilon_N<=u²[4a N^(-1/2)+(17/2)N^(-1/4)]<1/100.     (GROW)
 
-En efecto ell+mu_Q<=4N^(1/4), sigma_Q²<=N^(1/2), M_N<=u²/N y a<2. En N>=2^80 basta la comparación racional
+Indeed ell+mu_Q<=4N^(1/4), sigma_Q²<=N^(1/2), M_N<=u²/N and a<2. At N>=2^80 the rational comparison suffices
 
     u²[8·2^-40+(17/2)2^-20]<1/100.
 
-Así TODOS los grupos de esa ventana son realmente POSITIVOS. El crecimiento de Q no se invoca sólo formalmente.
+Thus ALL the groups of that window are really POSITIVE. The growth of Q is not invoked only formally.
 
-Sin embargo,
+However,
 
     sum_((m,Q)=1,m>=2)|mu(m)| |K_(N,Q)(m)| >37/25=1.48,
     0<K_(N,Q)(1)<101/200=.505.                          (GROW-ABS)
 
-La suma de la izquierda conserva TODO el resto infinito; se acota inferiormente por un subconjunto finito positivo de la ventana.
+The sum on the left keeps ALL the infinite residue; it is bounded below by a finite positive subset of the window.
 
-Prueba. Defina las masas armónicas FINITAS
+Proof. Define the FINITE harmonic masses
 
     S(M)=sum_(m<=M,(m,Q)=1)1/m,
     T(M)=sum_(m<=M,(m,Q)=1)mu(m)²/m.
 
-Como M>Q, todos los divisores b de Q satisfacen M/b>=1. Para z>=1,
+Since M>Q, all divisors b of Q satisfy M/b>=1. For z>=1,
 
     H_floor(z)=logz+e(z), 0<=e(z)<=1.
 
-Inclusión–exclusión, ANTES de estimar el error, da
+Inclusion–exclusion, BEFORE estimating the error, gives
 
     S(M)=sum_(b|Q)mu(b)H_floor(M/b)/b
          >=U_Q logM−sum_(b|Q)mu(b)logb/b−V_Q
          >=U_Q ell−V_Q.                                (COPRIME)
 
-El término logarítmico que se ha conservado tiene signo favorable exacto:
+The logarithmic term that has been kept has an exact favourable sign:
 
     sum_(b|Q)mu(b)logb/b
       =−U_Q sum_(p<=K)logp/(p−1)<=0.
 
-Los m coprimos con Q que no son libres de cuadrados son divisibles por p² para algún primo p>K. Dividir por p² preserva la condición de coprimalidad. Por unión de esos sucesos con pesos POSITIVOS,
+The m coprime with Q that are not squarefree are divisible by p² for some prime p>K. Dividing by p² preserves the coprimality condition. By a union of those events with POSITIVE weights,
 
     S(M)−T(M)
       <=sum_(p>K) p^-2 S(M/p²)
       <=S(M)sum_(n>K)n^-2<=S(M)/K.
 
-Luego T(M)>=(1−1/K)S(M). GROW, aplicado sólo a m<=M, prueba
+Hence T(M)>=(1−1/K)S(M). GROW, applied only to m<=M, proves
 
     sum_((m,Q)=1,m>=2)|mu(m)| |K_(N,Q)(m)|
       >=(1−epsilon_N)U_Q[T(M)−1]
@@ -228,6 +228,6 @@ Luego T(M)>=(1−1/K)S(M). GROW, aplicado sólo a m<=M, prueba
            [(1−1/K)(U_Q²ell−U_QV_Q)−U_Q]
       >=(99/100)[2(1−1/1024)−1/2]>37/25.
 
-Se usó U_Q²ell>=3N^(1/4)/K²>=3, U_QV_Q<=1 y U_Q<=1/2. La resta1 dentro de T(M) elimina m1, no un contacto aritmético no contado. Por otro lado GROW en m1 da K_(N,Q)(1)<(101/100)U_Q<=101/200. Esto demuestra GROW-ABS con constantes racionales.
+We used U_Q²ell>=3N^(1/4)/K²>=3, U_QV_Q<=1 and U_Q<=1/2. The subtraction of1 inside T(M) removes m1, not an uncounted arithmetic contact. On the other hand GROW at m1 gives K_(N,Q)(1)<(101/100)U_Q<=101/200. This proves GROW-ABS with rational constants.
 
-Conclusión específica: ESTA elección creciente de grupos tiene principal positivo y error local controlado, pero la suma de módulos de los grupos restantes es incluso mayor que el grupo principal. Por tanto no permite deducir el signo de FULL por dominación diagonal o por una nueva contracción ABSOLUTA después de agrupar. La suma FIRMADA exterior todavía puede cancelar; no se afirma signo de h_N, F_N o W, ni se excluyen otras elecciones o estimaciones firmadas del complemento.
+Specific conclusion: THIS growing choice of groups has a positive main term and controlled local error, but the sum of moduli of the remaining groups is even larger than the main group. Hence it does not allow deducing the sign of FULL by diagonal dominance or by a new ABSOLUTE contraction after grouping. The exterior SIGNED sum may still cancel; no sign of h_N, F_N or W is claimed, nor are other choices or signed estimates of the complement excluded.

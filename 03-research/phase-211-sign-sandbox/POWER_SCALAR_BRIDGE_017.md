@@ -1,106 +1,106 @@
-# POWER_SCALAR_BRIDGE_017 — Dos índices escalares bastan para todos los bloques
+# POWER_SCALAR_BRIDGE_017 — Two scalar indices suffice for all blocks
 
-Estado: PROVED, revisión formal independiente por mapa; auditoría final en POWER_INTERIOR_AUDIT_017. No prueba todavía el signo de la familia escalar. Papers intactos.
+Status: PROVED, independent formal review; final audit in POWER_INTERIOR_AUDIT_017. It does not yet prove the sign of the scalar family. Papers untouched.
 
-## 1. Corpus y diferencia explícita
+## 1. Corpus and explicit difference
 
-Consultados ROUTES-TRIED-INDEX, grid maestro, CROSSWORD-TO-D y POWER* buscando Bernstein, grado elevado, coeficientes positivos, partición y puente. Los usos registrados de Bernstein para medidas completamente monótonas, cotas de funciones enteras y límites de frecuencia no son este argumento. POWER_DESCENT016 localiza el interior binomial pendiente; CONFLUENT_BRIDGE014 demuestra suficiencia de todos los bloques, y JOINT_SCALE016 da coordenadas beta para sus sectores. No se reintenta inferir positividad de una envolvente lineal desde una unión de familias positivas.
+Consulted ROUTES-TRIED-INDEX, master grid, CROSSWORD-TO-D and POWER* searching for Bernstein, degree elevation, positive coefficients, partition and bridge. The recorded uses of Bernstein for completely monotone measures, bounds of entire functions and frequency limits are not this argument. POWER_DESCENT016 locates the pending binomial interior; CONFLUENT_BRIDGE014 proves sufficiency of all blocks, and JOINT_SCALE016 gives beta coordinates for its sectors. There is no renewed attempt to infer positivity of a linear envelope from a union of positive families.
 
-La diferencia es una identidad FINITA de densidades racionales con coeficientes positivos obtenida por elevación de grado, después de una perturbación arbitrariamente pequeña. La identidad conserva también el polar por evaluación racional fuera del semieje espectral. El lema polinómico elemental es estándar; la aportación aquí es su aplicación exacta a la forma completa y el control de todos los cruces mediante esa identidad.
+The difference is a FINITE identity of rational densities with positive coefficients obtained by degree elevation, after an arbitrarily small perturbation. The identity also preserves the polar by rational evaluation off the spectral half-axis. The elementary polynomial lemma is standard; the contribution here is its exact application to the full form and the control of all crossings through that identity.
 
-Antecedentes locales verificados por el auditor: `03-research/phase-114-closing-the-four-rows/114_d_180_BERNSTEIN_DIRECTED_ENDPOINT_GATE.md` §1 ya usa elevación positiva de grado para integración estable en coordenadas Bernstein; `03-research/phase-72-feshbach-leakage-calculus/E72_259_RATIONAL_BERNSTEIN_LM8_CERTIFICATE.md` certifica desigualdades polinómicas mediante coeficientes Bernstein y subdivisión exacta. Son antecedentes del instrumento, no del puente presente: ninguno de esos dos documentos transforma una densidad racional en el cono de átomos monomiales ni conserva explícitamente la polar por evaluación en x=-1/4.
+Local antecedents verified in the audit: `03-research/phase-114-closing-the-four-rows/114_d_180_BERNSTEIN_DIRECTED_ENDPOINT_GATE.md` §1 already uses positive degree elevation for stable integration in Bernstein coordinates; `03-research/phase-72-feshbach-leakage-calculus/E72_259_RATIONAL_BERNSTEIN_LM8_CERTIFICATE.md` certifies polynomial inequalities via Bernstein coefficients and exact subdivision. They are antecedents of the instrument, not of the present bridge: neither of those two documents turns a rational density into the cone of monomial atoms nor explicitly preserves the polar by evaluation at x=-1/4.
 
-## 2. Enunciado suficiente y necesario en los bloques confluentes
+## 2. Sufficient and necessary statement on the confluent blocks
 
-Fije u>1; puede tomarse u=63/2. Para N>=1,k>=0, sea h_(N,k) la función causal real de transformada
+Fix u>1; one may take u=63/2. For N>=1,k>=0, let h_(N,k) be the real causal function with transform
 
     H_(N,k)(s)=s^k/(s+u)^(N+k).
 
-Son equivalentes:
+The following are equivalent:
 
-(A) W[h_(N,k)]>=0 para todos N>=1,k>=0.
-(B) W[f]>=0 para toda F(s)=P(s)/(s+u)^M, M>=1, P real, grado P<M.
+(A) W[h_(N,k)]>=0 for all N>=1,k>=0.
+(B) W[f]>=0 for every F(s)=P(s)/(s+u)^M, M>=1, P real, degree P<M.
 
-B implica A inmediatamente. La demostración de A implica B ocupa §§3–5. Por CONFLUENT_BRIDGE014, A basta para el signo de todos los tests del portador declarado y, mediante el puente ya probado, el objetivo del Paper47. No se presupone A: sigue OPEN.
+B implies A immediately. The proof that A implies B occupies §§3–5. By CONFLUENT_BRIDGE014, A suffices for the sign of all tests of the declared carrier and, through the already proved bridge, the target of Paper47. A is not presupposed: it remains OPEN.
 
-La condición A utiliza sólo un numerador monomial y DOS índices. No se ha reducido a la sola cadena k0, ni a N fijo, ni a los extremos eventualmente positivos de015.
+Condition A uses only a monomial numerator and TWO indices. It has not been reduced to the single chain k0, nor to fixed N, nor to the eventually positive endpoints of015.
 
-## 3. Toda densidad racional es un polinomio no negativo sobre un peso común
+## 3. Every rational density is a nonnegative polynomial over a common weight
 
-Para F=P/(s+u)^M, ponga x=tau² y
+For F=P/(s+u)^M, set x=tau² and
 
     S(x)=P(i sqrt(x))P(-i sqrt(x)),
     q=x/(u²+x), F1(s)=1/(s+u).
 
-S es un polinomio real de grado<=M−1, no negativo para x>=0. La identidad racional es
+S is a real polynomial of degree<=M−1, nonnegative for x>=0. The rational identity is
 
     |F(i tau)|²=|F1(i tau)|² R(q),
     R(q)=u^(2−2M)(1−q)^(M−1) S(u²q/(1−q)).           (R)
 
-R es un polinomio real de grado<=M−1. Es no negativo en [0,1): todos los factores de (R) son no negativos allí. Por continuidad polinómica lo es también en1. Su valor en1 es cero si gradoP<M−1, y el cuadrado del coeficiente principal si gradoP=M−1. No se exige positividad estricta ni ausencia de raíces interiores.
+R is a real polynomial of degree<=M−1. It is nonnegative on [0,1): all factors of (R) are nonnegative there. By polynomial continuity it is also so at1. Its value at1 is zero if degreeP<M−1, and the square of the leading coefficient if degreeP=M−1. Neither strict positivity nor absence of interior roots is required.
 
-## 4. Lema elemental de elevación de grado con umbral explícito
+## 4. Elementary degree-elevation lemma with explicit threshold
 
-Sea R(q)=sum_(l=0)^d r_l q^l y R>=0 en [0,1]. Para epsilon>0, elija un entero D>=d. La expansión EXACTA de R+epsilon en la base Bernstein de grado D es
+Let R(q)=sum_(l=0)^d r_l q^l and R>=0 on [0,1]. For epsilon>0, choose an integer D>=d. The EXACT expansion of R+epsilon in the Bernstein basis of degree D is
 
     R(q)+epsilon=sum_(j=0)^D b_(D,j) binom(D,j)q^j(1−q)^(D−j),
     b_(D,j)=epsilon+sum_(l=0)^d r_l (j)_l/(D)_l.      (BER)
 
-Se entiende (j)_0/(D)_0=1 y (j)_l=0 para j<l. La fórmula se prueba contando subconjuntos marcados de tamaño l en una variable binomial, o expandiendo la identidad de su momento factorial.
+Understand (j)_0/(D)_0=1 and (j)_l=0 for j<l. The formula is proved by counting marked subsets of size l in a binomial variable, or by expanding the identity of its factorial moment.
 
-Uniformemente en j,
+Uniformly in j,
 
     |(j)_l/(D)_l − (j/D)^l| <=l(l−1)/(2D).
 
-Prueba elemental: extraer l índices uniformes con reemplazo de un conjunto de D, con j índices marcados. La probabilidad de que todos estén marcados es (j/D)^l. Condicionado a que no se repitan índices, es (j)_l/(D)_l. La diferencia entre ambas probabilidades es a lo sumo la probabilidad de alguna repetición, acotada por l(l−1)/(2D). Para l0 y l1 la igualdad es exacta.
+Elementary proof: draw l uniform indices with replacement from a set of D, with j marked indices. The probability that all are marked is (j/D)^l. Conditioned on no index being repeated, it is (j)_l/(D)_l. The difference between both probabilities is at most the probability of some repetition, bounded by l(l−1)/(2D). For l0 and l1 the equality is exact.
 
-En consecuencia, definiendo
+Consequently, defining
 
     C_R=(1/2)sum_l |r_l|l(l−1),
 
-se tiene b_(D,j)>=epsilon+R(j/D)−C_R/D. Si D>=max(d,1) y D>C_R/epsilon, TODOS los coeficientes son estrictamente positivos. El procedimiento es efectivo para cada R y epsilon. No se confunde el polinomio de Bernstein aproximante con la representación EXACTA por elevación de grado.
+one has b_(D,j)>=epsilon+R(j/D)−C_R/D. If D>=max(d,1) and D>C_R/epsilon, ALL coefficients are strictly positive. The procedure is effective for each R and epsilon. The approximating Bernstein polynomial is not confused with the EXACT representation by degree elevation.
 
-## 5. Identidad de la forma COMPLETA, incluido el polar
+## 5. Identity of the FULL form, including the polar
 
-Defina Q=s/(s+u), L=u/(s+u), y g_(D,j) por
+Define Q=s/(s+u), L=u/(s+u), and g_(D,j) by
 
     G_(D,j)=Q^j L^(D−j) F1
             =u^(D−j)s^j/(s+u)^(D+1).
 
-Es un múltiplo real positivo del átomo h_(D+1−j,j). En el eje espectral,
+It is a positive real multiple of the atom h_(D+1−j,j). On the spectral axis,
 
     |G_(D,j)|²=|F1|² q^j(1−q)^(D−j).
 
-Multiplicar (BER) por |F1|² y usar (R) da
+Multiplying (BER) by |F1|² and using (R) gives
 
     |F|²+epsilon|F1|²
       =sum_j b_(D,j)binom(D,j)|G_(D,j)|².            (DEN)
 
-Las partes arquimediana y de cada contacto son lineales en estas densidades, de modo que satisfacen DEN. Todas las series aritméticas convergen absolutamente para cada una de las funciones racionales de esta identidad finita; no se intercambia un límite de grado con una serie no controlada.
+The archimedean part and that of each contact are linear in these densities, so they satisfy DEN. All arithmetic series converge absolutely for each of the rational functions of this finite identity; no degree limit is interchanged with an uncontrolled series.
 
-Para el polar, léase DEN como identidad racional en x. En x=−1/4, los denominadores no se anulan porque u>1, y
+For the polar, read DEN as a rational identity in x. At x=−1/4, the denominators do not vanish because u>1, and
 
     F(i sqrt(x))F(-i sqrt(x))=F(-1/2)F(1/2).
 
-La identidad es algebraica y no depende de elegir una rama: cada producto es racional en x. Multiplicar su evaluación por2 produce EXACTAMENTE la identidad de los polares. Aunque q=−1/(4u²−1) es negativo allí, los coeficientes b_(D,j) siguen siendo los mismos números positivos; no se atribuye signo separado al valor del polar.
+The identity is algebraic and does not depend on choosing a branch: each product is rational in x. Multiplying its evaluation by2 produces EXACTLY the identity of the polars. Although q=−1/(4u²−1) is negative there, the coefficients b_(D,j) remain the same positive numbers; no separate sign is attributed to the value of the polar.
 
-Se concluye la identidad completa
+One concludes the full identity
 
     W[f]+epsilon W[f1]
       =sum_j b_(D,j)binom(D,j) W[g_(D,j)].            (FORM)
 
-FORM es una igualdad de valores cuadráticos; el lado izquierdo NO es W[f+sqrt(epsilon)f1]. No se omitió ningún término cruzado: todos los cruces del numerador P ya están en S y R.
+FORM is an equality of quadratic values; the left-hand side is NOT W[f+sqrt(epsilon)f1]. No cross term was omitted: all the crossings of the numerator P are already in S and R.
 
-Bajo A, cada sumando derecho es no negativo. Por tanto W[f]>=−epsilon W[f1]. Hacer epsilon->0 prueba W[f]>=0. No se necesita un margen uniforme, una topología de aproximación de funciones, ni convergencia fuerte de g_(D,j).
+Under A, each summand on the right is nonnegative. Hence W[f]>=−epsilon W[f1]. Letting epsilon->0 proves W[f]>=0. No uniform margin, function-approximation topology, nor strong convergence of g_(D,j) is needed.
 
-## 6. Extracción finita de un átomo negativo, si existiera una dirección negativa
+## 6. Finite extraction of a negative atom, if a negative direction existed
 
-La prueba también es constructiva por contraposición. Si W[f]=−delta<0, elija epsilon>0 de modo que epsilon |W[f1]|<delta/2, y D>=max(d,1), D>C_R/epsilon. Entonces el lado izquierdo de FORM es negativo. Como todos los coeficientes son positivos, al menos uno de los D+1 átomos h_(D+1−j,j) tiene W negativo.
+The proof is also constructive by contraposition. If W[f]=−delta<0, choose epsilon>0 so that epsilon |W[f1]|<delta/2, and D>=max(d,1), D>C_R/epsilon. Then the left-hand side of FORM is negative. Since all coefficients are positive, at least one of the D+1 atoms h_(D+1−j,j) has negative W.
 
-Esto no construye un contraejemplo real: no se conoce una dirección inicial negativa de W. Precisa que cualquier fallo en una matriz completa tendría un testigo escalar monomial a algún orden finito explícitamente acotable desde ese fallo. La representación permite tratar los cruces sin asumir que una unión de subespacios positivos sea positiva.
+This does not construct a real counterexample: no initial negative direction of W is known. It specifies that any failure in a full matrix would have a monomial scalar witness at some finite order explicitly boundable from that failure. The representation allows treating the crossings without assuming that a union of positive subspaces is positive.
 
-## 7. Relación exacta con016 y obligación pendiente
+## 7. Exact relation with016 and pending obligation
 
-No hay contradicción con la obstrucción de momentos de016: aquí no se aproxima f mediante una sucesión high-pass. Se representa su densidad, con una perturbación de energía arbitrariamente pequeña, mediante un cono positivo de densidades; la identidad racional conserva el polar.
+There is no contradiction with the moment obstruction of016: here f is not approximated by a high-pass sequence. Its density is represented, with an arbitrarily small energy perturbation, through a positive cone of densities; the rational identity preserves the polar.
 
-Tampoco basta EVENTUAL015. El triángulo de FORM contiene átomos con ambos índices variables, incluidos los iniciales. La masa y energía que016 localiza en el interior no están cubiertas por colas de dimensión fija. El blanco suficiente queda ahora explícito: probar el signo de toda la tabla escalar W[h_(N,k)] con el dato aritmético completo. Sólo identidades y colas siguen sin decidir esa tabla, como muestra el falsificador W4 de016.
+EVENTUAL015 does not suffice either. The triangle of FORM contains atoms with both indices variable, including the initial ones. The mass and energy that016 locates in the interior are not covered by tails of fixed dimension. The sufficient target is now explicit: prove the sign of the whole scalar table W[h_(N,k)] with the full arithmetic datum. Identities and tails alone still do not decide that table, as the falsifier W4 of016 shows.

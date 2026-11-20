@@ -1,57 +1,57 @@
-# POWER_REAL_PAIR_MONOTONICITY_AUDIT_102 — Auditoría independiente
+# POWER_REAL_PAIR_MONOTONICITY_AUDIT_102 — Independent audit
 
-Estado: **APROBADO / PROVED para la Phi real y TODOS p,t>0.** Fuente `POWER_REAL_PAIR_MONOTONICITY_102.md` leída íntegramente. Auditor mapa; root leyó y aprobó independientemente. No nuevos certificados, cuadraturas o campañas; papers intactos.
+Status: **APPROVED / PROVED for the real Phi and ALL p,t>0.** Source `POWER_REAL_PAIR_MONOTONICITY_102.md` read in full, and approved by two independent readings. No new certificates, quadratures or campaigns; papers untouched.
 
-## 1. Parejas, normalización y colas
+## 1. Pairs, normalisation and tails
 
-D_p es la densidadPhi_p positivaPAR de075, con (D²−p²)D_p=cPhi−pJ. Q_p=J−betaD_p tiene el cruce−/+ y masa cero077. Su primitivaPsi_p tiene derivada negativa y límite0, por tanto es positiva; el bordePsi'0=0 sigue de la masa exacta, no de asumir paridad de una fórmula con valor absoluto. Las ecuaciones con entradas analíticas extienden suavidad y analiticidad en0. D_p,Psi_p y sus derivadas conservan supercolas, suficientes incluso después de multiplicar cosh/sinh.
+D_p is the positive EVEN densityPhi_p of075, with (D²−p²)D_p=cPhi−pJ. Q_p=J−betaD_p has the −/+ crossing and zero mass077. Its primitivePsi_p has negative derivative and limit0, hence is positive; the boundary conditionPsi'0=0 follows from the exact mass, not from assuming parity of a formula with absolute value. The equations with analytic inputs extend smoothness and analyticity at0. D_p,Psi_p and their derivatives keep supertails, sufficient even after multiplying by cosh/sinh.
 
-La identidadtau<t/V'(t) y su límite0 se obtienen de la integración por partes con V'/t creciente. Los momentos deJ y la masa deQ_p conservan los mismos factores bilaterales de075/077. La normalización G_p=c z Z_Psi/Z_D fue reproducida algebraicamente desde F1−residuo/z y beta=ap²/(ap−c), sin perder un factorp o un término firmado.
+The identitytau<t/V'(t) and its limit0 are obtained from integration by parts with V'/t increasing. The moments ofJ and the mass ofQ_p keep the same two-sided factors of075/077. The normalisation G_p=c z Z_Psi/Z_D was reproduced algebraically from F1−residue/z and beta=ap²/(ap−c), without losing a factorp or a signed term.
 
-## 2. Rolle con multiplicidades y extremos reales
+## 2. Rolle with multiplicities and real endpoints
 
-Los lemas no aplican Rolle literalmente eninfinito: tras la última raíz, elegir un valor no nulo y un extremo derecho finito con módulo menor produce un extremo interior. La analiticidad evita intervalos nulos o raíces infinitamente planas. Las multiplicidades aportan m−k derivadas y los intervalos las raíces adicionales indicadas.
+The lemmas do not apply Rolle literally atinfinity: after the last root, choosing a nonzero value and a finite right endpoint with smaller modulus produces an interior extremum. Analyticity avoids null intervals or infinitely flat roots. The multiplicities contribute m−k derivatives and the intervals the additional roots indicated.
 
-ParaD², el retorno deh' a0 y el bordeh'0=0 producen la raíz adicional, aun sin conocerh0. En las contradicciones sólo se usa m>=2; no se necesita un caso degenerado m0. Las funciones intermedias no pueden anularse idénticamente salvo la función inicialnula, excluida por las ecuaciones/bases.
+ForD², the return ofh' to0 and the boundary conditionh'0=0 produce the additional root, even without knowingh0. In the contradictions only m>=2 is used; a degenerate case m0 is not needed. The intermediate functions cannot vanish identically except for the initial zero function, excluded by the equations/bases.
 
-ParaLp, g=h/cosh(pt) conserva raíces y T=cosh²g'=cosh h'−p sinh h tiene T0=T∞=0. Supercolas garantizan el último borde. La identidadT'=cosh(pt)Lph yel mismo conteo dan al menosn+1raíces. No se pierden multiplicidades al multiplicar porcosh>0. Enconsecuencia F con m>=2 raíces fuerza m+2 en LpF''.
+ForLp, g=h/cosh(pt) keeps roots and T=cosh²g'=cosh h'−p sinh h has T0=T∞=0. Supertails guarantee the last boundary condition. The identityT'=cosh(pt)Lph and the same count give at leastn+1 roots. No multiplicities are lost when multiplying bycosh>0. Consequently F with m>=2 roots forces m+2 in LpF''.
 
-## 3. K/J estricto
+## 3. Strict K/J
 
-077 aportaRcreciente y, más precisamente,R'>0 por la derivada delpromedio decola deLstrictdec con peso positivo. ParaH=K−rJ, H''=−rPhi B_(1/r) es exacto. B_l'=−tau'(R−l) tiene como máximo un mínimo, no una sucesión de estaciones; en el mínimo B_l''=−tau'R'>0. Por ello B_l tiene como máximo dos raícescontadas (doble sólo en su mínimo). El lemaD² obliga aH a tener como máximo una raízpositiva simple.
+077 providesR increasing and, more precisely,R'>0 by the derivative of the tail average ofL strictly decreasing with positive weight. ForH=K−rJ, H''=−rPhi B_(1/r) is exact. B_l'=−tau'(R−l) has at most one minimum, not a sequence of stationary points; at the minimum B_l''=−tau'R'>0. Hence B_l has at most two roots counted (double only at its minimum). LemmaD² forcesH to have at most one simple positive root.
 
-Una estación deK/J elegiría r=K/J>0 y daríaH=H'=0, contradicción. Su derivada continua nunca se anula. La cota temporal K<a∫(s−t)Phi<=aA0/V', J>tA0 da0<K/J<a/(tV')→0; fija el signo NEGATIVO, sin inferir un ratio temporal desde transformadas.
+A stationary point ofK/J would choose r=K/J>0 and would giveH=H'=0, a contradiction. Its continuous derivative never vanishes. The time bound K<a∫(s−t)Phi<=aA0/V', J>tA0 gives0<K/J<a/(tV')→0; it fixes the NEGATIVE sign, without inferring a time ratio from transforms.
 
-## 4. Cuatro funciones pares y el cociente para cada pivote
+## 4. Four even functions and the quotient for each pivot
 
-La derivada de[J,Phi,J'',Phi''] es exactamente el sistemaimpar089 multiplicado por−1columnaacolumna. Si una combinaciónPAR no trivial tuviera cuatro raícespositivas contadas, su derivada tendría almenoscuatro usando sólo su límite0 eninfinito, contradiciendo elECT4impar. La derivada no puede ser idénticamentenula por independencia, y una constante con cola0 sería nula. AsíEVEN4 es Chebyshev con multiplicidades; no se presupone un signo innecesario de sus determinantes.
+The derivative of[J,Phi,J'',Phi''] is exactly the odd system089 multiplied by−1 column by column. If a nontrivial EVEN combination had four positive roots counted, its derivative would have at least four using only its limit0 at infinity, contradicting the oddECT4. The derivative cannot be identically zero by independence, and a constant with tail0 would be zero. ThusEVEN4 is Chebyshev with multiplicities; an unnecessary sign of its determinants is not presupposed.
 
-Para F=Psi_p−rD_p, se verificó directamente FORCING4: LpF''=(1+rp)J''+(pbeta−p²)J−rcPhi''−betacPhi. ElcoeficienteJ'' es positivo para p,r>0, porloque la combinación no es nula y tiene<=3raíces. GAINdescarta queF tenga2raíces contadas. Una estación delratio elegía r=Psi/D>0 y produciría raíz doble: imposible. Se prueba no sólo monotonía débil sino derivada no nula.
+For F=Psi_p−rD_p, FORCING4 was verified directly: LpF''=(1+rp)J''+(pbeta−p²)J−rcPhi''−betacPhi. The coefficient ofJ'' is positive for p,r>0, so the combination is not zero and has<=3 roots. GAIN rules out thatF has2 roots counted. A stationary point of the ratio would choose r=Psi/D>0 and would produce a double root: impossible. Not only weak monotonicity but a nonzero derivative is proved.
 
-Finalmentetau(s)<=c/(2p) en una cola dependiente dep hace cPhi−pJ>=cPhi/2. Greenanticausal075 y sinh(px)/p>=x danD_p>=cI/2. Positividad deD y tau decreciente danPsi_p<=tau(t)I, así0<Psi/D<=2tau/c→0. Para CADA p, esa cola fija el signo global de su derivada continua sin estaciones: estrictamente negativo en TODOt>0. No se necesita uniformizar el umbral enp ni intercambiar límites.
+Finallytau(s)<=c/(2p) on a tail depending onp makes cPhi−pJ>=cPhi/2. Anticausal Green075 and sinh(px)/p>=x giveD_p>=cI/2. Positivity ofD and tau decreasing givePsi_p<=tau(t)I, thus0<Psi/D<=2tau/c→0. For EACH p, that tail fixes the global sign of its continuous derivative without stationary points: strictly negative at EVERYt>0. There is no need to make the threshold uniform inp nor to interchange limits.
 
-## 5. Diferencia y límites
+## 5. Difference and limits
 
-Consultados los tresíndices y075/077/078/089/099/100. Se usa un dato real adicional concreto (ECT4impar089→Chebyshev4PAR) para probar una desigualdad de pareja, no sólo reformular una razón de transformadas. K/J yPsi/Dtemporales son objetos distintos deeta=−K'/J falsificada como observablemonótono100; ambos resultados son compatibles.
+Consulted the three indexes and075/077/078/089/099/100. A concrete additional real datum is used (oddECT4 089→EVEN Chebyshev4) to prove a pair inequality, not merely to reformulate a ratio of transforms. The time quotients K/J andPsi/D are objects distinct frometa=−K'/J falsified as a monotone observable100; both results are compatible.
 
-Se prueban las propiedades para las parejas reales ya construidas y TODOS los primeros pivotes. No se prueba que otra reducción conserve ECT4, positividad de sus nuevas densidades o esta monotonía; no cierre de una claseinvariante de todos los órdenes. No nuevaW/T ni cinco generadoresadmisibles;099permanece vigente. La prueba depende de los resultados auditados previos, incluido el certificado fijo089, pero no de un nuevo cómputo.
-
-
-## Ampliación§8 — siguiente denominador y residuo
-
-Leída la versión final y aprobada independientemente. Para A=D_p,B=Psi_p, F=zZB/ZA=Gp/c, el cocienteZB/ZA es el promedio de rho=B/A bajoAcosh. Derivar da Cov(rho,t tanhzt)<0 estricta por doscopias y orden opuesto. Las supercolas pagan todas las derivadas. Así d/q<aF y d/q está estrictamente entre0 y rho0.
-
-El peso h=dA−qB tiene un cruce simple−/+ y balancecosh exacto. La función sinh[q(s−t)]1s>=t/cosh(qs) es no decreciente y estricta en la cola, con la derivada qcosh(qt)/cosh²(qs) correcta. Restar su valor en el cruce da E>0 en TODOel eje, no sólo un signo de transformada. E'0=0 procede del balance; la ecuaciónE''−q²E=h, paridad y supercolas justifican transformadaentera ZE=(dZA−qZB)/(z²−q²), con removibles±q yE0positivo.
-
-Se verificó algebraicamente F1=d/z[ZB/ZE−q]. ZE0=ZA0(q aF−d)/q² da r_q=q d²/(q aF−d)>0. Alquitarloqueda Rnext=d/z[ZB/ZE−gamma],gamma=ZB0/ZE0. U=B−gammaE tiene masa0 EXACTA, pero su cruce−/+ no está probado; la construcción Xi ysu representación se mantienen condicionales. La monotoníaB/A no se usa como si ya fuese una deE/B.
-
-La escalaoriginalGp=cF cambia a cE,cF1,c r_q,cRnext con c>0; no se pierde un factorq/c. Es una aplicación nueva deGreen075 aotra pareja disponible gracias102, no un nuevo principioabstracto. Se prueban denominador y residuo del siguiente paso; no una pareja positiva completa, su monotonía o conservaciónallorders. Fuente§7 fue precisada para no dejar el denominador ya probado como si aún estuviera abierto.
+The properties are proved for the real pairs already built and ALL first pivots. It is not proved that another reduction preserves ECT4, positivity of its new densities or this monotonicity; no closure of an invariant class of all orders. No newW/T nor five admissible generators;099 remains in force. The proof depends on the previously audited results, including the fixed certificate089, but not on a new computation.
 
 
-## Complemento099+102 — resto real positivo y removible
+## Extension§8 — next denominator and residue
 
-La distinción de alcance fue revisada: la positividad del siguiente denominador NO basta por sí sola para el resto. Pero099 añade concavidad estricta deR_F,S_F paraF=Gp/c y todos sus paresPD. La analiticidadF=zZB/ZA y aF>0 extiende R_F0=1/aF,S_F0=0. Las diferencias divididas deorden2 con nodo0 son estrictamente negativas, incluidos dos nodosq² repetidos: el promedio de la derivada estrictamente decreciente en[0,q²] supera su valor final. Así se justifica estrictitud sin apelar a un límite de matricesPD.
+The final version was read and approved independently. For A=D_p,B=Psi_p, F=zZB/ZA=Gp/c, the quotientZB/ZA is the average of rho=B/A underAcosh. Differentiating gives Cov(rho,t tanhzt)<0 strictly by two copies and opposite order. The supertails pay all derivatives. Thus d/q<aF and d/q lies strictly between0 and rho0.
 
-DET3 extendido da detK_F(0,q,z)>0 y el menor(0,q)>0 porF-GAP. La identidad exacta dobleSchur con ell=[zd−qF]/[d(z+q)] produce det=(d/q)delta ell²Rnext/z, positiva para z!=q. ell puede cambiar signo; sólo se usa su cuadrado. ell'(q)=(d−qF'(q))/(2dq)>0, y el término cuadrático exacto deDET3 tiene coeficiente positivo por las diferenciasdivididasconfluentes. Cancelar esos dos factores cuadráticos da Rnext(q)>0 también. La removibilidad deF1 allí es simple y no se omitió ese punto.
+The weight h=dA−qB has a simple −/+ crossing and exact cosh balance. The function sinh[q(s−t)]1s>=t/cosh(qs) is nondecreasing and strict on the tail, with the correct derivative qcosh(qt)/cosh²(qs). Subtracting its value at the crossing gives E>0 on the WHOLE axis, not only a sign of a transform. E'0=0 comes from the balance; the equationE''−q²E=h, parity and supertails justify the entire transform ZE=(dZA−qZB)/(z²−q²), with removable points±q andE0 positive.
 
-Se prueba Rnext(z)>0 TODOSp,q,z>0, incluida la escalaoriginalcRnext. SigueOPEN el cruce deU y su densidadXi positiva, la monotonía de esa pareja y las formascruzadas del nuevokernel. El nodo0 esauxiliarNOadmisibleW; no cinco/todoslosgeneradores ni nuevaW/T.
+F1=d/z[ZB/ZE−q] was verified algebraically. ZE0=ZA0(q aF−d)/q² gives r_q=q d²/(q aF−d)>0. Removing it leaves Rnext=d/z[ZB/ZE−gamma],gamma=ZB0/ZE0. U=B−gammaE has EXACT mass0, but its −/+ crossing is not proved; the construction Xi and its representation remain conditional. The monotonicityB/A is not used as if it were already one ofE/B.
+
+The original scaleGp=cF changes to cE,cF1,c r_q,cRnext with c>0; no factorq/c is lost. It is a new application ofGreen075 to another pair available thanks to102, not a new abstract principle. Denominator and residue of the next step are proved; not a full positive pair, its monotonicity or preservation for all orders. Source§7 was made precise so as not to leave the already proved denominator as if it were still open.
+
+
+## Complement099+102 — positive real remainder and removable point
+
+The scope distinction was reviewed: positivity of the next denominator does NOT by itself suffice for the remainder. But099 adds strict concavity ofR_F,S_F forF=Gp/c and all itsPD pairs. AnalyticityF=zZB/ZA and aF>0 extend R_F0=1/aF,S_F0=0. The divided differences of order2 with node0 are strictly negative, including two repeated nodesq²: the average of the strictly decreasing derivative on[0,q²] exceeds its final value. Thus strictness is justified without appealing to a limit ofPD matrices.
+
+ExtendedDET3 gives detK_F(0,q,z)>0 and the minor(0,q)>0 byF-GAP. The exact double Schur identity with ell=[zd−qF]/[d(z+q)] produces det=(d/q)delta ell²Rnext/z, positive for z!=q. ell may change sign; only its square is used. ell'(q)=(d−qF'(q))/(2dq)>0, and the exact quadratic term ofDET3 has positive coefficient by the confluent divided differences. Cancelling those two quadratic factors gives Rnext(q)>0 too. The removability ofF1 there is simple and that point was not omitted.
+
+Rnext(z)>0 is proved for ALLp,q,z>0, including the original scalecRnext. The crossing ofU and its positive densityXi, the monotonicity of that pair and the cross forms of the new kernel remain OPEN. The node0 is auxiliary and NOT W-admissible; not five/all generators nor newW/T.

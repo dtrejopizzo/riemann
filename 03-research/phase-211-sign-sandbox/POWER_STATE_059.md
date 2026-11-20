@@ -1,19 +1,19 @@
-# POWER_STATE_059 — Escala necesaria para un contorno uniforme
+# POWER_STATE_059 — Scale needed for a uniform contour
 
-Estado: obstrucción de clase PROVED; construcción de contorno uniforme OPEN; signo general OPEN. Papers intactos.
+Status: class obstruction PROVED; uniform contour construction OPEN; general sign OPEN. Papers untouched.
 
-POWER_STRIP_NECESSITY_059.md, prueba exacta de root y mapa: fijados u>0, 0<eta<u y D finita, la cota integral |rho(x+i eta)|<=D integral rho(x) falla sobre cualquier sucesión n<=j=o(n²), ya para P=1. Por tanto ningún cono j>=C n^p con p<2 admite esa cota uniforme. La prueba usa
+POWER_STRIP_NECESSITY_059.md, exact proof, independently checked: fixing u>0, 0<eta<u and finite D, the integral bound |rho(x+i eta)|<=D integral rho(x) fails on any sequence n<=j=o(n²), already for P=1. Hence no cone j>=C n^p with p<2 admits that uniform bound. The proof uses
 
     Var|tau|<=u²[j/(2(n−3/2)(n−1))+1/(2(n−3/2))]
 
-más tiempos t_n en un intervalo fijo donde la autocorrelación normalizada tiende a1. El supuesto contorno obligaría a que fuera menor que1/2. No se modifica W; no se afirma W negativa ni imposibilidad de positividad subcuadrática.
+plus times t_n in a fixed interval where the normalised autocorrelation tends to1. The supposed contour would force it to be less than1/2. W is not modified; W negative is not claimed nor impossibility of subquadratic positivity.
 
-La diferencia frente PACKET016 es cubrir TODO j=o(n²), incluso frecuencia central divergente, mediante varianza exacta. El resultado indica qué escala no intentar en la construcción actual. No refuta p>=2, ni constantes D dependientes de n como054.
+The difference relative to PACKET016 is covering ALL j=o(n²), even divergent central frequency, through exact variance. The result indicates which scale not to attempt in the current construction. It does not refute p>=2, nor n-dependent constants D as in054.
 
-## Construcción pendiente
+## Pending construction
 
-Se investiga una cota de contorno independiente de n para todos los numeradores en un cono polinómico de filtros. Se separan las partes par e impar de P(i tau), para conservar el producto de la densidad en amplitudes analíticas sin la fase causal. Esto evita importar la norma temporal ponderada uniforme refutada016.
+A contour bound independent of n for all numerators in a polynomial cone of filters is being investigated. The even and odd parts of P(i tau) are separated, in order to keep the density product in analytic amplitudes without the causal phase. This avoids importing the uniform weighted temporal norm refuted in016.
 
-El cambio inverso de054 lleva una traslación compleja a y/(1+i epsilon y). Su generador formal sobre una amplitud h es −i(y²h′+yh). Una comparación gaussiana global NO está justificada: la transformación compleja puede amplificar su región exterior, y una norma del generador en dimensión finita no controla automáticamente toda su exponencial. Se debe conservar el peso racional exacto y controlar región central y exterior antes de afirmar una nueva desigualdad. No se registra esa heurística como teorema.
+The inverse change of054 takes a complex translation to y/(1+i epsilon y). Its formal generator on an amplitude h is −i(y²h′+yh). A global Gaussian comparison is NOT justified: the complex transformation can amplify its exterior region, and a norm of the generator in finite dimension does not automatically control its whole exponential. The exact rational weight must be kept and the central and exterior regions controlled before claiming a new inequality. That heuristic is not recorded as a theorem.
 
-054 sigue siendo el último nuevo resultado de signo de la forma completa;053 conserva los trece polos arbitrarios. Las exploraciones posteriores055–058 no cerraron el signo inicial: identidades Selberg/Turán, cruces de filtros y representaciones exteriores repitieron obligaciones registradas. No se promueven a nuevos teoremas ni NO-GO generales.
+054 remains the latest new sign result of the full form;053 keeps the thirteen arbitrary poles. The later explorations055–058 did not close the initial sign: Selberg/Turán identities, filter cross terms and exterior representations repeated recorded obligations. They are not promoted to new theorems nor general NO-GOs.

@@ -1,220 +1,220 @@
-# Ronda 3, opción 5 — el par virial: selección
+# Round 3, option 5 — the virial pair: selection
 
-Memo de selección, no de construcción. Notación de `../phase-211-sign-sandbox/STATEMENT_001.md`;
-N = e^{2T}. Etiquetas: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMÉRICO.
-Pregunta: ¿existe una identidad exacta de conmutador o virial sobre todo P_T,
-a_T(F) = (forma de conmutador con el generador de dilataciones) + ρ_T(F), o una cantidad monótona en T,
-en la que m′ y los pesos Λ(n) log n entren con orientación firmada y cuya exactitud use
+Selection memo, not a construction memo. Notation of `../phase-211-sign-sandbox/STATEMENT_001.md`;
+N = e^{2T}. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
+Question: is there an exact commutator or virial identity on all of P_T,
+a_T(F) = (commutator form with the dilation generator) + ρ_T(F), or a quantity monotone in T,
+in which m′ and the weights Λ(n) log n enter with signed orientation and whose exactness uses
 Σ_{d|k}Λ(d) = log k?
 
-## Cotejo
+## Cross-check
 
-### Qué se buscó y dónde
+### What was searched and where
 
-Grep sin distinguir mayúsculas de «virial», «pohozaev», «morawetz», «mourre», «positive commutator»,
-«conmutador», «hellmann», «dilat», «monoton», «Grönwall», «Hadamard» en todo `03-research/`, en
-`04-papers/47*` y `48*`, en el índice de rutas (README y catálogos 01–06), en el grid y en el
-crucigrama, y lectura de `RULES_AVOID.md` §§B4, C1, D9, I3–I5, I8. Hubo más de cuarenta archivos con
-coincidencias. Se leyeron en primaria: R170_840 (§0 y §§8–9 enteros); R162_501 (entero);
-106_124 §§1–2; P121_COMMUTATOR_MOMENT_TOMOGRAPHY_NO_GO (entero); P124_007 (veredicto y §1);
-R165_202 (tabla 1.4–1.9); 211/ROUND_008_C (§§0–2 y enunciados de las Prop. 3–6); IDX README, fase 193,
-frente I. No se leyeron línea por línea: 106_105, 106_119, 106_41, R162_407, R162_408 ni los G2_* de la
-fase 159. Que no se hayan leído no prueba que no contengan la idea.
+Case-insensitive grep for «virial», «pohozaev», «morawetz», «mourre», «positive commutator»,
+«conmutador», «hellmann», «dilat», «monoton», «Grönwall», «Hadamard» in all of `03-research/`, in
+`04-papers/47*` and `48*`, in the routes index (README and catalogues 01–06), in the grid and in the
+crossword, and reading of `RULES_AVOID.md` §§B4, C1, D9, I3–I5, I8. There were more than forty files with
+hits. Read in primary: R170_840 (§0 and §§8–9 in full); R162_501 (in full);
+106_124 §§1–2; P121_COMMUTATOR_MOMENT_TOMOGRAPHY_NO_GO (in full); P124_007 (verdict and §1);
+R165_202 (table 1.4–1.9); 211/ROUND_008_C (§§0–2 and statements of Props. 3–6); IDX README, phase 193,
+front I. Not read line by line: 106_105, 106_119, 106_41, R162_407, R162_408 nor the G2_* of
+phase 159. That they were not read does not prove they do not contain the idea.
 
-### (1) Antecedentes más cercanos, leídos en primaria
+### (1) Closest antecedents, read in primary
 
-- **R162_501, Teorema 2.2 (Selberg–virial), PROVED bajo (REG) sobre el radical.** Es justamente la
-  pregunta de esta zona. El peso Λ(n) log n del peine derivado se reescribe con
-  Λ·log + Λ∗Λ = W := μ∗log². Esa identidad sale de multiplicar Λ∗1 = log por la derivación log, así
-  que usa Σ_{d|k}Λ(d) = log k. La ecuación del núcleo absorbe el cuadrado Λ∗Λ. Prop. 3.1: ningún
-  término tiene signo determinado, y la reformulación (S-W) es equivalente a 𝒱|_N ≤ 0, es decir a
-  VIR–LB. Falsificadores: el argumento cae para Davenport–Heilbronn sólo en la línea W ≥ 0, y **no
-  cae** para modificaciones finitas Λ + η con η ≥ 0.
-- **106_124 §1.** Con el generador completo, el conmutador de dilatación tiene paridad par. Cada
-  potencia de primo aporta la distribución aislada log n·{δ′_{log n} − δ′_{−log n}}, y el conmutador
-  es no acotado en ambos signos sobre el núcleo liso par. Proyectar la dilatación da un conjugado no
-  local. Bajo el umbral, una estimación de Mourre estricta para él equivale a la ausencia de los
-  estados que se querían excluir.
-- **R170_840 §8, Prop. 8.1 (PROVED).** VIR–LB y VIR–DET juntas fuerzan R_LG = 0 en una primera
-  ventana supuesta. Ambas quedan OPEN, igual que (REG) y la uniformidad en T. El propio memo dice que
-  el par «tiene exactamente la fuerza necesaria» para el cierre (§8, tras (8.6)).
-- **Monotonía y derivada en T.** R165_202 1.4 da la fórmula de Hellmann–Feynman
-  D⁺λ ≤ −𝒱_T(F_T)/T ≤ D₋λ (PROVED bajo (REG)), y su 1.5 da el principio de Hadamard (ARGUED).
-  En 211/ROUND_008_C, el Teorema 1 es la versión con multiplicadores de Tate y la Prop. 5 prueba que
-  Grönwall en T y (EB_C) son reformulaciones de (★) más una tasa (PROVED). R186_038 α.3 está
-  registrado como NO-GO (vacío). PROOF_L_SHARP_H_001 define la clase 𝒦_H, NO-GO ARGUED.
-- **Conmutadores con la posición.** En P121 se tiene ad_Q(S_a) = −aS_a. Sobre el radical, los
-  conmutadores simples no dan información; el doble conmutador da ⟨QF, HQF⟩ ≥ 0 y la ruta queda
-  retirada. P124_007: el conmutador con el multiplicador de Tate se cancela con el defecto de
-  proyección.
-- **IDX README, fase 193, frente I:** «Virial/Pohozaev (holds for every comb, DH included) … dead».
+- **R162_501, Theorem 2.2 (Selberg–virial), PROVED under (REG) on the radical.** It is precisely the
+  question of this zone. The weight Λ(n) log n of the derived comb is rewritten with
+  Λ·log + Λ∗Λ = W := μ∗log². That identity comes from multiplying Λ∗1 = log by the derivation log, so
+  it uses Σ_{d|k}Λ(d) = log k. The kernel equation absorbs the square Λ∗Λ. Prop. 3.1: no
+  term has a determined sign, and the reformulation (S-W) is equivalent to 𝒱|_N ≤ 0, that is to
+  VIR–LB. Falsifiers: the argument falls for Davenport–Heilbronn only at the line W ≥ 0, and **does not
+  fall** for finite modifications Λ + η with η ≥ 0.
+- **106_124 §1.** With the complete generator, the dilation commutator has even parity. Each
+  prime power contributes the isolated distribution log n·{δ′_{log n} − δ′_{−log n}}, and the commutator
+  is unbounded in both signs on the even smooth core. Projecting the dilation gives a non-local
+  conjugate. Below the threshold, a strict Mourre estimate for it is equivalent to the absence of the
+  states one wanted to exclude.
+- **R170_840 §8, Prop. 8.1 (PROVED).** VIR–LB and VIR–DET together force R_LG = 0 at a supposed first
+  window. Both remain OPEN, as do (REG) and uniformity in T. The memo itself says that
+  the pair «has exactly the strength needed» for the closure (§8, after (8.6)).
+- **Monotonicity and derivative in T.** R165_202 1.4 gives the Hellmann–Feynman formula
+  D⁺λ ≤ −𝒱_T(F_T)/T ≤ D₋λ (PROVED under (REG)), and its 1.5 gives the Hadamard principle (ARGUED).
+  In 211/ROUND_008_C, Theorem 1 is the version with Tate multipliers and Prop. 5 proves that
+  Grönwall in T and (EB_C) are reformulations of (★) plus a rate (PROVED). R186_038 α.3 is
+  recorded as NO-GO (vacuous). PROOF_L_SHARP_H_001 defines the class 𝒦_H, NO-GO ARGUED.
+- **Commutators with the position.** In P121 one has ad_Q(S_a) = −aS_a. On the radical, simple
+  commutators give no information; the double commutator gives ⟨QF, HQF⟩ ≥ 0 and the route is
+  withdrawn. P124_007: the commutator with the Tate multiplier cancels with the projection
+  defect.
+- **IDX README, phase 193, front I:** «Virial/Pohozaev (holds for every comb, DH included) … dead».
 
-### (2) Objeto realmente nuevo
+### (2) Genuinely new object
 
-**No hay ninguno que pueda escribir con mecanismo de signo.** La pregunta pide una forma
-exacta en todo P_T y no sólo en el radical. En esa forma sólo es nuevo, respecto de los antecedentes,
-lo que delimitan los dos lemas de §1: una forma de conmutador con multiplicadores traslación
-invariantes es una tautología (Lema 1), y la identidad a_T = κ·𝒱 + ρ con ρ acotada inferiormente es
-falsa (Lema 2). La identidad de Selberg–virial en todo P_T es la de R162_501 sin el paso 5, o sea
-sin la ecuación del núcleo. En su lugar aparece un apareamiento cruzado −⟨τ Im z_c F, S_T F⟩ sin
-signo, del mismo tipo que el residuo de I4 (§2). No se escribe ℋ_T, V_T ni ρ_T.
+**There is none I can write with a sign mechanism.** The question asks for an exact form
+on all of P_T and not only on the radical. In that form the only thing new, relative to the antecedents,
+is what the two lemmas of §1 delimit: a commutator form with translation-invariant
+multipliers is a tautology (Lemma 1), and the identity a_T = κ·𝒱 + ρ with ρ bounded below is
+false (Lemma 2). The Selberg–virial identity on all of P_T is that of R162_501 without step 5, that is
+without the kernel equation. In its place a cross pairing −⟨τ Im z_c F, S_T F⟩ without
+sign appears, of the same type as the residue of I4 (§2). ℋ_T, V_T and ρ_T are not written.
 
-### (3) Por qué el cambio no evita la dificultad del antecedente
+### (3) Why the change does not avoid the difficulty of the antecedent
 
-En el radical, la ecuación del núcleo es lo que convierte Λ∗Λ en datos arquimedianos (R162_501,
-paso 5). Fuera del radical ese paso no existe, y el cuadrado del peine vuelve como un cruce sin signo
-con S_T. Pasar del radical a todo P_T empeora la dificultad: el término comb del virial no es
-relativamente acotado por a_T (Lema 2). Ninguna identidad de la forma pedida puede tener resto
-acotado inferiormente.
+On the radical, the kernel equation is what turns Λ∗Λ into archimedean data (R162_501,
+step 5). Outside the radical that step does not exist, and the square of the comb returns as an unsigned cross term
+with S_T. Passing from the radical to all of P_T worsens the difficulty: the comb term of the virial is not
+relatively bounded by a_T (Lemma 2). No identity of the requested form can have a remainder
+bounded below.
 
-### (4) Identidad o desigualdad que conectaría con la positividad global
+### (4) Identity or inequality that would connect with global positivity
 
-Las únicas identidades exactas que conectan el virial con λ_A son la fórmula de variación en T
-(R165_202 1.4; 211/ROUND_008_C Teor. 1) y la suficiencia VIR–EP ⟹ R_LG = 0 (R170_840 Prop. 8.1).
-Ambas viven sobre minimizantes o vectores del radical. Sobre todo P_T, la desigualdad
-«a_T ≥ κ𝒱 − C‖·‖²» es falsa para todo κ ≠ 0 y todo C cuando T > ½ log 2 (Lema 2). La versión
-Grönwall está demostrada como reformulación de (★) más una tasa (211/ROUND_008_C Prop. 5).
+The only exact identities connecting the virial with λ_A are the variation formula in T
+(R165_202 1.4; 211/ROUND_008_C Thm. 1) and the sufficiency VIR–EP ⟹ R_LG = 0 (R170_840 Prop. 8.1).
+Both live on minimizers or vectors of the radical. On all of P_T, the inequality
+«a_T ≥ κ𝒱 − C‖·‖²» is false for every κ ≠ 0 and every C when T > ½ log 2 (Lemma 2). The
+Grönwall version is proved to be a reformulation of (★) plus a rate (211/ROUND_008_C Prop. 5).
 
-¿Más débil o equivalente? VIR–EP está cuantificada sobre ventanas de primer contacto supuestas.
-Cuando no hay contacto es vacía, así que no da un enunciado intermedio que se pueda probar por
-separado. Su contenido, junto con (REG), es el del cierre (R170_840 §8; CITED). La forma global
-a_T = κ𝒱 + ρ, ρ ≥ 0, no es ni más débil ni equivalente: es **falsa** (Lema 2).
+Weaker or equivalent? VIR–EP is quantified over supposed first-contact windows.
+When there is no contact it is vacuous, so it does not give an intermediate statement that can be proved
+separately. Its content, together with (REG), is that of the closure (R170_840 §8; CITED). The global form
+a_T = κ𝒱 + ρ, ρ ≥ 0, is neither weaker nor equivalent: it is **false** (Lemma 2).
 
-### (5) Líneas que se rompen para cΛ y a_P
+### (5) Lines that break for cΛ and a_P
 
-En la identidad de Selberg–virial, la única línea que distingue los pesos es W_a := a·log + a∗a = μ∗log².
+In the Selberg–virial identity, the only line that distinguishes the weights is W_a := a·log + a∗a = μ∗log².
 
-- **cΛ, c ≠ 1:** W_{cΛ}(p) = c log²p ≠ log²p, y W_{cΛ}(pq) = 2c² log p log q. La identidad
-  W_a = μ∗log² falla en n = p para todo c ≠ 1 (PROVED, por cálculo directo).
-- **a_P:** W_{a_P}(n) = W(n)·1[todos los factores primos de n son ≥ P] (Lema 3). La identidad falla
-  exactamente en n = p < P y en los n con algún primo pequeño. Las propiedades estructurales
-  (W1)–(W3) de R162_501 se conservan en el soporte. La separación es «conocer Λ en [2,N)», o sea
-  identificación lineal, ya registrada (RULES_AVOID I2, K4).
+- **cΛ, c ≠ 1:** W_{cΛ}(p) = c log²p ≠ log²p, and W_{cΛ}(pq) = 2c² log p log q. The identity
+  W_a = μ∗log² fails at n = p for every c ≠ 1 (PROVED, by direct computation).
+- **a_P:** W_{a_P}(n) = W(n)·1[all prime factors of n are ≥ P] (Lemma 3). The identity fails
+  exactly at n = p < P and at the n with some small prime. The structural properties
+  (W1)–(W3) of R162_501 are preserved on the support. The separation is «knowing Λ on [2,N)», that is
+  linear identification, already recorded (RULES_AVOID I2, K4).
 
-Lo que no se rompe: el signo. Ninguna orientación firmada del virial sale de estas líneas
-(R162_501 Prop. 3.1), y el falsificador Λ + η, η ≥ 0, ya hace fallar cualquier signo basado en W ≥ 0.
+What does not break: the sign. No signed orientation of the virial comes from these lines
+(R162_501 Prop. 3.1), and the falsifier Λ + η, η ≥ 0, already makes any sign based on W ≥ 0 fail.
 
-**Veredicto del cotejo: repetición.** Por regla 3 del brief, la memo terminaría aquí. Se añaden sólo
-los tres lemas cortos y completos que delimitan la clase, porque responden a la pregunta «en todo P_T».
+**Cross-check verdict: repetition.** By rule 3 of the brief, the memo would end here. Only
+the three short and complete lemmas that delimit the class are added, because they answer the question «on all of P_T».
 
-## 1. Dos lemas de formato
+## 1. Two format lemmas
 
-Sea D el generador unitario de dilataciones, (U_rF)(t) = r^{−1/2}F(t/r). En Fourier,
-(U_rF)^(τ) = r^{1/2}F̂(rτ). Para F real con c_F ∈ C¹ (por ejemplo F ∈ C_c^∞(I_T)) se define
+Let D be the unitary generator of dilations, (U_rF)(t) = r^{−1/2}F(t/r). In Fourier,
+(U_rF)^(τ) = r^{1/2}F̂(rτ). For real F with c_F ∈ C¹ (for example F ∈ C_c^∞(I_T)) define
 
     𝒱_T(F) := (1/2π)∫ τ s_T′(τ)|F̂(τ)|² dτ
             = (1/2π)∫ τ m′(τ)|F̂|² dτ − Σ_{log n<2T} v_n log n · c_F′(log n).
 
-La igualdad se debe a que 2π c_F(u) = ∫ cos(τu)|F̂|², de donde ∫ τ sin(τu)|F̂|² = −2π c_F′(u). Es el
-virial de R170_840 (8.1) sin el término de Tate del radical. Además
-𝒱_T(F) = −(d/dr)|_{r=1} (1/2π)∫ s_T(τ)|(U_rF)^(τ)|² dτ: es la forma ⟨F, i[D, S_T]F⟩ con la
-convención de signo de R162_407.
+The equality holds because 2π c_F(u) = ∫ cos(τu)|F̂|², whence ∫ τ sin(τu)|F̂|² = −2π c_F′(u). It is the
+virial of R170_840 (8.1) without the Tate term of the radical. Moreover
+𝒱_T(F) = −(d/dr)|_{r=1} (1/2π)∫ s_T(τ)|(U_rF)^(τ)|² dτ: it is the form ⟨F, i[D, S_T]F⟩ with the
+sign convention of R162_407.
 
-**Lema 1 (tautología en la clase de multiplicadores; PROVED).** Sea s una función real, par y
-continua. Sea x(τ) := ∫_1^{|τ|} s(σ)σ^{−1} dσ para τ ≠ 0. Entonces τ x′(τ) = s(τ) para todo τ ≠ 0 y
-⟨F, i[D, X]F⟩ = (1/2π)∫ s|F̂|² para todo F con ∫ |s||F̂|² < ∞, donde X es el multiplicador de símbolo
-x y el conmutador se entiende en sentido de formas. En particular, para cualquier sucesión de pesos
-a se tiene a_T^{(a)}(F) = ⟨F, i[D, X_a]F⟩ con ρ = 0.
+**Lemma 1 (tautology in the multiplier class; PROVED).** Let s be a real, even and
+continuous function. Let x(τ) := ∫_1^{|τ|} s(σ)σ^{−1} dσ for τ ≠ 0. Then τ x′(τ) = s(τ) for every τ ≠ 0 and
+⟨F, i[D, X]F⟩ = (1/2π)∫ s|F̂|² for every F with ∫ |s||F̂|² < ∞, where X is the multiplier of symbol
+x and the commutator is understood in the sense of forms. In particular, for any sequence of weights
+a one has a_T^{(a)}(F) = ⟨F, i[D, X_a]F⟩ with ρ = 0.
 
-*Demostración.* Para un multiplicador X de símbolo x, U_r X U_r^{−1} es el multiplicador de símbolo
-x(τ/r). Derivando en r = 1 se obtiene el símbolo −τx′(τ) para i[D,X], salvo la convención de signo
-fijada arriba. Por construcción τx′ = s, y la forma es (1/2π)∫ s|F̂|². ∎
+*Proof.* For a multiplier X of symbol x, U_r X U_r^{−1} is the multiplier of symbol
+x(τ/r). Differentiating at r = 1 gives the symbol −τx′(τ) for i[D,X], up to the sign convention
+fixed above. By construction τx′ = s, and the form is (1/2π)∫ s|F̂|². ∎
 
-Consecuencia. En la clase de conmutadores de D con multiplicadores traslación invariantes, toda
-identidad «a_T = conmutador + ρ» es un reparto del símbolo s_T = σ₁ + σ₂. Vale para todo peine, de modo
-que no se rompe para cΛ ni para a_P (patrón B1), y el signo del conmutador es literalmente (★).
+Consequence. In the class of commutators of D with translation-invariant multipliers, every
+identity «a_T = commutator + ρ» is a splitting of the symbol s_T = σ₁ + σ₂. It holds for every comb, so
+that it does not break for cΛ nor for a_P (pattern B1), and the sign of the commutator is literally (★).
 
-**Lema 2 (el virial no es relativamente acotado por a_T en P_T; PROVED).** Sea T > ½ log 2. Para
-todo κ ∈ ℝ∖{0} y todo C ≥ 0 existe G ∈ P_T ∩ C_c^∞(I_T) con a_T(G) − κ𝒱_T(G) < −C‖G‖². Por tanto
-no existe identidad exacta a_T = κ𝒱_T + ρ_T sobre P_T ∩ C_c^∞ con ρ_T ≥ −C‖·‖².
+**Lemma 2 (the virial is not relatively bounded by a_T on P_T; PROVED).** Let T > ½ log 2. For
+every κ ∈ ℝ∖{0} and every C ≥ 0 there exists G ∈ P_T ∩ C_c^∞(I_T) with a_T(G) − κ𝒱_T(G) < −C‖G‖². Therefore
+there is no exact identity a_T = κ𝒱_T + ρ_T on P_T ∩ C_c^∞ with ρ_T ≥ −C‖·‖².
 
-*Demostración.* Sea ℓ = log 2. Sea φ ∈ C_c^∞(−1, 1) real con ‖φ‖ = 1. Entonces c_φ es par, de clase
-C¹ y no constante, de modo que existe θ con c_φ′(−θ) ≠ 0. Como c_φ′ es impar, el signo de c_φ′(−θ)
-se elige cambiando θ por −θ. Sea φ_ε := ε^{−1/2}φ(·/ε). Para ε pequeño se toma
+*Proof.* Let ℓ = log 2. Let φ ∈ C_c^∞(−1, 1) be real with ‖φ‖ = 1. Then c_φ is even, of class
+C¹ and non-constant, so there exists θ with c_φ′(−θ) ≠ 0. Since c_φ′ is odd, the sign of c_φ′(−θ)
+is chosen by replacing θ with −θ. Let φ_ε := ε^{−1/2}φ(·/ε). For small ε take
 
     F_ε(t) = φ_ε(t − t₀) + φ_ε(t − t₀ − ℓ − εθ),
 
-con t₀ tal que el soporte quede en I_T; esto es posible porque ℓ < 2T. Se tiene
-c_{F_ε}(u) = 2c_φ(u/ε) + c_φ((u − ℓ − εθ)/ε) + c_φ((u + ℓ + εθ)/ε). Los log n con n ≥ 2 están
-separados entre sí y de 0. Para ε pequeño, el único que cae en un soporte es log 2, por el segundo
-sumando. Así c_{F_ε}′(log n) = 0 para n ≠ 2, c_{F_ε}′(ℓ) = ε^{−1}c_φ′(−θ) y c_{F_ε}(ℓ) = c_φ(−θ).
+with t₀ such that the support lies in I_T; this is possible because ℓ < 2T. One has
+c_{F_ε}(u) = 2c_φ(u/ε) + c_φ((u − ℓ − εθ)/ε) + c_φ((u + ℓ + εθ)/ε). The log n with n ≥ 2 are
+separated from each other and from 0. For small ε, the only one that falls in a support is log 2, through the second
+summand. Thus c_{F_ε}′(log n) = 0 for n ≠ 2, c_{F_ε}′(ℓ) = ε^{−1}c_φ′(−θ) and c_{F_ε}(ℓ) = c_φ(−θ).
 
-Corrección primitiva. Se fijan ψ₁, ψ₂ ∈ C_c^∞(I_T) con det[(A,B)(ψ_i)] ≠ 0; existen porque A y B son
-linealmente independientes sobre C_c^∞(I_T). Se tiene |A(F_ε)|, |B(F_ε)| ≤ 2e^{T/2}‖φ‖₁ε^{1/2}.
-Entonces G_ε = F_ε − α_εψ₁ − β_εψ₂ ∈ P_T con α_ε, β_ε = O(ε^{1/2}).
+Primitive correction. Fix ψ₁, ψ₂ ∈ C_c^∞(I_T) with det[(A,B)(ψ_i)] ≠ 0; they exist because A and B are
+linearly independent on C_c^∞(I_T). One has |A(F_ε)|, |B(F_ε)| ≤ 2e^{T/2}‖φ‖₁ε^{1/2}.
+Then G_ε = F_ε − α_εψ₁ − β_εψ₂ ∈ P_T with α_ε, β_ε = O(ε^{1/2}).
 
-Estimaciones:
-- s_T′ = m′ + Σ v_n log n sin(τ log n) está acotada (m′(τ) = O(1/(1+|τ|)), CITED de
-  211/ROUND_008_C Lema 1.2). Luego |𝒱_T(F,ψ)| ≤ C‖F‖‖τψ̂‖ = O(1), y
+Estimates:
+- s_T′ = m′ + Σ v_n log n sin(τ log n) is bounded (m′(τ) = O(1/(1+|τ|)), CITED from
+  211/ROUND_008_C Lemma 1.2). Hence |𝒱_T(F,ψ)| ≤ C‖F‖‖τψ̂‖ = O(1), and
   𝒱_T(G_ε) = −v_2 ℓ c_φ′(−θ)/ε + O(1).
-- m(τ) ≤ C₁ + log(1 + |τ|) y (1/2π)∫ log(1+|τ|)|F̂_ε|² = O(log(1/ε)), mientras los términos del
-  peine están acotados. Luego a_T(G_ε) = O(log(1/ε)), y ‖G_ε‖² → 2.
+- m(τ) ≤ C₁ + log(1 + |τ|) and (1/2π)∫ log(1+|τ|)|F̂_ε|² = O(log(1/ε)), while the comb
+  terms are bounded. Hence a_T(G_ε) = O(log(1/ε)), and ‖G_ε‖² → 2.
 
-Se elige el signo de c_φ′(−θ) de modo que κ𝒱_T(G_ε) → +∞ como 1/ε. Entonces
-a_T(G_ε) − κ𝒱_T(G_ε) → −∞, más rápido que cualquier −C‖G_ε‖². ∎
+Choose the sign of c_φ′(−θ) so that κ𝒱_T(G_ε) → +∞ like 1/ε. Then
+a_T(G_ε) − κ𝒱_T(G_ε) → −∞, faster than any −C‖G_ε‖². ∎
 
-Alcance. El Lema 2 usa sólo v_2 ≠ 0. Es una obstrucción de formato, genérica en el peine y sin signo,
-como el lema de K1′. Coincide en contenido con la frase de 106_124 §1 («unbounded in both signs on
-the even smooth core»), pero aquí se enuncia para a_T sobre P_T y con demostración escrita. **No
-excluye:** generadores distintos de D (por ejemplo dilataciones con peso aritmético, o el generador
-multiplicativo log x · x d/dx en otras coordenadas); conmutadores con operadores no traslación
-invariantes que no sean dilatación pura (la ventana, el defecto de Tate, U_n); restos ρ_T no acotados
-inferiormente pero con signo sobre P_T; combinaciones κ(T)𝒱_T con κ dependiente de F o no lineales;
-identidades sólo sobre subespacios propios; y la versión del radical (VIR–LB/VIR–DET), que sigue OPEN.
+Scope. Lemma 2 uses only v_2 ≠ 0. It is a format obstruction, generic in the comb and without sign,
+like the lemma of K1′. It coincides in content with the sentence of 106_124 §1 («unbounded in both signs on
+the even smooth core»), but here it is stated for a_T on P_T and with a written proof. **It does not
+exclude:** generators other than D (for example dilations with arithmetic weight, or the
+multiplicative generator log x · x d/dx in other coordinates); commutators with non-translation-invariant
+operators that are not pure dilation (the window, the Tate defect, U_n); remainders ρ_T not bounded
+below but with sign on P_T; combinations κ(T)𝒱_T with κ depending on F or non-linear;
+identities only on proper subspaces; and the radical version (VIR–LB/VIR–DET), which remains OPEN.
 
-## 2. Selberg–virial en todo P_T (ARGUED, pasos 1–4 de R162_501 sin el paso 5)
+## 2. Selberg–virial on all of P_T (ARGUED, steps 1–4 of R162_501 without step 5)
 
-Para F ∈ P_T real con c_F ∈ C¹, y z_c, Y, W como en R162_501, los pasos 1–4 no usan la ecuación del
-núcleo. Dan
+For real F ∈ P_T with c_F ∈ C¹, and z_c, Y, W as in R162_501, steps 1–4 do not use the kernel
+equation. They give
 
     𝒱_T(F) = (1/2π)∫ τ m′|F̂|² − (1/π)∫ τ Im Y |F̂|² + (1/π)∫ τ Im z_c · m |F̂|²
-             − (1/π)∫ τ Im z_c · s_T |F̂|²                     (+ término de umbral si 2T = log n₀).
+             − (1/π)∫ τ Im z_c · s_T |F̂|²                     (+ threshold term if 2T = log n₀).
 
-El último término es el apareamiento cruzado −(1/π)Re⟨M_{τ Im z_c}F, S_T F⟩. En el radical, S_T F
-cae en el espacio de Tate y en la fuga exterior; aquí no tiene signo. Es el mismo formato
-«−Re⟨X F, S_T F⟩ sin signo y con cota sólo bilateral» de RULES_AVOID I4. Vale para todo peine a con
-W_a en lugar de W (R162_501 §3, línea DH), así que no es nuevo y no lleva signo.
+The last term is the cross pairing −(1/π)Re⟨M_{τ Im z_c}F, S_T F⟩. On the radical, S_T F
+falls in the Tate space and in the exterior leakage; here it has no sign. It is the same format
+«−Re⟨X F, S_T F⟩ without sign and with only a two-sided bound» of RULES_AVOID I4. It holds for every comb a with
+W_a in place of W (R162_501 §3, DH line), so it is not new and carries no sign.
 
-**Lema 3 (W de a_P; PROVED).** Para a_P := Λ·1[p ≥ P] (potencias de primos p < P borradas),
-W_{a_P} := a_P·log + a_P∗a_P = W·1[todo factor primo de n es ≥ P].
+**Lemma 3 (W of a_P; PROVED).** For a_P := Λ·1[p ≥ P] (powers of primes p < P erased),
+W_{a_P} := a_P·log + a_P∗a_P = W·1[every prime factor of n is ≥ P].
 
-*Demostración.* Si p ≥ P, entonces a_P·log(p^k) = k log²p y a_P∗a_P(p^k) = Σ_{i=1}^{k−1}(log p)² =
-(k−1)log²p; la suma es (2k−1)log²p = W(p^k). Si p, q ≥ P son distintos, a_P∗a_P(p^iq^j) =
-2 log p log q = W(p^iq^j), y a_P·log se anula allí. Si ω(n) ≥ 3, ambos sumandos son 0. Si n tiene un
-factor primo menor que P, a_P(n) = 0 o n no es potencia de primo, y todo par d·(n/d) con a_P(d)a_P(n/d)
-≠ 0 tiene ambos factores sin primos pequeños; luego ambos sumandos son 0. ∎
+*Proof.* If p ≥ P, then a_P·log(p^k) = k log²p and a_P∗a_P(p^k) = Σ_{i=1}^{k−1}(log p)² =
+(k−1)log²p; the sum is (2k−1)log²p = W(p^k). If p, q ≥ P are distinct, a_P∗a_P(p^iq^j) =
+2 log p log q = W(p^iq^j), and a_P·log vanishes there. If ω(n) ≥ 3, both summands are 0. If n has a
+prime factor less than P, a_P(n) = 0 or n is not a prime power, and every pair d·(n/d) with a_P(d)a_P(n/d)
+≠ 0 has both factors without small primes; hence both summands are 0. ∎
 
-Lectura. Para a_P, la identidad de Selberg falla sólo por soporte, nunca por estructura. El virial de
-Selberg distingue Λ de a_P sólo por los valores en los n con primos pequeños, que es identificación
-lineal. Para cΛ falla en el valor y en el grado (c frente a c²), pero sigue sin signo.
+Reading. For a_P, the Selberg identity fails only by support, never by structure. The Selberg
+virial distinguishes Λ from a_P only by the values at the n with small primes, which is linear
+identification. For cΛ it fails in the value and in the degree (c versus c²), but remains without sign.
 
-## Resultado
+## Result
 
-Sin mecanismo nuevo; repetición de R162_501, 106_124, R170_840 §8, R165_202, 211/ROUND_008_C y
-P121. Se agregan dos lemas cortos que delimitan la pregunta «en todo P_T»: un NO-GO de clase (Lema 2)
-y una tautología de clase (Lema 1). No hay candidata lista para construcción.
+No new mechanism; repetition of R162_501, 106_124, R170_840 §8, R165_202, 211/ROUND_008_C and
+P121. Two short lemmas are added that delimit the question «on all of P_T»: a class NO-GO (Lemma 2)
+and a class tautology (Lemma 1). There is no candidate ready for construction.
 
-## Qué se probó
+## What was proved
 
-- Lema 1 (PROVED): en la clase de conmutadores de D con multiplicadores, la identidad
-  a_T = conmutador es tautológica y genérica en el peine, y su signo es (★) literalmente.
-- Lema 2 (PROVED, NO-GO con clase): para T > ½ log 2 no existe a_T = κ𝒱_T + ρ_T con κ ≠ 0 y
-  ρ_T ≥ −C‖·‖² sobre P_T ∩ C_c^∞. El virial del peine es no acotado en ambos signos relativo a a_T.
-- Lema 3 (PROVED): W_{a_P} = W·1[primos ≥ P]. La línea de a_P en el virial de Selberg es sólo soporte.
+- Lemma 1 (PROVED): in the class of commutators of D with multipliers, the identity
+  a_T = commutator is tautological and generic in the comb, and its sign is literally (★).
+- Lemma 2 (PROVED, NO-GO with class): for T > ½ log 2 there is no a_T = κ𝒱_T + ρ_T with κ ≠ 0 and
+  ρ_T ≥ −C‖·‖² on P_T ∩ C_c^∞. The virial of the comb is unbounded in both signs relative to a_T.
+- Lemma 3 (PROVED): W_{a_P} = W·1[primes ≥ P]. The a_P line in the Selberg virial is only support.
 
-## Qué falló y por qué
+## What failed and why
 
-Fuera del radical, el cuadrado Λ∗Λ que produce Σ_{d|k}Λ(d) = log k no se puede absorber: vuelve como
-un cruce con S_T sin signo. El virial tiene crecimiento |τ| en el peine frente a log|τ| en a_T, lo que
-impide toda identidad con resto acotado inferiormente. En el radical, el par VIR–LB/VIR–DET tiene la
-fuerza del cierre y sigue OPEN, sin objeto que lo oriente.
+Outside the radical, the square Λ∗Λ produced by Σ_{d|k}Λ(d) = log k cannot be absorbed: it returns as
+an unsigned cross term with S_T. The virial has growth |τ| in the comb versus log|τ| in a_T, which
+prevents any identity with remainder bounded below. On the radical, the pair VIR–LB/VIR–DET has the
+strength of the closure and remains OPEN, with no object that orients it.
 
-## Siguiente paso concreto
+## Concrete next step
 
-No relanzar el virial de dilatación pura sobre P_T. Queda una sola reapertura que el Lema 2 no
-excluye y que tiene operación explícita: sustituir D por un generador cuyo conmutador con el peine
-sea relativamente acotado por a_T. Eso exige que el término δ′ en log n quede compensado dentro del
-propio generador, por ejemplo un generador con amortiguación aritmética en cada log n. Antes de
-derivar nada, una candidata así tiene que escribir el generador y mostrar la cota relativa. El cotejo
-de esa idea contra 106_124 §§3–8 (generador completo, conjugado proyectado) queda pendiente y no se
-ha hecho aquí.
+Do not relaunch the pure-dilation virial on P_T. A single reopening remains that Lemma 2 does not
+exclude and that has an explicit operation: replace D by a generator whose commutator with the comb
+is relatively bounded by a_T. That requires the δ′ term at log n to be compensated within the
+generator itself, for example a generator with arithmetic damping at each log n. Before
+deriving anything, such a candidate has to write the generator and show the relative bound. The cross-check
+of that idea against 106_124 §§3–8 (complete generator, projected conjugate) remains pending and has not
+been done here.

@@ -1,32 +1,32 @@
 # POWER ROWS AUDIT 028
 
-Estado: ROW_FOUR028 y ROW_SPLIT028 (N5) APROBADOS. Papers intactos.
+Status: ROW_FOUR028 and ROW_SPLIT028 (N5) APPROVED. Papers untouched.
 
-## Fila N4 completa — APROBADA
+## Full row N4 — APPROVED
 
-Revisados `POWER_ROW_FOUR_028.md` y `tools/power_row_four_028_verify.py`; ejecución independiente PASS. La norma base5/(32u^7) y la recurrencia de integrales producen A4=d−ud′+(2u²/5)d″−(u³/15)d‴. Las series poligamma dan exactamente los tres términos negativos con factores u/2,u²/5,u³/20. El resto integral sobre la cola desde116 está correctamente acotado por la integral desde115. El extremo racional A4(u0)>11/400 está certificado.
+Reviewed `POWER_ROW_FOUR_028.md` and `tools/power_row_four_028_verify.py`; independent run PASS. The base norm5/(32u^7) and the recurrence of integrals produce A4=d−ud′+(2u²/5)d″−(u³/15)d‴. The polygamma series give exactly the three negative terms with factors u/2,u²/5,u³/20. The integral remainder on the tail from116 is correctly bounded by the integral from115. The rational endpoint A4(u0)>11/400 is certified.
 
-Las dos monotonías ARCH son legítimas: la ley en ξ=τ/u es independiente de u y m(uξ) crece con u; aumentar k repondera por ξ²/(1+ξ²), creciente con |ξ|. Así el extremo u0,k0 extiende el bound a todo u≥31.5,k≥0. Esto no usa movimiento de polos de la forma completa.
+The two ARCH monotonicities are legitimate: the law in ξ=τ/u is independent of u and m(uξ) increases with u; increasing k reweights by ξ²/(1+ξ²), increasing in |ξ|. Thus the endpoint u0,k0 extends the bound to all u≥31.5,k≥0. This does not use pole motion of the full form.
 
-WR4 eta12 conserva eta<u/2. Su serie generadora tiene coeficientes positivos y ambos argumentos decrecen con u; R4<400 en el extremo controla todos los parámetros. El bound del peine incluye toda la suma de von Mangoldt, con el factor2sqrt R<40 y la integral decreciente de(log x)x^−12. La sustitución2^−1/2<5/7 y el extremo log2<.7 dan pérdida<.006.
+WR4 eta12 keeps eta<u/2. Its generating series has positive coefficients and both arguments decrease with u; R4<400 at the endpoint controls all parameters. The comb bound includes the whole von Mangoldt sum, with the factor2sqrt R<40 and the decreasing integral of(log x)x^−12. The substitution2^−1/2<5/7 and the endpoint log2<.7 give loss<.006.
 
-La norma beta y el polar alternado son correctos. La cota c_k≥2^−k y binom(k+3,3)≤4^k da la razón geométrica8q_u; p40 y q_u decrecen con u. Para k pares el polar no se resta; para k impares su pérdida es<.001. El balance REAL completo es por tanto mayor que41/2000>1/50, uniformemente en todos k,u declarados.
+The beta norm and the alternating polar are correct. The bound c_k≥2^−k and binom(k+3,3)≤4^k give the geometric ratio8q_u; p40 and q_u decrease with u. For even k the polar is not subtracted; for odd k its loss is<.001. The full REAL balance is therefore greater than41/2000>1/50, uniformly in all declared k,u.
 
-La diferencia respecto018 es la evaluación exacta de ARCH4 y el peso eta12 que deja un margen positivo; las recurrencias solas no implican este resultado. La fila completa sí añade signo real de W y tercera diferencia estricta de la fila1, pero no completa la tabla ni certifica una ventana nueva T.
+The difference from018 is the exact evaluation of ARCH4 and the weight eta12 that leaves a positive margin; the recurrences alone do not imply this result. The full row does add a real sign of W and a strict third difference of row1, but it does not complete the table nor certify a new window T.
 
 
-## Fila N5 completa — APROBADA
+## Full row N5 — APPROVED
 
-Revisados `POWER_ROW_SPLIT_028.md` y `tools/power_row_split_028_verify.py`; ejecución independiente PASS. Los coeficientes Laguerre de k0 y k1 y sus normas70 y28 son correctos. Las bandas Toeplitz arquimedianas conservan los factores1/2 y1/r!. Las series poligamma usan256 sumandos y dos extremos integrales válidos; ψ(127/4) se reconstruye desdeψ(3/4)=−γ+π/2−3log2 mediante31 pasos. Los tres extremos racionales de ARCH están certificados.
+Reviewed `POWER_ROW_SPLIT_028.md` and `tools/power_row_split_028_verify.py`; independent run PASS. The Laguerre coefficients of k0 and k1 and their norms70 and28 are correct. The archimedean Toeplitz bands keep the factors1/2 and1/r!. The polygamma series use256 summands and two valid integral endpoints; ψ(127/4) is reconstructed fromψ(3/4)=−γ+π/2−3log2 via31 steps. The three rational ARCH endpoints are certified.
 
-Las monotonías legítimas de ARCH en k y u cubren todos los parámetros infinitos. El polar beta tiene la normalización declarada, signo (−1)^k y cociente (k+N)/[(k+1/2)(4u²−1)]. Para N5,k≥1 ese cociente es≤4/(4u0²−1)<1. El extremo p51(u0)<.002 domina todos los polares adversos. p50 decrece con u; por tanto usar ARCH(u0)>−.13 y polar(63)>.23 en [u0,63] es válido sin suponer monotonía AP. Para u≥63, ARCH>.5 y el polar k0 sigue favorable.
+The legitimate ARCH monotonicities in k and u cover all infinite parameters. The beta polar has the declared normalization, sign (−1)^k and quotient (k+N)/[(k+1/2)(4u²−1)]. For N5,k≥1 that quotient is≤4/(4u0²−1)<1. The endpoint p51(u0)<.002 dominates all adverse polars. p50 decreases with u; hence using ARCH(u0)>−.13 and polar(63)>.23 on [u0,63] is valid without assuming AP monotonicity. For u≥63, ARCH>.5 and the k0 polar remains favourable.
 
-WR5 eta12 es válido para todo u≥u0 y k≥0. Su serie generadora tiene coeficientes positivos; la monotonía de R5 se justifica por esa serie, no por el numerador cerrado de signos mezclados. R5<2500 da2sqrt R5<100. El bound completo de peine medianteΛ(q)≤q, q^−11.5≤q^−11 y la integral desde2 es menor que.06. No falta ninguna potencia prima.
+WR5 eta12 is valid for all u≥u0 and k≥0. Its generating series has positive coefficients; the monotonicity of R5 is justified by that series, not by the closed numerator of mixed signs. R5<2500 gives2sqrt R5<100. The full comb bound viaΛ(q)≤q, q^−11.5≤q^−11 and the integral from2 is less than.06. No prime power is missing.
 
-El balance real completo da W>norma²/25 para todo k≥0,u≥31.5 y W>4norma²/5 para k≥1. La identidad A_(N,1)=A_(N,0)+u∂_uA_(N,0) se deriva de la recurrencia de resolventes y la norma beta, sin límite asintótico ni extrapolación en N.
+The full real balance gives W>norm²/25 for all k≥0,u≥31.5 and W>4norm²/5 for k≥1. The identity A_(N,1)=A_(N,0)+u∂_uA_(N,0) is derived from the resolvent recurrence and the beta norm, without asymptotic limit or extrapolation in N.
 
-La diferencia específica de N5 es conservar el polar positivo del borde k0, usar extremos opuestos en un intervalo y empezar la covarianza en k1. El criterio reutilizable de§7 es sólo suficiente bajo sus hipótesis, no un teorema de todas las filas.
+The specific difference of N5 is keeping the positive polar of the edge k0, using opposite endpoints on an interval and starting the covariance at k1. The reusable criterion of§7 is only sufficient under its hypotheses, not a theorem for all rows.
 
-## Cierre de alcance
+## Scope closure
 
-Se añaden dos filas infinitas REALES de W con u uniforme, y por la recurrencia completa la tercera y cuarta diferencias estrictas correspondientes de la fila1. No se deduce completa monotonía de todo orden, todas las matrices ni nueva ventana T. La tabla suficiente completa sigue abierta. Root coincide independientemente en las revisiones de ambas filas.
+Two infinite REAL rows of W with uniform u are added, and via the full recurrence the corresponding strict third and fourth differences of row1. Complete monotonicity of all orders, all matrices or a new window T are not deduced. The full sufficient table remains open. A second independent review of both rows agrees.

@@ -4,7 +4,7 @@ Sources: README.md, STATEMENT_001.md, DOSSIER_001.md, SURVEY_001.md, AUDIT_001â€
 BRIEF_CONSTRUCTOR.md, ROUND_001_Aâ€“D.md, ROUND_002_A, B, D, E.md (there is no ROUND_002_C), ROUND_003_A.md,
 ROUND_003_B.md, REVIEW_001.md (statement and dossier), REVIEW_002.md (round 1), REVIEW_003.md (round 2 and
 ROUND_003_B), LEDGER.md. Round 2 and ROUND_003_B labels below are the REVIEW_003 verdicts (CONFIRMED read as PROVED,
-DOWNGRADE read as the label given); ROUND_003_A has not yet been reviewed and its labels are the constructor's own,
+DOWNGRADE read as the label given); ROUND_003_A has not yet been reviewed and its labels are as first written,
 marked "unreviewed". Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL. The target is treated
 as a statement about one quadratic form; no equivalence of it with any statement outside STATEMENT_001 is used.
 

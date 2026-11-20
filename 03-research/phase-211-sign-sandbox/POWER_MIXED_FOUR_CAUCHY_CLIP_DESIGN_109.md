@@ -1,47 +1,47 @@
-# POWER — Intersección Cauchy de coeficientes, diseño109
+# POWER — Cauchy intersection of coefficients, design109
 
-Estado: CONSTRUCTOR TERMINADO exit2/INCONCLUSO por presupuesto REST. Origen PASS16/16. Sin reproducción independiente de109. No se modifican107 ni108.
+Status: RUN FINISHED exit2/INCONCLUSIVE because of the REST budget. Origin PASS16/16. No independent reproduction of109. 107 and108 are not modified.
 
-## 1. Diferencia y antecedente
+## 1. Difference and antecedent
 
-Se conserva la consulta las reglas del proyecto, ROUTES-TRIED-INDEX/README, R162_2300_MASTER_GRID y CROSSWORD-TO-D del objeto mixto104–108.107 terminó INCONCLUSIVE al evaluar entradas separadas.108 preservó lambda formando primero el determinante polinómico, pero constructor y reproducción terminaron INCONCLUSIVE tras15 evaluaciones,4 celdas aceptadas, cobertura141/8192; celda fallida[141/8192,1129/65536], profundidad10. La rama restante no se ejecutó. Es un fallo de encierro y no un signo negativo.
+The consultation of the project rules, ROUTES-TRIED-INDEX/README, R162_2300_MASTER_GRID and CROSSWORD-TO-D for the mixed object104–108 is kept.107 ended INCONCLUSIVE when evaluating separate entries.108 preserved lambda by first forming the polynomial determinant, but the run and its reproduction ended INCONCLUSIVE after15 evaluations,4 accepted cells, coverage141/8192; failed cell[141/8192,1129/65536], depth10. The remaining branch was not executed. It is an enclosure failure and not a negative sign.
 
-109 añade información analítica YA PROBADA sobre coeficientes, sin nuevos puntos ni parámetros theta. La corrida repetirá el builder107 intacto para recuperar sus coeficientes; esa repetición todavía no se ha ejecutado. No se afirma que el exceso de anchura tenga una causa única ni se garantiza PASS. El cambio es intersectar las bolas de coeficientes base con sus cotas Cauchy antes de derivar y multiplicar.
+109 adds ALREADY PROVED analytic information on coefficients, with no new points nor theta parameters. The run will repeat the intact107 builder to recover its coefficients; that repetition has not yet been executed. It is not claimed that the excess width has a single cause, nor is PASS guaranteed. The change is to intersect the base coefficient balls with their Cauchy bounds before differentiating and multiplying.
 
-## 2. Cotas y operación exacta
+## 2. Bounds and exact operation
 
-Las funciones completas son holomorfas en un entorno de |lambda|<=1/2 y satisfacen, por107,
+The complete functions are holomorphic in a neighbourhood of |lambda|<=1/2 and satisfy, by107,
 
  |phi(lambda)|<2^40, |J(lambda)|<2^42, |K(lambda)|<2^42.
 
-Por Cauchy, sus coeficientes verdaderos verifican para todo k>=0
+By Cauchy, their true coefficients satisfy for all k>=0
 
  |phi_k|<=2^(40+k), |J_k|<=2^(42+k), |K_k|<=2^(42+k).
 
-Después de construir las bolas de coeficientes BASE de grado512 por el builder107, incluyendo errores de modos, momentos103 y a, intersectar cada una con el intervalo real simétrico correspondiente. La intersección contiene el coeficiente verdadero porque AMBOS encierros lo contienen. No escoger un punto ni un valor central en lugar de la intersección. Si la intersección es vacía, abortar con estado BUG/INCONCLUSIVE, nunca continuar ni ajustar una cota.
+After building the BASE coefficient balls of degree512 with the107 builder, including the errors of modes, moments103 and a, intersect each with the corresponding symmetric real interval. The intersection contains the true coefficient because BOTH enclosures contain it. Do not choose a point or a central value instead of the intersection. If the intersection is empty, abort with status BUG/INCONCLUSIVE, never continue nor adjust a bound.
 
-Reconstruir todas las derivadas desde estas bases intersectadas. Construir Q=-phi-2lambda phi' y sus derivadas desde la misma phi intersectada. No se intersectan arbitrariamente resultados intermedios con una cota no probada. Los coeficientes de J y K pueden intersectarse por separado: no se exige ni se supone correlación entre sus errores.
+Rebuild all derivatives from these intersected bases. Build Q=-phi-2lambda phi' and its derivatives from the same intersected phi. Intermediate results are not arbitrarily intersected with an unproved bound. The coefficients of J and K may be intersected separately: no correlation between their errors is required or assumed.
 
-## 3. Presupuesto y corrección sin cambios
+## 3. Budget and correction unchanged
 
-Reutilizar108: determinante completo de24 permutaciones como polinomio intervalar, todos los grados hasta2048, traslado Taylor al centro racional de cada celda y pérdida sum_(j>=1)|b_j|h^j. Conservar la corrección independiente2^-200 del determinante debida a las colas de funciones. La intersección sólo estrecha encierros de los mismos coeficientes verdaderos; no altera esa prueba.
+Reuse108: complete determinant of24 permutations as an interval polynomial, all degrees up to2048, Taylor shift to the rational centre of each cell and loss sum_(j>=1)|b_j|h^j. Keep the independent correction2^-200 of the determinant due to the tails of the functions. The intersection only narrows enclosures of the same true coefficients; it does not alter that proof.
 
-Conservar todas las precisiones, modos, caps, dominios, particiones iniciales, profundidad10, máximo8192 evaluaciones por rama y criterio de aceptación107/108. El resto Gauss107 queda intacto y sólo se ejecuta si el origen pasa. No se cambian parámetros ni se eligen según signos observados. El nuevo wrapper comprueba hashes de fuentes reutilizadas antes de calcular.
+Keep all precisions, modes, caps, domains, initial partitions, depth10, maximum8192 evaluations per branch and acceptance criterion of107/108. The Gauss remainder of107 stays intact and is executed only if the origin passes. Parameters are not changed nor chosen according to observed signs. The new wrapper checks hashes of reused sources before computing.
 
-## 4. Pendientes y alcance
+## 4. Pending items and scope
 
-Pendiente auditoría matemática y literal independiente antes de ejecutar109. Root implementa el wrapper; no se modifica código107/108. Un resultado INCONCLUSIVE sigue siendo legítimo. Esta operación no prueba signo por sí misma, no añade cobertura W ni altera la obligación mixta. Su objeto específico es aprovechar un encierro Cauchy uniforme de coeficientes que107/108 aún no imponían a la representación intervalar.
+Independent mathematical and literal audit pending before executing109. The wrapper is implemented without modifying the107/108 code. An INCONCLUSIVE result remains legitimate. This operation does not prove a sign by itself, adds no W coverage and does not alter the mixed obligation. Its specific object is to exploit a uniform Cauchy enclosure of coefficients that107/108 did not yet impose on the interval representation.
 
-## 5. Estado histórico durante la ejecución, antes del resultado final
+## 5. Historical status during execution, before the final result
 
-Tras aprobación matemática yliteral independientes antesdatos, root inició el constructor52183. Log:`tools/power_mixed_four_cauchy_109_root.log`; driverhash c3fe2df06692622dcaddbb4f2eb21047a7f4be46affdbe151af27f25bbef48ba. Origen Cauchy completo PASS16/16 enlambda[0,1/4]. La ramaREST sigue activa con subdivisión ypresupuestosfijos107. NO hay FULLPASS ni reproducción independiente anunciados.
+After independent mathematical and literal approval before data, run52183 was started. Log:`tools/power_mixed_four_cauchy_109_root.log`; driver hash c3fe2df06692622dcaddbb4f2eb21047a7f4be46affdbe151af27f25bbef48ba. Complete Cauchy origin PASS16/16 in lambda[0,1/4]. The REST branch is still active with subdivision and the fixed budgets of107. NO FULLPASS nor independent reproduction announced.
 
-Los impresos Arb de hojasREST pueden mostrar formas decimales groseras[+/−...] pese al predicado binario value>0; la prueba de aceptación es el predicado intervalar, no inferir ceros del formato decimal. No se modifican códigos/parámetros yno se lanza réplica antes del resultado constructor. Este estado es provisional, sin registro de signo global en índices hasta exit real.
+Arb printouts of REST leaves may show coarse decimal forms[+/−...] despite the binary predicate value>0; the acceptance test is the interval predicate, not inferring zeros from the decimal format. Codes/parameters are not modified and no replica is launched before the run result. This status is provisional, with no record of global sign in the indices until the real exit.
 
-## 6. Resultado final constructor109
+## 6. Final result of run109
 
-Root52183 terminó exit2/INCONCLUSIVE por presupuesto fijo de8192 evaluaciones REST, con4113 hojas aceptadas. El origen pasó16/16celdaslambda[0,1/4]. La siguiente celda REST pendiente era[2645/512,1323/256], profundidad6; no se evaluó tras agotarse el presupuesto. No fue una celda de signo negativo ni una parada por profundidad.
+Run52183 ended exit2/INCONCLUSIVE because of the fixed budget of8192 REST evaluations, with4113 accepted leaves. The origin passed16/16 cells lambda[0,1/4]. The next pending REST cell was[2645/512,1323/256], depth6; it was not evaluated after the budget was exhausted. It was neither a negative-sign cell nor a stop by depth.
 
-Auditoría del LOG, sin nueva corrida: las4113 hojas aceptadas son contiguas y cubren exactamente REST[1/2,2645/512], longitud2389/512. El resto de[1/2,64] no quedó certificado por esta corrida. El log está en`tools/power_mixed_four_cauchy_109_root.log`, conhashdriver c3fe2df06692622dcaddbb4f2eb21047a7f4be46affdbe151af27f25bbef48ba yhashes107/108intactos. NO se afirma reproducción independiente109.
+Audit of the LOG, without a new run: the4113 accepted leaves are contiguous and cover exactly REST[1/2,2645/512], length2389/512. The rest of[1/2,64] was not certified by this run. The log is in`tools/power_mixed_four_cauchy_109_root.log`, with driver hash c3fe2df06692622dcaddbb4f2eb21047a7f4be46affdbe151af27f25bbef48ba and hashes107/108 intact. NO independent reproduction of109 is claimed.
 
-Resultado final INCONCLUSO, sinFULLPASS,Cheb4global,Ufinito,W/T/allorders niobstrucciónmatemática. La condiciónprevia110(109sinFULLPASS) se cumple, pero otro literal debe auditarse antes de ejecutar esa representación. No se modifican parámetros109ni se reinicia esa corrida.
+Final result INCONCLUSIVE, without FULLPASS,Cheb4 global,finite U,W/T/all orders nor mathematical obstruction. The precondition of110(109 without FULLPASS) is met, but another literal must be audited before executing that representation. The parameters of109 are not modified and that run is not restarted.

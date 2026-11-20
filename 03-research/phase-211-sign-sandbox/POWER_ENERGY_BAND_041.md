@@ -1,197 +1,197 @@
-# POWER_ENERGY_BAND_041 — Beneficio firmado en una banda energética móvil
+# POWER_ENERGY_BAND_041 — Signed benefit on a moving energy band
 
-Estado: **PROVED BAND**, revisión independiente aprobada en [POWER_ENERGY_AUDIT_041.md](POWER_ENERGY_AUDIT_041.md). u=63/2 fijo. Papers intactos. No signo W global.
+Status: **PROVED BAND**, independent review approved in [POWER_ENERGY_AUDIT_041.md](POWER_ENERGY_AUDIT_041.md). u=63/2 fixed. Papers untouched. No global W sign.
 
-## 1. Corpus y diferencia
+## 1. Corpus and difference
 
-Consultados ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D; leídos LOW_TABLE018, CELL_BALANCE024, ARCH_CELL026, INTERIOR_SCALE030, GAMMA_WEIGHT031 y CRITICAL_BALANCE040. No se presenta otra integración por partes como signo. Frente024/030/031, la banda crece y se desplaza con N hasta la energía exponencial; se conserva el factor diferencial040 ANTES de tomar módulos. El resto se compara con un beneficio real de la misma escala energética, no con W total.
+Consulted ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D; read LOW_TABLE018, CELL_BALANCE024, ARCH_CELL026, INTERIOR_SCALE030, GAMMA_WEIGHT031 and CRITICAL_BALANCE040. Another integration by parts is not presented as sign. Compared with024/030/031, the band grows and moves with N up to the exponential energy; the differential factor040 is kept BEFORE taking moduli. The remainder is compared with a real benefit of the same energy scale, not with the total W.
 
-## 2. Resultado completo y definiciones
+## 2. Complete result and definitions
 
-Para TODOS N>=2^80, ponga d=N−1, delta=N^(-2), v=1/2+delta,
+For ALL N>=2^80, put d=N−1, delta=N^(-2), v=1/2+delta,
 
     T=2dv/(u²−v²), L=sqrt(N)/100,
     g(t)=rho_N(t)/2−rho_N'(t), C_N=exp(T/2)g(T)>0.
 
-Con el inverso Möbius COMPLETO h_N de022 y el MISMO peso celular
+With the COMPLETE Möbius inverse h_N of022 and the SAME cell weight
 
     B(x)=log(floor(x)!)−x H_floor(x)+floor(x),
 
-se prueba
+we prove
 
     2 int_(exp(T))^(exp(T+L)) h_N(x)B(x)dx
                 < −C_N/25600.                        (BAND)
 
-La banda es favorable en la identidad W/norma²=ARCH_sharp−2int hB. No se descarta ni reemplaza ningún salto de B. La contribución de su complemento sigue abierta.
+The band is favourable in the identity W/norm²=ARCH_sharp−2int hB. No jump of B is discarded or replaced. The contribution of its complement remains open.
 
-## 3. Expansión040 trasladada sin pérdida de signo
+## 3. Expansion040 translated without loss of sign
 
-Use el perfil FIJO f(ell)=exp(vell)g(T+ell)/g(T), sobre toda la recta, y
+Use the FIXED profile f(ell)=exp(vell)g(T+ell)/g(T), on the whole line, and
 
     S(ell)=sum_(n>=1)mu(n)n^(−1−delta)f(ell+logn).
 
-La serie es absoluta. El mismo argumento Fourier040, multiplicando el integrando por exp(i xi ell), da UNIFORMEMENTE en ell
+The series is absolute. The same Fourier argument040, multiplying the integrand by exp(i xi ell), gives UNIFORMLY in ell
 
     S=(delta−D)f−gamma(delta−D)²f+r,
     |r|<=E_N<1/(10000N),                              (EXP)
 
-para este delta,N. Esta extensión no cambia ninguna constante de040: el factor añadido tiene módulo1.
+for this delta,N. This extension does not change any constant of040: the added factor has modulus1.
 
-Ponga z(ell)=delta f(ell)−f'(ell). Entonces
+Put z(ell)=delta f(ell)−f'(ell). Then
 
     int_0^L exp(−delta ell)S(ell)dell
       =1−exp(−delta L)f(L)
          −gamma[z(0)−exp(−delta L)z(L)]
          +int_0^L exp(−delta ell)r(ell)dell.            (ENDS)
 
-Se utiliza sólo un intervalo FINITO; no se integra una serie Euler en el borde crítico ni se supone sumabilidad de sum|mu(n)|/n.
+Only a FINITE interval is used; no Euler series is integrated at the critical edge nor is summability of sum|mu(n)|/n assumed.
 
-## 4. Beneficio uniforme de bordes para el perfil REAL
+## 4. Uniform edge benefit for the REAL profile
 
-Escriba b=q'(T), M=u²/(2N−3). Por040, 50/N<b<M<=u²/N, q(T)−v<=M/u², y por CURV040
+Write b=q'(T), M=u²/(2N−3). By040, 50/N<b<M<=u²/N, q(T)−v<=M/u², and by CURV040
 
     (T/(T+s))² b<q'(T+s)<b.
 
-Las comparaciones racionales del verificador dan L>=8, L<T/4. Por ello q'(T+s)>b/2 para0<=s<=L. Como q(T)>=v,
+The rational comparisons of the verifier give L>=8, L<T/4. Hence q'(T+s)>b/2 for0<=s<=L. Since q(T)>=v,
 
     log f(L)
       =−int_0^L(q(T+s)−v)ds
            +log[(1/2+q(T+L))/(1/2+q(T))]
       <=−bL²/4+bL<=−bL²/8<=−1/1600.
 
-Así f(L)<=1−1/3200. En toda la banda, log f(s)<=bs<log2, por lo que f<=2. Además
+Thus f(L)<=1−1/3200. On the whole band, log f(s)<=bs<log2, so f<=2. Moreover
 
     |f'|<=2M(L+2), |f''|<1.                           (DER)
 
-Para el segundo bound, use directamente
+For the second bound, use directly
 
     f''/f=(v−q)²−q'+2(v−q)q'/(1/2+q)+q''/(1/2+q),
 
-|v−q|<=M(L+1), |q''|<2M/T y1/2+q>=1. Las constantes del verificador implican el bound estricto; no se supone una concavidad nueva de f.
+|v−q|<=M(L+1), |q''|<2M/T and1/2+q>=1. The constants of the verifier imply the strict bound; no new concavity of f is assumed.
 
-En particular |z|<=2delta+2M(L+2). Con0<gamma<1, ENDS y EXP dan
+In particular |z|<=2delta+2M(L+2). With0<gamma<1, ENDS and EXP give
 
     int_0^L exp(−delta ell)S(ell)dell
        >1/3200−[4delta+4M(L+2)]−E_N L
        >1/12800.                                     (GAIN)
 
-Todas las funciones aquí son las del átomo gamma REAL; no se sustituyen por un perfil elegible.
+All functions here are those of the REAL gamma atom; they are not replaced by an eligible profile.
 
-## 5. B real y su corrección controlada
+## 5. Real B and its controlled correction
 
-El estimate elemental
+The elementary estimate
 
     |B(x)+gamma x|<=logx+1, x>=1                      (B-REAL)
 
-basta en esta banda. Prueba: si n=floorx, theta=x−n, entonces
+suffices on this band. Proof: if n=floorx, theta=x−n, then
 
     B+gamma x=T_n−theta logn−x epsilon_n,
     1<=T_n:=logn!−nlogn+n<=1+logn,
     0<epsilon_n:=H_n−logn−gamma<1/n.
 
-Las primeras cotas proceden de comparar sum logk con el integral monótono; las últimas del integral elemental del residuo armónico. Como x/n<2, la cota inferior es mayor que−1−logx y la superior no supera1+logx. Incluye n1 y los extremos de salto.
+The first bounds come from comparing sum logk with the monotone integral; the last ones from the elementary integral of the harmonic residue. Since x/n<2, the lower bound is greater than−1−logx and the upper does not exceed1+logx. It includes n1 and the jump endpoints.
 
-Al cambiar x=exp(T+ell), el término principal−gamma x del B EXACTO produce
+On changing x=exp(T+ell), the main term−gamma x of the EXACT B produces
 
     −2gamma C_N int_0^L exp(−delta ell)S(ell)dell.
 
-El resto V=B+gamma x conserva toda la aritmética, incluidos saltos. Por EXP/DER, delta<1/1000 yE<1, |S|<8. En consecuencia su contribución absoluta, DIVIDIDA por C_N, es menor que
+The remainder V=B+gamma x keeps all the arithmetic, including jumps. By EXP/DER, delta<1/1000 andE<1, |S|<8. Consequently its absolute contribution, DIVIDED by C_N, is less than
 
     16exp(−T)L(T+L+1)
        <32N²exp(−N/1984)<1/25600.                    (V-ERROR)
 
-Aquí N/1984<T<N, L<N, y exp(−x)<=4!x^(-4) permite verificar la última comparación sólo con racionales en N0=2^80. Por gamma>1/2 y GAIN, el principal es menor que−C_N/12800. Sumando V-ERROR se obtiene BAND.
+Here N/1984<T<N, L<N, and exp(−x)<=4!x^(-4) allows verifying the last comparison only with rationals at N0=2^80. By gamma>1/2 and GAIN, the main term is less than−C_N/12800. Adding V-ERROR gives BAND.
 
-## 6. Alcance y precisión
+## 6. Scope and precision
 
-BAND es una desigualdad firmada sobre una integral REAL, no una identidad etiquetada como positividad. Se ha retenido la derivada total y sus bordes, y sólo después se acotan el resto Fourier y la corrección aritmética. C_N puede ser exponencialmente grande; el signo de la banda se decide porque su beneficio es de esa MISMA escala.
+BAND is a signed inequality on a REAL integral, not an identity labelled as positivity. The total derivative and its edges have been retained, and only afterwards are the Fourier remainder and the arithmetic correction bounded. C_N may be exponentially large; the sign of the band is decided because its benefit is of that SAME scale.
 
-Esto no controla la compensación contra el interior anterior a T ni contra las otras bandas. Un error de esta magnitud tampoco decide W, cuyo residuo total puede ser mucho menor que cada energía. No hay campaña de N, contactos o precisiones. La frontera crítica sum|mu|/n no se usa para negar cancelación firmada: sólo impide un Fubini absoluto global que aquí no se necesita.
+This does not control the compensation against the interior before T nor against the other bands. An error of this magnitude does not decide W either, whose total residue may be much smaller than each energy. There is no campaign over N, contacts or precisions. The critical boundary sum|mu|/n is not used to deny signed cancellation: it only prevents a global absolute Fubini that is not needed here.
 
-## 7. Expansión periódica uniforme de B y error integrado explícito
+## 7. Uniform periodic expansion of B and explicit integrated error
 
-Complemento auxiliar a BAND, con el B REAL019 completo. La expansión es una aplicación elemental de sumación Euler/Stirling; no se presenta como un principio nuevo de signo. La cota que se registra conserva los saltos exactos y separa la oscilación periódica de un error uniformemente O(1/x), útil para integrar contra el inverso firmado. BAND no depende de esta mejora: su prueba anterior usa una cota más gruesa suficiente.
+Auxiliary complement to BAND, with the complete REAL B019. The expansion is an elementary application of Euler/Stirling summation; it is not presented as a new sign principle. The bound recorded keeps the exact jumps and separates the periodic oscillation from a uniformly O(1/x) error, useful for integrating against the signed inverse. BAND does not depend on this improvement: its earlier proof uses a sufficient coarser bound.
 
-Ponga n=floorx, theta=x−n, B1(theta)=theta−1/2 y
+Put n=floorx, theta=x−n, B1(theta)=theta−1/2 and
 
     kappa=(1/2)log(2pi)−1/2.
 
-Para TODO real x>=1,
+For EVERY real x>=1,
 
     B(x)=−gamma x−B1(theta)logx+kappa+E(x),
-    −1/x<E(x)<1/(2x), en particular |E(x)|<=1/x.        (SAWTOOTH)
+    −1/x<E(x)<1/(2x), in particular |E(x)|<=1/x.        (SAWTOOTH)
 
-### 7.1. Dos restos elementales, sin datos numéricos
+### 7.1. Two elementary remainders, without numerical data
 
-Para TODO entero n>=1,
+For EVERY integer n>=1,
 
     log(n!)=(n+1/2)logn−n+(1/2)log(2pi)+s_n,
                     0<s_n<1/(12n),
     H_n=logn+gamma+1/(2n)+e_n,
                     −1/(12n²)<e_n<0.                  (ELEMENTARY-EM)
 
-Se incluyen pruebas compactas de las cotas y la constante. Sea r=1/(2n+1). La serie absolutamente convergente de atanh da
+Compact proofs of the bounds and the constant are included. Let r=1/(2n+1). The absolutely convergent atanh series gives
 
     a_n=(n+1/2)log(1+1/n)−1
         =sum_(j>=1) r^(2j)/(2j+1),
     0<a_n<r²/[3(1−r²)]=1/[12n(n+1)].
 
-Si Z_n=n!exp(n)/n^(n+1/2), entonces logZ_n−logZ_(n+1)=a_n. Por sumabilidad Z_n converge a una constante positiva C y logZ_n−logC=sum_(k>=n)a_k está entre0 y1/(12n). La constante es C=sqrt(2pi): la recurrencia de los integrales I_j=int_0^(pi/2)sin(t)^jdt y I_(2n+1)<=I_(2n)<=I_(2n−1) dan, con b_n=binom(2n,n)/4^n,
+If Z_n=n!exp(n)/n^(n+1/2), then logZ_n−logZ_(n+1)=a_n. By summability Z_n converges to a positive constant C and logZ_n−logC=sum_(k>=n)a_k lies between0 and1/(12n). The constant is C=sqrt(2pi): the recurrence of the integrals I_j=int_0^(pi/2)sin(t)^jdt and I_(2n+1)<=I_(2n)<=I_(2n−1) give, with b_n=binom(2n,n)/4^n,
 
     2/[pi(2n+1)]<=b_n²<=1/(pi n),
     sqrt(n)b_n->1/sqrt(pi).
 
-Pero Z_(2n)/Z_n²=b_n sqrt(n/2)->1/sqrt(2pi), mientras el mismo cociente tiende a1/C. Así C=sqrt(2pi), y queda probada la primera cota de ELEMENTARY-EM.
+But Z_(2n)/Z_n²=b_n sqrt(n/2)->1/sqrt(2pi), while the same quotient tends to1/C. Thus C=sqrt(2pi), and the first bound of ELEMENTARY-EM is proved.
 
-Para la segunda, defina
+For the second, define
 
     tau_n=1/(2n)+1/[2(n+1)]−log(1+1/n)
        =4sum_(j>=1) [j/(2j+1)]r^(2j+1)>0.
 
-La comparación coeficiente a coeficiente j/(2j+1)<=j/3 prueba
+The coefficient-wise comparison j/(2j+1)<=j/3 proves
 
     tau_n<4r³/[3(1−r²)²]
         =(1/12)[1/n²−1/(n+1)²].
 
-La sucesión D_n=H_n−logn−1/(2n)−gamma tiende a0 y D_n−D_(n+1)=−tau_n. Por telescopía, e_n=D_n=−sum_(k>=n)tau_k, que pertenece a(−1/(12n²),0). No se ha citado un resto asintótico sin justificar su signo.
+The sequence D_n=H_n−logn−1/(2n)−gamma tends to0 and D_n−D_(n+1)=−tau_n. By telescoping, e_n=D_n=−sum_(k>=n)tau_k, which belongs to(−1/(12n²),0). No asymptotic remainder has been cited without justifying its sign.
 
-### 7.2. Resto uniforme y saltos en enteros
+### 7.2. Uniform remainder and jumps at integers
 
-Sustituir ELEMENTARY-EM en B(x)=log(n!)−xH_n+n da EXACTAMENTE
+Substituting ELEMENTARY-EM in B(x)=log(n!)−xH_n+n gives EXACTLY
 
     E(x)=F(n,theta)+s_n−xe_n,
     F(n,theta)=(theta−1/2)log(1+theta/n)−theta/(2n).
 
-Para0<=theta<=1/2, log(1+theta/n)<=theta/n implica F>=−theta(1−theta)/n>=−1/(4n), y F<=0 es inmediato. Para1/2<=theta<1, log>=0 da F>=−1/(2n), mientras log<=theta/n da F<=theta(theta−1)/n<=0. En conjunto,
+For0<=theta<=1/2, log(1+theta/n)<=theta/n implies F>=−theta(1−theta)/n>=−1/(4n), and F<=0 is immediate. For1/2<=theta<1, log>=0 gives F>=−1/(2n), while log<=theta/n gives F<=theta(theta−1)/n<=0. Altogether,
 
     −1/(2n)<=F<=0,
     0<s_n−xe_n<(2n+1)/(12n²)<=1/(4n).
 
-Como x<2n, se concluye SAWTOOTH. En enteros se conserva la convención theta0: B1(0)=−1/2, no su promedio0. El salto de B en un entero m es logm; el de −B1({x})logx es también logm. Por tanto E es CONTINUO en cada entero. No se borran los saltos ni se mezclan sus límites izquierdo y derecho.
+Since x<2n, SAWTOOTH follows. At integers the convention theta0 is kept: B1(0)=−1/2, not its average0. The jump of B at an integer m is logm; that of −B1({x})logx is also logm. Hence E is CONTINUOUS at each integer. The jumps are not erased nor are their left and right limits mixed.
 
-### 7.3. Cota integrada periódica con bordes explícitos
+### 7.3. Periodic integrated bound with explicit edges
 
-Sea
+Let
 
     Q2(x)=(1/2)[{x}²−{x}+1/6]−1/48.
 
-Es una función CONTINUA periódica, incluso en enteros, con derivada B1({x}) casi por todas partes y norma uniforme1/16. Si1<=a<b y h es absolutamente continua en[a,b], defina
+It is a CONTINUOUS periodic function, even at integers, with derivative B1({x}) almost everywhere and uniform norm1/16. If1<=a<b and h is absolutely continuous on[a,b], define
 
     I=int_a^b h(x)[B(x)+gamma x−kappa]dx,
     F_h(x)=h(x)logx.
 
-SAWTOOTH e integración por partes contra la primitiva CONTINUA Q2 dan
+SAWTOOTH and integration by parts against the CONTINUOUS primitive Q2 give
 
     | I+[F_h(x)Q2(x)]_a^b |
       <=(1/16)int_a^b |F_h'(x)|dx
                               +int_a^b |h(x)|/x dx.    (PERIODIC-ERROR)
 
-Equivalente, si se quiere eliminar el borde firmado,
+Equivalently, if one wants to eliminate the signed edge,
 
     |I|<=(1/16)[|h(a)|loga+|h(b)|logb
                         +int_a^b |h'(x)logx+h(x)/x|dx]
                         +int_a^b |h(x)|/x dx.
 
-No aparecen términos de salto adicionales: los valores en enteros no cambian la integral y Q2 es continua allí. Para b infinito se puede pasar al límite cuando F_h(b)->0 y los integrales del mayorante convergen; los kernels gamma/inversos de N fijo tienen el decaimiento polinómico requerido.
+No additional jump terms appear: the values at integers do not change the integral and Q2 is continuous there. For infinite b one can pass to the limit when F_h(b)->0 and the integrals of the majorant converge; the gamma/inverse kernels of fixed N have the required polynomial decay.
 
-Esta desigualdad no asigna signo al error ni a h. Retiene la función B completa, el término principal −gamma x y la constante kappa, además de la cancelación periódica antes del módulo. No prueba por sí sola signo W ni domina automáticamente el complemento de la banda. Su papel es cuantificar precisamente qué bordes y qué variación de h harían despreciable esa corrección; el balance real BAND ya demostrado es la aplicación positiva de esta ronda.
+This inequality assigns no sign to the error or to h. It retains the complete function B, the main term −gamma x and the constant kappa, in addition to the periodic cancellation before the modulus. It does not by itself prove the sign of W nor automatically dominate the complement of the band. Its role is to quantify precisely which edges and which variation of h would make that correction negligible; the real balance BAND already proved is the positive application of this round.

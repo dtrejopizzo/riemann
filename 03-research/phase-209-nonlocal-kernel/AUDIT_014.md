@@ -1,43 +1,43 @@
-# AUDIT_014 — componente gaussiana tras quitar el rango uno
+# AUDIT_014 — Gaussian component after removing the rank one
 
-2026-10-19. Revisor hostil. **PROVED, con input CITED de Paper47 declarado.**
+2026-10-19. Independent check. **PROVED, with declared CITED input from Paper47.**
 
-Revisión de `LINK_014_REMOVING_RANK_ONE.md`. Se consultaron las reglas del proyecto, índice de rutas, grid y crucigrama. La diferencia frente a013 es sustantiva: su lower bound dependía de κvv*; aquí se estudia una subforma menor, Π, mediante un argumento independiente. No se deduce una obstrucción para una forma menor desde la obstrucción para una mayor.
+Review of `LINK_014_REMOVING_RANK_ONE.md`. Consulted: the project rules, routes index, grid and crossword. The difference with respect to 013 is substantive: its lower bound depended on κvv*; here a smaller subform, Π, is studied via an independent argument. An obstruction for a smaller form is not deduced from the obstruction for a larger one.
 
-## 1. Dominio y kernel positivo
+## 1. Domain and positive kernel
 
-Para d≥2, W_d(u)<0 y f_d(y)=q_d(y)−1/d<0. Cada sumando de K_y es positivo, y en compactos la convergencia es uniforme por una mayorante O(d⁻²). Su integral global se calcula por la Mellin absolutamente convergente de m:
+For d≥2, W_d(u)<0 and f_d(y)=q_d(y)−1/d<0. Each summand of K_y is positive, and on compact sets convergence is uniform by an O(d⁻²) majorant. Its global integral is computed via the absolutely convergent Mellin of m:
 
 `∫2e^(x/2)W_d(e^(2x))dx=−κ(d^(−1/2)−d⁻¹)`.
 
-Tonelli prueba exactamente `∫K_y=κΣv_d(1/d−q_d(y))=C(y)`, con 0<C(y)≤κ[ζ(3/2)−ζ(2)]. No se requiere una mayorante uniforme en x para intercambiar suma e integral global: se usa positividad. Para F acotado, |F|K_y es integrable y justifica la identidad puntual de B_F. Las sumas parciales convergen además en el factor gaussiano por011; una subsucesión converge casi en todas partes y coincide con la suma puntual. Por ello la identidad de energía (3) es legítima.
+Tonelli proves exactly `∫K_y=κΣv_d(1/d−q_d(y))=C(y)`, with 0<C(y)≤κ[ζ(3/2)−ζ(2)]. A majorant uniform in x is not required to interchange sum and global integral: positivity is used. For bounded F, |F|K_y is integrable and justifies the pointwise identity of B_F. The partial sums also converge in the Gaussian factor by 011; a subsequence converges almost everywhere and coincides with the pointwise sum. Hence the energy identity (3) is legitimate.
 
-## 2. Límite local y paso al integral
+## 2. Local limit and passage to the integral
 
-La inversión de Fourier tiene prefactor √(k/T)/(2π), fase √k zx/T y límite exp(−z²/6). Su integral da `g₀=√(3(21/e)/(2π))`, con la normalización correcta. La dominación gaussiana en |z|≤√k y las dos colas en v prueban tanto el límite local como el supremo uniforme. Los momentos Fourier dan `||G_T^(j)||∞=O(T^((1−j)/2))`; para j=2,4 sus contribuciones a F_T/√T desaparecen uniformemente.
+The Fourier inversion has prefactor √(k/T)/(2π), phase √k zx/T and limit exp(−z²/6). Its integral gives `g₀=√(3(21/e)/(2π))`, with the correct normalisation. Gaussian domination on |z|≤√k and the two tails in v prove both the local limit and the uniform supremum. The Fourier moments give `||G_T^(j)||∞=O(T^((1−j)/2))`; for j=2,4 their contributions to F_T/√T vanish uniformly.
 
-En consecuencia F_T/√T converge puntualmente a −γ₁²g₀/4 y está uniformemente acotada. K_y∈L¹ permite convergencia dominada para cada y; no se supone convergencia en todo el espacio gaussiano. Fatou sobre [1,2] basta para obtener `liminf E_Π(F_T)/T≥L₀>0`. C(y) es medible y acotada, τ es positiva continua en ese intervalo y C(y)>0 en cada punto. El argumento por sucesiones justifica el liminf para T real.
+Consequently F_T/√T converges pointwise to −γ₁²g₀/4 and is uniformly bounded. K_y∈L¹ allows dominated convergence for each y; convergence on the whole Gaussian space is not assumed. Fatou on [1,2] suffices to obtain `liminf E_Π(F_T)/T≥L₀>0`. C(y) is measurable and bounded, τ is positive continuous on that interval and C(y)>0 at every point. The sequential argument justifies the liminf for real T.
 
-Fijar T≥1 al presentar la familia garantiza k≥8, derivadas suficientes y pertenencia al dominio de forma; no afecta ninguna conclusión asintótica.
+Fixing T≥1 when presenting the family guarantees k≥8, sufficient derivatives and membership in the form domain; it does not affect any asymptotic conclusion.
 
-## 3. Cotejo con la forma declarada
+## 3. Cross-check with the declared form
 
-La cota CITED se refiere a estos F_T concretos, como se verificó en013 contra la prueba de Paper47; no se extrae una cota para un test desde el ínfimo espectral. Con ||F_T||²=O(T^(3/2)), resulta |Q_T|=O(T^(5/2)e^(−15.449T)). Dividir por E_Π≥c₀T da el cociente O(T^(3/2)e^(−15.449T)) y excluye toda constante positiva fija para Π y para S−κvv*.
+The CITED bound refers to these concrete F_T, as verified in 013 against the proof in Paper47; a bound for a test is not extracted from the spectral infimum. With ||F_T||²=O(T^(3/2)), one gets |Q_T|=O(T^(5/2)e^(−15.449T)). Dividing by E_Π≥c₀T gives the quotient O(T^(3/2)e^(−15.449T)) and excludes every fixed positive constant for Π and for S−κvv*.
 
-La aproximación suave en H¹ preserva polar y desigualdad estricta: Q es continua en H¹ y las energías reducidas son continuas en L² de cada ventana por011 y dominación por S. La necesidad para una posible escala c(T) es sólo una cota superior; no se afirma existencia ni imposibilidad de tal escala.
+Smooth approximation in H¹ preserves the polar condition and the strict inequality: Q is continuous in H¹ and the reduced energies are continuous in L² of each window by 011 and domination by S. The necessity for a possible scale c(T) is only an upper bound; neither existence nor impossibility of such a scale is claimed.
 
-## Veredicto
+## Verdict
 
-**Favorable.** La eliminación del rango uno del kernel no repara la dominación uniforme con el mapa011. No se obtuvo positividad nueva de D, ni una obstrucción para otros mapas o para coeficientes dependientes de T. El uso de información de ceros está declarado y limitado al falsificador.
+**Favourable.** Removing the rank one from the kernel does not repair the uniform domination with map011. No new positivity of D was obtained, nor an obstruction for other maps or for T-dependent coefficients. The use of zero information is declared and limited to the falsifier.
 
-## Addendum final — §7 y combinaciones de las tres piezas
+## Final addendum — §7 and combinations of the three pieces
 
-Revisada la extensión completa de §7. **Veredicto favorable, PROVED con el mismo input CITED.**
+The full extension of §7 reviewed. **Favourable verdict, PROVED with the same CITED input.**
 
-La covarianza con el índice2 es cero para d impar y `(1−1/√2)d^(−1/2)` para d par; G_s(2,2)=1/√2−1/2>0. La serie L₂ converge absolutamente y Cauchy–Schwarz se aplica a la forma PSD G_s, también para la serie límite porque κG_s≤S y la expansión de011 converge en S.
+The covariance with index 2 is zero for odd d and `(1−1/√2)d^(−1/2)` for even d; G_s(2,2)=1/√2−1/2>0. The series L₂ converges absolutely and Cauchy–Schwarz applies to the PSD form G_s, also for the limit series because κG_s≤S and the expansion of 011 converges in S.
 
-El Riemann sum sobre índices pares tiene densidad1/2: `(1/N)Σ_(2|d)g(d/N)→(1/2)∫g=κ/4`. El factor −2(1−1/√2) da h₂(−∞)=−κβ, β=(1−1/√2)/2. Las mismas mayorantes integrables de013 justifican las colas; el término positivo restante es O(N^(−1/2)) porque m≤1 y Σd^(−3/2)<∞. Continuidad local y límite derecho por las cotas gaussianas completan la acotación global del perfil.
+The Riemann sum over even indices has density 1/2: `(1/N)Σ_(2|d)g(d/N)→(1/2)∫g=κ/4`. The factor −2(1−1/√2) gives h₂(−∞)=−κβ, β=(1−1/√2)/2. The same integrable majorants of 013 justify the tails; the remaining positive term is O(N^(−1/2)) because m≤1 and Σd^(−3/2)<∞. Local continuity and the right-hand limit via the Gaussian bounds complete the global boundedness of the profile.
 
-La parte par del perfil tiende a −κβ/2 en ambos extremos. Por escape de masa de G_T/T y derivadas de norma L¹=o(T), `L₂(F_T)/T→γ₁²κβ/8`. Los factores de dos de (11) y (12) son correctos. Cauchy–Schwarz entrega E_G(F_T)≳T²; por tanto también esta pieza sola falla como dominación uniforme con escala fija positiva.
+The even part of the profile tends to −κβ/2 at both ends. By escape of mass of G_T/T and derivatives of L¹ norm=o(T), `L₂(F_T)/T→γ₁²κβ/8`. The factors of two in (11) and (12) are correct. Cauchy–Schwarz delivers E_G(F_T)≳T²; hence this piece alone also fails as a uniform domination with fixed positive scale.
 
-El corolario A,B,C≥0, no todos cero, es válido: cada energía es no negativa, la menor tasa de crecimiento garantizada entre las piezas es T y Q decae exponencialmente con un prefactor polinómico. La conclusión cubre cualquier combinación fija no negativa no nula con exactamente los coeficientes a_d(F) de011. No cubre cancelaciones firmadas, otro mapa ni factores dependientes de T. Es la finalización del examen de las tres piezas existentes; no un NO-GO general para D.
+The corollary A,B,C≥0, not all zero, is valid: each energy is nonnegative, the smallest guaranteed growth rate among the pieces is T and Q decays exponentially with a polynomial prefactor. The conclusion covers any fixed nonzero nonnegative combination with exactly the coefficients a_d(F) of 011. It does not cover signed cancellations, another map or T-dependent factors. It completes the examination of the three existing pieces; not a general NO-GO for D.

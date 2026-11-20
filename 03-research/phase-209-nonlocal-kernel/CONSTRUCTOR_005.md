@@ -1,22 +1,22 @@
-# CONSTRUCTOR_005 — Completación positiva exacta de −R_α
+# CONSTRUCTOR_005 — Exact positive completion of −R_α
 
-2026-10-18. Constructor único. Matemática pura. **PROVED, auditoría final favorable en AUDIT_005 §11:** para 0<α<1/2, el kernel renormalizado **−R_α es definido positivo sobre toda familia finita de divisores distintos d≥2**, no sólo entre primos distintos. Se construye una descomposición exacta de su diagonal, bloques del mismo primo y cruces. **No se ha probado un enlace con Q_T. La fila D sigue OPEN.**
+2026-10-18. Pure mathematics. **PROVED, favourable final audit in AUDIT_005 §11:** for 0<α<1/2, the renormalised kernel **−R_α is positive definite on every finite family of distinct divisors d≥2**, not only between distinct primes. An exact decomposition of its diagonal, same-prime blocks and cross terms is built. **No link with Q_T has been proved. Row D remains OPEN.**
 
-## 0. Corpus check y razón nueva escrita
+## 0. Corpus check and written new reason
 
-Leídos las reglas del proyecto, README209 y auditorías, índice ROUTES-TRIED-INDEX (README, entradas recientes 209 y familias), residuos 06, P1_BBSTAR, SPEC005, grid maestro y crucigrama. Búsqueda adicional dirigida: `renormal.*covarian`, `masa faltante`, `Haar.*theta`, `Mellin.*profini`, `gcd.*zeta`, `covarian.*renormal`. No se identificó esta identidad en las entradas consultadas; esto no es declaración de prioridad global.
+Read: the project rules, README209 and audits, ROUTES-TRIED-INDEX index (README, recent 209 entries and families), residues 06, P1_BBSTAR, SPEC005, master grid and crossword. Additional targeted search: `renormal.*covarian`, `masa faltante`, `Haar.*theta`, `Mellin.*profini`, `gcd.*zeta`, `covarian.*renormal`. This identity was not identified in the consulted entries; this is not a declaration of global priority.
 
-Choques: R183_008 (Gram semilocal gcd), Helson/Bohr, SPEC005 C-hom, P1 y certificados de la propia forma. **Razón nueva exacta:** se conserva el kernel R ya definido; no se sustituye por un Gram favorable. Una identidad algebraica de covarianzas y la Mellin de una *diferencia firmada* de masas producen su diagonal renormalizada y prueban **−R**, con signo prefijado, como suma PSD. La positividad clave es `−2π^(−α)Γ(α)ζ(2α)>0` en 0<2α<1, obtenida sin ceros. El espacio profinito se usa sólo para demostrar positividad de una matriz explícita sobre finitos divisores; no se propone el lift de Bohr como fuente de signo de Q_T.
+Clashes: R183_008 (semilocal gcd Gram), Helson/Bohr, SPEC005 C-hom, P1 and certificates of the form itself. **Exact new reason:** the already defined kernel R is kept; it is not replaced by a favourable Gram. An algebraic covariance identity and the Mellin of a *signed difference* of masses produce its renormalised diagonal and prove **−R**, with prefixed sign, as a PSD sum. The key positivity is `−2π^(−α)Γ(α)ζ(2α)>0` on 0<2α<1, obtained without zeros. The profinite space is used only to prove positivity of an explicit matrix on finitely many divisors; the Bohr lift is not proposed as a source of sign for Q_T.
 
-La diferencia frente a CONSTRUCTOR_002 es que allí R=I+H tenía H firmado sin control. Aquí se cambia la identidad de comparación, conservando exactamente R y todos sus contraterminos. La diferencia frente a una norma genérica es la **igualdad explícita con el kernel renormalizado antes fijado**, no la mera existencia de alguna raíz.
+The difference with respect to CONSTRUCTOR_002 is that there R=I+H had signed H without control. Here the comparison identity is changed, keeping exactly R and all its counterterms. The difference with respect to a generic norm is the **explicit equality with the previously fixed renormalised kernel**, not the mere existence of some root.
 
-## 1. Definiciones conservadas
+## 1. Definitions kept
 
 `τ(y)=Σ_{n∈Z\{0}}exp(−πn²y)`, `c(y)=y^(−1/2)`.
 
-`q_d(y)=τ(d²y)/τ(y)`, `X_d(N)=1_{d|N}` bajo `P_y(N=n)=exp(−πn²y)/τ(y)`.
+`q_d(y)=τ(d²y)/τ(y)`, `X_d(N)=1_{d|N}` under `P_y(N=n)=exp(−πn²y)/τ(y)`.
 
-Para d,e≥2 y l=lcm(d,e):
+For d,e≥2 and l=lcm(d,e):
 
 `B_y(d,e)=τ(y)[q_l(y)−q_d(y)q_e(y)]`,
 
@@ -24,95 +24,95 @@ Para d,e≥2 y l=lcm(d,e):
 
 `D_y(d,e)=c(y)G_1(d,e)−B_y(d,e)`.
 
-Para 0<α<1/2:
+For 0<α<1/2:
 
 `R_α(d,e)=∫_0^∞ y^(α−1)[B_y(d,e)−c(y)G_1(d,e)]dy`.
 
-La convergencia entrada a entrada fue probada en CONSTRUCTOR_002: el corchete es O(1) en cero y O(y^(−1/2)) en infinito. Se fija el mismo esquema de sustracción; no se cambia una diagonal a voluntad.
+Entrywise convergence was proved in CONSTRUCTOR_002: the bracket is O(1) at zero and O(y^(−1/2)) at infinity. The same subtraction scheme is fixed; a diagonal is not changed at will.
 
-Escribir s=2α∈(0,1) y
+Write s=2α∈(0,1) and
 
 `Z_α=2π^(−α)Γ(α)ζ(2α)`.
 
-**Signo elemental:** ζ(s)<0 para 0<s<1, pues la serie alternada η(s)=Σ_{n≥1}(−1)^(n−1)n^(−s) es positiva y `ζ(s)=η(s)/(1−2^(1−s))`. Por ello **Z_α<0**. Sólo se usa un valor real, no información sobre ceros.
+**Elementary sign:** ζ(s)<0 for 0<s<1, since the alternating series η(s)=Σ_{n≥1}(−1)^(n−1)n^(−s) is positive and `ζ(s)=η(s)/(1−2^(1−s))`. Hence **Z_α<0**. Only a real value is used, no information about zeros.
 
-## 2. El espacio aritmético: leyes geométricas sobre valuaciones finitas
+## 2. The arithmetic space: geometric laws on finite valuations
 
-Sea S cualquier conjunto finito de primos. Para t>0, defino P_t sobre `(v_p)_{p∈S}∈N_0^S` por independencia y
+Let S be any finite set of primes. For t>0, I define P_t on `(v_p)_{p∈S}∈N_0^S` by independence and
 
 `P_t(v_p=j)=(1−p^(−t))p^(−tj)`.
 
-Para d soportado en S, `E_t X_d=d^(−t)` y `E_t X_dX_e=lcm(d,e)^(−t)`. Las leyes son compatibles al ampliar S, pero la prueba sólo usa conjuntos finitos.
+For d supported on S, `E_t X_d=d^(−t)` and `E_t X_dX_e=lcm(d,e)^(−t)`. The laws are compatible when enlarging S, but the proof only uses finite sets.
 
-Para un polinomio de divisibilidad
+For a divisibility polynomial
 
-`A(N)=Σ_{d∈E}a_d X_d(N)`, E finito,
+`A(N)=Σ_{d∈E}a_d X_d(N)`, E finite,
 
-defino `μ_t(A)=E_t A=Σ a_d d^(−t)`. En particular μ_1 es la media de divisibilidad uniforme (Haar sobre cilindros profinitos).
+I define `μ_t(A)=E_t A=Σ a_d d^(−t)`. In particular μ_1 is the uniform divisibility mean (Haar on profinite cylinders).
 
-**Advertencia:** P_s para s<1 no es una probabilidad zeta normalizable sobre los enteros positivos. Es una ley sobre las finitas valuaciones observadas. No se intercambia un producto infinito con una serie divergente de enteros.
+**Warning:** P_s for s<1 is not a normalisable zeta probability on the positive integers. It is a law on the finitely many observed valuations. An infinite product is not interchanged with a divergent series of integers.
 
-## 3. Identidad algebraica exacta antes de integrar
+## 3. Exact algebraic identity before integrating
 
-Defino un funcional firmado sobre el álgebra finita de observables de divisibilidad:
+I define a signed functional on the finite algebra of divisibility observables:
 
 `ν_y(H)=c(y)E_1H−τ(y)E_yH`.
 
-No se afirma que ν_y sea positivo; de hecho D_y puede ser indefinido al mezclar varios primos. No se necesita una medida global ν_y sobre los enteros.
+It is not claimed that ν_y is positive; in fact D_y may be indefinite when mixing several primes. A global measure ν_y on the integers is not needed.
 
-**Lema 1 (PROVED).** Para todo A de soporte finito,
+**Lemma 1 (PROVED).** For all A of finite support,
 
 `D_y(A):=Σ conjugate(a_d)a_e D_y(d,e)`
 
 `=ν_y(|A−μ_1(A)|²)+τ(y)|E_yA−μ_1(A)|²`.             (2)
 
-**Prueba.** El primer miembro es `c Var_1(A)−τ Var_y(A)`. Expandir el primer término derecho:
+**Proof.** The left-hand side is `c Var_1(A)−τ Var_y(A)`. Expand the first right-hand term:
 
 `ν_y(|A−μ_1|²)=c Var_1(A)−τ[Var_y(A)+|E_yA−μ_1|²]`.
 
-Sumar el segundo término. Es una identidad de complejos y sus módulos; no se ha usado signo. ∎
+Add the second term. It is an identity of complex numbers and their moduli; no sign has been used. ∎
 
-El punto de esta comparación es que el centro μ_1 es constante en y. No se resta la media gaussiana dentro del funcional firmado al integrar.
+The point of this comparison is that the centre μ_1 is constant in y. The Gaussian mean is not subtracted inside the signed functional when integrating.
 
-## 4. Mellin del defecto de masa: signo y fórmula exactos
+## 4. Mellin of the mass defect: exact sign and formula
 
-**Lema 2 (PROVED).** Para k≥1 y 0<α<1/2,
+**Lemma 2 (PROVED).** For k≥1 and 0<α<1/2,
 
 `∫_0^∞ y^(α−1)[c(y)/k−τ(k²y)]dy=−Z_α k^(−2α)`.       (3)
 
-**Prueba.** Para k=1, Poisson da `c−τ=1−c τ(1/y)`, que es O(1) en cero y O(c) en infinito. La integral converge. Dividir en y=1 y comparar con la continuación elemental de `∫ τ(y)y^(α−1)dy` desde α>1/2 da `−Z_α`. También puede tomarse esa continuación como definición de la Mellin regularizada: los términos sustraídos coinciden exactamente. Para k general cambiar u=k²y; el corchete se vuelve `u^(−1/2)−τ(u)` y aparece k^(−2α). ∎
+**Proof.** For k=1, Poisson gives `c−τ=1−c τ(1/y)`, which is O(1) at zero and O(c) at infinity. The integral converges. Splitting at y=1 and comparing with the elementary continuation of `∫ τ(y)y^(α−1)dy` from α>1/2 gives `−Z_α`. That continuation can also be taken as the definition of the regularised Mellin: the subtracted terms coincide exactly. For general k change u=k²y; the bracket becomes `u^(−1/2)−τ(u)` and k^(−2α) appears. ∎
 
-Para un observable H de álgebra finita, expandirlo como combinación finita de X_k, incluyendo X_1=1. Como `ν_y(X_k)=c/k−τ(k²y)`, se obtiene
+For an observable H of the finite algebra, expand it as a finite combination of X_k, including X_1=1. Since `ν_y(X_k)=c/k−τ(k²y)`, one obtains
 
 `∫_0^∞ y^(α−1)ν_y(H)dy=−Z_α E_sH`, s=2α.            (4)
 
-Cada integral de esta expansión converge absolutamente; no se necesita que ν_y sea positivo antes de integrar. Si H≥0 en las valuaciones finitas, el miembro derecho es no negativo. Esta es la fuente de signo que faltaba al analizar la diferencia firmada.
+Each integral in this expansion converges absolutely; ν_y need not be positive before integrating. If H≥0 on the finite valuations, the right-hand side is nonnegative. This is the source of sign that was missing when analysing the signed difference.
 
-## 5. Completación PSD de todo el kernel renormalizado
+## 5. PSD completion of the whole renormalised kernel
 
-**Teorema 3 (PROVED).** Para 0<α<1/2 y A=Σ a_dX_d de soporte finito,
+**Theorem 3 (PROVED).** For 0<α<1/2 and A=Σ a_dX_d of finite support,
 
 `−R_α(A)= (−Z_α) E_s|A−μ_1(A)|²`
 
 `          +∫_0^∞ y^(α−1)τ(y)|E_yA−μ_1(A)|²dy ≥0`.   (5)
 
-**Prueba.** Integrar (2). La primera integral es (4) aplicada a H=|A−μ_1|². La segunda converge: en cero, para cada d fijo, `q_d=1/d+O_d(√y)`, así que la diferencia de medias es O_A(√y), y el integrando sin potencia es O_A(√y). En infinito, q_d es acotado y τ decae exponencialmente. Ambas formas derechas tienen signo por `−Z_α>0` y positividad de P_s. ∎
+**Proof.** Integrate (2). The first integral is (4) applied to H=|A−μ_1|². The second converges: at zero, for each fixed d, `q_d=1/d+O_d(√y)`, so the difference of means is O_A(√y), and the integrand without power is O_A(√y). At infinity, q_d is bounded and τ decays exponentially. Both right-hand forms have a sign by `−Z_α>0` and positivity of P_s. ∎
 
-Para índices distintos d≥2, la forma es **definida positiva**. Si el primer término fuera cero, A=μ_1(A) en todos los patrones de valuaciones finitas, pues P_s les da probabilidad positiva. En N=1 se obtiene μ_1=0. Evaluando sucesivamente en los índices de E en orden creciente, `A(d)=Σ_{e∈E,e|d}a_e` obliga por inducción a cada a_d=0. Por tanto un vector de coeficientes no nulo da primer término estrictamente positivo.
+For distinct indices d≥2, the form is **positive definite**. If the first term were zero, A=μ_1(A) on all finite valuation patterns, since P_s gives them positive probability. At N=1 one obtains μ_1=0. Evaluating successively at the indices of E in increasing order, `A(d)=Σ_{e∈E,e|d}a_e` forces by induction each a_d=0. Hence a nonzero coefficient vector gives a strictly positive first term.
 
-### Kernel completamente explícito
+### Completely explicit kernel
 
-Defino
+I define
 
 `H_s(d,e)=lcm(d,e)^(−s)−d^(−s)/e−e^(−s)/d+1/(de)`,
 
 `Π_α(d,e)=∫_0^∞ y^(α−1)τ(y)[q_d(y)−1/d][q_e(y)−1/e]dy`.
 
-Entonces
+Then
 
 `−R_α=(−Z_α)H_s+Π_α`.                               (6)
 
-Además,
+Moreover,
 
 `H_s=G_s+v_s v_s*`,
 
@@ -120,81 +120,81 @@ Además,
 
 `v_s(d)=d^(−s)−d^(−1)`.
 
-G_s es la covarianza de los indicadores bajo P_s y Π_α es el Gram explícito de sus desviaciones gaussianas respecto de la media Haar. Así
+G_s is the covariance of the indicators under P_s and Π_α is the explicit Gram of their Gaussian deviations from the Haar mean. Thus
 
 `−R_α=(−Z_α)G_s+(−Z_α)v_s v_s*+Π_α`,                 (7)
 
-con tres formas PSD identificadas y sin término restante firmado.
+with three identified PSD forms and no remaining signed term.
 
-**Caso crítico α=1/4:** s=1/2, `−Z_α=−2π^(−1/4)Γ(1/4)ζ(1/2)>0`. La identidad paga exactamente la diagonal y los bloques del mismo primo del kernel R que ya estaba definido. No identifica ese escalar gamma-zeta con el arquimediano de Q_T.
+**Critical case α=1/4:** s=1/2, `−Z_α=−2π^(−1/4)Γ(1/4)ζ(1/2)>0`. The identity pays exactly the diagonal and the same-prime blocks of the kernel R that was already defined. It does not identify that gamma-zeta scalar with the archimedean part of Q_T.
 
-## 6. Resultado previo de bloque, ahora explicado y reforzado
+## 6. Previous block result, now explained and strengthened
 
-El argumento siguiente fue encontrado antes de (5) y sirve como control independiente para potencias de un primo.
+The following argument was found before (5) and serves as an independent control for powers of one prime.
 
-La concavidad puncturada implica q_y(p)<1/p. Poisson da, para u>0,
+Punctured concavity implies q_y(p)<1/p. Poisson gives, for u>0,
 
 `τ(u)−τ(p²u)<u^(−1/2)(1−1/p)`.
 
-En efecto el defecto respecto del lado derecho es
+Indeed the defect with respect to the right-hand side is
 
 `u^(−1/2)[τ(1/u)−p^(−1)τ(1/(p²u))]<0`.
 
-Por tanto las masas gaussianas de cada cascarón de valuación,
+Hence the Gaussian masses of each valuation shell,
 
 `w_j=τ(p^(2j)y)−τ(p^(2j+2)y)`,
 
-están estrictamente dominadas por `c(1−1/p)p^(−j)`, las masas de cP_1. Para cualquier observable de una valuación, la covarianza no normalizada es
+are strictly dominated by `c(1−1/p)p^(−j)`, the masses of cP_1. For any observable of one valuation, the unnormalised covariance is
 
 `mass·Var(A)=min_z Σ_j mass_j|A_j−z|²`.
 
-Esta expresión crece al aumentar cada masa; de ahí D_y≥0 en cada bloque de un primo, antes de integrar. Es estricta para observables no constantes. En varios primos, esa dominación de masas puede fallar y D_y no es PSD en cada escala. **La identidad (5) usa la positividad de la Mellin integrada de ν, no una dominación falsa punto a punto.**
+This expression increases when each mass increases; hence D_y≥0 on each block of one prime, before integrating. It is strict for non-constant observables. For several primes, that mass domination may fail and D_y is not PSD at each scale. **Identity (5) uses the positivity of the integrated Mellin of ν, not a false pointwise domination.**
 
-## 7. Enlace con los cruces y con el producto de Euler
+## 7. Link with the cross terms and with the Euler product
 
-Para potencias de primos distintos, G_s(d,e)=0 porque lcm=de. Por (7), los cruces críticos positivos de −R calculados en CONSTRUCTOR_004 son
+For powers of distinct primes, G_s(d,e)=0 because lcm=de. By (7), the positive critical cross terms of −R computed in CONSTRUCTOR_004 are
 
 `(−Z_α)v_s(d)v_s(e)+Π_α(d,e)`.
 
-Ambos términos son positivos entrada a entrada, pues v_s(d)>0 en 0<s<1 y `q_d−1/d<0` por concavidad puncturada. Esto reproduce su signo sin asignar una diagonal de laplaciano artificial.
+Both terms are entrywise positive, since v_s(d)>0 on 0<s<1 and `q_d−1/d<0` by punctured concavity. This reproduces their sign without assigning an artificial Laplacian diagonal.
 
-Para potencias del mismo primo, G_s es exactamente la covarianza de su distribución geométrica de parámetro p^(−s). Así la completación no es sólo entrada a entrada: da los bloques de covarianza correctos dentro de la misma fórmula.
+For powers of the same prime, G_s is exactly the covariance of its geometric distribution with parameter p^(−s). Thus the completion is not only entrywise: it gives the correct covariance blocks within the same formula.
 
-La identidad (5) usa aritmética de todos los enteros y sus densidades de divisibilidad; P_s incorpora el producto euleriano sobre los primos observados. **Especificidad para Q_T no obtenida:** el §10 prueba que quitar finitos primos produce una ley condicionada que conserva esta positividad, con otra masa y otra theta. La fórmula no demuestra que la positividad de Q_T para conductor1 se transfiera ni identifica qué término del enlace fallaría. El cálculo de ese enlace sigue siendo necesario.
+Identity (5) uses arithmetic of all integers and their divisibility densities; P_s incorporates the Euler product over the observed primes. **Specificity for Q_T not obtained:** §10 proves that removing finitely many primes produces a conditioned law that keeps this positivity, with another mass and another theta. The formula does not prove that the positivity of Q_T for conductor 1 transfers nor identifies which term of the link would fail. The computation of that link is still necessary.
 
-## 8. Dominio y alcance: qué se logró, qué no
+## 8. Domain and scope: what was achieved, what was not
 
-Se obtuvo una **completación positiva exacta del kernel aritmético renormalizado −R_α sobre c_00 de divisores**, con todos los modos de ese espacio algebraico incluidos. Su completación de Hilbert se puede definir mediante (5), pero todavía no se ha construido un operador no compacto de alturas en el dominio requerido por O1.
+An **exact positive completion of the renormalised arithmetic kernel −R_α on c_00 of divisors** was obtained, with all modes of that algebraic space included. Its Hilbert completion can be defined via (5), but a non-compact height operator in the domain required by O1 has not yet been built.
 
-No se afirma que la norma así definida sea equivalente a una norma de coeficientes prefijada, ni que una serie infinita sobre todos los primos pertenezca al dominio. No se integra una suma global sin control de colas.
+It is not claimed that the norm so defined is equivalent to a prefixed coefficient norm, nor that an infinite series over all primes belongs to the domain. A global sum is not integrated without tail control.
 
-No se ha identificado un mapa U_T de los tests del nodo tal que `Q_T(F)=−R_(1/4)(U_TF)+resto positivo`, ni una dominación equivalente demostrada. La covarianza geométrica, el término v_s y Π_α no son por definición el gamma, el peine y el polo del paper. No se los etiqueta así por analogía.
+No map U_T from the tests of the node has been identified such that `Q_T(F)=−R_(1/4)(U_TF)+positive remainder`, nor an equivalent proved domination. The geometric covariance, the term v_s and Π_α are not by definition the gamma, the comb and the pole of the paper. They are not labelled so by analogy.
 
-Por tanto el objetivo auxiliar de esta ronda **sí está resuelto**: signo de R (negativo definido) y completación positiva genuina del objeto conservado. El objetivo principal D continúa activo. El residuo concreto es una realización de (7) sobre los tests F, con identidad exacta de los términos y dominio/colas, que vincule este objeto distinto a Q_T sin introducir su raíz cuadrada ni asumir su signo.
+Hence the auxiliary goal of this round **is resolved**: sign of R (negative definite) and genuine positive completion of the kept object. The main goal D remains active. The concrete residue is a realisation of (7) on the tests F, with exact identity of the terms and domain/tails, linking this distinct object to Q_T without introducing its square root nor assuming its sign.
 
-## 9. Puertas del programa
+## 9. Programme gates
 
-- **thm:sos:** (5) no paga el peine puntual por μ₀−S_T ni pide al arquimediano una constante. No cae en ese enunciado por forma. Tampoco se ha construido un certificado de def:PD para Q_T.
-- **P1:** la identidad positiva corresponde a R, objeto definido independientemente por una integral renormalizada; no a una raíz abstracta de Q_T. Si se propone U_T, debe demostrarse su enlace, no su existencia abstracta.
-- **W₂/BR:** no se han construido los tests/restos de esos esquemas. El kernel de índices enteros no se presenta como kernel efectivo de alturas por mero cambio de nombre.
-- **Ecuación funcional:** Poisson interviene en convergencia y en la Mellin completa; no se usa una identidad asintótica de Gonek ni se suprime un resto.
-- **Sector polar:** la aparición del rango uno v_s es explícita. No se ha demostrado que corresponda a cosh(x/2); no se elimina ni se identifica sin mapa.
+- **thm:sos:** (5) does not pay the pointwise comb by μ₀−S_T nor ask the archimedean part for a constant. It does not fall under that statement by form. Nor has a def:PD certificate for Q_T been built.
+- **P1:** the positive identity corresponds to R, an object defined independently by a renormalised integral; not to an abstract root of Q_T. If U_T is proposed, its link must be proved, not its abstract existence.
+- **W₂/BR:** the tests/remainders of those schemes have not been built. The kernel on integer indices is not presented as an effective height kernel by mere renaming.
+- **Functional equation:** Poisson intervenes in convergence and in the complete Mellin; no asymptotic Gonek identity is used nor is a remainder suppressed.
+- **Polar sector:** the appearance of the rank one v_s is explicit. It has not been proved that it corresponds to cosh(x/2); it is neither eliminated nor identified without a map.
 
-**Estado final del constructor: PSD COMPLETION PROVED para −R_α (0<α<1/2), auditoría final favorable. Enlace con Q_T y fila D: OPEN, trabajo activo.**
+**Final status: PSD COMPLETION PROVED for −R_α (0<α<1/2), favourable final audit. Link with Q_T and row D: OPEN, active work.**
 
-## 10. Test de especificidad: la completación también sobrevive a borrar primos
+## 10. Specificity test: the completion also survives deleting primes
 
-Sea P>1 squarefree, `δ_P=∏_{p|P}(1−1/p)` y
+Let P>1 be squarefree, `δ_P=∏_{p|P}(1−1/p)` and
 
 `τ_P(y)=Σ_{n≠0,(n,P)=1}exp(−πn²y)=Σ_{a|P}μ(a)τ(a²y)`.
 
-Su masa principal es δ_P c(y); el término constante desaparece porque `Σ_{a|P}μ(a)=0`. Para índices d,e coprimos con P, definimos q_d^P, B_y^P como antes usando τ_P y
+Its main mass is δ_P c(y); the constant term disappears because `Σ_{a|P}μ(a)=0`. For indices d,e coprime to P, we define q_d^P, B_y^P as before using τ_P and
 
 `R_α^P(d,e)=∫_0^∞ y^(α−1)[B_y^P(d,e)−δ_P c(y)G_1(d,e)]dy`.
 
-Las integrales convergen para 0<α<1/2: en cero la cancelación es incluso exponencial; en infinito basta la cola y^(−1/2). El centro μ_1 sigue siendo Σa_d/d en los índices supervivientes.
+The integrals converge for 0<α<1/2: at zero the cancellation is even exponential; at infinity the tail y^(−1/2) suffices. The centre μ_1 is still Σa_d/d on the surviving indices.
 
-Para `ν_y^P=δ_P c E_1^P−τ_P E_y^P`, donde P_t^P fija v_p=0 para p|P y conserva las otras geométricas, la inclusión–exclusión y (3) dan
+For `ν_y^P=δ_P c E_1^P−τ_P E_y^P`, where P_t^P fixes v_p=0 for p|P and keeps the other geometrics, inclusion–exclusion and (3) give
 
 `∫_0^∞ y^(α−1)ν_y^P(X_k)dy`
 
@@ -202,14 +202,14 @@ Para `ν_y^P=δ_P c E_1^P−τ_P E_y^P`, donde P_t^P fija v_p=0 para p|P y conse
 
 `Z_α^P:=Z_α∏_{p|P}(1−p^(−s))<0`, `(k,P)=1`.
 
-Repitiendo exactamente el Lema 1:
+Repeating exactly Lemma 1:
 
 `−R_α^P(A)=(−Z_α^P)E_s^P|A−μ_1(A)|²`
 
 `            +∫_0^∞ y^(α−1)τ_P(y)|E_y^P A−μ_1(A)|²dy ≥0`.
 
-Es definida positiva en familias finitas distintas de índices d≥2 coprimos con P. Los indicadores que contienen primos borrados son nulos en esta ley y no se cuentan como direcciones estrictas.
+It is positive definite on finite families of distinct indices d≥2 coprime to P. Indicators containing deleted primes vanish in this law and are not counted as strict directions.
 
-**Resultado del test:** la positividad auxiliar completa es **heredada por toda eliminación finita** con su theta y densidad correspondientes. El teorema de §5 sigue siendo válido e independiente, pero su signo por sí solo no separa la forma de conductor1 del falsificador. La premisa extra del enlace debe usar la FE autodual completa de θ_Z y la identidad de su arquimediano/polo; no basta usar esta completación PSD.
+**Result of the test:** the complete auxiliary positivity is **inherited by every finite deletion** with its corresponding theta and density. The theorem of §5 remains valid and independent, but its sign alone does not separate the conductor-1 form from the falsifier. The extra premise of the link must use the full self-dual FE of θ_Z and the identity of its archimedean part/pole; this PSD completion is not enough.
 
-Esta conclusión no se usa como NO-GO general: un enlace específico que falle para τ_P todavía podría servir. Debe construirse explícitamente, incluyendo el defecto de autodualidad, en vez de inferirlo de (5).
+This conclusion is not used as a general NO-GO: a specific link that fails for τ_P could still serve. It must be built explicitly, including the self-duality defect, instead of being inferred from (5).

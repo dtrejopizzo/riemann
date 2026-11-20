@@ -1,240 +1,240 @@
-# ROUND_003_4 — Selección: coordenada de borde y ancla nula con borde dentro de (G)
+# ROUND_003_4 — Selection: boundary coordinate and null anchor with boundary inside (G)
 
-Memo de selección, no de construcción. Notación de `../phase-211-sign-sandbox/STATEMENT_001.md`;
-N = e^{2T}. Etiquetas: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMÉRICO.
+Selection memo, not a construction memo. Notation of `../phase-211-sign-sandbox/STATEMENT_001.md`;
+N = e^{2T}. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 
-## Cotejo
+## Cross-check
 
-### Búsqueda realizada
+### Search performed
 
-- Lectura primaria entera: R170_861, 862, 866, 868, 869, 870; inicio y estado de 859, 867, 874;
-  R182_201 entero y README de la fase 182; `REVIEW_002_A.md`, `REVIEW_002_BC.md`, `LEDGER.md`,
+- Full primary reading: R170_861, 862, 866, 868, 869, 870; beginning and status of 859, 867, 874;
+  R182_201 in full and README of phase 182; `REVIEW_002_A.md`, `REVIEW_002_BC.md`, `LEDGER.md`,
   `RULES_AVOID.md` §§B, D, I.
-- grep en `03-research/` (todas las fases), `04-papers/47*`, `04-papers/48*` y
-  `05-meta-and-planning/` por: «null anchor», «bordered null», «boundary anchor», «boundary
+- grep in `03-research/` (all phases), `04-papers/47*`, `04-papers/48*` and
+  `05-meta-and-planning/` for: «null anchor», «bordered null», «boundary anchor», «boundary
   coordinate», «β_T(f)», «ancla nula», «ancla con borde», «coordenada de borde», «complemento de
-  Schur» / «Schur complement» junto a a_T o P_T, «NGF», «invisib» junto a núcleo/kernel.
-- Coincidencias abiertas en primaria: fase 170 (862–874), fase 182 (`R182_RECTANGULAR_TUNNEL.md`,
-  `R182_201_AUDIT_AND_NONLOCAL_GATE.md`), R179_CHAIN_GATE l. 252 (sólo cita 866). En la 211,
-  `ROUND_008_A.md` l. 26 y `ROUND_008_D.md` l. 18 citan «POLAR_CAP_001 (bordered Schur complement
-  that inverts a_T|P_T itself — consumes λ_A > 0)»; no hay archivo con ese nombre en la carpeta de la
-  211 (búsqueda por nombre sin resultado), de modo que sólo se conoce por esas dos citas.
-  P47 l. 4340–4350 (complemento de Schur con borde de a_T sobre P_T, término polar) y l. 5299
-  (thm:coer-schur): leídos sólo en las líneas citadas.
-- Las demás coincidencias textuales («boundary coordinates» en P121, P3 de la fase 120, fases 57,
-  72, 77, 78, 114/116) usan «borde» en otro sentido (coordenadas de Hadamard, borde de Weyl,
-  fronteras de capacidad); no se abrieron enteras. No encontré ninguna memo que escriba una forma
-  positiva con el vector nulo (Λ,1)⊗F ⊕ β_T(F) sobre todo P_T. Eso no prueba novedad: la §2 muestra
-  que el formato no la tiene.
+  Schur» / «Schur complement» next to a_T or P_T, «NGF», «invisib» next to núcleo/kernel.
+- Hits opened in primary: phase 170 (862–874), phase 182 (`R182_RECTANGULAR_TUNNEL.md`,
+  `R182_201_AUDIT_AND_NONLOCAL_GATE.md`), R179_CHAIN_GATE l. 252 (only cites 866). In 211,
+  `ROUND_008_A.md` l. 26 and `ROUND_008_D.md` l. 18 cite «POLAR_CAP_001 (bordered Schur complement
+  that inverts a_T|P_T itself — consumes λ_A > 0)»; there is no file with that name in the folder of
+  211 (search by name without result), so it is known only through those two citations.
+  P47 l. 4340–4350 (bordered Schur complement of a_T on P_T, polar term) and l. 5299
+  (thm:coer-schur): read only at the cited lines.
+- The other textual hits («boundary coordinates» in P121, P3 of phase 120, phases 57,
+  72, 77, 78, 114/116) use «boundary» in another sense (Hadamard coordinates, Weyl boundary,
+  capacity boundaries); they were not opened in full. I found no memo that writes a positive
+  form with the null vector (Λ,1)⊗F ⊕ β_T(F) on all of P_T. That does not prove novelty: §2 shows
+  that the format has none.
 
-### (1) Antecedente más cercano
+### (1) Closest antecedent
 
-- R170_862 §§2–6: ley del ancla nula con borde. Lema 2.1 (familia bilateral positiva ⟹
-  P_N Ḣ P_N = 0); §3 (un ancla fuera del núcleo no recibe la cancelación, modelo (3.2)); §4 las
-  cuatro obligaciones de e_T; §5 la columna de Tate tiene ‖b‖² = 4(sinh T + εT) > 0.
-- R170_868 §5: vector nulo ampliado ê_T(f) = ((Λ,1)⊗f, β_T(f)) con cancelación conjunta (5.4);
-  §6: β_T(f) se construye con (ρ_f, ℓ_f) de la ecuación de primer contacto PAf = ρ_f b, Q_eAf = ℓ_f.
-- R170_869 (0.2)–(0.4) y R170_870 §§2, 4: la clase de borde es lineal e impar; es independiente de
-  todo lo probado.
-- R170_861 (0.3), §§2, 6 y R182_201 §2: una extensión positiva con complemento de Schur fijo es
-  congruencia triangular; completar el bloque en abstracto equivale a lo buscado; queda abierto sólo
-  un factor fuente no local (NGF, R182_201 (3.1)–(NGF), OPEN).
+- R170_862 §§2–6: law of the null anchor with boundary. Lemma 2.1 (positive two-sided family ⟹
+  P_N Ḣ P_N = 0); §3 (an anchor outside the kernel does not receive the cancellation, model (3.2)); §4 the
+  four obligations of e_T; §5 the Tate column has ‖b‖² = 4(sinh T + εT) > 0.
+- R170_868 §5: enlarged null vector ê_T(f) = ((Λ,1)⊗f, β_T(f)) with joint cancellation (5.4);
+  §6: β_T(f) is constructed with (ρ_f, ℓ_f) from the first-contact equation PAf = ρ_f b, Q_eAf = ℓ_f.
+- R170_869 (0.2)–(0.4) and R170_870 §§2, 4: the boundary class is linear and odd; it is independent of
+  everything proved.
+- R170_861 (0.3), §§2, 6 and R182_201 §2: a positive extension with fixed Schur complement is a
+  triangular congruence; completing the block abstractly is equivalent to what is sought; only
+  a non-local source factor remains open (NGF, R182_201 (3.1)–(NGF), OPEN).
 
-Diferencia de marco que pide el encargo: toda la fase 170 trabaja con un vector f del radical de una
-ventana de primer contacto supuesta y usa la positividad para deducir una igualdad (Lema 2.1). La
-fase 212 pide la dirección contraria: una identidad (G) sobre todo P_T que produzca la positividad.
+Difference of framework requested by the task: all of phase 170 works with a vector f of the radical of a
+supposed first-contact window and uses positivity to deduce an equality (Lemma 2.1). Phase
+212 asks for the opposite direction: an identity (G) on all of P_T that produces positivity.
 
-### (2) El objeto, escrito
+### (2) The object, written
 
-Formato candidato (variante con borde de (G)). Espacio ampliado
+Candidate format (bordered variant of (G)). Enlarged space
 
     Ê_T = (ℝ^N ⊕ ℝ) ⊗ ℋ ⊕ ℬ_T ⊕ 𝒳_T,
 
-una forma 𝔾_T ⪰ 0 manifiesta sobre Ê_T (por ejemplo 𝔾_T = 𝓔_T*𝓔_T con 𝓔_T escrito), un vector nulo
-ê_T(F) = ((Λ,1)⊗F, β_T(F), 0) con 𝔾_T(ê_T(F)) = 0, una inmersión ι_T : P_T → Ê_T y una de las dos
-lecturas
+a manifest form 𝔾_T ⪰ 0 on Ê_T (for example 𝔾_T = 𝓔_T*𝓔_T with 𝓔_T written), a null vector
+ê_T(F) = ((Λ,1)⊗F, β_T(F), 0) with 𝔾_T(ê_T(F)) = 0, an embedding ι_T : P_T → Ê_T and one of the two
+readings
 
     (G-res)   a_T(F) = 𝔾_T(ι_T F),
-    (G-Schur) a_T(F) = inf_{y ∈ 𝒴} 𝔾_T(ι_T F + y),   𝒴 ⊂ Ê_T un subespacio auxiliar.
+    (G-Schur) a_T(F) = inf_{y ∈ 𝒴} 𝔾_T(ι_T F + y),   𝒴 ⊂ Ê_T an auxiliary subspace.
 
-Lo que el encargo pide fijar y lo que hay: β_T, según R170_868 §6, sale de la ecuación de primer
-contacto, que sólo existe para f en el radical de una ventana con λ_A(T) = 0. Sobre un F ∈ P_T
-general no hay ecuación de primer contacto. Su única extensión a todo P_T, la ecuación de
-Euler–Lagrange de λ_A, sólo vale en un minimizador (patrón B9). La definición literal de R170_856
-(8.7), β(F) = (b, PȦF) − (h, P𝒞F) − ρ_F g_ε, sí tiene sentido para todo F como funcional lineal. La
-§2 prueba que, dentro de (G-res) o (G-Schur), ningún β_T y ningún vector nulo influye en la
-identidad. Por eso no hay ℋ_T, V_T, ρ_T nuevos que escribir: el formato se reduce a (G) sin borde.
+What the task asks to fix and what there is: β_T, according to R170_868 §6, comes from the first-contact
+equation, which exists only for f in the radical of a window with λ_A(T) = 0. On a general F ∈ P_T
+there is no first-contact equation. Its only extension to all of P_T, the
+Euler–Lagrange equation of λ_A, holds only at a minimizer (pattern B9). The literal definition of R170_856
+(8.7), β(F) = (b, PȦF) − (h, P𝒞F) − ρ_F g_ε, does make sense for every F as a linear functional. 
+§2 proves that, within (G-res) or (G-Schur), no β_T and no null vector influences the
+identity. That is why there are no new ℋ_T, V_T, ρ_T to write: the format reduces to (G) without boundary.
 
-### (3) ¿Esquiva la dificultad del antecedente?
+### (3) Does it evade the difficulty of the antecedent?
 
-No. La dificultad de 862/870 es que la clase de borde es lineal e impar y la positividad es par.
-Dentro de (G) todo es cuadrático y la paridad desaparece, pero sólo porque el ancla deja de actuar
-(Lema 1). La dificultad de 861 y R182_201 §2 (Schur fijo = congruencia) se reproduce: con 𝔾_T
-manifiesta, (G-Schur) es (G) con V_T explícito (Lema 3); con 𝔾_T no manifiesta, 𝔾_T ⪰ 0 equivale al
-objetivo (861 (1.2)).
+No. The difficulty of 862/870 is that the boundary class is linear and odd and positivity is even.
+Within (G) everything is quadratic and parity disappears, but only because the anchor ceases to act
+(Lemma 1). The difficulty of 861 and R182_201 §2 (fixed Schur = congruence) is reproduced: with 𝔾_T
+manifest, (G-Schur) is (G) with explicit V_T (Lemma 3); with 𝔾_T not manifest, 𝔾_T ⪰ 0 is equivalent to the
+goal (861 (1.2)).
 
-### (4) Conexión con la positividad global
+### (4) Connection with global positivity
 
-Ninguna nueva: si (G-res) o (G-Schur) valen con 𝔾_T ⪰ 0, entonces a_T ≥ 0 sobre P_T de forma
-inmediata, igual que con (G). Todo el contenido está en escribir 𝔾_T (o V_T) manifiestamente
-positiva con la identidad exacta. El ancla no aporta ninguna desigualdad intermedia (Lema 1,
-Proposición 2).
+None new: if (G-res) or (G-Schur) hold with 𝔾_T ⪰ 0, then a_T ≥ 0 on P_T
+immediately, as with (G). All the content is in writing 𝔾_T (or V_T) manifestly
+positive with the exact identity. The anchor contributes no intermediate inequality (Lemma 1,
+Proposition 2).
 
-### (5) Líneas de ruptura para cΛ y a_P
+### (5) Breaking lines for cΛ and a_P
 
-- La nulidad del ancla falla en R170_866 (2.1), fila k = 2: Σ_{d|2} cΛ(d) − log 2 = (c − 1) log 2 ≠ 0;
-  para a_P con P > 2, (a_P∗1)(2) − log 2 = −log 2 ≠ 0. PROVED (cuenta directa).
-- Esas rupturas no son rupturas de (G): por el Lema 1, ê_T puede quitarse de ι_T sin cambiar la
-  identidad. La línea que tendría que romperse es la prueba de 𝔾_T ⪰ 0 (o de ρ_T ≥ 0), que no está
-  escrita. Además, para cΛ la ruptura cerca de c = 1 es automática en el formato (Lema 4) y no
-  aporta signo. Punto (5) sin respuesta: la candidata no está lista para construcción.
+- The nullity of the anchor fails in R170_866 (2.1), row k = 2: Σ_{d|2} cΛ(d) − log 2 = (c − 1) log 2 ≠ 0;
+  for a_P with P > 2, (a_P∗1)(2) − log 2 = −log 2 ≠ 0. PROVED (direct computation).
+- Those breakings are not breakings of (G): by Lemma 1, ê_T can be removed from ι_T without changing the
+  identity. The line that would have to break is the proof of 𝔾_T ⪰ 0 (or of ρ_T ≥ 0), which is not
+  written. Moreover, for cΛ the breaking near c = 1 is automatic in the format (Lemma 4) and
+  contributes no sign. Point (5) without answer: the candidate is not ready for construction.
 
-## 1. Convenciones
+## 1. Conventions
 
-E es un espacio vectorial real o complejo y 𝔾 una forma hermítica semidefinida positiva sobre E,
-sin hipótesis topológicas. Se escribe 𝔾(x) = 𝔾(x,x) y K = {k : 𝔾(k) = 0}.
+E is a real or complex vector space and 𝔾 a positive semidefinite Hermitian form on E,
+without topological hypotheses. Write 𝔾(x) = 𝔾(x,x) and K = {k : 𝔾(k) = 0}.
 
-## 2. Lemas (todos PROVED, con demostración completa)
+## 2. Lemmas (all PROVED, with complete proof)
 
-**Lema 1 (invisibilidad del núcleo).** K es un subespacio, 𝔾(x, k) = 0 para todo x ∈ E y k ∈ K, y
-𝔾(x + k) = 𝔾(x). En consecuencia, para toda aplicación ι : P_T → E (lineal o no), toda aplicación
-κ : P_T → K y todo subespacio 𝒴 ⊂ E:
+**Lemma 1 (invisibility of the kernel).** K is a subspace, 𝔾(x, k) = 0 for every x ∈ E and k ∈ K, and
+𝔾(x + k) = 𝔾(x). Consequently, for every map ι : P_T → E (linear or not), every map
+κ : P_T → K and every subspace 𝒴 ⊂ E:
 
     𝔾(ι F + κ F) = 𝔾(ι F),
     inf_{y∈𝒴} 𝔾(ι F + κ F + y) = inf_{y∈𝒴} 𝔾(ι F + y) = inf_{y∈𝒴+K} 𝔾(ι F + y).
 
-*Demostración.* Cauchy–Schwarz para formas semidefinidas: |𝔾(x,k)|² ≤ 𝔾(x)𝔾(k) = 0. Luego
-𝔾(x + k) = 𝔾(x) + 2Re 𝔾(x,k) + 𝔾(k) = 𝔾(x). K es cerrado por sumas (𝔾(k + k′) = 𝔾(k) = 0) y por
-escalares. La segunda línea se sigue de la primera aplicada a x = ιF + y. ∎
+*Proof.* Cauchy–Schwarz for semidefinite forms: |𝔾(x,k)|² ≤ 𝔾(x)𝔾(k) = 0. Hence
+𝔾(x + k) = 𝔾(x) + 2Re 𝔾(x,k) + 𝔾(k) = 𝔾(x). K is closed under sums (𝔾(k + k′) = 𝔾(k) = 0) and under
+scalars. The second line follows from the first applied to x = ιF + y. ∎
 
-**Corolario 1.** En (G-res) y en (G-Schur), la identidad vale con ι_T si y sólo si vale con
-ι_T − κ_T para todo κ_T : P_T → K. En particular, ni la nulidad de ê_T(F) ni el valor de β_T(F)
-intervienen en la identidad. Si ι_T = ê_T + w_T, la identidad equivale a a_T(F) = 𝔾_T(w_T F) (o al
-ínfimo correspondiente). La forma inducida sobre Ê_T/K es la única que importa, y en ella el ancla es
-el vector cero.
+**Corollary 1.** In (G-res) and in (G-Schur), the identity holds with ι_T if and only if it holds with
+ι_T − κ_T for every κ_T : P_T → K. In particular, neither the nullity of ê_T(F) nor the value of β_T(F)
+enter the identity. If ι_T = ê_T + w_T, the identity is equivalent to a_T(F) = 𝔾_T(w_T F) (or to the
+corresponding infimum). The induced form on Ê_T/K is the only one that matters, and in it the anchor is
+the zero vector.
 
-**Proposición 2 (el formato con borde equivale a (G)).** Toda identidad (G),
-a_T(F) = ‖V_T F‖² + ρ_T(F) con ρ_T(F) = Σ_j |r_j(F)|² escrita, se realiza en (G-res) con cualquier
-β_T y con ê_T nulo. Recíprocamente, toda realización (G-res) con 𝔾_T = 𝓔_T*𝓔_T da (G) con
-V_T = 𝓔_T ι_T y ρ_T = 0.
+**Proposition 2 (the bordered format is equivalent to (G)).** Every identity (G),
+a_T(F) = ‖V_T F‖² + ρ_T(F) with ρ_T(F) = Σ_j |r_j(F)|² written, is realized in (G-res) with any
+β_T and with null ê_T. Conversely, every realization (G-res) with 𝔾_T = 𝓔_T*𝓔_T gives (G) with
+V_T = 𝓔_T ι_T and ρ_T = 0.
 
-*Demostración.* Directa: tómese Ê_T = (ℝ^{N+1} ⊗ ℋ) ⊕ ℬ_T ⊕ (ℋ_T ⊕ ℓ²), 𝓔_T(x, b, h) = h (proyección
-sobre el último sumando) e ι_T(F) = ((Λ,1)⊗F, β_T(F), (V_T F, (r_j(F))_j)). Entonces 𝓔_T ê_T(F) = 0
-y 𝔾_T(ι_T F) = ‖V_T F‖² + Σ_j |r_j(F)|² = a_T(F). La recíproca es la definición. ∎
+*Proof.* Direct: take Ê_T = (ℝ^{N+1} ⊗ ℋ) ⊕ ℬ_T ⊕ (ℋ_T ⊕ ℓ²), 𝓔_T(x, b, h) = h (projection
+onto the last summand) and ι_T(F) = ((Λ,1)⊗F, β_T(F), (V_T F, (r_j(F))_j)). Then 𝓔_T ê_T(F) = 0
+and 𝔾_T(ι_T F) = ‖V_T F‖² + Σ_j |r_j(F)|² = a_T(F). The converse is the definition. ∎
 
-Lectura: exigir que (Λ,1)⊗F ⊕ β_T(F) sea nulo no restringe qué V_T son admisibles. Toda V_T
-admite esa ampliación. Es una reformulación (patrones B3 y A4), no un mecanismo.
+Reading: requiring that (Λ,1)⊗F ⊕ β_T(F) be null does not restrict which V_T are admissible. Every V_T
+admits that enlargement. It is a reformulation (patterns B3 and A4), not a mechanism.
 
-**Lema 3 (la variante de Schur es (G) o es el objetivo).** Sean 𝓔 = [E_X, E_Y] con E_X : X → 𝒦 y
-E_Y : 𝒴 → 𝒦 lineales y 𝒦 de Hilbert, y 𝔾 = 𝓔*𝓔 sobre X ⊕ 𝒴. Entonces
+**Lemma 3 (the Schur variant is (G) or is the goal).** Let 𝓔 = [E_X, E_Y] with E_X : X → 𝒦 and
+E_Y : 𝒴 → 𝒦 linear and 𝒦 a Hilbert space, and 𝔾 = 𝓔*𝓔 on X ⊕ 𝒴. Then
 
-    inf_{y∈𝒴} 𝔾(x + y) = ‖P^⊥ E_X x‖²,   P^⊥ = proyección ortogonal sobre (cl Ran E_Y)^⊥.
+    inf_{y∈𝒴} 𝔾(x + y) = ‖P^⊥ E_X x‖²,   P^⊥ = orthogonal projection onto (cl Ran E_Y)^⊥.
 
-*Demostración.* inf_y ‖E_X x + E_Y y‖² = dist(E_X x, Ran E_Y)² = dist(E_X x, cl Ran E_Y)² =
-‖P^⊥E_X x‖² (proyección sobre un subespacio cerrado de un Hilbert). ∎
+*Proof.* inf_y ‖E_X x + E_Y y‖² = dist(E_X x, Ran E_Y)² = dist(E_X x, cl Ran E_Y)² =
+‖P^⊥E_X x‖² (projection onto a closed subspace of a Hilbert space). ∎
 
-Así, con 𝔾_T manifiesta, (G-Schur) es (G) con V_T = P^⊥E_X ι_T y ρ_T = 0. Si 𝔾_T no es manifiesta y su
-bloque auxiliar es G > 0, R170_861 (1.2) da 𝔾_T ⪰ 0 ⟺ a_T ⪰ 0 (CITED, comprobado en primaria): el
-problema se transfiere entero. Coincide con R182_201 §2.
+Thus, with 𝔾_T manifest, (G-Schur) is (G) with V_T = P^⊥E_X ι_T and ρ_T = 0. If 𝔾_T is not manifest and its
+auxiliary block is G > 0, R170_861 (1.2) gives 𝔾_T ⪰ 0 ⟺ a_T ⪰ 0 (CITED, checked in primary): the
+problem is transferred entirely. It coincides with R182_201 §2.
 
-**Lema 4 (ruptura automática bajo cΛ en el formato lineal en el peso).** Supóngase que 𝔾 ⪰ 0 no
-depende del peso, que ι_a(F) = ι_0(F) + J(a ⊗ F) con J lineal, y que a_T(F; a) = 𝔾(ι_a F) vale para
-todo F ∈ P_T y para a = Λ + tδ con t en un intervalo abierto, donde δ está soportado en [2, N) y no
-es nulo. Entonces se llega a una contradicción. En particular, la identidad sólo puede valer en
-valores aislados de c para cΛ (δ = Λ) y para Λ + s(a_P − Λ).
+**Lemma 4 (automatic breaking under cΛ in the format linear in the weight).** Suppose that 𝔾 ⪰ 0 does not
+depend on the weight, that ι_a(F) = ι_0(F) + J(a ⊗ F) with J linear, and that a_T(F; a) = 𝔾(ι_a F) holds for
+every F ∈ P_T and for a = Λ + tδ with t in an open interval, where δ is supported in [2, N) and is not
+zero. Then a contradiction is reached. In particular, the identity can only hold at isolated
+values of c for cΛ (δ = Λ) and for Λ + s(a_P − Λ).
 
-*Demostración.* El lado derecho es un polinomio de grado ≤ 2 en t con coeficiente principal
-𝔾(J(δ⊗F)). El lado izquierdo es afín en t, con pendiente −Σ_n (2δ_n/√n) Re c_F(log n). La igualdad
-en un intervalo obliga a 𝔾(J(δ⊗F)) = 0, es decir J(δ⊗F) ∈ K. Por el Lema 1 el lado derecho no
-depende entonces de t, de modo que la pendiente es cero para todo F ∈ P_T. Pero la forma
-F ↦ Σ_n (δ_n/√n) Re c_F(log n) tiene símbolo τ ↦ Σ_n (δ_n/√n) cos(τ log n), que es casi periódico
-y no nulo en ℝ. Sus valores sobre |F̂|², con F ∈ P_T, no son todos nulos: por polarización se
-anularía como forma sesquilineal sobre P_T, y P_T tiene codimensión dos en L²(I_T), lo que permite
-elegir F, G ∈ P_T con F̂ Ĝ‾ cuya integral contra el símbolo no es cero. ∎
+*Proof.* The right side is a polynomial of degree ≤ 2 in t with leading coefficient
+𝔾(J(δ⊗F)). The left side is affine in t, with slope −Σ_n (2δ_n/√n) Re c_F(log n). Equality
+on an interval forces 𝔾(J(δ⊗F)) = 0, that is J(δ⊗F) ∈ K. By Lemma 1 the right side then does not
+depend on t, so the slope is zero for every F ∈ P_T. But the form
+F ↦ Σ_n (δ_n/√n) Re c_F(log n) has symbol τ ↦ Σ_n (δ_n/√n) cos(τ log n), which is almost periodic
+and non-zero on ℝ. Its values on |F̂|², with F ∈ P_T, are not all zero: by polarization it would
+vanish as a sesquilinear form on P_T, and P_T has codimension two in L²(I_T), which allows
+choosing F, G ∈ P_T with F̂ Ĝ‾ whose integral against the symbol is not zero. ∎
 
-Lectura: en este formato, la cláusula O4 para cΛ cerca de 1 se cumple gratis. Que «la identidad se
-rompe bajo cΛ» no indica, por sí solo, ninguna maquinaria de signo.
+Reading: in this format, clause O4 for cΛ near 1 is satisfied for free. That «the identity
+breaks under cΛ» does not, by itself, indicate any sign machinery.
 
-Nota sobre la última línea: el paso «el símbolo no nulo no se anula como forma sobre un subespacio de
-codimensión finita» se usa en la forma elemental siguiente. Si ∫ σ F̂ Ĝ‾ = 0 para todo F, G ∈ P_T,
-tomando F fijo y G variando en un subespacio de codimensión dos, la función σF̂ restringida (vía
-transformada inversa) a I_T está en el espacio generado por e^{±t/2}. Variando F en un subespacio de
-dimensión ≥ 3 sale σ ≡ 0 por la independencia de las traslaciones por log n, n < N. Lo dejo con esta
-redacción. La parte del Lema que se usa abajo (coeficiente principal nulo e invisibilidad) es
-completa; el argumento de no anulación de la pendiente es ARGUED en esta forma resumida, aunque el
-hecho es estándar.
+Note on the last line: the step «the non-zero symbol does not vanish as a form on a subspace of
+finite codimension» is used in the following elementary form. If ∫ σ F̂ Ĝ‾ = 0 for every F, G ∈ P_T,
+taking F fixed and G varying in a subspace of codimension two, the function σF̂ restricted (via
+inverse transform) to I_T lies in the span of e^{±t/2}. Varying F in a subspace of
+dimension ≥ 3 yields σ ≡ 0 by the independence of the translations by log n, n < N. I leave it with this
+wording. The part of the Lemma used below (zero leading coefficient and invisibility) is
+complete; the non-vanishing argument for the slope is ARGUED in this summarized form, although the
+fact is standard.
 
-## 3. Clase del resultado negativo
+## 3. Class of the negative result
 
-NO-GO con clase (PROVED, Lema 1, Proposición 2 y Lema 3). Clase: realizaciones exactas de a_T sobre
-P_T por restricción o por ínfimo parcial de una forma hermítica **semidefinida positiva** 𝔾_T sobre
-cualquier espacio ampliado, con cualquier vector nulo (en particular (Λ,1)⊗F ⊕ β_T(F), con cualquier
-β_T, lineal o no). En esa clase:
+NO-GO with class (PROVED, Lemma 1, Proposition 2 and Lemma 3). Class: exact realizations of a_T on
+P_T by restriction or by partial infimum of a **positive semidefinite** Hermitian form 𝔾_T on
+any enlarged space, with any null vector (in particular (Λ,1)⊗F ⊕ β_T(F), with any
+β_T, linear or not). In that class:
 
-(a) el ancla y la coordenada de borde no influyen en la identidad;
-(b) el formato con borde coincide con (G);
-(c) la variante de Schur es (G) si 𝔾_T es manifiesta, y es el objetivo si no lo es.
+(a) the anchor and the boundary coordinate do not influence the identity;
+(b) the bordered format coincides with (G);
+(c) the Schur variant is (G) if 𝔾_T is manifest, and is the goal if it is not.
 
-Lo que la clase NO excluye:
+What the class does NOT exclude:
 
-1. **Formas indefinidas (Kreĭn).** Si 𝔾_T es indefinida, un vector neutro (𝔾_T(v) = 0) no está en
-   el radical y el Lema 1 falla. Es el caso de la graduación de R170_854 (métrica indefinida) y de
-   861 §4. La positividad ya no es manifiesta y haría falta otro mecanismo. Sin objeto.
-2. **Esquemas por familias y contradicción.** El uso original del ancla en 862 es el Lema 2.1, que
-   va de positividad bilateral a una igualdad en el primer contacto. Ese esquema no es una identidad
-   (G) y sigue OPEN en la fase 170 (VIR–LB; 869 §5; 870 §5, acoplamiento impar o segundo radical
-   común). Este memo no lo toca.
-3. **El propio (G)** con V_T construido de Λ exacta, y el factor fuente no local NGF de R182_201,
-   que es una instancia de (G) con estructura de Schur (Lema 3). Ambos OPEN.
-4. **Vectores nulos que restrinjan 𝔾_T** cuando 𝔾_T se fija de antemano por otras razones (por
-   ejemplo 𝔾_T construida sólo con el peine y los puertos, sin Λ). La Proposición 2 dice que la
-   condición de nulidad no restringe V_T en general. No dice que, para una 𝔾_T dada, la condición
-   carezca de contenido. Pero entonces el contenido es la positividad de esa 𝔾_T sobre el cociente,
-   y no se conoce ninguna con la identidad exacta.
+1. **Indefinite forms (Kreĭn).** If 𝔾_T is indefinite, a neutral vector (𝔾_T(v) = 0) is not in
+   the radical and Lemma 1 fails. It is the case of the grading of R170_854 (indefinite metric) and of
+   861 §4. Positivity is no longer manifest and another mechanism would be needed. Without object.
+2. **Schemes by families and contradiction.** The original use of the anchor in 862 is Lemma 2.1, which
+   goes from two-sided positivity to an equality at first contact. That scheme is not an identity
+   (G) and remains OPEN in phase 170 (VIR–LB; 869 §5; 870 §5, odd coupling or second common
+   radical). This memo does not touch it.
+3. **(G) itself** with V_T constructed from exact Λ, and the non-local source factor NGF of R182_201,
+   which is an instance of (G) with Schur structure (Lemma 3). Both OPEN.
+4. **Null vectors that restrict 𝔾_T** when 𝔾_T is fixed in advance for other reasons (for
+   example 𝔾_T built only with the comb and the ports, without Λ). Proposition 2 says that the
+   nullity condition does not restrict V_T in general. It does not say that, for a given 𝔾_T, the condition
+   lacks content. But then the content is the positivity of that 𝔾_T on the quotient,
+   and none is known with the exact identity.
 
-## Resultado
+## Result
 
-Sin mecanismo nuevo, más una pieza de NO-GO con clase (PROVED). El ancla nula con borde y la
-coordenada β_T son invisibles en cualquier identidad de Gram semidefinida, y el formato con borde
-equivale a (G). La candidata no pasa la puerta de selección: no puede escribir (2) más allá de (G)
-ni (5).
+No new mechanism, plus one class NO-GO piece (PROVED). The null anchor with boundary and the
+coordinate β_T are invisible in any semidefinite Gram identity, and the bordered format
+is equivalent to (G). The candidate does not pass the selection gate: it cannot write (2) beyond (G)
+nor (5).
 
-## Qué se probó
+## What was proved
 
-- Lema 1 (invisibilidad del núcleo) y Corolario 1: PROVED.
-- Proposición 2 (el formato con borde equivale a (G); la nulidad de (Λ,1)⊗F ⊕ β_T(F) no restringe
+- Lemma 1 (invisibility of the kernel) and Corollary 1: PROVED.
+- Proposition 2 (the bordered format is equivalent to (G); the nullity of (Λ,1)⊗F ⊕ β_T(F) does not restrict
   V_T): PROVED.
-- Lema 3 (variante de Schur = (G) con V_T = P^⊥E_Xι_T, o el objetivo vía R170_861): PROVED, sin
-  hipótesis de rango cerrado.
-- Lema 4 (en el formato lineal en el peso, la ruptura bajo cΛ y bajo Λ + s(a_P − Λ) cerca del peso
-  exacto es automática): coeficiente principal e invisibilidad PROVED; la no anulación de la
-  pendiente es ARGUED en la redacción dada.
-- Líneas de ruptura de la nulidad: R170_866 (2.1) en k = 2 para cΛ (c ≠ 1) y para a_P (P > 2):
+- Lemma 3 (Schur variant = (G) with V_T = P^⊥E_Xι_T, or the goal via R170_861): PROVED, without
+  closed-range hypothesis.
+- Lemma 4 (in the format linear in the weight, the breaking under cΛ and under Λ + s(a_P − Λ) near the exact
+  weight is automatic): leading coefficient and invisibility PROVED; the non-vanishing of the
+  slope is ARGUED in the wording given.
+- Breaking lines of the nullity: R170_866 (2.1) at k = 2 for cΛ (c ≠ 1) and for a_P (P > 2):
   PROVED.
 
-## Qué falló y por qué
+## What failed and why
 
-- β_T no tiene definición sobre todo P_T con el contenido de 868 §6: sale de la ecuación de primer
-  contacto, que sólo existe en el radical. Su extensión natural, la ecuación de Euler–Lagrange, vale
-  sólo en el minimizador (B9).
-- Aunque se defina β_T sobre todo P_T (por ejemplo con la fórmula lineal de R170_856 (8.7)), el
-  Lema 1 la vuelve irrelevante en una identidad semidefinida. La paridad de 870 desaparece por la
-  misma razón: no hay clase impar que firmar porque el ancla no actúa. Eso no aporta signo.
-- La variante de Schur repite 861 y R182_201 §2.
+- β_T has no definition on all of P_T with the content of 868 §6: it comes from the first-contact
+  equation, which exists only on the radical. Its natural extension, the Euler–Lagrange equation, holds
+  only at the minimizer (B9).
+- Even if β_T is defined on all of P_T (for example with the linear formula of R170_856 (8.7)),
+  Lemma 1 makes it irrelevant in a semidefinite identity. The parity of 870 disappears for the
+  same reason: there is no odd class to sign because the anchor does not act. That contributes no sign.
+- The Schur variant repeats 861 and R182_201 §2.
 
-## Siguiente paso concreto
+## Concrete next step
 
-No relanzar el ancla con borde como objeto de (G) en la clase semidefinida. Si se quiere usar la
-zona, las dos salidas no excluidas tienen enunciado preciso:
+Do not relaunch the bordered anchor as an object of (G) in the semidefinite class. If one wants to use the
+zone, the two non-excluded exits have a precise statement:
 
-(i) una forma indefinida 𝔾_T de Kreĭn, construida con el peine y los puertos, en la que
-(Λ,1)⊗F ⊕ β_T(F) sea un vector neutro y de la que a_T salga como restricción a un subespacio
-positivo. Habría que escribir antes qué mecanismo daría la positividad de ese subespacio, que no
-puede ser ninguno de los de 861 §4 ni de R170_854 (3.4);
+(i) an indefinite Kreĭn form 𝔾_T, built with the comb and the ports, in which
+(Λ,1)⊗F ⊕ β_T(F) is a neutral vector and from which a_T comes out as the restriction to a positive
+subspace. One would first have to write what mechanism would give the positivity of that subspace, which
+cannot be any of those of 861 §4 nor of R170_854 (3.4);
 
-(ii) el factor NGF de R182_201 (3.1) como instancia de (G), con la admisibilidad allí escrita.
+(ii) the NGF factor of R182_201 (3.1) as an instance of (G), with the admissibility written there.
 
-Ninguna tiene objeto escrito. Anotación sugerida para el índice y el grid (no hecha desde aquí):
-«P212-3.4: ancla nula con borde en el formato (G) — NO-GO con clase PROVED (invisibilidad del
-núcleo en formas semidefinidas; el formato con borde equivale a (G)). No excluye: formas
-indefinidas, esquemas por familias de 862, NGF».
+Neither has a written object. Suggested annotation for the index and the grid (not made from here):
+«P212-3.4: null anchor with boundary in the format (G) — NO-GO with class PROVED (invisibility of the
+kernel in semidefinite forms; the bordered format is equivalent to (G)). Does not exclude: indefinite
+forms, family schemes of 862, NGF».

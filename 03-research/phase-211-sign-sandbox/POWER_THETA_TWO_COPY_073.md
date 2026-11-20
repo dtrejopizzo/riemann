@@ -1,162 +1,162 @@
-# POWER_THETA_TWO_COPY_073 — Concavidad de la media inclinada mediante dos copias
+# POWER_THETA_TWO_COPY_073 — Concavity of the tilted mean via two copies
 
-Estado: **PROVED/APROBADO**, incluida la aplicación theta y el corolario de dos generadores; auditoría independiente en [POWER_THETA_AUDIT_073.md](POWER_THETA_AUDIT_073.md). La verificación compacta se incorpora por POWER_THETA_HAZARD_COMPACT_073. Papers intactos. No se afirma signo global de W.
+Status: **PROVED/APPROVED**, including the theta application and the two-generator corollary; independent audit in [POWER_THETA_AUDIT_073.md](POWER_THETA_AUDIT_073.md). The compact verification is incorporated via POWER_THETA_HAZARD_COMPACT_073. Papers untouched. No global sign of W is claimed.
 
-## 1. Corpus y diferencia precisa
+## 1. Corpus and precise difference
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX/README, grid maestro R162_2300_MASTER_GRID y CROSSWORD-TO-D; leídos CONE001 y `phase-103-direct-a1-closure/103_43_THETA_HAZARD_CONVEXITY_GATE.md`, con sus antecedentes de covarianzas, cumulantes y medidas inclinadas. La positividad de una medida par y su logconvexidad no bastan para el bound superior del criterio de dos generadores: CONE001§4 contiene un contraejemplo concreto.103_43 ya prueba la hipótesis diferencial propuesta para el kernel específico fuera del intervalo compacto; no se presenta esa hipótesis como nueva ni se usa su versión global sin prueba.
+Consulted the project rules, ROUTES-TRIED-INDEX/README, master grid R162_2300_MASTER_GRID and CROSSWORD-TO-D; read CONE001 and `phase-103-direct-a1-closure/103_43_THETA_HAZARD_CONVEXITY_GATE.md`, with their antecedents on covariances, cumulants and tilted measures. Positivity of an even measure and its log-convexity do not suffice for the upper bound of the two-generator criterion: CONE001§4 contains a concrete counterexample. 103_43 already proves the proposed differential hypothesis for the specific kernel outside the compact interval; that hypothesis is not presented as new, nor is its global version used without proof.
 
-La diferencia es probar una consecuencia distinta de esa hipótesis: concavidad estricta de la MEDIA bajo inclinación exponencial, mediante una comparación condicional de DOS copias. No se intenta ordenar los cinco cambios de inclinación polinómica de103_43, ni derivar signo de cumulantes de todos los órdenes. El argumento se demuestra íntegramente abajo mediante cocientes de densidades y covarianzas, sin una desigualdad externa de correlación.
+The difference is to prove a distinct consequence of that hypothesis: strict concavity of the MEAN under exponential tilting, via a conditional comparison of TWO copies. No attempt is made to order the five polynomial-tilt changes of 103_43, nor to derive a sign of cumulants of all orders. The argument is proved in full below via density ratios and covariances, without an external correlation inequality.
 
-## 2. Hipótesis suficientes y enunciado
+## 2. Sufficient hypotheses and statement
 
-Sea V:R->R una función par, de clase C³, tal que
+Let V:R->R be an even function of class C³ such that
 
-    V'''(x)>0 para todo x>0,
-    V(x)/|x| -> +infinito cuando |x|->infinito.           (H)
+    V'''(x)>0 for all x>0,
+    V(x)/|x| -> +infinity as |x|->infinity.           (H)
 
-La segunda condición precisa el decaimiento superexponencial que aquí se necesita. Para u real defina
+The second condition pins down the superexponential decay needed here. For real u define
 
     Z(u)=int_R exp[-V(x)+ux]dx,
     p_u(x)=exp[-V(x)+ux]/Z(u),
     M(u)=E_u[X]=Z'(u)/Z(u).
 
-Entonces, para todo u>0,
+Then, for all u>0,
 
     M''(u)<0,
     M(u)-uM'(u)>0,
     0<uM'(u)<M(u).                                      (RESULT)
 
-Todas las derivadas de Z existen: sobre cualquier compacto de u, una potencia de |x| por exp[-V(x)+ux] queda dominada por una exponencial integrable. En particular M'=Var_u(X)>0 y M'' es el tercer momento centrado. No se necesita suponer que V sea convexa cerca del origen: (H) sólo fuerza que V'' crezca estrictamente con |x|.
+All derivatives of Z exist: on any compact set of u, a power of |x| times exp[-V(x)+ux] is dominated by an integrable exponential. In particular M'=Var_u(X)>0 and M'' is the third central moment. There is no need to assume V convex near the origin: (H) only forces V'' to increase strictly with |x|.
 
-## 3. Identidad exacta de dos copias: el factor4
+## 3. Exact two-copy identity: the factor 4
 
-Tome X,Y independientes con densidad p_u y ponga
+Take X,Y independent with density p_u and set
 
     S=(X+Y)/2, D=(X-Y)/2.
 
-Por expansión directa,
+By direct expansion,
 
     E[SD²]=(E[X³]-E[X²]E[X])/4,
     E[D²]=(E[X²]-E[X]²)/2,
     E[S]=E[X].
 
-Así
+Thus
 
     4Cov(S,D²)=E[X³]-3E[X²]E[X]+2E[X]³=M''(u).          (TWO-COPY)
 
-La densidad conjunta de S,D es proporcional a
+The joint density of S,D is proportional to
 
     exp[2us-V(s+d)-V(s-d)].
 
-El jacobiano constante2 no afecta las densidades condicionales. Condicionar S=s elimina la inclinación y da
+The constant Jacobian 2 does not affect the conditional densities. Conditioning on S=s removes the tilt and gives
 
     q_s(d)=exp[-W_s(d)]/int_R exp[-W_s(v)]dv,
     W_s(d)=V(s+d)+V(s-d).
 
-Ponga g(s)=E[D²|S=s]. Sus valores son finitos y no dependen de u. V par implica q_(-s)=q_s, así que g es par.
+Set g(s)=E[D²|S=s]. Its values are finite and do not depend on u. V even implies q_(-s)=q_s, so g is even.
 
-## 4. La varianza condicional decrece estrictamente con |S|
+## 4. The conditional variance decreases strictly with |S|
 
-Como V es par, V'' es par. De V'''>0 en la semirrecta positiva se sigue que V'' aumenta estrictamente con |x|.
+Since V is even, V'' is even. From V'''>0 on the positive half-line it follows that V'' increases strictly with |x|.
 
-Para 0<=s1<s2, defina Delta(d)=W_s2(d)-W_s1(d). Es par y para d>0 cumple
+For 0<=s1<s2, define Delta(d)=W_s2(d)-W_s1(d). It is even and for d>0 satisfies
 
     Delta'(d)
       =int_(s1)^(s2) [V''(t+d)-V''(t-d)]dt >0.          (ORDER)
 
-En efecto |t+d|>|t-d| para t,d>0. Aunque s1=0, el intervalo(t>0) tiene longitud positiva y la desigualdad integrada es estricta. Por tanto
+Indeed |t+d|>|t-d| for t,d>0. Even if s1=0, the interval (t>0) has positive length and the integrated inequality is strict. Therefore
 
-    q_s2(d)/q_s1(d)=constante·exp[-Delta(d)]
+    q_s2(d)/q_s1(d)=constant·exp[-Delta(d)]
 
-es estrictamente decreciente en |d|. Bajo q_s1, ponga B(d)=exp[-Delta(d)]. Entonces
+is strictly decreasing in |d|. Under q_s1, set B(d)=exp[-Delta(d)]. Then
 
     g(s2)-g(s1)=Cov_(q_s1)(D²,B(D))/E_(q_s1)B(D)<0.     (g-ORDER)
 
-El signo estricto se prueba con dos copias de |D|: D² crece estrictamente con |D|, B decrece estrictamente y la distribución tiene densidad positiva en toda la recta. Las integrales de B y D²B son finitas por la definición de q_s2 y (H); las de D² bajo q_s1 también. Esto justifica la identidad de covarianza incluso si B no fuera acotada.
+The strict sign is proved with two copies of |D|: D² increases strictly with |D|, B decreases strictly, and the distribution has positive density on the whole line. The integrals of B and D²B are finite by the definition of q_s2 and (H); those of D² under q_s1 as well. This justifies the covariance identity even if B were unbounded.
 
-Este argumento evita diferenciar integrales que contienen V': no se introduce una hipótesis de crecimiento de sus derivadas escondida en(H). Se ha probado directamente que g(s) es estrictamente decreciente para s>=0, que es la propiedad necesaria en el siguiente paso. No se necesita afirmar una fórmula diferencial de g.
+This argument avoids differentiating integrals containing V': no growth hypothesis on its derivatives is hidden in (H). It has been proved directly that g(s) is strictly decreasing for s>=0, which is the property needed in the next step. There is no need to assert a differential formula for g.
 
-## 5. Signo estricto de la covarianza no condicionada
+## 5. Strict sign of the unconditional covariance
 
-La densidad marginal de S tiene la forma
+The marginal density of S has the form
 
-    p_S(s)=constante·exp(2us)H(s),
+    p_S(s)=constant·exp(2us)H(s),
     H(s)=int_R exp[-W_s(d)]dd,
 
-con H par y estrictamente positiva. Ponga R=|S|. Para todo r>0,
+with H even and strictly positive. Set R=|S|. For all r>0,
 
     E[S|R=r]=r tanh(2ur)=:a_u(r).
 
-Si u>0, a_u es estrictamente creciente en r>0, pues
+If u>0, a_u is strictly increasing in r>0, since
 
     a_u'(r)=tanh(2ur)+2ur sech²(2ur)>0.
 
-Por condicionamiento y porque g es par,
+By conditioning and because g is even,
 
     Cov(S,D²)=Cov(S,g(S))
              =Cov(a_u(R),g(R))<0.                      (NEGATIVE)
 
-La última desigualdad vuelve a ser la identidad elemental de dos copias para funciones de monotonías opuestas. Es estricta porque R tiene densidad positiva en(0,infinito) y ambas funciones son estrictamente monótonas. Los productos son integrables: E[|S|g(S)]=E[|S|D²] es finita por los momentos de orden3 de X,Y. No se ha reemplazado una covarianza mixta por su módulo.
+The last inequality is again the elementary two-copy identity for functions of opposite monotonicity. It is strict because R has positive density on (0,infinity) and both functions are strictly monotone. The products are integrable: E[|S|g(S)]=E[|S|D²] is finite by the order-3 moments of X,Y. No mixed covariance has been replaced by its modulus.
 
-TWO-COPY y NEGATIVE prueban M''(u)<0 para todo u>0.
+TWO-COPY and NEGATIVE prove M''(u)<0 for all u>0.
 
-## 6. Consecuencia para el criterio de dos generadores
+## 6. Consequence for the two-generator criterion
 
-La paridad de V da M(0)=0. Para A(u)=M(u)-uM'(u),
+Evenness of V gives M(0)=0. For A(u)=M(u)-uM'(u),
 
-    A(0)=0, A'(u)=-uM''(u)>0 para u>0.
+    A(0)=0, A'(u)=-uM''(u)>0 for u>0.
 
-Luego A(u)>0. Además M'=Var_u(X)>0, lo que completa RESULT. Integrando la desigualdad0<uM'/M<1 se obtiene, para u>v>0,
+Hence A(u)>0. Moreover M'=Var_u(X)>0, which completes RESULT. Integrating the inequality 0<uM'/M<1 gives, for u>v>0,
 
     1<M(u)/M(v)<u/v.
 
-Ésta es exactamente la comparación de cocientes que CONE001 necesita para sus menores de dos generadores. Es una consecuencia bajo(H), no una afirmación sobre menores de orden mayor ni sobre la forma completa en una envolvente de familias.
+This is exactly the ratio comparison that CONE001 needs for its two-generator minors. It is a consequence under (H), not a claim about higher-order minors or about the full form on an envelope of families.
 
-## 7. Aplicación theta: hipótesis verificada y alcance
+## 7. Theta application: verified hypothesis and scope
 
-Para el kernel par positivo Phi de CONE001/103_43, tome
+For the positive even kernel Phi of CONE001/103_43, take
 
     V(x)=-log Phi(x),
     Z(u)=int_R Phi(x)exp(ux)dx,
     M(u)=Z'(u)/Z(u).
 
-La positividad, paridad, regularidad y decaimiento requerido se comprueban en los antecedentes. La hipótesis adicional necesaria es
+Positivity, evenness, regularity and the required decay are checked in the antecedents. The additional hypothesis needed is
 
-    V'''(x)=-(log Phi)'''(x)>0, TODOS x>0.                (THETA-H)
+    V'''(x)=-(log Phi)'''(x)>0, ALL x>0.                (THETA-H)
 
-103_43 prueba esa desigualdad para x>=1/4. El compacto0<x<1/4 queda ahora cubierto por [POWER_THETA_HAZARD_COMPACT_073.md](POWER_THETA_HAZARD_COMPACT_073.md): su certificado racional prueba(logPhi)''''<0 en[0,1/4], y la paridad da(logPhi)'''(0)=0. Integrar conserva la desigualdad estricta y completa THETA-H para TODO x>0. Constructor, root y auditor independiente reprodujeron el certificado; la auditoría integrada [POWER_THETA_AUDIT_073.md](POWER_THETA_AUDIT_073.md) aprueba la prueba de dos copias, el compacto y la aplicación. Por tanto la aplicación se promueve a **PROVED/APROBADO**, en lugar de CONDITIONAL. No se deduce de la logconcavidad sola ni se modifica la fuente histórica103_43.
+103_43 proves that inequality for x>=1/4. The compact set 0<x<1/4 is now covered by [POWER_THETA_HAZARD_COMPACT_073.md](POWER_THETA_HAZARD_COMPACT_073.md): its rational certificate proves (logPhi)''''<0 on [0,1/4], and evenness gives (logPhi)'''(0)=0. Integration preserves the strict inequality and completes THETA-H for ALL x>0. The certificate was reproduced independently three times; the integrated audit [POWER_THETA_AUDIT_073.md](POWER_THETA_AUDIT_073.md) approves the two-copy proof, the compact set and the application. Therefore the application is promoted to **PROVED/APPROVED**, instead of CONDITIONAL. It is not deduced from log-concavity alone, and the historical source 103_43 is not modified.
 
-Con M(u)=L(u+1/2) en la normalización de CONE001, RESULT demuestra M-uM'>0 para TODO u>0. Así se supera el dominio previo de la comparación aritmética de CONE001§5, restringido a u+1/2>=32. La comparación de inclinaciones polinómicas más altas de103_43 sigue siendo una obligación distinta.
+With M(u)=L(u+1/2) in the normalization of CONE001, RESULT proves M-uM'>0 for ALL u>0. This surpasses the previous domain of the arithmetic comparison of CONE001§5, restricted to u+1/2>=32. The comparison of higher polynomial tilts of 103_43 remains a distinct obligation.
 
-## 8. Corolario explícito: todos los planos reales de dos generadores
+## 8. Explicit corollary: all real two-generator planes
 
-Para a>1 defina, conservando las constantes y la aritmética completas de CONE001,
+For a>1 define, keeping the full constants and arithmetic of CONE001,
 
     L(a)=1/a+1/(a-1)-(log pi)/2+psi(a/2)/2
                          -sum_(m>=2)Lambda(m)m^(-a).
 
-Sean a1=a,a2=b, ambos mayores que1. Si a!=b, la matriz real simétrica
+Let a1=a, a2=b, both greater than 1. If a!=b, the real symmetric matrix
 
     K_(i,j)=[L(ai)+L(aj)]/(ai+aj-1), i,j=1,2,
 
-es DEFINIDA POSITIVA. En consecuencia, para cualquier par real(c1,c2)!=(0,0),
+is POSITIVE DEFINITE. Consequently, for any real pair (c1,c2)!=(0,0),
 
     W[c1 exp(-(a-1/2)t)1_(t>0)
           +c2 exp(-(b-1/2)t)1_(t>0)] > 0.               (TWO-GENERATORS)
 
-Prueba: por simetría suponga u=a-1/2>v=b-1/2>0. RESULT y§6 dan
+Proof: by symmetry assume u=a-1/2>v=b-1/2>0. RESULT and §6 give
 
     1<L(a)/L(b)<u/v.
 
-Las diagonales de K son positivas, y el criterio exacto de CONE001§3 afirma que el determinante es positivo cuando
+The diagonal entries of K are positive, and the exact criterion of CONE001§3 states that the determinant is positive when
 
     v/u<L(a)/L(b)<u/v.
 
-Ambas desigualdades son estrictas aquí. Sylvester prueba la definitud positiva. La fórmula de polarización de CONE001§1 identifica EXACTAMENTE K como la matriz de W en los dos exponenciales, incluyendo ARCH, polar y TODOS los contactos; no se transfieren sólo las partes individuales.
+Both inequalities are strict here. Sylvester proves positive definiteness. The polarization formula of CONE001§1 identifies K EXACTLY as the matrix of W on the two exponentials, including ARCH, polar and ALL contacts; not merely the individual parts are transferred.
 
-Para las potencias exteriores rho(X)=c1 X^(-a)+c2 X^(-b), X>1, el mapa Z de CONE001 da los coeficientes d_i=c_i zeta(ai) de esos exponenciales. Como zeta(ai)>0 para ai>1, la matriz de la forma exterior es una congruencia diagonal invertible de K. También es definida positiva para exponentes distintos.
+For the exterior powers rho(X)=c1 X^(-a)+c2 X^(-b), X>1, the map Z of CONE001 gives the coefficients d_i=c_i zeta(ai) of those exponentials. Since zeta(ai)>0 for ai>1, the matrix of the exterior form is an invertible diagonal congruence of K. It is also positive definite for distinct exponents.
 
-Si a=b, K es sólo semidefinida positiva: los dos generadores coinciden. La función temporal es no nula exactamente cuando c1+c2!=0, y en ese caso su W es estrictamente positiva. El vector de coeficientes no nulo(c1,-c1) representa la función cero y no tiene energía positiva. La misma precisión vale para las potencias exteriores coincidentes.
+If a=b, K is only positive semidefinite: the two generators coincide. The time function is nonzero exactly when c1+c2!=0, and in that case its W is strictly positive. The nonzero coefficient vector (c1,-c1) represents the zero function and has no positive energy. The same precision holds for coincident exterior powers.
 
-Este corolario no afirma positividad para tres generadores, todos los órdenes, su envolvente lineal completa ni una nueva ventana T. Es una ampliación demostrada de la comparación real de DOS generadores a todos los exponentes a,b>1. Papers intactos; signo global OPEN.
+This corollary does not claim positivity for three generators, all orders, their full linear envelope, or a new window T. It is a proved extension of the real comparison of TWO generators to all exponents a,b>1. Papers untouched; global sign OPEN.

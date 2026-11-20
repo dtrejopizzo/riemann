@@ -1,187 +1,187 @@
-# Kernel Gram por traslación: identidad uniforme y obstrucción de las capas
+# Translation Gram kernel: uniform identity and obstruction of the layers
 
-Estado: **PROVED como identidad y obstrucción de una clase de certificados; deduplicación dirigida independiente confirmada; auditoría literal final root/casos/mapa aprobada.** Prueba matemática revisada por root/casos. Sin cómputos nuevos y sin modificar papers. El resultado NO decide el signo del kernel integral completo ni el de W para la Phi real.
+Status: **PROVED as an identity and as the obstruction of a class of certificates; independent targeted deduplication confirmed; final literal audit (cases/cross-check) approved.** Mathematical proof reviewed against cases. No new computations and no papers modified. The result does NOT decide the sign of the full integral kernel nor that of W for the real Phi.
 
-**Auditoría independiente adicional:** fresh_global leyó literalmente §§2.1–2.2,8–8.3 y los addenda y emitió PASS matemático: constantes, dominios de transformada, cotas de cola y alcances de índices. Se corrigió el resumen de reparaciones de cola para distinguir Phi_M (todo M>=1) de Q_M (M suficientemente grande). Esta auditoría no añade positividad real.
+**Additional independent audit:** fresh_global read §§2.1–2.2,8–8.3 and the addenda literally and issued a mathematical PASS: constants, transform domains, tail bounds and index ranges. The summary of tail repairs was corrected to distinguish Phi_M (all M>=1) from Q_M (M sufficiently large). This audit adds no real positivity.
 
-## 1. Consulta y objeto que cambia
+## 1. Consultation and the object that changes
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX/README.md y los catálogos03/04, el grid R162_2300_MASTER_GRID.md y CROSSWORD-TO-D.md; cotejados POWER_THETA_SCHUR_DENSITY_075, POWER_RECIPROCAL_PFAFFIANS_083, POWER_GREEN_PAIR_TP2_SCOPE_111 y POWER_REAL_SECOND_PAIR_AND_TP2_112. Búsquedas dirigidas: slices/capas PSD, t+s+2r, Lyapunov, CND/conditionally negative y Gram/doble integral. La revisión independiente dirigida de mapa confirma que no encontró la fórmula literal. El marco Gram/Pólya es clásico; la ausencia en esta búsqueda no se presenta como novedad mundial.
+Consulted: the project rules, ROUTES-TRIED-INDEX/README.md and catalogues 03/04, the grid R162_2300_MASTER_GRID.md and CROSSWORD-TO-D.md; cross-checked POWER_THETA_SCHUR_DENSITY_075, POWER_RECIPROCAL_PFAFFIANS_083, POWER_GREEN_PAIR_TP2_SCOPE_111 and POWER_REAL_SECOND_PAIR_AND_TP2_112. Targeted searches: PSD slices/layers, t+s+2r, Lyapunov, CND/conditionally negative and Gram/double integral. The independent targeted cross-check confirms that it did not find the literal formula. The Gram/Pólya framework is classical; absence in this search is not presented as worldwide novelty.
 
-075 conserva una cancelación para obtener una densidad positiva, pero no un Gram de tamaño arbitrario.083 factoriza todos los tamaños y deja una obligación de signo de Pfaffianos.111 muestra que monotonías individuales, incluso monotonía completa paramétrica, no prueban TP2.112 prueba TP2 para la familia REAL, sin afirmar TP de todos los órdenes. La prueba siguiente intenta evitar esa herencia no demostrada mediante un único kernel de dos variables, cuya representación positiva, si existiese, pagaría simultáneamente todos los tamaños.
+075 keeps a cancellation to obtain a positive density, but not a Gram of arbitrary size. 083 factorizes all sizes and leaves a sign obligation on Pfaffians. 111 shows that individual monotonicities, even full parametric monotonicity, do not prove TP2. 112 proves TP2 for the REAL family, without claiming TP of all orders. The following proof tries to avoid that unproved inheritance via a single kernel in two variables, whose positive representation, if it existed, would pay for all sizes simultaneously.
 
-El CND de C9/ROUND_003_B pertenece a la métrica de exponentes primos; no es el kernel diferencial que aparece aquí. El fallo real del kernel Volterra bruto105 tampoco es la presente obstrucción: cambian el operador, la variable auxiliar y la condición necesaria refutada. No se afirma novedad absoluta del procedimiento de integración ni de los criterios Gram.
+The CND of C9/ROUND_003_B belongs to the metric of prime exponents; it is not the differential kernel appearing here. The actual failure of the raw Volterra kernel 105 is not the present obstruction either: the operator, the auxiliary variable and the refuted necessary condition all change. No absolute novelty is claimed for the integration procedure or for the Gram criteria.
 
-**Antecedente público localizado posteriormente (2026-11-06).** Dylan Suvlu, borrador de24septiembre2026, [Theta correlations and a causal range criterion for the Weil form, §3, (18)–(23)](https://dsuvlu.github.io/weil-form-operators/paper/theta-correlations-causal-range.pdf), contiene este mismo kernel normalizado. Cotejo algebraico root/new_structural_sign PASS; no se afirma publicación arbitrada ni auditoría integral del manuscrito. Si Z0=integral_R Phi y p=Phi/Z0, su j(x,y) satisface EXACTAMENTE j=A/Z0²: poner tau=(x+y)/2,delta=(x-y)/2; p(v+delta)p(v-delta) es par en v, lo que permite cambiar el extremo |tau| por tau, y después v=tau+r. Su respuesta logarítmica coincide con M de esta nota. El manuscrito distingue positividad puntual del acoplamiento y positividad de su forma; deja esta última abierta. Es antecedente directo de la representación, no una prueba del signo ni una identificación automática de RES-SOS§17 o del certificado§19.9 con resultados ajenos. La búsqueda dirigida previa no lo había localizado; no debe atribuirse novedad a A ni a este puente por esa ausencia.
+**Public antecedent located later (2026-11-06).** Dylan Suvlu, draft of 24 September 2026, [Theta correlations and a causal range criterion for the Weil form, §3, (18)–(23)](https://dsuvlu.github.io/weil-form-operators/paper/theta-correlations-causal-range.pdf), contains this same normalized kernel. Algebraic cross-check new_structural_sign PASS; no refereed publication nor a full audit of the manuscript is claimed. If Z0=integral_R Phi and p=Phi/Z0, its j(x,y) satisfies EXACTLY j=A/Z0²: set tau=(x+y)/2,delta=(x-y)/2; p(v+delta)p(v-delta) is even in v, which allows replacing the endpoint |tau| by tau, and then v=tau+r. Its logarithmic response coincides with M of this note. The manuscript distinguishes pointwise positivity of the coupling from positivity of its form; it leaves the latter open. It is a direct antecedent of the representation, not a proof of the sign nor an automatic identification of RES-SOS§17 or of the certificate §19.9 with others' results. The previous targeted search had not located it; novelty must not be attributed to A or to this bridge because of that absence.
 
-## 2. Kernel exacto y convergencia de su transformada
+## 2. Exact kernel and convergence of its transform
 
-Sea phi una función par positiva y suave. Para esta sección basta una cota gaussiana
+Let phi be an even, positive, smooth function. For this section a Gaussian bound suffices
 
     phi(t)<=C exp(-N t^2), N>0,
 
-y decaimiento suficiente de phi' para las derivaciones e integraciones por partes. La Phi real tiene estas cotas, para cada N>0, por sus supercolas; el modelo cuártico de la sección4 también satisface las condiciones con algún N>0. Definir
+together with sufficient decay of phi' for the differentiations and integrations by parts. The real Phi has these bounds, for every N>0, by its supertails; the quartic model of section 4 also satisfies the conditions with some N>0. Define
 
     Z(u)=integral_R exp(ut)phi(t)dt,
     A(t,s)=integral_0^infinito
                (t+s+2r)phi(t+r)phi(s+r)dr.             (A)
 
-El factor t+s+2r puede cambiar de signo. Su integral es, sin embargo, positiva. Escribir
+The factor t+s+2r may change sign. Its integral, however, is positive. Write
 
     tau=(t+s)/2, delta=(t-s)/2,
     P_delta(sigma)=phi(sigma+delta)phi(sigma-delta).
 
-P_delta es par en sigma. Por tanto
+P_delta is even in sigma. Therefore
 
     A(t,s)=integral_tau^infinito 2sigma P_delta(sigma)dsigma
           =integral_|tau|^infinito 2sigma P_delta(sigma)dsigma>0.
 
-Esta cancelación es anterior a cualquier estimación absoluta. La segunda expresión y la cota gaussiana dan
+This cancellation precedes any absolute estimate. The second expression and the Gaussian bound give
 
     0<A(t,s)<=C^2 exp(-2N delta^2)
                     integral_|tau|^infinito 2sigma exp(-2N sigma^2)dsigma
               =[C^2/(2N)]exp[-N(t^2+s^2)].             (DOM)
 
-En consecuencia, para todos u,v complejos, la doble transformada de A converge absolutamente, y todas sus derivadas en u,v están dominadas uniformemente sobre compactos. No se invierte el orden de una integral condicional.
+Consequently, for all complex u,v, the double transform of A converges absolutely, and all its derivatives in u,v are dominated uniformly on compacts. The order of no conditional integral is inverted.
 
-El operador partial_t+partial_s es partial_tau. El teorema fundamental del cálculo en la primera integral de A prueba
+The operator partial_t+partial_s is partial_tau. The fundamental theorem of calculus in the first integral of A proves
 
     (partial_t+partial_s)A(t,s)=-(t+s)phi(t)phi(s).
 
-Integrar por partes contra exp(ut+vs), con DOM y las supercolas en los bordes, da
+Integrating by parts against exp(ut+vs), with DOM and the supertails at the boundaries, gives
 
     (u+v) integral_R^2 exp(ut+vs)A(t,s)dt ds
        =Z'(u)Z(v)+Z(u)Z'(v).                          (LT)
 
-No hay factor2 adicional. Para u+v!=0 se puede dividir; en u+v=0 la integral proporciona la continuación removible. Todas las funciones de LT son enteras.
+There is no additional factor 2. For u+v!=0 one may divide; at u+v=0 the integral provides the removable continuation. All functions in LT are entire.
 
-Para u,v>0 y M=Z'/Z resulta
+For u,v>0 and M=Z'/Z one obtains
 
     [M(u)+M(v)]/(u+v)
        =[integral_R^2 exp(ut+vs)A(t,s)dt ds]/[Z(u)Z(v)].
 
-Si A fuese un kernel PSD, esta fórmula produciría el Gram de todos los bloques finitos del kernel de M. Para justificar el uso de exponenciales no compactas, truncarlas primero; DOM permite pasar al límite en cada forma cuadrática finita. Esto es una suficiencia precisa, NO una prueba de PSD de A real.
+If A were a PSD kernel, this formula would produce the Gram of all finite blocks of the kernel of M. To justify the use of non-compact exponentials, truncate them first; DOM allows passing to the limit in each finite quadratic form. This is a precise sufficiency, NOT a proof of PSD of the real A.
 
-### 2.1. Recíproca bajo DOM: los exponentes de un intervalo abierto bastan
+### 2.1. Converse under DOM: exponents from an open interval suffice
 
-**PROVED, revisión literal independiente root/casos; cotejo dirigido mapa.** La búsqueda no encontró esta recíproca literal en las fuentes cotejadas. Es una precisión del puente temporal, no una nueva desigualdad de signo. Sea I cualquier intervalo abierto no vacío contenido en (0,infinito). Bajo las hipótesis de§2, A es PSD en toda R si y sólo si el kernel K_M es PSD para todos los conjuntos finitos de nodos en I.
+**PROVED, independent literal review against cases; targeted cross-check.** The search did not find this literal converse in the cross-checked sources. It is a sharpening of the temporal bridge, not a new sign inequality. Let I be any nonempty open interval contained in (0,infinito). Under the hypotheses of §2, A is PSD on all of R if and only if the kernel K_M is PSD for all finite sets of nodes in I.
 
-La suficiencia de A ya está probada. Para la recíproca, poner w(t)=exp(-N t²) y H=L²(R,w(t)dt). DOM implica continuidad bilineal de la forma temporal:
+Sufficiency of A is already proved. For the converse, set w(t)=exp(-N t²) and H=L²(R,w(t)dt). DOM implies bilinear continuity of the temporal form:
 
     |integral A(t,s)f(t)conjugado(g(s))dt ds|
        <=[C²/(2N)](integral w) ||f||_H ||g||_H.
 
-El span de e^(ut), con u recorriendo I, es denso en H. En efecto, si h es ortogonal a todos ellos, J(z)=integral h(t)w(t)exp(zt)dt es entera por Cauchy–Schwarz y dominación gaussiana, también para sus derivadas en compactos. J se anula en I, luego en todo el plano. En z=i tau es la transformada Fourier de h w, que es integrable por Cauchy–Schwarz. Unicidad Fourier (o convolución gaussiana seguida de aproximación de la identidad) da h w=0 y h=0.
+The span of e^(ut), with u ranging over I, is dense in H. Indeed, if h is orthogonal to all of them, J(z)=integral h(t)w(t)exp(zt)dt is entire by Cauchy–Schwarz and Gaussian domination, also for its derivatives on compacts. J vanishes on I, hence on the whole plane. At z=i tau it is the Fourier transform of h w, which is integrable by Cauchy–Schwarz. Fourier uniqueness (or Gaussian convolution followed by approximation of the identity) gives h w=0 and h=0.
 
-LT y Z(u)>0 muestran que PSD de K_M en I da no negatividad de la forma temporal sobre ese span. Densidad y continuidad la extienden a H. Para nodos temporales t_i y coeficientes c_i arbitrarios, aproximar sum_i c_i delta_(t_i) por bumps suaves compactos de masa c_i. Cada bump pertenece a H; continuidad de A en los compactos permite pasar al límite de sus valores cuadráticos y da sum_ij c_i conjugado(c_j)A(t_i,t_j)>=0. No se requiere que las normas de los bumps permanezcan acotadas.
+LT and Z(u)>0 show that PSD of K_M on I gives nonnegativity of the temporal form on that span. Density and continuity extend it to H. For arbitrary temporal nodes t_i and coefficients c_i, approximate sum_i c_i delta_(t_i) by smooth compact bumps of mass c_i. Each bump belongs to H; continuity of A on compacts allows passing to the limit of their quadratic values and gives sum_ij c_i conjugado(c_j)A(t_i,t_j)>=0. It is not required that the norms of the bumps remain bounded.
 
-No se afirma densidad de una escalera discreta de exponentes bajo una mera cota gaussiana. Tampoco basta ningún tamaño fijo de matrices: la hipótesis usa todos los tamaños dentro de I. Para la Phi real, esto identifica exactamente el alcance del objetivo temporal sin demostrarlo. Para el modelo hiperbólico, el Gram de todos los órdenes ya demostrado en POWER_HYPERBOLIC_MODEL_GRAM sí implica ahora PSD de su A completo; ello no se transfiere a la Phi real.
+Density of a discrete ladder of exponents under a mere Gaussian bound is not claimed. Nor does any fixed matrix size suffice: the hypothesis uses all sizes within I. For the real Phi, this identifies exactly the scope of the temporal target without proving it. For the hyperbolic model, the Gram of all orders already proved in POWER_HYPERBOLIC_MODEL_GRAM now does imply PSD of its full A; this does not transfer to the real Phi.
 
-### 2.2. Para la Phi real, positividad temporal local implica global
+### 2.2. For the real Phi, local temporal positivity implies global
 
-**PROVED, revisión independiente root/casos; cotejo dirigido mapa.** No se halló esta formulación literal en las fuentes cotejadas; no se atribuye novedad mundial al principio de continuación de kernels analíticos. Esta precisión corrige la cautela anterior de que probar A PSD en la semirrecta positiva dejaría necesariamente una obligación independiente sobre sus bloques cruzados: para la Phi real, la analiticidad permite recuperar esos cruces. La hipótesis sigue siendo PSD en TODOS los tamaños, no positividad de entradas ni de un número fijo de menores.
+**PROVED, independent review against cases; targeted cross-check.** This literal formulation was not found in the cross-checked sources; no worldwide novelty is attributed to the continuation principle for analytic kernels. This sharpening corrects the earlier caution that proving A PSD on the positive half-line would necessarily leave an independent obligation on its cross blocks: for the real Phi, analyticity allows recovering those crossings. The hypothesis is still PSD in ALL sizes, not positivity of entries nor of a fixed number of minors.
 
-La serie theta que define Phi converge holomórficamente en |Im z|<pi/4. En cada compacto de ese strip, Re(exp(2z)) tiene una cota inferior positiva multiplicada por exp(2Re z). Por ello, en la integral que define A(t,s), la cola en r está dominada uniformemente en compactos del producto de strips por un polinomio en r,exp(2r) multiplicado por exp(-c exp(2r)), c>0. La serie theta y la integral dan una función A conjuntamente holomorfa en
+The theta series defining Phi converges holomorphically in |Im z|<pi/4. On each compact of that strip, Re(exp(2z)) has a positive lower bound times exp(2Re z). Hence, in the integral defining A(t,s), the tail in r is dominated uniformly on compacts of the product of strips by a polynomial in r,exp(2r) times exp(-c exp(2r)), c>0. The theta series and the integral give a function A jointly holomorphic in
 
     |Im t|<pi/4, |Im s|<pi/4.
 
-Suponga ahora que A es PSD sobre algún intervalo real abierto no vacío I. Fijar 0<rho<pi/4, por ejemplo rho=pi/8. Si un conjunto E ya es PSD y contiene un intervalo alrededor de c, las matrices mixtas formadas por puntos arbitrarios de E y derivadas de evaluación de órdenes0,...,m en c son PSD. En efecto, cada derivada se aproxima por diferencias finitas de evaluaciones dentro de ese intervalo; las matrices aproximantes son congruencias de matrices PSD de puntos de E y su límite conserva PSD.
+Suppose now that A is PSD on some nonempty open real interval I. Fix 0<rho<pi/4, for instance rho=pi/8. If a set E is already PSD and contains an interval around c, the mixed matrices formed by arbitrary points of E and evaluation derivatives of orders 0,...,m at c are PSD. Indeed, each derivative is approximated by finite differences of evaluations inside that interval; the approximating matrices are congruences of PSD matrices of points of E and their limit preserves PSD.
 
-Para cualquier punto nuevo x con |x-c|<rho, reemplazar formalmente su evaluación por
+For any new point x with |x-c|<rho, formally replace its evaluation by
 
     T_m(x)=sum_(j=0)^m (x-c)^j partial^j delta_c/j!.
 
-Toda matriz conjunta de puntos viejos y estos T_m(x) es PSD por el paso anterior. La serie Taylor doble de A en el bidisco de centro(c,c) converge absolutamente para los puntos nuevos; la serie simple de A(t,y), con y un punto viejo fijo, hace lo mismo para los cruces. Al enviar m a infinito se obtiene exactamente la matriz de A en los puntos viejos y nuevos. Así E unido con(c-rho,c+rho) sigue siendo PSD.
+Every joint matrix of old points and these T_m(x) is PSD by the previous step. The double Taylor series of A in the bidisc centred at (c,c) converges absolutely for the new points; the single series of A(t,y), with y a fixed old point, does the same for the crossings. Sending m to infinity gives exactly the matrix of A at the old and new points. Thus E united with (c-rho,c+rho) is still PSD.
 
-Partiendo de I y eligiendo centros interiores cerca de los extremos, el radio fijo permite extender sucesivamente a intervalos que cubren toda R. Se concluye que, para A real, PSD en CUALQUIER intervalo temporal abierto equivale a PSD global. No es necesario controlar aparte los cruces A(t,-s) una vez demostrada esa hipótesis local de todos los tamaños. La separación por raíces cuadradas discutida posteriormente no prueba tal hipótesis: su resto sigue sin cota firmada.
+Starting from I and choosing interior centres near the endpoints, the fixed radius allows successive extension to intervals covering all of R. One concludes that, for the real A, PSD on ANY open temporal interval is equivalent to global PSD. It is not necessary to control the crossings A(t,-s) separately once that local all-sizes hypothesis is proved. The square-root separation discussed later does not prove such a hypothesis: its remainder still lacks a signed bound.
 
-Esta continuación sólo cambia el alcance del puente; no da una factorización, no prueba ningún menor real nuevo y no amplía T. Combinada con§2.1, identifica las formulaciones locales y globales sin sustituir la obligación de signo.
+This continuation only changes the scope of the bridge; it gives no factorization, proves no new real minor and does not enlarge T. Combined with §2.1, it identifies the local and global formulations without replacing the sign obligation.
 
-### 2.3. Restricción de la factorización Hankel traslacional; antecedente clásico
+### 2.3. Restriction of the translational Hankel factorization; classical antecedent
 
-**PROVED como restricción de representación, revisión root/fresh_global.** No se atribuye novedad al mecanismo: [Blower, Integrable operators and the squares of Hankel operators](https://eprints.lancs.ac.uk/id/eprint/615/1/integrablepaper.pdf), Theorem1.2 y(1.15)–(1.16), obtiene factorizaciones bajo hipótesis concretas de ODE y signo. Su§2.5,(2.14), exhibe el mismo obstáculo por el factor x+y para funciones de cilindro parabólico. La presente aplicación permite un espacio de Hilbert auxiliar arbitrario.
+**PROVED as a representation restriction, review fresh_global.** No novelty is attributed to the mechanism: [Blower, Integrable operators and the squares of Hankel operators](https://eprints.lancs.ac.uk/id/eprint/615/1/integrablepaper.pdf), Theorem 1.2 and (1.15)–(1.16), obtains factorizations under concrete ODE and sign hypotheses. Its §2.5, (2.14), exhibits the same obstacle through the factor x+y for parabolic cylinder functions. The present application allows an arbitrary auxiliary Hilbert space.
 
-El A de§2, con phi positiva, no admite en t,s>0 una representación
+The A of §2, with phi positive, does not admit on t,s>0 a representation
 
     A(t,s)=integral_0^infinito <h(t+r),h(s+r)>_H dr,  (HANKEL)
 
-con h medible e integrales diagonales finitas. En efecto, para delta>0, restar la misma representación trasladada da
+with h measurable and finite diagonal integrals. Indeed, for delta>0, subtracting the same translated representation gives
 
     A(t,s)-A(t+delta,s+delta)
        =integral_0^delta <h(t+r),h(s+r)>_H dr,
 
-un kernel PSD. Dividir por delta y usar la derivabilidad del A conocido obliga a que -(partial_t+partial_s)A=(t+s)phi(t)phi(s) sea PSD. En dos puntos distintos t,s su determinante es
+a PSD kernel. Dividing by delta and using differentiability of the known A forces -(partial_t+partial_s)A=(t+s)phi(t)phi(s) to be PSD. At two distinct points t,s its determinant is
 
     -(t-s)²phi(t)²phi(s)²<0,
 
-contradicción. No se deriva h ni se impone regularidad adicional. El argumento excluye(HANKEL) en las variables originales; no excluye PSD de A, una representación Gram general, otras coordenadas o una transformación adicional. Tampoco contradice una expresión como suma de dos productos de operadores de Hankel. Es una precisión del alcance de una herramienta clásica, no una prueba de signo ni una nueva obstrucción general.
+a contradiction. h is not differentiated and no additional regularity is imposed. The argument excludes (HANKEL) in the original variables; it does not exclude PSD of A, a general Gram representation, other coordinates or an additional transformation. Nor does it contradict an expression as a sum of two products of Hankel operators. It is a sharpening of the scope of a classical tool, not a sign proof nor a new general obstruction.
 
-## 3. Descomposición en capas y certificado suficiente
+## 3. Layer decomposition and sufficient certificate
 
-En la segunda integral de A hacer v=sigma^2-tau^2. El jacobiano es dv=2sigma dsigma y se obtiene exactamente
+In the second integral of A set v=sigma^2-tau^2. The Jacobian is dv=2sigma dsigma and one obtains exactly
 
     A(t,s)=integral_0^infinito S_v(t,s)dv,
     S_v(t,s)=phi(sqrt(tau^2+v)+delta)
                    phi(sqrt(tau^2+v)-delta).           (SLICE)
 
-Cada capa es positiva punto a punto y simétrica en t,s. Esas dos propiedades NO implican PSD. Si S_v fuese PSD para todo v>=0, entonces A lo sería: para cualquier número de nodos y coeficientes reales, integrar su forma cuadrática no negativa. Las integrales de las entradas son finitas por DOM. El mismo argumento cubre coeficientes complejos por separación de partes reales e imaginarias.
+Each layer is pointwise positive and symmetric in t,s. These two properties do NOT imply PSD. If S_v were PSD for all v>=0, then A would be: for any number of nodes and real coefficients, integrate its nonnegative quadratic form. The integrals of the entries are finite by DOM. The same argument covers complex coefficients by separating real and imaginary parts.
 
-Se llama **clase de certificados por capas positivas** únicamente a esta condición S_v PSD para TODOS v>=0 y TODOS conjuntos finitos de nodos reales. La sección5 refuta esa condición para la Phi real. No refuta otras representaciones positivas del mismo A.
+The **class of positive-layer certificates** refers only to this condition: S_v PSD for ALL v>=0 and ALL finite sets of real nodes. Section 5 refutes that condition for the real Phi. It does not refute other positive representations of the same A.
 
-## 4. Un modelo integrable donde las capas sí son Gram
+## 4. An integrable model where the layers are Gram
 
-Tomar phi(t)=exp(-a t^4-b t^2), con a>0 y b real; también se permite a=0,b>0. La expansión exacta de las potencias da
+Take phi(t)=exp(-a t^4-b t^2), with a>0 and b real; a=0,b>0 is also allowed. Exact expansion of the powers gives
 
     S_v(t,s)=phi(t)phi(s)
        *exp[-2av^2-2bv-4av(t^2+s^2)]*exp(4avts).     (QUARTIC)
 
-Para v>=0, el último factor es un kernel PSD porque
+For v>=0, the last factor is a PSD kernel because
 
     exp(4avts)=sum_(n>=0) [(4av)^n/n!] t^n s^n.
 
-En cada conjunto finito de nodos la serie es absolutamente convergente y su forma cuadrática es una suma de cuadrados con coeficientes no negativos. Los otros factores de QUARTIC son un escalar positivo y una congruencia diagonal positiva. Así TODAS las capas son PSD y también A. El argumento no extrapola esta propiedad desde la clase cuártica a la theta real.
+On each finite set of nodes the series is absolutely convergent and its quadratic form is a sum of squares with nonnegative coefficients. The other factors of QUARTIC are a positive scalar and a positive diagonal congruence. Thus ALL layers are PSD and so is A. The argument does not extrapolate this property from the quartic class to the real theta.
 
-### 4.1. El logaritmo condicionalmente positivo exige más que el Gram cuártico
+### 4.1. The conditionally positive logarithm demands more than the quartic Gram
 
-**PROVED para el modelo, no para Phi.** Construcción root, revisión algebraica independiente theta_joint y cotejo dirigido mapa (2026-11-05). No se halló esta aplicación literal en las fuentes cotejadas. El criterio clásico considerado aquí es CPD de log A: para todo conjunto finito y coeficientes reales de suma cero, sum c_i c_j log A(t_i,t_j)>=0. Equivale a PSD del logaritmo anclado B(t,s)=log A(t,s)-log A(t,0)-log A(0,s)+log A(0,0). Si B es PSD, la serie exponencial y el producto de Schur hacen exp(B) PSD; una congruencia diagonal recupera A. Así sería suficiente para todos los órdenes. Normalizar A por su diagonal no cambia CPD del logaritmo. No se está pidiendo CND de las capas de§5.
+**PROVED for the model, not for Phi.** Construction, independent algebraic review theta_joint and targeted cross-check (2026-11-05). This literal application was not found in the cross-checked sources. The classical criterion considered here is CPD of log A: for every finite set and real coefficients summing to zero, sum c_i c_j log A(t_i,t_j)>=0. It is equivalent to PSD of the anchored logarithm B(t,s)=log A(t,s)-log A(t,0)-log A(0,s)+log A(0,0). If B is PSD, the exponential series and the Schur product make exp(B) PSD; a diagonal congruence recovers A. Thus it would suffice for all orders. Normalizing A by its diagonal does not change CPD of the logarithm. CND of the layers of §5 is not being asked for.
 
-Esta condición adicional falla incluso para el modelo positivo de§4 con b=0. En efecto,
+This additional condition fails even for the positive model of §4 with b=0. Indeed,
 
     A(t,s)=exp[-a(t^4+s^4)] Z(4a(t²-ts+s²)),
     Z(c)=integral_0^infinito exp(-2av²-cv)dv, a>0.
 
-Sea V la variable positiva con densidad proporcional a exp(-2av²). La expansión de log Z alrededor de0 tiene coeficientes (-1)^k kappa_k(V)/k!. Sus momentos, calculados por integrales gaussianas, dan
+Let V be the positive variable with density proportional to exp(-2av²). The expansion of log Z around 0 has coefficients (-1)^k kappa_k(V)/k!. Its moments, computed via Gaussian integrals, give
 
     kappa_5(V)=(2sqrt(a))^(-5)sqrt(2/pi)
                   *[3-40/pi+96/pi²] < 0.
 
-El signo no requiere aproximación numérica: 3x²-40x+96 decrece en [314159/100000,314160/100000], intervalo que contiene pi, y su valor en el extremo izquierdo es -548368157/10^10. Como el coeficiente de t^5s^5 en (t²-ts+s²)^5 es -51,
+The sign requires no numerical approximation: 3x²-40x+96 decreases on [314159/100000,314160/100000], an interval containing pi, and its value at the left endpoint is -548368157/10^10. Since the coefficient of t^5s^5 in (t²-ts+s²)^5 is -51,
 
     [t^5s^5]log A=(51/120)(4a)^5 kappa_5(V)<0.
 
-Tomar los seis nodos t_j=jh, j=0,...,5, con c_j=(-1)^(5-j)binom(5,j). Su suma es cero y anulan todas las potencias de grado menor que5. Por analiticidad, la forma de log A en estos coeficientes es h^10(5!)²[t^5s^5]log A+o(h^10), negativa para h>0 suficientemente pequeño. Por tanto log A no es CPD aunque A y todas sus capas sean PSD. Esto descarta inferir el criterio logarítmico de esas propiedades generales; NO refuta log A para la Phi real ni la positividad real.
+Take the six nodes t_j=jh, j=0,...,5, with c_j=(-1)^(5-j)binom(5,j). Their sum is zero and they annihilate all powers of degree less than 5. By analyticity, the form of log A on these coefficients is h^10(5!)²[t^5s^5]log A+o(h^10), negative for h>0 sufficiently small. Therefore log A is not CPD even though A and all its layers are PSD. This rules out inferring the logarithmic criterion from those general properties; it does NOT refute log A for the real Phi nor real positivity.
 
-**Diagnóstico real separado, NUMÉRICO, no certificado:** casos evaluó una sola matriz anclada en los nodos {0,1/4,1/2,1,2}, con ancla0, 60 dígitos, diez modos theta y cuadratura normalizada en r de0 a2. Los cuatro autovalores aproximados fueron 0.000708516447944, 0.0271085148761, 0.329726647588 y 2.85506271832. No se encerraron rigurosamente errores de truncación/cuadratura. Este diagnóstico no falsifica la candidata, pero tampoco prueba CPD ni autoriza extrapolar tamaños. No se emprendió una búsqueda de nodos.
+**Separate real diagnostic, NUMERICAL, not certified:** a single anchored matrix was evaluated at the nodes {0,1/4,1/2,1,2}, with anchor 0, 60 digits, ten theta modes and normalized quadrature in r from 0 to 2. The four approximate eigenvalues were 0.000708516447944, 0.0271085148761, 0.329726647588 and 2.85506271832. Truncation/quadrature errors were not rigorously enclosed. This diagnostic does not falsify the candidate, but neither does it prove CPD nor authorize extrapolating sizes. No search over nodes was undertaken.
 
-Para t,s>0 puede escribirse exactamente, con q=t+s+2r, p=-Phi'/Phi y probabilidad mu proporcional a q Phi(t+r)Phi(s+r)dr,
+For t,s>0 one can write exactly, with q=t+s+2r, p=-Phi'/Phi and probability mu proportional to q Phi(t+r)Phi(s+r)dr,
 
     partial_t partial_s log A
       = Cov_mu(p(t+r),p(s+r))
         - Cov_mu(1/q,p(t+r)+p(s+r)) - (E_mu[1/q])².
 
-El último término es negativo y mu depende de ambos nodos: la notación de covarianza no constituye un Gram. Sigue faltando una estimación específica que pruebe el criterio para theta. No hay nueva cobertura de signo ni ventana T.
+The last term is negative and mu depends on both nodes: the covariance notation does not constitute a Gram. A specific estimate proving the criterion for theta is still missing. There is no new sign coverage nor T window.
 
-**Segundo diagnóstico real, puntual y NUMÉRICO (2026-11-05):** se examinó únicamente el coeficiente [t^5s^5]log A en el origen, motivado por el falsificador cuártico anterior. Con Phi_i=Phi^(i), los coeficientes exactos son
+**Second real diagnostic, pointwise and NUMERICAL (2026-11-05):** only the coefficient [t^5s^5]log A at the origin was examined, motivated by the preceding quartic falsifier. With Phi_i=Phi^(i), the exact coefficients are
 
     a_ij = 1/(i!j!) integral_0^infinito
            [2r Phi_i(r)Phi_j(r)
             +i Phi_(i-1)(r)Phi_j(r)+j Phi_i(r)Phi_(j-1)(r)]dr,
 
-omitiendo los términos de índice negativo. La paridad anula i+j impar; por eso, para extraer t^5s^5 de log(A/A00), basta la expansión log(1+z) hasta z^5 en el álgebra truncada i,j<=5. Casos calculó las doce integrales simétricas independientes con grado total par, derivadas analíticas hasta5, diez modos theta, 70 dígitos y paneles fijos en r de0 a2. Resultado aproximado: A00=0.01006067751793984255436 y [t^5s^5]log A=+1.90430357842542673366828848575517. La derivada mixta correspondiente multiplica por (5!)². No hay enclosure de los errores de cola/cuadratura: no es certificado de signo. La cancelación entre los cinco términos de la expansión fue retenida. No se buscaron otros órdenes ni otros bloques. Este test no reproduce el falsificador cuártico en theta y no prueba CPD, ni siquiera todos los menores locales.
+omitting terms with negative index. Parity annihilates odd i+j; hence, to extract t^5s^5 from log(A/A00), the expansion log(1+z) up to z^5 in the truncated algebra i,j<=5 suffices. The twelve independent symmetric integrals of even total degree were computed, with analytic derivatives up to 5, ten theta modes, 70 digits and fixed panels in r from 0 to 2. Approximate result: A00=0.01006067751793984255436 and [t^5s^5]log A=+1.90430357842542673366828848575517. The corresponding mixed derivative multiplies by (5!)². There is no enclosure of tail/quadrature errors: it is not a sign certificate. The cancellation among the five terms of the expansion was retained. No other orders or blocks were searched. This test does not reproduce the quartic falsifier in theta and does not prove CPD, not even all local minors.
 
-**Decisión de alcance:** los dos diagnósticos reales no refutan el criterio, pero no aportan la estimación uniforme faltante. No se justifica iniciar una tabla de órdenes ni extrapolar desde estos valores. La condición real queda OPEN, sin nueva positividad W/T.
+**Scope decision:** the two real diagnostics do not refute the criterion, but they do not supply the missing uniform estimate. Starting a table of orders or extrapolating from these values is not justified. The real condition remains OPEN, with no new W/T positivity.
 
-**Actualización, 2026-11-06: tests diagonales complejos en las cúspides alternante y par positivos eventualmente (PROVED).** Cálculo global_restart_checked/root; auditoría matemática independiente arithmetic_fresh_candidate PASS y revisión root PASS para ambos mecanismos. El cotejo dirigido de fórmula y locus en índices, grid, crucigrama y fuentes phase209/211 no localizó antecedente literal; se combinan herramientas ya registradas, sin reclamar prioridad. Para z=x+iy, x>=0, 0<y<pi/4, definir
+**Update, 2026-11-06: complex diagonal tests at the alternating and even cusps eventually positive (PROVED).** Computation global_restart_checked; independent mathematical audit arithmetic_fresh_candidate PASS and a second review PASS for both mechanisms. The targeted cross-check of formula and locus in indices, grid, crossword and phase 209/211 sources located no literal antecedent; already-registered tools are combined, without claiming priority. For z=x+iy, x>=0, 0<y<pi/4, define
 
     F=A(z,bar z)=2 integral_x^infinito v|Phi(v+iy)|²dv>0,
     b=|Phi(z)|², L=integral_x^infinito |Phi(v+iy)|²dv,
@@ -189,22 +189,22 @@ omitiendo los términos de índice negativo. La paridad anula i+j impar; por eso
     K=integral_x^infinito v Phi'(v+iy)conjugado(Phi(v+iy))dv,
     D=(F/2)J-|K|²>=0.
 
-La última desigualdad es Cauchy–Schwarz con peso v. Los bordes superexponenciales y la integración por partes dan Re K=-(xb+L)/2, partial_t A=L+2K y partial_t partial_s A=2J-b en(z,bar z). Por tanto, para H=partial_t partial_s log A, definido localmente allí porque F>0,
+The last inequality is Cauchy–Schwarz with weight v. The superexponential boundaries and integration by parts give Re K=-(xb+L)/2, partial_t A=L+2K and partial_t partial_s A=2J-b at (z,bar z). Therefore, for H=partial_t partial_s log A, defined locally there because F>0,
 
     F² H(z,bar z)=F(2J-b)-|L+2K|²=4D+L²+2xbL-Fb,
     D=(F/2) min_(a complejo) integral_x^infinito
                                      v|Phi'(v+iy)-a Phi(v+iy)|²dv.
 
-La segunda identidad es la proyección ortogonal sobre la recta COMPLEJA generada por Phi en L²(v dv); su mínimo es J-|K|²/(F/2).
+The second identity is the orthogonal projection onto the COMPLEX line generated by Phi in L²(v dv); its minimum is J-|K|²/(F/2).
 
-**Cúspide alternante, x=0.** Poner epsilon=cos(2y), h=log(2)/2. Las cotas theta COMPLETAS SMALL/LARGE y la cota gaussiana global de «Cúspides modulares» en POWER_GLOBAL_ROUTE_REVIEW dan L>=c epsilon^(-4), integrando LARGE en[h,h+epsilon]; F<=C epsilon^(-5), integrando la cota global desde0; y b<=C epsilon^(-N)exp(-a/epsilon), con constantes positivas y N fijo. Luego F²H>=c²epsilon^(-8)-C epsilon^(-N-5)exp(-a/epsilon)>0 para epsilon suficientemente pequeño.
+**Alternating cusp, x=0.** Set epsilon=cos(2y), h=log(2)/2. The FULL theta bounds SMALL/LARGE and the global Gaussian bound of «Modular cusps» in POWER_GLOBAL_ROUTE_REVIEW give L>=c epsilon^(-4), integrating LARGE over [h,h+epsilon]; F<=C epsilon^(-5), integrating the global bound from 0; and b<=C epsilon^(-N)exp(-a/epsilon), with positive constants and N fixed. Hence F²H>=c²epsilon^(-8)-C epsilon^(-N-5)exp(-a/epsilon)>0 for epsilon sufficiently small.
 
-**Cúspide par, x=h: se acota el defecto de proyección, no el integral total.** Para 0<=u<=1, w=exp(2(h+epsilon u+iy))=2i+zeta satisface zeta=2epsilon(1+2iu)+O(epsilon²), con resto C1 uniforme. Poisson completo da theta(2i+zeta)=zeta^(-1/2)+R(zeta). En este segmento Re(1/zeta)>=c/epsilon; R y sus derivadas hasta orden3 están acotadas por una potencia fija de epsilon^(-1) por exp(-c'/epsilon). Esto se prueba diferenciando la serie de modos duales no nulos: cada derivada sólo añade potencias de sus índices y de zeta^(-1), absorbidas al extraer parte de la exponencial gaussiana. Con Phi=w^(5/4)[w theta''+(3/2)theta'], el principal es (3/4)(2i)w^(5/4)zeta^(-5/2), por cancelación exacta del término zeta^(-3/2). Así existe C0 distinto de0 tal que
+**Even cusp, x=h: the projection defect is bounded, not the total integral.** For 0<=u<=1, w=exp(2(h+epsilon u+iy))=2i+zeta satisfies zeta=2epsilon(1+2iu)+O(epsilon²), with uniform C1 remainder. Full Poisson gives theta(2i+zeta)=zeta^(-1/2)+R(zeta). On this segment Re(1/zeta)>=c/epsilon; R and its derivatives up to order 3 are bounded by a fixed power of epsilon^(-1) times exp(-c'/epsilon). This is proved by differentiating the series of nonzero dual modes: each derivative only adds powers of their indices and of zeta^(-1), absorbed by extracting part of the Gaussian exponential. With Phi=w^(5/4)[w theta''+(3/2)theta'], the leading term is (3/4)(2i)w^(5/4)zeta^(-5/2), by exact cancellation of the zeta^(-3/2) term. Thus there exists C0 different from 0 such that
 
     Phi(h+epsilon u+iy)=C0 epsilon^(-5/2) f_epsilon(u),
     f_epsilon -> f(u)=(1+2iu)^(-5/2) en C1([0,1]).
 
-El mínimo m(f)=min_(beta complejo) integral_0^1|f'-beta f|²du es positivo y continuo bajo esta convergencia, por su fórmula de proyección y porque integral|f|²>0. Más precisamente, con I0=integral_0^1|f|²<=1,
+The minimum m(f)=min_(beta complejo) integral_0^1|f'-beta f|²du is positive and continuous under this convergence, by its projection formula and because integral|f|²>0. More precisely, with I0=integral_0^1|f|²<=1,
 
     m(f)=(1/(2I0)) integral_0^1 integral_0^1
                        |f'(u)f(v)-f(u)f'(v)|²du dv,
@@ -212,7 +212,7 @@ El mínimo m(f)=min_(beta complejo) integral_0^1|f'-beta f|²du es positivo y co
         =100(u-v)²[(1+4u²)(1+4v²)]^(-7/2),
     m(f)>=100/(2*6*5^7)=1/9375.
 
-Se usa integral integral(u-v)²=1/6. Eventualmente m(f_epsilon)>=1/18750 y |f_epsilon(0)|²<=2. Restringir el integral del mínimo global a[h,h+epsilon], usar v>=h y sustituir beta=epsilon a conserva el mínimo sobre TODOS los escalares complejos; resulta
+One uses integral integral(u-v)²=1/6. Eventually m(f_epsilon)>=1/18750 and |f_epsilon(0)|²<=2. Restricting the integral of the global minimum to [h,h+epsilon], using v>=h and substituting beta=epsilon a preserves the minimum over ALL complex scalars; one gets
 
     min_(a complejo) integral_h^infinito v|Phi'-a Phi|²dv
         >=h|C0|² epsilon^(-6)/18750,
@@ -220,82 +220,82 @@ Se usa integral integral(u-v)²=1/6. Eventualmente m(f_epsilon)>=1/18750 y |f_ep
     F²H>=4D-Fb
         >=F|C0|² epsilon^(-6)[h/9375-2epsilon]>0
 
-para epsilon suficientemente pequeño. No se necesita cota superior de F ni excluir contribuciones de otras cúspides. No se fija un umbral numérico: la convergencia C1 aporta un intervalo eventual, no cuantificado aquí.
+for epsilon sufficiently small. No upper bound on F is needed, nor excluding contributions from other cusps. No numerical threshold is fixed: the C1 convergence provides an eventual interval, not quantified here.
 
-**Alcance.** Sólo estos dos tests necesarios PASAN: CPD de log A y signo global siguen OPEN, sin nueva ruta ni cobertura W/T. No se supone no anulación fuera de estas diagonales ni se usa una asintótica del integral total a partir del perfil de una sola cúspide; en particular no se atribuye al H completo el coeficiente local7/16. Sin cómputos ni cambios en papers.
+**Scope.** Only these two necessary tests PASS: CPD of log A and the global sign remain OPEN, with no new route nor W/T coverage. Non-vanishing outside these diagonals is not assumed, nor is an asymptotic of the total integral used from the profile of a single cusp; in particular the local coefficient 7/16 is not attributed to the full H. No computations or changes to papers.
 
-**Límite de la extensión por proyección conjunta (PROVED, misma actualización).** Cálculo global_restart_checked/root; auditoría independiente arithmetic_fresh_candidate PASS y root PASS. Cotejo dirigido en los tres índices y corpus sin antecedente literal localizado; E73_025§7/E73_030 regularizan otra proyección Cauchy mediante coordenadas Hermite, y R164_401/491 usan cocientes incrementales para densidad. La herramienta de diferencias finitas es clásica. Fijar PRIMERO z0=h+iy dentro del strip, próximo a la cúspide par con Phi(z0)!=0, un intervalo compacto I=[0,ell],ell>0, y un peso positivo continuo fijo w. En L²(I,w du), poner f0(u)=Phi(z0+u), f_eta(u)=Phi(z0+eta+u), y P_eta la proyección sobre su span COMPLEJO. Para eta=i tau, tau real no nulo suficientemente pequeño, ambos nodos conservan parte real h. La cota C2 uniforme de Phi en el compacto interior del strip da
+**Limit of the joint-projection extension (PROVED, same update).** Computation global_restart_checked; independent audit arithmetic_fresh_candidate PASS and second review PASS. Targeted cross-check in the three indices and corpus with no literal antecedent located; E73_025§7/E73_030 regularize another Cauchy projection via Hermite coordinates, and R164_401/491 use difference quotients for density. The finite-difference tool is classical. Fix FIRST z0=h+iy inside the strip, close to the even cusp with Phi(z0)!=0, a compact interval I=[0,ell],ell>0, and a fixed positive continuous weight w. In L²(I,w du), set f0(u)=Phi(z0+u), f_eta(u)=Phi(z0+eta+u), and P_eta the projection onto their COMPLEX span. For eta=i tau, tau real nonzero sufficiently small, both nodes keep real part h. The uniform C2 bound of Phi on the interior compact of the strip gives
 
     ||f0'-(f_eta-f0)/eta||=O(|eta|),
     R_00=||(I-P_eta)f0'||²=O(|eta|²),
     R_ij=<(I-P_eta)f_i',(I-P_eta)f_j'>, i,j en{0,eta}.
 
-Con b_i=f_i(0), B=bb*, se tiene B_00=|Phi(z0)|²>0 fijo. Luego NO existe c>0 independiente de eta tal que R>=cB para todos estos pares: basta evaluar en el primer vector coordenado. No hace falta independencia de f0,f_eta ni suponer A PSD. Incluso si c depende de z0,I,w, la uniformidad en la separación falla. Sólo se excluye ESTE pago del borde por ESTE residual; no c(eta), renormalizaciones dependientes de separación, otros términos de la identidad escalar, otras matrices de borde/proyección ni enfoques Gram generales. CPD y signo global siguen OPEN. Además, probar únicamente S=A^(odot2) odot H PSD no prueba H PSD: la división entrada a entrada por A² no preserva positividad en general. Sin nueva ruta, cómputos ni papers editados.
+With b_i=f_i(0), B=bb*, one has B_00=|Phi(z0)|²>0 fixed. Hence there is NO c>0 independent of eta such that R>=cB for all these pairs: it suffices to evaluate at the first coordinate vector. Independence of f0,f_eta is not needed nor assuming A PSD. Even if c depends on z0,I,w, uniformity in the separation fails. Only THIS payment of the boundary by THIS residual is excluded; not c(eta), separation-dependent renormalizations, other terms of the scalar identity, other boundary/projection matrices nor general Gram approaches. CPD and global sign remain OPEN. Moreover, proving only S=A^(odot2) odot H PSD does not prove H PSD: entrywise division by A² does not preserve positivity in general. No new route, computations or edited papers.
 
-**Promedio horizontal completo en una banda fija (PROVED, 2026-11-06).** Propuesta root, cálculo global_restart_checked y joint_sign_fresh_review; auditorías independientes arithmetic_fresh_candidate PASS y root PASS. El cotejo dirigido en los tres índices y corpus no localizó esta estimación literal; GLOBAL ya tenía lower local epsilon^-4 y upper horizontal epsilon^-5. La diferencia es conservar TODOS los modos y estimar sus cruces oscilatorios integrados, sin aislar una cúspide. Con epsilon=cos(2y) bajando a0, sigma=sin(2y), definir
+**Full horizontal average on a fixed band (PROVED, 2026-11-06).** Proposal, computation global_restart_checked and joint_sign_fresh_review; independent audits arithmetic_fresh_candidate PASS and second review PASS. The targeted cross-check in the three indices and corpus did not locate this literal estimate; GLOBAL already had local lower epsilon^-4 and horizontal upper epsilon^-5. The difference is keeping ALL modes and estimating their integrated oscillatory crossings, without isolating a cusp. With epsilon=cos(2y) decreasing to 0, sigma=sin(2y), define
 
     B_y=integral_2^4 [log(t)/(2t)] |Phi((log t)/2+iy)|²dt.
 
-Entonces, con c_*=315(log2)²/(512sqrt2)>0,
+Then, with c_*=315(log2)²/(512sqrt2)>0,
 
     epsilon^(9/2) B_y -> c_*,
     A(iy,-iy)>=B_y>=c epsilon^(-9/2)
 
-para epsilon suficientemente pequeño y algún c>0. El equivalente se afirma SÓLO para B_y, no para A completo.
+for epsilon sufficiently small and some c>0. The equivalent is claimed ONLY for B_y, not for the full A.
 
-**Cruces y sumas infinitas.** La fórmula modal exacta es
+**Crossings and infinite sums.** The exact modal formula is
 
     Phi((log t)/2+iy)
       =2pi² t^(9/4) exp(9iy/2) S_4(t)
          -3pi t^(5/4) exp(5iy/2) S_2(t),
     S_j(t)=sum_(n>=1) n^j exp[-pi t(epsilon+i sigma)n²].
 
-Para cada epsilon>0 fijo, las series, los productos dobles y las derivadas de amplitud siguientes convergen absolutamente y uniformemente en t∈[2,4]. Así se integra y diferencia primero con sumas absolutamente convergentes. Para n!=m, poner Q=n²+m², d=n²-m² y a_nm(t)=[log(t)/(2t)]t^(9/2)exp(-pi epsilon t Q). Integrar por partes contra exp(-i pi sigma d t), con sigma>=1/2 eventualmente, da
+For each fixed epsilon>0, the series, the double products and the following amplitude derivatives converge absolutely and uniformly in t∈[2,4]. Thus one integrates and differentiates first with absolutely convergent sums. For n!=m, set Q=n²+m², d=n²-m² and a_nm(t)=[log(t)/(2t)]t^(9/2)exp(-pi epsilon t Q). Integrating by parts against exp(-i pi sigma d t), with sigma>=1/2 eventually, gives
 
     |integral_2^4 a_nm(t)exp(-i pi sigma d t)dt|
         <=C exp(-pi epsilon Q)/|d|.
 
-En efecto, el término de borde y el integral de |a_nm'| se acotan por C(1+epsilon Q)exp(-2pi epsilon Q); el factor adicional se absorbe en la mitad de la exponencial. Como n4m4/(n²-m²)<=n7/(n-m) para n>m, TODOS los cruces del término S_4 tienen suma absoluta
+Indeed, the boundary term and the integral of |a_nm'| are bounded by C(1+epsilon Q)exp(-2pi epsilon Q); the additional factor is absorbed in half of the exponential. Since n4m4/(n²-m²)<=n7/(n-m) for n>m, ALL crossings of the S_4 term have absolute sum
 
     <=C sum_(n>=1) n7(1+log n)exp(-pi epsilon n²)
     <=C epsilon^(-4)[1+log(1/epsilon)]
      =o(epsilon^(-9/2)).
 
-La segunda cota sigue de log n<=log(1/epsilon)/2+n sqrt(epsilon) y las cotas gaussianas para sumas de potencias. No se desechan casi resonancias: sus fases exactas se integran en esta banda fija.
+The second bound follows from log n<=log(1/epsilon)/2+n sqrt(epsilon) and the Gaussian bounds for power sums. Near-resonances are not discarded: their exact phases are integrated on this fixed band.
 
-**Diagonal y constante.** Para f_t(s)=s8 exp(-2pi t s²) y q=sqrt(epsilon),
+**Diagonal and constant.** For f_t(s)=s8 exp(-2pi t s²) and q=sqrt(epsilon),
 
     epsilon^(9/2) sum_(n>=1)n8 exp(-2pi epsilon t n²)
        =q sum_(n>=1) f_t(nq)
        -> integral_0^infinito f_t(s)ds
         =Gamma(9/2)/[2(2pi t)^(9/2)]
 
-uniformemente en t∈[2,4]. El error de la suma Riemann está acotado por q integral|f_t'|=O(q), uniforme en ese compacto. Usando Gamma(9/2)=105sqrt(pi)/16, el factor4pi4t^(9/2) reduce el límite diagonal a105/(128sqrt2); integrar el peso log(t)/(2t) aporta3(log2)²/4 y da c_*. La norma L² ponderada del término principal es O(epsilon^(-9/4)); la cota gaussiana absoluta sum n²exp(-pi epsilon t n²)<=C epsilon^(-3/2) da norma O(epsilon^(-3/2)) para el término inferior. Su cuadrado es O(epsilon^-3) y su cruce con el principal es O(epsilon^(-15/4)), por Cauchy–Schwarz, ambos o(epsilon^(-9/2)). Esto completa el equivalente de B_y con la serie theta completa, sin cómputos.
+uniformly in t∈[2,4]. The error of the Riemann sum is bounded by q integral|f_t'|=O(q), uniform on that compact. Using Gamma(9/2)=105sqrt(pi)/16, the factor 4pi4t^(9/2) reduces the diagonal limit to 105/(128sqrt2); integrating the weight log(t)/(2t) contributes 3(log2)²/4 and gives c_*. The weighted L² norm of the leading term is O(epsilon^(-9/4)); the absolute Gaussian bound sum n²exp(-pi epsilon t n²)<=C epsilon^(-3/2) gives norm O(epsilon^(-3/2)) for the lower term. Its square is O(epsilon^-3) and its crossing with the leading term is O(epsilon^(-15/4)), by Cauchy–Schwarz, both o(epsilon^(-9/2)). This completes the equivalent of B_y with the full theta series, without computations.
 
-**Una cúspide aislada no aproxima el integral completo.** Para h=log2/2 y cada c0>0 FIJO, el Poisson local completo anterior acota |Phi(v+iy)|<=C_(c0)epsilon^(-5/2) en h<=v<=h+c0 epsilon. Por tanto
+**An isolated cusp does not approximate the full integral.** For h=log2/2 and each FIXED c0>0, the preceding full local Poisson bounds |Phi(v+iy)|<=C_(c0)epsilon^(-5/2) on h<=v<=h+c0 epsilon. Therefore
 
     integral_h^(h+c0 epsilon) 2v|Phi(v+iy)|²dv
        =O_(c0)(epsilon^-4),
     [ese integral]/A(iy,-iy)=O_(c0)(sqrt(epsilon))->0.
 
-Sólo se afirma este segmento de la cúspide par h, con ancho c0 epsilon y c0 fijo. No se extrapola a bandas de cúspides arbitrarias ni se deduce una asíntota de A total o de H. El resultado controla parte positiva de un integral horizontal completo; no prueba CPD, PSD de A, signo global ni nueva cobertura W/T. Sin nueva ruta ni cambios en papers.
+Only this segment of the even cusp h, with width c0 epsilon and c0 fixed, is claimed. It is not extrapolated to bands of arbitrary cusps nor is an asymptote of the total A or of H deduced. The result controls the positive part of a full horizontal integral; it does not prove CPD, PSD of A, global sign nor new W/T coverage. No new route nor changes to papers.
 
-El equivalente del A completo para las escalas enteras fijas se demuestra después en§16 mediante un argumento adicional sobre TODO t>=1; no se infiere del equivalente de B_y.
+The equivalent of the full A for the fixed integer scales is proved later in §16 via an additional argument over ALL t>=1; it is not inferred from the equivalent of B_y.
 
-### 4.2. El kernel theta completo no es log-supermodular en toda la semirrecta
+### 4.2. The full theta kernel is not log-supermodular on the whole half-line
 
-**PROVED, revisión independiente root/theta_joint/casos; deduplicación dirigida mapa (2026-11-05).** Esto refuta una propiedad de entradas, no la positividad matricial. Para cualquier compacto K contenido en (0,infinito), uniformemente en s en K, cuando t tiende a infinito,
+**PROVED, independent review theta_joint/cases; targeted deduplication (2026-11-05).** This refutes a property of entries, not matrix positivity. For any compact K contained in (0,infinito), uniformly in s in K, as t tends to infinity,
 
     H(t,s)=partial_t partial_s log A(t,s)
            =-1/(t+s)²+O_K(exp(-2t)) < 0
 
-para t suficientemente grande. Por tanto A no es TP2 en toda la semirrecta positiva. La diferencia frente§5 es esencial: aquí se conserva el INTEGRAL theta completo; no se refutan sólo sus capas. Los TP2 de073/112 conciernen a otros kernels.
+for t sufficiently large. Therefore A is not TP2 on the whole positive half-line. The difference with §5 is essential: here the full theta INTEGRAL is kept; not only its layers are refuted. The TP2 results of 073/112 concern other kernels.
 
-**Prueba con error diferenciado.** Poner Y=pi exp(2t), u=t+s, p=-Phi'/Phi. La primera moda da exactamente
+**Proof with differentiated error.** Set Y=pi exp(2t), u=t+s, p=-Phi'/Phi. The first mode gives exactly
 
     Phi(t)=2pi² exp(9t/2) exp(-Y)(1-3/(2Y))(1+R(Y)),
 
-con R y sus derivadas logarítmicas hasta cualquier orden fijo acotadas por un polinomio en Y multiplicado por exp(-3Y), para Y grande. Esto se obtiene término a término de la serie theta: los modos n>=2 tienen el factor exp[-(n²-1)Y], y sus derivadas sólo añaden potencias de n y Y. Introducir v=Y(exp(2r)-1) y r=log(1+v/Y)/2. Entonces
+with R and its logarithmic derivatives up to any fixed order bounded by a polynomial in Y times exp(-3Y), for Y large. This is obtained term by term from the theta series: the modes n>=2 carry the factor exp[-(n²-1)Y], and their derivatives only add powers of n and Y. Introduce v=Y(exp(2r)-1) and r=log(1+v/Y)/2. Then
 
     A(t,s)/(Phi(t)Phi(s))=[u J(Y,s)+K_1(Y,s)]/(2Y),
     J=integral_0^infinito exp(-v)(1+v/Y)^(5/4)
@@ -305,64 +305,64 @@ con R y sus derivadas logarítmicas hasta cualquier orden fijo acotadas por un p
     B_Y(v)=[(1-3/(2(Y+v)))/(1-3/(2Y))]
             *[(1+R(Y+v))/(1+R(Y))].
 
-El exponente5/4 incluye el Jacobiano; no se omite la suma de modos restantes. Taylor en v/Y da
+The exponent 5/4 includes the Jacobian; the sum of remaining modes is not omitted. Taylor in v/Y gives
 
     J=1+(5/4-p(s)/2)/Y+O_K(Y^-2),
     K_1=1/Y+O_K(Y^-2).
 
-Estos restos conservan el orden bajo (Y partial_Y)^j partial_s^k con j+k<=2. Para justificarlo, derivar primero los integrandos en el dominio fijo v>=0. En v<=sqrt(Y), Taylor con resto de las funciones suaves (incluida Phi cerca de K) produce cotas por C_K(1+v)^m/Y² para algún m fijo, integrables contra exp(-v), también después de esas derivadas. Los factores racionales de B son regulares para Y grande y sus correcciones empiezan en orden v/Y²; la corrección theta es exponencialmente menor. En v>=sqrt(Y), Phi y sus derivadas de orden fijo están acotadas en la semirrecta que comienza en min K, mientras min_K Phi>0. Las derivadas de r tienen crecimiento acotado, y los otros factores tienen a lo sumo crecimiento polinómico en v y Y. Por exp(-v), las integrales de esa cola, después de derivar, son O_K(Y^-N) para cada N fijo. No se deriva una aproximación meramente puntual ni se descartan términos de un corte móvil.
+These remainders keep their order under (Y partial_Y)^j partial_s^k with j+k<=2. To justify this, first differentiate the integrands on the fixed domain v>=0. For v<=sqrt(Y), Taylor with remainder of the smooth functions (including Phi near K) produces bounds by C_K(1+v)^m/Y² for some fixed m, integrable against exp(-v), also after those derivatives. The rational factors of B are regular for Y large and their corrections begin at order v/Y²; the theta correction is exponentially smaller. For v>=sqrt(Y), Phi and its derivatives of fixed order are bounded on the half-line starting at min K, while min_K Phi>0. The derivatives of r have bounded growth, and the other factors have at most polynomial growth in v and Y. Because of exp(-v), the integrals of that tail, after differentiation, are O_K(Y^-N) for each fixed N. No merely pointwise approximation is differentiated and no terms of a moving cutoff are discarded.
 
-En consecuencia, con resto también diferenciado,
+Consequently, with a differentiated remainder as well,
 
     log A=log Phi(t)+log Phi(s)+log u-log(2Y)
            +(5/4-p(s)/2+1/u)/Y+O_K(Y^-2).
 
-Derivar una vez en cada variable da, más precisamente,
+Differentiating once in each variable gives, more precisely,
 
     H(t,s)=-1/u²
        +[p'(s)+2/u²+2/u³]/Y+O_K(Y^-2).
 
-La primera contribución domina porque s queda en un compacto y Y crece exponencialmente. Esto prueba el signo negativo anunciado. Por continuidad, alrededor de uno de esos pares existen pequeños incrementos h,k>0 tales que
+The first contribution dominates because s stays in a compact and Y grows exponentially. This proves the announced negative sign. By continuity, around one of those pairs there exist small increments h,k>0 such that
 
     A(t,s)A(t+h,s+k)-A(t,s+k)A(t+h,s)<0.
 
-Son menores RECTANGULARES con conjuntos de filas y columnas diferentes, no menores principales de una matriz Gram. La desigualdad descarta TP2/log-supermodularidad global y, para H, una representación mediante productos de funciones todas no negativas. **NO descarta un Gram de funciones firmadas, PSD de H, CPD de log A ni PSD de A.** La candidata de§4.1 sigue OPEN. No hay nueva positividad W/T ni modificación de papers.
+These are RECTANGULAR minors with different row and column sets, not principal minors of a Gram matrix. The inequality rules out global TP2/log-supermodularity and, for H, a representation via products of functions all nonnegative. **It does NOT rule out a Gram of signed functions, PSD of H, CPD of log A nor PSD of A.** The candidate of §4.1 remains OPEN. There is no new W/T positivity nor modification of papers.
 
-### 4.3. El modelo principal de cola tampoco es una referencia PSD
+### 4.3. The leading tail model is not a PSD reference either
 
-**PROVED, root/casos/theta_joint; cotejo dirigido mapa (2026-11-05).** Es un corolario del principio de continuación de§2.2 aplicado a dos objetos explícitos distintos. Definir
+**PROVED, cases/theta_joint; targeted cross-check (2026-11-05).** It is a corollary of the continuation principle of §2.2 applied to two distinct explicit objects. Define
 
     G0(t,s)=(t+s)/(exp(2t)+exp(2s)),
     H0(t,s)=sech²(t-s)-1/(t+s)², t,s>0.
 
-Ni G0 ni H0 es PSD en todos los tamaños sobre NINGÚN intervalo abierto no vacío contenido en (0,infinito). Esto incluye toda cola, por lejos que empiece. No es un falsificador de A ni de H reales.
+Neither G0 nor H0 is PSD in all sizes on ANY nonempty open interval contained in (0,infinito). This includes every tail, however far it starts. It is not a falsifier of the real A nor H.
 
-Para G0, el denominador no se anula en el producto de strips |Im t|,|Im s|<pi/4: ambas exponenciales tienen parte real positiva. Si G0 fuese PSD en un intervalo, las diferencias finitas y series de Taylor de§2.2 lo extenderían por pasos de radio fijo a toda la recta real. Pero G0(t,t)=t exp(-2t)<0 para t<0, contradicción.
+For G0, the denominator does not vanish on the product of strips |Im t|,|Im s|<pi/4: both exponentials have positive real part. If G0 were PSD on an interval, the finite differences and Taylor series of §2.2 would extend it by steps of fixed radius to the whole real line. But G0(t,t)=t exp(-2t)<0 for t<0, a contradiction.
 
-Para H0, fijar cualquier compacto [a,b] de la semirrecta positiva que conecte el intervalo supuesto con t*=1/4. Con radio rho<min(a/4,pi/8), ni t+s ni cosh(t-s) se anulan en los bidiscos y los dominios mixtos necesarios. El mismo argumento de puntos antiguos más jets propaga PSD a lo largo del compacto. Esto contradice H0(1/4,1/4)=-3. No se intenta alcanzar0 con un radio fijo; el punto contradictorio es estrictamente positivo. En la semirrecta positiva se cumple exactamente H0=partial_t partial_s log G0.
+For H0, fix any compact [a,b] of the positive half-line connecting the assumed interval with t*=1/4. With radius rho<min(a/4,pi/8), neither t+s nor cosh(t-s) vanish on the bidiscs and the required mixed domains. The same old-points-plus-jets argument propagates PSD along the compact. This contradicts H0(1/4,1/4)=-3. No attempt is made to reach 0 with a fixed radius; the contradictory point is strictly positive. On the positive half-line, exactly H0=partial_t partial_s log G0 holds.
 
-**Relación con la theta completa.** Fijar x,y en un compacto y poner t=L+x,s=L+y, L grande. Escribir Yt=pi exp(2t), Ys=pi exp(2s), E=Yt+Ys y u=t+s. El cambio v=E(exp(2r)-1), con h=v/E, conserva todos los modos y da
+**Relation with the full theta.** Fix x,y in a compact and set t=L+x,s=L+y, L large. Write Yt=pi exp(2t), Ys=pi exp(2s), E=Yt+Ys and u=t+s. The change v=E(exp(2r)-1), with h=v/E, keeps all modes and gives
 
     A/(Phi(t)Phi(s))=(1/(2E)) integral_0^infinito exp(-v)
           [u+log(1+h)](1+h)^(7/2) B_t(v)B_s(v)dv,
 
-con B_j=[(1-3/(2Yj(1+h)))/(1-3/(2Yj))]·[(1+R(Yj(1+h)))/(1+R(Yj))], usando el R theta de§4.2. Ahora Yt,Ys son comparables a E. La expansión, con restos estables bajo las derivadas t,s de orden total hasta2, es
+with B_j=[(1-3/(2Yj(1+h)))/(1-3/(2Yj))]·[(1+R(Yj(1+h)))/(1+R(Yj))], using the theta R of §4.2. Now Yt,Ys are comparable to E. The expansion, with remainders stable under t,s derivatives of total order up to 2, is
 
     A/(Phi(t)Phi(s))=u/(2E)
        *[1+(7/2+1/u)/E+O(E^-2)].
 
-La justificación es la de§4.2: derivación previa en el dominio fijo de integración, Taylor en v<=sqrt(E) y control exponencial de la cola. Los factores B_t B_s contribuyen sólo O((1+v)^m/E²), aparte de las correcciones theta exponenciales. En consecuencia,
+The justification is that of §4.2: prior differentiation on the fixed integration domain, Taylor for v<=sqrt(E) and exponential control of the tail. The factors B_t B_s contribute only O((1+v)^m/E²), apart from the exponential theta corrections. Consequently,
 
     A(t,s)=[Phi(t)Phi(s)/(2pi)]G0(t,s)[1+O(exp(-2L))],
     H(t,s)=H0(t,s)+O(exp(-2L)),
 
-uniformemente para x,y en ese compacto. La primera igualdad incluye una congruencia diagonal positiva. Las estimaciones de entradas, aunque diferenciadas, NO permiten trasladar la indefinición de G0/H0 al kernel real: el tamaño del bloque y el vector negativo del modelo no están controlados uniformemente con L.
+uniformly for x,y in that compact. The first equality includes a positive diagonal congruence. The entry estimates, although differentiated, do NOT allow transferring the indefiniteness of G0/H0 to the real kernel: the block size and the negative vector of the model are not controlled uniformly in L.
 
-**Consecuencia para el método.** No procede usar G0 o H0 como referencia PSD de una prueba perturbativa de todos los órdenes. Tampoco puede cumplirse un sándwich simétrico (1-epsilon)H0 <= H <= (1+epsilon)H0 en orden de formas, con epsilon>0: sumando las dos diferencias PSD se obtendría 2epsilon H0 PSD, que es falso; idéntico argumento para el modelo directo después de congruencia. Una cota unilateral respecto de un modelo indefinido no cierra el signo sin pagar sus direcciones negativas. No se excluyen otras referencias positivas ni una compensación firmada exacta. La positividad real y el criterio logarítmico permanecen OPEN; sin nuevo signo W/T.
+**Consequence for the method.** Using G0 or H0 as the PSD reference of a perturbative all-orders proof is not appropriate. Nor can a symmetric sandwich (1-epsilon)H0 <= H <= (1+epsilon)H0 in the order of forms hold, with epsilon>0: adding the two PSD differences would give 2epsilon H0 PSD, which is false; identical argument for the direct model after congruence. A one-sided bound with respect to an indefinite model does not close the sign without paying for its negative directions. Other positive references and an exact signed compensation are not excluded. Real positivity and the logarithmic criterion remain OPEN; no new W/T sign.
 
-## 5. Condición necesaria infinitesimal y fallo para la Phi real
+## 5. Infinitesimal necessary condition and failure for the real Phi
 
-Poner V=-log phi y f=V'. Elegir nodos positivos, de modo que tau>0. En v=0,
+Set V=-log phi and f=V'. Choose positive nodes, so that tau>0. At v=0,
 
     S_0(t,s)=phi(t)phi(s),
     B_v(t,s)=S_v(t,s)/[phi(t)phi(s)],
@@ -370,1119 +370,1119 @@ Poner V=-log phi y f=V'. Elegir nodos positivos, de modo que tau>0. En v=0,
     partial_v B_v(t,s)|_(v=0)
            =-[f(t)+f(s)]/(t+s)=-K_f(t,s).             (JET)
 
-Para t=s la fórmula es K_f(t,t)=f(t)/t. No se necesitan nodos con t+s=0. Para cada conjunto finito de nodos, la suavidad da una expansión de primer orden con resto o(v).
+For t=s the formula is K_f(t,t)=f(t)/t. Nodes with t+s=0 are not needed. For each finite set of nodes, smoothness gives a first-order expansion with remainder o(v).
 
-Si todas las capas fuesen PSD, para todo vector c con sum_i c_i=0 se tendría
+If all layers were PSD, for every vector c with sum_i c_i=0 one would have
 
     0<=c^T B_v c=-v c^T K_f c+o(v),
 
-y, dividiendo por v>0 y pasando al límite,
+and, dividing by v>0 and passing to the limit,
 
     c^T K_f c<=0.                                    (CND)
 
-Esta es sólo una condición necesaria. A continuación se construye una violación exacta de ella bajo una hipótesis de crecimiento específica.
+This is only a necessary condition. Next, an exact violation of it is constructed under a specific growth hypothesis.
 
-Fijar dos números 0<alpha<beta y añadir un tercer nodo R>beta. Escribir k_ij=K_f(t_i,t_j), t=(alpha,beta,R), y definir
+Fix two numbers 0<alpha<beta and add a third node R>beta. Write k_ij=K_f(t_i,t_j), t=(alpha,beta,R), and define
 
     Q_ab=k11+k22-2k12,
     Q_bR=k22+k33-2k23,
     B=k13-k12-k23+k22.
 
-Para c=(1,-1-epsilon,epsilon), cuya suma es0,
+For c=(1,-1-epsilon,epsilon), whose sum is 0,
 
     c^T K_f c=Q_ab+2epsilon B+epsilon^2 Q_bR.          (TRIPLE)
 
-Suponer ahora f(R)/R^3->+infinito. Las constantes que involucran sólo alpha,beta son fijas. De las fórmulas de las entradas se obtiene
+Now assume f(R)/R^3->+infinito. The constants involving only alpha,beta are fixed. From the formulas of the entries one obtains
 
     B/[f(R)/R^2]->beta-alpha,
     Q_bR/[f(R)/R]->-1.                               (ASYM)
 
-Por ejemplo, la parte dominante de B es
+For example, the dominant part of B is
 
     f(R)[1/(R+alpha)-1/(R+beta)]
       =(beta-alpha)f(R)/[(R+alpha)(R+beta)],
 
-y la de Q_bR es f(R)[1/R-2/(R+beta)]. Los demás términos son constantes o O(1/R), insignificantes en esas escalas. Así, para R suficientemente grande pero FINITO, Q_bR<0 y B>0. Elegir exactamente
+and that of Q_bR is f(R)[1/R-2/(R+beta)]. The other terms are constants or O(1/R), negligible at those scales. Thus, for R sufficiently large but FINITE, Q_bR<0 and B>0. Choose exactly
 
     epsilon=-B/Q_bR>0.
 
-Entonces TRIPLE vale Q_ab+B^2/(-Q_bR), y
+Then TRIPLE equals Q_ab+B^2/(-Q_bR), and
 
     [B^2/(-Q_bR)]/[f(R)/R^3]->(beta-alpha)^2>0.
 
-El valor es positivo para algún R finito. Esto contradice CND.
+The value is positive for some finite R. This contradicts CND.
 
-Para traducir la contradicción a una capa concreta, fijar esos nodos y ese vector c. Si Q=c^T K_f c>0, JET implica c^T B_v c=-vQ+o(v)<0 para todo v>0 suficientemente pequeño. Con d_i=c_i/phi(t_i) se tiene d^T S_v d=c^T B_v c<0. Por tanto existe una capa FINITA, en tres nodos reales positivos, que no es PSD. No se ha calculado R ni v ni se requiere hacerlo.
+To translate the contradiction into a concrete layer, fix those nodes and that vector c. If Q=c^T K_f c>0, JET implies c^T B_v c=-vQ+o(v)<0 for all v>0 sufficiently small. With d_i=c_i/phi(t_i) one has d^T S_v d=c^T B_v c<0. Therefore there exists a FINITE layer, at three positive real nodes, which is not PSD. Neither R nor v has been computed, nor is it required.
 
-La Phi REAL satisface la hipótesis: la cola auditada de POWER_MIXED_VOLTERRA_OBSTRUCTION_105, sección4, da
+The REAL Phi satisfies the hypothesis: the audited tail of POWER_MIXED_VOLTERRA_OBSTRUCTION_105, section 4, gives
 
     f(R)=V'(R)=2pi exp(2R)+O(1), R->infinito.
 
-En particular f(R)/R^3->+infinito. La obstrucción se aplica al dato real, usando su crecimiento específico, sin invocar ninguna clase genérica descartada en074/101/111.
+In particular f(R)/R^3->+infinito. The obstruction applies to the real datum, using its specific growth, without invoking any generic class discarded in 074/101/111.
 
-## 6. Alcance exacto
+## 6. Exact scope
 
-Quedan probadas la identidad LT, la suficiencia uniforme de las capas PSD, el modelo cuártico y la imposibilidad de que TODAS las capas de la Phi real sean PSD. La desigualdad negativa hallada pertenece a una capa S_v; NO es una desigualdad negativa para su integral A, ni para un bloque del kernel de M, ni para W.
+Proved: the identity LT, the uniform sufficiency of PSD layers, the quartic model and the impossibility that ALL layers of the real Phi be PSD. The negative inequality found belongs to a layer S_v; it is NOT a negative inequality for its integral A, nor for a block of the kernel of M, nor for W.
 
-Una suma o integral de kernels indefinidos puede ser PSD. La presente obstrucción no excluye cancelación entre capas, un reordenamiento firmado, otro Gram ni una desigualdad conjunta específica de las capas reales. Tampoco amplía una dimensión finita o una ventana temporal del signo conocido.
+A sum or integral of indefinite kernels may be PSD. The present obstruction does not exclude cancellation between layers, a signed rearrangement, another Gram nor a specific joint inequality of the real layers. Nor does it enlarge a finite dimension or a temporal window of the known sign.
 
-Finalmente, la diagonal del kernel completo es
+Finally, the diagonal of the full kernel is
 
     A(t,t)=integral_t^infinito 2u phi(u)^2du,
 
-no J(t)=integral_t^infinito u phi(u)du del CORE. La entrada opuesta es
+not J(t)=integral_t^infinito u phi(u)du of the CORE. The opposite entry is
 
     A(t,-t)=integral_0^infinito 2r phi(r+t)phi(r-t)dr.
 
-No se infiere el signo de su menor a partir del fallo de una capa. Esta nota no contiene un falsificador de PSD del kernel integral completo.
+The sign of its minor is not inferred from the failure of a layer. This note contains no falsifier of PSD of the full integral kernel.
 
 
-## 7. Hipótesis genéricas y operaciones positivas
+## 7. Generic hypotheses and positive operations
 
-**PROVED, consecuencias analíticas sin nuevos cómputos.**074 tiene V(t)=g(t²) con g polinómica convexa, coeficientes no negativos y todas sus derivadas no negativas; satisface V'''(t)>0 para t>0 pero su kernel transformado3 es indefinido. Por LT su A tampoco es PSD. Es un corolario del falsificador existente, no un falsificador real theta.
+**PROVED, analytic consequences without new computations.** 074 has V(t)=g(t²) with g a convex polynomial, nonnegative coefficients and all its derivatives nonnegative; it satisfies V'''(t)>0 for t>0 but its transformed kernel 3 is indefinite. By LT its A is not PSD either. It is a corollary of the existing falsifier, not a real theta falsifier.
 
-Las mezclas positivas no conservan A PSD. Para dos gaussianas centradas normalizadas distintas, Z(u)=C1 exp(v1 u²/2)+C2 exp(v2 u²/2), C_i,v_i>0. N=M/u es el promedio inclinado de v_i y N'=u Var_u(v)>0. Luego uM'>M, contrario al criterio001§3. El menor de nodos u,u+h tiene coeficiente de h² igual a [M²-u²M'²]/(4u⁴)<0. Por LT, A no es PSD para esa mezcla, aunque cada gaussiana pertenece al modelo positivo de§4.
+Positive mixtures do not preserve A PSD. For two distinct centred normalized Gaussians, Z(u)=C1 exp(v1 u²/2)+C2 exp(v2 u²/2), C_i,v_i>0. N=M/u is the tilted average of v_i and N'=u Var_u(v)>0. Hence uM'>M, contrary to the criterion 001§3. The minor at nodes u,u+h has h² coefficient equal to [M²-u²M'²]/(4u⁴)<0. By LT, A is not PSD for that mixture, although each Gaussian belongs to the positive model of §4.
 
-Convolución sí conserva el kernel transformado: Z=Z1Z2 implica M=M1+M2, suma de kernels PSD. Pero una convolución con un factor exp(-at⁴-bt²) no nulo y otro factor positivo con masa en un compacto tiene cota inferior c exp(-C(1+|t|⁴)). Una mezcla positiva no nula de tales factores también: se restringe la medida de parámetros a una caja acotada de masa positiva y finita. Esto excluye esas representaciones exactas de Phi real, por su supercola. No excluye otros factores ni mezclas firmadas.
+Convolution does preserve the transformed kernel: Z=Z1Z2 implies M=M1+M2, a sum of PSD kernels. But a convolution with a nonzero factor exp(-at⁴-bt²) and another positive factor with mass on a compact has lower bound c exp(-C(1+|t|⁴)). So does a nonzero positive mixture of such factors: restrict the parameter measure to a bounded box of positive finite mass. This excludes those exact representations of the real Phi, by its supertail. It does not exclude other factors nor signed mixtures.
 
-La identidad de integración por partes con B(t,s)=(t+s)/(f(t)+f(s)), f=V', conserva una corrección: A=B Phi(t)Phi(s)+integral_0^infinito (partial_t+partial_s)B(t+r,s+r)Phi(t+r)Phi(s+r)dr, donde esté definida y los bordes se anulen. No puede certificarse haciendo PSD ambos términos: en la diagonal positiva, (partial_t+partial_s)B=(f-tf')/f²<0, consecuencia de073. Es una obstrucción a ese descarte, no al balance conjunto.
+The integration-by-parts identity with B(t,s)=(t+s)/(f(t)+f(s)), f=V', keeps a correction: A=B Phi(t)Phi(s)+integral_0^infinito (partial_t+partial_s)B(t+r,s+r)Phi(t+r)Phi(s+r)dr, wherever defined and the boundaries vanish. It cannot be certified by making both terms PSD: on the positive diagonal, (partial_t+partial_s)B=(f-tf')/f²<0, a consequence of 073. It is an obstruction to that discard, not to the joint balance.
 
-Tampoco basta un operador positivo que represente tPhi. La misma mezcla gaussiana tiene transformada Fourier H=Σ A_i exp(-omega²/(4a_i))>0. El multiplicador b0=-H'/(omega H), removible en0, es promedio de 1/(2a_i), y define un operador acotado autoadjunto positivo que satisface Bop(-Phi')=tPhi. Para h suave compacto y F(r)=integral h(t)Phi(t+r)dt, Fubini da Q_A(h)=-2 Re integral_0^infinito Bop F'(r) conjugado(F(r))dr. La positividad del operador no controla esta forma sobre la semirrecta, y A ya es indefinido en este ejemplo. No se requiere aplicar la derivada a la función cortada por la semirrecta.
+Nor does a positive operator representing tPhi suffice. The same Gaussian mixture has Fourier transform H=Σ A_i exp(-omega²/(4a_i))>0. The multiplier b0=-H'/(omega H), removable at 0, is an average of 1/(2a_i), and defines a bounded self-adjoint positive operator satisfying Bop(-Phi')=tPhi. For h smooth compact and F(r)=integral h(t)Phi(t+r)dt, Fubini gives Q_A(h)=-2 Re integral_0^infinito Bop F'(r) conjugado(F(r))dr. Positivity of the operator does not control this form on the half-line, and A is already indefinite in this example. It is not required to apply the derivative to the function cut by the half-line.
 
-La búsqueda dirigida de hazard, cocientes y Lyapunov en índices/corpus encontró103_42/43 y073, de objetos de curvatura/pares, sin duplicado literal de esta integración por partes. El fallo diagonal es consecuencia inmediata073 y no se presenta como herramienta nueva. PSD del A REAL sigue OPEN.
+The targeted search for hazard, quotients and Lyapunov in indices/corpus found 103_42/43 and 073, about curvature/pair objects, with no literal duplicate of this integration by parts. The diagonal failure is an immediate consequence of 073 and is not presented as a new tool. PSD of the REAL A remains OPEN.
 
 
-### 7.1. Convolución gaussiana: recíproca por un nodo que tiende a infinito
+### 7.1. Gaussian convolution: converse via a node tending to infinity
 
-**PROVED como equivalencia de signo, revisión root/casos y cotejo dirigido mapa.** La preservación por convolución de§7 ya era conocida. Se añade una recíproca bajo una condición de decaimiento del kernel que sí cumple la Phi real. No es el flujo que multiplica la densidad por exp(lambda t²), ni la representación gaussiana de los tests gamma.
+**PROVED as a sign equivalence, review against cases and targeted cross-check.** Preservation under convolution in §7 was already known. A converse is added under a decay condition on the kernel that the real Phi does satisfy. It is not the flow multiplying the density by exp(lambda t²), nor the Gaussian representation of the gamma tests.
 
-**Lema de rango uno.** Sea K un kernel real simétrico en(0,infinito) tal que, para cada u fijo,
+**Rank-one lemma.** Let K be a real symmetric kernel on (0,infinito) such that, for each fixed u,
 
     K(u,R)->0,   K(R,R)->0   cuando R->infinito.
 
-Para cualquier b>=0, K+b es PSD en todos los bloques finitos si y sólo si K lo es. La suficiencia es inmediata. Para la necesidad, si un bloque U=(u_i) y un vector c dan q=sum c_i c_j K(u_i,u_j)<0, añadir un nodo R mayor que todos los u_i y el coeficiente d=-sum c_i. La contribución constante b se anula exactamente, y la nueva forma vale
+For any b>=0, K+b is PSD on all finite blocks if and only if K is. Sufficiency is immediate. For necessity, if a block U=(u_i) and a vector c give q=sum c_i c_j K(u_i,u_j)<0, add a node R larger than all u_i and the coefficient d=-sum c_i. The constant contribution b cancels exactly, and the new form equals
 
     q+2d sum_i c_i K(u_i,R)+d²K(R,R) -> q<0.
 
-Para R suficientemente grande contradice PSD de K+b. La prueba utiliza todos los tamaños y nodos arbitrariamente grandes; no establece una equivalencia en tamaño fijo o en un rango acotado de nodos.
+For R sufficiently large it contradicts PSD of K+b. The proof uses all sizes and arbitrarily large nodes; it does not establish an equivalence at fixed size or on a bounded range of nodes.
 
-**Condición verificada para Phi.** Sea F(u)=log(Z(u)/Z(0)), con u>=0. Positividad y paridad de Phi dan F>=0 y M=F'>=0; F es convexa. Para todo N>0, Phi(t)<=C_N exp(-Nt²), de donde F(u)<=u²/(4N)+D_N. Por convexidad,
+**Condition verified for Phi.** Let F(u)=log(Z(u)/Z(0)), with u>=0. Positivity and parity of Phi give F>=0 and M=F'>=0; F is convex. For all N>0, Phi(t)<=C_N exp(-Nt²), whence F(u)<=u²/(4N)+D_N. By convexity,
 
     0<=M(u)/u <=[F(2u)-F(u)]/u² <=1/N+D_N/u².
 
-Como N es arbitrario, M(u)/u->0. Así K(u,v)=(M(u)+M(v))/(u+v) cumple las dos condiciones del lema.
+Since N is arbitrary, M(u)/u->0. Thus K(u,v)=(M(u)+M(v))/(u+v) satisfies both conditions of the lemma.
 
-**Aplicación.** Sea G_sigma la gaussiana centrada normalizada de varianza sigma², sigma>0. Su convolución temporal con Phi tiene
+**Application.** Let G_sigma be the centred normalized Gaussian of variance sigma², sigma>0. Its temporal convolution with Phi has
 
     Z_sigma(u)=exp(sigma²u²/2)Z(u),
     M_sigma(u)=M(u)+sigma²u,
     K_sigma(u,v)=K(u,v)+sigma².
 
-Por tanto K_sigma es PSD en todos los órdenes para UNA varianza sigma² fija si y sólo si K lo es. Multiplicar G_sigma*Phi por exp(-sigma²/8) conserva además el momento Z(1/2)=1/4; esa constante no modifica M_sigma ni K_sigma. La paridad y la positividad puntual se conservan.
+Therefore K_sigma is PSD in all orders for ONE fixed variance sigma² if and only if K is. Multiplying G_sigma*Phi by exp(-sigma²/8) moreover preserves the moment Z(1/2)=1/4; that constant does not modify M_sigma nor K_sigma. Parity and pointwise positivity are preserved.
 
-**Obligación restante.** Una prueba independiente del signo de una sola densidad suavizada cerraría el signo del kernel original. Aquí no se obtiene tal prueba. Tampoco se puede suponer que suavizar convierte un kernel globalmente indefinido en uno PSD: el lema lo impide en esta clase. Esto no descarta usar la equivalencia para encontrar una representación más manejable, ni excluye otras convoluciones. No hay nueva positividad de W, ventanaT o modificación de papers.
+**Remaining obligation.** An independent proof of the sign of a single smoothed density would close the sign of the original kernel. No such proof is obtained here. Nor can one assume that smoothing turns a globally indefinite kernel into a PSD one: the lemma forbids it in this class. This does not rule out using the equivalence to find a more tractable representation, nor exclude other convolutions. There is no new positivity of W, T window or modification of papers.
 
-## 8. Ningún modo theta individual proporciona un Gram local de todos los órdenes
+## 8. No individual theta mode provides a local Gram of all orders
 
-**PROVED, revisión matemática independiente root/casos; cotejo dirigido mapa.** El antecedente modal103_47/48 ya contiene la traslación siguiente; no se presenta como nueva. La diferencia respecto de la mera identidad de cruces es un falsificador de la positividad de cada kernel modal, seguido de su alcance LOCAL mediante§2.2. Sin cálculos numéricos ni prioridad bibliográfica afirmada.
+**PROVED, independent mathematical review against cases; targeted cross-check.** The modal antecedent 103_47/48 already contains the following translation; it is not presented as new. The difference from the mere crossing identity is a falsifier of the positivity of each modal kernel, followed by its LOCAL scope via §2.2. No numerical computations and no bibliographic priority claimed.
 
-Escribir
+Write
 
     h(x)=pi exp(5x/2)[2pi exp(2x)-3]exp(-pi exp(2x)),
     Phi_n(t)=n^(-1/2)h(t+log n),
     A_n(t,s)=integral_0^infinito
                 (t+s+2r)Phi_n(t+r)Phi_n(s+r)dr.
 
-No se aplica a Phi_n la cancelación par de§2: cada modo individual NO es par. Se tiene exactamente
+The even cancellation of §2 is not applied to Phi_n: each individual mode is NOT even. One has exactly
 
     A_n(t,t)=(2/n)integral_(t+log n)^infinito
                          (x-log n)h(x)^2 dx.
 
-La masa H=integral_R h(x)^2 dx y su primer momento absoluto son finitos. Demostraremos que m=H^(-1)integral xh(x)^2 dx<0. Así
+The mass H=integral_R h(x)^2 dx and its first absolute moment are finite. We will show that m=H^(-1)integral xh(x)^2 dx<0. Thus
 
     lim_(t→-infinito) A_n(t,t)=(2H/n)(m-log n)<0
 
-para TODOS los enteros n>=1, incluido el primer modo.
+for ALL integers n>=1, including the first mode.
 
-Prueba elemental del momento. Poner z=2pi exp(2x), alpha=5/2. Salvo una constante positiva, h(x)^2dx=z^(alpha-1)(z-3)^2exp(-z)dz. Definir
+Elementary proof of the moment. Set z=2pi exp(2x), alpha=5/2. Up to a positive constant, h(x)^2dx=z^(alpha-1)(z-3)^2exp(-z)dz. Define
 
     I_alpha=integral_0^infinito z^(alpha-1)exp(-z)dz,
     J_alpha=integral_0^infinito log(z)z^(alpha-1)exp(-z)dz.
 
-Integrar por partes da I_(alpha+1)=alpha I_alpha y J_(alpha+1)=alpha J_alpha+I_alpha. En alpha=5/2,
+Integrating by parts gives I_(alpha+1)=alpha I_alpha and J_(alpha+1)=alpha J_alpha+I_alpha. At alpha=5/2,
 
     I_(alpha+2)-6I_(alpha+1)+9I_alpha=(11/4)I_alpha,
     J_(alpha+2)-6J_(alpha+1)+9J_alpha=(11/4)J_alpha.
 
-En la segunda igualdad el término adicional es (2alpha+1-6)I_alpha=0. Como x=(log z-log(2pi))/2,
+In the second equality the additional term is (2alpha+1-6)I_alpha=0. Since x=(log z-log(2pi))/2,
 
     m=(1/2)[J_alpha/I_alpha-log(2pi)].
 
-Jensen estricto para log bajo la probabilidad z^(alpha-1)exp(-z)dz/I_alpha da J_alpha/I_alpha<log(alpha), pues su media es alpha. Por tanto m<(1/2)log(5/(4pi))<0. Esto verifica el signo sin estimar una serie ni truncar la aritmética.
+Strict Jensen for log under the probability z^(alpha-1)exp(-z)dz/I_alpha gives J_alpha/I_alpha<log(alpha), since its mean is alpha. Therefore m<(1/2)log(5/(4pi))<0. This verifies the sign without estimating a series or truncating the arithmetic.
 
-Cada A_n es conjuntamente holomorfo en el producto de strips |Im t|,|Im s|<pi/4: para r→infinito se aplica el mismo dominio de convergencia exponencial de§2.2; no se exige paridad ni positividad de h. El principio de propagación analítica, que sólo usa esa holomorfía, muestra que A_n NO puede ser PSD de todos los tamaños en ningún intervalo real abierto. De lo contrario sería PSD global y contradice la diagonal negativa recién probada. En particular, esto vale en intervalos positivos donde Phi_n es positiva y A_n tiene diagonal positiva. No se obtiene un tamaño explícito del menor negativo local ni se lanza una campaña para encontrarlo.
+Each A_n is jointly holomorphic on the product of strips |Im t|,|Im s|<pi/4: for r→infinito the same domain of exponential convergence of §2.2 applies; neither parity nor positivity of h is required. The analytic propagation principle, which only uses that holomorphy, shows that A_n CANNOT be PSD of all sizes on any open real interval. Otherwise it would be globally PSD, contradicting the negative diagonal just proved. In particular, this holds on positive intervals where Phi_n is positive and A_n has positive diagonal. No explicit size of the local negative minor is obtained, nor is a campaign launched to find it.
 
-Alcance: queda descartado certificar el kernel completo mediante Grams separados de cada modo theta, aun empezando en una cola temporal. No se refuta A de la Phi real: A incluye todos los pares de modos n,m, no sólo sum_n A_n, y su simetría global permite cancelaciones ausentes en cada modo. Tampoco se descarta una estimación conjunta ni un reagrupamiento distinto con sus cruces controlados.
+Scope: certifying the full kernel via separate Grams of each theta mode is ruled out, even starting on a temporal tail. A of the real Phi is not refuted: A includes all pairs of modes n,m, not only sum_n A_n, and its global symmetry allows cancellations absent in each mode. Nor is a joint estimate or a different regrouping with controlled crossings ruled out.
 
 
-### 8.1. El prefijo theta completo también falla: se conservan todos sus cruces
+### 8.1. The full theta prefix also fails: all its crossings are kept
 
-**PROVED para todo prefijo suficientemente grande, revisión independiente root/casos y cotejo dirigido mapa.** Cambio frente a§8: Phi_M=sum_(n=1)^M Phi_n se introduce COMPLETA en la definición de A; se incluyen todos los pares n,m<=M. Los antecedentes de colas correlacionadas103_47/48 y truncación Euler no son esta afirmación sobre el cuadrado de un prefijo theta. No se calcula un umbral M ni se inicia una campaña.
+**PROVED for every sufficiently large prefix, independent review against cases and targeted cross-check.** Change with respect to §8: Phi_M=sum_(n=1)^M Phi_n is introduced IN FULL into the definition of A; all pairs n,m<=M are included. The antecedents of correlated tails 103_47/48 and Euler truncation are not this statement about the square of a theta prefix. No threshold M is computed nor is a campaign started.
 
-Definir f_M(x)=M^(-1/2)Phi_M(x-log M). Con a_x=pi exp(2x),
+Define f_M(x)=M^(-1/2)Phi_M(x-log M). With a_x=pi exp(2x),
 
     f_M(x)=pi exp(5x/2)(1/M)sum_(n=1)^M
        (n/M)^2[2a_x(n/M)^2-3]exp[-a_x(n/M)^2].
 
-Para x fijo es una suma Riemann. Como la derivada de z³exp(-a_x z²) es z²[3-2a_x z²]exp(-a_x z²),
+For fixed x it is a Riemann sum. Since the derivative of z³exp(-a_x z²) is z²[3-2a_x z²]exp(-a_x z²),
 
     f_M(x)→F(x)=-pi exp(5x/2)exp[-pi exp(2x)].
 
-Es necesario controlar la masa que se mueve con M, no sólo este límite puntual. Para x<=0, a_x<=pi y la suma anterior da |f_M(x)|<=C exp(5x/2), uniformemente en M. Para x>=0 poner lambda=a_x/M². Entonces
+It is necessary to control the mass that moves with M, not just this pointwise limit. For x<=0, a_x<=pi and the preceding sum gives |f_M(x)|<=C exp(5x/2), uniformly in M. For x>=0 set lambda=a_x/M². Then
 
     |f_M(x)|<=3pi exp(5x/2)M^(-3)
                  sum_(n>=1)n²(1+lambda n²)exp(-lambda n²).
 
-En v∈[n-1/2,n], n²<=4v², 1+lambda n²<=4(1+lambda v²) y exp(-lambda n²)<=exp(-lambda v²). Integrando sobre esos intervalos disjuntos de longitud1/2,
+On v∈[n-1/2,n], n²<=4v², 1+lambda n²<=4(1+lambda v²) and exp(-lambda n²)<=exp(-lambda v²). Integrating over these disjoint intervals of length 1/2,
 
     sum_(n>=1)n²(1+lambda n²)exp(-lambda n²)
       <=32 integral_0^infinito v²(1+lambda v²)exp(-lambda v²)dv
       =C0 lambda^(-3/2).
 
-Así |f_M(x)|<=C1 exp(-x/2) para x>=0. Ambos mayorantes tienen cuadrado integrable con peso1+|x|. Convergencia dominada prueba f_M→F en L²((1+|x|)dx), de donde
+Thus |f_M(x)|<=C1 exp(-x/2) for x>=0. Both majorants are square integrable with weight 1+|x|. Dominated convergence proves f_M→F in L²((1+|x|)dx), whence
 
     H_M=integral f_M²→H=integral F²>0,
     J_M=integral x f_M²→J=integral x F².
 
-La identidad de cambio de variable es exacta:
+The change-of-variable identity is exact:
 
     integral_R t Phi_M(t)^2dt=M[J_M-log(M)H_M],
     [integral t Phi_M²]/[M log M]→-H<0.
 
-Por tanto ese momento es negativo para TODO M suficientemente grande. Para cada tal M,
+Therefore that moment is negative for ALL M sufficiently large. For each such M,
 
     lim_(t→-infinito) A_[Phi_M](t,t)
           =2 integral_R x Phi_M(x)^2dx<0.
 
-La finitud del momento absoluto se sigue también directamente de las colas de la suma finita. A_[Phi_M] es holomorfo en los mismos strips que cada modo;§2.2 implica que NO es PSD de todos los tamaños en ningún intervalo real abierto. La falta de paridad del prefijo impide usar la cancelación de§2, pero no afecta al principio analítico.
+Finiteness of the absolute moment also follows directly from the tails of the finite sum. A_[Phi_M] is holomorphic on the same strips as each mode; §2.2 implies that it is NOT PSD of all sizes on any open real interval. The lack of parity of the prefix prevents using the cancellation of §2, but does not affect the analytic principle.
 
-El fallo no desaparece al incluir los cruces dentro del prefijo. La masa cuadrática del prefijo es M H_M~M H y se desplaza hacia t=-log M; por eso la convergencia de la serie theta en compactos no es convergencia de estos prefijos en la norma global ponderada por1+|t|. La Phi infinita es par y su primer momento cuadrático vale0, sin contradicción. Este resultado descarta una prueba por prefijos theta eventualmente PSD; no descarta una estimación conjunta con la cola omitida, una reorganización distinta ni el signo del kernel real completo. No prueba una cota positiva ni amplía T.
+The failure does not disappear by including the crossings inside the prefix. The quadratic mass of the prefix is M H_M~M H and shifts towards t=-log M; that is why convergence of the theta series on compacts is not convergence of these prefixes in the global norm weighted by 1+|t|. The infinite Phi is even and its first quadratic moment equals 0, without contradiction. This result rules out a proof via eventually PSD theta prefixes; it does not rule out a joint estimate with the omitted tail, a different reorganization nor the sign of the full real kernel. It proves no positive bound and does not enlarge T.
 
 
-**Fortalecimiento: el descarte vale para TODO M>=1.** Revisión independiente root/casos, con cotejo dirigido de antecedentes. La asintótica anterior describe el defecto de masa, pero no hace falta para excluir prefijos pequeños. Sustituir z=pi exp(2t) en la transformada de h da, para u>-5/2,
+**Strengthening: the discard holds for ALL M>=1.** Independent review against cases, with targeted cross-check of antecedents. The preceding asymptotic describes the mass defect, but it is not needed to exclude small prefixes. Substituting z=pi exp(2t) in the transform of h gives, for u>-5/2,
 
     Z_h(u)=C(u)(u-1/2),
     C(u)=(1/2)pi^(-u/2-1/4)Gamma(u/2+5/4)>0.
 
-Por la traslación de cada modo,
+By the translation of each mode,
 
     Z_[Phi_M](u)=(u-1/2)H_M(u),
     H_M(u)=C(u)sum_(n=1)^M n^(-u-1/2)>0.
 
-H_M es C¹ cerca de1/2. Por tanto, para u<1/2 suficientemente próximo y aún positivo, Z_[Phi_M](u)<0 mientras su derivada H_M(u)+(u-1/2)H_M'(u)>0. Son signos de una fórmula explícita del aproximante; no se utiliza un argumento sobre ceros.
+H_M is C¹ near 1/2. Therefore, for u<1/2 sufficiently close and still positive, Z_[Phi_M](u)<0 while its derivative H_M(u)+(u-1/2)H_M'(u)>0. These are signs of an explicit formula of the approximant; no argument about zeros is used.
 
-LT también vale aquí sin paridad. Para phi=Phi_M, poner B(t)=[integral_t^infinito(1+x²)phi(x)^2dx]^(1/2). La desigualdad (x+y)²<=(1+x²)(1+y²) y Cauchy–Schwarz dan |A_phi(t,s)|<=B(t)B(s). B es acotada a izquierda y tiene supercola a derecha; así integral exp(ut)B(t)dt es finita para cada u>0. Esta cota y las colas de phi justifican la transformada doble, la integración por partes en LT y la truncación del test exponencial. En el u elegido,
+LT also holds here without parity. For phi=Phi_M, set B(t)=[integral_t^infinito(1+x²)phi(x)^2dx]^(1/2). The inequality (x+y)²<=(1+x²)(1+y²) and Cauchy–Schwarz give |A_phi(t,s)|<=B(t)B(s). B is bounded on the left and has a supertail on the right; thus integral exp(ut)B(t)dt is finite for each u>0. This bound and the tails of phi justify the double transform, the integration by parts in LT and the truncation of the exponential test. At the chosen u,
 
     integral integral exp[u(t+s)]A_[Phi_M](t,s)dt ds
                        =Z_[Phi_M](u)Z_[Phi_M]'(u)/u<0.
 
-Luego A_[Phi_M] no es PSD para ningún M>=1, y la continuación analítica excluye PSD en cualquier intervalo abierto. Esto amplía también a TODO M el descarte de reparaciones que mantengan intacta una cola derecha del prefijo bruto. El alcance de Q_M en§8.2 sigue siendo eventual; no se cambia por esta prueba.
+Hence A_[Phi_M] is not PSD for any M>=1, and analytic continuation excludes PSD on any open interval. This also extends to ALL M the discard of repairs that keep a right tail of the raw prefix intact. The scope of Q_M in §8.2 is still eventual; it is not changed by this proof.
 
-### 8.2. Añadir la cola continua mejora la convergencia, pero no restaura PSD
+### 8.2. Adding the continuous tail improves convergence, but does not restore PSD
 
-**PROVED, revisión independiente root/casos y cotejo mapa.** Se cambia el aproximante de§8.1: ahora
+**PROVED, independent review against cases and cross-check.** The approximant of §8.1 is changed: now
 
     Q_M(t)=Phi_M(t)+pi M³exp(5t/2)exp[-pi M²exp(2t)].
 
-El segundo término es exactamente integral_M^infinito Phi_n(t)dn, tratando n como variable real. No se presenta como nueva la operación Euler–Maclaurin. El resultado específico es que Q_M→Phi en L²((1+|t|)dt), pero su kernel temporal sigue sin ser PSD para todo M suficientemente grande. Se conservan los cruces de la corrección con el prefijo y con la Phi real.
+The second term is exactly integral_M^infinito Phi_n(t)dn, treating n as a real variable. The Euler–Maclaurin operation is not presented as new. The specific result is that Q_M→Phi in L²((1+|t|)dt), but its temporal kernel is still not PSD for all M sufficiently large. The crossings of the correction with the prefix and with the real Phi are kept.
 
-Poner E_M=Q_M-Phi y g_x(z)=z^(-1/2)h(x+log z). La identidad exacta de la cola es
+Set E_M=Q_M-Phi and g_x(z)=z^(-1/2)h(x+log z). The exact identity of the tail is
 
     E_M(x-log M)=sqrt(M)[integral_1^infinito g_x(z)dz
                            -(1/M)sum_(n>M)g_x(n/M)].
 
-La regla de trapecios con paso1/M, sumada sobre la semirrecta, da
+The trapezoidal rule with step 1/M, summed over the half-line, gives
 
     E_M(x-log M)=h(x)/(2sqrt(M))+R_M(x),
     |R_M(x)|<=G(x)/(8M^(3/2)),
     G(x)=integral_1^infinito |g_x''(z)|dz.              (TRAP)
 
-La cota elemental se obtiene integrando el resto contra el kernel cuadrático de cada celda, cuya altura es a lo sumo1/(8M²). Los bordes en infinito se anulan.
+The elementary bound is obtained by integrating the remainder against the quadratic kernel of each cell, whose height is at most 1/(8M²). The boundaries at infinity vanish.
 
-Para verificar que la cota sirve globalmente, escribir H(v)=v²(2pi v²-3)exp(-pi v²). Entonces g_x(z)=pi exp(x/2)H(exp(x)z), y
+To verify that the bound works globally, write H(v)=v²(2pi v²-3)exp(-pi v²). Then g_x(z)=pi exp(x/2)H(exp(x)z), and
 
     G(x)=pi exp(3x/2)integral_(exp x)^infinito |H''(v)|dv.
 
-Así G(x)<=C exp(3x/2) a izquierda y posee una cola doble exponencial a derecha. En particular h y G pertenecen a L²((1+|x|)dx). TRAP y el cambio t=x-log M dan la convergencia ponderada anunciada y
+Thus G(x)<=C exp(3x/2) on the left and has a doubly exponential tail on the right. In particular h and G belong to L²((1+|x|)dx). TRAP and the change t=x-log M give the announced weighted convergence and
 
     integral t E_M(t)^2dt
       =-[||h||²/(4M)]log M+O(1/M+log M/M²).           (ERR-MOM)
 
-Falta pagar los cruces, que no se eliminan por declarar pequeño E_M. Para cualquier alpha>0 existe C_alpha con |h(x)|<=C_alpha exp(-alpha x) para todo x: su cola derecha es doble exponencial y su cola izquierda decae. Las supercolas de Phi implican por ello
+The crossings still need to be paid; they are not eliminated by declaring E_M small. For any alpha>0 there exists C_alpha with |h(x)|<=C_alpha exp(-alpha x) for all x: its right tail is doubly exponential and its left tail decays. The supertails of Phi therefore imply
 
     integral |t|Phi(t)|h(t+log M)|dt=O_alpha(M^(-alpha)).
 
-La contribución cruzada del borde principal de TRAP es entonces O(M^(-3/2)), tomando alpha=1. Por Cauchy–Schwarz ponderada, la del resto es O(M^(-3/2)sqrt(1+log M)); se puede usar la cota más floja O(M^(-3/2)log M) para M>=2. Como Phi es par, integral tPhi(t)^2dt=0. Se obtiene
+The cross contribution of the leading boundary term of TRAP is then O(M^(-3/2)), taking alpha=1. By weighted Cauchy–Schwarz, that of the remainder is O(M^(-3/2)sqrt(1+log M)); the weaker bound O(M^(-3/2)log M) may be used for M>=2. Since Phi is even, integral tPhi(t)^2dt=0. One obtains
 
     integral t Q_M(t)^2dt
       =-[||h||²/(4M)]log M
            +O(1/M+log M/M^(3/2))<0                  (Q-MOM)
 
-para M suficientemente grande. No se necesita calcular un umbral.
+for M sufficiently large. No threshold needs to be computed.
 
-Cada Q_M es holomorfa en el strip y tiene momentos cuadrados absolutos finitos. El límite diagonal de su A es dos veces Q-MOM;§2.2 vuelve a excluir PSD en cualquier intervalo temporal abierto. A diferencia del prefijo bruto, aquí el defecto negativo tiende a0 y sí hay convergencia global de densidades: eso no prueba que la aproximación conserve el signo, ni decide el del límite. Se descarta exactamente esta primera corrección continua como fuente de aproximantes eventualmentePSD, no otras correcciones ni un control conjunto diferente. Sin datos nuevos ni modificaciones de papers.
+Each Q_M is holomorphic in the strip and has finite absolute square moments. The diagonal limit of its A is twice Q-MOM; §2.2 again excludes PSD on any open temporal interval. Unlike the raw prefix, here the negative defect tends to 0 and there is global convergence of densities: that does not prove that the approximation preserves the sign, nor does it decide that of the limit. Exactly this first continuous correction is discarded as a source of eventually PSD approximants, not other corrections nor a different joint control. No new data nor modifications of papers.
 
 
-### 8.3. Simetrizar el prefijo corregido tampoco restaura PSD
+### 8.3. Symmetrizing the corrected prefix does not restore PSD either
 
-**PROVED para TODO M>=1, revisión independiente root/casos y cotejo dirigido mapa.** Cambia otra hipótesis: S_M(t)=[Q_M(t)+Q_M(-t)]/2 es par, de modo que el momento impar usado en§8.2 ahora se anula exactamente. La prueba siguiente usa la forma cuadrática transformada completa, no vuelve a aplicar aquel falsificador. Ningún argumento sobre ceros es necesario.
+**PROVED for ALL M>=1, independent review against cases and targeted cross-check.** Another hypothesis changes: S_M(t)=[Q_M(t)+Q_M(-t)]/2 is even, so that the odd moment used in §8.2 now vanishes exactly. The following proof uses the full transformed quadratic form; it does not reapply that falsifier. No argument about zeros is necessary.
 
-Sea C=pi^(-1/4)Gamma(5/4)/4>0. Sustitución z=pi exp(2t) e integración por partes dan integral h=-C y la integral de la corrección continua de Q_M es2C sqrt(M). Así
+Let C=pi^(-1/4)Gamma(5/4)/4>0. The substitution z=pi exp(2t) and integration by parts give integral h=-C, and the integral of the continuous correction of Q_M is 2C sqrt(M). Thus
 
     integral S_M=integral Q_M
        =C[2sqrt(M)-sum_(n=1)^M n^(-1/2)]>=C>0,
 
-pues sum n^(-1/2)<=1+integral_1^M x^(-1/2)dx=2sqrt(M)-1. Por otro lado, expandir los exponentes en la cola izquierda da
+since sum n^(-1/2)<=1+integral_1^M x^(-1/2)dx=2sqrt(M)-1. On the other hand, expanding the exponents in the left tail gives
 
     Q_M(t)=-[pi M(3M+1)/2]exp(5t/2)+O_M(exp(9t/2)).
 
-Se usó exactamente sum_(n=1)^M n²=M(M+1)(2M+1)/6. La cola derecha de Q_M es doble exponencial. Por tanto
+Exactly sum_(n=1)^M n²=M(M+1)(2M+1)/6 was used. The right tail of Q_M is doubly exponential. Therefore
 
     S_M(t)=-D_M exp(-5|t|/2)+O_M(exp(-9|t|/2)),
     D_M=pi M(3M+1)/4>0.
 
-Su transformada Z_M(u)=integral exp(ut)S_M(t)dt existe para |Re u|<5/2, satisface Z_M(0)>0 y
+Its transform Z_M(u)=integral exp(ut)S_M(t)dt exists for |Re u|<5/2, satisfies Z_M(0)>0 and
 
     Z_M(u)=-D_M/(5/2-u)+O_M(1)→-infinito,
                    u→(5/2) desde abajo.
 
-Elegir el primer punto positivo donde Z_M alcanza el nivel Z_M(0)/2. En el intervalo anterior Z_M es positiva; el teorema del valor medio da un punto u>0 con Z_M(u)>0 y Z_M'(u)<0. Esto sólo usa un nivel estrictamente positivo, no información sobre ceros.
+Choose the first positive point where Z_M reaches the level Z_M(0)/2. On the preceding interval Z_M is positive; the mean value theorem gives a point u>0 with Z_M(u)>0 and Z_M'(u)<0. This only uses a strictly positive level, not information about zeros.
 
-Hay que justificar LT para estas colas, que no son gaussianas. Para cualquier S par con |S(t)|<=C0 exp(-beta|t|), la cancelación par en la integral de A sigue siendo válida aunque S tenga signo variable. Con tau=(t+s)/2 y d=(t-s)/2,
+LT must be justified for these tails, which are not Gaussian. For any even S with |S(t)|<=C0 exp(-beta|t|), the even cancellation in the integral of A remains valid even though S has variable sign. With tau=(t+s)/2 and d=(t-s)/2,
 
     |A_S(t,s)|<=C0² integral_|tau|^infinito
                        2sigma exp[-2beta max(sigma,|d|)]dsigma
        <=C_beta(1+t²+s²)exp[-beta(|t|+|s|)].
 
-Esto prueba convergencia absoluta e integración por partes en LT para |Re u|,|Re v|<beta. Aplicar beta=5/2 al punto anterior produce
+This proves absolute convergence and integration by parts in LT for |Re u|,|Re v|<beta. Applying beta=5/2 to the preceding point yields
 
     integral_R² exp[u(t+s)]A_[S_M](t,s)dt ds
                        =Z_M(u)Z_M'(u)/u<0.
 
-Truncar las exponenciales conserva el valor negativo para un corte suficientemente grande por convergencia dominada. Aproximar la integral compacta por sumas da una matriz finita negativa: A_[S_M] no es PSD. Su integral es conjuntamente holomorfa en los mismos strips (la cola en r es ahora exponencial, uniforme en compactos), por lo que§2.2 excluye PSD en cualquier intervalo temporal abierto.
+Truncating the exponentials preserves the negative value for a sufficiently large cutoff by dominated convergence. Approximating the compact integral by sums gives a finite negative matrix: A_[S_M] is not PSD. Its integral is jointly holomorphic on the same strips (the tail in r is now exponential, uniform on compacts), so §2.2 excludes PSD on any open temporal interval.
 
-La simetrización conserva la convergencia ponderada a Phi de§8.2 y elimina su momento impar, pero introduce colas negativas en ambos extremos; no proporciona aproximantes positivos, para ningún M>=1. No refuta A_[Phi], cuyas colas son positivas y doble exponenciales. Tampoco excluye otras correcciones que preserven simultáneamente paridad y estructura de colas. No hay nueva positividad ni ventana T.
-
-
-**Alcance común de§§8–8.3: reparar sólo la izquierda no cambia el test negativo.** Revisión root/casos. Si una densidad psi coincide con f en [R,infinito), entonces A_psi(t,s)=A_f(t,s) para t,s>=R, directamente porque r>=0 en la integral. El menor negativo de A_f en(R,R+1) se conserva exactamente. No se requiere analiticidad de psi, sólo que su integral exista en esos nodos. Por tanto reflejar o suavizar cerca del origen, manteniendo intacta una cola derecha de los aproximantes excluidos, no los repara: todos los modos, todos los S_M y todos los Phi_M están cubiertos (M>=1 en los dos últimos casos); para Q_M el resultado vale para M suficientemente grande. No se excluyen correcciones que alteren la cola derecha, aunque sean pequeñas; tampoco se conoce un tamaño fijo universal del menor negativo. Es una consecuencia de los resultados anteriores, no un nuevo mecanismo ni una obstrucción para la Phi completa.
+The symmetrization keeps the weighted convergence to Phi of §8.2 and eliminates its odd moment, but introduces negative tails at both ends; it does not provide positive approximants, for any M>=1. It does not refute A_[Phi], whose tails are positive and doubly exponential. Nor does it exclude other corrections simultaneously preserving parity and tail structure. There is no new positivity nor T window.
 
 
-**Extensión del descarte modal a cortes suaves de soporte infinito.** Revisión root/casos y cotejo mapa, sin antecedente literal encontrado. Sean w_n>=0, no todos nulos, con sum_n w_n n²<infinito, y phi_w(t)=sum_n w_n Phi_n(t). Esta condición incluye w_n=exp(-epsilon n²), epsilon>0, y los cortes finitos, pero NO los pesos reales completos w_n=1. El cambio frente al prefijo es permitir una suma infinita suavizada conservando todos sus cruces; no es calor en la variable temporal ni truncación de un producto Euler.
+**Common scope of §§8–8.3: repairing only the left does not change the negative test.** Review against cases. If a density psi coincides with f on [R,infinito), then A_psi(t,s)=A_f(t,s) for t,s>=R, directly because r>=0 in the integral. The negative minor of A_f in (R,R+1) is preserved exactly. Analyticity of psi is not required, only that its integral exist at those nodes. Therefore reflecting or smoothing near the origin, keeping a right tail of the excluded approximants intact, does not repair them: all modes, all S_M and all Phi_M are covered (M>=1 in the last two cases); for Q_M the result holds for M sufficiently large. Corrections that alter the right tail, even small ones, are not excluded; nor is a universal fixed size of the negative minor known. It is a consequence of the preceding results, not a new mechanism nor an obstruction for the full Phi.
 
-La cota global |h(x)|<=C exp(5x/2) controla la cola izquierda de phi_w por C exp(5t/2)sum w_n n². A derecha se absorbe el factor polinómico en exp(-pi n² exp(2t)), obteniendo C exp(5t/2)exp[-(pi/2)exp(2t)]sum w_n n². En substrips compactos del strip |Im t|<pi/4 se obtienen las mismas cotas con constantes positivas modificadas; los factores adicionales de las derivadas se absorben en la exponencial. Hay convergencia normal y el A asociado es conjuntamente holomorfo.
 
-Para u>0, Fubini absoluto da
+**Extension of the modal discard to smooth cutoffs of infinite support.** Review against cases and cross-check, no literal antecedent found. Let w_n>=0, not all zero, with sum_n w_n n²<infinito, and phi_w(t)=sum_n w_n Phi_n(t). This condition includes w_n=exp(-epsilon n²), epsilon>0, and the finite cutoffs, but NOT the full real weights w_n=1. The change with respect to the prefix is to allow a smoothed infinite sum keeping all its crossings; it is not heat in the temporal variable nor truncation of an Euler product.
+
+The global bound |h(x)|<=C exp(5x/2) controls the left tail of phi_w by C exp(5t/2)sum w_n n². On the right the polynomial factor is absorbed in exp(-pi n² exp(2t)), obtaining C exp(5t/2)exp[-(pi/2)exp(2t)]sum w_n n². On compact substrips of the strip |Im t|<pi/4 the same bounds are obtained with modified positive constants; the additional factors from derivatives are absorbed in the exponential. There is normal convergence and the associated A is jointly holomorphic.
+
+For u>0, absolute Fubini gives
 
     Z_[phi_w](u)=(u-1/2)H_w(u),
     H_w(u)=C(u)sum_n w_n n^(-u-1/2)>0,
 
-con C(u) como en el fortalecimiento de§8.1. H_w es C¹ cerca de1/2: el factor log n de la derivada queda dominado por la hipótesis sum w_n n²<infinito. Así Z<0 y Z'>0 inmediatamente a la izquierda de1/2. La cota B de§8.1 legitima LT y la truncación del test, dando un valor cuadrático negativo ZZ'/u. Por§2.2, A_[phi_w] no es PSD en ningún intervalo abierto.
+with C(u) as in the strengthening of §8.1. H_w is C¹ near 1/2: the factor log n of the derivative is dominated by the hypothesis sum w_n n²<infinito. Thus Z<0 and Z'>0 immediately to the left of 1/2. The bound B of §8.1 legitimizes LT and the truncation of the test, giving a negative quadratic value ZZ'/u. By §2.2, A_[phi_w] is not PSD on any open interval.
 
-Quedan excluidos estos cortes suaves como aproximantes positivos, aun cuando al retirar la regularización converjan en compactos a Phi. No se extiende la factorización/intercambio al peso w_n=1 bajo estas hipótesis; tampoco se descartan regularizaciones diferentes que conserven la compensación completa. No hay resultado negativo sobre A_[Phi] ni nueva ventanaT.
+These smooth cutoffs are excluded as positive approximants, even when, on removing the regularization, they converge on compacts to Phi. The factorization/exchange is not extended to the weight w_n=1 under these hypotheses; nor are different regularizations that keep the full compensation discarded. There is no negative result on A_[Phi] nor a new T window.
 
-### 8.4. Un momento exponencial cancelado excluye PSD; cortes del producto de Jacobi
+### 8.4. A cancelled exponential moment excludes PSD; cutoffs of the Jacobi product
 
-**PROVED, clase y momento explícitos.** Revisión matemática independiente root/casos; cotejo dirigido de antecedentes por mapa. Los apartados anteriores usan signos de pesos o coeficientes concretos. Aquí se permite una densidad firmada y se aísla el motivo común: un momento exponencial nulo. La aplicación a polinomios en exp(-pi exp(2t)) incluye coeficientes firmados y los cortes del producto de Jacobi, no sólo prefijos de modos cuadrados. No se afirma prioridad mundial ni se recurre a información externa sobre el signo objetivo.
+**PROVED, explicit class and moment.** Independent mathematical review against cases; targeted cross-check of antecedents. The preceding subsections use signs of concrete weights or coefficients. Here a signed density is allowed and the common reason is isolated: a vanishing exponential moment. The application to polynomials in exp(-pi exp(2t)) includes signed coefficients and the cutoffs of the Jacobi product, not only prefixes of square modes. No worldwide priority is claimed nor is external information about the target sign used.
 
-**Lema.** Sea phi real, continua y no idénticamente nula. Suponga, para alguna eta>0, decaimiento O(exp(eta t)) a izquierda y decaimiento más rápido que cualquier exponencial a derecha. Sea c>0 tal que
+**Lemma.** Let phi be real, continuous and not identically zero. Suppose, for some eta>0, decay O(exp(eta t)) on the left and decay faster than any exponential on the right. Let c>0 be such that
 
     Z(c)=integral_R exp(ct)phi(t)dt=0.                 (CANCEL)
 
-Entonces A_phi(t,s)=integral_0^infinito(t+s+2r)phi(t+r)phi(s+r)dr no es PSD en toda la recta. Si además A_phi es conjuntamente holomorfa en un producto de strips de anchura positiva, no es PSD en ningún intervalo real abierto no vacío.
+Then A_phi(t,s)=integral_0^infinito(t+s+2r)phi(t+r)phi(s+r)dr is not PSD on the whole line. If moreover A_phi is jointly holomorphic on a product of strips of positive width, it is not PSD on any nonempty open real interval.
 
-**Prueba.** Para u,v>0, hacer x=t+r,y=s+r dentro de la integral triple da, con convergencia absoluta,
+**Proof.** For u,v>0, setting x=t+r,y=s+r inside the triple integral gives, with absolute convergence,
 
     integral_R² exp(ut+vs)A_phi(t,s)dt ds
        =[Z'(u)Z(v)+Z(u)Z'(v)]/(u+v).                 (LT-CANCEL)
 
-En efecto, el valor absoluto antes de integrar en r está acotado por exp(-(u+v)r) multiplicado por
+Indeed, the absolute value before integrating in r is bounded by exp(-(u+v)r) times
 
     (integral |x|exp(ux)|phi(x)|dx)(integral exp(vy)|phi(y)|dy)
       +(integral exp(ux)|phi(x)|dx)(integral |y|exp(vy)|phi(y)|dy),
 
-que es finito por las colas supuestas. No se necesita paridad ni signo puntual de phi. Si A_phi fuese PSD, aproximar las integrales compactas por sumas finitas y retirar el corte mediante esta cota daría Z(u)Z'(u)/u>=0 para todo u>0. Así (Z(u)²)' >=0. Como Z(c)²=0, necesariamente Z(u)=0 para todo 0<u<c.
+which is finite by the assumed tails. Neither parity nor pointwise sign of phi is needed. If A_phi were PSD, approximating the compact integrals by finite sums and removing the cutoff via this bound would give Z(u)Z'(u)/u>=0 for all u>0. Thus (Z(u)²)' >=0. Since Z(c)²=0, necessarily Z(u)=0 for all 0<u<c.
 
-Esto fuerza phi=0: Z es holomorfa en Re u>-eta por las mismas cotas; la identidad en un intervalo implica identidad en ese semiplano, y en una recta vertical interior es la transformada de Fourier de una densidad integrable exp(u0 t)phi(t). Su unicidad da la contradicción. De manera equivalente, algún u0 en(0,c) satisface Z(u0)²>0, y el valor medio aplicado entre u0 y c produce un u con Z(u)Z'(u)<0. LT-CANCEL y truncación dan un test cuadrático negativo; sumas de Riemann dan un bloque finito negativo. La última afirmación del lema sigue de la continuación analítica PSD de§2.2.
+This forces phi=0: Z is holomorphic in Re u>-eta by the same bounds; the identity on an interval implies identity on that half-plane, and on an interior vertical line it is the Fourier transform of an integrable density exp(u0 t)phi(t). Its uniqueness gives the contradiction. Equivalently, some u0 in (0,c) satisfies Z(u0)²>0, and the mean value applied between u0 and c produces a u with Z(u)Z'(u)<0. LT-CANCEL and truncation give a negative quadratic test; Riemann sums give a finite negative block. The last statement of the lemma follows from the analytic PSD continuation of §2.2.
 
-**Aplicación polinómica.** Sea P un polinomio real no constante, q(t)=exp(-pi exp(2t)), y defina
+**Polynomial application.** Let P be a nonconstant real polynomial, q(t)=exp(-pi exp(2t)), and define
 
     F_P(t)=exp(t/2)P(q(t)),
     phi_P(t)=(D²-1/4)F_P(t)/4.
 
-Si P(q)=p0+sum_(k>=1)p_k q^k, una diferenciación exacta da
+If P(q)=p0+sum_(k>=1)p_k q^k, an exact differentiation gives
 
     phi_P=(1/2)sum_(k>=1)p_k Phi_[sqrt(k)],
     Phi_[b](t)=pi b² exp(5t/2)(2pi b²exp(2t)-3)
                   exp(-pi b²exp(2t)).
 
-El término p0 desaparece; la escala menor con coeficiente no nulo domina la cola derecha, así que phi_P no es idénticamente nula. La cola izquierda es O(exp(5t/2)), la derecha es superexponencial y A_phiP es holomorfa en |Im t|,|Im s|<pi/4. El momento requerido se obtiene conservando los bordes:
+The term p0 disappears; the smallest scale with nonzero coefficient dominates the right tail, so phi_P is not identically zero. The left tail is O(exp(5t/2)), the right one is superexponential and A_phiP is holomorphic in |Im t|,|Im s|<pi/4. The required moment is obtained keeping the boundaries:
 
     integral_R exp(t/2)phi_P(t)dt
       =(1/4)[exp(t/2)(F_P'(t)-F_P(t)/2)]_-infinito^infinito=0.
 
-En ambos extremos el borde es -2pi exp(3t)q(t)P'(q(t)) y tiende a0. No se presupone integrabilidad de F_P, que puede crecer a derecha. El lema con c=1/2 prueba que A_phiP falla PSD en cualquier intervalo real abierto.
+At both ends the boundary is -2pi exp(3t)q(t)P'(q(t)) and tends to 0. Integrability of F_P, which may grow on the right, is not presupposed. The lemma with c=1/2 proves that A_phiP fails PSD on any open real interval.
 
-**Producto de Jacobi.** La identidad clásica theta_3(0,q)=prod_(n>=1)(1-q^(2n))(1+q^(2n-1))² está en [DLMF20.5.3](https://dlmf.nist.gov/20.5.E3). Para cada J>=1, su corte
+**Jacobi product.** The classical identity theta_3(0,q)=prod_(n>=1)(1-q^(2n))(1+q^(2n-1))² is in [DLMF20.5.3](https://dlmf.nist.gov/20.5.E3). For each J>=1, its cutoff
 
     P_J(q)=prod_(n=1)^J(1-q^(2n))(1+q^(2n-1))²
 
-es un polinomio real no constante, por lo que el resultado anterior se aplica. Incluye TODOS los cruces de sus coeficientes firmados, aunque cada factor del producto sea positivo para0<q<1. J=0 produce la densidad nula y queda fuera del enunciado.
+is a nonconstant real polynomial, so the preceding result applies. It includes ALL crossings of its signed coefficients, although each factor of the product is positive for 0<q<1. J=0 produces the zero density and is outside the statement.
 
-**Alcance.** No se puede pasar CANCEL al producto infinito mediante convergencia en compactos: para la Phi completa, positiva, integral exp(t/2)Phi(t)dt es estrictamente positiva. El descarte no es una refutación de su núcleo ni de una reorganización que conserve el momento completo. Sí impide usar estos cortes polinómicos como aproximantes PSD. No se ha obtenido una desigualdad para el producto completo, una nueva ventanaT ni una prueba global; papers intactos.
+**Scope.** CANCEL cannot be passed to the infinite product via convergence on compacts: for the full, positive Phi, integral exp(t/2)Phi(t)dt is strictly positive. The discard is not a refutation of its kernel nor of a reorganization keeping the full moment. It does prevent using these polynomial cutoffs as PSD approximants. No inequality for the full product, new T window or global proof has been obtained; papers untouched.
 
-### 8.5. Simetrizar los cortes de Jacobi: corolario del criterio de pares
+### 8.5. Symmetrizing the Jacobi cutoffs: corollary of the pair criterion
 
-**PROVED para todo J>=1, revisión root/casos y cotejo mapa.** El criterio de pares procede de CONE001§3; no se presenta como principio nuevo. La aplicación siguiente no apareció en las fuentes cotejadas. A diferencia de§8.4 se restaura la paridad; a diferencia de§8.3 la cola resultante es POSITIVA y el test negativo requiere dos nodos, no una diagonal negativa.
+**PROVED for all J>=1, review against cases and cross-check.** The pair criterion comes from CONE001§3; it is not presented as a new principle. The following application did not appear in the cross-checked sources. Unlike §8.4 parity is restored; unlike §8.3 the resulting tail is POSITIVE and the negative test requires two nodes, not a negative diagonal.
 
-Con P_J y phi_PJ de§8.4, sea S_J(t)=[phi_PJ(t)+phi_PJ(-t)]/2. Al tender q a1 desde abajo,
+With P_J and phi_PJ from §8.4, let S_J(t)=[phi_PJ(t)+phi_PJ(-t)]/2. As q tends to 1 from below,
 
     P_J(q)=8^J J!(1-q)^J[1+O(1-q)].
 
-Así, para beta=2J+1/2 y A_J=8^J J!pi^J, la cola izquierda de F_PJ es A_J exp(beta t)[1+O(exp(2t))]. Diferenciar esta expansión convergente y usar la supercola derecha da
+Thus, for beta=2J+1/2 and A_J=8^J J!pi^J, the left tail of F_PJ is A_J exp(beta t)[1+O(exp(2t))]. Differentiating this convergent expansion and using the right supertail gives
 
     S_J(t)=D_J exp(-beta|t|)+O(exp(-(beta+2)|t|)),
     D_J=A_J(beta²-1/4)/8>0.                          (SJ-TAIL)
 
-En particular, para u<beta próximo a beta, la transformada Z de S_J satisface
+In particular, for u<beta close to beta, the transform Z of S_J satisfies
 
     Z(u)=D_J/(beta-u)+O(1),
     Z'(u)=D_J/(beta-u)²+O(1),
     M(u)=Z'(u)/Z(u)=1/(beta-u)+O(1).
 
-Los restos y sus derivadas provienen de integrales convergentes en una vecindad de beta después de separar la cola principal. Z(u)>0 en ese tramo. Para u1=beta-epsilon y u2=beta-2epsilon, ambos positivos si epsilon es suficientemente pequeña, el kernel K(u,v)=(M(u)+M(v))/(u+v) cumple
+The remainders and their derivatives come from integrals convergent in a neighbourhood of beta after separating the leading tail. Z(u)>0 on that stretch. For u1=beta-epsilon and u2=beta-2epsilon, both positive if epsilon is sufficiently small, the kernel K(u,v)=(M(u)+M(v))/(u+v) satisfies
 
     epsilon [K(ui,uj)] -> (1/(2beta)) [[2,3/2],[3/2,1]],
     epsilon² det[K(ui,uj)] -> -1/(16beta²)<0.
 
-Este cálculo hace explícito el fallo del criterio de dos puntos de001. LT-CANCEL se justifica aquí por los momentos absolutos finitos para 0<u,v<beta; la misma sustitución y cota triple de§8.4 son válidas en ese intervalo. Multiplicar la matriz K por los factores positivos Z(ui)Z(uj) conserva el signo negativo del determinante. Truncar los tests exponenciales y aproximar por sumas finitas produce un bloque negativo de A_[S_J].
+This computation makes explicit the failure of the two-point criterion of 001. LT-CANCEL is justified here by the finite absolute moments for 0<u,v<beta; the same substitution and triple bound of §8.4 are valid on that interval. Multiplying the matrix K by the positive factors Z(ui)Z(uj) preserves the negative sign of the determinant. Truncating the exponential tests and approximating by finite sums produces a negative block of A_[S_J].
 
-S_J es holomorfa en |Im t|<pi/4. La cola en la integral de A_[S_J] decae exponencialmente en r, uniformemente en compactos del producto de strips, por(SJ-TAIL) y las expresiones finitas de§8.4. Por§2.2, A_[S_J] no es PSD en ningún intervalo real abierto no vacío.
+S_J is holomorphic in |Im t|<pi/4. The tail in the integral of A_[S_J] decays exponentially in r, uniformly on compacts of the product of strips, by (SJ-TAIL) and the finite expressions of §8.4. By §2.2, A_[S_J] is not PSD on any nonempty open real interval.
 
-La conclusión excluye esta simetrización para todos J>=1. No se afirma positividad puntual global de S_J; sólo su cola positiva, suficiente para el argumento. No afecta a la Phi completa, de supercola, ni a reparaciones que cambien estas colas. Sin cómputos nuevos, ampliaciónT o cambios en papers.
+The conclusion excludes this symmetrization for all J>=1. Global pointwise positivity of S_J is not claimed; only its positive tail, sufficient for the argument. It does not affect the full Phi, with supertail, nor repairs that change these tails. No new computations, T enlargement or changes to papers.
 
-### 8.6. Pesos n^(-delta): incluso una amortiguación arbitrariamente débil falla
+### 8.6. Weights n^(-delta): even an arbitrarily weak damping fails
 
-**PROVED para todo delta real distinto de0, revisión root/casos y deduplicación dirigida mapa.** Se conserva la suma infinita completa y todos sus cruces:
+**PROVED for all real delta different from 0, review against cases and targeted deduplication.** The full infinite sum and all its crossings are kept:
 
     phi_delta(t)=sum_(n>=1)n^(-delta)Phi_n(t).
 
-El addendum de cortes suaves anterior sólo cubría esta familia para delta>3 mediante sum w_n n²<infinito. Aquí se elimina esa restricción, incluidos delta positivos arbitrariamente pequeños y delta negativos. No se asume paridad de phi_delta ni una cota gaussiana a izquierda; esas hipótesis no están disponibles en esta deformación.
+The preceding addendum on smooth cutoffs only covered this family for delta>3 via sum w_n n²<infinito. Here that restriction is removed, including arbitrarily small positive delta and negative delta. Neither parity of phi_delta nor a Gaussian bound on the left is assumed; those hypotheses are not available in this deformation.
 
-**Transformada en su dominio absoluto.** Con h de§8 y Phi_n(t)=n^(-1/2)h(t+log n), sustitución y Fubini absoluto dan
+**Transform on its absolute domain.** With h of §8 and Phi_n(t)=n^(-1/2)h(t+log n), substitution and absolute Fubini give
 
     Z_delta(u)=C(u)(u-1/2)sum_(n>=1)n^(-u-1/2-delta),
     C(u)=(1/2)pi^(-u/2-1/4)Gamma(u/2+5/4),
     u>max(-5/2,1/2-delta).                            (DELTA-LT)
 
-La integral absoluta del átomo h converge para u>-5/2; tras escalar, la serie absoluta tiene exactamente el peso n^(-u-1/2-delta). Para el primer momento absoluto se añade como mucho un factor 1+log n, que también suma estrictamente dentro del dominio. C(u)>0 para u>0. Por tanto la identidad LT-CANCEL de§8.4, demostrada por Fubini en la integral triple, es válida aquí para
+The absolute integral of the atom h converges for u>-5/2; after scaling, the absolute series has exactly the weight n^(-u-1/2-delta). For the first absolute moment at most a factor 1+log n is added, which also sums strictly inside the domain. C(u)>0 for u>0. Therefore the identity LT-CANCEL of §8.4, proved by Fubini in the triple integral, is valid here for
 
     u,v>max(0,1/2-delta).
 
-No se aplica el lema de§8.4 fuera de sus hipótesis de cola: se usa directamente su identidad integral, con los momentos absolutos que acabamos de justificar.
+The lemma of §8.4 is not applied outside its tail hypotheses: its integral identity is used directly, with the absolute moments just justified.
 
-**Caso delta>0.** Cerca de u=1/2, H_delta(u)=C(u)sum n^(-u-1/2-delta) es positiva y C¹. Como Z_delta=(u-1/2)H_delta, hay puntos u<1/2 dentro del dominio donde Z_delta<0 y Z_delta'>0. Así Z_delta Z_delta'/u<0.
+**Case delta>0.** Near u=1/2, H_delta(u)=C(u)sum n^(-u-1/2-delta) is positive and C¹. Since Z_delta=(u-1/2)H_delta, there are points u<1/2 inside the domain where Z_delta<0 and Z_delta'>0. Thus Z_delta Z_delta'/u<0.
 
-**Caso delta<0.** Poner c=1/2-delta>1/2. Para p>1 próximo a1,
+**Case delta<0.** Set c=1/2-delta>1/2. For p>1 close to 1,
 
     sum_(n>=1)n^(-p)=1/(p-1)+R(p),
 
-con R y R' acotadas cerca de1. Esto se prueba sin información adicional sobre la serie: restar sum_n integral_n^(n+1)x^(-p)dx; la serie de diferencias y su derivada convergen uniformemente en una vecindad de p=1, por cotas O((1+log n)n^(-p-1)). Insertar p=u+1/2+delta en(DELTA-LT) da, cuando u baja a c desde arriba,
+with R and R' bounded near 1. This is proved without additional information about the series: subtract sum_n integral_n^(n+1)x^(-p)dx; the series of differences and its derivative converge uniformly in a neighbourhood of p=1, by bounds O((1+log n)n^(-p-1)). Inserting p=u+1/2+delta into (DELTA-LT) gives, as u decreases to c from above,
 
     Z_delta(u)=D/(u-c)+O(1),
     Z_delta'(u)=-D/(u-c)²+O(1),
     D=C(c)(-delta)>0.
 
-De nuevo Z_delta Z_delta'/u<0 para u suficientemente próximo a c. El resto derivado es acotado porque C es suave y R es C¹; se conserva el término constante que resulta de expandir C(u)(u-1/2).
+Again Z_delta Z_delta'/u<0 for u sufficiently close to c. The differentiated remainder is bounded because C is smooth and R is C¹; the constant term resulting from expanding C(u)(u-1/2) is kept.
 
-**Del test al kernel local.** En ambos casos LT da un test exponencial negativo para A_[phi_delta]. Convergencia absoluta permite truncarlo y pasar a una matriz finita negativa. La serie modal converge normalmente en compactos de |Im t|<pi/4 para cualquier delta real; su cola derecha es superexponencial uniformemente en esos compactos, pues exp(-b n²exp(2r)) absorbe cualquier potencia fija de n. La integral de A es conjuntamente holomorfa en el producto de strips. Por§2.2, A_[phi_delta] no es PSD en ningún intervalo real abierto no vacío.
+**From the test to the local kernel.** In both cases LT gives a negative exponential test for A_[phi_delta]. Absolute convergence allows truncating it and passing to a finite negative matrix. The modal series converges normally on compacts of |Im t|<pi/4 for any real delta; its right tail is superexponential uniformly on those compacts, since exp(-b n²exp(2r)) absorbs any fixed power of n. The integral of A is jointly holomorphic on the product of strips. By §2.2, A_[phi_delta] is not PSD on any nonempty open real interval.
 
-**Discontinuidad del momento y alcance.** Para todo delta>0, Z_delta(1/2)=0; para delta=0, la cancelación del factor u-1/2 con el término 1/(u-1/2) de la serie da Z_Phi(1/2)=C(1/2)=1/4. Aunque phi_delta converge a Phi en compactos cuando delta tiende a0,
+**Discontinuity of the moment and scope.** For all delta>0, Z_delta(1/2)=0; for delta=0, the cancellation of the factor u-1/2 with the term 1/(u-1/2) of the series gives Z_Phi(1/2)=C(1/2)=1/4. Although phi_delta converges to Phi on compacts as delta tends to 0,
 
     integral_R exp(t/2)|phi_delta(t)-Phi(t)|dt>=1/4
 
-para todo delta>0. Por tanto convergencia local y amortiguación débil de cada modo no conservan este momento. El caso delta=0 queda completamente fuera del descarte. No se prueba signo negativo de A_[Phi] o W, ni se excluyen otras regularizaciones que mantengan la compensación completa. No hay nuevos cálculos, coberturaT o modificaciones de papers.
+for all delta>0. Therefore local convergence and weak damping of each mode do not preserve this moment. The case delta=0 is completely outside the discard. No negative sign of A_[Phi] or W is proved, nor are other regularizations keeping the full compensation excluded. There are no new computations, T coverage or modifications of papers.
 
-### 8.7. Perturbaciones positivas, pares y analíticas con error relativo arbitrariamente pequeño
+### 8.7. Positive, even and analytic perturbations with arbitrarily small relative error
 
-**PROVED, root/casos/theta_joint; cotejo dirigido mapa (2026-11-05).** Para todo epsilon>0 existe una densidad psi estrictamente positiva, par y holomorfa en |Im t|<pi/4, tal que
+**PROVED, cases/theta_joint; targeted cross-check (2026-11-05).** For every epsilon>0 there exists a strictly positive density psi, even and holomorphic in |Im t|<pi/4, such that
 
     sup_(t real) |psi(t)/Phi(t)-1| < epsilon,
     psi(t)/Phi(t) -> 1 cuando |t| -> infinito,
 
-pero A_psi NO es PSD. De hecho falla PSD en todo intervalo real abierto no vacío. Se conservan las supercolas reales de Phi y cualquier número finito de términos de su expansión relativa en exp(-2|t|). No se conservan los momentos exactamente ni la estructura aritmética modal. Esto no decide el signo de A_Phi: demuestra que la cercanía relativa de densidades, incluso en esta clase regular, no garantiza el signo del kernel perturbado.
+but A_psi is NOT PSD. In fact PSD fails on every nonempty open real interval. The real supertails of Phi and any finite number of terms of its relative expansion in exp(-2|t|) are kept. The moments are not kept exactly nor is the modal arithmetic structure. This does not decide the sign of A_Phi: it shows that relative closeness of densities, even in this regular class, does not guarantee the sign of the perturbed kernel.
 
-**Antecedente y diferencia.** §§8.1–8.3 ya descartan los prefijos Phi_M y establecen localidad de cola, pero sus aproximantes globales anteriores perdían positividad, paridad o las colas. La construcción siguiente conserva positividad y paridad, obtiene error RELATIVO uniforme y recupera analiticidad por mollificación de ese error, no de la densidad. La convolución aquí no se usa como operación preservante de signo.
+**Antecedent and difference.** §§8.1–8.3 already discard the prefixes Phi_M and establish tail locality, but their previous global approximants lost positivity, parity or the tails. The following construction keeps positivity and parity, obtains uniform RELATIVE error and recovers analyticity by mollifying that error, not the density. Convolution is not used here as a sign-preserving operation.
 
-**1. Reparación suave positiva.** Fijar chi par C∞, 0<=chi<=1, igual a0 en |t|<=1/2 y a1 en |t|>=1. Para t>=0, todos los modos Phi_n(t) son positivos. Con y=pi exp(2t)>=pi>3,
+**1. Smooth positive repair.** Fix chi even C∞, 0<=chi<=1, equal to 0 on |t|<=1/2 and to 1 on |t|>=1. For t>=0, all modes Phi_n(t) are positive. With y=pi exp(2t)>=pi>3,
 
     Phi_n(t)/Phi_1(t)
       = n²(2n²y-3)/(2y-3) exp[-(n²-1)y]
       <=2n^4 exp[-pi(n²-1)].
 
-Poner h_M(t)=chi(t) sum_(n>M)Phi_n(|t|)/Phi(t) y psi_M=Phi(1-h_M). Cerca de0 h_M es idénticamente cero, de modo que la reflexión no introduce pérdida de suavidad. Entonces h_M es par, suave, integrable y
+Set h_M(t)=chi(t) sum_(n>M)Phi_n(|t|)/Phi(t) and psi_M=Phi(1-h_M). Near 0 h_M is identically zero, so the reflection introduces no loss of smoothness. Then h_M is even, smooth, integrable and
 
     0<=h_M<=epsilon_M:=2 sum_(n>M)n^4 exp[-pi(n²-1)]
        <=4(M+1)^4 exp[-pi((M+1)²-1)] ->0.
 
-La última cota usa que la razón sucesiva de los sumandos es a lo sumo16 exp(-3pi)<1/2. Para M grande, epsilon_M<1. La densidad psi_M es estrictamente positiva y par; coincide con Phi_M en t>=1. Por§8.1 y localidad de cola, hay nodos finitos t_i en(1,2) y coeficientes reales c_i con
+The last bound uses that the successive ratio of the summands is at most 16 exp(-3pi)<1/2. For M large, epsilon_M<1. The density psi_M is strictly positive and even; it coincides with Phi_M on t>=1. By §8.1 and tail locality, there are finite nodes t_i in (1,2) and real coefficients c_i with
 
     sum_ij c_i c_j A_(psi_M)(t_i,t_j)<0.
 
-El tamaño del bloque puede depender de M y no se estima.
+The block size may depend on M and is not estimated.
 
-**2. Recuperar analiticidad sin perder el bloque negativo.** Sea gamma_sigma la gaussiana normalizada de varianza sigma² y g_sigma=h_M*gamma_sigma. En la recta, g_sigma es par y0<=g_sigma<=epsilon_M. Además es entera, pues para z=x+iy,
+**2. Recovering analyticity without losing the negative block.** Let gamma_sigma be the normalized Gaussian of variance sigma² and g_sigma=h_M*gamma_sigma. On the line, g_sigma is even and 0<=g_sigma<=epsilon_M. Moreover it is entire, since for z=x+iy,
 
     |g_sigma(z)|<=epsilon_M exp[y²/(2sigma²)],
 
-y las derivadas de la gaussiana justifican diferenciación uniforme en compactos. Como h_M pertenece a C0(R), g_sigma->h_M uniformemente cuando sigma baja a0. Definir
+and the derivatives of the Gaussian justify uniform differentiation on compacts. Since h_M belongs to C0(R), g_sigma->h_M uniformly as sigma decreases to 0. Define
 
     psi_(M,sigma)=Phi(1-g_sigma).
 
-Es positiva, par y holomorfa en el strip de Phi, con error relativo<=epsilon_M. Fijar el bloque negativo del paso1 ANTES de elegir sigma. Si delta_sigma=||g_sigma-h_M||_infinito, para esos nodos positivos
+It is positive, even and holomorphic in the strip of Phi, with relative error <=epsilon_M. Fix the negative block of step 1 BEFORE choosing sigma. If delta_sigma=||g_sigma-h_M||_infinito, for those positive nodes
 
     |A_(psi_(M,sigma))(t_i,t_j)-A_(psi_M)(t_i,t_j)|
       <=2 delta_sigma A_Phi(t_i,t_j) ->0.
 
-Esto sólo usa positividad puntual de Phi y de t_i+t_j+2r; NO supone PSD de A_Phi. La forma cuadrática negativa persiste para sigma suficientemente pequeño. Escogiendo primero M grande y luego sigma pequeño se obtiene el enunciado.
+This only uses pointwise positivity of Phi and of t_i+t_j+2r; it does NOT assume PSD of A_Phi. The negative quadratic form persists for sigma sufficiently small. Choosing first M large and then sigma small one obtains the statement.
 
-**3. Colas y alcance.** Para cada B>0, la razón modal de h_M satisface h_M(t)<=C_B exp(-B|t|). La convolución gaussiana conserva esa cota con otra constante, por la desigualdad |t-r|>=|t|-|r| y la integrabilidad de exp(B|r|)gamma_sigma(r). Así g_sigma=o(exp(-N|t|)) para cada N fijo, y psi_(M,sigma)/Phi->1 con todas las correcciones exponenciales finitas declaradas. No se conservan los términos modales de escala doble exponencial. En substrips fijos g_sigma está acotada por la cota compleja anterior; por tanto la integral de A_(psi_(M,sigma)) es conjuntamente holomorfa como en§2.2. Ese principio de continuación transporta su fallo PSD a cualquier intervalo abierto.
+**3. Tails and scope.** For each B>0, the modal ratio of h_M satisfies h_M(t)<=C_B exp(-B|t|). Gaussian convolution preserves that bound with another constant, by the inequality |t-r|>=|t|-|r| and integrability of exp(B|r|)gamma_sigma(r). Thus g_sigma=o(exp(-N|t|)) for each fixed N, and psi_(M,sigma)/Phi->1 with all the declared finite exponential corrections. The modal terms of doubly exponential scale are not kept. On fixed substrips g_sigma is bounded by the preceding complex bound; therefore the integral of A_(psi_(M,sigma)) is jointly holomorphic as in §2.2. That continuation principle transports its PSD failure to any open interval.
 
-Al tomar M→infinito y escoger para cada M un sigma_M suficientemente pequeño como en el paso2, el error relativo también implica convergencia en L²(w(t)dt) para cada peso FIJO con integral w Phi² finita, incluidos pesos exponenciales y gaussianos. No se afirma cercanía uniforme en una norma de strip complejo o de todos los jets: las constantes complejas pueden crecer cuando sigma disminuye. Tampoco se imponen las desigualdades adicionales073/077/112 ni momentos exactos. El resultado excluye una garantía de positividad basada únicamente en error relativo pequeño, paridad, positividad de la densidad y estas colas. No excluye una comparación firmada en norma de formas ni un uso de la estructura theta exacta. Sin nuevas evaluaciones numéricas, signo W/T ni modificaciones de papers.
+Taking M→infinito and choosing for each M a sufficiently small sigma_M as in step 2, the relative error also implies convergence in L²(w(t)dt) for each FIXED weight with integral w Phi² finite, including exponential and Gaussian weights. Uniform closeness in a complex-strip norm or in all jets is not claimed: the complex constants may grow as sigma decreases. Nor are the additional inequalities 073/077/112 or exact moments imposed. The result excludes a positivity guarantee based solely on small relative error, parity, positivity of the density and these tails. It does not exclude a signed comparison in form norm nor a use of the exact theta structure. No new numerical evaluations, W/T sign or modifications of papers.
 
-### 8.8. Se puede conservar cualquier familia finita de momentos independientes
+### 8.8. Any finite family of independent moments can be preserved
 
-**PROVED, construcción root y revisión independiente casos; cotejo dirigido mapa (2026-11-05).** Se fortalece§8.7: fijar pesos reales pares continuos w_1,...,w_d, linealmente independientes al restringirlos a(-1,1), tales que integral Phi|w_i| sea finita. Para todo epsilon>0 existe psi con todas las propiedades de§8.7 y A_psi no PSD, que además cumple EXACTAMENTE
+**PROVED, construction and independent review against cases; targeted cross-check (2026-11-05).** §8.7 is strengthened: fix real even continuous weights w_1,...,w_d, linearly independent when restricted to (-1,1), such that integral Phi|w_i| is finite. For every epsilon>0 there exists psi with all the properties of §8.7 and A_psi not PSD, which moreover satisfies EXACTLY
 
     integral_R w_i(t)psi(t)dt = integral_R w_i(t)Phi(t)dt, i=1,...,d.
 
-Los pesos y su número se fijan ANTES de elegir el aproximante. Las constantes de construcción dependen de esa familia. Por ejemplo se pueden preservar normalización, una lista finita de momentos polinomiales pares y valores/derivadas de la transformada en una lista finita de parámetros, tomando una base de los pesos analíticos correspondientes. No se exige ni se obtiene preservación de una familia infinita.
+The weights and their number are fixed BEFORE choosing the approximant. The construction constants depend on that family. For example one can preserve normalization, a finite list of even polynomial moments and values/derivatives of the transform at a finite list of parameters, taking a basis of the corresponding analytic weights. Preservation of an infinite family is neither required nor obtained.
 
-**1. Corrección suave sin alterar la cola que contiene el test negativo.** Definir L_i(f)=integral Phi(t)w_i(t)f(t)dt. Es un funcional continuo para la norma uniforme, con constante integral Phi|w_i|. Existen funciones pares suaves b_1,...,b_d, compactamente soportadas en(-1,1), para las cuales la matriz B_ij=L_i(b_j) es invertible. En efecto, por independencia se pueden elegir x_j en(0,1) con matriz [w_i(x_j)] invertible; si no, los vectores de evaluación generarían un subespacio propio y habría una combinación de los w_i idénticamente nula. Bumps pares alrededor de ±x_j, normalizados con Phi, aproximan esa matriz y conservan su invertibilidad.
+**1. Smooth correction without altering the tail containing the negative test.** Define L_i(f)=integral Phi(t)w_i(t)f(t)dt. It is a continuous functional for the uniform norm, with constant integral Phi|w_i|. There exist smooth even functions b_1,...,b_d, compactly supported in (-1,1), for which the matrix B_ij=L_i(b_j) is invertible. Indeed, by independence one can choose x_j in (0,1) with matrix [w_i(x_j)] invertible; otherwise, the evaluation vectors would generate a proper subspace and there would be a combination of the w_i identically zero. Even bumps around ±x_j, normalized with Phi, approximate that matrix and preserve its invertibility.
 
-Usar h_M de§8.7, d_(M,i)=L_i(h_M), a_M=B^(-1)d_M y
+Use h_M of §8.7, d_(M,i)=L_i(h_M), a_M=B^(-1)d_M and
 
     p_M=-h_M+sum_j a_(M,j)b_j.
 
-Entonces L_i(p_M)=0, ||p_M||_infinito<=C_w epsilon_M→0 y p_M=-h_M para |t|>=1. La densidad Phi(1+p_M) es positiva para M grande y coincide con Phi_M en t>=1. Tiene por tanto un bloque finito negativo de A, con nodos en(1,2). Elegir primero M de modo que ||p_M||<min(epsilon/4,1/4), y fijar ese bloque. La corrección es firmada; no se presupone que los a_j tengan un solo signo.
+Then L_i(p_M)=0, ||p_M||_infinito<=C_w epsilon_M→0 and p_M=-h_M for |t|>=1. The density Phi(1+p_M) is positive for M large and coincides with Phi_M on t>=1. It therefore has a finite negative block of A, with nodes in (1,2). First choose M so that ||p_M||<min(epsilon/4,1/4), and fix that block. The correction is signed; it is not presupposed that the a_j have a single sign.
 
-**2. Analiticidad y momentos exactos simultáneamente.** Mollificar por la misma gaussiana:
+**2. Analyticity and exact moments simultaneously.** Mollify by the same Gaussian:
 
     p_(M,sigma)=p_M*gamma_sigma,
     b_(j,sigma)=b_j*gamma_sigma,
     B_(sigma,ij)=L_i(b_(j,sigma)),
     r_(sigma,i)=L_i(p_(M,sigma)).
 
-La convergencia uniforme de las aproximaciones de la identidad y continuidad de L_i implican B_sigma→B y r_sigma→0. Para sigma pequeño B_sigma es invertible. Poner
+Uniform convergence of the approximations of the identity and continuity of L_i imply B_sigma→B and r_sigma→0. For small sigma B_sigma is invertible. Set
 
     c_sigma=-B_sigma^(-1)r_sigma,
     q_sigma=p_(M,sigma)+sum_j c_(sigma,j)b_(j,sigma),
     psi=Phi(1+q_sigma).
 
-Se tiene L_i(q_sigma)=0 EXACTAMENTE, c_sigma→0 y q_sigma→p_M uniformemente. Por tanto, al disminuir sigma, psi sigue siendo positiva y su error relativo es menor que epsilon. Para el bloque fijado, si ||p_M|| y ||q_sigma|| son <=1/2, la diferencia de entradas de A está acotada por 3||q_sigma-p_M||_infinito A_Phi(t_i,t_j); así persiste su forma cuadrática negativa. El factor2 de§8.7 no se reutiliza, pues ahora las correcciones pueden tener ambos signos. Las convoluciones son enteras y pares como en§8.7, incluso para p_M firmado usando su norma absoluta en las cotas. También decaen más rápido que cualquier exponencial fija, de modo que se conservan el cociente de colas y las expansiones relativas declaradas allí. La holomorfía de A y su fallo en cualquier intervalo se justifican como en§8.7.
+One has L_i(q_sigma)=0 EXACTLY, c_sigma→0 and q_sigma→p_M uniformly. Therefore, as sigma decreases, psi remains positive and its relative error is less than epsilon. For the fixed block, if ||p_M|| and ||q_sigma|| are <=1/2, the difference of entries of A is bounded by 3||q_sigma-p_M||_infinito A_Phi(t_i,t_j); thus its negative quadratic form persists. The factor 2 of §8.7 is not reused, since now the corrections can have both signs. The convolutions are entire and even as in §8.7, even for signed p_M using its absolute norm in the bounds. They also decay faster than any fixed exponential, so that the tail quotient and the relative expansions declared there are preserved. Holomorphy of A and its failure on any interval are justified as in §8.7.
 
-**Consecuencia para comprobaciones finitas del kernel.** Dados parámetros positivos distintos u_1,...,u_m, tomar como pesos cosh(u_i t) y t sinh(u_i t). Son funciones pares analíticas linealmente independientes: una combinación nula sería una suma de exponenciales con prefactores lineales; ordenar los u_i y enviar t a infinito elimina sucesivamente ambos coeficientes del mayor exponente. Para densidades pares estos momentos son precisamente Z(u_i) y Z'(u_i). Así psi puede tener EXACTAMENTE los mismos valores de
+**Consequence for finite checks of the kernel.** Given distinct positive parameters u_1,...,u_m, take as weights cosh(u_i t) and t sinh(u_i t). They are linearly independent even analytic functions: a vanishing combination would be a sum of exponentials with linear prefactors; ordering the u_i and sending t to infinity successively eliminates both coefficients of the largest exponent. For even densities these moments are precisely Z(u_i) and Z'(u_i). Thus psi can have EXACTLY the same values of
 
     K(u_i,u_j)=[Z'(u_i)/Z(u_i)+Z'(u_j)/Z(u_j)]/(u_i+u_j)
 
-que Phi en cualquier colección FINITA de bloques previamente elegidos, y sin embargo A_psi no ser PSD. Bajo las colas de§8.7, el puente§2.1 también implica fallo de K_psi en algún otro bloque. No se ha dado un contraejemplo a K_Phi. Este argumento por sí solo no garantiza preservar las familias infinitas de dos, tres o cuatro generadores. El control adicional de§8.9 sí conserva hasta cuatro en el dominio admisible.
+as Phi on any previously chosen FINITE collection of blocks, and yet A_psi fail to be PSD. Under the tails of §8.7, the bridge §2.1 also implies failure of K_psi on some other block. No counterexample to K_Phi has been given. This argument alone does not guarantee preserving the infinite families of two, three or four generators. The additional control of §8.9 does preserve up to four on the admissible domain.
 
-Esto va más allá del contramodelo abstracto de018 y de§8.7: aquí hay una densidad positiva, par y analítica arbitrariamente cercana a Phi con datos finitos exactos y colas compatibles. No se conserva la identidad theta completa, el peine aritmético ni todas las desigualdades estructurales073/077/112. No se concluye que todo método basado en identidades exactas sea imposible. Se excluye una garantía universal basada sólo en esos datos finitos, cercanía relativa y regularidad. Sin nuevos cálculos, signo W/T ni cambios en papers.
+This goes beyond the abstract countermodel of 018 and of §8.7: here there is a positive, even and analytic density arbitrarily close to Phi with exact finite data and compatible tails. The full theta identity, the arithmetic comb and all the structural inequalities 073/077/112 are not preserved. It is not concluded that every method based on exact identities is impossible. A universal guarantee based only on those finite data, relative closeness and regularity is excluded. No new computations, W/T sign or changes to papers.
 
-### 8.9. Estabilidad de TODOS los bloques admisibles de orden hasta cuatro
+### 8.9. Stability of ALL admissible blocks of order up to four
 
-**PROVED, construcción preservador/root, auditoría independiente casos y cotejo dirigido mapa (2026-11-05).** Se utilizan los resultados certificados084/085; no se ejecutaron nuevos cálculos. Definir
+**PROVED, construction (preserver), independent audit against cases and targeted cross-check (2026-11-05).** The certified results 084/085 are used; no new computations were run. Define
 
     ||h||_20=sup_(t real) exp(20|t|)|h(t)|.
 
-Existe delta_*>0 tal que toda densidad par positiva psi=Phi(1+h) con ||h||_20<delta_* tiene K_psi PD en TODOS los bloques de hasta cuatro nodos distintos u_i>1/2. Las repeticiones se agrupan y dan PSD. El umbral es existencial, no un nuevo valor certificado.
+There exists delta_*>0 such that every even positive density psi=Phi(1+h) with ||h||_20<delta_* has K_psi PD on ALL blocks of up to four distinct nodes u_i>1/2. Repetitions are grouped and give PSD. The threshold is existential, not a new certified value.
 
-La diferencia frente§8.8 es un control uniforme de los jets de Z que entran en los numeradores escalares085, incluso cuando los nodos confluyen o escapan. No se supone un margen uniforme de autovalores de las matrices.
+The difference from §8.8 is a uniform control of the jets of Z entering the scalar numerators 085, even when the nodes merge or escape. A uniform eigenvalue margin of the matrices is not assumed.
 
-**1. Error ponderado y jets.** Poner delta=||h||_20<=1/2 y Delta Z=Z_psi-Z_Phi. Para j<=4, usar |t|^j<=C_j exp(4|t|). Para u grande,
+**1. Weighted error and jets.** Set delta=||h||_20<=1/2 and Delta Z=Z_psi-Z_Phi. For j<=4, use |t|^j<=C_j exp(4|t|). For u large,
 
     |Delta Z^(j)(u)|
       <=C_j delta integral Phi(t)exp(ut-16|t|)dt
       <=C_j delta Z_Phi(u-16).
 
-La última desigualdad también vale para t<0. El lower M_Phi(s)>=(1/2)log s-C de084 implica, desde un U fijo suficientemente grande (puede elegirse U>256),
+The last inequality also holds for t<0. The lower bound M_Phi(s)>=(1/2)log s-C of 084 implies, from a fixed sufficiently large U (one may choose U>256),
 
     Z_Phi(u-16)/Z_Phi(u)
       =exp[-integral_(u-16)^u M_Phi(s)ds] <=C u^-8.
 
-Las fórmulas aritméticas084 de M y sus primeras tres derivadas dan Z_Phi^(j)/Z_Phi=O((1+log u)^j), j<=4, mediante las identidades de derivación exponencial. Además 1-delta<=Z_psi/Z_Phi<=1+delta. Aplicar las fórmulas de derivadas logarítmicas hasta orden4 da
+The arithmetic formulas 084 for M and its first three derivatives give Z_Phi^(j)/Z_Phi=O((1+log u)^j), j<=4, via the identities of exponential differentiation. Moreover 1-delta<=Z_psi/Z_Phi<=1+delta. Applying the formulas for logarithmic derivatives up to order 4 gives
 
     |M_psi^(k)-M_Phi^(k)|
        <=C delta u^-8(1+log u)^4, k=0,...,3.
 
-No se deriva una notación O: se estiman las expresiones algebraicas de los jets. Las constantes son independientes de h para delta<=1/2. En cada compacto u∈[1/2,U], la continuidad de los mismos jets, con cota lineal en delta, sigue de integrabilidad de Phi(t)|t|^j exp(U|t|).
+No O-notation is differentiated: the algebraic expressions of the jets are estimated. The constants are independent of h for delta<=1/2. On each compact u∈[1/2,U], continuity of the same jets, with a bound linear in delta, follows from integrability of Phi(t)|t|^j exp(U|t|).
 
-**2. Numeradores estrictos.** Para c=M, D=uM', E=u²M'', F=u³M''',085 define
+**2. Strict numerators.** For c=M, D=uM', E=u²M'', F=u³M''', 085 defines
 
     N_R=3c²+c(-6D-6E-2F)+3D²+6DE+2DF-3E²,
     N_S=3c²+c(6D+6E+2F)-9D²-6DE+2DF-3E².
 
-Son polinomios cuadráticos. El paso1 y c=O(log u), D,E,F=O(1) para Phi implican
+They are quadratic polynomials. Step 1 and c=O(log u), D,E,F=O(1) for Phi imply
 
     |Delta N_R|+|Delta N_S|
         <=C delta u^-5(1+log u)^5
 
-para u>=U.084 prueba N_R>1/4 y N_S>19/4 para Phi en u>=127.5. En [1/2,U],085 junto con084 da mínimos estrictamente positivos. Elegir delta_* suficientemente pequeño preserva ambos signos para TODO u>=1/2.
+for u>=U. 084 proves N_R>1/4 and N_S>19/4 for Phi on u>=127.5. On [1/2,U], 085 together with 084 gives strictly positive minima. Choosing delta_* sufficiently small preserves both signs for ALL u>=1/2.
 
-**3. Signos inferiores sin asumir073 para psi.** Para x=u², poner R=u/M_psi(u), S=uM_psi(u). Por positividad y paridad, M_psi(u)>0 para u>0. Las identidades084 dan
+**3. Lower signs without assuming 073 for psi.** For x=u², set R=u/M_psi(u), S=uM_psi(u). By positivity and parity, M_psi(u)>0 for u>0. The identities 084 give
 
     T_R=2R'R'''-3(R'')²=N_R/(16M_psi^4 u^6)>0,
     T_S=2S'S'''-3(S'')²=N_S/(16u^6)>0,
 
-con derivadas en x. Las asintóticas heredadas son M_psi=(1/2)log(u/(2pi))+O(1/u), uM_psi'→1/2 y u²M_psi''→-1/2. De ellas, R',S'>0 en la cola y R'',S''→0. T_f>0 impide f'=0, por lo que el signo positivo de la cola se conserva en todo x>=1/4. Entonces f'''>0; como f'' crece estrictamente hacia0, es negativa.
+with derivatives in x. The inherited asymptotics are M_psi=(1/2)log(u/(2pi))+O(1/u), uM_psi'→1/2 and u²M_psi''→-1/2. From them, R',S'>0 in the tail and R'',S''→0. T_f>0 prevents f'=0, so the positive sign of the tail is preserved on all x>=1/4. Then f'''>0; since f'' increases strictly towards 0, it is negative.
 
-No se invoca BASE073 ni se supone M_psi''<0. Los Pfaffianos de dos nodos083 son positivos por crecimiento; los de tres son -det[1,x_i,f(x_i)]/producto_(i<j)(u_i+u_j), positivos por concavidad estricta. Para cuatro aplica Rolle084 con f'>0,f''<0,T_f>0.083 y Sylvester dan todos los bloques PD de órdenes<=4.
+BASE073 is not invoked nor is M_psi''<0 assumed. The two-node Pfaffians 083 are positive by growth; the three-node ones are -det[1,x_i,f(x_i)]/producto_(i<j)(u_i+u_j), positive by strict concavity. For four, Rolle 084 applies with f'>0,f''<0,T_f>0. 083 and Sylvester give all blocks PD of orders <=4.
 
-**4. Aplicación a los aproximantes negativos.** En el soporte activo del cutoff de§8.7, |t|>=1/2. Para n>=2, la función exp[20t-pi(n²-1)exp(2t)] decrece desde1/2. Por tanto
+**4. Application to the negative approximants.** On the active support of the cutoff of §8.7, |t|>=1/2. For n>=2, the function exp[20t-pi(n²-1)exp(2t)] decreases from 1/2. Therefore
 
     ||h_M||_20
       <=2 exp(10) sum_(n>M)n^4 exp[-pi e(n²-1)] ->0.
 
-Las correcciones compactas de momentos de§8.8 tienen norma20 finita y coeficientes que tienden a0. La mollificación cumple
+The compact moment corrections of §8.8 have finite 20-norm and coefficients tending to 0. The mollification satisfies
 
     ||p*gamma_sigma||_20
       <=E exp(20|G_sigma|)||p||_20
       <=2 exp(200)||p||_20, 0<sigma<=1.
 
-También converge a p en esta norma cuando exp(20|t|)p(t) pertenece a C0: las traslaciones son continuas en norma20, y el mayorante exp(20|r|) controla la integral gaussiana. Tanto p_M como los bumps de§8.8 cumplen esa condición. Así las correcciones posteriores de momentos, con coeficientes que tienden a0, permiten q_sigma→p_M en norma20. Elegir primero M grande y luego sigma pequeño impone simultáneamente la vecindad delta_*, los momentos exactos, cualquier precisión relativa deseada y la persistencia del bloque negativo fijado.
+It also converges to p in this norm when exp(20|t|)p(t) belongs to C0: translations are continuous in the 20-norm, and the majorant exp(20|r|) controls the Gaussian integral. Both p_M and the bumps of §8.8 satisfy that condition. Thus the subsequent moment corrections, with coefficients tending to 0, allow q_sigma→p_M in 20-norm. Choosing first M large and then sigma small simultaneously imposes the neighbourhood delta_*, the exact moments, any desired relative precision and the persistence of the fixed negative block.
 
-**Conclusión.** Existen densidades positivas, pares y analíticas, arbitrariamente próximas a Phi en norma relativa ponderada20, que conservan TODOS los bloques admisibles de hasta cuatro generadores, cualquier familia finita de momentos de§8.8 y las colas de§8.7, pero cuyo A y K completo NO son PSD. Por§2.1 existe un bloque negativo de K con u>1/2; necesariamente tiene más de cuatro nodos distintos.
+**Conclusion.** There exist positive, even and analytic densities, arbitrarily close to Phi in the weighted relative norm 20, which preserve ALL admissible blocks of up to four generators, any finite family of moments of §8.8 and the tails of §8.7, but whose A and full K are NOT PSD. By §2.1 there exists a negative block of K with u>1/2; it necessarily has more than four distinct nodes.
 
-No se conserva la identidad aritmética theta, ni se refuta K_Phi. El argumento de§8.9 por sí solo no garantiza preservar TODOS los trece generadores de053; ese punto se trata en§8.10. No se afirma preservar las desigualdades077/112. Esta conclusión distingue claramente los cuatro órdenes continuos de la obligación global: ni esos órdenes, ni esta proximidad y los datos finitos exactos, la fuerzan por sí solos en la clase declarada. No es una ampliación del signo real ni de T. Papers intactos.
+The arithmetic theta identity is not preserved, nor is K_Phi refuted. The argument of §8.9 alone does not guarantee preserving ALL thirteen generators of 053; that point is treated in §8.10. Preserving the inequalities 077/112 is not claimed. This conclusion clearly distinguishes the four continuous orders from the global obligation: neither those orders, nor this proximity and the exact finite data, force it by themselves in the declared class. It is not an enlargement of the real sign nor of T. Papers untouched.
 
-### 8.10. Control relativo uniforme y conservación de los trece polos altos
+### 8.10. Uniform relative control and preservation of the thirteen high poles
 
-**PROVED, construcción root/preservador, auditoría independiente casos y cotejo dirigido de antecedentes mapa (2026-11-05).** El lema siguiente controla la forma relativa a la Gram de Cauchy, no sólo sus entradas. Evita un bound que degenere cuando los nodos confluyen o se separan mucho.
+**PROVED, construction (preserver), independent audit against cases and targeted cross-check of antecedents (2026-11-05).** The following lemma controls the form relative to the Cauchy Gram, not only its entries. It avoids a bound that degenerates when the nodes merge or separate a lot.
 
-**Lema de interpolación contractiva.** Fijar a>0 y n. Sea mu real suave en[a,infinito), tal que
+**Contractive interpolation lemma.** Fix a>0 and n. Let mu be real smooth on [a,infinito), such that
 
     F(z)=mu(a(1+z)/(1-z))
 
-se extienda a C^(n-1)[0,1]. Para cualquier conjunto de hasta n tasas u_i>=a y coeficientes complejos c_i,
+extends to C^(n-1)[0,1]. For any set of up to n rates u_i>=a and complex coefficients c_i,
 
     |sum_ij c_i conjugado(c_j)[mu(u_i)+mu(u_j)]/(u_i+u_j)|
       <=2 B_n sum_ij c_i conjugado(c_j)/(u_i+u_j),
     B_n=sum_(j=0)^(n-1) (2^j/j!) ||F^(j)||_infinito.
 
-La misma cota vale para los límites confluyentes, interpretados como derivadas paramétricas del kernel y exponenciales por polinomios.
+The same bound holds for the confluent limits, interpreted as parametric derivatives of the kernel and exponentials times polynomials.
 
-Prueba. En E=span{exp(-u_i r)}, con la norma L²(0,infinito), A=-D_r conserva E y
+Proof. On E=span{exp(-u_i r)}, with the L²(0,infinito) norm, A=-D_r preserves E and
 
     2 Re<Af,f>=|f(0)|²>=0.
 
-A+a es invertible. La identidad
+A+a is invertible. The identity
 
     ||(A+a)v||²-||(A-a)v||²=4a Re<Av,v>>=0
 
-hace Q=(A-a)(A+a)^(-1) una contracción. Sus autovalores z_i=(u_i-a)/(u_i+a) pertenecen a[0,1). Interpolar F mediante Newton: los coeficientes de diferencias divididas de orden j están acotados por ||F^(j)||/j!, y cada factor Q-z_iI tiene norma<=2. Por ello el polinomio interpolante P, de grado<=n-1, cumple ||P(Q)||<=B_n. Además P(Q)exp(-u_i r)=mu(u_i)exp(-u_i r). Para f=sum c_i exp(-u_i r), la forma de la izquierda es 2Re<P(Q)f,f>, mientras la Gram de la derecha es ||f||². Esto demuestra la cota sin suponer que mu sea holomorfa en toda una semirrecta compleja. Repetir nodos se trata por interpolación de Hermite o límites de diferencias finitas; la constante es uniforme y las tasas pueden confluir unilateralmente en a. Así quedan incluidos todos los numeradores de los espacios racionales correspondientes.
+makes Q=(A-a)(A+a)^(-1) a contraction. Its eigenvalues z_i=(u_i-a)/(u_i+a) belong to [0,1). Interpolate F via Newton: the divided-difference coefficients of order j are bounded by ||F^(j)||/j!, and each factor Q-z_iI has norm <=2. Hence the interpolating polynomial P, of degree <=n-1, satisfies ||P(Q)||<=B_n. Moreover P(Q)exp(-u_i r)=mu(u_i)exp(-u_i r). For f=sum c_i exp(-u_i r), the form on the left is 2Re<P(Q)f,f>, while the Gram on the right is ||f||². This proves the bound without assuming that mu is holomorphic on a whole complex half-line. Repeated nodes are treated by Hermite interpolation or limits of finite differences; the constant is uniform and the rates may merge one-sidedly at a. Thus all numerators of the corresponding rational spaces are included.
 
-**Aplicación a mu=M_psi-M_Phi.** Escribir psi=Phi(1+h), par positiva, y delta=||h||_100=sup exp(100|t|)|h(t)|<=1/2. Para j<=13, |t|^j<=C_j exp(4|t|), por lo que
+**Application to mu=M_psi-M_Phi.** Write psi=Phi(1+h), even positive, and delta=||h||_100=sup exp(100|t|)|h(t)|<=1/2. For j<=13, |t|^j<=C_j exp(4|t|), so that
 
     |Delta Z^(j)(u)|/Z_Phi(u)
       <=C_j delta Z_Phi(u-96)/Z_Phi(u)
       <=C_j' delta u^-48
 
-para u suficientemente grande. La segunda cota procede de integrar el lower M_Phi(s)>=(1/2)log s-C de084 sobre[u-96,u]. En compactos todos esos momentos tienen cotas lineales en delta.
+for u sufficiently large. The second bound comes from integrating the lower bound M_Phi(s)>=(1/2)log s-C of 084 over [u-96,u]. On compacts all those moments have bounds linear in delta.
 
-Para controlar los momentos normalizados de Phi sin necesitar fórmulas aritméticas de orden13, poner alpha=1/log u. El upper M_Phi(s)=O(log u) en[u-alpha,u+alpha] da
+To control the normalized moments of Phi without needing arithmetic formulas of order 13, set alpha=1/log u. The upper bound M_Phi(s)=O(log u) on [u-alpha,u+alpha] gives
 
     E_u exp(alpha|t|)
        <=[Z_Phi(u+alpha)+Z_Phi(u-alpha)]/Z_Phi(u)<=C.
 
-Por tanto E_u|t|^j<=C j!(log u)^j. Las fórmulas algebraicas de derivación logarítmica hasta orden13 y Z_psi/Z_Phi∈[1/2,3/2] implican
+Therefore E_u|t|^j<=C j!(log u)^j. The algebraic formulas of logarithmic differentiation up to order 13 and Z_psi/Z_Phi∈[1/2,3/2] imply
 
     |Delta M^(k)(u)|
        <=C delta u^-48(1+log u)^13, k=0,...,12.
 
-No se derivan restos asintóticos. Fijar a=63/2. En las derivadas hasta orden12 de F(z)=Delta M(a(1+z)/(1-z)), la regla de la cadena introduce a lo sumo factores C_a u^24. Así todas esas derivadas tienden a0 al llegar a z=1, se extienden continuamente y
+No asymptotic remainders are differentiated. Fix a=63/2. In the derivatives up to order 12 of F(z)=Delta M(a(1+z)/(1-z)), the chain rule introduces at most factors C_a u^24. Thus all those derivatives tend to 0 on reaching z=1, extend continuously and
 
     ||F||_(C12[0,1])<=C delta.
 
-El lema con n=13 prueba, para TODAS las tasas u_i>=63/2, con multiplicidades permitidas,
+The lemma with n=13 proves, for ALL rates u_i>=63/2, with multiplicities allowed,
 
     |Q_psi[f]-Q_Phi[f]|<=C_13 delta ||f||².
 
-Aquí Q_psi se DEFINE por el kernel K_psi y sus límites confluyentes. Para Phi, CONE001§1 identifica Q_Phi exactamente con la forma W sobre esas exponenciales; sus coeficientes temporales incluyen las congruencias correspondientes cuando se parte de los datos rho. No se está atribuyendo a psi una identidad aritmética de Weil no demostrada.
+Here Q_psi is DEFINED by the kernel K_psi and its confluent limits. For Phi, CONE001§1 identifies Q_Phi exactly with the form W on those exponentials; its temporal coefficients include the corresponding congruences when starting from the rho data. An unproved arithmetic Weil identity is not being attributed to psi.
 
-FULL_THIRTEEN053 prueba W[f]>||f||²/4000 para todos los trece polos>=63/2 y numeradores de grado<13. Elegir delta suficientemente pequeño para C_13 delta<1/8000 da
+FULL_THIRTEEN053 proves W[f]>||f||²/4000 for all thirteen poles >=63/2 and numerators of degree <13. Choosing delta sufficiently small for C_13 delta<1/8000 gives
 
     Q_psi[f]>||f||²/8000
 
-en TODA esa familia. Es una consecuencia analítica del certificado existente, sin nuevas verificaciones numéricas. No se calcula un delta efectivo.
+on ALL that family. It is an analytic consequence of the existing certificate, without new numerical verifications. No effective delta is computed.
 
-**Compatibilidad con los aproximantes negativos.** Para M suficientemente grande, la misma monotonía usada en§8.9 da
+**Compatibility with the negative approximants.** For M sufficiently large, the same monotonicity used in §8.9 gives
 
     ||h_M||_100
       <=2 exp(50) sum_(n>M)n^4 exp[-pi e(n²-1)] ->0.
 
-Las correcciones compactas de momentos tienen norma100 finita y coeficientes que tienden a0. Para sigma<=1, la convolución gaussiana tiene norma ponderada a lo sumo2 exp(5000); también aproxima la identidad para las funciones usadas, pues exp(100|t|)p_M(t) pertenece a C0. Por tanto§8.8 puede realizarse con norma100 arbitrariamente pequeña, sin perder momentos exactos ni el bloque negativo fijado. Como ||h||_20<=||h||_100, también se conserva la conclusión global de orden4 de§8.9.
+The compact moment corrections have finite 100-norm and coefficients tending to 0. For sigma<=1, Gaussian convolution has weighted norm at most 2 exp(5000); it also approximates the identity for the functions used, since exp(100|t|)p_M(t) belongs to C0. Therefore §8.8 can be realized with arbitrarily small 100-norm, without losing exact moments or the fixed negative block. Since ||h||_20<=||h||_100, the global order-4 conclusion of §8.9 is also preserved.
 
-En consecuencia, hay aproximantes positivos, pares y analíticos, arbitrariamente cercanos a Phi, que conservan simultáneamente TODOS los bloques admisibles de hasta cuatro generadores, TODOS los trece polos de tasas>=63/2 (incluso confluyentes), los momentos finitos preasignados y las colas de§8.7, y aun así NO tienen kernel global PSD. Por§2.1 hay un bloque negativo en cualquier intervalo abierto de tasas contenido en(63/2,infinito); tiene necesariamente más de trece nodos distintos.
+Consequently, there are positive, even and analytic approximants, arbitrarily close to Phi, which simultaneously preserve ALL admissible blocks of up to four generators, ALL thirteen poles of rates >=63/2 (even confluent), the preassigned finite moments and the tails of §8.7, and yet do NOT have a globally PSD kernel. By §2.1 there is a negative block on any open interval of rates contained in (63/2,infinito); it necessarily has more than thirteen distinct nodes.
 
-No se conserva la identidad theta aritmética completa, ni se refuta K_Phi. Tampoco se conserva por este argumento una familia de dimensiones sin cota: B_n y la regularidad ponderada requerida dependen de n. El lema sí aporta una herramienta de control uniforme a dimensión fija; no un cierre global ni una ampliación de T. Papers intactos.
+The full arithmetic theta identity is not preserved, nor is K_Phi refuted. Nor does this argument preserve a family of unbounded dimensions: B_n and the required weighted regularity depend on n. The lemma does provide a tool of uniform control at fixed dimension; not a global closure nor an enlargement of T. Papers untouched.
 
-### 8.11. Ningún margen positivo de Cauchy puede ser uniforme en todos los órdenes
+### 8.11. No positive Cauchy margin can be uniform in all orders
 
-**PROVED, root/casos/preservador; cotejo dirigido mapa (2026-11-06).** Corolario del principio de continuación de§2.2. Sea M real analítica en(0,infinito), con M(u)=O(u) cuando u baja a0. Para cualquier c>0 y cualquier intervalo abierto no vacío I contenido en(0,infinito), el kernel
+**PROVED, cases/preserver; targeted cross-check (2026-11-06).** Corollary of the continuation principle of §2.2. Let M be real analytic on (0,infinito), with M(u)=O(u) as u decreases to 0. For any c>0 and any nonempty open interval I contained in (0,infinito), the kernel
 
     F_c(u,v)=[M(u)+M(v)-c]/(u+v)
             =K_M(u,v)-c G(u,v), G(u,v)=1/(u+v),
 
-NO es PSD en todos los conjuntos finitos de nodos de I. No se supone que K_M sea PSD.
+is NOT PSD on all finite sets of nodes of I. It is not assumed that K_M is PSD.
 
-**Prueba.** Suponga PSD en I. En cada compacto positivo, la analiticidad real de M da una prolongación holomorfa a un vecindario complejo; el denominador u+v tampoco se anula en vecindarios suficientemente pequeños. El argumento de matrices mixtas de evaluaciones y jets de§2.2, seguido de Taylor, permite propagar PSD desde I hasta cualquier punto positivo a lo largo de un compacto que los conecte. Los radios se eligen uniformes en ese compacto; no se intenta llegar a0 con radio fijo. Para un u*>0 suficientemente pequeño, sin embargo,
+**Proof.** Suppose PSD on I. On each positive compact, real analyticity of M gives a holomorphic extension to a complex neighbourhood; the denominator u+v does not vanish on sufficiently small neighbourhoods either. The argument of mixed matrices of evaluations and jets of §2.2, followed by Taylor, allows propagating PSD from I to any positive point along a compact connecting them. The radii are chosen uniform on that compact; no attempt is made to reach 0 with fixed radius. For a sufficiently small u*>0, however,
 
     F_c(u*,u*)=M(u*)/u*-c/(2u*)<0,
 
-pues el primer término está acotado. Esta diagonal negativa contradice la positividad propagada.
+since the first term is bounded. This negative diagonal contradicts the propagated positivity.
 
-Para la Phi real, Z(u)>0 en la recta y sus momentos exponenciales son finitos; M=Z'/Z es real analítica y, por paridad,
+For the real Phi, Z(u)>0 on the line and its exponential moments are finite; M=Z'/Z is real analytic and, by parity,
 
     M(u)=[integral t²Phi(t)dt / integral Phi(t)dt] u+O(u³).
 
-Por tanto el corolario se aplica al kernel REAL completo. También se aplica al modelo hiperbólico par. En la norma de exponenciales de§8.10, significa que para todo c>0 y todo I admisible existen una combinación finita no nula f con tasas en I y un bloque tales que Q_Phi[f]<c||f||². No se afirma que ese valor sea negativo ni que tenga una cota inferior ya probada. Si además se demostrase PSD global, el ínfimo de esos cocientes sería exactamente0.
+Therefore the corollary applies to the full REAL kernel. It also applies to the even hyperbolic model. In the exponential norm of §8.10, it means that for every c>0 and every admissible I there exist a nonzero finite combination f with rates in I and a block such that Q_Phi[f]<c||f||². It is not claimed that this value is negative nor that it has an already proved lower bound. If global PSD were moreover proved, the infimum of those quotients would be exactly 0.
 
-**Consecuencia para el programa.** El margen1/4000 de053 y el margen estable de§8.10 no pueden extenderse con una constante positiva fija a dimensión arbitraria, incluso si todas las tasas quedan en un intervalo alto. Si I está dentro de(63/2,infinito) y c<1/4000, el test del corolario necesariamente necesita más de trece tasas distintas: los órdenes inferiores tienen el margen053. Esto no refuta el objetivo de no negatividad sin margen, ni los teoremas a dimensión fija.
+**Consequence for the programme.** The margin 1/4000 of 053 and the stable margin of §8.10 cannot be extended with a fixed positive constant to arbitrary dimension, even if all rates lie in a high interval. If I is inside (63/2,infinito) and c<1/4000, the test of the corollary necessarily needs more than thirteen distinct rates: the lower orders have the margin 053. This does not refute the target of nonnegativity without margin, nor the fixed-dimension theorems.
 
-La revisión del cálculo funcional tampoco permite desplazar gratuitamente el semiplano: aunque las tasas u_i sean>=a, A-a no es accretivo en general. Para f(r)=exp(-ar)-exp(-br), b>a, se tiene f(0)=0 y Re<(A-a)f,f>=-a||f||²<0. Por ello controlar una función sólo en Re u>=a no autoriza aplicar una cota de contracciones al Cayley de A-a. Una cota absoluta dimension-free de error, aun si existiese, tampoco aporta por sí sola la compensación relativa a un modelo sin margen uniforme. No se ha construido tal compensación; no nueva positividad W/T ni cambios en papers.
+The review of the functional calculus does not allow shifting the half-plane for free either: even if the rates u_i are >=a, A-a is not accretive in general. For f(r)=exp(-ar)-exp(-br), b>a, one has f(0)=0 and Re<(A-a)f,f>=-a||f||²<0. Hence controlling a function only on Re u>=a does not authorize applying a contraction bound to the Cayley transform of A-a. A dimension-free absolute error bound, even if it existed, would not by itself supply the compensation relative to a model without uniform margin. No such compensation has been constructed; no new W/T positivity nor changes to papers.
 
 
-## 9. Positividad estricta de todos los pares temporales por convexidad en los cuadrados
+## 9. Strict positivity of all temporal pairs by convexity in the squares
 
-**PROVED**, root; auditoría matemática independiente arithmetic_fresh_candidate PASS. Cotejo dirigido diagonal_gauge_dedup sin antecedente literal localizado en índices y primarias consultadas, no exhaustivo ni afirmación de prioridad mundial. Se combinan V'''(x)>0, x>0, probada para la theta completa en POWER_THETA_TWO_COPY_073 y sus certificados, y SLICE de§3. No se atribuye novedad al principio elemental de convexidad. No es el teorema de pares de potencias073: los nodos aquí son variables temporales reales arbitrarias.
+**PROVED**; independent mathematical audit arithmetic_fresh_candidate PASS. Targeted cross-check diagonal_gauge_dedup with no literal antecedent located in the consulted indices and primary sources, not exhaustive nor a claim of worldwide priority. V'''(x)>0, x>0, proved for the full theta in POWER_THETA_TWO_COPY_073 and its certificates, and SLICE of §3 are combined. No novelty is attributed to the elementary convexity principle. It is not the power-pairs theorem 073: the nodes here are arbitrary real temporal variables.
 
-Sea V=-logPhi, par y real-analítica. Para x>0,
+Let V=-logPhi, even and real-analytic. For x>0,
 
     xV''(x)-V'(x)=integral_0^x rV'''(r)dr>0.
 
-La constante en0 es cero por paridad. Para G(u)=V(sqrt(u)), u>=0,
+The constant at 0 is zero by parity. For G(u)=V(sqrt(u)), u>=0,
 
     G''(u)=[sqrt(u)V''(sqrt(u))-V'(sqrt(u))]/(4u^(3/2))>0
 
-cuando u>0. La analiticidad par de V permite extender G regularmente a0. Así G es estrictamente convexa en[0,infinito); no se necesita asumir V''(0)>0.
+when u>0. The even analyticity of V allows extending G regularly to 0. Thus G is strictly convex on [0,infinito); it is not necessary to assume V''(0)>0.
 
-Fijar t!=s reales y v>0. Poner m=(t+s)/2, delta=(t-s)/2 y
+Fix real t!=s and v>0. Set m=(t+s)/2, delta=(t-s)/2 and
 
     a=sqrt(m²+v)+delta, b=sqrt(m²+v)-delta,
     x=t²+v, y=s²+v.
 
-Entonces a²+b²=x+y, mientras
+Then a²+b²=x+y, while
 
     |a²-b²|=4|delta|sqrt(m²+v)>4|delta*m|=|x-y|.
 
-Todos estos cuadrados son no negativos, incluso cuando a o b sea negativo. Para una suma fija S, la función G(S/2+r)+G(S/2-r) crece estrictamente con r>=0 dentro de su dominio: su derivada es G'(S/2+r)-G'(S/2-r)>0 para r>0. Por tanto
+All these squares are nonnegative, even when a or b is negative. For a fixed sum S, the function G(S/2+r)+G(S/2-r) increases strictly with r>=0 inside its domain: its derivative is G'(S/2+r)-G'(S/2-r)>0 for r>0. Therefore
 
     V(a)+V(b)=G(a²)+G(b²)>G(t²+v)+G(s²+v).
 
-Usando SLICE y las diagonales S_v(t,t)=Phi(sqrt(t²+v))² se obtiene
+Using SLICE and the diagonals S_v(t,t)=Phi(sqrt(t²+v))² one obtains
 
     S_v(t,s)^2<S_v(t,t)S_v(s,s), v>0,t!=s.          (PAIR-SLICE)
 
-Las diagonales son estrictamente positivas, luego toda matriz de dos nodos distintos de S_v es definida positiva. Para v=0, S_0(t,s)=Phi(t)Phi(s), y la matriz es sólo semidefinida positiva de rango uno.
+The diagonals are strictly positive, hence every matrix of two distinct nodes of S_v is positive definite. For v=0, S_0(t,s)=Phi(t)Phi(s), and the matrix is only positive semidefinite of rank one.
 
-Para cualquier vector no nulo c de dos coeficientes, c* S_v c>0 para TODO v>0. Integrar la forma cuadrática usando A=integral S_v dv y la integrabilidad de entradas ya demostrada en§2 prueba
+For any nonzero vector c of two coefficients, c* S_v c>0 for ALL v>0. Integrating the quadratic form using A=integral S_v dv and the integrability of entries already proved in §2 proves
 
     [A(t_i,t_j)]_(i,j=1,2) es definida positiva si t_1!=t_2.
 
-En particular 0<A(t,s)<sqrt(A(t,t)A(s,s)) para todo par real distinto. No se deduce esta conclusión únicamente de positividad de entradas.
+In particular 0<A(t,s)<sqrt(A(t,t)A(s,s)) for every distinct real pair. This conclusion is not deduced solely from positivity of entries.
 
-**Alcance y patrón exacto.** Las capas en la variable v son PSD en todos los bloques de tamaño uno y dos, pero§5 ya demuestra que una capa theta real tiene un bloque de tres nodos positivos no PSD. Tres es por tanto el tamaño mínimo posible de un falsificador de ESA descomposición por capas. Las capas crudas en r de§2.3 son otro objeto y sí fallan en tamaño dos; no hay contradicción. El integral A tiene todos sus pares positivos, pero su signo a todos los órdenes sigue OPEN: integrar capas indefinidas puede compensarlas, sin una cota conjunta probada. No hay nueva cobertura W ni ampliación de T; el puente global no permite identificar tamaños finitos entre los dos kernels. Sin nuevos cálculos ni cambios en papers.
+**Scope and exact pattern.** The layers in the variable v are PSD on all blocks of size one and two, but §5 already proves that a real theta layer has a non-PSD block of three positive nodes. Three is therefore the minimal possible size of a falsifier of THAT layer decomposition. The raw layers in r of §2.3 are another object and do fail at size two; there is no contradiction. The integral A has all its pairs positive, but its sign in all orders remains OPEN: integrating indefinite layers can compensate them, without a proved joint bound. There is no new W coverage nor enlargement of T; the global bridge does not allow identifying finite sizes between the two kernels. No new computations or changes to papers.
 
 
-## 10. Compensación real demostrada en triples temporales simétricos
+## 10. Real compensation proved on symmetric temporal triples
 
-**PROVED**, root; auditoría matemática arithmetic_fresh_candidate PASS; cotejo dirigido diagonal_gauge_dedup sin antecedente literal localizado en índices y primarias. Se usan073 y§§4.3,5,9; no se presenta como nuevo el principio de que una integral puede compensar capas indefinidas. La diferencia es probar AMBOS signos para la theta real en LOS MISMOS nodos (-R,0,R). El refinamiento analítico siguiente fija R>=8 tanto para la positividad del integral como para la existencia de capas inicialmente negativas; no cuantifica su intervalo v_R ni afirma uniformidad en R. Sin cambios en papers.
+**PROVED**; mathematical audit arithmetic_fresh_candidate PASS; targeted cross-check diagonal_gauge_dedup with no literal antecedent located in indices and primary sources. 073 and §§4.3,5,9 are used; the principle that an integral may compensate indefinite layers is not presented as new. The difference is proving BOTH signs for the real theta at THE SAME nodes (-R,0,R). The following analytic refinement fixes R>=8 both for positivity of the integral and for the existence of initially negative layers; it does not quantify their interval v_R nor claim uniformity in R. No changes to papers.
 
-**Positividad del integral completo.** Por simetría y paridad conjunta, su matriz es
+**Positivity of the full integral.** By symmetry and joint parity, its matrix is
 
     [[d,c,b],[c,d0,c],[b,c,d]],
     d=A(R,R), d0=A(0,0), b=A(-R,R), c=A(R,0).
 
-Todos son positivos. En el sector antisimétrico, el autovalor es d-b>0 por§9. En la base ortonormal del sector simétrico, el bloque es [[d+b,sqrt(2)c],[sqrt(2)c,d0]]. Basta probar c²/d->0.
+All are positive. In the antisymmetric sector, the eigenvalue is d-b>0 by §9. In the orthonormal basis of the symmetric sector, the block is [[d+b,sqrt(2)c],[sqrt(2)c,d0]]. It suffices to prove c²/d->0.
 
-Poner Y=pi exp(2R), P=Phi(R) y B=sup_(x real)Phi(x)<infinito. La expansión theta completa da p(x)=-Phi'(x)/Phi(x)>=pi exp(2x) para x suficientemente grande. Así, para R grande y r>=0,
+Set Y=pi exp(2R), P=Phi(R) and B=sup_(x real)Phi(x)<infinito. The full theta expansion gives p(x)=-Phi'(x)/Phi(x)>=pi exp(2x) for x sufficiently large. Thus, for R large and r>=0,
 
     Phi(R+r)<=P exp(-Yr).
 
-La fórmula de A y la cota Phi(r)<=B implican
+The formula of A and the bound Phi(r)<=B imply
 
     0<c<=BP integral_0^infinito (R+2r)exp(-Yr)dr
          =BP(R/Y+2/Y²).
 
-Por§4.3, d/P²~R/(2Y), de modo que d>=RP²/(4Y) eventualmente. Por tanto
+By §4.3, d/P²~R/(2Y), so that d>=RP²/(4Y) eventually. Therefore
 
     c²/d<=4B²(Y/R)(R/Y+2/Y²)²->0.
 
-Como d0 es constante positiva y b>0, para R grande se cumple d0(d+b)>2c². Ambos sectores son definidos positivos: toda la matriz de tres nodos es SPD. Este argumento sólo usa bounds de cola y la positividad de pares; no necesita una asintótica diferenciada del cruce c.
+Since d0 is a positive constant and b>0, for R large d0(d+b)>2c² holds. Both sectors are positive definite: the whole three-node matrix is SPD. This argument only uses tail bounds and positivity of pairs; it does not need a differentiated asymptotic of the crossing c.
 
-**Refinamiento del mismo resultado: el integral es SPD para TODO R>=8.** No se abre otra ruta ni se usa un barrido. Por§12, p>0 en la semirrecta, luego B=sup Phi=Phi(0). Para f(x)=x(2x-3)exp(-x), f'(x)=(-2x²+7x-3)exp(-x)<0 si x>3. Como pi>3 y exp(3)>20 (Taylor racional positivo, también usado en088),
+**Refinement of the same result: the integral is SPD for ALL R>=8.** No other route is opened nor is a sweep used. By §12, p>0 on the half-line, hence B=sup Phi=Phi(0). For f(x)=x(2x-3)exp(-x), f'(x)=(-2x²+7x-3)exp(-x)<0 if x>3. Since pi>3 and exp(3)>20 (positive rational Taylor, also used in 088),
 
     B=sum_(n>=1)f(pi n²)
       <18 sum_(n>=1)n^4/20^(n²)<=450/499<1.
 
-La razón consecutiva del majorante es<=16/20³=1/500. Se incluyen todos los modos.
+The consecutive ratio of the majorant is <=16/20³=1/500. All modes are included.
 
-Para R>=1,088 da p(R+r)>2Y_r-6>=Y_r>=Y, con Y_r=Y exp(2r)>21. Así la cota anterior c<=BP(R/Y+2/Y²) vale ya en toda esa región. Para obtener una cota inferior explícita de d, restringir su integral a0<=r<=1/(4Y). Allí
+For R>=1, 088 gives p(R+r)>2Y_r-6>=Y_r>=Y, with Y_r=Y exp(2r)>21. Thus the preceding bound c<=BP(R/Y+2/Y²) already holds on that whole region. To obtain an explicit lower bound for d, restrict its integral to 0<=r<=1/(4Y). There
 
     p(R+r)<2Y exp(1/(2Y))+1<3Y.
 
-La última desigualdad sigue de exp(x)<=1/(1-x), 0<=x<1, y Y>21. Por tanto Phi(R+r)>=P exp(-3Yr), y
+The last inequality follows from exp(x)<=1/(1-x), 0<=x<1, and Y>21. Therefore Phi(R+r)>=P exp(-3Yr), and
 
     d>=2R P² integral_0^(1/(4Y)) exp(-6Yr)dr
       =R P²[1-exp(-3/2)]/(3Y)>R P²/(4Y),
 
-pues exp(3/2)>4 por su Taylor positivo hasta grado3.
+since exp(3/2)>4 by its positive Taylor up to degree 3.
 
-En0<=r<=1/16 todos los modos theta son positivos y Phi>=Phi_1>9/256: en efecto pi>3, 2pi exp(2r)-3>3, pi exp(2r)<4exp(1/8)<5 y exp(5)<256, usando exp(1/8)<8/7 y e<3. Luego
+On 0<=r<=1/16 all theta modes are positive and Phi>=Phi_1>9/256: indeed pi>3, 2pi exp(2r)-3>3, pi exp(2r)<4exp(1/8)<5 and exp(5)<256, using exp(1/8)<8/7 and e<3. Hence
 
     d0=integral_0^infinito 2r Phi(r)²dr>81/2^24.
 
-Si RY>=40, las cotas de c y d implican
+If RY>=40, the bounds on c and d imply
 
     2c²/d<8B²(R/Y)[1+2/(RY)]²<9B²R/Y<=9R/Y.
 
-Para TODO R>=8 se cumple RY>40; además R/Y decrece para R>=8. Usando pi>3 y exp(2)>7,
+For ALL R>=8, RY>40 holds; moreover R/Y decreases for R>=8. Using pi>3 and exp(2)>7,
 
     9R/Y<=72/[pi exp(16)]<24/7^8<81/2^24<d0.
 
-La comparación racional central equivale a402653184<466948881. Se obtiene 2c²<d0*d<d0(d+b), y d-b>0 por§9. Ambos sectores son por tanto SPD para TODO R>=8. No se cubren triples arbitrarios, R intermedios o todos los órdenes.
+The central rational comparison is equivalent to 402653184<466948881. One obtains 2c²<d0*d<d0(d+b), and d-b>0 by §9. Both sectors are therefore SPD for ALL R>=8. Arbitrary triples, intermediate R or all orders are not covered.
 
-**Capas inicialmente negativas en esos mismos nodos.** Normalizar B_v(t,s)=S_v(t,s)/(Phi(t)Phi(s)). Aquí B_0 es el kernel constante1. Para p=V' impar analítica,
+**Initially negative layers at those same nodes.** Normalize B_v(t,s)=S_v(t,s)/(Phi(t)Phi(s)). Here B_0 is the constant kernel 1. For p=V' odd analytic,
 
     partial_v B_v(t,s)|_(v=0)=-(p(t)+p(s))/(t+s).
 
-Los valores removibles son -p'(R) en(-R,R) y -p'(0) en(0,0). Se justifican también expandiendo V(R+sqrt(v))+V(R-sqrt(v)) y 2V(sqrt(v)); la paridad elimina las potencias impares de sqrt(v).
+The removable values are -p'(R) at (-R,R) and -p'(0) at (0,0). They are also justified by expanding V(R+sqrt(v))+V(R-sqrt(v)) and 2V(sqrt(v)); parity eliminates the odd powers of sqrt(v).
 
-Para eta=(1,-2,1), de suma cero, el cálculo en(-R,0,R) da
+For eta=(1,-2,1), of zero sum, the computation at (-R,0,R) gives
 
     eta^T B_v eta=-v Q_R+o(v),
     Q_R=2p'(R)-6p(R)/R+4p'(0).
 
-Las cotas completas de088 dan p'(R)>4Y-1 y p(R)<2Y+1 para R>=1;§12 prueba p'(0)>0. Así, para TODO R>=8,
+The full bounds of 088 give p'(R)>4Y-1 and p(R)<2Y+1 for R>=1; §12 proves p'(0)>0. Thus, for ALL R>=8,
 
     Q_R>(8-12/R)Y-2-6/R+4p'(0)
        >(13/2)Y-11/4>0.
 
-Para cada R>=8, eta^T B_v eta<0 cuando v>0 es suficientemente pequeño. El vector en la capa original es
+For each R>=8, eta^T B_v eta<0 when v>0 is sufficiently small. The vector in the original layer is
 
     w_R=(1/P,-2/Phi(0),1/P),
-    w_R^T S_v w_R<0 para 0<v<v_R
+    w_R^T S_v w_R<0 for 0<v<v_R
 
-con algún v_R>0; no se afirma uniformidad en R de ese intervalo.
+with some v_R>0; uniformity in R of that interval is not claimed.
 
-**Compensación efectiva, alcance limitado.** Para TODO R>=8 y ese mismo vector w_R, la positividad del bloque integral demuestra
+**Effective compensation, limited scope.** For ALL R>=8 and that same vector w_R, positivity of the integral block proves
 
     integral_0^infinito w_R^T S_v w_R dv=w_R^T A w_R>0,
 
-aunque el integrando es negativo en(0,v_R). Las entradas son integrables, así que la parte positiva fuera de ese intervalo supera estrictamente su pérdida. Es una desigualdad conjunta probada para esta familia concreta, no una cota de compensación uniforme sobre todos los nodos, tamaños o vectores. No son triples de potencias080; son triples temporales. No se deduce positividad global, ampliación W/T ni una inducción en dimensión. Sin cálculos numéricos.
+although the integrand is negative on (0,v_R). The entries are integrable, so the positive part outside that interval strictly exceeds its loss. It is a joint inequality proved for this concrete family, not a uniform compensation bound over all nodes, sizes or vectors. They are not power triples 080; they are temporal triples. No global positivity, W/T enlargement nor an induction on dimension is deduced. No numerical computations.
 
 
-## 11. La expansión de Andréief completamente emparejada conserva signos negativos
+## 11. The fully paired Andréief expansion keeps negative signs
 
-**PROVED**, positive_identity_attempt/root; auditoría independiente arithmetic_fresh_candidate PASS; cotejo dirigido diagonal_gauge_dedup sin duplicado literal localizado en índices y primarias, sin afirmación exhaustiva ni de prioridad mundial. Se prueba una limitación puntual de la expansión siguiente, no el signo negativo de su integral. La diferencia frente§2.3 es agrupar las ocho elecciones del determinante completo de orden tres, antes de pedir signo, en lugar de pedir PSD de cada capa cruda.
+**PROVED**, positive_identity_attempt; independent audit arithmetic_fresh_candidate PASS; targeted cross-check diagonal_gauge_dedup with no literal duplicate located in indices and primary sources, with no exhaustive claim nor claim of worldwide priority. A pointwise limitation of the following expansion is proved, not the negative sign of its integral. The difference from §2.3 is grouping the eight choices of the full order-three determinant, before asking for a sign, instead of asking for PSD of each raw layer.
 
-Fijar tres nodos temporales distintos t1<t2<t3, positivos, y definir vectores columna
+Fix three distinct temporal nodes t1<t2<t3, positive, and define column vectors
 
     f_i(r)=Phi(t_i+r), g_i(r)=(t_i+r)Phi(t_i+r),
     u_0=f, u_1=g.
 
-Entonces A_ij=integral_0^infinito[g_i(r)f_j(r)+f_i(r)g_j(r)]dr. Andréief en el espacio producto (0,infinito) times {0,1}, con medida Lebesgue y conteo, da exactamente
+Then A_ij=integral_0^infinito[g_i(r)f_j(r)+f_i(r)g_j(r)]dr. Andréief on the product space (0,infinito) times {0,1}, with Lebesgue and counting measure, gives exactly
 
     det[A_ij]=(1/6)integral_(0,infinito)^3 S(r1,r2,r3)dr1dr2dr3,
     S=sum_(epsilon in {0,1}^3)
        det[u_(epsilon_j)(r_j)] det[u_(1-epsilon_j)(r_j)].
 
-Todos los intercambios son absolutamente convergentes por las supercolas de Phi y el crecimiento lineal añadido en g. El principio de Andréief es clásico; no se atribuye novedad a esta identidad.
+All exchanges are absolutely convergent by the supertails of Phi and the linear growth added in g. The Andréief principle is classical; no novelty is attributed to this identity.
 
-Poner r1=r2=r>0, r3=r+h. Las elecciones con epsilon1=epsilon2 se anulan; las otras cuatro dan
+Set r1=r2=r>0, r3=r+h. The choices with epsilon1=epsilon2 vanish; the other four give
 
     S(r,r,r+h)=-4 det[g(r),f(r),f(r+h)]
                     times det[g(r),f(r),g(r+h)].
 
-Sean x_i=t_i+r y p=-Phi'/Phi. Puesto que f'=-pf y g'=(1-xp)f, Taylor y las diferencias divididas dan
+Let x_i=t_i+r and p=-Phi'/Phi. Since f'=-pf and g'=(1-xp)f, Taylor and the divided differences give
 
     det[g,f,f_h]=h C p[x1,x2,x3]+O(h²),
     det[g,f,g_h]=h C (xp)[x1,x2,x3]+O(h²),
     C=product_i Phi(x_i) product_(i<j)(x_j-x_i)>0.
 
-Los signos se comprueban por det[x,1,-p]=det[1,x,p] y det[x,1,1-xp]=det[1,x,xp]. Elegir r suficientemente grande: las expansiones diferenciadas theta completas prueban p''>0 y (xp)''=2p'+xp''>0 en el intervalo que contiene los tres x_i. Ambas diferencias divididas son entonces positivas. Para h>0 suficientemente pequeño se obtiene S(r,r,r+h)<0. Aunque r1=r2 es un conjunto de medida cero, continuidad y r>0 permiten perturbar hasta una región ABIERTA con 0<r1<r2<r3 donde S<0.
+The signs are checked by det[x,1,-p]=det[1,x,p] and det[x,1,1-xp]=det[1,x,xp]. Choose r sufficiently large: the full differentiated theta expansions prove p''>0 and (xp)''=2p'+xp''>0 on the interval containing the three x_i. Both divided differences are then positive. For h>0 sufficiently small one obtains S(r,r,r+h)<0. Although r1=r2 is a set of measure zero, continuity and r>0 allow perturbing to an OPEN region with 0<r1<r2<r3 where S<0.
 
-**Alcance.** Queda refutada únicamente la positividad puntual de ESTE integrando, incluso después de sumar todas sus elecciones. No se prueba det A negativo ni se excluye compensación entre regiones de integración, otro emparejamiento no local o un Gram distinto. No se promueve una identidad de determinantes a una desigualdad. El intento no produce nueva positividad W/T; sin cálculos ni cambios en papers.
+**Scope.** Only pointwise positivity of THIS integrand is refuted, even after summing all its choices. It is not proved that det A is negative nor is compensation between integration regions, another non-local pairing or a different Gram excluded. A determinant identity is not promoted to an inequality. The attempt produces no new W/T positivity; no computations or changes to papers.
 
 
-## 12. Recíproco del potencial: criterio de momentos y cola explícita
+## 12. Reciprocal of the potential: moment criterion and explicit tail
 
-**PROVED como identidad, implicación suficiente, cota exterior y cierre compacto por certificado Arb.** Constructor positive_identity_attempt/root; auditoría independiente arithmetic_fresh_candidate PASS (identidad con bordes, cola y revisión estática del certificado compacto); reproducción independiente root FULL PASS, exit0 y mismo SHA256. Consulta dirigida previa de índices, grid, crucigrama y073/086/088/103_43. El objeto es p(r)=V'(r), NO M=Z'/Z: la concavidad de sqrt(lambda)/M(sqrt(lambda)) de086 no prueba la condición siguiente. No se afirma prioridad mundial.
+**PROVED as an identity, sufficient implication, exterior bound and compact closure by Arb certificate.** Construction positive_identity_attempt; independent audit arithmetic_fresh_candidate PASS (identity with boundaries, tail and static review of the compact certificate); independent reproduction FULL PASS, exit 0 and same SHA256. Prior targeted consultation of indices, grid, crossword and 073/086/088/103_43. The object is p(r)=V'(r), NOT M=Z'/Z: the concavity of sqrt(lambda)/M(sqrt(lambda)) of 086 does not prove the following condition. No worldwide priority is claimed.
 
-Poner u=r², G(u)=V(sqrt(u)), a(u)=2G'(u)=p(r)/r, w=exp(-2G), y E la esperanza de densidad w/integral(w). Sean H=integral_0^infinito r Phi², J=integral r(Phi')², K=integral r(Phi'')². Entonces integral(w)=2H y
+Set u=r², G(u)=V(sqrt(u)), a(u)=2G'(u)=p(r)/r, w=exp(-2G), and E the expectation with density w/integral(w). Let H=integral_0^infinito r Phi², J=integral r(Phi')², K=integral r(Phi'')². Then integral(w)=2H and
 
     J/H=E[u a²]=E[a+u a'],
     K/H=E[(u a²-a-2u a')²],
     (HK-J²)/H²=Var(a+u a')+E[u²(2a'²-a a'')].
 
-La última identidad resulta de integrar por partes con ua, u²a³ y u²aa'. En cero, a es regular por analiticidad par y los factores u,u² anulan los bordes. En infinito, las supercolas theta y las expansiones diferenciadas justifican integrabilidad y desaparición de los bordes. No se omite un término de borde de la integración original en r.
+The last identity results from integrating by parts with ua, u²a³ and u²aa'. At zero, a is regular by even analyticity and the factors u,u² annihilate the boundaries. At infinity, the theta supertails and the differentiated expansions justify integrability and vanishing of the boundaries. No boundary term of the original integration in r is omitted.
 
-Si a>0 y (1/a)''>=0 en TODA la semirrecta, entonces 2a'²-aa''=a³(1/a)''>=0 y HK>=J². La igualdad obligaría a a+ua' constante; regularidad en cero fuerza a constante. Para la theta, a'>0 por§9; el certificado compacto siguiente completa además la condición global estricta.
+If a>0 and (1/a)''>=0 on the WHOLE half-line, then 2a'²-aa''=a³(1/a)''>=0 and HK>=J². Equality would force a+ua' constant; regularity at zero forces a constant. For theta, a'>0 by §9; the following compact certificate moreover completes the strict global condition.
 
-**Cola explícita probada.** Escribir q(u)=1/a(u)=r/p(r). Derivación directa da
+**Explicit tail proved.** Write q(u)=1/a(u)=r/p(r). Direct differentiation gives
 
     q''(u)=N/(4r³p³),
     N=2r²p'²-r²pp''-rpp'-p².
 
-Para r>=1, Y=pi exp(2r)>21. El primer modo satisface
+For r>=1, Y=pi exp(2r)>21. The first mode satisfies
 
     p1=2Y-9/2-6/(2Y-3),
     p1'=4Y+24Y/(2Y-3)²,
     p1''=8Y-48Y(2Y+3)/(2Y-3)³.
 
-POWER_THETA_DENSITY_OUTER_088§§3–4 controla la cola COMPLETA y da errores menores que eta<1 en p,p',p''. En consecuencia
+POWER_THETA_DENSITY_OUTER_088§§3–4 controls the FULL tail and gives errors smaller than eta<1 in p,p',p''. Consequently
 
     0<p<2Y+1, 4Y-1<p'<4Y+2, p''<8Y+1.
 
-Sustituir con los signos correctos (no se necesita p''>0) produce
+Substituting with the correct signs (p''>0 is not needed) yields
 
     N>r²(16Y²-26Y+1)-r(8Y²+8Y+2)-(4Y²+4Y+1)
       >=r²(4Y²-38Y-2)>2r²Y²>0.
 
-Se usa r>=1 y 2Y²-38Y-2>0 para Y>21. Así q''(u)>0 para TODO u>=1.
+One uses r>=1 and 2Y²-38Y-2>0 for Y>21. Thus q''(u)>0 for ALL u>=1.
 
-**Historia del gate.** En el origen el test de convexidad, si V''(0)>0, es 10V^(4)(0)²-3V''(0)V^(6)(0)>=0; no se deduce de V'''>0. Diagnósticos mpmath60 con20modos en el origen y r=1/4,1/2,3/4,1,3/2 dieron signo favorable, pero NO fueron certificados y no se usan en la prueba siguiente.
+**History of the gate.** At the origin the convexity test, if V''(0)>0, is 10V^(4)(0)²-3V''(0)V^(6)(0)>=0; it is not deduced from V'''>0. mpmath60 diagnostics with 20 modes at the origin and r=1/4,1/2,3/4,1,3/2 gave a favourable sign, but were NOT certified and are not used in the following proof.
 
-### 12.1. Cierre compacto con theta completa y paridad exacta
+### 12.1. Compact closure with full theta and exact parity
 
-**PROVED por certificado de bolas Arb, 2026-11-06.** Fuente reproducible: `tools/power_temporal_reciprocal_compact_verify.py`; salida constructor exit0/FULL PASS en `tools/power_temporal_reciprocal_compact_verify.log`. SHA256 del script: `498e199ae7bb52f7fedeef02847a1b8642a635b76bb036212259bc2f875e93fa`. Python-flint0.9.0, precisión512bits. Parámetros fijos:16modos theta, grado40 y256paneles en el origen;8192paneles y Taylor grado24/cap28 en el resto. No se ejecutó búsqueda de parámetros. La primera evaluación directa de intervalos del resto fue inconclusa por dependencia; se sustituyó por el polinomio entero siguiente. El grado16 dejó un resto absoluto excesivo cerca de r=1; el bound Cauchy a priori fijó grado24 antes de ejecutar la versión final, conservando malla y precisión.
+**PROVED by Arb ball certificate, 2026-11-06.** Reproducible source: `tools/power_temporal_reciprocal_compact_verify.py`; output exit 0/FULL PASS in `tools/power_temporal_reciprocal_compact_verify.log`. SHA256 of the script: `498e199ae7bb52f7fedeef02847a1b8642a635b76bb036212259bc2f875e93fa`. Python-flint 0.9.0, precision 512 bits. Fixed parameters: 16 theta modes, degree 40 and 256 panels at the origin; 8192 panels and Taylor degree 24/cap 28 on the rest. No parameter search was run. The first direct interval evaluation of the rest was inconclusive due to dependency; it was replaced by the following entire polynomial. Degree 16 left an excessive absolute remainder near r=1; the a priori Cauchy bound fixed degree 24 before running the final version, keeping mesh and precision.
 
-**Origen, sin cocientes temporales singulares.** La función par COMPLETA define f(u)=Phi(sqrt(u)), holomorfa para |u|<=1/16, con |f|<1000 por089§2. Su Taylor hasta grado40 se obtiene de los coeficientes pares de Phi en cero. No se supone paridad del prefijo de16modos: primero se encierran TODOS los jets de la serie completa y luego se usa la paridad de Phi. En |z|<=1/4, la cola modal tiene módulo menor que
+**Origin, without singular temporal quotients.** The FULL even function defines f(u)=Phi(sqrt(u)), holomorphic for |u|<=1/16, with |f|<1000 by 089§2. Its Taylor expansion up to degree 40 is obtained from the even coefficients of Phi at zero. Parity of the 16-mode prefix is not assumed: first ALL jets of the full series are enclosed and then the parity of Phi is used. On |z|<=1/4, the modal tail has modulus less than
 
     epsilon_O=304*17^4/4^289.
 
-Cauchy da error epsilon_O*4^j en cada coeficiente temporal de orden j; los coeficientes impares completos incluyen0. Para las derivadas de órdenes j=0,...,3 del Taylor de f, en0<=u<=1/64 el resto completo está acotado por
+Cauchy gives error epsilon_O*4^j on each temporal coefficient of order j; the full odd coefficients include 0. For the derivatives of orders j=0,...,3 of the Taylor polynomial of f, on 0<=u<=1/64 the full remainder is bounded by
 
     2000*(41!/(41-j)!)*16^41*(1/64)^(41-j).
 
-Se usa |[u^k]f|<=1000*16^k y la razón consecutiva del majorante, menor que1/2. Los256paneles de ancho1/16384 certifican f>0, f'<0 y
+One uses |[u^k]f|<=1000*16^k and the consecutive ratio of the majorant, less than 1/2. The 256 panels of width 1/16384 certify f>0, f'<0 and
 
     L3=f''' f²-3f''f'f+2f'^3>2/5.
 
-La salida guarda el lower más preciso, mayor que0.40639. Como a=-2f'/f, se concluye a>0 y a''=-2L3/f³<0; por tanto (1/a)''>0 en TODO0<=u<=1/64, incluidos ambos bordes.
+The output records the most precise lower bound, greater than 0.40639. Since a=-2f'/f, one concludes a>0 and a''=-2L3/f³<0; therefore (1/a)''>0 on ALL 0<=u<=1/64, including both endpoints.
 
-**Resto, polinomio entero y errores absolutos controlados.** En r∈[1/8,1], escribir F=Phi(r) y sus derivadas temporales. La identidad exacta es
+**Rest, entire polynomial and controlled absolute errors.** On r∈[1/8,1], write F=Phi(r) and its temporal derivatives. The exact identity is
 
     T=N F³=-r²F'²F''+2r²F F''²-r²F F'F'''
               +rF'^3-rF F'F''-F F'².
 
-En cada disco |z-r|<=1/64, Re exp(2z)>1, |exp(2z)|<9 y |exp(5z/2)|<16. Así |Phi_m(z)|<4800m^4*8^(-m²), |Phi(z)|<10000 y la cola después de16modos está acotada por
+On each disc |z-r|<=1/64, Re exp(2z)>1, |exp(2z)|<9 and |exp(5z/2)|<16. Thus |Phi_m(z)|<4800m^4*8^(-m²), |Phi(z)|<10000 and the tail after 16 modes is bounded by
 
     epsilon_R=9600*17^4/8^289.
 
-La razón consecutiva del majorante modal es menor que1/2. Cauchy da error epsilon_R*64^j en cada coeficiente Taylor temporal. Se incluyen esos errores ANTES de formar T. Para |z-r|<=1/128, |Phi^(j)(z)|<=Pj=10000*j!*128^j, j<=3, y |z|<2. Sustituir en el polinomio exacto da
+The consecutive ratio of the modal majorant is less than 1/2. Cauchy gives error epsilon_R*64^j on each temporal Taylor coefficient. These errors are included BEFORE forming T. For |z-r|<=1/128, |Phi^(j)(z)|<=Pj=10000*j!*128^j, j<=3, and |z|<2. Substituting into the exact polynomial gives
 
     |T|<=4(P1²P2+2P0P2²+P0P1P3)
             +2(P1³+P0P1P2)+P0P1²<10^24.
 
-Los8192paneles tienen semiancho h=7/131072, de modo que128h=7/1024. El resto después de grado24 es, uniformemente,
+The 8192 panels have half-width h=7/131072, so that 128h=7/1024. The remainder after degree 24 is, uniformly,
 
     REM_R=10^24*(7/1024)^25/(1-7/1024)<10^(-30).
 
-Cada panel certifica T(center) menos la suma de módulos de los términos Taylor no constantes y REM_R estrictamente positivo. El lower común de la salida es mayor que10^(-17). Se cubren las celdas CERRADAS y los extremos1/8,1; no se infiere el signo de puntos muestreados.
+Each panel certifies T(center) minus the sum of moduli of the nonconstant Taylor terms and REM_R strictly positive. The common lower bound of the output is greater than 10^(-17). The CLOSED cells and the endpoints 1/8,1 are covered; the sign is not inferred from sampled points.
 
-**Denominadores y ensamblaje.** El origen también certifica a(0)=V''(0)>0.073 prueba V'''>0 en toda la semirrecta, luego V''(r)>V''(0)>0 y p(r)>0 para TODO r>0 por p(0)=0. Así a>0 globalmente. Phi>0, T>0 y la fórmula de N prueban q''>0 en1/64<=u<=1. El origen cubre0<=u<=1/64; la cola de§12 cubre u>=1. Se obtiene
+**Denominators and assembly.** The origin also certifies a(0)=V''(0)>0. 073 proves V'''>0 on the whole half-line, hence V''(r)>V''(0)>0 and p(r)>0 for ALL r>0 since p(0)=0. Thus a>0 globally. Phi>0, T>0 and the formula for N prove q''>0 on 1/64<=u<=1. The origin covers 0<=u<=1/64; the tail of §12 covers u>=1. One obtains
 
-    a(u)>0 y q''(u)>0 para TODO u>=0,
+    a(u)>0 y q''(u)>0 for EVERY u>=0,
     HK>J².
 
-La estrictitud de momentos resulta directamente de la identidad de§12: u²(2a'²-aa'')=u²a³q'' es positiva para u>0 y la densidad w es positiva. Los bordes e integrabilidad ya justificados allí permanecen válidos.
+Strictness of the moments results directly from the identity of §12: u²(2a'²-aa'')=u²a³q'' is positive for u>0 and the density w is positive. The boundaries and integrability already justified there remain valid.
 
-### 12.2. Consecuencia local para triples temporales simétricos
+### 12.2. Local consequence for symmetric temporal triples
 
-Para los d,b,c,d0 de§10, poner B=Phi(0)Phi''(0). Taylor bajo las integrales completas, paridad y supercolas dan
+For the d,b,c,d0 of §10, set B=Phi(0)Phi''(0). Taylor under the full integrals, parity and supertails give
 
     d0=2H,
     c=2H-J R²+(K-B)R^4/12+O(R^6),
     d+b=4H-4J R²+(4K-B)R^4/3+O(R^6),
     D(R)=d0(d+b)-2c²=2(HK-J²)R^4+O(R^6).
 
-Los términos B conservan los bordes en cero y cancelan exactamente en D. En particular se usan integral Phi Phi'''=-B e integral r Phi Phi''''=K+B; no se descartan esos bordes. La identidad integral simetrizada del intento anterior proporciona también D/d0=R^4(K-J²/H)+O(R^6).
+The B terms keep the boundaries at zero and cancel exactly in D. In particular integral Phi Phi'''=-B and integral r Phi Phi''''=K+B are used; those boundaries are not discarded. The symmetrized integral identity of the previous attempt also provides D/d0=R^4(K-J²/H)+O(R^6).
 
-Como HK>J², existe R0>0 tal que D(R)>0 para TODO0<R<R0. El otro sector tiene d-b>0 por§9. Por tanto A en los tres nodos(-R,0,R) es SPD para TODO R positivo suficientemente pequeño. No se cuantifica R0 ni se certifica un intervalo por búsqueda. Junto a§10 se tienen familias pequeñas y grandes; NO se cubren todos los R intermedios, triples arbitrarios ni todos los órdenes. No hay cierre del signo global, nueva cobertura W/T ni cambios en papers.
+Since HK>J², there exists R0>0 such that D(R)>0 for ALL 0<R<R0. The other sector has d-b>0 by §9. Therefore A at the three nodes (-R,0,R) is SPD for ALL sufficiently small positive R. R0 is not quantified nor is an interval certified by search. Together with §10 there are small and large families; NOT all intermediate R, arbitrary triples nor all orders are covered. There is no closure of the global sign, new W/T coverage or changes to papers.
 
 
-### 12.3. Alcance frente al falsificador074 y a la positividad por capas
+### 12.3. Scope with respect to falsifier 074 and layer positivity
 
-Cotejo y cálculo arithmetic_fresh_candidate, revisados por root; consecuencias de fórmulas existentes, no prueba de suficiencia global. En074, n=999999 y a(u)=A[1+(u/4)^n]. Derivar q=1/a da
+Cross-check and computation arithmetic_fresh_candidate, reviewed; consequences of existing formulas, not a proof of global sufficiency. In 074, n=999999 and a(u)=A[1+(u/4)^n]. Differentiating q=1/a gives
 
     q''(u)=n*4^(-n)*u^(n-2)*[(n+1)(u/4)^n-(n-1)]
              /[A(1+(u/4)^n)^3]<0 para0<u<=1.
 
-Por tanto el falsificador074 NO satisface la nueva hipótesis de§12: no puede invocarse para refutar suficiencia de esa hipótesis adicional. Esto no demuestra dicha suficiencia.
+Therefore falsifier 074 does NOT satisfy the new hypothesis of §12: it cannot be invoked to refute sufficiency of that additional hypothesis. This does not prove such sufficiency.
 
-Como contraste explícito, V(r)=r²/2+r⁴/4+epsilon*r⁶/6, 0<epsilon<=1, cumple a=1+u+epsilon*u², a'>0 y
+As an explicit contrast, V(r)=r²/2+r⁴/4+epsilon*r⁶/6, 0<epsilon<=1, satisfies a=1+u+epsilon*u², a'>0 and
 
     a³ q''=2(1-epsilon)+6epsilon*u+6epsilon²*u²>0, u>0.
 
-Sin embargo V'(R)/R³ tiende a infinito, por lo que el falsificador de capas de§5 se aplica: la nueva condición no hace positivas todas las capas S_v. No se obtuvo un falsificador ni una prueba global del INTEGRAL A para esta familia; el caso cuártico epsilon=0 de§4 no autoriza extrapolar. La revisión constructiva tampoco produjo una cota del déficit integral D(R) para todo R a partir de q convexa. Los R intermedios y todos los órdenes permanecen OPEN.
+However V'(R)/R³ tends to infinity, so the layer falsifier of §5 applies: the new condition does not make all layers S_v positive. Neither a falsifier nor a global proof of the INTEGRAL A was obtained for this family; the quartic case epsilon=0 of §4 does not authorize extrapolation. The constructive review did not produce a bound of the integral deficit D(R) for all R from convex q either. Intermediate R and all orders remain OPEN.
 
 
-## 13. La convexidad recíproca tampoco basta para todos los órdenes
+## 13. Reciprocal convexity does not suffice for all orders either
 
-**PROVED, clase genérica declarada.** Construcción arithmetic_fresh_candidate/root, revisión independiente de estabilidad positive_identity_attempt. Consulta previa de los tres índices y§§8.7–8.9,12. Diferencia: el error relativo se controla ahora en C6, lo que conserva la nueva desigualdad diferencial GLOBAL, no sólo datos finitos. No se refuta la Phi real ni se conserva su identidad aritmética completa.
+**PROVED, declared generic class.** Construction arithmetic_fresh_candidate, independent stability review positive_identity_attempt. Prior consultation of the three indices and §§8.7–8.9,12. Difference: the relative error is now controlled in C6, which preserves the new GLOBAL differential inequality, not only finite data. The real Phi is not refuted nor is its full arithmetic identity preserved.
 
-Existen densidades psi positivas, pares, holomorfas en el strip de Phi y arbitrariamente cercanas a Phi en error relativo C6, con las colas relativas de§8.7, que satisfacen
+There exist positive, even densities psi, holomorphic in the strip of Phi and arbitrarily close to Phi in C6 relative error, with the relative tails of §8.7, which satisfy
 
-    V_psi'''(r)>0 para r>0,
+    V_psi'''(r)>0 for r>0,
     a_psi(u)=V_psi'(sqrt(u))/sqrt(u)>0,
-    (1/a_psi)''(u)>0 para u>=0,
+    (1/a_psi)''(u)>0 for u>=0,
 
-pero cuyo A_psi NO es PSD. El tamaño de un bloque negativo no se especifica. Estas densidades sí satisfacen HK>J² y positividad de triples temporales simétricos pequeños por§12; no hay contradicción entre esas conclusiones finitas y el fallo global.
+but whose A_psi is NOT PSD. The size of a negative block is not specified. These densities do satisfy HK>J² and positivity of small symmetric temporal triples by §12; there is no contradiction between those finite conclusions and the global failure.
 
-**1. El corte relativo de§8.7 es pequeño también en derivadas.** Con el mismo cutoff par fijo chi, n>=2, x=pi exp(2t)>=pi e para t>=1/2, poner r_n=Phi_n/Phi_1. La fórmula modal explícita y D=2x partial_x dan, para0<=j<=6,
+**1. The relative cutoff of §8.7 is also small in derivatives.** With the same fixed even cutoff chi, n>=2, x=pi exp(2t)>=pi e for t>=1/2, set r_n=Phi_n/Phi_1. The explicit modal formula and D=2x partial_x give, for 0<=j<=6,
 
     |D^j r_n(t)|<=C_j n^(4+2j)(1+x)^j exp[-(n²-1)x].
 
-Los factores racionales sólo tienen denominadores 2x-3, separados de cero. Las series de esos bounds convergen uniformemente en x>=pi e. Por tanto 1+sum_(n>=2)r_n y sus primeras seis derivadas están acotadas, el denominador es>=1 y las derivadas de su inverso están acotadas. Así
+The rational factors only have denominators 2x-3, separated from zero. The series of those bounds converge uniformly in x>=pi e. Therefore 1+sum_(n>=2)r_n and its first six derivatives are bounded, the denominator is >=1 and the derivatives of its inverse are bounded. Thus
 
     h_M=chi * [sum_(n>M)r_n]/[1+sum_(n>=2)r_n]
 
-satisface, para cada B>=0 fijo,
+satisfies, for each fixed B>=0,
 
     ||h_M||_(B,6):=max_(j<=6) sup_t exp(B|t|)|D^j h_M(t)|
        <=C_B sum_(n>M)n^16 exp[-(n²-1)pi e/2] ->0.
 
-Se absorben los factores polinómicos de x y exp(Bt)=(x/pi)^(B/2) contra la mitad del exponencial. Las derivadas del cutoff sólo cambian C_B; h_M es cero cerca del origen. No se afirma control uniforme en todos los órdenes de derivación.
+The polynomial factors of x and exp(Bt)=(x/pi)^(B/2) are absorbed against half of the exponential. The derivatives of the cutoff only change C_B; h_M is zero near the origin. Uniform control in all orders of differentiation is not claimed.
 
-**2. Estabilidad de las desigualdades diferenciales.** Para psi=Phi exp(-E), E par con ||E||C6<=delta, poner beta(u)=E'(r)/r, u=r². Las identidades integrales para una función par dan en0<=u<=1
+**2. Stability of the differential inequalities.** For psi=Phi exp(-E), E even with ||E||C6<=delta, set beta(u)=E'(r)/r, u=r². The integral identities for an even function give on 0<=u<=1
 
     |beta|<=delta, |beta'|<=delta/6, |beta''|<=delta/60.
 
-Por ejemplo beta=integral_0^1 E''(tr)dt; derivar usando paridad y el teorema fundamental del cálculo da beta'=(1/2)integral_0^1 t² integral_0^1 E^(4)(str)dsdt, y beta''=(1/4)integral t⁴ s² E^(6)(vstr)dvd sdt. Los coeficientes resultan de integrar esos pesos. Por§12, a y S=2a'²-aa'' tienen mínimos estrictamente positivos en[0,1]. La perturbación a+beta conserva ambos si delta es suficientemente pequeño.
+For example beta=integral_0^1 E''(tr)dt; differentiating using parity and the fundamental theorem of calculus gives beta'=(1/2)integral_0^1 t² integral_0^1 E^(4)(str)dsdt, and beta''=(1/4)integral t⁴ s² E^(6)(vstr)dvd sdt. The coefficients result from integrating those weights. By §12, a and S=2a'²-aa'' have strictly positive minima on [0,1]. The perturbation a+beta preserves both if delta is sufficiently small.
 
-En r>=1,088 da |p|,|p'|,|p''|<=128Y, Y=pi exp(2r)>21, y§12 da N>2r²Y². Para delta<=1 los segmentos de jets perturbados quedan acotados por129Y. La suma de los módulos de las tres derivadas parciales del polinomio N respecto de p,p',p'' es<=1290r²Y. Luego
+On r>=1, 088 gives |p|,|p'|,|p''|<=128Y, Y=pi exp(2r)>21, and §12 gives N>2r²Y². For delta<=1 the segments of perturbed jets are bounded by 129Y. The sum of the moduli of the three partial derivatives of the polynomial N with respect to p,p',p'' is <=1290r²Y. Hence
 
     |N_psi-N|<=1290delta r²Y.
 
-Tomar delta<=1/100 conserva N_psi>r²Y²>0 y p_psi>0, pues p>2Y-6. Esto completa la estabilidad global de a>0 y q''>0.
+Taking delta<=1/100 preserves N_psi>r²Y²>0 and p_psi>0, since p>2Y-6. This completes the global stability of a>0 and q''>0.
 
-También se conserva V'''>0:073 certifica V^(4)>=m4>0 cerca de0, mientras |E'''(r)|<=delta r por paridad. En un compacto separado de0 hay un mínimo positivo de V'''; en la cola V'''~8Y tiende a infinito. Reducir delta conserva los tres tramos. Por tanto a_psi'>0 también sigue de la misma identidad usada en§9.
+V'''>0 is also preserved: 073 certifies V^(4)>=m4>0 near 0, while |E'''(r)|<=delta r by parity. On a compact separated from 0 there is a positive minimum of V'''; in the tail V'''~8Y tends to infinity. Reducing delta preserves the three stretches. Therefore a_psi'>0 also follows from the same identity used in §9.
 
-**3. Analiticidad y bloque negativo, en el orden correcto.** Tomar g=h_M*gamma_sigma con0<sigma<=1. Las derivadas conmutan con la convolución y
+**3. Analyticity and negative block, in the correct order.** Take g=h_M*gamma_sigma with 0<sigma<=1. The derivatives commute with the convolution and
 
     ||g||_(B,6)<=||h_M||_(B,6) integral exp(B|z|)gamma_sigma(z)dz.
 
-El factor es acotado uniformemente para sigma<=1. Además0<=g<=epsilon_M, y E=-log(1-g) es pequeño en C6 cuando M es grande. Elegir PRIMERO M que asegure la estabilidad anterior para todos esos sigma. La densidad suave Phi(1-h_M) coincide con el prefijo Phi_M en t>=1;§8.7 proporciona un bloque negativo finito con nodos en(1,2). Elegir DESPUÉS sigma suficientemente pequeño para conservar ese bloque mediante la convergencia uniforme g->h_M y el bound de entradas2||g-h_M||infinito A_Phi de§8.7. La densidad final psi=Phi(1-g) es par, positiva y analítica; conserva las colas declaradas y todas las desigualdades diferenciales anteriores.
+The factor is uniformly bounded for sigma<=1. Moreover 0<=g<=epsilon_M, and E=-log(1-g) is small in C6 when M is large. Choose FIRST M ensuring the preceding stability for all those sigma. The smooth density Phi(1-h_M) coincides with the prefix Phi_M on t>=1; §8.7 provides a finite negative block with nodes in (1,2). Choose AFTERWARDS sigma sufficiently small to preserve that block via the uniform convergence g->h_M and the entry bound 2||g-h_M||infinito A_Phi of §8.7. The final density psi=Phi(1-g) is even, positive and analytic; it preserves the declared tails and all the preceding differential inequalities.
 
-**Alcance.** Queda refutada la suficiencia global de esta clase de hipótesis diferenciales, incluso junto a cercanía relativa C6 y las colas indicadas. No se descarta un argumento que use la estructura theta completa, una compensación adicional específica, ni la investigación de triples intermedios de la Phi real. No nueva ventana W/T, ningún cambio en papers y ningún cómputo nuevo.
+**Scope.** Global sufficiency of this class of differential hypotheses is refuted, even together with C6 relative closeness and the indicated tails. An argument using the full theta structure, a specific additional compensation, or the investigation of intermediate triples of the real Phi are not ruled out. No new W/T window, no change to papers and no new computation.
 
 
-## 14. El recíproco temporal no admite la representación Laplace positiva propuesta
+## 14. The temporal reciprocal does not admit the proposed positive Laplace representation
 
-**PROVED, root/arithmetic_fresh_candidate; revisión matemática independiente.** Consulta dirigida de índices, grid y crucigrama por diagonal_gauge_dedup sin antecedente literal localizado:086 concierne al recíproco de M,111 a monotonía en otro parámetro, y los descartes HCM a otra densidad. La cuestión nueva es q(u)=sqrt(u)/V'(sqrt(u)) de§12, no el signo del kernel original. El argumento sólo usa theta, Poisson, una suma de Gauss finita y unicidad analítica; no usa ninguna equivalencia externa del problema del signo.
+**PROVED, arithmetic_fresh_candidate; independent mathematical review.** Targeted consultation of indices, grid and crossword by diagonal_gauge_dedup with no literal antecedent located: 086 concerns the reciprocal of M, 111 monotonicity in another parameter, and the HCM discards another density. The new question is q(u)=sqrt(u)/V'(sqrt(u)) of §12, not the sign of the original kernel. The argument only uses theta, Poisson, a finite Gauss sum and analytic uniqueness; it uses no external equivalence of the sign problem.
 
-**Enunciado.** q, definida para u>0, no tiene extensión holomorfa a TODO Re u>0. En particular no existe una medida positiva mu en[0,infinito) tal que
+**Statement.** q, defined for u>0, has no holomorphic extension to ALL of Re u>0. In particular there is no positive measure mu on [0,infinito) such that
 
     q(u)=integral exp(-us)dmu(s), u>0.
 
-La finitud de esa integral para cada u>0 implicaría holomorfía en el semiplano: en un compacto Re u>=a>0 se dominan todas las derivadas por una constante por exp(-as/2), integrable. No se necesita suponer de antemano masa total finita.
+Finiteness of that integral for each u>0 would imply holomorphy in the half-plane: on a compact Re u>=a>0 all derivatives are dominated by a constant times exp(-as/2), integrable. It is not necessary to assume finite total mass beforehand.
 
-**1. Identidad sin denominadores.** Si Q fuese esa extensión, en el dominio convexo
+**1. Identity without denominators.** If Q were that extension, on the convex domain
 
     D={z=x+iy: x>|y|, |y|<pi/4}
 
-se tendría Q(z²)Phi'(z)+zPhi(z)=0. Ambos términos son holomorfos y la igualdad vale en el eje real positivo por§12. La unicidad analítica la extiende a D. No se divide por Phi' en ese dominio.
+one would have Q(z²)Phi'(z)+zPhi(z)=0. Both terms are holomorphic and the equality holds on the positive real axis by §12. Analytic uniqueness extends it to D. One does not divide by Phi' on that domain.
 
-**2. Cúspides racionales y coeficiente no nulo.** Para cada m>=3 impar, tomar tau_m=16+2/m, w0=i tau_m y w=w0+delta, delta>0. La descomposición por residuos módulo m y Poisson dan exactamente
+**2. Rational cusps and nonzero coefficient.** For each odd m>=3, take tau_m=16+2/m, w0=i tau_m and w=w0+delta, delta>0. The decomposition by residues modulo m and Poisson give exactly
 
     theta(w0+delta)=delta^(-1/2)/m
        *sum_(nu entero) exp[-pi nu²/(m²delta)] G_m(nu),
     G_m(nu)=sum_(j mod m) exp[-2pi i j²/m+2pi i nu j/m].
 
-El término16 no cambia la fase. Si G_m=G_m(0), entonces |G_m|²=m: al expandir el cuadrado, cambiar variables a=j-k,b=j+k módulo m es invertible y la suma es sum_(a,b)exp(-2pi i ab/m)=m. Por tanto G_m no es nulo. Para cada m fijo,
+The term 16 does not change the phase. If G_m=G_m(0), then |G_m|²=m: on expanding the square, changing variables a=j-k,b=j+k modulo m is invertible and the sum is sum_(a,b)exp(-2pi i ab/m)=m. Therefore G_m is nonzero. For each fixed m,
 
     theta(w0+delta)=(G_m/m)delta^(-1/2)+resto.
 
-El resto y sus primeras tres derivadas son O_m(delta^(-N)exp(-c_m/delta)) para algún N y c_m>0. Se obtiene diferenciando la serie de nu!=0: sólo aparecen potencias de nu y delta^(-1), dominadas por una parte de la exponencial gaussiana. No se requiere uniformidad en m.
+The remainder and its first three derivatives are O_m(delta^(-N)exp(-c_m/delta)) for some N and c_m>0. It is obtained by differentiating the series over nu!=0: only powers of nu and delta^(-1) appear, dominated by part of the Gaussian exponential. Uniformity in m is not required.
 
-**3. Límite del recíproco y contradicción.** Con z=(1/2)Log w en la rama del primer cuadrante,
+**3. Limit of the reciprocal and contradiction.** With z=(1/2)Log w on the first-quadrant branch,
 
     Phi(z)=w^(5/4)[w theta''(w)+(3/2)theta'(w)].
 
-Los términos algebraicos de orden delta^(-3/2) cancelan exactamente. Así
+The algebraic terms of order delta^(-3/2) cancel exactly. Thus
 
     Phi(z)=(3G_m/(4m))w0 w^(5/4)delta^(-5/2)+resto,
     Phi'(z)/Phi(z)=-5w0/delta+O_m(1).
 
-El control del resto diferenciado justifica ambos equivalentes; los términos principales son no nulos. La identidad del paso1 fuerza
+Control of the differentiated remainder justifies both equivalents; the leading terms are nonzero. The identity of step 1 forces
 
     Q(z²)=-zPhi(z)/Phi'(z) ->0 cuando delta baja a0.
 
-Estos z pertenecen a D y convergen a z_m=(log tau_m)/2+i pi/4. Además Re(z_m²)>0, pues (log tau_m)/2>log4>1>pi/4. Por continuidad de la extensión hipotética, Q(z_m²)=0 para todo m impar. Los puntos z_m² son distintos y convergen al punto interior (log4+i pi/4)² del semiplano. Unicidad analítica fuerza Q idénticamente nula allí, contrario a q(u)>0 en el eje real. Esto prueba el enunciado.
+These z belong to D and converge to z_m=(log tau_m)/2+i pi/4. Moreover Re(z_m²)>0, since (log tau_m)/2>log4>1>pi/4. By continuity of the hypothetical extension, Q(z_m²)=0 for all odd m. The points z_m² are distinct and converge to the interior point (log4+i pi/4)² of the half-plane. Analytic uniqueness forces Q identically zero there, contrary to q(u)>0 on the real axis. This proves the statement.
 
-**Alcance del test de momentos.** Antes de esta prueba se evaluaron los coeficientes de q de órdenes0,...,39 usando los jets COMPLETOS ya encerrados en el certificado de§12 (grado40 de Phi(sqrt u)); todos sus signos alternados son estrictamente positivos. No se usa ese test en la prueba ni se lo extrapola. El descarte sólo concierne a la representación positiva propuesta de q y a su extensión holomorfa; no refuta q''>0, HK>J², los triples positivos ni A_Phi. No nuevaW/T ni cambios en papers.
+**Scope of the moment test.** Before this proof, the coefficients of q of orders 0,...,39 were evaluated using the FULL jets already enclosed in the certificate of §12 (degree 40 of Phi(sqrt u)); all their alternating signs are strictly positive. That test is not used in the proof nor extrapolated. The discard only concerns the proposed positive representation of q and its holomorphic extension; it does not refute q''>0, HK>J², the positive triples nor A_Phi. No new W/T nor changes to papers.
 
 
-## 15. G convexa no basta ni para los triples temporales simétricos
+## 15. Convex G does not suffice even for symmetric temporal triples
 
-**PROVED por contramodelo elemental.** Constructor positive_identity_attempt, revisión root/arithmetic_fresh_candidate PASS. Consulta dirigida de índices, grid, crucigrama y074/101 sin este falsificador temporal literal localizado. Diferencia: se decide la suficiencia de G convexa para el bloque(-R,0,R), no un bloque del kernel de exponentes ni todos los órdenes a la vez.
+**PROVED by elementary countermodel.** Construction positive_identity_attempt, review arithmetic_fresh_candidate PASS. Targeted consultation of indices, grid, crossword and 074/101 with no literal temporal falsifier of this kind located. Difference: the sufficiency of convex G for the block (-R,0,R) is decided, not a block of the exponent kernel nor all orders at once.
 
-Tomar exactamente epsilon=1/1000 y
+Take exactly epsilon=1/1000 and
 
     phi(r)=exp(-r²/2-epsilon*r⁶/6),
     G(u)=u/2+epsilon*u³/6, u=r².
 
-G'>0, G''=epsilon*u>0 para u>0 y V'''(r)=20epsilon*r³>0 para r>0. La densidad es par, positiva y entera; sus supercolas justifican todos los bordes y derivaciones de§12. En particular sus pares temporales son SPD por§9.
+G'>0, G''=epsilon*u>0 for u>0 and V'''(r)=20epsilon*r³>0 for r>0. The density is even, positive and entire; its supertails justify all boundaries and differentiations of §12. In particular its temporal pairs are SPD by §9.
 
-Con a=1+epsilon*u², w=exp(-u-epsilon*u³/3), Z=integral_0^infinito w y E la esperanza normalizada, la identidad de§12 da
+With a=1+epsilon*u², w=exp(-u-epsilon*u³/3), Z=integral_0^infinito w and E the normalized expectation, the identity of §12 gives
 
     Delta=(HK-J²)/H²
       =-2epsilon E[u²]+epsilon²(15E[u⁴]-9E[u²]²).
 
-Definir I_j=integral u^j w. La desigualdad elemental exp(-x)>=1-x y las integrales factoriales dan
+Define I_j=integral u^j w. The elementary inequality exp(-x)>=1-x and the factorial integrals give
 
     I_2>=2!-epsilon*5!/3=2-40epsilon=49/25,
     I_4<=4!=24.
 
-Descartar sólo el término no positivo de Delta produce
+Discarding only the nonpositive term of Delta yields
 
     Delta<=(epsilon/Z)[-2I_2+15epsilon I_4]
          <=-89/(25000Z)<0.
 
-Por la expansión de§12.2, el determinante del sector simétrico satisface D(R)=2(HK-J²)R⁴+O(R⁶)<0 para TODO R>0 suficientemente pequeño. Así la matriz temporal de tres nodos(-R,0,R) es indefinida. No se requiere buscar ni evaluar numéricamente R.
+By the expansion of §12.2, the determinant of the symmetric sector satisfies D(R)=2(HK-J²)R⁴+O(R⁶)<0 for ALL sufficiently small R>0. Thus the three-node temporal matrix (-R,0,R) is indefinite. No search or numerical evaluation of R is required.
 
-Este potencial no satisface la convexidad recíproca nueva: q(u)=1/(1+epsilon*u²) tiene q''(0)=-2epsilon<0. El resultado no contradice§12 para la theta real ni refuta los triples de potencias080. Tampoco dice que q convexa baste para triples arbitrarios. Se descarta únicamente la suficiencia de G convexa (incluso acompañada de V'''>0) para los triples temporales simétricos. Sin cómputos, nuevaW/T ni cambios en papers.
+This potential does not satisfy the new reciprocal convexity: q(u)=1/(1+epsilon*u²) has q''(0)=-2epsilon<0. The result does not contradict §12 for the real theta nor refute the power triples 080. Nor does it say that convex q suffices for arbitrary triples. Only the sufficiency of convex G (even accompanied by V'''>0) for symmetric temporal triples is discarded. No computations, new W/T or changes to papers.
 
 
-## 16. Equivalente del kernel completo en escalas enteras fijas
+## 16. Equivalent of the full kernel at fixed integer scales
 
-**PROVED, 2026-11-06.** Construcción root/joint_sign_fresh_review, cálculo y verificación independiente global_restart_checked; auditoría matemática independiente arithmetic_fresh_candidate PASS y root PASS, incluidos prefactores y corolario. Consultados las reglas del proyecto, los tres índices y las primarias pertinentes; cotejo dirigido sin antecedente literal localizado para el equivalente de A siguiente. Los Grams aritméticos de phase209 [CONSTRUCTOR_005](../phase-209-nonlocal-kernel/CONSTRUCTOR_005.md) y [AUDIT_005](../phase-209-nonlocal-kernel/AUDIT_005.md) son antecedentes explícitos: el kernel gcd y su positividad son clásicos, no nuevos. La diferencia es identificar aquí el principal del A REAL COMPLETO, con sus casi resonancias controladas, no sustituir A por un Gram aritmético favorable. El promedio de banda de§4.1 es antecedente del método oscilatorio; por sí solo no daba este equivalente sobre toda la semirrecta.
+**PROVED, 2026-11-06.** Construction joint_sign_fresh_review, computation and independent verification global_restart_checked; independent mathematical audit arithmetic_fresh_candidate PASS and second review PASS, including prefactors and corollary. Consulted: the project rules, the three indices and the relevant primary sources; targeted cross-check with no literal antecedent located for the following equivalent of A. The arithmetic Grams of phase209 [CONSTRUCTOR_005](../phase-209-nonlocal-kernel/CONSTRUCTOR_005.md) and [AUDIT_005](../phase-209-nonlocal-kernel/AUDIT_005.md) are explicit antecedents: the gcd kernel and its positivity are classical, not new. The difference is identifying here the leading term of the FULL REAL A, with its near-resonances controlled, not replacing A by a favourable arithmetic Gram. The band average of §4.1 is an antecedent of the oscillatory method; by itself it did not give this equivalent on the whole half-line.
 
-### 16.1. Enunciado y fórmula exacta
+### 16.1. Statement and exact formula
 
-Sean k,l enteros positivos FIJOS, z_k=(log k)/2+iy, epsilon=cos(2y) bajando a0 y L=log(1/epsilon). Definir rho(k,l)=0 si k,l no tienen la misma parte libre de cuadrados. Si k=d a²,l=d b² con d libre de cuadrados, poner
+Let k,l be FIXED positive integers, z_k=(log k)/2+iy, epsilon=cos(2y) decreasing to 0 and L=log(1/epsilon). Define rho(k,l)=0 if k,l do not have the same squarefree part. If k=d a²,l=d b² with d squarefree, set
 
     rho(k,l)=gcd(a,b)/sqrt(ab).
 
-Entonces
+Then
 
     A(z_k,conjugado(z_l))
       =[105/(512sqrt2)] rho(k,l) epsilon^(-9/2) L²
          +O_(k,l)(epsilon^(-9/2) L).                 (INT-ASYM)
 
-El resto es complejo en general; sus constantes dependen de k,l. No se afirma uniformidad en esos enteros, el número de nodos o su separación.
+The remainder is complex in general; its constants depend on k,l. Uniformity in those integers, the number of nodes or their separation is not claimed.
 
-Para sigma=sin(2y), t=exp(2r)>=1 y c_kl=(log k+log l)/2, la representación exacta conserva el factor temporal:
+For sigma=sin(2y), t=exp(2r)>=1 and c_kl=(log k+log l)/2, the exact representation keeps the temporal factor:
 
     A(z_k,conjugado(z_l))
        =integral_1^infinito w_kl(t) Phi_k(t) conjugado(Phi_l(t))dt,
@@ -1493,120 +1493,120 @@ Para sigma=sin(2y), t=exp(2r)>=1 y c_kl=(log k+log l)/2, la representación exac
     V_k(t)=-3pi(kt)^(5/4)exp(5iy/2)
                    sum_(n>=1)n² exp[-pi(epsilon+i sigma)kt n²].
 
-Para epsilon>0 fijo, las series y sus productos son absolutamente integrables en t>=1 con este peso; la exponencial gaussiana domina todos los factores polinomiales y logarítmicos. Así Fubini y las diferenciaciones de amplitudes siguientes se justifican antes de tomar epsilon a0. El producto principal tiene el prefactor EXACTO
+For fixed epsilon>0, the series and their products are absolutely integrable on t>=1 with this weight; the Gaussian exponential dominates all polynomial and logarithmic factors. Thus Fubini and the following amplitude differentiations are justified before taking epsilon to 0. The leading product has the EXACT prefactor
 
     4pi4(kl)^(9/4) sum_(n,m>=1)n4m4
        integral_1^infinito w_kl(t)t^(9/2)
           exp[-pi epsilon t(kn²+lm²)]
           exp[-i pi sigma t(kn²-lm²)]dt.             (MAIN)
 
-### 16.2. Casi resonancias: control elemental también para aproximaciones cuadráticas
+### 16.2. Near-resonances: elementary control also for quadratic approximations
 
-Con prima indicando kn²!=lm², se prueba para TODO delta>0
+With the prime indicating kn²!=lm², one proves for ALL delta>0
 
     S_delta=sum' n4m4 exp[-delta(kn²+lm²)]/|kn²-lm²|
        <=C_(k,l) delta^-4 log(2+1/delta).            (NEAR)
 
-Para verlo, descomponer en cajas diádicas max(n,m) comparable a N. Fuera de una región donde sqrt(k)n y sqrt(l)m son comparables, el denominador es>=c_(k,l)N²; la suma de numeradores es O(N10), y el bloque es O(N8). En la región comparable, poner alpha=sqrt(k/l); el denominador es comparable a N|alpha n-m|.
+To see it, decompose into dyadic boxes with max(n,m) comparable to N. Outside a region where sqrt(k)n and sqrt(l)m are comparable, the denominator is >=c_(k,l)N²; the sum of numerators is O(N10), and the block is O(N8). In the comparable region, set alpha=sqrt(k/l); the denominator is comparable to N|alpha n-m|.
 
-Si alpha es irracional, la integridad de kq²-lp² implica |alpha q-p|>=c_(k,l)/q para el entero p más próximo y q>=1. Los residuos alpha n de una caja de longitud O(N) están por tanto separados en el círculo al menos c_(k,l)/N y también a esa distancia de0. Ordenar sus distancias a los enteros da sum_n dist(alpha n,Z)^(-1)<=C_(k,l)N log(2N). Los m más próximos aportan O(log(2N)) a la suma de denominadores inversos de la caja; los demás m aportan lo mismo por la suma armónica de sus distancias. Al multiplicar por n4m4<=C N8, se obtiene O(N8 log(2N)). Si alpha es racional, las distancias no nulas tienen un denominador fijo; se omiten sólo las resonancias exactas y la misma cota armónica basta. Esto conserva, en particular, las aproximaciones con |kn²-lm²| pequeño y no nulo.
+If alpha is irrational, integrality of kq²-lp² implies |alpha q-p|>=c_(k,l)/q for the nearest integer p and q>=1. The residues alpha n of a box of length O(N) are therefore separated on the circle by at least c_(k,l)/N and also at that distance from 0. Ordering their distances to the integers gives sum_n dist(alpha n,Z)^(-1)<=C_(k,l)N log(2N). The nearest m contribute O(log(2N)) to the sum of inverse denominators of the box; the other m contribute the same by the harmonic sum of their distances. Multiplying by n4m4<=C N8, one obtains O(N8 log(2N)). If alpha is rational, the nonzero distances have a fixed denominator; only the exact resonances are omitted and the same harmonic bound suffices. This keeps, in particular, the approximations with |kn²-lm²| small and nonzero.
 
-Sumar O(N8 log(2N))exp(-c delta N²) sobre N diádico prueba (NEAR) para delta<=1. Para delta>=1, extraer parte de la exponencial da S_delta<=C exp(-c delta)<=C' delta^-4, que completa la fórmula para todo delta.
+Summing O(N8 log(2N))exp(-c delta N²) over dyadic N proves (NEAR) for delta<=1. For delta>=1, extracting part of the exponential gives S_delta<=C exp(-c delta)<=C' delta^-4, which completes the formula for all delta.
 
-En t∈[T,2T], T=2^j>=1, integrar por partes contra la fase de (MAIN). Con Q=kn²+lm² y d_nm=kn²-lm² distinto de0, el borde y la derivada de la amplitud se acotan por
+On t∈[T,2T], T=2^j>=1, integrate by parts against the phase of (MAIN). With Q=kn²+lm² and d_nm=kn²-lm² different from 0, the boundary and the derivative of the amplitude are bounded by
 
     C_(k,l) T^(7/2)(1+log T)
          (1+epsilon T Q)exp(-pi epsilon T Q).
 
-El factor adicional se absorbe en parte de la exponencial. Como sigma>=1/2 eventualmente, el integral oscilatorio es<=C T^(7/2)(1+log T)exp(-c epsilon T Q)/|d_nm|. Aplicar (NEAR) con delta=c epsilon T y sumar todos los T da para TODOS los pares no resonantes de (MAIN)
+The additional factor is absorbed in part of the exponential. Since sigma>=1/2 eventually, the oscillatory integral is <=C T^(7/2)(1+log T)exp(-c epsilon T Q)/|d_nm|. Applying (NEAR) with delta=c epsilon T and summing over all T gives, for ALL non-resonant pairs of (MAIN),
 
     <=C_(k,l) epsilon^-4
         sum_(T=2^j) T^(-1/2)(1+log T)log(2+1/(epsilon T))
     <=C'_(k,l) epsilon^-4 log(2+1/epsilon).          (OFF)
 
-La suma diádica T^(-1/2)(1+log T) converge. No se ha usado una cota uniforme para razones reales arbitrarias ni se han borrado casi resonancias.
+The dyadic sum T^(-1/2)(1+log T) converges. No uniform bound for arbitrary real ratios has been used nor have near-resonances been deleted.
 
-### 16.3. Resonancias exactas y constante del equivalente
+### 16.3. Exact resonances and constant of the equivalent
 
-Si k,l no comparten parte libre de cuadrados, no hay resonancias exactas. En el otro caso, escribir k=d a²,l=d b²,g=gcd(a,b). Todas las resonancias son
+If k,l do not share a squarefree part, there are no exact resonances. Otherwise, write k=d a²,l=d b²,g=gcd(a,b). All resonances are
 
     n=(b/g)j, m=(a/g)j, j>=1,
     kn²=lm²=Lambda j², Lambda=d(ab/g)²,
     (kl)^(9/4)n4m4=(kl)^(1/4)(Lambda j²)^4,
     (kl)^(1/4)/sqrt(Lambda)=rho(k,l).
 
-Poner F(s)=s^(9/2)sum_(j>=1)j8 exp(-2pi s j²). El mismo argumento Riemann uniforme de§4.1 da
+Set F(s)=s^(9/2)sum_(j>=1)j8 exp(-2pi s j²). The same uniform Riemann argument of §4.1 gives
 
     F(s)=F0+O(sqrt s), s bajando a0,
     F0=Gamma(9/2)/[2(2pi)^(9/2)],
     F(s)<=C s^(9/2)exp(-c s), s>=1.
 
-El aporte resonante completo es exactamente
+The full resonant contribution is exactly
 
     4pi4 rho(k,l) epsilon^(-9/2)
        integral_1^infinito [log t+c_kl]/(2t) F(epsilon Lambda t)dt.
 
-Con s=epsilon Lambda t, sustituir F por F0 en epsilon Lambda<=s<=1 produce F0 log²(1/epsilon)/4+O_(k,l)(L). El error O(sqrt s) se integra contra [log(s/(epsilon Lambda))+c_kl]/s y es O_(k,l)(L); la cola s>=1 también es O_(k,l)(L) por su decaimiento exponencial. Los cambios constantes log Lambda y c_kl sólo afectan ese resto. Como
+With s=epsilon Lambda t, replacing F by F0 on epsilon Lambda<=s<=1 yields F0 log²(1/epsilon)/4+O_(k,l)(L). The error O(sqrt s) is integrated against [log(s/(epsilon Lambda))+c_kl]/s and is O_(k,l)(L); the tail s>=1 is also O_(k,l)(L) by its exponential decay. The constant shifts log Lambda and c_kl only affect that remainder. Since
 
     4pi4 F0=105/(128sqrt2),
 
-se obtiene el coeficiente105 rho(k,l)/(512sqrt2) de(INT-ASYM).
+one obtains the coefficient 105 rho(k,l)/(512sqrt2) of (INT-ASYM).
 
-### 16.4. Términos inferiores, corolario y alcance
+### 16.4. Lower terms, corollary and scope
 
-Las cotas gaussianas absolutas, válidas para todo t>=1, dan
+The absolute Gaussian bounds, valid for all t>=1, give
 
     |U_k(t)|<=C_k epsilon^(-5/2)t^(-1/4),
     |V_k(t)|<=C_k epsilon^(-3/2)t^(-1/4).
 
-El peso w_kl(t)t^(-1/2) es integrable en[1,infinito). Por tanto las normas L²(w_kl dt) de U_k,V_k son O_(k,l)(epsilon^(-5/2)) y O_(k,l)(epsilon^(-3/2)). Cauchy–Schwarz acota los cruces U_k conjugado(V_l), V_k conjugado(U_l) por O_(k,l)(epsilon^-4), y el producto inferior por O_(k,l)(epsilon^-3). Junto con(OFF), quedan absorbidos en el resto O_(k,l)(epsilon^(-9/2)L). No se supone previamente que A sea PSD.
+The weight w_kl(t)t^(-1/2) is integrable on [1,infinito). Therefore the L²(w_kl dt) norms of U_k,V_k are O_(k,l)(epsilon^(-5/2)) and O_(k,l)(epsilon^(-3/2)). Cauchy–Schwarz bounds the crossings U_k conjugado(V_l), V_k conjugado(U_l) by O_(k,l)(epsilon^-4), and the lower product by O_(k,l)(epsilon^-3). Together with (OFF), they are absorbed in the remainder O_(k,l)(epsilon^(-9/2)L). It is not previously assumed that A is PSD.
 
-**Corolario para una lista fija.** Para cualquier lista finita FIJA de enteros positivos distintos k_i, la matriz [rho(k_i,k_j)] es definida positiva. Las partes libres de cuadrados distintas dan bloques separados. Dentro de cada bloque, la congruencia por sqrt(a_i) produce [gcd(a_i,a_j)]. La identidad CLÁSICA gcd(a,b)=sum_(q|a,q|b)phi(q), con phi(q)>0, da un Gram de incidencias de divisores; sobre los a_i distintos ordenados, las columnas q=a_i forman una matriz triangular con diagonal1. Así el Gram es definido positivo. Esta identidad y la positividad aritmética no se presentan como nuevas.
+**Corollary for a fixed list.** For any FIXED finite list of distinct positive integers k_i, the matrix [rho(k_i,k_j)] is positive definite. Distinct squarefree parts give separate blocks. Within each block, congruence by sqrt(a_i) produces [gcd(a_i,a_j)]. The CLASSICAL identity gcd(a,b)=sum_(q|a,q|b)phi(q), with phi(q)>0, gives a Gram of divisor incidences; over the distinct ordered a_i, the columns q=a_i form a triangular matrix with diagonal 1. Thus the Gram is positive definite. This identity and the arithmetic positivity are not presented as new.
 
-En consecuencia, para cada tal lista, el bloque Hermitiano complejo [A(z_(k_i),conjugado(z_(k_j)))] es definido positivo cuando epsilon es suficientemente pequeño: al dividir por epsilon^(-9/2)L² se obtiene [105/(512sqrt2)]rho+O_lista(1/L), cuyo límite tiene mínimo autovalor positivo. El umbral DEPENDE de la lista; no hay uniformidad en dimensión ni enteros ni se certifica un valor numérico del umbral. Los enteros repetidos sólo duplican nodos y no dan definitud estricta.
+Consequently, for each such list, the complex Hermitian block [A(z_(k_i),conjugado(z_(k_j)))] is positive definite when epsilon is sufficiently small: dividing by epsilon^(-9/2)L² one obtains [105/(512sqrt2)]rho+O_lista(1/L), whose limit has positive minimal eigenvalue. The threshold DEPENDS on the list; there is no uniformity in dimension or integers nor is a numerical value of the threshold certified. Repeated integers only duplicate nodes and do not give strict definiteness.
 
-El resultado identifica un principal aritmético del kernel original completo y prueba este corolario de bloques COMPLEJOS fijos. No demuestra PSD de A en una ventana real, CPD de log A, positividad de H, una comparación relativa uniforme de todos los órdenes ni el signo global. No se confunde con el kernel renormalizado de phase209 ni se transfiere su norma al portador del paper. Sin campañas, datos numéricos, nueva cobertura W/T ni cambios en papers.
+The result identifies an arithmetic leading term of the full original kernel and proves this corollary for fixed COMPLEX blocks. It does not prove PSD of A on a real window, CPD of log A, positivity of H, a uniform relative comparison of all orders nor the global sign. It is not confused with the renormalized kernel of phase209 nor is its norm transferred to the carrier of the paper. No campaigns, numerical data, new W/T coverage or changes to papers.
 
-### 16.5. El comparador rho no da dominación uniforme ni tras normalizar la diagonal
+### 16.5. The comparator rho gives no uniform domination even after normalizing the diagonal
 
-**PROVED, misma fecha y entrada.** Propuesta root, cálculo global_restart_checked; auditoría independiente arithmetic_fresh_candidate PASS y root PASS. Cotejo dirigido en los tres índices y corpus phase209/211 sin antecedente literal localizado para este límite de enteros consecutivos. El antecedente de§4.3 estudia otra cola con variables reales; aquí se fija PRIMERO y∈(0,pi/4), por tanto epsilon=cos2y>0 y sigma=sin2y, y DESPUÉS se hace k tender a infinito con l=k+1. No se intercambia ese orden con(INT-ASYM).
+**PROVED, same date and entry.** Proposal, computation global_restart_checked; independent audit arithmetic_fresh_candidate PASS and second review PASS. Targeted cross-check in the three indices and corpus phase209/211 with no literal antecedent located for this limit of consecutive integers. The antecedent of §4.3 studies another tail with real variables; here y∈(0,pi/4) is fixed FIRST, hence epsilon=cos2y>0 and sigma=sin2y, and AFTERWARDS k tends to infinity with l=k+1. That order is not exchanged with (INT-ASYM).
 
-Poner x_k=(log k)/2, u=x_k+x_l y E=epsilon(k+l)+i sigma(k-l). Para k,l en{k,k+1}, la serie theta COMPLETA, normalizada por su primer modo, da uniformemente en r>=0, con s=exp(2r)-1,
+Set x_k=(log k)/2, u=x_k+x_l and E=epsilon(k+l)+i sigma(k-l). For k,l in {k,k+1}, the FULL theta series, normalized by its first mode, gives uniformly in r>=0, with s=exp(2r)-1,
 
     Phi(z_k+r)/Phi(z_k)
       =(1+s)^(9/4)exp[-pi k exp(2iy)s] B_k(s),
     B_k(s)=1+O_y(1/k)+O_y(exp(-3pi epsilon k)).
 
-En efecto, el cociente del factor racional del primer modo es [1-a_k/(1+s)]/[1-a_k], a_k=3/[2pi k exp(2iy)], y difiere de1 en O(1/k) uniformemente. La cola relativa completa se acota por C_y sum_(n>=2)n4 exp[-pi(n²-1)epsilon k(1+s)]<=C'_y exp(-3pi epsilon k). Para k suficientemente grande, esos factores muestran también Phi(z_k)!=0. Con D_kl(s)=B_k(s)conjugado(B_l(s)), se obtiene exactamente
+Indeed, the quotient of the rational factor of the first mode is [1-a_k/(1+s)]/[1-a_k], a_k=3/[2pi k exp(2iy)], and differs from 1 by O(1/k) uniformly. The full relative tail is bounded by C_y sum_(n>=2)n4 exp[-pi(n²-1)epsilon k(1+s)]<=C'_y exp(-3pi epsilon k). For k sufficiently large, those factors also show Phi(z_k)!=0. With D_kl(s)=B_k(s)conjugado(B_l(s)), one obtains exactly
 
     A(z_k,conjugado(z_l))/[Phi(z_k)conjugado(Phi(z_l))]
        =(1/2)integral_0^infinito [u+log(1+s)](1+s)^(7/2)
                            exp(-pi E s) D_kl(s)ds.
 
-Aquí D_kl=1+O_y(1/k) uniformemente y Re E es comparable a k para y fijo. La amplitud sin D es u+O((u+1)s(1+s)^(7/2)); integrar el error contra exp(-pi Re E s) da O_y((u+1)/k²). Así
+Here D_kl=1+O_y(1/k) uniformly and Re E is comparable to k for fixed y. The amplitude without D is u+O((u+1)s(1+s)^(7/2)); integrating the error against exp(-pi Re E s) gives O_y((u+1)/k²). Thus
 
     A(z_k,conjugado(z_l))/[Phi(z_k)conjugado(Phi(z_l))]
        =u/(2pi E) [1+O_y(1/k)],
     A(z_k,conjugado(z_k))/|Phi(z_k)|²
        =x_k/(2pi epsilon k) [1+O_y(1/k)].
 
-Las diagonales de A son positivas por su integral horizontal. Definir el bloque normalizado C_y(k,l)=A(z_k,conjugado(z_l))/sqrt(A(z_k,conjugado(z_k))A(z_l,conjugado(z_l))). Para l=k+1, las fórmulas anteriores implican
+The diagonals of A are positive by their horizontal integral. Define the normalized block C_y(k,l)=A(z_k,conjugado(z_l))/sqrt(A(z_k,conjugado(z_k))A(z_l,conjugado(z_l))). For l=k+1, the preceding formulas imply
 
     |C_y(k,k+1)|
        =[epsilon sqrt(k(k+1))(x_k+x_(k+1))
           /(sqrt(x_k x_(k+1)) |epsilon(2k+1)-i sigma|)]
             *[1+O_y(1/k)] ->1.
 
-Pero rho(k,k+1)=0: si compartieran parte libre de cuadrados, 1=d(b²-a²), imposible para a,b positivos. El bloque rho es por tanto I_2, mientras el mínimo autovalor del bloque C_y es 1-|C_y(k,k+1)| y tiende a0. Para CUALQUIER y fijo como arriba no existe c_y>0 tal que C_y>=c_y rho sobre todos los bloques enteros, aunque c_y dependa de y. Asimismo sup_(k,l)|C_y(k,l)-rho(k,l)|>=1 para cada y fijo; en particular no hay aproximación uniforme o(1) a rho cuando epsilon baja a0.
+But rho(k,k+1)=0: if they shared a squarefree part, 1=d(b²-a²), impossible for positive a,b. The rho block is therefore I_2, while the minimal eigenvalue of the C_y block is 1-|C_y(k,k+1)| and tends to 0. For ANY y fixed as above there is no c_y>0 such that C_y>=c_y rho on all integer blocks, even if c_y depends on y. Likewise sup_(k,l)|C_y(k,l)-rho(k,l)|>=1 for each fixed y; in particular there is no uniform o(1) approximation to rho as epsilon decreases to 0.
 
-Sólo se descartan estas dos afirmaciones sobre el comparador rho CON ESTA normalización diagonal. No se prueba un valor negativo de A, no se supone A PSD y no se excluyen otros modelos, pesos o compensaciones. El equivalente para nodos fijos de§16.1 y su corolario permanecen válidos; el límite de escape demuestra por qué no se extienden uniformemente en los enteros. No se afirma aquí un régimen conjunto variable de epsilon,k ni una ley de transición. Signo global OPEN; sin nueva ruta, cómputos, cobertura W/T ni cambios en papers.
+Only these two statements about the comparator rho WITH THIS diagonal normalization are discarded. No negative value of A is proved, A is not assumed PSD and other models, weights or compensations are not excluded. The equivalent for fixed nodes of §16.1 and its corollary remain valid; the escape limit shows why they do not extend uniformly in the integers. A joint variable regime of epsilon,k or a transition law is not claimed here. Global sign OPEN; no new route, computations, W/T coverage or changes to papers.
 
 
-## 17. Suma de cuadrados exacta para la parte resonante completa
+## 17. Exact sum of squares for the full resonant part
 
-**PROVED, 2026-11-06.** Construcción root/joint_sign_fresh_review, verificación independiente global_restart_checked; auditoría matemática independiente arithmetic_fresh_candidate PASS y root PASS para la identidad SOS, su positividad estricta y el antecedente de una frecuencia individual. Leídos las reglas del proyecto, los tres índices, POWER_SIGNED_MEAN_019 con su auditoría y phase209 CONSTRUCTOR_005/AUDIT_005; cotejo dirigido sin esta identidad literal localizada. Las herramientas de divisores, factoriales y sumas de cuadrados son conocidas. La diferencia es conservar la parte resonante EXACTA del kernel A y construir una SOS que acopla frecuencias distintas mediante cambio de escala. No se invierte una media por Möbius como en019 ni se sustituye el objeto por el Gram renormalizado de209.
+**PROVED, 2026-11-06.** Construction joint_sign_fresh_review, independent verification global_restart_checked; independent mathematical audit arithmetic_fresh_candidate PASS and second review PASS for the SOS identity, its strict positivity and the antecedent of an individual frequency. Read: the project rules, the three indices, POWER_SIGNED_MEAN_019 with its audit and phase209 CONSTRUCTOR_005/AUDIT_005; targeted cross-check without this literal identity located. The tools of divisors, factorials and sums of squares are known. The difference is keeping the EXACT resonant part of the kernel A and constructing an SOS that couples distinct frequencies via change of scale. A mean is not inverted by Möbius as in 019 nor is the object replaced by the renormalized Gram of 209.
 
-Fijar y real con |y|<pi/4, incluido y=0; poner a_y=exp(2iy), epsilon=cos(2y)>0 y z_k=(log k)/2+iy para k entero positivo. En la expansión modal exacta de§16, definir R_res como la contribución de TODOS los pares con kn²=lm², manteniendo el integral completo t>=1 y los dos términos del polinomio modal. La contribución restante de A contiene kn²!=lm². Para fijar las normalizaciones, poner
+Fix real y with |y|<pi/4, including y=0; set a_y=exp(2iy), epsilon=cos(2y)>0 and z_k=(log k)/2+iy for k a positive integer. In the exact modal expansion of §16, define R_res as the contribution of ALL pairs with kn²=lm², keeping the full integral t>=1 and both terms of the modal polynomial. The remaining contribution of A contains kn²!=lm². To fix the normalizations, set
 
     h_lambda(t)=pi(lambda t)^(5/4)(2pi a_y lambda t-3)
                          exp(5iy/2)exp(-pi a_y lambda t),
@@ -1617,38 +1617,38 @@ Fijar y real con |y|<pi/4, incluido y=0; poner a_y=exp(2iy), epsilon=cos(2y)>0 y
     J_lambda=lambda^(-1/2)integral_lambda^infinito
                                       log(u/lambda)H(u)/(2u)du.
 
-Para lambda>=1, H(u)>0 en u>=lambda, pues 2pi u>3; por tanto I_lambda,J_lambda>0. Todo el argumento usa epsilon>0 fijo, sin aproximación de borde.
+For lambda>=1, H(u)>0 on u>=lambda, since 2pi u>3; therefore I_lambda,J_lambda>0. The whole argument uses fixed epsilon>0, without boundary approximation.
 
-**Cotejo bibliográfico posterior (2026-11-06).** La representación de una forma de grafo mediante diferencias al cuadrado y potencial tiene antecedente general en Keller–Pinchover–Pogorzelski, [Criticality theory for Schrödinger operators on graphs, §4.2](https://arxiv.org/html/1708.09664#S4.SS2). Alexeev et al., [Primitive sets and von Mangoldt chains, Ejemplo2.4 y§10.1](https://arxiv.org/html/2605.00301v1#S10.SS1), emplean la cadena P(q→q/m)=Lambda(m)/log q. Para cada d, el peso nu_d(q)=I_(dq²)log q, q>=2, reproduce exactamente las conductancias Lambda(m)I_(dq²) de la SOS siguiente; q=1 es el extremo absorbente. Abreviando I_q=I_(dq²), J_q=J_(dq²), su potencial es D_q=J_q+log(d)I_q+Out_q−In_q, con Out_q=log(q)I_q e In_q=sum_(m>=2)Lambda(m)I_(qm). No se transfiere la subinvariancia de los pesos distintos del artículo: D_q>0 se prueba aquí por las cotas siguientes. No se atribuye novedad a completar cuadrados, al grafo divisor ni a la identidad factorial. La búsqueda dirigida root/fresh_global no localizó el mismo teorema con estos pesos theta y esta cota de D_q; eso NO establece prioridad mundial. La cadena no estima los productos de perfiles de frecuencias distintas del resto no resonante;§17.6 sigue aplicándose. Esta comparación bibliográfica no añade signo ni un método de cierre.
+**Later bibliographic cross-check (2026-11-06).** The representation of a graph form via squared differences and potential has a general antecedent in Keller–Pinchover–Pogorzelski, [Criticality theory for Schrödinger operators on graphs, §4.2](https://arxiv.org/html/1708.09664#S4.SS2). Alexeev et al., [Primitive sets and von Mangoldt chains, Example 2.4 and §10.1](https://arxiv.org/html/2605.00301v1#S10.SS1), use the chain P(q→q/m)=Lambda(m)/log q. For each d, the weight nu_d(q)=I_(dq²)log q, q>=2, reproduces exactly the conductances Lambda(m)I_(dq²) of the following SOS; q=1 is the absorbing endpoint. Abbreviating I_q=I_(dq²), J_q=J_(dq²), its potential is D_q=J_q+log(d)I_q+Out_q−In_q, with Out_q=log(q)I_q and In_q=sum_(m>=2)Lambda(m)I_(qm). The subinvariance of the different weights of the article is not transferred: D_q>0 is proved here by the following bounds. No novelty is attributed to completing squares, to the divisor graph or to the factorial identity. The targeted search fresh_global did not locate the same theorem with these theta weights and this bound on D_q; that does NOT establish worldwide priority. The chain does not estimate the products of profiles of distinct frequencies of the non-resonant remainder; §17.6 still applies. This bibliographic comparison adds no sign nor a closure method.
 
-### 17.1. Una frecuencia individual puede ser indefinida
+### 17.1. An individual frequency can be indefinite
 
-En los nodos k=1,4, la frecuencia comun lambda=4 corresponde a n=2,m=1. Su matriz, usando I_4,J_4 recién definidos, es exactamente
+At the nodes k=1,4, the common frequency lambda=4 corresponds to n=2,m=1. Its matrix, using I_4,J_4 just defined, is exactly
 
     [[J_4, sqrt2(J_4+log2 I_4)],
      [sqrt2(J_4+log2 I_4), 2(J_4+2log2 I_4)]],
     det=-2(log2)² I_4²<0.
 
-Este descarte de positividad por cada frecuencia NO se aplica a la suma de todas ellas. La construcción siguiente demuestra precisamente compensación entre frecuencias; no exige que cada bloque resonante individual sea PSD.
+This discard of positivity per frequency does NOT apply to the sum of all of them. The following construction proves precisely compensation between frequencies; it does not require each individual resonant block to be PSD.
 
-### 17.2. Transformación divisorial directa e identidad SOS
+### 17.2. Direct divisorial transformation and SOS identity
 
-Las resonancias sólo acoplan enteros con la misma parte libre de cuadrados. Fijar uno de esos grupos k=d a², con d libre de cuadrados, y coeficientes complejos c_a de soporte FINITO. Abreviar I_q=I_(dq²), J_q=J_(dq²), y definir
+Resonances only couple integers with the same squarefree part. Fix one of those groups k=d a², with d squarefree, and complex coefficients c_a of FINITE support. Abbreviate I_q=I_(dq²), J_q=J_(dq²), and define
 
     f_q=sum_(a|q)sqrt(a)c_a,
     g_q=sum_(a|q)sqrt(a)log(a)c_a.
 
-La frecuencia lambda=dq² recibe exactamente los índices a|q, con n=q/a. El factor n^(-1/2)=sqrt(a/q) y el cambio u=lambda t, con sqrt(d)/sqrt(lambda)=1/q, dan
+The frequency lambda=dq² receives exactly the indices a|q, with n=q/a. The factor n^(-1/2)=sqrt(a/q) and the change u=lambda t, with sqrt(d)/sqrt(lambda)=1/q, give
 
     R_res[c]/sqrt(d)
        =sum_(q>=1)[(J_q+log(d)I_q)|f_q|²
                                +2I_q Re(g_q conjugado(f_q))].
 
-La identidad elemental sum_(m|r)Lambda(m)=log r da DIRECTAMENTE
+The elementary identity sum_(m|r)Lambda(m)=log r gives DIRECTLY
 
     g_q=log(q)f_q-sum_(m|q,m>=2)Lambda(m)f_(q/m).
 
-Completar los cuadrados y reindexar los términos de |f_(q/m)|² produce la identidad exacta
+Completing the squares and reindexing the terms of |f_(q/m)|² produces the exact identity
 
     R_res[c]/sqrt(d)
        =sum_(q>=1) D_q |f_q|²
@@ -1657,48 +1657,48 @@ Completar los cuadrados y reindexar los términos de |f_(q/m)|² produce la iden
     D_q=J_q+[log d+log q]I_q
                     -sum_(m>=2)Lambda(m)I_(qm).
 
-Para comprobar factores y orientación: los cuadrados aportan log(q)I_q a la diagonal q por sum_(m|q)Lambda(m)=log q, y aportan sum_(m>=2)Lambda(m)I_(qm) al reindexar la otra diagonal. El resto es exactamente D_q, mientras el cruce es -2Lambda(m)I_q Re(f_q conjugado(f_(q/m))). No se han eliminado términos firmados ni introducido una inversión Möbius.
+To check factors and orientation: the squares contribute log(q)I_q to the diagonal q via sum_(m|q)Lambda(m)=log q, and contribute sum_(m>=2)Lambda(m)I_(qm) on reindexing the other diagonal. The rest is exactly D_q, while the crossing is -2Lambda(m)I_q Re(f_q conjugado(f_(q/m))). No signed terms have been eliminated nor has a Möbius inversion been introduced.
 
-### 17.3. El coeficiente diagonal D_q es estrictamente positivo
+### 17.3. The diagonal coefficient D_q is strictly positive
 
-Con lambda=dq², cambiar escala en cada I_(qm) y aplicar Tonelli a sus sumandos no negativos da
+With lambda=dq², rescaling in each I_(qm) and applying Tonelli to its nonnegative summands gives
 
     D_q=lambda^(-1/2)integral_lambda^infinito H(u)/(2u)
        *[log u-log q
           -sum_(2<=m<=sqrt(u/lambda))Lambda(m)/m]du.          (DIAG)
 
-Para X>1, N=floor X, la identidad factorial y floor(X/m)>=X/(2m), m<=X, implican
+For X>1, N=floor X, the factorial identity and floor(X/m)>=X/(2m), m<=X, imply
 
     log(N!)=sum_(m<=X)Lambda(m)floor(X/m)
        >=(X/2)sum_(2<=m<=X)Lambda(m)/m,
     sum_(2<=m<=X)Lambda(m)/m
        <=2log(N!)/X<2log X.
 
-La última desigualdad es estricta para TODO X>1, incluyendo 1<X<2: log(N!)<Xlog X. Para u>lambda, tomar X=sqrt(u/lambda). El corchete de(DIAG) es estrictamente mayor que
+The last inequality is strict for ALL X>1, including 1<X<2: log(N!)<Xlog X. For u>lambda, take X=sqrt(u/lambda). The bracket of (DIAG) is strictly greater than
 
     log u-log q-log(u/lambda)=log d+log q>=0.
 
-Como H(u)>0 en u>=lambda, se concluye D_q>0 para TODOS d,q>=1. También vale cuando d=q=1: la cota inferior constante es entonces0, pero el corchete es estrictamente positivo en todo u>lambda.
+Since H(u)>0 on u>=lambda, one concludes D_q>0 for ALL d,q>=1. It also holds when d=q=1: the constant lower bound is then 0, but the bracket is strictly positive on all u>lambda.
 
-### 17.4. Convergencia, definitud y alcance
+### 17.4. Convergence, definiteness and scope
 
-Para epsilon>0 fijo, I_(dq²),J_(dq²) se acotan por un polinomio en q por exp(-c_y d q²); esto sigue directamente del polinomio por gaussiana de H. Los f_q,g_q son acotados porque c tiene soporte finito. En particular las expresiones previas convergen absolutamente. Para los cuadrados de(RES-SOS), basta sum_(m|q)Lambda(m)=log q y el acotamiento de f. La suma reindexada de diagonales entrantes también converge, pues sum_q sum_(m>=2)Lambda(m)I_(qm)=sum_r log(r)I_r<infinito. Estas cotas justifican las expansiones de cuadrados y todas las reindexaciones; las sumas modales originales son asimismo absolutamente integrables para epsilon>0 fijo.
+For fixed epsilon>0, I_(dq²),J_(dq²) are bounded by a polynomial in q times exp(-c_y d q²); this follows directly from the polynomial-times-Gaussian form of H. The f_q,g_q are bounded because c has finite support. In particular the preceding expressions converge absolutely. For the squares of (RES-SOS), sum_(m|q)Lambda(m)=log q and the boundedness of f suffice. The reindexed sum of incoming diagonals also converges, since sum_q sum_(m>=2)Lambda(m)I_(qm)=sum_r log(r)I_r<infinito. These bounds justify the square expansions and all reindexings; the original modal sums are likewise absolutely integrable for fixed epsilon>0.
 
-Los pesos de(RES-SOS) son no negativos y D_q es estrictamente positivo. Si c no es nulo, elegir a0 mínimo con c_(a0)!=0; sus divisores propios tienen coeficiente0, luego f_(a0)=sqrt(a0)c_(a0)!=0. La primera suma es por tanto estrictamente positiva. Sumar los grupos libres de cuadrados, que no se acoplan en R_res, prueba que R_res es un kernel DEFINIDO POSITIVO sobre CUALQUIER conjunto finito de enteros positivos distintos k, para CADA y real con |y|<pi/4, incluido0. No hay restricción de tamaño ni un umbral dependiente de la lista para ESTA parte exacta. Los índices repetidos se agrupan y sólo dan semidefinitud como representación redundante.
+The weights of (RES-SOS) are nonnegative and D_q is strictly positive. If c is nonzero, choose a0 minimal with c_(a0)!=0; its proper divisors have coefficient 0, hence f_(a0)=sqrt(a0)c_(a0)!=0. The first sum is therefore strictly positive. Summing the squarefree groups, which do not couple in R_res, proves that R_res is a POSITIVE DEFINITE kernel on ANY finite set of distinct positive integers k, for EACH real y with |y|<pi/4, including 0. There is no size restriction nor a list-dependent threshold for THIS exact part. Repeated indices are grouped and only give semidefiniteness as a redundant representation.
 
-El cambio u=lambda t y la transformación divisorial directa acoplan frecuencias lambda distintas, cada una potencialmente indefinida. Por eso la prueba evita exigir PSD de las capas o de cada frecuencia; no borra la estructura aritmética. El resultado tampoco contradice§16.5: R_res es la parte resonante exacta, no el comparador límite rho ni una dominación de A por él.
+The change u=lambda t and the direct divisorial transformation couple distinct frequencies lambda, each potentially indefinite. That is why the proof avoids requiring PSD of the layers or of each frequency; it does not erase the arithmetic structure. Nor does the result contradict §16.5: R_res is the exact resonant part, not the limiting comparator rho nor a domination of A by it.
 
-**Alcance del signo obtenido.** Se demuestra todos los órdenes de R_res sobre los índices ENTEROS positivos k. NO se demuestra todos los nodos reales del kernel A ni el signo de la contribución kn²!=lm². Sigue faltando un control conjunto de esa contribución no resonante. El puente posterior de§18 elimina la obligación adicional de pasar del A COMPLETO entero a todos los nodos reales; no transfiere por separado R_res ni prueba el signo faltante. No se infiere A PSD, CPD, positividad del kernel partial_t partial_s log A, una ventana nueva W/T ni cierre global. Sin campañas, datos numéricos, archivos auxiliares ni cambios en papers.
+**Scope of the sign obtained.** All orders of R_res on the positive INTEGER indices k are proved. NOT all real nodes of the kernel A nor the sign of the contribution kn²!=lm² are proved. A joint control of that non-resonant contribution is still missing. The later bridge of §18 eliminates the additional obligation of passing from the FULL integer A to all real nodes; it does not transfer R_res separately nor prove the missing sign. No A PSD, CPD, positivity of the kernel partial_t partial_s log A, new W/T window or global closure is inferred. No campaigns, numerical data, auxiliary files or changes to papers.
 
-### 17.5. Cota uniforme en la energía divisorial exacta
+### 17.5. Uniform bound in the exact divisorial energy
 
-**PROVED, misma fecha y entrada.** Refinamiento root/joint_sign_fresh_review; verificación independiente global_restart_checked, auditoría arithmetic_fresh_candidate PASS y root PASS. Para TODOS d,q>=1 y TODOS 0<epsilon<=1 de la familia anterior,
+**PROVED, same date and entry.** Refinement joint_sign_fresh_review; independent verification global_restart_checked, audit arithmetic_fresh_candidate PASS and second review PASS. For ALL d,q>=1 and ALL 0<epsilon<=1 of the preceding family,
 
     D_q>=c_* I_q,
     c_*=(log2/3)*(4pi-3)²exp(-6pi)
                 /[(4pi+3)²+(4pi-3)²exp(-6pi)]>0.             (UNIF-D)
 
-Si dq>=2, la prueba de§17.3 ya da D_q>=log(dq)I_q>=log2 I_q, más fuerte. Sólo falta d=q=1,lambda=1. Para X>=2 y N=floor X, al menos floor(N/2) factores de N!/N^N son<=1/2; por tanto
+If dq>=2, the proof of §17.3 already gives D_q>=log(dq)I_q>=log2 I_q, stronger. Only d=q=1,lambda=1 remains. For X>=2 and N=floor X, at least floor(N/2) factors of N!/N^N are <=1/2; therefore
 
     N!<=N^N 2^(-floor(N/2)),
     sum_(2<=m<=X)Lambda(m)/m
@@ -1706,61 +1706,61 @@ Si dq>=2, la prueba de§17.3 ya da D_q>=log(dq)I_q>=log2 I_q, más fuerte. Sólo
        <=2log X-[2floor(N/2)/X]log2
        <=2log X-log2/3.
 
-Se usó 2floor(N/2)>=N-1 y (N-1)/X>(N-1)/(N+1)>=1/3. En el corchete de(DIAG) para d=q=1, poner X=sqrt u. Para u>=4 la cota anterior da un lower beta=log2/3. Para 2<=u<4 la suma está vacía y el corchete es log u>=log2. Así ese mismo lower beta vale en TODO u>=2; en[1,2] el corchete es no negativo por§17.3.
+One used 2floor(N/2)>=N-1 and (N-1)/X>(N-1)/(N+1)>=1/3. In the bracket of (DIAG) for d=q=1, set X=sqrt u. For u>=4 the preceding bound gives a lower bound beta=log2/3. For 2<=u<4 the sum is empty and the bracket is log u>=log2. Thus that same lower bound beta holds on ALL u>=2; on [1,2] the bracket is nonnegative by §17.3.
 
-Escribir C para la masa de H(u)/(2u) en[1,2] y T para su masa en[2,infinito). Como |a_y|=1 y 0<epsilon<=1,
+Write C for the mass of H(u)/(2u) on [1,2] and T for its mass on [2,infinito). Since |a_y|=1 and 0<epsilon<=1,
 
     C<=C_max=pi²sqrt2(4pi+3)²,
     T>=integral_2^3 H(u)/(2u)du
        >=T_min=pi²sqrt2(4pi-3)²exp(-6pi).
 
-La primera cota usa u^(3/2)<=2sqrt2, |2pi a_yu-3|<=4pi+3 y exp(-2pi epsilon u)<=1. La segunda usa u^(3/2)>=2sqrt2, |2pi a_yu-3|>=4pi-3 y exp(-2pi epsilon u)>=exp(-6pi) en[2,3]. Por tanto
+The first bound uses u^(3/2)<=2sqrt2, |2pi a_yu-3|<=4pi+3 and exp(-2pi epsilon u)<=1. The second uses u^(3/2)>=2sqrt2, |2pi a_yu-3|>=4pi-3 and exp(-2pi epsilon u)>=exp(-6pi) on [2,3]. Therefore
 
     D_1>=beta T,
     D_1/I_1>=beta T/(C+T)
               >=beta T_min/(C_max+T_min)=c_*.
 
-Esto completa(UNIF-D). Para un vector finito sobre los enteros k, separar k=d a² y poner f_(d,q)=sum_(a|q)sqrt(a)c_(d a²). La identidad(RES-SOS) implica
+This completes (UNIF-D). For a finite vector on the integers k, separate k=d a² and set f_(d,q)=sum_(a|q)sqrt(a)c_(d a²). The identity (RES-SOS) implies
 
     R_res[c]>=c_* E_y[c],
     E_y[c]=sum_(d libre de cuadrados)sqrt(d)
                     sum_(q>=1) I_(dq²)|f_(d,q)|².            (DIV-LOWER)
 
-La constante c_* es uniforme en epsilon,d,q y tamaño del soporte, pero E_y conserva los pesos EXACTOS I_(dq²), que dependen de epsilon y de los índices. No es un margen uniforme respecto de la norma euclídea de los coeficientes ni una comparación para A completo. El término no resonante sigue sin controlar. El puente posterior de§18 transfiere la eventual positividad del A COMPLETO entero a todos los nodos reales; no transfiere por separado esta cota resonante ni añade una ventana W/T o cierre global. Sin cómputos, nueva ruta o cambios en papers.
+The constant c_* is uniform in epsilon,d,q and support size, but E_y keeps the EXACT weights I_(dq²), which depend on epsilon and on the indices. It is not a uniform margin with respect to the Euclidean norm of the coefficients nor a comparison for the full A. The non-resonant term remains uncontrolled. The later bridge of §18 transfers the eventual positivity of the FULL integer A to all real nodes; it does not transfer this resonant bound separately nor add a W/T window or global closure. No computations, new route or changes to papers.
 
-### 17.6. La energía E_y no domina el daño no resonante uniformemente
+### 17.6. The energy E_y does not dominate the non-resonant damage uniformly
 
-**PROVED, misma fecha y entrada.** Propuesta root, verificación independiente global_restart_checked; auditoría arithmetic_fresh_candidate PASS y root PASS para los límites y alcances siguientes, incluida la extensión a y=0. Consultados los tres índices,§16.5 y§17.5; cotejo dirigido sin antecedente literal localizado para Off_y/E_y. Fijar PRIMERO y∈[0,pi/4) y DESPUÉS k tender a infinito. Abreviar A_y(k,l)=A(z_k,conjugado(z_l)) y Off_y=A_y-R_res,y, sin asignar signo a ninguna de las dos matrices completas.
+**PROVED, same date and entry.** Proposal, independent verification global_restart_checked; audit arithmetic_fresh_candidate PASS and second review PASS for the following limits and scopes, including the extension to y=0. Consulted the three indices, §16.5 and §17.5; targeted cross-check with no literal antecedent located for Off_y/E_y. Fix FIRST y∈[0,pi/4) and AFTERWARDS let k tend to infinity. Abbreviate A_y(k,l)=A(z_k,conjugado(z_l)) and Off_y=A_y-R_res,y, without assigning a sign to either of the two full matrices.
 
-Para un solo índice k=d a², las diagonales exactas de(DIV-LOWER) y de la parte resonante son
+For a single index k=d a², the exact diagonals of (DIV-LOWER) and of the resonant part are
 
     e_k=E_y[delta_k]=sqrt(k)sum_(n>=1)I_(kn²),
     r_k=R_res,y(k,k)
        =sqrt(k)sum_(n>=1)[J_(kn²)+log(k)I_(kn²)].
 
-El cambio u=lambda+s en los integrales de I,J, con y fijo, da
+The change u=lambda+s in the integrals of I,J, with fixed y, gives
 
     I_lambda=H(lambda)/[4pi epsilon lambda^(3/2)]
                        *[1+O_y(1/lambda)],
     J_lambda/I_lambda=O_y(1/lambda),
     sum_(n>=2)I_(kn²)/I_k=O_y(exp(-6pi epsilon k)).
 
-Estas cotas no derivan un resto asintótico: se escribe H(u)/(2u)=p_y(u)exp(-2pi epsilon u), con p_y(u) comparable a u^(7/2) y derivada logarítmica O_y(1/u) para u grande. Tras u=lambda+s, el cociente p_y(lambda+s)/p_y(lambda) tiene error acotado por C_y s(1+s)^M/lambda; se integra contra exp(-2pi epsilon s). Para J se usa log(1+s/lambda)<=s/lambda. La cola en n se acota por C_y sum_(n>=2)n6 exp[-2pi epsilon k(n²-1)], que da la última fórmula. En particular
+These bounds do not differentiate an asymptotic remainder: one writes H(u)/(2u)=p_y(u)exp(-2pi epsilon u), with p_y(u) comparable to u^(7/2) and logarithmic derivative O_y(1/u) for u large. After u=lambda+s, the quotient p_y(lambda+s)/p_y(lambda) has error bounded by C_y s(1+s)^M/lambda; it is integrated against exp(-2pi epsilon s). For J one uses log(1+s/lambda)<=s/lambda. The tail in n is bounded by C_y sum_(n>=2)n6 exp[-2pi epsilon k(n²-1)], which gives the last formula. In particular
 
     r_k/e_k=log k+O_y(1/k).
 
-La cola theta COMPLETA de§16.5 es O_y(exp(-3pi epsilon k)) relativa al primer modo, uniformemente en r>=0. Su contribución a A_y(k,k) respecto del cuadrado de ese modo tiene ese mismo error relativo, pues el peso diagonal es positivo. La cola de cuadrados de modos en r_k tiene error relativo O_y(exp(-6pi epsilon k)). Por tanto
+The FULL theta tail of §16.5 is O_y(exp(-3pi epsilon k)) relative to the first mode, uniformly in r>=0. Its contribution to A_y(k,k) relative to the square of that mode has that same relative error, since the diagonal weight is positive. The tail of squares of modes in r_k has relative error O_y(exp(-6pi epsilon k)). Therefore
 
     Off_y(k,k)/e_k=O_y(log k exp(-3pi epsilon k))->0,
     A_y(k,k)/e_k=log k+o(1).
 
-Los enteros consecutivos k,l=k+1 tienen distintas partes libres de cuadrados. Así E_y y R_res,y tienen cruce0 en ese par, mientras Off_y(k,l)=A_y(k,l). La correlación de§16.5, con error O_y(1/k), implica
+The consecutive integers k,l=k+1 have distinct squarefree parts. Thus E_y and R_res,y have crossing 0 at that pair, while Off_y(k,l)=A_y(k,l). The correlation of §16.5, with error O_y(1/k), implies
 
     |A_y(k,k+1)|/sqrt(e_k e_(k+1))=log k+o(1).
 
-En y=0 no se invoca§16.5 fuera de su enunciado: su prueba de extremo se aplica directamente con epsilon=1,sigma=0,E=k+l>0. La cola completa sigue siendo O(exp(-3pi k)), y la misma integral D_kl da A_0(k,l)/[Phi(x_k)Phi(x_l)]=(x_k+x_l)/[2pi(k+l)]*(1+O(1/k)). Esto prueba también la correlación necesaria en y=0. Allí A_0(k,l)>0 y pueden elegirse los coeficientes reales con signos(+,-).
+At y=0, §16.5 is not invoked outside its statement: its endpoint proof applies directly with epsilon=1,sigma=0,E=k+l>0. The full tail is still O(exp(-3pi k)), and the same integral D_kl gives A_0(k,l)/[Phi(x_k)Phi(x_l)]=(x_k+x_l)/[2pi(k+l)]*(1+O(1/k)). This also proves the necessary correlation at y=0. There A_0(k,l)>0 and the real coefficients can be chosen with signs (+,-).
 
-Elegir c^(k) con dos entradas de módulos (2e_k)^(-1/2),(2e_(k+1))^(-1/2) y fase que haga negativo el cruce de A_y. Entonces
+Choose c^(k) with two entries of moduli (2e_k)^(-1/2),(2e_(k+1))^(-1/2) and phase making the crossing of A_y negative. Then
 
     E_y[c^(k)]=1,
     Off_y[c^(k)]
@@ -1771,66 +1771,66 @@ Elegir c^(k) con dos entradas de módulos (2e_k)^(-1/2),(2e_(k+1))^(-1/2) y fase
     A_y[c^(k)]=o(1),
     A_y[c^(k)]/R_res,y[c^(k)]->0.
 
-No existe C_y finito tal que Off_y>=-C_y E_y sobre todos los bloques enteros. Tampoco existe delta_y>0 con A_y>=delta_y R_res,y uniformemente, o equivalentemente Off_y>=-(1-delta_y)R_res,y. Ambas constantes podrían depender de y y aun así fallan ya en estos pares, INCLUIDO y=0. Esto limita el pago mediante el margen E_y y la perturbación estrictamente menor que R_res; NO prueba A negativo ni decide la desigualdad crítica Off_y>=-R_res,y. En y=0 los pares reales son SPD por§9 y estos vectores tienen A_0[c^(k)]>0, aunque su cociente con R_res,0 tienda a0. La SOS de§17 y su lower(DIV-LOWER) siguen válidos. Sin nuevo principio general de imposibilidad, ruta, cómputos, ventana W/T ni papers editados.
+There is no finite C_y such that Off_y>=-C_y E_y on all integer blocks. Nor is there delta_y>0 with A_y>=delta_y R_res,y uniformly, or equivalently Off_y>=-(1-delta_y)R_res,y. Both constants could depend on y and still fail already on these pairs, INCLUDING y=0. This limits the payment via the margin E_y and the perturbation strictly smaller than R_res; it does NOT prove A negative nor decide the critical inequality Off_y>=-R_res,y. At y=0 the real pairs are SPD by §9 and these vectors have A_0[c^(k)]>0, although their quotient with R_res,0 tends to 0. The SOS of §17 and its lower bound (DIV-LOWER) remain valid. No new general impossibility principle, route, computations, W/T window or edited papers.
 
-### 17.7. La cota logarítmica escalar falla también en el portador theta exacto
+### 17.7. The scalar logarithmic bound also fails on the exact theta carrier
 
-**PROVED, misma fecha y entrada.** Construcción root/joint_sign_fresh_review, verificación independiente global_restart_checked; auditoría arithmetic_fresh_candidate PASS y root PASS. Cotejo previo: phase199 [PROOF_L_SHARP_C_001§4, Prop4.2](../phase-199-frontier-pattern/proof-L-sharp/PROOF_L_SHARP_C_001.md) ya demuestra no acotación del mapa directo de dilataciones en L²; [PROOF_L_SHARP_E_001§3, Rem3.1](../phase-199-frontier-pattern/proof-L-sharp/PROOF_L_SHARP_E_001.md) ya contiene el operador de peine mediante el conmutador divisorial. [BRIDGE002§3](POWER_BRIDGE_002.md) usa aproximación C1 por polinomios, [AUDIT_L_SHARP_1§2.4](../phase-199-frontier-pattern/proof-L-sharp/AUDIT_L_SHARP_1.md) usa inversión Möbius compacta en otro mapa y019§§3–5 conserva el límite de invertir medias. No se presenta la no acotación de dilataciones como principio nuevo. La diferencia acotada es comprobar ESTA desigualdad cuadrática con peso logarítmico sobre agregados theta EXACTOS, usando densidad en una norma donde el operador sí es continuo.
+**PROVED, same date and entry.** Construction joint_sign_fresh_review, independent verification global_restart_checked; audit arithmetic_fresh_candidate PASS and second review PASS. Prior cross-check: phase199 [PROOF_L_SHARP_C_001§4, Prop4.2](../phase-199-frontier-pattern/proof-L-sharp/PROOF_L_SHARP_C_001.md) already proves unboundedness of the direct dilation map on L²; [PROOF_L_SHARP_E_001§3, Rem3.1](../phase-199-frontier-pattern/proof-L-sharp/PROOF_L_SHARP_E_001.md) already contains the comb operator via the divisorial commutator. [BRIDGE002§3](POWER_BRIDGE_002.md) uses C1 approximation by polynomials, [AUDIT_L_SHARP_1§2.4](../phase-199-frontier-pattern/proof-L-sharp/AUDIT_L_SHARP_1.md) uses compact Möbius inversion on another map and 019§§3–5 keeps the limit of inverting means. Unboundedness of dilations is not presented as a new principle. The bounded difference is checking THIS quadratic inequality with logarithmic weight on EXACT theta aggregates, using density in a norm where the operator is continuous.
 
-Aquí y=0, t>=1. Definir T_mF(t)=F(mt), de modo que T_m²F(t)=F(m²t), y
+Here y=0, t>=1. Define T_mF(t)=F(mt), so that T_m²F(t)=F(m²t), and
 
     C=sum_(m>=2) Lambda(m)m^(-1/2) T_m²,
     Theta_k(t)=Phi((log(kt))/2), k entero positivo,
     Q_C(F)=integral_1^infinito (CF)(t)conjugado(F(t))dt/(2t),
     W(F)=integral_1^infinito (1+log t)|F(t)|²dt/(2t).
 
-NO existe M finito tal que |Q_C(F)|<=M W(F) para todos los F de la envolvente compleja FINITA de los Theta_k.
+There is NO finite M such that |Q_C(F)|<=M W(F) for all F in the FINITE complex span of the Theta_k.
 
-**Continuidad en una norma fuerte y densidad del portador.** Para 0<gamma<2pi, usar el espacio EXPONENCIAL
+**Continuity in a strong norm and density of the carrier.** For 0<gamma<2pi, use the EXPONENTIAL space
 
     H_gamma=L²([1,infinito), exp(gamma t)dt/t).
 
-No es un peso de potencia. El cambio u=m²t da
+It is not a power weight. The change u=m²t gives
 
     ||T_m²F||_(H_gamma)²
        =integral_(m²)^infinito exp(gamma u/m²)|F(u)|²du/u
        <=exp[-gamma(m²-1)]||F||_(H_gamma)².
 
-Luego C es acotado en H_gamma, pues sum_(m>=2)Lambda(m)m^(-1/2)exp[-gamma(m²-1)/2] converge. Q_C y W son formas continuas en H_gamma; para W se usa 1+log t<=C_gamma exp(gamma t). Los Theta_k pertenecen a ese espacio por su cola gaussiana completa.
+Hence C is bounded on H_gamma, since sum_(m>=2)Lambda(m)m^(-1/2)exp[-gamma(m²-1)/2] converges. Q_C and W are continuous forms on H_gamma; for W one uses 1+log t<=C_gamma exp(gamma t). The Theta_k belong to that space by their full Gaussian tail.
 
-Poner h(u)=pi u^(5/4)(2pi u-3)exp(-pi u). La expansión theta y su inversión, convergentes absolutamente en H_gamma, son
+Set h(u)=pi u^(5/4)(2pi u-3)exp(-pi u). The theta expansion and its inversion, absolutely convergent in H_gamma, are
 
     Theta_k(t)=sum_(n>=1)n^(-1/2)h(kn²t),
     h(kt)=sum_(n>=1)mu(n)n^(-1/2)Theta_(kn²)(t).
 
-La convergencia en norma se sigue de los bounds polinomiales por exp(-c_gamma kn²) para las normas de esos sumandos; también justifica reagrupar la inversión por sum_(n|j)mu(n). Así la clausura del span theta contiene cada h(kt).
+Norm convergence follows from the polynomial-times-exp(-c_gamma kn²) bounds for the norms of those summands; it also justifies regrouping the inversion via sum_(n|j)mu(n). Thus the closure of the theta span contains each h(kt).
 
-Para G suave de soporte compacto en[1,infinito), poner g(t)=G(t)/(pi t^(5/4)) y
+For G smooth with compact support in [1,infinito), set g(t)=G(t)/(pi t^(5/4)) and
 
     L=-2t(d/dt)-3,
     P(t)=(1/2)t^(-3/2)integral_t^infinito s^(1/2)g(s)ds.
 
-Entonces LP=g y P es suave y nula para t suficientemente grande. Con x=exp(-pi t), Q(x)=P(t)/x es suave en[0,exp(-pi)] y nula cerca de0. Aproximar Q en C1 por polinomios Q_N da
+Then LP=g and P is smooth and zero for t sufficiently large. With x=exp(-pi t), Q(x)=P(t)/x is smooth on [0,exp(-pi)] and zero near 0. Approximating Q in C1 by polynomials Q_N gives
 
     pi t^(5/4)L[xQ_N(x)] -> G en H_gamma.
 
-Cada aproximante es una combinación FINITA de h(kt): para el monomio x^k, pi t^(5/4)Lx^k=k^(-5/4)h(kt), k>=1. El error está acotado por C eta_N t^(5/4)(1+t)exp(-pi t), con eta_N->0, integrable en H_gamma porque gamma<2pi. La densidad de funciones suaves compactas completa la prueba de que el span theta finito es denso en H_gamma. No se confunde esta norma con el espacio B de BRIDGE002 ni con el mapa compacto de phase199.
+Each approximant is a FINITE combination of h(kt): for the monomial x^k, pi t^(5/4)Lx^k=k^(-5/4)h(kt), k>=1. The error is bounded by C eta_N t^(5/4)(1+t)exp(-pi t), with eta_N->0, integrable in H_gamma because gamma<2pi. Density of smooth compact functions completes the proof that the finite theta span is dense in H_gamma. This norm is not confused with the space B of BRIDGE002 nor with the compact map of phase199.
 
-**Contradicción con mesetas reales.** Una cota |Q_C|<=M W válida en el span theta se extendería por esas dos continuidades a TODO H_gamma. Para R>1, el test F_R=1_[1,R] pertenece a H_gamma y da exactamente
+**Contradiction with real plateaus.** A bound |Q_C|<=M W valid on the theta span would extend by those two continuities to ALL of H_gamma. For R>1, the test F_R=1_[1,R] belongs to H_gamma and gives exactly
 
     Q_C(F_R)=(1/2)sum_(2<=m<=sqrt R)
                        Lambda(m)m^(-1/2)log(R/m²),
     W(F_R)=(1/2)log R+(1/4)(log R)².
 
-Para R grande, restringir la suma no negativa a m<=R^(1/4) da Q_C(F_R)>=(log R/4)sum_(m<=R^(1/4))Lambda(m)/sqrt m. La cota elemental psi(X)>=cX para X grande implica que esto es>=c'R^(1/8)log R. Puede obtenerse dicha cota sin datos externos: para N=floor(X/2), psi(X)>=log binom(2N,N)>=2Nlog2-log(2N+1), comparando las valuaciones en primos del binomio con las potencias primas hasta2N. También sum_(m<=X)Lambda(m)/sqrt m>=psi(X)/sqrt X. Por tanto Q_C(F_R)/W(F_R) tiende a infinito.
+For R large, restricting the nonnegative sum to m<=R^(1/4) gives Q_C(F_R)>=(log R/4)sum_(m<=R^(1/4))Lambda(m)/sqrt m. The elementary bound psi(X)>=cX for X large implies that this is >=c'R^(1/8)log R. That bound can be obtained without external data: for N=floor(X/2), psi(X)>=log binom(2N,N)>=2Nlog2-log(2N+1), comparing the prime valuations of the binomial with the prime powers up to 2N. Also sum_(m<=X)Lambda(m)/sqrt m>=psi(X)/sqrt X. Therefore Q_C(F_R)/W(F_R) tends to infinity.
 
-El orden es fijar R, aproximar F_R en H_gamma por agregados theta y pasar la hipotética desigualdad al límite; DESPUÉS hacer R tender a infinito. No se necesita aproximación uniforme en R ni se afirma que F_R sea ya un agregado finito. Esto refuta sólo esta cota escalar logarítmica del operador C sobre el portador theta declarado. No controla el resto no resonante por R_res, no demuestra A negativo ni altera el signo objetivo; no certifica ventana W/T. Sin nueva ruta, campañas, archivos auxiliares ni cambios en papers.
+The order is: fix R, approximate F_R in H_gamma by theta aggregates and pass the hypothetical inequality to the limit; AFTERWARDS let R tend to infinity. Uniform approximation in R is not needed nor is it claimed that F_R is already a finite aggregate. This refutes only this scalar logarithmic bound of the operator C on the declared theta carrier. It does not control the non-resonant remainder by R_res, does not prove A negative nor alter the target sign; it certifies no W/T window. No new route, campaigns, auxiliary files or changes to papers.
 
-### 17.8. Los resolventes conjugados no son todos acretivos en la métrica física
+### 17.8. The conjugated resolvents are not all accretive in the physical metric
 
-**PROVED, misma fecha y entrada.** Construcción root/joint_sign_fresh_review; verificación independiente global_restart_checked, auditoría arithmetic_fresh_candidate PASS y root PASS. Cotejo dirigido en los tres índices y corpus sin este ejemplo literal localizado. Antecedentes: [phase199 E§3, Rem3.1](../phase-199-frontier-pattern/proof-L-sharp/PROOF_L_SHARP_E_001.md) y [phase188 N_BUILD_007](../phase-188-closing-D/N_BUILD_007_CONE_ORDER_ON_A_T.md)/[N_BUILD_018](../phase-188-closing-D/N_BUILD_018_LINEAR_CENTRE_REDUCES_TO_OMEGA_MU.md) tratan operadores de peine, otros núcleos y órdenes de cono; no prueban acretividad de ESTA conjugación en ESTA métrica. No se propone una imposibilidad general de métodos de resolventes.
+**PROVED, same date and entry.** Construction joint_sign_fresh_review; independent verification global_restart_checked, audit arithmetic_fresh_candidate PASS and second review PASS. Targeted cross-check in the three indices and corpus without this literal example located. Antecedents: [phase199 E§3, Rem3.1](../phase-199-frontier-pattern/proof-L-sharp/PROOF_L_SHARP_E_001.md) and [phase188 N_BUILD_007](../phase-188-closing-D/N_BUILD_007_CONE_ORDER_ON_A_T.md)/[N_BUILD_018](../phase-188-closing-D/N_BUILD_018_LINEAR_CENTRE_REDUCES_TO_OMEGA_MU.md) treat comb operators, other kernels and cone orders; they do not prove accretivity of THIS conjugation in THIS metric. No general impossibility of resolvent methods is proposed.
 
-En t>=1, poner
+On t>=1, set
 
     T=pi t^(5/4)[-2t(d/dt)-3], A0=-d/dt,
     (R_s f)(t)=integral_t^infinito exp[-s(u-t)]f(u)du, s>0,
@@ -1838,57 +1838,57 @@ En t>=1, poner
                            integral_t^infinito u^(-3/4)F(u)du,
     Rtilde_s=T R_s T^(-1).
 
-La inversa es la solución con lim_(t->infinito) t^(3/2)P(t)=0, condición que excluye la solución homogénea P(t)=constante*t^(-3/2); el peso correcto es u^(-3/4). Se usa el producto físico integral f conjugado(g)dt/(2t), no el de H_gamma. Para f∈C_c^infinito((1,infinito)), integración por partes sin bordes da exactamente
+The inverse is the solution with lim_(t->infinito) t^(3/2)P(t)=0, a condition that excludes the homogeneous solution P(t)=constante*t^(-3/2); the correct weight is u^(-3/4). The physical product integral f conjugado(g)dt/(2t) is used, not that of H_gamma. For f∈C_c^infinito((1,infinito)), integration by parts without boundaries gives exactly
 
     q=Re<T A0 f,Tf>_fis
       =(pi²/2)[7 integral_1^infinito t^(5/2)|f'|²dt
                       -(9/2)integral_1^infinito t^(1/2)|f|²dt].
 
-Con f(t)=t^(-3/4)u(log t), u suave de soporte compacto en(0,infinito), esto es
+With f(t)=t^(-3/4)u(log t), u smooth with compact support in (0,infinito), this is
 
     q=(pi²/2)[7 integral|u'|²dx-(9/16)integral|u|²dx].
 
-Elegir un bump real no nulo u_R(x)=chi(x/R), chi∈C_c^infinito((1,2)), hace q<0 para R suficientemente grande: las dos integrales escalan como R^(-1) y R. Fijar entonces 0<s<-q/||Tf||_fis² y v=T(A0+s)f. La identidad R_s(A0+s)f=f implica
+Choosing a nonzero real bump u_R(x)=chi(x/R), chi∈C_c^infinito((1,2)), makes q<0 for R sufficiently large: the two integrals scale as R^(-1) and R. Then fix 0<s<-q/||Tf||_fis² and v=T(A0+s)f. The identity R_s(A0+s)f=f implies
 
     Rtilde_s v=Tf,
     Re<Rtilde_s v,v>_fis=q+s||Tf||_fis²<0.             (RES-NEG)
 
-**Transferencia al span theta finito.** No basta densidad en una norma donde el operador sea discontinuo. Usar exactamente H_gamma exponencial de§17.7, 0<gamma<2pi. La fórmula integral de la conjugación es
+**Transfer to the finite theta span.** Density in a norm where the operator is discontinuous does not suffice. Use exactly the exponential H_gamma of §17.7, 0<gamma<2pi. The integral formula of the conjugation is
 
     Rtilde_s F(t)=t^(3/4)integral_t^infinito v^(-3/4)F(v)dv
       -(1/2)t^(5/4)(2st+3)
           *integral_t^infinito exp[-s(u-t)]u^(-3/2)
                        integral_u^infinito v^(-3/4)F(v)dv du.
 
-Se obtiene sustituyendo T^(-1) y derivando R_s, primero para datos suaves compactos, donde todos los intercambios son absolutos. La conjugación unitaria U_gamma F(t)=exp(gamma t/2)t^(-1/2)F(t) lleva H_gamma a L²(dt). Con r=v-t>=0, los módulos de los núcleos transformados de los dos términos se acotan respectivamente por
+It is obtained by substituting T^(-1) and differentiating R_s, first for smooth compact data, where all exchanges are absolute. The unitary conjugation U_gamma F(t)=exp(gamma t/2)t^(-1/2)F(t) takes H_gamma to L²(dt). With r=v-t>=0, the moduli of the transformed kernels of the two terms are bounded respectively by
 
     exp(-gamma r/2),
     (s+3/2)r exp(-gamma r/2).
 
-Para el segundo se usa integral_t^v exp[-s(u-t)]u^(-3/2)du<=r t^(-3/2), junto con (t/v)^(1/4)<=1 y t>=1. La cota de convolución por la norma L1 de esos núcleos da
+For the second one uses integral_t^v exp[-s(u-t)]u^(-3/2)du<=r t^(-3/2), together with (t/v)^(1/4)<=1 and t>=1. The convolution bound by the L1 norm of those kernels gives
 
     ||Rtilde_s||_(H_gamma -> H_gamma)
         <=2/gamma+4(s+3/2)/gamma².
 
-Así la fórmula define una extensión acotada, que coincide con la conjugación también sobre los agregados theta suaves con decaimiento exponencial. Su forma cuadrática física es continua en H_gamma. Aproximar el v real de(RES-NEG) por agregados theta FINITOS reales, mediante la densidad de§17.7, conserva la desigualdad estrictamente negativa. Por tanto existe también un agregado theta finito con Re<Rtilde_s F,F>_fis<0; no se afirma que v mismo sea ya uno de ellos.
+Thus the formula defines a bounded extension, which coincides with the conjugation also on smooth theta aggregates with exponential decay. Its physical quadratic form is continuous on H_gamma. Approximating the real v of (RES-NEG) by real FINITE theta aggregates, via the density of §17.7, preserves the strictly negative inequality. Therefore there also exists a finite theta aggregate with Re<Rtilde_s F,F>_fis<0; it is not claimed that v itself is already one of them.
 
-**Alcance.** Se refuta sólo la afirmación de que TODOS estos Rtilde_s sean acretivos en el producto físico sobre el portador declarado. La representación integral pertinente del logaritmo contiene MENOS R_s; por tanto(RES-NEG) NO es un falsificador de positividad del logaritmo conjugado. No excluye el método de resolventes completo, otro producto interno ni un balance conjunto con C; no prueba A negativo, un control del término no resonante o el signo global. Sin nueva ruta, cómputos, archivos auxiliares, cobertura W/T ni cambios en papers.
+**Scope.** Only the statement that ALL these Rtilde_s are accretive in the physical product on the declared carrier is refuted. The pertinent integral representation of the logarithm contains MINUS R_s; therefore (RES-NEG) is NOT a falsifier of positivity of the conjugated logarithm. It does not exclude the full resolvent method, another inner product nor a joint balance with C; it does not prove A negative, a control of the non-resonant term or the global sign. No new route, computations, auxiliary files, W/T coverage or changes to papers.
 
 
-## 18. El A completo sobre escalas enteras basta para todos los nodos reales
+## 18. The full A on integer scales suffices for all real nodes
 
-**PROVED, 2026-11-06.** Construcción independiente root/joint_sign_fresh_review, verificación global_restart_checked; auditoría arithmetic_fresh_candidate PASS y root PASS. Consultados las reglas del proyecto, los tres índices y corpus; cotejo dirigido sin este puente literal localizado. [BRIDGE002§3](POWER_BRIDGE_002.md) ya usa aproximación polinómica C1 en una variable exponencial; [CONFLUENT_BRIDGE014](POWER_CONFLUENT_BRIDGE_014.md) y [SCALAR_BRIDGE017](POWER_SCALAR_BRIDGE_017.md) transfieren otras familias racionales. La densidad de§17.7 controla F en H_gamma, pero NO por sí sola el segundo término G de la forma completa. Aquí se aproxima simultáneamente el par(F,G), usando una norma de dos derivadas antes de aplicar el operador logarítmico y C. No se atribuye novedad al instrumento polinómico ni a la inversión Möbius.
+**PROVED, 2026-11-06.** Independent construction joint_sign_fresh_review, verification global_restart_checked; audit arithmetic_fresh_candidate PASS and second review PASS. Consulted the project rules, the three indices and corpus; targeted cross-check without this literal bridge located. [BRIDGE002§3](POWER_BRIDGE_002.md) already uses C1 polynomial approximation in an exponential variable; [CONFLUENT_BRIDGE014](POWER_CONFLUENT_BRIDGE_014.md) and [SCALAR_BRIDGE017](POWER_SCALAR_BRIDGE_017.md) transfer other rational families. The density of §17.7 controls F in H_gamma, but NOT by itself the second term G of the full form. Here the pair (F,G) is approximated simultaneously, using a two-derivative norm before applying the logarithmic operator and C. No novelty is attributed to the polynomial instrument nor to Möbius inversion.
 
-**Enunciado.** Para la Phi real, son equivalentes:
+**Statement.** For the real Phi, the following are equivalent:
 
-1. A(.5log k,.5log l) es PSD para TODOS los bloques finitos de enteros positivos k,l.
-2. A(x,z) es PSD para TODOS los bloques finitos de nodos reales x,z.
+1. A(.5log k,.5log l) is PSD for ALL finite blocks of positive integers k,l.
+2. A(x,z) is PSD for ALL finite blocks of real nodes x,z.
 
-La segunda afirmación implica la primera por restricción. Para la dirección restante se conserva el A COMPLETO en y=0, incluidos todos los pares de frecuencias diferentes.
+The second statement implies the first by restriction. For the remaining direction the FULL A at y=0 is kept, including all pairs of different frequencies.
 
-### 18.1. Identidad de grafo para toda escala positiva
+### 18.1. Graph identity for every positive scale
 
-Para t>=1 y kappa>0 definir
+For t>=1 and kappa>0 define
 
     P_kappa(t)=kappa^(5/4)sum_(n>=1)n² exp(-pi kappa n²t),
     Theta_kappa(t)=Phi(.5log(kappa t)),
@@ -1898,194 +1898,194 @@ Para t>=1 y kappa>0 definir
     F(P)=TP,   G(P)=(1/2)T Lg P-C TP,
     (CF)(t)=sum_(m>=2)Lambda(m)/sqrt(m) F(m²t).
 
-Frullani sobre cada exponencial da Lg[exp(-pi b t)]=log b exp(-pi b t). Las series de P_kappa y sus derivadas convergen absolutamente con colas gaussianas, también con factores log n. Por tanto
+Frullani on each exponential gives Lg[exp(-pi b t)]=log b exp(-pi b t). The series of P_kappa and their derivatives converge absolutely with Gaussian tails, also with factors log n. Therefore
 
     F(P_kappa)=Theta_kappa,
     G(P_kappa)=(1/2)log(kappa)Theta_kappa.           (GRAPH)
 
-En efecto, el término adicional de (1/2)T Lg P_kappa tiene coeficiente log n en el modo n. En C Theta_kappa el cambio n=mj produce exactamente sum_(m|n)Lambda(m)=log n, que lo cancela. No se suprimen modos ni se estima su signo por separado.
+Indeed, the additional term of (1/2)T Lg P_kappa has coefficient log n in mode n. In C Theta_kappa the change n=mj produces exactly sum_(m|n)Lambda(m)=log n, which cancels it. No modes are suppressed nor is their sign estimated separately.
 
-Si P=sum_i c_i P_(kappa_i), x_i=.5log kappa_i, el cambio t=exp(2r) en A da exactamente
+If P=sum_i c_i P_(kappa_i), x_i=.5log kappa_i, the change t=exp(2r) in A gives exactly
 
     sum_ij c_i conjugado(c_j) A(x_i,x_j)
       =integral_1^infinito
           [log t |F(P)|²+2Re(G(P)conjugado(F(P)))]dt/(2t).
                                                         (A-GRAPH)
 
-### 18.2. Continuidad que conserva ambos términos
+### 18.2. Continuity preserving both terms
 
-Fijar una lista FINITA de kappa_i>0 y elegir
+Fix a FINITE list of kappa_i>0 and choose
 
     0<a<pi min(1,min_i kappa_i),  0<gamma<2a,
     ||P||_(a,2)=max_(0<=j<=2) sup_(t>=1) exp(at)|P^(j)(t)|.
 
-Partir Lg en r<1 y r>=1. Para j=0,1, el numerador pequeño es a lo sumo r(pi+1)exp(-at)||P||_(a,2); el grande se domina por exp(-at)[exp(-pi r)+exp(-ar)]||P||_(a,2). Esto justifica derivar bajo la integral y prueba
+Split Lg into r<1 and r>=1. For j=0,1, the small numerator is at most r(pi+1)exp(-at)||P||_(a,2); the large one is dominated by exp(-at)[exp(-pi r)+exp(-ar)]||P||_(a,2). This justifies differentiating under the integral and proves
 
     ||Lg P||_(a,1)<=C_a||P||_(a,2),
     C_a=pi+1+exp(-pi)/pi+exp(-a)/a.
 
-Así |TP(t)|<=5pi t^(9/4)exp(-at)||P||_(a,2), y la misma cota con factor C_a vale para T Lg P. La integral de t^(7/2)exp[-(2a-gamma)t] sobre[1,infinito) es finita. Junto con C acotado en H_gamma=L²(exp(gamma t)dt/t) por§17.7, resulta continuidad
+Thus |TP(t)|<=5pi t^(9/4)exp(-at)||P||_(a,2), and the same bound with factor C_a holds for T Lg P. The integral of t^(7/2)exp[-(2a-gamma)t] over [1,infinito) is finite. Together with C bounded on H_gamma=L²(exp(gamma t)dt/t) by §17.7, continuity results
 
     P en B_a² -> (F(P),G(P)) en H_gamma x H_gamma.
 
-El peso 1+log t está dominado por una constante por exp(gamma t). Cauchy–Schwarz prueba que la forma del lado derecho de(A-GRAPH) es continua en ese par de normas. No se presupone PSD de A.
+The weight 1+log t is dominated by a constant times exp(gamma t). Cauchy–Schwarz proves that the form on the right-hand side of (A-GRAPH) is continuous in that pair of norms. PSD of A is not presupposed.
 
-### 18.3. Aproximación por escalas enteras en la norma de grafo
+### 18.3. Approximation by integer scales in the graph norm
 
-Cada target P=sum_i c_i P_(kappa_i) tiene exp(at)P^(j)(t)->0 para j=0,1,2. Cortarlo suavemente en t grande lo aproxima en B_a²: las derivadas del corte se controlan y las colas ponderadas tienden a cero. Este paso se afirma para ESTOS targets, no para cualquier elemento de B_a².
+Each target P=sum_i c_i P_(kappa_i) has exp(at)P^(j)(t)->0 for j=0,1,2. Cutting it off smoothly at large t approximates it in B_a²: the derivatives of the cutoff are controlled and the weighted tails tend to zero. This step is claimed for THESE targets, not for every element of B_a².
 
-Para el corte suave P_c, poner x=exp(-pi t) y Q(x)=P_c(t)/x. Q se prolonga suavemente por cero cerca de x=0 en[0,exp(-pi)]. Aproximar Q en C² por polinomios Q_N: aproximar Q'' uniformemente e integrar dos veces ajustando Q(0),Q'(0). Entonces P_N(t)=x Q_N(x) es una combinación FINITA de exp(-pi k t), k entero positivo, y
+For the smooth cutoff P_c, set x=exp(-pi t) and Q(x)=P_c(t)/x. Q extends smoothly by zero near x=0 on [0,exp(-pi)]. Approximate Q in C² by polynomials Q_N: approximate Q'' uniformly and integrate twice adjusting Q(0),Q'(0). Then P_N(t)=x Q_N(x) is a FINITE combination of exp(-pi k t), k a positive integer, and
 
     |D^j(P_N-P_c)(t)|<=C eta_N exp(-pi t),
     j=0,1,2,  eta_N->0.
 
-Como a<pi, hay convergencia B_a². Para levantar cada exponencial usar la identidad exacta
+Since a<pi, there is B_a² convergence. To lift each exponential use the exact identity
 
     exp(-pi k t)=k^(-5/4)
           sum_(n>=1)mu(n)/sqrt(n) P_(kn²)(t).       (MOB-P)
 
-Al expandir P_(kn²), el coeficiente del modo j es j² sum_(n|j)mu(n), que sólo conserva j=1. La serie es ABSOLUTA en B_a², pues para K>=1
+On expanding P_(kn²), the coefficient of mode j is j² sum_(n|j)mu(n), which keeps only j=1. The series is ABSOLUTE in B_a², since for K>=1
 
     ||P_K||_(a,2)<=C_a' K^(13/4)exp(-pi K)
 
-por las cotas gaussianas de las series de n²,n4,n6 y a<pi. Truncar(MOB-P) produce combinaciones FINITAS de P_k enteros. Una selección sucesiva de corte, polinomio y truncaciones da P_l en span FINITO de los P_k enteros con P_l->P en B_a². En particular convergen simultáneamente F(P_l),G(P_l) en H_gamma.
+by the Gaussian bounds of the series of n²,n4,n6 and a<pi. Truncating (MOB-P) produces FINITE combinations of integer P_k. A successive selection of cutoff, polynomial and truncations gives P_l in the FINITE span of the integer P_k with P_l->P in B_a². In particular F(P_l),G(P_l) converge simultaneously in H_gamma.
 
-### 18.4. Transferencia de la desigualdad y alcance
+### 18.4. Transfer of the inequality and scope
 
-Bajo la hipótesis1, la forma(A-GRAPH) es no negativa para cada P_l entero. Por continuidad lo es para cualquier lista finita de kappa_i>0 y coeficientes complejos. Como x_i=.5log kappa_i recorre TODA R, se prueba2.
+Under hypothesis 1, the form (A-GRAPH) is nonnegative for each integer P_l. By continuity it is so for any finite list of kappa_i>0 and complex coefficients. Since x_i=.5log kappa_i ranges over ALL of R, 2 is proved.
 
-Así no queda una puerta de transferencia adicional entre el A COMPLETO sobre todos los enteros y el A real global. Combinado con§2 y los puentes K de [CONE001](POWER_CONE_001.md)/[BRIDGE002](POWER_BRIDGE_002.md), probar ese signo entero completo es suficiente para el objetivo declarado; la recíproca para el objetivo lambda_A(T)>=0 para TODOS T se verifica posteriormente en§18.9; no se identifica ningún mínimo a T fijo. La SOS de§17 sólo firma R_res: el control conjunto de la parte no resonante, o directamente el signo completo entero, sigue OPEN. No se transfiere por separado R_res ni se obtiene nueva ventana W/T, positividad global o cambio en papers.
+Thus no additional transfer gate remains between the FULL A on all integers and the global real A. Combined with §2 and the K bridges of [CONE001](POWER_CONE_001.md)/[BRIDGE002](POWER_BRIDGE_002.md), proving that full integer sign is sufficient for the declared target; the converse for the target lambda_A(T)>=0 for ALL T is verified later in §18.9; no minimum at fixed T is identified. The SOS of §17 only signs R_res: the joint control of the non-resonant part, or directly the full integer sign, remains OPEN. R_res is not transferred separately nor is a new W/T window, global positivity or change to papers obtained.
 
 
-### 18.5. La conjugación T no conserva tasas positivas de salto
+### 18.5. The conjugation T does not preserve positive jump rates
 
-**PROVED, alcance específico.** Root/joint_sign_fresh_review, verificación independiente global_restart_checked; auditoría arithmetic_fresh_candidate PASS y root PASS. Cotejados los tres índices y [106_31](../phase-106-global-modular-star-audit/106_31_FULL_KERNEL_DOOB_VARIANCE_IDENTITY.md), [ROUND005D](ROUND_005_D.md) y [L2_BUILD008](../phase-188-closing-D/L2_BUILD_008_GROUND_STATE_AND_T0.md): éstos tratan otras formas, transformaciones de ground state y métricas, sin esta conjugación T ni el núcleo siguiente. No se encontró el enunciado literal en ese cotejo.
+**PROVED, specific scope.** joint_sign_fresh_review, independent verification global_restart_checked; audit arithmetic_fresh_candidate PASS and second review PASS. Cross-checked the three indices and [106_31](../phase-106-global-modular-star-audit/106_31_FULL_KERNEL_DOOB_VARIANCE_IDENTITY.md), [ROUND005D](ROUND_005_D.md) and [L2_BUILD008](../phase-188-closing-D/L2_BUILD_008_GROUND_STATE_AND_T0.md): these treat other forms, ground-state transformations and metrics, without this conjugation T nor the following kernel. The literal statement was not found in that cross-check.
 
-Escribir D_(m²)P(t)=P(m²t) y
+Write D_(m²)P(t)=P(m²t) and
 
     B=Lg-2sum_(m>=2)Lambda(m)m² D_(m²),  p=P_1>0.
 
-Por la misma identidad modal sum_(m|n)Lambda(m)=log n de(GRAPH), Bp=0. Para P=pf con f suave de soporte compacto en[1,infinito), sin exigir f(1)=0, antes de aplicar T existe la identidad exacta de tasas positivas
+By the same modal identity sum_(m|n)Lambda(m)=log n of (GRAPH), Bp=0. For P=pf with f smooth with compact support in [1,infinito), without requiring f(1)=0, before applying T there is the exact positive-rate identity
 
     B(pf)(t)=integral_0^infinito
                     p(t+r)[f(t)-f(t+r)]dr/r
        +2sum_(m>=2)Lambda(m)m²p(m²t)[f(t)-f(m²t)].
 
-Esto no asegura su conservación tras la conjugación diferencial. Definir U_rP(t)=P(t+r). Sustituir la inversa terminal ponderada de§17.8 y derivar da
+This does not ensure its preservation after the differential conjugation. Define U_rP(t)=P(t+r). Substituting the weighted terminal inverse of §17.8 and differentiating gives
 
     (T U_r T^-1 F)(t)=(t/(t+r))^(9/4)F(t+r)
        -(3/2)r t^(5/4)(t+r)^(-5/2)
                          integral_(t+r)^infinito v^(-3/4)F(v)dv.
 
-Para F suave con soporte separado de t, el término local de Lg no contribuye y los intercambios son absolutos. Integrar el segundo término en r, usando
+For smooth F with support separated from t, the local term of Lg does not contribute and the exchanges are absolute. Integrating the second term in r, using
 
     (3/2)integral_0^(v-t)(t+r)^(-5/2)dr
                        =t^(-3/2)-v^(-3/2),
 
-y combinarlo con el traslado produce el núcleo respecto de dv
+and combining it with the translation produces the kernel with respect to dv
 
     (T Lg T^-1 F)(t)=integral_t^infinito K(t,v)F(v)dv,
     K(t,v)=t^(-1/4)v^(-3/4)
                     -t^(5/4)v^(-5/4)/(v-t).        (JUMP-K)
 
-Esta fórmula se usa sólo para soportes separados, sin imponer una renormalización diagonal. Con w=v/t,
+This formula is used only for separated supports, without imposing a diagonal renormalization. With w=v/t,
 
     K(t,v)=t^-1 w^(-5/4)[sqrt(w)-1/(w-1)]>0
                        cuando 2<w<3.
 
-Además T[m²D_(m²)]T^-1=m^(-1/2)D_(m²), luego TBT^-1=T Lg T^-1-2C. Elegir t0=2 y F>=0 suave no nula, de soporte compacto en(9/2,11/2). Entonces F es cero cerca de2 y CF(2)=0, pues 2m²>=8 para m>=2. Por(JUMP-K),
+Moreover T[m²D_(m²)]T^-1=m^(-1/2)D_(m²), hence TBT^-1=T Lg T^-1-2C. Choose t0=2 and F>=0 smooth nonzero, with compact support in (9/2,11/2). Then F is zero near 2 and CF(2)=0, since 2m²>=8 for m>=2. By (JUMP-K),
 
     (TBT^-1F)(2)=integral_(9/2)^(11/2)K(2,v)F(v)dv>0.
 
-Fijar la convención de la representación que se refuta:
+Fix the convention of the representation being refuted:
 
     (JF)(t)=integral[F(t)-F(v)]nu_t(dv)+V(t)F(t),
     nu_t>=0,
 
-con V local finito. Para este test F(2)=0, cualquier operador de esa clase satisface JF(2)<=0; el killing local no cambia ese valor. Por tanto TBT^-1 NO admite esa representación de tasas positivas sobre el portador suave declarado. Conjugar además por Theta_1(t)=Phi(.5log t)>0 tampoco cambia el signo fuera de la diagonal: usar el test F/Theta_1. Todo se conserva en t>=1; no se elimina el borde inferior.
+with V local finite. For this test F(2)=0, any operator of that class satisfies JF(2)<=0; local killing does not change that value. Therefore TBT^-1 does NOT admit that positive-rate representation on the declared smooth carrier. Conjugating moreover by Theta_1(t)=Phi(.5log t)>0 does not change the off-diagonal sign either: use the test F/Theta_1. Everything is kept on t>=1; the lower boundary is not eliminated.
 
-**Alcance.** Sólo falla el atajo de conservar tasas positivas DESPUÉS de T (también tras esa conjugación positiva). No se demuestra negatividad de la forma cuadrática Q o A, ni una imposibilidad para toda transformación Doob, otra métrica o el tratamiento conjunto del operador. El signo completo entero y, por§18, real global sigue OPEN. Sin nueva ruta, campañas, archivos auxiliares, ventana W/T ni cambios en papers.
+**Scope.** Only the shortcut of preserving positive rates AFTER T (also after that positive conjugation) fails. Negativity of the quadratic form Q or A is not proved, nor an impossibility for every Doob transformation, another metric or the joint treatment of the operator. The full integer sign and, by §18, the global real sign remain OPEN. No new route, campaigns, auxiliary files, W/T window or changes to papers.
 
 
-### 18.6. El borde complejo de§16 no da un principio mínimo directo
+### 18.6. The complex boundary of §16 does not give a direct minimum principle
 
-**PROVED, alcance específico.** Propuesta root, verificaciones independientes global_restart_checked/arithmetic_fresh_candidate PASS y root PASS. Leídos los tres índices,§§2.2,16 y [OUTER088](POWER_THETA_DENSITY_OUTER_088.md); cotejo dirigido sin transporte literal resuelto localizado. Para desplazamientos reales fijos x_i, poner
+**PROVED, specific scope.** Proposal, independent verifications global_restart_checked/arithmetic_fresh_candidate PASS and second review PASS. Read the three indices, §§2.2,16 and [OUTER088](POWER_THETA_DENSITY_OUTER_088.md); targeted cross-check without a resolved literal transport located. For fixed real shifts x_i, set
 
     A_ij(x,y)=integral_x^infinito w_ij(s)P_ij(s,y)ds,
     w_ij(s)=x_i+x_j+2s,
     P_ij(s,y)=Phi(x_i+s+iy)conjugado(Phi(x_j+s+iy)).
 
-En |y|<pi/4, las supercolas permiten todas las derivaciones y eliminan los bordes en infinito. Con Delta=partial_x²+partial_y², integrar por partes conservando el borde inferior da exactamente
+In |y|<pi/4, the supertails allow all differentiations and eliminate the boundaries at infinity. With Delta=partial_x²+partial_y², integrating by parts keeping the lower boundary gives exactly
 
     Delta A_ij(x,y)
       =4integral_x^infinito w_ij(s)
           Phi'(x_i+s+iy)conjugado(Phi'(x_j+s+iy))ds
          -4P_ij(x,y).                              (PDE-A)
 
-No se asigna signo matricial a esta fuente. Sí se refuta la superarmonicidad requerida por un principio mínimo directo: tomar x_i=x_j=0,y=0,x>=1. Escribir Y(s)=pi exp(2s), p(s)=-Phi'(s)/Phi(s). La fórmula del primer modo y las cotas de cola completa de088 dan p(s)>2Y(s)-6>Y(s) para s>=1 (Y>21). Por tanto
+No matrix sign is assigned to this source. What is refuted is the superharmonicity required by a direct minimum principle: take x_i=x_j=0,y=0,x>=1. Write Y(s)=pi exp(2s), p(s)=-Phi'(s)/Phi(s). The first-mode formula and the full-tail bounds of 088 give p(s)>2Y(s)-6>Y(s) for s>=1 (Y>21). Therefore
 
     I=integral_x^infinito 2s p(s)²Phi(s)²ds
       >Y(x)integral_x^infinito 2s p(s)Phi(s)²ds
       =Y(x)[xPhi(x)²+integral_x^infinito Phi(s)²ds]
       >Phi(x)².
 
-Aquí se usó (Phi²)'=-2pPhi², con el borde xPhi(x)² retenido y la cola en infinito nula; xY(x)>1. Así Delta A_ii(x,0)=4[I-Phi(x)²]>0. La función diagonal no es armónica ni superarmónica en ese dominio, y la positividad cerca de y=pi/4 de§16 no puede transportarse a y=0 mediante ese principio mínimo sin otra estimación.
+Here (Phi²)'=-2pPhi² was used, with the boundary xPhi(x)² retained and the tail at infinity zero; xY(x)>1. Thus Delta A_ii(x,0)=4[I-Phi(x)²]>0. The diagonal function is neither harmonic nor superharmonic on that domain, and the positivity near y=pi/4 of §16 cannot be transported to y=0 via that minimum principle without another estimate.
 
-**Alcance.** El umbral de§16 depende de cada bloque fijo; no aporta por sí solo PSD conjunta en un intervalo real abierto, que es la hipótesis de la continuación de§2.2. Esta identidad y este test no prueban una fuente matricial indefinida, Q/A negativo ni una imposibilidad para toda PDE u otro transporte. Sólo falla la premisa de superarmonicidad del atajo declarado; signo conjunto global OPEN. Sin nueva ruta, cómputos, archivos auxiliares, W/T ni papers.
+**Scope.** The threshold of §16 depends on each fixed block; it does not by itself provide joint PSD on an open real interval, which is the hypothesis of the continuation of §2.2. This identity and this test do not prove an indefinite matrix source, Q/A negative nor an impossibility for every PDE or other transport. Only the superharmonicity premise of the declared shortcut fails; global joint sign OPEN. No new route, computations, auxiliary files, W/T or papers.
 
 
-### 18.7. Toda cola entera basta; ningún observable finito sostiene un margen positivo
+### 18.7. Every integer tail suffices; no finite observable sustains a positive margin
 
-**PROVED, extensión del puente.** Root/joint_sign_fresh_review, verificación independiente global_restart_checked; auditoría arithmetic_fresh_candidate PASS y root PASS. Consultados los tres índices,§18.3 y [DESCENT_AUDIT016§§8–9](POWER_DESCENT_AUDIT_016.md), además de [BRIDGE002§3](POWER_BRIDGE_002.md). El antecedente016 ya prueba densidad de cada cola de otra familia racional y la insuficiencia del signo de sus diagonales para W4; aquí cambian el portador exacto P_k, la norma del grafo completo de A y la conclusión sobre minorantes. No se atribuye novedad al mecanismo abstracto de colas densas.
+**PROVED, extension of the bridge.** joint_sign_fresh_review, independent verification global_restart_checked; audit arithmetic_fresh_candidate PASS and second review PASS. Consulted the three indices, §18.3 and [DESCENT_AUDIT016§§8–9](POWER_DESCENT_AUDIT_016.md), in addition to [BRIDGE002§3](POWER_BRIDGE_002.md). Antecedent 016 already proves density of each tail of another rational family and the insufficiency of the sign of its diagonals for W4; here the exact carrier P_k, the norm of the full graph of A and the conclusion about minorants change. No novelty is attributed to the abstract mechanism of dense tails.
 
-Fijar un entero K>=1. Para los targets P=sum_i c_i P_(kappa_i) y los parámetros a,gamma de§18.2, se puede efectuar§18.3 usando SÓLO índices k>=K. Tras el corte P_c, escribir
+Fix an integer K>=1. For the targets P=sum_i c_i P_(kappa_i) and the parameters a,gamma of §18.2, §18.3 can be carried out using ONLY indices k>=K. After the cutoff P_c, write
 
     x=exp(-pi t),  Q(x)=P_c(t)/x^K.
 
-Q es suave y cero cerca de x=0. Aproximarlo en C² por polinomios Q_N da x^KQ_N(x), combinación finita de exp(-pi k t) con k>=K, y errores de derivadas de órdenes0,1,2 acotados por C_K eta_N exp(-pi Kt). Como a<pi<=pi K, convergen en B_a². La inversión(MOB-P) sólo introduce índices kn²>=K y sigue siendo absoluta en esa norma. Por tanto span{P_k:k>=K} aproxima cada target de§18 en B_a² y en el grafo(F,G). No se afirma densidad de compactos en todo B_a² ni uniformidad de las constantes en K.
+Q is smooth and zero near x=0. Approximating it in C² by polynomials Q_N gives x^KQ_N(x), a finite combination of exp(-pi k t) with k>=K, and derivative errors of orders 0,1,2 bounded by C_K eta_N exp(-pi Kt). Since a<pi<=pi K, they converge in B_a². The inversion (MOB-P) only introduces indices kn²>=K and is still absolute in that norm. Therefore span{P_k:k>=K} approximates each target of §18 in B_a² and in the graph (F,G). Density of compacts in all of B_a² or uniformity of the constants in K is not claimed.
 
-En particular, PSD de TODOS los bloques de CUALQUIER cola fija k>=K equivale a PSD del A real global, por el mismo paso de continuidad de§18.4. Esto conserva la obligación sobre TODOS los tamaños, no sólo las diagonales tardías.
+In particular, PSD of ALL blocks of ANY fixed tail k>=K is equivalent to PSD of the global real A, by the same continuity step of §18.4. This keeps the obligation on ALL sizes, not only the late diagonals.
 
-**Completar un prefijo con energía tendiendo a cero.** Abreviar A_0[c]=sum_kl c_k conjugado(c_l)A(.5log k,.5log l), con soporte finito. Fijar J y cualesquiera c_1,...,c_J. Aplicar la densidad de la cola k>J al target -sum_(k<=J)c_k P_k. Se obtienen completaciones c^(n), todas de soporte finito, con ese MISMO prefijo, tales que
+**Completing a prefix with energy tending to zero.** Abbreviate A_0[c]=sum_kl c_k conjugado(c_l)A(.5log k,.5log l), with finite support. Fix J and any c_1,...,c_J. Apply the density of the tail k>J to the target -sum_(k<=J)c_k P_k. One obtains completions c^(n), all of finite support, with that SAME prefix, such that
 
     sum_k c_k^(n)P_k ->0 en B_a²,
     A_0[c^(n)] ->0.                                (TAIL-ZERO)
 
-No se presupone PSD para esta convergencia. Si A_0 fuese PSD, el ínfimo sobre las completaciones de cada prefijo sería exactamente0; sin esa hipótesis no se asigna signo a dicho ínfimo.
+PSD is not presupposed for this convergence. If A_0 were PSD, the infimum over the completions of each prefix would be exactly 0; without that hypothesis no sign is assigned to that infimum.
 
-Si ell es cualquier funcional lineal no nulo FINITAMENTE soportado sobre los coeficientes, elegir J que contenga su soporte y un prefijo con ell(c)=1. Las colas no lo alteran. Por(TAIL-ZERO), es imposible
+If ell is any nonzero FINITELY supported linear functional on the coefficients, choose J containing its support and a prefix with ell(c)=1. The tails do not alter it. By (TAIL-ZERO), it is impossible that
 
-    A_0[c]>=delta |ell(c)|² para todos c finitos,
+    A_0[c]>=delta |ell(c)|² for all finite c,
     con delta>0.                                   (NO-FIN-MARGIN)
 
-Por consiguiente, tampoco existe un minorante no trivial sum_k w_k|c_k|² con TODOS w_k>=0 y alguno estrictamente positivo, aunque los pesos decaigan arbitrariamente. La misma razón excluye minorantes diagonales con pesos NO NEGATIVOS sobre los observables divisoriales finitodependientes de§17: f_(d,q) sólo usa índices d a²<=dq², a|q. Basta fijar un prefijo que haga no nulo un observable cuyo peso sea positivo. No se identifican esos f_(d,q) con otras coordenadas d_lambda; basta su dependencia finita.
+Consequently, there is no nontrivial minorant sum_k w_k|c_k|² with ALL w_k>=0 and some strictly positive either, even if the weights decay arbitrarily. The same reason excludes diagonal minorants with NONNEGATIVE weights on the finitely-dependent divisorial observables of §17: f_(d,q) only uses indices d a²<=dq², a|q. It suffices to fix a prefix making nonzero an observable whose weight is positive. Those f_(d,q) are not identified with other coordinates d_lambda; their finite dependence suffices.
 
-Como corolario del mismo(NO-FIN-MARGIN), se excluye una identidad ÚNICA compatible para TODOS los soportes
+As a corollary of the same (NO-FIN-MARGIN), a SINGLE identity compatible for ALL supports is excluded
 
     A_0[c]=sum_alpha w_alpha|ell_alpha(c)|²,
     w_alpha>=0,
 
-con algún sumando no nulo y TODOS los ell_alpha de soporte finito, aunque sus tamaños no tengan cota uniforme: cada sumando positivo sería por sí solo el minorante ya prohibido. Esto NO excluye factorizar cada bloque principal finito por separado; esas factorizaciones no constituyen la identidad única sobre todo el portador. [FIXED_BLOCK_ASSEMBLY](POWER_FIXED_BLOCK_ASSEMBLY_OBSTRUCTION.md) ya excluye ensamblajes de tamaños uniformemente acotados para otro kernel; aquí la obstrucción afecta a cualquier observable local fijo de esta identidad global.
+with some nonzero summand and ALL ell_alpha of finite support, even if their sizes have no uniform bound: each positive summand would by itself be the already forbidden minorant. This does NOT exclude factorizing each finite principal block separately; those factorizations do not constitute the single identity on the whole carrier. [FIXED_BLOCK_ASSEMBLY](POWER_FIXED_BLOCK_ASSEMBLY_OBSTRUCTION.md) already excludes assemblies of uniformly bounded sizes for another kernel; here the obstruction affects any fixed local observable of this global identity.
 
-**Alcance.** Resultado para el A COMPLETO en y=0, no una extensión automática a todo y complejo. Refuta márgenes positivos sobre observables de soporte finito y sus energías diagonales no negativas; no excluye energías de observables globales continuos ni sumas de cuadrados no diagonales que los conserven. No prueba A negativo ni el signo global, que sigue OPEN. Sin nueva ruta, cómputos, archivos auxiliares, W/T ni cambios en papers.
+**Scope.** Result for the FULL A at y=0, not an automatic extension to all complex y. It refutes positive margins on finitely supported observables and their nonnegative diagonal energies; it does not exclude energies of continuous global observables nor non-diagonal sums of squares preserving them. It does not prove A negative nor the global sign, which remains OPEN. No new route, computations, auxiliary files, W/T or changes to papers.
 
 
-### 18.8. Ningún momento exponencial real individual da un minorante positivo
+### 18.8. No individual real exponential moment gives a positive minorant
 
-**PROVED, corolario específico.** Root/joint_sign_fresh_review, verificación independiente global_restart_checked; auditoría arithmetic_fresh_candidate PASS y root PASS. Cotejados los tres índices,§§8.4,18, [BRIDGE002](POWER_BRIDGE_002.md), [106_31](../phase-106-global-modular-star-audit/106_31_FULL_KERNEL_DOOB_VARIANCE_IDENTITY.md), [ROUND005D](ROUND_005_D.md) y [106_36](../phase-106-global-modular-star-audit/106_36_JOINT_COMPLEMENT_AND_EXPANDER_GATE.md), sin este enunciado literal localizado. Las identidades de capacidad/varianza y continuidad anteriores tienen otros objetos;§8.4 altera la densidad y cancela un momento, mientras aquí se conserva la Phi exacta y se refuta un minorante de rango uno.
+**PROVED, specific corollary.** joint_sign_fresh_review, independent verification global_restart_checked; audit arithmetic_fresh_candidate PASS and second review PASS. Cross-checked the three indices, §§8.4,18, [BRIDGE002](POWER_BRIDGE_002.md), [106_31](../phase-106-global-modular-star-audit/106_31_FULL_KERNEL_DOOB_VARIANCE_IDENTITY.md), [ROUND005D](ROUND_005_D.md) and [106_36](../phase-106-global-modular-star-audit/106_36_JOINT_COMPLEMENT_AND_EXPANDER_GATE.md), without this literal statement located. The earlier capacity/variance and continuity identities have other objects; §8.4 alters the density and cancels a moment, while here the exact Phi is kept and a rank-one minorant is refuted.
 
-Para sigma REAL fijo y coeficientes finitos definir
+For fixed REAL sigma and finite coefficients define
 
     ell_sigma(c)=integral_0^infinito exp(sigma u)
                      sum_k c_k Phi(.5log k+u)du
                 =(1/2)integral_1^infinito F(t)t^(sigma/2)dt/t.
 
-Este funcional es continuo en H_gamma para todo gamma>0, pues Cauchy–Schwarz da
+This functional is continuous on H_gamma for all gamma>0, since Cauchy–Schwarz gives
 
     |ell_sigma(F)|²<=(1/4)||F||_(H_gamma)²
                          integral_1^infinito t^(sigma-1)exp(-gamma t)dt,
 
-con integral finita. Si A_0[c]>=delta|ell_sigma(c)|² para TODOS los c finitos y algún delta>0, la aproximación del grafo de§18 conservaría también ell_sigma, transfiriendo la desigualdad a cualquier nodo real x. Tomar x=-R, definir F_x(t)=Phi(x+.5log t)=Theta_(exp(2x))(t), y usar la paridad positiva de Phi:
+with finite integral. If A_0[c]>=delta|ell_sigma(c)|² for ALL finite c and some delta>0, the graph approximation of §18 would also preserve ell_sigma, transferring the inequality to any real node x. Take x=-R, define F_x(t)=Phi(x+.5log t)=Theta_(exp(2x))(t), and use the positive parity of Phi:
 
     A(-R,-R)=d(R)=2integral_R^infinito sPhi(s)²ds,
     ell_sigma(F_(-R))
@@ -2093,89 +2093,89 @@ con integral finita. Si A_0[c]>=delta|ell_sigma(c)|² para TODOS los c finitos y
        ~Z_sigma exp(sigma R),
     Z_sigma=integral_(-infinito)^infinito exp(sigma s)Phi(s)ds>0.
 
-Las supercolas de Phi dan d(R)exp(CR)->0 para TODO C real fijo. Por ello
+The supertails of Phi give d(R)exp(CR)->0 for ALL fixed real C. Hence
 
     A(-R,-R)/|ell_sigma(F_(-R))|² ->0,
 
-contradiciendo cualquier delta>0. Esto vale incluso para sigma<0, cuando el momento del nodo también tiende a0: d(R) decrece más rápido que toda exponencial.
+contradicting any delta>0. This holds even for sigma<0, when the moment of the node also tends to 0: d(R) decreases faster than any exponential.
 
-**Alcance.** Sólo se excluyen minorantes positivos por un momento exponencial REAL individual del portador exacto. No se excluyen momentos firmados generales, combinaciones con cancelaciones u observables globales distintos, ni se demuestra A negativo. No se afirma ningún resultado para sigma complejo ni un test espectral. Signo global OPEN, sin nueva ruta, cómputos, archivos auxiliares, W/T ni papers.
+**Scope.** Only positive minorants by an individual REAL exponential moment of the exact carrier are excluded. General signed moments, combinations with cancellations or distinct global observables are not excluded, nor is A proved negative. No result is claimed for complex sigma nor a spectral test. Global sign OPEN, no new route, computations, auxiliary files, W/T or papers.
 
 
-### 18.9. Equivalencia del objetivo para todas las ventanas y restricciones primitivas exactas
+### 18.9. Equivalence of the target for all windows and exact primitive constraints
 
-**PROVED como alcance, no como signo.** Root/joint_sign_fresh_review, verificación independiente global_restart_checked; auditoría arithmetic_fresh_candidate PASS y root PASS. Releídos las reglas del proyecto, los tres índices, las definiciones eq:form, eq:W y eq:target del [Paper47](../../04-papers/47-row-d-dual-certificates/main.tex), [BRIDGE002](POWER_BRIDGE_002.md), [CONFLUENT_BRIDGE014§3](POWER_CONFLUENT_BRIDGE_014.md) y el lema YA probado en [GLOBAL, Comparaciones primitivas](POWER_GLOBAL_ROUTE_REVIEW.md). El nuevo alcance es aplicar ese lema a D=M_Phi mismo y verificar el paso desde las ventanas primitivas a sus mezclas causales; no se presenta un principio analítico nuevo ni una prueba de positividad.
+**PROVED as scope, not as sign.** joint_sign_fresh_review, independent verification global_restart_checked; audit arithmetic_fresh_candidate PASS and second review PASS. Reread the project rules, the three indices, the definitions eq:form, eq:W and eq:target of [Paper47](../../04-papers/47-row-d-dual-certificates/main.tex), [BRIDGE002](POWER_BRIDGE_002.md), [CONFLUENT_BRIDGE014§3](POWER_CONFLUENT_BRIDGE_014.md) and the lemma ALREADY proved in [GLOBAL, Primitive comparisons](POWER_GLOBAL_ROUTE_REVIEW.md). The new scope is applying that lemma to D=M_Phi itself and verifying the step from the primitive windows to their causal mixtures; no new analytic principle nor a positivity proof is presented.
 
-Son equivalentes los siguientes objetivos globales:
+The following global targets are equivalent:
 
-1. lambda_A(T)>=0 para TODO T>0, con los dos momentos Tate y el dominio logarítmico declarados en Paper47.
-2. K_(M_Phi)(u,v)=[M_Phi(u)+M_Phi(v)]/(u+v) es PSD en todos los tamaños.
-3. A es PSD sobre todos los nodos reales.
-4. A(.5log k,.5log l) es PSD sobre todos los bloques de enteros positivos; equivalentemente, sobre todos los bloques de cualquier cola fija de éstos.
+1. lambda_A(T)>=0 for ALL T>0, with the two Tate moments and the logarithmic domain declared in Paper47.
+2. K_(M_Phi)(u,v)=[M_Phi(u)+M_Phi(v)]/(u+v) is PSD in all sizes.
+3. A is PSD on all real nodes.
+4. A(.5log k,.5log l) is PSD on all blocks of positive integers; equivalently, on all blocks of any fixed tail of these.
 
-Las equivalencias2–3 y3–4 son§§2.1,18,18.7. La implicación2=>1 es la suficiencia de CONE001/BRIDGE002, conservando la forma completa antes de restringir al subespacio primitivo.
+The equivalences 2–3 and 3–4 are §§2.1,18,18.7. The implication 2=>1 is the sufficiency of CONE001/BRIDGE002, keeping the full form before restricting to the primitive subspace.
 
-**Recíproca1=>2 sin cambiar de problema.** Usar la mezcla causal
+**Converse 1=>2 without changing the problem.** Use the causal mixture
 
     f(r)=sum_i d_i exp(-u_i r),  r>=0, u_i>1/2,
     sum_i d_i/(u_i-1/2)=sum_i d_i/(u_i+1/2)=0.
 
-Ésta es la función física causal que entra en W, no una identificación automática con el dato exterior h=Zrho de otra convención. Elegir 1/2<eta<min_i u_i. Cortar f suavemente sólo en infinito converge en H_eta de014. Los dos errores de momentos tienden a0. Elegir dos bumps suaves fijos interiores de la semirrecta, con matriz de momentos exp(±r/2) invertible, y corregir esos errores mediante coeficientes que tienden a0. Resultan funciones causales compactas f_R, EXACTAMENTE primitivas y convergentes a f en H_eta.
+This is the causal physical function entering W, not an automatic identification with the exterior datum h=Zrho of another convention. Choose 1/2<eta<min_i u_i. Cutting f off smoothly only at infinity converges in H_eta of 014. The two moment errors tend to 0. Choose two fixed smooth bumps interior to the half-line, with invertible moment matrix exp(±r/2), and correct those errors via coefficients tending to 0. One obtains compact causal functions f_R, EXACTLY primitive and converging to f in H_eta.
 
-No se exige f_R(0)=0. La extensión por cero de H¹ en la semirrecta pertenece continuamente a H^s(R) para0<s<1/2, incluso con ese salto, y por tanto al dominio logarítmico del Paper47. Trasladar cada soporte compacto dentro de algún I_T conserva los dos momentos nulos y W; sobre primitivos W=a_T. La hipótesis1 da W[f_R]>=0. Continuidad014 permite pasar al límite: W[f]>=0.
+f_R(0)=0 is not required. The extension by zero of H¹ on the half-line belongs continuously to H^s(R) for 0<s<1/2, even with that jump, and hence to the logarithmic domain of Paper47. Translating each compact support inside some I_T preserves the two vanishing moments and W; on primitives W=a_T. Hypothesis 1 gives W[f_R]>=0. Continuity 014 allows passing to the limit: W[f]>=0.
 
-La identidad CONE001 es W[f]=sum_ij d_i conjugado(d_j)K_(M_Phi)(u_i,u_j). Se ha probado por tanto PSD de K sobre TODOS los bloques sujetos a esas dos restricciones. M_Phi=Z'/Z es impar y real-analítica en toda R porque Phi es par y Z es estrictamente positiva sobre R. Aplicar el lema de GLOBAL con c=1/2,D=M_Phi: congruencia por u²-c², dos anclas, continuación analítica y filas nulas en±c convierten esa positividad restringida en PSD completa. Esto prueba1=>2.
+The identity CONE001 is W[f]=sum_ij d_i conjugado(d_j)K_(M_Phi)(u_i,u_j). Hence PSD of K has been proved on ALL blocks subject to those two constraints. M_Phi=Z'/Z is odd and real-analytic on all of R because Phi is even and Z is strictly positive on R. Applying the lemma of GLOBAL with c=1/2,D=M_Phi: congruence by u²-c², two anchors, analytic continuation and null rows at ±c turn that restricted positivity into full PSD. This proves 1=>2.
 
-**Las restricciones en el grafo P son dos condiciones, no tres.** Para cualquier P del portador de§18, integración por partes con la cola nula da exactamente
+**The constraints in the graph P are two conditions, not three.** For any P of the carrier of §18, integration by parts with vanishing tail gives exactly
 
     ell_sigma(TP)=pi P(1)
        +pi(sigma/2-1/4)integral_1^infinito
                                       t^(sigma/2+1/4)P(t)dt.
 
-Aquí ell_sigma es el momento físico de§18.8. En particular
+Here ell_sigma is the physical moment of §18.8. In particular
 
     ell_(1/2)(TP)=pi P(1),
     ell_(-1/2)(TP)=pi P(1)-(pi/2)integral_1^infinito P(t)dt.
 
-Así los dos momentos Tate equivalen EXACTAMENTE a P(1)=0 e integral_1^infinito P=0. NO imponen P'(1)=0. La preimagen de L2_BUILD008 es otra transformación; sus condiciones de borde no se importan a T.
+Thus the two Tate moments are EXACTLY equivalent to P(1)=0 and integral_1^infinito P=0. They do NOT impose P'(1)=0. The preimage of L2_BUILD008 is another transformation; its boundary conditions are not imported to T.
 
-**Completaciones primitivas con prefijo arbitrario.** El resultado(TAIL-ZERO) de§18.7 permanece válido si se exige que CADA completación sea exactamente primitiva. Para verlo, la aplicación de los dos momentos tiene rango2 sobre los P suaves compactos en[1,infinito): un bump que toca1 con P(1)!=0 y otro interior con integral no nula dan rango2 por la fórmula anterior. Dos bumps sólo interiores no servirían, pues ambos tendrían P(1)=0.
+**Primitive completions with arbitrary prefix.** The result (TAIL-ZERO) of §18.7 remains valid if EACH completion is required to be exactly primitive. To see it, the map of the two moments has rank 2 on smooth compact P in [1,infinito): a bump touching 1 with P(1)!=0 and another interior one with nonzero integral give rank 2 by the preceding formula. Two only-interior bumps would not work, since both would have P(1)=0.
 
-La prueba de densidad de cada cola de§18.7 aproxima también esos dos compactos directamente. Los momentos son continuos en B_a², por lo que se pueden elegir dos vectores FIJOS de soporte finito en la cola cuya matriz de momentos sea invertible. Aproximar -P_prefijo por esa cola; los dos momentos del total tienden a0. Corregirlos con aquellos dos vectores fijos y coeficientes tendiendo a0 impone ambos momentos EXACTAMENTE sin cambiar el prefijo ni la convergencia del grafo a0. Por continuidad, A_0 de las completaciones tiende a0.
+The density proof for each tail of §18.7 also approximates those two compacts directly. The moments are continuous in B_a², so two FIXED finitely supported vectors in the tail can be chosen whose moment matrix is invertible. Approximate -P_prefijo by that tail; the two moments of the total tend to 0. Correcting them with those two fixed vectors and coefficients tending to 0 imposes both moments EXACTLY without changing the prefix nor the graph convergence to 0. By continuity, A_0 of the completions tends to 0.
 
-En consecuencia, la exclusión de minorantes finitamente soportados y SOS locales compatibles de§18.7 sigue válida sobre el subespacio primitivo. En cambio§18.8 para sigma=±1/2 es allí vacuo porque esos momentos son cero; para otros sigma NO se transfiere automáticamente su falsificador no primitivo.
+Consequently, the exclusion of finitely supported minorants and compatible local SOS of §18.7 remains valid on the primitive subspace. In contrast §18.8 for sigma=±1/2 is vacuous there because those moments are zero; for other sigma its non-primitive falsifier does NOT transfer automatically.
 
-**Alcance.** Todas las equivalencias anteriores incluyen el cuantificador PARA TODO T y todos los tamaños. No identifican mínimos completos/primitivos ni formularios de una ventana T fija. Son equivalencias internas del problema explícito declarado; no se usa ningún enunciado externo ni se prueba el signo de cualquiera de los objetivos equivalentes. Global OPEN; sin nueva ventana W/T, cómputos, archivos auxiliares ni cambios en papers.
+**Scope.** All the preceding equivalences include the quantifier FOR ALL T and all sizes. They do not identify full/primitive minima nor forms of a fixed window T. They are internal equivalences of the declared explicit problem; no external statement is used nor is the sign of any of the equivalent targets proved. Global OPEN; no new W/T window, computations, auxiliary files or changes to papers.
 
 
-## 19. Primer polinomio térmico primitivo: signo completo de un vector fijo
+## 19. First primitive thermal polynomial: full sign of a fixed vector
 
-**PROVED, 2026-11-06.** Construcción fresh_global/root; auditoría matemática independiente arithmetic_fresh_candidate FULLPASS y verificación de root de los factores, la partición de la cola y la corrección del parámetro. Consultados las reglas del proyecto, README de ROUTES-TRIED-INDEX, grid maestro y crucigrama; cotejo dirigido del corpus sin la familia literal siguiente localizada. Antecedentes: el grafo completo de§18, sus restricciones primitivas exactas de§18.9 y la identidad de tasas anterior a T de§18.5. E101_061 trata polinomios de interpolación nodal, no estos polinomios en el tiempo térmico. Las familias gamma/Laguerre físicas previas y las inclinaciones exponenciales no son esta familia.
+**PROVED, 2026-11-06.** Construction fresh_global; independent mathematical audit arithmetic_fresh_candidate FULLPASS and verification of the factors, the tail partition and the parameter correction. Consulted the project rules, README of ROUTES-TRIED-INDEX, master grid and crossword; targeted corpus cross-check without the following literal family located. Antecedents: the full graph of §18, its exact primitive constraints of §18.9 and the rate identity before T of §18.5. E101_061 treats nodal interpolation polynomials, not these polynomials in the thermal time. The previous physical gamma/Laguerre families and the exponential tilts are not this family.
 
-La diferencia concreta es conservar p=P_1 EXACTO y multiplicarlo por un polinomio real en t, donde t=exp(2r), permitiendo ambos signos. No se trunca la densidad theta para definir el vector. Se firma únicamente el primer vector primitivo de esa familia; este cálculo de signo no afirma una recurrencia positiva entre sus grados. La densidad suficiente de la familia se prueba por separado en§19.8; no se deduce del signo de este vector. Las estimaciones siguientes conservan todas las contribuciones theta y primas mediante cotas de sus colas infinitas. La prueba no necesita un valor decimal de la forma.
+The concrete difference is keeping p=P_1 EXACT and multiplying it by a real polynomial in t, where t=exp(2r), allowing both signs. The theta density is not truncated to define the vector. Only the first primitive vector of that family is signed; this sign computation does not claim a positive recurrence among its degrees. Sufficient density of the family is proved separately in §19.8; it is not deduced from the sign of this vector. The following estimates keep all theta and prime contributions via bounds of their infinite tails. The proof does not need a decimal value of the form.
 
-### 19.1. Vector, parámetros y restricciones exactas
+### 19.1. Vector, parameters and exact constraints
 
-Para t>=1 poner
+For t>=1 set
 
     p(t)=sum_(n>=1) n² exp(-pi n²t),
     S_j=sum_(n>=1) n^(-j)exp(-pi n²),
     a=1+(2/pi)S_4/S_2,
     R(t)=(t-1)(t-a),   P(t)=p(t)R(t).
 
-Son series completas, absolutamente convergentes con todas las derivadas usadas. Integrar cada exponencial da
+These are full series, absolutely convergent with all the derivatives used. Integrating each exponential gives
 
     integral_1^infinito (t-1)p(t)dt=pi^(-2)S_2,
     integral_1^infinito t(t-1)p(t)dt
          =pi^(-2)S_2+2pi^(-3)S_4.
 
-Así a es exactamente la media de t para el peso positivo w(t)=(t-1)p(t), y a>1. El polinomio t-a es el primer polinomio ortogonal no constante para ese peso. Se tienen
+Thus a is exactly the mean of t for the positive weight w(t)=(t-1)p(t), and a>1. The polynomial t-a is the first nonconstant orthogonal polynomial for that weight. One has
 
     P(1)=0,   integral_1^infinito P(t)dt=0.
 
-Por§18.9, éstos son precisamente los dos momentos Tate de F=TP; no se añade P'(1)=0. La función P y sus derivadas tienen decaimiento exponencial, por lo que pertenecen a los dominios de grafo usados aquí.
+By §18.9, these are precisely the two Tate moments of F=TP; P'(1)=0 is not added. The function P and its derivatives have exponential decay, so they belong to the graph domains used here.
 
-Usar, como en§18,
+Use, as in §18,
 
     T=pi t^(5/4)(-2tD-3),
     B=Lg-2sum_(m>=2)Lambda(m)m²D_(m²),
@@ -2183,293 +2183,293 @@ Usar, como en§18,
            [log(t)|TP(t)|²+Re(TBP(t)conjugado(TP(t)))]dt/(2t)
          =Q_log(P)+Q_B(P).
 
-La identidad Bp=0 conserva la cancelación aritmética completa. Además Q_log(P)>=0, simplemente porque t>=1. Se probará Q_B(P)>1/2000.
+The identity Bp=0 preserves the full arithmetic cancellation. Moreover Q_log(P)>=0, simply because t>=1. It will be proved that Q_B(P)>1/2000.
 
-### 19.2. Expansión exacta de B y normalización modal
+### 19.2. Exact expansion of B and modal normalization
 
-Para j=1,2 definir
+For j=1,2 define
 
     D_j(n)=sum_(m|n,m>=2)Lambda(m)(m^(2j)-1).
 
-En particular D_j(1)=0 y
+In particular D_j(1)=0 and
 
     0<=D_j(n)<=n^(2j)log n,
 
-por sum_(m|n)Lambda(m)=log n. Aplicar§18.5 a R, o expandir las diferencias R(t)-R(t+r) y R(t)-R(m²t), da exactamente
+by sum_(m|n)Lambda(m)=log n. Applying §18.5 to R, or expanding the differences R(t)-R(t+r) and R(t)-R(m²t), gives exactly
 
     BP=(a+1-2t)U_1-U_2+2(a+1)tV_1-2t²V_2,
     U_1=pi^(-1)sum_n exp(-pi n²t),
     U_2=pi^(-2)sum_n n^(-2)exp(-pi n²t),
     V_j=sum_n n²D_j(n)exp(-pi n²t).
 
-La fórmula de V_j conserva todos los pares de divisores: reindexar n=mk en la suma inicial por m y k produce el factor n²D_j(n). Equivalentemente,
+The formula for V_j keeps all divisor pairs: reindexing n=mk in the initial sum over m and k produces the factor n²D_j(n). Equivalently,
 
     BP(t)=sum_(n>=1)exp(-pi n²t)L_n(t),
     L_n(t)=(a+1-2t)/pi-1/(pi²n²)
              +2n²(a+1)tD_1(n)-2n²t²D_2(n).
 
-Poner
+Set
 
     H_n=(2pi n²t-3)R-2tR',
     J_n=(2pi n²t-3)L_n-2tL_n'.
 
-Entonces las dos expansiones, con sus factores distintos, son
+Then the two expansions, with their distinct factors, are
 
     TP=pi t^(5/4)sum_n n²exp(-pi n²t)H_n,
     TBP=pi t^(5/4)sum_n exp(-pi n²t)J_n.
 
-Por tanto
+Therefore
 
     Q_B(P)=(pi²/2)sum_(n,m>=1)n²
         integral_1^infinito t^(3/2)exp[-pi(n²+m²)t]H_n(t)J_m(t)dt.
                                                         (POLY-QB)
 
-No se introduce un segundo factor m² en J_m. Las cotas polinomiales de D_j y las exponenciales justifican absolutamente esta doble serie, las derivaciones y las integraciones siguientes.
+No second factor m² is introduced in J_m. The polynomial bounds of D_j and the exponentials absolutely justify this double series, the differentiations and the following integrations.
 
-### 19.3. El modo principal y un lower elemental
+### 19.3. The leading mode and an elementary lower bound
 
-Escribir a_0=1+2/pi. Primero evaluar sólo el término (n,m)=(1,1) de(POLY-QB) en a=a_0, denotado Q_(B,11)(a_0). Con x=t-1 se obtiene
+Write a_0=1+2/pi. First evaluate only the term (n,m)=(1,1) of (POLY-QB) at a=a_0, denoted Q_(B,11)(a_0). With x=t-1 one obtains
 
     H_1=2pi x³+(2pi-11)x²+(10/pi-8)x+4/pi,
     J_1=-4x²+(12/pi-4)x+6/pi-3/pi².
 
-Para I_r=integral_1^infinito t^(r+3/2)exp(-2pi t)dt, integración por partes da
+For I_r=integral_1^infinito t^(r+3/2)exp(-2pi t)dt, integration by parts gives
 
     I_r=exp(-2pi)/(2pi)+(r+3/2)I_(r-1)/(2pi), r>=1.
 
-Expandir H_1J_1 y aplicar esta recurrencia hasta r=5 produce la identidad exacta
+Expanding H_1J_1 and applying this recurrence up to r=5 produces the exact identity
 
     Q_(B,11)(a_0)=(pi²/2)[A I_0-B_0 exp(-2pi)],
     A=(4pi-3)(176pi²-88pi+445)/(128pi⁴)>0,
     B_0=(176pi²-344pi+267)/(64pi⁴).
 
-La convexidad de (1+x)^(3/2) da I_0/exp(-2pi)>=1/(2pi)+3/(8pi²). En consecuencia
+Convexity of (1+x)^(3/2) gives I_0/exp(-2pi)>=1/(2pi)+3/(8pi²). Consequently
 
     [A I_0-B_0 exp(-2pi)]/exp(-2pi)
       >=(4096pi³+1264pi²+792pi-4005)/(1024pi⁶)
       >120339/1024000.
 
-Aquí bastan 3<pi<22/7 y (22/7)^6<1000. También exp(2pi)<600: las cotas elementales exp(1)<11/4 y
+Here 3<pi<22/7 and (22/7)^6<1000 suffice. Also exp(2pi)<600: the elementary bounds exp(1)<11/4 and
 
     exp(2/7)<=1+2/7+(2/7)²/[2(1-(2/7)/3)]<4/3
 
-dan exp(2pi)<(11/4)^6(4/3)<600, pues 2pi<44/7. La cota exponencial escrita se deduce de k!>=2*3^(k-2) para k>=2. Se concluye
+give exp(2pi)<(11/4)^6(4/3)<600, since 2pi<44/7. The written exponential bound follows from k!>=2*3^(k-2) for k>=2. One concludes
 
     Q_(B,11)(a_0)>(9/2)*120339/(1024000*600)>1/1200.
                                                         (POLY-11)
 
-### 19.4. Corrección del parámetro exacto a
+### 19.4. Correction of the exact parameter a
 
-Sea delta=a-a_0. La definición mediante S_4/S_2 implica delta<0 y
+Let delta=a-a_0. The definition via S_4/S_2 implies delta<0 and
 
     |delta|<=(2/pi)sum_(n>=2)n^(-2)exp[-pi(n²-1)]
        <exp(-9)/[6(1-exp(-15))]<1/40000.             (POLY-A)
 
-Se usó n²-1>=3+5(n-2), pi>3 y exp(3)>20. Esta última desigualdad ya resulta de sumar la serie de exp(3) hasta grado8. En particular
+One used n²-1>=3+5(n-2), pi>3 and exp(3)>20. This last inequality already results from summing the series of exp(3) up to degree 8. In particular
 
     163/100<a<a_0<5/3.
 
-Para TODO parámetro entre a y a_0, los polinomios del primer modo satisfacen, en t>=1,
+For ALL parameters between a and a_0, the first-mode polynomials satisfy, on t>=1,
 
     |H_1|<=7t³, |J_1|<=4t²,
     |partial_a H_1|<=7t², |partial_a J_1|<=2t.
 
-En efecto partial_a H_1=-(2pi t-3)(t-1)+2t y partial_a J_1=2t-3/pi; las demás cotas siguen directamente de 1<a<2 y 3<pi<22/7. Diferenciar la integral del modo principal, absolutamente convergente, da
+Indeed partial_a H_1=-(2pi t-3)(t-1)+2t and partial_a J_1=2t-3/pi; the other bounds follow directly from 1<a<2 and 3<pi<22/7. Differentiating the integral of the leading mode, absolutely convergent, gives
 
     |partial_a Q_(B,11)|
        <=210 integral_1^infinito t^(11/2)exp(-6t)dt
        <210exp(-6)<21/40<1.
 
-Para la desigualdad intermedia, t^(11/2)<=t^6 y la integración por partes finita da
+For the intermediate inequality, t^(11/2)<=t^6 and finite integration by parts gives
 
     integral_1^infinito t^6exp(-6t)dt
       =exp(-6)sum_(k=0)^6 6!/[(6-k)!6^(k+1)]<exp(-6).
 
-Por(POLY-A),
+By (POLY-A),
 
     |Q_(B,11)(a)-Q_(B,11)(a_0)|<1/40000.          (POLY-AERR)
 
-### 19.5. Los dos cruces entre los modos 1 y 2
+### 19.5. The two crossings between modes 1 and 2
 
-En la tabla siguiente [b_0,...,b_d] significa que el módulo del polinomio en x=t-1>=0 es a lo sumo sum_j b_jx^j. TODAS las cotas son para el parámetro EXACTO a de(POLY-A), no sólo para a_0:
+In the following table [b_0,...,b_d] means that the modulus of the polynomial in x=t-1>=0 is at most sum_j b_jx^j. ALL bounds are for the EXACT parameter a of (POLY-A), not only for a_0:
 
-| Polinomio | Coeficientes del mayorante absoluto |
+| Polynomial | Coefficients of the absolute majorant |
 | --- | --- |
 | H_1 | [4/3,5,5,44/7] |
 | J_1 | [2,1/5,4] |
 | H_2 | [4/3,20,5/2,176/7] |
 | J_2 | [660,3210,4670,2112] |
 
-Para verificar H_n, con alpha=a-1, sus coeficientes en x son
+To verify H_n, with alpha=a-1, its coefficients in x are
 
     [2alpha, -2pi n²alpha+5alpha-4,
                     2pi n²(1-alpha)-7, 2pi n²].
 
-Para J_1 son
+For J_1 they are
 
     [6/pi-3/pi²+delta(2-3/pi), 12/pi-4+2delta, -4].
 
-Los bounds de(POLY-A), 63/100<alpha<2/3 y 3<pi<22/7 prueban las tres primeras filas. Para la cuarta, D_1(2)=3log2 y D_2(2)=15log2, de modo que
+The bounds of (POLY-A), 63/100<alpha<2/3 and 3<pi<22/7 prove the first three rows. For the fourth, D_1(2)=3log2 and D_2(2)=15log2, so that
 
     L_2(t)=(a+1-2t)/pi-1/(4pi²)
                    +24(a+1)log2*t-120log2*t².
 
-Si L_2=l_0+l_1x+l_2x², las desigualdades 2/3<log2<7/10 dan
+If L_2=l_0+l_1x+l_2x², the inequalities 2/3<log2<7/10 give
 
     37<-l_0<40, 117<-l_1<125, 80<-l_2<84.
 
-Los coeficientes j_k de J_2 son exactamente
+The coefficients j_k of J_2 are exactly
 
     j_0=(8pi-3)l_0-2l_1,
     j_1=8pi l_0+(8pi-5)l_1-4l_2,
     j_2=8pi l_1+(8pi-7)l_2,
     j_3=8pi l_2.
 
-Esos intervalos muestran que todos son negativos y sus módulos son menores que los cuatro números de la tabla.
+Those intervals show that all are negative and their moduli are smaller than the four numbers of the table.
 
-Denotar por H_i^+,J_i^+ los polinomios de mayorantes de la tabla y poner
+Denote by H_i^+,J_i^+ the majorant polynomials of the table and set
 
     V(x)=[H_1^+(x)J_2^+(x)+4H_2^+(x)J_1^+(x)]
                          *(1+3x/2+3x²/8).
 
-El factor4 es el n² del modo n=2 en TP. La tercera derivada negativa de (1+x)^(3/2) prueba
+The factor 4 is the n² of the mode n=2 in TP. The negative third derivative of (1+x)^(3/2) proves
 
     (1+x)^(3/2)<=1+3x/2+3x²/8, x>=0.
 
-El producto polinomial racional anterior satisface, exactamente,
+The preceding rational polynomial product satisfies, exactly,
 
     sum_j [x^j]V *j!/15^(j+1)
        =92107822417/664453125<139.
 
-Integrar x^jexp(-15x) da entonces, usando pi²/2<5, 5pi>15 y exp(3)>20,
+Integrating x^jexp(-15x) then gives, using pi²/2<5, 5pi>15 and exp(3)>20,
 
     |Q_(B,12)+Q_(B,21)|
        <5*139/20^5<1/4500.                         (POLY-12)
 
-No se asigna signo a ninguno de esos cruces; se conserva su coste íntegro.
+No sign is assigned to either of those crossings; their full cost is kept.
 
-### 19.6. Resto de la doble serie infinita
+### 19.6. Remainder of the infinite double series
 
-De D_j(n)<=n^(2j)log n, a<5/3 y t>=1 se obtienen para n>=2
+From D_j(n)<=n^(2j)log n, a<5/3 and t>=1 one obtains for n>=2
 
     |L_n(t)|<=4n^6log(n)t²,
     |L_n'(t)|<=6n^6log(n)t,
     |J_n(t)|<=32n^8log(n)t³.
 
-Por ejemplo, los términos de L_n se acotan por (2/3)t+6n^4log(n)t+2n^6log(n)t²; al dividir por n^6log(n)t², se usa n>=2 y log n>2/3. La derivada se trata igual. Además |R|<=t(t-1), |R'|<=2t y 2pi n²>4 dan |H_n|<=2pi n²t³ para todo n>=1. Por tanto los sumandos F_n de TP y Z_n de TBP satisfacen
+For example, the terms of L_n are bounded by (2/3)t+6n^4log(n)t+2n^6log(n)t²; on dividing by n^6log(n)t², one uses n>=2 and log n>2/3. The derivative is treated similarly. Moreover |R|<=t(t-1), |R'|<=2t and 2pi n²>4 give |H_n|<=2pi n²t³ for all n>=1. Therefore the summands F_n of TP and Z_n of TBP satisfy
 
     |F_n(t)|<=22n^4t^(17/4)exp(-pi n²t), n>=1,
     |Z_n(t)|<=101n^8log(n)t^(17/4)exp(-pi n²t), n>=2,
     |Z_1(t)|<=13t^(17/4)exp(-pi t).
 
-La última cota usa |J_1|<=4t². Estas son cotas de las series completas, no de un corte elegido numéricamente.
+The last bound uses |J_1|<=4t². These are bounds of the full series, not of a numerically chosen cutoff.
 
-Para N>=2 y d<=9, el cociente entre términos consecutivos de n^dexp(-3n²) es menor que
+For N>=2 and d<=9, the ratio between consecutive terms of n^dexp(-3n²) is less than
 
     (3/2)^9/20^5<1/1000.
 
-Así
+Thus
 
     sum_(n>=N)n^dexp(-3n²)
        <(101/100)N^dexp(-3N²).                    (POLY-TAIL)
 
-Para un entero h>=8,
+For an integer h>=8,
 
     integral_1^infinito t^(15/2)exp(-pi h t)dt
        <=exp(-pi h)/(pi h-15/2),
 
-por log t<=t-1. El denominador es mayor que22 si h>=10 y mayor que16 si h>=8. Separar ahora los pares restantes de(POLY-QB) en n=1,m>=3; n>=3,m=1; y n,m>=2. Usar log n<=n y(POLY-TAIL), con exp(3)>20. El coste absoluto total es menor o igual que
+by log t<=t-1. The denominator is greater than 22 if h>=10 and greater than 16 if h>=8. Now separate the remaining pairs of (POLY-QB) into n=1,m>=3; n>=3,m=1; and n,m>=2. Use log n<=n and (POLY-TAIL), with exp(3)>20. The total absolute cost is less than or equal to
 
     (1111/22)(101/100)*3^9/20^10
        +(143/22)(101/100)*3^4/20^10
        +(1111/16)(101/100)²*2^13/20^8
      =11655533623/512000000000000<1/30000.          (POLY-REST)
 
-Los factores1111=22*101/2 y143=22*13/2 incluyen la medida dt/(2t). El último producto incluye TODOS los pares n,m>=2, en particular el par(2,2); no omite cruces entre modos grandes. Las tres clases, junto a(1,1),(1,2),(2,1), particionan toda la doble serie.
+The factors 1111=22*101/2 and 143=22*13/2 include the measure dt/(2t). The last product includes ALL pairs n,m>=2, in particular the pair (2,2); it omits no crossings between large modes. The three classes, together with (1,1),(1,2),(2,1), partition the whole double series.
 
-### 19.7. Signo y alcance
+### 19.7. Sign and scope
 
-Combinar(POLY-11), (POLY-AERR), (POLY-12) y(POLY-REST) da
+Combining (POLY-11), (POLY-AERR), (POLY-12) and (POLY-REST) gives
 
     Q_B(P)>1/1200-1/40000-1/4500-1/30000
             =199/360000>1/2000.
 
-Como Q_log(P)>=0,
+Since Q_log(P)>=0,
 
     Q(P)>1/2000.                                  (POLY-POS)
 
-Queda firmado ESTE vector primitivo exacto, con todas las contribuciones aritméticas y theta conservadas. El modo principal sólo se utilizó como término de referencia de un bound con cola completa; no se afirmó que fuera un aproximante PSD en todos los órdenes. Las comprobaciones racionales auxiliares de los coeficientes y sumas finitas anteriores fueron reproducidas por el auditor; no interviene una cuadratura decimal en la prueba.
+THIS exact primitive vector is signed, with all arithmetic and theta contributions kept. The leading mode was only used as the reference term of a bound with full tail; it was not claimed to be a PSD approximant in all orders. The auxiliary rational checks of the coefficients and finite sums above were reproduced in the audit; no decimal quadrature enters the proof.
 
-El caso corresponde al primer polinomio ortogonal no constante para w=(t-1)p. No prueba que el resultado se conserve para grados superiores, combinaciones arbitrarias de esos polinomios, ni sus cruces. El cálculo(POLY-POS) tampoco demuestra por sí solo una propiedad de core, una recurrencia, un nuevo menor K de orden fijo, una ventana W/T ni el signo global del Paper47. La propiedad de densidad suficiente se verifica independientemente en§19.8, sin heredar signo en grados superiores. No se ha modificado ningún paper ni creado un archivo de ideas o de cómputo.
+The case corresponds to the first nonconstant orthogonal polynomial for w=(t-1)p. It does not prove that the result is preserved for higher degrees, arbitrary combinations of those polynomials, or their crossings. The computation (POLY-POS) also does not by itself prove a core property, a recurrence, a new K minor of fixed order, a W/T window nor the global sign of Paper47. The sufficient density property is verified independently in §19.8, without inheriting sign in higher degrees. No paper has been modified nor has an ideas or computation file been created.
 
 
-### 19.8. Los polinomios por p son un core suficiente; todos sus bloques primitivos equivalen al objetivo global
+### 19.8. The polynomials times p are a sufficient core; all their primitive blocks are equivalent to the global target
 
-**PROVED como densidad y alcance, no como signo de la familia.** Construcciones independientes root/fresh_global; auditoría independiente global_restart_checked PASS de la continuación en norma, la corrección primitiva y ambos enlaces físicos. Consultados las reglas del proyecto, los tres índices, [BRIDGE002§3](POWER_BRIDGE_002.md), [CONFLUENT_BRIDGE014](POWER_CONFLUENT_BRIDGE_014.md), [DESCENT_AUDIT016§§8–9](POWER_DESCENT_AUDIT_016.md) y§18. Cotejo dirigido sin esta familia/core literal localizado. Aproximación polinómica y densidad fuerte tienen antecedentes explícitos; cambia el portador a p(t)R(t) con p=P1 exacto y el control simultáneo del grafo(F,G), no sólo una norma física L². No se atribuye prioridad mundial.
+**PROVED as density and scope, not as sign of the family.** Independent constructions fresh_global; independent audit global_restart_checked PASS of the norm continuation, the primitive correction and both physical links. Consulted the project rules, the three indices, [BRIDGE002§3](POWER_BRIDGE_002.md), [CONFLUENT_BRIDGE014](POWER_CONFLUENT_BRIDGE_014.md), [DESCENT_AUDIT016§§8–9](POWER_DESCENT_AUDIT_016.md) and §18. Targeted cross-check without this literal family/core located. Polynomial approximation and strong density have explicit antecedents; what changes is the carrier p(t)R(t) with exact p=P1 and the simultaneous control of the graph (F,G), not just a physical L² norm. No worldwide priority is attributed.
 
-**Continuación en B_a² sin separación funcional.** Fijar 0<a<pi y sea V la clausura COMPLEJA de span{p(t)t^j:j>=0} en B_a² de§18.2. Para r=0,1,2, las series theta completas dan |p^(r)(t)|<=C_r exp(-pi t), t>=1: tras retirar exp(-pi t), las sumas restantes se dominan por sum_n n^(2+2r)exp[-pi(n²-1)]. Definir
+**Continuation in B_a² without functional separation.** Fix 0<a<pi and let V be the COMPLEX closure of span{p(t)t^j:j>=0} in B_a² of §18.2. For r=0,1,2, the full theta series give |p^(r)(t)|<=C_r exp(-pi t), t>=1: after removing exp(-pi t), the remaining sums are dominated by sum_n n^(2+2r)exp[-pi(n²-1)]. Define
 
     H(z)(t)=p(t)exp(zt), Re z<pi-a.
 
-Para un centro z0 de ese semiplano, poner b=pi-a-Re z0>0. Derivando en t hasta orden2, y usando
+For a centre z0 of that half-plane, set b=pi-a-Re z0>0. Differentiating in t up to order 2, and using
 
     sup_(t>=1) exp(-bt)t^j/j! <= b^(-j),
 
-se obtiene para TODOS j>=0
+one obtains for ALL j>=0
 
     ||p exp(z0t)t^j/j!||_(a,2)
                          <=C_(z0)(1+b)² b^(-j).
 
-En efecto cada derivada de t^j/j! es t^(j-r)/(j-r)!; los términos con r>j desaparecen. Por tanto la serie Taylor de H en z0 converge en B_a² para |z-z0|<b y coincide con p exp(zt), también tras dos derivadas temporales. En z0=0 sus coeficientes están en V; así H(z) pertenece a V para |z|<pi-a.
+Indeed each derivative of t^j/j! is t^(j-r)/(j-r)!; the terms with r>j disappear. Therefore the Taylor series of H at z0 converges in B_a² for |z-z0|<b and coincides with p exp(zt), also after two temporal derivatives. At z0=0 its coefficients are in V; thus H(z) belongs to V for |z|<pi-a.
 
-Si un intervalo real de parámetros ya tiene H(z) en V, sus derivadas de cualquier orden en un centro interior pertenecen también a V por diferencias finitas y clausura. La serie Taylor en ese centro extiende la pertenencia al disco de radio pi-a-z0. Sucesivos centros reales negativos, separados por (pi-a)/2, dan por discos solapados
+If a real interval of parameters already has H(z) in V, its derivatives of any order at an interior centre also belong to V by finite differences and closure. The Taylor series at that centre extends membership to the disc of radius pi-a-z0. Successive negative real centres, separated by (pi-a)/2, give by overlapping discs
 
-    p(t)exp(-nu t) pertenece a V para TODO nu>0.
+    p(t)exp(-nu t) pertenece a V for EVERY nu>0.
 
-No se usa Hahn–Banach ni se infiere densidad desde convergencia puntual.
+Hahn–Banach is not used nor is density inferred from pointwise convergence.
 
-**Compactos y targets declarados.** Para P_c suave de soporte compacto en[1,infinito), poner x=exp(-t) y Q(x)=P_c(t)/(p(t)x). Como p>0 y P_c se anula para t grande, Q es suave en[0,exp(-1)] y cero cerca de0. Aproximar Q en C² por polinomios Q_N. Las funciones p x Q_N(x) son combinaciones finitas de p exp(-nu t), nu enteros positivos, y pertenecen a V. Para derivadas temporales de órdenes0,1,2, el error queda acotado por C eta_N exp[-(pi+1)t], eta_N->0. Así P_c pertenece a V. Cada target finito de§18 tiene sus jets ponderados tendiendo a0 y se aproxima por tales cortes; por clausura pertenece a V y admite aproximantes FINITOS pR en B_a². No se afirma esto para todo B_a²: en particular, no se supone densidad de compactos cuando los jets ponderados no tienden a0.
+**Compacts and declared targets.** For P_c smooth with compact support in [1,infinito), set x=exp(-t) and Q(x)=P_c(t)/(p(t)x). Since p>0 and P_c vanishes for large t, Q is smooth on [0,exp(-1)] and zero near 0. Approximate Q in C² by polynomials Q_N. The functions p x Q_N(x) are finite combinations of p exp(-nu t), nu positive integers, and belong to V. For temporal derivatives of orders 0,1,2, the error is bounded by C eta_N exp[-(pi+1)t], eta_N->0. Thus P_c belongs to V. Each finite target of §18 has its weighted jets tending to 0 and is approximated by such cutoffs; by closure it belongs to V and admits FINITE approximants pR in B_a². This is not claimed for all of B_a²: in particular, density of compacts is not assumed when the weighted jets do not tend to 0.
 
-La continuidad de§18.2 convierte esta aproximación en convergencia simultánea de F=TP y G=.5T LgP-C TP en H_gamma para0<gamma<2a, y por tanto de Q completo.
+The continuity of §18.2 turns this approximation into simultaneous convergence of F=TP and G=.5T LgP-C TP in H_gamma for 0<gamma<2a, and hence of the full Q.
 
-**Corrección exacta de los dos momentos.** Para un target primitivo P, las condiciones son P(1)=integralP=0 por§18.9. Los aproximantes pR_n tienen errores tendiendo a0 en ambos funcionales continuos de B_a². Corregirlos mediante dos vectores FIJOS p y tp: la matriz de los funcionales(P(1),integralP) tiene determinante
+**Exact correction of the two moments.** For a primitive target P, the conditions are P(1)=integralP=0 by §18.9. The approximants pR_n have errors tending to 0 in both continuous functionals of B_a². Correct them via two FIXED vectors p and tp: the matrix of the functionals (P(1),integralP) has determinant
 
     p(1)[integral_1^infinito t p(t)dt
                               -integral_1^infinito p(t)dt]>0.
 
-Sus coeficientes de corrección tienden a0. Quedan aproximantes primitivos EXACTOS pR_n sin perder la convergencia del grafo. Puesto que p(1)>0, sus polinomios son exactamente
+Their correction coefficients tend to 0. EXACT primitive approximants pR_n remain without losing the graph convergence. Since p(1)>0, their polynomials are exactly
 
     R_n(t)=(t-1)S_n(t),
     integral_1^infinito w(t)S_n(t)dt=0,
-    w(t)=(t-1)p(t)>0 para t>1.
+    w(t)=(t-1)p(t)>0 for t>1.
 
-Todos los momentos de w son finitos y su matriz de momentos es definida positiva sobre cada grado. Sean q_j sus polinomios ortogonales mónicos, con q_0=1. Entonces todo S de integral w nula es combinación FINITA de los q_j,j>=1. El portador polinómico primitivo es precisamente span{E_j=p(t)(t-1)q_j(t):j>=1}. El vector de§19.1 es E_1, con q_1=t-a y grado2 de R; el perfil p=P1 de las escalas enteras es otro objeto.
+All moments of w are finite and its moment matrix is positive definite on each degree. Let q_j be its monic orthogonal polynomials, with q_0=1. Then every S with vanishing integral against w is a FINITE combination of the q_j,j>=1. The primitive polynomial carrier is precisely span{E_j=p(t)(t-1)q_j(t):j>=1}. The vector of §19.1 is E_1, with q_1=t-a and R of degree 2; the profile p=P1 of the integer scales is another object.
 
-**Equivalencia suficiente y necesaria para todas las ventanas.** Definir la matriz Hermitiana Gamma_ij por polarización de Q(E_i,E_j), con la forma COMPLETA Q, no sólo Q_B. PSD de TODOS los bloques iniciales Gamma_(1..N) equivale a Q>=0 sobre todo el portador polinómico primitivo. A su vez equivale al objetivo lambda_A(T)>=0 para TODO T, como sigue.
+**Sufficient and necessary equivalence for all windows.** Define the Hermitian matrix Gamma_ij by polarization of Q(E_i,E_j), with the FULL form Q, not only Q_B. PSD of ALL initial blocks Gamma_(1..N) is equivalent to Q>=0 on the whole primitive polynomial carrier. In turn it is equivalent to the target lambda_A(T)>=0 for ALL T, as follows.
 
-Para la suficiencia, tomar un test físico f suave compacto primitivo y trasladarlo a soporte dentro de(0,infinito), conservando Tate y W. Poner F(t)=f(.5log t) y
+For sufficiency, take a smooth compact primitive physical test f and translate it to support inside (0,infinito), preserving Tate and W. Set F(t)=f(.5log t) and
 
     P(t)=T^-1F(t)=(1/(2pi))t^(-3/2)
                          integral_t^infinito v^(-3/4)F(v)dv.
 
-Es suave y cero para t suficientemente grande. Además el momento Tate positivo nulo hace P(1)=0; si F se anula cerca de1, también P se anula allí. El otro momento da integralP=0 por§18.9. Así P es un compacto primitivo del dominio anterior. La aproximación polinómica primitiva conserva el grafo completo y da Q(P)>=0 bajo la hipótesis sobre TODOS Gamma. Bajo u=.5log t, Q(P)=W[f], con las constantes y el borde causal verificados en [GLOBAL](POWER_GLOBAL_ROUTE_REVIEW.md), control operativo de§18.5. Por tanto W es no negativa sobre los tests suaves compactos primitivos. Su densidad en el dominio primitivo de cada ventana se obtiene de la densidad del núcleo de forma y corrección de sus dos errores Tate con dos bumps fijos interiores; los momentos son continuos. El paso al límite da lambda_A(T)>=0 para TODO T.
+It is smooth and zero for t sufficiently large. Moreover the vanishing positive Tate moment makes P(1)=0; if F vanishes near 1, P also vanishes there. The other moment gives integralP=0 by §18.9. Thus P is a primitive compact of the preceding domain. The primitive polynomial approximation preserves the full graph and gives Q(P)>=0 under the hypothesis on ALL Gamma. Under u=.5log t, Q(P)=W[f], with the constants and the causal boundary verified in [GLOBAL](POWER_GLOBAL_ROUTE_REVIEW.md), operational control of §18.5. Therefore W is nonnegative on smooth compact primitive tests. Their density in the primitive domain of each window is obtained from the density of the form core and correction of its two Tate errors with two fixed interior bumps; the moments are continuous. Passing to the limit gives lambda_A(T)>=0 for ALL T.
 
-Recíprocamente, si ese objetivo global vale, para cualquier polinomio primitivo P=pR la función física f(u)=(TP)(exp(2u)), u>=0, tiene supercola con todas las derivadas y ambos momentos Tate nulos. Pertenece a H_eta de014 para cualquier eta>1/2. Cortarla sólo en infinito y corregir los momentos con dos bumps físicos fijos produce compactos EXACTAMENTE primitivos convergentes en H_eta. El salto causal en0, si existe, está permitido en el dominio logarítmico; no se impone P'(1)=0. Cada compacto se traslada a alguna ventana y tiene W>=0 por la hipótesis. Continuidad014 da Q(P)=W[f]>=0. Esto firma todos los bloques Gamma y completa la equivalencia.
+Conversely, if that global target holds, for any primitive polynomial P=pR the physical function f(u)=(TP)(exp(2u)), u>=0, has a supertail with all derivatives and both Tate moments zero. It belongs to H_eta of 014 for any eta>1/2. Cutting it off only at infinity and correcting the moments with two fixed physical bumps produces EXACTLY primitive compacts converging in H_eta. The causal jump at 0, if it exists, is allowed in the logarithmic domain; P'(1)=0 is not imposed. Each compact is translated to some window and has W>=0 by the hypothesis. Continuity 014 gives Q(P)=W[f]>=0. This signs all blocks Gamma and completes the equivalence.
 
-**Alcance.** Se demuestra que ESTA familia polinómica primitiva es suficiente si se firman TODOS sus grados y cruces; su positividad en todos los tamaños sigue OPEN. El primer vector está certificado en§19.7 y el bloque de dos vectores se certifica separadamente en§19.9. No se hereda signo en el grado siguiente ni en combinaciones a partir de densidad, ortogonalidad de w o de vectores individuales positivos. Tampoco se identifica un mínimo a T fijo ni una nueva ventana W/T. Este puente no incorpora cómputos ni modifica papers.
+**Scope.** It is proved that THIS primitive polynomial family is sufficient if ALL its degrees and crossings are signed; its positivity in all sizes remains OPEN. The first vector is certified in §19.7 and the two-vector block is certified separately in §19.9. No sign is inherited in the next degree nor in combinations from density, orthogonality of w or individual positive vectors. Nor is a minimum at fixed T or a new W/T window identified. This bridge incorporates no computations and modifies no papers.
 
 
-### 19.9. Bloque primitivo completo de dimensión dos y fallo del signo separado de Q_B
+### 19.9. Full primitive block of dimension two and failure of the separate sign of Q_B
 
-**PROVED mediante certificado racional/Arb con colas analíticas completas, 2026-11-06.** Diseño arithmetic_fresh_candidate/root, revisión matemática previa fresh_global/root; implementación arithmetic_fresh_candidate, auditoría literal del código corregido fresh_global/root y reproducción independiente de root terminada exit0/FULLPASS. Parámetros fijados antes de la ejecución: precisión192 bits,960 paneles iguales de ancho1/64 en[1,16], Taylor de grado40, cuatro modos para encerrar los parámetros y dos modos para las integrales de referencia. No hay búsqueda de parámetros, cuadratura adaptativa ni decisión de signo en coma flotante ordinaria.
+**PROVED via rational/Arb certificate with full analytic tails, 2026-11-06.** Design arithmetic_fresh_candidate, prior mathematical review fresh_global; implementation arithmetic_fresh_candidate, literal audit of the corrected code fresh_global and independent reproduction completed exit 0/FULLPASS. Parameters fixed before execution: precision 192 bits, 960 equal panels of width 1/64 on [1,16], Taylor degree 40, four modes to enclose the parameters and two modes for the reference integrals. There is no parameter search, adaptive quadrature or sign decision in ordinary floating point.
 
-Fuentes reproducibles: [verificador](tools/power_thermal_primitive_two_verify.py) y [log](tools/power_thermal_primitive_two_verify.log). SHA256 del verificador CORREGIDO utilizado por constructor y reproducción independiente:
+Reproducible sources: [verifier](tools/power_thermal_primitive_two_verify.py) and [log](tools/power_thermal_primitive_two_verify.log). SHA256 of the CORRECTED verifier used in the construction and in the independent reproduction:
 
     e589fb2b9d98d76f021418427a903794f17aa629832f400f2154c21add52f170
 
-El certificado mantiene orden41 en cada serie truncada mediante derivadas polinomiales algebraicas exactas y asserts de precisión; no deriva una serie truncada reduciendo su orden. Las cotas siguientes explican todo el presupuesto de error y el alcance del certificado, sin depender sólo de la lectura del log.
+The certificate keeps order 41 in each truncated series via exact algebraic polynomial derivatives and precision asserts; it does not differentiate a truncated series by reducing its order. The following bounds explain the whole error budget and the scope of the certificate, without depending solely on reading the log.
 
-**Vectores y parámetros exactos.** Usar x=t-1, p y w=(t-1)p de§19.1. Para j=0,1,2,3,
+**Vectors and exact parameters.** Use x=t-1, p and w=(t-1)p of §19.1. For j=0,1,2,3,
 
     mu_j=integral_1^infinito x^j w(t)dt
         =(j+1)! S_(2j+2)/pi^(j+2),
@@ -2478,34 +2478,34 @@ El certificado mantiene orden41 en cada serie truncada mediante derivadas polino
     alpha=(mu_3 mu_0-mu_2 mu_1)/Delta,
     beta=(mu_3 mu_1-mu_2²)/Delta.
 
-La estricta positividad de Delta es la varianza no nula del peso positivo w, multiplicada por mu_0². Definir
+Strict positivity of Delta is the nonzero variance of the positive weight w, multiplied by mu_0². Define
 
     R_1=x(x-b),
     R_2=x(x²-alpha x+beta),
     E_1=pR_1,  E_2=pR_2.
 
-El nombre E_i evita confundir estos vectores con el perfil P_1 de las escalas enteras. E_1 coincide con el vector de§19.1, pues a=1+b. Los parámetros de R_2 imponen exactamente
+The name E_i avoids confusing these vectors with the profile P_1 of the integer scales. E_1 coincides with the vector of §19.1, since a=1+b. The parameters of R_2 impose exactly
 
     mu_2-alpha mu_1+beta mu_0=0,
     mu_3-alpha mu_2+beta mu_1=0.
 
-Así E_1,E_2 son los primeros dos vectores de la base primitiva de§19.8, aunque allí se escriban los polinomios ortogonales en t en vez de x. Ambos satisfacen E_i(1)=0 e integral E_i=0. Son linealmente independientes por sus grados2 y3; todo par real no nulo de coeficientes representa una función no nula y exactamente primitiva.
+Thus E_1,E_2 are the first two vectors of the primitive basis of §19.8, although there the orthogonal polynomials are written in t instead of x. Both satisfy E_i(1)=0 and integral E_i=0. They are linearly independent by their degrees 2 and 3; every nonzero real pair of coefficients represents a nonzero, exactly primitive function.
 
-Para encerrar los parámetros se suman los primeros cuatro términos de CADA S_j, j=2,4,6,8. El resto positivo completo satisface
+To enclose the parameters, the first four terms of EACH S_j, j=2,4,6,8, are summed. The full positive remainder satisfies
 
     0<sum_(n>=5)n^(-j)exp(-pi n²)
          <(101/100)5^(-j)20^(-25).
 
-Se usa pi>3, exp(3)>20 y la comparación geométrica de términos consecutivos; el factor101/100 es mayor que1/(1-1/1000). La evaluación con bolas de192 bits, añadiendo ese intervalo positivo ANTES de formar mu,Delta,b,alpha,beta, certifica
+One uses pi>3, exp(3)>20 and the geometric comparison of consecutive terms; the factor 101/100 is greater than 1/(1-1/1000). Evaluation with 192-bit balls, adding that positive interval BEFORE forming mu,Delta,b,alpha,beta, certifies
 
     63/100<b<2/3,
     19/10<alpha<48/25,
     3/5<beta<31/50,
     Delta>0.
 
-Toda incertidumbre de estos parámetros permanece dentro de cada coeficiente posterior. No se sustituyen por sus puntos medios.
+All uncertainty of these parameters remains inside each subsequent coefficient. They are not replaced by their midpoints.
 
-**Expansión modal y polarización.** Para i=1,2 y n>=1 poner
+**Modal expansion and polarization.** For i=1,2 and n>=1 set
 
     L_(i,n)(t)=-sum_(j=1)^3
                   R_i^(j)(t)/[j pi^j n^(2j-2)]
@@ -2514,68 +2514,68 @@ Toda incertidumbre de estos parámetros permanece dentro de cada coeficiente pos
     H_(i,n)=(2pi n²t-3)R_i-2tR_i',
     J_(i,n)=(2pi n²t-3)L_(i,n)-2tL_(i,n)'.
 
-La suma derivativa termina realmente en el grado de R_i. La identidad Bp=0 y la misma expansión de diferencias de§19.2 dan
+The derivative sum actually ends at the degree of R_i. The identity Bp=0 and the same difference expansion of §19.2 give
 
     F_i=TE_i=pi t^(5/4)sum_(n>=1)n²exp(-pi n²t)H_(i,n),
     Z_i=TBE_i=pi t^(5/4)sum_(n>=1)exp(-pi n²t)J_(i,n).
 
-La matriz real simétrica completa que se certifica es
+The full real symmetric matrix being certified is
 
     Q_ij=integral_1^infinito
        [log(t)F_i(t)F_j(t)+(F_i(t)Z_j(t)+F_j(t)Z_i(t))/2]
                                                          dt/(2t).
                                                         (BLOCK-Q)
 
-En particular Q(P)=c^t Q c para P=c_1E_1+c_2E_2. Se conserva el promedio simétrico de los cruces; no se sustituye Q_B por una expresión unilateral no simetrizada. Para el diagnóstico de separación se integra además DIRECTAMENTE
+In particular Q(P)=c^t Q c for P=c_1E_1+c_2E_2. The symmetric average of the crossings is kept; Q_B is not replaced by a one-sided non-symmetrized expression. For the separation diagnostic one also integrates DIRECTLY
 
     Q_B(E_1+E_2)=integral_1^infinito
                          (F_1+F_2)(Z_1+Z_2)dt/(2t).
 
-**Cotas reales de todos los modos.** Los intervalos de b,alpha,beta prueban para t>=1
+**Real bounds for all modes.** The intervals of b,alpha,beta prove for t>=1
 
     |R_i|<=t³, |R_i'|<=3t², |R_i''|<=6t, |R_i'''|<=6.
 
-Por ejemplo x²-alpha x+beta>=beta-alpha²/4>-1 y su cota superior es menor que x²+1; esto da |R_2|<=t³. Para R_2'=3x²-2alpha x+beta, el término negativo queda acotado por4x<=3t²; las demás derivadas y R_1 satisfacen las cotas escritas directamente.
+For example x²-alpha x+beta>=beta-alpha²/4>-1 and its upper bound is less than x²+1; this gives |R_2|<=t³. For R_2'=3x²-2alpha x+beta, the negative term is bounded by 4x<=3t²; the other derivatives and R_1 satisfy the written bounds directly.
 
-La parte derivativa de L_(i,n) tiene módulo a lo sumo(38/27)t³. Para n>=2, su derivada tiene módulo a lo sumo(25/12)t². La parte aritmética y su derivada se acotan respectivamente por
+The derivative part of L_(i,n) has modulus at most (38/27)t³. For n>=2, its derivative has modulus at most (25/12)t². The arithmetic part and its derivative are bounded respectively by
 
     2n²log(n)(1+n^6)t³<=(65/32)n^8log(n)t³,
     6n²log(n)(1+n^6)t²<=(195/32)n^8log(n)t².
 
-Aquí se conservó la diferencia completa R_i(t)-R_i(m²t), usando sum_(m|n)Lambda(m)=log n. Como n^8log n>512/3 para n>=2, se deduce
+Here the full difference R_i(t)-R_i(m²t) was kept, using sum_(m|n)Lambda(m)=log n. Since n^8log n>512/3 for n>=2, one deduces
 
     |L_(i,n)|<=3n^8log(n)t³,
     |L_(i,n)'|<=7n^8log(n)t²,
     |J_(i,n)|<=23n^10log(n)t^4, n>=2.
 
-Para n=1 bastan |L_(i,1)|<3t²/2 y |L_(i,1)'|<=7t/3. Por las desigualdades racionales verificadas con pi,
+For n=1, |L_(i,1)|<3t²/2 and |L_(i,1)'|<=7t/3 suffice. By the rational inequalities verified with pi,
 
     pi(2pi+6)<39, 23pi<73,
     pi(3pi+14/3)<45,
 
-los sumandos modales de F_i,Z_i satisfacen uniformemente para i=1,2
+the modal summands of F_i,Z_i satisfy uniformly for i=1,2
 
     |F_(i,n)|<=39n^4t^(21/4)exp(-pi n²t), n>=1,
     |Z_(i,1)|<=45t^(21/4)exp(-pi t),
     |Z_(i,n)|<=73n^10log(n)t^(21/4)exp(-pi n²t), n>=2.
                                                         (BLOCK-MODES)
 
-Estas cotas también justifican la convergencia absoluta de las expansiones e integrales de(BLOCK-Q).
+These bounds also justify the absolute convergence of the expansions and integrals of (BLOCK-Q).
 
-**Error por omitir modos n>=3 en la referencia de integración.** Abreviar
+**Error from omitting modes n>=3 in the integration reference.** Abbreviate
 
     C=101/100,
     T_d(N)=C N^d/20^(N²),
     Sbar_4=1/20+T_4(2).
 
-Para N>=2,d<=11, el cociente entre términos consecutivos de n^dexp(-3n²) es menor que(3/2)^11/20^5<1/1000; por tanto su cola es menor que C N^dexp(-3N²). Todo par omitido tiene h=n²+m²>=10. Las integrales pertinentes satisfacen
+For N>=2,d<=11, the ratio between consecutive terms of n^dexp(-3n²) is less than (3/2)^11/20^5<1/1000; therefore its tail is less than C N^dexp(-3N²). Every omitted pair has h=n²+m²>=10. The pertinent integrals satisfy
 
     integral_1^infinito t^(19/2)exp(-pi h t)dt
           <=exp(-pi h)/(pi h-19/2)<exp(-3h)/20,
     integral_1^infinito t^(21/2)exp(-pi h t)dt
           <exp(-3h)/19.
 
-Para la segunda se usó log t<=t. Aplicar(BLOCK-MODES) y log n<=n da los presupuestos absolutos, para CADA entrada simetrizada,
+For the second, log t<=t was used. Applying (BLOCK-MODES) and log n<=n gives the absolute budgets, for EACH symmetrized entry,
 
     r_B=(39/40)[73 Sbar_4 T_11(3)
                   +45 T_4(3)/20+73 T_4(3)T_11(2)]
@@ -2586,336 +2586,336 @@ Para la segunda se usó log t<=t. Aplicar(BLOCK-MODES) y log n<=n da los presupu
        <1/10^9.
                                                         (BLOCK-MODERR)
 
-El primer presupuesto cubre Z de índice>=3 contra todos los F, y F de índice>=3 contra Z de índice1 o>=2. Puede contar dos veces algunos pares, lo cual sólo aumenta el majorante. El promedio de dos términos en Q_B,ij conserva la misma cota r_B. Para la dirección E_1+E_2, el error de Q_B es a lo sumo4r_B. No se elimina ningún par de índices grandes ni un contacto primo-potencia.
+The first budget covers Z of index >=3 against all F, and F of index >=3 against Z of index 1 or >=2. It may count some pairs twice, which only increases the majorant. The average of two terms in Q_B,ij keeps the same bound r_B. For the direction E_1+E_2, the error of Q_B is at most 4r_B. No pair of large indices nor a prime-power contact is eliminated.
 
-**Cola temporal después de16.** Los mismos mayorantes, aún más holgados, dan para cada i
+**Temporal tail after 16.** The same majorants, even looser, give for each i
 
     |F_i(t)|<=663t^(21/4)exp(-pi t),
     |Z_i(t)|<=149549t^(21/4)exp(-pi t).
 
-Se usó Cexp(-9)<1, de modo que las colas relativas se acotan por2^4 y2^11, y 39(1+2^4)=663,45+73*2^11=149549. Estas cotas valen para las series completas y, en particular, para los dos modos retenidos. Para r=10,11,
+Cexp(-9)<1 was used, so that the relative tails are bounded by 2^4 and 2^11, and 39(1+2^4)=663,45+73*2^11=149549. These bounds hold for the full series and, in particular, for the two retained modes. For r=10,11,
 
     integral_16^infinito t^r exp(-6t)dt
        <=16^r exp(-96)/(6-r/16)<16^r/(5*20^32).
 
-Por log t<=t, unos presupuestos válidos para cada entrada son
+By log t<=t, valid budgets for each entry are
 
     e_B=663*149549*16^10/[10*20^32],
     e_log=663²*16^11/[10*20^32],
     e_B+e_log<1/10^20.
 
-Los exponentes enteros10,11 mayoran respectivamente19/2 y21/2 para t>=16. La dirección E_1+E_2 necesita4e_B para su parte Q_B.
+The integer exponents 10,11 majorize respectively 19/2 and 21/2 for t>=16. The direction E_1+E_2 needs 4e_B for its Q_B part.
 
-**Integración de referencia con resto de Taylor verificado.** Sólo en esta evaluación finita se conservan los modos n=1,2; los errores anteriores pagan todos los demás sobre la semirrecta completa. Para n=2, el único divisor no trivial es2, así que L_(i,2) contiene exactamente8log2[R_i(t)-R_i(4t)]. Su derivada se evalúa algebraicamente como8log2[R_i'(t)-4R_i'(4t)] más la derivada de la parte derivativa. No se reemplaza por diferencias numéricas.
+**Reference integration with verified Taylor remainder.** Only in this finite evaluation are the modes n=1,2 kept; the preceding errors pay for all the others on the full half-line. For n=2, the only nontrivial divisor is 2, so L_(i,2) contains exactly 8log2[R_i(t)-R_i(4t)]. Its derivative is evaluated algebraically as 8log2[R_i'(t)-4R_i'(4t)] plus the derivative of the derivative part. It is not replaced by numerical differences.
 
-En cada disco complejo de radio1/8 centrado en[1,16] se tienen Re z>7/8, |z|<17, |z-1|<18 y |4z-1|<69. Las ramas principales de log z y z^(5/4) son holomorfas allí. Los intervalos de parámetros anteriores dan
+On each complex disc of radius 1/8 centred in [1,16] one has Re z>7/8, |z|<17, |z-1|<18 and |4z-1|<69. The principal branches of log z and z^(5/4) are holomorphic there. The preceding parameter intervals give
 
     |R_i(z)|<10^4, |R_i'(z)|<2000,
     |R_i''(z)|<200, |R_i'''(z)|<=6,
     |R_i(4z)|<4*10^5, |R_i'(4z)|<15000.
 
-Denotar por F_i^[2],Z_i^[2] las sumas de referencia con n=1,2 únicamente. Por las fórmulas modales exactas de esos dos modos, usando |exp(-pi n²z)|<1,
+Denote by F_i^[2],Z_i^[2] the reference sums with n=1,2 only. By the exact modal formulas of those two modes, using |exp(-pi n²z)|<1,
 
     |H_(i,n)|<10^7, |L_(i,n)|<4*10^6,
     |L_(i,n)'|<5*10^5, |J_(i,n)|<3*10^9,
     |F_i^[2](z)|<2*10^11, |Z_i^[2](z)|<10^13.
 
-Además |log z|<4 y |1/(2z)|<1. Por tanto M=10^30 domina el módulo de cada integrando DE REFERENCIA de Q_11,Q_12,Q_22 y del integrando directo de Q_B(E_1+E_2), incluidos sus factores de polarización. Los errores(BLOCK-MODERR) conservan separadamente todos los modos no incluidos en esa referencia. Estos son bounds complejos para los integrandos, no estimaciones reales trasladadas sin prueba.
+Moreover |log z|<4 and |1/(2z)|<1. Therefore M=10^30 dominates the modulus of each REFERENCE integrand of Q_11,Q_12,Q_22 and of the direct integrand of Q_B(E_1+E_2), including their polarization factors. The errors (BLOCK-MODERR) separately keep all the modes not included in that reference. These are complex bounds for the integrands, not real estimates transferred without proof.
 
-Los960 paneles tienen ancho1/64 y semiancho1/128. Para el radio de Cauchy1/8, el cociente es1/16. Se integran exactamente los términos pares del polinomio de Taylor de grado40, con aritmética de bolas a192 bits. El error total de truncación queda acotado por
+The 960 panels have width 1/64 and half-width 1/128. For the Cauchy radius 1/8, the ratio is 1/16. The even terms of the Taylor polynomial of degree 40 are integrated exactly, with 192-bit ball arithmetic. The total truncation error is bounded by
 
     e_Taylor=15*10^30*(1/16)^41/(1-1/16)<1/10^18.
 
-El verificador construye R_i',R_i'',R_i''' y L_(i,n)' por fórmulas polinomiales exactas. Comprueba explícitamente que los campos F_i,Z_i, los cuatro integrandos y la serie que entra en la integración tienen precisión41 en CADA panel. Así el resto de grado40 corresponde al orden realmente utilizado.
+The verifier builds R_i',R_i'',R_i''' and L_(i,n)' by exact polynomial formulas. It explicitly checks that the fields F_i,Z_i, the four integrands and the series entering the integration have precision 41 on EACH panel. Thus the degree-40 remainder corresponds to the order actually used.
 
-**Inflación y gates finales.** Antes de cualquier comparación de signo se añaden bolas simétricas de radios
+**Inflation and final gates.** Before any sign comparison, symmetric balls of radii
 
     e_Q=r_B+r_log+e_B+e_log+e_Taylor<1/400000,
-    e_direction=4r_B+4e_B+e_Taylor.
+    e_direction=4r_B+4e_B+e_Taylor
 
-La incertidumbre de los parámetros ya está incorporada en todos los coeficientes y no se omite de estos intervalos. La ejecución del constructor y la reproducción independiente, con el mismo hash corregido, terminaron exit0/FULLPASS y certificaron
+are added. The parameter uncertainty is already incorporated in all coefficients and is not omitted from these intervals. The main run and the independent reproduction, with the same corrected hash, ended exit 0/FULLPASS and certified
 
     Q_11>179/100000,
     Q_22>17/10000,
     |Q_12|<79/50000,
     Q_B(E_1+E_2)<-1/20000.
 
-Por aritmética racional exacta,
+By exact rational arithmetic,
 
     det Q> (179/100000)(17/10000)-(79/50000)²
            =2733/5000000000>0.
 
-Luego el bloque COMPLETO Q sobre span{E_1,E_2} es definido positivo: TODA combinación real no nula tiene Q>0. No se restringen los signos de sus dos coeficientes. Al mismo tiempo, E_1+E_2 es exactamente primitivo y tiene Q_B<0. Queda refutada la promoción del signo separado Q_B(E_1)>0 de§19.7 a esta familia bidimensional; la contribución Q_log es necesaria en ese argumento. Esto NO produce un valor negativo de Q ni un contraejemplo al signo del paper.
+Hence the FULL block Q on span{E_1,E_2} is positive definite: EVERY nonzero real combination has Q>0. The signs of its two coefficients are not restricted. At the same time, E_1+E_2 is exactly primitive and has Q_B<0. The promotion of the separate sign Q_B(E_1)>0 of §19.7 to this two-dimensional family is refuted; the contribution Q_log is necessary in that argument. This does NOT produce a negative value of Q nor a counterexample to the sign of the paper.
 
-**Alcance.** Éste es un certificado asistido de un único bloque primitivo2x2 con todos sus cruces y colas completos. Por§19.8, firmar TODOS los bloques de la familia sería suficiente y necesario para el objetivo global; aquí sólo se han firmado dos dimensiones. No hay herencia automática al siguiente grado, recurrencia positiva, nuevo margen uniforme ni nueva ventana W/T. Los polinomios ortogonales de w no diagonalizan por sí solos Q. No se ha modificado ningún paper ni se infiere signo global.
+**Scope.** This is an assisted certificate of a single primitive 2x2 block with all its crossings and full tails. By §19.8, signing ALL blocks of the family would be sufficient and necessary for the global target; here only two dimensions have been signed. There is no automatic inheritance to the next degree, positive recurrence, new uniform margin nor new W/T window. The orthogonal polynomials of w do not by themselves diagonalize Q. No paper has been modified nor is a global sign inferred.
 
 
-### 19.10. Todos los bloques de cualquier cola fija de grados equivalen al objetivo global
+### 19.10. All blocks of any fixed tail of degrees are equivalent to the global target
 
-**PROVED como alcance, no como positividad nueva.** Root/joint_sign_fresh_review; auditorías independientes arithmetic_fresh_candidate y fresh_global PASS antes del registro. Consultados las reglas del proyecto, los tres índices,§§18.9,19.8, [CONFLUENT_BRIDGE014](POWER_CONFLUENT_BRIDGE_014.md), [RECIPROCAL_PFAFFIANS083](POWER_RECIPROCAL_PFAFFIANS_083.md) y [GLOBAL, «Comparaciones primitivas»](POWER_GLOBAL_ROUTE_REVIEW.md). Se aplica el lema analítico allí probado, con un número FINITO arbitrario de restricciones, al core térmico ya establecido. No se presenta otra desigualdad positiva ni un nuevo principio de continuación; la diferencia respecto de§19.8 es conservar exactamente los momentos adicionales que eliminan cualquier prefijo fijo de grados.
+**PROVED as scope, not as new positivity.** joint_sign_fresh_review; independent audits arithmetic_fresh_candidate and fresh_global PASS before recording. Consulted the project rules, the three indices, §§18.9,19.8, [CONFLUENT_BRIDGE014](POWER_CONFLUENT_BRIDGE_014.md), [RECIPROCAL_PFAFFIANS083](POWER_RECIPROCAL_PFAFFIANS_083.md) and [GLOBAL, «Primitive comparisons»](POWER_GLOBAL_ROUTE_REVIEW.md). The analytic lemma proved there is applied, with an arbitrary FINITE number of constraints, to the already established thermal core. No other positive inequality nor a new continuation principle is presented; the difference with respect to §19.8 is keeping exactly the additional moments that eliminate any fixed prefix of degrees.
 
-**Enunciado.** Fijar un entero J>=1 y los E_j=p(t)(t-1)q_j(t) de§19.8. Son equivalentes:
+**Statement.** Fix an integer J>=1 and the E_j=p(t)(t-1)q_j(t) of §19.8. The following are equivalent:
 
-1. Q es no negativa sobre TODA combinación finita de E_j con j>=J, incluidos todos sus cruces; equivalentemente, todos los bloques Gamma_(J..N), N>=J, son PSD.
-2. lambda_A(T)>=0 para TODO T>0.
+1. Q is nonnegative on EVERY finite combination of E_j with j>=J, including all their crossings; equivalently, all blocks Gamma_(J..N), N>=J, are PSD.
+2. lambda_A(T)>=0 for ALL T>0.
 
-La cola se fija antes de cuantificar los tamaños. No se sustituye1 por signo de las diagonales, de un bloque finito, ni de una unión de paquetes positivos de dimensión creciente.
+The tail is fixed before quantifying the sizes. 1 is not replaced by the sign of the diagonals, of a finite block, or of a union of positive packets of growing dimension.
 
-**Restricciones exactas de la cola.** Por ortogonalidad de q_j para w=(t-1)p, un polinomio P=pR pertenece a span FINITO{E_j:j>=J} exactamente cuando
+**Exact constraints of the tail.** By orthogonality of q_j for w=(t-1)p, a polynomial P=pR belongs to the FINITE span{E_j:j>=J} exactly when
 
     P(1)=0,
     integral_1^infinito t^k P(t)dt=0, 0<=k<J.       (TAIL-MOM)
 
-En efecto P(1)=0 equivale a R=(t-1)S; las otras condiciones dicen que S es ortogonal en L²(w dt) a todos los polinomios de grado<J. Su expansión polinómica FINITA en los q_j empieza entonces en J.
+Indeed P(1)=0 is equivalent to R=(t-1)S; the other conditions say that S is orthogonal in L²(w dt) to all polynomials of degree <J. Its FINITE polynomial expansion in the q_j then starts at J.
 
-Para F=TP y f(r)=F(exp(2r)), r>=0, la identidad de§18.9 da
+For F=TP and f(r)=F(exp(2r)), r>=0, the identity of §18.9 gives
 
     ell_sigma(f)=pi P(1)
         +pi(sigma/2-1/4)integral_1^infinito
                                       t^(sigma/2+1/4)P(t)dt.
 
-Por tanto(TAIL-MOM) equivale a ell_sigma(f)=0 para la lista de J+1 números reales DISTINTOS
+Therefore (TAIL-MOM) is equivalent to ell_sigma(f)=0 for the list of J+1 DISTINCT real numbers
 
     Sigma_J={1/2} union {2k-1/2:0<=k<J}.          (TAIL-SIGMA)
 
-Para sigma=1/2 se obtiene pi P(1); para sigma=2k-1/2 el coeficiente de la integral es pi(k-1/2), que no se anula para k entero. No se impone P'(1)=0.
+For sigma=1/2 one obtains pi P(1); for sigma=2k-1/2 the coefficient of the integral is pi(k-1/2), which does not vanish for integer k. P'(1)=0 is not imposed.
 
-**Extensión finita del lema ya probado en GLOBAL.** Sean sigma_1,...,sigma_m reales distintos, D impar real-analítica en TODA R y K_D(u,v)=(D(u)+D(v))/(u+v), con continuación removible. Si K_D es PSD sobre TODOS los bloques de un intervalo abierto I contenido en(max_l sigma_l,infinito), sujetos a
+**Finite extension of the lemma already proved in GLOBAL.** Let sigma_1,...,sigma_m be distinct reals, D odd real-analytic on ALL of R and K_D(u,v)=(D(u)+D(v))/(u+v), with removable continuation. If K_D is PSD on ALL blocks of an open interval I contained in (max_l sigma_l,infinito), subject to
 
     sum_i d_i/(u_i-sigma_l)=0, 1<=l<=m,           (CPD-m)
 
-entonces K_D es PSD completo. Para probarlo poner
+then K_D is fully PSD. To prove it set
 
     V(u)=prod_(l=1)^m(u-sigma_l),
     d_i=V(u_i)b_i,
     L(u,v)=V(u)V(v)K_D(u,v).
 
-Los polinomios V(u)/(u-sigma_l) forman una base de los de grado<=m-1: evaluar en los sigma_l prueba su independencia. Así(CPD-m) equivale a sum_i b_i u_i^k=0, 0<=k<m. Elegir m anclas distintas en I y restar a cada delta_x su interpolante de Lagrange sobre esas anclas. Las medidas E_x resultantes anulan esos m momentos y C(x,y)=L(E_x,E_y) es PSD en I. L y C son conjuntamente real-analíticos en TODA R² porque D es impar. La continuación de§2.2 propaga PSD de C a toda R, exactamente como en el caso m=2 de GLOBAL.
+The polynomials V(u)/(u-sigma_l) form a basis of those of degree <=m-1: evaluating at the sigma_l proves their independence. Thus (CPD-m) is equivalent to sum_i b_i u_i^k=0, 0<=k<m. Choose m distinct anchors in I and subtract from each delta_x its Lagrange interpolant on those anchors. The resulting measures E_x annihilate those m moments and C(x,y)=L(E_x,E_y) is PSD on I. L and C are jointly real-analytic on ALL of R² because D is odd. The continuation of §2.2 propagates PSD of C to all of R, exactly as in the case m=2 of GLOBAL.
 
-Para cualquier medida finita con esos momentos nulos las correcciones de las anclas se cancelan, de modo que su energía L es no negativa. Las filas L(sigma_l,v) son cero. Dado un vector arbitrario con nodos fuera de los sigma_l, dividir sus coeficientes por V y añadir masas en los m puntos sigma_l para anular los m momentos. La matriz de esa reparación es Vandermonde e invertible; las filas nulas aseguran que la energía no cambia. Resulta PSD completa de K_D fuera de esos puntos y, por continuidad, también en ellos. La recíproca por restricción es inmediata. Sólo se usa un número FINITO fijo de momentos, no una continuación uniforme en m.
+For any finite measure with those vanishing moments the anchor corrections cancel, so that its energy L is nonnegative. The rows L(sigma_l,v) are zero. Given an arbitrary vector with nodes outside the sigma_l, divide its coefficients by V and add masses at the m points sigma_l to annihilate the m moments. The matrix of that repair is Vandermonde and invertible; the null rows ensure the energy does not change. Full PSD of K_D results outside those points and, by continuity, also at them. The converse by restriction is immediate. Only a FINITE fixed number of moments is used, not a continuation uniform in m.
 
-**Aproximación térmica con las J+1 restricciones.** Todos los funcionales P(1), integral t^kP, 0<=k<J, son continuos en B_a², 0<a<pi. El core de§19.8 aproxima cualquier P_c suave de soporte compacto en[1,infinito) por pR_n en esa norma y en el grafo completo(F,G). Si P_c satisface(TAIL-MOM), los J+1 errores tienden a cero. Repararlos con los vectores polinómicos FIJOS
+**Thermal approximation with the J+1 constraints.** All functionals P(1), integral t^kP, 0<=k<J, are continuous on B_a², 0<a<pi. The core of §19.8 approximates any smooth P_c with compact support in [1,infinito) by pR_n in that norm and in the full graph (F,G). If P_c satisfies (TAIL-MOM), the J+1 errors tend to zero. Repair them with the FIXED polynomial vectors
 
     p, (t-1)p, t(t-1)p,...,t^(J-1)(t-1)p.
 
-La fila de borde es(p(1),0,...,0). El bloque restante, sobre los últimos J vectores, es el Hankel
+The boundary row is (p(1),0,...,0). The remaining block, on the last J vectors, is the Hankel
 
     H_kj=integral_1^infinito t^(k+j)w(t)dt,
     0<=k,j<J,
 
-que es definido positivo porque w>0 para t>1 y todos sus momentos son finitos. La matriz total tiene determinante p(1)det H>0. Sus inversas y los vectores de reparación son FIJOS para este J; sus coeficientes correctores tienden a cero. Los aproximantes corregidos satisfacen(TAIL-MOM) exactamente, pertenecen al span finito de E_j,j>=J y convergen en el grafo. Bajo la hipótesis1, continuidad da Q(P_c)>=0 para todo compacto de este subespacio.
+which is positive definite because w>0 for t>1 and all its moments are finite. The total matrix has determinant p(1)det H>0. Its inverses and the repair vectors are FIXED for this J; their correcting coefficients tend to zero. The corrected approximants satisfy (TAIL-MOM) exactly, belong to the finite span of E_j,j>=J and converge in the graph. Under hypothesis 1, continuity gives Q(P_c)>=0 for every compact of this subspace.
 
-**Corte físico ANTES de aplicar el core.** Para pasar de esos compactos a(CPD-m), tomar la lista(TAIL-SIGMA), elegir U>max(1/2,max_(sigma en Sigma_J)|sigma|), y tasas u_i>U. Sea h(r)=sum_i d_i exp(-u_i r), r>=0, con sum_i d_i/(u_i-sigma)=0 para cada sigma de la lista. Elegir eta con max(1/2,max Sigma_J)<eta<min_i u_i. Entonces h pertenece a H_eta de014 y todos los momentos ell_sigma son continuos allí.
+**Physical cutoff BEFORE applying the core.** To pass from those compacts to (CPD-m), take the list (TAIL-SIGMA), choose U>max(1/2,max_(sigma en Sigma_J)|sigma|), and rates u_i>U. Let h(r)=sum_i d_i exp(-u_i r), r>=0, with sum_i d_i/(u_i-sigma)=0 for each sigma of the list. Choose eta with max(1/2,max Sigma_J)<eta<min_i u_i. Then h belongs to H_eta of 014 and all moments ell_sigma are continuous there.
 
-Cortar h suavemente sólo en infinito produce errores de esos momentos tendiendo a cero. Existen J+1 bumps físicos FIJOS con matriz de momentos invertible: tomar psi suave no negativa, soportada dentro de(1,2) y positiva en un intervalo, y los bumps psi(r)exp(sigma_l r). La matriz de momentos es el Gram de las exponenciales exp(sigma_l r) en L²(psi dr), definido positivo por su independencia lineal. Corregir con esos bumps da h_n compactos EXACTAMENTE sujetos a(TAIL-SIGMA), convergentes a h en H_eta. No se exige h_n(0)=0; el posible salto de la extensión causal es permitido en el dominio logarítmico, como en§18.9.
+Cutting h off smoothly only at infinity produces errors in those moments tending to zero. There exist J+1 FIXED physical bumps with invertible moment matrix: take psi smooth nonnegative, supported inside (1,2) and positive on an interval, and the bumps psi(r)exp(sigma_l r). The moment matrix is the Gram of the exponentials exp(sigma_l r) in L²(psi dr), positive definite by their linear independence. Correcting with those bumps gives compact h_n EXACTLY subject to (TAIL-SIGMA), converging to h in H_eta. h_n(0)=0 is not required; the possible jump of the causal extension is allowed in the logarithmic domain, as in §18.9.
 
-Ahora, y sólo ahora, poner F_n(t)=h_n(.5log t) y P_n=T^-1F_n con la inversa terminal de§17.8. Cada P_n es suave hasta1 y cero para t suficientemente grande. La identidad de momentos da(TAIL-MOM), sin imponer P_n'(1)=0. La aproximación térmica reparada anterior firma Q(P_n)=W[h_n]>=0. Continuidad014 y la identidad exacta de CONE001 dan
+Now, and only now, set F_n(t)=h_n(.5log t) and P_n=T^-1F_n with the terminal inverse of §17.8. Each P_n is smooth up to 1 and zero for t sufficiently large. The moment identity gives (TAIL-MOM), without imposing P_n'(1)=0. The preceding repaired thermal approximation signs Q(P_n)=W[h_n]>=0. Continuity 014 and the exact identity of CONE001 give
 
     W[h]=sum_ij d_i conjugado(d_j)K_(M_Phi)(u_i,u_j)>=0
 
-en el subespacio(CPD-m) sobre cualquier intervalo abierto contenido en(U,infinito). M_Phi es impar y real-analítica en toda R, por la paridad y positividad real de Z. El lema extendido aplicado a D=M_Phi entrega PSD completa de K_(M_Phi). Los puentes§§2,18.9/BRIDGE002 dan entonces el objetivo2.
+on the subspace (CPD-m) on any open interval contained in (U,infinito). M_Phi is odd and real-analytic on all of R, by the parity and real positivity of Z. The extended lemma applied to D=M_Phi yields full PSD of K_(M_Phi). The bridges §§2,18.9/BRIDGE002 then give target 2.
 
-Este orden evita aplicar el core B_a² directamente a T^-1 de una mezcla exponencial física no cortada: esa preimagen tiene colas de potencia y NO se ha afirmado que pertenezca a B_a². Las normas de los compactos o sus constantes pueden depender del corte y de J; sólo se requiere convergencia para cada lista fija.
+This order avoids applying the B_a² core directly to T^-1 of an uncut physical exponential mixture: that preimage has power tails and it has NOT been claimed that it belongs to B_a². The norms of the compacts or their constants may depend on the cutoff and on J; only convergence for each fixed list is required.
 
-Recíprocamente, el objetivo2 firma todos los bloques primitivos por§19.8 y por tanto su restricción a cualquier cola fija. Esto completa la equivalencia.
+Conversely, target 2 signs all primitive blocks by §19.8 and therefore their restriction to any fixed tail. This completes the equivalence.
 
-**Alcance.** Es una aplicación de los antecedentes de continuación, reparación finita de momentos y core, no una desigualdad positiva nueva. El signo de todos los bloques de cualquiera de estas colas sigue OPEN. El bloque E_1,E_2 de§19.9 no controla automáticamente ninguna cola ni los cruces con ella; tampoco se prueba que ninguna cola pueda firmarse. No se identifica un mínimo a T fijo, no hay uniformidad en J ni nuevo margen, ventana W/T, cómputo o cambio en papers.
+**Scope.** It is an application of the antecedents of continuation, finite moment repair and core, not a new positive inequality. The sign of all blocks of any of these tails remains OPEN. The block E_1,E_2 of §19.9 does not automatically control any tail nor the crossings with it; nor is it proved that any tail cannot be signed. No minimum at fixed T is identified, there is no uniformity in J nor new margin, W/T window, computation or change to papers.
 
 
-### 19.11. La referencia de primer modo no es PSD en el dominio polinómico primitivo exacto
+### 19.11. The first-mode reference is not PSD on the exact primitive polynomial domain
 
-**PROVED como aplicación de un falsificador previo a este dominio.** Construcción root/joint_sign_fresh_review; auditorías de la versión corta joint_sign_fresh_review/fresh_global/arithmetic_fresh_candidate y root PASS. Consultados las reglas del proyecto y los tres índices; antecedentes [PRIME_PATTERN_FALSIFIER008§4](POWER_PRIME_PATTERN_FALSIFIER_008.md), [AUDIT008](POWER_AUDIT_008.md), [CONFLUENT_BRIDGE014](POWER_CONFLUENT_BRIDGE_014.md),§§18.9,19.8 y el control operativo de§18.5 en [GLOBAL](POWER_GLOBAL_ROUTE_REVIEW.md). La necesidad de conservar la aritmética ya estaba registrada en008. Aquí sólo se transporta ese déficit a la referencia de primer modo y a las restricciones EXACTAS de esta familia polinómica, sin calcular otro grado ni otro vector numérico.
+**PROVED as an application of an earlier falsifier to this domain.** Construction joint_sign_fresh_review; audits of the short version joint_sign_fresh_review/fresh_global/arithmetic_fresh_candidate and second review PASS. Consulted the project rules and the three indices; antecedents [PRIME_PATTERN_FALSIFIER008§4](POWER_PRIME_PATTERN_FALSIFIER_008.md), [AUDIT008](POWER_AUDIT_008.md), [CONFLUENT_BRIDGE014](POWER_CONFLUENT_BRIDGE_014.md), §§18.9,19.8 and the operational control of §18.5 in [GLOBAL](POWER_GLOBAL_ROUTE_REVIEW.md). The need to keep the arithmetic was already recorded in 008. Here that deficit is only transported to the first-mode reference and to the EXACT constraints of this polynomial family, without computing another degree or another numerical vector.
 
-Poner p_0(t)=exp(-pi t), p(t)=sum_(n>=1)n²exp(-pi n²t), t>=1, y definir para polinomios reales R
+Set p_0(t)=exp(-pi t), p(t)=sum_(n>=1)n²exp(-pi n²t), t>=1, and define for real polynomials R
 
     Q_0(R)=integral_1^infinito
        [log t |T(p_0R)|²
           +Re(T Lg(p_0R) conjugado(T(p_0R)))]dt/(2t).
                                                         (FIRST-REF)
 
-No aparece C en esta referencia: se sustituyen p por p_0 y B por Lg. Se afirma que existe un polinomio real R tal que
+C does not appear in this reference: p is replaced by p_0 and B by Lg. It is claimed that there exists a real polynomial R such that
 
     R(1)=0, integral_1^infinito p(t)R(t)dt=0,
     Q_0(R)<0.                                   (FIRST-NEG)
 
-Las dos primeras condiciones hacen que pR, el vector de la familia REAL, sea exactamente primitivo. NO dicen que p_0R tenga ambos momentos Tate nulos.
+The first two conditions make pR, the vector of the REAL family, exactly primitive. They do NOT say that p_0R has both Tate moments zero.
 
-**Identidad física sin peine.** Para un perfil temporal P suave de soporte compacto o con decaimiento exponencial suficiente, denotar por A_P(P) el lado derecho de(FIRST-REF) con p_0R reemplazado por P. La identidad física ya verificada para el grafo completo en GLOBAL, control operativo de§18.5, al retirar C, da exactamente
+**Physical identity without comb.** For a temporal profile P smooth with compact support or with sufficient exponential decay, denote by A_P(P) the right-hand side of (FIRST-REF) with p_0R replaced by P. The physical identity already verified for the full graph in GLOBAL, operational control of §18.5, on removing C, gives exactly
 
     A_P(P)=Arch[f]+2Re(ell_+(f)conjugado(ell_-(f))),
     f(u)=(TP)(exp(2u)), u>=0,
     ell_+(f)=pi P(1), ell_-(f)=pi P(1)-(pi/2)integral P.
 
-El borde causal se conserva. Se utiliza esta identidad solamente sobre compactos suaves y los perfiles exponenciales polinómicos posteriores, donde todas las piezas convergen. A_P es continua en B_a², 0<a<pi, por§18.2 con G=(1/2)T LgP y sin C. Además Q_0(R)=A_P(p_0R).
+The causal boundary is kept. This identity is used only on smooth compacts and the subsequent polynomial exponential profiles, where all pieces converge. A_P is continuous on B_a², 0<a<pi, by §18.2 with G=(1/2)T LgP and without C. Moreover Q_0(R)=A_P(p_0R).
 
-**Un plano físico negativo de dimensión tres.** El bound de008§4 es
+**A three-dimensional negative physical plane.** The bound of 008§4 is
 
     m(tau)<=-4+17tau²,
     Arch[f]<=-4||f||²+17||f'||²
 
-para tests físicos suaves compactos, por Parseval. Fijar un bump real no nulo phi en C_infinito,c((0,1)), c=||phi'||²/||phi||², y elegir L>0 con L²>17c/4. Los tres vectores
+for smooth compact physical tests, by Parseval. Fix a nonzero real bump phi in C_infinito,c((0,1)), c=||phi'||²/||phi||², and choose L>0 with L²>17c/4. The three vectors
 
     f_j(u)=L^(-1/2)phi(u/L-3j), j=1,2,3,
 
-tienen soportes disjuntos dentro de la semirrecta y separados de0. En TODO su span real V, tanto las normas como las normas de las derivadas suman sin cruces; así ||f'||²/||f||²=c/L² para cada f no nulo y Arch[f]<0. No se evalúa un nuevo determinante ni se usa signo del peine completo.
+have disjoint supports inside the half-line and separated from 0. On ALL of their real span V, both the norms and the derivative norms add without crossings; thus ||f'||²/||f||²=c/L² for each nonzero f and Arch[f]<0. No new determinant is evaluated nor is the sign of the full comb used.
 
-**Dos restricciones dejan una dirección negativa.** Para cada f en V, poner F(t)=f(.5log t) y P=T^-1F con la inversa terminal de§17.8. Este mapa es lineal e inyectivo; cada P es suave hasta1 y cero para t suficientemente grande. Definir
+**Two constraints leave a negative direction.** For each f in V, set F(t)=f(.5log t) and P=T^-1F with the terminal inverse of §17.8. This map is linear and injective; each P is smooth up to 1 and zero for t sufficiently large. Define
 
     rho(t)=p(t)/p_0(t)
           =sum_(n>=1)n²exp[-pi(n²-1)t].
 
-La función rho es positiva y acotada en[1,infinito). Intersectar en V los dos núcleos reales
+The function rho is positive and bounded on [1,infinito). Intersect in V the two real kernels
 
     P(1)=0, integral_1^infinito rho(t)P(t)dt=0.
 
-De dimensión tres menos a lo sumo dos restricciones queda algún f no nulo. Para este vector ell_+(f)=0, por lo que el producto polar se anula y A_P(P)=Arch[f]<0. No se necesita ell_-(f)=0 ni se afirma integralP=0. Como F se anula cerca de1, la condición P(1)=0 también hace P cero cerca de1; en particular es un compacto interior admisible para el core.
+From dimension three minus at most two constraints some nonzero f remains. For this vector ell_+(f)=0, so the polar product vanishes and A_P(P)=Arch[f]<0. ell_-(f)=0 is not needed nor is integralP=0 claimed. Since F vanishes near 1, the condition P(1)=0 also makes P zero near 1; in particular it is an admissible interior compact for the core.
 
-**Pasar a un polinomio con las restricciones exactas.** El argumento de core de§19.8 se aplica también a p_0: sus primeras dos derivadas son constantes por exp(-pi t), la continuación en B_a² de p_0exp(zt) tiene el mismo semiplano Re z<pi-a, y la aproximación C² de compactos procede exactamente igual. Así existen polinomios reales R_n con p_0R_n->P en B_a². Los errores de P(1) e integral rho P tienden a cero; el segundo funcional es continuo porque rho está acotada y exp(-at) es integrable.
+**Passing to a polynomial with the exact constraints.** The core argument of §19.8 also applies to p_0: its first two derivatives are constants times exp(-pi t), the continuation in B_a² of p_0exp(zt) has the same half-plane Re z<pi-a, and the C² approximation of compacts proceeds exactly the same. Thus there exist real polynomials R_n with p_0R_n->P in B_a². The errors of P(1) and integral rho P tend to zero; the second functional is continuous because rho is bounded and exp(-at) is integrable.
 
-Repararlos con los dos perfiles FIJOS p_0,tp_0. La matriz de estos funcionales tiene determinante
+Repair them with the two FIXED profiles p_0,tp_0. The matrix of these functionals has determinant
 
     p_0(1)[integral_1^infinito t p(t)dt
                               -integral_1^infinito p(t)dt]
        =exp(-pi)integral_1^infinito (t-1)p(t)dt>0.
 
-Los coeficientes correctores tienden a cero. Por tanto los perfiles corregidos siguen convergiendo a P en B_a² y son p_0 por polinomios reales, que nuevamente llamamos R_n, con R_n(1)=0 e integral p R_n=0 EXACTOS. Continuidad de A_P conserva la negatividad para algún n finito. Esto prueba(FIRST-NEG), sin calcular el grado ni los coeficientes del polinomio resultante.
+The correcting coefficients tend to zero. Therefore the corrected profiles still converge to P in B_a² and are p_0 times real polynomials, again called R_n, with R_n(1)=0 and integral p R_n=0 EXACTLY. Continuity of A_P preserves negativity for some finite n. This proves (FIRST-NEG), without computing the degree or the coefficients of the resulting polynomial.
 
-**Alcance.** Se refuta únicamente PSD universal de la referencia(FIRST-REF) sobre el dominio primitivo EXACTO definido mediante p. Es una aplicación del déficit arquimediano de008 y del core existente, no un nuevo principio de necesidad aritmética. No es un valor negativo del Q completo, de A o del kernel de una densidad theta truncada; tampoco refuta toda comparación perturbativa ni toda compensación entre modos. Los certificados positivos§§19.7,19.9 permanecen intactos y el signo completo global sigue OPEN. Sin grado nuevo evaluado, campaña, cómputo, archivo auxiliar, ventana W/T o cambio en papers.
+**Scope.** Only universal PSD of the reference (FIRST-REF) on the EXACT primitive domain defined via p is refuted. It is an application of the archimedean deficit of 008 and of the existing core, not a new principle of arithmetic necessity. It is not a negative value of the full Q, of A or of the kernel of a truncated theta density; nor does it refute every perturbative comparison or every compensation between modes. The positive certificates §§19.7,19.9 remain intact and the full global sign remains OPEN. No new degree evaluated, campaign, computation, auxiliary file, W/T window or change to papers.
 
-### 19.12. Adjunto causal y potencial local: signo negativo a derecha de log2
+### 19.12. Causal adjoint and local potential: negative sign to the right of log2
 
-**PROVED, con cola completa y prueba elemental.** Construcción joint_sign_fresh_review/root; auditoría independiente arithmetic_fresh_candidate FULLPASS de normalizaciones, desigualdades y todas las colas, root PASS previo al registro. Releídos las reglas del proyecto y los tres índices; cotejados§18.5, GLOBAL (control operativo del cambio causal), [106_31](../phase-106-global-modular-star-audit/106_31_FULL_KERNEL_DOOB_VARIANCE_IDENTITY.md) y [ROUND005D](ROUND_005_D.md). Picone/Doob y el killing logarítmico tienen esos antecedentes. La diferencia examinada es el potencial del adjunto CAUSAL de este J exacto, con la métrica dt/(2t), y su signo en un punto de salto concreto. No se encontró este cálculo literal en el cotejo dirigido; no se afirma lectura exhaustiva ni prioridad mundial. La prueba siguiente NO usa la justificación externa de la identidad radical de106_31.
+**PROVED, with full tail and elementary proof.** Construction joint_sign_fresh_review; independent audit arithmetic_fresh_candidate FULLPASS of normalizations, inequalities and all tails, second review PASS prior to recording. Reread the project rules and the three indices; cross-checked §18.5, GLOBAL (operational control of the causal change), [106_31](../phase-106-global-modular-star-audit/106_31_FULL_KERNEL_DOOB_VARIANCE_IDENTITY.md) and [ROUND005D](ROUND_005_D.md). Picone/Doob and logarithmic killing have those antecedents. The difference examined is the potential of the CAUSAL adjoint of this exact J, with the metric dt/(2t), and its sign at a concrete jump point. This literal computation was not found in the targeted cross-check; neither exhaustive reading nor worldwide priority is claimed. The following proof does NOT use the external justification of the radical identity of 106_31.
 
-**Identidad del adjunto, conservando el extremo1.** Poner
+**Identity of the adjoint, keeping the endpoint 1.** Set
 
     p=P_1, Theta(t)=Tp(t)=Phi(.5log t)>0,
     J=TBT^(-1), r=.5log t, dt/(2t)=dr.
 
-La identidad Bp=0 de§18.5 vale para TODO t>0: las series theta y las sumas con logaritmos convergen absolutamente en cada compacto de t>0. En coordenada r, el operador forward completo L_f=logt+J es traslacionalmente invariante, con la renormalización diagonal ya fijada en GLOBAL. Su núcleo fuera de la diagonal, dirigido hacia r+h, es2k(h), donde
+The identity Bp=0 of §18.5 holds for ALL t>0: the theta series and the sums with logarithms converge absolutely on each compact of t>0. In the coordinate r, the full forward operator L_f=logt+J is translation invariant, with the diagonal renormalization already fixed in GLOBAL. Its off-diagonal kernel, directed towards r+h, is 2k(h), where
 
     k(h)=2cosh(h/2)-exp(-h/2)/(1-exp(-2h))
                        -sum_(n>=2)Lambda(n)/sqrt(n) delta_(log n)(h), h>0.
 
-El término diagonal se conserva mediante la fórmula de Frullani, no se integra por separado un núcleo singular. De JTheta=0 se obtiene L_f Phi(r)=2rPhi(r) sobre TODA R. Reflejar esta identidad usando Phi par da L_b Phi(r)=-2rPhi(r) para el backward con la misma renormalización. Por tanto su promedio H_full satisface H_full Phi=0, deducido sólo de Bp=0, paridad y las identidades físicas de§18.5/GLOBAL.
+The diagonal term is kept via the Frullani formula; a singular kernel is not integrated separately. From JTheta=0 one obtains L_f Phi(r)=2rPhi(r) on ALL of R. Reflecting this identity using even Phi gives L_b Phi(r)=-2rPhi(r) for the backward operator with the same renormalization. Therefore their average H_full satisfies H_full Phi=0, deduced only from Bp=0, parity and the physical identities of §18.5/GLOBAL.
 
-Sea H_+ el promedio simétrico sobre r>=0. Para r>0, quitar la parte s<0 del promedio completo deja exactamente
+Let H_+ be the symmetric average on r>=0. For r>0, removing the part s<0 of the full average leaves exactly
 
     g(r):=H_+Phi(r)=-integral_0^infinito k(r+s)Phi(s)ds.       (POT-G)
 
-No hay singularidad diagonal en este integral cuando r>0. Como H_+=logt+(J+J*)/2 y JTheta=0,
+There is no diagonal singularity in this integral when r>0. Since H_+=logt+(J+J*)/2 and JTheta=0,
 
     (J*Theta)(exp(2r))=2g(r)-4rPhi(r).                       (CAUSAL-ADJ)
 
-Aquí J*Theta se entiende como adjunto débil causal contra tests suaves compactos; no se postula pertenencia a un dominio global del adjunto Hilbertiano. La restricción r>=0 y su borde están incluidos en(POT-G), no se sustituyen por una convolución sin borde.
+Here J*Theta is understood as the weak causal adjoint against smooth compact tests; membership in a global domain of the Hilbertian adjoint is not postulated. The restriction r>=0 and its boundary are included in (POT-G), not replaced by a convolution without boundary.
 
-Para relacionarlo con la propuesta de caminos, definir Q_phys(F):=Q(T^(-1)F), conservando Q(P) como en§19. Escribir F=Theta f y usar la medida FIRMADA fuera de la diagonal
+To relate it to the path proposal, define Q_phys(F):=Q(T^(-1)F), keeping Q(P) as in §19. Write F=Theta f and use the off-diagonal SIGNED measure
 
     dnu(t,v)=dt/(2t) [K(t,v)dv
                   -2sum_(m>=2)Lambda(m)/sqrt(m) delta_(m²t)(dv)],
 
-con K de§18.5 y v>t. JTheta=0 y la identidad
-Re(conj(a)(b-a))=(|b|²-|a|²-|b-a|²)/2 dan, para f suave de soporte compacto, con las diferencias haciendo integrable el borde diagonal,
+with K of §18.5 and v>t. JTheta=0 and the identity
+Re(conj(a)(b-a))=(|b|²-|a|²-|b-a|²)/2 give, for f smooth with compact support, with the differences making the diagonal boundary integrable,
 
     Q_phys(Theta f)=-.5 integral Theta(t)Theta(v)|f(v)-f(t)|² dnu + V(f),
     V(f)=integral_0^infinito Phi(r)g(r)|f(exp(2r))|²dr.      (POT-V)
 
-Equivale a conservar logt Theta²+.5Theta J*Theta en la métrica física. No se supone que la medida física sea estacionaria por tener J un vector nulo a derecha.
+It is equivalent to keeping logt Theta²+.5Theta J*Theta in the physical metric. It is not assumed that the physical measure is stationary because J has a null vector on the right.
 
-**Fórmula explícita y lado derecho del salto.** Para h>0,
+**Explicit formula and right side of the jump.** For h>0,
 
     2cosh(h/2)-exp(-h/2)/(1-exp(-2h))
              =exp(h/2)-sum_(j>=1)exp(-(2j+1/2)h).
 
-Con las constantes positivas
+With the positive constants
 
     A_+=integral_0^infinito exp(s/2)Phi(s)ds=pi p(1),
     A_0=integral_0^infinito Phi(s)ds,
     A_j=integral_0^infinito exp(-(2j+1/2)s)Phi(s)ds, j>=1,
 
-se obtiene, casi en todas partes para r>0,
+one obtains, almost everywhere for r>0,
 
     g(r)=sum_(n>exp r)Lambda(n)/sqrt(n) Phi(log n-r)
                     -exp(r/2)A_+
                     +sum_(j>=1)exp(-(2j+1/2)r)A_j.       (POT-EXPLICIT)
 
-La igualdad A_+=pi p(1) es exactamente la identidad del momento positivo de§18.9. Las supercolas de Phi justifican absolutamente las series; la serie prima converge uniformemente en compactos de r alejados de sus puntos de salto. En r=log2 por la DERECHA, el término n2 ha desaparecido. Definir
+The equality A_+=pi p(1) is exactly the identity of the positive moment of §18.9. The supertails of Phi justify the series absolutely; the prime series converges uniformly on compacts of r away from its jump points. At r=log2 from the RIGHT, the term n2 has disappeared. Define
 
     P_3=sum_(n>=3)Lambda(n)/sqrt(n) Phi(log(n/2)),
     Gamma=sum_(j>=1)2^(-2j-1/2)A_j.
 
-Entonces g(log2+)=P_3-sqrt(2)A_++Gamma. Como A_j<=A_0<=A_+,
+Then g(log2+)=P_3-sqrt(2)A_++Gamma. Since A_j<=A_0<=A_+,
 
     Gamma<=A_+/(3sqrt(2)),
     g(log2+)<=P_3-[5/(3sqrt(2))]A_+.                     (POT-BUDGET)
 
-**Cota polar generosa.** Las desigualdades pi>3, pi<16/5 y exp(16/5)<25 prueban
+**Generous polar bound.** The inequalities pi>3, pi<16/5 and exp(16/5)<25 prove
 
     A_+>=pi exp(-pi)>3/25.
 
-Se dan abajo gates de Taylor para las exponenciales. Como sqrt(2)<3/2, la pérdida neta de(POT-BUDGET) es estrictamente mayor que2/15.
+Taylor gates for the exponentials are given below. Since sqrt(2)<3/2, the net loss of (POT-BUDGET) is strictly greater than 2/15.
 
-**Cola prima/theta COMPLETA.** Para n>=3 la serie positiva exacta es
+**FULL prime/theta tail.** For n>=3 the exact positive series is
 
     Phi(log(n/2))=pi sum_(m>=1)m²(n/2)^(5/2)
               [(pi/2)m²n²-3]exp(-pi m²n²/4).
 
-Multiplicar por Lambda(n)/sqrt(n) y extraer la parte principal deja
+Multiplying by Lambda(n)/sqrt(n) and extracting the leading part leaves
 
     [pi²/(8sqrt(2))] Lambda(n)m^4 n^4
        [1-6/(pi m²n²)]exp(-pi m²n²/4).
 
-Usar pi²<10, sqrt(2)>7/5, Lambda(n)<=log n y log3<9/8. En el ÚNICO par aislado (n,m)=(3,1), conservar el factor entre corchetes, menor que4/5 porque pi<10/3. Como pi>25/8 implica9pi/4>7 y exp7>1000,
+Use pi²<10, sqrt(2)>7/5, Lambda(n)<=log n and log3<9/8. In the ONLY isolated pair (n,m)=(3,1), keep the bracketed factor, less than 4/5 because pi<10/3. Since pi>25/8 implies 9pi/4>7 and exp7>1000,
 
     contribucion_(3,1)
       <(25/28)·81·(9/8)·(4/5)/1000=3645/56000.          (POT-FIRST)
 
-Para TODOS los demás pares poner q=mn>=4 y omitir sólo el término negativo -3 en un upper. La identidad de emparejar divisores y las cotas tau(q)<=q, log q<=q/2 para q>=4 dan
+For ALL other pairs set q=mn>=4 and omit only the negative term -3 in an upper bound. The divisor-pairing identity and the bounds tau(q)<=q, log q<=q/2 for q>=4 give
 
     sum_(n|q,n>=3)log n
          <=sum_(n|q)log n=tau(q)log q/2<=q²/4.
 
-El prefactor pi²/(8sqrt(2))<25/28<1 y pi/4>25/32 prueban para el resto completo
+The prefactor pi²/(8sqrt(2))<25/28<1 and pi/4>25/32 prove for the full remainder
 
     resto<sum_(q>=4)(q^6/4)exp(-25q²/32).
 
-El cociente entre términos consecutivos es a lo sumo
+The ratio between consecutive terms is at most
 
     (5/4)^6 exp(-225/32)<4/1000=1/250.
 
-Con exp(25/2)>250000, sumar esta cola geométrica produce
+With exp(25/2)>250000, summing this geometric tail yields
 
     resto<1024/249000,
     P_3<3645/56000+1024/249000<7/100.                    (POT-TAIL)
 
-La agrupación incluye todo modo m y todo entero primo-potencia n>=3; no es un truncamiento sin resto ni un cambio de los pesos Lambda.
+The grouping includes every mode m and every prime-power integer n>=3; it is not a truncation without remainder nor a change of the weights Lambda.
 
-**Gates elementales suficientes.** Para hacer explícitos los presupuestos exponenciales anteriores, poner S8=sum_(k=0)^8 3^k/k!. Las comparaciones racionales
+**Sufficient elementary gates.** To make the preceding exponential budgets explicit, set S8=sum_(k=0)^8 3^k/k!. The rational comparisons
 
     S8>20,
     S8+(3^9/9!)/(1-3/10)<81/4
 
-dan20<exp3<81/4; el upper usa el cociente de términos de la cola desde orden9, a lo sumo3/10. Además
+give 20<exp3<81/4; the upper bound uses the ratio of terms of the tail from order 9, at most 3/10. Moreover
 
     exp(1/5)<6/5+3/140<49/40,
     exp(16/5)<(81/4)(49/40)=3969/160<25,
     exp7=(exp3)² exp1>20²·(8/3)>1000,
     exp(25/2)=(exp3)^4 exp(1/2)>20^4·(13/8)>250000.
 
-El upper exp(1/5) suma desde grado2 con cociente a lo sumo1/15; exp1>8/3 y exp(1/2)>13/8 siguen de sus series positivas. La desigualdad log3<9/8 sigue de sum_(k=0)^4(9/8)^k/k!>3: se usan CINCO términos, grado4. Las cotas de pi anteriores son las racionales elementales usuales; por ejemplo pi>25/8 sigue de pi=4[arctan(1/2)+arctan(1/3)] y
+The upper bound on exp(1/5) sums from degree 2 with ratio at most 1/15; exp1>8/3 and exp(1/2)>13/8 follow from their positive series. The inequality log3<9/8 follows from sum_(k=0)^4(9/8)^k/k!>3: FIVE terms are used, degree 4. The preceding bounds on pi are the usual elementary rational ones; for example pi>25/8 follows from pi=4[arctan(1/2)+arctan(1/3)] and
 
     4[(1/2-1/24+1/160-1/896)+(1/3-1/81)]>25/8,
 
-mediante las sumas alternantes inferiores de arctan. Todos los gates y la comparación racional final(POT-TAIL) fueron comprobados en la auditoría independiente, sin cuadratura ni campaña.
+via the lower alternating sums of arctan. All the gates and the final rational comparison (POT-TAIL) were checked in the independent audit, without quadrature or campaign.
 
-**Signo y alcance.** Combinar(POT-BUDGET) y(POT-TAIL) da estrictamente
+**Sign and scope.** Combining (POT-BUDGET) and (POT-TAIL) gives strictly
 
     g(log2+)<7/100-2/15=-19/300<-1/20.                  (POT-NEG)
 
-La convergencia uniforme local a derecha de log2, antes del siguiente salto log3, conserva g<0 en algún intervalo abierto I. Puesto que Phi>0, elegir f suave no nula con soporte físico en I hace V(f)<0 en(POT-V). El mismo signo negativo se conserva con primitividad EXACTA: tomar tres bumps reales chi_i suaves, no nulos y de soportes disjuntos dentro de I. En su espacio de dimensión3 los dos funcionales
+Local uniform convergence to the right of log2, before the next jump log3, keeps g<0 on some open interval I. Since Phi>0, choosing a nonzero smooth f with physical support in I makes V(f)<0 in (POT-V). The same negative sign is kept with EXACT primitivity: take three smooth, nonzero real bumps chi_i with disjoint supports inside I. On their 3-dimensional space the two functionals
 
     b -> integral_I exp(r/2)Phi(r)sum_i b_i chi_i(r)dr,
     b -> integral_I exp(-r/2)Phi(r)sum_i b_i chi_i(r)dr
 
-tienen un núcleo común de dimensión al menos1. Elegir b no cero en él y poner f(exp(2r))=sum_i b_i chi_i(r). El físico F(exp(2r))=Phi(r)sum_i b_i chi_i(r) tiene ambos momentos Tate nulos. Los soportes disjuntos aseguran F no nulo, y Phi g<0 en I da V(f)<0 estrictamente. Su preimagen P=T^(-1)F es suave compacta y satisface P(1)=integralP=0 por§18.9; no se impone P'(1)=0. No se calcula un radio, un grado ni otro test de signo. Por contraste, el borde r hacia0 tiene g(r)=[Phi(0)/2]log(1/r)+O(1): el killing logarítmico favorable conocido en ROUND005D§1 no controla este intervalo interior.
+have a common kernel of dimension at least 1. Choose nonzero b in it and set f(exp(2r))=sum_i b_i chi_i(r). The physical F(exp(2r))=Phi(r)sum_i b_i chi_i(r) has both Tate moments zero. The disjoint supports ensure F nonzero, and Phi g<0 on I gives V(f)<0 strictly. Its preimage P=T^(-1)F is smooth compact and satisfies P(1)=integralP=0 by §18.9; P'(1)=0 is not imposed. No radius, degree or other sign test is computed. By contrast, the boundary r towards 0 has g(r)=[Phi(0)/2]log(1/r)+O(1): the known favourable logarithmic killing of ROUND005D§1 does not control this interior interval.
 
-Queda refutada SÓLO la exigencia V(f)>=0 para todos los bumps locales en esta descomposición exacta, INCLUSO restringiendo F a primitividad exacta mediante la combinación de tres bumps. El término de diferencias de(POT-V) conserva signo mixto y puede compensar V<0: NO se demuestra Q negativo, A negativo, negatividad de la forma primitiva completa del Paper47 ni un NO-GO general de caminos, tres puntos o tratamientos conjuntos. Global sigue OPEN; certificados§§19.7,19.9 intactos. Sin archivos nuevos, campaña, nueva ventana W/T ni cambios en papers.
+ONLY the requirement V(f)>=0 for all local bumps in this exact decomposition is refuted, EVEN restricting F to exact primitivity via the combination of three bumps. The difference term of (POT-V) keeps mixed sign and can compensate V<0: it is NOT proved that Q is negative, A negative, the full primitive form of Paper47 negative, nor a general NO-GO for paths, three points or joint treatments. Global remains OPEN; certificates §§19.7,19.9 intact. No new files, campaign, new W/T window or changes to papers.

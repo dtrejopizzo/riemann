@@ -1,39 +1,39 @@
-# Estado042 — Cancelación global y cola residual en escala absoluta
+# State042 — Global cancellation and residual tail at absolute scale
 
-Estado: PROVED y auditado. Sustituye STATE041 como resumen de trabajo. Goal activo, signo global OPEN, papers intactos.
+Status: PROVED and audited. Replaces STATE041 as working summary. Goal active, global sign OPEN, papers untouched.
 
-## Resultado relevante para la precisión de la forma completa
+## Result relevant to the precision of the full form
 
-POWER_RENORMALIZED_TAIL_042 utiliza la masa exacta sum_(n>=1)J_N(n)=1, h_N=−J_N′ y la expansión periódica041 para cancelar GLOBALMENTE el término afín de B. Con kappa=(log(2pi)−1)/2 se obtiene exactamente:
+POWER_RENORMALIZED_TAIL_042 uses the exact mass sum_(n>=1)J_N(n)=1, h_N=−J_N′ and the periodic expansion041 to cancel GLOBALLY the affine term of B. With kappa=(log(2pi)−1)/2 one obtains exactly:
 
     F_N/2=−gamma+(kappa−gamma/2)J_N(1)+R_N,
     R_N=−int_1^infinito h_N B1({x})(logx+gamma)dx
                                       +int_1^infinito h_N E(x)dx.
 
-Se conservan el término J_N(1), las constantes, los saltos y los bordes. La identidad sola no determina signo.
+The term J_N(1), the constants, the jumps and the boundaries are kept. The identity alone does not determine a sign.
 
-Para TODOS N>=2^80, si T=(N−1)/992+5 y X=exp(T), se prueba:
+For ALL N>=2^80, if T=(N−1)/992+5 and X=exp(T), one proves:
 
-    |R_N^cola| <=N(T+2)exp(−3T/2)<exp(−N/1000).
+    |R_N^tail| <=N(T+2)exp(−3T/2)<exp(−N/1000).
 
-Ésta es una cota ABSOLUTA, no relativa a la energía exponencial C_N de041. En consecuencia:
+This is an ABSOLUTE bound, not relative to the exponential energy C_N of041. Consequently:
 
-    W[g_N]/norma²=ARCH_sharp+2gamma−(2kappa−gamma)J_N(1)
+    W[g_N]/norm²=ARCH_sharp+2gamma−(2kappa−gamma)J_N(1)
                            −2R_N^interior+epsilon_N,
     |epsilon_N|<2exp(−N/1000),
 
-con el interior real de1 aX. No se ha probado el signo de la expresión interior ni un margen que domine epsilon_N.
+with the real interior from1 toX. The sign of the interior expression and a margin dominating epsilon_N have not been proved.
 
-## Mecanismo y diferencia de alcance
+## Mechanism and difference in scope
 
-Euler por celdas y MASS022 eliminan el afín sin intercambiar una integral con una serie crítica divergente. Después de esa cancelación, el corte040 implica q(T)>1/2+2000/N; la dilatación real permite controlar TODOS los divisores y las derivadas: |h(x)|<=Nx^(-3/2), |h′(x)|<=2Nx^(-5/2) en la cola.
+Euler by cells and MASS022 eliminate the affine term without interchanging an integral with a divergent critical series. After that cancellation, the cutoff040 implies q(T)>1/2+2000/N; the real dilation allows controlling ALL divisors and the derivatives: |h(x)|<=Nx^(-3/2), |h′(x)|<=2Nx^(-5/2) on the tail.
 
-La primitiva periódica continua de norma1/16 conserva explícitamente el borde inferior X. Junto con |E|<=1/x, produce el decaimiento absoluto declarado. No se presupone monotonía de h ni signo favorable del error periódico.
+The continuous periodic primitive of norm1/16 keeps the lower boundary X explicitly. Together with |E|<=1/x, it produces the declared absolute decay. Neither monotonicity of h nor a favourable sign of the periodic error is presupposed.
 
-Frente041, se resuelve la escala de precisión de la cola tras cancelar globalmente el principal. No se suma el beneficio energético de otra representación ni se llama favorable al complemento entero: el interior renormalizado continúa pendiente.
+Relative to041, the precision scale of the tail after globally cancelling the principal term is resolved. The energy benefit of another representation is not added nor is the whole complement called favourable: the renormalised interior remains pending.
 
-## Auditoría y estado global
+## Audit and global state
 
-POWER_RENORMALIZED_AUDIT_042 aprueba toda la prueba. Root revisó normalizaciones, bordes, constantes y el paso a escala absoluta; root y auditor reprodujeron el verificador exacto: PASS. No se evaluaron nuevos casos W ni campañas de primos.
+POWER_RENORMALIZED_AUDIT_042 approves the whole proof. Normalisations, boundaries, constants and the passage to absolute scale were reviewed; the exact verifier was reproduced twice: PASS. No new W cases nor prime campaigns were evaluated.
 
-No hay nueva cobertura positiva W, combinación arbitraria ni ventana T del Paper47. Se conservan filas1..17, todos k>=0 a u31.5, y las regiones previas. El objetivo global requiere decidir el balance interior y después cubrir la tabla/portador suficiente; permanece OPEN.
+No new positive W coverage, arbitrary combination nor window T of Paper47. Rows1..17, all k>=0 at u31.5, and the earlier regions are kept. The global objective requires deciding the interior balance and then covering the sufficient table/carrier; it remains OPEN.

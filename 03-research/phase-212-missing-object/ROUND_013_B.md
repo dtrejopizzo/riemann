@@ -1,116 +1,116 @@
-# Ronda 13, memo B: el peso como caso de igualdad de una positividad (Gram, Schur, cuadrado completado)
+# Round 13, memo B: the weight as the equality case of a positivity (Gram, Schur, completed square)
 
-## 0. Propuesta examinada
+## 0. Proposal examined
 
-Las rondas 6–12 dejan una observación, sin rango de teorema. Los objetos con signo manifiesto no ven el peso:
-el cuadrado de Sonin, el canal de cocientes `∫ĝ|A|²`, los cuadrados de fuga, las discrepancias reticulares y la
-incertidumbre logarítmica. Los objetos que ven el peso no tienen signo: el canal de productos `∫ĝ Re A²`, el
-conmutador de borde, la cola de hipérbola y la parte prima de Sonin. La única pieza que ve el peso exacto es
-(PC) de R161_001 Teor. 3.1:
+Rounds 6–12 leave an observation, without the rank of a theorem. The objects with a manifest sign do not see the weight:
+the Sonin square, the ratio channel `∫ĝ|A|²`, the leakage squares, the lattice discrepancies and the
+logarithmic uncertainty. The objects that see the weight have no sign: the product channel `∫ĝ Re A²`, the
+boundary commutator, the hyperbola tail and the prime part of Sonin. The only piece that sees the exact weight is
+(PC) of R161_001 Thm. 3.1:
 
   `S_N A_M 𝓕 = {X,E_N} − L_M^*E_N − J H_{M,N} − H_{M,N}𝓕`,
 
-y lo ve como una igualdad que se rompe (defecto interior `δ_a(k) = Σ_{d|k}a(d) − log k`).
+and it sees it as an equality that breaks (interior defect `δ_a(k) = Σ_{d|k}a(d) − log k`).
 
-La propuesta es combinar un objeto firmado y ciego con uno no firmado que vea el peso, de modo que el peso
-entre como el **caso de igualdad** de una positividad. Formatos examinados:
+The proposal is to combine a signed blind object with an unsigned one that sees the weight, so that the weight
+enters as the **equality case** of a positivity. Formats examined:
 
-- (a) Gram, Cauchy–Schwarz o complemento de Schur `[[Q1,B],[B*,Q2]] ⪰ 0`, con `Q1`, `Q2` ciegos y `B` portador
-  del peso.
-- (b) Cuadrado completado `‖u − Lv‖²`, con `L` el operador de von Mangoldt.
-- (c) Interpolación en `c`, lema S y dualidad.
+- (a) Gram, Cauchy–Schwarz or Schur complement `[[Q1,B],[B*,Q2]] ⪰ 0`, with `Q1`, `Q2` blind and `B` carrying
+  the weight.
+- (b) Completed square `‖u − Lv‖²`, with `L` the von Mangoldt operator.
+- (c) Interpolation in `c`, Lemma S and duality.
 
-## 1. Cotejo hostil en primaria (antes de derivar)
+## 1. Strict primary-source cross-check (before deriving)
 
-| Formato | Antecedente más cercano (leído) | Resultado del cotejo |
+| Format | Closest antecedent (read) | Result of the cross-check |
 |---|---|---|
-| (a) Schur con bloque cruzado aritmético | **R170_861** §§0–1 (factorización (0.3)): si `A − D*G⁻¹D = H` con `G > 0`, la extensión es una congruencia triangular de `H ⊕ G`, y su positividad es la de `H`. La aplicación explícita es a `D ∈ {E, H_{M,N}, S(q)A(r), 𝒞_PC}`. Ver también `ANNEX_170_FILES_3.md` T1/T4 y `RULES_AVOID` I5. | Repetición literal: «colocar `H_{M,N}` en el bloque cruzado no crea energía». |
-| (a) Cauchy–Schwarz con `Λ∗1 = log` | R170_841 §4.2 (`RULES_AVOID` I2): con la probabilidad `Λ(d)/log k` se obtiene `|β_Λ|² ≤ (log k)Σ_Λ`. | La cota es par y `β_Λ` es impar (`β(12) < 0`). Repetición. |
-| (a) Versión invertida, determinante lorentziano | Fase 135 (transferencia de Hodge, condicional en `h⁰`); R160_C7_R1 §§5–6 (`RULES_AVOID` M1, N1). | La clase lorentziana se reduce al enunciado original (Prop. 6.2). |
-| (a) Determinantes 2×2 de tipo Turán o Pfaffiano | POWER_RECIPROCAL_PFAFFIANS_083, POWER_FOUR_TURAN_084 (memoria de selecciones rechazadas, las reglas del proyecto). | El producto pfaffiano es negativo. Repetición. |
-| (a) Gram de capas | POWER_GRAM_SLICES_OBSTRUCTION, ANNEX_211_GRAM_HYPERBOLIC (`RULES_AVOID` D16). | Gram de capas Λ-libres. Repetición. |
-| (b) Cuadrado completado | R170_854 §6.3 (toda completación por cuadrados del corriente graduado es indefinida o da el canal de cocientes); R170_860–861 (congruencia); `RULES_AVOID` I5 (`Σ(Λ(n)/√n)‖F − U_nF‖²` deja una constante divergente); I2 (`γ = Λ log − Λ∗Λ` choca con Selberg, 850–851); Q3 / R161_034. | Repetición. |
-| Término lineal de (a) y (b) | (OR) de R161_002 §2: `Re⟨R F, S_N𝓕F⟩ = ⟨A_M G, S_N^*S_N G⟩`. Su positividad sobre todo `L²` es el problema mismo. | L161.3 orientado sigue OPEN (`RULES_AVOID` U2). No lo cierra este formato (§2). |
-| (c) | Interpolación `a_c` afín en el peso: ciega (`RULES_AVOID` B8, W-lin). Dualidad `Θ_T = max_c λ_A`: B10. Lema S: reformula el signo como existencia de un multiplicador (B3). Douglas: EQUIV (R161_002 §4). | Repetición. |
+| (a) Schur with arithmetic cross block | **R170_861** §§0–1 (factorization (0.3)): if `A − D*G⁻¹D = H` with `G > 0`, the extension is a triangular congruence of `H ⊕ G`, and its positivity is that of `H`. The explicit application is to `D ∈ {E, H_{M,N}, S(q)A(r), 𝒞_PC}`. See also `ANNEX_170_FILES_3.md` T1/T4 and `RULES_AVOID` I5. | Literal repetition: «placing `H_{M,N}` in the cross block creates no energy». |
+| (a) Cauchy–Schwarz with `Λ∗1 = log` | R170_841 §4.2 (`RULES_AVOID` I2): with the probability `Λ(d)/log k` one gets `|β_Λ|² ≤ (log k)Σ_Λ`. | The bound is even and `β_Λ` is odd (`β(12) < 0`). Repetition. |
+| (a) Inverted version, Lorentzian determinant | Phase 135 (Hodge transfer, conditional on `h⁰`); R160_C7_R1 §§5–6 (`RULES_AVOID` M1, N1). | The Lorentzian class reduces to the original statement (Prop. 6.2). |
+| (a) 2×2 Turán-type or Pfaffian determinants | POWER_RECIPROCAL_PFAFFIANS_083, POWER_FOUR_TURAN_084 (memory of rejected selections, the project rules). | The Pfaffian product is negative. Repetition. |
+| (a) Gram of layers | POWER_GRAM_SLICES_OBSTRUCTION, ANNEX_211_GRAM_HYPERBOLIC (`RULES_AVOID` D16). | Gram of Λ-free layers. Repetition. |
+| (b) Completed square | R170_854 §6.3 (every completion by squares of the graded current is indefinite or gives the ratio channel); R170_860–861 (congruence); `RULES_AVOID` I5 (`Σ(Λ(n)/√n)‖F − U_nF‖²` leaves a divergent constant); I2 (`γ = Λ log − Λ∗Λ` collides with Selberg, 850–851); Q3 / R161_034. | Repetition. |
+| Linear term of (a) and (b) | (OR) of R161_002 §2: `Re⟨R F, S_N𝓕F⟩ = ⟨A_M G, S_N^*S_N G⟩`. Its positivity on all of `L²` is the problem itself. | Oriented L161.3 remains OPEN (`RULES_AVOID` U2). This format does not close it (§2). |
+| (c) | Interpolation `a_c` affine in the weight: blind (`RULES_AVOID` B8, W-lin). Duality `Θ_T = max_c λ_A`: B10. Lemma S: reformulates the sign as existence of a multiplier (B3). Douglas: EQUIV (R161_002 §4). | Repetition. |
 
-Los cotejos ya dan repetición en los tres formatos. Para que la detención sea precisa, y no sólo textual, el §2
-prueba la razón común en el formato (a) más general.
+The cross-checks already give repetition in all three formats. So that the stop is precise, and not merely textual, §2
+proves the common reason in the most general format (a).
 
-## 2. Por qué el «caso de igualdad» no transporta signo
+## 2. Why the «equality case» does not transport a sign
 
-**Lema 1 (dicotomía del bloque; PROVED).** Sea `𝕳 = [[Q1, B],[B*, Q2]]` sobre `P_T ⊕ 𝒦`, con `Q2 ≥ g_0 > 0`, y
-supongamos `Q1 − B Q2⁻¹ B* = a_T`.
+**Lemma 1 (block dichotomy; PROVED).** Let `𝕳 = [[Q1, B],[B*, Q2]]` on `P_T ⊕ 𝒦`, with `Q2 ≥ g_0 > 0`, and
+suppose `Q1 − B Q2⁻¹ B* = a_T`.
 
-- (i) Si la positividad de `𝕳` se prueba escribiendo `𝕳 = V*V` con `V = [u, v]` construido a partir de `F`,
-  entonces `a_T(F) = ‖(1 − Π_v)u(F)‖²`, donde `Π_v` es la proyección sobre el rango de `v`.
-- (ii) Si `𝕳 ⪰ 0` no se prueba así, entonces `𝕳 ⪰ 0` equivale a `a_T ⪰ 0` (R170_861 (0.3)).
+- (i) If the positivity of `𝕳` is proved by writing `𝕳 = V*V` with `V = [u, v]` built from `F`,
+  then `a_T(F) = ‖(1 − Π_v)u(F)‖²`, where `Π_v` is the projection onto the range of `v`.
+- (ii) If `𝕳 ⪰ 0` is not proved in this way, then `𝕳 ⪰ 0` is equivalent to `a_T ⪰ 0` (R170_861 (0.3)).
 
-*Prueba.* (ii) es (0.3). Para (i), el complemento de Schur de un Gram es el cuadrado del residuo de la
-proyección ortogonal: `‖u‖² − ⟨u, v(v*v)⁻¹v*u⟩ = ‖(1 − Π_v)u‖²`. ∎
+*Proof.* (ii) is (0.3). For (i), the Schur complement of a Gram is the square of the residue of the
+orthogonal projection: `‖u‖² − ⟨u, v(v*v)⁻¹v*u⟩ = ‖(1 − Π_v)u‖²`. ∎
 
-En el caso (i), el formato es una factorización `a_T = ‖w‖²` con `w = (1 − Π_v)u`. Es la factorización de
-Douglas (EQUIV) salvo que `w` tenga fórmula propia, y su signo es el de un único cuadrado, válido para todo peso.
+In case (i), the format is a factorization `a_T = ‖w‖²` with `w = (1 − Π_v)u`. It is the Douglas
+factorization (EQUIV) unless `w` has its own formula, and its sign is that of a single square, valid for every weight.
 
-**Lema 2 (homogeneidad; PROVED).** Escribamos `u = u_0 + u_Λ`, con `u_0` libre de `Λ` y `u_Λ` lineal en el peso, y
-supongamos `v` libre de `Λ`. Bajo `Λ ↦ cΛ`, el lado firmado vale `A_0 + 2cX + c²Y`, con
-`Y = ‖(1 − Π_v)u_Λ‖²`. En cambio, `a_T(cΛ) = Arch − cP` es afín en `c`.
+**Lemma 2 (homogeneity; PROVED).** Write `u = u_0 + u_Λ`, with `u_0` free of `Λ` and `u_Λ` linear in the weight, and
+suppose `v` free of `Λ`. Under `Λ ↦ cΛ`, the signed side equals `A_0 + 2cX + c²Y`, with
+`Y = ‖(1 − Π_v)u_Λ‖²`. On the other hand, `a_T(cΛ) = Arch − cP` is affine in `c`.
 
-- La identidad para todo `c` exige `Y = 0`. Entonces `X = 0` y el peso desaparece.
-- La identidad en `c = 1` sola exige `Y = Arch − P − A_0 − 2X`. El término cuadrático en el peso tiene que
-  coincidir con una expresión lineal.
+- The identity for all `c` requires `Y = 0`. Then `X = 0` and the weight disappears.
+- The identity at `c = 1` alone requires `Y = Arch − P − A_0 − 2X`. The quadratic term in the weight has to
+  coincide with a linear expression.
 
-*Prueba.* Desarrollar el cuadrado. `Y = 0` implica `(1 − Π_v)u_Λ = 0`, y entonces el término cruzado se anula. ∎
+*Proof.* Expand the square. `Y = 0` implies `(1 − Π_v)u_Λ = 0`, and then the cross term vanishes. ∎
 
-Así, (a) con `B` afín se reduce a (b). Con `B` lineal es par en `Λ`: es el análogo del Teor. 1.1 de R161_002, y
-la inversión global `Λ ↦ −Λ` deja el lado firmado igual.
+Thus (a) with affine `B` reduces to (b). With linear `B` it is even in `Λ`: it is the analogue of Thm. 1.1 of R161_002, and
+the global inversion `Λ ↦ −Λ` leaves the signed side unchanged.
 
-**Lema 3 (el término cuadrático es el canal de cocientes; PROVED).** Para `L_M = Σ_{d≤M} Λ(d) d^{−1/2} τ_{log d}`:
+**Lemma 3 (the quadratic term is the ratio channel; PROVED).** For `L_M = Σ_{d≤M} Λ(d) d^{−1/2} τ_{log d}`:
 
-- el coeficiente de `τ_{log(a/b)}` en `L_M^*L_M`, con `gcd(a,b) = 1` y `a, b > 1`, es `Λ(a)Λ(b)/√(ab)` (con
+- the coefficient of `τ_{log(a/b)}` in `L_M^*L_M`, with `gcd(a,b) = 1` and `a, b > 1`, is `Λ(a)Λ(b)/√(ab)` (with
   `a, b ≤ M`);
-- el coeficiente en `r = 1` es `Σ_{n≤M} Λ(n)²/n`, que diverge como `½ log² M`.
+- the coefficient at `r = 1` is `Σ_{n≤M} Λ(n)²/n`, which diverges like `½ log² M`.
 
-*Prueba.* Hay que tener `ak` y `bk` potencias de primos con `a`, `b` coprimos. Si `k > 1`, entonces `k = p^i` y
-`a`, `b` serían potencias de `p`, contra la coprimalidad. Luego `k = 1`. ∎
+*Proof.* One needs `ak` and `bk` to be prime powers with `a`, `b` coprime. If `k > 1`, then `k = p^i` and
+`a`, `b` would be powers of `p`, against coprimality. Hence `k = 1`. ∎
 
-Por lo tanto, el término `L*L` de (b) no contiene ninguna suma de divisores `Σ_{d|k}Λ(d)`. La relación
-`Λ∗1 = log` gobierna los productos `L S_N`, es decir el soporte de `H_{M,N}`, y no los cocientes. La premisa de
-(b), «identificar `L*L` aplicando `Λ∗1 = log` dos veces», es falsa. Lo que aparece es el canal de cocientes de Q3
-con la constante divergente de I5.
+Therefore the term `L*L` of (b) contains no divisor sum `Σ_{d|k}Λ(d)`. The relation
+`Λ∗1 = log` governs the products `L S_N`, i.e. the support of `H_{M,N}`, and not the ratios. The premise of
+(b), «identify `L*L` by applying `Λ∗1 = log` twice», is false. What appears is the ratio channel of Q3
+with the divergent constant of I5.
 
-**Controles (regla R3-i).**
+**Checks (rule R3-i).**
 
-- **Con `c = 2`.** `‖(1 − Π_v)u‖² ≥ 0` sigue valiendo, porque es un cuadrado de vectores para todo peso. Si la
-  batería E (CITED) da una dirección negativa de `a_T(2Λ)`, lo que falla es la igualdad.
-- **Con el borrado de una potencia de primo.** Mismo caso: el cuadrado es indiferente.
-- **Con Beurling.** `L*L` y el cuadrado siguen definidos; sólo falta `E_N`, que no entra en el lado firmado.
+- **With `c = 2`.** `‖(1 − Π_v)u‖² ≥ 0` still holds, because it is a square of vectors for every weight. If
+  battery E (CITED) gives a negative direction of `a_T(2Λ)`, what fails is the equality.
+- **With deletion of a prime power.** Same case: the square is indifferent.
+- **With Beurling.** `L*L` and the square remain defined; only `E_N` is missing, and it does not enter the signed side.
 
-Ningún paso firmado nombrado deja de ser `≥ 0` bajo estos controles: el lado firmado es ciego por construcción.
-**Corrección de alcance:** esto no excluye una prueba para Λ. Puede fallar únicamente la identificación
-con a_T en el control. Un Gram con fórmula propia e identificación exacta demostrada sin suponer el
-signo objetivo sería un certificado válido. Sólo se transfiere positividad al falsificador cuando
-sobrevive toda la cadena de igualdad y desigualdad, incluidos los términos adicionales.
-En la rama (ii), el único paso firmado es la propia `a_T ⪰ 0`. Para invertir el bloque hace falta `Q2⁻¹`. Si
-`Q2` contiene la forma, es J3; si `Q2` es Λ-libre, se cae en (i) o en la congruencia de R170_861.
+No named signed step ceases to be `≥ 0` under these checks: the signed side is blind by construction.
+**Scope correction:** this does not exclude a proof for Λ. Only the identification
+with a_T may fail in the check. A Gram with its own formula and an exact identification proved without assuming the
+target sign would be a valid certificate. Positivity transfers to the falsifier only when
+the whole chain of equality and inequality survives, including the additional terms.
+In branch (ii), the only signed step is `a_T ⪰ 0` itself. To invert the block one needs `Q2⁻¹`. If
+`Q2` contains the form, it is J3; if `Q2` is Λ-free, one falls into (i) or into the congruence of R170_861.
 
-**Pruebas de R161_002 §6.** Formalmente no se aplican, porque ninguna variante pasa la puerta. En el formato (b):
+**Tests of R161_002 §6.** Formally they do not apply, because no variant passes the gate. In format (b):
 
-- La prueba de inversión de `Λ(2)` cambia `Y` en los cocientes `2/q`, de orden cuadrático. No cambia el
-  defecto interior `−2 log 2` en `k = 2`, que vive en los productos.
-- La prueba de dos puntos exige el coeficiente lineal `2 log 2/√2`, que sólo aporta `X`, el apareamiento (OR).
+- The inversion test of `Λ(2)` changes `Y` in the ratios `2/q`, of quadratic order. It does not change the
+  interior defect `−2 log 2` at `k = 2`, which lives in the products.
+- The two-point test requires the linear coefficient `2 log 2/√2`, which only contributes `X`, the pairing (OR).
 
-## 3. Veredicto
+## 3. Verdict
 
-- **Formatos concretos examinados: repetición, sin candidata nueva.** Se retira la exclusión general de
-  toda identidad Gram, de Schur o de cuadrado completado con lado positivo definido para todo peso.
-  Los Lemas 1(i)–(ii) no excluyen una construcción independiente ni una identidad específica de Λ.
-  En el operador L_M concreto del Lema 3, el término cuadrático en `Λ` es
-  el canal de cocientes, donde `Λ∗1 = log` no actúa (Lema 3). Patrones B3, B9 y J3.
-- **Etiquetas.** Lemas 1–3: PROVED. Antecedentes R170_841, R170_854, R170_861, R160_C7_R1, R161_002 y los memos
-  083/084: CITED. Ruptura bajo `c = 2` sólo en la igualdad: PROVED, condicionado a la batería E (CITED). Signo
-  global de `a_T`: OPEN.
-- **Operación que reabriría la clase.** Un `𝕳 ⪰ 0`, Gram o no presentado como Gram, de fórmula propia y con
-  positividad demostrada independientemente, junto con la identidad completa de su Schur con a_Λ.
-  Bajo `c = 2` puede fallar esa identidad; no se exige que falle la positividad del bloque. El único
-  candidato de fuente conocido es la clase infinitamente divisible o de Pick (`RULES_AVOID` M4, ARGUED), y falta
-  un `𝕳` explícito. No lo propongo.
+- **Concrete formats examined: repetition, no new candidate.** The general exclusion of
+  every Gram, Schur or completed-square identity with a positive definite side for every weight is withdrawn.
+  Lemmas 1(i)–(ii) exclude neither an independent construction nor a Λ-specific identity.
+  In the concrete operator L_M of Lemma 3, the quadratic term in `Λ` is
+  the ratio channel, where `Λ∗1 = log` does not act (Lemma 3). Patterns B3, B9 and J3.
+- **Labels.** Lemmas 1–3: PROVED. Antecedents R170_841, R170_854, R170_861, R160_C7_R1, R161_002 and memos
+  083/084: CITED. Breakdown under `c = 2` only in the equality: PROVED, conditional on battery E (CITED). Global
+  sign of `a_T`: OPEN.
+- **Operation that would reopen the class.** A `𝕳 ⪰ 0`, Gram or not presented as Gram, with its own formula and with
+  independently proved positivity, together with the full identity of its Schur complement with a_Λ.
+  Under `c = 2` that identity may fail; failure of the positivity of the block is not required. The only
+  known source candidate is the infinitely divisible or Pick class (`RULES_AVOID` M4, ARGUED), and an
+  explicit `𝕳` is missing. I do not propose it.

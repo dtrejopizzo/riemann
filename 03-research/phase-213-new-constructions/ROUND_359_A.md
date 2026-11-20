@@ -1,30 +1,30 @@
-# Criterio con el producto entero libre de primos pequeños
+# Criterion with the whole product free of small primes
 
-Sea Q_{z,h} la parte de P_h de 353 con p>z y con todos los factores primos de m mayores que z, incluido el caso m=1. Entonces RH equivale a
+Let Q_{z,h} be the part of P_h of 353 with p>z and with all prime factors of m greater than z, including the case m=1. Then RH is equivalent to
 
     ‖Q_{z,h}‖_Y ≪_η √(hY) Y^η
 
-para cada η>0, todo Y grande, 0<h≤1 y uniformemente en (log Y)²≤z≤4(log Y)². Ahora es el entero completo n=pm el que debe carecer de primos pequeños. La familia de cortes tiene anchura multiplicativa cuatro; no se afirma aquí la equivalencia para un solo corte exacto de ambos factores.
+for each η>0, all large Y, 0<h≤1 and uniformly in (log Y)²≤z≤4(log Y)². Now it is the whole integer n=pm that must lack small primes. The family of cuts has multiplicative width four; the equivalence for a single exact cut of both factors is not claimed here.
 
-**Identidad.** Escribir T_d para la dilatación de 357, L_z=Σ_{p≤z}(log p)T_p, K_z=Σ_{d z-liso}T_d y U_z=Σ_{d z-liso}μ(d)T_d. A corte fijo se tiene
+**Identity.** Write T_d for the dilation of 357, L_z=Σ_{p≤z}(log p)T_p, K_z=Σ_{d z-smooth}T_d and U_z=Σ_{d z-smooth}μ(d)T_d. At fixed cut one has
 
     Q_z=K_z(P−L_z S),      P=L_z S+U_z Q_z.
 
-En efecto L_z retira la etiqueta prima exterior, y K_z borra los factores de Euler del cofactor por la identidad de 357. Bajo RH las normas críticas de S y P se conocen por 353. En la norma de exponente σ=1/2+ε, el coste de K_z es ≤∏_{p≤z}(1−p^(−σ))^(−1)=Y^o(1) y el de L_z es polilogarítmico. Empezar con una pérdida menor que η y usar cuentas triviales en escalas acotadas prueba la dirección directa.
+Indeed L_z removes the exterior prime label, and K_z erases the Euler factors of the cofactor by the identity of 357. Under RH the critical norms of S and P are known by 353. In the norm of exponent σ=1/2+ε, the cost of K_z is ≤∏_{p≤z}(1−p^(−σ))^(−1)=Y^o(1) and that of L_z is polylogarithmic. Starting with a loss less than η and using trivial counts at bounded scales proves the direct direction.
 
-**Recuperar la suma.** Fijar 0<ε<1/4, σ=1/2+ε, y sea A(X) el supremo de ‖S_h‖_Y/(√(hY)Y^ε) para 1/2≤Y≤X y 0<h≤1. Es finito por 353. En lo que sigue todos los costes en el bloque X están normalizados por √(hX)X^ε. Tomar z=(log X)². El término L_z S cuesta a lo sumo
+**Recovering the sum.** Fix 0<ε<1/4, σ=1/2+ε, and let A(X) be the supremum of ‖S_h‖_Y/(√(hY)Y^ε) for 1/2≤Y≤X and 0<h≤1. It is finite by 353. In what follows all costs in the block X are normalized by √(hX)X^ε. Take z=(log X)². The term L_z S costs at most
 
     A(X) Σ_{p≤z}(log p)p^(−σ) = O_ε(A(X)(log X)^(1−2ε)),
 
-por Chebyshev y sumación parcial. Esto es o(A(X)log X).
+by Chebyshev and partial summation. This is o(A(X)log X).
 
-Para d≤√X en U_z Q_z, el bloque Y=X/d satisface (log Y)²≤z≤4(log Y)². Aplicar la hipótesis con η=ε/2. El coste total normalizado de estas ramas es O(X^(−ε/2)∏_{p≤z}(1+p^(−1/2−ε/2)))=O(1).
+For d≤√X in U_z Q_z, the block Y=X/d satisfies (log Y)²≤z≤4(log Y)². Apply the hypothesis with η=ε/2. The total normalized cost of these branches is O(X^(−ε/2)∏_{p≤z}(1+p^(−1/2−ε/2)))=O(1).
 
-Para los demás d necesitamos una estimación previa que pueda depender de A(X). En cada Y≤X con Y≥1/2, la identidad de 353 acota P en norma de exponente σ por O_ε(A(X)log(2X)): las potencias superiores suman Σ_{p,k≥2}(log p)p^(−kσ)<∞ y la integral de anchuras cuesta O(1). La misma estimación basta para L_z S. El operador K_z a este exponente cuesta X^o(1) incluso si el bloque hijo es pequeño, pues el corte z sigue congelado en el del padre. Así Q_z en cada hijo cuesta A(X)X^o(1) en su propia norma normalizada. Las escalas por debajo de 1/2 no aportan. El transporte de regreso al padre para d>√X tiene coste
+For the other d we need a preliminary estimate that may depend on A(X). In each Y≤X with Y≥1/2, the identity of 353 bounds P in the norm of exponent σ by O_ε(A(X)log(2X)): the higher powers sum to Σ_{p,k≥2}(log p)p^(−kσ)<∞ and the integral of widths costs O(1). The same estimate suffices for L_z S. The operator K_z at this exponent costs X^o(1) even if the child block is small, since the cut z remains frozen at that of the parent. Thus Q_z in each child costs A(X)X^o(1) in its own normalized norm. Scales below 1/2 do not contribute. Transporting back to the parent for d>√X has cost
 
-    Σ_{d>√X, z-liso} μ²(d)d^(−σ)
+    Σ_{d>√X, z-smooth} μ²(d)d^(−σ)
        ≤ X^(−ε/4)∏_{p≤z}(1+p^(−1/2−ε/2)) = X^(−ε/4+o(1)).
 
-Por tanto todo P cuesta O(1)+o(A(X)log X) en el bloque X. Reinsertar en la identidad de 353 y dividir por log X−1; a exponente σ los demás costes son O_ε(A(X)) antes de la división. Se obtiene una constante más o(1)A(X) para la norma normalizada de S_h. Aplicar bloque por bloque para Y≤X, eligiendo un umbral fijo a partir del cual el coeficiente es ≤1/2, y tomar el supremo: A(X) queda acotado uniformemente. Como ε puede ser arbitrariamente pequeño, la implicación inversa de 353 da RH.
+Hence all of P costs O(1)+o(A(X)log X) in the block X. Reinsert into the identity of 353 and divide by log X−1; at exponent σ the other costs are O_ε(A(X)) before the division. One obtains a constant plus o(1)A(X) for the normalized norm of S_h. Apply block by block for Y≤X, choosing a fixed threshold beyond which the coefficient is ≤1/2, and take the supremum: A(X) is bounded uniformly. Since ε can be arbitrarily small, the inverse implication of 353 gives RH.
 
-**Qué cambia.** 358 elimina primos del cofactor mediante inversión. El mismo coste de Euler aplicado sin más a L_z S puede superar el margen de absorción. Aquí el término de primos exteriores pequeños se saca antes de invertir; sólo las ramas largas usan la envolvente A, y el peso extra en esas ramas paga su coste de Euler. Queda la estimación incondicional de la suma sobre productos enteramente cribados.
+**What changes.** 358 eliminates primes of the cofactor by inversion. The same Euler cost applied plainly to L_z S may exceed the absorption margin. Here the term of small exterior primes is extracted before inverting; only the long branches use the envelope A, and the extra weight in those branches pays their Euler cost. The unconditional estimate of the sum over fully sieved products remains.

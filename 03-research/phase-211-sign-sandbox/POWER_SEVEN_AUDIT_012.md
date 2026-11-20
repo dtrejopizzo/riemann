@@ -1,23 +1,23 @@
-# POWER_SEVEN_AUDIT_012 — Revisión del signo global en siete polos
+# POWER_SEVEN_AUDIT_012 — Review of the global sign at seven poles
 
-Estado: PROVED. POWER_SEVEN_GLOBAL_012.md y tools/power_seven_global_012_verify.py revisados desde las fórmulas; script ejecutado independientemente con PASS. Papers intactos.
+Status: PROVED. POWER_SEVEN_GLOBAL_012.md and tools/power_seven_global_012_verify.py reviewed from the formulas; script run independently with PASS. Papers untouched.
 
-## 1. Matriz confluente
+## 1. Confluent matrix
 
-Las bandas AP y sus factores coinciden con el kernel y las transformaciones Laguerre previamente auditados. La fórmula compacta psi^(r)*u^r/(2r!) usada por el programa es exactamente equivalente a g^(r)*(2u)^r/r!, no pierde una potencia de dos. Las sumas16..2000 y colas integrales desde2001/2000 tienen signo y orden correctos. Las siete eliminaciones intervalares de AP-.069I tienen pivotes inferiores positivos y mantienen intactas las columnas del pivote. El certificado decide todo el bloque.
+The AP bands and their factors coincide with the kernel and the Laguerre transformations previously audited. The compact formula psi^(r)*u^r/(2r!) used by the program is exactly equivalent to g^(r)*(2u)^r/r!, it does not lose a power of two. The sums16..2000 and integral tails from2001/2000 have correct sign and order. The seven interval eliminations of AP-.069I have positive lower pivots and keep the pivot columns intact. The certificate decides the whole block.
 
-Las normas de momentos AA,BB usan siete términos y la comprobación4AA BB<1 basta para la cota polar empleada. No se extrapola esa comparación desde un grado menor.
+The moment norms AA,BB use seven terms and the check4AA BB<1 suffices for the polar bound employed. That comparison is not extrapolated from a lower degree.
 
-## 2. Producto de déficit, no producto de máximos independientes
+## 2. Product of deficits, not product of independent maxima
 
-Los196 paneles de longitud1/4 cubren exactamente[0,49]. En cada uno, c-ell(x) decrece mientras el polinomio del filtro crece. El máximo del PRODUCTO queda por tanto acotado por el primer factor en el extremo izquierdo, truncado a positivo, y el segundo en el extremo derecho. Esto justifica DIRECT sobre cada intervalo completo. El lower49>.05>.01 y la monotonía de m controlan todo el exterior.
+The196 panels of length1/4 cover exactly[0,49]. On each, c-ell(x) decreases while the filter polynomial increases. The maximum of the PRODUCT is therefore bounded by the first factor at the left endpoint, truncated to positive, and the second at the right endpoint. This justifies DIRECT on each full interval. The lower bound49>.05>.01 and the monotonicity of m control the whole exterior.
 
-La pérdida integral es<.057R0N0, sin necesitar factor x ni cota separada K_n. El filtro sigue teniendo factor polar Bernoulli7/(4u²), con la orientación correcta. El corchete .069-.01-.057-7/(4u²) es positivo; su holgura es pequeña pero está comprobada racionalmente. De ello se obtiene AP>.01I en todos los siete polos>=u, manteniendo la norma nueva en la identidad.
+The integral loss is<.057R0N0, without needing a factor x or a separate bound K_n. The filter still has Bernoulli polar factor7/(4u²), with the correct orientation. The bracket .069-.01-.057-7/(4u²) is positive; its slack is small but checked rationally. From this one obtains AP>.01I at all seven poles>=u, keeping the new norm in the identity.
 
-## 3. Traza ponderada y factores de la cola
+## 3. Weighted trace and factors of the tail
 
-El lema de traza de POWER_COMMON_TRANSFER_010§6 fue revisado en su telescopaje, núcleo inverso positivo decreciente y conexión Laguerre. Su hipótesis sigma21<min v_j se satisface. La traza confluente exacta T7=176673441 y2sqrt(T7)<26600 están comprobadas. Se usa sólo operatornorm<=trace; no se asume monotonía del mayor eigenvalor de la Gram.
+The trace lemma of POWER_COMMON_TRANSFER_010§6 was reviewed in its telescoping, positive decreasing inverse kernel and Laguerre connection. Its hypothesis sigma21<min v_j is satisfied. The exact confluent trace T7=176673441 and2sqrt(T7)<26600 are checked. Only operatornorm<=trace is used; monotonicity of the largest eigenvalue of the Gram is not assumed.
 
-La correlación pierde q^-21 y el coeficiente del peine añade q^-1/2, de modo que el exponente es21.5. El factor adicional1/sqrt(q)<=1/sqrt2<5/7 está conservado por la comparación racional(7/5)^2<2. Al sumar logq*q^-21 se obtiene exactamente el mayorante2^-21[.7+1.4/20+2/20²]=31/(40*2^21). Así el coste infinito es<1/125, con todos los contactos y sin hipótesis de signo matricial.
+The correlation loses q^-21 and the comb coefficient adds q^-1/2, so the exponent is21.5. The additional factor1/sqrt(q)<=1/sqrt2<5/7 is kept by the rational comparison(7/5)^2<2. Summing logq*q^-21 gives exactly the majorant2^-21[.7+1.4/20+2/20²]=31/(40*2^21). Thus the infinite cost is<1/125, with all contacts and without matrix sign hypotheses.
 
-Concluye W>.01I-.008I=.002I=1/500 I en todos los espacios declarados, incluso polos repetidos o arbitrariamente separados. Nada en este certificado implica el resultado para ocho polos o todos los grados.
+It concludes W>.01I-.008I=.002I=1/500 I on all declared spaces, even repeated or arbitrarily separated poles. Nothing in this certificate implies the result for eight poles or all degrees.

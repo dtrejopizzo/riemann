@@ -1,27 +1,27 @@
-# El carácter principal a frecuencia fija oscila demasiado; se puede retirar del promedio completo
+# The principal character at fixed frequency oscillates too much; it can be removed from the full average
 
-En 290 tomar 1≤κ≤N^(1/4) y P impar comparable con κ+1 y mayor o igual que κ. Así el promedio de todos los caracteres reproduce μ exactamente. Hay dos hechos compatibles: para el carácter trivial los sumandos a frecuencia fija exceden el presupuesto de raíz por ambos signos; después de integrar se puede suprimir ese carácter y renormalizar el resto, con error de raíz en cualquier intervalo.
+In 290 take 1≤κ≤N^(1/4) and odd P comparable to κ+1 and at least κ. Thus the average of all characters reproduces μ exactly. There are two compatible facts: for the trivial character the summands at fixed frequency exceed the square-root budget with both signs; after integration that character can be suppressed and the rest renormalized, with square-root error on any interval.
 
-**Obstrucción a frecuencia fija.** Para el carácter trivial, en la representación Fourier de 288 el sumando real es
+**Obstruction at fixed frequency.** For the trivial character, in the Fourier representation of 288 the real summand is
 
     a_t(n)=μ²(n) ∏_(p|n)(cos(t log p)−1),     A_t(x)=Σ_(n≤x) a_t(n).
 
-Se obtiene factorizando el cuadrado ordinario centrado primo a primo y dividiéndolo por 2^ω(n). Para cualquier t∈[1,2] se tiene A_t(x)=Ω₊(x/√log x) y Ω₋(x/√log x), donde cada signo tiene su propia subsucesión. Incluso las integrales en t de la parte positiva y de la parte negativa en magnitud tienen, por separado, ese límite superior inferior en orden.
+It is obtained by factoring the centered ordinary square prime by prime and dividing by 2^ω(n). For any t∈[1,2] one has A_t(x)=Ω₊(x/√log x) and Ω₋(x/√log x), where each sign has its own subsequence. Even the integrals in t of the positive part and of the negative part in magnitude have, separately, that limsup lower bound in order.
 
-En Re s>1 comparar el producto de Euler de F_t(s)=Σ a_t(n)n^(−s) con
+In Re s>1 compare the Euler product of F_t(s)=Σ a_t(n)n^(−s) with
 
     ζ(s−it)^(1/2) ζ(s+it)^(1/2) / ζ(s).
 
-Los términos de grado uno coinciden, por lo que el factor corrector tiene cola que converge absolutamente y no se anula cerca de Re s=1, uniformemente para t∈[1,2]; los factores finitos se revisan directamente. En s=1+it sólo p=2 podría dar cero en 1+(cos(t log p)−1)p^(−s); exigiría a la vez cos(t log 2)=−1 y exp(−it log 2)=1, imposible. Se toman las ramas desde Re s>1; sólo hacen falta sus módulos. Por el polo simple en 1, la ausencia de ceros de ζ sobre Re s=1 y compacidad,
+The degree-one terms coincide, so the correcting factor has an absolutely convergent tail and does not vanish near Re s=1, uniformly for t∈[1,2]; the finite factors are checked directly. At s=1+it only p=2 could give zero in 1+(cos(t log p)−1)p^(−s); it would require both cos(t log 2)=−1 and exp(−it log 2)=1, impossible. The branches are taken from Re s>1; only their moduli are needed. By the simple pole at 1, the absence of zeros of ζ on Re s=1 and compactness,
 
     |F_t(1+ε+it)| ≫ ε^(−1/2),      |F_t(1+ε)| ≪ ε,
 
-con constantes uniformes. Por sumación parcial F_t(s)/s es la integral de A_t(exp u) exp(−su) para u≥0. La primera estimación implica que la integral del valor absoluto con peso exp(−(1+ε)u) es ≫ε^(−1/2). La segunda acota con el mismo peso la integral firmada por O(ε). Por tanto ambas partes en magnitud tienen masa ≫ε^(−1/2). Como ∫₁^∞ exp(−εu)du/√u≤√(π/ε), se obtiene el Ω anunciado para cada signo; integrando antes en t y aplicando Tonelli se obtiene la versión integrada. Esto excluye acotar los sumandos uno a uno por raíz, aun en frecuencias bajas ordinarias; no usa una hipótesis sobre ceros en la franja abierta.
+with uniform constants. By partial summation F_t(s)/s is the integral of A_t(exp u) exp(−su) for u≥0. The first estimate implies that the integral of the absolute value with weight exp(−(1+ε)u) is ≫ε^(−1/2). The second bounds the signed integral with the same weight by O(ε). Hence both parts in magnitude have mass ≫ε^(−1/2). Since ∫₁^∞ exp(−εu)du/√u≤√(π/ε), one obtains the announced Ω for each sign; integrating first in t and applying Tonelli gives the integrated version. This rules out bounding the summands one by one by the square root, even at ordinary low frequencies; it uses no hypothesis on zeros in the open strip.
 
-**Retirar caracteres ya integrados.** Sea R_χ(n) la parte real del filtro con un carácter de 290, integrado con Wδ (es decir, contra su densidad Fourier). Su término diagonal tras complementar vale μ(n). Los demás factores de carácter tienen módulo uno. La prueba de 289, que ya sumaba los módulos antes de agrupar, da por tanto uniformemente
+**Removing already integrated characters.** Let R_χ(n) be the real part of the filter with one character of 290, integrated with Wδ (that is, against its Fourier density). Its diagonal term after complementing equals μ(n). The other character factors have modulus one. The proof of 289, which already summed the moduli before grouping, therefore gives uniformly
 
     Σ_(n≤N)|R_χ(n)−μ(n)| ≪ κ√N log(2κ)/(log(2N))^(3/4).
 
-Sea k=2(P−1). Al eliminar cualquier conjunto E de e<k caracteres, la diferencia entre el promedio renormalizado de los k−e restantes y μ es exactamente −Σ_(χ∈E)(R_χ−μ)/(k−e). En particular se pueden retirar los dos caracteres que son triviales en las unidades (y difieren sólo en la paridad de v_P), con error total O(√N log(2κ)/(log(2N))^(3/4)) cuando P≥3 y P≍κ+1. Se conserva esa cota para toda suma en subintervalos. El promedio restante ya no tiene por qué mayorar punto por punto; el error absoluto acumulado basta para el criterio unilateral de 287.
+Let k=2(P−1). On removing any set E of e<k characters, the difference between the renormalized average of the remaining k−e and μ is exactly −Σ_(χ∈E)(R_χ−μ)/(k−e). In particular one can remove the two characters that are trivial on the units (and differ only in the parity of v_P), with total error O(√N log(2κ)/(log(2N))^(3/4)) when P≥3 and P≍κ+1. This bound holds for every sum over subintervals. The remaining average need no longer majorize pointwise; the accumulated absolute error suffices for the one-sided criterion of 287.
 
-**Qué queda.** Las oscilaciones de A_t hacen inviable buscar una cota de raíz uniforme término a término antes de la integración. El carácter trivial y su variante en la valuación ya no son necesarios en la estimación global. Sigue abierta la cota firmada para el promedio integrado de los caracteres no triviales en las unidades. El producto de Euler de cada uno mantiene el factor común del recíproco de ζ en el término de primer grado.
+**What remains.** The oscillations of A_t make it unfeasible to seek a uniform square-root bound term by term before integration. The trivial character and its variant in the valuation are no longer needed in the global estimate. The signed bound for the integrated average of the characters nontrivial on the units remains open. The Euler product of each keeps the common factor of the reciprocal of ζ in the first-degree term.

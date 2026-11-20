@@ -1,20 +1,20 @@
-# Estado revisado de la ruta de potencias — ronda 003
+# Revised state of the power route — round 003
 
-El turno anterior produjo progreso verificable: teoremas de orden finito y puente. Esta ronda certifica la familia fija hasta orden seis y refuta una inducción escalar propuesta. El goal sigue activo, sin cierre del signo.
+The previous turn produced verifiable progress: finite-order theorems and a bridge. This round certifies the fixed family up to order six and refutes a proposed scalar induction. The goal remains active, without closure of the sign.
 
-## Resultados de registro
+## Recorded results
 
-- POWER_BRIDGE_002 y POWER_AUDIT_002: puente completo revisado. Basta positividad de todas las matrices líderes K_ij=(L(32+i)+L(32+j))/(63+i+j). Cualquier test compacto trasladado se representa por inversión Möbius finita y se aproxima en norma de forma por la escalera fija.
-- POWER_FIXED_GRID_003: todos los órdenes 1–6 certificados por intervalos racionales. El script tools/power_fixed_grid_003.py fue reejecutado por coordinación y auditor con salida coincidente. Incluye transformación Schur exacta; no supone que el patrón de seis parámetros se extienda.
-- POWER_POLYNOMIAL_003: coordenadas Jacobi y dilataciones exactas; las dilataciones no son autoadjuntas ni contracciones positivas en esa métrica. Identidades, no signo uniforme.
-- POWER_SCHUR_003: F(z)=(z²-z+10)/10 tiene F'>0 y F/z decreciente en [1,3]; todos sus pares pasan, pero su triple 1,2,3 tiene determinante -13/270000. Contraejemplo a preservación desde esas dos propiedades. La versión por tramos del §7 agrega concavidad y también falla. Ningún falsificador es del dato aritmético.
+- POWER_BRIDGE_002 and POWER_AUDIT_002: full bridge reviewed. Positivity of all leading matrices K_ij=(L(32+i)+L(32+j))/(63+i+j) suffices. Any translated compact test is represented by finite Möbius inversion and approximated in form norm by the fixed ladder.
+- POWER_FIXED_GRID_003: all orders 1–6 certified by rational intervals. The script tools/power_fixed_grid_003.py was re-run twice independently with matching output. It includes an exact Schur transformation; it does not assume that the six-parameter pattern extends.
+- POWER_POLYNOMIAL_003: Jacobi coordinates and exact dilations; the dilations are neither self-adjoint nor positive contractions in that metric. Identities, not a uniform sign.
+- POWER_SCHUR_003: F(z)=(z²-z+10)/10 has F'>0 and F/z decreasing on [1,3]; all its pairs pass, but its triple 1,2,3 has determinant -13/270000. Counterexample to preservation from those two properties. The piecewise version of §7 adds concavity and also fails. No falsifier is of the arithmetic datum.
 
-## Qué falta
+## What is missing
 
-P3 para todos A>=32,h>0 no está demostrado: hay un rango alto y el caso exacto A32,h1 (incluido en seis potencias). Tampoco hay control uniforme en orden. El puente sí está resuelto. La unión de rangos altos u>=2^{40n} no es densa, con prueba cuantitativa de concentración: no extrapolar esa familia.
+P3 for all A>=32,h>0 is not proved: there is a high range and the exact case A32,h1 (included in six powers). There is also no uniform control in the order. The bridge is resolved. The union of high ranges u>=2^{40n} is not dense, with a quantitative concentration proof: do not extrapolate that family.
 
-## Próximo ensayo autorizado
+## Next authorised trial
 
-Atacar el caso confluente (h→0) con una base estable de exponenciales por polinomios y auditar si mover las tasas hacia arriba preserva el mínimo arquimediano. Esa monotonía NO está probada. Un contraejemplo a ella obligaría a pivotar, no refutaría el signo. Evitar Gram monomial cerca de confluencia: produce falsos negativos por mal condicionamiento.
+Attack the confluent case (h→0) with a stable basis of exponentials times polynomials and audit whether moving the rates upward preserves the archimedean minimum. That monotonicity is NOT proved. A counterexample to it would force a pivot, not refute the sign. Avoid the monomial Gram near confluence: it produces false negatives through ill-conditioning.
 
-Estado: OPEN. Papers intactos. No hay bloqueo externo; queda trabajo matemático sustantivo.
+Status: OPEN. Papers untouched. There is no external blockage; substantive mathematical work remains.

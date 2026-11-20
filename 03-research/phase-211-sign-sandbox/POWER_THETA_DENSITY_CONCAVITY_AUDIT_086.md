@@ -1,27 +1,27 @@
-# POWER_THETA_DENSITY_CONCAVITY_AUDIT_086 — Auditoría independiente
+# POWER_THETA_DENSITY_CONCAVITY_AUDIT_086 — Independent audit
 
-Estado: **APROBADO / PROVED para la Phi real**, usando los resultados073/077 ya probados. Fuente `POWER_THETA_DENSITY_CONCAVITY_086.md` leída íntegramente. Revisor mapa. Papers intactos.
+Status: **APPROVED / PROVED for the real Phi**, using the already proved results 073/077. Source `POWER_THETA_DENSITY_CONCAVITY_086.md` read in full. Independent review. Papers untouched.
 
-## Identidad y signo de densidades
+## Identity and sign of densities
 
-La identidad (A'/B')'=tN/[p(tq−p)²] fue reproducida independientemente por diferenciación simbólica exacta. La expansión C=tpA0'−DA0 y su derivada tienen los signos correctos.077 da p,D,N>0 en toda la semirrecta. Así B=p/t crece y A=p²−q−2p/t es estrictamente convexa en B. El orden de columnas [1,A,B], no[1,B,A], produce el determinante negativo requerido. Las tres densidades se normalizan por tPhi>0 sólo para t>0, sin introducir una singularidad en las densidades originales.
+The identity (A'/B')'=tN/[p(tq−p)²] was reproduced independently by exact symbolic differentiation. The expansion C=tpA0'−DA0 and its derivative have the correct signs. 077 gives p,D,N>0 on the whole half-line. Thus B=p/t increases and A=p²−q−2p/t is strictly convex in B. The column order [1,A,B], not [1,B,A], produces the required negative determinant. The three densities are normalized by tPhi>0 only for t>0, without introducing a singularity in the original densities.
 
-## TP, Fubini y bordes
+## TP, Fubini and boundary terms
 
-La prueba TP3sinh por series/Cauchy–Binet es correcta: cada término es producto de dos determinantes de monomios positivos y pesos positivos; el término1,3,5 fija estrictitud. El argumento Rolle ponderado más Wronskiano positivo prueba el signo de esos determinantes, no lo supone. Las mismas cuentas para L(lambda,t)=sinh(sqrt(lambda)t)/sqrt(lambda) dan el kernel confluente de filas0,1,2; el término m0,1,2 es estrictamente positivo.
+The TP3 sinh proof via series/Cauchy–Binet is correct: each term is a product of two determinants of positive monomials and positive weights; the term 1,3,5 fixes strictness. The weighted Rolle argument plus positive Wronskian proves the sign of those determinants, it does not assume it. The same computations for L(lambda,t)=sinh(sqrt(lambda)t)/sqrt(lambda) give the confluent kernel of rows 0,1,2; the term m 0,1,2 is strictly positive.
 
-Las transformadas sobre todaR de tPhi,(tPhi)'',−Phi' son Z',u²Z',uZ. Supertails y suavidad eliminan bordes en infinito; no hay borde artificial en0. Si se pliega a la semirrecta, los factores2 son exactos por imparidad. Como comprobación equivalente, tPhi(0)=0 y sinh0=0 también cancelarían los dos términos en0 de la segunda derivada.
+The transforms over all of R of tPhi, (tPhi)'', −Phi' are Z', u²Z', uZ. Supertails and smoothness eliminate boundary terms at infinity; there is no artificial boundary at 0. If folded onto the half-line, the factors 2 are exact by oddness. As an equivalent check, tPhi(0)=0 and sinh0=0 would also cancel the two terms at 0 of the second derivative.
 
-Andreief admite las densidades firmadas: la prueba es expansión finita de determinantes y Fubini absolutamente convergente, pagado por las colas de Phi y sus derivadas contra exp(Ut). No se presupone positividad de cada densidad. En la cámara ordenada el determinante kernel es positivo y el de densidades negativo en todos sus puntos, de modo que la integral es estrictamente negativa. El factor8 de los tres factores2 es correcto y no falta3!: restringir la integral simétrica a la cámara cancela ese factorial.
+Andreief admits the signed densities: the proof is finite expansion of determinants and absolutely convergent Fubini, paid for by the tails of Phi and its derivatives against exp(Ut). Positivity of each density is not presupposed. On the ordered chamber the kernel determinant is positive and the density determinant negative at all its points, so the integral is strictly negative. The factor 8 of the three factors 2 is correct and 3! is not missing: restricting the symmetric integral to the chamber cancels that factorial.
 
-## Confluencia y conclusión exacta
+## Confluence and exact conclusion
 
-Los tres cocientes f=(Z'/u,uZ',Z) son exactamente2∫Lrho. Derivar hasta2 veces bajo la integral en compactos de lambda>0 es legítimo por dominación exponencial uniforme. La versión confluente de Andreief prueba W(f)<0. Como f=f1(1,lambda,R), la identidad W(f)=f1³R'' no deja términos de f1 adicionales; f1>0. Por tanto R''(lambda)<0 PUNTUALMENTE para todo lambda>0. No se ha inferido erróneamente esa desigualdad de sólo secantes estrictas.
+The three quotients f=(Z'/u,uZ',Z) are exactly 2∫Lrho. Differentiating up to 2 times under the integral on compact subsets of lambda>0 is legitimate by uniform exponential domination. The confluent version of Andreief proves W(f)<0. Since f=f1(1,lambda,R), the identity W(f)=f1³R'' leaves no additional f1 terms; f1>0. Therefore R''(lambda)<0 POINTWISE for all lambda>0. That inequality has not been wrongly inferred from strict secants alone.
 
-Con a=M'(0)>0, g''=aR''<0 global.079 y BASE073 prueban todos los triples positivos de nodos y, en particular, W completa para tres exponentes ai>1. No se extiende la admisibilidad de W a ai<=1 por la mera validez de la curvatura allí.
+With a=M'(0)>0, g''=aR''<0 globally. 079 and BASE073 prove all positive triples of nodes and, in particular, complete W for three exponents ai>1. The admissibility of W is not extended to ai<=1 by the mere validity of the curvature there.
 
-## Diferencia y límites
+## Difference and limits
 
-La consulta de los registros y073–085 no encontró este transporte concreto de tres densidades. La entrada nueva es que N077 controla exactamente su convexidad relativa, antes de integrar con un kernel TP. Así se descarga una obligación de signo REAL y no sólo una identidad.080 permanece válido e independiente como certificado compacto de esa curvatura;086 no lo necesita, aunque sí utiliza las desigualdades077, cuya propia prueba incluye su certificado fijo. No se presenta como eliminación de todo cómputo de los antecedentes.
+Consulting the records and 073–085 did not find this concrete transport of three densities. The new input is that N of 077 controls exactly their relative convexity, before integrating with a TP kernel. Thus a REAL sign obligation is discharged and not only an identity. 080 remains valid and independent as a compact certificate of that curvature; 086 does not need it, although it does use the inequalities 077, whose own proof includes its fixed certificate. It is not presented as elimination of all computation from the antecedents.
 
-No hay nueva cobertura W frente a080/085 (actualmente cuatro generadores ya probados), ni extrapolación del menor de tres densidades a la jerarquía superior083, ni todos los órdenes/T/global. Queda un mecanismo estructural concreto para estudiar esas obligaciones superiores.
+There is no new W coverage relative to 080/085 (currently four generators already proved), nor extrapolation of the three-density minor to the higher hierarchy 083, nor all orders/T/global. What remains is a concrete structural mechanism for studying those higher obligations.

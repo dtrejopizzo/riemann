@@ -1,25 +1,25 @@
-# POWER_STATE_061 — Resuelto el caso interior histórico129,0
+# POWER_STATE_061 — The historical interior case129,0 resolved
 
-Estado: PROVED para un único átomo; signo global OPEN. Papers intactos.
+Status: PROVED for a single atom; global sign OPEN. Papers untouched.
 
-Para g(t)=t^128 exp(−63t/2)/128! sobre t>0, con transformada G(s)=(s+63/2)^−129,
+For g(t)=t^128 exp(−63t/2)/128! on t>0, with transform G(s)=(s+63/2)^−129,
 
     1.34e−10 < W[g]/||g||² <1.35e−10.
 
-El intervalo racional exterior certificado es[13456684165,13456684168]/10^20. Incluye ARCH, polar y TODOS los contactos. La cola adversa después512 tiene cota racional<10^−24. Constructor, root y mapa reprodujeron el verificador con exit0/PASS.
+The certified outer rational interval is[13456684165,13456684168]/10^20. It includes ARCH, polar and ALL contacts. The adverse tail after512 has rational bound<10^−24. The verifier was reproduced three times independently with exit0/PASS.
 
-Fuente POWER_GAMMA_129_DECISION_061.md; auditoría POWER_GAMMA_129_AUDIT_061.md. Este caso quedó abierto en025/026/027 y no estaba resuelto por032/035/042. Se retomó una obligación histórica concreta, sin buscar otrosN ni hacer campañas de cortes.
+Source POWER_GAMMA_129_DECISION_061.md; audit POWER_GAMMA_129_AUDIT_061.md. This case was left open in025/026/027 and was not resolved by032/035/042. A concrete historical obligation was taken up again, without searching for otherN nor running campaigns of cutoffs.
 
-## Compensación que faltaba
+## The missing compensation
 
-La forma sharp tiene ARCHsharp/norma² aproximadamente−1.04219397018062543 y ERR aproximadamente−1.04219397031519227; ambos están encerrados racionalmente. La diferencia positiva es sólo1.3456684e−10. El bound ERR<−.66 de025 era correcto pero insuficiente.
+The sharp form has ARCHsharp/norm² approximately−1.04219397018062543 and ERR approximately−1.04219397031519227; both are rationally enclosed. The positive difference is only1.3456684e−10. The bound ERR<−.66 of025 was correct but insufficient.
 
-Usando la primera celda ya auditada024, TODAS las celdas posteriores aportan entre.3755 y.3822 al beneficio−ERR. No se suma ese beneficio otra vez: es una descomposición de la misma cantidad total. El kernel K129(1)<0 de023 no implicaba Wnegativa; la compensación integrada completa decide este dato.
+Using the already audited first cell024, ALL later cells contribute between.3755 and.3822 to the benefit−ERR. That benefit is not added again: it is a decomposition of the same total quantity. The kernel K129(1)<0 of023 did not imply negativeW; the full integrated compensation decides this datum.
 
-No se infiere signo para130, una fila, una nueva ventanaT o el problema global. El patrón observado exige controlar el balance firmado al tamaño del residuo: la positividad de cada contribución parcial o sus bounds de orden constante no bastaban.
+No sign is inferred for130, a row, a new windowT or the global problem. The observed pattern requires controlling the signed balance at the size of the residue: positivity of each partial contribution or its bounds of constant order were not enough.
 
-## Alcance del cono060 revisado
+## Scope of the cone060 reviewed
 
-Para los átomos escalares del puente017, la región060 está contenida en el cono escalar ya conocido; su novedad son TODOS los numeradores de cada bloque. Sus densidades normalizadas tienen masa en[−u,u] a lo sumo16e−12, por el momento inverso060, y también sus mezclas positivas. El átomoF1 tiene masa1/2 allí. Por tanto no se sustituye por ese cono la familia completa por aproximación positiva. Es una aplicación de la obstrucción016/029, no un nuevo NO-GO para espacios lineales o cruces.
+For the scalar atoms of the bridge017, the region060 is contained in the already known scalar cone; its novelty is ALL numerators of each block. Its normalised densities have mass on[−u,u] at most16e−12, by the inverse moment060, and so do their positive mixtures. The atomF1 has mass1/2 there. Hence the full family is not replaced by that cone via positive approximation. It is an application of the obstruction016/029, not a new NO-GO for linear spaces or cross terms.
 
-060 y053 mantienen sus teoremas uniformes;061 añade sólo este caso interior real. La estimación firmada uniforme del segmento inicial continúa pendiente.
+060 and053 keep their uniform theorems;061 adds only this real interior case. The uniform signed estimate of the initial segment remains pending.

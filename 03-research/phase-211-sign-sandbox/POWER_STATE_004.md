@@ -1,25 +1,25 @@
-# Estado revisado — caso de tres potencias resuelto
+# Revised state — three-power case resolved
 
-Estado: PROVED caso de tres; OPEN signo a todos los órdenes. Goal activo. Papers intactos.
+Status: PROVED three case; OPEN sign at all orders. Goal active. Papers untouched.
 
-## Teorema nuevo
+## New theorem
 
-Para cualesquiera a_1,a_2,a_3>=32 y coeficientes reales c_i, sea rho=Σc_i X^{-a_i}, f(y)=Σc_i zeta(a_i)exp(-(a_i-1/2)y), y>0. Entonces
+For any a_1,a_2,a_3>=32 and real coefficients c_i, let rho=Σc_i X^{-a_i}, f(y)=Σc_i zeta(a_i)exp(-(a_i-1/2)y), y>0. Then
 
     Q[rho] >= (1/20)||f||².
 
-Si la función no es nula, el signo es estrictamente positivo. No se requiere separación ni cota superior de exponentes. Por tanto P3 para A>=32,h>0 queda resuelto, también para triples desiguales. Los límites confluyentes de multiplicidad total tres quedan cubiertos.
+If the function is nonzero, the sign is strictly positive. No separation or upper bound on exponents is required. Hence P3 for A>=32,h>0 is resolved, also for unequal triples. The confluent limits of total multiplicity three are covered.
 
-Fuentes: POWER_POLE_MOVEMENT_004 (prueba), POWER_CONFLUENT_004 (certificado racional), POWER_AUDIT_004 (revisión independiente). Anula la anterior condición de rango alto para triples; no cambia alcance del teorema general de orden n con umbral creciente.
+Sources: POWER_POLE_MOVEMENT_004 (proof), POWER_CONFLUENT_004 (rational certificate), POWER_AUDIT_004 (independent review). It cancels the earlier high-range condition for triples; it does not change the scope of the general order-n theorem with increasing threshold.
 
-## Insight y prueba
+## Insight and proof
 
-Las transformadas son P(iτ)/∏(u_j+iτ). Al subir individualmente los polos u_j, la densidad se multiplica por un factor creciente de |τ|. El multiplicador arquimediano también crece en |τ|. La identidad de covarianza prueba que cada cociente Rayleigh aumenta, y por minmax lo hacen todos los autovalores comprimidos. Esto reduce el mínimo arquimediano a polos confluyentes en u=31.5.
+The transforms are P(iτ)/∏(u_j+iτ). Raising the poles u_j individually multiplies the density by an increasing factor of |τ|. The archimedean multiplier is also increasing in |τ|. The covariance identity proves that each Rayleigh quotient increases, and by minmax so do all compressed eigenvalues. This reduces the archimedean minimum to confluent poles at u=31.5.
 
-En la base Laguerre de dimensión tres, la matriz arquimediana es Toeplitz3 explícita y se certifica >1/10 con sumas racionales. La norma ponderada ||exp(uy/2)f||²<=1302||f||² controla el peine (<.003) y sólo la parte negativa del polar (<.042). La suma conserva más de1/20 de margen.
+In the three-dimensional Laguerre basis, the archimedean matrix is an explicit Toeplitz3 and is certified >1/10 with rational sums. The weighted norm ||exp(uy/2)f||²<=1302||f||² controls the comb (<.003) and only the negative part of the polar (<.042). The sum keeps more than1/20 of margin.
 
-## Lo que no se ha resuelto
+## What has not been resolved
 
-La familia fija32+k, de todos los órdenes, sigue sin signo demostrado. El puente de esa familia al signo de ventanas sí está probado. No extrapolar triples ni los seis tamaños ya certificados a todos los tamaños.
+The fixed family32+k, of all orders, still has no proved sign. The bridge from that family to the sign of windows is proved. Do not extrapolate triples nor the six already certified sizes to all sizes.
 
-En dimensión cuatro, un diagnóstico concreto del confluente en31.5 da fondo arquimediano negativo (~−.17005), mientras arquimediano+polar es positivo (~.32259). Estos números son diagnósticos, no certificados. Motivan el siguiente paso: conservar la contribución positiva del polar y revisar si el movimiento de polos sigue teniendo el signo adecuado para esa suma. NO se presupone tal monotonía.
+In dimension four, a concrete diagnosis of the confluent case at31.5 gives a negative archimedean floor (~−.17005), while archimedean+polar is positive (~.32259). These numbers are diagnostics, not certificates. They motivate the next step: keep the positive contribution of the polar and check whether pole movement still has the right sign for that sum. Such monotonicity is NOT presupposed.

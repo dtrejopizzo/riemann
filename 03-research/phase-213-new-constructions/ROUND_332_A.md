@@ -1,15 +1,15 @@
-# La clase de cocientes primitivos ya tiene toda la tasa absoluta
+# The class of primitive quotients already carries the whole absolute rate
 
-En la escala h=exp(−am), 0<a<log 4, sea P*_m la suma de 326 con valores absolutos restringida a (n,d)=1. Entonces
+At the scale h=exp(−am), 0<a<log 4, let P*_m be the sum of 326 with absolute values restricted to (n,d)=1. Then
 
     lim (P*_m)^(1/(2m)) = 2 exp(−a/2).
 
-**Conteo en la banda.** Para X entero, H entero entre 1 y X, contar X≤n<2X y d=n+k, 1≤k≤H. Al crecer H y X, la proporción de pares para los cuales nd es libre de cuadrados tiende a
+**Count in the band.** For integer X, integer H between 1 and X, count X≤n<2X and d=n+k, 1≤k≤H. As H and X grow, the proportion of pairs for which nd is squarefree tends to
 
     c = ∏_p (1−1/p)²(1+2/p)>0.
 
-En efecto, para los primos hasta P fijo, tomar el módulo M producto de sus cuadrados. El rectángulo de (n,k) se equidistribuye en clases módulo M en ambas coordenadas, y (n,k)↦(n,n+k) es biyectiva módulo M. En cada primo se permiten dos unidades o exactamente una coordenada divisible por p una sola vez y la otra unidad. Esto da el factor local escrito; el producto converge a un valor positivo pues su factor es 1−3/p²+2/p³. Para p>P los pares con p²|n o p²|d cuestan O(H(X/P+√X)), contando primero el múltiplo del cuadrado hasta 3X y luego hasta H vecinos. Los pares con p|n,d sólo contribuyen si p|k, luego cuestan a lo sumo Σ_(P<p≤H)(2X/p)(H/p) ≪ XH/P. Dividir por XH y hacer crecer primero X,H y después P. Este conteo elemental no requiere uniformidad de la distribución de μ en intervalos cortos particulares.
+Indeed, for the primes up to a fixed P, take the modulus M product of their squares. The rectangle of (n,k) equidistributes in classes modulo M in both coordinates, and (n,k)↦(n,n+k) is bijective modulo M. At each prime one allows two units or exactly one coordinate divisible by p only once and the other a unit. This gives the written local factor; the product converges to a positive value since its factor is 1−3/p²+2/p³. For p>P the pairs with p²|n or p²|d cost O(H(X/P+√X)), counting first the multiple of the square up to 3X and then up to H neighbours. The pairs with p|n,d only contribute if p|k, hence cost at most Σ_(P<p≤H)(2X/p)(H/p) ≪ XH/P. Divide by XH and let first X,H and then P grow. This elementary count does not require uniformity of the distribution of μ in particular short intervals.
 
-**Transferencia.** Tomar X=⌈exp(2m)⌉, H=⌊c₀hX⌋ con 0<c₀<1 tan pequeño que K≥1/2 en [−c₀,c₀]. Se tiene H→∞. En todos los pares contados, |μ(n)μ(d)|=1, (n,d)=1, d≤3X y 0<log(d/n)≤c₀h. La suma restringida es por ello ≫ h X² (2m)^(2m)/((m!)²(3X)^3) ≫ h4^m/m por Stirling. El techo procede de 326. En particular, incluso un argumento que consiguiera eliminar exactamente todas las clases con mcd mayor que uno seguiría afrontando la tasa absoluta íntegra en la clase restante. El cálculo deja abierto el signo agregado dentro de esa clase y no impide cancelación entre clases en la energía total.
+**Transfer.** Take X=⌈exp(2m)⌉, H=⌊c₀hX⌋ with 0<c₀<1 so small that K≥1/2 on [−c₀,c₀]. One has H→∞. In all counted pairs, |μ(n)μ(d)|=1, (n,d)=1, d≤3X and 0<log(d/n)≤c₀h. The restricted sum is therefore ≫ h X² (2m)^(2m)/((m!)²(3X)^3) ≫ h4^m/m by Stirling. The ceiling comes from 326. In particular, even an argument that managed to eliminate exactly all classes with gcd greater than one would still face the full absolute rate in the remaining class. The computation leaves open the aggregate sign within that class and does not prevent cancellation between classes in the total energy.
 
-**Antecedentes en la fase.** 326 usa ocupación en celdas sin imponer coprimalidad; 331 da un techo para la cola de divisores comunes. Aquí el piso persiste tras fijar el mcd exactamente igual a uno. La densidad elemental sólo se usa para obtener esta conclusión sobre la energía.
+**Antecedents in the phase.** 326 uses occupation in cells without imposing coprimality; 331 gives a ceiling for the tail of common divisors. Here the floor persists after fixing the gcd exactly equal to one. The elementary density is only used to obtain this conclusion about the energy.

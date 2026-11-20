@@ -1,53 +1,53 @@
-# Revisión de la ronda 5 (generativa: escribir un objeto desde la especificación A1–A6)
+# Review of round 5 (generative: write an object from the specification A1–A6)
 
-Memos revisadas: `ROUND_005_G1.md` … `ROUND_005_G5.md`. Las cinco concluyen «no logré escribir un objeto que
-cumpla A1–A6». Ninguna candidata. Signo global OPEN. Ningún resultado de esta ronda lleva signo.
+Memos reviewed: `ROUND_005_G1.md` … `ROUND_005_G5.md`. All five conclude "I did not manage to write an object that
+satisfies A1–A6". No candidate. Global sign OPEN. No result of this round carries a sign.
 
-## Veredictos
+## Verdicts
 
-| Semilla | Memo | Veredicto | Comprobado | Reserva |
+| Seed | Memo | Verdict | Checked | Reservation |
 |---|---|---|---|---|
-| G1 objeto de grado ≥ 3 con hessiana −a_T | 005_G1 | ACEPTADO | Lema 2–3: con p(e + sF) = p(e)∏(1 + sλ_i), Σλ_i = 0 y Σλ_i² proporcional a a_T(F) sobre P_T, de donde \|e_k(λ)\| ≤ (Σλ_i²)^{k/2}; para d = 3 el discriminante da a_T³ ≥ 54 p(F)² | La reducción de las cuatro clases de certificado a (G) se leyó, no se rehízo entera. «Probablemente falso en casi-minimizantes» es ARGUED. La cita de G2_B8_R5 no tiene aritmética de intervalos |
-| G2 cierre bajo producto sobre la signatura | 005_G2 | ACEPTADO | Lema 1 (homomorfismo: producto de factores ↦ suma de formas); Lema 2 (un semigrupo cerrado bajo producto contiene x_∞ ⊛ x_2^{⊛n}, cuya forma 𝔪_T − nΠ_{T,2} tiene índice negativo no acotado sobre P_T para T > ½ log 2) | Lemas 3–5 leídos, no rehechos. «c = 2 exactamente falla» no se comprueba; sólo c grande |
-| G3 la forma como varianza | 005_G3 | ACEPTADO CON RESERVA | Lema 1 (formato de varianza ⟺ (G)); Lema 3 (las leyes de ζ^c son probabilidades para todo c > 0) | El Lema 2 (Π_T con subespacios definidos de dimensión arbitraria de ambos signos sobre P_T) se revisó sólo en su plausibilidad |
-| G4 inducción que alarga la ventana | 005_G4 | ACEPTADO | Lema 1 (c_F(±2T) = 0: en el cruce λ_A no depende del peso entrante); Lema 2 (intervalo admisible con interior cuando λ_A(T) > 0); Lema 3 (todo peso cumple a(n) = (a∗1)(n) − Σ_{d\|n, d<n}a(d)) | La premisa de la semilla era falsa (Lema 3). El análisis del forzante de Riccati es ARGUED |
-| G5 invención libre | 005_G5 | ACEPTADO | L1 (−∇² log det(X_0 + ΣxA)[u,u] = tr((X_0⁻¹A_u)²): forma de Gram); L3 (para p homogéneo, por la identidad de Euler ∇²p(x_0)x_0 = (d−1)∇p(x_0), «a lo sumo un autovalor positivo» ⟺ ∇² log p ⪯ 0 sobre el ortogonal del gradiente) | L2 es PROVED en dimensión finita; su punto (e) es relativo a G2_B8_R1 |
+| G1 object of degree ≥ 3 with Hessian −a_T | 005_G1 | ACCEPTED | Lemma 2–3: with p(e + sF) = p(e)∏(1 + sλ_i), Σλ_i = 0 and Σλ_i² proportional to a_T(F) on P_T, whence \|e_k(λ)\| ≤ (Σλ_i²)^{k/2}; for d = 3 the discriminant gives a_T³ ≥ 54 p(F)² | The reduction of the four certificate classes to (G) was read, not redone in full. "Probably false at near-minimizers" is ARGUED. The citation of G2_B8_R5 has no interval arithmetic |
+| G2 closure under product over the signature | 005_G2 | ACCEPTED | Lemma 1 (homomorphism: product of factors ↦ sum of forms); Lemma 2 (a semigroup closed under product contains x_∞ ⊛ x_2^{⊛n}, whose form 𝔪_T − nΠ_{T,2} has unbounded negative index on P_T for T > ½ log 2) | Lemmas 3–5 read, not redone. "c = 2 fails exactly" is not checked; only large c |
+| G3 the form as a variance | 005_G3 | ACCEPTED WITH RESERVATION | Lemma 1 (variance format ⟺ (G)); Lemma 3 (the laws of ζ^c are probabilities for all c > 0) | Lemma 2 (Π_T with definite subspaces of arbitrary dimension of both signs on P_T) was reviewed only for plausibility |
+| G4 induction that lengthens the window | 005_G4 | ACCEPTED | Lemma 1 (c_F(±2T) = 0: at the crossing λ_A does not depend on the incoming weight); Lemma 2 (admissible interval with interior when λ_A(T) > 0); Lemma 3 (every weight satisfies a(n) = (a∗1)(n) − Σ_{d\|n, d<n}a(d)) | The premise of the seed was false (Lemma 3). The analysis of the Riccati forcing is ARGUED |
+| G5 free invention | 005_G5 | ACCEPTED | L1 (−∇² log det(X_0 + ΣxA)[u,u] = tr((X_0⁻¹A_u)²): Gram form); L3 (for homogeneous p, by Euler's identity ∇²p(x_0)x_0 = (d−1)∇p(x_0), "at most one positive eigenvalue" ⟺ ∇² log p ⪯ 0 on the orthogonal complement of the gradient) | L2 is PROVED in finite dimension; its point (e) is relative to G2_B8_R1 |
 
-## Resultados que se anotan (todos sin signo)
+## Results recorded (all without sign)
 
-R5-a (PROVED, `ROUND_005_G5.md` L1, L3; `ROUND_005_G3.md` Lema 1). Log-concavidad en un punto base
-(determinante, función de partición, varianza) y signatura de Lorentz de la hessiana de un polinomio
-homogéneo en un punto: equivalen a una realización de Gram (G) o al enunciado en el sector. No añaden
-mecanismo. No excluye una propiedad válida en un cono entero con certificado propio.
+R5-a (PROVED, `ROUND_005_G5.md` L1, L3; `ROUND_005_G3.md` Lemma 1). Log-concavity at a base point
+(determinant, partition function, variance) and Lorentz signature of the Hessian of a homogeneous
+polynomial at a point: equivalent to a Gram realization (G) or to the statement on the sector. They add no
+mechanism. Does not exclude a property valid on a whole cone with its own certificate.
 
-R5-b (PROVED, `ROUND_005_G1.md` Lema 3). Si p es hiperbólico de grado d ≥ 3 respecto de e con hessiana −a_T
-sobre P_T, entonces \|D^k p(e)[F^k]\| ≤ C a_T(F)^{k/2}: o los términos de grado ≥ 3 se anulan sobre P_T
-(clase de R160_C7_R1 Prop. 6.2), o la hiperbolicidad es el objetivo con margen (para d = 3,
-a_T³ ≥ 54 p(F)²). Responde a R160_C7_R1 §6.3(2) en las cuatro clases de certificado examinadas.
+R5-b (PROVED, `ROUND_005_G1.md` Lemma 3). If p is hyperbolic of degree d ≥ 3 with respect to e with Hessian −a_T
+on P_T, then \|D^k p(e)[F^k]\| ≤ C a_T(F)^{k/2}: either the terms of degree ≥ 3 vanish on P_T
+(class of R160_C7_R1 Prop. 6.2), or hyperbolicity is the target with margin (for d = 3,
+a_T³ ≥ 54 p(F)²). Answers R160_C7_R1 §6.3(2) in the four certificate classes examined.
 
-R5-c (PROVED, `ROUND_005_G2.md` Lemas 1–2). Multiplicar factores de Euler es sumar formas. Ningún semigrupo
-cerrado bajo producto que contenga el factor arquimediano y el del primo 2 admite un teorema de cierre
-«n₋ ≤ κ sobre P_T» para T > ½ log 2. Con la condición de balance (cada factor local una vez por cada
-factor arquimediano, equivalente a la imparidad de la derivada logarítmica bajo s ↦ 1 − s) y coeficientes
-en {0, 1} no queda operación de cierre: la afirmación es el enunciado. Las etapas intermedias con
-ecuación funcional torcida están en la fase 122 (P122_018).
+R5-c (PROVED, `ROUND_005_G2.md` Lemmas 1–2). Multiplying Euler factors is adding forms. No semigroup
+closed under product containing the archimedean factor and that of the prime 2 admits a closure theorem
+"n₋ ≤ κ on P_T" for T > ½ log 2. With the balance condition (each local factor once per
+archimedean factor, equivalent to the oddness of the logarithmic derivative under s ↦ 1 − s) and coefficients
+in {0, 1} no closure operation remains: the claim is the statement. The intermediate stages with
+twisted functional equation are in phase 122 (P122_018).
 
-R5-d (PROVED, `ROUND_005_G4.md` Lemas 1–3). En el instante en que la ventana alcanza log n, λ_A no depende
-del peso entrante; en toda ventana con λ_A(T) > 0 el conjunto de pesos admisibles en n es un intervalo
-con interior. Todo peso está determinado por su suma sobre divisores y los pesos anteriores; lo propio de
-Λ es que esa suma es log n. Antecedentes: R162_802 §§4–5, R162_2701, fase 197 BARRIER_W_001.
+R5-d (PROVED, `ROUND_005_G4.md` Lemmas 1–3). At the instant the window reaches log n, λ_A does not depend
+on the incoming weight; in every window with λ_A(T) > 0 the set of admissible weights at n is an interval
+with interior. Every weight is determined by its divisor sum and the previous weights; what is specific to
+Λ is that this sum is log n. Antecedents: R162_802 §§4–5, R162_2701, phase 197 BARRIER_W_001.
 
-R5-e (PROVED, `ROUND_005_G3.md` Lema 3; Lema 2 con la reserva indicada). Las leyes de valuaciones de ζ^c son
-probabilidades para todo c > 0; ninguna identidad de varianza se rompe en c = 2. El peine no es una
-varianza explicada. Antecedentes: fase 209 CONSTRUCTOR_005 §10, ANTICORRELATION_003; 106_114 Teor. 2;
+R5-e (PROVED, `ROUND_005_G3.md` Lemma 3; Lemma 2 with the indicated reservation). The valuation laws of ζ^c are
+probabilities for all c > 0; no variance identity breaks at c = 2. The comb is not an
+explained variance. Antecedents: phase 209 CONSTRUCTOR_005 §10, ANTICORRELATION_003; 106_114 Thm. 2;
 211 POWER_GLOBAL_ROUTE_REVIEW.
 
-## Lo que la ronda deja sin excluir, y sin objeto escrito
+## What the round leaves unexcluded, and without a written object
 
-Las cinco memos señalan, con palabras distintas, el mismo hueco:
-1. Un reparto local a_T = q_∞ + Σ_p q_p con q_v ⪰ 0, donde q_p no es invariante por traslación ni de tipo
-   Lévy y tiene fórmula propia (G1, G5). Con reparto libre su existencia equivale al objetivo.
-2. Un predicado de etapa para la inducción por primos, con fórmula propia (G2).
-3. Una relación no lineal en el peso entre componer desplazamientos (convolución) y componer longitudes
-   (ventana) (G4).
-4. Certificados de raíces reales fuera de las cuatro clases examinadas; un punto base dependiente de F (G1).
+The five memos point, in different words, to the same gap:
+1. A local splitting a_T = q_∞ + Σ_p q_p with q_v ⪰ 0, where q_p is neither translation-invariant nor of
+   Lévy type and has its own formula (G1, G5). With free splitting its existence is equivalent to the target.
+2. A stage predicate for induction over primes, with its own formula (G2).
+3. A relation non-linear in the weight between composing shifts (convolution) and composing lengths
+   (window) (G4).
+4. Real-rootedness certificates outside the four classes examined; an F-dependent base point (G1).

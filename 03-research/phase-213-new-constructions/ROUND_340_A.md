@@ -1,21 +1,21 @@
-# Un único subbloque aislado con los signos verdaderos ya exige RH
+# A single isolated subblock with the true signs already demands RH
 
-Para cada Y real grande tomar X=Y², I=(21Y/20,22Y/20], h=X^(−δ), y formar
+For each large real Y take X=Y², I=(21Y/20,22Y/20], h=X^(−δ), and form
 
     B_I(x)=Σ_{d,e∈I} μ(d)μ(e) η(log(x/(de))/h).
 
-En la reducción 338 si ambas copias se restringen a I sólo queda este pulso. El siguiente enunciado **equivale a RH**: para δ=1/j, j≥5, y cada ε>0,
+In the reduction 338 if both copies are restricted to I only this pulse remains. The following statement **is equivalent to RH**: for δ=1/j, j≥5, and each ε>0,
 
-    ∫_[X,2X] |B_I(x)|² dx/x ≪_(δ,ε) h X^(1+ε)     para todo X grande.
+    ∫_[X,2X] |B_I(x)|² dx/x ≪_(δ,ε) h X^(1+ε)     for all large X.
 
-**Por qué el bloque aislado ya basta.** Todos los pulsos están enteros en la ventana, como en 339. Para cada t real fijo el integral contra (x/X)^(−it) es exactamente h hatη(ht) [Σ_I μ(n)(n/Y)^(−it)]². Como hatη(0)≠0, Cauchy–Schwarz bajo la cota propuesta implica
+**Why the isolated block already suffices.** All pulses are entirely in the window, as in 339. For each fixed real t the integral against (x/X)^(−it) is exactly h hatη(ht) [Σ_I μ(n)(n/Y)^(−it)]². Since hatη(0)≠0, Cauchy–Schwarz under the proposed bound implies
 
     |Σ_I μ(n)n^(−it)| ≪ Y^((1+δ)/2+ε).
 
-En particular t=0 basta. Para cada Z grande tomar Y=20Z/22; así se controla la suma entre 21Z/22 y Z. Telescopar en razón 21/22, con extremos reales y convención semiabierta, da la misma cota para Σ_{n≤Z}μ(n). Tomar j arbitrariamente grande y después elegir ε demuestra la cota de Mertens O_ν(Z^(1/2+ν)) para cada ν>0. Por sumación parcial 1/ζ se prolonga sin polos en Re s>1/2. El mismo razonamiento con un único t fijo no nulo controla los sumandos μ(n)n^(−it) y prolonga 1/ζ(s+it) en ese semiplano.
+In particular t=0 suffices. For each large Z take Y=20Z/22; thus the sum between 21Z/22 and Z is controlled. Telescoping in ratio 21/22, with real endpoints and half-open convention, gives the same bound for Σ_{n≤Z}μ(n). Taking j arbitrarily large and then choosing ε proves the Mertens bound O_ν(Z^(1/2+ν)) for each ν>0. By partial summation 1/ζ extends without poles to Re s>1/2. The same reasoning with a single fixed nonzero t controls the summands μ(n)n^(−it) and extends 1/ζ(s+it) to that half-plane.
 
-**Dirección bajo RH.** Sea D_I(t)=Σ_I μ(n)(n/Y)^(−it). Para todo ν>0, RH da |D_I(t)|≪_ν Y^(1/2+ν) uniformemente para |t|≤Y⁴. En detalle, para cada extremo usar el semientero v=⌊extremo⌋+1/2 y Perron truncado para 1/ζ(s+it), en abscisa 1+1/log Y y altura U=Y^10. Con coeficientes de módulo ≤1 el error es O(Y log Y/U) por separación de v y los enteros (en [v/2,2v] sumar los inversos de las distancias y fuera usar convergencia absoluta). Mover a Re s=1/2+ν/3. Bajo RH la cota de 326 da O((2+U+|t|)^γ) para cualquier γ>0 en esa franja; el lado vertical cuesta O(Y^(1/2+ν/3)(2U)^γ log U), y los horizontales O(Y(2U)^γ/U). Escoger γ suficientemente pequeño. Restar los dos prefijos y multiplicar por Y^(it).
+**Direction under RH.** Let D_I(t)=Σ_I μ(n)(n/Y)^(−it). For every ν>0, RH gives |D_I(t)|≪_ν Y^(1/2+ν) uniformly for |t|≤Y⁴. In detail, for each endpoint use the half-integer v=⌊endpoint⌋+1/2 and truncated Perron for 1/ζ(s+it), at abscissa 1+1/log Y and height U=Y^10. With coefficients of modulus ≤1 the error is O(Y log Y/U) by separation of v from the integers (on [v/2,2v] sum the inverses of the distances and outside use absolute convergence). Move to Re s=1/2+ν/3. Under RH the bound of 326 gives O((2+U+|t|)^γ) for any γ>0 in that strip; the vertical side costs O(Y^(1/2+ν/3)(2U)^γ log U), and the horizontal ones O(Y(2U)^γ/U). Choose γ small enough. Subtract the two prefixes and multiply by Y^(it).
 
-Plancherel en log x da exactamente h²/(2π) veces la integral de |hatη(ht)|²|D_I(t)|⁴ en toda la recta. En |t|≤Y⁴ la cota anterior y la norma de hatη dan O(hY^(2+4ν)). En el resto usar |D_I|≪Y y el decaimiento de cualquier orden de hatη (hY⁴≥Y³ para estas δ). Elegir ν en función de ε.
+Plancherel in log x gives exactly h²/(2π) times the integral of |hatη(ht)|²|D_I(t)|⁴ over the whole line. On |t|≤Y⁴ the previous bound and the norm of hatη give O(hY^(2+4ν)). Elsewhere use |D_I|≪Y and the decay of any order of hatη (hY⁴≥Y³ for these δ). Choose ν depending on ε.
 
-**Decisión para el método.** Intentar demostrar la norma suficiente en 338 por separado en cada rectángulo de índices exigiría, ya en este rectángulo concreto, un resultado equivalente a RH. El argumento usa los signos exactos y una sola frecuencia en la dirección difícil, a diferencia del contraejemplo artificial 339. No establece que las distintas componentes del bloque completo deban cancelarse; muestra el coste lógico de desechar esa posibilidad. Es una aplicación del criterio clásico de Mertens, no un mecanismo independiente de cierre.
+**Decision for the method.** Trying to prove the sufficient norm in 338 separately on each rectangle of indices would demand, already on this concrete rectangle, a result equivalent to RH. The argument uses the exact signs and a single frequency in the hard direction, unlike the artificial counterexample 339. It does not establish that the different components of the full block must cancel; it shows the logical cost of discarding that possibility. It is an application of the classical Mertens criterion, not an independent closing mechanism.

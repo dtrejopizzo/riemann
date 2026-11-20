@@ -1,40 +1,40 @@
-# Promediar escalas cuartas elimina la condición de libre de cuadrados en cada pendiente
+# Averaging fourth-power scales eliminates the squarefree condition in each slope
 
-En 059 el término integral de cada pendiente se anuló, pero quedaba un error al contar los enteros libres de cuadrados. Aquí se promedia la **identidad completa sin cortes** en escalas x/k⁴. La descomposición única como cuadrado por libre de cuadrados permite estimar conjuntamente las pendientes de producto reducido hasta
+In 059 the integral term of each slope was annihilated, but an error remained when counting squarefree integers. Here the **complete identity without cutoffs** is averaged over the scales x/k⁴. The unique decomposition as a square times a squarefree number allows estimating jointly the slopes of reduced product up to
 
-    R=L exp(−δ√log L),     L=√x,     δ>0 fijo.
+    R=L exp(−δ√log L),     L=√x,     δ>0 fixed.
 
-Su coste es o(L), sumando incluso los módulos de los totales por pendiente. El cambio abandona los rangos individuales de 056 y usa un nuevo criterio equivalente al signo, no una mejora del conteo anterior para el propio peso truncado.
+Its cost is o(L), even summing the absolute values of the totals per slope. The change abandons the individual ranges of 056 and uses a new criterion equivalent to the sign, not an improvement of the previous count for the truncated weight itself.
 
-**Identidad exacta.** Usar V de 047, β=ε*ε de 056, b₀ de 059 y y=4x. Para cada x>0 definir Q(x) por la suma de μ(d)μ(m)β(w)V(dmw/y) multiplicada por [log(d/L)+log(m/L)]/2−b₀ sobre todos los índices positivos, sin cortes. Es finita y se anula para x suficientemente pequeño. Si B(x)=4A(x)−4A(2x)+A(4x) de 054, entonces
+**Exact identity.** Use V from 047, β=ε*ε from 056, b₀ from 059 and y=4x. For each x>0 define Q(x) by the sum of μ(d)μ(m)β(w)V(dmw/y) multiplied by [log(d/L)+log(m/L)]/2−b₀ over all positive indices, without cutoffs. It is finite and vanishes for sufficiently small x. If B(x)=4A(x)−4A(2x)+A(4x) of 054, then
 
     Q(x)=B(x)−(log L+b₀) Σ_{j=1,2,4} c_j V(j/y),   (c₁,c₂,c₄)=(1,−4,4).
 
-En efecto μ*β=α, μ*α tiene masas c_j, y (μ log)*1=−Λ por inversión de divisores. Por simetría basta desarrollar el logaritmo del primer índice. El término adicional está soportado en un compacto de x alejado de cero.
+Indeed μ*β=α, μ*α has masses c_j, and (μ log)*1=−Λ by divisor inversion. By symmetry it suffices to expand the logarithm of the first index. The additional term is supported on a compact set of x away from zero.
 
-**Criterio.** Escribir S(x)=Σ_{k≥1}Q(x/k⁴), suma finita. El signo global equivale a S(j⁴)≤Cj² eventualmente. Si vale el signo, |B(x)|≪√x por 047 y por tanto |S(x)|≪√x usando Σk⁻²<∞. La suma de las correcciones compactas cuesta O(x^(1/4)), pues sólo entran k comparables a x^(1/4).
+**Criterion.** Write S(x)=Σ_{k≥1}Q(x/k⁴), a finite sum. The global sign is equivalent to S(j⁴)≤Cj² eventually. If the sign holds, |B(x)|≪√x by 047 and therefore |S(x)|≪√x using Σk⁻²<∞. The sum of the compact corrections costs O(x^(1/4)), since only k comparable to x^(1/4) enter.
 
-Para la vuelta unilateral, las dos primeras derivadas logarítmicas de B y B mismo son O(x) en toda la semirrecta positiva por Chebyshev, suavidad y soporte. La corrección compacta satisface las mismas cotas, y Σk⁻⁴ converge. Así se interpola S(exp r)exp(−r/2) con error O(1) entre las muestras de 4log j como en 047. En Re s>1 la Mellin con convención ∫S(x)x^(−s)dx/x es
+For the one-sided converse, the first two logarithmic derivatives of B and B itself are O(x) on the whole positive half-line by Chebyshev, smoothness and support. The compact correction satisfies the same bounds, and Σk⁻⁴ converges. Thus S(exp r)exp(−r/2) is interpolated with error O(1) between the samples at 4log j as in 047. On Re s>1 the Mellin transform with convention ∫S(x)x^(−s)dx/x is
 
     ζ(4s)[(2−2^s)² V̂(s)(ζ'/ζ)(s)+E(s)],
 
-con E entera de la corrección compacta. Esto sigue de la serie de Λ por convergencia absoluta y del cambio x=k⁴u; V̂(s)=∫V(t)t^(s−1)dt. La expresión es regular en todo el eje real s>1/2, incluido s=1 por el cero doble. Si S(x)≤C√x eventualmente, Landau aplicado en log x a C√x−S(x) en una cola da holomorfía para Re s>1/2 como en 038. En 1/2<Re s<1 el factor ζ(4s) no se anula y (2−2^s) tampoco. Por 044–047 V̂(s) es el producto del factor del promedio P(s−1/2) con
+with E entire from the compact correction. This follows from the series of Λ by absolute convergence and from the change x=k⁴u; V̂(s)=∫V(t)t^(s−1)dt. The expression is regular on the whole real axis s>1/2, including s=1 because of the double zero. If S(x)≤C√x eventually, Landau applied in log x to C√x−S(x) on a tail gives holomorphy for Re s>1/2 as in 038. On 1/2<Re s<1 the factor ζ(4s) does not vanish and neither does (2−2^s). By 044–047 V̂(s) is the product of the averaging factor P(s−1/2) with
      
     2b [1−cosh(h(s−1/2))/cosh(hb)]/[b²−(s−1/2)²],
 
-donde b=3/2, h=log16 (integrar los exponenciales de 044). Ambos son no nulos en esta franja. Luego ningún polo de ζ'/ζ allí puede quedar oculto, y se concluye por Weil como en 038. Para una versión bilateral basta en cambio la inversión elemental Q(x)=Σ μ(k) S(x/k⁴) y la cota bilateral de 047–054.
+where b=3/2, h=log16 (integrate the exponentials of 044). Both are nonzero in this strip. Hence no pole of ζ'/ζ there can stay hidden, and one concludes by Weil as in 038. For a two-sided version, instead, the elementary inversion Q(x)=Σ μ(k) S(x/k⁴) and the two-sided bound of 047–054 suffice.
 
-**Qué ocurre en una pendiente.** Sea d=at, m=bt, (a,b)=1, r=ab. Para términos no nulos r es libre de cuadrados. Sea f(u)=(log u−b₀)Σ_w β(w)V(u²w/4), el perfil suave de 059, plano en cero, compacto por arriba y de integral cero. En la escala x/k⁴ aparece f(k²t/T) con T=L/√r. La contribución de la pendiente es exactamente
+**What happens in a slope.** Let d=at, m=bt, (a,b)=1, r=ab. For nonzero terms r is squarefree. Let f(u)=(log u−b₀)Σ_w β(w)V(u²w/4), the smooth profile of 059, flat at zero, compact from above and of integral zero. At scale x/k⁴ there appears f(k²t/T) with T=L/√r. The contribution of the slope is exactly
 
-    μ(r) Σ_n f(n/T) 1_{v_p(n) par para todo p|r}.
+    μ(r) Σ_n f(n/T) 1_{v_p(n) even for all p|r}.
 
-En efecto n=k²t con t libre de cuadrados es una descomposición única; la condición sobre sus valuaciones es precisamente (t,r)=1. Esto reemplaza la densidad asintótica de 057 por una identidad discreta.
+Indeed n=k²t with t squarefree is a unique decomposition; the condition on its valuations is precisely (t,r)=1. This replaces the asymptotic density of 057 by a discrete identity.
 
-El indicador es Σ_{h|n, rad(h)|r}(−1)^Ω(h), por suma alternada en cada potencia prima. Extender f por cero a la recta. Poisson e ∫f=0 dan |Σ_l f(l/Z)|≤C Z^σ con una **misma C** para todo 0<σ≤1/2: si Z≥1 basta integración por partes dos veces; para Z pequeño la suma se anula, y el intervalo intermedio es compacto. La suma en l es sobre enteros positivos. Así el total de módulos de pendientes para r≤R es a lo sumo
+The indicator is Σ_{h|n, rad(h)|r}(−1)^Ω(h), by alternating sum at each prime power. Extend f by zero to the line. Poisson and ∫f=0 give |Σ_l f(l/Z)|≤C Z^σ with **one and the same C** for all 0<σ≤1/2: if Z≥1 integration by parts twice suffices; for small Z the sum vanishes, and the intermediate interval is compact. The sum over l is over positive integers. Thus the total of absolute values of slopes for r≤R is at most
 
     C L^σ Σ_{r≤R} 2^ω(r) Σ_{rad(h)|r} h^(−σ)
       ≤ C L^σ R log(2R) ∏_p [1+2/(p(p^σ−1))].
 
-Para la desigualdad, fijar h y escribir r=rad(h)j. Usar 2^ω(r)≤2^ω(h)τ(j) y la suma elemental de τ. El logaritmo del producto es o(1/σ) al tender σ a cero: cada término multiplicado por σ tiende a cero y es ≤2/(p log p), sumable por Chebyshev y sumación parcial. Con σ=δ/(2√log L) resulta una cota L exp(−(δ/2+o(1))√log L), que prueba el enunciado. Para r=1 ya es rápido el decaimiento por Poisson; la nueva diagonal está incluida.
+For the inequality, fix h and write r=rad(h)j. Use 2^ω(r)≤2^ω(h)τ(j) and the elementary sum of τ. The logarithm of the product is o(1/σ) as σ tends to zero: each term multiplied by σ tends to zero and is ≤2/(p log p), summable by Chebyshev and partial summation. With σ=δ/(2√log L) one gets a bound L exp(−(δ/2+o(1))√log L), which proves the statement. For r=1 the decay by Poisson is already fast; the new diagonal is included.
 
-**Alcance.** Sigue faltando la cota superior uniforme O(L) sobre las pendientes con r>R. El promedio no borra polos del puente global; su ventaja demostrada es que sustituye el conteo de t libres de cuadrados por una suma lisa en todos los enteros, con una condición explícita en los primos que dividen r. La inversión por potencias cuadradas y la fórmula de Poisson son conocidas. La comparación es con la representación de 059 antes de promediar, que mantiene un soporte individual más estrecho.
+**Scope.** The uniform upper bound O(L) on the slopes with r>R is still missing. The average does not erase poles of the global bridge; its proven advantage is that it replaces the count of squarefree t by a smooth sum over all integers, with an explicit condition on the primes dividing r. Inversion by square powers and the Poisson formula are known. The comparison is with the representation of 059 before averaging, which keeps a narrower individual support.

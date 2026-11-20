@@ -1,33 +1,33 @@
-# POWER_THETA_DENSITY_OUTER_AUDIT_088 — Auditoría independiente
+# POWER_THETA_DENSITY_OUTER_AUDIT_088 — Independent audit
 
-Estado: **APROBADO / PROVED para TODO t>=1.** Fuente `POWER_THETA_DENSITY_OUTER_088.md` y verificador leídos íntegros; reproducción mapa exit0 con cuatro bloques PASS y mismo hash que constructor/root:
+Status: **APPROVED / PROVED for ALL t>=1.** Source `POWER_THETA_DENSITY_OUTER_088.md` and verifier read in full; independent reproduction exit0 with four blocks PASS and the same hash as the earlier runs:
 
     d2b1e479295cbf9eda602a2786b657cab5c83db1c74dee9a7d00b751723fc8f4
 
-Papers intactos; prueba finita racional/polinómica, sin malla ni valores theta muestreados.
+Papers untouched; finite rational/polynomial proof, without mesh or sampled theta values.
 
-## Primer modo y normalización
+## First mode and normalization
 
-Las cuatro densidades del primer modo son pi g0 F, mientras el factor retirado para las razones es tPhi1=t pi g0 b. La identidad de Wronskianos al factorizar una función común da exactamente W4,0=W(F)/(tb)^4. D=partial_t+2y partial_y actúa sobre lasFpolinomiales; las derivadas de g0 quedan eliminadas por la identidad general, no omitidas indebidamente.
+The four densities of the first mode are pi g0 F, while the factor removed for the ratios is tPhi1=t pi g0 b. The Wronskian identity when factoring a common function gives exactly W4,0=W(F)/(tb)^4. D=partial_t+2y partial_y acts on the polynomial F; the derivatives of g0 are eliminated by the general identity, not improperly omitted.
 
-El verificador genera la recurrenciaB0..3, el determinante de24permutaciones y P=−W(F)/(16y²) con Fraction. La sustitución t=1+T,y=21+Y en P−4096t²y8 tiene exactamente27coeficientes positivos incluido el constante. Por tanto el signo vale en TODO el cuadrante independiente t>=1,y>=21. b<2y fija G0<−4096t²y6 con la orientación correcta. El dato real cumple y>21 por pi>3,exp2>7.
+The verifier generates the recurrence B0..3, the 24-permutation determinant and P=−W(F)/(16y²) with Fraction. The substitution t=1+T, y=21+Y in P−4096t²y8 has exactly 27 positive coefficients including the constant. Therefore the sign holds on the WHOLE independent quadrant t>=1, y>=21. b<2y fixes G0<−4096t²y6 with the correct orientation. The real datum satisfies y>21 by pi>3, exp2>7.
 
-## Cola theta completa hasta V6
+## Complete theta tail up to V6
 
-La cancelación de logy antes de diferenciar logrm es válida. Cada coeficiente de la diferencia de log(1−h/m²) y log(1−h) contiene1−m^(−2n), de módulo<=1; esto paga simultáneamente las derivadas1..6 mediante la sumaEulern5h^n<1 en h<=1/14. Los Bell completos con argumentos2^(j+1)z dan el polinomioB6 indicado, menor que5000z6 desdez>=63. Los órdenes inferiores están dominados porque B_(j+1)>=x1 Bj con x1=4z>=1.
+The cancellation of logy before differentiating logrm is valid. Each coefficient of the difference of log(1−h/m²) and log(1−h) contains 1−m^(−2n), of modulus <=1; this pays simultaneously for derivatives 1..6 via the Euler sum n5h^n<1 on h<=1/14. The complete Bell polynomials with arguments 2^(j+1)z give the indicated polynomial B6, less than 5000z6 from z>=63. The lower orders are dominated because B_(j+1)>=x1 Bj with x1=4z>=1.
 
-Al ampliar a TODOS los enterosa>=3 no se pierde ninguna contribución. La razón sucesiva y la monotonía y6exp(−3y) pagan TODA la cola por E=62523502209/6553600000000000000000. Los coeficientes log6 son exactamente(k−1)!S(6,k); su suma conEpotencias<2E paga también órdenes inferiores. No se presupone un signo de ese error.
+Extending to ALL integers a>=3 loses no contribution. The successive ratio and the monotonicity of y6exp(−3y) pay for the WHOLE tail by E=62523502209/6553600000000000000000. The log6 coefficients are exactly (k−1)!S(6,k); their sum with powers of E <2E also pays for lower orders. No sign of that error is presupposed.
 
-Los jets del primer modo hasta6 quedan en módulo<68y (y parap<2y); añadir eta<1 conserva BOX128y. Los segmentos del teorema multivariable están por tanto contenidos en esa caja.
+The jets of the first mode up to 6 stay in modulus <68y (and for p<2y); adding eta<1 keeps BOX 128y. The segments of the multivariable theorem are therefore contained in that box.
 
-## Polinomio genérico y propagación
+## Generic polynomial and propagation
 
-La derivación formal usa p'=q,...,v5'=v6 y prohíbe derivarv6. El algoritmo construye G=t4W(1,A,B,C), cancela potencias negativas det y comprueba55monomios,tgrado<=2,jetgrado<=6. La suma ponderada exactaK30936927338496 controla la suma de las seis derivadas parciales en BOX porKt²y5. Cada término queda pagado por el grado de jets y128^(grado−1); t>=1,y>=21 permiten ampliar a t²y5.
+The formal differentiation uses p'=q,...,v5'=v6 and forbids differentiating v6. The algorithm constructs G=t4W(1,A,B,C), cancels negative powers of t and checks 55 monomials, t degree <=2, jet degree <=6. The exact weighted sum K 30936927338496 controls the sum of the six partial derivatives on BOX by Kt²y5. Each term is paid by the jet degree and 128^(degree−1); t>=1, y>=21 allow enlarging to t²y5.
 
-La desigualdad racional etaK=59029694970340794273/10^17<96·21<=96y está reproducida. Así |G−G0|<96t²y6, y G<−4000t²y6; por tanto W4<−4000y6/t² para TODOt>=1. No se reemplazó una cola alta por una muestra ni por un asintótico.
+The rational inequality etaK=59029694970340794273/10^17<96·21<=96y is reproduced. Thus |G−G0|<96t²y6, and G<−4000t²y6; therefore W4<−4000y6/t² for ALL t>=1. A high tail was not replaced by a sample or by an asymptotic.
 
-## Consecuencia y límites
+## Consequence and limits
 
-Con B'>0,J>0 globales086, RAISE087 convierte el signo en(Eraise/J)'>0 en la región exterior; Rolle da el determinante de densidades negativo para todos los cuatro nodos TODOS>=1. Esto no permite Andreief en la semirrecta completa: sigue pendiente0<t<1.087 sólo aporta un entorno existente del origen sin radio, que no cubre ese compacto.
+With B'>0, J>0 global from 086, RAISE087 converts the sign into (Eraise/J)'>0 on the exterior region; Rolle gives the density determinant negative for all four nodes ALL >=1. This does not allow Andreief on the complete half-line: 0<t<1 remains pending. 087 only supplies an existing neighbourhood of the origin without radius, which does not cover that compact range.
 
-No se añade coberturaW a085, ni se prueban cinco/todos los órdenes o una ventanaT. Consulta de077/083–087 y los tres registros distingue el nuevo signo exterior de un Wronskiano hastaV6 del ya probadoN077 hastaV4.
+No W coverage is added to 085, nor are five/all orders or a window T proved. Consulting 077/083–087 and the three records distinguishes the new exterior sign of a Wronskian up to V6 from the already proved N077 up to V4.

@@ -1,32 +1,32 @@
 # POWER ARCH CELL AUDIT 026
 
-Estado: ARCH_CELL026 y UNIFORM_CUTOFF026 APROBADOS. Papers intactos.
+Status: ARCH_CELL026 and UNIFORM_CUTOFF026 APPROVED. Papers untouched.
 
-Antecedentes revisados: CELL_BALANCE024 y su auditoría, CELL_TEST024, INVERSE_LOGCONCAVITY025 y su auditoría. La logconcavidad específica ya permite un corte completo y ERR129<−.66; no es por sí sola un signo de W. La nueva obligación cuantitativa es conservar ARCH_sharp en el balance real, o extender el corte con un teorema uniforme de parámetros. Una cota inferior insuficiente no es W negativo. Una identidad de agrupación sin desigualdad adicional no completa ese balance.
+Antecedents reviewed: CELL_BALANCE024 and its audit, CELL_TEST024, INVERSE_LOGCONCAVITY025 and its audit. The specific log-concavity already allows a full cutoff and ERR129<−.66; it is not by itself a sign of W. The new quantitative obligation is to keep ARCH_sharp in the real balance, or to extend the cutoff with a uniform theorem in the parameters. An insufficient lower bound is not W negative. A grouping identity without an additional inequality does not complete that balance.
 
-## ARCH_CELL026 — APROBADO
+## ARCH_CELL026 — APPROVED
 
-Revisados `POWER_ARCH_CELL_026.md` y `tools/power_arch_cell_026_verify.py`; ejecución independiente PASS. La recurrencia ψ(5/4+iτ/2)=ψ(1/4+iτ/2)+1/(1/4+iτ/2) incorpora exactamente el símbolo polar sharp. Para g129, la varianza V=u²/[4(2N−3)] y las tres traslaciones hasta17/4 son correctas; Euler/Jensen dan ARCH_sharp<−.81. Por tanto el comparador ARCH_sharp+.66 es negativo por más de.15. Esto demuestra insuficiencia de esa garantía de ERR, no W<0.
+Reviewed `POWER_ARCH_CELL_026.md` and `tools/power_arch_cell_026_verify.py`; independent run PASS. The recurrence ψ(5/4+iτ/2)=ψ(1/4+iτ/2)+1/(1/4+iτ/2) incorporates exactly the sharp polar symbol. For g129, the variance V=u²/[4(2N−3)] and the three shifts up to 17/4 are correct; Euler/Jensen give ARCH_sharp<−.81. Therefore the comparator ARCH_sharp+.66 is negative by more than .15. This shows the insufficiency of that ERR guarantee, not W<0.
 
-La identidad w(x)=ΣJ(nx) sigue de μ*1 con suma absoluta. Sustituir J=x∫K/t² da los pesos D=T(t)/t² y E_x=T(t/x)/t² y el factor x^(3/2) en rho. La representación de ψ produce k(x)=x^−7/2/(1−x^−2), con el factor2 declarado. Así JOINT conserva todas las normalizaciones y saltos.
+The identity w(x)=ΣJ(nx) follows from μ*1 with absolute summation. Substituting J=x∫K/t² gives the weights D=T(t)/t² and E_x=T(t/x)/t² and the factor x^(3/2) in rho. The representation of ψ produces k(x)=x^−7/2/(1−x^−2), with the declared factor 2. Thus JOINT preserves all normalisations and jumps.
 
-El intercambio agrupado es válido: cerca de x1, la parte suave de T(t)−x^(3/2)T(t/x) es O(x−1) en norma integrada contra |K|/t²; los cruces de escalones n≤t<nx también suman O(x−1) por el decaimiento y acotación suave de K. Esto cancela la singularidad de k. En infinito el mayorante es integrable. Las singularidades logarítmicas en t entero tienen medida cero y son localmente integrables; no se separan los dos términos divergentes del corchete.
+The grouped interchange is valid: near x1, the smooth part of T(t)−x^(3/2)T(t/x) is O(x−1) in norm integrated against |K|/t²; the step crossings n≤t<nx also add up to O(x−1) by the decay and smooth boundedness of K. This cancels the singularity of k. At infinity the majorant is integrable. The logarithmic singularities at integer t have measure zero and are locally integrable; the two divergent terms of the bracket are not separated.
 
-En1<t<2, I′=−1/(t²−1) y la diferencia de valores ψ dan la fórmula FIRST. El evaluador racional certifica Omega(3/2)<−.1. Se refuta positividad puntual universal de este peso conjunto. No se permite elegir un K arbitrario como si proviniera de una autocorrelación gamma: el ejemplo de soporte compacto violaría rho≤1. No se infiere signo de W ni imposibilidad de otras agrupaciones.
+On 1<t<2, I′=−1/(t²−1) and the difference of ψ values give the formula FIRST. The rational evaluator certifies Omega(3/2)<−.1. Universal pointwise positivity of this joint weight is refuted. Choosing an arbitrary K as if it came from a gamma autocorrelation is not allowed: the compact-support example would violate rho≤1. No sign of W and no impossibility of other groupings is inferred.
 
 
-## UNIFORM_CUTOFF026 — APROBADO
+## UNIFORM_CUTOFF026 — APPROVED
 
-Revisados `POWER_UNIFORM_CUTOFF_026.md` y `tools/power_uniform_cutoff_026_verify.py`; ejecución independiente PASS. El corte Jensen es válido para d≥2: f(j)=(d−j)/(2d−j−1) es decreciente y cóncava, r_j≤63(1+10/d)f(j), y la media del índice es tL<d. La comparación con L30 da exactamente t_J=d(d+220)/(330d+6300). El caso30t≥d también está tratado, sin salir del dominio de f.
+Reviewed `POWER_UNIFORM_CUTOFF_026.md` and `tools/power_uniform_cutoff_026_verify.py`; independent run PASS. The Jensen cutoff is valid for d≥2: f(j)=(d−j)/(2d−j−1) is decreasing and concave, r_j≤63(1+10/d)f(j), and the mean of the index is tL<d. The comparison with L30 gives exactly t_J=d(d+220)/(330d+6300). The case 30t≥d is also treated, without leaving the domain of f.
 
-La ecuación diferencial de rho y la Riccati de q son correctas. q>0 procede del kernel de calor; la expansión polinómica en infinito da q′=d/t²+O(t^−3)>0. En el nivel q′0, q″<0 impide volver a valores positivos; en el nivel q′M_d, q″=2qM_d+q²/t>0 impide retornar desde arriba al límite0. Estas barreras excluyen también contactos y dan0<q′<M_d en todo t>0. No se presupone la desigualdad que se pretende probar.
+The differential equation for rho and the Riccati equation for q are correct. q>0 comes from the heat kernel; the polynomial expansion at infinity gives q′=d/t²+O(t^−3)>0. At the level q′0, q″<0 prevents returning to positive values; at the level q′M_d, q″=2qM_d+q²/t>0 prevents returning from above to the limit 0. These barriers also exclude contacts and give 0<q′<M_d for all t>0. The inequality to be proved is not presupposed.
 
-De Riccati se obtiene la cota inferior de q. La identidad D′/D=u−q+q′/(3/2+q), el umbral Q²=9/4+M_d y la resolución t_R=2dQ/(u²−Q²) son correctos. Para d≥2 el denominador es positivo. El caso d1 se separa correctamente con el polinomio afín y su umbral1/30−1/693. Así ambos cortes son teoremas uniformes, no extrapolaciones entre certificados puntuales.
+From Riccati one obtains the lower bound for q. The identity D′/D=u−q+q′/(3/2+q), the threshold Q²=9/4+M_d and the resolution t_R=2dQ/(u²−Q²) are correct. For d≥2 the denominator is positive. The case d1 is correctly separated with the affine polynomial and its threshold 1/30−1/693. Thus both cutoffs are uniform theorems, not extrapolations between pointwise certificates.
 
-La expresión de t_R en x=2d−1 y el polinomio del signo de su derivada tienen denominadores positivos. La expansión en x=5+y es positiva; las dos comparaciones racionales d2,d128 y el caso afín prueban el rango2≤N≤129. El script sólo verifica estas constantes; el argumento analítico proporciona la uniformidad.
+The expression of t_R in x=2d−1 and the polynomial for the sign of its derivative have positive denominators. The expansion in x=5+y is positive; the two rational comparisons d2, d128 and the affine case prove the range 2≤N≤129. The script only verifies these constants; the analytic argument provides the uniformity.
 
-Integrar el bound de logderivada controla la suma COMPLETA de Möbius por Σm^−2≤3/4, y por tanto K>0 en toda la cola declarada. La representación de J da la integral gamma inferior positiva; LOCAL da CELLTAIL. La reducción del número de celdas interiores es correcta y no aporta su signo. El orden129 reproduce ERR025, sin contarlo como nueva cobertura.
+Integrating the log-derivative bound controls the FULL Möbius sum by Σm^−2≤3/4, and hence K>0 on the whole declared tail. The representation of J gives the positive lower gamma integral; LOCAL gives CELLTAIL. The reduction of the number of interior cells is correct and does not supply their sign. Order 129 reproduces ERR025, without counting it as new coverage.
 
-## Cierre de alcance
+## Scope closure
 
-La ronda añade dos cortes uniformes y un kernel conjunto exacto que sigue siendo firmado. El comparador ARCH+.66 insuficiente y Omega(3/2)<0 no son W<0. Las colas positivas no prueban los promedios interiores restantes ni el signo de todos los órdenes. No hay una ventana nueva T certificada ni modificación de papers.
+The round adds two uniform cutoffs and an exact joint kernel that remains signed. The insufficient comparator ARCH+.66 and Omega(3/2)<0 are not W<0. The positive tails do not prove the remaining interior averages nor the sign of all orders. There is no newly certified window T and no modification of papers.

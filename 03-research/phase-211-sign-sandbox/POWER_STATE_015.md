@@ -1,27 +1,27 @@
-# Estado 015 — mezcla completa y positividad eventual
+# State 015 — full mixture and eventual positivity
 
-Estado: PROVED resultados parciales; signo global OPEN. Goal activo. Papers intactos. Sustituye POWER_STATE_014 como resumen vigente.
+Status: PROVED partial results; global sign OPEN. Goal active. Papers untouched. Replaces POWER_STATE_014 as the current summary.
 
-## Resultados consolidados
+## Consolidated results
 
-Se mantiene W[f]>||f||²/1000 para todos los espacios de ocho polos reales >=63/2, con repeticiones, numerador de grado menor que ocho y todos los contactos aritméticos. Certificado racional y auditoría en POWER_SIGNED_TRANSFER_014 y POWER_SIGNED_AUDIT_014.
+W[f]>||f||²/1000 still holds for all spaces of eight real poles >=63/2, with repetitions, numerator of degree less than eight and all arithmetic contacts. Rational certificate and audit in POWER_SIGNED_TRANSFER_014 and POWER_SIGNED_AUDIT_014.
 
-El puente POWER_CONFLUENT_BRIDGE_014 demuestra que basta la no negatividad de todos los bloques confluentes de una sola tasa. No exige margen uniforme en dimensión. Todos los tamaños siguen abiertos.
+The bridge POWER_CONFLUENT_BRIDGE_014 shows that nonnegativity of all confluent blocks of a single rate suffices. It does not require a uniform margin in dimension. All sizes remain open.
 
-## Resultado general nuevo
+## New general result
 
-POWER_HIGHPASS_015, revisado íntegramente en POWER_HIGHPASS_AUDIT_015: fijados u>1 y N, existe K_N tal que la forma COMPLETA es positiva en todos los subespacios Q^k V_N para k>=K_N, donde Q(s)=s/(s+u) y V_N tiene transformadas P(s)/(s+u)^N, grado P<N. La uniformidad incluye todos los numeradores, incluso dependientes de k.
+POWER_HIGHPASS_015, fully reviewed in POWER_HIGHPASS_AUDIT_015: fixing u>1 and N, there exists K_N such that the FULL form is positive on all subspaces Q^k V_N for k>=K_N, where Q(s)=s/(s+u) and V_N has transforms P(s)/(s+u)^N, deg P<N. Uniformity includes all numerators, even ones depending on k.
 
-La parte arquimediana normalizada es >=(log k)/2-C_N; el peine completo y el polar normalizados tienden uniformemente a cero. La prueba usa convergencia de matrices Gram reescaladas, no sólo el término dominante de un polinomio fijo. K_N no es todavía efectivo ni uniforme en N.
+The normalised archimedean part is >=(log k)/2-C_N; the full comb and the normalised polar tend uniformly to zero. The proof uses convergence of rescaled Gram matrices, not only the leading term of a fixed polynomial. K_N is not yet effective nor uniform in N.
 
-## Mezcla exacta
+## Exact mixture
 
-POWER_GEOMETRIC_TRANSFER_015, revisado en POWER_MIXTURE_AUDIT_015 y POWER_HIGHPASS_AUDIT_015, expresa el transporte de polos mediante una mezcla positiva de las energías W[Q^k f_base]. Incluye el polar y todos los contactos, converge absolutamente y tiene pesos de Rayleigh correctamente normalizados por las normas. La identidad finita conserva el resto sobre la función de destino.
+POWER_GEOMETRIC_TRANSFER_015, reviewed in POWER_MIXTURE_AUDIT_015 and POWER_HIGHPASS_AUDIT_015, expresses pole transport through a positive mixture of the energies W[Q^k f_base]. It includes the polar and all contacts, converges absolutely and has Rayleigh weights correctly normalised by the norms. The finite identity keeps the remainder on the target function.
 
-La novedad frente al déficit puntual013 es conservar la corrección firmada completa y su estructura espectral. Frente a014, la expansión y su cola uniforme están ahora demostradas. Estas identidades no prueban por sí solas el signo aritmético.
+The novelty relative to the pointwise deficit013 is keeping the full signed correction and its spectral structure. Relative to014, the expansion and its uniform tail are now proved. These identities do not by themselves prove the arithmetic sign.
 
-## Obligación pendiente
+## Pending obligation
 
-Para cada N fijo queda una condición suficiente de transporte sobre un segmento finito de bloques iniciales. No se conoce aquí su extremo efectivo ni su signo para todos los N. La positividad eventual no permite inferir la positividad de esos términos iniciales ni de toda mezcla. No hay prueba global ni contraejemplo de la forma completa.
+For each fixed N a sufficient transport condition remains on a finite segment of initial blocks. Its effective endpoint and its sign for all N are not known here. Eventual positivity does not allow inferring positivity of those initial terms nor of every mixture. There is no global proof nor counterexample of the full form.
 
-Próximo trabajo: buscar un mecanismo para controlar el segmento inicial y su dependencia en N, contrastándolo previamente con el índice y los falsificadores de alto orden007–008. No repetir una campaña de certificados finitos como sustituto de ese mecanismo.
+Next work: look for a mechanism to control the initial segment and its dependence on N, checking it first against the index and the high-order falsifiers007–008. Do not repeat a campaign of finite certificates as a substitute for that mechanism.

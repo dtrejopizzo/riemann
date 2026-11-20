@@ -1,235 +1,235 @@
-# Ronda 5, semilla G2 — cierre bajo producto de factores de Euler aplicado a la signatura
+# Round 5, seed G2 — closure under products of Euler factors applied to the signature
 
-Memo generativa. Notación de `../phase-211-sign-sandbox/STATEMENT_001.md`; N = e^{2T};
+Generative memo. Notation from `../phase-211-sign-sandbox/STATEMENT_001.md`; N = e^{2T};
 D_T = P_T ∩ H¹_0(I_T) real; 𝔪_T(F) = (1/2π)∫ m|F̂|²; Π_{T,p}(F) = −Σ_{k≥1} v_{p^k} Re c_F(k log p);
-a_T = 𝔪_T + Σ_p Π_{T,p}. Etiquetas: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMÉRICO.
-Ningún cómputo en esta memo.
+a_T = 𝔪_T + Σ_p Π_{T,p}. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
+No computation in this memo.
 
-Resultado adelantado. No se logró escribir un objeto que cumpla A1–A6. Se prueban cinco lemas que
-delimitan la semilla: (1) la operación sobre formas que corresponde a multiplicar factores de Euler es
-la suma, por un homomorfismo explícito Φ_T de funciones meromorfas a formas; (2) toda clase cerrada
-bajo ese producto (semigrupo) que contenga el objeto arquimediano y el de p = 2 contiene objetos que
-violan la positividad y toda cota del índice negativo, para cada T > ½ log 2; (3) la condición «cada
-factor local exactamente una vez por cada factor arquimediano» es exactamente la ecuación funcional de
-la derivada logarítmica, dentro de la clase de productos Γ_ℝ^a ∏ Z_p^{b_p}; (4) restringida a los
-objetos balanceados, toda afirmación sobre Φ_T es el objetivo mismo sobre un rayo de un cono convexo
-(reformulación); (5) la propiedad no cónica que distingue «una vez» es la de coeficientes en {0, 1},
-cerrada sólo bajo productos de soporte coprimo (monoide parcial). La inducción por primos con esa
-operación parcial y la ecuación funcional como cociclo de las etapas intermedias ya está en la fase 122
-(fases de dispersión b_∞, c_p). Queda abierto, sin objeto, un predicado de etapa no tautológico.
+Result in advance. I did not manage to write an object satisfying A1–A6. Five lemmas are proved that
+delimit the seed: (1) the operation on forms corresponding to multiplying Euler factors is
+the sum, via an explicit homomorphism Φ_T from meromorphic functions to forms; (2) every class closed
+under that product (semigroup) containing the archimedean object and that of p = 2 contains objects that
+violate positivity and every bound on the negative index, for each T > ½ log 2; (3) the condition "each
+local factor exactly once for each archimedean factor" is exactly the functional equation of
+the logarithmic derivative, within the class of products Γ_ℝ^a ∏ Z_p^{b_p}; (4) restricted to the
+balanced objects, every statement about Φ_T is the target itself on a ray of a convex cone
+(reformulation); (5) the non-conic property distinguishing "once" is that of coefficients in {0, 1},
+closed only under products of coprime support (partial monoid). Induction over primes with that
+partial operation and the functional equation as a cocycle of the intermediate stages is already in phase 122
+(scattering phases b_∞, c_p). What remains open, without object, is a non-tautological stage predicate.
 
-## 0. Cotejo
+## 0. Cross-check
 
-**Qué se buscó.** Grep en `03-research/` (todas las fases), `04-papers/47*`, `48*`, anexos de esta
-carpeta, por: cociclo/cocycle, scattering, «twisted functional equation», Z_p(1−s), semigrupo de
-factores, «product of Euler factors», local certificate, LK splitting, lem:shape-scale, integralidad
-de coeficientes. Coincidencias de cociclo en fases 78, 122, 129, 136, 170 (Tate), 184.
+**What was searched.** Grep in `03-research/` (all phases), `04-papers/47*`, `48*`, annexes of this
+folder, for: cociclo/cocycle, scattering, "twisted functional equation", Z_p(1−s), semigrupo de
+factores, "product of Euler factors", local certificate, LK splitting, lem:shape-scale, integrality
+of coefficients. Matches for cocycle in phases 78, 122, 129, 136, 170 (Tate), 184.
 
-**Abiertos en primaria.** Los obligatorios del encargo (BRIEF_CONSTRUCTOR, README, OBJECT_SPEC,
-LEDGER, REVIEW_003, REVIEW_004, RULES_AVOID completo, ANNEX_COTEJO_LORENTZ_1 y _2, STATEMENT_001,
-R160_C7_R1 §§5–6, ROUND_003_8 completo); `phase-159/G2_B8_R1.md` §§1–2 (Teoremas B, S, Cor. S′);
-`G2_B8_R5.md` §§0–2 (definiciones, Teorema D); `phase-194/INV_F_001_DLOG_WALL_CONES.md` completo;
-`phase-122/P122_018_GLOBAL_GAMMA_EULER_COCYCLE_PARITY_NO_GO.md` §§1–4; P47 `lem:shape-scale` y su
-prueba, `cor:Tarch`; `ROUND_004_E.md` tabla de índices (líneas de 𝔪_T).
+**Opened as primary sources.** The mandatory ones for the task (BRIEF_CONSTRUCTOR, README, OBJECT_SPEC,
+LEDGER, REVIEW_003, REVIEW_004, RULES_AVOID in full, ANNEX_COTEJO_LORENTZ_1 and _2, STATEMENT_001,
+R160_C7_R1 §§5–6, ROUND_003_8 in full); `phase-159/G2_B8_R1.md` §§1–2 (Theorems B, S, Cor. S′);
+`G2_B8_R5.md` §§0–2 (definitions, Theorem D); `phase-194/INV_F_001_DLOG_WALL_CONES.md` in full;
+`phase-122/P122_018_GLOBAL_GAMMA_EULER_COCYCLE_PARITY_NO_GO.md` §§1–4; P47 `lem:shape-scale` and its
+proof, `cor:Tarch`; `ROUND_004_E.md` table of indices (lines for 𝔪_T).
 
-**No abiertos en primaria.** `INV_I_001` (sólo vía ANNEX_COTEJO_LORENTZ_2 fila 22); `BARRIER_W_001`
-(vía el mismo anexo, fila 26); E70_10–12 (vía ROUND_003_8); fase 65; fase 120; P122_015, 017 y 014
-(citados por P122_018); fase 129 y 78 (coincidencias de «cocycle» en otro sentido, no verificado).
+**Not opened as primary sources.** `INV_I_001` (only via ANNEX_COTEJO_LORENTZ_2 row 22); `BARRIER_W_001`
+(via the same annex, row 26); E70_10–12 (via ROUND_003_8); phase 65; phase 120; P122_015, 017 and 014
+(cited by P122_018); phases 129 and 78 (matches for "cocycle" in another sense, not verified).
 
-**(1) Antecedentes más cercanos.**
-- `G2_B8_R5` Teorema D: certificación local = reparto (C_p, K_p) de la parte arquimediana entre
-  primos con formas locales q_p ≥ 0 sumadas; falla para T ≥ 0.5925. Es un cierre bajo **suma** de
-  formas con el arquimediano repartido, no un cierre bajo producto con el arquimediano fijo.
-- `INV_F_001` F0–F2 y §4: ∂log manda productos a sumas; toda premisa cónica en log ζ es ciega a cΛ;
-  residuo declarado: una restricción curva que acople log ζ con exp(log ζ) (integralidad o ecuación
-  funcional), OPEN.
-- P47 `lem:shape-scale`: el vector F_+ = φ + φ(· − log 2) hace 𝔪_T(F_+) − c v_2‖φ‖² → −∞.
-- `P122_018` §§1–4: fases de dispersión b_∞(τ) y c_p(τ) (exactamente Γ_ℝ(1−s)/Γ_ℝ(s) y
-  Z_p(1−s)/Z_p(s) normalizados en la recta), producto finito completado Θ_T = b_∞ ∏ c_p^{−1}; ningún
-  cociclo simétrico global acopla Γ y Euler; el acoplamiento no nulo es causal y es la historia
-  entrante 𝓛_{T,−}.
+**(1) Closest antecedents.**
+- `G2_B8_R5` Theorem D: local certification = distribution (C_p, K_p) of the archimedean part among
+  primes with local forms q_p ≥ 0 summed; fails for T ≥ 0.5925. It is a closure under **sum** of
+  forms with the archimedean part distributed, not a closure under product with the archimedean part fixed.
+- `INV_F_001` F0–F2 and §4: ∂log sends products to sums; every conic premise on log ζ is blind to cΛ;
+  declared residue: a curved constraint coupling log ζ with exp(log ζ) (integrality or functional
+  equation), OPEN.
+- P47 `lem:shape-scale`: the vector F_+ = φ + φ(· − log 2) makes 𝔪_T(F_+) − c v_2‖φ‖² → −∞.
+- `P122_018` §§1–4: scattering phases b_∞(τ) and c_p(τ) (exactly Γ_ℝ(1−s)/Γ_ℝ(s) and
+  Z_p(1−s)/Z_p(s) normalized on the line), completed finite product Θ_T = b_∞ ∏ c_p^{−1}; no
+  symmetric global cocycle couples Γ and Euler; the nonzero coupling is causal and is the
+  incoming history 𝓛_{T,−}.
 
-**(2) Qué es nuevo.** Lema 2 en su variante de índice (toda cota n₋ ≤ κ cae, no sólo la positividad);
-Lema 3 (balance ⟺ ecuación funcional, con la prueba por residuos en Re s = 0 que separa cada primo);
-Lema 5 (coeficientes {0,1} ⟺ b_p ∈ {0,1}, y la conjunción con el Lema 3 fija b ≡ a = 1); la
-comprobación explícita de por qué c = 2 rompe el cierre (el semigrupo lo genera; el monoide parcial
-coprimo no). Ninguno lleva signo.
+**(2) What is new.** Lemma 2 in its index variant (every bound n₋ ≤ κ falls, not only positivity);
+Lemma 3 (balance ⟺ functional equation, with the residue proof on Re s = 0 that separates each prime);
+Lemma 5 (coefficients {0,1} ⟺ b_p ∈ {0,1}, and the conjunction with Lemma 3 fixes b ≡ a = 1); the
+explicit check of why c = 2 breaks the closure (the semigroup generates it; the coprime partial
+monoid does not). None carries a sign.
 
-**(3) Por qué evitaría la dificultad.** No la evita. La dificultad de G2_B8 (interferencia entre primos)
-y la de INV_F_001 (homogeneidad) reaparecen: el Lema 2 es la homogeneidad en forma de semigrupo, y el
-Lema 4 muestra que la única salida que conserva un homomorfismo a formas es la del rayo balanceado, que
-es el objetivo.
+**(3) Why it would avoid the difficulty.** It does not avoid it. The difficulty of G2_B8 (interference between primes)
+and that of INV_F_001 (homogeneity) reappear: Lemma 2 is homogeneity in semigroup form, and
+Lemma 4 shows that the only exit that preserves a homomorphism to forms is that of the balanced ray, which
+is the target.
 
-**(4) Identidad que conecta con la positividad global.** a_T = Φ_T(Γ_ℝ ζ) (Lema 1). Es exacta, pero
-Φ_T es lineal en el exponente: no hay desigualdad que conecte.
+**(4) Identity connecting with global positivity.** a_T = Φ_T(Γ_ℝ ζ) (Lemma 1). It is exact, but
+Φ_T is linear in the exponent: there is no connecting inequality.
 
-## 1. Objeto
+## 1. Object
 
-**Espacio.** 𝔐 = grupo multiplicativo de funciones meromorfas generado por Γ_ℝ(s) = π^{−s/2}Γ(s/2) y
-Z_p(s) = (1 − p^{−s})^{−1}; sus elementos con exponentes reales se entienden a nivel de derivada
-logarítmica:
+**Space.** 𝔐 = multiplicative group of meromorphic functions generated by Γ_ℝ(s) = π^{−s/2}Γ(s/2) and
+Z_p(s) = (1 − p^{−s})^{−1}; its elements with real exponents are understood at the level of the logarithmic
+derivative:
 
     𝒪_{a,b} := Γ_ℝ^a ∏_p Z_p^{b_p},   g_{a,b}(s) := a h(s) + Σ_p b_p z_p(s),
     h = Γ_ℝ′/Γ_ℝ = −½ log π + ½ ψ(s/2),   z_p = Z_p′/Z_p = −log p · Σ_{k≥1} p^{−ks},
 
-con b = (b_p) de la forma b_p = β + d_p, β ∈ ℝ y d finitamente soportado (así g es meromorfa en ℂ:
+with b = (b_p) of the form b_p = β + d_p, β ∈ ℝ and d finitely supported (so g is meromorphic on ℂ:
 g = β(h + ζ′/ζ) + (a − β)h + Σ d_p z_p).
 
-**Aplicación a formas.** Para F ∈ L²(I_T):
+**Map to forms.** For F ∈ L²(I_T):
 
     Φ_T(𝒪)(F) := (1/2π) ∫ 2 Re g_𝒪(½ + iτ) |F̂(τ)|² dτ ,
 
-definida término a término: la parte h contribuye (1/2π)∫2Re h(½+iτ)|F̂|², la parte z_p contribuye
-−Σ_k 2 log p · p^{−k/2} Re c_F(k log p), suma finita porque c_F = 0 fuera de [−2T, 2T].
+defined term by term: the h part contributes (1/2π)∫2Re h(½+iτ)|F̂|², the z_p part contributes
+−Σ_k 2 log p · p^{−k/2} Re c_F(k log p), a finite sum because c_F = 0 outside [−2T, 2T].
 
-**Operación.** ⊛ = producto de funciones (suma de exponentes). Variante parcial: ⊛_cop, definido sólo
-entre objetos cuyos conjuntos de primos con exponente no nulo son disjuntos.
+**Operation.** ⊛ = product of functions (sum of exponents). Partial variant: ⊛_cop, defined only
+between objects whose sets of primes with nonzero exponent are disjoint.
 
-**Objetos.** 𝒪_∞ = Γ_ℝ; 𝒪_p = Z_p; vector de Tate: e^{±t/2}, que entra sólo por P_T.
+**Objects.** 𝒪_∞ = Γ_ℝ; 𝒪_p = Z_p; Tate vector: e^{±t/2}, which enters only through P_T.
 
-## 2. Identidad
+## 2. Identity
 
-**Lema 1 (PROVED).** (i) Φ_T(𝒪 ⊛ 𝒪′) = Φ_T(𝒪) + Φ_T(𝒪′). (ii) Φ_T(𝒪_∞) = 𝔪_T,
-Φ_T(𝒪_p) = Π_{T,p}. (iii) a_T = Φ_T(Γ_ℝ ∏_p Z_p) = Φ_T(Γ_ℝ ζ) sobre L²(I_T), y para cΛ,
+**Lemma 1 (PROVED).** (i) Φ_T(𝒪 ⊛ 𝒪′) = Φ_T(𝒪) + Φ_T(𝒪′). (ii) Φ_T(𝒪_∞) = 𝔪_T,
+Φ_T(𝒪_p) = Π_{T,p}. (iii) a_T = Φ_T(Γ_ℝ ∏_p Z_p) = Φ_T(Γ_ℝ ζ) on L²(I_T), and for cΛ,
 a_T^{(c)} = Φ_T(Γ_ℝ ζ^c).
 
-*Demostración.* (i): g es aditiva en los exponentes y Φ_T es lineal en g. (ii): 2 Re h(½+iτ)
-= −log π + Re ψ(¼ + iτ/2) = m(τ). Para p: 2 Re z_p(½+iτ) = −Σ_k 2 log p · p^{−k/2} cos(kτ log p)
-= −Σ_k v_{p^k} cos(τ log p^k), serie absolutamente convergente; y (1/2π)∫cos(τu)|F̂|² = Re c_F(u)
-porque ĉ_F = |F̂|². (iii): suma de (ii) sobre p; sólo p^k < N contribuyen. ∎
+*Proof.* (i): g is additive in the exponents and Φ_T is linear in g. (ii): 2 Re h(½+iτ)
+= −log π + Re ψ(¼ + iτ/2) = m(τ). For p: 2 Re z_p(½+iτ) = −Σ_k 2 log p · p^{−k/2} cos(kτ log p)
+= −Σ_k v_{p^k} cos(τ log p^k), an absolutely convergent series; and (1/2π)∫cos(τu)|F̂|² = Re c_F(u)
+because ĉ_F = |F̂|². (iii): sum of (ii) over p; only p^k < N contribute. ∎
 
-Lectura (respuesta a (d) del encargo). Multiplicar factores de Euler es, en las formas, sumar. La
-clase 𝒦 hay que enunciarla sobre 𝒪 (sobre Z), no sobre g = V = Z⁻¹δZ: sobre g (o sobre Φ_T) toda
-clase cerrada es aditiva, y el Lema 2 la cierra. Ésta es la misma ecuación V_{Z₁Z₂} = V_{Z₁} + V_{Z₂}
-de E70_12 y de INV_F_001 Lema F0.
+Reading (answer to (d) of the task). Multiplying Euler factors is, on the forms, adding. The
+class 𝒦 has to be stated on 𝒪 (on Z), not on g = V = Z⁻¹δZ: on g (or on Φ_T) every
+closed class is additive, and Lemma 2 closes it. This is the same equation V_{Z₁Z₂} = V_{Z₁} + V_{Z₂}
+of E70_12 and of INV_F_001 Lemma F0.
 
-## 3. Mecanismo: qué clases cerradas existen
+## 3. Mechanism: which closed classes exist
 
-**Lema 2 (NO-GO con clase; PROVED relativo a la construcción de P47 lem:shape-scale).** Clase
-declarada: (𝒦, ⊛) semigrupo, Φ: 𝒦 → formas sobre L²(I_T) aditiva (Φ(x ⊛ y) = Φ(x) + Φ(y)),
-x_∞, x_2 ∈ 𝒦 con Φ(x_∞) = 𝔪_T y Φ(x_2) = Π_{T,2}, y un teorema de cierre «x ∈ 𝒦 ⟹ n₋(Φ(x)|P_T) ≤ κ»
-para algún κ ≥ 0 fijo (κ = 0 es la positividad). Entonces para todo T > ½ log 2 la clase no existe.
+**Lemma 2 (NO-GO with class; PROVED relative to the construction of P47 lem:shape-scale).** Declared
+class: (𝒦, ⊛) a semigroup, Φ: 𝒦 → forms on L²(I_T) additive (Φ(x ⊛ y) = Φ(x) + Φ(y)),
+x_∞, x_2 ∈ 𝒦 with Φ(x_∞) = 𝔪_T and Φ(x_2) = Π_{T,2}, and a closure theorem "x ∈ 𝒦 ⟹ n₋(Φ(x)|P_T) ≤ κ"
+for some fixed κ ≥ 0 (κ = 0 is positivity). Then for every T > ½ log 2 the class does not exist.
 
-*Demostración.* Sea ℓ < min(2T − log 2, log(3/2)), y φ_1, …, φ_{κ+3} reales no nulas con soportes
-disjuntos dentro de un intervalo J ⊂ [−T, T − log 2] de longitud ℓ. Pongo F_j = φ_j + φ_j(· − log 2)
-∈ L²(I_T) y V = span{F_j}. Para F = Σ a_jF_j, c_F(u) se anula salvo para u en (−ℓ, ℓ) ∪
-(± log 2 + (−ℓ, ℓ)); como ℓ < log(3/2), ningún log n con n ≥ 3 cae ahí, y la única contribución
-aritmética es la de n = 2: c_F(log 2) = ∫F(t)F(t − log 2)dt = Σ_j a_j² ‖φ_j‖² (los términos cruzados
-se anulan por soportes disjuntos; ∫φ_i(t)φ_j(t − log 2)dt = 0 porque J ∩ (J + log 2) = ∅). Luego
-Π_{T,2}|_V = −v_2 diag(‖φ_j‖²), definida negativa, y 𝔪_T|_V es una forma acotada en dimensión finita.
-El semigrupo contiene x_∞ ⊛ x_2^{⊛n}, con Φ = 𝔪_T + nΠ_{T,2}, definida negativa en V para n grande.
-V ∩ P_T tiene dimensión ≥ κ + 1, luego n₋(Φ|P_T) ≥ κ + 1. ∎
+*Proof.* Let ℓ < min(2T − log 2, log(3/2)), and φ_1, …, φ_{κ+3} real nonzero with disjoint supports
+inside an interval J ⊂ [−T, T − log 2] of length ℓ. Set F_j = φ_j + φ_j(· − log 2)
+∈ L²(I_T) and V = span{F_j}. For F = Σ a_jF_j, c_F(u) vanishes except for u in (−ℓ, ℓ) ∪
+(± log 2 + (−ℓ, ℓ)); since ℓ < log(3/2), no log n with n ≥ 3 falls there, and the only arithmetic
+contribution is that of n = 2: c_F(log 2) = ∫F(t)F(t − log 2)dt = Σ_j a_j² ‖φ_j‖² (the cross terms
+vanish by disjoint supports; ∫φ_i(t)φ_j(t − log 2)dt = 0 because J ∩ (J + log 2) = ∅). Hence
+Π_{T,2}|_V = −v_2 diag(‖φ_j‖²), negative definite, and 𝔪_T|_V is a bounded form in finite dimension.
+The semigroup contains x_∞ ⊛ x_2^{⊛n}, with Φ = 𝔪_T + nΠ_{T,2}, negative definite on V for large n.
+V ∩ P_T has dimension ≥ κ + 1, hence n₋(Φ|P_T) ≥ κ + 1. ∎
 
-El lema no usa más primo que 2 ni ninguna propiedad de Λ salvo v_2 > 0: es una obstrucción de formato,
-genérica en el peine (como R3-d). Cubre en particular «cierre bajo producto aplicado a la signatura»
-con cualquier cota de índice. Su contenido es la homogeneidad de INV_F_001 F2 escrita como semigrupo.
+The lemma uses no prime other than 2 nor any property of Λ except v_2 > 0: it is a format obstruction,
+generic in the comb (like R3-d). It covers in particular "closure under product applied to the signature"
+with any index bound. Its content is the homogeneity of INV_F_001 F2 written as a semigroup.
 
-**Respuesta a (a) del encargo.** 𝒪_∞ no puede estar en una clase de signo acotado para T grande: n₋(𝔪_T|P_T)
-≥ ⌈2Tτ_0/π⌉ − 3 (P47 thm:J, thm:index, citados en `ROUND_004_E.md`, tabla; CITED) y 𝔪_T es negativa en
-algún vector de P_T para T ≥ 0.60 (P47 cor:Tarch, CITED). Así, una clase 𝒦 definida por signatura de Φ
-no contiene a 𝒪_∞ salvo para κ creciente con T. **(b)**: Π_{T,p} es indefinida en L²(I_T) (su
-símbolo cambia de signo); está en una clase de índice acotado sólo si κ ≥ n₋(Π_{T,p}), que no es
-finito en general (ARGUED: paquetes de onda de alta frecuencia donde el símbolo −Σ_k v_{p^k}
-cos(kτ log p) es negativo). Ninguna clase de signatura sobre Φ cumple (a) y (b) con κ fijo.
+**Answer to (a) of the task.** 𝒪_∞ cannot be in a class of bounded sign for large T: n₋(𝔪_T|P_T)
+≥ ⌈2Tτ_0/π⌉ − 3 (P47 thm:J, thm:index, cited in `ROUND_004_E.md`, table; CITED) and 𝔪_T is negative on
+some vector of P_T for T ≥ 0.60 (P47 cor:Tarch, CITED). Thus a class 𝒦 defined by signature of Φ
+does not contain 𝒪_∞ except for κ growing with T. **(b)**: Π_{T,p} is indefinite on L²(I_T) (its
+symbol changes sign); it is in a class of bounded index only if κ ≥ n₋(Π_{T,p}), which is not
+finite in general (ARGUED: high-frequency wave packets where the symbol −Σ_k v_{p^k}
+cos(kτ log p) is negative). No signature class on Φ satisfies (a) and (b) with κ fixed.
 
-**Lema 3 (balance ⟺ ecuación funcional; PROVED, con la ecuación funcional de Γ_ℝζ CITED).** En la clase
-del §1, g_{a,b}(s) = −g_{a,b}(1 − s) idénticamente si y sólo si d ≡ 0 y a = β, es decir b_p = a para
-todo p.
+**Lemma 3 (balance ⟺ functional equation; PROVED, with the functional equation of Γ_ℝζ CITED).** In the class
+of §1, g_{a,b}(s) = −g_{a,b}(1 − s) identically if and only if d ≡ 0 and a = β, i.e. b_p = a for
+all p.
 
-*Demostración.* Por la ecuación funcional Γ_ℝζ(s) = Γ_ℝζ(1 − s), la función h + ζ′/ζ es impar respecto
-de s ↦ 1 − s. Luego g(s) + g(1 − s) = (a − β)H(s) + Σ_p d_p [z_p(s) + z_p(1 − s)], H = h(s) + h(1 − s).
-Fijo p con d_p ≠ 0 y s_0 = 2πi/log p. z_p tiene allí un polo simple de residuo −1 (cero simple de
-1 − p^{−s}); z_p(1 − s) tiene polos en Re s = 1; z_q, q ≠ p, tiene polos en 2πik/log q ≠ s_0 porque
-log q/log p ∉ ℚ; H es holomorfa en Re s = 0 salvo en s = 0 (polos de ψ(s/2) en 0, −2, …; de
-ψ((1 − s)/2) en 1, 3, …). Si g(s) + g(1 − s) ≡ 0, el residuo en s_0 es −d_p = 0. Entonces
-(a − β)H ≡ 0, y H tiene polo en s = 0, luego a = β. El recíproco es la ecuación funcional. ∎
+*Proof.* By the functional equation Γ_ℝζ(s) = Γ_ℝζ(1 − s), the function h + ζ′/ζ is odd with respect
+to s ↦ 1 − s. Hence g(s) + g(1 − s) = (a − β)H(s) + Σ_p d_p [z_p(s) + z_p(1 − s)], H = h(s) + h(1 − s).
+Fix p with d_p ≠ 0 and s_0 = 2πi/log p. z_p has there a simple pole with residue −1 (simple zero of
+1 − p^{−s}); z_p(1 − s) has poles on Re s = 1; z_q, q ≠ p, has poles at 2πik/log q ≠ s_0 because
+log q/log p ∉ ℚ; H is holomorphic on Re s = 0 except at s = 0 (poles of ψ(s/2) at 0, −2, …; of
+ψ((1 − s)/2) at 1, 3, …). If g(s) + g(1 − s) ≡ 0, the residue at s_0 is −d_p = 0. Then
+(a − β)H ≡ 0, and H has a pole at s = 0, hence a = β. The converse is the functional equation. ∎
 
-Respuesta a (e) del encargo. La hipótesis del teorema de cierre que exige «cada factor local
-exactamente una vez por cada factor arquimediano» es la autodualidad de la derivada logarítmica
-g(s) = −g(1 − s) del compuesto. Para c = 2 (a = 1, β = 2) falla por el término (a − β)H = −H; para c no
-entero, igual con −(c − 1)H; para a_P (d_p = −1, p < P) falla por los residuos en 2πik/log p. Para un
-objeto con ecuación funcional sin producto (Davenport–Heilbronn) el lema no se aplica: no está en la
-clase, porque su derivada logarítmica no es combinación de h y z_p. Esa exclusión es de pertenencia,
-no de signo.
+Answer to (e) of the task. The hypothesis of the closure theorem requiring "each local factor
+exactly once for each archimedean factor" is the self-duality of the logarithmic derivative
+g(s) = −g(1 − s) of the composite. For c = 2 (a = 1, β = 2) it fails through the term (a − β)H = −H; for non-integer
+c, likewise with −(c − 1)H; for a_P (d_p = −1, p < P) it fails through the residues at 2πik/log p. For an
+object with functional equation but no product (Davenport–Heilbronn) the lemma does not apply: it is not in the
+class, because its logarithmic derivative is not a combination of h and z_p. That exclusion is one of membership,
+not of sign.
 
-**Lema 4 (lo balanceado no lleva signo; PROVED).** E_T := {(a, b) ∈ ℝ × ℝ^{π(N)} : a𝔪_T + Σ_p b_pΠ_{T,p}
-⪰ 0 en P_T} es un cono convexo cerrado (intersección de semiespacios, uno por F). Por el Lema 1, sobre
-los objetos balanceados Φ_T(𝒪_{a,a}) = a·a_T, de modo que «todo objeto balanceado con a > 0 está en
-E_T» equivale a (1, 1, …, 1) ∈ E_T, que es (★)_T. El semigrupo de objetos balanceados es {(Γ_ℝζ)^n}:
-el cierre bajo ⊛ entre ellos sólo escala. Reformulación (patrón B3); no es un paso de signo.
+**Lemma 4 (the balanced carries no sign; PROVED).** E_T := {(a, b) ∈ ℝ × ℝ^{π(N)} : a𝔪_T + Σ_p b_pΠ_{T,p}
+⪰ 0 on P_T} is a closed convex cone (intersection of half-spaces, one per F). By Lemma 1, on
+the balanced objects Φ_T(𝒪_{a,a}) = a·a_T, so that "every balanced object with a > 0 is in
+E_T" is equivalent to (1, 1, …, 1) ∈ E_T, which is (★)_T. The semigroup of balanced objects is {(Γ_ℝζ)^n}:
+closure under ⊛ among them only scales. Reformulation (pattern B3); not a sign step.
 
-**Lema 5 (la propiedad no cónica que distingue «una vez»; PROVED).** Para b_p ∈ ℝ, la serie de Dirichlet
-de ∏_{p∈S} Z_p^{b_p} (S finito) tiene todos sus coeficientes en {0, 1} si y sólo si b_p ∈ {0, 1} para
-todo p ∈ S. La clase 𝒦_{01} = {∏_{p∈S}Z_p : S conjunto de primos} es cerrada bajo ⊛_cop y no bajo ⊛.
+**Lemma 5 (the non-conic property distinguishing "once"; PROVED).** For b_p ∈ ℝ, the Dirichlet series
+of ∏_{p∈S} Z_p^{b_p} (S finite) has all its coefficients in {0, 1} if and only if b_p ∈ {0, 1} for
+all p ∈ S. The class 𝒦_{01} = {∏_{p∈S}Z_p : S a set of primes} is closed under ⊛_cop and not under ⊛.
 
-*Demostración.* Por factorización única el coeficiente en p^k de ∏ Z_p^{b_p} es el de Z_p^{b_p} =
-Σ_k binom(b_p + k − 1, k) p^{−ks}: en k = 1 vale b_p, en k = 2 vale b_p(b_p + 1)/2. Ambos en {0,1}
-fuerzan b_p ∈ {0, 1}. Recíproco: ∏_{p∈S}Z_p = Σ_{n: primos de n en S} n^{−s}. Z_p ⊛ Z_p = Z_p² tiene
-coeficiente 2 en p. ⊛_cop conserva la forma ∏_{p∈S}Z_p. ∎
+*Proof.* By unique factorization the coefficient at p^k of ∏ Z_p^{b_p} is that of Z_p^{b_p} =
+Σ_k binom(b_p + k − 1, k) p^{−ks}: at k = 1 it equals b_p, at k = 2 it equals b_p(b_p + 1)/2. Both in {0,1}
+force b_p ∈ {0, 1}. Converse: ∏_{p∈S}Z_p = Σ_{n: primes of n in S} n^{−s}. Z_p ⊛ Z_p = Z_p² has
+coefficient 2 at p. ⊛_cop preserves the form ∏_{p∈S}Z_p. ∎
 
-Con el Lema 3: dentro de la clase del §1, {coeficientes de la parte finita en {0,1}} ∧ {g impar} fija
-b_p ≡ a ∈ {0, 1}, es decir el objeto trivial o Γ_ℝζ (en el Lema 5 se aplica a cada subproducto finito
-de la parte finita). Es la conjunción integralidad ∧ ecuación
-funcional de INV_F_001 §4 e INV_I_001, ahora con la operación de cierre explícita: ⊛_cop.
+With Lemma 3: within the class of §1, {coefficients of the finite part in {0,1}} ∧ {g odd} fixes
+b_p ≡ a ∈ {0, 1}, i.e. the trivial object or Γ_ℝζ (Lemma 5 is applied to each finite subproduct
+of the finite part). It is the conjunction integrality ∧ functional
+equation of INV_F_001 §4 and INV_I_001, now with the explicit closure operation: ⊛_cop.
 
-**Teorema de cierre que habría que probar (OPEN, sin candidato).** Enunciado con la única estructura
-que pasa los Lemas 2–5: un predicado I(Q, S) sobre pares (forma, conjunto de primos ya añadidos) tal
-que (i) I(𝔪_T, ∅); (ii) I(Q, S) ∧ p ∉ S ⟹ I(Q + Π_{T,p}, S ∪ {p}); (iii) I(Q, {p < N}) ⟹ Q ⪰ 0 en
-P_T; (iv) I tiene una fórmula que no contiene la conclusión. Sin (iv) existe trivialmente:
-I(Q, S) := «Q + Σ_{p∉S, p<N} Π_{T,p} ⪰ 0 en P_T», que es (★)_T (patrón J3). Verificado: la
-estructura de monoide parcial (ii) es la de 𝒦_{01} (Lema 5). Abierto: (iv). Por el Lema 3, las etapas
-intermedias Γ_ℝ ∏_{p∈S}Z_p no tienen ecuación funcional; la llevan sólo torcida por el cociclo finito
-∏_{p∉S} Z_p(1 − s)/Z_p(s), es decir por las fases de dispersión c_p de `P122_018` (1.3). Esa
-contabilidad ya está hecha allí: el acoplamiento simétrico Γ–Euler es nulo (Teor. 2.1) y el causal es
-la historia entrante 𝓛_{T,−} (§4). Un I(Q, S) que lea el cociclo cae en esa fase.
+**Closure theorem that would have to be proved (OPEN, no candidate).** Statement with the only structure
+that passes Lemmas 2–5: a predicate I(Q, S) on pairs (form, set of primes already added) such
+that (i) I(𝔪_T, ∅); (ii) I(Q, S) ∧ p ∉ S ⟹ I(Q + Π_{T,p}, S ∪ {p}); (iii) I(Q, {p < N}) ⟹ Q ⪰ 0 on
+P_T; (iv) I has a formula that does not contain the conclusion. Without (iv) it exists trivially:
+I(Q, S) := "Q + Σ_{p∉S, p<N} Π_{T,p} ⪰ 0 on P_T", which is (★)_T (pattern J3). Verified: the
+partial monoid structure (ii) is that of 𝒦_{01} (Lemma 5). Open: (iv). By Lemma 3, the intermediate
+stages Γ_ℝ ∏_{p∈S}Z_p have no functional equation; they carry it only twisted by the finite cocycle
+∏_{p∉S} Z_p(1 − s)/Z_p(s), i.e. by the scattering phases c_p of `P122_018` (1.3). That
+accounting is already done there: the symmetric Γ–Euler coupling is zero (Thm. 2.1) and the causal one is
+the incoming history 𝓛_{T,−} (§4). An I(Q, S) that reads the cocycle falls into that phase.
 
-## 4. Controles
+## 4. Controls
 
-| Falsificador | Lema 2 (semigrupo) | Lemas 3–5 (balance, {0,1}, ⊛_cop) |
+| Falsifier | Lemma 2 (semigroup) | Lemmas 3–5 (balance, {0,1}, ⊛_cop) |
 |---|---|---|
-| c = 2 | el semigrupo lo genera (x_2^{⊛2}); el cierre lo declara en 𝒦 y la conclusión es falsa para c grande en T > ½ log 2 (Lema 2). Que falle en c = 2 exactamente no se comprueba aquí | Lema 3: (a − β)H = −H ≠ 0; Lema 5: coeficiente 2 en p. No alcanzable por ⊛_cop. Pero la ruptura es de pertenencia, no de signo: R3-i no queda satisfecho, porque no hay resto ≥ 0 que deje de serlo |
-| c no entero | igual (el semigrupo sólo genera enteros; el fallo de c pequeño, T ≥ 0.60, no lo da el semigrupo) | Lema 3 con −(c − 1)H; Lema 5: coeficiente c ∉ {0,1} |
-| a_P | el semigrupo contiene Γ_ℝ ∏_{p≥P}Z_p | Lema 5 lo admite (coeficientes {0,1}); Lema 3 lo excluye por residuos en Re s = 0 |
-| sin producto (Davenport–Heilbronn) | no está en 𝒦 | no está en la clase; exclusión de pertenencia |
+| c = 2 | the semigroup generates it (x_2^{⊛2}); the closure declares it in 𝒦 and the conclusion is false for large c at T > ½ log 2 (Lemma 2). That it fails at exactly c = 2 is not checked here | Lemma 3: (a − β)H = −H ≠ 0; Lemma 5: coefficient 2 at p. Not reachable by ⊛_cop. But the breaking is one of membership, not of sign: R3-i is not satisfied, because there is no remainder ≥ 0 that stops being so |
+| non-integer c | same (the semigroup only generates integers; the failure for small c, T ≥ 0.60, is not given by the semigroup) | Lemma 3 with −(c − 1)H; Lemma 5: coefficient c ∉ {0,1} |
+| a_P | the semigroup contains Γ_ℝ ∏_{p≥P}Z_p | Lemma 5 admits it (coefficients {0,1}); Lemma 3 excludes it by residues on Re s = 0 |
+| no product (Davenport–Heilbronn) | not in 𝒦 | not in the class; membership exclusion |
 
-Ninguna fila es la ruptura de un resto ≥ 0: no hay paso de signo que romper. La exigencia de A5 no se
-cumple.
+No row is the breaking of a remainder ≥ 0: there is no sign step to break. The requirement of A5 is not
+met.
 
-## 5. Cotejo final y qué cambia
+## 5. Final cross-check and what changes
 
-Antecedente más cercano: G2_B8_R5 (suma de formas locales con reparto arquimediano) e INV_F_001 §4
-(residuo no cónico). Lo que cambia aquí es sólo de formato: el cierre bajo producto con Γ_ℝ fijo se
-reduce, por el Lema 1, a suma con 𝔪_T sin repartir, y entonces el Lema 2 lo cierra con un argumento más
-corto que el Teorema D (no requiere T ≥ 0.5925, sólo T > ½ log 2, pero a cambio exige cerrar bajo
-potencias). La versión parcial ⊛_cop con ecuación funcional es la arquitectura de la fase 122.
+Closest antecedent: G2_B8_R5 (sum of local forms with archimedean distribution) and INV_F_001 §4
+(non-conic residue). What changes here is only about format: closure under product with Γ_ℝ fixed
+reduces, by Lemma 1, to a sum with 𝔪_T undistributed, and then Lemma 2 closes it with an argument shorter
+than Theorem D (it does not require T ≥ 0.5925, only T > ½ log 2, but in exchange requires closure under
+powers). The partial version ⊛_cop with functional equation is the architecture of phase 122.
 
-## 6. Veredicto propio
+## 6. Own verdict
 
-No logré escribir un objeto que cumpla A1–A6.
+I did not manage to write an object satisfying A1–A6.
 
-## Resultado
+## Result
 
-NO-GO con clase (Lema 2: semigrupos con aplicación aditiva a formas, positividad o índice acotado,
-T > ½ log 2), más tres lemas PROVED de delimitación (3, 4, 5). Sin mecanismo nuevo.
+NO-GO with class (Lemma 2: semigroups with additive map to forms, positivity or bounded index,
+T > ½ log 2), plus three PROVED delimitation lemmas (3, 4, 5). No new mechanism.
 
-## Qué se probó
+## What was proved
 
-Lema 1 (homomorfismo Φ_T; a_T = Φ_T(Γ_ℝζ)); Lema 2 (NO-GO de semigrupo, también para cotas de índice);
-Lema 3 (exponentes balanceados ⟺ g impar; separación primo a primo por residuos en Re s = 0); Lema 4
-(sobre lo balanceado, reformulación por cono convexo); Lema 5 ({0,1} ⟺ b_p ∈ {0,1}; cierre sólo bajo
+Lemma 1 (homomorphism Φ_T; a_T = Φ_T(Γ_ℝζ)); Lemma 2 (semigroup NO-GO, also for index bounds);
+Lemma 3 (balanced exponents ⟺ g odd; prime-by-prime separation by residues on Re s = 0); Lemma 4
+(on the balanced, reformulation by a convex cone); Lemma 5 ({0,1} ⟺ b_p ∈ {0,1}; closure only under
 ⊛_cop).
 
-## Qué falló y por qué
+## What failed and why
 
-Toda clase que se lee a través de las formas es aditiva (∂log), y la aditividad con potencias genera
-cΛ con c entero grande (Lema 2). Quitar las potencias exige el monoide parcial coprimo y la ecuación
-funcional; ambas cosas fijan un único objeto, Γ_ℝζ, y un teorema cuya hipótesis fija un único objeto no
-tiene contenido de cierre: el paso de signo vuelve a ser (★)_T. La inducción por primos con las etapas
-torcidas por el cociclo de dispersión es la de la fase 122.
+Every class read through the forms is additive (∂log), and additivity with powers generates
+cΛ with large integer c (Lemma 2). Removing the powers requires the coprime partial monoid and the functional
+equation; both fix a single object, Γ_ℝζ, and a theorem whose hypothesis fixes a single object has
+no closure content: the sign step becomes (★)_T again. Induction over primes with the stages
+twisted by the scattering cocycle is that of phase 122.
 
-## Siguiente paso concreto
+## Concrete next step
 
-Ninguno en esta semilla sin un predicado de etapa I(Q, S) con fórmula propia que use algo de las
-etapas distinto de Φ_T (por ejemplo, los coeficientes de la serie más allá de N), y antes cotejado con
-P122_014, 015, 017 y la historia entrante 𝓛_{T,−} de la fase 121. Registrar el Lema 2 en el índice y el
-grid como NO-GO de clase (semigrupo aditivo, índice acotado).
+None in this seed without a stage predicate I(Q, S) with its own formula that uses something of the
+stages other than Φ_T (for example, the coefficients of the series beyond N), and cross-checked beforehand against
+P122_014, 015, 017 and the incoming history 𝓛_{T,−} of phase 121. Record Lemma 2 in the index and the
+grid as a class NO-GO (additive semigroup, bounded index).

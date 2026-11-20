@@ -1,36 +1,36 @@
-# Estado028 — Cuarta y quinta filas completas positivas de W
+# State028 — Fourth and fifth full positive rows of W
 
-Estado: ROW4 y ROW5 PROVED y auditados. Sustituye STATE027 como resumen vigente. Signo global OPEN; goal activo; papers intactos. Ambas construcciones cerradas y revisadas.
+Status: ROW4 and ROW5 PROVED and audited. Replaces STATE027 as the current summary. Global sign OPEN; goal active; papers untouched. Both constructions closed and reviewed.
 
-## Nueva cobertura de la forma completa
+## New coverage of the full form
 
-POWER_ROW_FOUR_028 demuestra
+POWER_ROW_FOUR_028 proves
 
     W[f_(4,k)] > ||f_(4,k)||²/50,
-    F_(4,k)(s)=s^k/(s+u)^(4+k), TODOS k>=0 y TODOS u>=63/2.
+    F_(4,k)(s)=s^k/(s+u)^(4+k), ALL k>=0 and ALL u>=63/2.
 
-Se incluyen TODO el peine aritmético y el término polar. No es positividad de un núcleo auxiliar ni una muestra de exponentes. La prueba combina ARCH/norma²>11/400, peine en magnitud<3/500 y pérdida polar<1/1000 para k impares; en k pares el polar es positivo. El margen resultante41/2000 supera1/50.
+The WHOLE arithmetic comb and the polar term are included. It is not positivity of an auxiliary kernel nor a sample of exponents. The proof combines ARCH/norm²>11/400, comb in magnitude<3/500 and polar loss<1/1000 for odd k; for even k the polar is positive. The resulting margin41/2000 exceeds1/50.
 
-## Qué cambió respecto de las filas anteriores
+## What changed relative to the earlier rows
 
-La fórmula exacta ARCH40=d−ud'+(2u²/5)d''−(u³/15)d''' mantiene el pequeño margen positivo que se perdería con cotas más gruesas. Las monotonías de ARCH en u y en k reducen todos los parámetros a u=63/2,k0. Las tres series de polygamma se acotan con resto integral racional.
+The exact formula ARCH40=d−ud'+(2u²/5)d''−(u³/15)d''' keeps the small positive margin that coarser bounds would lose. Monotonicity of ARCH in u and in k reduces all parameters to u=63/2,k0. The three polygamma series are bounded with a rational integral remainder.
 
-El peso eta12 en WR4 reduce el coste del peine completo frente a eta15 usado018; la positividad de los coeficientes de su serie demuestra uniformidad en u. El signo alternado real del polar evita restar el término favorable de k0. No se supone monotonía de W bajo movimiento de polos.
+The weight eta12 in WR4 reduces the cost of the full comb compared with eta15 used in018; positivity of the coefficients of its series proves uniformity in u. The real alternating sign of the polar avoids subtracting the favourable term at k0. No monotonicity of W under pole movement is assumed.
 
-La recurrencia completa implica además positividad estricta de la tercera diferencia de la fila inicial para TODOS k. No implica diferencias de cualquier orden.
+The full recurrence further implies strict positivity of the third difference of the initial row for ALL k. It does not imply differences of every order.
 
-## Evidencia y límite
+## Evidence and limit
 
-POWER_ROWS_AUDIT_028 aprueba ROW4 y ROW5; root leyó ambas pruebas y reprodujo los dos verificadores Fraction: PASS. La uniformidad proviene de argumentos analíticos, no de un barrido. Se conserva la auditoría027 del balance exterior y la mezcla gamma, sin atribuirles signo del interior.
+POWER_ROWS_AUDIT_028 approves ROW4 and ROW5; both proofs were read and the two Fraction verifiers reproduced: PASS. Uniformity comes from analytic arguments, not from a sweep. The audit027 of the exterior balance and the gamma mixture is kept, without attributing to them the sign of the interior.
 
-La cobertura ahora incluye filas N1,2,3,4,5 para todo k y u>=31.5; también permanece el cono k>=10000N² a u31.5, ocho polos arbitrarios y bloque fijo12. En la tabla suficiente a u31.5 resta N>=6 debajo del cono. El puente017 exige todos N,k; una fila nueva no certifica una ventana T ni resuelve el signo global.
+The coverage now includes rows N1,2,3,4,5 for all k and u>=31.5; the cone k>=10000N² at u31.5, eight arbitrary poles and fixed block12 also remain. In the sufficient table at u31.5, N>=6 below the cone remains. The bridge017 requires all N,k; a new row does not certify a window T nor resolve the global sign.
 
-## Quinta fila y patrón de separación
+## Fifth row and separation pattern
 
-POWER_ROW_SPLIT_028 demuestra W[f_(5,k,u)]>norma²/25 para TODOS k>=0,u>=63/2. Para k>=1 da el margen más fuerte4/5. ARCH50(u0)<−1/10, así que exigir ARCH positivo desde k0 habría perdido esta fila real.
+POWER_ROW_SPLIT_028 proves W[f_(5,k,u)]>norm²/25 for ALL k>=0,u>=63/2. For k>=1 it gives the stronger margin4/5. ARCH50(u0)<−1/10, so requiring positive ARCH from k0 would have lost this real row.
 
-En k0 y u entre u0 y2u0 se combinan extremos opuestos: ARCH>−.13 y polar>.23. Para u>=2u0, ARCH>.5 y el polar sigue favorable. En k>=1, covarianza y escala dan ARCH>.9; el polar impar pierde menos de.002. El peine COMPLETO pierde menos de.06 en todos los parámetros, por WR5 con eta12. Esas cotas prueban la fila sin asumir monotonía de AP ni de W.
+At k0 and u between u0 and2u0 opposite extremes are combined: ARCH>−.13 and polar>.23. For u>=2u0, ARCH>.5 and the polar remains favourable. At k>=1, covariance and scaling give ARCH>.9; the odd polar loses less than.002. The FULL comb loses less than.06 at all parameters, by WR5 with eta12. These bounds prove the row without assuming monotonicity of AP or W.
 
-El criterio reutilizable del memo separa la obligación k0 de la órbita k>=1. La identidad A_(N,1)=A_(N,0)+u∂_u A_(N,0) explica la mejora; las premisas del criterio no están probadas para todo N. La cuarta diferencia de la fila1 es ahora estrictamente positiva, sin concluir completa monotonía.
+The reusable criterion of the memo separates the obligation k0 from the orbit k>=1. The identity A_(N,1)=A_(N,0)+u∂_u A_(N,0) explains the improvement; the premises of the criterion are not proved for all N. The fourth difference of row1 is now strictly positive, without concluding full monotonicity.
 
-La continuación029 busca un patrón uniforme mediante control de autocorrelación con pesos opuestos y parámetros N/u², previa comparación con el no-go de pesos a u fijo016. No se sustituye el objetivo de todos N a tasa fija por un resultado con tasa creciente.
+The continuation029 looks for a uniform pattern through autocorrelation control with opposite weights and parameters N/u², after comparison with the no-go of weights at fixed u016. The objective of all N at fixed rate is not replaced by a result with increasing rate.

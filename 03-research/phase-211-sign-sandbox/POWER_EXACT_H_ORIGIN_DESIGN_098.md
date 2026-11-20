@@ -1,91 +1,91 @@
-# POWER_EXACT_H_ORIGIN_DESIGN_098 — Diseño previo y decisión del jet exacto de T_h
+# POWER_EXACT_H_ORIGIN_DESIGN_098 — Prior design and decision of the exact jet of T_h
 
-**Actualización099:** la obligación REAL T_h>0 global quedó cerrada en `POWER_EXACT_H_GLOBAL_DESIGN_099.md`, auditada en `POWER_EXACT_H_GLOBAL_AUDIT_099.md` y resumida en `POWER_STATE_099.md`. Se prueban ambas curvaturas y todos los triples del resto G_p; el bloque auxiliar de cinco nodos está anclado en0 y NO son cinco generadores W admisibles. Las menciones de compacto/hipótesis pendiente abajo conservan el estado histórico de esta ronda; la herencia al siguiente nivel sigue abierta.
+**Update099:** the REAL obligation T_h>0 globally was closed in `POWER_EXACT_H_GLOBAL_DESIGN_099.md`, audited in `POWER_EXACT_H_GLOBAL_AUDIT_099.md` and summarized in `POWER_STATE_099.md`. Both curvatures and all triples of the remainder G_p are proved; the auxiliary block of five nodes is anchored at0 and they are NOT five admissible W generators. The mentions of compact set/pending hypothesis below keep the historical status of this round; inheritance to the next level remains open.
 
-**Auditoría independiente:** `POWER_EXACT_H_ORIGIN_AUDIT_098.md` aprobada; constructor19778 exit0/FULL PASS, reproducción independiente root57072 exit0/FULL PASS128 y hash coincidente.
+**Independent audit:** `POWER_EXACT_H_ORIGIN_AUDIT_098.md` approved; run19778 exit0/FULL PASS, independent reproduction run57072 exit0/FULL PASS128 and matching hash.
 
-Estado: **PROVED PUNTUAL por constructor exit0/FULL PASS; diseño y literal aprobados independientemente ANTES de la corrida.** Lectura final y reproducción independiente pendientes. Se conserva el diseño previo; resultado en§6. Papers intactos.
+Status: **PROVED POINTWISE by the main run exit0/FULL PASS; design and literal text independently approved BEFORE the run.** Final reading and independent reproduction pending. The previous design is kept; result in§6. Papers untouched.
 
-## 1. Diferencia, antecedentes y objeto
+## 1. Difference, antecedents and object
 
-Consultados las reglas del proyecto, README ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D, y073/077/078/087/090/092/093/095. Las identidades Hankel/Schur abstractas ya están registradas; no prueban por sí mismas un signo.093 verificó un jet de una condición de densidades más fuerte. Aquí se decide la condición EXACTA T_h(0), utilizando sólo seis momentos de la MISMA Phi real. No nuevos pivotes o muestras; no se infiere signo global desde el origen.
+Consulted the project rules, README ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D, and073/077/078/087/090/092/093/095. The abstract Hankel/Schur identities are already registered; they do not by themselves prove a sign.093 verified a jet of a stronger density condition. Here the EXACT condition T_h(0) is decided, using only six moments of the SAME real Phi. No new pivots or samples; no global sign is inferred from the origin.
 
-Con Z(u)=integral_R exp(ut)Phi(t)dt, M=Z'/Z, x=u² y
+With Z(u)=integral_R exp(ut)Phi(t)dt, M=Z'/Z, x=u² and
 
     N(x)=M(u)/u=a+b x+c x²+d x³+e x^4+O(x^5),
     h(x)=xN(x)/(a−N(x)),
     T_h=2h'h'''−3(h'')²,
 
-la regularización algebraica exacta da
+the exact algebraic regularization gives
 
     T_h(0)=12a H3/b^4,
     H3=det[[a,b,c],[b,c,d],[c,d,e]].
 
-Aquí a=κ2,b=κ4/6,c=κ6/120,d=κ8/5040,e=κ10/362880, con κ los cumulantes de la probabilidad Phi/Z(0).La varianza073 da a>0;086/097 dan R'(0)>0 para R=1/N, y por R'(0)=−b/a² se obtiene b<0. No se deduce esa desigualdad estricta sólo de M''<0 en u>0. El script comprobará además que sus intervalos verifican esas desigualdades antes de la comparación. H3 no se trata como un determinante de momentos positivos genéricos: son coeficientes de cumulantes y su signo es el test solicitado.
+Here a=κ2,b=κ4/6,c=κ6/120,d=κ8/5040,e=κ10/362880, with κ the cumulants of the probability Phi/Z(0).The variance073 gives a>0;086/097 give R'(0)>0 for R=1/N, and from R'(0)=−b/a² one obtains b<0. That strict inequality is not deduced only from M''<0 for u>0. The script will also check that its intervals verify those inequalities before the comparison. H3 is not treated as a determinant of generic positive moments: they are cumulant coefficients and their sign is the requested test.
 
-Definir Ir=integral_0^infinito t^rPhi(t)dt para r=0,2,4,6,8,10. Los momentos normalizados son mr=Ir/I0. Se forma la serie par Z(u)/Z(0)=sum_(k=0)^5 m_(2k)u^(2k)/(2k)!+O(u^12), con m0=1 exactamente. Derivar su logaritmo hasta grado9 produce a,b,c,d,e sin requerir momentos de orden mayor10. La implementación deberá respetar la precisión formal conocida: Z.prec>=11 y M.prec>=10, sin rellenar coeficientes desconocidos.
+Define Ir=integral_0^infinito t^rPhi(t)dt for r=0,2,4,6,8,10. The normalized moments are mr=Ir/I0. The even series Z(u)/Z(0)=sum_(k=0)^5 m_(2k)u^(2k)/(2k)!+O(u^12) is formed, with m0=1 exactly. Differentiating its logarithm up to degree9 produces a,b,c,d,e without requiring moments of order greater than10. The implementation must respect the known formal precision: Z.prec>=11 and M.prec>=10, without filling in unknown coefficients.
 
-## 2. Parámetros previos, idénticos a093
+## 2. Prior parameters, identical to093
 
-En[0,2],128paneles, centros(2j+1)/128,j=0,...,127, h=1/128. Radio Cauchy r=1/32, razón1/4. Taylor grado64, cap65, precisión512bits, modos theta1,...,16. No ajustar después de observar el signo.
+On[0,2],128panels, centres(2j+1)/128,j=0,...,127, h=1/128. Cauchy radius r=1/32, ratio1/4. Taylor degree64, cap65, precision512bits, theta modes1,...,16. No tuning after observing the sign.
 
-El diseño093 ya auditado prueba en los discos complejos
+The already audited design093 proves on the complex discs
 
     −1/32<=Re t<=65/32, |Im t|<=1/32,
     |Phi(t)|<2^22, |t|<3,
     EPS=2^25*17^4/8^289
 
-para la cola COMPLETA de modos m>=17. La única nueva mayoración compleja necesaria es
+for the COMPLETE tail of modes m>=17. The only new complex majorization needed is
 
     |t^(2k)Phi(t)|<3^10*2^22<10^12, k=0,...,5.
 
-Se añaden EPS*32^j a TODOS los coeficientes Phi[j],j=0,...,64, antes de multiplicar por cada t^(2k). No se importa ni ejecuta ninguna malla previa para calcular estos momentos.
+EPS*32^j is added to ALL coefficients Phi[j],j=0,...,64, before multiplying by each t^(2k). No previous mesh is imported or executed to compute these moments.
 
-## 3. Error de integración fijado
+## 3. Fixed integration error
 
-Cada polinomio Taylor grado64 de t^(2k)Phi se integra exactamente en el panel simétrico: términos pares2coef[j]h^(j+1)/(j+1), términos impares0. Los redondeos son intervalares outward.
+Each Taylor polynomial of degree64 of t^(2k)Phi is integrated exactly on the symmetric panel: even terms2coef[j]h^(j+1)/(j+1), odd terms0. Roundings are outward interval.
 
-Con el bound nuevo10^12 y la longitud total2, el error TOTAL del desarrollo completo es
+With the new bound10^12 and total length2, the TOTAL error of the complete expansion is
 
     REM=2*10^12*4^(−65)/(1−1/4)<10^(−24).
 
-Se añade simétricamente a cada momento. Este resto Cauchy se suma a los errores theta ya propagados en los coeficientes; no sustituye la cola theta ni se estima a partir de valores observados.
+It is added symmetrically to each moment. This Cauchy remainder is added to the theta errors already propagated in the coefficients; it does not replace the theta tail nor is it estimated from observed values.
 
-## 4. Nueva cola temporal, válida hasta orden10
+## 4. New temporal tail, valid up to order10
 
-093 ya demostró, conservando todos los modos,
+093 already proved, keeping all modes,
 
     0<Phi(2+s)<2^(−140)exp(−300s), s>=0.
 
-Para todos los órdenes r=0,2,4,6,8,10,
+For all orders r=0,2,4,6,8,10,
 
     (2+s)^r<=2^10 exp(5s),
 
-por log(1+s/2)<=s/2. Luego
+by log(1+s/2)<=s/2. Hence
 
     0<integral_2^infinito t^rPhi(t)dt
        <(1024/295)*2^(−140)<2^(−138).
 
-Se fija TAIL=2^(−138) para TODOS los seis momentos y se añade el intervalo positivo[0,TAIL]. No usar el tail2^(−140) de093, que sólo estaba fijado para órdenes0,1,2.
+TAIL=2^(−138) is fixed for ALL six moments and the positive interval[0,TAIL] is added. Do not use the tail2^(−140) of093, which was fixed only for orders0,1,2.
 
-## 5. Test previo y alcance
+## 5. Prior test and scope
 
-La implementación verificará la positividad y finitud de los seis momentos, la finitud de las series y las precisiones formales anteriores. H3 se evaluará por la fórmula polinómica exacta
+The implementation will verify the positivity and finiteness of the six moments, the finiteness of the series and the formal precisions above. H3 will be evaluated by the exact polynomial formula
 
     H3=a*c*e−a*d²−b²*e+2b*c*d−c³.
 
-El assert de decisión acepta H3>0 O H3<0. Si los intervalos no separan0, se informa inconcluso sin modificar parámetros para forzar una respuesta. No se predetermina positividad.
+The decision assert accepts H3>0 OR H3<0. If the intervals do not separate0, it is reported inconclusive without modifying parameters to force an answer. Positivity is not predetermined.
 
-Un signo positivo sólo prueba T_h>0 cerca del origen en una vecindad no cuantificada; un signo negativo refutaría la propiedad global buscada para la Phi real, pero no sería un contraejemplo de W. Ni uno ni otro decide todo el intervalo restante ni todos los órdenes. No nueva ventana T.
+A positive sign only proves T_h>0 near the origin on an unquantified neighbourhood; a negative sign would refute the sought global property for the real Phi, but would not be a counterexample to W. Neither decides the whole remaining interval nor all orders. No new window T.
 
 
-## 6. Resultado constructor y alcance exacto
+## 6. Main run result and exact scope
 
-Tras aprobación matemática y literal de mapa y root, la ÚNICA corrida constructora19778 terminó exit0/FULL PASS128paneles, sin cambios de código, precisión, parámetros, modos o restos durante la corrida. El test que aceptaba cualquiera de los dos signos obtuvo
+After mathematical and literal approval, the SINGLE run19778 ended exit0/FULL PASS128panels, without changes of code, precision, parameters, modes or remainders during the run. The test that accepted either sign obtained
 
     PASS098: exact T_h(0) sign POSITIVE.
 
-Salida intervalar outward de Arb:
+Outward interval output of Arb:
 
     I0 [0.12428019454707852747819343 +/- 6.89e-27]
     I2 [0.00574298607878635938381247 +/- 2.84e-27]
@@ -101,16 +101,16 @@ Salida intervalar outward de Arb:
     H3 [1.73824840842099742e-21 +/- 6.84e-39]
     Th0 [3.1551297417482263e-5 +/- 5.03e-22].
 
-La prueba del signo es la comparación estricta intervalar del script, no la sustitución de los centros de estos intervalos. Se verifican también a>0 y b<0 antes del cociente. Todos los momentos incluyen las colas completas de modos, el resto de cuadratura y la cola temporal hasta orden10. No se usa una positividad abstracta de matrices Hankel para sustituir ese cálculo firmado.
+The proof of the sign is the strict interval comparison of the script, not the substitution of the centres of these intervals. a>0 and b<0 are also verified before the quotient. All moments include the complete mode tails, the quadrature remainder and the temporal tail up to order10. No abstract positivity of Hankel matrices is used to replace that signed computation.
 
-Así **T_h(0)>0 para la Phi REAL**. La regularización de§1 es analítica cerca0 porque b!=0, y por continuidad T_h(x)>0 en una vecindad existente de x=0, sin radio certificado. Se verifica esta premisa local exacta; no se la refuta ni se infiere su signo en todo el intervalo intermedio. El nodo0 es auxiliar para el criterio anclado, no un nuevo exponente admisible de W. No nuevo número de generadores, signo global, todos los órdenes ni ventana T.
+Thus **T_h(0)>0 for the REAL Phi**. The regularization of§1 is analytic near0 because b!=0, and by continuity T_h(x)>0 on an existing neighbourhood of x=0, without certified radius. This exact local premise is verified; it is not refuted nor is its sign inferred on the whole intermediate interval. The node0 is auxiliary for the anchored criterion, not a new admissible exponent of W. No new number of generators, global sign, all orders or window T.
 
-Comando desde la raíz del repositorio:
+Command from the repository root:
 
     python3 03-research/phase-211-sign-sandbox/tools/power_exact_h_origin_098_verify.py
 
-SHA256 del script fijo:
+SHA256 of the fixed script:
 
     bebcca70c5dd54ba53841e77542aa3e3e2ea059306061dc676e24f88ee5117c9.
 
-El script es autónomo: no importa ni ejecuta las corridas087/093, aunque conserva sus bounds analíticos y esquema de cuadratura ya auditados. La auditoría098 está aprobada y root57072 reprodujo exit0/FULL PASS128 con el mismo hash.
+The script is self-contained: it does not import or execute the runs087/093, although it keeps their already audited analytic bounds and quadrature scheme. The audit098 is approved and run57072 reproduced exit0/FULL PASS128 with the same hash.

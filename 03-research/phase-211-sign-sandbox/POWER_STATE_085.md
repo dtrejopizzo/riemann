@@ -1,22 +1,22 @@
-# POWER_STATE_085 — Cuatro potencias arbitrarias admisibles
+# POWER_STATE_085 — Four arbitrary admissible powers
 
-Estado: **PROVED**, constructor61911 exit0/FULL PASS16384paneles para NR y NS; auditoría matemática y código aprobada. Reproducción independiente root29132 exit0/FULL PASS de ambos numeradores en los16384paneles, con hash coincidente. Paper47 global **OPEN**; papers intactos.
+Status: **PROVED**, run 61911 exit0/FULL PASS 16384 panels for NR and NS; mathematical and code audit approved. Independent reproduction 29132 exit0/FULL PASS of both numerators on the 16384 panels, with matching hash. Paper 47 global **OPEN**; papers untouched.
 
-## Resultado completo
+## Complete result
 
-Para cualesquiera exponentes reales ai>1, W es positiva en el espacio generado por hasta CUATRO potencias correspondientes, salvo la función nula. Para nodos distintos el kernel completoKij=[L(ai)+L(aj)]/(ai+aj−1) es PD. Si hay exponentes repetidos, se agrupan coeficientes y la matriz redundante es PSD. Se conservan ARCH, polar y TODOS los contactos porCONE001.
+For any real exponents ai>1, W is positive on the span of up to FOUR corresponding powers, except for the zero function. For distinct nodes the full kernel Kij=[L(ai)+L(aj)]/(ai+aj−1) is PD. If there are repeated exponents, coefficients are grouped and the redundant matrix is PSD. ARCH, polar and ALL contacts are kept via CONE001.
 
-Cadena:073/080 prueban los menores hasta3 y las derivadas de R=u/M,S=uM;084 identifica TR/TS y prueba su suficiencia global porRolle, además del exteriorA>=128;085 certifica simultáneamente NR,NS>0 en[.5,127.5];083 factoriza detK4 en el productoPfR·PfS/productoR. Esto prueba todos los nodos, no una lista de matrices.
+Chain: 073/080 prove the minors up to 3 and the derivatives of R=u/M, S=uM; 084 identifies TR/TS and proves their global sufficiency via Rolle, in addition to the exterior A>=128; 085 certifies simultaneously NR,NS>0 on [.5,127.5]; 083 factors detK4 into the product PfR·PfS/productR. This proves all nodes, not a list of matrices.
 
-Fuentes: `POWER_FOUR_GENERATORS_085.md`, `POWER_FOUR_GENERATORS_AUDIT_085.md`, `POWER_FOUR_TURAN_084.md`, `POWER_FOUR_TURAN_AUDIT_084.md`, `POWER_RECIPROCAL_PFAFFIANS_083.md`, `POWER_STATE_080.md`.
+Sources: `POWER_FOUR_GENERATORS_085.md`, `POWER_FOUR_GENERATORS_AUDIT_085.md`, `POWER_FOUR_TURAN_084.md`, `POWER_FOUR_TURAN_AUDIT_084.md`, `POWER_RECIPROCAL_PFAFFIANS_083.md`, `POWER_STATE_080.md`.
 
-Código: `tools/power_four_turan_compact_085_verify.py`.
+Code: `tools/power_four_turan_compact_085_verify.py`.
 Hash:
 
     4916689a48baf3164b8e99ff8ff7973dbd505367cf9ee46b17b7efc9845abf46
 
-Certificado continuo fijo:16384panelesdyádicos,512bits/cap45,Taylor40,discosr1/32,majoranteanalítico10^20 y resto racional10^20(127/1024)^41/(1−127/1024)<10^−16. Sólo jets centrales exactos con errores rigurosos y resto globalCauchy; ningún muestreo de signo.
+Fixed continuous certificate: 16384 dyadic panels, 512 bits/cap 45, Taylor 40, discs r 1/32, analytic majorant 10^20 and rational remainder 10^20(127/1024)^41/(1−127/1024)<10^−16. Only exact central jets with rigorous errors and global Cauchy remainder; no sign sampling.
 
-## Alcance
+## Scope
 
-Nueva cobertura de cuatro exponentes pequeños o mixtos; las tasas todas>=31.5 ya estaban contenidas en053. Cinco generadores, todos los órdenes y una nueva ventanaT no están demostrados. El apéndice abstracto083 no aporta por sí solo los signos superiores.081 sólo descarta herencia literalBASE, no una recursión más amplia. Continuación global activa.
+New coverage of four small or mixed exponents; rates all >=31.5 were already contained in 053. Five generators, all orders and a new window T are not proved. The abstract appendix 083 does not by itself supply the higher signs. 081 only rules out literal BASE inheritance, not a broader recursion. Global continuation active.

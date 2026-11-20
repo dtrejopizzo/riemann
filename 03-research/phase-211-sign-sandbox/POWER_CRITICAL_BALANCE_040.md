@@ -1,196 +1,196 @@
-# POWER_CRITICAL_BALANCE_040 — Factor elemental del producto infinito y signos cerca del centro
+# POWER_CRITICAL_BALANCE_040 — Elementary factor of the infinite product and signs near the center
 
-Estado: **PROVED, núcleo y CONSTANT-CUTOFF aprobados por auditoría independiente**. Ver [POWER_CRITICAL_AUDIT_040.md](POWER_CRITICAL_AUDIT_040.md). Tasa fija u=63/2. Papers intactos.
+Status: **PROVED, core and CONSTANT-CUTOFF approved by independent audit**. See [POWER_CRITICAL_AUDIT_040.md](POWER_CRITICAL_AUDIT_040.md). Fixed rate u=63/2. Papers untouched.
 
-Resultados: expansión del inverso aritmético COMPLETO con resto explícito O(delta³+N^(-3/2)) y cola exponencial; en delta=N^(-2), signos OPUESTOS uniformes de h_N y K_N cerca del centro energético. No se afirma signo de W.
+Results: expansion of the COMPLETE arithmetic inverse with explicit remainder O(delta³+N^(-3/2)) and exponential tail; at delta=N^(-2), uniform OPPOSITE signs of h_N and K_N near the energy center. No sign of W is claimed.
 
-## 1. Corpus y diferencia precisa
+## 1. Corpus and precise difference
 
-Consultados ROUTES-TRIED-INDEX/README.md, grid maestro y CROSSWORD-TO-D; leídos INVERSE_KERNEL020, UNIFORM_CUTOFF026, SIGNED_MOMENTS038 e INFINITE_SHOULDER039. Las fórmulas de Euler–Maclaurin y el principal de la suma Euler son conocidos; no se presentan como herramientas nuevas.
+Consulted ROUTES-TRIED-INDEX/README.md, the master grid and CROSSWORD-TO-D; read INVERSE_KERNEL020, UNIFORM_CUTOFF026, SIGNED_MOMENTS038 and INFINITE_SHOULDER039. The Euler–Maclaurin formulas and the main part of the Euler sum are known; they are not presented as new tools.
 
-La diferencia respecto038/039 es conservar el FACTOR elemental del recíproco Euler en sigma=1+delta antes de invertir Fourier. No se centra mediante A_sigma y B_sigma divergentes cuando delta baja a escala1/N. La cota resulta ABSOLUTA para el cociente completo del inverso y es menor que su escala1/N en el régimen analizado, en lugar de un error relativo que no decide el signo. Sólo se usan el integral de la parte fraccionaria y productos absolutamente convergentes en sigma>1.
+The difference with respect to038/039 is to keep the elementary FACTOR of the Euler reciprocal at sigma=1+delta before inverting Fourier. One does not center via divergent A_sigma and B_sigma when delta drops to scale1/N. The bound turns out ABSOLUTE for the complete quotient of the inverse and smaller than its scale1/N in the analyzed regime, instead of a relative error that does not decide the sign. Only the integral of the fractional part and absolutely convergent products at sigma>1 are used.
 
-## 2. Factor local con resto explícito
+## 2. Local factor with explicit remainder
 
-Para Re z>0,
+For Re z>0,
 
     zeta(1+z)=1/z+H(z),
     H(z)=1−(1+z)int_1^infty {x}x^(−2−z)dx.
 
-Esta identidad sale de la suma de floor(x) por integración por partes. Además H(0)=gamma: integrar hasta un entero M da int_1^M{x}x^(-2)dx=logM−H_M+1.
+This identity comes from the sum of floor(x) by integration by parts. Moreover H(0)=gamma: integrating up to an integer M gives int_1^M{x}x^(-2)dx=logM−H_M+1.
 
-Para Re z>=0, |z|<=1/8, el integral tiene módulo<=1 y su diferencia respecto al valor en0 es<=|z|, porque int_1^infty logx x^(-2)dx=1. Por tanto
+For Re z>=0, |z|<=1/8, the integral has modulus<=1 and its difference from the value at0 is<=|z|, because int_1^infty logx x^(-2)dx=1. Hence
 
     |H(z)|<=17/8,
     |H(z)−gamma|<=2|z|,
     |zH(z)|<=17/64<1.
 
-Expandir una fracción geométrica con DENOMINADOR controlado da
+Expanding a geometric fraction with controlled DENOMINATOR gives
 
     1/zeta(1+z)=z−gamma z²+R3(z),
     |R3(z)|<=9|z|³.                                    (LAURENT)
 
-En efecto R3=−z²(H−gamma)+z³H²/(1+zH), y2+(17/8)²/(1−17/64)<9. No se postula una serie formal sin resto.
+Indeed R3=−z²(H−gamma)+z³H²/(1+zH), and2+(17/8)²/(1−17/64)<9. No formal series without remainder is postulated.
 
-## 3. Perfil gamma y razón completa del inverso
+## 3. Gamma profile and complete ratio of the inverse
 
-Conserve039: d=N−1, c en{1/2,3/2}, rho_N par, q=−rho'/rho para argumento positivo,
+Keep039: d=N−1, c in{1/2,3/2}, rho_N even, q=−rho'/rho for positive argument,
 
     g_c(t)=c rho_N(t)−rho_N'(t),
     v=1/2+delta, a_v=u²−v², t_v=2dv/a_v,
     f(ell)=exp(vell)g_c(t_v+ell)/g_c(t_v).
 
-La extensión izquierda de f no se considera una probabilidad. En sigma=1+delta>1, el inverso COMPLETO correspondiente tiene cociente
+The left extension of f is not considered a probability. At sigma=1+delta>1, the corresponding COMPLETE inverse has ratio
 
     R_c(t_v)=sum_(n>=1)mu(n)n^(−sigma)f(logn).
 
-Para c1/2 éste es h_N(e^t_v)/H_N(e^t_v); para c3/2 es K_N(e^t_v)/G_N(e^t_v), con las normalizaciones039. f(0)=1.
+For c1/2 this is h_N(e^t_v)/H_N(e^t_v); for c3/2 it is K_N(e^t_v)/G_N(e^t_v), with the normalizations039. f(0)=1.
 
-Fourier039 conserva la fórmula exacta y los bounds uniformes, para v en[1/2,2]:
+Fourier039 keeps the exact formula and the uniform bounds, for v in[1/2,2]:
 
     |fhat(xi)|<=sqrt(N)exp(−Nxi²/1000), |xi|<=1,
     |fhat(xi)|<sqrt(N)/2 ·sqrt(1+xi²)
        [1+beta_v xi²/a_v²+xi^4/a_v²]^(-N/2),
     beta_v=2(u²+v²), beta_v/a_v²>1/500.
 
-La normalización usa la norma del átomo gamma original. El multiplicador infinito es1/zeta(1+delta−i xi); su serie Euler es absoluta porque delta>0. No se descarta ningún entero Möbius.
+The normalization uses the norm of the original gamma atom. The infinite multiplier is1/zeta(1+delta−i xi); its Euler series is absolute because delta>0. No Möbius integer is discarded.
 
-## 4. Inversión con factor lineal y cuadrático: cota uniforme
+## 4. Inversion with linear and quadratic factor: uniform bound
 
-Suponga N>=24 y0<delta<=1/16. En |xi|<=1/16, z=delta−i xi pertenece a |z|<=1/8, y LAURENT se aplica. Al invertir los polinomios z,z² aparecen exactamente
+Suppose N>=24 and0<delta<=1/16. On |xi|<=1/16, z=delta−i xi belongs to |z|<=1/8, and LAURENT applies. On inverting the polynomials z,z² there appear exactly
 
     delta f(0)−f'(0),
     delta²f(0)−2delta f'(0)+f''(0).
 
-Se obtiene
+One obtains
 
     R_c(t_v)=delta−f'(0)
           −gamma[delta²−2delta f'(0)+f''(0)]+E_N,          (EXPANSION)
     |E_N|<=288delta³+9·10^6/N^(3/2)
                   +110000sqrt(N)delta^(-1)exp(−N/10^6). (REMAINDER)
 
-Prueba del centro. La desigualdad |delta−i xi|³<=2(delta³+|xi|³), LAURENT y los integrales gaussianos039 dan
+Proof of the center. The inequality |delta−i xi|³<=2(delta³+|xi|³), LAURENT and the Gaussian integrals039 give
 
     int_R sqrt(N)exp(−Nxi²/1000)d xi/(2pi)<16,
     int_R sqrt(N)|xi|³exp(−Nxi²/1000)d xi/(2pi)
                                        <500000/N^(3/2).
 
-Multiplicar por18 prueba los dos primeros errores.
+Multiplying by18 proves the first two errors.
 
-Para la cola |xi|>=1/16, la suma Euler absoluta da |1/zeta|<=1+1/delta; el polinomio z−gamma z² se acota junto con ella por(4/delta)(1+xi²). Se separa la potencia gamma en dos mitades y se reserva N/4>=6. La mitad extraída es<=exp(−N/10^6), pues log(1+(1/500)(1/16)²)>1/250000. El integral auxiliar de(1+|xi|)(1+xi²)(1+xi²/500)^(-6) en R es<110000. Sus cuatro monomios se acotan por92,100,46000,62500. Incluir el prefactor sqrt(N)/2 y2pi da el último error de REMAINDER.
+For the tail |xi|>=1/16, the absolute Euler sum gives |1/zeta|<=1+1/delta; the polynomial z−gamma z² is bounded together with it by(4/delta)(1+xi²). The gamma power is split into two halves and N/4>=6 is reserved. The extracted half is<=exp(−N/10^6), since log(1+(1/500)(1/16)²)>1/250000. The auxiliary integral of(1+|xi|)(1+xi²)(1+xi²/500)^(-6) over R is<110000. Its four monomials are bounded by92,100,46000,62500. Including the prefactor sqrt(N)/2 and2pi gives the last error of REMAINDER.
 
-Todas las integraciones son absolutas. La cota de cola usa delta>0; no se elimina esa condición por una continuación informal.
+All integrations are absolute. The tail bound uses delta>0; that condition is not removed by an informal continuation.
 
-## 5. Nueva desigualdad elemental de curvatura gamma
+## 5. New elementary gamma curvature inequality
 
-Además de q''<0 ya probado031, se tiene
+In addition to q''<0 already proved031, one has
 
     −2q'(t)/t<q''(t)<0, t>0.                            (CURVATURE)
 
-Prueba. Con P_N positivo grado d y pesos p_jt^j/P_N(t),
+Proof. With P_N positive of degree d and weights p_jt^j/P_N(t),
 
     t²q'=EJ−Var(J)<d.
 
-Defina S=q''+2q'/t. Diferenciar Riccati026 muestra que en cualquier punto S=0,
+Define S=q''+2q'/t. Differentiating Riccati026 shows that at any point S=0,
 
     S'=2q'[q'−(2d+1)/t²]<0.
 
-Por otro lado P_N da la expansión algebraica
+On the other hand P_N gives the algebraic expansion
 
     q=u−d/t+d(d+1)/(2ut²)+O(t^(-3)),
-    S=d(d+1)/(ut^4)+O(t^(-5))>0 al infinito.
+    S=d(d+1)/(ut^4)+O(t^(-5))>0 at infinity.
 
-Si S tuviera algún valor no positivo antes, debería volver a ser positivo, pero en TODO contacto S0 su derivada es negativa; se excluyen también tangencias. Luego S>0. Esto prueba CURVATURE sin una desigualdad especial de Bessel.
+If S had some nonpositive value earlier, it would have to become positive again, but at EVERY contact S0 its derivative is negative; tangencies are also excluded. Hence S>0. This proves CURVATURE without a special Bessel inequality.
 
-Derivar Riccati y combinar sus dos cotas de curvatura da
+Differentiating Riccati and combining its two curvature bounds gives
 
     d q/[t(qt+d+1)]<q'<d q/[t(qt+d)].                    (SLOPE)
 
-Ésta proporciona una escala inferior efectiva para comparar REMAINDER, no sólo una asintótica formal.
+This provides an effective lower scale for comparing REMAINDER, not just a formal asymptotic.
 
-## 6. Derivadas exactas del perfil en el centro inclinado
+## 6. Exact derivatives of the profile at the tilted center
 
-Escriba q=q_N(t_v), b=q_N'(t_v), epsilon=q−v>0. Riccati se factoriza:
+Write q=q_N(t_v), b=q_N'(t_v), epsilon=q−v>0. Riccati factors:
 
     b=epsilon(q+u²/v),
     eta:=epsilon/b=v/(u²+vq).
 
-Por diferenciación directa,
+By direct differentiation,
 
     f'(0)=b[1/(c+q)−eta],
     f''(0)=−b+q''/(c+q)
                     +b²[eta²−2eta/(c+q)].              (DERIVATIVES)
 
-En el régimen delta=N^(-2), N>=2^80, v<=1, q<2, eta<=1/u² y t_v>=N/(2·992). CURVATURE, b<=M_N<=u²/N y c+q>=1 prueban
+In the regime delta=N^(-2), N>=2^80, v<=1, q<2, eta<=1/u² and t_v>=N/(2·992). CURVATURE, b<=M_N<=u²/N and c+q>=1 prove
 
     −b(1+3970/N)<f''(0)<−b,
     0<f'(0)<b/(c+1/2),
     f'_(c=1/2)(0)>=b[1−2/N−1/u²].                     (BOUNDS)
 
-Para el lower de b, usar SLOPE, q>=1/2, t_v<=2d/(u²−1)<d/400 y qt_v+d+1<3d. Luego
+For the lower bound of b, use SLOPE, q>=1/2, t_v<=2d/(u²−1)<d/400 and qt_v+d+1<3d. Hence
 
     b>50/N.                                            (LOWER-b)
 
-Las constantes son deliberadamente holgadas; no se evalúa un N concreto.
+The constants are deliberately loose; no concrete N is evaluated.
 
-## 7. Patrón de signos cerca del centro energético
+## 7. Sign pattern near the energy center
 
-Con delta=N^(-2), REMAINDER prueba para TODOS N>=2^80
+With delta=N^(-2), REMAINDER proves for ALL N>=2^80
 
     |E_N|<10^(-4)/N.
 
-El primer término es directo; para el exponencial se usa exp(−x)<=6!x^(-6), de modo que N veces la cola queda acotada por110000·6!·10^36/N^(5/2). Todo se compara racionalmente en el extremo monótono2^80.
+The first term is direct; for the exponential one uses exp(−x)<=6!x^(-6), so that N times the tail is bounded by110000·6!·10^36/N^(5/2). Everything is compared rationally at the monotone endpoint2^80.
 
-Las cotas57/100<gamma<3/5 y BOUNDS/LOWER-b, sustituidas en EXPANSION, dan los signos
+The bounds57/100<gamma<3/5 and BOUNDS/LOWER-b, substituted in EXPANSION, give the signs
 
     h_N(e^t_v)/H_N(e^t_v)<−1/N,
     K_N(e^t_v)/G_N(e^t_v)>1/N,                           (CENTRAL-SIGNS)
     v=1/2+N^(-2), N>=2^80.
 
-Para c3/2, los términos delta y2gamma delta f' son favorables, −gamma f''>=gamma b y f'<=b/2; el beneficio es al menos(gamma−1/2)b, mayor que los errores. Para c1/2, el upper es
+For c3/2, the terms delta and2gamma delta f' are favorable, −gamma f''>=gamma b and f'<=b/2; the benefit is at least(gamma−1/2)b, larger than the errors. For c1/2, the upper bound is
 
     delta+b{−1+1/u²+2/N+(3/5)(1+3970/N)
                     +(6/5)delta}+|E_N|,
 
-estrictamente menor que−1/N mediante b>50/N y el resto citado. El término−gamma delta² sólo mejora ese upper.
+strictly less than−1/N via b>50/N and the cited remainder. The term−gamma delta² only improves that upper bound.
 
-Estos son signos del inverso COMPLETO en un centro que satisface t_v=d/992+O(1/N). No se identifica aún el punto exacto de transición en t ni se afirma un signo de W. Las sumas firmadas se conservan antes del resto; ninguna conclusión procede de una medida firmada tratada como probabilidad.
+These are signs of the COMPLETE inverse at a center satisfying t_v=d/992+O(1/N). The exact transition point in t is not yet identified nor is a sign of W claimed. The signed sums are kept before the remainder; no conclusion comes from a signed measure treated as a probability.
 
-## 8. Corte uniforme a distancia constante
+## 8. Uniform cutoff at constant distance
 
-Para TODOS N>=2^80 y
+For ALL N>=2^80 and
 
     2000/N <= delta <= 1000/sqrt(N),
 
-valen v<1, q<2, 0<f'<b y f''<−b por las mismas identidades exactas. Como 0<gamma<1, EXPANSION implica
+v<1, q<2, 0<f'<b and f''<−b hold by the same exact identities. Since 0<gamma<1, EXPANSION implies
 
     R_c(t_v)>=delta−u²/N−delta²−|E_N|.
 
-Las constantes racionales verificadas en el script dan, uniformemente en ese intervalo,
+The rational constants verified in the script give, uniformly on that interval,
 
     delta<1/1000,
     288delta³<delta/1000,
     9·10^6/N^(3/2)<1/(10000N),
     110000sqrt(N)delta^(-1)e^(−N/10^6)<1/(10000N).
 
-Para la última desigualdad basta exp(−x)<=6!x^(−6) y delta>=2000/N: N veces el término es a lo sumo 55·6!·10^36/N^(7/2). Luego
+For the last inequality exp(−x)<=6!x^(−6) and delta>=2000/N suffice: N times the term is at most 55·6!·10^36/N^(7/2). Hence
 
     R_c(t_v)> (998/1000)delta−(u²+1/5000)/N>0,
 
-pues delta>=2000/N. Esto cubre ambos c y TODOS los centros t_v de ese intervalo. En el extremo superior enlaza con el teorema039, válido para todos los t posteriores. Por tanto
+since delta>=2000/N. This covers both c and ALL centers t_v of that interval. At the upper endpoint it links with theorem039, valid for all later t. Therefore
 
-    h_N(e^t)>0 y K_N(e^t)>0
-    para TODO t>= (N−1)/992+5, N>=2^80.             (CONSTANT-CUTOFF)
+    h_N(e^t)>0 and K_N(e^t)>0
+    for ALL t>= (N−1)/992+5, N>=2^80.             (CONSTANT-CUTOFF)
 
-En efecto, si delta0=2000/N, la diferencia exacta entre el primer centro y d/992 es
+Indeed, if delta0=2000/N, the exact difference between the first center and d/992 is
 
     t_(1/2+delta0)−d/992
        =d·delta0·(1985+delta0)/(992·[u²−(1/2+delta0)²])<5,
 
-usando d·delta0<2000, delta0<1 y u²−v²>=u²−1. La conclusión es un corte suficiente, no la ubicación exacta de ninguna transición. Mejora el hombro O(sqrt(N)) de039 para los mismos objetos completos h y K; tampoco decide W.
+using d·delta0<2000, delta0<1 and u²−v²>=u²−1. The conclusion is a sufficient cutoff, not the exact location of any transition. It improves the shoulder O(sqrt(N)) of039 for the same complete objects h and K; nor does it decide W.
 
-## 9. Alcance y validación
+## 9. Scope and validation
 
-La prueba controla por primera vez una escala1/N del inverso infinito en el centro, donde039 sólo daba signo en un hombro O(sqrt(N)). CENTRAL-SIGNS y CONSTANT-CUTOFF fueron aprobados independientemente por root y mapa; el verificador exacto reproduce PASS. La región interior integral y el balance con ARCH_sharp siguen pendientes; un h_N negativo localmente no implica W negativo.
+The proof controls for the first time a scale1/N of the infinite inverse at the center, where039 only gave a sign on a shoulder O(sqrt(N)). CENTRAL-SIGNS and CONSTANT-CUTOFF were approved independently; the exact verifier reproduces PASS. The interior integral region and the balance with ARCH_sharp remain pending; a locally negative h_N does not imply negative W.
 
-No hay campañas de N, m o primos. La prueba usa el factor local explícito, integrales gamma y desigualdades uniformes. La auditoría hostil revisó el resto LAURENT, normalización Fourier, CURVATURE, factores de DERIVATIVES, comparaciones de signos y enlace con039. Papers intactos.
+There are no campaigns over N, m or primes. The proof uses the explicit local factor, gamma integrals and uniform inequalities. The independent audit reviewed the LAURENT remainder, Fourier normalization, CURVATURE, the factors of DERIVATIVES, sign comparisons and the link with039. Papers untouched.

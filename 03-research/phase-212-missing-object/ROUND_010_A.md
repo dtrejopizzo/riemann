@@ -1,184 +1,184 @@
-# Ronda 10, A: covariancia aditiva como mecanismo del signo
+# Round 10, A: additive covariance as the mechanism of the sign
 
-Notación del brief común. a_T(F) = Arch(F) − Σ_n v_n c_F(log n) sobre P_T, v_n = 2Λ(n)/√n.
-En coordenada logarítmica, τ_a F(t) = F(t+a), X = multiplicación por t, 𝓕 es la transformada aditiva
-transportada y M = m(D).
+Notation of the common brief. a_T(F) = Arch(F) − Σ_n v_n c_F(log n) on P_T, v_n = 2Λ(n)/√n.
+In logarithmic coordinate, τ_a F(t) = F(t+a), X = multiplication by t, 𝓕 is the transported additive
+transform and M = m(D).
 
-**Pista examinada.** Ninguna identidad de tipo Sonin puede llevar el signo por ser unitaria y covariante por
-escala, porque F_S = I·m_∞(D)e^{iφ_S(D)} tiene esas dos propiedades para toda fase (ANNEX_SONIN_READING §4). La
-propiedad que sólo tiene la transformada verdadera es la covariancia aditiva: relación canónica de conmutación,
-núcleo e^{2πixy} y Poisson sobre ℤ. Esa covariancia tendría que acoplarse con Σ_{d|n}Λ(d) = log n. El Lema A de
-ROUND_009_G2 explica por qué: un paso que use sólo divisores es ciego a Beurling.
+**Lead examined.** No Sonin-type identity can carry the sign by virtue of being unitary and scale-covariant,
+because F_S = I·m_∞(D)e^{iφ_S(D)} has those two properties for every phase (ANNEX_SONIN_READING §4). The
+property that only the true transform has is additive covariance: canonical commutation relation,
+kernel e^{2πixy} and Poisson on ℤ. That covariance would have to be coupled with Σ_{d|n}Λ(d) = log n. Lemma A of
+ROUND_009_G2 explains why: a step that uses only divisors is blind to Beurling.
 
-**Resultado.** El acoplamiento que pide la pista ya está escrito en el corpus. Es la identidad de anomalía
-Müntz–Chebyshev (PC) de la fase 161, R161_001 Teor. 3.1. Junta en una misma línea tres cosas: la relación de
-Tate–Beckner X + 𝓕X𝓕 = M (R160_C8_R1 Teor. 1 y Cor. 2.4), el defecto de Poisson E_N = S_N𝓕 − JS_N y la
-hipérbola de divisores H = L_M S_N − K_N, que contiene a Λ∗1 = log. La fase 161 la recorrió entre R161_001 y
+**Result.** The coupling requested by the lead is already written in the corpus. It is the Müntz–Chebyshev
+anomaly identity (PC) of phase 161, R161_001 Thm. 3.1. It puts three things in one line: the
+Tate–Beckner relation X + 𝓕X𝓕 = M (R160_C8_R1 Thm. 1 and Cor. 2.4), the Poisson defect E_N = S_N𝓕 − JS_N and the
+divisor hyperbola H = L_M S_N − K_N, which contains Λ∗1 = log. Phase 161 traversed it between R161_001 and
 R161_081.
 
-Ninguna de las tres direcciones del encargo pasa la puerta. Más abajo se registra el residuo exacto que queda abierto.
+None of the three directions of the brief passes the gate. The exact residue that remains open is recorded below.
 
-## 0. Cotejo en primaria
+## 0. Primary-source cross-check
 
-| Tema | Archivo y sección | Qué se construyó | Dónde se detuvo y por qué |
+| Topic | File and section | What was built | Where it stopped and why |
 |---|---|---|---|
-| Arch como incertidumbre logarítmica, con constante exacta C_0 = ψ(¼) − log π | `phase-160-row-d-infinite-T/R160_C8_R1.md`, Teor. 1 y Cor. 2.3–2.5 | a_T es el funcional de incertidumbre logarítmica de la involución de Tate–Fourier 𝔉_S. Su parte arquimediana es la desigualdad de Beckner con constante exacta C_0 (PROVED en clase densa, CITED Beckner). Para S finito la constante semilocal es κ_S = C_0 − Σ 2log p/(√p−1) | O-1, «Beckner de ventana para todo T», quedó OPEN y es una reformulación. Fila I-12: los multiplicadores de Tate sólo fijan una constante por la fórmula del producto (Teor. 3). Fila S-8: X + 𝔉X𝔉 es indefinida en L²(ℝ) |
-| (i) Parte de contactos como conmutador de log\|x\| con la suma E f(x) = Σ f(nx) | `phase-161-row-d-sum-product-square/R161_001_MUNTZ_CHEBYSHEV_ANOMALY.md` §§1–6 | Identidad (PC), PROVED para M_0 y N finitos: S_N A_{M_0}𝓕 se expresa mediante {X, E_N}, L*E_N, JH y H𝓕. Aquí S_N es el operador de suma de Müntz, que en coordenada x es Σ n^{−1/2}f(nx), y la «covariancia aditiva» es 𝓕 con E_N. Teor. 4.1: con cΛ y con borrados aparece un defecto interior δ_a(k) = Σ_{d\|k}a(d) − log k en el primer k afectado; en Beurling falta el dato de Poisson entero | R161_002 §§0–1: el cuadrado canónico ‖S_N A_M 𝓕F‖² ve A², no A, y por tanto es ciego al signo. Falta «una orientación del defecto de borde de Poisson» |
-| Derivada covariante [X, ·] del defecto de Poisson | R161_040; R161_041 §§0, 3, 6 | Poisson identifica las dos historias exteriores (040). La derivada de la diferencia E da la media U+V; la de la suma C = Z𝓕 + JZ da el chorro crítico U − V = ZM𝓕 − {X,C} (041 Teor. 3.1, PROVED) | Sólo E da un conmutador lineal que se anula; sólo C no tiene control de Poisson. Hace falta el apareamiento mixto comprimido E–C |
-| Apareamiento mixto E–C (Green) | R161_042–044 | Identidad de Green exacta: deja la diferencia de primeros momentos orientados, que es una energía positiva de distancia al borde | El término C_N X f rompe los momentos de Tate. Su corrección tiene paridad opuesta y el apareamiento se anula (043). El término primitivo colisiona con el NO-GO horizontal (044). RULES_AVOID K1: «piezas residuales sin signo» |
-| Cuadrado local de Toeplitz–Hankel | R161_045; RULES_AVOID R2 | Toeplitz–Hankel de rango uno | No globaliza (ensamblaje cerrado en la fase 122) |
-| Ondas de borde del defecto de Poisson | `phase-163-integrality-defect/R163_154_RESCALED_POISSON_BOUNDARY_WAVES.md` l. 68–83 | Expansión reescalada de E_N^ren mediante Tate–Beckner | l. 83: el operador principal usa sólo el peine entero y la ecuación funcional, sin Λ∗1 = log ni el peso de un primo. Es el mismo para cualquier peso a. Falta acoplarlo a los saltos de Euler (R163_152) |
-| Intercambio de factores en PC completo | `phase-170-.../R170_876` §0 | Simetría exacta de la hipérbola causal | No lo es del operador de primer contacto. La extracción causal intercambiada no existe porque PL_N^*P no es invertible (J3) |
-| (ii) Operador diferencial que conmuta con el corte y con la transformada | `phase-186-toolbox/R186_003` filas 3–4; `R186_006` filas 1, 4, 9; `R186_007` §6; `phase-200-sign-object/SPEC_SIGN_OBJECT_011` (CS-0) | W_λ = −∂(λ²−x²)∂ + (2πλx)² conmuta con P_λ y con 𝓕 (PROVED). Se usó como herramienta espectral y de funciones de prueba (prolatos), y como candidato a conmutar con P^S | NO-GO PROVED para S = {∞,2}: ninguna función del número de Hermite semilocal sumada a −𝔰² conmuta con P^S (003 fila 4), y L + κX no conmuta nunca (006 fila 4). Nunca se usó como **cota operatorial que domine los restos**. Ese uso cae, sin embargo, en las clases de §1(b) |
-| (iii) Oscilador o representación metapléctica combinados con la dilatación por enteros | R186_003 §5 (número N_S y ϖ(k) = πx² − ∂²/4π); R186_006 (W^{mp} con E g(u) = Σ g(2^k u)) | Se combinó el oscilador con la dilatación por 2: η_S = E, F_S = EF_∞E^{−1} | NO-GO de conmutación (006 fila 4). La «escalera» a, a* nunca se usó como factorización B*B de a_T. Esa factorización cae en BB* (J8; P1_BBSTAR_001) |
-| Hipercontractividad y Bonami–Beckner | `phase-201-untried-families/FAMILIES_B_001.md` F10 | Inventario de la familia | Sin mecanismo para el peine |
-| Teta exacta, sumación de Bernoulli, métricas no locales | 211 `POWER_HYPERBOLIC_MODEL_GRAM.md` §§12.6–12.7; 106_109 §2; memoria de las reglas del proyecto | Realización teta (Poisson modular) del Gram | Rechazadas en selección: falta un núcleo no local positivo o una identidad de Green con resto controlado |
-| Meta-ledger | `phase-200-sign-object/LEDGER_L5_META.md` C1 (l. 20) y l. 91 | «Poisson-ℤ» figura como identidad lineal y genérica en el peine | thm:shape(A): sobrevive a cΛ y a los borrados |
+| Arch as logarithmic uncertainty, with exact constant C_0 = ψ(¼) − log π | `phase-160-row-d-infinite-T/R160_C8_R1.md`, Thm. 1 and Cor. 2.3–2.5 | a_T is the logarithmic uncertainty functional of the Tate–Fourier involution 𝔉_S. Its archimedean part is Beckner's inequality with exact constant C_0 (PROVED on a dense class, CITED Beckner). For S finite the semilocal constant is κ_S = C_0 − Σ 2log p/(√p−1) | O-1, «window Beckner for all T», remained OPEN and is a reformulation. Row I-12: the Tate multipliers only fix a constant by the product formula (Thm. 3). Row S-8: X + 𝔉X𝔉 is indefinite on L²(ℝ) |
+| (i) Contact part as the commutator of log\|x\| with the sum E f(x) = Σ f(nx) | `phase-161-row-d-sum-product-square/R161_001_MUNTZ_CHEBYSHEV_ANOMALY.md` §§1–6 | Identity (PC), PROVED for M_0 and N finite: S_N A_{M_0}𝓕 is expressed through {X, E_N}, L*E_N, JH and H𝓕. Here S_N is the Müntz sum operator, which in coordinate x is Σ n^{−1/2}f(nx), and the «additive covariance» is 𝓕 with E_N. Thm. 4.1: with cΛ and with deletions an interior defect δ_a(k) = Σ_{d\|k}a(d) − log k appears at the first affected k; in Beurling the integer Poisson datum is missing | R161_002 §§0–1: the canonical square ‖S_N A_M 𝓕F‖² sees A², not A, and is therefore blind to the sign. Missing: «an orientation of the Poisson boundary defect» |
+| Covariant derivative [X, ·] of the Poisson defect | R161_040; R161_041 §§0, 3, 6 | Poisson identifies the two exterior histories (040). The derivative of the difference E gives the mean U+V; that of the sum C = Z𝓕 + JZ gives the critical jet U − V = ZM𝓕 − {X,C} (041 Thm. 3.1, PROVED) | Only E gives a vanishing linear commutator; only C has no Poisson control. The compressed mixed pairing E–C is needed |
+| Mixed pairing E–C (Green) | R161_042–044 | Exact Green identity: leaves the difference of oriented first moments, which is a positive distance-to-boundary energy | The term C_N X f breaks the Tate moments. Its correction has opposite parity and the pairing vanishes (043). The primitive term collides with the horizontal NO-GO (044). RULES_AVOID K1: «residual pieces without sign» |
+| Local Toeplitz–Hankel square | R161_045; RULES_AVOID R2 | Rank-one Toeplitz–Hankel | Does not globalize (assembly closed in phase 122) |
+| Boundary waves of the Poisson defect | `phase-163-integrality-defect/R163_154_RESCALED_POISSON_BOUNDARY_WAVES.md` l. 68–83 | Rescaled expansion of E_N^ren via Tate–Beckner | l. 83: the principal operator uses only the integer comb and the functional equation, without Λ∗1 = log or the weight of a prime. It is the same for any weight a. Coupling to the Euler jumps is missing (R163_152) |
+| Interchange of factors in full PC | `phase-170-.../R170_876` §0 | Exact symmetry of the causal hyperbola | It is not a symmetry of the first-contact operator. The interchanged causal extraction does not exist because PL_N^*P is not invertible (J3) |
+| (ii) Differential operator commuting with the cutoff and the transform | `phase-186-toolbox/R186_003` rows 3–4; `R186_006` rows 1, 4, 9; `R186_007` §6; `phase-200-sign-object/SPEC_SIGN_OBJECT_011` (CS-0) | W_λ = −∂(λ²−x²)∂ + (2πλx)² commutes with P_λ and with 𝓕 (PROVED). Used as a spectral and test-function tool (prolates), and as a candidate to commute with P^S | NO-GO PROVED for S = {∞,2}: no function of the semilocal Hermite number added to −𝔰² commutes with P^S (003 row 4), and L + κX never commutes (006 row 4). Never used as an **operator bound dominating the remainders**. That use, however, falls into the classes of §1(b) |
+| (iii) Oscillator or metaplectic representation combined with dilation by integers | R186_003 §5 (number N_S and ϖ(k) = πx² − ∂²/4π); R186_006 (W^{mp} with E g(u) = Σ g(2^k u)) | The oscillator was combined with dilation by 2: η_S = E, F_S = EF_∞E^{−1} | Commutation NO-GO (006 row 4). The «ladder» a, a* was never used as a B*B factorization of a_T. That factorization falls into BB* (J8; P1_BBSTAR_001) |
+| Hypercontractivity and Bonami–Beckner | `phase-201-untried-families/FAMILIES_B_001.md` F10 | Inventory of the family | No mechanism for the comb |
+| Exact theta, Bernoulli summation, nonlocal metrics | 211 `POWER_HYPERBOLIC_MODEL_GRAM.md` §§12.6–12.7; 106_109 §2; memory of the project rules | Theta realization (modular Poisson) of the Gram | Rejected at selection: a positive nonlocal kernel or a Green identity with controlled remainder is missing |
+| Meta-ledger | `phase-200-sign-object/LEDGER_L5_META.md` C1 (l. 20) and l. 91 | «Poisson-ℤ» appears as a linear identity generic in the comb | thm:shape(A): survives cΛ and deletions |
 
-Búsquedas sin hallazgo relevante (grep sobre 03-research y 05-meta): «canonical commutation», Eisenbud,
-«time delay» (aparece sólo en sentido de fase), Lax–Phillips (fase 64, colligación adélica, otro objeto),
-Segal–Bargmann (fase 4, otro uso) y co-Poisson (phase-209 LINK_011/016, Mellin–Gauss y rango denso). Una
-búsqueda sin coincidencias textuales no prueba novedad conceptual.
+Searches without relevant finding (grep over 03-research and 05-meta): «canonical commutation», Eisenbud,
+«time delay» (appears only in the phase sense), Lax–Phillips (phase 64, adelic colligation, another object),
+Segal–Bargmann (phase 4, another use) and co-Poisson (phase-209 LINK_011/016, Mellin–Gauss and dense range). A
+search without textual matches does not prove conceptual novelty.
 
-**Respuestas puntuales.**
-- (i) Sí. La identidad de Beckner con C_0 exacta está en R160_C8_R1. La parte de contactos como anomalía entre
-  X, el operador de suma S_N y Poisson está en R161_001 (PC). La línea terminó en R161_002 (cuadrado ciego), en
-  R161_042–044 (Green mixto sin signo) y en K7, que sigue abierto.
-- (ii) Como mecanismo de conmutación, sí, y es NO-GO para S ≥ {∞,2}. Como desigualdad operatorial dominante, no
-  hay memo. La clase cae de todos modos en B2, B8 y W11′ (§1(b)).
-- (iii) Sí, para la dilatación por 2 (R186_006), en forma de conmutación. Es NO-GO.
+**Point-by-point answers.**
+- (i) Yes. Beckner's identity with exact C_0 is in R160_C8_R1. The contact part as an anomaly between
+  X, the sum operator S_N and Poisson is in R161_001 (PC). The line ended in R161_002 (blind square), in
+  R161_042–044 (mixed Green without sign) and in K7, which remains open.
+- (ii) As a commutation mechanism, yes, and it is NO-GO for S ≥ {∞,2}. As a dominating operator inequality, there
+  is no memo. The class falls in any case into B2, B8 and W11′ (§1(b)).
+- (iii) Yes, for dilation by 2 (R186_006), in commutation form. It is NO-GO.
 
-## 1. Lema de canales (cierra el encargo en su forma general)
+## 1. Channel lemma (closes the brief in its general form)
 
-**Lema C (por dónde puede entrar la covariancia aditiva; ARGUED, con dos piezas PROVED).** En a_T la estructura
-aditiva de ℝ_x sólo puede entrar por tres vías:
+**Lemma C (where additive covariance can enter; ARGUED, with two PROVED pieces).** In a_T the additive
+structure of ℝ_x can only enter through three routes:
 
-- (α) **La relación de Tate–Beckner X + 𝓕X𝓕 = M**, que es la versión integrada de la relación canónica de
-  conmutación. Produce Arch y nada del peine. Es ciega a los tres controles (PROVED: no contiene pesos).
-  Por Paper 47 cor:Tarch (CITED), toda pieza de este canal que acote los contactos por arriba muere antes de
+- (α) **The Tate–Beckner relation X + 𝓕X𝓕 = M**, which is the integrated version of the canonical
+  commutation relation. It produces Arch and nothing of the comb. It is blind to the three checks (PROVED: it contains no weights).
+  By Paper 47 cor:Tarch (CITED), every piece of this channel that bounds the contacts from above dies before
   T ≈ 0.60.
-- (β) **Poisson sobre ℤ para el peine entero sin pesos.** Es idéntica bajo cΛ y bajo el borrado de una potencia
-  prima (PROVED trivial: la retícula ℤ y la familia {log n} no cambian, sólo los pesos). Sólo detecta Beurling
+- (β) **Poisson on ℤ for the integer comb without weights.** It is identical under cΛ and under the deletion of a prime
+  power (PROVED trivial: the lattice ℤ and the family {log n} do not change, only the weights). It only detects Beurling
   (R163_154 l. 83, CITED).
-- (γ) **El acoplamiento de (β) con Σ_{d|n}Λ(d) = log n.** Es la identidad (PC) de R161_001. Su Teor. 4.1 da el
-  comportamiento correcto frente a los tres controles al nivel de la identidad.
+- (γ) **The coupling of (β) with Σ_{d|n}Λ(d) = log n.** It is the identity (PC) of R161_001. Its Thm. 4.1 gives the
+  correct behaviour against the three checks at the level of the identity.
 
-Consecuencia: la conjunción de la pista con el Lema A de ROUND_009_G2 apunta exactamente a (γ), que ya está
-escrita y recorrida. La parte ARGUED es la exhaustividad de la lista; lo que la sostiene es que a_T sólo es
-covariante por dilataciones (es Toeplitz en t), y que la modulación e^{2πiyx} conmuta con P_T pero no deja
-invariante la forma.
+Consequence: the conjunction of the lead with Lemma A of ROUND_009_G2 points exactly to (γ), which is already
+written and traversed. The ARGUED part is the exhaustiveness of the list; what supports it is that a_T is only
+covariant under dilations (it is Toeplitz in t), and that the modulation e^{2πiyx} commutes with P_T but does not leave
+the form invariant.
 
-**Primer caso no trivial (contactos 2, 3, 4; T ∈ (log 2, ½log 5]); PROVED como lectura de R161_001 Teor. 4.1
-con N, M_0 ≥ 4.** Los defectos interiores son:
-- cΛ con c = 2: δ(2) = log 2 en k = 2.
-- Borrado de 4: δ(4) = −log 2 en k = 4.
-- Beurling: el defecto E_N cambia de operador, porque falta el peine entero.
+**First non-trivial case (contacts 2, 3, 4; T ∈ (log 2, ½log 5]); PROVED as a reading of R161_001 Thm. 4.1
+with N, M_0 ≥ 4.** The interior defects are:
+- cΛ with c = 2: δ(2) = log 2 at k = 2.
+- Deletion of 4: δ(4) = −log 2 at k = 4.
+- Beurling: the defect E_N changes operator, because the integer comb is missing.
 
-Los tres son visibles en la identidad, pero el signo no lo es: R161_002.
+All three are visible in the identity, but the sign is not: R161_002.
 
-## 2. Candidatas (filtro de cuatro puntos; ninguna pasa)
+## 2. Candidates (four-point filter; none passes)
 
-### (a) Factorización escalera / número: a_T + (término nombrado ≥ 0) = ⟨F, B*B F⟩, con B construido de X, ∂ y dilataciones enteras
+### (a) Ladder / number factorization: a_T + (named term ≥ 0) = ⟨F, B*B F⟩, with B built from X, ∂ and integer dilations
 
-1. *Antecedente:* RULES_AVOID J8 y P1_BBSTAR_001 (BB* NO-GO PROVED en la clase convolutiva y término a término);
-   R161_002 §1 (el cuadrado canónico de PC); R186_003 §5 (número de Hermite semilocal).
-2. *Nuevo:* B = Σ_n β_n n^{−1/2}τ_{log n}(X + i𝓕X𝓕) o variantes, con coeficientes β fijados por Poisson y por
+1. *Antecedent:* RULES_AVOID J8 and P1_BBSTAR_001 (BB* NO-GO PROVED in the convolutive class and term by term);
+   R161_002 §1 (the canonical square of PC); R186_003 §5 (semilocal Hermite number).
+2. *New:* B = Σ_n β_n n^{−1/2}τ_{log n}(X + i𝓕X𝓕) or variants, with coefficients β fixed by Poisson and by
    Λ∗1 = log.
-3. *Por qué evitaría la dificultad:* no la evita, por dos razones.
-   - Si β es lineal en Λ, B*B es cuadrático en el peine: es un sector «Λ∗Λ» sin término de compensación, la
-     clase R3-b y K2 (varianza orientada, genérica).
-   - Si B se toma de PC, el cuadrado es ‖S_N A𝓕F‖², que ve A² (R161_002). Que exista B con B*B = a_T|_{P_T}
-     equivale a a_T ⪰ 0 (J8: REF-D).
-4. *Conexión global:* ninguna sin un B explícito que no salga de factorizar la propia forma (J3).
+3. *Why it would avoid the difficulty:* it does not, for two reasons.
+   - If β is linear in Λ, B*B is quadratic in the comb: it is a «Λ∗Λ» sector without a compensating term, the
+     class R3-b and K2 (oriented variance, generic).
+   - If B is taken from PC, the square is ‖S_N A𝓕F‖², which sees A² (R161_002). The existence of B with B*B = a_T|_{P_T}
+     is equivalent to a_T ⪰ 0 (J8: REF-D).
+4. *Global connection:* none without an explicit B that does not come from factoring the form itself (J3).
 
-**Ruptura bajo controles.** No aplica: no hay objeto. Para el cuadrado de PC, cΛ produce otro cuadrado ≥ 0, y la
-ruptura no está en el resto. **Repetición:** R161_002, K2, J8.
+**Breakdown under checks.** Does not apply: there is no object. For the PC square, cΛ produces another square ≥ 0, and the
+breakdown is not in the remainder. **Repetition:** R161_002, K2, J8.
 
-### (b) Dominar los restos de Sonin con un operador diferencial de segundo orden que conmute con el corte y con la transformada
+### (b) Dominating the Sonin remainders with a second-order differential operator commuting with the cutoff and the transform
 
-1. *Antecedente:* R186_003 y R186_006 (W_λ, NO-GO semilocal); ANNEX_SONIN_READING §§1, 5 (los restos K_s, C_p
-   y κ_S, n₋(R) = ∞); Paper 47, Teor. P (fase 155: direcciones negativas en ≤ 8 modos prolatos).
-2. *Nuevo:* la desigualdad −⟨g,K_s g⟩ − ⟨g,C_p g⟩ ≥ −Φ(W_λ) y Son + 2ε′𝔅 ≥ Φ(W_λ) en P_T, con Φ explícita.
-3. *Por qué evitaría la dificultad:* no la evita.
-   - El único W conocido conmuta con P_λ y con 𝓕_∞, no con F_S (R186_006 fila 4, PROVED). Para la forma
-     completa (S = S(T)) no existe uno local.
-   - Una Φ(W_λ) es un multiplicador en la base prolata. La desigualdad pedida es un certificado lineal en una
-     base fija (W-lin) o una cota de norma o inercia del resto (W11′, R184_015 Teor. 2). Además lleva holgura
-     frente a un margen ≤ 4·10⁹Te^{−15.449T} (B2).
-   - C_p es indefinido con espectro ± de multiplicidad infinita (R183_018 Prop. 4.1). Φ(W_λ) tendría que
-     absorber infinitas direcciones negativas con margen superexponencialmente pequeño.
-4. *Conexión global:* sólo vía «Son ≥ C_ε en P_T», que es la inercia N_T (OPEN, REF-D).
+1. *Antecedent:* R186_003 and R186_006 (W_λ, semilocal NO-GO); ANNEX_SONIN_READING §§1, 5 (the remainders K_s, C_p
+   and κ_S, n₋(R) = ∞); Paper 47, Thm. P (phase 155: negative directions in ≤ 8 prolate modes).
+2. *New:* the inequality −⟨g,K_s g⟩ − ⟨g,C_p g⟩ ≥ −Φ(W_λ) and Son + 2ε′𝔅 ≥ Φ(W_λ) on P_T, with explicit Φ.
+3. *Why it would avoid the difficulty:* it does not.
+   - The only known W commutes with P_λ and with 𝓕_∞, not with F_S (R186_006 row 4, PROVED). For the full
+     form (S = S(T)) no local one exists.
+   - A Φ(W_λ) is a multiplier in the prolate basis. The requested inequality is a linear certificate in a
+     fixed basis (W-lin) or a norm or inertia bound of the remainder (W11′, R184_015 Thm. 2). Moreover it carries slack
+     against a margin ≤ 4·10⁹Te^{−15.449T} (B2).
+   - C_p is indefinite with ± spectrum of infinite multiplicity (R183_018 Prop. 4.1). Φ(W_λ) would have to
+     absorb infinitely many negative directions with superexponentially small margin.
+4. *Global connection:* only via «Son ≥ C_ε on P_T», which is the inertia N_T (OPEN, REF-D).
 
-**Ruptura bajo controles.** Φ(W_λ) no ve el peine. Con c = 2 la desigualdad falla, pero porque el resto crece y
-no porque cambie el signo de alguna pieza (patrón B1/B2). **Repetición de clase:** W-lin, W11′, B2. El ítem 9 de
-R186_006 («¿existe un operador de segundo orden que conmute con P^S y con P̂^S?») sigue OPEN, pero es una pregunta
-de conmutación y no de signo.
+**Breakdown under checks.** Φ(W_λ) does not see the comb. With c = 2 the inequality fails, but because the remainder grows and
+not because the sign of some piece changes (pattern B1/B2). **Class repetition:** W-lin, W11′, B2. Item 9 of
+R186_006 («is there a second-order operator commuting with P^S and with P̂^S?») remains OPEN, but it is a
+commutation question and not a sign question.
 
-### (c) Bochner mixto en el semianillo: positividad definida en la variable aditiva x combinada con la convolución multiplicativa de los contactos
+### (c) Mixed Bochner on the semiring: positive definiteness in the additive variable x combined with the multiplicative convolution of the contacts
 
-1. *Antecedente:* 211 POWER_HYPERBOLIC_MODEL_GRAM §§12.6–12.7 (realización teta exacta; falta un núcleo no local
-   positivo); 106_109 §2 (sumación por partes en teta, resto de Bernoulli con signo); LEDGER_L5_META C1
-   (Poisson-ℤ es lineal en el peine); R163_154.
-2. *Nuevo:* sería un enunciado de la forma a_T(F) = ∫ Q_F(y) dμ(y), con μ ≥ 0 una medida en el dual aditivo y
-   Q_F(y) ≥ 0 construido con e^{2πixy} y los contactos.
-3. *Por qué evitaría la dificultad:* no la evita.
-   - El peine sólo entra por Poisson-ℤ, el canal (β), que es ciego a cΛ y a los borrados. Para verlos hay que
-     pasar por (γ).
-   - Expresar a_T como integral firmada en la variable aditiva es la realización teta. Su obstrucción registrada
-     es justamente que el núcleo no local no es positivo.
-   - Positividad de Bochner en x de Σ v_n e^{2πi(log n)…} es positividad de la medida de contactos: PC rama 2,
+1. *Antecedent:* 211 POWER_HYPERBOLIC_MODEL_GRAM §§12.6–12.7 (exact theta realization; a positive nonlocal kernel
+   is missing); 106_109 §2 (summation by parts in theta, signed Bernoulli remainder); LEDGER_L5_META C1
+   (Poisson-ℤ is linear in the comb); R163_154.
+2. *New:* it would be a statement of the form a_T(F) = ∫ Q_F(y) dμ(y), with μ ≥ 0 a measure on the additive dual and
+   Q_F(y) ≥ 0 built with e^{2πixy} and the contacts.
+3. *Why it would avoid the difficulty:* it does not.
+   - The comb only enters through Poisson-ℤ, channel (β), which is blind to cΛ and to deletions. To see them one must
+     go through (γ).
+   - Expressing a_T as a signed integral in the additive variable is the theta realization. Its recorded obstruction
+     is precisely that the nonlocal kernel is not positive.
+   - Bochner positivity in x of Σ v_n e^{2πi(log n)…} is positivity of the contact measure: PC branch 2,
      CPOS_CLASS_001.
-4. *Conexión global:* ninguna nueva.
+4. *Global connection:* no new one.
 
-**Ruptura bajo controles.** Bajo cΛ, μ sigue siendo positiva, porque es la parte de Poisson y no tiene pesos.
-**Repetición:** memoria de selecciones rechazadas («métricas no locales», «sumación por partes en theta») y canal
-(β) del Lema C.
+**Breakdown under checks.** Under cΛ, μ remains positive, because it is the Poisson part and has no weights.
+**Repetition:** memory of rejected selections («nonlocal metrics», «summation by parts in theta») and channel
+(β) of Lemma C.
 
-### (d) Otras
+### (d) Others
 
-Las dos variantes de la covariancia aditiva quedan cubiertas por el Lema C, cada una en su canal:
-- la relación canónica de conmutación como identidad de Green ([X, ·] sobre E y C) cae en (γ) y en R161_042–044;
-- el núcleo e^{2πixy} como intertwiner de la suma S_N cae en (β)/(γ) y en R161_040.
+The two variants of additive covariance are covered by Lemma C, each in its channel:
+- the canonical commutation relation as a Green identity ([X, ·] on E and C) falls into (γ) and into R161_042–044;
+- the kernel e^{2πixy} as an intertwiner of the sum S_N falls into (β)/(γ) and into R161_040.
 
-No encuentro otra vía defendible.
+I find no other defensible route.
 
-## 3. Residuo preciso (la mejor de las tres)
+## 3. Precise residue (the best of the three)
 
-El único punto de esta línea que no está cerrado por un NO-GO es RULES_AVOID K7, abierto:
+The only point of this line not closed by a NO-GO is RULES_AVOID K7, open:
 
   SP-161 / L161.1 (R161_002 §§4–5):
-    a_T = Σ_N w_N Re⟨RF, S_N𝓕F⟩ + cuadrados de fuga de C_T = (1−P_T)𝓕P_T, sobre todo P_T.
+    a_T = Σ_N w_N Re⟨RF, S_N𝓕F⟩ + leakage squares of C_T = (1−P_T)𝓕P_T, on all of P_T.
 
-Sólo murió la rama w_N ≥ 0 (R161_002 Teor. 8.1). Los pesos con signo, o las derivadas discretas en N, no se
-escribieron.
+Only the branch w_N ≥ 0 died (R161_002 Thm. 8.1). Signed weights, or discrete derivatives in N, were not
+written.
 
-**Operación que falta.** Hace falta una sucesión explícita w_N con signo, no tomada de un optimizador, que cumpla
-dos cosas. Primero, que Σ w_N H_{M,N} cancele el resto de hipérbola positivo h(k) = Σ_{dm=k, d≤M, m≤N} Λ(d) para
-k > e^{2T}; una diferencia finita en N es candidata natural, porque h es monótono en N. Segundo, que el término de
-Poisson resultante, Σ w_N E_N, quede orientado: que sea una fuga exterior ‖(1−P_T)·‖² y no un conmutador de
-soporte [P,S].
+**Missing operation.** An explicit signed sequence w_N, not taken from an optimizer, is needed that satisfies
+two things. First, that Σ w_N H_{M,N} cancel the positive hyperbola remainder h(k) = Σ_{dm=k, d≤M, m≤N} Λ(d) for
+k > e^{2T}; a finite difference in N is a natural candidate, because h is monotone in N. Second, that the resulting
+Poisson term, Σ w_N E_N, be oriented: that it be an exterior leakage ‖(1−P_T)·‖² and not a support
+commutator [P,S].
 
-Ésta es la «identidad que conecte un cuadrado de fuga con el defecto de PC» que exige la reapertura de K1. La
-covariancia aditiva entra por E_N; la multiplicativa, por h(k). Bajo cΛ la cancelación interior fallaría en k = 2
-por δ = log 2 (R161_001 Teor. 4.1); bajo Beurling falta E_N. No lo propongo como candidata porque no tengo los
-w_N, y anunciarlo sin ellos repetiría K7.
+This is the «identity connecting a leakage square with the PC defect» that the reopening of K1 requires. The
+additive covariance enters through E_N; the multiplicative one, through h(k). Under cΛ the interior cancellation would fail at k = 2
+by δ = log 2 (R161_001 Thm. 4.1); under Beurling E_N is missing. I do not propose it as a candidate because I do not have the
+w_N, and announcing it without them would repeat K7.
 
-## 4. Lista de afirmaciones
+## 4. List of claims
 
-| # | Afirmación | Etiqueta |
+| # | Claim | Label |
 |---|---|---|
-| 1 | La pista «covariancia aditiva + Λ∗1 = log» es el contenido de R161_001 (PC) más R160_C8_R1 (Tate–Beckner) | CITED (lectura en primaria) |
-| 2 | Arch es la incertidumbre logarítmica con constante exacta C_0 = ψ(¼) − log π | CITED (R160_C8_R1 Cor. 2.4) |
-| 3 | El cuadrado canónico de PC es ciego al signo | CITED (R161_002) |
-| 4 | El Green mixto E–C deja piezas sin signo; la corrección de Tate se anula por paridad | CITED (R161_042–044) |
-| 5 | El operador prolato conmutante no existe en forma local para S ⊇ {∞,2} | CITED (R186_003 fila 4, R186_006 fila 4) |
-| 6 | Oscilador más dilatación por 2: NO-GO de conmutación | CITED (R186_006) |
-| 7 | Lema C, pieza (α): la relación de Tate–Beckner no contiene pesos | PROVED (trivial) |
-| 8 | Lema C, pieza (β): Poisson-ℤ sin pesos es invariante bajo cΛ y bajo borrados | PROVED (trivial) |
-| 9 | Lema C, exhaustividad de los tres canales | ARGUED |
-| 10 | Defectos interiores en el caso 2, 3, 4: log 2 en k = 2 (c = 2), −log 2 en k = 4 (borrado de 4) | PROVED (lectura de R161_001 Teor. 4.1) |
-| 11 | (a) repite R161_002, K2 y J8 | ARGUED (cotejo) |
-| 12 | (b) cae en W-lin, W11′ y B2 | ARGUED (cotejo) |
-| 13 | (c) repite la selección de métricas no locales y la de teta, y cae en el canal (β) | ARGUED (cotejo) |
-| 14 | Residuo: K7, pesos w_N con signo en SP-161 | OPEN |
-| 15 | Signo global de a_T | OPEN |
+| 1 | The lead «additive covariance + Λ∗1 = log» is the content of R161_001 (PC) plus R160_C8_R1 (Tate–Beckner) | CITED (primary-source reading) |
+| 2 | Arch is the logarithmic uncertainty with exact constant C_0 = ψ(¼) − log π | CITED (R160_C8_R1 Cor. 2.4) |
+| 3 | The canonical PC square is blind to the sign | CITED (R161_002) |
+| 4 | The mixed E–C Green leaves pieces without sign; the Tate correction vanishes by parity | CITED (R161_042–044) |
+| 5 | The commuting prolate operator does not exist in local form for S ⊇ {∞,2} | CITED (R186_003 row 4, R186_006 row 4) |
+| 6 | Oscillator plus dilation by 2: commutation NO-GO | CITED (R186_006) |
+| 7 | Lemma C, piece (α): the Tate–Beckner relation contains no weights | PROVED (trivial) |
+| 8 | Lemma C, piece (β): weightless Poisson-ℤ is invariant under cΛ and under deletions | PROVED (trivial) |
+| 9 | Lemma C, exhaustiveness of the three channels | ARGUED |
+| 10 | Interior defects in the case 2, 3, 4: log 2 at k = 2 (c = 2), −log 2 at k = 4 (deletion of 4) | PROVED (reading of R161_001 Thm. 4.1) |
+| 11 | (a) repeats R161_002, K2 and J8 | ARGUED (cross-check) |
+| 12 | (b) falls into W-lin, W11′ and B2 | ARGUED (cross-check) |
+| 13 | (c) repeats the selection of nonlocal metrics and that of theta, and falls into channel (β) | ARGUED (cross-check) |
+| 14 | Residue: K7, signed weights w_N in SP-161 | OPEN |
+| 15 | Global sign of a_T | OPEN |

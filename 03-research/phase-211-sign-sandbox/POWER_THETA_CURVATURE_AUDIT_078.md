@@ -1,33 +1,33 @@
 # POWER_THETA_CURVATURE_AUDIT_078
 
-**Actualización080:** el compacto admisible de g quedó certificado en `POWER_THETA_G_COMPACT_080.md`, auditado en `POWER_THETA_G_COMPACT_AUDIT_080.md` y resumido en `POWER_STATE_080.md`: TODOS los triples de potencias ai>1 tienen signo positivo completo. Las menciones siguientes de compacto pendiente describen el estado histórico de esta ronda; h y los órdenes superiores no quedan descargados por080.
+**Update 080:** the admissible compact range of g was certified in `POWER_THETA_G_COMPACT_080.md`, audited in `POWER_THETA_G_COMPACT_AUDIT_080.md` and summarized in `POWER_STATE_080.md`: ALL power triples ai>1 have full positive sign. The later mentions of a pending compact range describe the historical state of this round; h and the higher orders are not discharged by 080.
 
-Estado: **APROBADO** el apéndice078 de POWER_STATE_077. Son curvaturas auxiliares verificadas en tramos exteriores, no nueva cobertura deW. La continuación compacta sigue activa. Papers intactos.
+Status: **APPROVED** appendix 078 of POWER_STATE_077. These are auxiliary curvatures verified on exterior ranges, not new coverage of W. The compact continuation remains active. Papers untouched.
 
-## Identidades y criterio suficiente
+## Identities and sufficient criterion
 
-Se distinguen correctamente las coordenadas: x=u², b(x)=B(sqrt x), h=1/b y g=xb=a0u/M(u)−1, a0=M′(0). Las derivadas de este apéndice son respecto ax. Verificadas independientemente por derivación simbólica exacta las fórmulas de g″ y h″ en las variables v=a0u/M,r=uM′/M,t=−u²M″/M. El factor4 y las potencias deu son correctos.
+The coordinates are correctly distinguished: x=u², b(x)=B(sqrt x), h=1/b and g=xb=a0u/M(u)−1, a0=M′(0). The derivatives in this appendix are with respect to x. The formulas for g″ and h″ in the variables v=a0u/M, r=uM′/M, t=−u²M″/M were verified independently by exact symbolic differentiation. The factor 4 and the powers of u are correct.
 
-La fórmula C_P=(b(P)−b(x))/(xb(x)−Pb(P)) es positiva por077 y tiene singularidad removible. Sus dos derivadas expresadas mediante errores de rectas tangentes deh y g son exactas. Concavidad GLOBAL de ambas sería una condición suficiente para C_P′<=0 y(xC_P)′>=0 y por tanto para el criterio de pares del kernelG_p. No se afirma que sea necesaria, ni que las colas de concavidad descarguen ya el compacto global. El residuoR_p/z aporta el kernel de rango uno positivoR_p/(zw), con la normalización correcta.
+The formula C_P=(b(P)−b(x))/(xb(x)−Pb(P)) is positive by 077 and has a removable singularity. Its two derivatives expressed through tangent-line errors of h and g are exact. GLOBAL concavity of both would be a sufficient condition for C_P′<=0 and (xC_P)′>=0 and therefore for the pair criterion of the kernel G_p. It is not claimed that it is necessary, nor that the concavity tails already discharge the global compact range. The residue R_p/z contributes the positive rank-one kernel R_p/(zw), with the correct normalization.
 
-g″<=0 equivale exactamente al jet de074 t<=(1−r)(1+2r); no es una nueva condición descubierta sin antecedente. La fórmula deh″ es estrictamente negativa cuando v>=3, dados0<r<1,t>0. Esta última positividad de variables proviene de073/077, no de componentes aisladas de la aritmética.
+g″<=0 is exactly equivalent to the jet of 074 t<=(1−r)(1+2r); it is not a newly discovered condition without antecedent. The formula for h″ is strictly negative when v>=3, given 0<r<1, t>0. This last positivity of variables comes from 073/077, not from isolated components of the arithmetic.
 
-## Curvatura de g: u>=63/2
+## Curvature of g: u>=63/2
 
-Revisadas las series reales de c=M,d=M′,e=M″ paraA=u+1/2>=32 y las comparaciones poligamma. La combinación conserva las cancelaciones exactas y da d+ue>1/(4A²)−uP2>0. Los majorantes completos deP0,AP1,A³P2 son válidos porLambda(logn)^j<=n^(j+1), primer término más integral y decrecimiento de A^m2^−A. Las cotas1/100,1/100,1/4 son sobradas y uniformes desde32.
+Reviewed the real series of c=M, d=M′, e=M″ for A=u+1/2>=32 and the polygamma comparisons. The combination keeps the exact cancellations and gives d+ue>1/(4A²)−uP2>0. The complete majorants of P0, AP1, A³P2 are valid by Lambda(logn)^j<=n^(j+1), first term plus integral and decrease of A^m2^−A. The bounds 1/100, 1/100, 1/4 are ample and uniform from 32.
 
-La desigualdad d<1/(2A)+P1 y d>0, ya probado como varianza, permiten|ud|<51/100. El lower dec usa el signo favorable de sus términos racionales y da c>3/4 mediante pi<22/7 y log5>124/81. Así Delta=c²+cu(d+ue)−2(ud)²>423/10000. La identidad g″=−a0Delta/(4u³c³) tiene el signo correcto, probando g″<0 en todo el tramo declarado. No es la segunda derivada deb, que sería otra expresión.
+The inequality d<1/(2A)+P1 and d>0, already proved as a variance, give |ud|<51/100. The lower bound of c uses the favourable sign of its rational terms and gives c>3/4 via pi<22/7 and log5>124/81. Thus Delta=c²+cu(d+ue)−2(ud)²>423/10000. The identity g″=−a0Delta/(4u³c³) has the correct sign, proving g″<0 on the whole declared range. It is not the second derivative of b, which would be another expression.
 
-## Curvatura de h: u>=128
+## Curvature of h: u>=128
 
-El ancla M(15/2)=L(8) conserva TODOS los términos aritméticos. Las cotas gamma<3/5 y logpi<23/20, másP0(8)<85/11648<1/105, dan L8>3/10. La concavidad estricta073 permite a0>1/25. El bound P0 conserva la potencia fraccionaria15/2 y emplea1/sqrt2<5/7 correctamente.
+The anchor M(15/2)=L(8) keeps ALL arithmetic terms. The bounds gamma<3/5 and logpi<23/20, plus P0(8)<85/11648<1/105, give L8>3/10. The strict concavity of 073 gives a0>1/25. The bound P0 keeps the fractional power 15/2 and uses 1/sqrt2<5/7 correctly.
 
-Se comprobaron también independientemente con Fraction: el prefijo atanh de tres términos da log2>693/1000 yH32−5log2_lower<3/5; Taylor hasta grado6 da exp(23/20)>22/7;85/11648<1/105 y99/20+4/85<128/25. No se necesita otro verificador ni una evaluación numérica deM.
+Also checked independently with Fraction: the three-term atanh prefix gives log2>693/1000 and H32−5log2_lower<3/5; Taylor up to degree 6 gives exp(23/20)>22/7; 85/11648<1/105 and 99/20+4/85<128/25. Neither another verifier nor a numerical evaluation of M is needed.
 
-El upperM<log(u/5)/2+2/(u−1/2) es correcto para este rango. En128 la comparación escrita implica3M<u/25, y la brecha crece por la cota de su derivada. Por tantov>3 para todo u>=128; la identidad deh″ demuestra su negatividad estricta. Se verifica un tramo continuo, no una sucesión de puntos.
+The upper bound M<log(u/5)/2+2/(u−1/2) is correct for this range. At 128 the written comparison implies 3M<u/25, and the gap grows by the bound on its derivative. Therefore v>3 for all u>=128; the identity for h″ proves its strict negativity. A continuous range is verified, not a sequence of points.
 
-## Coordenada adicional y alcance
+## Additional coordinate and scope
 
-Las expresiones deb(0),b′(0) concuerdan con el desarrollo por cumulantes; h″(0) requiere también el orden8. La densidadK del final del apéndice es positiva: a0Phi−J tiene masa cero y un cruce negativo/positivo porque J/Phi decrece; su cola integrada es positiva, K′<0 yK tiende a0. La extensión par tiene derivada0 en el origen. Las identidades uZ_J=Z′ y u²Z_K=a0Z−Z_J dan exactamente b(u²)=Z_K/Z_J, sin convertir el cociente en una comparación de varianzas de una sola ley.
+The expressions for b(0), b′(0) agree with the cumulant expansion; h″(0) also requires order 8. The density K at the end of the appendix is positive: a0Phi−J has zero mass and one negative/positive crossing because J/Phi decreases; its integrated tail is positive, K′<0 and K tends to 0. The even extension has derivative 0 at the origin. The identities uZ_J=Z′ and u²Z_K=a0Z−Z_J give exactly b(u²)=Z_K/Z_J, without turning the quotient into a comparison of variances of a single law.
 
-Quedan g″ en0<u<63/2 y h″ en0<u<128 sin resolver en este apéndice. Las concavidades globales y cualquier puente a orden3 se mantienenCONDITIONAL. Las tasas altas ya pertenecen a la cobertura de trece polos053; no se presenta esto como una nueva región de signoW ni una ventana temporal. El resultado nuevo es descargar analíticamente las COLAS de estas obligaciones de curvatura específicas.
+g″ on 0<u<63/2 and h″ on 0<u<128 remain unresolved in this appendix. The global concavities and any bridge to order 3 remain CONDITIONAL. The high rates already belong to the thirteen-pole coverage 053; this is not presented as a new W sign region nor a time window. The new result is to discharge analytically the TAILS of these specific curvature obligations.

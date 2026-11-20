@@ -1,33 +1,33 @@
-# Corregir una unidad de masa a coste que tiende a cero
+# Correcting one unit of mass at a cost tending to zero
 
-En los binomiales enteros de argumento superior n≤N de 262, llamar R_N al máximo de |Σa_i e_i| entre combinaciones que valen exactamente cero en cada potencia prima y tienen Σ|a_i|≤1. Entonces
+Among the integer binomials with upper argument n≤N from 262, let R_N be the maximum of |Σa_i e_i| over combinations that are exactly zero on every prime power and have Σ|a_i|≤1. Then
 
     R_N → ∞,       R_N ≤ log(N+1).
 
-En consecuencia, para N≥6 el coste mínimo de corregir un error escalar Δ sin alterar una sola potencia prima es exactamente |Δ|/R_N. El precio por unidad tiende a cero incondicionalmente. La demostración cualitativa no proporciona una tasa inferior de crecimiento de R_N.
+Consequently, for N≥6 the minimum cost of correcting a scalar error Δ without altering a single prime power is exactly |Δ|/R_N. The price per unit tends to zero unconditionally. The qualitative proof does not provide a lower growth rate for R_N.
 
-**Un ejemplo concreto.** A las cuatro filas binom(p,1) para p=5,7,11,13 restar la fila binom(15,6) y dividir por cinco. La combinación tiene variación uno y es nula en cada potencia prima: binom(15,6)=5005=5·7·11·13, y cada primo del producto entra por el acarreo en m=p (todos tienen p²>15). Su masa es [Σ e(p,1)−e(15,6)]/5, entre 0.43082 y 0.43083. Con las filas de 262 se obtenía |log(1728/3125)|/3<0.198. El ejemplo sólo certifica un piso para el óptimo.
+**A concrete example.** From the four rows binom(p,1) for p=5,7,11,13 subtract the row binom(15,6) and divide by five. The combination has variation one and vanishes on every prime power: binom(15,6)=5005=5·7·11·13, and each prime of the product enters through the carry at m=p (all have p²>15). Its mass is [Σ e(p,1)−e(15,6)]/5, between 0.43082 and 0.43083. With the rows of 262 one obtained |log(1728/3125)|/3<0.198. The example only certifies a floor for the optimum.
 
-**Reformulación dual.** Sea A la matriz de acarreos con filas binomiales y columnas potencias primas. R_N es la distancia en norma suprema del vector e a la imagen de A. Es la dualidad finita de la norma cociente: los funcionales que se anulan sobre la imagen son las combinaciones buscadas. Ampliar N conserva cada testigo añadiendo ceros, pues una fila anterior tampoco carga potencias mayores; R_N es creciente en sentido no estricto. El vector de columna z_m=Λ(m) produce log binom(n,k). La cota 0≤e−log binom≤log(n+1) de 262 da el techo.
+**Dual reformulation.** Let A be the carry matrix with binomial rows and prime-power columns. R_N is the sup-norm distance from the vector e to the image of A. This is finite duality for the quotient norm: the functionals vanishing on the image are the combinations sought. Enlarging N preserves every witness by adding zeros, since an earlier row does not load higher powers either; R_N is nondecreasing. The column vector z_m=Λ(m) produces log binom(n,k). The bound 0≤e−log binom≤log(n+1) of 262 gives the ceiling.
 
-**Consecuencia de un precio que no bajara.** Si R_N estuviera acotado por C, para cada N existirían z_m tales que H(n)=Σ z_m⌊n/m⌋ cumple, con D(n)=n log n−H(n) y D(0)=0,
+**Consequence of a price that did not drop.** If R_N were bounded by C, then for each N there would exist z_m such that H(n)=Σ z_m⌊n/m⌋ satisfies, with D(n)=n log n−H(n) and D(0)=0,
 
     |D(n)−D(k)−D(n−k)|≤C   (n≤N).
 
-El promedio cíclico de 261 se aplica a cualquier función escalar con ese defecto. Da |D(j)−c_N j|≤2C para c_N=D(N)/N. Como D(1)=0, |c_N|≤2C. En cada argumento fijo H(n) queda acotado uniformemente en N. Las coordenadas z_(p^a) también: H(n)−H(n−1) suma z_m sobre los divisores primarios de n, de donde se recuperan sucesivamente en n=p^a. Extraer una subsucesión diagonal en todos los coeficientes y en c_N produce un H global con H(n)=n log n−cn+O(1).
+The cyclic averaging of 261 applies to any scalar function with that defect. It gives |D(j)−c_N j|≤2C for c_N=D(N)/N. Since D(1)=0, |c_N|≤2C. At each fixed argument H(n) is bounded uniformly in N. So are the coordinates z_(p^a): H(n)−H(n−1) sums z_m over the primary divisors of n, from which they are recovered successively at n=p^a. Extracting a diagonal subsequence in all coefficients and in c_N produces a global H with H(n)=n log n−cn+O(1).
 
-**Contradicción en el origen.** Definir b(n)=H(n)−H(n−1)−log n. Es aditiva para factores coprimos y acotada, por la última estimación. En particular Σ_p sup_(a≥1)|b(p^a)|<∞: para cualquier conjunto finito de primos elegir potencias con valores positivos casi máximos, omitiendo los que no contribuyen. El valor de b en su producto acota uniformemente la suma; repetir con los valores negativos.
+**Contradiction at the origin.** Define b(n)=H(n)−H(n−1)−log n. It is additive for coprime factors and bounded, by the last estimate. In particular Σ_p sup_(a≥1)|b(p^a)|<∞: for any finite set of primes choose powers with nearly maximal positive values, omitting those that do not contribute. The value of b at their product bounds the sum uniformly; repeat with the negative values.
 
-Para Re s>1 se tiene
+For Re s>1 one has
 
     Σ b(n)n^(−s)=ζ(s) Σ_p (1−p^(−s)) Σ_(a≥1) b(p^a)p^(−as).
 
-El factor después de ζ es holomorfo en Re s>0 por convergencia uniforme en compactos. En 0<s<1 real está acotado en módulo por Σ_p sup_a|b(p^a)|, ya que los pesos de cada serie geométrica suman p^(−s)≤1. Como ζ es regular en 0, esta continuación queda acotada al tender s a 0 por la derecha.
+The factor after ζ is holomorphic in Re s>0 by uniform convergence on compacta. For real 0<s<1 it is bounded in modulus by Σ_p sup_a|b(p^a)|, since the weights of each geometric series sum to p^(−s)≤1. Since ζ is regular at 0, this continuation stays bounded as s tends to 0 from the right.
 
-Por otra parte, Σ_(j≤n)b(j)=H(n)−log(n!)=(1−c)n−(1/2)log n+O(1), por Stirling. La misma fórmula para el extremo real t≥1 vale con error O(1). Por Mellin de la suma parcial la continuación anterior es
+On the other hand, Σ_(j≤n)b(j)=H(n)−log(n!)=(1−c)n−(1/2)log n+O(1), by Stirling. The same formula for the real endpoint t≥1 holds with error O(1). By Mellin transform of the partial sum, the above continuation is
 
     (1−c)s/(s−1)−1/(2s)+s∫₁^∞ O(1)t^(−s−1)dt.
 
-La última integral multiplicada por s es acotada para s real positivo. Hay por tanto divergencia al acercarse a cero, en contradicción con el cálculo por aditividad. Esto demuestra el crecimiento no acotado de R_N.
+The last integral multiplied by s is bounded for real positive s. There is therefore divergence as s approaches zero, contradicting the computation via additivity. This proves the unbounded growth of R_N.
 
-**Alcance para el signo.** Dado un ajuste en los átomos, la corrección óptima de su error concreto de masa ya tiene precio exacto, y es asintóticamente más barata que repetir una relación fija. Pero R_N≤log(N+1): esta mejora, por sí sola, no reduce el exponente de un error mayor que la raíz por una potencia fija. Permanece abierta la estimación conjunta de coste del ajuste y tamaño del error de masa para el peso de 257.
+**Scope for the sign.** Given a fit in the atoms, the optimal correction of its concrete mass error now has an exact price, and it is asymptotically cheaper than repeating a fixed relation. But R_N≤log(N+1): this improvement, by itself, does not reduce the exponent of an error larger than the square root by a fixed power. The joint estimate of the fit cost and the size of the mass error for the weight of 257 remains open.

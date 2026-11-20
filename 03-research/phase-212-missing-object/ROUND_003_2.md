@@ -1,208 +1,208 @@
-# Ronda 3, opción 2 — Funcionales y factores que dependen de Λ (memo de selección)
+# Round 3, option 2 — Functionals and factors that depend on Λ (selection memo)
 
-Objetivo (★): λ_A(T) ≥ 0 para todo T, con las definiciones de `../phase-211-sign-sandbox/STATEMENT_001.md`.
-Pregunta: ¿existe una factorización explícita a_T(F) = ‖V_T F‖² + ρ_T(F) sobre P_T (o sobre una reducción
-PROVED) con V_T escrito con los valores exactos Λ(n), n < N = e^{2T}, ρ_T manifiestamente ≥ 0, y que se rompa
-para cΛ y a_P? Notación: Arch(F) = (1/2π)∫ m|F̂|²; para un peso a, Comb_a(F) = Σ_{log n<2T} (2a(n)/√n) Re c_F(log n),
-de modo que a_T^{(a)} = Arch − Comb_a y a_T = a_T^{(Λ)}. Etiquetas: PROVED / CITED / CONDITIONAL / ARGUED / OPEN /
-NO-GO / NUMÉRICO.
+Goal (★): λ_A(T) ≥ 0 for every T, with the definitions of `../phase-211-sign-sandbox/STATEMENT_001.md`.
+Question: is there an explicit factorization a_T(F) = ‖V_T F‖² + ρ_T(F) on P_T (or on a PROVED
+reduction) with V_T written with the exact values Λ(n), n < N = e^{2T}, ρ_T manifestly ≥ 0, and that breaks
+for cΛ and a_P? Notation: Arch(F) = (1/2π)∫ m|F̂|²; for a weight a, Comb_a(F) = Σ_{log n<2T} (2a(n)/√n) Re c_F(log n),
+so that a_T^{(a)} = Arch − Comb_a and a_T = a_T^{(Λ)}. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN /
+NO-GO / NUMERICAL.
 
-## Cotejo
+## Cross-check
 
-### Qué se buscó y dónde
+### What was searched and where
 
-Grep en `03-research/` (todas las fases), `04-papers/47` y `48`, grid, crucigrama y anexos de la fase 212 por:
+Grep in `03-research/` (all phases), `04-papers/47` and `48`, grid, crossword and annexes of phase 212 for:
 Fejér–Riesz, Cholesky, LDL, pivote, Wiener–Hopf, outer function / función exterior, Szegő, square root / raíz
-cuadrada, spectral factorization, B*B, V*V, ratio comb, Schur complement. Hay coincidencias en unas cuarenta
-fases; las de más densidad son 114, 116, 72, 162, 186, 155, 211, 204, 200. Primarias abiertas: fase 200
-`A_MU_FACTORIZATION_001.md` §1(a)–(e) y su tabla; fase 186 `R186_043_WH_SIGN_ROUTE.md` §§0, 2–3; 211
-`ROUND_005_A.md` Prop. 3.3 y §5.3; 211 `LEDGER.md` C33b, C43; fase 170 `R170_861` §§0–7 (encabezados y
-estado); P47 lem:shape-scale y cor:Tarch. Las coincidencias «LDL/pivote» de la fase 211 (POWER_*_007, 050,
-052, 053, AUDIT_002/005) son certificados racionales de bloques fijos (W-fam, `RULES_AVOID.md` D12), no
-factorizaciones de la forma completa. No abrí en primaria las coincidencias de las fases 72, 114 y 116 por
-«square root»: por los títulos y por `REVIEW_002_BC.md` B.1(6) (fase 116) son operadores de Feshbach o Gram
-ortonormalizados, no un V_T con Λ en el núcleo; queda como límite de este cotejo. Ninguna búsqueda encontró un
-V_T afín o racional en Λ cuyo cuadrado se compare con a_T y cuyo resto se examine como tal; eso no prueba que
-no exista en otra fase.
+cuadrada, spectral factorization, B*B, V*V, ratio comb, Schur complement. There are hits in some forty
+phases; the densest are 114, 116, 72, 162, 186, 155, 211, 204, 200. Primaries opened: phase 200
+`A_MU_FACTORIZATION_001.md` §1(a)–(e) and its table; phase 186 `R186_043_WH_SIGN_ROUTE.md` §§0, 2–3; 211
+`ROUND_005_A.md` Prop. 3.3 and §5.3; 211 `LEDGER.md` C33b, C43; phase 170 `R170_861` §§0–7 (headings and
+status); P47 lem:shape-scale and cor:Tarch. The «LDL/pivot» hits of phase 211 (POWER_*_007, 050,
+052, 053, AUDIT_002/005) are rational certificates of fixed blocks (W-fam, `RULES_AVOID.md` D12), not
+factorizations of the complete form. I did not open in primary the hits of phases 72, 114 and 116 for
+«square root»: by their titles and by `REVIEW_002_BC.md` B.1(6) (phase 116) they are Feshbach operators or orthonormalized
+Grams, not a V_T with Λ in the kernel; this remains a limit of this cross-check. No search found a
+V_T affine or rational in Λ whose square is compared with a_T and whose remainder is examined as such; that does not prove that
+none exists in another phase.
 
-### (1) Antecedente más cercano
+### (1) Closest antecedent
 
-- **Factorización canónica de la forma o del símbolo:** fase 200 `A_MU_FACTORIZATION_001.md` §1(a)
-  (Fejér–Riesz / factorización espectral del símbolo: NO-GO, el símbolo es nulo fuera de un conjunto
-  discreto por la ecuación funcional) y §1(b) (Cholesky de la matriz agrupada: inercia mixta, clase C8,
-  existe igual para a_P y c = 2). `RULES_AVOID.md` C1 lista «Fejér–Riesz, Cholesky» y «Wiener–Hopf como
-  fuente de signo» como cerradas. R186_043 §2: Wiener–Hopf truncado es reformulación del autovalor extremo.
-- **Cuadrado del peine comprimido:** 211 `ROUND_005_A.md` Prop. 3.3: Π² = Qσ_v²Q − 𝔏*𝔏, con Λ∗Λ, forma de
-  cocientes ≥ 0 y fuga. Es exactamente ‖V_1F‖² para el V_1 lineal en Λ del encargo.
-- **Completar el cuadrado:** R170_861 (D*G⁻¹D con D aritmético es congruencia pura, PROVED allí); R170_201/301
-  (D_p*D_p = C_pI − (V_p + V_p*), cuadrados menos constante divergente); R166_502 §5.2 y fase 204
-  `P1_BBSTAR_001` (V*V da cocientes con coeficiente ≥ 0).
-- `REVIEW_002_BC.md` B.2(3), B.4: deja no excluidas las ℓ_i dependientes de Λ (R170_868 no las cubre).
+- **Canonical factorization of the form or of the symbol:** phase 200 `A_MU_FACTORIZATION_001.md` §1(a)
+  (Fejér–Riesz / spectral factorization of the symbol: NO-GO, the symbol vanishes outside a
+  discrete set by the functional equation) and §1(b) (Cholesky of the grouped matrix: mixed inertia, class C8,
+  exists equally for a_P and c = 2). `RULES_AVOID.md` C1 lists «Fejér–Riesz, Cholesky» and «Wiener–Hopf as a
+  source of sign» as closed. R186_043 §2: truncated Wiener–Hopf is a reformulation of the extreme eigenvalue.
+- **Square of the compressed comb:** 211 `ROUND_005_A.md` Prop. 3.3: Π² = Qσ_v²Q − 𝔏*𝔏, with Λ∗Λ, quotient
+  form ≥ 0 and leakage. It is exactly ‖V_1F‖² for the V_1 linear in Λ of the task.
+- **Completing the square:** R170_861 (D*G⁻¹D with arithmetic D is pure congruence, PROVED there); R170_201/301
+  (D_p*D_p = C_pI − (V_p + V_p*), squares minus a divergent constant); R166_502 §5.2 and phase 204
+  `P1_BBSTAR_001` (V*V gives quotients with coefficient ≥ 0).
+- `REVIEW_002_BC.md` B.2(3), B.4: leaves not excluded the ℓ_i depending on Λ (R170_868 does not cover them).
 
-### (2) Objeto realmente nuevo
+### (2) Genuinely new object
 
-Ninguna candidata escrita pasa. Lo nuevo de esta memo son tres lemas cortos que delimitan la zona; los
-demuestro enteros abajo (§1). En resumen:
+No written candidate passes. What is new in this memo are three short lemmas that delimit the zone; I
+prove them in full below (§1). In summary:
 
-- **Lema 1 (PROVED).** «V_T depende de Λ» no es una restricción ni una ayuda algebraica: toda identidad
-  polinómica en los pesos válida en a = Λ está en el ideal generado por los átomos Σ_{d|n}a(d) − log n. La
-  pregunta de O2 «qué absorbe la parte cuadrática en Λ y con qué identidad» tiene siempre una respuesta
-  formal, y esa respuesta no tiene contenido de signo.
-- **Lema 2 (PROVED).** Las factorizaciones canónicas (raíz cuadrada de la forma, Cholesky/LDL en cualquier
-  orden, factorización de Wiener–Hopf o exterior del símbolo) existen con resto nulo si y sólo si la forma
-  es ≥ 0 en el dominio correspondiente: escribirlas exige ya el signo. Circularidad probada en esa clase.
-- **Lema 3 (NO-GO con clase, PROVED usando P47 cor:Tarch).** La candidata natural del encargo, V_T afín en
-  los pesos, V_T(a) = V_0 + V_1(a) con V_0 y los coeficientes de V_1 independientes del peso, y con el término
-  cruzado del cuadrado reproduciendo el peine (2Re⟨V_0F, V_1(Λ)F⟩ = −Comb_Λ(F)), nunca tiene resto ≥ 0 sobre
-  P_T para T ≥ 0.60.
+- **Lemma 1 (PROVED).** «V_T depends on Λ» is neither a restriction nor an algebraic help: every polynomial
+  identity in the weights valid at a = Λ lies in the ideal generated by the atoms Σ_{d|n}a(d) − log n. The
+  question of O2 «what absorbs the part quadratic in Λ and with what identity» always has a
+  formal answer, and that answer has no sign content.
+- **Lemma 2 (PROVED).** The canonical factorizations (square root of the form, Cholesky/LDL in any
+  order, Wiener–Hopf or outer factorization of the symbol) exist with zero remainder if and only if the form
+  is ≥ 0 on the corresponding domain: writing them already requires the sign. Circularity proved in that class.
+- **Lemma 3 (NO-GO with class, PROVED using P47 cor:Tarch).** The natural candidate of the task, V_T affine in
+  the weights, V_T(a) = V_0 + V_1(a) with V_0 and the coefficients of V_1 independent of the weight, and with the cross
+  term of the square reproducing the comb (2Re⟨V_0F, V_1(Λ)F⟩ = −Comb_Λ(F)), never has remainder ≥ 0 on
+  P_T for T ≥ 0.60.
 
-Queda por escribir, y no sé escribir: un V_T no afín en Λ (resolvente, Cayley) con fórmula no canónica, o uno
-afín cuyo término cruzado no reproduzca el peine y cuyo resto lleve el resto del peine con signo manifiesto.
+Still to be written, and I do not know how: a V_T non-affine in Λ (resolvent, Cayley) with a non-canonical formula, or an
+affine one whose cross term does not reproduce the comb and whose remainder carries the rest of the comb with manifest sign.
 
-### (3) Por qué el cambio evitaría la dificultad del antecedente
+### (3) Why the change would avoid the difficulty of the antecedent
 
-No la evita en las clases examinadas. Lema 3: con V afín y cruce emparejado, el resto es
-ρ = Arch − ‖V_0F‖² − ‖V_1F‖² ≤ Arch, y Arch toma valores negativos en P_T desde T ≥ 0.60; la parte cuadrática
-en Λ (Λ∗Λ, cocientes, fuga de Prop. 3.3) entra en ρ con signo menos y ninguna reescritura por
-Σ_{d|k}Λ(d) = log k cambia su valor. Es la misma deuda «cuadrados menos constante» de R170_201/301, ahora
-probada para toda V_0 y toda V_1 de la clase, no sólo para dilataciones unitarias. Lema 2: lo que sí
-factoriza (raíz, Cholesky, Wiener–Hopf) lo hace sólo si ya se sabe el signo, como dice A_MU §1(b) para un
-caso. Lema 1: añadir dependencia polinómica en Λ no da estructura que usar.
+It does not avoid it in the classes examined. Lemma 3: with affine V and matched cross term, the remainder is
+ρ = Arch − ‖V_0F‖² − ‖V_1F‖² ≤ Arch, and Arch takes negative values on P_T from T ≥ 0.60 on; the part quadratic
+in Λ (Λ∗Λ, quotients, leakage of Prop. 3.3) enters ρ with minus sign and no rewriting by
+Σ_{d|k}Λ(d) = log k changes its value. It is the same debt «squares minus constant» of R170_201/301, now
+proved for every V_0 and every V_1 of the class, not only for unitary dilations. Lemma 2: what does
+factor (root, Cholesky, Wiener–Hopf) does so only if the sign is already known, as A_MU §1(b) says for one
+case. Lemma 1: adding polynomial dependence on Λ gives no structure to use.
 
-### (4) Identidad que conectaría con la positividad global
+### (4) Identity that would connect with global positivity
 
-Sólo la trivial: a_T = ‖a_T^{1/2}F‖² sobre P_T (Lema 2), equivalente a (★). Para la clase afín no hay
-identidad útil (Lema 3). No tengo identidad para las clases no excluidas.
+Only the trivial one: a_T = ‖a_T^{1/2}F‖² on P_T (Lemma 2), equivalent to (★). For the affine class there is no
+useful identity (Lemma 3). I have no identity for the non-excluded classes.
 
-### (5) Línea que se rompe para cΛ y a_P
+### (5) Line that breaks for cΛ and a_P
 
-- Clase canónica (Lema 2): la línea que falla es «pivote d_k ≥ 0» (o «a_T^{1/2} existe»): para c pequeño
-  (P47 lem:shape-scale, PROVED para T ≥ 0.60) y para a_P donde λ_A(T; a_P) < 0. Pero es la propia conclusión,
-  no un paso intermedio: la ruptura es circular.
-- Clase afín emparejada (Lema 3): no hay línea que señalar, porque la identidad falla ya para Λ.
-- Lema 1: toda identidad en un punto se «rompe» en otro punto de forma genérica; por eso O4, leído sólo
-  como «la identidad deja de valer para cΛ», no separa por sí solo un paso de signo de una identidad
-  arbitraria. Precisión posterior de O4: se exige la igualdad completa y la no negatividad demostradas
-  para Λ; bajo el falsificador puede fallar únicamente la igualdad, sin que pierda positividad el
-  resto auxiliar. El veto anterior excedía el Lema 1; véase la auditoría de O4/O17 en el índice maestro.
+- Canonical class (Lemma 2): the line that fails is «pivot d_k ≥ 0» (or «a_T^{1/2} exists»): for small c
+  (P47 lem:shape-scale, PROVED for T ≥ 0.60) and for a_P where λ_A(T; a_P) < 0. But it is the conclusion itself,
+  not an intermediate step: the breaking is circular.
+- Matched affine class (Lemma 3): there is no line to point to, because the identity already fails for Λ.
+- Lemma 1: every identity at one point «breaks» at another point generically; that is why O4, read only
+  as «the identity ceases to hold for cΛ», does not by itself separate a sign step from an arbitrary
+  identity. Later precision of O4: the complete equality and the non-negativity proved
+  for Λ are required; under the falsifier only the equality may fail, without the auxiliary
+  remainder losing positivity. The earlier veto exceeded Lemma 1; see the audit of O4/O17 in the master index.
 
-### Veredicto del cotejo
+### Cross-check verdict
 
-Repetición en la parte canónica (fase 200 §1(a)–(b); C1; R186_043). La parte afín es la candidata natural
-del encargo y queda cerrada con clase por el Lema 3. Sin candidata lista para construcción.
+Repetition in the canonical part (phase 200 §1(a)–(b); C1; R186_043). The affine part is the natural candidate
+of the task and is closed with class by Lemma 3. No candidate ready for construction.
 
-## 1. Los tres lemas
+## 1. The three lemmas
 
-### Lema 1 (los átomos generan el ideal del punto Λ; PROVED)
+### Lemma 1 (the atoms generate the ideal of the point Λ; PROVED)
 
-Sea R = ℝ[a_2, …, a_{N−1}] y ℓ_n(a) = Σ_{d|n, d≥2} a(d) − log n, 2 ≤ n < N. Entonces el ideal de R de los
-polinomios que se anulan en a = Λ es (ℓ_2, …, ℓ_{N−1}). Lo mismo vale con coeficientes en un espacio de
-formas hermíticas sobre un espacio fijo (tensorizando).
+Let R = ℝ[a_2, …, a_{N−1}] and ℓ_n(a) = Σ_{d|n, d≥2} a(d) − log n, 2 ≤ n < N. Then the ideal of R of the
+polynomials vanishing at a = Λ is (ℓ_2, …, ℓ_{N−1}). The same holds with coefficients in a space of
+Hermitian forms on a fixed space (by tensoring).
 
-*Demostración.* ℓ_n(a) = a_n + Σ_{d|n, 2≤d<n} a_d − log n: el cambio a ↦ (ℓ_n(a))_n es afín y unitriangular
-en el orden natural, luego invertible con inversa polinómica (afín). Por tanto R = ℝ[ℓ_2, …, ℓ_{N−1}], el punto
-Λ es ℓ = 0 (pues Σ_{d|n}Λ(d) = log n), y el ideal de polinomios que se anulan en el origen de un anillo de
-polinomios en las variables ℓ es (ℓ_2, …, ℓ_{N−1}). Para coeficientes en un espacio vectorial E se aplica
-coordenada a coordenada a R ⊗ E. ∎
+*Proof.* ℓ_n(a) = a_n + Σ_{d|n, 2≤d<n} a_d − log n: the change a ↦ (ℓ_n(a))_n is affine and unitriangular
+in the natural order, hence invertible with polynomial (affine) inverse. Therefore R = ℝ[ℓ_2, …, ℓ_{N−1}], the point
+Λ is ℓ = 0 (since Σ_{d|n}Λ(d) = log n), and the ideal of polynomials vanishing at the origin of a
+polynomial ring in the variables ℓ is (ℓ_2, …, ℓ_{N−1}). For coefficients in a vector space E apply it
+coordinate by coordinate to R ⊗ E. ∎
 
-Consecuencia (PROVED). Si V_T(a) es polinómico en los pesos con coeficientes operadores fijos y (G) vale en
-a = Λ, la diferencia a_T^{(a)} − ‖V_T(a)·‖² − ρ_T(a) se escribe Σ_n ℓ_n(a) Q_n con Q_n formas: la parte
-cuadrática en Λ queda siempre «cancelada contra log k» en sentido formal. Es el análogo para polinomios de
-la tautología de R170_868 señalada en `REVIEW_002_BC.md` B.2(3); no aporta signo ni restringe V_T. Con
-dependencia racional (resolventes) vale lo mismo en la localización en Λ.
+Consequence (PROVED). If V_T(a) is polynomial in the weights with fixed operator coefficients and (G) holds at
+a = Λ, the difference a_T^{(a)} − ‖V_T(a)·‖² − ρ_T(a) is written Σ_n ℓ_n(a) Q_n with Q_n forms: the part
+quadratic in Λ is always «cancelled against log k» in a formal sense. It is the analogue for polynomials of
+the tautology of R170_868 pointed out in `REVIEW_002_BC.md` B.2(3); it contributes no sign and does not restrict V_T. With
+rational dependence (resolvents) the same holds in the localization at Λ.
 
-### Lema 2 (circularidad de las factorizaciones canónicas; PROVED)
+### Lemma 2 (circularity of the canonical factorizations; PROVED)
 
-(a) Existen ℋ, V lineal sobre P_T ∩ 𝒟_T (dominio de forma) y ρ ≥ 0 con a_T = ‖V·‖² + ρ si y sólo si
-a_T ≥ 0 sobre P_T. (b) Una matriz hermítica 𝔸 (por ejemplo 𝔸_M de (S)) con menores principales directores
-no nulos tiene factorización LDL* con D ≥ 0 si y sólo si 𝔸 ⪰ 0, y d_k = det 𝔸_k / det 𝔸_{k−1}; lo mismo en
-cualquier orden de eliminación (permutación). (c) Si V conmuta con traslaciones (multiplicador h), entonces
-‖VF‖² = (1/2π)∫|h|²|F̂|² y ρ = a_T − ‖V·‖² tiene símbolo s_T − |h|² ≤ s_T (`REVIEW_002_BC.md` Lema B-2).
+(a) There exist ℋ, V linear on P_T ∩ 𝒟_T (form domain) and ρ ≥ 0 with a_T = ‖V·‖² + ρ if and only if
+a_T ≥ 0 on P_T. (b) A Hermitian matrix 𝔸 (for example 𝔸_M of (S)) with non-zero leading principal
+minors has an LDL* factorization with D ≥ 0 if and only if 𝔸 ⪰ 0, and d_k = det 𝔸_k / det 𝔸_{k−1}; likewise in
+any elimination order (permutation). (c) If V commutes with translations (multiplier h), then
+‖VF‖² = (1/2π)∫|h|²|F̂|² and ρ = a_T − ‖V·‖² has symbol s_T − |h|² ≤ s_T (`REVIEW_002_BC.md` Lemma B-2).
 
-*Demostración.* (a) ⇐: a_T es una forma cerrada semiacotada (P47 lem:contA y la forma de Lévy de
-STATEMENT §1); si es ≥ 0 en P_T su operador asociado A ≥ 0 tiene raíz A^{1/2} y a_T(F) = ‖A^{1/2}F‖²,
-ρ = 0. ⇒: ‖VF‖² + ρ(F) ≥ 0. (b) Eliminación gaussiana sin pivoteo: d_k es el complemento de Schur del bloque
-director, igual al cociente de determinantes; 𝔸 = LDL* con L unitriangular es congruencia, y por Sylvester
-𝔸 ⪰ 0 ⟺ D ⪰ 0. Un orden distinto es la misma afirmación para P𝔸Pᵀ. (c) Plancherel. ∎
+*Proof.* (a) ⇐: a_T is a closed semibounded form (P47 lem:contA and the Lévy form of
+STATEMENT §1); if it is ≥ 0 on P_T its associated operator A ≥ 0 has a root A^{1/2} and a_T(F) = ‖A^{1/2}F‖²,
+ρ = 0. ⇒: ‖VF‖² + ρ(F) ≥ 0. (b) Gaussian elimination without pivoting: d_k is the Schur complement of the leading
+block, equal to the quotient of determinants; 𝔸 = LDL* with L unitriangular is a congruence, and by Sylvester
+𝔸 ⪰ 0 ⟺ D ⪰ 0. A different order is the same statement for P𝔸Pᵀ. (c) Plancherel. ∎
 
-Lectura. En (a) y (b) el factor está determinado por la forma; escribirlo «con Λ exacta» es inmediato
-(la forma ya contiene Λ), y su existencia con resto ≥ 0 es (★) en ese dominio. La «ruptura para cΛ» es que
-el pivote o la raíz dejan de existir, es decir la conclusión. Esto cierra como circular la clase «factor
-determinado canónicamente por la forma». No cierra factores con fórmula propia (no derivada de a_T) cuya
-igualdad con una factorización se demuestre después: eso queda en la lista de no excluidos. Para el símbolo en
-la recta (Wiener–Hopf, Szegő, función exterior) ρ = 0 exigiría s_T = |h|² y s_T toma valores negativos; ver
-además fase 200 §1(a). ARGUED que la variante «por ventana» (Wiener–Hopf truncado) es el caso (a) con A el
-operador de Toeplitz truncado (R186_043 §2 lo trata como reformulación del autovalor extremo).
+Reading. In (a) and (b) the factor is determined by the form; writing it «with exact Λ» is immediate
+(the form already contains Λ), and its existence with remainder ≥ 0 is (★) on that domain. The «breaking for cΛ» is that
+the pivot or the root cease to exist, that is the conclusion. This closes as circular the class «factor
+canonically determined by the form». It does not close factors with their own formula (not derived from a_T) whose
+equality with a factorization is proved afterwards: that remains in the non-excluded list. For the symbol on
+the line (Wiener–Hopf, Szegő, outer function) ρ = 0 would require s_T = |h|² and s_T takes negative values; see
+also phase 200 §1(a). ARGUED that the «per-window» variant (truncated Wiener–Hopf) is case (a) with A the
+truncated Toeplitz operator (R186_043 §2 treats it as a reformulation of the extreme eigenvalue).
 
-### Lema 3 (NO-GO para V afín con cruce emparejado; PROVED, con P47 cor:Tarch)
+### Lemma 3 (NO-GO for affine V with matched cross term; PROVED, with P47 cor:Tarch)
 
-Clase 𝒱_aff. Para cada T: V_0 : P_T ∩ 𝒟_T → ℋ_T lineal y V_1(a) = Σ_{n<N} a(n) W_n con W_n lineales, todos
-independientes del peso; V_T(a) = V_0 + V_1(a). Condición de emparejamiento:
+Class 𝒱_aff. For each T: V_0 : P_T ∩ 𝒟_T → ℋ_T linear and V_1(a) = Σ_{n<N} a(n) W_n with W_n linear, all
+independent of the weight; V_T(a) = V_0 + V_1(a). Matching condition:
 
-    2 Re⟨V_0F, V_1(Λ)F⟩_{ℋ_T} = −Comb_Λ(F)   para todo F ∈ P_T ∩ 𝒟_T.          (E)
+    2 Re⟨V_0F, V_1(Λ)F⟩_{ℋ_T} = −Comb_Λ(F)   for every F ∈ P_T ∩ 𝒟_T.          (E)
 
-Enunciado. Si T ≥ 0.60, ninguna V_T ∈ 𝒱_aff que cumpla (E) admite (G) con ρ_T ≥ 0 sobre P_T. Además, para
-todo T y todo c real, ρ_T^{(c)} := a_T^{(cΛ)} − ‖V_T(cΛ)·‖² = ρ_T^{(0)} − c²‖V_1(Λ)·‖², par en c y no creciente
-en |c|.
+Statement. If T ≥ 0.60, no V_T ∈ 𝒱_aff satisfying (E) admits (G) with ρ_T ≥ 0 on P_T. Moreover, for
+every T and every real c, ρ_T^{(c)} := a_T^{(cΛ)} − ‖V_T(cΛ)·‖² = ρ_T^{(0)} − c²‖V_1(Λ)·‖², even in c and non-increasing
+in |c|.
 
-*Demostración.* Desarrollando el cuadrado,
-‖V_T(cΛ)F‖² = ‖V_0F‖² + 2c Re⟨V_0F, V_1(Λ)F⟩ + c²‖V_1(Λ)F‖² = ‖V_0F‖² − c Comb_Λ(F) + c²‖V_1(Λ)F‖² por (E)
-(homogénea de grado uno en el peso, luego válida en cΛ si lo es en Λ). Como a_T^{(cΛ)} = Arch − c Comb_Λ,
-ρ_T^{(c)}(F) = Arch(F) − ‖V_0F‖² − c²‖V_1(Λ)F‖². En particular ρ_T = ρ_T^{(1)} ≤ Arch sobre P_T. Por P47
-cor:Tarch (PROVED allí, con verificación en aritmética de intervalos), inf{Arch(F) : F ∈ P_T, ‖F‖ = 1} < 0
-para T ≥ 0.60; en un F así, ρ_T(F) < 0. ∎
+*Proof.* Expanding the square,
+‖V_T(cΛ)F‖² = ‖V_0F‖² + 2c Re⟨V_0F, V_1(Λ)F⟩ + c²‖V_1(Λ)F‖² = ‖V_0F‖² − c Comb_Λ(F) + c²‖V_1(Λ)F‖² by (E)
+(homogeneous of degree one in the weight, hence valid at cΛ if it is at Λ). Since a_T^{(cΛ)} = Arch − c Comb_Λ,
+ρ_T^{(c)}(F) = Arch(F) − ‖V_0F‖² − c²‖V_1(Λ)F‖². In particular ρ_T = ρ_T^{(1)} ≤ Arch on P_T. By P47
+cor:Tarch (PROVED there, with verification in interval arithmetic), inf{Arch(F) : F ∈ P_T, ‖F‖ = 1} < 0
+for T ≥ 0.60; at such an F, ρ_T(F) < 0. ∎
 
-Consecuencias.
-- Respuesta a O2 en esta clase: la parte cuadrática en Λ de ‖V_TF‖², ‖V_1(Λ)F‖² (por ejemplo Λ∗Λ +
-  cocientes − fuga de 211/ROUND_005_A Prop. 3.3 cuando V_1 es el peine comprimido), sólo puede absorberla ρ_T,
-  y entra con signo menos. Reescribirla con Σ_{d|k}Λ(d) = log k (Lema 1) cambia su presentación, no su valor.
-- Aun para T < 0.60, ρ_T ≥ 0 implicaría a_T^{(cΛ)} ≥ ‖V_T(cΛ)·‖² ≥ 0 para todo |c| ≤ 1: la identidad no
-  podría romperse en c < 1, contra la exigencia O4 (y contra P47 lem:shape-scale para c pequeño, T ≥ 0.60).
-- Cubre la candidata del encargo «operador arquimediano de primer orden − peine de dilataciones Λ(n)/√n
-  comprimido a la ventana» en cuanto su término cruzado sea el peine, y cubre completar el cuadrado
-  V = K − ½K⁻¹Π′ con K > 0 fijo (allí ρ = Arch − K² − ¼Π′K⁻²Π′, y K² + ¼Π′K⁻²Π′ ⪰ ±Π′, de modo que
-  ρ ≤ min(a_T^{(Λ)}, a_T^{(−Λ)})); es una prueba directa, en esta clase, del fenómeno de R170_861.
+Consequences.
+- Answer to O2 in this class: the part quadratic in Λ of ‖V_TF‖², ‖V_1(Λ)F‖² (for example Λ∗Λ +
+  quotients − leakage of 211/ROUND_005_A Prop. 3.3 when V_1 is the compressed comb), can only be absorbed by ρ_T,
+  and it enters with minus sign. Rewriting it with Σ_{d|k}Λ(d) = log k (Lemma 1) changes its presentation, not its value.
+- Even for T < 0.60, ρ_T ≥ 0 would imply a_T^{(cΛ)} ≥ ‖V_T(cΛ)·‖² ≥ 0 for every |c| ≤ 1: the identity could
+  not break at c < 1, against requirement O4 (and against P47 lem:shape-scale for small c, T ≥ 0.60).
+- It covers the candidate of the task «first-order archimedean operator − comb of dilations Λ(n)/√n
+  compressed to the window» as soon as its cross term is the comb, and it covers completing the square
+  V = K − ½K⁻¹Π′ with fixed K > 0 (there ρ = Arch − K² − ¼Π′K⁻²Π′, and K² + ¼Π′K⁻²Π′ ⪰ ±Π′, so that
+  ρ ≤ min(a_T^{(Λ)}, a_T^{(−Λ)})); it is a direct proof, in this class, of the phenomenon of R170_861.
 
-Lo que el Lema 3 no cubre (NO excluido):
-- (i) V afín sin (E): 2Re⟨V_0F, V_1(Λ)F⟩ = −Comb_Λ(F) + L(F) con L ≠ 0. Entonces
-  ρ_T = Arch − ‖V_0F‖² − ‖V_1F‖² − L(F), y el signo tendría que salir de −L, un término lineal en Λ que queda
-  fuera del cuadrado. El cuadrado no aporta el mecanismo; se vuelve a un uso lineal del peine en ρ. ARGUED que
-  esto reproduce la situación de K1/I2; no probado.
-- (ii) V_0 dependiente del peso, o V_T no afín en Λ (resolvente (1 − zΠ)⁻¹, transformada de Cayley,
-  parámetros de Schur con fórmula propia). La prueba usa que c ↦ ‖V_T(cΛ)F‖² es un polinomio de grado dos con
-  término lineal fijado por (E); con dependencia no polinómica la concavidad en c se pierde.
-- (iii) Identidades sobre reducciones PROVED ((L2), (S), perfil, escalera) donde el término arquimediano
-  reducido sea ≥ 0: el Lema 3 usa la negatividad de Arch sobre P_T; sobre 𝔸_M con 2T_0 < log 2 hay que
-  rehacer la cuenta con Arch_M (no hecho aquí).
+What Lemma 3 does not cover (NOT excluded):
+- (i) Affine V without (E): 2Re⟨V_0F, V_1(Λ)F⟩ = −Comb_Λ(F) + L(F) with L ≠ 0. Then
+  ρ_T = Arch − ‖V_0F‖² − ‖V_1F‖² − L(F), and the sign would have to come from −L, a term linear in Λ that stays
+  outside the square. The square does not contribute the mechanism; one returns to a linear use of the comb in ρ. ARGUED that
+  this reproduces the situation of K1/I2; not proved.
+- (ii) V_0 depending on the weight, or V_T non-affine in Λ (resolvent (1 − zΠ)⁻¹, Cayley transform,
+  Schur parameters with their own formula). The proof uses that c ↦ ‖V_T(cΛ)F‖² is a polynomial of degree two with
+  linear term fixed by (E); with non-polynomial dependence the concavity in c is lost.
+- (iii) Identities on PROVED reductions ((L2), (S), profile, ladder) where the reduced archimedean term
+  is ≥ 0: Lemma 3 uses the negativity of Arch on P_T; on 𝔸_M with 2T_0 < log 2 the computation has to be
+  redone with Arch_M (not done here).
 
-## Resultado
+## Result
 
-**Sin mecanismo nuevo, con una pieza NO-GO de clase PROVED (Lema 3) y dos lemas de delimitación PROVED
-(Lemas 1 y 2).** La zona «funcionales que dependen de Λ» queda así: la dependencia polinómica en Λ es
-formalmente vacía (Lema 1); las factorizaciones canónicas son circulares (Lema 2; repetición de fase 200
-§1(a)–(b)); la clase afín con cruce emparejado está excluida (Lema 3). No hay candidata lista.
+**No new mechanism, with one class NO-GO piece PROVED (Lemma 3) and two PROVED delimitation lemmas
+(Lemmas 1 and 2).** The zone «functionals that depend on Λ» stands thus: polynomial dependence on Λ is
+formally empty (Lemma 1); the canonical factorizations are circular (Lemma 2; repetition of phase 200
+§1(a)–(b)); the affine class with matched cross term is excluded (Lemma 3). No candidate is ready.
 
-## Qué se probó
+## What was proved
 
-- Lema 1: el ideal del punto Λ está generado por los átomos Σ_{d|n}a(d) − log n (cambio de variables
-  unitriangular). Toda absorción de Λ∗Λ «por log k» es formal.
-- Lema 2: raíz, LDL en cualquier orden y factorización de símbolo existen con resto ≥ 0 sii la forma es ≥ 0.
-- Lema 3: para V_T = V_0 + V_1(Λ) con coeficientes fijos y cruce igual al peine, ρ_T = Arch − ‖V_0F‖² −
-  ‖V_1F‖² ≤ Arch, negativo en P_T para T ≥ 0.60 (P47 cor:Tarch); y ρ^{(c)} es par y no creciente en |c|.
+- Lemma 1: the ideal of the point Λ is generated by the atoms Σ_{d|n}a(d) − log n (unitriangular change of
+  variables). Every absorption of Λ∗Λ «through log k» is formal.
+- Lemma 2: root, LDL in any order and symbol factorization exist with remainder ≥ 0 iff the form is ≥ 0.
+- Lemma 3: for V_T = V_0 + V_1(Λ) with fixed coefficients and cross term equal to the comb, ρ_T = Arch − ‖V_0F‖² −
+  ‖V_1F‖² ≤ Arch, negative on P_T for T ≥ 0.60 (P47 cor:Tarch); and ρ^{(c)} is even and non-increasing in |c|.
 
-## Qué falló y por qué
+## What failed and why
 
-- En la clase afín el cuadrado sólo puede producir el peine en el término cruzado; entonces la parte
-  cuadrática en Λ se paga en el resto con signo menos, y el arquimediano solo no la paga (es negativo en P_T).
-- Las factorizaciones que sí existen están definidas por la forma y requieren el signo para existir.
-- La dependencia en Λ no añade información algebraica explotable.
+- In the affine class the square can only produce the comb in the cross term; then the part
+  quadratic in Λ is paid in the remainder with minus sign, and the archimedean term alone does not pay it (it is negative on P_T).
+- The factorizations that do exist are defined by the form and require the sign to exist.
+- Dependence on Λ adds no exploitable algebraic information.
 
-## Siguiente paso concreto
+## Concrete next step
 
-1. Anotar el Lema 3 como NO-GO de clase (𝒱_aff con (E)) en el índice de rutas, el grid y el ledger, con su
-   alcance exacto (no cubre (i)–(iii)); los Lemas 1–2 como delimitación, no como clausura de la zona.
-2. Si se reabre la zona, sólo con un V_T no afín en Λ con fórmula escrita no derivada de a_T (por ejemplo la
-   resolvente del peine comprimido restringida a P_T) y con ρ_T escrito; antes de derivar, comprobar que
-   ρ_T^{(c)} no es monótono en |c| (si lo es, el argumento del Lema 3 se adapta y lo cierra).
-3. Revisar la variante (iii) sobre 𝔸_M: decidir si Arch_M es ≥ 0 en el portador reducido; si lo es, el Lema 3
-   no aplica y la clase afín sobre (S) queda abierta en sentido estricto.
+1. Record Lemma 3 as a class NO-GO (𝒱_aff with (E)) in the routes index, the grid and the ledger, with its
+   exact scope (it does not cover (i)–(iii)); Lemmas 1–2 as delimitation, not as closure of the zone.
+2. If the zone is reopened, only with a V_T non-affine in Λ with a written formula not derived from a_T (for example the
+   resolvent of the compressed comb restricted to P_T) and with ρ_T written; before deriving, check that
+   ρ_T^{(c)} is not monotone in |c| (if it is, the argument of Lemma 3 adapts and closes it).
+3. Review variant (iii) on 𝔸_M: decide whether Arch_M is ≥ 0 on the reduced carrier; if it is, Lemma 3
+   does not apply and the affine class on (S) remains open in the strict sense.

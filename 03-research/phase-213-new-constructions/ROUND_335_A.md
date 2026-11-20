@@ -1,17 +1,17 @@
-# Umbral de los pesos en el divisor común
+# Threshold of the weights on the common divisor
 
-Con las clases B_q de 334, incluida la diagonal, fijar 0<κ<1 y poner V_m(κ)=Σ q^κ |B_q|. En las anchuras h→0 con log(1/h)=o(m),
+With the classes B_q of 334, including the diagonal, fix 0<κ<1 and put V_m(κ)=Σ q^κ |B_q|. At widths h→0 with log(1/h)=o(m),
 
     limsup V_m(κ)^(1/(2m)) = max{1/(3/2−Θ), 1/(1−κ/2)}.
 
-En particular ningún peso q^κ con κ>0 arbitrariamente pequeño conserva bajo RH el techo uno. En cambio todo peso fijo 1≤w(q)≪_ε q^ε para cada ε>0 conserva exactamente la tasa de 334, por comparación y haciendo κ→0. Esto incluye pérdidas fijas por potencias del número de divisores.
+In particular no weight q^κ with arbitrarily small κ>0 preserves the ceiling one under RH. On the other hand every fixed weight 1≤w(q)≪_ε q^ε for each ε>0 preserves exactly the rate of 334, by comparison and letting κ→0. This includes fixed losses by powers of the number of divisors.
 
-**Techo.** El argumento dual de 334 con |b(q)|≤q^κ da |(μ*b)(g)|≤g^κτ(g). En los discos de radio r basta por ello exigir σ=3/2−r>max{Θ,(1+κ)/2}. La suma de los Gram J_g con esos pesos converge por la cota de 334, tomando 2ε<2σ−1−κ. La pérdida por la altura es subexponencial. Los intercambios también son absolutos a orden fijo: fuera de diagonal se usa 331 con Σ g^(κ−2)τ(g)<∞; en la diagonal el peso total por n es ≤n^κτ(n)^2, sumable contra l_m(n)^2. Se obtiene el techo al llevar r a su extremo.
+**Ceiling.** The dual argument of 334 with |b(q)|≤q^κ gives |(μ*b)(g)|≤g^κτ(g). On the discs of radius r it therefore suffices to require σ=3/2−r>max{Θ,(1+κ)/2}. The sum of the Gram J_g with those weights converges by the bound of 334, taking 2ε<2σ−1−κ. The loss from height is subexponential. The exchanges are also absolute at fixed order: off the diagonal 331 is used with Σ g^(κ−2)τ(g)<∞; on the diagonal the total weight per n is ≤n^κτ(n)^2, summable against l_m(n)^2. The ceiling is obtained by taking r to its extreme.
 
-**Piso aritmético.** Además de V_m(κ)≥V_m(0), elegir b(q)=q^κ. Su inversión c(g)=g^κ∏_{p|g}(1−p^(−κ)) es positiva. Así V_m(κ)≥Σ c(g)J_g. En el Gram de los múltiplos de un primo p la muestra n=p tiene soporte disjunto de las de 2p,3p,… cuando h<log 2. Su contribución individual vale l_m(p)^2 por K(0)=1 y el Gram restante es no negativo. Por tanto
+**Arithmetic floor.** Besides V_m(κ)≥V_m(0), choose b(q)=q^κ. Its inversion c(g)=g^κ∏_{p|g}(1−p^(−κ)) is positive. Thus V_m(κ)≥Σ c(g)J_g. In the Gram of the multiples of a prime p the sample n=p has support disjoint from those of 2p,3p,… when h<log 2. Its individual contribution equals l_m(p)^2 by K(0)=1 and the remaining Gram is nonnegative. Therefore
 
     V_m(κ) ≥ Σ_p (p^κ−1) l_m(p)^2.
 
-Tomar X=exp(2m/(2−κ)). El teorema de los números primos da ≫X/log X primos entre X y 2X. Ese bloque aporta ≫ X^(κ−2)(log X)^(2m)/((log X)(m!)²). Por Stirling su raíz de orden 2m tiene límite inferior al menos 2/(2−κ). El piso sólo necesita h<log 2 y también rige en las ventanas exponenciales de 326. Bajo RH en esas ventanas se obtiene el techo correspondiente por el mismo argumento de 334 con exponente de altura arbitrariamente pequeño.
+Take X=exp(2m/(2−κ)). The prime number theorem gives ≫X/log X primes between X and 2X. That block contributes ≫ X^(κ−2)(log X)^(2m)/((log X)(m!)²). By Stirling its 2m-th root has lower limit at least 2/(2−κ). The floor only needs h<log 2 and also holds in the exponential windows of 326. Under RH in those windows the corresponding ceiling is obtained by the same argument of 334 with arbitrarily small height exponent.
 
-**Uso para el cierre.** Una prueba por clases puede absorber pérdidas subpolinómicas en q a nivel de la tasa. Si paga una potencia fija de q sobre las clases completas, la primera muestra de cada progresión prima ya impide el techo uno. Para clases con la diagonal sustraída este piso no se ha demostrado.
+**Use for the closure.** A proof by classes can absorb subpolynomial losses in q at the level of the rate. If it pays a fixed power of q over the complete classes, the first sample of each prime progression already prevents the ceiling one. For classes with the diagonal subtracted this floor has not been proved.

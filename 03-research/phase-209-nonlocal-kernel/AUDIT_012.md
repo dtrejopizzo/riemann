@@ -1,71 +1,71 @@
-# AUDIT_012 — Falsificador de la dominación del mapa011
+# AUDIT_012 — Falsifier of the domination of map011
 
-2026-10-19. Revisor independiente. Leídos LINK012, certify.py, check_laplace.py y sus salidas. Ambos programas reproducidos con python-flint0.9.0, precisión Arb128bits; terminaron sin fallos.
-**Veredicto: PROVED el falsificador para la normalización EXACTA de U de LINK011. No exclusión de todas las reescalas ni cierre de D.**
+2026-10-19. Independent check. Read LINK012, certify.py, check_laplace.py and their outputs. Both programs reproduced with python-flint0.9.0, Arb precision 128 bits; they finished without failures.
+**Verdict: PROVED the falsifier for the EXACT normalisation of U of LINK011. No exclusion of all rescalings nor closure of D.**
 
-## 1. Corpus y clase nueva
+## 1. Corpus and new class
 
-Consultados índice (incluida entrada011 y P1/Gram), grid y crucigrama; cotejadas las definiciones de P47 y la auditoría011. La igualdad del mapa ya estaba refutada y no se reintenta. La pregunta nueva es la desigualdad TOTAL Q_T≥||UF||² para ese mismo U y escala, que seguía abierta. El test y la certificación responden exactamente esa pregunta; no se construye otra familia auxiliar ni se usan márgenes sobre ceros.
+Consulted: index (including entry011 and P1/Gram), grid and crossword; cross-checked the definitions of P47 and audit011. The equality of the map was already refuted and is not retried. The new question is the TOTAL inequality Q_T≥||UF||² for that same U and scale, which remained open. The test and the certification answer exactly that question; no other auxiliary family is built nor are margins on zeros used.
 
-## 2. Test exacto, dominio y polar
+## 2. Exact test, domain and polar
 
-T=4/5, ω=π/(2T), r=3(ω²+1/4)/(9ω²+1/4) definen números exactos. La aritmética de bolas los encierra; no se reemplaza r por un flotante independiente. Para f=cos(3ωx)+r cos(ωx), ortogonalidad da ||f||²=T(1+r²) y f(±T)=0.
+T=4/5, ω=π/(2T), r=3(ω²+1/4)/(9ω²+1/4) define exact numbers. Ball arithmetic encloses them; r is not replaced by an independent float. For f=cos(3ωx)+r cos(ωx), orthogonality gives ||f||²=T(1+r²) and f(±T)=0.
 
-Los momentos cosh de las dos frecuencias tienen los signos y factores escritos en LINK012. Sustituir r los cancela ALGEBRAICAMENTE. Que una bola contenga cero no sería prueba de esa identidad, pero aquí no se usa tal criterio: la cancelación es exacta por la fórmula. F=f/√N es par, polar libre y pertenece a H¹₀, luego al dominio de gamma y de Q_T.
+The cosh moments of the two frequencies have the signs and factors written in LINK012. Substituting r cancels them ALGEBRAICALLY. A ball containing zero would not prove that identity, but no such criterion is used here: the cancellation is exact by the formula. F=f/√N is even, polar-free and belongs to H¹₀, hence to the domain of gamma and of Q_T.
 
-La aproximación por C_c∞ par con corrección del momento es válida en H¹. Q_T es continuo para esa convergencia y U es L²-acotado. El margen negativo estricto sobrevive en un core suave. No se limita el falsificador a una realización de matrices sin dominio controlado.
+The approximation by even C_c∞ with moment correction is valid in H¹. Q_T is continuous for that convergence and U is L²-bounded. The strict negative margin survives on a smooth core. The falsifier is not limited to a matrix realisation without controlled domain.
 
-## 3. Término de rango uno y cola gaussiana
+## 3. Rank-one term and Gaussian tail
 
-De S=κG_s+κvv*+Π con las otras dos piezas PSD resulta ||UF||²≥κ|M(F)|². La suma M=Σa_d(d^(−1/2)−d^(−1)) converge absolutamente por las cotas011. Intercambiarla con la integral en un compacto es legítimo.
+From S=κG_s+κvv*+Π with the other two pieces PSD it follows that ||UF||²≥κ|M(F)|². The sum M=Σa_d(d^(−1/2)−d^(−1)) converges absolutely by the bounds of 011. Interchanging it with the integral on a compact set is legitimate.
 
-Agrupar k=dn produce exactamente b_k y la resta z_cτ, con z_c=ζ(3/2)−ζ(2)>0. La normalización por √N se aplica después a M(f). Los factores2 de τ y del mapa011 están correctos.
+Grouping k=dn produces exactly b_k and the subtraction z_cτ, with z_c=ζ(3/2)−ζ(2)>0. The normalisation by √N is applied afterwards to M(f). The factors 2 of τ and of map011 are correct.
 
-La cota 0≤b_k≤k basta para la cola. Para a=πexp(−2T), K=12 se verifica aK²>1/2, así xexp(−ax²) decrece para x≥K. Las dos comparaciones integrales dan las colas exp(−aK²)/a y exp(−aK²)/(aK). Al multiplicar por longitud2T, cota |f|≤1+r y el factor exterior2 del mapa, se obtiene EXACTAMENTE ε_M escrito. No se atribuye signo a f para descartar términos.
+The bound 0≤b_k≤k suffices for the tail. For a=πexp(−2T), K=12 one checks aK²>1/2, so xexp(−ax²) decreases for x≥K. The two integral comparisons give the tails exp(−aK²)/a and exp(−aK²)/(aK). Multiplying by length 2T, bound |f|≤1+r and the outer factor 2 of the map, one obtains EXACTLY the written ε_M. No sign is attributed to f to discard terms.
 
-La integral truncada de M es de una función ENTERA: sumas finitas de exponenciales, cosenos y exp(exp(2z)). Ignorar el indicador analytic del callback no oculta una singularidad en esa integral. La evaluación validada y la cola positiva dan la cota de |M| con el sentido correcto.
+The truncated integral of M is of an ENTIRE function: finite sums of exponentials, cosines and exp(exp(2z)). Ignoring the analytic indicator of the callback does not hide a singularity in that integral. The validated evaluation and the positive tail give the bound on |M| in the correct direction.
 
-## 4. Certificado principal de gamma y peine
+## 4. Main certificate of gamma and comb
 
-La Fourier entera con sinc es correcta para la convención de P47. Sobre el eje real f es par real, luego fhat²=|fhat|² y la extensión simétrica de digamma coincide con m. Su extensión compleja es meromorfa, no entera; el cálculo por acb debe conservar las singularidades, como advierte el memo. El resultado final tiene además la verificación independiente sin esa cuadratura de §5.
+The entire Fourier transform with sinc is correct for the convention of P47. On the real axis f is even and real, hence fhat²=|fhat|² and the symmetric extension of digamma coincides with m. Its complex extension is meromorphic, not entire; the acb computation must keep the singularities, as the memo warns. The final result additionally has the independent verification of §5 without that quadrature.
 
-Para t≥100>6ω, las fórmulas racionales de cada coseno dan |fhat|≤(8/3)ω(r+3)/t². La cota m(t)≤2logt+10 está demostrada por la separación de la energía de Lévy en tres intervalos. Verifiqué K≤1/u+1/2, las integrales 1/4+1/(12t) y 2logt+1−1/t y la cola ∫₁∞K<28/9. El C₀ negativo se omite sólo para una cota SUPERIOR. Integrar el majorante de frecuencia da ε_Γ con sus coeficientes2/3,2/9,10/3 correctos.
+For t≥100>6ω, the rational formulas of each cosine give |fhat|≤(8/3)ω(r+3)/t². The bound m(t)≤2logt+10 is proved by splitting the Lévy energy into three intervals. I checked K≤1/u+1/2, the integrals 1/4+1/(12t) and 2logt+1−1/t and the tail ∫₁∞K<28/9. The negative C₀ is omitted only for an UPPER bound. Integrating the frequency majorant gives ε_Γ with its coefficients 2/3, 2/9, 10/3 correct.
 
-En T=4/5 los contactos son2,3,4. Los intervalos de autocorrelación y sus pesos Λ(2)=Λ(4)=log2, Λ(3)=log3 están correctos. La normalización por N afecta tanto gamma como peine.
+At T=4/5 the contacts are 2,3,4. The autocorrelation intervals and their weights Λ(2)=Λ(4)=log2, Λ(3)=log3 are correct. The normalisation by N affects both gamma and comb.
 
-## 5. Verificación independiente cerrada
+## 5. Closed independent verification
 
-La fórmula Laplace I(a) de §7 fue revisada por la ecuación diferencial del kernel exp(−a|x−y|). El particular, las condiciones Robin y el coeficiente homogéneo C producen exactamente el término cuadrado positivo con factor1+exp(−2aT). I=½〈F,v〉 lleva el factor1/2 correcto.
+The Laplace formula I(a) of §7 was checked via the differential equation of the kernel exp(−a|x−y|). The particular solution, the Robin conditions and the homogeneous coefficient C produce exactly the positive square term with factor 1+exp(−2aT). I=½〈F,v〉 carries the correct factor 1/2.
 
-La energía gamma normalizada es C₀+2Σ_j[1/a_j−I(a_j)], a_j=2j+1/2. La desigualdad de traslaciones
+The normalised gamma energy is C₀+2Σ_j[1/a_j−I(a_j)], a_j=2j+1/2. The translation inequality
 
     1−c_F(u)=||F−τ_uF||²/2≤u²||F'||²/2
 
-vale para la extensión por cero H¹. De ahí la cola ≤2||F'||²Σ_{j≥J}a_j^(−3) y el majorante a_J^(−3)+1/(4a_J²) por suma-integral. El valor de ||F'||²=ω²(r²+9)/(1+r²) es correcto.
+holds for the extension by zero in H¹. Hence the tail ≤2||F'||²Σ_{j≥J}a_j^(−3) and the majorant a_J^(−3)+1/(4a_J²) by sum-integral comparison. The value ||F'||²=ω²(r²+9)/(1+r²) is correct.
 
-check_laplace.py emplea J=200 y el peine exacto de lem:combsine con coeficientes(r,−1)/√(1+r²); el signo negativo procede de e₃=−cos(3ωx). Reproducido:
+check_laplace.py uses J=200 and the exact comb of lem:combsine with coefficients (r,−1)/√(1+r²); the negative sign comes from e₃=−cos(3ωx). Reproduced:
 
-    gamma parcial = −0.2361826974540901495…,
-    cola superior <0.000098513228,
-    peine = −0.2377321365688090439…,
+    partial gamma = −0.2361826974540901495…,
+    upper tail <0.000098513228,
+    comb = −0.2377321365688090439…,
     Q_T(F)<0.001647953.
 
-El certificado principal produjo Q_T(F)<0.002351. Son cotas superiores compatibles; la segunda comprobación elimina toda dependencia de cuadratura para gamma y peine.
+The main certificate produced Q_T(F)<0.002351. These are compatible upper bounds; the second check removes all dependence on quadrature for gamma and comb.
 
-## 6. Resultado certificado y escala
+## 6. Certified result and scale
 
-La reproducción de certify.py dio bolas con
+The reproduction of certify.py gave balls with
 
     |M(F)|>0.1812652378,
     κ>7.95393245,
     ||UF||²≥κ|M(F)|²>0.26134304.
 
-Incluso usando la cota más débil Q<0.002351 se obtiene
+Even using the weaker bound Q<0.002351 one obtains
 
     Q_T(F)−||UF||²<−0.25899<0.
 
-Por tanto la desigualdad exacta planteada para U011 es falsa. No se necesitó conocer ||UF||² completa ni demostrar un signo de Q_T por separado.
+Hence the exact inequality posed for U011 is false. It was not necessary to know the full ||UF||² nor to prove a sign of Q_T separately.
 
-Esto refuta la escala fija, no todos los c_T||UF||². El cociente exploratorio no es un umbral certificado para todas las reescalas. De las cotas conservadoras se podrían excluir algunas escalas grandes, pero no arbitrariamente pequeñas ni dependientes de T; el memo no pretende esa conclusión.
+This refutes the fixed scale, not all c_T||UF||². The exploratory quotient is not a certified threshold for all rescalings. From the conservative bounds some large scales could be excluded, but not arbitrarily small or T-dependent ones; the memo does not claim that conclusion.
 
-**Veredicto final:** igualdad011 ya refutada y dominación012 ahora refutada para ese mismo candidato. Los auxiliares −R/FE siguen válidos; ninguna conclusión general sobre otros mapas o sobre D. Objetivo D íntegro OPEN y activo.
+**Final verdict:** equality011 already refuted and domination012 now refuted for that same candidate. The auxiliaries −R/FE remain valid; no general conclusion about other maps or about D. Full target D OPEN and active.

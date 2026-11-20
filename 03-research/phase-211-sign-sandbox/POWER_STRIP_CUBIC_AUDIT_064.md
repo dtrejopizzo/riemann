@@ -1,35 +1,35 @@
 # POWER_STRIP_CUBIC_AUDIT_064
 
-Estado: **APROBADO** POWER_STRIP_CUBIC_NECESSITY_064, tras relectura de las reglas del proyecto y lectura completa de la fuente. Prueba analítica; no requiere tests numéricos. Sólo limita la clase STRIP uniforme declarada. Papers intactos.
+Status: **APPROVED** POWER_STRIP_CUBIC_NECESSITY_064, after rereading the project rules and a full reading of the source. Analytic proof; it requires no numerical tests. It only limits the declared uniform STRIP class. Papers untouched.
 
-Antecedentes cotejados: índice/grid/crucigrama, JOINT_SCALE016, STRIP_NECESSITY059 y UNIFORM_STRIP060. La diferencia efectiva frente059 es utilizar un numerador de mayor grado adaptado al peso Student exacto, en vez del numerador constante. No se deduce una concentración global de un pico de Christoffel ni se importa una aproximación gaussiana compleja no justificada.
+Antecedents cross-checked: index/grid/crossword, JOINT_SCALE016, STRIP_NECESSITY059 and UNIFORM_STRIP060. The effective difference relative to 059 is the use of a higher-degree numerator adapted to the exact Student weight, instead of the constant numerator. No global concentration is deduced from a Christoffel peak, and no unjustified complex Gaussian approximation is imported.
 
-## Recurrencia y grados
+## Recurrence and degrees
 
-La construcción usa sólo grados hasta n+4 y momentos hasta n+5; todos existen ya bajo n>=4 y j>=10^6n. Los bordes Pearson se anulan. El coeficiente subprincipal y beta_k de060 siguen siendo correctos en ese rango ampliado. Para k<=n+4<=2n se tiene2M−k>=2j y los dos factores del denominador son positivos y al menosj. Sus majorantes por2M y M<=2j dan exactamente k/8<=beta_k<=4k.
+The construction uses only degrees up to n+4 and moments up to n+5; all already exist under n>=4 and j>=10^6n. The Pearson boundary terms vanish. The subleading coefficient and beta_k of 060 remain correct in that extended range. For k<=n+4<=2n one has 2M−k>=2j and the two factors of the denominator are positive and at least j. Their majorants by 2M and M<=2j give exactly k/8<=beta_k<=4k.
 
-Multiplicar cinco veces desde grado d=n−1 requiere MULT en grados de entrada hasta n+3 y beta hasta n+4, que son precisamente los cubiertos. La fuente no utiliza una recurrencia fuera de su rango de momentos.
+Multiplying five times from degree d=n−1 requires MULT in input degrees up to n+3 and beta up to n+4, which are precisely those covered. The source does not use a recurrence outside its range of moments.
 
-## Proyección y constantes
+## Projection and constants
 
-Para R=e_d normalizado, y²R′+yR tiene grado<=d+1 y es ortogonal a e_(d+3). La componente superior de y³e_d sólo puede proceder de tres ascensos, por lo que su coeficiente es sqrt(beta_(d+1)beta_(d+2)beta_(d+3)). El lower supera n^(3/2)/24. El factor M/j>=1 conserva esta cota para el término principal.
+For R=e_d normalized, y²R′+yR has degree <=d+1 and is orthogonal to e_(d+3). The top component of y³e_d can only come from three raisings, so its coefficient is sqrt(beta_(d+1)beta_(d+2)beta_(d+3)). The lower bound exceeds n^(3/2)/24. The factor M/j>=1 keeps this bound for the leading term.
 
-La descomposición racional SPLIT es exacta. Su resto tiene norma<=2·4^5(n+4)^(5/2)/j<=12288n^(5/2)/j. Las hipótesis implican j>=589824n y permiten pagar este resto por n^(3/2)/48. Triángulo inverso en una ÚNICA proyección unitaria prueba ||AR||>=n^(3/2)/48. No se supone que el generador preserve el espacio original ni se ignoran términos capaces de cancelarse dentro de él.
+The rational decomposition SPLIT is exact. Its remainder has norm <=2·4^5(n+4)^(5/2)/j<=12288n^(5/2)/j. The hypotheses imply j>=589824n and allow this remainder to be paid by n^(3/2)/48. Reverse triangle inequality in a SINGLE unit projection proves ||AR||>=n^(3/2)/48. It is not assumed that the generator preserves the original space, nor are terms that could cancel inside it ignored.
 
-## Numerador real y desplazamiento
+## Real numerator and shift
 
-La paridad d de R asegura que p(z)=(z/a)^dR(a/z) tiene únicamente potencias pares no negativas y coeficientes reales. Es no nulo y de grado<n; P(s)=p(−is) sigue siendo real. El cambio inverso recupera exactamente R y las normas de060, sin un factor2 extra. De allí ||H′||²/||H||²>=n³/(2304u²j).
+The parity d of R ensures that p(z)=(z/a)^dR(a/z) has only nonnegative even powers and real coefficients. It is nonzero and of degree <n; P(s)=p(−is) is still real. The inverse change recovers exactly R and the norms of 060, without an extra factor 2. Hence ||H′||²/||H||²>=n³/(2304u²j).
 
-Como p es real par, P(iz)=P(−iz)=p(z), H es real sobre la recta y la densidad analítica ORIGINAL es exactamente H². Esta propiedad especial justifica convertir su módulo desplazado en la norma² de H desplazada; no se hace esa identificación para un numerador complejo genérico.
+Since p is real and even, P(iz)=P(−iz)=p(z), H is real on the line and the ORIGINAL analytic density is exactly H². This special property justifies converting its shifted modulus into the shifted norm² of H; that identification is not made for a generic complex numerator.
 
-En toda subfranja cerrada de|Imz|<u, H y sus derivadas tienen decaimiento suficiente para diferenciar e integrar por partes. N″(t)=4||H′(·+it)||² es correcto. Tanto N como D(t)=||H′(·+it)||² son pares, porque H y H′ son reales en la recta. D es convexa por D″=4||H″||²>=0, así que D(t)>=D(0). Integrar dos veces produce N(eta)>=N(0)+2eta²||H′||². Con la densidad H² se obtiene el factor1152 y exactamente LOWER de la fuente para cada altura fija0<eta<u.
+On every closed substrip of |Imz|<u, H and its derivatives have sufficient decay to differentiate and integrate by parts. N″(t)=4||H′(·+it)||² is correct. Both N and D(t)=||H′(·+it)||² are even, because H and H′ are real on the line. D is convex by D″=4||H″||²>=0, so D(t)>=D(0). Integrating twice yields N(eta)>=N(0)+2eta²||H′||². With the density H² one obtains the factor 1152 and exactly the LOWER of the source for each fixed height 0<eta<u.
 
-## Clase refutada y alcance
+## Refuted class and scope
 
-Para cualquier p<3 y C>0, la sucesión entera j_n=max(ceil(Cn^p),ceil(10^6n)) satisface las hipótesis de construcción, pertenece al cono propuesto y es o(n³). El lower de STRIP diverge, descartando una constante finita uniforme en n,j y TODOS los numeradores a esa altura fija.
+For any p<3 and C>0, the integer sequence j_n=max(ceil(Cn^p),ceil(10^6n)) satisfies the construction hypotheses, belongs to the proposed cone and is o(n³). The STRIP lower bound diverges, ruling out a finite constant uniform in n, j and ALL numerators at that fixed height.
 
-## Mejora del umbral de construcción
+## Improvement of the construction threshold
 
-Root observó después de la primera aprobación que el umbral10^6n² era innecesario. Revisada la MISMA prueba paso a paso: sólo se usa j>=n para M<=2j, j>=9 para2j−9>=j, j>11/2 para los momentos hasta n+5, y j>=589824n para el restoREM. La identidad de normasGEN exige a lo sumo j>=n+8; también queda cubierta. Ningún paso de desplazamiento utiliza COARSE054 ni un contorno escalar que pida j>=10000n²: su integrabilidad se verifica directamente por el decaimiento analítico. Por tanto LOWER es válida ya para TODO j>=10^6n, sin cambiar constantes, objeto o lower. La aprobación de esta auditoría incluye esa versión mejorada.
+After the first approval it was observed that the threshold 10^6n² was unnecessary. The SAME proof was revised step by step: only j>=n is used for M<=2j, j>=9 for 2j−9>=j, j>11/2 for the moments up to n+5, and j>=589824n for the remainder REM. The norm identity GEN requires at most j>=n+8; it is also covered. No shift step uses COARSE054 or a scalar contour that requires j>=10000n²: its integrability is verified directly by the analytic decay. Therefore LOWER is already valid for ALL j>=10^6n, without changing constants, object or lower bound. The approval of this audit includes that improved version.
 
-No se afirma que esos tests tengan W negativa, que fallen sus autocorrelaciones aritméticas completas, ni que p>=3 sea necesario para un cono de SIGNO W. Tampoco se demuestra optimalidad logarítmica de060. El resultado sólo excluye la estimación ABSOLUTA de contorno uniforme descrita. Los métodos que conserven cancelación firmada y el problema del interior siguen abiertos.
+It is not claimed that those tests have negative W, that their full arithmetic autocorrelations fail, nor that p>=3 is necessary for a W SIGN cone. Logarithmic optimality of 060 is not proved either. The result only excludes the uniform ABSOLUTE contour estimate described. Methods that keep signed cancellation and the interior problem remain open.

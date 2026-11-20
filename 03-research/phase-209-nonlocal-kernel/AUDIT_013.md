@@ -1,72 +1,72 @@
-# AUDIT_013 — Escalas universales del mapa Mellin–Gauss011
+# AUDIT_013 — Universal scales of the Mellin–Gauss map011
 
-2026-10-19. Revisor independiente. Leído LINK_013_NO_FIXED_SCALE y cotejados P47 lem:testfam, thm:margin CON SU PRUEBA y cor:margin1.
-**Veredicto: PROVED la exclusión de toda escala universal c>0 para U011, con el input CITED de la cota del paper sobre esa familia explícita. No exclusión de c(T), otros mapas o D.**
+2026-10-19. Independent check. Read LINK_013_NO_FIXED_SCALE and cross-checked P47 lem:testfam, thm:margin WITH ITS PROOF and cor:margin1.
+**Verdict: PROVED the exclusion of every universal scale c>0 for U011, with the CITED input of the paper's bound on that explicit family. No exclusion of c(T), other maps or D.**
 
-## 1. Corpus y cambio de clase
+## 1. Corpus and change of class
 
-Consultados índice/grid/crucigrama, familias de margen y entradas011–012. La razón nueva es válida:012 trató una escala en una ventana;013 evalúa el MISMO mapa en los tests concretos responsables del margen cuando T→∞. No se intenta repetir la igualdad descartada ni se transforma un ínfimo pequeño en información sobre cualquier vector. El cálculo de M(F_T) es indispensable y se ha efectuado.
+Consulted: index/grid/crossword, margin families and entries011–012. The new reason is valid: 012 treated one scale in one window; 013 evaluates the SAME map on the concrete tests responsible for the margin as T→∞. There is no attempt to repeat the discarded equality nor is a small infimum turned into information about an arbitrary vector. The computation of M(F_T) is indispensable and has been carried out.
 
-La cota CITED de P47 usa sus datos certificados Z1/Z2 y la fórmula explícita. Aquí sólo falsifica una dominación del auxiliar; no es una fuente de signo positivo de D ni se introduce equivalencia externa alguna.
+The CITED bound of P47 uses its certified data Z1/Z2 and the explicit formula. Here it only falsifies a domination of the auxiliary; it is not a source of positive sign for D nor is any external equivalence introduced.
 
-## 2. Perfil h y Riemann impropia
+## 2. Profile h and improper Riemann sums
 
-La identidad h=2y^(1/4)[z_cm(y)−Σ(d^(−1/2)−d^(−1))m(d²y)] es exacta: la contribución de c cancela mediante Σv(d)/d=z_c. Las series convergen por las cotas ya probadas, sin separar un vector polar divergente.
+The identity h=2y^(1/4)[z_cm(y)−Σ(d^(−1/2)−d^(−1))m(d²y)] is exact: the contribution of c cancels via Σv(d)/d=z_c. The series converge by the bounds already proved, without separating a divergent polar vector.
 
-Con N=y^(−1/2) y g(r)=r^(−1/2)m(r²), se verifica exactamente
+With N=y^(−1/2) and g(r)=r^(−1/2)m(r²), one checks exactly
 
     N^(−1/2)Σd^(−1/2)m((d/N)²)=(1/N)Σg(d/N).
 
-La dominación g≤min(r^(−1/2),r^(−3/2)) controla las sumas cerca de cero y en infinito por2√ε+o(1) y2/√R+o(1). En un intervalo [ε,R] la suma usual converge por continuidad. No se invoca incorrectamente una Riemann ordinaria sobre un extremo singular.
+The domination g≤min(r^(−1/2),r^(−3/2)) controls the sums near zero and at infinity by 2√ε+o(1) and 2/√R+o(1). On an interval [ε,R] the usual sum converges by continuity. An ordinary Riemann sum is not incorrectly invoked at a singular endpoint.
 
-La integral de g es κ/2 por y=r², con factor1/2 correcto. El término d^(−1) es O(1+logN) antes del factor N^(−1/2); su cola se acota mediante m((d/N)²)≤N/d. El término z_cm también desaparece. Así h(−∞)=−κ. La representación original con τ prueba h(+∞)=0 por decaimiento gaussiano; convergencia local uniforme da continuidad. Junto con los límites, h es acotado y h_ev→−κ/2 en ambos extremos.
+The integral of g is κ/2 via y=r², with correct factor 1/2. The term d^(−1) is O(1+logN) before the factor N^(−1/2); its tail is bounded via m((d/N)²)≤N/d. The term z_cm also vanishes. Thus h(−∞)=−κ. The original representation with τ proves h(+∞)=0 by Gaussian decay; local uniform convergence gives continuity. Together with the limits, h is bounded and h_ev→−κ/2 at both ends.
 
-## 3. Spline, derivadas y masa que escapa
+## 3. Spline, derivatives and escaping mass
 
-Para cada j fijo, la fórmula Plancherel tiene prefactor k^(2j+1). En |v|≤1, |sincv|≤exp(−v²/7) produce integral O(k^(−j−1/2)), por lo que el producto es O(k^(j+1/2)). Los intervalos [1,2] y [2,∞) dan contribuciones exponencialmente pequeñas para k grande usando sin1<1 y v^(−2k). Con exponente k y sin peso se obtiene ||ω_k||∞=O(√k). Los argumentos y órdenes están correctos.
+For each fixed j, the Plancherel formula has prefactor k^(2j+1). On |v|≤1, |sincv|≤exp(−v²/7) yields an integral O(k^(−j−1/2)), so the product is O(k^(j+1/2)). The intervals [1,2] and [2,∞) give exponentially small contributions for large k using sin1<1 and v^(−2k). With exponent k and no weight one obtains ||ω_k||∞=O(√k). The arguments and orders are correct.
 
-Para k~T,
+For k~T,
 
     ||G_T^(j)||₂=O(T^(3/4−j/2)).
 
-Cauchy–Schwarz en soporte de longitud2T da los dos órdenes L¹ T^(1/4) y T^(−3/4), y ||F_T||²=O(T^(3/2)). No se deriva un perfil h cuya integrabilidad de derivadas no se haya probado.
+Cauchy–Schwarz on a support of length 2T gives the two L¹ orders T^(1/4) and T^(−3/4), and ||F_T||²=O(T^(3/2)). No profile h is differentiated whose derivative integrability has not been proved.
 
-G_T/T es probabilidad y su masa en |x|≤R es O_R(T^(−1/2)). Aunque G_T se concentra en x/T cerca de cero, en la coordenada física x su anchura crece: la masa escapa de cada compacto fijo. Con h acotado y h_ev→−κ/2 esto prueba ∫G_Th/T→−κ/2. No hace falta un límite puntual de G_T.
+G_T/T is a probability and its mass on |x|≤R is O_R(T^(−1/2)). Although G_T concentrates in x/T near zero, in the physical coordinate x its width grows: the mass escapes from every fixed compact set. With h bounded and h_ev→−κ/2 this proves ∫G_Th/T→−κ/2. A pointwise limit of G_T is not needed.
 
-## 4. Respuesta del mapa y dominio
+## 4. Response of the map and domain
 
-P(D) coincide término por término con el polinomio de P47. El término −γ₁²G_T/4 da el principal positivo de M; las dos derivadas contribuyen o(T). Así
+P(D) coincides term by term with the polynomial of P47. The term −γ₁²G_T/4 gives the positive main part of M; the two derivatives contribute o(T). Thus
 
     M(F_T)/T→γ₁²κ/8,
     liminf ||U_TF_T||²/T²≥γ₁⁴κ³/64>0.
 
-El signo y todas las potencias de κ son correctos.
+The sign and all powers of κ are correct.
 
-Para invocar las propiedades del test basta fijar T≥1: k=ceil(21T/e)≥8, G tiene derivadas suficientes y F está en H¹ con soporte y momentos exigidos. Se comunicó explicitar ese umbral en§3, pues para T muy pequeño k<5 no se aplicaría el lema. Esto no limita el teorema asintótico: T_c se puede aumentar a1.
+To invoke the properties of the test it suffices to fix T≥1: k=ceil(21T/e)≥8, G has enough derivatives and F lies in H¹ with the required support and moments. It was flagged that this threshold should be made explicit in §3, since for very small T, k<5 and the lemma would not apply. This does not limit the asymptotic theorem: T_c can be raised to 1.
 
-Paridad y cancelación de ambos momentos exponenciales proceden del polinomio P(±1/2)=0 y de las derivadas nulas al borde. Por tanto Q_T=a_T en estos tests sin término polar omitido.
+Parity and cancellation of both exponential moments come from the polynomial P(±1/2)=0 and from the vanishing derivatives at the boundary. Hence Q_T=a_T on these tests with no omitted polar term.
 
-## 5. Cota para la familia REAL de P47
+## 5. Bound for the ACTUAL family of P47
 
-El paso6 de la prueba de thm:margin acota la SUMA ABSOLUTA de contribuciones de ceros para el F de lem:testfam. Luego también acota |a_T(F)|, no sólo un ínfimo. El paso7 divide por el límite inferior de ||F||². Cor:margin1 optimiza justamente k=ceil(21T/e). Por tanto es válido transportar de esa prueba, como input CITED,
+Step 6 of the proof of thm:margin bounds the ABSOLUTE SUM of zero contributions for the F of lem:testfam. Hence it also bounds |a_T(F)|, not only an infimum. Step 7 divides by the lower bound of ||F||². Cor:margin1 optimises precisely k=ceil(21T/e). Therefore it is valid to carry over from that proof, as CITED input,
 
     |Q_T(F_T)|/||F_T||²≤4·10⁹ T exp(−15.449T).
 
-No se obtiene esta afirmación sólo del enunciado λ_A≤…; la comprobación de la prueba evita esa inferencia inválida. No se reauditan aquí los certificados externos Z1/Z2 del paper.
+This claim is not obtained merely from the statement λ_A≤…; checking the proof avoids that invalid inference. The external certificates Z1/Z2 of the paper are not re-audited here.
 
-Con ||F_T||²=O(T^(3/2)) y la respuesta de U≥const·T² resulta
+With ||F_T||²=O(T^(3/2)) and the response of U≥const·T² one obtains
 
     |Q_T(F_T)|/||U_TF_T||²
       =O(T^(1/2)exp(−15.449T))→0.
 
-Es válido usar valor absoluto gracias al paso6; no se presupone Q_T≥0.
+It is valid to use the absolute value thanks to step 6; Q_T≥0 is not presupposed.
 
-## 6. Cuantificadores y core
+## 6. Quantifiers and core
 
-La convergencia de M/T y todas las cotas son para TODO T suficientemente grande, no únicamente una sucesión, porque k~T y las estimaciones son uniformes para k grande. Por tanto cada c>0 fija falla en todas las ventanas T≥T_c sobre la familia dada.
+The convergence of M/T and all the bounds hold for ALL sufficiently large T, not just a sequence, because k~T and the estimates are uniform for large k. Hence every fixed c>0 fails in all windows T≥T_c on the given family.
 
-Para cada T con violación estricta, aproximar F_T en H¹ por funciones pares C_c∞ y corregir su momento cosh mantiene la desigualdad por continuidad de Q_T en H¹ y de U_T en L². No se necesita una aproximación uniforme simultánea en todas las ventanas.
+For each T with strict violation, approximating F_T in H¹ by even C_c∞ functions and correcting its cosh moment keeps the inequality by continuity of Q_T in H¹ and of U_T in L². A simultaneous uniform approximation over all windows is not needed.
 
-Una dominación hipotética con c(T)>0 obligaría a c(T)≤O(T^(1/2)exp(−15.449T)) en estos tests. Esa condición necesaria no prueba existencia ni imposibilidad de tales escalas. Tampoco descarta mapas distintos o un enlace que cambie realmente de clase.
+A hypothetical domination with c(T)>0 would force c(T)≤O(T^(1/2)exp(−15.449T)) on these tests. That necessary condition proves neither existence nor impossibility of such scales. Nor does it rule out different maps or a link that genuinely changes class.
 
-**Resultado final:** toda escala universal positiva de U011 descartada, con fuente CITED claramente delimitada. −R y sus identidades siguen válidos. D íntegro permanece OPEN y activo; este resultado sólo cierra esa familia de dominaciones del mapa concreto.
+**Final result:** every positive universal scale of U011 ruled out, with a clearly delimited CITED source. −R and its identities remain valid. Full D remains OPEN and active; this result only closes that family of dominations of the concrete map.

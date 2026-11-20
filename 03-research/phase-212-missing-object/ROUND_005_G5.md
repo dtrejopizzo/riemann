@@ -1,218 +1,218 @@
-# Ronda 5, memo G5: invención libre desde A1–A6 (deducción hacia atrás de los tipos de objeto)
+# Round 5, memo G5: free invention from A1–A6 (backward deduction of object types)
 
-Notación de `../phase-211-sign-sandbox/STATEMENT_001.md`. Arch(F) = C_0‖F‖² + ∫_0^∞ (c_F(0) − Re c_F(u))K(u)du;
-Π_p(F) = Σ_{k: k log p < 2T} v_{p^k} Re c_F(k log p); a_T = Arch − Σ_p Π_p. Para el peso cΛ, a_T^{(c)} = Arch − cΣ_pΠ_p.
-Sector de paridad: P_T^± = P_T ∩ {F par / impar}; en cada sector hay un solo vector de Tate, τ_+ = cosh(t/2) (par)
-y τ_− = sinh(t/2) (impar), y P_T^± = τ_±^⊥ dentro del sector.
+Notation from `../phase-211-sign-sandbox/STATEMENT_001.md`. Arch(F) = C_0‖F‖² + ∫_0^∞ (c_F(0) − Re c_F(u))K(u)du;
+Π_p(F) = Σ_{k: k log p < 2T} v_{p^k} Re c_F(k log p); a_T = Arch − Σ_p Π_p. For the weight cΛ, a_T^{(c)} = Arch − cΣ_pΠ_p.
+Parity sector: P_T^± = P_T ∩ {F even / odd}; in each sector there is a single Tate vector, τ_+ = cosh(t/2) (even)
+and τ_− = sinh(t/2) (odd), and P_T^± = τ_±^⊥ within the sector.
 
-## Cotejo (va primero, por regla)
+## Cross-check (goes first, by rule)
 
-1. **Antecedentes más cercanos, leídos en primaria.**
-   - `phase-160-row-d-infinite-T/R160_C7_R1.md` §§5–6, en especial §6.3(2) y §7 ítem 2 (P160.C7.1): pide un
-     polinomio de grado k ≥ 3 cuya hessiana sea −a_T, con una fuente independiente de coeficientes no negativos;
-     descarta los candidatos Str(Γ_F^k). Leído entero en §§5–7.
-   - `phase-159-row-d-two-front-construction/G2_B8_R1.md` §§1–2 (Teorema S y Corolario S′: vacío del toro de
-     Satake) y `G2_B8_R5.md` §§1–2 (Teorema D: certificación local con reparto Lévy–Khintchine del factor
-     arquimediano; umbral T_loc ≤ 0.5925). Leídos en esas secciones.
-   - `phase-200-sign-object/SPEC_SIGN_OBJECT_010.md`, variante 20.3 (a_T como log θ; «su signo es el de la
-     hessiana de log θ, un segundo cumulante indefinido»). Leído el pasaje.
-   - `phase-193-creation-campaign/CA_G_000_SEEDS.md` G6 y `CA_F_000_SEEDS.md` F5; `phase-201-untried-families/FAMILIES_A_001.md`
-     A1: polinomios lorentzianos registrados como «retry, no sign» / NON-VIRGIN. Leídas las líneas pertinentes.
-   - `ANNEX_COTEJO_LORENTZ_1.md` §§3–5 y `ANNEX_COTEJO_LORENTZ_2.md` §§3–5 de esta carpeta: M5 «cierre bajo
-     producto de factores de Euler aplicado a la signatura con el factor arquimediano fijo, y su comprobación en
-     c = 2» figura como no encontrado.
-2. **Qué es nuevo aquí.** No un objeto: tres lemas de clase (PROVED, elementales) que cierran, en clases
-   declaradas, los tipos de objeto que la deducción hacia atrás señala como «nativos» para A1–A6:
-   (L1) todo objeto cuyo signo salga de la log-concavidad (o log-convexidad) en un punto interior —
-   determinantes, funciones de partición, polinomios lorentzianos homogéneos en un punto del cono— da a_T como
-   una forma de Gram cuyo vector es exactamente el V_T de (G), sin aporte de signo propio; (L2) el cierre bajo
-   producto de factores de Euler de esa log-concavidad equivale a un reparto local a_T = Σ_v q_v, q_v ⪰ 0, que
-   con repartos sin restricción es el enunciado (Farkas trivial) y con repartos covariantes por rotación local
-   cae en el Teorema S de G2_B8_R1; (L3) en el formato lorentziano homogéneo la dirección del gradiente queda
-   forzada a ser el vector de Tate del sector. L2 responde al punto M5 del anexo (cierre por producto con el
-   factor arquimediano fijo, con su comprobación en c = 2): la ruptura en c = 2 está exactamente en el
-   presupuesto arquimediano, pero el mecanismo no tiene contenido de signo.
-3. **Por qué no repite.** R160_C7_R1 §6.3(2) examina sólo Str(Γ_F^k) y deja abierta la clase; G2_B8 trata
-   repartos de Lévy–Khintchine (invariantes por traslación) y rotaciones de Satake, no la clausura por producto
-   de log-concavidad de factores arbitrarios. L1–L3 cubren la clase «signo por log-concavidad en punto
-   interior, cerrada por productos», que incluye el ítem P160.C7.1 en cuanto se quiera probar con las reglas de
-   cierre de producto.
-4. **Conexión con la positividad global.** Ninguna: los tres lemas muestran que en esas clases la
-   positividad global equivale a la existencia de V_T (L1) o a la del reparto (L2), es decir al objetivo. No se
-   afirma signo alguno.
+1. **Closest antecedents, read as primary sources.**
+   - `phase-160-row-d-infinite-T/R160_C7_R1.md` §§5–6, especially §6.3(2) and §7 item 2 (P160.C7.1): asks for a
+     polynomial of degree k ≥ 3 whose Hessian is −a_T, with an independent source of nonnegative coefficients;
+     discards the candidates Str(Γ_F^k). Read in full in §§5–7.
+   - `phase-159-row-d-two-front-construction/G2_B8_R1.md` §§1–2 (Theorem S and Corollary S′: emptiness of the
+     Satake torus) and `G2_B8_R5.md` §§1–2 (Theorem D: local certification with Lévy–Khintchine distribution of the
+     archimedean factor; threshold T_loc ≤ 0.5925). Read in those sections.
+   - `phase-200-sign-object/SPEC_SIGN_OBJECT_010.md`, variant 20.3 (a_T as log θ; "its sign is that of the
+     Hessian of log θ, an indefinite second cumulant"). The passage was read.
+   - `phase-193-creation-campaign/CA_G_000_SEEDS.md` G6 and `CA_F_000_SEEDS.md` F5; `phase-201-untried-families/FAMILIES_A_001.md`
+     A1: Lorentzian polynomials recorded as "retry, no sign" / NON-VIRGIN. The pertinent lines were read.
+   - `ANNEX_COTEJO_LORENTZ_1.md` §§3–5 and `ANNEX_COTEJO_LORENTZ_2.md` §§3–5 of this folder: M5 "closure under
+     product of Euler factors applied to the signature with the archimedean factor fixed, and its check at
+     c = 2" appears as not found.
+2. **What is new here.** Not an object: three class lemmas (PROVED, elementary) that close, in declared
+   classes, the object types that the backward deduction points to as "native" for A1–A6:
+   (L1) every object whose sign comes from log-concavity (or log-convexity) at an interior point —
+   determinants, partition functions, homogeneous Lorentzian polynomials at a point of the cone— gives a_T as
+   a Gram form whose vector is exactly the V_T of (G), with no sign contribution of its own; (L2) closure under
+   product of Euler factors of that log-concavity is equivalent to a local distribution a_T = Σ_v q_v, q_v ⪰ 0, which
+   with unrestricted distributions is the statement (trivial Farkas) and with distributions covariant under local rotation
+   falls into Theorem S of G2_B8_R1; (L3) in the homogeneous Lorentzian format the direction of the gradient is
+   forced to be the Tate vector of the sector. L2 answers point M5 of the annex (closure by product with the
+   archimedean factor fixed, with its check at c = 2): the breaking at c = 2 is exactly in the
+   archimedean budget, but the mechanism has no sign content.
+3. **Why it does not repeat.** R160_C7_R1 §6.3(2) examines only Str(Γ_F^k) and leaves the class open; G2_B8 treats
+   Lévy–Khintchine distributions (translation-invariant) and Satake rotations, not closure under product
+   of log-concavity of arbitrary factors. L1–L3 cover the class "sign by log-concavity at an interior
+   point, closed under products", which includes item P160.C7.1 insofar as one wants to prove it with the
+   product closure rules.
+4. **Connection with global positivity.** None: the three lemmas show that in those classes
+   global positivity is equivalent to the existence of V_T (L1) or of the distribution (L2), i.e. to the target. No
+   sign is claimed.
 
-Resultado anticipado: **no logré escribir un objeto que cumpla A1–A6.** Lo que sigue es la deducción y los
-lemas de clase.
+Result in advance: **I did not manage to write an object satisfying A1–A6.** What follows is the deduction and the
+class lemmas.
 
-## 1. Deducción hacia atrás (pasos (1)–(3) de la semilla)
+## 1. Backward deduction (steps (1)–(3) of the seed)
 
-| Propiedad forzada por A1–A6 y los hechos | Tipos que la tienen de forma nativa | Qué queda tras L1–L3 o tras lo PROVED en el corpus |
+| Property forced by A1–A6 and the facts | Types that have it natively | What remains after L1–L3 or after what is PROVED in the corpus |
 |---|---|---|
-| (P1) Dependencia no afín del peso que en c = 1 degenera (A1) | determinante, función de partición, índice, dimensión, cohomología que salta | Índices y dimensiones: constantes cerca de c = 1 en ventana fija (R4-f). Determinante / partición: L1 |
-| (P2) Positividad sin margen (λ_A ≤ 4·10⁹Te^{−15.449T}) | identidad «= Σ cuadrados»; desigualdad con caso de igualdad; cantidad entera | Cantidad entera: R4-f. Identidad: es (G) misma |
-| (P3) Usa las dos condiciones de momento de forma esencial (A3) | objeto cuyo gradiente en el punto base es el vector de Tate | L3: en el formato lorentziano esto es forzado, no una elección |
-| (P4) Ventana en c que se cierra sobre 1 por ambos lados | función cóncava de c con máximo en c = 1 (λ_A(T;c) es ínfimo de afines) | Cualquier mecanismo cuya hipótesis valga en un conjunto de c independiente de T falla (P47 thm:shape, cor:void) |
-| (P5) Producto de Euler y factor arquimediano fijo; c = 2 debe romper por el factor arquimediano (A5) | cierre bajo producto (log-concavidad, lorentzianidad, estabilidad) | L2: el cierre por producto es un reparto local; con reparto libre es el objetivo, con reparto covariante cae en el Teorema S |
-| (P6) c = 1 único: red ℤ autodual por Poisson | identidad de Poisson / theta | D6, D14, D15 de `RULES_AVOID.md` (theta, completitud de cuadrados, métricas locales) |
+| (P1) Non-affine dependence on the weight that degenerates at c = 1 (A1) | determinant, partition function, index, dimension, jumping cohomology | Indices and dimensions: constant near c = 1 in a fixed window (R4-f). Determinant / partition: L1 |
+| (P2) Positivity without margin (λ_A ≤ 4·10⁹Te^{−15.449T}) | identity "= Σ squares"; inequality with an equality case; integer quantity | Integer quantity: R4-f. Identity: it is (G) itself |
+| (P3) Uses the two moment conditions essentially (A3) | object whose gradient at the base point is the Tate vector | L3: in the Lorentzian format this is forced, not a choice |
+| (P4) Window in c closing on 1 from both sides | concave function of c with maximum at c = 1 (λ_A(T;c) is an infimum of affine functions) | Any mechanism whose hypothesis holds on a set of c independent of T fails (P47 thm:shape, cor:void) |
+| (P5) Euler product and fixed archimedean factor; c = 2 must break through the archimedean factor (A5) | closure under product (log-concavity, Lorentzianity, stability) | L2: closure by product is a local distribution; with free distribution it is the target, with covariant distribution it falls into Theorem S |
+| (P6) c = 1 unique: lattice ℤ self-dual by Poisson | Poisson / theta identity | D6, D14, D15 of `RULES_AVOID.md` (theta, completion of squares, local metrics) |
 
-Intersección de (P1)–(P5) en tipos de objeto: «función positiva p cerca de un punto base x_0, con log p
-cóncava, producto de un factor arquimediano y factores por primo, gradiente en el vector de Tate, y hessiana de
-log p igual a −a_T». Los lemas siguientes muestran que esa intersección no aporta signo propio.
+Intersection of (P1)–(P5) in object types: "positive function p near a base point x_0, with log p
+concave, product of an archimedean factor and per-prime factors, gradient at the Tate vector, and Hessian of
+log p equal to −a_T". The following lemmas show that this intersection contributes no sign of its own.
 
-## 2. Lemas de clase
+## 2. Class lemmas
 
-**Lema L1 (log-concavidad en punto interior = Gram de (G); PROVED).** Sea E ⊂ P_T un subespacio de dimensión
-finita (o P_T ∩ 𝒟_T con la topología de la norma del grafo), U ⊂ ℝ^d abierto, x_0 ∈ U, ℓ : E → ℝ^d lineal y
-p : U → (0, ∞) de clase C² con
+**Lemma L1 (log-concavity at an interior point = Gram of (G); PROVED).** Let E ⊂ P_T be a finite-dimensional
+subspace (or P_T ∩ 𝒟_T with the graph norm topology), U ⊂ ℝ^d open, x_0 ∈ U, ℓ : E → ℝ^d linear and
+p : U → (0, ∞) of class C² with
 
-  ∇² log p(x_0)[ℓF, ℓF] = −a_T(F)  para todo F ∈ E.  (2.1)
+  ∇² log p(x_0)[ℓF, ℓF] = −a_T(F)  for all F ∈ E.  (2.1)
 
-(a) Si log p es cóncava cerca de x_0, entonces a_T ⪰ 0 en E y existe un espacio de Hilbert ℋ y V : E → ℋ lineal
-con a_T(F) = ‖VF‖² (es decir, (G) con ρ = 0).
-(b) Caso determinante: p(x) = det(X_0 + Σ_i x_i A_i) con X_0 ≻ 0 y A_i simétricas cualesquiera. Entonces
-−∇² log p(0)[y, y] = tr((X_0^{−1}A(y))²) = ‖X_0^{−1/2}A(y)X_0^{−1/2}‖²_HS, A(y) = Σ y_iA_i; el signo no usa
-ninguna positividad de los A_i.
-(c) Caso partición: p(x) = ∫ e^{⟨x, X⟩} dμ con μ medida de probabilidad y momentos exponenciales. Entonces
-∇² log p(0)[y, y] = Var_μ⟨y, X⟩ ≥ 0; (2.1) con signo cambiado (log-convexidad) da a_T(F) = Var_μ⟨ℓF, X⟩, y un tal μ
-existe para algún ℓ si y sólo si a_T ⪰ 0 en E.
-(d) Recíprocamente, si a_T ⪰ 0 en E, existen p log-cóncava y ℓ con (2.1): p = exp(−½a_T∘ℓ^{−1}) en la imagen.
+(a) If log p is concave near x_0, then a_T ⪰ 0 on E and there exist a Hilbert space ℋ and V : E → ℋ linear
+with a_T(F) = ‖VF‖² (i.e., (G) with ρ = 0).
+(b) Determinant case: p(x) = det(X_0 + Σ_i x_i A_i) with X_0 ≻ 0 and arbitrary symmetric A_i. Then
+−∇² log p(0)[y, y] = tr((X_0^{−1}A(y))²) = ‖X_0^{−1/2}A(y)X_0^{−1/2}‖²_HS, A(y) = Σ y_iA_i; the sign uses
+no positivity of the A_i.
+(c) Partition case: p(x) = ∫ e^{⟨x, X⟩} dμ with μ a probability measure with exponential moments. Then
+∇² log p(0)[y, y] = Var_μ⟨y, X⟩ ≥ 0; (2.1) with the sign changed (log-convexity) gives a_T(F) = Var_μ⟨ℓF, X⟩, and such a μ
+exists for some ℓ if and only if a_T ⪰ 0 on E.
+(d) Conversely, if a_T ⪰ 0 on E, there exist log-concave p and ℓ with (2.1): p = exp(−½a_T∘ℓ^{−1}) on the image.
 
-*Prueba.* (a) Concavidad de log p ⇒ ∇²log p(x_0) ⪯ 0 ⇒ por (2.1) a_T ⪰ 0; la raíz cuadrada de la forma
-(teorema espectral en dimensión finita, o completación de E por a_T en general) da V. (b) ∂_y log det(X) =
-tr(X^{−1}A(y)), ∂_y² = −tr(X^{−1}A(y)X^{−1}A(y)); con X_0 ≻ 0, tr((X_0^{−1}A)²) = tr((X_0^{−1/2}AX_0^{−1/2})²) =
-‖X_0^{−1/2}AX_0^{−1/2}‖²_HS ≥ 0 porque X_0^{−1/2}AX_0^{−1/2} es simétrica. (c) Fórmula estándar de cumulantes:
-∂² log ∫e^{⟨x,X⟩}dμ = covarianza bajo la medida inclinada; en x = 0 es Var_μ. Si a_T ⪰ 0 en E, el campo
-gaussiano centrado con covarianza a_T existe (Kolmogorov; en dimensión finita, la gaussiana de matriz a_T); si
-no, la varianza no puede ser negativa. (d) Directo. ∎
+*Proof.* (a) Concavity of log p ⇒ ∇²log p(x_0) ⪯ 0 ⇒ by (2.1) a_T ⪰ 0; the square root of the form
+(spectral theorem in finite dimension, or completion of E by a_T in general) gives V. (b) ∂_y log det(X) =
+tr(X^{−1}A(y)), ∂_y² = −tr(X^{−1}A(y)X^{−1}A(y)); with X_0 ≻ 0, tr((X_0^{−1}A)²) = tr((X_0^{−1/2}AX_0^{−1/2})²) =
+‖X_0^{−1/2}AX_0^{−1/2}‖²_HS ≥ 0 because X_0^{−1/2}AX_0^{−1/2} is symmetric. (c) Standard cumulant formula:
+∂² log ∫e^{⟨x,X⟩}dμ = covariance under the tilted measure; at x = 0 it is Var_μ. If a_T ⪰ 0 on E, the
+centred Gaussian field with covariance a_T exists (Kolmogorov; in finite dimension, the Gaussian with matrix a_T); if
+not, the variance cannot be negative. (d) Direct. ∎
 
-*Lectura.* En la clase «el signo sale de la log-concavidad (o log-convexidad) de una función positiva en un
-punto interior», el objeto construido es exactamente un V_T de (G); la log-concavidad no aporta nada que no
-sea la existencia de V_T. Esto incluye determinantes y funciones de partición (P1) y responde a la variante 20.3
-de `SPEC_SIGN_OBJECT_010.md`: allí el segundo cumulante quedaba indefinido; aquí, cuando está definido, es un
-Gram y su existencia es el objetivo.
+*Reading.* In the class "the sign comes from log-concavity (or log-convexity) of a positive function at an
+interior point", the constructed object is exactly a V_T of (G); log-concavity contributes nothing other than
+the existence of V_T. This includes determinants and partition functions (P1) and answers variant 20.3
+of `SPEC_SIGN_OBJECT_010.md`: there the second cumulant was indefinite; here, when it is definite, it is a
+Gram and its existence is the target.
 
-**Lema L3 (formato lorentziano homogéneo y vector de Tate; PROVED).** Sea p homogéneo de grado k ≥ 2, positivo
-en un abierto cónico que contiene x_0, de clase C². Pongamos g = ∇p(x_0) ≠ 0 y H = ∇² log p(x_0). Entonces
-∇²p(x_0) = p(x_0)(H + ĝĝᵀ), ĝ = g/p(x_0), y son equivalentes:
- (i) ∇²p(x_0) tiene a lo sumo un autovalor positivo;
- (ii) H ⪯ 0 sobre g^⊥.
-Si además (2.1) vale con ℓ un isomorfismo del sector P_T^± ⊕ ℝτ_± sobre ℝ^d tal que ℓ(P_T^±) = g^⊥, entonces (i)
-para p equivale a a_T ⪰ 0 en P_T^±, y el hiperplano g^⊥ es la imagen del núcleo del funcional de Tate.
+**Lemma L3 (homogeneous Lorentzian format and Tate vector; PROVED).** Let p be homogeneous of degree k ≥ 2, positive
+on an open cone containing x_0, of class C². Set g = ∇p(x_0) ≠ 0 and H = ∇² log p(x_0). Then
+∇²p(x_0) = p(x_0)(H + ĝĝᵀ), ĝ = g/p(x_0), and the following are equivalent:
+ (i) ∇²p(x_0) has at most one positive eigenvalue;
+ (ii) H ⪯ 0 on g^⊥.
+If moreover (2.1) holds with ℓ an isomorphism of the sector P_T^± ⊕ ℝτ_± onto ℝ^d such that ℓ(P_T^±) = g^⊥, then (i)
+for p is equivalent to a_T ⪰ 0 on P_T^±, and the hyperplane g^⊥ is the image of the kernel of the Tate functional.
 
-*Prueba.* ∇²p = ∇(p∇log p) = p(∇²log p + ∇log p ∇log pᵀ). Por Euler, ∇²p(x_0)x_0 = (k−1)g y
-∇²p(x_0)[x_0,x_0] = k(k−1)p(x_0) > 0. (i)⇒(ii): x_0 es dirección positiva; el complemento ∇²p-ortogonal de x_0 es
-{y : ⟨g, y⟩ = 0} = g^⊥; con a lo sumo un autovalor positivo, ∇²p ⪯ 0 en ese complemento, y allí ∇²p = p·H porque
-⟨ĝ, y⟩ = 0. (ii)⇒(i): ∇²p ⪯ 0 en el hiperplano g^⊥, luego por min-max a lo sumo un autovalor positivo. La última
-frase es (2.1) restringida. ∎
+*Proof.* ∇²p = ∇(p∇log p) = p(∇²log p + ∇log p ∇log pᵀ). By Euler, ∇²p(x_0)x_0 = (k−1)g and
+∇²p(x_0)[x_0,x_0] = k(k−1)p(x_0) > 0. (i)⇒(ii): x_0 is a positive direction; the ∇²p-orthogonal complement of x_0 is
+{y : ⟨g, y⟩ = 0} = g^⊥; with at most one positive eigenvalue, ∇²p ⪯ 0 on that complement, and there ∇²p = p·H because
+⟨ĝ, y⟩ = 0. (ii)⇒(i): ∇²p ⪯ 0 on the hyperplane g^⊥, hence by min-max at most one positive eigenvalue. The last
+sentence is (2.1) restricted. ∎
 
-*Lectura.* (P3) no es una elección de diseño: en cualquier objeto lorentziano homogéneo cuya hessiana
-reproduzca a_T en un sector, el gradiente en el punto base es el funcional de Tate. El contenido de signo es
-H ⪯ 0 en g^⊥, que es (2.1) con a_T ⪰ 0: de nuevo el objetivo, salvo que la lorentzianidad de p se obtenga por
-una regla de cierre. La regla de cierre nativa con el producto de Euler es el producto; es el lema siguiente.
+*Reading.* (P3) is not a design choice: in any homogeneous Lorentzian object whose Hessian
+reproduces a_T in a sector, the gradient at the base point is the Tate functional. The sign content is
+H ⪯ 0 on g^⊥, which is (2.1) with a_T ⪰ 0: again the target, unless the Lorentzianity of p is obtained by
+a closure rule. The native closure rule with the Euler product is the product; that is the next lemma.
 
-**Lema L2 (cierre por producto de factores de Euler = reparto local; PROVED en dimensión finita).** Sea E ⊂ P_T
-de dimensión finita y Π_T el conjunto de primos p < e^{2T}. Supongamos p = p_∞ ∏_{p∈Π_T} p_p, cada factor positivo
-y C² cerca de x_0, y (2.1). Pongamos q_v(F) := −∇²log p_v(x_0)[ℓF, ℓF].
-(a) a_T = q_∞ + Σ_p q_p en E. Si cada factor es log-cóncavo (en particular si cada factor es lorentziano, por la
-log-concavidad de los lorentzianos en el ortante abierto, CITED: Brändén–Huh, Ann. Math. 2020, Thm 2.30), cada
+**Lemma L2 (closure by product of Euler factors = local distribution; PROVED in finite dimension).** Let E ⊂ P_T
+be finite-dimensional and Π_T the set of primes p < e^{2T}. Suppose p = p_∞ ∏_{p∈Π_T} p_p, each factor positive
+and C² near x_0, and (2.1). Set q_v(F) := −∇²log p_v(x_0)[ℓF, ℓF].
+(a) a_T = q_∞ + Σ_p q_p on E. If each factor is log-concave (in particular if each factor is Lorentzian, by the
+log-concavity of Lorentzian polynomials on the open orthant, CITED: Brändén–Huh, Ann. Math. 2020, Thm 2.30), each
 q_v ⪰ 0.
-(b) (Reparto libre.) Existen formas simétricas r_p en E con r_p − Π_p ⪰ 0 para todo p y Arch − Σ_p r_p ⪰ 0 si y
-sólo si a_T ⪰ 0 en E.
-(c) (Reparto con dependencia del peso sólo local.) Si la construcción vale para todo peso w en un entorno de Λ,
-con p_∞ independiente de w y p_p dependiente sólo de (w_{p^k})_k, entonces q_p^{(w)} = r_p − Π_p^{(w)} con r_p
-independiente de w_p, y q_∞ = Arch − Σ_p r_p.
-(d) (c = 2 y c no entero.) Bajo (c), para el peso cΛ la misma construcción da a_T^{(c)} = (Arch − cΣ_pr_p) +
-Σ_p c(r_p − Π_p). Los términos de primo son c·q_p ⪰ 0 para todo c > 0; la única línea que puede fallar es
-q_∞^{(c)} = Arch − cΣ_pr_p ⪰ 0, el presupuesto del factor arquimediano fijo.
-(e) (Covariancia por rotación.) Si la log-concavidad de p_p se deduce de una propiedad de los datos locales que
-vale para Haar-casi todo α_p = e^{iθ_p} (temperancia, estabilidad local de Lee–Yang, forma de grado uno), la
-construcción prueba a_T^{(v(θ))} ⪰ 0 para casi todo θ del toro de Satake, lo que es falso para T ≥ 0.60
-(G2_B8_R1 Teorema S(1) y Corolario S′, CITED del corpus, leídos en primaria).
+(b) (Free distribution.) There exist symmetric forms r_p on E with r_p − Π_p ⪰ 0 for all p and Arch − Σ_p r_p ⪰ 0 if and
+only if a_T ⪰ 0 on E.
+(c) (Distribution with only local dependence on the weight.) If the construction holds for every weight w in a neighbourhood of Λ,
+with p_∞ independent of w and p_p depending only on (w_{p^k})_k, then q_p^{(w)} = r_p − Π_p^{(w)} with r_p
+independent of w_p, and q_∞ = Arch − Σ_p r_p.
+(d) (c = 2 and non-integer c.) Under (c), for the weight cΛ the same construction gives a_T^{(c)} = (Arch − cΣ_pr_p) +
+Σ_p c(r_p − Π_p). The prime terms are c·q_p ⪰ 0 for all c > 0; the only line that can fail is
+q_∞^{(c)} = Arch − cΣ_pr_p ⪰ 0, the budget of the fixed archimedean factor.
+(e) (Covariance under rotation.) If the log-concavity of p_p is deduced from a property of the local data that
+holds for Haar-almost every α_p = e^{iθ_p} (temperedness, local Lee–Yang stability, degree-one form), the
+construction proves a_T^{(v(θ))} ⪰ 0 for almost every θ of the Satake torus, which is false for T ≥ 0.60
+(G2_B8_R1 Theorem S(1) and Corollary S′, CITED from the corpus, read as primary sources).
 
-*Prueba.* (a) log p = log p_∞ + Σ log p_p; derivar dos veces. (b) ⇒: sumando, a_T = (Arch − Σr_p) + Σ(r_p − Π_p) ⪰ 0.
-⇐: si Π_T = ∅ no hay nada que probar; si no, r_p := Π_p + a_T/|Π_T| da r_p − Π_p = a_T/|Π_T| ⪰ 0 y Arch − Σr_p =
-a_T − a_T = 0. (c) Derivando la identidad a_T^{(w)} = q_∞ + Σq_p^{(w)} respecto de w_{p^k}: el lado izquierdo da
-−(2/√(p^k))Re c_F(k log p) = −∂_{w_{p^k}}Π_p^{(w)}(F), y sólo q_p^{(w)} depende de w_{p^k}; como a_T^{(w)} es
-afín en w, q_p^{(w)} es afín en (w_{p^k})_k con la misma parte lineal que −Π_p^{(w)}; se define r_p := q_p^{(w)} +
-Π_p^{(w)}, independiente de w_p y, por la hipótesis de localidad, de los demás pesos; entonces q_∞ = a_T − Σq_p =
-Arch − Σr_p. (d) Sustituir w = cΛ en (c). (e) Las hipótesis de (e) se conservan bajo la rotación, luego la
-construcción (si existe para Λ por esa vía) existe para v(θ), contradicción con S(1) en un conjunto de θ de
-medida positiva. ∎
+*Proof.* (a) log p = log p_∞ + Σ log p_p; differentiate twice. (b) ⇒: adding, a_T = (Arch − Σr_p) + Σ(r_p − Π_p) ⪰ 0.
+⇐: if Π_T = ∅ there is nothing to prove; otherwise, r_p := Π_p + a_T/|Π_T| gives r_p − Π_p = a_T/|Π_T| ⪰ 0 and Arch − Σr_p =
+a_T − a_T = 0. (c) Differentiating the identity a_T^{(w)} = q_∞ + Σq_p^{(w)} with respect to w_{p^k}: the left-hand side gives
+−(2/√(p^k))Re c_F(k log p) = −∂_{w_{p^k}}Π_p^{(w)}(F), and only q_p^{(w)} depends on w_{p^k}; since a_T^{(w)} is
+affine in w, q_p^{(w)} is affine in (w_{p^k})_k with the same linear part as −Π_p^{(w)}; define r_p := q_p^{(w)} +
+Π_p^{(w)}, independent of w_p and, by the locality hypothesis, of the other weights; then q_∞ = a_T − Σq_p =
+Arch − Σr_p. (d) Substitute w = cΛ in (c). (e) The hypotheses of (e) are preserved under rotation, hence the
+construction (if it exists for Λ by that route) exists for v(θ), contradicting S(1) on a set of θ of
+positive measure. ∎
 
-*Lectura de L2.* La clausura por producto, que es lo único que el producto de Euler aporta a la
-log-concavidad, convierte el signo en un reparto del factor arquimediano entre primos. Con repartos sin
-restricción el reparto existe exactamente cuando vale el objetivo (b): el mecanismo no tiene contenido. Con
-repartos de Lévy–Khintchine es la certificación local de G2_B8_R5, que no existe para T ≥ 0.5925. Con
-propiedades locales invariantes por rotación es el vacío de Satake. Lo único no excluido es un r_p que dependa
-de la fase exacta α_p = 1 (no de una propiedad casi segura del toro) y que no sea invariante por traslación; no
-logré escribir ninguno con fórmula propia.
+*Reading of L2.* Closure by product, which is the only thing the Euler product contributes to
+log-concavity, turns the sign into a distribution of the archimedean factor among primes. With unrestricted
+distributions the distribution exists exactly when the target holds (b): the mechanism has no content. With
+Lévy–Khintchine distributions it is the local certification of G2_B8_R5, which does not exist for T ≥ 0.5925. With
+rotation-invariant local properties it is the Satake void. The only thing not excluded is an r_p depending
+on the exact phase α_p = 1 (not on an almost-sure property of the torus) and not translation-invariant; I did
+not manage to write one with its own formula.
 
-## 3. Objeto
+## 3. Object
 
-No escrito. La intersección de §1 se reduce, por L1–L3, a «V_T de (G)» o a «reparto local (r_p) con
-Arch − Σr_p ⪰ 0 y r_p ⪰ Π_p», y ninguna de las dos lleva una fuente de signo independiente del enunciado.
+Not written. The intersection of §1 reduces, by L1–L3, to "V_T of (G)" or to "local distribution (r_p) with
+Arch − Σr_p ⪰ 0 and r_p ⪰ Π_p", and neither of the two carries a sign source independent of the statement.
 
-## 4. Identidad
+## 4. Identity
 
-L1(a), L1(d) y L2(b) son las identidades exactas entre las clases examinadas y a_T: (2.1) ⟺ (G) con ρ = 0; producto
-de factores log-cóncavos ⟺ a_T = q_∞ + Σq_p con q_v ⪰ 0 ⟺ a_T ⪰ 0 en E. Comprobación en el caso más simple: para
-T < ½log 2 no hay primos, L2 se reduce a q_∞ = a_T = Arch, y L1 da a_T = ‖VF‖² exactamente cuando Arch ⪰ 0 en P_T,
-que es lo certificado en ese rango. No se hizo ningún cómputo: las pruebas son de dos líneas.
+L1(a), L1(d) and L2(b) are the exact identities between the examined classes and a_T: (2.1) ⟺ (G) with ρ = 0; product
+of log-concave factors ⟺ a_T = q_∞ + Σq_p with q_v ⪰ 0 ⟺ a_T ⪰ 0 on E. Check in the simplest case: for
+T < ½log 2 there are no primes, L2 reduces to q_∞ = a_T = Arch, and L1 gives a_T = ‖VF‖² exactly when Arch ⪰ 0 on P_T,
+which is what is certified in that range. No computation was done: the proofs are two lines long.
 
-## 5. Mecanismo
+## 5. Mechanism
 
-El candidato natural era: «p lorentziano por producto de factores lorentzianos (Brändén–Huh, cierre por
-producto, CITED) ⇒ ∇²p con a lo sumo un autovalor positivo ⇒ (L3) a_T ⪰ 0 en P_T^±». Hipótesis: (H1) cada factor
-local es lorentziano; (H2) (2.1) con gradiente en el vector de Tate. (H2) es consistente (L3). (H1) para todos los
-factores implica, por L2(a), q_v ⪰ 0 para cada v, y entonces el contenido de (H1) es el reparto de L2(b)–(e).
-Hipótesis abierta señalada: existencia de r_p con fórmula propia, dependiente de la fase exacta, no invariante
-por traslación, con r_p ⪰ Π_p y Σr_p ⪯ Arch en P_T para todo T. Esto equivale al objetivo (L2(b)), así que no es
-una hipótesis más débil: queda registrada sólo como forma del problema, no como avance (B3).
+The natural candidate was: "p Lorentzian as a product of Lorentzian factors (Brändén–Huh, closure under
+product, CITED) ⇒ ∇²p with at most one positive eigenvalue ⇒ (L3) a_T ⪰ 0 on P_T^±". Hypotheses: (H1) each local
+factor is Lorentzian; (H2) (2.1) with gradient at the Tate vector. (H2) is consistent (L3). (H1) for all
+factors implies, by L2(a), q_v ⪰ 0 for each v, and then the content of (H1) is the distribution of L2(b)–(e).
+Open hypothesis pointed out: existence of r_p with its own formula, depending on the exact phase, not translation-invariant,
+with r_p ⪰ Π_p and Σr_p ⪯ Arch on P_T for all T. This is equivalent to the target (L2(b)), so it is not
+a weaker hypothesis: it is recorded only as a form of the problem, not as progress (B3).
 
-## 6. Controles (sobre el mecanismo de §5, que no prueba nada)
+## 6. Controls (on the mechanism of §5, which proves nothing)
 
-- **c = 2.** Rompe en la línea q_∞^{(2)} = Arch − 2Σr_p ⪰ 0 (L2(d)): los factores de primo duplicados siguen
-  siendo log-cóncavos (producto de dos copias), el factor arquimediano fijo no paga el doble presupuesto. Es la
-  ruptura que pide A5, pero el mecanismo no tiene contenido para c = 1.
-- **c no entero.** No hay factorización en copias; con (c) la construcción se extiende a todo c > 0 por
-  escalado de q_p, y la misma línea q_∞^{(c)} es la única que puede fallar. Para c < 1, q_∞^{(c)} =
-  q_∞ + (1 − c)Σr_p no es ⪰ 0 a menos que Σr_p ⪰ 0, que no está garantizado: la ruptura a la izquierda de 1
-  depende de r_p, no del factor arquimediano. No verificado en ningún ejemplo.
-- **a_P (borrado de primos p < P).** Desaparecen los factores p_p, p < P; si el reparto no se recalcula,
-  a_T^{(a_P)} = q_∞ + Σ_{p<P}r_p + Σ_{p≥P}q_p, y falla la línea Σ_{p<P} r_p ⪰ 0 (los r_p no tienen signo propio).
-- **Sin producto de Euler (Davenport–Heilbronn).** La hipótesis «p = p_∞∏p_p» no se puede escribir: falla la
-  primera línea de L2; L1 sigue valiendo (es genérico), lo cual confirma que L1 no aporta signo.
-- **Rotación de Satake.** L2(e).
+- **c = 2.** Breaks at the line q_∞^{(2)} = Arch − 2Σr_p ⪰ 0 (L2(d)): the doubled prime factors remain
+  log-concave (product of two copies), the fixed archimedean factor does not pay the double budget. It is the
+  breaking that A5 asks for, but the mechanism has no content for c = 1.
+- **Non-integer c.** There is no factorization into copies; with (c) the construction extends to all c > 0 by
+  scaling q_p, and the same line q_∞^{(c)} is the only one that can fail. For c < 1, q_∞^{(c)} =
+  q_∞ + (1 − c)Σr_p is not ⪰ 0 unless Σr_p ⪰ 0, which is not guaranteed: the breaking to the left of 1
+  depends on r_p, not on the archimedean factor. Not verified in any example.
+- **a_P (deletion of primes p < P).** The factors p_p, p < P, disappear; if the distribution is not recomputed,
+  a_T^{(a_P)} = q_∞ + Σ_{p<P}r_p + Σ_{p≥P}q_p, and the line Σ_{p<P} r_p ⪰ 0 fails (the r_p have no sign of their own).
+- **No Euler product (Davenport–Heilbronn).** The hypothesis "p = p_∞∏p_p" cannot be written: the
+  first line of L2 fails; L1 still holds (it is generic), which confirms that L1 contributes no sign.
+- **Satake rotation.** L2(e).
 
-## 7. Veredicto propio
+## 7. Own verdict
 
-**No logré escribir un objeto que cumpla A1–A6.** Resultados de clase, todos sin signo: L1 (PROVED): signo por
-log-concavidad o log-convexidad en punto interior, incluidos determinante y función de partición, es exactamente
-un V_T de (G); L3 (PROVED): en el formato lorentziano homogéneo el gradiente es el vector de Tate y la condición
-es a_T ⪰ 0 en el sector; L2 (PROVED en dimensión finita, (e) relativo a G2_B8_R1 Teorema S): el cierre por producto
-de factores de Euler es un reparto local que con reparto libre equivale al objetivo, con Lévy–Khintchine es la
-clase muerta de G2_B8_R5, y con propiedades locales casi seguras en el toro cae en el vacío de Satake; rompe en
-c = 2 sólo en el presupuesto arquimediano.
+**I did not manage to write an object satisfying A1–A6.** Class results, all without sign: L1 (PROVED): sign by
+log-concavity or log-convexity at an interior point, including determinant and partition function, is exactly
+a V_T of (G); L3 (PROVED): in the homogeneous Lorentzian format the gradient is the Tate vector and the condition
+is a_T ⪰ 0 in the sector; L2 (PROVED in finite dimension, (e) relative to G2_B8_R1 Theorem S): closure by product
+of Euler factors is a local distribution which with free distribution is equivalent to the target, with Lévy–Khintchine is the
+dead class of G2_B8_R5, and with almost-sure local properties on the torus falls into the Satake void; it breaks at
+c = 2 only in the archimedean budget.
 
-## Resultado
+## Result
 
-NO-GO con clase (L1–L3), sin mecanismo nuevo. Ninguna afirmación de signo.
+NO-GO with class (L1–L3), no new mechanism. No sign statement.
 
-## Qué se probó
+## What was proved
 
-L1(a)–(d), L3, L2(a)–(d) completos; L2(e) relativo a un teorema del corpus.
+L1(a)–(d), L3, L2(a)–(d) complete; L2(e) relative to a theorem of the corpus.
 
-## Qué falló y por qué
+## What failed and why
 
-Todo tipo de objeto «nativo» para (P1)–(P5) que obtenga el signo de una concavidad en un punto interior
-traslada el signo a una forma de Gram o a un reparto, y la existencia de cualquiera de los dos es el objetivo.
-La única regla de cierre que usa el producto de Euler (producto de factores) es aditiva en la hessiana de log y
-reproduce la certificación local.
+Every "native" object type for (P1)–(P5) that obtains the sign from a concavity at an interior point
+transfers the sign to a Gram form or to a distribution, and the existence of either of the two is the target.
+The only closure rule using the Euler product (product of factors) is additive in the Hessian of log and
+reproduces the local certification.
 
-## Siguiente paso concreto
+## Concrete next step
 
-Si se quiere seguir por esta clase: escribir un r_p con fórmula propia que dependa de α_p = 1 de forma no casi
-segura en el toro y no sea invariante por traslación, y verificar r_p ⪰ Π_p para p = 2, 3 en T = 0.5925 sobre el
-par de prueba de G2_B8_R5 §4 (donde todo reparto LK falla). Sin esa fórmula, la clase queda cerrada como se dice
-arriba. No cotejado en primaria: fases 15, 40–43, 120 (matroide de colisiones, citada por el anexo), 137–142,
-Paper 46, y `00-references/`.
+If one wants to continue along this class: write an r_p with its own formula depending on α_p = 1 in a way that is not almost
+sure on the torus and not translation-invariant, and verify r_p ⪰ Π_p for p = 2, 3 at T = 0.5925 on the
+test pair of G2_B8_R5 §4 (where every LK distribution fails). Without that formula, the class remains closed as stated
+above. Not cross-checked in primary sources: phases 15, 40–43, 120 (collision matroid, cited by the annex), 137–142,
+Paper 46, and `00-references/`.

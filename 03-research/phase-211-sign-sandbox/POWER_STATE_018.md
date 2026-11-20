@@ -1,35 +1,35 @@
-# Estado018 — Tres filas completas y obligación aritmética pendiente
+# State018 — Three full rows and pending arithmetic obligation
 
-Estado: resultados parciales PROVED, signo global OPEN. Goal activo. Papers intactos. Sustituye STATE017 como resumen vigente.
+Status: partial results PROVED, global sign OPEN. Goal active. Papers untouched. Replaces STATE017 as the current summary.
 
-## Blanco suficiente y región probada
+## Sufficient target and proved region
 
-Por POWER_SCALAR_BRIDGE_017 basta demostrar el signo de TODA la tabla H_(N,k)=s^k/(s+u)^(N+k), N>=1,k>=0, a una tasa fija u=63/2. La representación positiva de densidades por elevación Bernstein conserva todos los cruces y el polar; el puente fuerte014 conecta con los datos del Paper47.
+By POWER_SCALAR_BRIDGE_017 it suffices to prove the sign of the WHOLE table H_(N,k)=s^k/(s+u)^(N+k), N>=1,k>=0, at a fixed rate u=63/2. The positive representation of densities by Bernstein elevation keeps all cross terms and the polar; the strong bridge014 connects to the data of Paper47.
 
-Regiones probadas: N1 para TODOS k con margen4/3; N2 y N3 para TODOS k con margen1/8; y TODOS N>=2,k>=10000N² con margen49/50 a u31.5. Las filas1,2,3 valen también para toda u>=31.5. Además siguen vigentes los certificados de ocho polos arbitrarios y del bloque confluente fijo de dimensión12.
+Proved regions: N1 for ALL k with margin4/3; N2 and N3 for ALL k with margin1/8; and ALL N>=2,k>=10000N² with margin49/50 at u31.5. Rows1,2,3 also hold for all u>=31.5. In addition the certificates of eight arbitrary poles and of the fixed confluent block of dimension12 remain valid.
 
-Falta, como blanco suficiente, N>=4 y 0<=k<10000N². No se afirma que todos esos puntos estén sin ningún certificado particular; se identifica la región no cubierta por los teoremas uniformes anteriores.
+Missing, as sufficient target, N>=4 and 0<=k<10000N². It is not claimed that all those points lack any particular certificate; the region not covered by the earlier uniform theorems is identified.
 
-## Avance positivo018
+## Positive progress018
 
-POWER_TABLE_DESCENT_018 prueba las filas2/3 con el multiplicador real y todos los contactos. Covarianza arquimediana reduce a k0, cotas de dos derivadas de digamma controlan ARCH, WRN017 controla el peine completo, y conservar la paridad del polar evita perder el margen en N3.
+POWER_TABLE_DESCENT_018 proves rows2/3 with the real multiplier and all contacts. Archimedean covariance reduces to k0, bounds of two digamma derivatives control ARCH, WRN017 controls the full comb, and keeping the parity of the polar avoids losing the margin at N3.
 
-La recurrencia exacta a_(N,k)=a_(N,k+1)+u²a_(N+1,k) convierte estos teoremas en primeras y segundas diferencias estrictamente positivas de la fila1 para TODOS k. No prueba completa monotonía ni permite extrapolar a todos los órdenes. Root leyó la prueba y reprodujo tools/power_table_descent_018_verify.py con PASS; mapa aprobó independientemente las constantes y el alcance.
+The exact recurrence a_(N,k)=a_(N,k+1)+u²a_(N+1,k) turns these theorems into strictly positive first and second differences of row1 for ALL k. It does not prove full monotonicity nor allow extrapolating to all orders. The proof was read and tools/power_table_descent_018_verify.py reproduced with PASS; an independent review approved the constants and the scope.
 
-## Límite cuantificado del error absoluto
+## Quantified limit of the absolute error
 
-POWER_LOW_TABLE_018 calcula para k0 el presupuesto exacto D_N(theta)=2+2theta J_N(theta−1/2), usando E0(x)=psi_Lambda(x)−x+1 para fijar el endpoint. D_N(0)=2; para theta<1/2 tiende a1/(1/2−theta); en theta1/2 crece como sqrt(N); para theta>1/2 crece como sqrt(N)[1−(theta−1/2)²/u²]^(-N), en el rango de integrabilidad declarado.
+POWER_LOW_TABLE_018 computes for k0 the exact budget D_N(theta)=2+2theta J_N(theta−1/2), using E0(x)=psi_Lambda(x)−x+1 to fix the endpoint. D_N(0)=2; for theta<1/2 it tends to1/(1/2−theta); at theta1/2 it grows like sqrt(N); for theta>1/2 it grows like sqrt(N)[1−(theta−1/2)²/u²]^(-N), in the declared integrability range.
 
-El residuo firmado central y la cancelación del polar con el término principal eran conocidos. La novedad es el presupuesto exacto para esta fila, no un teorema nuevo de signo ni una prohibición global. Mapa revisó endpoints, integración por partes y los tres regímenes. La auditoría consolidada está guardada en POWER_TABLE_AUDIT_018 y fue leída por root.
+The central signed residue and the cancellation of the polar with the main term were known. The novelty is the exact budget for this row, not a new sign theorem nor a global prohibition. Endpoints, integration by parts and the three regimes were reviewed independently. The consolidated audit is saved in POWER_TABLE_AUDIT_018 and was read.
 
-## Qué cambia en la siguiente construcción
+## What changes in the next construction
 
-No se continuará una campaña fila4,fila5,... como sustituto del paso universal. Los constructores019 buscan una desigualdad FIRMADA del error aritmético o de las diferencias completas que controle órdenes variables. Deben contrastarla con el corpus y conservar el peine completo. Las identidades de recurrencia y los certificados finitos por sí solos no aportan ese signo.
+A campaign row4,row5,... will not be continued as a substitute for the universal step. Round019 looks for a SIGNED inequality of the arithmetic error or of the full differences that controls variable orders. It must be cross-checked against the corpus and keep the full comb. Recurrence identities and finite certificates alone do not supply that sign.
 
-Ningún resultado anterior certifica por sí solo una nueva ventana T>log(5)/2. El cierre requiere completar el blanco suficiente o probar directamente el signo para todos los datos admisibles. No hay contraejemplo a la forma real W ni cierre global.
+No earlier result by itself certifies a new window T>log(5)/2. Closure requires completing the sufficient target or proving the sign directly for all admissible data. There is no counterexample to the real form W nor global closure.
 
-## Modelo que delimita el descenso estructural
+## Model delimiting structural descent
 
-POWER_TABLE_AUDIT_018 §3 prueba un falsificador explícito de la inferencia basada sólo en recurrencias y regiones positivas. V[f]=2||f||²−(u/100)|F(iu)|² conserva las identidades de filtros, márgenes de todos los espacios de hasta12 polos>=u, las tres filas completas y el cono positivo. Sin embargo su entrada N40402,k40401 es negativa, por una desigualdad elemental para coeficientes binomiales centrales. Root revisó independientemente todos esos cálculos, incluida la uniformidad de filas al variar el polo.
+POWER_TABLE_AUDIT_018 §3 proves an explicit falsifier of the inference based only on recurrences and positive regions. V[f]=2||f||²−(u/100)|F(iu)|² keeps the filter identities, margins of all spaces of up to12 poles>=u, the three full rows and the positive cone. However its entry N40402,k40401 is negative, by an elementary inequality for central binomial coefficients. All those computations were reviewed independently, including the uniformity of rows as the pole varies.
 
-V NO es la forma W del paper; no conserva la aritmética concreta ni el perfil logarítmico preciso. El resultado muestra exactamente por qué aquellos datos estructurales no bastan y obliga a utilizar información aritmética adicional. No se declara bloqueado el objetivo ni se refuta el signo real.
+V is NOT the form W of the paper; it does not keep the concrete arithmetic nor the precise logarithmic profile. The result shows exactly why those structural data do not suffice and forces the use of additional arithmetic information. The objective is not declared blocked and the real sign is not refuted.

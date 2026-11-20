@@ -1,27 +1,27 @@
-# POWER_PARTICULAR_TAIL_AUDIT_095 — Auditoría independiente
+# POWER_PARTICULAR_TAIL_AUDIT_095 — Independent audit
 
-Estado: **APROBADO / PROVED analíticamente para TODO t>=64.** Fuente `POWER_PARTICULAR_TAIL_095.md` leída íntegramente. Revisor mapa; sin nueva evaluación theta, campaña o certificado compacto. Papers intactos.
+Status: **APPROVED / PROVED analytically for ALL t>=64.** Source `POWER_PARTICULAR_TAIL_095.md` read in full. No new theta evaluation, campaign or compact certificate. Papers untouched.
 
-## Strip theta y cocientes holomorfos
+## Theta strip and holomorphic quotients
 
-En el strip mayor, Y>162 yRey>156 pagan todos los modosm>=2 por2m4exp[−(m²−1)Rey]. La razón geométrica y el primer término dan|Rtheta|<2^-460, porloque1+Rtheta no se anula y su log tiene módulo<2^-459. LosdiscosCauchy de radio1/32 delstripinterior quedan completamente en elstripmayor. Sus dosderivadas son<1; la primera expresión ysegunda derivada exacta delprimermodo dan|p−2y|<6,|p'|<=5Y. cos1/8 yY>162 pruebanRep>=Y>0, suficiente para todos los denominadores y las colas horizontales.
+On the larger strip, Y>162 andRey>156 pay all modesm>=2 by2m4exp[−(m²−1)Rey]. The geometric ratio and the first term give|Rtheta|<2^-460, so1+Rtheta does not vanish and its log has modulus<2^-459. The Cauchy discs of radius1/32 of the inner strip lie completely in the larger strip. Their two derivatives are<1; the first expression and exact second derivative of the first mode give|p−2y|<6,|p'|<=5Y. cos1/8 andY>162 proveRep>=Y>0, sufficient for all denominators and the horizontal tails.
 
-## K particular e integración con resto
+## Particular K and integration with remainder
 
-La representación horizontal conserva la selección deK por elbordeinfinito. En el eje real se obtiene integrando−Phi' porpartes, con el factor s y borde nulo; se extiende holomórficamente por convergenciauniforme en compactos y supercolas. ElcocientePhi(z+s)/Phi(z) tiene módulo<=exp−∫Rep<=exp−Ys.
+The horizontal representation keeps the selection ofK by the boundary condition at infinity. On the real axis it is obtained by integrating−Phi' by parts, with the factor s and vanishing boundary term; it extends holomorphically by uniform convergence on compacta and supertails. The quotientPhi(z+s)/Phi(z) has modulus<=exp−∫Rep<=exp−Ys.
 
-La integraciónporpartes H0/Phi=1/p−∫kernel p'/p² es EXACTA, no una expansión sin resto. Con|p'|<=5Y_s y|p|>=Y_s paga5/Y². Elotro término deK conserva s(z+s), cuyo integral cuesta25|z|/Y²+50/Y³; Y>50 daIBP-REM(6+25|z|)/Y². Elboundesholomorfo en unstrip y no se derivó informalmente unOreal.
+The integration by parts H0/Phi=1/p−∫kernel p'/p² is EXACT, not an expansion without remainder. With|p'|<=5Y_s and|p|>=Y_s it pays5/Y². The other term ofK keeps s(z+s), whose integral costs25|z|/Y²+50/Y³; Y>50 givesIBP-REM(6+25|z|)/Y². The bound is holomorphic on a strip and no real O was informally differentiated.
 
-## Tres derivadas y determinante
+## Three derivatives and determinant
 
-Losdiscosrealesdecentrot>=4yradio1/32 permanecen en elstripinterior. La comparación Y/y0entre15/16y16/15y|z|<t+1 paga los erroresdecolumnas2,3,4 por6,200(1+t)y0,200(1+t)/y0². Sus derivadas0..3 se acotan porCauchy con factor máximo3!32³; H39321600 es correcto. La función analítica decolumna3 usa z, no uncentrotfijo, como aclara la fuente.
+The discs with real centret>=4 and radius1/32 remain in the inner strip. The comparison Y/y0 between15/16 and16/15 and|z|<t+1 pays the errors of columns2,3,4 by6,200(1+t)y0,200(1+t)/y0². Their derivatives0..3 are bounded by Cauchy with maximal factor3!32³; H39321600 is correct. The analytic function of column3 uses z, not a fixed centre t, as the source clarifies.
 
-Se reprodujo simbólicamente el determinanteexacto W[t,q,tq²,1/q]=−128q²(6t²+4t−1). Losmaximosdeentradasmodelo(t,16y,512ty²,4/y) cubrenfilas0..3. Se recalcularonindependientemente los7términosmultilineales con24productos y1+t<=2t:445440H,26304H²,96H³ pagan todosloserrores. C=1e6(1+H)³ domina su suma yC<2^98, sin omitir términosmixtos.
+The exact determinant W[t,q,tq²,1/q]=−128q²(6t²+4t−1) was reproduced symbolically. The maxima of model entries(t,16y,512ty²,4/y) cover rows0..3. The7 multilinear terms with24 products and1+t<=2t were recomputed independently:445440H,26304H²,96H³ pay all errors. C=1e6(1+H)³ dominates their sum andC<2^98, without omitting mixed terms.
 
-Para t>=64,y/t es creciente; y64>2^128 y64C<2^104. Así y>Ct, que permite convertir errorCt³y en< t²y² y conservar el margen−3071t²y². Multiplicar porPhi⁴>0 conserva el signo delWronskiano ORIGINAL. No se ha sustituido K por sólo su principal.
+For t>=64,y/t is increasing; y64>2^128 and64C<2^104. Thus y>Ct, which allows turning errorCt³y into< t²y² and keeping the margin−3071t²y². Multiplying byPhi⁴>0 keeps the sign of the ORIGINAL Wronskian. K has not been replaced by just its main term.
 
-## Diferencia y límites
+## Difference and limits
 
-Consultados los tresregistros y077/078/087–094. El objeto es el Wronskiano PARTICULAR conKseleccionado por susbordes;088 trataba otra cuarta densidad y092 la cartauniversal. La fuente evita invertirDelta y prueba toda una cola con constantesexplícitas; no se limita a una identidad o principal formal.
+Consulted the three records and077/078/087–094. The object is the PARTICULAR Wronskian withK selected by its boundary conditions;088 treated another fourth density and092 the universal chart. The source avoids inverting Delta and proves a whole tail with explicit constants; it is not limited to an identity or a formal main term.
 
-093da signo en una vecindad delorigen sinradio;095da toda cola t>=64. Elintervalointermedio sigueOPEN: no se unen esos resultados como si cubrieranTODAt>0. No nuevacoberturaW, cinco/todoslosgeneradores, ni ventanaT. No se contradice singularidaduniversal092; no regla de herenciaD² ni conoselector global probado.
+093 gives the sign on a neighbourhood of the origin without radius;095 gives the whole tail t>=64. The intermediate interval remainsOPEN: those results are not joined as if they covered ALL t>0. No new W coverage, five/all generators, nor window T. The universal singularity of092 is not contradicted; no D² inheritance rule nor global selector cone is proved.

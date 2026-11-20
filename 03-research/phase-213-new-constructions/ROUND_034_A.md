@@ -1,55 +1,55 @@
-# Condición de borde de un extremizador negativo
+# Boundary condition of a negative extremizer
 
-En la normalización de 033, si Γ>0 existe un extremizador u de I(u)=1, y **todo** extremizador satisface
+In the normalization of 033, if Γ>0 there exists an extremizer u with I(u)=1, and **every** extremizer satisfies
 
     liminf_{r↑1} (1−r)⁻¹∫ᵣ¹ x|u′(x)|² dx ≥ 1.
 
-La constante es independiente del tamaño del defecto. Es un resultado condicional sobre el perfil óptimo. Antecedentes: monotonía variacional en BUILD083 y argumentos de borde de 212-36; P47 menciona cotas viriales. Aquí se usa la ley exacta de escalado en la norma degenerada de 033.
+The constant is independent of the size of the defect. It is a conditional result on the optimal profile. Antecedents: variational monotonicity in BUILD083 and boundary arguments of 212-36; P47 mentions virial bounds. Here the exact scaling law in the degenerate norm of 033 is used.
 
-**Compacidad.** Representar B∞ por un operador autoadjunto A en el espacio de energía X₀ de 033. Para L fijo la demostración de Galerkin de 033 acota uniformemente en la bola la diferencia cuadrática entre B_L y su compresión finita en 6c_L/M. Para operadores autoadjuntos esa cota controla la norma del operador diferencia. Luego cada B_L representa un operador compacto. La estimación de diferencias de cortes de 032, transferida a X₀ en 033, da convergencia en norma hacia A. Si Γ>0, −Γ es un autovalor mínimo y lo alcanza un vector unitario.
+**Compactness.** Represent B∞ by a self-adjoint operator A on the energy space X₀ of 033. For fixed L the Galerkin proof of 033 bounds uniformly on the ball the quadratic difference between B_L and its finite compression by 6c_L/M. For self-adjoint operators that bound controls the norm of the difference operator. Hence each B_L represents a compact operator. The cut-difference estimate of 032, transferred to X₀ in 033, gives norm convergence to A. If Γ>0, −Γ is a minimal eigenvalue and is attained by a unit vector.
 
-**Compresión exacta.** Sea Y_r la imagen de la isometría de energía u(x)↦u(x/r) extendida por cero para x>r. El momento cero se conserva. Bajo U se obtiene una traslación por log r con amplitud √r; por ello B_L y luego B∞ se multiplican por r. El ínfimo del cociente de Rayleigh en Y_r es −rΓ. Estos subespacios cerrados crecen y su unión es densa por los aproximantes suaves compactos de media cero de 033.
+**Exact compression.** Let Y_r be the image of the energy isometry u(x)↦u(x/r) extended by zero for x>r. The zero moment is preserved. Under U one obtains a translation by log r with amplitude √r; hence B_L and then B∞ are multiplied by r. The infimum of the Rayleigh quotient on Y_r is −rΓ. These closed subspaces grow and their union is dense by the smooth compactly supported zero-mean approximants of 033.
 
-**Coste de la capa exterior.** Para un extremizador normalizado, sea P la proyección de energía sobre Y_r. Poner m_r=∫₀ʳu−ru(r)=∫ᵣ¹xu′, por el momento cero y la traza en 1. Sobre (0,r) se tiene Pu=u−u(r)−2m_r(r−x)/r² y fuera vale cero. En efecto tiene media y traza en r nulas; el residuo es ortogonal a Y_r por integración por partes. La pertenencia del candidato a Y_r se obtiene por reescalado y la caracterización por energía finita y traza nula en r (en la variable logarítmica, truncar primero la derivada en la cola, continuar por constante y cortar esa constante sobre un intervalo de longitud creciente). Escribiendo d²=I(u−Pu) y E_r=∫ᵣ¹x|u′|², resulta
+**Cost of the outer layer.** For a normalized extremizer, let P be the energy projection onto Y_r. Put m_r=∫₀ʳu−ru(r)=∫ᵣ¹xu′, by the zero moment and the trace at 1. On (0,r) one has Pu=u−u(r)−2m_r(r−x)/r² and outside it is zero. Indeed it has zero mean and zero trace at r; the residue is orthogonal to Y_r by integration by parts. Membership of the candidate in Y_r is obtained by rescaling and the characterization by finite energy and zero trace at r (in the logarithmic variable, first truncate the derivative in the tail, continue by a constant and cut that constant over an interval of growing length). Writing d²=I(u−Pu) and E_r=∫ᵣ¹x|u′|², one gets
 
     d²=E_r+2|m_r|²/r²,       E_r≤d²≤E_r/r².
 
-La última cota usa Cauchy–Schwarz contra x dx. Se tiene d>0 por la comparación de mínimos y d→0 por densidad. El residuo unitario e=(u−Pu)/d converge débilmente a cero por ortogonalidad a los subespacios crecientes. Por compacidad B∞(e)=o(1). Escribiendo R para el cociente de Rayleigh, la ecuación Au=−Γu da, cuando Pu≠0,
+The last bound uses Cauchy–Schwarz against x dx. One has d>0 by comparison of minima and d→0 by density. The unit residue e=(u−Pu)/d converges weakly to zero by orthogonality to the growing subspaces. By compactness B∞(e)=o(1). Writing R for the Rayleigh quotient, the equation Au=−Γu gives, when Pu≠0,
 
     (1−r)Γ ≤ R(Pu)+Γ = d²(Γ+B∞(e))/(1−d²).
 
-Se deduce el liminf anunciado. Una contradicción exigiría otra propiedad del operador aritmético que impidiera tal energía en el borde. La suavidad por sí sola admite pendiente no nula en 1. PROVED (implicación condicional), auditoría matemática independiente.
+The announced liminf follows. A contradiction would require another property of the arithmetic operator preventing such energy at the boundary. Smoothness alone admits nonzero slope at 1. PROVED (conditional implication), independent mathematical audit.
 
-## Ley exacta de borde y simplicidad del mínimo
+## Exact boundary law and simplicity of the minimum
 
-Suponer Γ>0. Entonces el menor autovalor de la forma completa en la norma de 033 es simple. El extremizador real unitario se puede orientar de modo que u(x)/(1−x)→1 cuando x↑1. La afirmación se refiere al problema normalizado en X₀.
+Assume Γ>0. Then the smallest eigenvalue of the full form in the norm of 033 is simple. The real unit extremizer can be oriented so that u(x)/(1−x)→1 as x↑1. The claim refers to the normalized problem on X₀.
 
-**Diferencia de dilataciones.** Escribir S_r para la isometría anterior y w=S_ru−u. Por la ecuación propia, la forma B∞+ΓI anula los cruces con u. Evaluándola sobre S_ru se obtiene exactamente
+**Difference of dilations.** Write S_r for the previous isometry and w=S_ru−u. By the eigen-equation, the form B∞+ΓI annihilates the crossings with u. Evaluating it on S_ru one obtains exactly
 
     B∞(w)+ΓI(w)=Γ(1−r).
 
-En particular I(w)≥Γ(1−r)/(||A||+Γ). El vector w/√I(w) converge débilmente a cero: contra cada test suave compacto φ de media cero, el producto de energía con w es la integral de y u′(y) contra el conjugado de rφ′(ry)−φ′(y), de orden Oφ(1−r) por Cauchy–Schwarz. Pasar por densidad. La compacidad de A da B∞(w)=o(I(w)); por tanto I(w)/(1−r)→1. En (r,1) la contribución a I(w) vale E_r. La cota inferior de la sección previa obliga a E_r/(1−r)→1 y la contribución del intervalo (0,r) es o(1−r).
+In particular I(w)≥Γ(1−r)/(||A||+Γ). The vector w/√I(w) converges weakly to zero: against each smooth compactly supported test φ of zero mean, the energy product with w is the integral of y u′(y) against the conjugate of rφ′(ry)−φ′(y), of order Oφ(1−r) by Cauchy–Schwarz. Pass by density. Compactness of A gives B∞(w)=o(I(w)); hence I(w)/(1−r)→1. On (r,1) the contribution to I(w) equals E_r. The lower bound of the previous section forces E_r/(1−r)→1 and the contribution of the interval (0,r) is o(1−r).
 
-**La pendiente media determina el autoespacio.** Sea h=−log r y g(t) la derivada de u(exp(−t)) respecto de t. Se tiene h⁻¹∫₀ʰ|g|²→1. La contribución interior anterior equivale a D(h)=∫₀^∞|g(t+h)−g(t)|²dt=o(h). La varianza de g con medida dt/h en [0,h] es
+**The mean slope determines the eigenspace.** Let h=−log r and g(t) the derivative of u(exp(−t)) with respect to t. One has h⁻¹∫₀ʰ|g|²→1. The previous interior contribution is equivalent to D(h)=∫₀^∞|g(t+h)−g(t)|²dt=o(h). The variance of g with measure dt/h on [0,h] is
 
     (2h²)⁻¹ ∫₀ʰ∫₀ʰ |g(s)−g(t)|² ds dt ≤ h⁻²∫₀ʰ D(s)ds = o(1).
 
-Luego |ℓ_h(u)|²→I(u) para todo vector del autoespacio por homogeneidad, con ℓ_h(u)=u(exp(−h))/h. Para dos vectores ortonormales, polarizar exigiría ℓ_h(u)conj(ℓ_h(v))→0, aunque ambos módulos tienden a uno. Esto prueba simplicidad. La forma es real por la simetría del símbolo, luego se puede elegir un extremizador real. Su cociente ℓ_h es continuo para h>0 y su módulo tiende a uno; el signo es constante cerca de cero. Elegir orientación y usar h/(1−exp(−h))→1 prueba la ley de pendiente. No exige continuidad de u′ hasta el borde.
+Hence |ℓ_h(u)|²→I(u) for every vector of the eigenspace by homogeneity, with ℓ_h(u)=u(exp(−h))/h. For two orthonormal vectors, polarizing would require ℓ_h(u)conj(ℓ_h(v))→0, although both moduli tend to one. This proves simplicity. The form is real by the symmetry of the symbol, so a real extremizer can be chosen. Its quotient ℓ_h is continuous for h>0 and its modulus tends to one; the sign is constant near zero. Choosing the orientation and using h/(1−exp(−h))→1 proves the slope law. It does not require continuity of u′ up to the boundary.
 
-El resultado usa la estructura de compresión y compacidad; por sí solo admite un mínimo negativo simple. PROVED (implicación condicional), auditoría independiente.
+The result uses the structure of compression and compactness; by itself it admits a simple negative minimum. PROVED (conditional implication), independent audit.
 
-Control del alcance: la forma modelo −||u||₂² en X₀ es compacta en I por 033, satisface el mismo escalado y tiene defecto estrictamente positivo. La ley de pendiente y la simplicidad también valen para ella. Por tanto un argumento de signo necesita una propiedad adicional específica de la forma aritmética. El fondo arquimediano simple de P47 corresponde a otro operador.
+Scope control: the model form −||u||₂² on X₀ is compact in I by 033, satisfies the same scaling and has strictly positive defect. The slope law and simplicity also hold for it. Hence a sign argument needs an additional property specific to the arithmetic form. The simple archimedean background of P47 corresponds to another operator.
 
-## Qué detectan los contactos aritméticos en un posible extremizador
+## What the arithmetic contacts detect in a possible extremizer
 
-Para n≥2 sea C_n el operador en X₀ que representa la forma (2/n) Re ∫conj(u(y))u(y/n)dy. Es acotado por la inclusión en L² y Cauchy–Schwarz. Para enteros distintos n y coeficientes reales a_n de soporte finito, toda combinación C=Σa_n C_n con algún a_n≠0 es inyectiva. Esto vale sin hipótesis sobre Γ. La inyectividad concierne a la acción del operador; un solo valor cuadrático puede valer cero.
+For n≥2 let C_n be the operator on X₀ representing the form (2/n) Re ∫conj(u(y))u(y/n)dy. It is bounded by the inclusion in L² and Cauchy–Schwarz. For distinct integers n and real coefficients a_n of finite support, every combination C=Σa_n C_n with some a_n≠0 is injective. This holds without hypothesis on Γ. Injectivity concerns the action of the operator; a single quadratic value may be zero.
 
-En efecto, su símbolo logarítmico es q(t)=2Σa_n cos(t log n)/√n. Si Cu=0, probar la forma polarizada contra S_ru para todo 0<r≤1. Salvo un factor √r, se obtiene la transformada de Fourier de la función real integrable q(t)|widehat(Uu)(t)|² en un semieje. Por simetría hermitiana se anula en el otro, e inyectividad de Fourier implica q|widehat(Uu)|²=0 casi por doquier. Las frecuencias distintas hacen de q una función analítica no idénticamente nula (independencia de las exponenciales). Sus ceros son discretos, luego u=0.
+Indeed, its logarithmic symbol is q(t)=2Σa_n cos(t log n)/√n. If Cu=0, test the polarized form against S_ru for all 0<r≤1. Up to a factor √r, one obtains the Fourier transform of the real integrable function q(t)|widehat(Uu)(t)|² on a half-axis. By Hermitian symmetry it vanishes on the other, and injectivity of Fourier implies q|widehat(Uu)|²=0 almost everywhere. The distinct frequencies make q an analytic function not identically zero (independence of the exponentials). Its zeros are discrete, hence u=0.
 
-**Consecuencia para el signo al variar pesos.** Si Γ>0, tomar el mínimo simple aislado λ=−Γ y un extremizador unitario u. Perturbar la forma como A+εC. El signo elegido para C sólo fija la orientación de ε. En cualquier dirección no nula en que λ′(0)=〈u,Cu〉 sea cero, se tiene estrictamente
+**Consequence for the sign when varying weights.** If Γ>0, take the isolated simple minimum λ=−Γ and a unit extremizer u. Perturb the form as A+εC. The sign chosen for C only fixes the orientation of ε. In any nonzero direction in which λ′(0)=〈u,Cu〉 is zero, one has strictly
 
-    λ″(0)=−2〈Cu,(A−λ)⁻¹ en u⊥ aplicado a Cu〉 < 0.
+    λ″(0)=−2〈Cu,(A−λ)⁻¹ on u⊥ applied to Cu〉 < 0.
 
-En efecto el mínimo aislado simple admite una rama diferenciable dos veces para perturbaciones acotadas. Derivando la ecuación propia con derivada del vector en u⊥ se obtiene u′=−(A−λ)⁻¹Cu en ese subespacio cuando λ′=0. Diferenciar λ′ da la fórmula. El inverso reducido es positivo y Cu≠0. Por tanto en toda familia finita de pesos la Hessiana es negativa definida sobre el núcleo de la primera variación. No se necesita que ese núcleo tenga codimensión exactamente uno.
+Indeed the isolated simple minimum admits a twice differentiable branch for bounded perturbations. Differentiating the eigen-equation with the derivative of the vector in u⊥ one obtains u′=−(A−λ)⁻¹Cu on that subspace when λ′=0. Differentiating λ′ gives the formula. The reduced inverse is positive and Cu≠0. Hence in every finite family of weights the Hessian is negative definite on the kernel of the first variation. That kernel need not have codimension exactly one.
 
-P47 rem:resweights y lem:degen ya estudian sensibilidad de pesos; aquí se excluyen direcciones planas hasta segundo orden en el portador de 033. Sólo la inyectividad es incondicional. El cálculo de curvatura presupone ya un mínimo negativo y no decide el signo para los pesos de von Mangoldt fijos. PROVED tras auditoría independiente.
+P47 rem:resweights and lem:degen already study sensitivity to weights; here flat directions up to second order are excluded on the carrier of 033. Only injectivity is unconditional. The curvature computation already presupposes a negative minimum and does not decide the sign for the fixed von Mangoldt weights. PROVED after independent audit.

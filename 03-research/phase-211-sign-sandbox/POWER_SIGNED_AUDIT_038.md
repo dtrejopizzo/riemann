@@ -1,38 +1,38 @@
 # POWER SIGNED AUDIT 038
 
-Estado: SIGNED_MOMENTS038 completo y verificador APROBADOS. Papers intactos.
+Status: SIGNED_MOMENTS038 complete and verifier APPROVED. Papers untouched.
 
-## 1. Corpus y diferencia
+## 1. Corpus and difference
 
-Reconsultados índice ROUTES-TRIED-INDEX/README, grid maestro y crucigrama. Las entradas542/543 tratan cumulantes de otros objetos de grupo de clases y comparaciones de medias de formas de ventana; no invalidan automáticamente este producto FINITO Möbius aplicado al perfil gamma real. Sí impiden confundir momentos firmados con una probabilidad o aplicar Jensen sin hipótesis positiva.
+Reconsulted index ROUTES-TRIED-INDEX/README, master grid and crossword. The entries542/543 treat cumulants of other class-group objects and comparisons of means of window shapes; they do not automatically invalidate this FINITE Möbius product applied to the real gamma profile. They do prevent confusing signed moments with a probability or applying Jensen without a positivity hypothesis.
 
-La diferencia respecto037 es una desigualdad Fourier con resto: el factorV/U desaparece del error CENTRAL y permanece sólo en una cola exponencialmente pequeña. No es una identidad de momentos promovida a signo ni una solución del complemento infinito.
+The difference from037 is a Fourier inequality with remainder: the factorV/U disappears from the CENTRAL error and remains only in an exponentially small tail. It is not a moment identity promoted to a sign nor a solution of the infinite complement.
 
-## 2. Producto firmado y transformado — APROBADOS
+## 2. Signed product and transform — APPROVED
 
-Leído `POWER_SIGNED_MOMENTS_038.md` íntegro. El perfil extendido f_N no es positivo en toda la recta y el texto lo distingue correctamente de la densidad auxiliar positiva p_N. La relación con D_N en ell≥0 y con el kernel agrupado tiene los factores e^ell yU/m correctos.
+Read `POWER_SIGNED_MOMENTS_038.md` in full. The extended profile f_N is not positive on the whole line and the text correctly distinguishes it from the auxiliary positive density p_N. The relation with D_N on ell≥0 and with the grouped kernel has the correct factors e^ell andU/m.
 
-La serie logarítmica del producto finito es absolutamente convergente y elige una rama continua0 en frecuencia0. El primer término es−iA_Qξ y el resto tiene módulo≤B_Qξ²/2; exponentiar da CENTRAL-MULT sin interpretar cumulantes como una varianza positiva. El bound exteriorV/U+1 es válido. La traslación comparadora es f_N(ell−A_Q), con signo correcto.
+The logarithmic series of the finite product is absolutely convergent and chooses a continuous branch0 at frequency0. The first term is−iA_Qξ and the remainder has modulus≤B_Qξ²/2; exponentiating gives CENTRAL-MULT without interpreting cumulants as a positive variance. The exterior boundV/U+1 is valid. The comparison shift is f_N(ell−A_Q), with correct sign.
 
-La transformada de f es C exp(iξc_N)(1−iξ)(a+ξ²+iξ)^−N. El factor1−iξ resulta de la integración por partes de rho′; la fase y el módulo a²+1985ξ²+ξ⁴ son correctos. La extensión par de rho es suficiente y todas estas integrales convergen absolutamente en el rangoN≥16.
+The transform of f is C exp(iξc_N)(1−iξ)(a+ξ²+iξ)^−N. The factor1−iξ results from integration by parts of rho′; the phase and the modulus a²+1985ξ²+ξ⁴ are correct. The even extension of rho is sufficient and all these integrals converge absolutely in the rangeN≥16.
 
-## 3. Normalizador y envolventes — APROBADOS
+## 3. Normalizer and envelopes — APPROVED
 
-La probabilidad p_N=e^(y/2)rho/L tiene mediaN/a y varianza1985N/a². Es unimodal, con modo q(y*)=1/2. Riccati da y*=d/(a+q′), y0≤c_N−y*≤u²/a²; integrar la pendiente logarítmica controlada porM_N da p(c_N)>p(y*)/2. Chebyshev sobre un intervalo de longitud4σ da p(y*)≥3/(16σ), no una falsa cota inferior en un punto arbitrario. Así C a^−N≤32σ/3<√N/2.
+The probability p_N=e^(y/2)rho/L has meanN/a and variance1985N/a². It is unimodal, with mode q(y*)=1/2. Riccati gives y*=d/(a+q′), and0≤c_N−y*≤u²/a²; integrating the logarithmic slope controlled byM_N gives p(c_N)>p(y*)/2. Chebyshev on an interval of length4σ gives p(y*)≥3/(16σ), not a false lower bound at an arbitrary point. Thus C a^−N≤32σ/3<√N/2.
 
-Para|ξ|≤1, log del denominador normalizado≥1985ξ²/(a²+1986)>ξ²/500; se obtiene CENTRAL-GAMMA. Para|ξ|≥1, reservarN/4≥4 deja una integral racional integrable y una pérdida exp(−N/2000). Sus medias integrales son<46 y<84: la primera se domina porπ/(2√c)<46 y la segunda es1/(6c)<84. Con prefactor√N/2 y división2π se justifica la constante65. El extremoN16 está incluido; no se emplea una cola divergente para N2.
+For|ξ|≤1, the log of the normalized denominator is≥1985ξ²/(a²+1986)>ξ²/500; CENTRAL-GAMMA follows. For|ξ|≥1, reservingN/4≥4 leaves an integrable rational integral and a loss exp(−N/2000). Their integral means are<46 and<84: the first is dominated byπ/(2√c)<46 and the second is1/(6c)<84. With prefactor√N/2 and division by2π the constant65 is justified. The endpointN16 is included; no divergent tail is used for N2.
 
-## 4. Desigualdad y alcance
+## 4. Inequality and scope
 
-La condiciónB_Q≤N/1000 deja el gaussiano central exp(−Nξ²/2000). Su segundo momento, conservando2π, da2000^(3/2)B_Q/(8√πN)<12000B_Q/N. Junto con la cola se prueba SIGNED-FOURIER para TODO ell real y todo Q finito del rango declarado.
+The conditionB_Q≤N/1000 leaves the central gaussian exp(−Nξ²/2000). Its second moment, keeping2π, gives2000^(3/2)B_Q/(8√πN)<12000B_Q/N. Together with the tail, SIGNED-FOURIER is proved for ALL real ell and every finite Q in the declared range.
 
-El resultado sí mejora cuantitativamente el error037: conserva la cancelación finita y eliminaV/U de su parte dominante. No prueba automáticamente que el perfil trasladado domine ambos errores, ni que la suma exterior sobre m coprimo con Q o su integral con B sea favorable. El error polinómico tampoco equivale a precisión relativa suficiente frente a componentes exponenciales. No hay signo W, h global, nueva cobertura o ventana T. Root coincide independientemente en toda la prueba analítica.
+The result does improve the error037 quantitatively: it keeps the finite cancellation and eliminatesV/U from its dominant part. It does not automatically prove that the shifted profile dominates both errors, nor that the exterior sum over m coprime to Q or its integral with B is favourable. Nor is the polynomial error equivalent to sufficient relative precision against exponential components. There is no W sign, global h, new coverage or window T. A second independent review of the whole analytic proof agrees.
 
 
-## 5. Ventana ampliada de la misma familia — APROBADA
+## 5. Enlarged window of the same family — APPROVED
 
-Leído el corolario§7 final y ejecutado independientemente `tools/power_signed_moments_038_verify.py`: PASS. La misma familia primorial037 tiene A≤logQ≤N^(1/4),V/U≤N^(1/4). El bound B≤log²Q es válido: para p≥3 el coeficiente p/(p−1)²≤1, y el término adicional de p2 queda dominado por el producto cruzado con p3. Q contiene ambos en el rango declarado. Así B≤√N≤N/1000.
+Read the final corollary§7 and ran `tools/power_signed_moments_038_verify.py` independently: PASS. The same primorial family037 has A≤logQ≤N^(1/4),V/U≤N^(1/4). The bound B≤log²Q is valid: for p≥3 the coefficient p/(p−1)²≤1, and the additional term of p2 is dominated by the cross product with p3. Q contains both in the declared range. Thus B≤√N≤N/1000.
 
-En N≥2^80 el error central<.01 y el exterior<.01, usando el bound de exponencial por su segundo término y el prefactor≤130N. En s=logm−A∈[0,√N/100], DILATE037 da f_N(s)>.9 y<1.01, con los extremos monótonos certificados. Esto prueba(.8)U/m<K_(N,Q)(m)<(1.2)U/m en TODA la ventana declarada.
+At N≥2^80 the central error<.01 and the exterior one<.01, using the exponential bound via its second term and the prefactor≤130N. On s=logm−A∈[0,√N/100], DILATE037 gives f_N(s)>.9 and<1.01, with the certified monotone endpoints. This proves(.8)U/m<K_(N,Q)(m)<(1.2)U/m on the WHOLE declared window.
 
-La ampliación de longitud logarítmicaN^(1/4) a√N es una desigualdad real nueva de los mismos grupos, no otra identidad. No incluye automáticamente m1, no controla el complemento infinito y no modifica el alcance sobre W. Las precisiones editoriales del texto final distinguen la norma gamma original y usan desigualdad no estricta en frecuencia0. Root y la revisión adversarial del normalizador coinciden con esta aprobación.
+The enlargement of logarithmic length fromN^(1/4) to√N is a new real inequality of the same groups, not another identity. It does not automatically include m1, does not control the infinite complement and does not modify the scope regarding W. The editorial precisions of the final text distinguish the original gamma norm and use non-strict inequality at frequency0. A second independent review and an adversarial review of the normalizer agree with this approval.

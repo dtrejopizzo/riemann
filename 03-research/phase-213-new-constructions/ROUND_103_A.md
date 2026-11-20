@@ -1,13 +1,13 @@
-# Los cubos deciden el contacto en el umbral de cobertura de cuadrados
+# The cubes decide the contact at the covering threshold for squares
 
-Con la notación de 102, bajo RH sea A=sup_T(−J(T)) y λ*=1−A/2. El conjunto de λ∈[0,1] con U_λ(x)≤x eventualmente es exactamente el intervalo CERRADO [0,λ*]. En el extremo mismo,
+With the notation of 102, under RH let A=sup_T(−J(T)) and λ*=1−A/2. The set of λ∈[0,1] with U_λ(x)≤x eventually is exactly the CLOSED interval [0,λ*]. At the endpoint itself,
 
     x−U_(λ*)(x) ≥ 3x^(1/3)−O(x^(1/4)).
 
-No se afirma que el coeficiente 3 sea el límite inferior exacto del margen normalizado: eso exigiría controlar con qué rapidez se acerca −J a su supremo.
+It is not claimed that the coefficient 3 is the exact lower limit of the normalized margin: that would require controlling how fast −J approaches its supremum.
 
-En efecto, por 092 bajo RH S(y)=y+O(√y), ya que J es acotada. Por otro lado, el peso integrado de todas las potencias primas es Σ_{k≥1}k S(x^(1/k)) y por la fórmula explícita integrada de 092 vale x−√x J((log x)/2)+O(log x). El bloque k≥4 es O(x^(1/4)): separar k=4, y para 5≤k≤log x/log 2 usar S(y)≪y y la cota O(x^(1/5)log²x). Extrayendo cuadrados y cubos queda, uniformemente para 0≤λ≤1,
+Indeed, by 092 under RH S(y)=y+O(√y), since J is bounded. On the other hand, the integrated weight of all prime powers is Σ_{k≥1}k S(x^(1/k)) and by the integrated explicit formula of 092 equals x−√x J((log x)/2)+O(log x). The block k≥4 is O(x^(1/4)): separate k=4, and for 5≤k≤log x/log 2 use S(y)≪y and the bound O(x^(1/5)log²x). Extracting squares and cubes leaves, uniformly for 0≤λ≤1,
 
     U_λ(x)−x = √x[−J((log x)/2)−2(1−λ)] − 3x^(1/3) + O(x^(1/4)).
 
-En λ* el corchete es siempre ≤0, incluidos los contactos y las aproximaciones arbitrariamente cercanas. El término cúbico tiene signo fijo y domina todo el error. Por monotonía en λ se obtiene el resto del intervalo cerrado; para λ>λ* se aplica la recurrencia de 102. Sin RH ningún λ sirve por 092. En particular el techo para el valor explícito λ=1−D/2 equivale al signo global, porque bajo RH A≤D. Esto resuelve el extremo dejado abierto por la estimación de primer orden de 102. No determina A ni la positividad global.
+At λ* the bracket is always ≤0, including the contacts and arbitrarily close approximations. The cubic term has fixed sign and dominates the whole error. By monotonicity in λ the rest of the closed interval follows; for λ>λ* the recurrence of 102 applies. Without RH no λ works by 092. In particular the ceiling for the explicit value λ=1−D/2 is equivalent to the global sign, because under RH A≤D. This resolves the endpoint left open by the first-order estimate of 102. It does not determine A nor global positivity.

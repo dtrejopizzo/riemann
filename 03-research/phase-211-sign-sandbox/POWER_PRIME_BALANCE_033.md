@@ -1,167 +1,167 @@
-# POWER_PRIME_BALANCE_033 — Contracción real y cotas firmadas del peine
+# POWER_PRIME_BALANCE_033 — Real contraction and signed bounds of the comb
 
-Estado: **PROVED; revisión independiente APROBADA en POWER_BALANCE_AUDIT_033.md**: contracción uniforme y brackets aritméticos con resto de signo conocido. No nuevo signo W ni nueva fila. Papers intactos.
+Status: **PROVED; independent review APPROVED in POWER_BALANCE_AUDIT_033.md**: uniform contraction and arithmetic brackets with remainder of known sign. No new W sign nor new row. Papers untouched.
 
-## 1. Corpus y diferencia
+## 1. Corpus and difference
 
-Consultados ROUTES-TRIED-INDEX (Euler/divisores, transporte Möbius), grid maestro y CROSSWORD-TO-D (Λ*1=log, falta de propagación por dilataciones), y SIGNED_MEAN019, ARITHMETIC_DIFFERENCES019, SIGNED_BALANCE020, CONTACT_BALANCE021, CONTACT_DECISION032. La inversión de Euler por serie de Neumann es clásica y no se presenta como nueva. Tampoco se infiere signo de una identidad.
+Consulted ROUTES-TRIED-INDEX (Euler/divisors, Möbius transport), master grid and CROSSWORD-TO-D (Λ*1=log, lack of propagation by dilations), and SIGNED_MEAN019, ARITHMETIC_DIFFERENCES019, SIGNED_BALANCE020, CONTACT_BALANCE021, CONTACT_DECISION032. Euler inversion by Neumann series is classical and is not presented as new. Nor is a sign inferred from an identity.
 
-La diferencia específica es probar para el kernel de contacto GAMMA REAL una norma de dilatación estrictamente contractiva en q>=5, uniforme en un rango explícito N/u². Esta propiedad produce cotas UNILATERALES del peine completo con error relativo geométrico y signo conocido, a partir de sumas sobre enteros con coeficientes cerrados de logaritmos. No se usa un mínimo común que borre la variación entre contactos. El fallo de inversión positiva para otros kernels019 no se extiende a esta clase contractiva. La comparación con ARCH+POLAR permanece como criterio explícito; no se declara resuelta por la mera convergencia.
+The specific difference is to prove for the REAL GAMMA contact kernel a strictly contractive dilation norm at q>=5, uniform in an explicit range N/u². This property produces ONE-SIDED bounds of the full comb with geometric relative error and known sign, from sums over integers with closed logarithmic coefficients. No common minimum that erases the variation between contacts is used. The failure of positive inversion for other kernels019 does not extend to this contractive class. The comparison with ARCH+POLAR remains an explicit criterion; it is not declared solved by mere convergence.
 
-## 2. Región y kernel real
+## 2. Region and real kernel
 
-En todo el memo,
+Throughout the memo,
 
-    u>=63/2,  N entero>=3,
+    u>=63/2,  N integer>=3,
     N <= 2u²/9−u/3+3/2.                                  (REGION)
 
-Se conserva el átomo f_(N,1), con norma019, y se define para q REAL>=2
+The atom f_(N,1) is kept, with norm019, and one defines for REAL q>=2
 
     w(q)=2q^(-1/2) C_(N+1)''(logq)/||f_(N,1)||².
 
-Así el peine normalizado es sum_(q>=2)Λ(q)w(q). Por la frontera019,
+Thus the normalised comb is sum_(q>=2)Λ(q)w(q). By the frontier019,
 
     chi_N < [1+sqrt(8N−11)]/2 <=2u/3<u log2,
 
-porque (2u/3)²−2u/3−(2N−3)>=0 por REGION. Luego w(q)>0 para TODO q>=2. No se sustituye Λ por logq.
+because (2u/3)²−2u/3−(2N−3)>=0 by REGION. Hence w(q)>0 for EVERY q>=2. Λ is not replaced by logq.
 
-El resultado NUEVO de control es
+The NEW control result is
 
     w(mq)<=m^(-2)w(q),  q>=5, m>=1.                      (DECAY)
 
-En particular alcanza simultáneamente todos3<=N<=211 en u63/2, sin verificar cada orden.
+In particular it reaches simultaneously all3<=N<=211 at u63/2, without verifying each order.
 
-## 3. Prueba elemental de DECAY
+## 3. Elementary proof of DECAY
 
-Use los polinomios positivos019
+Use the positive polynomials019
 
     p_j(x)=sum_(l=0)^j (2j−l)! x^l/[2^(j−l)(j−l)!l!],
     p_j=(2j−1)p_(j−1)+x²p_(j−2),
     p_j'=p_j−x p_(j−1),  p_j>x p_(j−1)  (j>=1,x>=0).
 
-Para x=u logq, el factor variable de C'' es e^(-x)r_N(x), donde
+For x=u logq, the variable factor of C'' is e^(-x)r_N(x), where
 
     r_N=x²p_(N−2)−p_(N−1).
 
-Ponga R=p_(N−1)/p_(N−2). Para N>=3,
+Put R=p_(N−1)/p_(N−2). For N>=3,
 
     R=2N−3+x² p_(N−3)/p_(N−2)
       >=2N−3+x²/(2N−5+x).                              (RLOW)
 
-Para N3 la comparación del denominador es igualdad; para N>=4 sigue de la recurrencia y p_(N−3)>x p_(N−4). Derivar r mediante las identidades anteriores da
+For N3 the comparison of the denominator is an equality; for N>=4 it follows from the recurrence and p_(N−3)>x p_(N−4). Differentiating r by means of the previous identities gives
 
     r_N'=r_N+x p_(N−2)(2N−R),
     (log(e^(-x)r_N))'=x(2N−R)/(x²−R).                  (DER)
 
-La derivada logarítmica sólo se usa donde r_N>0, ya garantizado por REGION y q>=5.
+The logarithmic derivative is only used where r_N>0, already guaranteed by REGION and q>=5.
 
-Escriba B=2N−5>0, t=logq>=log5>8/5. Entonces
+Write B=2N−5>0, t=logq>=log5>8/5. Then
 
     u[x/(B+x)−3/x]=u²t/(B+ut)−3/t >3/2.               (SLOPE)
 
-En efecto el lado izquierdo crece en t. En t8/5 la comparación equivale exactamente a
+Indeed the left side increases in t. At t8/5 the comparison is exactly equivalent to
 
     64u²−216u−270N+675>0.
 
-Por REGION, este polinomio es al menos
+By REGION, this polynomial is at least
 
     4u²−126u+270=4u(u−63/2)+270>0.
 
-SLOPE implica R−2N>0 por RLOW. Como 0<x²−R<x²,
+SLOPE implies R−2N>0 by RLOW. Since 0<x²−R<x²,
 
     x(R−2N)/(x²−R) >=(R−2N)/x
                         >=x/(B+x)−3/x.
 
-Finalmente DER y el factor q^-1/2 producen
+Finally DER and the factor q^-1/2 produce
 
     dlogw(q)/dlogq
       =−1/2+u x(2N−R)/(x²−R) <−2.
 
-Integrar entre q y mq prueba DECAY. Es una desigualdad de la forma exacta gamma, no una suposición de monotonía sobre todos los kernels.
+Integrating between q and mq proves DECAY. It is an inequality of the exact gamma form, not an assumption of monotonicity over all kernels.
 
-## 4. Espacio contractivo y corrección de los tres contactos pequeños
+## 4. Contractive space and correction of the three small contacts
 
-En funciones q>=5 defina
+On functions q>=5 define
 
     (Df)(q)=sum_(m>=2)f(mq),
     rho0=2389/3600<2/3.
 
-La estimación elemental
+The elementary estimate
 
     sum_(m>=2)m^-2
        <=sum_(m=2)^5 m^-2+int_5^infty x^-2dx=rho0
 
-y DECAY implican 0<=Dw<=rho0 w. Además DECAY se conserva al aplicar D, de modo que
+and DECAY imply 0<=Dw<=rho0 w. Moreover DECAY is preserved under D, so that
 
     0<=D^j w<=rho0^j w, j>=0.                           (CONTRACT)
 
-Defina el coeficiente aritmético EXPLÍCITO
+Define the EXPLICIT arithmetic coefficient
 
     b(n)=logn−log2·1_(2|n)−log3·1_(3|n)−log2·1_(4|n),
     L(f)=sum_(n>=5)b(n)f(n),
     A(f)=sum_(q>=5)Λ(q)f(q).
 
-La identidad de divisores exacta muestra
+The exact divisor identity shows
 
     b(n)=sum_(d|n,d>=5)Λ(d)>=0,
     L(f)=A((I+D)f).                                    (DIV)
 
-Las tres correcciones son esenciales: se quitan q2,3,4 como DIVISORES, no sólo tres términos del sumatorio n. No se usa logn sin corregir y no se prolonga artificialmente w con0 bajo5. Todas las sumas son absolutas: DECAY da w(n)<=25w(5)n^-2 y b(n)=O(logn). Los intercambios positivos de DIV también están justificados por Tonelli.
+The three corrections are essential: q2,3,4 are removed as DIVISORS, not just three terms of the sum over n. Uncorrected logn is not used and w is not artificially extended by0 below5. All sums are absolute: DECAY gives w(n)<=25w(5)n^-2 and b(n)=O(logn). The positive interchanges of DIV are also justified by Tonelli.
 
-## 5. Cotas firmadas y resto relativo uniforme
+## 5. Signed bounds and uniform relative remainder
 
-Para K>=0 ponga
+For K>=0 put
 
     S_K=sum_(j=0)^K (−1)^j L(D^j w).
 
-La telescopía de DIV da exactamente
+Telescoping DIV gives exactly
 
     S_K=A(w)+(−1)^K A(D^(K+1)w).                        (TEL)
 
-No hay inferencia de signo por un prefijo genérico de Möbius. El resto AQUÍ es positivo por w>=0 y CONTRACT, y
+There is no sign inference from a generic Möbius prefix. The remainder HERE is positive by w>=0 and CONTRACT, and
 
     0<=A(D^(K+1)w)<=rho0^(K+1)A(w)
                          <=rho0^(K+1)L(w).              (REL)
 
-Por tanto, para K IMPAR,
+Hence, for ODD K,
 
     S_K <= A(w) <= S_K+rho0^(K+1)L(w),
     (1−rho0^(K+1))A(w)<=S_K.                            (BRACKET)
 
-En particular TODOS esos prefijos impares son positivos, uniformemente en REGION. Para K par el prefijo es una cota superior; no se confunden las dos direcciones. Esta es una desigualdad aritmética firmada sobre TODOS los contactos de la cola, con resto geométrico relativo a su magnitud; no es un bound relativo al pequeño residuo W.
+In particular ALL those odd prefixes are positive, uniformly in REGION. For even K the prefix is an upper bound; the two directions are not confused. This is a signed arithmetic inequality over ALL contacts of the tail, with geometric remainder relative to its magnitude; it is not a bound relative to the small residue W.
 
-Dos corolarios cuantitativos no requieren estimar una cola adicional:
+Two quantitative corollaries require no estimate of an additional tail:
 
     L(w)/(1+rho0) <= A(w) <= L(w),
-    S_K <= A(w) <= S_K/(1−rho0^(K+1))   (K impar).        (INTRINSIC)
+    S_K <= A(w) <= S_K/(1−rho0^(K+1))   (K odd).        (INTRINSIC)
 
-El primero sigue de L(w)=A(w)+A(Dw)<=(1+rho0)A(w); el segundo de BRACKET. Por ello también el PROPIO prefijo positivo controla su error relativo. No se afirma que éste sea relativo al pequeño residuo W.
+The first follows from L(w)=A(w)+A(Dw)<=(1+rho0)A(w); the second from BRACKET. Hence the positive prefix ITSELF also controls its relative error. It is not claimed that this is relative to the small residue W.
 
-Los coeficientes de L son logaritmos y divisibilidades cerrados. D^j w(n) también puede reagruparse como sum_(m>=2^j)d_j(m)w(nm), donde d_j cuenta factorizaciones ORDENADAS de m en j factores>=2. No se calcula ninguna campaña ni se afirma que esta enumeración sea más económica que032. El objetivo del criterio es mantener el signo de la corrección y ofrecer un error explícito uniforme.
+The coefficients of L are closed logarithms and divisibilities. D^j w(n) can also be regrouped as sum_(m>=2^j)d_j(m)w(nm), where d_j counts ORDERED factorisations of m into j factors>=2. No campaign is computed nor is it claimed that this enumeration is more economical than032. The aim of the criterion is to keep the sign of the correction and offer an explicit uniform error.
 
-## 6. Comparación concreta con la forma completa, todavía abierta en REGION
+## 6. Concrete comparison with the full form, still open in REGION
 
-Sea
+Let
 
     B_N(u)=ARCH_(N,1)/norm²+POLAR_(N,1)/norm²
             +log2 w(2)+log3 w(3)+log2 w(4).
 
-ARCH admite las fórmulas exactas A0/A1 de ARCH_EXACT032 para todo N, con x=(u+1/2)/2; el polar es exacto019. Para TODO K impar y TODO REGION,
+ARCH admits the exact formulas A0/A1 of ARCH_EXACT032 for all N, with x=(u+1/2)/2; the polar is exact019. For EVERY odd K and EVERY REGION,
 
     B_N(u)+S_K <= W[f_(N,1)]/norm²
        <=B_N(u)+S_K+rho0^(K+1)L(w).                     (FULL)
 
-En particular, sin elegir K, la cota de magnitud concreta es
+In particular, without choosing K, the concrete magnitude bound is
 
     B_N(u)+(3600/5989)L(w) <= W[f_(N,1)]/norm²
                              <=B_N(u)+L(w).             (MAGNITUDE)
 
-Éste es un criterio suficiente cuantitativo: demostrar B_N(u)+S_K>0 en un rango prueba W en ese rango, conservando todos los contactos y el resto. El error ya tiene signo y factor uniforme, pero NO se ha probado esa desigualdad positiva para un rango nuevo. El margen032 de orden1e−15 no autoriza a borrar el resto por pequeño que sea un prefijo.
+This is a quantitative sufficient criterion: proving B_N(u)+S_K>0 in a range proves W in that range, keeping all contacts and the remainder. The error already has a sign and a uniform factor, but that positive inequality has NOT been proved for a new range. The margin032 of order1e−15 does not authorise erasing the remainder however small a prefix is.
 
-Como control de escala, rho0^100<10^-17 por aritmética racional. Eso indica que la jerarquía puede alcanzar errores relativos pequeños con un orden FINITO explícito; no supone que el valor truncado tenga signo positivo ni transforma la convergencia en una prueba global.
+As a scale control, rho0^100<10^-17 by rational arithmetic. This indicates that the hierarchy can reach small relative errors with an explicit FINITE order; it does not assume that the truncated value has positive sign nor does it turn convergence into a global proof.
 
-## 7. Resultado y límite
+## 7. Result and limit
 
-Se obtiene una herramienta uniforme NUEVA sobre la clase gamma real: DECAY en REGION, inversión de divisores mediante un operador positivo estrictamente contractivo y BRACKET/FULL con resto relativo firmado. No se presenta la identidad Euler como descubrimiento ni como signo W. Frente019, la positividad de la inversión se prueba por CONTRACT para esta cola específica, y no se exige en prefijos arbitrarios de otros kernels. Frente032, no se certifica otro N.
+A NEW uniform tool is obtained on the real gamma class: DECAY in REGION, divisor inversion by a strictly contractive positive operator and BRACKET/FULL with signed relative remainder. The Euler identity is not presented as a discovery nor as a W sign. Relative to019, positivity of the inversion is proved by CONTRACT for this specific tail, and is not required on arbitrary prefixes of other kernels. Relative to032, no other N is certified.
 
-Sigue abierta una comparación de B_N+S_K que venza la cancelación completa en un rango. Este resultado controla la aproximación aritmética; no aumenta cobertura W ni resuelve las filas de tasa fija que siguen abiertas.
+A comparison of B_N+S_K that overcomes the full cancellation in a range remains open. This result controls the arithmetic approximation; it does not increase W coverage nor solve the fixed-rate rows that remain open.

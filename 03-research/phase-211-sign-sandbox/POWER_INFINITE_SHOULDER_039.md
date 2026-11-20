@@ -1,33 +1,33 @@
-# POWER_INFINITE_SHOULDER_039 — Positividad del inverso COMPLETO en un hombro energético
+# POWER_INFINITE_SHOULDER_039 — Positivity of the COMPLETE inverse on an energy shoulder
 
-Estado: **PROVED**, auditoría hostil independiente aprobada en POWER_SHOULDER_AUDIT_039.md y verificador exacto PASS reproducido. Tasa FIJA u=63/2. Papers intactos.
+Status: **PROVED**, independent audit approved in POWER_SHOULDER_AUDIT_039.md and exact verifier PASS reproduced. FIXED rate u=63/2. Papers untouched.
 
-Resultado: para TODOS N>=4,000,000, los inversos aritméticos COMPLETOS h_N y K_N son positivos para TODO x>=exp(T_N), donde
+Result: for ALL N>=4,000,000, the COMPLETE arithmetic inverses h_N and K_N are positive for ALL x>=exp(T_N), where
 
     d=N−1, L=1000,
     v_N=1/2+L/sqrt(N),
     T_N=2d v_N/(u²−v_N²).
 
-El corte es T_N=d/992+O(sqrt(N)) y mejora el corte K026 de escala d/330. No se afirma signo de W ni del resto interior.
+The cutoff is T_N=d/992+O(sqrt(N)) and improves the K026 cutoff of scale d/330. No sign of W nor of the interior remainder is claimed.
 
-## 1. Corpus y diferencia precisa
+## 1. Corpus and precise difference
 
-Consultados ROUTES-TRIED-INDEX/README.md, grid maestro y CROSSWORD-TO-D; leídos INVERSE_KERNEL020, UNIFORM_CUTOFF026, ENERGY_GROUP037 y SIGNED_MOMENTS038. La identidad Euler/Möbius y el centrado del término principal son previos; no se presentan como resultados nuevos de signo.
+Consulted ROUTES-TRIED-INDEX/README.md, master grid and CROSSWORD-TO-D; read INVERSE_KERNEL020, UNIFORM_CUTOFF026, ENERGY_GROUP037 and SIGNED_MOMENTS038. The Euler/Möbius identity and the centring of the main term are prior; they are not presented as new sign results.
 
-La diferencia es pasar del grupo FINITO038 al producto aritmético INFINITO conservando su multiplicador firmado. Se trabaja exclusivamente en sigma>1, donde todos los productos, series y momentos utilizados convergen absolutamente. Una inclinación v>1/2 del perfil gamma desplaza el centro al hombro energético; sus momentos se controlan mediante una cota Chebyshev demostrada. Esto controla por primera vez el complemento completo del inverso en esta región, no sólo un Q finito. No hay campaña de N o listas de primos.
+The difference is passing from the FINITE group 038 to the INFINITE arithmetic product while keeping its signed multiplier. Work is done exclusively in sigma>1, where all products, series and moments used converge absolutely. A tilt v>1/2 of the gamma profile moves the centre to the energy shoulder; its moments are controlled through a proved Chebyshev bound. This controls for the first time the complete complement of the inverse in this region, not just a finite Q. There is no campaign over N nor lists of primes.
 
-Se distinguen dos objetos: h_N es el inverso de H_N; K_N=J_N+xh_N es el inverso compensado de026. Ambos se incluyen abajo para que la comparación con el corte026 se refiera al MISMO K_N.
+Two objects are distinguished: h_N is the inverse of H_N; K_N=J_N+xh_N is the compensated inverse of 026. Both are included below so that the comparison with the cutoff 026 refers to the SAME K_N.
 
-## 2. Objetos reales y perfil inclinado
+## 2. Real objects and tilted profile
 
-Sea rho_N par la autocorrelación gamma normalizada y q_N=−rho_N'/rho_N para argumento positivo. En todo el memo norm²=Gamma(N−1/2)/[2sqrt(pi)Gamma(N)u^(2N−1)] denota la norma del átomo gamma original. Para c en{1/2,3/2}, defina
+Let rho_N be the even normalized gamma autocorrelation and q_N=−rho_N'/rho_N for positive argument. Throughout the memo norm²=Gamma(N−1/2)/[2sqrt(pi)Gamma(N)u^(2N−1)] denotes the norm of the original gamma atom. For c in {1/2,3/2}, define
 
     g_c(t)=c rho_N(t)−rho_N'(t),
     H_N(x)=x^(-3/2)g_(1/2)(logx),
     G_N(x)=x^(-1/2)g_(3/2)(logx)=w_N−xw_N',
     w_N=x^(-1/2)rho_N(logx).
 
-Los inversos COMPLETOS satisfacen exactamente
+The COMPLETE inverses satisfy exactly
 
     h_N(x)/H_N(x)
       =sum_(n>=1)mu(n)n^(-1/2)
@@ -36,33 +36,33 @@ Los inversos COMPLETOS satisfacen exactamente
       =sum_(n>=1)mu(n)n^(-1/2)
                        g_(3/2)(logx+logn)/g_(3/2)(logx).
 
-Estas fórmulas provienen de019/022, con sus jacobianos. Para N fijo son absolutas.
+These formulas come from 019/022, with their Jacobians. For fixed N they are absolute.
 
-Para1/2<=v<=2 ponga
+For 1/2<=v<=2 put
 
     a_v=u²−v², t_v=2dv/a_v, sigma=v+1/2,
     f_(c,v)(ell)=exp(v ell)g_c(t_v+ell)/g_c(t_v).
 
-Se usa la extensión par de rho para Fourier. f_(c,v) puede ser negativa en una parte del semieje izquierdo; no se considera una densidad positiva. En los argumentos físicos t_v+ell>=0 se conserva el perfil real original.
+The even extension of rho is used for Fourier. f_(c,v) may be negative on part of the left half-axis; it is not regarded as a positive density. At the physical arguments t_v+ell>=0 the original real profile is kept.
 
-En x=exp(t_v), ambos cocientes de inversos se escriben, para el c correspondiente,
+At x=exp(t_v), both inverse quotients are written, for the corresponding c,
 
     R_c(t_v)=sum_(n>=1)mu(n)n^(-sigma)f_(c,v)(logn).       (FULL)
 
-## 3. Control elemental de TODOS los momentos aritméticos
+## 3. Elementary control of ALL arithmetic moments
 
-Se prueba primero psi_Lambda(x)<=2x para TODO real x>=1. Para entero n,
+First, psi_Lambda(x)<=2x is proved for ALL real x>=1. For integer n,
 
     psi_Lambda(2n)−psi_Lambda(n)<=log binom(2n,n)<=2nlog2.
 
-Cada potencia prima en(n,2n] contribuye1 en la fórmula de Legendre del binomio, y todas las demás diferencias de pisos son no negativas. Para entero M>=6 tome n=ceil(M/2). Por inducción,
+Each prime power in (n,2n] contributes 1 in Legendre's formula for the binomial, and all other floor differences are nonnegative. For integer M>=6 take n=ceil(M/2). By induction,
 
     psi_Lambda(M)<=psi_Lambda(n)+2nlog2
        <=2n(1+log2)<(17/10)(M+1)<=2M.
 
-Los casos1<=M<=5 siguen de psi_Lambda(M)<=MlogM<=Mlog5<2M; no hace falta consultar una tabla de primos. Pasar a floor(x) prueba la cota real.
+The cases 1<=M<=5 follow from psi_Lambda(M)<=MlogM<=Mlog5<2M; no table of primes needs to be consulted. Passing to floor(x) proves the real bound.
 
-Para sigma=1+delta>1, integración por partes absoluta da
+For sigma=1+delta>1, absolute integration by parts gives
 
     A_sigma=sum Lambda(n)n^(-sigma)
       =sigma int_1^infty psi_Lambda(x)x^(-sigma−1)dx
@@ -70,9 +70,9 @@ Para sigma=1+delta>1, integración por partes absoluta da
     B_sigma=sum Lambda(n)logn n^(-sigma)
       <=2sigma/delta².                                  (MOMENTS)
 
-En el segundo bound se resta primero el término no positivo de la integración por partes, −int psi_Lambda(x)x^(-sigma−1)dx, y sólo después se aplica psi<=2x al término sigma logx. No se usa psi superior contra un kernel de signo cambiante.
+In the second bound one first subtracts the nonpositive term of the integration by parts, −int psi_Lambda(x)x^(-sigma−1)dx, and only afterwards applies psi<=2x to the term sigma logx. No upper bound on psi is used against a sign-changing kernel.
 
-Los productos infinitos son absolutamente convergentes:
+The infinite products are absolutely convergent:
 
     U_sigma=prod_p(1−p^(-sigma))=1/zeta(sigma)>0,
     V_sigma=prod_p(1+p^(-sigma)),
@@ -80,141 +80,141 @@ Los productos infinitos son absolutamente convergentes:
                     <=(1+1/delta)^2,
     U_sigma>=delta/(1+delta).                            (PRODUCTS)
 
-Sólo se usa la suma Euler absolutamente convergente y zeta(sigma)<=1+1/delta. En1/2<v<=2, sigma<=5/2 y (MOMENTS) da A_sigma<=5/delta,B_sigma<=5/delta².
+Only the absolutely convergent Euler sum and zeta(sigma)<=1+1/delta are used. In 1/2<v<=2, sigma<=5/2 and (MOMENTS) gives A_sigma<=5/delta, B_sigma<=5/delta².
 
-## 4. Fourier gamma UNIFORME en c y v
+## 4. Gamma Fourier UNIFORM in c and v
 
-El argumento038 se extiende a c en{1/2,3/2}, v en[1/2,2] conservando sus constantes12000 y65. Se detallan los cambios necesarios.
+The argument of 038 extends to c in {1/2,3/2}, v in [1/2,2] keeping its constants 12000 and 65. The necessary changes are detailed.
 
-La densidad POSITIVA auxiliar es
+The auxiliary POSITIVE density is
 
     p_v(y)=exp(vy)rho_N(y)/L_v,
     L_v=1/(norm² a_v^N).
 
-Tiene media2Nv/a_v y varianza beta_v N/a_v², donde beta_v=2(u²+v²). Su modo y_* cumple q_N(y_*)=v y, por Riccati026,
+It has mean 2Nv/a_v and variance beta_v N/a_v², where beta_v=2(u²+v²). Its mode y_* satisfies q_N(y_*)=v and, by Riccati 026,
 
     y_*=2dv/[a_v+q_N'(y_*)],
     0<=t_v−y_*<=2dvM_N/a_v²<=4u²/(u²−4)²,
     M_N=u²/(2N−3).
 
-La última cota usa dM_N<=u² y v<=2. El control0<q'<M_N permite comparar p_v(t_v) con su máximo:
+The last bound uses dM_N<=u² and v<=2. The control 0<q'<M_N allows comparing p_v(t_v) with its maximum:
 
     p_v(t_v)>=p_v(y_*)exp[−M_N(t_v−y_*)²/2]
               >p_v(y_*)/2>=3/(32s_v),
     s_v²=beta_v N/a_v².
 
-Chebyshev da la última cota del máximo; la localización y variación del modo justifican evaluarla en t_v. Uniformemente,8u^6/(u²−4)^4<1/100<log2 y s_v<sqrt(N)/22.
+Chebyshev gives the last bound on the maximum; the localization and variation of the mode justify evaluating it at t_v. Uniformly, 8u^6/(u²−4)^4<1/100<log2 and s_v<sqrt(N)/22.
 
-El transformado EXACTO es
+The EXACT transform is
 
     fhat_(c,v)(xi)=C_(c,v) exp(i xi t_v)
                 (c+v−i xi)(a_v+xi²+2iv xi)^(-N),
     C_(c,v)=exp(−v t_v)/[norm² g_c(t_v)].
 
-Riccati da q_N(t_v)>v, por lo que
+Riccati gives q_N(t_v)>v, so that
 
     (C_(c,v)a_v^(-N))(c+v)<=32s_v/3<sqrt(N)/2.
 
-Así el factor Fourier se absorbe por
+Thus the Fourier factor is absorbed by
 
     |c+v−i xi|/(c+v)<=sqrt(1+xi²),
 
-pues c+v>=1. No se pierde una constante al variar v o c. El módulo del denominador al cuadrado es a_v²+beta_v xi²+xi^4.
+since c+v>=1. No constant is lost when varying v or c. The squared modulus of the denominator is a_v²+beta_v xi²+xi^4.
 
-Con a_v en[3953/4,992], beta_v en[1985,3985/2], las mismas comparaciones038 prueban
+With a_v in [3953/4,992], beta_v in [1985,3985/2], the same comparisons of 038 prove
 
     |fhat_(c,v)(xi)|<=sqrt(N)exp(−Nxi²/1000), |xi|<=1,
     int_(|xi|>=1)|fhat_(c,v)(xi)|d xi/(2pi)
                   <65sqrt(N)exp(−N/2000), N>=16.         (GAMMA)
 
-El script comprueba exactamente las cotas extremas: beta_v/(a_v²+beta_v+1)>1/500, beta_v/a_v²>1/500 y s_v<sqrt(N)/22. La prueba de la cola reserva la potencia N/4>=4, como038.
+The script checks the extreme bounds exactly: beta_v/(a_v²+beta_v+1)>1/500, beta_v/a_v²>1/500 and s_v<sqrt(N)/22. The proof of the tail reserves the power N/4>=4, as in 038.
 
-## 5. Producto INFINITO firmado conservado
+## 5. Signed INFINITE product preserved
 
-Defina el operador absolutamente convergente
+Define the absolutely convergent operator
 
     M_sigma f(ell)=U_sigma^(-1)sum_(n>=1)mu(n)n^(-sigma)
                                                    f(ell+logn).
 
-Los f_(c,v) son acotados y tienen Fourier integrable; sum n^(-sigma)<infinito justifica Fubini. El multiplicador es el producto Euler infinito Z_sigma(i xi)/U_sigma. Su logaritmo centrado admite la serie ABSOLUTA
+The f_(c,v) are bounded and have integrable Fourier transform; sum n^(-sigma)<infinity justifies Fubini. The multiplier is the infinite Euler product Z_sigma(i xi)/U_sigma. Its centred logarithm admits the ABSOLUTE series
 
     log[Z_sigma(i xi)/U_sigma]+iA_sigma xi
       =−sum_p sum_(k>=1)
         [exp(ik xi logp)−1−ik xi logp]/[k p^(k sigma)].
 
-Por |exp(it)−1−it|<=t²/2 su módulo es <=B_sigma xi²/2. Aplicar exactamente el corte Fourier038 y (GAMMA) prueba
+By |exp(it)−1−it|<=t²/2 its modulus is <=B_sigma xi²/2. Applying exactly the Fourier cutoff of 038 and (GAMMA) proves
 
     |M_sigma f_(c,v)(0)−f_(c,v)(−A_sigma)|
       <=12000B_sigma/N
         +65sqrt(N)[(1+1/delta)^2+1]exp(−N/2000),          (INFINITE)
 
-si N>=16 y B_sigma<=N/1000. No hay un grupo Q finito ni una suma exterior coprima omitida en esta desigualdad. No se aplica Jensen a una medida firmada.
+if N>=16 and B_sigma<=N/1000. There is no finite group Q nor any omitted coprime outer sum in this inequality. Jensen is not applied to a signed measure.
 
-## 6. Perfil trasladado en su lado físico
+## 6. Shifted profile on its physical side
 
-Ponga L=1000 y suponga
+Put L=1000 and assume
 
     N>=4L²=4,000,000,
     L/sqrt(N)<=delta<=3/2,
     v=1/2+delta.
 
-De(MOMENTS), A:=A_sigma<=5/delta y B_sigma<=5/delta². Además t_v>=d/992>=N/(2·992), mientras A<=5sqrt(N)/L. La desigualdad L²>5·992 prueba t_v>A en todo el rango. El argumento trasladado t_v−A es POSITIVO; no se toma el signo de la extensión izquierda de f.
+From (MOMENTS), A:=A_sigma<=5/delta and B_sigma<=5/delta². Moreover t_v>=d/992>=N/(2·992), while A<=5sqrt(N)/L. The inequality L²>5·992 proves t_v>A on the whole range. The shifted argument t_v−A is POSITIVE; the sign of the left extension of f is not taken.
 
-Riccati, q'>0 y q'<M_N dan
+Riccati, q'>0 and q'<M_N give
 
     f_(c,v)(−A)>=(1−M_N A)exp(−M_N A²/2).
 
-En efecto q(t_v)>=v, q(t_v−s)>=v−M_Ns y el cociente(c+q(t_v−A))/(c+q(t_v))>=1−M_NA, porque c+q(t_v)>=1. Con M_N<=u²/N,
+Indeed q(t_v)>=v, q(t_v−s)>=v−M_Ns and the quotient (c+q(t_v−A))/(c+q(t_v))>=1−M_NA, because c+q(t_v)>=1. With M_N<=u²/N,
 
     f_(c,v)(−A)>1−15u²/L².
 
-Para el upper, q(t_v)−v<=M_Nv/(u²+v²)<=2M_N/u² y el cociente anterior es<=1. Así
+For the upper bound, q(t_v)−v<=M_Nv/(u²+v²)<=2M_N/u² and the previous quotient is <=1. Thus
 
     f_(c,v)(−A)<=exp(5/L²)<=1/(1−5/L²).
 
-## 7. Signo completo del inverso en todos los centros inclinados
+## 7. Complete sign of the inverse at all tilted centres
 
-En el rango anterior, B_sigma/N<=5/L²<1/1000 y el primer error de(INFINITE) es<=60000/L²=.06. El segundo es<1/200. Para probarlo sin estimación numérica de exponenciales, use delta<=3/2 y delta>=L/sqrt(N):
+On the above range, B_sigma/N<=5/L²<1/1000 and the first error of (INFINITE) is <=60000/L²=.06. The second is <1/200. To prove this without numerical estimation of exponentials, use delta<=3/2 and delta>=L/sqrt(N):
 
     [(1+1/delta)^2+1]<=17/(2delta²),
     exp(−N/2000)<=6(2000/N)^3.
 
-En N>=4L² resulta un mayorante3315·10^9/L^5<1/200. Las comparaciones racionales finales dan
+At N>=4L² this gives a majorant 3315·10^9/L^5<1/200. The final rational comparisons give
 
     9/10<M_sigma f_(c,v)(0)<11/10.
 
-Por(FULL), para cada v en[1/2+1000/sqrt(N),2] y sigma=1/2+v,
+By (FULL), for each v in [1/2+1000/sqrt(N),2] and sigma=1/2+v,
 
     (9/10)U_sigma<h_N(e^t_v)/H_N(e^t_v)<(11/10)U_sigma,
     (9/10)U_sigma<K_N(e^t_v)/G_N(e^t_v)<(11/10)U_sigma.    (SHOULDER)
 
-Son los inversos COMPLETOS, con todos los enteros Möbius. PRODUCTS da además el lower explícito(9/10)delta/(1+delta)>0. No es un signo de una agrupación truncada.
+These are the COMPLETE inverses, with all Möbius integers. PRODUCTS also gives the explicit lower bound (9/10)delta/(1+delta)>0. It is not a sign of a truncated grouping.
 
-## 8. Positividad en TODA la cola y comparación correcta con026
+## 8. Positivity on the WHOLE tail and correct comparison with 026
 
-La función v->t_v=2dv/(u²−v²) crece estrictamente. Por tanto SHOULDER cubre todos los t entre T_N=t_(1/2+1000/sqrtN) y t_2.
+The function v->t_v=2dv/(u²−v²) is strictly increasing. Hence SHOULDER covers all t between T_N=t_(1/2+1000/sqrtN) and t_2.
 
-Para t>=t_2, q_N(t)>=2. El cociente de dilatación común a ambos inversos tiene derivada logarítmica
+For t>=t_2, q_N(t)>=2. The dilation quotient common to both inverses has logarithmic derivative
 
     d/dell log[e^(−ell/2)g_c(t+ell)/g_c(t)]
        =−1/2−q_N(t+ell)+q_N'(t+ell)/(c+q_N(t+ell))<-2,
 
-porque M_N<=u²/N<5/4 y c+q>=5/2. Cada término n>=2 se acota por n^(-2), y la suma absoluta es<3/4. Luego ambos cocientes completos son>1/4 en TODO t>=t_2.
+because M_N<=u²/N<5/4 and c+q>=5/2. Each term n>=2 is bounded by n^(-2), and the absolute sum is <3/4. Hence both complete quotients are >1/4 for ALL t>=t_2.
 
-Se concluye para TODOS N>=4,000,000 y TODO x>=exp(T_N):
+We conclude for ALL N>=4,000,000 and ALL x>=exp(T_N):
 
     h_N(x)>0, K_N(x)>0.                                (TAIL)
 
-Para L fijo,
+For fixed L,
 
     T_N=(N−1)/992+(1985L/992²)sqrt(N)+O(1).
 
-Además v_N<=1 en el rango declarado, por lo que T_N<=2d/(u²−1)<d/330. Los dos cortes de K026 son>d/330: t_J directamente y t_R porque Q_d>3/2. Así TAIL mejora legítimamente el corte del MISMO K_N; también mejora el corte previo020 de h_N. No se atribuye a h_N un teorema que026 sólo probaba para K_N.
+Moreover v_N<=1 on the declared range, so T_N<=2d/(u²−1)<d/330. The two cutoffs of K026 are >d/330: t_J directly and t_R because Q_d>3/2. Thus TAIL legitimately improves the cutoff of the SAME K_N; it also improves the previous cutoff 020 of h_N. A theorem that 026 only proved for K_N is not attributed to h_N.
 
-## 9. Alcance del resultado
+## 9. Scope of the result
 
-La nueva cota controla por primera vez el producto infinito firmado en un hombro energético y la cola posterior. El inverso puede seguir tomando signos en la región interior no cubierta; no se afirma signo en el centro crítico delta0 ni se elimina esa restricción sigma>1.
+The new bound controls for the first time the signed infinite product on an energy shoulder and the subsequent tail. The inverse may still take signs in the uncovered interior region; no sign is claimed at the critical centre delta0, nor is the restriction sigma>1 removed.
 
-La representación F_N=2int h_N B conserva una cola favorable al tener B<0, pero no se ha comparado su magnitud con la parte adversa interior o con ARCH_sharp. En particular no se afirma W>=0, nueva fila o nueva ventanaT. La precisión del residuo polar−peine completo sigue siendo una obligación adicional; SHOULDER no se vende como un error relativo suficiente de W.
+The representation F_N=2int h_N B keeps a favourable tail since B<0, but its magnitude has not been compared with the adverse interior part or with ARCH_sharp. In particular W>=0, a new row or a new window T is not claimed. The precision of the polar−complete-comb residue remains an additional obligation; SHOULDER is not sold as a sufficient relative error for W.
 
-Verificador: tools/power_infinite_shoulder_039_verify.py, Fraction/intervalos para constantes uniformes, cota aritmética y umbrales; PASS. No evalúa W en nuevos N ni enumera primos. La auditoría independiente confirma c,v, normalización, inversión infinita, condiciones físicas y positividad de toda la cola. Revisión adversarial adicional del constructor paralelo aprobada. Papers intactos.
+Verifier: tools/power_infinite_shoulder_039_verify.py, Fraction/intervals for uniform constants, arithmetic bound and thresholds; PASS. It does not evaluate W at new N nor enumerate primes. The independent audit confirms c,v, normalization, infinite inversion, physical conditions and positivity of the whole tail. An additional adversarial check was also approved. Papers untouched.

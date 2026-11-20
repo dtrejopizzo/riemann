@@ -1,127 +1,127 @@
-# POWER_REAL_PAIR_DOUBLE_LIMIT_103 — Límite real normalizado y transferencia a parámetros finitos
+# POWER_REAL_PAIR_DOUBLE_LIMIT_103 — Normalised real limit and transfer to finite parameters
 
-Estado: **PROVED analítico y test puntual NEGATIVO, con auditorías independientes aprobadas y reproducción del certificado.** Véase `POWER_REAL_PAIR_DOUBLE_LIMIT_AUDIT_103.md`. Las extensiones analíticas posteriores prueban H/K estrictamente decreciente y, para la pareja REAL límite (J,K), E_q/K estrictamente decreciente, el único cruce global de U_*(q) y su primitiva doble positiva para TODO q>0. No se afirma cruce global para p finito ni nuevo signo W. Papers intactos.
+Status: **PROVED analytic and pointwise test NEGATIVE, with independent audits approved and reproduction of the certificate.** See `POWER_REAL_PAIR_DOUBLE_LIMIT_AUDIT_103.md`. The later analytic extensions prove H/K strictly decreasing and, for the limiting REAL pair (J,K), E_q/K strictly decreasing, the unique crossing of U_*(q) and its positive double primitive for EVERY q>0. No global crossing is claimed for finite p nor a new W sign. Papers untouched.
 
-La sección11 añade un puente EXACTO a p finito: (Psi_p/K)'<0 y (D_p/K)'>0. El cruce global del siguiente U finito queda condicionado a una comparación mixta distinta de EVEN4, todavía abierta.
+Section11 adds an EXACT bridge to finite p: (Psi_p/K)'<0 and (D_p/K)'>0. The global crossing of the next finite U remains conditional on a mixed comparison different from EVEN4, still open.
 
-## 1. Consulta y objetivo concreto
+## 1. Consultation and concrete target
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX/README.md, R162_2300_MASTER_GRID.md y CROSSWORD-TO-D.md; cotejados075/077/078/081/089/099 y102 con su corolario auditado. La búsqueda en esos tres índices y el corpus POWER de `B−gamma E`, `B-gamma E`, `NEXT-REST`, `J4` y `ECT5` no encontró este límite puntual ni su test.102 ya construye E>0 y localiza U=B-gamma E, pero no decide el cruce de U.
+Consulted the project rules, ROUTES-TRIED-INDEX/README.md, R162_2300_MASTER_GRID.md and CROSSWORD-TO-D.md; cross-checked075/077/078/081/089/099 and102 with its audited corollary. The search in those three indexes and the POWER corpus for `B−gamma E`, `B-gamma E`, `NEXT-REST`, `J4` and `ECT5` did not find this pointwise limit nor its test.102 already builds E>0 and locates U=B-gamma E, but does not decide the crossing of U.
 
-La diferencia es estudiar un valor puntual de ese U REAL mediante dos límites rigurosos y escalas positivas. Un signo positivo en el límite refutaría el cruce negativo/positivo propuesto para parámetros FINITOS; un signo negativo sólo verificaría una condición de origen. No es una nueva reformulación de W ni un test de potenciales genéricos.
+The difference is to study a pointwise value of that REAL U by means of two rigorous limits and positive scalings. A positive sign in the limit would refute the proposed negative/positive crossing for FINITE parameters; a negative sign would only verify a condition at the origin. It is neither a new reformulation of W nor a test of generic potentials.
 
-## 2. Escalas positivas que preservan el signo de U
+## 2. Positive scalings that preserve the sign of U
 
-Mantener todas las definiciones de102. Para p>0, escribir c=M(p), a=M'(0) y
+Keep all the definitions of102. For p>0, write c=M(p), a=M'(0) and
 
     Q_p=J-beta D_p, beta=ap^2/(ap-c), Psi_p''=Q_p.
 
-Normalizar la pareja por
+Normalise the pair by
 
     A_p=pD_p, B_p=(ap/c)Psi_p.                     (SCALE)
 
-Ambas escalas son positivas. Para una pareja arbitraria A,B, el paso102 con q>0 usa
+Both scalings are positive. For an arbitrary pair A,B, the step102 with q>0 uses
 
     F(z)=z ZB(z)/ZA(z), d=F(q),
     E=G_q(dA-qB), gamma=ZB(0)/ZE(0), U=B-gamma E,
     G_q h(t)=(1/q)int_|t|^infinito sinh[q(s-|t|)]h(s)ds.
 
-Si A se multiplica por s>0 y B por t>0, entonces F,d se multiplican por t/s; el forzante dA-qB, E y U se multiplican por t, y gamma no cambia. Para SCALE, por tanto,
+If A is multiplied by s>0 and B by t>0, then F,d are multiplied by t/s; the forcing dA-qB, E and U are multiplied by t, and gamma does not change. For SCALE, therefore,
 
     d_hat=(a/c)d, E_hat=(ap/c)E,
     gamma_hat=gamma, U_hat=(ap/c)U.                (SIGN-SCALE)
 
-Todas las afirmaciones de signo sobre U_hat son afirmaciones del mismo signo sobre el U original.
+All sign statements about U_hat are statements of the same sign about the original U.
 
-## 3. Convergencia p hacia infinito con derivadas y momentos
+## 3. Convergence as p tends to infinity with derivatives and moments
 
-075/081 prueban c/p->0 y c->infinito; basta además pc->infinito. Definir la convolución probabilística bilateral
+075/081 prove c/p->0 and c->infinito; moreover pc->infinito suffices. Define the two-sided probabilistic convolution
 
     R_p f(t)=(p/2)int_R exp[-p|t-s|]f(s)ds.
 
-La solución de D_p''-p^2D_p=cPhi-pJ con los bordes de075 da exactamente
+The solution of D_p''-p^2D_p=cPhi-pJ with the boundary conditions of075 gives exactly
 
     A_p=R_pJ-(c/p)R_pPhi.                         (A-EXACT)
 
-No se usa la representación anticausal con factores crecientes para tomar este límite.
+The anticausal representation with growing factors is not used to take this limit.
 
-Para sigma>0 y un entero k>=0 usar la norma
+For sigma>0 and an integer k>=0 use the norm
 
     ||f||_(sigma,k)=int_R exp(sigma|t|)|f(t)|dt
           +sum_(j=0)^k sup_t exp(sigma|t|)|f^(j)(t)|.
 
-Phi y J tienen estas normas finitas para todo sigma,k. Para p>sigma, R_p conmuta con derivadas y su norma en cada uno de estos espacios es a lo sumo p/(p-sigma). Se obtiene usando exp(sigma|t|)<=exp(sigma|s|)exp(sigma|t-s|) y la integral exacta del kernel. Dos integraciones por partes, o Taylor integral de f(t+r)+f(t-r)-2f(t), dan
+Phi and J have these norms finite for every sigma,k. For p>sigma, R_p commutes with derivatives and its norm on each of these spaces is at most p/(p-sigma). This is obtained using exp(sigma|t|)<=exp(sigma|s|)exp(sigma|t-s|) and the exact integral of the kernel. Two integrations by parts, or integral Taylor of f(t+r)+f(t-r)-2f(t), give
 
     R_pf-f=R_p f''/p^2.
 
-Así R_pf->f en cada norma declarada, con coste a lo sumo [p/(p-sigma)]||f''||_(sigma,k)/p^2. A-EXACT implica A_p->J en todas ellas.
+Thus R_pf->f in each declared norm, with cost at most [p/(p-sigma)]||f''||_(sigma,k)/p^2. A-EXACT implies A_p->J in all of them.
 
-Para B_p, poner epsilon=c/(ap), que tiende a0. La ecuación de Psi_p y la identidad de resolvente dan la otra fórmula exacta
+For B_p, put epsilon=c/(ap), which tends to0. The equation of Psi_p and the resolvent identity give the other exact formula
 
     B_p''=[a R_pPhi-J-a R_pJ''/(pc)]/(1-epsilon).
                                                                (B-EXACT)
 
-En efecto beta D_p=[R_pJ-(c/p)R_pPhi]/(1-epsilon) y R_pJ-J=R_pJ''/p^2. Por tanto B_p''->aPhi-J en todas las normas anteriores.
+Indeed beta D_p=[R_pJ-(c/p)R_pPhi]/(1-epsilon) and R_pJ-J=R_pJ''/p^2. Hence B_p''->aPhi-J in all the previous norms.
 
-Para funciones pares f con masa cero definir
+For even functions f with zero mass define
 
     G_0 f(t)=int_|t|^infinito(s-|t|)f(s)ds.
 
-Este operador es continuo en los espacios declarados: en las partes de orden0, la norma ponderada de salida se acota por sigma^-2 veces la de entrada; para la primera derivada el factor es sigma^-1, y desde la segunda derivada se usa (G_0 f)''=f. La masa cero asegura (G_0f)'(0)=0; la paridad de f asegura la suavidad de las derivadas restantes. Estos bounds salen de integrar los kernels r exp(-sigma r) y exp(-sigma r) sobre r>=0. Todas las fuerzas B_p'' tienen masa cero por077, al igual que aPhi-J.
+This operator is continuous on the declared spaces: on the parts of order0, the weighted output norm is bounded by sigma^-2 times the input one; for the first derivative the factor is sigma^-1, and from the second derivative on one uses (G_0 f)''=f. Zero mass ensures (G_0f)'(0)=0; parity of f ensures smoothness of the remaining derivatives. These bounds come from integrating the kernels r exp(-sigma r) and exp(-sigma r) over r>=0. All forcings B_p'' have zero mass by077, as does aPhi-J.
 
-Como B_p=G_0(B_p'') y K=G_0(aPhi-J), resulta
+Since B_p=G_0(B_p'') and K=G_0(aPhi-J), it follows that
 
     A_p -> J, B_p -> K
-    en TODAS las normas ||.||_(sigma,k).          (PAIR-LIMIT)
+    in ALL the norms ||.||_(sigma,k).          (PAIR-LIMIT)
 
-En particular convergen los valores y derivadas en compactos, todos los momentos polinomiales, y todas las transformadas bilaterales y sus derivadas en cada compacto real. No se ha requerido una cota uniforme superexponencial en p.
+In particular the values and derivatives on compacts converge, all polynomial moments, and all two-sided transforms and their derivatives on each real compact. No uniform superexponential bound in p has been required.
 
-## 4. Continuidad del siguiente paso para cada q fijo
+## 4. Continuity of the next step for each fixed q
 
-Fijar q>0 y aplicar102 a la pareja normalizada A_p,B_p. PAIR-LIMIT con sigma>q implica convergencia de d_hat_p=q ZB_p(q)/ZA_p(q) hacia d_*=q ZK(q)/ZJ(q). El denominador límite es positivo.
+Fix q>0 and apply102 to the normalised pair A_p,B_p. PAIR-LIMIT with sigma>q implies convergence of d_hat_p=q ZB_p(q)/ZA_p(q) to d_*=q ZK(q)/ZJ(q). The limiting denominator is positive.
 
-El operador G_q es continuo con los pesos sigma>q: el coste para orden0 es la integral
+The operator G_q is continuous with the weights sigma>q: the cost for order0 is the integral
 
     int_0^infinito exp(-sigma r)sinh(qr)/q dr
       =1/(sigma^2-q^2).
 
-Para la primera derivada se usa la integral con cosh y para las superiores la ecuación (G_qh)''-q^2G_qh=h. Los bordes pares se conservan por el balance cosh ya probado102. Así, para q fijo, E_hat_p converge con momentos y valores a
+For the first derivative one uses the integral with cosh and for the higher ones the equation (G_qh)''-q^2G_qh=h. The even boundary conditions are preserved by the cosh balance already proved102. Thus, for fixed q, E_hat_p converges with moments and values to
 
     E_*(q)=G_q[d_*J-qK]>0.
 
-La positividad y masa positiva de E_* siguen directamente de102 aplicado a J,K, porque K/J es estrictamente decreciente hacia0. Por continuidad de las masas,
+Positivity and positive mass of E_* follow directly from102 applied to J,K, because K/J is strictly decreasing to0. By continuity of the masses,
 
     U_hat_(p,q) -> U_*(q)
       =K-[ZK(0)/ZE_*(q)(0)]E_*(q)                 (FIXED-Q)
 
-puntualmente, con derivadas y momentos. Por tanto el primer límite p hacia infinito es lícito para cada q positivo fijo.
+pointwise, with derivatives and moments. Hence the first limit p to infinity is legitimate for each fixed positive q.
 
-## 5. Límite q hacia cero de la pareja (J,K)
+## 5. Limit q to zero of the pair (J,K)
 
-Poner Jmass=int_0^infinito J, Kmass=int_0^infinito K y b0=Kmass/Jmass>0. Usar masas de semirrecta o bilaterales da los mismos cocientes. Por las supercolas,
+Put Jmass=int_0^infinito J, Kmass=int_0^infinito K and b0=Kmass/Jmass>0. Using half-line or two-sided masses gives the same quotients. By the supertails,
 
     d_*/q=ZK(q)/ZJ(q) -> b0.
 
-Entonces
+Then
 
     E_*(q)/q
       =G_q[(d_*/q)J-K] -> H=G_0(b0J-K).           (H-LIMIT)
 
-La convergencia vale con derivadas y momentos. Se justifica por dominación de sinh(qr)/q por r exp(q0r), para 0<q<=q0 fijo, usando cualquier peso sigma>q0. También los kernels de primera derivada convergen; las derivadas superiores siguen de la ecuación diferencial. No se permuta una integral no dominada con el límite q->0.
+Convergence holds with derivatives and moments. It is justified by domination of sinh(qr)/q by r exp(q0r), for fixed 0<q<=q0, using any weight sigma>q0. The kernels of the first derivative also converge; the higher derivatives follow from the differential equation. A non-dominated integral is not interchanged with the limit q->0.
 
-Como K/J decrece estrictamente hacia0, b0 es un promedio estricto de ese cociente bajo J; por tanto 0<b0<(K/J)(0). La fuerza b0J-K tiene masa cero y un único cruce negativo/positivo. Su integral de cola es estrictamente positiva; de ahí H'<0 y H>0, por el mismo argumento elemental usado para Psi_p. En particular
+Since K/J decreases strictly to0, b0 is a strict average of that quotient under J; hence 0<b0<(K/J)(0). The forcing b0J-K has zero mass and a unique negative/positive crossing. Its tail integral is strictly positive; hence H'<0 and H>0, by the same elementary argument used for Psi_p. In particular
 
     Hmass=int_0^infinito H>0.
 
-H-LIMIT y la convergencia de masas implican
+H-LIMIT and the convergence of masses imply
 
     U_*(q) -> U_lim=K-(Kmass/Hmass)H.              (U-LIMIT)
 
-Este orden es precisamente p->infinito primero, q->0 después. No se necesita uniformidad conjunta en p,q ni una elección diagonal no demostrada.
+This order is precisely p->infinito first, q->0 afterwards. No joint uniformity in p,q nor an unproved diagonal choice is needed.
 
-## 6. Fórmula puntual exacta con I0,...,I6
+## 6. Exact pointwise formula with I0,...,I6
 
-Definir I_m=int_0^infinito t^mPhi(t)dt para m=0,...,6. Fubini absolutamente convergente da
+Define I_m=int_0^infinito t^mPhi(t)dt for m=0,...,6. Absolutely convergent Fubini gives
 
     a=I2/I0, Jmass=I2,
     K(0)=aI1-I3/2,
@@ -130,56 +130,56 @@ Definir I_m=int_0^infinito t^mPhi(t)dt para m=0,...,6. Fubini absolutamente conv
     H(0)=(b0/2-a/6)I3+I5/24,
     Hmass=(b0/6-a/24)I4+I6/120.                   (FORMULAS)
 
-Por ejemplo int tJ=I3/2 e int tK=aI3/6-I5/24; las fórmulas de H siguen de H=G_0(b0J-K). Para la masa de H se usa int G_0f=(1/2)int t^2f. Todos los denominadores son estrictamente positivos por las construcciones anteriores.
+For example int tJ=I3/2 and int tK=aI3/6-I5/24; the formulas for H follow from H=G_0(b0J-K). For the mass of H one uses int G_0f=(1/2)int t^2f. All denominators are strictly positive by the previous constructions.
 
-El test puntual exacto es
+The exact pointwise test is
 
     U_lim(0)=K(0)-[Kmass/Hmass]H(0).
 
-Es preferible decidir el numerador sin divisiones
+It is preferable to decide the numerator without divisions
 
     N=K(0)Hmass-Kmass H(0),
     sign U_lim(0)=sign N,                         (POINT-TEST)
 
-con la normalización a=I2/I0 conservada o con I0 positivo limpiando los denominadores. Aquí NO se ha evaluado su signo. El diseño puntual separado debe fijar de antemano los parámetros de integración de los siete momentos y aceptar cualquiera de ambos signos, sin campaña ni ajuste tras observarlo.
+with the normalisation a=I2/I0 kept or with I0 positive clearing the denominators. Its sign has NOT been evaluated here. The separate pointwise design must fix in advance the integration parameters of the seven moments and accept either sign, without a campaign or adjustment after observing it.
 
-## 7. Implicación a parámetros finitos y límites de la inferencia
+## 7. Implication for finite parameters and limits of the inference
 
-Si POINT-TEST diese U_lim(0)>0, U-LIMIT permitiría elegir un q>0 FINITO con U_*(q)(0)>0. Para ese q fijo, FIXED-Q permitiría elegir p>0 FINITO y suficientemente grande con U_hat_(p,q)(0)>0. SIGN-SCALE implicaría U_(p,q)(0)>0 para el resto REAL original. Por continuidad, U sería positivo en un entorno del origen, lo que refutaría su patrón propuesto negativo/positivo de un único cruce.
+If POINT-TEST gave U_lim(0)>0, U-LIMIT would allow choosing a FINITE q>0 with U_*(q)(0)>0. For that fixed q, FIXED-Q would allow choosing a FINITE and sufficiently large p>0 with U_hat_(p,q)(0)>0. SIGN-SCALE would imply U_(p,q)(0)>0 for the original REAL remainder. By continuity, U would be positive in a neighbourhood of the origin, which would refute its proposed negative/positive single-crossing pattern.
 
-Si el valor fuese negativo, sólo se verificaría el signo del origen en este límite; no se probaría el cruce global ni todos los parámetros. Un valor nulo o un encierro que no lo separase dejaría el test inconcluso. Ninguna alternativa implica por sí sola signo negativo de W o cierre del signo global. No se modifica ningún resultado102.
+If the value were negative, it would only verify the sign at the origin in this limit; neither the global crossing nor all parameters would be proved. A zero value or an enclosure that did not separate it would leave the test inconclusive. No alternative by itself implies a negative sign of W or closure of the global sign. No result102 is modified.
 
-## 8. Único resultado puntual y reproducción independiente
+## 8. Single pointwise result and independent reproduction
 
-Tras la auditoría previa de prueba, diseño y literal, la ÚNICA corrida constructora68812 terminó exit0/FULL PASS128 paneles. La reproducción independiente root91737 también terminó exit0/FULL PASS128 con el mismo resultado y hash:
+After the prior audit of proof, design and code, the SINGLE run68812 ended exit0/FULL PASS128 panels. The independent reproduction91737 also ended exit0/FULL PASS128 with the same result and hash:
 
     P=[-3.1683047444094325e-13 +/- 2.16e-30],
     U_lim(0)=[-1.35855717857699839e-6 +/- 8.09e-24],
     hash=5090a71fd7dd4ae786a3f785ca8a4c32d6691cf92af912d4e5fffff9e583d080.
 
-Estos son encierros outward producidos por `tools/power_real_pair_limit_origin_103_verify.py`, no aproximaciones usadas como prueba. Ambos extremos de cada encierro son estrictamente negativos. Se mantuvieron todos los parámetros del diseño sin ajustes y no se ejecutaron tests adicionales.
+These are outward enclosures produced by `tools/power_real_pair_limit_origin_103_verify.py`, not approximations used as proof. Both endpoints of each enclosure are strictly negative. All design parameters were kept without adjustment and no additional tests were run.
 
-Por tanto U_lim(0)<0. Los límites probados permiten además elegir q>0 suficientemente pequeño y FIJO con U_*(q)(0)<0, y para ese q elegir p FINITO suficientemente grande con U_(p,q)(0)<0; las escalas son positivas. No se obtiene un umbral cuantitativo de esos parámetros. Esto verifica una condición necesaria del cruce en el origen y NO es un falsificador. No prueba el cruce global de U, la positividad de Xi, conservación bajo nuevas reducciones, nueva cobertura W/T ni todos los órdenes. La rama positiva de la sección7 permanece como implicación condicional correcta, pero no es el resultado de esta corrida.
+Hence U_lim(0)<0. The proved limits also allow choosing a sufficiently small and FIXED q>0 with U_*(q)(0)<0, and for that q choosing a sufficiently large FINITE p with U_(p,q)(0)<0; the scalings are positive. No quantitative threshold of those parameters is obtained. This verifies a necessary condition of the crossing at the origin and is NOT a falsifier. It does not prove the global crossing of U, positivity of Xi, preservation under new reductions, new W/T coverage nor all orders. The positive branch of section7 remains as a correct conditional implication, but it is not the result of this run.
 
-## 9. Extensión analítica posterior: H/K decrece y el U límite tiene un único cruce
+## 9. Later analytic extension: H/K decreases and the limiting U has a unique crossing
 
-Estado: **PROVED analítico, auditorías independientes aprobadas.** Esta deducción se obtuvo DESPUÉS del test puntual de la sección8. No requiere nuevos datos ni certificados. La búsqueda de `H/K`, `H−rK`, `H-rK` y `Xi_limit` en los tres índices y el corpus POWER no encontró esta monotonía; las apariciones de U_lim eran sólo las fórmulas y el resultado puntual103. Se utiliza directamente EVEN4, ya probado102 desde089.
+Status: **PROVED analytic, independent audits approved.** This deduction was obtained AFTER the pointwise test of section8. It requires no new data or certificates. The search for `H/K`, `H−rK`, `H-rK` and `Xi_limit` in the three indexes and the POWER corpus did not find this monotonicity; the occurrences of U_lim were only the formulas and the pointwise result103. EVEN4 is used directly, already proved102 from089.
 
-Recordar b0=Kmass/Jmass>0, H>0 y
+Recall b0=Kmass/Jmass>0, H>0 and
 
     H''=b0J-K, K''=aPhi-J.
 
-Para r>0 poner F_r=H-rK. Diferenciar cuatro veces, conservando todas las contribuciones, da
+For r>0 put F_r=H-rK. Differentiating four times, keeping all contributions, gives
 
     F_r''''=(b0+r)J''-raPhi''-aPhi+J.             (FOURTH)
 
-Es una combinación de EVEN4=[J,Phi,J'',Phi''] no idénticamente nula: su coeficiente de J es1. Por102 tiene a lo sumo tres raíces positivas contando multiplicidades. Todas las funciones y derivadas de FOURTH tienen las mismas paridades y supercolas ya justificadas; F_r y F_r'' son pares y ninguna es idénticamente nula.
+It is a combination of EVEN4=[J,Phi,J'',Phi''] not identically zero: its coefficient of J is1. By102 it has at most three positive roots counting multiplicities. All functions and derivatives of FOURTH have the same parities and supertails already justified; F_r and F_r'' are even and neither is identically zero.
 
-Si F_r tuviese dos raíces positivas contando multiplicidades, el lema D2 de102 forzaría al menos tres raíces positivas de F_r'' y, aplicándolo de nuevo a esta función par, al menos cuatro de F_r''''. Contradice la cota de EVEN4. Luego F_r tiene a lo sumo una raíz positiva simple.
+If F_r had two positive roots counting multiplicities, lemma D2 of102 would force at least three positive roots of F_r'' and, applying it again to this even function, at least four of F_r''''. This contradicts the bound of EVEN4. Hence F_r has at most one simple positive root.
 
-Sea rho_H=H/K>0. Si rho_H'(t0)=0 en t0>0, elegir r=rho_H(t0) produciría una raíz doble de F_r, imposible. Así rho_H' no se anula en la semirrecta.
+Let rho_H=H/K>0. If rho_H'(t0)=0 at t0>0, choosing r=rho_H(t0) would produce a double root of F_r, impossible. Thus rho_H' does not vanish on the half-line.
 
-La dirección se determina de forma temporal. Para t suficientemente grande, tau(t)<=a/2. Con I(t)=int_t^infinito(s-t)Phi(s)ds>0 y usando que tau decrece,
+The direction is determined in time. For t large enough, tau(t)<=a/2. With I(t)=int_t^infinito(s-t)Phi(s)ds>0 and using that tau decreases,
 
     K(t)=int_t^infinito(s-t)[aPhi(s)-J(s)]ds
            >=(a/2)I(t),
@@ -187,221 +187,221 @@ La dirección se determina de forma temporal. Para t suficientemente grande, tau
            <=b0 int_t^infinito(s-t)J(s)ds
            <=b0 tau(t)I(t).
 
-Por tanto
+Hence
 
     0<rho_H(t)<=2b0 tau(t)/a ->0.
 
-La derivada continua nunca nula tiene signo constante. Positividad y límite0 excluyen el signo positivo, de modo que
+The continuous never-zero derivative has constant sign. Positivity and limit0 exclude the positive sign, so that
 
-    (H/K)'(t)<0 para TODO t>0.                    (H-RATIO)
+    (H/K)'(t)<0 for EVERY t>0.                    (H-RATIO)
 
-Ahora definir gamma_lim=Kmass/Hmass>0. Su recíproco Hmass/Kmass es el promedio de rho_H bajo la densidad positiva K en la semirrecta, por lo que
+Now define gamma_lim=Kmass/Hmass>0. Its reciprocal Hmass/Kmass is the average of rho_H under the positive density K on the half-line, so
 
     0<1/gamma_lim<rho_H(0).
 
-Por continuidad, H-RATIO y su límite0, existe un único t0>0 donde rho_H(t0)=1/gamma_lim. En consecuencia
+By continuity, H-RATIO and its limit0, there exists a unique t0>0 where rho_H(t0)=1/gamma_lim. Consequently
 
     U_lim=K-gamma_lim H=K[1-gamma_lim rho_H]
 
-es estrictamente negativo antes de t0 y estrictamente positivo después. El cruce es simple: en t0 su derivada es -gamma_lim K(t0)rho_H'(t0)>0. Además U_lim tiene masa cero por la elección de gamma_lim. Se concluye
+is strictly negative before t0 and strictly positive after. The crossing is simple: at t0 its derivative is -gamma_lim K(t0)rho_H'(t0)>0. Moreover U_lim has zero mass by the choice of gamma_lim. We conclude
 
     Xi_lim(t)=int_|t|^infinito(s-|t|)U_lim(s)ds>0,
     Xi_lim''=U_lim, Xi_lim'(0)=0.                 (LIMIT-PRIMITIVE)
 
-La positividad sigue del único cruce y masa cero: la integral de cola de U_lim es positiva para t>0; por tanto Xi_lim'<0 y Xi_lim tiende a0 desde valores positivos. Paridad, suavidad y supercolas se conservan como en las primitivas anteriores.
+Positivity follows from the unique crossing and zero mass: the tail integral of U_lim is positive for t>0; hence Xi_lim'<0 and Xi_lim tends to0 from positive values. Parity, smoothness and supertails are preserved as in the previous primitives.
 
-Esta prueba GLOBAL para el objeto límite implica retrospectivamente U_lim(0)<0, de modo que el certificado puntual anterior queda lógicamente redundante para ese signo. Se conserva su cronología, diseño y resultado; no se lo presenta como consecuencia computacional de este teorema posterior.
+This GLOBAL proof for the limiting object implies retrospectively U_lim(0)<0, so that the previous pointwise certificate becomes logically redundant for that sign. Its chronology, design and result are kept; it is not presented as a computational consequence of this later theorem.
 
-La convergencia secuencial103 no transfiere automáticamente el conteo GLOBAL de raíces a parámetros finitos: no aporta control uniforme de las colas ni excluye raíces adicionales que escapen de los compactos. Por tanto el único cruce de U_(p,q) para TODOS los parámetros finitos, la positividad de su Xi y la conservación indefinida siguen OPEN. No se obtiene aquí nueva cobertura W/T ni todos los órdenes.
+The sequential convergence103 does not automatically transfer the GLOBAL root count to finite parameters: it provides no uniform control of the tails nor excludes additional roots escaping from the compacts. Hence the unique crossing of U_(p,q) for ALL finite parameters, positivity of its Xi and indefinite preservation remain OPEN. No new W/T coverage nor all orders is obtained here.
 
-## 10. Pareja límite (J,K): cruce global para TODO q>0 sin segundo límite
+## 10. Limiting pair (J,K): global crossing for EVERY q>0 without a second limit
 
-Estado: **PROVED analítico, auditorías independientes aprobadas.** Esta segunda ampliación se obtuvo después de la sección9 y tampoco usa nuevos certificados. La búsqueda adicional de `E_q/K`, `E_*(q)/K`, `E−rK`, `E-rK` y la fórmula del forzante en los tres índices y el corpus POWER no encontró esta consecuencia. Se conserva aquí p->infinito, pero ya NO se necesita q->0 para concluir el cruce.
+Status: **PROVED analytic, independent audits approved.** This second extension was obtained after section9 and also uses no new certificates. The additional search for `E_q/K`, `E_*(q)/K`, `E−rK`, `E-rK` and the formula of the forcing in the three indexes and the POWER corpus did not find this consequence. Here p->infinito is kept, but q->0 is NO longer needed to conclude the crossing.
 
-Para q>0, escribir en esta sección
+For q>0, write in this section
 
     d_q=q ZK(q)/ZJ(q)>0,
     E_q=G_q(d_qJ-qK)>0,
     E_q''-q^2E_q=d_qJ-qK.
 
-Es exactamente E_*(q) de las secciones4-5. Todas sus derivadas tienen los bordes pares y supercolas ya justificados102. Para r>0 fijar F=E_q-rK. Usando K''=aPhi-J y conmutando los operadores constantes,
+It is exactly E_*(q) of sections4-5. All its derivatives have the even boundary conditions and supertails already justified102. For r>0 fix F=E_q-rK. Using K''=aPhi-J and commuting the constant operators,
 
     Lq(F'')=(d_q+r)J''-raPhi''
              +a(rq^2-q)Phi+(q-rq^2)J.            (ALL-Q-FORCING)
 
-La combinación de EVEN4 es no trivial, pues d_q+r>0 es su coeficiente de J''. Por tanto tiene a lo sumo tres raíces positivas contando multiplicidades. Si F tuviese dos, D2 seguido de Lq forzaría al menos cuatro de ALL-Q-FORCING, por GAIN102. Luego F tiene a lo sumo una raíz positiva simple.
+The combination of EVEN4 is nontrivial, since d_q+r>0 is its coefficient of J''. Hence it has at most three positive roots counting multiplicities. If F had two, D2 followed by Lq would force at least four of ALL-Q-FORCING, by GAIN102. Hence F has at most one simple positive root.
 
-En consecuencia, para cualquier q,t>0,
+Consequently, for any q,t>0,
 
     derivative_t [E_q(t)/K(t)] != 0:
 
-un punto estacionario y r=E_q(t)/K(t)>0 producirían una raíz doble prohibida de F. Para fijar su signo NO se presupone una estimación de cola del cociente. Fijar cualquier t>0. La función
+a stationary point and r=E_q(t)/K(t)>0 would produce a forbidden double root of F. To fix its sign a tail estimate of the quotient is NOT presupposed. Fix any t>0. The function
 
     q -> derivative_t [E_q(t)/K(t)]
 
-es continua en q>0: d_q y el kernel Green dependen continuamente de q, con dominación superexponencial uniforme en cada compacto de q. La sección5 ya prueba la convergencia C1 E_q/q->H cuando q->0. Así
+is continuous in q>0: d_q and the Green kernel depend continuously on q, with uniform superexponential domination on each compact of q. Section5 already proves C1 convergence E_q/q->H as q->0. Thus
 
     (1/q) derivative_t[E_q(t)/K(t)]
        -> derivative_t[H(t)/K(t)]<0.
 
-Para ese t fijo la derivada es negativa cuando q es suficientemente pequeño. Como es continua y nunca cero, no puede cambiar de signo en el intervalo conexo q>0. Puesto que t era arbitrario,
+For that fixed t the derivative is negative when q is small enough. Since it is continuous and never zero, it cannot change sign on the connected interval q>0. Since t was arbitrary,
 
     derivative_t[E_q(t)/K(t)]<0
-      para TODOS q,t>0.                          (ALL-Q-RATIO)
+      for ALL q,t>0.                          (ALL-Q-RATIO)
 
-Para cada q definir gamma_q=Kmass/Emass_q>0 y rho_q=E_q/K. La función rho_q es positiva, estrictamente decreciente, y por tanto posee un límite ell_q>=0 en infinito. El promedio de rho_q bajo la densidad positiva K es estrictamente interior:
+For each q define gamma_q=Kmass/Emass_q>0 and rho_q=E_q/K. The function rho_q is positive, strictly decreasing, and therefore has a limit ell_q>=0 at infinity. The average of rho_q under the positive density K is strictly interior:
 
     ell_q<Emass_q/Kmass<rho_q(0).
 
-Las desigualdades son estrictas porque rho_q decrece estrictamente y K es positiva en toda la semirrecta. No se necesita probar ell_q=0. El nivel Emass_q/Kmass=1/gamma_q se alcanza una sola vez en un t_q>0. Por tanto
+The inequalities are strict because rho_q decreases strictly and K is positive on the whole half-line. There is no need to prove ell_q=0. The level Emass_q/Kmass=1/gamma_q is attained exactly once at some t_q>0. Hence
 
     U_*(q)=K-gamma_q E_q=K[1-gamma_q rho_q]
 
-tiene exactamente un cruce negativo/positivo, simple por ALL-Q-RATIO. La masa de U_*(q) es cero y se obtiene
+has exactly one negative/positive crossing, simple by ALL-Q-RATIO. The mass of U_*(q) is zero and one obtains
 
     Xi_q(t)=int_|t|^infinito(s-|t|)U_*(q)(s)ds>0,
     Xi_q''=U_*(q), Xi_q'(0)=0,
-      para TODO q>0.                             (ALL-Q-PRIMITIVE)
+      for EVERY q>0.                             (ALL-Q-PRIMITIVE)
 
-La positividad y suavidad siguen del mismo argumento de cola y masa cero de las primitivas anteriores. Si se conserva la normalización del siguiente resto102 para F_*(z)=zZK(z)/ZJ(z), su resto regularizado es exactamente
+Positivity and smoothness follow from the same tail and zero-mass argument of the previous primitives. If the normalisation of the next remainder102 is kept for F_*(z)=zZK(z)/ZJ(z), its regularised remainder is exactly
 
     R_*(q;z)=d_q z ZXi_q(z)/ZE_q(z)>0
-      para TODOS q,z>0.
+      for ALL q,z>0.
 
-Ésta es positividad del resto escalar de la pareja límite, no una afirmación sobre todos los menores de su kernel.
+This is positivity of the scalar remainder of the limiting pair, not a statement about all minors of its kernel.
 
-El alcance final de103 mejora el solo test puntual y el doble límite: para p->infinito, la pareja (J,K) admite el siguiente numerador positivo PARA TODOS q>0. No se transfiere ese conteo global a p FINITO por convergencia en compactos o momentos. El cruce global de U_(p,q) para todos p,q finitos, la conservación posterior y todos los órdenes permanecen OPEN. Se mantienen el certificado puntual previo y su cronología; no se ejecutaron tests adicionales.
+The final scope of103 improves on the pointwise test alone and the double limit: for p->infinito, the pair (J,K) admits the next positive numerator FOR ALL q>0. That global count is not transferred to FINITE p by convergence on compacts or moments. The global crossing of U_(p,q) for all finite p,q, later preservation and all orders remain OPEN. The previous pointwise certificate and its chronology are kept; no additional tests were run.
 
-## 11. Puente exacto a p FINITO y criterio mixto suficiente aún abierto
+## 11. Exact bridge to FINITE p and sufficient mixed criterion still open
 
-Estado: **Identidades y monotonías PROVED, auditorías independientes aprobadas; criterio adicional CONDITIONAL.** Los antecedentes093/095, los tres índices y el corpus se cotejaron antes de plantear el criterio. La comparación mixta no se presenta como nueva bajo otro nombre: se identifica abajo su relación con el Wronskiano particular ya registrado. No se ejecuta otro certificado.
+Status: **Identities and monotonicities PROVED, independent audits approved; additional criterion CONDITIONAL.** The antecedents093/095, the three indexes and the corpus were cross-checked before posing the criterion. The mixed comparison is not presented as new under another name: its relation with the particular Wronskian already recorded is identified below. No other certificate is run.
 
-### 11.1. La pareja finita contiene exactamente el Green de la pareja (J,K)
+### 11.1. The finite pair contains exactly the Green function of the pair (J,K)
 
-Fijar p>0 y mantener c=M(p), beta=ap^2/(ap-c), lambda=p^2c/(ap-c). Las identidades numéricas exactas son
+Fix p>0 and keep c=M(p), beta=ap^2/(ap-c), lambda=p^2c/(ap-c). The exact numerical identities are
 
     beta c=a lambda, beta p-p^2=lambda.
 
-D-EQ, PSI-EQ y K''=aPhi-J implican
+D-EQ, PSI-EQ and K''=aPhi-J imply
 
     (beta D_p+p^2Psi_p)''
       =beta(cPhi-pJ+p^2D_p)+p^2(J-beta D_p)
       =a lambda Phi-lambda J=lambda K''.
 
-La diferencia beta D_p+p^2Psi_p-lambda K tiene segunda derivada cero y decae en infinito junto con su primera derivada. Es por tanto idénticamente nula:
+The difference beta D_p+p^2Psi_p-lambda K has zero second derivative and decays at infinity together with its first derivative. It is therefore identically zero:
 
     beta D_p+p^2Psi_p=lambda K,
     LpPsi_p=J-lambda K.                           (FINITE-BRIDGE)
 
-Tomar la transformada bilateral de la segunda ecuación y evaluar en z=p da ZJ(p)=lambda ZK(p). Para el d_p de la sección10,
+Taking the two-sided transform of the second equation and evaluating at z=p gives ZJ(p)=lambda ZK(p). For the d_p of section10,
 
     d_p=pZK(p)/ZJ(p)=p/lambda,
     Lp E_p=(p/lambda)(J-lambda K).
 
-La solución con los dos bordes superexponenciales es única: una diferencia homogénea sería combinación de exp(pt),exp(-pt), incompatible con ambos bordes. Luego
+The solution with the two superexponential boundary conditions is unique: a homogeneous difference would be a combination of exp(pt),exp(-pt), incompatible with both boundary conditions. Hence
 
     Psi_p=(lambda/p)E_p.                         (FINITE-GREEN)
 
-ALL-Q-RATIO de la sección10 se aplica ahora EXACTAMENTE, sin límite en p. Como lambda/p>0,
+ALL-Q-RATIO of section10 now applies EXACTLY, without a limit in p. Since lambda/p>0,
 
     (Psi_p/K)'<0,
     (D_p/K)'=-(p^2/beta)(Psi_p/K)'>0,
-      para TODOS p,t>0 FINITOS.                  (FINITE-RATIOS)
+      for ALL FINITE p,t>0.                  (FINITE-RATIOS)
 
-Son comparaciones temporales adicionales de la pareja real; no una transferencia informal desde p infinito.
+These are additional time comparisons of the real pair; not an informal transfer from p infinite.
 
-### 11.2. Fuerza mixta del nuevo numerador
+### 11.2. Mixed forcing of the new numerator
 
-Para el siguiente paso de102, escribir A=D_p, B=Psi_p, F(z)=zZB(z)/ZA(z), d=F(q)>0 y E=G_q(dA-qB)>0. Definir
+For the next step of102, write A=D_p, B=Psi_p, F(z)=zZB(z)/ZA(z), d=F(q)>0 and E=G_q(dA-qB)>0. Define
 
     C=d lambda/beta>0, D=dp^2/beta+q>0,
     gamma=massPsi_p/massE>0,
     alpha=gamma q-q^2>0,
     U=Psi_p-gamma E.
 
-alpha>0 es precisamente la positividad del residuo102: gamma-q=r_q/d>0. Usando FINITE-BRIDGE,
+alpha>0 is precisely the positivity of the residue102: gamma-q=r_q/d>0. Using FINITE-BRIDGE,
 
     LqE=CK-DPsi_p,
     Cp^2-Dlambda=-qlambda.
 
-Conmutar los dos operadores constantes y conservar todas las contribuciones da
+Commuting the two constant operators and keeping all contributions gives
 
     LpLqU=J''-a(lambda+gamma C)Phi
        +[lambda-q^2+gamma(C+D)]J
        -lambda alpha K.                          (MIXED-FORCING)
 
-Así basta estudiar una combinación de la familia MIXTA
+Thus it suffices to study a combination of the MIXED family
 
     [K,J,Phi,J''].                               (MIXED4)
 
-No aparece J^(4), pero MIXED4 NO es EVEN4=[J,Phi,J'',Phi''];102 no demuestra que MIXED4 sea Chebyshev. Se mantienen las restricciones reales de coeficientes de MIXED-FORCING en vez de convertirlas en una afirmación genérica ya supuesta.
+J^(4) does not appear, but MIXED4 is NOT EVEN4=[J,Phi,J'',Phi''];102 does not prove that MIXED4 is Chebyshev. The real coefficient restrictions of MIXED-FORCING are kept instead of turning them into an already assumed generic statement.
 
-### 11.3. Qué probaría una cota mixta, y por qué es sólo suficiente
+### 11.3. What a mixed bound would prove, and why it is only sufficient
 
-Si MIXED4 fuese Chebyshev de dimensión4 en toda la semirrecta con multiplicidades, MIXED-FORCING tendría a lo sumo tres raíces positivas. No sería idénticamente nula, pues su coeficiente de J'' es1. Dos aplicaciones del lema Lp/Lq de102, con paridad y bordes superexponenciales, implicarían que U tiene a lo sumo una raíz positiva contando multiplicidad. Su masa es cero y no sería nulo, de modo que tendría exactamente un cruce simple.
+If MIXED4 were Chebyshev of dimension4 on the whole half-line with multiplicities, MIXED-FORCING would have at most three positive roots. It would not be identically zero, since its coefficient of J'' is1. Two applications of the Lp/Lq lemma of102, with parity and superexponential boundary conditions, would imply that U has at most one positive root counting multiplicity. Its mass is zero and it would not be zero, so it would have exactly one simple crossing.
 
-Para orientar ese cruce no se toma un límite de parámetros.099 prueba todos los triples del kernel de G_p en nodos positivos, y por tanto también del kernel de F=G_p/c. Al llevar un nodo a0 se obtiene un bloque auxiliar PSD en {0,q,z}.102 prueba que sus dos pivotes sucesivos son positivos: d/q>0 y aF-d/q>0, con aF=F'(0). La doble congruencia de Schur de099 deja la diagonal R_next(z)/z; en consecuencia
+To orient that crossing no limit of parameters is taken.099 proves all triples of the kernel of G_p at positive nodes, and hence also of the kernel of F=G_p/c. Taking a node to0 one obtains an auxiliary PSD block on {0,q,z}.102 proves that its two successive pivots are positive: d/q>0 and aF-d/q>0, with aF=F'(0). The double Schur congruence of099 leaves the diagonal R_next(z)/z; consequently
 
-    R_next(z)>=0 para z>0.                       (SCALAR-INPUT)
+    R_next(z)>=0 for z>0.                       (SCALAR-INPUT)
 
-Para orientación basta esta desigualdad no estricta, que se conserva al pasar al nodo auxiliar0. Para z distinto de q se usa directamente la congruencia; el valor removible z=q se obtiene por continuidad. Por la masa cero de U, Xi=G_0U tiene bordes pares correctos incluso antes de conocer su signo. NEXT-REST102 da exactamente R_next(z)=d z ZXi(z)/ZE(z).
+For orientation this non-strict inequality suffices, and it is preserved when passing to the auxiliary node0. For z different from q the congruence is used directly; the removable value z=q is obtained by continuity. By the zero mass of U, Xi=G_0U has correct even boundary conditions even before knowing its sign. NEXT-REST102 gives exactly R_next(z)=d z ZXi(z)/ZE(z).
 
-Si el único cruce de U fuese positivo/negativo, todas sus integrales de cola serían negativas, de modo que Xi'>0 y Xi(infinito)=0 implicarían Xi<0. Su transformada bilateral sería estrictamente negativa y R_next(z)<0, contradiciendo SCALAR-INPUT. Por tanto el cruce sería negativo/positivo y Xi>0, como en las primitivas anteriores. Entonces también R_next(z)>0.
+If the unique crossing of U were positive/negative, all its tail integrals would be negative, so that Xi'>0 and Xi(infinito)=0 would imply Xi<0. Its two-sided transform would be strictly negative and R_next(z)<0, contradicting SCALAR-INPUT. Hence the crossing would be negative/positive and Xi>0, as in the previous primitives. Then also R_next(z)>0.
 
-El criterio Chebyshev MIXED4 es SUFICIENTE; no se ha demostrado que sea necesario. MIXED-FORCING ocupa una clase restringida de combinaciones, y una prueba directa para esa clase también serviría. No se afirma aquí ninguna de ambas cotas de raíces.
+The Chebyshev criterion MIXED4 is SUFFICIENT; it has not been proved to be necessary. MIXED-FORCING occupies a restricted class of combinations, and a direct proof for that class would also serve. Neither of these root bounds is claimed here.
 
-La ruta suficiente global tiene un antecedente exacto093/095. Si K_odd=-K'/a, entonces K_odd''=v-w/a, con w=tPhi,v=-Phi', y K_odd(0)=K_odd(infinito)=0. La derivada de MIXED4 es, salvo factores constantes y orden de columnas,
+The global sufficient route has an exact antecedent093/095. If K_odd=-K'/a, then K_odd''=v-w/a, with w=tPhi,v=-Phi', and K_odd(0)=K_odd(infinito)=0. The derivative of MIXED4 is, up to constant factors and column order,
 
     [w,v,w'',K_odd].
 
-Es el Wronskiano PARTICULAR de093/095. Un sistema Chebyshev extendido global de esas cuatro funciones impares implicaría MIXED4 por el lema de un extremo en infinito.093 controla un entorno existente del origen y095 toda la cola t>=64; el intervalo intermedio sigue abierto. No se oculta ese antecedente ni se extrapolan sus signos locales a toda la semirrecta.
+It is the PARTICULAR Wronskian of093/095. A global extended Chebyshev system of those four odd functions would imply MIXED4 by the lemma of one endpoint at infinity.093 controls an existing neighbourhood of the origin and095 the whole tail t>=64; the intermediate interval remains open. That antecedent is not hidden nor are its local signs extrapolated to the whole half-line.
 
-El avance incondicional de esta sección es FINITE-RATIOS y la identificación exacta FINITE-GREEN. El siguiente cruce de U para p finito, su numerador Xi positivo, la conservación posterior y todos los órdenes permanecen OPEN. No se ha abierto una campaña ni se ha modificado ningún paper.
+The unconditional advance of this section is FINITE-RATIOS and the exact identification FINITE-GREEN. The next crossing of U for finite p, its positive numerator Xi, later preservation and all orders remain OPEN. No campaign has been opened and no paper has been modified.
 
-### 11.4. Los tres primeros niveles mixtos sí se controlan globalmente
+### 11.4. The first three mixed levels are controlled globally
 
-Esta comparación se deduce de EVEN4 sin asumir el criterio MIXED4. Para coeficientes reales no todos nulos, sea
+This comparison is deduced from EVEN4 without assuming the criterion MIXED4. For real coefficients not all zero, let
 
     f=A K+B Phi+C J.
 
-Entonces
+Then
 
     f''=AaPhi-AJ+B Phi''+C J''
 
-es una combinación no trivial de EVEN4: sus coeficientes no pueden ser todos cero salvo A=B=C=0. Por tanto tiene a lo sumo tres raíces positivas contando multiplicidades. Si f tuviese tres raíces positivas, el lema D2 produciría al menos cuatro de f'', contradicción. Así [K,Phi,J], y cualquier reordenación de esas tres funciones, es Chebyshev3 en toda la semirrecta con multiplicidades.
+is a nontrivial combination of EVEN4: its coefficients cannot all be zero unless A=B=C=0. Hence it has at most three positive roots counting multiplicities. If f had three positive roots, lemma D2 would produce at least four of f'', a contradiction. Thus [K,Phi,J], and any reordering of those three functions, is Chebyshev3 on the whole half-line with multiplicities.
 
-Se puede fijar además la convexidad temporal que contiene este resultado. Poner
+The time convexity contained in this result can also be fixed. Put
 
     tau=J/Phi, kappa=K/Phi=tau(K/J),
     S=kappa'/tau'.
 
-tau'<0 por077 y (K/J)'<0 por102 implican kappa'<0, por lo que S>0. Ambos cocientes tau,kappa tienden a0 en infinito. El Wronskiano es exactamente
+tau'<0 by077 and (K/J)'<0 by102 imply kappa'<0, so S>0. Both quotients tau,kappa tend to0 at infinity. The Wronskian is exactly
 
     W(Phi,J,K)=Phi^3 tau'^2 S'.
 
-Chebyshev3 con multiplicidades implica que ese Wronskiano no se anula: si lo hiciese, una combinación no trivial de las tres funciones tendría una raíz positiva de multiplicidad al menos3. Por tanto S' es continuo, no se anula y tiene signo constante.
+Chebyshev3 with multiplicities implies that this Wronskian does not vanish: if it did, a nontrivial combination of the three functions would have a positive root of multiplicity at least3. Hence S' is continuous, does not vanish and has constant sign.
 
-Supóngase S'>0. Para cualquier t>0, los límites tau,kappa->0 dan la identidad de promedio de cola
+Suppose S'>0. For any t>0, the limits tau,kappa->0 give the tail average identity
 
     kappa(t)/tau(t)
       =[int_t^infinito S(s)(-tau'(s))ds]
                     /[int_t^infinito(-tau'(s))ds]
       >S(t).
 
-La integrabilidad del numerador es exactamente kappa(t), no una hipótesis adicional sobre S. En consecuencia
+The integrability of the numerator is exactly kappa(t), not an additional hypothesis on S. Consequently
 
     derivative_t[kappa/tau]
        =tau'[S-kappa/tau]/tau>0,
 
-contradiciendo kappa/tau=K/J estrictamente decreciente. Se concluye
+contradicting kappa/tau=K/J strictly decreasing. We conclude
 
     S'<0,
     d^2 kappa/d tau^2=S'/tau'>0.                 (MIXED-CONVEXITY)
 
-Así kappa es estrictamente convexa como función de la coordenada tau, en todo su intervalo de valores. En el orden MIXED4=[K,J,Phi,J''], sus tres primeros Wronskianos son estrictamente positivos:
+Thus kappa is strictly convex as a function of the coordinate tau, on its whole range of values. In the order MIXED4=[K,J,Phi,J''], its first three Wronskians are strictly positive:
 
     W1=K>0,
     W2=W(K,J)=K^2(J/K)'>0,
     W3=W(K,J,Phi)=-W(Phi,J,K)>0.
 
-La tercera igualdad es el intercambio de las columnas extremas. Sólo queda sin descargar el CUARTO Wronskiano mixto, o una cota directa suficiente para la clase restringida MIXED-FORCING. No se infiere ese cuarto signo de MIXED-CONVEXITY ni se afirma herencia de orden4.
+The third equality is the exchange of the extreme columns. Only the FOURTH mixed Wronskian remains undischarged, or a direct sufficient bound for the restricted class MIXED-FORCING. That fourth sign is not inferred from MIXED-CONVEXITY nor is inheritance of order4 claimed.

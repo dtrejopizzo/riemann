@@ -9,7 +9,7 @@ the quadratic form $\mathfrak a_T$/$W_T$.
 Read Paper 47 abstract/intro/open-problems (lines 90–160, 10660–10800) and
 `05-meta-and-planning/ROUTES-TRIED-INDEX/04_PHASES_100-189.md` Part I (walls W1–W12, falsifiers, phases 185–189
 and key 100–161 entries) before opening any phase folder, per the routes-tried rule. Then read phase 153, 155,
-156, 160 primary memos (README/closure files already summarized in MEMORY.md) and the phase-160 builder/panel
+156, 160 primary memos (README/closure files already summarized in MEMORY.md) and the phase-160 construction/panel
 corpus directly (20 memos C1–C8, M1–M12, plus panel PA–PE, plus round-2 D2/D4 and cycle X_C1).
 
 ## Phase-by-phase (100–133: rows A–C, not row-D content)
@@ -75,10 +75,10 @@ object of thm:coer-schur (that theorem postdates phase 160, cited in Paper 47 §
 phase 162+); phases 157–159 could not have recognised (L2) in its current form since the finite reduction did not
 exist yet. No hit.
 
-## Phase 160: 20-builder survey + 5-panel audit, round 1 (complete) + round 2 (partial, then stopped)
+## Phase 160: 20-memo survey + 5-panel audit, round 1 (complete) + round 2 (partial, then stopped)
 
-### Builders stopped by the owner for lack of progress vs. for a mathematical reason
-The historical record (MEMORY.md: "STOPPED 2026-09-26 by owner (no progress seen); last file R160_X_C1.md") is
+### Construction memos stopped for lack of progress vs. for a mathematical reason
+The historical record (MEMORY.md: "STOPPED 2026-09-26 (no progress seen); last file R160_X_C1.md") is
 accurate on inspection: round 1 (all 20 memos C1–C8, M1–M12) and its five panel reviews (PA–PE) **did complete**
 and each panel scored every memo as RESTATEMENT or PARTIAL_NEW with scores 0.15–0.35 (0–1 scale, 1 = a proof of
 G1/G2) — i.e., every memo received a *mathematical* verdict (restatement of Weil's criterion, EQUIV-tagged, or a
@@ -87,7 +87,7 @@ twenty slots (D2, D4), both closed by their own authors (R160_D2_R2 Thm Z; R160_
 a half-finished cycle (R160_X_C1, Route N: Carathéodory–Fejér/Connes–van Suijlekom rigidity on the first-contact
 state) that reached a verdict section but was the last file before the stop. So:
 
-- The **owner's stop was administrative** (quota/resource exhaustion risk per R160_HANDOFF.md: "running 20 memos
+- The **stop was administrative** (quota/resource exhaustion risk per R160_HANDOFF.md: "running 20 memos
   at maximum effort exhausted the resource limit within the first round"), not a judgment that the surviving
   ideas were dead. Two threads were left genuinely open when the campaign paused:
   - **D2, D4** (round 2 slots): both already closed negatively by their own authors — not casualties of the stop.
@@ -153,9 +153,9 @@ state) that reached a verdict section but was the last file before the stop. So:
    Corollary margin1?) before being filed as nothing.
 2. **(administrative, not mathematical) R160_X_C1 / Route N** (Carathéodory–Fejér / Connes–van Suijlekom rigidity
    applied without a limit to the finite-window first-contact state of phase 121 / R157_004 O4) was mid-argument
-   when phase 160 was stopped for resource reasons, not resolved negatively or positively. If the owner wants a
+   when phase 160 was stopped for resource reasons, not resolved negatively or positively. If a
    genuinely unclosed 2026-09 thread reopened, this is the one candidate — note it is NOT yet in the routes-tried
-   index as closed, so per the owner's rule it is **not barred from a fresh attempt**, provided a written reason
+   index as closed, so per the project rule it is **not barred from a fresh attempt**, provided a written reason
    is given for why finite-window rigidity escapes the "dies at the limit" failure mode of Doc 99's use of the
    same tool (the memo itself gestures at this reason in its §0.1 point 4, but never completes the rigidity argument).
 
@@ -169,7 +169,7 @@ sterility, C4–C9 panel scores) is backed by an explicit reason in the cited fi
 used, and no PROVED label was found attached to a claim that doesn't hold up (M2's contact-cone lemma is the only
 PROVED in the sampled set and it is a true, narrowly-scoped convexity fact, correctly not oversold as bearing on sign).
 
-## Phase-160 builder list (as requested), idea in two lines each
+## Phase-160 construction-memo list (as requested), idea in two lines each
 See full list under "Per-memo verdicts" above; repeated here compactly:
 - C1 Connes: laminated/leafwise Hodge carrier, no compactness — object not a window form, no sign.
 - C2 Connes–Moscovici: prolate boundary triples + Sonin count — no sign.

@@ -1,27 +1,27 @@
-# La cancelación de incrementos alarga las ventanas de coste pequeño
+# Cancellation of increments lengthens the windows of small cost
 
-Sea Ω(X)=(log X/log log X)^(1/3). Para alguna constante fija κ>0, poner L=X^(2/3)exp(κΩ(X)). Se obtienen dos techos incondicionales:
+Let Ω(X)=(log X/log log X)^(1/3). For some fixed constant κ>0, set L=X^(2/3)exp(κΩ(X)). Two unconditional ceilings are obtained:
 
-* En la subsucesión de enteros n de 237, con X=n, X⁻²∫_X^(X+L) F(x)² dx→0 para el MISMO coseno de 236.
-* Para TODOS los X suficientemente grandes, el mínimo cuadrático local de 231 en [X,X+L] también tiende a cero. En este enunciado basta incluso la recta de pendiente uno e intercepto cero para el conteo desde X.
+* Along the subsequence of integers n of 237, with X=n, X⁻²∫_X^(X+L) F(x)² dx→0 for the SAME cosine of 236.
+* For ALL sufficiently large X, the local quadratic minimum of 231 on [X,X+L] also tends to zero. In this statement even the line of slope one and intercept zero for the count from X suffices.
 
-El factor que alarga L supera toda potencia fija de log X pero es X^o(1). La ganancia proviene de cancelar el principal de los incrementos del conteo; la regla de 237 basada sólo en contar enteros no da estos techos.
+The factor that lengthens L exceeds every fixed power of log X but is X^o(1). The gain comes from cancelling the main term of the increments of the count; the rule of 237 based only on counting integers does not give these ceilings.
 
-**Estimación importada y uniformidad.** Sea E(z)=θ(z)−z. Para X^(5/8)≤v≤X/2, uniformemente en y∈[1,2],
+**Imported estimate and uniformity.** Let E(z)=θ(z)−z. For X^(5/8)≤v≤X/2, uniformly in y∈[1,2],
 
     |E(y(X+v))−E(yX)| ≪ v exp(−c Ω(X))
 
-con alguna c>0. Se usa Thorner–Zaman, sección 1.2, consecuencia de su teorema 1.1 para intervalos de Hoheisel. En su notación tomar módulo 2, clase 1, extremo superior z=y(X+v), longitud yv y A=1. Para ε=1/48 se tiene 7/12+ε<5/8, por lo que yv≥z^(7/12+ε)log z eventualmente. Todos los primos del intervalo son impares. Las cantidades Ω(z) y Ω(X) son comparables y se puede reducir c. Para 0≤v<X^(5/8) el conteo de enteros da O((v+1)log X). [Thorner y Zaman, sección 1.2](https://arxiv.org/pdf/2108.10878).
+with some c>0. Thorner–Zaman, section 1.2, is used, a consequence of their Theorem 1.1 for Hoheisel intervals. In their notation take modulus 2, class 1, upper endpoint z=y(X+v), length yv and A=1. For ε=1/48 one has 7/12+ε<5/8, so yv≥z^(7/12+ε)log z eventually. All primes of the interval are odd. The quantities Ω(z) and Ω(X) are comparable and c can be reduced. For 0≤v<X^(5/8) counting integers gives O((v+1)log X). [Thorner and Zaman, section 1.2](https://arxiv.org/pdf/2108.10878).
 
-**Dónde se cancela el término principal.** Con f(y)=cos(2πy) y el convenio de extremo izquierdo abierto, ∫₁² f(y)dy=0 y f(1)=f(2)=1 dan por partes
+**Where the main term cancels.** With f(y)=cos(2πy) and the left-open endpoint convention, ∫₁² f(y)dy=0 and f(1)=f(2)=1 give by parts
 
     F(x)=E(2x)−E(x)−∫₁² f'(y)E(xy)dy.
 
-Al restar el valor en X del valor en X+v se obtienen sólo incrementos del mismo E, incluidos ambos bordes. La constante de integración cuesta a lo sumo 2+∫|f'|. Para 0≤v≤L se deduce
+On subtracting the value at X from the value at X+v one obtains only increments of the same E, including both edges. The integration constant costs at most 2+∫|f'|. For 0≤v≤L one deduces
 
     |F(X+v)−F(X)| ≪ X^(5/8)log X + L exp(−c Ω(X)).
 
-En X=n con |F(n)|≪log n de 237 se puede usar el mismo techo para |F(n+v)|. Multiplicar su cuadrado por L/X² cuesta
-O(X^(−1/12+o(1))+exp((3κ−2c)Ω(X))). Elegir por ejemplo κ=c/3 da convergencia a cero. En el segundo enunciado el residuo de la recta propuesta es directamente E(X+v)−E(X). Le vale la misma estimación para todo X sin elegir un cruce, y la minimización sólo puede mejorarla.
+At X=n with |F(n)|≪log n from 237 the same ceiling can be used for |F(n+v)|. Multiplying its square by L/X² costs
+O(X^(−1/12+o(1))+exp((3κ−2c)Ω(X))). Choosing for example κ=c/3 gives convergence to zero. In the second statement the residual of the proposed line is directly E(X+v)−E(X). The same estimate applies to it for every X without choosing a crossing, and minimisation can only improve it.
 
-**Interpretación.** La longitud relativa L/X=X^(−1/3+o(1)) no satisface la hipótesis log(1/h)=o(log log X) de 231 y 236. El techo para estas longitudes ya vale en ambas alternativas para RH, por lo que no resuelve la obligación de las ventanas detectoras. No se da un valor numérico para κ ni una mejora fija del exponente 2/3.
+**Interpretation.** The relative length L/X=X^(−1/3+o(1)) does not satisfy the hypothesis log(1/h)=o(log log X) of 231 and 236. The ceiling for these lengths already holds in both alternatives for RH, so it does not resolve the obligation of the detecting windows. No numerical value for κ nor a fixed improvement of the exponent 2/3 is given.

@@ -1,36 +1,36 @@
-# POWER_SIGNED_AUDIT_014 — Revisión independiente del cierre global de ocho polos
+# POWER_SIGNED_AUDIT_014 — Independent review of the global eight-pole closure
 
-Estado: PROVED. POWER_SIGNED_TRANSFER_014.md y tools/power_signed_transfer_014_verify.py revisados íntegramente. Ejecución independiente del verificador con PASS. Papers intactos.
+Status: PROVED. POWER_SIGNED_TRANSFER_014.md and tools/power_signed_transfer_014_verify.py reviewed in full. Independent run of the verifier with PASS. Papers untouched.
 
-## 1. Telescopaje exacto y restricción preservada
+## 1. Exact telescoping and preserved restriction
 
-Para A_j=v_j²(u²+x)/[u²(v_j²+x)], se verifica A_j-1=x(v_j²-u²)/[u²(v_j²+x)]. Al multiplicar por el producto de los A_k anteriores y por |P|²/(u²+x)^n, los factores quedan exactamente
+For A_j=v_j²(u²+x)/[u²(v_j²+x)], one verifies A_j-1=x(v_j²-u²)/[u²(v_j²+x)]. Multiplying by the product of the previous A_k and by |P|²/(u²+x)^n, the factors become exactly
 
     kappa_j=(v_j²-u²)/u² prod_(k<j)v_k²/u²,
     |G_j|²=x|P|²/[(u²+x)^(n-j+1)prod_(k<=j)(v_k²+x)].
 
-Así TEL conserva la constante R0, los exponentes y todos los términos cruzados del numerador; no hay una raíz o un factor de norma faltante. Cada kappa_j es no negativa y G_j tiene n+1 polos y numerador sP, de grado<=n y con cero en s0. La condición se refiere a la transformada Laplace, no al valor temporal del vector.
+Thus TEL keeps the constant R0, the exponents and all cross terms of the numerator; there is no missing root or norm factor. Each kappa_j is nonnegative and G_j has n+1 poles and numerator sP, of degree<=n and with a zero at s0. The condition refers to the Laplace transform, not to the time value of the vector.
 
-El movimiento arquimediano de004 se aplica al MISMO subespacio de polinomios Q de grado<n+1 con Q(0)=0: el mapa de denominadores mantiene Q exactamente. Por tanto la cota confluente restringida sí se transporta a todos los G_j. Al integrar TEL contra m-c, cada sumando es una forma arquimediana menos c veces su norma; el signo positivo deriva de la coercividad del bloque restringido, no de que m sea puntual positivo. Esta es una estimación distinta de la clase descartada en013.
+The archimedean motion of004 applies to the SAME subspace of polynomials Q of degree<n+1 with Q(0)=0: the denominator map keeps Q exactly. Hence the restricted confluent bound does transport to all G_j. Integrating TEL against m-c, each summand is an archimedean form minus c times its norm; the positive sign derives from the coercivity of the restricted block, not from m being pointwise positive. This is an estimate different from the class discarded in013.
 
-## 2. Dos certificados intervalares y el Gram correcto
+## 2. Two interval certificates and the correct Gram
 
-Las nueve bandas arquimedianas se forman con las derivadas psi en16 hasta orden8, sumadas16..2000 y encerradas mediante integrales desde2001/2000, con signos correctos. Los intervalos de gamma,pi y logaritmos fueron auditados previamente; todas las operaciones usan redondeo exterior racional. LDL intervalar de AP8-(7/200)I pasa con ocho pivotes inferiores positivos.
+The nine archimedean bands are formed with the psi derivatives at16 up to order8, summed16..2000 and enclosed via integrals from2001/2000, with correct signs. The intervals of gamma,pi and logarithms were audited previously; all operations use outward rational rounding. Interval LDL of AP8-(7/200)I passes with eight positive lower pivots.
 
-En el bloque restringido Arch9, evaluar Laplace de la base Laguerre en0 da sqrt(2/u)(-1)^j. Por ello la base B_i=e_i-(-1)^i e8, i0..7, describe exactamente el núcleo de esa evaluación. Las entradas comprimidas son
+In the restricted block Arch9, evaluating the Laplace transform of the Laguerre basis at0 gives sqrt(2/u)(-1)^j. Hence the basis B_i=e_i-(-1)^i e8, i0..7, describes exactly the kernel of that evaluation. The compressed entries are
 
     Arch_|i-j|-a_j Arch_(8-i)-a_i Arch_(8-j)+a_i a_j Arch0.
 
-El programa resta(1/4)(delta_ij+a_i a_j), que es EXACTAMENTE(1/4)B^t B y no una identidad indebidamente normalizada. Su LDL intervalar pasa. Así gamma1/4 es una cota de forma respecto de la norma física para TODO el subespacio.
+The program subtracts(1/4)(delta_ij+a_i a_j), which is EXACTLY(1/4)B^t B and not an improperly normalized identity. Its interval LDL passes. Thus gamma1/4 is a form bound relative to the physical norm for the WHOLE subspace.
 
-Las dos normas de momentos de ocho componentes satisfacen4AA BB<(3/2)^2, justificando p3/2. El margen b-c-p*8/3969, con b7/200 y c3/100, es>1/1000. Integrar la descomposición y mantener el polar produce AP>.03 en todos los ocho polos reales>=31.5. No se presupone monotonía de AP.
+The two eight-component moment norms satisfy4AA BB<(3/2)^2, justifying p3/2. The margin b-c-p*8/3969, with b7/200 and c3/100, is>1/1000. Integrating the decomposition and keeping the polar produces AP>.03 at all eight real poles>=31.5. No monotonicity of AP is presupposed.
 
-## 3. Todos los contactos y margen final
+## 3. All contacts and final margin
 
-La traza ponderada con alpha3/5 está cubierta por POWER_COMMON_TRANSFER_010§6; sigma189/10<min v_j. Su suma binomial exacta satisface4T8<25000². Con beta97/5, la cola conserva el factor fraccionario2^-2/5<19/25: elevar a quinta potencia equivale exactamente a25^5<4*19^5. La cota decreciente de(logx)x^-beta desde2 y beta-1>18 dan el mayorante racional del script<29/1000.
+The weighted trace with alpha3/5 is covered by POWER_COMMON_TRANSFER_010§6; sigma189/10<min v_j. Its exact binomial sum satisfies4T8<25000². With beta97/5, the tail keeps the fractional factor2^-2/5<19/25: raising to the fifth power is exactly equivalent to25^5<4*19^5. The decreasing bound of(logx)x^-beta from2 and beta-1>18 give the rational majorant of the script<29/1000.
 
-Por tanto la forma COMPLETA satisface W>.001||f||² para cualquier numerador real de grado<8 y cualquier conjunto de ocho tasas>=31.5, permitiendo multiplicidades, separación arbitraria y tasas sin cota superior. El peine es infinito completo, sin hipótesis de signo favorable de sus matrices individuales. No se infiere ningún resultado de dimensión mayor ni cierre del Paper47.
+Hence the FULL form satisfies W>.001||f||² for any real numerator of degree<8 and any set of eight rates>=31.5, allowing multiplicities, arbitrary separation and rates without upper bound. The comb is the full infinite one, without favourable sign hypotheses on its individual matrices. No higher-dimensional result nor closure of Paper47 is inferred.
 
-## 4. Alcance del avance frente al límite previo
+## 4. Scope of the advance relative to the previous limit
 
-La ronda013 seguía siendo correcta: prohibía reemplazar la densidad racional por un peor coste puntual y descartar ganancias positivas. La prueba actual conserva la integral firmada y demuestra su positividad sobre un subespacio racional restringido, usando TEL y un bloque certificado. Cambia explícitamente una hipótesis esencial de aquella clase, sin contradicción ni reinterpretación de un falsificador como signo negativo de la forma.
+Round013 remained correct: it prohibited replacing the rational density by a worse pointwise cost and discarding positive gains. The current proof keeps the signed integral and proves its positivity on a restricted rational subspace, using TEL and a certified block. It explicitly changes an essential hypothesis of that class, without contradiction nor reinterpretation of a falsifier as a negative sign of the form.

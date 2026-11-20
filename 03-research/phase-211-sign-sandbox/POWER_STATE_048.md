@@ -1,26 +1,26 @@
-# Estado 048 — Nueva región explícita de potencias y un extremo de transporte
+# State 048 — New explicit region of powers and one transport endpoint
 
-El objetivo global sigue OPEN. Esta ronda sí añade una región explícita de positividad de la forma completa, pero no una ventana nueva del Paper47. Papers intactos.
+The global objective remains OPEN. This round does add an explicit region of positivity of the full form, but not a new window of Paper47. Papers untouched.
 
-## Forma completa en una región subcuadrática
+## Full form in a subquadratic region
 
-POWER_SUBQUADRATIC_COROLLARY_048 demuestra, a u=63/2 y para los átomos de transformada s^k/(s+u)^(N+k), que
+POWER_SUBQUADRATIC_COROLLARY_048 proves, at u=63/2 and for the atoms with transform s^k/(s+u)^(N+k), that
 
     N >= exp(10^6),  k >= 2N²/log log N
     => W[f_Nk] > (2/5)log N · ||f_Nk||².
 
-La prueba es simbólica, uniforme en TODOS esos N,k, y conserva el peine infinito completo y el polar. Usa las constantes explícitas de017 con c variable; no es una nueva desigualdad aritmética ni una prueba por casos numéricos. POWER_SUBQUADRATIC_AUDIT_048 aprueba el argumento y root revisó la derivación.
+The proof is symbolic, uniform in ALL those N,k, and keeps the full infinite comb and the polar. It uses the explicit constants of017 with variable c; it is not a new arithmetic inequality nor a proof by numerical cases. POWER_SUBQUADRATIC_AUDIT_048 approves the argument and the derivation was reviewed.
 
-Esto baja la frontera respecto de cada cono cuadrático con coeficiente fijo para N suficientemente grande. El umbral exp(10^6) es conservador. Sigue faltando la banda inferior; la ampliación no elimina el residuo energético036 ni prueba la hipótesis uniforme de046. Las regiones anteriores siguen vigentes.
+This lowers the frontier relative to each quadratic cone with fixed coefficient for N large enough. The threshold exp(10^6) is conservative. The lower band is still missing; the extension does not eliminate the energy residue036 nor prove the uniform hypothesis of046. The earlier regions remain valid.
 
-## Transporte restringido del bloque V12: primer extremo
+## Restricted transport of the block V12: first endpoint
 
-POWER_R12_ENDPOINT_048 prueba E2[G]>||G||²/50 sobre V13 confluyente con G(0)=0, donde E2 conserva ARCH, POLAR y sólo el contacto2. Es el extremo v=u de R12, no el enunciado uniforme para v>=u. No se confunde con W completo: la cola de los otros contactos requiere su propio control.
+POWER_R12_ENDPOINT_048 proves E2[G]>||G||²/50 on confluent V13 with G(0)=0, where E2 keeps ARCH, POLAR and only the contact2. It is the endpoint v=u of R12, not the uniform statement for v>=u. It is not confused with full W: the tail of the other contacts requires its own control.
 
-La prueba usa una congruencia y LDL racional de doce dimensiones; constructor, auditor y root reprodujeron el verificador PASS. POWER_R12_AUDIT_048 aprueba también la consecuencia local por continuidad y la cota polar de la órbita Q^jV12, de razón <=9/62. Falta un corte arquimediano efectivo y el control de los índices intermedios antes de deducir transporte por la expansión geométrica015. No se hicieron barridos de tasas ni órdenes.
+The proof uses a congruence and twelve-dimensional rational LDL; the verifier was reproduced PASS three times independently. POWER_R12_AUDIT_048 also approves the local consequence by continuity and the polar bound of the orbit Q^jV12, with ratio <=9/62. An effective archimedean cutoff and control of the intermediate indices are missing before deducing transport via the geometric expansion015. No sweeps over rates or orders were done.
 
-## Estado de las ventanas y del cierre
+## State of the windows and of closure
 
-La corrección documental045 permanece: ROUND_026_A registra una certificación anterior de lambda_A(T)>=2e-26 para todos0<T<=1.035, con logs positivos de ambas paridades revisados documentalmente, sin reproducción larga en estas rondas. Los resultados048 no amplían ese rango.
+The documentary correction045 remains: ROUND_026_A records an earlier certification of lambda_A(T)>=2e-26 for all0<T<=1.035, with positive logs of both parities reviewed documentarily, without long reproduction in these rounds. The results048 do not extend that range.
 
-Las exploraciones046/047 se registraron como deduplicaciones sin nuevo signo. La tabla suficiente completa, su versión primitiva y el objetivo global siguen abiertos. No se marca el goal completo ni bloqueado por dificultad matemática.
+The explorations046/047 were recorded as deduplications without new sign. The full sufficient table, its primitive version and the global objective remain open. The goal is marked neither complete nor blocked by mathematical difficulty.

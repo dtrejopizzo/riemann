@@ -1,148 +1,148 @@
-# POWER_CONTACT_OSCILLATION_065 — Número exacto de cambios de signo para todos N,k
+# POWER_CONTACT_OSCILLATION_065 — Exact number of sign changes for all N,k
 
-Estado: **PROVED/APROBADO**, revisión independiente en POWER_CONTACT_OSCILLATION_AUDIT_065.md y revisión de root. Teorema sobre la autocorrelación y el signo de la cola aritmética; NO sobre el signo de W. Papers intactos.
+Status: **PROVED/APPROVED**, independent review in POWER_CONTACT_OSCILLATION_AUDIT_065.md and a further re-check. Theorem on the autocorrelation and the sign of the arithmetic tail; NOT on the sign of W. Papers untouched.
 
-## 1. Antecedentes y cambio de objeto
+## 1. Antecedents and change of object
 
-Leídos las reglas del proyecto, ROUTES-TRIED-INDEX/README, grid maestro R162_2300_MASTER_GRID y CROSSWORD-TO-D; revisados ARITHMETIC_DIFFERENCES019 y su auditoría, DESCENT016 y los antecedentes de derivadas Bessel, Laguerre, Descartes, bell-shaped y total positivity. La búsqueda dirigida no halló en el corpus POWER un enunciado de número exacto de raíces para TODOS k.
+Read the project rules, ROUTES-TRIED-INDEX/README, master grid R162_2300_MASTER_GRID and CROSSWORD-TO-D; reviewed ARITHMETIC_DIFFERENCES019 and its audit, DESCENT016 and the antecedents on Bessel derivatives, Laguerre, Descartes, bell-shaped and total positivity. The targeted search did not find in the POWER corpus a statement of the exact number of roots for ALL k.
 
-019 demuestra una sola frontera para k=1 mediante el cociente de coeficientes j(j+1)-2N y Descartes. No se relanza ese cálculo con otro nombre. Aquí cambia el objeto: se consideran las derivadas de orden2k de C_(N+k) y se cuenta su número exacto de raíces mediante cancelación de2k momentos y convoluciones exponenciales unilaterales. La prueba usa Rolle con un borde en infinito, no un supuesto de positividad total de otro kernel. La cota de última raíz obtenida aquí es deliberadamente más gruesa que la de019 para k=1.
+019 proves a single frontier for k=1 via the coefficient ratio j(j+1)-2N and Descartes. That computation is not relaunched under another name. Here the object changes: the derivatives of order2k of C_(N+k) are considered and their exact number of roots is counted via cancellation of2k moments and one-sided exponential convolutions. The proof uses Rolle with a boundary at infinity, not an assumption of total positivity of another kernel. The last-root bound obtained here is deliberately coarser than that of019 for k=1.
 
-## 2. Enunciado y coeficientes exactos
+## 2. Statement and exact coefficients
 
-Sean u>0, enteros N>=1,k>=1 y
+Let u>0, integers N>=1,k>=1 and
 
     F_(N,k)(s)=s^k/(s+u)^(N+k),
     K_(N,k)(t)=c_(f_(N,k))(t).
 
-Entonces K_(N,k) tiene exactamente k raíces en(0,infinito), TODAS simples, y ningún otro cero allí. Es positiva en0 y sus signos alternan al atravesar esas raíces. Si chi_(N,k) es la mayor raíz en la coordenada x=u t, entonces
+Then K_(N,k) has exactly k roots in(0,infinito), ALL simple, and no other zero there. It is positive at0 and its signs alternate when crossing those roots. If chi_(N,k) is the largest root in the coordinate x=u t, then
 
     chi_(N,k) < 4k(N+k-1).                              (LAST)
 
-Para dar los coeficientes, ponga d=N+k-1 y
+To give the coefficients, set d=N+k-1 and
 
     p_d(x)=sum_(j=0)^d a_j x^j,
     a_j=(2d-j)!/[2^(d-j)(d-j)!j!],
     r_(d,k)(x)=(1-D_x)^(2k)p_d(x).
 
-Las fórmulas gamma de019 y la regla de Fourier dan exactamente, para t>=0,
+The gamma formulas of019 and the Fourier rule give exactly, for t>=0,
 
     K_(N,k)(t)=(-1)^k C_(N+k)^(2k)(t)
       =(-1)^k exp(-x)r_(d,k)(x)
                  /[2^(d+1)u^(2N-1)d!], x=ut.           (PROFILE)
 
-Su coeficiente de x^j es
+Its coefficient of x^j is
 
     [x^j]r_(d,k)
       =sum_(ell=0)^min(2k,d-j)
           (-1)^ell binom(2k,ell)(j+ell)! a_(j+ell)/j!.
 
-Equivalentemente, usando potencias factoriales descendentes,
+Equivalently, using falling factorial powers,
 
     [x^j]r_(d,k)/a_j
       =sum_(ell=0)^min(2k,d-j)
           binom(2k,ell)(-2)^ell
                     (d-j)_fall_ell/(2d-j)_fall_ell.     (COEFF)
 
-El término ell=0 vale1. Todos los denominadores de los términos presentes son positivos. No se extiende la suma a términos con denominador cero. El grado de r es exactamente d y su coeficiente principal es1.
+The term ell=0 equals1. All denominators of the terms present are positive. The sum is not extended to terms with zero denominator. The degree of r is exactly d and its leading coefficient is1.
 
-## 3. Dos hechos elementales de conteo
+## 3. Two elementary counting facts
 
-Como ilustración algebraica, en N=1 y x=u|t| los tres primeros perfiles NORMALIZADOS son
+As an algebraic illustration, at N=1 and x=u|t| the first three NORMALIZED profiles are
 
     K_(1,1)(t)/K_(1,1)(0)=exp(-x)(1-x),
     K_(1,2)(t)/K_(1,2)(0)=exp(-x)(1-5x/3+x²/3),
     K_(1,3)(t)/K_(1,3)(0)=exp(-x)(1-11x/5+4x²/5-x³/15).
 
-Son sustituciones exactas en PROFILE, no nuevos cálculos de W. El argumento siguiente demuestra que tienen, respectivamente, una, dos y tres raíces positivas simples y extiende ese patrón a TODOS N,k sin enumerar casos.
+They are exact substitutions in PROFILE, not new computations of W. The following argument proves that they have, respectively, one, two and three simple positive roots and extends that pattern to ALL N,k without enumerating cases.
 
-**Momentos.** Para todo N>=1,k>=1,
+**Moments.** For all N>=1,k>=1,
 
     int_R t^ell K_(N,k)(t)dt=0, 0<=ell<2k.              (ZERO-MOMENTS)
 
-En efecto, su transformada es tau^(2k)/(u²+tau²)^(N+k), que tiene un cero de orden2k en tau=0. Los momentos temporales son absolutamente convergentes: PROFILE es exponencial por un polinomio en cada semirrecta. Además
+Indeed, its transform is tau^(2k)/(u²+tau²)^(N+k), which has a zero of order2k at tau=0. The temporal moments are absolutely convergent: PROFILE is exponential times a polynomial on each half-line. Moreover
 
     K_(N,k)(0)=(1/(2pi))int_R tau^(2k)/(u²+tau²)^(N+k)dtau>0.
 
-**Momentos obligan cambios.** Si una función real continua no nula tiene momentos absolutos hasta orden r-1 y todos esos momentos son cero, y tiene un número finito de ceros, debe tener al menos r cambios de signo. De lo contrario, multiplicarla por el polinomio producto de los factores(t-b) de sus s<r puntos de cambio produce, tras elegir un signo global, una función no negativa y no idénticamente cero. Su integral sería positiva, contradiciendo la anulación de los momentos hasta grado s.
+**Moments force changes.** If a nonzero real continuous function has absolute moments up to order r-1 and all those moments are zero, and it has finitely many zeros, it must have at least r sign changes. Otherwise, multiplying it by the polynomial product of the factors(t-b) over its s<r change points produces, after choosing a global sign, a nonnegative function not identically zero. Its integral would be positive, contradicting the vanishing of the moments up to degree s.
 
-## 4. Lema de convolución unilateral: ceros simples preservados
+## 4. One-sided convolution lemma: simple zeros preserved
 
-Sean
+Let
 
     e_+(t)=exp(-ut)1_(t>=0),
     e_-(t)=exp(ut)1_(t<=0).
 
-Suponga que f es real continua, con colas exponencial por polinomio, exactamente r ceros simples, y momentos cero de órdenes0,...,r-1. Cada convolución e_+*f y e_-*f tiene también exactamente r ceros, todos simples, y conserva esos momentos cero.
+Suppose f is real continuous, with exponential-times-polynomial tails, exactly r simple zeros, and zero moments of orders0,...,r-1. Each convolution e_+*f and e_-*f also has exactly r zeros, all simple, and keeps those zero moments.
 
-La preservación de momentos se verifica por Fubini y la expansión binomial de(t+y)^ell; ambos factores tienen momentos absolutos de todos los órdenes. Las colas siguen siendo exponencial por polinomio. En la aplicación, cada semirrecta conserva exactamente la forma exp(-u|t|) por un polinomio. Ninguna convolución puede anularse idénticamente en un intervalo: su ecuación g'=f-u g (o g'=u g-f) forzaría que f también se anulara allí, contradiciendo sus ceros simples finitos. Así los polinomios de ambas semirrectas no son idénticamente cero y los intermedios tienen un número finito de ceros; la cuenta de Rolle de abajo proporciona además una demostración independiente de esa finitud.
+Preservation of moments is verified by Fubini and the binomial expansion of(t+y)^ell; both factors have absolute moments of all orders. The tails remain exponential times polynomial. In the application, each half-line keeps exactly the form exp(-u|t|) times a polynomial. No convolution can vanish identically on an interval: its equation g'=f-u g (or g'=u g-f) would force f to vanish there too, contradicting its finitely many simple zeros. Thus the polynomials on both half-lines are not identically zero and the intermediate ones have finitely many zeros; the Rolle count below furthermore provides an independent proof of that finiteness.
 
-Para g=e_+*f se tiene g'=f-u g. Ponga h(t)=exp(ut)g(t), de modo que
+For g=e_+*f one has g'=f-u g. Set h(t)=exp(ut)g(t), so that
 
     h'=exp(ut)f(t), h(-infinito)=0.
 
-Así h' tiene exactamente r ceros simples. Un cero de g es simple si f no se anula allí. Si g(b)=f(b)=0, entonces g'(b)=0 y g''(b)=f'(b)!=0, de modo que ese cero sería doble. La derivada existe en b por la simplicidad de f allí. No hay otros tipos de multiplicidad.
+Thus h' has exactly r simple zeros. A zero of g is simple if f does not vanish there. If g(b)=f(b)=0, then g'(b)=0 and g''(b)=f'(b)!=0, so that zero would be double. The derivative exists at b by the simplicity of f there. There are no other types of multiplicity.
 
-Si h tuviera m ceros contados con multiplicidad, Rolle obliga a h' a tener al menos m: hay los correspondientes ceros de multiplicidad reducida en cada cero múltiple, uno entre cada par de ceros distintos y UNO antes del primero. Este último existe porque h tiende a0 al extremo izquierdo, vale0 en el primer cero y no es idénticamente cero en el intervalo: alcanza un extremo interior no nulo. La cuenta total es
+If h had m zeros counted with multiplicity, Rolle forces h' to have at least m: there are the corresponding zeros of reduced multiplicity at each multiple zero, one between each pair of distinct zeros and ONE before the first. This last one exists because h tends to0 at the left end, equals0 at the first zero and is not identically zero on the interval: it attains a nonzero interior extremum. The total count is
 
-    sum multiplicidades - numero de ceros distintos
-       + (numero de ceros distintos-1)+1 = m.
+    sum of multiplicities - number of distinct zeros
+       + (number of distinct zeros-1)+1 = m.
 
-El mismo argumento sobre cualquier colección finita de ceros excluye infinitos ceros. Por tanto m<=r. La cancelación de momentos obliga a al menos r CAMBIOS de signo, de modo que m=r y todos los ceros son simples. En particular se excluyen las tangencias dobles.
+The same argument on any finite collection of zeros excludes infinitely many zeros. Hence m<=r. Moment cancellation forces at least r sign CHANGES, so m=r and all zeros are simple. In particular double tangencies are excluded.
 
-Para e_-*f basta reflejar t; equivalentemente, usar h=exp(-ut)g, h'=-exp(-ut)f y el borde h(+infinito)=0. Esto prueba el lema sin invocar una propiedad general de otros kernels.
+For e_-*f it suffices to reflect t; equivalently, use h=exp(-ut)g, h'=-exp(-ut)f and the boundary h(+infinito)=0. This proves the lemma without invoking a general property of other kernels.
 
-## 5. Caso base y propagación a TODO N
+## 5. Base case and propagation to ALL N
 
-Para N=1, el polinomio r_(k,k) de PROFILE tiene grado k. Así K_(1,k) tiene a lo sumo k ceros positivos. Es par y no se anula en0, por lo que tiene a lo sumo2k ceros reales distintos. ZERO-MOMENTS obliga a al menos2k cambios de signo. Se concluye que tiene exactamente k raíces positivas, todas simples, y sus reflejos negativos.
+For N=1, the polynomial r_(k,k) of PROFILE has degree k. Thus K_(1,k) has at most k positive zeros. It is even and does not vanish at0, so it has at most2k distinct real zeros. ZERO-MOMENTS forces at least2k sign changes. One concludes that it has exactly k positive roots, all simple, and their negative reflections.
 
-La función C_1(t)=exp(-u|t|)/(2u) satisface exactamente
+The function C_1(t)=exp(-u|t|)/(2u) satisfies exactly
 
     C_1=e_+*e_-.
 
-Por multiplicación de transformadas,
+By multiplication of transforms,
 
     K_(N+1,k)=C_1*K_(N,k).
 
-Aplicar sucesivamente el lema unilateral a e_- y e_+ preserva los2k ceros simples y los2k momentos nulos. Inducción en N prueba que K_(N,k) tiene exactamente2k ceros reales simples para TODO N>=1. Como es par y positiva en0, exactamente k están en la semirrecta positiva.
+Applying the one-sided lemma successively to e_- and e_+ preserves the2k simple zeros and the2k vanishing moments. Induction on N proves that K_(N,k) has exactly2k simple real zeros for ALL N>=1. Since it is even and positive at0, exactly k lie on the positive half-line.
 
-El signo inicial es positivo. El coeficiente principal de r es positivo, de modo que el signo final en PROFILE es(-1)^k; coincide con alternar k veces desde el signo inicial.
+The initial sign is positive. The leading coefficient of r is positive, so the final sign in PROFILE is(-1)^k; it coincides with alternating k times from the initial sign.
 
-## 6. Cota elemental del último cero
+## 6. Elementary bound on the last zero
 
-Para x>0, como todos los coeficientes de p_d son positivos,
+For x>0, since all coefficients of p_d are positive,
 
     0<=p_d^(ell)(x)/p_d(x)<= (d)_fall_ell/x^ell
                                     <=(d/x)^ell.
 
-La primera cota procede término a término de(j)_fall_ell<=(d)_fall_ell, y vale con derivada cero cuando ell>d. Por ello
+The first bound follows term by term from(j)_fall_ell<=(d)_fall_ell, and holds with zero derivative when ell>d. Hence
 
     |r_(d,k)(x)-p_d(x)|/p_d(x)
       <=sum_(ell=1)^(2k)binom(2k,ell)(d/x)^ell
       =(1+d/x)^(2k)-1.
 
-Si x>=4kd,
+If x>=4kd,
 
     (1+d/x)^(2k)<=exp(1/2)<2.
 
-La última desigualdad se obtiene comparando la serie exponencial con la geométrica de razón1/2, estrictamente desde el término cuadrático. Así r_(d,k)(x)>0 para TODO x>=4kd. No hay ceros en ese intervalo y se obtiene LAST. No se afirma optimalidad ni se sustituye la mejor cota019 en k=1.
+The last inequality is obtained by comparing the exponential series with the geometric one of ratio1/2, strictly from the quadratic term on. Thus r_(d,k)(x)>0 for ALL x>=4kd. There are no zeros in that interval and LAST follows. Optimality is not claimed nor is the better bound019 at k=1 replaced.
 
-## 7. Cola aritmética completa, con su signo correcto
+## 7. Complete arithmetic tail, with its correct sign
 
-Suponga u>1/2 para garantizar convergencia absoluta del peine. Para TODOS los enteros q>=2 con
+Assume u>1/2 to guarantee absolute convergence of the comb. For ALL integers q>=2 with
 
     u log q >= 4k(N+k-1),
 
-PROFILE y LAST dan
+PROFILE and LAST give
 
     sign K_(N,k)(log q)=(-1)^k.
 
-Por tanto cada término no nulo de la contribución
+Hence each nonzero term of the contribution
 
     -2 Lambda(q)q^(-1/2)K_(N,k)(log q)
 
-tiene signo(-1)^(k+1). La suma sobre TODOS esos q tiene ese mismo signo estricto: hay potencias de2 arbitrariamente grandes con Lambda>0. No se trunca ni modifica Lambda. En particular la cola ayuda a W para k impar y es adversa para k par.
+has sign(-1)^(k+1). The sum over ALL those q has that same strict sign: there are arbitrarily large powers of2 with Lambda>0. Lambda is neither truncated nor modified. In particular the tail helps W for odd k and is adverse for even k.
 
-Para k=0 se separa el caso: K_(N,0)=C_N es estrictamente positiva, no tiene raíces y el peine completo es negativo, como ya registra019. No se usa la fórmula de corte con k=0 como si produjera una transición.
+For k=0 the case is separated: K_(N,0)=C_N is strictly positive, has no roots and the complete comb is negative, as019 already records. The cutoff formula with k=0 is not used as if it produced a transition.
 
-El teorema no estima la magnitud de la cola ni la compensación frente al prefijo, ARCH y polar. No prueba W>=0, una fila nueva, una ventana T nueva o el signo global. Su resultado es el patrón de oscilación para TODOS N,k y una frontera explícita después de la cual TODA la cola tiene signo conocido.
+The theorem does not estimate the magnitude of the tail nor the compensation against the prefix, ARCH and polar. It does not prove W>=0, a new row, a new window T or the global sign. Its result is the oscillation pattern for ALL N,k and an explicit frontier beyond which the WHOLE tail has known sign.

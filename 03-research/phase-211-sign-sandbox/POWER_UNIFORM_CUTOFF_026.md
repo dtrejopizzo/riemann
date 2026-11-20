@@ -1,135 +1,135 @@
-# POWER_UNIFORM_CUTOFF_026 — Corte analítico en N para la cola del kernel compensado
+# POWER_UNIFORM_CUTOFF_026 — Analytic cutoff in N for the tail of the compensated kernel
 
-Estado: PROVED dos cortes analíticos uniformes en N y control completo de la cola de K y de sus celdas. Revisión independiente aprobada en POWER_ARCH_CELL_AUDIT_026.md; verificador reproducido por root: PASS. Sin certificados fila a fila. Papers intactos.
+Status: PROVED two analytic cutoffs uniform in N and full control of the tail of K and of its cells. Independent review approved in POWER_ARCH_CELL_AUDIT_026.md; verifier reproduced: PASS. No row-by-row certificates. Papers untouched.
 
-## Corpus y razón nueva antes de construir
+## Corpus and new reason before building
 
-Leídos las reglas del proyecto, INVERSE_KERNEL020, CUMULATIVE_INVERSE022, CELL_TEST024 y el lema logcóncavo025; búsquedas en índice/grid/crucigrama (Riccati/Bessel/coeficientes/logconcavidad/corte). Los signos de h y K ya tienen falsificadores interiores. La diferencia aquí es reemplazar el corte certificado para un solo N por una FÓRMULA en N, utilizando ratios de coeficientes y la ecuación diferencial del mismo kernel gamma. No se coleccionan puntos ni se extrapola positividad de una fila a otras.
+Read the project rules, INVERSE_KERNEL020, CUMULATIVE_INVERSE022, CELL_TEST024 and the log-concave lemma 025; searches in index/grid/crossword (Riccati/Bessel/coefficients/log-concavity/cutoff). The signs of h and K already have interior falsifiers. The difference here is to replace the cutoff certified for a single N by a FORMULA in N, using coefficient ratios and the differential equation of the same gamma kernel. No points are collected and positivity is not extrapolated from one row to others.
 
-## 1. Resultado uniforme
+## 1. Uniform result
 
-Fije u=63/2 y d=N−1. Para N>=3 defina
+Fix u=63/2 and d=N−1. For N>=3 define
 
     t_J(d)=d(d+220)/(330d+6300),
     M_d=u²/(2d−1), Q_d=sqrt(9/4+M_d),
     t_R(d)=2d Q_d/(u²−Q_d²),
     t_*(N)=min(t_J(d),t_R(d)).
 
-Los denominadores son positivos. Para N=2 ponga t_*(2)=1/30−1/693. Entonces
+The denominators are positive. For N=2 set t_*(2)=1/30−1/693. Then
 
-    D_N'(t)/D_N(t)<=30 para TODO t>=t_*(N),             (LOG)
+    D_N'(t)/D_N(t)<=30 for ALL t>=t_*(N),             (LOG)
     K_N(x)>=x^-32D_N(logx)/4>0
-                       para TODO x>=exp(t_*(N)).       (TAIL)
+                       for ALL x>=exp(t_*(N)).       (TAIL)
 
-Aquí D_N=33P_N−P_N' y K_N es la suma Möbius COMPLETA, no un polinomio aproximado ni un prefijo. En particular t_J(d)<d/30 para todos d>1 y ambos cortes son d/330+O(1): el exponente del corte exterior mejora de escala d/30 a d/330.
+Here D_N=33P_N−P_N' and K_N is the COMPLETE Möbius sum, not an approximate polynomial or a prefix. In particular t_J(d)<d/30 for all d>1 and both cutoffs are d/330+O(1): the exponent of the exterior cutoff improves from scale d/30 to d/330.
 
-Se obtiene además sin barrido de N el rango uniforme
+One also obtains without a sweep over N the uniform range
 
-    K_N(x)>0 para TODOS2<=N<=129, x>=exp(2/3).           (RANGE)
+    K_N(x)>0 for ALL 2<=N<=129, x>=exp(2/3).           (RANGE)
 
-No se prueba signo de K en la región interior ni positividad de W en todos esos N.
+No sign of K in the interior region is proved, nor positivity of W for all those N.
 
-## 2. Corte racional por Jensen sobre los coeficientes
+## 2. Rational cutoff via Jensen on the coefficients
 
-Use los coeficientes positivos de P_N=Σp_jt^j. Los de D_N son
+Use the positive coefficients of P_N=Σp_jt^j. Those of D_N are
 
     D_j=p_j(3d+30j)/(2d−j)>0.
 
-Para d>1, sus cocientes de derivación satisfacen, j0..d−1,
+For d>1, their differentiation ratios satisfy, j=0..d−1,
 
     r_j=(j+1)D_(j+1)/D_j
        =63(d−j)/(2d−j−1)·(1+10/(d+10j)); r_d=0.
 
-La función f(z)=(d−z)/(2d−z−1) es decreciente y cóncava en[0,d]. Si L=D_N'(t)/D_N(t), la probabilidad con pesos D_jt^j/D_N(t) tiene media del índice tL. Así
+The function f(z)=(d−z)/(2d−z−1) is decreasing and concave on [0,d]. If L=D_N'(t)/D_N(t), the probability with weights D_jt^j/D_N(t) has index mean tL. Thus
 
     L=E r_j<=63(1+10/d)E f(j)
               <=63(1+10/d)f(tL).                       (JEN)
 
-Se tiene tL<d porque todos los coeficientes son positivos. En t=t_J se comprueba exactamente
+One has tL<d because all coefficients are positive. At t=t_J one checks exactly
 
     30=63(1+10/d)f(30t_J),
     30t_J<d,
 
-pues la diferencia después de multiplicar por el denominador positivo es −3d−660+990t+18900t/d. Si L>30, f(tL)<f(30t_J), contradiciendo JEN. Para t>=t_J, si30t>=d es inmediato L<d/t<=30; si30t<d se aplica la misma comparación por monotonía de f. Esto prueba LOG con t_J para TODOS N>=3 sin chequear cada fila.
+since the difference after multiplying by the positive denominator is −3d−660+990t+18900t/d. If L>30, f(tL)<f(30t_J), contradicting JEN. For t>=t_J, if 30t>=d it is immediate that L<d/t<=30; if 30t<d the same comparison applies by monotonicity of f. This proves LOG with t_J for ALL N>=3 without checking each row.
 
-La desigualdad t_J<d/30 equivale a d>1. Su expansión asintótica tiene término principal d/330. La logconcavidad de D de025 es compatible con esta prueba, pero no se necesita invocarla para interpolar filas.
+The inequality t_J<d/30 is equivalent to d>1. Its asymptotic expansion has leading term d/330. The log-concavity of D from 025 is compatible with this proof, but there is no need to invoke it to interpolate rows.
 
-## 3. Corte Riccati por la autocorrelación gamma
+## 3. Riccati cutoff via the gamma autocorrelation
 
-Escriba rho_N(t)=e^-ut P_N(t)>0 y q(t)=−rho_N'(t)/rho_N(t)>0 para t>0. La positividad se sigue de la representación de calor gamma de018. La recurrencia de p_j demuestra la ecuación diferencial
+Write rho_N(t)=e^-ut P_N(t)>0 and q(t)=−rho_N'(t)/rho_N(t)>0 for t>0. Positivity follows from the gamma heat representation of 018. The recurrence of p_j proves the differential equation
 
     rho_N''−(2d/t)rho_N'−u²rho_N=0,
     q'=q²+(2d/t)q−u².                                 (RIC)
 
-Como P_N tiene grado d y coeficiente principal positivo,
+Since P_N has degree d and positive leading coefficient,
 
     q(t)=u−d/t+O(t^-2),
-    q'(t)=d/t²+O(t^-3)>0 para t grande.
+    q'(t)=d/t²+O(t^-3)>0 for large t.
 
-Se puede demostrar una cota global de curvatura SIN citar una desigualdad especial de Bessel:
+A global curvature bound can be proved WITHOUT citing a special Bessel inequality:
 
     0<q'(t)<M_d=u²/(2d−1), t>0.                       (CURV)
 
-En efecto, al derivar RIC, si q'=0 se obtiene q''=−2dq/t²<0. Cualquier paso de valores no positivos a los valores positivos finales requeriría un cruce ascendente, imposible con esa derivada. Si q'=M_d, RIC da2dq/t=2dM_d−q², y por ello q''=2qM_d+q²/t>0. Cualquier valor por encima de M_d debería volver a bajar porque q'->0, pero todo cruce del nivel M_d tiene derivada positiva. También se excluyen los contactos exactos por el mismo argumento. Así CURV vale en todo t>0, no solo cerca del origen.
+Indeed, differentiating RIC, if q'=0 one gets q''=−2dq/t²<0. Any passage from nonpositive values to the final positive values would require an upward crossing, impossible with that derivative. If q'=M_d, RIC gives 2dq/t=2dM_d−q², and hence q''=2qM_d+q²/t>0. Any value above M_d would have to come back down because q'->0, but every crossing of the level M_d has positive derivative. Exact contacts are also excluded by the same argument. Thus CURV holds for all t>0, not only near the origin.
 
-La parte inferior de CURV y RIC dan
+The lower part of CURV and RIC give
 
     q(t)>sqrt[(d/t)²+u²]−d/t.                           (ROOT)
 
-Por otro lado D_N=e^ut rho_N(3/2+q), luego
+On the other hand D_N=e^ut rho_N(3/2+q), hence
 
     D_N'/D_N=u−q+q'/(3/2+q)
              <u−q+M_d/(3/2+q).
 
-El último lado es <=u−3/2=30 si q>=Q_d=sqrt(9/4+M_d). Para d>=2, Q_d<u. El lado derecho de ROOT alcanza Q_d exactamente en t_R=2dQ_d/(u²−Q_d²). Por tanto LOG vale con t_R para todo N>=3. Su término principal es3d/(u²−9/4)=d/330.
+The last side is <=u−3/2=30 if q>=Q_d=sqrt(9/4+M_d). For d>=2, Q_d<u. The right side of ROOT reaches Q_d exactly at t_R=2dQ_d/(u²−Q_d²). Therefore LOG holds with t_R for all N>=3. Its leading term is 3d/(u²−9/4)=d/330.
 
-Para N=2, D_N(t)=3/2+(2079/2)t; su logderivada es <=30 cuando t>=1/30−1/693, dando el caso separado sin usar un denominador de t_R no positivo.
+For N=2, D_N(t)=3/2+(2079/2)t; its log-derivative is <=30 when t>=1/30−1/693, giving the separate case without using a nonpositive denominator of t_R.
 
-## 4. Un rango entero de N sin certificados individuales
+## 4. A whole range of N without individual certificates
 
-El corte Riccati permite recuperar y extender analíticamente el sitio2/3 que025 certificaba solo para N129. Con x=2d−1,
+The Riccati cutoff allows recovering and analytically extending the site 2/3 that 025 certified only for N=129. With x=2d−1,
 
     t_R=(2/3)(x+1)sqrt[x(x+441)]/(440x−441).
 
-Dos veces su derivada logarítmica tiene signo del polinomio
+Twice its logarithmic derivative has the sign of the polynomial
 
     T(x)=880x³+192276x²−778365x−194481.
 
-La expansión T(5+y)=830594+1210395y+205476y²+880y³ tiene todos los coeficientes positivos. Por tanto t_R crece para d>=3. La comparación t_R(128)<2/3 se reduce a la desigualdad racional
+The expansion T(5+y)=830594+1210395y+205476y²+880y³ has all coefficients positive. Therefore t_R increases for d>=3. The comparison t_R(128)<2/3 reduces to the rational inequality
 
     9·128² Q_128² <(u²−Q_128²)².
 
-Para d=2 se comprueba la misma comparación racional; para d=1 se usa el corte lineal anterior. Son DOS comparaciones de los extremos de una fórmula monótona, no una campaña de certificados de129 filas. Esto prueba LOG para todo2<=N<=129,t>=2/3 y por§5 prueba RANGE.
+For d=2 the same rational comparison is checked; for d=1 the previous linear cutoff is used. These are TWO comparisons at the endpoints of a monotone formula, not a campaign of certificates for 129 rows. This proves LOG for all 2<=N<=129, t>=2/3 and by §5 proves RANGE.
 
-## 5. La cola Möbius completa y las celdas restantes
+## 5. The complete Möbius tail and the remaining cells
 
-La fórmula exacta es
+The exact formula is
 
     K_N(x)=x^-32Σ(m>=1)mu(m)m^-32D_N(logx+logm).
 
-Si logx>=t_*(N), integrar LOG da D_N(logx+logm)<=m^30D_N(logx). Por |mu|<=1 y Σ(m>=2)m^-2<=3/4,
+If logx>=t_*(N), integrating LOG gives D_N(logx+logm)<=m^30D_N(logx). By |mu|<=1 and Σ(m>=2)m^-2<=3/4,
 
     |K_N(x)/(x^-32D_N(logx))−1|<=3/4,
 
-que prueba TAIL con TODA la suma. No se resta una cola de signo desconocido sin controlarla.
+which proves TAIL with the WHOLE sum. No tail of unknown sign is subtracted without controlling it.
 
-Ponga X_N=exp(t_*(N)). La identidad (J_N/x)'=−K_N/x² y J_N/x->0 da, para x>=X_N,
+Set X_N=exp(t_*(N)). The identity (J_N/x)'=−K_N/x² and J_N/x->0 give, for x>=X_N,
 
-    J_N(x)=x∫_x^infinito K_N(t)t^-2dt
-      >=(x/4)∫_x^infinito t^-34D_N(logt)dt>0.           (JTAIL)
+    J_N(x)=x∫_x^infinity K_N(t)t^-2dt
+      >=(x/4)∫_x^infinity t^-34D_N(logt)dt>0.           (JTAIL)
 
-Para cualquier celda[n−1,n] con n−1>=X_N, la monotonía de J_N/x implica
+For any cell [n−1,n] with n−1>=X_N, monotonicity of J_N/x implies
 
     S_N(n)=H_(n−1)∫_(n−1)^nJ_N−logn J_N(n)
       >=[H_(n−1)(1−1/(2n))−logn]J_N(n)
       >=(3/4−log2)J_N(n)>0.                           (CELLTAIL)
 
-Las dos cotas armónicas empleadas, ya demostradas en el criterio celular, son H_(n−1)−logn>=1−log2 y H_(n−1)/(2n)<=1/4. JTAIL permite incluso sustituir J_N(n) por una integral gamma positiva explícita. Así la parte de ERR=−2ΣS_N(n) formada por esas celdas es favorable, con una cota cuantitativa completa.
+The two harmonic bounds used, already proved in the cellular criterion, are H_(n−1)−logn>=1−log2 and H_(n−1)/(2n)<=1/4. JTAIL even allows replacing J_N(n) by an explicit positive gamma integral. Thus the part of ERR=−2ΣS_N(n) formed by those cells is favorable, with a complete quantitative bound.
 
-El número de celdas interiores aún necesitadas de control queda acotado por ceil(X_N). En términos del exponente, pasa del corte previo de orden exp(d/30) a exp(d/330+O(1)). Sigue creciendo con N; no se ha eliminado el problema interior.
+The number of interior cells still needing control is bounded by ceil(X_N). In terms of the exponent, it goes from the previous cutoff of order exp(d/30) to exp(d/330+O(1)). It still grows with N; the interior problem has not been eliminated.
 
-## 6. Alcance
+## 6. Scope
 
-Se obtuvo un corte ANALÍTICO para todos N, y un rango2..129 con cola positiva desde un mismo sitio. No se requiere una nueva matriz ni un certificado polinómico por cada N. Para N129, combinado con S129(2)>33/100 ya auditado, CELLTAIL vuelve a dar ERR129<−33/50 completo; ese caso ya estaba probado por025 y no se cuenta como nueva cobertura de W.
+An ANALYTIC cutoff was obtained for all N, and a range 2..129 with positive tail from a single site. No new matrix or polynomial certificate per N is required. For N=129, combined with the already audited S129(2)>33/100, CELLTAIL again gives complete ERR129<−33/50; that case was already proved by 025 and is not counted as new W coverage.
 
-Para otros N siguen faltando los promedios interiores. Ninguna cota de cola aislada prueba el signo de W ni todos los bloques. Las nuevas fórmulas sirven para localizar y reducir cuantitativamente la obligación restante, conservando la aritmética firmada y todos los contactos.
+For other N the interior averages are still missing. No isolated tail bound proves the sign of W or all the blocks. The new formulas serve to locate and quantitatively reduce the remaining obligation, keeping the signed arithmetic and all contacts.

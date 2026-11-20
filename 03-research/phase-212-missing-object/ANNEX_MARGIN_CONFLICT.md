@@ -1,59 +1,59 @@
-# Anexo: el conflicto sobre el margen de λ_A(T)
+# Annex: the conflict over the margin of λ_A(T)
 
-Nota de referencia. Resuelve la contradicción registrada en `05-meta-and-planning/ROUTES-MASTER-INDEX.md`
-(l.66, l.590–592, l.833–837, l.4351, l.4484, l.4724, l.4849, l.4979, l.5306) entre la cota doblemente
-exponencial y la cota simplemente exponencial para el fondo `λ_A(T) = λ_min(a_T|P_T)`. Donde una fuente
-menciona el enunciado famoso, se escribe «[H]».
+Reference note. It resolves the contradiction recorded in `05-meta-and-planning/ROUTES-MASTER-INDEX.md`
+(l.66, l.590–592, l.833–837, l.4351, l.4484, l.4724, l.4849, l.4979, l.5306) between the doubly
+exponential bound and the simply exponential bound for the bottom `λ_A(T) = λ_min(a_T|P_T)`. Where a source
+mentions the famous statement, «[H]» is written.
 
-Notación de Paper 47 (P47): `a_T(F) = C₀‖F‖² + 𝔈(c_F) − Σ_n v_n c_F(log n)`, `P_T = {A(F) = B(F) = 0}`,
-`A(F) = ∫F e^{t/2}`, `B(F) = ∫F e^{−t/2}`, `W_T = a_T + 2AB` (def:W, eq:W), `λ_A = λ_min(a_T|P_T)` (fondo
-«primitivo restringido»), `λ_P` = fondo sobre el cono `K_prim` (def:PD), `λ_W = λ_min(W_T)` sobre todo el
-dominio (fondo «completo»). Normalización: `‖·‖ = L²(I_T)`.
+Notation of Paper 47 (P47): `a_T(F) = C₀‖F‖² + 𝔈(c_F) − Σ_n v_n c_F(log n)`, `P_T = {A(F) = B(F) = 0}`,
+`A(F) = ∫F e^{t/2}`, `B(F) = ∫F e^{−t/2}`, `W_T = a_T + 2AB` (def:W, eq:W), `λ_A = λ_min(a_T|P_T)` («restricted
+primitive» bottom), `λ_P` = bottom on the cone `K_prim` (def:PD), `λ_W = λ_min(W_T)` on the whole
+domain («complete» bottom). Normalization: `‖·‖ = L²(I_T)`.
 
 ---
 
-## §1 Enunciados exactos
+## §1 Exact statements
 
-**(S1) R160_M4_R1, Teorema B(i)** (`03-research/phase-160-row-d-infinite-T/R160_M4_R1.md`, l.334–336):
+**(S1) R160_M4_R1, Theorem B(i)** (`03-research/phase-160-row-d-infinite-T/R160_M4_R1.md`, l.334–336):
 
 > «There are absolute effective constants `C, c, T₀` such that for every `T ≥ T₀`:
 > (i) *(upper)* `𝔤̃_ev(T), 𝔤̃_odd(T) ≤ Ce^{cT}e^{−2πe^{2T}}`, and
 > `λ^W_T ≤ λ^prim_T ≤ λ^A_T ≤ Ce^{cT}e^{−2πe^{2T}}` [both].»
 
-Cantidad: `λ^A_T = λ_min(A_T|P_T)` con las definiciones de P47 «verbatim» (l.157–161; misma `a_T`, mismo
-`P_T`, norma `L²`). Rango: `T ≥ T₀` (no explícito). Etiqueta: PROVED, «unconditional» (tabla l.54).
-Nota de registro R1 (l.62, Remark B4 l.393–398): la ley doblemente exponencial «is already in 106.09 Thms 2–3».
+Quantity: `λ^A_T = λ_min(A_T|P_T)` with the definitions of P47 «verbatim» (l.157–161; same `a_T`, same
+`P_T`, `L²` norm). Range: `T ≥ T₀` (not explicit). Label: PROVED, «unconditional» (table l.54).
+Record note R1 (l.62, Remark B4 l.393–398): the doubly exponential law «is already in 106.09 Thms 2–3».
 
 **(S2) Panel R160_PC_R1** (`R160_PC_R1.md`, l.198–202):
 
 > «Thm B(i): `X_T = Mχ_T − a u_ev ∈ P_T` (even, `ℓ_ev = 0`), `𝔞_T(X_T) = W_*(X_T − M) = W_*(−E^M_T − a u_ev)
 > ≤ Ce^{cT}e^{−2πe^{2T}}`, `‖X_T‖ ≥ ½‖M‖`. Verified. Hence `λ^A_T ≤ Ce^{cT}e^{−2πe^{2T}}`, unconditional.»
 
-**(S3) G2_B6_R2, Teorema M / Corolario M1** (`03-research/phase-159-row-d-two-front-construction/G2_B6_R2.md`,
+**(S3) G2_B6_R2, Theorem M / Corollary M1** (`03-research/phase-159-row-d-two-front-construction/G2_B6_R2.md`,
 l.15–17, l.191–194):
 
 > «Theorem M (PROVED, unconditional, new): for every `ε > 0` and every `T ≥ T₀(ε)`,
 > `λ^W_T ≤ λ^P_T ≤ λ_min(A_T|P_T) ≤ exp(−e^{(2−ε)T})`.»
 
-Misma cantidad `λ_min(A_T|P_T)`. Etiqueta PROVED. (No se re-deriva aquí: (S1) la contiene y la mejora.)
+Same quantity `λ_min(A_T|P_T)`. Label PROVED. (It is not rederived here: (S1) contains and improves it.)
 
-**(S4) 106_09, Teorema 3** (`03-research/phase-106-global-modular-star-audit/106_09_NEAR_RADICAL_CLUSTER_AND_GAP_COLLAPSE.md`,
+**(S4) 106_09, Theorem 3** (`03-research/phase-106-global-modular-star-audit/106_09_NEAR_RADICAL_CLUSTER_AND_GAP_COLLAPSE.md`,
 l.291–301, §6 l.410–416):
 
 > «For all sufficiently large `L`, `μ⁺_{1,L} ≤ ε_L`, `μ⁻_{0,L} ≤ ε_L`», `ε_L = Cλ^M e^{−cλ²}`, `λ = e^L`;
 > «Unconditional: the truncated Riemann-kernel derivative spaces have Weil matrices `O(λ^M e^{−cλ²})`».
 
-Cantidad: autovalores (segundo par, primero impar) de la forma completa `QW` en `[−L, L]`, no `λ_A`
-directamente. Etiqueta propia: unconditional. Remark B4 de (S1) afirma que el espacio de prueba
-`span{v₀, v₂}` contiene un vector con `ℓ_ev = 0`, lo que transfiere la cota a `λ^A`.
+Quantity: eigenvalues (second even, first odd) of the complete form `QW` on `[−L, L]`, not `λ_A`
+directly. Own label: unconditional. Remark B4 of (S1) states that the test space
+`span{v₀, v₂}` contains a vector with `ℓ_ev = 0`, which transfers the bound to `λ^A`.
 
-**(S5) Paper 47, thm:margin y cor:margin1** (`04-papers/47-row-d-dual-certificates/main.tex`, l.3530–3580):
+**(S5) Paper 47, thm:margin and cor:margin1** (`04-papers/47-row-d-dual-certificates/main.tex`, l.3530–3580):
 
 > «For every `T ≥ 1`, `λ_W ≤ λ_P ≤ λ_A ≤ 4·10⁹ T e^{−15.449 T}`.»
 
-Cantidad: `λ_A` de P47. Rango `T ≥ 1`. PROVED (prueba vía la fórmula explícita sobre `P_T`, lem:roughEF,
-con un vector de prueba que anula sólo el primer cero; nota al pie: «a property of that family, not a sharp
-rate»). rem:moriceiling (l.3582–3591): cita una cota `exp(−4π e^{2T})` de Mori **para `λ_W`**, «plausible,
+Quantity: `λ_A` of P47. Range `T ≥ 1`. PROVED (proof via the explicit formula on `P_T`, lem:roughEF,
+with a test vector that annihilates only the first zero; footnote: «a property of that family, not a sharp
+rate»). rem:moriceiling (l.3582–3591): cites a bound `exp(−4π e^{2T})` of Mori **for `λ_W`**, «plausible,
 unverified»; «It bounds `λ_W ≤ λ_A` and so does not replace Corollary cor:margin1 as a bound on `λ_A`.»
 
 **(S6) Paper 48 §subsec:margin** (`04-papers/48-row-d-route-map/main.tex`, l.265–276):
@@ -61,116 +61,116 @@ unverified»; «It bounds `λ_W ≤ λ_A` and so does not replace Corollary cor:
 > «A doubly exponential upper bound `exp(−e^{(2−ε)T})` for `λ_A` is *not* proved; earlier versions of this
 > map stated it as a theorem, and that statement is withdrawn.»
 
-Fuente declarada de la retirada (tabla l.945): «index correction after the shape theorem of P47». Ningún
-paso de (S1) ni de (S3) es señalado como fallido.
+Declared source of the withdrawal (table l.945): «index correction after the shape theorem of P47». No
+step of (S1) or (S3) is pointed out as failing.
 
-**(S7) Índice 06, entrada [margin]** (`ROUTES-TRIED-INDEX/06_OPEN_RESIDUES_DEAD_SUBROUTES.md`, l.19 en HEAD):
+**(S7) Index 06, entry [margin]** (`ROUTES-TRIED-INDEX/06_OPEN_RESIDUES_DEAD_SUBROUTES.md`, l.19 at HEAD):
 
 > «The doubly exponential estimate cited in P47 rem:moriceiling concerns λ_W, is recorded there as
 > unverified, and must not be transferred to λ_A (λ_W≤λ_A has the wrong direction for that transfer).»
 
 ---
 
-## §2 ¿Es la misma cantidad?
+## §2 Is it the same quantity?
 
-(S1), (S2), (S3), (S5), (S6) hablan todos de `λ_A(T) = λ_min(a_T|P_T)` con la normalización de P47.
-(S1) declara usar las definiciones de P47 textualmente, y su `𝔞_*` (D3) restringido a `𝒟_T` coincide con
-`a_T` (`Σ (v_n/2)[c(log n) + c(−log n)] = Σ v_n c(log n)` por simetría de `c_F`).
+(S1), (S2), (S3), (S5), (S6) all speak of `λ_A(T) = λ_min(a_T|P_T)` with the normalization of P47.
+(S1) declares that it uses the definitions of P47 verbatim, and its `𝔞_*` (D3) restricted to `𝒟_T` coincides with
+`a_T` (`Σ (v_n/2)[c(log n) + c(−log n)] = Σ v_n c(log n)` by symmetry of `c_F`).
 
-(S7) habla de **otra** estimación: la de Mori citada en rem:moriceiling, que acota `λ_W`. La relación es
-`λ_W ≤ λ_P ≤ λ_A` (P47 rem:Kprim: `W_T = a_T` cuando `A·B̄` es imaginario puro, y `P_T ⊂ K_prim`; CITED,
-P47). Por tanto una cota superior de `λ_W` no da nada para `λ_A`; (S7) tiene razón **sobre Mori**.
+(S7) speaks of **another** estimate: Mori's, cited in rem:moriceiling, which bounds `λ_W`. The relation is
+`λ_W ≤ λ_P ≤ λ_A` (P47 rem:Kprim: `W_T = a_T` when `A·B̄` is purely imaginary, and `P_T ⊂ K_prim`; CITED,
+P47). Hence an upper bound for `λ_W` gives nothing for `λ_A`; (S7) is right **about Mori**.
 
-El error está en la propagación: el índice maestro (l.592, l.4351, l.4484, l.5306) y P48 aplicaron la
-corrección de (S7) al Teorema M y a (S1), que no pasan por `λ_W`: ambos construyen un vector de prueba
-**dentro de `P_T`** y acotan `a_T` directamente. Las dos cotas doblemente exponenciales del corpus son,
-pues, distintas: la de Mori (`λ_W`, CITED no verificada) y la de (S1)/(S3) (`λ_A`, memo PROVED).
-
----
-
-## §3 La prueba de (S1) y su control
-
-Objetos (R160_M4_R1 §1): `K_Pó(t) = Σ_n (4π²n⁴e^{9t/2} − 6πn²e^{5t/2}) e^{−πn²e^{2t}}`, con `Φ_{K_Pó} = ξ`
-(P46 Def–Thm 11.7, (11.9)); `M := −K_Pó″ + ¼K_Pó`, de modo que `Φ_M(s) = s(1−s)ξ(s)`, `A(M) = B(M) = 0`,
-`M` par y no nulo. Corte `χ_T ∈ C_c^∞(I_T)`, `χ_T = 1` en `[−T+θ, T−θ]`, `θ = e^{−2T}`. Cola
-`E := M(1−χ_T)`. `u_ev ∈ C_c^∞(−½,½)` par con `ℓ_ev(u_ev) = 1`; `a := −ℓ_ev(E)`.
-
-**Vector de prueba:** `X_T := Mχ_T − a u_ev ∈ C_c^∞(I_T)`, par, `ℓ_ev(X_T) = 0`, luego `A = B = 0`: `X_T ∈ P_T`.
-
-Pasos y control:
-
-1. **`W_*` en el radical (Lema 2(a),(c)).** Para `X, Y` en la clase de Weil `D^W`,
-   `W_*(X,Y) = Σ_ρ Φ_X(ρ)Φ_Y(1−ρ)` (fórmula explícita, P46 Thm 11.3; CITED). Como `Φ_M` se anula en todo
-   cero de `ξ` **dondequiera que esté**, `W_*(M, ·) ≡ 0`. No usa ninguna información sobre la posición de
-   los ceros: correcto. La extensión a `Z ∈ 𝒟_T` usa densidad de `C_c^∞(I_T)` y la cota 2(b).
-   *Control:* para `Z ∈ C_c^∞(I_T) ⊂ D^W` la identidad es directa; 2(b) es Cauchy–Schwarz más
-   `m ≤ C₀ + c(1+|τ|)` y Plancherel. Correcto.
-2. **Coincidencia de formas.** Para `X_T ∈ C_c^∞(I_T)`, `c_{X_T}(log n) = 0` si `log n ≥ 2T`, así que la
-   suma sobre todo `n ≥ 2` de `W_*` coincide con la suma truncada de `a_T`; y `W_T(X_T) = a_T(X_T)` porque
-   `AB = 0`. Es la misma identidad que P47 usa en el paso (2) de thm:margin (lem:roughEF). Correcto.
-3. **Reducción a la cola.** `X_T − M = −(E + a u_ev) =: −Y`, `Y ∈ D^W`, par, `ℓ_ev(Y) = 0`. Por el paso 1,
-   `a_T(X_T) = W_*(X_T) = W_*(Y) = W_*(E) + 2a W_*(u_ev, E) + a² W_*(u_ev)`. Correcto (bilinealidad).
-4. **Tamaño de la cola (Lema 3).** `|K_Pó^{(j)}(t)| ≤ c_j e^{(9/2+2j)|t|} e^{−πe^{2|t|}}`; en el soporte de
-   `E`, `e^{2|t|} ≥ e^{2T} − 2`, y `|χ_T^{(k)}| ≤ c_k e^{2kT}`. De ahí `‖E‖_{H¹}, ∫|E|e^{|t|/2}, |a| ≤
-   Ce^{cT}e^{−πe^{2T}}`. *Control:* correcto; el factor `θ^{−k}` es sólo `e^{2kT}`, absorbido en `e^{cT}`.
-5. **`|W_*(E)| ≤ Ce^{cT}e^{−2πe^{2T}}`.** Término `2AB(E)`: producto de dos cantidades `O(e^{cT}e^{−πe^{2T}})`.
-   Término arquimediano: `≤ C‖E‖²_{H¹}`. Primos con `log n ≤ 2T+1`: `Σ v_n ≤ Ce^T` por `‖E‖²`. Primos con
-   `log n > 2T+1`: `|c_E(log n)| ≤ ‖E‖_{L¹} sup_{|s| ≥ (log n)/2}|E(s)|`, y el supremo es `≤ e^{−πn^{…}}`;
-   la memoria escribe «`O(e^{−πe^{2T+1}})`» para la suma, lo que es descuidado (falta el factor `‖E‖_{L¹}`),
-   pero con ese factor el término es `≤ Ce^{cT}e^{−πe^{2T}}·e^{−πe^{2T+1}} ≤ Ce^{cT}e^{−2πe^{2T}}`; y aun
-   sin él, `e^{−πe^{2T+1}} ≤ e^{−2πe^{2T}}` porque `e > 2`. Correcto.
-6. **Términos cruzados.** `|W_*(u_ev, E)| ≤ Ce^{T/2}‖u_ev‖ 𝔪_T(E)` (Lema 2(b)) y `|a| ≤ Ce^{cT}e^{−πe^{2T}}`
-   dan `O(e^{cT}e^{−2πe^{2T}})`; `a² W_*(u_ev)` idem (`u_ev` fijo). Correcto.
-7. **Normalización.** `‖X_T‖ ≥ ‖M‖ − ‖E‖ − |a|‖u_ev‖ ≥ ½‖M‖` para `T ≥ T₀`, luego
-   `λ_A ≤ a_T(X_T)/‖X_T‖² ≤ 4Ce^{cT}e^{−2πe^{2T}}/‖M‖²`. Correcto.
-
-**Qué paso declara fallido P48 u otra fuente:** ninguno. P48 retira el enunciado sin señalar un paso; su
-única fuente declarada es la corrección del índice (S7), que se refiere a la cota de Mori sobre `λ_W`.
-Ninguna memoria posterior localizada objeta el Lema 2, el Lema 3 o el vector `X_T`.
-
-**Paso más débil, según este control:** el Lema 2(a) aplicado a pares en `D^W` sin soporte compacto: la
-fórmula explícita para funciones de decaimiento `O(e^{−(1+ε)|t|})` con dos derivadas, con la suma de primos
-sobre todo `n` y la suma sobre ceros absolutamente convergente. Es la versión estándar de la fórmula
-explícita de Weil (P46 Thm 11.3, (11.2), (E3d)); la convergencia absoluta de `Σ_ρ Φ_X(ρ)Φ_Y(1−ρ)` para
-`X, Y ∈ D^W` se sigue de `Φ_{g″}(s) = (s−½)²Φ_g(s)` (dos integraciones por partes) y de la densidad de
-ceros. Lo considero correcto; queda como dependencia CITED de P46, no re-derivada aquí línea por línea.
-Las constantes `C, c, T₀` no son explícitas: la cota no es numéricamente utilizable en una ventana dada.
+The error is in the propagation: the master index (l.592, l.4351, l.4484, l.5306) and P48 applied the
+correction of (S7) to Theorem M and to (S1), which do not go through `λ_W`: both build a test vector
+**inside `P_T`** and bound `a_T` directly. The two doubly exponential bounds of the corpus are
+therefore distinct: Mori's (`λ_W`, CITED unverified) and that of (S1)/(S3) (`λ_A`, memo PROVED).
 
 ---
 
-## §4 Veredicto y consecuencias para OBJECT_SPEC
+## §3 The proof of (S1) and its check
 
-**Veredicto: (b).** Para `λ_A(T)` sobre `P_T` tal como lo define P47, está probado (memoria R160_M4_R1,
-Teorema B(i); verificado por el panel R160_PC_R1; re-controlado paso a paso en §3):
+Objects (R160_M4_R1 §1): `K_Pó(t) = Σ_n (4π²n⁴e^{9t/2} − 6πn²e^{5t/2}) e^{−πn²e^{2t}}`, with `Φ_{K_Pó} = ξ`
+(P46 Def–Thm 11.7, (11.9)); `M := −K_Pó″ + ¼K_Pó`, so that `Φ_M(s) = s(1−s)ξ(s)`, `A(M) = B(M) = 0`,
+`M` even and nonzero. Cutoff `χ_T ∈ C_c^∞(I_T)`, `χ_T = 1` on `[−T+θ, T−θ]`, `θ = e^{−2T}`. Tail
+`E := M(1−χ_T)`. `u_ev ∈ C_c^∞(−½,½)` even with `ℓ_ev(u_ev) = 1`; `a := −ℓ_ev(E)`.
 
-  `λ_A(T) ≤ C e^{cT} e^{−2π e^{2T}}`  para `T ≥ T₀`, con constantes absolutas efectivas no explicitadas.
+**Test vector:** `X_T := Mχ_T − a u_ev ∈ C_c^∞(I_T)`, even, `ℓ_ev(X_T) = 0`, hence `A = B = 0`: `X_T ∈ P_T`.
 
-Etiqueta honesta: **PROVED (en el corpus de memorias), dependiente de P46 Thm 11.3 (CITED)**, no integrado
-en P47. Lo que P47 contiene como teorema del paper es sólo la cota simple (S5), PROVED con constantes
-explícitas para `T ≥ 1`. La retirada de P48 y las entradas del índice que dicen «doble exponencial no
-probada para `λ_A`» proceden de transferir a (S1)/(S3) una corrección escrita para la cota de Mori sobre
-`λ_W` (S7); esa transferencia es incorrecta. (S7) sigue siendo correcto respecto de Mori. El Teorema M
-(S3) queda superado por (S1) y no se re-deriva aquí. 106_09 (S4) es una cota de autovalores de la forma
-completa; su transferencia a `λ_A` depende de Remark B4 (vector con `ℓ_ev = 0` en el espacio de prueba),
-que no se re-controla aquí y no es necesaria, porque (S1) da directamente el vector `X_T ∈ P_T`.
+Steps and check:
 
-Mientras P47 no incorpore (S1), lo citable en un paper es (S5); en las notas de la fase 212 se usa (S1).
+1. **`W_*` on the radical (Lemma 2(a),(c)).** For `X, Y` in the Weil class `D^W`,
+   `W_*(X,Y) = Σ_ρ Φ_X(ρ)Φ_Y(1−ρ)` (explicit formula, P46 Thm 11.3; CITED). Since `Φ_M` vanishes at every
+   zero of `ξ` **wherever it is**, `W_*(M, ·) ≡ 0`. It uses no information about the position of
+   the zeros: correct. The extension to `Z ∈ 𝒟_T` uses density of `C_c^∞(I_T)` and bound 2(b).
+   *Check:* for `Z ∈ C_c^∞(I_T) ⊂ D^W` the identity is direct; 2(b) is Cauchy–Schwarz plus
+   `m ≤ C₀ + c(1+|τ|)` and Plancherel. Correct.
+2. **Coincidence of forms.** For `X_T ∈ C_c^∞(I_T)`, `c_{X_T}(log n) = 0` if `log n ≥ 2T`, so the
+   sum over all `n ≥ 2` of `W_*` coincides with the truncated sum of `a_T`; and `W_T(X_T) = a_T(X_T)` because
+   `AB = 0`. It is the same identity that P47 uses in step (2) of thm:margin (lem:roughEF). Correct.
+3. **Reduction to the tail.** `X_T − M = −(E + a u_ev) =: −Y`, `Y ∈ D^W`, even, `ℓ_ev(Y) = 0`. By step 1,
+   `a_T(X_T) = W_*(X_T) = W_*(Y) = W_*(E) + 2a W_*(u_ev, E) + a² W_*(u_ev)`. Correct (bilinearity).
+4. **Size of the tail (Lemma 3).** `|K_Pó^{(j)}(t)| ≤ c_j e^{(9/2+2j)|t|} e^{−πe^{2|t|}}`; on the support of
+   `E`, `e^{2|t|} ≥ e^{2T} − 2`, and `|χ_T^{(k)}| ≤ c_k e^{2kT}`. Hence `‖E‖_{H¹}, ∫|E|e^{|t|/2}, |a| ≤
+   Ce^{cT}e^{−πe^{2T}}`. *Check:* correct; the factor `θ^{−k}` is only `e^{2kT}`, absorbed in `e^{cT}`.
+5. **`|W_*(E)| ≤ Ce^{cT}e^{−2πe^{2T}}`.** Term `2AB(E)`: product of two quantities `O(e^{cT}e^{−πe^{2T}})`.
+   Archimedean term: `≤ C‖E‖²_{H¹}`. Primes with `log n ≤ 2T+1`: `Σ v_n ≤ Ce^T` times `‖E‖²`. Primes with
+   `log n > 2T+1`: `|c_E(log n)| ≤ ‖E‖_{L¹} sup_{|s| ≥ (log n)/2}|E(s)|`, and the supremum is `≤ e^{−πn^{…}}`;
+   the memo writes «`O(e^{−πe^{2T+1}})`» for the sum, which is careless (the factor `‖E‖_{L¹}` is missing),
+   but with that factor the term is `≤ Ce^{cT}e^{−πe^{2T}}·e^{−πe^{2T+1}} ≤ Ce^{cT}e^{−2πe^{2T}}`; and even
+   without it, `e^{−πe^{2T+1}} ≤ e^{−2πe^{2T}}` because `e > 2`. Correct.
+6. **Cross terms.** `|W_*(u_ev, E)| ≤ Ce^{T/2}‖u_ev‖ 𝔪_T(E)` (Lemma 2(b)) and `|a| ≤ Ce^{cT}e^{−πe^{2T}}`
+   give `O(e^{cT}e^{−2πe^{2T}})`; `a² W_*(u_ev)` likewise (`u_ev` fixed). Correct.
+7. **Normalization.** `‖X_T‖ ≥ ‖M‖ − ‖E‖ − |a|‖u_ev‖ ≥ ½‖M‖` for `T ≥ T₀`, hence
+   `λ_A ≤ a_T(X_T)/‖X_T‖² ≤ 4Ce^{cT}e^{−2πe^{2T}}/‖M‖²`. Correct.
 
-**Consecuencias para el objeto.**
+**Which step P48 or another source declares failing:** none. P48 withdraws the statement without pointing to a step; its
+only declared source is the index correction (S7), which refers to Mori's bound on `λ_W`.
+No later memo located objects to Lemma 2, Lemma 3 or the vector `X_T`.
 
-- Con (S1): una identidad «`a_T = expresión no negativa + resto`» que pretenda dar el signo debe controlar
-  el resto con precisión relativa por debajo de `Ce^{cT}e^{−2πe^{2T}}` en la ventana `T`; ya en `T = 2`
-  eso es del orden de `e^{−340}`. Toda cota perturbativa, de compacidad o de brecha más grosera no decide el
-  signo. En particular el término «manifiestamente no negativo» no puede tener mínimo sobre `P_T` acotado
-  inferiormente por nada mayor; tiene que anularse (a esa escala) sobre el truncado `Mχ_T` del núcleo de
-  Riemann, que es un casi-vector nulo explícito del objeto. Esto es un falsificador interno útil: el
-  objeto debe evaluar `X_T` en `O(e^{cT}e^{−2πe^{2T}})`.
-- Con sólo (S5): el umbral sería `4·10⁹Te^{−15.449T}`, mucho más permisivo; diseñar con ese umbral
-  subestimaría la precisión necesaria en una escala doblemente exponencial. Por (S1), el umbral de diseño
-  correcto es el doblemente exponencial.
-- (S1) es sólo cota superior: no da información sobre el signo (B(ii) de la misma memoria da la
-  dirección inversa sólo hasta un defecto `e^{cT}e^{−πe^{2T}}`, sin signo).
+**Weakest step, according to this check:** Lemma 2(a) applied to pairs in `D^W` without compact support: the
+explicit formula for functions with decay `O(e^{−(1+ε)|t|})` with two derivatives, with the prime sum
+over all `n` and the sum over zeros absolutely convergent. It is the standard version of Weil's explicit
+formula (P46 Thm 11.3, (11.2), (E3d)); absolute convergence of `Σ_ρ Φ_X(ρ)Φ_Y(1−ρ)` for
+`X, Y ∈ D^W` follows from `Φ_{g″}(s) = (s−½)²Φ_g(s)` (two integrations by parts) and from the density of
+zeros. I consider it correct; it remains a CITED dependence on P46, not rederived here line by line.
+The constants `C, c, T₀` are not explicit: the bound is not numerically usable in a given window.
 
-**Corrección pendiente (para quien edite el índice y P48, no hecha aquí):** las entradas l.592, l.837,
-l.4351, l.4484, l.5306 del índice maestro y P48 l.275–276 deben distinguir la cota de Mori (`λ_W`, CITED no
-verificada) de la de R160_M4_R1 B(i) (`λ_A`, PROVED en memoria, no integrada en P47).
+---
+
+## §4 Verdict and consequences for OBJECT_SPEC
+
+**Verdict: (b).** For `λ_A(T)` on `P_T` as defined by P47, it is proved (memo R160_M4_R1,
+Theorem B(i); verified by the panel R160_PC_R1; rechecked step by step in §3):
+
+  `λ_A(T) ≤ C e^{cT} e^{−2π e^{2T}}`  for `T ≥ T₀`, with effective absolute constants not made explicit.
+
+Honest label: **PROVED (in the memo corpus), dependent on P46 Thm 11.3 (CITED)**, not integrated
+in P47. What P47 contains as a theorem of the paper is only the simple bound (S5), PROVED with explicit
+constants for `T ≥ 1`. The withdrawal in P48 and the index entries saying «doubly exponential not
+proved for `λ_A`» come from transferring to (S1)/(S3) a correction written for Mori's bound on
+`λ_W` (S7); that transfer is incorrect. (S7) remains correct regarding Mori. Theorem M
+(S3) is superseded by (S1) and is not rederived here. 106_09 (S4) is an eigenvalue bound for the complete
+form; its transfer to `λ_A` depends on Remark B4 (vector with `ℓ_ev = 0` in the test space),
+which is not rechecked here and is not necessary, because (S1) directly gives the vector `X_T ∈ P_T`.
+
+As long as P47 does not incorporate (S1), what is citable in a paper is (S5); in the notes of phase 212 (S1) is used.
+
+**Consequences for the object.**
+
+- With (S1): an identity «`a_T = non-negative expression + remainder`» intended to give the sign must control
+  the remainder with relative precision below `Ce^{cT}e^{−2πe^{2T}}` in the window `T`; already at `T = 2`
+  that is of order `e^{−340}`. Every coarser perturbative, compactness or gap bound does not decide the
+  sign. In particular the «manifestly non-negative» term cannot have a minimum on `P_T` bounded
+  below by anything larger; it has to vanish (at that scale) on the truncation `Mχ_T` of the Riemann
+  kernel, which is an explicit near-null vector of the object. This is a useful internal falsifier: the
+  object must evaluate `X_T` within `O(e^{cT}e^{−2πe^{2T}})`.
+- With only (S5): the threshold would be `4·10⁹Te^{−15.449T}`, much more permissive; designing with that threshold
+  would underestimate the precision needed on a doubly exponential scale. By (S1), the correct design
+  threshold is the doubly exponential one.
+- (S1) is only an upper bound: it gives no information about the sign (B(ii) of the same memo gives the
+  reverse direction only up to a defect `e^{cT}e^{−πe^{2T}}`, without sign).
+
+**Pending correction (for whoever edits the index and P48, not done here):** entries l.592, l.837,
+l.4351, l.4484, l.5306 of the master index and P48 l.275–276 must distinguish Mori's bound (`λ_W`, CITED
+unverified) from that of R160_M4_R1 B(i) (`λ_A`, PROVED in memo, not integrated in P47).

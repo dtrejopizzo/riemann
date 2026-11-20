@@ -1,242 +1,242 @@
-# POWER_CONFLUENT_BRIDGE_014 — Una sola tasa confluente basta, en norma fuerte
+# POWER_CONFLUENT_BRIDGE_014 — A single confluent rate suffices, in strong norm
 
-Estado: PROVED. Nueva precisión del puente: no se usa sólo densidad L². Papers intactos.
+Status: PROVED. New precision of the bridge: not only L² density is used. Papers untouched.
 
-## 1. Antecedentes y diferencia
+## 1. Antecedents and difference
 
-Consultados las reglas del proyecto, índice/grid/crucigrama según las auditorías previas; POWER_BRIDGE_002, POWER_PACKET_SCOPE_AUDIT_009, POWER_COMMON_TRANSFER_010 y certificados confluentes004–013. El puente002 demostraba suficiencia de una escalera fija de tasas distintas32+k mediante una norma fraccionaria ponderada. La diferencia aquí es probar densidad fuerte de TODOS los grados con UNA MISMA tasa u fija. No se atribuye signo a esa densidad: la positividad de todos los bloques sigue siendo una obligación aparte.
+Consulted the project rules, index/grid/crossword according to the previous audits; POWER_BRIDGE_002, POWER_PACKET_SCOPE_AUDIT_009, POWER_COMMON_TRANSFER_010 and confluent certificates004–013. Bridge002 proved sufficiency of a fixed ladder of distinct rates32+k via a weighted fractional norm. The difference here is to prove strong density of ALL degrees with ONE SAME fixed rate u. No sign is attributed to that density: positivity of all blocks remains a separate obligation.
 
-## 2. Lema elemental: exponenciales por polinomios densas en H¹ de la semirrecta
+## 2. Elementary lemma: exponentials times polynomials dense in H¹ of the half-line
 
-Para cualquier a>0,
+For any a>0,
 
     span{y^k exp(-ay): k=0,1,...}
 
-es denso en H¹(0,infinito), sin condición de valor en0.
+is dense in H¹(0,infinito), with no condition on the value at0.
 
-Prueba. Basta mostrar que su ortogonal para el producto H¹ es cero. Sea h en ese ortogonal; complejificar si hace falta. Defina para Re z>0 la función analítica bilineal
+Proof. It suffices to show that its orthogonal complement for the H¹ product is zero. Let h be in that orthogonal complement; complexify if needed. Define for Re z>0 the bilinear analytic function
 
     J(z)=integral_0^infinito [h(y)e^(-zy)-z h'(y)e^(-zy)]dy.
 
-Todas las derivadas respecto de z convergen localmente por Cauchy--Schwarz y el decaimiento exponencial. La ortogonalidad a y^k e^(-ay) es exactamente J^(k)(a)=0 para todo k, pues derivar también el segundo término reproduce la derivada temporal del test. Por analiticidad, J es idénticamente cero en el semiplano conexo Re z>0.
+All derivatives with respect to z converge locally by Cauchy--Schwarz and the exponential decay. Orthogonality to y^k e^(-ay) is exactly J^(k)(a)=0 for all k, since differentiating the second term too reproduces the temporal derivative of the test. By analyticity, J is identically zero on the connected half-plane Re z>0.
 
-Escriba H(z)=integral h(y)e^(-zy)dy. Integrar h' por partes da
+Write H(z)=integral h(y)e^(-zy)dy. Integrating h' by parts gives
 
     integral h'(y)e^(-zy)dy=-h(0)+zH(z),
     J(z)=(1-z²)H(z)+z h(0).
 
-La integración es legítima para H¹: tiene traza en0, y el extremo en infinito se anula contra e^(-zy). Evaluar en z1, donde H es analítica, da h(0)=0. Así (1-z²)H(z)=0 y H es cero en todo Re z>0. La unicidad se puede verificar tomando cualquier vertical Re z=c>0: es la transformada Fourier de la función integrable e^(-cy)h(y) extendida por cero. Por tanto h=0. El teorema de proyección en Hilbert demuestra la densidad anunciada. No se impone una condición de Robin al cierre: el término h(0) fue precisamente necesario para descartarla.
+The integration is legitimate for H¹: it has a trace at0, and the endpoint at infinity vanishes against e^(-zy). Evaluating at z1, where H is analytic, gives h(0)=0. Thus (1-z²)H(z)=0 and H is zero on all of Re z>0. Uniqueness can be checked by taking any vertical Re z=c>0: it is the Fourier transform of the integrable function e^(-cy)h(y) extended by zero. Hence h=0. The Hilbert projection theorem proves the announced density. No Robin condition is imposed on the closure: the term h(0) was precisely necessary to rule it out.
 
-## 3. Norma ponderada que controla toda la forma
+## 3. Weighted norm controlling the whole form
 
-Fije u>1/2 y elija eta con1/2<eta<u. Ponga
+Fix u>1/2 and choose eta with1/2<eta<u. Set
 
-    H_eta={f: exp(eta y)f(y) pertenece a H¹(0,infinito)},
+    H_eta={f: exp(eta y)f(y) belongs to H¹(0,infinito)},
     ||f||_eta=||exp(eta y)f||H¹.
 
-Multiplicar por exp(eta y) identifica los polinomios por exp(-uy) con los polinomios por exp(-(u-eta)y). El lema§2 se aplica porque u-eta>0. Así
+Multiplying by exp(eta y) identifies polynomials times exp(-uy) with polynomials times exp(-(u-eta)y). Lemma§2 applies because u-eta>0. Thus
 
     union_N span{y^k exp(-uy):0<=k<N}
 
-es densa en H_eta.
+is dense in H_eta.
 
-La forma completa W de la extensión por cero es continua en H_eta, por las estimaciones ya auditadas y que se enumeran para fijar su topología:
+The complete form W of the zero extension is continuous on H_eta, by the estimates already audited, which are listed to fix its topology:
 
-* La extensión por cero H¹(0,infinito)->H^s(R) es continua para0<s<1/2, sin exigir f(0)=0. El multiplicador m tiene crecimiento logarítmico y su forma queda controlada por esa norma.
-* Con el peso e^(eta y), las correlaciones bilineales desplazadas se acotan por e^(-eta t) veces las dos normas ponderadasL². La suma2sum Lambda(q)q^(-eta-1/2) converge porque eta>1/2, y controla TODO el peine y sus diferencias.
-* Ambos momentos polares son continuos por Cauchy--Schwarz, pues e^((1/2-eta)y) es integrable al cuadrado.
+* The zero extension H¹(0,infinito)->H^s(R) is continuous for0<s<1/2, without requiring f(0)=0. The multiplier m has logarithmic growth and its form is controlled by that norm.
+* With the weight e^(eta y), the shifted bilinear correlations are bounded by e^(-eta t) times the two weightedL² norms. The sum2sum Lambda(q)q^(-eta-1/2) converges because eta>1/2, and controls the WHOLE comb and its differences.
+* Both polar moments are continuous by Cauchy--Schwarz, since e^((1/2-eta)y) is square integrable.
 
-Estas cotas son bilineales y prueban continuidad real o Hermitiana de W, no sólo finitud sobre cada miembro de una sucesión. La densidad conseguida es por tanto suficientemente fuerte para pasar una desigualdad de signo al límite.
+These bounds are bilinear and prove real or Hermitian continuity of W, not merely finiteness on each member of a sequence. The density obtained is therefore strong enough to pass a sign inequality to the limit.
 
-## 4. Consecuencia suficiente exacta
+## 4. Exact sufficient consequence
 
-Si para una SOLA tasa u>1/2 todos los bloques finitos Laguerre
+If for a SINGLE rate u>1/2 all finite Laguerre blocks
 
     V_N(u)=span{exp(-uy)L_j(2uy):0<=j<N}
 
-son no negativos para W, entonces W>=0 en todo H_eta por densidad y continuidad. Para un test suave compacto arbitrario en R, trasládelo a soporte dentro de(0,infinito). El trasladado pertenece a H_eta y W es invariante por traslación, incluso en su polar porque los dos momentos se multiplican por factores recíprocos. Se obtiene signo para todos los tests suaves compactos. La densidad del núcleo de forma en cada ventana extiende el signo al dominio correspondiente; en los subespacios primitivos el polar se anula y queda el signo requerido de a_T.
+are nonnegative for W, then W>=0 on all of H_eta by density and continuity. For an arbitrary smooth compactly supported test on R, translate it to support inside(0,infinito). The translate belongs to H_eta and W is translation invariant, even in its polar because the two moments are multiplied by reciprocal factors. One obtains the sign for all smooth compact tests. Density of the form core in each window extends the sign to the corresponding domain; on the primitive subspaces the polar vanishes and the required sign of a_T remains.
 
-No se necesita un margen uniforme en N: basta semidefinitud de cada bloque y continuidad del límite. Tampoco hace falta probar todos los conjuntos de tasas ni transportar monotonía al variar polos. Para u63/2, éste es un blanco suficiente de UNA sola sucesión de matrices Toeplitz completas.
+No margin uniform in N is needed: semidefiniteness of each block and continuity of the limit suffice. Nor is it necessary to prove all sets of rates or to transport monotonicity when varying poles. For u63/2, this is a sufficient target of ONE single sequence of complete Toeplitz matrices.
 
-## 5. Relación con los datos exteriores y límites
+## 5. Relation with the exterior data and limits
 
-En la imagen Z, las derivadas respecto del exponente en a=u+1/2 de X^-a tienen la forma
+In the Z image, the derivatives with respect to the exponent at a=u+1/2 of X^-a have the form
 
     partial_a^k[ zeta(a)exp(-(a-1/2)y)]
       =exp(-uy)sum_(j=0)^k binom(k,j)zeta^(k-j)(a)(-y)^j.
 
-La diagonal de esta transformación triangular es(-1)^k zeta(a), distinta de cero para a>1. Por tanto toda confluencia de potencias genera exactamente V_N(u) en su imagen. El puente puede formularse en cualquiera de las dos coordenadas sin suponer una transformación positiva por entradas: se conserva la forma por identificación invertible.
+The diagonal of this triangular transformation is(-1)^k zeta(a), nonzero for a>1. Hence every confluence of powers generates exactly V_N(u) in its image. The bridge can be formulated in either of the two coordinates without assuming an entrywise positive transformation: the form is preserved by invertible identification.
 
-La unión de bloques con todos sus términos cruzados es densa; una sola cadena de vectores f_n, o una unión de espacios de dimensión uniformemente acotada, no hereda esa suficiencia. Los certificados actuales hastaN12 y sus extensiones de tasas no prueban el resto de los bloques. El bloque AP negativo conocido obliga a conservar aritmética cuando se intenta esta dirección a todos los órdenes.
+The union of blocks with all their cross terms is dense; a single chain of vectors f_n, or a union of spaces of uniformly bounded dimension, does not inherit that sufficiency. The current certificates up toN12 and their rate extensions do not prove the rest of the blocks. The known negative AP block forces keeping arithmetic when attempting this direction at all orders.
 
 
-## 6. Tasas móviles: umbral exacto de aproximación fuerte (2026-11-06)
+## 6. Moving rates: exact threshold for strong approximation (2026-11-06)
 
-**PROVED como criterio de aproximación; no positividad nueva.** Root; auditorías independientes new_structural_sign y arithmetic_fresh_candidate PASS. Consultados las reglas del proyecto, los tres índices, este puente, THREE002§§7–8 y094/096. La diferencia es permitir tasas u_N que tienden a infinito, sin filtro highpass, y demostrar el umbral en la norma H_eta que controla W. No es el criterio r²/N de094 ni la densidad de una envolvente lineal. No se afirma novedad bibliográfica.
+**PROVED as an approximation criterion; no new positivity.** Independent audits PASS. Consulted the project rules, the three indices, this bridge, THREE002§§7–8 and094/096. The difference is to allow rates u_N tending to infinity, without highpass filter, and to prove the threshold in the norm H_eta that controls W. It is not the r²/N criterion of094 nor the density of a linear envelope. No bibliographic novelty is claimed.
 
-Fijar eta>1/2 y u_N>eta con u_N->infinito. Poner
+Fix eta>1/2 and u_N>eta with u_N->infinito. Set
 
     V_N(u_N)={exp(-u_N y)P(y):deg P<N},
-    L²_eta={f:exp(eta y)f pertenece a L²(0,infinito)},
+    L²_eta={f:exp(eta y)f belongs to L²(0,infinito)},
     ||f||_Heta=||exp(eta y)f||_H1.
 
-Entonces:
+Then:
 
-1. dist_Heta(f,V_N(u_N))->0 para TODO f en H_eta, a lo largo de todos los N, si y sólo si N/u_N->infinito.
-2. La UNION de estos bloques es densa en H_eta si y sólo si limsup_(N->infinito) N/u_N=infinito.
+1. dist_Heta(f,V_N(u_N))->0 for EVERY f in H_eta, along all N, if and only if N/u_N->infinito.
+2. The UNION of these blocks is dense in H_eta if and only if limsup_(N->infinito) N/u_N=infinito.
 
-No se caracteriza aquí el cierre de su envolvente lineal.
+The closure of its linear envelope is not characterized here.
 
-**Distancia exacta en L²_eta.** Es el caso sin filtro r=0 de la representación por proyección de096§2, aplicado a las tasas desplazadas; no se atribuye novedad a esa fórmula. Para v>eta, normalizar e_v(y)=sqrt(2(v-eta))exp(-vy). La base de Laguerre a tasa a_N=u_N-eta, después de multiplicar por exp(eta y), tiene coeficientes contra e_v proporcionales a ((u_N-v)/(u_N+v-2eta))^j. Sumando la cola geométrica da EXACTAMENTE
+**Exact distance in L²_eta.** It is the unfiltered case r=0 of the projection representation of096§2, applied to the shifted rates; no novelty is attributed to that formula. For v>eta, normalize e_v(y)=sqrt(2(v-eta))exp(-vy). The Laguerre basis at rate a_N=u_N-eta, after multiplying by exp(eta y), has coefficients against e_v proportional to ((u_N-v)/(u_N+v-2eta))^j. Summing the geometric tail gives EXACTLY
 
     dist_L²eta(e_v,V_N(u_N))²
             =abs((u_N-v)/(u_N+v-2eta))^(2N).            (MOV-DIST)
 
-En efecto el coeficiente de grado j es 2sqrt(a_N(v-eta))/(a_N+v-eta) por ((v-eta-a_N)/(v-eta+a_N))^j; el cuadrado del prefactor es uno menos el cuadrado de la razón. Para u_N->infinito, el logaritmo de(MOV-DIST) es
+Indeed the degree-j coefficient is 2sqrt(a_N(v-eta))/(a_N+v-eta) times ((v-eta-a_N)/(v-eta+a_N))^j; the square of the prefactor is one minus the square of the ratio. For u_N->infinito, the logarithm of(MOV-DIST) is
 
     -4(v-eta)(N/u_N)(1+o(1)).
 
-Los exponenciales con v>eta son totales en L²_eta por unicidad de Laplace. Las proyecciones ortogonales tienen norma1, de modo que N/u_N->infinito implica aproximación de todo L²_eta a lo largo de N.
+The exponentials with v>eta are total in L²_eta by Laplace uniqueness. Orthogonal projections have norm1, so N/u_N->infinito implies approximation of all of L²_eta along N.
 
-**Paso fuerte sin pérdida de grados.** El operador anticausal
+**Strong step without loss of degrees.** The anticausal operator
 
     (Jh)(y)=integral_y^infinito h(t)dt
 
-satisface ||Jh||_L²eta<=eta^(-1)||h||_L²eta: después de ponderar, es una integral de traslaciones contra exp(-eta t), de norma L1 igual a1/eta. Si f pertenece a H_eta, entonces f' pertenece a L²_eta, f' es integrable y f tiende a0 en infinito, por lo que f=-Jf'. Aproximar f' por h_N en V_N(u_N) y definir g_N=-Jh_N. Integrar un polinomio por una exponencial NO aumenta su grado; por tanto g_N pertenece al MISMO V_N(u_N) y g_N'=h_N. Así
+satisfies ||Jh||_L²eta<=eta^(-1)||h||_L²eta: after weighting, it is an integral of translations against exp(-eta t), of L1 norm equal to1/eta. If f belongs to H_eta, then f' belongs to L²_eta, f' is integrable and f tends to0 at infinity, so f=-Jf'. Approximate f' by h_N in V_N(u_N) and define g_N=-Jh_N. Integrating a polynomial times an exponential does NOT increase its degree; hence g_N belongs to the SAME V_N(u_N) and g_N'=h_N. Thus
 
     ||f-g_N||_Heta
        <=sqrt(eta^(-2)+4) ||f'-h_N||_L²eta ->0.          (MOV-STRONG)
 
-No se necesita una condición adicional N/u_N mucho mayor que log N: esa pérdida aparece si se deriva una proyección L² en lugar de aproximar primero la derivada.
+No additional condition N/u_N much larger than log N is needed: that loss appears if one differentiates an L² projection instead of first approximating the derivative.
 
-**Necesidad y unión.** Aproximación fuerte implica aproximación L²_eta. (MOV-DIST), con un v>eta fijo, fuerza N/u_N->infinito. Para la unión, si limsup N/u_N=infinito se aplica la suficiencia a una subsucesión. Si limsup es finita, elegir eta<v<min_N u_N; ese mínimo existe y es mayor que eta porque u_N->infinito. Cada distancia de(MOV-DIST) es positiva, y su cola está uniformemente separada de0. Por tanto la unión no aproxima siquiera ese exponencial en L²_eta, ni en H_eta.
+**Necessity and union.** Strong approximation implies L²_eta approximation. (MOV-DIST), with a fixed v>eta, forces N/u_N->infinito. For the union, if limsup N/u_N=infinito sufficiency is applied to a subsequence. If the limsup is finite, choose eta<v<min_N u_N; that minimum exists and is greater than eta because u_N->infinito. Each distance of(MOV-DIST) is positive, and its tail is uniformly separated from0. Hence the union does not approximate even that exponential in L²_eta, nor in H_eta.
 
-**Consecuencia de signo, todavía condicional.** Si se probara W>=0 sobre cada bloque COMPLETO V_N(u_N) de una subsucesión con N/u_N->infinito, continuidad de W en H_eta y traslación, como en§4, darían el objetivo global. Se requieren todos los cruces internos de cada bloque, pero no cruces entre bloques distintos: cada aproximante pertenece a un único bloque positivo. No se ha probado aquí esa hipótesis. Más generalmente basta W[f]>=-epsilon_N||f||² para TODOS f del bloque, con epsilon_N->0 en la subsucesión densa: los aproximantes convergen en H_eta, sus normas L² permanecen acotadas y el error desaparece. La suficiencia de una cota inferior evanescente tiene antecedente en036; no es una nueva desigualdad positiva.
+**Sign consequence, still conditional.** If W>=0 were proved on each COMPLETE block V_N(u_N) of a subsequence with N/u_N->infinito, continuity of W on H_eta and translation, as in§4, would give the global target. All internal crossings of each block are required, but not crossings between distinct blocks: each approximant belongs to a single positive block. That hypothesis has not been proved here. More generally W[f]>=-epsilon_N||f||² for ALL f in the block, with epsilon_N->0 along the dense subsequence, suffices: the approximants converge in H_eta, their L² norms remain bounded and the error disappears. Sufficiency of a vanishing lower bound has an antecedent in036; it is not a new positive inequality.
 
-El teorema positivo THREE002§7 exige u_N>=2^(40N), régimen que no satisface el criterio. Además, no se puede conservar su margen fijo W>=9||f||² al pasar a un régimen denso: eso trasladaría el mismo margen a todos los compactos físicos, contradiciendo los cortes suaves de Phi, cuya energía tiende a0 por la identidad física H_full Phi=0 deGRAM19.12, mientras su norma L² tiende a un valor positivo. Esta observación sólo impide preservar coercividad fija; no impide semidefinitud ni márgenes que tiendan a0. No nueva ventanaT, cómputos ni cambios en papers.
+The positive theorem THREE002§7 requires u_N>=2^(40N), a regime that does not satisfy the criterion. Moreover, its fixed margin W>=9||f||² cannot be kept when passing to a dense regime: that would carry the same margin to all physical compacts, contradicting the smooth cutoffs of Phi, whose energy tends to0 by the physical identity H_full Phi=0 ofGRAM19.12, while their L² norm tends to a positive value. This observation only prevents preserving fixed coercivity; it does not prevent semidefiniteness nor margins tending to0. No new windowT, computations or paper changes.
 
 
-**Control de alcance: N/u_N² no suprime el peine completo (2026-11-06).** Root/arithmetic_fresh_candidate, verificación independiente de la aplicación de008. Tomar u_N=N^(3/4) para N suficientemente grande y eta=1. El test exactamente primitivo h de PRIME_PATTERN_FALSIFIER008 pertenece a H_eta y satisface Arch[h]<-3.83||h||², c_h(log2)>||h||²/2. Por este puente, existen aproximantes en V_N(u_N) que convergen a h en H_eta. Pueden hacerse exactamente primitivos: aproximar también dos correctores fijos e^(-2y),e^(-3y) en esos mismos bloques. Su matriz de momentos Tate converge a una matriz invertible; resolver el sistema2x2 elimina los pequeños errores de momentos con coeficientes que tienden a0. Las combinaciones corregidas f_N permanecen en V_N(u_N) y convergen a h en H_eta.
+**Scope control: N/u_N² does not suppress the complete comb (2026-11-06).** Independent verification of the application of008. Take u_N=N^(3/4) for N sufficiently large and eta=1. The exactly primitive test h of PRIME_PATTERN_FALSIFIER008 belongs to H_eta and satisfies Arch[h]<-3.83||h||², c_h(log2)>||h||²/2. By this bridge, there exist approximants in V_N(u_N) converging to h in H_eta. They can be made exactly primitive: also approximate two fixed correctors e^(-2y),e^(-3y) in those same blocks. Their Tate moment matrix converges to an invertible matrix; solving the2x2 system eliminates the small moment errors with coefficients tending to0. The corrected combinations f_N remain in V_N(u_N) and converge to h in H_eta.
 
-Por continuidad de Arch, de los momentos y de la autocorrelación, eventualmente
+By continuity of Arch, of the moments and of the autocorrelation, eventually
 
     (Arch[f_N]+Polar[f_N])/||f_N||² < -3,
     c_(f_N)(log2)/||f_N||² > 1/3,
-    Polar[f_N]=0 exactamente,
+    Polar[f_N]=0 exactly,
 
-mientras N/u_N²=N^(-1/2)->0. Así falla la supresión uniforme del contacto2 como error O(N/u_N²) sobre TODOS los numeradores, y no puede declararse positivo el principal Arch+Polar que elimina la aritmética. Es transporte del falsificador008 al régimen denso, no un principio nuevo sobre necesidad aritmética. No refuta una expansión cuyo principal conserve los contactos y cuya positividad se pruebe independientemente; no afirma W[f_N]<0. No nuevaT ni cómputos.
+while N/u_N²=N^(-1/2)->0. Thus uniform suppression of contact2 as an O(N/u_N²) error over ALL numerators fails, and the main part Arch+Polar that eliminates the arithmetic cannot be declared positive. It is transport of falsifier008 to the dense regime, not a new principle on arithmetic necessity. It does not refute an expansion whose main part keeps the contacts and whose positivity is proved independently; it does not claim W[f_N]<0. No new T nor computations.
 
 
-## 7. Corte aritmético creciente con error uniforme explícito (2026-11-06)
+## 7. Growing arithmetic cutoff with explicit uniform error (2026-11-06)
 
-**PROVED como control de cola; signo del bloque retenido OPEN.** Root, auditorías independientes arithmetic_fresh_candidate y new_structural_sign PASS. Consulta las reglas del proyecto, los tres índices, THREE002§7,008 y106_32. Es una aplicación cuantitativa de la cota de cola ya probada, no una nueva estimación de concentración ni positividad. Frente al intento de suprimir contactos bajos, se conserva un corte que crece con N/u.
+**PROVED as tail control; sign of the retained block OPEN.** Independent audits PASS. Consulted the project rules, the three indices, THREE002§7,008 and106_32. It is a quantitative application of the already proved tail bound, not a new concentration estimate nor positivity. Compared with the attempt to suppress low contacts, a cutoff growing with N/u is kept.
 
-Para N>=1, u>=2, sea V_N(u)=exp(-uy) polinomios de grado<N y definir
+For N>=1, u>=2, let V_N(u)=exp(-uy) times polynomials of degree<N and define
 
     Q_cut=ceil(exp(40N/u)),
     W_(<=Q_cut)[f]=Arch[f]+Polar[f]
           -2sum_(2<=q<=Q_cut) Lambda(q)/sqrt(q) Re c_f(log q).
 
-Se conserva exactamente la normalización de W y todos los cruces de cada bloque. Entonces
+The normalization of W and all crossings of each block are kept exactly. Then
 
     |W[f]-W_(<=Q_cut)[f]| < exp(-N)||f||²,
-    para TODO f en V_N(u).                              (MOV-TAIL)
+    for EVERY f in V_N(u).                              (MOV-TAIL)
 
-**Prueba.** La estimación de THREE002§7
+**Proof.** The estimate of THREE002§7
 
     ||f 1_(y>=t)|| <=sqrt6 13^N exp(-ut/2)||f||
 
-usa sólo la base ortonormal y las tasas en[u,3u], no el umbral posterior u>=2^(40N) de positividad. Su límite confluyente conserva la cota para V_N(u). Cauchy–Schwarz para la correlación, seguido de Lambda(q)<=log q, da
+uses only the orthonormal basis and the rates in[u,3u], not the later positivity threshold u>=2^(40N). Its confluent limit keeps the bound for V_N(u). Cauchy–Schwarz for the correlation, followed by Lambda(q)<=log q, gives
 
     |W-W_(<=Q_cut)|/||f||²
        <=2sqrt6 13^N sum_(q>Q_cut)log(q)q^(-(u+1)/2).
 
-La función log(x)x^(-(u+1)/2) decrece para x>=Q_cut>=2, pues (3/2)log2>1. Comparar cada término con su intervalo precedente e integrar exactamente da
+The function log(x)x^(-(u+1)/2) decreases for x>=Q_cut>=2, since (3/2)log2>1. Comparing each term with its preceding interval and integrating exactly gives
 
     sum_(q>Q_cut)log(q)q^(-(u+1)/2)
        <=Q_cut^(-(u-1)/2)
                   [2log(Q_cut)/(u-1)+4/(u-1)²].
 
-Como u>=2,
+Since u>=2,
 
     Q_cut^(-(u-1)/2)<=exp(-10N),
     log Q_cut<=40N/u+1,
     2log(Q_cut)/(u-1)+4/(u-1)²<=40N+6<=46N.
 
-Usando 2sqrt6<5 y13<exp3, la cola es menor que230N exp(-7N). Finalmente N<=exp(N-1) y exp6>400>230 prueban230N exp(-7N)<exp(-N), como se requería.
+Using 2sqrt6<5 and13<exp3, the tail is less than230N exp(-7N). Finally N<=exp(N-1) and exp6>400>230 prove230N exp(-7N)<exp(-N), as required.
 
-**Obligación finita que permanece.** Para u_N=N^(3/4), desde N suficientemente grande u_N>=2 y Q_cut,N=ceil(exp(40N^(1/4))). Si se demostrara para TODOS los vectores de cada bloque retenido
+**Finite obligation that remains.** For u_N=N^(3/4), from N sufficiently large on u_N>=2 and Q_cut,N=ceil(exp(40N^(1/4))). If one proved for ALL vectors of each retained block
 
     W_(<=Q_cut,N)[f]>=-epsilon_N||f||²,
     epsilon_N->0,
 
-entonces(MOV-TAIL) y§6 darían el objetivo global. No se ha demostrado ese lower ni PSD del bloque retenido. No basta signo de sus diagonales, de algunos vectores o de una cantidad fija de grados. Este corte creciente no contradice la indispensabilidad de átomos para un corte FIJO de106_32. El resultado sólo retira la cola infinita de esta obligación cuantitativa; no decide la compensación aritmética dentro del corte. Sin cómputos, nueva ventanaT o cambios en papers.
+then(MOV-TAIL) and§6 would give the global target. Neither that lower bound nor PSD of the retained block has been proved. The sign of its diagonals, of some vectors or of a fixed number of degrees does not suffice. This growing cutoff does not contradict the indispensability of atoms for a FIXED cutoff of106_32. The result only removes the infinite tail from this quantitative obligation; it does not decide the arithmetic compensation within the cutoff. No computations, new windowT or paper changes.
 
 
-## 8. Tamaño necesario del corte en una escala densa (2026-11-06)
+## 8. Necessary size of the cutoff at a dense scale (2026-11-06)
 
-**PROVED para el principal truncado; signo completo OPEN.** Constructor fresh_sign_mechanism, auditoría independiente new_structural_sign y comprobación root; deduplicación independiente arithmetic_fresh_candidate. Consulta de los tres índices,007§2 y106_32. La diferencia explícita es cuantitativa: el corte crece con la dimensión, y se obtiene un umbral necesario en la escala u_N=N^(3/4). Las bandas de007 son antecedentes, no una identidad nueva.106_32 trata eliminación de átomos en la energía transformada de diferencias; no se identifica esa truncación con W_(<=Q) aquí.
+**PROVED for the truncated main part; complete sign OPEN.** Independent audit and re-check; independent deduplication. Consulted the three indices,007§2 and106_32. The explicit difference is quantitative: the cutoff grows with the dimension, and a necessary threshold is obtained at the scale u_N=N^(3/4). The bands of007 are antecedents, not a new identity.106_32 treats elimination of atoms in the transformed energy of differences; that truncation is not identified with W_(<=Q) here.
 
-Para N>=2,u>=1,Q entero>=1, definir la base ortonormal
+For N>=2,u>=1,Q integer>=1, define the orthonormal basis
 
     phi_j(y)=sqrt(2u)exp(-uy)L_j(2uy), y>=0,
     d=N-1, f=(phi_0-(-1)^d phi_d)/sqrt2.
 
-Entonces ||f||=1 y, con la definición íntegra de W_(<=Q) de§7,
+Then ||f||=1 and, with the full definition of W_(<=Q) from§7,
 
     W_(<=Q)[f] <= 2log u+32+4sqrt(Q)log Q+6/u
                          -(2/u)exp((N-1)/u).             (MOV-NEC)
 
-**Prueba del polar.** Las integrales de phi_j contra exp(±y/2) son sqrt(2u)(-1)^j r^(±j)/(u∓1/2), donde r=(u+1/2)/(u-1/2). Su producto simetrizado da las bandas de007 generalizadas a u: p_d=C_u(-1)^d(r^d+r^(-d)), C_u=2u/(u²-1/4). Por tanto el polar del vector elegido es EXACTAMENTE C_u(2-r^d-r^(-d)). Como 2/u<=C_u<=3/u y log r>=1/u, es <=6/u-(2/u)exp(d/u).
+**Proof of the polar.** The integrals of phi_j against exp(±y/2) are sqrt(2u)(-1)^j r^(±j)/(u∓1/2), where r=(u+1/2)/(u-1/2). Their symmetrized product gives the bands of007 generalized to u: p_d=C_u(-1)^d(r^d+r^(-d)), C_u=2u/(u²-1/4). Hence the polar of the chosen vector is EXACTLY C_u(2-r^d-r^(-d)). Since 2/u<=C_u<=3/u and log r>=1/u, it is <=6/u-(2/u)exp(d/u).
 
-**Prueba arquimediana y aritmética.** El multiplicador m(tau)=Re psi(1/4+i tau/2)-log pi tiene mínimo m(0)>-8. Su media contra la densidad de Fourier de phi_0 es a_0=psi((u+1/2)/2)-log pi<=log u. La última desigualdad usa psi(x)<log x; ésta sigue de Jensen aplicada a log para una variable Gamma(x,1). La cota m(0)>-8 sigue de psi(1/4)=-gamma-pi/2-3log2 y las cotas gamma<1,pi/2<2,3log2<3,log pi<2. En la coordenada de Cayley, las bandas arquimedianas son coeficientes de Fourier de ese multiplicador; cada una tiene módulo <=integral |m|<=a_0+16. Así la contribución de las dos coordenadas es <=2log u+32. Finalmente |c_f(t)|<=||f||²=1, Lambda(q)<=log q y sum_(q=2)^Q q^(-1/2)<=2sqrt Q dan el majorante 4sqrt Q log Q para todos los contactos retenidos. Sumando se obtiene(MOV-NEC).
+**Archimedean and arithmetic proof.** The multiplier m(tau)=Re psi(1/4+i tau/2)-log pi has minimum m(0)>-8. Its mean against the Fourier density of phi_0 is a_0=psi((u+1/2)/2)-log pi<=log u. The last inequality uses psi(x)<log x; this follows from Jensen applied to log for a Gamma(x,1) variable. The bound m(0)>-8 follows from psi(1/4)=-gamma-pi/2-3log2 and the bounds gamma<1,pi/2<2,3log2<3,log pi<2. In the Cayley coordinate, the archimedean bands are Fourier coefficients of that multiplier; each has modulus <=integral |m|<=a_0+16. Thus the contribution of the two coordinates is <=2log u+32. Finally |c_f(t)|<=||f||²=1, Lambda(q)<=log q and sum_(q=2)^Q q^(-1/2)<=2sqrt Q give the majorant 4sqrt Q log Q for all retained contacts. Summing yields(MOV-NEC).
 
-**Consecuencia móvil.** Fijar 0<delta<2, u_N=N^(3/4). Si log Q_N<=(2-delta)N/u_N, el cociente del majorante aritmético respecto de (2/u_N)exp((N-1)/u_N) es <=2(2-delta)N exp(-delta N^(1/4)/2+1/u_N), que tiende a0. Los términos logarítmicos y 6/u_N también son despreciables. Eventualmente
+**Moving consequence.** Fix 0<delta<2, u_N=N^(3/4). If log Q_N<=(2-delta)N/u_N, the ratio of the arithmetic majorant to (2/u_N)exp((N-1)/u_N) is <=2(2-delta)N exp(-delta N^(1/4)/2+1/u_N), which tends to0. The logarithmic terms and 6/u_N are also negligible. Eventually
 
     W_(<=Q_N)[f_N] <= -exp((N-1)/u_N)/u_N -> -infinito.
 
-En particular, ningún corte polinómico fijo Q_N<=N^k permite una cota inferior -epsilon_N||f||², epsilon_N->0, sobre TODO V_N(u_N). Si existiera tal cota a lo largo de todos los N, necesariamente liminf u_N log Q_N/N>=2: cualquier subsucesión con cociente <=2-delta contradice la cota anterior. No se afirma que el umbral2 sea suficiente ni óptimo. El corte suficiente para ERROR de§7 tiene constante40, de modo que ambas cotas fijan el mismo orden exponencial para esta escala concreta.
+In particular, no fixed polynomial cutoff Q_N<=N^k permits a lower bound -epsilon_N||f||², epsilon_N->0, on ALL of V_N(u_N). If such a bound existed along all N, necessarily liminf u_N log Q_N/N>=2: any subsequence with ratio <=2-delta contradicts the preceding bound. It is not claimed that the threshold2 is sufficient or optimal. The sufficient cutoff for the ERROR of§7 has constant40, so both bounds fix the same exponential order for this concrete scale.
 
-**Alcance.** Los vectores no se afirman primitivos. W completa no se ha probado negativa: la cola omitida puede compensar el polar. El umbral no se extiende sin prueba a todas las escalas densas, especialmente si N/u_N crece lentamente. No se firma el principal con corte40, no nueva ventanaT y no cambios en papers.
+**Scope.** The vectors are not claimed primitive. Complete W has not been proved negative: the omitted tail may compensate the polar. The threshold does not extend without proof to all dense scales, especially if N/u_N grows slowly. The main part with cutoff40 is not signed, no new windowT and no paper changes.
 
 
-## 9. Corte insuficiente incluso con ambos momentos nulos (2026-11-06)
+## 9. Insufficient cutoff even with both moments zero (2026-11-06)
 
-**PROVED: falsificador primitivo del principal truncado, no de W completa.** Construcción fresh_sign_mechanism/root y comprobación mutua de constantes; revisión matemática independiente new_structural_sign PASS. Consulta previa de los tres índices,008 y§§6–8; búsqueda dirigida de filtros Dirichlet/Jackson con Laguerre y momentos Tate sin este enunciado localizado. La diferencia nueva es un test explícito en el MISMO bloque móvil con corte creciente. El vector gamma de008 no da esta escala: su ancho es sqrt(N)/u, mientras el filtro siguiente alcanza N/u. No se atribuye novedad al núcleo de Dirichlet ni a las desigualdades de008.
+**PROVED: primitive falsifier of the truncated main part, not of complete W.** Construction with mutual check of constants; independent mathematical review PASS. Prior consultation of the three indices,008 and§§6–8; targeted search for Dirichlet/Jackson filters with Laguerre and Tate moments, with this statement not located. The new difference is an explicit test in the SAME moving block with growing cutoff. The gamma vector of008 does not give this scale: its width is sqrt(N)/u, while the following filter reaches N/u. No novelty is attributed to the Dirichlet kernel nor to the inequalities of008.
 
-Sea u=N^(3/4), N>=2^60, y Q>=1 entero con
+Let u=N^(3/4), N>=2^60, and Q>=1 an integer with
 
     log Q <= 2^(-12)N/u.
 
-Existe f en V_N(u), real, ||f||=1, con ambos momentos Tate exactamente nulos y f(0)=0, tal que
+There exists f in V_N(u), real, ||f||=1, with both Tate moments exactly zero and f(0)=0, such that
 
     W_(<=Q)[f]<-3.                                      (PRIM-CUT)
 
-**Construcción exacta.** Poner M=floor(N/4), r=(u+1/2)/(u-1/2) y definir los coeficientes c_j del polinomio
+**Exact construction.** Set M=floor(N/4), r=(u+1/2)/(u-1/2) and define the coefficients c_j of the polynomial
 
     C(z)=(1-z)(z+r)(z+r^(-1)) [sum_(j=0)^(M-1)(-z)^j]^4.
 
-Su grado es4M-1<N. Tomar f proporcional a sum_j c_j phi_j, normalizado en L². Las fórmulas de Laplace de§8 evalúan los momentos en z=-r y z=-1/r; por tanto ambos se anulan EXACTAMENTE. Además phi_j(0)=sqrt(2u), así que C(1)=0 implica f(0)=0.
+Its degree is4M-1<N. Take f proportional to sum_j c_j phi_j, normalized in L². The Laplace formulas of§8 evaluate the moments at z=-r and z=-1/r; hence both vanish EXACTLY. Moreover phi_j(0)=sqrt(2u), so C(1)=0 implies f(0)=0.
 
-**Segundo momento espectral.** En la coordenada de Cayley z=-exp(2ix), -pi/2<x<pi/2, se tiene |tau|=u|tan x|. La medida espectral de phi_0 se transforma en medida uniforme, que se cancela en la razón normalizada. Escribir a=1/(u²-1/4), S=sin(Mx)/sin x. Entonces |(z+r)(z+1/r)|=a+4sin²x y |1-z|²=4cos²x, de modo que
+**Second spectral moment.** In the Cayley coordinate z=-exp(2ix), -pi/2<x<pi/2, one has |tau|=u|tan x|. The spectral measure of phi_0 transforms into uniform measure, which cancels in the normalized ratio. Write a=1/(u²-1/4), S=sin(Mx)/sin x. Then |(z+r)(z+1/r)|=a+4sin²x and |1-z|²=4cos²x, so
 
     E_f tau² = u² integral sin²x(a+4sin²x)²|S|^8 dx
                       / integral cos²x(a+4sin²x)²|S|^8 dx.
 
-Todas las integrales siguientes tienen límites [-pi/2,pi/2]. Para |x|<=1/(2M), M>=2, cos²x>=1/2 y |S|>=M/2. El denominador es >=a²M^7/512. Usar |S|<=min(M,1/|sin x|), |sin x|<=|x| y |sin x|>=|x|/2. Dividir en |x|<=1/M y su complemento da
+All the following integrals have limits [-pi/2,pi/2]. For |x|<=1/(2M), M>=2, cos²x>=1/2 and |S|>=M/2. The denominator is >=a²M^7/512. Use |S|<=min(M,1/|sin x|), |sin x|<=|x| and |sin x|>=|x|/2. Splitting into |x|<=1/M and its complement gives
 
     I_2=integral sin²x |S|^8 dx
          <=(2/3+128/5)M^5 <27M^5,
     I_6=integral sin^6x |S|^8 dx
          <=(2/7+8)M <9M.
 
-Como (a+4sin²x)²<=2a²+32sin^4x, el numerador es <=u²(2a²I_2+32I_6). Por tanto, para1<=u<=M,
+Since (a+4sin²x)²<=2a²+32sin^4x, the numerator is <=u²(2a²I_2+32I_6). Hence, for1<=u<=M,
 
     E_f tau² <=512u²[54/M²+288/(a²M^6)]
               <=175104(u/M)² <2^18(u/M)².                (PRIM-MOM)
 
-Se usó a>=1/u² y u/M<=1. El factor1-z asegura integrabilidad del segundo momento también en los extremos x=±pi/2.
+One used a>=1/u² and u/M<=1. The factor1-z ensures integrability of the second moment also at the endpoints x=±pi/2.
 
-**Signo de cada pieza retenida.** Por008, Arch[f]<-4+17 E_f tau² y c_f(t)>=1-(t²/2)E_f tau². Para N>=2^60, M>=N/8 y u<=M, así E_f tau²<=2^24/sqrt(N)<=1/64. Luego Arch[f]<-3. Si log q<=2^(-12)N/u, entonces log q<=M/(512u), y(PRIM-MOM) implica c_f(log q)>=1/2. Todos los contactos retenidos son no positivos y el polar es cero, lo que demuestra(PRIM-CUT).
+**Sign of each retained piece.** By008, Arch[f]<-4+17 E_f tau² and c_f(t)>=1-(t²/2)E_f tau². For N>=2^60, M>=N/8 and u<=M, so E_f tau²<=2^24/sqrt(N)<=1/64. Hence Arch[f]<-3. If log q<=2^(-12)N/u, then log q<=M/(512u), and(PRIM-MOM) implies c_f(log q)>=1/2. All retained contacts are nonpositive and the polar is zero, which proves(PRIM-CUT).
 
-**Alcance.** El corte puede crecer exponencialmente en N/u con la pequeña constante2^(-12); todo corte polinómico fijo queda incluido eventualmente. No se transfiere a primitivas el umbral2 de§8, ni se prueba que la constante aquí sea óptima. La cola omitida podría compensar el déficit: W completa y el principal con corte40 de§7 siguen OPEN. La mera eliminación del polar no permite reemplazar ese corte por uno polinómico. Sin cómputos ni nueva ventanaT o cambios en papers.
+**Scope.** The cutoff can grow exponentially in N/u with the small constant2^(-12); every fixed polynomial cutoff is eventually included. The threshold2 of§8 is not transferred to primitives, nor is the constant here proved optimal. The omitted tail could compensate the deficit: complete W and the main part with cutoff40 of§7 remain OPEN. Mere elimination of the polar does not allow replacing that cutoff by a polynomial one. No computations, new windowT or paper changes.

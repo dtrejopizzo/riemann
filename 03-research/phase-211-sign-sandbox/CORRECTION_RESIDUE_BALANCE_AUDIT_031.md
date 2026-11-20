@@ -1,12 +1,12 @@
-# Auditoría de la corrección residual031
+# Audit of the residual correction 031
 
-**APROBADO.** Lectura íntegra de030,031 y CORRECTION_RESIDUE_BALANCE_031, sin ejecución numérica.
+**APPROVED.** Full reading of 030, 031 and CORRECTION_RESIDUE_BALANCE_031, without numerical execution.
 
-M=Q=2,s=(1,1) satisface B2. El perfil de anchura estrictamente menor que log(3/2) hace W1(m,j)=delta_mj en filas1,2 para todo j positivo. Los bumps declarados interpolan exactamente s y tienen soporte dentro(2/3,5/2). En esas filas, n>=3 no contribuye; n2 sólo contribuye a j2. Así el pairing completo de módulo2 es c2(2)v2S1/2=v2/2>0. La componenteq1 restante es también v2/2 y la suma reproduce el término original, sin contradicción con030.
+M=Q=2, s=(1,1) satisfies B2. The profile of width strictly less than log(3/2) makes W1(m,j)=delta_mj in rows 1,2 for every positive j. The declared bumps interpolate s exactly and are supported inside (2/3,5/2). In those rows, n>=3 does not contribute; n2 only contributes to j2. Thus the full modulus-2 pairing is c2(2)v2S1/2=v2/2>0. The remaining q1 component is also v2/2 and the sum reproduces the original term, with no contradiction with 030.
 
-Esto refuta la omisión pequeña de031§3 y su repetición§4 para la interpolación declarada. La observación de balance sin pesos es verdadera; su transferencia por multiplicación no coprima falla. La elección de interpolante es explícita, no se afirma independencia del componente respecto de toda interpolación posible. TeoremaE por aproximación de configuraciones queda intacto. Ninguna negatividadW ni imposibilidad global nueva.
+This refutes the small omission of 031§3 and its repetition in §4 for the declared interpolation. The unweighted balance observation is true; its transfer by non-coprime multiplication fails. The choice of interpolant is explicit; independence of the component from every possible interpolation is not claimed. Theorem E by approximation of configurations remains intact. No W negativity and no new global impossibility.
 
 
-## Reparación rough universal
+## Universal rough repair
 
-Aprobada§5: para soporte roughQ>=2 sólo hay filas impares; con W1delta y variaciónS(j/2), la ecuación j'/2^a=j/2 tiene una única solución impar a1,j'j. Coeficiente -s_jv2/2, no hay cancelación oculta. Los puntos relevantes son localmente finitos lejos de0, así existe el bump. La conclusión exige TODOS los perfiles e interpolantes y sólo se afirma para R_Q. No se infiere para soporte mixto ni se importa TeoremaE a una restricción modificada.
+§5 approved: for rough support Q>=2 there are only odd rows; with W1 delta and the variation S(j/2), the equation j'/2^a=j/2 has a unique odd solution a1, j'j. Coefficient -s_jv2/2, no hidden cancellation. The relevant points are locally finite away from 0, so the bump exists. The conclusion requires ALL profiles and interpolants and is only claimed for R_Q. Nothing is inferred for mixed support, nor is Theorem E imported to a modified restriction.

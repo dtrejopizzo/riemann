@@ -1,25 +1,25 @@
-# Estado020 — Inverso completo positivo fuera de un intervalo y balance pendiente
+# State020 — Full inverse positive outside an interval and pending balance
 
-Estado: PROVED resultados parciales auditados; signo global OPEN. Goal activo. Papers intactos. Sustituye STATE019 como resumen vigente.
+Status: audited partial results PROVED; global sign OPEN. Goal active. Papers untouched. Replaces STATE019 as the current summary.
 
-## Cobertura de W sin cambios
+## Coverage of W unchanged
 
-El puente escalar017 sigue siendo suficiente: completar W>=0 para TODOS N,k a u31.5 cerraría el signo de todos los datos mediante el puente fuerte. Están probadas filas N1,2,3 para todo k y el cono k>=10000N². Ocho polos arbitrarios y bloque confluente12 siguen vigentes. Esta ronda no prueba una nueva entrada W ni amplía ventanas T.
+The scalar bridge017 is still sufficient: completing W>=0 for ALL N,k at u31.5 would close the sign of all data through the strong bridge. Rows N1,2,3 for all k and the cone k>=10000N² are proved. Eight arbitrary poles and the confluent block12 remain valid. This round proves no new W entry and does not extend windows T.
 
-## Resultado positivo sobre el inverso COMPLETO
+## Positive result on the FULL inverse
 
-POWER_INVERSE_KERNEL_020 demuestra H_N/4<=h_N<=7H_N/4 para TODOS N>=2 y logx>=(N−1)/30. Usa A_N(logx), polinomio de coeficientes positivos, para acotar la SUMA COMPLETA de Möbius por sum_(m>=2)m^-2<=3/4. No infiere signo de un prefijo.
+POWER_INVERSE_KERNEL_020 proves H_N/4<=h_N<=7H_N/4 for ALL N>=2 and logx>=(N−1)/30. It uses A_N(logx), a polynomial with positive coefficients, to bound the FULL Möbius SUM by sum_(m>=2)m^-2<=3/4. It does not infer the sign of a prefix.
 
-Para N2 prueba además h_2>=H_2/[2zeta(32)]>H_2/4 en TODA la semirrecta. La fórmula exacta conserva el signo de la derivada de1/zeta32. Por tanto cualquier parte negativa del inverso para N arbitrario está localizada en [1,exp((N−1)/30)). La cola del emparejamiento con B<0 es favorable y su magnitud se expresa mediante integrales gamma incompletas. La magnitud adversa interior sigue abierta; no se deduce de ello W>=0.
+For N2 it further proves h_2>=H_2/[2zeta(32)]>H_2/4 on the WHOLE half-line. The exact formula keeps the sign of the derivative of1/zeta32. Hence any negative part of the inverse for arbitrary N is localised in [1,exp((N−1)/30)). The tail of the pairing with B<0 is favourable and its magnitude is expressed through incomplete gamma integrals. The adverse interior magnitude remains open; W>=0 is not deduced from it.
 
-## Primer contacto: obstrucción cuantitativa real
+## First contact: genuine quantitative obstruction
 
-POWER_SIGNED_BALANCE_020 estudia un solo átomo N211,k1,u31.5. Una cota analítica de ARCH por Euler/digamma trasladada y Jensen da ARCH/norma²<−.74; evaluación racional exacta da0<P2/norma²<.075, y el polar es negativo. Así ARCH+POLAR+P2<−.66norma². El resto de contactos es positivo por019 y NO se omite de W. Esto refuta únicamente la reparación con el primer contacto en ese caso; no demuestra W negativa ni imposibilidad de varios contactos.
+POWER_SIGNED_BALANCE_020 studies a single atom N211,k1,u31.5. An analytic bound of ARCH by shifted Euler/digamma and Jensen gives ARCH/norm²<−.74; exact rational evaluation gives0<P2/norm²<.075, and the polar is negative. Thus ARCH+POLAR+P2<−.66norm². The remaining contacts are positive by019 and are NOT omitted from W. This refutes only the repair by the first contact in that case; it does not show W negative nor the impossibility of several contacts.
 
-Root leyó ambas pruebas y reprodujo los dos verificadores Fraction con PASS. POWER_BALANCE_AUDIT_020 contiene la revisión independiente completa, aprobada. No se modificaron papers.
+Both proofs were read and the two Fraction verifiers reproduced with PASS. POWER_BALANCE_AUDIT_020 contains the full independent review, approved. No papers were modified.
 
-## Próximo paso concreto
+## Concrete next step
 
-Conservar la suma firmada restante para el balance de k1 y controlar el emparejamiento interior de h_N con B. Se autorizó un diagnóstico numérico pequeño en el MISMO átomo211 para decidir si cotas separadas de componentes podrían bastar; sus valores no se incorporan como teoremas ni como signo de W. No se lanza una campaña de nuevos órdenes.
+Keep the remaining signed sum for the balance of k1 and control the interior pairing of h_N with B. A small numerical diagnosis on the SAME atom211 was authorised to decide whether separate bounds of components could suffice; its values are not incorporated as theorems nor as the sign of W. No campaign of new orders is launched.
 
-El objetivo global continúa activo. Las obstrucciones ya registradas no equivalen a un bloqueo externo ni a una refutación de la forma real. Todo resultado debe seguir distinguiendo signo de un kernel, de un término aritmético y de la forma completa.
+The global objective remains active. The obstructions already recorded do not amount to an external blockage nor to a refutation of the real form. Every result must continue to distinguish the sign of a kernel, of an arithmetic term and of the full form.

@@ -18,7 +18,7 @@ $\gamma_n$ (phases 0, 5, 32, 59, 60, 71), a Weil–Toeplitz algebra of windows w
 built from a *conjectural* off-line zero (phases 72–99, the long E7x/P7x–P99 Feshbach/Cauchy-projection/
 adjugate chain). None of these objects is the finite vector $(\Lambda(n))_{n<e^{2T}}$ that Paper 47 shows
 carries the whole problem (Prop. "finite", `main.tex` line ~140). Reading any of their stated theorems into a
-statement about $\lambda_A(T)$ requires passing through exactly the equivalence the owner has barred (zero-set
+statement about $\lambda_A(T)$ requires passing through exactly the equivalence the project rules bar (zero-set
 object $\leftrightarrow$ prime-only quadratic form), so nothing here converts into reduced forms (L2)/(N)/(S)
 or into the primitive subspace $\mathcal P_T$ without that forbidden step. This is already the main
 conclusion; the phase-by-phase pass below looks for exceptions (identities/tools that are, in fact, prime-only
@@ -88,7 +88,7 @@ nothing") is a real dichotomy theorem, but it is a dichotomy about an operator f
 conjectural zero configuration; it does not supply, and the document does not claim to supply, a bound on
 $s_T$. No hit. P36-4's "two-variable Weil form" / INV_J_001 wall = pair correlation (Hardy–Littlewood, parity
 obstruction) is the same parity-obstruction family Paper 47 encounters independently in problem (N) (the
-owner's "exponent $\frac12$ cancellation, with sign" requirement is exactly what a parity-type sieve bound
+requirement "exponent $\frac12$ cancellation, with sign" is exactly what a parity-type sieve bound
 cannot deliver) — already closed there under a different name; no new angle found; not proposed as a route
 (ES-4/NG-A4/P36-4 already cover "parity problem" as a named wall in the index, so this is not new).
 

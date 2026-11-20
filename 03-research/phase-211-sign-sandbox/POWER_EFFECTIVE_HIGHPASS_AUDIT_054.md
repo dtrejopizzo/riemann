@@ -1,29 +1,29 @@
 # POWER_EFFECTIVE_HIGHPASS_AUDIT_054
 
-Estado: **APROBADO** POWER_EFFECTIVE_HIGHPASS_054, tras lectura íntegra de sus ocho secciones. Es una prueba analítica; no requiere construir ni evaluar K(n). Papers intactos.
+Status: **APPROVED** POWER_EFFECTIVE_HIGHPASS_054, after a full reading of its eight sections. It is an analytic proof; it does not require constructing or evaluating K(n). Papers untouched.
 
-El resultado demuestra W[Q^jF0]>norma² para TODOS los numeradores reales propios de dimensiónn y TODOS j>=K(n), con el entero explícito declarado. Es una efectivización de la eventualidad015 mediante COEFF054 y contorno escalar017. No demuestra el segmento inicial ni el signo global.
+The result proves W[Q^jF0]>norm² for ALL proper real numerators of dimensionn and ALL j>=K(n), with the declared explicit integer. It is an effectivization of the eventuality015 via COEFF054 and the scalar contour017. It does not prove the initial segment nor the global sign.
 
-## Momentos y extremo escalar
+## Moments and scalar endpoint
 
-Revisado el cambio inverso y todos los factores de escala contra INVERSE_COEFFICIENT054 y su auditoría. Para0<=r<=n−1 la integral beta tiene el parámetro b=n+j−r−1/2. La aplicación de Jensen sólo se hace con exponente r+1/2>=1 cuando r>=1. La rama r=0 emplea una desigualdad de gamma distinta obtenida por Cauchy, con la orientación correcta. De allí M_r<=Gamma(r+1/2) y sumaM_r<=2n!. El caso n=1 está incluido.
+Reviewed the inverse change and all scale factors against INVERSE_COEFFICIENT054 and its audit. For0<=r<=n−1 the beta integral has parameter b=n+j−r−1/2. Jensen is applied only with exponent r+1/2>=1 when r>=1. The branch r=0 employs a different gamma inequality obtained by Cauchy, with the correct orientation. From there M_r<=Gamma(r+1/2) and sumM_r<=2n!. The case n=1 is included.
 
-Para el momento adicional r=n, b=j−1/2 es menor quej. La fuente NO hereda indebidamente el bound anterior: conserva el factor[j/(j−1/2)]^(n+1/2). Su logaritmo es<1/100 bajo j>=10000n²; el factor<3 produce suma_(r=1)^n M_r<6n n!, suficiente para A_n.
+For the additional moment r=n, b=j−1/2 is less thanj. The source does NOT improperly inherit the previous bound: it keeps the factor[j/(j−1/2)]^(n+1/2). Its logarithm is<1/100 under j>=10000n²; the factor<3 produces sum_(r=1)^n M_r<6n n!, sufficient for A_n.
 
-El extremo escalarN'=1 del contorno está justificado separadamente. La fórmula de norma ponderada de INTERIOR017 y Vandermonde dan ratio<=11 para el peso+15; causalidad da ratio<=1 para el peso−15. Cauchy/Plancherel aplicados al producto exacto H(−15+ix)H(15−ix) dan ratio de integrales de densidad<=sqrt11<4. Esto usa dos pesos sólo en dimensión1, sin introducir una constante uniforme temporal para dimensiónn.
+The scalar endpointN'=1 of the contour is justified separately. The weighted norm formula of INTERIOR017 and Vandermonde give ratio<=11 for the weight+15; causality gives ratio<=1 for the weight−15. Cauchy/Plancherel applied to the exact product H(−15+ix)H(15−ix) give a ratio of density integrals<=sqrt11<4. This uses two weights only in dimension1, without introducing a uniform temporal constant for dimensionn.
 
-## Contorno y aritmética completa
+## Contour and complete arithmetic
 
-El signo(−1)^(n−1) en el producto R(a/z)R(−a/z) se conserva en la identidad antes de tomar módulos. COEFF limita el producto completo y permite majorarlo por la suma de n diagonales positivas. Cada una tiene N'=r+1, k'=j+n−1−r y satisface las hipótesis escalar017 cuando j>=10000n²; N'=1 queda cubierto por la prueba precedente.
+The sign(−1)^(n−1) in the product R(a/z)R(−a/z) is kept in the identity before taking moduli. COEFF bounds the complete product and allows majorizing it by the sum of n positive diagonals. Each has N'=r+1, k'=j+n−1−r and satisfies the scalar hypotheses017 when j>=10000n²; N'=1 is covered by the preceding proof.
 
-La integral escalar es exactamente a^(−2r−1)M_r. Multiplicarla por el prefactor a^(−2n+2)a^(2r) y dividir por la norma a^(1−2n)H cancela TODAS las potencias de a y H. No hay un factor2pi ni factor2 residual. Así STRIP<=5C_n sumaM_r<=D_n, uniforme en todos los numeradores y todos esos j.
+The scalar integral is exactly a^(−2r−1)M_r. Multiplying it by the prefactor a^(−2n+2)a^(2r) and dividing by the norm a^(1−2n)H cancels ALL powers of a and H. There is no residual factor2pi or factor2. Thus STRIP<=5C_n sumM_r<=D_n, uniform over all numerators and all such j.
 
-La densidad racional es analítica en la franja hasta15 y decae al menos como|z|^−2; los lados verticales del desplazamiento tienden a cero. La cota de autocorrelación lleva exp(−15t). Con Lambda(q)<=q la suma absoluta del peine queda dominada por2D_n suma q^−14<D_n. Esto conserva TODOS los contactos y sus potencias primas; no se usa un símbolo puntual infinito ni una cota IBP no sumable.
+The rational density is analytic in the strip up to15 and decays at least like|z|^−2; the vertical sides of the shift tend to zero. The autocorrelation bound carries exp(−15t). With Lambda(q)<=q the absolute sum of the comb is dominated by2D_n sum q^−14<D_n. This keeps ALL contacts and their prime powers; no infinite pointwise symbol nor non-summable IBP bound is used.
 
-## ARCH, polar y umbral
+## ARCH, polar and threshold
 
-El momento inverso de la función original es la esperanza de y² dividida poru²j. COEFF y la rama adicionalr=n justifican A_n=6C_n n n! sin pérdida de uniformidad enP. Para j>=A_n3^(4D_n+20), E(tau^−2)<=u^−2 3^(−4D_n−20). Jensen y Cauchy, con el lower global de digamma ya auditado, dan ARCH>2D_n+9: bastan u>2pi, log3>1 y1/u+1/(2u²)<1. Se conserva explícitamente el término logu que hace válida esta comparación.
+The inverse moment of the original function is the expectation of y² divided byu²j. COEFF and the additional branchr=n justify A_n=6C_n n n! without loss of uniformity inP. For j>=A_n3^(4D_n+20), E(tau^−2)<=u^−2 3^(−4D_n−20). Jensen and Cauchy, with the already audited global digamma lower bound, give ARCH>2D_n+9: u>2pi, log3>1 and1/u+1/(2u²)<1 suffice. The term logu that makes this comparison valid is kept explicitly.
 
-El polar se evalúa en R(±2ia). Las potencias(2a)^(2n−2) se cancelan al volver aP(±1/2). La razón de normas resultante es exactamente el majorante POLAR-RAW, con factor3968^−j de la órbitaQ y factorj^(n−1/2). Las simplificaciones4pi/u<1, [u²/(u²−1/4)]^n<exp(n) y logC_n<6n son correctas. Para j>=10000n², n logj<=n sqrtj<=j/100 y7n<=7j/10000; por ello el majorante polar es<1. No se presupone su signo.
+The polar is evaluated at R(±2ia). The powers(2a)^(2n−2) cancel on returning toP(±1/2). The resulting norm ratio is exactly the majorant POLAR-RAW, with factor3968^−j from the orbitQ and factorj^(n−1/2). The simplifications4pi/u<1, [u²/(u²−1/4)]^n<exp(n) and logC_n<6n are correct. For j>=10000n², n logj<=n sqrtj<=j/100 and7n<=7j/10000; hence the polar majorant is<1. Its sign is not presupposed.
 
-ARCH, peine y polar se refieren a la MISMA norma y función. El balance adverso da W/norma²>D_n+8>1, como se afirma. La constante de contorno crece conn y es compatible con las obstrucciones ponderadas016; el método no pretende un bound independiente de la dimensión. El crecimiento enorme deK y el segmento j<K permanecen explícitamente fuera de la conclusión. No se añade una ventana temporal ni se cierra la tabla suficiente completa.
+ARCH, comb and polar refer to the SAME norm and function. The adverse balance gives W/norm²>D_n+8>1, as claimed. The contour constant grows withn and is compatible with the weighted obstructions016; the method does not claim a dimension-independent bound. The enormous growth ofK and the segment j<K remain explicitly outside the conclusion. No time window is added nor is the complete sufficient table closed.

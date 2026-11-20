@@ -1,75 +1,75 @@
-# POWER_HIGH_ORDER_PM_NOGO_007 — Falsificador alto del movimiento arch+polar uniforme en dimensión
+# POWER_HIGH_ORDER_PM_NOGO_007 — High falsifier of arch+polar movement uniform in dimension
 
-Estado: PROVED. NO refuta transporte de signo, ni el resultado local de orden cuatro, ni el signo completo. Papers intactos.
+Status: PROVED. It does NOT refute sign transport, nor the local order-four result, nor the complete sign. Papers untouched.
 
-## 1. Corpus y razón nueva
+## 1. Corpus and new reason
 
-Consultados índice ROUTES-TRIED-INDEX, grid maestro y crucigrama mediante búsquedas high-order pole, gamma packet, pole no-go, 131072 y derivadas de digamma; revisados POWER_POLE_MOVEMENT_004 y POWER_POLAR_MOVEMENT_005. El contraejemplo de orden uno de 005 sólo tenía tasas pequeñas (1 y 2). La razón nueva es un falsificador EXACTO dentro del rango u>=63/2, con dimensión explícita grande y una identidad escalar: no se buscan espectros de matrices grandes. Construcción propuesta por el constructor principal y verificada aquí.
+Consulted the ROUTES-TRIED-INDEX index, master grid and crossword through searches high-order pole, gamma packet, pole no-go, 131072 and digamma derivatives; reviewed POWER_POLE_MOVEMENT_004 and POWER_POLAR_MOVEMENT_005. The order-one counterexample of 005 only had small rates (1 and 2). The new reason is an EXACT falsifier inside the range u>=63/2, with large explicit dimension and a scalar identity: no spectra of large matrices are searched for. The construction is verified here.
 
-## 2. Lema global arquimediano
+## 2. Global archimedean lemma
 
-Para m(tau)=Re psi(1/4+i tau/2)-log pi,
+For m(tau)=Re psi(1/4+i tau/2)-log pi,
 
     0<=tau m'(tau)<4, tau real.                             (G)
 
-Prueba. Ponga t=|tau|/2 y a_k=k+1/4. La serie de digamma derivada da
+Proof. Put t=|tau|/2 and a_k=k+1/4. The differentiated digamma series gives
 
     tau m'(tau)=Σ_{k>=0} 2 a_k t²/(a_k²+t²)².
 
-Si t<=1, el término k=0 es <=1/(2a_0)=2. El resto es a lo sumo
+If t<=1, the term k=0 is <=1/(2a_0)=2. The rest is at most
 
     2Σ_{k>=1}(k+1/4)^-3
       <=2[(5/4)^-3+∫_1^∞(x+1/4)^-3 dx]=208/125.
 
-La suma es <=458/125<4. Si t>=1, f(a)=2at²/(a²+t²)² es no negativa y unimodal, con integral sobre (0,infinito) igual a 1 y máximo 3sqrt3/(8t)<1. Comparando por separado las ramas creciente y decreciente con integrales de paneles de longitud uno, y apartando a lo sumo dos términos próximos al máximo, la suma de cualquier retícula de paso uno es <=∫f+2max f<3. Esto se aplica a a_k. En t=0 el resultado es inmediato. La convergencia absoluta justifica derivar la serie.
+The sum is <=458/125<4. If t>=1, f(a)=2at²/(a²+t²)² is nonnegative and unimodal, with integral over (0,infinity) equal to 1 and maximum 3sqrt3/(8t)<1. Comparing separately the increasing and decreasing branches with integrals over panels of length one, and setting aside at most two terms near the maximum, the sum over any lattice of step one is <=∫f+2max f<3. This applies to a_k. At t=0 the result is immediate. Absolute convergence justifies differentiating the series.
 
-## 3. Familia de numerador fijo y polar exacto
+## 3. Fixed-numerator family and exact polar term
 
-Para n>=1 entero, u>1/2, sea f_{n,u}(y)=y^{n-1}exp(-uy)1_{y>0}. Su transformada de Laplace es (n-1)!/(s+u)^n; el factor constante no altera cocientes. Es el numerador fijo 1 con n polos iguales u. Directamente,
+For integer n>=1, u>1/2, let f_{n,u}(y)=y^{n-1}exp(-uy)1_{y>0}. Its Laplace transform is (n-1)!/(s+u)^n; the constant factor does not alter quotients. It is the fixed numerator 1 with n equal poles u. Directly,
 
     ||f||²=(2n-2)!/(2u)^{2n-1},
     A=(n-1)!/(u-1/2)^n, B=(n-1)!/(u+1/2)^n.
 
-El cociente polar normalizado es
+The normalized polar quotient is
 
     P_n(u)=2AB/||f||²
       =4^n/[u binom(2n-2,n-1)]*(1-1/(4u²))^-n.            (P)
 
-Por binom(2n-2,n-1)<=4^{n-1}, se tiene P_n(u)>=4/u. Además
+Since binom(2n-2,n-1)<=4^{n-1}, we have P_n(u)>=4/u. Moreover
 
     u d(log P_n)/du=-1-n/[2(u²-1/4)].                     (PD)
 
-La probabilidad espectral normalizada es una constante por u^-1[1+(tau/u)²]^-n. Cambiar tau=ut en la energía arquimediana A_n(u) y usar (G) da
+The normalized spectral probability is a constant times u^-1[1+(tau/u)²]^-n. Changing tau=ut in the archimedean energy A_n(u) and using (G) gives
 
     u A_n'(u)=E[tau m'(tau)]<4.                           (AD)
 
-La derivación bajo la integral se justifica por (G). No se evalúa una matriz de tamaño n.
+Differentiation under the integral is justified by (G). No matrix of size n is evaluated.
 
-## 4. Contraejemplo alto explícito, también para cada polo individual
+## 4. Explicit high counterexample, also for each individual pole
 
-Tome u=63/2, n=2^17=131072. Para E_n=A_n+P_n,
+Take u=63/2, n=2^17=131072. For E_n=A_n+P_n,
 
     u E_n'(u)<4-(4/u)[1+n/(2(u²-1/4))]
               =4-264/31=-140/31<0.                       (NEG)
 
-La igualdad es aritmética racional exacta; no usa aproximaciones de factoriales ni potencias grandes.
+The equality is exact rational arithmetic; it uses no approximations of factorials or large powers.
 
-Para pasar a movimientos INDIVIDUALES, defina E(u_1,...,u_n) con transformada 1/Π_j(s+u_j). Es diferenciable y simétrica para u_j>1/2. En confluencia todas las parciales son iguales, y
+To pass to INDIVIDUAL movements, define E(u_1,...,u_n) with transform 1/Π_j(s+u_j). It is differentiable and symmetric for u_j>1/2. At confluence all partials are equal, and
 
     E_n'(u)=Σ_j ∂E/∂u_j=n ∂E/∂u_1.
 
-Por ello, en el punto declarado,
+Hence, at the declared point,
 
-    u ∂E/∂u_j < -140/(31n), cada j.
+    u ∂E/∂u_j < -140/(31n), each j.
 
-Existe epsilon>0 tal que aumentar solamente UN polo desde 63/2 a 63/2+epsilon disminuye el cociente arch+polar del numerador fijo. Todos los polos siguen en el rango alto. No se confunde dilatación global con cambio individual: la simetría diferenciable es el argumento explícito que permite pasar entre ambos.
+There is epsilon>0 such that increasing only ONE pole from 63/2 to 63/2+epsilon decreases the arch+polar quotient of the fixed numerator. All poles stay in the high range. Global dilation is not confused with individual change: differentiable symmetry is the explicit argument allowing passage between the two.
 
-## 5. Alcance preciso
+## 5. Precise scope
 
-Queda FALSIFIED la afirmación «para todo n y todos los polos >=63/2, aumentar individualmente los polos no reduce el cociente arch+polar de ningún numerador». No se puede extender uniformemente en dimensión la derivada positiva de POWER_POLAR_MOVEMENT_005 §6.
+The statement «for all n and all poles >=63/2, individually increasing the poles does not reduce the arch+polar quotient of any numerator» is FALSIFIED. The positive derivative of POWER_POLAR_MOVEMENT_005 §6 cannot be extended uniformly in dimension.
 
-NO se concluye que la energía sea negativa, ni se descarta un transporte que preserve sólo el signo: una energía positiva puede decrecer y seguir positiva. Tampoco se ha incluido el peine. El teorema arquimediano de covarianza permanece válido; el cambio de signo proviene de la derivada del polar positivo. El resultado local n=4 no está afectado.
+It is NOT concluded that the energy is negative, nor is a transport that preserves only the sign discarded: a positive energy may decrease and remain positive. The comb has not been included either. The archimedean covariance theorem remains valid; the sign change comes from the derivative of the positive polar term. The local result n=4 is not affected.
 
-Herramienta reutilizable nueva: la cota global (G) y el polar exacto (P) permiten auditar propuestas de transporte sin construir matrices grandes.
+New reusable tool: the global bound (G) and the exact polar term (P) allow auditing transport proposals without building large matrices.
 
-La afirmación falsificada es el cociente Rayleigh para TODO numerador bajo la identificación racional de numeradores fijos. No se proporciona aquí un contraejemplo a la monotonía de lambda_min ni de otras eigenenergías comprimidas: que disminuya el cociente de un vector particular no implica que disminuya el mínimo del espacio. La monotonía de eigenenergías de la parte ARQUIMEDIANA sigue probada por el argumento separado de 004.
+The falsified statement is the Rayleigh quotient for EVERY numerator under the rational identification of fixed numerators. No counterexample to monotonicity of lambda_min or of other compressed eigenenergies is provided here: a decrease of the quotient of a particular vector does not imply a decrease of the minimum over the space. Monotonicity of eigenenergies of the ARCHIMEDEAN part remains proved by the separate argument of 004.

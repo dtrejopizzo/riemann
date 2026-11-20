@@ -1,230 +1,230 @@
-# POWER_RECIPROCAL_SECANT_CONCAVITY_090 — Concavidad de una secante recíproca
+# POWER_RECIPROCAL_SECANT_CONCAVITY_090 — Concavity of a reciprocal secant
 
-**Actualización099:** la obligación REAL T_h>0 global quedó cerrada en `POWER_EXACT_H_GLOBAL_DESIGN_099.md`, auditada en `POWER_EXACT_H_GLOBAL_AUDIT_099.md` y resumida en `POWER_STATE_099.md`. Se prueban ambas curvaturas y todos los triples del resto G_p; el bloque auxiliar de cinco nodos está anclado en0 y NO son cinco generadores W admisibles. Las menciones de compacto/hipótesis pendiente abajo conservan el estado histórico de esta ronda; la herencia al siguiente nivel sigue abierta.
+**Update099:** the REAL global obligation T_h>0 was closed in `POWER_EXACT_H_GLOBAL_DESIGN_099.md`, audited in `POWER_EXACT_H_GLOBAL_AUDIT_099.md` and summarized in `POWER_STATE_099.md`. Both curvatures and all triples of the remainder G_p are proved; the auxiliary five-node block is anchored at0 and they are NOT five admissible W generators. The mentions of a pending compact/hypothesis below keep the historical status of this round; inheritance to the next level remains open.
 
-Estado: **PROVED el lema elemental y su aplicación theta por el dato global T_R>0 probado089, con constructor y reproducción root FULL PASS.** Auditoría independiente aprobada; véase `POWER_RECIPROCAL_SECANT_CONCAVITY_AUDIT_090.md`. No se afirma que los restos hereden nuevas desigualdades de Turán, ni signo global de W. Papers intactos.
+Status: **PROVED the elementary lemma and its theta application via the global datum T_R>0 proved in089, with derivation and independent reproduction FULL PASS.** Independent audit passed; see `POWER_RECIPROCAL_SECANT_CONCAVITY_AUDIT_090.md`. No claim is made that the remainders inherit new Turán inequalities, nor of a global sign of W. Papers untouched.
 
-## 1. Consulta y diferencia precisa
+## 1. Consultation and precise difference
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D; cotejados078,081–089.078 dejó abierta una segunda concavidad para controlar los pares del resto G_p;079/082 evitaron necesitarla para tres generadores originales.084 introdujo T_f=2f'f'''−3f''² para cuatro nodos.081 impide heredar ingenuamente monotonía y concavidad de la función original en todos los restos.
+Consulted the project rules, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D; cross-checked078,081–089.078 left open a second concavity to control the pairs of the remainder G_p;079/082 avoided needing it for three original generators.084 introduced T_f=2f'f'''−3f''² for four nodes.081 prevents naively inheriting monotonicity and concavity of the original function in all the remainders.
 
-El nuevo paso respecto del corpus es una desigualdad integral: T_f>0 implica concavidad estricta del recíproco de la secante desde0. Se demuestra bajo hipótesis que no exigen f creciente y cóncava a la vez: basta f'>0 y T_f>0. Esto conecta el dato T_R global buscado089 con la obligación h de078. No se reclama prioridad mundial del lema ni se presume la hipótesis theta que falta.
+The new step relative to the corpus is an integral inequality: T_f>0 implies strict concavity of the reciprocal of the secant from0. It is proved under hypotheses that do not require f to be increasing and concave at once: f'>0 and T_f>0 suffice. This connects the global T_R datum sought in089 with the h obligation of078. No worldwide priority of the lemma is claimed and the missing theta hypothesis is not presumed.
 
-## 2. Lema y extremo removible
+## 2. Lemma and removable endpoint
 
-Sea 0<L<=infinito y f∈C³([0,L)), con f'(x)>0 en TODO [0,L). Suponer
+Let 0<L<=infinity and f∈C³([0,L)), with f'(x)>0 on ALL of [0,L). Suppose
 
     T_f(x)=2f'(x)f'''(x)−3f''(x)²>0, 0<x<L.
 
-Definir, para x>0,
+Define, for x>0,
 
     g(x)=f(x)−f(0)>0,
     h_0(x)=x/g(x).
 
-Entonces h_0 se extiende como función C² al extremo0, con
+Then h_0 extends as a C² function to the endpoint0, with
 
     h_0(0)=1/f'(0),
-    h_0''(x)<0, TODOS0<x<L.                         (SECANT-CONCAVITY)
+    h_0''(x)<0, ALL0<x<L.                         (SECANT-CONCAVITY)
 
-No se requiere f>0 ni f''<0. En0 sólo se deduce h_0''(0)<=0; la desigualdad estricta allí necesita T_f(0)>0.
+Neither f>0 nor f''<0 is required. At0 only h_0''(0)<=0 follows; the strict inequality there needs T_f(0)>0.
 
-La extensión C² sigue de
+The C² extension follows from
 
     g(x)/x=int_0^1 f'(sx)ds,
 
-cuyo lado derecho es C² y positivo hasta0. Además
+whose right-hand side is C² and positive up to0. Moreover
 
     h_0''(0)=[3f''(0)²−2f'(0)f'''(0)]/[6f'(0)³]
              =−T_f(0)/[6f'(0)³]<=0.
 
-## 3. Prueba por integración de la tangente
+## 3. Proof by integrating the tangent
 
-Poner w=(f')^(-1/2)>0. Derivar dos veces da
+Set w=(f')^(-1/2)>0. Differentiating twice gives
 
     w''=[3f''²−2f'f''']/(4f'^(5/2))
         =−T_f/(4f'^(5/2))<0, 0<x<L.
 
-Así w es estrictamente cóncava en cada intervalo [0,x], y w(0)>0. Fijar x>0 y su tangente
+Thus w is strictly concave on each interval [0,x], and w(0)>0. Fix x>0 and its tangent
 
     ell_x(s)=w(x)+w'(x)(s−x), 0<=s<=x.
 
-La concavidad estricta implica w(s)<ell_x(s) para0<=s<x. En particular
+Strict concavity implies w(s)<ell_x(s) for0<=s<x. In particular
 
     d_x=w(x)−xw'(x)>=w(0)>0.
 
-Como ell_x es lineal y sus dos extremos son positivos, no hay un polo oculto al integrar su recíproco cuadrado. Se obtiene la desigualdad estricta
+Since ell_x is linear and its two endpoint values are positive, there is no hidden pole when integrating its reciprocal square. One obtains the strict inequality
 
     g(x)=int_0^x ds/w(s)²
          >int_0^x ds/ell_x(s)²
          =x/[w(x)(w(x)−xw'(x))].                   (TANGENT-INTEGRAL)
 
-La igualdad integral también vale si w'(x)=0, por cálculo directo o continuidad; no se divide por w' sin tratar ese borde. Tampoco se usa un signo de w'.
+The integral equality also holds if w'(x)=0, by direct computation or continuity; one does not divide by w' without treating that boundary. Nor is a sign of w' used.
 
-Escribir d=f'=1/w² y e=f''=−2w'/w³. El cálculo exacto del segundo cociente es
+Write d=f'=1/w² and e=f''=−2w'/w³. The exact computation of the second quotient is
 
     h_0''=[2xd²−2gd−xge]/g³
           =2[x−g w(w−xw')]/(w⁴g³).
 
-TANGENT-INTEGRAL prueba que el numerador es estrictamente negativo, mientras el denominador es positivo. Esto demuestra SECANT-CONCAVITY. La ganancia de signo procede de la desigualdad de tangentes integrada, no de una identidad del cociente por sí sola.
+TANGENT-INTEGRAL proves that the numerator is strictly negative, while the denominator is positive. This proves SECANT-CONCAVITY. The sign gain comes from the integrated tangent inequality, not from an identity of the quotient by itself.
 
-## 4. Aplicación theta, input global probado089
+## 4. Theta application, global input proved in089
 
-Usar las coordenadas reales073/077/078/086:
+Use the real coordinates073/077/078/086:
 
     a=M'(0)>0,
     R(x)=u/M(u), x=u²,
     b(x)=[au/M(u)−1]/u²=a[R(x)−R(0)]/x,
     h(x)=1/b(x).
 
-La paridad analítica de Z y M(u)/u→a muestran que R es analítica en0 y R(0)=1/a.073 da R'>0 para x>0, y086 prueba R''<0 en TODO x>0. Por tanto R' decrece estrictamente, y su límite finito en0 satisface R'(0)>R'(x)>0. Se verifica así el extremo no degenerado que exige el lema, sin asumir un signo no demostrado para un cumulante en0.
+The analytic parity of Z and M(u)/u→a show that R is analytic at0 and R(0)=1/a.073 gives R'>0 for x>0, and086 proves R''<0 for ALL x>0. Hence R' decreases strictly, and its finite limit at0 satisfies R'(0)>R'(x)>0. This verifies the nondegenerate endpoint required by the lemma, without assuming an unproved sign for a cumulant at0.
 
-089, su transporte de cuatro densidades y reproducción root87911 FULL PASS prueban
+089, its four-density transport and the independent reproduction 87911 FULL PASS prove
 
-    T_R=2R'R'''−3R''²>0, TODO x>0.                 (THETA-INPUT-PROVED)
+    T_R=2R'R'''−3R''²>0, ALL x>0.                 (THETA-INPUT-PROVED)
 
-Por tanto SECANT-CONCAVITY se aplica a f=R y da
+Hence SECANT-CONCAVITY applies to f=R and gives
 
     h(x)=[x/(R(x)−R(0))]/a,
-    h''(x)<0, TODO x>0.                            (THETA-PROVED)
+    h''(x)<0, ALL x>0.                            (THETA-PROVED)
 
-El dato global procede del transporte probado089, no de extender085 fuera de su dominio:085 por sí solo, desde un extremo positivo, no reemplazaba la hipótesis en todo0..x. La prueba089 incluye ambos encierros compactos y la cola088 con reproducción independiente FULL PASS.
+The global datum comes from the transport proved in089, not from extending085 beyond its domain:085 by itself, from a positive endpoint, did not replace the hypothesis on all of0..x. The proof089 includes both compact enclosures and the tail088 with independent reproduction FULL PASS.
 
-## 5. Consecuencia probada para los pares de G_p
+## 5. Proved consequence for the pairs of G_p
 
-El otro dato de078 ya está descargado086: g_*(x)=xb(x)=aR(x)−1 satisface g_*''<0. Por THETA-INPUT-PROVED y§4, h''<0 global. Por tanto, para cada P=p², poner
+The other datum of078 is already discharged in086: g_*(x)=xb(x)=aR(x)−1 satisfies g_*''<0. By THETA-INPUT-PROVED and§4, h''<0 globally. Hence, for each P=p², set
 
     C_P(x)=[b(P)−b(x)]/[xb(x)−Pb(P)].
 
-Las fórmulas de078 son
+The formulas of078 are
 
     C_P'(x)=−b(P)b(x)²
         ·[h(x)−h(P)−(x−P)h'(x)]/[xb(x)−Pb(P)]²,
     [xC_P(x)]'=b(P)
         ·[g_*(x)−g_*(P)−(x−P)g_*'(x)]/[xb(x)−Pb(P)]².
 
-Las concavidades estrictas dan C_P'<0 y(xC_P)'>0 para x≠P. En x=P sus límites también son estrictos: los numeradores de los errores de tangentes son respectivamente −h''(P)(x−P)²/2 y−g_*''(P)(x−P)²/2, mientras el denominador tiene término principal g_*'(P)²(x−P)² y g_*'(P)>0. Las singularidades son removibles, como en077.
+The strict concavities give C_P'<0 and(xC_P)'>0 for x≠P. At x=P their limits are also strict: the numerators of the tangent errors are respectively −h''(P)(x−P)²/2 and−g_*''(P)(x−P)²/2, while the denominator has leading term g_*'(P)²(x−P)² and g_*'(P)>0. The singularities are removable, as in077.
 
-Como G_p(z)=[a/B(p)]zC_P(z²)>0,
+Since G_p(z)=[a/B(p)]zC_P(z²)>0,
 
-    −1<zG_p'(z)/G_p(z)<1, TODOS p,z>0.
+    −1<zG_p'(z)/G_p(z)<1, ALL p,z>0.
 
-El criterio de pares CONE001 prueba entonces todos los pares del kernel G_p definidos positivos para nodos distintos. No se exige G_p'>0; por ello el resultado es compatible con la obstrucción081.
+The pair criterion CONE001 then proves all pairs of the kernel G_p positive definite for distinct nodes. G_p'>0 is not required; hence the result is compatible with the obstruction081.
 
-Esta aplicación ya queda probada por089. No afirma T_(R_G)>0, ni concavidad de ambos datos recíprocos de G_p, ni preservación de las hipótesis al iterar Schur. Se obtiene un posible paso concreto sobre los cruces del resto, no un cierre de todos los órdenes o del objetivo global.
+This application is now proved by089. It does not claim T_(R_G)>0, nor concavity of both reciprocal data of G_p, nor preservation of the hypotheses when iterating Schur. One obtains a possible concrete step on the crossings of the remainder, not a closure of all orders or of the global target.
 
-## 6. Extensión a un ancla interior: prueba con ambas orientaciones
+## 6. Extension to an interior anchor: proof with both orientations
 
-Sea f∈C³(I), I un intervalo, f'>0 y T_f>0 en I. Para P∈I definir
+Let f∈C³(I), I an interval, f'>0 and T_f>0 on I. For P∈I define
 
     H_P(x)=(x−P)/[f(x)−f(P)], x≠P,
     H_P(P)=1/f'(P).
 
-Entonces H_P es C² y H_P''<0 en TODO I, incluido x=P. No se requiere que P sea un extremo del intervalo ni que f sea cóncava.
+Then H_P is C² and H_P''<0 on ALL of I, including x=P. It is not required that P be an endpoint of the interval nor that f be concave.
 
-La extensión C² sigue de [f(x)−f(P)]/(x−P)=int_0^1 f'(P+s(x−P))ds>0. Poner y=x−P, G=f(x)−f(P), w=(f')^(-1/2), y fijar la tangente ell_x(s)=w(x)+w'(x)(s−x). Como w''<0, esta tangente es estrictamente mayor que w(s) para s≠x en el segmento de extremos P,x. En particular d=w(x)−yw'(x)=ell_x(P)>w(P)>0, y la tangente es positiva en todo ese segmento.
+The C² extension follows from [f(x)−f(P)]/(x−P)=int_0^1 f'(P+s(x−P))ds>0. Set y=x−P, G=f(x)−f(P), w=(f')^(-1/2), and fix the tangent ell_x(s)=w(x)+w'(x)(s−x). Since w''<0, this tangent is strictly greater than w(s) for s≠x on the segment with endpoints P,x. In particular d=w(x)−yw'(x)=ell_x(P)>w(P)>0, and the tangent is positive on that whole segment.
 
-Si x>P, integrar en la orientación positiva da
+If x>P, integrating in the positive orientation gives
 
     G=int_P^x ds/w(s)²
       >int_P^x ds/ell_x(s)²=y/[w(x)d].
 
-Si x<P, ambas integrales se orientan al revés y dan
+If x<P, both integrals are oriented the other way and give
 
     G=−int_x^P ds/w(s)²
       <−int_x^P ds/ell_x(s)²=y/[w(x)d].
 
-La evaluación de la integral lineal vale también si w'(x)=0. La fórmula de derivada es
+The evaluation of the linear integral also holds if w'(x)=0. The derivative formula is
 
     H_P''(x)=2[y−G w(x)d]/[w(x)^4 G³].
 
-Para x>P el numerador es negativo y G³>0. Para x<P el numerador es positivo y G³<0. En ambos casos H_P''<0. En el punto removible,
+For x>P the numerator is negative and G³>0. For x<P the numerator is positive and G³<0. In both cases H_P''<0. At the removable point,
 
     H_P''(P)=−T_f(P)/[6f'(P)³]<0.
 
-Así se comprueban explícitamente ambas orientaciones y el propio ancla.
+Thus both orientations and the anchor itself are checked explicitly.
 
-## 7. Una curvatura del resto se descarga con el mismo dato T_R
+## 7. One curvature of the remainder is discharged with the same datum T_R
 
-Conservar x=z², P=p², b_P=b(P), g(x)=xb(x)=aR(x)−1 y h(x)=1/b(x). En esta sección R_G,S_G son los datos recíprocos del RESTO, no los de M:
+Keep x=z², P=p², b_P=b(P), g(x)=xb(x)=aR(x)−1 and h(x)=1/b(x). In this section R_G,S_G are the reciprocal data of the REMAINDER, not those of M:
 
     R_G(x)=z/G_p(z), S_G(x)=zG_p(z).
 
-La expresión exacta077 de G_p da
+The exact expression077 of G_p gives
 
     R_G(x)=(1/a){(x−P)/[h(x)−h(P)]−P b_P},
     S_G(x)=a{(x−P)/[g(x)−g(P)]−h(P)}.             (REST-SECANTS)
 
-Para verificar la primera, usar h−h(P)=(b_P−b)/(bb_P); para la segunda, usar g(P)=Pb_P. Son igualdades algebraicas que se extienden a x=P por sus valores removibles.
+To verify the first, use h−h(P)=(b_P−b)/(bb_P); for the second, use g(P)=Pb_P. They are algebraic equalities that extend to x=P by their removable values.
 
-Por THETA-INPUT-PROVED de089, g'>0 y T_g=a²T_R>0 en toda la semirrecta. El lema de ancla interior aplica a f=g y prueba
+By THETA-INPUT-PROVED of089, g'>0 and T_g=a²T_R>0 on the whole half-line. The interior-anchor lemma applies to f=g and proves
 
-    S_G''(x)<0, TODOS p>0,x>0.                     (ONE-REST-CURVATURE)
+    S_G''(x)<0, ALL p>0,x>0.                     (ONE-REST-CURVATURE)
 
-Por tanto esta curvatura no exige ninguna hipótesis nueva por encima del dato T_R global: usa el mismo dato para TODOS los pivotes. Es una desigualdad efectiva de forma, no simplemente la identidad REST-SECANTS. El input089 ya tiene auditoría matemática/código y reproducción root87911 exit0/FULL PASS, por lo que ONE-REST-CURVATURE es PROVED para la Phi real.
+Hence this curvature requires no new hypothesis beyond the global T_R datum: it uses the same datum for ALL pivots. It is an effective shape inequality, not simply the REST-SECANTS identity. The input089 already has a mathematical/code audit and independent reproduction 87911 exit0/FULL PASS, so ONE-REST-CURVATURE is PROVED for the real Phi.
 
-En cambio R_G''<0 quedaría probado por el mismo lema SI se demostrara T_h>0 global, pues h'>0 ya se conoce077. No se afirma que T_h se herede. De hecho, la fórmula removible de§6 muestra que R_G''(P)<0 para TODOS los pivotes exigiría necesariamente T_h(P)>0. Así la familia de esas curvaturas tiene como obligación exacta adicional T_h>0, no la monotonía de G_p refutada081.
+By contrast R_G''<0 would be proved by the same lemma IF T_h>0 were proved globally, since h'>0 is already known from077. It is not claimed that T_h is inherited. In fact, the removable formula of§6 shows that R_G''(P)<0 for ALL pivots would necessarily require T_h(P)>0. Thus the family of these curvatures has as exact additional obligation T_h>0, not the monotonicity of G_p refuted in081.
 
-Si ese dato adicional se demostrara,082 aplicado a G_p, cuyos pares son PD por§5 bajo el input089, daría todos sus triples definidos positivos. Esto todavía no prueba que las mismas condiciones se preserven al siguiente resto.
+If that additional datum were proved,082 applied to G_p, whose pairs are PD by§5 under the input089, would give all its triples positive definite. This still does not prove that the same conditions are preserved to the next remainder.
 
-## 8. La obligación T_h es un siguiente menor anclado, no herencia automática
+## 8. The T_h obligation is a next anchored minor, not automatic inheritance
 
-Consulta adicional:083 identifica el Pfaffiano bordeado de tamaño cinco con el determinante de interpolación de las columnas
+Additional consultation:083 identifies the bordered Pfaffian of size five with the interpolation determinant of the columns
 
     (1,x,x²,R,xR).
 
-Su especialización con un nodo en0 aclara exactamente qué dato nuevo se solicita. Escribir R0=R(0), G=R−R0>0 y H=x/G=ah. Restar R0 veces la primera columna a la cuarta y R0 veces la segunda a la quinta. Al expandir la fila correspondiente a0, queda el determinante de cuatro nodos de (x,x²,G,xG).
+Its specialization with one node at0 clarifies exactly which new datum is requested. Write R0=R(0), G=R−R0>0 and H=x/G=ah. Subtract R0 times the first column from the fourth and R0 times the second from the fifth. Expanding along the row corresponding to0, the four-node determinant of (x,x²,G,xG) remains.
 
-Dividir cada fila restante por su G_i>0 da (H,xH,1,x). Pasar los dos bloques de dos columnas a (1,x,H,xH) usa cuatro transposiciones y tiene signo positivo. En consecuencia, para cuatro nodos distintos positivos,
+Dividing each remaining row by its G_i>0 gives (H,xH,1,x). Moving the two blocks of two columns to (1,x,H,xH) uses four transpositions and has positive sign. Consequently, for four distinct positive nodes,
 
-    det[1,x,x²,R,xR]_(nodos 0,x1,x2,x3,x4)
-        =(producto_(i=1)^4G(xi))
-             ·det[1,x,H,xH]_(nodos x1,x2,x3,x4).    (ANCHORED-FIVE)
+    det[1,x,x²,R,xR]_(nodes 0,x1,x2,x3,x4)
+        =(product_(i=1)^4G(xi))
+             ·det[1,x,H,xH]_(nodes x1,x2,x3,x4).    (ANCHORED-FIVE)
 
-La versión con los cuatro nodos positivos confluentes es exactamente
+The version with the four positive nodes confluent is exactly
 
     W(x,x²,G,xG)=G⁴ W(1,x,H,xH)
                  =−G⁴T_H=−a²G⁴T_h.              (ANCHORED-JET)
 
-Se usa la misma orientación de columnas que en084. El nodo0 aquí es auxiliar algebraico y no se convierte en un exponente admisible para W.
+The same column orientation as in084 is used. The node0 here is an algebraic auxiliary and is not turned into an admissible exponent for W.
 
-Así T_h>0 es la condición local del siguiente determinante de cinco columnas, con un nodo anclado en0 y los otros cuatro confluentes. El signo de T_R de cuatro columnas no la suministra. La identidad muestra la obligación real adicional sin declararla resuelta, ni afirmar positividad de todos los cinco nodos arbitrarios o preservación de todos los órdenes.
+Thus T_h>0 is the local condition of the next five-column determinant, with one node anchored at0 and the other four confluent. The sign of the four-column T_R does not supply it. The identity shows the real additional obligation without declaring it resolved, nor claiming positivity for all arbitrary five nodes or preservation of all orders.
 
-## 9. NO-GO de herencia genérica: contraejemplo global explícito
+## 9. NO-GO for generic inheritance: explicit global counterexample
 
-Estado de esta sección: **PROVED, auditorías independientes aprobadas.** Se refuta conservar automáticamente T_f>0 bajo H=x/(f−f0), incluso para f positiva, creciente y estrictamente cóncava en TODA la semirrecta. La diferencia frente084 es que el dato inicial aquí SÍ tiene T_f>0 global. No se modifica ningún dato theta ni se refuta T_h de la Phi real.
+Status of this section: **PROVED, independent audits passed.** Automatically preserving T_f>0 under H=x/(f−f0) is refuted, even for f positive, increasing and strictly concave on the WHOLE half-line. The difference from084 is that the initial datum here DOES have T_f>0 globally. No theta datum is modified and T_h of the real Phi is not refuted.
 
-Definir para TODO x>=0
+Define for ALL x>=0
 
     w(x)=(5−exp(−x))/4,
     f(x)=1+(16/25){log[(5exp(x)−1)/4]
                           −1/[5exp(x)−1]+1/4}.
 
-Entonces f(0)=1 y
+Then f(0)=1 and
 
     f'(x)=1/w(x)²>0,
     f''(x)=−2w'(x)/w(x)³<0,
     T_f(x)=−4w''(x)/w(x)^5=exp(−x)/w(x)^5>0.
 
-Aquí w>0,w'=exp(−x)/4>0,w''=−exp(−x)/4<0 globalmente. f es positiva porque parte de1 y crece. La fórmula explícita de f se verifica derivando, sin cuadratura ni empalmes.
+Here w>0,w'=exp(−x)/4>0,w''=−exp(−x)/4<0 globally. f is positive because it starts at1 and increases. The explicit formula for f is verified by differentiating, without quadrature or gluing.
 
-Sin embargo H(x)=x/[f(x)−f(0)] NO conserva T_H>0. La extensión regular en0 tiene series exactas
+However H(x)=x/[f(x)−f(0)] does NOT preserve T_H>0. The regular extension at0 has exact series
 
     f(x)−f(0)=x−x²/4+7x³/48−x⁴/12+O(x^5),
     H(x)=1+x/4−x²/12+5x³/192+O(x^4).
 
-Por tanto
+Hence
 
     H'(0)=1/4, H''(0)=−1/6, H'''(0)=5/32,
     T_H(0)=2H'(0)H'''(0)−3H''(0)²
            =5/64−1/12=−1/192<0.
 
-Las funciones son analíticas en un entorno de0. Por continuidad, T_H<0 en algún intervalo positivo: no es sólo un fallo en un extremo excluido. No se pretende cuantificar ese intervalo, porque el signo ya decide la afirmación universal de herencia.
+The functions are analytic in a neighbourhood of0. By continuity, T_H<0 on some positive interval: it is not just a failure at an excluded endpoint. No attempt is made to quantify that interval, because the sign already decides the universal inheritance claim.
 
-Una comprobación general del jet localiza el dato adicional. Si w(0)=1, b=w'(0), c=−w''(0), d=w'''(0), entonces
+A general jet check locates the additional datum. If w(0)=1, b=w'(0), c=−w''(0), d=w'''(0), then
 
     H'(0)=b, H''(0)=−2c/3, H'''(0)=(bc+d)/2,
     T_H(0)=b²c+bd−4c²/3.
 
-El ejemplo fija b=c=d=1/4. No se variaron parámetros en una campaña numérica. Aunque H''<0 queda garantizada por el lema de esta fuente, su nueva desigualdad de Turán falla.
+The example fixes b=c=d=1/4. Parameters were not varied in a numerical campaign. Although H''<0 is guaranteed by the lemma of this source, its new Turán inequality fails.
 
-Alcance: sólo se refuta esa herencia genérica. La curvatura REAL S_G''<0 de§7 permanece probada. T_h de la Phi real sigue OPEN y exigiría información específica, por ejemplo el menor de cinco columnas anclado de§8. No se refutan W, las coberturas085, otros invariantes ni la recursión general de Schur. No se afirma positividad de todos los triples de G_p, de cinco generadores originales o de todos los órdenes.
+Scope: only that generic inheritance is refuted. The REAL curvature S_G''<0 of§7 remains proved. T_h of the real Phi remains OPEN and would require specific information, for example the anchored five-column minor of§8. W, the coverages085, other invariants and the general Schur recursion are not refuted. No positivity is claimed for all triples of G_p, of five original generators or of all orders.

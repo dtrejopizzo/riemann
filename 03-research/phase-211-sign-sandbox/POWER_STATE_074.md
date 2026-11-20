@@ -1,44 +1,44 @@
-# POWER_STATE_074 — La hipótesis probabilística073 no se extiende automáticamente a tres
+# POWER_STATE_074 — The probabilistic hypothesis073 does not automatically extend to three
 
-Estado: **PROVED/APROBADO** para el contraejemplo auxiliar; signo global OPEN. Papers intactos.
+Status: **PROVED/APPROVED** for the auxiliary counterexample; global sign OPEN. Papers untouched.
 
-## Resultado y diferencia
+## Result and difference
 
-Fuente [POWER_TWO_COPY_SCOPE_074.md](POWER_TWO_COPY_SCOPE_074.md), auditoría [POWER_TWO_COPY_SCOPE_AUDIT_074.md](POWER_TWO_COPY_SCOPE_AUDIT_074.md). Constructor, root y auditor reprodujeron el verificador racional con exit0/PASS.
+Source [POWER_TWO_COPY_SCOPE_074.md](POWER_TWO_COPY_SCOPE_074.md), audit [POWER_TWO_COPY_SCOPE_AUDIT_074.md](POWER_TWO_COPY_SCOPE_AUDIT_074.md). The rational verifier was reproduced three times independently with exit0/PASS.
 
-El potencial explícito
+The explicit potential
 
     V(x)=A[x²/2+x^(2p)/(2p·2^(2p-2))],
     p=1000000, A=400000000,
 
-es par, polinómico, fuertemente convexo, superlineal y satisface V'''(x)>0 para TODOS x>0. Por073, su media inclinada M cumple M''<0 y M-uM'>0; TODOS los pares distintos positivos del kernel K(u,v)=(M(u)+M(v))/(u+v) son definidos positivos.
+is even, polynomial, strongly convex, superlinear and satisfies V'''(x)>0 for ALL x>0. By073, its tilted mean M satisfies M''<0 and M-uM'>0; ALL distinct positive pairs of the kernel K(u,v)=(M(u)+M(v))/(u+v) are positive definite.
 
-Sin embargo, en los tres nodos A,2A,3A, el vector c=(40,-40,3) cumple
+However, at the three nodes A,2A,3A, the vector c=(40,-40,3) satisfies
 
     c^T K c < -53111/(10000 A)<0.
 
-La prueba controla modos y medias por convexidad fuerte e integración por partes, no por una aproximación de punto de silla sin error. Las medias quedan a menos de1/10000 de(1,2,2); la matriz racional límite da c^T B0 c=-6 y el error cuadrático es menor que6889/10000. No hay cuadratura, barrido de potenciales ni campaña de nodos.
+The proof controls modes and means by strong convexity and integration by parts, not by a saddle-point approximation without error. The means lie within1/10000 of(1,2,2); the limiting rational matrix gives c^T B0 c=-6 and the quadratic error is less than6889/10000. There is no quadrature, sweep over potentials nor campaign over nodes.
 
-La diferencia frente SCHUR003 es conservar EXACTAMENTE toda la hipótesis fuerte de potencial073. Los auxiliares anteriores no la verificaban. La investigación prescrita de V=x^6 dio un primer determinante coalescente positivo, demostrado con momentos gamma exactos; no se lo presentó como contraejemplo ni se buscó un signo por una campaña.
+The difference relative to SCHUR003 is keeping EXACTLY the whole strong potential hypothesis073. The earlier auxiliaries did not satisfy it. The prescribed investigation of V=x^6 gave a first positive coalescent determinant, proved with exact gamma moments; it was not presented as a counterexample nor was a sign searched for by a campaign.
 
-## Lo que permanece probado para el dato real
+## What remains proved for the real datum
 
-073 permanece íntegro: para el kernel theta REAL, el compacto del hazard está certificado, M''<0 y M-uM'>0 para TODO u>0, y la forma COMPLETA es positiva en TODOS los planos de dos potencias con exponentes a,b>1, incluidos polar y todos los contactos. Exponentes distintos dan matriz definida positiva; exponentes coincidentes dan semidefinitud por redundancia y energía positiva sólo para la función representada no nula.
+073 remains intact: for the REAL theta kernel, the hazard compact is certified, M''<0 and M-uM'>0 for ALL u>0, and the FULL form is positive on ALL planes of two powers with exponents a,b>1, including polar and all contacts. Distinct exponents give a positive definite matrix; coinciding exponents give semidefiniteness by redundancy and positive energy only for the nonzero represented function.
 
-074 no es un contraejemplo a Phi real ni a W. No añade ni retira una región de signo W, ni una ventana T. Para avanzar a tres generadores reales hace falta una propiedad específica adicional de Phi o una comparación cuantitativa de su cruce.
+074 is not a counterexample to real Phi nor to W. It neither adds nor removes a sign region of W, nor a window T. To advance to three real generators an additional specific property of Phi or a quantitative comparison of its cross term is needed.
 
-## Obligación local cuantitativa, NO estimación probada
+## Quantitative local obligation, NOT a proved estimate
 
-Para el M REAL de073 y un u>0, ponga
+For the REAL M of073 and some u>0, set
 
     r=uM'(u)/M(u), t=-u²M''(u)/M(u).
 
-073 proporciona0<r<1 y t>0. El primer jet de tres nodos coalescentes exigiría además
+073 provides0<r<1 and t>0. The first jet of three coalescent nodes would further require
 
     t <= (1-r)(1+2r).                                  (OPEN-JET)
 
-Es la condición local ya asociada al primer transformado de SCHUR003§4, escrita con estas variables. Para precisar el alcance, la matriz de coeficientes Taylor de K alrededor de(u,u), con índices0,1,2 y división por los factoriales respectivos, tiene determinante
+It is the local condition already associated with the first transform of SCHUR003§4, written with these variables. To make the scope precise, the matrix of Taylor coefficients of K around(u,u), with indices0,1,2 and division by the respective factorials, has determinant
 
     M(u)^3/(64u^9) ·(1-r+t)·[(1-r)(1+2r)-t].
 
-Como1-r+t>0, un determinante local no negativo requiere OPEN-JET. Esta fórmula es una identificación algebraica de la obligación, no una prueba de su signo para Phi. La concavidad de M sólo conoce el signo de la covarianza de dos copias; falta controlar su MAGNITUD. Tampoco probar este jet puntual sustituiría la comparación global entre tres nodos distintos. No se crea otro memo de identidades ni se declara resuelta esa obligación.
+Since1-r+t>0, a nonnegative local determinant requires OPEN-JET. This formula is an algebraic identification of the obligation, not a proof of its sign for Phi. Concavity of M only knows the sign of the two-copy covariance; control of its MAGNITUDE is missing. Nor would proving this pointwise jet replace the global comparison between three distinct nodes. No other identity memo is created and that obligation is not declared resolved.

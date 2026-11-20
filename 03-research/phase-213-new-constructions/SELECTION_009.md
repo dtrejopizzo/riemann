@@ -1,11 +1,11 @@
-# Eliminar el salto compuesto de índice máximo
+# Eliminating the composite jump of maximal index
 
-En la base compatible del índice maestro, sustraer β_L b_L conserva las restricciones y elimina la coordenada superior. La propuesta precisa una comparación de energías entre ambos tests. El cruce que decide esta comparación es el de la forma física completa.
+In the compatible basis of the master index, subtracting β_L b_L preserves the constraints and eliminates the top coordinate. The proposal requires a comparison of energies between both tests. The crossing deciding this comparison is that of the complete physical form.
 
-La entrada «Primera transición compuesta» ya da u, v, las coordenadas de celdas de b_6 y b_10, y encierra el cruce físico real c=u* M_9 v alrededor de 3.70208. El número cercano a −0.41834 que aparece en la misma entrada es el error de la extensión congelada. Para un entero t, el test tu+v es admisible y retirar b_10 lo lleva a tu. Por polarización,
+The entry «Primera transición compuesta» already gives u, v, the cell coordinates of b_6 and b_10, and encloses the real physical crossing c=u* M_9 v around 3.70208. The number close to −0.41834 appearing in the same entry is the error of the frozen extension. For an integer t, the test tu+v is admissible and removing b_10 takes it to tu. By polarization,
 
     E(tu+v)−E(tu)=E(v)+2tc.
 
-Dado c>0, esta diferencia toma ambos signos al variar t entre enteros. Así se decide la monotonía de la retirada literal incluso en esta única transición. En particular, el signo de cada incremento no puede sostener una inducción que retire el mayor salto dejando fijos todos los demás coeficientes de la base.
+Given c>0, this difference takes both signs as t varies over the integers. This decides the monotonicity of the literal removal even in this single transition. In particular, the sign of each increment cannot support an induction that removes the largest jump keeping all the other coefficients of the basis fixed.
 
-Conclusión de selección basada en un certificado anterior. La posibilidad de una compensación que modifique conjuntamente los coeficientes antiguos sigue abierta. El signo de la energía total tampoco queda decidido por el signo del incremento.
+Selection conclusion based on an earlier certificate. The possibility of a compensation that jointly modifies the old coefficients remains open. The sign of the total energy is not decided by the sign of the increment either.

@@ -1,28 +1,28 @@
-# POWER_STATE_089 — Transporte global R4 y Turán real
+# POWER_STATE_089 — Global R4 transport and real Turán
 
-Estado: **PROVED**, constructor40406 exit0/FULL PASS1024origen+8192resto y auditoríamath/código aprobada. Reproducción independiente root87911 exit0/FULL PASS1024+8192 y hash coincidente. Paper47global OPEN; papers intactos.
+Status: **PROVED**, run 40406 exit0/FULL PASS 1024 origin + 8192 remainder and math/code audit approved. Independent reproduction 87911 exit0/FULL PASS 1024+8192 and matching hash. Paper 47 global OPEN; papers untouched.
 
-## Resultados estructurales
+## Structural results
 
-1. Wt(1,A,B,C)<0 paraTODOt>0: certificado089 dosramas completas más exterioranalítico088.
-2. Enorden[1,B,A,C] losWronskianosprevios086 yelcuarto danChebyshevglobal; eldeterminantedelasdensidadesrho4esnegativo paraTODOSsusnodos.
-3. SinhTP4/Andreiefconfluente trasladan esesigno a−(Z'/u)^4T_R<0. Por tanto T_R=2R'R'''−3R''²>0 enTODOx=u²>0.
-4.090seaplica globalmente: h=1/bstrictconcava. Con086g_*=xbstrictconcava,078pruebatodoslosparesdelrestoGpstrictPD paraTODOp>0.
+1. Wt(1,A,B,C)<0 for ALL t>0: certificate 089 two complete branches plus analytic exterior 088.
+2. In the order [1,B,A,C] the previous Wronskians 086 and the fourth give global Chebyshev; the determinant of the densities rho4 is negative for ALL its nodes.
+3. Without TP4/confluent Andreief, this sign is transferred to −(Z'/u)^4T_R<0. Therefore T_R=2R'R'''−3R''²>0 at ALL x=u²>0.
+4. 090 applies globally: h=1/b strictly concave. With 086 g_*=xb strictly concave, 078 proves all pairs of the remainder Gp strictly PD for ALL p>0.
 
-Fuentes:`POWER_THETA_DENSITY_COMPACT_089.md`,`POWER_THETA_DENSITY_COMPACT_AUDIT_089.md`,`POWER_THETA_DENSITY_TRANSPORT_089.md`,`POWER_RECIPROCAL_SECANT_CONCAVITY_090.md`,086/088.
-Código:`tools/power_theta_density_compact_089_verify.py`.
+Sources: `POWER_THETA_DENSITY_COMPACT_089.md`, `POWER_THETA_DENSITY_COMPACT_AUDIT_089.md`, `POWER_THETA_DENSITY_TRANSPORT_089.md`, `POWER_RECIPROCAL_SECANT_CONCAVITY_090.md`, 086/088.
+Code: `tools/power_theta_density_compact_089_verify.py`.
 Hash:
 
     995ef292abf5a80a3d195b4e68a815e1b56f9b343531bc1c0786af682413d1aa
 
-## Certificado y alcance
+## Certificate and scope
 
-Origenlambda[0,1/256]:1024paneles,1024bits/cap23,Taylor16,B1e48. Restot[1/16,1]:8192paneles,512bits/cap47,Taylor40,B1e60. Cadajetcentral incluye16modostheta yTODAlacolacompleja porerrorescoeficientesantesderivar. Paridadparcialorigenforzadamediantepromedio±sqrtlambda. RestoCauchyuniforme deldeterminantepagatodoelpanel. Parámetrosfijados/auditadosantescorrida;sinFAIL/ajustes.
+Origin lambda [0,1/256]: 1024 panels, 1024 bits/cap 23, Taylor 16, B 1e48. Remainder t [1/16,1]: 8192 panels, 512 bits/cap 47, Taylor 40, B 1e60. Each central jet includes 16 theta modes and ALL the complete tail via coefficient errors before differentiating. Partial parity at the origin forced via the average ±sqrt lambda. Uniform Cauchy remainder of the determinant pays for the whole panel. Parameters fixed/audited before the run; no FAIL/adjustments.
 
-No nueva coberturaWfrente085(cuatroexponentesai>1yaPROVED). NoS4transporteglobal,cinco/todoslosórdenes ni nuevaT. ElrestoGpnoheredaBASE081 ni susTuran; la segunda curvatura recíproca yla iteración quedanOPEN. Continuaciónactiva.
+No new W coverage relative to 085 (four exponents ai>1 already PROVED). No global S4 transport, five/all orders or new T. The remainder Gp does not inherit BASE 081 nor its Turán inequalities; the second reciprocal curvature and the iteration remain OPEN. Continuation active.
 
-## Extensión090 auditada
+## Audited extension 090
 
-El lema anclado en P, probado en ambas orientaciones, se aplica a g=xb=aR−1, pues T_g=a²T_R>0. Por tanto S_G tiene segunda derivada estrictamente negativa para TODOS p,x>0. La otra curvatura, R_G, exige T_h>0 global: sigue OPEN y corresponde al siguiente jet anclado explicitado en090. No hay herencia automática ni nuevo cierre de W.
+The lemma anchored at P, proved in both orientations, applies to g=xb=aR−1, since T_g=a²T_R>0. Therefore S_G has strictly negative second derivative for ALL p,x>0. The other curvature, R_G, requires global T_h>0: it remains OPEN and corresponds to the next anchored jet made explicit in 090. There is no automatic inheritance nor new closure of W.
 
-El contraejemplo global explícito de090§9 refuta la herencia genérica T_f⇒T_H: con w=(5−e^−x)/4, T_f>0 global pero T_H(0)=−1/192. No decide T_h de Phi ni la iteración específica.
+The explicit global counterexample of 090§9 refutes the generic inheritance T_f⇒T_H: with w=(5−e^−x)/4, T_f>0 globally but T_H(0)=−1/192. It does not decide T_h of Phi nor the specific iteration.

@@ -1,80 +1,80 @@
-# POWER_R12_TRANSPORT_049 — Transporte aritmético R12 para el primer movimiento desde V12
+# POWER_R12_TRANSPORT_049 — Arithmetic transport R12 for the first movement from V12
 
-Estado: PROVED; revisión independiente APROBADA en POWER_R12_AUDIT_049.md. Constructor, auditor y root reprodujeron el certificado exhaustivo finito PASS. R12 queda resuelto en su clase declarada, no el signo completo de W. Papers intactos.
+Status: PROVED; independent review APPROVED in POWER_R12_AUDIT_049.md. The exhaustive finite certificate was reproduced independently, PASS. R12 is solved in its declared class, not the full sign of W. Papers untouched.
 
-## 1. Corpus, diferencia y objetivo
+## 1. Corpus, difference and target
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID, CROSSWORD-TO-D y PRIME_TRANSFER014, GEOMETRIC_TRANSFER015, ARITHMETIC_BLOCK007, R12_ENDPOINT048 y CENTERED_CUTOFF049. El falsificador universal014 no pertenece a V12. La eventualidad015 no daba un corte efectivo. La diferencia actual es combinar el corte analítico J=14, uniforme en TODOS los numeradores de V12, con un certificado exhaustivo del único segmento restante j=1,...,13. Los índices se fijan por la prueba del corte, no mediante una búsqueda de casos favorables.
+Consulted the project rules, ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID, CROSSWORD-TO-D and PRIME_TRANSFER014, GEOMETRIC_TRANSFER015, ARITHMETIC_BLOCK007, R12_ENDPOINT048 and CENTERED_CUTOFF049. The universal falsifier014 does not belong to V12. The eventuality015 did not give an effective cut. The current difference is to combine the analytic cut J=14, uniform in ALL numerators of V12, with an exhaustive certificate of the only remaining segment j=1,...,13. The indices are fixed by the proof of the cut, not by a search for favourable cases.
 
-Sea u=63/2, Q(s)=s/(s+u), y E2=ARCH+POLAR−sqrt(2)log2·c(log2). El objetivo es exactamente R12 de PRIME_TRANSFER014§5, con c=1/2500.
+Let u=63/2, Q(s)=s/(s+u), and E2=ARCH+POLAR−sqrt(2)log2·c(log2). The target is exactly R12 of PRIME_TRANSFER014§5, with c=1/2500.
 
-## 2. Segmento finito: matrices y error relativo a la Gram
+## 2. Finite segment: matrices and error relative to the Gram
 
-El verificador tools/power_r12_finite_segment_049_verify.py reproduce las fórmulas intervalares auditadas007 y048 para las25 primeras bandas de la matriz Toeplitz E2 en la base Laguerre ortonormal. Conserva ARCH, contacto2 y polar exactos en sus normalizaciones originales. La ARCH usa sumas de potencias a partir de16 con Euler y restos explícitos, el polar es racional y log2 tiene resto de atanh positivo. Los centros racionales tienen denominador10^18. La suma de errores por fila es menor que10^−8.
+The verifier tools/power_r12_finite_segment_049_verify.py reproduces the audited interval formulas007 and048 for the first25 bands of the Toeplitz matrix E2 in the orthonormal Laguerre basis. It keeps ARCH, contact2 and polar exact in their original normalisations. The ARCH uses power sums from16 with Euler and explicit remainders, the polar is rational and log2 has a positive atanh remainder. The rational centres have denominator10^18. The sum of errors per row is less than10^−8.
 
-Sobre el círculo z=(s−u)/(s+u), Q=(1+z)/2. Para cada j=1,...,13 la imagen Q^jV12 tiene matriz de coeficientes
+On the circle z=(s−u)/(s+u), Q=(1+z)/2. For each j=1,...,13 the image Q^jV12 has coefficient matrix
 
     C_j[a,i]=binom(j,a−i), 0≤i≤11, 0≤a≤11+j,
 
-entendiendo cero fuera de0≤a−i≤j. Se omite el factor común2^−j: cancela del signo de la desigualdad. La Gram exacta es C_jᵀC_j. Si T es la matriz E2 y Tc su centro intervalar, entonces
+understood as zero outside0≤a−i≤j. The common factor2^−j is omitted: it cancels from the sign of the inequality. The exact Gram is C_jᵀC_j. If T is the matrix E2 and Tc its interval centre, then
 
     |xᵀ C_jᵀ(T−Tc) C_j x| ≤ 10^−8 xᵀ C_jᵀC_j x.
 
-No se paga el error contra una identidad de coordenadas mal condicionadas. El LDL racional de dimensión12 verifica, para TODOS los trece índices,
+The error is not paid against an identity of ill-conditioned coordinates. The rational LDL of dimension12 verifies, for ALL thirteen indices,
 
     C_jᵀ Tc C_j − (1/2500+10^−8)C_jᵀC_j > 0.
 
-La ejecución única terminó exit0, con trece mensajes PASS y la conclusión
+The single run ended exit0, with thirteen PASS messages and the conclusion
 
     E2[Q^jF] > ||Q^jF||²/2500,
-    F∈V12 no nulo, j=1,...,13.                          (FINITE)
+    F∈V12 nonzero, j=1,...,13.                          (FINITE)
 
-La comprobación no usa autovalores flotantes ni discretización de tasas, y no deja índices sin verificar en ese segmento.
+The check uses no floating eigenvalues nor discretisation of rates, and leaves no unverified indices in that segment.
 
-## 3. Cola analítica y toda la órbita
+## 3. Analytic tail and the whole orbit
 
-CENTERED_CUTOFF049 demuestra para TODO j≥14 y TODO F∈V12,
+CENTERED_CUTOFF049 proves for EVERY j≥14 and EVERY F∈V12,
 
     E_(Q^jF) τ^−2 < 1/405,
     ARCH[Q^jF]/||Q^jF||² > 859/800.
 
-El contacto2 tiene módulo menor que la norma². R12_ENDPOINT048 da
+Contact2 has modulus less than the norm². R12_ENDPOINT048 gives
 
     |POLAR[Q^jF]|/||Q^jF||² ≤ (9/62)^j PB12,
 
-con PB12<3: las bandas polares tienen módulo<1/5 y la suma de fila es<12/5. Así, para j≥14,
+with PB12<3: the polar bands have modulus<1/5 and the row sum is<12/5. Thus, for j≥14,
 
     E2[Q^jF]/||Q^jF||²
        > 859/800 − 1 − 3(9/62)^14 > 1/2500.             (TAIL)
 
-Juntando FINITE y TAIL, E2−c norma² es estrictamente positiva en TODA Q^jV12, para todos los enteros j≥1.
+Combining FINITE and TAIL, E2−c norm² is strictly positive on ALL of Q^jV12, for all integers j≥1.
 
-## 4. Ensamblaje exacto y resolución de R12
+## 4. Exact assembly and resolution of R12
 
-Para v≥u ponga r=1−u²/v²∈[0,1). Sea G_v(s)=sF(s)/(s+v). La identidad geométrica015, aplicada a QF, da
+For v≥u put r=1−u²/v²∈[0,1). Let G_v(s)=sF(s)/(s+v). The geometric identity015, applied to QF, gives
 
     E2[G_v]=(1−r)Σ_(j≥0) r^j E2[Q^(j+1)F],
     ||G_v||²=(1−r)Σ_(j≥0)r^j ||Q^(j+1)F||².           (MIX)
 
-Es una identidad de formas cuadráticas, no de funciones. El polar se conserva porque Q(−1/2)Q(1/2)=−1/3968 y
+It is an identity of quadratic forms, not of functions. The polar is preserved because Q(−1/2)Q(1/2)=−1/3968 and
 
     (1−r)Σ r^j (−1/3968)^(j+1)=−1/(4v²−1).
 
-Las series convergen absolutamente por un argumento directo. En el eje real |Q(iτ)|<=1 y la integral de |m(τ)||F(iτ)|² es finita para todo F en V12, por su decaimiento racional. Esto domina uniformemente las integrales arquimedianas de Q^jF. El contacto2 está acotado por sqrt(2)log2·||F||², y el polar es la sucesión geométrica explícita anterior. Así cada E2[Q^jF] queda uniformemente acotada en j; la suma geométrica y la convergencia dominada justifican MIX para cada v finito. La misma dominación con multiplicador1 prueba la identidad de normas y permite restar c. El caso v=u es r=0 y queda incluido.
+The series converge absolutely by a direct argument. On the real axis |Q(iτ)|<=1 and the integral of |m(τ)||F(iτ)|² is finite for every F in V12, by its rational decay. This uniformly dominates the archimedean integrals of Q^jF. Contact2 is bounded by sqrt(2)log2·||F||², and the polar is the explicit geometric sequence above. Thus each E2[Q^jF] is uniformly bounded in j; the geometric sum and dominated convergence justify MIX for each finite v. The same domination with multiplier1 proves the norm identity and allows subtracting c. The case v=u is r=0 and is included.
 
-Por FINITE+TAIL y MIX,
+By FINITE+TAIL and MIX,
 
     E2[G_v] > (1/2500)||G_v||²,
-    F∈V12\{0}, TODOS v≥u.                              (R12-PROVED)
+    F∈V12\{0}, ALL v≥u.                              (R12-PROVED)
 
-Esta es exactamente la obligación R12: |G_v(iτ)|²=τ²|F(iτ)|²/(v²+τ²) y POLAR[G_v]=−POLAR[F]/[4(v²−1/4)].
+This is exactly the obligation R12: |G_v(iτ)|²=τ²|F(iτ)|²/(v²+τ²) and POLAR[G_v]=−POLAR[F]/[4(v²−1/4)].
 
-Si f_v=(s+u)F/(s+v), T2 de014 implica
+If f_v=(s+u)F/(s+v), T2 of014 implies
 
-    (E2−c norma²)[f_v] ≥ (u²/v²)(E2−c norma²)[F].
+    (E2−c norm²)[f_v] ≥ (u²/v²)(E2−c norm²)[F].
 
-007 certifica E2[F]>(1/1250−10^−8)||F||²; como ese margen es mayor que c, la base también es coerciva a la misma constante.
+007 certifies E2[F]>(1/1250−10^−8)||F||²; since that margin is greater than c, the base is also coercive at the same constant.
 
-## 5. Alcance
+## 5. Scope
 
-Se resuelve la obligación restringida R12 y el primer movimiento desde V12. No se han acotado aquí los contactos restantes sobre el espacio desplazado: la cola pequeña de007 fue certificada sólo sobre la base confluyente V12. Por tanto no se infiere una desigualdad para W completo en esos nuevos espacios. Tampoco se aplica R12 recursivamente a una base intermedia distinta de V12 sin una prueba adicional. No se afirma signo global ni nueva ventana temporal.
+The restricted obligation R12 and the first movement from V12 are solved. The remaining contacts on the shifted space have not been bounded here: the small tail of007 was certified only on the confluent base V12. Hence no inequality for full W on those new spaces is inferred. Nor is R12 applied recursively to an intermediate base different from V12 without an additional proof. No global sign nor new time window is claimed.

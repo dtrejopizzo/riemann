@@ -1,75 +1,75 @@
-# POWER TABLE AUDIT 018 — revisión independiente
+# POWER TABLE AUDIT 018 — independent review
 
-Estado: APROBADO, con alcance delimitado. Fecha: 2026-11-05. Papers intactos.
+Status: APPROVED, with delimited scope. Date: 2026-11-05. Papers untouched.
 
-## 1. Filas N=2 y N=3
+## 1. Rows N=2 and N=3
 
-Revisado `POWER_TABLE_DESCENT_018.md` y ejecutado su verificador exacto `tools/power_table_descent_018_verify.py`: PASS. La revisión independiente de root coincide.
+Reviewed `POWER_TABLE_DESCENT_018.md` and ran its exact verifier `tools/power_table_descent_018_verify.py`: PASS. A second independent review agrees.
 
-Para todos u≥63/2 y k≥0, ambas filas satisfacen W[f_Nk]>||f_Nk||²/8. La normalización es f_Nk(s)=s^k/(s+u)^(N+k). La recurrencia exacta es a_Nk=a_N,k+1+u²a_N+1,k. Por tanto quedan certificadas las primeras y segundas diferencias estrictas de la fila N=1; no se deducen diferencias de órdenes superiores.
+For all u≥63/2 and k≥0, both rows satisfy W[f_Nk]>||f_Nk||²/8. The normalization is f_Nk(s)=s^k/(s+u)^(N+k). The exact recurrence is a_Nk=a_N,k+1+u²a_N+1,k. Therefore the strict first and second differences of the row N=1 are certified; differences of higher orders are not deduced.
 
-Se comprobaron: monotonía archimedeana en k por covarianza; A20=d−ud′>2/5 y A30=d−ud′+u²d″/3>3/20; razones ponderadas uniformes R2=4641/11 y R3=15658881/1331 en el extremo u=63/2, decrecientes en u; costes del peine completo menores que .003 y 1/60; polar de N=2 en valor absoluto menor que .26 y polar negativo de N=3 menor que .001. Las sumas resultantes exceden 1/8. La paridad del polar de N=3 es esencial y está usada correctamente.
+Checked: archimedean monotonicity in k by covariance; A20=d−ud′>2/5 and A30=d−ud′+u²d″/3>3/20; uniform weighted ratios R2=4641/11 and R3=15658881/1331 at the endpoint u=63/2, decreasing in u; costs of the complete comb less than .003 and 1/60; polar of N=2 in absolute value less than .26 and negative polar of N=3 less than .001. The resulting sums exceed 1/8. The parity of the polar of N=3 is essential and is used correctly.
 
-## 2. Presupuesto de la fila baja
+## 2. Budget of the low row
 
-Revisado y aprobado `POWER_LOW_TABLE_018.md`. No aporta un signo nuevo: cuantifica exactamente el presupuesto absoluto de la ruta E0 ya existente.
+Reviewed and approved `POWER_LOW_TABLE_018.md`. It does not supply a new sign: it quantifies exactly the absolute budget of the already existing route E0.
 
-Con E0(x)=ψΛ(x)−x+1, E0(1)=0 y C_N la autocorrelación positiva decreciente, la integración por partes da
+With E0(x)=ψΛ(x)−x+1, E0(1)=0 and C_N the positive decreasing autocorrelation, integration by parts gives
 
 F_N=(2/C_N(0))∫₀∞ E0(eᵗ)e^(−t/2)(C_N(t)/2−C_N′(t))dt.
 
-El término +1 y el extremo x=1 son correctos. Bajo la hipótesis |E0(x)|≤Ax^θ, 0≤θ<u+1/2, el presupuesto exacto es D_N(θ)=2+2θJ_N(θ−1/2), con J_N(b)=∫₀∞e^(bt)C_N(t)/C_N(0)dt. Se verifican D_N(0)=2; el límite 1/(1/2−θ) si θ<1/2; el crecimiento de orden √N si θ=1/2; y de orden √N(1−(θ−1/2)²/u²)^(−N) si θ>1/2. El último régimen usa las cotas bilaterales por cosh y exige θ−1/2<u. No se ha obtenido control firmado del residuo.
+The term +1 and the endpoint x=1 are correct. Under the hypothesis |E0(x)|≤Ax^θ, 0≤θ<u+1/2, the exact budget is D_N(θ)=2+2θJ_N(θ−1/2), with J_N(b)=∫₀∞e^(bt)C_N(t)/C_N(0)dt. Verified: D_N(0)=2; the limit 1/(1/2−θ) if θ<1/2; growth of order √N if θ=1/2; and of order √N(1−(θ−1/2)²/u²)^(−N) if θ>1/2. The last regime uses the two-sided cosh bounds and requires θ−1/2<u. No signed control of the residue has been obtained.
 
-## 3. Falsificador exacto de la inferencia estructural
+## 3. Exact falsifier of the structural inference
 
-Este modelo no es la forma aritmética W. Demuestra que recurrencia, identidades de filtros y las regiones positivas certificadas no bastan, por sí solas, para completar la tabla.
+This model is not the arithmetic form W. It shows that the recurrence, filter identities and the certified positive regions do not suffice, by themselves, to complete the table.
 
-Fijar u₀=63/2, ε=1/100 y la probabilidad arcoseno ν(dq)=dq/(π√(q(1−q))). Sea μ=2ν−εδ₁/₂. La forma sobre funciones racionales causales reales es
+Fix u₀=63/2, ε=1/100 and the arcsine probability ν(dq)=dq/(π√(q(1−q))). Let μ=2ν−εδ₁/₂. The form on real causal rational functions is
 
 V[f]=2||f||²−εu₀|F(iu₀)|².
 
-Con q=τ²/(u₀²+τ²) y F₁(s)=1/(s+u₀), equivale a integrar |F/F₁|² contra μ/(2u₀). Para la tabla de polo u₀,
+With q=τ²/(u₀²+τ²) and F₁(s)=1/(s+u₀), it is equivalent to integrating |F/F₁|² against μ/(2u₀). For the table with pole u₀,
 
 b_Nk=∫q^k(1−q)^(N−1)dμ,   a^V_Nk=b_Nk/(2u₀^(2N−1)).
 
-La identidad puntual q+(1−q)=1 da exactamente la misma recurrencia de Pascal y las identidades complementarias/binomiales. Las identidades geométricas convergentes también se conservan. No se postula ninguna identidad gamma o de von Mangoldt para V.
+The pointwise identity q+(1−q)=1 gives exactly the same Pascal recurrence and the complementary/binomial identities. The convergent geometric identities are also preserved. No gamma or von Mangoldt identity is postulated for V.
 
-### 3.1. Márgenes de bloques y filas
+### 3.1. Margins of blocks and rows
 
-En cualquier espacio racional de m≤12 polos v_j≥u₀, incluidos polos repetidos, la base de Malmquist da
+In any rational space of m≤12 poles v_j≥u₀, including repeated poles, the Malmquist basis gives
 
 Σ_j|φ̂_j(iu₀)|²=Σ_j 2v_j/(v_j²+u₀²)≤m/u₀.
 
-Cauchy implica V[f]≥(2−εm)||f||²≥47||f||²/25. Así conserva, con margen mayor, todos los certificados de bloques de hasta doce polos, incluidos todos sus cruces y los ocho polos arbitrarios.
+Cauchy implies V[f]≥(2−εm)||f||²≥47||f||²/25. Thus it preserves, with a larger margin, all block certificates of up to twelve poles, including all their crossings and the eight arbitrary poles.
 
-También conserva las tres filas completas para cualquier polo v≥u₀. Escribir q_v=u₀²/(v²+u₀²)≤1/2. La razón del término evaluado respecto de la norma es
+It also preserves the three complete rows for any pole v≥u₀. Write q_v=u₀²/(v²+u₀²)≤1/2. The ratio of the evaluated term to the norm is
 
 [2u₀v/(v²+u₀²)] q_v^k(1−q_v)^(N−1)/(B(k+1/2,N−1/2)/π).
 
-El primer factor es ≤1. Para N=1, c_k=binom(2k,k)/4^k≥2^(−k) da razón ≤1. Para N=2 el máximo es ≤2: k=0 directamente; para k≥1 el modo k/(k+1)≥1/2 permite maximizar en q=1/2. Para N=3 la cota es 8/3: k=0 directamente; k=1 da 64/27<8/3; k≥2 vuelve a maximizar en 1/2. En q=1/2 los cocientes consecutivos son (k+N)/(2k+1), con máximo en k=N−1 o N. Luego los márgenes son respectivamente 1.99, 1.98 y 2−(8/3)ε, todos mayores que los certificados reales. Las correspondientes desigualdades de diferencias se conservan.
+The first factor is ≤1. For N=1, c_k=binom(2k,k)/4^k≥2^(−k) gives ratio ≤1. For N=2 the maximum is ≤2: k=0 directly; for k≥1 the mode k/(k+1)≥1/2 allows maximizing at q=1/2. For N=3 the bound is 8/3: k=0 directly; k=1 gives 64/27<8/3; k≥2 again maximizes at 1/2. At q=1/2 the consecutive quotients are (k+N)/(2k+1), with maximum at k=N−1 or N. Hence the margins are respectively 1.99, 1.98 and 2−(8/3)ε, all larger than the real certificates. The corresponding difference inequalities are preserved.
 
-### 3.2. Cono positivo y positividad eventual
+### 3.2. Positive cone and eventual positivity
 
-Sea h(q)=q^k(1−q)^(N−1), d=h(1/2). Como ν≥dq/2,
+Let h(q)=q^k(1−q)^(N−1), d=h(1/2). Since ν≥dq/2,
 
 ∫h dν≥(1/2)∫h dq≥(1/2)(3/4)^k8^(−N),
 
-integrando q∈[3/4,7/8]. Si k≥6N, (∫h dq)/d≥(3/2)^k/2^(2N+1)>1. Por ello el cociente del átomo negativo respecto de la masa ν es ≤2 y V/||f||²≥2−2ε=1.98. En particular se conserva todo el cono N≥2, k≥10000N² y su margen 49/50.
+integrating over q∈[3/4,7/8]. If k≥6N, (∫h dq)/d≥(3/2)^k/2^(2N+1)>1. Hence the ratio of the negative atom to the mass ν is ≤2 and V/||f||²≥2−2ε=1.98. In particular the whole cone N≥2, k≥10000N² and its margin 49/50 are preserved.
 
-Para cada orden fijo, el átomo evaluado tras Q^k decrece exponencialmente, mientras la norma decrece sólo como potencia de k. La afirmación es uniforme en cualquier espacio fijo de numeradores de dimensión finita. Por tanto también se conserva la positividad eventual de cada fila/espacio fijo. No se afirma que V reproduzca el crecimiento logarítmico preciso de W.
+For each fixed order, the evaluated atom after Q^k decreases exponentially, while the norm decreases only as a power of k. The statement is uniform in any fixed finite-dimensional space of numerators. Therefore eventual positivity of each fixed row/space is also preserved. It is not claimed that V reproduces the precise logarithmic growth of W.
 
-### 3.3. Entrada interior negativa explícita
+### 3.3. Explicit negative interior entry
 
-Tomar N=n+1, k=n. Entonces
+Take N=n+1, k=n. Then
 
 4^n b_Nk=2c_n−ε,   c_n=binom(2n,n)/4^n.
 
-La inducción c_n≤1/√(n+1) sigue de c_(n+1)/c_n=(2n+1)/(2n+2): la desigualdad cuadrada necesaria tiene diferencia 3n+2>0. Con n=201²=40401,
+The induction c_n≤1/√(n+1) follows from c_(n+1)/c_n=(2n+1)/(2n+2): the required squared inequality has difference 3n+2>0. With n=201²=40401,
 
 2c_n≤2/√40402<2/201<1/100.
 
-Por tanto b_40402,40401<0, y también a^V_40402,40401<0. Esta entrada queda fuera de los bloques finitos y del cono certificado.
+Therefore b_40402,40401<0, and also a^V_40402,40401<0. This entry lies outside the finite blocks and the certified cone.
 
-## 4. Conclusión de alcance
+## 4. Scope conclusion
 
-Filas 2 y 3: nuevo signo positivo efectivo de toda la fila. LOW_TABLE: presupuesto exacto de una ruta anterior, sin signo adicional. Modelo μ: obstrucción lógica a completar la tabla mediante sólo las identidades y regiones ya probadas; no contraejemplo a W ni a la positividad buscada. La distinción pendiente debe usar información adicional de la forma aritmética concreta. Ninguno de estos resultados certifica por sí solo una nueva ventana T.
+Rows 2 and 3: new effective positive sign of the whole row. LOW_TABLE: exact budget of a previous route, without additional sign. Model μ: logical obstruction to completing the table through only the identities and regions already proved; not a counterexample to W nor to the sought positivity. The pending distinction must use additional information about the concrete arithmetic form. None of these results by itself certifies a new window T.

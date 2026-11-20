@@ -1,163 +1,163 @@
-# POWER_PARTICULAR_TAIL_095 — Cola analítica del Wronskiano particular
+# POWER_PARTICULAR_TAIL_095 — Analytic tail of the particular Wronskian
 
-Estado: **PROVED por las estimaciones analíticas siguientes; auditoría independiente aprobada.** Véase `POWER_PARTICULAR_TAIL_AUDIT_095.md`. No nueva evaluación theta, certificado compacto, parámetro explorado ni malla. Papers intactos. Se prueba el signo requerido del Wronskiano PARTICULAR para todo t>=64, no para todo t>0 ni para una nueva ventana T del Paper47.
+Status: **PROVED by the following analytic estimates; independent audit approved.** See `POWER_PARTICULAR_TAIL_AUDIT_095.md`. No new theta evaluation, compact certificate, explored parameter or grid. Papers untouched. The required sign of the PARTICULAR Wronskian is proved for all t>=64, not for all t>0 nor for a new window T of Paper47.
 
-## 1. Datos, consulta y diferencia frente088/092
+## 1. Data, consultation and difference from088/092
 
-Consultados las reglas del proyecto, README ROUTES-TRIED-INDEX, R162_2300_MASTER_GRID y CROSSWORD-TO-D, y077/078/087–094.088 controla el Wronskiano original de cuatro densidades.092 muestra que la eliminación universal mediante Delta no es globalmente invertible.093 verifica el signo de la solución particular en una vecindad no cuantificada del origen. Aquí se utiliza la selección integral de ESA solución particular para probar una cola completa; no se invierte Delta y no se diferencia un equivalente real sin resto.
+Consulted the project rules, README ROUTES-TRIED-INDEX, R162_2300_MASTER_GRID and CROSSWORD-TO-D, and077/078/087–094.088 controls the original Wronskian of four densities.092 shows that universal elimination via Delta is not globally invertible.093 verifies the sign of the particular solution on an unquantified neighbourhood of the origin. Here the integral selection of THAT particular solution is used to prove a complete tail; Delta is not inverted and no real equivalent without remainder is differentiated.
 
-Phi es la densidad theta REAL, par, positiva y de supercolas, y
+Phi is the REAL theta density, even, positive and with supertails, and
 
     w=tPhi, v=−Phi', a=M'(0)>1/25, c=1/a<25,
     zeta=v−cw,
     K(t)=integral_t^infinito(s−t)zeta(s)ds.
 
-La desigualdad a>1/25 es el ancla real078, no una aproximación de los momentos. K(0)=0 por el momento exacto integral_0^infinito t zeta(t)dt=0. Su extensión impar es suave y K''=zeta. El objeto es
+The inequality a>1/25 is the real anchor078, not an approximation of the moments. K(0)=0 by the exact moment integral_0^infinito t zeta(t)dt=0. Its odd extension is smooth and K''=zeta. The object is
 
     Wpart(t)=W_t(w,v,w'',K).
 
-## 2. Control complejo completo del logaritmo theta
+## 2. Complete complex control of the theta logarithm
 
-En el strip mayor Re z>=2, |Im z|<=1/8, escribir y=pi exp(2z),Y=|y|. Las cotas elementales pi>3,exp4>54 y cos(1/4)>31/32 dan
+On the larger strip Re z>=2, |Im z|<=1/8, write y=pi exp(2z),Y=|y|. The elementary bounds pi>3,exp4>54 and cos(1/4)>31/32 give
 
     Y>162, Re y>(31/32)Y>156.
 
-La función se factoriza exactamente
+The function factors exactly
 
     Phi(z)=pi exp(5z/2)(2y−3)exp(−y)[1+Rtheta(z)],
     Rtheta=sum_(m>=2)m²(2m²y−3)/(2y−3) exp[−(m²−1)y].
 
-Como Y>162, el factor racional tiene módulo menor que2m^4. Los términos m^4 exp[−156(m²−1)] tienen razones sucesivas menores que1/2: desde m=2, (1+1/m)^4<6 y el incremento del exponente es por lo menos780. Por tanto TODA la cola satisface
+Since Y>162, the rational factor has modulus less than2m^4. The terms m^4 exp[−156(m²−1)] have successive ratios less than1/2: from m=2, (1+1/m)^4<6 and the increment of the exponent is at least780. Hence the WHOLE tail satisfies
 
     |Rtheta|<64 exp(−468)<2^(−462)<2^(−460).
 
-Esto incluye todos los modos m>=2; no se los descarta. La serie log(1+Rtheta) es holomorfa y de módulo menor que2^(−459). En cada disco de radio1/32 alrededor de Re z>=3,|Im z|<=1/16, se permanece en el strip mayor. Cauchy da
+This includes all modes m>=2; they are not discarded. The series log(1+Rtheta) is holomorphic with modulus less than2^(−459). On each disc of radius1/32 around Re z>=3,|Im z|<=1/16, one stays in the larger strip. Cauchy gives
 
     |[log(1+Rtheta)]'|<32*2^(−459)<1,
     |[log(1+Rtheta)]''|<2*32²*2^(−459)<1.
 
-Ni 2y−3 ni1+Rtheta se anulan. Definir el logaritmo derivado p(z)=−Phi'(z)/Phi(z), sin necesitar una elección global del logaritmo de Phi. Para el primer modo,
+Neither 2y−3 nor1+Rtheta vanishes. Define the logarithmic derivative p(z)=−Phi'(z)/Phi(z), without needing a global choice of the logarithm of Phi. For the first mode,
 
     p_first=2y−9/2−6/(2y−3),
     p_first'=4y+24y/(2y−3)².
 
-En el strip interior Re z>=3,|Im z|<=1/16 se concluye
+On the inner strip Re z>=3,|Im z|<=1/16 one concludes
 
     |p−2y|<6, |p'|<=5Y, Re p>=Y, |p|>=Y.        (COMPLEX)
 
-La última comparación usa Re(2y)>=2Y cos(1/8), cos(1/8)>127/128 y Y>162. Así todos los cocientes utilizados a continuación son holomorfos en ese strip.
+The last comparison uses Re(2y)>=2Y cos(1/8), cos(1/8)>127/128 and Y>162. Thus all quotients used below are holomorphic on that strip.
 
-## 3. Representación horizontal e integración por partes con resto
+## 3. Horizontal representation and integration by parts with remainder
 
-Para z en el strip interior,
+For z in the inner strip,
 
     K(z)=integral_0^infinito [1−cs(z+s)]Phi(z+s)ds. (HORIZONTAL)
 
-En z real resulta de integrar por partes el término−Phi' en la definición de K. La identidad se extiende al strip por holomorfía: las integrales horizontales convergen uniformemente en compactos por Re y>0 y las supercolas theta.
+For real z it follows from integrating by parts the term−Phi' in the definition of K. The identity extends to the strip by holomorphy: the horizontal integrals converge uniformly on compacta by Re y>0 and the theta supertails.
 
-Fijando z y s>=0, COMPLEX implica
+Fixing z and s>=0, COMPLEX implies
 
     |Phi(z+s)/Phi(z)|
        <=exp[−integral_0^s Y exp(2r)dr]
        <=exp(−Ys).
 
-Sea H0(z)=integral_0^infinito Phi(z+s)ds. La integración por partes exacta, con borde nulo en infinito, da
+Let H0(z)=integral_0^infinito Phi(z+s)ds. The exact integration by parts, with vanishing boundary term at infinity, gives
 
     H0(z)/Phi(z)=1/p(z)
       −integral_0^infinito [Phi(z+s)/Phi(z)]p'(z+s)/p(z+s)² ds.
 
-Aquí |p'(z+s)/p(z+s)²|<=5/[Y exp(2s)]<=5/Y. Por tanto
+Here |p'(z+s)/p(z+s)²|<=5/[Y exp(2s)]<=5/Y. Hence
 
     |H0/Phi−1/p|<=5/Y².
 
-El segundo término de HORIZONTAL se controla conservando su estructura completa:
+The second term of HORIZONTAL is controlled keeping its complete structure:
 
     |K/Phi−H0/Phi|
       <=25 integral_0^infinito s(|z|+s)exp(−Ys)ds
       =25|z|/Y²+50/Y³.
 
-Como Y>50,
+Since Y>50,
 
     |K/Phi−1/p|< (6+25|z|)/Y².                 (IBP-REM)
 
-Es un bound de funciones holomorfas en un strip, no sólo un O real. Permite controlar derivadas por Cauchy sin diferenciar informalmente un resto asintótico.
+It is a bound for holomorphic functions on a strip, not just a real O. It allows controlling derivatives by Cauchy without informally differentiating an asymptotic remainder.
 
-## 4. Tres errores de columnas y sus derivadas hasta orden3
+## 4. Three column errors and their derivatives up to order3
 
-Fijar t real>=4 y y0=pi exp(2t). En el disco |z−t|<=1/32 se tiene
+Fix real t>=4 and y0=pi exp(2t). On the disc |z−t|<=1/32 one has
 
     (15/16)y0<Y<(16/15)y0,
     |z|<t+1.
 
-Se usan las cotas exp(−1/16)>15/16 y exp(1/16)<16/15. Al dividir todas las columnas por Phi, la regla de factor común del Wronskiano da
+The bounds exp(−1/16)>15/16 and exp(1/16)<16/15 are used. Dividing all columns by Phi, the common-factor rule of the Wronskian gives
 
     Wpart/Phi(t)^4=W_t[t,p,t(p²−p')−2p,K/Phi].
 
-Comparar con el modelo de funciones analíticas
+Compare with the model of analytic functions
 
     [t,q,tq²,1/q], q(z)=2pi exp(2z).
 
-La primera columna es exacta. Para la segunda, COMPLEX da |p−q|<6. Para la tercera,
+The first column is exact. For the second, COMPLEX gives |p−q|<6. For the third,
 
     |t(p²−p')−2p−tq²|
        <=[35|z|+6]Y
        <200(1+t)y0.
 
-En esta estimación t dentro de la función analítica significa z; el t real sólo nombra el centro. Se usaron |p+q|<5Y,|p'|<=5Y,|p|<3Y. Para la cuarta, IBP-REM y
+In this estimate t inside the analytic function means z; the real t only names the centre. We used |p+q|<5Y,|p'|<=5Y,|p|<3Y. For the fourth, IBP-REM and
 
     |1/p−1/q|<=3/Y²
 
-dan
+give
 
     |K/Phi−1/q|<200(1+t)y0^(−2).
 
-Cauchy en el disco fijo de radio1/32 controla las derivadas0,...,3 de TODOS estos errores. Con
+Cauchy on the fixed disc of radius1/32 controls the derivatives0,...,3 of ALL these errors. With
 
     H=200*3!*32³=39321600,
 
-los módulos de las entradas de las columnas de error, en cualquier fila de derivadas0,...,3 del Wronskiano, son respectivamente menores que
+the moduli of the entries of the error columns, in any row of derivatives0,...,3 of the Wronskian, are respectively less than
 
     H, H(1+t)y0, H(1+t)y0^(−2).                (COL-ERR)
 
-Los bordes de los discos son admisibles porque se trabaja en un entorno del strip cerrado; alternativamente se obtiene el mismo bound por límite de radios menores. No se deriva ningún O sin control.
+The boundaries of the discs are admissible because one works in a neighbourhood of the closed strip; alternatively the same bound is obtained as a limit of smaller radii. No O is differentiated without control.
 
-## 5. Determinante modelo y resto finito explícito
+## 5. Model determinant and explicit finite remainder
 
-En el centro real, las cuatro columnas modelo y sus derivadas hasta orden3 tienen entradas acotadas en módulo por
+At the real centre, the four model columns and their derivatives up to order3 have entries bounded in modulus by
 
     [t,16y0,512t y0²,4/y0].
 
-En efecto q'=2q y las derivadas de tq² son4y0²[4^r t+r4^(r−1)],r<=3, acotadas por512t y0² para t>=4. El cálculo polinómico exacto del determinante modelo es
+Indeed q'=2q and the derivatives of tq² are4y0²[4^r t+r4^(r−1)],r<=3, bounded by512t y0² for t>=4. The exact polynomial computation of the model determinant is
 
     W[t,q,tq²,1/q]
       =−128q²(6t²+4t−1)
       <=−3072t²y0².                            (MODEL)
 
-No se usan valores theta para esta identidad. Expandir multilinealmente en los tres errores COL-ERR produce siete términos. Cada determinante se acota por24veces el producto de los máximos de sus columnas. Usando1+t<=2t,t>=4,y0>=1, los tres términos con un error suman como máximo445440H t³y0; los tres con dos errores,26304H²t³y0; y el de tres errores,96H³t³y0. En consecuencia
+No theta values are used for this identity. Expanding multilinearly in the three errors COL-ERR produces seven terms. Each determinant is bounded by24 times the product of the maxima of its columns. Using1+t<=2t,t>=4,y0>=1, the three terms with one error sum to at most445440H t³y0; the three with two errors,26304H²t³y0; and the one with three errors,96H³t³y0. Consequently
 
-    |Wpart/Phi^4−Wmodelo|<C t³y0,
+    |Wpart/Phi^4−Wmodel|<C t³y0,
     C=10^6(1+H)³,
     445440H+26304H²+96H³<C<2^98.                (DET-REM)
 
-Las últimas desigualdades son aritmética entera: H+1<2^26 y10^6<2^20. Se conserva el efecto simultáneo de los errores; no se extrapola el signo de columnas separadas.
+The last inequalities are integer arithmetic: H+1<2^26 and10^6<2^20. The simultaneous effect of the errors is kept; the sign of separate columns is not extrapolated.
 
-## 6. Umbral analítico y resultado
+## 6. Analytic threshold and result
 
-La función y0/t=pi exp(2t)/t es estrictamente creciente para t>1/2. En t=64, usando exp1>2,
+The function y0/t=pi exp(2t)/t is strictly increasing for t>1/2. At t=64, using exp1>2,
 
     y0>2^128,
     C*64<2^104,
     y0>C*64.
 
-Así y0>Ct para TODO t>=64. MODEL y DET-REM dan entonces
+Thus y0>Ct for ALL t>=64. MODEL and DET-REM then give
 
     Wpart(t)/Phi(t)^4<−3071t²y0²<0,
-    W_t(tPhi,−Phi',(tPhi)'',K)<0 para TODO t>=64. (TAIL-PARTICULAR)
+    W_t(tPhi,−Phi',(tPhi)'',K)<0 for ALL t>=64. (TAIL-PARTICULAR)
 
-El número64 se obtiene sólo de los mayorantes anteriores y potencias enteras, sin evaluar el determinante en puntos ni ajustar un umbral a signos observados.
+The number64 is obtained only from the above majorants and integer powers, without evaluating the determinant at points nor adjusting a threshold to observed signs.
 
-## 7. Alcance y obligación restante
+## 7. Scope and remaining obligation
 
-093 verifica este mismo signo cerca0; la presente prueba verifica toda la cola t>=64. Permanece abierto el intervalo intermedio. No se infiere que los sistemas de cuatro densidades preserven el signo por mera inversión de D², ni que la carta Delta de092 sea regular; esta prueba evita esa carta y usa directamente la solución particular seleccionada por sus bordes.
+093 verifies this same sign near0; the present proof verifies the whole tail t>=64. The intermediate interval remains open. It is not inferred that four-density systems preserve the sign by mere inversion of D², nor that the Delta chart of092 is regular; this proof avoids that chart and directly uses the particular solution selected by its boundary conditions.
 
-El parámetro t aquí es la variable temporal interna de las densidades theta, **no una nueva ventana T**. No se afirma positividad para cinco generadores ni todos los órdenes, ni ampliación de la cobertura de W. Una prueba global del signo particular seguiría siendo necesaria para la aplicación correspondiente. No se crea un verificador numérico: sólo se usan las identidades y desigualdades analíticas explícitas anteriores.
+The parameter t here is the internal time variable of the theta densities, **not a new window T**. Neither positivity for five generators nor all orders, nor an extension of the coverage of W, is claimed. A global proof of the particular sign would still be needed for the corresponding application. No numerical verifier is created: only the explicit analytic identities and inequalities above are used.

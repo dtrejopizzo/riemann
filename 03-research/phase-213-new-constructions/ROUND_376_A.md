@@ -1,29 +1,29 @@
-# Marcado logarítmico de la capa: crecimiento hasta (1−ε)log log x
+# Logarithmic marking of the layer: growth up to (1−ε)log log x
 
-**Estado: PROVED, con revisión independiente del momento común, las marcas y las exclusiones.**
+**Status: PROVED, with independent review of the common moment, the marks and the exclusions.**
 
-Con la notación de 375, uniformemente para 1≤k≤2h,
+With the notation of 375, uniformly for 1≤k≤2h,
 
     k M_(k+1)(x) ≥ (1−o(1)) h M_k(x).
 
-Así cada prefijo impar hasta (1−ε)h tiene signo negativo para x suficientemente grande, para cada ε>0 fijo. En 375 dos elecciones posibles de primo costaban k(k+1). Aquí la masa total de una de esas marcas se normaliza exactamente.
+Thus every odd prefix up to (1−ε)h has negative sign for x sufficiently large, for each fixed ε>0. In 375 two possible choices of prime cost k(k+1). Here the total mass of one of those marks is normalized exactly.
 
-**Una estimación prima común.** Para Y→∞ se tiene
+**A common prime estimate.** For Y→∞ one has
 
     Σ_p (log p) g(log(Y/p)) ∼ J Y,   J=∫ g(u)exp(−u)du>0.
 
-En |u|≤B fijo vale por el PNT, como convergencia de la medida θ(Ydt)/Y a dt en un compacto de t>0. Las colas son uniformemente pequeñas respecto de Y al hacer B grande, por θ(t)≪t y bandas unitarias con la gaussiana. El mismo equivalente vale recortando |u|≤2√L si Y→∞ uniformemente y L→∞. Sólo se utiliza para log Y≥L/(3kh), muy superior a √L.
+On |u|≤B fixed it holds by the PNT, as convergence of the measure θ(Ydt)/Y to dt on a compact set of t>0. The tails are uniformly small relative to Y by taking B large, by θ(t)≪t and unit bands with the Gaussian. The same equivalent holds after truncating to |u|≤2√L if Y→∞ uniformly and L→∞. It is only used for log Y≥L/(3kh), far above √L.
 
-**Entrada.** Descartar |log(n/x)|>2√L cuesta o(1) por 375. En cada producto restante repartir su masa g entre sus primos p con pesos log p/log n. Si se retienen sólo log p≥L/(kh), la pérdida relativa es O(1/h) por Σ log p=log n. Para cada cofactor distinto m=n/p así generado, escribir Y=x/m; entonces log Y≥L/(2kh). Sumando ahora sobre todos los p, incluso los descartados, y usando log n∼L en el tramo central original, se obtiene
+**Input.** Discarding |log(n/x)|>2√L costs o(1) by 375. In each remaining product distribute its mass g among its primes p with weights log p/log n. If only log p≥L/(kh) are retained, the relative loss is O(1/h) by Σ log p=log n. For each distinct cofactor m=n/p so generated, write Y=x/m; then log Y≥L/(2kh). Now summing over all p, including the discarded ones, and using log n∼L in the original central range, one obtains
 
     (1−o(1)) M_k ≤ (1+o(1)) (J/L) Σ_m Y.
 
-La absorción del o(1) absoluto es uniforme por la construcción de 375, válida también para k≤2h porque kh=o(L).
+The absorption of the absolute o(1) is uniform by the construction of 375, valid also for k≤2h because kh=o(L).
 
-**Salida.** Para cada m elegir q∤m en L²<q≤exp(L/(10kh²)). Poner Y'=Y/q. Para los primos r con |log(Y'/r)|≤2√L se tiene r>q y log(mqr)∼L. Borrar los r|m cuesta O(kL) en la suma con peso log r, pues g es acotada y log m≤2L. Como log Y'≥L/(3kh), ese coste es o(Y') uniformemente. Por la estimación prima, la suma para esta pareja m,q, con peso g(log(Y'/r))log r/log(mqr), es (1+o(1))JY/(qL). Mertens da Σ_q 1/q=h−O(log h) uniformemente, incluyendo la exclusión de los divisores de m.
+**Output.** For each m choose q∤m in L²<q≤exp(L/(10kh²)). Set Y'=Y/q. For primes r with |log(Y'/r)|≤2√L one has r>q and log(mqr)∼L. Deleting the r|m costs O(kL) in the sum weighted by log r, since g is bounded and log m≤2L. Since log Y'≥L/(3kh), that cost is o(Y') uniformly. By the prime estimate, the sum for this pair m,q, with weight g(log(Y'/r))log r/log(mqr), is (1+o(1))JY/(qL). Mertens gives Σ_q 1/q=h−O(log h) uniformly, including the exclusion of the divisors of m.
 
-Para un producto final N=mqr, fijado r, hay a lo sumo k elecciones de q entre los otros factores. Sumando en r, Σ_{r|N}log r/log N=1. Por tanto toda la salida marcada pesa a lo sumo k M_(k+1). Comparando entrada y salida se obtiene la desigualdad anunciada. La ganancia viene de conservar el mismo J en ambas estimaciones, además de recuperar una potencia de k en la multiplicidad.
+For a final product N=mqr, with r fixed, there are at most k choices of q among the other factors. Summing over r, Σ_{r|N}log r/log N=1. Hence the whole marked output weighs at most k M_(k+1). Comparing input and output gives the announced inequality. The gain comes from keeping the same J in both estimates, in addition to recovering a power of k in the multiplicity.
 
-**Registro de revisión.** El equivalente primo es uniforme porque el menor log Y' permitido es L/(3kh)≥L/(6h²)→∞ y supera sqrt L; por eso el mismo J aparece en entrada y salida, incluso después del recorte gaussiano. Al excluir q|m se pierde como máximo k/L² en la suma de recíprocos. Al excluir r|m se pierde O(kL)=o(Y') uniformemente, antes de dividir por L. Cada producto final fija m una vez designados q,r; para cada r hay a lo sumo k elecciones de q, y la suma de todas las marcas log r/log N es exactamente 1. Los términos no generados sólo reducen esta suma positiva, de modo que la cota kM_(k+1) no exige que todos los primos puedan actuar como r. La construcción inferior de 375 sigue siendo uniforme para k≤2h, con log M_k≥L−O(kh+h), y absorbe la cola o(1).
+**Review record.** The prime equivalent is uniform because the smallest allowed log Y' is L/(3kh)≥L/(6h²)→∞ and exceeds sqrt L; that is why the same J appears in input and output, even after the Gaussian truncation. Excluding q|m loses at most k/L² in the sum of reciprocals. Excluding r|m loses O(kL)=o(Y') uniformly, before dividing by L. Each final product fixes m once q,r are designated; for each r there are at most k choices of q, and the sum of all marks log r/log N is exactly 1. Non-generated terms only reduce this positive sum, so the bound kM_(k+1) does not require that all primes can act as r. The lower construction of 375 remains uniform for k≤2h, with log M_k≥L−O(kh+h), and absorbs the o(1) tail.
 
-**Alcance.** Para k≤(1−ε)h, la razón supera 1 uniformemente al crecer x. Esto conserva el signo favorable en una franja mayor; el argumento pierde esa garantía cuando k/h supera 1. El saldo total y el control de las capas intermedias de 374 siguen abiertos.
+**Scope.** For k≤(1−ε)h, the ratio exceeds 1 uniformly as x grows. This preserves the favorable sign on a larger strip; the argument loses that guarantee when k/h exceeds 1. The total balance and the control of the intermediate layers of 374 remain open.

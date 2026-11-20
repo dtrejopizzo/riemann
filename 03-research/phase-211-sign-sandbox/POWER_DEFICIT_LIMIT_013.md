@@ -1,91 +1,91 @@
-# POWER_DEFICIT_LIMIT_013 — Límite exacto del transporte separable por déficit puntual en orden ocho
+# POWER_DEFICIT_LIMIT_013 — Exact limit of separable transport by pointwise deficit at order eight
 
-Estado: PROVED (NO-GO de una clase precisa de estimaciones). No es un contraejemplo al signo ni al transporte que conserve acoplamientos. Papers intactos.
+Status: PROVED (NO-GO for a precise class of estimates). It is not a counterexample to the sign nor to transport that keeps couplings. Papers untouched.
 
-## 1. Clase declarada y razón nueva
+## 1. Declared class and new reason
 
-Consultados índice/grid/crucigrama por deficit limit, pointwise deficit, separable transport y discarded positive gain; revisados POWER_FOUR_GLOBAL_009, POWER_SIX_GLOBAL_011 y el criterio general de transporte. Esta nota identifica dónde deja de bastar el mecanismo que cerró los casos de dimensión pequeña. No reintenta ni clasifica otras rutas del paper.
+Consulted index/grid/crossword for deficit limit, pointwise deficit, separable transport and discarded positive gain; reviewed POWER_FOUR_GLOBAL_009, POWER_SIX_GLOBAL_011 and the general transport criterion. This note identifies where the mechanism that closed the small-dimension cases stops sufficing. It does not retry or classify other routes of the paper.
 
-Fije u=63/2, n=8. La clase considerada transporta desde la base confluente usando:
+Fix u=63/2, n=8. The class considered transports from the confluent base using:
 
-1. Una constante escalar b tal que AP[f0]>=b||f0||² para TODO numerador de grado menor que ocho.
-2. Un objetivo c>=0.
-3. La envolvente uniforme R/R0<=(1+x/u²)^8, x=tau².
-4. Descarta toda ganancia en frecuencias m>=c y acota la pérdida negativa independientemente de la distribución espectral del numerador.
-5. Acota la variación polar por una pérdida no negativa independiente.
+1. A scalar constant b such that AP[f0]>=b||f0||² for EVERY numerator of degree less than eight.
+2. A target c>=0.
+3. The uniform envelope R/R0<=(1+x/u²)^8, x=tau².
+4. It discards all gain at frequencies m>=c and bounds the negative loss independently of the spectral distribution of the numerator.
+5. It bounds the polar variation by an independent non-negative loss.
 
-La estimación de 011 usa además X,D con m>=c para x>=X y x(c-m)_+<=D, y el producto D K8, K8=[(1+X/u²)^8-1]/X. Se probará que NI optimizar X,D,c,b hasta sus valores verdaderos puede cerrar esta clase en orden ocho. No se excluyen estimaciones que retengan la ganancia positiva o la medida espectral racional.
+The estimate of 011 additionally uses X,D with m>=c for x>=X and x(c-m)_+<=D, and the product D K8, K8=[(1+X/u²)^8-1]/X. It will be proved that NOT EVEN optimizing X,D,c,b up to their true values can close this class at order eight. Estimates that retain the positive gain or the rational spectral measure are not excluded.
 
-## 2. Un vector racional da b<1/25
+## 2. A rational vector gives b<1/25
 
-En la base Laguerre ortonormal de ocho polos u, tome
+In the orthonormal Laguerre basis of eight poles u, take
 
     v=(169,-310,405,-460,460,-405,310,-169).
 
-Es un vector racional explícito de dimensión ocho. Su cociente arch+polar satisface estrictamente
+It is an explicit rational vector of dimension eight. Its arch+polar quotient strictly satisfies
 
     0<AP[v]/||v||²<1/25.                                 (B8)
 
-El verificador tools/power_deficit_limit_013_verify.py calcula las ocho bandas Toeplitz mediante la fórmula Gamma+polar ya probada. Las derivadas psi^(j)(16), j<=7, se encierran sumando potencias racionales hasta 2000 y usando colas integrales. Gamma, pi y logaritmos usan los intervalos racionales de fixed_grid_003. La evaluación del vector es intervalar exacta, sin calcular autovalores numéricos para certificar.
+The verifier tools/power_deficit_limit_013_verify.py computes the eight Toeplitz bands by the already proved Gamma+polar formula. The derivatives psi^(j)(16), j<=7, are enclosed by summing rational powers up to 2000 and using integral tails. Gamma, pi and logarithms use the rational intervals of fixed_grid_003. The evaluation of the vector is exact interval arithmetic, without computing numerical eigenvalues to certify.
 
-Un único cálculo de descubrimiento de autovector produjo el vector anterior por redondeo; no interviene en la prueba final ni hubo un barrido de tasas. Por el principio variacional, cualquier b válido en el punto 1 de la clase declarada debe satisfacer b<1/25.
+A single eigenvector discovery computation produced the above vector by rounding; it plays no role in the final proof and there was no sweep over rates. By the variational principle, any b valid in item 1 of the declared class must satisfy b<1/25.
 
-## 3. Una frecuencia exige pérdida mayor que 1/20
+## 3. One frequency requires a loss greater than 1/20
 
-Se prueba exactamente
+We prove exactly
 
     m(4)<-2/5.                                           (M4)
 
-Para verificarlo, use m(0)=-gamma-pi/2-3log2-logpi con los intervalos anteriores, y sume los primeros 32 términos positivos de digamma a x=16. La cola es a lo sumo
+To verify it, use m(0)=-gamma-pi/2-3log2-logpi with the previous intervals, and sum the first 32 positive terms of digamma at x=16. The tail is at most
 
     (x/4)Σ_{k>=32}(k+1/4)^-3
        <=x/[8(125/4)^2].
 
-El extremo superior racional obtenido es menor que -2/5. La comparación no depende de una gráfica ni de una aproximación redondeada de m.
+The rational upper endpoint obtained is less than -2/5. The comparison does not depend on a graph nor on a rounded approximation of m.
 
-Por otra parte la desigualdad racional
+On the other hand the rational inequality
 
     (2/5)[(1+16/u²)^8-1]>1/20                            (LOSS)
 
-es verificada exactamente. Para cualquier c>=0, (M4) implica que la menor constante de pérdida obtenible usando SOLAMENTE la envolvente puntual uniforme satisface
+is verified exactly. For any c>=0, (M4) implies that the smallest loss constant obtainable using ONLY the uniform pointwise envelope satisfies
 
     sup_{x>=0}[(1+x/u²)^8-1](c-m(sqrt x))_+
        >(2/5)[(1+16/u²)^8-1]>1/20.
 
-La envolvente es realmente el supremo puntual de R/R0 cuando todos los polos nuevos tienden a infinito. Por tanto no existe una envolvente puntual uniforme estrictamente menor que la usada aquí para todos los polos v_j>=u. No se afirma que un numerador racional de grado siete pueda concentrarse arbitrariamente en esa frecuencia: precisamente esa restricción de medida es información que la clase declarada descarta.
+The envelope really is the pointwise supremum of R/R0 when all the new poles tend to infinity. Hence there is no uniform pointwise envelope strictly smaller than the one used here for all poles v_j>=u. It is not claimed that a rational numerator of degree seven can concentrate arbitrarily at that frequency: precisely that measure restriction is information that the declared class discards.
 
-### Teorema para la pérdida puntual DIRECTA
+### Theorem for the DIRECT pointwise loss
 
-Defina, sin separar el producto en dos constantes,
+Define, without splitting the product into two constants,
 
     L8(c)=sup_{x>=0}(c-m(sqrt x))_+[(1+x/u²)^8-1].
 
-Para CUALQUIER c>=0, la evaluación x=16 ya prueba L8(c)>1/20. Combinando con (B8), para todo b válido y toda pérdida polar p_loss>=0,
+For ANY c>=0, the evaluation x=16 already proves L8(c)>1/20. Combining with (B8), for every valid b and every polar loss p_loss>=0,
 
     b-c-L8(c)-p_loss <1/25-1/20=-1/100.
 
-Por tanto también queda excluida la estimación que optimiza directamente el producto puntual completo. El NO-GO no se limita a la separación D K8 ni a una partición particular de paneles. Es la sustitución de la integral negativa por un supremo puntual independiente del numerador, descartando la ganancia positiva, la que produce el obstáculo.
+Hence the estimate that directly optimizes the complete pointwise product is also excluded. The NO-GO is not limited to the D K8 separation nor to a particular partition of panels. It is the replacement of the negative integral by a pointwise supremum independent of the numerator, discarding the positive gain, that produces the obstacle.
 
-## 4. Imposibilidad de optimizar las constantes del criterio D K8
+## 4. Impossibility of optimizing the constants of the D K8 criterion
 
-Toda elección válida X,D debe tener X>16, pues m(4)<0<=c. Además
+Every valid choice X,D must have X>16, since m(4)<0<=c. Moreover
 
     D>=16(c-m(4))>16*(2/5).
 
-La convexidad de x->(1+x/u²)^8-1, que se anula en cero, da
+Convexity of x->(1+x/u²)^8-1, which vanishes at zero, gives
 
     K8>=[(1+16/u²)^8-1]/16.
 
-Por (LOSS), D K8>1/20. Incluso concediendo pérdida polar CERO, el margen máximo del criterio es
+By (LOSS), D K8>1/20. Even granting ZERO polar loss, the maximal margin of the criterion is
 
     b-c-D K8 <1/25-1/20=-1/100<0.
 
-Por tanto el criterio no puede certificar orden ocho, aunque se optimicen todos los paneles, colas, cotas de gamma o constantes de la parte negativa. El mismo fracaso vale para la versión con la mejor pérdida puntual exacta en lugar del producto D K8.
+Hence the criterion cannot certify order eight, even if all panels, tails, gamma bounds or constants of the negative part are optimized. The same failure holds for the version with the best exact pointwise loss instead of the product D K8.
 
-## 5. Interpretación operativa y límites
+## 5. Operational interpretation and limits
 
-Este resultado evita una prolongación indefinida de optimizaciones de constantes dentro de la misma estimación separable. En orden ocho debe retenerse alguna información descartada: ganancia en las frecuencias m>=c, distribución espectral del numerador, acoplamiento con el polar, filtros específicos de las tasas o contribución aritmética favorable.
+This result avoids an indefinite prolongation of constant optimizations within the same separable estimate. At order eight some discarded information must be retained: gain at the frequencies m>=c, spectral distribution of the numerator, coupling with the polar, specific filters of the rates or favourable arithmetic contribution.
 
-NO se prueba AP[v]<0: el vector del certificado tiene AP POSITIVA. Tampoco se prueba W[v]<0, ni se excluye un transporte global de signo más fino. El fallo pertenece a la estimación que sustituye el coste por su peor valor puntual independientemente del vector.
+It is NOT proved that AP[v]<0: the certificate vector has POSITIVE AP. Nor is W[v]<0 proved, nor is a finer global sign transport excluded. The failure belongs to the estimate that replaces the cost by its worst pointwise value independently of the vector.
 
-Comando: `python3 03-research/phase-211-sign-sandbox/tools/power_deficit_limit_013_verify.py`. Verifica (B8), (M4) y (LOSS) mediante enteros y Fraction; no contiene funciones especiales numéricas, optimizadores ni coma flotante.
+Command: `python3 03-research/phase-211-sign-sandbox/tools/power_deficit_limit_013_verify.py`. It verifies (B8), (M4) and (LOSS) via integers and Fraction; it contains no numerical special functions, optimizers or floating point.

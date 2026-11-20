@@ -1,112 +1,112 @@
-# Ronda 026 B — (PBP_T) como problema extremal exacto; argumento de Kreĭn y densidad; puerta de cuatro puntos
+# Round 026 B — (PBP_T) as an exact extremal problem; Kreĭn and density argument; four-point gate
 
-Objeto: la forma `a^w_T` sobre `P_T` (Paper 47, `04-papers/47-row-d-dual-certificates/main.tex`). Sin derivaciones
-largas. Abiertos: R160_M2_R1 completo; G2_B9_R3 §3; P47 `eq:m`, `eq:Aform`, `eq:Kprim`, `prop:finite`, `lem:degen`,
-`rem:resweights`; R155_033 §0, §2.1–2.3; índice, entrada 212-25; ROUND_025_A (grep). No abiertos: R155_023/024/027
-(umbrales y Theorem N′, sólo por su resumen en README de la fase 155), R155_049, ROUND_025_B, G2_B6_R2.
+Object: the form `a^w_T` on `P_T` (Paper 47, `04-papers/47-row-d-dual-certificates/main.tex`). No long
+derivations. Opened: R160_M2_R1 complete; G2_B9_R3 §3; P47 `eq:m`, `eq:Aform`, `eq:Kprim`, `prop:finite`, `lem:degen`,
+`rem:resweights`; R155_033 §0, §2.1–2.3; index, entry 212-25; ROUND_025_A (grep). Not opened: R155_023/024/027
+(thresholds and Theorem N′, only via their summary in the README of phase 155), R155_049, ROUND_025_B, G2_B6_R2.
 
-## 1. Formulación exacta (ya hecha en el corpus)
+## 1. Exact formulation (already done in the corpus)
 
-Literal del paper (`eq:m`, `eq:Aform`, `eq:Kprim`): para `F` real, `‖F‖=1`, `c=c_F`,
+Verbatim from the paper (`eq:m`, `eq:Aform`, `eq:Kprim`): for real `F`, `‖F‖=1`, `c=c_F`,
 ```
 𝔞^{(w)}_T(F) = C_0·c(0) + 𝔈(c) − Σ_{n∈N_T} w_n c(log n),   𝔈(c) = ∫_0^∞ (c(0) − c(u)) K(u) du ≥ 0,
 C_0 = ψ(1/4) − log π = −5.3721834…,   K(u) = 1/(2 sinh(u/2)) + 1/(2 cosh(u/2)),
 K(u) = 1/u + O(1) (u↓0),   K(u) = 2e^{−u/2}(1+O(e^{−u})) (u→∞).
 ```
-Términos de polo: en la forma completa se suma `2A(F)B(F) = 2∫c(u)cosh(u/2)du` (R160_M2_R1 Rem. 2.5). En `P_T`
-desaparecen y la primitividad pasa a dos restricciones lineales sobre `c` (`eq:Kprim`):
-`∫ c(u) cosh(u/2) du = 0`, `∫ c(u) u sinh(u/2) du = 0`. Como `c` se anula en `|u| ≥ 2T`,
-`𝔈(c) = ∫_0^{2T} (1 − c)K + ∫_{2T}^∞ K`, y el último sumando es `≈ 4e^{−T}`.
+Pole terms: in the complete form one adds `2A(F)B(F) = 2∫c(u)cosh(u/2)du` (R160_M2_R1 Rem. 2.5). On `P_T`
+they disappear and primitivity becomes two linear constraints on `c` (`eq:Kprim`):
+`∫ c(u) cosh(u/2) du = 0`, `∫ c(u) u sinh(u/2) du = 0`. Since `c` vanishes for `|u| ≥ 2T`,
+`𝔈(c) = ∫_0^{2T} (1 − c)K + ∫_{2T}^∞ K`, and the last summand is `≈ 4e^{−T}`.
 
-Problema extremal (relajado a estados mixtos, convexo):
+Extremal problem (relaxed to mixed states, convex):
 ```
-Z^prim_T = ínf { C_0 + 𝔈(Φ) :  Φ par, definida positiva, Φ(0)=1, sop Φ ⊂ [−2T,2T],
+Z^prim_T = inf { C_0 + 𝔈(Φ) :  Φ even, positive definite, Φ(0)=1, supp Φ ⊂ [−2T,2T],
                  ∫Φ cosh(u/2) = ∫Φ u sinh(u/2) = 0,  Φ(log n) = 0  ∀ 2 ≤ n < e^{2T} } ;
-(PBP_T):  Z^prim_T ≥ 0  (equivalentemente K_T = 𝒱^prim_T ≠ ∅).
+(PBP_T):  Z^prim_T ≥ 0  (equivalently K_T = 𝒱^prim_T ≠ ∅).
 ```
-**Ya hecho (CITED, PROVED allí):** es literalmente R160_M2_R1 D4–D5, Thm 4.1 (dualidad fuerte; el peso óptimo es el
-multiplicador de Lagrange de las restricciones `Φ(log n)=0`), Thm 4.3(a) (`𝒱^prim_T ≠ ∅ ⟺ Z^prim_T ≥ 0`), Rem. 4.4
-(versión `T→∞`) y §7.1. Sin las restricciones de contacto es el programa `(P_∞)` de R155_033 §2.1–2.2. Nada nuevo en (1).
+**Already done (CITED, PROVED there):** it is literally R160_M2_R1 D4–D5, Thm 4.1 (strong duality; the optimal weight is the
+Lagrange multiplier of the constraints `Φ(log n)=0`), Thm 4.3(a) (`𝒱^prim_T ≠ ∅ ⟺ Z^prim_T ≥ 0`), Rem. 4.4
+(`T→∞` version) and §7.1. Without the contact constraints it is the program `(P_∞)` of R155_033 §2.1–2.2. Nothing new in (1).
 
-## 2. El argumento de Kreĭn más densidad de `log ℕ`: qué da
+## 2. The Kreĭn argument plus density of `log ℕ`: what it gives
 
-Herramienta (CITED, estándar): para `Φ` definida positiva con `Φ(0)=1` existe un espacio de Hilbert con vectores
-unitarios `ξ_u`, `⟨ξ_u, ξ_{u′}⟩ = Φ(u − u′)`. Con `ω := 1 − Φ ∈ [0,2]` y `d(h) := ‖ξ_h − ξ_0‖ = √(2ω(h))`:
-(K1) `|Φ(u) − Φ(u′)| ≤ d(u − u′)` (Kreĭn); (K2) `d` es subaditiva, luego `ω(s) + ω(h−s) ≥ ω(h)/2` para `0 ≤ s ≤ h`.
+Tool (CITED, standard): for positive-definite `Φ` with `Φ(0)=1` there is a Hilbert space with unit
+vectors `ξ_u`, `⟨ξ_u, ξ_{u′}⟩ = Φ(u − u′)`. With `ω := 1 − Φ ∈ [0,2]` and `d(h) := ‖ξ_h − ξ_0‖ = √(2ω(h))`:
+(K1) `|Φ(u) − Φ(u′)| ≤ d(u − u′)` (Kreĭn); (K2) `d` is subadditive, hence `ω(s) + ω(h−s) ≥ ω(h)/2` for `0 ≤ s ≤ h`.
 
-Consecuencias (PROVED, una línea cada una; `K` decreciente):
-- **Campo lejano.** Si `g(u) := dist(u, {log n: n≥2})`, entonces `|Φ(u)| ≤ D(g(u))`, `D(r) := sup_{|h|≤r} d(h)`, y
-  `ω(u) ≥ 1 − D(g(u))`. En `[log N, ∞)` es `g ≤ ½ log(1+1/N)`, así que
+Consequences (PROVED, one line each; `K` decreasing):
+- **Far field.** If `g(u) := dist(u, {log n: n≥2})`, then `|Φ(u)| ≤ D(g(u))`, `D(r) := sup_{|h|≤r} d(h)`, and
+  `ω(u) ≥ 1 − D(g(u))`. On `[log N, ∞)` one has `g ≤ ½ log(1+1/N)`, so
   `∫_{log N}^∞ ωK ≥ (1 − D_N) ∫_{log N}^∞ K`, `D_N := D(½log(1+1/N))`.
-- **Cerca de 0.** Por (K2), `∫_0^h ωK ≥ (ω(h)/2) ∫_{h/2}^h K ≈ (log 2/2) ω(h)`; con `ω(h) = D²/2` en el punto donde se
-  alcanza `D_N`, el aporte es `≥ (log 2/4) D_N² ≈ 0.173 D_N²` (≤ 0.69).
-- **Primer contacto.** `ω(log 2) = 1` y (K2) dan `∫_0^{log 2} ωK ≥ ½∫_{½log2}^{log 2} K = 0.4266`.
+- **Near 0.** By (K2), `∫_0^h ωK ≥ (ω(h)/2) ∫_{h/2}^h K ≈ (log 2/2) ω(h)`; with `ω(h) = D²/2` at the point where
+  `D_N` is attained, the contribution is `≥ (log 2/4) D_N² ≈ 0.173 D_N²` (≤ 0.69).
+- **First contact.** `ω(log 2) = 1` and (K2) give `∫_0^{log 2} ωK ≥ ½∫_{½log2}^{log 2} K = 0.4266`.
 
-Cota resultante (PROVED como desigualdad, salvo el solapamiento de las dos cotas sobre `[0, log 2]`, que sólo puede
-bajarla): `𝔈(Φ) ≥ mín_{D∈[0,2]} [ (1−D)_+ ∫_{log 2}^∞ K + máx(0.4266, 0.173 D²) ]`. Valores (NUMÉRICO, mpmath):
-`∫_{log 2}^∞ K = 2.9937`, `∫_{log 7}^∞ K = 1.5181` (la cifra 1.5 de H1), `∫_{log 3}^∞ K = 2.3642`.
-**Techo del método: `𝔈 ≥ ~3.0–3.4` (en el mejor caso `D=0`), contra `−C_0 = 5.372`. Faltan `≈ 2.0` (al menos 1.7 aun
-sumando las dos cotas sin solapamiento, ≤ 3.7).** NO alcanza; no se fuerza.
+Resulting bound (PROVED as an inequality, except for the overlap of the two bounds on `[0, log 2]`, which can only
+lower it): `𝔈(Φ) ≥ min_{D∈[0,2]} [ (1−D)_+ ∫_{log 2}^∞ K + max(0.4266, 0.173 D²) ]`. Values (NUMERICAL, mpmath):
+`∫_{log 2}^∞ K = 2.9937`, `∫_{log 7}^∞ K = 1.5181` (the figure 1.5 of H1), `∫_{log 3}^∞ K = 2.3642`.
+**Ceiling of the method: `𝔈 ≥ ~3.0–3.4` (in the best case `D=0`), against `−C_0 = 5.372`. About `≈ 2.0` is missing (at least 1.7 even
+adding the two bounds without overlap, ≤ 3.7).** It does NOT reach; it is not forced.
 
-De dónde tendría que salir lo que falta (ARGUED). La positividad arquimediana en ventanas cortas (`T*_{∞,P} ≈ 0.58–0.60`)
-viene de la singularidad `K ~ 1/u`: un `Φ` que cae de 1 a 0 en escala `h` paga `≈ log(1/h)` por *todas* las escalas
-diádicas entre `h` y 1. (K2) sólo cobra una escala (un factor `log 2`), no la suma diádica. Lo que falta es un
-**principio de incertidumbre multiescala para funciones definidas positivas que se anulan en `log ℕ`**: una cota
-inferior de `∫_0^1 ωK` que crezca como `log(1/g)` cuando las anulaciones fuerzan variación a escala `g ≍ e^{−u}`. Es la
-pared «del borde» de R155_033 §0 (`thm:O`, presente ya con `v=0`), ahora en el lado primal. Sin ella el argumento sólo
-cobra la cola de `K`, que es `O(1)` y acotada por `∫_{log 2}^∞ K < 3`.
+Where the missing part would have to come from (ARGUED). Archimedean positivity on short windows (`T*_{∞,P} ≈ 0.58–0.60`)
+comes from the singularity `K ~ 1/u`: a `Φ` that drops from 1 to 0 at scale `h` pays `≈ log(1/h)` for *all* the dyadic
+scales between `h` and 1. (K2) only charges one scale (a factor `log 2`), not the dyadic sum. What is missing is a
+**multiscale uncertainty principle for positive-definite functions vanishing on `log ℕ`**: a lower
+bound on `∫_0^1 ωK` growing like `log(1/g)` when the vanishings force variation at scale `g ≍ e^{−u}`. It is the
+"boundary" wall of R155_033 §0 (`thm:O`, already present with `v=0`), now on the primal side. Without it the argument only
+charges the tail of `K`, which is `O(1)` and bounded by `∫_{log 2}^∞ K < 3`.
 
-Primitividad. En el argumento de (2) **no entra**: (K1)–(K2) valen para toda `Φ` definida positiva. Su único papel
-posible es obligar a `Φ` a tener masa negativa ponderada por `cosh(u/2)` lejos de 0, lo que choca con `|Φ| ≤ D(g)`. Pero
-el peso llega a `e^{T}`, así que basta amplitud `≍ e^{−T}` lejos, que (K1) permite con `D ≍ e^{−T}`: aporte asintótico
-nulo por esta vía (ARGUED, no cuantificado con mezclas). Cuantificarlo: OPEN.
+Primitivity. In the argument of (2) it **does not enter**: (K1)–(K2) hold for every positive-definite `Φ`. Its only
+possible role is to force `Φ` to have negative mass weighted by `cosh(u/2)` far from 0, which clashes with `|Φ| ≤ D(g)`. But
+the weight reaches `e^{T}`, so amplitude `≍ e^{−T}` far away suffices, which (K1) allows with `D ≍ e^{−T}`: asymptotically
+null contribution along this route (ARGUED, not quantified with mixtures). Quantifying it: OPEN.
 
-## 3. Antecedentes y qué de (1)–(2) ya está
+## 3. Antecedents and what of (1)–(2) already exists
 
-- R160_M2_R1: (1) completo (D4–D5, Thm 4.1–4.5, Rem. 4.4, §7.1–7.2); §6 H1 es la versión heurística de (2) con
-  `|c′| ≤ Ω` en vez de (K1), y ya concluye «≈1.5, not enough against 5.37 by crude bounds». (2) es H1 rigorizado y
-  apenas mejorado (de 1.5 a ≤ 3.4 al usar todo `[log 2, ∞)` y (K2)); el déficit sigue.
-- R155_033 §2.2: la misma cuenta en el lado dual («`τ=0` cap»): un certificado necesita `∫_{2T}^∞(1−w)K ≥ 𝔈(c_{F⋆})`,
-  y la cola de `K` sola no basta (factores 2.3–2.6). Es la versión dual del techo de (2).
-- R155_033 §0, Thm AL (sólo `(D_∞)`; corregida por R155_049 a `Θ(1/M)` en el programa completo): la pared es el borde
-  de la ventana, no el retículo. Coincide con el diagnóstico de §2.
-- P47 `lem:degen`, `rem:resweights`: definen `μ_T` cóncava y el caso degenerado; `prop:finite`(ii)–(iii): `𝒱_T`
-  cerrado convexo, `0 ∉ 𝒱_T` para `T ≥ 0.60`.
-- G2_B9_R3 §3 (Thm N, R′): rigidez sólo para `w − v ∈ 𝒯_meas`; para pesos no temperados, hueco registrado en 212-25.
-- Grep «Kreĭn inequality / 1 − Re»: no hay uso de (K1)–(K2) sobre `Z^prim_T` en el corpus (las coincidencias de 211
-  ROUND_012_B/016_A/024_A, 212 ROUND_018_A y R162_1301 son otros objetos: espacios de Kreĭn/Pontryagin, función Q).
-  Una búsqueda sin coincidencias no prueba novedad conceptual: (K1) es exactamente el control de H1.
+- R160_M2_R1: (1) complete (D4–D5, Thm 4.1–4.5, Rem. 4.4, §7.1–7.2); §6 H1 is the heuristic version of (2) with
+  `|c′| ≤ Ω` instead of (K1), and already concludes "≈1.5, not enough against 5.37 by crude bounds". (2) is H1 made rigorous and
+  barely improved (from 1.5 to ≤ 3.4 by using all of `[log 2, ∞)` and (K2)); the deficit remains.
+- R155_033 §2.2: the same count on the dual side ("`τ=0` cap"): a certificate needs `∫_{2T}^∞(1−w)K ≥ 𝔈(c_{F⋆})`,
+  and the tail of `K` alone does not suffice (factors 2.3–2.6). It is the dual version of the ceiling of (2).
+- R155_033 §0, Thm AL (only `(D_∞)`; corrected by R155_049 to `Θ(1/M)` in the full program): the wall is the boundary
+  of the window, not the lattice. Coincides with the diagnosis of §2.
+- P47 `lem:degen`, `rem:resweights`: define concave `μ_T` and the degenerate case; `prop:finite`(ii)–(iii): `𝒱_T`
+  closed convex, `0 ∉ 𝒱_T` for `T ≥ 0.60`.
+- G2_B9_R3 §3 (Thm N, R′): rigidity only for `w − v ∈ 𝒯_meas`; for non-tempered weights, gap recorded in 212-25.
+- Grep "Kreĭn inequality / 1 − Re": there is no use of (K1)–(K2) on `Z^prim_T` in the corpus (the matches in 211
+  ROUND_012_B/016_A/024_A, 212 ROUND_018_A and R162_1301 are other objects: Kreĭn/Pontryagin spaces, Q function).
+  A search without matches does not prove conceptual novelty: (K1) is exactly the control of H1.
 
-## 4. Puerta de cuatro puntos
+## 4. Four-point gate
 
-1. **Antecedente más cercano:** R160_M2_R1 §6 H1 y §7.1 (más D5, Thm 4.1/4.3); en el lado dual R155_033 §2.2.
-2. **Qué es nuevo:** sustituir la hipótesis de banda `|c′| ≤ Ω` de H1 por (K1)–(K2), válidas para toda `Φ` de la clase
-   mixta, y el cálculo exacto del techo (≈ 3.0–3.4 frente a 5.372). Es una precisión de una heurística, no un objeto.
-3. **¿Evita la dificultad del antecedente?** No. La dificultad de H1 era que la cola de `K` sólo da `O(1)`; (K1)–(K2)
-   cobran la misma cola y una sola escala cerca de 0. El déficit `≈ 2` está en la suma diádica de la singularidad,
-   que ninguna desigualdad de tres puntos ve.
-4. **Conexión con el objetivo global:** (PBP_T) ∀T ⟹ `K_T ≠ ∅` ∀T ⟹ (Tychonoff, 212-25) un `w` con `a^w_T ≥ 0` ∀T;
-   pasar de ese `w` al peso verdadero exige rigidez para pesos con `|w_n| ≲ log n`: **CONDITIONAL** (212-25).
-   (PBP_T) ∀T por sí sola **sí sería un teorema nuevo respecto del corpus** (OPEN en R160 §7.1 para `T > log 2` puro y
-   `T > 0.8` relajado; ningún falsificador ni prueba de imposibilidad): diría que *ningún estado primitivo cuya
-   autocorrelación se anula en todo `log n` tiene energía arquimediana negativa*, con todo el contenido en las
-   posiciones `log n` y ninguno en valores de pesos. No da el signo del objetivo sin la rigidez.
+1. **Closest antecedent:** R160_M2_R1 §6 H1 and §7.1 (plus D5, Thm 4.1/4.3); on the dual side R155_033 §2.2.
+2. **What is new:** replacing the band hypothesis `|c′| ≤ Ω` of H1 by (K1)–(K2), valid for every `Φ` of the mixed
+   class, and the exact computation of the ceiling (≈ 3.0–3.4 versus 5.372). It is a refinement of a heuristic, not an object.
+3. **Does it avoid the antecedent's difficulty?** No. The difficulty of H1 was that the tail of `K` only gives `O(1)`; (K1)–(K2)
+   charge the same tail and a single scale near 0. The deficit `≈ 2` lies in the dyadic sum of the singularity,
+   which no three-point inequality sees.
+4. **Connection with the global target:** (PBP_T) ∀T ⟹ `K_T ≠ ∅` ∀T ⟹ (Tychonoff, 212-25) a `w` with `a^w_T ≥ 0` ∀T;
+   passing from that `w` to the true weight requires rigidity for weights with `|w_n| ≲ log n`: **CONDITIONAL** (212-25).
+   (PBP_T) ∀T by itself **would be a new theorem relative to the corpus** (OPEN in R160 §7.1 for `T > log 2` pure and
+   `T > 0.8` relaxed; no falsifier nor impossibility proof): it would say that *no primitive state whose
+   autocorrelation vanishes at every `log n` has negative archimedean energy*, with all the content in the
+   positions `log n` and none in weight values. It does not give the sign of the target without rigidity.
 
-Controles. (PBP) no tiene peso; el control es el retículo. En (2) el retículo entra **sólo** en dos datos: la función
-de huecos `g(u) ≤ ½log(1+1/⌊e^u⌋)` y la posición del primer contacto `log 2`. Ningún paso usa que el conjunto sea
-exactamente `log ℕ`: para los enteros coprimos con `p` los huecos crecen a lo sumo por un factor `p/(p−1)` y el
-primer contacto pasa a `log 3` (`p=2`), con techo `∫_{log 3}^∞ K = 2.36`, menor; un sistema de Beurling con el mismo
-perfil de huecos da la misma cota. El argumento varía continuamente y no separa `log ℕ` de sus vecinos (si (PBP)
-fallara para alguno, este método no lo vería). El único lugar donde la estructura entera podría entrar y no se usa:
-en el espacio GNS, `ξ_{log m} ⊥ ξ_{log n}` cuando `n | m` (pues `Φ(log(m/n)) = 0`); pero esa relación de divisibilidad
-la comparte todo sistema multiplicativamente cerrado (Beurling incluido), así que tampoco separa. Registrado, no
-explotado.
+Controls. (PBP) has no weight; the control is the lattice. In (2) the lattice enters **only** through two data: the gap
+function `g(u) ≤ ½log(1+1/⌊e^u⌋)` and the position of the first contact `log 2`. No step uses that the set is
+exactly `log ℕ`: for the integers coprime to `p` the gaps grow at most by a factor `p/(p−1)` and the
+first contact moves to `log 3` (`p=2`), with ceiling `∫_{log 3}^∞ K = 2.36`, smaller; a Beurling system with the same
+gap profile gives the same bound. The argument varies continuously and does not separate `log ℕ` from its neighbors (if (PBP)
+failed for one of them, this method would not see it). The only place where the integer structure could enter and is not used:
+in the GNS space, `ξ_{log m} ⊥ ξ_{log n}` when `n | m` (since `Φ(log(m/n)) = 0`); but that divisibility relation
+is shared by every multiplicatively closed system (Beurling included), so it does not separate either. Recorded, not
+exploited.
 
-## Veredicto
+## Verdict
 
-**NO PASA (repetición, y sin mecanismo).** (1) está hecho (R160_M2_R1 D4–D5, Thm 4.1/4.3). (2) es H1 de R160 §6 con
-(K1)–(K2) en lugar de banda limitada: techo PROVED-como-cota `𝔈 ≳ 3.0–3.4 < 5.372`, déficit `≈ 2`; la primitividad no
-entra en el argumento (aporte ARGUED nulo asintóticamente). Lo que falta es una cota multiescala de la singularidad
-`K ~ 1/u` forzada por las anulaciones (pared del borde de R155_033), no la cola de `K`. (PBP_T) ∀T sigue OPEN y sería
-nuevo; su conexión con el objetivo es CONDITIONAL en la rigidez para pesos no temperados (212-25). Reapertura: un
-principio de incertidumbre para `Φ` definida positiva anulada en `log ℕ` que cobre `≳ log(1/g)` por escalas.
+**DOES NOT PASS (repetition, and no mechanism).** (1) is done (R160_M2_R1 D4–D5, Thm 4.1/4.3). (2) is H1 of R160 §6 with
+(K1)–(K2) instead of band-limitation: ceiling PROVED-as-bound `𝔈 ≳ 3.0–3.4 < 5.372`, deficit `≈ 2`; primitivity does not
+enter the argument (contribution ARGUED asymptotically null). What is missing is a multiscale bound on the singularity
+`K ~ 1/u` forced by the vanishings (boundary wall of R155_033), not the tail of `K`. (PBP_T) ∀T remains OPEN and would be
+new; its connection with the target is CONDITIONAL on rigidity for non-tempered weights (212-25). Reopening: an
+uncertainty principle for positive-definite `Φ` vanishing on `log ℕ` that charges `≳ log(1/g)` across scales.

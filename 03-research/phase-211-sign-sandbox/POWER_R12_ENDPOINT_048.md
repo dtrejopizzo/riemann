@@ -1,48 +1,48 @@
-# POWER_R12_ENDPOINT_048 — Primer extremo del transporte aritmético restringido
+# POWER_R12_ENDPOINT_048 — First endpoint of the restricted arithmetic transport
 
-Estado: certificado racional del extremo confluyente; revisión independiente APROBADA en POWER_R12_AUDIT_048.md y verificador reproducido por root. OPEN R12 uniforme para todas las tasas. Papers intactos.
+Status: rational certificate of the confluent endpoint; independent review APPROVED in POWER_R12_AUDIT_048.md and verifier reproduced. OPEN uniform R12 for all rates. Papers untouched.
 
-## Antecedentes y diferencia
+## Antecedents and difference
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX/README, R162_2300_MASTER_GRID, CROSSWORD-TO-D y PRIME_TRANSFER014, SIGNED_TRANSFER014 y ARITHMETIC_BLOCK007. No se encontró un cierre posterior explícito de R12. El falsificador universal014 usa orden enorme; no pertenece a V12. Aquí se conserva exactamente la base positiva V12 y se comprueba únicamente el primer extremo natural v=u, sin barrer tasas ni órdenes.
+Consulted the project rules, ROUTES-TRIED-INDEX/README, R162_2300_MASTER_GRID, CROSSWORD-TO-D and PRIME_TRANSFER014, SIGNED_TRANSFER014 and ARITHMETIC_BLOCK007. No explicit later closure of R12 was found. The universal falsifier014 uses huge order; it does not belong to V12. Here the positive base V12 is kept exactly and only the first natural endpoint v=u is checked, without sweeping rates or orders.
 
-## Forma y restricción exactas
+## Exact form and restriction
 
-Sea u=63/2, y sea e_j la base ortonormal causal con transformadas
+Let u=63/2, and let e_j be the causal orthonormal basis with transforms
 
     E_j(s)=sqrt(2u)(s−u)^j/(s+u)^(j+1), 0≤j≤12.
 
-Se mantiene E2=ARCH+POLAR−sqrt(2)log(2)c(log2), sin omitir el polar ni sustituir el contacto por una norma. Para F0 en V12, G(s)=sF0(s)/(s+u) pertenece a V13 y G(0)=0. Recíprocamente cada G en V13 con G(0)=0 tiene esa representación con F0 en V12. La restricción en coordenadas reales z es sum_j(−1)^j z_j=0.
+E2=ARCH+POLAR−sqrt(2)log(2)c(log2) is kept, without omitting the polar or replacing the contact by a norm. For F0 in V12, G(s)=sF0(s)/(s+u) belongs to V13 and G(0)=0. Conversely each G in V13 with G(0)=0 has that representation with F0 in V12. The restriction in real coordinates z is sum_j(−1)^j z_j=0.
 
-El verificador tools/power_r12_endpoint_048_verify.py reproduce las cotas racionales auditadas007, extendidas una banda: ARCH mediante sumas de potencias desde16 con cola Euler y resto explícito; polar exacto; contacto2 mediante log2 encerrado por atanh. Las bandas son Toeplitz. El centro racional usa denominador10^15 y el error de norma por suma de filas es menor que10^−10.
+The verifier tools/power_r12_endpoint_048_verify.py reproduces the audited rational bounds007, extended by one band: ARCH by power sums from16 with Euler tail and explicit remainder; exact polar; contact2 with log2 enclosed by atanh. The bands are Toeplitz. The rational centre uses denominator10^15 and the norm error by row sum is less than10^−10.
 
-La congruencia de trece a doce dimensiones tiene columnas C_i=e_i−(−1)^i e_12, 0≤i≤11. El LDL racional comprueba positividad de
+The congruence from thirteen to twelve dimensions has columns C_i=e_i−(−1)^i e_12, 0≤i≤11. The rational LDL checks positivity of
 
-    Cᵀ[T_centro−(1/50+10^−10)I]C.
+    Cᵀ[T_centre−(1/50+10^−10)I]C.
 
-Por tanto, sin diagonalización numérica,
+Hence, without numerical diagonalisation,
 
     E2[G] > (1/50)||G||²,   G∈V13, G(0)=0, G≠0.       (ENDPOINT)
 
-No se ha incluido la cola de primos restantes en esta afirmación: R12 fue planteado precisamente para E2. Tampoco se importa la cota de esa cola sobre V12 hacia V13.
+The tail of the remaining primes has not been included in this claim: R12 was posed precisely for E2. Nor is the bound of that tail on V12 imported to V13.
 
-## Consecuencia local y obligación pendiente
+## Local consequence and pending obligation
 
-Para cualquier c<1/50, en particular c=1/2500 (también inferior a la coercividad base certificada007), ENDPOINT demuestra R12 en v=u. Además existe ε>0 tal que R12 vale simultáneamente para todos F0∈V12 y u≤v≤u+ε. En efecto, en una base fija de V12, las matrices de E2[sF0/(s+v)]−c||sF0/(s+v)||² son continuas en v. La integral arquimediana se domina uniformemente cerca de u por una función integrable con factor log(2+|τ|); los términos polar y contacto son continuos por sus integrales racionales causales. La matriz en u es definida positiva; su menor autovalor conserva signo en un entorno. No se da aquí un radio efectivo.
+For any c<1/50, in particular c=1/2500 (also below the certified base coercivity007), ENDPOINT proves R12 at v=u. Moreover there exists ε>0 such that R12 holds simultaneously for all F0∈V12 and u≤v≤u+ε. Indeed, in a fixed basis of V12, the matrices of E2[sF0/(s+v)]−c||sF0/(s+v)||² are continuous in v. The archimedean integral is uniformly dominated near u by an integrable function with factor log(2+|τ|); the polar and contact terms are continuous by their causal rational integrals. The matrix at u is positive definite; its smallest eigenvalue keeps its sign in a neighbourhood. No effective radius is given here.
 
-Esta consecuencia local no prueba R12 para todo v≥u. La monotonía de ARCH bajo movimiento de polos no ordena el símbolo oscilatorio del contacto2 ni su cambio polar. Tampoco autoriza sucesivos movimientos: después del primero la base ya no es V12 confluyente. La obligación uniforme original sigue OPEN. El resultado nuevo es el certificado de la corrección restringida en el extremo, con margen, y la exclusión de un falsificador en ese extremo; no un cierre del transporte o del signo completo.
+This local consequence does not prove R12 for all v≥u. Monotonicity of ARCH under pole movement does not order the oscillatory symbol of contact2 nor its polar change. Nor does it authorise successive movements: after the first one the base is no longer confluent V12. The original uniform obligation remains OPEN. The new result is the certificate of the restricted correction at the endpoint, with margin, and the exclusion of a falsifier at that endpoint; not a closure of the transport or of the full sign.
 
-## Complemento: el polar de la órbita highpass tiene un resto efectivo
+## Complement: the polar of the highpass orbit has an effective remainder
 
-La expansión geométrica pertinente ya fue probada en GEOMETRIC_TRANSFER015; no se presenta aquí como nueva. Para usarla sobre V12 falta un corte efectivo J después del cual ARCH sobre Q^jV12 domine el contacto2 y el polar, y certificados de todos los índices anteriores. ENDPOINT sólo cubre j=1.
+The relevant geometric expansion was already proved in GEOMETRIC_TRANSFER015; it is not presented here as new. To use it on V12 one needs an effective cut J after which ARCH on Q^jV12 dominates contact2 and the polar, and certificates of all previous indices. ENDPOINT only covers j=1.
 
-Sí se puede cuantificar sencillamente la desaparición del polar, sin recurrir a una estimación de peor orden. Sea Q(s)=s/(s+u). En la base e_0,...,e_11, la compresión de q=|Q(iτ)|² es tridiagonal con diagonal1/2 y adyacentes1/4: con z=(iτ−u)/(iτ+u), q=(2+z+z̄)/4 y la medida espectral de e_0 es la medida uniforme del círculo. Para un vector real o complejo a, cambiar signos alternados da la energía de diferencias con dos extremos cero. Por telescopado y Cauchy,
+The disappearance of the polar can be quantified simply, without resorting to a worst-order estimate. Let Q(s)=s/(s+u). In the basis e_0,...,e_11, the compression of q=|Q(iτ)|² is tridiagonal with diagonal1/2 and adjacent entries1/4: with z=(iτ−u)/(iτ+u), q=(2+z+z̄)/4 and the spectral measure of e_0 is the uniform measure on the circle. For a real or complex vector a, alternating signs gives the difference energy with two zero endpoints. By telescoping and Cauchy,
 
     <qF,F> ≥ ||F||²/(4·12²)=||F||²/576.
 
-Para M_j=||Q^jF||², Cauchy da M_(j+1)M_(j−1)≥M_j²; así M_j≥576^−j M_0. Por otra parte Q(−1/2)Q(1/2)=−1/3968, y por tanto
+For M_j=||Q^jF||², Cauchy gives M_(j+1)M_(j−1)≥M_j²; thus M_j≥576^−j M_0. On the other hand Q(−1/2)Q(1/2)=−1/3968, and therefore
 
     Polar[Q^jF]=(−1/3968)^j Polar[F],
     |Polar[Q^jF]|/M_j ≤ (9/62)^j |Polar[F]|/M_0.
 
-Un límite explícito uniforme para el último cociente es la norma de la matriz polar12 exacta de007; puede usarse su suma de valores absolutos. Esto paga el resto polar de una eventual prueba por corte J. No da por sí solo un corte arquimediano efectivo ni el signo de los bloques intermedios; no se ha ejecutado una campaña de esos bloques.
+An explicit uniform bound for the last quotient is the norm of the exact polar matrix12 of007; its sum of absolute values can be used. This pays the polar remainder of an eventual proof by cut J. It does not by itself give an effective archimedean cut nor the sign of the intermediate blocks; no campaign over those blocks has been run.

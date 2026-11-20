@@ -1,108 +1,108 @@
-# POWER_DESCENT_AUDIT_016 — Qué falta para descender de las colas high-pass
+# POWER_DESCENT_AUDIT_016 — What is missing to descend from the high-pass tails
 
-Estado: PROVED y revisado: obstrucciones de densidad, no-implicación lógica y construcciones específicas de016; véanse §§6–8. Papers intactos.
+Status: PROVED and reviewed: density obstructions, logical non-implication and specific constructions of016; see §§6–8. Papers untouched.
 
-## 1. Corpus y diferencia de alcance
+## 1. Corpus and difference in scope
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX entradas POWER014–015, grid/crucigrama y búsquedas de highpass, dense, vanishing moments, all moments vanish y continuous moment functional. Los puentes BRIDGE002/CONFLUENT_BRIDGE014 y su revisión prueban densidad fuerte de la envolvente confluente COMPLETA. Las obstrucciones de umbrales crecientes de THREE002 trataban otra concentración temporal. No se encontró registrada la siguiente aplicación exacta de ceros crecientes de Laplace a las colas actuales. La continuidad de momentos y la unicidad analítica de Laplace son herramientas estándar, no se atribuye novedad a esos principios generales.
+Consulted the project rules, ROUTES-TRIED-INDEX entries POWER014–015, grid/crossword and searches for highpass, dense, vanishing moments, all moments vanish and continuous moment functional. The bridges BRIDGE002/CONFLUENT_BRIDGE014 and their review prove strong density of the COMPLETE confluent envelope. The obstructions of growing thresholds of THREE002 dealt with another temporal concentration. The following exact application of growing Laplace zeros to the current tails was not found registered. Continuity of moments and analytic uniqueness of Laplace are standard tools; no novelty is attributed to those general principles.
 
-## 2. Un cero high-pass impide densidad en la norma de015
+## 2. A high-pass zero prevents density in the norm of015
 
-Sea eta>0 fijo y use L²_eta={f causal: e^(eta y)f∈L²(0,infinito)}. Para cada entero r>=0, el momento
+Let eta>0 be fixed and use L²_eta={f causal: e^(eta y)f∈L²(0,infinity)}. For each integer r>=0, the moment
 
     ell_r(f)=integral_0^infinito y^r f(y)dy
 
-es un funcional continuo, con cota exacta
+is a continuous functional, with exact bound
 
     |ell_r(f)|<=sqrt((2r)!/(2eta)^(2r+1)) ||e^(eta y)f||_2.
 
-Toda función de Q^k V_N, Q=s/(s+u), con k>=1, tiene Laplace con numerador divisible por s^k y denominador no nulo en0. Por tanto ell_r(f)=0 para0<=r<k. En particular la unión de TODOS esos espacios con k>=1 permanece en el hiperplano cerrado ell_0=0 y no es densa en L²_eta ni en las normas más fuertes de015 que incluyen ese peso.
+Every function of Q^k V_N, Q=s/(s+u), with k>=1, has a Laplace transform with numerator divisible by s^k and denominator non-zero at0. Hence ell_r(f)=0 for0<=r<k. In particular the union of ALL those spaces with k>=1 remains in the closed hyperplane ell_0=0 and is not dense in L²_eta nor in the stronger norms of015 that include that weight.
 
-La obstrucción subsiste en el portador primitivo relevante: elija g≥0 suave compacto dentro de la semirrecta, con integral positiva, y F=(1/4-D²)g. Sus dos momentos Tate se anulan por integración por partes, pero ell_0(F)=(1/4)integral g>0. Para cualquier h de aquella unión,
+The obstruction persists on the relevant primitive carrier: choose g≥0 smooth compactly supported inside the half-line, with positive integral, and F=(1/4-D²)g. Its two Tate moments vanish by integration by parts, but ell_0(F)=(1/4)integral g>0. For any h of that union,
 
     ||e^(eta y)(F-h)||_2>=sqrt(2eta)|ell_0(F)|>0.
 
-No basta alegar que las restricciones Tate ya seleccionan los tests pertinentes: el momento ordinario adicional no es una consecuencia de ellas. Trasladar funciones tampoco elimina un cero de orden k en Laplace0, pues la transformada se multiplica por una exponencial no nula.
+It does not suffice to allege that the Tate restrictions already select the pertinent tests: the additional ordinary moment is not a consequence of them. Translating functions does not eliminate a zero of order k in Laplace at0 either, since the transform gets multiplied by a non-zero exponential.
 
-## 3. Ceros de orden creciente: todo límite fuerte es cero
+## 3. Zeros of growing order: every strong limit is zero
 
-Suponga k_j→infinito y f_j∈Q^(k_j)V_(N_j), con N_j arbitrario. Si f_j converge a f en L²_eta para un MISMO eta>0, la continuidad de cada ell_r y su anulación eventual implican ell_r(f)=0 para TODO r.
+Suppose k_j→infinity and f_j∈Q^(k_j)V_(N_j), with N_j arbitrary. If f_j converges to f in L²_eta for a SAME eta>0, the continuity of each ell_r and its eventual vanishing imply ell_r(f)=0 for ALL r.
 
-Laplace H_f(z)=integral e^(-zy)f(y)dy es analítica en Re z>-eta, por Cauchy--Schwarz en compactos. El punto0 está en ese dominio y H_f^(r)(0)=(-1)^r ell_r(f)=0 para todo r. Por el teorema de identidad H_f es cero en el semiplano conexo. Unicidad de Fourier en una recta vertical implica f=0.
+The Laplace transform H_f(z)=integral e^(-zy)f(y)dy is analytic in Re z>-eta, by Cauchy--Schwarz on compacts. The point0 lies in that domain and H_f^(r)(0)=(-1)^r ell_r(f)=0 for all r. By the identity theorem H_f is zero on the connected half-plane. Uniqueness of Fourier on a vertical line implies f=0.
 
-Así una sucesión de vectores normalizados con k_j→infinito no puede tener un límite fuerte no nulo en ninguna norma común de015. Este resultado no depende de cómo crezca N_j ni de una tasa entre N_j y k_j. En particular no autoriza un puente por densidad de la unión de colas individuales en ESA topología.
+Thus a sequence of normalized vectors with k_j→infinity cannot have a non-zero strong limit in any common norm of015. This result does not depend on how N_j grows nor on a rate between N_j and k_j. In particular it does not authorize a bridge by density of the union of individual tails in THAT topology.
 
-Si una asignación k(N) es>=1 para todos N grandes y sólo tiene finitos bloques con k0, su unión también queda lejos de tests genéricos: el cierre está contenido en el hiperplano ell0=0 más la unión finita de esos bloques excepcionales. Si k0 aparece en grados N arbitrariamente grandes, la densidad puede recuperarse por el puente confluente, pero precisamente se han reintroducido los bloques iniciales sin signo que015 no decide.
+If an assignment k(N) is>=1 for all large N and has only finitely many blocks with k0, its union also stays far from generic tests: the closure is contained in the hyperplane ell0=0 plus the finite union of those exceptional blocks. If k0 appears in arbitrarily large degrees N, density can be recovered by the confluent bridge, but precisely the initial blocks without sign that015 does not decide have been reintroduced.
 
-La afirmación no excluye aproximaciones en una topología distinta donde esos momentos no sean continuos, ni una corrección adicional de momentos. Tal argumento tendría que verificar otra vez la continuidad de la forma COMPLETA, incluidos todos los contactos y la polar; densidadL² por sí sola no lo prueba.
+The statement does not exclude approximations in a different topology where those moments are not continuous, nor an additional moment correction. Such an argument would have to verify again the continuity of the COMPLETE form, including all contacts and the polar; L² density alone does not prove it.
 
-## 4. Falsificador lógico de un descenso basado sólo en estructura y positividad eventual
+## 4. Logical falsifier of a descent based only on structure and eventual positivity
 
-Considere la forma modificada W_C[f]=W[f]-C||f||². Las identidades finitas e infinitas de mezcla de015 se conservan, porque la norma² satisface las MISMAS identidades con los mismos pesos. También se conservan las particiones lineales de formas que se deducen de esas identidades. El teorema EVENTUAL se conserva para cada N fijo: su Rayleigh crece como .5logk más un bloque acotado, y restar C sólo cambia la constante, dejando positivo todo k suficientemente grande con otro umbral.
+Consider the modified form W_C[f]=W[f]-C||f||². The finite and infinite mixture identities of015 are preserved, because the norm² satisfies the SAME identities with the same weights. The linear partitions of forms deduced from those identities are also preserved. The EVENTUAL theorem is preserved for each fixed N: its Rayleigh quotient grows like .5logk plus a bounded block, and subtracting C only changes the constant, leaving every sufficiently large k positive with another threshold.
 
-Sin embargo se puede tomar C4 y obtener un vector inicial negativo explícito. Para f(y)=e^(-31.5y), su cociente completo es
+However one can take C4 and obtain an explicit negative initial vector. For f(y)=e^(-31.5y), its complete quotient is
 
     W[f]/||f||²=psi16-logpi+2zeta'(32)/zeta(32)+126/992.
 
-Como psi16=H15-gamma<H15<7/2, logpi>0, zeta'(32)/zeta(32)<0 y126/992<1/2, este cociente es estrictamente menor que4. Por tanto W_4[f]<0.
+Since psi16=H15-gamma<H15<7/2, logpi>0, zeta'(32)/zeta(32)<0 and126/992<1/2, this quotient is strictly less than4. Hence W_4[f]<0.
 
-Esto refuta sólo la inferencia lógica 'mezcla positiva + particiones + positividad eventual en cada dimensión ⇒ signo de todos los miembros iniciales'. Es una forma DIFERENTE, con símbolo arquimediano m-4, no un contraejemplo a W real ni un argumento contra usar sus coeficientes y certificados específicos. Los certificados iniciales de W no se trasladan a W_4 y no se pretende que lo hagan.
+This refutes only the logical inference 'positive mixture + partitions + eventual positivity in each dimension ⇒ sign of all initial members'. It is a DIFFERENT form, with archimedean symbol m-4, not a counterexample to the real W nor an argument against using its specific coefficients and certificates. The initial certificates of W do not transfer to W_4 and it is not claimed that they do.
 
-## 5. Obligación que sigue siendo legítima
+## 5. Obligation that remains legitimate
 
-Para descender hace falta una desigualdad que controle el defecto de los bloques iniciales por información adicional, o una uniformidad conjunta que alcance la masa pertinente de una partición y permita pasar la forma al límite. El puente confluente completo sigue válido. Los resultados anteriores sólo impiden sustituirlo sin prueba por la unión de colas que tienen ceros prescritos; no clasifican ni cierran las nuevas desigualdades que se intentan construir.
+To descend one needs an inequality that controls the defect of the initial blocks by additional information, or a joint uniformity that reaches the pertinent mass of a partition and allows passing the form to the limit. The complete confluent bridge remains valid. The previous results only prevent replacing it without proof by the union of tails having prescribed zeros; they do not classify or close the new inequalities being constructed.
 
-## 6. Revisión de POWER_DESCENT_016 y su verificador
+## 6. Review of POWER_DESCENT_016 and its verifier
 
-APROBADO íntegramente. La identidad complementaria incluye la polar porque los productos de evaluaciones de Q y L en±1/2 suman1. Los filtros conmutan y la iteración binomial es exacta para cada contacto y la suma completa. La fórmula (-1)^r Delta^r a_k=W[L^rQ^k f] se obtiene por inducción sin normalizar los vectores. Aplicar015 al espacio V_(N+r) es legítimo para N,r fijos y proporciona uniformidad en el numerador, no un umbral común en r.
+APPROVED in full. The complementary identity includes the polar because the products of evaluations of Q and L at±1/2 sum to1. The filters commute and the binomial iteration is exact for each contact and the complete sum. The formula (-1)^r Delta^r a_k=W[L^rQ^k f] is obtained by induction without normalizing the vectors. Applying015 to the space V_(N+r) is legitimate for fixed N,r and provides uniformity in the numerator, not a common threshold in r.
 
-La serie telescópica de energías converge absolutamente: las sumas parciales convergen por Q^k f->0 en norma fuerte, y la cola de sus términos es positiva por EVENTUAL aplicado a Lf. Una cola positiva de suma convergente es absolutamente sumable; el prefijo es finito. No se supuso positividad de todos los términos para probarla.
+The telescopic series of energies converges absolutely: the partial sums converge by Q^k f->0 in strong norm, and the tail of its terms is positive by EVENTUAL applied to Lf. A positive tail of a convergent sum is absolutely summable; the prefix is finite. Positivity of all terms was not assumed to prove it.
 
-La ley binomial condicional y el bound Lipschitz1/(2sqrt(m)) son correctos. Para un borde fijo r<=R, la probabilidad condicional de tener pocos fracasos tiende a0 para cada frecuencia finita, y la dominación por1 justifica EDGE. Su versión uniforme en la esfera de V_N usa una compresión positiva finita de multiplicadores acotados, cuya traza tiende a0; operatornorm<=trace es el paso correcto.
+The conditional binomial law and the Lipschitz bound1/(2sqrt(m)) are correct. For a fixed edge r<=R, the conditional probability of having few failures tends to0 for each finite frequency, and domination by1 justifies EDGE. Its uniform version on the sphere of V_N uses a finite positive compression of bounded multipliers, whose trace tends to0; operatornorm<=trace is the correct step.
 
-La contribución ENERGÉTICA del borde fijo también se verificó: L^r f tiene orden inicial N+r y el mismo grado de numeradorD, así su déficit de grado es r0+r. Las asintóticas015 dan norma²O(m^(.5-r0-r)) y RayleighO(logm). Multiplicar por binom(m,r)=O(m^r) deja O(m^(.5-r0)logm), que tiende a0 porque r0>=1. La suma sobre r=0,...,R es finita. No se infirió la desaparición de energía sólo desde la desaparición de masa; aquí se aportó su estimación propia.
+The ENERGY contribution of the fixed edge was also verified: L^r f has initial order N+r and the same numerator degreeD, so its degree deficit is r0+r. The asymptotics015 give norm²O(m^(.5-r0-r)) and RayleighO(logm). Multiplying by binom(m,r)=O(m^r) leaves O(m^(.5-r0)logm), which tends to0 because r0>=1. The sum over r=0,...,R is finite. The vanishing of energy was not inferred only from the vanishing of mass; its own estimate was provided here.
 
-El verificador actual tools/power_descent_016_verify.py se ejecutó con PASS. Su cota elemental2L32<H15-1+1/16+2/31<3 es correcta: psi16<H15,logpi>1 y zeta'/zeta32<0. Por tanto el falsificador modificado W4 tiene el margen más fuerte<-1 sobre el vector inicial. Esto refuerza la cota más débil de§4 de esta auditoría sin cambiar su alcance.
+The current verifier tools/power_descent_016_verify.py was executed with PASS. Its elementary bound2L32<H15-1+1/16+2/31<3 is correct: psi16<H15,logpi>1 and zeta'/zeta32<0. Hence the modified falsifier W4 has the stronger margin<-1 on the initial vector. This strengthens the weaker bound of§4 of this audit without changing its scope.
 
-## 7. Revisión de POWER_JOINT_SCALE_016
+## 7. Review of POWER_JOINT_SCALE_016
 
-APROBADO. La transformación Z=tau²/(u²+tau²) produce Beta(k+.5,N-.5), y el factor de norma es u^(1-2N)B/(2pi), con la contribución de ambas semirrectas correctamente incorporada. La concentración para k/N->c y la convergencia de correlaciones a cos(u sqrt(c)t) son consecuencias de media/varianza beta. Para el promedio de m, la cota uniforme de E tau² y el crecimiento logarítmico proporcionan la uniformidad integrable requerida. El contraejemplo a desaparición uniforme del contacto2 en un cono lineal usa c fijo resonante y k=ceil(cN); no hace ninguna afirmación de signo completo.
+APPROVED. The transformation Z=tau²/(u²+tau²) produces Beta(k+.5,N-.5), and the norm factor is u^(1-2N)B/(2pi), with the contribution of both half-lines correctly incorporated. Concentration for k/N->c and convergence of correlations to cos(u sqrt(c)t) are consequences of beta mean/variance. For the average of m, the uniform bound on E tau² and the logarithmic growth provide the required integrable uniformity. The counterexample to uniform vanishing of contact2 in a linear cone uses a fixed resonant c and k=ceil(cN); it makes no claim of complete sign.
 
-La identidad del extremo P=s^(N-1) con la órbita inicial de dimensión1 es exacta. Las entradas de Gram completas tienen signo(-1)^(r+i) cuando i+j=2r, y los parámetros beta declarados son correctos. La coordenada Jacobi con exponente final±.5 se interpreta tomando el grado máximo PERMITIDO del sector por N (se pueden rellenar coeficientes nulos), no necesariamente el grado efectivo de un P particular. Así la afirmación cubre todo el sector sin cambiar su peso.
+The identity of the endpoint P=s^(N-1) with the initial orbit of dimension1 is exact. The complete Gram entries have sign(-1)^(r+i) when i+j=2r, and the declared beta parameters are correct. The Jacobi coordinate with final exponent±.5 is interpreted by taking the maximal degree ALLOWED by the sector for N (null coefficients can be filled in), not necessarily the effective degree of a particular P. Thus the statement covers the whole sector without changing its weight.
 
-La media temporal(N-.5)/u sigue de la derivada de fase con signo correcto. Para k>=1, el salto en fase de(i tau)^k no aporta porque la transformada se anula en0. La segunda derivada de Parseval usa exactamente k²/tau²+(N²-k²)/(u²+tau²); los momentos beta producen E y² y Var y del memo. La extensión algebraica k0 coincide con la ley gamma temporal conocida. Jensen demuestra el crecimiento exponencial en N del peso NO centrado para todo k, y cosh/Jensen demuestran que centrar no uniformiza simultáneamente los dos pesos: el producto de sus esperanzas es al menos1+2eta²Var, como se afirma (de hecho las mismas hipótesis permiten una cota mayor).
+The temporal mean(N-.5)/u follows from the phase derivative with correct sign. For k>=1, the phase jump of(i tau)^k contributes nothing because the transform vanishes at0. The second Parseval derivative uses exactly k²/tau²+(N²-k²)/(u²+tau²); the beta moments produce E y² and Var y of the memo. The algebraic extension k0 coincides with the known temporal gamma law. Jensen proves the exponential growth in N of the NON-centred weight for all k, and cosh/Jensen prove that centring does not uniformize both weights simultaneously: the product of their expectations is at least1+2eta²Var, as claimed (in fact the same hypotheses allow a larger bound).
 
-Estos resultados refutan herramientas de uniformización precisas, no el signo de W en conos lineales o cuadráticos. El cono cuadrático conserva el estado OPEN del memo y no se convierte por esta auditoría en un teorema de dispersión espectral uniforme.
+These results refute precise uniformization tools, not the sign of W in linear or quadratic cones. The quadratic cone keeps the OPEN status of the memo and is not turned by this audit into a theorem of uniform spectral dispersion.
 
-## 8. Estado final de esta ronda
+## 8. Final status of this round
 
-Los lemas de momentos de§§2–4 fueron revisados independientemente por el coordinador y aprobados. Las dos construcciones específicas de016 quedan revisadas y aprobadas en§§6–7. Descenso aritmético global, signo de los bloques iniciales y uniformidad conjunta de signo siguen abiertos. No se editó ningún paper.
+The moment lemmas of§§2–4 were independently reviewed and approved. The two specific constructions of016 are reviewed and approved in§§6–7. Global arithmetic descent, sign of the initial blocks and joint sign uniformity remain open. No paper was edited.
 
 
-## 9. Complemento: filtro desplazado, span denso y diagonales positivas insuficientes
+## 9. Complement: shifted filter, dense span and insufficient positive diagonals
 
-**PROVED; revisión matemática y literal root/casos/mapa aprobada.** Es un complemento del falsificador W4 de§4/§6, no un nuevo principio de signo. Dedup: búsquedas dirigidas en índices01–06, grid/crucigrama y corpus; antecedentes015 (órbitas ponderadas),014 (densidad confluente),016 (partición y momentos) y010 (multiplicadores ponderados). No se halló la fórmula literal siguiente; no se afirma novedad absoluta del filtro exterior.
+**PROVED; mathematical and literal review of cases approved.** It is a complement of the falsifier W4 of§4/§6, not a new sign principle. Dedup: targeted searches in indices01–06, grid/crossword and corpus; antecedents015 (weighted orbits),014 (confluent density),016 (partition and moments) and010 (weighted multipliers). The following literal formula was not found; no absolute novelty of the exterior filter is claimed.
 
-Fijar u=63/2, delta=1, eta=3/4, f0(s)=1/(s+u) y Qdelta(s)=(s+delta)/(s+u). Usar H_eta={h:e^(eta t)h pertenece a H¹(0,infinito)}, norma de014. El filtro y su inversa son operadores causales acotados en ese espacio:
+Fix u=63/2, delta=1, eta=3/4, f0(s)=1/(s+u) and Qdelta(s)=(s+delta)/(s+u). Use H_eta={h:e^(eta t)h belongs to H¹(0,infinity)}, the norm of014. The filter and its inverse are bounded causal operators on that space:
 
  Qdelta=1-(u-delta)/(s+u),
  Qdelta^(-1)=1+(u-delta)/(s+delta).
 
-Sus núcleos exponenciales, ponderados, son integrables porque u,delta>eta; las derivadas se controlan también por la ecuación de convolución exponencial. Así cada potencia fija es un isomorfismo acotado. En particular Qdelta(0)=delta/u no anula el momento ordinario; el cero -delta queda fuera del semiplano Re s>-eta donde los momentos de§2 se leen continuamente.
+Their weighted exponential kernels are integrable because u,delta>eta; the derivatives are also controlled by the exponential convolution equation. Thus each fixed power is a bounded isomorphism. In particular Qdelta(0)=delta/u does not annihilate the ordinary moment; the zero -delta lies outside the half-plane Re s>-eta where the moments of§2 are read continuously.
 
-Para r>=0 poner fr=Qdelta^r f0. Para cada m, span{fr:0<=r<=m}=V_(m+1)(u): expandir Qdelta=1-(u-delta)/(s+u) da una matriz triangular con diagonal no nula sobre las potencias (s+u)^(-j-1). Por014 la unión de esos espacios es densa en H_eta. Para TODO R fijo, span{fr:r>=R}=Qdelta^R span{fr:r>=0} también es denso. Esto evita de verdad la obstrucción de momento cero, incluso para una cola de la familia.
+For r>=0 put fr=Qdelta^r f0. For each m, span{fr:0<=r<=m}=V_(m+1)(u): expanding Qdelta=1-(u-delta)/(s+u) gives a triangular matrix with non-zero diagonal over the powers (s+u)^(-j-1). By014 the union of those spaces is dense in H_eta. For EVERY fixed R, span{fr:r>=R}=Qdelta^R span{fr:r>=0} is also dense. This genuinely avoids the zero-moment obstruction, even for a tail of the family.
 
-Ahora sea W4=W-4||.||², el mismo falsificador completo de016. Es continuo en H_eta por014/002. Poner Q0=s/(s+u), gk=Q0^k f0 y d=delta²/u², p=1-d. La identidad escalar EXACTA es
+Now let W4=W-4||.||², the same complete falsifier of016. It is continuous on H_eta by014/002. Put Q0=s/(s+u), gk=Q0^k f0 and d=delta²/u², p=1-d. The EXACT scalar identity is
 
  |Qdelta(i tau)|²=d+p|Q0(i tau)|²,
  Qdelta(-1/2)Qdelta(1/2)=d+p Q0(-1/2)Q0(1/2).
 
-Por ello, incluidos el polar, todos los contactos y la norma,
+Therefore, including the polar, all contacts and the norm,
 
  W4[fr]=sum_(k=0)^r binom(r,k)d^(r-k)p^k W4[gk].
 
-No se ha expandido cuadráticamente la suma de funciones suprimiendo cruces; se usa una identidad de multiplicadores de las formas completas.015 en dimensión1 da W4[gk]~C k^(-1/2)log k, C>0, y lo mismo para W. Existe K con todas esas diagonales positivas para k>=K. Los términos k<K de la suma binomial tienen pérdida absoluta O(r^K d^(r-K)), exponencialmente pequeña. En el bulk k>=pr/2 la probabilidad binomial tiende a1; allí W4[gk]>=c log(r)/sqrt(r) para r grande, uniformemente en pr/2<=k<=r. Por tanto W4[fr]>0 para TODO r suficientemente grande. También W[fr]>0 eventualmente. Son afirmaciones escalares a dimensión inicial1 fija; no uniformidad en todos los numeradores ni positividad de los pares cruzados.
+The sum of functions has not been expanded quadratically suppressing crossings; a multiplier identity of the complete forms is used.015 in dimension1 gives W4[gk]~C k^(-1/2)log k, C>0, and the same for W. There exists K with all those diagonals positive for k>=K. The terms k<K of the binomial sum have absolute loss O(r^K d^(r-K)), exponentially small. In the bulk k>=pr/2 the binomial probability tends to1; there W4[gk]>=c log(r)/sqrt(r) for large r, uniformly in pr/2<=k<=r. Hence W4[fr]>0 for ALL sufficiently large r. Also W[fr]>0 eventually. These are scalar statements at fixed initial dimension1; not uniformity over all numerators nor positivity of the crossed pairs.
 
-Sin embargo,016§6 prueba W4[f0]/||f0||²<-1. El span de cualquier cola r>=R es denso y W4 es continuo; existe por tanto una combinación FINITA v=sum_(r=R)^L c_r fr con W4[v]<0. Elegir R después del umbral anterior garantiza que cada generador usado tiene individualmente W4[fr]>0. Todos los términos son racionales causales en H_eta; no se usa una topología débil que pierda el polar o la aritmética.
+However,016§6 proves W4[f0]/||f0||²<-1. The span of any tail r>=R is dense and W4 is continuous; hence there exists a FINITE combination v=sum_(r=R)^L c_r fr with W4[v]<0. Choosing R after the previous threshold guarantees that each generator used individually has W4[fr]>0. All terms are causal rationals in H_eta; no weak topology losing the polar or the arithmetic is used.
 
-Queda refutada la inferencia «span denso en norma de forma + signo individual eventual de sus generadores implica signo sobre ese span», incluso después de reparar el momento cero mediante un filtro invertible. No se afirma W real negativa, ni pares PSD, ni imposibilidad de un control de cruces específico del dato real. No hay nuevo certificado, nueva ventana temporal, torre de grados ni modificación de papers.
+The inference «dense span in the form norm + eventual individual sign of its generators implies sign on that span» is refuted, even after repairing the zero moment by an invertible filter. It is not claimed that the real W is negative, nor PSD pairs, nor impossibility of a control of crossings specific to the real datum. There is no new certificate, new time window, tower of degrees or modification of papers.

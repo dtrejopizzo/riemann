@@ -1,243 +1,243 @@
-# Ronda 4, zona D — Factorización de 𝔸_M con soporte en las casi-coincidencias m ≈ kn (memo de selección)
+# Round 4, zone D — Factorization of 𝔸_M with support on the near-coincidences m ≈ kn (selection memo)
 
-Objetivo (★): λ_A(T) ≥ 0 para todo T, definiciones de `../phase-211-sign-sandbox/STATEMENT_001.md`. Reducción usada
-(PROVED, P47 prop:AM, thm:oneprofile): perfil fijo F_0 ∈ P_{T_0}, 2T_0 < log 2; (★) equivale a
-𝔸_M = [𝖡(log m − log k)]_{m,k≤M} ⪰ 0 para todo M, con 𝔸_M = Arch_M − Div_M − Near_M. Notación: β(d) parte
-arquimediana de 𝖡, c_0 = c_{F_0} (sop ⊂ [−2T_0, 2T_0], c_0(0) = 1), v_n = 2Λ(n)n^{−1/2}, θ_0 := 2T_0.
-Etiquetas: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMÉRICO.
+Target (★): λ_A(T) ≥ 0 for all T, definitions from `../phase-211-sign-sandbox/STATEMENT_001.md`. Reduction used
+(PROVED, P47 prop:AM, thm:oneprofile): fixed profile F_0 ∈ P_{T_0}, 2T_0 < log 2; (★) is equivalent to
+𝔸_M = [𝖡(log m − log k)]_{m,k≤M} ⪰ 0 for all M, with 𝔸_M = Arch_M − Div_M − Near_M. Notation: β(d) archimedean part
+of 𝖡, c_0 = c_{F_0} (supp ⊂ [−2T_0, 2T_0], c_0(0) = 1), v_n = 2Λ(n)n^{−1/2}, θ_0 := 2T_0.
+Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 
-## Cotejo
+## Cross-check
 
-### Qué se buscó, qué se abrió, qué no
+### What was searched, what was opened, what was not
 
-Grep (sin distinguir mayúsculas) en `03-research/` (todas las fases), P47, P48 y `05-meta-and-planning/` (índice,
-crucigrama) por: near-divisib, casi-divisib, almost divisor, interval order, orden de intervalo, semiorder, Farey,
+Grep (case-insensitive) in `03-research/` (all phases), P47, P48 and `05-meta-and-planning/` (index,
+crossword) for: near-divisib, casi-divisib, almost divisor, interval order, orden de intervalo, semiorder, Farey,
 continued fraction, fracción continua, Green matri(x), matriz de Green, semisepar, totally positive, totalmente
-positiv, Pólya frequency, sign-regular, complemento de Schur, closed under elimination, transitive. Resultados:
-«near-divisib», «casi-divisib», «almost divisor», «semiorder», «closed under elimination», «orden de intervalo»: 0
-coincidencias; «interval order»: 1 (fase 73, E73_115, no pertinente por título, no abierto); «Farey»: 42 archivos
-(fases 167, 191, 200, 194); «totally positive»/«Pólya frequency»: 24/14 (fases 102–104, 114–116, 154, 162, 184, 186,
-200, 201) más el índice AUDIT_A (A14a-1: PF₅ del núcleo de de Bruijn–Newman, NO-GO CITED; A14a-2: PF₄ OPEN), L23,
-L48, L49; «Green»: fases 116, 170, 194, 205, 206.
+positiv, Pólya frequency, sign-regular, complemento de Schur, closed under elimination, transitive. Results:
+"near-divisib", "casi-divisib", "almost divisor", "semiorder", "closed under elimination", "orden de intervalo": 0
+matches; "interval order": 1 (phase 73, E73_115, not pertinent by title, not opened); "Farey": 42 files
+(phases 167, 191, 200, 194); "totally positive"/"Pólya frequency": 24/14 (phases 102–104, 114–116, 154, 162, 184, 186,
+200, 201) plus the AUDIT_A index (A14a-1: PF₅ of the de Bruijn–Newman kernel, NO-GO CITED; A14a-2: PF₄ OPEN), L23,
+L48, L49; "Green": phases 116, 170, 194, 205, 206.
 
-Abiertos en primaria: P47 prop:AM con demostración, thm:oneprofile con demostración, prop:nearfree con demostración,
-rem:boxes, rem:bar-arith; `ROUND_003_7` (entera), `REVIEW_003`, `RULES_AVOID` §§B, E, F, J; `OBJECT_SPEC`;
-`BRIEF_CONSTRUCTOR`; STATEMENT_001; fase 194 `INV_C_001` §§0–1 (fibración por razones r = a/b, Lema 1–3);
-fase 205 `SKELETON_001` (líneas de §5 «Pole Green identity» y su tabla de búsqueda: «semiseparable: 0»);
-211 LEDGER filas C9 y C43; índice AUDIT_A §1 (PF₅). No abiertos en primaria (límite del cotejo): `N_BUILD_022`,
-`L2_BUILD_031`, `CA_K_001`, `CA_K_002` (usados sólo a través de su lectura en `ROUND_003_7` §Cotejo y `REVIEW_003`,
-que los confirma); fase 202 (tabla exterior); fase 206 salvo la línea de NODE_001 que nombra el núcleo de Green
-del polo; 211 `ROUND_003_B` (sólo vía LEDGER C9); los 42 archivos de Farey salvo INV_C_001; los archivos de
-total positividad de las fases 102–116 y 186. Una búsqueda sin coincidencias no prueba novedad.
+Opened as primary sources: P47 prop:AM with proof, thm:oneprofile with proof, prop:nearfree with proof,
+rem:boxes, rem:bar-arith; `ROUND_003_7` (in full), `REVIEW_003`, `RULES_AVOID` §§B, E, F, J; `OBJECT_SPEC`;
+`BRIEF_CONSTRUCTOR`; STATEMENT_001; phase 194 `INV_C_001` §§0–1 (fibration by ratios r = a/b, Lemmas 1–3);
+phase 205 `SKELETON_001` (lines of §5 "Pole Green identity" and its search table: "semiseparable: 0");
+211 LEDGER rows C9 and C43; AUDIT_A index §1 (PF₅). Not opened as primary sources (limit of the cross-check): `N_BUILD_022`,
+`L2_BUILD_031`, `CA_K_001`, `CA_K_002` (used only through their reading in `ROUND_003_7` §Cross-check and `REVIEW_003`,
+which confirms them); phase 202 (exterior table); phase 206 except the NODE_001 line that names the Green kernel
+of the pole; 211 `ROUND_003_B` (only via LEDGER C9); the 42 Farey files except INV_C_001; the
+total positivity files of phases 102–116 and 186. A search without matches does not prove novelty.
 
-### (1) Antecedente más cercano
+### (1) Closest antecedent
 
-- `ROUND_003_7` Lema 1 y «no excluidos» (factor en la divisibilidad: NO-GO de formato), con `ROUND_001_B` §4.
-- `INV_C_001` §1 (fase 194): la fibración de los pares (m, n) por la razón r ∈ ℚ_{>0} con masa de fibra κ_K(r);
-  el ordenamiento Farey/coprimo de los pares se examinó allí y aterriza en un objeto sin información de signo
-  (los pesos de las razones primas son 1, no Λ(q), salvo inserción a mano).
-- 211 LEDGER C9 (`ROUND_003_B`): métricas de tamaño |log m/k| y de factorización log(lcm/gcd) acopladas sobre
-  𝔸_M: reformulación, menores negativos explícitos.
-- fase 205 `SKELETON_001` §5: identidad de Green del polo (núcleo e^{|s|/2} = rango 2 + Green de ¼ − ∂²) en la
-  ventana: es la única estructura de tipo Green registrada; vive en el polo, no en 𝖡 ni en Near.
-- Índice AUDIT_A A14a-1/2: total positividad de orden ≥ 5 del núcleo de de Bruijn–Newman, NO-GO CITED; no es 𝖡.
+- `ROUND_003_7` Lemma 1 and "not excluded" (factor on divisibility: format NO-GO), with `ROUND_001_B` §4.
+- `INV_C_001` §1 (phase 194): the fibration of pairs (m, n) by the ratio r ∈ ℚ_{>0} with fibre mass κ_K(r);
+  the Farey/coprime ordering of the pairs was examined there and lands on an object without sign information
+  (the weights of prime ratios are 1, not Λ(q), except by insertion by hand).
+- 211 LEDGER C9 (`ROUND_003_B`): size metrics |log m/k| and factorization metrics log(lcm/gcd) coupled on
+  𝔸_M: reformulation, explicit negative minors.
+- phase 205 `SKELETON_001` §5: Green identity of the pole (kernel e^{|s|/2} = rank 2 + Green of ¼ − ∂²) in the
+  window: it is the only Green-type structure recorded; it lives in the pole, not in 𝖡 nor in Near.
+- AUDIT_A index A14a-1/2: total positivity of order ≥ 5 of the de Bruijn–Newman kernel, NO-GO CITED; it is not 𝖡.
 
-### (2) Objeto realmente nuevo
+### (2) Genuinely new object
 
-No hay ℋ_T, V_T, ρ_T nuevos. No sé escribir una W con soporte en las casi-coincidencias y fórmula propia que lleve
-signo. Lo que esta memo aporta son tres piezas de delimitación, demostradas en §1, que responden (i), (ii) y (iv):
+There are no new ℋ_T, V_T, ρ_T. I do not know how to write a W with support on the near-coincidences and its own formula that carries
+a sign. What this memo contributes are three delimitation pieces, proved in §1, which answer (i), (ii) and (iv):
 
-- **Lema A (grafo de acoplamiento; PROVED salvo una cita).** Descripción exacta de los soportes de Div, Near, Arch;
-  el soporte de Div + Near depende del peso sólo a través del conjunto finito {n ≤ n_* : a(n) ≠ 0}.
-- **Lema B (estructura de orden; PROVED).** La relación de casi-divisibilidad no es un orden parcial (no es
-  transitiva); su soporte está contenido en el semiorden de umbral {m/k > 2e^{−θ_0}} y coincide con él para
-  m/k ≥ R_0. Toda «función de Möbius» extraída del patrón es, salvo en un conjunto acotado de razones, la del
-  semiorden de umbral, que no depende del peso.
-- **Lema C (cierre bajo eliminación; NO-GO de formato, PROVED).** Si 4T_0 < log 2, 𝖡 toma valores estrictamente
-  negativos en (θ_0, log 2 − θ_0) y 𝖡(0) > 0; y 𝖡 no coincide en (0, ∞) con ninguna transformada de Laplace de una
-  medida (en particular con ninguna suma finita de exponenciales). Luego 𝔸_M, para M grande, no pertenece a ninguna
-  de las familias cerradas bajo complemento de Schur por las que preguntaba el encargo: núcleos totalmente
-  positivos o signo-regulares de orden 1, matrices de Green de árbol o de la recta con pesos positivos
-  (semiseparables de rango acotado), matrices f(mcd).
+- **Lemma A (coupling graph; PROVED except for one citation).** Exact description of the supports of Div, Near, Arch;
+  the support of Div + Near depends on the weight only through the finite set {n ≤ n_* : a(n) ≠ 0}.
+- **Lemma B (order structure; PROVED).** The near-divisibility relation is not a partial order (it is not
+  transitive); its support is contained in the threshold semiorder {m/k > 2e^{−θ_0}} and coincides with it for
+  m/k ≥ R_0. Every "Möbius function" extracted from the pattern is, except on a bounded set of ratios, that of the
+  threshold semiorder, which does not depend on the weight.
+- **Lemma C (closure under elimination; format NO-GO, PROVED).** If 4T_0 < log 2, 𝖡 takes strictly
+  negative values on (θ_0, log 2 − θ_0) and 𝖡(0) > 0; and 𝖡 does not coincide on (0, ∞) with any Laplace transform of a
+  measure (in particular with no finite sum of exponentials). Hence 𝔸_M, for large M, belongs to none
+  of the families closed under Schur complement that the task asked about: totally
+  positive or sign-regular kernels of order 1, Green matrices of a tree or of the line with positive weights
+  (semiseparable of bounded rank), f(gcd) matrices.
 
-### (3) Por qué el cambio evitaría la dificultad del antecedente
+### (3) Why the change would avoid the antecedent's difficulty
 
-No la evita. El antecedente (`ROUND_003_7` Lema 1) falla por formato: la incidencia de divisores no ve los pares
-coprimos casi proporcionales. Pasar al soporte de casi-coincidencias corrige el formato (el soporte ya no es
-escaso: Lema A muestra que es casi completo fuera de una banda alrededor de la diagonal), pero el Lema B muestra
-que la estructura combinatoria de ese soporte es esencialmente un semiorden de umbral independiente del peso, y el
-Lema C que 𝖡 no está en ninguna clase conocida cerrada bajo eliminación. La información aritmética está en los
-**valores** de las entradas de Near, no en su patrón; un pivote explícito tendría que leerse de los valores, y eso
-es la LDL de `ROUND_003_2` Lema 2 (circular, RULES_AVOID J3).
+It does not avoid it. The antecedent (`ROUND_003_7` Lemma 1) fails by format: the divisor incidence does not see the
+nearly proportional coprime pairs. Passing to the near-coincidence support corrects the format (the support is no longer
+sparse: Lemma A shows it is almost complete outside a band around the diagonal), but Lemma B shows
+that the combinatorial structure of that support is essentially a threshold semiorder independent of the weight, and
+Lemma C that 𝖡 is in no known class closed under elimination. The arithmetic information is in the
+**values** of the entries of Near, not in their pattern; an explicit pivot would have to be read from the values, and that
+is the LDL of `ROUND_003_2` Lemma 2 (circular, RULES_AVOID J3).
 
-### (4) Identidad que conectaría con la positividad global
+### (4) Identity that would connect with global positivity
 
-Ninguna escrita. La forma que tendría que tener: 𝔸_M = WᵀDW + ρ_M con D ≥ 0, W soportada en el grafo del Lema A,
-W y D dados por fórmula propia en los valores Λ(n), n < M e^{θ_0}, y ρ_M con signo manifiesto; por el Lema 2 de
-`ROUND_003_7` (sitios primos ya equivalentes) la restricción a primos de WᵀDW tendría que llevar rango alto, lo que
-el soporte de Near permite (Lema A(c)) pero ningún antecedente ni esta memo realiza. Lo que sí queda fijado
-(Lemas B, C): la «cierre bajo eliminación» que haría de los pivotes una identidad no puede venir de la clase del
-núcleo 𝖡 ni del patrón de soporte; tendría que ser una propiedad de la familia {𝔸_M} que use los valores exactos.
+None written. The form it would have to take: 𝔸_M = WᵀDW + ρ_M with D ≥ 0, W supported on the graph of Lemma A,
+W and D given by their own formula in the values Λ(n), n < M e^{θ_0}, and ρ_M with manifest sign; by Lemma 2 of
+`ROUND_003_7` (prime sites already equivalent) the restriction of WᵀDW to primes would have to carry high rank, which
+the support of Near allows (Lemma A(c)) but which no antecedent nor this memo realizes. What does get fixed
+(Lemmas B, C): the "closure under elimination" that would make the pivots an identity cannot come from the class of the
+kernel 𝖡 nor from the support pattern; it would have to be a property of the family {𝔸_M} that uses the exact values.
 
-### (5) cΛ y a_P: por qué el resto dejaría de ser ≥ 0
+### (5) cΛ and a_P: why the remainder would stop being ≥ 0
 
-- Para cualquier construcción que use sólo el patrón del Lema A (y su Möbius, Lema B): el patrón es idéntico para
-  todo c > 0 (Lema A(d)), luego W y D serían los mismos para cΛ y para Λ; el resto ρ^{(c)} = 𝔸^{(c)} − WᵀDW =
-  ρ^{(1)} + (1 − c)(Div + Near) es afín en c, y su conjunto de positividad es un intervalo de c. No hay línea que
-  lo rompa por el patrón; la ruptura tendría que venir de que (Div + Near) no es ⪰ 0 ni ⪯ 0 en la dirección de ρ,
-  es decir, de valores. Por R3-i esto no es mecanismo: es la condición misma.
-- a_P borra las potencias de primos p < P: el patrón cambia sólo en razones acotadas (Lema A(d)) y en Div; sobre
-  el resto del soporte (razones ≥ R_0 P-dependiente) el patrón coincide. La ruptura no puede estar en el patrón
-  de razones grandes.
-- En una W con valores propios (no escrita) la ruptura debe señalarse en los valores; no hay objeto donde
-  señalarla.
+- For any construction using only the pattern of Lemma A (and its Möbius, Lemma B): the pattern is identical for
+  all c > 0 (Lemma A(d)), hence W and D would be the same for cΛ and for Λ; the remainder ρ^{(c)} = 𝔸^{(c)} − WᵀDW =
+  ρ^{(1)} + (1 − c)(Div + Near) is affine in c, and its positivity set is an interval of c. No line
+  breaks it through the pattern; the breaking would have to come from (Div + Near) being neither ⪰ 0 nor ⪯ 0 in the direction of ρ,
+  i.e. from values. By R3-i this is not a mechanism: it is the condition itself.
+- a_P deletes the powers of primes p < P: the pattern changes only at bounded ratios (Lemma A(d)) and in Div; on
+  the rest of the support (ratios ≥ R_0, P-dependent) the pattern coincides. The breaking cannot be in the pattern
+  of large ratios.
+- In a W with its own values (not written) the breaking must be pointed out in the values; there is no object in which
+  to point it out.
 
-### Veredicto del cotejo
+### Verdict of the cross-check
 
-Sin mecanismo nuevo. La zona «W con soporte en m ≈ kn» queda delimitada: su patrón es un semiorden casi independiente
-del peso, y 𝖡 no pertenece a clases cerradas bajo eliminación. Se demuestran tres lemas de delimitación (§1); ninguno
-lleva signo. No hay candidata lista para construcción.
+No new mechanism. The zone "W with support on m ≈ kn" is delimited: its pattern is a semiorder nearly independent
+of the weight, and 𝖡 does not belong to classes closed under elimination. Three delimitation lemmas are proved (§1); none
+carries a sign. No candidate ready for construction.
 
-## 1. Demostraciones
+## 1. Proofs
 
-### Lema A (grafo de acoplamiento)
+### Lemma A (coupling graph)
 
-Sea a un peso real ≥ 0 sobre {n ≥ 2} (Λ, cΛ, a_P), v_n^a = 2a(n)n^{−1/2}. Para m > k ≥ 1, r := m/k.
+Let a be a real weight ≥ 0 on {n ≥ 2} (Λ, cΛ, a_P), v_n^a = 2a(n)n^{−1/2}. For m > k ≥ 1, r := m/k.
 
-(a) **Div** (PROVED, P47 prop:AM(iii)): (Div)_{mk} = ½ v^a_{r} si r ∈ ℕ, y 0 si no. Soporte potencial: k | m con
-a(m/k) ≠ 0 (para Λ: m/k potencia de primo). Diagonal nula.
+(a) **Div** (PROVED, P47 prop:AM(iii)): (Div)_{mk} = ½ v^a_{r} if r ∈ ℕ, and 0 otherwise. Potential support: k | m with
+a(m/k) ≠ 0 (for Λ: m/k a prime power). Zero diagonal.
 
-(b) **Near** (PROVED, ibíd.): (Near)_{mk} = ½ Σ_{n ≥ 2, n ≠ r} v^a_n c_0(log(kn/m)), y el término n contribuye sólo si
-|log n − log r| < θ_0. Soporte potencial: existe n ≥ 2, n ≠ r, a(n) ≠ 0, con n ∈ (r e^{−θ_0}, r e^{θ_0}). Como n ≥ 2,
-esto exige r > 2e^{−θ_0} > 1. Diagonal nula; además Near_{mk} = Near_{km}.
+(b) **Near** (PROVED, ibid.): (Near)_{mk} = ½ Σ_{n ≥ 2, n ≠ r} v^a_n c_0(log(kn/m)), and the term n contributes only if
+|log n − log r| < θ_0. Potential support: there exists n ≥ 2, n ≠ r, a(n) ≠ 0, with n ∈ (r e^{−θ_0}, r e^{θ_0}). Since n ≥ 2,
+this requires r > 2e^{−θ_0} > 1. Zero diagonal; moreover Near_{mk} = Near_{km}.
 
-(c) **Arch** (PROVED a partir de STATEMENT_001 §3 y P47 lem:transl(iv)): para d := log r > θ_0,
-Arch_{mk} = β(d) = −Σ_{j≥1} γ_j e^{−(2j+½)d}, γ_j = ∫e^{(2j+½)u}c_0(u)du. Como F_0 es par y real (g ∗ g̃ y G_0 son
-pares), γ_j = (∫F_0(t)e^{(2j+½)t}dt)² ≥ 0, y ∫F_0 e^{st} = F̂_0(−is) = (¼ − s²)ĝ(is)²ĝ(−is)² con
-ĝ(±is) = (e^{(b∓s)a} − 1)/(b ∓ s), real y no nulo si b ≠ ±s. Así, para b ∉ {±(2j+½)}, γ_j > 0 para todo j ≥ 1, y
-Arch_{mk} < 0 para toda razón r > e^{θ_0}: Arch acopla **todos** los pares, con entradas negativas fuera de la
-banda |log r| ≤ θ_0 y decaimiento e^{−5d/2}.
+(c) **Arch** (PROVED from STATEMENT_001 §3 and P47 lem:transl(iv)): for d := log r > θ_0,
+Arch_{mk} = β(d) = −Σ_{j≥1} γ_j e^{−(2j+½)d}, γ_j = ∫e^{(2j+½)u}c_0(u)du. Since F_0 is even and real (g ∗ g̃ and G_0 are
+even), γ_j = (∫F_0(t)e^{(2j+½)t}dt)² ≥ 0, and ∫F_0 e^{st} = F̂_0(−is) = (¼ − s²)ĝ(is)²ĝ(−is)² with
+ĝ(±is) = (e^{(b∓s)a} − 1)/(b ∓ s), real and nonzero if b ≠ ±s. Thus, for b ∉ {±(2j+½)}, γ_j > 0 for all j ≥ 1, and
+Arch_{mk} < 0 for every ratio r > e^{θ_0}: Arch couples **all** pairs, with negative entries outside the
+band |log r| ≤ θ_0 and decay e^{−5d/2}.
 
-(d) **Dependencia del soporte en el peso.** CITED (teorema de los números primos): para cada η > 0 existe x_η con
-un primo en (x, x(1+η)) para todo x ≥ x_η. Tomo η con 1 + η ≤ e^{θ_0}. Para r ≥ R_0 := x_η e^{θ_0}, los dos
-intervalos (r e^{−θ_0}, r) y (r, r e^{θ_0}) contienen cada uno un primo, y al menos uno es ≠ r. Luego, para todo peso
-con a(p) ≠ 0 en todos los primos p ≥ x_η (en particular Λ, cΛ con c > 0, y a_P si además R_0 ≥ P e^{θ_0}):
-**todo par con r ≥ R_0 está en el soporte potencial de Near.** Para
-r < R_0, el soporte depende sólo de {n ≤ n_* := R_0 e^{θ_0} : a(n) ≠ 0}, un conjunto finito. En consecuencia:
+(d) **Dependence of the support on the weight.** CITED (prime number theorem): for each η > 0 there exists x_η with
+a prime in (x, x(1+η)) for all x ≥ x_η. I take η with 1 + η ≤ e^{θ_0}. For r ≥ R_0 := x_η e^{θ_0}, the two
+intervals (r e^{−θ_0}, r) and (r, r e^{θ_0}) each contain a prime, and at least one is ≠ r. Hence, for every weight
+with a(p) ≠ 0 at all primes p ≥ x_η (in particular Λ, cΛ with c > 0, and a_P if moreover R_0 ≥ P e^{θ_0}):
+**every pair with r ≥ R_0 is in the potential support of Near.** For
+r < R_0, the support depends only on {n ≤ n_* := R_0 e^{θ_0} : a(n) ≠ 0}, a finite set. Consequently:
 
-- el soporte potencial de Div + Near es el mismo para Λ y para cΛ, todo c > 0 (PROVED, trivial: a(n) ≠ 0 no cambia);
-- para a_P difiere del de Λ sólo en pares con r < R_0(P) (PROVED dado lo CITED).
+- the potential support of Div + Near is the same for Λ and for cΛ, all c > 0 (PROVED, trivial: a(n) ≠ 0 does not change);
+- for a_P it differs from that of Λ only at pairs with r < R_0(P) (PROVED given what is CITED).
 
-Observación: «soporte potencial» porque una suma Σ v_n c_0(·) puede anularse por cancelación (c_0 cambia de signo);
-el soporte efectivo es un subconjunto. ∎
+Remark: "potential support" because a sum Σ v_n c_0(·) can vanish by cancellation (c_0 changes sign);
+the effective support is a subset. ∎
 
-### Lema B (estructura de orden de la casi-divisibilidad)
+### Lemma B (order structure of near-divisibility)
 
-Sea ⊲ la relación k ⊲ m :⟺ m > k y (m, k) en el soporte potencial de Div + Near (Lema A) para el peso Λ.
+Let ⊲ be the relation k ⊲ m :⟺ m > k and (m, k) in the potential support of Div + Near (Lemma A) for the weight Λ.
 
-(a) ⊲ está contenida en el semiorden de umbral S := {(k, m) : log m − log k > log 2 − θ_0}. PROVED: Lema A(a),(b).
-S es un semiorden (orden de intervalos unitarios en la recta log): x ≺ y ⟺ y − x > δ, δ := log 2 − θ_0 > 0.
+(a) ⊲ is contained in the threshold semiorder S := {(k, m) : log m − log k > log 2 − θ_0}. PROVED: Lemma A(a),(b).
+S is a semiorder (unit interval order on the log line): x ≺ y ⟺ y − x > δ, δ := log 2 − θ_0 > 0.
 
-(b) ⊲ no es transitiva en general, luego no es un orden parcial y no tiene álgebra de incidencia ni función de
-Möbius propia. PROVED con ejemplo: 1 ⊲ 2 (Div, Λ(2) > 0); 2 ⊲ 6 (Div, 6/2 = 3, Λ(3) > 0); pero (1, 6) no está en
-el soporte si θ_0 < log(7/6): Λ(6) = 0, y el intervalo (6e^{−θ_0}, 6e^{θ_0}) ⊂ (5, 7) no contiene ningún entero
-n ≠ 6. Luego 1 ⊲ 2 ⊲ 6 y no 1 ⊲ 6. ∎
-La clausura transitiva de ⊲ está contenida en S (S es transitivo: δ + δ > δ) y contiene todos los pares con
-r ≥ R_0 (Lema A(d)).
+(b) ⊲ is not transitive in general, hence it is not a partial order and has no incidence algebra nor
+Möbius function of its own. PROVED by example: 1 ⊲ 2 (Div, Λ(2) > 0); 2 ⊲ 6 (Div, 6/2 = 3, Λ(3) > 0); but (1, 6) is not in
+the support if θ_0 < log(7/6): Λ(6) = 0, and the interval (6e^{−θ_0}, 6e^{θ_0}) ⊂ (5, 7) contains no integer
+n ≠ 6. Hence 1 ⊲ 2 ⊲ 6 and not 1 ⊲ 6. ∎
+The transitive closure of ⊲ is contained in S (S is transitive: δ + δ > δ) and contains all pairs with
+r ≥ R_0 (Lemma A(d)).
 
-(c) Consecuencia para pivotes de «Möbius». Cualquier construcción de pivotes que dependa sólo del orden
-(clausura transitiva de ⊲, o S) es: en las razones r ≥ R_0, idéntica a la del semiorden S, que depende sólo de δ
-(arquimediano) y no del peso; en las razones r < R_0, depende del peso sólo a través del conjunto finito
-{n ≤ n_* : Λ(n) ≠ 0}. PROVED (Lemas A(d), B(a)). Por B1/B5 de RULES_AVOID (clase cerrada por modificación que
-conserva ese conjunto finito, p. ej. f_t con λ₁ > n_*, o cΛ), una tal construcción no puede llevar el signo
-sola. Es NO-GO de clase para «pivotes determinados por el patrón de soporte», no para W con valores propios.
+(c) Consequence for "Möbius" pivots. Any pivot construction that depends only on the order
+(transitive closure of ⊲, or S) is: at ratios r ≥ R_0, identical to that of the semiorder S, which depends only on δ
+(archimedean) and not on the weight; at ratios r < R_0, it depends on the weight only through the finite set
+{n ≤ n_* : Λ(n) ≠ 0}. PROVED (Lemmas A(d), B(a)). By B1/B5 of RULES_AVOID (class closed under modifications that
+preserve that finite set, e.g. f_t with λ₁ > n_*, or cΛ), such a construction cannot carry the sign
+alone. It is a class NO-GO for "pivots determined by the support pattern", not for W with its own values.
 
-El semiorden S, restringido a {log m : m ≤ M}, sí es un orden de intervalos y su función de Möbius es explícita
-por cadenas (μ_S(x, y) = Σ_{cadenas} (−1)^{long}), pero no contiene ningún dato de Λ. Una «inversión de Möbius en
-el semigrupo de intervalos» (la que transforma sumas sobre (r e^{−θ_0}, r e^{θ_0}) en valores puntuales) es la
-deconvolución por c_0, que es exactamente pasar de Near a la medida puntual Σ v_n δ_{log n}: devuelve el peine, no
-un pivote. ARGUED (es la definición de Near como convolución, P47 prop:AM(iii)).
+The semiorder S, restricted to {log m : m ≤ M}, is indeed an interval order and its Möbius function is explicit
+via chains (μ_S(x, y) = Σ_{chains} (−1)^{length}), but it contains no datum of Λ. A "Möbius inversion in
+the semigroup of intervals" (the one that turns sums over (r e^{−θ_0}, r e^{θ_0}) into point values) is
+deconvolution by c_0, which is exactly passing from Near to the point measure Σ v_n δ_{log n}: it returns the comb, not
+a pivot. ARGUED (it is the definition of Near as a convolution, P47 prop:AM(iii)).
 
-### Lema C (𝖡 no está en las clases cerradas bajo eliminación)
+### Lemma C (𝖡 is not in the classes closed under elimination)
 
-Hipótesis: 4T_0 < log 2 (es decir θ_0 < log 2 − θ_0), b ∉ {±(2j+½) : j ≥ 1}.
+Hypotheses: 4T_0 < log 2 (i.e. θ_0 < log 2 − θ_0), b ∉ {±(2j+½) : j ≥ 1}.
 
-(a) 𝖡(d) < 0 para d ∈ (θ_0, log 2 − θ_0). PROVED: allí |log n ± d| ≥ log 2 − d > θ_0 para todo n ≥ 2, luego la parte
-del peine es nula y 𝖡(d) = β(d) = −Σ_{j≥1}γ_j e^{−(2j+½)d} < 0 por Lema A(c).
+(a) 𝖡(d) < 0 for d ∈ (θ_0, log 2 − θ_0). PROVED: there |log n ± d| ≥ log 2 − d > θ_0 for all n ≥ 2, hence the comb part
+vanishes and 𝖡(d) = β(d) = −Σ_{j≥1}γ_j e^{−(2j+½)d} < 0 by Lemma A(c).
 
-(b) 𝖡(0) = a_{T_0}(F_0) (P47 thm:band, STATEMENT_001 §3). Es > 0 en las ventanas certificadas T_0 ≤ ½ log 5
-(PROVED en P47; aquí T_0 < (log 2)/4 está dentro). Si 𝖡(0) = 0 con 𝖡(d) < 0 en otro punto, 𝔸_M ya no sería ⪰ 0
-para el par {log 1, log m} con log m ≈ d — no ocurre por lo certificado; basta 𝖡(0) ≥ 0 y (a).
+(b) 𝖡(0) = a_{T_0}(F_0) (P47 thm:band, STATEMENT_001 §3). It is > 0 in the certified windows T_0 ≤ ½ log 5
+(PROVED in P47; here T_0 < (log 2)/4 is inside). If 𝖡(0) = 0 with 𝖡(d) < 0 at another point, 𝔸_M would no longer be ⪰ 0
+for the pair {log 1, log m} with log m ≈ d — this does not happen by what is certified; 𝖡(0) ≥ 0 and (a) suffice.
 
-(c) 𝖡 restringida a (0, ∞) no es la transformada de Laplace ∫e^{−td}dν(t) de ninguna medida con signo ν para la que
-esa integral converja en un entorno de (0, ∞) (en particular no es una suma finita de exponenciales). PROVED: tal
-transformada es real-analítica en (0, ∞). En (θ_0, log 2 − θ_0) coincidiría con β, y β en (θ_0, ∞) es también una
-serie de exponenciales −Σγ_j e^{−(2j+½)d} analítica en (θ_0, ∞); dos funciones analíticas que coinciden en un
-intervalo coinciden en (θ_0, ∞); luego la parte del peine sería ≡ 0 en (θ_0, ∞). Pero en d ∈ (log 2 − θ_0, log 2 + θ_0)
-con θ_0 < (log(3/2))/2 el único n que contribuye es n = 2 y la parte del peine es −½v_2 c_0(log 2 − d), que vale
-−½v_2 ≠ 0 en d = log 2. Contradicción. ∎
+(c) 𝖡 restricted to (0, ∞) is not the Laplace transform ∫e^{−td}dν(t) of any signed measure ν for which
+that integral converges in a neighbourhood of (0, ∞) (in particular it is not a finite sum of exponentials). PROVED: such a
+transform is real-analytic on (0, ∞). On (θ_0, log 2 − θ_0) it would coincide with β, and β on (θ_0, ∞) is also a
+series of exponentials −Σγ_j e^{−(2j+½)d} analytic on (θ_0, ∞); two analytic functions that coincide on an
+interval coincide on (θ_0, ∞); hence the comb part would be ≡ 0 on (θ_0, ∞). But for d ∈ (log 2 − θ_0, log 2 + θ_0)
+with θ_0 < (log(3/2))/2 the only n that contributes is n = 2 and the comb part is −½v_2 c_0(log 2 − d), which equals
+−½v_2 ≠ 0 at d = log 2. Contradiction. ∎
 
-(d) Consecuencias (PROVED a partir de (a)–(c) y de las definiciones de cada clase):
-- Núcleos totalmente positivos, o signo-regulares de orden 1 (todas las entradas de un mismo signo): excluidos por
-  (a)–(b): para M grande existe un par m > k con log(m/k) ∈ (θ_0, log 2 − θ_0) (densidad de los log(m/k)), así que
-  𝔸_M tiene entradas > 0 (diagonal) y < 0. La positividad total exige en particular entradas ≥ 0.
-- Funciones de Pólya (PF₂ o más): requieren 𝖡 ≥ 0 y log-cóncava; excluidas por (a).
-- Matrices de Green de la recta o de un árbol, semiseparables de rango ≤ r (las que se cierran bajo complemento de
-  Schur con parámetros explícitos): para puntos ordenados x_1 < … < x_M exigen 𝖡(x_j − x_i) = Σ_{l≤r} u_l(x_i)w_l(x_j)
-  para i < j; para un núcleo de diferencias continuo y para todos los M esto fuerza (ecuación funcional de
-  d'Alembert/Levi-Civita, CITED) que 𝖡|_{(0,∞)} sea una suma finita de exponenciales-polinomio, excluida por (c).
-- Matrices f(mcd): las entradas sobre primos distintos serían constantes f(1); 𝖡(log p − log q) no es constante
-  (`ROUND_003_7` Lema 1, pasos 2–3). Excluidas.
-- Funciones condicionalmente definidas positivas de orden 1: no se cierran bajo eliminación en el sentido pedido y
-  su positividad sobre vectores de suma nula es más débil que el objetivo; no aportan pivotes. ARGUED.
-- Núcleos de tipo Green en la recta para la parte Near sola: Near_{mk} = ½Σ v_n c_0(log n − log r) es la
-  convolución de la medida del peine con c_0 de soporte compacto; por el mismo argumento de analiticidad no es
-  semiseparable de rango acotado. PROVED (c_0 ≠ 0 de soporte compacto no es exponencial-polinomio).
+(d) Consequences (PROVED from (a)–(c) and the definitions of each class):
+- Totally positive kernels, or sign-regular of order 1 (all entries of the same sign): excluded by
+  (a)–(b): for large M there exists a pair m > k with log(m/k) ∈ (θ_0, log 2 − θ_0) (density of the log(m/k)), so
+  𝔸_M has entries > 0 (diagonal) and < 0. Total positivity requires in particular entries ≥ 0.
+- Pólya frequency functions (PF₂ or higher): require 𝖡 ≥ 0 and log-concave; excluded by (a).
+- Green matrices of the line or of a tree, semiseparable of rank ≤ r (those closed under Schur
+  complement with explicit parameters): for ordered points x_1 < … < x_M they require 𝖡(x_j − x_i) = Σ_{l≤r} u_l(x_i)w_l(x_j)
+  for i < j; for a continuous difference kernel and for all M this forces (functional equation of
+  d'Alembert/Levi-Civita, CITED) 𝖡|_{(0,∞)} to be a finite sum of exponential-polynomials, excluded by (c).
+- f(gcd) matrices: the entries on distinct primes would be constant f(1); 𝖡(log p − log q) is not constant
+  (`ROUND_003_7` Lemma 1, steps 2–3). Excluded.
+- Conditionally positive definite functions of order 1: they are not closed under elimination in the requested sense and
+  their positivity on zero-sum vectors is weaker than the target; they provide no pivots. ARGUED.
+- Green-type kernels on the line for the Near part alone: Near_{mk} = ½Σ v_n c_0(log n − log r) is the
+  convolution of the comb measure with c_0 of compact support; by the same analyticity argument it is not
+  semiseparable of bounded rank. PROVED (c_0 ≠ 0 of compact support is not an exponential-polynomial).
 
-Todo el Lema C es arquimediano o de formato: vale para cualquier peso con a(2) ≠ 0. NO-GO de formato, sin signo.
+All of Lemma C is archimedean or about format: it holds for any weight with a(2) ≠ 0. Format NO-GO, without sign.
 
-## Resultado
+## Result
 
-**Sin mecanismo nuevo.** Tres piezas de delimitación PROVED (Lemas A, B, C; la parte (d) de A usa el teorema de los
-números primos, CITED): el grafo de acoplamiento de 𝔸_M está descrito; la casi-divisibilidad no es un orden parcial
-y su patrón es, salvo razones acotadas, un semiorden de umbral independiente del peso; 𝖡 no pertenece a ninguna
-clase cerrada bajo eliminación de las examinadas. Sin candidata lista para construcción.
+**No new mechanism.** Three PROVED delimitation pieces (Lemmas A, B, C; part (d) of A uses the prime number
+theorem, CITED): the coupling graph of 𝔸_M is described; near-divisibility is not a partial order
+and its pattern is, except at bounded ratios, a threshold semiorder independent of the weight; 𝖡 belongs to no
+class closed under elimination among those examined. No candidate ready for construction.
 
-## Qué se probó
+## What was proved
 
-- Lema A: Div en k | m; Near en pares con algún n ≥ 2, a(n) ≠ 0, |log(kn/m)| < θ_0 (exige m/k > 2e^{−θ_0}); Arch en
-  todos los pares, negativa fuera de la banda |log(m/k)| ≤ θ_0. El patrón de Div + Near es el mismo para todo cΛ y
-  cambia para a_P sólo en razones acotadas.
-- Lema B: ⊲ no es transitiva (1 ⊲ 2 ⊲ 6, no 1 ⊲ 6, para θ_0 < log(7/6)); su clausura está en el semiorden de umbral y
-  lo llena en razones ≥ R_0. Pivotes determinados por el patrón: NO-GO de clase (ciegos a cΛ, a f_t con λ₁ > n_*).
-- Lema C: con 4T_0 < log 2, 𝖡 < 0 en (θ_0, log 2 − θ_0), 𝖡(0) > 0, 𝖡|_{(0,∞)} no es transformada de Laplace; excluye TP,
-  PF₂, Green/semiseparable de rango acotado, f(mcd).
+- Lemma A: Div on k | m; Near on pairs with some n ≥ 2, a(n) ≠ 0, |log(kn/m)| < θ_0 (requires m/k > 2e^{−θ_0}); Arch on
+  all pairs, negative outside the band |log(m/k)| ≤ θ_0. The pattern of Div + Near is the same for all cΛ and
+  changes for a_P only at bounded ratios.
+- Lemma B: ⊲ is not transitive (1 ⊲ 2 ⊲ 6, not 1 ⊲ 6, for θ_0 < log(7/6)); its closure is in the threshold semiorder and
+  fills it at ratios ≥ R_0. Pivots determined by the pattern: class NO-GO (blind to cΛ, to f_t with λ₁ > n_*).
+- Lemma C: with 4T_0 < log 2, 𝖡 < 0 on (θ_0, log 2 − θ_0), 𝖡(0) > 0, 𝖡|_{(0,∞)} is not a Laplace transform; excludes TP,
+  PF₂, Green/semiseparable of bounded rank, f(gcd).
 
-## Qué falló y por qué
+## What failed and why
 
-- El patrón m ≈ kn no es escaso (casi completo fuera de la banda) ni estructurado aritméticamente: la aritmética
-  vive en los valores de Near, no en su soporte. Un factor con soporte en el patrón y pivotes leídos de los valores
-  es la LDL circular (J3).
-- 𝖡 cambia de signo y no es analítica en (0, ∞): ninguna de las clases clásicas de cierre bajo eliminación aplica.
-  Las razones son arquimedianas (γ_j > 0) y de soporte compacto de c_0; genéricas en el peine.
-- La deconvolución en el «semigrupo de intervalos» devuelve el peine Σ v_n δ_{log n}, no pivotes.
+- The pattern m ≈ kn is neither sparse (almost complete outside the band) nor arithmetically structured: the arithmetic
+  lives in the values of Near, not in its support. A factor supported on the pattern with pivots read from the values
+  is the circular LDL (J3).
+- 𝖡 changes sign and is not analytic on (0, ∞): none of the classical classes of closure under elimination applies.
+  The reasons are archimedean (γ_j > 0) and the compact support of c_0; generic in the comb.
+- Deconvolution in the "semigroup of intervals" returns the comb Σ v_n δ_{log n}, not pivots.
 
-## Qué queda NO excluido
+## What remains NOT excluded
 
-- W con soporte en el grafo y valores dados por una fórmula propia no derivada de 𝔸_M (ninguna escrita).
-- Cierre bajo eliminación de la **familia** {𝔸_M} que use los valores exactos de Λ (por ejemplo, que el complemento
-  de Schur al eliminar el sitio M sea 𝔸_{M−1} para otro peso explícito a′, o para otro perfil F_0′); no examinado.
-- Clases cerradas bajo eliminación distintas de las del Lema C (por ejemplo, matrices de desplazamiento de rango
-  bajo con generador aritmético); no examinadas.
-- Las demás reducciones PROVED ((L2), escalera, perfil continuo).
+- W with support on the graph and values given by its own formula not derived from 𝔸_M (none written).
+- Closure under elimination of the **family** {𝔸_M} using the exact values of Λ (for example, that the Schur
+  complement on eliminating the site M be 𝔸_{M−1} for another explicit weight a′, or for another profile F_0′); not examined.
+- Classes closed under elimination other than those of Lemma C (for example, low displacement rank matrices
+  with an arithmetic generator); not examined.
+- The other PROVED reductions ((L2), ladder, continuous profile).
 
-## Siguiente paso concreto
+## Concrete next step
 
-1. Anotar en el índice (06 §R9), en el grid y en el ledger: «𝔸_M con factor soportado en m ≈ kn: patrón = semiorden
-   de umbral salvo razones acotadas, ciego a cΛ (ROUND_004_D Lemas A–B); 𝖡 fuera de TP/PF₂/Green/f(mcd) (Lema C);
-   NO-GO de formato, sin signo».
-2. La única pregunta concreta que queda de esta zona: ¿existe un peso explícito a′ (función de Λ) tal que el
-   complemento de Schur de 𝔸_M^{Λ} respecto de un sitio sea, exactamente, una matriz 𝔸^{a′} de la misma familia?
-   Antes de derivar, cotejarla con R3-b/J2 (si a′ es afín en Λ con coeficientes independientes del peso, cae allí)
-   y con la fase 70 (Riccati/Darboux, J8), que es el antecedente natural de «el complemento es la misma familia con
-   peso transformado».
+1. Record in the index (06 §R9), in the grid and in the ledger: "𝔸_M with factor supported on m ≈ kn: pattern = threshold
+   semiorder except at bounded ratios, blind to cΛ (ROUND_004_D Lemmas A–B); 𝖡 outside TP/PF₂/Green/f(gcd) (Lemma C);
+   format NO-GO, without sign".
+2. The only concrete question remaining from this zone: is there an explicit weight a′ (function of Λ) such that the
+   Schur complement of 𝔸_M^{Λ} with respect to a site is, exactly, a matrix 𝔸^{a′} of the same family?
+   Before deriving, cross-check it against R3-b/J2 (if a′ is affine in Λ with weight-independent coefficients, it falls there)
+   and against phase 70 (Riccati/Darboux, J8), which is the natural antecedent of "the complement is the same family with
+   transformed weight".

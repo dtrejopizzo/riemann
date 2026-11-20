@@ -1,31 +1,31 @@
-# Ventana de búsqueda en número de primos alrededor de una amplitud calculable
+# Search window in number of primes around a computable amplitude
 
-**Estado: PROVED, con revisión independiente de las constantes, la normalización y el primer acierto.**
+**Status: PROVED, with independent review of the constants, the normalization and the first hit.**
 
-Sean α,K de 368 en el corte z=L², b=log z y T₀=exp(K(α))/(|ζ(1/2)|√(2πK''(α))). Este número positivo usa ζ en un punto real y el producto hasta z, sin conocer S. Enumerar en orden creciente los primos terminales de la franja κ₀−1≤b(Y/z−4)≤κ₀+1 de 398; recorrer cada primo con el peso λ de 0 a 1 y usar como coordenada r el número de pasos de peso acumulados (cada primo tiene longitud uno). Definir
+Let α,K be those of 368 at the cut z=L², b=log z and T₀=exp(K(α))/(|ζ(1/2)|√(2πK''(α))). This positive number uses ζ at a real point and the product up to z, without knowing S. Enumerate in increasing order the terminal primes of the strip κ₀−1≤b(Y/z−4)≤κ₀+1 of 398; traverse each prime with the weight λ from 0 to 1 and use as coordinate r the number of accumulated weight steps (each prime has length one). Define
 
     A₀(r)=2 exp(Re G(s_*))/√(2π Lb).
 
-Hay un único r₀ con A₀(r₀)=T₀. Bajo RH, si r_* es la coordenada del primer peso que reproduce S, entonces para cada ε>0 fijo, eventualmente,
+There is a unique r₀ with A₀(r₀)=T₀. Under RH, if r_* is the coordinate of the first weight reproducing S, then for each fixed ε>0, eventually,
 
     r₀−ε L ≤ r_* ≤ r₀+[8/(2−log 4)+ε] Lb.
 
-Esto acota una parte de la adaptación en número de primos; no se convierte la anchura en longitud usando un promedio de huecos primos.
+This bounds part of the adaptation in number of primes; the width is not converted into length using an average of prime gaps.
 
-**Calibración sin consultar S.** Las comparaciones de 394–395 con T₀ son incondicionales: RH sólo se usó para sustituir T₀ por |S|. La corrección al logaritmo de la amplitud firmada cuesta O(L/b³) por 398. En cada extremo de la franja, log(A₀/T₀) tiene signo opuesto y módulo ≍L/b² (tomar el primo interior más cercano no altera el resultado, por el PNT con resto como en 398, o empezar con el conjunto de primos ya presente en el extremo real). En la franja la derivada exacta de G(s_*) con respecto a λ es −p^(−s_*)/(1−λp^(−s_*)); su parte real satisface
+**Calibration without consulting S.** The comparisons of 394–395 with T₀ are unconditional: RH was only used to replace T₀ by |S|. The correction to the logarithm of the signed amplitude costs O(L/b³) by 398. At each end of the strip, log(A₀/T₀) has opposite sign and absolute value ≍L/b² (taking the nearest interior prime does not alter the result, by the PNT with remainder as in 398, or start with the set of primes already present at the real endpoint). In the strip the exact derivative of G(s_*) with respect to λ is −p^(−s_*)/(1−λp^(−s_*)); its real part satisfies
 
     ∂_r log A₀=(1+o(1))/(4L),
 
-porque Re s_*=1/2+(log 2+o(1))/b y p/z→4. Su parte imaginaria, por 398, es
+because Re s_*=1/2+(log 2+o(1))/b and p/z→4. Its imaginary part, by 398, is
 
     ∂_r Im G(s_*)=−[π(2−log 4)+o(1)]/(4Lb).
 
-Ambas estimaciones son uniformes y empalman al pasar al siguiente primo. La primera asegura unicidad de r₀ y deja ≫L²/b² pasos entre r₀ y cada extremo. El prefactor de 398 difiere de A₀ por 1+o(1): G''(s_*)/(Lb)→1 por la ecuación de la silla positiva, log p=b+O(1) y 398.
+Both estimates are uniform and join when passing to the next prime. The first ensures uniqueness of r₀ and leaves ≫L²/b² steps between r₀ and each end. The prefactor of 398 differs from A₀ by 1+o(1): G''(s_*)/(Lb)→1 by the positive saddle equation, log p=b+O(1) and 398.
 
-**Alcance del primer acierto.** Bajo RH, |S|/T₀→1. Para todo r≤r₀−εL en la franja, la envolvente continua A₀(r)≤T₀ exp(−ε/4+o(1)) no alcanza |S| ni con el error uniforme de 398. Antes de la franja la exclusión es la de 394, válida para todos los pesos. Para la otra dirección empezar en r₀+L√b: la envolvente ya supera T₀ por un factor que tiende a infinito. Una vuelta completa de fase necesita (8/(2−log 4)+o(1))Lb pasos. En el recorrido se alcanzan fases de ambos signos del coseno con módulo uno, por continuidad, contando si hace falta un o(Lb) adicional. Allí los saldos finitos encierran S; por interpolación se lo alcanza en el intervalo anunciado. Los redondeos de un primo son O(1).
+**Scope of the first hit.** Under RH, |S|/T₀→1. For every r≤r₀−εL in the strip, the continuous envelope A₀(r)≤T₀ exp(−ε/4+o(1)) does not reach |S| even with the uniform error of 398. Before the strip the exclusion is that of 394, valid for all weights. For the other direction start at r₀+L√b: the envelope already exceeds T₀ by a factor tending to infinity. A complete turn of phase needs (8/(2−log 4)+o(1))Lb steps. Along the way phases of both signs of the cosine with modulus one are attained, by continuity, counting an additional o(Lb) if needed. There the finite balances enclose S; by interpolation it is attained in the announced interval. The roundings of one prime are O(1).
 
-**Registro de revisión.** En el factor terminal p^(−s_*)=−a exp(−iδ), con a=(1+o(1))/(4L) y δ=[π(2−log4)+o(1)]/b. La parte real de a exp(−iδ)/(1+λa exp(−iδ)) es a(1+o(1)); su parte imaginaria es−a sinδ/(|1+λa exp(−iδ)|²). Así se obtienen las dos tasas con factor1/4 y, para una vuelta de2π, exactamente8Lb/(2−log4). Los empalmes son continuos y las tasas uniformes, incluidos los pesos0 y1. La ecuación positiva y log p/b→1 dan G''(s_*)/(Lb)→1; por eso A₀ y la amplitud compleja de398 difieren sólo en1+o(1), sin perder un factor2 ni una raíz de2π.
+**Review record.** In the terminal factor p^(−s_*)=−a exp(−iδ), with a=(1+o(1))/(4L) and δ=[π(2−log4)+o(1)]/b. The real part of a exp(−iδ)/(1+λa exp(−iδ)) is a(1+o(1)); its imaginary part is−a sinδ/(|1+λa exp(−iδ)|²). Thus one obtains the two rates with factor1/4 and, for a turn of2π, exactly8Lb/(2−log4). The junctions are continuous and the rates uniform, including the weights0 and1. The positive equation and log p/b→1 give G''(s_*)/(Lb)→1; hence A₀ and the complex amplitude of398 differ only by1+o(1), without losing a factor2 or a root of2π.
 
-Los márgenes r₀−r_inicial y r_final−r₀ son≳L²/b², que dominan tantoLsqrt b comoLb. Por tanto la vuelta de fase usada para el techo cabe en la franja. Antes de r₀−εL se utiliza la monotonía deA₀ para reducir la estimación a un intervalo de longitudεL; no se acumula un error relativo no uniforme sobre toda la lista. La exclusión de394 antes de la franja vale para cualquier peso, y bajoRH |S|/T₀→1. Esto localiza al primer acierto global y no sólo a alguno de los aciertos del bloque. Las afirmaciones sobre r₀, sus márgenes y las tasas son incondicionales; tanto excluir valores anteriores por comparación conT₀ como afirmar que los extremos encierranS en esta ventana usanRH.
+The margins r₀−r_initial and r_final−r₀ are≳L²/b², which dominate bothLsqrt b andLb. Hence the phase turn used for the ceiling fits in the strip. Before r₀−εL the monotonicity ofA₀ is used to reduce the estimate to an interval of lengthεL; no non-uniform relative error is accumulated over the whole list. The exclusion of394 before the strip holds for any weight, and underRH |S|/T₀→1. This localizes the global first hit and not only one of the hits of the block. The claims about r₀, its margins and the rates are unconditional; both excluding earlier values by comparison withT₀ and asserting that the extremes encloseS in this window useRH.
 
-La construcción de r₀ y la amplificación de ambos signos son incondicionales. La localización de r_* usa RH. El problema pendiente es comparar el saldo completo con el rango de valores de estos productos sin usar el equivalente para S de 368.
+The construction of r₀ and the amplification of both signs are unconditional. The localization of r_* uses RH. The pending problem is to compare the complete balance with the range of values of these products without using the equivalent for S of 368.

@@ -1,25 +1,25 @@
-# Un promedio positivo de Liouville con varianza uniformemente acotada
+# A positive Liouville average with uniformly bounded variance
 
-Sea U(u)=e^(−u/2)L(e^u), extendida por cero a u<0, y c=1.25·10^(−25). En cada T=log x tomar la densidad par de masa uno
+Let U(u)=e^(−u/2)L(e^u), extended by zero to u<0, and c=1.25·10^(−25). At each T=log x take the even density of mass one
 
     w_T(y)=Z_T^(−1) sinc(3y)^4 exp(−y²/(2cT)),     sinc(t)=sin(t)/t.
 
-Su varianza es ≤1/12 para todo T y tiende a 1/12 al crecer T. Sin suponer RH,
+Its variance is ≤1/12 for all T and tends to 1/12 as T grows. Without assuming RH,
 
     ∫ w_T(y) U(T+y) dy = 1/ζ(1/2) + O(exp(−10^(−25) T)).
 
-En particular el promedio completo es negativo para toda escala suficientemente grande. Se puede cortar a |y|≤3√c T y renormalizar sin alterar el resultado. Se obtiene así una suma finita con pesos positivos sobre los términos de Liouville. No se da un comienzo numérico del régimen asintótico.
+In particular the full average is negative for every sufficiently large scale. One can truncate to |y|≤3√c T and renormalize without changing the result. This gives a finite sum with positive weights over the Liouville terms. No numerical starting point of the asymptotic regime is given.
 
-**Masa y dispersión.** Z_T tiende por convergencia dominada a ∫sinc(3y)^4dy>0. En la variable t, ∫sinc(t)^4dt=2π/3 por Parseval de la función triangular, mientras que ∫t²sinc(t)^4dt=π/2, usando sin⁴t=[4(1−cos2t)−(1−cos4t)]/8 y ∫(1−cos(kt))/t² dt=π|k|. Escalar por 3 da varianza 1/12. Multiplicar por una función decreciente de y² y renormalizar sólo puede reducir su media (comparar dos copias independientes); el corte simétrico tiene la misma propiedad. Por tanto ya antes del límite hay al menos 11/12 de la masa en |y|≤1.
+**Mass and dispersion.** Z_T tends by dominated convergence to ∫sinc(3y)^4dy>0. In the variable t, ∫sinc(t)^4dt=2π/3 by Parseval for the triangle function, while ∫t²sinc(t)^4dt=π/2, using sin⁴t=[4(1−cos2t)−(1−cos4t)]/8 and ∫(1−cos(kt))/t² dt=π|k|. Scaling by 3 gives variance 1/12. Multiplying by a decreasing function of y² and renormalizing can only reduce its mean (compare two independent copies); the symmetric truncation has the same property. Hence already before the limit at least 11/12 of the mass lies in |y|≤1.
 
-**Control espectral del promedio.** Denotar M_T(s)=∫w_T(y)e^(sy)dy. La Fourier de sinc(3y)^4, en frecuencia angular, es integrable y se anula fuera de [−12,12] por convolución de cuatro indicadores. Al integrar la gaussiana en la representación inversa, para T grande se obtiene
+**Spectral control of the average.** Write M_T(s)=∫w_T(y)e^(sy)dy. The Fourier transform of sinc(3y)^4, in angular frequency, is integrable and vanishes outside [−12,12] by convolution of four indicators. Integrating the Gaussian in the inverse representation, for large T one gets
 
     |M_T(σ+iτ)| ≪ √T exp((cT/2)(σ²−max(|τ|−12,0)²)).
 
-Las derivadas de cualquier orden fijo obedecen la misma cota salvo un factor polinómico en T para s en un compacto fijo, por derivación de la exponencial gaussiana. M_T(0)=1 exactamente.
+Derivatives of any fixed order obey the same bound up to a polynomial factor in T for s in a fixed compact set, by differentiating the Gaussian exponential. M_T(0)=1 exactly.
 
-Como en 145 invertir la transformada R(s)=ζ(1+2s)/[(1/2+s)ζ(1/2+s)] contra exp(Ts) M_T(s) en la recta σ=.54, por Fourier y Fubini. Cortar a una altura G libre de polos entre 2.99·10¹² y 3·10¹² y desplazar hasta −1/4. En las colas derechas y en los lados horizontales el desplazamiento de 12 en la frecuencia conserva un exponente menor que −.01 antes de factores polinómicos. El borde izquierdo cuesta O(exp(−.24T)). Todo cero incluido está en la recta crítica por Z2 del paper 47 y tiene |γ|>14 por Z1. Su contribución es a lo sumo un polinomio fijo en T por exp(−cT(|γ|−12)²/2). La tasa negativa tiene magnitud mayor que 2.5·10^(−25), así que la suma finita cabe en el error enunciado, con multiplicidades permitidas. El polo real aporta exactamente 1/ζ(1/2).
+As in 145, invert the transform R(s)=ζ(1+2s)/[(1/2+s)ζ(1/2+s)] against exp(Ts) M_T(s) on the line σ=.54, by Fourier and Fubini. Truncate at a pole-free height G between 2.99·10¹² and 3·10¹² and shift to −1/4. On the right tails and on the horizontal sides the frequency shift by 12 keeps an exponent smaller than −.01 before polynomial factors. The left edge costs O(exp(−.24T)). Every included zero is on the critical line by Z2 of paper 47 and has |γ|>14 by Z1. Its contribution is at most a fixed polynomial in T times exp(−cT(|γ|−12)²/2). The negative rate has magnitude larger than 2.5·10^(−25), so the finite sum fits in the stated error, with multiplicities allowed. The real pole contributes exactly 1/ζ(1/2).
 
-Para el corte físico usar |U(T+y)|≤exp((T+y)/2) y sinc⁴≤1. El coste fuera de |y|≤3√c T es ≪√T exp((1/2+c/8)T) veces una cola normal cuyo argumento es al menos (3−√c/2)√T. Resulta O(exp(−3T)) para esta c y T grande. La masa retirada al normalizar es igualmente exponencialmente pequeña.
+For the physical truncation use |U(T+y)|≤exp((T+y)/2) and sinc⁴≤1. The cost outside |y|≤3√c T is ≪√T exp((1/2+c/8)T) times a normal tail whose argument is at least (3−√c/2)√T. It is O(exp(−3T)) for this c and large T. The mass removed on normalizing is likewise exponentially small.
 
-**Alcance.** 131 emplea sinc⁴ para eliminar errores de suelos con un peso impar y una escala aritmética aditiva. Aquí se aplica una densidad par de baja frecuencia a la variable logarítmica del promedio completo de Liouville. La gaussiana controla la transformada en la franja compleja y hace finita la media frente al crecimiento elemental de U. La varianza acotada se refiere a la distribución de escalas, no a un soporte logarítmico fijo; se conserva una cola hasta distancias proporcionales a T en la versión finita. Este peso suprime la señal no verificada en la demostración, por lo que su negatividad no implica la negatividad para el peso puramente gaussiano de 144.
+**Scope.** 131 uses sinc⁴ to remove floor errors with an odd weight and an additive arithmetic scale. Here an even low-frequency density is applied to the logarithmic variable of the full Liouville average. The Gaussian controls the transform in the complex strip and makes the mean finite against the elementary growth of U. The bounded variance refers to the distribution of scales, not to a fixed logarithmic support; a tail out to distances proportional to T is kept in the finite version. This weight suppresses the signal not verified in the proof, so its negativity does not imply negativity for the purely Gaussian weight of 144.

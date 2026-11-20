@@ -1,17 +1,17 @@
-# Ajuste calibrado incondicional en todos los módulos por encima del corte de raíz
+# Unconditional calibrated fit on all moduli above the square-root cutoff
 
-Para N=⌊2x⌋, 2≤U≤N entero, existe una combinación de filas binomiales genuinas, de extremos ≤N, que reproduce g(m/x) para CADA entero m>U hasta N y tiene masa entrópica exactamente xh. Su variación es O((x/U)log²(2N)). En particular, elegir U=⌊√N⌋ cumple simultáneamente todas las ecuaciones de los primos grandes de 271 y la calibración inicial con coste x^(1/2+o(1)).
+For N=⌊2x⌋, integer 2≤U≤N, there exists a combination of genuine binomial rows, with endpoints ≤N, that reproduces g(m/x) for EVERY integer m>U up to N and has entropic mass exactly xh. Its variation is O((x/U)log²(2N)). In particular, choosing U=⌊√N⌋ simultaneously satisfies all the equations of the large primes of 271 and the initial calibration at cost x^(1/2+o(1)).
 
-**Construcción superior.** En la inversión de 261 retener sólo b_j=S_j−S_(j+1) para j>U, con S_j=Σ_d μ(d)g(dj/x). Los coeficientes descartados multiplican F_j(m)=⌊j/m⌋ idénticamente cero para m>U. En cada d contribuyente (d≤N/U), la variación del muestreo de g(dj/x) es a lo sumo Var(g) y sus términos con diferencia no nula tienen j≤N/d. Por suma absoluta se obtienen
+**Upper construction.** In the inversion of 261 keep only b_j=S_j−S_(j+1) for j>U, with S_j=Σ_d μ(d)g(dj/x). The discarded coefficients multiply F_j(m)=⌊j/m⌋, identically zero for m>U. For each contributing d (d≤N/U), the variation of the sampling of g(dj/x) is at most Var(g) and its terms with nonzero difference have j≤N/d. By absolute summation one obtains
 
     Σ_(j>U)|b_j| ≪ x/U,      Σ_(j>U) j|b_j| ≪ x log(2N).
 
-Agregar F_U con coeficiente β=−Σ_(j>U)j b_j/U. La familia de símbolos queda balanceada, de modo que el promedio cíclico formal de 261 la convierte en filas genuinas con coste ≤2(Σ|b_j|+|β|). Esta conversión conserva el valor de cualquier evaluación lineal de los símbolos.
+Add F_U with coefficient β=−Σ_(j>U)j b_j/U. The family of symbols becomes balanced, so that the formal cyclic averaging of 261 converts it into genuine rows at cost ≤2(Σ|b_j|+|β|). This conversion preserves the value of any linear evaluation of the symbols.
 
-**Ajuste de la masa sin tocar la interpolación.** Evaluando F_j en j log j, la masa H₀ de la combinación balanceada es Σ_(j>U)j b_j log(j/U). Por la segunda cota su módulo es O(x log²(2N)). Tomar la fila de extremo U y lado ⌊U/2⌋. Su entropía e es ≫U por la fórmula de entropía binaria y porque ⌊U/2⌋/U∈[1/3,1/2]. Todos sus acarreos son cero en m>U. Añadir la fila con coeficiente (xh−H₀)/e da la calibración requerida dentro del coste anunciado.
+**Mass adjustment without touching the interpolation.** Evaluating F_j at j log j, the mass H₀ of the balanced combination is Σ_(j>U)j b_j log(j/U). By the second bound its modulus is O(x log²(2N)). Take the row with endpoint U and side ⌊U/2⌋. Its entropy e is ≫U by the binary entropy formula and because ⌊U/2⌋/U∈[1/3,1/2]. All its carries are zero for m>U. Adding the row with coefficient (xh−H₀)/e gives the required calibration within the announced cost.
 
-**Residuo localizado.** Escribiendo λ=(xh−H₀)/e, en m≤U el error exacto (objetivo menos respuesta) es
+**Localized residue.** Writing λ=(xh−H₀)/e, for m≤U the exact error (target minus response) is
 
     r(m)=Σ_(j≤U)b_j⌊j/m⌋ − β⌊U/m⌋ − λ c_(U,⌊U/2⌋)(m).
 
-Aquí los b_j de la suma son los originales de 261. Por encima de U el error se anula incluso en las potencias propias de los primos pequeños. Para U=⌊√N⌋, la variación de 271 queda concentrada en las cadenas hasta U, con cero en su siguiente nivel. Falta probar que esa variación sea de tamaño de raíz, para esta elección o para otra distribución de los coeficientes inferiores que conserve el balance y la masa. La magnitud del coste inicial por sí sola sólo da una cota puntual de tamaño comparable al coste en cada átomo inferior; sumar tales cotas no cierra la prueba. El ajuste calibrado de los módulos grandes sí queda construido incondicionalmente.
+Here the b_j in the sum are the original ones of 261. Above U the error vanishes even on the proper powers of the small primes. For U=⌊√N⌋, the variation of 271 is concentrated on the chains up to U, with zero at their next level. It remains to prove that this variation is of square-root size, for this choice or for another distribution of the lower coefficients that preserves balance and mass. The magnitude of the initial cost by itself only gives a pointwise bound comparable to the cost at each lower atom; summing such bounds does not close the proof. The calibrated fit on the large moduli is, however, constructed unconditionally.

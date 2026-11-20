@@ -1,47 +1,47 @@
 # POWER JOINT AUDIT 027
 
-Estado: DISCRETE_BALANCE027 e INTERIOR_CONSTRAINT027 APROBADOS. Papers intactos.
+Status: DISCRETE_BALANCE027 and INTERIOR_CONSTRAINT027 APPROVED. Papers untouched.
 
-## 1. Kernel conjunto y desigualdad uniforme
+## 1. Joint kernel and uniform inequality
 
-Revisados `POWER_DISCRETE_BALANCE_027.md` y `tools/power_discrete_balance_027_verify.py`; ejecución independiente PASS. Root reprodujo también el verificador y revisó la prueba.
+Reviewed `POWER_DISCRETE_BALANCE_027.md` and `tools/power_discrete_balance_027_verify.py`; independent run PASS. The verifier was also reproduced separately and the proof reviewed.
 
-SAMPLE y SCALES son identidades exactas por inversión absoluta, sin nueva desigualdad de signo por sí solas. La fórmula FLOOR de Omega coincide con026: la parte celular es H_n−(2L_n+T(n))/t² y cada copia de la parte sharp añade j[c+log((t+j)/(t−j))]/t². Se mantienen los picos logarítmicos; no se presupone convergencia uniforme hacia ell.
+SAMPLE and SCALES are exact identities by absolute inversion, with no new sign inequality by themselves. The FLOOR formula for Omega agrees with026: the cell part is H_n−(2L_n+T(n))/t² and each copy of the sharp part adds j[c+log((t+j)/(t−j))]/t². The logarithmic peaks are kept; uniform convergence to ell is not presupposed.
 
-Las comparaciones suma/integral son correctas: H_n≥log t+γ−2/t; la función ylog((t+y)/(t−y)) es creciente; el tramo faltante de longitudδ≤1/t cuesta a lo sumoδ[log(2/δ)+1]. La cota superior de2L_n se obtiene integrando hasta n+1≤t+1 y usando log(t+1)≤log t+1/t. El signo negativo de c−1 invierte correctamente la comparación de T(n)/t². Las constantes dan Omega≥ell−(4log t+9)/t; ell>1/50 y el extremo4096 certifican Omega>.009 para toda la cola, salvo puntos singulares aislados.
+The sum/integral comparisons are correct: H_n≥log t+γ−2/t; the function ylog((t+y)/(t−y)) is increasing; the missing segment of lengthδ≤1/t costs at mostδ[log(2/δ)+1]. The upper bound of2L_n is obtained by integrating up to n+1≤t+1 and using log(t+1)≤log t+1/t. The negative sign of c−1 correctly reverses the comparison of T(n)/t². The constants give Omega≥ell−(4log t+9)/t; ell>1/50 and the endpoint4096 certify Omega>.009 for the whole tail, except at isolated singular points.
 
-## 2. Cola conjunta del kernel gamma real
+## 2. Joint tail of the real gamma kernel
 
-El corte026 da G/4≤K≤7G/4 y G′/G≤−2/x; aquí sí se usa la restricción gamma concreta, no sólo dos masas. Para T admisible, ambos factores son positivos y la cota inferior conjunta (.009/4)∫G es válida.
+The cut of026 gives G/4≤K≤7G/4 and G′/G≤−2/x; here the concrete gamma constraint is indeed used, not only two masses. For admissible T, both factors are positive and the joint lower bound (.009/4)∫G is valid.
 
-Para el mayorante, Omega≤log t+1+t^−2Σjlog((t+j)/(t−j)). Integrar G(T)(T/t)² da T(log T+2). En la parte logarítmica se intercambian términos positivos y se amplía cada integral hasta j. El cambio t=jz produce j^−2 y la integral z^−4log((z+1)/(z−1)), menor que2log2. Σj^−2<2 da la constante3. Se integran correctamente las singularidades; no se muestrea su máximo.
+For the majorant, Omega≤log t+1+t^−2Σjlog((t+j)/(t−j)). Integrating G(T)(T/t)² gives T(log T+2). In the logarithmic part positive terms are interchanged and each integral is enlarged up to j. The change t=jz produces j^−2 and the integral z^−4log((z+1)/(z−1)), less than2log2. Σj^−2<2 gives the constant3. The singularities are integrated correctly; their maximum is not sampled.
 
-La evaluación racional del único N129,T4096 prueba0<R<10^−36 para la cola conjunta REAL. El uso del corte exp(2/3) de025 es válido: se deduce directamente de su bound logarítmico, aunque su resumen utilizara el corte más débil2. La pequeña cota superior del certificado inferior no se confunde con un mayorante de R.
+The rational evaluation of the single N129,T4096 proves0<R<10^−36 for the REAL joint tail. Use of the cut exp(2/3) of025 is valid: it follows directly from its logarithmic bound, even though its summary used the weaker cut2. The small upper bound of the lower certificate is not confused with a majorant of R.
 
-## 3. Corpus y alcance
+## 3. Corpus and scope
 
-Las identidades divisor/muestreo son antecedentes y no bastan para el signo. El esquema de bumps citado como limitación genérica no conserva la forma gamma real y no se registra como falsificador de W. El avance específico es una desigualdad unilateral completa de la contribución conjunta exterior, con magnitud certificada en un átomo. No controla su interior.
+The divisor/sampling identities are antecedents and do not suffice for the sign. The bump scheme cited as a generic limitation does not preserve the real gamma form and is not recorded as a falsifier of W. The specific progress is a complete one-sided inequality for the exterior joint contribution, with magnitude certified at one atom. It does not control its interior.
 
-El déficit.15 de026 pertenece al comparador que garantiza sólo.66 de beneficio aritmético, no al valor interior real. El resultado W/C0=∫_1^4096K Omega+R,0<R<10^−36 deja el primer término sin signo. No hay nueva cobertura W ni ventana T.
-
-
-## 4. Restricción interior gamma real — APROBADA
-
-Revisados `POWER_INTERIOR_CONSTRAINT_027.md` y `tools/power_interior_constraint_027_verify.py`; ejecución independiente PASS. La mezcla de calor normalizada tiene V=β/G, G gamma de parámetro N−1/2 y β=u²/4; su media es u²/[4(N−3/2)]. La gaussiana phi_v indicada tiene norma uno y autocorrelación exp(−vt²). Las contribuciones de Levy, polar y peine tienen integrandos no negativos antes de aplicar sus signos. Tonelli identifica sus esperanzas con las del rho real, finitas por su decaimiento exponencial; WG no elimina la forma completa.
-
-El peso bisagra L≥0 y sus dos fórmulas son correctos. La representación de Jensen delta=t⁴∫exp(−at²)L(a)da conserva el primer momento. Su masa Var(V)/2 sólo se usa para N≥3; N2 tiene masa infinita sin invalidar GAP para t≠0. La fórmula de la varianza coincide con la ley inversa gamma.
-
-A_sharp es estrictamente cóncava y su mezcla queda estrictamente POR DEBAJO del valor en la media. Esta comparación superior no se convierte en un lower bound favorable. Para la forma completa, la segunda derivada R contiene polar positivo y ARCH/peine negativos. El intercambio de GAP con cada pieza es absoluto: sus integrales son los respectivos gaps finitos de Jensen de las piezas originales. Así JOINT-GAP es exacta sin signo inventado para R.
-
-La curvatura negativa en v≥65536 está probada. El Levy original K(t)=e^(t/2)/sinh t satisface K≥1/[2sinh(t/2)]≥1/(2t) para0<t≤1. Su contribución de curvatura es menor que−1/(8v²) para v≥2. El polar es menor que24v^−5/2; los primos añaden curvatura no positiva. Con sqrt v≥256 el total es estrictamente negativo. El script certifica las constantes; la prueba analítica proporciona todo el rango.
-
-Se refuta convexidad global del funcional gaussiano completo, no el signo de su promedio contra la ley real L_N ni el de W. La mezcla gamma era conocida; lo distinto aquí es el peso positivo explícito del resto y la comprobación de dirección de las comparaciones posibles. No se infiere positividad de matrices completas desde las diagonales g_N.
-
-## 5. Cierre
-
-La ronda usa restricciones gamma reales y conserva W completa en JOINT-TAIL y JOINT-GAP. Ninguna de las dos desigualdades controla todavía el emparejamiento interior. Las masas aisladas no aportan esa condición, el comparador negativo no es W negativo, y la curvatura negativa no es una refutación de toda comparación conjunta. No hay nueva ventana T ni cobertura de tabla certificada.
+The deficit.15 of026 belongs to the comparator that guarantees only.66 of arithmetic benefit, not to the real interior value. The result W/C0=∫_1^4096K Omega+R,0<R<10^−36 leaves the first term without sign. There is no new W coverage nor window T.
 
 
-## Ampliación§8: mezcla e inversos gaussianos
+## 4. Real gamma interior constraint — APPROVED
 
-Revisiones matemática y literal APROBADAS. Se verifica H_a=x^(-3/2)e^(-a log²x)(.5+2a logx)>0 para x>=1. La derivación bajo MIX en128/129 admite dominación por1+V_N. Las sumas positivas ABS-H/ABS-J son finitas por los polinomios gamma y la potencia m^-32. Fubini da exactamente h_N=E h_a y K_N=E K_a en x1, con inversos COMPLETOS. NEG128 yNEG129 previos fuerzan existencias a_h,a_K, posiblemente distintas. No se emplea convexidad de W, una mezcla arbitraria ni un nuevo valor numérico. El alcance no afecta NStieltjes niheatH_A-P.
+Reviewed `POWER_INTERIOR_CONSTRAINT_027.md` and `tools/power_interior_constraint_027_verify.py`; independent run PASS. The normalized heat mixture has V=β/G, G gamma with parameter N−1/2 and β=u²/4; its mean is u²/[4(N−3/2)]. The indicated Gaussian phi_v has norm one and autocorrelation exp(−vt²). The Levy, polar and comb contributions have nonnegative integrands before applying their signs. Tonelli identifies their expectations with those of the real rho, finite by its exponential decay; WG does not eliminate the complete form.
+
+The hinge weight L≥0 and its two formulas are correct. The Jensen representation delta=t⁴∫exp(−at²)L(a)da preserves the first moment. Its mass Var(V)/2 is used only for N≥3; N2 has infinite mass without invalidating GAP for t≠0. The variance formula agrees with the inverse gamma law.
+
+A_sharp is strictly concave and its mixture lies strictly BELOW the value at the mean. This upper comparison is not turned into a favorable lower bound. For the complete form, the second derivative R contains a positive polar part and negative ARCH/comb parts. The interchange of GAP with each piece is absolute: their integrals are the respective finite Jensen gaps of the original pieces. Thus JOINT-GAP is exact with no invented sign for R.
+
+The negative curvature for v≥65536 is proved. The original Levy K(t)=e^(t/2)/sinh t satisfies K≥1/[2sinh(t/2)]≥1/(2t) for0<t≤1. Its curvature contribution is less than−1/(8v²) for v≥2. The polar part is less than24v^−5/2; the primes add nonpositive curvature. With sqrt v≥256 the total is strictly negative. The script certifies the constants; the analytic proof provides the whole range.
+
+Global convexity of the complete Gaussian functional is refuted, not the sign of its average against the real law L_N nor that of W. The gamma mixture was known; what is different here is the explicit positive weight of the remainder and the check of the direction of the possible comparisons. Positivity of complete matrices is not inferred from the diagonals g_N.
+
+## 5. Closure
+
+The round uses real gamma constraints and keeps W complete in JOINT-TAIL and JOINT-GAP. Neither of the two inequalities yet controls the interior pairing. The isolated masses do not supply that condition, the negative comparator is not a negative W, and the negative curvature is not a refutation of every joint comparison. There is no new window T nor certified table coverage.
+
+
+## Extension§8: mixture and Gaussian inverses
+
+Mathematical and literal reviews APPROVED. It is verified that H_a=x^(-3/2)e^(-a log²x)(.5+2a logx)>0 for x>=1. Differentiation under MIX in128/129 admits domination by1+V_N. The positive sums ABS-H/ABS-J are finite by the gamma polynomials and the power m^-32. Fubini gives exactly h_N=E h_a and K_N=E K_a at x1, with COMPLETE inverses. The previous NEG128 andNEG129 force existences a_h,a_K, possibly different. Neither convexity of W, an arbitrary mixture nor a new numerical value is used. The scope does not affect NStieltjes norheatH_A-P.

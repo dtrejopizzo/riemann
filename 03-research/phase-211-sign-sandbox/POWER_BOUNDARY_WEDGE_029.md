@@ -1,118 +1,118 @@
-# POWER_BOUNDARY_WEDGE_029 — Región uniforme u>=64sqrt(N), incluido k=0
+# POWER_BOUNDARY_WEDGE_029 — Uniform region u>=64sqrt(N), including k=0
 
-Estado: PROVED región infinita en N,k,u; revisión independiente APROBADA y verificador reproducido con PASS. Papers intactos.
+Status: PROVED infinite region in N,k,u; independent review APPROVED and verifier reproduced with PASS. Papers untouched.
 
-## 1. Corpus, diferencia y teorema
+## 1. Corpus, difference and theorem
 
-Leídos las reglas del proyecto, INTERIOR017/WRN, JOINT_SCALE016 y sus obstrucciones de pesos, ROW_SPLIT028 y las filas previas; búsquedas dirigidas en índice/grid/crucigrama (pesos bilaterales/escala conjunta/u variable). No se reintenta uniformizar una sola norma temporal a u fijo, que016 refutó.
+Read the project rules, INTERIOR017/WRN, JOINT_SCALE016 and its weight obstructions, ROW_SPLIT028 and the previous rows; targeted searches in index/grid/crossword (bilateral weights/joint scale/variable u). There is no retry of uniformizing a single temporal norm at fixed u, which016 refuted.
 
-La diferencia nueva es conservar JUNTOS los pesos opuestos +eta y−eta: sus factores de desplazamiento temporal se cancelan. Se obtiene una constante de correlación controlada por N/u², no por N/u. Esto se combina con un lower global elemental de ARCH que cubre también k0, sin un certificado individual por dimensión.
+The new difference is to keep the opposite weights +eta and−eta TOGETHER: their temporal shift factors cancel. One obtains a correlation constant controlled by N/u², not by N/u. This is combined with an elementary global lower bound of ARCH that also covers k0, without an individual certificate per dimension.
 
-**Teorema.** Para TODOS enteros N>=1,k>=0 y TODAS tasas reales u>=64sqrt(N), sea f de transformada F(s)=s^k/(s+u)^(N+k). Entonces
+**Theorem.** For ALL integers N>=1,k>=0 and ALL real rates u>=64sqrt(N), let f have transform F(s)=s^k/(s+u)^(N+k). Then
 
     W[f]>(2/5)||f||².                                   (WEDGE)
 
-No se afirma el mismo signo en todo N a una tasa FIJA ni suficiencia de este wedge para el puente a todos los tests.
+The same sign for all N at a FIXED rate is not claimed, nor sufficiency of this wedge for the bridge to all tests.
 
-## 2. Una mejora de WRN por coeficientes, válida en ambas direcciones
+## 2. An improvement of WRN via coefficients, valid in both directions
 
-El coeficiente de S_N(r) de INTERIOR017 es B_l=(N−1/2)_l/(1/2)_l. Si C_l=(2N−1)_l/l!, entonces B0=C0=1 y para l>=1,
+The coefficient of S_N(r) from INTERIOR017 is B_l=(N−1/2)_l/(1/2)_l. If C_l=(2N−1)_l/l!, then B0=C0=1 and for l>=1,
 
     (l−1/2)(2N+l−2)−l(N+l−3/2)=(N−1)(l−1)>=0.
 
-Por comparación de cocientes, B_l<=C_l y
+By ratio comparison, B_l<=C_l and
 
     S_N(r)<=sum C_lr^l=(1−r)^(-(2N−1)), 0<=r<1.
 
-La expansión beta que prueba WRN utiliza eta² y solamente requiere a=u−eta>0 y eta²/a²<1. Por eso la MISMA prueba vale tanto para eta como para−eta cuando0<eta<u/2, y da
+The beta expansion proving WRN uses eta² and only requires a=u−eta>0 and eta²/a²<1. Hence the SAME proof holds for both eta and−eta when0<eta<u/2, and gives
 
     ||e^(eta y)f||²/||f||²
        <=[(u−eta)/(u−2eta)]^(2N−1),
     ||e^(-eta y)f||²/||f||²
        <=[(u+eta)/(u+2eta)]^(2N−1).
 
-No se fuerza ninguna de esas dos constantes por separado a ser uniforme. Cauchy–Schwarz desplazado conserva su PRODUCTO y da
+Neither of those two constants is forced separately to be uniform. Shifted Cauchy–Schwarz keeps their PRODUCT and gives
 
     |c_f(t)|/||f||²<=e^(-eta|t|)
        ·[(u²−eta²)/(u²−4eta²)]^(N−1/2).                (BILAT)
 
-En efecto, para t>=0 se insertan e^(eta(y+t)) y e^(-eta y) en ∫f(y+t)f(y)dy; queda el factor e^-eta t. La simetría cubre t<0. Éste es el paso que evita la obstrucción de media temporal016.
+Indeed, for t>=0 one inserts e^(eta(y+t)) and e^(-eta y) into ∫f(y+t)f(y)dy; the factor e^-eta t remains. Symmetry covers t<0. This is the step that avoids the temporal-mean obstruction016.
 
-## 3. Peine completo uniformemente pequeño en el wedge
+## 3. Complete comb uniformly small in the wedge
 
-Elija eta15. Como u²>=4096N, se tiene u>30. Por log(1+x)<=x,
+Choose eta15. Since u²>=4096N, one has u>30. By log(1+x)<=x,
 
     log([(u²−225)/(u²−900)]^(N−1/2))
        <=675(N−1/2)/(4096N−900)<=675/4096.
 
-La última comparación equivale a2048>=900. Además exp(675/4096)<=4096/3421<6/5. De BILAT se obtiene
+The last comparison is equivalent to2048>=900. Moreover exp(675/4096)<=4096/3421<6/5. From BILAT one obtains
 
     |c_f(t)|/||f||²<(6/5)e^(-15|t|).
 
-Usando Lambda(q)<=q y comparación suma-integral,
+Using Lambda(q)<=q and sum-integral comparison,
 
     |Comb[f]|/||f||²
       <(12/5)sum_(q>=2)q^-14
       <=(12/5)2^-14(1+2/13)<1/5000.                    (PRIME)
 
-El peine infinito está incluido íntegramente, sin signo supuesto de contactos.
+The infinite comb is included in full, with no assumed sign of contacts.
 
-## 4. Lower global de ARCH sin problemas en frecuencia cero
+## 4. Global lower bound of ARCH without problems at zero frequency
 
-La desigualdad auditada en QUADRATIC017, ApéndiceA, es Re psi(a+it)>=log|a+it|−1/a. Usar la recurrencia una vez desde1/4 hasta5/4 da, para tau!=0,
+The inequality audited in QUADRATIC017, AppendixA, is Re psi(a+it)>=log|a+it|−1/a. Using the recurrence once from1/4 to5/4 gives, for tau!=0,
 
     m(tau)>=log|tau|−log(2pi)−4/5−1/(tau²+1/4).        (SYMBOL)
 
-El recíproco procede exactamente de Re[1/(1/4+i tau/2)]=1/(tau²+1/4). No se pierde una potencia de2.
+The reciprocal comes exactly from Re[1/(1/4+i tau/2)]=1/(tau²+1/4). No power of2 is lost.
 
-La energía arquimediana A_(N,k)(u) crece en k por la covarianza con Z=tau²/(u²+tau²), de modo que basta k0. Su probabilidad espectral tiene densidad máxima
+The archimedean energy A_(N,k)(u) increases in k by covariance with Z=tau²/(u²+tau²), so k0 suffices. Its spectral probability has maximal density
 
     p_max=1/[uB(1/2,N−1/2)]<=sqrt(N)/(u sqrt(pi)).
 
-La desigualdad beta se demuestra por Jensen para sqrt(X) con X~Gamma(N−1/2,1): Gamma(N)/Gamma(N−1/2)<=sqrt(N−1/2)<sqrtN. Por tanto
+The beta inequality is proved by Jensen for sqrt(X) with X~Gamma(N−1/2,1): Gamma(N)/Gamma(N−1/2)<=sqrt(N−1/2)<sqrtN. Therefore
 
     E[1/(tau²+1/4)]<=2pi p_max<4sqrtN/u.                (RECIP)
 
-Por la fórmula beta,
+By the beta formula,
 
     Elog|tau|=logu+(1/2)psi(1/2)−(1/2)psi(N−1/2)
        >log(u/sqrtN)−1.
 
-Aquí psi(1/2)=−gamma−2log2>−2 usando gamma<3/5,log2<7/10, y psi(x)<=logx. Así SYMBOL/RECIP dan, en el wedge,
+Here psi(1/2)=−gamma−2log2>−2 using gamma<3/5,log2<7/10, and psi(x)<=logx. Thus SYMBOL/RECIP give, in the wedge,
 
     A_(N,k)(u)>log(32/pi)−1−4/5−1/16>9/20.             (ARCH)
 
-La última comparación es elemental: pi<22/7 y
+The last comparison is elementary: pi<22/7 and
 
     log(112/11)=3log2+log(14/11)
        >3(693/1000)+6/25=2319/1000.
 
-Se usó el primer término atanh para log(14/11); las cotas de log2 y gamma ya están auditadas y el verificador adjunto las comprueba racionalmente. ARCH cubre TODOS N>=1, no una lista de extremos de N.
+The first atanh term was used for log(14/11); the bounds on log2 and gamma are already audited and the attached verifier checks them rationally. ARCH covers ALL N>=1, not a list of N endpoints.
 
-## 5. Polar: signo par y pequeño presupuesto impar
+## 5. Polar: even sign and small odd budget
 
-Sea a=u²−1/4. Las fórmulas beta dan signo polar (−1)^k y magnitud p_(N,k) de ROW_SPLIT028. La cota beta de§4 y sqrt(pi)<2 implican
+Let a=u²−1/4. The beta formulas give polar sign (−1)^k and magnitude p_(N,k) from ROW_SPLIT028. The beta bound of§4 and sqrt(pi)<2 imply
 
     p_(N,0)<=4sqrt(pi)sqrtN/u·(1−1/(4u²))^-N
        <(1/8)·16384/16383<1/4.
 
-Se aplicó Bernoulli (1−z)^N>=1−Nz y N/(4u²)<=1/16384. Además a>=4095N, por lo que
+Bernoulli (1−z)^N>=1−Nz and N/(4u²)<=1/16384 were applied. Moreover a>=4095N, so
 
     p_(N,1)=p_(N,0)N/(2a)<1/(4·8190)<1/1000.
 
-Para k>=1, los cocientes sucesivos de magnitudes son
+For k>=1, the successive ratios of magnitudes are
 
     (k+N)/[(k+1/2)(4u²−1)]
       <=(N+1)/[(3/2)(16384N−1)]<1.
 
-Así todos los polares impares son >−1/1000. En k0 y en todos los k pares el polar es no negativo y se conserva. Combinando con ARCH y PRIME,
+Thus all odd polars are >−1/1000. At k0 and at all even k the polar is nonnegative and is kept. Combining with ARCH and PRIME,
 
     W[f]/||f||²>9/20−1/5000−1/1000>2/5.
 
-Queda probado WEDGE. El límite k0 no necesita un bound singular E tau^-2: RECIP lo reemplazó por una densidad máxima integrable.
+WEDGE is proved. The k0 limit does not need a singular bound E tau^-2: RECIP replaced it by an integrable maximal density.
 
-## 6. Verificación y alcance
+## 6. Verification and scope
 
-El archivo `tools/power_boundary_wedge_029_verify.py` comprueba las constantes racionales y las cotas elementales de gamma/log sin recorrer N o k. Las desigualdades para todos los parámetros se demuestran en el texto.
+The file `tools/power_boundary_wedge_029_verify.py` checks the rational constants and the elementary bounds of gamma/log without sweeping N or k. The inequalities for all parameters are proved in the text.
 
-Esta es una región REAL de signo completa y uniforme en tres parámetros, e incluye el borde k0. Complementa la región más fuerte de ROW_PATTERN029 para k>=1. No se afirma que uvariable baste para el puente de tasa fija u31.5: para cada N el lower de u crece. POWER_SCALE_BRIDGE_LIMIT_029 demuestra además que las mezclas positivas de las densidades de esta región NO aproximan ciertos átomos concentrados de tasa fija en L¹. No se excluyen otros mecanismos con información adicional. No hay nueva ventana T ni edición de papers.
+This is a complete REAL sign region, uniform in three parameters, and includes the k0 edge. It complements the stronger region of ROW_PATTERN029 for k>=1. It is not claimed that variable u suffices for the fixed-rate bridge u31.5: for each N the lower bound on u grows. POWER_SCALE_BRIDGE_LIMIT_029 furthermore proves that positive mixtures of the densities of this region do NOT approximate certain concentrated fixed-rate atoms in L¹. Other mechanisms with additional information are not excluded. No new window T and no paper edits.

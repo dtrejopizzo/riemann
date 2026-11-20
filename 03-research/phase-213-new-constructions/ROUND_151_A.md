@@ -1,17 +1,17 @@
-# Qué parte de la corrección impar escapa a la altura verificada
+# Which part of the odd correction escapes the verified height
 
-Usamos el mismo ε y la misma densidad de 150, sin recalibrarlos para un intervalo finito. Sea E(T)=∫yp(y)U(T+y)dy. Para T≥0 vale incondicionalmente
+We use the same ε and the same density of 150, without recalibrating them for a finite interval. Let E(T)=∫yp(y)U(T+y)dy. For T≥0 one has unconditionally
 
     E(T) = Σ mρ B(ρ) exp((ρ−1/2)T) + b exp(−T/2) + O(exp(−T)),
     b = (ξ'/ξ)(0)/(2ξ(1/2)).
 
-Aquí la suma recorre ceros distintos de ξ. La parte par de F vale a+O(exp(−T/2)). En particular, si H≥2 es una altura hasta la que se conoce RH, entonces
+Here the sum runs over distinct zeros of ξ. The even part of F equals a+O(exp(−T/2)). In particular, if H≥2 is a height up to which RH is known, then
 
     F(T) ≤ 3a/4 + C exp(−T/2)
                   + C (1+H)^A exp(T/2−πH/4)
 
-con constantes absolutas independientes de T,H y a<0. Se puede usar H=3·10¹² por Z2 del paper 47. No damos un intervalo numérico certificado: las constantes del resto no se han evaluado.
+with absolute constants independent of T,H and a<0. One may use H=3·10¹² by Z2 of paper 47. We give no certified numerical interval: the constants of the remainder have not been evaluated.
 
-**Prueba.** La transformada de E es B(z)ξ'(z)/ξ(z) en las convenciones de 150. Desplazar hasta Re z=−1/2. Todos los ceros quedan a la derecha de esa recta independientemente de RH. La expansión local de la derivada logarítmica y Stirling dan crecimiento a lo sumo polinómico del factor sin gamma sobre la recta y sobre una sucesión de horizontales que evitan las ordenadas por ≫1/log(|t|+2). El decaimiento gamma permite pasar al límite para cada T fijo. El aparente polo en z=1/2 desaparece por ξ'(1/2)=0. El polo simple de Γ(z/2) en cero tiene residuo 2 y ζ(0)=−1/2, dando b. En la misma tira B(z)cosh(z−1/2) sólo aporta el residuo a en 1/2 y un término O(exp(−T/2)) en cero. Las integrales restantes son O(exp(−T)). En todo 0≤Re z≤1 y para |Im z|≥2, Stirling y el crecimiento polinómico de ζ en tiras fijas dan |B(z)|≤C(1+|Im z|)^A exp(−π|Im z|/4). El conteo por bandas unitarias absorbe un factor logarítmico aumentando A. La serie converge absolutamente para T fijo. Su cola después de H tiene la cota anunciada usando Re ρ≤1. La parte hasta H, multiplicada por ε, cuesta a lo sumo |a|/4 por la elección de 150. Esto prueba la desigualdad.
+**Proof.** The transform of E is B(z)ξ'(z)/ξ(z) in the conventions of 150. Shift to Re z=−1/2. All zeros lie to the right of that line independently of RH. The local expansion of the logarithmic derivative and Stirling give at most polynomial growth of the factor without gamma on the line and on a sequence of horizontals avoiding the ordinates by ≫1/log(|t|+2). The gamma decay allows passing to the limit for each fixed T. The apparent pole at z=1/2 disappears by ξ'(1/2)=0. The simple pole of Γ(z/2) at zero has residue 2 and ζ(0)=−1/2, giving b. In the same strip B(z)cosh(z−1/2) contributes only the residue a at 1/2 and a term O(exp(−T/2)) at zero. The remaining integrals are O(exp(−T)). In all of 0≤Re z≤1 and for |Im z|≥2, Stirling and the polynomial growth of ζ in fixed strips give |B(z)|≤C(1+|Im z|)^A exp(−π|Im z|/4). The count by unit bands absorbs a logarithmic factor by increasing A. The series converges absolutely for fixed T. Its tail beyond H has the announced bound using Re ρ≤1. The part up to H, multiplied by ε, costs at most |a|/4 by the choice in 150. This proves the inequality.
 
-**Alcance.** Para T≤(π/2−δ)H con δ>0 fijo, la contribución desconocida está acotada por C(1+H)^A exp(−δH/2). El parámetro T de esta cuenta es el logaritmo de la escala de Liouville, distinto del soporte de las pruebas del paper 47. La estimación por altura fija pierde fuerza cuando T crece sin límite. La fórmula localiza exactamente ese fallo aun para ceros múltiples y no proporciona cota global.
+**Scope.** For T≤(π/2−δ)H with fixed δ>0, the unknown contribution is bounded by C(1+H)^A exp(−δH/2). The parameter T of this computation is the logarithm of the Liouville scale, distinct from the support of the tests of paper 47. The fixed-height estimate loses strength when T grows without bound. The formula localizes exactly that failure even for multiple zeros and gives no global bound.

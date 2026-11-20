@@ -1,31 +1,31 @@
-# Estado036 — Dónde permanece la energía que falta controlar
+# State036 — Where the energy still to be controlled resides
 
-Estado: PROVED y auditado. Sustituye STATE035 como resumen de trabajo; conserva íntegramente su cobertura positiva. Goal activo, signo global OPEN, papers intactos.
+Status: PROVED and audited. Replaces STATE035 as working summary; keeps its positive coverage in full. Goal active, global sign OPEN, papers untouched.
 
-## Frontera de recurrencia: el cono conocido no elimina el resto
+## Recurrence frontier: the known cone does not eliminate the remainder
 
-POWER_RECURRENCE_BOUNDARY_036 prueba para cualquier entrada fija N>=18,k>=0,u=63/2 que, en la expansión diagonal de profundidad L, la contribución COMPLETA del cono k'>=10000N'^2 satisface
+POWER_RECURRENCE_BOUNDARY_036 proves for any fixed entry N>=18,k>=0,u=63/2 that, in the diagonal expansion of depth L, the FULL contribution of the cone k'>=10000N'^2 satisfies
 
     0 <= C_L <= M_L(H_L+1/500) = O(log(L+2)/sqrt(L+1)) -> 0.
 
-Los pesos beta-binomial son exactos. Un momento inverso exacto controla la masa del cono creciente; una cota arquimediana por Jensen y los bounds completos017 de peine y polar controlan su energía. El complemento cumple R_L=A_(N,k)−C_L y converge exactamente al valor inicial. La novedad frente016 es controlar TODO el cono parabólico creciente en energía de W real, no sólo un borde fijo o una probabilidad. El ejemplo ya decidido211,1 proporciona un resto real no nulo sin nuevas evaluaciones.
+The beta-binomial weights are exact. An exact inverse moment controls the mass of the growing cone; an archimedean bound by Jensen and the full bounds017 of comb and polar control its energy. The complement satisfies R_L=A_(N,k)−C_L and converges exactly to the initial value. The novelty relative to016 is controlling the WHOLE growing parabolic cone in the energy of real W, not only a fixed edge or a probability. The already decided example211,1 provides a real nonzero remainder without new evaluations.
 
-También se prueban pesos exactos para detener caminos al primer contacto con el cono y una masa superviviente positiva. No se atribuye a esa masa un límite de energía sin control adicional. La obstrucción concierne a omitir el resto del esquema diagonal; no prohíbe otras fronteras ni una compensación aritmética nueva.
+Exact weights for stopping paths at the first contact with the cone and a positive surviving mass are also proved. No energy limit is attributed to that mass without additional control. The obstruction concerns omitting the remainder of the diagonal scheme; it does not forbid other frontiers nor a new arithmetic compensation.
 
-## Ventana de energía: las dos partes reales viven en otra escala
+## Energy window: the two real parts live at another scale
 
-POWER_MOVING_BALANCE_036 parte de la ley P_d exacta035, d=N−1. Aunque P_d tiene escala m~sqrt(d), las leyes obtenidas al ponderarla por la contribución polar y por el módulo del peine aritmético COMPLETO satisfacen
+POWER_MOVING_BALANCE_036 starts from the exact law P_d035, d=N−1. Although P_d has scale m~sqrt(d), the laws obtained by weighting it by the polar contribution and by the modulus of the FULL arithmetic comb satisfy
 
-    m/d -> 1/32 en probabilidad.
+    m/d -> 1/32 in probability.
 
-Se demuestra mediante una inclinación positiva exacta a_m(63/62)^m, representada como mezcla binomial contra q(t)^d. El máximo de q está en1/64, su valor es3969/3968 y la probabilidad binomial allí es1/32. Cotas exponenciales explícitas y dominaciones de ambas energías reales justifican el límite. La comparación aritmética inferior usa un bound elemental de psi_Lambda, demostrado con el binomio central; no se altera ni trunca el peine.
+This is proved through an exact positive tilt a_m(63/62)^m, represented as a binomial mixture against q(t)^d. The maximum of q is at1/64, its value is3969/3968 and the binomial probability there is1/32. Explicit exponential bounds and dominations of both real energies justify the limit. The lower arithmetic comparison uses an elementary bound of psi_Lambda, proved with the central binomial; the comb is neither altered nor truncated.
 
-Ambas partes tienen fase exponencial (3969/3968)^N. En cualquier prefijo m<=C sqrt(d), su energía relativa tiende a cero. Por tanto no es válido descartar esas colas por separado basándose en la concentración normativa035. La igualdad de fases NO prueba que la razón entre prime y polar tienda a1, ni controla su diferencia. La ventana del funcional firmado total continúa OPEN: una cancelación interna puede cambiarla.
+Both parts have exponential phase (3969/3968)^N. On any prefix m<=C sqrt(d), their relative energy tends to zero. Hence it is not valid to discard those tails separately on the basis of the normative concentration035. Equality of phases does NOT prove that the ratio between prime and polar tends to1, nor does it control their difference. The window of the total signed functional remains OPEN: an internal cancellation may change it.
 
-## Evidencia, cobertura y siguiente obligación
+## Evidence, coverage and next obligation
 
-POWER_FRONTIER_AUDIT_036 aprueba ambas pruebas; root las revisó independientemente. El verificador de constantes de MOVING036 fue reproducido con PASS por root y auditor; sólo verifica constantes, no sustituye los argumentos uniformes. No hubo campaña de N, primos o nuevos casos W.
+POWER_FRONTIER_AUDIT_036 approves both proofs; they were reviewed independently. The constant verifier of MOVING036 was reproduced with PASS twice; it only verifies constants, it does not replace the uniform arguments. There was no campaign over N, primes or new W cases.
 
-No hay nueva cobertura positiva en036. Permanece el resultado035: todos los átomos de filas1..17, cualquier k>=0, a u31.5, tienen W>norma²/40; se conservan los espacios y regiones previos, incluido el cono017 y el caso211,1. No se prueban nuevas combinaciones arbitrarias ni una ventana T mayor que log(5)/2.
+There is no new positive coverage in036. The result035 remains: all atoms of rows1..17, any k>=0, at u31.5, have W>norm²/40; the earlier spaces and regions are kept, including the cone017 and case211,1. No new arbitrary combinations nor a window T larger than log(5)/2 are proved.
 
-El siguiente paso debe conservar conjuntamente la contribución polar y aritmética antes de estimar colas, con una diferencia explícita frente a las representaciones conjuntas018/030/031. La localización036 identifica dónde falla el descarte separado; no se presenta por sí sola como un método de signo. El objetivo completo permanece abierto.
+The next step must keep the polar and arithmetic contributions jointly before estimating tails, with an explicit difference from the joint representations018/030/031. The localisation036 identifies where the separate discard fails; it is not presented by itself as a sign method. The full objective remains open.

@@ -1,47 +1,47 @@
-# Pérdida óptima de un minorante divisorial positivo a escala variable
+# Optimal loss of a positive divisorial minorant at variable scale
 
-En 040 se descartó el perfil fijo. Aquí los coeficientes b_n≥0 pueden elegirse de nuevo para cada x>1. En n=1 se puede fijar b₁=0. Sea w(t)=min(t,t^(−2)), como en 040. Para un tope entero N en el soporte, maximizar
+In 040 the fixed profile was discarded. Here the coefficients b_n≥0 may be chosen anew for each x>1. At n=1 one may fix b₁=0. Let w(t)=min(t,t^(−2)), as in 040. For an integer cap N on the support, maximize
 
     x^(−1/2) Σ_{n≤N} b_n log n
 
-bajo las restricciones Σ_{n≤N:p^e|n}b_n ≤ w(p^e/x) para cada primo p y e≥1. Sólo se necesitan restricciones donde Λ no se anula. Por la identidad de divisores, cada familia admisible minora Q(x) de 039. Llamar M_N(x) al máximo.
+under the constraints Σ_{n≤N:p^e|n}b_n ≤ w(p^e/x) for each prime p and e≥1. Constraints are only needed where Λ does not vanish. By the divisor identity, each admissible family is a minorant of Q(x) of 039. Call M_N(x) the maximum.
 
-**Solución exacta.** Poner d_{p,e}=min_{1≤i≤e} w(p^i/x). Entonces
+**Exact solution.** Put d_{p,e}=min_{1≤i≤e} w(p^i/x). Then
 
     M_N(x)=x^(−1/2) Σ_{p^e≤N} (log p)d_{p,e}.
 
-En efecto las masas acumuladas por los múltiplos de p^e son decrecientes en e, así que d_{p,e} las domina término a término. La descomposición de log n da la cota superior. Para alcanzarla, en cada cadena truncar d a cero desde la primera potencia mayor que N y poner b_{p^e}=d_{p,e}−d_{p,e+1} con esos valores truncados. En los demás enteros poner cero. Telescopar satura todas las cotas simultáneamente. Con soporte infinito la misma construcción alcanza el límite M∞, por monotonía y convergencia de la suma dominada por Q(x). Entre sucesiones de soporte finito sin tope prefijado ese límite es un supremo.
+Indeed the masses accumulated by the multiples of p^e are decreasing in e, so d_{p,e} dominates them term by term. The decomposition of log n gives the upper bound. To attain it, on each chain truncate d to zero from the first power greater than N and put b_{p^e}=d_{p,e}−d_{p,e+1} with those truncated values. At the other integers put zero. Telescoping saturates all bounds simultaneously. With infinite support the same construction attains the limit M∞, by monotonicity and convergence of the sum dominated by Q(x). Among finitely supported sequences without a prescribed cap that limit is a supremum.
 
-**Cuánto cuestan las restricciones.** El primer nivel e=1 conserva íntegro el peso de cada primo admitido. Para los cuadrados d_{p,2}=min(p/x,x²/p⁴). Separando en p=x^(3/5), la cota de Chebyshev θ(t)=O(t) y sumación parcial dan
+**How much the constraints cost.** The first level e=1 keeps the full weight of each admitted prime. For the squares d_{p,2}=min(p/x,x²/p⁴). Splitting at p=x^(3/5), the Chebyshev bound θ(t)=O(t) and partial summation give
 
     x^(−1/2) Σ_p log(p) d_{p,2} = O(x^(−3/10)).
 
-En efecto los dos tramos quedan acotados por constantes por x^(−3/2)(x^(3/5))² y x^(3/2)(x^(3/5))^(−3). Para e≥3 la contribución retenida, al ser a lo sumo la plena, es O(x^(−1/6)) por 039. Estas cotas valen para todo N. De 039, el peso pleno de los cuadrados tiende a 2/3; por ello
+Indeed the two pieces are bounded by constants times x^(−3/2)(x^(3/5))² and x^(3/2)(x^(3/5))^(−3). For e≥3 the retained contribution, being at most the full one, is O(x^(−1/6)) by 039. These bounds hold for all N. From 039, the full weight of the squares tends to 2/3; hence
 
     Q(x)−M∞(x) = 2/3 + o(1).
 
-**Tope finito.** Si N≥x y N→∞, los primos mayores que N quedan íntegramente en la rama decreciente del peso. Por los cálculos anteriores,
+**Finite cap.** If N≥x and N→∞, the primes greater than N lie entirely on the decreasing branch of the weight. By the previous computations,
 
     Q(x)−M_N(x) = 2/3 + o(1) + x^(3/2) Σ_{p>N} (log p)/p²,
 
-con el primer o(1) uniforme en N≥x. Por el teorema de los números primos y sumación parcial, la cola es asintótica a 1/N. Así, para cualquier λ>0 fijo, N∼λx^(3/2) da pérdida 2/3+1/λ+o(1). En general, para mantener acotada la pérdida es necesario y suficiente que N≥c x^(3/2) eventualmente para algún c>0. Si N<x a lo largo de una subsucesión, ya la cola de primos >x cuesta orden √x; para N≥x rige la fórmula anterior.
+with the first o(1) uniform in N≥x. By the prime number theorem and partial summation, the tail is asymptotic to 1/N. Thus, for any fixed λ>0, N∼λx^(3/2) gives loss 2/3+1/λ+o(1). In general, to keep the loss bounded it is necessary and sufficient that N≥c x^(3/2) eventually for some c>0. If N<x along a subsequence, the tail of primes >x already costs order √x; for N≥x the previous formula applies.
 
-La precisión aditiva O(1) requerida en 039 sí es alcanzable por una minoración positiva si se permite elegirla a cada escala. La construcción exacta depende de los primos y conserva su suma del primer nivel. Lo pendiente es una cota inferior de M_N(x) por (3/2)√x−O(1) con N del tamaño indicado; calcular la pérdida no suministra esa cota. La operación divisorial ya figuraba en 040 y N_BUILD022. El cotejo no localizó este problema de optimización por cadenas con esta función de peso.
+The additive precision O(1) required in 039 is indeed attainable by a positive minorant if it may be chosen at each scale. The exact construction depends on the primes and keeps their first-level sum. What is pending is a lower bound of M_N(x) by (3/2)√x−O(1) with N of the indicated size; computing the loss does not provide that bound. The divisorial operation already appeared in 040 and N_BUILD022. The cross-check did not locate this chain optimization problem with this weight function.
 
-## ¿Se pueden sustituir los coeficientes en primos por productos de dos primos?
+## Can the coefficients at primes be replaced by products of two primes?
 
-Imponer ahora b_p=0 para cada primo p. Denotar el nuevo máximo finito por M_N^comp. Para mantener Q(x)−M_N^comp(x)=O(1) es necesario y suficiente que N≥c x^(9/4) eventualmente, para algún c>0. Para la suficiencia basta usar productos de dos primos distintos. La afirmación trata del soporte de los coeficientes; su elección todavía utiliza las capacidades de los primos individuales.
+Now impose b_p=0 for each prime p. Denote the new finite maximum by M_N^comp. To keep Q(x)−M_N^comp(x)=O(1) it is necessary and sufficient that N≥c x^(9/4) eventually, for some c>0. For sufficiency it suffices to use products of two distinct primes. The claim concerns the support of the coefficients; their choice still uses the capacities of the individual primes.
 
-**Necesidad.** De no existir tal c, hay una subsucesión con N=o(x^(9/4)). Fijar δ>0, P=δ x^(3/2) y considerar los primos en (P,2P]. Un entero compuesto ≤N que contenga uno de esos primos p contiene exactamente uno y con exponente uno, pues P²>N para x grande. Su cofactor tiene algún divisor primo q≤N/P. Por tanto la suma de masas asignadas a los primos de esa banda es a lo sumo
+**Necessity.** If no such c exists, there is a subsequence with N=o(x^(9/4)). Fix δ>0, P=δ x^(3/2) and consider the primes in (P,2P]. A composite integer ≤N containing one of those primes p contains exactly one, with exponent one, since P²>N for large x. Its cofactor has some prime divisor q≤N/P. Hence the sum of masses assigned to the primes of that band is at most
 
-    Σ_{q primo≤N/P} w(q/x) = o(√x/log x).
+    Σ_{q prime≤N/P} w(q/x) = o(√x/log x).
 
-En efecto y=N/P=o(x^(3/4)); si y≤x^(2/3) basta la suma de todos los enteros dividida por x. Para y>x^(2/3) se usa Σ_{q≤y}q≪y²/log y. Multiplicar por log(2P)/√x da o(1) de contribución a la banda. Su capacidad completa ponderada, en cambio, es x^(3/2)Σ_{P<p≤2P}log(p)/p²∼1/(2δ) por el teorema de los números primos. El déficit en cada fila es no negativo, así que el liminf de la pérdida en esa subsucesión es al menos 1/(2δ) para cada δ fijo. Una pérdida acotada es imposible.
+Indeed y=N/P=o(x^(3/4)); if y≤x^(2/3) the sum over all integers divided by x suffices. For y>x^(2/3) one uses Σ_{q≤y}q≪y²/log y. Multiplying by log(2P)/√x gives o(1) contribution to the band. Its full weighted capacity, by contrast, is x^(3/2)Σ_{P<p≤2P}log(p)/p²∼1/(2δ) by the prime number theorem. The deficit in each row is nonnegative, so the liminf of the loss along that subsequence is at least 1/(2δ) for each fixed δ. A bounded loss is impossible.
 
-**Suficiencia.** Basta construir para N=⌊c x^(9/4)⌋, pues aumentar N conserva factibilidad. Elegir X=λ x^(3/2), con λ>0 suficientemente pequeña en función de c. Se van a saturar las capacidades de primer nivel d_p=w(p/x) para *todos* los primos p≤X. Los primos p de √N<p≤X se recorren de mayor a menor. Asignar su masa d_p a productos pq, repartiéndola entre primos q≤y=min(x,N/p) con capacidad disponible. Esos socios son menores que √N y los conjuntos permitidos crecen durante el recorrido. Basta verificar en cada paso que la demanda acumulada hasta el p actual no excede la capacidad total de sus socios.
+**Sufficiency.** It suffices to build for N=⌊c x^(9/4)⌋, since increasing N preserves feasibility. Choose X=λ x^(3/2), with λ>0 sufficiently small depending on c. The first-level capacities d_p=w(p/x) will be saturated for *all* primes p≤X. The primes p with √N<p≤X are traversed from largest to smallest. Assign their mass d_p to products pq, distributing it among primes q≤y=min(x,N/p) with available capacity. Those partners are less than √N and the allowed sets grow during the traversal. It suffices to verify at each step that the demand accumulated up to the current p does not exceed the total capacity of its partners.
 
-La demanda es a lo sumo C x²/(p log p) por la cota de Chebyshev y sumación parcial. La capacidad disponible *antes de empezar todo el recorrido* en q≤y es al menos c₁ y²/(x log y), por la cantidad de primos en (y/2,y]. Aquí y crece uniformemente. Si y=x, la demanda es o(x/log x) porque p>√N. Si y=N/p<x, la razón demanda/capacidad es a lo sumo C′ x³ p/N² ≤ C′ x³ X/N², que es menor que uno al elegir λ suficientemente pequeña. Así se completa el reparto sin exceder capacidades.
+The demand is at most C x²/(p log p) by the Chebyshev bound and partial summation. The capacity available *before starting the whole traversal* at q≤y is at least c₁ y²/(x log y), by the number of primes in (y/2,y]. Here y grows uniformly. If y=x, the demand is o(x/log x) because p>√N. If y=N/p<x, the demand/capacity ratio is at most C′ x³ p/N² ≤ C′ x³ X/N², which is less than one when λ is chosen sufficiently small. Thus the distribution is completed without exceeding capacities.
 
-Quedan las demandas residuales de los primos ≤√N. Su suma L es ≫x/log x: sólo en [x/2,x] había ese orden de masa y el recorrido anterior consumió O(x²/(√N log N))=o(x/log x). Cada demanda residual es ≤1. Para x grande ninguna supera L/2. Dividir un círculo de longitud L en arcos consecutivos con esas longitudes; emparejar cada punto con el punto opuesto. Casi ningún par tiene los dos extremos en el mismo arco. La longitud emparejada entre dos arcos da un coeficiente no negativo b_pq (contar cada par una sola vez), con suma en cada primo exactamente su demanda residual. Los productos son ≤N. Este segundo reparto usa socios distintos y no activa restricciones para p². Así se alcanza como valor exactamente la contribución de los primos ≤X. Su pérdida frente a Q tiende a 2/3+1/λ por 039 y el cálculo de cola anterior. Esto es una cota superior del déficit óptimo para este soporte restringido; no identifica su constante óptima.
+There remain the residual demands of the primes ≤√N. Their sum L is ≫x/log x: on [x/2,x] alone there was mass of that order and the previous traversal consumed O(x²/(√N log N))=o(x/log x). Each residual demand is ≤1. For large x none exceeds L/2. Divide a circle of length L into consecutive arcs with those lengths; pair each point with the opposite point. Almost no pair has both ends in the same arc. The paired length between two arcs gives a nonnegative coefficient b_pq (count each pair once), with sum at each prime exactly its residual demand. The products are ≤N. This second distribution uses distinct partners and does not activate constraints for p². The value attained is thus exactly the contribution of the primes ≤X. Its loss relative to Q tends to 2/3+1/λ by 039 and the previous tail computation. This is an upper bound on the optimal deficit for this restricted support; it does not identify its optimal constant.
 
-En particular, en la escala de soporte x^(3/2) de la primera parte, los compuestos por sí solos no pueden certificar la cota inferior buscada. Al permitir la escala x^(9/4) se puede reproducir la suma sobre primos, pero su estimación uniforme sigue siendo necesaria.
+In particular, at the support scale x^(3/2) of the first part, composites alone cannot certify the desired lower bound. Allowing the scale x^(9/4) the sum over primes can be reproduced, but its uniform estimate remains necessary.

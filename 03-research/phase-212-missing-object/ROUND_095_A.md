@@ -1,120 +1,120 @@
-# Dilataciones primas: signo negativo de la parte finita ciclotómica
+# Prime dilations: negative sign of the cyclotomic finite part
 
-Estado: **PROVED**, con revisión independiente de la prueba y de su alcance. No decide el signo de la forma completa.
+Status: **PROVED**, with independent review of the proof and of its scope. It does not decide the sign of the complete form.
 
-## Cotejo
+## Cross-check
 
-1. Antecedente: Parte V del índice maestro, «Corte ciclotómico dependiente del índice», posterior a 212-94. Allí se obtiene la parte finita homogénea J_sc, se certifica su positividad en b_6 y se deja abierto su signo general. «Selección de agregación por dilataciones» había quedado sin regla para los cruces.
-2. Objeto nuevo: un test entero explícito que suma dilataciones primas de b_6 y tiene J_sc negativo. No se aumenta una tabla de matrices ni se busca otra representación de la forma objetivo.
-3. Diferencia: para primos distintos mayores que el soporte de b_6, el mcd de los índices dilatados se calcula exactamente. Esto proporciona el término cruzado dominante con signo, que faltaba en la selección anterior. La puerta independiente aprobó investigar sólo esta obstrucción auxiliar.
-4. Enlace con el objetivo: se decide si J_sc puede ser una pieza PSD en la separación a=J_sc+(a−J_sc). Un valor negativo descarta esa separación en dos piezas PSD, pero no descarta a≥0 ni una compensación conjunta distinta. No se reclama novedad de las herramientas elementales sobre primos o mcd.
+1. Antecedent: Part V of the master index, "Index-dependent cyclotomic cutoff", after 212-94. There the homogeneous finite part J_sc is obtained, its positivity at b_6 is certified and its general sign is left open. "Selection of aggregation by dilations" had remained without a rule for the crossings.
+2. New object: an explicit integer test that sums prime dilations of b_6 and has negative J_sc. No table of matrices is enlarged and no other representation of the target form is sought.
+3. Difference: for distinct primes larger than the support of b_6, the gcd of the dilated indices is computed exactly. This provides the dominant cross term with sign, which was missing in the previous selection. The independent gate approved investigating only this auxiliary obstruction.
+4. Link with the target: it decides whether J_sc can be a PSD piece in the splitting a=J_sc+(a−J_sc). A negative value rules out that splitting into two PSD pieces, but does not rule out a≥0 nor a different joint compensation. No novelty is claimed for the elementary tools on primes or gcd.
 
-## Definiciones y enunciado
+## Definitions and statement
 
-Para sucesiones reales de soporte finito, usar la forma bilineal simétrica
+For finitely supported real sequences, use the symmetric bilinear form
 
     B(b,c)=−Σ_(i,j≥1) gcd(i,j)b_i c_j log((i+j)/gcd(i,j)),
     J_sc(b)=B(b,b).
 
-El portador entero K consta de las sucesiones enteras de soporte finito que cumplen
+The integer carrier K consists of the finitely supported integer sequences satisfying
 
-    Σ_j b_j=0,    Σ_j j b_j=0,    Σ_j b_j v_r(j)=0 para cada primo r.
+    Σ_j b_j=0,    Σ_j j b_j=0,    Σ_j b_j v_r(j)=0 for each prime r.
 
-Sea b=b_6=(−1,3,−1,−2,0,1), con índices 1,...,6. Para un entero p positivo, D_p b coloca b_i en el índice pi y cero en los restantes. Para cualquier entero k≥4096, definir
+Let b=b_6=(−1,3,−1,−2,0,1), with indices 1,...,6. For a positive integer p, D_p b places b_i at index pi and zero elsewhere. For any integer k≥4096, define
 
-    X=2^k,    P_X={p primo: sqrt(X)<p≤X},    N=|P_X|,
+    X=2^k,    P_X={p prime: sqrt(X)<p≤X},    N=|P_X|,
     β_X=Σ_(p∈P_X) D_p b.
 
-**Enunciado.** β_X es un elemento no nulo de K y J_sc(β_X)<0. Por tanto J_sc no es PSD sobre el portador entero.
+**Statement.** β_X is a nonzero element of K and J_sc(β_X)<0. Therefore J_sc is not PSD on the integer carrier.
 
-## 1. Datos del test y conservación de las restricciones
+## 1. Data of the test and preservation of the constraints
 
-Para b, la suma y el momento son cero. Las únicas filas primas no vacías son
+For b, the sum and the moment are zero. The only nonempty prime rows are
 
     Σ_i b_i v_2(i)=3−4+1=0,
     Σ_i b_i v_3(i)=−1+1=0.
 
-La identidad v_r(pi)=v_r(p)+v_r(i) muestra que cada D_p b y su suma pertenecen a K. Si p,q>6 son primos distintos y 1≤i,j≤6, pi=qj es imposible: obligaría a p|j. Sus soportes son disjuntos; en particular β_X no es nulo cuando N>0.
+The identity v_r(pi)=v_r(p)+v_r(i) shows that each D_p b and their sum belong to K. If p,q>6 are distinct primes and 1≤i,j≤6, pi=qj is impossible: it would force p|j. Their supports are disjoint; in particular β_X is nonzero when N>0.
 
-Por cálculo finito exacto, ya registrado para este mismo b,
+By exact finite computation, already recorded for this same b,
 
     A=Σ_(i,j=1)^6 gcd(i,j)b_i b_j=14,
     J_sc(b)=−72log2+36log3+10log5−2log7<3.
 
-Para la última cota basta la desigualdad entera
+For the last bound the integer inequality suffices
 
     3^36·5^10 < 2^75·7²,
 
-que da J_sc(b)<log8<3. No se usa el certificado intervalar anterior. Además Σ_i|b_i|=8, de modo que
+which gives J_sc(b)<log8<3. The earlier interval certificate is not used. Moreover Σ_i|b_i|=8, so that
 
     H=Σ_(i,j=1)^6 gcd(i,j)|b_i b_j|≤6·8²=384.
 
-La homogeneidad exacta da B(D_p b,D_p b)=pJ_sc(b)<3p.
+Exact homogeneity gives B(D_p b,D_p b)=pJ_sc(b)<3p.
 
-## 2. Cruces completos entre primos distintos
+## 2. Complete crossings between distinct primes
 
-Sean p≥q>6 primos distintos. Como ninguno divide los índices i,j≤6,
+Let p≥q>6 be distinct primes. Since neither divides the indices i,j≤6,
 
     gcd(pi,qj)=gcd(i,j)=g.
 
-Luego, sin omitir ningún cruce,
+Hence, without omitting any crossing,
 
     B(D_p b,D_q b)
       =−A log p−Σ_(i,j=1)^6 g b_i b_j log((i+(q/p)j)/g).
 
-Se tiene 1≤(i+(q/p)j)/g≤12. Por tanto
+One has 1≤(i+(q/p)j)/g≤12. Therefore
 
     |B(D_p b,D_q b)+14log p|≤H log12<1152.
 
-Aquí log12<3, pues la suma de los primeros cuatro términos de exp(3) es 13. Para p,q∈P_X, log p>(log X)/2. Si k≥4096, log X=klog2>(2/3)k>2304, y así
+Here log12<3, since the sum of the first four terms of exp(3) is 13. For p,q∈P_X, log p>(log X)/2. If k≥4096, log X=klog2>(2/3)k>2304, and thus
 
-    B(D_p b,D_q b)<−(13/2)log X.                 (CRUCE)
+    B(D_p b,D_q b)<−(13/2)log X.                 (CROSS)
 
-La cota es uniforme en todos los pares usados. No requiere que p/q esté separado de cero.
+The bound is uniform over all pairs used. It does not require p/q to be bounded away from zero.
 
-## 3. Cantidad suficiente de primos, sin teorema asintótico
+## 3. Sufficient number of primes, without an asymptotic theorem
 
-Para X=2^k, el coeficiente central satisface
+For X=2^k, the central coefficient satisfies
 
     binom(X,X/2)≥2^X/(X+1).
 
-Para cada primo p≤X, la fórmula de valuación factorial expresa su valuación en ese binomial como suma de floor(X/p^a)−2floor(X/(2p^a)). Cada sumando es 0 o 1 y desaparece para p^a>X. En consecuencia,
+For each prime p≤X, the factorial valuation formula expresses its valuation in that binomial as the sum of floor(X/p^a)−2floor(X/(2p^a)). Each summand is 0 or 1 and vanishes for p^a>X. Consequently,
 
     v_p(binom(X,X/2))log p≤log X,
     π(X)log X≥Xlog2−log(X+1).
 
-Como π(sqrt X)≤sqrt X,
+Since π(sqrt X)≤sqrt X,
 
     Nlog X≥Xlog2−log(X+1)−sqrt X log X.
 
-Para k≥16, k+1≤2^k/16 y k≤2^(k/2)/16. Ambas se comprueban en k=16 y se conservan al incrementar k. Usando log2<1, se obtiene
+For k≥16, k+1≤2^k/16 and k≤2^(k/2)/16. Both are checked at k=16 and are preserved when k is incremented. Using log2<1, one obtains
 
     log(X+1)≤k+1≤X/16,
     sqrt X log X≤2^(k/2)k≤X/16.
 
-La cota elemental log2>2/3 (por ejemplo, integrar el desarrollo de 1/(1−t²) entre 0 y 1/3) implica
+The elementary bound log2>2/3 (for example, integrating the expansion of 1/(1−t²) between 0 and 1/3) implies
 
     Nlog X>(2/3−1/8)X>X/2,
-    N>X/(2log X).                                (CUENTA)
+    N>X/(2log X).                                (COUNT)
 
-En particular N>0. Todo el conteo es elemental y efectivo.
+In particular N>0. The whole count is elementary and effective.
 
-## 4. Signo negativo
+## 4. Negative sign
 
-Expandir la forma cuadrática, con dos veces cada par no ordenado. Las diagonales y (CRUCE) dan
+Expand the quadratic form, with each unordered pair twice. The diagonals and (CROSS) give
 
     J_sc(β_X)<3XN−(13/2)log X·N(N−1).
 
-Por (CUENTA), el miembro derecho es menor que
+By (COUNT), the right-hand side is less than
 
     N[−X/4+(13/2)log X].
 
-Este número es negativo, porque 2^k>26k>26log X para k≥4096. Esto prueba el enunciado sobre tests finitos explícitamente definidos. No se necesita enumerar sus primos ni calcular una matriz de tamaño creciente.
+This number is negative, because 2^k>26k>26log X for k≥4096. This proves the statement on explicitly defined finite tests. There is no need to enumerate their primes or compute a matrix of growing size.
 
-## Resultado
+## Result
 
-**Qué se probó:** la parte finita J_sc del regularizador ciclotómico homogéneo tiene valores negativos en el portador entero, pese al valor positivo conocido en b_6. La familia β_X conserva exactamente todas las restricciones de valuaciones y los dos momentos.
+**What was proved:** the finite part J_sc of the homogeneous cyclotomic regularizer takes negative values on the integer carrier, despite the known positive value at b_6. The family β_X exactly preserves all the valuation constraints and the two moments.
 
-**Qué falló y por qué:** sustraer la autoenergía positiva del regularizador no conserva PSD. Las dilataciones individuales escalan su energía por p, mientras que los cruces entre muchas escalas primas acumulan un término negativo de orden N² log X. El resultado excluye tomar J_sc como una pieza no negativa universal en a=J_sc+(a−J_sc).
+**What failed and why:** subtracting the positive self-energy of the regularizer does not preserve PSD. The individual dilations scale their energy by p, while the crossings among many prime scales accumulate a negative term of order N² log X. The result excludes taking J_sc as a universal nonnegative piece in a=J_sc+(a−J_sc).
 
-**Siguiente paso concreto:** cualquier reapertura ciclotómica debe especificar una compensación conjunta con el resto que responda a esta familia de tests; no basta el corte homogéneo ni su positividad en un test. No se propone aquí tal compensación. No se afirma negatividad de a, ni signo del resto, ni imposibilidad de otros regularizadores, ni cierre de la positividad global. La batería de falsificadores de una prueba positiva de a no se aplica a esta refutación de una forma auxiliar: no se ha dado ese paso de signo.
+**Concrete next step:** any cyclotomic reopening must specify a joint compensation with the remainder that responds to this family of tests; the homogeneous cutoff and its positivity on one test do not suffice. No such compensation is proposed here. No negativity of a, nor sign of the remainder, nor impossibility of other regularizers, nor closure of global positivity is claimed. The falsifier battery for a positive proof of a does not apply to this refutation of an auxiliary form: that sign step has not been taken.

@@ -1,94 +1,94 @@
-# Construcción 082 — Defecto equilibrado con regularización arquimediana
+# Construction 082 — Balanced defect with archimedean regularization
 
-Estado: fórmulas (1)–(2), dominio y equivalencia de signo revisados independientemente. Es un balance de tipo Birman–Schwinger, no un mecanismo de signo nuevo.
+Status: formulas (1)–(2), domain and sign equivalence checked independently. It is a Birman–Schwinger type balance, not a new sign mechanism.
 
-## Cambio respecto de los anuladores de perfiles
+## Change with respect to the profile annihilators
 
-BUILD079–081 no reprodujeron la cancelación de la forma sobre vectores casi nulos. Aquí se incluye esa cancelación completa en el operador, sin invertir la forma objetivo. Esto evita ajustar perfiles, pero puede trasladar íntegramente la obligación de signo; el residuo se calcula para comprobarlo.
+BUILD079–081 did not reproduce the cancellation of the form on near-null vectors. Here that complete cancellation is included in the operator, without inverting the target form. This avoids fitting profiles, but it may transfer the sign obligation entirely; the residue is computed to check this.
 
-Trabajar en el Hilbert primitivo P_T. Sean A el operador autoadjunto asociado a a_T, A_arch el asociado a la forma arquimediana comprimida a P_T y L=ΣΛ(n)/sqrt(n) U_log n. Poner s=ΣΛ(n)/sqrt(n), con n<exp(2T), y
+Work in the primitive Hilbert space P_T. Let A be the self-adjoint operator associated with a_T, A_arch the one associated with the archimedean form compressed to P_T, and L=ΣΛ(n)/sqrt(n) U_log n. Put s=ΣΛ(n)/sqrt(n), with n<exp(2T), and
 
     β_T=1−C0+2s,
     B=A_arch+β_T I,
     P=β_T I+Q(L+L*)Q.
 
-B≥(1+2s)I y P≥(1−C0)I>0, pues ||L||≤s. Son operadores sobre P_T; B no es la forma objetivo. Se tiene A=B−P como identidad de formas y con perturbación acotada sobre Dom(B).
+B≥(1+2s)I and P≥(1−C0)I>0, since ||L||≤s. They are operators on P_T; B is not the target form. One has A=B−P as an identity of forms and with bounded perturbation on Dom(B).
 
-Definir
+Define
 
     C=B^(-1/2) P B^(-1/2)≥0,
     V F=(I−C) B^(1/2)F
        =B^(1/2)F−B^(-1/2)PF,
 
-para F en el dominio de forma. La inversa sólo corresponde a la parte arquimediana desplazada B, cuya positividad está asegurada de antemano. En Dom(A), V=B^(-1/2)AF. No se emplea una raíz o inversa de A ni sus autovectores para definir V.
+for F in the form domain. The inverse only corresponds to the shifted archimedean part B, whose positivity is ensured in advance. On Dom(A), V=B^(-1/2)AF. No root or inverse of A nor its eigenvectors are used to define V.
 
-## Cuadrado y residuo exactos
+## Exact square and residue
 
-Con x=B^(1/2)F,
+With x=B^(1/2)F,
 
     a_T(F)=<x,(I−C)x>,
     ||VF||²=<x,(I−C)²x>,
     ρ(F)=a_T(F)−||VF||²=<x,(C−C²)x>.                    (1)
 
-En las variables originales,
+In the original variables,
 
     ρ(F)=<F,PF>−<PF,B^(-1)PF>.                           (2)
 
-Todos los cruces entre contactos están presentes en PF y en el segundo término; no se sustituyen por una suma de normas independientes.
+All cross terms between contacts are present in PF and in the second term; they are not replaced by a sum of independent norms.
 
-## Diagnóstico favorable y límite lógico
+## Favourable diagnosis and logical limit
 
-Si F es un autovector de A con AF=λF, se obtiene, sólo como diagnóstico,
+If F is an eigenvector of A with AF=λF, one obtains, only as a diagnosis,
 
     ||VF||²=λ²<F,B^(-1)F>≤λ²||F||²/(1+2s).
 
-El candidato suprime automáticamente toda dirección casi nula con residuo operatorial pequeño, sin escogerla de antemano. Una pequeña razón de Rayleigh por sí sola NO basta para esta cota: se necesita controlar AF.
+The candidate automatically suppresses every near-null direction with small operator residual, without choosing it in advance. A small Rayleigh quotient alone is NOT enough for this bound: AF must be controlled.
 
-Pero C≥0 implica que C−C²≥0 si y sólo si C≤I. Además C≤I equivale a A≥0 por la primera igualdad de (1). Como B≥constante>0, x recorre todo P_T cuando F recorre Dom(B^(1/2)); no falta un subespacio en esa equivalencia.
+But C≥0 implies that C−C²≥0 if and only if C≤I. Moreover C≤I is equivalent to A≥0 by the first equality of (1). Since B≥constant>0, x ranges over all of P_T when F ranges over Dom(B^(1/2)); no subspace is missing in that equivalence.
 
-Por tanto este diseño resuelve la incompatibilidad de extracción sobre autovectores casi nulos, pero NO reduce la obligación lógica de signo. Probar ρ≥0 es exactamente probar la contracción C≤I. No se supone esa contracción y no se presenta (1) como prueba de positividad.
+Therefore this design resolves the extraction incompatibility on near-null eigenvectors, but it does NOT reduce the logical sign obligation. Proving ρ≥0 is exactly proving the contraction C≤I. That contraction is not assumed and (1) is not presented as a positivity proof.
 
-## Qué sería una operación adicional
+## What an additional operation would be
 
-La fórmula (2) deja una diana concreta: una identidad aritmético-arquimediana que controle el apareamiento de PF con el Green positivo de B, conservando todos los cruces. Definir ese control como la norma óptima o volver a factorizar I−C sería circular. La regularización arquimediana ya está escrita; falta una razón independiente para la contracción.
+Formula (2) leaves a concrete target: an arithmetic-archimedean identity controlling the pairing of PF with the positive Green function of B, keeping all cross terms. Defining that control as the optimal norm or refactoring I−C would be circular. The archimedean regularization is already written; an independent reason for the contraction is missing.
 
-Para falsificadores con pesos positivos, la misma construcción y las identidades existen al adaptar s y P. En una ventana negativa, C tiene una dirección espectral por encima de1 y el residuo también falla. Esa observación comprueba coherencia; no identifica todavía una ley aritmética que separe el peso verdadero.
+For falsifiers with positive weights, the same construction and identities exist after adapting s and P. In a negative window, C has a spectral direction above 1 and the residue also fails. That observation checks consistency; it does not yet identify an arithmetic law separating the true weight.
 
-## Desarrollo explícito de la compensación de los dos momentos
+## Explicit expansion of the compensation of the two moments
 
-Cálculo añadido para revisión. Se distingue H0=L²(I) del subespacio primitivo. En H0 poner
+Computation added for review. H0=L²(I) is distinguished from the primitive subspace. In H0 put
 
     B0=A_arch,full+β_T I, G0=B0^(-1),
     E(z+,z−)=z+ e+ + z− e−,
     Hpol=E*G0E.
 
-B0≥(1+2s)I; G0 es positivo e inyectivo. E es inyectivo y Hpol es una matriz2x2 estrictamente positiva. Definir
+B0≥(1+2s)I; G0 is positive and injective. E is injective and Hpol is a strictly positive 2x2 matrix. Define
 
     Gprim=G0−G0 E Hpol^(-1) E*G0.                        (3)
 
-Ésta es la extensión por cero sobre P_T^perp del inverso de la compresión primitiva B. En efecto, para fuente f, u=Gprim f cumple E*u=0 y B0u=f−E Hpol^(-1)E*G0f. Al probar contra cualquier h∈P_T, se obtiene b_B(h,u)=<h,f>; la coercividad da unicidad. Además Gprim E=0 y E*Gprim=0. No se confunde Gprim con QG0Q, que en general es distinto.
+This is the extension by zero on P_T^perp of the inverse of the primitive compression B. Indeed, for a source f, u=Gprim f satisfies E*u=0 and B0u=f−E Hpol^(-1)E*G0f. Testing against any h∈P_T, one obtains b_B(h,u)=<h,f>; coercivity gives uniqueness. Moreover Gprim E=0 and E*Gprim=0. Gprim is not confused with QG0Q, which in general is different.
 
-Con P0=β_T I+L+L*, para F∈P_T la fórmula(2) se convierte en
+With P0=β_T I+L+L*, for F∈P_T formula (2) becomes
 
     ρ(F)=<F,P0F>−<P0F,G0P0F>+v(F)*Hpol^(-1)v(F),       (4)
     v(F)=E*G0P0F.
 
-La última contribución es manifiestamente no negativa, pero de rango a lo sumo2. No se supone positivo el núcleo puntual de Gprim: positividad como operador y positividad del núcleo son propiedades distintas.
+The last contribution is manifestly non-negative, but of rank at most 2. The pointwise kernel of Gprim is not assumed positive: positivity as an operator and positivity of the kernel are different properties.
 
-Se pueden escribir los dos funcionales sin aplicar el inverso a la fuente aritmética: kσ=G0eσ depende sólo de Arch, la ventana y β_T. Entonces
+The two functionals can be written without applying the inverse to the arithmetic source: kσ=G0eσ depends only on Arch, the window and β_T. Then
 
     vσ(F)=<kσ,P0F>=<rσ,F>,
     rσ=β_T kσ+Σ_n Λ(n)/sqrt(n)(U_log n+U_log n*)kσ.       (5)
 
-Todos los contactos y las dos restricciones aparecen en(4)-(5), con sus cruces conservados. El problema pendiente es dominar el defecto <P0F,G0P0F>−<F,P0F> por estos dos funcionales para todo F∈P_T. No se afirma que el rango dos baste por una razón dimensional: precisamente esa dominación es lo que falta demostrar.
+All contacts and the two constraints appear in (4)-(5), with their cross terms preserved. The pending problem is to dominate the defect <P0F,G0P0F>−<F,P0F> by these two functionals for all F∈P_T. It is not claimed that rank two suffices for a dimensional reason: precisely that domination is what remains to be proved.
 
-Para F tal que v(F)=0, la compensación desaparece. Cualquier prueba basada en(4) debe por tanto controlar el defecto completo también sobre ese subespacio; no puede usar la mera positividad de Hpol^(-1) como conclusión. Esto fija una condición verificable para un intento posterior de cancelación.
+For F such that v(F)=0, the compensation disappears. Any proof based on (4) must therefore control the complete defect also on that subspace; it cannot use the mere positivity of Hpol^(-1) as a conclusion. This fixes a verifiable condition for a later cancellation attempt.
 
 
-## Alcance de la revisión
+## Scope of the review
 
-La cota general es ||VF||≤||AF||/sqrt(1+2s); para AF=λF+r, es ≤(|λ|||F||+||r||)/sqrt(1+2s). No se deduce amortiguación de todos los tests de pequeña razón de Rayleigh sin controlar su residuo operatorial.
+The general bound is ||VF||≤||AF||/sqrt(1+2s); for AF=λF+r, it is ≤(|λ|||F||+||r||)/sqrt(1+2s). Damping of all tests with small Rayleigh quotient is not deduced without controlling their operator residual.
 
-Antecedente conceptual verificado: P47 subsec:wh-det/thm:wh-pencil. No se importa su conclusión de clase traza: P≥(1−C0)I en dimensión infinita no es de clase traza. La equivalencia de orden operatorial aquí escrita no requiere esa propiedad.
+Verified conceptual antecedent: P47 subsec:wh-det/thm:wh-pencil. Its trace-class conclusion is not imported: P≥(1−C0)I in infinite dimension is not trace class. The operator-order equivalence written here does not require that property.
 
-La fórmula del Green restringido (3) también fue confirmada como eliminación exacta de las dos restricciones. Exhibir su término positivo de rango dos no prueba la dominación pendiente en(4).
+The formula for the restricted Green function (3) was also confirmed as exact elimination of the two constraints. Exhibiting its positive rank-two term does not prove the pending domination in (4).

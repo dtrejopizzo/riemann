@@ -1,32 +1,32 @@
 # POWER BALANCE AUDIT 020
 
-Estado: APROBADOS SIGNED_BALANCE020 e INVERSE_KERNEL020, con los alcances delimitados a continuación. Papers intactos.
+Status: SIGNED_BALANCE020 and INVERSE_KERNEL020 APPROVED, with the scopes delimited below. Papers untouched.
 
-## Restricción de novedad y de alcance
+## Novelty and scope restriction
 
-Se conservan los antecedentes auditados en POWER_SIGNED_AUDIT_019: Euler/Möbius y Λ*1=log no son una prueba nueva de signo; Descartes es una herramienta clásica. La nueva frontera específica de autocorrelación019 sí prueba signo del peine de k=1 para N≤211, pero no el de la forma W completa. La media negativa B019 y el prefijo inverso negativo no deciden el kernel inverso completo.
+The antecedents audited in POWER_SIGNED_AUDIT_019 are kept: Euler/Möbius and Λ*1=log are not a new proof of sign; Descartes is a classical tool. The new specific autocorrelation frontier of 019 does prove the sign of the comb at k=1 for N≤211, but not that of the full form W. The negative mean B019 and the negative inverse prefix do not decide the full inverse kernel.
 
-Esta ronda exige verificar por separado las normalizaciones y el balance de las tres contribuciones reales ARCH, peine y polar, o un emparejamiento firmado completo que lo controle. No se aceptará trasladar el signo de un portador a otro sin la desigualdad correspondiente. La tabla completa y nuevas ventanas T permanecen abiertas mientras no se pruebe su condición suficiente.
+This round requires verifying separately the normalisations and the balance of the three real contributions ARCH, comb and polar, or a complete signed pairing that controls it. Transferring the sign from one carrier to another without the corresponding inequality will not be accepted. The full table and new windows T remain open as long as their sufficient condition is not proved.
 
-## SIGNED_BALANCE020 — APROBADO
+## SIGNED_BALANCE020 — APPROVED
 
-Revisados `POWER_SIGNED_BALANCE_020.md` y `tools/power_signed_balance_020_verify.py`; ejecución independiente PASS. La integral de Euler del resto de ψ tiene módulo ≤(1/2)∫(a+t)^−2dt=1/(2a). Las cuatro traslaciones desde 1/4 hasta 17/4 conservan el signo menos de los recíprocos. En x=T², log(A+x), −a/[2(A+x)] y cada −b/(b²+x) son cóncavas; Jensen suministra la cota superior U con E T²=3u²/[4(2N−3)]. La normalización es la de ARCH real, sin polar incorporado.
+Reviewed `POWER_SIGNED_BALANCE_020.md` and `tools/power_signed_balance_020_verify.py`; independent run PASS. The Euler integral of the remainder of ψ has modulus ≤(1/2)∫(a+t)^−2dt=1/(2a). The four shifts from 1/4 to 17/4 keep the minus sign of the reciprocals. In x=T², log(A+x), −a/[2(A+x)] and each −b/(b²+x) are concave; Jensen supplies the upper bound U with E T²=3u²/[4(2N−3)]. The normalisation is that of the real ARCH, without the polar term incorporated.
 
-La norma beta y K_N son correctos; el factor −2Λ(2)2^−1/2 de peine y 2^−u=2^−31/√2 producen exactamente (log2/2^31)K_Nr_N(u log2). El evaluador Horner conserva extremos Fraction sin redondeo intermedio. Se certifican ARCH/norma<−.74 y 0<P2/norma<.075 en N211,k1,u31.5. El polar es estrictamente negativo, por lo que la forma real conservando sólo contacto2 es menor que −.66 veces la norma.
+The beta norm and K_N are correct; the comb factor −2Λ(2)2^−1/2 and 2^−u=2^−31/√2 produce exactly (log2/2^31)K_Nr_N(u log2). The Horner evaluator keeps Fraction endpoints without intermediate rounding. ARCH/norm<−.74 and 0<P2/norm<.075 are certified at N211,k1,u31.5. The polar term is strictly negative, so the real form keeping only contact 2 is less than −.66 times the norm.
 
-Alcance: obstrucción nueva y concreta al balance mediante el primer contacto en esta columna. No es una nueva fila positiva de W. Todos los contactos restantes son favorables por019 y siguen pendientes de magnitud conjunta; no hay conclusión W<0 ni prohibición de reparación mediante varios contactos. La fórmula general U se prueba para N variable, pero sólo se certifica FAIL2 en el punto declarado.
+Scope: new and concrete obstruction to the balance via the first contact in this column. It is not a new positive row of W. All remaining contacts are favourable by 019 and their joint magnitude is still pending; there is no conclusion W<0 nor a prohibition of repair via several contacts. The general formula U is proved for variable N, but FAIL2 is only certified at the declared point.
 
 
-## INVERSE_KERNEL020 — APROBADO
+## INVERSE_KERNEL020 — APPROVED
 
-Leídos `POWER_INVERSE_KERNEL_020.md` y `tools/power_inverse_kernel_020_verify.py`; ejecución independiente PASS. La fórmula gamma de p_j y el cociente (j+1)p_(j+1)/p_j≤u son correctos. Por tanto A_N=(u+1/2)P_N−P_N′ tiene todos sus coeficientes estrictamente positivos y grado N−1; H_N=x^−33 A_N(log x) conserva la normalización de019.
+Read `POWER_INVERSE_KERNEL_020.md` and `tools/power_inverse_kernel_020_verify.py`; independent run PASS. The gamma formula for p_j and the ratio (j+1)p_(j+1)/p_j≤u are correct. Therefore A_N=(u+1/2)P_N−P_N′ has all its coefficients strictly positive and degree N−1; H_N=x^−33 A_N(log x) keeps the normalisation of 019.
 
-La comparación de cada monomio da A(t+l)/A(t)≤exp(dl/t). Para log x≥d/30, la serie COMPLETA de Möbius se domina por Σ_(m≥2)m^−2≤3/4. Esto prueba H/4≤h≤7H/4 sin ninguna inferencia desde prefijos. La expansión finita de A también justifica que h sea x^−33 por un polinomio, con coeficiente principal positivo A_d/ζ(32).
+The comparison of each monomial gives A(t+l)/A(t)≤exp(dl/t). For log x≥d/30, the FULL Möbius series is dominated by Σ_(m≥2)m^−2≤3/4. This proves H/4≤h≤7H/4 without any inference from prefixes. The finite expansion of A also justifies that h is x^−33 times a polynomial, with positive leading coefficient A_d/ζ(32).
 
-Para N=2, Σμ(m)log(m)m^−32=−M′(32)=−D(32)/ζ(32), de modo que la fórmula H2 tiene el signo menos correcto. La cota D(32)≤Σm^−31 y 1008D<1/4 dan h2≥H2/[2ζ(32)]>H2/4 en toda la semirrecta. La serie y sus derivadas necesarias son absolutamente convergentes.
+For N=2, Σμ(m)log(m)m^−32=−M′(32)=−D(32)/ζ(32), so the formula H2 has the correct minus sign. The bound D(32)≤Σm^−31 and 1008D<1/4 give h2≥H2/[2ζ(32)]>H2/4 on the whole half-line. The series and its necessary derivatives are absolutely convergent.
 
-LOCAL conserva la dirección: B<0 y h≥H/4 implican 2hB≤−(a0/2)H(x−1) en la cola. La integración por partes de esa cola tiene correctamente el término positivo (X−1)w(X). La parte adversa del emparejamiento queda localizada en [1,exp((N−1)/30)], sin que se haya demostrado que su magnitud esté compensada.
+LOCAL keeps the direction: B<0 and h≥H/4 imply 2hB≤−(a0/2)H(x−1) on the tail. The integration by parts of that tail correctly has the positive term (X−1)w(X). The adverse part of the pairing is localised in [1,exp((N−1)/30)], without it having been shown that its magnitude is compensated.
 
-## Conclusión de la ronda
+## Conclusion of the round
 
-Resultado nuevo de signo: positividad del kernel Möbius COMPLETO en la región exterior explícita para todo N, y global para N=2. Resultado nuevo de balance: el primer contacto solo no repara el átomo N211,k1. Ninguno prueba una nueva entrada positiva de la forma W que no estuviera cubierta, ni una nueva fila o ventana T. La cota del emparejamiento interior y la magnitud favorable del resto del peine permanecen abiertas; no son sustituidas por las identidades.
+New sign result: positivity of the FULL Möbius kernel on the explicit exterior region for every N, and globally for N=2. New balance result: the first contact alone does not repair the atom N211,k1. Neither proves a new positive entry of the form W that was not covered, nor a new row or window T. The bound on the interior pairing and the favourable magnitude of the rest of the comb remain open; they are not replaced by the identities.

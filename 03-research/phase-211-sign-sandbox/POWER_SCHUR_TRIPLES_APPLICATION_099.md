@@ -1,54 +1,54 @@
-# POWER_SCHUR_TRIPLES_APPLICATION_099 — Triples del resto y cinco nodos anclados
+# POWER_SCHUR_TRIPLES_APPLICATION_099 — Triples of the remainder and five anchored nodes
 
-Estado: **PROVED usando el constructor099 FULL PASS auditado; reproducción independiente root8310 exit0/FULL PASS2048 y hash coincidente.** Se explicita la aplicación exacta del dato global T_h, sin convertir el nodo auxiliar0 en un test admisible. Papers intactos.
+Status: **PROVED using the audited derivation099 FULL PASS; independent reproduction 8310 exit0/FULL PASS2048 and matching hash.** The exact application of the global datum T_h is made explicit, without turning the auxiliary node0 into an admissible test. Papers untouched.
 
-## 1. Entradas y ambas curvaturas
+## 1. Inputs and both curvatures
 
-099 certifica T_h>0 en el compacto de inclinación0<u<=512;097 lo prueba para u>=512 y098 añade el valor positivo del origen. La cadena completa da T_h(x)>0 para todo x>0.089 aporta T_R>0 global y086R''<0. Todos los inputs son de la Phi real, no una herencia abstracta refutada090.
+099 certifies T_h>0 on the slope compact0<u<=512;097 proves it for u>=512 and098 adds the positive value at the origin. The full chain gives T_h(x)>0 for all x>0.089 provides global T_R>0 and086 R''<0. All inputs are from the real Phi, not an abstract inheritance refuted in090.
 
-Usar a=M'(0)>0, g(x)=aR(x)−1=xb(x), h=1/b.090 ya prueba h'>0, g'>0, T_g=a²T_R>0 y todos los pares distintos delkernelG_p definidos positivos.
+Use a=M'(0)>0, g(x)=aR(x)−1=xb(x), h=1/b.090 already proves h'>0, g'>0, T_g=a²T_R>0 and all distinct pairs of the kernel G_p positive definite.
 
-Para P=p² y x=z², las identidades exactas de090 son
+For P=p² and x=z², the exact identities of090 are
 
     R_G(x)=z/G_p(z)=(1/a){(x−P)/[h(x)−h(P)]−Pb(P)},
     S_G(x)=zG_p(z)=a{(x−P)/[g(x)−g(P)]−h(P)}.
 
-El lema de secante recíproca con ancla INTERIOR aplica ahora a f=h y a f=g: ambas derivadas primeras son positivas y ambos T_f estrictamente positivos en toda la semirrecta. Por tanto R_G''<0 y S_G''<0 paraTODOSp,x>0. El puntox=P es removible y el lema da allí H_P''(P)=−T_f(P)/(6f'(P)³)<0. No se omite el ancla.
+The reciprocal secant lemma with INTERIOR anchor now applies to f=h and to f=g: both first derivatives are positive and both T_f strictly positive on the whole half-line. Hence R_G''<0 and S_G''<0 for ALL p,x>0. The point x=P is removable and the lemma gives there H_P''(P)=−T_f(P)/(6f'(P)³)<0. The anchor is not omitted.
 
-082, con paresPD y ambas concavidades estrictas, prueba que TODOS los triples de nodos positivos distintos delkernel K_Gp(z,w)=[G_p(z)+G_p(w)]/(z+w) son PD, paraTODOp>0. Nodos repetidos se agrupan. No se requiere G_p creciente;081 sigue válido.
+082, with PD pairs and both strict concavities, proves that ALL triples of distinct positive nodes of the kernel K_Gp(z,w)=[G_p(z)+G_p(w)]/(z+w) are PD, for ALL p>0. Repeated nodes are grouped. G_p increasing is not required;081 remains valid.
 
-## 2. Congruencia exacta con dos pivotes
+## 2. Exact congruence with two pivots
 
-Extender analíticamente K_M(u,v)=[M(u)+M(v)]/(u+v) al nodo0:
+Extend analytically K_M(u,v)=[M(u)+M(v)]/(u+v) to the node0:
 
     K_M(0,0)=a, K_M(0,z)=M(z)/z.
 
-Fijar p>0,c=M(p)>0,delta=a−c/p>0 y definir para z>0,z!=p
+Fix p>0,c=M(p)>0,delta=a−c/p>0 and define for z>0,z!=p
 
     d_p(z)=[zc−pM(z)]/[c(z+p)],
     F1(z)=c[zM(z)−pc]/[zc−pM(z)],
     r_p=c²/delta=pc²/(pa−c)>0.
 
-Las fórmulas075–077 dan F1(z)=r_p/z+G_p(z). M(z)/z estrictamente decreciente implica que d_p(z) tiene signo z−p: es REAL no nulo, pero no siempre positivo. La congruencia sólo necesita ser real invertible.
+The formulas075–077 give F1(z)=r_p/z+G_p(z). M(z)/z strictly decreasing implies that d_p(z) has the sign of z−p: it is REAL nonzero, but not always positive. The congruence only needs to be real invertible.
 
-El complemento deSchur de la diagonalK_M(p,p)=c/p satisface, por álgebra exacta,
+The Schur complement of the diagonal K_M(p,p)=c/p satisfies, by exact algebra,
 
     S00=delta,
     S0z=−c d_p(z)/z,
     Suv=d_p(u)d_p(v)[F1(u)+F1(v)]/(u+v).
 
-Quitar además la diagonalS00 produce
+Removing in addition the diagonal S00 produces
 
     Suv−S0u S0v/delta
        =d_p(u)d_p(v){K_F1(u,v)−r_p/(uv)}
        =d_p(u)d_p(v)K_Gp(u,v).
 
-No se eliminó un término firmado arbitrariamente: r_p/(uv) es exactamente el rango1 pagado por el segundo pivote. Las dos diagonales pivotantesc/p ydelta son positivas.
+No signed term was arbitrarily removed: r_p/(uv) is exactly the rank1 paid by the second pivot. The two pivot diagonals c/p and delta are positive.
 
-## 3. Alcance de los cinco nodos
+## 3. Scope of the five nodes
 
-Para p,z1,z2,z3 positivos distintos, el bloque ORIGINAL de nodos{0,p,z1,z2,z3} esPD: sus dos complementos anteriores dejan una congruencia real invertible deltripleG_pPD. Repetidos producen la redundancia habitual y PSD.
+For distinct positive p,z1,z2,z3, the ORIGINAL block of nodes{0,p,z1,z2,z3} is PD: its two previous complements leave a real invertible congruence of the PD G_p triple. Repeated nodes produce the usual redundancy and PSD.
 
-El nodo0 corresponde al exponente original1/2 y está FUERA del portador W de exponentes>1. Por tanto esto NO prueba cinco generadores admisibles arbitrarios, ni permite sustituir0 por un nodo positivo libre sin otra prueba. Los cuatro nodos positivos de ese bloque ya estaban cubiertos en su rango admisible por085. El resultado nuevo es control estricto de los triples delresto y de una matriz auxiliar anclada, no nueva coberturaW/T.
+The node0 corresponds to the original exponent1/2 and lies OUTSIDE the W carrier of exponents>1. Hence this does NOT prove five arbitrary admissible generators, nor allow replacing0 by a free positive node without another proof. The four positive nodes of that block were already covered in their admissible range by085. The new result is strict control of the triples of the remainder and of an auxiliary anchored matrix, not new W/T coverage.
 
-No se afirma que T de los datos recíprocos delresto se preserve ni que pueda repetirse el argumento a todos los órdenes. El siguiente nivel requiere un input nuevo y el signo global sigueOPEN. La reproducción independiente root8310 del certificado099 terminó exit0/FULL PASS2048 con hash coincidente.
+It is not claimed that T of the reciprocal data of the remainder is preserved nor that the argument can be repeated to all orders. The next level requires a new input and the global sign remains OPEN. The independent reproduction 8310 of the certificate099 ended exit0/FULL PASS2048 with matching hash.

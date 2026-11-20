@@ -1,23 +1,23 @@
-# POWER_FOUR_TURAN_AUDIT_084 — Auditoría independiente
+# POWER_FOUR_TURAN_AUDIT_084 — Independent audit
 
-Estado: **APROBADO / PROVED como criterio suficiente, falsificador de clase y aplicación exterior.** Fuente `POWER_FOUR_TURAN_084.md` leída íntegramente. Revisor mapa; root revisó independientemente. Papers intactos.
+Status: **APPROVED / PROVED as sufficient criterion, class falsifier and exterior application.** Source `POWER_FOUR_TURAN_084.md` read in full. Reviewed by two independent checks. Papers untouched.
 
-## 1. Identidad y suficiencia global en el intervalo
+## 1. Identity and global sufficiency on the interval
 
-PF-DET tiene signo negativo con la convención083 y el denominador producto(ui+uj)>0. La expansión por los productos fi fj verifica la identidad. Para f'>0,f''<0,T=2f'f'''−3f''²>0, H=(xf)''/f'' tiene H'=−T/f''²<0. Una combinación de1,x,f,xf con cuatro ceros daría tras Rolle dos ceros de f''(c+dH), imposible salvo combinación nula. La cámara de nodos ordenados es conexa; W=−T y la confluencia con Vandermonde/factoriales positivos fijan el signo negativo del determinante para TODOS los nodos, no sólo localmente. Así ambos factores positivos implican detK4>0; los menores hasta3 ya están probados073/080.
+PF-DET has negative sign with the convention083 and the denominator product(ui+uj)>0. The expansion by the products fi fj verifies the identity. For f'>0,f''<0,T=2f'f'''−3f''²>0, H=(xf)''/f'' has H'=−T/f''²<0. A combination of1,x,f,xf with four zeros would give after Rolle two zeros of f''(c+dH), impossible unless the combination is null. The chamber of ordered nodes is connected; W=−T and the confluence with positive Vandermonde/factorials fix the negative sign of the determinant for ALL nodes, not only locally. Thus both positive factors imply detK4>0; the minors up to3 are already proved073/080.
 
-## 2. Falsificador y alcance de clase
+## 2. Falsifier and class scope
 
-El ejemplo R=1+x−x²/16,S=x/R conserva RS=x, R',S'>0,R'',S''<0; M=u/R(u²) tiene las propiedades escalares BASE, g cóncava y b decreciente. Las expresiones de S'' y M'' impresas tienen signo estricto en el intervalo. La descomposición por formas simples da PfAR=−epsilon²V y PfAS=epsilonV/productoRi, de modo que detK4<0 en TODAS las cuádruplas distintas señaladas. Refuta sólo la herencia desde esas propiedades escalares; no se afirma una densidad theta para ese ejemplo ni se falsifica la Phi real/W.
+The example R=1+x−x²/16,S=x/R keeps RS=x, R',S'>0,R'',S''<0; M=u/R(u²) has the scalar properties BASE, g concave and b decreasing. The printed expressions of S'' and M'' have strict sign on the interval. The decomposition by simple forms gives PfAR=−epsilon²V and PfAS=epsilonV/productRi, so that detK4<0 on ALL the indicated distinct quadruples. It refutes only the inheritance from those scalar properties; no theta density is claimed for that example nor is the real Phi/W falsified.
 
-## 3. Fórmulas reales y exterior
+## 3. Real formulas and exterior
 
-Las dos fórmulas REAL-TURAN fueron reproducidas independientemente por derivación simbólica exacta con d/dx=(2u)^−1d/du. Los denominadores positivos, signos del peine y factores16u6/c4 son correctos.
+The two REAL-TURAN formulas were independently reproduced by exact symbolic differentiation with d/dx=(2u)^−1d/du. The positive denominators, signs of the comb and factors16u6/c4 are correct.
 
-Las comparaciones integrales de polygamma incluyen ambos extremos y la suma aritmética COMPLETA queda pagada por Pj<=2^(j+1−A)[1+2/(A−j−2)]. Los majorantes necesarios decrecen desde32; los umbralesA>=128 dan exactamente BOX. En particular la cancelación del racional6/A4 con el término superior de psi3 paga Fupper, y Elower cancela el término−2/A3 antes de pagar P2. No se usan sólo límites.
+The polygamma integral comparisons include both endpoints and the COMPLETE arithmetic sum is paid by Pj<=2^(j+1−A)[1+2/(A−j−2)]. The necessary majorants decrease from32; the thresholdsA>=128 give exactly BOX. In particular the cancellation of the rational6/A4 with the upper term of psi3 pays Fupper, and Elower cancels the term−2/A3 before paying P2. Not only limits are used.
 
-Con D∈(.45,.51),E∈(−.51,−.4),F∈(.8,1.01), las cotas racionales conservadoras de los términos lineales/cuadráticos prueban los cuatro bounds finales. La cota c>1.5 usa psi>=log−1/t, (A−1)P0<1,pi<22/7 y e<87/32; todos con orientación correcta. Por ello NR>.25 y NS>19/4 en TODO A>=128.
+With D∈(.45,.51),E∈(−.51,−.4),F∈(.8,1.01), the conservative rational bounds of the linear/quadratic terms prove the four final bounds. The bound c>1.5 uses psi>=log−1/t, (A−1)P0<1,pi<22/7 and e<87/32; all with correct orientation. Hence NR>.25 and NS>19/4 on ALL A>=128.
 
-## 4. Obligación pendiente
+## 4. Pending obligation
 
-La fuente demuestra un criterio GLOBAL en cada intervalo y verifica sus hipótesis sólo en la cola u>=127.5. El compacto .5<u<127.5 sigue pendiente;085 no está certificado por esta auditoría. La cola de cuatro ya estaba cubierta por053, por lo que no aporta nueva cobertura W/T. No se registran cuatro generadores globales ni órdenes arbitrarios. El criterio es suficiente, no necesario individualmente para cada Pfaffiano.
+The source proves a GLOBAL criterion on each interval and verifies its hypotheses only on the tail u>=127.5. The compact set .5<u<127.5 remains pending;085 is not certified by this audit. The tail of four was already covered by053, so it provides no new W/T coverage. Four global generators or arbitrary orders are not recorded. The criterion is sufficient, not individually necessary for each Pfaffian.

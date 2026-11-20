@@ -1,67 +1,67 @@
-# POWER_THETA_DENSITY_TRANSPORT_089 — Del signo R4 al Turán global
+# POWER_THETA_DENSITY_TRANSPORT_089 — From the R4 sign to global Turán
 
-Estado: **PROVED usando el certificado constructor089 FULL PASS auditado; reproducción independiente root87911 exit0/FULL PASS1024+8192 y hash coincidente.** Este archivo explicita el transporte, separado de las cotas computacionales de `POWER_THETA_DENSITY_COMPACT_089.md`. No nueva cobertura W; papers intactos.
+Status: **PROVED using the audited certificate 089 FULL PASS; independent reproduction 87911 exit0/FULL PASS 1024+8192 and matching hash.** This file makes the transport explicit, separated from the computational bounds of `POWER_THETA_DENSITY_COMPACT_089.md`. No new W coverage; papers untouched.
 
-## 1. Entradas y diferencia
+## 1. Inputs and difference
 
-Se usan073/077/086 y el signo Wt(1,A,B,C)<0 enTODOt>0 obtenido por BRIDGE/certificado089 en0<t<=1 y la prueba analítica088 ent>=1. La entrada nueva sobre086 es un cuarto Wronskiano global; no se hereda de los tres anteriores.087 sigue siendo una comprobación puntual independiente.
+Uses 073/077/086 and the sign Wt(1,A,B,C)<0 at ALL t>0 obtained by BRIDGE/certificate 089 on 0<t<=1 and the analytic proof 088 on t>=1. The new input over 086 is a fourth global Wronskian; it is not inherited from the previous three. 087 remains an independent pointwise check.
 
-Las notaciones son A=p²−q−2p/t,B=p/t,C=(p³−3pq+r)/t, conPhi real y rho=(tPhi,(tPhi)'',−Phi',−Phi''')=tPhi(1,A,B,C).086 da k=B'>0 y J=(A'/B')'>0.
+The notations are A=p²−q−2p/t, B=p/t, C=(p³−3pq+r)/t, with real Phi and rho=(tPhi,(tPhi)'',−Phi',−Phi''')=tPhi(1,A,B,C). 086 gives k=B'>0 and J=(A'/B')'>0.
 
-## 2. Los menores previos y el orden necesario
+## 2. The previous minors and the necessary order
 
-El sistema que se usa para Rolle es **[1,B,A,C]**. Sus Wronskianos iniciales son
+The system used for Rolle is **[1,B,A,C]**. Its initial Wronskians are
 
     W1=1,
     W2=B'=k>0,
     W3=W(1,B,A)=k²J>0,
     W4=W(1,B,A,C)=−W(1,A,B,C)>0.
 
-No se utiliza[1,A,B,C] como sistema inicial: A' no ha sido supuesto positivo. El intercambio de sus dos columnas centrales fija todos los signos.
+[1,A,B,C] is not used as the initial system: A' has not been assumed positive. Exchanging its two central columns fixes all signs.
 
-Rolle ponderado demuestra que un sistema suave con estos Wronskianos iniciales estrictamente positivos es un sistema de Chebyshev extendido. Se divide primero por la función inicial no nula y se deriva; los Wronskianos del sistema reducido son cocientes de los anteriores por potencias positivas. Repetir reduce el número máximo de ceros. Una combinación no trivial de cuatro funciones tiene a lo sumo tres ceros; por tanto el determinante de evaluación no se anula para t1<...<t4. Su signo se fija por el límite confluente y W4>0. Volviendo al orden original y multiplicando filas por tiPhi(ti)>0,
+Weighted Rolle proves that a smooth system with these strictly positive initial Wronskians is an extended Chebyshev system. One first divides by the nonzero initial function and differentiates; the Wronskians of the reduced system are quotients of the previous ones by positive powers. Repeating reduces the maximal number of zeros. A nontrivial combination of four functions has at most three zeros; therefore the evaluation determinant does not vanish for t1<...<t4. Its sign is fixed by the confluent limit and W4>0. Returning to the original order and multiplying rows by tiPhi(ti)>0,
 
     det[rho_j(t_i)]_(i,j=1)^4<0
-    para TODO0<t1<t2<t3<t4.
+    for ALL 0<t1<t2<t3<t4.
 
-Esto es un signo de TODOS los nodos de densidad, no sólo del jet confluente.
+This is a sign for ALL density nodes, not only for the confluent jet.
 
-## 3. Transformación integral estricta
+## 3. Strict integral transformation
 
-Sinh(ut) es estrictamente TP4 en nodos positivos: expandir su serie con coeficientes positivos y aplicar Cauchy–Binet produce determinantes de monomios positivos; el término de exponentes1,3,5,7 es estrictamente positivo. La positividad de determinantes generalizados de monomios se demuestra por Rolle ponderado y sus Wronskianos positivos.
+Sinh(ut) is strictly TP4 at positive nodes: expanding its series with positive coefficients and applying Cauchy–Binet produces determinants of positive monomials; the term with exponents 1,3,5,7 is strictly positive. Positivity of generalized determinants of monomials is proved by weighted Rolle and their positive Wronskians.
 
-Las transformadas bilaterales de rho son
+The bilateral transforms of rho are
 
     (Z',u²Z',uZ,u³Z).
 
-Integrar por partes enTODA R elimina bordes por supercolas y evita un extremo artificial en0. Por imparidad, son2∫sinh(ut)rho(t)dt ensemirrecta. Andreief, expansión finita y Fubini absolutamente convergente, da
+Integrating by parts over ALL of R eliminates boundary terms by the supertails and avoids an artificial endpoint at 0. By oddness, they are 2∫sinh(ut)rho(t)dt on the half-line. Andreief, finite expansion and absolutely convergent Fubini, gives
 
     det[Z'(ui),ui²Z'(ui),uiZ(ui),ui³Z(ui)]<0
 
-para todos los nodos positivos distintos ordenados. El factor2⁴ es positivo; el4! de Andreief se cancela al restringir a la cámara ordenada. Las densidades pueden ser firmadas: cada término de la expansión está dominado por productos de integrales de |rhoj|exp(Ut), finitas por sus colas. No se supone que cada densidad sea positiva.
+for all ordered distinct positive nodes. The factor 2⁴ is positive; the 4! of Andreief cancels when restricting to the ordered chamber. The densities may be signed: each term of the expansion is dominated by products of integrals of |rhoj|exp(Ut), finite by their tails. It is not assumed that each density is positive.
 
-Dividir por Z'(ui)>0 da det[1,ui²,R(ui²),ui²R(ui²)]<0. Esto prueba signos de PfaffianosR4 en todos los nodos, pero para la desigualdad puntual estricta se necesita el siguiente paso confluente.
+Dividing by Z'(ui)>0 gives det[1,ui²,R(ui²),ui²R(ui²)]<0. This proves signs of R4 Pfaffians at all nodes, but for the strict pointwise inequality the next confluent step is needed.
 
-## 4. Turán puntual global
+## 4. Global pointwise Turán
 
-Conlambda=u² y L(lambda,t)=sinh(sqrt(lambda)t)/sqrt(lambda), el kernel de filas derivadas0,1,2,3 es estrictamente TP4. Cauchy–Binet aplicado a L=Σlambda^m t^(2m+1)/(2m+1)! tiene Wronskianos de monomios enlambda positivos y determinantes de monomios ent positivos; el término m0,1,2,3 fija la estrictitud.
+With lambda=u² and L(lambda,t)=sinh(sqrt(lambda)t)/sqrt(lambda), the kernel with derived rows 0,1,2,3 is strictly TP4. Cauchy–Binet applied to L=Σlambda^m t^(2m+1)/(2m+1)! has positive Wronskians of monomials in lambda and positive determinants of monomials in t; the term m 0,1,2,3 fixes strictness.
 
-Definir
+Define
 
     f=(Z'/u,uZ',Z,u²Z)
       =2∫L(lambda,t)rho(t)dt
       =f1(1,lambda,R(lambda),lambda R(lambda)), f1=Z'/u>0.
 
-Las derivadas hastatres bajo la integral son legítimas en compactos delambda>0 por dominación exponencial uniforme. Andreief confluente y el signo global de densidades dan W(f)<0. La regla de Wronskianos por factor común da exactamente
+Derivatives up to three under the integral are legitimate on compact subsets of lambda>0 by uniform exponential domination. Confluent Andreief and the global density sign give W(f)<0. The Wronskian rule for a common factor gives exactly
 
     W(f)=f1⁴W(1,lambda,R,lambda R)
         =f1⁴[3(R'')²−2R'R''']
         =−f1⁴T_R.
 
-Se concluye **T_R=2R'R'''−3(R'')²>0 para TODOlambda>0**. No se infiere una desigualdad puntual estricta de sólo determinantes distintos.
+One concludes **T_R=2R'R'''−3(R'')²>0 for ALL lambda>0**. A strict pointwise inequality is not inferred from distinct determinants alone.
 
-## 5. Consecuencia090 y límites
+## 5. Consequence 090 and limits
 
-090 ya auditado se aplica ahora globalmente aR: R esC3hasta0 conR'0>0 por073/086. Da h=1/b estrictamente cóncava paraTODASx>0. Con086g_*=xb estrictamente cóncava y las fórmulas078, todos los pares distintos del resto regularizado Gp son PD para TODOp>0. El punto removible x=P se trata por los errores de tangente de segundo orden; no se presupone Gp creciente, por lo que081 no resulta contradicha.
+The already audited 090 now applies globally to R: R is C3 up to 0 with R'0>0 by 073/086. It gives h=1/b strictly concave for ALL x>0. With 086 g_*=xb strictly concave and the formulas 078, all distinct pairs of the regularized remainder Gp are PD for ALL p>0. The removable point x=P is treated by the second-order tangent errors; Gp increasing is not presupposed, so 081 is not contradicted.
 
-Esto no demuestra la concavidad de ambos datos recíprocos del restoGp, sus desigualdadesTurán ni preservación por un segundo pasoSchur. No se transportaS4 aquí, ni cinco/todos los órdenes, ni nuevaW/T. Cuatro generadores siguen probados independientemente085. La reproducción independiente root87911 del certificado089 terminó exit0/FULL PASS1024+8192, con hash coincidente.
+This does not prove the concavity of both reciprocal data of the remainder Gp, its Turán inequalities nor preservation by a second Schur step. S4 is not transported here, nor five/all orders, nor new W/T. Four generators remain independently proved in 085. The independent reproduction 87911 of the certificate 089 finished exit0/FULL PASS 1024+8192, with matching hash.

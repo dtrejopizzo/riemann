@@ -1,30 +1,30 @@
 # POWER CELL AUDIT 024
 
-Estado: CELL_BALANCE024 y certificado único de primera celda129 APROBADOS. Papers intactos.
+Status: CELL_BALANCE024 and the single certificate of first cell129 APPROVED. Papers untouched.
 
-## 1. Criterio integrado — APROBADO
+## 1. Integrated criterion — APPROVED
 
-Revisado `POWER_CELL_BALANCE_024.md`. La definición S_N(n)=H_(n−1)∫J−log(n)J(n) conserva los saltos y pendientes de B; la suma absoluta es −F_N/2. No se usa esa identidad como supuesto de signo.
+Reviewed `POWER_CELL_BALANCE_024.md`. The definition S_N(n)=H_(n−1)∫J−log(n)J(n) keeps the jumps and slopes of B; the absolute sum is −F_N/2. That identity is not used as a sign assumption.
 
-La identidad diferencial J(x)=xJ(n)/n+x∫_x^nK(t)t^−2dt, integrada en el triángulo finito, produce exactamente LOCAL con el factor H/2 y peso 1−(n−1)²/t². El peso no negativo integra a1/n. Así BUFFER conserva toda la parte adversa, sin hipótesis de signo sobre J o K. El criterio J(n)≥0 y sup K^-≤4aJ(n), a=3/4−log2, implica S≥0 porque b_n≥a y H/(2n)≤1/4. No están demostradas esas hipótesis para todas las celdas.
+The differential identity J(x)=xJ(n)/n+x∫_x^nK(t)t^−2dt, integrated over the finite triangle, produces exactly LOCAL with the factor H/2 and weight 1−(n−1)²/t². The nonnegative weight integrates to1/n. Thus BUFFER keeps the whole adverse part, with no sign hypothesis on J or K. The criterion J(n)≥0 and sup K^-≤4aJ(n), a=3/4−log2, implies S≥0 because b_n≥a and H/(2n)≤1/4. These hypotheses are not proved for all cells.
 
-## 2. Exterior e interfaz exacta — APROBADOS
+## 2. Exterior and exact interface — APPROVED
 
-OUTER020 implica h≥H/4 en toda la cola x≥exp((N−1)/30), de donde J(n)≥w(n)/4 y J es decreciente en cada celda enteramente exterior. Por tanto OUT-CELL y su mejora por H−log n son correctas. Sólo se localizan posibles celdas adversas a una región finita por cada N; no se controla automáticamente su balance.
+OUTER020 implies h≥H/4 on the whole tail x≥exp((N−1)/30), whence J(n)≥w(n)/4 and J is decreasing on each entirely exterior cell. Hence OUT-CELL and its improvement via H−log n are correct. Possible adverse cells are only localized to a finite region for each N; their balance is not automatically controlled.
 
-La recurrencia31Q−Q′=P tiene coeficientes positivos y genera T(x)=x^−31Q(log x)=∫_x∞w. El cambio y=mx en ∫_1²w(mx)dx produce correctamente el factor m^−32 en la interfaz de suma Möbius. La fórmula de J(2) conserva2^−32. No falta un jacobiano.
+The recurrence31Q−Q′=P has positive coefficients and generates T(x)=x^−31Q(log x)=∫_x∞w. The change y=mx in ∫_1²w(mx)dx correctly produces the factor m^−32 in the Möbius-sum interface. The formula for J(2) keeps2^−32. No Jacobian is missing.
 
-## 3. Corpus y alcance
+## 3. Corpus and scope
 
-La distinción relativa a023 es un presupuesto integrado explícito que tolera K negativo, no una resurrección de K≥0 universal. Las identidades Möbius y primitivas son antecedentes; la nueva desigualdad local cuantifica un margen y requiere cotas reales de sus términos. La identidad W/C0=ARCH_sharp/C0+2ΣS conserva el déficit arquimediano. Ni F≤0 ni una celda favorable implican W≥0 o una ventana nueva T.
+The distinction relative to023 is an explicit integrated budget tolerating negative K, not a resurrection of universal K≥0. The Möbius and primitive identities are antecedents; the new local inequality quantifies a margin and requires real bounds on its terms. The identity W/C0=ARCH_sharp/C0+2ΣS keeps the archimedean deficit. Neither F≤0 nor a favorable cell implies W≥0 or a new window T.
 
 
-## 4. Primera celda129 — APROBADA
+## 4. First cell129 — APPROVED
 
-Revisados `POWER_CELL_TEST_024.md` y `tools/power_cell_test_024_verify.py`. Ejecución independiente PASS: 31/100<∫_1²K C_B<8/25, 33/100<S129(2)<1/3 y 1/2<∫_1²K/x²<3/5. El cálculo es racional con cola completa; no usa cuadratura.
+Reviewed `POWER_CELL_TEST_024.md` and `tools/power_cell_test_024_verify.py`. Independent run PASS: 31/100<∫_1²K C_B<8/25, 33/100<S129(2)<1/3 and 1/2<∫_1²K/x²<3/5. The computation is rational with complete tail; it uses no quadrature.
 
-La integración por partes da exactamente ∫K C_B=∫J−(3/4)J(2), usando el límite izquierdo del peso en2, y ∫K/x²=J(1)−J(2)/2. El salto de la representación global en2 no se elimina: el valor puntual del peso no cambia esta integral ordinaria. S(2)=∫J−log2 J(2) es otra asignación de borde y no debe sumarse como un beneficio independiente al primero.
+Integration by parts gives exactly ∫K C_B=∫J−(3/4)J(2), using the left limit of the weight at2, and ∫K/x²=J(1)−J(2)/2. The jump of the global representation at2 is not eliminated: the pointwise value of the weight does not change this ordinary integral. S(2)=∫J−log2 J(2) is another boundary assignment and must not be added as a benefit independent of the first.
 
-El script comprueba31Q−Q′=P coeficiente a coeficiente. Sus integrales finitas y extremos usan los factores m^−32,2^−31 y2^−32 correctos. La factorización de μ y el evaluador intervalar exterior son los ya auditados022/023. Para cada m, w(mx)>0 decreciente da ∫_1²w(mx)dx≤w(m) y w(2m)≤w(m). Por tanto cada error de las tres combinaciones es menor que2T_P. El mayorante positivo por las integrales desde64 cubre TODOS m≥65 y es menor que10^−10. No se supone signo del resto Möbius.
+The script checks31Q−Q′=P coefficient by coefficient. Its finite integrals and endpoints use the correct factors m^−32,2^−31 and2^−32. The factorization of μ and the outward interval evaluator are those already audited022/023. For each m, decreasing w(mx)>0 gives ∫_1²w(mx)dx≤w(m) and w(2m)≤w(m). Hence each error of the three combinations is less than2T_P. The positive majorant via the integrals from64 covers ALL m≥65 and is less than10^−10. No sign of the Möbius remainder is assumed.
 
-La negatividad K129(1)<0 es compatible con estos promedios positivos y, por continuidad, obliga a que K sea positivo en algún punto interior. No se deduce número de transiciones. El beneficio de ERR de esta celda no determina ERR total ni W. Las otras celdas y el déficit ARCH_sharp siguen pendientes en esta ronda; no se incorpora aquí ninguna construcción posterior.
+The negativity K129(1)<0 is compatible with these positive averages and, by continuity, forces K to be positive at some interior point. No number of transitions is deduced. The ERR benefit of this cell does not determine total ERR nor W. The other cells and the ARCH_sharp deficit remain pending in this round; no later construction is incorporated here.

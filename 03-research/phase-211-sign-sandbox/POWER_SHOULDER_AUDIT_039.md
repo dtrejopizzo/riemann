@@ -1,31 +1,31 @@
 # POWER SHOULDER AUDIT 039
 
-Estado: INFINITE_SHOULDER039 APROBADO. Papers intactos.
+Status: INFINITE_SHOULDER039 APPROVED. Papers untouched.
 
-## 1. Corpus y diferencia
+## 1. Corpus and difference
 
-Reconsultados índice de rutas, grid y crucigrama; contrastados UNIFORM_CUTOFF026, ENERGY_GROUP037 y SIGNED_MOMENTS038.026 controlaba el inverso compensado K mediante un corte de grado;038 conservó el producto firmado FINITO con un resto Fourier. La diferencia039 es una desigualdad para el producto INFINITO completo en sigma>1, y por tanto elimina la suma coprima omitida en esa región. No se llama nueva a la identidad Euler ni se traslada un resultado de K a h sin prueba.
+Reconsulted routes index, grid and crossword; contrasted UNIFORM_CUTOFF026, ENERGY_GROUP037 and SIGNED_MOMENTS038.026 controlled the compensated inverse K via a degree cut;038 kept the FINITE signed product with a Fourier remainder. The difference039 is an inequality for the full INFINITE product in sigma>1, and therefore eliminates the omitted coprime sum in that region. The Euler identity is not called new nor is a result for K transferred to h without proof.
 
-## 2. Normalizaciones y aritmética infinita — APROBADAS
+## 2. Normalizations and infinite arithmetic — APPROVED
 
-Leídos `POWER_INFINITE_SHOULDER_039.md` y `tools/power_infinite_shoulder_039_verify.py`; ejecución independiente PASS. Las razones h/H yK/G conservan los jacobianos y el factorn^−1/2. El perfil inclinado con c1/2 o3/2 y sigma=v+1/2 produce exactamenteFULL. La extensión izquierda puede ser firmada y no se considera una probabilidad.
+Read `POWER_INFINITE_SHOULDER_039.md` and `tools/power_infinite_shoulder_039_verify.py`; independent run PASS. The ratios h/H andK/G keep the Jacobians and the factorn^−1/2. The tilted profile with c1/2 or3/2 and sigma=v+1/2 produces exactlyFULL. The left extension may be signed and is not considered a probability.
 
-La cota psi≤2x está demostrada: el binomio central controla psi(2n)−psi(n); la inducción con n=ceil(M/2) funciona para M≥6 y las bases1..5 se dominan por Mlog5<2M. Pasar a floor x es legítimo. Las integraciones de A yB son absolutas; paraB se descarta primero un término negativo antes de insertar psi superior. Esto evita un error con kernel de signo cambiante. A≤5/delta yB≤5/delta² valen en todo v≤2.
+The bound psi≤2x is proved: the central binomial controls psi(2n)−psi(n); the induction with n=ceil(M/2) works for M≥6 and the bases1..5 are dominated by Mlog5<2M. Passing to floor x is legitimate. The integrations of A andB are absolute; forB a negative term is discarded first before inserting the upper bound of psi. This avoids an error with a sign-changing kernel. A≤5/delta andB≤5/delta² hold for all v≤2.
 
-Todos los productos, momentos y la rama logarítmica centrada convergen absolutamente en sigma>1. f es acotado y su transformada integrable;Σn^−sigma justifica Fubini infinito. No se aplica Jensen firmado. El multiplicador y su resta de la traslación−A conservan todos los enteros Möbius.
+All products, moments and the centred logarithmic branch converge absolutely in sigma>1. f is bounded and its transform integrable;Σn^−sigma justifies infinite Fubini. Signed Jensen is not applied. The multiplier and its subtraction of the shift−A keep all the Möbius integers.
 
-## 3. Fourier uniforme y argumento físico — APROBADOS
+## 3. Uniform Fourier and physical argument — APPROVED
 
-La densidad positiva auxiliar tiene varianza2N(u²+v²)/(u²−v²)². Riccati da y*=2dv/(a_v+q′), y la separación respecto t_v≤4u²/(u²−4)². El control de variación y Chebyshev justifican el lower en t_v, no en un punto arbitrario. El factor(c+v) se absorbe en el normalizador y deja el mismo prefactor<√N/2 de038. La transformada tiene(c+v−iξ) y denominador a_v+ξ²+2ivξ; beta_v y los extremos uniformes son correctos. Las envolventes centrales y de cola12000/65 permanecen válidas.
+The auxiliary positive density has variance2N(u²+v²)/(u²−v²)². Riccati gives y*=2dv/(a_v+q′), and the separation from t_v≤4u²/(u²−4)². The variation control and Chebyshev justify the lower bound at t_v, not at an arbitrary point. The factor(c+v) is absorbed into the normalizer and leaves the same prefactor<√N/2 of038. The transform has(c+v−iξ) and denominator a_v+ξ²+2ivξ; beta_v and the uniform endpoints are correct. The central and tail envelopes12000/65 remain valid.
 
-En N≥4L²,L1000, t_v>A porqueL²>5·992. El argumento t_v−A es POSITIVO aunque el desplazamiento relativo sea negativo. Integrar q≥v−M s y controlar el cociente c+q da pérdida total≤15u²/L². El upper usa q(t_v)−v≤Mv/(u²+v²) y da exp(5/L²). Ambos errores de Fourier son≤.06 y<.005, con la cola estimada por el tercer término positivo de la exponencial. Quedan aprobadas las razones completas entre(.9)U_sigma y(1.1)U_sigma, para ambos c.
+For N≥4L²,L1000, t_v>A becauseL²>5·992. The argument t_v−A is POSITIVE even if the relative shift is negative. Integrating q≥v−M s and controlling the quotient c+q gives total loss≤15u²/L². The upper bound uses q(t_v)−v≤Mv/(u²+v²) and gives exp(5/L²). Both Fourier errors are≤.06 and<.005, with the tail estimated by the third positive term of the exponential. The full ratios between(.9)U_sigma and(1.1)U_sigma are approved, for both c.
 
-## 4. Toda la cola y comparación con026 — APROBADAS
+## 4. The whole tail and comparison with026 — APPROVED
 
-v→t_v es estrictamente creciente, así los centros parametrizados cubren TODO[T_N,t_2], no una lista de puntos. Después de t_2, q≥2 yq′<M<5/4 implican la logderivada de dilatación<−2 para ambos inversos. La suma absoluta de n≥2 es entonces<3/4; ambos cocientes son>1/4. Así h_N yK_N son positivos para TODA x≥exp T_N y TODO N≥4,000,000.
+v→t_v is strictly increasing, so the parametrized centres cover ALL of[T_N,t_2], not a list of points. After t_2, q≥2 andq′<M<5/4 imply the dilation logderivative<−2 for both inverses. The absolute sum of n≥2 is then<3/4; both quotients are>1/4. Thus h_N andK_N are positive for ALL x≥exp T_N and ALL N≥4,000,000.
 
-La expansión T_N=d/992+(1985L/992²)√N+O(1) es correcta. Como v_N≤1, T_N≤2d/(u²−1)<d/330; los dos cortes anteriores deK026 son>d/330. La comparación se hace con el MISMOK, y el resultado también mejora el corte previo deh020. No se confunde ese hecho con positividad de W.
+The expansion T_N=d/992+(1985L/992²)√N+O(1) is correct. Since v_N≤1, T_N≤2d/(u²−1)<d/330; the two previous cuts ofK026 are>d/330. The comparison is made with the SAMEK, and the result also improves the previous cut ofh020. That fact is not confused with positivity of W.
 
-## 5. Alcance
+## 5. Scope
 
-Es nuevo signo del inverso COMPLETO en un hombro energético real y toda su cola, no sólo un grupo finito o su valor absoluto. La región sigma1 crítica y el interior restante no están cubiertos. La cola de ERR es favorable al emparejarh conB<0, pero no se ha demostrado compensación cuantitativa del interior ni de ARCH_sharp. No hay nueva filaW, ventanaT o cierre global. Root coincide independientemente en la prueba y el verificador.
+It is a new sign of the FULL inverse on a real energy shoulder and its whole tail, not only a finite group or its absolute value. The critical region sigma1 and the remaining interior are not covered. The tail of ERR is favourable when pairingh withB<0, but quantitative compensation of the interior or of ARCH_sharp has not been proved. There is no new W row, windowT or global closure. A second independent review of the proof and the verifier agrees.

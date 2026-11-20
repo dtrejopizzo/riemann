@@ -1,17 +1,17 @@
-# Bastan muestras buenas dispersas en el bloque de dos conteos
+# Scattered good samples in the block of two counts suffice
 
-Tomar S y W de 240–241. Para t grande fijar h=exp(−(log t)²), N=ceil(t²), δ=h/N y n=ceil(t/(log t)²). En los N nodos k=0,...,N−1 medir
+Take S and W from 240–241. For large t fix h=exp(−(log t)²), N=ceil(t²), δ=h/N and n=ceil(t/(log t)²). At the N nodes k=0,...,N−1 measure
 
     V_k=exp(−t/2)|S(t+(k+1)δ)−exp(δ)S(t+kδ)|.
 
-Si V_(n) es el n-ésimo menor valor (incluyendo empates), entonces
+If V_(n) is the n-th smallest value (including ties), then
 
     lim log(1+V_(n))/t = B.
 
-En particular si B>0 y 0<ε<B, en cada bloque suficientemente lejano a lo sumo n−1 nodos satisfacen V_k≤exp((B−ε)t). La colocación de esos nodos es libre. El bloque físico mide aproximadamente X exp(−(log log X)²) con X=exp(t); el soporte de cada peso W conserva su anchura logarítmica fija.
+In particular if B>0 and 0<ε<B, in each sufficiently distant block at most n−1 nodes satisfy V_k≤exp((B−ε)t). The placement of those nodes is free. The physical block measures approximately X exp(−(log log X)²) with X=exp(t); the support of each weight W keeps its fixed logarithmic width.
 
-**Máximo del bloque.** La primera diferencia elimina el principal exactamente. El argumento de 241 para el máximo se aplica con este paso: log(1/δ)=O(log²t)=o(t), G=t(log t)³, Gδ=o(1) y M log(1/δ)=o(t) para el M≤t^(q+o(1)) del filtro, q<1. Además M<N. Para cualquier cero fijo β₀>1/2 se puede escoger σ estrictamente entre ambos. El multiplicador de primera diferencia del modo elegido es comparable a δ y conserva su exponente. La misma separación de ceros y potencias de 241 prueba log(1+max V_k)/t→B, incluso para esta elección de h más corta.
+**Maximum of the block.** The first difference eliminates the main term exactly. The argument of 241 for the maximum applies with this step: log(1/δ)=O(log²t)=o(t), G=t(log t)³, Gδ=o(1) and M log(1/δ)=o(t) for the M≤t^(q+o(1)) of the filter, q<1. Moreover M<N. For any fixed zero β₀>1/2 one can choose σ strictly between both. The first-difference multiplier of the chosen mode is comparable to δ and keeps its exponent. The same separation of zeros and powers as in 241 proves log(1+max V_k)/t→B, even for this shorter choice of h.
 
-**De n nodos al máximo.** Interpolar la función real sin módulo g(v)=S(t+v+δ)−exp(δ)S(t+v) en los n nodos de menor módulo. En [0,h] cada numerador elemental de Lagrange tiene módulo ≤h, y cada separación entre nodos es ≥δ. Por tanto el valor absoluto del interpolante es ≤n N^(n−1)exp(t/2)V_(n), donde log(n N^(n−1))=o(t). Para la derivada de orden n del conteo basta derivar las primeras n cajas de W y reservar otra caja para la norma suprema. Como 1/a_j≤Cj², esto cuesta exp(O(n log(n+2))). Los primos que intervienen cumplen p≤exp(t+1) para t grande y la suma de sus pesos log p es ≤exp(t+O(log t)). El resto real de interpolación es así ≤exp(t+O(n log(n+2)+log t))h^n/n!≤exp(o(t)), uniformemente en el bloque. Tras dividir por exp(t/2), el máximo cuesta a lo sumo exp(o(t))V_(n)+exp(−t/2+o(t)). La desigualdad inversa V_(n)≤max V_k concluye.
+**From n nodes to the maximum.** Interpolate the real function without modulus g(v)=S(t+v+δ)−exp(δ)S(t+v) at the n nodes of smallest modulus. On [0,h] each elementary Lagrange numerator has modulus ≤h, and each separation between nodes is ≥δ. Hence the absolute value of the interpolant is ≤n N^(n−1)exp(t/2)V_(n), where log(n N^(n−1))=o(t). For the derivative of order n of the count it suffices to differentiate the first n boxes of W and reserve another box for the sup norm. Since 1/a_j≤Cj², this costs exp(O(n log(n+2))). The primes involved satisfy p≤exp(t+1) for large t and the sum of their weights log p is ≤exp(t+O(log t)). The real interpolation remainder is thus ≤exp(t+O(n log(n+2)+log t))h^n/n!≤exp(o(t)), uniformly on the block. After dividing by exp(t/2), the maximum costs at most exp(o(t))V_(n)+exp(−t/2+o(t)). The reverse inequality V_(n)≤max V_k concludes.
 
-**Qué se ganó y qué falta.** Para establecer B=0 basta exhibir en una subsucesión de bloques n nodos cualesquiera de tamaño V_k≤exp(o(t)). Su fracción n/N tiende a cero. La interpolación da estabilidad frente a la elección de posiciones y el resultado de 241 sólo controlaba el máximo. No se ha demostrado la existencia de esos n nodos buenos en bloques arbitrariamente lejanos. Los cruces de 237 son para otra suma y no aportan ese conteo.
+**What was gained and what is missing.** To establish B=0 it suffices to exhibit along a subsequence of blocks any n nodes of size V_k≤exp(o(t)). Their fraction n/N tends to zero. Interpolation gives stability with respect to the choice of positions and the result of 241 only controlled the maximum. The existence of those n good nodes in arbitrarily distant blocks has not been proved. The crossings of 237 are for another sum and do not provide that count.

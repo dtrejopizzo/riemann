@@ -1,47 +1,47 @@
-# POWER_EXACT_H_GLOBAL_AUDIT_099 — Auditoría independiente
+# POWER_EXACT_H_GLOBAL_AUDIT_099 — Independent audit
 
-Estado: **APROBADO / PROVED con constructor98529 exit0/FULL PASS2048**. Reproducción independiente root8310 exit0/FULL PASS2048 con el mismo hash y resto exacto; no se duplicó el proceso. Fuente `POWER_EXACT_H_GLOBAL_DESIGN_099.md` final leída; diseño y literal auditados ANTES de ejecutar. Hash comprobado localmente:
+Status: **APPROVED / PROVED with run98529 exit0/FULL PASS2048**. Independent reproduction run8310 exit0/FULL PASS2048 with the same hash and exact remainder; the process was not duplicated. Final source `POWER_EXACT_H_GLOBAL_DESIGN_099.md` read; design and literal text audited BEFORE executing. Hash checked locally:
 
     6712eb8542b4d8b7e0836260fba831cd44ccaffb7f1ea321df0a0a32668d51d7
 
-Papers intactos. La aplicación se explicita en `POWER_SCHUR_TRIPLES_APPLICATION_099.md`.
+Papers untouched. The application is made explicit in `POWER_SCHUR_TRIPLES_APPLICATION_099.md`.
 
-## 1. Entiridad y cancelaciones exactas
+## 1. Entireness and exact cancellations
 
-E es un múltiplo constante positivo de Z; a=E''0/E0 usa la paridad EXACTA, no un valor numérico impuesto deE'0. U=E'/u y V=(aE−U)/u² son enteras pares en u y enteras en x=u². La relación aE0=E''0 elimina el término constante deV, sin afirmar h=U/V entera ni E/V libres de ceros complejos.
+E is a positive constant multiple of Z; a=E''0/E0 uses the EXACT parity, not an imposed numerical value ofE'0. U=E'/u and V=(aE−U)/u² are entire and even in u and entire in x=u². The relation aE0=E''0 eliminates the constant term ofV, without claiming h=U/V entire nor E/V free of complex zeros.
 
-NUMx=−W(V,xV,U,xU)=2W01W03+6W01W12−3W02²=V4Th. Se reprodujeron independientemente las dos identidades PS=E4NS y PC=E4Ch por álgebra exacta; cuentan18/11monomios y sumas absolutas91/51. De DIRECT097 se obtiene Ntilde=(16/a)u15NUMx(u²). Por tanto S=Ntilde/u15 es ENTERA y PAR. V0=−E0b y098Th0=12aH3/b4 dan S0=192E0⁴H3. No se presume removibilidad de un cociente meromorfo ajeno.
+NUMx=−W(V,xV,U,xU)=2W01W03+6W01W12−3W02²=V4Th. The two identities PS=E4NS and PC=E4Ch were independently reproduced by exact algebra; they count18/11monomials and absolute sums91/51. From DIRECT097 one obtains Ntilde=(16/a)u15NUMx(u²). Hence S=Ntilde/u15 is ENTIRE and EVEN. V0=−E0b and098Th0=12aH3/b4 give S0=192E0⁴H3. Removability of an unrelated meromorphic quotient is not presumed.
 
-## 2. Cauchy y Schwarz a través de0
+## 2. Cauchy and Schwarz through0
 
-Positividad/paridadtheta paga |Ej(z)|<=2j!E(c+2) en el disco|z−c|<=1. M<3 hasta514 se deriva de un ancla gamma completaA516 y monotonía073; e6<512 paga |Ej|/Ec<1024j!<2^15. Con|z|<2^10,a<8, los polinomios cuárticos dan RAW2^121 sin dividir por E(z).
+Positivity/paritytheta pays |Ej(z)|<=2j!E(c+2) on the disc|z−c|<=1. M<3 up to514 is derived from a complete gamma anchorA516 and monotonicity073; e6<512 pays |Ej|/Ec<1024j!<2^15. With|z|<2^10,a<8, the quartic polynomials give RAW2^121 without dividing by E(z).
 
-Si|z|>=1/4, dividir el factor conocido da Sbound2^151Ec4. En el círculo|z|1/4, Ec>=E0, E(5/4)/E0<e^(15/4)<64 y |Ej|/Ec<128j!<2^12. Loscoeficientes pagan Ntilde<2^57Ec4. Aplicar máximo a S ya removida da S<2^87Ec4 dentro. Esto cubre incluso discos que cruzanReu0, sin un supuesto de discos libres de ceros de E.
+If|z|>=1/4, dividing the known factor gives Sbound2^151Ec4. On the circle|z|1/4, Ec>=E0, E(5/4)/E0<e^(15/4)<64 and |Ej|/Ec<128j!<2^12. The coefficients pay Ntilde<2^57Ec4. Applying the maximum principle to the already removed S gives S<2^87Ec4 inside. This covers even discs that crossReu0, without an assumption of discs free of zeros of E.
 
-## 3. Gauge fijado ANTES de datos
+## 3. Gauge fixed BEFORE data
 
-La revisión detectó dos pérdidas estructurales: u15 y crecimientoE4. Se retiraron algebraicamente ANTES de ejecutar; no hubo FAIL ni datos de centros para ajustar el signo. La corrección final usa Gc=exp[−4M(c)(u−c)]S/Ec4. El FACTOR exponencial es positivo en reales; el signo deGc se decide por el certificado, no se presupone.
+The review detected two structural losses: u15 and growthE4. They were removed algebraically BEFORE executing; there was no FAIL nor centre data to tune the sign. The final correction uses Gc=exp[−4M(c)(u−c)]S/Ec4. The exponential FACTOR is positive on the reals; the sign ofGc is decided by the certificate, not presupposed.
 
-M(c)<3 y radio1 amplifican el bound sólo pore12<2^18, así B2^169. En reales073M'<=a<1 da0<=logE(c+s)−logEc−Mcs<=as²/2; el factorE4gauge permanece entre1 yexp1/32 en elpanel. Es una justificación de representación, no una prueba anticipada del signo restante.
+M(c)<3 and radius1 amplify the bound only bye12<2^18, so B2^169. On the reals073M'<=a<1 gives0<=logE(c+s)−logEc−Mcs<=as²/2; the gauge factorE4 stays between1 andexp1/32 on thepanel. It is a justification of representation, not an anticipated proof of the remaining sign.
 
-RestoTOTALTaylor104:2^169·8^-105/(1−1/8)=1/78052608194857180995375013954269265270931456<2^-145. Es correcto para Gc/Ec4 con el normalizador constante exacto; su incertidumbre se conserva por intervalos.
+TOTAL Taylor remainder104:2^169·8^-105/(1−1/8)=1/78052608194857180995375013954269265270931456<2^-145. It is correct for Gc/Ec4 with the exact constant normalizer; its uncertainty is kept by intervals.
 
-## 4. Literal, precisión y corrida
+## 4. Literal text, precision and run
 
-1024bits/cap109 dejan Ej4prec105; PS/PC/Ntilde/u15 y gauge conservan todos los coeficientes0..104. La división es local en centros positivos, nunca0/0. Los Ej proceden de la serieE ORIGINAL normalizada sólo por la CONSTANTE Ec; no se derivó E ya gauged. M(c)=raw1/raw0 es puntual. El gauge se aplica al final.
+1024bits/cap109 leave Ej4prec105; PS/PC/Ntilde/u15 and gauge keep all coefficients0..104. The division is local at positive centres, never0/0. The Ej come from the ORIGINAL series E normalized only by the CONSTANT Ec; the already gauged E was not differentiated. M(c)=raw1/raw0 is pointwise. The gauge is applied at the end.
 
-El nuevo a se calcula de un jet de orden2 a1024bits, se comprueba contenido en098 y se conserva estrecho (radio<5.69e−306). Esto evita amplificar el intervalo antiguo al dividiru15. Losotros valores de la bola no tienen porqué definir funciones removibles: el bound analítico corresponde al valorreal exacto seleccionado, que está encerrado por las operaciones intervalares.
+The new a is computed from a jet of order2 at1024bits, checked to be contained in098 and kept narrow (radius<5.69e−306). This avoids amplifying the old interval when dividing byu15. The other values of the ball need not define removable functions: the analytic bound corresponds to the exact selected real value, which is enclosed by the interval operations.
 
-Los2048centros(2j+1)/8 y h1/8 cubren EXACTAMENTE[0,512]. Finitud/prec105 y lowerGc0−sum|Gck|h^k−REM>0 se exigenenCADA panel. El constructor98529 terminó exit0/FULL PASS2048 sin cambiar script/parámetros; hash arriba coincide localmente. No se hizo otra copia durante la reproducciónroot.
+The2048centres(2j+1)/8 and h1/8 cover EXACTLY[0,512]. Finiteness/prec105 and lowerGc0−sum|Gck|h^k−REM>0 are required inEVERY panel. Run98529 ended exit0/FULL PASS2048 without changing script/parameters; the hash above matches locally. No other copy was made during the reproduction.
 
-## 5. Empalme y aplicación auditada
+## 5. Splicing and audited application
 
-El gauge positivo da S>0 en[0,512]; V>0 real y ENTIRE-S prueban Th>0 en0<u<=512.097 aporta u>=512 y098 su valor positivo en0. Por tanto **T_h(x)>0 para TODOx>0** en la MISMA Phi real.
+The positive gauge gives S>0 on[0,512]; V>0 real and ENTIRE-S prove Th>0 on0<u<=512.097 provides u>=512 and098 its positive value at0. Hence **T_h(x)>0 for ALLx>0** for the SAME real Phi.
 
-090 anclado aplica a h y g=xb: ambos datosrecíprocosRG,SG de Gp son estrictamente cóncavos en TODOSp,x>0. Los paresGp ya eranPD;082 da todos sus triples distintosPD. Las singularidadesx=P se tratan por eljet−Tf/(6f'^3), sin omitir pivotes.
+Anchored090 applies to h and g=xb: both reciprocal dataRG,SG of Gp are strictly concave for ALLp,x>0. The pairsGp were alreadyPD;082 gives all their distinct triplesPD. The singularitiesx=P are treated by thejet−Tf/(6f'^3), without omitting pivots.
 
-La doblecongruenciaSchur del archivoaplicación se verificó algebraicamente: d_p(z)=[zc−pM(z)]/[c(z+p)] es REAL no nulo para z!=p y puede cambiar signo. Quitar los dos pivotesp y0 deja diag(d)KGpdiag(d). Ambasdiagonalespivotantes positivas implican elbloque ORIGINAL anclado{0,p,z1,z2,z3}PD.
+The double Schur congruence of the application file was verified algebraically: d_p(z)=[zc−pM(z)]/[c(z+p)] is REAL non-zero for z!=p and may change sign. Removing the two pivotsp and0 leaves diag(d)KGpdiag(d). Both positive pivoting diagonals imply that theORIGINAL anchored block{0,p,z1,z2,z3} isPD.
 
-## 6. Alcance
+## 6. Scope
 
-Nodo0auxiliar corresponde alexponenteoriginal1/2, FUERA del portadorWai>1. No se prueban cinco generadoresadmisiblesarbitrarios. Cuatroadmisibles ya estaban probados085; no nuevaW/T. Tampoco se prueba herenciaTurán de los datos delresto ni iteraciónallorders.090contraejemplogenérico,091criterioPeano y092cartasingular siguen vigentes en sus clases; se evitó exigir el Wronskianoparticularmásfuerte093/095. Las aplicaciones nuevas son triplesdelresto y matrizauxiliaranclada, no el cierre global.
+The auxiliary node0 corresponds to the original exponent1/2, OUTSIDE the carrierWai>1. Five arbitrary admissible generators are not proved. Four admissible ones were already proved085; no newW/T. Nor is Turán inheritance of the remainder data or iteration to all orders proved. The generic counterexample090, the Peano criterion091 and the singular chart092 remain in force in their classes; requiring the stronger particular Wronskian093/095 was avoided. The new applications are triples of the remainder and an anchored auxiliary matrix, not the global closure.

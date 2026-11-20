@@ -1,31 +1,31 @@
 # POWER_INVERSE_COEFFICIENT_AUDIT_054
 
-Estado: **APROBADO** el lema COEFF/EVAL de POWER_INVERSE_COEFFICIENT_054, tras lectura íntegra de la fuente. No se afirma nuevo signo de W ni un corte completo. Papers intactos.
+Status: the COEFF/EVAL lemma of POWER_INVERSE_COEFFICIENT_054 is **APPROVED**, after a complete reading of the source. No new sign of W nor a complete cutoff is claimed. Papers untouched.
 
-## Antecedentes y diferencia
+## Antecedents and difference
 
-Se cotejaron índice/grid/crucigrama y HIGHPASS015, JOINT_SCALE016, QUADRATIC_EXPLICIT017 y los momentos049/053.015 ya prueba eventualidad uniforme en los numeradores a dimensión fija mediante convergencia de Gram y Riemann–Lebesgue, sin una dependencia efectiva del condicionamiento en dimensión.016 impide una constante temporal ponderada independiente de n, pero no constantes explícitas que crezcan con n.017 trata densidades monomiales. El objeto nuevo aquí es un polinomio en frecuencia inversa cuyo control de coeficientes depende explícitamente sólo de n y vale para todos j>=n. No se registra otra prueba cualitativa de RL como avance.
+Cross-checked index/grid/crossword and HIGHPASS015, JOINT_SCALE016, QUADRATIC_EXPLICIT017 and the moments 049/053. 015 already proves eventuality uniform in the numerators in fixed dimension through Gram convergence and Riemann–Lebesgue, without an effective dependence of the conditioning on dimension. 016 prevents a weighted time constant independent of n, but not explicit constants growing with n. 017 treats monomial densities. The new object here is a polynomial in inverse frequency whose coefficient control depends explicitly only on n and holds for all j>=n. Another qualitative proof of RL is not recorded as progress.
 
-## Normalización y prueba del bound
+## Normalization and proof of the bound
 
-Para a=u sqrt(j), R(y)=y^(n−1)P(ia/y) es un polinomio de grado<=n−1, y su cambio de coeficientes es invertible para cada j. El cambio tau=a/y en ambas semirrectas tiene jacobiano absoluto a/y². Sustituyendo la potencia del denominador resulta exactamente
+For a=u sqrt(j), R(y)=y^(n−1)P(ia/y) is a polynomial of degree<=n−1, and its change of coefficients is invertible for each j. The change tau=a/y on both half-lines has absolute Jacobian a/y². Substituting the power of the denominator gives exactly
 
     ||Q^jF0||²=a^(1−2n)/(2pi) ∫|R(y)|²(1+y²/j)^−(n+j)dy.
 
-No falta un factor2 porque la última integral cubre toda la recta. La integrabilidad se mantiene en cero y en infinito para todo n>=1,j>=n.
+No factor 2 is missing because the last integral covers the whole line. Integrability holds at zero and at infinity for all n>=1, j>=n.
 
-En[-1,1], log(1+y²/j)<=y²/j y (n+j)/j<=2, de modo que el peso es>=exp(−2). La recurrencia de Legendre implica por inducción que la suma de módulos de sus coeficientes es<=3^k. Su ortogonalidad da por Cauchy
+On [-1,1], log(1+y²/j)<=y²/j and (n+j)/j<=2, so the weight is >=exp(−2). The Legendre recurrence implies by induction that the sum of moduli of their coefficients is <=3^k. Their orthogonality gives, by Cauchy,
 
     (sum|coef R|)²
       <= exp(2) D ·sum_(k<n)(2k+1)9^k/2
       <= exp(2)D n²9^(n−1).
 
-Como exp(2)<9, la constante declarada C_n=9n²9^n es sobrada y válida también en n=1. La demostración cubre coeficientes complejos y por tanto TODOS los numeradores, no sólo sus diagonales o un numerador fijo al variar j. No requiere un eigenvalor límite no cuantificado.
+Since exp(2)<9, the declared constant C_n=9n²9^n is ample and valid also at n=1. The proof covers complex coefficients and hence ALL numerators, not only their diagonals or a fixed numerator as j varies. It does not require an unquantified limit eigenvalue.
 
-La evaluación compleja satisface |R(z)|<=(sum|coef R|)max(1,|z|^(n−1)); aplicarla a z y−z prueba las dos cotas EVAL con exactamente la misma normaD y constanteC_n. No aparece una pérdida cuadrática adicional deC_n.
+The complex evaluation satisfies |R(z)|<=(sum|coef R|)max(1,|z|^(n−1)); applying it to z and −z proves the two EVAL bounds with exactly the same norm D and constant C_n. No additional quadratic loss of C_n appears.
 
-## Signo y límites
+## Sign and limits
 
-Para P real se verifica R(y)R(−y)=(−1)^(n−1)|R(y)|² en la recta real. La fuente conserva explícitamente ese factor en DENSITY; su identidad analítica es correcta. Los majorantes absolutos sobre un contorno no eliminan la obligación de integrar la densidad completa con su denominador.
+For real P, R(y)R(−y)=(−1)^(n−1)|R(y)|² holds on the real line. The source explicitly keeps that factor in DENSITY; its analytic identity is correct. Absolute majorants on a contour do not remove the obligation to integrate the complete density with its denominator.
 
-COEFF/EVAL no demuestra aún una cola aritmética summable ni un corteK(n) para W. Un bound IBP de correlación proporcional a1/t por sí solo no suma el peine infinito. El extremo monomialN'=1 de una futura reducción no puede importarse de una prueba que sólo cubreN'>=2. La sección5 del memo mantiene estas obligaciones separadas y OPEN. No se modifica la cobertura de signo previamente certificada.
+COEFF/EVAL does not yet prove a summable arithmetic tail nor a cutoff K(n) for W. An IBP correlation bound proportional to 1/t does not by itself sum the infinite comb. The monomial endpoint N'=1 of a future reduction cannot be imported from a proof that only covers N'>=2. Section 5 of the memo keeps these obligations separate and OPEN. The previously certified sign coverage is not modified.

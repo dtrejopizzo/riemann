@@ -1,21 +1,21 @@
-# Alineación casi total en un intervalo multiplicativo de primos
+# Almost total alignment on a multiplicative interval of primes
 
-Bajo la hipótesis crítica de 183, para cada D≥8 fijo y T→∞, poner N=exp(2T−2D). Existe τ con |τ−Γ|≤exp(4T) tal que
+Under the critical hypothesis of 183, for each fixed D≥8 and T→∞, put N=exp(2T−2D). There is τ with |τ−Γ|≤exp(4T) such that
 
     |Σ_{N≤p≤eN}(log p) p^{iτ}| / Σ_{N≤p≤eN}log p ≥ 1−C/D²−o_D(1).
 
-C es absoluta. El intervalo, de razón e, está dentro del soporte aritmético. El umbral se acerca a uno tomando primero T grande y luego D grande. El antecedente 181 usa un supernivel para un peine global; 183 localiza la masa del perfil. Aquí se deduce alineación normalizada casi máxima en un solo intervalo, en una frecuencia efectiva del perfil.
+C is absolute. The interval, of ratio e, lies inside the arithmetic support. The threshold approaches one by taking first T large and then D large. The antecedent 181 uses a superlevel set for a global comb; 183 localizes the mass of the profile. Here an almost maximal normalized alignment on a single interval is deduced, at an effective frequency of the profile.
 
-**Ventanas enfrentadas.** Con w y f=M_Γ h de 183, escribir b=exp(T/2)f/w. Definir L(y)=b(−T+D+y), R(y)=b(T−D+y), con extensión por cero. Para y en compactos de (−D,D), las medidas |L(y)|²dy, |R(y)|²dy tienden vagamente a dy/2: en cada extremo la profundidad es D±y y el factor exp(T)/w² cancela exp(−(D±y)). Sea χ suave real no nula soportada en (−1/4,1/4) y poner χ_D(y)=χ(y/D). Para U=χ_D L y V=χ_D R las normas cuadradas tienden ambas a D∫χ²/2.
+**Facing windows.** With w and f=M_Γ h of 183, write b=exp(T/2)f/w. Define L(y)=b(−T+D+y), R(y)=b(T−D+y), extended by zero. For y in compact subsets of (−D,D), the measures |L(y)|²dy, |R(y)|²dy tend vaguely to dy/2: at each end the depth is D±y and the factor exp(T)/w² cancels exp(−(D±y)). Let χ be a smooth real nonzero function supported in (−1/4,1/4) and put χ_D(y)=χ(y/D). For U=χ_D L and V=χ_D R the squared norms both tend to D∫χ²/2.
 
-Escribir d_p=log(p/N) y E el promedio con pesos log p sobre [N,eN], de masa total asintótica (e−1)N por PNT. En el déficit no negativo de 183 conservar únicamente los saltos desde −T+D+y hasta T−D+y+d_p con |y|≤D/2. Después del cambio a b el coeficiente de cada salto es exp(−2T)w(t)w(t+log p)(log p)/√p. En estas franjas w(t)w(t+log p)=(1+o_D(1))√p uniformemente. Por tanto
+Write d_p=log(p/N) and E the average with weights log p over [N,eN], of total asymptotic mass (e−1)N by PNT. In the nonnegative deficit of 183 keep only the jumps from −T+D+y to T−D+y+d_p with |y|≤D/2. After the change to b the coefficient of each jump is exp(−2T)w(t)w(t+log p)(log p)/√p. On these strips w(t)w(t+log p)=(1+o_D(1))√p uniformly. Hence
 
     E∫_{|y|≤D/2}|L(y)−R(y+d_p)|²dy=o_D(1).
 
-El costo de recortar la traslación, en norma cuadrada promediada, es a lo sumo ||χ'||∞²/D² por la masa de R en |y|≤D/4+2, que es O(D) en el límite (para D=8 usar un compacto dentro de (−D,D)). Se sigue, por desigualdad triangular, que E||U−V(·+d_p)||²≤C/D+o_D(1). La identidad de polarización da una correlación media real ≥(1−C/D²−o_D(1))||U|| ||V||.
+The cost of truncating the translation, in averaged squared norm, is at most ||χ'||∞²/D² times the mass of R on |y|≤D/4+2, which is O(D) in the limit (for D=8 use a compact set inside (−D,D)). It follows, by the triangle inequality, that E||U−V(·+d_p)||²≤C/D+o_D(1). The polarization identity gives a real mean correlation ≥(1−C/D²−o_D(1))||U|| ||V||.
 
-**Frecuencia efectiva.** Por Plancherel esta correlación es una integral de la transformada de U contra la de V con multiplicador E exp(iτ d_p), salvo conjugación según convención. Tras desmodular por Γ, ambos recortes tienen variación O_D(exp T): el multiplicador χ_D exp(T/2)/w y su variación están acotados por constantes dependientes de D, y ||h||∞≤Var(h). Su energía de Fourier fuera de |τ−Γ|≤exp(4T) es O_D(exp(−2T)). Cauchy–Schwarz dentro y fuera de la banda da el enunciado. El paso de d_p a log p sólo cambia una fase común.
+**Effective frequency.** By Plancherel this correlation is an integral of the transform of U against that of V with multiplier E exp(iτ d_p), up to conjugation depending on convention. After demodulating by Γ, both truncations have variation O_D(exp T): the multiplier χ_D exp(T/2)/w and its variation are bounded by constants depending on D, and ||h||∞≤Var(h). Their Fourier energy outside |τ−Γ|≤exp(4T) is O_D(exp(−2T)). Cauchy–Schwarz inside and outside the band gives the statement. Passing from d_p to log p only changes a common phase.
 
-El resultado exige una frecuencia real que puede depender de D y del perfil. Para excluir saturación por esta vía haría falta una separación uniforme respecto de uno capaz de superar C/D² en algún D, incluyendo las frecuencias excepcionales. Aquí no se prueba esa separación.
+The result requires a real frequency that may depend on D and on the profile. To exclude saturation along this route one would need a uniform separation from one able to beat C/D² at some D, including the exceptional frequencies. That separation is not proved here.
 
-**Auditoría independiente.** Se verificó la extracción por Plancherel, el coeficiente del déficit, la pérdida relativa O(D⁻²) y el orden de límites. P47 prop:wit-coh ya deduce coherencia ponderada a partir de un dato negativo. La afirmación adicional aquí es el umbral cercano a uno en un intervalo primo localizado bajo saturación crítica.
+**Independent audit.** The extraction by Plancherel, the coefficient of the deficit, the relative loss O(D⁻²) and the order of limits were verified. P47 prop:wit-coh already deduces weighted coherence from a negative datum. The additional statement here is the threshold close to one on a localized prime interval under critical saturation.

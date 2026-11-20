@@ -1,21 +1,21 @@
-# POWER_DIRECT_RECIPROCAL_TURAN_AUDIT_097 — Auditoría independiente
+# POWER_DIRECT_RECIPROCAL_TURAN_AUDIT_097 — Independent audit
 
-Estado: **APROBADO / PROVED la fórmula y T_h>0 para TODO u>=512; compacto y signo del origen OPEN.** Fuente `POWER_DIRECT_RECIPROCAL_TURAN_097.md` leída íntegramente. Revisor mapa; root aprobó independientemente. Papers intactos; sin nuevos certificados o muestras theta.
+Status: **APPROVED / PROVED the formula and T_h>0 for ALL u>=512; compact set and sign of the origin OPEN.** Source `POWER_DIRECT_RECIPROCAL_TURAN_097.md` read in full. Approved by two independent reviews. Papers untouched; no new certificates or theta samples.
 
-## Identidades exactas
+## Exact identities
 
-Se reprodujeron por derivación simbólica exacta DIRECT, las expresiones auxiliares h',h'', el control estructural mediante T_S y la tercera derivada de u³/M, y ORIGIN-HANKEL. Las derivadas x/u se relacionan medianteD_x=(2u)^−1D_u; los factores16u³ y(au−M)^4 son correctos.073 garantiza denominador positivo para u>0; no se separan términos cancelantes para decidir el signo.
+DIRECT, the auxiliary expressions h',h'', the structural check via T_S and the third derivative of u³/M, and ORIGIN-HANKEL were reproduced by exact symbolic differentiation. The x/u derivatives are related viaD_x=(2u)^−1D_u; the factors16u³ and(au−M)^4 are correct.073 guarantees a positive denominator for u>0; cancelling terms are not separated to decide the sign.
 
-En el origen N=a+b1x+...+b4x4, R=1/N y086R'0>0 dan b1<0. B0=(a−N)/x queda analítica y positiva en0, h=N/B0. Las derivadas y el factor positivo12a/b1⁴ multiplicando elHankel3 son correctos. Los coeficientes son cumulantes normalizados, no momentos de otra medida; esta identidad no decide su signo ni usa un certificado nuevo.
+At the origin N=a+b1x+...+b4x4, R=1/N and086R'0>0 give b1<0. B0=(a−N)/x is analytic and positive at0, h=N/B0. The derivatives and the positive factor12a/b1⁴ multiplying theHankel3 are correct. The coefficients are normalized cumulants, not moments of another measure; this identity does not decide their sign nor use a new certificate.
 
-## Caja aritmética y coste
+## Arithmetic box and cost
 
-Se reutiliza exactamente INPUT084, con TODOS los contactos y las colas absolutasPj. N_S>3c²−2>2c² porque c>1.5. La caja paga3D+6E+F<.14,−12D²−6DE<−4347/5000<0 y6D³<.8. Así C_h<3c³+.14c²+.8<4c³: la diferencia es creciente desde1.5 y allí113/50>0. No se presupone C_h positivo.
+INPUT084 is reused exactly, with ALL contacts and the absolute tailsPj. N_S>3c²−2>2c² because c>1.5. The box pays3D+6E+F<.14,−12D²−6DE<−4347/5000<0 and6D³<.8. Thus C_h<3c³+.14c²+.8<4c³: the difference is increasing from1.5 and there113/50>0. C_h is not presumed positive.
 
-Resulta auN_S−4C_h>2c²(au−8c). El anclaREAL078 da a>1/25. En512, UPPER-M y log2<.7 dan M<123/50, por tanto8M<492/25<512/25. H(u)=u/25−4log(u/5)−16/(u−.5) tiene derivada positiva para u>=512, así la comparación cubre TODA la cola sin malla. DIRECT-TAIL conserva el margen estricto y no sólo su límite asintótico.
+The result is auN_S−4C_h>2c²(au−8c). The REAL anchor078 gives a>1/25. At512, UPPER-M and log2<.7 give M<123/50, hence8M<492/25<512/25. H(u)=u/25−4log(u/5)−16/(u−.5) has positive derivative for u>=512, so the comparison covers the WHOLE tail without a mesh. DIRECT-TAIL keeps the strict margin and not only its asymptotic limit.
 
-## Diferencia y alcance
+## Difference and scope
 
-Consultados los registros y078/083–095. Se ataca directamente el dato EXACTO T_h de090, más débil que el Wronskiano particular suficiente093/095; no es repetir su cola temporal. u es inclinación, no tiempo interno t ni ventanaT. La cota usa una cancelación aritmética conjunta específica y no herencia genérica, refutada090.
+Consulted the records and078/083–095. The EXACT datum T_h of090 is attacked directly, weaker than the particular sufficient Wronskian093/095; it is not a repetition of its temporal tail. u is tilt, not internal time t nor windowT. The bound uses a specific joint arithmetic cancellation and not generic inheritance, refuted090.
 
-En0<u<512 sigueOPEN el numerador conjunto y elHankel3 del origen. No se prueba T_hglobal, R_G'' para todos los pivotes, triplesGp, cinco/todos los generadores ni nueva coberturaW/T. La cola puede aplicar el lema anclado sólo si todo el segmento entrex yP permanece en el dominio probado; no se extiende por separado a pivotes pequeños.
+On0<u<512 the joint numerator and theHankel3 of the origin remainOPEN. Global T_h, R_G'' for all pivots, triplesGp, five/all generators and new coverageW/T are not proved. The tail can apply the anchored lemma only if the whole segment betweenx andP remains in the proved domain; it is not extended separately to small pivots.

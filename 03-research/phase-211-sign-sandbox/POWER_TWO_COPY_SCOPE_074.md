@@ -1,139 +1,139 @@
-# POWER_TWO_COPY_SCOPE_074 — La hipótesis fuerte073 no basta para tres generadores
+# POWER_TWO_COPY_SCOPE_074 — The strong hypothesis 073 does not suffice for three generators
 
-Estado: **PROVED/APROBADO**, auditoría independiente en [POWER_TWO_COPY_SCOPE_AUDIT_074.md](POWER_TWO_COPY_SCOPE_AUDIT_074.md); verificador reproducido por constructor, root y auditor con exit0/PASS. Contraejemplo ANALÍTICO auxiliar dentro de la misma clase de potenciales de073. No es el kernel theta real ni una dirección negativa de W. Papers intactos.
+Status: **PROVED/APPROVED**, independent audit in [POWER_TWO_COPY_SCOPE_AUDIT_074.md](POWER_TWO_COPY_SCOPE_AUDIT_074.md); verifier reproduced independently three times with exit 0/PASS. Auxiliary ANALYTIC counterexample within the same class of potentials as 073. It is not the real theta kernel nor a negative direction of W. Papers untouched.
 
-## 1. Consulta y diferencia exacta
+## 1. Consultation and exact difference
 
-Leídos las reglas del proyecto, ROUTES-TRIED-INDEX/README, grid maestro R162_2300_MASTER_GRID y CROSSWORD-TO-D; cotejados SCHUR003 y THETA_TWO_COPY073.003 ya refuta extender monotonías y concavidad a matrices de orden3, pero sus funciones auxiliares no se presentan como medias inclinadas de un potencial par C³ con V'''>0. El ejemplo3+cosh tampoco satisface esas hipótesis.
+Read the project rules, ROUTES-TRIED-INDEX/README, master grid R162_2300_MASTER_GRID and CROSSWORD-TO-D; cross-checked SCHUR003 and THETA_TWO_COPY073. 003 already refutes extending monotonicities and concavity to order-3 matrices, but its auxiliary functions are not presented as tilted means of an even C³ potential with V'''>0. The example 3+cosh does not satisfy those hypotheses either.
 
-La diferencia aquí es mantener TODAS las hipótesis fuertes073 y producir una matriz3x3 indefinida. Se estudió primero el jet en0 de la familia prescrita V=x^6; ese jet NO produce el contraejemplo. El contraejemplo definitivo se construye analíticamente mediante un único potencial polinómico explícito y tres inclinaciones fijadas de antemano. No se barre una familia de parámetros ni se evalúan integrales numéricamente.
+The difference here is to keep ALL the strong hypotheses 073 and produce an indefinite 3x3 matrix. The jet at 0 of the prescribed family V=x^6 was studied first; that jet does NOT produce the counterexample. The definitive counterexample is constructed analytically via a single explicit polynomial potential and three tilts fixed in advance. No parameter family is swept and no integrals are evaluated numerically.
 
-## 2. Condición del determinante coalescente en el origen
+## 2. Coalescent determinant condition at the origin
 
-Para cualquier potencial par con los momentos y la regularidad de073, escriba los cumulantes de su ley sin inclinación como kappa2,kappa4,kappa6. Cerca de0,
+For any even potential with the moments and regularity of 073, write the cumulants of its untilted law as kappa2,kappa4,kappa6. Near 0,
 
     M(u)=alpha u+beta u³+gamma u^5+O(u^7),
     alpha=kappa2, beta=kappa4/6, gamma=kappa6/120.
 
-Para nodos distintos xi>0 y ui=epsilon xi, el kernel K(u,v)=(M(u)+M(v))/(u+v) satisface
+For distinct nodes xi>0 and ui=epsilon xi, the kernel K(u,v)=(M(u)+M(v))/(u+v) satisfies
 
     det[K(epsilon xi,epsilon xj)]_(i,j=1)^3
       =epsilon^6 prod_(i<j)(xj-xi)²
                        ·(-beta)(alpha gamma-beta²)+O(epsilon^8).
 
-Se verifica expandiendo(u^(2r+1)+v^(2r+1))/(u+v). En las coordenadas monomiales0,1,2 el primer menor de coeficientes es
+This is verified by expanding (u^(2r+1)+v^(2r+1))/(u+v). In the monomial coordinates 0,1,2 the first coefficient minor is
 
     [[alpha,0,beta],[0,-beta,0],[beta,0,gamma]],
 
-cuyo determinante es(-beta)(alpha gamma-beta²). Los índices0,1,2 son los de menor suma en tres filas y columnas distintas, por lo que dan el término de orden6. La paridad excluye orden7.
+whose determinant is (-beta)(alpha gamma-beta²). The indices 0,1,2 are those of smallest sum in three distinct rows and columns, so they give the order-6 term. Parity excludes order 7.
 
-Si kappa4<0, el signo principal de este determinante está determinado por
+If kappa4<0, the leading sign of this determinant is determined by
 
     3 kappa2 kappa6 - 10 kappa4².                       (JET)
 
-Para V(x)=x^6, los momentos pares son
+For V(x)=x^6, the even moments are
 
     m_(2r)=Gamma((2r+1)/6)/Gamma(1/6).
 
-Poniendo a=m2, la reflexión gamma da m4=2a² y m6=1/6. Así
+Setting a=m2, gamma reflection gives m4=2a² and m6=1/6. Thus
 
     kappa4=-a², kappa6=1/6,
     JET=a/2-10a^4>0.
 
-Para justificar el último signo sin decimales, basta a<1/3. En efecto
+To justify the last sign without decimals, a<1/3 suffices. Indeed
 
-    Gamma(1/6)=6 int_0^infinito exp(-x^6)dx
+    Gamma(1/6)=6 int_0^infinity exp(-x^6)dx
       >6[1-1/7+1/26-1/114]>3sqrt(pi).
 
-La primera desigualdad usa el polinomio de Taylor inferior1-z+z²/2-z³/6 para exp(-z), integrado en[0,1], y descarta una cola positiva. Si r=1-1/7+1/26-1/114, el verificador comprueba r²>11/14>pi/4 usando pi<22/7. Por tanto a=sqrt(pi)/Gamma(1/6)<1/3 y1/2-10a³>1/2-10/27>0. Este primer test coalescente de x^6 es positivo; no se ofrece como falsificador.
+The first inequality uses the lower Taylor polynomial 1-z+z²/2-z³/6 for exp(-z), integrated over [0,1], and discards a positive tail. If r=1-1/7+1/26-1/114, the verifier checks r²>11/14>pi/4 using pi<22/7. Therefore a=sqrt(pi)/Gamma(1/6)<1/3 and 1/2-10a³>1/2-10/27>0. This first coalescent test of x^6 is positive; it is not offered as a falsifier.
 
-## 3. Potencial explícito que sí da el contraejemplo
+## 3. Explicit potential that does give the counterexample
 
-Fije exactamente
+Fix exactly
 
     p=1000000, A=400000000,
     v(x)=x²/2+x^(2p)/[2p·2^(2p-2)],
     V(x)=A v(x).
 
-Es un potencial par POLINÓMICO, de clase C-infinito, superlineal, y
+It is an even POLYNOMIAL potential, of class C-infinity, superlinear, and
 
     v''(x)=1+(2p-1)(x/2)^(2p-2)>=1,
     V'''(x)=A(2p-1)(2p-2)x^(2p-3)/2^(2p-2)>0, x>0.
 
-Por tanto satisface estrictamente TODAS las hipótesis073. Sea M(u) la media de la densidad proporcional a exp[-V(x)+ux], y tome únicamente los tres nodos
+Therefore it strictly satisfies ALL the hypotheses 073. Let M(u) be the mean of the density proportional to exp[-V(x)+ux], and take only the three nodes
 
     u1=A, u2=2A, u3=3A.
 
-No se modifica el potencial entre los tres nodos.
+The potential is not modified between the three nodes.
 
-## 4. Modos: bounds analíticos sin resolver ecuaciones grandes
+## 4. Modes: analytic bounds without solving large equations
 
-Para i=1,2,3, sea xi la única solución de v'(xi)=i. Existe y es única por v''>=1 y los límites de v'. Ponga eta=1/20000. Se tiene
+For i=1,2,3, let xi be the unique solution of v'(xi)=i. It exists and is unique by v''>=1 and the limits of v'. Set eta=1/20000. One has
 
     1-eta<x1<1,
     2-eta<x2<2,
     2-eta<x3<2.                                        (MODES)
 
-En efecto v'(x)=x+x(x/2)^(2p-2). Como2p-2>15 y2^15>20000,
+Indeed v'(x)=x+x(x/2)^(2p-2). Since 2p-2>15 and 2^15>20000,
 
     v'(1-eta)<1-eta+2^(-(2p-2))<1<v'(1).
 
-Para el otro extremo,
+For the other end,
 
     v'(2-eta)
       <2-eta+2(1-eta/2)^(2p-2)
       <=2-eta+2exp[-(p-1)eta]<2,
 
-pues(p-1)eta>49 y exp49>49^4/24>40000, de donde2exp(-49)<eta. Por otra parte v'(2)=4>3. La monotonía estricta de v' prueba MODES para ambos índices2,3.
+since (p-1)eta>49 and exp49>49^4/24>40000, whence 2exp(-49)<eta. On the other hand v'(2)=4>3. Strict monotonicity of v' proves MODES for both indices 2,3.
 
-## 5. Modos a medias: error uniforme por convexidad fuerte
+## 5. From modes to means: uniform error via strong convexity
 
-En el nodo ui=A i, la densidad es proporcional a exp[-A(v(x)-i x)]. Si Xi tiene esa ley y mi=M(A i), la integración por partes de(x-xi) por la densidad da EXACTAMENTE
+At the node ui=A i, the density is proportional to exp[-A(v(x)-i x)]. If Xi has that law and mi=M(A i), integration by parts of (x-xi) against the density gives EXACTLY
 
     E[(Xi-xi)(v'(Xi)-i)]=1/A.
 
-El término de borde se anula por la caída de una exponencial de un polinomio par. Como v''>=1 y v'(xi)=i,
+The boundary term vanishes by the decay of an exponential of an even polynomial. Since v''>=1 and v'(xi)=i,
 
     (x-xi)(v'(x)-i)>=(x-xi)².
 
-Luego E[(Xi-xi)²]<=1/A y, por Cauchy,
+Hence E[(Xi-xi)²]<=1/A and, by Cauchy,
 
     |mi-xi|<=1/sqrt A=eta.
 
-Combinando con MODES se obtiene
+Combining with MODES gives
 
     |m1-1|<1/10000,
     |m2-2|<1/10000,
     |m3-2|<1/10000.                                    (MEANS)
 
-Esta estimación controla las integrales reales completas; no es una aproximación de punto de silla sin resto.
+This estimate controls the full real integrals; it is not a saddle-point approximation without remainder.
 
-## 6. Vector negativo racional y todos los pares positivos
+## 6. Rational negative vector and all pairs positive
 
-La matriz rescalada B=A[K(ui,uj)] tiene entradas
+The rescaled matrix B=A[K(ui,uj)] has entries
 
     B_(i,j)=(mi+mj)/(i+j).
 
-Por MEANS, cada entrada difiere en menos de delta=1/10000 de la matriz racional
+By MEANS, each entry differs by less than delta=1/10000 from the rational matrix
 
     B0=[[1,1,3/4],[1,1,4/5],[3/4,4/5,2/3]].
 
-Tome c=(40,-40,3). Un cálculo racional exacto da
+Take c=(40,-40,3). An exact rational computation gives
 
     c^T B0 c=-6,
     |c^T(B-B0)c|<delta(40+40+3)²=6889/10000<1.
 
-Por tanto
+Therefore
 
     c^T B c < -53111/10000<0,
     c^T [K(ui,uj)] c < -53111/(10000 A)<0.              (NEGATIVE)
 
-La matriz es indefinida, pues sus diagonales son positivas. Sin embargo, por el teorema general073 aplicado a ESTE V, TODOS sus menores de dos nodos distintos positivos son definidos positivos, no sólo los tres pares elegidos aquí. También M''<0 y M-uM'>0 en toda la semirrecta positiva.
+The matrix is indefinite, since its diagonals are positive. However, by the general theorem 073 applied to THIS V, ALL its minors of two distinct positive nodes are positive definite, not only the three pairs chosen here. Also M''<0 and M-uM'>0 on the whole positive half-line.
 
-Así el control probabilístico fuerte073 y su concavidad estricta no se preservan automáticamente como un signo de orden3. El contraejemplo es analítico y pertenece exactamente a la clase propuesta, a diferencia de los auxiliares de003.
+Thus the strong probabilistic control 073 and its strict concavity are not automatically preserved as an order-3 sign. The counterexample is analytic and belongs exactly to the proposed class, unlike the auxiliaries of 003.
 
-## 7. Evidencia y alcance
+## 7. Evidence and scope
 
-Verificador `tools/power_two_copy_scope_074_verify.py`: aritmética Fraction para MODES, el error de medias, la matriz B0, el vector y las constantes del test x^6. No evalúa la función M ni el potencial de grado enorme; no hay cuadratura ni búsqueda de parámetros. Las desigualdades para las medias y las entradas se prueban analíticamente arriba.
+Verifier `tools/power_two_copy_scope_074_verify.py`: Fraction arithmetic for MODES, the mean error, the matrix B0, the vector and the constants of the x^6 test. It does not evaluate the function M or the huge-degree potential; there is no quadrature or parameter search. The inequalities for the means and the entries are proved analytically above.
 
-No es el potencial theta REAL y no se afirma una dirección negativa de W. El resultado073 de TODOS los pares reales sigue íntegro. Lo refutado es únicamente la implicación genérica «hipótesis sobre V de073 ⇒ positividad3x3 de K». Para avanzar sobre tres generadores del dato real hará falta una propiedad específica adicional de Phi o una estimación concreta de su cruce. No se excluyen tales propiedades ni se infiere un impedimento global. Papers intactos.
+It is not the REAL theta potential and no negative direction of W is claimed. The result 073 on ALL real pairs remains intact. What is refuted is only the generic implication «hypothesis on V of 073 ⇒ 3x3 positivity of K». To advance on three generators of the real datum, an additional specific property of Phi or a concrete estimate of its cross term will be needed. Such properties are not excluded and no global impediment is inferred. Papers untouched.

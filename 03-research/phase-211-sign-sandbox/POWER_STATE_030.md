@@ -1,41 +1,41 @@
-# Estado030 — Compensación de un bloque interior a tasa fija
+# State030 — Compensation of an interior block at fixed rate
 
-Estado: resultados parciales PROVED y auditados. Sustituye STATE029. Goal activo, signo global OPEN, papers intactos.
+Status: partial results PROVED and audited. Replaces STATE029. Goal active, global sign OPEN, papers untouched.
 
-## Bloque aritmético real, uniforme en órdenes grandes
+## Real arithmetic block, uniform at large orders
 
-POWER_INTERIOR_SCALE_030 transforma exactamente la representación conjunta, mediante inversión de divisores, en
+POWER_INTERIOR_SCALE_030 transforms the joint representation exactly, via divisor inversion, into
 
-    W[g_N]/norma² = int_1^infinito G_N(x) H(x)dx,
+    W[g_N]/norm² = int_1^infinito G_N(x) H(x)dx,
     G_N=x^-1/2[(3/2)rho_N(logx)−rho_N'(logx)]>0,
     H(x)=1+[log((x+1)/(x−1))−gamma−log(4pi)−1
                             −2sum_(q<=x)qLambda(q)]/x².
 
-Se cancelan las singularidades logarítmicas en enteros mayores que1, conservando los saltos aritméticos reales. La identidad sola no da signo.
+The logarithmic singularities at integers greater than1 cancel, keeping the real arithmetic jumps. The identity alone gives no sign.
 
-A u=63/2 FIJO se demuestra, para TODOS N>=2^20,
+At FIXED u=63/2 one proves, for ALL N>=2^20,
 
     int_1^(9/4) G_N(x)H(x)dx >1/100.
 
-El bloque contiene el contacto2 adverso. La comparación local con G_*=(3/2)x^-1/2 tiene error<=7M2/4, M2=u²/(2N−3). La integral principal se calcula exactamente, incluye Lambda(2), y supera1/50; el error integrado es<1/200. No se evalúa una campaña de órdenes. El resto desde9/4 hasta infinito sigue sin control de signo: no se afirma positividad de W total.
+The block contains the adverse contact2. The local comparison with G_*=(3/2)x^-1/2 has error<=7M2/4, M2=u²/(2N−3). The main integral is computed exactly, includes Lambda(2), and exceeds1/50; the integrated error is<1/200. No campaign over orders is evaluated. The remainder from9/4 to infinity remains without sign control: positivity of total W is not claimed.
 
-También se demuestra que las primitivas ordinaria y ponderada por x² de H hasta5/2 son negativas. La monotonía real de G_N a órdenes grandes no basta para el criterio de primitivas positivas. El bloque favorable se prueba usando su magnitud real, no suponiendo esa premisa falsa.
+It is also proved that the ordinary primitive and the primitive weighted by x² of H up to5/2 are negative. The real monotonicity of G_N at large orders does not suffice for the positive-primitive criterion. The favourable block is proved using its real magnitude, not by assuming that false premise.
 
-## Comparación gamma–gaussiana con coste explícito
+## Gamma–Gaussian comparison with explicit cost
 
-POWER_GAMMA_BALANCE_030 demuestra para TODOS N>=2 a tasa fija
+POWER_GAMMA_BALANCE_030 proves for ALL N>=2 at fixed rate
 
-    0<A_sharp(EV)−ARCH_sharp[g_N]/norma²
+    0<A_sharp(EV)−ARCH_sharp[g_N]/norm²
       <=.5[psi(N−.5)−log(N−1.5)]<1/[2(N−1.5)].
 
-El peso de resto L_N es el de la ley inversa gamma real. Su momento int L_N/a² se calcula exactamente, y K_sharp<=1/t controla la curvatura negativa. Es una estimación constructiva O(1/N), válida incluso en N2 sin varianza finita de V.
+The remainder weight L_N is that of the real inverse gamma law. Its moment int L_N/a² is computed exactly, and K_sharp<=1/t controls the negative curvature. It is a constructive O(1/N) estimate, valid even at N2 without finite variance of V.
 
-La comparación de las formas COMPLETAS sin coste es falsa en la ley real N2: Wgamma/norma²<.85 y G_W(EV)>.875, de modo que el gap integrado es<−1/40. Esto no significa W negativo: esa fila ya tiene positividad probada. Falta compensar la fluctuación aritmética firmada junto a la pérdida sharp; la comparación gaussiana sola no la decide.
+The comparison of the FULL forms without cost is false for the real law N2: Wgamma/norm²<.85 and G_W(EV)>.875, so the integrated gap is<−1/40. This does not mean W negative: that row already has proved positivity. The signed arithmetic fluctuation must still be compensated together with the sharp loss; the Gaussian comparison alone does not decide it.
 
-## Evidencia y obligación restante
+## Evidence and remaining obligation
 
-POWER_INTERIOR_AUDIT_030 aprueba ambos memos, incluidos inversión/Fubini, primitiva exacta J, contacto2, límites uniformes y comparación gaussiana. Root leyó las pruebas y reprodujo los dos verificadores exactos: PASS. Las demostraciones proporcionan la uniformidad en N; los scripts certifican constantes.
+POWER_INTERIOR_AUDIT_030 approves both memos, including inversion/Fubini, exact primitive J, contact2, uniform limits and the Gaussian comparison. The proofs were read and the two exact verifiers reproduced: PASS. The proofs provide uniformity in N; the scripts certify constants.
 
-No hay nueva cobertura de W total ni ventana T. A u31.5 permanecen filas N1..5 para todo k y cono k>=10000N²; resta N>=6 debajo del cono. Las regiones029 de tasas crecientes siguen válidas con su límite de puente explícito. No se puede sumar una cola de otra representación sin contabilidad de sus fronteras.
+There is no new coverage of total W nor window T. At u31.5 rows N1..5 for all k and cone k>=10000N² remain; N>=6 below the cone remains. The regions029 of increasing rates remain valid with their explicit bridge limit. A tail of another representation cannot be added without accounting for its boundaries.
 
-La siguiente obligación es controlar el resto del emparejamiento G_N H a tasa fija o la diferencia aritmética en la comparación gamma–gaussiana. El bloque integrado favorable y el coste sharp son herramientas concretas; ninguno sustituye esa obligación.
+The next obligation is to control the remainder of the pairing G_N H at fixed rate or the arithmetic difference in the gamma–Gaussian comparison. The favourable integrated block and the sharp cost are concrete tools; neither replaces that obligation.

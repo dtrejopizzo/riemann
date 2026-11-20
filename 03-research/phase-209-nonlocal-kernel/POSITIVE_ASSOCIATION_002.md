@@ -1,108 +1,108 @@
-# POSITIVE_ASSOCIATION_002 — Asociación estricta de divisibilidad bajo theta
+# POSITIVE_ASSOCIATION_002 — Strict association of divisibility under theta
 
-2026-10-18. Revisor: prueba independiente para auditar CONSTRUCTOR_002.
-**PROVED / herramienta positiva parcial. No signo del nodo demostrado.**
+2026-10-18. Independent proof to audit CONSTRUCTOR_002.
+**PROVED / partial positive tool. No sign of the node proved.**
 
-## Corpus y atribución
+## Corpus and attribution
 
-Búsquedas dirigidas en índice por convexidad geométrica de theta, asociación y correlaciones de divisibilidad no identificaron esta formulación. Proximidades: SPEC005 (C-hom, theta-Bochner genérico), R183_008 (Gram semilocal gcd), R11_2_ORIGIN (polar/origen). La diferencia explícita: no se usa la PSD genérica de una covarianza, sino el signo de cada correlación cruzada; el cociente theta tiene grado cero; el signo puede romperse para la medida correspondiente a un factor Euler eliminado. Esto habilita examinar el corolario, sin reabrir las rutas anteriores como prueba del nodo.
+Targeted searches in the index for geometric convexity of theta, association and divisibility correlations did not identify this formulation. Nearby items: SPEC005 (C-hom, generic theta-Bochner), R183_008 (semilocal gcd Gram), R11_2_ORIGIN (polar/origin). The explicit difference: the generic PSD of a covariance is not used, but rather the sign of each cross correlation; the theta quotient has degree zero; the sign can break for the measure corresponding to a removed Euler factor. This allows examining the corollary, without reopening the earlier routes as a proof of the node.
 
-La convexidad theta es clásica, no nueva: fuente primaria comunicada y verificada por el coordinador, Faulhuber–Steinerberger, arXiv:1601.02972, Theorem 2.3, https://arxiv.org/html/1601.02972 . A continuación se da prueba propia elemental para no depender de una cita de memoria. No se afirma novedad del corolario de asociación en la literatura.
+Theta convexity is classical, not new: primary source communicated and verified, Faulhuber–Steinerberger, arXiv:1601.02972, Theorem 2.3, https://arxiv.org/html/1601.02972 . An elementary self-contained proof is given below so as not to depend on a citation from memory. No novelty of the association corollary in the literature is claimed.
 
-## 1. Convexidad geométrica estricta de theta
+## 1. Strict geometric convexity of theta
 
-Sea θ(y)=Σ_{n∈ℤ} exp(−π y n²), y>0; h(x)=log θ(e^x). Entonces h''(x)>0.
+Let θ(y)=Σ_{n∈ℤ} exp(−π y n²), y>0; h(x)=log θ(e^x). Then h''(x)>0.
 
-Prueba para y=e^x≥1. Bajo la probabilidad gaussiana discreta μ_y(n)=exp(−π y n²)/θ(y), escribir m=E(n²). Derivación absoluta de las series da
+Proof for y=e^x≥1. Under the discrete Gaussian probability μ_y(n)=exp(−π y n²)/θ(y), write m=E(n²). Absolute differentiation of the series gives
 
     h''(x)=π² y² Var(n²)−π y m.
 
-Se tiene E(n⁴)≥m, luego Var(n²)≥m(1−m). Además θ≥1 y, con q=e^(−π)<1/20,
+One has E(n⁴)≥m, hence Var(n²)≥m(1−m). Moreover θ≥1 and, with q=e^(−π)<1/20,
 
     0<m≤2 Σ_{n≥1} n² q^(n²)≤2 Σ_{n≥1} n² q^n
        =2q(1+q)/(1−q)³ < 840/6859 < 1/2.
 
-Por tanto h''≥π y m [π y(1−m)−1]>0, ya que π/2>1. Para y≤1, Poisson θ(y)=y^(−1/2)θ(1/y) implica h(x)=−x/2+h(−x), luego h''(x)=h''(−x)>0. ∎
+Hence h''≥π y m [π y(1−m)−1]>0, since π/2>1. For y≤1, Poisson θ(y)=y^(−1/2)θ(1/y) implies h(x)=−x/2+h(−x), hence h''(x)=h''(−x)>0. ∎
 
-Poisson se usa de modo efectivo para trasladar el signo desde y≥1 hacia y≤1; no se simetriza una norma genérica.
+Poisson is used effectively to transfer the sign from y≥1 to y≤1; no generic norm is symmetrised.
 
-## 2. Correlación de dos divisibilidades
+## 2. Correlation of two divisibilities
 
-Para enteros d,e≥2, sean I_d(n)=1_{d|n}, tomando d|0. Su probabilidad bajo μ_y es q_d(y)=θ(d²y)/θ(y). Para ℓ=lcm(d,e),
+For integers d,e≥2, let I_d(n)=1_{d|n}, taking d|0. Its probability under μ_y is q_d(y)=θ(d²y)/θ(y). For ℓ=lcm(d,e),
 
     C_y(d,e)=Cov_μy(I_d,I_e)
        =θ(ℓ²y)/θ(y)−θ(d²y)θ(e²y)/θ(y)² >0.
 
-Prueba. Con x=log y, a=2log d>0 y b=2log e>0,
+Proof. With x=log y, a=2log d>0 and b=2log e>0,
 
     h(x+a+b)+h(x)−h(x+a)−h(x+b)
        =∫_0^a ∫_0^b h''(x+u+v) dv du >0.
 
-Exponenciando,
+Exponentiating,
 
     θ((de)²y)θ(y)>θ(d²y)θ(e²y).
 
-Como ℓ≤de y θ es decreciente, θ(ℓ²y)≥θ((de)²y). La desigualdad estricta anterior prueba C_y(d,e)>0. ∎
+Since ℓ≤de and θ is decreasing, θ(ℓ²y)≥θ((de)²y). The strict inequality above proves C_y(d,e)>0. ∎
 
-El signo no es la PSD de la matriz de covarianzas: PSD vale para toda probabilidad, mientras una covarianza cruzada individual puede ser negativa.
+The sign is not the PSD of the covariance matrix: PSD holds for every probability, while an individual cross covariance can be negative.
 
-## 3. Un borrado primo rompe el signo cruzado
+## 3. A prime deletion breaks the cross sign
 
-Sea p primo y μ_y^(p) la probabilidad proporcional a exp(−π y n²) sobre n∈ℤ con p∤n. Su normalización es
+Let p be prime and μ_y^(p) the probability proportional to exp(−π y n²) on n∈ℤ with p∤n. Its normalisation is
 
     Z_p(y)=θ(y)−θ(p² y)>0.
 
-Para d coprimo con p,
+For d coprime to p,
 
     q_d^(p)(y)=[θ(d²y)−θ(p²d²y)]/Z_p(y).
 
-Sean d,e≥2 coprimos entre sí y con p. Cuando y→∞,
+Let d,e≥2 be coprime to each other and to p. As y→∞,
 
     Z_p(y)=2e^(−π y)(1+o(1)),
     q_d^(p)(y)=e^(−π(d²−1)y)(1+o(1)),
     q_de^(p)(y)=e^(−π((de)²−1)y)(1+o(1)).
 
-Como
+Since
 
     ((de)²−1)−(d²+e²−2)=(d²−1)(e²−1)>0,
 
-resulta
+it follows that
 
     Cov_μy^(p)(I_d,I_e)
        =−e^(−π(d²+e²−2)y)(1+o(1))<0
 
-para todo y suficientemente grande. Ejemplo explícito: p=5, d=2, e=3. No se requiere umbral numérico para la afirmación asintótica probada.
+for all sufficiently large y. Explicit example: p=5, d=2, e=3. No numerical threshold is required for the proved asymptotic claim.
 
-Este condicionamiento corresponde realmente al factor eliminado: para Re s>1,
+This conditioning really corresponds to the removed factor: for Re s>1,
 
     ∫_0^∞ Z_p(y)y^(s/2−1)dy
        =2π^(−s/2)Γ(s/2)ζ(s)(1−p^(−s)).
 
-La identidad sale por integración término a término sobre enteros positivos no divisibles por p. Se ha perdido la masa en cero, pero aquí se prueba que esa pérdida cambia una correlación de signo; no se atribuye ese signo al término polar de Q_T.
+The identity follows by termwise integration over positive integers not divisible by p. The mass at zero has been lost, but here it is proved that this loss changes the sign of a correlation; that sign is not attributed to the polar term of Q_T.
 
-## 4. Alcance exacto
+## 4. Exact scope
 
-Hay un positivo independiente y específico de una distribución aritmética con Poisson: todas las covarianzas cruzadas anteriores son estrictamente positivas y un borrado primo concreto las hace negativas. El objeto no es sólo una norma genérica. Aun así:
+There is an independent positive result specific to an arithmetic distribution with Poisson: all the cross covariances above are strictly positive and a concrete prime deletion makes them negative. The object is not just a generic norm. Even so:
 
-- Es una afirmación sobre divisibilidad gaussiana, no todavía sobre los coeficientes Λ del nodo.
-- La variable y y los índices d,e no son automáticamente alturas t,t′ de Mellin; la traducción necesita hacerse.
-- No se ha demostrado identidad o dominación de Q_T por estas correlaciones. Pesos con signo y derivadas logarítmicas pueden perder la positividad.
-- El límite y↓0 es C_y(d,e)→(gcd(d,e)−1)/(de); para d,e coprimos, la estricta positividad queda en una corrección pequeña que no debe descartarse.
-- El fallo de signo se probó para un condicionamiento completo y y grande, no para todo p,T ni para toda ventana del nodo.
+- It is a statement about Gaussian divisibility, not yet about the Λ coefficients of the node.
+- The variable y and the indices d,e are not automatically Mellin heights t,t′; the translation remains to be done.
+- No identity or domination of Q_T by these correlations has been proved. Signed weights and logarithmic derivatives may lose positivity.
+- The limit y↓0 is C_y(d,e)→(gcd(d,e)−1)/(de); for coprime d,e, the strict positivity sits in a small correction that must not be discarded.
+- The sign failure was proved for a complete conditioning and large y, not for every p,T nor for every window of the node.
 
-**Resultado parcial positivo PROVED; enlace con Q_T OPEN.** Esta nota ofrece un signo concreto que auditar, sin declarar cumplido el objetivo de O1 ni el signo final.
+**Partial positive result PROVED; link with Q_T OPEN.** This note offers a concrete sign to audit, without declaring the O1 goal or the final sign fulfilled.
 
-## 5. Control hostil del origen: límite decisivo del positivo
+## 5. Independent check of the origin: decisive limit of the positive result
 
-**PROVED.** El átomo n=0 explica una contribución positiva de rango uno. Sea p₀=μ_y({0})=1/θ(y), μ_y^*=μ_y condicionada a n≠0, y r_d=E_μy* I_d. La fórmula de covarianza total da exactamente
+**PROVED.** The atom n=0 explains a positive rank-one contribution. Let p₀=μ_y({0})=1/θ(y), μ_y^*=μ_y conditioned on n≠0, and r_d=E_μy* I_d. The law of total covariance gives exactly
 
     C_y(d,e)=(1−p₀) C_y^*(d,e)
        +p₀(1−p₀)(1−r_d)(1−r_e).
 
-El último término es una matriz de rango uno positiva. Sobre coeficientes finitos a_d con Σ_d a_d(1−r_d)=0, su contribución a Σ a_d conjugado(a_e)C_y(d,e) se anula y sólo queda la covarianza condicionada, cuya PSD es genérica.
+The last term is a positive rank-one matrix. On finite coefficients a_d with Σ_d a_d(1−r_d)=0, its contribution to Σ a_d conjugate(a_e)C_y(d,e) vanishes and only the conditioned covariance remains, whose PSD is generic.
 
-Para d,e coprimos mayores que 1, también C_y^*(d,e)<0 para y grande: la misma asintótica de §3 vale sin excluir múltiplos de p. Por tanto el cambio de signo del borrado no identifica por sí solo un efecto de Euler completo; quitar únicamente el origen ya destruye la asociación cruzada. La prueba de §2 sigue siendo un positivo exacto, pero no establece que el signo útil sobreviva al eliminar el modo de origen.
+For coprime d,e greater than 1, also C_y^*(d,e)<0 for large y: the same asymptotics of §3 hold without excluding multiples of p. Hence the sign change of the deletion does not by itself identify a complete Euler effect; removing only the origin already destroys the cross association. The proof of §2 remains an exact positive result, but it does not establish that the useful sign survives the removal of the origin mode.
 
-**No hay identificación demostrada entre este rango uno y el polar de Q_T.** Hasta construirla, tampoco se puede afirmar que el ortogonal cosh lo mate automáticamente. R11_2_ORIGIN ya obliga a controlar este punto antes de convertir una propiedad del origen theta en mecanismo para el nodo.
+**There is no proved identification between this rank one and the polar term of Q_T.** Until it is constructed, it cannot be claimed either that the cosh orthogonal kills it automatically. R11_2_ORIGIN already requires controlling this point before turning a property of the theta origin into a mechanism for the node.
 
-Conclusión de alcance corregida: el positivo de asociación existe y es específico de la distribución theta íntegra; la pretensión de que proporcione signo aritmético nuevo para el ortogonal polar queda **OPEN, sin evidencia por ahora**. No usar el fracaso tras borrar p como prueba suficiente de una evasión de la barrera del origen.
+Corrected scope conclusion: the association positive result exists and is specific to the complete theta distribution; the claim that it provides a new arithmetic sign for the polar orthogonal remains **OPEN, with no evidence for now**. Do not use the failure after deleting p as sufficient proof of an evasion of the origin barrier.

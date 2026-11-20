@@ -1,283 +1,283 @@
-# Síntesis de las rondas O1
+# Synthesis of the O1 rounds
 
-**Estado actual:** objetivo completo D active. La sección final «Rondas 005–007»
-recoge los resultados más recientes; las rondas previas quedan como historia.
+**Current status:** full goal D active. The final section «Rounds 005–007»
+collects the most recent results; the previous rounds remain as history.
 
-2026-10-18. Fila D independiente. Documento de integración, sin modificación
-de Paper 47. Revisión final favorable: AUDIT_001 §8.
+2026-10-18. Row D independent. Integration document, without modification
+of Paper 47. Final review favourable: AUDIT_001 §8.
 
-## Qué cambió en el encargo
+## What changed in the assignment
 
-La pregunta original «K de dos variables positivo y que falle al borrar un
-primo» se sustituyó por una prueba en puertas: dominio efectivo; salida
-precisa de SOS/PD; traducción real a BR, si existe; signo independiente;
-fallo de una premisa o del enlace ante falsificadores pertinentes; enlace
-con Q_T sólo al final. El signo del candidato no tiene por qué fallar él
-mismo ante toda eliminación. Una identidad específica puede ser el paso
-que evite la transferencia, pero su demostración debe aportar contenido.
+The original question «two-variable K positive and failing when a
+prime is deleted» was replaced by a gated test: effective domain; precise
+exit from SOS/PD; actual translation to BR, if it exists; independent sign;
+failure of a premise or of the link under the relevant falsifiers; link
+with Q_T only at the end. The sign of the candidate need not itself fail
+under every elimination. A specific identity may be the step
+that avoids the transfer, but its proof must contribute content.
 
-## Resultados y límites
+## Results and limits
 
-- CONTROL_001: la proyección P_T M_a P_T crea un kernel de dos variables
-  sin cambiar la forma en la imagen de P_T. PROVED y revisión hostil favorable.
-- AUDIT_001: thm:sos no es una prohibición de toda identidad de normas.
-  Se distingue su clase de def:PD y del colapso abstracto B*B.
-- AUDIT_001: núcleo de P36-4, operador K(t,t′) y conjunto relajado W₂ de
-  BR son objetos diferentes. No se transfiere una pared por la notación.
-- El examen del ansatz J+corrección compacta se registra en CONSTRUCTOR_001
-  y fue aceptado por la revisión final (AUDIT_001 §8). Se refiere a positividad en un intervalo
-  completo de alturas o en un ideal lineal denso explícito; no al dominio
-  aritmético Euler+FE ni al nodo global con sus colas.
+- CONTROL_001: the projection P_T M_a P_T creates a two-variable kernel
+  without changing the form on the image of P_T. PROVED and independent review favourable.
+- AUDIT_001: thm:sos is not a prohibition of every norm identity.
+  Its class is distinguished from def:PD and from the abstract collapse B*B.
+- AUDIT_001: the kernel of P36-4, the operator K(t,t′) and the relaxed set W₂ of
+  BR are different objects. No wall is transferred by notation.
+- The examination of the ansatz J+compact correction is recorded in CONSTRUCTOR_001
+  and was accepted by the final review (AUDIT_001 §8). It refers to positivity on a full interval
+  of heights or on an explicit dense linear ideal; not to the arithmetic domain
+  Euler+FE nor to the global node with its tails.
 
-No se ha construido un núcleo con signo propio y enlace aritmético útil.
-La ronda NO demuestra inexistencia del objeto de O1.
+No kernel with its own sign and a useful arithmetic link has been constructed.
+The round does NOT prove nonexistence of the O1 object.
 
-## Qué significaría continuar después del control compacto
+## What continuing after the compact control would mean
 
-Dentro del ansatz J+K y con positividad sobre el espacio completo de alturas,
-una corrección tendría que escapar la clase compacta. Esto no impone no
-compacidad a todo posible mecanismo O1: otro dominio u otra forma de
-positividad requieren otro análisis.
+Within the ansatz J+K and with positivity on the full space of heights,
+a correction would have to escape the compact class. This does not impose non-
+compactness on every possible O1 mechanism: another domain or another form of
+positivity requires another analysis.
 
-Por ejemplo, I+J es ya positivo y no compacto en ese espacio. Eso sólo
-ilustra que salir de la clase compacta no basta: es una positividad genérica,
-sin especificidad aritmética. La siguiente ronda necesita un candidato
-explícito antes de añadir otra condición necesaria al catálogo.
+For example, I+J is already positive and non-compact on that space. That only
+illustrates that leaving the compact class is not enough: it is a generic positivity,
+without arithmetic specificity. The next round needs an explicit
+candidate before adding another necessary condition to the catalogue.
 
-**Balance:** encargo mejorado y primera tentativa ejecutada; sin fuente de
-signo, sin cierre del nodo ni cambio de estado de O1 o de la fila D.
+**Balance:** improved assignment and first attempt executed; no source of
+sign, no closure of the node and no change of status of O1 or of row D.
 
-## Segunda ronda — resultado positivo auxiliar con signo estricto
+## Second round — auxiliary positive result with strict sign
 
-El plan posterior fue continuar hasta un resultado positivo.
-Se construyó C_y como covarianza de divisibilidad bajo la gaussiana discreta
-sin origen, con τ=θ−1. Su PSD genérica no se contó como avance. El cálculo
-posterior produjo estos signos adicionales, aceptados en AUDIT_003:
+The subsequent plan was to continue until a positive result.
+C_y was constructed as a divisibility covariance under the discrete Gaussian
+without origin, with τ=θ−1. Its generic PSD was not counted as progress. The subsequent
+computation produced these additional signs, accepted in AUDIT_003:
 
-1. **Concavidad geométrica puncturada:** (d/dx)²logτ(e^x)<0 para todo x.
-   Prueba elemental con Poisson y cotas racionales uniformes; no depende de
-   ceros. No se afirma prioridad bibliográfica.
-2. **Anticorrelación estricta:** para d,e>1 coprimos,
-   Cov_y(1_{d|N},1_{e|N})<0 para TODO y>0. No es la PSD automática de una
-   covarianza; determina el signo de su interacción cruzada.
-3. **Factores primos:** Cov_y(v_p,v_q)<0 para p≠q, y
-   Var_y(log|N|)<Σ_p(log p)²Var_y(v_p), con convergencia absoluta probada.
-4. Para familias FINITAS coprimas dos a dos, la matriz C_y es definida
-   positiva, tiene entradas cruzadas negativas y su inversa es positiva
-   entrada a entrada. Esa estructura no se atribuye al nodo.
+1. **Punctured geometric concavity:** (d/dx)²logτ(e^x)<0 for all x.
+   Elementary proof with Poisson and uniform rational bounds; it does not depend on
+   zeros. No bibliographic priority is claimed.
+2. **Strict anticorrelation:** for coprime d,e>1,
+   Cov_y(1_{d|N},1_{e|N})<0 for ALL y>0. It is not the automatic PSD of a
+   covariance; it determines the sign of its cross interaction.
+3. **Prime factors:** Cov_y(v_p,v_q)<0 for p≠q, and
+   Var_y(log|N|)<Σ_p(log p)²Var_y(v_p), with proved absolute convergence.
+4. For pairwise coprime FINITE families, the matrix C_y is positive
+   definite, has negative cross entries and its inverse is positive
+   entrywise. That structure is not attributed to the node.
 
-### Paso crítico coprimo
+### Critical coprime step
 
-Si B_y(d,e)=τ(y)C_y(d,e), el término divergente de B_y en cero es
-G₀(d,e)y^(-1/2), G₀=(gcd(d,e)−1)/(de). Para coprimos G₀=0 exactamente.
-Se obtiene directamente, para α>0,
+If B_y(d,e)=τ(y)C_y(d,e), the divergent term of B_y at zero is
+G₀(d,e)y^(-1/2), G₀=(gcd(d,e)−1)/(de). For coprime indices G₀=0 exactly.
+One obtains directly, for α>0,
 
     A_α(d,e)=−∫₀∞y^(α−1)B_y(d,e)dy >0.
 
-En α=1/4 no hace falta contratermino COPRIMO. B conserva el cociente
-τ(d²y)τ(e²y)/τ(y); desnormalizar el factor exterior no lo elimina.
-La diferencia conjunta converge; no separar sus dos integrales divergentes
-sin la continuación correspondiente.
+At α=1/4 no COPRIME counterterm is needed. B keeps the quotient
+τ(d²y)τ(e²y)/τ(y); denormalising the outer factor does not remove it.
+The joint difference converges; do not split its two divergent integrals
+without the corresponding continuation.
 
-CONSTRUCTOR_004 y AUDIT_004 desarrollan además la no dependencia exclusiva
-del producto de los índices y la extensión Mellin a todas las potencias de
-DOS primos distintos. Ésta no autoriza sumar todos los primos en el peso
-crítico sin una estimación uniforme.
+CONSTRUCTOR_004 and AUDIT_004 further develop the non-exclusive dependence
+on the product of the indices and the Mellin extension to all powers of
+TWO distinct primes. This does not authorise summing over all primes at the critical
+weight without a uniform estimate.
 
-### Lo que se alcanzó y lo que no
+### What was achieved and what was not
 
-Se alcanzó un **resultado positivo parcial real**: una interacción cruzada
-firmada, válida en todas las escalas y cuyo Mellin coprimo conserva el signo
-en α=1/4 sin resta. No se construyó la forma PSD global que cierre O1.
-Positividad de entradas no es positividad de forma; falta diagonal y mismo
-primo, enlace exacto con Q_T, identificación del polar y control de todos
-los tests/modos. α=1/4 por sí solo no verifica la ley de peso del nodo.
-La anticorrelación podría heredarse por un Euler incompleto: no se demostró
-la especificidad completa exigida al mecanismo final.
+A **genuine partial positive result** was achieved: a signed cross
+interaction, valid at all scales, whose coprime Mellin transform keeps the sign
+at α=1/4 without subtraction. The global PSD form that would close O1 was not constructed.
+Positivity of entries is not positivity of the form; the diagonal and same
+prime, the exact link with Q_T, the identification of the polar term and control of all
+tests/modes are missing. α=1/4 by itself does not verify the weight law of the node.
+The anticorrelation could be inherited by an incomplete Euler product: the complete
+specificity required of the final mechanism was not proved.
 
-La primera ronda dejó controles negativos; la segunda deja este lema de
-signo y un objeto explícito. El nodo y D siguen OPEN. No se escribió ningún
-cierre en Paper 47 ni se repintaron celdas del grid.
+The first round left negative controls; the second leaves this sign
+lemma and an explicit object. The node and D remain OPEN. No
+closure was written in Paper 47 and no cells of the grid were repainted.
 
-Revisión final de segunda ronda: AUDIT_003 y AUDIT_004 favorables; sin
-objeciones pendientes. El hito positivo alcanzado es auxiliar y firmado,
-no el hito mayor del núcleo O1 con enlace completo.
+Final review of the second round: AUDIT_003 and AUDIT_004 favourable; no
+pending objections. The positive milestone achieved is auxiliary and signed,
+not the major milestone of the O1 kernel with complete link.
 
-## Rondas 005–007 — completación auxiliar y enlace funcional
+## Rounds 005–007 — auxiliary completion and functional link
 
-**CONSTRUCTOR_005 / AUDIT_005: PROVED.** Todo el kernel canónico −Rα
-queda SPD sobre coeficientes finitos de divisores distintos≥2:
+**CONSTRUCTOR_005 / AUDIT_005: PROVED.** The whole canonical kernel −Rα
+is SPD on finite coefficients of distinct divisors ≥2:
 
     −Rα(A)=κ E_s|A−μ₁(A)|²+∫y^{α−1}τ|E_yA−μ₁(A)|²dy,
     s=2α∈(0,1), κ=−2π^{−α}Γ(α)ζ(2α)>0.
 
-La diagonal de R y los bloques del mismo primo YA están pagados para ese
-objeto. No se asignó una diagonal favorable ni se supuso positividad deQ.
-No se usó una leyζnormalizable a s<1: P_s vive en finitísimas valuaciones.
-La positividad se hereda bajo borrado finito; no es específica por sí sola.
+The diagonal of R and the same-prime blocks ARE ALREADY paid for that
+object. No favourable diagonal was assigned nor was positivity of Q assumed.
+No normalisable ζ law at s<1 was used: P_s lives on finitely many valuations.
+Positivity is inherited under finite deletion; it is not specific by itself.
 
-**CONSTRUCTOR_006 / AUDIT_006: PROVED.** Con m=y^{−1/2}−τ,
-0<m<1 y m(y)=y^{−1/2}m(1/y), la FE de Π transforma α en1/2−α,
-con dilataciones fraccionarias explícitas y mismo parámetro en1/4.
-Para una ley borrada, el perfil dual m_P^∨ difiere de m_P porΔ_P
-explícito y no nulo. Esa identidad de un único perfil sí falla al borrar;
-aún no se ha demostrado que aporte el signo deQ. No se atribuye aΠ
-noHankel aαfijo sólo por escribir dos escalas.
+**CONSTRUCTOR_006 / AUDIT_006: PROVED.** With m=y^{−1/2}−τ,
+0<m<1 and m(y)=y^{−1/2}m(1/y), the FE of Π transforms α into 1/2−α,
+with explicit fractional dilations and the same parameter at 1/4.
+For a deleted law, the dual profile m_P^∨ differs from m_P by an explicit
+nonzero Δ_P. That single-profile identity does fail under deletion;
+it has not yet been proved that it contributes the sign of Q. No
+non-Hankel property at fixed α is attributed to Π merely by writing two scales.
 
-**CONSTRUCTOR_007:** en el núcleo Haarcentrado de la completación de−R,
-D_nA=1_{n|N}A(N/n) preserva el centro. V_n=n^{s/2}D_n es un semigrupo
-de contracciones. El factor geométrico es isométrico y el defecto de norma
-es exactamente
+**CONSTRUCTOR_007:** in the Haar-centred kernel of the completion of −R,
+D_nA=1_{n|N}A(N/n) preserves the centring. V_n=n^{s/2}D_n is a semigroup
+of contractions. The geometric factor is isometric and the norm defect
+is exactly
 
     ∫u^{α−1}τ(u)[1−q_n(u/n²)]|E_uA|²du ≥(1−1/n)Π(A).
 
-El cálculo de adjuntos en el factor gaussiano no se transfiere automáticamente
-al subespacio grafo. Las propiedades del monoide solas pueden ser genéricas;
-la FE y la interpretación entera deben intervenir en el enlace concreto.
+The computation of adjoints in the Gaussian factor does not transfer automatically
+to the graph subspace. The monoid properties alone may be generic;
+the FE and the integer interpretation must intervene in the concrete link.
 
-**Objetivo D activo.** Próximo paso: realizar la inversión de006 en el
-espacio de007 y verificar la forma/traza que produzca, con dominio y
-convergencia. No se da por existente una traza ni se identifica su signo
-conQ por semejanza. Faltan ese enlace, todos los modos/ventanas, colas y
-los sectores/polar requeridos por el portador declarado.
+**Goal D active.** Next step: realise the inversion of 006 in the
+space of 007 and verify the form/trace it produces, with domain and
+convergence. A trace is not taken as existing nor is its sign identified
+with Q by similarity. That link, all modes/windows, tails and
+the sectors/polar required by the declared carrier are missing.
 
-## Ronda008 — defecto de inversión verificado
+## Round 008 — inversion defect verified
 
-CONSTRUCTOR008/AUDIT008: en el factorGaussian la inversiónU satisface
-UGnU=M_bGn*, b²=r(y/n²)/r(y), r=τyτ1/y. b cruza1 en y=n.
-No se puede importar una conjugación simple conadjunto al módulo.
-La sucesión primorial que parecía producir una componente vertical
-converge sólo puntualmente: su normaGaussian diverge. Prueba aritmética
-elemental; no Mertens ni nueva hipótesis de ceros.
+CONSTRUCTOR008/AUDIT008: in the Gaussian factor the inversion U satisfies
+UGnU=M_bGn*, b²=r(y/n²)/r(y), r=τyτ1/y. b crosses 1 at y=n.
+A simple conjugation with adjoint cannot be imported into the module.
+The primorial sequence that seemed to produce a vertical component
+converges only pointwise: its Gaussian norm diverges. Elementary arithmetic
+proof; no Mertens nor new zero hypothesis.
 
-Sigue pendiente determinar el cierre y su invariancia; el cálculo de008
-no decide ni clausurabilidad ni componentes verticales. El mapa conQ_T
-no fue construido. Objetivo íntegroD active.
+Determining the closure and its invariance remains pending; the computation of 008
+decides neither closability nor vertical components. The map to Q_T
+was not constructed. Full goal D active.
 
-## Ronda009 — resultado de la prueba directa del enlace
+## Round 009 — outcome of the direct proof of the link
 
-LINK009/AUDIT009 descartan un semigrupoC0 que interpole n^betaV_n enlogn
-para cualquierbeta, tambiénD_n. La prueba usa un vector concreto de007,
-no un argumento de soporte ni información de ceros. Compresiónunitaria
-fijaV_n excluida; paraD_n no se afirma esa segunda conclusión.
+LINK009/AUDIT009 discard a C0 semigroup interpolating n^beta V_n at log n
+for any beta, also D_n. The proof uses a concrete vector of 007,
+not a support argument nor zero information. A fixed unitary compression
+of V_n is excluded; for D_n that second conclusion is not claimed.
 
-Por tanto no se puede pasar del módulo a un generadorMellin continuo por
-simple interpolación de sus acciones. Falta otra realización/mapa y la
-identidad conQ_T. SCOPE_P44_009 separa este resultado del sobrealcance
-de rem:nointerp sobre interpolaciónweak* arbitraria. ObjetivoD active.
-
-
-### Fase209 — LINK010: regularidad de una compresión de D_n (2026-10-19)
-
-LINK_010_SPECTRAL_REGULARITY calcula, para cada observable finito centrado
-no nulo A, incrementos con liminf ||D_mA−D_nA||²/log(m/n)^s>0,
-s=2alpha, mediante n=1+kL,m=n+L fuera del soporte primo de A.
-Toda realización D_n=P U(log n)J con mapas fijos acotados y U unitario C0
-requiere momento espectral s INFINITO para JA: no Dom(|B|^(s/2)).
-En alpha1/4, momento1/2 y potencia de dominio1/4. PROVED, revisión
-independiente favorable en AUDIT_010. Sólo excluye compresiones con esa
-regularidad; la compresión general permanece OPEN, igual que el enlace Q_T.
-No se reabre la compresión normalizada009 ni se modifica el estado de D.
+Hence one cannot pass from the module to a continuous Mellin generator by
+simple interpolation of its actions. Another realisation/map and the
+identity with Q_T are missing. SCOPE_P44_009 separates this result from the overreach
+of rem:nointerp about arbitrary weak* interpolation. Goal D active.
 
 
-### Fase209 — LINK011: primer mapa continuo calculado y cotejado (2026-10-19)
+### Phase 209 — LINK010: regularity of a compression of D_n (2026-10-19)
 
-LINK_011_MELLIN_GAUSS_MAP construye UF=Σ a_d(F)(X_d−1/d), con
- a_d=2∫ e^(x/2)F(x)W_d(e^(2x))dx en alpha1/4.
-Convergencia enH por a_d=O_T(||F||/d), Sdd=O(d^-s); operador compacto,
-featureC∞ y kernel efectivo suave. FEcoef paraFpar recupera exactamente
-C(F)=∫Fcosh(x/2). No sumar el vector polar separado: diverge; cancelar
-coeficientes primero. La igualdad Q_T=||UF||² en el portador continuo es
-FALSA para ESTE mapa: tests polarcorregidos de alta frecuencia tienen
-Q_T~logλ y||UF||→0. La dominación Q_T≥||UF||² sigue OPEN, igual que otros
-mapas no suavizantes. No NO-GO generalO1, ni prueba deD. Revisión favorable en AUDIT_011.
-Precisión006: no se exigen correspondenciasG/Π/v pieza a pieza; basta
-identidad o dominación TOTAL sobre un core denso para norma de forma.
+LINK_010_SPECTRAL_REGULARITY computes, for each nonzero centred finite
+observable A, increments with liminf ||D_mA−D_nA||²/log(m/n)^s>0,
+s=2alpha, via n=1+kL, m=n+L outside the prime support of A.
+Every realisation D_n=P U(log n)J with fixed bounded maps and C0 unitary U
+requires INFINITE spectral moment s for JA: not in Dom(|B|^(s/2)).
+At alpha 1/4, moment 1/2 and domain power 1/4. PROVED, independent
+review favourable in AUDIT_010. It only excludes compressions with that
+regularity; the general compression remains OPEN, as does the Q_T link.
+The normalised compression 009 is not reopened and the status of D is not modified.
 
 
-### Fase209 — LINK012: dominación011 refutada por test certificado (2026-10-19)
+### Phase 209 — LINK011: first continuous map computed and cross-checked (2026-10-19)
 
-LINK_012_DOMINATION_FALSIFIER conserva exactamente el mapaU de011 y
-prueba la desigualdad que había quedadoOPEN, sin reintentar la igualdad.
-Test explícitoT=4/5, ω=5π/8, r=3(ω²+1/4)/(9ω²+1/4),
-F=(cos3ωx+r cosωx)/sqrt(T(1+r²)), par, H0¹ y polar libre EXACTO.
-CertificaciónArb128 y colasanalíticas: Q(F)<.002351, mientras el rango uno
-positivo de005 da ||UF||²≥κ|Σa_dv_d|²>.26134304. Resto<−.25899.
-Laplaceexacta de autocorrelación y expansiónK=2Σexp(−(2j+.5)u)
-proporcionan comprobaciónindependiente sincuadraturagamma/peine:
-Qupper<.001647953. Datos/códigoenLINK012_data. AproximaciónH1polarcorregida
-extiende el falsificador a coreC_c∞. AUDIT_012 favorable, ambos scripts reproducidos.
-Sólo escala EXACTA deU011: ninguna exclusión de reescalares pequeñas,
-otros mapas/O1 niD. Esta dominación concreta ya no es un residuoOPEN.
-No integraciónP47 ni cambio de celdas/conteos. ObjetivoD íntegro active.
+LINK_011_MELLIN_GAUSS_MAP constructs UF=Σ a_d(F)(X_d−1/d), with
+ a_d=2∫ e^(x/2)F(x)W_d(e^(2x))dx at alpha 1/4.
+Convergence in H by a_d=O_T(||F||/d), Sdd=O(d^-s); compact operator,
+C∞ feature and smooth effective kernel. FEcoef for even F recovers exactly
+C(F)=∫Fcosh(x/2). Do not sum the separate polar vector: it diverges; cancel
+coefficients first. The equality Q_T=||UF||² on the continuous carrier is
+FALSE for THIS map: polar-corrected high-frequency tests have
+Q_T~logλ and ||UF||→0. The domination Q_T≥||UF||² remains OPEN, as do other
+non-smoothing maps. No general NO-GO for O1, nor proof of D. Review favourable in AUDIT_011.
+Precision on 006: piece-by-piece G/Π/v correspondences are not required; a
+TOTAL identity or domination on a dense core for the form norm suffices.
 
 
-### Fase209 — LINK013: toda escala fija deU011 falla para ventanas grandes (2026-10-19)
+### Phase 209 — LINK012: domination 011 refuted by a certified test (2026-10-19)
 
-Diferencia nueva escrita respecto012: no cambiaU ni reintenta escala1;
-calcula la respuesta del mismo mapa sobre la familia EXPLÍCITA de P47
-lem:testfam aT→∞, y prueba la clase antesabierta de constantes arbitrarias.
-El perfilM(F)=∫Fh cumple h(−∞)=−κ,h(+∞)=0, por sumaRiemann y Mellin
-positiva de m=y^−1/2−τ. Para G_T=ω_k(x/T),k=ceil21T/e,F_T=P(D)G_T,
-masaG_T/Tescapa compactos, derivadasL1 son o(T), y
-M(F_T)/T→γ1²κ/8. AsíE_T≥κM²≥c0T². La prueba deP47thm:margin/cor:margin1
-(CITED, inputsZ1/Z2 y fórmulaexplícita sólo para este falsificador) da
-|Q_T(F_T)|/||F_T||²≤4e9Texp(−15.449T) paraESTAFAMILIA, no porinferir
-un test de un ínfimo. NormF²O(T^1.5) => |Q|/E=O(√Texp(−15.449T))→0.
-No existec>0 fijo conQ_T≥cE_Ten todasventanas. Cualquierc(T) eventual
-requiere c(T)≤C√Texp(−15.449T); su existencia no se demuestra.
-Pruebaanalítica sin nuevo cálculo numérico; AUDIT_013 favorable, inputCITED explícito.
-No exclusión de otrosmapas, ni signoD nuevo. No integraciónP47/celdas/conteos.
-
-
-### Fase209 — LINK014: quitar piezas positivas tampoco reparaU011 (2026-10-19)
-
-Diferencia escrita:013 descartó una forma MAYOR porκvv*; no implicaba
-falla de subformas. Aquíse prueba directamente cada pieza conMISMOa_d011.
-ParaΠ, el perfil K_y(x)=2e^.5xΣWd(e2x)(qd(y)−1/d) es positivo,L1 y
-∫K_y=C(y)=κΣvd(1/d−qd)>0. LocalCLTporFourier paraG_T ycotassupderivadas
-=>B_FT(y)/√T→−γ1²g0 C(y)/4. Fatouen[1,2] daEΠ(F_T)≳T.
-ParaG_s, G(d,2)=(1−1/√2)d^−.5 1_even; perfilh2boundedconlímites
-−κ(1−1/√2)/2 y0. Riemannpares+masaescape danL2(F_T)≍T; Cauchycovarianza
-=>E_G(F_T)≳T². κvv*ya daba≳T² en013. ConQ(F_T)CITEDdelpaper decreciendo
-exponencialmente, TODA combinaciónfija nonegativanonula AκG+Bκvv*+CΠ
-con MISMOa_d011 tiene |Q|/E→0. No constantepositivauniforme de dominación.
-No inferencias de mayor a menor; nueva prueba para ambas subformas.
-Sin numerics nuevos. AUDIT_014 y addendum favorables para toda la clase.
-No se excluyen otros mapas, cancelacionesfirmadas ni factoresTdependientes.
-ObjetivoD íntegro active/OPEN; no integraciónP47/celdas/conteos.
+LINK_012_DOMINATION_FALSIFIER keeps exactly the map U of 011 and
+tests the inequality that had remained OPEN, without retrying the equality.
+Explicit test T=4/5, ω=5π/8, r=3(ω²+1/4)/(9ω²+1/4),
+F=(cos3ωx+r cosωx)/sqrt(T(1+r²)), even, H0¹ and EXACTLY polar-free.
+Arb128 certification and analytic tails: Q(F)<.002351, while the positive
+rank one of 005 gives ||UF||²≥κ|Σa_dv_d|²>.26134304. Remainder<−.25899.
+Exact Laplace transform of the autocorrelation and the expansion K=2Σexp(−(2j+.5)u)
+provide an independent check without gamma/comb quadrature:
+Qupper<.001647953. Data/code in LINK012_data. Polar-corrected H1 approximation
+extends the falsifier to the C_c∞ core. AUDIT_012 favourable, both scripts reproduced.
+Only the EXACT scale of U011: no exclusion of small rescalings,
+other maps/O1 nor D. This concrete domination is no longer an OPEN residue.
+No P47 integration nor change of cells/counts. Full goal D active.
 
 
-### Fase209 — CONSTRUCTOR015: dominio separado y cono PSD exacto (2026-10-19)
+### Phase 209 — LINK013: every fixed scale of U011 fails for large windows (2026-10-19)
 
-Diferencia nueva frente008: pequeños tilts positivos sobre muchos primosaltos,
-no el primorial cuya normaGaussian divergía. ParaH=Σp^-s→∞,t=H^-2/3,
-Z_u=∏(1+tp^-u), A=∏(1+tXp)/Z_s−Z_1/Z_s es Haarcentrado y satisface
-Es|A−1|²→0, ||TA||≤C(Z_r−1)/Z_s→0,r=(s+1)/2>s, porΠdd de011.
-Esto produce(√κ1,0)∈H. AccionesDnacotadas007 generan purosXd y dan
-H=L²(P_s)⊕V,V=closureTA0. Tdensamente definido NOclausurable, con
-sucesiónexplícita f2−(D2A_j−A_j/2)→0arith, imagen→q2−1/2≠0.
-Las3formasκG,κvv*,Π son energías de3proyeccionesortogonales genuinas.
-El conoPSD en su spanREAL sobreTODOA0 es exactamentea,b,c≥0.
-Con014cierratambiéncombinacionesfirmadasPSDglobales deese span con
-MISMOmapa011. No clasifica formas positivas sóloensuimagen niotrosmapas.
-Psproducto devaluaciones, NOleyzetasobreN. NoV=todoGaussian niFEinvariancia.
-Sin numerics nuevos ni inputnuevo de ceros. AUDIT_015 favorable a los tres teoremas.
-No signoQ/D; objetivo íntegroactive, sin integraciónP47/celdas/conteos.
+New written difference from 012: it does not change U nor retry scale 1;
+it computes the response of the same map on the EXPLICIT family of P47
+lem:testfam as T→∞, and tests the previously open class of arbitrary constants.
+The profile M(F)=∫Fh satisfies h(−∞)=−κ, h(+∞)=0, by Riemann sum and positive
+Mellin transform of m=y^−1/2−τ. For G_T=ω_k(x/T), k=ceil21T/e, F_T=P(D)G_T,
+the mass of G_T/T escapes compact sets, the L1 derivatives are o(T), and
+M(F_T)/T→γ1²κ/8. Thus E_T≥κM²≥c0T². The proof of P47 thm:margin/cor:margin1
+(CITED, inputs Z1/Z2 and explicit formula only for this falsifier) gives
+|Q_T(F_T)|/||F_T||²≤4e9Texp(−15.449T) for THIS FAMILY, not by inferring
+a test from an infimum. Norm F² O(T^1.5) => |Q|/E=O(√Texp(−15.449T))→0.
+There is no fixed c>0 with Q_T≥cE_T in all windows. Any possible c(T)
+requires c(T)≤C√Texp(−15.449T); its existence is not proved.
+Analytic proof without new numerical computation; AUDIT_013 favourable, explicit CITED input.
+No exclusion of other maps, nor new sign of D. No P47/cells/counts integration.
 
 
-### Fase209 — LINK016: imagen par polar libre densa (2026-10-19)
+### Phase 209 — LINK014: removing positive pieces does not repair U011 either (2026-10-19)
 
-Nueva diferencia frente015: ya no se suponePSDglobal; se calcula el
-anulador de U_T011 sobre TODOS los tests pares polar libres. Enα1/4,
-para cadaT>0, closureU_T(P_Tev)=H, tambiénparaelcoreC_c∞polarcorregido.
-Prueba: ηd=<fd,h>=O(d^-1/4), c=Σηd/d converge; el perfilanalítico b_h
-anuladorsatisface b_even=λcosh. Combμatómicaentera, a_n=Σd|nηd−c,a0=0;
-μ'=μ−λδ0/2 es antiFourier porinyectividadGaussianenS'par (lemaentero
-incluido). Fourierdecombenteraesperiódica=>μ'periodic=>constantcoeff;
-Thetaμ'(1)=0 obliga0; divisorinductionηd0=>h0. No nuevo input de ceros.
-Así cualquierformaHermítica Hcontinua PSDenU_T(core) esPSDglobal.
-Con015+014cierratambiéncombinacionesfirmadascontinuas del span3piezas
-positivas sóloenesa imagen, conMISMOmapa011. No finiteblockE_N, no formas
-Hdiscontinuas, no otrosmapas/coefTdependientes ni signoQ. Auditoría favorable
-independiente enAUDIT_016.md. D íntegroactive/OPEN.
+Written difference: 013 discarded a LARGER form via κvv*; it did not imply
+failure of subforms. Here each piece is tested directly with the SAME a_d 011.
+For Π, the profile K_y(x)=2e^.5xΣWd(e2x)(qd(y)−1/d) is positive, L1 and
+∫K_y=C(y)=κΣvd(1/d−qd)>0. Local CLT via Fourier for G_T and sup bounds on derivatives
+=> B_FT(y)/√T→−γ1²g0 C(y)/4. Fatou on [1,2] gives EΠ(F_T)≳T.
+For G_s, G(d,2)=(1−1/√2)d^−.5 1_even; profile h2 bounded with limits
+−κ(1−1/√2)/2 and 0. Even Riemann sums + escaping mass give L2(F_T)≍T; Cauchy covariance
+=> E_G(F_T)≳T². κvv* already gave ≳T² in 013. With the CITED Q(F_T) of the paper decreasing
+exponentially, EVERY fixed non-negative nonzero combination AκG+Bκvv*+CΠ
+with the SAME a_d 011 has |Q|/E→0. No positive uniform constant of domination.
+No inferences from larger to smaller; new proof for both subforms.
+No new numerics. AUDIT_014 and addendum favourable for the whole class.
+Other maps, signed cancellations and T-dependent factors are not excluded.
+Full goal D active/OPEN; no P47/cells/counts integration.
+
+
+### Phase 209 — CONSTRUCTOR015: split domain and exact PSD cone (2026-10-19)
+
+New difference from 008: small positive tilts over many large primes,
+not the primorial whose Gaussian norm diverged. For H=Σp^-s→∞, t=H^-2/3,
+Z_u=∏(1+tp^-u), A=∏(1+tXp)/Z_s−Z_1/Z_s is Haar-centred and satisfies
+Es|A−1|²→0, ||TA||≤C(Z_r−1)/Z_s→0, r=(s+1)/2>s, by Πdd of 011.
+This produces (√κ1,0)∈H. The bounded actions Dn of 007 generate pure Xd and give
+H=L²(P_s)⊕V, V=closure TA0. T densely defined NOT closable, with
+explicit sequence f2−(D2A_j−A_j/2)→0 arithmetically, image→q2−1/2≠0.
+The 3 forms κG, κvv*, Π are energies of 3 genuine orthogonal projections.
+The PSD cone in their REAL span over ALL of A0 is exactly a,b,c≥0.
+With 014 it also closes globally PSD signed combinations of that span with the
+SAME map 011. It does not classify forms positive only on its image nor other maps.
+Ps is a product of valuations, NOT a zeta law on N. Not V=all Gaussian nor FE invariance.
+No new numerics nor new zero input. AUDIT_015 favourable to the three theorems.
+No sign of Q/D; full goal active, no P47/cells/counts integration.
+
+
+### Phase 209 — LINK016: dense even polar-free image (2026-10-19)
+
+New difference from 015: global PSD is no longer assumed; the
+annihilator of U_T 011 on ALL even polar-free tests is computed. At α 1/4,
+for each T>0, closure U_T(P_Tev)=H, also for the polar-corrected C_c∞ core.
+Proof: ηd=<fd,h>=O(d^-1/4), c=Σηd/d converges; the analytic profile b_h of the
+annihilator satisfies b_even=λcosh. Integer atomic comb μ, a_n=Σd|nηd−c, a0=0;
+μ'=μ−λδ0/2 is anti-Fourier by Gaussian injectivity on even S' (full lemma
+included). The Fourier transform of an integer comb is periodic => μ' periodic => constant coeff;
+Thetaμ'(1)=0 forces 0; divisor induction ηd 0 => h 0. No new zero input.
+Thus every H-continuous Hermitian form PSD on U_T(core) is globally PSD.
+With 015+014 it also closes continuous signed combinations of the span of the 3 pieces
+positive only on that image, with the SAME map 011. Not finite block E_N, not
+discontinuous H-forms, not other maps/T-dependent coefficients nor sign of Q. Favourable
+independent audit in AUDIT_016.md. Full D active/OPEN.

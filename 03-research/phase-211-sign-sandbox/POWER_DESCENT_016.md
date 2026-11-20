@@ -1,116 +1,116 @@
-# POWER_DESCENT_016 — Defecto complementario, localización binomial y obstrucción precisa al descenso sólo estructural
+# POWER_DESCENT_016 — Complementary defect, binomial localization and precise obstruction to purely structural descent
 
-Estado: PROVED (identidades completas, monotonía eventual de diferencias, localización de masa y falsificador de la inferencia estructural). Descenso aritmético global OPEN. Papers intactos.
+Status: PROVED (complete identities, eventual monotonicity of differences, mass localization and falsifier of the structural inference). Global arithmetic descent OPEN. Papers untouched.
 
-## 1. Estado previo, corpus y razón nueva
+## 1. Previous state, corpus and new reason
 
-Leídos POWER_STATE_015, POWER_HIGHPASS_015, POWER_GEOMETRIC_TRANSFER_015 y el índice/grid/crucigrama, buscando complementary filters, binomial mixtures/partitions, descent y constant shifts. Se conserva el signo global de ocho polos y la positividad eventual para todo orden fijo. No se interpreta esa cola como positividad de los pasos iniciales.
+Read POWER_STATE_015, POWER_HIGHPASS_015, POWER_GEOMETRIC_TRANSFER_015 and the index/grid/crossword, searching for complementary filters, binomial mixtures/partitions, descent and constant shifts. The global sign of eight poles and eventual positivity for every fixed order are kept. That tail is not interpreted as positivity of the initial steps.
 
-La diferencia nueva frente a 015 es calcular el DEFECTO exacto entre pasos high-pass, incluyendo el polar, y localizar cuantitativamente la masa de su refinamiento binomial. Esto permite probar qué parte de una tentativa de descenso está realmente controlada y cuál no. Las identidades de filtros no se presentan como una propiedad aritmética exclusiva.
+The new difference with respect to 015 is to compute the exact DEFECT between high-pass steps, including the polar, and to localize quantitatively the mass of its binomial refinement. This allows proving which part of a descent attempt is really controlled and which is not. The filter identities are not presented as an exclusive arithmetic property.
 
-## 2. Identidad complementaria con el polar completo
+## 2. Complementary identity with the complete polar
 
-Fije u>1, Q(s)=s/(s+u), L(s)=u/(s+u). En el eje de Fourier,
+Fix u>1, Q(s)=s/(s+u), L(s)=u/(s+u). On the Fourier axis,
 
     |Q(i tau)|²+|L(i tau)|²=1.
 
-Además, poniendo a=1/2,
+Moreover, setting a=1/2,
 
     Q(-a)Q(a)+L(-a)L(a)
        =[-a²+u²]/[u²-a²]=1.
 
-Por tanto la misma partición vale EXACTAMENTE para la forma completa:
+Hence the same partition holds EXACTLY for the complete form:
 
     W[f]=W[Qf]+W[Lf].                                    (DEF)
 
-La parte arquimediana y cada contacto se verifican multiplicando sus integrandos espectrales; el polar usa la segunda identidad. Las sumas de contactos convergen absolutamente en la clase racional considerada. También se cumple la identidad para la norma L2. No se ha supuesto que W[Lf] sea no negativa.
+The archimedean part and each contact are verified by multiplying their spectral integrands; the polar uses the second identity. The contact sums converge absolutely in the rational class considered. The identity also holds for the L2 norm. It has not been assumed that W[Lf] is non-negative.
 
-Los filtros conmutan. Iterar (DEF) m veces da
+The filters commute. Iterating (DEF) m times gives
 
     W[f]=Σ_{j=0}^m binom(m,j)W[Q^j L^{m-j}f],             (BIN)
 
-y la misma fórmula para ||f||². Se incluyen todos los cruces a través de la identidad de filtros; no es un argumento de positividad de sumandos.
+and the same formula for ||f||². All crossings are included via the filter identity; it is not an argument of positivity of summands.
 
-## 3. Resultado positivo adicional: diferencias finitas eventualmente positivas
+## 3. Additional positive result: eventually positive finite differences
 
-Para f en V_N, sea a_k=W[Q^k f] y Δa_k=a_{k+1}-a_k. (DEF) implica, para cada entero r>=0,
+For f in V_N, let a_k=W[Q^k f] and Δa_k=a_{k+1}-a_k. (DEF) implies, for each integer r>=0,
 
     (-1)^r Δ^r a_k=W[L^r Q^k f].                          (FD)
 
-Como L^r f=u^r P(s)/(s+u)^{N+r} pertenece a V_{N+r}, el teorema de positividad eventual de 015 prueba que, fijados N y r, el miembro derecho es positivo para k suficientemente grande, uniformemente sobre todos los numeradores de V_N. En particular a_k es eventualmente positiva y decreciente, y converge a cero por la convergencia fuerte ya probada.
+Since L^r f=u^r P(s)/(s+u)^{N+r} belongs to V_{N+r}, the eventual positivity theorem of 015 proves that, for fixed N and r, the right-hand side is positive for k sufficiently large, uniformly over all numerators of V_N. In particular a_k is eventually positive and decreasing, and converges to zero by the already proved strong convergence.
 
-Este enunciado es una monotonía de los VALORES CUADRÁTICOS SIN NORMALIZAR en la cola, no una monotonía global de los cocientes Rayleigh. Cada orden r tiene su propio umbral; no se ha probado un umbral común para todos r,N ni descenso hasta k=0.
+This statement is a monotonicity of the UNNORMALIZED QUADRATIC VALUES in the tail, not a global monotonicity of the Rayleigh quotients. Each order r has its own threshold; a common threshold for all r,N, or descent down to k=0, has not been proved.
 
-Telescopar r=1 también da
+Telescoping r=1 also gives
 
     W[f]=Σ_{k>=0}W[LQ^k f],
     ||f||²=Σ_{k>=0}||LQ^k f||².
 
-La serie de energías converge absolutamente: su cola es positiva por 015 y las sumas parciales convergen a W[f] por (DEF) y Q^k f->0 en norma fuerte. El prefijo finito todavía puede contener valores cuyo signo no está demostrado.
+The series of energies converges absolutely: its tail is positive by 015 and the partial sums converge to W[f] by (DEF) and Q^k f->0 in strong norm. The finite prefix may still contain values whose sign is not proved.
 
-## 4. Localización binomial exacta: la cola conocida ocupa un borde de masa nula
+## 4. Exact binomial localization: the known tail occupies a null-mass edge
 
-Para f no nula, defina la probabilidad espectral dmu=|F(i tau)|²d tau/(2pi||f||²) y
+For f non-zero, define the spectral probability dmu=|F(i tau)|²d tau/(2pi||f||²) and
 
     p(tau)=tau²/(u²+tau²),
     nu_m(j)=binom(m,j)||Q^j L^{m-j}f||²/||f||².
 
-Entonces nu_m es una probabilidad sobre j=0,...,m y tiene la representación EXACTA
+Then nu_m is a probability on j=0,...,m and has the EXACT representation
 
     nu_m(j)=∫binom(m,j)p(tau)^j[1-p(tau)]^{m-j}dmu.       (LAW)
 
-Condicionada a tau, j es una variable binomial de m ensayos y parámetro p(tau). En consecuencia, para toda función Lipschitz phi sobre [0,1],
+Conditioned on tau, j is a binomial variable of m trials and parameter p(tau). Consequently, for every Lipschitz function phi on [0,1],
 
     |Σ_j nu_m(j)phi(j/m)-∫phi(p(tau))dmu|
        <=Lip(phi)/(2sqrt m).                              (LOC)
 
-Prueba: la varianza condicional de j/m es p(1-p)/m<=1/(4m), y se aplica Cauchy--Schwarz. Así la ley de j/m converge a la imagen de la MEDIDA ESPECTRAL REAL de f por p; no se acumula automáticamente en j/m=1.
+Proof: the conditional variance of j/m is p(1-p)/m<=1/(4m), and Cauchy--Schwarz is applied. Thus the law of j/m converges to the image of the REAL SPECTRAL MEASURE of f under p; it does not automatically accumulate at j/m=1.
 
-Para cada R fijo,
+For each fixed R,
 
     Σ_{m-j<=R}nu_m(j)->0.                                 (EDGE)
 
-En efecto p(tau)<1 para todo tau finito; la probabilidad binomial de tener a lo sumo R fracasos tiende a cero para cada p<1, y se aplica convergencia dominada. La afirmación es uniforme sobre la esfera unitaria de cualquier V_N fijo: el operador multiplicador del evento está entre 0 y 1, converge puntualmente a cero, y su compresión de dimensión N tiene traza que tiende a cero; su norma está acotada por esa traza.
+Indeed p(tau)<1 for every finite tau; the binomial probability of having at most R failures tends to zero for each p<1, and dominated convergence is applied. The statement is uniform over the unit sphere of any fixed V_N: the multiplier operator of the event lies between 0 and 1, converges pointwise to zero, and its compression of dimension N has trace tending to zero; its norm is bounded by that trace.
 
-La relación con 015 es precisa. El término de (BIN) con m-j=r fijo es Q^{m-r}(L^r f), cuyo orden base es N+r. Fijado R, 015 hace positivos todos los términos del borde r<=R para m suficientemente grande. Pero (EDGE) prueba que ese borde tiene PESO NORMALIZADO TOTAL que tiende a cero. En el interior j/m≈theta<1, el orden base N+m-j también crece: 015 no proporciona allí un umbral uniforme.
+The relation with 015 is precise. The term of (BIN) with m-j=r fixed is Q^{m-r}(L^r f), whose base order is N+r. For fixed R, 015 makes all the edge terms r<=R positive for m sufficiently large. But (EDGE) proves that this edge has TOTAL NORMALIZED WEIGHT tending to zero. In the interior j/m≈theta<1, the base order N+m-j also grows: 015 provides no uniform threshold there.
 
-Esto no demuestra que los términos interiores sean negativos; demuestra que conocer sólo los bordes eventualmente positivos no controla por masa el resto de (BIN). La información pendiente permanece en la región macroscópica descrita por la medida p_#mu, que depende del numerador.
+This does not prove that the interior terms are negative; it proves that knowing only the eventually positive edges does not control by mass the rest of (BIN). The pending information remains in the macroscopic region described by the measure p_#mu, which depends on the numerator.
 
-### También desaparece la contribución energética de un borde fijo
+### The energy contribution of a fixed edge also vanishes
 
-Para f=P/(s+u)^N fijo no nulo, ponga d=grado P y r0=N-d>=1. Los asintóticos de norma y cociente completo de POWER_HIGHPASS_015 dan, para cada r fijo,
+For f=P/(s+u)^N fixed non-zero, put d=degree P and r0=N-d>=1. The norm and complete-quotient asymptotics of POWER_HIGHPASS_015 give, for each fixed r,
 
     ||Q^{m-r}L^r f||²=O(m^{-(r0+r-1/2)}),
     W[Q^{m-r}L^r f]/||Q^{m-r}L^r f||²=O(logm).
 
-Como binom(m,r)=O(m^r), resulta
+Since binom(m,r)=O(m^r), we get
 
     Σ_{r=0}^R binom(m,r)W[Q^{m-r}L^r f]
        =O(m^{1/2-r0}logm)->0.
 
-Por tanto los términos positivos que controla directamente 015 sobre un número fijo de diagonales superiores no sólo tienen peso normalizado nulo: su contribución energética TOTAL también desaparece. El interior de (BIN) conserva la energía inicial. No se infiere su signo de esta localización.
+Hence the positive terms that 015 directly controls over a fixed number of upper diagonals not only have zero normalized weight: their TOTAL energy contribution also vanishes. The interior of (BIN) keeps the initial energy. Its sign is not inferred from this localization.
 
-## 5. Falsificador exacto al descenso que usa únicamente identidades y cola
+## 5. Exact falsifier of descent that uses only identities and tail
 
-Observación del constructor principal. Modifique sólo la constante de la parte arquimediana:
+Observation. Modify only the constant of the archimedean part:
 
     W_4[f]=W[f]-4||f||².
 
-El peine entero y el polar permanecen idénticos. Como la norma satisface todas las particiones, W_4 conserva EXACTAMENTE (DEF), (BIN), las mezclas geométricas y sus normalizaciones. También conserva el teorema de positividad eventual de 015: el cociente high-pass crece al menos (logk)/2-C_N, y restar 4 no altera su divergencia positiva. Por tanto también conserva todas las conclusiones eventuales de (FD).
+The integer comb and the polar remain identical. Since the norm satisfies all the partitions, W_4 keeps EXACTLY (DEF), (BIN), the geometric mixtures and their normalizations. It also keeps the eventual positivity theorem of 015: the high-pass quotient grows at least (logk)/2-C_N, and subtracting 4 does not alter its positive divergence. Hence it also keeps all the eventual conclusions of (FD).
 
-Sin embargo, para f(y)=exp(-63y/2)1_{y>0}, la fórmula completa exacta da
+However, for f(y)=exp(-63y/2)1_{y>0}, the exact complete formula gives
 
     W[f]/||f||²=2L(32)<3,
     W_4[f]/||f||²<-1.
 
-La cota es elemental: psi(16)=H15-gamma<H15, logpi>1 y zeta'(32)/zeta(32)<0. Por tanto 2L(32)<H15-1+1/16+2/31<3, y esta última comparación racional está verificada en tools/power_descent_016_verify.py. Se incluyen TODOS los contactos a través del signo exacto de la serie convergente de zeta'/zeta; no se emplean aproximaciones de constantes especiales.
+The bound is elementary: psi(16)=H15-gamma<H15, logpi>1 and zeta'(32)/zeta(32)<0. Hence 2L(32)<H15-1+1/16+2/31<3, and this last rational comparison is verified in tools/power_descent_016_verify.py. ALL contacts are included through the exact sign of the convergent series of zeta'/zeta; no approximations of special constants are used.
 
-Queda FALSIFIED la inferencia «particiones exactas completas + mezcla positiva + positividad eventual uniforme en cada orden fijo implican positividad inicial». Todos esos enunciados son verdaderos para W_4, pero su dato inicial explícito es negativo. Esta clase de descenso debe usar alguna estimación cuantitativa adicional que distinga el multiplicador real del desplazado. Incluso conservar exactamente Lambda no basta si su interacción con la constante arquimediana no aparece en esa estimación.
+The inference «complete exact partitions + positive mixture + uniform eventual positivity at each fixed order imply initial positivity» is FALSIFIED. All those statements are true for W_4, but its explicit initial datum is negative. This class of descent must use some additional quantitative estimate that distinguishes the real multiplier from the shifted one. Even keeping Lambda exactly does not suffice if its interaction with the archimedean constant does not appear in that estimate.
 
-NO es un contraejemplo a la forma W del paper: W_4 es una forma modificada explícitamente. Tampoco se descarta un descenso que controle W[Lf] con el dato aritmético completo o utilice la distribución espectral del numerador. El resultado excluye sólo la inferencia basada en las propiedades estructurales y la cola ya disponibles.
+It is NOT a counterexample to the form W of the paper: W_4 is an explicitly modified form. Nor is a descent excluded that controls W[Lf] with the complete arithmetic datum or uses the spectral distribution of the numerator. The result excludes only the inference based on the structural properties and the tail already available.
 
-## 6. Obligación que queda después del defecto exacto
+## 6. Obligation remaining after the exact defect
 
-El defecto W[f]-W[Qf] es la forma COMPLETA de Lf. Ni el filtro L estable, ni Lambda>=0, ni el signo de la cola high-pass prueban su positividad en los primeros pasos. Una nueva desigualdad de descenso tendría que controlar este bloque de baja frecuencia con el multiplicador real y las autocorrelaciones aritméticas, o acoplarlo explícitamente con el bloque high-pass; asumir ese signo reintroduce la obligación pendiente.
+The defect W[f]-W[Qf] is the COMPLETE form of Lf. Neither the stable filter L, nor Lambda>=0, nor the sign of the high-pass tail prove its positivity in the first steps. A new descent inequality would have to control this low-frequency block with the real multiplier and the arithmetic autocorrelations, or couple it explicitly with the high-pass block; assuming that sign reintroduces the pending obligation.
 
-La localización (LOC) ofrece una restricción concreta para esa desigualdad: debe actuar sobre el interior j/m, no sólo sobre un número fijo de diagonales de la cola eventualmente positiva. Esta nota no aporta aún ese control aritmético y no declara cierre global.
+The localization (LOC) offers a concrete restriction for that inequality: it must act on the interior j/m, not only on a fixed number of diagonals of the eventually positive tail. This note does not yet provide that arithmetic control and does not declare global closure.

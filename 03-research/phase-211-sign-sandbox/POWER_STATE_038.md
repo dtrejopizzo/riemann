@@ -1,34 +1,34 @@
-# Estado038 — Error firmado por Fourier y ventana ampliada de agrupación
+# State038 — Signed error via Fourier and enlarged grouping window
 
-Estado: PROVED y auditado. Sustituye STATE037 como resumen de trabajo; conserva su cobertura W. Goal activo, signo global OPEN, papers intactos.
+Status: PROVED and audited. Replaces STATE037 as working summary; keeps its W coverage. Goal active, global sign OPEN, papers untouched.
 
-## Desigualdad nueva sobre el mismo perfil real
+## New inequality on the same real profile
 
-POWER_SIGNED_MOMENTS_038 conserva el producto Möbius finito en Fourier. Para el perfil gamma real f_N de037 extendido mediante rho par, define M_Q f=U_Q^(-1)sum_(b|Q)mu(b)f(ell+logb)/b, A_Q=sum logp/(p−1), B_Q=sum p(logp)²/(p−1)². Para TODO ell real, N>=16 y B_Q<=N/1000:
+POWER_SIGNED_MOMENTS_038 keeps the finite Möbius product in Fourier. For the real gamma profile f_N of037 extended through even rho, it defines M_Q f=U_Q^(-1)sum_(b|Q)mu(b)f(ell+logb)/b, A_Q=sum logp/(p−1), B_Q=sum p(logp)²/(p−1)². For ALL real ell, N>=16 and B_Q<=N/1000:
 
     |M_Q f_N(ell)−f_N(ell−A_Q)|
       <=12000 B_Q/N +65 sqrt(N)(V_Q/U_Q+1)exp(−N/2000).
 
-La diferencia respecto037 es sustancial y cuantitativa: V_Q/U_Q desaparece del error central y sólo permanece en una cola exponencialmente pequeña. El principal es una traslación exacta del perfil real, no una constante o una supuesta media positiva. El operador sigue siendo firmado; no se aplica Jensen a sus pesos.
+The difference relative to037 is substantial and quantitative: V_Q/U_Q disappears from the central error and remains only in an exponentially small tail. The principal term is an exact translation of the real profile, not a constant or a supposed positive average. The operator remains signed; Jensen is not applied to its weights.
 
-La transformada gamma explícita, un normalizador con densidad auxiliar positiva y una envolvente gaussiana permiten invertir Fourier con errores absolutos controlados. El perfil extendido puede cambiar de signo; sólo la densidad auxiliar empleada para el normalizador es positiva. La comparación entre el modo y el punto central se demuestra mediante Riccati, antes de usar Chebyshev.
+The explicit gamma transform, a normaliser with positive auxiliary density and a Gaussian envelope allow inverting Fourier with controlled absolute errors. The extended profile may change sign; only the auxiliary density used for the normaliser is positive. The comparison between the mode and the central point is proved via Riccati, before using Chebyshev.
 
-## Corolario para la misma agrupación creciente037
+## Corollary for the same growing grouping037
 
-Para TODOS N>=2^80, Q=prod_(p<=floor(N^(1/8)))p y
+For ALL N>=2^80, Q=prod_(p<=floor(N^(1/8)))p and
 
     A_Q <= logm <= A_Q+sqrt(N)/100,
 
-se prueba para el núcleo agrupado REAL
+one proves for the REAL grouped kernel
 
     (4/5)U_Q/m < K_(N,Q)(m) < (6/5)U_Q/m.
 
-El perfil trasladado está en su lado físico positivo, y cada error es menor que1/100. La longitud logarítmica certificada pasa de orden N^(1/4) en037 a orden sqrtN. Son ventanas de validez de un núcleo auxiliar: no son ventanas T del Paper47. No se afirma que el nuevo intervalo contenga m1 ni que su signo controle la suma exterior con coeficientes Möbius.
+The translated profile is on its positive physical side, and each error is less than1/100. The certified logarithmic length goes from order N^(1/4) in037 to order sqrtN. These are validity windows of an auxiliary kernel: they are not windows T of Paper47. It is not claimed that the new interval contains m1 nor that its sign controls the outer sum with Möbius coefficients.
 
-## Evidencia y obligación pendiente
+## Evidence and pending obligation
 
-POWER_SIGNED_AUDIT_038 aprueba teorema y corolario. Root y dos revisores comprobaron Fourier, normalizador, constantes y alcance. Verificador exacto de constantes reproducido por root y auditor: PASS. No se evaluaron nuevos casos W ni listas de Q.
+POWER_SIGNED_AUDIT_038 approves theorem and corollary. Fourier, normaliser, constants and scope were checked in three independent reviews. Exact constant verifier reproduced twice: PASS. No new W cases nor lists of Q were evaluated.
 
-La mejora local no controla aún la suma infinita sobre m coprimo con Q ni su integral en el residuo polar−peine. El error B_Q/N tampoco proporciona por sí solo la precisión necesaria frente a componentes exponenciales. El siguiente paso debe controlar ese complemento firmado sin sumar un mayorante no sumable ni convertir positividad de grupos en positividad de toda la suma.
+The local improvement does not yet control the infinite sum over m coprime to Q nor its integral in the polar−comb residue. The error B_Q/N does not by itself provide the precision needed against exponential components either. The next step must control that signed complement without summing a non-summable majorant nor turning positivity of groups into positivity of the whole sum.
 
-Sin nueva cobertura positiva de W: se mantienen filas1..17 para todo k>=0 a u31.5 con W>norma²/40, las regiones anteriores y el átomo211,1. No hay nuevas combinaciones arbitrarias ni ampliación de T. El objetivo global sigue abierto.
+No new positive coverage of W: rows1..17 for all k>=0 at u31.5 with W>norm²/40, the earlier regions and the atom211,1 are kept. No new arbitrary combinations nor extension of T. The global objective remains open.

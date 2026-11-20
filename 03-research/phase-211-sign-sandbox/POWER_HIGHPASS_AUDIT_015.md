@@ -1,47 +1,47 @@
-# POWER_HIGHPASS_AUDIT_015 — Revisión de positividad eventual uniforme y mezcla completa
+# POWER_HIGHPASS_AUDIT_015 — Review of uniform eventual positivity and complete mixture
 
-Estado: PROVED. Revisados íntegramente POWER_HIGHPASS_015.md y POWER_GEOMETRIC_TRANSFER_015.md. No se requiere cómputo numérico para sus demostraciones. Papers intactos.
+Status: PROVED. POWER_HIGHPASS_015.md and POWER_GEOMETRIC_TRANSFER_015.md reviewed in full. No numerical computation is required for their proofs. Papers untouched.
 
-## 1. Gram reescalada y uniformidad en todos los coeficientes
+## 1. Rescaled Gram and uniformity in all coefficients
 
-La sustitución tau=sqrt(k)x y b_j=a_j k^(j/2) produce exactamente el factor k^(N-1/2) delante de la norma². Ponderar por e^(eta y) sustituye s por-eta+i tau. Las dos constantes son c_eta=(u-eta)^2 y d_eta=c_eta-eta²=u(u-2eta)>0, con0<=eta<u/2. Las potencias de k, el polinomio trasladado y todos los factores de la fórmula GRAM son correctos.
+The substitution tau=sqrt(k)x and b_j=a_j k^(j/2) produces exactly the factor k^(N-1/2) in front of the norm². Weighting by e^(eta y) replaces s by -eta+i tau. The two constants are c_eta=(u-eta)^2 and d_eta=c_eta-eta²=u(u-2eta)>0, with 0<=eta<u/2. The powers of k, the shifted polynomial and all the factors of the GRAM formula are correct.
 
-Para justificar uniformidad, cada una de las N² entradas se domina independientemente de los coeficientes. Cerca de x0, escribir y=x²+c_eta/k da cociente^k<exp(-d_eta/y), y el producto exp(-d_eta/y)y^-N está acotado para y>0. Los monomios trasladados están uniformemente acotados en|x|<=1. En|x|>=1, cada entrada está dominada por C|x|^(i+j-2N), cuyo exponente es<=-2. Esto demuestra convergencia dominada, también en L¹ de las densidades matriciales.
+To justify uniformity, each of the N² entries is dominated independently of the coefficients. Near x0, writing y=x²+c_eta/k gives quotient^k<exp(-d_eta/y), and the product exp(-d_eta/y)y^-N is bounded for y>0. The shifted monomials are uniformly bounded on |x|<=1. On |x|>=1, each entry is dominated by C|x|^(i+j-2N), whose exponent is <=-2. This proves dominated convergence, also in L¹ for the matrix densities.
 
-La matriz límite es definida positiva porque su peso es estrictamente positivo fuera de0 y un polinomio no nulo no se anula casi en todas partes. En dimensión N fija, las matrices convergen en norma y sus eigenvalores mínimo/máximo quedan uniformemente acotados con el signo pertinente. Como b depende invertiblemente de a para cada k, esto prueba uniformidad en TODO numerador, incluso si sus coeficientes dependen de k o se anula el coeficiente de mayor grado. No se usó un argumento sólo de término dominante para esa parte uniforme.
+The limit matrix is positive definite because its weight is strictly positive away from 0 and a nonzero polynomial does not vanish almost everywhere. In fixed dimension N, the matrices converge in norm and their minimum/maximum eigenvalues stay uniformly bounded with the relevant sign. Since b depends invertibly on a for each k, this proves uniformity in EVERY numerator, even if its coefficients depend on k or the top-degree coefficient vanishes. No mere leading-term argument was used for that uniform part.
 
-## 2. Forma arquimediana
+## 2. Archimedean form
 
-El factor m(sqrt(k)x)-.5logk converge a log(|x|/(2pi)). El bound global por log(2+|tau|) y la comparabilidad entre2/sqrt(k)+|x| y sqrt(x²+u²/k) producen C+|log y| cerca del origen. Su producto por exp(-u²/y)y^-N sigue acotado. Fuera de|x|<=1, el majorante adicional1+log|x| es integrable contra|x|^-2. Así la matriz arquimediana, después de restar .5logk veces la matriz de norma, tiene límite finito en norma. Compararla con el mínimo positivo de G0 demuestra ARCH/||f||²>=.5logk-C_N uniformemente.
+The factor m(sqrt(k)x)-.5logk converges to log(|x|/(2pi)). The global bound by log(2+|tau|) and the comparability between 2/sqrt(k)+|x| and sqrt(x²+u²/k) produce C+|log y| near the origin. Its product with exp(-u²/y)y^-N remains bounded. Outside |x|<=1, the additional majorant 1+log|x| is integrable against |x|^-2. Thus the archimedean matrix, after subtracting .5logk times the norm matrix, has a finite limit in norm. Comparing it with the positive minimum of G0 proves ARCH/||f||²>=.5logk-C_N uniformly.
 
-Este paso no supone que la medida espectral de un numerador fijo controle los numeradores variables: la comparación matricial es lo que proporciona esa uniformidad.
+This step does not assume that the spectral measure of a fixed numerator controls the variable numerators: the matrix comparison is what provides this uniformity.
 
-## 3. Peine completo y polar
+## 3. Complete comb and polar term
 
-La correlación en un tiempo t>0 fijo se obtiene de las N² densidades de Fourier reescaladas. Se resta primero su límite en L¹; sólo después se usa Riemann--Lebesgue a frecuencia sqrt(k)t sobre cada densidad límite fija. La finitud de N² y el mínimo positivo de G0 justifican la convergencia uniforme en los numeradores del cociente de correlaciones. No se aplica RL directamente a una sucesión móvil sin ese control.
+The correlation at a fixed time t>0 is obtained from the N² rescaled Fourier densities. Their L¹ limit is subtracted first; only afterwards is Riemann--Lebesgue used at frequency sqrt(k)t on each fixed limit density. Finiteness of N² and the positive minimum of G0 justify the convergence, uniform in the numerators, of the correlation quotient. RL is not applied directly to a moving sequence without that control.
 
-La matriz límite ponderada con1/2<eta<u/2 da un cociente de norma ponderada uniformemente acotado. Cauchy--Schwarz desplazado produce un majorante Cq^-eta para las correlaciones normalizadas. La serie2sum Lambda(q)q^(-eta-1/2) converge absolutamente (basta Lambda<=logq). Al separar un segmento finito y la cola dominada, se obtiene convergencia a0 del peine COMPLETO, uniformemente en P. No se truncó una contribución sin estimarla.
+The weighted limit matrix with 1/2<eta<u/2 gives a uniformly bounded weighted-norm quotient. Shifted Cauchy--Schwarz produces a majorant Cq^-eta for the normalized correlations. The series 2sum Lambda(q)q^(-eta-1/2) converges absolutely (Lambda<=logq suffices). Separating a finite segment and the dominated tail yields convergence to 0 of the COMPLETE comb, uniformly in P. No contribution was truncated without being estimated.
 
-El polar tiene el factor exacto[-1/(4u²-1)]^k. Las evaluaciones iniciales del numerador son uniformemente acotadas en b y la norma² tiene cota inferior c_N k^(1/2-N)||b||². Por tanto el cociente polar es<=C_N k^(N-1/2)(4u²-1)^-k y tiende a0 porque u>1. Los signos alternados no son necesarios para esta cota.
+The polar term has the exact factor [-1/(4u²-1)]^k. The initial evaluations of the numerator are uniformly bounded in b and the norm² has lower bound c_N k^(1/2-N)||b||². Hence the polar quotient is <=C_N k^(N-1/2)(4u²-1)^-k and tends to 0 because u>1. The alternating signs are not needed for this bound.
 
-Queda probado el teorema EVENTUAL: para cada N,u fijos, existe K_N independiente de P tal que W>0 sobre TODOS los subespacios Q^k V_N con k>=K_N.
+The EVENTUAL theorem is proved: for each fixed N,u, there is K_N independent of P such that W>0 on ALL the subspaces Q^k V_N with k>=K_N.
 
-## 4. Constante asintótica de numerador fijo
+## 4. Asymptotic constant for a fixed numerator
 
-Para gradoD fijo, r=N-D, la integral límite sobre R es
+For fixed degree D, r=N-D, the limit integral over R is
 
     integral |x|^-2r exp(-u²/x²)dx=u^(1-2r)Gamma(r-1/2).
 
-El factor Parseval1/(2pi), la escala k^(1/2-r) y |a_D|² del memo son correctos. La misma sustitución t=u²/x² da Elog|x|=logu-.5psi(r-.5); el símbolo añade-log(2pi). El peine y polar normalizados tienden a0, así ASYM es la asintótica de W completo. La razón ponderada[u/(u-2eta)]^(r-.5) también coincide con el cociente de integrales límite.
+The Parseval factor 1/(2pi), the scale k^(1/2-r) and |a_D|² of the memo are correct. The same substitution t=u²/x² gives Elog|x|=logu-.5psi(r-.5); the symbol adds -log(2pi). The normalized comb and polar term tend to 0, so ASYM is the asymptotics of the complete W. The weighted ratio [u/(u-2eta)]^(r-.5) also agrees with the quotient of limit integrals.
 
-## 5. Revisión del memo de mezcla geométrica final
+## 5. Review of the final geometric mixture memo
 
-POWER_GEOMETRIC_TRANSFER_015 fue leído en su versión completa. Sus índices residuales coinciden con POWER_MIXTURE_AUDIT_015: el resto es Q^(K+1)fv y su denominador tiene exponente N+K en s+u, además de s+v. El espacio X=H^t(R)+L² ponderado, aunque más débil que la norma ponderadaH^s propuesta en esa auditoría, es suficiente y sus dos contracciones se verifican directamente por los multiplicadores en las rectas correspondientes.
+POWER_GEOMETRIC_TRANSFER_015 was read in its complete version. Its residual indices agree with POWER_MIXTURE_AUDIT_015: the remainder is Q^(K+1)fv and its denominator has exponent N+K in s+u, besides s+v. The space X=H^t(R)+weighted L², although weaker than the weighted H^s norm proposed in that audit, is sufficient and its two contractions are verified directly via the multipliers on the corresponding lines.
 
-La continuidad de W controla arch, momentos y todo el peine con sus constantes correctas. La convergencia fuerte elimina el resto y la cota uniforme de las formas prueba convergencia absoluta de la mezcla. Los pesos normalizados incorporan ||h_k||² y suman1 por la identidad separada de norma; no se confunden funciones y mezclas de formas.
+Continuity of W controls arch, moments and the whole comb with their correct constants. Strong convergence removes the remainder and the uniform bound on the forms proves absolute convergence of the mixture. The normalized weights incorporate ||h_k||² and sum to 1 by the separate norm identity; functions and mixtures of forms are not confused.
 
-En el producto de filtros todos los H_j son contracciones de X y conmutan con Q. Esto justifica Fubini absoluto y los pesos homogéneos positivos w_k del memo. La suma de pesos es1, y las normas adicionales son las correctas para una mezcla de Rayleigh.
+In the product of filters all the H_j are contractions of X and commute with Q. This justifies absolute Fubini and the positive homogeneous weights w_k of the memo. The sum of the weights is 1, and the additional norms are the correct ones for a Rayleigh mixture.
 
-## 6. Alcance operativo
+## 6. Operational scope
 
-Se obtienen DOS herramientas probadas: la mezcla completa exacta y una cola high-pass completa uniformemente positiva para cada N fijo. Juntas reducen una condición SUFICIENTE de transporte para ese N al signo de un segmento finito de bloques iniciales. No se proporciona todavía un extremo efectivo de ese segmento ni su signo en todos los N. Una mezcla puede contener términos iniciales negativos; la positividad eventual de sus términos no prueba que la suma sea no negativa. Nada en esta aprobación cierra el signo de todas las ventanas.
+TWO proved tools are obtained: the exact complete mixture and a complete high-pass tail uniformly positive for each fixed N. Together they reduce a SUFFICIENT transport condition for that N to the sign of a finite segment of initial blocks. No effective endpoint of that segment, nor its sign for all N, is yet provided. A mixture may contain negative initial terms; eventual positivity of its terms does not prove that the sum is nonnegative. Nothing in this approval closes the sign of all windows.

@@ -1,35 +1,35 @@
-# Comparación integrada en el eje real que recupera la suma sin peso de los desplazamientos
+# Integrated comparison on the real axis that recovers the unweighted sum of displacements
 
-**Estado: PROVED, con revisión independiente de la normalización al infinito, el factor2 y el límite extendido.**
+**Status: PROVED, with independent review of the normalization at infinity, the factor2 and the extended limit.**
 
-Sean X(w)=ξ(1/2+w)/ξ(1/2) y P(w)=∏_{γ>0}(1+w²/γ²) usando TODAS las ordenadas con multiplicidad. Para w real ambos son positivos. Existe c=lim_{w→+∞}log(X(w)/P(w)). Si
+Let X(w)=ξ(1/2+w)/ξ(1/2) and P(w)=∏_{γ>0}(1+w²/γ²) using ALL ordinates with multiplicity. For real w both are positive. There exists c=lim_{w→+∞}log(X(w)/P(w)). If
 
     D(R)=∫_{−R}^R [log(X(w)/P(w))−c] dw,
 
-entonces D(R)≥0 para R>0 y
+then D(R)≥0 for R>0 and
 
-    lim_{R→∞} R D(R) = 2 Σ_{γ>0} (Re ρ−1/2)²   en [0,∞].
+    lim_{R→∞} R D(R) = 2 Σ_{γ>0} (Re ρ−1/2)²   in [0,∞].
 
-Esto difiere del déficit de 410, que pesa los desplazamientos con orden γ^(−4). En particular una sucesión no acotada con D(R)=o(1/R) bastaría para RH. La afirmación no da esa estimación.
+This differs from the deficit of 410, which weights the displacements with order γ^(−4). In particular an unbounded sequence with D(R)=o(1/R) would suffice for RH. The claim does not give that estimate.
 
-**Normalización.** Por Hadamard como en 410, para el cero superior con δ=Re ρ−1/2 tomar la contribución de su par conjugado log(((w−δ)²+γ²)/(δ²+γ²)). Sumar simétricamente las abscisas δ y −δ (sin duplicar la multiplicidad). La diferencia con P es la suma de log(γ²/(δ²+γ²)) más la suma de diferencias centradas
+**Normalization.** By Hadamard as in 410, for the upper zero with δ=Re ρ−1/2 take the contribution of its conjugate pair log(((w−δ)²+γ²)/(δ²+γ²)). Sum symmetrically the abscissae δ and −δ (without duplicating the multiplicity). The difference with P is the sum of log(γ²/(δ²+γ²)) plus the sum of centered differences
 
     [f_γ(w−δ)+f_γ(w+δ)]/2−f_γ(w),    f_γ(w)=log(w²+γ²).
 
-La constante converge por Σγ^(−2)<∞; los restantes términos cuestan O(δ²/γ²) por Taylor, uniforme en w, y tienden individualmente a cero al tender w a infinito. Así la constante es precisamente c, también determinable como límite por el eje real sin introducir las abscisas en su definición. La suma se integra término a término en cada compacto.
+The constant converges by Σγ^(−2)<∞; the remaining terms cost O(δ²/γ²) by Taylor, uniformly in w, and tend individually to zero as w tends to infinity. Thus the constant is precisely c, also determinable as a limit along the real axis without introducing the abscissae into its definition. The sum is integrated term by term on each compact set.
 
-**Positividad después de integrar.** Sea J(d)=∫_(−R)^R f_γ(w−d)dw. Es par y
+**Positivity after integrating.** Let J(d)=∫_(−R)^R f_γ(w−d)dw. It is even and
 
     J''(d)=4R(R²+γ²−d²)/[((R−d)²+γ²)((R+d)²+γ²)].
 
-Como |d|≤1/2 y γ>1, esta expresión es positiva y comparable a R/(R²+γ²), con constantes absolutas. La contribución integrada es J(δ)−J(0)=∫₀^|δ| (|δ|−t) J''(t)dt. Por tanto
+Since |d|≤1/2 and γ>1, this expression is positive and comparable to R/(R²+γ²), with absolute constants. The integrated contribution is J(δ)−J(0)=∫₀^|δ| (|δ|−t) J''(t)dt. Hence
 
     D(R) ≍ Σ_{γ>0} δ² R/(R²+γ²).
 
-A γ fijo, R J''(t)→4 uniformemente para |t|≤1/2, de modo que R[J(δ)−J(0)]→2δ². Si Σδ² converge, domina Cδ² y se pasa al límite. Si diverge, la positividad permite tomar sumas parciales arbitrarias para el liminf. Esto prueba la fórmula completa: ningún cero alto puede compensar el aporte de uno bajo en esta integral.
+At fixed γ, R J''(t)→4 uniformly for |t|≤1/2, so R[J(δ)−J(0)]→2δ². If Σδ² converges, Cδ² dominates and one passes to the limit. If it diverges, positivity allows taking arbitrary partial sums for the liminf. This proves the complete formula: no high zero can compensate the contribution of a low one in this integral.
 
-**Registro de revisión.** Al agrupar primero cada cero con su conjugado aparecen los factores positivos((w−δ)²+γ²)/(δ²+γ²); las exponenciales lineales canónicas se cancelan al sumar las abscisasδ y−δ con sus multiplicidades. El promedio simétrico usado en la fórmula no duplica el conjunto superior: cada cero conγ>0 sigue contándose una vez. La constante es c=Σlog(γ²/(γ²+δ²)), finita y no positiva. La cota uniforme |[f(w−δ)+f(w+δ)]/2−f(w)|≤Cδ²/γ² permite tanto el paso al infinito como integrar en cualquier compacto; sin restar c habría un término lineal enR y la conclusión no sería válida.
+**Review record.** When first grouping each zero with its conjugate the positive factors((w−δ)²+γ²)/(δ²+γ²) appear; the canonical linear exponentials cancel when summing the abscissaeδ and−δ with their multiplicities. The symmetric average used in the formula does not duplicate the upper set: each zero withγ>0 is still counted once. The constant is c=Σlog(γ²/(γ²+δ²)), finite and non-positive. The uniform bound |[f(w−δ)+f(w+δ)]/2−f(w)|≤Cδ²/γ² allows both the passage to infinity and integration on any compact set; without subtracting c there would be a term linear inR and the conclusion would not be valid.
 
-La derivada segunda deJ indicada es positiva para todo R>0 porqueγ>|δ|, y es comparable aR/(R²+γ²) uniformemente en|δ|≤1/2. Cada contribución integrada es por tanto no negativa, aun cuando la diferencia centrada no tenga signo punto a punto. Para un cero superior fijo, R[J(δ)−J(0)]→2δ²; un cuarteto exterior tiene dos ceros superiores y aporta4δ², lo que confirma el factor2 por cero. SiΣδ²<∞ se domina porCδ²; siΣδ²=∞ las sumas parciales positivas fuerzan liminf R D(R)=∞, que prueba el límite extendido sin intercambiar una serie divergente. El valorD(R) sigue siendo finito para cadaR, porΣδ²/γ²<∞. BajoRH es idénticamente0, y con algún cero exterior es estrictamente positivo para cadaR>0.
+The stated second derivative ofJ is positive for all R>0 becauseγ>|δ|, and is comparable toR/(R²+γ²) uniformly in|δ|≤1/2. Each integrated contribution is therefore non-negative, even when the centered difference has no pointwise sign. For a fixed upper zero, R[J(δ)−J(0)]→2δ²; an exterior quartet has two upper zeros and contributes4δ², which confirms the factor2 per zero. IfΣδ²<∞ it is dominated byCδ²; ifΣδ²=∞ the positive partial sums force liminf R D(R)=∞, which proves the extended limit without interchanging a divergent series. The valueD(R) remains finite for eachR, byΣδ²/γ²<∞. UnderRH it is identically0, and with some exterior zero it is strictly positive for eachR>0.
 
-**Obligación pendiente.** Aunque X sobre el eje real se evalúa mediante ζ y su factor arquimediano, P utiliza las ordenadas de todos los ceros y c exige normalización al infinito. Reemplazar P por el producto de sólo los ceros críticos verificados invalidaría la identidad. El método distingue desplazamientos que una Gram de ordenadas por sí sola no detecta, pero necesita una estimación independiente del cociente integrado a escala o(1/R). No se afirma prioridad externa.
+**Pending obligation.** Although X on the real axis is evaluated via ζ and its archimedean factor, P uses the ordinates of all zeros and c requires normalization at infinity. Replacing P by the product of only the verified critical zeros would invalidate the identity. The method distinguishes displacements that a Gram of ordinates alone does not detect, but it needs an independent estimate of the integrated quotient at scale o(1/R). No external priority is claimed.

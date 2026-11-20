@@ -1,102 +1,102 @@
-# POWER_SCHUR_PRIOR_AUDIT_003 — Antecedentes y primer paso aritmético
+# POWER_SCHUR_PRIOR_AUDIT_003 — Antecedents and first arithmetic step
 
-Estado: PROVED (álgebra y primer paso real); OPEN (preservación iterada). No modifica papers.
+Status: PROVED (algebra and first real step); OPEN (iterated preservation). Does not modify papers.
 
-## 1. Restricción de novedad
+## 1. Novelty restriction
 
-Consultados las reglas del proyecto, índice ROUTES-TRIED-INDEX, grid R162_2300_part3/part5, CROSSWORD-TO-D y búsqueda de algoritmo Schur, Cayley, Nevanlinna y recursión en el corpus. Antecedentes concretos:
+Consulted the project rules, index ROUTES-TRIED-INDEX, grid R162_2300_part3/part5, CROSSWORD-TO-D and a search for Schur algorithm, Cayley, Nevanlinna and recursion in the corpus. Concrete antecedents:
 
-* 04-papers/36-obstruction-ledger/main.tex:3753–3765: cor:schur-coords y algoritmo escalar Schur–Nevanlinna sobre datos de Pick anidados. El algoritmo general no es nuevo.
-* 03-research/phase-61-open-problems/respuestas3.md:110–134: recursión Krein–Langer/Schur para matrices de transferencia ordenadas por primos. Es otro objeto.
-* 03-research/phase-104-unconditional-a1-closure/104_16_JORDAN_COCYCLE_ATTACK.md y su README: cociente completado desplazado y jets de Cayley. Otro dato de entrada y otra parametrización.
-* 03-research/phase-120-global-polarization/P3_EFFECTIVE_HERGLOTZ_GAMMA_GATE.md:36: Cayley y contractividad de un objeto efectivo.
+* 04-papers/36-obstruction-ledger/main.tex:3753–3765: cor:schur-coords and scalar Schur–Nevanlinna algorithm on nested Pick data. The general algorithm is not new.
+* 03-research/phase-61-open-problems/respuestas3.md:110–134: Krein–Langer/Schur recursion for transfer matrices ordered by primes. It is another object.
+* 03-research/phase-104-unconditional-a1-closure/104_16_JORDAN_COCYCLE_ATTACK.md and its README: shifted completed quotient and Cayley jets. Another input datum and another parametrization.
+* 03-research/phase-120-global-polarization/P3_EFFECTIVE_HERGLOTZ_GAMMA_GATE.md:36: Cayley and contractivity of an effective object.
 
-No se encontró en esas búsquedas el paso exacto para F(z)=L(z+1/2) en los nodos z=31.5+k. La diferencia autorizada es calcular los primeros transformados desde la serie aritmética, demostrar una desigualdad preservada e identificar un falsificador explícito que falle esa desigualdad. No consiste en anunciar el algoritmo conocido ni en usarlo como prueba sin signo.
+Those searches did not find the exact step for F(z)=L(z+1/2) at the nodes z=31.5+k. The authorized difference is to compute the first transforms from the arithmetic series, prove a preserved inequality and identify an explicit falsifier that fails that inequality. It does not consist in announcing the known algorithm nor in using it as a proof without sign.
 
-## 2. Primer transformado exacto
+## 2. Exact first transform
 
-Fije u>=31.5, c=F(u)>0, y defina
+Fix u>=31.5, c=F(u)>0, and define
 
     b_u(z)=(z-u)/(z+u),
     r(z)=(F(z)-c)/(F(z)+c),
     q(z)=r(z)/b_u(z),
     F_1(z)=c(1+q(z))/(1-q(z)).
 
-Álgebra directa da
+Direct algebra gives
 
     F_1(z)=c [z F(z)-u c]/[z c-u F(z)].
 
-No se supone contractividad para obtener esta fórmula. La desigualdad ya demostrada en POWER_CONE, F'>=0 y F-zF'>0 para z>=31.5, implica 0<=q(z)<1 para todos los reales z>=31.5, z distinto de u. En efecto r y b tienen el mismo signo por F creciente; q<1 es exactamente la desigualdad de cocientes entre u/z y z/u, demostrada para todos los pares de ese intervalo. El valor removible es
+No contractivity is assumed to obtain this formula. The inequality already proved in POWER_CONE, F'>=0 and F-zF'>0 for z>=31.5, implies 0<=q(z)<1 for all real z>=31.5, z different from u. Indeed r and b have the same sign since F is increasing; q<1 is exactly the inequality of quotients between u/z and z/u, proved for all pairs of that interval. The removable value is
 
     q(u)=uF'(u)/c <1,
     F_1(u)=c[c+uF'(u)]/[c-uF'(u)]>0.
 
-Por tanto F_1 es real estrictamente positiva en todo ese intervalo. Este resultado verifica un primer paso real; no implica positividad del kernel completo de F_1.
+Hence F_1 is real and strictly positive on that whole interval. This result verifies a first real step; it does not imply positivity of the full kernel of F_1.
 
-## 3. Falsificador racional del mismo paso
+## 3. Rational falsifier of the same step
 
-Para H(z)=3+cosh z y F=H'/H, tome u=log2,v=2log2. Entonces c=3/17, F(v)=15/41,
+For H(z)=3+cosh z and F=H'/H, take u=log2,v=2log2. Then c=3/17, F(v)=15/41,
 
     r(v)=22/63, b_u(v)=1/3,
     q(v)=22/21>1,
     F_1(v)=-43c=-129/17<0.
 
-Así el primer paso real distingue una propiedad probada para el dato aritmético del mero supuesto de representación cosh positiva. No prueba todavía preservación de esa propiedad después del paso.
+Thus the first real step distinguishes a property proved for the arithmetic datum from the mere assumption of a positive cosh representation. It does not yet prove preservation of that property after the step.
 
-## 4. La siguiente desigualdad concreta y una advertencia
+## 4. The next concrete inequality and a warning
 
-Ponga d=F'(u), e=F''(u). Derivar la fracción removible en u da
+Set d=F'(u), e=F''(u). Differentiating the removable fraction at u gives
 
     F_1'(u)=c[d(c-ud)+uc e]/(c-ud)^2.
 
-La condición local necesaria para un siguiente paso es
+The necessary local condition for a next step is
 
     |u(cd-u d²+uc e)| <= c²-u²d².
 
-Esta desigualdad usa sólo los jets explícitos de L, y puede atacarse con las series absolutamente convergentes de psi y zeta'/zeta en el rango a>=32. Aún no se ha demostrado aquí, y la preservación global requeriría el correspondiente control para todos los pares del primer transformado y sus iteraciones.
+This inequality uses only the explicit jets of L, and can be attacked with the absolutely convergent series of psi and zeta'/zeta in the range a>=32. It has not yet been proved here, and global preservation would require the corresponding control for all pairs of the first transform and its iterations.
 
-No exigir F_1'>=0 como invariante: ni siquiera el modelo F(z)=c+(1/2)log(z/u), localmente con c>0, lo conserva, pues d=1/(2u),e=-1/(2u²) dan F_1'(u)<0 cuando c>1/2. El invariante apropiado debe permitir ambas señales de la derivada y controlar |zF_j'/F_j|, o directamente la desigualdad de dos puntos de cada transformado. La positividad real del primer transformado por sí sola no es ese invariante.
+Do not require F_1'>=0 as an invariant: not even the model F(z)=c+(1/2)log(z/u), locally with c>0, preserves it, since d=1/(2u),e=-1/(2u²) give F_1'(u)<0 when c>1/2. The appropriate invariant must allow both signs of the derivative and control |zF_j'/F_j|, or directly the two-point inequality of each transform. The real positivity of the first transform by itself is not that invariant.
 
-## 5. Falso lema: todos los pares positivos no preservan el siguiente paso
+## 5. False lemma: all positive pairs do not preserve the next step
 
-Falsificador comunicado por el coordinador y verificado con aritmética racional:
+Falsifier verified with rational arithmetic:
 
     F(z)=(z²-z+10)/10, 1<=z<=3.
 
-Se tiene F>0, F'=(2z-1)/10>0 y
+One has F>0, F'=(2z-1)/10>0 and
 
     d/dz[F(z)/z]=1/10-1/z²<0
 
-sobre todo el intervalo. Por el criterio exacto de dos puntos, TODOS los bloques 2x2 del kernel [F(x)+F(y)]/(x+y) son positivos definidos para x distinto de y en [1,3]. Sin embargo para los nodos 1,2,3,
+on the whole interval. By the exact two-point criterion, ALL 2x2 blocks of the kernel [F(x)+F(y)]/(x+y) are positive definite for x different from y in [1,3]. However for the nodes 1,2,3,
 
     K=[[1,11/15,13/20],[11/15,3/5,14/25],[13/20,14/25,8/15]],
     det K=-13/270000,
-    pivotes LDL=(1,14/225,-13/16800),
+    LDL pivots=(1,14/225,-13/16800),
     (93,-375,280)K(93,-375,280)^t=-182/3.
 
-El primer transformado, con pivote u=1 y c=1, se simplifica exactamente a
+The first transform, with pivot u=1 and c=1, simplifies exactly to
 
     F_1(z)=(z²+10)/(10-z),
     F_1(2)=7/4, F_1(3)=19/7.
 
-Es positivo en [1,3] y creciente, pero
+It is positive on [1,3] and increasing, but
 
     F_1(3)/F_1(2)=76/49>3/2,
 
-así pierde la banda de cocientes requerida para el siguiente paso. Incluso el control local de §4 en el pivote inicial pasa: su lado izquierdo es 29/100 y el derecho 99/100. Por tanto verificar únicamente ese jet en el primer pivote tampoco bastaría para controlar los otros nodos.
+so it loses the band of quotients required for the next step. Even the local control of §4 at the initial pivot passes: its left-hand side is 29/100 and the right-hand side 99/100. Hence checking only that jet at the first pivot would not suffice to control the other nodes either.
 
-**Conclusión de alcance exacto:** se refuta la afirmación de preservación del paso Schur basada exclusivamente en F'>=0 y F/z decreciente, aunque ambas propiedades valgan para todos los puntos del intervalo. Esto no refuta el kernel aritmético ni el algoritmo como instrumento constructivo. Obliga a demostrar una propiedad adicional de las series aritméticas y a comprobar su conservación por los transformados. No se afirma NO-GO fuera de esa clase explícita de hipótesis.
+**Conclusion of exact scope:** the claim of preservation of the Schur step based exclusively on F'>=0 and F/z decreasing is refuted, even though both properties hold at all points of the interval. This does not refute the arithmetic kernel nor the algorithm as a constructive instrument. It forces proving an additional property of the arithmetic series and checking its preservation by the transforms. No NO-GO is claimed outside that explicit class of hypotheses.
 
-## 6. Revisión y estado al registrar
+## 6. Review and status at recording
 
-La matriz, determinante, pivotes y vector negativo de §5 fueron recalculados con fracciones racionales exactas; la fórmula de F_1 se verificó por simplificación algebraica. Las demostraciones escalares de §§2–4 no usan ningún signo supuesto del kernel completo. El primer paso real para el dato aritmético permanece PROVED por POWER_CONE; la preservación iterada permanece OPEN, con el falso lema de §5 retirado explícitamente de las posibles justificaciones.
+The matrix, determinant, pivots and negative vector of §5 were recomputed with exact rational fractions; the formula for F_1 was verified by algebraic simplification. The scalar proofs of §§2–4 use no assumed sign of the full kernel. The first real step for the arithmetic datum remains PROVED by POWER_CONE; iterated preservation remains OPEN, with the false lemma of §5 explicitly withdrawn from the possible justifications.
 
-## 7. Añadir concavidad tampoco basta: falsificador continuo por tramos
+## 7. Adding concavity does not suffice either: piecewise continuous falsifier
 
-Dato comunicado por el coordinador y verificado exactamente:
+Datum verified exactly:
 
     F(z)=min((2+3z)/5,(14+z)/10), z>=1.
 
-Las dos rectas se cruzan en z=2. La pendiente pasa de 3/5 a 1/10, así F es positiva, creciente y cóncava. En cada rama F(z)/z es decreciente por su intercepto positivo, y es continua en la unión; por tanto decrece en todo [1,infinito). Todos los pares pasan el criterio. Sin embargo F(1)=1,F(2)=8/5,F(3)=17/10 dan det K=-53/270000<0.
+The two lines cross at z=2. The slope goes from 3/5 to 1/10, so F is positive, increasing and concave. On each branch F(z)/z is decreasing because of its positive intercept, and it is continuous on the union; hence it decreases on all of [1,infinity). All pairs pass the criterion. However F(1)=1,F(2)=8/5,F(3)=17/10 give det K=-53/270000<0.
 
-Esto refuta, para la clase de funciones continuas por tramos, que agregar concavidad a las dos monotonías garantice el signo de orden tres. No se afirma aquí un falsificador analítico ni se necesita tal afirmación para el alcance declarado. Tampoco se afirma imposibilidad de obtener una desigualdad adicional específica del dato aritmético.
+This refutes, for the class of piecewise continuous functions, that adding concavity to the two monotonicities guarantees the sign of order three. No analytic falsifier is claimed here nor is such a claim needed for the declared scope. Nor is impossibility claimed of obtaining an additional inequality specific to the arithmetic datum.

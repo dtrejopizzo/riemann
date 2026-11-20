@@ -1,29 +1,29 @@
-# Una parte de la suma de residuos ya cumple un ahorro exponencial
+# One part of the sum of residues already satisfies an exponential saving
 
-**Estado: PROVED, con revisión independiente de la comparación de contornos y la orientación parabólica.**
+**Status: PROVED, with independent review of the contour comparison and the parabolic orientation.**
 
-Sean α,K,T₀ de 403, b=log z, z=L². Existen η,c₁>0 absolutos y bordes seguros σ₀=α+δ (0≤δ≤1/L), H∈[2√L,2√L+1], tales que en la suma rectangular R de 403 basta retener los ceros ρ=β+iγ con
+Let α,K,T₀ be from 403, b=log z, z=L². There exist absolute η,c₁>0 and safe edges σ₀=α+δ (0≤δ≤1/L), H∈[2√L,2√L+1], such that in the rectangular sum R of 403 it suffices to retain the zeros ρ=β+iγ with
 
     β−γ²/(2L)>σ₀+η/b.
 
-Si R_par es la suma retenida con residuos completos, se tiene |R−R_par|≪T₀ exp(−c₁ L/b). Esto estima el saldo agregado de los residuos retirados, sin estimar cada multiplicidad por separado. En particular S=R_par−(1+o(1))T₀. Las exclusiones parabólicas de 364–366 tenían parámetro de difusión fijo; aquí el pulso tiene varianza uno y la parábola depende de L.
+If R_par is the retained sum with complete residues, one has |R−R_par|≪T₀ exp(−c₁ L/b). This estimates the aggregate balance of the removed residues, without estimating each multiplicity separately. In particular S=R_par−(1+o(1))T₀. The parabolic exclusions of 364–366 had a fixed diffusion parameter; here the pulse has variance one and the parabola depends on L.
 
-**Ahorro uniforme del producto en las alas.** Para 1≤|t|≤H y α≤σ≤1+1/L hay c₂>0 con
+**Uniform saving of the product on the wings.** For 1≤|t|≤H and α≤σ≤1+1/L there is c₂>0 with
 
     log|E_z(σ+it)| ≤ log E_z(α)−c₂ L/b.
 
-Si σ≤α+1/b, los primos de [z/2,z] tienen p^(−σ)≍p^(−α); en una proporción fija de la banda la fase está separada de 2πℤ por 367, usando intervalos cortos hasta altura H. Esto da pérdida ≫L/b respecto al producto real E_z(σ)≤E_z(α); los términos de potencias mayores añaden pérdidas no negativas. Si σ≥α+1/b, ya el decaimiento del producto real cuesta ≫L/b por los mismos primos, pues 1−p^(−1/b) está separado de cero. Elegir 0<η<c₂/4.
+If σ≤α+1/b, the primes of [z/2,z] have p^(−σ)≍p^(−α); on a fixed proportion of the band the phase is separated from 2πℤ by 367, using short intervals up to height H. This gives loss ≫L/b relative to the real product E_z(σ)≤E_z(α); the higher-power terms add non-negative losses. If σ≥α+1/b, the decay of the real product already costs ≫L/b by the same primes, since 1−p^(−1/b) is separated from zero. Choose 0<η<c₂/4.
 
-**Comparación de contornos.** Conservar sin cambios el segmento σ₀+it para |t|≤1. En cada extremo conectar horizontalmente con la nueva curva de abscisa
+**Contour comparison.** Keep the segment σ₀+it for |t|≤1 unchanged. At each end connect horizontally with the new curve of abscissa
 
     s_R(t)=min(1+1/L, σ₀+η/b+t²/(2L)),    1≤|t|≤H.
 
-No hay ceros no triviales a alturas |γ|≤2 (también basta la verificación finita utilizada en 367). Para escoger δ, excluir bandas de radio 4L^(−2) tanto en torno a β−α como a β−α−η/b−γ²/(2L) para todos los ceros hasta H+2 (usar de antemano 2√L+4). La longitud perdida es o(1/L) por el conteo de 403. En la parte curva no saturada la pendiente es O(L^(−1/2)); esa exclusión da distancia euclídea ≫L^(−2) a los ceros, incluso mirando alturas vecinas. En la parte saturada la separación horizontal ya es ≥1/L. Elegir H seguro como en 403. Por tanto 1/ζ cuesta a lo sumo exp(O(log² L)) sobre ambos recorridos.
+There are no non-trivial zeros at heights |γ|≤2 (the finite verification used in 367 also suffices). To choose δ, exclude bands of radius 4L^(−2) both around β−α and around β−α−η/b−γ²/(2L) for all zeros up to H+2 (use 2√L+4 in advance). The lost length is o(1/L) by the count of 403. On the non-saturated curved part the slope is O(L^(−1/2)); that exclusion gives Euclidean distance ≫L^(−2) to the zeros, even looking at neighboring heights. On the saturated part the horizontal separation is already ≥1/L. Choose a safe H as in 403. Hence 1/ζ costs at most exp(O(log² L)) on both paths.
 
-En las alas de la nueva curva el coste (s_R(t)−α)L−t²/2 es ≤δL+ηL/b, también cuando está saturada. En el conector horizontal a |t|=1 vale la misma cota. El ahorro del producto domina ese coste, la longitud O(√L), el prefactor gaussiano real y la cota de 1/ζ. Toda la integral en estas piezas cuesta ≪T₀ exp(−c₁L/b), reduciendo c₁ para absorber el prefactor √K''. Lo mismo vale en las alas rectas originales y en la tapa a H por el argumento de 403. Al restar los dos recorridos se cancela exactamente el tramo central común. El teorema de los residuos da la cota anunciada para su diferencia, y la saturación a la derecha de uno no elimina ningún polo que cumpla la desigualdad indicada.
+On the wings of the new curve the cost (s_R(t)−α)L−t²/2 is ≤δL+ηL/b, also when saturated. On the horizontal connector at |t|=1 the same bound holds. The saving of the product dominates that cost, the length O(√L), the real Gaussian prefactor and the bound for 1/ζ. The whole integral on these pieces costs ≪T₀ exp(−c₁L/b), reducing c₁ to absorb the prefactor √K''. The same holds on the original straight wings and on the cap at H by the argument of 403. Subtracting the two paths cancels exactly the common central segment. The residue theorem gives the announced bound for their difference, and the saturation to the right of one does not eliminate any pole satisfying the stated inequality.
 
-**Registro de revisión.** Las dos familias de exclusiones paraδ consumen O(sqrt L log L·L^(−2))=o(1/L) incluso contando multiplicidades. En un punto de la curva no saturada con |t−γ|<L^(−2), su pendiente O(L^(−1/2)) cambia la abscisa en o(L^(−2)); el margen4L^(−2) a la alturaγ deja por tanto distancia euclídea≫L^(−2). Si |t−γ|≥L^(−2) la distancia ya es suficiente, y al saturar en1+1/L la separación horizontal es≥1/L. Esto justifica el techo deF sólo en el recorrido, no en el interior con polos.
+**Review record.** The two families of exclusions forδ consume O(sqrt L log L·L^(−2))=o(1/L) even counting multiplicities. At a point of the non-saturated curve with |t−γ|<L^(−2), its slope O(L^(−1/2)) changes the abscissa by o(L^(−2)); the margin4L^(−2) at heightγ therefore leaves Euclidean distance≫L^(−2). If |t−γ|≥L^(−2) the distance is already sufficient, and when saturating at1+1/L the horizontal separation is≥1/L. This justifies the ceiling ofF only on the path, not in the interior with poles.
 
-La nueva curva queda a la derecha de la vertical vieja. Los residuos que quedan a su derecha cumplen β>σ₀+η/b+γ²/(2L), exactamente la desigualdad retenida; cuando la curva satura, ambos criterios excluyen todos los polos porque β<1. Al restar recorridos, el tramo |t|≤1 se cancela de manera idéntica, sin aproximar dos términos de tamañoT₀. Sólo permanecen alas, conectores y tapas, todos con ahorro exp(−cL/b). De ahí el techo agregado paraR−R_par, válido para residuos completos sin estimar cada uno. Las orientaciones del teorema de residuos dan R−R_par como diferencia de esas integrales, cuyo módulo se acota independientemente del signo.
+The new curve lies to the right of the old vertical. The residues remaining to its right satisfy β>σ₀+η/b+γ²/(2L), exactly the retained inequality; when the curve saturates, both criteria exclude all poles because β<1. When subtracting paths, the segment |t|≤1 cancels identically, without approximating two terms of sizeT₀. Only wings, connectors and caps remain, all with saving exp(−cL/b). Hence the aggregate ceiling forR−R_par, valid for complete residues without estimating each one. The orientations of the residue theorem give R−R_par as a difference of those integrals, whose absolute value is bounded independently of the sign.
 
-**Alcance.** Todo cero fijo con β>1/2 acabaría entrando en la región retenida cuando L crece, pues α→1/2 y γ²/L→0. Así el ahorro no excluye un cero exterior; identifica qué agregado ya es despreciable frente al fondo negativo a cada escala.
+**Scope.** Every fixed zero with β>1/2 would eventually enter the retained region as L grows, since α→1/2 and γ²/L→0. Thus the saving does not exclude an exterior zero; it identifies which aggregate is already negligible relative to the negative background at each scale.

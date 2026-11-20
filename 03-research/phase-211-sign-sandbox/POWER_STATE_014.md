@@ -1,39 +1,39 @@
-# Estado de registro — ocho polos y transporte firmado
+# Recorded state — eight poles and signed transport
 
-Estado: PROVED ocho polos arbitrarios y puente confluente fuerte; signo global OPEN. Goal activo. Ningún paper modificado.
+Status: PROVED eight arbitrary poles and strong confluent bridge; global sign OPEN. Goal active. No paper modified.
 
-## Resultado nuevo revisado
+## New reviewed result
 
-POWER_SIGNED_TRANSFER_014, revisado en POWER_SIGNED_AUDIT_014 y reproducido con tools/power_signed_transfer_014_verify.py, prueba
+POWER_SIGNED_TRANSFER_014, reviewed in POWER_SIGNED_AUDIT_014 and reproduced with tools/power_signed_transfer_014_verify.py, proves
 
     W[f] > ||f||²/1000
 
-para todo f real no nulo de Laplace P(s)/Π_(j=1)^8(s+v_j), grado P<8, v_j>=63/2. Se admiten repeticiones y cancelaciones; no hay separación mínima ni cota superior. Incluye toda mezcla de hasta ocho potencias exteriores con exponentes>=32.
+for every nonzero real f with Laplace transform P(s)/Π_(j=1)^8(s+v_j), deg P<8, v_j>=63/2. Repetitions and cancellations are allowed; there is no minimal separation or upper bound. It includes every mixture of up to eight exterior powers with exponents>=32.
 
-## Insight que supera el límite013
+## Insight that overcomes the limit013
 
-El defecto de filtro conserva la ganancia positiva: (R−R0)|F0|² se descompone EXACTAMENTE en suma positiva de |G_j|². Cada G_j tiene nueve polos y un cero del numerador en s=0. El movimiento arquimediano de polos se aplica en ese mismo subespacio de numeradores; una coercividad confluente restringida>1/4 certifica el signo de toda la corrección.
+The filter defect keeps the positive gain: (R−R0)|F0|² decomposes EXACTLY into a positive sum of |G_j|². Each G_j has nine poles and a numerator zero at s=0. The archimedean pole movement applies on that same subspace of numerators; a restricted confluent coercivity>1/4 certifies the sign of the whole correction.
 
-Base AP8>7/200, norma polar<3/2, margen de transporte y control completo del peine por traza ponderada producen el resultado. No se contradice013: se conserva la distribución espectral y la ganancia que aquel método descartaba. No se afirma monotonía AP general.
+Base AP8>7/200, polar norm<3/2, transport margin and full control of the comb by weighted trace produce the result. 013 is not contradicted: the spectral distribution and the gain that that method discarded are kept. No general AP monotonicity is claimed.
 
-## Puente exacto a la tarea completa
+## Exact bridge to the full task
 
-POWER_CONFLUENT_BRIDGE_014 fue revisado independientemente por casos. Para cualquier tasa fija u>1/2, TODOS los bloques span{y^k e^-uy:0<=k<N} son densos en una norma ponderada H1 que controla toda la forma. La prueba de densidad usa la transformada de Laplace de un vector H1 ortogonal, incluye el término de borde y no presupone densidad L² suficiente.
+POWER_CONFLUENT_BRIDGE_014 was independently reviewed by cases. For any fixed rate u>1/2, ALL blocks span{y^k e^-uy:0<=k<N} are dense in a weighted H1 norm that controls the whole form. The density proof uses the Laplace transform of an orthogonal H1 vector, includes the boundary term and does not presuppose sufficient L² density.
 
-Por ello basta demostrar W>=0 en cada bloque confluente de UNA tasa, por ejemplo31.5. NO hace falta una constante positiva uniforme en N. La no negatividad de todos los bloques y continuidad fuerte bastan para pasar al límite y trasladar tests compactos a cualquier ventana.
+Therefore it suffices to prove W>=0 on each confluent block of ONE rate, for example31.5. A positive constant uniform in N is NOT needed. Nonnegativity of all blocks and strong continuity suffice to pass to the limit and transfer compact tests to any window.
 
-Esto no está conseguido: el bloque fijo de dimensión doce tiene certificado separado, pero no están probados todos los tamaños posteriores. Los certificados finitos, aun universales en sus tasas, no sustituyen ese requisito.
+This has not been achieved: the fixed block of dimension twelve has a separate certificate, but all subsequent sizes are not proved. Finite certificates, even universal in their rates, do not replace that requirement.
 
-## Identidad completa disponible y obligación restante
+## Available full identity and remaining obligation
 
-PRIME_TRANSFER_014 contiene la identidad de un polo, auditada en POWER_PRIME_AUDIT_014:
+PRIME_TRANSFER_014 contains the one-pole identity, audited in POWER_PRIME_AUDIT_014:
 
     W[f_v]−R0 W[f_u]=(1−R0)W[G], G(s)=sF_u(s)/(s+v).
 
-Incluye el polar y TODOS los contactos; el generador no se declara positivo sin probar W[G]. La versión multipolo se integra en SIGNED_TRANSFER. Para cerrar todos los órdenes hará falta controlar estas correcciones con la forma completa, no sólo repetir identidades.
+It includes the polar and ALL contacts; the generator is not declared positive without proving W[G]. The multipole version is integrated into SIGNED_TRANSFER. Closing all orders will require controlling these corrections with the full form, not only repeating identities.
 
-Una expansión geométrica y el comportamiento de iteraciones que añaden ceros en s=0 están en construcción en la ronda015. No se incluyen aquí como teoremas verificados ni se deduce signo de una mezcla cuyas componentes todavía no estén controladas.
+A geometric expansion and the behaviour of iterations that add zeros at s=0 are under construction in round015. They are not included here as verified theorems, and no sign is deduced for a mixture whose components are not yet controlled.
 
-## Auditoría del goal
+## Goal audit
 
-Caso de tres: resuelto y ampliado hasta ocho. Puente en norma de forma: resuelto, ahora para tasa confluente única. Extensión a TODOS los órdenes: abierta. Cierre del signo del Paper47: abierto. Goal no completado ni bloqueado; queda trabajo matemático autorizado.
+Three case: resolved and extended up to eight. Bridge in form norm: resolved, now for a single confluent rate. Extension to ALL orders: open. Closure of the sign of Paper47: open. Goal neither completed nor blocked; authorised mathematical work remains.

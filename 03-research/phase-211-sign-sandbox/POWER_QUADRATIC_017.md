@@ -1,185 +1,185 @@
-# POWER_QUADRATIC_017 — Paquete cuadrático y obligación de controlar el peine completo
+# POWER_QUADRATIC_017 — Quadratic packet and the obligation to control the full comb
 
-Estado: PROVED cota de autocorrelación uniforme en el cono cuadrático y positividad eventual para P=1; PROVED aproximación de TODA la suma aritmética por una serie gaussiana modulada. Revisado independientemente en POWER_INTERIOR_AUDIT_017.md. Sin campañas numéricas. Papers intactos.
+Status: PROVED uniform autocorrelation bound on the quadratic cone and eventual positivity for P=1; PROVED approximation of the WHOLE arithmetic sum by a modulated Gaussian series. Reviewed independently in POWER_INTERIOR_AUDIT_017.md. No numerical campaigns. Papers untouched.
 
-## Antecedentes y razón nueva registrados antes de construir
+## Antecedents and new reason recorded before building
 
-Consultados las reglas del proyecto, JOINT_SCALE016, HIGHPASS015 y TATE_CHAIN009; índice ROUTES-TRIED-INDEX y su inventario R2/R5 (criticidad, E_gamma, paquetes y familias moduladas); grid parte3; CROSSWORD-TO-D (paquetes, fluctuación Chebyshev, pesos gaussianos). No se relanza una cota genérica para paquetes ni se atribuye signo a un teorema central del límite.
+Consulted the project rules, JOINT_SCALE016, HIGHPASS015 and TATE_CHAIN009; ROUTES-TRIED-INDEX index and its inventory R2/R5 (criticality, E_gamma, packets and modulated families); grid part3; CROSSWORD-TO-D (packets, Chebyshev fluctuation, Gaussian weights). A generic bound for packets is not relaunched nor is a sign attributed to a central limit theorem.
 
-La diferencia concreta es la escala conjunta k~cN² del MISMO test racional P=1: se busca su autocorrelación cuantitativa y se exige justificar por separado cualquier paso a la suma infinita del peine. Las cotas ponderadas uniformes falsificadas en016 no se reutilizarán. Un resultado sobre contactos fijos o truncamientos no se declarará control del peine completo.
+The concrete difference is the joint scale k~cN² of the SAME rational test P=1: its quantitative autocorrelation is sought and any passage to the infinite sum of the comb must be justified separately. The uniform weighted bounds falsified in016 will not be reused. A result on fixed contacts or truncations will not be declared control of the full comb.
 
-## 1. Teorema: una banda analítica de la DENSIDAD conserva cancelación
+## 1. Theorem: an analytic strip of the DENSITY keeps cancellation
 
-Fije u=63/2, N>=2, k entero, y
+Fix u=63/2, N>=2, k integer, and
 
     F_(N,k)(s)=s^k/(s+u)^(N+k),
     rho_(N,k)(z)=z^(2k)/(u²+z²)^(N+k),
     I_(N,k)=∫_R rho_(N,k)(x)dx>0,
     R_(N,k)(t)=c_f(N,k)(t)/||f_(N,k)||².
 
-Para cualquier c>0, si k>=max(cN²,4N), se prueba
+For any c>0, if k>=max(cN²,4N), one proves
 
     ∫_R |rho_(N,k)(x+i)|dx/I_(N,k) <=C(c),
     C(c)=1+2[exp(4/(25c))+exp(1/c)].                     (STRIP)
 
-Desplazar el contorno dentro de la banda sin polos |Im z|<u da entonces
+Shifting the contour within the pole-free strip |Im z|<u then gives
 
-    |R_(N,k)(t)|<=C(c)exp(−|t|), para TODO t real.       (CORR)
+    |R_(N,k)(t)|<=C(c)exp(−|t|), for EVERY real t.       (CORR)
 
-Esta cota no contradice016: se desplaza la DENSIDAD racional completa, conservando el producto de sus dos factores, no se separa en las normas ponderadas de F y su conjugada. Esa separación perdía una compensación esencial.
+This bound does not contradict016: the full rational DENSITY is shifted, keeping the product of its two factors, not separated into the weighted norms of F and its conjugate. That separation lost an essential compensation.
 
-## 2. Prueba elemental de STRIP: región principal
+## 2. Elementary proof of STRIP: main region
 
-Ponga M=N+k, y=sqrt(x²+1), T=u²/(y²+u²). La identidad algebraica exacta es
+Put M=N+k, y=sqrt(x²+1), T=u²/(y²+u²). The exact algebraic identity is
 
     |rho(x+i)|=rho(y)[1−(4/u²)T²]^(-M/2).               (MOD)
 
-En |x|>=sqrt(3), y>=2 y dx/dy=y/sqrt(y²−1)<=2. Como M<=2k y 4/(u²−4)<1/100, la desigualdad −log(1−a)<=a/(1−a) da
+On |x|>=sqrt(3), y>=2 and dx/dy=y/sqrt(y²−1)<=2. Since M<=2k and 4/(u²−4)<1/100, the inequality −log(1−a)<=a/(1−a) gives
 
     [1−(4/u²)T²]^(-M/2)<=exp(kT²/100).
 
-Bajo la probabilidad rho(y)dy/I sobre toda la recta, T tiene distribución Beta(b,a), con b=N−1/2 y a=k+1/2. Basta acotar E exp(kT²/100). Divida en T<=4N/k y su complemento.
+Under the probability rho(y)dy/I on the whole line, T has distribution Beta(b,a), with b=N−1/2 and a=k+1/2. It suffices to bound E exp(kT²/100). Split into T<=4N/k and its complement.
 
-En el primer segmento,
+On the first segment,
 
     exp(kT²/100)<=exp[4N²/(25k)]<=exp[4/(25c)].
 
-En el complemento, use T²<=T y exp(kT/100)<=(1−T)^(-k/100). El peso cambia la beta a a'=99k/100+1/2. La contribución queda acotada por
+On the complement, use T²<=T and exp(kT/100)<=(1−T)^(-k/100). The weight changes the beta to a'=99k/100+1/2. The contribution is bounded by
 
     [B(a',b)/B(a,b)] P_(a',b)(T>4N/k).                  (BT)
 
-Dos desigualdades gamma elementales son suficientes. Para b>=1,
+Two elementary gamma inequalities suffice. For b>=1,
 
     Gamma(a+b)/Gamma(a)<=(a+b)^b,
     Gamma(a'+b)/Gamma(a')>=(a')^b.
 
-La primera se obtiene integrando psi(x)<=log x; esta última es Jensen para log de una variable gamma. La segunda es Jensen para su potencia b. Por tanto
+The first is obtained by integrating psi(x)<=log x; the latter is Jensen for log of a gamma variable. The second is Jensen for its power b. Hence
 
     B(a',b)/B(a,b)
        <=[(k+N)/(99k/100)]^N
        <=exp(N²/k)(100/99)^N.
 
-Por Markov usando el momento entero N de la nueva beta,
+By Markov using the integer moment N of the new beta,
 
     P_(a',b)(T>4N/k)
        <=(k/(4N))^N (b)_N/(a'+b)_N
        <=(50/99)^N.
 
-Aquí (b)_N<(2N)^N y (a'+b)_N>=(99k/100)^N. Así BT es menor que
+Here (b)_N<(2N)^N and (a'+b)_N>=(99k/100)^N. Thus BT is less than
 
     exp(1/c)(5000/9801)^N<=exp(1/c).
 
-La región principal de la integral normalizada de MOD es por ello <=2[exp(4/(25c))+exp(1/c)].
+The main region of the normalised integral of MOD is therefore <=2[exp(4/(25c))+exp(1/c)].
 
-## 3. Región pequeña y normalización beta
+## 3. Small region and beta normalisation
 
-En |x|<=sqrt(3), |x+i|²<=4 y |u²+(x+i)²|>=u²−1. La longitud del segmento es menor que4. Por otra parte,
+On |x|<=sqrt(3), |x+i|²<=4 and |u²+(x+i)²|>=u²−1. The length of the segment is less than4. On the other hand,
 
     I=u^(1−2N)B(k+1/2,N−1/2).
 
-Usando la integral beta en T∈[N/(2k),N/k], válida porque k>=4N y N>=2,
+Using the beta integral on T∈[N/(2k),N/k], valid because k>=4N and N>=2,
 
     B(k+1/2,N−1/2)
        >=[N/(2k)]^(N−1/2) exp(−2N).                    (BL)
 
-Se usaron T^(N−3/2) creciente y (1−N/k)^k>=exp(−2N). Defina A=u²/(u²−1)<2 y r=4/(u²−1)<1/100. La contribución pequeña normalizada es menor que
+We used T^(N−3/2) increasing and (1−N/k)^k>=exp(−2N). Define A=u²/(u²−1)<2 and r=4/(u²−1)<1/100. The normalised small contribution is less than
 
     (4/u) A^N r^k [2k/N]^(N−1/2)exp(2N).
 
-Para t=k/N>=4, (2t)^N<exp(k)<3^k y A^N exp(2N)<18^N<3^k. La expresión es menor que (4/u)(9r)^k<1. Combinada con§2 prueba STRIP.
+For t=k/N>=4, (2t)^N<exp(k)<3^k and A^N exp(2N)<18^N<3^k. The expression is less than (4/u)(9r)^k<1. Combined with§2 this proves STRIP.
 
-Para CORR, el integrando rho(z)exp(izt) es racional y holomorfo entre Im z=0 y1. Las caras verticales desaparecen al llevar Re z a infinito, por el decaimiento O(|z|^(-2N)). Desplazar hacia arriba para t>=0 introduce exp(−t). La simetría de la autocorrelación cubre t<0. No se desplazó una norma temporal ni se supuso una constante ponderada falsa.
+For CORR, the integrand rho(z)exp(izt) is rational and holomorphic between Im z=0 and1. The vertical sides vanish as Re z goes to infinity, by the decay O(|z|^(-2N)). Shifting upward for t>=0 introduces exp(−t). The symmetry of the autocorrelation covers t<0. No time norm was shifted nor was a false weighted constant assumed.
 
-## 4. Control de TODO el peine y signo eventual en el cono
+## 4. Control of the WHOLE comb and eventual sign on the cone
 
-CORR implica, sin signo supuesto de contactos,
+CORR implies, without an assumed sign of contacts,
 
     |Comb[f]|/||f||²
       <=2C(c)Σ(q>=2)Lambda(q)q^(-3/2)<14C(c).            (PRIME)
 
-Se usó Lambda(q)<=logq y Σ(q>=2)(logq)q^-3/2<7. Esta última cota sigue de f(2)+∫_2^infinito f(x)dx, pues f(x)=(logx)x^-3/2 decrece desde2, y log2<7/10. PRIME controla la suma infinita completa uniformemente en N,k de este cono.
+We used Lambda(q)<=logq and Σ(q>=2)(logq)q^-3/2<7. This last bound follows from f(2)+∫_2^infinito f(x)dx, since f(x)=(logx)x^-3/2 decreases from2, and log2<7/10. PRIME controls the full infinite sum uniformly in N,k of this cone.
 
-La ley beta exacta016 da
+The exact beta law016 gives
 
     E log|tau|=log u+(1/2)psi(k+1/2)−(1/2)psi(N−1/2).
 
-Con psi(x)>=logx−1/x, psi(x)<=logx y el lower global del símbolo m(tau)>=log(|tau|/(2pi))−4,
+With psi(x)>=logx−1/x, psi(x)<=logx and the global lower bound of the symbol m(tau)>=log(|tau|/(2pi))−4,
 
     Arch[f]/||f||²
        >=(1/2)logN+log[u sqrt(c)/(2pi)]−5.              (ARCH)
 
-El polar tiene valor absoluto normalizado
+The polar has normalised absolute value
 
     (4pi/u)[u²/(u²−1/4)]^N
        [1/(4u²−1)]^k /B(k+1/2,N−1/2).
 
-Aplicar BL como en§3, con A<2 y r=1/(4u²−1)=1/3968, muestra
+Applying BL as in§3, with A<2 and r=1/(4u²−1)=1/3968, shows
 
     |Polar[f]|/||f||²<400^-k,                            (POL)
 
-porque 4pi/u<1 y 9/3968<1/400. Así
+because 4pi/u<1 and 9/3968<1/400. Thus
 
     W[f]/||f||²
       >(1/2)logN+log[u sqrt(c)/(2pi)]−5−14C(c)−400^-k.
 
-**Teorema de signo:** para cada c>0 existe N0(c) explícitamente acotable tal que W[f_(N,k)]>0 para TODOS N>=N0(c), TODOS k>=cN². Basta exigir N>=max(2,4/c) y
+**Sign theorem:** for each c>0 there exists an explicitly boundable N0(c) such that W[f_(N,k)]>0 for ALL N>=N0(c), ALL k>=cN². It suffices to require N>=max(2,4/c) and
 
     (1/2)logN+log[u sqrt(c)/(2pi)]>6+14C(c).
 
-No es un certificado de todos los numeradores: se mantiene P=1, como se declaró. El umbral es deliberadamente muy conservador, pero la prueba es uniforme y controla todos los contactos.
+It is not a certificate for all numerators: P=1 is kept, as declared. The threshold is deliberately very conservative, but the proof is uniform and controls all contacts.
 
-## 5. Autocorrelación cuadrática: aproximación cuantitativa de contactos
+## 5. Quadratic autocorrelation: quantitative approximation of contacts
 
-Si k=ceil(cN²), ponga mu_N=u sqrt(k/N). La misma beta se representa mediante variables independientes X~Gamma(k+1/2,1),Y~Gamma(N−1/2,1): |tau|=u sqrt(X/Y). Para cualquier T finito,
+If k=ceil(cN²), put mu_N=u sqrt(k/N). The same beta is represented by independent variables X~Gamma(k+1/2,1),Y~Gamma(N−1/2,1): |tau|=u sqrt(X/Y). For any finite T,
 
     sup_(|t|<=T)|R_(N,k)(t)
         −exp(−u²ct²/8)cos(mu_N t)| <=C_(c,u,T)/sqrt(N)  (GAUSS)
 
-para N suficientemente grande. Se demuestra elementalmente así:
+for N large enough. It is proved elementarily as follows:
 
-* Los momentos gamma hasta orden cuatro muestran que, en L¹,
+* The gamma moments up to order four show that, in L¹,
   |tau|=mu_N−(u sqrt(c)/2)(Y−N)/sqrt(N)+O(N^-1/2).
-  En el evento X/k,Y/N∈[1/2,3/2] se usa Taylor con resto cuadrático de sqrt(X/k)/sqrt(Y/N). Su esperanza multiplicada por sqrt(N) es O(N^-1/2). En el complemento, los cuartos momentos dan probabilidad O(N^-2); Cauchy–Schwarz y E tau²=O(N) dan el mismo error. La contribución lineal de X es O(N^-1/2).
-* La función característica exacta de (Y−N)/sqrt(N) es exp(−iz sqrt(N))(1−iz/sqrt(N))^(-N+1/2). Taylor de log(1−iz/sqrt(N)) da exp(−z²/2)+O_T(N^-1/2), uniformemente para z en un compacto.
-* |exp(ita)−exp(itb)|<=|t||a−b| y la simetría de tau convierten esas dos estimaciones en GAUSS.
+  On the event X/k,Y/N∈[1/2,3/2] one uses Taylor with quadratic remainder of sqrt(X/k)/sqrt(Y/N). Its expectation multiplied by sqrt(N) is O(N^-1/2). On the complement, the fourth moments give probability O(N^-2); Cauchy–Schwarz and E tau²=O(N) give the same error. The linear contribution of X is O(N^-1/2).
+* The exact characteristic function of (Y−N)/sqrt(N) is exp(−iz sqrt(N))(1−iz/sqrt(N))^(-N+1/2). Taylor of log(1−iz/sqrt(N)) gives exp(−z²/2)+O_T(N^-1/2), uniformly for z in a compact.
+* |exp(ita)−exp(itb)|<=|t||a−b| and the symmetry of tau turn those two estimates into GAUSS.
 
-El mismo argumento vale con k/N²->c, reemplazando el error explícito por o(1) uniforme en compactos de t. En ese caso puede mantenerse c_N=k/N² en la amplitud gaussiana antes de pasar al límite.
+The same argument holds with k/N²->c, replacing the explicit error by o(1) uniform on compacts of t. In that case one can keep c_N=k/N² in the Gaussian amplitude before passing to the limit.
 
-## 6. La aproximación pasa a la suma infinita, no solo a contactos fijos
+## 6. The approximation passes to the infinite sum, not only to fixed contacts
 
-CORR, que es independiente de GAUSS, proporciona el majorante sumable que faltaba en016. La envolvente gaussiana también es sumable contra Lambda(q)q^-1/2. Separando un segmento finito y su cola, se obtiene para k=ceil(cN²)
+CORR, which is independent of GAUSS, provides the summable majorant that was missing in016. The Gaussian envelope is also summable against Lambda(q)q^-1/2. Separating a finite segment and its tail, one obtains for k=ceil(cN²)
 
     Comb[f]/||f||²
       =−2Σ(q>=2)Lambda(q)q^-1/2
           exp[−u²c(logq)²/8]cos(mu_N logq)+o(1).         (ALL)
 
-La serie de ALL es absolutamente convergente y uniformemente acotada en mu_N. No se afirma que su signo sea favorable, ni se reemplaza por cero mediante una oscilación no demostrada. El control de su magnitud basta, porque ARCH crece logarítmicamente.
+The series of ALL is absolutely convergent and uniformly bounded in mu_N. It is not claimed that its sign is favourable, nor is it replaced by zero by means of an unproved oscillation. Control of its magnitude suffices, because ARCH grows logarithmically.
 
-Más precisamente, E tau^-2=(N−1/2)/[u²(k−1/2)]=O(1/N). Las cotas elementales ya probadas en Paper47, lem:mbounds, dan |m(tau)−log(|tau|/(2pi))|<=1/|tau|+1/(2tau²) para tau distinto de0. Por Cauchy--Schwarz y la fórmula beta, su esperanza es O(N^-1/2), pues E tau^-2=O(1/N). Esto y la fórmula de Elog dan
+More precisely, E tau^-2=(N−1/2)/[u²(k−1/2)]=O(1/N). The elementary bounds already proved in Paper47, lem:mbounds, give |m(tau)−log(|tau|/(2pi))|<=1/|tau|+1/(2tau²) for tau different from0. By Cauchy--Schwarz and the beta formula, its expectation is O(N^-1/2), since E tau^-2=O(1/N). This and the formula for Elog give
 
     W[f]/||f||²=(1/2)logN+log[u sqrt(c)/(2pi)]
       −2Σ(q>=2)Lambda(q)q^-1/2
           exp[−u²c(logq)²/8]cos(mu_N logq)+o(1).         (PROFILE)
 
-Así la autocorrelación no tiene por qué desaparecer en cada contacto; queda una serie modulada acotada. La nueva herramienta no necesita que desaparezca.
+Thus the autocorrelation need not vanish at each contact; a bounded modulated series remains. The new tool does not need it to vanish.
 
-## 7. Alcance y límite preciso
+## 7. Scope and precise limit
 
-Se obtuvo una herramienta que evita las normas temporales uniformes falsificadas016: desplazar conjuntamente la densidad espectral racional. El resultado prueba signo eventual en el cono cuadrático para P=1 y suma toda la aritmética con un majorante uniforme. No prueba ese cono para TODOS los numeradores ni controla las primeras dimensiones, ni convierte la serie de PROFILE en un objeto no negativo. Tampoco se invoca criticidad como descarte: se ha demostrado directamente el lower necesario en esta familia concreta.
+A tool was obtained that avoids the falsified uniform time norms016: shifting the rational spectral density jointly. The result proves an eventual sign on the quadratic cone for P=1 and sums all the arithmetic with a uniform majorant. It does not prove that cone for ALL numerators nor control the first dimensions, nor turn the series of PROFILE into a nonnegative object. Nor is criticality invoked as a discard: the necessary lower bound has been proved directly in this concrete family.
 
 
-## Apéndice A. Bounds globales elementales de digamma usados en ARCH
+## Appendix A. Elementary global digamma bounds used in ARCH
 
-Se incorpora una prueba propia del constructor principal, revisada independientemente. Para a>0,t real, ponga g(x)=x/(x²+t²). La serie de digamma y el límite armónico dan
+A proof is incorporated here, reviewed independently. For a>0,t real, put g(x)=x/(x²+t²). The digamma series and the harmonic limit give
 
     Re psi(a+it)=lim_(n->infinito)[logn-sum_(j=0)^(n-1)g(a+j)].
 
-En cada intervalo unitario, la diferencia entre el valor en el extremo izquierdo y la integral se acota en valor absoluto por la integral de |g'| sobre ese intervalo. Por tanto el error total es<=integral_a^(a+n)|g'|. Si |t|<=a, g decrece y su variación en[a,infinito) es g(a)<=1/a. Si |t|>=a, g crece hasta|t| y luego decrece; su variación total es2g(|t|)-g(a)<=1/|t|<=1/a. En ambos casos
+On each unit interval, the difference between the value at the left endpoint and the integral is bounded in absolute value by the integral of |g'| over that interval. Hence the total error is<=integral_a^(a+n)|g'|. If |t|<=a, g decreases and its variation on[a,infinito) is g(a)<=1/a. If |t|>=a, g increases up to|t| and then decreases; its total variation is2g(|t|)-g(a)<=1/|t|<=1/a. In both cases
 
     Re psi(a+it)>=log|a+it|-1/a,
 
-porque integral_a^(a+n)g=(1/2)log[((a+n)²+t²)/(a²+t²)] y el término logn cancela su extremo superior al pasar al límite. Aplicar a1/4,t=tau/2 da, para tau distinto de0,
+because integral_a^(a+n)g=(1/2)log[((a+n)²+t²)/(a²+t²)] and the term logn cancels its upper endpoint when passing to the limit. Applying to a1/4,t=tau/2 gives, for tau different from0,
 
     m(tau)>=log(|tau|/(2pi))-4.
 
-En t0 produce también psi(x)>=logx-1/x. La otra cota psi(x)<=logx se obtiene de la integral gamma: psi(x)=ElogX con X~Gamma(x,1), EX=x, y Jensen para log. Estas demostraciones justifican las dos desigualdades gamma integradas en BT y las cotas de ARCH sin una cita especial no verificada.
+At t0 it also produces psi(x)>=logx-1/x. The other bound psi(x)<=logx is obtained from the gamma integral: psi(x)=ElogX with X~Gamma(x,1), EX=x, and Jensen for log. These proofs justify the two gamma inequalities integrated in BT and the bounds of ARCH without an unverified special citation.

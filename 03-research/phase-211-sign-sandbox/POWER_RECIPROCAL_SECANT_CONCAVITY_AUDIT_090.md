@@ -1,40 +1,40 @@
-# POWER_RECIPROCAL_SECANT_CONCAVITY_AUDIT_090 — Auditoría independiente
+# POWER_RECIPROCAL_SECANT_CONCAVITY_AUDIT_090 — Independent audit
 
-Estado: **APROBADO / PROVED el lema y aplicación theta, input global descargado por089 con reproducción FULL PASS.** Fuente `POWER_RECIPROCAL_SECANT_CONCAVITY_090.md` leída íntegra. Auditor mapa. Papers intactos.
+Status: **APPROVED / PROVED the lemma and theta application, global input discharged by089 with reproduction FULL PASS.** Source `POWER_RECIPROCAL_SECANT_CONCAVITY_090.md` read in full. Papers untouched.
 
-## Lema elemental
+## Elementary lemma
 
-Tf>0 equivale exactamente a w''<0 para w=(f')^−1/2. La tangente en x domina estrictamente w(s) para0<=s<x. Su extremo d_x=w−xw'>=w0>0 y el otro extremo w(x)>0 garantizan que el recíproco cuadrado es integrable y su integral es x/[w(x)d_x]. No se supuso w'>0 ni se dividió por w' sin tratar el cero. La desigualdad estricta integrada da exactamente el signo negativo en h0''=2[x−gw(w−xw')]/(w4g3).
+Tf>0 is exactly equivalent to w''<0 for w=(f')^−1/2. The tangent at x strictly dominates w(s) for0<=s<x. Its endpoint d_x=w−xw'>=w0>0 and the other endpoint w(x)>0 guarantee that the reciprocal square is integrable and its integral is x/[w(x)d_x]. Neither w'>0 was assumed nor was division by w' made without treating zero. The integrated strict inequality gives exactly the negative sign in h0''=2[x−gw(w−xw')]/(w4g3).
 
-La hipótesisC3 y f'>0 hasta0 da extensiónC2 de g/x por integral de f'(sx). El valor h0''0=−Tf0/[6f'0³] es correcto; por continuidad Tf0>=0, no necesariamente estricto. No se amplía indebidamente la desigualdad puntual al extremo.
+The hypothesisC3 and f'>0 up to0 give aC2 extension of g/x via the integral of f'(sx). The value h0''0=−Tf0/[6f'0³] is correct; by continuity Tf0>=0, not necessarily strict. The pointwise inequality is not improperly extended to the endpoint.
 
-## Aplicación y signo de cruces
+## Application and sign of crossings
 
-R real es analítica en0 con R0=1/a.073 da R'>0 en x>0 y086R''<0; por ello el límiteR'0 es finito y estrictamente positivo. El lema necesita Tf para TODO el segmento0..x; la cota085 sólo desdeu>.5 no satisface automáticamente ese requisito. La fuente mantiene esta obligación global explícita y no la promueve antes de089.
+Real R is analytic at0 with R0=1/a.073 gives R'>0 for x>0 and086 R''<0; hence the limit R'0 is finite and strictly positive. The lemma needs Tf on the WHOLE segment0..x; the bound085 only from u>.5 does not automatically satisfy that requirement. The source keeps this global obligation explicit and does not promote it before089.
 
-b=a(R−R0)/x implica h=1/b=h0/a con el factor correcto. Bajo el inputglobalTR>0, h''<0 y g_*''=aR''<0 de086. Las fórmulas078 deCp' y(xCp)' tienen signos estrictos por errores de tangentes. Alconfluirx=P, esos errores son−h''s²/2 y−g_*''s²/2, y el denominador tienecoefg_*'²>0; se conservan signos y removibilidad. Con Gp>0 de077 esto da−1<zGp'/Gp<1 y porCONE001 todos sus paresdistintosPD. Se permiten derivadasGpnegativas, porloque081noescontradicha.
+b=a(R−R0)/x implies h=1/b=h0/a with the correct factor. Under the global input TR>0, h''<0 and g_*''=aR''<0 from086. The formulas078 of Cp' and(xCp)' have strict signs via tangent errors. At confluence x=P, those errors are−h''s²/2 and−g_*''s²/2, and the denominator has coefficient g_*'²>0; signs and removability are preserved. With Gp>0 from077 this gives−1<zGp'/Gp<1 and by CONE001 all its distinct pairs PD. Negative Gp derivatives are allowed, so081 is not contradicted.
 
-## Diferencia y límites
+## Difference and limits
 
-Consultados los antecedentes078/081–089 y tresregistros. La desigualdad nueva es la tangente integrada que controla el recíproco de una secante, no una identidad sola. El lema es abstracto y no se reclama prioridad mundial. Su aplicacióntheta sigue CONDICIONAL mientrasfalteTRglobal. No pruebaTR_G, doblesconcavidadesrecíprocasGp ni preservaciónporSchur/allorders. No nuevaW/T.
-
-
-## Actualización tras089 FULL PASS
-
-El transporte globalR4 de089 y su reproducción root87911 exit0/FULL PASS cierran el inputTR>0TODOx>0. Se promueven hglobalstrictconcava y todos los paresdistintosGp aPROVED. Las advertencias históricas de arriba explican por qué085solo no bastaba; ya no son una obligación pendiente. No se descarga herenciaTuránGp ni todos los órdenes.
+Consulted the antecedents078/081–089 and three records. The new inequality is the integrated tangent controlling the reciprocal of a secant, not an identity alone. The lemma is abstract and no worldwide priority is claimed. Its theta application remains CONDITIONAL while global TR is missing. It does not prove TR_G, double reciprocal concavities of Gp nor preservation under Schur/all orders. No new W/T.
 
 
-## Apéndice posterior — ancla interior y una curvatura real del resto
+## Update after089 FULL PASS
 
-Leídas§§6–8. La tangente positiva de w=(f')^−1/2 domina en el segmento dePax para ambas orientaciones. Alinvertir orientación de integración, cambian tanto el signo del numerador y−Gwd como el deG³; H_P'' sigue negativo. El punto removible es−Tf(P)/(6f'(P)³)<0 y la extensiónC2 por promediof' es válida.
-
-REST-SECANTS se verificó por sustituciónexacta de Gp: R_G=(1/a)[(x−P)/(h−hP)−PbP], S_G=a[(x−P)/(g−gP)−hP]. ConTRglobal089, Tg=a²TR>0 y g'>0; el lema anclado da **S_G''<0 paraTODOSp,x>0**, incluidosanclajes. No exige ni prueba una herenciaBASE.
-
-ParaR_G hacefaltaTh>0global, aúnOPEN. Suconfluenteenx=P muestra queR_G''(P)<0paraTODOSP exigiría exactamente ese signo. ANCHORED-FIVE conserva signos: trasrestarR0columnas yexpandirnodo0, lasfilasdivididasporG producen(H,xH,1,x); moverdosbloquesdedosusa4transposicionespositivas. EljetesW(x,x²,G,xG)=−G⁴TH=−a²G⁴Th. Nodo0auxiliarnoadmisibleW. Este siguiente menoranclado noqueda probado porTRactual.
+The global transport R4 of089 and its independent reproduction 87911 exit0/FULL PASS close the input TR>0 for ALL x>0. Global strict concavity of h and all distinct pairs of Gp are promoted to PROVED. The historical caveats above explain why085 alone did not suffice; they are no longer a pending obligation. Turán inheritance for Gp and all orders are not discharged.
 
 
-## Adición090§9 — herencia genérica refutada
+## Later appendix — interior anchor and one real curvature of the remainder
 
-Leída la fuente final y reproducidos los jets exactos independientemente. Para w=(5−exp(−x))/4, derivar la antiderivada explícita da f'=1/w², f''<0 y Tf=exp(−x)/w5>0 en TODA la semirrecta; f0=1 y f>0. La expansión directa da H=1+x/4−x²/12+5x³/192+O(x4), de dondeTH0=−1/192. La continuidad analítica extiende el fallo a un intervalo positivo, sin radio necesario para refutar la herencia universal.
+Read§§6–8. The positive tangent of w=(f')^−1/2 dominates on the segment from P to x for both orientations. When the orientation of integration is reversed, both the sign of the numerator y−Gwd and that of G³ change; H_P'' remains negative. The removable point is−Tf(P)/(6f'(P)³)<0 and the C2 extension via averaging f' is valid.
 
-También es correcto el jet general H'0=b,H''0=−2c/3,H'''0=(bc+d)/2 yTH0=b²c+bd−4c²/3 para w0=1,b=w'0,c=−w''0,d=w'''0. No se generó una campaña ni se modificó la Phi real. El ejemplo distingue Tfglobal de la hipótesis más débil de084, preserva la concavidadH garantizada por el lema y refuta SÓLO la promoción automáticaTf⇒TH. T_hREAL sigueOPEN;S_GREALconcava siguePROVED. Root aprobó independientemente antiderivada y jets. No hay W negativo ni exclusión de otros invariantes.
+REST-SECANTS was verified by exact substitution of Gp: R_G=(1/a)[(x−P)/(h−hP)−PbP], S_G=a[(x−P)/(g−gP)−hP]. With global TR from089, Tg=a²TR>0 and g'>0; the anchored lemma gives **S_G''<0 for ALL p,x>0**, anchors included. It neither requires nor proves a BASE inheritance.
+
+For R_G one needs global Th>0, still OPEN. Its confluent at x=P shows that R_G''(P)<0 for ALL P would require exactly that sign. ANCHORED-FIVE preserves signs: after subtracting R0 columns and expanding node0, the rows divided by G produce(H,xH,1,x); moving two blocks of two uses 4 positive transpositions. The jet is W(x,x²,G,xG)=−G⁴TH=−a²G⁴Th. Node0 is auxiliary, not admissible for W. This next anchored minor is not proved by the current TR.
+
+
+## Addition090§9 — generic inheritance refuted
+
+Read the final source and reproduced the exact jets independently. For w=(5−exp(−x))/4, differentiating the explicit antiderivative gives f'=1/w², f''<0 and Tf=exp(−x)/w5>0 on the WHOLE half-line; f0=1 and f>0. The direct expansion gives H=1+x/4−x²/12+5x³/192+O(x4), whence TH0=−1/192. Analytic continuation extends the failure to a positive interval, with no radius needed to refute universal inheritance.
+
+The general jet H'0=b,H''0=−2c/3,H'''0=(bc+d)/2 and TH0=b²c+bd−4c²/3 for w0=1,b=w'0,c=−w''0,d=w'''0 is also correct. No campaign was generated nor was the real Phi modified. The example distinguishes global Tf from the weaker hypothesis of084, preserves the concavity of H guaranteed by the lemma and refutes ONLY the automatic promotion Tf⇒TH. REAL T_h remains OPEN; REAL concave S_G remains PROVED. Antiderivative and jets were approved by a second independent check. There is no negative W nor exclusion of other invariants.

@@ -1,144 +1,144 @@
-# POWER_INTERIOR_SCALE_030 — Compensación interior real a tasa fija
+# POWER_INTERIOR_SCALE_030 — Real interior compensation at fixed rate
 
-Estado: **PROVED**, revisión independiente APROBADA en POWER_INTERIOR_AUDIT_030.md. Con u=63/2 FIJO, para TODOS N>=2^20,
+Status: **PROVED**, independent review APPROVED in POWER_INTERIOR_AUDIT_030.md. With u=63/2 FIXED, for ALL N>=2^20,
 
     int_1^(9/4) G_N(x) H(x)dx>1/100.                      (BLOCK)
 
-Aquí G_N es el kernel gamma real y H conserva la aritmética completa del balance conjunto; en el bloque aparece el contacto q2. No es el valor total de W. Resto interior, cola y signo W global **OPEN**. Papers intactos.
+Here G_N is the real gamma kernel and H keeps the complete arithmetic of the joint balance; the contact q2 appears in the block. It is not the total value of W. Interior remainder, tail and global W sign **OPEN**. Papers untouched.
 
-## 1. Corpus y razón nueva
+## 1. Corpus and new reason
 
-Leídos las reglas del proyecto, SIGNED_MEAN019 (PAIR), INVERSE_KERNEL020, CUMULATIVE_INVERSE022, ARCH_CELL026, DISCRETE_BALANCE027 y STATE029. Consultados índice ROUTES-TRIED-INDEX, grid maestro y CROSSWORD-TO-D.md sobre muestreo, Euler/Möbius, sumación por divisores, medias Riesz y errores aritméticos firmados.
+Read the project rules, SIGNED_MEAN019 (PAIR), INVERSE_KERNEL020, CUMULATIVE_INVERSE022, ARCH_CELL026, DISCRETE_BALANCE027 and STATE029. Consulted the ROUTES-TRIED-INDEX index, master grid and CROSSWORD-TO-D.md on sampling, Euler/Möbius, divisor summation, Riesz means and signed arithmetic errors.
 
-Las inversiones de divisores y las identidades no se presentan como resultados nuevos de signo. Frente019–027, se utiliza la restricción FUNCIONAL completa para eliminar el inverso Möbius de la función gamma y cancelar todas las singularidades logarítmicas en enteros>1. El peso resultante sigue firmado. La novedad positiva es demostrar que el kernel gamma REAL compensa un bloque interior que contiene un contacto adverso, UNIFORMEMENTE a órdenes grandes y a la tasa FIJA31.5. No se mejora otra constante de una cuña de tasa variable y no se verifica una campaña de N.
+The divisor inversions and the identities are not presented as new sign results. Compared with 019–027, the complete FUNCTIONAL constraint is used to remove the Möbius inverse from the gamma function and cancel all logarithmic singularities at integers>1. The resulting weight is still signed. The positive novelty is proving that the REAL gamma kernel compensates an interior block containing an adverse contact, UNIFORMLY at large orders and at the FIXED rate 31.5. No other constant of a variable-rate wedge is improved and no campaign over N is verified.
 
-El cálculo de una primitiva negativa registra además por qué la monotonía gamma sola no basta; el resultado principal BLOCK conserva su magnitud y obtiene compensación, no sólo otra obstrucción abstracta.
+The computation of a negative primitive also records why gamma monotonicity alone is not enough; the main result BLOCK keeps its magnitude and obtains compensation, not just another abstract obstruction.
 
-## 2. Inversión del peso conjunto y cancelación exacta de singularidades
+## 2. Inversion of the joint weight and exact cancellation of singularities
 
-Conserve K_N y Omega de026, de modo que W[g_N]/norm²=int_1^infty K_N(t)Omega(t)dt. La restricción de escalas REAL es
+Keep K_N and Omega of 026, so that W[g_N]/norm²=int_1^infty K_N(t)Omega(t)dt. The REAL scale constraint is
 
     G_N(x):=sum_(n>=1)K_N(nx)
            =w_N(x)−xw_N'(x)=x^(−32)D_N(logx)>0,
     D_N=33P_N−P_N', w_N=x^(−1/2)rho_N(logx).
 
-La inversión adjunta finita del peso es
+The finite adjoint inversion of the weight is
 
     H(x)=sum_(m<=x)mu(m)Omega(x/m)/m.
 
-La fórmula FLOOR027 y las identidades sum_(m|r)mu(m)=1_(r=1), sum_(m|r)mu(m)log(r/m)=Lambda(r) simplifican EXACTAMENTE a
+The formula FLOOR027 and the identities sum_(m|r)mu(m)=1_(r=1), sum_(m|r)mu(m)log(r/m)=Lambda(r) simplify EXACTLY to
 
     H(x)=1+[log((x+1)/(x−1))+c−1−2Psi_1(x)]/x²,
     c=−gamma−log(4pi),
     Psi_1(x)=sum_(q<=x)qLambda(q).                         (H)
 
-Por ejemplo, la parte H_floor de Omega se convierte en1, y todas las singularidades log((x+q)/(x−q)) con q>1 cancelan al sumar sus divisores. Sólo queda la singularidad integrable en x1. Los saltos de H en potencias primas son NEGATIVOS de tamaño2Lambda(q)/q. No se borran esos saltos.
+For example, the part H_floor of Omega becomes 1, and all singularities log((x+q)/(x−q)) with q>1 cancel when summing their divisors. Only the integrable singularity at x1 remains. The jumps of H at prime powers are NEGATIVE of size 2Lambda(q)/q. These jumps are not erased.
 
-La identidad conjunta queda
+The joint identity becomes
 
     W[g_N]/norm²=int_1^infty G_N(x)H(x)dx.                (JOINT-G)
 
-Todo es absoluto para N fijo: G_N,K_N decaen como x^(-32) por polinomios en logx; H crece a lo sumo como O(1+logx) y tiene una singularidad logarítmica integrable en1. Para el intercambio de escalas, la suma de módulos se domina por sum_n n^(-32) por polinomios en logn, multiplicada por una integral convergente en x. Los valores en los puntos de salto no afectan la integral.
+Everything is absolute for fixed N: G_N,K_N decay like x^(-32) times polynomials in logx; H grows at most like O(1+logx) and has an integrable logarithmic singularity at 1. For the interchange of scales, the sum of moduli is dominated by sum_n n^(-32) times polynomials in logn, multiplied by a convergent integral in x. The values at the jump points do not affect the integral.
 
-JOINT-G sola no es una desigualdad de signo y coincide con una aplicación legítima de la inversión clásica. Se utiliza a continuación para un bound firmado específico.
+JOINT-G alone is not a sign inequality and coincides with a legitimate application of classical inversion. It is used next for a specific signed bound.
 
-## 3. La monotonía gamma es real, pero falla el criterio de primitivas positivas
+## 3. Gamma monotonicity is real, but the positive-primitive criterion fails
 
-Por025, D_N es logcóncavo y
+By 025, D_N is log-concave and
 
     D_N'(0)/D_N(0)=63(d+10)/(2d−1), d=N−1.
 
-Decrece en d. Por tanto G_N es decreciente para TODOS N>=663, y G_N/x² es decreciente para TODOS N>=134: basta comparar el cociente anterior con32 y34, respectivamente. Son propiedades de la función gamma REAL, no hipótesis añadidas.
+It decreases in d. Hence G_N is decreasing for ALL N>=663, and G_N/x² is decreasing for ALL N>=134: it suffices to compare the previous quotient with 32 and 34, respectively. These are properties of the REAL gamma function, not added hypotheses.
 
-Sin embargo las premisas suficientes naturales de una integración de Stieltjes no se cumplen. El verificador racional prueba sobre el MISMO H completo
+However, the natural sufficient premises of a Stieltjes integration do not hold. The rational verifier proves on the SAME complete H
 
     int_1^(5/2) H(x)dx<−1/50,
     int_1^(5/2) x²H(x)dx<−1/4.                           (PRIMITIVE-FAIL)
 
-Sólo q2 aparece en ese intervalo, con su valor real Lambda(2)=log2. Así el fallo del criterio es aritmético y cuantitativo, no un contraejemplo a la monotonía real de G. No se infiere de PRIMITIVE-FAIL que el emparejamiento con G_N sea negativo.
+Only q2 appears on that interval, with its real value Lambda(2)=log2. Thus the failure of the criterion is arithmetic and quantitative, not a counterexample to the real monotonicity of G. It is not inferred from PRIMITIVE-FAIL that the pairing with G_N is negative.
 
-Para reproducir el primer bound, una primitiva desde1, en2<=T<3, es
+To reproduce the first bound, a primitive from 1, on 2<=T<3, is
 
     T−1+(c−1)(1−1/T)−log((T+1)/(T−1))/T
        +2logT−log(T²−1)+4log2/T.
 
-La segunda es (T³−1)/3+(c−1)(T−1)+(T+1)log(T+1)−(T−1)log(T−1)−2log2−4log2(T−2). Las comparaciones en T5/2 usan exclusivamente intervalos de logaritmos/gamma, sin cuadratura ni prueba de otro N.
+The second is (T³−1)/3+(c−1)(T−1)+(T+1)log(T+1)−(T−1)log(T−1)−2log2−4log2(T−2). The comparisons at T5/2 use exclusively intervals of logarithms/gamma, with no quadrature nor test of another N.
 
-## 4. Comparación gamma uniforme en un bloque finito
+## 4. Uniform gamma comparison on a finite block
 
-Escriba rho_N(y)=C_N(y)/C_N(0). Su probabilidad espectral tiene momento EXACTO
+Write rho_N(y)=C_N(y)/C_N(0). Its spectral probability has EXACT moment
 
     M2_N=E tau²=u²/(2N−3), u=63/2.
 
-Las desigualdades elementales de coseno/seno dan
+The elementary cosine/sine inequalities give
 
     |rho_N(y)−1|<=M2_N y²/2,
     |rho_N'(y)|<=M2_N |y|.
 
-La forma gamma real del kernel positivo de escalas es
+The real gamma form of the positive scale kernel is
 
     G_N(x)=x^(−1/2)[(3/2)rho_N(logx)−rho_N'(logx)].
 
-Compare con G_*(x)=(3/2)x^(−1/2). Puesto que log(9/4)<1, en TODO1<=x<=9/4,
+Compare with G_*(x)=(3/2)x^(−1/2). Since log(9/4)<1, on ALL of 1<=x<=9/4,
 
     |G_N(x)−G_*(x)|<=(7/4)M2_N.                          (GAMMA-ERROR)
 
-Se trata de una comparación local uniforme con error explícito; no se intercambia un límite N infinito con la forma completa ni se usa un modelo genérico en lugar del dato gamma.
+This is a uniform local comparison with explicit error; no infinite-N limit is interchanged with the complete form and no generic model is used instead of the gamma datum.
 
-También, usando (H) y ampliando sólo para un mayorante hasta5/2,
+Also, using (H) and enlarging only for a majorant up to 5/2,
 
     int_1^(9/4)|H(x)|dx<6.                               (H-NORM)
 
-En efecto |c−1|<23/5, int_1^(5/2)x^(-2)dx=3/5, int_1^infty x^(-2)log((x+1)/(x−1))dx=2log2<7/5, y el único término primo se acota por4log2 int_2^(5/2)x^(-2)dx<7/25. Sumando con la longitud3/2 da297/50<6.
+Indeed |c−1|<23/5, int_1^(5/2)x^(-2)dx=3/5, int_1^infty x^(-2)log((x+1)/(x−1))dx=2log2<7/5, and the only prime term is bounded by 4log2 int_2^(5/2)x^(-2)dx<7/25. Adding the length 3/2 gives 297/50<6.
 
-De GAMMA-ERROR y H-NORM,
+From GAMMA-ERROR and H-NORM,
 
     |int_1^(9/4)(G_N−G_*)H|
       <(21/2)u²/(2N−3).                                 (ERROR)
 
-La comparación conserva el SIGNO y TODOS los contactos del bloque en el término principal; el módulo sólo controla el error de aproximación gamma.
+The comparison keeps the SIGN and ALL the contacts of the block in the main term; the modulus only controls the gamma approximation error.
 
-## 5. Integral principal exacta, con contacto2 incluido
+## 5. Exact main integral, with contact 2 included
 
-Para1<=x<=9/4, Psi_1(x)=0 si x<2 y2log2 si x>=2. El integral de comparación I_*:=int_1^(9/4)G_*(x)H(x)dx es exactamente
+For 1<=x<=9/4, Psi_1(x)=0 if x<2 and 2log2 if x>=2. The comparison integral I_*:=int_1^(9/4)G_*(x)H(x)dx is exactly
 
     I_*=3/2+(19/27)(c−1)+(3/2)J
                    −log2(sqrt2−32/27),
     J=8/9−(16/81)log(13/5)+(2/3)log(5/2)
                                       −(4/3)arctan(1/5). (I)
 
-La última contribución es precisamente la del contacto2. No se omite ninguna potencia prima: las siguientes empiezan en3, fuera del bloque.
+The last contribution is precisely that of contact 2. No prime power is omitted: the next ones start at 3, outside the block.
 
-Para verificar (I), integrar x^(-1/2), x^(-5/2) y el escalón en2. En el término logarítmico, el cambio x=z² lleva el extremo superior a z3/2; integración por partes y arctan(3/2)=pi/4+arctan(1/5) dan la fórmula J sin ningún resto numérico.
+To verify (I), integrate x^(-1/2), x^(-5/2) and the step at 2. In the logarithmic term, the change x=z² takes the upper endpoint to z3/2; integration by parts and arctan(3/2)=pi/4+arctan(1/5) give the formula J with no numerical remainder.
 
-Los intervalos racionales003 de logaritmos, gamma y arctan(1/5), junto a sqrt2<99/70, prueban
+The rational intervals 003 for logarithms, gamma and arctan(1/5), together with sqrt2<99/70, prove
 
     I_*>1/50.                                           (MAIN)
 
-Su valor aproximado.0219844 sólo orienta; no se usa en la prueba.
+Its approximate value .0219844 is only for orientation; it is not used in the proof.
 
-## 6. Compensación real uniforme a tasa FIJA
+## 6. Uniform real compensation at FIXED rate
 
-Para TODOS N>=2^20,
+For ALL N>=2^20,
 
     (21/2)u²/(2N−3)<1/200.
 
-Combinar MAIN y ERROR prueba
+Combining MAIN and ERROR proves
 
     int_1^(9/4)G_N H>1/50−1/200=3/200>1/100.
 
-Esto demuestra BLOCK sobre el kernel gamma real, pese a PRIMITIVE-FAIL. El resultado no usa un N elegido y certificado por separado: el único umbral pertenece a la cota monótona explícita de error en N.
+This proves BLOCK on the real gamma kernel, despite PRIMITIVE-FAIL. The result does not use an N chosen and certified separately: the only threshold belongs to the explicit monotone error bound in N.
 
-El balance favorable incluye una región negativa real del peso después del salto en2. Por tanto es una compensación integrada, y no la suma de términos supuestamente positivos ni otra cola exterior que se vuelve despreciable.
+The favourable balance includes a real negative region of the weight after the jump at 2. Hence it is an integrated compensation, and not the sum of supposedly positive terms nor another exterior tail that becomes negligible.
 
-## 7. Qué falta para el balance total
+## 7. What is missing for the total balance
 
-JOINT-G da
+JOINT-G gives
 
     W[g_N]/norm²=int_1^(9/4)G_NH+int_(9/4)^infty G_NH.
 
-Sólo el primer término tiene el bound BLOCK. El segundo conserva todos los contactos siguientes y no se declara favorable ni pequeño. La cola positiva en la representación K Omega de027 sigue válida, pero no puede sumarse dos veces ni trasladarse sin contabilidad a un truncamiento diferente de JOINT-G.
+Only the first term has the bound BLOCK. The second keeps all the following contacts and is declared neither favourable nor small. The positive tail in the K Omega representation of 027 remains valid, but it cannot be added twice nor transferred without bookkeeping to a different truncation of JOINT-G.
 
-El objetivo que queda es controlar el tramo adverso restante CONTRA G_N real y compararlo con las compensaciones favorables. No se propone una nueva cadena abstracta de primitivas; PRIMITIVE-FAIL explica el límite de ese criterio, y GAMMA-ERROR/MAIN suministran el retorno concreto al balance. No se afirma W>=0, ERR total de otro N, una nueva ventanaT ni cobertura completa de la tabla.
+The remaining goal is to control the remaining adverse stretch AGAINST the real G_N and compare it with the favourable compensations. No new abstract chain of primitives is proposed; PRIMITIVE-FAIL explains the limit of that criterion, and GAMMA-ERROR/MAIN supply the concrete return to the balance. W>=0, total ERR at another N, a new window T or complete coverage of the table are not claimed.
 
-Verificador: tools/power_interior_scale_030_verify.py, aritmética Fraction/intervalos exactos; PASS. Certifica MAIN, H-NORM, el umbral analítico y PRIMITIVE-FAIL. La uniformidad en TODOS N>=2^20 se prueba en el texto. Papers intactos.
+Verifier: tools/power_interior_scale_030_verify.py, Fraction arithmetic/exact intervals; PASS. It certifies MAIN, H-NORM, the analytic threshold and PRIMITIVE-FAIL. Uniformity in ALL N>=2^20 is proved in the text. Papers untouched.

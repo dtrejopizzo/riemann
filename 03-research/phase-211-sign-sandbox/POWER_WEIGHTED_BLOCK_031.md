@@ -1,105 +1,105 @@
-# POWER_WEIGHTED_BLOCK_031 — Prefijo ponderado adverso y recuperación real en4
+# POWER_WEIGHTED_BLOCK_031 — Adverse weighted prefix and real recovery at 4
 
-Estado: **PROVED**, revisión independiente por mapa aprobada y verificador PASS reproducido. Tasa FIJA u=63/2. Con X0=225/64=(15/8)²:
+Status: **PROVED**, independent review approved and verifier PASS reproduced. FIXED rate u=63/2. With X0=225/64=(15/8)²:
 
-    int_1^X0 G_N H<−3/1000       para TODOS N>=2^24,
-    int_1^4 G_N H>3/200          para TODOS N>=2^22,
-    int_X0^4 G_N H>9/500         para TODOS N>=2^24.        (REAL)
+    int_1^X0 G_N H<−3/1000       for ALL N>=2^24,
+    int_1^4 G_N H>3/200          for ALL N>=2^22,
+    int_X0^4 G_N H>9/500         for ALL N>=2^24.        (REAL)
 
-No son valores totales de W. Resto del balance y signo global OPEN. Papers intactos. No se continúa una campaña de contactos.
+These are not total values of W. Rest of the balance and global sign OPEN. Papers untouched. No campaign over contacts is continued.
 
-## 1. Corpus y razón nueva
+## 1. Corpus and new reason
 
-Leídos las reglas del proyecto, INTERIOR_SCALE030 y su auditoría; identidad JOINT-G, primitiva ponderada I_* y error gamma local. Consultados índice ROUTES-TRIED-INDEX, grid maestro y CROSSWORD-TO-D.md sobre medias ponderadas, primitivas, Euler/Möbius y bloques030. Las primitivas de H y x²H refutadas030 NO son el objeto aquí.
+Read the project rules, INTERIOR_SCALE030 and its audit; identity JOINT-G, weighted primitive I_* and local gamma error. Consulted the index ROUTES-TRIED-INDEX, master grid and CROSSWORD-TO-D.md on weighted means, primitives, Euler/Möbius and blocks 030. The primitives of H and x²H refuted in 030 are NOT the object here.
 
-La diferencia es incorporar el PRIMER contacto siguiente, q3, en la primitiva ponderada por G_*=(3/2)x^(-1/2), y comprobar si su signo puede servir al emparejamiento real. La premisa universal I_*>=0 falla ya tras ese contacto. Pero, antes de pivotar, se extrae una recuperación CUANTITATIVA del bloque gamma real, uniforme en N y a tasa fija. No se certifican dimensiones aisladas ni se usa otro modelo en lugar de G_N.
+The difference is to incorporate the NEXT contact, q=3, into the primitive weighted by G_*=(3/2)x^(-1/2), and check whether its sign can serve the real pairing. The universal premise I_*>=0 already fails after that contact. But, before pivoting, a QUANTITATIVE recovery of the real gamma block is extracted, uniform in N and at fixed rate. No isolated dimensions are certified and no other model is used in place of G_N.
 
-Se evalúan sólo un prefijo adverso motivado dentro de(3,4), con extremo cuadrado racional X0, y el extremo4 que completa la celda del contacto3. El contacto4 está en el extremo y su contribución integral es exactamente0. No se genera una lista de signos para más contactos.
+Only an adverse prefix motivated inside (3,4), with rational square endpoint X0, and the endpoint 4 completing the cell of contact 3 are evaluated. Contact 4 is at the endpoint and its integral contribution is exactly 0. No list of signs for more contacts is generated.
 
-## 2. Peso real y primitiva correcta
+## 2. Real weight and correct primitive
 
-Conserve030:
+Keep 030:
 
     G_N(x)=x^(-1/2)[(3/2)rho_N(logx)−rho_N'(logx)]>0,
     H(x)=1+[log((x+1)/(x−1))+c−1−2Psi_1(x)]/x²,
     c=−gamma−log(4pi), Psi_1(x)=sum_(q<=x)qLambda(q),
     W[g_N]/norm²=int_1^infty G_N(x)H(x)dx.
 
-La primitiva en estudio es
+The primitive under study is
 
     I_*(X)=int_1^X G_*(x)H(x)dx, G_*=(3/2)x^(-1/2).
 
-Integrando cada escalón aritmético, con TODO contacto q<=X,
+Integrating each arithmetic step, with EVERY contact q<=X,
 
     I_*(X)=3(sqrtX−1)+(c−1)(1−X^(-3/2))+(3/2)J(X)
        −2sum_(q<=X)Lambda(q)/sqrtq
        +2X^(-3/2)sum_(q<=X)qLambda(q),                  (I)
     J(X)=int_1^X x^(-5/2)log((x+1)/(x−1))dx.
 
-Cada contacto de extremo q=X cancela exactamente entre las dos sumas. No se omite un salto con valor favorable o adverso.
+Each endpoint contact q=X cancels exactly between the two sums. No jump with favorable or adverse value is omitted.
 
-Para z=sqrtX>1, la integración por partes030 da la forma cerrada
+For z=sqrtX>1, the integration by parts of 030 gives the closed form
 
     J(X)=(8/3)(1−1/z)−[2/(3z³)]log((X+1)/(X−1))
         +(2/3)log((z+1)/(2(z−1)))
         −(4/3)arctan((z−1)/(z+1)).                       (J)
 
-En X0, z15/8 y el argumento arctan es7/23. En X4, z2 y el argumento es1/3. Las dos fórmulas contienen sólo constantes con intervalos racionales explícitos, no una cuadratura numérica.
+At X0, z=15/8 and the arctan argument is 7/23. At X=4, z=2 and the argument is 1/3. The two formulas contain only constants with explicit rational intervals, not a numerical quadrature.
 
-## 3. Qué ocurre tras el contacto3
+## 3. What happens after contact 3
 
-En ambos extremos sólo contribuyen q2 y q3 (q4 tiene coeficiente0 en X4). Sus valores reales son Lambda(2)=log2,Lambda(3)=log3. El certificado exacto prueba
+At both endpoints only q=2 and q=3 contribute (q=4 has coefficient 0 at X=4). Their real values are Lambda(2)=log2, Lambda(3)=log3. The exact certificate proves
 
     I_*(225/64)<−1/250,
     I_*(4)>1/50.                                        (WEIGHTED)
 
-Se usan 140/99<sqrt2<99/70 y265/153<sqrt3<97/56, comprobadas elevando al cuadrado. Las cotas negativas se obtienen con los recíprocos menores; las positivas con los recíprocos mayores, conservando la dirección correcta de cada término −2Lambda(q)/sqrtq.
+Used: 140/99<sqrt2<99/70 and 265/153<sqrt3<97/56, checked by squaring. The negative bounds are obtained with the smaller reciprocals; the positive ones with the larger reciprocals, keeping the correct direction of each term −2Lambda(q)/sqrtq.
 
-Como orientación, sin usarlos en la prueba, los valores son aproximadamente−.0047659 y+.0251073. WEIGHTED refuta exactamente la premisa «la primitiva ponderada I_* es no negativa para todo X». No refuta el signo de W ni autoriza a ignorar el intervalo de recuperación posterior.
+For orientation, without using them in the proof, the values are approximately −.0047659 and +.0251073. WEIGHTED refutes exactly the premise «the weighted primitive I_* is nonnegative for all X». It does not refute the sign of W nor authorize ignoring the subsequent recovery interval.
 
-## 4. Transferencia uniforme a G_N REAL, sin otro N certificado
+## 4. Uniform transfer to the REAL G_N, without another certified N
 
-Por030, para y real,
+By 030, for real y,
 
     |rho_N(y)−1|<=M2_N y²/2,
     |rho_N'(y)|<=M2_N |y|,
     M2_N=u²/(2N−3).
 
-En1<=x<=4 se tiene logx<=log4<7/5. Luego
+On 1<=x<=4 one has logx<=log4<7/5. Hence
 
     |G_N(x)−G_*(x)|
       <=M2_N[(3/4)(logx)²+logx]<3M2_N.                  (G-ERROR)
 
-También
+Also
 
     int_1^4 |H(x)|dx<10.                               (H-NORM)
 
-Para probarlo se acota la longitud por3, la parte constante por(23/5)(3/4), el kernel logarítmico por2log2<7/5, el contacto2 por4log2 int_2^4 x^(-2)dx<7/10 y el contacto3 por6log3 int_3^4 x^(-2)dx<11/20. Su suma es9.1<10. El valor del contacto4 en el extremo no altera la integral.
+To prove it, the length is bounded by 3, the constant part by (23/5)(3/4), the logarithmic kernel by 2log2<7/5, contact 2 by 4log2 int_2^4 x^(-2)dx<7/10 and contact 3 by 6log3 int_3^4 x^(-2)dx<11/20. Their sum is 9.1<10. The value of contact 4 at the endpoint does not alter the integral.
 
-Así para CUALQUIER X<=4,
+Thus for ANY X<=4,
 
     |int_1^X(G_N−G_*)H|<30u²/(2N−3).                    (ERROR)
 
-A tasa FIJA u63/2, el mayorante es <1/200 para TODOS N>=2^22 y <1/1000 para TODOS N>=2^24. No hay un barrido o un certificado individual por N: se usa una función explícita decreciente de N.
+At FIXED rate u=63/2, the majorant is <1/200 for ALL N>=2^22 and <1/1000 for ALL N>=2^24. There is no sweep or individual certificate per N: an explicit decreasing function of N is used.
 
-Combinar ERROR y WEIGHTED da los dos primeros bounds REAL. Para N>=2^24, restarlos sobre la MISMA función gamma real prueba la recuperación
+Combining ERROR and WEIGHTED gives the first two REAL bounds. For N>=2^24, subtracting them on the SAME real gamma function proves the recovery
 
     int_X0^4 G_NH>3/200+3/1000=9/500.
 
-En particular el prefijo real adverso no desaparece al incorporar el dato gamma: para todo N del rango declarado persiste un aporte negativo. El bloque extendido lo compensa cuantitativamente antes de llegar a4.
+In particular the adverse real prefix does not disappear when incorporating the gamma datum: for every N in the declared range a negative contribution persists. The extended block compensates it quantitatively before reaching 4.
 
-## 5. Relación con el factor real y obligación global
+## 5. Relation to the real factor and global obligation
 
-Escriba R_N=G_N/G_*=rho_N−(2/3)rho_N', con rho evaluada en logx. En intervalos finitos,
+Write R_N=G_N/G_*=rho_N−(2/3)rho_N', with rho evaluated at logx. On finite intervals,
 
     int_1^X G_NH=R_N(X)I_*(X)−int_1^X I_*(x)dR_N(x).
 
-En toda la semirrecta el término de borde se anula, por el decaimiento gamma y el crecimiento a lo sumo polinómico de I_*, y se obtiene W/norm²=−int I_*dR_N. Esta identidad no es una nueva desigualdad de signo. El constructor paralelo analiza la forma y la variación del factor real R_N en POWER_GAMMA_WEIGHT_031.md; no se supone que sea monótono desde1.
+On the whole half-line the boundary term vanishes, by the gamma decay and the at most polynomial growth of I_*, and one gets W/norm²=−int I_*dR_N. This identity is not a new sign inequality. The shape and variation of the real factor R_N are analyzed in parallel in POWER_GAMMA_WEIGHT_031.md; it is not assumed monotone from 1.
 
-WEIGHTED demuestra por qué aun una propiedad favorable de R_N necesita comparar intervalos: I_* tiene una región adversa real. REAL suministra una compensación concreta, pero no dice que todos los bloques admitan el mismo patrón ni que sumar bloques positivos cierre la forma.
+WEIGHTED shows why even a favorable property of R_N needs to compare intervals: I_* has a real adverse region. REAL supplies a concrete compensation, but does not say that all blocks admit the same pattern nor that adding positive blocks closes the form.
 
-No se amplía aquí la lista de contactos. El próximo requisito es una desigualdad de emparejamiento que use el factor gamma y controle las contribuciones adversas de TODOS los contactos frente a las favorables, conservando el peso completo. Sólo el bloque hasta4 queda resuelto. El resto int_4^infty G_NH sigue abierto, y no puede reemplazarse automáticamente por una cola positiva de otra representación sin contabilidad de los cambios de truncamiento.
+The list of contacts is not extended here. The next requirement is a pairing inequality that uses the gamma factor and controls the adverse contributions of ALL contacts against the favorable ones, keeping the full weight. Only the block up to 4 is resolved. The rest int_4^infty G_NH remains open, and cannot automatically be replaced by a positive tail of another representation without accounting for the truncation changes.
 
-## 6. Evidencia
+## 6. Evidence
 
-Verificador: tools/power_weighted_block_031_verify.py, Fraction e intervalos exactos; PASS. Comprueba las dos desigualdades de WEIGHTED, los coeficientes de G-ERROR/H-NORM y los umbrales analíticos. La uniformidad en TODOS N de REAL se prueba arriba. No se afirma W total negativo ni positivo, una nueva ventanaT ni cierre global. Papers intactos.
+Verifier: tools/power_weighted_block_031_verify.py, Fraction and exact intervals; PASS. It checks the two inequalities of WEIGHTED, the coefficients of G-ERROR/H-NORM and the analytic thresholds. The uniformity in ALL N of REAL is proved above. Not claimed: total W negative or positive, a new window T, or global closure. Papers untouched.

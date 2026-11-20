@@ -1,33 +1,33 @@
-# POWER_SHIFTED_WRONSKIAN_AUDIT_092 — Auditoría independiente
+# POWER_SHIFTED_WRONSKIAN_AUDIT_092 — Independent audit
 
-Estado: **APROBADO / PROVED para la carta de eliminación declarada.** Fuente `POWER_SHIFTED_WRONSKIAN_092.md` y código leídos íntegros. Revisor mapa reprodujo exit0/PASS092, con los mismos intervalos de087 sin cambiarlo. Papers intactos; sin nueva campaña.
+Status: **APPROVED / PROVED for the declared elimination chart.** Source `POWER_SHIFTED_WRONSKIAN_092.md` and code read in full. The review reproduced exit0/PASS092, with the same intervals of087 without changing it. Papers untouched; no new campaign.
 
-## Identidad SHIFT y ecuación
+## SHIFT identity and equation
 
-El operadorD3 es mónico con núcleo(1,B,A): su coeficienteD² es−(log(k²J))'=−(2b+j), y el coeficienteD indicado coincide con la factorización ponderada. SustituirF''=s−mF'−AF da exactamenteT0,U,Vc y la matriz2×2 impresa; su determinante es−Delta para la aplicación(h,h')→(D3h,(D3h)'). Los dos homogéneos1/w,t/w tienenWronskianw^−2.
+The operatorD3 is monic with kernel(1,B,A): its coefficient ofD² is−(log(k²J))'=−(2b+j), and the indicated coefficient ofD coincides with the weighted factorization. SubstitutingF''=s−mF'−AF gives exactlyT0,U,Vc and the printed2×2 matrix; its determinant is−Delta for the map(h,h')→(D3h,(D3h)'). The two homogeneous solutions1/w,t/w have Wronskianw^−2.
 
-La identidadDarbouxW(D3h1,D3h2)=W(1,B,A,h1,h2)/W(1,B,A) se obtiene eliminando las primeras tres columnas por filas. W(1,B,A)=k²J>0. Elfactorcomúnw de cinco columnas paga w^−5; mover(1,t) delante sonseistransposicionespositivas. Las doscolumnaspolinomialesdejanW(w'',v'',w4), porloqueSHIFTcondenominadorw³k²J ysignonegativo es exacta.
+The Darboux identity W(D3h1,D3h2)=W(1,B,A,h1,h2)/W(1,B,A) is obtained by eliminating the first three columns by rows. W(1,B,A)=k²J>0. The common factor w of five columns pays w^−5; moving(1,t) to the front is six positive transpositions. The two polynomial columns leave W(w'',v'',w4), so SHIFT with denominator w³k²J and negative sign is exact.
 
-## Signo cerca del origen
+## Sign near the origin
 
-Normalizar por tPhi y cambiarlambda=t² da Wshift=8t6Phi³Wlambda; por ello el término inicial es8Phi0³t6D0. Los factoresk! en la matriz3×3 son correctos. Se reprodujo simbólicamente D0=−161280(6a1a3a4−8a2²a4+3a2a3²).
+Normalizing by tPhi and changing lambda=t² gives Wshift=8t6Phi³Wlambda; hence the initial term is8Phi0³t6D0. The factorsk! in the3×3 matrix are correct. D0=−161280(6a1a3a4−8a2²a4+3a2a3²) was reproduced symbolically.
 
-El script092 importa087 intacto y sólo aplica este polinomio a sus intervalosracionales completos. La reproducción mapa exit0 verifica−56488961026<D0<−56488961025 y los mismos extremosracionales. No se cambia precisión, modos ocola de087. La expansión analítica decide una vecindad existente del origen sin asignarle radio.
+The script092 imports087 intact and only applies this polynomial to its full rational intervals. The exit0 reproduction verifies−56488961026<D0<−56488961025 and the same rational endpoints. Precision, modes or tail of087 are not changed. The analytic expansion decides an existing neighbourhood of the origin without assigning it a radius.
 
-## Exterior con toda la cola
+## Exterior with the whole tail
 
-088 da |Vj−2^jy|<=65 simultáneamentej1..6,uniformeent>=1: el término−9t/2 sólo afectaV1; las serieslog y correccióntheta completa pagan el resto. Los trescocientesdedensidad g1,g2,g3 de la fuente son correctos, incluidos−4g2 enw4/Phi.
+088 gives |Vj−2^jy|<=65 simultaneously for j1..6, uniformly in t>=1: the term−9t/2 only affects V1; the log series and full theta correction pay the rest. The three density quotients g1,g2,g3 of the source are correct, including−4g2 in w4/Phi.
 
-Wshift/Phi³=W(g1,g2,g3) es polinomio finito en t y jetsV1..6, con tgrado<=2 y gradojets<=9. Su partegrado9 proviene sólo de(t p1²,p1³,t p1⁴); se reprodujo independientemente su expresión exacta. Sustituir pj=2^jy+ej produce el término4096(2t²−1)y9, también reproducido exacto; todos los demás términos tienen ygrado<=8. Cstar queda definido por una suma FINITA explícita de coeficientes, con |ej|<=65. Así |resto|<=Cstar t²y8 sin suponer un asintótico sinerror. y→infinito fuerza signo positivo eventualmente, sin umbral optimizado ni muestras.
+Wshift/Phi³=W(g1,g2,g3) is a finite polynomial in t and jets V1..6, with t-degree<=2 and jet degree<=9. Its degree-9 part comes only from(t p1²,p1³,t p1⁴); its exact expression was reproduced independently. Substituting pj=2^jy+ej produces the term4096(2t²−1)y9, also reproduced exactly; all other terms have y-degree<=8. Cstar is defined by an explicit FINITE sum of coefficients, with |ej|<=65. Thus |remainder|<=Cstar t²y8 without assuming an error-free asymptotic. y→infinity forces a positive sign eventually, without optimized threshold or samples.
 
-## Cero real y alcance universal preciso
+## Real zero and precise universal scope
 
-Por continuidad Wshift cambia de signo y tiene un cero interior; w,k,J>0 allí danDelta=0. Falla la inversión GLOBAL de esa carta, aunque numeradoresparticulares podrían también anularse. No se declara un polo inevitable deK ni de cualquier ODE alternativa.
+By continuity Wshift changes sign and has an interior zero; w,k,J>0 there give Delta=0. The GLOBAL inversion of that chart fails, although particular numerators could also vanish. No unavoidable pole of K nor of any alternative ODE is declared.
 
-La adiciónAbel es correcta y más precisa: Y1=D3(1/w),Y2=D3(t/w) son suaves y W=−Delta/w² no es idénticamente cero pero tiene cero interior. Cualquier ODEhomog2mónica concoefcontinuos que contuvieraAMBASimágenes obligaría W'=betaW y W=W0exp∫beta; imposible. Esto excluye una extensiónregularcomún deESAecuaciónuniversal conservandoambassoluciones, no una cancelación para la particularK, otra representación/gauge/orden o una ecuacióninhomogdistinta.
+The Abel addition is correct and more precise: Y1=D3(1/w),Y2=D3(t/w) are smooth and W=−Delta/w² is not identically zero but has an interior zero. Any monic homogeneous order-2 ODE with continuous coefficients containing BOTH images would force W'=betaW and W=W0exp∫beta; impossible. This excludes a common regular extension of THAT universal equation keeping both solutions, not a cancellation for the particular K, another representation/gauge/order or a different inhomogeneous equation.
 
-Consulta077/087–090 y los tresregistros distingue este Wronskiano desplazado de los signos ya probados. No hay nuevoWnegativo, menorancladodecidido, coberturaW/Tniobstrucciónglobal. El sistema original/otrascartas siguen disponibles.
-# Reproducción adicional root
+Consultation of077/087–090 and the three records distinguishes this shifted Wronskian from the signs already proved. There is no new negative W, decided anchored minor, W/T coverage nor global obstruction. The original system/other charts remain available.
+# Additional reproduction
 
-Root reprodujo el intervalo estricto `-56488961026 < D0 < -56488961025` reutilizando directamente los intervalos racionales completos de087. También expandió independientemente el determinante exterior con derivación formal: grado en `t` a lo sumo2, grado total en los jets a lo sumo9 y coeficiente de `y^9` exactamente `4096(2t^2-1)`. Ambas comprobaciones terminaron con PASS. Son verificaciones de las obligaciones fijas de esta prueba, no una exploración de parámetros.
+The strict interval `-56488961026 < D0 < -56488961025` was reproduced again by directly reusing the full rational intervals of087. The exterior determinant was also expanded independently with formal derivation: degree in `t` at most2, total degree in the jets at most9 and coefficient of `y^9` exactly `4096(2t^2-1)`. Both checks ended with PASS. They are verifications of the fixed obligations of this proof, not a parameter exploration.
 

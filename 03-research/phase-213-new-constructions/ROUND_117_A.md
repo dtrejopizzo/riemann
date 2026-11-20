@@ -1,20 +1,20 @@
-# Techo para el mínimo completo con masa local posiblemente no acotada
+# Ceiling for the full minimum with possibly unbounded local mass
 
-Sea D₂(y) la suma, con multiplicidad, de (Reρ−1/2)² para los representantes de cuartetos fuera de la recta con ordenada positiva a distancia <1 de y, como en fase 159 G2_B2_R5. Supóngase D₂(y)≪[log(2+|y|)]^κ para algún 0≤κ≤1. Para la parte negativa M_W del fondo completo y M_A del primitivo,
+Let D₂(y) be the sum, with multiplicity, of (Reρ−1/2)² over the representatives of off-line quartets with positive ordinate at distance <1 from y, as in phase 159 G2_B2_R5. Assume D₂(y)≪[log(2+|y|)]^κ for some 0≤κ≤1. For the negative part M_W of the full floor and M_A of the primitive one,
 
     limsup log(1+M_A(T))/(2T) ≤ limsup log(1+M_W(T))/(2T)
                                   ≤ min(1/2, Δ+κ/2).
 
-Por tanto, si la hipótesis vale para todo κ>0, ambos cocientes convergen a Δ=sup Reρ−1/2, sin exigir alcance del supremo (115). La hipótesis admite masa local que crezca sin cota. El paper 33 controla la media de D₂, no este crecimiento uniforme.
+Hence, if the hypothesis holds for every κ>0, both quotients converge to Δ=sup Reρ−1/2, without requiring the supremum to be attained (115). The hypothesis allows local mass growing without bound. Paper 33 controls the mean of D₂, not this uniform growth.
 
-**Coste en frecuencia de un test negativo.** Para F unitario real y suave en [−T,T], T≥1, con W_T(F)<0, escribir L(ξ)=log(2+|ξ|). La fórmula aritmética W=m(D)−C_T+polar y m(ξ)≥cL(ξ)−C implican ∫L|F̂|²dξ/(2π)≪e^T. En efecto el peine tiene norma O(e^T) por 081 y el término polar está acotado por O(e^T) por Cauchy–Schwarz contra exp(±t/2). También M_W≪e^T. Jensen en la medida de Plancherel da ∫L^κ|F̂|²≪e^(κT) en esos tests, sin requerir que exista un minimizador.
+**Frequency cost of a negative test.** For F real, unit and smooth on [−T,T], T≥1, with W_T(F)<0, write L(ξ)=log(2+|ξ|). The arithmetic formula W=m(D)−C_T+polar and m(ξ)≥cL(ξ)−C imply ∫L|F̂|²dξ/(2π)≪e^T. Indeed the comb has norm O(e^T) by 081 and the polar term is bounded by O(e^T) by Cauchy–Schwarz against exp(±t/2). Also M_W≪e^T. Jensen in the Plancherel measure gives ∫L^κ|F̂|²≪e^(κT) on those tests, without requiring a minimizer to exist.
 
-**Tira espectral.** Reutilizar el segmento, la subarmonicidad y los rectángulos de G2_B2_R5 §4 con radio 1/(2T). En vez de tomar sup D₂ resulta
+**Spectral strip.** Reuse the segment, the subharmonicity and the rectangles of G2_B2_R5 §4 with radius 1/(2T). Instead of taking sup D₂ one gets
      
     −W_T(F) ≪ T² ∫_{|σ|≤Δ+1/(2T)} ∫ L(ξ)^κ |(t exp(σt)F)^∧(ξ)|² dξ dσ.
 
-Vale multiplicidad ponderada local en el integrando porque cada rectángulo que cubre (σ,ξ) tiene su ordenada a distancia ≤1/(2T) de ξ. El paso nuevo es conservar el peso dentro de la integral hasta restringirse a vectores negativos.
+The locally weighted multiplicity in the integrand is valid because each rectangle covering (σ,ξ) has its ordinate at distance ≤1/(2T) from ξ. The new step is to keep the weight inside the integral until restricting to negative vectors.
 
-**Multiplicación y cierre.** Extender el multiplicador t exp(σt) desde [−T,T] por un corte suave igual a uno allí, cero fuera de [−T−1,T+1], con primeras dos derivadas del corte uniformemente acotadas. El multiplicador extendido y su segunda derivada tienen normas L¹ ≪(1+T)² exp(|σ|T) para |σ|≤1. Su Fourier está acotada por esa cantidad por O((1+|ξ|)⁻²). Como L(ξ)^(κ/2)≪L(ξ−v)^(κ/2)L(v)^(κ/2), Young da una cota para la norma L² ponderada de la transformada del producto por O((1+T)² exp(|σ|T)) veces la de F̂. Insertando y usando el momento anterior se obtiene −W_T(F)≪(1+T)^6 exp((2Δ+κ)T). Tomar el ínfimo por densidad de los tests y combinar con 115.
+**Multiplication and closure.** Extend the multiplier t exp(σt) from [−T,T] by a smooth cutoff equal to one there, zero outside [−T−1,T+1], with the first two derivatives of the cutoff uniformly bounded. The extended multiplier and its second derivative have L¹ norms ≪(1+T)² exp(|σ|T) for |σ|≤1. Its Fourier transform is bounded by that quantity times O((1+|ξ|)⁻²). Since L(ξ)^(κ/2)≪L(ξ−v)^(κ/2)L(v)^(κ/2), Young gives a bound for the weighted L² norm of the transform of the product by O((1+T)² exp(|σ|T)) times that of F̂. Inserting and using the previous moment gives −W_T(F)≪(1+T)^6 exp((2Δ+κ)T). Take the infimum by density of the tests and combine with 115.
 
-**Cotejo y límite.** El uso de sinh y de las masas cuadráticas ya es exactamente U₂ de G2_B2_R5 y no se cuenta como nuevo. El teorema M allí descarta una cota del canal negativo aislado en toda la bola unidad si D₂ no está acotada. Aquí sólo se paga el peso sobre los tests con energía completa negativa, que sí tienen presupuesto logarítmico por la fórmula aritmética. No se prueba que D₂ crezca subpolinómicamente en log |y| para ζ; sin ese insumo no se cierra la cota superior general a exponente Δ.
+**Cross-check and limit.** The use of sinh and of the quadratic masses is already exactly U₂ of G2_B2_R5 and is not counted as new. Theorem M there rules out a bound for the isolated negative channel on the whole unit ball if D₂ is unbounded. Here the weight is only paid on tests with negative full energy, which do have a logarithmic budget by the arithmetic formula. It is not proved that D₂ grows subpolynomially in log |y| for ζ; without that input the general upper bound at exponent Δ is not closed.

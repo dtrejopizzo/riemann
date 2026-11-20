@@ -1,36 +1,36 @@
-# Estado034 — Filas completas hasta12 a tasa fija y oscilación del criterio de Abel
+# State034 — Full rows up to12 at fixed rate and oscillation of the Abel criterion
 
-Estado: dos resultados PROVED y auditados. Sustituye STATE033. Goal activo, signo global OPEN, papers intactos.
+Status: two results PROVED and audited. Replaces STATE033. Goal active, global sign OPEN, papers untouched.
 
-## Nueva región uniforme de positividad de W completo
+## New uniform region of positivity of full W
 
-POWER_DIVISOR_COMPARISON_034 demuestra para TODOS enteros N>=3,k>=1 y tasas u>=63/2 con u²>=225N/4:
+POWER_DIVISOR_COMPARISON_034 proves for ALL integers N>=3,k>=1 and rates u>=63/2 with u²>=225N/4:
 
     W[f_(N,k,u)] > ||f_(N,k,u)||²/40,
     F_(N,k,u)(s)=s^k/(s+u)^(N+k).
 
-Para k>=2 el margen es mayor que3/20. En k1 se conserva el peine favorable019 y se prueba ARCH−|polar|>.026; cada comparador inferior impar033 es positivo. Desde k2, el incremento beta de ARCH permite pagar un bound absoluto de TODO el peine mediante los dos pesos opuestos029. No se extrapola el signo del peine de k1 a otras columnas.
+For k>=2 the margin is greater than3/20. At k1 the favourable comb019 is kept and ARCH−|polar|>.026 is proved; each odd lower comparator033 is positive. From k2 on, the beta increment of ARCH allows paying an absolute bound of the WHOLE comb through the two opposite weights029. The sign of the comb at k1 is not extrapolated to other columns.
 
-La prueba es analítica uniforme, no un barrido de N,k,u. La contracción033 no es la responsable de compensar un ARCH negativo en esta región: aquí ARCH−|polar| ya es positivo. El caso211 de032 conserva su prueba separada con cancelación mucho más fina.
+The proof is analytic and uniform, not a sweep over N,k,u. The contraction033 is not responsible for compensating a negative ARCH in this region: here ARCH−|polar| is already positive. Case211 of032 keeps its separate proof with much finer cancellation.
 
-## Cobertura exacta al combinar fuentes anteriores
+## Exact coverage when combining earlier sources
 
-A tasa FIJA u0=63/2, la condición nueva alcanza TODOS N<=17 y k>=1. Para k0,N<=12, el dato g_N=y^(N−1)e^-u0y/(N−1)! pertenece al bloque V12 probado en ARITHMETIC_BLOCK007. Por tanto quedan completas TODAS las filas N1..12 para TODO k>=0 a u0. Para N13..17 queda pendiente sólo k0.
+At FIXED rate u0=63/2, the new condition reaches ALL N<=17 and k>=1. For k0,N<=12, the datum g_N=y^(N−1)e^-u0y/(N−1)! belongs to the block V12 proved in ARITHMETIC_BLOCK007. Hence ALL rows N1..12 for ALL k>=0 at u0 are complete. For N13..17 only k0 remains pending.
 
-Para TODAS las tasas u>=u0, k0,N<=8 pertenece al espacio de ocho polos repetidos de SIGNED_TRANSFER014; junto a la nueva región quedan completas las filas N1..8 para TODO k>=0 y TODO u>=u0. No se extiende el certificado fijo V12 a tasas variables en N9..12.
+For ALL rates u>=u0, k0,N<=8 belongs to the space of eight repeated poles of SIGNED_TRANSFER014; together with the new region, rows N1..8 for ALL k>=0 and ALL u>=u0 are complete. The fixed certificate V12 is not extended to variable rates at N9..12.
 
-Estos enunciados se refieren a los átomos escalares indicados. No certifican arbitrarias combinaciones lineales de todos los nuevos átomos ni una ventana T. Los bloques de formas cuadráticas ya probados007/014 mantienen su alcance propio.
+These statements refer to the indicated scalar atoms. They do not certify arbitrary linear combinations of all the new atoms nor a window T. The already proved quadratic-form blocks007/014 keep their own scope.
 
-## Criterio de Abel033 refutado uniformemente
+## Abel criterion033 uniformly refuted
 
-POWER_WEIGHTED_COEFFICIENT_034 demuestra que la sucesión real T_m de033 tiene términos estrictamente positivos y negativos en índices arbitrariamente grandes. No sólo falla la premisa T_m>=0 para todo m: tampoco basta exceptuar un número finito de índices.
+POWER_WEIGHTED_COEFFICIENT_034 proves that the real sequence T_m of033 has strictly positive and negative terms at arbitrarily large indices. Not only does the premise T_m>=0 for all m fail: excepting a finite number of indices does not suffice either.
 
-La demostración no calcula nuevos m. Usa la representación real cosh positiva ya auditada001 para prolongar el funcional exponencial E(v) de forma real-analítica y obtener su paridad. El generador F(z)=sum T_m z^(m−1) es simétrico alrededor de1 y decae cuando z real tiende a infinito. Un lema elemental de series positivas, demostrado en el texto, muestra que coeficientes eventualmente de un signo obligarían a que la serie fuera entera. Una derivada impar en1 por encima de las excepciones forzaría entonces una cola nula, convirtiendo F en un polinomio; el decaimiento contradice F(0)=T1>1/8.
+The proof computes no new m. It uses the already audited positive cosh representation001 to continue the exponential functional E(v) real-analytically and obtain its parity. The generator F(z)=sum T_m z^(m−1) is symmetric around1 and decays as real z tends to infinity. An elementary lemma on positive series, proved in the text, shows that eventually one-signed coefficients would force the series to be entire. An odd derivative at1 above the exceptions would then force a zero tail, turning F into a polynomial; the decay contradicts F(0)=T1>1/8.
 
-Ésta es una refutación del criterio suficiente específico, no un contraejemplo a W. La mezcla gamma exacta de033 sigue válida: sus pesos pueden compensar los signos de T_m. No se declara imposible controlar esas combinaciones por otro mecanismo.
+This is a refutation of the specific sufficient criterion, not a counterexample to W. The exact gamma mixture of033 remains valid: its weights may compensate the signs of T_m. It is not declared impossible to control those combinations by another mechanism.
 
-## Evidencia y obligación restante
+## Evidence and remaining obligation
 
-POWER_COMPARISON_AUDIT_034 aprueba ambos memos, la extensión a k>=2 y las inclusiones de espacios007/014. Root revisó ambas pruebas y reprodujo el verificador racional de la región: PASS. La oscilación se demuestra analíticamente, sin certificado numérico de índices ni hipótesis no probadas sobre la serie en1.
+POWER_COMPARISON_AUDIT_034 approves both memos, the extension to k>=2 and the space inclusions007/014. Both proofs were reviewed and the rational verifier of the region reproduced: PASS. The oscillation is proved analytically, without a numerical certificate of indices nor unproved hypotheses on the series at1.
 
-A u31.5, fuera del cono k>=10000N² y del átomo211,k1 ya decidido, resta k0 paraN>=13 y, desdeN18, las columnas inferiores al cono no cubiertas. No hay cierre del signo global ni nueva ventana T certificada. La continuación debe conservar la compensación aritmética de los pesos reales; no reintentar positividad componente a componente de T_m, ahora refutada.
+At u31.5, outside the cone k>=10000N² and the already decided atom211,k1, k0 forN>=13 remains and, fromN18, the columns below the cone not covered. There is no closure of the global sign nor a new certified window T. The continuation must keep the arithmetic compensation of the real weights; do not retry componentwise positivity of T_m, now refuted.

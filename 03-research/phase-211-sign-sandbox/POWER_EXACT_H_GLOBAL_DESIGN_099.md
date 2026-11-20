@@ -1,38 +1,38 @@
-# POWER_EXACT_H_GLOBAL_DESIGN_099 — Diseño fijo y prueba global de la obligación exacta T_h
+# POWER_EXACT_H_GLOBAL_DESIGN_099 — Fixed design and global proof of the exact obligation T_h
 
-**Auditoría independiente:** fuente final, diseño y literal aprobados en `POWER_EXACT_H_GLOBAL_AUDIT_099.md`; constructor98529 FULL PASS2048, reproducción independiente root8310 exit0/FULL PASS2048 y hash coincidente. Aplicación exacta: `POWER_SCHUR_TRIPLES_APPLICATION_099.md`; estado: `POWER_STATE_099.md`.
+**Independent audit:** final source, design and literal text approved in `POWER_EXACT_H_GLOBAL_AUDIT_099.md`; run98529 FULL PASS2048, independent reproduction run8310 exit0/FULL PASS2048 and matching hash. Exact application: `POWER_SCHUR_TRIPLES_APPLICATION_099.md`; status: `POWER_STATE_099.md`.
 
-Estado: **PROVED por constructor y reproducción independiente root8310 exit0/FULL PASS2048; lectura final y auditoría aprobadas, hash coincidente.** Root y mapa aprobaron diseño y literal ANTES de la única corrida. Se conserva el diseño previo y su historial analítico; el resultado está en§8. Papers intactos.
+Status: **PROVED by the main run and independent reproduction run8310 exit0/FULL PASS2048; final reading and audit approved, matching hash.** Design and literal text were independently approved BEFORE the single run. The previous design and its analytic history are kept; the result is in§8. Papers untouched.
 
-## 1. Objeto, antecedentes y cambio de representación
+## 1. Object, antecedents and change of representation
 
-Consultados las reglas del proyecto, README ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D, y073/077/078/080/085/089/090/092/093/095/097/098.097 probó la obligación EXACTA T_h>0 para u>=512;098 decidió T_h(0)>0 por seis momentos completos. Las condiciones puntuales de densidades093/095 son más fuertes y no se presuponen globales.090 refuta una herencia genérica de Turán; no se la reintenta.
+Consulted the project rules, README ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D, and073/077/078/080/085/089/090/092/093/095/097/098.097 proved the EXACT obligation T_h>0 for u>=512;098 decided T_h(0)>0 by six complete moments. The pointwise density conditions093/095 are stronger and are not presupposed global.090 refutes a generic Turán inheritance; it is not retried.
 
-Este diseño se dirige directamente al compacto restante usando una función ENTERA regularizada. No se certifica una matriz nueva, una condición suficiente de densidades ni sólo muestras de T_h. Se reutiliza el mecanismo de jets centrales y Cauchy080/085, pero se eliminan los denominadores y el cero algebraico u^15 ANTES de fijar el test. La diferencia es esencial para evitar que un bound triangular de variación pierda el signo sólo por ese factor conocido.
+This design addresses directly the remaining compact set using a regularized ENTIRE function. No new matrix, sufficient density condition or mere samples of T_h are certified. The mechanism of central jets and Cauchy080/085 is reused, but the denominators and the algebraic zero u^15 are eliminated BEFORE fixing the test. The difference is essential to prevent a triangular variation bound from losing the sign only because of that known factor.
 
-Sea E un múltiplo constante positivo de la transformada Z de Phi, M=E'/E,a=M'(0)>0,x=u² y
+Let E be a positive constant multiple of the transform Z of Phi, M=E'/E,a=M'(0)>0,x=u² and
 
     N(x)=M(u)/u,
     h(x)=xN(x)/(a−N(x)),
     T_h=2h'h'''−3(h'')²,
 
-con derivadas de h respecto de x. Definir las funciones enteras en x
+with derivatives of h with respect to x. Define the entire functions in x
 
     U(x)=E'(u)/u,
     V(x)=[aE(u)−U(x)]/u².
 
-Su entiridad proviene de la paridad de E y de aE(0)=E''(0): U=2dE(sqrt x)/dx; el numerador de V tiene término constante cero. No se presupone que h=U/V sea entera ni que V carezca de ceros complejos.
+Their entireness comes from the parity of E and from aE(0)=E''(0): U=2dE(sqrt x)/dx; the numerator of V has zero constant term. It is not presupposed that h=U/V is entire nor that V lacks complex zeros.
 
-Con derivadas respecto de x, poner Wij=V^(i)U^(j)−V^(j)U^(i). La identidad polinómica exacta es
+With derivatives with respect to x, put Wij=V^(i)U^(j)−V^(j)U^(i). The exact polynomial identity is
 
     NUM_x=−W_x(V,xV,U,xU)
          =2W01W03+6W01W12−3W02².
 
-Es entera sin denominadores. En reales x>0, V>0 por073 y NUM_x=V^4 T_h.
+It is entire without denominators. On reals x>0, V>0 by073 and NUM_x=V^4 T_h.
 
-## 2. Polinomios enteros en E y regularización del cero15
+## 2. Integer polynomials in E and regularization of the zero15
 
-Poner ej=E^(j)(u),j=0,...,4, derivadas SIN normalizar por factorial. Definir
+Put ej=E^(j)(u),j=0,...,4, derivatives NOT normalized by factorial. Define
 
     PS=u^4(2e0²e2e4−3e0²e3²−2e0e1²e4+10e0e1e2e3
              −6e0e2³−4e1³e3+3e1²e2²)
@@ -46,121 +46,121 @@ Poner ej=E^(j)(u),j=0,...,4, derivadas SIN normalizar por factorial. Definir
 
     Ntilde=a u PS−4PC.
 
-PS=E^4 N_S y PC=E^4 C_h, con N_S,C_h definidos y auditados097. PS tiene18monomios, suma absoluta de coeficientes91 y grado en u<=4; PC tiene11monomios, suma51 y grado<=3. Todos son cuárticos homogéneos en e0,...,e4.
+PS=E^4 N_S and PC=E^4 C_h, with N_S,C_h defined and audited097. PS has18monomials, absolute sum of coefficients91 and degree in u<=4; PC has11monomials, sum51 and degree<=3. All are homogeneous quartic in e0,...,e4.
 
-La fórmula DIRECT097 y NUM_x=V^4T_h, primero en u>0 y luego por identidad de funciones enteras, dan
+The formula DIRECT097 and NUM_x=V^4T_h, first for u>0 and then by identity of entire functions, give
 
     Ntilde(u)=(16/a)u^15 NUM_x(u²),
     S(u)=Ntilde(u)/u^15=(16/a)NUM_x(u²).          (ENTIRE-S)
 
-Por tanto S es ENTERA y PAR, con la división removible ya justificada. Su valor en0 es S(0)=192E(0)^4H3>0 por098. La entiridad se funda en U,V y ENTIRE-S, **no** en suponer que T_h meromorfa carezca de singularidades complejas.
+Hence S is ENTIRE and EVEN, with the removable division already justified. Its value at0 is S(0)=192E(0)^4H3>0 by098. Entireness rests on U,V and ENTIRE-S, **not** on assuming that the meromorphic T_h lacks complex singularities.
 
-En reales u>0, S>0 equivale exactamente a T_h>0. La implementación evaluará el cociente en centros estrictamente positivos; no se evalúa0/0. El bound Cauchy siguiente se aplica a la S entera real, no a una familia arbitraria donde se varíe a rompiendo aE0=E''0.
+On reals u>0, S>0 is exactly equivalent to T_h>0. The implementation will evaluate the quotient at strictly positive centres; 0/0 is not evaluated. The following Cauchy bound is applied to the real entire S, not to an arbitrary family where a is varied breaking aE0=E''0.
 
-## 3. Bound de crecimiento completo, sin discos libres de ceros
+## 3. Complete growth bound, without zero-free discs
 
-La positividad de Phi y la paridad de E dan, para cada centro real c>=0,|z−c|<=r y cada j>=0,
+Positivity of Phi and parity of E give, for each real centre c>=0,|z−c|<=r and each j>=0,
 
     |E^(j)(z)|<=2j! E(c+r+1).
 
-Se usa |t|^j<=j!exp(|t|) bajo la integral; todas las colas se conservan. Para c<=512,r=1, la monotonicidad real073 y el ancla gamma/arimética completa garantizan M(t)<3 hasta514. Una comprobación elemental puede usar el ancla A=516: psi(A/2)<=log(A/2), el término primo favorable y pi>3 dan M(515.5)<log86/2+1/516+1/515<3, pues86<(8/3)^5<exp5. La monotonicidad extiende el upper a todo el intervalo requerido.
+One uses |t|^j<=j!exp(|t|) under the integral; all tails are kept. For c<=512,r=1, the real monotonicity073 and the complete gamma/arithmetic anchor guarantee M(t)<3 up to514. An elementary check can use the anchor A=516: psi(A/2)<=log(A/2), the favourable prime term and pi>3 give M(515.5)<log86/2+1/516+1/515<3, since86<(8/3)^5<exp5. Monotonicity extends the upper bound to the whole required interval.
 
-La cota elemental auditada exp1<87/32 y(87/32)^6<512 dan exp6<512. Así E(c+2)/E(c)<exp6<512 y en el disco de radio1,
+The audited elementary bound exp1<87/32 and(87/32)^6<512 give exp6<512. Thus E(c+2)/E(c)<exp6<512 and on the disc of radius1,
 
     |ej|/E(c)<1024j!<2^15, j<=4,
     |u|<513<2^10, a<8.
 
-La cota a<8 está sobradamente contenida en el intervalo certificado098, y será comprobada también para su refinamiento puntual. Por las sumas de coeficientes de§2,
+The bound a<8 is amply contained in the certified interval098, and will also be checked for its pointwise refinement. By the coefficient sums of§2,
 
     |PS|/E(c)^4<2^107,
     |PC|/E(c)^4<2^96,
     |Ntilde|/E(c)^4<2^121.                       (RAW-BOUND)
 
-No se exige que E(z) sea no nula en el disco: no aparecen sus cocientes complejos ni logaritmos en estos polinomios.
+It is not required that E(z) be non-zero on the disc: its complex quotients and logarithms do not appear in these polynomials.
 
-## 4. Bound uniforme de S a través del origen removible
+## 4. Uniform bound on S through the removable origin
 
-Si |z|>=1/4 dentro de un disco anterior, RAW-BOUND implica
+If |z|>=1/4 inside a previous disc, RAW-BOUND implies
 
     |S(z)|/E(c)^4<2^121*4^15=2^151.
 
-Para |z|<=1/4 usar un círculo centrado en0. Puesto que E(c)>=E(0), la misma desigualdad de derivadas y M<3 dan en |z|=1/4
+For |z|<=1/4 use a circle centred at0. Since E(c)>=E(0), the same derivative inequality and M<3 give on |z|=1/4
 
     |ej|/E(c)<=2j! E(5/4)/E(0)
                <128j!<2^12, j<=4.
 
-Aquí exp(15/4)<64, por log2>56/81. Además |z|<=1 y a|z|<2. Por las sumas91 y51 se obtiene |Ntilde|/E(c)^4<2^57 en ese círculo. ENTIRE-S y el principio del máximo, aplicado a la función ya removida, dan en TODO |z|<=1/4
+Here exp(15/4)<64, by log2>56/81. Moreover |z|<=1 and a|z|<2. By the sums91 and51 one obtains |Ntilde|/E(c)^4<2^57 on that circle. ENTIRE-S and the maximum principle, applied to the already removed function, give on ALL of |z|<=1/4
 
     |S(z)|/E(c)^4<2^57*4^15=2^87.
 
-Ambos casos prueban en cada disco |z−c|<=1,c en[0,512], el único bound fijo
+Both cases prove on each disc |z−c|<=1,c in[0,512], the single fixed bound
 
     |S(z)|/E(c)^4<2^151.                         (CAUCHY-S)
 
-No se resta a ciegas un resto de u^15 en un panel que toca0: el factor fue eliminado algebraicamente en la función que se certifica.
+A remainder of u^15 is not blindly subtracted on a panel touching0: the factor was eliminated algebraically in the function being certified.
 
-## 5. Parámetros fijados antes de ejecutar
+## 5. Parameters fixed before executing
 
-UNA rama, dominio[0,512],2048paneles, semiancho h=1/8, centros
+ONE branch, domain[0,512],2048panels, half-width h=1/8, centres
 
     c_j=(2j+1)/8, j=0,...,2047.
 
-Precisión1024bits, cap de E109, Taylor grado104. Todos los centros son positivos. Radio Cauchy r=1 y razón h/r=1/8. Normalizar la serie entera E por su valor real positivo E(c_j), CONSTANTE respecto de la variable formal; así se certifica S/E(c_j)^4. La incertidumbre del valor normalizador se mantiene outward.
+Precision1024bits, cap of E109, Taylor degree104. All centres are positive. Cauchy radius r=1 and ratio h/r=1/8. Normalize the entire series E by its positive real value E(c_j), CONSTANT with respect to the formal variable; thus S/E(c_j)^4 is certified. The uncertainty of the normalizing value is kept outward.
 
-Antes de evaluar centros, la revisión independiente detectó otra pérdida estructural del lower triangular: S conserva el factor E(u)^4. En la cola, su crecimiento lineal en un panel podría consumir el signo aunque S fuese positiva. NO hubo corrida ni signo observado. Se fija por ello el gauge ENTERO por panel
+Before evaluating centres, the independent review detected another structural loss of the triangular lower bound: S keeps the factor E(u)^4. In the tail, its linear growth over a panel could consume the sign even if S were positive. There was NO run nor observed sign. Hence the ENTIRE per-panel gauge is fixed
 
     G_c(u)=exp[−4M(c)(u−c)]S(u)/E(c)^4,
     M(c)=E'(c)/E(c).
 
-El FACTOR EXPONENCIAL es positivo en reales; no se presume el signo de G_c. No se divide por E(u) variable. En el disco de radio1, |M(c)|<3 da un factor máximo exp12<2^18. Por CAUCHY-S,
+The EXPONENTIAL FACTOR is positive on the reals; the sign of G_c is not presumed. There is no division by the variable E(u). On the disc of radius1, |M(c)|<3 gives a maximal factor exp12<2^18. By CAUCHY-S,
 
     |G_c|<2^169,
     REM=2^169*(1/8)^105/(1−1/8)<2^(−145).
 
-La eficacia de quitar ese crecimiento tiene una razón previa analítica:073 da0<M'(u)<=a<1 en u>=0. Para |s|<=h,c+s>=0,
+The effectiveness of removing that growth has a prior analytic reason:073 gives0<M'(u)<=a<1 for u>=0. For |s|<=h,c+s>=0,
 
     0<=logE(c+s)−logE(c)−M(c)s<=a s²/2.
 
-Así el factor E(c+s)^4 exp(−4M(c)s)/E(c)^4 pertenece a[1,exp(2ah²)] y es menor que exp(1/32). Esto no garantiza el signo del resto de la función; elimina una pérdida conocida antes de pedirle al certificado que lo decida. Los ajustes Taylor96→104 y cap101→109 pagan exactamente el bound del gauge; no cambian malla, precisión ni centros, y fueron fijados ANTES de evaluar.
+Thus the factor E(c+s)^4 exp(−4M(c)s)/E(c)^4 belongs to[1,exp(2ah²)] and is less than exp(1/32). This does not guarantee the sign of the rest of the function; it eliminates a known loss before asking the certificate to decide it. The adjustments Taylor96→104 and cap101→109 pay exactly the gauge bound; they do not change mesh, precision or centres, and were fixed BEFORE evaluating.
 
-Para cada centro, exigir G.prec>=105 y coeficientes0,...,104 finitos. El test continuo de positividad es
+For each centre, require G.prec>=105 and coefficients0,...,104 finite. The continuous positivity test is
 
     G[0]−sum_(k=1)^104 abs(G[k])*h^k−REM>0.
 
-El test verifica TODO el panel cerrado. No toma muestras como sustituto de un lower continuo. Si falla un encierro, no es por sí mismo un signo negativo y no autoriza ajustar los parámetros para forzar PASS.
+The test verifies the WHOLE closed panel. It does not take samples as a substitute for a continuous lower bound. If an enclosure fails, that is not by itself a negative sign and does not authorize tuning the parameters to force PASS.
 
-## 6. Dato a preciso y evaluación reproducible propuesta
+## 6. Precise datum a and proposed reproducible evaluation
 
-No se utiliza el intervalo ancho de a098 como dato principal para las divisiones por u^15. Antes de recorrer paneles, encerrar nuevamente el MISMO a por la identidad exacta
+The wide interval of a098 is not used as the main datum for the divisions by u^15. Before going through the panels, enclose the SAME a again by the exact identity
 
     a=E''(0)/E(0),
 
-en un único jet central de orden2 y1024bits. Se comprueba que el intervalo nuevo está contenido en el intervalo certificado098
+in a single central jet of order2 and1024bits. It is checked that the new interval is contained in the certified interval098
 
     0.0462099862308379415778676 +/- 3.74e−26.
 
-Se conserva el nuevo encierro estrecho, sin sustituirlo por el intervalo antiguo más ancho. No es un nuevo dato libre; ambos encierran la misma constante y se verifica su consistencia.
+The new narrow enclosure is kept, without replacing it by the wider old interval. It is not a new free datum; both enclose the same constant and their consistency is verified.
 
-Para evaluar E se usa la fórmula entera ya auditada080/085 con A=u+1/2,
+To evaluate E one uses the already audited entire formula080/085 with A=u+1/2,
 
     E(u)=A[1+(A−1)zeta_deflated(A)]Gamma(A/2)pi^(−A/2).
 
-zeta_deflated(A)=zeta(A)−1/(A−1), NO(A−1)zeta(A). Definición oficial de la API: https://flintlib.org/doc/arb_poly/_arb_poly_zeta_series.html . Las evaluaciones son sólo jets en centros exactos, no bolas de parámetro zeta. La identidad con la transformada theta par viene de las definiciones auditadas de CONE001/073; las constantes positivas globales no afectan M,a ni el signo.
+zeta_deflated(A)=zeta(A)−1/(A−1), NOT(A−1)zeta(A). Official API definition: https://flintlib.org/doc/arb_poly/_arb_poly_zeta_series.html . The evaluations are only jets at exact centres, not zeta parameter balls. The identity with the even theta transform comes from the audited definitions of CONE001/073; the global positive constants do not affect M,a or the sign.
 
-E.prec109 deja E^(4).prec105; los productos PS,PC,Ntilde y la división formal por u^15 conservan coeficientes conocidos0,...,104 en cada centro no nulo. No rellenar derivadas desconocidas con ceros. Los ej son derivadas FUNCIONALES obtenidas por derivative(), no coeficientes Taylor sin sus factoriales. Se computan de la serie E original normalizada por la CONSTANTE E(c), NO de una serie ya modificada por el gauge. Primero se evalúan PS,PC,Ntilde/u^15; sólo después se multiplica por exp[−4M(c)(u−c)]. M(c) se encierra desde el mismo jet puntual, sin evaluar M en discos complejos.
+E.prec109 leaves E^(4).prec105; the products PS,PC,Ntilde and the formal division by u^15 keep known coefficients0,...,104 at each non-zero centre. Unknown derivatives are not filled with zeros. The ej are FUNCTIONAL derivatives obtained by derivative(), not Taylor coefficients without their factorials. They are computed from the original series E normalized by the CONSTANT E(c), NOT from a series already modified by the gauge. First PS,PC,Ntilde/u^15 are evaluated; only afterwards is it multiplied by exp[−4M(c)(u−c)]. M(c) is enclosed from the same pointwise jet, without evaluating M on complex discs.
 
-La sustitución de una bola estrecha por a en las operaciones encierra el valor real seleccionado. La prueba Cauchy se aplica a ese valor real exacto, cuya relación de momentos asegura ENTIRE-S; no se exige que todas las constantes ajenas contenidas en la bola definan funciones removibles.
+Substituting a narrow ball for a in the operations encloses the selected real value. The Cauchy proof is applied to that exact real value, whose moment relation ensures ENTIRE-S; it is not required that all foreign constants contained in the ball define removable functions.
 
-## 7. Conclusión prevista por el diseño y límites
+## 7. Conclusion foreseen by the design and limits
 
-Si todos los paneles verifican el lower, el gauge real positivo implica S>0 en[0,512], y por ENTIRE-S se prueba T_h>0 en0<u<=512. Empalmar con097 descarga T_h>0 para TODOu>0.098 da además el valor positivo en0. Esta es la obligación exacta, más débil que el signo temporal de densidades particulares.
+If all panels verify the lower bound, the positive real gauge implies S>0 on[0,512], and by ENTIRE-S T_h>0 is proved on0<u<=512. Splicing with097 discharges T_h>0 for ALLu>0.098 also gives the positive value at0. This is the exact obligation, weaker than the temporal sign of particular densities.
 
-El diseño no afirmaba el resultado antes de la corrida;§8 registra su decisión. Aun después de un PASS, no se infiere herencia de Turán del siguiente resto, iteración a todos los órdenes ni signo global de W. Las aplicaciones se formularán y auditarán separadamente; el parámetro u no es una nueva ventana T. No nueva implementación hasta aprobar este diseño independientemente.
+The design did not claim the result before the run;§8 records its decision. Even after a PASS, no Turán inheritance of the next remainder, iteration to all orders or global sign of W is inferred. The applications will be formulated and audited separately; the parameter u is not a new window T. No new implementation until this design is independently approved.
 
 
-## 8. Corrida constructora: obligación exacta global descargada
+## 8. Main run: global exact obligation discharged
 
-Después de las aprobaciones matemáticas y literales independientes de root y mapa se ejecutó UNA corrida fija, handle propietario98529. Terminó exit0, sin cambios de parámetros, código o representación durante la ejecución:
+After the independent mathematical and literal approvals, ONE fixed run was executed, owning handle98529. It ended exit0, without changes of parameters, code or representation during execution:
 
     PASS all predeclared Cauchy, Schwarz and gauge bounds
     PASS precise a, certificate098 containment and entire representation
@@ -169,27 +169,27 @@ Después de las aprobaciones matemáticas y literales independientes de root y m
     PASS exact T_h panels2048 of2048
     PASS ALL099: exact T_h positive throughout[0,512].
 
-El refinamiento puntual de a se encerró con radio menor que5.69e−306 y estuvo contenido en el intervalo completo098. Ninguna corrida de momentos previa se importó ni se volvió a ejecutar para la prueba099. La decisión continua usa cada lower de§5, todos los coeficientes hasta104 y el resto EXACTO
+The pointwise refinement of a was enclosed with radius less than5.69e−306 and was contained in the complete interval098. No previous moment run was imported or re-executed for the proof099. The continuous decision uses each lower bound of§5, all coefficients up to104 and the EXACT remainder
 
     REM=1/78052608194857180995375013954269265270931456.
 
-El signo probado es el del gauge entero positivo por panel, por lo que S>0 en TODO[0,512]. La identidad ENTIRE-S y V>0 en reales positivos prueban
+The proved sign is that of the positive entire per-panel gauge, so S>0 on ALL of[0,512]. The identity ENTIRE-S and V>0 on positive reals prove
 
-    T_h(u²)>0 para TODO0<u<=512.
+    T_h(u²)>0 for ALL0<u<=512.
 
-Empalmar con la cola analítica completa097 descarga la obligación EXACTA
+Splicing with the complete analytic tail097 discharges the EXACT obligation
 
     T_h(x)=2h'(x)h'''(x)−3h''(x)²>0
-    para TODO x>0.
+    for ALL x>0.
 
-098 da también T_h(0)>0 en su extensión removible. Este resultado se refiere a la MISMA Phi real y conserva la aritmética completa por la representación entera E; no es una herencia genérica desde T_R. Tampoco demuestra que el Wronskiano temporal particular093/095 tenga signo en todo su intervalo intermedio: esa condición era más fuerte y no se usó.
+098 also gives T_h(0)>0 in its removable extension. This result refers to the SAME real Phi and keeps the complete arithmetic through the entire representation E; it is not a generic inheritance from T_R. Nor does it prove that the particular temporal Wronskian093/095 has a sign on its whole intermediate interval: that condition was stronger and was not used.
 
-SHA256 del script fijo, sin modificaciones durante la corrida:
+SHA256 of the fixed script, unmodified during the run:
 
     6712eb8542b4d8b7e0836260fba831cd44ccaffb7f1ea321df0a0a32668d51d7.
 
-Comando reproducible desde la raíz:
+Reproducible command from the root:
 
     python3 03-research/phase-211-sign-sandbox/tools/power_exact_h_global_099_verify.py
 
-No se infiere de este paso una nueva herencia de Turán para el siguiente resto, iteración a todos los órdenes, signo global de W ni una ventana T nueva. Las aplicaciones adicionales deben formularse y auditarse separadamente. La fuente conserva la diferencia entre la variable de inclinación u y la variable temporal t de095. La auditoría099 está aprobada y la reproducción independiente root8310 terminó exit0/FULL PASS2048 con hash y resto exacto coincidentes.
+No new Turán inheritance for the next remainder, iteration to all orders, global sign of W nor a new window T is inferred from this step. Additional applications must be formulated and audited separately. The source keeps the difference between the tilt variable u and the time variable t of095. The audit099 is approved and the independent reproduction run8310 ended exit0/FULL PASS2048 with matching hash and exact remainder.

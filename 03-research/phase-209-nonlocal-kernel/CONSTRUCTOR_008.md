@@ -1,6 +1,6 @@
 # CONSTRUCTOR_008 — Inversion of scale, adjoint defect, and a domain check
 
-2026-10-19. Principal constructor. **PROVED, independent review approved in AUDIT_008.** D remains OPEN. No identity with Q_T is claimed.
+2026-10-19. **PROVED, independent review approved in AUDIT_008.** D remains OPEN. No identity with Q_T is claimed.
 
 ## 0. Corpus check and the precise change of object
 
@@ -177,10 +177,10 @@ Final review AUDIT_008: all stated lemmas approved with elementary proofs.
 No Mertens estimate is needed. Domain invariance and Q_T remain OPEN.
 
 
-## Actualización de dominio — continuación015
+## Domain update — continuation015
 
-CONSTRUCTOR_015_DOMAIN_AND_CONE resuelve con otra sucesión la cuestión
-que aquí quedó abierta: H=L²(P_s)⊕V y el operador T de007 no es clausurable.
-El vectorvertical fuerte proviene de likelihoodtilts sobre primosaltos,
-no de la sucesiónprimorial divergente de008. No se afirmaV=todoGaussian
-ni invariancia porla FE ambiental; el enlaceQ sigueOPEN. AUDIT_015 favorable.
+CONSTRUCTOR_015_DOMAIN_AND_CONE resolves with another sequence the question
+left open here: H=L²(P_s)⊕V and the operator T of 007 is not closable.
+The strong vertical vector comes from likelihood tilts over large primes,
+not from the divergent primorial sequence of 008. V=all Gaussian is not claimed,
+nor invariance under the ambient FE; the Q link remains OPEN. AUDIT_015 favourable.

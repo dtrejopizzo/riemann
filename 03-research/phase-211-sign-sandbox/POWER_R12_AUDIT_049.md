@@ -1,23 +1,23 @@
-# POWER_R12_AUDIT_049 — Corte efectivo y primer transporte restringido
+# POWER_R12_AUDIT_049 — Effective cut and first restricted transport
 
-Estado: **APROBADO** CENTERED_CUTOFF049 y R12_TRANSPORT049. Resuelve R12 para el primer movimiento desde V12, con c=1/2500. No certifica W completo ni iteración. Papers intactos.
+Status: **APPROVED** CENTERED_CUTOFF049 and R12_TRANSPORT049. Solves R12 for the first movement from V12, with c=1/2500. Does not certify full W nor iteration. Papers untouched.
 
-Antecedentes cotejados: índice/crucigrama, PRIME_TRANSFER014 y auditoría, GEOMETRIC_TRANSFER015, QUADRATIC017, BLOCK007 y ENDPOINT048. La hipótesis restringida seguía OPEN. La diferencia efectiva es un corte analítico uniforme en todos los numeradores, seguido del certificado exhaustivo de los únicos trece índices restantes. No se utiliza el falsificador universal de orden enorme para descartar esta restricción.
+Antecedents cross-checked: index/crossword, PRIME_TRANSFER014 and audit, GEOMETRIC_TRANSFER015, QUADRATIC017, BLOCK007 and ENDPOINT048. The restricted hypothesis was still OPEN. The effective difference is an analytic cut uniform in all numerators, followed by the exhaustive certificate of the only thirteen remaining indices. The universal falsifier of huge order is not used to discard this restriction.
 
-## Corte analítico
+## Analytic cut
 
-La transformación z=exp(2ix), y=sin x y el centrado exp(−11ix) son exactos, incluso para coeficientes complejos. Los sectores cos x R(y), S(y) tienen paridades opuestas y grados10/11; sus cruces integran cero tanto en norma como en momento inverso. El jacobiano da precisamente exponentes j+1/2 y j−1/2. La razón total es mezcla positiva de las razones sectoriales.
+The transformation z=exp(2ix), y=sin x and the centring exp(−11ix) are exact, even for complex coefficients. The sectors cos x R(y), S(y) have opposite parities and degrees10/11; their cross terms integrate to zero both in norm and in inverse moment. The Jacobian gives precisely exponents j+1/2 and j−1/2. The total ratio is a positive mixture of the sector ratios.
 
-Revisadas las dos integraciones por partes: el operador polinómico simétrico tiene eigenvalores n(n+2a+1), y los bordes de ambas fórmulas se anulan bajo a>0. De aquí 2ar<=1+2sqrt(rD). Los coeficientes normalizados decrecen en j; el sector de grado10 queda dominado por el de grado11. Para todo j>=14 resulta27r<=1+2sqrt(429r). La comprobación16129/400>0 sitúa su raíz positiva debajo de49/20. Por tanto E(tau^−2)<1/405 uniformemente, sin una hipótesis asintótica de dimensión.
+The two integrations by parts were reviewed: the symmetric polynomial operator has eigenvalues n(n+2a+1), and the boundary terms of both formulas vanish under a>0. Hence 2ar<=1+2sqrt(rD). The normalised coefficients decrease in j; the sector of degree10 is dominated by that of degree11. For every j>=14 one gets27r<=1+2sqrt(429r). The check16129/400>0 places its positive root below49/20. Hence E(tau^−2)<1/405 uniformly, without an asymptotic dimension hypothesis.
 
-El lower global de digamma usado existe con prueba explícita en Paper47, main.tex:505, lem:mbounds(ii): integración por partes del kernel g con g'>0 y variación total1/2. Jensen y Cauchy tienen la orientación correcta y dan ARCH>859/800. El contacto2 cuesta menos de una norma² y el polar efectivo048 cuesta a lo sumo3(9/62)^j. Esto supera1/2500 para toda la cola j>=14.
+The global digamma lower bound used exists with explicit proof in Paper47, main.tex:505, lem:mbounds(ii): integration by parts of the kernel g with g'>0 and total variation1/2. Jensen and Cauchy have the correct orientation and give ARCH>859/800. Contact2 costs less than one norm² and the effective polar048 costs at most3(9/62)^j. This exceeds1/2500 for the whole tail j>=14.
 
-## Certificado finito
+## Finite certificate
 
-Leído íntegro power_r12_finite_segment_049_verify.py y reproducido independientemente con python3: **PASS para los trece bloques1,...,13**, exit0. La ampliación de007 usa bandas0..24, sumas de potencias2..25 y los mismos restos racionales explícitos. Son suficientes para las imágenes de dimensión ambiente12+j<=25. C_j reproduce exactamente los coeficientes de(1+z)^j; omitir2^−j no altera el signo. El error de operador<10^−8 se paga contra C_jᵀC_j, no contra la identidad de las coordenadas originales. Los LDL racionales verifican todos los cruces y todos los pivotes. No se usan autovalores flotantes.
+power_r12_finite_segment_049_verify.py was read in full and reproduced independently with python3: **PASS for the thirteen blocks1,...,13**, exit0. The extension of007 uses bands0..24, power sums2..25 and the same explicit rational remainders. They suffice for the images of ambient dimension12+j<=25. C_j reproduces exactly the coefficients of(1+z)^j; omitting2^−j does not alter the sign. The operator error<10^−8 is paid against C_jᵀC_j, not against the identity of the original coordinates. The rational LDLs verify all cross terms and all pivots. No floating eigenvalues are used.
 
-## Mezcla y alcance
+## Mixture and scope
 
-Para cada v finito>=u, r=1−u²/v² pertenece a[0,1). La identidad de densidades es |G_v|²=(1−r)sum r^j|Q^(j+1)F|². ARCH y contacto2 se suman por convergencia absoluta; las normas fuertes de015 acotan uniformemente las energías de la órbita. El multiplicador Q es contracción en Sobolev no ponderado y en L² exponencial con eta entre1/2 y u/2. El polar se verifica separadamente por la serie escalar exacta (1−r)sum r^j(−1/3968)^(j+1)=−1/(4v²−1). No se necesita uniformidad cuando v tiende a infinito.
+For each finite v>=u, r=1−u²/v² belongs to[0,1). The density identity is |G_v|²=(1−r)sum r^j|Q^(j+1)F|². ARCH and contact2 are summed by absolute convergence; the strong norms of015 bound uniformly the energies of the orbit. The multiplier Q is a contraction in unweighted Sobolev and in exponential L² with eta between1/2 and u/2. The polar is verified separately by the exact scalar series (1−r)sum r^j(−1/3968)^(j+1)=−1/(4v²−1). No uniformity is needed as v tends to infinity.
 
-Cada término de la mezcla de E2−c norma² es positivo, incluidos j=1..13 y toda la cola. Así R12 es válida para todos los v finitos>=u desde la base EXACTA V12, a c=1/2500, también inferior al margen base007. El caso v=u es r=0. La ganancia no incluye los demás contactos: su cota007 no se ha transportado. Tampoco se conserva automáticamente la hipótesis sobre bases intermedias al mover un segundo polo. El alcance declarado en R12_TRANSPORT049 es correcto.
+Each term of the mixture of E2−c norm² is positive, including j=1..13 and the whole tail. Thus R12 holds for all finite v>=u from the EXACT base V12, at c=1/2500, also below the base margin007. The case v=u is r=0. The gain does not include the other contacts: their bound007 has not been transported. Nor is the hypothesis on intermediate bases automatically preserved when moving a second pole. The scope declared in R12_TRANSPORT049 is correct.

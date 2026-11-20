@@ -1,283 +1,283 @@
-# ROUND_003_9 — Selección: métrica no local de la realización theta
+# ROUND_003_9 — Selection: non-local metric of the theta realization
 
-Memo de selección, no de construcción. Notación de `../phase-211-sign-sandbox/STATEMENT_001.md`;
-N = e^{2T}. Fuentes de la 211 citadas como HY (`POWER_HYPERBOLIC_MODEL_GRAM.md`), GS
+Selection memo, not a construction memo. Notation of `../phase-211-sign-sandbox/STATEMENT_001.md`;
+N = e^{2T}. Sources from 211 cited as HY (`POWER_HYPERBOLIC_MODEL_GRAM.md`), GS
 (`POWER_GRAM_SLICES_OBSTRUCTION.md`), CONE001 (`POWER_CONE_001.md`), BRIDGE002 (`POWER_BRIDGE_002.md`).
-Etiquetas: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMÉRICO.
+Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 
-## Cotejo
+## Cross-check
 
-### Búsqueda realizada
+### Search performed
 
-- Lectura primaria entera: HY §§1–5 y §§12.2–12.7; CONE001 §§1–2; BRIDGE002 §6;
-  `ROUND_001_L.md` §§1–4 (por líneas citadas), `ROUND_003_4.md`, `OBJECT_SPEC.md`, `RULES_AVOID.md`,
-  `LEDGER.md`, `README.md`; README de la fase 209; `ANNEX_211_GRAM_HYPERBOLIC.md` §§0–1;
-  `phase-114-closing-the-four-rows/114_d_139_THETA_PAIR_METRIC_NO_GO.md` §0 y §1 inicial.
-- grep en `03-research/` (todas las fases), `04-papers/47*`, `04-papers/48*`,
-  `05-meta-and-planning/` por: «Kontorovich», «Lebedev», «métrica no local», «metrica no local»,
+- Full primary reading: HY §§1–5 and §§12.2–12.7; CONE001 §§1–2; BRIDGE002 §6;
+  `ROUND_001_L.md` §§1–4 (by cited lines), `ROUND_003_4.md`, `OBJECT_SPEC.md`, `RULES_AVOID.md`,
+  `LEDGER.md`, `README.md`; README of phase 209; `ANNEX_211_GRAM_HYPERBOLIC.md` §§0–1;
+  `phase-114-closing-the-four-rows/114_d_139_THETA_PAIR_METRIC_NO_GO.md` §0 and initial §1.
+- grep in `03-research/` (all phases), `04-papers/47*`, `04-papers/48*`,
+  `05-meta-and-planning/` for: «Kontorovich», «Lebedev», «métrica no local», «metrica no local»,
   «nonlocal metric», «entrelaz», «intertwin», «Stieltjes», «Herglotz», «traza que represente»,
-  «Green positivo». Sin coincidencias para Kontorovich/Lebedev y para «métrica no local» como frase.
-  «nonlocal metric» sólo en D.139 (fases 114/116, mismo archivo). «Green positivo» sólo en HY, en
-  sus ecos del grid/crucigrama/índice y en `POWER_GREEN_PAIR_TP2_SCOPE_111.md` (no abierto entero).
-  «Stieltjes» en la fase 206 (NODE_001: integral de Stieltjes contra d(ψ − t), otro sentido).
-  «Herglotz» en las fases 136–137 (matriz-Herglotz de una resolvente comprimida, otro objeto).
-- GS §§17–19 los conozco sólo por el anexo `ANNEX_211_GRAM_HYPERBOLIC.md` §0 y por `RULES_AVOID.md`
-  D9, D14, D16; no los releí en primaria. LINK_014 de la 209 sólo por su enunciado (Teorema 3 y
-  estado, l. 151–173). La ausencia de coincidencias no prueba novedad; la §2 muestra además que no
-  la hay en la clase examinada.
+  «Green positivo». No hits for Kontorovich/Lebedev nor for «métrica no local» as a phrase.
+  «nonlocal metric» only in D.139 (phases 114/116, same file). «Green positivo» only in HY, in
+  its echoes in the grid/crossword/index and in `POWER_GREEN_PAIR_TP2_SCOPE_111.md` (not opened in full).
+  «Stieltjes» in phase 206 (NODE_001: Stieltjes integral against d(ψ − t), another sense).
+  «Herglotz» in phases 136–137 (matrix-Herglotz of a compressed resolvent, another object).
+- GS §§17–19 I know only through the annex `ANNEX_211_GRAM_HYPERBOLIC.md` §0 and through `RULES_AVOID.md`
+  D9, D14, D16; I did not reread them in primary. LINK_014 of 209 only through its statement (Theorem 3 and
+  status, l. 151–173). The absence of hits does not prove novelty; §2 moreover shows that there is
+  none in the class examined.
 
-### (1) Antecedente más cercano
+### (1) Closest antecedent
 
-- HY §§4–5 (PROVED para el modelo φ_a = e^{−a cosh 2t}): M_a(u)/u = ½Tr(H + u²/4)^{−1} con
-  H = −D_r² + a²e^{2r} positivo e independiente de u (REP); de ahí la identidad de resolventes
-  (uR_u + vR_v)/(u+v) = (H + uv/4)R_uR_v y la suma de cuadrados GRAM para todos los tamaños.
-- HY §12.6 (PROVED como realización): espacio ℋ = L²((0,∞), sech(πω/2)dω) ⊕ ℝ³, Q(v), C, D, B̄, h,
-  con ⟨Y_ν(2π), h⟩ = Z(2ν) y la ecuación fuerte Y_rr = (b² + ν²)Y + 2DY_r + (−C + 2bB̄)Y.
-- HY §12.7 (NO-GO con clase PROVED): no hay métrica local, acotada, estrictamente positiva M(r) con
-  M′ = −DM − MD y −C + D² + 2bB̄ simétrico en M(r).
-- `ROUND_001_L.md` Teorema 2.1, Cor. 2.2, Prop. 4.2 (PROVED relativo a Herglotz–Riesz, Pick y
-  Blaschke, CITED): la escalera K_ij = (L(32+i)+L(32+j))/(63+i+j) es PSD en todos los tamaños si y
-  sólo si M es real-positiva en Π = {Re u > 0}, y entonces M = Σ_k r_k·2u/(u² + τ_k²), r_k ≥ 0. El
-  índice (README l. 1791, «núcleo real de tipo Pick») y la propia memo registran esta positividad de
-  tipo Herglotz como **reformulación del objetivo**.
-- D.139 (fase 114): para el par theta (LD, L) en coordenada logarítmica, toda métrica positiva
-  invariante por traslación definida en todo el dominio es nula (el vector theta está en el núcleo
-  de C = ∂_x + φ′ y su transformada no se anula en casi todo punto). Excluye métricas globales de
-  convolución antes de cortar los momentos de Tate; no excluye métricas no invariantes.
-- Fase 209: CONSTRUCTOR_001 (NO-GO de J + C compacto), 005 (núcleo SPD −R_α), 011 (mapa
-  Mellin–Gauss continuo a un núcleo positivo; la forma inducida no coincide con Q_T: la alta
-  frecuencia corregida separa), 012–014 (dominaciones uniformes; LINK_014: toda combinación fija no
-  negativa AκG + Bκvv* + CΠ con el mismo a_d tiene |Q|/E → 0), 016 (positividad sólo en la imagen no
-  amplía el cono). Ninguno es una métrica de la realización theta; todos fallan en el enlace con la
-  forma, no en la positividad del núcleo auxiliar.
+- HY §§4–5 (PROVED for the model φ_a = e^{−a cosh 2t}): M_a(u)/u = ½Tr(H + u²/4)^{−1} with
+  H = −D_r² + a²e^{2r} positive and independent of u (REP); hence the resolvent identity
+  (uR_u + vR_v)/(u+v) = (H + uv/4)R_uR_v and the sum of squares GRAM for all sizes.
+- HY §12.6 (PROVED as a realization): space ℋ = L²((0,∞), sech(πω/2)dω) ⊕ ℝ³, Q(v), C, D, B̄, h,
+  with ⟨Y_ν(2π), h⟩ = Z(2ν) and the strong equation Y_rr = (b² + ν²)Y + 2DY_r + (−C + 2bB̄)Y.
+- HY §12.7 (NO-GO with class PROVED): there is no local, bounded, strictly positive metric M(r) with
+  M′ = −DM − MD and −C + D² + 2bB̄ symmetric in M(r).
+- `ROUND_001_L.md` Theorem 2.1, Cor. 2.2, Prop. 4.2 (PROVED relative to Herglotz–Riesz, Pick and
+  Blaschke, CITED): the ladder K_ij = (L(32+i)+L(32+j))/(63+i+j) is PSD in all sizes if and
+  only if M is real-positive on Π = {Re u > 0}, and then M = Σ_k r_k·2u/(u² + τ_k²), r_k ≥ 0. The
+  index (README l. 1791, «real kernel of Pick type») and the memo itself record this
+  Herglotz-type positivity as a **reformulation of the goal**.
+- D.139 (phase 114): for the theta pair (LD, L) in logarithmic coordinate, every positive
+  translation-invariant metric defined on the whole domain is zero (the theta vector is in the kernel
+  of C = ∂_x + φ′ and its transform does not vanish almost everywhere). It excludes global
+  convolution metrics before cutting the Tate moments; it does not exclude non-invariant metrics.
+- Phase 209: CONSTRUCTOR_001 (NO-GO of J + compact C), 005 (SPD kernel −R_α), 011 (continuous
+  Mellin–Gauss map to a positive kernel; the induced form does not coincide with Q_T: the corrected high
+  frequency separates), 012–014 (uniform dominations; LINK_014: every fixed non-negative
+  combination AκG + Bκvv* + CΠ with the same a_d has |Q|/E → 0), 016 (positivity only on the image does not
+  enlarge the cone). None is a metric of the theta realization; all fail at the link with the
+  form, not at the positivity of the auxiliary kernel.
 
-### (2) El objeto, escrito
+### (2) The object, written
 
-La realización (HY §12.6) y lo que la métrica debería dar se escriben en §1. La «métrica 𝒢» que la
-regla del dueño pide explicitar se formaliza en §2 como la clase 𝒞_G de identidades de Green de tipo
-REP (las únicas que, en el antecedente HY §§4–5, producen GRAM). El Lema 2 prueba que en esa clase
-los datos observables de 𝒢 (la medida espectral de H vista desde la observación) están
-**determinados** por M y son exactamente sus datos de Herglotz; su positividad es la escalera
-completa. No hay ℋ_T, V_T ni ρ_T nuevos que escribir: la solución canónica es el espacio de la medida
-de borde de M, cuyo signo es el objetivo.
+The realization (HY §12.6) and what the metric should give are written in §1. The «metric 𝒢» that the
+project rule asks to make explicit is formalized in §2 as the class 𝒞_G of Green identities of
+REP type (the only ones that, in the antecedent HY §§4–5, produce GRAM). Lemma 2 proves that in that class
+the observable data of 𝒢 (the spectral measure of H seen from the observation) are
+**determined** by M and are exactly its Herglotz data; their positivity is the complete
+ladder. There are no new ℋ_T, V_T or ρ_T to write: the canonical solution is the space of the boundary
+measure of M, whose sign is the goal.
 
-### (3) ¿Esquiva la dificultad del antecedente?
+### (3) Does it evade the difficulty of the antecedent?
 
-No. La dificultad de HY §12.7 es local (la ecuación métrica fuerza exponentes incompatibles). Pasar
-a métricas no locales o no acotadas evita esa prueba concreta, pero el Lema 2 muestra que cualquier
-métrica, local o no, que produzca una identidad de tipo REP tiene sus datos observables fijados y su
-positividad equivale a la real-positividad de M, ya registrada como reformulación. La no localidad no
-cambia lo que hay que firmar.
+No. The difficulty of HY §12.7 is local (the metric equation forces incompatible exponents). Passing
+to non-local or unbounded metrics avoids that concrete proof, but Lemma 2 shows that any
+metric, local or not, that produces an identity of REP type has its observable data fixed and its
+positivity is equivalent to the real-positivity of M, already recorded as a reformulation. Non-locality does not
+change what has to be signed.
 
-### (4) Conexión con la positividad global
+### (4) Connection with global positivity
 
-Cadena exacta (sin margen): identidad REP con 𝒢 ⪰ 0 ⟹ K_M PSD en todos los tamaños (Lema 2(a),
-PROVED) ⟹ escalera de BRIDGE002 §6 PSD ⟹ no negatividad de la forma sobre todos los tests suaves
-compactos, en particular sobre P_T para todo T (BRIDGE002 §6, PROVED allí). La recíproca hasta
-«existe 𝒢 ⪰ 0 en 𝒞_G» también vale (Lema 2(b)). La conexión existe, pero es una equivalencia con la
-escalera: no es una desigualdad intermedia.
+Exact chain (without margin): REP identity with 𝒢 ⪰ 0 ⟹ K_M PSD in all sizes (Lemma 2(a),
+PROVED) ⟹ ladder of BRIDGE002 §6 PSD ⟹ non-negativity of the form on all smooth compact
+tests, in particular on P_T for every T (BRIDGE002 §6, PROVED there). The converse up to
+«there exists 𝒢 ⪰ 0 in 𝒞_G» also holds (Lemma 2(b)). The connection exists, but it is an equivalence with the
+ladder: it is not an intermediate inequality.
 
-### (5) Líneas de ruptura para cΛ y a_P
+### (5) Breaking lines for cΛ and a_P
 
-Λ entra en 𝒢 sólo a través de M, linealmente (§3): L_c(a) = L(a) − (c − 1)Σ_n Λ(n)n^{−a} y
-L_P(a) = L(a) + Σ_{p<P}Σ_{k≥1}(log p)p^{−ka}. La línea que se rompe es r_k ≥ 0 en la
-representación de Herglotz de M_c o M_P, es decir, la positividad de la medida de borde: la misma
-afirmación que se quiere probar (211 LEDGER C43: la ventana en c se cierra en c = 1 por ambos lados).
-No hay paso de signo intermedio que falle: punto (5) sin respuesta. La candidata no está lista para
-construcción.
+Λ enters 𝒢 only through M, linearly (§3): L_c(a) = L(a) − (c − 1)Σ_n Λ(n)n^{−a} and
+L_P(a) = L(a) + Σ_{p<P}Σ_{k≥1}(log p)p^{−ka}. The line that breaks is r_k ≥ 0 in the
+Herglotz representation of M_c or M_P, that is, the positivity of the boundary measure: the same
+statement one wants to prove (211 LEDGER C43: the window in c closes at c = 1 from both sides).
+There is no intermediate sign step that fails: point (5) without answer. The candidate is not ready for
+construction.
 
-## 1. La realización theta y la ecuación de la métrica
+## 1. The theta realization and the equation of the metric
 
-**1.1 Objetos (HY §12.6, PROVED allí).** ℋ = L²((0,∞), ρ(ω)dω) ⊕ ℝ³, ρ(ω) = sech(πω/2),
-λ_j = j + ¼; Q(v) = (cos ωv, cosh λ_0v, cosh λ_1v, cosh λ_2v); C multiplicación por −ω² y λ_j²;
-D multiplicación por d(ω) = 1 + ω coth(πω/2) + (15/2)cosh(πω/2)/cosh(2πω) y masas (−29/4, −23/4, −9/4);
-B̄ la clausura de BQ(v) = sinh v Q′(v) + cosh v DQ(v) sobre S = span{Q(v)}; h ∈ ℋ con
-⟨Q(v), h⟩ = q_θ(v) = Φ(v/2)e^{2π cosh v}. Para b = e^r > 0,
+**1.1 Objects (HY §12.6, PROVED there).** ℋ = L²((0,∞), ρ(ω)dω) ⊕ ℝ³, ρ(ω) = sech(πω/2),
+λ_j = j + ¼; Q(v) = (cos ωv, cosh λ_0v, cosh λ_1v, cosh λ_2v); C multiplication by −ω² and λ_j²;
+D multiplication by d(ω) = 1 + ω coth(πω/2) + (15/2)cosh(πω/2)/cosh(2πω) and masses (−29/4, −23/4, −9/4);
+B̄ the closure of BQ(v) = sinh v Q′(v) + cosh v DQ(v) on S = span{Q(v)}; h ∈ ℋ with
+⟨Q(v), h⟩ = q_θ(v) = Φ(v/2)e^{2π cosh v}. For b = e^r > 0,
 
     Y_ν(b) = ∫_0^∞ e^{−b cosh v} cosh(νv) Q(v) dv,
     Y_rr = (b² + ν²)Y + 2D Y_r + (−C + 2bB̄)Y,
     ⟨Y_ν(2π), h⟩ = ∫_0^∞ Φ(v/2)cosh(νv)dv = Z(2ν).
 
-**Observación 1.2 (PROVED, una línea).** La observación sólo lee la rebanada b = 2π: el factor
-e^{2π cosh v} de q_θ cancela exactamente el núcleo e^{−2π cosh v}. La variable de escala r y su
-ecuación son andamiaje; la observación de cualquier otra rebanada b ≠ 2π no es Z. Una métrica en r
-sólo sirve si su identidad de Green, evaluada en b = 2π, reproduce M = Z′/Z.
+**Remark 1.2 (PROVED, one line).** The observation reads only the slice b = 2π: the factor
+e^{2π cosh v} of q_θ cancels exactly the kernel e^{−2π cosh v}. The scale variable r and its
+equation are scaffolding; the observation of any other slice b ≠ 2π is not Z. A metric in r
+is useful only if its Green identity, evaluated at b = 2π, reproduces M = Z′/Z.
 
-**1.3 Qué debería cumplir la métrica (traducción del antecedente).** En el modelo, la identidad que
-da GRAM es REP: M(u)/u = ½Tr(H + u²/4)^{−1} con H ⪰ 0 independiente de u, obtenida de la ecuación
-de Wronskiano (y_x² z_x′)′ = y_x² y de la simetría de −D² + a²e^{2r} en L²(dr). Para la realización
-theta la condición necesaria local es la de HY §12.7 (M′ = −DM − MD y simetría de E en M(r)), excluida
-allí para M local acotada. Una métrica no local es una forma 𝒢 ⪰ 0 sobre funciones de r con valores
-en ℋ (núcleo 𝒢(r, s)) en la que L = −∂_r² + 2D∂_r + b²I + E(b) sea simétrico con condiciones de borde
-compatibles con h; su función de Green G_ν daría, por el argumento del Wronskiano, una identidad de
-la forma
+**1.3 What the metric should satisfy (translation of the antecedent).** In the model, the identity that
+gives GRAM is REP: M(u)/u = ½Tr(H + u²/4)^{−1} with H ⪰ 0 independent of u, obtained from the
+Wronskian equation (y_x² z_x′)′ = y_x² and from the symmetry of −D² + a²e^{2r} in L²(dr). For the theta
+realization the local necessary condition is that of HY §12.7 (M′ = −DM − MD and symmetry of E in M(r)), excluded
+there for local bounded M. A non-local metric is a form 𝒢 ⪰ 0 on functions of r with values
+in ℋ (kernel 𝒢(r, s)) in which L = −∂_r² + 2D∂_r + b²I + E(b) is symmetric with boundary conditions
+compatible with h; its Green function G_ν would give, by the Wronskian argument, an identity of
+the form
 
-    (REP-𝒢)   M(u) = βu + u⟨g, (H + u²)^{−1} g⟩_𝒦,   H ⪰ 0 independiente de u, β ≥ 0,
+    (REP-𝒢)   M(u) = βu + u⟨g, (H + u²)^{−1} g⟩_𝒦,   H ⪰ 0 independent of u, β ≥ 0,
 
-con 𝒦 el completado de (funciones, 𝒢), H el operador asociado a L y g el vector de borde dado por h
-(reescalando u ↦ u/2 si se quiere la normalización de HY). Que la simetría de L en 𝒢 implique
-(REP-𝒢) es ARGUED (es el cálculo de HY §§3–4 con ⟨·,·⟩ sustituido por 𝒢; no lo escribo porque el
-Lema 2 hace innecesaria su forma exacta). Lo que sigue clasifica (REP-𝒢) directamente, sin pasar por
-L ni por r.
+with 𝒦 the completion of (functions, 𝒢), H the operator associated with L and g the boundary vector given by h
+(rescaling u ↦ u/2 if the normalization of HY is wanted). That the symmetry of L in 𝒢 implies
+(REP-𝒢) is ARGUED (it is the computation of HY §§3–4 with ⟨·,·⟩ replaced by 𝒢; I do not write it because
+Lemma 2 makes its exact form unnecessary). What follows classifies (REP-𝒢) directly, without going through
+L or r.
 
-## 2. La métrica queda determinada y su positividad es el objetivo
+## 2. The metric is determined and its positivity is the goal
 
-**Clase 𝒞_G.** Ternas (𝒦, H, g) y β ≥ 0, con 𝒦 un Hilbert real cualquiera (cualquier dimensión,
-cualquier origen: local, no local, no acotado), H autoadjunto ⪰ 0 en 𝒦, g ∈ 𝒦, tales que
-(REP-𝒢) vale para u en un conjunto X ⊂ (0,∞) de unicidad para funciones holomorfas en Π (por
-ejemplo la escalera 31.5 + ℕ de BRIDGE002 §6, que es de unicidad por ROUND_001_L Lema 1.3, o un
-intervalo). Aquí M(u) = L(u + ½) con L de CONE001 §1:
+**Class 𝒞_G.** Triples (𝒦, H, g) and β ≥ 0, with 𝒦 any real Hilbert space (any dimension,
+any origin: local, non-local, unbounded), H self-adjoint ⪰ 0 on 𝒦, g ∈ 𝒦, such that
+(REP-𝒢) holds for u in a set X ⊂ (0,∞) of uniqueness for holomorphic functions on Π (for
+example the ladder 31.5 + ℕ of BRIDGE002 §6, which is of uniqueness by ROUND_001_L Lemma 1.3, or an
+interval). Here M(u) = L(u + ½) with L from CONE001 §1:
 
     L(a) = 1/a + 1/(a−1) − (log π)/2 + ψ(a/2)/2 + ζ′(a)/ζ(a),   ζ′/ζ(a) = −Σ_n Λ(n)n^{−a}.
 
-M es meromorfa en ℂ e impar (Z(u) = C∫Φ(t)cosh(ut)dt es par y entera, CONE001 §2).
+M is meromorphic on ℂ and odd (Z(u) = C∫Φ(t)cosh(ut)dt is even and entire, CONE001 §2).
 
-**Lema 2 (circularidad en 𝒞_G).**
+**Lemma 2 (circularity in 𝒞_G).**
 
-(a) (PROVED) Si (𝒦, H, g, β) ∈ 𝒞_G, entonces K_M(u,v) = [M(u)+M(v)]/(u+v) es PSD en todo subconjunto
-finito de X, con la suma de cuadrados explícita
+(a) (PROVED) If (𝒦, H, g, β) ∈ 𝒞_G, then K_M(u,v) = [M(u)+M(v)]/(u+v) is PSD on every finite subset
+of X, with the explicit sum of squares
 
     Σ_ij c_i c_j K_M(u_i,u_j) = β(Σc_i)² + ‖H^{1/2}Σ_i c_iR_ig‖² + ‖Σ_i c_iu_iR_ig‖²,
     R_i = (H + u_i²)^{−1}.
 
-(b) (PROVED relativo a `ROUND_001_L.md` Teorema 2.1 y Prop. 4.2, que a su vez son PROVED relativos a
-los clásicos C1–C3 citados allí) Recíprocamente, si K_M es PSD en todo subconjunto finito de X,
-existe (𝒦, H, g) ∈ 𝒞_G con β = 0: 𝒦 = ℓ², H = diag(τ_k²), g_k = (2r_k)^{1/2}.
+(b) (PROVED relative to `ROUND_001_L.md` Theorem 2.1 and Prop. 4.2, which in turn are PROVED relative to
+the classical C1–C3 cited there) Conversely, if K_M is PSD on every finite subset of X,
+there exists (𝒦, H, g) ∈ 𝒞_G with β = 0: 𝒦 = ℓ², H = diag(τ_k²), g_k = (2r_k)^{1/2}.
 
-(c) (PROVED relativo a la unicidad de la medida en la representación de Herglotz–Riesz y a la
-inversión de Stieltjes, CITED) Para toda (𝒦, H, g, β) ∈ 𝒞_G, β = lim_{u→∞} M(u)/u y la medida
-espectral μ_g de H en g (μ_g(E) = ⟨g, 1_E(H)g⟩) están determinadas por M. La única libertad es la
-equivalencia unitaria sobre el subespacio cíclico de g y el complemento ortogonal, que no interviene.
+(c) (PROVED relative to the uniqueness of the measure in the Herglotz–Riesz representation and to
+Stieltjes inversion, CITED) For every (𝒦, H, g, β) ∈ 𝒞_G, β = lim_{u→∞} M(u)/u and the
+spectral measure μ_g of H at g (μ_g(E) = ⟨g, 1_E(H)g⟩) are determined by M. The only freedom is
+unitary equivalence on the cyclic subspace of g and the orthogonal complement, which plays no role.
 
-(d) (PROVED, de (a)–(c)) En consecuencia, para la realización theta, existe una métrica 𝒢 —local o
-no, acotada o no— cuya identidad de Green sea de tipo (REP-𝒢), si y sólo si la escalera de BRIDGE002
-§6 es PSD en todos los tamaños; y entonces la parte observable de 𝒢 es canónica: la medida μ_g es la
-medida de borde de M, atómica, con masas r_k y posiciones τ_k² (ROUND_001_L Prop. 4.2). La
-positividad de 𝒢 en 𝒞_G es literalmente la positividad de esa escalera.
+(d) (PROVED, from (a)–(c)) Consequently, for the theta realization, there exists a metric 𝒢 —local or
+not, bounded or not— whose Green identity is of type (REP-𝒢), if and only if the ladder of BRIDGE002
+§6 is PSD in all sizes; and then the observable part of 𝒢 is canonical: the measure μ_g is the
+boundary measure of M, atomic, with masses r_k and positions τ_k² (ROUND_001_L Prop. 4.2). The
+positivity of 𝒢 in 𝒞_G is literally the positivity of that ladder.
 
-*Demostración.* (a) Para u, v > 0 las resolventes conmutan y
-uR_u + vR_v = R_uR_v[u(H + v²) + v(H + u²)] = (u + v)R_uR_v(H + uv). Luego
-K_M(u,v) = β + ⟨g, (H + uv)R_uR_vg⟩ = β + ⟨H^{1/2}R_ug, H^{1/2}R_vg⟩ + uv⟨R_ug, R_vg⟩, usando que
-R_u, R_v, H^{1/2} son autoadjuntos y conmutan y que R_ug ∈ Dom(H) (H^{1/2}R_u acotado). Cada sumando
-es un núcleo de Gram; la forma cuadrática es la escrita.
+*Proof.* (a) For u, v > 0 the resolvents commute and
+uR_u + vR_v = R_uR_v[u(H + v²) + v(H + u²)] = (u + v)R_uR_v(H + uv). Hence
+K_M(u,v) = β + ⟨g, (H + uv)R_uR_vg⟩ = β + ⟨H^{1/2}R_ug, H^{1/2}R_vg⟩ + uv⟨R_ug, R_vg⟩, using that
+R_u, R_v, H^{1/2} are self-adjoint and commute and that R_ug ∈ Dom(H) (H^{1/2}R_u bounded). Each summand
+is a Gram kernel; the quadratic form is the one written.
 
-(b) Por ROUND_001_L Teorema 2.1 hay F real-positiva en Π con F = M en X. M es meromorfa en ℂ y F
-holomorfa en Π; X tiene un punto de acumulación en Π o es de unicidad, así que M = F en Π (en el
-caso de la escalera, la unicidad es la de ROUND_001_L Lema 1.3 aplicada a M − F, que es meromorfa de
-crecimiento controlado en Π: es exactamente el paso usado allí en Cor. 2.2). Por Prop. 4.2,
-M(u) = Σ_k r_k·2u/(u² + τ_k²), r_k ≥ 0, sin término lineal. Con H = diag(τ_k²) y g_k = (2r_k)^{1/2},
-u⟨g, (H + u²)^{−1}g⟩ = Σ_k 2r_ku/(τ_k² + u²) = M(u); g ∈ ℓ² porque Σ r_k/(1 + τ_k²) < ∞ (finitud de
+(b) By ROUND_001_L Theorem 2.1 there is a real-positive F on Π with F = M on X. M is meromorphic on ℂ and F
+holomorphic on Π; X has an accumulation point in Π or is of uniqueness, so M = F on Π (in the
+case of the ladder, uniqueness is that of ROUND_001_L Lemma 1.3 applied to M − F, which is meromorphic of
+controlled growth on Π: it is exactly the step used there in Cor. 2.2). By Prop. 4.2,
+M(u) = Σ_k r_k·2u/(u² + τ_k²), r_k ≥ 0, without linear term. With H = diag(τ_k²) and g_k = (2r_k)^{1/2},
+u⟨g, (H + u²)^{−1}g⟩ = Σ_k 2r_ku/(τ_k² + u²) = M(u); g ∈ ℓ² because Σ r_k/(1 + τ_k²) < ∞ (finiteness of
 M(1)).
 
-(c) De (REP-𝒢), M(u)/u = β + ∫ dμ_g(λ)/(λ + u²) en X, y ambos lados son meromorfos/holomorfos en
-Π; luego la igualdad vale en Π, y en particular s ↦ ∫dμ_g(λ)/(λ + s) queda determinada para s > 0,
-con β = lim M(u)/u (convergencia dominada: ∫dμ_g/(λ+u²) → 0 si μ_g es finita, lo es porque
-g ∈ 𝒦). La transformada de Stieltjes de una medida positiva finita en [0,∞) determina la medida
-(inversión de Stieltjes, CITED). La medida espectral determina H|_{cíclico de g} hasta equivalencia
-unitaria (teorema espectral, CITED).
+(c) From (REP-𝒢), M(u)/u = β + ∫ dμ_g(λ)/(λ + u²) on X, and both sides are meromorphic/holomorphic on
+Π; hence the equality holds on Π, and in particular s ↦ ∫dμ_g(λ)/(λ + s) is determined for s > 0,
+with β = lim M(u)/u (dominated convergence: ∫dμ_g/(λ+u²) → 0 if μ_g is finite, which it is because
+g ∈ 𝒦). The Stieltjes transform of a finite positive measure on [0,∞) determines the measure
+(Stieltjes inversion, CITED). The spectral measure determines H|_{cyclic of g} up to unitary
+equivalence (spectral theorem, CITED).
 
-(d) Junta (a), (b), (c) con BRIDGE002 §6 (la escalera es K_M sobre X = 31.5 + ℕ, desplazando
+(d) Combine (a), (b), (c) with BRIDGE002 §6 (the ladder is K_M on X = 31.5 + ℕ, shifting
 a = u + ½). ∎
 
-**Clase y alcance del lema (NO-GO de circularidad con clase, PROVED en los términos anteriores).**
-Clase: toda identidad de Green que represente M en la forma (REP-𝒢), con operador positivo
-independiente de u, sobre cualquier Hilbert. En esta clase la «métrica no local» no es un objeto
-libre: es la representación de Herglotz de M, cuya positividad está registrada como reformulación del
-objetivo (IDX README l. 1791; ROUND_001_L l. 27). Resolver la ecuación de entrelazamiento por Mellin o
-por cualquier otra transformada produce, si produce algo, esa misma medida.
+**Class and scope of the lemma (circularity NO-GO with class, PROVED in the above terms).**
+Class: every Green identity representing M in the form (REP-𝒢), with positive operator
+independent of u, on any Hilbert space. In this class the «non-local metric» is not a free
+object: it is the Herglotz representation of M, whose positivity is recorded as a reformulation of the
+goal (IDX README l. 1791; ROUND_001_L l. 27). Solving the intertwining equation by Mellin or
+by any other transform produces, if it produces anything, that same measure.
 
-**Corolario 2.1 (variante con resto, PROVED relativo a ROUND_001_L Teorema 3.1).** Si se pide sólo
-M = M_𝒢 + F con M_𝒢 de tipo (REP-𝒢) no nula y F real-positiva (un «resto controlado» positivo), la
-medida de M_𝒢 queda dominada por la de M, que bajo esa hipótesis es atómica (es literalmente la
-rigidez R-comp de `OBJECT_SPEC.md` §3 con M0 = M_𝒢/ε). No hay métrica de 𝒞_G que pague una parte del
-signo y deje un resto positivo independiente: su medida tiene que estar dentro de la de M.
+**Corollary 2.1 (variant with remainder, PROVED relative to ROUND_001_L Theorem 3.1).** If one asks only
+M = M_𝒢 + F with M_𝒢 of type (REP-𝒢) non-zero and F real-positive (a positive «controlled remainder»), the
+measure of M_𝒢 is dominated by that of M, which under that hypothesis is atomic (it is literally the
+rigidity R-comp of `OBJECT_SPEC.md` §3 with M0 = M_𝒢/ε). There is no metric of 𝒞_G that pays part of the
+sign and leaves an independent positive remainder: its measure has to be inside that of M.
 
-**Observación 2.2 (involución modular; ARGUED).** La simetría θ(1/t) = √t θ(t) da Φ par, Z par y M
-impar. En el Lema 2 esa paridad ya está consumida: es lo que hace que la medida de Herglotz sea
-simétrica y que (REP-𝒢) dependa de u². Una factorización 𝒢 = 𝒥*𝒥 con 𝒥 la involución no aporta signo:
-toda 𝒢 ⪰ 0 es un cuadrado, y la paridad la comparte cualquier Φ par (cualquier dato con ecuación
-funcional del mismo tipo, por ejemplo Davenport–Heilbronn en la normalización correspondiente), de
-modo que un argumento que sólo use la involución no tiene línea que se rompa en ese falsificador.
-No lo desarrollo como lema.
+**Remark 2.2 (modular involution; ARGUED).** The symmetry θ(1/t) = √t θ(t) gives Φ even, Z even and M
+odd. In Lemma 2 that parity is already consumed: it is what makes the Herglotz measure
+symmetric and (REP-𝒢) depend on u². A factorization 𝒢 = 𝒥*𝒥 with 𝒥 the involution contributes no sign:
+every 𝒢 ⪰ 0 is a square, and the parity is shared by any even Φ (any datum with a functional
+equation of the same type, for example Davenport–Heilbronn in the corresponding normalization), so
+that an argument using only the involution has no line that breaks at that falsifier.
+I do not develop it as a lemma.
 
-**Observación 2.3 (núcleo explícito tipo Kontorovich–Lebedev; PROVED como cuenta, sin signo).** En el
-modelo, y_x(r) = K_{√x}(ae^r) con K_ν la función de Macdonald (∫_0^∞e^{−b cosh v}cosh(νv)dv = K_ν(b),
-CITED), y el operador H es diagonalizable por una transformada de esa familia con densidad de
-Plancherel positiva. Esa positividad es universal (no depende de Φ) y por el Lema 2(c) no puede ser
-la métrica: la métrica está fijada por M. Una «función explícita» (cociente de Gammas, theta, su
-transformada) cuya positividad fuese la de 𝒢 tendría que codificar μ_g, es decir la escalera.
+**Remark 2.3 (explicit kernel of Kontorovich–Lebedev type; PROVED as a computation, without sign).** In the
+model, y_x(r) = K_{√x}(ae^r) with K_ν the Macdonald function (∫_0^∞e^{−b cosh v}cosh(νv)dv = K_ν(b),
+CITED), and the operator H is diagonalizable by a transform of that family with positive Plancherel
+density. That positivity is universal (it does not depend on Φ) and by Lemma 2(c) cannot be
+the metric: the metric is fixed by M. An «explicit function» (quotient of Gammas, theta, its
+transform) whose positivity were that of 𝒢 would have to encode μ_g, that is the ladder.
 
-## 3. Dónde entra Λ
+## 3. Where Λ enters
 
-Integralidad: Φ = Σ_n n^{−1/2}h(t + log n) tiene coeficiente 1 en cada n (en la forma modal, 1 sobre
-los cuadrados de la theta). Producto de Euler: Σ_{d|n}Λ(d) = log n es exactamente la identidad que
-convierte la derivada logarítmica de Σn^{−a} en −ΣΛ(n)n^{−a}. Así Λ aparece en M, de forma lineal y
-explícita, por ζ′/ζ en L (CONE001 §1, PROVED allí). En 𝒞_G, por el Lema 2(c), μ_g es la medida de
-borde de M, que depende linealmente de M; la única no linealidad es g_k = (2r_k)^{1/2}, que no añade
-información. La cláusula O10 se cumple formalmente (se trabaja del lado de Λ), pero sin mecanismo:
-el cruce de la derivada logarítmica está en la definición de M, no en un paso de signo.
+Integrality: Φ = Σ_n n^{−1/2}h(t + log n) has coefficient 1 at each n (in the modal form, 1 on
+the squares of the theta). Euler product: Σ_{d|n}Λ(d) = log n is exactly the identity that
+converts the logarithmic derivative of Σn^{−a} into −ΣΛ(n)n^{−a}. Thus Λ appears in M, linearly and
+explicitly, through ζ′/ζ in L (CONE001 §1, PROVED there). In 𝒞_G, by Lemma 2(c), μ_g is the boundary
+measure of M, which depends linearly on M; the only non-linearity is g_k = (2r_k)^{1/2}, which adds no
+information. Clause O10 is satisfied formally (one works on the Λ side), but without mechanism:
+the crossing of the logarithmic derivative is in the definition of M, not in a sign step.
 
-Para cΛ: M_c(u) = M(u) − (c − 1)Σ_nΛ(n)n^{−(u+½)} (ARGUED que BRIDGE002 §6 se transporta con la
-inversa de Dirichlet de los coeficientes de cΛ en lugar de μ; CONE001 §1 da el término del peine
-proporcional a c). Para a_P: M_P(u) = M(u) + Σ_{p<P}Σ_k (log p)p^{−k(u+½)}. En ambos casos la línea
-que falla del Lema 2 es la existencia de (𝒦, H, g) con μ_g ≥ 0, es decir (b): exactamente la
-positividad de la escalera del modelo alterado. No hay otra línea.
+For cΛ: M_c(u) = M(u) − (c − 1)Σ_nΛ(n)n^{−(u+½)} (ARGUED that BRIDGE002 §6 transports with the
+Dirichlet inverse of the coefficients of cΛ instead of μ; CONE001 §1 gives the comb term
+proportional to c). For a_P: M_P(u) = M(u) + Σ_{p<P}Σ_k (log p)p^{−k(u+½)}. In both cases the line
+of Lemma 2 that fails is the existence of (𝒦, H, g) with μ_g ≥ 0, that is (b): exactly the
+positivity of the ladder of the altered model. There is no other line.
 
-## 4. Inventario de núcleos no locales ya probados (sólo lo pertinente)
+## 4. Inventory of non-local kernels already proved (only what is pertinent)
 
-- 211, modelo hiperbólico (HY §§4–5): Green positivo de todos los órdenes, PROVED; sin transferencia
-  (§6–7: mezclas y convoluciones positivas no transfieren; §§9–12.4: flujo de escala, prefactores,
-  derivas escalares, excluidos en sus clases).
-- 211, HY §12.7: métrica local acotada, NO-GO. GS §2.3: factorización Hankel traslacional de A
-  excluida. GS §4.3: referencias G0, H0 no PSD. GS §§17–19 (por el anexo): suma de cuadrados
-  resonante con margen, comparación Off contra E_y refutada (pares k, k+1), grafo térmico y Q_B; ningún
-  núcleo que represente A con resto controlado.
-- 114 D.139: métrica traslacional global del par theta, nula.
-- 209: núcleos positivos auxiliares (005, 011) sin enlace con la forma; dominaciones fijas (012–014)
-  fallan con |Q|/E → 0; 016 no amplía el cono. Fallo común: el núcleo positivo no ve el signo de la
-  forma; la identificación con la forma pierde la parte que lleva el signo.
+- 211, hyperbolic model (HY §§4–5): positive Green of all orders, PROVED; without transfer
+  (§6–7: positive mixtures and convolutions do not transfer; §§9–12.4: scale flow, prefactors,
+  scalar drifts, excluded in their classes).
+- 211, HY §12.7: local bounded metric, NO-GO. GS §2.3: translational Hankel factorization of A
+  excluded. GS §4.3: references G0, H0 not PSD. GS §§17–19 (via the annex): resonant sum of squares
+  with margin, comparison Off against E_y refuted (pairs k, k+1), thermal graph and Q_B; no
+  kernel that represents A with controlled remainder.
+- 114 D.139: global translational metric of the theta pair, zero.
+- 209: auxiliary positive kernels (005, 011) without link to the form; fixed dominations (012–014)
+  fail with |Q|/E → 0; 016 does not enlarge the cone. Common failure: the positive kernel does not see the sign of the
+  form; the identification with the form loses the part that carries the sign.
 
-## Resultado
+## Result
 
-Sin mecanismo nuevo, con una pieza de NO-GO de circularidad con clase (PROVED en los términos del
-Lema 2, relativo a ROUND_001_L y a clásicos CITED). La «métrica no local» de la realización theta,
-dentro de la clase de identidades de Green de tipo REP (operador positivo independiente de u, cualquier
-Hilbert, local o no), queda determinada por M en su parte observable, y su positividad es la escalera
-de BRIDGE002 §6, ya registrada como reformulación. La candidata no pasa la puerta de selección.
+No new mechanism, with one circularity NO-GO piece with class (PROVED in the terms of
+Lemma 2, relative to ROUND_001_L and to CITED classics). The «non-local metric» of the theta realization,
+within the class of Green identities of REP type (positive operator independent of u, any
+Hilbert space, local or not), is determined by M in its observable part, and its positivity is the ladder
+of BRIDGE002 §6, already recorded as a reformulation. The candidate does not pass the selection gate.
 
-## Qué se probó
+## What was proved
 
-- Lema 2(a): REP-𝒢 ⟹ K_M PSD con suma de cuadrados explícita (PROVED).
-- Lema 2(b)–(d): recíproca, unicidad de los datos observables y equivalencia con la escalera (PROVED
-  relativo a ROUND_001_L Teorema 2.1, Prop. 4.2 y a Herglotz–Riesz/Stieltjes CITED).
-- Corolario 2.1: una métrica de 𝒞_G con resto real-positivo cae en la rigidez R-comp (PROVED relativo
-  a ROUND_001_L Teorema 3.1).
-- Observación 1.2: la realización §12.6 sólo observa la rebanada b = 2π (PROVED, cuenta directa).
+- Lemma 2(a): REP-𝒢 ⟹ K_M PSD with explicit sum of squares (PROVED).
+- Lemma 2(b)–(d): converse, uniqueness of the observable data and equivalence with the ladder (PROVED
+  relative to ROUND_001_L Theorem 2.1, Prop. 4.2 and to Herglotz–Riesz/Stieltjes CITED).
+- Corollary 2.1: a metric of 𝒞_G with real-positive remainder falls into the rigidity R-comp (PROVED relative
+  to ROUND_001_L Theorem 3.1).
+- Remark 1.2: the realization §12.6 observes only the slice b = 2π (PROVED, direct computation).
 
-## Qué falló y por qué
+## What failed and why
 
-- La métrica no aparece como objeto libre: en 𝒞_G sus datos son los de Herglotz de M; resolver el
-  entrelazamiento (por Mellin o por otra vía) no puede dar otra cosa. Circularidad, no imposibilidad
-  del signo.
-- La involución modular y las densidades de Plancherel explícitas son universales o compartidas por
-  falsificadores con ecuación funcional; no llevan la línea de ruptura (ARGUED).
-- Punto (5): para cΛ y a_P lo único que falla es la positividad de la medida de borde, que es el
-  objetivo alterado.
+- The metric does not appear as a free object: in 𝒞_G its data are the Herglotz data of M; solving the
+  intertwining (by Mellin or by another route) cannot give anything else. Circularity, not impossibility
+  of the sign.
+- The modular involution and the explicit Plancherel densities are universal or shared by
+  falsifiers with functional equation; they do not carry the breaking line (ARGUED).
+- Point (5): for cΛ and a_P the only thing that fails is the positivity of the boundary measure, which is the
+  altered goal.
 
-Queda NO excluido:
-1. Identidades de Green que no sean de tipo REP: operador dependiente de u de forma no resolvente,
-   formas indefinidas (Kreĭn) con vector neutro no radical (`ROUND_003_4.md` §3, punto 1), o
-   identidades sobre A(t,s) que no pasen por M y usen una estructura que el Lema 2 no ve (por
-   ejemplo, construir los vectores de Gram de A desde operaciones aritméticas con verificación
-   algebraica, como HY §5 en el modelo). Esto último es el propio (G) sobre la escalera, sin objeto.
-2. Métricas no locales que den (REP-𝒢) sólo para una parte de M con un resto que no sea
-   real-positivo (fuera del Corolario 2.1).
-3. Realizaciones distintas de §12.6 (otras Q, otras observaciones no continuas).
+Remaining NOT excluded:
+1. Green identities not of REP type: operator depending on u in a non-resolvent way,
+   indefinite (Kreĭn) forms with a non-radical neutral vector (`ROUND_003_4.md` §3, point 1), or
+   identities on A(t,s) that do not pass through M and use a structure that Lemma 2 does not see (for
+   example, building the Gram vectors of A from arithmetic operations with algebraic
+   verification, as HY §5 in the model). The latter is (G) itself on the ladder, without object.
+2. Non-local metrics that give (REP-𝒢) only for a part of M with a remainder that is not
+   real-positive (outside Corollary 2.1).
+3. Realizations different from §12.6 (other Q, other non-continuous observations).
 
-## Siguiente paso concreto
+## Concrete next step
 
-No relanzar la «métrica no local de la realización theta» en la clase REP: anotar el Lema 2 junto a
-la entrada de reserva de métricas no locales (memoria de selecciones y `RULES_AVOID.md` D15) como
-circularidad con clase. Una reapertura tendría que salir de la clase 𝒞_G: escribir una identidad que
-represente A o K_M con un operador que dependa de u de forma no resolvente, o con métrica indefinida,
-y señalar la línea que se rompe para cΛ y a_P antes de cualquier derivación.
+Do not relaunch the «non-local metric of the theta realization» in the REP class: record Lemma 2 next to
+the reserve entry for non-local metrics (memory of selections and `RULES_AVOID.md` D15) as
+circularity with class. A reopening would have to leave the class 𝒞_G: write an identity that
+represents A or K_M with an operator depending on u in a non-resolvent way, or with an indefinite metric,
+and point out the line that breaks for cΛ and a_P before any derivation.

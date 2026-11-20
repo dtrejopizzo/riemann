@@ -1,30 +1,30 @@
-# Qué detectan las derivadas del déficit integrado
+# What the derivatives of the integrated deficit detect
 
-**Estado: PROVED, con revisión independiente de la inversión de Laplace, el coeficiente oscilatorio y el límite gamma.**
+**Status: PROVED, with independent review of the Laplace inversion, the oscillatory coefficient and the gamma limit.**
 
-Para el D de 412 sea F(s)=D(√s)/√s. Si se ha verificado la recta crítica hasta altura H≥2, entonces para todo s>0
+For the D of 412 let F(s)=D(√s)/√s. If the critical line has been verified up to height H≥2, then for all s>0
 
-    (−1)^n F^(n)(s) ≥ 0 si (n+1) 2 arctan(1/(2H)) ≤ π/2.
+    (−1)^n F^(n)(s) ≥ 0 if (n+1) 2 arctan(1/(2H)) ≤ π/2.
 
-Con H=3·10¹² esto incluye todos los órdenes enteros de 0 a 4.7·10¹². Si existe un cero exterior, la desigualdad falla en algún s positivo para cada n suficientemente grande.
+With H=3·10¹² this includes all integer orders from 0 to 4.7·10¹². If there is an exterior zero, the inequality fails at some positive s for each sufficiently large n.
 
-**Demostración.** Para cada cero superior, contado con multiplicidad, poner d=|Re ρ−1/2|. Integrando dos veces la identidad de 414 se obtiene F(s)=4Σ∫₀ᵈ(d−u) Re[1/(s+(γ+iu)²)]du. El argumento del denominador es a lo sumo 2 arctan(u/γ); al derivar n veces, su recíproco queda elevado a n+1 y multiplicado por (−1)^n n!. La convergencia local de las series derivadas sigue de Σγ⁻²<∞.
+**Proof.** For each upper zero, counted with multiplicity, set d=|Re ρ−1/2|. Integrating twice the identity of 414 one obtains F(s)=4Σ∫₀ᵈ(d−u) Re[1/(s+(γ+iu)²)]du. The argument of the denominator is at most 2 arctan(u/γ); differentiating n times, its reciprocal is raised to n+1 and multiplied by (−1)^n n!. The local convergence of the differentiated series follows from Σγ⁻²<∞.
 
-La densidad inversa de Laplace es
+The inverse Laplace density is
 
     K(t)=4Σ∫₀ᵈ(d−u) exp(−(γ²−u²)t) cos(2γut)du.
 
-Es continua para t>0 por convergencia local uniforme. La integral de la serie de valores absolutos es finita por Σ d²/(γ²−1/4)<∞, justificando el intercambio de integrales. Si existe un cero exterior, tomar el mínimo A de γ²−d² entre ellos. Lo alcanzan finitos ceros y hay un salto positivo hasta los restantes, por finitud local. Su contribución restante es O(exp(−(A+ε)t)) para t≥1, sumando primero a t=1.
+It is continuous for t>0 by local uniform convergence. The integral of the series of absolute values is finite by Σ d²/(γ²−1/4)<∞, justifying the interchange of integrals. If there is an exterior zero, take the minimum A of γ²−d² among them. Finitely many zeros attain it and there is a positive jump to the remaining ones, by local finiteness. Their remaining contribution is O(exp(−(A+ε)t)) for t≥1, summing first at t=1.
 
-Para cada minimizador sustituir v=t(d−u). Tras multiplicar por t² exp(At), su contribución es
-4 Re[exp(−2iγdt)/(2d−2iγ)²]+o(1), por convergencia dominada con mayorante 4v exp(−dv). A fijo, la frecuencia 2γd determina γ y d porque (γ+id)²=A+2iγd. Las multiplicidades se suman. El polinomio trigonométrico resultante tiene media cero y media cuadrática positiva. Como es acotado, la media inferior de su valor absoluto es positiva; ambas partes de signo tienen por ello media inferior positiva. Así K toma valores estrictos de ambos signos a tiempos arbitrariamente tardíos.
+For each minimizer substitute v=t(d−u). After multiplying by t² exp(At), its contribution is
+4 Re[exp(−2iγdt)/(2d−2iγ)²]+o(1), by dominated convergence with majorant 4v exp(−dv). At fixed A, the frequency 2γd determines γ and d because (γ+id)²=A+2iγd. The multiplicities add up. The resulting trigonometric polynomial has mean zero and positive mean square. Since it is bounded, the lower mean of its absolute value is positive; both sign parts therefore have positive lower mean. Thus K takes strict values of both signs at arbitrarily late times.
 
-Fijar t₀ con K(t₀)<0. La derivada de orden n con signo alternado, en s=(n+1)/t₀, tiene el signo de la integral de K contra la densidad gamma proporcional a tⁿ exp(−st). Estas densidades tienen media t₀ y varianza t₀²/(n+1). Fuera de cualquier entorno fijo de t₀ su supremo tiende a cero por unimodalidad y Stirling; allí basta la norma L¹ de K. Por continuidad la integral converge a K(t₀).
+Fix t₀ with K(t₀)<0. The derivative of order n with alternating sign, at s=(n+1)/t₀, has the sign of the integral of K against the gamma density proportional to tⁿ exp(−st). These densities have mean t₀ and variance t₀²/(n+1). Outside any fixed neighborhood of t₀ their supremum tends to zero by unimodality and Stirling; there the L¹ norm of K suffices. By continuity the integral converges to K(t₀).
 
-**Registro de revisión.** La identidad de412 da J_R''(u)/R=4Re[1/(R²+(γ+iu)²)], confirmando el factor4 enF y enK. El argumento del denominador a s>0 no supera2arctan(u/γ); por eso la condición sobre n+1, y no sobre n, garantiza el signo. La normaL¹ deK es finita por el mayorante2Σd²/(γ²−1/4), mientras su continuidad sólo se necesita para t>0; no se presupone K acotada en0.
+**Review record.** The identity of412 gives J_R''(u)/R=4Re[1/(R²+(γ+iu)²)], confirming the factor4 inF and inK. The argument of the denominator at s>0 does not exceed2arctan(u/γ); hence the condition on n+1, and not on n, guarantees the sign. TheL¹ norm ofK is finite by the majorant2Σd²/(γ²−1/4), while its continuity is only needed for t>0; K is not presupposed bounded at0.
 
-En el mínimo A, el cambio v=t(d−u) da exactamente t²exp(At)K_ρ(t)=4Re[exp(−2iγdt)∫₀^(td) v exp(−2dv+v²/t+2iγv)dv]. La dominación porv exp(−dv) conduce a1/(2d−2iγ)², con el signo y coeficiente anunciados. Los ceros reflejados con el mismoγ y|δ| suman sus multiplicidades; no cancelan esta frecuencia. Distintos minimizadores con igualA tienen distinta2γd salvo esa duplicación, pues la raíz cuadrada deA+2iγd fijaγ,d>0. La media cuadrática positiva y la media cero dan valores positivos y negativos separados de0 para el polinomio en tiempos arbitrariamente tardíos, suficientes para absorber el restoo(1) y los exponentes posteriores.
+At the minimum A, the change v=t(d−u) gives exactly t²exp(At)K_ρ(t)=4Re[exp(−2iγdt)∫₀^(td) v exp(−2dv+v²/t+2iγv)dv]. Domination byv exp(−dv) leads to1/(2d−2iγ)², with the announced sign and coefficient. The reflected zeros with the sameγ and|δ| add their multiplicities; they do not cancel this frequency. Different minimizers with the sameA have different2γd except for that duplication, since the square root ofA+2iγd fixesγ,d>0. The positive mean square and zero mean give positive and negative values bounded away from0 for the polynomial at arbitrarily late times, sufficient to absorb the remaindero(1) and the later exponents.
 
-Al normalizar tⁿexp(−s_nt), s_n=(n+1)/t₀, se obtiene la densidad gamma de forma n+1, media t₀ y varianza t₀²/(n+1). Por Stirling su supremo fuera de un entorno fijo de t₀ tiende a0; multiplicarlo por la normaL¹ deK controla incluso la zona próxima a0. En el entorno se usa continuidad. Así el promedio gamma converge aK(t₀)<0 para todos los n suficientemente grandes, y no sólo a lo largo de una subsucesión. Esto prueba exactamente el fallo eventual de cada orden alto si existe un cero exterior, sin contradecir el rango finito garantizado porH.
+Normalizing tⁿexp(−s_nt), s_n=(n+1)/t₀, gives the gamma density of shape n+1, mean t₀ and variance t₀²/(n+1). By Stirling its supremum outside a fixed neighborhood of t₀ tends to0; multiplying it by theL¹ norm ofK controls even the zone near0. In the neighborhood continuity is used. Thus the gamma average converges toK(t₀)<0 for all sufficiently large n, and not only along a subsequence. This proves exactly the eventual failure of each high order if there is an exterior zero, without contradicting the finite range guaranteed byH.
 
-**Alcance.** La fase 101 ya registra criterios abstractos de monotonía completa. Aquí se identifica el término oscilatorio que impide extrapolar los órdenes finitos para el déficit específico de 412. La monotonía completa de F equivale a RH, ya que bajo RH F es idénticamente cero. Queda abierta una cota independiente sobre la contribución de las ordenadas. La positividad de todas las diferencias diádicas iteradas no se deduce de 414.
+**Scope.** Phase 101 already records abstract criteria of complete monotonicity. Here the oscillatory term that prevents extrapolating the finite orders for the specific deficit of 412 is identified. Complete monotonicity of F is equivalent to RH, since under RH F is identically zero. An independent bound on the contribution of the ordinates remains open. Positivity of all iterated dyadic differences does not follow from 414.

@@ -1,38 +1,38 @@
 # POWER CRITICAL AUDIT 040
 
-Estado: CRITICAL_BALANCE040 completo y verificador APROBADOS. Papers intactos.
+Status: complete CRITICAL_BALANCE040 and verifier APPROVED. Papers untouched.
 
-## 1. Corpus y diferencia
+## 1. Corpus and difference
 
-Reconsultados índice, grid y crucigrama y los antecedentes020/038/039. El principal del producto Euler y las fórmulas floor son clásicos. La diferencia040 es una expansión con RESTO ABSOLUTO explícito antes de invertir Fourier, pequeña respecto de la escala1/N del inverso completo. No usa una serie formal ni los momentos divergentesA_sigma,B_sigma como si siguieran controlados cuando delta baja aN^−2.
+Re-consulted index, grid and crossword and the antecedents020/038/039. The main part of the Euler product and the floor formulas are classical. The difference040 is an expansion with explicit ABSOLUTE REMAINDER before inverting Fourier, small relative to the scale1/N of the complete inverse. It uses neither a formal series nor the divergent momentsA_sigma,B_sigma as if they remained controlled when delta drops toN^−2.
 
-## 2. Factor local e inversión completa — APROBADOS
+## 2. Local factor and complete inversion — APPROVED
 
-Leído `POWER_CRITICAL_BALANCE_040.md` íntegro. La identidad floor para zeta(1+z) yH(0)=γ conserva los extremos. En Re z≥0, la comparación deI(z) conI(0) tiene módulo≤|z| yH−γ=−(I−I0)−zI(z), dando2|z|. Las cotas|H|≤17/8 y|zH|≤17/64 controlan el denominador geométrico. La expresión explícitaR3=−z²(H−γ)+z³H²/(1+zH) da el factor9 sin recurrir a una serie sin resto.
+Read `POWER_CRITICAL_BALANCE_040.md` in full. The floor identity for zeta(1+z) andH(0)=γ keeps the endpoints. On Re z≥0, the comparison ofI(z) withI(0) has modulus≤|z| andH−γ=−(I−I0)−zI(z), giving2|z|. The bounds|H|≤17/8 and|zH|≤17/64 control the geometric denominator. The explicit expressionR3=−z²(H−γ)+z³H²/(1+zH) gives the factor9 without resorting to a series without remainder.
 
-El producto inverso completo se mantiene en sigma1+delta>1, absolutamente convergente. La transformada uniforme039 y su normalización gamma original son aplicables. El multiplicadorz=delta−iξ invierte exactamenteδf−f′ yδ²f−2δf′+f″, con signos correctos.
+The complete inverse product is kept at sigma1+delta>1, absolutely convergent. The uniform transform039 and its original gamma normalization are applicable. The multiplierz=delta−iξ inverts exactlyδf−f′ andδ²f−2δf′+f″, with correct signs.
 
-En la banda|ξ|≤1/16,|z|≤1/8 y|z|³≤2(δ³+|ξ|³). Los momentos gaussianos producen288δ³ y9·10^6/N^(3/2). Fuera de la banda, el multiplicador total se domina por(4/δ)(1+ξ²); reservarN/4≥6 controla la integral y extraeexp(−N/10^6). Los cuatro monomios auxiliares suman108692<110000; los factores√N/2 y2π dejan el coeficiente110000√N/δ. No falta la cola ni se elimina la condiciónδ>0.
+In the band|ξ|≤1/16,|z|≤1/8 and|z|³≤2(δ³+|ξ|³). The Gaussian moments produce288δ³ and9·10^6/N^(3/2). Outside the band, the total multiplier is dominated by(4/δ)(1+ξ²); reservingN/4≥6 controls the integral and extractsexp(−N/10^6). The four auxiliary monomials sum to108692<110000; the factors√N/2 and2π leave the coefficient110000√N/δ. The tail is not missing nor is the conditionδ>0 removed.
 
-## 3. Curvatura y signos de escala1/N — APROBADOS
+## 3. Curvature and signs of scale1/N — APPROVED
 
-Con los pesos positivos deP, t²q′=EJ−VarJ<d. ParaS=q″+2q′/t, en todo ceroS′=2q′[q′−(2d+1)/t²]<0. La expansión algebraica deP daS>0 al infinito, por lo que no puede haber un valor no positivo anterior. Así−2q′/t<q″<0 y las dos cotas SLOPE son válidas.
+With the positive weights ofP, t²q′=EJ−VarJ<d. ForS=q″+2q′/t, at every zeroS′=2q′[q′−(2d+1)/t²]<0. The algebraic expansion ofP givesS>0 at infinity, so there can be no earlier nonpositive value. Thus−2q′/t<q″<0 and the two SLOPE bounds are valid.
 
-La diferenciación directa de f da las fórmulas exactas de f′ y f″. En deltaN^−2, q<2, eta≤1/u² y t_v≥N/(2·992). El lower de f″ tiene3970/N=3968/N del término curvatura más2/N del término cuadrático. El lower específico de f′ parac1/2 usa1/(1+δ+epsilon)≥1−2/N. SLOPE da b>50/N con las cotas holgadas declaradas.
+Direct differentiation of f gives the exact formulas for f′ and f″. At deltaN^−2, q<2, eta≤1/u² and t_v≥N/(2·992). The lower bound of f″ has3970/N=3968/N from the curvature term plus2/N from the quadratic term. The specific lower bound of f′ forc1/2 uses1/(1+δ+epsilon)≥1−2/N. SLOPE gives b>50/N with the declared loose bounds.
 
-Para N≥2^80, multiplicar REMAINDER porN y usar el sexto término positivo de la exponencial demuestra error<10^−4/N. En c3/2, el margen(γ−1/2)b deja>3.5/N antes de errores; se conserva el costo negativoγδ². En c1/2, el upper tiene coeficiente de b menor que−.39, dejando margen negativo mucho mayor que1/N. Quedan aprobados h/H<−1/N yK/G>1/N en el centro inclinado indicado, sobre sus sumas COMPLETAS.
+For N≥2^80, multiplying REMAINDER byN and using the sixth positive term of the exponential proves error<10^−4/N. At c3/2, the margin(γ−1/2)b leaves>3.5/N before errors; the negative costγδ² is kept. At c1/2, the upper bound has coefficient of b less than−.39, leaving a negative margin much larger than1/N. h/H<−1/N andK/G>1/N at the indicated tilted center, on their COMPLETE sums, are approved.
 
-## 4. Alcance
+## 4. Scope
 
-Son signos opuestos reales del inverso completo cerca del centro energético, no W negativo ni positivo. El hombro039 y estas cotas no controlan la integral interior ni compensan ARCH_sharp por sí solos. No hay nueva fila o ventana T. Root coincide independientemente en todos los pasos analíticos; el verificador final se registra a continuación.
+These are real opposite signs of the complete inverse near the energy center, not negative nor positive W. The shoulder039 and these bounds do not control the interior integral nor compensate ARCH_sharp by themselves. No new row or window T. All analytic steps were confirmed independently; the final verifier is recorded below.
 
 
-## 5. Corte a distancia constante — APROBADO
+## 5. Cutoff at constant distance — APPROVED
 
-Leída§8 final y ejecutado independientemente `tools/power_critical_balance_040_verify.py`: PASS para núcleo y corolario. En TODOdelta∈[2000/N,1000/√N], las identidades exactas dan0<f′<b y f″<−b porquev<1,q<2; no se extrapolan sin justificación los bounds específicos de deltaN^−2. Con0<γ<1, el principal se acota porδ−b−δ².
+Read the final§8 and ran independently `tools/power_critical_balance_040_verify.py`: PASS for core and corollary. On ALLdelta∈[2000/N,1000/√N], the exact identities give0<f′<b and f″<−b becausev<1,q<2; the specific bounds for deltaN^−2 are not extrapolated without justification. With0<γ<1, the main part is bounded byδ−b−δ².
 
-El término cúbico es<.001δ; los otros dos errores son cada uno<10^−4/N. Para la cola, el boundδ^−1≤N/2000 y el sexto término de la exponencial producen exactamente55·6!·10^36/N^(7/2) tras multiplicar porN. Ademásδ²<.001δ. El lower resultante(.998)δ−(u²+.0002)/N es estrictamente positivo en todo el intervalo, con las constantes comprobadas racionalmente.
+The cubic term is<.001δ; the other two errors are each<10^−4/N. For the tail, the boundδ^−1≤N/2000 and the sixth term of the exponential produce exactly55·6!·10^36/N^(7/2) after multiplying byN. Moreoverδ²<.001δ. The resulting lower bound(.998)δ−(u²+.0002)/N is strictly positive on the whole interval, with the constants checked rationally.
 
-La monotonía v→t_v cubre todo el intervalo de centros y su extremo superior coincide con el comienzo del hombro039; por tanto se controla TODA la cola posterior. La diferencia exacta del primer centro respecto d/992 es dδ0(1985+δ0)/(992a_v)<5. Queda aprobado h_N(e^t)>0 yK_N(e^t)>0 para TODOt≥(N−1)/992+5 y TODOSN≥2^80. Es un corte suficiente, no una localización exacta de la transición.
+The monotonicity v→t_v covers the whole interval of centers and its upper endpoint coincides with the start of the shoulder039; hence the WHOLE later tail is controlled. The exact difference of the first center with respect to d/992 is dδ0(1985+δ0)/(992a_v)<5. h_N(e^t)>0 andK_N(e^t)>0 for ALLt≥(N−1)/992+5 and ALLN≥2^80 are approved. It is a sufficient cutoff, not an exact localization of the transition.
 
-El resultado mejora O(√N)039 a distancia constante para los mismos inversos completos. Los signos centrales opuestos y este corte no se convierten en un signo de la forma W, del emparejamiento interior ni de una ventana T. No hay edición de papers ni uso de argumentos de ceros/equivalencias.
+The result improves O(√N)039 to constant distance for the same complete inverses. The opposite central signs and this cutoff do not become a sign of the form W, of the interior pairing nor of a window T. No paper edits nor use of zeros/equivalence arguments.

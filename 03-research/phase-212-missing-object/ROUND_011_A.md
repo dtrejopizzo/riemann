@@ -1,174 +1,174 @@
-# Ronda 11, A: los residuos abiertos de (PC) y la discrepancia reticular unilateral
+# Round 11, A: the open residues of (PC) and the one-sided lattice discrepancy
 
-Notación del brief común. τ_aF(t) = F(t+a); S_N = Σ_{n≤N} n^{−1/2}τ_{log n}; C_N(D) su continuo polar,
-(C_N(D)g)(t) = e^{−t/2}∫_{−∞}^{t+log N} e^{y/2}g(y)dy; S_N^ren = S_N − C_N(D); P = P_T; A = A_M el operador de la
-forma; ℓ_T(F) = (1−P)AF la fuga exterior; 𝓕 la transformada aditiva transportada.
+Notation of the common brief. τ_aF(t) = F(t+a); S_N = Σ_{n≤N} n^{−1/2}τ_{log n}; C_N(D) its polar continuum,
+(C_N(D)g)(t) = e^{−t/2}∫_{−∞}^{t+log N} e^{y/2}g(y)dy; S_N^ren = S_N − C_N(D); P = P_T; A = A_M the operator of the
+form; ℓ_T(F) = (1−P)AF the exterior leakage; 𝓕 the transported additive transform.
 
-**Resultado.** Ninguna candidata pasa la puerta. El mecanismo de discrepancia reticular con signo (test integral,
-Hermite–Hadamard, primer resto de Euler–Maclaurin) muere ante L161.3 por dos motivos. (a) El resto Δ^R ℓ_T(F) es
-lineal en F, y un signo uniforme de un funcional lineal impar sólo es posible si el funcional es idénticamente nulo.
-(b) El peine que muestrea es de pesos unidad n^{−1/2}: el signo de Euler–Maclaurin no ve Λ y es el mismo para cΛ,
-para el borrado y para Beurling. El intercambio log n = ∫dx/x vía Λ∗1 = log recae en el primitivo escalar de
-Stieltjes (R161_004 Cor. 2.1; Paper 41 C4–C5) y en el resto de Bernoulli firmado (106_109 (9)–(10)). Ambos están
-cerrados.
+**Result.** No candidate passes the gate. The mechanism of signed lattice discrepancy (integral test,
+Hermite–Hadamard, first Euler–Maclaurin remainder) dies against L161.3 for two reasons. (a) The remainder Δ^R ℓ_T(F) is
+linear in F, and a uniform sign of an odd linear functional is only possible if the functional is identically zero.
+(b) The sampling comb has unit weights n^{−1/2}: the Euler–Maclaurin sign does not see Λ and is the same for cΛ,
+for deletion and for Beurling. The exchange log n = ∫dx/x via Λ∗1 = log falls back onto the scalar Stieltjes
+primitive (R161_004 Cor. 2.1; Paper 41 C4–C5) and onto the signed Bernoulli remainder (106_109 (9)–(10)). Both are
+closed.
 
-## 0. Paso 0: los cuatro residuos, en primaria
+## 0. Step 0: the four residues, in primary sources
 
-Leí completos R161_004, 005, 006, 020 y 023. De R161_015, 016, 021, 022, 029, 038, 041 y 050 leí las secciones de
-enunciado y de estado. También leí R163_153 y R170_853 §§4–5, RULES_AVOID K, L y T, y ANNEX_161_FILES_1 §(c)
-y _2 (038, 050).
+I read R161_004, 005, 006, 020 and 023 in full. Of R161_015, 016, 021, 022, 029, 038, 041 and 050 I read the statement
+and status sections. I also read R163_153 and R170_853 §§4–5, RULES_AVOID K, L and T, and ANNEX_161_FILES_1 §(c)
+and _2 (038, 050).
 
 ### 0.1 L161.3 / PC-port (R161_004 §6, R161_005 §5, R161_006)
 
-- **Enunciado abierto.** Sea F un estado primitivo de primer contacto: PAPF = r = αe^{−t/2} + βe^{t/2}. El puerto
-  B^ren_{N,T}(F) = PS_N^ren(1−P)AF, en su límite orientado y antes de cualquier traza, tendría que tener un símbolo
-  normal crítico no nulo. Además, la ecuación de igualdad junto con la cancelación de Tate tendría que anularlo
+- **Open statement.** Let F be a primitive first-contact state: PAPF = r = αe^{−t/2} + βe^{t/2}. The port
+  B^ren_{N,T}(F) = PS_N^ren(1−P)AF, in its oriented limit and before any trace, would have to have a non-zero critical normal
+  symbol. Moreover, the equality equation together with Tate cancellation would have to annihilate it
   (R161_005 §5).
-- **PROVED alrededor.**
-  - (005 Teor. 1.1) PR_{M,N}𝓕F = PS_N r + B_{N,T}(F).
-  - (006 Teor. 2.1) B^ren(F)(t) = Δ^R_{N,T}ℓ_T(F)(t) − e^{−t/2}a_−(ℓ_T(F)), con
+- **PROVED around it.**
+  - (005 Thm. 1.1) PR_{M,N}𝓕F = PS_N r + B_{N,T}(F).
+  - (006 Thm. 2.1) B^ren(F)(t) = Δ^R_{N,T}ℓ_T(F)(t) − e^{−t/2}a_−(ℓ_T(F)), with
     Δ^R_{N,T}g(t) = Σ_{e^{T−t}<n≤N} n^{−1/2}g(t+log n) − e^{−t/2}∫_T^{t+log N}e^{y/2}g(y)dy,
-    y la reflexión correspondiente para Δ^L.
-  - Cámara 0.8 < T < ½log5: Z_{T,−}^{−1} = I − K + K² (005 §4).
-- **Por qué se detuvo.** El cuadrado ‖B‖² pierde la orientación (005 §2). La traza escalar recae en Paper 41 C5
-  (004 §2). Llevarlo a una historia de divisores recae en el no-go CMO de la fase 121 (004 §3).
-- **Memos posteriores.** R161_028–029: la capa polar es la imagen exterior. La norma de la discrepancia móvil
-  N_f(a) = ‖Z_af‖² tiene derivada (2.2) y saltos (3.2) indefinidos; la monotonía ordinaria es **FALSA** (029 §7).
-  El signo que queda se identifica con la compuerta inversa de Markov de R161_016. Cerrado en la clase
-  «monotonía de la norma de la discrepancia» por un falsificador numérico (script 161_02). La versión orientada
-  sigue OPEN.
-- **Controles.** Δ^R tiene pesos unidad y no contiene Λ. Los pesos sólo entran a través de g = ℓ_T(F). Con cΛ y con
-  el borrado de una potencia de primo cambia g y el operador Δ^R queda igual. Beurling cambia la retícula del peine
-  (R161_001 Teor. 4.1: falta el dato de Poisson entero).
+    and the corresponding reflection for Δ^L.
+  - Chamber 0.8 < T < ½log5: Z_{T,−}^{−1} = I − K + K² (005 §4).
+- **Why it stopped.** The square ‖B‖² loses the orientation (005 §2). The scalar trace falls back onto Paper 41 C5
+  (004 §2). Bringing it to a divisor history falls back onto the CMO no-go of phase 121 (004 §3).
+- **Later memos.** R161_028–029: the polar layer is the exterior image. The norm of the moving discrepancy
+  N_f(a) = ‖Z_af‖² has indefinite derivative (2.2) and jumps (3.2); ordinary monotonicity is **FALSE** (029 §7).
+  The remaining sign is identified with the inverse Markov gate of R161_016. Closed in the class
+  «monotonicity of the discrepancy norm» by a numerical falsifier (script 161_02). The oriented version
+  remains OPEN.
+- **Checks.** Δ^R has unit weights and contains no Λ. The weights only enter through g = ℓ_T(F). With cΛ and with
+  deletion of a prime power g changes and the operator Δ^R stays the same. Beurling changes the lattice of the comb
+  (R161_001 Thm. 4.1: the integer Poisson datum is missing).
 
 ### 0.2 L161.4 (R161_020 §5)
 
-- **Enunciado abierto.** Construir V_{M,N,T}F a partir de (PC-ren), heredado del producto zeta y de los términos
-  de Tate cruzados y sin definirlo a partir de L^sc, tal que lim‖H_T^−E_N^ren V F‖² = L_T^sc(F) := ‖(I−P_+)C_log g‖².
-  La identidad finita de primer contacto tendría que anular el miembro izquierdo.
-- **PROVED alrededor.**
-  - Rigidez de compresión unitaria (Lema 1.1).
-  - Cuadrado de fuga (0.2).
+- **Open statement.** Build V_{M,N,T}F from (PC-ren), inherited from the zeta product and the crossed Tate terms
+  and without defining it from L^sc, such that lim‖H_T^−E_N^ren V F‖² = L_T^sc(F) := ‖(I−P_+)C_log g‖².
+  The finite first-contact identity would have to annihilate the left-hand side.
+- **PROVED around it.**
+  - Unitary compression rigidity (Lemma 1.1).
+  - Leakage square (0.2).
   - Error (3.4).
-  - Forma de Hardy (4.3).
-  - Cierre por la red de polos Gamma (R161_019).
-- **Por qué se detuvo.** E_N^ren → 0 fuertemente, de modo que todo límite lineal acotado mata ambos lados
-  (R161_016 §3 lo prueba en la clase de límites fuertes acotados). Falta una V que no sea circular.
-- **Posteriores.** K1 de RULES_AVOID: «los cuadrados de fuga son correctos, pero no hay identidad que los conecte
-  con el defecto de PC». No hay no-go ni falsificador. Sigue OPEN.
-- **Controles.** L^sc no contiene pesos aritméticos; sólo C_log y el soporte. El dato aritmético tendría que entrar
-  por V, y por eso los controles no se pueden evaluar hasta que V exista.
+  - Hardy form (4.3).
+  - Closure by the Gamma pole lattice (R161_019).
+- **Why it stopped.** E_N^ren → 0 strongly, so every bounded linear limit kills both sides
+  (R161_016 §3 proves it in the class of bounded strong limits). A non-circular V is missing.
+- **Later.** K1 of RULES_AVOID: «the leakage squares are correct, but there is no identity connecting them
+  with the PC defect». There is neither a no-go nor a falsifier. Remains OPEN.
+- **Checks.** L^sc contains no arithmetic weights; only C_log and the support. The arithmetic datum would have to enter
+  through V, and therefore the checks cannot be evaluated until V exists.
 
 ### 0.3 L161.5–L161.6 (R161_021 §5, R161_022 §4, R161_023 §5)
 
-- **Enunciado abierto.** Encontrar una ley de borde antisimétrica, obtenida de (PC-ren) en dos orientaciones antes
-  de recombinar, que lleve Re⟨g_N, S_N^ren w_N⟩ → 0. Tiene que distinguir ⟨g_N, S w_N⟩ de ⟨S*g_N, w_N⟩ a través del
-  borde móvil y no puede seguirse de a_T(F,H) = 0 para H primitivo.
-- **PROVED alrededor.**
-  - Criterio X_T(F) = 0 ⇔ C_log g = −εg ⇒ F = 0 (021, 023 (5.1)).
-  - Proyección de Tate ⟨r, ΤPy⟩ = ⟨Sr, g⟩ (023 (1.3)).
-- **Por qué se detuvo.** El test canónico Π_TP_TZ*g recombina tautológicamente en (PC-ren). Usar la matriz cruzada
-  como Gram es REJECTED.
-- **Posteriores.**
-  - R163_153: para un puerto con soporte a la derecha, el test vale exactamente 0 para todo N. Es un no-go por
-    soporte y polaridad que vale para cualquier peine de pesos unidad.
-  - R170_853 §4: imponer z_F = 0 repite L161.6.
-  - Índice 04, G1C-R161_022-023: REF-D.
-- **Controles.** El colapso de R163_153 no usa Λ, de modo que es ciego a los tres controles. La ley buscada no
-  existe todavía.
+- **Open statement.** Find an antisymmetric boundary law, obtained from (PC-ren) in two orientations before
+  recombining, that drives Re⟨g_N, S_N^ren w_N⟩ → 0. It must distinguish ⟨g_N, S w_N⟩ from ⟨S*g_N, w_N⟩ through the
+  moving boundary and cannot follow from a_T(F,H) = 0 for H primitive.
+- **PROVED around it.**
+  - Criterion X_T(F) = 0 ⇔ C_log g = −εg ⇒ F = 0 (021, 023 (5.1)).
+  - Tate projection ⟨r, ΤPy⟩ = ⟨Sr, g⟩ (023 (1.3)).
+- **Why it stopped.** The canonical test Π_TP_TZ*g recombines tautologically in (PC-ren). Using the cross matrix
+  as a Gram is REJECTED.
+- **Later.**
+  - R163_153: for a right-supported port, the test is exactly 0 for all N. It is a support and polarity no-go
+    valid for any comb with unit weights.
+  - R170_853 §4: imposing z_F = 0 repeats L161.6.
+  - Index 04, G1C-R161_022-023: REF-D.
+- **Checks.** The collapse of R163_153 does not use Λ, so it is blind to the three checks. The sought law does not
+  exist yet.
 
-### 0.4 Mínimo del puerto / pullback inverso (R161_015 §4, R161_016 §2)
+### 0.4 Port minimum / inverse pullback (R161_015 §4, R161_016 §2)
 
-- **Enunciado abierto.** Sobre el radical de primer contacto, N_T(δ) − N_T(0) = ‖D_{EΓ,δ}E^phys_{T,δ}F‖² + R con
-  liminf R/δ ≥ 0, construido desde las fuentes (016 (2.2)).
-- **PROVED alrededor.**
-  - Pendiente de norma −2∫(t−T)|g|² (015 Teor. 3.1).
-  - Equivalencia con la última cota superior (015).
-  - Criterio condicional de cierre (016 Teor. 2.1).
-  - El pullback directo de Markov da la flecha automática (016 Prop. 1.1).
-  - El dato finito 2, 3, 4 controla sólo el primer collar (016 §5).
-- **Por qué se detuvo.** Hace falta una dispersión de orden cero que invierta entrada y salida, y E_N^ren no puede
-  serlo.
-- **Posteriores.** R161_029 identifica L161.11 con esta compuerta. R161_038 y R161_050 cierran la clase formal
-  (involuciones + (PC) lineal + radicalidad + paridad) mediante contramodelos 2×2 y 3×3. Sigue OPEN fuera de esa
-  clase.
-- **Controles.** No están evaluados.
+- **Open statement.** On the first-contact radical, N_T(δ) − N_T(0) = ‖D_{EΓ,δ}E^phys_{T,δ}F‖² + R with
+  liminf R/δ ≥ 0, built from the sources (016 (2.2)).
+- **PROVED around it.**
+  - Norm slope −2∫(t−T)|g|² (015 Thm. 3.1).
+  - Equivalence with the last upper bound (015).
+  - Conditional closure criterion (016 Thm. 2.1).
+  - The direct Markov pullback gives the automatic arrow (016 Prop. 1.1).
+  - The finite datum 2, 3, 4 controls only the first collar (016 §5).
+- **Why it stopped.** A zero-order scattering that inverts input and output is needed, and E_N^ren cannot
+  be one.
+- **Later.** R161_029 identifies L161.11 with this gate. R161_038 and R161_050 close the formal class
+  (involutions + linear (PC) + radicality + parity) by 2×2 and 3×3 countermodels. Remains OPEN outside that
+  class.
+- **Checks.** Not evaluated.
 
-Los cuatro residuos están formulados sobre el radical de un primer contacto supuesto. Ninguno es una identidad
-sobre todo P_T (aviso de ANNEX_161_FILES_1 §(c)).
+The four residues are formulated on the radical of a supposed first contact. None is an identity
+on all of P_T (warning of ANNEX_161_FILES_1 §(c)).
 
-## 1. Paso 1: la discrepancia reticular sobre L161.3
+## 1. Step 1: the lattice discrepancy on L161.3
 
-**(i) La función φ.** En Δ^R hago el cambio y = t + log x. Queda
-Δ^R g(t) = Σ_{e^{T−t}<n≤N} φ_t(n) − ∫_{e^{T−t}}^{N} φ_t(x)dx, con φ_t(x) = x^{−1/2} g(t + log x) y g = ℓ_T(F).
-Es exactamente una discrepancia reticular unilateral con extremo inferior móvil e^{T−t} (PROVED, cálculo directo).
-φ_t no es ni un cuadrado ni un producto: es **lineal** en F.
+**(i) The function φ.** In Δ^R I make the change y = t + log x. It becomes
+Δ^R g(t) = Σ_{e^{T−t}<n≤N} φ_t(n) − ∫_{e^{T−t}}^{N} φ_t(x)dx, with φ_t(x) = x^{−1/2} g(t + log x) and g = ℓ_T(F).
+It is exactly a one-sided lattice discrepancy with moving lower endpoint e^{T−t} (PROVED, direct computation).
+φ_t is neither a square nor a product: it is **linear** in F.
 
-**(ii) Ordenamiento monótono o convexo para todo F.**
+**(ii) Monotone or convex ordering for all F.**
 
-- **Lema 1 (PROVED).** Supongamos que existe una regla de signo σΔ^R ℓ_T(F)(t) ≥ 0 válida para todo F de P_T, o
-  para todo F de un cono que contenga a −F junto con F. Entonces Δ^R ℓ_T(F)(t) = 0.
-  *Prueba.* El funcional es lineal e impar. ∎
-- Para obtener un signo útil hay que pasar a una forma cuadrática ⟨h(F), Δ^R ℓ_T F⟩. El sumando resultante es
-  bilineal, φ_t(n)·(dato de h), y no tiene monotonía uniforme. La monotonía de x ↦ x^{−1/2}g(t+log x) en (e^{T−t}, N)
-  exige que g sea esencialmente monótona en (T, ∞). La imagen exterior de A sobre P_T no es un cono de funciones
-  monótonas (ARGUED: contiene ℓ_T(F) y −ℓ_T(F)).
-- **Lema 2 (PROVED).** Δ^R depende sólo de la retícula ℤ_{≥1} y de los pesos n^{−1/2}; no contiene Λ. Por tanto,
-  cualquier signo que provenga de la monotonía o la convexidad de φ_t (integral test, Hermite–Hadamard, primer resto
-  de Euler–Maclaurin con B_1 firmado) se conserva sin cambios para cΛ con c = 2 y para el borrado de una potencia de
-  primo, porque estos sólo modifican g. Por la disciplina R3-i, un signo así no rompe ante dos de los tres controles.
-- **Intercambio por Λ∗1 = log.** La desigualdad log n ≤ Σ_{m<n}1/m (error firmado γ + O(1/n)) es una afirmación
-  escalar. Introducirla en Δ^R obliga a escalarizar la fibra de divisores antes del puerto. Eso es exactamente la
-  clase cerrada de R161_004 Cor. 2.1: primitivo de Stieltjes de Paper 41 (3.10), completación C5 con cuadrado
-  negativo e intervalo negativo bajo log 2. Lo que sí rompe ante cΛ es el defecto δ_a(k) = Σ_{d|k}a(d) − log k
-  (R161_001 Teor. 4.1). Ese defecto es lineal en el peso y no es una discrepancia monótona (U1 de ANNEX_161: Λ∗1
-  entra sólo linealmente).
+- **Lemma 1 (PROVED).** Suppose there is a sign rule σΔ^R ℓ_T(F)(t) ≥ 0 valid for all F in P_T, or
+  for all F in a cone containing −F together with F. Then Δ^R ℓ_T(F)(t) = 0.
+  *Proof.* The functional is linear and odd. ∎
+- To obtain a useful sign one must pass to a quadratic form ⟨h(F), Δ^R ℓ_T F⟩. The resulting summand is
+  bilinear, φ_t(n)·(datum of h), and has no uniform monotonicity. Monotonicity of x ↦ x^{−1/2}g(t+log x) on (e^{T−t}, N)
+  requires g to be essentially monotone on (T, ∞). The exterior image of A on P_T is not a cone of monotone
+  functions (ARGUED: it contains ℓ_T(F) and −ℓ_T(F)).
+- **Lemma 2 (PROVED).** Δ^R depends only on the lattice ℤ_{≥1} and the weights n^{−1/2}; it contains no Λ. Hence,
+  any sign coming from monotonicity or convexity of φ_t (integral test, Hermite–Hadamard, first Euler–Maclaurin
+  remainder with signed B_1) is preserved unchanged for cΛ with c = 2 and for deletion of a prime
+  power, because these only modify g. By discipline R3-i, such a sign does not break under two of the three checks.
+- **Exchange via Λ∗1 = log.** The inequality log n ≤ Σ_{m<n}1/m (signed error γ + O(1/n)) is a scalar
+  statement. Introducing it into Δ^R forces scalarizing the divisor fibre before the port. That is exactly the
+  closed class of R161_004 Cor. 2.1: Stieltjes primitive of Paper 41 (3.10), completion C5 with negative square
+  and negative interval below log 2. What does break under cΛ is the defect δ_a(k) = Σ_{d|k}a(d) − log k
+  (R161_001 Thm. 4.1). That defect is linear in the weight and is not a monotone discrepancy (U1 of ANNEX_161: Λ∗1
+  enters only linearly).
 
-**(iii) Cotejo con lo cerrado.**
+**(iii) Cross-check with what is closed.**
 
-- **106_109 §2 (9)–(10), §§5, 8–9.** La sumación por partes gaussiana deja un resto de Bernoulli firmado cuyo núcleo
-  cambia de signo en cada celda del retículo. El signo de Euler–Maclaurin ya está identificado y no se transporta.
-- **POWER_GRAM_SLICES §§8–8.3.** Los prefijos theta, la cola continua y la simetrización no restauran PSD. La
-  discrepancia «enteros menos continuo» de una función theta pertenece a esa familia.
-- **R161_004.** Los sucesores escalares de Stieltjes y las fibras positivas de divisores están cerrados. R161_041 no
-  añade signo: la derivada de E da U+V y la de C da U−V.
-- **R161_029.** La versión cuadrática natural, N_f(a) = ‖Z_af‖², tiene derivada y saltos indefinidos, y la monotonía
-  es FALSA. Ésta es precisamente la «discrepancia reticular con signo» aplicada al objeto del residuo: ya está
-  probada y falsada.
-- **R161_038 y R161_050.** Los contramodelos no tienen semigrupo de traslaciones enteras ni continuo de
-  Euler–Maclaurin (038 lo declara en «No modela»), así que en ellos no hay signo reticular disponible. Esto indica
-  que el mecanismo está **fuera** de su clase. Pero no le da contenido: los Lemas 1 y 2 lo matan por linealidad y
-  por ceguera al peso, independientemente de esos contramodelos.
+- **106_109 §2 (9)–(10), §§5, 8–9.** Gaussian summation by parts leaves a signed Bernoulli remainder whose kernel
+  changes sign in each lattice cell. The Euler–Maclaurin sign is already identified and does not transport.
+- **POWER_GRAM_SLICES §§8–8.3.** Theta prefixes, the continuous tail and symmetrization do not restore PSD. The
+  discrepancy «integers minus continuum» of a theta function belongs to that family.
+- **R161_004.** Scalar Stieltjes successors and positive divisor fibres are closed. R161_041 does not
+  add a sign: the derivative of E gives U+V and that of C gives U−V.
+- **R161_029.** The natural quadratic version, N_f(a) = ‖Z_af‖², has indefinite derivative and jumps, and monotonicity
+  is FALSE. This is precisely the «signed lattice discrepancy» applied to the object of the residue: already
+  proved and falsified.
+- **R161_038 and R161_050.** The countermodels have neither a semigroup of integer translations nor an Euler–Maclaurin
+  continuum (038 states it under «Does not model»), so no lattice sign is available in them. This indicates
+  that the mechanism lies **outside** their class. But it does not give it content: Lemmas 1 and 2 kill it by linearity and
+  by blindness to the weight, independently of those countermodels.
 
-**Diferencia neta: ninguna.** Me detengo antes de derivar.
+**Net difference: none.** I stop before deriving.
 
-## 2. Paso 2: no sobrevive ninguna candidata
+## 2. Step 2: no candidate survives
 
-| Residuo | Clase que lo cierra, u operación que falta |
+| Residue | Class that closes it, or missing operation |
 |---|---|
-| L161.3 | La monotonía de la norma de la discrepancia móvil es FALSA (029). El signo reticular lineal es trivial (Lema 1) y ciego al peso (Lema 2). La escalarización está cerrada (004). Falta un apareamiento **orientado** de dos orientaciones cuyo término cruzado tenga el signo de D^Poisson ≥ 0 (029 (6.1)). |
-| L161.4 | No hay no-go. Falta V_{M,N,T} no circular, con convergencia de grafo proyectada (no fuerte), que lleve el dato aritmético. |
-| L161.5–6 | El test conjugado directo es tautológico (023) y vale idénticamente 0 para un puerto derecho (R163_153). Falta una ley de concomitante de borde que no sea una consecuencia de la radicalidad, insertando 𝓕 antes de la adjunción. |
-| Mínimo del puerto | La clase formal está cerrada (038, 050) y el pullback directo da la flecha automática (016). Falta una dispersión de orden cero que invierta entrada y salida. Es la misma compuerta que L161.11. |
+| L161.3 | Monotonicity of the moving discrepancy norm is FALSE (029). The linear lattice sign is trivial (Lemma 1) and blind to the weight (Lemma 2). Scalarization is closed (004). Missing: an **oriented** pairing of two orientations whose cross term has the sign of D^Poisson ≥ 0 (029 (6.1)). |
+| L161.4 | No no-go. Missing: a non-circular V_{M,N,T}, with projected (not strong) graph convergence, carrying the arithmetic datum. |
+| L161.5–6 | The direct conjugate test is tautological (023) and is identically 0 for a right port (R163_153). Missing: a boundary concomitant law that is not a consequence of radicality, inserting 𝓕 before the adjunction. |
+| Port minimum | The formal class is closed (038, 050) and the direct pullback gives the automatic arrow (016). Missing: a zero-order scattering that inverts input and output. It is the same gate as L161.11. |
 
-**Orden.** Pondría primero **L161.4**. Es el único residuo cuyo objetivo es una igualdad entre dos cuadrados ya
-PROVED ≥ 0, y nada en el corpus lo cierra: ni no-go ni falsificador, sólo «falta V». Los otros tres colapsan, en
-memos posteriores, en una misma compuerta: el término cruzado orientado de 029 (6.1) y 016 (2.2). L161.4 tiene dos
-reservas. Hereda la dependencia del radical. Y el enlace (4) con la positividad global sobre todo P_T no está
-escrito en ninguna parte, de modo que habría que añadirlo antes de cualquier construcción.
+**Order.** I would put **L161.4** first. It is the only residue whose target is an equality between two squares already
+PROVED ≥ 0, and nothing in the corpus closes it: neither no-go nor falsifier, only «V is missing». The other three collapse, in
+later memos, into one and the same gate: the oriented cross term of 029 (6.1) and 016 (2.2). L161.4 has two
+caveats. It inherits the dependence on the radical. And the link (4) with global positivity on all of P_T is not
+written anywhere, so it would have to be added before any construction.
 
-## Afirmaciones y etiquetas
+## Claims and labels
 
-1. Δ^R ℓ_T(F)(t) = Σ φ_t(n) − ∫φ_t, con φ_t(x) = x^{−1/2}ℓ_T(F)(t+log x) y extremo inferior e^{T−t}: PROVED.
-2. Lema 1 (un signo uniforme de un funcional lineal impar obliga a que sea nulo): PROVED.
-3. Lema 2 (Δ^R no contiene Λ; un signo de monotonía es invariante ante cΛ y el borrado): PROVED.
-4. La imagen exterior ℓ_T(P_T) no es un cono monótono: ARGUED.
-5. El intercambio log n ↔ Σ1/m recae en R161_004 Cor. 2.1 y Paper 41 C5: CITED.
-6. El resto de Bernoulli firmado ya está identificado (106_109; POWER_GRAM_SLICES §8): CITED.
-7. La monotonía de la norma de la discrepancia móvil es falsa (R161_029): CITED (NO-GO numérico de esa memo).
-8. 038 y 050 carecen de retícula entera, y el mecanismo cae fuera de su clase sin ganar contenido: PROVED (lectura
-   de las definiciones).
-9. Los estados de L161.3, L161.4, L161.5–6 y del mínimo del puerto son los de la tabla del §2: CITED / OPEN.
-10. Candidata que pasa la puerta: ninguna. NO-GO de selección en la clase «discrepancia reticular firmada aplicada
-    a los restos de PC».
-11. L161.4 primero en el orden: ARGUED.
+1. Δ^R ℓ_T(F)(t) = Σ φ_t(n) − ∫φ_t, with φ_t(x) = x^{−1/2}ℓ_T(F)(t+log x) and lower endpoint e^{T−t}: PROVED.
+2. Lemma 1 (a uniform sign of an odd linear functional forces it to vanish): PROVED.
+3. Lemma 2 (Δ^R contains no Λ; a monotonicity sign is invariant under cΛ and deletion): PROVED.
+4. The exterior image ℓ_T(P_T) is not a monotone cone: ARGUED.
+5. The exchange log n ↔ Σ1/m falls back onto R161_004 Cor. 2.1 and Paper 41 C5: CITED.
+6. The signed Bernoulli remainder is already identified (106_109; POWER_GRAM_SLICES §8): CITED.
+7. Monotonicity of the moving discrepancy norm is false (R161_029): CITED (numerical NO-GO of that memo).
+8. 038 and 050 lack an integer lattice, and the mechanism falls outside their class without gaining content: PROVED (reading
+   of the definitions).
+9. The statuses of L161.3, L161.4, L161.5–6 and the port minimum are those of the table of §2: CITED / OPEN.
+10. Candidate passing the gate: none. Selection NO-GO in the class «signed lattice discrepancy applied
+    to the PC remainders».
+11. L161.4 first in the order: ARGUED.

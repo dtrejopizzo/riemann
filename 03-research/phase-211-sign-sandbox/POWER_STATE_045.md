@@ -1,23 +1,23 @@
-# Estado 045 — Frontera documental corregida y prueba de un certificado heredado
+# State 045 — Corrected documentary frontier and test of an inherited certificate
 
-El signo global permanece OPEN. La ronda no añade una ventana ni una región de positividad de potencias. Papers intactos.
+The global sign remains OPEN. The round adds no window nor region of positivity of powers. Papers untouched.
 
-## Corrección importante del estado
+## Important correction of the state
 
-No debe confundirse el rango incluido en Paper47 con todo lo certificado previamente en el sandbox. Paper47 contiene la prueba hasta T=log(5)/2. ROUND_026_A, Theorem26A.2, registra una certificación asistida por computadora de lambda_A(T)>=2e-26 para TODOS los tests primitivos normalizados y TODOS 0<T<=207/200=1.035. Esta última sí supera log(5)/2, pero es un resultado anterior, no un avance de las rondas recientes de potencias.
+The range included in Paper47 must not be confused with everything previously certified in the sandbox. Paper47 contains the proof up to T=log(5)/2. ROUND_026_A, Theorem26A.2, records a computer-assisted certification of lambda_A(T)>=2e-26 for ALL normalised primitive tests and ALL 0<T<=207/200=1.035. The latter does exceed log(5)/2, but it is an earlier result, not progress of the recent power rounds.
 
-Root y mapa leyeron los logs archivados de ambas paridades a T=1.035, mu=2e-26; ambos registran certified:true. No se reprodujo ahora el cálculo grande. POWER_PRIMAL_AUDIT_045 precisa fuentes, los resúmenes JSON sobrescritos por otros intentos y la distinción entre build y certificado. Para T=1.098 se localizaron matrices y builds, pero no un certificado final: no se promueve ese extremo a resultado probado.
+The archived logs of both parities at T=1.035, mu=2e-26 were read twice independently; both record certified:true. The large computation was not reproduced now. POWER_PRIMAL_AUDIT_045 specifies sources, the JSON summaries overwritten by other attempts and the distinction between build and certificate. For T=1.098 matrices and builds were located, but not a final certificate: that endpoint is not promoted to a proved result.
 
-## Qué falla al reutilizar el certificado de Paper47
+## What fails when reusing the certificate of Paper47
 
-POWER_CONTACT_FLOOR_045 prueba, con revisión independiente y verificador racional reproducido por root, que al entrar el contacto 5 el piso crudo m(240)-A_T es menor que -1/2. Por ello no sirve mantener simultáneamente el corte240 y ese piso de masa total para obtener un lower no negativo mediante lowercert. No es negatividad de la forma ni imposibilidad de otros certificados. ROUND_026_A ya evita esa restricción usando cotas del símbolo real y otro corte.
+POWER_CONTACT_FLOOR_045 proves, with independent review and a reproduced rational verifier, that when contact 5 enters the raw floor m(240)-A_T is less than -1/2. Hence it is of no use to keep simultaneously the cutoff240 and that total-mass floor to obtain a nonnegative lower bound via lowercert. It is not negativity of the form nor impossibility of other certificates. ROUND_026_A already avoids that restriction using bounds of the real symbol and another cutoff.
 
-La nota escribe también los cruces lineales y cuadráticos y el borde polar que una propuesta basada en ese certificado debe conservar. Son fórmulas del método existente, no una nueva desigualdad de signo.
+The note also writes out the linear and quadratic cross terms and the polar boundary that a proposal based on that certificate must keep. They are formulas of the existing method, not a new sign inequality.
 
-## Trabajo en la representación L55-B
+## Work on the L55-B representation
 
-La construcción de un par positivo explícito sigue OPEN. La auditoría exige igualdad en todo el portador primitivo y coincidencia aritmética en la banda o discrepancia controlada; positividad de medidas aisladas no basta. El intento de imponer masa espectral total finita se retiró por ser una restricción artificial, ajena al candidato general.
+The construction of an explicit positive pair remains OPEN. The audit requires equality on the whole primitive carrier and arithmetic coincidence on the band or controlled discrepancy; positivity of isolated measures is not enough. The attempt to impose finite total spectral mass was withdrawn as an artificial restriction, foreign to the general candidate.
 
-POWER_PRIMAL_PAIR_045 estudia el ansatz más preciso de fijar la cola real y reparar sólo un compacto espectral. Para medidas PARES, la identidad en todos los tests primitivos fuerza que esa corrección compacta sea cero: aplicar F=(D²-1/4)phi, polarizar y localizar anula el núcleo en un intervalo; la compacidad anula entonces todos sus momentos. A T=3/5, el símbolo en cero es menor que -15/2. Por ello este ansatz no produce un representante positivo con slack <=15/2, aunque la forma en esa ventana ya es positiva. Root revisó la prueba y reprodujo el verificador de constantes; la auditoría independiente se consigna en POWER_PRIMAL_AUDIT_045.
+POWER_PRIMAL_PAIR_045 studies the more precise ansatz of fixing the real tail and repairing only a spectral compact. For EVEN measures, the identity on all primitive tests forces that compact correction to be zero: applying F=(D²-1/4)phi, polarising and localising annihilates the kernel on an interval; compactness then annihilates all its moments. At T=3/5, the symbol at zero is less than -15/2. Hence this ansatz does not produce a positive representative with slack <=15/2, although the form in that window is already positive. The proof was reviewed and the constant verifier reproduced; the independent audit is recorded in POWER_PRIMAL_AUDIT_045.
 
-La paridad es esencial: sin ella sólo se determina la parte par de la corrección. Tampoco se excluyen correcciones no compactas. En el subcaso de una corrección dada por una función continua templada y un resto temporal exterior que es medida finita firmada, el intento vuelve exactamente al dual(D) existente. No se afirma esa identificación para toda medida singular o distribución exterior. No se construyó un nuevo par positivo ni se cerró L55-B.
+Parity is essential: without it only the even part of the correction is determined. Non-compact corrections are not excluded either. In the subcase of a correction given by a tempered continuous function and an exterior temporal remainder that is a finite signed measure, the attempt returns exactly to the existing dual(D). That identification is not claimed for every singular measure or exterior distribution. No new positive pair was constructed and L55-B was not closed.

@@ -50,9 +50,9 @@ direct re-reading of the three phases the task calls out specifically (202, 205,
 File: 03-research/phase-202-exterior-plank/README.md, WORK_STATE.md, REVIEW_STATE.md.
 
 Status: **phase explicitly closed by its own pre-declared death criterion (a), in round 2** — not
-stopped by owner fatigue. Quote (README): "Closure — phase dead by criterion (a) in round 2... No
+stopped by fatigue. Quote (README): "Closure — phase dead by criterion (a) in round 2... No
 sign. (★★), L′♯, row D OPEN." The death criterion was fixed *before* starting (three rounds of a
-fixed team); it triggered in round 2, i.e. inside budget, not because the owner called a stop.
+fixed team); it triggered in round 2, i.e. inside budget, not because of an external stop.
 
 Last mathematical obstacle, precisely: Lemma M (R2, PROVED) shows the archimedean weight 𝔅_n is never
 multiplicative (by Riemann-Lebesgue, the only continuous multiplicative function on dense log ℚ is a
@@ -98,11 +98,9 @@ File: GOAL_D_STATUS.md (full log of ~20 continuations, 2026-10-18 to 2026-10-19)
 **This is the strongest candidate for "stopped-not-dead," but the log itself argues against that
 framing with unusual rigor.** The explicit goal-tracking tool was set to status `blocked` after three
 consecutive continuations (post-016) produced no new step toward the sign of the auxiliary kernel Q.
-The log is explicit that this is *not* a budget/patience stop: "El límite de uso de un revisor NO es el
-motivo del bloqueo" ("a reviewer's usage limit is NOT the reason for the block") and reiterates at each
-step that blocked ≠ a mathematical NO-GO ("No es una prueba de que no exista: es el punto muerto de
-esta investigación" — "this is not a proof that [the object] doesn't exist: it is this investigation's
-dead end"). So by the owner's own standing rule (only NO-GO-by-proof or falsifier closes a route), this
+The log is explicit that this is *not* a budget/patience stop: "A usage limit is NOT the reason for the block" and reiterates at each
+step that blocked ≠ a mathematical NO-GO ("this is not a proof that [the object] doesn't exist: it is this investigation's
+dead end"). So by the standing project rule (only NO-GO-by-proof or falsifier closes a route), this
 residue should be read as: **genuinely stuck for lack of a new idea, explicitly not closed, explicitly
 not a mathematical impossibility** — which is precisely the "stopped but not dead" category the task
 asks to flag, except that the phase file is unusually careful to say so itself.
@@ -160,10 +158,10 @@ proved elsewhere without being connected.)
    residues" list (R1-R10 plus the "Other open items" table) is, on this re-check, internally
    consistent with the phase-level memos: every PROVED sub-result is already scoped by its own memo as
    insufficient (necessary-only, an identity rather than an inequality, scoped to a sub-family, etc.),
-   and every such scoping was independently re-derived by a hostile audit in the same phase.
+   and every such scoping was independently re-derived by an independent audit in the same phase.
 2. One housekeeping item that functioned as a near-hit of the "mislabel" type rather than the
    "unrecognized progress" type: the λ_A/λ_W double-exponential ceiling confusion in 06_OPEN_RESIDUES,
-   caught and fixed during phase 209 (see above) — not a live issue now, but worth the owner knowing it
+   caught and fixed during phase 209 (see above) — not a live issue now, but worth knowing it
    existed, since it is exactly the kind of silent mislabel that could propagate into Paper 47 if a
    future round re-derives it from an un-audited citation.
 
@@ -172,11 +170,10 @@ proved elsewhere without being connected.)
 - **Phase 209 (nonlocal kernel), overall goal:** explicitly `blocked` by the goal-tracking tool after
   three unproductive continuations (rounds "after 016"), and the phase's own log insists, repeatedly
   and in writing, that this is not a mathematical NO-GO — only the absence of a next idea. What remains
-  to be done, verbatim from the final log entry: "para continuar con trabajo matemático concreto hace
-  falta un ingrediente nuevo (candidato de operador, identidad o lema de signo)" — i.e. a new candidate
-  operator/identity/sign lemma is needed; none of the auxiliary PROVED facts (005, 015, 016) supply it.
-  This is squarely in the "owner's time/patience" category the task asks about, except here it is the
-  investigation's own idea-exhaustion (no more candidates to try), not an owner-imposed stop; no
+  to be done, verbatim from the final log entry: "to continue with concrete mathematical work a new
+  ingredient is needed (an operator candidate, identity or sign lemma)"; none of the auxiliary PROVED facts (005, 015, 016) supply it.
+  This is squarely in the "time/patience" category the task asks about, except here it is the
+  investigation's own idea-exhaustion (no more candidates to try), not an externally imposed stop; no
   external stop order is recorded in this file.
 - **Phase 202 (exterior plank), residue "layer edges κ_{T+log n}":** flagged "Residue without a
   proposal" at closure — nobody has attempted a bound here; it was noted in passing rather than
@@ -194,8 +191,8 @@ proved elsewhere without being connected.)
 
 None found that are currently live in the index as read. The one identified instance (λ_A/λ_W
 double-exponential ceiling in 06_OPEN_RESIDUES' [margin] note and the R6 table row) was already
-corrected by the time of this audit, per phase-209's own log ("Auditoría de continuación posterior
-a015... Se corrigió una referencia obsoleta en archivo06 de residuos") — confirmed fixed by re-reading
+corrected by the time of this audit, per phase-209's own log ("Continuation audit after
+a015... An obsolete reference in residue file 06 was corrected") — confirmed fixed by re-reading
 the current 06_OPEN_RESIDUES_DEAD_SUBROUTES.md, whose [margin] bullet and R6 entry both now state the
 correct single-exponential ceiling for λ_A and flag the λ_W figure as unverified-and-non-transferable.
 No other mislabel surfaced in the phases inspected (161-210): labels (PROVED/CITED/ARGUED/OPEN/NO-GO)

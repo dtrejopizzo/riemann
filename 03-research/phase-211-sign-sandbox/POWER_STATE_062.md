@@ -1,26 +1,26 @@
-# POWER_STATE_062 — Residuo indispensable en el mismo caso129
+# POWER_STATE_062 — Indispensable residue in the same case129
 
-Estado: diagnóstico cuantitativo PROVED; ninguna nueva región de signo. Objetivo global OPEN. Papers intactos.
+Status: quantitative diagnosis PROVED; no new sign region. Global objective OPEN. Papers untouched.
 
-Se evaluó el balance renormalizado042 en el MISMO átomo129 ya decidido061. Con normalización por norma², beta=log(2pi)−1−gamma,
+The renormalised balance042 was evaluated on the SAME atom129 already decided061. With normalisation by norm², beta=log(2pi)−1−gamma,
 
     AFF=ARCHsharp+2gamma−beta J129(1),
     R=(ERR+2gamma−beta J129(1))/2,
-    W/norma²=AFF−2R.
+    W/norm²=AFF−2R.
 
-Los intervalos racionales auditados son
+The audited rational intervals are
 
     AFF ∈[−60446492280,−60446492279]/10^12,
     R ∈[−30223246208,−30223246207]/10^12.
 
-La parte afín tiene déficit aproximado.06044649228; el residuo completo lo repara casi exactamente. Por tanto esa parte afín no sirve como una base positiva desde la cual simplemente despreciar el resto. R incluye término periódicoB1 YerrorEuler; no se asigna toda la reparación a uno de ellos.
+The affine part has approximate deficit.06044649228; the full residue repairs it almost exactly. Hence that affine part is of no use as a positive base from which to simply neglect the rest. R includes the periodic termB1 ANDthe Euler error; the whole repair is not assigned to one of them.
 
-Fuentes POWER_GAMMA_AFFINE_BALANCE_062.md y POWER_GAMMA_AFFINE_AUDIT_062.md. Verificador tools/power_gamma_affine_balance_062_verify.py reproducido de forma independiente, exit0/PASS. Reutiliza024 y061 sin nuevosN, cortes o precisiones. No usa ABS-TAIL042, que exigeN>=2^80.
+Sources POWER_GAMMA_AFFINE_BALANCE_062.md and POWER_GAMMA_AFFINE_AUDIT_062.md. Verifier tools/power_gamma_affine_balance_062_verify.py reproduced independently, exit0/PASS. It reuses024 and061 without newN, cutoffs or precisions. It does not use ABS-TAIL042, which requiresN>=2^80.
 
-El R aquí calculado usaERR061 ya conocido: NO es una nueva estimación independiente capaz de propagar el signo. El pequeño margenW mantiene la prueba061 y no se infiere de redondeos independientes deAFF/R. La comparación de diferencias enN deJ,K yARCHsharp sigue pendiente; Kpositivoexterior yqconcava no ordenan esos términos. Los reagrupamientos024/026/030/042 no se cuentan como nuevas herramientas.
+The R computed here usesERR061 already known: it is NOT a new independent estimate capable of propagating the sign. The small marginW keeps the proof061 and is not inferred from independent roundings ofAFF/R. The comparison of differences inN ofJ,K andARCHsharp remains pending; positive exteriorK and concaveq do not order those terms. The regroupings024/026/030/042 are not counted as new tools.
 
-## Consulta063 — integración directa revisada y deduplicada
+## Query063 — direct integration reviewed and deduplicated
 
-Casos revisó la propuesta de acotarR directamente por celdas; root comprobó las identidades de divisores. Para U=B+gamma floor(x)+gamma/2−kappa, R=integral hU y el borde esJ(1)(3gamma/2−kappa). Integrar por partes conserva dU=−H_floor(x)dx+sum_(m>=2)(logm+gamma)delta_m. La identidad sum_(m<=y)mu(m)H_floor(y/m)/m=1 sigue de mu*1=delta; conJ=sum mu(m)w(mx), devuelve integralH_floor J=integralw. Asimismo sum logm J(m)=sum Lambda(m)w(m). MASS elimina la suma restante deJ.
+The proposal of boundingR directly by cells was reviewed by cases; the divisor identities were checked. For U=B+gamma floor(x)+gamma/2−kappa, R=integral hU and the boundary isJ(1)(3gamma/2−kappa). Integrating by parts keeps dU=−H_floor(x)dx+sum_(m>=2)(logm+gamma)delta_m. The identity sum_(m<=y)mu(m)H_floor(y/m)/m=1 follows from mu*1=delta; withJ=sum mu(m)w(mx), it returns integralH_floor J=integralw. Likewise sum logm J(m)=sum Lambda(m)w(m). MASS eliminates the remaining sum ofJ.
 
-Así la evaluación directa reconstruye los mismos contactos, resolvente yJ1 ya utilizados en061/062. No se ejecutó otra implementación ni se obtuvo una cota independiente deR. La vía factorial/Stirling fue revisada por insight048 y también vuelve a030/042 o a los componentesErlang033; no apareció una hipótesis nueva que evite sus pérdidas. Son deduplicaciones de propuestas concretas, no pruebas de imposibilidad general ni nuevos resultados de signo.
+Thus the direct evaluation reconstructs the same contacts, resolvent andJ1 already used in061/062. No other implementation was run and no independent bound ofR was obtained. The factorial/Stirling route was reviewed via insight048 and also returns to030/042 or to the Erlang components033; no new hypothesis avoiding their losses appeared. These are deduplications of concrete proposals, not proofs of general impossibility nor new sign results.

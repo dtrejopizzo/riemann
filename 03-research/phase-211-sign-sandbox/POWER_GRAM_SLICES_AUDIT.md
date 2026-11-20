@@ -1,16 +1,16 @@
-# Auditoría del kernel Gram y sus capas
+# Audit of the Gram kernel and its layers
 
-**APROBADO.** Lectura matemática y literal independiente, sin nuevos certificados ni cambios en papers.
+**APPROVED.** Independent mathematical and literal reading, with no new certificates and no changes to papers.
 
-Verificados: cancelación por paridad antes de DOM, constante C²/(2N), transformada doble sin factor2, cambio v=sigma²−tau² y suficiencia de capas PSD por integración de cada forma finita. La identidad cuártica y su serie Gram positiva son exactas.
+Verified: parity cancellation before DOM, constant C²/(2N), double transform without factor2, change of variables v=sigma²−tau², and sufficiency of PSD layers by integration of each finite form. The quartic identity and its positive Gram series are exact.
 
-La derivada normalizada en v0 exige CND de K_f=(f(t)+f(s))/(t+s). El cuadrático de tres nodos, epsilon=−B/Q_bR y los equivalentes B~(beta−alpha)f(R)/R², Q_bR~−f(R)/R son correctos. La ganancia crece como (beta−alpha)²f(R)/R³, divergente por la cola auditada105§4. Se fija R finito antes de tomar v pequeño. La congruencia final es d_i=c_i/Phi(t_i). La diagonal integral involucra Phi², no J del CORE.
+The normalized derivative at v0 requires CND of K_f=(f(t)+f(s))/(t+s). The three-node quadratic, epsilon=−B/Q_bR and the equivalents B~(beta−alpha)f(R)/R², Q_bR~−f(R)/R are correct. The gain grows as (beta−alpha)²f(R)/R³, divergent by the tail audited in105§4. R is fixed finite before taking v small. The final congruence is d_i=c_i/Phi(t_i). The integral diagonal involves Phi², not the J of the CORE.
 
-Dedup: búsquedas transversales y lectura selectiva de103_47/48,073/074,N_BUILD014/016/018,C9 no hallaron duplicado literal; no afirma exhaustividad ni prioridad absoluta. Marco Gram/Pólya clásico. Diferencia concreta: desintegración exacta en v y condición CND específica de sus capas.
+Dedup: cross searches and selective reading of103_47/48,073/074,N_BUILD014/016/018,C9 found no literal duplicate; no claim of exhaustiveness or absolute priority. Classical Gram/Pólya framework. Concrete difference: exact disintegration in v and the specific CND condition of its layers.
 
-La obstrucción sólo refuta que todas las capas sean PSD. No prueba indefinición de A ni W negativo. PSD del integral sigue OPEN: haría falta controlar compensación entre capas o construir otro Gram. Root y casos también aprobaron el literal. Fuente: POWER_GRAM_SLICES_OBSTRUCTION.md.
+The obstruction only refutes that all layers are PSD. It does not prove indefiniteness of A nor negative W. PSD of the integral remains OPEN: one would need to control compensation between layers or build another Gram. The literal statement and the cases were also checked and approved. Source: POWER_GRAM_SLICES_OBSTRUCTION.md.
 
 
-## Addendum de operaciones: APROBADO
+## Addendum on operations: APPROVED
 
-Revisados§7, el menor confluente con denominador4u⁴, la derivada del promedio de varianzas, suma por convolución y cotas inferiores por restricción positiva a compactos. El criterio hazard descartado tiene diagonal estrictamente negativa por073. El multiplicador Fourier positivo de la mezcla gaussiana satisface exactamente Bop(-Phi')=tPhi, pero no controla el término de semirrecta de Q_A. Estas consecuencias no deciden el A real. No nuevos certificados; antecedente074 explícito.
+Reviewed§7, the confluent minor with denominator4u⁴, the derivative of the variance average, sum by convolution and lower bounds by positive restriction to compacts. The discarded hazard criterion has strictly negative diagonal by073. The positive Fourier multiplier of the Gaussian mixture satisfies exactly Bop(-Phi')=tPhi, but does not control the half-line term of Q_A. These consequences do not decide the actual A. No new certificates; antecedent074 explicit.

@@ -1,67 +1,67 @@
-# Umbral polinómico para un contraejemplo en celdas
+# Polynomial threshold for a counterexample on cells
 
-Cotejo. 010 prueba descenso con error dependiente del perfil. P47 prop:nearfree ya comprime el peine sobre contactos divisoriales y estima por Schur con pesos j⁻¹ᐟ². Aquí se aplica ese control al salto de dos réplicas consecutivas de cualquier test en N celdas, para elegir una pareja de réplicas y un umbral uniformes a tamaño N.
+Cross-check. 010 proves descent with profile-dependent error. P47 prop:nearfree already compresses the comb onto divisorial contacts and estimates by Schur with weights j⁻¹ᐟ². Here that control is applied to the jump of two consecutive replicas of any test on N cells, in order to choose a pair of replicas and a threshold uniform in the size N.
 
-Para H=N+1, definir B=2 log H, R=2π exp(4) H², Q=⌈max(2H, HR(B+2−m(0)))⌉, d=log(1+1/Q), p=exp(−d/2). Si r es el cociente de Rayleigh de un test primitivo F no nulo de las celdas 1,...,N y
+For H=N+1, define B=2 log H, R=2π exp(4) H², Q=⌈max(2H, HR(B+2−m(0)))⌉, d=log(1+1/Q), p=exp(−d/2). If r is the Rayleigh quotient of a nonzero primitive test F on the cells 1,...,N and
 
     r < τ_N := tanh(d/4)/N,
 
-entonces U(f_Q+f_{Q+1}) tiene energía estrictamente negativa, con f_q(x)=q⁻¹ᐟ²f(x/q). En particular el signo global exige que el menor cociente de toda compresión primitiva no vacía sea ≥τ_N. El umbral es de orden 1/(N⁴ log N) al crecer N; no se pretende optimizar el exponente.
+then U(f_Q+f_{Q+1}) has strictly negative energy, with f_q(x)=q⁻¹ᐟ²f(x/q). In particular the global sign requires that the smallest quotient of every nonempty primitive compression be ≥τ_N. The threshold is of order 1/(N⁴ log N) as N grows; no attempt is made to optimize the exponent.
 
-**Salto exacto.** Sean a_j los valores físicos de f, a_0=a_H=0. Para g=V_dF−pF todos los trozos no nulos son copias de la misma función −exp((u−d)/2)1_[0,d)(u), desplazada a log j con coeficiente √j(a_j−a_{j−1}). Los soportes son disjuntos, pues d<log(1+1/H). Así ||g||²=(1−p²)J con J=Σ_{j=1}^H j|a_j−a_{j−1}|². Telescopando hacia a_H y aplicando Cauchy–Schwarz, |a_i|²≤J Σ_{j=i+1}^H 1/j. La suma en i da ||F||²≤NJ.
+**Exact jump.** Let a_j be the physical values of f, a_0=a_H=0. For g=V_dF−pF all nonzero pieces are copies of the same function −exp((u−d)/2)1_[0,d)(u), shifted to log j with coefficient √j(a_j−a_{j−1}). The supports are disjoint, since d<log(1+1/H). Thus ||g||²=(1−p²)J with J=Σ_{j=1}^H j|a_j−a_{j−1}|². Telescoping towards a_H and applying Cauchy–Schwarz, |a_i|²≤J Σ_{j=i+1}^H 1/j. Summing over i gives ||F||²≤NJ.
 
-**Contactos.** Un desplazamiento log n sólo conecta dos pulsos si nj=l exactamente: con 1≤l≤H todo entero distinto de l dista de l en logaritmo al menos log(1+1/H). Para pulsos normalizados el peine comprimido vale Λ(n)/√n en las dos posiciones simétricas del par j,nj. El peso de Schur j⁻¹ᐟ² da en la fila j una suma ponderada ≤Σ_{n≤H/j}Λ(n)/n+Σ_{n|j}Λ(n). La segunda es log j. Para x≥1, con h=⌊x⌋, usar ⌊h/n⌋≥h/(2n) cuando n≤h y Σ_{n≤h}Λ(n)⌊h/n⌋=log(h!) para acotar la primera por 2log x. Luego la norma es ≤B sobre estos pulsos.
+**Contacts.** A shift log n only connects two pulses if nj=l exactly: with 1≤l≤H every integer distinct from l is at logarithmic distance at least log(1+1/H) from l. For normalized pulses the compressed comb equals Λ(n)/√n at the two symmetric positions of the pair j,nj. The Schur weight j⁻¹ᐟ² gives in row j a weighted sum ≤Σ_{n≤H/j}Λ(n)/n+Σ_{n|j}Λ(n). The second is log j. For x≥1, with h=⌊x⌋, use ⌊h/n⌋≥h/(2n) when n≤h and Σ_{n≤h}Λ(n)⌊h/n⌋=log(h!) to bound the first by 2log x. Hence the norm is ≤B on these pulses.
 
-**Piso y competidor.** Por P47 lem:mbounds, m≥B+2 para |t|≥R y m≥m(0) en todo t. El soporte de g tiene medida ≤Hd. La masa de Fourier en [−R,R] con medida dt/(2π) es ≤RHd||g||²/π por Cauchy–Schwarz. Con la elección de Q resulta (B+2−m(0))RHd/π≤1. La parte arquimediana domina (B+1)||g||² y la forma completa primitiva cumple a(g)≥||g||². Para el cruce real entre F y V_dF, la polarización da la identidad
+**Floor and competitor.** By P47 lem:mbounds, m≥B+2 for |t|≥R and m≥m(0) for all t. The support of g has measure ≤Hd. The Fourier mass in [−R,R] with measure dt/(2π) is ≤RHd||g||²/π by Cauchy–Schwarz. With the choice of Q one gets (B+2−m(0))RHd/π≤1. The archimedean part dominates (B+1)||g||² and the full primitive form satisfies a(g)≥||g||². For the real crossing between F and V_dF, polarization gives the identity
 
     p a(F+V_dF)=(1+p)²a(F)−a(g).
 
-El lado derecho es estrictamente negativo si r<(1−p²)/(N(1+p)²)=τ_N. Trasladar por log Q da la pareja entera anunciada, con última celda posible (Q+1)H−1. Las cotas Q de orden H³ log H y tanh(d/4) de orden 1/Q prueban la tasa. La estimación es condicional como piso y es incondicional como regla de construcción a partir de una violación certificada. No establece que tal violación ocurra ni que el fondo continuo de la misma ventana tenga ese piso. PROVED tras auditoría matemática independiente.
+The right-hand side is strictly negative if r<(1−p²)/(N(1+p)²)=τ_N. Translating by log Q gives the announced integer pair, with last possible cell (Q+1)H−1. The bounds Q of order H³ log H and tanh(d/4) of order 1/Q prove the rate. The estimate is conditional as a floor and unconditional as a construction rule starting from a certified violation. It does not establish that such a violation occurs nor that the continuous background of the same window has that floor. PROVED after independent mathematical audit.
 
-## Umbral reforzado con las posiciones reales de los saltos
+## Threshold strengthened with the actual positions of the jumps
 
-Adaptación de P47 prop:nearfree a los pulsos exponenciales rectangulares de 031. En las fórmulas anteriores se puede sustituir Q por ⌈e¹³ H log(2H)⌉ y el umbral por
+Adaptation of P47 prop:nearfree to the rectangular exponential pulses of 031. In the previous formulas Q can be replaced by ⌈e¹³ H log(2H)⌉ and the threshold by
 
     τ'_N = (1+log log(2H)) tanh(d/4)/N,     d=log(1+1/Q).
 
-Esto da orden (log log N)/(N² log N) al crecer N. Se conserva la misma regla explícita de falsificación.
+This gives order (log log N)/(N² log N) as N grows. The same explicit falsification rule is kept.
 
-Para la cota del peine, ψ(x)=Σ_{n≤x}Λ(n)≤4(log 2)x para x≥1: cada potencia prima en (h,2h] contribuye su peso a log binom(2h,h), y sumar en potencias de dos y redondear x a la potencia superior da la cota. Para h=⌊x⌋ la identidad factorial implica h Σ_{n≤h}Λ(n)/n ≤ log(h!)+ψ(h). Con los pesos de Schur anteriores esto da norma ≤log H+4log 2.
+For the comb bound, ψ(x)=Σ_{n≤x}Λ(n)≤4(log 2)x for x≥1: each prime power in (h,2h] contributes its weight to log binom(2h,h), and summing over powers of two and rounding x up to the next power gives the bound. For h=⌊x⌋ the factorial identity implies h Σ_{n≤h}Λ(n)/n ≤ log(h!)+ψ(h). With the previous Schur weights this gives norm ≤log H+4log 2.
 
-Para un solo pulso φ de longitud d normalizado en L², ||φ||₁²≤d. P47 lem:mbounds da m(t)≥log|t|−7 (usar m(0)>−6 en |t|<1). Al integrar log|dt| en su parte negativa, la estimación |φ̂|²≤d cuesta a lo sumo (1/π)∫₀¹−log u du=1/π. La diagonal arquimediana vale al menos log(1/d)−7−1/π. Para dos pulsos a distancia u=|log(j/k)|≥|j−k|/H≥2d, la fórmula separada de P47 prop:nearfree y K(v)≤2/v dan cruce en módulo ≤2d/u: la autocorrelación tiene norma L¹≤d y el núcleo se evalúa a distancia ≥u/2. (La cota para K resulta de sinh(v/2)≥v/2 y cosh(v/2)≥v/2.) Las sumas de filas arquimedianas fuera de diagonal quedan ≤4dH(1+log H)≤8e⁻¹³. Esto controla el bloque para coeficientes arbitrarios de los pulsos disjuntos. Los contactos aritméticos siguen siendo exactamente los divisoriales.
+For a single pulse φ of length d normalized in L², ||φ||₁²≤d. P47 lem:mbounds gives m(t)≥log|t|−7 (use m(0)>−6 on |t|<1). When integrating log|dt| on its negative part, the estimate |φ̂|²≤d costs at most (1/π)∫₀¹−log u du=1/π. The archimedean diagonal is at least log(1/d)−7−1/π. For two pulses at distance u=|log(j/k)|≥|j−k|/H≥2d, the separated formula of P47 prop:nearfree and K(v)≤2/v give crossing of modulus ≤2d/u: the autocorrelation has L¹ norm ≤d and the kernel is evaluated at distance ≥u/2. (The bound for K follows from sinh(v/2)≥v/2 and cosh(v/2)≥v/2.) The off-diagonal archimedean row sums stay ≤4dH(1+log H)≤8e⁻¹³. This controls the block for arbitrary coefficients of the disjoint pulses. The arithmetic contacts remain exactly the divisorial ones.
 
-Como log(1/d)≥13+log H+log log(2H), al restar las cotas anteriores queda a(g)≥(1+log log(2H))||g||² para H≥2. La identidad de polarización de 031 concluye. La mejora utiliza la separación geométrica de los pulsos y la cota divisorial aguda ya presentes para otros resonadores en P47. Las constantes se escogieron por simplicidad. PROVED tras auditoría matemática independiente.
+Since log(1/d)≥13+log H+log log(2H), subtracting the previous bounds leaves a(g)≥(1+log log(2H))||g||² for H≥2. The polarization identity of 031 concludes. The improvement uses the geometric separation of the pulses and the sharp divisorial bound already present for other resonators in P47. The constants were chosen for simplicity. PROVED after independent mathematical audit.
 
-## Umbral de orden N⁻² con una segunda diferencia
+## Threshold of order N⁻² with a second difference
 
-El antecedente NEAR_CASES_RESULTS_2026_11_04 §1 elimina el logaritmo en la escala de resonadores suaves fijados de antemano. Para el test arbitrario F de 031 se puede fabricar un pulso de media cero con dos traslaciones y recuperar el control de F mediante dos identidades exactas.
+The antecedent NEAR_CASES_RESULTS_2026_11_04 §1 removes the logarithm at the scale of smooth resonators fixed in advance. For the arbitrary test F of 031 one can manufacture a zero-mean pulse with two translations and recover control of F by two exact identities.
 
-Tomar Q=⌈exp(13)H⌉, d=log(1+1/Q), p=exp(−d/2), V=V_d, g=(V−pI)F y h=(I−V)g. En cada sitio log j el pulso de h es el de g menos una copia contigua suya. Tiene media cero, ancho 2d y norma al cuadrado doble de la del pulso de g. Dado que 2d<log(1+1/H), los sitios son disjuntos, los contactos del peine siguen siendo exactamente los divisoriales y ||h||²=2(1−p²)J.
+Take Q=⌈exp(13)H⌉, d=log(1+1/Q), p=exp(−d/2), V=V_d, g=(V−pI)F and h=(I−V)g. At each site log j the pulse of h is that of g minus a contiguous copy of it. It has zero mean, width 2d and squared norm twice that of the pulse of g. Since 2d<log(1+1/H), the sites are disjoint, the comb contacts remain exactly the divisorial ones and ||h||²=2(1−p²)J.
 
-Para su pulso normalizado ψ, repetir la diagonal de 031 con ancho 2d da piso log(1/d)−log 2−7−1/π. Queda el cruce arquimediano separado a distancia u≥1/H≥4d. Se tiene ∫c_ψ=0, ||c_ψ||₁≤2d y soporte en [−2d,2d]. Por convexidad decreciente del núcleo K y K(x)≤2/x, |K'(x)|≤2K(x/2)/x≤8/x². En la integral separada restar K(u) de K(u−v). El factor 1/2 del cruce y el teorema del valor medio dan cota 64d²/u². Por u≥|j−k|/H y Σ_{n≥1} n⁻²≤2, la suma fuera de diagonal por fila es ≤256(dH)². La norma del peine sigue ≤log H+4log 2. Por tanto, después de restar todos estos costes queda un piso ≥13−5log 2−7−1/π−256 exp(−26)>1. Así a(h)≥||h||².
+For its normalized pulse ψ, repeating the diagonal of 031 with width 2d gives floor log(1/d)−log 2−7−1/π. There remains the separated archimedean crossing at distance u≥1/H≥4d. One has ∫c_ψ=0, ||c_ψ||₁≤2d and support in [−2d,2d]. By decreasing convexity of the kernel K and K(x)≤2/x, |K'(x)|≤2K(x/2)/x≤8/x². In the separated integral subtract K(u) from K(u−v). The factor 1/2 of the crossing and the mean value theorem give bound 64d²/u². By u≥|j−k|/H and Σ_{n≥1} n⁻²≤2, the off-diagonal row sum is ≤256(dH)². The comb norm stays ≤log H+4log 2. Hence, after subtracting all these costs a floor ≥13−5log 2−7−1/π−256 exp(−26)>1 remains. Thus a(h)≥||h||².
 
-Si ambos tests Y₁=(I+V)F e Y₂=(I+V)g tienen energía no negativa, entonces
+If both tests Y₁=(I+V)F and Y₂=(I+V)g have nonnegative energy, then
 
     4(1+p)²a(F) ≥ 4a(g) = a(h)+a(Y₂) ≥ 2(1−p²)J,
 
-usando la identidad de 031 para Y₁ en el primer paso. Luego el cociente de Rayleigh de F está por encima o en
+using the identity of 031 for Y₁ in the first step. Hence the Rayleigh quotient of F is at or above
 
     τ''_N = tanh(d/4)/(2N),     Q=⌈exp(13)(N+1)⌉.
 
-Si el cociente es estrictamente menor, al menos uno de esos dos tests tiene energía negativa. Ambos son primitivos y se realizan en celdas enteras: trasladar por log Q² convierte los factores 1, exp d y exp(2d) en Q², Q(Q+1) y (Q+1)² para las réplicas normalizadas. La última celda posible es (Q+1)²H−1. El precio del umbral de orden N⁻² es que se pueden necesitar tres réplicas y comparar dos energías; no es el mismo competidor de dos réplicas de las secciones anteriores. PROVED tras auditoría matemática independiente.
+If the quotient is strictly smaller, at least one of those two tests has negative energy. Both are primitive and are realized on integer cells: translating by log Q² turns the factors 1, exp d and exp(2d) into Q², Q(Q+1) and (Q+1)² for the normalized replicas. The last possible cell is (Q+1)²H−1. The price of the threshold of order N⁻² is that three replicas may be needed and two energies compared; it is not the same two-replica competitor of the previous sections. PROVED after independent mathematical audit.
 
-## Qué escala de error en los saltos conservaría el signo
+## What error scale on the jumps would preserve the sign
 
-Como corolario de la aproximación de celdas de 212-75 y de la reformulación de 212 ROUND_022_B, poner β_N=max(0,sup(−a(Uf)/J_N(f))) sobre vectores no nulos de las N celdas que cumplen los dos momentos, con β_N=0 si no hay tales vectores. Entonces el signo global equivale a liminf_{N→∞} β_N/N=0. En particular, una cota inferior −o(N)J_N sólo en una subsucesión cofinal bastaría. Es una equivalencia; la estimación sublineal no está probada.
+As a corollary of the cell approximation of 212-75 and of the reformulation of 212 ROUND_022_B, put β_N=max(0,sup(−a(Uf)/J_N(f))) over nonzero vectors of the N cells satisfying the two moments, with β_N=0 if there are no such vectors. Then the global sign is equivalent to liminf_{N→∞} β_N/N=0. In particular, a lower bound −o(N)J_N only on a cofinal subsequence would suffice. It is an equivalence; the sublinear estimate is not proved.
 
-Para ver la implicación decisiva, si falla el signo elegir f suave real compacto en (0,b) con ambos momentos nulos y q=a(Uf)<0, por densidad en norma de forma. En la malla de paso 1/K muestrear por extremos izquierdos a f y a dos funciones suaves correctoras, todas con soporte en un compacto interior de (0,b). Elegir las correctoras con matriz invertible de los funcionales ∫u dx, ∫u dx/x (por ejemplo dos bumps positivos con soportes separados). Los dos momentos de las aproximaciones escalonadas convergen a los continuos con error O(1/K) por el teorema del valor medio. Resolver el sistema de dos momentos muestreados da coeficientes O(1/K) que reparan exactamente al perfil muestreado.
+To see the decisive implication, if the sign fails choose f smooth real compactly supported in (0,b) with both moments zero and q=a(Uf)<0, by density in form norm. On the mesh of step 1/K sample by left endpoints f and two smooth corrector functions, all supported in an interior compact subset of (0,b). Choose the correctors with invertible matrix of the functionals ∫u dx, ∫u dx/x (for instance two positive bumps with separated supports). The two moments of the step approximations converge to the continuous ones with error O(1/K) by the mean value theorem. Solving the system of the two sampled moments gives coefficients O(1/K) that exactly repair the sampled profile.
 
-Al deshacer el escalamiento, estos escalones reparados convergen a f en norma de forma sobre un intervalo logarítmico compacto común: convergen en L¹ y tienen variación total uniformemente acotada, también después de aplicar U. Sus transformadas quedan dominadas por C/(1+|τ|); Plancherel ponderado por log(2+|τ|) y convergencia dominada bastan para la parte arquimediana, y el peine en esa ventana es acotado. Dilatar físicamente por K y multiplicar por K^(−1/2) produce un vector en celdas enteras, con energía →q por invariancia. Escribir f_K para f más las dos correctoras suaves con sus coeficientes, antes de muestrear. La identidad
+Undoing the scaling, these repaired steps converge to f in form norm on a common compact logarithmic interval: they converge in L¹ and have uniformly bounded total variation, also after applying U. Their transforms are dominated by C/(1+|τ|); Plancherel weighted by log(2+|τ|) and dominated convergence suffice for the archimedean part, and the comb on that window is bounded. Dilating physically by K and multiplying by K^(−1/2) produces a vector on integer cells, with energy →q by invariance. Write f_K for f plus the two smooth correctors with their coefficients, before sampling. The identity
 
     K J_N = Σ_j (1/K)(j/K) |K(f_K(j/K)−f_K((j−1)/K))|²
 
-y la convergencia uniforme de las derivadas dan K J_N→I_f=∫x|f'(x)|²dx>0. Tomar K=⌊N/b⌋; el soporte interior permite rellenar las celdas sobrantes por cero para todos los N suficientemente grandes. Se obtiene
+and the uniform convergence of the derivatives give K J_N→I_f=∫x|f'(x)|²dx>0. Take K=⌊N/b⌋; the interior support allows filling the leftover cells with zero for all N sufficiently large. One obtains
 
     liminf β_N/N ≥ −q/(b I_f)>0.
 
-En sentido directo β_N=0 bajo positividad global. El índice sublineal de 025/026 cuenta dimensiones y no acota este cociente de energías. El argumento usa refinamiento y dilatación del perfil suave; añadir celdas nulas a un único vector fijo no produciría el factor 1/N en J_N. PROVED tras auditoría matemática independiente.
+In the direct sense β_N=0 under global positivity. The sublinear index of 025/026 counts dimensions and does not bound this energy quotient. The argument uses refinement and dilation of the smooth profile; adding zero cells to a single fixed vector would not produce the factor 1/N in J_N. PROVED after independent mathematical audit.

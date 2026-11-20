@@ -86,7 +86,7 @@ the all-profile infimum must be ≤ any single-profile infimum. This relation (n
 without an independent solver; it was violated by the first (buggy) run of this script (see §1) and used to catch
 the bug.
 
-### 2.2 Eigenvector shape (NUMERICAL, answer to the owner's question)
+### 2.2 Eigenvector shape (NUMERICAL)
 
 The maximiser is, at every T tested, a **long packet spanning nearly the whole window** (effective length
 0.79–0.98 of 2T), never a short bump — consistent with the necessity direction of ROUND_012_A §4.2 (short packets

@@ -1,66 +1,66 @@
-# Silla incondicional hasta cortes exp(C(log log x)²)
+# Unconditional saddle up to cuts exp(C(log log x)²)
 
-**Estado: PROVED, con [revisión independiente de la transferencia y del tramo local](AUDIT_370_PHASE.md).** Hay una constante absoluta C suficientemente grande para la que, con L=log x, uniformemente en
+**Status: PROVED, with [independent review of the transfer and of the local stretch](AUDIT_370_PHASE.md).** There is a sufficiently large absolute constant C for which, with L=log x, uniformly in
 
     C(log L)² ≤ b=log z ≤ L^(3/4),
 
-los pulsos de anchura fija de 367–368 satisfacen S^*(x;z)<0 y Q^*(x;z)>0 para x suficientemente grande. El peso sigue siendo g(v)=exp(v/2)φ₁(v). No se supone RH.
+the fixed-width pulses of 367–368 satisfy S^*(x;z)<0 and Q^*(x;z)>0 for sufficiently large x. The weight is still g(v)=exp(v/2)φ₁(v). RH is not assumed.
 
-**Cotejo y operación.** El antecedente inmediato es 367, «Sentido bajo RH» y «Control que sustituye a la difusión»: allí la silla queda junto a 1/2 y RH permite desplazar el contorno. Aquí se mueve la silla hacia 1 al aumentar el corte, dentro de una región libre de ceros incondicional. La banda útil de primos ya no tiene anchura logarítmica constante, sino 1/(1−α). 369 conserva el signo mediante capas de Dickman hasta b≥L^(3/4); el presente argumento cubre el rango adyacente y no usa una sustitución firmada de todas las capas. Es una extensión parcial del mismo observable, no una prueba de su signo en z=L² ni de la forma completa. El cotejo interno se limita a 367–369 y al registro de esos resultados en la Parte V del índice; no se afirma novedad histórica.
+**Cross-check and operation.** The immediate antecedent is 367, «Direction under RH» and «Control replacing diffusion»: there the saddle stays next to 1/2 and RH allows shifting the contour. Here the saddle is moved towards 1 as the cut increases, inside an unconditional zero-free region. The useful band of primes no longer has constant logarithmic width, but 1/(1−α). 369 preserves the sign via Dickman layers up to b≥L^(3/4); the present argument covers the adjacent range and does not use a signed substitution of all layers. It is a partial extension of the same observable, not a proof of its sign at z=L² nor of the full form. The internal cross-check is limited to 367–369 and to the record of those results in Part V of the index; no historical novelty is claimed.
 
-## 1. Silla y región libre
+## 1. Saddle and free region
 
-Poner F=1/ζ, E_z(s)=∏_{p≤z}(1−p^(−s))^(−1) y
+Put F=1/ζ, E_z(s)=∏_{p≤z}(1−p^(−s))^(−1) and
 
     K(s)=Ls+(s−1/2)²/2+log E_z(s).
 
-Sea α la única raíz real de K'(α)=0 en (1/2,1), y d=1−α, ξ=bd, u=L/b. El PNT clásico, por sumación parcial, da uniformemente
+Let α be the unique real root of K'(α)=0 in (1/2,1), and d=1−α, ξ=bd, u=L/b. The classical PNT, by partial summation, gives uniformly
 
     ξ→∞,  e^ξ/ξ∼u,  ξ=log u+log log u+o(1),
-    K''(α)∼Lb,   K'''(α+it)=O(Lb²)  para |t|≤1/b.
+    K''(α)∼Lb,   K'''(α+it)=O(Lb²)  for |t|≤1/b.
 
-Para obtener estas estimaciones basta integrar las potencias primeras en log p: ∑ log p·p^(−α)∼e^(db)/d; las potencias superiores aportan O(1) a K' y O(1) a cada derivada fija. La masa principal procede de log p=b−O(1/d), y 1/d=b/ξ=o(b). La ecuación exacta y la estricta positividad de K'' justifican la existencia y unicidad; en α=1 la suma es O(b)=o(L), y en α=1/2 excede L. Además
+To obtain these estimates it suffices to integrate the first powers in log p: ∑ log p·p^(−α)∼e^(db)/d; the higher powers contribute O(1) to K' and O(1) to each fixed derivative. The main mass comes from log p=b−O(1/d), and 1/d=b/ξ=o(b). The exact equation and the strict positivity of K'' justify existence and uniqueness; at α=1 the sum is O(b)=o(L), and at α=1/2 it exceeds L. Moreover
 
     d=ξ/b ≤ O(1)/(C log L),   sqrt(b/L)→0.
 
-Elegir C grande asegura que todo el rectángulo α≤Re s≤1+1/L, |Im s|≤2sqrt L queda en una versión interior de la región libre clásica Re s≥1−c/log(3+|Im s|). F es regular en s=1. Allí F y F' tienen cota exp(O((log L)²)), por las cotas usuales en la región libre, o por Borel–Carathéodory y Cauchy usando un margen ≍1/log L. Se usan únicamente la [región libre clásica y sus consecuencias PNT](https://www.ford126.web.illinois.edu/wwwpapers/zeros.pdf).
+Choosing C large ensures that the whole rectangle α≤Re s≤1+1/L, |Im s|≤2sqrt L lies in an interior version of the classical free region Re s≥1−c/log(3+|Im s|). F is regular at s=1. There F and F' have bound exp(O((log L)²)), by the usual bounds in the free region, or by Borel–Carathéodory and Cauchy using a margin ≍1/log L. Only the [classical free region and its PNT consequences](https://www.ford126.web.illinois.edu/wwwpapers/zeros.pdf) are used.
 
-## 2. Pérdida de fase sin RH
+## 2. Phase loss without RH
 
-En la banda b−1/d≤log p≤b, la masa ∑p^(−α) es ≍L/b. Tras r=d(b−log p), su medida normalizada es comparable a exp(−r)dr en [0,1]. La desigualdad elemental
+In the band b−1/d≤log p≤b, the mass ∑p^(−α) is ≍L/b. After r=d(b−log p), its normalized measure is comparable to exp(−r)dr on [0,1]. The elementary inequality
 
     inf_θ ∫₀¹ exp(−r)[1−cos(θ−ωr)]dr ≳ min(ω²,1)
 
-se sigue por comparación con la medida uniforme: el ínfimo de su integral es exactamente 1−|sinc(ω/2)|, que es ≳min(ω²,1). Aplicada con ω=t/d, implica
+follows by comparison with the uniform measure: the infimum of its integral is exactly 1−|sinc(ω/2)|, which is ≳min(ω²,1). Applied with ω=t/d, it implies
 
     log E_z(α)−log|E_z(α+it)| ≳ (L/b) min((t/d)²,1).
 
-La transferencia a los primos es uniforme para 1/b≤|t|≤2sqrt L y usa sólo integración por partes. Integrar θ(v)−v contra v^(−α)(1−cos(t log v))/log v en [exp(b−1/d),exp b]. El PNT clásico da un error absoluto
+The transfer to the primes is uniform for 1/b≤|t|≤2sqrt L and uses only integration by parts. Integrate θ(v)−v against v^(−α)(1−cos(t log v))/log v on [exp(b−1/d),exp b]. The classical PNT gives an absolute error
 
     O((e^(db)/(db)) exp(−c₁sqrt b)(1+|t|)).
 
-Los términos de borde cumplen la misma cota. Aquí e^(db)/(db)≍L/b; al elegir C grande, el error relativo es o(ξ^(−2)), menor que la pérdida relativa mínima en el tramo. No se requiere un teorema de primos en intervalos cortos ni sumar una partición oscilante.
+The boundary terms satisfy the same bound. Here e^(db)/(db)≍L/b; choosing C large, the relative error is o(ξ^(−2)), smaller than the minimal relative loss on the stretch. Neither a theorem on primes in short intervals nor summing an oscillating partition is required.
 
-Para |t|≤1/b, las fases de estos mismos primos tienen módulo ≤1, de donde la cota más precisa ≳Lb t². Por consiguiente, en todo el tramo 1/b≤|t|≤2sqrt L la pérdida es al menos
+For |t|≤1/b, the phases of these same primes have modulus ≤1, whence the more precise bound ≳Lb t². Consequently, on the whole stretch 1/b≤|t|≤2sqrt L the loss is at least
 
     c L/(bξ²) ≳ L^(1/4)/(log L)².
 
-Este término domina (log L)² y, por tanto, el coste del factor zeta y de sus derivadas.
+This term dominates (log L)² and hence the cost of the zeta factor and its derivatives.
 
-## 3. Equivalentes y signos
+## 3. Equivalents and signs
 
-La integral local en |t|≤(log L)/sqrt(Lb) es gaussiana: el resto cúbico normalizado es O((log L)³sqrt(b/L))=o(1). Entre esa escala y 1/b domina la pérdida Lb t². En este tramo no se usa el techo global de zeta: como |t|/d≤1/ξ=o(1), se tiene |F(α+it)|=O(d), F'=O(1), |L_z|=O(L), |H|=O(1) y |B_z|=O(Ld). Así la cola local es despreciable sin comparar constantes desconocidas en exponentes de tamaño (log L)². El resto del segmento vertical queda dominado por la estimación de fase anterior. Al desplazar el contorno desde c=1+1/L hasta α no se cruza ningún cero. Los horizontales a ±2sqrt L y las colas en c son despreciables por exp(−2L), frente a exp(K(α))=exp(L−o(L)); además log E_z(α)=O(L/b)=o(L).
+The local integral on |t|≤(log L)/sqrt(Lb) is Gaussian: the normalized cubic remainder is O((log L)³sqrt(b/L))=o(1). Between that scale and 1/b the loss Lb t² dominates. On this stretch the global ceiling for zeta is not used: since |t|/d≤1/ξ=o(1), one has |F(α+it)|=O(d), F'=O(1), |L_z|=O(L), |H|=O(1) and |B_z|=O(Ld). Thus the local tail is negligible without comparing unknown constants in exponents of size (log L)². The rest of the vertical segment is dominated by the previous phase estimate. When shifting the contour from c=1+1/L to α no zero is crossed. The horizontals at ±2sqrt L and the tails on c are negligible by exp(−2L), against exp(K(α))=exp(L−o(L)); moreover log E_z(α)=O(L/b)=o(L).
 
-Para el pulso sin primo exterior el factor es F. Como α→1 por la izquierda,
+For the pulse without exterior prime the factor is F. Since α→1 from the left,
 
     F(α)∼−d,
     S^*(x;z) ∼ F(α) exp(K(α))/sqrt(2πK''(α)) <0.
 
-El factor varía relativamente o(1) en la escala local, pues d sqrt(Lb)=ξ sqrt(L/b)→∞. Para Q^* el factor de 367 es B_z=F'−F(H+L_z), con H la suma de potencias superiores y L_z=∑_{p≤z}log p·p^(−s). La ecuación de la silla da L_z(α)=L+O(1), mientras H(α)=O(1), F'(α)=O(1) y Ld→∞. Así
+The factor varies relatively by o(1) at the local scale, since d sqrt(Lb)=ξ sqrt(L/b)→∞. For Q^* the factor of 367 is B_z=F'−F(H+L_z), with H the sum of higher powers and L_z=∑_{p≤z}log p·p^(−s). The saddle equation gives L_z(α)=L+O(1), while H(α)=O(1), F'(α)=O(1) and Ld→∞. Thus
 
     B_z(α)∼−LF(α)∼Ld,
     Q^*(x;z) ∼ Ld exp(K(α))/sqrt(2πK''(α)) >0.
 
-Todas las estimaciones son uniformes en el rango anunciado. La revisión independiente enlazada comprueba la pérdida de fase, su transferencia por el PNT y el control local de los dos factores. No hay cálculo numérico ni extrapolación de muestras; tampoco se proporciona un primer x explícito.
+All estimates are uniform in the announced range. The linked independent review checks the phase loss, its transfer by the PNT and the local control of the two factors. There is no numerical computation nor extrapolation from samples; nor is an explicit first x provided.
 
-**Alcance y siguiente frontera.** Junto con 369 se obtiene S^*<0 para exp(C(log log x)²)≤z≤sqrt x. El corte de 368 es z=(log x)², cuyo logaritmo es 2log log x: queda fuera. Allí la silla sale de la región libre clásica disponible a las alturas necesarias. Reabrir exige controlar ese desplazamiento o sustituirlo por una identidad aritmética que conserve el signo; reducir C sin una nueva estimación no resuelve la diferencia de órdenes.
+**Scope and next frontier.** Together with 369 one obtains S^*<0 for exp(C(log log x)²)≤z≤sqrt x. The cut of 368 is z=(log x)², whose logarithm is 2log log x: it lies outside. There the saddle leaves the classical free region available at the necessary heights. Reopening requires controlling that displacement or replacing it by an arithmetic identity preserving the sign; reducing C without a new estimate does not resolve the difference of orders.

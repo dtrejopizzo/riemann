@@ -1,31 +1,31 @@
 # POWER CONTACT AUDIT 032
 
-Estado: ARCH_EXACT032 y CONTACT_DECISION032 APROBADOS. Papers intactos.
+Status: ARCH_EXACT032 and CONTACT_DECISION032 APPROVED. Papers untouched.
 
-## 1. Corpus y razón nueva
+## 1. Corpus and new reason
 
-Reconsultados ROUTES-TRIED-INDEX/README, grid R162_2300 y CROSSWORD-TO-D, entradas021. Aquel diagnóstico mantuvo NUMÉRICO el parcial hasta300≈−6.08e−14; no había intervalo de W ni error certificado de cuadratura.032 decide exactamente el MISMO átomo N211,k1,u31.5, reemplazando ARCH por un intervalo analítico y conservando toda la cola. No es una campaña de órdenes ni una extrapolación de signos parciales.
+Re-consulted ROUTES-TRIED-INDEX/README, grid R162_2300 and CROSSWORD-TO-D, entries021. That diagnostic kept the partial up to300≈−6.08e−14 as NUMERICAL; there was no interval for W nor certified quadrature error.032 decides exactly the SAME atom N211,k1,u31.5, replacing ARCH by an analytic interval and keeping the whole tail. It is neither a campaign over orders nor an extrapolation of partial signs.
 
-## 2. ARCH exacta — APROBADA
+## 2. Exact ARCH — APPROVED
 
-Revisados `POWER_ARCH_EXACT_032.md` y `tools/power_arch_exact_032_verify.py`. La integración del kernel geométrico deψ contra los coeficientes positivos de rho produce A0=a−Σb_j S_(j+1), con b_j=p_jj!/2^j y el factor correcto de Hurwitz. Derivar la suma FINITA mediante GAIN da A1=a+(u/2)S2−Σ(j+1)b_j[S_(j+1)−(u/2)S_(j+2)]. Los corchetes son positivos porque x16>u/2.
+Reviewed `POWER_ARCH_EXACT_032.md` and `tools/power_arch_exact_032_verify.py`. Integrating the geometric kernel ofψ against the positive coefficients of rho produces A0=a−Σb_j S_(j+1), with b_j=p_jj!/2^j and the correct Hurwitz factor. Differentiating the FINITE sum via GAIN gives A1=a+(u/2)S2−Σ(j+1)b_j[S_(j+1)−(u/2)S_(j+2)]. The brackets are positive because x16>u/2.
 
-EM8 con corte32 usa el resto integral del Bernoulli periódico16. Su supremo está acotado por|B16| mediante la serie Fourier absoluta; integrar reduce el bound exactamente al término E_p declarado. Es válido para todos p2..212 sin exigir decrecimiento de la expansión ni signo de un término siguiente. Los extremos Hurwitz se conservan como Fraction antes de multiplicarlos por b_j; el redondeo exterior se hace después. El ancho final<10^−18 y la envolvente impresa están correctamente certificados.
+EM8 with cutoff32 uses the integral remainder of the periodic Bernoulli16. Its supremum is bounded by|B16| via the absolute Fourier series; integrating reduces the bound exactly to the declared term E_p. It is valid for all p2..212 without requiring decrease of the expansion nor the sign of a next term. The Hurwitz endpoints are kept as Fraction before multiplying them by b_j; outward rounding is done afterwards. The final width<10^−18 and the printed envelope are correctly certified.
 
-## 3. Contactos, polar y cola — APROBADOS
+## 3. Contacts, polar and tail — APPROVED
 
-Revisados `POWER_CONTACT_DECISION_032.md`, `tools/power_contact_decision_032_contacts.py` y el verificador principal. La norma beta, polar exacto y normalización K/r_j coinciden con019–021. La enumeración determinista incluye TODOS los primos y sus potencias≤512. Para cada q=p^a se usa log p, no log q. El factor q^−32 combina exactamente el peso q^−1/2 y la autocorrelación e^−u log q.
+Reviewed `POWER_CONTACT_DECISION_032.md`, `tools/power_contact_decision_032_contacts.py` and the main verifier. The beta norm, exact polar and normalization K/r_j coincide with019–021. The deterministic enumeration includes ALL primes and their powers≤512. For each q=p^a log p is used, not log q. The factor q^−32 combines exactly the weight q^−1/2 and the autocorrelation e^−u log q.
 
-Horner en potencias divididas conserva r(x)=Σa_jx^j/j! mediante v_j=a_j+xv_(j+1)/(j+1). La división por q^32 se aplica primero a extremos racionales; evita redondear un recíproco pequeño antes de multiplicarlo. El ancho del peine finito<10^−40 se comprueba, sin suponer que concordancia decimal certifique error.
+Horner in divided powers keeps r(x)=Σa_jx^j/j! via v_j=a_j+xv_(j+1)/(j+1). Division by q^32 is applied first to rational endpoints; it avoids rounding a small reciprocal before multiplying it. The width of the finite comb<10^−40 is checked, without assuming that decimal agreement certifies error.
 
-Todos los contactos omitidos son positivos por el teorema analítico019 y su umbral211. La cota superior cubre la cola COMPLETA q>512: suma unimodal≤integral+sup, derivada logarítmica≥−32/512 e integral recurrente positiva dan el factor1+32/512. Usar coeficientes absolutos yΛ≤log q conserva la dirección. La recurrencia es la misma ya auditada021 y no depende de una cuadratura ni de un signo de prefijo.
+All omitted contacts are positive by the analytic theorem019 and its threshold211. The upper bound covers the COMPLETE tail q>512: unimodal sum≤integral+sup, logarithmic derivative≥−32/512 and positive recurrent integral give the factor1+32/512. Using absolute coefficients andΛ≤log q keeps the direction. The recurrence is the same one already audited021 and depends neither on a quadrature nor on a prefix sign.
 
-## 4. Decisión independiente y alcance
+## 4. Independent decision and scope
 
-Ejecutado independientemente `python3 tools/power_contact_decision_032_verify.py` desde su ruta phase211: PASS. Se importan directamente los intervalos internos de ARCH, peine y polar y el mayorante racional de toda la cola. El extremo inferior del parcial certificado>3.4·10^−15 y el superior más cola<4.5·10^−15 prueban
+Ran independently `python3 tools/power_contact_decision_032_verify.py` from its phase211 path: PASS. The internal intervals of ARCH, comb and polar and the rational majorant of the whole tail are imported directly. The lower endpoint of the certified partial>3.4·10^−15 and the upper one plus tail<4.5·10^−15 prove
 
 3.4·10^−15 < W[f]/||f||² < 4.5·10^−15.
 
-El punto candidato es POSITIVO. La suma parcial negativa hasta300 era compatible con la cola favorable omitida y no es evidencia de W negativo. No se atribuye ese cambio al minúsculo error del diagnóstico ARCH.
+The candidate point is POSITIVE. The negative partial sum up to300 was compatible with the omitted favorable tail and is not evidence of negative W. That change is not attributed to the tiny error of the ARCH diagnostic.
 
-El resultado decide un único átomo; no prueba una fila, un vecindario, parámetros próximos ni nueva ventana T. La fórmula estable de ARCH sí es general, pero aquí sólo se certificó el punto autorizado. No se modifica ningún paper ni se usa información de ceros/equivalencias.
+The result decides a single atom; it proves no row, neighborhood, nearby parameters nor new window T. The stable ARCH formula is general, but here only the authorized point was certified. No paper is modified and no information on zeros/equivalences is used.

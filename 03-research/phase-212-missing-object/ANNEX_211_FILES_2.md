@@ -1,563 +1,563 @@
-# Anexo 211 — Archivos, segunda tanda (POWER_DESCENT_016 … POWER_INVERSE_INTERIOR_022)
+# Annex 211 — Files, second batch (POWER_DESCENT_016 … POWER_INVERSE_INTERIOR_022)
 
-Lectura íntegra, archivo por archivo, de los `.md` de `../phase-211-sign-sandbox/` comprendidos en orden
-alfabético entre `POWER_DESCENT_016.md` y `POWER_INVERSE_INTERIOR_022.md` inclusive, excepto
-`POWER_GLOBAL_ROUTE_REVIEW.md` y `POWER_GRAM_SLICES_OBSTRUCTION.md`. Notación de
-`../phase-211-sign-sandbox/STATEMENT_001.md`, `POWER_CONE_001.md` y `POWER_BRIDGE_002.md`. En estos archivos
-W es la forma completa de la línea (ARCH + POLAR − peine), V_n={P(s)/(s+u)^n: deg P<n}, Q(s)=s/(s+u),
-u=63/2 salvo indicación; g_N(t)=t^{N−1}e^{−ut}/(N−1)!; L(a), K(a,b) son los de POWER_CONE_001. El
-objetivo es (★) de STATEMENT_001. Las etiquetas se copian tal como figuran en cada fuente.
+Complete reading, file by file, of the `.md` files of `../phase-211-sign-sandbox/` lying in alphabetical
+order between `POWER_DESCENT_016.md` and `POWER_INVERSE_INTERIOR_022.md` inclusive, except
+`POWER_GLOBAL_ROUTE_REVIEW.md` and `POWER_GRAM_SLICES_OBSTRUCTION.md`. Notation of
+`../phase-211-sign-sandbox/STATEMENT_001.md`, `POWER_CONE_001.md` and `POWER_BRIDGE_002.md`. In these files
+W is the full form on the line (ARCH + POLAR − comb), V_n={P(s)/(s+u)^n: deg P<n}, Q(s)=s/(s+u),
+u=63/2 unless stated otherwise; g_N(t)=t^{N−1}e^{−ut}/(N−1)!; L(a), K(a,b) are those of POWER_CONE_001. The
+target is (★) of STATEMENT_001. Labels are copied as they appear in each source.
 
-## Entradas por archivo
+## Entries by file
 ### 1. POWER_DESCENT_016.md
-- Objeto: filtros complementarios Q=s/(s+u), L=u/(s+u) (u>1); identidad exacta W[f]=W[Qf]+W[Lf] (DEF), incluida la polar; iteración binomial (BIN); diferencias (−1)^rΔ^r a_k=W[L^rQ^k f] (FD); ley binomial espectral (LAW).
-- Resultado: PROVED (identidades, monotonía eventual de diferencias, localización (LOC) con error Lip(φ)/(2√m), (EDGE): el borde de 015 tiene masa y energía total →0). Falsificador W_4=W−4‖·‖²: conserva DEF/BIN/eventualidad y W_4[e^{−63y/2}]/‖·‖²<−1 (2L(32)<3). Descenso aritmético global OPEN.
-- Resto sin signo: el defecto W[f]−W[Qf]=W[Lf] (forma completa del bloque de baja frecuencia) en los primeros pasos; el interior j/m≈θ<1 de (BIN).
-- Reapertura: un descenso que controle W[Lf] con el dato aritmético completo o use la distribución espectral del numerador.
-- PROVED reutilizable: (DEF)/(BIN)/(FD) para toda f racional causal; telescopado W[f]=Σ_k W[LQ^k f] absolutamente convergente.
+- Object: complementary filters Q=s/(s+u), L=u/(s+u) (u>1); exact identity W[f]=W[Qf]+W[Lf] (DEF), polar included; binomial iteration (BIN); differences (−1)^rΔ^r a_k=W[L^rQ^k f] (FD); spectral binomial law (LAW).
+- Result: PROVED (identities, eventual monotonicity of differences, localization (LOC) with error Lip(φ)/(2√m), (EDGE): the edge of 015 has total mass and energy →0). Falsifier W_4=W−4‖·‖²: preserves DEF/BIN/eventuality and W_4[e^{−63y/2}]/‖·‖²<−1 (2L(32)<3). Global arithmetic descent OPEN.
+- Unsigned remainder: the defect W[f]−W[Qf]=W[Lf] (full form of the low-frequency block) in the first steps; the interior j/m≈θ<1 of (BIN).
+- Reopening: a descent controlling W[Lf] with the full arithmetic datum or using the spectral distribution of the numerator.
+- Reusable PROVED: (DEF)/(BIN)/(FD) for every causal rational f; telescoping W[f]=Σ_k W[LQ^k f] absolutely convergent.
 
 ### 2. POWER_DESCENT_AUDIT_016.md
-- Objeto: momentos ℓ_r(f)=∫y^r f en L²_η; uniones de Q^kV_N; filtro desplazado Q_δ=(s+δ)/(s+u).
-- Resultado: PROVED y APROBADO: (i) la unión de Q^kV_N, k≥1, está en el hiperplano ℓ_0=0, no es densa (incluso en P_T: F=(¼−D²)g); (ii) k_j→∞ ⇒ todo límite fuerte es 0; (iii) falsificador lógico W_C, C=4; (iv) §9: span{Q_δ^r f_0: r≥R} denso, W_4[f_r]>0 eventual, pero existe combinación finita con W_4<0.
-- Falsificador: refuta «span denso + signo individual eventual de generadores ⇒ signo en el span» y «partición+mezcla positiva+eventualidad ⇒ signo inicial».
-- Reapertura: desigualdad que controle el defecto de bloques iniciales con información adicional, o uniformidad conjunta sobre la masa pertinente; topología donde los momentos no sean continuos con continuidad de la forma completa reverificada.
-- PROVED reutilizable: obstrucciones de momentos (hiperplano ℓ_0=0; límite cero) en L²_η, η>0; aprobación de JOINT_SCALE_016 (ley Beta(k+½,N−½)).
+- Object: moments ℓ_r(f)=∫y^r f in L²_η; unions of Q^kV_N; shifted filter Q_δ=(s+δ)/(s+u).
+- Result: PROVED and APPROVED: (i) the union of Q^kV_N, k≥1, lies in the hyperplane ℓ_0=0, it is not dense (even in P_T: F=(¼−D²)g); (ii) k_j→∞ ⇒ every strong limit is 0; (iii) logical falsifier W_C, C=4; (iv) §9: span{Q_δ^r f_0: r≥R} dense, W_4[f_r]>0 eventually, but there is a finite combination with W_4<0.
+- Falsifier: refutes «dense span + eventual individual sign of generators ⇒ sign on the span» and «partition+positive mixture+eventuality ⇒ initial sign».
+- Reopening: an inequality controlling the defect of the initial blocks with additional information, or joint uniformity over the relevant mass; a topology in which the moments are not continuous, with continuity of the full form reverified.
+- Reusable PROVED: moment obstructions (hyperplane ℓ_0=0; zero limit) in L²_η, η>0; approval of JOINT_SCALE_016 (law Beta(k+½,N−½)).
 
 ### 3. POWER_DIMENSIONAL_AUDIT_051.md
-- Objeto: auditoría de DIMENSIONAL_CUTOFF_051.
-- Resultado: APROBADO como cota de momento y de ARCH, no de W; corrección del factor del segundo sector (d−1)(d+2j+1).
-- Resto: segmento inicial dependiente de n, polar y peine completo. Falsificador citado (PRIME_TRANSFER014): n=2^17, F=(s²−¼)/(s+u)^n, E2[QF]<0 impide declarar positivos todos los segmentos iniciales de E2.
-- Observación: ZERO13 controla un subespacio de codimensión uno; el acoplamiento de Schur queda sin control; no se registra NO-GO nuevo.
-- PROVED reutilizable: ninguno propio (valida 051).
+- Object: audit of DIMENSIONAL_CUTOFF_051.
+- Result: APPROVED as a moment bound and an ARCH bound, not for W; correction of the factor of the second sector (d−1)(d+2j+1).
+- Remainder: initial segment depending on n, polar and full comb. Cited falsifier (PRIME_TRANSFER014): n=2^17, F=(s²−¼)/(s+u)^n, E2[QF]<0 prevents declaring all initial segments of E2 positive.
+- Remark: ZERO13 controls a codimension-one subspace; the Schur coupling remains uncontrolled; no new NO-GO is recorded.
+- Reusable PROVED: none of its own (validates 051).
 
 ### 4. POWER_DIMENSIONAL_CUTOFF_051.md
-- Objeto: r=u²E_G[τ^{−2}] para G=Q^jF, F∈V_n={P/(s+u)^n}, u=63/2.
-- Resultado: PROVED (auditado): (GENERAL) t r≤1+2√(d(d+2j)r), d=n−1, t=2j−1; (LINEAR) para todo n≥1, j≥⌈7n/6⌉: r<49/20, E τ^{−2}<1/405, ARCH/‖G‖²>859/800; corte J(n,b) para cualquier margen h.
-- Resto: los índices j<⌈7n/6⌉, el polar y todos los contactos; la traza ponderada 010 que paga contactos crece con la dimensión. No es corte de signo de W.
-- PROVED reutilizable: GENERAL/ROOT/LINEAR/ARCH-b, para todos los numeradores reales o complejos, sólo la parte arquimediana.
+- Object: r=u²E_G[τ^{−2}] for G=Q^jF, F∈V_n={P/(s+u)^n}, u=63/2.
+- Result: PROVED (audited): (GENERAL) t r≤1+2√(d(d+2j)r), d=n−1, t=2j−1; (LINEAR) for all n≥1, j≥⌈7n/6⌉: r<49/20, E τ^{−2}<1/405, ARCH/‖G‖²>859/800; cutoff J(n,b) for any margin h.
+- Remainder: the indices j<⌈7n/6⌉, the polar and all contacts; the weighted trace 010 that pays for contacts grows with dimension. Not a sign cutoff for W.
+- Reusable PROVED: GENERAL/ROOT/LINEAR/ARCH-b, for all real or complex numerators, archimedean part only.
 
 ### 5. POWER_DIRECT_RECIPROCAL_TURAN_097.md
-- Objeto: h(x)=u²M(u)/[au−M(u)], x=u², a=M′(0); T_h=2h′h‴−3h″².
-- Resultado: PROVED la fórmula (DIRECT) T_h=a[auN_S−4C_h]/[16u³(au−c)^4], la regularización analítica en el origen, T_h(0)=(12a/b_1^4)·det Hankel₃(a,b_1,…,b_4) (ORIGIN-HANKEL) y T_h>0 para todo u≥512 (DIRECT-TAIL). Compacto 0<u<512 OPEN en esta ronda (cerrado después en 099).
-- Resto: cota conjunta de auN_S−4C_h en 0<u<512; signo de ORIGIN-HANKEL no calculado. La herencia al siguiente nivel sigue abierta.
-- PROVED reutilizable: DIRECT, COST C_h<4c³ para A≥128, T_h>0 para u≥512 (dato real, todos los contactos).
+- Object: h(x)=u²M(u)/[au−M(u)], x=u², a=M′(0); T_h=2h′h‴−3h″².
+- Result: PROVED the formula (DIRECT) T_h=a[auN_S−4C_h]/[16u³(au−c)^4], the analytic regularization at the origin, T_h(0)=(12a/b_1^4)·det Hankel₃(a,b_1,…,b_4) (ORIGIN-HANKEL) and T_h>0 for all u≥512 (DIRECT-TAIL). Compact range 0<u<512 OPEN in this round (closed later in 099).
+- Remainder: joint bound of auN_S−4C_h on 0<u<512; sign of ORIGIN-HANKEL not computed. Inheritance to the next level remains open.
+- Reusable PROVED: DIRECT, COST C_h<4c³ for A≥128, T_h>0 for u≥512 (real datum, all contacts).
 
 ### 6. POWER_DIRECT_RECIPROCAL_TURAN_AUDIT_097.md
-- Objeto: auditoría de 097.
-- Resultado: APROBADO / PROVED fórmula y T_h>0 para u≥512; compacto y signo del origen OPEN.
-- Advertencia de alcance: no da T_h global, R_G″ en todos los pivotes, triples G_p, cinco/todos los generadores ni nueva cobertura W/T; el lema anclado se aplica sólo si todo el segmento entre x y P está en el dominio probado.
-- PROVED reutilizable: confirma 097.
+- Object: audit of 097.
+- Result: APPROVED / PROVED formula and T_h>0 for u≥512; compact range and sign at the origin OPEN.
+- Scope warning: does not give global T_h, R_G″ at all pivots, triples G_p, five/all generators nor new W/T coverage; the anchored lemma applies only if the whole segment between x and P lies in the proved domain.
+- Reusable PROVED: confirms 097.
 
 ### 7. POWER_DISCRETE_BALANCE_027.md
-- Objeto: kernel conjunto Ω(t) por pisos (FLOOR), masas Σ K_N(n)=3/2 (SAMPLE), Σ K_N(nx)=G_N(x)=x^{−32}D_N(log x) (SCALES).
-- Resultado: PROVED: Ω(t)≥ℓ−(4log t+9)/t, ℓ=1+γ/2−½log(4π)>1/50; Ω>9/1000 para t≥4096; (JOINT-TAIL) 0<(9/4000)∫_T^∞G_N≤∫_T^∞K_NΩ≤(7/4)G_N(T){T(logT+2)+3T²}; en N=129, 0<cola<10^{−36} (SCALE). Interior y signo W OPEN.
-- Resto: ∫_1^{4096}K_129Ω (interior); dos masas escalares no fuerzan el emparejamiento (bump cerca de 3/2 donde Ω<−0,1).
-- PROVED reutilizable: OMEGA-TAIL y JOINT-TAIL para el K gamma real en x≥exp(τ_N).
+- Object: joint kernel Ω(t) by floors (FLOOR), masses Σ K_N(n)=3/2 (SAMPLE), Σ K_N(nx)=G_N(x)=x^{−32}D_N(log x) (SCALES).
+- Result: PROVED: Ω(t)≥ℓ−(4log t+9)/t, ℓ=1+γ/2−½log(4π)>1/50; Ω>9/1000 for t≥4096; (JOINT-TAIL) 0<(9/4000)∫_T^∞G_N≤∫_T^∞K_NΩ≤(7/4)G_N(T){T(logT+2)+3T²}; at N=129, 0<tail<10^{−36} (SCALE). Interior and sign of W OPEN.
+- Remainder: ∫_1^{4096}K_129Ω (interior); two scalar masses do not force the pairing (bump near 3/2 where Ω<−0.1).
+- Reusable PROVED: OMEGA-TAIL and JOINT-TAIL for the real gamma K on x≥exp(τ_N).
 
 ### 8. POWER_DIVISOR_COMPARISON_034.md
-- Objeto: átomos f_{N,k} (filas N, columnas k), comparador B_N+S_K de 033.
-- Resultado: PROVED (auditado): para todo N≥3, k≥1, u≥63/2, u²≥225N/4: W[f_{N,k}]>(1/40)‖f‖² (NEW-REGION); k≥2 margen >3/20. Corolarios: en u=63/2 filas 3≤N≤12 para todo k≥0 (margen >10^{−4}); para toda u≥63/2 filas 3≤N≤8 uniformes (margen >10^{−3}).
-- Resto: k=0 para N≥13 a tasa fija; interior N≥18; rango N/u² cerca de 2/9.
-- PROVED reutilizable: NEW-REGION (átomos individuales, no combinaciones), ARCH>7/200 y ARCH2>19/40, |POLAR|<9/1000.
+- Object: atoms f_{N,k} (rows N, columns k), comparator B_N+S_K of 033.
+- Result: PROVED (audited): for all N≥3, k≥1, u≥63/2, u²≥225N/4: W[f_{N,k}]>(1/40)‖f‖² (NEW-REGION); k≥2 margin >3/20. Corollaries: at u=63/2 rows 3≤N≤12 for all k≥0 (margin >10^{−4}); for all u≥63/2 rows 3≤N≤8 uniformly (margin >10^{−3}).
+- Remainder: k=0 for N≥13 at fixed rate; interior N≥18; range N/u² near 2/9.
+- Reusable PROVED: NEW-REGION (individual atoms, not combinations), ARCH>7/200 and ARCH2>19/40, |POLAR|<9/1000.
 
 ### 9. POWER_EFFECTIVE_HIGHPASS_054.md
-- Objeto: órbita high-pass Q^jF_0, Q=s/(s+u), u=63/2, F_0=P/(s+u)^n, deg P<n.
-- Resultado: PROVED (auditado): para todo P real no nulo y todo j≥K(n)=max{10000n², A_n·3^{4D_n+20}} (C_n=9n²9^n, D_n=10C_n n!, A_n=6C_n n n!): W[Q^jF_0]>‖Q^jF_0‖² (EFFECTIVE). Incluye contorno STRIP≤D_n, cota del peine completo, polar <‖·‖².
-- Resto: todos los índices j<K(n) (el corte es enorme); no da signo de la tabla ni ventana T.
-- PROVED reutilizable: EFFECTIVE (dimensión variable, todos los numeradores); MOMENTS M_r≤Γ(r+½); |c_{Q^jF_0}(t)|≤D_n e^{−15t}‖·‖².
+- Object: high-pass orbit Q^jF_0, Q=s/(s+u), u=63/2, F_0=P/(s+u)^n, deg P<n.
+- Result: PROVED (audited): for every nonzero real P and every j≥K(n)=max{10000n², A_n·3^{4D_n+20}} (C_n=9n²9^n, D_n=10C_n n!, A_n=6C_n n n!): W[Q^jF_0]>‖Q^jF_0‖² (EFFECTIVE). Includes contour STRIP≤D_n, bound on the full comb, polar <‖·‖².
+- Remainder: all indices j<K(n) (the cutoff is enormous); gives no sign of the table nor window T.
+- Reusable PROVED: EFFECTIVE (variable dimension, all numerators); MOMENTS M_r≤Γ(r+½); |c_{Q^jF_0}(t)|≤D_n e^{−15t}‖·‖².
 
 ### 10. POWER_EFFECTIVE_HIGHPASS_AUDIT_054.md
-- Objeto: auditoría de 054.
-- Resultado: APROBADO; efectivización de la eventualidad 015 vía COEFF054 y contorno escalar 017; dos pesos sólo en dimensión 1.
-- Resto: segmento j<K(n) y signo global, explícitamente fuera.
-- PROVED reutilizable: confirma 054.
+- Object: audit of 054.
+- Result: APPROVED; effectivization of the eventuality 015 via COEFF054 and the scalar contour 017; two weights only in dimension 1.
+- Remainder: segment j<K(n) and global sign, explicitly outside.
+- Reusable PROVED: confirms 054.
 
 ### 11. POWER_ENERGY_AUDIT_041.md
-- Objeto: auditoría de ENERGY_BAND_041 y de su §7 (expansión periódica de B).
-- Resultado: APROBADO; BAND uniforme para N≥2^80; SAWTOOTH y PERIODIC-ERROR aprobados como expansión clásica, no principio de signo.
-- Resto: complemento anterior y posterior de la banda y su balance con ARCH_♯.
-- PROVED reutilizable: confirma 041.
+- Object: audit of ENERGY_BAND_041 and of its §7 (periodic expansion of B).
+- Result: APPROVED; BAND uniform for N≥2^80; SAWTOOTH and PERIODIC-ERROR approved as a classical expansion, not a sign principle.
+- Remainder: the complement before and after the band and its balance with ARCH_♯.
+- Reusable PROVED: confirms 041.
 
 ### 12. POWER_ENERGY_BAND_041.md
-- Objeto: banda energética móvil [e^T,e^{T+L}], T=2dv/(u²−v²), L=√N/100, inverso Möbius completo h_N, B(x)=log(⌊x⌋!)−xH_{⌊x⌋}+⌊x⌋.
-- Resultado: PROVED BAND: para todo N≥2^80, 2∫_{e^T}^{e^{T+L}}h_N B dx<−C_N/25600 (favorable en W/‖·‖²=ARCH_♯−2∫hB). También SAWTOOTH B=−γx−B_1(θ)log x+κ+E, −1/x<E<1/(2x), y PERIODIC-ERROR.
-- Resto: complemento de la banda (interior antes de T y otras bandas); el residuo total W puede ser mucho menor que cada energía.
-- PROVED reutilizable: BAND, B-REAL |B+γx|≤log x+1, SAWTOOTH, ELEMENTARY-EM, PERIODIC-ERROR.
+- Object: moving energy band [e^T,e^{T+L}], T=2dv/(u²−v²), L=√N/100, full Möbius inverse h_N, B(x)=log(⌊x⌋!)−xH_{⌊x⌋}+⌊x⌋.
+- Result: PROVED BAND: for all N≥2^80, 2∫_{e^T}^{e^{T+L}}h_N B dx<−C_N/25600 (favorable in W/‖·‖²=ARCH_♯−2∫hB). Also SAWTOOTH B=−γx−B_1(θ)log x+κ+E, −1/x<E<1/(2x), and PERIODIC-ERROR.
+- Remainder: complement of the band (interior before T and other bands); the total residue W may be much smaller than each energy.
+- Reusable PROVED: BAND, B-REAL |B+γx|≤log x+1, SAWTOOTH, ELEMENTARY-EM, PERIODIC-ERROR.
 
 ### 13. POWER_ENERGY_GROUP_037.md
-- Objeto: dilatación D_N(m)=mH_N(mx_N)/H_N(x_N) en el centro energético t_N=d/992; grupos K_{N,Q}(m)=Σ_{b|Q}μ(b)D_N(mb).
-- Resultado: PROVED: (CENTER), (DILATE) m^{−1}e^{−M_N(...)}≤D_N≤m^{−1}(1+M_N ℓ); falsificador ABS-FAIL: Σ_{m≥2}|μ(m)|D_N(m)>1 para todo N≥2^16 (refuta contracción absoluta); SIGNED y WINDOW (grupos finitos positivos); §8 con Q=∏_{p≤N^{1/8}}p: grupos positivos pero GROW-ABS Σ|μ||K|>37/25 >K(1)<0,505.
-- Resto: la suma firmada exterior FULL Σ_{(m,Q)=1}μ(m)K_{N,Q}(m); el mayorante (log m)²/m no es sumable.
-- Reapertura: un bound firmado del complemento sin sumar error no sumable.
-- PROVED reutilizable: DILATE, SIGNED, WINDOW; NO-GO de contracción absoluta (incluso tras agrupar con Q creciente).
+- Object: dilation D_N(m)=mH_N(mx_N)/H_N(x_N) at the energy center t_N=d/992; groups K_{N,Q}(m)=Σ_{b|Q}μ(b)D_N(mb).
+- Result: PROVED: (CENTER), (DILATE) m^{−1}e^{−M_N(...)}≤D_N≤m^{−1}(1+M_N ℓ); falsifier ABS-FAIL: Σ_{m≥2}|μ(m)|D_N(m)>1 for all N≥2^16 (refutes absolute contraction); SIGNED and WINDOW (positive finite groups); §8 with Q=∏_{p≤N^{1/8}}p: positive groups but GROW-ABS Σ|μ||K|>37/25 >K(1)<0.505.
+- Remainder: the exterior signed sum FULL Σ_{(m,Q)=1}μ(m)K_{N,Q}(m); the majorant (log m)²/m is not summable.
+- Reopening: a signed bound of the complement without summing a nonsummable error.
+- Reusable PROVED: DILATE, SIGNED, WINDOW; NO-GO of absolute contraction (even after grouping with growing Q).
 
 ### 14. POWER_EXACT_H_GLOBAL_AUDIT_099.md
-- Objeto: auditoría del certificado global de T_h (099).
-- Resultado: APROBADO / PROVED (FULL PASS 2048 paneles en [0,512], hash fijado): T_h(x)>0 para todo x>0 con la Φ real; los datos recíprocos R_G, S_G de G_p son estrictamente cóncavos en todos p,x>0; todos los triples distintos de G_p PD; bloque anclado {0,p,z_1,z_2,z_3} PD.
-- Alcance: el nodo 0 corresponde al exponente ½, fuera del portador; no prueba cinco generadores admisibles arbitrarios ni herencia Turán ni todos los órdenes; 090 (contraejemplo genérico), 091, 092 siguen vigentes.
-- PROVED reutilizable: T_h>0 global; triples del resto de G_p PD; bloque auxiliar de cinco nodos anclado PD.
+- Object: audit of the global certificate of T_h (099).
+- Result: APPROVED / PROVED (FULL PASS 2048 panels on [0,512], fixed hash): T_h(x)>0 for all x>0 with the real Φ; the reciprocal data R_G, S_G of G_p are strictly concave for all p,x>0; all distinct triples of G_p PD; anchored block {0,p,z_1,z_2,z_3} PD.
+- Scope: node 0 corresponds to exponent ½, outside the carrier; does not prove five arbitrary admissible generators nor Turán inheritance nor all orders; 090 (generic counterexample), 091, 092 remain in force.
+- Reusable PROVED: T_h>0 globally; triples of the remainder G_p PD; anchored auxiliary five-node block PD.
 
 ### 15. POWER_EXACT_H_GLOBAL_DESIGN_099.md
-- Objeto: funciones enteras U(x)=E′(u)/u, V(x)=[aE(u)−U(x)]/u²; S(u)=Ñ(u)/u^15=(16/a)NUM_x(u²) entera y par (ENTIRE-S), NUM_x=V^4T_h; gauge G_c=exp[−4M(c)(u−c)]S/E(c)^4.
-- Resultado: PROVED (certificado intervalar 2048 paneles en [0,512], FULL PASS; reproducido): T_h(x)>0 para todo x>0 (empalmado con 097 y 098), en la Φ real con aritmética completa.
-- Resto: no se infiere herencia de Turán al siguiente resto, iteración a todos los órdenes, signo W ni ventana T; el Wronskiano temporal 093/095 (más fuerte) sigue sin signo global.
-- PROVED reutilizable: T_h>0 global; representación entera regularizada S; cota CAUCHY-S |S|/E(c)^4<2^151.
+- Object: entire functions U(x)=E′(u)/u, V(x)=[aE(u)−U(x)]/u²; S(u)=Ñ(u)/u^15=(16/a)NUM_x(u²) entire and even (ENTIRE-S), NUM_x=V^4T_h; gauge G_c=exp[−4M(c)(u−c)]S/E(c)^4.
+- Result: PROVED (interval certificate 2048 panels on [0,512], FULL PASS; reproduced): T_h(x)>0 for all x>0 (spliced with 097 and 098), for the real Φ with full arithmetic.
+- Remainder: no Turán inheritance to the next remainder is inferred, nor iteration to all orders, sign of W nor window T; the temporal Wronskian 093/095 (stronger) still has no global sign.
+- Reusable PROVED: T_h>0 globally; regularized entire representation S; bound CAUCHY-S |S|/E(c)^4<2^151.
 
 ### 16. POWER_EXACT_H_ORIGIN_AUDIT_098.md
-- Objeto: auditoría del jet en 0.
-- Resultado: APROBADO: H_3>0 (≈1,738·10^{−21}) y T_h(0)>0 (≈3,155·10^{−5}) para la Φ real, NUMÉRICO certificado (intervalos Arb, 128 paneles, reproducido).
-- Resto (en esta ronda): intervalo intermedio OPEN (cerrado en 099).
-- PROVED reutilizable: T_h(0)>0 con a>0, b<0.
+- Object: audit of the jet at 0.
+- Result: APPROVED: H_3>0 (≈1.738·10^{−21}) and T_h(0)>0 (≈3.155·10^{−5}) for the real Φ, certified NUMERICAL (Arb intervals, 128 panels, reproduced).
+- Remainder (in this round): intermediate interval OPEN (closed in 099).
+- Reusable PROVED: T_h(0)>0 with a>0, b<0.
 
 ### 17. POWER_EXACT_H_ORIGIN_DESIGN_098.md
-- Objeto: T_h(0)=12aH_3/b^4, H_3=det[[a,b,c],[b,c,d],[c,d,e]] con coeficientes de cumulantes normalizados (κ_{2j}) de Φ/Z(0); seis momentos pares I_0..I_10.
-- Resultado: PROVED PUNTUAL (certificado intervalar): T_h(0)>0, vecindad sin radio certificado. Valores a≈0,04621, b≈−7,43·10^{−5}.
-- Resto: el compacto 0<u<512 en esta ronda; ningún signo global ni de W.
-- PROVED reutilizable: T_h(0)>0; cola temporal ∫_2^∞ t^rΦ<2^{−138} (r≤10).
+- Object: T_h(0)=12aH_3/b^4, H_3=det[[a,b,c],[b,c,d],[c,d,e]] with normalized cumulant coefficients (κ_{2j}) of Φ/Z(0); six even moments I_0..I_10.
+- Result: PROVED AT A POINT (interval certificate): T_h(0)>0, neighbourhood without certified radius. Values a≈0.04621, b≈−7.43·10^{−5}.
+- Remainder: the compact range 0<u<512 in this round; no global sign nor sign of W.
+- Reusable PROVED: T_h(0)>0; temporal tail ∫_2^∞ t^rΦ<2^{−138} (r≤10).
 
 ### 18. POWER_FIVE_AUDIT_010.md
-- Objeto: auditoría de FIVE_GLOBAL_010.
-- Resultado: PROVED / PASS: W>0,01‖f‖² en todos los espacios de cinco polos reales ≥31,5, con repetición, sin separación.
-- Resto: dimensión fija; no se extiende a seis ni a todos los órdenes.
-- PROVED reutilizable: confirma 010.
+- Object: audit of FIVE_GLOBAL_010.
+- Result: PROVED / PASS: W>0.01‖f‖² on all spaces of five real poles ≥31.5, with repetition, without separation.
+- Remainder: fixed dimension; does not extend to six nor to all orders.
+- Reusable PROVED: confirms 010.
 
 ### 19. POWER_FIVE_GLOBAL_010.md
-- Objeto: f con Laplace P(s)/∏_{j≤5}(s+v_j), v_j≥63/2, deg P<5.
-- Resultado: PROVED (certificado racional): W[f]>(1/100)‖f‖² (FIVE); BASE5 AP>(19/100)‖f_0‖²; AP5 AP>(1/50)‖f‖² por transporte; peine |Comb|<1/100 con peso all-pass σ=21, B_5=(49^5−1)/16.
-- Resto: dimensión 12 necesita contribución aritmética con signo; sin constante uniforme al crecer la dimensión.
-- PROVED reutilizable: FIVE (incluye mezclas de hasta cinco potencias X^{−a}, a≥32, y límites confluentes); identidad de transporte AP[f]−c‖f‖²=R_0(...)+∫(R−R_0)(m−c)|F_0|²+(r_0−R_0)Polar.
+- Object: f with Laplace transform P(s)/∏_{j≤5}(s+v_j), v_j≥63/2, deg P<5.
+- Result: PROVED (rational certificate): W[f]>(1/100)‖f‖² (FIVE); BASE5 AP>(19/100)‖f_0‖²; AP5 AP>(1/50)‖f‖² by transport; comb |Comb|<1/100 with all-pass weight σ=21, B_5=(49^5−1)/16.
+- Remainder: dimension 12 needs an arithmetic contribution with sign; no uniform constant as dimension grows.
+- Reusable PROVED: FIVE (includes mixtures of up to five powers X^{−a}, a≥32, and confluent limits); transport identity AP[f]−c‖f‖²=R_0(...)+∫(R−R_0)(m−c)|F_0|²+(r_0−R_0)Polar.
 
 ### 20. POWER_FIXED_BLOCK_ASSEMBLY_AUDIT.md
-- Objeto: auditoría de la obstrucción por bloques PSD de soporte acotado.
-- Resultado: APROBADO; exclusión sólo en la base original y para k fijo.
-- Reapertura (no excluido): otra base, tamaño creciente, parte PSD global densa, Schur, controles firmados de cruces.
-- PROVED reutilizable: confirma la obstrucción.
+- Object: audit of the obstruction by PSD blocks of bounded support.
+- Result: APPROVED; exclusion only in the original basis and for fixed k.
+- Reopening (not excluded): another basis, growing size, dense global PSD part, Schur, signed controls of cross terms.
+- Reusable PROVED: confirms the obstruction.
 
 ### 21. POWER_FIXED_BLOCK_ASSEMBLY_OBSTRUCTION.md
-- Objeto: certificados C=ΣB_α, B_α PSD soportadas en ≤k coordenadas de la escalera a=32+m; condición necesaria 1ᵀC1≤k·tr C.
-- Resultado: NO-GO PROVED (clase: sumas de PSD de soporte ≤k fijo en la base de potencias, cerrada por límites y congruencias diagonales): para cada k existe un bloque de nodos a_j=32+2N+2j, j=0..k, con C_ij→1 que viola NECESSARY; también falla la dominancia diagonal escalada.
-- Falsificador: el propio bloque normalizado de la escalera real (no prueba dirección negativa).
-- Reapertura: cambios de base generales, bloques de tamaño creciente, Schur, parte PSD global densa.
-- PROVED reutilizable: L(a_j)=½log N+O_k(1); condición LOCAL/NECESSARY.
+- Object: certificates C=ΣB_α, B_α PSD supported on ≤k coordinates of the ladder a=32+m; necessary condition 1ᵀC1≤k·tr C.
+- Result: NO-GO PROVED (class: sums of PSD matrices of fixed support ≤k in the power basis, closed under limits and diagonal congruences): for each k there is a block of nodes a_j=32+2N+2j, j=0..k, with C_ij→1 violating NECESSARY; scaled diagonal dominance also fails.
+- Falsifier: the normalized block of the real ladder itself (does not prove a negative direction).
+- Reopening: general changes of basis, blocks of growing size, Schur, dense global PSD part.
+- Reusable PROVED: L(a_j)=½log N+O_k(1); LOCAL/NECESSARY condition.
 
 ### 22. POWER_FIXED_GRID_003.md
-- Objeto: escalera fija a_j=32+j, K_ij=(L_i+L_j)/(s_i+s_j), s_j=63/2+j; congruencia a B_ij=(1−q_iq_j)/(1−x_ix_j), x_j=j/(63+j), q_j=(L_j−L_0)/(L_j+L_0); recurrencia de eliminación (E) con parámetros α_r.
-- Resultado: PROVED: K_n PD ⟺ α_0..α_{n−1} definidos y |α_r|<1 (identidad algebraica finita); órdenes 1–6 certificados (intervalos racionales): signo para toda mezcla real de X^{−32},…,X^{−37}. Falsificador algebraico: s=(1,5/3,3), L=(1,3/2,121/79): L creciente, L/s decreciente, todos los menores 2×2 >0, det K=−332001/391435520<0.
-- Resto: |α_r|<1 para todo r con los L(32+j) reales; no hay ley de alternancia ni cota uniforme.
-- Reapertura: un resto de signo que se preserve bajo (E).
-- PROVED reutilizable: criterio de Schur/Pick por (E) en la escalera; seis primeros órdenes.
+- Object: fixed ladder a_j=32+j, K_ij=(L_i+L_j)/(s_i+s_j), s_j=63/2+j; congruence to B_ij=(1−q_iq_j)/(1−x_ix_j), x_j=j/(63+j), q_j=(L_j−L_0)/(L_j+L_0); elimination recurrence (E) with parameters α_r.
+- Result: PROVED: K_n PD ⟺ α_0..α_{n−1} defined and |α_r|<1 (finite algebraic identity); orders 1–6 certified (rational intervals): sign for every real mixture of X^{−32},…,X^{−37}. Algebraic falsifier: s=(1,5/3,3), L=(1,3/2,121/79): L increasing, L/s decreasing, all 2×2 minors >0, det K=−332001/391435520<0.
+- Remainder: |α_r|<1 for all r with the real L(32+j); no alternation law nor uniform bound.
+- Reopening: a sign remainder preserved under (E).
+- Reusable PROVED: Schur/Pick criterion via (E) on the ladder; first six orders.
 
 ### 23. POWER_FOUR_GENERATORS_085.md
-- Objeto: N_R, N_S (obligaciones Turán de R(x)=u/M(u), S(x)=uM(u)) en el compacto ½≤u≤127,5.
-- Resultado: PROVED (certificado 16384 paneles, FULL PASS, reproducido): T_R,T_S>0 para todo u≥½; con Rolle (084), factorización (083) y menores (080): W completa positiva en toda combinación no nula de hasta CUATRO potencias X^{−a_i}, a_i>1 arbitrarios (ARCH, polar y todos los contactos).
-- Resto: cinco generadores, todos los órdenes, envolvente completa; obligaciones pfaffianas superiores OPEN.
-- PROVED reutilizable: positividad para cuatro generadores arbitrarios a_i>1.
+- Object: N_R, N_S (Turán obligations of R(x)=u/M(u), S(x)=uM(u)) on the compact range ½≤u≤127.5.
+- Result: PROVED (certificate 16384 panels, FULL PASS, reproduced): T_R,T_S>0 for all u≥½; with Rolle (084), factorization (083) and minors (080): full W positive on every nonzero combination of up to FOUR powers X^{−a_i}, a_i>1 arbitrary (ARCH, polar and all contacts).
+- Remainder: five generators, all orders, full envelope; higher Pfaffian obligations OPEN.
+- Reusable PROVED: positivity for four arbitrary generators a_i>1.
 
 ### 24. POWER_FOUR_GENERATORS_AUDIT_085.md
-- Objeto: auditoría de 085.
-- Resultado: APROBADO / PROVED (hash coincidente). Amplía exponentes pequeños/mixtos más allá de la región de tasas grandes 053.
-- Resto: cinco generadores y órdenes superiores OPEN.
-- PROVED reutilizable: confirma 085.
+- Object: audit of 085.
+- Result: APPROVED / PROVED (matching hash). Extends small/mixed exponents beyond the large-rate region 053.
+- Remainder: five generators and higher orders OPEN.
+- Reusable PROVED: confirms 085.
 
 ### 25. POWER_FOUR_GLOBAL_009.md
-- Objeto: espacios de cuatro polos reales v_j≥63/2 (con repetición); transporte de déficit por filtro H=∏(s+u)/(s+v_j).
-- Resultado: PROVED: W[f]>(2/25)‖f‖² (FOUR); AP4 AP>(1/10)‖f‖²; (NEG) m≥1/10 para τ²≥81 y τ²(1/10−m)_+<23; peine <13/1000 con B_4=32552.
-- Resto: dimensión creciente: BASE puede fallar sin contribución aritmética positiva (dimensión 12).
-- PROVED reutilizable: identidad de transporte (ID) y cota coerciva; FOUR.
+- Object: spaces of four real poles v_j≥63/2 (with repetition); deficit transport by the filter H=∏(s+u)/(s+v_j).
+- Result: PROVED: W[f]>(2/25)‖f‖² (FOUR); AP4 AP>(1/10)‖f‖²; (NEG) m≥1/10 for τ²≥81 and τ²(1/10−m)_+<23; comb <13/1000 with B_4=32552.
+- Remainder: growing dimension: BASE can fail without a positive arithmetic contribution (dimension 12).
+- Reusable PROVED: transport identity (ID) and coercive bound; FOUR.
 
 ### 26. POWER_FOUR_GLOBAL_AUDIT_009.md
-- Objeto: auditoría de 009.
-- Resultado: PROVED / APROBADO; corchete exacto 3669270349/93389776200>3/100.
-- Resto: no se infiere cinco polos ni dimensión arbitraria.
-- PROVED reutilizable: confirma 009.
+- Object: audit of 009.
+- Result: PROVED / APPROVED; exact bracket 3669270349/93389776200>3/100.
+- Remainder: five poles or arbitrary dimension are not inferred.
+- Reusable PROVED: confirms 009.
 
 ### 27. POWER_FOUR_TURAN_084.md
-- Objeto: Pfaffiano de cuatro nodos, A_{f,ij}=[f(x_j)−f(x_i)]/(u_i+u_j); Pf(A_f)=−D_f/P (PF-DET), D_f=det[1,x_i,f,x_if]; det K=Pf(A_R)Pf(A_S)/∏R(x_i).
-- Resultado: PROVED: criterio global por Rolle: f′>0, f″<0, T_f=2f′f‴−3f″²>0 en el intervalo ⇒ Pf(A_f)>0 para toda cuádrupla; OUTER-TURAN N_R>¼, N_S>19/4 para A≥128. Falsificador de herencia: R=1+x−x²/16, S=x/R (RS=x, concavidades, triples PD) con det K_4=−ε³V²/[∏R]²<0.
-- Resto (en esta ronda): compacto ½<u<127,5 (cerrado en 085); o pagar el producto de Pfaffianos sin signos individuales.
-- PROVED reutilizable: PF-DET; criterio de Rolle suficiente; REAL-TURAN; cotas de P_j(A).
+- Object: four-node Pfaffian, A_{f,ij}=[f(x_j)−f(x_i)]/(u_i+u_j); Pf(A_f)=−D_f/P (PF-DET), D_f=det[1,x_i,f,x_if]; det K=Pf(A_R)Pf(A_S)/∏R(x_i).
+- Result: PROVED: global criterion via Rolle: f′>0, f″<0, T_f=2f′f‴−3f″²>0 on the interval ⇒ Pf(A_f)>0 for every quadruple; OUTER-TURAN N_R>¼, N_S>19/4 for A≥128. Inheritance falsifier: R=1+x−x²/16, S=x/R (RS=x, concavities, triples PD) with det K_4=−ε³V²/[∏R]²<0.
+- Remainder (in this round): compact range ½<u<127.5 (closed in 085); or pay for the product of Pfaffians without individual signs.
+- Reusable PROVED: PF-DET; sufficient Rolle criterion; REAL-TURAN; bounds on P_j(A).
 
 ### 28. POWER_FOUR_TURAN_AUDIT_084.md
-- Objeto: auditoría de 084.
-- Resultado: APROBADO / PROVED como criterio suficiente, falsificador de clase y aplicación exterior. El criterio es suficiente, no necesario para cada Pfaffiano.
-- Resto: compacto pendiente en esa ronda; sin nueva cobertura W/T (cola ya cubierta por 053).
-- PROVED reutilizable: confirma 084.
+- Object: audit of 084.
+- Result: APPROVED / PROVED as a sufficient criterion, class falsifier and exterior application. The criterion is sufficient, not necessary for each Pfaffian.
+- Remainder: compact range pending in that round; no new W/T coverage (tail already covered by 053).
+- Reusable PROVED: confirms 084.
 
 ### 29. POWER_FRONTIER_AUDIT_036.md
-- Objeto: auditoría de RECURRENCE_BOUNDARY_036 y MOVING_BALANCE_036.
-- Resultado: APROBADOS: frontera diagonal completa 0≤C_L≤M_L(H_L+0,002)=O(log L/√L) sobre el cono parabólico; frontera detenida (SURVIVAL con probabilidad positiva; la región 034 N′≤17 es inaccesible desde N≥18); ventana energética: ambas energías reales (polar y prima) concentran en m/d→1/32 con fases λ^N coincidentes; CHEB ψ≥x/2−16 para Λ real.
-- Resto: el lower firmado del complemento R_L; no se deduce Π/P→1 ni precisión del residuo; compensación dentro del funcional firmado antes de promediar no refutada.
-- PROVED reutilizable: cotas de energía del cono parabólico; concentración m/d→1/32.
+- Object: audit of RECURRENCE_BOUNDARY_036 and MOVING_BALANCE_036.
+- Result: APPROVED: full diagonal frontier 0≤C_L≤M_L(H_L+0.002)=O(log L/√L) on the parabolic cone; stopped frontier (SURVIVAL with positive probability; the region 034 N′≤17 is inaccessible from N≥18); energy window: both real energies (polar and prime) concentrate at m/d→1/32 with coinciding phases λ^N; CHEB ψ≥x/2−16 for real Λ.
+- Remainder: the signed lower bound of the complement R_L; Π/P→1 or precision of the residue is not deduced; compensation within the signed functional before averaging not refuted.
+- Reusable PROVED: energy bounds of the parabolic cone; concentration m/d→1/32.
 
 ### 30. POWER_FULL_THIRTEEN_053.md
-- Objeto: espacios de trece polos reales v_i≥63/2, numerador P de grado<13; ganancia ZERO14 (catorce polos con D(0)=0).
-- Resultado: PROVED (certificado: 95 LDL racionales j=1..95 más cola analítica j≥96, auditado): W[P/∏_{i≤13}(s+v_i)]>‖·‖²/4000 (TARGET); W>‖·‖²/1000 en catorce polos con numerador cero.
-- Resto: dimensión arbitraria; catorce polos con numerador general; el mayorante de cola desde n=3 (0,0464) es insuficiente para E2, por eso se conserva el contacto 3.
-- PROVED reutilizable: TARGET (13 polos); ZERO14; identidad FULLTEL con κ_j≥0.
+- Object: spaces of thirteen real poles v_i≥63/2, numerator P of degree<13; gain ZERO14 (fourteen poles with D(0)=0).
+- Result: PROVED (certificate: 95 rational LDLs j=1..95 plus analytic tail j≥96, audited): W[P/∏_{i≤13}(s+v_i)]>‖·‖²/4000 (TARGET); W>‖·‖²/1000 on fourteen poles with zero numerator.
+- Remainder: arbitrary dimension; fourteen poles with general numerator; the tail majorant from n=3 (0.0464) is insufficient for E2, which is why contact 3 is kept.
+- Reusable PROVED: TARGET (13 poles); ZERO14; identity FULLTEL with κ_j≥0.
 
 ### 31. POWER_FULL_THIRTEEN_AUDIT_053.md
-- Objeto: auditoría de 053.
-- Resultado: APROBADO (reproducción exit 0, 95 LDL PASS, B_T14=947334302964<973312²).
-- Resto: no dimensión arbitraria ni ventana temporal.
-- PROVED reutilizable: confirma 053.
+- Object: audit of 053.
+- Result: APPROVED (reproduction exit 0, 95 LDL PASS, B_T14=947334302964<973312²).
+- Remainder: neither arbitrary dimension nor temporal window.
+- Reusable PROVED: confirms 053.
 
 ### 32. POWER_FULL_TRANSFER_PLAN_050.md
-- Objeto: plan MULTI con contactos {2}, {2,3}, {2,3,4}; MULTI-E2: E2[F]>‖F‖²/2500 en todos los doce polos ≥u.
-- Resultado: EXPLORACIÓN SUPERADA por FULL_TWELVE_050; PROVED MULTI-E2 (ARCH+POLAR+contacto 2) y TAIL-M (mayorante de cola desde M). La obligación NEXT (E_{2,3}≥‖·‖²/2500 en toda la órbita) quedó OPEN y luego evitada; «no tratar NEXT como obligación vigente».
-- Resto: ninguno vigente propio.
-- PROVED reutilizable: MULTI-E2; cota TAIL-M con B=1282776893780652.
+- Object: plan MULTI with contacts {2}, {2,3}, {2,3,4}; MULTI-E2: E2[F]>‖F‖²/2500 on all twelve poles ≥u.
+- Result: EXPLORATION SUPERSEDED by FULL_TWELVE_050; PROVED MULTI-E2 (ARCH+POLAR+contact 2) and TAIL-M (tail majorant from M). The obligation NEXT (E_{2,3}≥‖·‖²/2500 on the whole orbit) remained OPEN and was later avoided; «do not treat NEXT as a live obligation».
+- Remainder: none of its own in force.
+- Reusable PROVED: MULTI-E2; bound TAIL-M with B=1282776893780652.
 
 ### 33. POWER_FULL_TWELVE_050.md
-- Objeto: doce polos reales v_i≥63/2, deg P<12; ZERO13.
-- Resultado: PROVED (auditado): W[f]>‖f‖²/10000 (TWELVE); ZERO13: W>‖·‖²/250 en trece polos con D(0)=0; ORBIT E2[Q^jF_0]>‖·‖²/50 para j≥1.
-- Resto: trece polos con numerador general (cerrado en 053), orden arbitrario, puente global de bloques crecientes.
-- PROVED reutilizable: TWELVE; ZERO13; ORBIT; B_T13=109543953194.
+- Object: twelve real poles v_i≥63/2, deg P<12; ZERO13.
+- Result: PROVED (audited): W[f]>‖f‖²/10000 (TWELVE); ZERO13: W>‖·‖²/250 on thirteen poles with D(0)=0; ORBIT E2[Q^jF_0]>‖·‖²/50 for j≥1.
+- Remainder: thirteen poles with general numerator (closed in 053), arbitrary order, global bridge of growing blocks.
+- Reusable PROVED: TWELVE; ZERO13; ORBIT; B_T13=109543953194.
 
 ### 34. POWER_FULL_TWELVE_AUDIT_050.md
-- Objeto: auditoría de 050.
-- Resultado: APROBADO; trece PASS; cola ≤2942000/186535791<2/125.
-- PROVED reutilizable: confirma 050.
+- Object: audit of 050.
+- Result: APPROVED; thirteen PASS; tail ≤2942000/186535791<2/125.
+- Reusable PROVED: confirms 050.
 
 ### 35. POWER_GAMMA_129_AUDIT_061.md
-- Objeto: auditoría de la decisión del átomo N=129, k=0.
-- Resultado: APROBADO; W/‖g‖²∈[13456684165,13456684168]/10^{20}; beneficio de las células n≥3 entre 0,3755 y 0,3822.
-- Resto: no decide filas, bloques, órdenes arbitrarios ni ventana.
-- PROVED reutilizable: confirma 061.
+- Object: audit of the decision of the atom N=129, k=0.
+- Result: APPROVED; W/‖g‖²∈[13456684165,13456684168]/10^{20}; benefit of the cells n≥3 between 0.3755 and 0.3822.
+- Remainder: does not decide rows, blocks, arbitrary orders nor window.
+- Reusable PROVED: confirms 061.
 
 ### 36. POWER_GAMMA_129_DECISION_061.md
-- Objeto: átomo g_129(t)=t^{128}e^{−ut}/128!, u=63/2.
-- Resultado: PROVED (certificado racional): 1,34·10^{−10}<W[g_129]/‖g_129‖²<1,35·10^{−10}; −ERR≈1,04219397031519 y −ARCH_♯≈1,04219397018063 (cancelación a 10^{−10}); K_129(1)<0 no implicaba W<0.
-- Resto: propagación en N; el balance firmado debe conservarse con precisión relativa al residuo; no rehabilita K≥0 universal.
-- PROVED reutilizable: signo del átomo (129,0); 0,3755<2Σ_{m≥3}S_129(m)<0,3822.
+- Object: atom g_129(t)=t^{128}e^{−ut}/128!, u=63/2.
+- Result: PROVED (rational certificate): 1.34·10^{−10}<W[g_129]/‖g_129‖²<1.35·10^{−10}; −ERR≈1.04219397031519 and −ARCH_♯≈1.04219397018063 (cancellation to 10^{−10}); K_129(1)<0 did not imply W<0.
+- Remainder: propagation in N; the signed balance must be preserved with precision relative to the residue; does not rehabilitate universal K≥0.
+- Reusable PROVED: sign of the atom (129,0); 0.3755<2Σ_{m≥3}S_129(m)<0.3822.
 
 ### 37. POWER_GAMMA_AFFINE_AUDIT_062.md
-- Objeto: auditoría del diagnóstico afín 062.
-- Resultado: APROBADO; R es el residuo global completo de 042; ABS-TAIL (N≥2^80) no aplica a 129; R obtenido de ERR061, no estimación independiente.
-- Resto: control del balance firmado interior al variar N.
-- PROVED reutilizable: confirma 062.
+- Object: audit of the affine diagnosis 062.
+- Result: APPROVED; R is the full global residue of 042; ABS-TAIL (N≥2^80) does not apply to 129; R obtained from ERR061, not an independent estimate.
+- Remainder: control of the interior signed balance as N varies.
+- Reusable PROVED: confirms 062.
 
 ### 38. POWER_GAMMA_AFFINE_BALANCE_062.md
-- Objeto: AFF=ARCH_♯+2γ−βJ_1, β=log(2π)−1−γ; W/‖g_129‖²=AFF−2R (EXACT), R residuo renormalizado completo.
-- Resultado: PROVED (certificado): AFF<−1/100 (≈−0,0604), R<−1/200; NO-GO puntual: la parte afín 042 no es base positiva en N=129.
-- Resto: R (orden 0,03) frente a W (orden 10^{−10}); comparación uniforme celdas–ARCH_♯ OPEN.
-- Reapertura: cualquier continuación desde la parte afín debe estimar de verdad el residuo completo.
-- PROVED reutilizable: las cajas BOXES (sólo N=129).
+- Object: AFF=ARCH_♯+2γ−βJ_1, β=log(2π)−1−γ; W/‖g_129‖²=AFF−2R (EXACT), R full renormalized residue.
+- Result: PROVED (certificate): AFF<−1/100 (≈−0.0604), R<−1/200; pointwise NO-GO: the affine part 042 is not a positive base at N=129.
+- Remainder: R (of order 0.03) against W (of order 10^{−10}); uniform cells–ARCH_♯ comparison OPEN.
+- Reopening: any continuation from the affine part must genuinely estimate the full residue.
+- Reusable PROVED: the BOXES (only N=129).
 
 ### 39. POWER_GAMMA_BALANCE_030.md
-- Objeto: ley gamma real V=β/G, G~Gamma(b,1), β=u²/4, b=N−½; L_N(a)=E(V−a)_+−(m−a)_+; G_W(v) forma completa del test gaussiano; identidad FULL-GAP W[g_N]/‖g_N‖²−G_W(m)=∫L_N G_W″.
-- Resultado: PROVED: SHARP-GAP 0<A_♯(m)−ARCH_♯[g_N]/‖·‖²≤½[ψ(b)−log(b−1)]<1/(2(b−1)) para todo N≥2. Falsificador (N=2, u=63/2): W[g_2]/‖·‖²<17/20, G_W(u²/2)>7/8, ∫L_2G_W″<−1/40 (NEG-GAP): refuta «el test gamma domina a la gaussiana de igual segundo momento».
-- Resto: el cambio firmado de ERR junto con la pérdida; el emparejamiento completo L_N G_W″.
-- PROVED reutilizable: SHARP-GAP (lower de la parte sharp con coste O(1/N)); lower digamma Re ψ(a+it)≥log|a+it|−Re[1/(2(a+it))]−1/(6a²).
+- Object: real gamma law V=β/G, G~Gamma(b,1), β=u²/4, b=N−½; L_N(a)=E(V−a)_+−(m−a)_+; G_W(v) full form of the Gaussian test; identity FULL-GAP W[g_N]/‖g_N‖²−G_W(m)=∫L_N G_W″.
+- Result: PROVED: SHARP-GAP 0<A_♯(m)−ARCH_♯[g_N]/‖·‖²≤½[ψ(b)−log(b−1)]<1/(2(b−1)) for all N≥2. Falsifier (N=2, u=63/2): W[g_2]/‖·‖²<17/20, G_W(u²/2)>7/8, ∫L_2G_W″<−1/40 (NEG-GAP): refutes «the gamma test dominates the Gaussian with the same second moment».
+- Remainder: the signed change of ERR together with the loss; the full pairing L_N G_W″.
+- Reusable PROVED: SHARP-GAP (lower bound of the sharp part with cost O(1/N)); digamma lower bound Re ψ(a+it)≥log|a+it|−Re[1/(2(a+it))]−1/(6a²).
 
 ### 40. POWER_GAMMA_WEIGHT_031.md
-- Objeto: R(t)=ρ(t)−(2/3)ρ′(t), máximo T_N; primitiva I_*(X)=∫_1^X(3/2)x^{−½}H(x)dx con H(x)=1+[log((x+1)/(x−1))+c_0−1−2Ψ_1(x)]/x², Ψ_1(x)=Σ_{q≤x}qΛ(q).
-- Resultado: PROVED (auditado): T_N≤(2/3)d/(d+20), q″<0, PEAK 0<R(T_N)−1≤2M_2/9, M_2=u²/(2N−3); BUDGET W[g_N]/‖·‖²≥∫_{T_N}^∞I_*(e^t)[−R′]dt−M_2; criterio suficiente E_ν[I_*]>M_2/R(T) (no probado).
-- Resto: I_* toma valores negativos después de 3 (WEIGHTED_BLOCK031); falta una desigualdad aritmética firmada para E_ν[I_*].
-- PROVED reutilizable: PEAK, BUDGET, concavidad de q, identidad IBP sin borde.
+- Object: R(t)=ρ(t)−(2/3)ρ′(t), maximum T_N; primitive I_*(X)=∫_1^X(3/2)x^{−½}H(x)dx with H(x)=1+[log((x+1)/(x−1))+c_0−1−2Ψ_1(x)]/x², Ψ_1(x)=Σ_{q≤x}qΛ(q).
+- Result: PROVED (audited): T_N≤(2/3)d/(d+20), q″<0, PEAK 0<R(T_N)−1≤2M_2/9, M_2=u²/(2N−3); BUDGET W[g_N]/‖·‖²≥∫_{T_N}^∞I_*(e^t)[−R′]dt−M_2; sufficient criterion E_ν[I_*]>M_2/R(T) (not proved).
+- Remainder: I_* takes negative values after 3 (WEIGHTED_BLOCK031); a signed arithmetic inequality for E_ν[I_*] is missing.
+- Reusable PROVED: PEAK, BUDGET, concavity of q, IBP identity without boundary.
 
 ### 41. POWER_GEOMETRIC_TRANSFER_015.md
-- Objeto: iteración de un polo W[f_v]=ρΣ_{k≤K}a^kW[h_k]+a^{K+1}W[g_{K+1,v}], ρ=u²/v², a=1−ρ; topología X=H^t∩L²(e^{ηy}), 0<t<½, ½<η<u/2.
-- Resultado: PROVED (u>1): W continua en X; Q^k f→0 fuertemente; mezcla (MIX) y (MULTI) W[f]=Σw_kW[Q^kf_0] con w_k≥0, Σw_k=1; cociente arquimediano no decreciente en k; Polar[h_k]=[−1/(4u²−1)]^kPolar[h_0].
-- Resto: positividad de los bloques iniciales de la órbita Q^kV_N (segmento finito para cada N, sin extremo efectivo universal).
-- PROVED reutilizable: MULTI (suficiencia: toda la órbita high-pass positiva ⇒ todos los N polos ≥u); continuidad en X.
+- Object: one-pole iteration W[f_v]=ρΣ_{k≤K}a^kW[h_k]+a^{K+1}W[g_{K+1,v}], ρ=u²/v², a=1−ρ; topology X=H^t∩L²(e^{ηy}), 0<t<½, ½<η<u/2.
+- Result: PROVED (u>1): W continuous on X; Q^k f→0 strongly; mixture (MIX) and (MULTI) W[f]=Σw_kW[Q^kf_0] with w_k≥0, Σw_k=1; archimedean quotient nondecreasing in k; Polar[h_k]=[−1/(4u²−1)]^kPolar[h_0].
+- Remainder: positivity of the initial blocks of the orbit Q^kV_N (finite segment for each N, without a universal effective endpoint).
+- Reusable PROVED: MULTI (sufficiency: the whole high-pass orbit positive ⇒ all N poles ≥u); continuity on X.
 
 ### 42. POWER_GRAM_SLICES_AUDIT.md
-- Objeto: auditoría de GRAM_SLICES_OBSTRUCTION (fuera del rango a resumir; su auditoría sí está en el rango).
-- Resultado: APROBADO: refuta sólo que todas las capas (desintegración en v=σ²−τ²) sean PSD; ganancia (β−α)²f(R)/R³ divergente; addendum: criterio hazard con diagonal negativa por 073; multiplicador gaussiano B_op(−Φ′)=tΦ no controla el término de semirrecta de Q_A.
-- Resto: PSD del integral OPEN; controlar compensación entre capas o construir otro Gram.
-- PROVED reutilizable: ninguno nuevo (confirma la obstrucción de capas).
+- Object: audit of GRAM_SLICES_OBSTRUCTION (outside the range to be summarized; its audit is in the range).
+- Result: APPROVED: refutes only that all layers (disintegration in v=σ²−τ²) are PSD; gain (β−α)²f(R)/R³ divergent; addendum: hazard criterion with negative diagonal by 073; Gaussian multiplier B_op(−Φ′)=tΦ does not control the half-line term of Q_A.
+- Remainder: PSD of the integral OPEN; control compensation between layers or build another Gram.
+- Reusable PROVED: none new (confirms the layer obstruction).
 
 ### 43. POWER_GREEN_PAIR_TP2_AUDIT_111.md
-- Objeto: auditoría de 111 (Green balanceados V_p, pareja J,K compacta).
-- Resultado: APROBADO (base, extensión estricta r_ε, ampliación CM en x=p²).
-- Resto: no se afirma CM de la familia real ni se excluye un método con más estructura.
-- PROVED reutilizable: confirma 111.
+- Object: audit of 111 (balanced Green functions V_p, compact pair J,K).
+- Result: APPROVED (base, strict extension r_ε, CM extension in x=p²).
+- Remainder: CM of the real family is not claimed nor is a method with more structure excluded.
+- Reusable PROVED: confirms 111.
 
 ### 44. POWER_GREEN_PAIR_TP2_SCOPE_111.md
-- Objeto: K=1_{|t|<2}, J=[1+1_{1<|t|<2}]K; λ_p=2−1/(2cosh p); V_p Green balanceado con V_p″−p²V_p=J−λ_pK.
-- Resultado: NO-GO PROVED (clase: parejas pares compactas con J/K no decreciente, incluso estrictamente creciente, todos los V_p>0 con V_p/K decreciente, aun con monotonía completa de V en x=p²): no implican TP2; menores OPPOSITE-MINORS de signos opuestos con p=1,2 en t∈{¼,½} y {3/2,7/4}.
-- Falsificador: la pareja explícita (no es la Φ real; no cumple J′=−tΦ, K″=aΦ−J ni MIXED4).
-- Reapertura: una inducción que use la compatibilidad real J′=−tΦ, K″=aΦ−J o MIXED4.
-- PROVED reutilizable: COMPLETE-MONOTONICITY para la contraclase; menores explícitos.
+- Object: K=1_{|t|<2}, J=[1+1_{1<|t|<2}]K; λ_p=2−1/(2cosh p); V_p balanced Green function with V_p″−p²V_p=J−λ_pK.
+- Result: NO-GO PROVED (class: even compact pairs with J/K nondecreasing, even strictly increasing, all V_p>0 with V_p/K decreasing, even with complete monotonicity of V in x=p²): they do not imply TP2; minors OPPOSITE-MINORS of opposite signs with p=1,2 at t∈{¼,½} and {3/2,7/4}.
+- Falsifier: the explicit pair (it is not the real Φ; it does not satisfy J′=−tΦ, K″=aΦ−J nor MIXED4).
+- Reopening: an induction using the real compatibility J′=−tΦ, K″=aΦ−J or MIXED4.
+- Reusable PROVED: COMPLETE-MONOTONICITY for the counterclass; explicit minors.
 
 ### 45. POWER_GROUP_AUDIT_037.md
-- Objeto: auditoría de ENERGY_GROUP_037.
-- Resultado: APROBADO (núcleo, ABS-FAIL, SIGNED/WINDOW y elección Q creciente).
-- Resto: el complemento aritmético firmado y su integración con precisión suficiente.
-- PROVED reutilizable: confirma 037.
+- Object: audit of ENERGY_GROUP_037.
+- Result: APPROVED (core, ABS-FAIL, SIGNED/WINDOW and choice of growing Q).
+- Remainder: the signed arithmetic complement and its integration with sufficient precision.
+- Reusable PROVED: confirms 037.
 
 ### 46. POWER_HIGH_ORDER_PM_NOGO_007.md
-- Objeto: f_{n,u}=y^{n−1}e^{−uy}; polar normalizado P_n(u)=4^n/[u·binom(2n−2,n−1)](1−1/(4u²))^{−n}; lema (G) 0≤τm′(τ)<4.
-- Resultado: PROVED / NO-GO: para u=63/2, n=2^17: uE_n′(u)<−140/31 (NEG); aumentar un solo polo reduce el cociente ARCH+POLAR. FALSIFIED «aumentar individualmente polos ≥63/2 no reduce el cociente arch+polar de ningún numerador, uniformemente en n».
-- Alcance: no refuta transporte que preserve sólo el signo, ni n=4, ni monotonía de λ_min; no incluye el peine.
-- PROVED reutilizable: (G) y fórmula polar exacta (P).
+- Object: f_{n,u}=y^{n−1}e^{−uy}; normalized polar P_n(u)=4^n/[u·binom(2n−2,n−1)](1−1/(4u²))^{−n}; lemma (G) 0≤τm′(τ)<4.
+- Result: PROVED / NO-GO: for u=63/2, n=2^17: uE_n′(u)<−140/31 (NEG); increasing a single pole reduces the ARCH+POLAR quotient. FALSIFIED «individually increasing poles ≥63/2 does not reduce the arch+polar quotient of any numerator, uniformly in n».
+- Scope: does not refute transport preserving only the sign, nor n=4, nor monotonicity of λ_min; does not include the comb.
+- Reusable PROVED: (G) and exact polar formula (P).
 
 ### 47. POWER_HIGHPASS_015.md
-- Objeto: órbita f_{k,P} con F=[s/(s+u)]^kP(s)/(s+u)^N, u>1, deg P<N.
-- Resultado: PROVED (auditado): EVENTUAL: existe K_N (independiente de P) con W[f_{k,P}]>0 para todo k≥K_N; uniformemente Arch/‖·‖²≥½log k−C_N, Comb/‖·‖²→0, Polar/‖·‖²→0; para P fijo ASYM W/‖·‖²=½log k+log(u/2π)−½ψ(r−½)+o(1).
-- Resto: signo de los primeros k; K_N no uniforme en N; positividad de cola no implica positividad de la mezcla.
-- PROVED reutilizable: EVENTUAL, GRAM/LIMIT, WT ‖e^{ηy}f‖²≤C_{N,η}‖f‖², ASYM.
+- Object: orbit f_{k,P} with F=[s/(s+u)]^kP(s)/(s+u)^N, u>1, deg P<N.
+- Result: PROVED (audited): EVENTUAL: there is K_N (independent of P) with W[f_{k,P}]>0 for all k≥K_N; uniformly Arch/‖·‖²≥½log k−C_N, Comb/‖·‖²→0, Polar/‖·‖²→0; for fixed P ASYM W/‖·‖²=½log k+log(u/2π)−½ψ(r−½)+o(1).
+- Remainder: sign of the first k; K_N not uniform in N; tail positivity does not imply positivity of the mixture.
+- Reusable PROVED: EVENTUAL, GRAM/LIMIT, WT ‖e^{ηy}f‖²≤C_{N,η}‖f‖², ASYM.
 
 ### 48. POWER_HIGHPASS_AUDIT_015.md
-- Objeto: auditoría de HIGHPASS_015 y GEOMETRIC_TRANSFER_015.
-- Resultado: PROVED: dos herramientas (mezcla completa exacta y cola high-pass uniformemente positiva para cada N fijo); reducen la condición suficiente al signo de un segmento finito de bloques iniciales.
-- Resto: extremo efectivo del segmento y su signo para todo N; una mezcla puede contener términos iniciales negativos.
-- PROVED reutilizable: confirma 015.
+- Object: audit of HIGHPASS_015 and GEOMETRIC_TRANSFER_015.
+- Result: PROVED: two tools (exact full mixture and uniformly positive high-pass tail for each fixed N); they reduce the sufficient condition to the sign of a finite segment of initial blocks.
+- Remainder: effective endpoint of the segment and its sign for all N; a mixture may contain negative initial terms.
+- Reusable PROVED: confirms 015.
 
 ### 49. POWER_HIGHPASS_CUTOFF_049.md
-- Objeto: corte J=32 para E2 sobre Q^jV_12; lema JAC αR≤β+1+2√(m(m+α+β+1)R).
-- Resultado: BORRADOR SUPERADO (por CENTERED_CUTOFF_049, corte 14, y R12_TRANSPORT_049); «no registrar este corte 32 como resultado adicional». Contiene prueba de JAC y TAIL E2>(99/1000)‖·‖², j≥32.
-- Resto (histórico): bloques j=1..31.
-- PROVED reutilizable: el lema JAC (polinomios ponderados) es demostración autocontenida, aunque el documento está superado.
+- Object: cutoff J=32 for E2 on Q^jV_12; lemma JAC αR≤β+1+2√(m(m+α+β+1)R).
+- Result: SUPERSEDED DRAFT (by CENTERED_CUTOFF_049, cutoff 14, and R12_TRANSPORT_049); «do not record this cutoff 32 as an additional result». Contains the proof of JAC and TAIL E2>(99/1000)‖·‖², j≥32.
+- Remainder (historical): blocks j=1..31.
+- Reusable PROVED: the lemma JAC (weighted polynomials) is a self-contained proof, although the document is superseded.
 
 ### 50. POWER_HIGHPASS_DIAGONAL_DENSITY_094.md
-- Objeto: E_{n,r}=Q^rV_n(u) ↔ S_{n,r}={(1+z)^rP(z): deg P<n} en H² (CAYLEY); distancia exacta dist(1,S_{n,r})²=1−A(n,r), A=[(n+r−1)!]²/[(n−1)!(n+2r−1)!].
-- Resultado: PROVED (auditado): BINOMIAL-DET por Dodgson; e^{−r²/n}≤A≤e^{−r²/(n+2r−1)}; DIAGONAL-DENSITY: la unión ∪E_{n,r(n)} es densa en L² ⟺ liminf r(n)²/n=0; NO-GO de densidad: la unión de bloques con r≥n (incluido el cono 060 r≥10^{12}[n⌈log_2(n+1)⌉]³) está a distancia >½ de 1, aun añadiendo finitos bloques confluentes.
-- Resto: envolvente lineal de la unión, cruces entre bloques, continuidad de W en la topología usada.
-- Reapertura: un cono positivo con r=o(√n) en una subsucesión, más continuidad de la forma completa.
-- PROVED reutilizable: EXACT-DISTANCE, BINOMIAL-DET, DIAGONAL-DENSITY, POLYNOMIAL-APPROX.
+- Object: E_{n,r}=Q^rV_n(u) ↔ S_{n,r}={(1+z)^rP(z): deg P<n} in H² (CAYLEY); exact distance dist(1,S_{n,r})²=1−A(n,r), A=[(n+r−1)!]²/[(n−1)!(n+2r−1)!].
+- Result: PROVED (audited): BINOMIAL-DET by Dodgson; e^{−r²/n}≤A≤e^{−r²/(n+2r−1)}; DIAGONAL-DENSITY: the union ∪E_{n,r(n)} is dense in L² ⟺ liminf r(n)²/n=0; density NO-GO: the union of blocks with r≥n (including the cone 060 r≥10^{12}[n⌈log_2(n+1)⌉]³) is at distance >½ from 1, even adding finitely many confluent blocks.
+- Remainder: linear envelope of the union, cross terms between blocks, continuity of W in the topology used.
+- Reopening: a positive cone with r=o(√n) along a subsequence, plus continuity of the full form.
+- Reusable PROVED: EXACT-DISTANCE, BINOMIAL-DET, DIAGONAL-DENSITY, POLYNOMIAL-APPROX.
 
 ### 51. POWER_HIGHPASS_DIAGONAL_DENSITY_AUDIT_094.md
-- Objeto: auditoría de 094.
-- Resultado: APROBADO / PROVED.
-- Resto: la no densidad del cono no excluye su envolvente lineal, cruces, control firmado, mezclas o descenso compensado.
-- PROVED reutilizable: confirma 094.
+- Object: audit of 094.
+- Result: APPROVED / PROVED.
+- Remainder: the non-density of the cone does not exclude its linear envelope, cross terms, signed control, mixtures or compensated descent.
+- Reusable PROVED: confirms 094.
 
-### 52. POWER_HYPERBOLIC_MODEL_GRAM.md (71 KB, 13 secciones)
-- Objeto: modelo φ_a(t)=exp(−a cosh 2t), Z_a=y_{u²/4}(0), y_x″=[a²e^{2r}+x]y_x; H=−D_r²+a²e^{2r} (Dirichlet), M_a(u)/u=½Tr(H+u²/4)^{−1} (REP).
-- Resultados PROVED (con su clase): §5 GRAM: K_ij=(M_a(u_i)+M_a(u_j))/(u_i+u_j) PSD en todos los tamaños (suma de cuadrados HS) para el modelo; §8 extensión Robin φ_{a,β}=[β+a cosh 2t]e^{−a cosh 2t} también PSD. NO-GO: §7.1 Φ no es mezcla positiva ∫e^{−a cosh 2t}dμ(a); §7.2 Φ≠φ_a∗ν (ν≥0 finita); §9 el flujo −a∂_aK_a no es PSD en todos los tamaños (NEG-MOM); §10 prefactor fijo q no da potencial escalar independiente de ν (salvo q constante); §10.1 con primera derivada sólo q=C o C cosh(v/2), excluido para la q real (también con peso espectral variable y cambio de escala); §11 Φ≠C e^{−a cosh 2t}∏cosh(α_jt) (c_1=π−3/(2π)∉ℕ); §11.4 ni aproximación localuniforme a escala 2π fija; §12 vector finito de prefactores fijos sin deriva; §12.1 con deriva matricial (anulador racional imposible); §12.2 dimensión infinita simétrica sin deriva (‖Q‖²=A+c log cosh v); §12.3 deriva escalar constante (kernel DRIFT-K, cúspide par w=2i); §12.4 deriva escalar dependiente de escala forzada constante; métrica local imposible para el ejemplo 2×2; §12.7 la realización 12.6 no admite métrica local positiva acotada compatible; §13 productos cosh desplazados (−1<c<1) dan límite entero, incompatible con la cúspide par; §13.1 también con escala a_n variable.
-- PROVED positivo adicional: §12.5 la deriva operatorial determina L=[G(v+z)+G(v−z)]/2, G=−coth(t/2)F′; §12.6 realización explícita Q,B,C,D en H=L²(ρdω)⊕ℝ³ (ρ=sech(πω/2)) con observación continua exacta ⟨Q(v),h⟩=q_θ(v) y ecuación fuerte Y_rr=(b²+ν²)Y+2DY_r+(−C+2bB̄)Y, ⟨Y_ν(2π),h⟩=Z(2ν).
-- Resto: una métrica (no local o no acotada) y una identidad Green POSITIVA que reproduzca la forma completa; la comparación K_Φ≥εK_{2π} está refutada (GLOBAL).
-- Reapertura (declarada): métricas no locales, no acotadas, conexiones nuevas, prefactores dependientes de b, observaciones no continuas, otras realizaciones; escalas base variables de frecuencia, potencias reales, sumas, cocientes, comparaciones relativas de formas.
-- PROVED reutilizable: Green/traza del modelo; THETA-TAIL Φ(t)~2π²e^{9t/2}e^{−πe^{2t}}; expansión de cúspide par; realización 12.6.
+### 52. POWER_HYPERBOLIC_MODEL_GRAM.md (71 KB, 13 sections)
+- Object: model φ_a(t)=exp(−a cosh 2t), Z_a=y_{u²/4}(0), y_x″=[a²e^{2r}+x]y_x; H=−D_r²+a²e^{2r} (Dirichlet), M_a(u)/u=½Tr(H+u²/4)^{−1} (REP).
+- PROVED results (with their class): §5 GRAM: K_ij=(M_a(u_i)+M_a(u_j))/(u_i+u_j) PSD at all sizes (sum of HS squares) for the model; §8 Robin extension φ_{a,β}=[β+a cosh 2t]e^{−a cosh 2t} also PSD. NO-GO: §7.1 Φ is not a positive mixture ∫e^{−a cosh 2t}dμ(a); §7.2 Φ≠φ_a∗ν (ν≥0 finite); §9 the flow −a∂_aK_a is not PSD at all sizes (NEG-MOM); §10 a fixed prefactor q does not give a scalar potential independent of ν (except q constant); §10.1 with first derivative only q=C or C cosh(v/2), excluded for the real q (also with variable spectral weight and change of scale); §11 Φ≠C e^{−a cosh 2t}∏cosh(α_jt) (c_1=π−3/(2π)∉ℕ); §11.4 nor locally uniform approximation at fixed scale 2π; §12 finite vector of fixed prefactors without drift; §12.1 with matrix drift (rational annihilator impossible); §12.2 symmetric infinite dimension without drift (‖Q‖²=A+c log cosh v); §12.3 constant scalar drift (kernel DRIFT-K, even cusp w=2i); §12.4 scale-dependent scalar drift forced to be constant; local metric impossible for the 2×2 example; §12.7 the realization 12.6 admits no compatible bounded positive local metric; §13 shifted cosh products (−1<c<1) give an entire limit, incompatible with the even cusp; §13.1 also with variable scale a_n.
+- Additional positive PROVED: §12.5 the operator drift determines L=[G(v+z)+G(v−z)]/2, G=−coth(t/2)F′; §12.6 explicit realization Q,B,C,D in H=L²(ρdω)⊕ℝ³ (ρ=sech(πω/2)) with exact continuous observation ⟨Q(v),h⟩=q_θ(v) and strong equation Y_rr=(b²+ν²)Y+2DY_r+(−C+2bB̄)Y, ⟨Y_ν(2π),h⟩=Z(2ν).
+- Remainder: a metric (nonlocal or unbounded) and a POSITIVE Green identity reproducing the full form; the comparison K_Φ≥εK_{2π} is refuted (GLOBAL).
+- Reopening (declared): nonlocal or unbounded metrics, new connections, b-dependent prefactors, noncontinuous observations, other realizations; variable base frequency scales, real powers, sums, quotients, relative comparisons of forms.
+- Reusable PROVED: Green/trace of the model; THETA-TAIL Φ(t)~2π²e^{9t/2}e^{−πe^{2t}}; even cusp expansion; realization 12.6.
 
 ### 53. POWER_INFINITE_SHOULDER_039.md
-- Objeto: inversos aritméticos completos h_N, K_N=J_N+xh_N (Möbius completo) en el hombro x=e^{t_v}, t_v=2dv/(u²−v²), v=½+δ, σ=v+½>1; operador M_σf(ℓ)=U_σ^{−1}Σμ(n)n^{−σ}f(ℓ+log n).
-- Resultado: PROVED (auditado): ψ_Λ(x)≤2x para todo x≥1; A_σ≤2σ/δ, B_σ≤2σ/δ²; (INFINITE) |M_σf(0)−f(−A_σ)|≤12000B_σ/N+…; SHOULDER (9/10)U_σ<h_N/H_N, K_N/G_N<(11/10)U_σ; TAIL: para todo N≥4·10^6 y x≥e^{T_N}, T_N=d/992+O(√N): h_N(x)>0, K_N(x)>0.
-- Resto: región interior (centro crítico δ→0, σ=1 no alcanzado); comparación de la cola favorable de F_N=2∫h_NB con la parte adversa interior y ARCH_♯; precisión del residuo polar−peine.
-- PROVED reutilizable: ψ_Λ(x)≤2x elemental; MOMENTS; SHOULDER/TAIL (positividad de los inversos completos en x≥e^{T_N}).
+- Object: full arithmetic inverses h_N, K_N=J_N+xh_N (full Möbius) at the shoulder x=e^{t_v}, t_v=2dv/(u²−v²), v=½+δ, σ=v+½>1; operator M_σf(ℓ)=U_σ^{−1}Σμ(n)n^{−σ}f(ℓ+log n).
+- Result: PROVED (audited): ψ_Λ(x)≤2x for all x≥1; A_σ≤2σ/δ, B_σ≤2σ/δ²; (INFINITE) |M_σf(0)−f(−A_σ)|≤12000B_σ/N+…; SHOULDER (9/10)U_σ<h_N/H_N, K_N/G_N<(11/10)U_σ; TAIL: for all N≥4·10^6 and x≥e^{T_N}, T_N=d/992+O(√N): h_N(x)>0, K_N(x)>0.
+- Remainder: interior region (critical center δ→0, σ=1 not reached); comparison of the favorable tail of F_N=2∫h_NB with the adverse interior part and ARCH_♯; precision of the polar−comb residue.
+- Reusable PROVED: ψ_Λ(x)≤2x elementary; MOMENTS; SHOULDER/TAIL (positivity of the full inverses on x≥e^{T_N}).
 
 ### 54. POWER_INTERIOR_017.md
-- Objeto: fila N=1, F_k(s)=s^k/(s+u)^{k+1}, u≥63/2; norma ponderada N_k(η).
-- Resultado: PROVED: (WR) ‖e^{ηy}h_k‖²/‖h_k‖²≤(u−η)/(u−2η) para todo k≥0 (generadora GEN y Vandermonde c_{k−j}c_j≤c_k); ROW1 W[h_k]>(4/3)‖h_k‖² para todo k≥0, u≥63/2; §7 WRN: ‖e^{ηy}f_{N,k}‖²/‖f_{N,k}‖²≤R_N(u,η)=(u/a)^{2N−1}S_N(ρ), S_N racional, para todas las filas, uniforme en k.
-- Resto: el régimen conjunto k/N finito con N creciente; la dependencia en N de R_N no basta para la tabla.
-- PROVED reutilizable: WR, W11, ROW1, WRN; polar exacto Polar[h_k]=2(−¼)^k/(u²−¼)^{k+1}.
+- Object: row N=1, F_k(s)=s^k/(s+u)^{k+1}, u≥63/2; weighted norm N_k(η).
+- Result: PROVED: (WR) ‖e^{ηy}h_k‖²/‖h_k‖²≤(u−η)/(u−2η) for all k≥0 (generating function GEN and Vandermonde c_{k−j}c_j≤c_k); ROW1 W[h_k]>(4/3)‖h_k‖² for all k≥0, u≥63/2; §7 WRN: ‖e^{ηy}f_{N,k}‖²/‖f_{N,k}‖²≤R_N(u,η)=(u/a)^{2N−1}S_N(ρ), S_N rational, for all rows, uniform in k.
+- Remainder: the joint regime k/N finite with growing N; the N-dependence of R_N is not enough for the table.
+- Reusable PROVED: WR, W11, ROW1, WRN; exact polar Polar[h_k]=2(−¼)^k/(u²−¼)^{k+1}.
 
 ### 55. POWER_INTERIOR_AUDIT_017.md
-- Objeto: auditoría de la tabla escalar: puente escalar Bernstein (SCALAR_BRIDGE_017), fila N=1, WRN, cono cuadrático (QUADRATIC_017 y QUADRATIC_EXPLICIT_017).
-- Resultado: PROVED los resultados específicos: puente Bernstein: W[f]+εW[f_1] es suma positiva de valores atómicos W[h_{N,k}], por lo que la tabla escalar COMPLETA (todos los átomos (N,k)) es SUFICIENTE; ROW1; WRN; cono cuadrático: positividad eventual para P=1 en k≥cN², N≥N_0(c); explícito: W>(49/50)‖f‖² para todo N≥2, k≥10000N², u=31,5, P=1. Signo de toda la tabla escalar OPEN.
-- Resto: los átomos (N,k) fuera de la fila 1 y del cono cuadrático.
-- PROVED reutilizable: puente escalar Bernstein (reducción a átomos); cono cuadrático explícito; lower m(τ)≥log(|τ|/2π)−4 y |m−log(|τ|/2π)|≤1/|τ|+1/(2τ²).
+- Object: audit of the scalar table: scalar Bernstein bridge (SCALAR_BRIDGE_017), row N=1, WRN, quadratic cone (QUADRATIC_017 and QUADRATIC_EXPLICIT_017).
+- Result: PROVED the specific results: Bernstein bridge: W[f]+εW[f_1] is a positive sum of atomic values W[h_{N,k}], so the COMPLETE scalar table (all atoms (N,k)) is SUFFICIENT; ROW1; WRN; quadratic cone: eventual positivity for P=1 on k≥cN², N≥N_0(c); explicit: W>(49/50)‖f‖² for all N≥2, k≥10000N², u=31.5, P=1. Sign of the whole scalar table OPEN.
+- Remainder: the atoms (N,k) outside row 1 and the quadratic cone.
+- Reusable PROVED: scalar Bernstein bridge (reduction to atoms); explicit quadratic cone; lower bound m(τ)≥log(|τ|/2π)−4 and |m−log(|τ|/2π)|≤1/|τ|+1/(2τ²).
 
 ### 56. POWER_INTERIOR_AUDIT_030.md
-- Objeto: auditoría de GAMMA_BALANCE_030 e INTERIOR_SCALE_030.
-- Resultado: APROBADOS: SHARP-GAP; falsificador NEG-GAP (N=2, sólo de la comparación sin coste); bloque interior real (x∈[1,9/4]): I_*>0,02, error <0,005 para N≥2^{20}, bloque >0,01; identidad JOINT-G con H=1+[log((x+1)/(x−1))+c−1−2Ψ_1(x)]/x².
-- Resto: el resto [9/4,∞) sin control; BLOCK no es W total.
-- PROVED reutilizable: confirma 030 y la fórmula de H.
+- Object: audit of GAMMA_BALANCE_030 and INTERIOR_SCALE_030.
+- Result: APPROVED: SHARP-GAP; falsifier NEG-GAP (N=2, only of the cost-free comparison); genuine interior block (x∈[1,9/4]): I_*>0.02, error <0.005 for N≥2^{20}, block >0.01; identity JOINT-G with H=1+[log((x+1)/(x−1))+c−1−2Ψ_1(x)]/x².
+- Remainder: the rest [9/4,∞) uncontrolled; BLOCK is not total W.
+- Reusable PROVED: confirms 030 and the formula for H.
 
 ### 57. POWER_INTERIOR_CONSTRAINT_027.md
-- Objeto: mezcla gamma real ρ_N(t)=E e^{−V_Nt²}, V_N=β/G, G~Gamma(N−½,1); W[g_N]/‖g_N‖²=E G_W(V_N) (WG); peso bisagra L_N(a)=E(V_N−a)_+−(m_N−a)_+≥0; GAP δ_N(t)=t^4∫e^{−at²}L_N(a)da.
-- Resultado: PROVED: UPPER ARCH_♯[g_N]/‖·‖²=E A_♯(V_N)<A_♯(EV_N) (Jensen va en el sentido INCORRECTO para un lower); JOINT-GAP W[g_N]/‖·‖²−G_W(m_N)=∫L_N(a)G_W″(a)da; FAIL-CONVEX G_W″(v)<0 para todo v≥65536. §8: por INV-MIX y los certificados 022/023 existen a_h, a_K>0 con h_{a_h}(1)<0 y K_{a_K}(1)<0: refutadas las premisas universales gaussianas h_a≥0, K_a≥0.
-- Resto: G_W(m_N)+∫L_NR≥0, es decir, controlar unilateralmente la parte negativa de R=G_W″ contra la ley L_N real.
-- PROVED reutilizable: WG, GAP, JOINT-GAP, INV-MIX.
+- Object: real gamma mixture ρ_N(t)=E e^{−V_Nt²}, V_N=β/G, G~Gamma(N−½,1); W[g_N]/‖g_N‖²=E G_W(V_N) (WG); hinge weight L_N(a)=E(V_N−a)_+−(m_N−a)_+≥0; GAP δ_N(t)=t^4∫e^{−at²}L_N(a)da.
+- Result: PROVED: UPPER ARCH_♯[g_N]/‖·‖²=E A_♯(V_N)<A_♯(EV_N) (Jensen goes in the WRONG direction for a lower bound); JOINT-GAP W[g_N]/‖·‖²−G_W(m_N)=∫L_N(a)G_W″(a)da; FAIL-CONVEX G_W″(v)<0 for all v≥65536. §8: by INV-MIX and the certificates 022/023 there exist a_h, a_K>0 with h_{a_h}(1)<0 and K_{a_K}(1)<0: the universal Gaussian premises h_a≥0, K_a≥0 are refuted.
+- Remainder: G_W(m_N)+∫L_NR≥0, i.e., control one-sidedly the negative part of R=G_W″ against the real law L_N.
+- Reusable PROVED: WG, GAP, JOINT-GAP, INV-MIX.
 
 ### 58. POWER_INTERIOR_SCALE_030.md
-- Objeto: inversión adjunta H(x)=Σ_{m≤x}μ(m)Ω(x/m)/m=1+[log((x+1)/(x−1))+c−1−2Ψ_1(x)]/x², c=−γ−log 4π; JOINT-G W[g_N]/‖·‖²=∫_1^∞G_N H, G_N=x^{−32}D_N(log x).
-- Resultado: PROVED (auditado): BLOCK ∫_1^{9/4}G_N H>1/100 para todo N≥2^{20} (u=63/2), con el contacto 2 incluido; PRIMITIVE-FAIL ∫_1^{5/2}H<−1/50 y ∫_1^{5/2}x²H<−1/4 (falla el criterio de primitivas positivas); G_N decreciente para N≥663, G_N/x² para N≥134.
-- Resto: ∫_{9/4}^∞G_N H (todos los contactos siguientes), sin control.
-- PROVED reutilizable: fórmula H, JOINT-G, BLOCK, GAMMA-ERROR |G_N−G_*|≤(7/4)M2_N en [1,9/4].
+- Object: adjoint inversion H(x)=Σ_{m≤x}μ(m)Ω(x/m)/m=1+[log((x+1)/(x−1))+c−1−2Ψ_1(x)]/x², c=−γ−log 4π; JOINT-G W[g_N]/‖·‖²=∫_1^∞G_N H, G_N=x^{−32}D_N(log x).
+- Result: PROVED (audited): BLOCK ∫_1^{9/4}G_N H>1/100 for all N≥2^{20} (u=63/2), with contact 2 included; PRIMITIVE-FAIL ∫_1^{5/2}H<−1/50 and ∫_1^{5/2}x²H<−1/4 (the positive-primitives criterion fails); G_N decreasing for N≥663, G_N/x² for N≥134.
+- Remainder: ∫_{9/4}^∞G_N H (all subsequent contacts), uncontrolled.
+- Reusable PROVED: formula H, JOINT-G, BLOCK, GAMMA-ERROR |G_N−G_*|≤(7/4)M2_N on [1,9/4].
 
 ### 59. POWER_INVERSE_COEFFICIENT_054.md
-- Objeto: R(y)=y^{n−1}P(ia/y), a=u√j, peso w=(1+y²/j)^{−(n+j)}; ‖Q^jF_0‖²=a^{1−2n}D_{n,j}[R]/(2π).
-- Resultado: PROVED (auditado): COEFF (Σ|c_r|)²≤C_nD_{n,j}[R], C_n=9n²9^n, para todo R complejo y todo j≥n; EVAL |R(z)R(−z)|≤C_nD·max(1,|z|^{2n−2}); identidad DENSITY con el factor (−1)^{n−1}.
-- Resto (en el memo): integración de contorno y cola sumable (desarrolladas en 054 EFFECTIVE).
-- PROVED reutilizable: COEFF/EVAL (condicionamiento efectivo dependiente sólo de n).
+- Object: R(y)=y^{n−1}P(ia/y), a=u√j, weight w=(1+y²/j)^{−(n+j)}; ‖Q^jF_0‖²=a^{1−2n}D_{n,j}[R]/(2π).
+- Result: PROVED (audited): COEFF (Σ|c_r|)²≤C_nD_{n,j}[R], C_n=9n²9^n, for every complex R and every j≥n; EVAL |R(z)R(−z)|≤C_nD·max(1,|z|^{2n−2}); identity DENSITY with the factor (−1)^{n−1}.
+- Remainder (in the memo): contour integration and summable tail (developed in 054 EFFECTIVE).
+- Reusable PROVED: COEFF/EVAL (effective conditioning depending only on n).
 
 ### 60. POWER_INVERSE_COEFFICIENT_AUDIT_054.md
-- Objeto: auditoría de COEFF/EVAL.
-- Resultado: APROBADO; no demuestra cola aritmética sumable ni corte K(n); un bound IBP ∝1/t no suma el peine; N′=1 no se importa de N′≥2.
-- PROVED reutilizable: confirma 054.
+- Object: audit of COEFF/EVAL.
+- Result: APPROVED; does not prove a summable arithmetic tail nor the cutoff K(n); an IBP bound ∝1/t does not sum the comb; N′=1 is not imported from N′≥2.
+- Reusable PROVED: confirms 054.
 
 ### 61. POWER_INVERSE_INTERIOR_022.md
-- Objeto: inverso Möbius completo h_128(1)=Σ_{m≥1}μ(m)m^{−32}A_128(log m), A_128 con coeficientes racionales positivos.
-- Resultado: PROVED (certificado racional, cola m≥65 <10^{−10}): −2/3<h_128(1)<−33/50<0. Falsificador: «h_N(x)≥0 para todos N≥2, x≥1» es falso; existe intervalo a la derecha de 1 con h_N<0 y B<0 (contribución adversa real en F_N=2∫h_NB).
-- Resto: el emparejamiento total F_N; no se afirma W[g_128]<0.
-- Reapertura: los presupuestos firmados que no supongan h_N≥0 siguen legítimos.
-- PROVED reutilizable: el valor certificado de h_128(1); exterior h_128≥H_128/4 para log x≥127/30 (citado de 020).
+- Object: full Möbius inverse h_128(1)=Σ_{m≥1}μ(m)m^{−32}A_128(log m), A_128 with positive rational coefficients.
+- Result: PROVED (rational certificate, tail m≥65 <10^{−10}): −2/3<h_128(1)<−33/50<0. Falsifier: «h_N(x)≥0 for all N≥2, x≥1» is false; there is an interval to the right of 1 with h_N<0 and B<0 (genuine adverse contribution in F_N=2∫h_NB).
+- Remainder: the total pairing F_N; W[g_128]<0 is not claimed.
+- Reopening: signed budgets that do not assume h_N≥0 remain legitimate.
+- Reusable PROVED: the certified value of h_128(1); exterior h_128≥H_128/4 for log x≥127/30 (cited from 020).
 
-## A. Lista deduplicada «no relanzar», con condición de reapertura, y cotejo con RULES_AVOID.md
+## A. Deduplicated «do not relaunch» list, with reopening condition, and cross-check with RULES_AVOID.md
 
-Marcas: **[AUSENTE]** no figura en `RULES_AVOID.md`; **[PARCIAL/INEXACTO]** figura con alcance o condición
-distintos (se citan ambos); **[PRESENTE]** figura correctamente.
+Marks: **[ABSENT]** not listed in `RULES_AVOID.md`; **[PARTIAL/INEXACT]** listed with a different scope or condition
+(both are quoted); **[PRESENT]** listed correctly.
 
-A1. **Descenso desde particiones exactas + mezcla positiva + positividad eventual en cada orden fijo**
-(016 §5, AUDIT_016 §4). Falsificador: W_4=W−4‖·‖² conserva DEF/BIN/MULTI/EVENTUAL y W_4[e^{−63y/2}]<−‖·‖².
-Reapertura: «un descenso que controle W[Lf] con el dato aritmético completo o utilice la distribución
-espectral del numerador» (016 §5); «una desigualdad que controle el defecto de los bloques iniciales por
-información adicional» (AUDIT_016 §5). **[PARCIAL/INEXACTO]** RULES_AVOID D4: «Recurrencia o descenso solos —
-sólo con una cota aritmética firmada del resto R_L ≥ −ε_L». No menciona el falsificador W_4 ni que la
-cota debe distinguir el multiplicador real del desplazado m−C (016: «Incluso conservar exactamente Lambda
-no basta si su interacción con la constante arquimediana no aparece en esa estimación»).
+A1. **Descent from exact partitions + positive mixture + eventual positivity at each fixed order**
+(016 §5, AUDIT_016 §4). Falsifier: W_4=W−4‖·‖² preserves DEF/BIN/MULTI/EVENTUAL and W_4[e^{−63y/2}]<−‖·‖².
+Reopening: «a descent controlling W[Lf] with the full arithmetic datum or using the spectral
+distribution of the numerator» (016 §5); «an inequality controlling the defect of the initial blocks by
+additional information» (AUDIT_016 §5). **[PARTIAL/INEXACT]** RULES_AVOID D4: «Recurrence or descent alone —
+only with a signed arithmetic bound on the remainder R_L ≥ −ε_L». It does not mention the falsifier W_4 nor that the
+bound must distinguish the real multiplier from the shifted one m−C (016: «even preserving Lambda exactly
+is not enough if its interaction with the archimedean constant does not appear in that estimate»).
 
-A2. **Puente de densidad por uniones de colas high-pass** (AUDIT_016 §§2–3, §9; 094). (i) La unión de
-Q^kV_N, k≥1, está en ℓ_0=0 (no densa en L²_η); (ii) con k_j→∞ todo límite fuerte es 0; (iii) incluso
-reparando el momento con un filtro invertible Q_δ (span denso), «span denso en norma de forma + signo
-individual eventual de sus generadores» NO implica signo (contraejemplo con W_4); (iv) en L² sin peso la
-unión diagonal es densa ⟺ liminf r(n)²/n=0, y aun así falta continuidad de la forma completa.
-Reapertura: cono positivo con r=o(√n) en una subsucesión más continuidad de W en esa topología; o control
-específico de cruces del dato real. **[PARCIAL/INEXACTO]** RULES_AVOID D3: «Inferir densidad o signo de una
-unión positiva — sólo con liminf r(n)²/n = 0 y un bloque que repare el momento (211/GLOBAL §4)». AUDIT_016
-§9 muestra que reparar el momento con generadores individualmente positivos no basta: falta el control de
-cruces, y 094 exige además la continuidad de la forma completa.
+A2. **Density bridge via unions of high-pass tails** (AUDIT_016 §§2–3, §9; 094). (i) The union of
+Q^kV_N, k≥1, lies in ℓ_0=0 (not dense in L²_η); (ii) with k_j→∞ every strong limit is 0; (iii) even
+repairing the moment with an invertible filter Q_δ (dense span), «dense span in form norm + eventual individual
+sign of its generators» does NOT imply sign (counterexample with W_4); (iv) in unweighted L² the
+diagonal union is dense ⟺ liminf r(n)²/n=0, and even then continuity of the full form is missing.
+Reopening: positive cone with r=o(√n) along a subsequence plus continuity of W in that topology; or specific
+control of cross terms of the real datum. **[PARTIAL/INEXACT]** RULES_AVOID D3: «Inferring density or sign from a
+positive union — only with liminf r(n)²/n = 0 and a block that repairs the moment (211/GLOBAL §4)». AUDIT_016
+§9 shows that repairing the moment with individually positive generators is not enough: control of
+cross terms is missing, and 094 additionally requires continuity of the full form.
 
-A3. **Contracción absoluta de la inversión Möbius**, también tras agrupar con Q creciente (037 ABS-FAIL,
-GROW-ABS). Reapertura: «un bound firmado del complemento, sin sumar un error no sumable ni convertir el signo
-de un grupo finito en el de FULL». **[AUSENTE]**.
+A3. **Absolute contraction of the Möbius inversion**, also after grouping with growing Q (037 ABS-FAIL,
+GROW-ABS). Reopening: «a signed bound of the complement, without summing a nonsummable error nor converting the sign
+of a finite group into that of FULL». **[ABSENT]**.
 
-A4. **Positividad universal del inverso completo** h_N≥0, K≥0 universal, y sus versiones gaussianas h_a≥0,
-K_a≥0 (022; 027 §8; 061 «no rehabilita K≥0 universal»). Reapertura: presupuestos firmados que no supongan
-ese signo. **[AUSENTE]**.
+A4. **Universal positivity of the full inverse** h_N≥0, universal K≥0, and their Gaussian versions h_a≥0,
+K_a≥0 (022; 027 §8; 061 «does not rehabilitate universal K≥0»). Reopening: signed budgets that do not assume
+that sign. **[ABSENT]**.
 
-A5. **Comparación con la gaussiana de igual segundo momento / Jensen / convexidad** (027 UPPER y
-FAIL-CONVEX; 030 NEG-GAP). Jensen da cota SUPERIOR de ARCH_♯; G_W″<0 para v≥65536; el test gamma no domina a
-la gaussiana (N=2). Reapertura: controlar la parte negativa de R=G_W″ contra la ley L_N real, o el cambio
-firmado de ERR junto con SHARP-GAP. **[PARCIAL/INEXACTO]** RULES_AVOID D11 sólo dice «concavidad de Jensen /
-de operadores»; no registra la convexidad global de G_W ni la comparación gaussiana.
+A5. **Comparison with the Gaussian of equal second moment / Jensen / convexity** (027 UPPER and
+FAIL-CONVEX; 030 NEG-GAP). Jensen gives an UPPER bound on ARCH_♯; G_W″<0 for v≥65536; the gamma test does not dominate
+the Gaussian (N=2). Reopening: control the negative part of R=G_W″ against the real law L_N, or the signed
+change of ERR together with SHARP-GAP. **[PARTIAL/INEXACT]** RULES_AVOID D11 only says «Jensen /
+operator concavity»; it does not record the global convexity of G_W nor the Gaussian comparison.
 
-A6. **Criterio de primitivas positivas** del peso H o I_* (030 PRIMITIVE-FAIL; 031: I_* negativa después de
-3). Reapertura: desigualdad aritmética firmada para E_ν[I_*]>M_2/R(T). **[AUSENTE]** (la «primitivas
-compensadas de capas» de D16 es otro objeto).
+A6. **Positive-primitives criterion** for the weight H or I_* (030 PRIMITIVE-FAIL; 031: I_* negative after
+3). Reopening: a signed arithmetic inequality for E_ν[I_*]>M_2/R(T). **[ABSENT]** (the «compensated
+primitives of layers» of D16 is another object).
 
-A7. **Parte afín de la representación renormalizada 042 como base positiva** (062: AFF<−1/100 en N=129).
-Reapertura: estimar de verdad el residuo completo R. **[AUSENTE]**.
+A7. **Affine part of the renormalized representation 042 as a positive base** (062: AFF<−1/100 at N=129).
+Reopening: genuinely estimate the full residue R. **[ABSENT]**.
 
-A8. **Bounds separados de orden constante en lugar del balance firmado** (061: la cancelación es a 10^{−10};
-ERR<−0,66 perdía el beneficio). **[PRESENTE]** genéricamente en RULES_AVOID B2.
+A8. **Separate bounds of constant order instead of the signed balance** (061: the cancellation is at 10^{−10};
+ERR<−0.66 lost the benefit). **[PRESENT]** generically in RULES_AVOID B2.
 
-A9. **Herencia de pares a triples y de concavidades a cuatro nodos** (003 §4: L creciente y L/s decreciente
-no bastan para tres; 084 §4: R=1+x−x²/16 conserva RS=x, concavidades y triples pero det K_4<0). Reapertura:
-un resto de signo preservado por la eliminación (E) (003), o la condición cuantitativa TURAN (084).
-**[AUSENTE]** (la memoria de las reglas del proyecto cita 084 sólo para los Pfaffianos por reciprocidad).
+A9. **Inheritance from pairs to triples and from concavities to four nodes** (003 §4: L increasing and L/s decreasing
+are not enough for three; 084 §4: R=1+x−x²/16 preserves RS=x, concavities and triples but det K_4<0). Reopening:
+a sign remainder preserved by the elimination (E) (003), or the quantitative TURAN condition (084).
+**[ABSENT]** (the memory of the project rules cites 084 only for the Pfaffians by reciprocity).
 
-A10. **Extender a la dimensión siguiente** los cierres de 4, 5, 12, 13 polos por extrapolación de márgenes
-(009 §7, 010 §5, 050 §7, 053 §5) y declarar positivos todos los segmentos iniciales de E2 (051 con el
-falsificador n=2^17, F=(s²−¼)/(s+u)^n, E2[QF]<0). **[PRESENTE]** como D2 («extender la torre de órdenes
-finitos»); el falsificador E2 **[AUSENTE]**.
+A10. **Extending to the next dimension** the closures for 4, 5, 12, 13 poles by extrapolating margins
+(009 §7, 010 §5, 050 §7, 053 §5) and declaring all initial segments of E2 positive (051 with the
+falsifier n=2^17, F=(s²−¼)/(s+u)^n, E2[QF]<0). **[PRESENT]** as D2 («extend the tower of finite
+orders»); the falsifier E2 **[ABSENT]**.
 
-A11. **Ensamblaje de certificados PSD de soporte ≤k fijo** en la base de potencias (FIXED_BLOCK_ASSEMBLY).
-Reapertura: otra base, bloques de tamaño creciente, complementos de Schur, parte PSD global densa.
-**[PARCIAL]** RULES_AVOID D12 lo nombra sin condición de reapertura.
+A11. **Assembly of PSD certificates of fixed support ≤k** in the power basis (FIXED_BLOCK_ASSEMBLY).
+Reopening: another basis, blocks of growing size, Schur complements, dense global PSD part.
+**[PARTIAL]** RULES_AVOID D12 names it without a reopening condition.
 
-A12. **Monotonía uniforme en dimensión del cociente ARCH+POLAR al aumentar polos** (007, n=2^17).
-Reapertura: transporte que preserve sólo el signo. **[AUSENTE]**.
+A12. **Dimension-uniform monotonicity of the ARCH+POLAR quotient when poles increase** (007, n=2^17).
+Reopening: transport preserving only the sign. **[ABSENT]**.
 
-A13. **Monotonías individuales (incluida monotonía completa en x=p²) ⇒ TP2** de la familia de Green
-balanceados (111). Reapertura: usar la compatibilidad real J′=−tΦ, K″=aΦ−J o MIXED4. **[AUSENTE]**.
+A13. **Individual monotonicities (including complete monotonicity in x=p²) ⇒ TP2** for the family of
+balanced Green functions (111). Reopening: use the real compatibility J′=−tΦ, K″=aΦ−J or MIXED4. **[ABSENT]**.
 
-A14. **Modelo hiperbólico y transferencias** (HYPERBOLIC §§7–13): mezcla positiva y convolución positiva
-(§7), flujo de escala −a∂_aK_a (§9), prefactores fijos con potencial escalar, deriva escalar/matricial,
-dimensión infinita simétrica (§§10–12.4), métrica local para la realización theta (§12.7), productos cosh
-con o sin desplazamiento y escala variable (§§11, 13). Reapertura declarada: métricas no locales o no
-acotadas con identidad Green positiva, conexiones nuevas, prefactores dependientes de b, observaciones no
-continuas, otras frecuencias base, sumas/cocientes/potencias reales, comparaciones relativas de formas.
-**[PRESENTE]** en B4 («211/HYPERBOLIC §§6–13»), D15 (§12.7) y C1 («cierres por productos cosh»); el flujo de
-escala §9 y la familia de cierres §§10–12.4 **[AUSENTE]** como entradas explícitas.
+A14. **Hyperbolic model and transfers** (HYPERBOLIC §§7–13): positive mixture and positive convolution
+(§7), scale flow −a∂_aK_a (§9), fixed prefactors with scalar potential, scalar/matrix drift,
+symmetric infinite dimension (§§10–12.4), local metric for the theta realization (§12.7), cosh products
+with or without shift and variable scale (§§11, 13). Declared reopening: nonlocal or
+unbounded metrics with positive Green identity, new connections, b-dependent prefactors, noncontinuous
+observations, other base frequencies, sums/quotients/real powers, relative comparisons of forms.
+**[PRESENT]** in B4 («211/HYPERBOLIC §§6–13»), D15 (§12.7) and C1 («closures by cosh products»); the scale
+flow §9 and the family of closures §§10–12.4 **[ABSENT]** as explicit entries.
 
-A15. **Inferir densidad o masa de dos masas escalares** (027 DISCRETE §1: un bump cerca de 3/2 donde Ω<−0,1
-puede llevar la masa). **[AUSENTE]** (menor).
+A15. **Inferring density or mass from two scalar masses** (027 DISCRETE §1: a bump near 3/2 where Ω<−0.1
+can carry the mass). **[ABSENT]** (minor).
 
-A16. **Positividad en codimensión uno implica bloque** (051, ZERO13: el acoplamiento de Schur no se
-controla). **[PARCIAL]** D5 trata «Monotonías Schur–Green», no este acoplamiento.
+A16. **Positivity in codimension one implies the block** (051, ZERO13: the Schur coupling is not
+controlled). **[PARTIAL]** D5 deals with «Schur–Green monotonicities», not this coupling.
 
-A17. **Capas PSD de la desintegración Gram** (GRAM_SLICES_AUDIT). **[PRESENTE]** vía D16/memoria de
-las reglas del proyecto.
+A17. **PSD layers of the Gram disintegration** (GRAM_SLICES_AUDIT). **[PRESENT]** via D16/memory of
+the project rules.
 
-Observación sobre D7 de RULES_AVOID («Variantes del presupuesto 022»): en este rango `POWER_INVERSE_INTERIOR_022`
-es un falsificador puntual, no un presupuesto; la referencia de D7 parece apuntar a CUMULATIVE_INVERSE022
-(fuera de este rango). Conviene precisarla.
+Remark on D7 of RULES_AVOID («Variants of budget 022»): in this range `POWER_INVERSE_INTERIOR_022`
+is a pointwise falsifier, not a budget; the reference of D7 seems to point to CUMULATIVE_INVERSE022
+(outside this range). It should be made precise.
 
-## B. Resultados positivos PROVED, con alcance exacto
+## B. PROVED positive results, with exact scope
 
-B1. Identidades exactas de filtros (016): W[f]=W[Qf]+W[Lf], binomial, (−1)^rΔ^r W[Q^kf]=W[L^rQ^kf], para f
-racional causal, polar incluida.
-B2. Mezcla geométrica y continuidad (015 GEOMETRIC): W continua en X=H^t∩L²(e^{ηy}); para todos v_j≥u>1,
-W[f]=Σw_kW[Q^kf_0], w_k≥0, Σw_k=1: la positividad de toda la órbita Q^kV_N basta para todos los N polos ≥u.
-B3. Eventualidad (015 HIGHPASS): para N fijo existe K_N independiente de P con W>0 en Q^kV_N, k≥K_N.
-B4. Corte efectivo (054): W[Q^jF_0]>‖·‖² para todo P, todo n, j≥K(n) (entero explícito enorme). COEFF/EVAL.
-B5. Corte arquimediano lineal (051): para todo n y j≥⌈7n/6⌉, ARCH>859/800 (sólo ARCH).
-B6. Fila N=1 (017): W[h_k]>(4/3)‖h_k‖², todo k≥0, u≥63/2; WR y WRN (normas ponderadas uniformes en k).
-B7. Puente escalar Bernstein (AUDIT_017): si todos los átomos W[h_{N,k}]≥0 entonces W≥0 en todos los
-numeradores (reducción a la tabla escalar); cono cuadrático explícito W>(49/50)‖f‖² para N≥2, k≥10000N²,
+B1. Exact filter identities (016): W[f]=W[Qf]+W[Lf], binomial, (−1)^rΔ^r W[Q^kf]=W[L^rQ^kf], for causal rational
+f, polar included.
+B2. Geometric mixture and continuity (015 GEOMETRIC): W continuous on X=H^t∩L²(e^{ηy}); for all v_j≥u>1,
+W[f]=Σw_kW[Q^kf_0], w_k≥0, Σw_k=1: positivity of the whole orbit Q^kV_N suffices for all N poles ≥u.
+B3. Eventuality (015 HIGHPASS): for fixed N there is K_N independent of P with W>0 on Q^kV_N, k≥K_N.
+B4. Effective cutoff (054): W[Q^jF_0]>‖·‖² for all P, all n, j≥K(n) (enormous explicit integer). COEFF/EVAL.
+B5. Linear archimedean cutoff (051): for all n and j≥⌈7n/6⌉, ARCH>859/800 (ARCH only).
+B6. Row N=1 (017): W[h_k]>(4/3)‖h_k‖², all k≥0, u≥63/2; WR and WRN (weighted norms uniform in k).
+B7. Scalar Bernstein bridge (AUDIT_017): if all atoms W[h_{N,k}]≥0 then W≥0 on all
+numerators (reduction to the scalar table); explicit quadratic cone W>(49/50)‖f‖² for N≥2, k≥10000N²,
 P=1.
-B8. Región de átomos (034): W[f_{N,k}]>‖·‖²/40 para N≥3, k≥1, u≥63/2, u²≥225N/4; filas 3≤N≤12 en u=63/2
-para todo k≥0; filas 3≤N≤8 uniformes en u≥63/2.
-B9. Dimensión fija, todas las tasas ≥63/2 con repetición: 4 polos W>(2/25)‖·‖² (009); 5 polos
-W>‖·‖²/100 (010); 12 polos W>‖·‖²/10000 (050); 13 polos W>‖·‖²/4000 y 14 polos con D(0)=0
+B8. Atom region (034): W[f_{N,k}]>‖·‖²/40 for N≥3, k≥1, u≥63/2, u²≥225N/4; rows 3≤N≤12 at u=63/2
+for all k≥0; rows 3≤N≤8 uniformly in u≥63/2.
+B9. Fixed dimension, all rates ≥63/2 with repetition: 4 poles W>(2/25)‖·‖² (009); 5 poles
+W>‖·‖²/100 (010); 12 poles W>‖·‖²/10000 (050); 13 poles W>‖·‖²/4000 and 14 poles with D(0)=0
 W>‖·‖²/1000 (053).
-B10. Escalera de potencias: mezclas de X^{−32},…,X^{−37} (003, órdenes 1–6); cuatro potencias arbitrarias
-a_i>1 (085, vía T_R,T_S>0 global, Rolle 084, factorización 083); T_h>0 para todo x>0 y todos los triples del
-resto G_p PD, bloque auxiliar anclado de cinco nodos PD (099; no son cinco generadores admisibles).
-B11. Átomo (129,0): 1,34·10^{−10}<W[g_129]/‖·‖²<1,35·10^{−10} (061).
-B12. Balances parciales firmados: OMEGA-TAIL y JOINT-TAIL (027); BLOCK ∫_1^{9/4}G_NH>1/100, N≥2^{20} (030);
-SHARP-GAP (030); PEAK y BUDGET (031); BAND, N≥2^{80} (041); DILATE/SIGNED/WINDOW (037); SHOULDER y TAIL:
-h_N,K_N>0 para x≥e^{T_N}, N≥4·10^6 (039); ψ_Λ(x)≤2x (039).
-B13. Modelo hiperbólico (HYPERBOLIC §§5, 8): kernel [M_a(u_i)+M_a(u_j)]/(u_i+u_j) PSD en todos los
-tamaños para φ_a y su extensión Robin; realización explícita (§12.6) de Q,B,C,D con observación continua
-exacta de q_θ y ecuación fuerte para Y_ν. No transferido a Φ.
-B14. Densidad (094): distancia exacta, BINOMIAL-DET, criterio DIAGONAL-DENSITY.
-B15. Herramientas: lema (G) 0≤τm′(τ)<4 y polar exacto P_n(u) (007); identidad de transporte con déficit
-(009/010); PF-DET y criterio de Rolle (084); JAC (049, documento superado).
+B10. Ladder of powers: mixtures of X^{−32},…,X^{−37} (003, orders 1–6); four arbitrary powers
+a_i>1 (085, via T_R,T_S>0 globally, Rolle 084, factorization 083); T_h>0 for all x>0 and all triples of the
+remainder G_p PD, anchored auxiliary five-node block PD (099; these are not five admissible generators).
+B11. Atom (129,0): 1.34·10^{−10}<W[g_129]/‖·‖²<1.35·10^{−10} (061).
+B12. Signed partial balances: OMEGA-TAIL and JOINT-TAIL (027); BLOCK ∫_1^{9/4}G_NH>1/100, N≥2^{20} (030);
+SHARP-GAP (030); PEAK and BUDGET (031); BAND, N≥2^{80} (041); DILATE/SIGNED/WINDOW (037); SHOULDER and TAIL:
+h_N,K_N>0 for x≥e^{T_N}, N≥4·10^6 (039); ψ_Λ(x)≤2x (039).
+B13. Hyperbolic model (HYPERBOLIC §§5, 8): kernel [M_a(u_i)+M_a(u_j)]/(u_i+u_j) PSD at all
+sizes for φ_a and its Robin extension; explicit realization (§12.6) of Q,B,C,D with exact continuous
+observation of q_θ and strong equation for Y_ν. Not transferred to Φ.
+B14. Density (094): exact distance, BINOMIAL-DET, DIAGONAL-DENSITY criterion.
+B15. Tools: lemma (G) 0≤τm′(τ)<4 and exact polar P_n(u) (007); transport identity with deficit
+(009/010); PF-DET and Rolle criterion (084); JAC (049, superseded document).
 
-## C. Obligaciones OPEN como enunciados matemáticos
+## C. OPEN obligations as mathematical statements
 
-C1. **Segmento inicial de la órbita high-pass.** Para todo n≥1, todo P real con deg P<n y todo
-0≤j<K(n): W[Q^jP/(s+u)^n]≥0 (o, por B2, para un N fijo, para todos los j<K_N). Intentado: eventualidad
-(015), cortes efectivos (049, 051, 053, 054), descenso binomial (016), uniones densas (AUDIT_016, 094).
-C2. **Escalera de potencias en todos los órdenes.** [ (L(32+i)+L(32+j))/(63+i+j) ]_{0≤i,j≤m} ⪰ 0 para
-todo m; equivalentemente |α_r|<1 para todo r en la recurrencia (E) de 003. Intentado: eliminación (003),
-pares/triples/cuatro (084, 085), Turán T_h (097–099); obligaciones pfaffianas de orden ≥5 y herencia al
-siguiente resto abiertas.
-C3. **Tabla escalar completa.** W[h_{N,k}]≥0 para todo N≥1, k≥0 (h_{N,k} con Laplace s^k/(s+u)^{N+k});
-cubiertos N=1, N≤17 con k≥1 (y otras filas), el cono k≥10000N² y la región u²≥225N/4. Falta el interior
-N≥18 con k<10000N², y k=0 para N≥13 a tasa fija.
-C4. **Balance interior gamma** (átomo k=0): para N grande, ∫_1^∞G_N(x)H(x)dx≥0 con H de 030; quedan
-∫_{9/4}^∞G_NH (030), ∫_1^{4096}K_NΩ (027), E_ν[I_*(e^t)]>M_2/R(T_N) (031), el complemento de la banda
-[e^T,e^{T+L}] (041), la suma firmada FULL Σ_{(m,Q)=1}μ(m)K_{N,Q}(m) (037) y la región interior x<e^{T_N} del
-inverso (039). Forma equivalente: G_W(m_N)+∫_0^∞L_N(a)G_W″(a)da≥0 (027).
-C5. **Propagación en N** del balance firmado con precisión relativa al residuo (061, 062): estimar R (orden
-0,03) y W (orden 10^{−10}) sin sumar cajas independientes.
-C6. **Transferencia del modelo hiperbólico a Φ**: una métrica (no local o no acotada) y una identidad de
-Green positiva que reproduzca la forma completa a partir de la realización 12.6.
-C7. **Dimensión arbitraria de polos**: W>0 en todos los espacios de n polos ≥63/2 para todo n (y 14 polos
-con numerador general).
-C8. **Densidad + continuidad**: envolvente lineal de uniones de bloques positivos y continuidad de W en la
-topología usada (094); cruces entre bloques.
+C1. **Initial segment of the high-pass orbit.** For all n≥1, every real P with deg P<n and every
+0≤j<K(n): W[Q^jP/(s+u)^n]≥0 (or, by B2, for a fixed N, for all j<K_N). Attempted: eventuality
+(015), effective cutoffs (049, 051, 053, 054), binomial descent (016), dense unions (AUDIT_016, 094).
+C2. **Ladder of powers at all orders.** [ (L(32+i)+L(32+j))/(63+i+j) ]_{0≤i,j≤m} ⪰ 0 for
+all m; equivalently |α_r|<1 for all r in the recurrence (E) of 003. Attempted: elimination (003),
+pairs/triples/four (084, 085), Turán T_h (097–099); Pfaffian obligations of order ≥5 and inheritance to the
+next remainder open.
+C3. **Complete scalar table.** W[h_{N,k}]≥0 for all N≥1, k≥0 (h_{N,k} with Laplace transform s^k/(s+u)^{N+k});
+covered N=1, N≤17 with k≥1 (and other rows), the cone k≥10000N² and the region u²≥225N/4. Missing: the interior
+N≥18 with k<10000N², and k=0 for N≥13 at fixed rate.
+C4. **Interior gamma balance** (atom k=0): for large N, ∫_1^∞G_N(x)H(x)dx≥0 with H from 030; remaining:
+∫_{9/4}^∞G_NH (030), ∫_1^{4096}K_NΩ (027), E_ν[I_*(e^t)]>M_2/R(T_N) (031), the complement of the band
+[e^T,e^{T+L}] (041), the signed sum FULL Σ_{(m,Q)=1}μ(m)K_{N,Q}(m) (037) and the interior region x<e^{T_N} of the
+inverse (039). Equivalent form: G_W(m_N)+∫_0^∞L_N(a)G_W″(a)da≥0 (027).
+C5. **Propagation in N** of the signed balance with precision relative to the residue (061, 062): estimate R (of order
+0.03) and W (of order 10^{−10}) without summing independent boxes.
+C6. **Transfer of the hyperbolic model to Φ**: a metric (nonlocal or unbounded) and a positive Green
+identity reproducing the full form from the realization 12.6.
+C7. **Arbitrary dimension of poles**: W>0 on all spaces of n poles ≥63/2 for all n (and 14 poles
+with general numerator).
+C8. **Density + continuity**: linear envelope of unions of positive blocks and continuity of W in the
+topology used (094); cross terms between blocks.
 
-## D. Objetos o ideas mencionados como no iniciados o no examinados
+## D. Objects or ideas mentioned as not started or not examined
 
-D1. ORIGIN-HANKEL «no se inició ese cálculo aquí» (097) — ejecutado después en 098.
-D2. Ruta larga E_{2,3} (NEXT) del plan 050: «no se ejecutó»; superada.
-D3. Topologías donde los momentos ℓ_r no son continuos (AUDIT_016 §3): no examinadas.
-D4. Otras agrupaciones o estimaciones firmadas del complemento Möbius (037 §8): «no se excluyen».
-D5. Otras representaciones afines distintas de 042 (062): no examinadas.
-D6. COMPLETE-MONOTONICITY para las densidades reales de 103: «no se ha demostrado ni refutado» (111).
-D7. Si un factor cosh aislado (con o sin desplazamiento) preserva PSD del kernel: «no se ha demostrado ni
-refutado» (HYPERBOLIC §§11, 13).
-D8. Métricas no locales o no acotadas, conexiones nuevas, prefactores dependientes de b, sistemas no
-simétricos, observaciones no continuas para la realización 12.6 (HYPERBOLIC §§12.4–12.7).
-D9. Escalas base de frecuencia variable, potencias reales, sumas y cocientes de productos cosh (§13.1).
-D10. Signo global del Wronskiano temporal de densidades 093/095 (097, 099): no usado ni probado.
-D11. Signo para todos los numeradores en el cono cuadrático (AUDIT_017 §8): no afirmado.
-D12. Un bound de operador de correlación distinto del mayorante de Cauchy de la cola desde 3 (053 §1):
-«no excluye otro bound».
+D1. ORIGIN-HANKEL «that computation was not started here» (097) — carried out later in 098.
+D2. Long route E_{2,3} (NEXT) of plan 050: «not executed»; superseded.
+D3. Topologies in which the moments ℓ_r are not continuous (AUDIT_016 §3): not examined.
+D4. Other groupings or signed estimates of the Möbius complement (037 §8): «not excluded».
+D5. Other affine representations different from 042 (062): not examined.
+D6. COMPLETE-MONOTONICITY for the real densities of 103: «neither proved nor refuted» (111).
+D7. Whether an isolated cosh factor (with or without shift) preserves PSD of the kernel: «neither proved nor
+refuted» (HYPERBOLIC §§11, 13).
+D8. Nonlocal or unbounded metrics, new connections, b-dependent prefactors, nonsymmetric
+systems, noncontinuous observations for the realization 12.6 (HYPERBOLIC §§12.4–12.7).
+D9. Variable base frequency scales, real powers, sums and quotients of cosh products (§13.1).
+D10. Global sign of the temporal Wronskian of densities 093/095 (097, 099): neither used nor proved.
+D11. Sign for all numerators in the quadratic cone (AUDIT_017 §8): not claimed.
+D12. A correlation-operator bound different from the Cauchy majorant of the tail from 3 (053 §1):
+«does not exclude another bound».
 
-## E. Cobertura
+## E. Coverage
 
-Rango: los `.md` de `phase-211-sign-sandbox/` en orden de `ls *.md | sort` desde `POWER_DESCENT_016.md`
-hasta `POWER_INVERSE_INTERIOR_022.md` inclusive, excluidos `POWER_GLOBAL_ROUTE_REVIEW.md` y
-`POWER_GRAM_SLICES_OBSTRUCTION.md`: **61 archivos**. Leídos íntegramente: **61/61** (incluido
-`POWER_HYPERBOLIC_MODEL_GRAM.md`, 966 líneas, en dos tramos completos). Ningún archivo ni tramo del rango
-quedó sin leer. Se leyeron además, para notación, `RULES_AVOID.md`, `OBJECT_SPEC.md`, `STATEMENT_001.md`,
-`POWER_CONE_001.md` y `POWER_BRIDGE_002.md`. No se leyeron los verificadores `tools/*.py` ni los archivos
-citados fuera del rango (p. ej. 018–026, 032–033, 042, 073–096, POWER_STATE_*); sus contenidos sólo se
-reflejan tal como los citan los archivos leídos.
+Range: the `.md` files of `phase-211-sign-sandbox/` in `ls *.md | sort` order from `POWER_DESCENT_016.md`
+to `POWER_INVERSE_INTERIOR_022.md` inclusive, excluding `POWER_GLOBAL_ROUTE_REVIEW.md` and
+`POWER_GRAM_SLICES_OBSTRUCTION.md`: **61 files**. Read in full: **61/61** (including
+`POWER_HYPERBOLIC_MODEL_GRAM.md`, 966 lines, in two complete portions). No file or portion of the range
+was left unread. Also read, for notation, `RULES_AVOID.md`, `OBJECT_SPEC.md`, `STATEMENT_001.md`,
+`POWER_CONE_001.md` and `POWER_BRIDGE_002.md`. The checkers `tools/*.py` and the files
+cited outside the range (e.g. 018–026, 032–033, 042, 073–096, POWER_STATE_*) were not read; their contents are only
+reflected as the files read cite them.

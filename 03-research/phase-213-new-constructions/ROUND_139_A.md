@@ -1,29 +1,29 @@
-# El borde de Liouville es lineal en la raíz con error uniforme
+# The Liouville boundary is linear in the root with uniform error
 
-Para la suma de 138 con f=λ y 1≤x≤D² se tiene incondicionalmente
+For the sum of 138 with f=λ and 1≤x≤D² one has unconditionally
 
     S_D(x)=2√x Σ_{a≤D}λ(a)/√a − A(x) + E_D(x),   |E_D(x)|≤2D,
     A(x)=Σ_{r≤x}μ(r) P(√(x/r)),   P(z)=Σ_{ij≤z}1.
 
-En efecto, invertir las dos sumas del borde de 138, donde g es el indicador de cuadrados, da exactamente 2Σ_{a≤D} λ(a) floor(√(x/a)). Sustituir cada suelo por su argumento cuesta a lo sumo dos unidades por índice. La expresión de A se obtiene de μ*g*g por convolución. Así toda la parte de borde que pudiera superar D es una única función de x cuyo coeficiente depende de D.
+Indeed, inverting the two sums of the boundary term of 138, where g is the indicator of squares, gives exactly 2Σ_{a≤D} λ(a) floor(√(x/a)). Replacing each floor by its argument costs at most two units per index. The expression for A is obtained from μ*g*g by convolution. Thus the whole boundary part that could exceed D is a single function of x whose coefficient depends on D.
 
-**Cancelar el coeficiente antes de estimar.** Definir C(x)=A(16x)−4A(4x)+4A(x). Para 16x≤D², la misma combinación aplicada a S_D da −C(x) con error ≤18D. En el interior de C se obtiene la identidad exacta
+**Cancelling the coefficient before estimating.** Define C(x)=A(16x)−4A(4x)+4A(x). For 16x≤D², the same combination applied to S_D gives −C(x) with error ≤18D. Inside C one obtains the exact identity
 
     C(x)=Σ_{r≤16x} μ(r) J(4√(x/r)),
     J(z)=Σ_{ij≤z}(−1)^(i+j)=P(z)−4P(z/2)+4P(z/4).
 
-La hipérbola de Dirichlet corta esta suma en dos franjas i≤√z o j≤√z, restando el cuadrado contado dos veces. Cada suma alternada interior tiene módulo ≤1, por lo que |J(z)|≤2√z+1 para z≥1. Por tanto todos los r≤x^(1/3) juntos cuestan en valor absoluto O(x^(1/4)Σ_{r≤x^(1/3)}r^(−1/4)+x^(1/3))=O(√x). Esta estimación elemental paga a la vez la parte de borde y las dos sumas de divisores de los r pequeños a escala raíz cuando D es comparable a √x.
+The Dirichlet hyperbola cuts this sum into two strips i≤√z or j≤√z, subtracting the square counted twice. Each inner alternating sum has modulus ≤1, so |J(z)|≤2√z+1 for z≥1. Hence all r≤x^(1/3) together cost in absolute value O(x^(1/4)Σ_{r≤x^(1/3)}r^(−1/4)+x^(1/3))=O(√x). This elementary estimate pays at once the boundary part and the two divisor sums of the small r at root scale when D is comparable to √x.
 
-**Qué signo bastaría.** Para todo ε>0 una cota superior C(x)≪ε x^(1/2+ε) eventual basta para RH, y bajo RH se cumple incluso en módulo por 138 o por convolución. En efecto en Re s>1 la Mellin de C sobre (0,∞) es
+**What sign would suffice.** For every ε>0 an eventual upper bound C(x)≪ε x^(1/2+ε) suffices for RH, and under RH it holds even in modulus by 138 or by convolution. Indeed in Re s>1 the Mellin transform of C over (0,∞) is
 
     (16^s−4·4^s+4) ζ(2s)² / [s ζ(s)].
 
-El tramo inferior a 1 tiene soporte alejado de cero y aporta una función entera. El factor de dilatación es (4^s−2)² y no se anula en Re s>1/2. Tampoco se anula ζ(2s) allí. El eje real en esa franja es regular. Landau aplicado a una constante por x^(1/2+ε) menos C excluye polos más a la derecha que 1/2+ε. Por la estimación absoluta anterior basta la cota unilateral para r>x^(1/3).
+The part below 1 has support away from zero and contributes an entire function. The dilation factor is (4^s−2)² and does not vanish in Re s>1/2. Neither does ζ(2s) there. The real axis in that strip is regular. Landau applied to a constant times x^(1/2+ε) minus C excludes poles further right than 1/2+ε. By the absolute estimate above the one-sided bound for r>x^(1/3) suffices.
 
-**Límite de una inducción por dilataciones.** Invirtiendo las dos sumas finitas también se tiene C(x)=Σ_{k≤4√x} b_k M₀(16x/k²), b_k=Σ_{ij=k}(−1)^(i+j). El término k=1 es M₀(16x). A escala raíz una inducción por valores absolutos tendría que pagar |b_k|/k por dilatación. Ya los primos impares tienen b_p=2 y Σ_p 2/p diverge. La mera alternancia dentro de J no produce una contracción absoluta. Queda abierta la cancelación entre dilataciones o, equivalentemente aquí, la estimación del resto sobre r grandes.
+**Limit of an induction by dilations.** Inverting the two finite sums one also has C(x)=Σ_{k≤4√x} b_k M₀(16x/k²), b_k=Σ_{ij=k}(−1)^(i+j). The term k=1 is M₀(16x). At root scale an induction by absolute values would have to pay |b_k|/k per dilation. Already the odd primes have b_p=2 and Σ_p 2/p diverges. The mere alternation inside J does not produce an absolute contraction. Cancellation between dilations, or equivalently here the estimate of the remainder over large r, remains open.
 
-**Cotejo.** Los filtros de dilatación y los cortes por hipérbola ya son herramientas del corpus (entre otros 045, 060 y 132); la transferencia general es 138. La observación específica es el borde exacto de λ a error 2D y la elección de un mismo filtro que lo anula y alterna ambas coordenadas del divisor de cuadrados. No se infiere una extensión de la ventana.
+**Cross-check.** Dilation filters and hyperbola cuts are already tools of the corpus (among others 045, 060 and 132); the general transfer is 138. The specific observation is the exact Liouville boundary up to error 2D and the choice of a single filter that cancels it and alternates both coordinates of the divisor of squares. No extension of the window is inferred.
 
-Basta comprobar el techo unilateral en x=m². El coeficiente de A en n=rs², con r libre de cuadrados, es μ(r)τ(s) (equivalentemente, en p^j es (−1)^j(floor(j/2)+1) por su factor local). Por ello cada salto es Oε(n^ε). Pasar de m² a cualquier x antes de (m+1)² cuesta Oε(x^(1/2+ε)) para cada una de las tres sumas. El coste absoluto del sector r pequeño ya es O(√x) en todos los x.
+It suffices to check the one-sided ceiling at x=m². The coefficient of A at n=rs², with r squarefree, is μ(r)τ(s) (equivalently, at p^j it is (−1)^j(floor(j/2)+1) by its local factor). Hence each jump is Oε(n^ε). Passing from m² to any x before (m+1)² costs Oε(x^(1/2+ε)) for each of the three sums. The absolute cost of the small-r sector is already O(√x) for all x.
 
-Antecedente directo del coeficiente: 054/055 ya emplean ε*ε (ε(n)=(−1)^(n+1)); 057 trabaja con η² en Mellin. El nuevo uso de 139 es el borde de Liouville y el argumento escalado 4√(x/r).
+Direct antecedent of the coefficient: 054/055 already use ε*ε (ε(n)=(−1)^(n+1)); 057 works with η² in Mellin. The new use in 139 is the Liouville boundary and the scaled argument 4√(x/r).

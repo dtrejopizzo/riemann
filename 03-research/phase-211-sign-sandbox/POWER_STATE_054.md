@@ -1,30 +1,30 @@
-# POWER_STATE_054 — Corte explícito para la forma completa en toda dimensión
+# POWER_STATE_054 — Explicit cutoff for the full form in every dimension
 
-Estado: PROVED para la región declarada; signo global OPEN. Papers intactos.
+Status: PROVED for the declared region; global sign OPEN. Papers untouched.
 
-Con u=63/2, Q(s)=s/(s+u), definir
+With u=63/2, Q(s)=s/(s+u), define
 
     C_n=9n²9^n, D_n=10C_n n!, A_n=6C_n n n!,
     K(n)=max(10000n²,A_n·3^(4D_n+20)).
 
-Para TODO n>=1, TODO polinomio real P no nulo de grado<n y TODO j>=K(n),
+For ALL n>=1, ALL nonzero real polynomials P of degree<n and ALL j>=K(n),
 
     W[Q^j P/(s+u)^n] > ||Q^j P/(s+u)^n||².
 
-Fuente POWER_EFFECTIVE_HIGHPASS_054.md; revisión independiente aprobada en POWER_EFFECTIVE_HIGHPASS_AUDIT_054.md. Root leyó y verificó ambas pruebas completas. No se requiere evaluar K(n), ejecutar una campaña numérica ni verificar casos individuales.
+Source POWER_EFFECTIVE_HIGHPASS_054.md; independent review approved in POWER_EFFECTIVE_HIGHPASS_AUDIT_054.md. Both full proofs were read and verified. It is not required to evaluate K(n), run a numerical campaign nor verify individual cases.
 
-## Mecanismo nuevo y alcance exacto
+## New mechanism and exact scope
 
-POWER_INVERSE_COEFFICIENT_054 y su auditoría establecen una cota efectiva de coeficientes al invertir y reescalar frecuencia. Un intervalo fijo y la expansión de Legendre sustituyen el menor eigenvalor de Gram no cuantificado de015. La constante depende de n y cubre todos los numeradores simultáneamente.
+POWER_INVERSE_COEFFICIENT_054 and its audit establish an effective coefficient bound on inverting and rescaling frequency. A fixed interval and the Legendre expansion replace the unquantified smallest Gram eigenvalue of015. The constant depends on n and covers all numerators simultaneously.
 
-El contorno de la densidad completa tiene integral absoluta <=D_n veces la norma espectral. La prueba conserva el producto polinómico completo, aplica017 a diagonales positivas y justifica separadamente dimensión1. Los momentos beta exactos controlan las constantes; la autocorrelación queda acotada por D_n exp(-15|t|)norma². Esto paga TODOS los contactos aritméticos mediante una serie absolutamente convergente.
+The contour of the full density has absolute integral <=D_n times the spectral norm. The proof keeps the full polynomial product, applies017 to positive diagonals and justifies dimension1 separately. The exact beta moments control the constants; the autocorrelation is bounded by D_n exp(-15|t|)norm². This pays ALL arithmetic contacts through an absolutely convergent series.
 
-El momento inverso es <=A_n/(u²j). DesdeK(n), ARCH>2D_n+9, el módulo del peine<D_n y el módulo del polar<1, todos divididos por la misma norma². El balance prueba el resultado con margen.
+The inverse moment is <=A_n/(u²j). FromK(n) on, ARCH>2D_n+9, the modulus of the comb<D_n and the modulus of the polar<1, all divided by the same norm². The balance proves the result with margin.
 
-Es una mejora efectiva de la eventualidad015: ahora existe una fórmula universal explícita en n. Su tamaño es enorme y no se afirma optimalidad. No prueba los segmentos j<K(n), no demuestra que esta región positiva sea densa en el portador requerido y no amplía la ventana temporalT. La positividad en trece polos arbitrarios053 sigue vigente separadamente.
+It is an effective improvement of the eventuality015: there is now an explicit universal formula in n. Its size is enormous and no optimality is claimed. It does not prove the segments j<K(n), does not show that this positive region is dense in the required carrier and does not extend the temporal windowT. Positivity on thirteen arbitrary poles053 remains valid separately.
 
-## Propuestas descartadas por duplicación y obligación viva
+## Proposals discarded as duplicates and live obligation
 
-La extrapolación absoluta de momentos053 reproduce el obstáculo016. Renombrar como energía negativa el resto pendiente reproduce036; la cola renormalizada042 no resuelve su interior ni uniformidad en k. No son nuevos NO-GO. El control temporal ponderado independiente de n tampoco se supone.
+The absolute extrapolation of moments053 reproduces the obstacle016. Renaming the pending remainder as negative energy reproduces036; the renormalised tail042 does not resolve its interior nor uniformity in k. These are not new NO-GOs. Weighted temporal control independent of n is not assumed either.
 
-El paso pendiente hacia el objetivo general requiere controlar el segmento inicial al variar n conservando su aritmética firmada. El corte efectivo no autoriza eliminar ese segmento por recurrencia ni por masa pequeña. No hay bloqueo externo ni cierre del goal.
+The pending step toward the general objective requires controlling the initial segment as n varies while keeping its signed arithmetic. The effective cutoff does not authorise eliminating that segment by recurrence nor by small mass. There is no external blockage nor closure of the goal.

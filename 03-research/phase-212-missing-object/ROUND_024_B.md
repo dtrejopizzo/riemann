@@ -1,103 +1,103 @@
-# Ronda 24, memo B — ¿Bloque casi nulo de la 211 = familia casi radical `{Π_T(M∗φ)}`?
+# Round 24, memo B — Near-null block of 211 = near-radical family `{Π_T(M∗φ)}`?
 
-Pregunta (índice, Parte V, 212-22-A, «(d) OPEN»): ¿el bloque casi nulo de la fase 211 es el mismo objeto que la
-familia `{Π_T(M∗φ)}` de ROUND_021_A/022_A? Etiquetas: PROVED / CITED / ARGUED / OPEN / NUMÉRICO.
+Question (index, Part V, 212-22-A, «(d) OPEN»): is the near-null block of phase 211 the same object as the
+family `{Π_T(M∗φ)}` of ROUND_021_A/022_A? Labels: PROVED / CITED / ARGUED / OPEN / NUMERICAL.
 
-## 0. Cotejo
-- Abiertos: `ROUND_021_A.md` (íntegro), `ROUND_022_A.md` §§Parte 1–3, `ANNEX_COTEJO_NULLDIR.md` §1.2 y §5;
-  211 `ROUND_008_E.md` §§0–2.2, `ROUND_009_B.md` §0, §§2.4–2.6, `ROUND_005_C.md` §1 (Def. 1), `ROUND_017_A.md` (sólo
-  encabezados); P47 `def:ext` (l.9867), `thm:ext-half` (l.9913), `prop:ext-gauge` (l.9946); índice 212-22-A.
-- No abiertos: P2_SCHUR_001 (sólo por cita de 021_A), 211 ROUND_005_B, ROUND_007_B, ROUND_009_A, R160_D4_R2, P46.
-- Grep («Π_T(M», «prolat», «casi nul», «near-null», «E_T» en 211/212): ningún memo escribe la identificación. El
-  ANNEX_COTEJO_NULLDIR §5(c) separa «E(prolatos)», «familia de respuestas E_T» y S_T sin relacionarlos con M∗φ.
-  Por tanto no se para en el cotejo. No se propone ningún mecanismo de signo; es una pregunta de identificación.
+## 0. Cross-check
+- Opened: `ROUND_021_A.md` (in full), `ROUND_022_A.md` §§Part 1–3, `ANNEX_COTEJO_NULLDIR.md` §1.2 and §5;
+  211 `ROUND_008_E.md` §§0–2.2, `ROUND_009_B.md` §0, §§2.4–2.6, `ROUND_005_C.md` §1 (Def. 1), `ROUND_017_A.md` (headings
+  only); P47 `def:ext` (l.9867), `thm:ext-half` (l.9913), `prop:ext-gauge` (l.9946); index 212-22-A.
+- Not opened: P2_SCHUR_001 (only via citation in 021_A), 211 ROUND_005_B, ROUND_007_B, ROUND_009_A, R160_D4_R2, P46.
+- Grep («Π_T(M», «prolat», «casi nul», «near-null», «E_T» in 211/212): no memo writes down the identification. The
+  ANNEX_COTEJO_NULLDIR §5(c) separates «E(prolates)», «family of responses E_T» and S_T without relating them to M∗φ.
+  Hence it does not stop at the cross-check. No sign mechanism is proposed; it is an identification question.
 
-## 1. Definiciones literales
-**212 (ROUND_021_A §1; ROUND_022_A Obs. 1.1).** `0<η<δ<T`, `χ` corte suave par (=1 en `|t|≤T−η`, soporte en `I_T`),
-`φ ∈ L¹∩L²` con soporte en `[−(T−δ),T−δ]`, `F_φ = M∗φ`, `Π_T(φ) := χF_φ − A(χF_φ)u_+ − B(χF_φ)u_−`. Además
-`M∗φ = S_ζ(g∗φ)` con `S_ζh(t) = Σ_{n≥1} n^{−1/2}h(t+log n)`, `g = (−∂²+¼)g_0`, `g_0(t)=(2π²e^{9t/2}−3πe^{5t/2})e^{−πe^{2t}}`.
-Identidad (1.1): `a_T(Π_Tφ) = 𝔡_T(φ)` doble-exponencialmente pequeño (PROVED en 021_A).
+## 1. Literal definitions
+**212 (ROUND_021_A §1; ROUND_022_A Obs. 1.1).** `0<η<δ<T`, `χ` smooth even cutoff (=1 on `|t|≤T−η`, support in `I_T`),
+`φ ∈ L¹∩L²` with support in `[−(T−δ),T−δ]`, `F_φ = M∗φ`, `Π_T(φ) := χF_φ − A(χF_φ)u_+ − B(χF_φ)u_−`. Moreover
+`M∗φ = S_ζ(g∗φ)` with `S_ζh(t) = Σ_{n≥1} n^{−1/2}h(t+log n)`, `g = (−∂²+¼)g_0`, `g_0(t)=(2π²e^{9t/2}−3πe^{5t/2})e^{−πe^{2t}}`.
+Identity (1.1): `a_T(Π_Tφ) = 𝔡_T(φ)` doubly-exponentially small (PROVED in 021_A).
 
-**211, bloque bajo (ROUND_008_E §2.2; ROUND_009_B §2.5; P47 def:ext).** `λ=e^T`, `N=e^{2T}`, `c=2πN`, `ψ_k` prolatas de
-`[−λ,λ]`, `d_k = 1−χ_k(c)`, `Ef(x) = e^{x/2}Σ_n f(ne^x)` en `I_T`. Bloque: `Π_T E·span{ψ_0,ψ_4,ψ_8,…}` (clase `+1` en el
-sector par; en el impar clase intercambiada, suelo `d_10`). Ley: `λ_j^{ev} ≈ κ_j d_{4j+8}`, `κ_j∈[0.85,2]`, para `4j+8 ≲ 4N`
-(NUMÉRICO); el minimizador está a ángulo `10⁻⁴` de `Π_T E span{ψ_0,…,ψ_8}` (NUMÉRICO).
+**211, low block (ROUND_008_E §2.2; ROUND_009_B §2.5; P47 def:ext).** `λ=e^T`, `N=e^{2T}`, `c=2πN`, `ψ_k` prolates of
+`[−λ,λ]`, `d_k = 1−χ_k(c)`, `Ef(x) = e^{x/2}Σ_n f(ne^x)` on `I_T`. Block: `Π_T E·span{ψ_0,ψ_4,ψ_8,…}` (class `+1` in the
+even sector; in the odd one, class swapped, floor `d_10`). Law: `λ_j^{ev} ≈ κ_j d_{4j+8}`, `κ_j∈[0.85,2]`, for `4j+8 ≲ 4N`
+(NUMERICAL); the minimizer is at angle `10⁻⁴` from `Π_T E span{ψ_0,…,ψ_8}` (NUMERICAL).
 
-**211, «bloque alto» (ROUND_009_B §2.4(iii)).** `k > 4N`, `d_k ≈ 1`; el cociente `M/D → 0` porque el tramo alto contiene
-aproximaciones del gauge `𝒢_T` (soporte en `(−1/λ,1/λ)`), sobre las cuales `E ≈ 0` (ARGUED allí).
+**211, «high block» (ROUND_009_B §2.4(iii)).** `k > 4N`, `d_k ≈ 1`; the quotient `M/D → 0` because the high range contains
+approximations of the gauge `𝒢_T` (support in `(−1/λ,1/λ)`), on which `E ≈ 0` (ARGUED there).
 
-**211, familia `E_T` (ROUND_005_C Def. 1).** `E_T := N′ ⊕ P_𝒞Π(𝒩_η+𝒯)`: bloque de modos con `s_q ≤ 0` más respuestas del
-peine; `dim E_T ≤ 2|𝒩|+2`, bloque 11/41/125 en `½log5+ε, 1, 1.25` (NUMÉRICO allí).
+**211, family `E_T` (ROUND_005_C Def. 1).** `E_T := N′ ⊕ P_𝒞Π(𝒩_η+𝒯)`: block of modes with `s_q ≤ 0` plus responses of the
+comb; `dim E_T ≤ 2|𝒩|+2`, block 11/41/125 at `½log5+ε, 1, 1.25` (NUMERICAL there).
 
-## 2. Lema puente (PROVED, una línea)
-Sea `ι f(t) := e^{t/2} f(e^t)`. Entonces `E = S_ζ ∘ ι`:
+## 2. Bridge lemma (PROVED, one line)
+Let `ι f(t) := e^{t/2} f(e^t)`. Then `E = S_ζ ∘ ι`:
 `S_ζ(ιf)(x) = Σ n^{−1/2} e^{(x+log n)/2} f(ne^x) = e^{x/2}Σ f(ne^x) = Ef(x)`. ∎
-Con `f_0 := ι^{−1}g_0`, `f_0(u) = (2π²u⁴ − 3πu²)e^{−πu²}` (par, gaussiana por polinomio) y `g∗φ = ι(f_φ)`,
-`f_φ(u) := ∫ f_g(ue^{−s}) e^{−s/2}φ(s)ds` (convolución multiplicativa, `f_g := ι^{−1}g`). Así:
-- 211 (ambos bloques) `= Π_T S_ζ ι(f)`, `f` par con soporte en `[−λ,λ]` (prolatas);
-- 212 `≈ Π_T S_ζ ι(f_φ)` (con el corte `χ`), `f_φ` dilataciones gaussianas a escalas `e^{s}`, `|s| ≤ T−δ`;
-- gauge `= S_ζ ι(φ)`, `φ ∈ 𝒢_T`, idénticamente nulo en `I_T` (P47 prop:ext-gauge: `Φ_φ` soportada en `(−∞,−T]`).
-Los tres son imágenes del mismo operador `S_ζ`; difieren en la clase de entrada. Esto es (U) de 022_A con `h = ιf`.
+With `f_0 := ι^{−1}g_0`, `f_0(u) = (2π²u⁴ − 3πu²)e^{−πu²}` (even, Gaussian times polynomial) and `g∗φ = ι(f_φ)`,
+`f_φ(u) := ∫ f_g(ue^{−s}) e^{−s/2}φ(s)ds` (multiplicative convolution, `f_g := ι^{−1}g`). Thus:
+- 211 (both blocks) `= Π_T S_ζ ι(f)`, `f` even with support in `[−λ,λ]` (prolates);
+- 212 `≈ Π_T S_ζ ι(f_φ)` (with the cutoff `χ`), `f_φ` Gaussian dilations at scales `e^{s}`, `|s| ≤ T−δ`;
+- gauge `= S_ζ ι(φ)`, `φ ∈ 𝒢_T`, identically zero on `I_T` (P47 prop:ext-gauge: `Φ_φ` supported in `(−∞,−T]`).
+All three are images of the same operator `S_ζ`; they differ in the input class. This is (U) of 022_A with `h = ιf`.
 
-## 3. Inclusión aproximada 212 ⊂ bloque bajo 211 (ARGUED; constantes no escritas)
-(i) Concentración. Para `|s| ≤ T−δ`, `f_g(ue^{−s})` es gaussiana de escala `e^{s} ≤ λe^{−δ}`: la masa fuera de `[−λ,λ]` es
-`≲ poly(λ)e^{−πe^{2δ}}`; por la autodualidad gaussiana la transformada es gaussiana de escala `e^{−s} ≤ λe^{−δ}` y la banda
-fuera de `[−λ,λ]` es del mismo orden. Luego `f_φ` está `ε_δ`-concentrada en tiempo y banda en `[−λ,λ]²`,
-`ε_δ ≍ poly(λ)e^{−πe^{2δ}}‖φ‖_{L¹}` (ARGUED; es la «localización» que 022_A atribuye a la autodualidad).
-(ii) Landau–Pollak (CITED, clásico): una función `ε`-concentrada en tiempo y banda dista `≲ ε/√(1−χ_K)` del span de
-`ψ_0,…,ψ_K` si `K` es el último índice con `d_K` acotado lejos de 1; aquí `K ≈ 4N − O(log c · log(1/ε_δ))`.
-(iii) `E` en `I_T` suma `≤ N` términos: `‖Ef‖_{L²(I_T)} ≤ poly(N)‖f‖`. Con `Π_T` y `χ` acotados:
+## 3. Approximate inclusion 212 ⊂ low block of 211 (ARGUED; constants not written)
+(i) Concentration. For `|s| ≤ T−δ`, `f_g(ue^{−s})` is a Gaussian of scale `e^{s} ≤ λe^{−δ}`: the mass outside `[−λ,λ]` is
+`≲ poly(λ)e^{−πe^{2δ}}`; by Gaussian self-duality the transform is a Gaussian of scale `e^{−s} ≤ λe^{−δ}` and the band
+outside `[−λ,λ]` is of the same order. Hence `f_φ` is `ε_δ`-concentrated in time and band in `[−λ,λ]²`,
+`ε_δ ≍ poly(λ)e^{−πe^{2δ}}‖φ‖_{L¹}` (ARGUED; it is the «localization» that 022_A attributes to self-duality).
+(ii) Landau–Pollak (CITED, classical): a function `ε`-concentrated in time and band lies at distance `≲ ε/√(1−χ_K)` from the span of
+`ψ_0,…,ψ_K` if `K` is the last index with `d_K` bounded away from 1; here `K ≈ 4N − O(log c · log(1/ε_δ))`.
+(iii) `E` on `I_T` sums `≤ N` terms: `‖Ef‖_{L²(I_T)} ≤ poly(N)‖f‖`. With `Π_T` and `χ` bounded:
 **`Π_T(M∗φ) ∈ Π_T E·span{ψ_k : k ≲ 4N} + O(poly(N)e^{−πe^{2δ}}‖φ‖)`** (ARGUED).
-Es decir: la familia de 212 vive en la imagen del bloque prolato BAJO (`k ≲ 4N`), no del alto.
-(iv) Corrección a ROUND_021_A §2(c): la frase «cúmulo = bloque prolato alto (P211-9B: los vectores gauge viven en el bloque
-alto)» confunde dos cosas. Lo que se anula en el bloque alto es `E` sobre entradas cercanas a `𝒢_T` (núcleo de la
-entrada), cuyas imágenes en `P_T` son ≈ 0, no direcciones casi nulas de `a_T`. El gauge no aporta ninguna dirección al
-cúmulo en `P_T` (PROVED por prop:ext-gauge: imagen idénticamente nula en `I_T`). El «bloque casi nulo» de la 211 que puede
-coincidir con `{Π_T(M∗φ)}` es el BAJO.
+That is: the family of 212 lives in the image of the LOW prolate block (`k ≲ 4N`), not the high one.
+(iv) Correction to ROUND_021_A §2(c): the sentence «cluster = high prolate block (P211-9B: the gauge vectors live in the high
+block)» conflates two things. What vanishes in the high block is `E` on inputs close to `𝒢_T` (kernel of the
+input), whose images in `P_T` are ≈ 0, not near-null directions of `a_T`. The gauge contributes no direction to the
+cluster in `P_T` (PROVED by prop:ext-gauge: image identically zero on `I_T`). The «near-null block» of 211 that can
+coincide with `{Π_T(M∗φ)}` is the LOW one.
 
-## 4. Lo que NO se identifica
-(a) `E_T` de ROUND_005_C no es este objeto (PROVED por definición): es el bloque de índice negativo de `a_T` en `L²(I_T)`
-más respuestas del peine, construido con los valores de `Λ`, de dimensión `≤ 2|𝒩|+2`; no es imagen de `S_ζ` ni casi
-nulo (contiene direcciones con `s_q<0`). Queda fuera de la identificación.
-(b) Inclusión inversa (bloque bajo 211 ⊂ 212): OPEN. `ιψ_k` tiene Mellin analítico sólo en un semiplano (soporte
-`(−∞,T]`); estar en `{g∗φ}` exige `𝓜(ιψ_k)/Φ_g` de tipo exponencial `≤ T−δ`, y `Φ_g ∝ s(s−1)π^{−s/2}Γ(s/2)·(¼−s²…)`
-decae como `e^{−π|τ|/4}`: la división crece exponencialmente. No hay inclusión exacta; la aproximada no está probada.
-(c) Selección de clase. En la 211 sólo la clase `ε_k = +1` (sector par) es casi nula; la clase `−1` no
-(ROUND_009_B Teor. 1.2: defecto de Fourier en `[2,4]` en la clase opuesta; NUMÉRICO 008_E §2.2: el fondo de
-`Π_T E span{ψ_0,ψ_2}` es `0.108` en `T=0.8`). **Vector explícito de separación (NUMÉRICO):** `Π_T Eψ_2` está en la imagen
-del span prolato bajo de §3(iii) pero tiene cociente de Rayleigh `≥ 0.108` (fondo del span bidimensional, 008_E §2.2),
-luego no está cerca del cúmulo. Consecuencia: la inclusión de §3 es en el span prolato bajo COMPLETO; para caer en el
-bloque casi nulo de la 211 haría falta que `f_φ` herede la clase `+1`. Como la dilatación conjuga `ℱ` con la dilatación
-inversa, `f_φ` no es autofunción de `ℱ` para `φ` general; que su proyección de clase `−1` sea pequeña se deduce sólo de la
-casi radicalidad (1.1) más el hecho NUMÉRICO de que la clase `−1` no es casi nula. Como enunciado estructural: OPEN.
+## 4. What is NOT identified
+(a) `E_T` of ROUND_005_C is not this object (PROVED by definition): it is the negative-index block of `a_T` on `L²(I_T)`
+plus responses of the comb, built with the values of `Λ`, of dimension `≤ 2|𝒩|+2`; it is not an image of `S_ζ` nor near
+null (it contains directions with `s_q<0`). It stays outside the identification.
+(b) Reverse inclusion (low block of 211 ⊂ 212): OPEN. `ιψ_k` has Mellin transform analytic only in a half-plane (support
+`(−∞,T]`); being in `{g∗φ}` requires `𝓜(ιψ_k)/Φ_g` of exponential type `≤ T−δ`, and `Φ_g ∝ s(s−1)π^{−s/2}Γ(s/2)·(¼−s²…)`
+decays like `e^{−π|τ|/4}`: the division grows exponentially. There is no exact inclusion; the approximate one is not proved.
+(c) Class selection. In 211 only the class `ε_k = +1` (even sector) is near null; the class `−1` is not
+(ROUND_009_B Thm. 1.2: Fourier defect in `[2,4]` in the opposite class; NUMERICAL 008_E §2.2: the bottom of
+`Π_T E span{ψ_0,ψ_2}` is `0.108` at `T=0.8`). **Explicit separating vector (NUMERICAL):** `Π_T Eψ_2` is in the image
+of the low prolate span of §3(iii) but has Rayleigh quotient `≥ 0.108` (bottom of the two-dimensional span, 008_E §2.2),
+hence is not close to the cluster. Consequence: the inclusion of §3 is into the FULL low prolate span; to fall into the
+near-null block of 211 one would need `f_φ` to inherit the class `+1`. Since dilation conjugates `ℱ` with the inverse
+dilation, `f_φ` is not an eigenfunction of `ℱ` for general `φ`; that its class `−1` projection is small follows only from
+near-radicality (1.1) plus the NUMERICAL fact that the class `−1` is not near null. As a structural statement: OPEN.
 
-## 5. Cuentas
-- 212: `N_T(ε) ≳ (4/(πe))e^{2T} ≈ 0.47e^{2T}` (ARGUED en 021_A, falta (2.1)).
-- 211 bloque bajo: Landau (CITED) da `≈ 4N` índices con `χ_k ≈ 1`, `≈ 2N` pares, `≈ N` de clase `+1`; con la ley
-  `λ_j^{ev} ≈ κ_jd_{4j+8}` (NUMÉRICO) salen `≈ N − 2` direcciones pares y `≈ N − 2` impares por debajo de `ε` fijo, es decir
-  `≈ 2e^{2T}` en total (ARGUED: la ley sólo está medida para `j ≤ 4`, `T ≤ 1.2`). Hasta umbral `ε = e^{−πe^{2T}}` el conteo
-  baja en `O(log c · πe^{2T}/log…)`; no se calculó.
-- 211 `E_T`: 11, 41, 125 (NUMÉRICO), otro objeto (§4a).
-- Cota superior común: `exp(2e^T)` (P211-6C, CITED en 021_A). Ambas cuentas son `≍ e^{2T}` y compatibles con que la
-  familia de 212 sea un subespacio de dimensión fraccional (`≈ 0.24`) del bloque bajo de 211; no se decide.
+## 5. Counts
+- 212: `N_T(ε) ≳ (4/(πe))e^{2T} ≈ 0.47e^{2T}` (ARGUED in 021_A, (2.1) missing).
+- 211 low block: Landau (CITED) gives `≈ 4N` indices with `χ_k ≈ 1`, `≈ 2N` even, `≈ N` of class `+1`; with the law
+  `λ_j^{ev} ≈ κ_jd_{4j+8}` (NUMERICAL) one gets `≈ N − 2` even and `≈ N − 2` odd directions below fixed `ε`, i.e.
+  `≈ 2e^{2T}` in total (ARGUED: the law is measured only for `j ≤ 4`, `T ≤ 1.2`). Down to threshold `ε = e^{−πe^{2T}}` the count
+  drops by `O(log c · πe^{2T}/log…)`; not computed.
+- 211 `E_T`: 11, 41, 125 (NUMERICAL), another object (§4a).
+- Common upper bound: `exp(2e^T)` (P211-6C, CITED in 021_A). Both counts are `≍ e^{2T}` and compatible with the
+  family of 212 being a subspace of fractional dimension (`≈ 0.24`) of the low block of 211; not decided.
 
-## 6. Qué cambia
-- Si son el mismo (bloque bajo 211 = `{Π_T(M∗φ)}` a precisión de margen): el bloque bajo de la 211 hereda la descripción
-  «imagen de `S_ζ` con entradas gaussianas»; la ley `d_{4j+8}` sería la lectura prolata de la localización gaussiana de
-  022_A; la cuenta (2.2) de 021_A se sustituiría por Landau (CITED) más la ley de la 211, y el paso pendiente (2.1) de
-  021_A quedaría superfluo. Todos los intentos de signo de la 211 sobre el bloque bajo pasan a ser intentos sobre la
-  clase cerrada por R160_D4_R2 Teor. 5.1 (convolución de Dirichlet sobre tests); ningún paso de signo nuevo.
-- Si no son el mismo (la inclusión §3 es estricta, o la clase no se hereda): coexisten dos familias casi nulas de
-  tamaño `≍ e^{2T}` dentro del mismo span `Π_T E(prolatas bajas)`; su diferencia sería la parte de clase/constrainte, que
-  es libre de `Λ` (ROUND_009_B §3: Teor. 1.1–1.2 valen verbatim para todo peso). Tampoco aparece mecanismo de signo.
-- En ambos casos el signo sigue en el acople cúmulo–complemento (021_A §3, P211-17A), no en el cúmulo.
+## 6. What changes
+- If they are the same (low block of 211 = `{Π_T(M∗φ)}` to margin precision): the low block of 211 inherits the description
+  «image of `S_ζ` with Gaussian inputs»; the law `d_{4j+8}` would be the prolate reading of the Gaussian localization of
+  022_A; the count (2.2) of 021_A would be replaced by Landau (CITED) plus the law of 211, and the pending step (2.1) of
+  021_A would become superfluous. All sign attempts of 211 on the low block become attempts on the
+  class closed by R160_D4_R2 Thm. 5.1 (Dirichlet convolution on tests); no new sign step.
+- If they are not the same (the inclusion of §3 is strict, or the class is not inherited): two near-null families of
+  size `≍ e^{2T}` coexist inside the same span `Π_T E(low prolates)`; their difference would be the class/constraint part, which
+  is `Λ`-free (ROUND_009_B §3: Thm. 1.1–1.2 hold verbatim for every weight). No sign mechanism appears either.
+- In both cases the sign remains in the cluster–complement coupling (021_A §3, P211-17A), not in the cluster.
 
-## Veredicto
-- `E = S_ζ ∘ ι`: PROVED (cálculo de una línea). Ambos objetos son imágenes de `S_ζ`; entradas de soporte compacto en
-  `[−λ,λ]` (211) frente a dilataciones gaussianas (212); gauge con imagen nula en `I_T` (PROVED, prop:ext-gauge).
-- `{Π_T(M∗φ)} ⊂ Π_T E(span ψ_k, k ≲ 4N) + O(poly(N)e^{−πe^{2δ}})`: ARGUED (Landau–Pollak CITED; constantes no escritas).
-- La identificación correcta es con el bloque prolato BAJO, no el alto; corrige ROUND_021_A §2(c): ARGUED con base PROVED.
-- Inclusión en el bloque casi nulo de clase `+1` y la inversa: OPEN. `E_T` de 005_C: objeto distinto (PROVED por definición).
-- Cuentas: 212 `≳0.47e^{2T}` (ARGUED), 211 `≈2e^{2T}` (ARGUED/NUMÉRICO). Sin mecanismo de signo en ningún caso.
-- Siguiente operación única si se quiere cerrar (d): calcular numéricamente el ángulo entre `Π_T(M∗φ)` (φ prolatas de
-  `[−(T−δ),T−δ]`) y `Π_T E span{ψ_{4j}}` en `T = 0.8, 1.0`; es identificación, no signo.
+## Verdict
+- `E = S_ζ ∘ ι`: PROVED (one-line computation). Both objects are images of `S_ζ`; compactly supported inputs in
+  `[−λ,λ]` (211) versus Gaussian dilations (212); gauge with zero image on `I_T` (PROVED, prop:ext-gauge).
+- `{Π_T(M∗φ)} ⊂ Π_T E(span ψ_k, k ≲ 4N) + O(poly(N)e^{−πe^{2δ}})`: ARGUED (Landau–Pollak CITED; constants not written).
+- The correct identification is with the LOW prolate block, not the high one; corrects ROUND_021_A §2(c): ARGUED on a PROVED base.
+- Inclusion in the near-null block of class `+1` and the reverse: OPEN. `E_T` of 005_C: distinct object (PROVED by definition).
+- Counts: 212 `≳0.47e^{2T}` (ARGUED), 211 `≈2e^{2T}` (ARGUED/NUMERICAL). No sign mechanism in any case.
+- Single next operation if one wants to close (d): compute numerically the angle between `Π_T(M∗φ)` (φ prolates of
+  `[−(T−δ),T−δ]`) and `Π_T E span{ψ_{4j}}` at `T = 0.8, 1.0`; it is identification, not sign.

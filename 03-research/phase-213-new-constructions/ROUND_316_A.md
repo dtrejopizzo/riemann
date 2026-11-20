@@ -1,24 +1,24 @@
-# Tres dilataciones cancelan el tramo de argumentos hasta una potencia fija
+# Three dilations cancel the range of arguments up to a fixed power
 
-Sea D=x^o(1), D≥2, q=⌊D⌋+1 y w_D la criba de 310. Congelar D,q al evaluar en escalas distintas y formar los pesos firmados
+Let D=x^o(1), D≥2, q=⌊D⌋+1 and w_D the sieve of 310. Freeze D,q when evaluating at different scales and form the signed weights
 
     g(n)=w_D(n)−2q w_D(n/q)+q²w_D(n/q²),
 
-interpretando los argumentos no enteros como peso cero. Con κ=77/285, para todo x suficientemente grande y uniformemente en 0≤t≤2,
+interpreting non-integer arguments as weight zero. With κ=77/285, for all sufficiently large x and uniformly in 0≤t≤2,
 
     B_t(x) + Σ_(D<n≤x^(1−κ)) g(n) B_t(x/n) = O_ε(x^(1/2+ε)).
 
-La muestra principal entra con coeficiente uno. La suma conservada evalúa B_t sólo en argumentos entre x^κ y x/D. Eliminar todos los argumentos menores que x^κ cuesta en total O_ε(x^(1/2+ε)), sin localizar cruces ni escoger el extremo según t. El resultado corresponde a una combinación firmada de las medias de 310; no conserva la positividad de sus pesos.
+The main sample enters with coefficient one. The retained sum evaluates B_t only at arguments between x^κ and x/D. Eliminating all arguments smaller than x^κ costs in total O_ε(x^(1/2+ε)), without locating crossings or choosing the endpoint depending on t. The result corresponds to a signed combination of the averages of 310; it does not preserve the positivity of their weights.
 
-**Techo de la media completa.** El polinomio que modifica la criba es (1−q^(1−s))². El sumatorio ponderado en todas las dilataciones es S_D(x,t)−2q S_D(x/q,t)+q² S_D(x/q²,t). Por 310 en cualquier recta fija σ>1/2 la modificación multiplica el techo por (1+q^(1−σ))²=x^o(1). Resulta el techo de raíz con pérdida arbitraria. Como q>D, g(1)=1 y g(n)=0 en 2≤n≤D.
+**Ceiling of the full average.** The polynomial modifying the sieve is (1−q^(1−s))². The weighted partial sum over all dilations is S_D(x,t)−2q S_D(x/q,t)+q² S_D(x/q²,t). By 310, on any fixed line σ>1/2 the modification multiplies the ceiling by (1+q^(1−σ))²=x^o(1). This gives the square-root ceiling with arbitrary loss. Since q>D, g(1)=1 and g(n)=0 on 2≤n≤D.
 
-**Qué cancela la diferencia.** La serie de g es ζ(s)²k(s) con k=h_D(s)(1−q^(1−s))². Su polinomio finito está soportado hasta D⁴q²=x^o(1), tiene norma absoluta x^o(1) en cada abscisa fija no negativa (por 310 o su expansión por pares) y satisface k(1)=k'(1)=0 exactamente. Poner G(v)=Σ_(n≤v)g(n) y β=131/416. Para v≥D⁴q², convolucionar el asintótico del divisor con k anula por completo v log v y v: los coeficientes son k(1) y (2γ−1)k(1)+k'(1). Por tanto |G(v)|≪_η x^o(1) v^(β+η) para todo η>0. El único insumo externo adicional es la cota publicada para el error en el sumatorio de τ; los factores logarítmicos se absorben en η. [Huxley, Exponential sums and lattice points III](https://doi.org/10.1112/S0024611503014485)
+**What the difference cancels.** The series of g is ζ(s)²k(s) with k=h_D(s)(1−q^(1−s))². Its finite polynomial is supported up to D⁴q²=x^o(1), has absolute norm x^o(1) at each fixed nonnegative abscissa (by 310 or its expansion by pairs) and satisfies k(1)=k'(1)=0 exactly. Put G(v)=Σ_(n≤v)g(n) and β=131/416. For v≥D⁴q², convolving the divisor asymptotic with k completely cancels v log v and v: the coefficients are k(1) and (2γ−1)k(1)+k'(1). Hence |G(v)|≪_η x^o(1) v^(β+η) for all η>0. The only additional external input is the published bound for the error in the partial sum of τ; logarithmic factors are absorbed into η. [Huxley, Exponential sums and lattice points III](https://doi.org/10.1112/S0024611503014485)
 
-**Transferencia a la cola firmada.** Para V=x^κ el intercambio de sumas da exactamente
+**Transfer to the signed tail.** For V=x^κ, interchanging the sums gives exactly
 
     Σ_(x/V<n≤x) g(n)B_t(x/n)
         = Σ_(m≤V)b_t(m)[G(x/m)−G(x/V)].
 
-Todos los argumentos de G superan su umbral de soporte para x grande. Los coeficientes |b_t(m)|≪_η m^η uniformemente, por los factores locales acotados y el soporte libre de cubos. Estimando ambos términos queda O_η(x^(β+O(η)+o(1)) V^(1−β)). Como β+κ(1−β)=1/2, la cola cabe en el presupuesto para cualquier ε>0. La misma prueba con cualquier exponente β<1/2 del problema del divisor permite κ=(1/2−β)/(1−β). La estimación para g se hace después de compensar entre las tres dilataciones: acotar las tres masas en módulo por separado perdería los dos ceros en 1.
+All arguments of G exceed its support threshold for large x. The coefficients satisfy |b_t(m)|≪_η m^η uniformly, by the bounded local factors and the cube-free support. Estimating both terms gives O_η(x^(β+O(η)+o(1)) V^(1−β)). Since β+κ(1−β)=1/2, the tail fits in the budget for every ε>0. The same proof with any exponent β<1/2 for the divisor problem allows κ=(1/2−β)/(1−β). The estimate for g is made after compensating among the three dilations: bounding the three masses in modulus separately would lose the two zeros at 1.
 
-**Lo pendiente.** Por 292, controlar la integral en t∈[1,2] de la parte negativa de la suma intermedia en el enunciado a escala x^(1/2+ε) equivale al signo global, ya que su opuesto difiere de B_t(x) en un error uniforme de ese orden. El recorte de 311 era positivo con un extremo adaptado, y el filtro diádico de 300 actuaba sobre la primera fila. Aquí q>D preserva la brecha inicial mientras elimina el tramo de potencia para todas las frecuencias. Falta pagar el intervalo intermedio.
+**What is pending.** By 292, controlling the integral over t∈[1,2] of the negative part of the intermediate sum in the statement at scale x^(1/2+ε) is equivalent to the global sign, since its opposite differs from B_t(x) by a uniform error of that order. The trimming of 311 was positive with an adapted endpoint, and the dyadic filter of 300 acted on the first row. Here q>D preserves the initial gap while eliminating the power range for all frequencies. The intermediate interval remains to be paid for.

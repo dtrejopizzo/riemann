@@ -1,105 +1,105 @@
-# POWER — Diseño compacto del sistema mixto, ronda107
+# POWER — Compact design of the mixed system, round107
 
-Estado: **DISEÑO AUDITADO; CORRIDA107 INCONCLUSA EN ORIGEN.** Reproducción independiente mapa46719 terminada con el mismo resultado. Este documento conserva los parámetros previos a datos y no afirma el signo compacto.
+Status: **DESIGN AUDITED; RUN107 INCONCLUSIVE AT THE ORIGIN.** Independent reproduction 46719 finished with the same result. This document keeps the parameters fixed before data and does not claim the compact sign.
 
-## 1. Objeto y diferencia respecto del corpus
+## 1. Object and difference relative to the corpus
 
-Se consulta las reglas del proyecto, ROUTES-TRIED-INDEX/README.md, R162_2300_MASTER_GRID y CROSSWORD-TO-D, y las fuentes103–106. El objetivo es W_t(K,J,Phi,J'')>0 para0<t<64. El origen104 es positivo sin radio y la cola104 cubre t>=64; ninguno cierra el intervalo. Este sistema PAR no es el sistema impar particular093/095. Su positividad, junto al CT3 de103, permitiría el argumento de dos operadores de Rolle para la segunda pareja real de102. No es una consecuencia automática de099 ni un resultado sobre la forma completa.
+Consulted the project rules, ROUTES-TRIED-INDEX/README.md, R162_2300_MASTER_GRID and CROSSWORD-TO-D, and the sources103–106. The target is W_t(K,J,Phi,J'')>0 for0<t<64. The origin104 is positive without radius and the tail104 covers t>=64; neither closes the interval. This EVEN system is not the odd particular system093/095. Its positivity, together with CT3 of103, would allow the two-Rolle-operator argument for the second real pair of102. It is not an automatic consequence of099 nor a result on the complete form.
 
-Escribir a=I2/I0, J(t)=integral_t^infinito s Phi(s)ds y K''=a Phi-J, con K par, positivo y decreciente en la semirrecta. Ij=integral_0^infinito t^j Phi(t)dt. Se usan las fórmulas y normalizaciones103, no nuevos datos de momentos.
+Write a=I2/I0, J(t)=integral_t^infinito s Phi(s)ds and K''=a Phi-J, with K even, positive and decreasing on the half-line. Ij=integral_0^infinito t^j Phi(t)dt. The formulas and normalizations of103 are used, not new moment data.
 
-## 2. Presupuesto fijado antes de datos
+## 2. Budget fixed before data
 
-Rama origen: t en[0,1/2], lambda=t^2 en[0,1/4]; precisión1024bits;128 modos; jet t de Phi con cap1025; polinomios lambda de grado512. Partición inicial16 celdas lambda de ancho1/64. Subdivisión interna izquierda primero, profundidad máxima10 y máximo8192 evaluaciones de celdas.
+Origin branch: t in[0,1/2], lambda=t^2 in[0,1/4]; precision1024bits;128 modes; t-jet of Phi with cap1025; lambda polynomials of degree512. Initial partition16 lambda cells of width1/64. Internal left-first subdivision, maximum depth10 and at most8192 cell evaluations.
 
-Rama restante: t en[1/2,64]; precisión512bits; jet temporal cap4 para integrales, cap5 para el logaritmo theta local. Gauss–Legendre64 en cada uno de los diez segmentos v con extremos0,1,2,4,8,16,32,64,128,256,512. Partición inicial508 celdas temporales de ancho1/8. Profundidad máxima10 y máximo8192 evaluaciones de celdas, izquierda primero.
+Remaining branch: t in[1/2,64]; precision512bits; time jet cap4 for integrals, cap5 for the local theta logarithm. Gauss–Legendre64 on each of the ten v segments with endpoints0,1,2,4,8,16,32,64,128,256,512. Initial partition508 time cells of width1/8. Maximum depth10 and at most8192 cell evaluations, left first.
 
-Una celda se acepta sólo si el límite inferior del determinante intervalar es positivo en TODA la celda. Si su límite superior es negativo se informa ese intervalo. Si no se decide y se agota profundidad o presupuesto, resultado INCONCLUSO. No se cambian parámetros según signos observados. Sólo una cobertura completa permite afirmar el signo compacto.
+A cell is accepted only if the lower bound of the interval determinant is positive on the WHOLE cell. If its upper bound is negative that interval is reported. If undecided and depth or budget is exhausted, the result is INCONCLUSIVE. Parameters are not changed according to observed signs. Only a complete coverage allows claiming the compact sign.
 
-## 3. Origen: función holomorfa y colas fijas
+## 3. Origin: holomorphic function and fixed tails
 
-Sea phi(lambda)=Phi(sqrt(lambda)); la paridad de Phi define esta función holomorfa en un entorno de |lambda|<=1/2. En ese disco |t|<3/4, Re(pi exp(2t))>3/80 y |pi exp(2t)|<20. Se usan cos(3/2)>1/16, exp(3/2)<5 y exp(15/8)<9. La suma theta absoluta proporciona
+Let phi(lambda)=Phi(sqrt(lambda)); parity of Phi defines this holomorphic function in a neighbourhood of |lambda|<=1/2. On that disc |t|<3/4, Re(pi exp(2t))>3/80 and |pi exp(2t)|<20. We use cos(3/2)>1/16, exp(3/2)<5 and exp(15/8)<9. The absolute theta sum provides
 
  |phi| <=1548 sum_(m>=1) m^4 exp(-3m^2/80)
        <=1548*24*(83/3)^5 <2^40.
 
-Retener modos1..128. Desde m=129 la razón de los mayorantes es menor que1/2, y la cola es menor que2^-583: 129^4<2^29 y 3*129^2/80>624. La extracción de coeficientes PARES del jet t equivale a simetrizar el parcial; no se supone que un parcial theta sea par. Cauchy en lambda radio1/2 da un error de coeficiente <=2^-583*2^k para k0..512. Se añade antes de productos, recurrencias o determinantes.
+Keep modes1..128. From m=129 the ratio of the majorants is less than1/2, and the tail is less than2^-583: 129^4<2^29 and 3*129^2/80>624. Extracting EVEN coefficients of the t-jet is equivalent to symmetrizing the partial sum; it is not assumed that a theta partial sum is even. Cauchy in lambda radius1/2 gives a coefficient error <=2^-583*2^k for k0..512. It is added before products, recurrences or determinants.
 
-Para el Taylor completo de grado512, sus restos y derivadas de orden0..4 sobre lambda real[0,1/4] son menores que2^-426. Por ejemplo N=513 y sum_(n>=N) n^4 2^-n<3N^4 2^-N, N^4<2^37; se pagan además2^40 y4^4. No se evalúa una división por t^6 ni por lambda en un intervalo que contenga0.
+For the complete Taylor polynomial of degree512, its remainders and derivatives of order0..4 on real lambda[0,1/4] are less than2^-426. For example N=513 and sum_(n>=N) n^4 2^-n<3N^4 2^-N, N^4<2^37; 2^40 and4^4 are also paid. No division by t^6 or by lambda is evaluated on an interval containing0.
 
-## 4. Origen: momentos, recurrencias y matriz
+## 4. Origin: moments, recurrences and matrix
 
-Los datos103 se introducen como cajas racionales exactas outward:
+The data of103 are entered as exact outward rational boxes:
 
  I1=0.02152870762556652324898962 +/-3.96e-27,
  I3=0.00191588830192231322996545 +/-4.90e-27.
 
-Para a se usa exclusivamente un jet PUNTUAL fijo de la función completada E en0 a1024bits, cap3, a=2E[2]/E[0]. E(u)=A[1+(A-1)zeta_deflated(A)] Gamma(A/2) exp(-A log(pi)/2), A=u+1/2. La deflación resta1/(A-1). Se comprueba compatibilidad con el intervalo098 a=0.0462099862308379415778676 +/-3.74e-26; ese intervalo ancho no sustituye al nuevo encierro puntual. Este cálculo es parte del futuro certificado, no se ha ejecutado para107.
+For a, exclusively a fixed POINTWISE jet of the completed function E at0 at1024bits, cap3, is used, a=2E[2]/E[0]. E(u)=A[1+(A-1)zeta_deflated(A)] Gamma(A/2) exp(-A log(pi)/2), A=u+1/2. The deflation subtracts1/(A-1). Compatibility with the interval098 a=0.0462099862308379415778676 +/-3.74e-26 is checked; that wide interval does not replace the new pointwise enclosure. This computation is part of the future certificate; it has not been executed for107.
 
-Si phi_k son los coeficientes lambda, construir
+If phi_k are the lambda coefficients, build
 
  J_0=I1, K_0=a I1-I3/2,
  J_k=-phi_(k-1)/(2k),
  K_k=(a phi_(k-1)-J_(k-1))/(2k(2k-1)), k>=1.
 
-Todos los errores de I1,I3,a y phi_k se propagan por aritmética intervalar antes del determinante. Las constantes a,I1,K0<1 se comprueban como assertions.
+All errors of I1,I3,a and phi_k are propagated by interval arithmetic before the determinant. The constants a,I1,K0<1 are checked as assertions.
 
-Para justificar las colas de estas recurrencias, J_lambda'=-phi/2 y
+To justify the tails of these recurrences, J_lambda'=-phi/2 and
 
  K(lambda)=K0-I1 lambda/2
  +a lambda integral_0^1 (1-s)phi(s^2 lambda)ds
  +(lambda^2/2) integral_0^1 s(1-s)^2 phi(s^2 lambda)ds.
 
-Esto da |J|,|K|<2^42 en |lambda|<=1/2. Con el mismo cálculo de cola anterior, el error de entradas derivadas hasta4 es menor que2^-420. Se añade conservadoramente una bola2^-400 a CADA entrada de la matriz, después de evaluar los polinomios conocidos. No se rellenan coeficientes desconocidos con ceros sin pagar este error.
+This gives |J|,|K|<2^42 on |lambda|<=1/2. With the same tail computation as before, the error of entries differentiated up to4 is less than2^-420. A ball2^-400 is conservatively added to EACH matrix entry, after evaluating the known polynomials. Unknown coefficients are not filled with zeros without paying this error.
 
-La matriz tiene columnas K,J,phi,Q, filas derivadas lambda0..3, donde Q=J''_t=-phi-2lambda phi'. Así Q^(j)=-(2j+1)phi^(j)-2lambda phi^(j+1). Se multiplican coeficientes de jets por factoriales para obtener derivadas. Su determinante es W_lambda; el puente exacto es W_t=64t^6 W_lambda. La matriz se evalúa en la bola de la celda completa.
+The matrix has columns K,J,phi,Q, rows lambda derivatives0..3, where Q=J''_t=-phi-2lambda phi'. Thus Q^(j)=-(2j+1)phi^(j)-2lambda phi^(j+1). Jet coefficients are multiplied by factorials to obtain derivatives. Its determinant is W_lambda; the exact bridge is W_t=64t^6 W_lambda. The matrix is evaluated on the ball of the whole cell.
 
-## 5. Resto: integrales normalizadas directas
+## 5. Remainder: direct normalized integrals
 
-Reutilizar el lema106, incluida su sección8, sin propagar datos mediante ODE. Para t en una celda, y=pi exp(2t), r=Log(1+v/y)/2 y
+Reuse the lemma of106, including its section8, without propagating data through an ODE. For t in a cell, y=pi exp(2t), r=Log(1+v/y)/2 and
 
  Theta16(y)=2y-3+sum_(m=2)^16 m^2(2m^2 y-3)exp(-(m^2-1)y),
  A16=exp(-v)/(2y)*(1+v/y)^(1/4)*Theta16(y+v)/Theta16(y).
 
-Integrar juntos los jets de (t+r)A16 y [a r-(t+r)r^2/2]A16. La rama principal es holomorfa por106. Para las evaluaciones reales, comprobar denominador positivo y1+v/y positivo. No se emplea acb.integral ni se omite una condición de rama.
+Integrate together the jets of (t+r)A16 and [a r-(t+r)r^2/2]A16. The principal branch is holomorphic by106. For the real evaluations, check positive denominator and positive1+v/y. acb.integral is not used and no branch condition is omitted.
 
-En cada celda fijar Yc=pi exp(2c), constante respecto al jet. Las columnas son Yc^2 kappa,Yc tau,1,X/Yc, X=t p-1, p=-Phi'/Phi. El determinante es Yc^2 W_t/Phi^4. La columna constante permite calcular el menor3x3 de filas derivadas1..3 y columnas primera, segunda y cuarta, con signo positivo. p se obtiene de Theta16 local con cap5, no derivando datos iniciales de una ODE.
+In each cell fix Yc=pi exp(2c), constant with respect to the jet. The columns are Yc^2 kappa,Yc tau,1,X/Yc, X=t p-1, p=-Phi'/Phi. The determinant is Yc^2 W_t/Phi^4. The constant column allows computing the3x3 minor of derivative rows1..3 and first, second and fourth columns, with positive sign. p is obtained from the local Theta16 with cap5, not by differentiating initial data of an ODE.
 
-## 6. Errores Gauss, modos y dominio
+## 6. Gauss, mode and domain errors
 
-La prueba106 sección8 da, para el coeficiente temporal j, error Gauss <=2^(-83+5j), j0..3. La API arb.legendre_p_root(64,k,weight=True) proporciona nodos y pesos encerrados; su redondeo se propaga además por aritmética intervalar. Verificar positividad de pesos y que su suma encierra2 antes de transformar cada segmento.
+The proof of106 section8 gives, for the time coefficient j, Gauss error <=2^(-83+5j), j0..3. The API arb.legendre_p_root(64,k,weight=True) provides enclosed nodes and weights; their rounding is additionally propagated by interval arithmetic. Check positivity of weights and that their sum encloses2 before transforming each segment.
 
-El semiancho temporal inicial1/16 es admisible: la unión de discos de radio1/32 alrededor de sus puntos satisface |z-c|<=3/32, Re z>=1/2-3/32>-1/16, |Im z|<=1/32 y |z|<65. Además Yc/Y<exp(3/16)<2 y Yc^2/Y^2<exp(3/8)<2. Por ello siguen válidos los mayorantes4096 exp(-Re v)(1+|v|)^5 y2^34 de106. Las celdas subdivididas sólo reducen estos dominios.
+The initial time half-width1/16 is admissible: the union of discs of radius1/32 around its points satisfies |z-c|<=3/32, Re z>=1/2-3/32>-1/16, |Im z|<=1/32 and |z|<65. Moreover Yc/Y<exp(3/16)<2 and Yc^2/Y^2<exp(3/8)<2. Hence the majorants4096 exp(-Re v)(1+|v|)^5 and2^34 of106 remain valid. Subdivided cells only shrink these domains.
 
-Añadir antes del determinante errores coeficientes2^-81*32^j a ambas columnas integradas, incluyendo Gauss, cola v>512 y modos>16 según106. Para X/Yc usar el error local106 <=2^-687*32^j. Los errores son para coeficientes normalizados; pagar factoriales al convertir a derivadas. No se usa |y+v|>=Y+v, que sería falso para y complejo.
+Before the determinant, add coefficient errors2^-81*32^j to both integrated columns, including Gauss, tail v>512 and modes>16 according to106. For X/Yc use the local error of106 <=2^-687*32^j. The errors are for normalized coefficients; factorials are paid when converting to derivatives. |y+v|>=Y+v is not used, as it would be false for complex y.
 
-## 7. Implementación prevista y coste
+## 7. Planned implementation and cost
 
-Por celda se pueden precomputar los15 jets exp(-(m^2-1)y) y reutilizar los factores escalares exp(-(m^2-1)v) en los640 nodos. Esto es una identidad exacta que reduce el coste, no cambia regla ni precisión. El máximo resto es8192*640=5242880 evaluaciones vectoriales cap4; puede requerir horas. El diseño no garantiza terminación con signo y no se ejecutará antes de la revisión independiente del literal.
+Per cell, the15 jets exp(-(m^2-1)y) can be precomputed and the scalar factors exp(-(m^2-1)v) reused at the640 nodes. This is an exact identity that reduces cost, it does not change the rule or the precision. The maximum remainder is8192*640=5242880 vector evaluations cap4; it may take hours. The design does not guarantee termination with a sign and will not be executed before the independent review of the literal.
 
-## 8. Pendientes exactos y alcance
+## 8. Exact pending items and scope
 
-Pendiente: auditoría del presente diseño; implementación literal de theta/jet origen y regla Gauss con errores explícitos; revisión independiente del código; ejecución única; reproducción y archivo íntegro de salida/hash si procede. El presupuesto del origen aquí usa la cota robusta2^40, no las cotas más finas discutidas informalmente. Debe revisarse literalmente que la cola de entradas2^-400 cubre la combinación Q, las recurrencias y todos los factoriales; las cajas de momentos se propagan sin absorberse en esa cola.
+Pending: audit of the present design; literal implementation of origin theta/jet and Gauss rule with explicit errors; independent code review; single execution; reproduction and complete archive of output/hash if applicable. The origin budget here uses the robust bound2^40, not the finer bounds discussed informally. It must be checked literally that the entry tail2^-400 covers the combination Q, the recurrences and all factorials; the moment boxes are propagated without being absorbed into that tail.
 
-SIGNO GLOBAL ABIERTO. Una salida INCONCLUSA no refuta el signo. Ninguna parte de este diseño añade cobertura de W, de ventanas T ni de todos los órdenes. La transferencia a la siguiente pareja sólo se invocará después de demostrar el sistema mixto completo.
+GLOBAL SIGN OPEN. An INCONCLUSIVE output does not refute the sign. No part of this design adds coverage of W, of windows T or of all orders. Transfer to the next pair will be invoked only after proving the complete mixed system.
 
 
-## 9. Auditoría y salida real de107
+## 9. Audit and actual output of107
 
-Mapa aprobó el diseño completo. El pago de entradas del origen se justifica explícitamente: para J,K, la cota2^42 y el Taylor512 dan, hasta derivada4,
+The complete design was approved. The payment of origin entries is justified explicitly: for J,K, the bound2^42 and the Taylor512 give, up to derivative4,
 
  2^42 * 4^4 * 3 * 513^4 * 2^-513 <2^-424.
 
-Para Phi se tiene2^-426; la combinación Q y sus derivadas hasta3 cuestan menos que8 veces ese error, por tanto menos que2^-423. El pago2^-400 por entrada es holgado. Los errores de modos, momentos y a siguen propagándose antes de los productos; no se consideran correlacionados gratuitamente.
+For Phi one has2^-426; the combination Q and its derivatives up to3 cost less than8 times that error, hence less than2^-423. The payment2^-400 per entry is generous. The errors of modes, moments and a are still propagated before the products; they are not treated as correlated for free.
 
-El root ejecutó el literal aprobado: sesión5594, exit2, INCONCLUSIVE en lambda=[0,1/65536], profundidad10,11 evaluaciones,0 celdas aceptadas. La bola del determinante tenía radio aproximado0.00294; esa aproximación sólo describe la salida, no certifica un signo. No se ejecutó la rama restante. No se cambiaron parámetros. La reproducción independiente mapa46719 terminó exit2 con exactamente el mismo resultado; véase sección10.
+The approved literal was executed: session5594, exit2, INCONCLUSIVE at lambda=[0,1/65536], depth10,11 evaluations,0 accepted cells. The determinant ball had approximate radius0.00294; that approximation only describes the output, it does not certify a sign. The remaining branch was not executed. No parameters were changed. The independent reproduction46719 ended exit2 with exactly the same result; see section10.
 
-El fallo es de encierro, no una refutación. Una representación posterior podría formar primero el determinante como polinomio en la MISMA variable lambda y evaluarlo después. Eso requiere pagar explícitamente colas y errores de coeficientes; no se ha probado ni ejecutado todavía aquí.
+The failure is one of enclosure, not a refutation. A later representation could first form the determinant as a polynomial in the SAME variable lambda and evaluate it afterwards. That requires explicitly paying tails and coefficient errors; it has not yet been proved or executed here.
 
-## 10. Reproducción independiente y alcance final
+## 10. Independent reproduction and final scope
 
-Root constructor5594 terminó exit2: INCONCLUSIVE por profundidad máxima del origen. Reproducción independiente mapa46719 terminó igualmente exit2. Ambas corridas hicieron11 evaluaciones,0 hojas aceptadas y alcanzaron profundidad10 en lambda[0,1/65536], con determinante impreso[+/−2.94e−3]. Este ball no separa0: no es prueba de signo negativo ni de fallo de la hipótesis. REST NO se ejecutó, según el main auditado.
+Run5594 ended exit2: INCONCLUSIVE by maximum depth at the origin. The independent reproduction46719 likewise ended exit2. Both runs made11 evaluations,0 accepted leaves and reached depth10 at lambda[0,1/65536], with printed determinant[+/−2.94e−3]. This ball does not separate0: it is neither a proof of negative sign nor of failure of the hypothesis. REST was NOT executed, according to the audited main.
 
-Logs completos:`tools/power_mixed_four_compact_107_root.log` y `tools/power_mixed_four_compact_107_audit.log`. Hash main:`2a7d147caf8181adb5aa29eb6fcbe356f625e2743ad6765e6ac543aacad23054`; hash origen:`15d6f12c197ef52c062a12c59ee4a7c5db94c74e0073e8463a7ce03dd613e553`. Coincidieron en ambas corridas y tras la reproducción. No se editaron scripts ni parámetros para lograr otro resultado.
+Complete logs:`tools/power_mixed_four_compact_107_root.log` and `tools/power_mixed_four_compact_107_audit.log`. Main hash:`2a7d147caf8181adb5aa29eb6fcbe356f625e2743ad6765e6ac543aacad23054`; origin hash:`15d6f12c197ef52c062a12c59ee4a7c5db94c74e0073e8463a7ce03dd613e553`. They coincided in both runs and after the reproduction. Scripts and parameters were not edited to obtain a different result.
 
-Sólo se registra insuficiencia del encierro intervalar con ESTE presupuesto; no hay obstrucción matemática, Chebyshev4 decidido, cruce U finito, W negativo ni nueva cobertura. Otro objeto o representación deberá diseñarse y auditarse antes de cualquier nueva ejecución. Los signos locales104 y todas las pruebas analíticas previas permanecen vigentes.
+Only insufficiency of the interval enclosure with THIS budget is recorded; there is no mathematical obstruction, decided Chebyshev4, finite U crossing, negative W nor new coverage. Another object or representation must be designed and audited before any new execution. The local signs of104 and all previous analytic proofs remain in force.

@@ -1,60 +1,60 @@
-# POWER — Cociente theta factorizado, diseño110
+# POWER — Factored theta quotient, design110
 
-## Actualización verificada: reproducción terminada y WM activada
+## Verified update: reproduction finished and WM activated
 
-Los logs constructor y reproducción independiente de110 son idénticos byte por byte, SHA256 `90a2ec137e806c8a7f8cce975f7af1cee375d9e48bdaf1c5bc302f7c06428539`. Driver: `c629d4ed4b5eeb625a69ee92f6000892b9493c50e825e9ade73bf3a5a9362108`; los cuatro módulos importados conservan los hashes auditados. Root comprobó por fracciones exactas el origen completo (16 hojas en lambda[0,1/4]) y 4198 hojas REST contiguas desde1/2 hasta845/32 en AMBOS logs. Ambos programas terminaron INCONCLUSIVE por8192 evaluaciones; no se cambia esa etiqueta ni se afirma FULLPASS hasta64.
+The run log and the independent reproduction log of110 are byte-for-byte identical, SHA256 `90a2ec137e806c8a7f8cce975f7af1cee375d9e48bdaf1c5bc302f7c06428539`. Driver: `c629d4ed4b5eeb625a69ee92f6000892b9493c50e825e9ade73bf3a5a9362108`; the four imported modules keep the audited hashes. Exact fractions confirmed the complete origin (16 leaves in lambda[0,1/4]) and 4198 contiguous REST leaves from1/2 to845/32 in BOTH logs. Both programs ended INCONCLUSIVE after8192 evaluations; that label is not changed and no FULLPASS up to64 is claimed.
 
-La cola analítica104, auditada por root/casos/mapa, prueba Wmixed/Phi^4>6t^2/y^2 para todo t>=16. Por tanto la cobertura reproducida y esa cola se solapan y prueban WM para TODO t>0. Los tres prefijos103 completan MIXED4. Queda activada la aplicación real de las implicaciones auditadas112: segunda densidad Xi positiva para todos p,q>0, E/Psi decreciente, TP2 y confluencia estrictas. Root revisó también el literal§8 y las dos fuerzas verificadas independientemente por casos: se activan las comparaciones de la pareja límite estrella. No se afirma Xi_(p,q)/E_(p,q) decreciente para parámetros finitos, cinco potencias arbitrarias, todos los órdenes ni una ventana nueva.
+The analytic tail104, audited independently, proves Wmixed/Phi^4>6t^2/y^2 for all t>=16. Hence the reproduced coverage and that tail overlap and prove WM for ALL t>0. The three prefixes103 complete MIXED4. The real application of the audited implications112 is activated: second density Xi positive for all p,q>0, E/Psi decreasing, strict TP2 and confluence. The literal§8 and the two strengths verified independently by cases were also reviewed: the comparisons of the limiting star pair are activated. It is not claimed that Xi_(p,q)/E_(p,q) is decreasing for finite parameters, five arbitrary powers, all orders, nor a new window.
 
-Las menciones posteriores a réplica pendiente o aplicación condicional describen el estado anterior a esta actualización y quedan superadas exclusivamente por esta evidencia. El signo global permanece OPEN. Véase `POWER_REASSESSMENT.md` para el cambio de estrategia.
+Later mentions of a pending replica or conditional application describe the status before this update and are superseded exclusively by this evidence. The global sign remains OPEN. See `POWER_REASSESSMENT.md` for the change of strategy.
 
 
-Estado: DISEÑO Y LITERAL AUDITADOS; constructor root52878 terminó exit2/INCONCLUSO; reproducción mapa12244 en curso, sin cierre independiente todavía.109 terminó exit2 sinFULLPASS, por lo que la condición previa se cumple. No se garantiza PASS.
+Status: DESIGN AND LITERAL AUDITED; run52878 ended exit2/INCONCLUSIVE; reproduction12244 in progress, without independent closure yet.109 ended exit2 without FULLPASS, so the precondition is met. PASS is not guaranteed.
 
-## 1. Diferencia precisa
+## 1. Precise difference
 
-Se mantiene la consulta las reglas del proyecto y los tres índices del objeto mixto104–109. La rama restante107 evalúa el cociente Theta16(y+v)/Theta16(y) con numerador y denominador separados.110 usa una identidad exacta para conservar la dependencia del primer modo común. No cambia la función integrada, las hipótesis, el objetivo ni el presupuesto; no es una nueva prueba de signo ni una modificación de109 durante su corrida.
+The consultation of the project rules and the three indices for the mixed object104–109 is kept. The remaining branch of107 evaluates the quotient Theta16(y+v)/Theta16(y) with separate numerator and denominator.110 uses an exact identity to preserve the dependence on the common first mode. It does not change the integrated function, the hypotheses, the target or the budget; it is neither a new sign proof nor a modification of109 during its run.
 
-## 2. Identidad exacta y factores
+## 2. Exact identity and factors
 
-Definir d=2y-3 y, para m=2..16, a_m=m^2-1,
+Define d=2y-3 and, for m=2..16, a_m=m^2-1,
 
  B_m(y)=m^4+3m^2 a_m/d,
  R16(y)=sum B_m(y)exp(-a_m y).
 
-Entonces Theta16(y)=d(1+R16(y)). El factor m^4 es esencial: (2m^2 y-3)/(2y-3)=m^2+3(m^2-1)/(2y-3), y existe además el factor exterior m^2. Por ello
+Then Theta16(y)=d(1+R16(y)). The factor m^4 is essential: (2m^2 y-3)/(2y-3)=m^2+3(m^2-1)/(2y-3), and there is in addition the outer factor m^2. Hence
 
  Theta16(y+v)/Theta16(y)
  =(1+2v/d)*(1+R16(y+v))/(1+R16(y)).
 
-Se usa esta identidad DENTRO del mismo integrando A16 de106/107. No se supone que los errores de las dos correcciones estén correlacionados: sus bolas se propagan normalmente. La conservación es algebraica en el factor principal explícito1+2v/d.
+This identity is used INSIDE the same integrand A16 of106/107. It is not assumed that the errors of the two corrections are correlated: their balls are propagated normally. The preservation is algebraic in the explicit main factor1+2v/d.
 
-La derivada temporal total, con y'=2y, es
+The total time derivative, with y'=2y, is
 
  R_t(y)=-sum exp(-a_m y)[2y a_m B_m(y)+12y m^2 a_m/d^2].
 
-Así la misma columna local p16 puede evaluarse como
+Thus the same local column p16 can be evaluated as
 
  p16=2y-9/2-6/d-R_t/(1+R16).
 
-No confundir R_t con R_y. Los jets de p16 se obtienen con la misma precisión/cap y coeficientes conocidos de107. La fórmula no diferencia un equivalente asintótico ni descarta modos.
+Do not confuse R_t with R_y. The jets of p16 are obtained with the same precision/cap and known coefficients of107. The formula does not differentiate an asymptotic equivalent nor discard modes.
 
-## 3. Presupuesto, dominio y errores conservados
+## 3. Budget, domain and errors kept
 
-El origen Cauchyclip109 queda INTACTO. En el resto se conservan precision512,cap4 de integrales/cap5 local,16 modos, Gauss64 en los mismos10 segmentos v hasta512, partición inicial508 celdas temporales de ancho1/8, profundidad10 y máximo8192 evaluaciones. Se conserva orden de recorrido y criterio de signo/inconcluso. Los nodos y pesos encerrados, ramas log/potencia y comprobaciones de denominadores se mantienen.
+The Cauchy-clip origin109 stays INTACT. In the remainder, precision512,cap4 for integrals/cap5 local,16 modes, Gauss64 on the same10 v segments up to512, initial partition508 time cells of width1/8, depth10 and at most8192 evaluations are kept. The traversal order and the sign/inconclusive criterion are kept. Enclosed nodes and weights, log/power branches and denominator checks are maintained.
 
-Los errores analíticos106 se aplican sin cambio porque las funciones son idénticas: Gauss2^(-83+5j), pago total de columnas2^-81*32^j y error X/Yc2^-687*32^j para j0..3, además del redondeo intervalar. No se acortan colas ni se eligen parámetros según la salida109. La factorización no extiende el dominio de holomorfía: d y1+R16 son no nulos en los dominios ya probados106. Se pueden reutilizar exp(-a_m y) y exp(-a_m v) para la corrección desplazada.
+The analytic errors of106 apply unchanged because the functions are identical: Gauss2^(-83+5j), total column payment2^-81*32^j and X/Yc error2^-687*32^j for j0..3, besides interval rounding. Tails are not shortened and parameters are not chosen according to the output of109. The factorization does not extend the domain of holomorphy: d and1+R16 are nonzero on the domains already proved in106. exp(-a_m y) and exp(-a_m v) can be reused for the shifted correction.
 
-## 4. Condición de ejecución y alcance
+## 4. Execution condition and scope
 
-Esperar la salida final109 sin intervenir en su proceso. Si es FULLPASS,110 no se ejecuta. Si no lo es, la nueva representación requiere primero auditoría del presente diseño y literal; sólo después podrá autorizarse una corrida. Un fallo de encierro posterior sigue siendo INCONCLUSIVE, no negativo matemático. Este diseño no añade cobertura W ni afirma que la factorización baste para terminar dentro del presupuesto.
+Wait for the final output of109 without intervening in its process. If it is FULLPASS,110 is not executed. If not, the new representation first requires audit of the present design and literal; only afterwards may a run be authorized. A later enclosure failure remains INCONCLUSIVE, not a mathematical negative. This design adds no W coverage and does not claim that the factorization suffices to finish within budget.
 
-## 5. Estado posterior a revisión, sin anticipar resultado
+## 5. Status after review, without anticipating the result
 
-109terminóexit2porpresupuestoREST, noFULLPASS. Rootymapaaprobaronindependientementediseñoyliteral110antesdatos;rootautorizólaprimeracorridacoordinada. El auditornoejecutóreplicanianticipaPASS. Códigos107/108/109/110sinmodificacionesdurantelacorrida. Elresultadofinalyhashdeldriverseconsignaránsólotraslasalida real.
+109 ended exit2 because of the REST budget, not FULLPASS. Design and literal110 were approved independently before data; the first coordinated run was authorized. No replica was executed at that point and no PASS is anticipated. Codes107/108/109/110 unmodified during the run. The final result and driver hash will be recorded only after the actual output.
 
-## 6. Resultado terminal del constructor y reproducción en curso
+## 6. Terminal result of the run and reproduction in progress
 
-Root52878 terminó exit2/INCONCLUSIVE por presupuesto8192evaluacionesREST,4198hojasaceptadas. OrigenPASS16/16. AuditoríalogexactaFraction: las4198hojassoncontiguasREST[1/2,845/32],longitud829/32. La siguientecelda pendiente[845/32,3381/128],depth4,noquedóaceptada antesdelcap. NOFULLPASSdelprogramaconobjetivohasta64. Log:`tools/power_mixed_four_factored_110_root.log`,driverhashc629d4ed4b5eeb625a69ee92f6000892b9493c50e825e9ade73bf3a5a9362108.
+Run52878 ended exit2/INCONCLUSIVE because of the budget of8192 REST evaluations,4198 accepted leaves. Origin PASS16/16. Exact Fraction log audit: the4198 leaves are contiguous REST[1/2,845/32], length829/32. The next pending cell[845/32,3381/128],depth4, was not accepted before the cap. NO FULLPASS of the program with target up to64. Log:`tools/power_mixed_four_factored_110_root.log`, driver hash c629d4ed4b5eeb625a69ee92f6000892b9493c50e825e9ade73bf3a5a9362108.
 
-La reproducciónindependiente mapa12244 sigue conelMISMOprograma,objetivo64ypresupuesto8192,sinparadaen16niotroajuste. El constructor cubre16,y104pruebacola16,pero la aplicaciónWMglobal112sigueCONDICIONALhasta confirmar lacoberturaindependiente16. No seconfunde ese posibleensamblaje conFULLPASSdelprograma,ni se anticipaelresultadofinaldelaréplica.
+The independent reproduction12244 continues with the SAME program, target64 and budget8192, without stopping at16 nor other adjustment. The run covers16, and104 proves the tail from16, but the global WM application112 remains CONDITIONAL until independent coverage to16 is confirmed. That possible assembly is not confused with FULLPASS of the program, and the final result of the replica is not anticipated.

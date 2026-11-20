@@ -1,43 +1,43 @@
-# POWER_FIXED_GRID_003 — Escalera fija, eliminación completa y seis casos certificados
+# POWER_FIXED_GRID_003 — Fixed ladder, complete elimination and six certified cases
 
-Estado: PROVED (identidad de eliminación, órdenes 1–6 y falsificador algebraico). OPEN (control uniforme de todos los órdenes). Papers intactos.
+Status: PROVED (elimination identity, orders 1–6 and algebraic falsifier). OPEN (uniform control of all orders). Papers untouched.
 
-## 1. Antecedentes y razón nueva
+## 1. Antecedents and new reason
 
-Consultados ROUTES-TRIED-INDEX/README.md:393,655 y entradas de rondas 001–002; NODE_001:195; grid part3:12, part5:7 y MASTER_GRID, entradas recientes; CROSSWORD-TO-D, entradas recientes; POWER_BRIDGE_002, POWER_CONE_001 y POWER_THREE_002. La eliminación Schur/Pick es conocida, no se vende como objeto nuevo. La diferencia frente al rango alto de ronda 002 es la escalera FIJA a_j=32+j, que posee el puente denso probado en revisión independiente. Se calcula una transformación exacta del dato completo (no separado en Gamma, prime, polar) y se certifican sus seis primeros pasos por aritmética racional con restos explícitos.
+Consulted ROUTES-TRIED-INDEX/README.md:393,655 and entries of rounds 001–002; NODE_001:195; grid part3:12, part5:7 and MASTER_GRID, recent entries; CROSSWORD-TO-D, recent entries; POWER_BRIDGE_002, POWER_CONE_001 and POWER_THREE_002. Schur/Pick elimination is known, it is not sold as a new object. The difference with respect to the high range of round 002 is the FIXED ladder a_j=32+j, which has the dense bridge proved in independent review. An exact transformation of the complete datum (not separated into Gamma, prime, polar) is computed and its first six steps are certified by rational arithmetic with explicit remainders.
 
-## 2. Eliminación exacta que conserva todas las cancelaciones
+## 2. Exact elimination keeping all cancellations
 
-Sea s_j=63/2+j, L_j=L(32+j), K_ij=(L_i+L_j)/(s_i+s_j). Ponga
+Let s_j=63/2+j, L_j=L(32+j), K_ij=(L_i+L_j)/(s_i+s_j). Put
 
     x_j=j/(63+j), q_j=(L_j-L_0)/(L_j+L_0).
 
-Entonces K es congruente por una diagonal estrictamente positiva con
+Then K is congruent by a strictly positive diagonal to
 
     B_ij=(1-q_i q_j)/(1-x_i x_j).
 
-En efecto K_ij=w_i w_j B_ij, donde
+Indeed K_ij=w_i w_j B_ij, where
 
     w_i=(L_i+L_0)(1-x_i)/(2 sqrt(L_0 s_0)).
 
-No se elimina por separado ninguna componente del dato: L incluye las tres piezas y sus cancelaciones exactas. La identidad polar cruzada de POWER_THREE_002 §1 sigue aplicada.
+No component of the datum is eliminated separately: L includes the three pieces and their exact cancellations. The crossed polar identity of POWER_THREE_002 §1 remains applied.
 
-Para r=0,1,..., defina alpha_r=q_r^(r), con q_j^(0)=q_j. Si |alpha_r|<1 y los denominadores 1-alpha_r q_j^(r) son no nulos,
+For r=0,1,..., define alpha_r=q_r^(r), with q_j^(0)=q_j. If |alpha_r|<1 and the denominators 1-alpha_r q_j^(r) are non-zero,
 
     q_j^(r+1) = [(q_j^(r)-alpha_r)/(1-alpha_r q_j^(r))]
                  /[(x_j-x_r)/(1-x_j x_r)],  j>r.             (E)
 
-Cada paso de eliminación, cuando está definido, es una congruencia diagonal real invertible de la matriz restante con (1-q_i^(r+1)q_j^(r+1))/(1-x_i x_j). Prueba: aplicar las transformaciones fraccionarias Q=(q-alpha)/(1-alpha q), X=(x-x_r)/(1-x_r x); ambas mandan el pivote a cero. El nuevo núcleo es congruente al anterior; al restar la fila/columna del pivote 1, su complemento es
+Each elimination step, when defined, is an invertible real diagonal congruence of the remaining matrix with (1-q_i^(r+1)q_j^(r+1))/(1-x_i x_j). Proof: apply the fractional transformations Q=(q-alpha)/(1-alpha q), X=(x-x_r)/(1-x_r x); both send the pivot to zero. The new kernel is congruent to the previous one; on subtracting the row/column of the pivot 1, its complement is
 
     X_i X_j [1-(Q_i/X_i)(Q_j/X_j)]/(1-X_i X_j).
 
-La transformación del denominador a los x originales sólo introduce factores diagonales positivos. Los factores procedentes de 1-alpha_r q_j^(r) pueden tener signo arbitrario fuera del régimen positivo; basta que sean no nulos para conservar inercia por congruencia. Si la matriz es positiva definida, sus diagonales implican |q_j^(r)|<1, de modo que esos factores son positivos y no nulos automáticamente. Como x_j>x_r para j>r, dividir por X_i no altera la inercia. Por inducción la matriz de orden n es positiva definida exactamente cuando los primeros n parámetros están definidos y |alpha_r|<1. Esta es una identidad algebraica finita, sin hipótesis de extensión analítica.
+The transformation of the denominator to the original x only introduces positive diagonal factors. The factors coming from 1-alpha_r q_j^(r) may have arbitrary sign outside the positive regime; it suffices that they be non-zero to keep inertia by congruence. If the matrix is positive definite, its diagonals imply |q_j^(r)|<1, so those factors are automatically positive and non-zero. Since x_j>x_r for j>r, dividing by X_i does not alter the inertia. By induction the matrix of order n is positive definite exactly when the first n parameters are defined and |alpha_r|<1. This is a finite algebraic identity, without analytic extension hypotheses.
 
-## 3. Caso A=32 y órdenes hasta seis, certificados exactamente
+## 3. Case A=32 and orders up to six, certified exactly
 
-El archivo `tools/power_fixed_grid_003.py` usa únicamente enteros y `fractions.Fraction` para la prueba. No llama a funciones especiales numéricas ni a aritmética flotante para certificar. Los seis parámetros satisfacen los siguientes intervalos, con extremos racionales de denominador 10^20:
+The file `tools/power_fixed_grid_003.py` uses only integers and `fractions.Fraction` for the proof. It calls no numerical special functions nor floating-point arithmetic to certify. The six parameters satisfy the following intervals, with rational endpoints of denominator 10^20:
 
-| r | numerador inferior | numerador superior |
+| r | lower numerator | upper numerator |
 |---|---:|---:|
 |0|0|0|
 |1|51259972990094569363|51259972990094569364|
@@ -46,9 +46,9 @@ El archivo `tools/power_fixed_grid_003.py` usa únicamente enteros y `fractions.
 |4|-25282748230749984903|-25282748230749984902|
 |5|29837716612495345653|29837716612495345654|
 
-Todos están estrictamente en (-1,1). Independientemente, la eliminación LDL intervalar da estos pivotes, con extremos de denominador 10^30:
+All are strictly in (-1,1). Independently, interval LDL elimination gives these pivots, with endpoints of denominator 10^30:
 
-| r | numerador inferior | numerador superior |
+| r | lower numerator | upper numerator |
 |---|---:|---:|
 |0|27353961447421353405359957407|27353961447421353405359957408|
 |1|4849334253718313144169652|4849334253718313144169653|
@@ -57,37 +57,37 @@ Todos están estrictamente en (-1,1). Independientemente, la eliminación LDL in
 |4|18108703084109592|18108703084109593|
 |5|70566563152624|70566563152625|
 
-En particular queda probado P3 para A=32,h=1; el tercer pivote es mayor que 3.982421698e-9. También queda probado signo para toda mezcla real de las seis potencias X^-32,...,X^-37. No es una afirmación meramente numérica: cada intervalo es racional y deriva de series con resto.
+In particular P3 is proved for A=32,h=1; the third pivot is greater than 3.982421698e-9. The sign is also proved for every real mixture of the six powers X^-32,...,X^-37. It is not a merely numerical statement: each interval is rational and derives from series with remainder.
 
-### Fuentes de los intervalos
+### Sources of the intervals
 
-* log x: reducir x a [1,2] mediante potencias de dos; usar 120 términos de 2 atanh((x-1)/(x+1)); resto <=2t^241/[241(1-t²)].
-* pi: fórmula de Machin 16atan(1/5)-4atan(1/239), 100 términos alternados, error del siguiente término.
-* gamma: H_1000-log1000-1/2000+Σ_{k=1}^{12}B_{2k}/(2k1000^{2k}); error en valor absoluto <=|B_26|/(26*1000^26), por el resto de Euler–Maclaurin para la función digamma. Se usa B_26=8553103/6.
-* psi entero/semientero: psi(m)=H_{m-1}-gamma, psi(m+1/2)=-gamma-2log2+2Σ_{k=1}^m1/(2k-1).
-* zeta y zeta': sumar n<=50 y acotar colas por las integrales de x^-a y (log x)x^-a; son decrecientes en ese rango. Así la certificación no necesita tablas de primos ni Λ.
-* Cada operación redondea los extremos hacia afuera a múltiplos de 10^-60. El programa imprime únicamente intervalos racionales como certificado final.
+* log x: reduce x to [1,2] via powers of two; use 120 terms of 2 atanh((x-1)/(x+1)); remainder <=2t^241/[241(1-t²)].
+* pi: Machin's formula 16atan(1/5)-4atan(1/239), 100 alternating terms, error of the next term.
+* gamma: H_1000-log1000-1/2000+Σ_{k=1}^{12}B_{2k}/(2k1000^{2k}); error in absolute value <=|B_26|/(26*1000^26), by the Euler–Maclaurin remainder for the digamma function. B_26=8553103/6 is used.
+* integer/half-integer psi: psi(m)=H_{m-1}-gamma, psi(m+1/2)=-gamma-2log2+2Σ_{k=1}^m1/(2k-1).
+* zeta and zeta': sum n<=50 and bound the tails by the integrals of x^-a and (log x)x^-a; they are decreasing in that range. Thus the certification needs no prime tables nor Λ.
+* Each operation rounds the endpoints outward to multiples of 10^-60. The program prints only rational intervals as final certificate.
 
-Comando reproducible: `python3 03-research/phase-211-sign-sandbox/tools/power_fixed_grid_003.py`.
+Reproducible command: `python3 03-research/phase-211-sign-sandbox/tools/power_fixed_grid_003.py`.
 
-## 4. Falsificador: todos los pares y la monotonía NO bastan para tres
+## 4. Falsifier: all pairs and monotonicity do NOT suffice for three
 
-No se puede extrapolar POWER_CONE_001 mediante el lema «L creciente y L(s)/s decreciente implican signo a todo orden». Considere los tres sitios y valores racionales
+POWER_CONE_001 cannot be extrapolated via the lemma «L increasing and L(s)/s decreasing imply sign at every order». Consider the three sites and rational values
 
     s=(1,5/3,3), L=(1,3/2,121/79).
 
-L aumenta estrictamente y L/s disminuye estrictamente; por tanto cada par pasa exactamente el criterio de POWER_CONE_001. La matriz completa es
+L increases strictly and L/s decreases strictly; hence each pair passes exactly the criterion of POWER_CONE_001. The complete matrix is
 
     [1,       15/16,      50/79;
      15/16,   9/10,       1437/2212;
      50/79,   1437/2212,  121/237].
 
-Sus tres menores principales de orden dos son 27/1280, 2059/18723 y 916539/24464720, todos positivos. Sin embargo
+Its three principal minors of order two are 27/1280, 2059/18723 and 916539/24464720, all positive. However
 
     det K=-332001/391435520<0.
 
-En coordenadas de eliminación, x=(0,1/4,1/2), q=(0,1/5,21/100), alpha_1=4/5 pero alpha_2=-665/332, fuera del intervalo permitido. Es un falsificador algebraico al paso de pares a triples, NO al dato L del paper.
+In elimination coordinates, x=(0,1/4,1/2), q=(0,1/5,21/100), alpha_1=4/5 but alpha_2=-665/332, outside the allowed interval. It is an algebraic falsifier of the step from pairs to triples, NOT of the datum L of the paper.
 
-## 5. Residuo exacto y criterio de avance
+## 5. Exact residue and progress criterion
 
-El nuevo objetivo concreto es controlar (E) para los valores reales L(32+j), demostrando |alpha_r|<=1 para todo r. Las seis verificaciones no prueban una ley de alternancia ni una cota uniforme 0.6; sólo muestran los seis pasos declarados. La recurrencia conserva todo el dato aritmético, pero todavía no se ha obtenido un resto de signo que se preserve al aplicarla. Toda afirmación uniforme requiere esa pieza nueva. La hipótesis de dos puntos por sí sola está explícitamente falsificada por §4.
+The new concrete objective is to control (E) for the real values L(32+j), proving |alpha_r|<=1 for all r. The six verifications do not prove an alternation law nor a uniform bound 0.6; they only show the six declared steps. The recurrence keeps all the arithmetic datum, but a sign remainder that is preserved when applying it has not yet been obtained. Every uniform statement requires that new piece. The two-point hypothesis alone is explicitly falsified by §4.

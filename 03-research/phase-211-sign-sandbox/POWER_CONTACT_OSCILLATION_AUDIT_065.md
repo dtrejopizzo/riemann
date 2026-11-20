@@ -1,35 +1,35 @@
 # POWER_CONTACT_OSCILLATION_AUDIT_065
 
-Estado: **APROBADO** POWER_CONTACT_OSCILLATION_065 tras lectura completa. Prueba analítica; no requiere tests numéricos. Autocorrelación y signo de cola, no signo de W. Papers intactos.
+Status: **APPROVED** POWER_CONTACT_OSCILLATION_065 after complete reading. Analytic proof; requires no numerical tests. Autocorrelation and sign of the tail, not sign of W. Papers untouched.
 
-Se cotejaron índice/grid/crucigrama, ARITHMETIC_DIFFERENCES019 y su auditoría, DESCENT016 y las referencias de oscilación/Descartes.019 sólo decide la columna k=1. La diferencia actual es un conteo exacto para TODOS N,k mediante momentos nulos y filtros exponenciales unilaterales. No se presenta Rolle o un principio nodal genérico como mecanismo de signo de la forma completa.
+Index/grid/crossword, ARITHMETIC_DIFFERENCES019 and its audit, DESCENT016 and the oscillation/Descartes references were cross-checked.019 only decides the column k=1. The current difference is an exact count for ALL N,k via vanishing moments and one-sided exponential filters. Rolle or a generic nodal principle is not presented as a sign mechanism for the complete form.
 
-## Perfil y momentos
+## Profile and moments
 
-PROFILE tiene todos sus factores correctos: derivar2k introduce u^(2k), que cancela esa potencia del denominador de C_(N+k), dejando u^(2N−1). El factor factoriald!,2^(d+1), el signo(−1)^k y el coeficiente principal unitario son correctos. COEFF resulta de cancelar los factoriales del cociente a_(j+ell)/a_j; la suma termina antes de cualquier factorial descendente nulo en el denominador.
+PROFILE has all its factors correct: differentiating2k times introduces u^(2k), which cancels that power of the denominator of C_(N+k), leaving u^(2N−1). The factorial factord!,2^(d+1), the sign(−1)^k and the unit leading coefficient are correct. COEFF results from cancelling the factorials of the ratio a_(j+ell)/a_j; the sum ends before any vanishing falling factorial in the denominator.
 
-La transformada tau^(2k)/(u²+tau²)^(N+k) tiene exactamente el cero requerido en0 y es integrable, incluso en N=1. El perfil temporal tiene todos los momentos absolutos y por ello ZERO-MOMENTS se deduce legítimamente. K(0)>0 se obtiene de la integral espectral positiva. El argumento del polinomio producto de los cambios de signo usa sólo momentos de grado inferior a2k y cuenta cambios reales, no meros ceros tangenciales.
+The transform tau^(2k)/(u²+tau²)^(N+k) has exactly the required zero at0 and is integrable, even at N=1. The temporal profile has all absolute moments and therefore ZERO-MOMENTS follows legitimately. K(0)>0 is obtained from the positive spectral integral. The argument with the product polynomial of the sign changes uses only moments of degree less than2k and counts real changes, not mere tangential zeros.
 
-Revisada también la adición explicativa de root al inicio de§3: paraN=1 yk=1,2,3, aplicar(1−D)^(2k) a p_k, multiplicar por(−1)^k y dividir por el valor en0 produce exactamente1−x,1−5x/3+x²/3 y1−11x/5+4x²/5−x³/15. El factor común exp(−x) y la normalización por K(0) son correctos. Son ejemplos algebraicos del perfil, sin afirmación adicional sobreW ni alteración de la prueba general.
+Also reviewed the explanatory addition at the start of§3: forN=1 andk=1,2,3, applying(1−D)^(2k) to p_k, multiplying by(−1)^k and dividing by the value at0 produces exactly1−x,1−5x/3+x²/3 and1−11x/5+4x²/5−x³/15. The common factor exp(−x) and the normalization by K(0) are correct. They are algebraic examples of the profile, with no additional claim aboutW nor alteration of the general proof.
 
-## Lema unilateral y simplicidad
+## One-sided lemma and simplicity
 
-Fubini preserva todos los momentos nulos indicados bajo cada filtro, no sólo al completar un par simétrico. g'=f−ug implica que un cero de g con f distinto de0 es simple. Si coinciden un cero de g y un cero simple de f, existe g″ allí y vale f′, no nulo: el cero sería doble. La inducción supone ya que TODOS los ceros de f son simples; sin esa hipótesis no bastaría el argumento de simplicidad. La fuente la conserva explícitamente.
+Fubini preserves all the indicated vanishing moments under each filter, not only when completing a symmetric pair. g'=f−ug implies that a zero of g with f nonzero is simple. If a zero of g and a simple zero of f coincide, g″ exists there and equals f′, nonzero: the zero would be double. The induction already assumes that ALL zeros of f are simple; without that hypothesis the simplicity argument would not suffice. The source keeps it explicitly.
 
-El cero adicional de h'=exp(ut)f antes del primer cero seleccionado de h está bien justificado: h tiende a0 en−infinito, vale0 en ese cero y no es idénticamente0 entre ambos. Elegir un punto de valor no nulo y usar ambos extremos de valor límite0 da un extremo interior no nulo. No se aplica formalmente Rolle en un punto infinito. Los ceros heredados de multiplicidades y los ceros intermedios están en intervalos disjuntos; la cuenta da al menosm ceros de h′ si h tiene m contados con multiplicidad. También se aplica a cualquier colección finita, excluyendo infinitos ceros. El filtro reflejado usa el borde opuesto correctamente.
+The additional zero of h'=exp(ut)f before the first selected zero of h is well justified: h tends to0 at−infinity, equals0 at that zero and is not identically0 between them. Choosing a point of nonzero value and using both endpoints with limit value0 gives a nonzero interior extremum. Rolle is not applied formally at a point at infinity. The zeros inherited from multiplicities and the intermediate zeros lie in disjoint intervals; the count gives at leastm zeros of h′ if h has m counted with multiplicity. It also applies to any finite collection, excluding infinitely many zeros. The reflected filter uses the opposite boundary correctly.
 
-El posible cúspide en0 del caso base no es un cero, pues K(0)>0. Todos sus ceros están en regiones analíticas. Tras la primera convolución la función es C1; las coincidencias de ceros en0 admiten las derivadas locales usadas. No hay intervalos de anulación: la ecuación diferencial los propagaría hacia f, contradiciendo sus ceros finitos simples. El decaimiento exponencial por polinomio preserva las convergencias y el borde ponderado.
+The possible cusp at0 of the base case is not a zero, since K(0)>0. All its zeros lie in analytic regions. After the first convolution the function is C1; coincidences of zeros at0 admit the local derivatives used. There are no intervals of vanishing: the differential equation would propagate them to f, contradicting its finitely many simple zeros. The exponential-times-polynomial decay preserves the convergences and the weighted boundary.
 
-## Base, propagación y último cero
+## Base, propagation and last zero
 
-En N=1 el perfil positivo tiene un polinomio de grado k. Paridad y momentos fuerzan al menos2k cambios globales; el grado permite a lo sumok raíces positivas. Quedan exactamentek raíces positivas distintas. Como ese polinomio tiene grado k, todas son simples y no admite raíces adicionales de mayor multiplicidad. Sus reflejos negativos son simples y0 no es raíz.
+At N=1 the positive profile has a polynomial of degree k. Parity and moments force at least2k global changes; the degree allows at mostk positive roots. Exactlyk distinct positive roots remain. Since that polynomial has degree k, all are simple and it admits no additional roots of higher multiplicity. Their negative reflections are simple and0 is not a root.
 
-C_1=e_+*e_- con la normalización1/(2u) es exacta. Aplicar los dos filtros sucesivamente conserva los2k ceros y momentos; al terminar cada par se recupera la autocorrelación par del siguiente N. Esto prueba el conteo para todo N sin suponer paridad en el paso intermedio.
+C_1=e_+*e_- with the normalization1/(2u) is exact. Applying the two filters successively keeps the2k zeros and moments; on finishing each pair the even autocorrelation of the next N is recovered. This proves the count for all N without assuming parity in the intermediate step.
 
-La cota p_d^(ell)/p_d<= (d/x)^ell usa coeficientes positivos y vale también cuando ell>d, con derivada cero. La expansión binomial limita|r−p|/p por(1+d/x)^(2k)−1. Para x>=4kd, exp(1/2)<2 deja r estrictamente positivo, incluso en el extremo. Por tanto la mayor raíz es ESTRICTAMENTE menor que4kd. El resultado no sustituye la cota más fina019 en k=1.
+The bound p_d^(ell)/p_d<= (d/x)^ell uses positive coefficients and also holds when ell>d, with zero derivative. The binomial expansion bounds|r−p|/p by(1+d/x)^(2k)−1. For x>=4kd, exp(1/2)<2 leaves r strictly positive, even at the endpoint. Hence the largest root is STRICTLY less than4kd. The result does not replace the finer bound019 at k=1.
 
-## Cola y alcance
+## Tail and scope
 
-El signo final de K es(−1)^k; el factor negativo del peine lo cambia a(−1)^(k+1). La cola desde u logq>=4kd conserva ese signo. Para u>1/2 converge absolutamente y contiene infinitas potencias de2 de peso positivo, por lo que su suma tiene signo estricto. El caso k=0 está separado y no se interpreta como transición.
+The final sign of K is(−1)^k; the negative factor of the comb changes it to(−1)^(k+1). The tail from u logq>=4kd keeps that sign. For u>1/2 it converges absolutely and contains infinitely many powers of2 with positive weight, so its sum has strict sign. The case k=0 is separated and not interpreted as a transition.
 
-No se estima la magnitud de esa cola frente al prefijo, ARCH y polar. No hay nueva fila de signo W, ventana temporal ni conclusión global. La aprobación se refiere exactamente al patrón de raíces y al signo declarado del complemento aritmético.
+The magnitude of that tail against the prefix, ARCH and polar is not estimated. There is no new W sign row, temporal window nor global conclusion. The approval refers exactly to the root pattern and the declared sign of the arithmetic complement.

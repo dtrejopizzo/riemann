@@ -1,37 +1,37 @@
 # POWER_THETA_SCHUR_DENSITY_AUDIT_075
 
-Estado: **APROBADO** POWER_THETA_SCHUR_DENSITY_075, tras lectura completa y la aclaración de Fubini en NEG-MASS. Prueba analítica, sin nuevos cómputos. Papers intactos.
+Status: **APPROVED** POWER_THETA_SCHUR_DENSITY_075, after a complete reading and the clarification of Fubini in NEG-MASS. Analytic proof, without new computations. Papers untouched.
 
-Consultados los antecedentes de índice/grid/crucigrama, SCHUR003, THETA073 y el límite de alcance074. No se encontró la construcción literal de esta densidad en las búsquedas dirigidas. El algoritmo de Schur y su primer cociente son anteriores; el objeto nuevo es una representación POSITIVA del denominador regularizado para la MISMA Phi. La fuente no la identifica con una derivada logarítmica que no se haya probado.
+Consulted the antecedents in index/grid/crossword, SCHUR003, THETA073 and the scope limit 074. The literal construction of this density was not found in the targeted searches. The Schur algorithm and its first quotient are earlier; the new object is a POSITIVE representation of the regularized denominator for the SAME Phi. The source does not identify it with an unproved logarithmic derivative.
 
-## Primeros pesos y masa
+## First weights and mass
 
-073 da c=M(u)>0 y c<ua para todo u>0. V par implica V′(0)=0, y V‴>0 prueba que V′(x)/x es estrictamente creciente. Su promedio bajo x²Phi/(aZ0) es1/a por integración por partes; el límite en0 es estrictamente menor que ese promedio y, por tanto, menor queu/c. El límite infinito es infinito para la cola theta real. Esto proporciona exactamente un cruce de h_u en la semirrecta positiva, de negativo a positivo.
+073 gives c=M(u)>0 and c<ua for all u>0. V even implies V′(0)=0, and V‴>0 proves that V′(x)/x is strictly increasing. Its average under x²Phi/(aZ0) is 1/a by integration by parts; the limit at 0 is strictly less than that average and, therefore, less than u/c. The limit at infinity is infinite for the real theta tail. This provides exactly one crossing of h_u on the positive half-line, from negative to positive.
 
-h_u es impar y de integral total0, así que su primitiva hacia infinito k_u es par y decae en ambas colas. En x>0, k′=−h hace que k crezca hasta el cruce deh y luego decrezca hacia0 desde valores positivos. Para NEG-MASS se aplica Fubini DESPUÉS de usar paridad:2integral_0∞ k=2integral_0∞ y h(y)dy, cuyo majorante absoluto es finito. No se intercambia el integral doble absoluto sobre todaR. La integración por partes resultante da Z0(c−ua)<0. Esto fuerza k(0)<0 y, por la monotonía descrita, exactamente un cruce negativo/positivo de k.
+h_u is odd and of total integral 0, so its primitive towards infinity k_u is even and decays in both tails. On x>0, k′=−h makes k increase up to the crossing of h and then decrease to 0 from positive values. For NEG-MASS Fubini is applied AFTER using parity: 2integral_0∞ k=2integral_0∞ y h(y)dy, whose absolute majorant is finite. The absolute double integral over all of R is not interchanged. The resulting integration by parts gives Z0(c−ua)<0. This forces k(0)<0 and, by the described monotonicity, exactly one negative/positive crossing of k.
 
-## Cancelación y densidad positiva
+## Cancellation and positive density
 
-La transformada bilateral de h es D_u(z)=zcZ−uZ′. La identidad k′=−h da D_u=z Laplace(k), con bordes nulos. D_u(u)=0 implica la cancelación exacta de la masa firmada cosh(uy)k(y)dy en[0,∞).
+The bilateral transform of h is D_u(z)=zcZ−uZ′. The identity k′=−h gives D_u=z Laplace(k), with vanishing boundary terms. D_u(u)=0 implies the exact cancellation of the signed mass cosh(uy)k(y)dy on [0,∞).
 
-El cociente w_x(y)=sinh(u(y−x))1_(y>=x)/cosh(uy) es continuo, no decreciente y tiene derivada u cosh(ux)/cosh²(uy)>0 para y>x. Restar su valor en el único cruce dek deja un integrando no negativo; es estrictamente positivo en una cola no vacía. Se preserva la cancelación antes de comparar pesos. El factor1/u es positivo y está correctamente incluido. Así Phi_u(x)>0 para todo x, incluido0.
+The quotient w_x(y)=sinh(u(y−x))1_(y>=x)/cosh(uy) is continuous, nondecreasing and has derivative u cosh(ux)/cosh²(uy)>0 for y>x. Subtracting its value at the single crossing of k leaves a nonnegative integrand; it is strictly positive on a nonempty tail. The cancellation is preserved before comparing weights. The factor 1/u is positive and correctly included. Thus Phi_u(x)>0 for all x, including 0.
 
-## Ecuación y transformada
+## Equation and transform
 
-Dos derivaciones de la integral hacia infinito dan Phi_u″−u²Phi_u=k, con el signo positivo dek correcto. La primera derivada en0 es la negativa del integral cosh balanceado y por tanto se anula. La extensión par es suave: la ecuación con k par suave y el dato Neumann0 permite prolongar todas las derivadas sin salto ni masa delta.
+Two differentiations of the integral towards infinity give Phi_u″−u²Phi_u=k, with the correct positive sign of k. The first derivative at 0 is the negative of the balanced cosh integral and therefore vanishes. The even extension is smooth: the equation with smooth even k and the Neumann datum 0 allows extending all derivatives without jump or delta mass.
 
-Las colas theta de h y k son menores que cualquier exponencial; el kernel sinh preserva este hecho para cada u fijo, eligiendo un exponente mayor queu. Lo mismo vale para la primera derivada dePhi_u, suficiente para los bordes de la ecuación. Se obtiene exactamente
+The theta tails of h and k are smaller than any exponential; the sinh kernel preserves this fact for each fixed u, choosing an exponent larger than u. The same holds for the first derivative of Phi_u, sufficient for the boundary terms of the equation. One obtains exactly
 
     H_u(z)=Laplace(Phi_u)(z)=D_u(z)/[z(z²−u²)].
 
-Las singularidades0,±u son removibles por la identidad entera. En0 la masa es Z0(ua−c)/u²>0, sin factor2 perdido por el uso de semirrectas. La positividad dePhi_u y todos sus momentos justifican H_u>0 y(logH_u)″>0 sobre todo el eje real.
+The singularities 0, ±u are removable by the entire identity. At 0 the mass is Z0(ua−c)/u²>0, without a factor 2 lost by the use of half-lines. Positivity of Phi_u and all its moments justify H_u>0 and (logH_u)″>0 on the whole real axis.
 
-## Primer transformado y alcance
+## First transform and scope
 
-Verificada algebraicamente la identidad
+Verified algebraically the identity
 
     F1(z)=−cz/u+c² Z(z)/(u z H_u(z)).
 
-El residuo en0 es u c²/(ua−c)>0; restarlo da exactamente la expresiónG_u de la fuente. Nada de lo probado convierte F1 en H_u′/H_u ni ordena automáticamente Z/H_u. No se preserva por supuesto la hipótesis V_u‴>0 ni se prueba un kernel Pick de orden dos paraF1.
+The residue at 0 is u c²/(ua−c)>0; subtracting it gives exactly the expression G_u of the source. Nothing proved turns F1 into H_u′/H_u nor automatically orders Z/H_u. The hypothesis V_u‴>0 is not assumed to be preserved, nor is a second-order Pick kernel for F1 proved.
 
-La nueva densidad positiva es una restricción estructural real y específica del denominador regularizado. No contradice074, no demuestra tres generadores ni todos los órdenes y no añade una ventana temporal ni signo global deW. La comparación entrePhi yPhi_u que necesita el siguiente paso continúa explícitamente abierta.
+The new positive density is a real and specific structural restriction of the regularized denominator. It does not contradict 074, does not prove three generators nor all orders and adds neither a time window nor a global sign of W. The comparison between Phi and Phi_u needed by the next step remains explicitly open.

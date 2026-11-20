@@ -1,75 +1,75 @@
-# POWER_PAIR_OBSERVABLE_SCOPE_100 — Observable real de la pareja J/K
+# POWER_PAIR_OBSERVABLE_SCOPE_100 — Real observable of the J/K pair
 
-Estado: **PROVED; lectura final y auditoría independiente aprobadas.** Véase `POWER_PAIR_OBSERVABLE_SCOPE_AUDIT_100.md`. Para la pareja REAL positiva J,K de078, el observable eta=−K'/J es positivo en la semirrecta, parte de0 y vuelve a0. No pertenece a la clase de observables crecientes que permitiría reutilizar directamente073. No se refutan el signo de T_h, la positividad de sus kernels, otras clases de pares ni la recursión general. Papers intactos.
+Status: **PROVED; final reading and independent audit approved.** See `POWER_PAIR_OBSERVABLE_SCOPE_AUDIT_100.md`. For the REAL positive pair J,K of078, the observable eta=−K'/J is positive on the half-line, starts at0 and returns to0. It does not belong to the class of increasing observables that would allow reusing073 directly. The sign of T_h, the positivity of its kernels, other classes of pairs and the general recursion are not refuted. Papers untouched.
 
-## 1. Consulta y diferencia precisa
+## 1. Consultation and precise difference
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D; cotejados073–078,081,090 y097–099.078 ya construye las densidades positivas J,K.081 ya estudia F(u)=a/M(u)−1/u=uB(u), prueba F>0 y F→0 y excluye heredar la monotonía de G_p por un límite normalizado. Esos resultados no se presentan de nuevo como novedad.
+Consulted the project rules, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D; cross-checked073–078,081,090 and097–099.078 already builds the positive densities J,K.081 already studies F(u)=a/M(u)−1/u=uB(u), proves F>0 and F→0 and excludes inheriting the monotonicity of G_p through a normalized limit. Those results are not presented again as novelty.
 
-El objeto aquí es PUNTUAL en la variable temporal: eta(t)=−K'(t)/J(t) para la misma pareja real. La desigualdad0<eta(t)<a/t descarta reconstruir la siguiente media mediante un observable creciente de esta pareja. No se registra otra prueba de la obstrucción081 ni un NO-GO de todos los métodos de pares de Laplace.
+The object here is POINTWISE in the time variable: eta(t)=−K'(t)/J(t) for the same real pair. The inequality0<eta(t)<a/t rules out reconstructing the next mean via an increasing observable of this pair. Neither another proof of the obstruction081 nor a NO-GO for all Laplace-pair methods is recorded.
 
-## 2. Definiciones y signos ya establecidos
+## 2. Definitions and signs already established
 
-Sea Phi la densidad par positiva real, Z su transformada bilateral y a=M'(0)>0. Usar las densidades PARES de078
+Let Phi be the real positive even density, Z its bilateral transform and a=M'(0)>0. Use the EVEN densities of078
 
     J(t)=int_|t|^infinito sPhi(s)ds>0,
     K(t)=int_|t|^infinito(s−|t|)[aPhi(s)−J(s)]ds>0.
 
-Aquí K es la densidad par, no la primitiva impar de093/095. Se tienen
+Here K is the even density, not the odd primitive of093/095. One has
 
     K''=aPhi−J, K'(0)=0,
     Z_J=Z'/u, u²Z_K=aZ−Z_J,
     b(u²)=Z_K/Z_J, h=1/b.
 
-Para completar el signo de K', poner q=aPhi−J.077/078 prueban que tau=J/Phi decrece estrictamente y que q tiene un cruce negativo/positivo. Además int_0^infinito q=0, pues int J=a int Phi. Por ello int_t^infinito q>0 para TODO t>0: después del cruce el integrando es positivo; antes del cruce la integral es−int_0^t q>0. Así
+To complete the sign of K', set q=aPhi−J.077/078 prove that tau=J/Phi decreases strictly and that q has one negative/positive crossing. Moreover int_0^infinito q=0, since int J=a int Phi. Hence int_t^infinito q>0 for ALL t>0: after the crossing the integrand is positive; before the crossing the integral is−int_0^t q>0. Thus
 
     −K'(t)=int_t^infinito q(s)ds>0, t>0.
 
-Los bordes y las colas superexponenciales proceden de las mismas integrales de Phi y no introducen términos distribucionales en0.
+The boundary terms and the superexponential tails come from the same integrals of Phi and introduce no distributional terms at0.
 
-## 3. Desigualdad puntual real y ausencia de monotonía
+## 3. Real pointwise inequality and absence of monotonicity
 
-Definir
+Define
 
     eta(t)=−K'(t)/J(t).
 
-Es una función impar suave porque K,J son pares suaves y J>0. En particular eta(0)=0 y eta(t)>0 para t>0. La fórmula de K' da
+It is a smooth odd function because K,J are smooth even and J>0. In particular eta(0)=0 and eta(t)>0 for t>0. The formula for K' gives
 
     −K'(t)=a int_t^infinito Phi(s)ds
                       −int_t^infinito J(s)ds
             <a int_t^infinito Phi(s)ds.
 
-Por otra parte
+On the other hand
 
     J(t)=int_t^infinito sPhi(s)ds
            >t int_t^infinito Phi(s)ds, t>0,
 
-con desigualdad estricta porque Phi es positiva más allá de t. Dividir ambas desigualdades por J(t)>0 prueba
+with strict inequality because Phi is positive beyond t. Dividing both inequalities by J(t)>0 proves
 
-    0<eta(t)<a/t, TODOS t>0.                       (POINTWISE)
+    0<eta(t)<a/t, ALL t>0.                       (POINTWISE)
 
-Así eta(t)→0 cuando t→infinito. No se usaron asintóticos, cotas derivadas de un resto real, truncaciones de la aritmética ni un nuevo certificado.
+Thus eta(t)→0 as t→infinity. No asymptotics, bounds derived from a real remainder, truncations of the arithmetic nor a new certificate were used.
 
-Una función positiva en(0,infinito) que vuelve a0 no puede ser no decreciente. Tampoco eta puede ser no creciente en[0,infinito), porque eta(0)=0 y eta(t)>0. Por tanto la observable REAL no es monótona en ninguno de los dos sentidos globales. Posee al menos un máximo interior, sin que esto pruebe un único máximo o unimodalidad.
+A positive function on(0,infinity) returning to0 cannot be nondecreasing. Nor can eta be nonincreasing on[0,infinity), because eta(0)=0 and eta(t)>0. Hence the REAL observable is not monotone in either of the two global directions. It has at least one interior maximum, without this proving a single maximum or unimodality.
 
-## 4. Reconstrucción exacta de h y antecedente081
+## 4. Exact reconstruction of h and antecedent081
 
-Para u>0, considerar la ley positiva inclinada de densidad J(t)exp(ut)/Z_J(u). Una integración por partes en toda la recta, con bordes nulos, da
+For u>0, consider the positive tilted law with density J(t)exp(ut)/Z_J(u). An integration by parts on the whole line, with vanishing boundary terms, gives
 
     int_R exp(ut)eta(t)J(t)dt
        =int_R exp(ut)[−K'(t)]dt=uZ_K(u).
 
-En consecuencia
+Consequently
 
     E_(J,u)[eta]=uZ_K/Z_J=u b(u²)=a/M(u)−1/u,
     h(u²)=u/E_(J,u)[eta].                          (PAIR-MEAN)
 
-La función del lado derecho es exactamente F(u) de081, que ya era positiva y tendía a0. No se reivindica como nueva su falta de monotonía en el parámetro u. La ganancia acotada de esta fuente es identificar la observable temporal correspondiente y probar POINTWISE, que descarta imponerle monotonía creciente.
+The function on the right is exactly F(u) of081, which was already positive and tended to0. Its lack of monotonicity in the parameter u is not claimed as new. The limited gain of this source is to identify the corresponding time observable and prove POINTWISE, which rules out imposing increasing monotonicity on it.
 
-## 5. Alcance para una clase invariante
+## 5. Scope for an invariant class
 
-073 usa una media de la coordenada bajo una ley positiva y una comparación condicional de dos copias. PAIR-MEAN podría motivar repetir ese mecanismo con eta en lugar de la coordenada; hacerlo bajo la hipótesis de que eta fuese creciente sería incorrecto para los propios datos reales, por§3.
+073 uses a mean of the coordinate under a positive law and a conditional comparison of two copies. PAIR-MEAN could motivate repeating that mechanism with eta instead of the coordinate; doing so under the hypothesis that eta were increasing would be incorrect for the real data themselves, by§3.
 
-Esto no decide qué comparación de dos copias podría funcionar con eta no monótona, ni excluye una clase dual que permita ascenso y descenso. Tampoco se afirma que el bound a/t se preserve bajo nuevos pasos de Green o secantes. No se ofrece aquí una clase cerrada de todos los órdenes; ese objetivo permanece OPEN.
+This does not decide which two-copy comparison could work with non-monotone eta, nor exclude a dual class allowing ascent and descent. Nor is it claimed that the bound a/t is preserved under new Green or secant steps. No closed class for all orders is offered here; that goal remains OPEN.
 
-La positividad T_h global de099 y sus consecuencias, ya probadas y auditadas con reproducción independiente FULL PASS, son compatibles con esta obstrucción puntual. No se deduce de ella un contraejemplo W ni se retira ninguna cobertura de signo ya probada.
+The global T_h positivity of099 and its consequences, already proved and audited with independent FULL PASS reproduction, are compatible with this pointwise obstruction. No W counterexample is deduced from it and no already proved sign coverage is withdrawn.

@@ -1,26 +1,26 @@
-# POWER_INVERSE_INTERIOR_022 — Un punto interior del inverso completo
+# POWER_INVERSE_INTERIOR_022 — An interior point of the complete inverse
 
-Estado: PROVED un punto negativo del inverso COMPLETO, certificado racional ejecutado y revisión independiente final APROBADA. El constructor principal y el auditor reprodujeron el verificador. Papers intactos.
+Status: PROVED a negative point of the COMPLETE inverse, rational certificate executed and final independent review APPROVED. The verifier was reproduced independently twice. Papers untouched.
 
-## Corpus y razón nueva antes de construir
+## Corpus and new reason before building
 
-Leídos las reglas del proyecto, SIGNED_MEAN019 (fallo SOLO de prefijos), INVERSE_KERNEL020 (positividad exterior completa), sus auditorías y búsquedas dirigidas en índice/grid/crucigrama sobre inverso/kernel/Möbius/signo. La diferencia exacta es decidir una suma COMPLETA en UN punto interior, con cola rigurosa; no se infiere nada desde el prefijo019 ni desde la región exterior020.
+Read the project rules, SIGNED_MEAN019 (failure ONLY of prefixes), INVERSE_KERNEL020 (complete exterior positivity), their audits and targeted searches in index/grid/crossword on inverse/kernel/Möbius/sign. The exact difference is deciding a COMPLETE sum at ONE interior point, with a rigorous tail; nothing is inferred from the prefix 019 nor from the exterior region 020.
 
-Se elige N=128,x=1 porque la aproximación gamma local del término derivativo en el contacto2 tiene escala (u²log2/(2N))exp(−u²(log2)²/(4N)), cuyo máximo en N cae cerca de u²(log2)²/4≈119. La aproximación solo motiva el punto; no participa en el certificado. El corte64 se fija por monotonía: log64>127/32, lo que permite cotar TODAS las colas de potencias logarítmicas de grado hasta127 por una integral.
+N=128, x=1 is chosen because the local gamma approximation of the derivative term at contact 2 has scale (u²log2/(2N))exp(−u²(log2)²/(4N)), whose maximum in N falls near u²(log2)²/4≈119. The approximation only motivates the point; it does not take part in the certificate. The cutoff 64 is fixed by monotonicity: log64>127/32, which allows bounding ALL the tails of logarithmic powers of degree up to 127 by an integral.
 
-## 1. Resultado sobre la suma completa
+## 1. Result on the complete sum
 
-Con los kernels exactos de020, se prueba
+With the exact kernels of 020, we prove
 
     −2/3 <h_128(1)<−33/50<0.                            (NEG)
 
-La suma incluye TODOS los enteros m de la inversión Möbius. En particular es falso el lema «h_N(x)>=0 para todos N>=2,x>=1». Esto refuta una premisa posible de la recuperación de signo por019; no refuta el signo de la forma de Weil ni de ERR.
+The sum includes ALL integers m of the Möbius inversion. In particular the lemma «h_N(x)>=0 for all N>=2, x>=1» is false. This refutes a possible premise of the sign recovery via 019; it does not refute the sign of the Weil form nor of ERR.
 
-El resultado complementa OUTER020: para N=128 se sabe h_128(x)>=H_128(x)/4>0 si logx>=127/30. La negatividad en1 y la continuidad implican una región interior negativa y al menos un cambio de signo antes de esa frontera. No se extrapola el signo a otros N.
+The result complements OUTER020: for N=128 it is known that h_128(x)>=H_128(x)/4>0 if logx>=127/30. Negativity at 1 and continuity imply a negative interior region and at least one sign change before that boundary. The sign is not extrapolated to other N.
 
-## 2. Polinomio positivo exacto utilizado
+## 2. Exact positive polynomial used
 
-Se reconstruyen los coeficientes racionales mediante
+The rational coefficients are reconstructed by
 
     p_0=1,
     p_(j+1)=p_j·[2u(N−1−j)]/[(j+1)(2N−2−j)],
@@ -28,44 +28,44 @@ Se reconstruyen los coeficientes racionales mediante
     a_127=32p_127,
     A_128(t)=Σ(j=0..127)a_j t^j.
 
-La prueba de020 da a_j>0 y a_0=1/2; el script también verifica estos signos racionalmente. El kernel es
+The proof of 020 gives a_j>0 and a_0=1/2; the script also verifies these signs rationally. The kernel is
 
     H_128(x)=x^-33 A_128(logx),
     h_128(1)=Σ(m>=1)mu(m)m^-32 A_128(logm).
 
-No se imprimen128 coeficientes extensos: la recurrencia racional los determina íntegramente sin parámetros numéricos.
+The 128 lengthy coefficients are not printed: the rational recurrence determines them entirely with no numerical parameters.
 
-## 3. Segmento finito con logaritmos encerrados
+## 3. Finite segment with enclosed logarithms
 
-El script `tools/power_inverse_interior_022_verify.py` calcula mu(m) para1<=m<=64 por factorización entera elemental: un factor primo repetido da0, y cada factor primo distinto invierte el signo. No usa una tabla externa de valores Möbius.
+The script `tools/power_inverse_interior_022_verify.py` computes mu(m) for 1<=m<=64 by elementary integer factorization: a repeated prime factor gives 0, and each distinct prime factor flips the sign. It uses no external table of Möbius values.
 
-Los logaritmos se encierran con el módulo racional explícito `power_fixed_grid_003.py`: reducción del argumento a[1,2], serie atanh y resto geométrico, con redondeo exterior en cada operación. Se evalúa A_128 por Horner intervalar y se acumula el segmento m<=64 conservando el signo de cada mu(m).
+The logarithms are enclosed with the explicit rational module `power_fixed_grid_003.py`: argument reduction to [1,2], atanh series and geometric remainder, with outward rounding at every operation. A_128 is evaluated by interval Horner and the segment m<=64 is accumulated keeping the sign of each mu(m).
 
-Todas las entradas y operaciones del certificado son Fraction; el valor decimal aproximado−.662345100449 se menciona solo como orientación y no participa en NEG.
+All entries and operations of the certificate are Fraction; the approximate decimal value −.662345100449 is mentioned only for orientation and does not take part in NEG.
 
-## 4. Cola COMPLETA m>=65
+## 4. COMPLETE tail m>=65
 
-Para0<=j<=127, la función x^-32(logx)^j decrece cuando logx>=j/32. Como log64=6log2>4>127/32,
+For 0<=j<=127, the function x^-32(logx)^j decreases when logx>=j/32. Since log64=6log2>4>127/32,
 
     Σ(m>=65)m^-32(logm)^j
-       <=∫_64^infinito x^-32(logx)^j dx.
+       <=∫_64^infinity x^-32(logx)^j dx.
 
-Ponga L=21/5>log64. Por integración por partes y positividad, los mayores racionales de esas integrales se obtienen de
+Put L=21/5>log64. By integration by parts and positivity, rational upper bounds for these integrals are obtained from
 
     I_0=64^-31/31,
     I_j=64^-31 L^j/31+(j/31)I_(j−1), 1<=j<=127.
 
-Los coeficientes a_j positivos permiten cotar TODA la cola de Möbius, sin suponer cancelación:
+The positive coefficients a_j allow bounding the WHOLE Möbius tail, without assuming cancellation:
 
     |Σ(m>=65)mu(m)m^-32 A_128(logm)|
        <=Σ(j=0..127)a_j I_j <10^-10.                    (TAIL)
 
-El último signo es una comparación racional exacta ejecutada por el verificador. Este mayorante controla el complemento infinito del segmento calculado. Por ello NEG no es una inferencia desde un prefijo negativo.
+The last sign is an exact rational comparison executed by the verifier. This majorant controls the infinite complement of the computed segment. Hence NEG is not an inference from a negative prefix.
 
-Sumar el intervalo finito y el intervalo simétrico ±TAIL da los dos extremos racionales de NEG. El verificador ejecutado produce PASS.
+Adding the finite interval and the symmetric interval ±TAIL gives the two rational endpoints of NEG. The executed verifier produces PASS.
 
-## 5. Consecuencias limitadas para el emparejamiento con B
+## 5. Limited consequences for the pairing with B
 
-El signo B(x)<0 de019 no pasa al signo de F_N=2∫h_N B porque el inverso completo sí puede ser negativo. Por continuidad, para N128 existe un intervalo derecho de1 donde h_N<0 y B<0, de modo que el producto h_N B es positivo: aparece realmente una contribución adversa, no solo una pérdida de una cota.
+The sign B(x)<0 of 019 does not pass to the sign of F_N=2∫h_N B because the complete inverse can indeed be negative. By continuity, for N128 there is an interval to the right of 1 where h_N<0 and B<0, so that the product h_N B is positive: an adverse contribution really appears, not merely the loss of a bound.
 
-Esto no determina el emparejamiento TOTAL: las regiones de h_N>0 aportan favorablemente y la región exterior positiva de020 se conserva. No se afirma W[g_128]<0 ni F_128>0. El dato nuevo es un falsificador completo y certificado de la hipótesis h_N>=0, con un solo N elegido analíticamente y una cola infinita rigurosa.
+This does not determine the TOTAL pairing: the regions with h_N>0 contribute favourably and the positive exterior region of 020 is kept. W[g_128]<0 and F_128>0 are not claimed. The new datum is a complete, certified falsifier of the hypothesis h_N>=0, with a single analytically chosen N and a rigorous infinite tail.

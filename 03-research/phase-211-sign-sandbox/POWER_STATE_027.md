@@ -1,27 +1,27 @@
-# Estado027 — Balance exterior completo y restricción gamma interior
+# State027 — Full exterior balance and interior gamma restriction
 
-Estado: resultados parciales PROVED, auditoría independiente aprobada; signo global OPEN. Sustituye STATE026. Goal activo, papers intactos.
+Status: partial results PROVED, independent audit approved; global sign OPEN. Replaces STATE026. Goal active, papers untouched.
 
-## Contribución conjunta exterior
+## Joint exterior contribution
 
-POWER_DISCRETE_BALANCE_027 da una fórmula exacta por pisos del peso Omega y demuestra Omega(t)>=ell−(4logt+9)/t, ell=1+gamma/2−log(4pi)/2>1/50. En particular Omega>.009 para t>=4096 salvo singularidades logarítmicas integrables. Combinado con el corte uniforme026 y el kernel gamma real, prueba positividad y cotas de magnitud para TODA la cola conjunta int_T^infinito K_N Omega cuando T>=max(4096,exp(tau_N)).
+POWER_DISCRETE_BALANCE_027 gives an exact floor formula for the weight Omega and proves Omega(t)>=ell−(4logt+9)/t, ell=1+gamma/2−log(4pi)/2>1/50. In particular Omega>.009 for t>=4096 except for integrable logarithmic singularities. Combined with the uniform cutoff026 and the real gamma kernel, it proves positivity and magnitude bounds for the WHOLE joint tail int_T^infinito K_N Omega when T>=max(4096,exp(tau_N)).
 
-Para N129 se obtiene 0<R=int_4096^infinito K129 Omega<10^-36. Por tanto W[g129]/norma²=int_1^4096 K129 Omega+R, con el primer término aún sin signo. La cola positiva no aporta una corrección significativa al presupuesto grueso026. El déficit .15 de aquel presupuesto no es un déficit interior real demostrado.
+For N129 one obtains 0<R=int_4096^infinito K129 Omega<10^-36. Hence W[g129]/norm²=int_1^4096 K129 Omega+R, with the first term still unsigned. The positive tail contributes no significant correction to the coarse budget026. The deficit .15 of that budget is not a proved real interior deficit.
 
-Las identidades sum K(n)=3/2 y sum K(nx)=x^-32D_N(logx) son restricciones exactas por inversión, no pruebas de signo por sí solas. No se afirma convergencia uniforme de Omega hacia ell: los picos logarítmicos la impiden.
+The identities sum K(n)=3/2 and sum K(nx)=x^-32D_N(logx) are exact restrictions from inversion, not sign proofs by themselves. Uniform convergence of Omega to ell is not claimed: the logarithmic peaks prevent it.
 
-## Mezcla real y peso del resto
+## Real mixture and weight of the remainder
 
-POWER_INTERIOR_CONSTRAINT_027 usa la mezcla de calor conocida018, rho_N(t)=E exp(−V_N t²), V_N=(u²/4)/G, G~Gamma(N−1/2,1). Conserva todas las piezas de W por Tonelli con magnitudes finitas.
+POWER_INTERIOR_CONSTRAINT_027 uses the known heat mixture018, rho_N(t)=E exp(−V_N t²), V_N=(u²/4)/G, G~Gamma(N−1/2,1). It keeps all pieces of W by Tonelli with finite magnitudes.
 
-Con m_N=EV_N, el peso positivo específico L_N(a)=E(V_N−a)_+−(m_N−a)_+ da exactamente rho_N(t)−exp(−m_N t²)=t^4 int exp(−at²)L_N(a)da. Para N>=3 su masa es Var(V_N)/2; en N2 la masa es infinita pero la representación sigue válida para t distinto de cero.
+With m_N=EV_N, the specific positive weight L_N(a)=E(V_N−a)_+−(m_N−a)_+ gives exactly rho_N(t)−exp(−m_N t²)=t^4 int exp(−at²)L_N(a)da. For N>=3 its mass is Var(V_N)/2; at N2 the mass is infinite but the representation remains valid for t nonzero.
 
-La comparación con la gaussiana de igual segundo momento tiene sentido SUPERIOR estricto para ARCH_sharp, por concavidad. Para la forma completa, Wgamma−Wgaussiana(m_N)=int L_N(a)G_W''(a)da. No se obtuvo el signo de esa integral. La premisa de convexidad global del funcional gaussiano real es falsa: G_W''(a)<0 para TODO a>=65536, mediante cotas elementales. Esto no prueba que W ni el resto específico sean negativos.
+The comparison with the Gaussian of equal second moment has a strict UPPER sense for ARCH_sharp, by concavity. For the full form, Wgamma−Wgaussian(m_N)=int L_N(a)G_W''(a)da. The sign of that integral was not obtained. The premise of global convexity of the real Gaussian functional is false: G_W''(a)<0 for ALL a>=65536, via elementary bounds. This does not prove that W or the specific remainder is negative.
 
-## Verificación, cobertura y continuación
+## Verification, coverage and continuation
 
-POWER_JOINT_AUDIT_027 aprueba ambos memos, incluidas normalizaciones, Fubini/Tonelli, singularidades y excepción N2. Root leyó las pruebas y reprodujo ambos verificadores exactos: PASS. Los scripts comprueban constantes; la uniformidad proviene de los argumentos analíticos.
+POWER_JOINT_AUDIT_027 approves both memos, including normalisations, Fubini/Tonelli, singularities and the exception N2. The proofs were read and both exact verifiers reproduced: PASS. The scripts check constants; uniformity comes from the analytic arguments.
 
-No hay nueva cobertura W ni ventana T: siguen filas N1,2,3 para todo k, cono k>=10000N², ocho polos arbitrarios y bloque fijo12. El puente escalar017 sigue requiriendo todos N,k. No basta una mezcla positiva con curvatura firmada ni otra cola favorable diminuta.
+There is no new W coverage nor window T: rows N1,2,3 for all k, cone k>=10000N², eight arbitrary poles and fixed block12 remain. The scalar bridge017 still requires all N,k. A positive mixture with signed curvature is not enough, nor is another tiny favourable tail.
 
-La siguiente búsqueda prioriza una desigualdad del interior real y una posible fila N4 completa mediante ARCH exacto, peso de autocorrelación mejorado y polar alternado, previa consulta del corpus. No se considera logrado el objetivo ni existe bloqueo externo.
+The next search prioritises an inequality for the real interior and a possible full row N4 via exact ARCH, improved autocorrelation weight and alternating polar, after consulting the corpus. The objective is not considered achieved and there is no external blockage.

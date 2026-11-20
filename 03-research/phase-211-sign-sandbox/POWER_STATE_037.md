@@ -1,26 +1,26 @@
-# Estado037 — Agrupación firmada con error explícito y límite del resto absoluto
+# State037 — Signed grouping with explicit error and limit of the absolute remainder
 
-Estado: PROVED y auditado. Sustituye STATE036 como resumen de trabajo; conserva la cobertura positiva035. Goal activo, signo global OPEN, papers intactos.
+Status: PROVED and audited. Replaces STATE036 as working summary; keeps the positive coverage035. Goal active, global sign OPEN, papers untouched.
 
-## Resultado sobre la aritmética real
+## Result on the real arithmetic
 
-POWER_ENERGY_GROUP_037 estudia H_N(x)=−d[x^(-1/2)rho_N(logx)]/dx, en x_N=exp((N−1)/992), centro asintótico de la energía polar. A tasa fija63/2, M_N=u²/(2N−3), prueba para todos m>=1:
+POWER_ENERGY_GROUP_037 studies H_N(x)=−d[x^(-1/2)rho_N(logx)]/dx, at x_N=exp((N−1)/992), asymptotic centre of the polar energy. At fixed rate63/2, M_N=u²/(2N−3), it proves for all m>=1:
 
     exp(−M_N[log(m)/1985+log²(m)/2])/m
        <= m H_N(mx_N)/H_N(x_N) <= (1+M_N log(m))/m.
 
-El comportamiento crítico es1/m. Un conteo elemental de enteros libres de cuadrados y estas cotas prueban que la suma absoluta de los términos Möbius no principales supera1 para TODOS N>=2^16. Esto refuta contracción absoluta en el centro energético real, a diferencia de la región m^(-2) de033. No determina el signo de la suma firmada.
+The critical behaviour is1/m. An elementary count of squarefree integers and these bounds prove that the absolute sum of the non-principal Möbius terms exceeds1 for ALL N>=2^16. This refutes absolute contraction at the real energy centre, unlike the region m^(-2) of033. It does not determine the sign of the signed sum.
 
-## Ganancia concreta de conservar signos antes del error
+## Concrete gain from keeping signs before the error
 
-Para Q producto finito de primos, el núcleo agrupado K_(N,Q)(m) conserva exactamente como término principal U_Q/m, U_Q=prod(1−1/p). Se demuestra un error explícito mediante los dos momentos de log(b) bajo los pesos1/b de sus divisores. Una condición uniforme garantiza K_(N,Q)(m) entre U_Q/(2m) y3U_Q/(2m) en una ventana logm de orden sqrtN para Q fijo. Es signo de un núcleo auxiliar agrupado, no signo de W.
+For Q a finite product of primes, the grouped kernel K_(N,Q)(m) keeps exactly as principal term U_Q/m, U_Q=prod(1−1/p). An explicit error is proved through the two moments of log(b) under the weights1/b of its divisors. A uniform condition guarantees K_(N,Q)(m) between U_Q/(2m) and3U_Q/(2m) in a window logm of order sqrtN for fixed Q. It is the sign of an auxiliary grouped kernel, not the sign of W.
 
-La elección creciente Q=prod_(p<=floor(N^(1/8)))p permite, para TODOS N>=2^80, error relativo<.01 en toda la ventana m<=exp(3N^(1/4)). Sin embargo una prueba por inclusión–exclusión y conteo de cuadrados muestra que la suma de módulos del resto agrupado supera1.48, mientras el grupo principal es<.505. Por tanto esta elección tampoco cierra el problema mediante dominación absoluta del resto. La suma exterior con sus signos sigue abierta.
+The growing choice Q=prod_(p<=floor(N^(1/8)))p allows, for ALL N>=2^80, relative error<.01 on the whole window m<=exp(3N^(1/4)). However a proof by inclusion–exclusion and square counting shows that the sum of moduli of the grouped remainder exceeds1.48, while the principal group is<.505. Hence this choice does not close the problem through absolute domination of the remainder either. The outer sum with its signs remains open.
 
-## Alcance y evidencia
+## Scope and evidence
 
-POWER_GROUP_AUDIT_037 aprueba núcleo y extensión creciente. Root revisó ambos y reprodujo el verificador exacto ampliado: PASS; auditor independiente también PASS. Se corrigió el uso de conteo entero mediante Abel discreto. Los teoremas uniformes son analíticos; no se evaluaron nuevos datos W ni se enumeraron campañas de primos o Möbius.
+POWER_GROUP_AUDIT_037 approves the kernel and the growing extension. Both were reviewed and the extended exact verifier reproduced: PASS; an independent run also PASS. The use of integer counting was corrected via discrete Abel summation. The uniform theorems are analytic; no new W data were evaluated and no campaigns of primes or Möbius were enumerated.
 
-La novedad frente018/030/031 no es otra cancelación formal del principal: es una desigualdad cuantitativa del perfil real y de su agrupación finita. Aun así, el mayorante de error de orden log²(m)/m no puede sumarse hasta infinito. Falta controlar el complemento aritmético firmado y su integral. No se afirma que otras agrupaciones sean imposibles.
+The novelty relative to018/030/031 is not another formal cancellation of the principal term: it is a quantitative inequality of the real profile and of its finite grouping. Even so, the error majorant of order log²(m)/m cannot be summed to infinity. Control of the signed arithmetic complement and its integral is missing. It is not claimed that other groupings are impossible.
 
-No hay nueva cobertura positiva de W ni ventana T. Se conservan filas1..17, cualquier k>=0, a u31.5 con W>norma²/40, las regiones previas y el átomo211,1. El objetivo global sigue abierto. La continuación debe aportar control firmado nuevo del complemento; mejorar sólo constantes de las mismas cotas absolutas no resuelve la obligación.
+There is no new positive coverage of W nor window T. Rows1..17, any k>=0, at u31.5 with W>norm²/40, the earlier regions and the atom211,1 are kept. The global objective remains open. The continuation must supply new signed control of the complement; improving only constants of the same absolute bounds does not resolve the obligation.

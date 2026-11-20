@@ -45,7 +45,7 @@ K ≥ c′N^{−1/2}e^{(K_T+λ+1)/4} is stated with K_T and is unaffected. The t
 ℱf(ξ) = ∫f e^{−2πixξ} (def:ext convention) gives zero cross-overlaps and diagonal leakage; (4.1) is (3.1) polarised with
 A_jB_k + A_kB_j. The "no spectral separation" mechanism (L.224–226) is ARGUED.
 
-**Numerics (§2, §5).** NUMERICAL, not reviewed digit by digit. Hostile note: the "assembled bound" W_T ≥ θ_Kλ_A‖Ef‖²
+**Numerics (§2, §5).** NUMERICAL, not reviewed digit by digit. Critical note: the "assembled bound" W_T ≥ θ_Kλ_A‖Ef‖²
 (L.124–126, L.285) is a Galerkin value on a span, with M computed by a sine-Galerkin image that is neither an upper nor a
 lower bound for W_T in general; it must not be called a bound. §3.4(i)–(iii) is ARGUED / OPEN as labelled; the
 Landau–Widom constant in (ii) is quoted without the normalisation of c being checked against the source; it is not used.
@@ -124,7 +124,7 @@ Lemma 1.1(ii)) are correct. Note: the statement needs Σ^{|ρ|}, since ρ_β may
 **Theorem 2.2 (L.44–50), certified computation.** CONFIRMED; re-run. tools/cos2_trivial_cert.py was executed on the grids of
 the proof: [0.01, 0.3] step 0.01 → min slack 0.1145; [0.3, 2.5] step 0.01 → 0.3316; [2.5, 2.6] step 0.002 → 0.1367;
 [2.6, 2.64] step 0.001 → 0.0486; [2.64, 2.67] step 0.001 → first failing cell [2.660, 2.661] (slack −9.5·10⁻⁵). On (0, 0.01]
-the comb is empty and the slack is m(2π·1.1) = 0.0944. All printed slacks reproduce. Hostile remarks, none fatal: (i) Σ is
+the comb is empty and the slack is m(2π·1.1) = 0.0944. All printed slacks reproduce. Critical remarks, none fatal: (i) Σ is
 enclosed in interval arithmetic, m is a 50-digit floating evaluation, not an enclosure (error ≪ slack); (ii) grid points
 are floats accumulated by addition, but each cell is [T_j, T_{j+1}] with the same floats on both sides, so coverage is
 contiguous; (iii) the docstring calls the result "Theorem 2.1"; it is Theorem 2.2; (iv) the script divides by T and

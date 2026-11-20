@@ -1,21 +1,21 @@
-# Positividad estricta hasta T=68/25
+# Strict positivity up to T=68/25
 
-Para 0<T≤68/25 y todo f del dominio del paper 47, W_T(f)≥exp(−22000000001)||f||₂². La altura de ceros verificados sigue siendo G=3·10¹². Se añade el tramo (2.68,2.72].
+For 0<T≤68/25 and every f in the domain of paper 47, W_T(f)≥exp(−22000000001)||f||₂². The height of verified zeros is still G=3·10¹². The stretch (2.68,2.72] is added.
 
-**Filtro interior con banda de transición.** Fijar H=G/2, b=29, v=τ/H y
+**Inner filter with transition band.** Fix H=G/2, b=29, v=τ/H and
 
     u(τ)=1−sinc(v)² [cosh(b√(1−v²))/cosh b]².
 
-La serie par del coseno hiperbólico elimina la elección de raíz compleja. Para v=x+iy, |Re√(1−v²)|²=(|1−v²|+1−x²+y²)/2≤1+y². Junto con la representación integral de sinc esto da crecimiento a lo sumo constante por exp(2(b+1)|Im τ|/H) para u. Sobre la recta 0≤u≤1. Para el polinomio exterior h de 190, de grado m/2, h(u)f̂ es entera de tipo ≤T+m(b+1)/H y de clase L² en la recta. El teorema de Paley–Wiener conserva el soporte requerido. El multiplicador es par, por lo que ambos momentos polares se multiplican por el mismo valor real.
+The even series of the hyperbolic cosine removes the choice of complex root. For v=x+iy, |Re√(1−v²)|²=(|1−v²|+1−x²+y²)/2≤1+y². Together with the integral representation of sinc this gives growth at most a constant times exp(2(b+1)|Im τ|/H) for u. On the line 0≤u≤1. For the outer polynomial h of 190, of degree m/2, h(u)f̂ is entire of type ≤T+m(b+1)/H and of class L² on the line. The Paley–Wiener theorem preserves the required support. The multiplier is even, so both polar moments are multiplied by the same real value.
 
-**Tres regiones y polo.** Si r=R/H y |v|≤r<1, entonces
+**Three regions and pole.** If r=R/H and |v|≤r<1, then
 
     u≤v²/3+2b v²/(1+√(1−r²)) ≤ a=r²[1/3+2b/(1+√(1−r²))].
 
-En efecto 1−sinc(v)²≤v²/3, y log cosh es 1-Lipschitz, así que el déficit del segundo factor cuadrado es ≤2b(1−√(1−v²)). Para 2r≤|v|≤1 ambos factores sin cuadrar son positivos decrecientes en |v|, y Arb verifica u(2R)>7a/2 (argumento en unidades de τ). Desde |v|=1 el factor hiperbólico se convierte en coseno y 1−u≤sech²(b)/v². En particular sigue u≥7a/2. En el polo v=i/(2H), con y=1/(2H), se tiene sinh(y)/y≤exp(y²), y log cosh(b√(1+y²))−log cosh b≤by²/2. Por ello |u(i/2)|≤exp((b+2)y²)−1≤(b+2)/(2H²). El último paso usa (b+2)y²<1.
+Indeed 1−sinc(v)²≤v²/3, and log cosh is 1-Lipschitz, so the deficit of the second squared factor is ≤2b(1−√(1−v²)). For 2r≤|v|≤1 both unsquared factors are positive and decreasing in |v|, and Arb verifies u(2R)>7a/2 (argument in units of τ). From |v|=1 on the hyperbolic factor becomes a cosine and 1−u≤sech²(b)/v². In particular u≥7a/2 still holds. At the pole v=i/(2H), with y=1/(2H), one has sinh(y)/y≤exp(y²), and log cosh(b√(1+y²))−log cosh b≤by²/2. Hence |u(i/2)|≤exp((b+2)y²)−1≤(b+2)/(2H²). The last step uses (b+2)y²<1.
 
-**Certificación de la forma.** Usar T=68/25, U=2749/1000, R=315000000, m=1390000000 y N=10¹⁰. Se obtiene T+m(b+1)/H=2.7478<U y 2U=5.498<5.5. El peso escalonado de 191, recalculado en esta ventana, verifica en enteros las 2048 filas para ||C||≤17.62. El margen arquimediano fuera de R supera 1/10; el piso global supera −24. Aplicar ahora la prueba de 190 con el a indicado. En unidades de B=D_{m/2}(2/a−1)^(−2), la ganancia después de reservar la densidad alta es ≥η exp(m arcosh 6)/80−24; el costo polar es ≤4 exp(T) exp(m arcosh(1+(b+2)/(H²a))). El certificado comprueba la absorción y B>exp(−22000000000).
+**Certification of the form.** Use T=68/25, U=2749/1000, R=315000000, m=1390000000 and N=10¹⁰. One obtains T+m(b+1)/H=2.7478<U and 2U=5.498<5.5. The step weight of 191, recomputed on this window, verifies in integers the 2048 rows for ||C||≤17.62. The archimedean margin outside R exceeds 1/10; the global floor exceeds −24. Now apply the proof of 190 with the indicated a. In units of B=D_{m/2}(2/a−1)^(−2), the gain after reserving the high density is ≥η exp(m arcosh 6)/80−24; the polar cost is ≤4 exp(T) exp(m arcosh(1+(b+2)/(H²a))). The certificate checks the absorption and B>exp(−22000000000).
 
-Para |τ|≥H, la máscara exterior satisface 1−P≤2m sech²(b)(H/|τ|)² por la derivada de 190. Esta potencia cuadrática basta para la corrección alta: log(3+t)/t² decrece para t≥H, y al inicio 2m sech²(b) por 10⁹log(3+G) es <1/1000. El costo bajo es ≤2π exp(−22000000002)||f||². La reserva 1/(80π) y el signo no negativo de los átomos retenidos completan la prueba como en 190; se aplica inclusión de soportes. El filtro exterior sigue siendo el de Chebyshev de 190; el ahorro de soporte proviene de la función interior, que suprime la cola desde G/2 mediante sech² b.
+For |τ|≥H, the outer mask satisfies 1−P≤2m sech²(b)(H/|τ|)² by the derivative of 190. This quadratic power suffices for the high correction: log(3+t)/t² decreases for t≥H, and at the start 2m sech²(b) times 10⁹log(3+G) is <1/1000. The low cost is ≤2π exp(−22000000002)||f||². The reserve 1/(80π) and the nonnegative sign of the retained atoms complete the proof as in 190; inclusion of supports is applied. The outer filter is still the Chebyshev one of 190; the saving in support comes from the inner function, which suppresses the tail from G/2 on through sech² b.
 
-**Reproducción.** Ejecutar python3 verify_192.py con python-flint. El resultado es interno al proyecto y conserva los insumos espectrales y de extensión de 175–179.
+**Reproduction.** Run python3 verify_192.py with python-flint. The result is internal to the project and keeps the spectral and extension inputs of 175–179.

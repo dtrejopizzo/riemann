@@ -1,171 +1,171 @@
-# POWER_THETA_DENSITY_OUTER_088 — Signo exterior del Wronskiano de cuatro densidades
+# POWER_THETA_DENSITY_OUTER_088 — Exterior sign of the four-density Wronskian
 
-Estado: **PROVED, certificado polinómico/racional exit0/PASS, auditoría independiente y reproducciones aprobadas.** Véase `POWER_THETA_DENSITY_OUTER_AUDIT_088.md`. Sólo t>=1 para las densidades R4 de la Phi real. No se infiere el transporte global, una nueva región W o todos los órdenes. Papers intactos; sin mallas ni evaluaciones theta numéricas.
+Status: **PROVED, polynomial/rational certificate exit0/PASS, independent audit and reproductions approved.** See `POWER_THETA_DENSITY_OUTER_AUDIT_088.md`. Only t>=1 for the R4 densities of the real Phi. Neither the global transport, a new W region nor all orders are inferred. Papers untouched; no meshes or numerical theta evaluations.
 
-## 1. Antecedentes y objeto específico
+## 1. Antecedents and specific object
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D; releídos077,083–087.086 controla las tres densidades R3 mediante N>0 de077;087 decide el signo necesario del Wronskiano R4 en el origen, sin intervalo global. No se hereda el cuarto signo desde el tercero.
+Consulted the project rules, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D; reread 077, 083–087. 086 controls the three R3 densities via N>0 of 077; 087 decides the necessary sign of the R4 Wronskian at the origin, without a global interval. The fourth sign is not inherited from the third.
 
-Con Phi real y V=−logPhi, definir para t>0
+With real Phi and V=−logPhi, define for t>0
 
     p=V',q=V'',r=V''',s=V'''',v5=V^(5),v6=V^(6),
     A=p²−q−2p/t, B=p/t, C=(p³−3pq+r)/t,
     W4(t)=W_t(1,A,B,C), G(t)=t⁴W4(t).
 
-El resultado es la cota cuantitativa uniforme
+The result is the uniform quantitative bound
 
     G(t)<−4000 t² y⁶,
     W4(t)<−4000 y⁶/t²<0,
-    TODOS t>=1, y=pi exp(2t).                       (OUTER)
+    ALL t>=1, y=pi exp(2t).                       (OUTER)
 
-Se conservan TODOS los modos theta. La nueva diferencia respecto del outer077 es un Wronskiano que contiene derivadas hasta orden6; sus signos no están incluidos en C,N077, que sólo alcanzan orden4.
+ALL theta modes are kept. The new difference relative to the outer range of 077 is a Wronskian containing derivatives up to order 6; its signs are not included in C, N of 077, which only reach order 4.
 
-## 2. Primer modo y un polinomio exacto
+## 2. First mode and an exact polynomial
 
-Para el primer modo poner b=2y−3 y g0=exp(5t/2−y), de modo que Phi1=pi b g0. Usar D=partial_t+2y partial_y sobre polinomios en t,y. Definir
+For the first mode set b=2y−3 and g0=exp(5t/2−y), so that Phi1=pi b g0. Use D=partial_t+2y partial_y on polynomials in t,y. Define
 
     B0=2y−3,
     B_(j+1)=D B_j+(5/2−2y)B_j, j=0,1,2.
 
-Entonces Phi1^(j)=pi g0 B_j y
+Then Phi1^(j)=pi g0 B_j and
 
     F=(tB0, tB2+2B1, −B1, −B3).
 
-Al retirar el factor común pi g0 del Wronskiano de las cuatro densidades, se obtiene exactamente
+Removing the common factor pi g0 from the Wronskian of the four densities, one obtains exactly
 
     W4,0=det[D^iF_j]_(i,j=0)^3/(t b)^4.
 
-El determinante del numerador es
+The determinant of the numerator is
 
     det[D^iF_j]=−16 y² P(t,y),                       (MODE-POLY)
 
-donde P es un polinomio racional. El verificador lo genera mediante las recurrencias y el determinante, sin un dato flotante.
+where P is a rational polynomial. The verifier generates it via the recurrences and the determinant, without any floating-point datum.
 
-Se comprueba la desigualdad polinómica sobre el cuadrante MÁS GRANDE
+The polynomial inequality is checked on the LARGER quadrant
 
-    P(t,y)>4096 t² y⁸, TODOS t>=1,y>=21.             (MODE-MARGIN)
+    P(t,y)>4096 t² y⁸, ALL t>=1,y>=21.             (MODE-MARGIN)
 
-Prueba finita: sustituir t=1+T,y=21+Y en P−4096t²y⁸. Sus27coeficientes no nulos, incluido el constante, son ESTRICTAMENTE positivos. Por tanto el polinomio es positivo para T,Y>=0. No se requiere la relación entre t e y para este paso.
+Finite proof: substitute t=1+T, y=21+Y in P−4096t²y⁸. Its 27 nonzero coefficients, including the constant, are STRICTLY positive. Therefore the polynomial is positive for T,Y>=0. The relation between t and y is not required for this step.
 
-Como b<2y, MODE-POLY y MODE-MARGIN dan
+Since b<2y, MODE-POLY and MODE-MARGIN give
 
     G0=t⁴W4,0<−65536 t²y^10/b⁴<−4096t²y⁶.          (MODE-BOUND)
 
-Para el dato real t>=1, pi>3 y exp2>7 dan y>21; exp2>7 se prueba con la suma Taylor positiva hasta grado5.
+For the real datum t>=1, pi>3 and exp2>7 give y>21; exp2>7 is proved with the positive Taylor sum up to degree 5.
 
-## 3. Cola theta completa hasta el sexto orden
+## 3. Complete theta tail up to sixth order
 
-Escribir Phi=Phi1(1+Rtheta), Rtheta=Σ_(m>=2)r_m>0. Como en077/10343, con a=m²−1>=3 y z=ay,
+Write Phi=Phi1(1+Rtheta), Rtheta=Σ_(m>=2)r_m>0. As in 077/10343, with a=m²−1>=3 and z=ay,
 
     0<r_m<=(32/9)a²exp(−ay).
 
-Poner h=3/(2y)<=1/14. El cociente tiene logaritmo
+Set h=3/(2y)<=1/14. The quotient has logarithm
 
-    log r_m=constante−ay+log(1−h/m²)−log(1−h).
+    log r_m=constant−ay+log(1−h/m²)−log(1−h).
 
-Las contribuciones de logy se cancelan ANTES de derivar. Para1<=j<=6,
+The logy contributions cancel BEFORE differentiating. For 1<=j<=6,
 
     |D^jlog r_m|
       <=2^j[z+Σ_(n>=1)n^(j−1)h^n]
       <=2^j[z+1]<2^(j+1)z.                         (LOG-TAIL)
 
-La cota de la suma se obtiene de la identidad racional
+The bound on the sum is obtained from the rational identity
 
     Σ_(n>=1)n⁵h^n
-      =h(1+26h+66h²+26h³+h⁴)/(1−h)^6<1 en h<=1/14.
+      =h(1+26h+66h²+26h³+h⁴)/(1−h)^6<1 on h<=1/14.
 
-Los órdenes inferiores quedan dominados por n⁵ para n>=1. La fórmula de Bell para derivar exp(log r_m), con los bounds2^(j+1)z, da en orden6
+The lower orders are dominated by n⁵ for n>=1. The Bell formula for differentiating exp(log r_m), with the bounds 2^(j+1)z, gives at order 6
 
     |D^6r_m|/r_m
       <=4096z⁶+30720z⁵+66560z⁴+46080z³+7936z²+128z
       <5000z⁶, z>=63.
 
-El mismo majorante sirve para los órdenes0,...,5: los polinomios completos de Bell con argumentos positivos aquí crecen en el orden, porque el primer argumento4z es>=1. Por tanto
+The same majorant serves for orders 0,...,5: the complete Bell polynomials with positive arguments here grow with the order, because the first argument 4z is >=1. Therefore
 
     |D^jRtheta|
       <=(160000/9)y⁶ Σ_(a>=3)a⁸exp(−ay), 0<=j<=6.
 
-Se amplió la suma de a=m²−1 a TODOS los enteros a>=3; sólo se añadieron términos positivos. La suma Taylor racional de exp3 hasta grado11 prueba exp3>20. Para y>=21, la razón consecutiva de a⁸exp(−ay) es<=(4/3)^8/20^7<1/2. Además y⁶exp(−3y) decrece para y>=21. Así
+The sum over a=m²−1 was extended to ALL integers a>=3; only positive terms were added. The rational Taylor sum of exp3 up to degree 11 proves exp3>20. For y>=21, the consecutive ratio of a⁸exp(−ay) is <=(4/3)^8/20^7<1/2. Moreover y⁶exp(−3y) decreases for y>=21. Thus
 
     |D^jRtheta|<E, j=0,...,6,
     E=(320000/9)3⁸21⁶/20^21
       =62523502209/6553600000000000000000.            (TAIL)
 
-Es una cota de la cola COMPLETA para cada derivada pertinente.
+It is a bound on the COMPLETE tail for each relevant derivative.
 
-## 4. Error de las seis derivadas del potencial
+## 4. Error of the six derivatives of the potential
 
-Rtheta>=0 asegura denominadores1+Rtheta>=1. Las fórmulas de derivadas logarítmicas y TAIL dan, simultáneamente para1<=j<=6,
+Rtheta>=0 ensures denominators 1+Rtheta>=1. The logarithmic derivative formulas and TAIL give, simultaneously for 1<=j<=6,
 
     |D^jlog(1+Rtheta)|
       <=E+31E²+180E³+390E⁴+360E⁵+120E⁶<2E=:eta.     (LOG-ERROR)
 
-Los coeficientes son(k−1)!S(6,k); los órdenes inferiores están dominados por la misma suma. No se usa un signo del error, sólo su módulo.
+The coefficients are (k−1)!S(6,k); the lower orders are dominated by the same sum. No sign of the error is used, only its modulus.
 
-Para el primer modo, V0=y−(5/2)t−log(2y−3)−logpi. En orden1,0<V0'<2y. Para los órdenes2,...,6, la expansión de log(1−h) ya usada da
+For the first mode, V0=y−(5/2)t−log(2y−3)−logpi. At order 1, 0<V0'<2y. For orders 2,...,6, the expansion of log(1−h) already used gives
 
     |V0^(j)|<=2^j(y+1)<68y.
 
-Con eta<1 y y>=21, todos los segmentos entre los jets exactos y los del primer modo quedan dentro de la caja
+With eta<1 and y>=21, all segments between the exact jets and those of the first mode stay inside the box
 
     |p|,|q|,|r|,|s|,|v5|,|v6|<=128y.                (BOX)
 
-No se supone que los modos posteriores sean despreciables en derivadas altas: LOG-TAIL y Bell pagan precisamente esos factores.
+It is not assumed that the later modes are negligible in high derivatives: LOG-TAIL and Bell pay precisely for those factors.
 
-## 5. Propagación al polinomio genérico del Wronskiano
+## 5. Propagation to the generic polynomial of the Wronskian
 
-El mismo algoritmo de derivación formal, ahora con p'=q,q'=r,r'=s,s'=v5,v5'=v6, demuestra que
+The same formal differentiation algorithm, now with p'=q, q'=r, r'=s, s'=v5, v5'=v6, proves that
 
     G=t⁴W_t(1,A,B,C)
 
-es un polinomio de55monomios en t,p,q,r,s,v5,v6. Cada exponente de t está entre0 y2 y cada grado total en los seis jets está entre3 y6. No aparece una derivada de v6: el verificador lo exige al aplicar la derivación.
+is a polynomial of 55 monomials in t,p,q,r,s,v5,v6. Each exponent of t lies between 0 and 2 and each total degree in the six jets lies between 3 and 6. No derivative of v6 appears: the verifier requires it when applying the differentiation.
 
-Las sumas de coeficientes absolutos ponderados por el grado de jets, agrupadas por ese grado, son
+The sums of absolute coefficients weighted by the jet degree, grouped by that degree, are
 
-    grado6:888, grado5:1580, grado4:644, grado3:66.
+    degree6:888, degree5:1580, degree4:644, degree3:66.
 
-Por BOX, para t>=1,y>=21, la suma de módulos de las seis derivadas parciales del polinomio es<=K t²y⁵, donde
+By BOX, for t>=1, y>=21, the sum of moduli of the six partial derivatives of the polynomial is <=K t²y⁵, where
 
     K=888·128⁵+1580·128⁴+644·128³+66·128²
       =30936927338496.
 
-El teorema del valor medio multivariable y LOG-ERROR prueban
+The multivariable mean value theorem and LOG-ERROR prove
 
     |G−G0|<=eta K t²y⁵.
 
-La comparación racional exacta del verificador es
+The exact rational comparison of the verifier is
 
     eta K=59029694970340794273/100000000000000000
           <96·21<=96y.
 
-Con MODE-BOUND,
+With MODE-BOUND,
 
     G<−4096t²y⁶+96t²y⁶=−4000t²y⁶,
 
-que demuestra OUTER para TODO t>=1, no una colección de puntos.
+which proves OUTER for ALL t>=1, not a collection of points.
 
-## 6. Verificador finito y salida
+## 6. Finite verifier and output
 
-Ejecutar
+Run
 
     python3 03-research/phase-211-sign-sandbox/tools/power_theta_density_outer_088_verify.py
 
-El programa usa únicamente enteros, Fraction y operaciones exactas de polinomios; no necesita Sympy, FLINT ni evaluar pi o una suma theta en un punto. Certifica los27coeficientes positivos, los55monomios y K, y todas las desigualdades racionales de TAIL/LOG-ERROR/MVT. La corrida final terminó exit0 con los cuatro bloques PASS.
+The program uses only integers, Fraction and exact polynomial operations; it needs neither Sympy, FLINT nor evaluating pi or a theta sum at a point. It certifies the 27 positive coefficients, the 55 monomials and K, and all rational inequalities of TAIL/LOG-ERROR/MVT. The final run finished exit0 with the four blocks PASS.
 
-SHA256 de la versión estable:
+SHA256 of the stable version:
 
     d2b1e479295cbf9eda602a2786b657cab5c83db1c74dee9a7d00b751723fc8f4.
 
-Una comprobación simbólica auxiliar previa produjo las mismas identidades. El certificado final es autocontenido en operaciones racionales, no en muestreo de parámetros.
+An earlier auxiliary symbolic check produced the same identities. The final certificate is self-contained in rational operations, not in parameter sampling.
 
-## 7. Consecuencia de transporte y límite
+## 7. Transport consequence and limit
 
-086 ya prueba B'>0 y J=(A'/B')'>0 para TODOt>0. Con Eraise=(C'/B')', la identidad
+086 already proves B'>0 and J=(A'/B')'>0 for ALL t>0. With Eraise=(C'/B')', the identity
 
     W4=−(B')³J²(Eraise/J)'
 
-implica(Eraise/J)'>0 para TODOt>=1. Rolle en la coordenada B da el signo negativo del determinante de cuatro densidades en cualesquiera cuatro puntos distintos TODOS>=1. El signo de primer modo sólo se usó después de pagar la cola completa.
+implies (Eraise/J)'>0 for ALL t>=1. Rolle in the coordinate B gives the negative sign of the four-density determinant at any four distinct points ALL >=1. The first-mode sign was only used after paying the complete tail.
 
-Para aplicar Andreief a toda la semirrecta0<t<infinito todavía falta el tramo0<t<1.087 certifica el signo en el origen y algún entorno no cuantificado, pero no llena ese intervalo. No se omite su contribución ni se pasa de una región de nodos de densidad al signo de la integral completa.
+To apply Andreief to the whole half-line 0<t<infinity the range 0<t<1 is still missing. 087 certifies the sign at the origin and some unquantified neighbourhood, but does not fill that interval. Its contribution is not omitted, nor does one pass from a region of density nodes to the sign of the complete integral.
 
-No se afirma transporte PF4 global, una nueva región W, cinco generadores, todos los órdenes o una ventana temporal. La prueba global de cuatro potencias085 permanece independiente y válida. El objeto estructural pendiente es el signo del nuevo Wronskiano de densidades en el compacto restante.
+Neither global PF4 transport, a new W region, five generators, all orders nor a time window is claimed. The global proof for four powers 085 remains independent and valid. The pending structural object is the sign of the new density Wronskian on the remaining compact range.

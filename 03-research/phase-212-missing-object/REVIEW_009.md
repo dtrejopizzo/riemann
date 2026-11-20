@@ -1,36 +1,36 @@
-# Revisión de la ronda 9 (`ROUND_009_G1.md`, `ROUND_009_G2.md`, `ROUND_009_G3.md`)
+# Review of round 9 (`ROUND_009_G1.md`, `ROUND_009_G2.md`, `ROUND_009_G3.md`)
 
-Ninguna candidata pasa la puerta. Signo global: OPEN. Los antecedentes citados por los memos conservan la
-etiqueta CITED; aquí se rederivó sólo lo indicado.
+No candidate passes the gate. Global sign: OPEN. The antecedents cited by the memos keep the
+label CITED; only what is indicated was re-derived here.
 
-## R9-a. Contactos como fuente (G1)
+## R9-a. Contacts as source (G1)
 
-- La inversión de papeles ya está en la fase 188: N_BUILD_001 (la densidad media `ρ₁ = 2e^{u/2}du` aporta un
-  término `≥ 0` sobre `P_T`; símbolo `m^♯ = m + 1/(¼+τ²)`) y N_BUILD_011 Teor. 1 (`ρ_κ` positiva sólo para
-  `κ ≥ κ* ≥ |C₀|/4 ≈ 1.343 > 1`). La media no alcanza; la fluctuación debe aportar. CITED.
-- Polarización de `Λ = μ∗log`: caso `W = 1` de L2_BUILD_017; traslada el signo al cuadrado. Repetición.
-- Anti-alineación de `U_μF` y `U_{log}F` sobre las direcciones negativas de `Arch`: residuo abierto (a) de
-  `06_OPEN_RESIDUES_DEAD_SUBROUTES.md`; sin identidad nueva es un acoplamiento 2×2 a precisión del margen.
+- The role inversion is already in phase 188: N_BUILD_001 (the mean density `ρ₁ = 2e^{u/2}du` contributes a
+  term `≥ 0` on `P_T`; symbol `m^♯ = m + 1/(¼+τ²)`) and N_BUILD_011 Thm. 1 (`ρ_κ` positive only for
+  `κ ≥ κ* ≥ |C₀|/4 ≈ 1.343 > 1`). The mean does not suffice; the fluctuation must contribute. CITED.
+- Polarization of `Λ = μ∗log`: case `W = 1` of L2_BUILD_017; transfers the sign to the square. Repetition.
+- Anti-alignment of `U_μF` and `U_{log}F` on the negative directions of `Arch`: open residue (a) of
+  `06_OPEN_RESIDUES_DEAD_SUBROUTES.md`; without a new identity it is a 2×2 coupling at the precision of the margin.
 
-## R9-b. Recursiones con historia (G2)
+## R9-b. Recursions with history (G2)
 
-- Las recursiones clásicas (Schur/Verblunsky, sistemas canónicos, matriz de transferencia por primos, inducción
-  en la ventana, Jacobi inverso, Sturm, Darboux, cadena de Sonin) están en el corpus y terminan en una de dos
-  formas: parámetros que exigen invertir la matriz (J3), o factores que no ven el peso. CITED.
-- Lema A, rederivado: en todo sistema de Beurling `Λ_𝒩` se define por `Λ_𝒩 ∗ 1 = log`, luego
-  `Σ_{d|ν}Λ_𝒩(d) = log ν`. Un paso que use sólo divisores y el monoide libre no puede fallar bajo un peso de
-  ese tipo; debe usar estructura aditiva. PROVED.
-- Lema B (el contacto aporta cero en el instante de entrada; el dato de etapa debe ser una ley de transporte
-  en `T`): CITED + ARGUED.
-- Candidata sin objeto: parámetro `ρ_n = Φ_T(ρ_d, d|n; ρ_{n−1}; log n)`. Falta `Φ` y la región.
+- The classical recursions (Schur/Verblunsky, canonical systems, transfer matrix over primes, induction
+  in the window, inverse Jacobi, Sturm, Darboux, Sonin chain) are in the corpus and end in one of two
+  ways: parameters that require inverting the matrix (J3), or factors that do not see the weight. CITED.
+- Lemma A, re-derived: in every Beurling system `Λ_𝒩` is defined by `Λ_𝒩 ∗ 1 = log`, hence
+  `Σ_{d|ν}Λ_𝒩(d) = log ν`. A step that uses only divisors and the free monoid cannot fail under a weight of
+  that type; it must use additive structure. PROVED.
+- Lemma B (the contact contributes zero at the instant of entry; the stage datum must be a transport law
+  in `T`): CITED + ARGUED.
+- Candidate without object: parameter `ρ_n = Φ_T(ρ_d, d|n; ρ_{n−1}; log n)`. Missing `Φ` and the region.
 
-## R9-c. Complemento del mapa (G3)
+## R9-c. Complement of the map (G3)
 
-- Taxonomía de 25 clases de método y lista P1–P12 de propiedades simultáneas del objeto: documento de trabajo;
-  la clasificación es ARGUED.
-- Operaciones fuera de la taxonomía examinadas: varianza con ley no lineal (R5-e), mayorización (N_BUILD_007),
-  reflexión con contactos que cruzan (R3-a), conteo puro (no se rompe en `c = 2`): todas con antecedente.
-- Sin marca textual en el corpus y sin objeto: (A) contracción de Birkhoff–Hopf con paso de ventana a ventana
-  dependiente de la historia; falta una aplicación no lineal `T → T′` que preserve positividad (la inclusión
-  `P_T ⊂ P_{T′}` transfiere el signo en sentido contrario). (B) funcional convexo con hessiano `a_T` y
-  certificado propio de convexidad (hueco de R5-a); falta una tercera fuente de convexidad.
+- Taxonomy of 25 method classes and list P1–P12 of simultaneous properties of the object: working document;
+  the classification is ARGUED.
+- Operations outside the taxonomy examined: variance with non-linear law (R5-e), majorization (N_BUILD_007),
+  reflection with crossing contacts (R3-a), pure counting (does not break at `c = 2`): all with antecedent.
+- Without textual mark in the corpus and without object: (A) Birkhoff–Hopf contraction with a window-to-window step
+  depending on the history; missing a non-linear map `T → T′` that preserves positivity (the inclusion
+  `P_T ⊂ P_{T′}` transfers the sign in the opposite direction). (B) convex functional with Hessian `a_T` and
+  its own convexity certificate (gap of R5-a); a third source of convexity is missing.

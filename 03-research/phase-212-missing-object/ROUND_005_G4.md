@@ -1,158 +1,158 @@
-# Ronda 5, semilla G4: inducción que alarga la ventana con la identidad de divisores en el paso
+# Round 5, seed G4: induction that lengthens the window with the divisor identity in the step
 
-Notación de `../phase-211-sign-sandbox/STATEMENT_001.md`. T_n := ½ log n. Para un vector de pesos real
-v = (v_n) sumable en cada ventana, a_T^{(v)} y λ_A(T; v) son la forma y el fondo con ese peine; v^{(n,x)}
-es v con la coordenada n sustituida por x. Etiquetas: PROVED / CITED / CONDITIONAL / ARGUED / OPEN /
-NO-GO / NUMÉRICO.
+Notation from `../phase-211-sign-sandbox/STATEMENT_001.md`. T_n := ½ log n. For a real weight vector
+v = (v_n) summable in each window, a_T^{(v)} and λ_A(T; v) are the form and the bottom with that comb; v^{(n,x)}
+is v with the coordinate n replaced by x. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN /
+NO-GO / NUMERICAL.
 
-## 0. Cotejo (se hace primero; manda sobre el resto)
+## 0. Cross-check (done first; it governs the rest)
 
-**(1) Antecedente más cercano, leído en primaria.**
+**(1) Closest antecedent, read as primary source.**
 
-- `phase-162-row-d-first-contact-closure/R162_802_T_EVOLUTION.md` §4 punto 4 y §5. Ya plantea la primera
-  integral de Riccati de Kreĭn–Bellman–Siegert para operadores de convolución truncados (la ventana como
-  flujo en T) y concluye, en su metaenunciado, que Λ∗1 = log es una identidad de convolución sobre los
-  tests que dentro del flujo actúa como un desplazamiento de ventana; por tanto sólo produce relaciones
-  entre f(T) y f(T + ½ log m) lineales en el peso, y «una cantidad monótona que prohíba el contacto tendría
-  que ser no lineal en el peso en las trazas de borde del encendido; no se identifica ninguna». Es
-  exactamente la semilla G4 (identidad de divisores en el paso inductivo, dato de borde, Riccati).
-- `phase-162-row-d-first-contact-closure/R162_2701_TATE_CANONICAL_SYSTEM.md` §§0–1: el sistema canónico
-  2×2 de transferencia por primos; cada factor es un boost conjugado por propagación libre, J-unitario
-  para todo valor del coeficiente de reflexión, y el sistema no detecta ningún falsificador (borrado,
-  pesos atómicos arbitrarios, Beurling, Λχ₂). Es el «dato de puerto» con actualización exacta por cruce.
-- `phase-197-barrier-theorem/BARRIER_W_001_…_NO_GO.md` §§1–6 (leído entero): toda invariante de la clase
-  𝒮 (extensión por cero, concavidad en el peine, continuidad en T, invisibilidad de la entrada U0,
-  paridad, resolvente compacta) vale para a_P, truncaciones, cΛ, O_6 y Beurling; el único dato que lee Λ
-  en un cruce es el apareamiento de Hellmann–Feynman con el minimizador.
-- `phase-211-sign-sandbox/ROUND_008_C.md` Prop. 2.3 y Prop. 5 (contactos entrantes aportan 0 a todo
-  orden en el marco de extensión por cero; Grönwall en T = (★) más una tasa) y
-  `phase-165-critical-interlacing/R165_202_NODE_FLOW.md` fila 1.4 (fórmula virial de variación).
-- `ROUND_001_B.md` / LEDGER K2 (parámetros de Schur del problema de extensión desde Λ exacta) y
-  `REVIEW_003.md` / `RULES_AVOID.md` J8 (Riccati/Darboux con el peine como superpotencial, fase 70).
+- `phase-162-row-d-first-contact-closure/R162_802_T_EVOLUTION.md` §4 point 4 and §5. It already poses the first
+  Riccati integral of Kreĭn–Bellman–Siegert for truncated convolution operators (the window as a
+  flow in T) and concludes, in its meta-statement, that Λ∗1 = log is a convolution identity on the
+  tests which inside the flow acts as a window shift; therefore it only produces relations
+  between f(T) and f(T + ½ log m) linear in the weight, and "a monotone quantity forbidding contact would have
+  to be nonlinear in the weight in the boundary traces of the switch-on; none is identified". It is
+  exactly seed G4 (divisor identity in the inductive step, boundary datum, Riccati).
+- `phase-162-row-d-first-contact-closure/R162_2701_TATE_CANONICAL_SYSTEM.md` §§0–1: the 2×2 canonical
+  system of transfer by primes; each factor is a boost conjugated by free propagation, J-unitary
+  for every value of the reflection coefficient, and the system detects no falsifier (deletion,
+  arbitrary atomic weights, Beurling, Λχ₂). It is the "port datum" with exact update per crossing.
+- `phase-197-barrier-theorem/BARRIER_W_001_…_NO_GO.md` §§1–6 (read in full): every invariant of the class
+  𝒮 (extension by zero, concavity in the comb, continuity in T, invisibility of the entry U0,
+  parity, compact resolvent) holds for a_P, truncations, cΛ, O_6 and Beurling; the only datum that reads Λ
+  at a crossing is the Hellmann–Feynman pairing with the minimizer.
+- `phase-211-sign-sandbox/ROUND_008_C.md` Prop. 2.3 and Prop. 5 (incoming contacts contribute 0 to all
+  orders in the extension-by-zero framework; Grönwall in T = (★) plus a rate) and
+  `phase-165-critical-interlacing/R165_202_NODE_FLOW.md` row 1.4 (virial variation formula).
+- `ROUND_001_B.md` / LEDGER K2 (Schur parameters of the extension problem from exact Λ) and
+  `REVIEW_003.md` / `RULES_AVOID.md` J8 (Riccati/Darboux with the comb as superpotential, phase 70).
 
-**(2) Objeto o afirmación nuevos.** No logré escribir un invariante I_T con actualización Φ_n que cumpla
-(a)–(c) de la semilla. Lo único nuevo son tres lemas cortos (§2) que explican por qué la exigencia (a)
-—«Φ_n conserva la positividad cuando, y sólo cuando, el peso entrante es el dictado por los divisores»—
-no puede satisfacerse en el instante del cruce por ninguna invariante cuyo signo determine λ_A, y por qué
-la regla «el peso nuevo está determinado por los anteriores» no distingue Λ de ningún otro peso.
+**(2) New object or statement.** I did not manage to write an invariant I_T with update Φ_n satisfying
+(a)–(c) of the seed. The only new things are three short lemmas (§2) explaining why requirement (a)
+—"Φ_n preserves positivity when, and only when, the incoming weight is the one dictated by the divisors"—
+cannot be satisfied at the instant of crossing by any invariant whose sign determines λ_A, and why
+the rule "the new weight is determined by the previous ones" does not distinguish Λ from any other weight.
 
-**(3) Por qué evitaría la dificultad del antecedente.** No la evita: los lemas de §2 confirman y precisan
-el diagnóstico de R162_802 §5 y de BARRIER_W_001 §6; no aportan la cantidad no lineal en el peso que
-ambos piden.
+**(3) Why it would avoid the antecedent's difficulty.** It does not avoid it: the lemmas of §2 confirm and sharpen
+the diagnosis of R162_802 §5 and of BARRIER_W_001 §6; they do not provide the quantity nonlinear in the weight that
+both ask for.
 
-**(4) Identidad que conectaría con la positividad global.** Ninguna nueva. La reformulación por intervalos
-admisibles de §2 (Lema 2) es una reescritura coordenada a coordenada del conjunto convexo K_T de la fase
-197 (W2); B3 del índice: objetivo válido, no avance.
+**(4) Identity that would connect with global positivity.** No new one. The reformulation by admissible
+intervals of §2 (Lemma 2) is a coordinate-by-coordinate rewriting of the convex set K_T of phase
+197 (W2); B3 of the index: valid target, not progress.
 
-**Veredicto del cotejo: repetición** (R162_802 §§4–5 para el flujo de Riccati y el uso de Λ∗1 = log en el
-flujo; R162_2701 para el dato de puerto por cruce; BARRIER_W_001 para la inducción en la ventana). Por la
-regla 3 del brief la memo debería terminar aquí; se añaden sólo los tres lemas de §2 porque son cortos,
-completos y delimitan qué parte de la semilla es imposible tal como se enunció.
+**Verdict of the cross-check: repetition** (R162_802 §§4–5 for the Riccati flow and the use of Λ∗1 = log in the
+flow; R162_2701 for the per-crossing port datum; BARRIER_W_001 for induction in the window). By
+rule 3 of the brief the memo should end here; only the three lemmas of §2 are added because they are short,
+complete and delimit which part of the seed is impossible as stated.
 
-## 1. Objeto
+## 1. Object
 
-No hay objeto. Intenté tres invariantes; los tres caen en antecedentes:
+There is no object. I tried three invariants; all three fall into antecedents:
 
-- I_T = (a_T, P_T) con la regla de extensión por cero: es 𝒮 (BARRIER_W_001 §1).
-- I_T = matriz de transferencia de Kreĭn de la ventana (o el resolvente de borde Γ_T(±T, ±T), dato de
-  Dirichlet-a-Neumann de la ventana) con la corrección polar de rango dos de las condiciones de Tate: es
-  R162_802 §4 punto 4 y R162_2701. Su ecuación de Bellman ∂_T Γ = −γ_T γ_T* tiene forzante de signo fijo
-  para **todo** núcleo; el peso entra sólo linealmente en la ecuación integral de γ_T, y la pérdida de
-  positividad no es salida de un cono sino explosión de la solución (anulación de un determinante:
-  W-det, 𝒦_W). ARGUED aquí; los enunciados están en esos archivos.
-- I_T = intervalo admisible de cada coordenada del peine dados los anteriores (§2, Lema 2): reescritura de
+- I_T = (a_T, P_T) with the extension-by-zero rule: it is 𝒮 (BARRIER_W_001 §1).
+- I_T = Kreĭn transfer matrix of the window (or the boundary resolvent Γ_T(±T, ±T), Dirichlet-to-Neumann
+  datum of the window) with the rank-two polar correction of the Tate conditions: it is
+  R162_802 §4 point 4 and R162_2701. Its Bellman equation ∂_T Γ = −γ_T γ_T* has a forcing of fixed sign
+  for **every** kernel; the weight enters only linearly in the integral equation for γ_T, and the loss of
+  positivity is not an exit from a cone but a blow-up of the solution (vanishing of a determinant:
+  W-det, 𝒦_W). ARGUED here; the statements are in those files.
+- I_T = admissible interval of each comb coordinate given the previous ones (§2, Lemma 2): a rewriting of
   K_T.
 
-## 2. Tres lemas sobre la semilla (sin signo)
+## 2. Three lemmas on the seed (without sign)
 
-**Lema 1 (neutralidad del cruce; PROVED relativo a la continuidad en T, CITED P47 lem:contA, BARRIER_W_001
-(S3)).** Sea I_T cualquier invariante tal que «I_T es positivo» ⟺ λ_A(T; v) ≥ 0, para todo T y todo v en
-una clase que contenga v^{(n,x)} para x en un intervalo. Entonces la positividad de I_{T_n+} es la misma
-para todos esos x; en particular ninguna regla Φ_n puede conservar la positividad «sólo cuando» x es el
-valor dictado por los divisores.
+**Lemma 1 (neutrality of the crossing; PROVED relative to continuity in T, CITED P47 lem:contA, BARRIER_W_001
+(S3)).** Let I_T be any invariant such that "I_T is positive" ⟺ λ_A(T; v) ≥ 0, for all T and all v in
+a class containing v^{(n,x)} for x in an interval. Then the positivity of I_{T_n+} is the same
+for all those x; in particular no rule Φ_n can preserve positivity "only when" x is the
+value dictated by the divisors.
 
-*Demostración.* Para F ∈ L²(I_{T_n}), c_F es continua con soporte en [−2T_n, 2T_n] y c_F(±2T_n) = 0, luego
-el término −x Re c_F(log n) es nulo y λ_A(T_n; v^{(n,x)}) no depende de x. Por la continuidad de
-T ↦ λ_A(T; v^{(n,x)}) (lem:contA usa sólo la sumabilidad de los pesos, BARRIER_W_001 (S3)), el signo de
-λ_A justo después de T_n es el de λ_A(T_n), igual para todo x, salvo en el caso de borde λ_A(T_n) = 0;
-y en ese caso el módulo U2 (v_n C_T / log(1/2η), CITED en BARRIER_W_001 (S3)) es el mismo orden para todo
+*Proof.* For F ∈ L²(I_{T_n}), c_F is continuous with support in [−2T_n, 2T_n] and c_F(±2T_n) = 0, hence
+the term −x Re c_F(log n) vanishes and λ_A(T_n; v^{(n,x)}) does not depend on x. By the continuity of
+T ↦ λ_A(T; v^{(n,x)}) (lem:contA uses only summability of the weights, BARRIER_W_001 (S3)), the sign of
+λ_A just after T_n is that of λ_A(T_n), the same for all x, except in the boundary case λ_A(T_n) = 0;
+and in that case the modulus U2 (v_n C_T / log(1/2η), CITED in BARRIER_W_001 (S3)) is of the same order for all
 x ≥ 0. ∎
 
-Lectura. La información del peso entrante no se decide en el cruce sino a lo largo de [T_n, ∞): el
-«forzante» −x Re c_F(log n) sólo ve funciones con masa a distancia ≥ log n, y crece con el collar. Un Φ_n
-puntual no puede llevar signo; el paso inductivo tiene que incluir la evolución arquimediana posterior, y
-entonces deja de ser una función del peso entrante solo.
+Reading. The information of the incoming weight is not decided at the crossing but along [T_n, ∞): the
+"forcing" −x Re c_F(log n) only sees functions with mass at distance ≥ log n, and grows with the collar. A pointwise Φ_n
+cannot carry a sign; the inductive step has to include the subsequent archimedean evolution, and
+then it ceases to be a function of the incoming weight alone.
 
-**Lema 2 (intervalo admisible; PROVED).** Para T y v fijos sea S_n(T) := {x ∈ ℝ : λ_A(T; v^{(n,x)}) ≥ 0}.
-Entonces S_n(T) es un intervalo cerrado, y si λ_A(T; v) > 0 contiene [v_n − λ_A(T; v), v_n + λ_A(T; v)].
+**Lemma 2 (admissible interval; PROVED).** For fixed T and v let S_n(T) := {x ∈ ℝ : λ_A(T; v^{(n,x)}) ≥ 0}.
+Then S_n(T) is a closed interval, and if λ_A(T; v) > 0 it contains [v_n − λ_A(T; v), v_n + λ_A(T; v)].
 
-*Demostración.* x ↦ a_T^{(v^{(n,x)})}(F) es afín para cada F, luego x ↦ λ_A(T; v^{(n,x)}) es un ínfimo de
-funciones afines: cóncava y semicontinua superior; su conjunto de superniveles {≥ 0} es un intervalo
-cerrado. Como |Re c_F(log n)| ≤ ‖F‖² = 1, λ_A(T; v^{(n,x)}) ≥ λ_A(T; v) − |x − v_n|. ∎
+*Proof.* x ↦ a_T^{(v^{(n,x)})}(F) is affine for each F, hence x ↦ λ_A(T; v^{(n,x)}) is an infimum of
+affine functions: concave and upper semicontinuous; its superlevel set {≥ 0} is a closed
+interval. Since |Re c_F(log n)| ≤ ‖F‖² = 1, λ_A(T; v^{(n,x)}) ≥ λ_A(T; v) − |x − v_n|. ∎
 
-Consecuencia. En toda ventana con λ_A(T) > 0 (en particular en todo T ≤ ½ log 5) la parte «sólo cuando»
-de (a) es falsa: los pesos entrantes x con |x − v_n(Λ)| < λ_A(T) conservan la positividad. Coincide con
-R4-f y A1 (el veredicto no distingue c cerca de 1). La inducción por intervalos se escribe: (★) ⟺ para
-todo n, v_n(Λ) ∈ ⋂_{T ≥ T_n} S_n(T) con las demás coordenadas en Λ; es una reformulación (B3).
+Consequence. In every window with λ_A(T) > 0 (in particular at every T ≤ ½ log 5) the "only when" part
+of (a) is false: incoming weights x with |x − v_n(Λ)| < λ_A(T) preserve positivity. This coincides with
+R4-f and A1 (the verdict does not distinguish c near 1). Induction by intervals is written: (★) ⟺ for
+all n, v_n(Λ) ∈ ⋂_{T ≥ T_n} S_n(T) with the other coordinates at Λ; it is a reformulation (B3).
 
-**Lema 3 (la regla de divisores no restringe el peso; PROVED).** Para todo peso a: ℕ_{≥2} → ℝ, con
-L_a := a ∗ 1 (a(1) := 0), vale a(n) = L_a(n) − Σ_{d|n, d<n} a(d). Luego «el peso nuevo está determinado
-por los pesos en los divisores propios» es cierto para todo a con su propio L_a; la información específica
-es L_Λ = log, es decir, que el coeficiente de la medida μ_Λ ∗ μ_1 en el desfase u = log n es u veces el de
-μ_1 (μ_a := Σ a(n) n^{−1/2} δ_{log n}, μ_1 con coeficientes 1). *Demostración:* definición de ∗. ∎
+**Lemma 3 (the divisor rule does not constrain the weight; PROVED).** For every weight a: ℕ_{≥2} → ℝ, with
+L_a := a ∗ 1 (a(1) := 0), one has a(n) = L_a(n) − Σ_{d|n, d<n} a(d). Hence "the new weight is determined
+by the weights at the proper divisors" is true for every a with its own L_a; the specific information
+is L_Λ = log, i.e., that the coefficient of the measure μ_Λ ∗ μ_1 at the offset u = log n is u times that of
+μ_1 (μ_a := Σ a(n) n^{−1/2} δ_{log n}, μ_1 with coefficients 1). *Proof:* definition of ∗. ∎
 
-Para cΛ: L = c·log; para a_P: L = log de la parte P-rugosa; para un sistema de Beurling: el logaritmo de
-su norma. La regla «Λ(n) = log n − Σ_{d<n}Λ(d)» sólo dice L = log, que es una propiedad de la posición del
-desfase, no de los pesos anteriores. En el flujo en T, la convolución μ_Λ ∗ μ_1 compone desfases (suma de
-log d y log(n/d)), mientras que la recursión de la ventana compone longitudes (concatenación de
-intervalos, producto de matrices de transferencia): las dos operaciones no coinciden. Que no exista un
-diccionario no lineal entre ellas es ARGUED (es la lectura de R162_802 §5: dentro del flujo Λ∗1 = log es un
-desplazamiento de ventana, lineal en el peso).
+For cΛ: L = c·log; for a_P: L = log of the P-rough part; for a Beurling system: the logarithm of
+its norm. The rule "Λ(n) = log n − Σ_{d<n}Λ(d)" only says L = log, which is a property of the position of the
+offset, not of the previous weights. In the flow in T, the convolution μ_Λ ∗ μ_1 composes offsets (sum of
+log d and log(n/d)), while the window recursion composes lengths (concatenation of
+intervals, product of transfer matrices): the two operations do not coincide. That no nonlinear
+dictionary exists between them is ARGUED (it is the reading of R162_802 §5: inside the flow Λ∗1 = log is a
+window shift, linear in the weight).
 
-## 3. Mecanismo
+## 3. Mechanism
 
-Ninguno. La pregunta de la semilla sobre el forzante tiene esta respuesta (ARGUED, con las fuentes de §0):
-en la ecuación de Bellman del resolvente de la ventana el término de Riccati −γ_Tγ_T* tiene signo fijo
-para todo núcleo, de modo que el cono es invariante para cualquier peso; el peine entra sólo en la columna
-de borde γ_T, linealmente, como una delta en el desfase log n que en T = T_n acopla exactamente los puntos
-±T (factor J-unitario de tipo boost, R162_2701 §1, admisible para cualquier coeficiente). La identidad de
-divisores no le da signo al forzante porque el forzante ya tiene signo fijo y no es lo que decide; lo que
-decide es la ausencia de explosión, que es la anulación de un determinante (W-det) o el propio n₋(T) = 0
+None. The seed's question about the forcing has this answer (ARGUED, with the sources of §0):
+in the Bellman equation for the window resolvent the Riccati term −γ_Tγ_T* has fixed sign
+for every kernel, so the cone is invariant for any weight; the comb enters only in the boundary
+column γ_T, linearly, as a delta at the offset log n which at T = T_n couples exactly the points
+±T (J-unitary boost-type factor, R162_2701 §1, admissible for any coefficient). The divisor identity
+gives no sign to the forcing because the forcing already has a fixed sign and is not what decides; what
+decides is the absence of blow-up, which is the vanishing of a determinant (W-det) or n₋(T) = 0 itself
 (BARRIER_W_001 W1).
 
-## 4. Controles
+## 4. Controls
 
-No hay paso de signo; los tres lemas son estructurales y valen sin cambios para c = 2, c no entero, a_P
-y Davenport–Heilbronn (Lema 1 sólo usa sumabilidad y soporte; Lema 2, afinidad en el peso; Lema 3, la
-definición de ∗). Eso es lo esperado de lemas sin signo y confirma que ninguno es mecanismo. En particular
-para c = 2 el peso 2Λ cumple la regla de divisores con L = 2 log = log(n²): el factor arquimediano fijo
-no aparece en ninguna de las tres invariantes de §1 de modo que la rompa; un mecanismo correcto tendría que
-romperse ahí y éste no lo hace.
+There is no sign step; the three lemmas are structural and hold unchanged for c = 2, non-integer c, a_P
+and Davenport–Heilbronn (Lemma 1 only uses summability and support; Lemma 2, affinity in the weight; Lemma 3, the
+definition of ∗). That is what is expected of lemmas without sign and confirms that none is a mechanism. In particular
+for c = 2 the weight 2Λ satisfies the divisor rule with L = 2 log = log(n²): the fixed archimedean factor
+does not appear in any of the three invariants of §1 in a way that breaks it; a correct mechanism would have to
+break there and this one does not.
 
-## 5. Veredicto propio
+## 5. Own verdict
 
-**No logré escribir un objeto que cumpla A1–A6.** Repetición de R162_802 §§4–5, R162_2701 y BARRIER_W_001.
+**I did not manage to write an object satisfying A1–A6.** Repetition of R162_802 §§4–5, R162_2701 and BARRIER_W_001.
 
-## Resultado
+## Result
 
-Sin mecanismo nuevo. Tres lemas sin signo: Lema 1 y Lema 2 PROVED (relativos a lem:contA y a U2, CITED);
-Lema 3 PROVED; la lectura del forzante de Riccati ARGUED.
+No new mechanism. Three lemmas without sign: Lemma 1 and Lemma 2 PROVED (relative to lem:contA and to U2, CITED);
+Lemma 3 PROVED; the reading of the Riccati forcing ARGUED.
 
-## Qué se probó
+## What was proved
 
-La exigencia «conservar la positividad en el cruce sólo con el peso dictado» es imposible para cualquier
-invariante cuyo signo determine λ_A (Lemas 1–2); la regla de divisores, leída como regla de actualización,
-vale para todo peso con su propio L_a (Lema 3), y su contenido L = log es posicional.
+The requirement "preserve positivity at the crossing only with the dictated weight" is impossible for any
+invariant whose sign determines λ_A (Lemmas 1–2); the divisor rule, read as an update rule,
+holds for every weight with its own L_a (Lemma 3), and its content L = log is positional.
 
-## Qué falló y por qué
+## What failed and why
 
-Entre cruces el espacio crece y la forma no cambia; en el cruce el término entrante es invisible. El paso
-de signo tendría que ser una cantidad no lineal en el peso sobre las trazas de borde del encendido, que
-R162_802 ya pidió y no identificó; el dato de puerto de Kreĭn o Tate es ciego a los falsificadores.
+Between crossings the space grows and the form does not change; at the crossing the incoming term is invisible. The sign
+step would have to be a quantity nonlinear in the weight on the boundary traces of the switch-on, which
+R162_802 already asked for and did not identify; the Kreĭn or Tate port datum is blind to the falsifiers.
 
-## Siguiente paso concreto
+## Concrete next step
 
-Ninguno dentro de esta semilla. Lo único no cubierto es una relación entre la composición de desfases
-(μ_Λ ∗ μ_1 = u·μ_1) y la composición de longitudes de la ventana que no sea lineal en el peso; requiere un
-objeto escrito antes de cualquier derivación. No abrí en primaria: fase 64 (thm:KEP3), fase 70
-(E70_10–12), R162_503, R162_903, ni los archivos de la fase 116/114 con «Dirichlet-to-Neumann».
+None within this seed. The only thing not covered is a relation between the composition of offsets
+(μ_Λ ∗ μ_1 = u·μ_1) and the composition of window lengths that is not linear in the weight; it requires a
+written object before any derivation. Not opened as primary sources: phase 64 (thm:KEP3), phase 70
+(E70_10–12), R162_503, R162_903, nor the files of phase 116/114 with "Dirichlet-to-Neumann".

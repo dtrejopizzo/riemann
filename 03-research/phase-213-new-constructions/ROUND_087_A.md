@@ -1,28 +1,28 @@
-# Un solo listado de polos: comparación bilateral con la ventana efectiva
+# A single list of poles: two-sided comparison with the effective window
 
-Sea v=(v₁,…,v_n) una lista finita, con repeticiones permitidas, S=Σ1/v_j en un compacto J⊂(0,∞), V=min v_j y ε=Σv_j^(−3). Sea R(v,L) el menor cociente de la forma completa sobre los numeradores de ese listado, recortados a longitud L y normalizados por la norma recortada. Uniformemente para V grande, se tiene, para todo 0<α<1 y 0<s<1/2,
+Let v=(v₁,…,v_n) be a finite list, repetitions allowed, S=Σ1/v_j in a compact set J⊂(0,∞), V=min v_j and ε=Σv_j^(−3). Let R(v,L) be the smallest quotient of the full form over the numerators of that list, cut to length L and normalized by the cut norm. Uniformly for V large, one has, for all 0<α<1 and 0<s<1/2,
 
     λ_W(S)−C_{J,α}(log V / V)^(2α/3)
        ≤ inf_{L>0} R(v,L) ≤ R(v,2S)
        ≤ λ_W(S)+C_{J,s} ε^(2s/3)(1+|log ε|).
 
-En el corte 2S vale además R(v,2S)≥λ_W(S). Aquí ε≤S/V². Aunque 086 optimizaba también sobre los listados y recuperaba por polos repetidos, cada listado individual con las condiciones anteriores aproxima el mismo mínimo a su propio S. Por ejemplo el error es O_{J,β}(V^(−β)) para cualquier β<2/3, tanto al corte 2S como para el ínfimo sobre las longitudes. Las constantes no se han evaluado.
+At the cutoff 2S one also has R(v,2S)≥λ_W(S). Here ε≤S/V². Although 086 also optimized over the lists and recovered through repeated poles, each individual list under the above conditions approximates the same minimum at its own S. For example the error is O_{J,β}(V^(−β)) for any β<2/3, both at the cutoff 2S and for the infimum over the lengths. The constants have not been evaluated.
 
-**Cota inferior para cualquier corte.** La reflexión de 085 da log ||exp(σt)f||≤Σ log((1+σ/v_j)/(1−σ/v_j)) para ||f||=1. Si σ≤V/2, la serie de artanh acota esta expresión por 2σS+Cσ³ S/V². Tomar σ=V^(2/3)(log V)^(1/3), H=2S+D(log V/V)^(2/3), con D>C sup J+3. El argumento de 086 da ||exp(t) f 1_{t>H}||≤exp(H−σ(H−2S)+Cσ³ S/V²)≤V^(−2) eventualmente. Para L≤H la inclusión de ventanas da R≥λ_W(H/2). Para L>H, el cruce arquimediano de Carleman, el peine completo y los momentos polares se pagan como en 086 con coste O_J(V^(−2)), también al normalizar. El módulo de potencia de 077 en un compacto ligeramente mayor que J da el lado inferior.
+**Lower bound for any cutoff.** The reflection of 085 gives log ||exp(σt)f||≤Σ log((1+σ/v_j)/(1−σ/v_j)) for ||f||=1. If σ≤V/2, the artanh series bounds this expression by 2σS+Cσ³ S/V². Take σ=V^(2/3)(log V)^(1/3), H=2S+D(log V/V)^(2/3), with D>C sup J+3. The argument of 086 gives ||exp(t) f 1_{t>H}||≤exp(H−σ(H−2S)+Cσ³ S/V²)≤V^(−2) eventually. For L≤H the inclusion of windows gives R≥λ_W(H/2). For L>H, the Carleman archimedean crossing, the full comb and the polar moments are paid as in 086 at cost O_J(V^(−2)), also after normalizing. The power modulus of 077 on a compact set slightly larger than J gives the lower side.
 
-**Cota superior para el listado prescrito.** Tomar t como variable física y B(z)=∏(1−z/v_j)/(1+z/v_j). Sea E el multiplicador de retardo exp(−2Sz). Sobre el eje imaginario, la fase de B es −2Σ arctan(ξ/v_j). De |u−arctan u|≤|u|³/3 y el módulo unitario se obtiene exactamente el mayorante
+**Upper bound for the prescribed list.** Take t as physical variable and B(z)=∏(1−z/v_j)/(1+z/v_j). Let E be the delay multiplier exp(−2Sz). On the imaginary axis, the phase of B is −2Σ arctan(ξ/v_j). From |u−arctan u|≤|u|³/3 and unit modulus one obtains exactly the majorant
 
     |B(iξ)−E(iξ)| ≤ min(2, (2/3) ε |ξ|³).
 
-Para 0≤q≤s/2 esto da ||(B*−E*)F||_{H^q} ≤ C_s ε^((s−q)/3)||F||_{H^s}, donde los asteriscos denotan multiplicadores adjuntos sobre toda la recta. Elegir un minimizador normalizado de la ventana trasladada a [0,2S]; su extensión por cero tiene norma H^s acotada uniformemente en J por 077. Por soporte, P_+E*F=0, con P_+ la restricción a tiempos positivos. Como en 086, Q_B F=F−B P_+B*F pertenece al modelo racional del listado. Así para g=1_[0,2S] Q_B F el error e=F−g satisface la misma cota en H^q, hasta una constante uniforme. Se usa que las restricciones a semirrectas e intervalos son acotadas uniformemente para q∈[0,s/2], por interpolación entre L² y H^(s/2). En particular ||g||→1 uniformemente.
+For 0≤q≤s/2 this gives ||(B*−E*)F||_{H^q} ≤ C_s ε^((s−q)/3)||F||_{H^s}, where the asterisks denote adjoint multipliers on the whole line. Choose a normalized minimizer of the window translated to [0,2S]; its extension by zero has H^s norm bounded uniformly in J by 077. By support, P_+E*F=0, with P_+ the restriction to positive times. As in 086, Q_B F=F−B P_+B*F belongs to the rational model of the list. Thus for g=1_[0,2S] Q_B F the error e=F−g satisfies the same bound in H^q, up to a uniform constant. One uses that restrictions to half-lines and intervals are uniformly bounded for q∈[0,s/2], by interpolation between L² and H^(s/2). In particular ||g||→1 uniformly.
 
-Sobre este soporte fijo, la parte acotada de W tiene norma O_J(1); el peso logarítmico arquimediano está dominado por C q^(−1)(1+ξ²)^q para q>0 pequeño. Elegir q=1/|log ε| para ε suficientemente pequeño. La ecuación propia de F cancela los términos lineales, de modo que
+On this fixed support, the bounded part of W has norm O_J(1); the archimedean logarithmic weight is dominated by C q^(−1)(1+ξ²)^q for small q>0. Choose q=1/|log ε| for ε small enough. The eigen-equation of F cancels the linear terms, so that
     
     W(g)/||g||²−λ_W(S)=[W(e)−λ_W(S)||e||²]/||g||²
                           ≪_{J,s} (1+|log ε|) ε^(2s/3).
 
-El paso de fase cúbica se usa antes de la estimación de energía; un control meramente cualitativo de la densidad no da esta comparación finita.
+The cubic phase step is used before the energy estimate; a merely qualitative density control does not give this finite comparison.
 
-**Límite del mayorante de fase.** Para n polos iguales v=n/S con S fijo, ε=S³/n². En ξ=ε^(−1/3) la diferencia de fases tiende a 2/3, pues el siguiente término en la expansión de arctan cuesta O(n^(−2/3)). Por continuidad en frecuencia esto da norma ≳ε^(s/3) para B−E de H^s a L². El cálculo muestra la escala donde deja de funcionar la aproximación uniforme del multiplicador; no demuestra optimalidad de la tasa de los mínimos ni de los errores tras proyectar.
+**Limit of the phase majorant.** For n equal poles v=n/S with S fixed, ε=S³/n². At ξ=ε^(−1/3) the phase difference tends to 2/3, since the next term in the expansion of arctan costs O(n^(−2/3)). By continuity in frequency this gives norm ≳ε^(s/3) for B−E from H^s to L². The computation shows the scale where the uniform approximation of the multiplier stops working; it does not prove optimality of the rate of the minima nor of the errors after projecting.
 
-**Cotejo.** POWER_CONFLUENT_BRIDGE_014 §6 tiene distancias exactas para tests exponenciales en el modelo repetido; 086 identifica el límite variacional; 077 suministra regularidad y continuidad en ventana. La contribución presente es la comparación con error para un listado prescrito, incluidos polos distintos o confluyentes y todos los términos aritméticos. No es una cota uniforme en S→∞ ni una prueba de signo para la ventana aproximada.
+**Cross-check.** POWER_CONFLUENT_BRIDGE_014 §6 has exact distances for exponential tests in the repeated model; 086 identifies the variational limit; 077 supplies regularity and continuity in the window. The present contribution is the comparison with error for a prescribed list, including distinct or confluent poles and all arithmetic terms. It is not a bound uniform as S→∞ nor a proof of sign for the approximated window.

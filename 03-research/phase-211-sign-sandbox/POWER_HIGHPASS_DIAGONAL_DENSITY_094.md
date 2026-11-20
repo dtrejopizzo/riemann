@@ -1,145 +1,145 @@
-# POWER_HIGHPASS_DIAGONAL_DENSITY_094 — Umbral exacto de densidad L² de una unión filtrada
+# POWER_HIGHPASS_DIAGONAL_DENSITY_094 — Exact L² density threshold of a filtered union
 
-Estado: **PROVED, auditorías independientes aprobadas.** Véase `POWER_HIGHPASS_DIAGONAL_DENSITY_AUDIT_094.md`. Se calcula una distancia L² sin peso y se caracteriza cuándo una UNIÓN diagonal de espacios Q^rV_n es densa. No se afirma densidad de su envolvente lineal, continuidad de W en L² ni positividad de términos cruzados entre espacios distintos. Papers intactos.
+Status: **PROVED, independent audits approved.** See `POWER_HIGHPASS_DIAGONAL_DENSITY_AUDIT_094.md`. An unweighted L² distance is computed and it is characterized when a diagonal UNION of spaces Q^rV_n is dense. Density of its linear span, continuity of W in L², and positivity of cross terms between different spaces are not claimed. Papers untouched.
 
-## 1. Consulta y diferencia precisa
+## 1. Consultation and precise difference
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D; releídos BRIDGE002, THREE002§8, PACKET_SCOPE009, CONFLUENT_BRIDGE014, HIGHPASS015, JOINT_SCALE016, DESCENT_AUDIT016,053–054 y059–060.
+Consulted: the project rules, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D; reread BRIDGE002, THREE002§8, PACKET_SCOPE009, CONFLUENT_BRIDGE014, HIGHPASS015, JOINT_SCALE016, DESCENT_AUDIT016, 053–054 and 059–060.
 
-DESCENT_AUDIT016§§2–3 ya impide densidad en L²_eta, eta>0 común: incluso un filtro Q anula un momento continuo, y filtros de orden creciente sólo permiten límite fuerte cero. No se reintenta ese puente fuerte. THREE002§8 prueba una obstrucción L² para otra familia, con tasas que crecen exponencialmente y concentración temporal.
+DESCENT_AUDIT016§§2–3 already prevents density in L²_eta, common eta>0: even one filter Q kills a continuous moment, and filters of increasing order only allow a zero strong limit. That strong bridge is not retried. THREE002§8 proves an L² obstruction for another family, with exponentially growing rates and temporal concentration.
 
-La diferencia aquí es una distancia EXACTA en L² SIN peso, con tasa u FIJA y TODOS los numeradores del bloque. Permite cuantificar el régimen conjunto r²/n, incluso cuando los espacios no están anidados. El determinante binomial y Dodgson son álgebra clásica; no se reclama novedad de esas herramientas.
+The difference here is an EXACT distance in UNWEIGHTED L², with FIXED rate u and ALL numerators of the block. It allows quantifying the joint regime r²/n, even when the spaces are not nested. The binomial determinant and Dodgson are classical algebra; no novelty of these tools is claimed.
 
-## 2. Espacios y cambio unitario, con sus constantes
+## 2. Spaces and unitary change, with their constants
 
-Fijar u>0 y definir, en transformadas de Laplace de funciones causales,
+Fix u>0 and define, in Laplace transforms of causal functions,
 
     V_n(u)={P(s)/(s+u)^n: deg P<n}, n>=1,
-    Q(s)=s/(s+u), E_(n,r)=Q^r V_n(u), r>=0 entero.
+    Q(s)=s/(s+u), E_(n,r)=Q^r V_n(u), r>=0 integer.
 
-La norma temporal es la L² ordinaria. Plancherel usa
+The time norm is the ordinary L² norm. Plancherel uses
 
     ||f||²=(1/(2pi))int_R |F(i tau)|²d tau.
 
-Poner z=(s−u)/(s+u). El mapa unitario entre H² del disco y el espacio causal es
+Put z=(s−u)/(s+u). The unitary map between H² of the disc and the causal space is
 
     F(s)=sqrt(2u)/(s+u) H((s−u)/(s+u)).             (CAYLEY)
 
-En la frontera, |z|=1 y |dtheta|=2u d tau/(u²+tau²), exactamente el módulo cuadrado del prefactor. Por tanto ||f||²=int|H(e^(itheta))|²dtheta/(2pi). El mapa sobre polinomios da la base ortonormal de Laguerre; su completitud también sigue de la densidad confluente014. Así la isometría se extiende sobre todo L² causal.
+On the boundary, |z|=1 and |dtheta|=2u d tau/(u²+tau²), exactly the squared modulus of the prefactor. Hence ||f||²=int|H(e^(itheta))|²dtheta/(2pi). The map on polynomials gives the orthonormal Laguerre basis; its completeness also follows from the confluent density 014. Thus the isometry extends to all of causal L².
 
-CAYLEY lleva V_n sobre los polinomios de grado<n, y Q=(1+z)/2. En consecuencia E_(n,r) corresponde exactamente al subespacio
+CAYLEY carries V_n onto the polynomials of degree<n, and Q=(1+z)/2. Consequently E_(n,r) corresponds exactly to the subspace
 
-    S_(n,r)={(1+z)^r P(z): deg P<n} de H².
+    S_(n,r)={(1+z)^r P(z): deg P<n} of H².
 
-El factor escalar2^(−r) de Q^r no cambia el subespacio ni las distancias. El vector constante1 corresponde a f_0(t)=sqrt(2u)exp(−ut), que tiene norma1. Todo el argumento vale también en los subespacios reales.
+The scalar factor 2^(−r) of Q^r changes neither the subspace nor the distances. The constant vector 1 corresponds to f_0(t)=sqrt(2u)exp(−ut), which has norm 1. The whole argument also holds in the real subspaces.
 
-## 3. Distancia exacta al vector base
+## 3. Exact distance to the base vector
 
-Para TODO n>=1,r>=0,
+For ALL n>=1,r>=0,
 
     dist_H²(1,S_(n,r))²=1−A(n,r),
     A(n,r)=[(n+r−1)!]²/[(n−1)!(n+2r−1)!].        (EXACT-DISTANCE)
 
-En r=0 el cociente es1 y la distancia es cero. Para probar la fórmula, usar la base b_j=z^j(1+z)^r, j=0,...,n−1. Su Gram es
+At r=0 the quotient is 1 and the distance is zero. To prove the formula, use the basis b_j=z^j(1+z)^r, j=0,...,n−1. Its Gram matrix is
 
     G_ij=binom(2r,r+i−j),
 
-con coeficientes binomiales fuera de rango iguales a cero. G es definida positiva por integración de |(1+z)^rP|². Además <1,b_j>=delta_(j,0), pues el término constante de b_j es1 sólo para j=0. La norma cuadrada de la proyección de1 es por tanto
+with out-of-range binomial coefficients equal to zero. G is positive definite by integration of |(1+z)^rP|². Moreover <1,b_j>=delta_(j,0), since the constant term of b_j is 1 only for j=0. The squared norm of the projection of 1 is therefore
 
     (G^(-1))_00=det G_(n−1)/det G_n.
 
-El determinante binomial calculado en§4 da exactamente A(n,r).
+The binomial determinant computed in §4 gives exactly A(n,r).
 
-## 4. Determinante binomial: prueba por Dodgson
+## 4. Binomial determinant: proof via Dodgson
 
-Para enteros a,b>=0, definir
+For integers a,b>=0, define
 
     D_n(a,b)=det[binom(a+b,a+i−j)]_(i,j=0,...,n−1), D_0=1.
 
-La identidad es
+The identity is
 
-    D_n(a,b)=producto_(j=0)^(n−1)
+    D_n(a,b)=product_(j=0)^(n−1)
                    j!(a+b+j)!/[(a+j)!(b+j)!].       (BINOMIAL-DET)
 
-Los casos n=0,1 son directos. Si a=0 o b=0 la matriz es triangular con diagonal1, igual al producto. Para a,b>=1, la identidad Desnanot–Jacobi aplicada a las cuatro esquinas da
+The cases n=0,1 are direct. If a=0 or b=0 the matrix is triangular with diagonal 1, equal to the product. For a,b>=1, the Desnanot–Jacobi identity applied to the four corners gives
 
     D_n(a,b)D_(n−2)(a,b)=D_(n−1)(a,b)²
        −D_(n−1)(a−1,b+1)D_(n−1)(a+1,b−1).
 
-Suponer por inducción la fórmula para tamaños menores. El cociente del producto cruzado por D_(n−1)(a,b)² es
+Assume by induction the formula for smaller sizes. The quotient of the cross product by D_(n−1)(a,b)² is
 
-    producto_(j=0)^(n−2) [(a+j)(b+j)]/[(a+j+1)(b+j+1)]
+    product_(j=0)^(n−2) [(a+j)(b+j)]/[(a+j+1)(b+j+1)]
        =ab/[(a+n−1)(b+n−1)].
 
-Por tanto el factor de la recurrencia es
+Hence the factor in the recurrence is
 
     1−ab/[(a+n−1)(b+n−1)]
        =(n−1)(a+b+n−1)/[(a+n−1)(b+n−1)].
 
-Es precisamente el cociente entre los dos últimos factores consecutivos de BINOMIAL-DET. Como D_(n−2)>0 por la fórmula inductiva, se puede dividir y queda probada la identidad. Tomar a=b=r y dividir D_(n−1)/D_n prueba EXACT-DISTANCE, incluyendo n=1 con D_0=1.
+It is precisely the quotient between the last two consecutive factors of BINOMIAL-DET. Since D_(n−2)>0 by the inductive formula, one may divide and the identity is proved. Taking a=b=r and dividing D_(n−1)/D_n proves EXACT-DISTANCE, including n=1 with D_0=1.
 
-## 5. Régimen cuantitativo r²/n
+## 5. Quantitative regime r²/n
 
-Para r>=1,
+For r>=1,
 
-    A(n,r)=producto_(j=0)^(r−1)(n+j)/(n+r+j).
+    A(n,r)=product_(j=0)^(r−1)(n+j)/(n+r+j).
 
-Las desigualdades log(1−y)<=−y y log(1−y)>=−y/(1−y),0<y<1, dan
+The inequalities log(1−y)<=−y and log(1−y)>=−y/(1−y), 0<y<1, give
 
     exp(−r²/n)<=A(n,r)<=exp[−r²/(n+2r−1)].        (TWO-SIDED)
 
-La cota izquierda también vale en r=0. En particular la distancia al vector base tiende a cero a lo largo de dimensiones n→infinito SI Y SÓLO SI r²/n→0. Para la necesidad, si r>=n el exponente de la cota superior es mayor que r/3; si r<n es mayor que r²/(3n). Así no puede tender a cero mientras r²/n esté separado de cero.
+The left bound also holds at r=0. In particular the distance to the base vector tends to zero along dimensions n→infinity IF AND ONLY IF r²/n→0. For necessity, if r>=n the exponent of the upper bound is larger than r/3; if r<n it is larger than r²/(3n). Thus it cannot tend to zero while r²/n stays away from zero.
 
-También hay una aproximación cuantitativa de cualquier polinomio fijo P(z)=sum_(m=0)^M c_m z^m. Si n>M,
+There is also a quantitative approximation of any fixed polynomial P(z)=sum_(m=0)^M c_m z^m. If n>M,
 
     dist(P,S_(n,r))
        <=sum_(m=0)^M |c_m|sqrt[1−A(n−m,r)]
        <=r sum_(m=0)^M |c_m|/sqrt(n−m).             (POLYNOMIAL-APPROX)
 
-En efecto z^m S_(n−m,r) está contenido en S_(n,r), y multiplicar por z^m preserva la norma H². Aproximar cada monomio y sumar dentro del MISMO espacio lineal da la primera desigualdad. La segunda usa1−exp(−y)<=y. No se están sumando aproximantes pertenecientes a bloques distintos.
+Indeed z^m S_(n−m,r) is contained in S_(n,r), and multiplying by z^m preserves the H² norm. Approximating each monomial and summing inside the SAME linear space gives the first inequality. The second uses 1−exp(−y)<=y. Approximants belonging to different blocks are not being summed.
 
-## 6. Criterio exacto para la UNIÓN diagonal, sin monotonía de r
+## 6. Exact criterion for the diagonal UNION, without monotonicity of r
 
-Sea r(n) una asignación arbitraria de enteros no negativos, n=1,2,..., sin suponer monotonía. Entonces
+Let r(n) be an arbitrary assignment of nonnegative integers, n=1,2,..., with no monotonicity assumed. Then
 
-    cierre_L²(unión_(n>=1) E_(n,r(n)))=L²(0,infinito)
-       SI Y SÓLO SI liminf_(n→infinito) r(n)²/n=0.  (DIAGONAL-DENSITY)
+    closure_L²(union_(n>=1) E_(n,r(n)))=L²(0,infinity)
+       IF AND ONLY IF liminf_(n→infinity) r(n)²/n=0.  (DIAGONAL-DENSITY)
 
-Se trata del cierre de la UNIÓN, no de su envolvente lineal.
+This concerns the closure of the UNION, not its linear span.
 
-Suficiencia: elegir una subsucesión n_k→infinito con r(n_k)²/n_k→0. POLYNOMIAL-APPROX muestra que cada polinomio fijo se aproxima por elementos de S_(n_k,r(n_k)). Los polinomios son densos en H²; aproximar primero el objetivo por un polinomio y después ese polinomio por un único bloque prueba la densidad de la unión. No se usó anidamiento.
+Sufficiency: choose a subsequence n_k→infinity with r(n_k)²/n_k→0. POLYNOMIAL-APPROX shows that each fixed polynomial is approximated by elements of S_(n_k,r(n_k)). Polynomials are dense in H²; approximating first the target by a polynomial and then that polynomial by a single block proves density of the union. No nesting was used.
 
-Necesidad, incluidos los casos finitos r=0: si el liminf no es cero, existen0<delta<=1 y N tales que r(n)²/n>=delta para todo n>=N. TWO-SIDED y los dos casos r<n/r>=n dan
+Necessity, including the finite cases r=0: if the liminf is not zero, there exist 0<delta<=1 and N such that r(n)²/n>=delta for all n>=N. TWO-SIDED and the two cases r<n/r>=n give
 
     dist(1,S_(n,r(n)))>=d=sqrt[1−exp(−delta/3)]>0, n>=N.
 
-Los bloques excepcionales n<N son finitos, aunque algunos tengan r=0 y contengan al vector1. Elegir M mayor que TODOS sus grados máximos n+r(n)−1, y epsilon=d/2. El vector
+The exceptional blocks n<N are finitely many, even if some have r=0 and contain the vector 1. Choose M larger than ALL their maximal degrees n+r(n)−1, and epsilon=d/2. The vector
 
     H_*=1+epsilon z^M
 
-queda a distancia al menos epsilon de cada bloque excepcional, porque z^M es ortogonal a todos sus polinomios. Para n>=N, la desigualdad triangular da
+is at distance at least epsilon from each exceptional block, because z^M is orthogonal to all their polynomials. For n>=N, the triangle inequality gives
 
     dist(H_*,S_(n,r(n)))>=d−epsilon=d/2.
 
-Así H_* tiene distancia positiva a la unión completa. Esto evita suponer que el vector1 sirve como testigo cuando se han añadido finitos bloques sin filtro.
+Thus H_* has positive distance to the complete union. This avoids assuming that the vector 1 serves as a witness when finitely many unfiltered blocks have been added.
 
-## 7. Obstrucción uniforme para los conos positivos conocidos
+## 7. Uniform obstruction for the known positive cones
 
-Si r>=n>=1, TWO-SIDED implica
+If r>=n>=1, TWO-SIDED implies
 
     A(n,r)<exp(−1/3)<3/4,
     dist(1,S_(n,r))>1/2.
 
-La segunda comparación usa exp(1/3)>1+1/3=4/3. Por tanto la unión de TODOS los bloques E_(n,r) con r>=n no es densa ni siquiera en L² sin peso, con la distancia uniforme anterior. En particular esto se aplica al cono060
+The second comparison uses exp(1/3)>1+1/3=4/3. Hence the union of ALL the blocks E_(n,r) with r>=n is not dense even in unweighted L², with the uniform distance above. In particular this applies to the cone 060
 
     r>=10^12[n ceil(log_2(n+1))]^3,
 
-que ya exige r>=n. No se vuelve a probar su signo ni se presenta esta obstrucción como un signo W negativo.
+which already requires r>=n. Its sign is not reproved, nor is this obstruction presented as a negative W sign.
 
-Añadir una cantidad finita de bloques confluentes sin filtro a la MISMA tasa tampoco basta. Si sus grados son menores que M, el vector1+z^M/4 tiene distancia al menos1/4 a esos bloques y mayor que1/4 a todo el cono r>=n, por la desigualdad triangular. Su imagen CAYLEY proporciona un testigo causal explícito. La afirmación no incluye otras familias continuas de tasas ni sumas arbitrarias de miembros de bloques distintos.
+Adding finitely many unfiltered confluent blocks at the SAME rate does not suffice either. If their degrees are less than M, the vector 1+z^M/4 has distance at least 1/4 from those blocks and more than 1/4 from the whole cone r>=n, by the triangle inequality. Its CAYLEY image provides an explicit causal witness. The statement does not include other continuous families of rates nor arbitrary sums of members of different blocks.
 
-## 8. Alcance respecto del problema del signo
+## 8. Scope with respect to the sign problem
 
-016 ya descartaba el puente fuerte en una norma ponderada común.094 añade el umbral EXACTO de densidad de la unión diagonal en la topología MÁS DÉBIL L², y una obstrucción cuantitativa para los conos de signo actuales. Si algún futuro cono positivo alcanzara r=o(sqrt n) en una subsucesión, DIAGONAL-DENSITY daría aproximación L²; aun así habría que justificar continuidad de la forma COMPLETA en la topología utilizada. Aquí no se deduce W de esa densidad.
+016 already discarded the strong bridge in a common weighted norm. 094 adds the EXACT density threshold of the diagonal union in the WEAKER L² topology, and a quantitative obstruction for the current sign cones. If some future positive cone reached r=o(sqrt n) along a subsequence, DIAGONAL-DENSITY would give L² approximation; even then continuity of the COMPLETE form in the topology used would have to be justified. W is not deduced from that density here.
 
-Tampoco se afirma nada sobre densidad de la envolvente lineal de la unión. La positividad de cada bloque no paga automáticamente los cruces entre bloques. Las vías de mezclas o descenso con compensación específica permanecen abiertas. No se modifica ningún paper ni se cierra el objetivo global.
+Nothing is claimed about density of the linear span of the union either. Positivity of each block does not automatically pay for the crossings between blocks. The routes of mixtures or descent with specific compensation remain open. No paper is modified and the global goal is not closed.

@@ -1,40 +1,40 @@
-# POWER_STATE_064 — Necesidad de escala cúbica para STRIP uniforme en todos los numeradores
+# POWER_STATE_064 — Cubic scale needed for uniform STRIP over all numerators
 
-Estado: **PROVED/APROBADO**, revisión independiente en POWER_STRIP_CUBIC_AUDIT_064.md; constructor, root y mapa verificaron también el umbral mejorado j≥10^6n. No nuevo signo de W. Papers intactos.
+Status: **PROVED/APPROVED**, independent review in POWER_STRIP_CUBIC_AUDIT_064.md; the improved threshold j≥10^6n was also verified three times independently. No new sign of W. Papers untouched.
 
-## Resultado probado
+## Proved result
 
-Fuente: POWER_STRIP_CUBIC_NECESSITY_064.md. Fijar u=63/2 y0<η<u. Para TODOS n≥4 y j≥10^6n se construye un polinomio REAL no nulo P_(n,j), grado<n, tal que la densidad del test s^jP/(s+u)^(n+j) satisface
+Source: POWER_STRIP_CUBIC_NECESSITY_064.md. Fix u=63/2 and0<η<u. For ALL n≥4 and j≥10^6n a nonzero REAL polynomial P_(n,j), degree<n, is constructed such that the density of the test s^jP/(s+u)^(n+j) satisfies
 
     ∫|ρ(x+iη)|dx / ∫ρ(x)dx ≥1+η²n³/(1152u²j).
 
-Por tanto no puede existir un D finito uniforme en todos los numeradores sobre un cono j≥C n^p con p<3: elegir j=max(ceil(Cn^p),ceil(10^6n)) hace divergir el lower. Esta conclusión se refiere únicamente al bound ABSOLUTO de contorno STRIP, no a negatividad de W ni a imposibilidad de un cono de signo más pequeño.
+Hence there cannot exist a finite D uniform over all numerators on a cone j≥C n^p with p<3: choosing j=max(ceil(Cn^p),ceil(10^6n)) makes the lower bound diverge. This conclusion refers only to the ABSOLUTE STRIP contour bound, not to negativity of W nor impossibility of a smaller sign cone.
 
-## Mecanismo y diferencia frente059
+## Mechanism and difference relative to059
 
-059 emplea P=1 y sólo fuerza exponente al menos2. Aquí P varía con n,j: en frecuencia inversa se toma el polinomio ortonormal Student de grado d=n−1. Su paridad produce un numerador real par. La recurrencia exacta tiene k/8≤β_k≤4k hasta n+4; proyectar el generador060 sobre el grado d+3 deja una componente≥n^(3/2)/24 y un resto≤n^(3/2)/48. Así ||H′||²/||H||²≥n³/(2304u²j). Como la densidad construida es H² con H real, la convexidad par de las normas desplazadas prueba el lower de STRIP.
+059 uses P=1 and only forces exponent at least2. Here P varies with n,j: in inverse frequency the orthonormal Student polynomial of degree d=n−1 is taken. Its parity produces an even real numerator. The exact recurrence has k/8≤β_k≤4k up to n+4; projecting the generator060 on degree d+3 leaves a component≥n^(3/2)/24 and a remainder≤n^(3/2)/48. Thus ||H′||²/||H||²≥n³/(2304u²j). Since the constructed density is H² with H real, the even convexity of the shifted norms proves the STRIP lower bound.
 
-No se usa un paquete gaussiano con colas no controladas ni se supone que un pico estrecho tenga varianza pequeña. La construcción y las cotas son analíticas; no hubo campaña numérica ni nuevo caso de signo.
+No Gaussian packet with uncontrolled tails is used, nor is it assumed that a narrow peak has small variance. The construction and the bounds are analytic; there was no numerical campaign nor new sign case.
 
-## Qué sigue vigente
+## What remains valid
 
-060 continúa probando STRIP uniforme y W>norma² para todos los numeradores en j≥10^12(nq_n)^3, q_n=ceil(log2(n+1)).064 muestra que la potencia3 es necesaria para esa estrategia absoluta; no decide los factores logarítmicos. Los segmentos iniciales y el objetivo global permanecen abiertos. La positividad de trece polos arbitrarios053 y el caso interior129,0 de061 no se modifican. No se amplía una ventana temporalT ni se toca ningún paper.
+060 continues to prove uniform STRIP and W>norm² for all numerators at j≥10^12(nq_n)^3, q_n=ceil(log2(n+1)).064 shows that the power3 is necessary for that absolute strategy; it does not decide the logarithmic factors. The initial segments and the global objective remain open. Positivity of thirteen arbitrary poles053 and the interior case129,0 of061 are not modified. No temporal windowT is extended and no paper is touched.
 
-## Deduplicación adicional: recurrencia normalizada en el borde k0
+## Additional deduplication: normalised recurrence on the edge k0
 
-Para la familia con tasa u, sea G_N(s)=(s+u)^−N y H_N(s)=s/(s+u)^(N+1). Definir con sus normas RESPECTIVAS
+For the family with rate u, let G_N(s)=(s+u)^−N and H_N(s)=s/(s+u)^(N+1). Define with their RESPECTIVE norms
 
     A_N(u)=W[g_N]/||g_N||²,
     B_N(u)=W[h_N]/||h_N||².
 
-Las identidades completas ya conocidas de016/036 y la relación de derivación029 son
+The already known full identities of016/036 and the derivation relation029 are
 
     B_N=A_N+u∂_u A_N,
     A_(N+1)=(2N A_N−B_N)/(2N−1)
             =A_N−u∂_u A_N/(2N−1).
 
-La derivada se toma en la familia de tasas y después puede evaluarse en u=63/2. Se conservan ARCH, polar y TODOS los contactos; no se supone un signo al derivar.
+The derivative is taken in the family of rates and can then be evaluated at u=63/2. ARCH, polar and ALL contacts are kept; no sign is assumed when differentiating.
 
-Propagar A_N≥0 al siguiente orden requiere el bound concreto B_N≤2N A_N. Un descenso monótono desde infinito podría usar B_N≥A_N junto con liminf_(N→∞)A_N≥0. Ninguna de esas nuevas desigualdades se ha demostrado aquí. La identidad y las diferencias del peine reproducen los antecedentes016/036 y Bessel019; no se presentan como nueva herramienta de signo ni se infiere que la positividad aislada de B_N las implique.
+Propagating A_N≥0 to the next order requires the concrete bound B_N≤2N A_N. A monotone descent from infinity could use B_N≥A_N together with liminf_(N→∞)A_N≥0. None of those new inequalities has been proved here. The identity and the differences of the comb reproduce the antecedents016/036 and Bessel019; they are not presented as a new sign tool nor is it inferred that isolated positivity of B_N implies them.
 
-Esta revisión, coordinada entre insight048 y root, queda registrada como deduplicación. No añade cobertura W ni una entrada teoremática nueva a los índices.
+This review, coordinated with insight048, is recorded as a deduplication. It adds no W coverage nor a new theorem entry to the indices.

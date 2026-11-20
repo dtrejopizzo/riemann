@@ -1,100 +1,100 @@
-# POWER_FULL_THIRTEEN_053 — Forma completa positiva en todos los trece polos reales ≥63/2
+# POWER_FULL_THIRTEEN_053 — Full form positive on all thirteen real poles ≥63/2
 
-Estado: PROVED, segmento exhaustivo y constantes PASS; revisión independiente aprobada en POWER_FULL_THIRTEEN_AUDIT_053.md. Papers intactos.
+Status: PROVED, exhaustive segment and constants PASS; independent review approved in POWER_FULL_THIRTEEN_AUDIT_053.md. Papers untouched.
 
-**Teorema.** Para cualesquiera trece tasas reales v_i≥63/2, con multiplicidades permitidas, y todo polinomio real no nulo P de grado<13,
+**Theorem.** For any thirteen real rates v_i≥63/2, with multiplicities allowed, and every nonzero real polynomial P of degree<13,
 
     W[P/∏_(i=1)^13(s+v_i)] > ||P/∏(s+v_i)||²/4000.
 
-La ganancia nueva es W>norma²/1000 sobre todos los catorce polos≥63/2 con numerador cero en0. Se conservan todos los contactos aritméticos y el polar. No se afirma dimensión arbitraria ni catorce polos con numerador general.
+The new gain is W>norm²/1000 on all fourteen poles≥63/2 with numerator vanishing at0. All arithmetic contacts and the polar are kept. Neither arbitrary dimension nor fourteen poles with general numerator is claimed.
 
-## 1. Corpus y cambio respecto a050/052
+## 1. Corpus and change relative to050/052
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID, CROSSWORD-TO-D, COMMON_TRANSFER010, FULLTEL014, MULTI015, CENTERED_CUTOFF049, FULL_TWELVE050 y CONFLUENT_THIRTEEN052.052 ya prueba W>norma²/4000 sobre V13 confluyente. La nueva pieza es una ganancia COMPLETA sobre catorce polos con numerador cero, que transporta ese bloque a trece polos arbitrarios. No se supone que positividad en codimensión1 implique la de todo el bloque.
+Consulted the project rules, ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID, CROSSWORD-TO-D, COMMON_TRANSFER010, FULLTEL014, MULTI015, CENTERED_CUTOFF049, FULL_TWELVE050 and CONFLUENT_THIRTEEN052.052 already proves W>norm²/4000 on confluent V13. The new piece is a FULL gain on fourteen poles with zero numerator, which transports that block to thirteen arbitrary poles. It is not assumed that positivity in codimension1 implies that of the whole block.
 
-El primer bloque E2[QV13] se certificó racionalmente >norma²/125, con tools/power_zero_fourteen_endpoint_053_verify.py. El mayorante de cola desde3 obtenido con la traza14 es0.0463807089, demasiado grande para ese margen; incluso el término n=3 de ESE mayorante de Cauchy excede0.036. Por tanto conservar Λ exacta sólo en n≥4 no arregla esa comparación particular. Esto no excluye otro bound del operador de correlación.
+The first block E2[QV13] was certified rationally >norm²/125, with tools/power_zero_fourteen_endpoint_053_verify.py. The tail majorant from3 obtained with trace14 is0.0463807089, too large for that margin; even the term n=3 of THAT Cauchy majorant exceeds0.036. Hence keeping Λ exact only for n≥4 does not fix that particular comparison. This does not exclude another bound of the correlation operator.
 
-Se conserva entonces exactamente el contacto3, además del2, y se paga sólo la cola desde4. No se ha buscado una sucesión de primos o dimensiones. El corte analítico J=96 y su auditoría se obtuvieron ANTES de certificar el segmento j=1,...,95.
+So contact3 is kept exactly, in addition to2, and only the tail from4 is paid. No sequence of primes or dimensions was searched. The analytic cut J=96 and its audit were obtained BEFORE certifying the segment j=1,...,95.
 
-## 2. Cola highpass analítica, ya revisada independientemente
+## 2. Analytic highpass tail, already independently reviewed
 
-CENTERED_MOMENT053 prueba mediante una única matriz racional de momentos de dimensión13, en j=96, que para TODO F0∈V13 no nulo,
+CENTERED_MOMENT053 proves via a single rational moment matrix of dimension13, at j=96, that for EVERY nonzero F0∈V13,
 
     E_(Q^96F0)[tau^-2] <4/19845, Q(s)=s/(s+u), u=63/2.
 
-La reponderación por q=|Q|² y la covarianza negativa con (1−q)/q propagan este bound a TODOS j≥96 sin comprobar matrices adicionales. El mismo memo, auditado en CENTERED_MOMENT_AUDIT053, deduce
+Reweighting by q=|Q|² and the negative covariance with (1−q)/q propagate this bound to ALL j≥96 without checking additional matrices. The same memo, audited in CENTERED_MOMENT_AUDIT053, deduces
 
     ARCH[Q^jF0]>(12/5)||Q^jF0||².
 
-Los dos coeficientes de contacto satisfacen v2+v3<137/60. El polar normalizado sobre esta órbita es menor que3(169/992)^j<3/5^j<1/1000. Por tanto
+The two contact coefficients satisfy v2+v3<137/60. The normalized polar on this orbit is less than3(169/992)^j<3/5^j<1/1000. Hence
 
-    E23[Q^jF0]>(1/10)||Q^jF0||², TODOS j≥96.           (TAIL-ORBIT)
+    E23[Q^jF0]>(1/10)||Q^jF0||², ALL j≥96.           (TAIL-ORBIT)
 
-E23 conserva ARCH, POLAR y los contactos2,3. La cola aritmética desde4 aún no está incluida en TAIL-ORBIT.
+E23 keeps ARCH, POLAR and contacts2,3. The arithmetic tail from4 is not yet included in TAIL-ORBIT.
 
-## 3. Certificado exacto del segmento exhaustivo
+## 3. Exact certificate of the exhaustive segment
 
-El único segmento restante es j=1,...,95, con margen fijado c=1/500. El verificador tools/power_full_thirteen_053_verify.py construye108 bandas Toeplitz E23. Utiliza intervalos racionales redondeados hacia fuera con paso10^−260; los logaritmos usan512 términos de atanh y resto geométrico positivo.
+The only remaining segment is j=1,...,95, with fixed margin c=1/500. The verifier tools/power_full_thirteen_053_verify.py builds108 Toeplitz bands E23. It uses rational intervals rounded outward with step10^−260; the logarithms use512 atanh terms and a positive geometric remainder.
 
-La precisión se fijó antes de la ejecución: para log3 directo, el resto es menor que2^−1022. Los512 términos se evalúan mediante intervalos outward en cada suma, producto y división; el resto se añade como intervalo positivo usando r≤1/2. El error acumulado no se identifica con un único paso de redondeo: queda propagado en los extremos y se comprueba en el bound de suma de filas antes de los LDL. Esta evaluación evita denominadores intermedios enormes sin cambiar la suma matemática ni el resto. Para grado≤107 y argumento63log3<70, un bound grueso de la derivada de los polinomios en juego es108·71^107<10^201. Este bound explica la elección amplia de precisión; la cota efectiva final se verifica directamente a partir de TODOS los extremos intervalares, sin asumir un número de dígitos conservados tras las cancelaciones. No se usa precisión flotante para decidir signos.
+The precision was fixed before execution: for direct log3, the remainder is less than2^−1022. The512 terms are evaluated with outward intervals in every sum, product and division; the remainder is added as a positive interval using r≤1/2. The accumulated error is not identified with a single rounding step: it is propagated in the endpoints and checked in the row-sum bound before the LDLs. This evaluation avoids huge intermediate denominators without changing the mathematical sum or the remainder. For degree≤107 and argument63log3<70, a coarse bound for the derivative of the polynomials involved is108·71^107<10^201. This bound explains the ample choice of precision; the final effective bound is verified directly from ALL interval endpoints, without assuming a number of digits preserved after cancellations. No floating-point precision is used to decide signs.
 
-La ARCH usa Hurwitz desde16, suma exacta hasta CUT−1 con CUT=256, y Euler–Maclaurin con12 términos Bernoulli. El resto periódico absoluto es
+ARCH uses Hurwitz from16, exact sum up to CUT−1 with CUT=256, and Euler–Maclaurin with12 Bernoulli terms. The absolute periodic remainder is
 
     |B24|(p)_23 / [24!·256^(p+23)].
 
-El bound del Bernoulli periódico |B24({x})|≤|B24| es el mismo usado en ARCH_EXACT032, obtenido de la serie de Fourier absolutamente convergente de B24 y su valor en0. Cada coeficiente racional de la banda multiplica los extremos EXACTOS de Hurwitz ANTES de redondearlos; así no se amplifica un redondeo previo por u^r, como ya advertía032. Gamma usa el mismo recinto Euler con resto de007. Los centros finales tienen denominador10^24 y se exige suma de errores por fila<ε=10^−12 ANTES de intentar los certificados finitos.
+The bound of the periodic Bernoulli |B24({x})|≤|B24| is the same one used in ARCH_EXACT032, obtained from the absolutely convergent Fourier series of B24 and its value at0. Each rational coefficient of the band multiplies the EXACT Hurwitz endpoints BEFORE rounding them; thus a previous rounding is not amplified by u^r, as032 already warned. Gamma uses the same Euler enclosure with the remainder of007. The final centers have denominator10^24 and the sum of errors per row<ε=10^−12 is required BEFORE attempting the finite certificates.
 
-La compresión de Q^j se calcula sin una matriz108 densa. Para las trece coordenadas iniciales, Vandermonde da exactamente
+The compression of Q^j is computed without a dense108 matrix. For the thirteen initial coordinates, Vandermonde gives exactly
 
-    banda_r(C_jᵀTC_j)=Σ_(d=−j)^j binom(2j,j+d)t_|r+d|,
-    banda_r(C_jᵀC_j)=binom(2j,j+r), 0≤r≤12,
+    band_r(C_jᵀTC_j)=Σ_(d=−j)^j binom(2j,j+d)t_|r+d|,
+    band_r(C_jᵀC_j)=binom(2j,j+r), 0≤r≤12,
 
-con cero cuando r>j. El factor4^−j común se omite. El error de operador se paga como ε C_jᵀC_j. Para cada índice del segmento se verifica LDL racional positivo de
+with zero when r>j. The common factor4^−j is omitted. The operator error is paid as ε C_jᵀC_j. For each index of the segment a positive rational LDL is verified for
 
     C_jᵀTcC_j − (1/500+ε)C_jᵀC_j.
 
-No se escogió un índice por autovalores flotantes; el segmento completo está determinado por TAIL-ORBIT. La corrida completa terminó exit0: PASS de108 bandas, PASS de suma de errores por fila<10^−12 ANTES de los certificados, y95 mensajes PASS, uno por cada j=1,...,95. No se relajó ningún umbral. El proceso anterior se detuvo únicamente para sustituir una evaluación exacta demasiado costosa de los logaritmos por la misma serie con intervalos por término; no había producido un fallo matemático ni se usó su salida parcial para elegir índices.
+No index was chosen by floating eigenvalues; the full segment is determined by TAIL-ORBIT. The complete run finished exit0: PASS for108 bands, PASS for row error sum<10^−12 BEFORE the certificates, and95 PASS messages, one for each j=1,...,95. No threshold was relaxed. The earlier process was stopped only to replace a too-costly exact evaluation of the logarithms by the same series with per-term intervals; it had not produced a mathematical failure and its partial output was not used to choose indices.
 
-## 4. Transporte y cola aritmética completos
+## 4. Full transport and arithmetic tail
 
-Los95 LDL positivos y TAIL-ORBIT prueban E23[Q^jF0]>norma²/500 para TODOS j≥1. Para cualquier numerador D=sP de grado≤13, P de grado<13,
+The95 positive LDLs and TAIL-ORBIT prove E23[Q^jF0]>norm²/500 for ALL j≥1. For any numerator D=sP of degree≤13, P of degree<13,
 
     G0=D/(s+u)^14=QF0.
 
-MULTI015 con CATORCE factores expresa E23 y la norma de cualquier G=D/∏_(i=1)^14(s+v_i), v_i≥u, como las mismas mezclas positivas y absolutamente convergentes de Q^kG0. Resulta E23[G]>norma²/500 uniformemente sobre todos esos espacios restringidos.
+MULTI015 with FOURTEEN factors expresses E23 and the norm of any G=D/∏_(i=1)^14(s+v_i), v_i≥u, as the same positive and absolutely convergent mixtures of Q^kG0. It follows that E23[G]>norm²/500 uniformly over all those restricted spaces.
 
-La traza010 con n=14, α=1/2 es EXACTAMENTE
+The trace010 with n=14, α=1/2 is EXACTLY
 
     B_T14=947334302964<973312².
 
-Por Cauchy y Λ(n)≤logn, la cola completa n≥4 satisface
+By Cauchy and Λ(n)≤logn, the full tail n≥4 satisfies
 
-    ||cola||≤2·973312 Σ_(n≥4)(logn)n^−65/4.
+    ||tail||≤2·973312 Σ_(n≥4)(logn)n^−65/4.
 
-Usar n^−1/4≤5/7 para n≥4, log4<7/5 y primer término más integral de logx·x^−16, decreciente desde4. Resulta el racional
+Use n^−1/4≤5/7 for n≥4, log4<7/5 and first term plus integral of logx·x^−16, decreasing from4. The result is the rational
 
     L4=2·973312·(5/7)·4^−16
              [7/5+4(7/5)/15+4/225]
        =0.0005798513927...<1/1000.
 
-Por tanto se demuestra
+Hence it is proved that
 
     W[G]>(1/500−L4)||G||²>||G||²/1000,
-    TODOS14polos≥u, D(0)=0.                            (ZERO14)
+    ALL14poles≥u, D(0)=0.                            (ZERO14)
 
-FULLTEL014 con n=13 conserva exactamente forma, norma, polar y todos los contactos. Su base052 tiene W>norma²/4000 y sus correcciones G_j pertenecen a ZERO14, cuyo margen supera1/4000. Se obtiene entonces
+FULLTEL014 with n=13 keeps form, norm, polar and all contacts exactly. Its base052 has W>norm²/4000 and its corrections G_j belong to ZERO14, whose margin exceeds1/4000. One then obtains
 
-    W[P/∏_(i=1)^13(s+v_i)]>norma²/4000,
-    TODOS13polos≥u, gradoP<13.                          (TARGET)
+    W[P/∏_(i=1)^13(s+v_i)]>norm²/4000,
+    ALL13poles≥u, degreeP<13.                          (TARGET)
 
-La identidad FULLTEL usada aquí es exacta: con R0=∏u²/v_i²>0 y κ_j=(v_j²−u²)/u²·∏_(k<j)v_k²/u²≥0,
+The FULLTEL identity used here is exact: with R0=∏u²/v_i²>0 and κ_j=(v_j²−u²)/u²·∏_(k<j)v_k²/u²≥0,
 
     W[F]−c||F||²=R0[(W[F0]−c||F0||²)
                          +Σ_jκ_j(W[G_j]−c||G_j||²)],
     G_j=sP/[(s+u)^(14−j)∏_(k≤j)(s+v_k)].
 
-Cada corrección tiene catorce polos y numerador cero; su margen ZERO14 supera c=1/4000. La misma identidad conserva la norma. El primer término base052 es estrictamente positivo, por lo que TARGET es estricto incluso cuando algunas tasas coinciden con u. La convergencia de todas las series primas es absoluta para estos datos racionales con polos>1/2; no se omite un átomo ni se cambia el signo del polar.
+Each correction has fourteen poles and zero numerator; its ZERO14 margin exceeds c=1/4000. The same identity preserves the norm. The first base term052 is strictly positive, so TARGET is strict even when some rates coincide with u. Convergence of all prime series is absolute for these rational data with poles>1/2; no atom is omitted and the sign of the polar is not changed.
 
-## 5. Alcance
+## 5. Scope
 
-Se amplía V13 fijo052 a TODOS los trece polos reales≥31.5 mediante una ganancia aritmética completa de catorce polos con numerador cero. La cota del momento y la monotonía sustituyen todos los certificados j≥96, y el segmento anterior fue exhaustivo y fijado analíticamente. No se afirma dimensión arbitraria ni catorce polos con numerador general, y no se deduce aquí una nueva ventana T del Paper47. El caso siguiente necesita nuevas hipótesis verificadas; no se extrapolan los márgenes por dimensión. Papers intactos.
+The fixed V13 of052 is extended to ALL thirteen real poles≥31.5 via a full arithmetic gain of fourteen poles with zero numerator. The moment bound and monotonicity replace all certificates j≥96, and the earlier segment was exhaustive and fixed analytically. Neither arbitrary dimension nor fourteen poles with general numerator is claimed, and no new T window of Paper47 is deduced here. The next case needs new verified hypotheses; the margins are not extrapolated by dimension. Papers untouched.

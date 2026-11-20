@@ -1,11 +1,11 @@
-# Dos perfiles de saltos con escalas 2 y 3
+# Two jump profiles with scales 2 and 3
 
-Se consideró combinar traslaciones de los perfiles con numeradores P_r(r^s), donde P_r(z)=(z−1)²(z−r), para r=2,3. En la recta física Re s=1/2, el módulo de r^s es √r. Cada numerador ya es distinto de cero allí. Los ceros periódicos adicionales corresponden a las rectas Re s=0,1. La inconmensurabilidad de los periodos se refiere a esas rectas.
+Combining translations of the profiles with numerators P_r(r^s), where P_r(z)=(z−1)²(z−r), for r=2,3, was considered. On the physical line Re s=1/2, the modulus of r^s is √r. Each numerator is already non-zero there. The additional periodic zeros correspond to the lines Re s=0,1. The incommensurability of the periods refers to those lines.
 
-En la prueba de thm:oneprofile de P47, pasos 2 y 3, el desplazamiento de contorno produce decaimiento suficiente para pasar al límite en la suma aritmética. La información sobre los ceros exactos de dos numeradores deja pendiente ese control para los perfiles propuestos. La cota es una hipótesis suficiente de aquella prueba.
+In the proof of thm:oneprofile of P47, steps 2 and 3, the contour shift produces enough decay to pass to the limit in the arithmetic sum. The information about the exact zeros of two numerators leaves that control pending for the proposed profiles. The bound is a sufficient hypothesis of that proof.
 
-El índice, Parte V, «Portador racional exacto», ya prueba la suficiencia global de las celdas enteras de todos los tamaños por refinamiento racional y continuidad en norma de forma. La dificultad a la que debe responder una construcción es una desigualdad sobre las energías en ese portador. La propuesta de dos perfiles tampoco proporciona una cota sobre las energías de sus combinaciones de traslaciones.
+The index, Part V, «Portador racional exacto», already proves the global sufficiency of the integer cells of all sizes by rational refinement and continuity in form norm. The difficulty a construction must answer is an inequality on the energies on that carrier. The two-profile proposal does not provide a bound on the energies of its combinations of translations either.
 
-Decisión de selección tras cotejo dirigido con revisor independiente. Se detiene la propuesta en su formulación presente. Una reapertura requiere un paso de signo explícito. Queda indecisa la suficiencia particular de estos dos perfiles.
+Selection decision after targeted cross-check with independent review. The proposal is stopped in its present formulation. A reopening requires an explicit sign step. The particular sufficiency of these two profiles remains undecided.
 
-Para el argumento por densidad del espacio generado conjuntamente se necesita positividad del bloque mixto completo con entradas a(F_r,V_d F_u), incluidos r=2,u=3. Las dos diagonales por separado dejan pendiente ese cruce.
+For the density argument for the jointly generated space one needs positivity of the complete mixed block with entries a(F_r,V_d F_u), including r=2,u=3. The two diagonals separately leave that crossing pending.

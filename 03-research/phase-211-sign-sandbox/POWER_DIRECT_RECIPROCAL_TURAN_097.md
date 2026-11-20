@@ -1,50 +1,50 @@
-# POWER_DIRECT_RECIPROCAL_TURAN_097 — T_h directa y cola real desde512
+# POWER_DIRECT_RECIPROCAL_TURAN_097 — Direct T_h and real tail from512
 
-**Actualización099:** la obligación REAL T_h>0 global quedó cerrada en `POWER_EXACT_H_GLOBAL_DESIGN_099.md`, auditada en `POWER_EXACT_H_GLOBAL_AUDIT_099.md` y resumida en `POWER_STATE_099.md`. Se prueban ambas curvaturas y todos los triples del resto G_p; el bloque auxiliar de cinco nodos está anclado en0 y NO son cinco generadores W admisibles. Las menciones de compacto/hipótesis pendiente abajo conservan el estado histórico de esta ronda; la herencia al siguiente nivel sigue abierta.
+**Update099:** the REAL obligation T_h>0 globally was closed in `POWER_EXACT_H_GLOBAL_DESIGN_099.md`, audited in `POWER_EXACT_H_GLOBAL_AUDIT_099.md` and summarized in `POWER_STATE_099.md`. Both curvatures and all triples of the remainder G_p are proved; the auxiliary block of five nodes is anchored at0 and they are NOT five admissible W generators. The mentions of compact set/pending hypothesis below keep the historical status of this round; inheritance to the next level remains open.
 
-Estado: **PROVED la fórmula, la regularización y T_h>0 para TODO u>=512; auditorías independientes aprobadas.** Véase `POWER_DIRECT_RECIPROCAL_TURAN_AUDIT_097.md`. El compacto0<u<512 sigue OPEN. No se requiere el signo puntual de las densidades particulares K. No se afirma preservación de Turán, signo de todos los órdenes ni nueva cobertura W. Papers intactos; sin nuevos certificados numéricos.
+Status: **PROVED the formula, the regularization and T_h>0 for ALL u>=512; independent audits approved.** See `POWER_DIRECT_RECIPROCAL_TURAN_AUDIT_097.md`. The compact set0<u<512 remains OPEN. The pointwise sign of the particular densities K is not required. No preservation of Turán, sign of all orders nor new W coverage is claimed. Papers untouched; no new numerical certificates.
 
-## 1. Consulta y diferencia precisa
+## 1. Consultation and precise difference
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D; cotejados078,083–085,089–090,092–093 y095.090 identifica T_h>0 como una obligación exacta para las curvaturas R_G en todos los pivotes y refuta su herencia genérica desde T_R>0. El signo del Wronskiano de densidades particulares investigado093/095 es una condición suficiente MÁS FUERTE, todavía sin prueba global.
+Consulted the project rules, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D; cross-checked078,083–085,089–090,092–093 and095.090 identifies T_h>0 as an exact obligation for the curvatures R_G at all pivots and refutes its generic inheritance from T_R>0. The sign of the Wronskian of particular densities investigated093/095 is a STRONGER sufficient condition, still without global proof.
 
-Aquí se trabaja directamente con la MISMA h en datos reales M,Z. Se conserva su cancelación algebraica y se obtiene una nueva desigualdad de cola mediante las series completas ya auditadas084. No se vuelve a certificar otra dimensión ni se promueve la identidad anclada de cinco columnas como una ganancia de signo.
+Here one works directly with the SAME h on real data M,Z. Its algebraic cancellation is kept and a new tail inequality is obtained via the complete series already audited084. No other dimension is re-certified, nor is the anchored five-column identity promoted as a sign gain.
 
-## 2. Fórmula explícita en M y tres derivadas
+## 2. Explicit formula in M and three derivatives
 
-Poner x=u², a=M'(0)>0 y
+Put x=u², a=M'(0)>0 and
 
     c=M(u), d=M'(u), e=M''(u), f=M'''(u),
     D=ud, E=u²e, F=u³f,
     h(x)=u²M(u)/[au−M(u)].
 
-Las derivadas de h son respecto de x; d,e,f son respecto de u.073 da au−c>0 para u>0. Definir el polinomio N_S ya utilizado084 y un polinomio C_h nuevo:
+The derivatives of h are with respect to x; d,e,f are with respect to u.073 gives au−c>0 for u>0. Define the polynomial N_S already used084 and a new polynomial C_h:
 
     N_S=3c²+c(6D+6E+2F)−9D²−6DE+2DF−3E²,
     C_h=3c³+c²(3D+6E+F)+c(−12D²−6DE)+6D³.
 
-Entonces exactamente
+Then exactly
 
     T_h=2h'h'''−3h''²
         =a[au N_S−4C_h]/[16u³(au−c)^4].           (DIRECT)
 
-Son coeficientes explícitos: N_S y C_h sólo contienen a,u,M,M',M'',M'''. No se necesita derivar un resto asintótico. Una comprobación por derivación usa
+These are explicit coefficients: N_S and C_h only contain a,u,M,M',M'',M'''. No asymptotic remainder needs to be derived. A check by differentiation uses
 
     h'=[acu+adu²−2c²]/[2(au−c)²],
     h''=a[−acu+adu²+aeu³+3c²−5cdu−ceu²+2d²u²]
                                       /[4u(au−c)³].
 
-Derivar h'' por(2u)^(-1)d/du y combinar2h'h'''−3h''² da DIRECT. El numerador no se sustituye por errores absolutos independientes antes de efectuar esa cancelación.
+Differentiating h'' by(2u)^(-1)d/du and combining2h'h'''−3h''² gives DIRECT. The numerator is not replaced by independent absolute errors before carrying out that cancellation.
 
-Como control estructural, S(x)=uM(u) satisface T_S=N_S/(16u^6), y
+As a structural check, S(x)=uM(u) satisfies T_S=N_S/(16u^6), and
 
     T_h={a²u⁴T_S+2ac⁴(d/dx)^3[u³/M(u)]}/(au−c)^4.
 
-El segundo sumando puede ser negativo; por eso T_S>0, por sí solo, no resuelve el signo. La prueba siguiente paga su coste mediante C_h.
+The second summand may be negative; that is why T_S>0 alone does not resolve the sign. The following proof pays its cost via C_h.
 
-## 3. Entrada aritmética completa y caja exterior auditada
+## 3. Complete arithmetic input and audited exterior box
 
-Escribir A=u+1/2.084 prueba por series reales completas
+Write A=u+1/2.084 proves via complete real series
 
     c=1/A+1/(A−1)−logpi/2+psi(A/2)/2−P_0,
     d=−1/A²−1/(A−1)²+psi_1(A/2)/4+P_1,
@@ -52,11 +52,11 @@ Escribir A=u+1/2.084 prueba por series reales completas
     f=−6/A⁴−6/(A−1)⁴+psi_3(A/2)/16+P_3,
     P_j(A)=sum_(n>=2)Lambda(n)(log n)^j n^(−A).
 
-Todas estas sumas son absolutas en la región empleada. No se truncan primos. Los restos completos se pagan mediante
+All these sums are absolute in the region used. No primes are truncated. The complete remainders are paid via
 
     P_j(A)<=2^(j+1−A)[1+2/(A−j−2)], j=0,1,2,3,
 
-y comparaciones integrales de las series de polygamma, detalladas084. Su consecuencia auditada para A>=128 es
+and integral comparisons of the polygamma series, detailed084. Its audited consequence for A>=128 is
 
     c>3/2,
     9/20<D<51/100,
@@ -64,90 +64,90 @@ y comparaciones integrales de las series de polygamma, detalladas084. Su consecu
     4/5<F<101/100,
     N_S>3c²−2>2c².                                (INPUT-084)
 
-La última comparación usa c²>9/4>2. Se reutiliza una cota c-dependiente de084, no sólo el margen constante N_S>19/4.
+The last comparison uses c²>9/4>2. A c-dependent bound from084 is reused, not only the constant margin N_S>19/4.
 
-La misma caja permite una cota superior conjunta de C_h. En efecto,
+The same box allows a joint upper bound on C_h. Indeed,
 
     3D+6E+F<3(51/100)+6(−2/5)+101/100=7/50,
     −12D²−6DE<−12(9/20)²+6(51/100)²
                   =−4347/5000<0,
     6D³<6(51/100)³<4/5.
 
-Por ello
+Hence
 
     C_h<3c³+(7/50)c²+4/5<4c³, c>3/2.             (COST)
 
-La última desigualdad es elemental: c³−(7/50)c²−4/5 es creciente para c>=3/2 y en3/2 vale113/50>0. Si C_h fuese negativo, el coste sería todavía menor; no se presume su signo.
+The last inequality is elementary: c³−(7/50)c²−4/5 is increasing for c>=3/2 and at3/2 equals113/50>0. If C_h were negative, the cost would be even smaller; its sign is not presumed.
 
-INPUT-084 y COST dan
+INPUT-084 and COST give
 
     au N_S−4C_h>2c²(au−8c).
 
-Así basta demostrar au>8M(u) en la cola.
+Thus it suffices to prove au>8M(u) in the tail.
 
-## 4. Comparación escalar que paga TODO u>=512
+## 4. Scalar comparison that pays ALL u>=512
 
-078 prueba el dato REAL a>1/25, usando el ancla L(8)>3/10 y073. También, para u>=128,
+078 proves the REAL datum a>1/25, using the anchor L(8)>3/10 and073. Also, for u>=128,
 
     M(u)<log(u/5)/2+2/(u−1/2).                    (UPPER-M)
 
-En u=512, 512/5<128 y log2<7/10 implican
+At u=512, 512/5<128 and log2<7/10 imply
 
     M(512)<(7/2)log2+2/(512−1/2)
            <49/20+1/100=123/50.
 
-La cota log2<7/10 se demuestra, por ejemplo, con la suma positiva de la serie de exp(7/10) hasta grado4, que es mayor que2. Así
+The bound log2<7/10 is proved, for example, with the positive sum of the series of exp(7/10) up to degree4, which is greater than2. Thus
 
     8M(512)<492/25<512/25<a·512.
 
-Para extender la comparación sin malla, considerar
+To extend the comparison without a mesh, consider
 
     H(u)=u/25−4log(u/5)−16/(u−1/2).
 
-El cálculo anterior da H(512)>0, y para TODO u>=512,
+The previous computation gives H(512)>0, and for ALL u>=512,
 
     H'(u)=1/25−4/u+16/(u−1/2)²
            >1/25−4/512>0.
 
-UPPER-M implica entonces au>u/25>8M(u) para todos esos u. DIRECT queda estrictamente positivo:
+UPPER-M then implies au>u/25>8M(u) for all those u. DIRECT is strictly positive:
 
     T_h>a c²(au−8c)/[8u³(au−c)^4]>0,
-    TODOS u>=512.                                (DIRECT-TAIL)
+    ALL u>=512.                                (DIRECT-TAIL)
 
-El umbral se fijó por estas desigualdades analíticas holgadas. No se buscó un extremo favorable ni se evaluó numéricamente T_h. El dominio es del parámetro de inclinación u; no es el dominio temporal t de095.
+The threshold was fixed by these loose analytic inequalities. No favourable endpoint was searched for and T_h was not evaluated numerically. The domain is that of the tilt parameter u; it is not the time domain t of095.
 
-## 5. Regularización exacta del origen
+## 5. Exact regularization of the origin
 
-La paridad de Z y su positividad cerca del origen hacen analítica N(x)=M(u)/u en x=u². Escribir
+The parity of Z and its positivity near the origin make N(x)=M(u)/u analytic in x=u². Write
 
     N(x)=a+b_1x+b_2x²+b_3x³+b_4x^4+O(x^5),
     b_1=kappa4/6, b_2=kappa6/120,
     b_3=kappa8/5040, b_4=kappa10/362880,
 
-donde kappa_(2j) son los cumulantes de la ley real Phi sin inclinación. No se afirma su signo por separado.086 da R'(0)>0, así b_1<0, pues R=1/N. La expresión regular es
+where kappa_(2j) are the cumulants of the real law Phi without tilt. Their sign is not claimed separately.086 gives R'(0)>0, so b_1<0, since R=1/N. The regular expression is
 
     h(x)=N(x)/B_0(x),
     B_0(x)=[a−N(x)]/x,
     B_0(0)=−b_1>0.
 
-Por tanto h y sus derivadas son analíticas en un entorno de0; el denominador aparentemente singular de DIRECT no implica una singularidad real. No se usa el numerador y denominador pequeños por separado para decidir un signo.
+Hence h and its derivatives are analytic in a neighbourhood of0; the apparently singular denominator of DIRECT does not imply a real singularity. The small numerator and denominator are not used separately to decide a sign.
 
-Los valores explícitos son
+The explicit values are
 
     h(0)=−a/b_1,
     h'(0)=a b_2/b_1²−1,
     h''(0)=2a(b_1b_3−b_2²)/b_1³,
     h'''(0)=6a(b_1²b_4−2b_1b_2b_3+b_2³)/b_1^4.
 
-Combinar estas derivadas cancela términos y da
+Combining these derivatives cancels terms and gives
 
     T_h(0)=(12a/b_1^4)
        ·det[[a,b_1,b_2],[b_1,b_2,b_3],[b_2,b_3,b_4]]. (ORIGIN-HANKEL)
 
-Así el dato de origen es un Hankel3 de los coeficientes NORMALIZADOS de cumulantes. No se infiere su signo de la positividad de una medida distinta ni de la positividad individual de algunos cumulantes. En esta fuente no se calculan nuevos momentos ni se certifica el signo de ORIGIN-HANKEL.
+Thus the origin datum is a Hankel3 of the NORMALIZED cumulant coefficients. Its sign is not inferred from positivity of a different measure nor from the individual positivity of some cumulants. In this source no new moments are computed and the sign of ORIGIN-HANKEL is not certified.
 
-## 6. Obligación restante y alcance
+## 6. Remaining obligation and scope
 
-DIRECT-TAIL descarga la obligación EXACTA T_h en una cola de u. En0<u<512 sigue faltando un bound conjunto para auN_S−4C_h, o una comparación equivalente que conserve su cancelación. Para decidir el propio origen puede usarse ORIGIN-HANKEL con un encierro de momentos previamente diseñado; no se inició ese cálculo aquí.
+DIRECT-TAIL discharges the EXACT obligation T_h on a tail of u. On0<u<512 a joint bound for auN_S−4C_h is still missing, or an equivalent comparison that keeps its cancellation. To decide the origin itself one can use ORIGIN-HANKEL with a previously designed moment enclosure; that computation was not started here.
 
-El dato es más débil que exigir un Wronskiano temporal firmado en cada punto: no necesita esa hipótesis suficiente ni deriva sus restos reales. No se ha demostrado T_h global, R_G'' para todos los pivotes, todos los triples del kernel G_p, cinco generadores originales o todos los órdenes. La nueva cola no modifica por sí sola la cobertura W ya probada085. El contraejemplo de herencia090 permanece válido y no refuta esta desigualdad REAL. Objetivo global OPEN.
+The datum is weaker than requiring a signed temporal Wronskian at each point: it does not need that sufficient hypothesis nor derive its real remainders. Global T_h, R_G'' for all pivots, all triples of the kernel G_p, five original generators or all orders have not been proved. The new tail does not by itself modify the W coverage already proved085. The inheritance counterexample090 remains valid and does not refute this REAL inequality. Global objective OPEN.

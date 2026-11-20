@@ -1,79 +1,79 @@
-# POWER_SUBQUADRATIC_COROLLARY_048 — Extracción de una región de signo de los bounds017
+# POWER_SUBQUADRATIC_COROLLARY_048 — Extraction of a sign region from the bounds 017
 
-Estado: **PROVED como corolario de las desigualdades auditadas017; revisión independiente APROBADA en POWER_SUBQUADRATIC_AUDIT_048.md y derivación revisada por root.** No es una desigualdad aritmética nueva ni un cierre global. Papers intactos.
+Status: **PROVED as a corollary of the audited inequalities 017; independent review APPROVED in POWER_SUBQUADRATIC_AUDIT_048.md and derivation reviewed.** It is not a new arithmetic inequality nor a global closure. Papers untouched.
 
-## 1. Consulta previa y diferencia exacta
+## 1. Prior consultation and exact difference
 
-Leídos las reglas del proyecto, STATEMENT_001, ROUTES-TRIED-INDEX/README, grid maestro y CROSSWORD-TO-D; revisados SCALAR_BRIDGE017, QUADRATIC017, QUADRATIC_EXPLICIT017, DESCENT016, TABLE_DESCENT018, RECURRENCE_BOUNDARY036 y los estados046/047. La búsqueda específica de `subquadr`, `sub.quadr`, `loglog`, `log log N` y `log\\log N` en el índice, grid, crucigrama y archivos POWER no halló una región de esta forma ya explicitada.
+Read the project rules, STATEMENT_001, ROUTES-TRIED-INDEX/README, master grid and CROSSWORD-TO-D; reviewed SCALAR_BRIDGE017, QUADRATIC017, QUADRATIC_EXPLICIT017, DESCENT016, TABLE_DESCENT018, RECURRENCE_BOUNDARY036 and the states 046/047. The specific search for `subquadr`, `sub.quadr`, `loglog`, `log log N` and `log\\log N` in the index, grid, crossword and POWER files found no region of this form already made explicit.
 
-La herramienta es íntegramente QUADRATIC017: no se reintenta otra prueba de la estimación por banda, ni se da otro nombre a esa ruta. Se extrae una consecuencia cuantitativa permitiendo que su parámetro c dependa de N y tienda a cero. La razón precisa que permite esta extracción es que STRIP, PRIME, ARCH y POL son desigualdades válidas para CADA c>0, N>=2 y k>=max(cN²,4N), con constantes explícitas; no se usa el enunciado eventual con N0(c) sin controlar su dependencia.
+The tool is entirely QUADRATIC017: no other proof of the band estimate is retried, nor is that route given another name. A quantitative consequence is extracted by letting its parameter c depend on N and tend to zero. The precise reason that allows this extraction is that STRIP, PRIME, ARCH and POL are inequalities valid for EACH c>0, N>=2 and k>=max(cN²,4N), with explicit constants; the eventual statement with N0(c) is not used without controlling its dependence.
 
-El resultado017 explicitado tenía c fijo; QUADRATIC_EXPLICIT017 cubre k>=10000N² desde N=2. Aquí la frontera es 2N²/log log N. Para cada c fijo positivo, esta frontera queda por debajo de cN² para N suficientemente grande. Es nueva cobertura explicitada de la tabla, obtenida de bounds existentes. No se declara un método nuevo, ni se afirma controlar el interior completo.
+The explicit result 017 had fixed c; QUADRATIC_EXPLICIT017 covers k>=10000N² from N=2. Here the frontier is 2N²/log log N. For each fixed positive c, this frontier lies below cN² for N large enough. It is new explicit coverage of the table, obtained from existing bounds. No new method is declared, nor is control of the full interior claimed.
 
-## 2. Candidato y resultado
+## 2. Candidate and result
 
-Fije u=63/2. Para enteros N>=exp(1000000) y
+Fix u=63/2. For integers N>=exp(1000000) and
 
     k >= 2N²/log log N,
 
-sea f_(N,k) la función causal de transformada s^k/(s+u)^(N+k). Entonces, para la forma COMPLETA real de017,
+let f_(N,k) be the causal function with transform s^k/(s+u)^(N+k). Then, for the COMPLETE real form of 017,
 
     W[f_(N,k)] > (2/5) log N · ||f_(N,k)||².             (SUBQUADRATIC)
 
-El enunciado cubre TODOS los órdenes de esa región no acotada y TODOS los k por encima de su frontera. No se ha evaluado numéricamente un orden N ni un contacto. El umbral es deliberadamente conservador.
+The statement covers ALL orders of that unbounded region and ALL k above its frontier. No order N or contact has been evaluated numerically. The threshold is deliberately conservative.
 
-## 3. Cuatro bounds exactos que se importan de017
+## 3. Four exact bounds imported from 017
 
-Para cualquier c>0 bajo N>=2 y k>=max(cN²,4N), QUADRATIC017 prueba
+For any c>0 under N>=2 and k>=max(cN²,4N), QUADRATIC017 proves
 
     C(c)=1+2[exp(4/(25c))+exp(1/c)],
     |Comb[f]|/||f||² < 14C(c),
     ARCH[f]/||f||² >= (1/2)log N + log[u sqrt(c)/(2pi)] - 5,
     |Polar[f]|/||f||² < 400^(-k).
 
-El bound de Comb suma el peine INFINITO completo usando el desplazamiento de la DENSIDAD racional conjunta; no separa dos normas temporales. El polar es el real completo y se conserva aun cuando su signo sea desfavorable. Las cuatro desigualdades son finitas y uniformes en la región indicada. No se necesita la aproximación gaussiana de017 ni pasar un límite por una suma aritmética.
+The Comb bound sums the complete INFINITE comb using the shift of the joint rational DENSITY; it does not separate two time norms. The polar is the complete real one and is kept even when its sign is unfavourable. The four inequalities are finite and uniform in the indicated region. Neither the Gaussian approximation of 017 nor passing a limit through an arithmetic sum is needed.
 
-## 4. Elección variable y comprobación de todas las hipótesis
+## 4. Variable choice and check of all hypotheses
 
-Escriba L=log N>=1000000 y elija
+Write L=log N>=1000000 and choose
 
     c_N = 2/log L > 0.
 
-La condición del teorema es exactamente k>=c_N N². También c_N N²>=4N: basta N>=2log L, y
+The condition of the theorem is exactly k>=c_N N². Also c_N N²>=4N: it suffices that N>=2log L, and
 
     N=exp L >= L²/2 >= 2L >= 2log L
 
-para L>=1000000. La primera desigualdad usa sólo un término positivo de la serie exponencial. Se cumplen por tanto TODAS las hipótesis de los bounds017 con esta elección c_N, sin invocar ningún N0 dependiente de c.
+for L>=1000000. The first inequality uses only one positive term of the exponential series. Therefore ALL hypotheses of the bounds 017 hold with this choice c_N, without invoking any c-dependent N0.
 
-Ahora
+Now
 
     exp(1/c_N)=sqrt L,
     exp(4/(25c_N))=L^(2/25)<=sqrt L,
     C(c_N)<=1+4sqrt L.
 
-Además u sqrt(2)/(2pi)>1, usando u=63/2 y pi<4. Así
+Moreover u sqrt(2)/(2pi)>1, using u=63/2 and pi<4. Thus
 
     ARCH[f]/||f||²
       > (1/2)L - (1/2)log log L - 5.
 
-Para L>=1000000 se tiene log log L<=log L<=sqrt L. La segunda desigualdad vale desde L=16: en16 usa log16<4, y la derivada de sqrt L-log L es no negativa para L>=4. La primera sigue de log L<=L y monotonía del logaritmo.
+For L>=1000000 one has log log L<=log L<=sqrt L. The second inequality holds from L=16: at 16 it uses log16<4, and the derivative of sqrt L-log L is nonnegative for L>=4. The first follows from log L<=L and monotonicity of the logarithm.
 
-## 5. Balance completo y margen
+## 5. Complete balance and margin
 
-El bound polar es menor que1. Las estimaciones anteriores dan
+The polar bound is less than 1. The previous estimates give
 
     W[f]/||f||²
       > (1/2)L - (113/2)sqrt L - 20.
 
-Ponga y=sqrt L>=1000. Entonces
+Set y=sqrt L>=1000. Then
 
     (1/10)y²-(113/2)y-20
       >=(87/2)y-20 > 0,
 
-pues y²/10>=100y. Por tanto el último lower es estrictamente mayor que (2/5)L. Esto prueba SUBQUADRATIC con todas las constantes simbólicas y sin una campaña numérica.
+since y²/10>=100y. Therefore the last lower bound is strictly greater than (2/5)L. This proves SUBQUADRATIC with all constants symbolic and without a numerical campaign.
 
-## 6. Alcance frente036 y046
+## 6. Scope relative to 036 and 046
 
-Esta extracción no prueba la hipótesis uniforme -o(1) sobre TODA la banda pendiente de046. Sigue quedando k<2N²/log log N y N no cubiertos por otros resultados.
+This extraction does not prove the uniform -o(1) hypothesis over the WHOLE pending band of 046. What remains is k<2N²/log log N and N not covered by other results.
 
-Tampoco se anula RECURRENCE_BOUNDARY036. Su conclusión se refiere a la energía del cono fijo k'>=10000N'²; ampliar aquí la región de signo no convierte automáticamente el complemento de una frontera diagonal en energía evanescente. No se ha probado una estimación de ese nuevo complemento, ni se lo elimina por una cuenta de masa. La tabla completa y el signo global continúan **OPEN**; no hay nueva ventana T certificada del Paper47.
+Nor is RECURRENCE_BOUNDARY036 cancelled. Its conclusion refers to the energy of the fixed cone k'>=10000N'²; enlarging the sign region here does not automatically convert the complement of a diagonal frontier into vanishing energy. No estimate of that new complement has been proved, nor is it eliminated by a mass count. The complete table and the global sign remain **OPEN**; there is no new certified window T of Paper 47.

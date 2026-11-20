@@ -1,42 +1,42 @@
-# Estado de registro — hasta siete polos arbitrarios
+# Recorded state — up to seven arbitrary poles
 
-Estado: PROVED resultados indicados; signo de todos los órdenes OPEN. Goal activo. Ningún paper modificado.
+Status: PROVED indicated results; sign at all orders OPEN. Goal active. No paper modified.
 
-## Avance de la ronda
+## Progress of the round
 
-El paso de confluencia a tasas arbitrarias ya no depende de monotonía AP. La identidad de filtro transporta un margen y retiene exactamente la norma nueva. Sólo se acota la pérdida en la región donde m−c es negativo y la posible pérdida polar. Una cota de traza ponderada, máxima en la confluencia por convoluciones de núcleos positivos, controla TODOS los contactos primos.
+The passage from confluence to arbitrary rates no longer depends on AP monotonicity. The filter identity transports a margin and retains exactly the new norm. Only the loss in the region where m−c is negative and the possible polar loss are bounded. A weighted trace bound, maximal at confluence by convolutions of positive kernels, controls ALL prime contacts.
 
-Resultados con revisión independiente y verificadores racionales ejecutados:
+Results with independent review and rational verifiers executed:
 
-| Clase: tasas reales >=31.5, sin separación ni cota superior | Margen de W respecto de ||f||² | Prueba |
+| Class: real rates >=31.5, no separation or upper bound | Margin of W relative to ||f||² | Proof |
 |---|---:|---|
-| Hasta tres polos | 1/20 | POWER_POLE_MOVEMENT_004, AUDIT_004 |
-| Hasta cuatro polos | 2/25 | POWER_FOUR_GLOBAL_009, FOUR_GLOBAL_AUDIT_009 |
-| Hasta cinco polos | 1/100 | POWER_FIVE_GLOBAL_010, FIVE_AUDIT_010 |
-| Hasta seis polos | 1/25 | POWER_SIX_GLOBAL_011, SIX_AUDIT_011 |
-| Hasta siete polos | 1/500 | POWER_SEVEN_GLOBAL_012, POWER_SEVEN_AUDIT_012 y verifier PASS |
+| Up to three poles | 1/20 | POWER_POLE_MOVEMENT_004, AUDIT_004 |
+| Up to four poles | 2/25 | POWER_FOUR_GLOBAL_009, FOUR_GLOBAL_AUDIT_009 |
+| Up to five poles | 1/100 | POWER_FIVE_GLOBAL_010, FIVE_AUDIT_010 |
+| Up to six poles | 1/25 | POWER_SIX_GLOBAL_011, SIX_AUDIT_011 |
+| Up to seven poles | 1/500 | POWER_SEVEN_GLOBAL_012, POWER_SEVEN_AUDIT_012 and verifier PASS |
 
-Todas las cotas son estrictas para f no nula; las constantes no fueron optimizadas y no deben compararse como fondos óptimos. Se admiten multiplicidades. Para exponentes exteriores a_i>=32, las imágenes Z de las mezclas de potencias pertenecen exactamente a estas clases. Los casos de menor dimensión se incluyen por cancelación de factores adicionales en el numerador.
+All bounds are strict for nonzero f; the constants were not optimised and must not be compared as optimal floors. Multiplicities are allowed. For exterior exponents a_i>=32, the Z images of the power mixtures belong exactly to these classes. The lower-dimensional cases are included by cancellation of additional factors in the numerator.
 
-POWER_COMMON_TRANSFER_010 contiene el criterio común y las cotas ponderadas. La mejora de traza NO afirma monotonía del eigenvalor máximo ponderado: usa operatornorm<=trace y monotonía de la traza. POWER_SEVEN_GLOBAL_012 cubre el déficit por 196 intervalos racionales completos, no por muestreo entre puntos.
+POWER_COMMON_TRANSFER_010 contains the common criterion and the weighted bounds. The trace improvement does NOT claim monotonicity of the maximal weighted eigenvalue: it uses operatornorm<=trace and monotonicity of the trace. POWER_SEVEN_GLOBAL_012 covers the deficit by 196 complete rational intervals, not by sampling between points.
 
-El bloque fijo Laguerre12 de POWER_ARITHMETIC_BLOCK_007 conserva su prueba separada, W>||f||²/10000. Allí AP es indefinida y el contacto2 es necesario para reparar ciertas direcciones. NO se infiere de ese bloque signo para doce tasas arbitrarias.
+The fixed Laguerre12 block of POWER_ARITHMETIC_BLOCK_007 keeps its separate proof, W>||f||²/10000. There AP is indefinite and the contact2 is necessary to repair certain directions. A sign for twelve arbitrary rates is NOT inferred from that block.
 
-## Auditoría del objetivo completo
+## Audit of the full goal
 
-- Caso de tres potencias: resuelto en TODO el rango propuesto a_i>=32, incluso triples desiguales.
-- Puente en norma de forma: probado, incluido PW_N y cualquier test compacto mediante Möbius finito y aproximación fuerte (POWER_BRIDGE_002).
-- Extensión a órdenes arbitrarios de una familia densa: no probada. Certificados de tamaño fijo no suplen este requisito.
-- Cierre del signo del Paper47: no obtenido. El goal no está completo y no se editan papers.
+- Three-power case: resolved on the WHOLE proposed range a_i>=32, including unequal triples.
+- Bridge in form norm: proved, including PW_N and any compact test via finite Möbius and strong approximation (POWER_BRIDGE_002).
+- Extension to arbitrary orders of a dense family: not proved. Fixed-size certificates do not meet this requirement.
+- Closure of the sign of Paper47: not obtained. The goal is not complete and papers are not edited.
 
-La cadena Tate009 tiene identidad exacta W[f_n]=992^(2−n)Δ²q_n y monotonía de la parte arquimediana; su convexidad aritmética sigue abierta. Su límite es el centro crítico E0 ya registrado, no una nueva holgura asintótica. Además la familia individual no es densa: probar sólo sus diagonales no sustituye el signo de todas las combinaciones.
+The Tate chain009 has the exact identity W[f_n]=992^(2−n)Δ²q_n and monotonicity of the archimedean part; its arithmetic convexity remains open. Its limit is the already recorded critical centre E0, not a new asymptotic slack. Moreover the individual family is not dense: proving only its diagonals does not replace the sign of all combinations.
 
-## Próxima decisión matemática
+## Next mathematical decision
 
-Auditar el límite del criterio de pérdida uniforme al llegar a ocho polos. Si falla, señalar la clase exacta de estimaciones que falla; no atribuir negatividad a W. Conservar la información positiva descartada por la cota uniforme o acoplar el peine puede ser necesario. La propiedad requerida para todos los órdenes todavía no está construida.
+Audit the limit of the uniform-loss criterion on reaching eight poles. If it fails, identify the exact class of estimates that fails; do not attribute negativity to W. Keeping the positive information discarded by the uniform bound or coupling the comb may be necessary. The property required for all orders has not yet been built.
 
-## Límite del método ya auditado (013)
+## Already audited limit of the method (013)
 
-POWER_DEFICIT_LIMIT_013 y POWER_DEFICIT_AUDIT_013 prueban que, en dimensión ocho, incluso el MEJOR déficit uniforme puntual directo no permite el transporte anterior: el margen base óptimo es <1/25 (test racional), mientras la pérdida puntual forzosa es >1/20. Esto excluye seguir afinando constantes dentro de esa clase de estimación. No prueba negatividad de AP ni W, ni excluye conservar la ganancia espectral positiva o usar restricciones de las funciones racionales.
+POWER_DEFICIT_LIMIT_013 and POWER_DEFICIT_AUDIT_013 prove that, in dimension eight, even the BEST direct pointwise uniform deficit does not allow the earlier transport: the optimal base margin is <1/25 (rational test), while the forced pointwise loss is >1/20. This excludes further tuning of constants within that class of estimate. It does not prove negativity of AP or W, nor exclude keeping the positive spectral gain or using restrictions of the rational functions.
 
-La siguiente ronda conserva la integral firmada del filtro y explora su descomposición en formas sobre numeradores con un cero adicional. Esa construcción todavía está en desarrollo; no forma parte de los resultados PROVED de este estado.
+The next round keeps the signed integral of the filter and explores its decomposition into forms on numerators with an additional zero. That construction is still in development; it is not part of the PROVED results of this state.

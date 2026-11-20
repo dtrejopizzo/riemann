@@ -1,138 +1,138 @@
-# QRH7/8 — balance compensado y geometría hiperbólica del portador
+# QRH7/8 — compensated balance and hyperbolic geometry of the carrier
 
-2026-10-19. **PROVED: cálculo geométrico, cota de momentos e inflexión.**
-Revisión independiente de las fórmulas y asintóticas. **OPEN: enlace de
-signo con Q_T.** No se afirma una nueva estimación de los primos.
+2026-10-19. **PROVED: geometric computation, moment bound and inflection.**
+Independent review of the formulas and asymptotics. **OPEN: sign link
+with Q_T.** No new estimate for the primes is claimed.
 
-## 0. Corpus, diferencia y fuente
+## 0. Corpus, difference and source
 
-Consultados las reglas del proyecto, índice ROUTES-TRIED-INDEX, grid maestro y
-CROSSWORD-TO-D.md. Antecedentes: SKELETON_001/AUDIT_205_SKELETON_001,
-RFIN_TRACT_001 y modelos hiperbólicos R186_043. No se reabre el kernel
-Green polar ni la acotación genérica de psi−x como fuente de signo.
-El cálculo adicional es la norma EXACTA del perfil proyectado, su
-dependencia en la frecuencia y la posición de su inflexión. Es un
-diagnóstico geométrico, no una nueva ruta que esquive aquellos fallos.
+Consulted: the project rules, the ROUTES-TRIED-INDEX index, master grid and
+CROSSWORD-TO-D.md. Antecedents: SKELETON_001/AUDIT_205_SKELETON_001,
+RFIN_TRACT_001 and hyperbolic models R186_043. The polar Green kernel
+and the generic bound of psi−x are not reopened as a source of sign.
+The additional computation is the EXACT norm of the projected profile, its
+dependence on frequency and the position of its inflection. It is a
+geometric diagnostic, not a new route that evades those failures.
 
-Fuente externa examinada: OpenAI30Sept2026, introducción y§§19–20,
+External source examined: OpenAI30Sept2026, introduction and §§19–20,
 https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf .
-No se auditó integralmente el manuscrito externo.
+The external manuscript was not audited in full.
 
-## 1. Qué conservar del argumento7/8
+## 1. What to keep from the 7/8 argument
 
-El argumento combina estimaciones de momentos de polinomios inversos
-y ordinarios, con selección de primos y un balance de parámetros.
-Lemma20.2 y(20.9) certifican −E_*≥49/440640 para un EXPONENTE
-COMPENSADO, mediante una identidad polinómica de signo explícito.
-Ese número no es un margen de coercividad de Q_T.
+The argument combines moment estimates of inverse and ordinary
+polynomials, with a selection of primes and a balance of parameters.
+Lemma20.2 and (20.9) certify −E_*≥49/440640 for a COMPENSATED
+EXPONENT, via a polynomial identity with explicit sign.
+That number is not a coercivity margin of Q_T.
 
-La lección aplicable es conservar la compensación antes de estimar las
-piezas. Para usarla en017 faltan estimaciones aritméticas válidas del
-resto que permitan un balance semejante. La técnica no crea esas cotas.
-No se importa un signo de la familia auxiliar a la forma del paper47.
+The applicable lesson is to keep the compensation before estimating the
+pieces. To use it in 017, valid arithmetic estimates of the
+remainder allowing a similar balance are missing. The technique does not create those bounds.
+No sign of the auxiliary family is imported into the form of paper47.
 
-## 2. Cota exacta de un momento hiperbólico
+## 2. Exact bound of a hyperbolic moment
 
-En H=L²_even(−T,T), o su complejificación, sea h_b(x)=cosh(bx), b>0,
-y P_b la proyección ortogonal sobre h_b^perp. Definir
+In H=L²_even(−T,T), or its complexification, let h_b(x)=cosh(bx), b>0,
+and P_b the orthogonal projection onto h_b^perp. Define
 
     I_T(z,b)=sinh((z+b)T)/(z+b)+sinh((z−b)T)/(z−b),
     I_T(b,b)=T+sinh(2bT)/(2b),
 
-con los cocientes extendidos por continuidad. Para u_z(x)=cosh(zx),
+with the quotients extended by continuity. For u_z(x)=cosh(zx),
 
     ||P_b u_z||²=||u_z||²−|I_T(z,b)|²/I_T(b,b).       (1)
 
-Prueba: integrar cosh(zx)cosh(bx) por producto a suma y aplicar la
-fórmula de proyección de rango uno. Para F⊥h_b, Cauchy–Schwarz da
+Proof: integrate cosh(zx)cosh(bx) by product-to-sum and apply the
+rank-one projection formula. For F⊥h_b, Cauchy–Schwarz gives
 
     |<F,u_z>|² ≤ ||F||² ||P_bu_z||².                (2)
 
-Es una cota efectiva para todo test de ese subespacio, sin información
-de ceros. Para tests reales pares también acota el momento de Laplace
-∫F(x)cosh(zx)dx. El factor es óptimo en el espacio complejificado.
-En el portador par polar libre del proyecto, b=1/2.
+It is an effective bound for every test of that subspace, without zero
+information. For real even tests it also bounds the Laplace moment
+∫F(x)cosh(zx)dx. The factor is optimal in the complexified space.
+On the even polar-free carrier of the project, b=1/2.
 
-## 3. Asíntota real y frecuencia compleja
+## 3. Real asymptotics and complex frequency
 
-Sean 0<a<b y gamma reales FIJOS, z=a+i gamma. Integración directa da
+Let 0<a<b and gamma be FIXED reals, z=a+i gamma. Direct integration gives
 
     ||u_z||²=sinh(2aT)/(2a)+sin(2 gamma T)/(2 gamma),
 
-interpretando el segundo sumando como T si gamma=0. Cuando T→∞,
+interpreting the second summand as T if gamma=0. As T→∞,
 
     ||u_z||² ~ exp(2aT)/(4a),
     I_T(z,b) ~ exp((a+b+i gamma)T)/(2(a+b+i gamma)).
 
-Sustituir en(1) prueba
+Substituting into (1) proves
 
     ||P_bu_z||² / ||u_z||²
        → [(b−a)²+gamma²]/[(b+a)²+gamma²].            (3)
 
-Para gamma=0, equivalentemente,
+For gamma=0, equivalently,
 
     ||P_b cosh(ax)||²
        ~ exp(2aT)(b−a)²/[4a(a+b)²].                (4)
 
-El número3/8=7/8−1/2 motiva probar a=3/8 como PERFIL MODELO.
-Con b=1/2 se obtiene
+The number 3/8=7/8−1/2 motivates testing a=3/8 as a MODEL PROFILE.
+With b=1/2 one obtains
 
     ||P_(1/2)cosh(3x/8)||² ~ (2/147)exp(3T/4),
-    razón residual → 1/49,
-    razón compleja → [gamma²+1/64]/[gamma²+49/64].  (5)
+    residual ratio → 1/49,
+    complex ratio → [gamma²+1/64]/[gamma²+49/64].  (5)
 
-La atenuación1/49 corresponde sólo al perfil real, sin oscilación.
-La razón de(3) tiende a1 al tomar después |gamma|→∞. No se ha usado
-uniformidad en un límite conjunto. Incluso para T fijo, la fórmula
-explícita da I_T(a+i gamma,b)=O_T(1/|gamma|), mientras ||u_z||²
-tiende a sinh(2aT)/(2a)>0. Así la proyección quita una fracción
-tendente a cero al crecer la frecuencia.
+The attenuation 1/49 corresponds only to the real profile, without oscillation.
+The ratio of (3) tends to 1 when afterwards |gamma|→∞. No
+uniformity in a joint limit has been used. Even for fixed T, the explicit
+formula gives I_T(a+i gamma,b)=O_T(1/|gamma|), while ||u_z||²
+tends to sinh(2aT)/(2a)>0. Thus the projection removes a fraction
+tending to zero as the frequency grows.
 
-Las asíntotas(3)–(4) no se extienden sin justificación a a=0. En ese
-caso particular, para b=1/2, la fórmula exacta es
+The asymptotics (3)–(4) do not extend without justification to a=0. In that
+particular case, for b=1/2, the exact formula is
 
     ||P_(1/2)1||²
        =2T−16sinh²(T/2)/(T+sinh T)=2T−8+o(1).
 
-## 4. Dónde sí aparece un cambio de convexidad
+## 4. Where a change of convexity does appear
 
-Cosh(ax) es convexa globalmente: su segunda derivada es a²cosh(ax)>0
-para a≠0. Sinh(ax), a>0, cambia de convexidad en0. El perfil corregido
+Cosh(ax) is globally convex: its second derivative is a²cosh(ax)>0
+for a≠0. Sinh(ax), a>0, changes convexity at 0. The corrected profile
 
     v_T(x)=cosh(ax)−c_T cosh(bx),
     c_T=I_T(a,b)/I_T(b,b),
 
-sí presenta otra geometría. Para0<a<b fijos,
+does present another geometry. For fixed 0<a<b,
 
     c_T ~ [2b/(a+b)]exp(−(b−a)T).
 
-La razón cosh(ax)/cosh(bx) decrece estrictamente en x>0: su derivada
-logarítmica es a tanh(ax)−b tanh(bx)<0. Por tanto v_T'' se anula
-como máximo una vez en(0,T). Para T suficientemente grande v_T''(0)>0
-y v_T''(T)<0, pues
+The ratio cosh(ax)/cosh(bx) decreases strictly on x>0: its logarithmic
+derivative is a tanh(ax)−b tanh(bx)<0. Hence v_T'' vanishes
+at most once in (0,T). For T sufficiently large v_T''(0)>0
+and v_T''(T)<0, since
 
     c_T b²cosh(bT)/(a²cosh(aT))
        → K=2b³/[a²(a+b)]>1.
 
-Existe entonces una única inflexión positiva x_inf(T), y
+There is then a unique positive inflection x_inf(T), and
 
     x_inf(T)=T−log(K)/(b−a)+o(1).                 (6)
 
-Para justificar la posición, primero x_inf→∞ porque c_T→0; se pueden
-entonces usar las equivalencias exponenciales en la ecuación v_T''=0.
-En a=3/8,b=1/2 la distancia al borde tiende a8log(128/63).
-En todo el intervalo hay dos inflexiones simétricas, no una sola.
+To justify the position, first x_inf→∞ because c_T→0; one can
+then use the exponential equivalences in the equation v_T''=0.
+At a=3/8, b=1/2 the distance to the boundary tends to 8log(128/63).
+On the whole interval there are two symmetric inflections, not just one.
 
-## 5. Alcance para D
+## 5. Scope for D
 
-Las fórmulas son cotas y límites sobre el portador polar libre, pero no
-identifican la fluctuación real de los primos con estos perfiles. Una
-región libre7/8 no da una identidad E(e^x)exp(−x/2)=cosh(3x/8), ni
-su signo, amplitud o frecuencia. El cambio de convexidad tampoco decide
-el signo de Q_T(v_T).
+The formulas are bounds and limits on the polar-free carrier, but they do not
+identify the actual fluctuation of the primes with these profiles. A
+7/8 free region does not give an identity E(e^x)exp(−x/2)=cosh(3x/8), nor
+its sign, amplitude or frequency. The change of convexity does not decide
+the sign of Q_T(v_T) either.
 
-Insight preciso: la eliminación polar reduce perfiles próximos a ella,
-pero no proporciona una atenuación uniforme en frecuencia. El cálculo
-deja visible qué parte no podría pagar un argumento basado solamente
-en cercanía geométrica a cosh(x/2). No excluye controles aritméticos
-adicionales. No se demostró el contratermino017 ni se integró paper47.
+Precise insight: polar elimination reduces profiles close to it,
+but does not provide a uniform attenuation in frequency. The computation
+makes visible which part could not be paid by an argument based only
+on geometric closeness to cosh(x/2). It does not exclude additional arithmetic
+controls. The counterterm 017 was not proved and paper47 was not integrated.

@@ -1,21 +1,21 @@
 # POWER INVERSE LOGCONCAVITY AUDIT 025
 
-Estado: APROBADO. Papers intactos.
+Status: APPROVED. Papers untouched.
 
-Revisados `POWER_INVERSE_LOGCONCAVITY_025.md` y `tools/power_inverse_logconcavity_025_verify.py`; ejecución independiente PASS. El certificado de primera celda `POWER_CELL_TEST_024` y su verificador fueron revisados y reproducidos independientemente en POWER_CELL_AUDIT_024.
+Reviewed `POWER_INVERSE_LOGCONCAVITY_025.md` and `tools/power_inverse_logconcavity_025_verify.py`; independent run PASS. The first-cell certificate `POWER_CELL_TEST_024` and its verifier were reviewed and independently reproduced in POWER_CELL_AUDIT_024.
 
-## 1. Logconcavidad y corte infinito
+## 1. Log-concavity and infinite cut
 
-La identidad c_j=p_j(3d+30j)/(2d−j) se obtiene exactamente de D=33P−P′ y la recurrencia gamma. El cociente (j+1)c_(j+1)/c_j tiene los dos factores declarados: el primero decrece o es constante cuando d1; el segundo decrece estrictamente. El cociente final r_d=0 conserva la monotonía. Con los pesos c_jt^j/D, D′/D es la esperanza de r_j y su derivada es Cov(r_j,j)/t≤0. Esto prueba LC para todos N≥2, sin deducir de ella un signo Möbius automático.
+The identity c_j=p_j(3d+30j)/(2d−j) follows exactly from D=33P−P′ and the gamma recurrence. The quotient (j+1)c_(j+1)/c_j has the two declared factors: the first decreases or is constant when d1; the second decreases strictly. The final quotient r_d=0 preserves monotonicity. With the weights c_jt^j/D, D′/D is the expectation of r_j and its derivative is Cov(r_j,j)/t≤0. This proves LC for all N≥2, without deducing from it an automatic Möbius sign.
 
-La comparación Fraction D129′(2/3)<30D129(2/3) está certificada. LC la prolonga a todos t≥2/3; integrar el cociente logarítmico da D(t+log m)/D(t)≤m^30. La suma absoluta de TODOS m≥2 queda entonces dominada por Σm^−2≤3/4. CUT es una afirmación sobre el inverso COMPLETO. Como log2>2/3, se obtiene K129>0 en toda x≥2. No se afirma que haya una sola transición en [1,2].
+The Fraction comparison D129′(2/3)<30D129(2/3) is certified. LC extends it to all t≥2/3; integrating the logarithmic quotient gives D(t+log m)/D(t)≤m^30. The absolute sum over ALL m≥2 is then dominated by Σm^−2≤3/4. CUT is a statement about the COMPLETE inverse. Since log2>2/3, one obtains K129>0 for all x≥2. It is not claimed that there is a single transition in [1,2].
 
-## 2. Balance integrado completo
+## 2. Complete integrated balance
 
-La representación J(x)=x∫_x∞K(t)t^−2dt implica J129(x)>0 para x≥2. En cada celda n≥3, LOCAL024 y K>0 dan S129(n)≥b_nJ129(n)>0. La primera celda tiene el certificado independiente S129(2)>33/100 con cola Möbius completa. La convergencia absoluta de la suma celular fue probada antes. Por tanto ERR129=−2ΣS129(n)<−33/50 sobre TODA la semirrecta. No se combina adicionalmente el beneficio C_B de esa misma celda.
+The representation J(x)=x∫_x∞K(t)t^−2dt implies J129(x)>0 for x≥2. In each cell n≥3, LOCAL024 and K>0 give S129(n)≥b_nJ129(n)>0. The first cell has the independent certificate S129(2)>33/100 with complete Möbius tail. Absolute convergence of the cell sum was proved earlier. Hence ERR129=−2ΣS129(n)<−33/50 on the WHOLE half-line. The C_B benefit of that same cell is not additionally combined.
 
-## 3. Novedad y alcance
+## 3. Novelty and scope
 
-El lema de covarianza y las razones de coeficientes son herramientas clásicas. El progreso específico frente a020/023 es el corte mejorado para el kernel compensado real; frente a024, permite controlar analíticamente todas las celdas restantes y cerrar una desigualdad aritmética firmada COMPLETA en N129. La negatividad K129(1) permanece intacta.
+The covariance lemma and the coefficient ratios are classical tools. The specific progress relative to020/023 is the improved cut for the real compensated kernel; relative to024, it allows controlling all remaining cells analytically and closing a COMPLETE signed arithmetic inequality at N129. The negativity K129(1) remains intact.
 
-El resultado no es W≥0: W/C0=ARCH_sharp/C0−ERR conserva una comparación cuantitativa pendiente con ARCH_sharp. Tampoco se extiende ERR<0 a todos los órdenes, a toda la tabla ni a una ventana nueva T. El certificado de la forma completa requiere ese balance adicional.
+The result is not W≥0: W/C0=ARCH_sharp/C0−ERR keeps a pending quantitative comparison with ARCH_sharp. Nor is ERR<0 extended to all orders, to the whole table or to a new window T. The certificate of the complete form requires that additional balance.

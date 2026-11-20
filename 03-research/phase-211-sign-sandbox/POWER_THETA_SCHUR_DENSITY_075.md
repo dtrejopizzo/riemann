@@ -1,134 +1,134 @@
-# POWER_THETA_SCHUR_DENSITY_075 — Densidad positiva del denominador regularizado
+# POWER_THETA_SCHUR_DENSITY_075 — Positive density of the regularized denominator
 
-Estado: **PROVED/APROBADO**, revisión independiente POWER_THETA_SCHUR_DENSITY_AUDIT_075.md. Propiedad de la Phi real de073. No prueba el signo del resto G, del kernel Schur de orden dos ni de tres generadores. Papers intactos; sin cómputos nuevos.
+Status: **PROVED/APPROVED**, independent review POWER_THETA_SCHUR_DENSITY_AUDIT_075.md. Property of the real Phi of 073. It does not prove the sign of the remainder G, of the second-order Schur kernel nor of three generators. Papers untouched; no new computations.
 
-## 1. Corpus y cambio preciso
+## 1. Corpus and precise change
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D; releídos POWER_SCHUR_003 y las fuentes theta073. Las búsquedas de denominador regularizado, densidad Schur y fórmulas sinh/cosh no encontraron este objeto en phase211/103 ni una construcción literal en el corpus. Los antecedentes de regularización Schur de otras fases pertenecen a otros operadores; no se presenta su algoritmo general como nuevo.
+Consulted the project rules, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D; reread POWER_SCHUR_003 and the theta sources 073. The searches for regularized denominator, Schur density and sinh/cosh formulas did not find this object in phase 211/103 nor a literal construction in the corpus. The Schur regularization antecedents of other phases belong to other operators; their general algorithm is not presented as new.
 
-El paso003 daba positividad real del primer cociente, sin preservar su kernel. La continuación074 identificó pesos bilaterales con cambio de signo y dejó abierta la positividad del denominador después de quitar sus ceros reales conocidos. Aquí se resuelve exactamente ESA obligación por una densidad explícita positiva. No se sustituye por otra función ni se afirma que un cociente de transformadas positivas sea una derivada logarítmica positiva.
+Step 003 gave real positivity of the first quotient, without preserving its kernel. The continuation 074 identified two-sided weights with sign change and left open the positivity of the denominator after removing its known real zeros. Here EXACTLY that obligation is resolved by an explicit positive density. It is not replaced by another function, nor is it claimed that a quotient of positive transforms is a positive logarithmic derivative.
 
-## 2. Datos theta y definiciones
+## 2. Theta data and definitions
 
-Sea Phi la función par positiva y suave de CONE001/073; V=−logPhi. Se usan los resultados reales ya probados
+Let Phi be the even positive smooth function of CONE001/073; V=−logPhi. The already proved real results are used
 
-    V'''(x)>0 para TODO x>0,
+    V'''(x)>0 for ALL x>0,
     Z(z)=∫_R Phi(x)e^(zx)dx,
-    M(u)=Z'(u)/Z(u), M''(u)<0 para u>0.
+    M(u)=Z'(u)/Z(u), M''(u)<0 for u>0.
 
-Phi y sus derivadas decaen más rápido que cualquier exponencial. Por tanto Z es entera, todas las integraciones por partes siguientes tienen bordes nulos y todos los momentos utilizados son finitos. Además V'(x)/x tiende a infinito por la cola theta explícita.
+Phi and its derivatives decay faster than any exponential. Therefore Z is entire, all the following integrations by parts have vanishing boundary terms and all moments used are finite. Moreover V'(x)/x tends to infinity by the explicit theta tail.
 
-Fijar u>0 y escribir
+Fix u>0 and write
 
     c=M(u)>0, a=M'(0)=∫x²Phi(x)dx/Z(0)>0,
     D_u(z)=zcZ(z)−uZ'(z).
 
-La concavidad estricta de M y M(0)=0 implican c<ua. Definir en toda la recta
+Strict concavity of M and M(0)=0 imply c<ua. Define on the whole line
 
     h_u(x)=−cPhi'(x)−uxPhi(x)
            =Phi(x)[cV'(x)−ux],
-    k_u(x)=∫_x^infinito h_u(y)dy.
+    k_u(x)=∫_x^infinity h_u(y)dy.
 
-Finalmente, con x real,
+Finally, with x real,
 
-    Phi_u(x)=(1/u)∫_|x|^infinito sinh(u(y−|x|))k_u(y)dy.  (NEW-PHI)
+    Phi_u(x)=(1/u)∫_|x|^infinity sinh(u(y−|x|))k_u(y)dy.  (NEW-PHI)
 
-## 3. Dos cambios de signo controlados, uno en cada peso
+## 3. Two controlled sign changes, one in each weight
 
-Como V es par, V'(0)=0. Para x>0,
+Since V is even, V'(0)=0. For x>0,
 
     d/dx[V'(x)/x]
       =[xV''(x)−V'(x)]/x²
       =(1/x²)∫_0^x tV'''(t)dt>0.
 
-Integración por partes da∫xV'(x)Phi(x)dx=Z(0). Así el promedio de V'(x)/x bajo la probabilidad x²Phi(x)/(aZ(0)) es1/a. La función estrictamente creciente no es constante, por lo que su límite en0 es menor que1/a. Como u/c>1/a y el límite en infinito es infinito, existe UN único b>0 con V'(b)/b=u/c.
+Integration by parts gives ∫xV'(x)Phi(x)dx=Z(0). Thus the average of V'(x)/x under the probability x²Phi(x)/(aZ(0)) is 1/a. The strictly increasing function is not constant, so its limit at 0 is less than 1/a. Since u/c>1/a and the limit at infinity is infinite, there exists a UNIQUE b>0 with V'(b)/b=u/c.
 
-En consecuencia h_u es impar y tiene signo negativo en0<x<b y positivo en x>b. Su integral sobre toda la recta es0. Por ello k_u es par y k_u'=−h_u; en la semirrecta positiva primero crece estrictamente hasta b y luego decrece estrictamente hacia0 desde valores positivos.
+Consequently h_u is odd and has negative sign on 0<x<b and positive on x>b. Its integral over the whole line is 0. Hence k_u is even and k_u'=−h_u; on the positive half-line it first increases strictly up to b and then decreases strictly to 0 from positive values.
 
-La paridad permite aplicar Fubini sólo en la semirrecta positiva, donde ∫_0^infinito y|h_u(y)|dy es finita. Luego integración por partes da
+Parity allows applying Fubini only on the positive half-line, where ∫_0^infinity y|h_u(y)|dy is finite. Then integration by parts gives
 
-    ∫_R k_u(x)dx=2∫_0^infinito k_u(x)dx
-                 =2∫_0^infinito y h_u(y)dy
+    ∫_R k_u(x)dx=2∫_0^infinity k_u(x)dx
+                 =2∫_0^infinity y h_u(y)dy
                  =∫_R x h_u(x)dx=Z(0)(c−ua)<0.          (NEG-MASS)
 
-Esto fuerza k_u(0)<0: de lo contrario la monotonía anterior haría k_u>=0 en toda la recta. Puesto que k_u(b)>0, existe exactamente UN beta en(0,b) con
+This forces k_u(0)<0: otherwise the previous monotonicity would make k_u>=0 on the whole line. Since k_u(b)>0, there exists exactly ONE beta in (0,b) with
 
-    k_u(x)<0 para0<=x<beta,
-    k_u(x)>0 para x>beta.                              (ONE-CROSS)
+    k_u(x)<0 for 0<=x<beta,
+    k_u(x)>0 for x>beta.                              (ONE-CROSS)
 
-Todos los intercambios son absolutamente convergentes por la cola theta; no se infiere el signo de k sólo del signo de su integral.
+All interchanges are absolutely convergent by the theta tail; the sign of k is not inferred only from the sign of its integral.
 
-## 4. Cancelación exacta y positividad de la nueva densidad
+## 4. Exact cancellation and positivity of the new density
 
-La transformada bilateral de h_u es D_u(z), pues∫−Phi'(x)e^(zx)dx=zZ(z). Como k_u'=−h_u, otra integración por partes da
+The bilateral transform of h_u is D_u(z), since ∫−Phi'(x)e^(zx)dx=zZ(z). Since k_u'=−h_u, another integration by parts gives
 
     D_u(z)=z∫_R k_u(x)e^(zx)dx.
 
-La igualdad D_u(u)=0 y la paridad de k implican
+The equality D_u(u)=0 and the parity of k imply
 
-    ∫_0^infinito cosh(uy)k_u(y)dy=0.                    (BALANCE)
+    ∫_0^infinity cosh(uy)k_u(y)dy=0.                    (BALANCE)
 
-Para cada x>=0, ponga
+For each x>=0, set
 
     w_x(y)=sinh(u(y−x))1_(y>=x)/cosh(uy), y>=0.
 
-Esta función es continua, no decreciente y estrictamente creciente para y>x, porque allí
+This function is continuous, nondecreasing and strictly increasing for y>x, because there
 
     w_x'(y)=u cosh(ux)/cosh²(uy)>0.
 
-La medida firmada dnu(y)=cosh(uy)k_u(y)dy tiene masa total0 y UN cruce de signo negativo/positivo en beta. Por tanto
+The signed measure dnu(y)=cosh(uy)k_u(y)dy has total mass 0 and ONE negative/positive sign crossing at beta. Therefore
 
     ∫w_x dnu=∫[w_x(y)−w_x(beta)]dnu(y)>0.
 
-El integrando del último integral es no negativo en ambos lados de beta. La estricta positividad procede, por ejemplo, de y>max(x,beta), donde k_u>0 y w_x(y)>w_x(beta). Las colas garantizan integrabilidad.
+The integrand of the last integral is nonnegative on both sides of beta. Strict positivity comes, for example, from y>max(x,beta), where k_u>0 and w_x(y)>w_x(beta). The tails guarantee integrability.
 
-Por NEW-PHI,
+By NEW-PHI,
 
-    Phi_u(x)>0 para TODO x real.                       (POSITIVE)
+    Phi_u(x)>0 for ALL real x.                       (POSITIVE)
 
-Este paso conserva la cancelación BALANCE antes de comparar pesos, en lugar de tomar valores absolutos de k_u.
+This step keeps the cancellation BALANCE before comparing weights, instead of taking absolute values of k_u.
 
-## 5. Ecuación diferencial y transformada exacta
+## 5. Differential equation and exact transform
 
-Para x>0, diferenciar NEW-PHI da
+For x>0, differentiating NEW-PHI gives
 
-    Phi_u'(x)=−∫_x^infinito cosh(u(y−x))k_u(y)dy,
+    Phi_u'(x)=−∫_x^infinity cosh(u(y−x))k_u(y)dy,
     Phi_u''(x)−u²Phi_u(x)=k_u(x).
 
-BALANCE implica Phi_u'(0+)=0. La extensión par es por tanto suave y satisface la ecuación en toda la recta, sin masa delta en0.
+BALANCE implies Phi_u'(0+)=0. The even extension is therefore smooth and satisfies the equation on the whole line, without delta mass at 0.
 
-Para todo A>u, la cola theta permite|k_u(y)|<=C_Ae^(−Ay); NEW-PHI y su fórmula de primera derivada dan cotas del mismo tipo para Phi_u y Phi_u'. Como A es arbitrario, las transformadas bilaterales son enteras y los bordes de integración por partes se anulan para todo z complejo. Se obtiene exactamente
+For all A>u, the theta tail allows |k_u(y)|<=C_Ae^(−Ay); NEW-PHI and its first-derivative formula give bounds of the same type for Phi_u and Phi_u'. Since A is arbitrary, the bilateral transforms are entire and the boundary terms of integration by parts vanish for all complex z. One obtains exactly
 
     ∫_R Phi_u(x)e^(zx)dx
       =D_u(z)/[z(z²−u²)].                              (TRANSFORM)
 
-Los valores en0,±u son removibles por la identidad entera. En particular la masa positiva es
+The values at 0, ±u are removable by the entire identity. In particular the positive mass is
 
     ∫_R Phi_u(x)dx=Z(0)(ua−c)/u²>0.
 
-Se ha construido una representación positiva explícita del denominador regularizado, no sólo demostrado que su valor sobre el eje real es positivo.
+An explicit positive representation of the regularized denominator has been constructed, not merely a proof that its value on the real axis is positive.
 
-## 6. Corolario real: positividad y logconvexidad estricta
+## 6. Real corollary: positivity and strict log-convexity
 
-Definir H_u(z)=∫Phi_u(x)e^(zx)dx por TRANSFORM. Para todo z real, H_u(z)>0 y
+Define H_u(z)=∫Phi_u(x)e^(zx)dx by TRANSFORM. For all real z, H_u(z)>0 and
 
     (log H_u)''(z)=Var_(Phi_u exp(zx)/H_u(z))(X)>0.
 
-La identidad se obtiene diferenciando bajo la integral, justificado por la cola superexponencial. La varianza es estrictamente positiva porque Phi_u es positiva en toda la recta, no una masa puntual. Por paridad, H_u es par y su derivada logarítmica es impar y creciente. No se infiere el signo de (log H_u)''' ni convexidad del hazard de Phi_u.
+The identity is obtained by differentiating under the integral, justified by the superexponential tail. The variance is strictly positive because Phi_u is positive on the whole line, not a point mass. By parity, H_u is even and its logarithmic derivative is odd and increasing. Neither the sign of (log H_u)''' nor hazard convexity of Phi_u is inferred.
 
-## 7. Comparación que aún falta para el paso Schur
+## 7. Comparison still missing for the Schur step
 
-El transformado003 es
+The transform of 003 is
 
     F_1(z)=c[zM(z)−uc]/[zc−uM(z)].
 
-Si H_u(z)=∫Phi_u(x)e^(zx)dx, álgebra exacta usando TRANSFORM da
+If H_u(z)=∫Phi_u(x)e^(zx)dx, exact algebra using TRANSFORM gives
 
     F_1(z)=(c²/u) Z(z)/[zH_u(z)]−cz/u.
 
-El residuo en0 es R_u=uc²/(ua−c)>0. Por tanto
+The residue at 0 is R_u=uc²/(ua−c)>0. Therefore
 
     G_u(z)=F_1(z)−R_u/z
       =(c²/(uz))[Z(z)/H_u(z)−Z(0)/H_u(0)]−cz/u.
 
-POSITIVE no ordena automáticamente el cociente Z/H_u ni lo identifica con una derivada logarítmica. Falta una desigualdad específica que compare Phi y Phi_u y controle el kernel de G o el de F_1. La clase genérica de hipótesis de073 no implica positividad de orden tres, como ya registra074; este resultado no retira ese límite. No se deduce positividad de tres generadores, de todos los órdenes ni una nueva ventana temporal.
+POSITIVE does not automatically order the quotient Z/H_u nor identify it with a logarithmic derivative. A specific inequality comparing Phi and Phi_u and controlling the kernel of G or that of F_1 is missing. The generic class of hypotheses of 073 does not imply positivity of order three, as 074 already records; this result does not remove that limit. Neither positivity of three generators, of all orders nor a new time window is deduced.

@@ -1,87 +1,87 @@
-# QRH — mapa de exponentes y condiciones para una extrapolación
+# QRH — exponent map and conditions for an extrapolation
 
-2026-10-19. Cálculo algebraico revisado por constructor y revisor.
-**PROVED como lema condicional; estimaciones nuevas OPEN. No signo de D.**
+2026-10-19. Algebraic computation, independently reviewed.
+**PROVED as a conditional lemma; new estimates OPEN. No sign of D.**
 
-## Alcance y diferencia
+## Scope and difference
 
-Consultados índice (L74 y familias de amplificación), grid y crucigrama.
-No se reabre una familia cerrada ni se propone una nueva criba sin prueba.
-La diferencia es analizar la extracción exacta de una fuente externa ahora
-leída: ecuaciones2.3–2.5 del PDF OpenAI de5Oct2026. No se infiere una
-recurrencia interpolando los números47/48,11/12,7/8.
+Consulted the index (L74 and amplification families), grid and crossword.
+No closed family is reopened nor is a new sieve proposed without proof.
+The difference is to analyse the exact extraction of an external source now
+read: equations 2.3–2.5 of the OpenAI PDF of 5Oct2026. No recurrence
+is inferred by interpolating the numbers 47/48, 11/12, 7/8.
 
-Fuente: https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/paper2.pdf
+Source: https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/paper2.pdf
 
-## Lema de réplicas
+## Replica lemma
 
-Supongamos, para D creciente y H=D^h en un rango autorizado, una familia
-de números complejos A_j, una señal A y un subconjunto de J réplicas con,
-para todo ε>0 (permitiendo constantes dependientes de ε),
+Suppose, for growing D and H=D^h in an authorised range, a family
+of complex numbers A_j, a signal A and a subset of J replicas with,
+for all ε>0 (allowing ε-dependent constants),
 
     J >= H^κ D^(-ε),
-    |A_j-A| <= C D H^(-δ) en cada réplica,
-    sum_familia |A_j|² <= C_ε D^(a+ε) H^b.
+    |A_j-A| <= C D H^(-δ) on each replica,
+    sum_family |A_j|² <= C_ε D^(a+ε) H^b.
 
-Las constantes deben ser uniformes en D,H; h,κ,δ son positivos fijos.
-Sumar |A|²<=2|A_j|²+2|A_j-A|² sobre las réplicas prueba
+The constants must be uniform in D,H; h,κ,δ are fixed positive numbers.
+Summing |A|²<=2|A_j|²+2|A_j-A|² over the replicas proves
 
     |A| <= C_ε D^(θ+ε),
     θ = (1/2)max{a+(b-κ)h, 2-2δh}.
 
-Por tanto, para que ESTA COTA certifique exponente1/2+ε, basta y es
-algebraicamente necesario que
+Hence, for THIS BOUND to certify exponent 1/2+ε, it is sufficient and
+algebraically necessary that
 
     h >= 1/(2δ),       a+(b-κ)h <= 1.
 
-No son condiciones necesarias para cancelación real: el argumento puede
-perder información y otro control puede mejorarla.
+These are not necessary conditions for actual cancellation: the argument may
+lose information and another control may improve it.
 
-## Sustitución en el argumento publicado
+## Substitution into the published argument
 
-Las réplicas son filas p^6: J es de orden H^(1/6)/log H y
-A_(p^6)=A_1+O(D H^(-1/6)). Así κ=δ=1/6. La cota usada es
-M(D,H)<=C_ε D^(1+ε)H, para H=D^(1+ϑ),0<ϑ<=1/10.
-Luego a=b=1, h=1+ϑ y
+The replicas are the rows p^6: J is of order H^(1/6)/log H and
+A_(p^6)=A_1+O(D H^(-1/6)). Thus κ=δ=1/6. The bound used is
+M(D,H)<=C_ε D^(1+ε)H, for H=D^(1+ϑ), 0<ϑ<=1/10.
+Then a=b=1, h=1+ϑ and
 
     θ(h)=(1/2)max{1+5h/6,2-h/3}=11/12+5ϑ/12.
 
-No hay una regla que tome este θ como entrada para una mejora siguiente.
-Incluso concediendo CONTRAFACTUALMENTE la misma cota para todo h>0,
-el mínimo algebraico sería θ=6/7 en h=6/7. Ese rango no está probado
-por el resultado citado;6/7 no es un nuevo teorema externo ni nuestro.
+There is no rule that takes this θ as input for a next improvement.
+Even granting COUNTERFACTUALLY the same bound for all h>0,
+the algebraic minimum would be θ=6/7 at h=6/7. That range is not proved
+by the cited result; 6/7 is not a new theorem, external or ours.
 
-Para h=3, el nivel crítico requeriría que el promedio total fuera
-O(D^(3/2+ε)), frente a D H=D^4 en esa escala. No se afirma que tal
-cota sea cierta o factible: cuantifica lo que esta extracción exigiría.
+For h=3, the critical level would require the total average to be
+O(D^(3/2+ε)), versus D H=D^4 at that scale. It is not claimed that such a
+bound is true or feasible: it quantifies what this extraction would require.
 
-## Un objetivo alternativo preciso, todavía OPEN
+## A precise alternative target, still OPEN
 
-En vez de estimar toda la familia, bastaría controlar sólo las réplicas
-p^6 con Np entre Y/2 y Y, Y=D^(1/2), mediante
+Instead of estimating the whole family, it would suffice to control only the replicas
+p^6 with Np between Y/2 and Y, Y=D^(1/2), via
 
     sum_p |A_(p^6)(D)|² <= C_ε J D^(1+ε),
-    J = #primos del intervalo, de orden Y/log Y.
+    J = #primes in the interval, of order Y/log Y.
 
-El error conocido por réplica es O(D/Y)=O(D^(1/2)); el lema daría
-|A_1|<=C_ε D^(1/2+ε). Este objetivo conserva la señal coherente;
-la criba sobre la familia completa NO lo demuestra. Puede ser tan difícil
-como controlar directamente la señal. No es una fuente nueva ya construida.
+The known error per replica is O(D/Y)=O(D^(1/2)); the lemma would give
+|A_1|<=C_ε D^(1/2+ε). This target keeps the coherent signal;
+the sieve over the whole family does NOT prove it. It may be as hard
+as controlling the signal directly. It is not an already constructed new source.
 
-**Actualización tras el cálculo exacto:** QRH_REPLICA_COHERENCE.md prueba
-que esas dos familias de estimaciones son de hecho equivalentes, para
-todo ε>0 con renombre del exponente. La varianza de las réplicas es O(D)
-sin cancelación; toda la dificultad restante está en su media coherente.
-La selección, por sí sola, no aporta un mecanismo nuevo para acotarla.
+**Update after the exact computation:** QRH_REPLICA_COHERENCE.md proves
+that those two families of estimates are in fact equivalent, for
+all ε>0 after renaming the exponent. The variance of the replicas is O(D)
+without cancellation; all the remaining difficulty lies in their coherent mean.
+The selection, by itself, contributes no new mechanism to bound it.
 
-## Las tres fracciones no son tres iteraciones
+## The three fractions are not three iterations
 
-Kintali47/48 usa probe y comparación por densidad de ceros en un régimen
-específico. El texto de30Sept2026 que da7/8 usa además un detector con
-polinomios inversos y ordinarios y estimaciones separadas de momentos
-(resumen introductorio y§§17–20). Esta lectura de estructura NO audita
-sus199páginas. No se identifica una transformación común iterada.
+Kintali 47/48 uses a probe and comparison by zero density in a
+specific regime. The text of 30Sept2026 giving 7/8 additionally uses a detector with
+inverse and ordinary polynomials and separate moment estimates
+(introductory summary and §§17–20). This structural reading does NOT audit
+its 199 pages. No common iterated transformation is identified.
 
-Para D seguiría faltando una identidad que transfiera cualquier nueva
-estimación a la cota inferior exacta de017. No se usa ninguna equivalencia
-externa de D ni se atribuye a este lema un control del contratermino.
+For D an identity would still be missing that transfers any new
+estimate to the exact lower bound of 017. No external equivalence
+of D is used, nor is a control of the counterterm attributed to this lemma.

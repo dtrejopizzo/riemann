@@ -1,122 +1,122 @@
-# POWER_JOINT_SCALE_016 — Escala conjunta de dimensión y orden highpass
+# POWER_JOINT_SCALE_016 — Joint scale of dimension and highpass order
 
-Estado: PROVED fórmulas beta, límite de paquete lineal, momentos temporales y obstrucciones a uniformizar los pesos. OPEN un cono de positividad de la forma completa. Sin campañas numéricas. Papers intactos.
+Status: PROVED beta formulas, linear packet limit, time moments and obstructions to uniformizing the weights. OPEN a positivity cone for the complete form. No numerical campaigns. Papers untouched.
 
-## Antecedentes y razón nueva, registrados antes de construir
+## Antecedents and new reason, recorded before building
 
-Leídos las reglas del proyecto, HIGHPASS015 y auditoría, GEOMETRIC_TRANSFER015, CONFLUENT_BRIDGE014; búsqueda conjunta en índice ROUTES-TRIED-INDEX, grid parte3 y CROSSWORD-TO-D (Jacobi/resolvente/escala conjunta/highpass). La coercividad de alta frecuencia y los límites de bloques prolates ya están registrados. La diferencia aquí es cuantificar la dependencia en N de la órbita racional exacta Q^kV_N, especialmente para P=1 y P=s^(N−1), no inferir una cola prolate ni positividad general desde un índice alto.
+Read: the project rules, HIGHPASS015 and its audit, GEOMETRIC_TRANSFER015, CONFLUENT_BRIDGE014; joint search in the ROUTES-TRIED-INDEX index, grid part3 and CROSSWORD-TO-D (Jacobi/resolvent/joint scale/highpass). High-frequency coercivity and the limits of prolate blocks are already recorded. The difference here is to quantify the N-dependence of the exact rational orbit Q^kV_N, especially for P=1 and P=s^(N−1), not to infer a prolate tail or general positivity from a high index.
 
-Se investiga por separado: (i) escala espectral real, (ii) uniformidad de los pesos temporales usados para sumar el peine, (iii) signo completo. Un falsificador de (ii) no será presentado como falsificador de (iii).
+Investigated separately: (i) real spectral scale, (ii) uniformity of the time weights used to sum the comb, (iii) complete sign. A falsifier of (ii) will not be presented as a falsifier of (iii).
 
-## 1. Extremo P=1: ley beta EXACTA para todo N,k
+## 1. Endpoint P=1: EXACT beta law for all N,k
 
-Sea u=63/2 y f_(N,k) de transformada F(s)=s^k/(s+u)^(N+k), N>=1,k>=0. Su densidad espectral normalizada es proporcional a tau^(2k)/(u²+tau²)^(N+k). Al cambiar
+Let u=63/2 and f_(N,k) with transform F(s)=s^k/(s+u)^(N+k), N>=1,k>=0. Its normalized spectral density is proportional to tau^(2k)/(u²+tau²)^(N+k). Changing to
 
     Z=tau²/(u²+tau²),
 
-se obtiene EXACTAMENTE
+one obtains EXACTLY
 
     Z~Beta(k+1/2,N−1/2),
     ||f_(N,k)||²=u^(1−2N)B(k+1/2,N−1/2)/(2pi).          (BETA)
 
-El signo de tau es simétrico e independiente de Z. Para N>3/2,
+The sign of tau is symmetric and independent of Z. For N>3/2,
 
     E tau²=u²(k+1/2)/(N−3/2).
 
-Así la escala típica es u sqrt(k/N), no sqrt(k) con una constante independiente de N. La constante oculta en el teorema015 importa realmente al variar la dimensión.
+Thus the typical scale is u sqrt(k/N), not sqrt(k) with a constant independent of N. The hidden constant in the theorem of015 really matters as the dimension varies.
 
-## 2. Paquete en el cono LINEAL: los contactos no desaparecen
+## 2. Packet in the LINEAR cone: the contacts do not disappear
 
-Suponga N->infinito y k/N->c, 0<c<infinito. La media y varianza beta son
+Suppose N->infinity and k/N->c, 0<c<infinity. The beta mean and variance are
 
     E Z=(k+1/2)/(k+N),
     Var Z=(k+1/2)(N−1/2)/[(k+N)²(k+N+1)].
 
-Por Chebyshev, Z converge en probabilidad a c/(1+c). En consecuencia |tau| converge en probabilidad a u sqrt(c). Para todo t real fijo,
+By Chebyshev, Z converges in probability to c/(1+c). Consequently |tau| converges in probability to u sqrt(c). For every fixed real t,
 
     c_f(N,k)(t)/||f_(N,k)||² ->cos(u sqrt(c)t).           (PACKET)
 
-No se usa un teorema central del límite: la función cos es acotada y basta la concentración beta. La energía arquimediana normalizada converge a m(u sqrt(c)); la uniformidad integrable requerida se sigue de la cota uniforme de E tau², pues m tiene crecimiento logarítmico.
+No central limit theorem is used: the function cos is bounded and beta concentration suffices. The normalized archimedean energy converges to m(u sqrt(c)); the required integrable uniformity follows from the uniform bound on E tau², since m has logarithmic growth.
 
-Este resultado falsifica la extrapolación «desaparición uniforme de cada contacto en todo cono k>=C N». Para cualquier C, elija un entero m suficientemente grande y c=[2pi m/(u log2)]²>=C; tome k=ceil(cN). Entonces
+This result falsifies the extrapolation "uniform disappearance of each contact in every cone k>=C N". For any C, choose a sufficiently large integer m and c=[2pi m/(u log2)]²>=C; take k=ceil(cN). Then
 
     c_f(N,k)(log2)/||f_(N,k)||² ->1.
 
-El contacto 2 permanece y no tiende a cero. No se afirma que la forma completa sea negativa en esta sucesión: su suma infinita no se puede intercambiar con PACKET usando las cotas015, precisamente porque falla su uniformidad. El cono lineal queda sin prueba de signo, no refutado como enunciado de signo.
+Contact 2 remains and does not tend to zero. It is not claimed that the complete form is negative along this sequence: its infinite sum cannot be interchanged with PACKET using the bounds of015, precisely because their uniformity fails. The linear cone remains without a sign proof, not refuted as a sign statement.
 
-## 3. Otro extremo: P=s^(N−1) elimina la dificultad dimensional
+## 3. Another endpoint: P=s^(N−1) removes the dimensional difficulty
 
-Para ese numerador,
+For that numerator,
 
     Q(s)^k P(s)/(s+u)^N
       =s^(k+N−1)/(s+u)^(k+N)
       =Q(s)^(k+N−1)/(s+u).
 
-Es EXACTAMENTE la órbita de dimensión inicial uno y orden k+N−1. Por HIGHPASS015 su forma normalizada crece como
+It is EXACTLY the orbit of initial dimension one and order k+N−1. By HIGHPASS015 its normalized form grows like
 
     (1/2)log(k+N−1)+log[u/(2pi)]−(1/2)psi(1/2)+o(1),
 
-y el peine y el polar normalizados desaparecen cuando k+N crece. Su ley beta es Beta(k+N−1/2,1/2). Este comportamiento es distinto del de P=1, aunque ambos numeradores pertenezcan al mismo espacio inicial. Un análisis de un único extremo no uniformiza todo el bloque.
+and the normalized comb and polar parts disappear as k+N grows. Its beta law is Beta(k+N−1/2,1/2). This behaviour differs from that of P=1, although both numerators belong to the same initial space. An analysis of a single endpoint does not uniformize the whole block.
 
-## 4. La matriz Gram beta completa explica la dependencia en N
+## 4. The complete beta Gram matrix explains the N-dependence
 
-Para un numerador real P(s)=Σa_j s^j, la norma es una forma Gram cuyas entradas se calculan por beta. Las entradas con i+j impar se anulan por simetría; si i+j=2r,
+For a real numerator P(s)=Σa_j s^j, the norm is a Gram form whose entries are computed by beta. Entries with i+j odd vanish by symmetry; if i+j=2r,
 
     (1/2pi)∫tau^(2k)(i tau)^j conjugate[(i tau)^i]
                          /(u²+tau²)^(N+k)d tau
       =(−1)^(r+i) u^(1−2N+2r)
            B(k+r+1/2,N−r−1/2)/(2pi).                   (GRAM)
 
-Aquí 0<=i,j<N, por lo que el segundo parámetro beta es positivo. GRAM es una fórmula de TODO el bloque, no solo de sus diagonales. El menor parámetro puede ser1/2 o puede crecer como N: esto contiene simultáneamente los dos regímenes extremos anteriores y no proporciona por sí solo un condicionamiento uniforme en N.
+Here 0<=i,j<N, so the second beta parameter is positive. GRAM is a formula for the WHOLE block, not only its diagonals. The smaller parameter can be1/2 or can grow like N: this contains simultaneously the two previous extreme regimes and does not by itself provide conditioning uniform in N.
 
-El cambio Z de§1 separa también los dos sectores reales. Escribiendo P(i tau)=E(tau²)+i tau O(tau²), se elimina el término cruzado. Si d es el grado máximo permitido por N en el sector (rellenando coeficientes nulos cuando sea necesario), poner R(Z)=(1−Z)^d E(u²Z/(1−Z)) (análogamente para O) convierte el sector en una Gram de polinomios de grado<=d para un peso Jacobi Z^alpha(1−Z)^beta. Los parámetros son alpha=k−1/2,beta=±1/2 en el sector par, y alpha=k+1/2,beta=±1/2 en el impar. Es una coordenatización exacta para estudiar la escala conjunta; no se atribuye signo de W a la positividad de esta Gram de normas.
+The change Z of§1 also separates the two real sectors. Writing P(i tau)=E(tau²)+i tau O(tau²), the cross term is eliminated. If d is the maximal degree allowed by N in the sector (padding with zero coefficients when necessary), setting R(Z)=(1−Z)^d E(u²Z/(1−Z)) (analogously for O) turns the sector into a Gram of polynomials of degree<=d for a Jacobi weight Z^alpha(1−Z)^beta. The parameters are alpha=k−1/2,beta=±1/2 in the even sector, and alpha=k+1/2,beta=±1/2 in the odd one. It is an exact coordinatization for studying the joint scale; no sign of W is attributed to the positivity of this Gram of norms.
 
-## 5. Media temporal EXACTA independiente de k
+## 5. EXACT time mean independent of k
 
-Para P=1, la probabilidad temporal es |f_(N,k)(y)|²dy/||f_(N,k)||², y>=0. Su media es
+For P=1, the time probability is |f_(N,k)(y)|²dy/||f_(N,k)||², y>=0. Its mean is
 
     mu_(N,k)=E y=(N−1/2)/u.                              (MEAN)
 
-Prueba por Parseval. Para tau!=0, la derivada de la fase de F(i tau) es −(N+k)u/(u²+tau²); la fase k arg(i tau) es constante en cada semirrecta. Si k>=1, el posible salto en tau=0 se multiplica por F(0)=0; k=0 no tiene ese término. Por tanto
+Proof by Parseval. For tau!=0, the derivative of the phase of F(i tau) is −(N+k)u/(u²+tau²); the phase k arg(i tau) is constant on each half-line. If k>=1, the possible jump at tau=0 is multiplied by F(0)=0; k=0 has no such term. Hence
 
     E y=(N+k)u E[1/(u²+tau²)]
        =(N+k)/u E(1−Z)=(N−1/2)/u.
 
-Las funciones racionales decaen exponencialmente por polinomio, de modo que Parseval para la derivada y los momentos temporales es legítimo incluso si hay salto de la extensión en y=0: se deriva en FRECUENCIA para multiplicar por y, no en tiempo a través de ese borde.
+The rational functions decay exponentially times polynomial, so Parseval for the derivative and the time moments is legitimate even if the extension jumps at y=0: one differentiates in FREQUENCY to multiply by y, not in time across that edge.
 
-Para cualquier eta>0 con eta<u, Jensen demuestra entonces
+For any eta>0 with eta<u, Jensen then proves
 
     ||e^(eta y)f_(N,k)||²/||f_(N,k)||²
-       >=exp[2eta(N−1/2)/u], para TODO k.                (WEIGHT)
+       >=exp[2eta(N−1/2)/u], for ALL k.                (WEIGHT)
 
-Así una constante ponderada uniforme en N es imposible incluso sobre k>=C N², k>=exp(N), o cualquier cono que permita N crecer: WEIGHT es independiente de k. No se refuta EVENTUAL015, cuya constante sí depende de N.
+Thus a weighted constant uniform in N is impossible even on k>=C N², k>=exp(N), or any cone allowing N to grow: WEIGHT is independent of k. EVENTUAL015, whose constant does depend on N, is not refuted.
 
-## 6. Centrar elimina la media, pero no la dispersión temporal
+## 6. Centering removes the mean, but not the time dispersion
 
-Para k>=1, otro cálculo de Parseval da
+For k>=1, another Parseval computation gives
 
     E y²=(N−1/2)/u² [N−k+k²/(k−1/2)],
     Var y=(N−1/2)/u² [1+1/(4(k−1/2))].                 (VAR)
 
-En efecto, |F'|²/|F|²=k²/tau²+(N²−k²)/(u²+tau²). Bajo BETA,
+Indeed, |F'|²/|F|²=k²/tau²+(N²−k²)/(u²+tau²). Under BETA,
 
     E tau^-2=(N−1/2)/[u²(k−1/2)],
     E(u²+tau²)^-1=(N−1/2)/[u²(N+k)],
 
-lo que produce las dos igualdades. Para k=0 se obtiene directamente la distribución gamma temporal y Var y=(N−1/2)/(2u²), consistente con la extensión algebraica de VAR.
+which produces the two equalities. For k=0 one obtains directly the gamma time distribution and Var y=(N−1/2)/(2u²), consistent with the algebraic extension of VAR.
 
-Sea X=y−mu. Como cosh z>=1+z²/2,
+Let X=y−mu. Since cosh z>=1+z²/2,
 
     E e^(2eta X)+E e^(-2eta X)>=2+4eta²Var y.
 
-Cada esperanza es >=1 por Jensen. Al menos una crece linealmente en N para k>=1. Incluso el producto de ambas crece al menos como1+2eta²Var y. Por consiguiente no existe una cota uniforme simultánea para los DOS pesos exponenciales centrados de amplitud eta fija, ni para el producto de normas usado en la correspondiente cota bilateral de correlaciones.
+Each expectation is >=1 by Jensen. At least one grows linearly in N for k>=1. Even the product of both grows at least like1+2eta²Var y. Consequently there is no simultaneous uniform bound for the TWO centered exponential weights of fixed amplitude eta, nor for the product of norms used in the corresponding two-sided bound of correlations.
 
-Esto no descarta pesos centrados con eta dependiente de N ni un análisis que use cancelación en vez de valores absolutos. Distingue un desplazamiento de una dispersión: centrar solo elimina el primero.
+This does not rule out centered weights with N-dependent eta nor an analysis using cancellation instead of absolute values. It distinguishes a shift from a dispersion: centering removes only the former.
 
-## 7. Consecuencia para el defecto complementario y estado del cono
+## 7. Consequence for the complementary defect and status of the cone
 
-Las mezclas geométricas015 conservan energías completas con pesos positivos e incorporan las normas de Q^k f. EVENTUAL015 controla la cola cuando N es fijo. PACKET refuta la desaparición uniforme de los contactos en el cono lineal; WEIGHT refuta una cota exponencial ponderada uniforme en N en cualquier cono. El comportamiento espectral del cono cuadrático queda abierto aquí.
+The geometric mixtures of015 preserve complete energies with positive weights and incorporate the norms of Q^k f. EVENTUAL015 controls the tail when N is fixed. PACKET refutes uniform disappearance of the contacts in the linear cone; WEIGHT refutes a weighted exponential bound uniform in N in any cone. The spectral behaviour of the quadratic cone remains open here.
 
-El segmento complementario que queda antes del umbral efectivo K_N conserva una obligación de signo. Ni la identidad de mezcla ni GRAM ni la positividad eventual a N fijo lo controlan. La ruta apropiada debe cuantificar ese segmento o aportar una desigualdad aritmética para los regímenes de paquete, conservando la suma firmada completa.
+The complementary segment remaining before the effective threshold K_N keeps a sign obligation. Neither the mixture identity nor GRAM nor eventual positivity at fixed N controls it. The appropriate route must quantify that segment or supply an arithmetic inequality for the packet regimes, preserving the complete signed sum.
 
-**OPEN:** existencia de C tal que W>=0 para todos los numeradores y k>=C N, o k>=C N². No se produjo contraejemplo a esas dos afirmaciones de signo. **FALSIFIED:** su justificación mediante desaparición uniforme de cada contacto en el cono lineal, o mediante una constante exponencial ponderada uniforme en N en cualquier cono de k. La concentración/dispersión en el cono cuadrático requiere un análisis adicional; aquí no se la presenta como teorema ni como negativo de W.
+**OPEN:** existence of C such that W>=0 for all numerators and k>=C N, or k>=C N². No counterexample to those two sign statements was produced. **FALSIFIED:** its justification via uniform disappearance of each contact in the linear cone, or via an exponential weighted constant uniform in N in any cone of k. Concentration/dispersion in the quadratic cone requires additional analysis; here it is presented neither as a theorem nor as a negative of W.

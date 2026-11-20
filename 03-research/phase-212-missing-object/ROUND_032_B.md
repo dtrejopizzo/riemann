@@ -1,115 +1,115 @@
-# ROUND 032 B — Puerta de selección: (PBP_T) como problema de medidas representantes del origen en el polidisco infinito
+# ROUND 032 B — Selection gate: (PBP_T) as a problem of representing measures of the origin on the infinite polydisc
 
-Objeto: estado sin peso de (PBP_T) (ROUND_030_B, 031_A, 031_B). Propuesta: levantar μ al toro 𝕋^∞ por la recta
-de Kronecker ι(τ) = (p^{−iτ})_p y leer Φ(log n) = 0 (n ≥ 2) como «ν = ι_*μ representa al origen para el álgebra
-del polidisco». Sólo cotejo, corrección y selección; ninguna derivación nueva.
+Object: weight-free state of (PBP_T) (ROUND_030_B, 031_A, 031_B). Proposal: lift μ to the torus 𝕋^∞ via the Kronecker
+line ι(τ) = (p^{−iτ})_p and read Φ(log n) = 0 (n ≥ 2) as "ν = ι_*μ represents the origin for the polydisc
+algebra". Only cross-check, correction and selection; no new derivation.
 
-## 1. Cotejo (fuentes abiertas, no por coincidencia de palabras)
+## 1. Cross-check (sources opened, not by word matching)
 
-**1.1 CA_E_001 (fase 193) §§1–2, Lema 1 y Teorema 2 (PROVED).** Misma operación sobre el objeto con el peso:
-φ(q) = 𝖡(log q) en G = ℚ_{>0}^× es PD ⟺ objetivo (Lema 0); la medida de Bochner de φ en Ĝ ≅ ∏_p S¹ es ι_*ν,
-Radon, concentrada en la recta de Kronecker (Lema 1, σ-compacidad de ι(ℝ)); toda traslación de la recta es
-Haar-nula. Concluye: reformulación exacta (REF-D, clase lem:shape-restate), «válida para todo peine», sin paso de signo.
-Elimina factorizaciones producto/Schur. No cerró porque la recta es Haar-nula: nada de la estructura de toro
-(independencia de lugares) llega a una medida de la recta.
+**1.1 CA_E_001 (phase 193) §§1–2, Lemma 1 and Theorem 2 (PROVED).** Same operation on the object with the weight:
+φ(q) = 𝖡(log q) on G = ℚ_{>0}^× is PD ⟺ target (Lemma 0); the Bochner measure of φ on Ĝ ≅ ∏_p S¹ is ι_*ν,
+Radon, concentrated on the Kronecker line (Lemma 1, σ-compactness of ι(ℝ)); every translate of the line is
+Haar-null. Concludes: exact reformulation (REF-D, class lem:shape-restate), "valid for every comb", without a sign step.
+Eliminates product/Schur factorizations. It did not close because the line is Haar-null: nothing of the torus structure
+(independence of places) reaches a measure on the line.
 
-**1.2 CA_C_002 §3, Prop. 2(a)–(d) (PROVED).** Misma herramienta sobre la forma con peso: sᵀ𝔸_M s =
-∫ m |P_s∘ι|² dμ_line − ∫(Σ_pδ_p)|P_s|² dθ − (μ_line∘ι^{−1} − Haar)(…). «Local = Haar en 𝕋^S; acople global = recta
-de Kronecker». Concluye identidad sin signo; el término Near es el defecto de equidistribución de la recta.
+**1.2 CA_C_002 §3, Prop. 2(a)–(d) (PROVED).** Same tool on the form with weight: sᵀ𝔸_M s =
+∫ m |P_s∘ι|² dμ_line − ∫(Σ_pδ_p)|P_s|² dθ − (μ_line∘ι^{−1} − Haar)(…). "Local = Haar on 𝕋^S; global coupling = Kronecker
+line". Concludes an identity without sign; the Near term is the equidistribution defect of the line.
 
-**1.3 CA_H_002 §3 (Teor. 3.1–3.2, Prop. 3.3–3.4, Cor. 3.5).** Extiende 1.2 al solenoide completo: Div = integral
-de Haar, Div + Near = integral sobre la recta, Near = recta − Haar; Kronecker–Weyl como límite exacto (§3.4).
-Cor. 3.5: la forma «defecto de Kronecker» del objetivo es REF-D. No cerró: identidad lineal en Λ, sin signo.
+**1.3 CA_H_002 §3 (Thm. 3.1–3.2, Prop. 3.3–3.4, Cor. 3.5).** Extends 1.2 to the full solenoid: Div = Haar
+integral, Div + Near = integral over the line, Near = line − Haar; Kronecker–Weyl as exact limit (§3.4).
+Cor. 3.5: the "Kronecker defect" form of the target is REF-D. It did not close: identity linear in Λ, without sign.
 
-**1.4 CA_M_001 Teor. 3.1/Cor. 3.2.** La aritmética de sitios (p − np′) es «information-free»: la conclusión
-sólo usa la PD del 𝖡 libre de sitios; NO-GO para toda ruta de aritmética de sitios. Pertinente al control
-«Beurling libre»: allí ya se probó que el lado de sitios no distingue ℕ de un peine Beurling.
+**1.4 CA_M_001 Thm. 3.1/Cor. 3.2.** Site arithmetic (p − np′) is "information-free": the conclusion
+only uses the PD of the site-free 𝖡; NO-GO for every site-arithmetic route. Relevant to the
+"free Beurling" control: there it was already proved that the site side does not distinguish ℕ from a Beurling comb.
 
-**1.5 AUDIT_204_TRACT_F_001 §3 (l.123–125).** Sólo vocabulario: levantamiento de Bohr a H²(𝔻^∞) para la cuestión
-de ciclicidad de Báez-Duarte; [H] en su formulación; no toca el estado sin peso ni medidas representantes.
+**1.5 AUDIT_204_TRACT_F_001 §3 (l.123–125).** Vocabulary only: Bohr lift to H²(𝔻^∞) for the
+Báez-Duarte cyclicity question; [H] in its formulation; does not touch the weight-free state or representing measures.
 
-**1.6 NEAR_DOSSIER (212) ítem 8 y fila N_BUILD_022 §4 / L2_BUILD_028 §2(c).** NO-GO PROVED: «en el toro con fases
-independientes sólo Div es diagonal; Near y Arch viven en la diagonal θ_p = θ log p». Es exactamente el punto en que
-la propuesta deja la aritmética («la dirección de la recta frente a m»).
+**1.6 NEAR_DOSSIER (212) item 8 and row N_BUILD_022 §4 / L2_BUILD_028 §2(c).** NO-GO PROVED: "on the torus with independent
+phases only Div is diagonal; Near and Arch live on the diagonal θ_p = θ log p". It is exactly the point at which
+the proposal leaves the arithmetic ("the direction of the line versus m").
 
-**1.7 Montgomery–Vaughan / Hilbert.** ANNEX_211_FILES_7 l.288 y l.464: control de pares no resonantes por la desigualdad
-de Hilbert generalizada en el modelo de Poisson; da cota de magnitud del término fuera de diagonal, no signo.
-Índice ANNEX_INDEX_04 l.498 «Magnitude bounds RFB/Carleson/sampling» [DEAD]; l.503 «evaluación por ventana más fina
-que Montgomery–Vaughan» [OPEN] (es justamente lo que faltaría).
+**1.7 Montgomery–Vaughan / Hilbert.** ANNEX_211_FILES_7 l.288 and l.464: control of non-resonant pairs by the generalized
+Hilbert inequality in the Poisson model; gives a magnitude bound on the off-diagonal term, not a sign.
+Index ANNEX_INDEX_04 l.498 "Magnitude bounds RFB/Carleson/sampling" [DEAD]; l.503 "window evaluation finer
+than Montgomery–Vaughan" [OPEN] (precisely what would be missing).
 
-**1.8 «Medida representante» en 211.** ROUND_001_D, STATE_001, POWER_REDUCTION_AUDIT_044: otra medida (la de B en un
-problema de momentos de Hamburger/Stieltjes), NO-GO «ciego al peine». Sólo vocabulario. «Jensen» en 104/119: medida
-de Jensen de masa interior, otro objeto. Ningún archivo formula Φ(log n) = 0 como «ν representa a 0 en A(𝔻^∞)».
+**1.8 "Representing measure" in 211.** ROUND_001_D, STATE_001, POWER_REDUCTION_AUDIT_044: another measure (that of B in a
+Hamburger/Stieltjes moment problem), NO-GO "blind to the comb". Vocabulary only. "Jensen" in 104/119: Jensen measure
+of interior mass, another object. No file formulates Φ(log n) = 0 as "ν represents 0 in A(𝔻^∞)".
 
-**Clasificación.** Levantamiento + recta de Kronecker + Haar vs recta: misma operación ya hecha (1.1–1.3, con peso;
-la versión sin peso es caso particular: poner w = 0 en 𝖡 no cambia el Lema 1). Lectura «medida representante del
-origen»: frase nueva en el corpus, pero es la traducción literal de la restricción del estado sin peso (§2).
+**Classification.** Lift + Kronecker line + Haar vs line: same operation already done (1.1–1.3, with weight;
+the weight-free version is a special case: setting w = 0 in 𝖡 does not change Lemma 1). Reading "representing measure of the
+origin": a new phrase in the corpus, but it is the literal translation of the constraint of the weight-free state (§2).
 
-## 2. Corrección de la formulación
+## 2. Correction of the formulation
 
-(a) **Medida de Borel.** ι: ℝ → 𝕋^∞ continua e inyectiva (factorización única + independencia ℚ-lineal de los log p);
-ι(ℝ) σ-compacto ⟹ Borel; ν := ι_*μ es Radon positiva finita (CA_E_001 Lema 1). ∫χ_r dν = ∫ r^{−iτ}dμ = Φ(log r) con la
-convención μ̂(x) = ∫e^{−ixτ}dμ. Correcto. Normalizar ν(𝕋^∞) = Φ(0) = 1.
+(a) **Borel measure.** ι: ℝ → 𝕋^∞ continuous and injective (unique factorization + ℚ-linear independence of the log p);
+ι(ℝ) σ-compact ⟹ Borel; ν := ι_*μ is a finite positive Radon measure (CA_E_001 Lemma 1). ∫χ_r dν = ∫ r^{−iτ}dμ = Φ(log r) with the
+convention μ̂(x) = ∫e^{−ixτ}dμ. Correct. Normalize ν(𝕋^∞) = Φ(0) = 1.
 
-(b) **Momentos.** Φ real y par ⟹ ∫z^a dν = ∫z̄^a dν = 0 para todo a ≥ 0, a ≠ 0. Eso es exactamente «ν representa al
-0 para el álgebra del polidisco» (equivalentemente para su cierre en C(𝕋^∞)). Los momentos mixtos z^a z̄^b
-(a, b de soportes disjuntos) son Φ(log(n/m)), cocientes no enteros: libres. Correcto.
+(b) **Moments.** Φ real and even ⟹ ∫z^a dν = ∫z̄^a dν = 0 for every a ≥ 0, a ≠ 0. That is exactly "ν represents
+0 for the polydisc algebra" (equivalently for its closure in C(𝕋^∞)). The mixed moments z^a z̄^b
+(a, b of disjoint supports) are Φ(log(n/m)), non-integer quotients: free. Correct.
 
-(c) **Ventana finita.** Φ = μ̂ es la autocorrelación de F ∈ P_T, con soporte en [−2T, 2T]. Para n ≥ e^{2T},
-Φ(log n) = 0 es automático. La restricción efectiva son los monomios con n < e^{2T}, un número finito. Por tanto, para
-T finito ν **no** representa al origen por imposición: lo hace por soporte compacto de Φ, que es propiedad de la clase
-Paley–Wiener y no de ℕ. Además, en una variable (un primo p) sólo se imponen los momentos k < 2T/log p: la medida
-imagen en S¹ no está forzada a ser Lebesgue a ventana finita. «Unicidad en una variable = optimalidad de un generador»
-vale sólo en el límite de todos los momentos, no en la ventana. Hay que corregir ese enunciado de la propuesta.
+(c) **Finite window.** Φ = μ̂ is the autocorrelation of F ∈ P_T, with support in [−2T, 2T]. For n ≥ e^{2T},
+Φ(log n) = 0 is automatic. The effective constraint is the monomials with n < e^{2T}, finitely many. Therefore, for
+finite T, ν does **not** represent the origin by imposition: it does so by the compact support of Φ, which is a property of the
+Paley–Wiener class and not of ℕ. Moreover, in one variable (one prime p) only the moments k < 2T/log p are imposed: the
+image measure on S¹ is not forced to be Lebesgue at a finite window. "Uniqueness in one variable = optimality of one generator"
+holds only in the limit of all moments, not in the window. That statement of the proposal must be corrected.
 
-(d) **Densidades de la ventana en 𝕋^∞.** ν es singular respecto de Haar (concentrada en una traslación Haar-nula de la
-recta). La clase «μ = |F̂|²dτ/2π con F ∈ P_T» no tiene descripción intrínseca en 𝕋^∞: es la imagen de un espacio
-de Paley–Wiener de la recta; el tipo exponencial 2T y los ceros dobles en ±i/2 son condiciones sobre ℝ, no sobre el toro.
+(d) **Densities of the window on 𝕋^∞.** ν is singular with respect to Haar (concentrated on a Haar-null translate of the
+line). The class "μ = |F̂|²dτ/2π with F ∈ P_T" has no intrinsic description on 𝕋^∞: it is the image of a
+Paley–Wiener space of the line; the exponential type 2T and the double zeros at ±i/2 are conditions on ℝ, not on the torus.
 
-(e) **El funcional.** m(τ) = Re ψ(¼ + iτ/2) − log π crece como log|τ| y no es casi periódica: no es restricción a la recta
-de ninguna función continua (ni Borel acotada razonable) sobre 𝕋^∞ de la que dependa ∫m dν como funcional de ν en el
-toro. ∫m dν sólo tiene sentido como ∫m dμ en ℝ. El objetivo no vive en el polidisco.
+(e) **The functional.** m(τ) = Re ψ(¼ + iτ/2) − log π grows like log|τ| and is not almost periodic: it is not the restriction to the line
+of any continuous function (nor reasonable bounded Borel function) on 𝕋^∞ on which ∫m dν would depend as a functional of ν on the
+torus. ∫m dν only makes sense as ∫m dμ on ℝ. The target does not live on the polydisc.
 
-## 3. Herramientas disponibles y enunciado mínimo
+## 3. Available tools and minimal statement
 
-- Teoría de medidas representantes/de Jensen del polidisco (Rudin, *Function theory in polydiscs*): describe el
-  convexo de medidas en 𝕋^n que anulan momentos analíticos; sus cotas inferiores son para funcionales del tipo
-  ∫ log|f| dν ≥ log|f(0)| (Jensen), con f analítica en el polidisco. m∘ι^{−1} no es log|f| de ninguna f analítica en
-  𝔻^∞ (sería log|f(p^{−iτ})| sobre la recta: una serie de Dirichlet); habría que exhibir f = Σ a_n n^{−s} con
-  log|f(½·?+iτ)| ≤ m(τ) en la recta y f(0) = a_1 controlado. Eso es reescribir m como subarmónica de una serie de
-  Dirichlet: objeto no construido y no motivado por la propuesta.
-- Carlson: lim (1/2X)∫_{−X}^{X} |Σa_n n^{−it}|² dt = Σ|a_n|² = recta → Haar en el límite: es CA_H_002 §3.4.
-- Montgomery–Vaughan: ∫_{−X}^{X}|Σa_n n^{−it}|² = Σ|a_n|²(2X + O(n/δ_n)): cota de magnitud del defecto recta − Haar
-  = Near; es 1.7, sin signo, y a escala de ventana finita el error O(n/δ_n) domina.
-- Inmersión local de H²(𝔻^∞) (series de Dirichlet en intervalos): da ∫_I |f(it)|² ≲ ‖f‖²_{H²}; de nuevo magnitud.
+- Theory of representing/Jensen measures of the polydisc (Rudin, *Function theory in polydiscs*): describes the
+  convex set of measures on 𝕋^n annihilating analytic moments; its lower bounds are for functionals of the type
+  ∫ log|f| dν ≥ log|f(0)| (Jensen), with f analytic on the polydisc. m∘ι^{−1} is not log|f| of any f analytic on
+  𝔻^∞ (it would be log|f(p^{−iτ})| on the line: a Dirichlet series); one would have to exhibit f = Σ a_n n^{−s} with
+  log|f(½·?+iτ)| ≤ m(τ) on the line and f(0) = a_1 controlled. That is rewriting m as a subharmonic function of a
+  Dirichlet series: an object not constructed and not motivated by the proposal.
+- Carlson: lim (1/2X)∫_{−X}^{X} |Σa_n n^{−it}|² dt = Σ|a_n|² = line → Haar in the limit: it is CA_H_002 §3.4.
+- Montgomery–Vaughan: ∫_{−X}^{X}|Σa_n n^{−it}|² = Σ|a_n|²(2X + O(n/δ_n)): magnitude bound on the defect line − Haar
+  = Near; it is 1.7, without sign, and at finite-window scale the error O(n/δ_n) dominates.
+- Local embedding of H²(𝔻^∞) (Dirichlet series on intervals): gives ∫_I |f(it)|² ≲ ‖f‖²_{H²}; again magnitude.
 
-**Enunciado mínimo que habría que probar.** Para toda μ = |F̂|²dτ/2π, F ∈ P_T, con Φ(log n) = 0 (n < e^{2T}):
-∫ m dμ ≥ 0. Expresado en el toro no se simplifica: hace falta una cota que use a la vez ι (las frecuencias log p) y m,
-es decir, una estimación del defecto recta − Haar con signo frente a m. Es (PBP_T) idéntico.
+**Minimal statement that would have to be proved.** For every μ = |F̂|²dτ/2π, F ∈ P_T, with Φ(log n) = 0 (n < e^{2T}):
+∫ m dμ ≥ 0. Expressed on the torus it does not simplify: one needs a bound that uses at once ι (the frequencies log p) and m,
+i.e. an estimate of the defect line − Haar with sign against m. It is (PBP_T) identically.
 
-## 4. Filtro de cuatro puntos
+## 4. Four-point filter
 
-1. **Antecedente más cercano:** CA_E_001 Lema 1 + CA_H_002 Teor. 3.1/Cor. 3.5 (levantamiento a Ĝ, recta de Kronecker,
-   recta − Haar), con el NO-GO de NEAR_DOSSIER ítem 8 (Arch y Near viven en la diagonal θ_p = θ log p).
-2. **Qué es nuevo:** sólo la etiqueta «medida representante del origen» para la restricción Φ(log n) = 0, y la observación
-   de que en dimensión ≥ 2 el convexo es grande. Ninguna desigualdad nueva.
-3. **¿Evita la dificultad del antecedente?** No. La dificultad de 1.1–1.3 es que la recta es Haar-nula y que m no es
-   función del toro; la propuesta conserva ambas cosas (§2(d)–(e)) y además la condición representante es, a ventana
-   finita, consecuencia del soporte de Φ (§2(c)).
-4. **Desigualdad que conectaría con el signo global:** ninguna nombrada. Las herramientas del polidisco o acotan funcionales
-   de tipo Jensen (que m no es) o dan magnitudes (Carlson, Montgomery–Vaughan) que ya figuran como DEAD/OPEN sin signo.
+1. **Closest antecedent:** CA_E_001 Lemma 1 + CA_H_002 Thm. 3.1/Cor. 3.5 (lift to Ĝ, Kronecker line,
+   line − Haar), with the NO-GO of NEAR_DOSSIER item 8 (Arch and Near live on the diagonal θ_p = θ log p).
+2. **What is new:** only the label "representing measure of the origin" for the constraint Φ(log n) = 0, and the observation
+   that in dimension ≥ 2 the convex set is large. No new inequality.
+3. **Does it avoid the antecedent's difficulty?** No. The difficulty of 1.1–1.3 is that the line is Haar-null and that m is not
+   a function on the torus; the proposal keeps both (§2(d)–(e)) and moreover the representing condition is, at a finite
+   window, a consequence of the support of Φ (§2(c)).
+4. **Inequality that would connect with the global sign:** none named. The polydisc tools either bound functionals
+   of Jensen type (which m is not) or give magnitudes (Carlson, Montgomery–Vaughan) that already appear as DEAD/OPEN without sign.
 
-**Controles.** Sistema Beurling libre {q_j}: mismo grupo ⊕ℤ, mismo polidisco, mismo convexo de medidas
-representantes, misma m; cambia sólo ι_q(τ) = (q_j^{−iτ}). Impares: un polidisco con una variable menos, mismo esquema.
-¿En qué paso con nombre entra la dirección exacta (log p)_p? En ninguno de los enunciados del polidisco: entra sólo en
-∫m dμ evaluada en ℝ, que es el problema original. CA_M_001 ya probó que el lado de sitios es «information-free».
+**Controls.** Free Beurling system {q_j}: same group ⊕ℤ, same polydisc, same convex set of representing
+measures, same m; only ι_q(τ) = (q_j^{−iτ}) changes. Odd integers: a polydisc with one fewer variable, same scheme.
+At which named step does the exact direction (log p)_p enter? In none of the polydisc statements: it enters only in
+∫m dμ evaluated on ℝ, which is the original problem. CA_M_001 already proved that the site side is "information-free".
 
-## 5. Veredicto
+## 5. Verdict
 
-**NO PASA (repetición; además sin mecanismo).** El levantamiento a 𝕋^∞ por la recta de Kronecker y la lectura recta − Haar
-están hechos (CA_E_001, CA_C_002, CA_H_002; la versión sin peso es caso particular). La relectura como medida representante
-del origen es otro lenguaje: a ventana finita es consecuencia del soporte de Φ, el funcional m no es definible en el toro,
-y ninguna herramienta del polidisco usa la dirección (log p)_p. Corrección registrada: a ventana T la unicidad de una
-variable no se aplica (sólo los momentos k < 2T/log p están impuestos).
-Reapertura sólo con una f analítica explícita en 𝔻^∞ (serie de Dirichlet) tal que log|f∘ι| ≤ m sobre la recta con f(0)
-controlado, o con una cota firmada del defecto recta − Haar frente a m; ninguna de las dos la aporta la propuesta.
+**DOES NOT PASS (repetition; moreover without mechanism).** The lift to 𝕋^∞ via the Kronecker line and the line − Haar reading
+are done (CA_E_001, CA_C_002, CA_H_002; the weight-free version is a special case). The rereading as a representing measure
+of the origin is another language: at a finite window it is a consequence of the support of Φ, the functional m is not definable on the torus,
+and no polydisc tool uses the direction (log p)_p. Correction recorded: at window T one-variable uniqueness
+does not apply (only the moments k < 2T/log p are imposed).
+Reopening only with an explicit analytic f on 𝔻^∞ (Dirichlet series) such that log|f∘ι| ≤ m on the line with f(0)
+controlled, or with a signed bound of the defect line − Haar against m; the proposal provides neither.

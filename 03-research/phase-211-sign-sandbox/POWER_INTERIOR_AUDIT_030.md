@@ -1,40 +1,40 @@
 # POWER INTERIOR AUDIT 030
 
-Estado: GAMMA_BALANCE030 e INTERIOR_SCALE030 APROBADOS. Papers intactos.
+Status: GAMMA_BALANCE030 and INTERIOR_SCALE030 APPROVED. Papers untouched.
 
-## 1. Corpus y distinción
+## 1. Corpus and distinction
 
-Reconsultados ROUTES-TRIED-INDEX/README, grid maestro R162_2300 y CROSSWORD-TO-D, entradas027 y029. La mezcla gamma, el peso bisagra L_N y JOINT-GAP son antecedentes027; falta de convexidad global no decidía un gap contra una ley real. Las cuñas029 no cubren el resto a u31.5 y no se trasladan automáticamente por el puente017.
+Re-consulted ROUTES-TRIED-INDEX/README, master grid R162_2300 and CROSSWORD-TO-D, entries 027 and 029. The gamma mixture, the hinge weight L_N and JOINT-GAP are antecedents in 027; lack of global convexity did not decide a gap against a real law. The wedges of 029 do not cover the remainder at u31.5 and are not transferred automatically by the bridge 017.
 
-La nueva obligación es una desigualdad integrada contra la ley real a tasa fija, o una desigualdad efectiva para K Omega que preserve sus restricciones. Identidades y condiciones suficientes reetiquetadas no se registran como signo; un falsificador acotado no es imposibilidad global.
+The new obligation is an inequality integrated against the real law at fixed rate, or an effective inequality for K Omega preserving its constraints. Identities and relabelled sufficient conditions are not recorded as a sign; a bounded falsifier is not global impossibility.
 
-## 2. GAMMA_BALANCE030 — APROBADO
+## 2. GAMMA_BALANCE030 — APPROVED
 
-Revisados `POWER_GAMMA_BALANCE_030.md` y `tools/power_gamma_balance_030_verify.py`; ejecución independiente PASS. K_sharp≤1/t implica−A_sharp″(a)≤1/(2a²). La identidad de bisagras para−log da exactamente∫L/a²=log EV−Elog V=ψ(b)−log(b−1), finita también N2. Por tanto SHARP-GAP es un lower válido tras pagar un coste explícito, uniforme en todos N≥2 a tasa fija. El bound O(1/N) no depende de una varianza inexistente en N2.
+Reviewed `POWER_GAMMA_BALANCE_030.md` and `tools/power_gamma_balance_030_verify.py`; independent run PASS. K_sharp≤1/t implies −A_sharp″(a)≤1/(2a²). The hinge identity for −log gives exactly ∫L/a²=log EV−Elog V=ψ(b)−log(b−1), finite also at N2. Hence SHARP-GAP is a valid lower bound after paying an explicit cost, uniform in all N≥2 at fixed rate. The bound O(1/N) does not depend on a variance that does not exist at N2.
 
-Para la ley real N2, el extremo trigamma inferior incluye correctamente la integral desde256; ARCH_gamma<.59 y polar<.26 son cotas superiores. Todos los contactos tienen signo negativo porque la autocorrelación es positiva, por lo que W_gamma<.85 conserva la aritmética completa.
+For the real law N2, the lower trigamma endpoint correctly includes the integral from 256; ARCH_gamma<.59 and polar<.26 are upper bounds. All contacts have negative sign because the autocorrelation is positive, so W_gamma<.85 keeps the complete arithmetic.
 
-En la gaussiana de igual segundo momento, v=u²/2, la densidad espectral es normal de desviación u. Euler B2 tiene resto de módulo≤1/(12a²); junto con−1/(12z²) da1/(6a²)=8/75 en a5/4. Los kernels recíprocos tienen integralesπ y2π. Su coste≤3πpmax se combina con el polar EXACTO2sqrt(π/v)exp(1/(16v)), dejando un beneficio>1/u. El bound del peine completo por2Σq^−19 es válido desde log2>2/3 y u²/3>20. Los extremos logarítmicos racionales prueban G_W(u²/2)>.875.
+In the Gaussian with equal second moment, v=u²/2, the spectral density is normal with deviation u. Euler B2 has remainder of modulus ≤1/(12a²); together with −1/(12z²) it gives 1/(6a²)=8/75 at a5/4. The reciprocal kernels have integrals π and 2π. Their cost ≤3πpmax combines with the EXACT polar term 2sqrt(π/v)exp(1/(16v)), leaving a benefit >1/u. The bound of the complete comb by 2Σq^−19 is valid from log2>2/3 and u²/3>20. The rational logarithmic endpoints prove G_W(u²/2)>.875.
 
-Así el gap completo real∫L2G_W″<−1/40 está certificado. Es un falsificador de la comparación sin coste con la gaussiana de igual momento; no de W, cuya filaN2 ya es positiva. La novedad constructiva principal es el coste SHARP-GAP contra L_N real, y no sólo la repetición de Jensen. No se decide el gap en otros órdenes ni se amplía cobertura W/T.
+Thus the complete real gap ∫L2G_W″<−1/40 is certified. It is a falsifier of the cost-free comparison with the equal-moment Gaussian; not of W, whose row N2 is already positive. The main constructive novelty is the SHARP-GAP cost against the real L_N, and not merely the repetition of Jensen. The gap at other orders is not decided and W/T coverage is not extended.
 
 
-## 3. Bloque interior real a tasa fija — APROBADO
+## 3. Real interior block at fixed rate — APPROVED
 
-Revisados `POWER_INTERIOR_SCALE_030.md` y `tools/power_interior_scale_030_verify.py`; ejecución independiente PASS. La inversión adjunta tiene el factorμ(m)/m correcto. Agrupar divisores cancela todas las singularidades escaladas salvo la de1: la parte armónica da1, las logarítmicas dan sólo el divisor total1, el términoΣjlogj daΣqΛ(q)q. Resulta H=1+[log((x+1)/(x−1))+c−1−2Psi1(x)]/x². Los saltos negativos−2Λ(q)/q permanecen. El intercambio absoluto se justifica por el decaimiento gamma y las singularidades logarítmicas integrables de Omega. JOINT-G conserva W completa, aunque no prueba signo por sí sola.
+Reviewed `POWER_INTERIOR_SCALE_030.md` and `tools/power_interior_scale_030_verify.py`; independent run PASS. The adjoint inversion has the correct factor μ(m)/m. Grouping divisors cancels all scaled singularities except that of 1: the harmonic part gives 1, the logarithmic ones give only the total divisor 1, the term Σjlogj gives ΣqΛ(q)q. The result is H=1+[log((x+1)/(x−1))+c−1−2Psi1(x)]/x². The negative jumps −2Λ(q)/q remain. The absolute interchange is justified by the gamma decay and the integrable logarithmic singularities of Omega. JOINT-G keeps the complete W, although it does not prove a sign by itself.
 
-Los umbrales de monotonía de G y G/x² se obtienen de la logderivada en0 y LC, y son correctos. Las primitivas negativas en5/2 sólo refutan ese criterio suficiente, no el emparejamiento real. Las fórmulas racionales y sus contactosq2 conservan sus extremos.
+The monotonicity thresholds of G and G/x² are obtained from the log-derivative at 0 and LC, and are correct. The negative primitives at 5/2 only refute that sufficient criterion, not the real pairing. The rational formulas and their contacts q2 keep their endpoints.
 
-El bound de momentos |rho−1|≤M2 y²/2 y |rho′|≤M2|y| da el error uniforme7M2/4 de G frente a(3/2)x^−1/2 en[1,9/4]. El mayorante∫|H|<6 incluye longitud, constante, singularidad y el contacto2; sólo se toma módulo del error de aproximación. Así ERROR tiene el factor21/2 exacto.
+The moment bound |rho−1|≤M2 y²/2 and |rho′|≤M2|y| gives the uniform error 7M2/4 of G against (3/2)x^−1/2 on [1,9/4]. The majorant ∫|H|<6 includes length, constant, singularity and contact 2; only the modulus of the approximation error is taken. Thus ERROR has the exact factor 21/2.
 
-La integral principal se verificó independientemente. Para J=∫_1^(9/4)x^−5/2log((x+1)/(x−1))dx, poner z=√x da la primitiva
+The main integral was verified independently. For J=∫_1^(9/4)x^−5/2log((x+1)/(x−1))dx, putting z=√x gives the primitive
 
 −2log((z²+1)/(z²−1))/(3z³)−(4/3)[2/z+(1/2)log((z−1)/(z+1))+arctan z].
 
-Su límite en1 es(2/3)log2−8/3−π/3; evaluar en3/2 y usar arctan(3/2)=π/4+arctan(1/5) da exactamente J declarado. Los otros factores son3/2,19/27 y el contacto−log2(√2−32/27). No hay prima siguiente antes de3. Los intervalos exactos prueban I*>.02; el error<.005 para TODOS N≥2^20 deja el bloque real>.015>.01.
+Its limit at 1 is (2/3)log2−8/3−π/3; evaluating at 3/2 and using arctan(3/2)=π/4+arctan(1/5) gives exactly the declared J. The other factors are 3/2, 19/27 and the contact −log2(√2−32/27). There is no next prime before 3. The exact intervals prove I*>.02; the error <.005 for ALL N≥2^20 leaves the real block >.015>.01.
 
-## 4. Cierre de alcance
+## 4. Scope closure
 
-La diferencia efectiva frente019–027 es una compensación interior contra el kernel gamma real, a tasa FIJA31.5 y uniforme en órdenes grandes; no otra identidad ni cuña variable. El bloque incluye un contacto adverso y conserva su magnitud. El resto[9/4,infinito) permanece sin control; no se añade dos veces una cola favorable de la representación K Omega. BLOCK no es W total ni cobertura de una fila completa o ventana T.
+The effective difference with respect to 019–027 is an interior compensation against the real gamma kernel, at FIXED rate 31.5 and uniform in large orders; not another identity or variable wedge. The block includes an adverse contact and keeps its magnitude. The remainder [9/4,infinity) remains uncontrolled; a favourable tail of the K Omega representation is not added twice. BLOCK is not the total W nor coverage of a complete row or window T.
 
-SHARP-GAP aporta además un coste integrado constructivo uniforme de una componente; el gap completo negativo de N2 delimita una comparación concreta, sin refutar W ni otros balances. Ninguno de los falsificadores locales se registra como imposibilidad global. Root coincide independientemente en ambas revisiones.
+SHARP-GAP also provides a constructive integrated cost, uniform, for one component; the negative complete gap at N2 delimits a concrete comparison, without refuting W or other balances. None of the local falsifiers is recorded as global impossibility. Both reviews are confirmed by an independent check.

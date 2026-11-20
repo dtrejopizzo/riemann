@@ -1,11 +1,11 @@
-# POWER_FIVE_AUDIT_010 — Revisión independiente del signo global de cinco polos
+# POWER_FIVE_AUDIT_010 — Independent review of the global sign at five poles
 
-Estado: PROVED. POWER_FIVE_GLOBAL_010.md y tools/power_five_global_010_verify.py revisados; script ejecutado con PASS. Papers intactos.
+Status: PROVED. POWER_FIVE_GLOBAL_010.md and tools/power_five_global_010_verify.py reviewed; script executed with PASS. Papers untouched.
 
-El certificado confluente conserva las mismas bandas y momentos ya auditados. La nueva banda de orden cuatro usa las derivadas correctas y las colas integrales con orientación de signo pertinente. El centro racional, el error máximo de fila<1/200 y LDL(centroAP-39/200 I)>0 implican AP>19/100 I. La eliminación in-place no altera la columna de pivote durante la actualización. El cálculo exacto4AA BB<1 aporta |Polar|<I en todo el bloque, no sólo sobre sus vectores de base.
+The confluent certificate keeps the same bands and moments already audited. The new band of order four uses the correct derivatives and the integral tails with the pertinent sign orientation. The rational centre, the maximal row error<1/200 and LDL(centreAP-39/200 I)>0 imply AP>19/100 I. The in-place elimination does not alter the pivot column during the update. The exact computation4AA BB<1 provides |Polar|<I on the whole block, not only on its basis vectors.
 
-La aplicación del criterio de transporte usa n5,u63/2,b19/100,C1,c1/50,X81,D23. Las cotas de símbolo de FOUR009 para c1/10 siguen válidas al bajar c. El filtro se eleva a potencia cinco y la pérdida polar cambia a5/(4u²); el corchete está certificado>.03. Así AP>1/50 I para todas las cinco tasas>=u.
+The application of the transport criterion uses n5,u63/2,b19/100,C1,c1/50,X81,D23. The symbol bounds of FOUR009 for c1/10 remain valid when lowering c. The filter is raised to the fifth power and the polar loss changes to5/(4u²); the bracket is certified>.03. Thus AP>1/50 I for all five rates>=u.
 
-El peso sigma21=2u/3 tiene inicialnorm²<=3 y cada all-pass normaYoung<=7. Por tanto B5=3sum49^j=(49^5-1)/16, sin asumir ortogonalidad ponderada. La cola de correlación usa exp(-21t) y Lambda(q)<=q, dejando q^-20.5<=q^-20. Las comparaciones2sqrt(B5)<8404 y sumq^-20<=2^-20(21/19) son exactas y la pérdida resultante es<.01. En combinación con AP>.02 se obtiene W>.01 en TODOS los espacios de cinco polos reales>=31.5, sin separación, sin cota superior y permitiendo repetición de polos.
+The weight sigma21=2u/3 has initialnorm²<=3 and each all-pass normYoung<=7. Hence B5=3sum49^j=(49^5-1)/16, without assuming weighted orthogonality. The correlation tail uses exp(-21t) and Lambda(q)<=q, leaving q^-20.5<=q^-20. The comparisons2sqrt(B5)<8404 and sumq^-20<=2^-20(21/19) are exact and the resulting loss is<.01. Combined with AP>.02 one obtains W>.01 on ALL spaces of five real poles>=31.5, without separation, without upper bound and allowing repetition of poles.
 
-La mejora opcional de norma ponderada Fourier de POWER_COMMON_TRANSFER_010 no es necesaria para este certificado: todas las constantes utilizadas aquí están probadas con la cotaYoung original. La afirmación sigue siendo de dimensión fija, sin extensión automática a seis o todos los órdenes.
+The optional improvement of the Fourier weighted norm of POWER_COMMON_TRANSFER_010 is not necessary for this certificate: all constants used here are proved with the original Young bound. The statement remains of fixed dimension, without automatic extension to six or all orders.

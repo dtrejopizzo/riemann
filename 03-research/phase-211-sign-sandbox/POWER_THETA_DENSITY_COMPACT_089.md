@@ -1,190 +1,190 @@
-# POWER_THETA_DENSITY_COMPACT_089 — Signo global del Wronskiano real R4 por densidades
+# POWER_THETA_DENSITY_COMPACT_089 — Global sign of the real Wronskian R4 via densities
 
-**Auditoría independiente:** `POWER_THETA_DENSITY_COMPACT_AUDIT_089.md` aprobada; constructor40406 FULL PASS, reproducción independiente root87911 exit0/FULL PASS1024+8192 y hash coincidente. Desarrollo de transporte independiente: `POWER_THETA_DENSITY_TRANSPORT_089.md`.
+**Independent audit:** `POWER_THETA_DENSITY_COMPACT_AUDIT_089.md` approved; run 40406 FULL PASS, independent reproduction 87911 exit0/FULL PASS 1024+8192 and matching hash. Independent transport development: `POWER_THETA_DENSITY_TRANSPORT_089.md`.
 
-Estado: **PROVED, certificado constructor y reproducción independiente root87911 exit0/FULL PASS; auditoría matemática y código aprobadas.** Los objetos, dominios, colas y parámetros se fijaron y auditaron antes de implementar y ejecutar. Se prueba el transporte del LADO_R por densidades; no S4 ni una nueva cobertura W respecto085. Papers intactos.
+Status: **PROVED, certificate and independent reproduction 87911 exit0/FULL PASS; mathematical and code audit approved.** The objects, domains, tails and parameters were fixed and audited before implementing and running. The transport of the R_SIDE via densities is proved; not S4 nor new W coverage relative to 085. Papers untouched.
 
-## 1. Objeto y antecedentes
+## 1. Object and antecedents
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D; releídos077,083–088.087 decide el Wronskiano R4 en el origen y088 su exterior t>=1. Faltaba el compacto0<t<1 de la MISMA Phi. La condición puntual de densidades es más fuerte que la curvatura transformada ya probada085: no se hereda desde ella.
+Consulted the project rules, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D; reread 077, 083–088. 087 decides the Wronskian R4 at the origin and 088 its exterior t>=1. The compact range 0<t<1 of the SAME Phi was missing. The pointwise density condition is stronger than the transformed curvature already proved in 085: it is not inherited from it.
 
-Conservar las cuatro densidades
+Keep the four densities
 
     rho=(tPhi,(tPhi)'',−Phi',−Phi'''),
     K(t)=W_t(rho1,rho2,rho3,rho4).
 
-Como rho=tPhi·(1,A,B,C),
+Since rho=tPhi·(1,A,B,C),
 
     K(t)=(tPhi)^4 W_t(1,A,B,C).
 
-No se divide numéricamente por Phi ni por t. Para el origen poner lambda=t² y phi(lambda)=Phi(sqrt(lambda)), SIN normalizar por Phi(0). Las cuatro densidades divididas por t son
+There is no numerical division by Phi or by t. For the origin set lambda=t² and phi(lambda)=Phi(sqrt(lambda)), WITHOUT normalizing by Phi(0). The four densities divided by t are
 
     Psi=[phi,6phi'+4lambda phi'',−2phi',−12phi''−8lambda phi'''].
 
-Aquí las primas de phi son respecto de lambda. Las identidades exactas de Wronskianos dan
+Here the primes of phi are with respect to lambda. The exact Wronskian identities give
 
     K(t)=64t^10 W_lambda(Psi)(t²).                  (BRIDGE)
 
-Por tanto se fijan dos obligaciones complementarias: W_lambda(Psi)<0 en0<=lambda<=1/256, y K<0 en1/16<=t<=1. Su unión cubre0<t<=1 y evita la cancelación de orden10 en el origen.
+Therefore two complementary obligations are fixed: W_lambda(Psi)<0 on 0<=lambda<=1/256, and K<0 on 1/16<=t<=1. Their union covers 0<t<=1 and avoids the order-10 cancellation at the origin.
 
-## 2. Bound complejo theta para la rama de origen
+## 2. Complex theta bound for the origin branch
 
-Si |t|<=1/4, entonces
+If |t|<=1/4, then
 
     Re exp(2t)>=exp(−1/2)cos(1/2)>1/2.
 
-Basta exp(1/2)<5/3, cos(1/2)>7/8 y(3/5)(7/8)>1/2. El primer bound se deduce de e<87/32<25/9 y el segundo de la serie alternante de cos. Además |exp(2t)|<2 y |exp(5t/2)|<2: para el segundo usar exp(1/2)<5/3 y exp(1/8)<8/7.
+It suffices that exp(1/2)<5/3, cos(1/2)>7/8 and (3/5)(7/8)>1/2. The first bound follows from e<87/32<25/9 and the second from the alternating series of cos. Moreover |exp(2t)|<2 and |exp(5t/2)|<2: for the second use exp(1/2)<5/3 and exp(1/8)<8/7.
 
-Así cada modo satisface en ese disco
+Thus each mode satisfies on that disc
 
     |Phi_m(t)|<152m⁴4^(−m²),
 
-usando pi<4, pi Re exp(2t)>3/2 y exp(3/2)>4. La suma queda acotada por1000: la razón consecutiva de m⁴4^(−m²) es<=16/4³<1/2 y por ello152Σ<=76<1000.
+using pi<4, pi Re exp(2t)>3/2 and exp(3/2)>4. The sum is bounded by 1000: the consecutive ratio of m⁴4^(−m²) is <=16/4³<1/2 and hence 152Σ<=76<1000.
 
-La paridad analítica de Phi da una función phi holomorfa en un entorno del disco|lambda|<=1/16, con
+The analytic parity of Phi gives a function phi holomorphic in a neighbourhood of the disc |lambda|<=1/16, with
 
     |phi(lambda)|<1000.
 
-Para |lambda|<=1/32, Cauchy con radio1/32 da
+For |lambda|<=1/32, Cauchy with radius 1/32 gives
 
     |phi^(k)(lambda)|<=1000k!32^k.
 
-En el Wronskiano de Psi, las filas son derivadas de órdenes0,...,3. Con P_k=1000k!32^k, las cuatro cotas máximas exactas de columnas son
+In the Wronskian of Psi, the rows are derivatives of orders 0,...,3. With P_k=1000k!32^k, the four exact maximal column bounds are
 
     [P3,18P4+P5/8,2P4,36P5+P6/4]
       =[196608000,956301312000,50331648000,338228674560000].
 
-El bound por las24permutaciones es menor que10^48. Se puede usar el mismo B_origin=10^48 en TODO |lambda|<=1/32.
+The bound over the 24 permutations is less than 10^48. The same B_origin=10^48 can be used on ALL |lambda|<=1/32.
 
-## 3. Partición y aproximación completa del origen
+## 3. Partition and complete approximation at the origin
 
-Se fijan1024paneles iguales de[0,1/256], con centros positivos exactos y radio h_lambda=1/524288. En cada centro se usa Taylor de W_lambda(Psi) hasta grado16, con disco r_lambda=1/64. Todos esos discos quedan en|lambda|<=5/256<1/32. El error completo de Taylor es
+1024 equal panels of [0,1/256] are fixed, with exact positive centres and radius h_lambda=1/524288. At each centre the Taylor expansion of W_lambda(Psi) up to degree 16 is used, with disc r_lambda=1/64. All those discs lie in |lambda|<=5/256<1/32. The complete Taylor error is
 
     R_origin=10^48(1/8192)^17/(1−1/8192)<10^(−18).
 
-Se fijan precisión1024bits y cap de phi23: el determinante necesita coeficientes hasta grado16 y derivadas de phi hasta orden22, porque la cuarta columna de Psi contiene phi''' y se deriva tres veces al formar el Wronskiano.
+Precision 1024 bits and phi cap 23 are fixed: the determinant needs coefficients up to degree 16 and derivatives of phi up to order 22, because the fourth column of Psi contains phi''' and is differentiated three times when forming the Wronskian.
 
-Para evaluar jets usar EXACTAMENTE
+To evaluate jets use EXACTLY
 
     phi16(lambda)=[Phi16(sqrt(lambda))+Phi16(−sqrt(lambda))]/2,
 
-donde Phi16 retiene modos1,...,16. El promedio es esencial: un parcial theta individual no es par, y su composición con sqrt no sería analítica enlambda=0. La función phi16 sí lo es; los centros son positivos, de modo que las series formales de sqrt tienen rama real definida.
+where Phi16 retains modes 1,...,16. The average is essential: an individual theta partial sum is not even, and its composition with sqrt would not be analytic at lambda=0. The function phi16 is; the centres are positive, so the formal series of sqrt have a defined real branch.
 
-La cola COMPLETA en|lambda|<=1/16 queda acotada por
+The COMPLETE tail on |lambda|<=1/16 is bounded by
 
     epsilon_origin=304·17⁴/4^289,
 
-pues desde m=17 la razón es<=(18/17)^4/4^35<1/2. El promedio de las dos colas no añade un factor2. En cada centro, Cauchy con radio1/32 da error de coeficiente de phi de orden k a lo sumo epsilon_origin32^k. Se añade esa bola a TODOS los coeficientes0,...,22 ANTES de formar Psi, sus derivadas y el determinante. No se sustituye esta cola por una comprobación de paridad o por precisión flotante.
+since from m=17 the ratio is <=(18/17)^4/4^35<1/2. The average of the two tails does not add a factor 2. At each centre, Cauchy with radius 1/32 gives a coefficient error of phi of order k at most epsilon_origin32^k. That ball is added to ALL coefficients 0,...,22 BEFORE forming Psi, its derivatives and the determinant. This tail is not replaced by a parity check or by floating-point precision.
 
-## 4. Bound complejo theta para la rama restante
+## 4. Complex theta bound for the remaining branch
 
-Sean c0∈[1/16,1] y |z−c0|<=1/32. Entonces
+Let c0∈[1/16,1] and |z−c0|<=1/32. Then
 
     Re z∈[1/32,33/32], |Im z|<=1/32,
     |y|=|pi exp(2z)|<32, Re y>5/2,
     |exp(5z/2)|<16.
 
-Para los uppers bastan exp(33/16)<8 y exp(165/64)<16, ambas comparaciones con log2>56/81. Para Re y, usar pi>3, exp(2Re z)>1 y cos(1/16)>511/512. De ahí
+For the upper bounds exp(33/16)<8 and exp(165/64)<16 suffice, both comparisons with log2>56/81. For Re y, use pi>3, exp(2Re z)>1 and cos(1/16)>511/512. Hence
 
     |Phi_m(z)|<4288m⁴8^(−m²),
     |Phi(z)|<10000.
 
-El coeficiente4288 es4·16·(64+3); exp(5/2)>8 paga el decaimiento. La suma se acota por una geométrica, con razón inicial16/8³<1/2.
+The coefficient 4288 is 4·16·(64+3); exp(5/2)>8 pays for the decay. The sum is bounded by a geometric series, with initial ratio 16/8³<1/2.
 
-En el disco interior |z−c0|<=1/64, Cauchy con radio1/64 conserva el disco exterior y da
+On the inner disc |z−c0|<=1/64, Cauchy with radius 1/64 stays in the outer disc and gives
 
     |Phi^(k)(z)|<=p_k=10000k!64^k.
 
-Como |z|<2, las cotas máximas de columnas del Wronskiano rawrho son
+Since |z|<2, the maximal column bounds of the raw Wronskian rho are
 
     [2p3+3p2,2p5+5p4,p4,p6].
 
-Sus24productos quedan por debajo de10^60. Por tanto B_rest=10^60 es un bound uniforme de|K| en cada disco interior.
+Their 24 products lie below 10^60. Therefore B_rest=10^60 is a uniform bound of |K| on each inner disc.
 
-## 5. Partición y cola de la rama restante
+## 5. Partition and tail of the remaining branch
 
-Se fijan8192paneles iguales de[1/16,1], con radio h_t=15/262144. El radio Cauchy para K es r_t=1/64, de modo que h_t/r_t=15/4096. Se usa Taylor de grado40 con error completo
+8192 equal panels of [1/16,1] are fixed, with radius h_t=15/262144. The Cauchy radius for K is r_t=1/64, so h_t/r_t=15/4096. Taylor of degree 40 is used with complete error
 
     R_rest=10^60(15/4096)^41/(1−15/4096)<10^(−39).
 
-La precisión es512bits, capPhi47: la cuarta densidad es−Phi''' y su tercera fila derivada usa Phi^(6), por lo que el coeficiente40 necesita Phi hasta grado46.
+The precision is 512 bits, Phi cap 47: the fourth density is −Phi''' and its third derived row uses Phi^(6), so the coefficient 40 needs Phi up to degree 46.
 
-Se evalúa Phi16 DIRECTAMENTE como función de t. No hace falta simetrizar en esta rama sin sqrt. La cola completa en todos los discos exteriores es
+Phi16 is evaluated DIRECTLY as a function of t. No symmetrization is needed in this branch without sqrt. The complete tail on all outer discs is
 
     epsilon_rest=8576·17⁴/8^289,
 
-con razón consecutiva desde17 menor que1/2. Se añade a cada coeficiente k=0,...,46 el error de Cauchy epsilon_rest32^k ANTES de derivar las densidades y formar el Wronskiano.
+with consecutive ratio from 17 less than 1/2. The Cauchy error epsilon_rest32^k is added to each coefficient k=0,...,46 BEFORE differentiating the densities and forming the Wronskian.
 
-## 6. Asserts de signo y parámetros fijados antes de ejecutar
+## 6. Sign asserts and parameters fixed before running
 
-Para CUALQUIERA de las dos ramas, los coeficientes C_k del determinante están normalizados por k!. Se certifica el signo negativo en cada panel por
+For EITHER of the two branches, the coefficients C_k of the determinant are normalized by k!. The negative sign on each panel is certified by
 
     C0.upper+Σ_(k=1)^degree |Ck|.upper h^k+Remainder<0.
 
-Se exigen todos los coeficientes finitos y la precisión formal necesaria (al menos17 para origen y41 para resto). No se pasa de valores centrales negativos a un intervalo sin el resto. Las bolas de la cola theta se incorporan a los jets de phi/Phi, separadamente del resto de Taylor del determinante.
+All coefficients are required to be finite and the necessary formal precision (at least 17 for origin and 41 for rest). One does not pass from negative central values to an interval without the remainder. The theta tail balls are incorporated into the jets of phi/Phi, separately from the Taylor remainder of the determinant.
 
-Los dos dominios, sus1024/8192paneles, las precisiones1024/512, los grados16/40, caps23/47,16modos y las colas quedan fijados por estas derivaciones antes de implementar o ejecutar. No hubo FAIL ni cambio de un parámetro después de ejecutar. Ningún signo se obtuvo por una búsqueda de mallas o rangos.
+The two domains, their 1024/8192 panels, the precisions 1024/512, the degrees 16/40, caps 23/47, 16 modes and the tails are fixed by these derivations before implementing or running. There was no FAIL nor change of a parameter after running. No sign was obtained by a search over meshes or ranges.
 
-## 7. Resultado reproducible
+## 7. Reproducible result
 
-Código estable: tools/power_theta_density_compact_089_verify.py. Usa series reales Arb con las dos precisiones y caps declaradas, añadiendo las bolas de cola a TODOS los coeficientes antes de derivar. El determinante se calcula por expansión de Laplace en las primeras dos filas: seis productos de menores2x2, sin divisiones. Se verifica precisión formal al menos17/41 y finitud de todos los coeficientes necesarios.
+Stable code: tools/power_theta_density_compact_089_verify.py. It uses real Arb series with the two declared precisions and caps, adding the tail balls to ALL coefficients before differentiating. The determinant is computed by Laplace expansion along the first two rows: six products of 2x2 minors, without divisions. Formal precision at least 17/41 and finiteness of all necessary coefficients are verified.
 
-La corrida constructor40406 terminó exit0 y FULL PASS:
+Run 40406 finished exit0 and FULL PASS:
 
-    ORIGIN:1024/1024paneles,W_lambda(Psi)<0 en[0,1/256];
-    REST:8192/8192paneles,W_t(rho4)<0 en[1/16,1].
+    ORIGIN:1024/1024 panels,W_lambda(Psi)<0 on [0,1/256];
+    REST:8192/8192 panels,W_t(rho4)<0 on [1/16,1].
 
-Ejecutar
+Run
 
     python3 03-research/phase-211-sign-sandbox/tools/power_theta_density_compact_089_verify.py
 
-SHA256 de la versión exacta que terminó, no modificada durante su ejecución:
+SHA256 of the exact version that finished, not modified during its execution:
 
     995ef292abf5a80a3d195b4e68a815e1b56f9b343531bc1c0786af682413d1aa.
 
-El archivo.sha256 fija la misma versión para reproducción. Las colas theta y los dos restos Cauchy se imprimen como fracciones exactas. No hubo evaluación de signos diagnósticos ni ajustes después de resultados: las dos obligaciones continuas fueron las predeclaradas en este mismo archivo.
+The .sha256 file fixes the same version for reproduction. The theta tails and the two Cauchy remainders are printed as exact fractions. There was no evaluation of diagnostic signs nor adjustments after results: the two continuous obligations were those predeclared in this same file.
 
-## 8. Empalme, Rolle y transporte global del lado R
+## 8. Splice, Rolle and global transport of the R side
 
-BRIDGE y ambos certificados prueban W_t(1,A,B,C)<0 en0<t<=1.088 aporta el mismo signo para TODOt>=1. Por tanto
+BRIDGE and both certificates prove W_t(1,A,B,C)<0 on 0<t<=1. 088 supplies the same sign for ALL t>=1. Therefore
 
-    W_t(1,A,B,C)<0 para TODOt>0.                    (GLOBAL-R4)
+    W_t(1,A,B,C)<0 for ALL t>0.                    (GLOBAL-R4)
 
-086 ya da B'>0 y J=(A'/B')'>0. Con E=(C'/B')', la identidad Darboux de087 implica(E/J)'>0 para TODOt>0. En el orden(1,B,A,C), los Wronskianos iniciales tienen signos1,B'>0,(B')²J>0 y−Woriginal>0. No se presupone un signo de A'.
+086 already gives B'>0 and J=(A'/B')'>0. With E=(C'/B')', the Darboux identity of 087 implies (E/J)'>0 for ALL t>0. In the order (1,B,A,C), the initial Wronskians have signs 1, B'>0, (B')²J>0 and −W original>0. No sign of A' is presupposed.
 
-Para probar el signo del determinante de evaluación, usar la coordenada z=B(t). Si una combinación no nula a+bB+cA+dC tuviera cuatro ceros, Rolle daría al menos dos ceros a cA_zz+dC_zz. Dividir por A_zz=J/B'>0 deja c+d(E/J), que tiene a lo sumo un cero por su monotonía estricta, salvo c=d=0. En ese borde una función afín en B no admite cuatro ceros sin anularse idénticamente. Así el determinante no se anula en la cámara de cuatro nodos positivos ordenados; su signo confluente GLOBAL-R4 lo fija estrictamente negativo en el orden original(1,A,B,C). Multiplicar las filas por t_iPhi(t_i)>0 conserva el signo de las cuatro densidades rho.
+To prove the sign of the evaluation determinant, use the coordinate z=B(t). If a nonzero combination a+bB+cA+dC had four zeros, Rolle would give at least two zeros of cA_zz+dC_zz. Dividing by A_zz=J/B'>0 leaves c+d(E/J), which has at most one zero by its strict monotonicity, unless c=d=0. In that boundary case an affine function of B does not admit four zeros without vanishing identically. Thus the determinant does not vanish on the chamber of four ordered positive nodes; its confluent sign GLOBAL-R4 fixes it strictly negative in the original order (1,A,B,C). Multiplying the rows by t_iPhi(t_i)>0 preserves the sign of the four densities rho.
 
-El kernel
+The kernel
 
     L(lambda,t)=sinh(sqrt(lambda)t)/sqrt(lambda)
                 =Σ_(m>=0)lambda^m t^(2m+1)/(2m+1)!
 
-tiene menores de tamaño4 positivos para nodos positivos ordenados. La prueba es la de086, ahora con cuatro filas: Cauchy–Binet sobre truncamientos produce productos de determinantes de monomios con exponentes estrictamente crecientes, positivos por Rolle y sus Wronskianos. El término m=0,1,2,3 garantiza estricta positividad. Lo mismo vale para las filas confluentes de derivadas0,...,3 enlambda, por los Wronskianos de lambda^m. La convergencia de las series y sus derivadas es localmente uniforme.
+has positive minors of size 4 for ordered positive nodes. The proof is that of 086, now with four rows: Cauchy–Binet on truncations produces products of determinants of monomials with strictly increasing exponents, positive by Rolle and their Wronskians. The terms m=0,1,2,3 guarantee strict positivity. The same holds for the confluent rows of derivatives 0,...,3 in lambda, by the Wronskians of lambda^m. Convergence of the series and their derivatives is locally uniform.
 
-La integración por partes bilateral, con bordes superexponenciales nulos, da
+Two-sided integration by parts, with vanishing superexponential boundary terms, gives
 
     LT(rho)=(Z',u²Z',uZ,u³Z).
 
-Dividir por u>0 y poner lambda=u² produce funciones
+Dividing by u>0 and setting lambda=u² produces functions
 
     F=(Z'/u,uZ',Z,u²Z)
-      =2∫_0^infinito L(lambda,t)rho(t)dt.
+      =2∫_0^infinity L(lambda,t)rho(t)dt.
 
-Andreief —expansión de determinantes y Fubini— transporta el signo negativo del determinante de densidades a detF para cuatro nodos lambda positivos. También su versión confluente da W_lambda(F)<0. Cada término es absolutamente integrable por las colas superexponenciales de Phi y sus derivadas, aun después de las derivadas del kernel sobre compactos de lambda>0.
+Andreief —expansion of determinants and Fubini— transports the negative sign of the density determinant to detF for four positive nodes lambda. Its confluent version also gives W_lambda(F)<0. Each term is absolutely integrable by the superexponential tails of Phi and its derivatives, even after the kernel derivatives on compact subsets of lambda>0.
 
-Como F0=Z'/u>0 y
+Since F0=Z'/u>0 and
 
     F=F0·(1,lambda,R(lambda),lambda R(lambda)),
 
-se obtiene en particular
+one obtains in particular
 
     W_lambda(1,lambda,R,lambda R)<0,
-    2R'R'''−3(R'')²>0 para TODOlambda>0.            (REAL-R-TURAN)
+    2R'R'''−3(R'')²>0 for ALL lambda>0.            (REAL-R-TURAN)
 
-La identidad del último Wronskiano es exactamente la de084. Así el lado R tiene ahora una prueba global por las densidades de la MISMA Phi, independiente del certificado en parámetro u de085. No se ha quitado una contribución de la forma completa ni usado positividad de un kernel ajeno.
+The identity of the last Wronskian is exactly that of 084. Thus the R side now has a global proof via the densities of the SAME Phi, independent of the certificate in the parameter u of 085. No contribution of the complete form has been removed nor positivity of an unrelated kernel used.
 
-## 9. Alcance exacto
+## 9. Exact scope
 
-El resultado es GLOBAL-R4 y el transporte REAL-R-TURAN del LADO_R para todos los parámetros positivos. No trata las cuatro densidades del lado S ni demuestra una regla de herencia a niveles superiores. La base de tres densidades086 y el nuevo Wronskiano de cuatro se verificaron separadamente; no se sustituyó ese dato por la concavidad genérica refutada084.
+The result is GLOBAL-R4 and the transport REAL-R-TURAN of the R_SIDE for all positive parameters. It does not treat the four densities of the S side nor prove an inheritance rule to higher levels. The three-density base 086 and the new four-density Wronskian were verified separately; that datum was not replaced by the generic concavity refuted in 084.
 
-La positividad W de cuatro generadores085 permanece válida, pero este resultado no amplía su cobertura admisible, no prueba cinco generadores, todos los órdenes ni una ventana temporal. Su aporte es la comparación de densidades que explica y transporta estructuralmente uno de los dos signos recíprocos. El objetivo global del paper permanece OPEN; papers intactos.
+The W positivity of four generators 085 remains valid, but this result does not extend its admissible coverage, does not prove five generators, all orders or a time window. Its contribution is the density comparison that structurally explains and transports one of the two reciprocal signs. The global objective of the paper remains OPEN; papers untouched.

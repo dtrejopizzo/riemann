@@ -1,23 +1,23 @@
-# Ventanas de tamaño X^(2/3) donde la primera componente ya pasa el techo, incondicionalmente
+# Windows of size X^(2/3) where the first component already passes the ceiling, unconditionally
 
-Sea F la suma coseno de 236 con pesos sobre primos simples. Se tiene sin asumir RH
+Let F be the cosine sum of 236 with weights on plain primes. Without assuming RH one has
 
     limsup F(x)/√x ≥ 0.24,      liminf F(x)/√x ≤ −0.24.
 
-En particular hay enteros n→∞ con |F(n)|≪log n. Más aún, en esa misma sucesión, para 1≤L≤n,
+In particular there are integers n→∞ with |F(n)|≪log n. Moreover, along that same sequence, for 1≤L≤n,
 
     n^(−2) ∫_n^(n+L) F(x)²dx ≪ L(L+1)² log² n/n².
 
-Tomando L=n^(2/3) se obtiene O(log² n). Esto cumple la escala subpotencia incluso si falla RH: una ventana de esa longitud no puede sustituir a las ventanas de 236 con la misma normalización. No se afirma optimalidad del exponente 2/3. Para L=n^c con c<2/3 el techo obtenido tiende a cero.
+Taking L=n^(2/3) one obtains O(log² n). This meets the subpower scale even if RH fails: a window of that length cannot replace the windows of 236 with the same normalisation. Optimality of the exponent 2/3 is not claimed. For L=n^c with c<2/3 the obtained ceiling tends to zero.
 
-**Comparación de dos residuos.** Por 236 ya se conocen bajo fallo de RH excursiones de ambas señales con exponente estrictamente mayor que 1/2. Para abarcar el otro caso suponer RH durante este argumento. Sea P(s)=Σ_p(log p)p^(−s) y M(s)=H(s)P(s), el Mellin unilateral de F. F(x)=O_ε(x^(1/2+ε)) por 235, por lo que la integral converge absolutamente a la derecha de 1/2. Para proseguir hasta los dos puntos fronterizos usar
+**Comparison of two residues.** By 236, under failure of RH, excursions of both signs with exponent strictly greater than 1/2 are already known. To cover the other case assume RH during this argument. Let P(s)=Σ_p(log p)p^(−s) and M(s)=H(s)P(s), the one-sided Mellin transform of F. F(x)=O_ε(x^(1/2+ε)) by 235, so the integral converges absolutely to the right of 1/2. To continue up to the two boundary points use
 
     P(s)=−ζ'(s)/ζ(s)−P(2s)−Σ_(l≥3)P(ls).
 
-La cola converge localmente para Re s>1/3. En s=1/2 el polo de P(2s) tiene residuo 1/2 porque P(z) tiene residuo uno en z=1. En ρ₁=1/2+iγ₁ ese término es regular, pues ζ no tiene ceros en Re z=1 y 2ρ₁≠1. Por tanto los residuos de M son −H(1/2)/2 en el eje real y −mult(ρ₁)H(ρ₁) en ρ₁.
+The tail converges locally for Re s>1/3. At s=1/2 the pole of P(2s) has residue 1/2 because P(z) has residue one at z=1. At ρ₁=1/2+iγ₁ that term is regular, since ζ has no zeros on Re z=1 and 2ρ₁≠1. Therefore the residues of M are −H(1/2)/2 on the real axis and −mult(ρ₁)H(ρ₁) at ρ₁.
 
-Si F(x)≥−c√x eventualmente, integrar la función no negativa F(x)+c√x desde ese umbral. Para σ>1/2 el módulo de su Mellin en σ+iγ₁ no supera su Mellin real en σ. Multiplicar por σ−1/2 y pasar al límite da mult(ρ₁)|H(ρ₁)|≤c−H(1/2)/2, pues el prefijo retirado es entero en s. Bajo el supuesto F(x)≤c√x eventualmente, el mismo argumento con c√x−F(x) da mult(ρ₁)|H(ρ₁)|≤c+H(1/2)/2. Ambas conclusiones son imposibles para c=0.24.
+If F(x)≥−c√x eventually, integrate the nonnegative function F(x)+c√x from that threshold. For σ>1/2 the modulus of its Mellin transform at σ+iγ₁ does not exceed its real Mellin transform at σ. Multiplying by σ−1/2 and passing to the limit gives mult(ρ₁)|H(ρ₁)|≤c−H(1/2)/2, since the removed prefix is entire in s. Under the assumption F(x)≤c√x eventually, the same argument with c√x−F(x) gives mult(ρ₁)|H(ρ₁)|≤c+H(1/2)/2. Both conclusions are impossible for c=0.24.
 
-**Certificado.** El verificador verify_237.py usa bolas Arb en 1024 puntos medios de [1,2]. Para y^(−1/2+it)cos(2πy) el supremo del módulo de la derivada respecto de y es ≤|−1/2+it|+2π; el error de la regla del punto medio con esa cota es a lo sumo el supremo dividido por 4096. Para la ordenada se calcula en t=14.135 y se agrega 1/200 por la derivada en t de H, de módulo ≤log 2, cubriendo el intervalo certificado 14.13≤γ₁≤14.14 de Z1. Se comprueba |H(1/2)|<0.01, Re H(ρ₁)<−0.16 e Im H(ρ₁)>0.20, de donde |H(ρ₁)|>0.25. El certificado sólo decide el margen de residuos.
+**Certificate.** The verifier verify_237.py uses Arb balls at 1024 midpoints of [1,2]. For y^(−1/2+it)cos(2πy) the supremum of the modulus of the derivative with respect to y is ≤|−1/2+it|+2π; the error of the midpoint rule with that bound is at most the supremum divided by 4096. For the ordinate it is computed at t=14.135 and 1/200 is added for the t-derivative of H, of modulus ≤log 2, covering the certified interval 14.13≤γ₁≤14.14 of Z1. One checks |H(1/2)|<0.01, Re H(ρ₁)<−0.16 and Im H(ρ₁)>0.20, whence |H(ρ₁)|>0.25. The certificate only decides the residue margin.
 
-**Cruces y ventanas.** La estimación de 236 entre x∈[n,n+1] y n es O(log n); las excursiones dan enteros de ambas señales arbitrariamente lejos y, entre ellos, enteros con |F(n)|≪log n. Desde cada uno, telescopar la misma estimación hasta n+L para dominar el supremo por C(L+1)log n. Integrar el cuadrado da el techo anunciado. Esto prueba existencia de ventanas buenas con un tamaño creciente en las dos alternativas para RH. Las de 236 que sí detectarían el signo tienen longitud X^(1−o(1)), con la condición más precisa sobre h de 231. No se ha construido la sucesión buena a ese tamaño.
+**Crossings and windows.** The estimate of 236 between x∈[n,n+1] and n is O(log n); the excursions give integers of both signs arbitrarily far out and, between them, integers with |F(n)|≪log n. From each of them, telescope the same estimate up to n+L to dominate the supremum by C(L+1)log n. Integrating the square gives the announced ceiling. This proves existence of good windows with a growing size in both alternatives for RH. Those of 236 that would detect the sign have length X^(1−o(1)), with the more precise condition on h of 231. The good sequence at that size has not been constructed.

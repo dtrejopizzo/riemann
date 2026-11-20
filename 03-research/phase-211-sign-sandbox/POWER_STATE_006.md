@@ -1,25 +1,25 @@
-# Estado revisado — cuatro generadores y compensación aritmética
+# Revised state — four generators and arithmetic compensation
 
-Estado: resultados particulares PROVED, signo general OPEN. Goal activo; papers intactos.
+Status: particular results PROVED, general sign OPEN. Goal active; papers untouched.
 
-## Ronda anterior y progreso de ésta
+## Previous round and progress of this one
 
-La ronda004 resolvió todas las ternas a_i>=32 y el puente de aproximación. Esta ronda aporta pruebas verificadas que distinguen tres mecanismos.
+Round004 resolved all triples a_i>=32 and the approximation bridge. This round supplies verified proofs that distinguish three mechanisms.
 
-1. POWER_CONFLUENT_FOUR_005: sobre exp(-31.5y) por polinomios de grado<=3, ARCH tiene una dirección negativa certificada, pero ARCH+POLAR>49/200 y la forma completa W>1/5 de la norma. No es cuatro tasas arbitrarias.
-2. POWER_POLAR_MOVEMENT_005: en esa misma confluencia, para cualquier numerador racional de grado<4, la derivada del Rayleigh de ARCH+POLAR al aumentar un polo es >1/420. Identidad SOS racional y LDL exacto, auditados en POWER_AUDIT_005. Es transporte LOCAL, no global ni signo del término primo.
-3. POWER_ARITHMETIC_WITNESS_006: vector Laguerre de dimensión12 con ARCH+POLAR normalizada entre -2/125 y -1/100. Su autocorrelación es exp(-31.5t)Q(63t); todos los coeficientes de Q(x+40) son negativos. Todos los contactos aritméticos ayudan; el de2 aislado repara el déficit. W>norm²/50. Retirar únicamente n=2 (conservando4,8,...) da W<−norm²/125, por cola racional restante<norm²/500. Revisado de modo independiente en POWER_AUDIT_006, incluida expansión directa de autocorrelación sin depender de la identidad Laguerre.
+1. POWER_CONFLUENT_FOUR_005: on exp(-31.5y) times polynomials of degree<=3, ARCH has a certified negative direction, but ARCH+POLAR>49/200 and the full form W>1/5 of the norm. It is not four arbitrary rates.
+2. POWER_POLAR_MOVEMENT_005: at that same confluence, for any rational numerator of degree<4, the derivative of the ARCH+POLAR Rayleigh quotient when raising a pole is >1/420. Rational SOS identity and exact LDL, audited in POWER_AUDIT_005. It is LOCAL transport, not global nor a sign of the prime term.
+3. POWER_ARITHMETIC_WITNESS_006: Laguerre vector of dimension12 with normalised ARCH+POLAR between -2/125 and -1/100. Its autocorrelation is exp(-31.5t)Q(63t); all coefficients of Q(x+40) are negative. All arithmetic contacts help; the contact at2 alone repairs the deficit. W>norm²/50. Removing only n=2 (keeping4,8,...) gives W<−norm²/125, by a remaining rational tail<norm²/500. Reviewed independently in POWER_AUDIT_006, including a direct expansion of the autocorrelation without relying on the Laguerre identity.
 
-Los tres verificadores exactos fueron reejecutados por coordinación con PASS. No se infiere de estos casos positividad de matrices de orden arbitrario.
+The three exact verifiers were re-run with PASS. Positivity of matrices of arbitrary order is not inferred from these cases.
 
-## Patrón probado y límite
+## Proved pattern and limit
 
-Tres generadores: domina ARCH. Cuatro confluyentes: se necesita conservar el polar positivo. El test explícito de doce necesita el contacto aritmético2. Esta sucesión muestra compensaciones distintas: no justifica una regla única de inducción. La monotonía de ARCH por covarianza está probada; la extensión a ARCH+POLAR sólo es local en el caso4 y falsa sin restricción de tasas (contraejemplo u1→2).
+Three generators: ARCH dominates. Four confluent: the positive polar must be kept. The explicit test of twelve needs the arithmetic contact2. This sequence shows distinct compensations: it does not justify a single induction rule. Monotonicity of ARCH by covariance is proved; the extension to ARCH+POLAR is only local in case4 and false without restriction on rates (counterexample u1→2).
 
-## Próxima obligación
+## Next obligation
 
-Controlar la compensación conjunta en una familia densa, no sumar familias positivas por separado. En paralelo se audita un falsificador a la monotonía ARCH+POLAR en orden grande incluso con tasas31.5, usando y^(n−1)exp(-uy); no es todavía resultado de registro aquí. El signo general permanece OPEN y no hay impedimento externo.
+Control the joint compensation on a dense family, not sum positive families separately. In parallel a falsifier to ARCH+POLAR monotonicity at large order, even with rates31.5, using y^(n−1)exp(-uy), is being audited; it is not yet a recorded result here. The general sign remains OPEN and there is no external impediment.
 
-## Actualización007 auditada
+## Audited update007
 
-El falsificador anunciado arriba ya está PROVED en POWER_HIGH_ORDER_PM_NOGO_007, auditado en POWER_AUDIT_007. Afecta la monotonía universal de todos los Rayleigh AP con numerador fijo, no el mínimo espectral ni el signo. No se intentará cerrar todos los órdenes extrapolando la monotonía local4. El trabajo se orienta a la cancelación aritmética conjunta.
+The falsifier announced above is now PROVED in POWER_HIGH_ORDER_PM_NOGO_007, audited in POWER_AUDIT_007. It affects universal monotonicity of all AP Rayleigh quotients with fixed numerator, not the spectral minimum nor the sign. No attempt will be made to close all orders by extrapolating local monotonicity4. The work turns to joint arithmetic cancellation.

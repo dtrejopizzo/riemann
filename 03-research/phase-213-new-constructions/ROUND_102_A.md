@@ -1,19 +1,19 @@
-# Cuánto del coste de los cuadrados admite un certificado por divisibilidad
+# How much of the cost of squares admits a divisibility certificate
 
-Sean 0≤λ≤1, S de 092 y U_λ(x)=S(x)+2λS(√x). Una cobertura con pesos a_n≥0 y coste Σa_n log n debe pagar al menos U_λ si Σ_{p|n}a_n≥log(x/p) para cada p≤x y Σ_{p²|n}a_n≥λlog(x/p²) para cada p²≤x (en ambas sumas se recorre n). La afirmación resulta de la factorización de cada n. Para pesos reales sobre n≤x el mínimo es exactamente U_λ: poner a_(p²)=λlog(x/p²) y a_p=log(x/p)−a_(p²), tomando cero para cuadrados fuera de rango. Todos son no negativos.
+Let 0≤λ≤1, S of 092 and U_λ(x)=S(x)+2λS(√x). A covering with weights a_n≥0 and cost Σa_n log n must pay at least U_λ if Σ_{p|n}a_n≥log(x/p) for each p≤x and Σ_{p²|n}a_n≥λlog(x/p²) for each p²≤x (in both sums n ranges). The claim follows from the factorization of each n. For real weights on n≤x the minimum is exactly U_λ: set a_(p²)=λlog(x/p²) and a_p=log(x/p)−a_(p²), taking zero for squares out of range. All are non-negative.
 
-Sea D=2+γ_E−log(4π). Para λ<1−D/2 el techo eventual U_λ≤x equivale al signo global. Para λ≥1−(D/2)(1−1/392) ese techo es FALSO incondicionalmente, aun restringido a escalas arbitrariamente tardías. La anchura entre los umbrales es D/784, menor que 0.000060. El extremo inferior λ=1−D/2 queda abierto.
+Let D=2+γ_E−log(4π). For λ<1−D/2 the eventual ceiling U_λ≤x is equivalent to the global sign. For λ≥1−(D/2)(1−1/392) that ceiling is FALSE unconditionally, even restricted to arbitrarily late scales. The width between the thresholds is D/784, less than 0.000060. The lower endpoint λ=1−D/2 remains open.
 
-En efecto, sin RH el techo implicaría S≤x y contradice 092. Bajo RH, con x=exp(2T),
+Indeed, without RH the ceiling would imply S≤x and contradicts 092. Under RH, with x=exp(2T),
 
     (U_λ(x)−x)/√x = −J(T)−2(1−λ)+o(1),
 
-por 092 y PNT. Bajo esta hipótesis J es casi periódica por convergencia absoluta de su serie con frecuencias reales y |J|≤D. Para el sentido contrario existen T arbitrariamente grandes en que J(T) se acerca a J(0), por aproximación simultánea de un número finito de fases al neutro y control uniforme de la cola. En el neutro,
+by 092 and PNT. Under this hypothesis J is almost periodic by absolute convergence of its series with real frequencies and |J|≤D. For the converse direction there exist arbitrarily large T at which J(T) approaches J(0), by simultaneous approximation of a finite number of phases to the identity and uniform control of the tail. At the identity,
 
     −J(0)=Σ (|ρ|^(−2)−½|ρ|^(−4)) > D(1−1/392),
 
-ya que Reρ=1/2, |Imρ|>14 y Σ|ρ|⁻²=D. Esto fuerza excesos ≥c_λ√x en una sucesión si λ alcanza o supera el umbral superior. Sin RH los excesos normalizados de S ya son ilimitados por 092 y 088. El valor crítico como supremo bajo RH es exactamente 1−sup_T(−J(T))/2; el contacto en el borde requeriría controlar el resto.
+since Reρ=1/2, |Imρ|>14 and Σ|ρ|⁻²=D. This forces excesses ≥c_λ√x along a sequence if λ reaches or exceeds the upper threshold. Without RH the normalized excesses of S are already unbounded by 092 and 088. The critical value as a supremum under RH is exactly 1−sup_T(−J(T))/2; contact at the boundary would require controlling the remainder.
 
-**Aplicación.** Una cobertura que pague todas las exigencias de los cuadrados además de las primas falla necesariamente a escala raíz. La cobertura óptima anterior utiliza los primos mismos y no da una construcción independiente con coste ≤x. Antecedentes: 039 y 092 calculan el sesgo de cuadrados, 091 usa retornos a la identidad y 097 resuelve un máximo coprimo distinto.
+**Application.** A covering that pays all the requirements of the squares in addition to the prime ones necessarily fails at root scale. The optimal covering above uses the primes themselves and does not give an independent construction with cost ≤x. Antecedents: 039 and 092 compute the bias of squares, 091 uses returns to the identity and 097 solves a different coprime maximum.
 
-Actualización: [103](ROUND_103_A.md) conserva el término de los cubos y resuelve el contacto tanto en λ* bajo RH como en el umbral explícito inferior.
+Update: [103](ROUND_103_A.md) keeps the term of the cubes and resolves the contact both at λ* under RH and at the explicit lower threshold.

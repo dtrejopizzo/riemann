@@ -1,227 +1,227 @@
-# Anexo — Cotejo dirigido: Hodge, Lorentz, Alexandrov–Fenchel, log-concavidad
+# Annex — Targeted cross-check: Hodge, Lorentz, Alexandrov–Fenchel, log-concavity
 
-Pregunta cotejada. En cada sector de paridad de J: t ↦ −t, P_T tiene codimensión uno; (★) en un sector
-equivale a que a_T tenga a lo sumo una dirección negativa en el espacio entero del sector, con el vector
-de Tate (cosh(t/2) o sinh(t/2)) como dirección temporal, es decir a una Cauchy–Schwarz invertida
-a_T(F, G)² ≥ a_T(F) a_T(G) para G temporal. Se busca en el corpus si alguien intentó probar esa signatura
-por un MECANISMO DE CIERRE (inducción, log-concavidad, cierre bajo producto, derivada direccional,
-límite, borrado/contracción), y no sólo enunciarla o contarla. Este anexo no propone construcciones.
+Question cross-checked. In each parity sector of J: t ↦ −t, P_T has codimension one; (★) in a sector
+is equivalent to a_T having at most one negative direction on the whole space of the sector, with the Tate
+vector (cosh(t/2) or sinh(t/2)) as the timelike direction, i.e. to a reversed Cauchy–Schwarz
+a_T(F, G)² ≥ a_T(F) a_T(G) for timelike G. The corpus is searched for anyone who tried to prove that signature
+by a CLOSURE MECHANISM (induction, log-concavity, closure under products, directional derivative,
+limit, deletion/contraction), and not merely stated or counted it. This annex proposes no constructions.
 
-## 1. Qué se buscó
+## 1. What was searched
 
-Grep sin distinguir mayúsculas en `03-research/` (todas las fases), `04-papers/` (43–48),
-`00-references/`, `05-meta-and-planning/` (índice, SURVEY_MODERN_UNTRIED, crucigrama) y el grid maestro,
-con las palabras del encargo agrupadas en una sola expresión (Hodge index, índice de Hodge, Hodge–Riemann,
+Case-insensitive grep in `03-research/` (all phases), `04-papers/` (43–48),
+`00-references/`, `05-meta-and-planning/` (index, SURVEY_MODERN_UNTRIED, crossword) and the master grid,
+with the words of the task grouped into a single expression (Hodge index, índice de Hodge, Hodge–Riemann,
 Kähler package, hard Lefschetz, Lorentz/Lorentzian, reverse Cauchy, Cauchy–Schwarz invertida, Alexandrov,
 Aleksandrov, Fenchel, mixed volume, mixed discriminant, Brunn–Minkowski, log-concav/log-cóncav, matroid,
 Chow ring, Adiprasito, Brändén, one positive eigenvalue, exactly one negative, hyperbolic polynomial,
-completely log, Gårding). Resultado: **740 archivos** con al menos una coincidencia (la mayoría por
-«Hodge index» en las fases 4–50 y por copias de respaldo del grid). Después se afinó por subfamilia
-(Lorentzian/completely log: ~25 archivos de investigación; log-concav: ~25; matroid/Chow ring/Adiprasito:
-~25; Alexandrov/mixed volume/mixed discriminant: 10; Gårding/hyperbolic polynomial/Borcea: ~25) y se
-cruzó con el índice (README, 02, 03, 04, 05, 05b, 06, AUDIT_PHASE193_CERTAINTY, SURVEY_MODERN_UNTRIED).
+completely log, Gårding). Result: **740 files** with at least one match (most of them for
+«Hodge index» in phases 4–50 and for backup copies of the grid). The search was then refined by subfamily
+(Lorentzian/completely log: ~25 research files; log-concav: ~25; matroid/Chow ring/Adiprasito:
+~25; Alexandrov/mixed volume/mixed discriminant: 10; Gårding/hyperbolic polynomial/Borcea: ~25) and
+crossed with the index (README, 02, 03, 04, 05, 05b, 06, AUDIT_PHASE193_CERTAINTY, SURVEY_MODERN_UNTRIED).
 
-**Abiertos en primaria (lectura de la sección pertinente o completa), 31 archivos:**
-fase 212: README, OBJECT_SPEC, LEDGER, BRIEF_CONSTRUCTOR, REVIEW_003, REVIEW_004, ROUND_004_E (§§Cotejo,
-1, 2); fase 211: STATEMENT_001, ROUND_004_A §3; `phase-160/R160_C7_R1.md` §0, §6; `R160_S3_SURVEY.md`
-§3.1 (T20) y lead 4; `phase-138/R138_001_ROUND1.md` D.15.2 y lista de cierre; `phase-120/
-P3_MATROID_FUSION_NO_GO.md` completo; `P3_G125_T2_AHK_CORRECTION.md` §§4–5, 8;
-`phase-114/114_d_244_FOURIER_TANGENT_HODGE_FORM.md` veredicto, §§3, 5–7; `phase-41/126-hodge-index-on-
-the-square-attainable.md` resumen y §1; `phase-195/INV_M_001_REAL_STABILITY_GARDING_MSS_NO_GO.md` §§2–5;
-`phase-200/D_CONSTRUCTION_001.md` resumen y tabla de cotejo (§5 por encabezado); `phase-201/
+**Opened as primary sources (reading of the relevant section or the whole file), 31 files:**
+phase 212: README, OBJECT_SPEC, LEDGER, BRIEF_CONSTRUCTOR, REVIEW_003, REVIEW_004, ROUND_004_E (§§Cross-check,
+1, 2); phase 211: STATEMENT_001, ROUND_004_A §3; `phase-160/R160_C7_R1.md` §0, §6; `R160_S3_SURVEY.md`
+§3.1 (T20) and lead 4; `phase-138/R138_001_ROUND1.md` D.15.2 and closing list; `phase-120/
+P3_MATROID_FUSION_NO_GO.md` complete; `P3_G125_T2_AHK_CORRECTION.md` §§4–5, 8;
+`phase-114/114_d_244_FOURIER_TANGENT_HODGE_FORM.md` verdict, §§3, 5–7; `phase-41/126-hodge-index-on-
+the-square-attainable.md` summary and §1; `phase-195/INV_M_001_REAL_STABILITY_GARDING_MSS_NO_GO.md` §§2–5;
+`phase-200/D_CONSTRUCTION_001.md` summary and cross-check table (§5 by heading); `phase-201/
 FAMILIES_A_001.md` A1; `FAMILIES_B_001.md` F30; `phase-193/CA_F_000_SEEDS.md` F5; `CA_F_SYNTHESIS.md`;
 `phase-186/R186_033_NEW_INSIGHT.md` Idea 2; `phase-135/R135_007_CLOSING_DECISION.md`;
-`phase-16/06-hunt-indefinite-object.md` principio; `phase-11/M11.4-5-verdict…` veredicto;
-`phase-104/104_21_GLOBAL_COMPOUND_POISSON_TP_GATE.md` (línea de log-concavidad); líneas de coincidencia
-en `phase-211/ROUND_005_D.md`, `phase-207/CLASS_001.md`, `phase-206/AUDIT_206_001.md`,
-`phase-212/ROUND_004_D.md`, `phase-162/R162_1602`, `phase-200/SPEC_SIGN_OBJECT_008.md`; y las filas del
-índice citadas abajo.
+`phase-16/06-hunt-indefinite-object.md` principle; `phase-11/M11.4-5-verdict…` verdict;
+`phase-104/104_21_GLOBAL_COMPOUND_POISSON_TP_GATE.md` (log-concavity line); matching lines
+in `phase-211/ROUND_005_D.md`, `phase-207/CLASS_001.md`, `phase-206/AUDIT_206_001.md`,
+`phase-212/ROUND_004_D.md`, `phase-162/R162_1602`, `phase-200/SPEC_SIGN_OBJECT_008.md`; and the rows of the
+index cited below.
 
-**No abiertos en primaria (sólo vistos por la fila del índice o por la línea de grep):** Paper 46
-(`main.tex`, §§11–12, 17, 22–26), Paper 47 (thm:P / cor:P3 y thm:parityschur sólo vía ROUND_004_E),
-Paper 43 Thm 14.1, fase 15 (M1–M10), fase 41 doc 125, fases 40, 42, 43, 107 (107_241), 113, 122, 137,
-139–142, 155 (R155_054), 159 (G1_B1_R3/R4), 184 (R184_011), las fuentes de `00-references/` (Tropical
-Hodge theory, Cartwright, Hodge index de Yuan–Zhang) y las fases 4, 10, 28, 33, 54, 103, 106 donde la
-palabra aparece en otros sentidos.
+**Not opened as primary sources (seen only via the index row or the grep line):** Paper 46
+(`main.tex`, §§11–12, 17, 22–26), Paper 47 (thm:P / cor:P3 and thm:parityschur only via ROUND_004_E),
+Paper 43 Thm 14.1, phase 15 (M1–M10), phase 41 doc 125, phases 40, 42, 43, 107 (107_241), 113, 122, 137,
+139–142, 155 (R155_054), 159 (G1_B1_R3/R4), 184 (R184_011), the sources in `00-references/` (Tropical
+Hodge theory, Cartwright, Hodge index of Yuan–Zhang) and phases 4, 10, 28, 33, 54, 103, 106 where the
+word appears in other senses.
 
-## 2. Inventario de antecedentes
+## 2. Inventory of antecedents
 
-**A1. Criterio lorentziano (R138_001 D.15.2, PROVED, álgebra lineal).** Para Q simétrica y K con
-Q(K) > 0: Q ≤ 0 en K^⊥ ⟺ Q(F, K)² ≥ Q(F)Q(K) para todo F ⟺ lo mismo sobre un conjunto absorbente en K.
-Es exactamente la Cauchy–Schwarz invertida contra el vector temporal. Se refutó la versión «para todos
-F, G en un cono convexo» (D.15.2(e)). D.15.2b: el cono efectivo es el cono equivocado; la forma
-Khovanskii–Teissier sobre ese cono no está disponible; D.17.3 cae en el no-go del resto de Chebyshev
-(114_d_185). Etiqueta del registro: PROVED (criterio) / RESTATEMENT; índice: G6 «retry, no sign»,
-P46 §17 DEAD. Dónde se detuvo: el criterio no aporta signo; probarlo sobre el cono que detecta exige el
-signo mismo.
+**A1. Lorentzian criterion (R138_001 D.15.2, PROVED, linear algebra).** For symmetric Q and K with
+Q(K) > 0: Q ≤ 0 on K^⊥ ⟺ Q(F, K)² ≥ Q(F)Q(K) for all F ⟺ the same on an absorbing set in K.
+It is exactly the reversed Cauchy–Schwarz against the timelike vector. The version «for all
+F, G in a convex cone» was refuted (D.15.2(e)). D.15.2b: the effective cone is the wrong cone; the
+Khovanskii–Teissier form on that cone is not available; D.17.3 falls into the no-go of the Chebyshev remainder
+(114_d_185). Record label: PROVED (criterion) / RESTATEMENT; index: G6 «retry, no sign»,
+P46 §17 DEAD. Where it stopped: the criterion contributes no sign; proving it on the detecting cone requires the
+sign itself.
 
-**A2. Completación polar del cuadrado y residuo (HR-T) (R160_C7_R1, §§0, 5–6).** Construye un álgebra
-𝒜 = ℝf₁ ⊕ ℝf₂ ⊕ (T) con forma B; Teor. 2: Castelnuovo Z² ≤ 2(Z·f₁)(Z·f₂) en Γ_F es literalmente W_T ≥ 0;
-Teor. 3: estructura de Metzler (fuera de diagonal > 0, diagonal −∞) y estado fundamental de Perron de
-A_T en L²(I_T); Teor. 4 enuncia «a lo sumo una dirección negativa en L²(I_T)» como reformulación (usa una
-equivalencia externa). **§6.2 es el único examen explícito del mecanismo pedido:** (a) la clase cuadrática
-de Brändén–Huh exige entradas ≥ 0 y a lo sumo un autovalor positivo; aquí la diagonal es −∞; quitar la
-diagonal lleva a matrices de ceros en la diagonal que sólo son lorentzianas en el caso multipartito
-completo, y las compresiones de divisibilidad no lo son; (b) cierre bajo límites: no hay familia
-generadora finita (cota de arena N*(T) ≥ exp(4e^T(1+o(1)))), luego el límite no da nada más que la
-definición; (c) Alexandrov–Fenchel: un modelo de volúmenes mixtos tendría diagonal V(K, K) ≥ 0, imposible
-con diagonal −∞; (d) AHK: en una superficie el polinomio de volumen y el índice de Hodge coinciden. §6.3(2):
-**subir de grado** (polinomio homogéneo de grado k ≥ 3 cuya hessiana sea −a_T) — candidatos Str(Γ_F^k)
-dan formas bilineales complejas sin transpuesta; los candidatos con transpuesta son −a twisted por Φ_F^{k−2}
-y sólo son lorentzianos si la propiedad ya vale para las formas torcidas. OPEN; «necesita una fuente
-independiente de coeficientes no negativos». Etiqueta: PARTIAL / REF-D en el índice (G8H-R160_C7_R1).
+**A2. Polar completion of the square and residue (HR-T) (R160_C7_R1, §§0, 5–6).** Builds an algebra
+𝒜 = ℝf₁ ⊕ ℝf₂ ⊕ (T) with form B; Thm. 2: Castelnuovo Z² ≤ 2(Z·f₁)(Z·f₂) on Γ_F is literally W_T ≥ 0;
+Thm. 3: Metzler structure (off-diagonal > 0, diagonal −∞) and Perron ground state of
+A_T on L²(I_T); Thm. 4 states «at most one negative direction on L²(I_T)» as a reformulation (it uses an
+external equivalence). **§6.2 is the only explicit examination of the requested mechanism:** (a) the quadratic class
+of Brändén–Huh requires entries ≥ 0 and at most one positive eigenvalue; here the diagonal is −∞; removing the
+diagonal leads to matrices with zero diagonal that are Lorentzian only in the complete multipartite
+case, and the divisibility compressions are not; (b) closure under limits: there is no finite generating
+family (arena bound N*(T) ≥ exp(4e^T(1+o(1)))), hence the limit gives nothing beyond the
+definition; (c) Alexandrov–Fenchel: a mixed-volume model would have diagonal V(K, K) ≥ 0, impossible
+with diagonal −∞; (d) AHK: on a surface the volume polynomial and the Hodge index coincide. §6.3(2):
+**raising the degree** (homogeneous polynomial of degree k ≥ 3 whose Hessian is −a_T) — candidates Str(Γ_F^k)
+give complex bilinear forms without transpose; the candidates with transpose are −a twisted by Φ_F^{k−2}
+and are Lorentzian only if the property already holds for the twisted forms. OPEN; «needs an
+independent source of nonnegative coefficients». Label: PARTIAL / REF-D in the index (G8H-R160_C7_R1).
 
-**A3. Forma tangente lorentziana sobre primos (114_d_244, PROVED).** h_S = xx* − diag(|x_p|²) sobre los
-canales tangentes de un conjunto finito S de primos; inercia (1, |S|−1, 0) para |S| ≥ 2, por un lema de
-determinante de rango uno menos diagonal. **Cierre por límite cofinal en S** (§5): compatibilidad por
-extensión por cero, forma límite |Σ√log p z_p|² − Σ log p |z_p|², negativa sobre el núcleo primitivo;
-levantamiento a potencias de primos con coeficiente Λ(p^{k+ℓ})/√p^{k+ℓ}. Se detuvo (§6): obstrucción de
-rango — el término de grado es de rango uno en cada S y la parte arquimediana G_∞ tiene rango infinito;
-además es de segundo orden en las velocidades mientras la forma objetivo es de primer orden (R160_S3 lead 4,
-D.258–259). Índice: G4D «PARTIAL, genuine signature theorem, dead-ended».
+**A3. Lorentzian tangent form over primes (114_d_244, PROVED).** h_S = xx* − diag(|x_p|²) on the
+tangent channels of a finite set S of primes; inertia (1, |S|−1, 0) for |S| ≥ 2, by a
+rank-one-minus-diagonal determinant lemma. **Closure by cofinal limit in S** (§5): compatibility by
+extension by zero, limit form |Σ√log p z_p|² − Σ log p |z_p|², negative on the primitive kernel;
+lift to prime powers with coefficient Λ(p^{k+ℓ})/√p^{k+ℓ}. It stopped (§6): rank
+obstruction — the degree term has rank one in each S and the archimedean part G_∞ has infinite rank;
+moreover it is second order in the velocities while the target form is first order (R160_S3 lead 4,
+D.258–259). Index: G4D «PARTIAL, genuine signature theorem, dead-ended».
 
-**A4. Persistencia puntual de Hodge–Riemann bajo sistemas dirigidos (P3_G125_T2_AHK_CORRECTION §5,
-PROVED).** Si q_{S′} restringe a q_S y q_S ≤ 0 en los primitivos compatibles, la forma inducida es ≤ 0 en
-el colímite algebraico, sin tomar límites de signatura. Es una regla de cierre bajo «agregar primos», pero
-presupone la signatura en cada S finito, que debía venir de un anillo de Chow de matroide (AHK) sobre los
-estratos de colisión de primos (§4, condiciones 1–6). **P3_MATROID_FUSION_NO_GO (PROVED):** no existe
-inyección ℕ → retículo de flats con Φ(i + j) = Φ(i) ∨ Φ(j), porque el join es idempotente
-(Φ(2i) = Φ(i)); la iteración aditiva fiel de Frobenius no cabe en un retículo de matroide. Candidato
-retirado antes de llegar a Hodge–Riemann. Índice: G4H-phase-120/P3 DEAD.
+**A4. Pointwise persistence of Hodge–Riemann under directed systems (P3_G125_T2_AHK_CORRECTION §5,
+PROVED).** If q_{S′} restricts to q_S and q_S ≤ 0 on the compatible primitives, the induced form is ≤ 0 on
+the algebraic colimit, without taking limits of signature. It is a closure rule under «adding primes», but
+it presupposes the signature at each finite S, which was to come from a matroid Chow ring (AHK) on the
+prime-collision strata (§4, conditions 1–6). **P3_MATROID_FUSION_NO_GO (PROVED):** there is no
+injection ℕ → lattice of flats with Φ(i + j) = Φ(i) ∨ Φ(j), because the join is idempotent
+(Φ(2i) = Φ(i)); the faithful additive iteration of Frobenius does not fit in a matroid lattice. Candidate
+withdrawn before reaching Hodge–Riemann. Index: G4H-phase-120/P3 DEAD.
 
-**A5. AHK frente al cuadrado del sitio de escalado (fase 41, doc 126).** Análisis del paquete de Kähler:
-AHK requiere anillo graduado finito, dualidad de Poincaré, clase amplia y la inducción por flips sobre un
-retículo finito; el objeto es infinito y continuo, lo que rompe la inducción finita; obstrucción de tipo
-Babaee–Huh. Veredicto (d) «indeterminable», sesgo a circular (usa una equivalencia externa). Etiqueta:
-análisis, sin teorema; índice P41-2 NO-GO, G8H-R160_S2 PARTIAL (señal (1,2) de juguete no persistente a
-rango infinito).
+**A5. AHK versus the square of the scaling site (phase 41, doc 126).** Analysis of the Kähler package:
+AHK requires a finite graded ring, Poincaré duality, an ample class and induction by flips over a
+finite lattice; the object is infinite and continuous, which breaks the finite induction; obstruction of
+Babaee–Huh type. Verdict (d) «indeterminable», biased toward circular (it uses an external equivalence). Label:
+analysis, no theorem; index P41-2 NO-GO, G8H-R160_S2 PARTIAL (toy (1,2) signal not persistent at
+infinite rank).
 
-**A6. Estabilidad real, conos de Gårding, MSS (phase-195 INV_M_001, PROVED).** Sobre el símbolo
-multiafín polarizado del bloque 𝔸 en {1, 2, 3, 6}: Teor. M1/M2, no es real estable — en cada cara
-coordenada donde la forma es definida positiva la desigualdad de Rayleigh Δ_ij p ≥ 0 falla, porque
-estabilidad = Cauchy–Schwarz invertida (signatura (1, n−1)) y el blanco allí era definido. §3: una
-cuadrática definida no es hiperbólica en ninguna dirección; el único cono de Gårding útil es el cono PSD
-(REF-D). §4: MSS da ∃ y no ∀. **Nota:** este intento aplicó la teoría estable/lorentziana a la forma
-restringida (blanco definido), no a la forma en el espacio entero del sector con la dirección de Tate.
+**A6. Real stability, Gårding cones, MSS (phase-195 INV_M_001, PROVED).** On the polarized
+multiaffine symbol of the block 𝔸 on {1, 2, 3, 6}: Thm. M1/M2, it is not real stable — on every
+coordinate face where the form is positive definite the Rayleigh inequality Δ_ij p ≥ 0 fails, because
+stability = reversed Cauchy–Schwarz (signature (1, n−1)) and the target there was definite. §3: a
+definite quadratic is not hyperbolic in any direction; the only useful Gårding cone is the PSD cone
+(REF-D). §4: MSS gives ∃ and not ∀. **Note:** this attempt applied stable/Lorentzian theory to the
+restricted form (definite target), not to the form on the whole space of the sector with the Tate direction.
 
-**A7. Hodge–Riemann/Lorentz no AHK (phase-193 CA_F_000_SEEDS F5; CA_F_SYNTHESIS).** Lema F5
-(Haynsworth, PROVED): positividad sobre los primitivos ⟺ k ≤ 2 negativos y una condición 2×2 de Schur
-(= P47 thm:parityschur). Descartada como «retry» con el argumento «Theorem P: n₋ en el espacio entero > 2
-a T grande, la hipótesis de signatura es falsa». **Ese argumento está mal citado:** AUDIT_PHASE193 fila 35
-lo marca «Theorem P mis-cited; FIX», y ROUND_004_E Prop. 1 y tabla §1 muestran que los conteos
-crecientes son de 𝔪_T (sin peine), mientras que para a_T, si λ_A(T) > 0, n₋(a_T|L²(I_T)) ≤ 2. El
-descarte de F5 queda, pues, sólo como «reformulación sin mecanismo».
+**A7. Non-AHK Hodge–Riemann/Lorentz (phase-193 CA_F_000_SEEDS F5; CA_F_SYNTHESIS).** Lemma F5
+(Haynsworth, PROVED): positivity on the primitives ⟺ k ≤ 2 negatives and a 2×2 Schur condition
+(= P47 thm:parityschur). Discarded as «retry» with the argument «Theorem P: n₋ on the whole space > 2
+at large T, the signature hypothesis is false». **That argument is mis-cited:** AUDIT_PHASE193 row 35
+marks it «Theorem P mis-cited; FIX», and ROUND_004_E Prop. 1 and table §1 show that the growing
+counts are of 𝔪_T (without comb), whereas for a_T, if λ_A(T) > 0, n₋(a_T|L²(I_T)) ≤ 2. The
+discard of F5 therefore stands only as «reformulation without mechanism».
 
-**A8. Transferencia del índice de Hodge condicional a h⁰ (R135_007 Thm 12.3; P46 §§11–12; fases
-137–142, 155).** Clase canónica K, dualidad σ_K, teorema de transferencia PROVED condicional a una
-h⁰ ≥ 0 con (a), (b′) y la desigualdad de Riemann–Roch (c). h⁰_Z sobre traslaciones de potencias de
-primos cumple (a), (b′) y falla (c) (crecimiento (log m)^{3/2} frente a ¼m², D.11.3); h⁰ tensorial (140)
-lee sólo bidegrados; frame defect (142 Thm 19.25) excluye la h⁰ con (a), (b′), (c); el falsificador Ξ_a
-rompe la transferencia. Índice: W10 MW-5/OT-5′ NO-GO; G1H-P46 DEAD.
+**A8. Hodge index transfer conditional on h⁰ (R135_007 Thm 12.3; P46 §§11–12; phases
+137–142, 155).** Canonical class K, duality σ_K, transfer theorem PROVED conditional on an
+h⁰ ≥ 0 with (a), (b′) and the Riemann–Roch inequality (c). h⁰_Z on translations of prime
+powers satisfies (a), (b′) and fails (c) (growth (log m)^{3/2} versus ¼m², D.11.3); tensorial h⁰ (140)
+reads only bidegrees; frame defect (142 Thm 19.25) excludes the h⁰ with (a), (b′), (c); the falsifier Ξ_a
+breaks the transfer. Index: W10 MW-5/OT-5′ NO-GO; G1H-P46 DEAD.
 
-**A9. Arakelov / índice de Hodge aritmético (fase 15, 40, 122; R9-05, R9-09; L26, L80, L83).** Import
-de Faltings–Hriljac/Yuan–Zhang: controla alturas, no tipa en el portador; P40-3 CIRCULAR (positividad
-espectral frente a de intersección). No abiertos en primaria aquí.
+**A9. Arakelov / arithmetic Hodge index (phases 15, 40, 122; R9-05, R9-09; L26, L80, L83).** Import
+of Faltings–Hriljac/Yuan–Zhang: controls heights, does not type-check on the carrier; P40-3 CIRCULAR (spectral
+versus intersection positivity). Not opened as primary sources here.
 
-**A10. Volumen mixto (phase-200 D_CONSTRUCTION_001 §5).** Kazarnovskiĭ/BKK + Minkowski
-V(P, Q)² ≥ V(P, P)V(Q, Q): da una forma entera cuadrática con signatura de Hodge, pero no ve los
-coeficientes, es genérica para Beurling y Epstein, y su inmersión isométrica equivale a (W⁰)
-(REF-D, PROVED). R160_C7_R1 §6.2(c) añade: diagonal de volumen ≥ 0, incompatible con la diagonal −∞.
+**A10. Mixed volume (phase-200 D_CONSTRUCTION_001 §5).** Kazarnovskiĭ/BKK + Minkowski
+V(P, Q)² ≥ V(P, P)V(Q, Q): gives an integer quadratic form with Hodge signature, but it does not see the
+coefficients, it is generic for Beurling and Epstein, and its isometric embedding is equivalent to (W⁰)
+(REF-D, PROVED). R160_C7_R1 §6.2(c) adds: volume diagonal ≥ 0, incompatible with the diagonal −∞.
 
-**A11. Discriminante mixto (211 ROUND_004_A Prop. 1, PROVED).** Las condiciones necesarias (C_k) en
-2×2 contienen Σ v_m v_n ½D(R_m, R_n), discriminante mixto de matrices de solapamiento; acopla pares de
-potencias de primos sin relación aritmética. Condición necesaria, no mecanismo; NO-GO de clase
-(Prop. B: subespacios finitos independientes de Λ no llevan el signo).
+**A11. Mixed discriminant (211 ROUND_004_A Prop. 1, PROVED).** The necessary conditions (C_k) in
+2×2 contain Σ v_m v_n ½D(R_m, R_n), the mixed discriminant of overlap matrices; it couples pairs of
+prime powers with no arithmetic relation. Necessary condition, not a mechanism; class NO-GO
+(Prop. B: finite subspaces independent of Λ do not carry the sign).
 
-**A12. Log-concavidad/log-convexidad.** (i) R186_033 Idea 2: convexidad de log λ_A(T) en una variable
-canónica — NO-GO NUMÉRICO (falsificada en T, e^{2T}, e^{4T}). (ii) 211 ROUND_005_D: log-concavidad del
-perfil de estado fundamental OPEN, «no esperada», NUMÉRICO. (iii) 212 ROUND_004_D: funciones de Pólya
-PF₂ excluidas porque 𝖡 no es ≥ 0. (iv) R162_1602: suma de ≥ 2 deltas falla PF₂. (v) 104_21: secuencia
-compuesta de Poisson ni log-cóncava ni PF₂ para 1 < Q < 3. (vi) Turán/Jensen/Laguerre–Pólya/log-concavidad
-de coeficientes de Taylor (índice L22, L23, L75, A14a; NG-D1/D2; G1F-103): propiedades del lado de
-Fourier o de toda serie de Euler con coeficientes ≥ 0, clase 𝒦_inh, Teor. B de 207 CLASS_001 (falsificador
-a_P). (vii) FAMILIES_A A1: «aplicar log-concavidad a (Λ(n)/√n) o a (c_N) sería una condición de cono
-sobre una sucesión» — descartado por adyacencia, sin construcción.
+**A12. Log-concavity/log-convexity.** (i) R186_033 Idea 2: convexity of log λ_A(T) in a
+canonical variable — NO-GO NUMERICAL (falsified in T, e^{2T}, e^{4T}). (ii) 211 ROUND_005_D: log-concavity of the
+ground-state profile OPEN, «not expected», NUMERICAL. (iii) 212 ROUND_004_D: Pólya functions
+PF₂ excluded because 𝖡 is not ≥ 0. (iv) R162_1602: a sum of ≥ 2 deltas fails PF₂. (v) 104_21: compound
+Poisson sequence neither log-concave nor PF₂ for 1 < Q < 3. (vi) Turán/Jensen/Laguerre–Pólya/log-concavity
+of Taylor coefficients (index L22, L23, L75, A14a; NG-D1/D2; G1F-103): properties of the Fourier
+side or of every Euler series with coefficients ≥ 0, class 𝒦_inh, Thm. B of 207 CLASS_001 (falsifier
+a_P). (vii) FAMILIES_A A1: «applying log-concavity to (Λ(n)/√n) or to (c_N) would be a cone condition
+on a sequence» — discarded by adjacency, without construction.
 
-**A13. Indefinición como principio (fase 16, memo 06; fase 11).** Principio: el portador debe tener
-signatura intrínseca Lorentz/Pontryagin; una modificación de Klein–Gordon ingenua de las resonancias
-modulares sigue definida. Fase 11: la ruta de hiperbolicidad/total positividad «es una positividad».
-Sin objeto.
+**A13. Indefiniteness as a principle (phase 16, memo 06; phase 11).** Principle: the carrier must have
+intrinsic Lorentz/Pontryagin signature; a naive Klein–Gordon modification of the
+modular resonances remains definite. Phase 11: the hyperbolicity/total positivity route «is a positivity».
+No object.
 
-**A14. Inercia y formato de Pontryagin (ROUND_004_E; P47 thm:parityschur, prop:polarcap,
-subsec:inertia-excl; fase 197 BARRIER_W).** Conteo de índices; constancia en c cerca de 1. Ya cubierto
-por el encargo.
+**A14. Inertia and Pontryagin format (ROUND_004_E; P47 thm:parityschur, prop:polarcap,
+subsec:inertia-excl; phase 197 BARRIER_W).** Index counting; constancy in c near 1. Already covered
+by the task.
 
-## 3. Clasificación
+## 3. Classification
 
-| Antecedente | Clase |
+| Antecedent | Class |
 |---|---|
-| A1 criterio lorentziano D.15.2 | (a) reformulación |
-| A2 R160_C7_R1 (Teor. 4; §6) | (a) reformulación; §6.2–6.3 es examen negativo del mecanismo (sin construcción) |
-| A3 forma tangente 114_d_244 | (c) degenerada: signatura (1, n−1) sobre primos con cierre por límite cofinal en S, pero el mecanismo es un lema de rango uno menos diagonal, no inducción ni log-concavidad, y la forma no es a_T |
-| A4 persistencia + matroide de fusión (fase 120) | intento de (c) sobre objetos del problema (estratos de colisión de potencias de primos), con cierre por colímite en S; murió antes de Hodge–Riemann |
-| A5 AHK/cuadrado (fase 41) | (b) transferencia |
-| A6 estabilidad/Gårding/MSS (195) | (c) aplicado al blanco equivocado (forma definida); NO-GO sobre esa formulación |
-| A7 F5 no AHK (193) | (a) reformulación (descartada con cita errónea) |
-| A8 transferencia h⁰ (135–142, P46) | (b) transferencia |
-| A9 Arakelov | (b) transferencia |
-| A10 volumen mixto (200) | (b) transferencia desde cuerpos convexos/BKK, REF-D |
-| A11 discriminante mixto (211) | (a) condición necesaria |
-| A12 log-concavidad (186, 211, 212, 162, 104, Turán…) | pruebas de log-concavidad de cantidades escalares (λ_A en T, perfiles, sucesiones); ninguna es un mecanismo de cierre para la signatura de la forma |
-| A13 principio de indefinición | (a) |
-| A14 inercia | (a) conteo |
+| A1 Lorentzian criterion D.15.2 | (a) reformulation |
+| A2 R160_C7_R1 (Thm. 4; §6) | (a) reformulation; §6.2–6.3 is a negative examination of the mechanism (no construction) |
+| A3 tangent form 114_d_244 | (c) degenerate: signature (1, n−1) over primes with closure by cofinal limit in S, but the mechanism is a rank-one-minus-diagonal lemma, not induction or log-concavity, and the form is not a_T |
+| A4 persistence + fusion matroid (phase 120) | attempt at (c) on objects of the problem (collision strata of prime powers), with closure by colimit in S; died before Hodge–Riemann |
+| A5 AHK/square (phase 41) | (b) transfer |
+| A6 stability/Gårding/MSS (195) | (c) applied to the wrong target (definite form); NO-GO on that formulation |
+| A7 F5 non-AHK (193) | (a) reformulation (discarded with an erroneous citation) |
+| A8 h⁰ transfer (135–142, P46) | (b) transfer |
+| A9 Arakelov | (b) transfer |
+| A10 mixed volume (200) | (b) transfer from convex bodies/BKK, REF-D |
+| A11 mixed discriminant (211) | (a) necessary condition |
+| A12 log-concavity (186, 211, 212, 162, 104, Turán…) | tests of log-concavity of scalar quantities (λ_A in T, profiles, sequences); none is a closure mechanism for the signature of the form |
+| A13 indefiniteness principle | (a) |
+| A14 inertia | (a) counting |
 
-## 4. Respuesta
+## 4. Answer
 
-**¿Hay en el corpus un intento de clase (c)?** Sólo dos parciales, y ninguno sobre a_T con la dirección
-de Tate en un sector de paridad.
+**Is there an attempt of class (c) in the corpus?** Only two partial ones, and neither on a_T with the Tate
+direction in a parity sector.
 
-- **Fase 120 (A4).** Operación de cierre: unión de conjuntos de primos (colímite dirigido en S, con el
-  lema de persistencia puntual PROVED) y, dentro de cada S, la inducción de AHK por flips/borrado–
-  contracción sobre un retículo de flats que debía codificar las colisiones C_{p^i}∘C_{p^j} → C_{p^{i+j}}.
-  Lo detuvo una incompatibilidad de tipos PROVED: la iteración aditiva fiel no se inyecta en un join
-  idempotente (Φ(2i) = Φ(i)). El retículo usado era el de colisiones, no el retículo de divisibilidad
-  de la ventana; la inducción de AHK nunca se ejecutó.
-- **114_d_244 (A3).** Operación de cierre: agregar primos (extensión por cero, límite cofinal), con
-  levantamiento a todas las potencias. La signatura (1, |S|−1) sale de un lema de determinante, no de
-  inducción. Lo detuvo una obstrucción de rango: el término de grado es de rango uno, la parte
-  arquimediana es de rango infinito, y la forma es de segundo orden frente a la forma objetivo de primer
-  orden; nunca se identificó con a_T.
-- **Exámenes negativos sin construcción:** R160_C7_R1 §6.2 descarta la clase cuadrática de Brändén–Huh
-  (diagonal −∞), el cierre bajo límites (no hay familia generadora finita), Alexandrov–Fenchel (diagonal
-  de volumen ≥ 0) y AHK en una superficie (coincide con el enunciado); §6.3(2) deja OPEN la subida de
-  grado (polinomio de grado ≥ 3 con hessiana −a_T) por falta de una fuente independiente de coeficientes
-  no negativos. Phase 195 refuta estabilidad real sobre la forma definida, no sobre la forma entera del
-  sector. Las demás menciones son reformulaciones (a) o transferencias (b).
+- **Phase 120 (A4).** Closure operation: union of sets of primes (directed colimit in S, with the
+  pointwise persistence lemma PROVED) and, within each S, the AHK induction by flips/deletion–
+  contraction on a lattice of flats that was meant to encode the collisions C_{p^i}∘C_{p^j} → C_{p^{i+j}}.
+  It was stopped by a type incompatibility PROVED: the faithful additive iteration does not inject into an
+  idempotent join (Φ(2i) = Φ(i)). The lattice used was the collision lattice, not the divisibility lattice
+  of the window; the AHK induction was never executed.
+- **114_d_244 (A3).** Closure operation: adding primes (extension by zero, cofinal limit), with
+  lifting to all powers. The signature (1, |S|−1) comes from a determinant lemma, not from
+  induction. It was stopped by a rank obstruction: the degree term has rank one, the
+  archimedean part has infinite rank, and the form is second order versus the first-order target
+  form; it was never identified with a_T.
+- **Negative examinations without construction:** R160_C7_R1 §6.2 discards the Brändén–Huh quadratic class
+  (diagonal −∞), closure under limits (no finite generating family), Alexandrov–Fenchel (volume
+  diagonal ≥ 0) and AHK on a surface (coincides with the statement); §6.3(2) leaves OPEN the raising of
+  degree (polynomial of degree ≥ 3 with Hessian −a_T) for lack of an independent source of nonnegative
+  coefficients. Phase 195 refutes real stability on the definite form, not on the whole form of the
+  sector. The other mentions are reformulations (a) or transfers (b).
 
-Ningún archivo abierto ejecuta una inducción del tipo «signatura en la ventana T ⇒ signatura en T′ > T»,
-ni una derivada direccional/polarización sobre a_T, ni borrado/contracción en el retículo de divisores de
+No opened file carries out an induction of the type «signature on the window T ⇒ signature at T′ > T»,
+nor a directional derivative/polarization on a_T, nor deletion/contraction on the divisor lattice of
 [1, e^{2T}).
 
-## 5. Lo no encontrado (sin afirmar novedad)
+## 5. What was not found (without claiming novelty)
 
-En los archivos abiertos y en las coincidencias de grep no se encontró:
+In the opened files and in the grep matches the following was not found:
 
-1. Un intento de probar «a lo sumo una dirección negativa por sector de paridad para a_T en L²(I_T),
-   con cosh(t/2) o sinh(t/2) como dirección temporal» por inducción en T (alargar la ventana) o por
-   cualquier regla de cierre. El enunciado aparece sólo como reformulación (A2 Teor. 4, A7, A14) o como
-   conteo.
-2. Un polinomio de grado ≥ 3 en el test, construido de los objetos del problema, cuya hessiana sea a_T
-   (o −a_T) y al que se aplique la caracterización de Brändén–Huh por derivadas; sólo el examen negativo
-   de R160_C7_R1 §6.3(2) sobre Str(Γ_F^k).
-3. Anillos de Chow, retículos de flats o deletion–contraction sobre el retículo de divisibilidad
-   {n < e^{2T}} o sobre el peine; el único retículo de matroide tratado (fase 120) fue el de colisiones de
-   correspondencias.
-4. Estabilidad real o conos de Gårding aplicados a la forma del sector entero (signatura de Lorentz), en
-   lugar de a la forma restringida o al bloque 𝔸_M (A6).
-5. Log-concavidad de una sucesión o polinomio generador ligado a la signatura (por ejemplo, de
-   coeficientes de un polinomio característico de compresiones de a_T); las log-concavidades examinadas
-   son de cantidades escalares o de coeficientes del lado de Fourier.
-6. Alexandrov–Fenchel/discriminantes mixtos con diagonal no positiva o con «cuerpos virtuales»; sólo el
-   descarte por diagonal de R160_C7_R1 §6.2(c) y la condición necesaria de 211 ROUND_004_A.
+1. An attempt to prove «at most one negative direction per parity sector for a_T on L²(I_T),
+   with cosh(t/2) or sinh(t/2) as the timelike direction» by induction in T (lengthening the window) or by
+   any closure rule. The statement appears only as a reformulation (A2 Thm. 4, A7, A14) or as a
+   count.
+2. A polynomial of degree ≥ 3 in the test, built from the objects of the problem, whose Hessian is a_T
+   (or −a_T) and to which the Brändén–Huh characterization by derivatives is applied; only the negative examination
+   of R160_C7_R1 §6.3(2) on Str(Γ_F^k).
+3. Chow rings, lattices of flats or deletion–contraction on the divisibility lattice
+   {n < e^{2T}} or on the comb; the only matroid lattice treated (phase 120) was the collision lattice of
+   correspondences.
+4. Real stability or Gårding cones applied to the form of the whole sector (Lorentz signature), instead
+   of the restricted form or the block 𝔸_M (A6).
+5. Log-concavity of a sequence or generating polynomial tied to the signature (for example, of
+   coefficients of a characteristic polynomial of compressions of a_T); the log-concavities examined
+   are of scalar quantities or of Fourier-side coefficients.
+6. Alexandrov–Fenchel/mixed discriminants with nonpositive diagonal or with «virtual bodies»; only the
+   discard by diagonal of R160_C7_R1 §6.2(c) and the necessary condition of 211 ROUND_004_A.
 
-Una búsqueda sin coincidencias no prueba que no se haya intentado: quedan sin abrir en primaria Paper 46,
-fases 15, 40–43, 107, 113, 122, 137–142, 155, 159, 184 y las fuentes de `00-references/`. Además, un
-mecanismo de signatura sobre el espacio entero del sector sigue sujeto a lo PROVED en ROUND_004_E Lema 2
-(toda cota del índice negativo es una positividad en codimensión finita) y a la prueba de falsificadores
-de `RULES_AVOID.md` §E: este anexo no examina si alguna regla de cierre distingue Λ de cΛ o de a_P.
+A search without matches does not prove that nothing was attempted: Paper 46,
+phases 15, 40–43, 107, 113, 122, 137–142, 155, 159, 184 and the sources in `00-references/` remain unopened as primary sources. Moreover, a
+signature mechanism on the whole space of the sector remains subject to what is PROVED in ROUND_004_E Lemma 2
+(every bound on the negative index is a positivity in finite codimension) and to the falsifier test
+of `RULES_AVOID.md` §E: this annex does not examine whether any closure rule distinguishes Λ from cΛ or from a_P.

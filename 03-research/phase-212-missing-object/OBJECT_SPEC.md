@@ -1,136 +1,136 @@
-# Fase 212 — Especificación del objeto a construir
+# Phase 212 — Specification of the object to be built
 
-Fusiona P47 prob:region y prop:spec, P48 req:spec (R1–R12), GRID §7 (S1–S12), CW §3.2 ((α)–(μ)) y
-211/OBJECT_SPEC_001 (R1–R5), sin repetir. Notación de `../phase-211-sign-sandbox/STATEMENT_001.md`;
+Merges P47 prob:region and prop:spec, P48 req:spec (R1–R12), GRID §7 (S1–S12), CW §3.2 ((α)–(μ)) and
+211/OBJECT_SPEC_001 (R1–R5), without repetition. Notation of `../phase-211-sign-sandbox/STATEMENT_001.md`;
 N = e^{2T}.
 
-## 1. Forma del objeto
+## 1. Shape of the object
 
-Alcance: esta especificación define el programa de identidad (G), no una necesidad demostrada
-para toda prueba posible de positividad global. La vía asintótica de P47 thm:wit-Tc(iv) y
-ROUND_022_B, Lema 1, sigue admisible con sus cuantificadores completos; véase RULES_AVOID B2.
-No se presenta esa vía ya registrada como una nueva construcción.
+Scope: this specification defines the identity programme (G), not a proven necessity
+for every possible proof of global positivity. The asymptotic route of P47 thm:wit-Tc(iv) and
+ROUND_022_B, Lemma 1, remains admissible with its full quantifiers; see RULES_AVOID B2.
+That already-recorded route is not presented as a new construction.
 
-Un objeto 𝒪 = (ℋ_T, V_T, ρ_T)_{T>0} con:
+An object 𝒪 = (ℋ_T, V_T, ρ_T)_{T>0} with:
 
-- ℋ_T un espacio de Hilbert explícito y V_T : P_T ∩ 𝒟_T → ℋ_T lineal;
-- ρ_T una forma sobre P_T **manifiestamente** no negativa (suma de cuadrados escrita, o medida positiva
-  escrita);
-- la identidad exacta **(G)** a_T(F) = ‖V_T F‖² + ρ_T(F) para todo F ∈ P_T ∩ 𝒟_T y todo T.
+- ℋ_T an explicit Hilbert space and V_T : P_T ∩ 𝒟_T → ℋ_T linear;
+- ρ_T a form on P_T that is **manifestly** non-negative (a written sum of squares, or a written positive
+  measure);
+- the exact identity **(G)** a_T(F) = ‖V_T F‖² + ρ_T(F) for every F ∈ P_T ∩ 𝒟_T and every T.
 
-Se admite la variante por reducción exacta: (G) sobre el portador finito de (L2), sobre la matriz 𝔸_M
-de (S), sobre la función 𝖡 de un perfil, o sobre la escalera de potencias, siempre que la reducción
-usada sea una de las PROVED (README §3).
+The variant by exact reduction is admitted: (G) on the finite carrier of (L2), on the matrix 𝔸_M
+of (S), on the function 𝖡 of a profile, or on the power ladder, provided the reduction
+used is one of the PROVED ones (README §3).
 
-## 2. Cláusulas
+## 2. Clauses
 
-O1. **Exactitud.** (G) es una igualdad. Ningún término se acota en valor absoluto, por norma, por
-    Cauchy–Schwarz con pérdida ni por un resto o(·).
-O2. **Dependencia exacta de Λ, con la no linealidad en el acoplamiento.** V_T usa los valores exactos
-    Λ(n), n < N. La forma es afín en el peine, de modo que el grado en los pesos es invisible para
-    ella, y toda relación polinómica sobre Λ en [2,N) se deduce de los átomos lineales
-    Σ_{d|n}Λ(d) = log n (`ROUND_001_D.md` Lema A; la relación de grado dos es la regla de Leibniz
-    sobre Λ∗1 = log, `ROUND_001_A.md` Lema B). La no linealidad que decide el signo tiene que estar en
-    cómo V_T actúa sobre F (el cuadrado ‖V_T F‖²), no en productos de pesos. Un uso lineal en que F
-    entra sólo por su autocorrelación es un certificado, cuyo contenido es λ^prim (P47 cor:shape (a)).
-O3. **Las tres entradas juntas en una misma línea.** El producto de Euler sobre todos los primos, la
-    ecuación funcional con Γ(s/2) a conductor 1 y la integralidad (coeficientes b ≡ 1 de la serie
-    sobre ℕ, o Σ_{d|n}Λ(d) = log n) entran en la demostración de (G) en un mismo paso, no encadenadas
+O1. **Exactness.** (G) is an equality. No term is bounded in absolute value, by a norm, by
+    lossy Cauchy–Schwarz, or by an o(·) remainder.
+O2. **Exact dependence on Λ, with the nonlinearity in the coupling.** V_T uses the exact values
+    Λ(n), n < N. The form is affine in the comb, so the degree in the weights is invisible to
+    it, and every polynomial relation on Λ in [2,N) follows from the linear atoms
+    Σ_{d|n}Λ(d) = log n (`ROUND_001_D.md` Lemma A; the degree-two relation is the Leibniz rule
+    on Λ∗1 = log, `ROUND_001_A.md` Lemma B). The nonlinearity that decides the sign must lie in
+    how V_T acts on F (the square ‖V_T F‖²), not in products of weights. A linear use in which F
+    enters only through its autocorrelation is a certificate, whose content is λ^prim (P47 cor:shape (a)).
+O3. **The three inputs together in one line.** The Euler product over all primes, the
+    functional equation with Γ(s/2) at conductor 1, and integrality (coefficients b ≡ 1 of the series
+    over ℕ, or Σ_{d|n}Λ(d) = log n) enter the proof of (G) in one and the same step, not chained
     (P48 req:spec R2–R3; P47 prop:shape-inputs).
-O4. **Ruptura, no pérdida de margen.** Para cada falsificador de `RULES_AVOID.md` §E se señala la línea
-    de la demostración de (G) que deja de ser cierta. En particular (G) es falsa para cΛ con c ≠ 1 por
-    pequeño que sea |c − 1|, y para a_P con P > N (que coincide con Λ en casi toda propiedad de clase).
-    Una ruptura formal aislada no basta para proponer una candidata: hay que demostrar la identidad
-    completa y la no negatividad de su lado derecho para Λ. Una vez demostrado eso, el paso que falla
-    en un falsificador puede ser la propia identidad de representación; no es necesario que también
-    pierdan positividad la norma o el resto auxiliares. `REVIEW_003.md` R3-i describe la ruptura
-    algebraica automática, pero no excluye una representación positiva exacta y específica de Λ.
-    El Lema T de `ROUND_013_C.md` sólo transfiere la conclusión a un falsificador si sobreviven la
-    identificación con la forma y todas las hipótesis que dan el signo.
-O5. **Uniformidad en T.** La construcción es una sola, válida para todo T; no una familia de
-    certificados cuya dimensión o precisión se recalcula por ventana (W-fam; P47 cor:shape (b)).
-O6. **Ve las casi-coincidencias.** ‖V_T F‖² no se anula idénticamente sobre los vectores que ven
-    m ≈ kn, m ≠ kn; allí está el signo (P47 prop:nearfree, rem:bar-arith).
-O7. **Usa la fluctuación, no la densidad** (P47 thm:ceiling, prob:region (7)); **usa la parte positiva
-    del símbolo en todo ℝ junto con el conjunto negativo** (prob:region (8)).
-O8. **No es** un funcional del minimizador, un funcional acotado de los pesos, un criterio local, un
-    determinante o momento del haz, ni una suma de cuadrados aritmética pura para T ≥ ½log3
+O4. **Breaking, not loss of margin.** For each falsifier of `RULES_AVOID.md` §E one points to the line
+    of the proof of (G) that ceases to be true. In particular (G) is false for cΛ with c ≠ 1 however
+    small |c − 1| is, and for a_P with P > N (which agrees with Λ in almost every class property).
+    An isolated formal break is not enough to propose a candidate: one must prove the full
+    identity and the non-negativity of its right-hand side for Λ. Once that is proved, the step that fails
+    on a falsifier may be the representation identity itself; it is not necessary that the auxiliary
+    norm or remainder also lose positivity. `REVIEW_003.md` R3-i describes the automatic algebraic
+    break, but does not exclude an exact and specific positive representation of Λ.
+    Lemma T of `ROUND_013_C.md` only transfers the conclusion to a falsifier if the
+    identification with the form and all the hypotheses giving the sign survive.
+O5. **Uniformity in T.** The construction is a single one, valid for all T; not a family of
+    certificates whose dimension or precision is recomputed per window (W-fam; P47 cor:shape (b)).
+O6. **Sees the near-coincidences.** ‖V_T F‖² does not vanish identically on the vectors that see
+    m ≈ kn, m ≠ kn; that is where the sign lies (P47 prop:nearfree, rem:bar-arith).
+O7. **Uses the fluctuation, not the density** (P47 thm:ceiling, prob:region (7)); **uses the positive part
+    of the symbol on all of ℝ together with the negative set** (prob:region (8)).
+O8. **Is not** a functional of the minimizer, a bounded functional of the weights, a local criterion, a
+    determinant or moment of the pencil, nor a pure arithmetic sum of squares for T ≥ ½log3
     (P48 req:spec R7, R9, R10).
-O9. **Acopla Λ(n), n < N, con la ecuación funcional por una vía distinta del factor común
-    ζ(½+iτ)** (P47 prop:spec (5), OPEN: ningún objeto conocido). Las identidades de la franja cumplen
-    la letra de esta cláusula pero son genéricas en el peine: no sirven solas.
-O10. **Cruza la derivada logarítmica.** Las positividades de la serie de Dirichlet que pasan a su
-     derivada logarítmica son sólo las infinitamente divisibles, cono homogéneo que cΛ conserva
-     (P47 prop:spec (6)); el objeto debe trabajar del lado de Λ o cruzar por un mecanismo no homogéneo.
-     La primera relación exacta no homogénea en (1, Λ) es de grado dos:
+O9. **Couples Λ(n), n < N, with the functional equation by a route other than the common factor
+    ζ(½+iτ)** (P47 prop:spec (5), OPEN: no known object). The strip identities satisfy
+    the letter of this clause but are generic in the comb: they do not suffice alone.
+O10. **Crosses the logarithmic derivative.** The positivities of the Dirichlet series that pass to its
+     logarithmic derivative are only the infinitely divisible ones, a homogeneous cone that cΛ preserves
+     (P47 prop:spec (6)); the object must work on the Λ side or cross by a non-homogeneous mechanism.
+     The first exact non-homogeneous relation in (1, Λ) has degree two:
      Λ·log + Λ∗Λ = μ∗log² (P47 rem:spec-scope).
 
-## 3. Dos restricciones probadas sobre (G) (ronda 1; `REVIEW_001_LC.md`)
+## 3. Two proved restrictions on (G) (round 1; `REVIEW_001_LC.md`)
 
-Ninguna aporta signo; delimitan dónde no buscar.
+Neither contributes a sign; they delimit where not to search.
 
-R-comp (PROVED relativo a tres teoremas clásicos citados; `ROUND_001_L.md`, Teorema 3.1, Cor. 4.1).
-En la escalera de potencias, si el núcleo objetivo menos ε veces un núcleo [M₀(u)+M₀(v)]/(u+v), con
-M₀ real-positiva en Re u > 0 y real en (0,∞), es semidefinido positivo en todos los tamaños, entonces
-M₀ no tiene término lineal y su medida de borde está dominada por (1/ε) veces la de M, que bajo esa
-hipótesis es puramente atómica. La atomicidad es conclusión bajo la hipótesis, no un hecho
-incondicional. La exclusión no es efectiva (no da bloque ni vector). No restringe espacios ℋ_T que no
-provengan de un comparador de esta clase: fuera de ella no hay rigidez.
+R-comp (PROVED relative to three cited classical theorems; `ROUND_001_L.md`, Theorem 3.1, Cor. 4.1).
+On the power ladder, if the target kernel minus ε times a kernel [M₀(u)+M₀(v)]/(u+v), with
+M₀ positive-real on Re u > 0 and real on (0,∞), is positive semidefinite at all sizes, then
+M₀ has no linear term and its boundary measure is dominated by (1/ε) times that of M, which under that
+hypothesis is purely atomic. Atomicity is a conclusion under the hypothesis, not an
+unconditional fact. The exclusion is not effective (it gives no block or vector). It does not restrict spaces ℋ_T that do not
+come from a comparator of this class: outside it there is no rigidity.
 
-R-cont (PROVED relativo a 211 GRAM_SLICES §18.2 y a la holomorfía de z ↦ P_z; `ROUND_001_C.md`,
-Lema 1, Teorema R). En una identidad única A_0 = Σ cuadrados + resto no negativo sobre el portador de
-escalas enteras, cada cuadrado es continuo en la norma del grafo y sus coeficientes son valores
-enteros de una función holomorfa de crecimiento polinómico en un semiplano. Ningún cuadrado no nulo
-se anula sobre un conjunto de nodos o modos de suma recíproca divergente, ni es la torsión de un
-funcional continuo por una función con conjunto de nivel divergente de complemento divergente
-(caracteres, sumas de Ramanujan no constantes, μ, μ², Λ, indicadoras de residuos, múltiplos o gcd
-fijo). Luego V_T usa observables globales, no de soporte finito ni seleccionados aritméticamente en
-el nodo. Quedan admitidos: cuadrados continuos con índice o pesos aritméticos en la dilatación,
-torsiones sin conjunto de nivel divergente, y objetos por ventana o sobre 𝔸_M.
+R-cont (PROVED relative to 211 GRAM_SLICES §18.2 and to the holomorphy of z ↦ P_z; `ROUND_001_C.md`,
+Lemma 1, Theorem R). In a single identity A_0 = Σ squares + non-negative remainder on the carrier of
+integer scales, each square is continuous in the graph norm and its coefficients are integer
+values of a holomorphic function of polynomial growth on a half-plane. No nonzero square
+vanishes on a set of nodes or modes with divergent reciprocal sum, nor is it the twist of a
+continuous functional by a function with a divergent level set of divergent complement
+(characters, non-constant Ramanujan sums, μ, μ², Λ, indicators of residues, multiples or fixed
+gcd). Hence V_T uses global observables, not finitely supported or arithmetically selected at
+the node. Still admitted: continuous squares with arithmetic index or weights in the dilation,
+twists without a divergent level set, and per-window objects or objects on 𝔸_M.
 
-## 4. Qué entrega una candidata antes de construir
+## 4. What a candidate delivers before construction
 
-(1) antecedente más cercano, con archivo y sección; (2) el objeto: ℋ_T, V_T, ρ_T escritos, o la parte
-que falta por escribir señalada; (3) por qué el cambio evita la dificultad concreta del antecedente;
-(4) la identidad que la conecta con (G) sobre el portador completo; (5) para cΛ y a_P, la línea que se
-rompe. Una candidata que no puede escribir (2) y (5) no está lista para construcción.
+(1) closest antecedent, with file and section; (2) the object: ℋ_T, V_T, ρ_T written, or the part
+still to be written identified; (3) why the change avoids the concrete difficulty of the antecedent;
+(4) the identity connecting it with (G) on the full carrier; (5) for cΛ and a_P, the line that
+breaks. A candidate that cannot write (2) and (5) is not ready for construction.
 
-## 5. Cláusulas añadidas por las rondas 6–17 (índice maestro `05-meta-and-planning/ROUTES-MASTER-INDEX.md`, III.0 §2; la lista completa de restricciones de todo el corpus está en su Parte II)
+## 5. Clauses added by rounds 6–17 (master index `05-meta-and-planning/ROUTES-MASTER-INDEX.md`, III.0 §2; the full list of restrictions from the whole corpus is in its Part II)
 
-O11. **Los tres controles a la vez.** La relación exacta que da el signo falla simultáneamente en `cΛ`
-     (`c = 2`), en el borrado de una potencia de primo y en un peso de tipo Beurling. Un signo obtenido de
-     cuadrados ciegos más relaciones válidas en alguno de los tres prueba un enunciado falso (Lema T,
-     `ROUND_013_C`; PROVED en la clase declarada).
-O12. **Arch y el peso del mismo objeto.** Frente a `c = 2`, la parte arquimediana y el peso salen del
-     mismo objeto en el mismo paso: un objeto que produce el peso `2Λ` con todas las relaciones exactas
-     (anillo `ℤ×ℤ`) produce también Arch duplicada (`ROUND_016_B`). Frente al borrado, se usa la
-     integralidad; frente a Beurling, el espaciado igual de los enteros. Precisa O3.
-O13. **El vector tiene fórmula propia.** En `a_T = ‖V_T F‖² + ρ_T`, `V_T` se escribe sin invertir ni
-     factorizar la forma. Si `V_T` puede contener `Λ` de modo arbitrario, la identidad existe si y sólo si
-     `a_T ≥ 0` (`ROUND_014_A` Lema P(c)); si `V_T` es afín en el peso, el resto es ciego (polarización).
-O14. **Un bloque de Gram o de Schur necesita una construcción y una identificación independientes del signo buscado.**
-     No basta fabricar un bloque cuya positividad presuponga a_T≥0, ni exhibir un Gram positivo sin
-     demostrar su identidad completa con a_T. Los lemas de `ROUND_013_B` no excluyen un Gram explícito
-     con fórmula propia y una identificación aritmética específica demostrada para Λ. La equivalencia
-     de Schur por sí sola no es una prueba de imposibilidad. Se conserva la exclusión de una suma de
-     piezas por primo cada una con signo (falso para `Λ`
-     pasado `T ≈ 0.697` en la clase de dos posiciones, NUMÉRICO; factores exponenciales por primo ciegos,
+O11. **The three controls at once.** The exact relation giving the sign fails simultaneously at `cΛ`
+     (`c = 2`), at the deletion of a prime power, and at a Beurling-type weight. A sign obtained from
+     blind squares plus relations valid in any of the three proves a false statement (Lemma T,
+     `ROUND_013_C`; PROVED in the declared class).
+O12. **Arch and the weight from the same object.** Against `c = 2`, the archimedean part and the weight come from the
+     same object in the same step: an object producing the weight `2Λ` with all exact relations
+     (ring `ℤ×ℤ`) also produces doubled Arch (`ROUND_016_B`). Against deletion, integrality is used;
+     against Beurling, the equal spacing of the integers. Sharpens O3.
+O13. **The vector has its own formula.** In `a_T = ‖V_T F‖² + ρ_T`, `V_T` is written without inverting or
+     factoring the form. If `V_T` may contain `Λ` arbitrarily, the identity exists if and only if
+     `a_T ≥ 0` (`ROUND_014_A` Lemma P(c)); if `V_T` is affine in the weight, the remainder is blind (polarization).
+O14. **A Gram or Schur block needs a construction and an identification independent of the sought sign.**
+     It is not enough to manufacture a block whose positivity presupposes a_T≥0, nor to exhibit a positive Gram without
+     proving its full identity with a_T. The lemmas of `ROUND_013_B` do not exclude an explicit Gram
+     with its own formula and a specific arithmetic identification proved for Λ. The Schur
+     equivalence by itself is not a proof of impossibility. The exclusion of a sum of
+     per-prime pieces each with a sign is kept (false for `Λ`
+     past `T ≈ 0.697` in the two-position class, NUMERICAL; per-prime exponential factors blind,
      `ROUND_014_B`).
-O15. **La razón no es «la identidad se rompe fuera de `c = 1`».** El conjunto de `c` con positividad
-     contiene un entorno de 1 del tamaño del margen (`ROUND_013_A`); el objeto tiene que explicar una
-     coincidencia de ese orden entre Arch y la parte de primos, no una igualdad formal.
-O16. **Acopla primos distintos a través de la estructura aditiva.** Lo que trata a cada primo por
-     separado, es lineal en `F` y afín en el retardo, está cerrado o es ciego (lectura de conjunto de las
-     rondas 13–16; precisa O6).
-O17. **Una fuente de positividad auxiliar no sustituye su identificación con la forma completa.**
-     El Lema K de `ROUND_013_C` prueba positividad de las Hessianas de las dos clases allí declaradas
-     cuando sus medidas o pesos son positivos; no excluye una identidad aritmética específica que las
-     identifique con a_T para Λ y falle para un falsificador. Por tanto no se prohíben universalmente
-     las medidas positivas ni los pesos positivos como fuente del signo. Se exige construir y probar
-     el enlace exacto, con el alcance global y la fórmula propia de las otras cláusulas. Las exclusiones
-     relativas a tasas de generadores (`ROUND_016_A`) y monotonía completa arquimediana (`ROUND_016_C`)
-     conservan las clases e hipótesis de sus enunciados; no se amplían a toda representación positiva.
+O15. **The reason is not "the identity breaks away from `c = 1`".** The set of `c` with positivity
+     contains a neighbourhood of 1 of the size of the margin (`ROUND_013_A`); the object has to explain a
+     coincidence of that order between Arch and the prime part, not a formal equality.
+O16. **Couples distinct primes through the additive structure.** Whatever treats each prime
+     separately, is linear in `F` and affine in the lag, is closed or blind (collective reading of
+     rounds 13–16; sharpens O6).
+O17. **An auxiliary source of positivity does not replace its identification with the full form.**
+     Lemma K of `ROUND_013_C` proves positivity of the Hessians of the two classes declared there
+     when their measures or weights are positive; it does not exclude a specific arithmetic identity that
+     identifies them with a_T for Λ and fails for a falsifier. Hence positive measures and positive weights
+     are not universally forbidden as a source of the sign. One is required to build and prove
+     the exact link, with the global scope and own formula of the other clauses. The exclusions
+     concerning generator rates (`ROUND_016_A`) and archimedean complete monotonicity (`ROUND_016_C`)
+     keep the classes and hypotheses of their statements; they are not extended to every positive representation.
 
-## 6. Terreno sin objeto
+## 6. Terrain without an object
 
-La lista vigente está en el índice maestro `05-meta-and-planning/ROUTES-MASTER-INDEX.md` (Parte I, secciones B y B′) y en las secciones X–AB de `RULES_AVOID.md`.
+The current list is in the master index `05-meta-and-planning/ROUTES-MASTER-INDEX.md` (Part I, sections B and B′) and in sections X–AB of `RULES_AVOID.md`.

@@ -1,22 +1,22 @@
-# POWER_STATE_099 — T_h global y triples de cada resto
+# POWER_STATE_099 — Global T_h and triples of each remainder
 
-Estado: **PROVED**, constructor98529 exit0/FULL PASS2048 y auditoría matemática/código aprobada. Reproducción independiente root8310 exit0/FULL PASS2048 y hash coincidente. Papers intactos; objetivo global OPEN.
+Status: **PROVED**, run 98529 exit0/FULL PASS 2048 and mathematical/code audit approved. Independent reproduction 8310 exit0/FULL PASS 2048 and matching hash. Papers untouched; global objective OPEN.
 
-## Resultado exacto
+## Exact result
 
-T_h=2h'h'''−3h''²>0 para TODOx=u²>0 de la Phi REAL. Certificado compacto099 en[0,512] más cola analítica097;098 da también el valor positivo de0. Se trabaja directamente con la obligación exacta y no con el signo de densidades particulares más fuerte.
+T_h=2h'h'''−3h''²>0 for ALL x=u²>0 of the REAL Phi. Compact certificate 099 on [0,512] plus analytic tail 097; 098 also gives the positive value at 0. One works directly with the exact obligation and not with the stronger sign of particular densities.
 
-Certificado: S=Ntilde/u15=(16/a)NUMx(u²) ENTERA/par; gaugepositivo porpanel exp[−4M(c)(u−c)]S/Ec4.2048paneles/h1/8/r1/1024bits/cap109/Taylor104; CauchyB2^169 con Schwarzlocalparaelcero15 yrestoexacto<2^-145. Diseño final auditado ANTES de datos, sin cambios durante la corrida. Hash:
+Certificate: S=Ntilde/u15=(16/a)NUMx(u²) ENTIRE/even; positive gauge per panel exp[−4M(c)(u−c)]S/Ec4. 2048 panels/h 1/8/r 1/1024 bits/cap 109/Taylor 104; Cauchy B 2^169 with local Schwarz for the zero 15 and exact remainder <2^-145. Final design audited BEFORE data, with no changes during the run. Hash:
 
     6712eb8542b4d8b7e0836260fba831cd44ccaffb7f1ea321df0a0a32668d51d7
 
-Fuentes:`POWER_EXACT_H_GLOBAL_DESIGN_099.md`,`POWER_EXACT_H_GLOBAL_AUDIT_099.md`,`POWER_SCHUR_TRIPLES_APPLICATION_099.md`,097/098/090/082.
-Código:`tools/power_exact_h_global_099_verify.py`.
+Sources: `POWER_EXACT_H_GLOBAL_DESIGN_099.md`, `POWER_EXACT_H_GLOBAL_AUDIT_099.md`, `POWER_SCHUR_TRIPLES_APPLICATION_099.md`, 097/098/090/082.
+Code: `tools/power_exact_h_global_099_verify.py`.
 
-## Consecuencias auditadas
+## Audited consequences
 
--090 anclado: ambascurvaturas RG''<0,SG''<0 para TODOSp,x>0.
--ParesGpPD ya probados;082 da TODOS los triples distintos delkernelGpPD para cada pivote p>0.
--DobleSchur exacto da K_M sobre{0,p,z1,z2,z3}PD para nodosdistintos; d_p cambia signo pero es congruenciaREALinvertible.0esauxiliar,exponenteoriginal1/2,NOtestWadmisible.
+- 090 anchored: both curvatures RG''<0, SG''<0 for ALL p,x>0.
+- Pairs Gp PD already proved; 082 gives ALL distinct triples of the kernel Gp PD for each pivot p>0.
+- Exact double Schur gives K_M on {0,p,z1,z2,z3} PD for distinct nodes; d_p changes sign but it is a REAL invertible congruence. 0 is auxiliary, original exponent 1/2, NOT an admissible W test.
 
-No cinco generadoresadmisibles arbitrarios, nuevaW/T ni herencia al siguiente nivel. Cuatroai>1 ya probados085. Estrategia global continúa abierta.
+No five arbitrary admissible generators, new W/T or inheritance to the next level. Four ai>1 already proved in 085. Global strategy remains open.

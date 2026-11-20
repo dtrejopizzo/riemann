@@ -1,72 +1,72 @@
-# POWER_CONFLUENT_FOUR_005 — Cuatro polos confluentes: polar rescata el signo
+# POWER_CONFLUENT_FOUR_005 — Four confluent poles: the polar rescues the sign
 
-Estado: PROVED certificado exacto; revisado independientemente. No prueba cuatro tasas arbitrarias. Papers intactos.
+Status: PROVED exact certificate; independently reviewed. It does not prove four arbitrary rates. Papers untouched.
 
-Antecedentes: POWER_CONFLUENT_004, POWER_POLYNOMIAL_003, movimiento de polos y control ponderado de `signo`/POWER_AUDIT_004. Razón nueva: en dimensión cuatro falla la positividad arquimediana aislada; se conserva explícitamente la matriz polar antes de comparar. No se extrapola la prueba de dimensión tres ignorando ese cambio de signo.
+Antecedents: POWER_CONFLUENT_004, POWER_POLYNOMIAL_003, pole motion and weighted control of POWER_AUDIT_004. New reason: in dimension four isolated archimedean positivity fails; the polar matrix is kept explicitly before comparing. The dimension-three proof is not extrapolated while ignoring that sign change.
 
-## 1. Matrices exactas
+## 1. Exact matrices
 
-Fije u=63/2 y phi_j(y)=sqrt(63)e^-uy L_j(63y), 0≤j≤3, base Laguerre ortonormal. La matriz arquimediana es Toeplitz con primera fila (d,b,c,e), donde
+Fix u=63/2 and phi_j(y)=sqrt(63)e^-uy L_j(63y), 0≤j≤3, an orthonormal Laguerre basis. The archimedean matrix is Toeplitz with first row (d,b,c,e), where
 
     d=psi(16)−log pi,
     b=(63/4)psi'(16),
     c=b+(3969/16)psi''(16),
     e=b+(3969/8)psi''(16)+(250047/96)psi'''(16).
 
-La fórmula general del cuarto coeficiente es 2up'+4u²p''+(4/3)u³p''', con p=[psi((u+.5)/2)−log pi]/2. Se deriva diferenciando el mismo kernel [p(u)+p(v)]/(u+v) y conjugando por Laguerre.
+The general formula of the fourth coefficient is 2up'+4u²p''+(4/3)u³p''', with p=[psi((u+.5)/2)−log pi]/2. It is derived by differentiating the same kernel [p(u)+p(v)]/(u+v) and conjugating by Laguerre.
 
-Los momentos polares exactos son
+The exact polar moments are
 
     A_j=sqrt(63)(−32)^j/31^(j+1),
     B_j=sqrt(63)(−31)^j/32^(j+1),
     Polar_jk=A_j B_k+B_j A_k.
 
-Así toda la matriz polar es racional, sin raíces tras multiplicar los momentos.
+Thus the whole polar matrix is rational, without roots after multiplying the moments.
 
-## 2. Intervalos racionales
+## 2. Rational intervals
 
-Use J,E y H definidos en POWER_CONFLUENT_004, todos con 24 términos. Las cotas 223/71<pi<22/7, H256−log256−1/256<gamma<H256−log256 dan
+Use J,E and H defined in POWER_CONFLUENT_004, all with 24 terms. The bounds 223/71<pi<22/7, H256−log256−1/256<gamma<H256−log256 give
 
     dlo=H15−H256+8J(1/3)−J(15/29)−E(15/29),
     dhi=H15−H256+8[J(1/3)+E(1/3)]+1/256−J(76/147).
 
-Para r=2,3,4 defina
+For r=2,3,4 define
 
     Sr=Σ(k=16..255)k^-r,
     lo_r=Sr+1/[(r−1)256^(r−1)],
     hi_r=Sr+1/[(r−1)255^(r−1)].
 
-Entonces b está entre (u/2)lo_2 y (u/2)hi_2; c entre blo−(u²/2)hi_3 y bhi−(u²/2)lo_3; e entre blo−u²hi_3+(u³/2)lo_4 y bhi−u²lo_3+(u³/2)hi_4. Son intervalos racionales exactos.
+Then b lies between (u/2)lo_2 and (u/2)hi_2; c between blo−(u²/2)hi_3 and bhi−(u²/2)lo_3; e between blo−u²hi_3+(u³/2)lo_4 and bhi−u²lo_3+(u³/2)hi_4. These are exact rational intervals.
 
-Tome el centro racional r=(1596/1000,1016/1000,−16/1000,349/1000) y T(r) la Toeplitz de orden cuatro. Aplicar los intervalos anteriores prueba que el error entre la matriz arquimediana verdadera y T(r) tiene máxima suma absoluta de fila menor que 1/200. Por simetría su norma es menor que 1/200.
+Take the rational center r=(1596/1000,1016/1000,−16/1000,349/1000) and T(r) the Toeplitz of order four. Applying the previous intervals proves that the error between the true archimedean matrix and T(r) has maximal absolute row sum less than 1/200. By symmetry its norm is less than 1/200.
 
-El LDL exacto de T(r)+Polar−(1/4)I tiene cuatro pivotes positivos; el verificador adjunto lo comprueba exclusivamente con Fraction. Alternativamente, la polar también es Toeplitz: si (a,b0,c0,e0) es la primera fila de T(r)+Polar, la congruencia racional por los vectores (1,0,0,1),(0,1,1,0),(1,0,0,−1),(0,1,−1,0) separa los dos bloques
+The exact LDL of T(r)+Polar−(1/4)I has four positive pivots; the attached verifier checks it exclusively with Fraction. Alternatively, the polar is also Toeplitz: if (a,b0,c0,e0) is the first row of T(r)+Polar, the rational congruence by the vectors (1,0,0,1),(0,1,1,0),(1,0,0,−1),(0,1,−1,0) separates the two blocks
 
     [[a+e0−1/4,b0+c0],[b0+c0,a+b0−1/4]],
     [[a−e0−1/4,b0−c0],[b0−c0,a−b0−1/4]].
 
-Ambos tienen primer pivote y determinante racionales positivos, comprobados también en el verificador. Por tanto
+Both have positive rational first pivot and determinant, also checked in the verifier. Hence
 
     Arch+Polar > (1/4−1/200)I = (49/200)I.                  (AP4)
 
-## 3. Control del peine y resultado completo
+## 3. Comb control and complete result
 
-El control ponderado de cuatro polos previamente auditado da ∫e^(uy)|h(y)|²dy≤32552||h||² para esta confluencia. Por Cauchy–Schwarz, |c_h(log n)|≤sqrt(32552)n^(-u/2)||h||². Usando Lambda(n)≤n, 2sqrt(32552)<362, (u−1)/2>15, y comparación integral,
+The previously audited weighted control of four poles gives ∫e^(uy)|h(y)|²dy≤32552||h||² for this confluence. By Cauchy–Schwarz, |c_h(log n)|≤sqrt(32552)n^(-u/2)||h||². Using Lambda(n)≤n, 2sqrt(32552)<362, (u−1)/2>15, and integral comparison,
 
     |Comb|≤362 Σ(n>=2)n^-15 ||h||²
            ≤362[2^-15+2^-14/14]||h||²
            =362/28672 ||h||² <(13/1000)||h||².
 
-Junto a AP4 resulta
+Together with AP4 this gives
 
     W[h] > (49/200−13/1000)||h||² > (1/5)||h||².
 
-Este teorema vale sobre span{e^-31.5y,ye^-31.5y,y²e^-31.5y,y³e^-31.5y}. Por continuidad en una base de diferencias divididas persiste en alguna vecindad de tasas confluentes; aquí no se obtiene un radio explícito. No prueba positividad de todos los cuádruples a>=32: la monotonía usada para ARCH no incluye automáticamente el término polar.
+This theorem holds on span{e^-31.5y,ye^-31.5y,y²e^-31.5y,y³e^-31.5y}. By continuity in a basis of divided differences it persists in some neighborhood of confluent rates; no explicit radius is obtained here. It does not prove positivity of all quadruples a>=32: the monotonicity used for ARCH does not automatically include the polar term.
 
-## 4. Falsificador exacto de ARCH positivo en orden cuatro
+## 4. Exact falsifier of positive ARCH at order four
 
-Para el vector Laguerre v=(1,−1,1,−1),
+For the Laguerre vector v=(1,−1,1,−1),
 
     Arch[v]/||v||² = d−(3/2)b+c−(1/2)e <−1/10,
 
-por los mismos intervalos racionales. Así el método «ARCH positiva para cualquier cantidad de polos con tasas >=31.5 y resto pequeño» queda refutado ya en dimensión cuatro. No es negatividad de la forma completa: AP4 muestra explícitamente la compensación polar.
+by the same rational intervals. Thus the method «ARCH positive for any number of poles with rates >=31.5 and small remainder» is refuted already in dimension four. It is not negativity of the complete form: AP4 explicitly shows the polar compensation.

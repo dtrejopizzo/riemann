@@ -1,25 +1,25 @@
-# Estado 052 — V13 confluyente completo y signo real del pivote
+# State 052 — Full confluent V13 and real sign of the pivot
 
-POWER_CONFLUENT_THIRTEEN_052 prueba, con auditoría independiente aprobada, que
+POWER_CONFLUENT_THIRTEEN_052 proves, with approved independent audit, that
 
     W[f] > ||f||²/4000
 
-para TODOS los numeradores reales propios en V13={P(s)/(s+63/2)^13}. Se mantienen todos los términos cruzados, el polar y todos los contactos aritméticos. Es una ampliación del bloque confluyente; no se ha probado todavía trece polos arbitrarios. El resultado050 de doce polos arbitrarios sigue vigente.
+for ALL proper real numerators in V13={P(s)/(s+63/2)^13}. All cross terms, the polar and all arithmetic contacts are kept. It is an extension of the confluent block; thirteen arbitrary poles have not yet been proved. The result050 of twelve arbitrary poles remains valid.
 
-## Información del caso que orienta el siguiente paso
+## Information from the case that guides the next step
 
-El pivote de Schur complementario a la restricción F(0)=0 queda positivamente encerrado para la forma COMPLETA, entre0.0003 y0.0005. No se dedujo su signo de la positividad de esa restricción: se cuantificó el acoplamiento real.
+The Schur pivot complementary to the restriction F(0)=0 is positively enclosed for the FULL form, between0.0003 and0.0005. Its sign was not deduced from positivity of that restriction: the real coupling was quantified.
 
-E2 ya es positiva sobreV13, pero su cota de cola absoluta desde3 no alcanza para certificarW. Conservar exactamente el contacto3 permite pagar la cola desde4 por menos de0.00001 veces la norma². E23>0.00028 norma², suficiente para el margen declarado.
+E2 is already positive onV13, but its absolute tail bound from3 does not suffice to certifyW. Keeping the contact3 exactly allows paying the tail from4 for less than0.00001 times the norm². E23>0.00028 norm², sufficient for the declared margin.
 
-El contacto3 es adverso en el pivote: lo reduce de aproximadamente0.00040545 a0.00038348, con intervalos racionales certificados. En la dirección racional elegida por el Schur central deE2, contacto2 también es adverso y casi cancela el beneficio deARCH+POLAR. Estas energías se evalúan en un único vector de complemento fijo, no se confunden con cocientes de Rayleigh de norma1. Que2 repare otras direcciones no autoriza atribuirle signo favorable en ésta.
+The contact3 is adverse at the pivot: it reduces it from approximately0.00040545 to0.00038348, with certified rational intervals. In the rational direction chosen by the central Schur ofE2, contact2 is also adverse and almost cancels the benefit ofARCH+POLAR. These energies are evaluated on a single fixed complement vector, not confused with Rayleigh quotients of norm1. That2 repairs other directions does not authorise attributing a favourable sign to it in this one.
 
-Este dato descarta usar un patrón de mejora por cada contacto añadido. El certificado mejora al conservar3 exactamente porque evita una pérdida excesiva de la cota absoluta, no porque ese contacto añada energía positiva.
+This datum rules out using a pattern of improvement for each added contact. The certificate improves by keeping3 exactly because it avoids an excessive loss in the absolute bound, not because that contact adds positive energy.
 
-## Verificación y alcance
+## Verification and scope
 
-POWER_CONFLUENT_THIRTEEN_AUDIT_052 aprueba la prueba. El script tools/power_confluent_thirteen_052_verify.py emplea fracciones, intervalos de constantes con restos y LDL; encierra los pivotes mediante orden de formas, preservando todos sus cruces. Constructor, auditor y root reprodujeron PASS. Se estudió un solo bloque nuevo, no una campaña de dimensiones o tasas.
+POWER_CONFLUENT_THIRTEEN_AUDIT_052 approves the proof. The script tools/power_confluent_thirteen_052_verify.py uses fractions, constant intervals with remainders and LDL; it encloses the pivots via form ordering, preserving all their cross terms. PASS reproduced three times independently. A single new block was studied, not a campaign of dimensions or rates.
 
-La búsqueda paralela de una norma ponderada uniforme en j para toda Q^jV_n no produjo una nueva cota: los bounds monomiales no controlan automáticamente la Gram mixta, y la traza deV_n no se traslada sin prueba a la órbita. No se declara una imposibilidad general.
+The parallel search for a weighted norm uniform in j for all Q^jV_n produced no new bound: monomial bounds do not automatically control the mixed Gram, and the trace ofV_n does not carry over to the orbit without proof. No general impossibility is declared.
 
-Siguen abiertos trece polos arbitrarios, los órdenes generales y el signo global. No hay una nueva ventana T del Paper47; papers intactos y goal activo.
+Thirteen arbitrary poles, general orders and the global sign remain open. There is no new window T of Paper47; papers untouched and goal active.

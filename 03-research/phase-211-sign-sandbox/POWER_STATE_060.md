@@ -1,23 +1,23 @@
-# POWER_STATE_060 — Cono uniforme de positividad para todos los numeradores
+# POWER_STATE_060 — Uniform positivity cone for all numerators
 
-Estado: PROVED en la región declarada; signo global OPEN. Papers intactos.
+Status: PROVED in the declared region; global sign OPEN. Papers untouched.
 
-Con u=63/2, Q(s)=s/(s+u), q_n=ceil(log_2(n+1)) y J(n)=10^12(nq_n)^3, para TODO n>=1, TODO polinomio real no nulo P de grado<n y TODO entero j>=J(n),
+With u=63/2, Q(s)=s/(s+u), q_n=ceil(log_2(n+1)) and J(n)=10^12(nq_n)^3, for ALL n>=1, ALL nonzero real polynomials P of degree<n and ALL integers j>=J(n),
 
     W[Q^j P/(s+u)^n] > ||Q^j P/(s+u)^n||².
 
-Además la integral absoluta de la densidad desplazada a altura3 es menor que2 veces la integral real, con constante INDEPENDIENTE de n y P. Esto controla las autocorrelaciones por2exp(−3|t|)norma² y conserva TODO el peine infinito.
+Moreover the absolute integral of the density shifted to height3 is less than2 times the real integral, with a constant INDEPENDENT of n and P. This controls the autocorrelations by2exp(−3|t|)norm² and keeps the WHOLE infinite comb.
 
-Fuente POWER_UNIFORM_STRIP_060.md, diez secciones. Auditoría independiente completa POWER_UNIFORM_STRIP_AUDIT_060.md APROBADA. Root leyó y verificó la prueba completa y su auditoría. Es matemática analítica, sin campaña de parámetros ni cálculo de casos aislados.
+Source POWER_UNIFORM_STRIP_060.md, ten sections. Full independent audit POWER_UNIFORM_STRIP_AUDIT_060.md APPROVED. The full proof and its audit were read and verified. It is analytic mathematics, without a campaign over parameters or computation of isolated cases.
 
-## Mecanismo y diferencia respecto054
+## Mechanism and difference relative to054
 
-El peso racional exacto en frecuencia inversa tiene polinomios ortogonales con una recurrencia explícita. Esto permite controlar la primera derivada de una amplitud sin fase causal por200(n+2)^(3/2)/(u sqrt(j)). Al derivar repetidamente se contabiliza el cambio de clase(n,j) a(n+3r,j−r).
+The exact rational weight in inverse frequency has orthogonal polynomials with an explicit recurrence. This allows controlling the first derivative of an amplitude without causal phase by200(n+2)^(3/2)/(u sqrt(j)). On differentiating repeatedly the change of class(n,j) to(n+3r,j−r) is accounted for.
 
-La constante grandeD_n de054 sólo paga la cola de Taylor, por Cauchy en L² a altura15. Los primeros20nq_n términos se pagan con la cota de derivadas; no se exponentia una norma en dimensión fija ni se compara globalmente con una gaussiana. Así se obtiene una norma de traslación menor que1.1 a alturas±3, uniforme en n. Para polinomios complejos se usa la evaluación individual de054; el producto de la densidad se recupera después mediante Cauchy entre alturas opuestas.
+The large constantD_n of054 only pays the Taylor tail, by Cauchy in L² at height15. The first20nq_n terms are paid with the derivative bound; a norm in fixed dimension is not exponentiated nor globally compared with a Gaussian. Thus a translation norm less than1.1 at heights±3 is obtained, uniform in n. For complex polynomials the individual evaluation of054 is used; the density product is then recovered via Cauchy between opposite heights.
 
-La suma aritmética completa tiene módulo<2norma², ARCH>4norma² y el polar tiene módulo<norma². El balance demuestra el signo con margen. El corte pasa del enormeK(n)054 aO(n³ log³n); también basta10^12n^6.
+The full arithmetic sum has modulus<2norm², ARCH>4norm² and the polar has modulus<norm². The balance proves the sign with margin. The cutoff goes from the enormousK(n)054 toO(n³ log³n);10^12n^6 also suffices.
 
-## Lo que permanece abierto
+## What remains open
 
-No se prueba el segmento j<J(n), no se deduce por descenso ni por mezcla su positividad, y no se afirma un cono cuadrático uniforme.059 sólo da una condición necesaria cuadrática para esta clase de estimaciones. No se añade una ventanaT del Paper47. El resultado053 para trece polos arbitrarios permanece vigente por separado. El cierre global exige aún controlar el interior aritmético firmado.
+The segment j<J(n) is not proved, its positivity is not deduced by descent nor by mixture, and no uniform quadratic cone is claimed.059 only gives a quadratic necessary condition for this class of estimates. No windowT of Paper47 is added. The result053 for thirteen arbitrary poles remains valid separately. Global closure still requires controlling the signed arithmetic interior.

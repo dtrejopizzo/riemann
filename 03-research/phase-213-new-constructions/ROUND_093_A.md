@@ -1,15 +1,15 @@
-# Una desigualdad de prefijos sin parámetro continuo
+# A prefix inequality without a continuous parameter
 
-Sean p_n los primos en orden creciente, w_n=log p_n, H_n=Σ_{k≤n}w_k y Q_n=Σ_{k≤n}w_k². El signo global equivale a
+Let p_n be the primes in increasing order, w_n=log p_n, H_n=Σ_{k≤n}w_k and Q_n=Σ_{k≤n}w_k². The global sign is equivalent to
 
-    B_n = Q_n − H_n log H_n + H_n ≥ 0 eventualmente.
+    B_n = Q_n − H_n log H_n + H_n ≥ 0 eventually.
 
-En efecto S(x) de selección 092 es el máximo sobre n≥0 de H_n log x−Q_n (el prefijo vacío da cero): los incrementos son w_n log(x/p_n), que cambian de signo una sola vez. Para cada n≥1, el máximo en x>0 de H_n log x−Q_n−x se alcanza en x=H_n y vale −B_n. Si S(x)≤x eventualmente se puede evaluar en H_n→∞ y deducir B_n≥0, incluso si H_n no está entre p_n y p_(n+1). Recíprocamente cada prefijo con B_n≥0 queda por debajo de x para todo x, y los finitos prefijos iniciales también lo hacen para x suficientemente grande. Aplicar 092.
+Indeed S(x) of selection 092 is the maximum over n≥0 of H_n log x−Q_n (the empty prefix gives zero): the increments are w_n log(x/p_n), which change sign only once. For each n≥1, the maximum over x>0 of H_n log x−Q_n−x is attained at x=H_n and equals −B_n. If S(x)≤x eventually one can evaluate at H_n→∞ and deduce B_n≥0, even if H_n is not between p_n and p_(n+1). Conversely each prefix with B_n≥0 stays below x for all x, and the finitely many initial prefixes also do so for x large enough. Apply 092.
 
-**Cuánto cuesta retirar la variable x.** Exactamente, para p=p_n,
+**How much removing the variable x costs.** Exactly, for p=p_n,
 
     B_n = p−S(p) − p[ (H_n/p)log(H_n/p)−H_n/p+1 ].
 
-La corrección que se resta es no negativa, asintótica a (H_n−p)²/(2p) cuando H_n/p→1 con H_n≠p. Así sustituir el máximo del prefijo por su valor en el primo pierde un término explícito de segundo orden.
+The correction being subtracted is non-negative, asymptotic to (H_n−p)²/(2p) when H_n/p→1 with H_n≠p. Thus replacing the maximum of the prefix by its value at the prime loses an explicit second-order term.
 
-**Incremento exacto.** B_0=0 y B_n−B_(n−1)=∫_{H_(n−1)}^{H_n}log(p_n/t)dt. Hay incrementos negativos siempre que H_(n−1)≥p_n. Por tanto un intento de demostrar el signo por monotonía requeriría información sobre la posición del primo frente a su masa acumulada. La tarea unilateral es controlar el total firmado de estos incrementos. Esta dualización elemental del criterio primo no prueba tal estimación.
+**Exact increment.** B_0=0 and B_n−B_(n−1)=∫_{H_(n−1)}^{H_n}log(p_n/t)dt. There are negative increments whenever H_(n−1)≥p_n. Hence an attempt to prove the sign by monotonicity would require information on the position of the prime relative to its accumulated mass. The one-sided task is to control the signed total of these increments. This elementary dualization of the prime criterion does not prove such an estimate.

@@ -1,25 +1,25 @@
-# Cuánto futuro admite el baricentro usando sólo los primos ya conocidos
+# How much future the barycentre admits using only the primes already known
 
-Para cada primo p, formar D(x)=x²C(x) de 247. Si D(p)>0, llamar H(p) a la raíz positiva de
+For each prime p, form D(x)=x²C(x) from 247. If D(p)>0, call H(p) the positive root of
 
     D(p)+hD'_+(p)−θ(p)h²=0.
 
-Poner H(p)=0 si D(p)≤0. Esta longitud se calcula con los tres momentos primos hasta p. Para 0≤h<min(H(p),p), el baricentro en p+h sigue siendo estrictamente positivo incluso si se retira cualquier subconjunto de los primos en (p,p+h]. En efecto la expresión cuadrática es exactamente lo que aportan los primos hasta p, y cada primo nuevo r aporta (p+h−r)(3r−p−h)log r≥0. Si el primo siguiente está a distancia menor que H(p), el margen en p basta para pasar ese hueco.
+Set H(p)=0 if D(p)≤0. This length is computed with the three prime moments up to p. For 0≤h<min(H(p),p), the barycentre at p+h remains strictly positive even if any subset of the primes in (p,p+h] is removed. Indeed the quadratic expression is exactly what the primes up to p contribute, and each new prime r contributes (p+h−r)(3r−p−h)log r≥0. If the next prime is at distance less than H(p), the margin at p suffices to cross that gap.
 
-Sea Θ=sup Re ρ. Se tiene
+Let Θ=sup Re ρ. One has
 
-    limsup_(p primo→∞) log(1+H(p))/log p = (1+Θ)/2.
+    limsup_(p prime→∞) log(1+H(p))/log p = (1+Θ)/2.
 
-En particular, SIN asumir RH hay primos arbitrariamente grandes desde los cuales el signo está garantizado en todo el tramo 0≤h≤0.41 p^(3/4), aun descartando todos los primos nuevos. Para probar RH bastaría demostrar el techo aritmético H(p)≤p^(3/4+o(1)) para todos los primos grandes. La dirección del techo importa: radios excesivamente largos también revelarían una falla del signo global.
+In particular, WITHOUT assuming RH there are arbitrarily large primes from which the sign is guaranteed on the whole stretch 0≤h≤0.41 p^(3/4), even discarding all new primes. To prove RH it would suffice to prove the arithmetic ceiling H(p)≤p^(3/4+o(1)) for all large primes. The direction of the ceiling matters: excessively long radii would also reveal a failure of the global sign.
 
-**Cálculo del radio.** En un tramo sin entradas D'_+(x)=4Σ_(r≤x) r log r−2xθ(x). Bajo RH la estimación de 235 y sumación parcial dan D'_+(x)=O(x^(3/2)log²x); el término continuo se cancela. Por 247, 4/15−0.094+o(1)≤C(x)/√x≤4/15+0.094+o(1). Dividir la fórmula de la raíz por x^(3/4), usando θ(x)∼x, da
+**Computation of the radius.** On a stretch without entries D'_+(x)=4Σ_(r≤x) r log r−2xθ(x). Under RH the estimate of 235 and partial summation give D'_+(x)=O(x^(3/2)log²x); the continuous term cancels. By 247, 4/15−0.094+o(1)≤C(x)/√x≤4/15+0.094+o(1). Dividing the root formula by x^(3/4), using θ(x)∼x, gives
 
     H(x)/x^(3/4)=sqrt(C(x)/√x)+o(1).
 
-Aquí se extiende la misma definición a inicios reales. En particular 0.41<H(p)/p^(3/4)<0.61 para todo primo suficientemente grande bajo RH. Sin hipótesis, para cada ε>0, la cota de 235 para θ(x)−x da D'_+=O_ε(x^(1+Θ+ε)) y C(x)=O_ε(x^(Θ+ε)) por sumación parcial con k de 247, cuya integral es cero. La fórmula cuadrática da H≪|D'_+|/θ+√(max(D,0)/θ), de exponente a lo sumo (1+Θ)/2 en el límite superior, pues Θ≤1.
+Here the same definition is extended to real starting points. In particular 0.41<H(p)/p^(3/4)<0.61 for every sufficiently large prime under RH. Without hypothesis, for each ε>0, the bound of 235 for θ(x)−x gives D'_+=O_ε(x^(1+Θ+ε)) and C(x)=O_ε(x^(Θ+ε)) by partial summation with k from 247, whose integral is zero. The quadratic formula gives H≪|D'_+|/θ+√(max(D,0)/θ), of exponent at most (1+Θ)/2 in the upper limit, since Θ≤1.
 
-**Radios inferiores cuando hay ceros a la derecha.** Para cada 1/2<d<Θ la función continua C(x)/x^d es no acotada en ambos sentidos arbitrariamente lejos. En caso de techo o piso eventual aplicar Landau a A x^d±C(x) eventualmente no negativa: su transformada tiene un polo no real a la derecha de d y ningún polo real allí por 247. Entre excursiones negativas y positivas elegir máximos locales x→∞ con C(x)≥x^d. Un primo no puede ser tal máximo: la derivada de C(x)/x^d tiene allí un salto estrictamente ascendente debido al primo entrante. Por tanto D'(x)=(2+d)D(x)/x>0 en esos máximos.
+**Lower radii when there are zeros to the right.** For each 1/2<d<Θ the continuous function C(x)/x^d is unbounded in both directions arbitrarily far out. In the case of an eventual ceiling or floor apply Landau to A x^d±C(x), eventually nonnegative: its transform has a nonreal pole to the right of d and no real pole there by 247. Between negative and positive excursions choose local maxima x→∞ with C(x)≥x^d. A prime cannot be such a maximum: the derivative of C(x)/x^d has there a strictly upward jump due to the entering prime. Hence D'(x)=(2+d)D(x)/x>0 at those maxima.
 
-Para 0≤h≤L=x^((1+d)/2)/2, los primos hasta x aportan al menos D(x)−θ(x)L²>0, pues D(x)≥x^(2+d) y θ(x)≤2x. El primer primo p>x está a distancia O(x^(5/8)) por el teorema de intervalos cortos usado en 238. En consecuencia p−x=o(L). Congelar ahora los primos en p conserva el margen hasta x+L: el primo recién incorporado sólo aporta cantidades no negativas en ese tramo. Así H(p)≥L−(p−x) para esos primos, que dan exponente inferior (1+d)/2. Haciendo d↑Θ y juntando con el caso RH se obtiene la identidad.
+For 0≤h≤L=x^((1+d)/2)/2, the primes up to x contribute at least D(x)−θ(x)L²>0, since D(x)≥x^(2+d) and θ(x)≤2x. The first prime p>x is at distance O(x^(5/8)) by the short-interval theorem used in 238. Consequently p−x=o(L). Now freezing the primes at p preserves the margin up to x+L: the newly incorporated prime only contributes nonnegative amounts on that stretch. Thus H(p)≥L−(p−x) for those primes, which give lower exponent (1+d)/2. Letting d↑Θ and combining with the RH case gives the identity.
 
-**Alcance.** Se obtiene una sucesión incondicional de bloques positivos y un criterio superior sobre su robustez. La positividad de bloques excepcionales no da una inducción perpetua de primo a primo. Falta demostrar que los tres momentos parciales no producen radios de exponente superior a 3/4.
+**Scope.** An unconditional sequence of positive blocks and an upper criterion on their robustness are obtained. Positivity of exceptional blocks does not give a perpetual induction from prime to prime. It remains to prove that the three partial moments do not produce radii of exponent greater than 3/4.

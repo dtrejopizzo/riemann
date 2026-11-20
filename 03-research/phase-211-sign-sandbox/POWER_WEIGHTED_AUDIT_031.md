@@ -1,38 +1,38 @@
 # POWER WEIGHTED AUDIT 031
 
-Estado: WEIGHTED_BLOCK031 y GAMMA_WEIGHT031 APROBADOS. Papers intactos.
+Status: WEIGHTED_BLOCK031 and GAMMA_WEIGHT031 APPROVED. Papers untouched.
 
-## 1. Corpus y diferencia
+## 1. Corpus and difference
 
-Se mantienen los antecedentes auditados030 y las restricciones del índice/grid/crucigrama: JOINT-G e integración de escalones son identidades; primitivas de H sin peso ya fallaron030. La novedad requerida es una desigualdad contra G_N real que conserve aritmética y compare lesiones con recuperaciones, no sólo otro test de signo de un peso abstracto.
+The audited antecedents 030 and the restrictions of the index/grid/crossword are kept: JOINT-G and step integration are identities; unweighted primitives of H already failed in 030. The required novelty is an inequality against the real G_N that keeps the arithmetic and compares losses with recoveries, not just another sign test of an abstract weight.
 
-## 2. Bloque ponderado y recuperación — APROBADOS
+## 2. Weighted block and recovery — APPROVED
 
-Revisados `POWER_WEIGHTED_BLOCK_031.md` y `tools/power_weighted_block_031_verify.py`; ejecución independiente PASS. La fórmula de I*(X) incorpora todos los escalones con factores−2Λ(q)/√q+2X^−3/2qΛ(q). Si q=X sus dos términos cancelan; el contacto4 no tiene contribución integral en el extremo4. Sólo q2,q3 contribuyen a los extremos declarados.
+Checked `POWER_WEIGHTED_BLOCK_031.md` and `tools/power_weighted_block_031_verify.py`; independent run PASS. The formula for I*(X) incorporates all steps with factors −2Λ(q)/√q+2X^−3/2qΛ(q). If q=X its two terms cancel; contact 4 has no integral contribution at endpoint 4. Only q=2, q=3 contribute at the declared endpoints.
 
-La fórmula general de J(X), con z=√X y arctan((z−1)/(z+1)), resulta de la primitiva verificada030. Las cotas de√2 y√3 y sus recíprocos conservan correctamente las direcciones de las evaluaciones superior/inferior. Los intervalos exactos certifican I*(225/64)<−.004 e I*(4)>.02.
+The general formula for J(X), with z=√X and arctan((z−1)/(z+1)), follows from the primitive verified in 030. The bounds for √2 and √3 and their reciprocals correctly keep the directions of the upper/lower evaluations. The exact intervals certify I*(225/64)<−.004 and I*(4)>.02.
 
-El error gamma local satisface |G_N−G*|<3M2 en[1,4], porque log4<1.4 y(3/4)(1.4)²+1.4<3. El mayorante de∫|H|<10 incluye longitud, constante, singularidad y ambos contactos. Por tanto el error30M2 y los umbrales N≥2^22 y N≥2^24 están certificados uniformemente, sin barrido de órdenes.
+The local gamma error satisfies |G_N−G*|<3M2 on [1,4], because log4<1.4 and (3/4)(1.4)²+1.4<3. The majorant of ∫|H|<10 includes length, constant, singularity and both contacts. Therefore the error 30M2 and the thresholds N≥2^22 and N≥2^24 are certified uniformly, without a sweep over orders.
 
-Quedan aprobados los tres resultados REALES a u31.5 fijo: prefijo hasta225/64<−.003 para N≥2^24; bloque hasta4>.015 para N≥2^22; recuperación entre esos extremos>.018 para N≥2^24. La última se obtiene restando sobre la misma función G_N, no combinando modelos o truncamientos distintos.
+The three REAL results at fixed u=31.5 are approved: prefix up to 225/64 <−.003 for N≥2^24; block up to 4 >.015 for N≥2^22; recovery between those endpoints >.018 for N≥2^24. The last is obtained by subtracting on the same function G_N, not by combining different models or truncations.
 
-La negatividad del prefijo ponderado refuta I*≥0 universal, pero no W. El bloque ampliado muestra compensación interior cuantitativa real y es distinto de repetir las primitivas sin peso030. Falta controlar todo[4,infinito); no se reemplaza por una cola de otra representación ni se certifica una nueva ventana T.
+The negativity of the weighted prefix refutes universal I*≥0, but not W. The extended block shows real quantitative interior compensation and is distinct from repeating the unweighted primitives of 030. All of [4,infinity) remains to be controlled; it is not replaced by a tail of another representation and no new window T is certified.
 
 
-## 3. Factor gamma real y costo inicial — APROBADOS
+## 3. Real gamma factor and initial cost — APPROVED
 
-Revisado `POWER_GAMMA_WEIGHT_031.md`. La estricta logconcavidad de D implica un único máximo de R=e^−utD/(3/2), pues la logderivada inicial es positiva y su límite es−u. Reutilizar Jensen026 con umbral u da exactamente t0=(2/3)d/(d+20), con ut0<d para d≥2. El caso d1 tiene el máximo afín1/33. No se introduce un nuevo supuesto de monotonía desde el origen.
+Checked `POWER_GAMMA_WEIGHT_031.md`. Strict log-concavity of D implies a unique maximum of R=e^−utD/(3/2), since the initial log-derivative is positive and its limit is −u. Reusing Jensen 026 with threshold u gives exactly t0=(2/3)d/(d+20), with ut0<d for d≥2. The case d=1 has the affine maximum 1/33. No new monotonicity assumption from the origin is introduced.
 
-La prueba global q″<0 es válida: en todo cero de q″, la Riccati y su derivada dan q‴=2(q′)²+4qq′/t>0. La asintótica q″<0 al infinito impide un cruce descendente desde un valor no negativo anterior y excluye contactos. La concavidad y q(0)=0 implican∫_0^Tq≥Tq(T)/2.
+The global proof of q″<0 is valid: at every zero of q″, the Riccati equation and its derivative give q‴=2(q′)²+4qq′/t>0. The asymptotics q″<0 at infinity prevents a downward crossing from an earlier nonnegative value and excludes contacts. Concavity and q(0)=0 imply ∫_0^Tq≥Tq(T)/2.
 
-En la rama creciente el paréntesis cq′−q−cq² es positivo; por eso reemplazarρ≤1 antes de descartar−cq² conserva la dirección del bound de R′. Integrar produce el sobrepaso≤q(T)(c−T/2)≤M2T(c−T/2)≤2M2/9. La TV resultante conserva ambas ramas reales.
+On the increasing branch the parenthesis cq′−q−cq² is positive; hence replacing ρ≤1 before discarding −cq² keeps the direction of the bound on R′. Integration produces the overshoot ≤q(T)(c−T/2)≤M2T(c−T/2)≤2M2/9. The resulting TV keeps both real branches.
 
-La integración por partes global no tiene borde: I*(1)=0 y el decaimiento gamma domina su crecimiento. La singularidad inicial es integrable. La rama creciente termina antes de log2, así que no contiene contacto primo. La cota superior de I* en esa rama es<9/2, usando el signo de c0−1 y el integral exacto del logaritmo. Multiplicada por la variación positiva≤2M2/9, deja un costo adverso≤M2. BUDGET conserva toda la primitiva firmada contra el peso positivo−R′ de la rama restante.
+The global integration by parts has no boundary: I*(1)=0 and the gamma decay dominates its growth. The initial singularity is integrable. The increasing branch ends before log2, so it contains no prime contact. The upper bound of I* on that branch is <9/2, using the sign of c0−1 and the exact integral of the logarithm. Multiplied by the positive variation ≤2M2/9, it leaves an adverse cost ≤M2. BUDGET keeps the whole signed primitive against the positive weight −R′ of the remaining branch.
 
-El criterio de esperanza indicado es suficiente pero sigue sin prueba. No se transforma el peso positivo en signo del promedio, porque I* sí tiene lesiones reales. La diferencia respecto030 es un control cuantitativo de variación TOTAL del factor gamma y del costo de su rama inicial, de orden1/N; no una nueva escritura de IBP como signo.
+The indicated expectation criterion is sufficient but remains unproved. The positive weight is not turned into a sign of the average, because I* does have real losses. The difference relative to 030 is a quantitative control of the TOTAL variation of the gamma factor and of the cost of its initial branch, of order 1/N; not a new rewriting of IBP as a sign.
 
-## 4. Cierre
+## 4. Closure
 
-La ronda añade compensación real hasta4 y un presupuesto global de rama inicial, ambos a tasa fija y sin campaña de órdenes. Ni sumarlos ni la medida positiva de la rama descendente resuelven automáticamente todos los contactos restantes. No hay signo total W, nueva fila completa o ventana T certificada. Los resultados negativos de primitivas sólo delimitan criterios suficientes, no una imposibilidad global. Root coincide independientemente en la revisión de WEIGHTED_BLOCK031 y en la localización del máximo por Jensen.
+The round adds real compensation up to 4 and a global budget for the initial branch, both at fixed rate and without a campaign over orders. Neither adding them nor the positive measure of the descending branch automatically resolves all remaining contacts. There is no total sign of W, new complete row or certified window T. The negative results on primitives only delimit sufficient criteria, not a global impossibility. A second independent check agrees on the review of WEIGHTED_BLOCK031 and on the localization of the maximum via Jensen.
 
-Aclaración final de la rama creciente: también R′=cρq′−qR≤cq′−q porqueρ≤1, q′>0 y R≥R(0)=1. Esta formulación, explicitada por el constructor a petición de root, conserva de manera directa la dirección de la cota del sobrepaso y está aprobada.
+Final clarification on the increasing branch: also R′=cρq′−qR≤cq′−q because ρ≤1, q′>0 and R≥R(0)=1. This formulation, made explicit on request, directly keeps the direction of the overshoot bound and is approved.

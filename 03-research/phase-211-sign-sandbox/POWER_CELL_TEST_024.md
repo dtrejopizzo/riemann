@@ -1,74 +1,74 @@
-# POWER_CELL_TEST_024 — Test integrado de la primera celda, N=129
+# POWER_CELL_TEST_024 — Integrated test of the first cell, N=129
 
-Estado: PROVED promedios positivos de la primera celda, con suma Möbius completa, certificado racional ejecutado y revisión independiente APROBADA. Un único N129, sin campaña. Papers intactos.
+Status: PROVED positive averages of the first cell, with complete Möbius sum, rational certificate executed and independent review APPROVED. A single N129, no campaign. Papers untouched.
 
-## Corpus y razón nueva antes de construir
+## Corpus and new reason before building
 
-Leídos las reglas del proyecto, CUMULATIVE_INVERSE022 y su extensión C_B/MASS, CUMULATIVE_TEST023 y auditorías; búsqueda dirigida en índice/grid/crucigrama (criterios celulares, medias de kernels, C_B). La positividad puntual K>=0 ya está refutada para N129,x1. La diferencia aquí es evaluar una condición INTEGRADA más débil en la primera celda, conservando el peso C_B que anula el extremo1, no repetir otra prueba puntual.
+Read the project rules, CUMULATIVE_INVERSE022 and its extension C_B/MASS, CUMULATIVE_TEST023 and audits; targeted search in index/grid/crossword (cellular criteria, kernel means, C_B). Pointwise positivity K>=0 is already refuted for N129,x1. The difference here is to evaluate a weaker INTEGRATED condition on the first cell, keeping the weight C_B that vanishes at the endpoint1, not to repeat another pointwise test.
 
-Se fija SOLO N129 y la celda[1,2]. Se calcularán exactamente sus integrales mediante un antiderivado polinómico y una cola Möbius completa. Se coordina con `signo`, que trabaja la estructura general S_N(n), para no duplicar tests.
+ONLY N129 and the cell[1,2] are fixed. Their integrals will be computed exactly via a polynomial antiderivative and a complete Möbius tail. The general structure S_N(n) is handled in POWER_CELL_BALANCE_024.md, so as not to duplicate tests.
 
-## 1. Resultado dirigido
+## 1. Targeted result
 
-Para N=129 y u=63/2, la suma COMPLETA satisface
+For N=129 and u=63/2, the COMPLETE sum satisfies
 
     31/100 <∫_1^2 K_N(x)C_B(x)dx<8/25,
     33/100 <S_N(2)<1/3,                                 (CELL)
     1/2 <∫_1^2 K_N(x)x^-2dx<3/5.                        (MASS1)
 
-Aquí C_B(x)=(1−x^-2)/2 para1<x<2, y S_N(2)=∫_1^2J_N(x)dx−log2 J_N(2). La condición puntual K_129(1)<0 de023 es compatible con estos tres promedios positivos. Por continuidad, K tiene también valores positivos dentro de(1,2); no se concluye una única transición ni un patrón para las siguientes celdas.
+Here C_B(x)=(1−x^-2)/2 for1<x<2, and S_N(2)=∫_1^2J_N(x)dx−log2 J_N(2). The pointwise condition K_129(1)<0 from023 is compatible with these three positive averages. By continuity, K also takes positive values inside(1,2); neither a single transition nor a pattern for the following cells is concluded.
 
-La contribución de esta celda a la representación ERR=−2∫KC_B es estrictamente menor que−31/50. No se declara el signo de ERR total ni de W: faltan las otras celdas y la comparación con ARCH_sharp. S_N(2) y la integral con C_B son dos asignaciones distintas de contribuciones de borde/saltos; no deben sumarse como si fueran beneficios independientes.
+The contribution of this cell to the representation ERR=−2∫KC_B is strictly less than−31/50. The sign of total ERR or of W is not declared: the other cells and the comparison with ARCH_sharp are missing. S_N(2) and the integral with C_B are two distinct assignments of edge/jump contributions; they must not be added as if they were independent benefits.
 
-## 2. Identidades de integración que eliminan la cuadratura
+## 2. Integration identities eliminating quadrature
 
-Como h_N=−J_N' y K_N=J_N−xJ_N', integración por partes en la primera celda da EXACTAMENTE
+Since h_N=−J_N' and K_N=J_N−xJ_N', integration by parts on the first cell gives EXACTLY
 
     ∫_1^2 K_N C_B
        =∫_1^2 J_N dx−(3/4)J_N(2),                     (CB1)
     ∫_1^2 K_N x^-2dx=J_N(1)−J_N(2)/2.                 (MA1)
 
-En CB1 se usó (xC_B)'+C_B=1 y xC_B=0 en1,3/4 en2. El valor del peso en el punto2, donde puede saltar su definición por celdas, no altera la integral ordinaria. No se eliminan saltos de la representación global de ERR.
+In CB1 one used (xC_B)'+C_B=1 and xC_B=0 at1,3/4 at2. The value of the weight at the point2, where its cellwise definition may jump, does not alter the ordinary integral. Jumps of the global representation of ERR are not eliminated.
 
-Escriba J_N(x)=x^-32Σmu(m)m^-32P_N(logx+logm). Sea Q_N el polinomio positivo de igual grado definido por
+Write J_N(x)=x^-32Σmu(m)m^-32P_N(logx+logm). Let Q_N be the positive polynomial of equal degree defined by
 
     31Q_N−Q_N'=P_N,
     q_d=p_d/31,
     q_j=[p_j+(j+1)q_(j+1)]/31, d=128.
 
-Entonces
+Then
 
     ∫_1^2J_N(x)dx
       =Σ(m>=1)mu(m)m^-32
           [Q_N(logm)−2^-31Q_N(log(2m))],               (INT)
     J_N(2)=2^-32Σ(m>=1)mu(m)m^-32P_N(log(2m)).
 
-Los coeficientes p_j de P_N se generan por la recurrencia racional gamma de020. Todos los q_j son positivos y el verificador comprueba coeficiente a coeficiente 31Q−Q'=P.
+The coefficients p_j of P_N are generated by the rational gamma recurrence of020. All q_j are positive and the verifier checks 31Q−Q'=P coefficient by coefficient.
 
-## 3. Segmento exacto y cola infinita común
+## 3. Exact segment and common infinite tail
 
-El script `tools/power_cell_test_024_verify.py` usa mu(m) por factorización entera para1<=m<=64, logaritmos atanh con resto geométrico e intervalos racionales con redondeo exterior. Evalúa P y Q por Horner. No utiliza cuadratura flotante ni funciones especiales numéricas.
+The script `tools/power_cell_test_024_verify.py` uses mu(m) via integer factorization for1<=m<=64, atanh logarithms with geometric remainder and rational intervals with outward rounding. It evaluates P and Q by Horner. It uses neither floating quadrature nor numerical special functions.
 
-Para controlar TODOS los términos m>=65 se usa la monotonicidad del kernel original w_N(x)=x^-1/2rho_N(logx): w_N>0 y−w_N'=H_N>0. Para cada m,
+To control ALL terms m>=65 one uses the monotonicity of the original kernel w_N(x)=x^-1/2rho_N(logx): w_N>0 and−w_N'=H_N>0. For each m,
 
     0<∫_1^2 w_N(mx)dx<=w_N(m),
     0<w_N(2m)<=w_N(m).
 
-Defina T_P=Σ(m>=65)m^-32P_N(logm). Los errores de INT, J_N(1) y J_N(2) son por tanto <=T_P. Los de CB1, MA1 y S_N(2) son menores que2T_P, porque3/4,1/2 y log2 son menores que1.
+Define T_P=Σ(m>=65)m^-32P_N(logm). The errors of INT, J_N(1) and J_N(2) are therefore <=T_P. Those of CB1, MA1 and S_N(2) are less than2T_P, because3/4,1/2 and log2 are less than1.
 
-Como log64>4=128/32, las funciones x^-32(logx)^j decrecen en x>=64 para todos j<=128. Con L=21/5 y
+Since log64>4=128/32, the functions x^-32(logx)^j decrease on x>=64 for all j<=128. With L=21/5 and
 
     I_0=64^-31/31,
     I_j=64^-31L^j/31+(j/31)I_(j−1),
 
-se obtiene el mayorante racional completo
+one obtains the complete rational majorant
 
     2T_P<=2Σ(j=0..128)p_jI_j<10^-10.                   (TAIL)
 
-Este error se añade simétricamente a cada intervalo finito antes de comprobar CELL/MASS1. No se ha supuesto signo de la cola de Möbius.
+This error is added symmetrically to each finite interval before checking CELL/MASS1. No sign of the Möbius tail has been assumed.
 
-## 4. Verificación y alcance
+## 4. Verification and scope
 
-El verificador ejecutado produce PASS para los tres resultados con cola completa. Como orientación únicamente, los valores son aproximadamente .318043377895 para CB1 y .333118004377 para S_N(2); no participan en la prueba.
+The executed verifier produces PASS for the three results with complete tail. For orientation only, the values are approximately .318043377895 for CB1 and .333118004377 for S_N(2); they play no part in the proof.
 
-Se resolvió un criterio integrado concreto que NO estaba refutado por el punto negativo023. No se probó una condición para todos N ni para todas las celdas de N129; tampoco se controló el daño total de K^- ni se estableció el signo de W. La continuación debe sumar las celdas restantes con signos y mantener los términos de borde de la identidad global.
+A concrete integrated criterion that was NOT refuted by the negative point023 was settled. No condition was proved for all N or for all cells of N129; nor was the total damage of K^- controlled or the sign of W established. The continuation must add the remaining cells with signs and keep the boundary terms of the global identity.

@@ -1,83 +1,83 @@
-# Casos elementales, 2026-11-04
+# Elementary cases, 2026-11-04
 
-Estado: resultado auxiliar demostrado y contraejemplos algebraicos a posibles lemas; **ninguna prueba del signo global**. Fuentes locales leídas: Paper 47, especialmente `reson`, `nearfree`, `transl`, y README/mapa del Paper 48; el mapa y meta descartan presentar otra reformulación positiva como una vía nueva.
+Status: auxiliary result proved and algebraic counterexamples to possible lemmas; **no proof of the global sign**. Local sources read: Paper 47, especially `reson`, `nearfree`, `transl`, and the README/map of Paper 48; the map and meta notes rule out presenting another positive reformulation as a new route.
 
-## 1. Mejora demostrable de nearfree: eliminar log log M
+## 1. Provable improvement of nearfree: removing log log M
 
-Sea χ real, suave y compacta en (-1,1), no nula. Escriba χε(t)=χ(t/ε), P=1/4−∂², ψε=Pχε y Dχ=∫x⁴|χ̂(x)|²dx>0. Para ε≤1,
+Let χ be real, smooth, compactly supported in (-1,1), nonzero. Write χε(t)=χ(t/ε), P=1/4−∂², ψε=Pχε and Dχ=∫x⁴|χ̂(x)|²dx>0. For ε≤1,
 
     ||ψε||² ≥ Dχ/(2π ε³).
 
-La función de Lévy del artículo tiene expansión K(s)=2Σ(j≥0) exp(−(2j+1/2)s). Por tanto
+The Lévy function of the paper has the expansion K(s)=2Σ(j≥0) exp(−(2j+1/2)s). Therefore
 
     |P²K(s)| ≤ 2Σ(j≥0)(2j+1/2)⁴ exp(−(2j+1/2)s) ≤ 400 s⁻⁵.
 
-Prueba del último número: a⁴exp(−as/2)≤(8/(es))⁴ y Σexp(−(2j+1/2)s/2)=exp(−s/4)/(1−exp(−s))≤(1+4/e)/s; entonces 2(8/e)⁴(1+4/e)<400. El término j=0 de P²K es de hecho cero.
+Proof of the last number: a⁴exp(−as/2)≤(8/(es))⁴ and Σexp(−(2j+1/2)s/2)=exp(−s/4)/(1−exp(−s))≤(1+4/e)/s; then 2(8/e)⁴(1+4/e)<400. The j=0 term of P²K is in fact zero.
 
-Si u≥4ε, las identidades de Fourier y dos integraciones por partes dobles dan
+If u≥4ε, the Fourier identities and two double integrations by parts give
 
     m(ψε,V_uψε)=−(1/2)∫cχε(v) P²K(u−v)dv.
 
-No hay términos de frontera porque χ es suave compacta; el término diagonal C0 desaparece porque las dos funciones tienen soportes disjuntos. Como |v|≤2ε y ||cχε||1≤ε²||χ||1²,
+There are no boundary terms because χ is smooth and compactly supported; the diagonal term C0 disappears because the two functions have disjoint supports. Since |v|≤2ε and ||cχε||1≤ε²||χ||1²,
 
     |m(ψε,V_uψε)| / ||ψε||² ≤ Cχ (ε/u)⁵,
     Cχ=12800π ||χ||1²/Dχ.
 
-Para los centros xm=log m−(1/2)log M, |xm−xk|≥|m−k|/M. Si ε=1/(KM), K≥8, la norma de la matriz de términos cruzados, dividida por ||ψε||², está acotada por 2ζ(5)Cχ/K⁵. El término diagonal del artículo satisface m(ψε)/||ψε||²≥log(1/ε)−C'χ. Su estimación exacta de divisibilidad permanece ≤log M+E. Resulta
+For the centres xm=log m−(1/2)log M, |xm−xk|≥|m−k|/M. If ε=1/(KM), K≥8, the norm of the cross-term matrix, divided by ||ψε||², is bounded by 2ζ(5)Cχ/K⁵. The diagonal term of the paper satisfies m(ψε)/||ψε||²≥log(1/ε)−C'χ. Its exact divisibility estimate remains ≤log M+E. This gives
 
     a(Fb)/||Fb||² ≥ log K−C'χ−E−2ζ(5)Cχ/K⁵.
 
-En particular existe K0(χ) que da margen ≥1 para todo M y todo vector b con ε=1/(KM). Esto mejora el ε=1/[8KM(2+log M)] del Paper 47. No se afirma novedad frente al corpus completo: no apareció este argumento en las secciones revisadas.
+In particular there exists K0(χ) giving margin ≥1 for every M and every vector b with ε=1/(KM). This improves the ε=1/[8KM(2+log M)] of Paper 47. No novelty is claimed relative to the full corpus: this argument did not appear in the sections reviewed.
 
-Límite: K grande sigue impidiendo las near-coincidencias. La mejora quita una pérdida técnica, sin acceder al portador del signo que falta.
+Limit: large K still prevents the near-coincidences. The improvement removes a technical loss, without reaching the missing carrier of the sign.
 
-## 2. Primer defecto visible: dos paquetes
+## 2. First visible defect: two packets
 
-Tome centros log k y log(2k+1), con perfil ψε, y δ=log((2k+1)/(2k)). Al crecer ε por encima de δ/2 puede activarse el contacto n=2, pues su autocorrelación es cψε(δ). Para k grande y ε=O(1/k), ningún otro entero está cerca del cociente y los paquetes permanecen disjuntos. Defina
+Take centres log k and log(2k+1), with profile ψε, and δ=log((2k+1)/(2k)). As ε grows above δ/2, the contact n=2 can be activated, since its autocorrelation is cψε(δ). For large k and ε=O(1/k), no other integer is close to the ratio and the packets remain disjoint. Define
 
     a=m(ψε), h=m(ψε,V_log((2k+1)/k)ψε), c=cψε(δ), v2=2log2/√2.
 
-La matriz exacta sobre estos dos paquetes es
+The exact matrix on these two packets is
 
     [[a, h−v2 c/2], [h−v2 c/2,a]].
 
-Así la condición exacta es a≥|h−v2 c/2|. La incorporación del near-contact cambia la matriz por [[0,−v2 c/2],[−v2 c/2,0]], que tiene ambos signos si c≠0. Por ello el lema «activar un contacto cercano mejora/empeora la forma en orden de Loewner» es falso incluso en dimensión dos. Escoger signos opuestos de los dos coeficientes invierte el efecto.
+Thus the exact condition is a≥|h−v2 c/2|. Incorporating the near-contact changes the matrix by [[0,−v2 c/2],[−v2 c/2,0]], which has both signs if c≠0. Hence the lemma "activating a near contact improves/worsens the form in Loewner order" is false even in dimension two. Choosing opposite signs of the two coefficients reverses the effect.
 
-En este ejemplo no aparece una amenaza asintótica al signo: a/||ψε||²=log k+O(1), |c|≤||ψε||² y h/||ψε||²=O(ε⁵). La desigualdad se cumple para k suficientemente grande. Un solo defecto local no explica la cancelación global.
+In this example no asymptotic threat to the sign appears: a/||ψε||²=log k+O(1), |c|≤||ψε||² and h/||ψε||²=O(ε⁵). The inequality holds for k large enough. A single local defect does not explain the global cancellation.
 
-## 3. Dos y tres aristas: la prueba por pares no basta
+## 3. Two and three edges: the pairwise proof is not enough
 
-La matriz con diagonal 1 y las tres entradas extradiagonales −0.6 tiene cada sección 2×2 definida positiva, pero eigenvalores −0.2,1.6,1.6. Una inducción basada únicamente en las cotas de pares pierde la suma coherente. Con solo dos aristas (cadena de tres vértices) y peso c, la condición es c≤1/√2; con tres aristas iguales es c≤1/2, aunque cada par permite c≤1.
+The matrix with diagonal 1 and all three off-diagonal entries −0.6 has every 2×2 section positive definite, but eigenvalues −0.2,1.6,1.6. An induction based only on pairwise bounds loses the coherent sum. With only two edges (a three-vertex chain) and weight c, the condition is c≤1/√2; with three equal edges it is c≤1/2, although each pair allows c≤1.
 
-El patrón aritmético próximo al triángulo (2,2,4) lo dan k,2k+1,4k+3. Las distancias al contacto son
+The arithmetic pattern close to the triangle (2,2,4) is given by k,2k+1,4k+3. The distances to the contact are
 
     δ12=log((2k+1)/(2k)),
     δ23=log((4k+3)/(4k+2)),
     δ13=log((4k+3)/(4k)).
 
-Son respectivamente ~1/(2k),1/(4k),3/(4k). Con ε de orden 1/k se ven progresivamente las tres. Esto identifica un ensayo concreto de la cooperación de dos contactos primos y su potencia. **La matriz abstracta anterior no se ha realizado como una matriz negativa del Weil form**; para tres paquetes, nuevamente la diagonal log k domina los pesos fijos. Confundir el contraejemplo abstracto con un contraejemplo al signo sería incorrecto.
+They are respectively ~1/(2k),1/(4k),3/(4k). With ε of order 1/k the three become progressively visible. This identifies a concrete test of the cooperation of two prime contacts and their power. **The abstract matrix above has not been realised as a negative matrix of the Weil form**; for three packets, again the diagonal log k dominates the fixed weights. Confusing the abstract counterexample with a counterexample to the sign would be incorrect.
 
-## Conclusión operativa
+## Operational conclusion
 
-No sobrevive una nueva vía para cerrar el signo. Sí sobreviven: (i) una mejora auxiliar con prueba explícita; (ii) un contraejemplo mínimo a monotonía de near-contactos; (iii) una batería 2×2/cadena/triángulo para refutar pruebas por control independiente de aristas. Cualquier propuesta basada en estos patrones necesita controlar la norma colectiva de la matriz de near-contactos frente a la energía archimedeana, y esa desigualdad no se ha obtenido aquí.
+No new route to close the sign survives. What does survive: (i) an auxiliary improvement with explicit proof; (ii) a minimal counterexample to monotonicity of near-contacts; (iii) a 2×2/chain/triangle battery to refute proofs by independent control of edges. Any proposal based on these patterns needs to control the collective norm of the near-contact matrix against the archimedean energy, and that inequality has not been obtained here.
 
-## 4. Auditoría del primer ciclo con pesos aritméticos reales
+## 4. Audit of the first cycle with real arithmetic weights
 
-Antecedentes revisados adicionalmente: phase-193 `CA_J_002_GKS_FRUSTRATION_AND_FKG_ON_THE_DIVISOR_LATTICE.md` y `CA_K_SYNTHESIS.md`. La frustración, holonomía, gauge y comparación diamagnética **no son una propuesta nueva** y están expresamente agotados allí.
+Antecedents additionally reviewed: phase-193 `CA_J_002_GKS_FRUSTRATION_AND_FKG_ON_THE_DIVISOR_LATTICE.md` and `CA_K_SYNTHESIS.md`. Frustration, holonomy, gauge and diamagnetic comparison **are not a new proposal** and are expressly exhausted there.
 
-Para los tres índices anteriores se tiene exactamente δ13=δ12+δ23, y el Euler factor fuerza Λ(4)=Λ(2). Elija ε=k^(−1/2). Aunque esta resolución ve near-coincidencias, en este subespacio de tres paquetes solo se activan los contactos 2,2,4 para k suficientemente grande. Los paquetes siguen teniendo soportes disjuntos. Por escala y continuidad,
+For the three indices above one has exactly δ13=δ12+δ23, and the Euler factor forces Λ(4)=Λ(2). Choose ε=k^(−1/2). Although this resolution sees near-coincidences, in this three-packet subspace only the contacts 2,2,4 are activated for k large enough. The packets still have disjoint supports. By scaling and continuity,
 
     cψε(δij)/||ψε||² → 1,
     m(ψε,V_log(mi/mj)ψε)/||ψε||² → 0.
 
-Por tanto las entradas extradiagonales normalizadas tienden a −x,−x,−z, donde
+Therefore the normalised off-diagonal entries tend to −x,−x,−z, where
 
     x=log2/√2, z=log2/2=x/√2.
 
-Si d=m(ψε)/||ψε||², el determinante límite de la plantilla es
+If d=m(ψε)/||ψε||², the limiting determinant of the template is
 
     d³−d(2x²+z²)−2x²z.
 
-El término cúbico orientado −2x²z es estrictamente negativo. **Falsificador preciso:** la afirmación «el primer ciclo cercano de tipo (p,p,p²), gracias a Λ(p²)=Λ(p), tiene contribución cúbica no negativa al determinante» es falsa ya para p=2 en el régimen descrito. No hay cancelación favorable del primer ciclo por esa identidad aritmética. El umbral espectral exacto de la plantilla es d≥(z+√(z²+8x²))/2, mayor que el umbral de la cadena d≥√2 x y el de una sola arista d≥x.
+The oriented cubic term −2x²z is strictly negative. **Precise falsifier:** the claim "the first near cycle of type (p,p,p²), thanks to Λ(p²)=Λ(p), has a nonnegative cubic contribution to the determinant" is false already for p=2 in the regime described. There is no favourable cancellation of the first cycle from that arithmetic identity. The exact spectral threshold of the template is d≥(z+√(z²+8x²))/2, larger than the chain threshold d≥√2 x and the single-edge threshold d≥x.
 
-Este falsificador se refiere únicamente al signo del término cúbico propuesto; **no es negatividad de la forma**, porque aquí d→∞. Demuestra que ni la identidad de potencias ni el cociclo de desplazamientos proveen por sí solos la compensación deseada. Una conjetura colectiva distinta tendría que especificar y probar un mecanismo adicional; no se ha encontrado uno defendible en esta exploración.
+This falsifier refers only to the sign of the proposed cubic term; **it is not negativity of the form**, because here d→∞. It shows that neither the power identity nor the shift cocycle provides by itself the desired compensation. A different collective conjecture would have to specify and prove an additional mechanism; no defensible one has been found in this exploration.

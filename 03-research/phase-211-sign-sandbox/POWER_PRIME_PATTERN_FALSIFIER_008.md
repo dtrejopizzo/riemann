@@ -1,92 +1,92 @@
-# POWER_PRIME_PATTERN_FALSIFIER_008 — En la misma familia, los contactos bajos también pueden agravar el déficit
+# POWER_PRIME_PATTERN_FALSIFIER_008 — In the same family, low contacts can also worsen the deficit
 
-Estado: PROVED (vector explícito, polar nulo, déficit arquimediano y signo perjudicial de cada contacto <=1024). No se afirma negatividad de la forma completa. Papers intactos.
+Status: PROVED (explicit vector, zero polar, archimedean deficit and harmful sign of each contact <=1024). Negativity of the full form is not claimed. Papers untouched.
 
-## 1. Antecedentes y diferencia declarada
+## 1. Antecedents and declared difference
 
-Leídos POWER_POLYNOMIAL_003, POWER_ARITHMETIC_WITNESS_006, POWER_POLE_MOVEMENT_004 y Paper47, teorema de sub-comb negativity (§Partial prime combs); búsquedas de Laguerre, Levinson, finite differences y Toeplitz prime en índice, grid y crucigrama. La necesidad de la aritmética y el fracaso de monotonía por añadir contactos ya constan. No se propone un NO-GO global nuevo. La diferencia exacta es un test cerrado en la MISMA familia confluente fija usada por los certificados: en 006 todos los contactos ayudan y el 2 repara; aquí TODOS los contactos hasta 1024 perjudican una dirección con polar exactamente cero y parte arquimediana negativa. No se hace búsqueda de matrices ni campaña numérica.
+Read POWER_POLYNOMIAL_003, POWER_ARITHMETIC_WITNESS_006, POWER_POLE_MOVEMENT_004 and Paper47, theorem of sub-comb negativity (§Partial prime combs); searches for Laguerre, Levinson, finite differences and Toeplitz prime in index, grid and crossword. The necessity of the arithmetic and the failure of monotonicity when adding contacts are already recorded. No new global NO-GO is proposed. The exact difference is a closed test in the SAME fixed confluent family used by the certificates: in 006 all contacts help and 2 repairs; here ALL contacts up to 1024 harm a direction with polar exactly zero and negative archimedean part. No matrix search or numerical campaign is done.
 
-## 2. Vector racional explícito en el espacio confluente
+## 2. Explicit rational vector in the confluent space
 
-Fije u=63/2, n=2^17 y
+Fix u=63/2, n=2^17 and
 
     g(y)=y^{n-1}exp(-uy)1_{y>0},
     f(y)=(d²/dy²-1/4)g(y).
 
-Como n>3, g(0)=g'(0)=0 y las integraciones por partes no tienen términos de borde. Tanto g como todas las derivadas necesarias decaen exponencialmente en infinito. La transformada de Laplace es
+Since n>3, g(0)=g'(0)=0 and the integrations by parts have no boundary terms. Both g and all necessary derivatives decay exponentially at infinity. The Laplace transform is
 
     F(s)=(n-1)!(s²-1/4)/(s+u)^n.
 
-Es un numerador racional FIJO de grado dos en el espacio confluente de n polos u, por lo que f pertenece al span de las primeras n funciones Laguerre e^-uy L_j(2uy). No es necesario imprimir n coeficientes: la fórmula diferencial los determina exactamente.
+It is a FIXED rational numerator of degree two in the confluent space of n poles u, so f belongs to the span of the first n Laguerre functions e^-uy L_j(2uy). There is no need to print n coefficients: the differential formula determines them exactly.
 
-Los momentos polares son exactamente
+The polar moments are exactly
 
     A(f)=F(-1/2)=0, B(f)=F(1/2)=0.
 
-Así el polar se anula. La densidad espectral normalizada es proporcional a
+Thus the polar vanishes. The normalised spectral density is proportional to
 
     (tau²+1/4)²/(u²+tau²)^n.                              (S)
 
-## 3. Cota racional del segundo momento espectral
+## 3. Rational bound on the second spectral moment
 
-Use primero la probabilidad base proporcional a (u²+tau²)^-n. Si M_{2k} es su momento, integración por partes o la integral beta dan
+First use the base probability proportional to (u²+tau²)^-n. If M_{2k} is its moment, integration by parts or the beta integral give
 
     M2=u²/(2n-3),
     M4=3u^4/[(2n-3)(2n-5)],
     M6=15u^6/[(2n-3)(2n-5)(2n-7)].
 
-Para n=2^17, u²<1024 y cada denominador de los tres productos es mayor que n. Por tanto
+For n=2^17, u²<1024 and each denominator of the three products is greater than n. Hence
 
     M2<1/128, M4<3/128², M6<15/128³.
 
-Al ponderar por (tau²+1/4)², el segundo momento de (S) es
+Weighting by (tau²+1/4)², the second moment of (S) is
 
     E_f tau²=[M6+(1/2)M4+(1/16)M2]
                   /[M4+(1/2)M2+1/16]
              <=16M6+8M4+M2
              <1231/131072<1/100.                         (M)
 
-Todas las comparaciones son racionales; no se estiman factoriales grandes.
+All comparisons are rational; no large factorials are estimated.
 
-## 4. Déficit arquimediano estricto
+## 4. Strict archimedean deficit
 
-La serie positiva del multiplicador da, para a_k=k+1/4,
+The positive series of the multiplier gives, for a_k=k+1/4,
 
     m(tau)-m(0)
       =Σ [(tau²/4)/(a_k(a_k²+tau²/4))]
       <=(tau²/4)Σ a_k^-3 <17tau².
 
-La última cota usa Σ_{k>=1}(k+1/4)^-3<=104/125, sumando el primer término y comparando con una integral; el término k=0 aporta 64. Además m(0)=-gamma-pi/2-3log2-logpi<-4 (de hecho <-9/2), usando gamma>0, pi>3, log2>2/3 y logpi>1. Por (M),
+The last bound uses Σ_{k>=1}(k+1/4)^-3<=104/125, summing the first term and comparing with an integral; the term k=0 contributes 64. Moreover m(0)=-gamma-pi/2-3log2-logpi<-4 (in fact <-9/2), using gamma>0, pi>3, log2>2/3 and logpi>1. By (M),
 
     Arch[f]/||f||² <-4+17/100=-383/100.
 
-El polar es cero, así que Arch+Polar es estrictamente negativa en este test, sin ningún diagnóstico numérico.
+The polar is zero, so Arch+Polar is strictly negative on this test, without any numerical diagnostic.
 
-## 5. TODOS los contactos bajos perjudican el signo
+## 5. ALL low contacts harm the sign
 
-Por cos x>=1-x²/2 y Parseval,
+By cos x>=1-x²/2 and Parseval,
 
     c_f(t)/||f||²=E_f cos(tau t)
                  >=1-(t²/2)E_f tau² >1-t²/200.
 
-Para cada entero q con 2<=q<=1024, logq<=10log2<10. Luego
+For each integer q with 2<=q<=1024, logq<=10log2<10. Hence
 
     c_f(logq)>||f||²/2.
 
-Cada contacto primo-potencia no nulo de ese intervalo aporta
+Each nonzero prime-power contact of that interval contributes
 
     -2Lambda(q)q^-1/2 c_f(logq)
        <-Lambda(q)q^-1/2 ||f||² <0.
 
-En particular añadir el contacto 2 agrava el déficit; añadir el 3 también lo agrava; y lo mismo sucede con todas las potencias primas hasta 1024. Es el comportamiento opuesto al vector de dimensión doce de POWER_ARITHMETIC_WITNESS_006, donde todos ayudan. El patrón depende de la autocorrelación del vector, no de una sucesión universal de primos reparadores.
+In particular adding contact 2 worsens the deficit; adding 3 also worsens it; and the same happens with all prime powers up to 1024. It is the opposite behaviour to the dimension-twelve vector of POWER_ARITHMETIC_WITNESS_006, where all help. The pattern depends on the autocorrelation of the vector, not on a universal sequence of repairing primes.
 
-## 6. Desigualdad aritmética concreta que exige este test
+## 6. Concrete arithmetic inequality required by this test
 
-La serie completa del peine converge absolutamente, pues c_f(t) es exponencial e^-ut por un polinomio finito. Si la forma completa es no negativa sobre este test, necesariamente el segmento q>1024 satisface
+The full series of the comb converges absolutely, since c_f(t) is exponential e^-ut times a finite polynomial. If the full form is nonnegative on this test, the segment q>1024 necessarily satisfies
 
     -Σ_{q>1024}2Lambda(q)q^-1/2 c_f(logq)/||f||²
        >383/100 + Σ_{2<=q<=1024}Lambda(q)q^-1/2.           (TAIL)
 
-Esta es una obligación explícita sobre la cola del MISMO vector: el segmento bajo no puede producir su reparación. No se usa (TAIL) como prueba de su propio signo, ni se afirma haberla demostrado aquí. La propiedad aritmética necesaria debe conservar la suma con autocorrelaciones de ambos signos; las contribuciones favorables de un vector concreto no se transfieren a todo el subespacio.
+This is an explicit obligation on the tail of the SAME vector: the low segment cannot produce its repair. (TAIL) is not used as proof of its own sign, nor is it claimed to be proved here. The necessary arithmetic property must keep the sum with autocorrelations of both signs; the favourable contributions of a concrete vector do not transfer to the whole subspace.
 
-No se afirma W[f]<0: precisamente la cola q>1024 permanece sin evaluar. El resultado no refuta ningún certificado completo del paper ni de esta fase; refuta sólo el patrón universal «los contactos bajos siempre reparan las direcciones arch+polar negativas» dentro de la familia confluente fija.
+W[f]<0 is not claimed: precisely the tail q>1024 remains unevaluated. The result refutes no full certificate of the paper or of this phase; it only refutes the universal pattern «low contacts always repair the negative arch+polar directions» within the fixed confluent family.

@@ -1,36 +1,36 @@
-# Auditoría110 — cociente theta factorizado
+# Audit110 — factored theta quotient
 
-## Actualización verificada: reproducción terminada y WM activada
+## Verified update: reproduction finished and WM activated
 
-Los logs constructor y reproducción independiente de110 son idénticos byte por byte, SHA256 `90a2ec137e806c8a7f8cce975f7af1cee375d9e48bdaf1c5bc302f7c06428539`. Driver: `c629d4ed4b5eeb625a69ee92f6000892b9493c50e825e9ade73bf3a5a9362108`; los cuatro módulos importados conservan los hashes auditados. Root comprobó por fracciones exactas el origen completo (16 hojas en lambda[0,1/4]) y 4198 hojas REST contiguas desde1/2 hasta845/32 en AMBOS logs. Ambos programas terminaron INCONCLUSIVE por8192 evaluaciones; no se cambia esa etiqueta ni se afirma FULLPASS hasta64.
+The run log and the independent reproduction log of110 are byte-for-byte identical, SHA256 `90a2ec137e806c8a7f8cce975f7af1cee375d9e48bdaf1c5bc302f7c06428539`. Driver: `c629d4ed4b5eeb625a69ee92f6000892b9493c50e825e9ade73bf3a5a9362108`; the four imported modules keep the audited hashes. Exact fractions confirmed the complete origin (16 leaves in lambda[0,1/4]) and 4198 contiguous REST leaves from1/2 to845/32 in BOTH logs. Both programs ended INCONCLUSIVE after8192 evaluations; that label is not changed and no FULLPASS up to64 is claimed.
 
-La cola analítica104, auditada por root/casos/mapa, prueba Wmixed/Phi^4>6t^2/y^2 para todo t>=16. Por tanto la cobertura reproducida y esa cola se solapan y prueban WM para TODO t>0. Los tres prefijos103 completan MIXED4. Queda activada la aplicación real de las implicaciones auditadas112: segunda densidad Xi positiva para todos p,q>0, E/Psi decreciente, TP2 y confluencia estrictas. Root revisó también el literal§8 y las dos fuerzas verificadas independientemente por casos: se activan las comparaciones de la pareja límite estrella. No se afirma Xi_(p,q)/E_(p,q) decreciente para parámetros finitos, cinco potencias arbitrarias, todos los órdenes ni una ventana nueva.
+The analytic tail104, audited independently, proves Wmixed/Phi^4>6t^2/y^2 for all t>=16. Hence the reproduced coverage and that tail overlap and prove WM for ALL t>0. The three prefixes103 complete MIXED4. The real application of the audited implications112 is activated: second density Xi positive for all p,q>0, E/Psi decreasing, strict TP2 and confluence. The literal§8 and the two strengths verified independently by cases were also reviewed: the comparisons of the limiting star pair are activated. It is not claimed that Xi_(p,q)/E_(p,q) is decreasing for finite parameters, five arbitrary powers, all orders, nor a new window.
 
-Las menciones posteriores a réplica pendiente o aplicación condicional describen el estado anterior a esta actualización y quedan superadas exclusivamente por esta evidencia. El signo global permanece OPEN. Véase `POWER_REASSESSMENT.md` para el cambio de estrategia.
+Later mentions of a pending replica or conditional application describe the status before this update and are superseded exclusively by this evidence. The global sign remains OPEN. See `POWER_REASSESSMENT.md` for the change of strategy.
 
 
-Estado: **DISEÑO Y LITERAL APROBADOS. Constructor110 exit2/INCONCLUSO; reproducción independiente12244 en curso. WM todavía no activada.** Fuente:`POWER_MIXED_FOUR_FACTORED_RATIO_DESIGN_110.md`.109 terminó sinFULLPASS; sus códigos siguen intactos.
+Status: **DESIGN AND LITERAL APPROVED. Run110 exit2/INCONCLUSIVE; independent reproduction12244 in progress. WM not yet activated.** Source:`POWER_MIXED_FOUR_FACTORED_RATIO_DESIGN_110.md`.109 ended without FULLPASS; its codes remain intact.
 
-Comprobadas algebraicamenteTheta16=d(1+R16),d=2y−3 y B_m=m4+3m²(m²−1)/d. El coeficiente m4 conserva el prefactor exterior m². Con y'=2y, B_m' temporal=−12ym²(m²−1)/d²; por tanto Rt y p16=2y−9/2−6/d−Rt/(1+R16) coinciden exactamente con la fórmula107. El cociente desplazado conserva el factorcomún1+2v/d sin suponer correlación favorable entreerroresdecorrecciones.
+Checked algebraically Theta16=d(1+R16),d=2y−3 and B_m=m4+3m²(m²−1)/d. The coefficient m4 keeps the outer prefactor m². With y'=2y, temporal B_m'=−12ym²(m²−1)/d²; hence Rt and p16=2y−9/2−6/d−Rt/(1+R16) coincide exactly with the formula of107. The shifted quotient keeps the common factor1+2v/d without assuming favourable correlation between the errors of corrections.
 
-Para y en el dominio106,d≠0 y1+R16(y)≠0. EnlosdiscoscomplejosV deGaussRe(y+v)>2, porloquedshift≠0; no se requiere que laTheta delnumerador sea no nula paraholomorfía. La factorización representa las MISMAS funciones enel MISMOdominio, por tanto loserroresanalíticos106siguenpagados, ademásdelredondeointervalar. No reduceporhipótesisanchosnicostes.
+For y in the domain of106,d≠0 and1+R16(y)≠0. On the complex Gauss discs V, Re(y+v)>2, so dshift≠0; the numerator Theta need not be nonzero for holomorphy. The factorization represents the SAME functions on the SAME domain, hence the analytic errors of106 remain paid, besides interval rounding. It does not reduce widths or costs by hypothesis.
 
-Todoslosparámetros/origen109/REST107/budgets permanecenfijos.109debeterminarsinserparadoomodificado. Si109FULLPASS,110NOseejecuta; deotromodo aúnfaltalecturaliteralindependiente antescorrida. No seafirmaqueelcambioalgebraicologrePASS, signo W o cobertura adicional.
+All parameters/origin109/REST107/budgets remain fixed.109 must finish without being stopped or modified. If109 gives FULLPASS,110 is NOT executed; otherwise an independent literal reading is still required before the run. It is not claimed that the algebraic change achieves PASS, a W sign or additional coverage.
 
-## Lectura literal final110
+## Final literal reading110
 
-Leído completo`tools/power_mixed_four_factored_110_verify.py`,sinimportarlo ni ejecutar theta. Cuatrohashesguardadosantesimports; origenproxy109intacto,módulosnopatcheados. CorrecciónBm/Rt yprimerfactor1+2v/d coincidenexactamenteconeldiseño. Cache desplazado usa node.mode_exponentials[m−1] para m2..16, índice correcto delarray107queempiezaenm1. Cap5local/cap4integrales,errorescoefantesfactoriales/menor3x3con signo+ ymismosDFS/presupuestos.
+Read in full`tools/power_mixed_four_factored_110_verify.py`, without importing it or executing theta. Four hashes stored before imports; origin proxy109 intact, modules not patched. Correction Bm/Rt and first factor1+2v/d coincide exactly with the design. The shifted cache uses node.mode_exponentials[m−1] for m2..16, the correct index of the107 array starting at m1. Local cap5/integrals cap4, coefficient errors before factorials/3x3 minor with sign+ and same DFS/budgets.
 
-109ya terminósinFULLPASS, porloquesecumple lacondiciónprevia. Literal aprobado paraunaeventualcorridacoordinadaporroot; el auditorNOlaejecutó. No se promete reducircosteniPASS.
+109 already ended without FULLPASS, so the precondition is met. Literal approved for an eventual coordinated run; the audit did NOT execute it. No reduction of cost nor PASS is promised.
 
-Root confirmó lectura literal independiente yautorizó primera corrida110. Auditor no inicia réplica; no se afirmaPASS ni se modifica código.
+Independent literal reading confirmed and first run of110 authorized. No replica started at this point; no PASS is claimed and the code is not modified.
 
-## Reproducción independiente autorizada en curso
+## Authorized independent reproduction in progress
 
-Root autorizó reproducción110 INTACTA mientras su constructor continúa, para contrastar la cobertura parcial con la cola analítica104 desde16. Auditor inició sesión12244; logseparado`tools/power_mixed_four_factored_110_audit.log`. Driverhashc629d4ed4b5eeb625a69ee92f6000892b9493c50e825e9ade73bf3a5a9362108 coincide conlogconstructor. Los cuatrohashes107/108/109 coinciden.
+An INTACT reproduction of110 was authorized while the run continues, to compare partial coverage with the analytic tail104 from16. Session12244 started; separate log`tools/power_mixed_four_factored_110_audit.log`. Driver hash c629d4ed4b5eeb625a69ee92f6000892b9493c50e825e9ade73bf3a5a9362108 coincides with the run log. The four hashes107/108/109 coincide.
 
-Se conserva objetivo hasta64,presupuesto8192 yalgoritmo completo; no se detendrá al16. Estado en curso, sinpromoverPASSnireproducción completa. Tras salida se auditará la contigüidad exacta de hojas conFraction y se distinguirá cobertura parcial de estado terminal.
+The target up to64, budget8192 and complete algorithm are kept; it will not be stopped at16. Status in progress, without promoting PASS nor complete reproduction. After exit, exact contiguity of leaves will be audited with Fraction and partial coverage distinguished from terminal status.
 
-## Constructor terminal, réplica todavía activa
+## Run terminal, replica still active
 
-Root52878exit2/INCONCLUSIVEpor8192eval,4198hojasaceptadas,origen16/16PASS. ParseoindependientedellogconFractionconfirmahojasRESTcontiguas[1/2,845/32],longitud829/32. Siguienteintervalopendiente[845/32,3381/128],depth4; cap,no signonegativo. NoFULLPASSdelobjetivohasta64. Réplica12244sigueintacta; aúnno seactivalaaplicaciónWM/112hasta confirmar coberturaindependiente16. Hashdrivercoincidente,ycódigossinmodificar.
+Run52878 exit2/INCONCLUSIVE after8192 evaluations,4198 accepted leaves, origin16/16 PASS. Independent Fraction parsing of the log confirms contiguous REST leaves[1/2,845/32], length829/32. Next pending interval[845/32,3381/128],depth4; cap, not a negative sign. No FULLPASS of the target up to64. Replica12244 continues intact; the WM/112 application is not activated until independent coverage to16 is confirmed. Driver hash coincides, and codes unmodified.

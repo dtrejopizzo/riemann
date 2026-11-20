@@ -1,112 +1,112 @@
-# Ronda 8, encargo A — el concomitante de borde que convertiría el canal de producto en el de cocientes
+# Round 8, item A — the boundary concomitant that would convert the product channel into the ratio channel
 
-Notación de la fase: a_T(F) = Arch(F) − Σ_n v_n c_F(log n), F real, sop F ⊂ [−T,T], F ∈ P_T.
+Phase notation: a_T(F) = Arch(F) − Σ_n v_n c_F(log n), F real, supp F ⊂ [−T,T], F ∈ P_T.
 
-## 0. Paso previo: ¿se intentó la exigencia de R161_034 §0 después de escrita?
+## 0. Preliminary step: was the requirement of R161_034 §0 attempted after it was written?
 
-Sí. Se llevó a cabo y se cerró dentro de la propia fase 161. Lectura en primaria:
+Yes. It was carried out and closed within phase 161 itself. Primary-source reading:
 
-- `phase-161-row-d-sum-product-square/R161_034_MELLIN_GRAM_AND_PRODUCT_RATIO_COLLISION.md` §§0–7. El símbolo de
-  cada átomo es q_k(τ) = k^{−s}u_∞(τ) − k^{−(1−s)} (1.3). El Gram cruzado se parte en un canal de cocientes
-  cos(τ log(k/l)) y un canal de productos Re{u_∞(τ)e^{−iτ log kl}} (3.2). En recta completa no hay cancelación
-  (§4, ARGUED). El candidato que deja es la fuga coherente comprimida L_{N,T} = ‖(I−P)Σ(log k)d_kPF‖² (5.2), que
-  envuelve el conmutador [P,d_k] (5.1). u_∞ es exactamente el intercambio de orientaciones ξ ↔ −ξ.
-- `R161_035` construye el objeto pedido en su forma más fuerte. Con U_N = K_N𝓕 y V_N = JK_N (las dos
-  orientaciones, sintetizadas previamente por Λ∗1 = log, (4.1)), la identidad del paralelogramo da
-  D_N^coh = ¼‖(U_N − V_N)f‖² ≥ 0 (3.2), conservando todo el Gram k/l y kl. La componente de borde es
-  ¼‖(I−P)(U_N−V_N)f‖² (5.1). Lo que falta es la saturación (5.2)–(5.3).
-- `R161_037`: si hay saturación, entonces F = 0. `R161_038`: un contramodelo 2×2 exacto satisface (PC), la
-  radicalidad y la paridad sin saturar. `R161_039`: equivalencia terminal; falta una identidad de Green física
+- `phase-161-row-d-sum-product-square/R161_034_MELLIN_GRAM_AND_PRODUCT_RATIO_COLLISION.md` §§0–7. The symbol of
+  each atom is q_k(τ) = k^{−s}u_∞(τ) − k^{−(1−s)} (1.3). The cross Gram splits into a ratio channel
+  cos(τ log(k/l)) and a product channel Re{u_∞(τ)e^{−iτ log kl}} (3.2). On the full line there is no cancellation
+  (§4, ARGUED). The candidate it leaves is the compressed coherent leakage L_{N,T} = ‖(I−P)Σ(log k)d_kPF‖² (5.2), which
+  involves the commutator [P,d_k] (5.1). u_∞ is exactly the interchange of orientations ξ ↔ −ξ.
+- `R161_035` builds the requested object in its strongest form. With U_N = K_N𝓕 and V_N = JK_N (the two
+  orientations, previously synthesized via Λ∗1 = log, (4.1)), the parallelogram identity gives
+  D_N^coh = ¼‖(U_N − V_N)f‖² ≥ 0 (3.2), keeping all of the Gram k/l and kl. The boundary component is
+  ¼‖(I−P)(U_N−V_N)f‖² (5.1). What is missing is saturation (5.2)–(5.3).
+- `R161_037`: if there is saturation, then F = 0. `R161_038`: an exact 2×2 countermodel satisfies (PC),
+  radicality and parity without saturating. `R161_039`: terminal equivalence; a physical Green identity is missing
   (3.1).
-- `R161_057`–`R161_065`: la familia «concomitante de soporte / potencia hermítica / lagrangiana». R161_065 (1.2)
-  prueba que el concomitante candidato es K_P(S;g,w) = ⟨g,[P,S]w⟩, es decir el conmutador de soporte ya
-  auditado, que es indefinido. R161_064 (4.2), que lo expandía como suma de energías no negativas, queda retirada.
-  Según R161_065 §4, lo que falta es un teorema aritmético exterior, por ejemplo Re⟨g, P_R C_log g + εg⟩ = 0.
-- `R161_050`: un contramodelo de tres bloques muestra que la cancelación central, la unitariedad autoadjunta y la
-  paridad de dispersión no transfieren el signo al exterior.
-- `R161_075` y `R161_081` tratan el dominio del multiplicador y el test Q ≥ 0, que queda excluido en el espacio
-  primitivo. Ninguno de los dos reabre lo anterior.
-- Índice de rutas (`04_PHASES_100-189.md`, líneas 746, 763, 769): G1C-R161_061-065 DEAD (concomitante = conmutador
-  de soporte); G4C-R161_035-038 PARTIAL; G8B-161 R161_037-039 DEAD (contramodelo 2×2). README l. 2457 registra los
-  contramodelos 038/050. RULES_AVOID §Q3 y REVIEW_007 R7-c recogen la repetición de la ronda 7.
-- 211 «Extensión factorial» y 106_109 (§2, (9)–(10)) ya figuran en la memoria de selecciones rechazadas. No
-  contienen una versión comprimida del concomitante distinta de la anterior.
+- `R161_057`–`R161_065`: the «support concomitant / Hermitian power / Lagrangian» family. R161_065 (1.2)
+  proves that the candidate concomitant is K_P(S;g,w) = ⟨g,[P,S]w⟩, i.e. the already audited support
+  commutator, which is indefinite. R161_064 (4.2), which expanded it as a sum of nonnegative energies, is withdrawn.
+  According to R161_065 §4, what is missing is an exterior arithmetic theorem, e.g. Re⟨g, P_R C_log g + εg⟩ = 0.
+- `R161_050`: a three-block countermodel shows that central cancellation, self-adjoint unitarity and
+  scattering parity do not transfer the sign to the exterior.
+- `R161_075` and `R161_081` treat the domain of the multiplier and the test Q ≥ 0, which is excluded in the primitive
+  space. Neither reopens the above.
+- Routes index (`04_PHASES_100-189.md`, lines 746, 763, 769): G1C-R161_061-065 DEAD (concomitant = support
+  commutator); G4C-R161_035-038 PARTIAL; G8B-161 R161_037-039 DEAD (2×2 countermodel). README l. 2457 records the
+  countermodels 038/050. RULES_AVOID §Q3 and REVIEW_007 R7-c record the repetition of round 7.
+- 211 «Extensión factorial» and 106_109 (§2, (9)–(10)) already appear in the memory of rejected selections. They
+  contain no compressed version of the concomitant different from the above.
 
-**Dictamen del paso 0: repetición.** La operación «canal de producto comprimido = canal de cocientes
-comprimido + concomitante de borde con signo» se ejecutó en R161_035 (con signo, gracias al paralelogramo) y en
-R161_057–065 (el concomitante se calcula y resulta ser [P,S], sin signo). Se cerró por dos vías: el contramodelo
-R161_038/050 y la reducción R161_065 (1.2). Conforme a la regla, **la construcción se detiene aquí**. Las
-secciones siguientes no derivan nada nuevo. Sólo fijan, con las fórmulas del encargo, dónde queda el signo y qué
-hipótesis del cierre no está forzada.
+**Verdict of step 0: repetition.** The operation «compressed product channel = compressed ratio
+channel + boundary concomitant with a sign» was executed in R161_035 (with a sign, thanks to the parallelogram) and in
+R161_057–065 (the concomitant is computed and turns out to be [P,S], without sign). It was closed in two ways: the countermodel
+R161_038/050 and the reduction R161_065 (1.2). In accordance with the rule, **the construction stops here**. The
+following sections derive nothing new. They only fix, with the formulas of the brief, where the sign remains and which
+hypothesis of the closure is not forced.
 
-## 1. Filtro de cuatro puntos (escrito después del paso 0)
+## 1. Four-point filter (written after step 0)
 
-1. **Antecedente:** R161_035 §§3–5 y R161_065 §§1–4, con los contramodelos R161_038 y R161_050.
-2. **Objeto nuevo:** ninguno. El «canal de cocientes comprimido + concomitante» es D_N^coh de R161_035, y el
-   concomitante es ⟨g,[P,S]w⟩ de R161_065.
-3. **Esquiva de la dificultad:** no la esquiva. El signo queda en la saturación (R161_039 (2.1)), o bien en el
-   conmutador indefinido.
-4. **Conexión global:** la única existente es la de R161_037–039: saturación ⇒ ausencia de estado de primer
-   contacto ⇒ a_T ≥ 0 en P_T para todo T, vía los teoremas de anidamiento. Esa implicación es CITED; la
-   saturación sigue OPEN.
+1. **Antecedent:** R161_035 §§3–5 and R161_065 §§1–4, with the countermodels R161_038 and R161_050.
+2. **New object:** none. The «compressed ratio channel + concomitant» is D_N^coh of R161_035, and the
+   concomitant is ⟨g,[P,S]w⟩ of R161_065.
+3. **Avoidance of the difficulty:** it does not avoid it. The sign remains in saturation (R161_039 (2.1)), or else in the
+   indefinite commutator.
+4. **Global connection:** the only existing one is that of R161_037–039: saturation ⇒ absence of a first-contact
+   state ⇒ a_T ≥ 0 on P_T for all T, via the nesting theorems. That implication is CITED;
+   saturation remains OPEN.
 
-No pasa la puerta.
+It does not pass the gate.
 
-## 2. Precisión de (a)–(d) sin derivación nueva
+## 2. Precision on (a)–(d) without new derivation
 
-**(a) Enunciado.** Con u_∞ como en R161_034 (1.1), el operador completo de una orientación es τ_{log k}𝓕 y el de
-la otra es Jτ_{log k}. La reflexión entra por J: para F real, F̂(−ξ) = conj F̂(ξ). En Mellin, A(ξ)A(ξ) frente a
-A(ξ)A(−ξ) es exactamente «orientaciones opuestas» frente a «iguales» ((3.1) de 034). u_∞ es el único factor que
-liga ξ con −ξ en el peso completo. Comprimido a la ventana:
+**(a) Statement.** With u_∞ as in R161_034 (1.1), the full operator of one orientation is τ_{log k}𝓕 and that of
+the other is Jτ_{log k}. Reflection enters through J: for F real, F̂(−ξ) = conj F̂(ξ). In Mellin, A(ξ)A(ξ) versus
+A(ξ)A(−ξ) is exactly «opposite orientations» versus «same» ((3.1) of 034). u_∞ is the only factor that
+links ξ with −ξ in the full weight. Compressed to the window:
 
-- canal de cocientes comprimido = ‖P(U_N+V_N)Pf‖² y ‖P U_N P f‖² + ‖P V_N P f‖²;
-- canal de productos comprimido = Re⟨PU_NPf, PV_NPf⟩.
+- compressed ratio channel = ‖P(U_N+V_N)Pf‖² and ‖P U_N P f‖² + ‖P V_N P f‖²;
+- compressed product channel = Re⟨PU_NPf, PV_NPf⟩.
 
-(PROVED como reescritura de R161_035 (3.1)–(3.2).)
+(PROVED as a rewriting of R161_035 (3.1)–(3.2).)
 
-**(b) Diferencia.** Producto menos cocientes es −¼‖(U_N−V_N)f‖² más el término de borde que separa la versión
-comprimida de la versión completa. Ese término es exactamente ⟨f,[P,·]f⟩ (R161_065 (1.2)–(1.3)). La parte de bulk
-es el cuadrado del paralelogramo. Ni para T → ∞ ni bajo las dos restricciones de momento (F ∈ P_T) el término de
-borde pasa a tener signo: R161_064 (4.2) se retiró. (CITED.)
+**(b) Difference.** Product minus ratio is −¼‖(U_N−V_N)f‖² plus the boundary term that separates the compressed
+version from the full version. That term is exactly ⟨f,[P,·]f⟩ (R161_065 (1.2)–(1.3)). The bulk part
+is the square of the parallelogram. Neither as T → ∞ nor under the two moment restrictions (F ∈ P_T) does the boundary
+term acquire a sign: R161_064 (4.2) was withdrawn. (CITED.)
 
-**(c) a_T de grado uno.** Los objetos de 035 son cuadráticos en el operador K_N, que es lineal en Λ ∗ 1 = log, y
-por tanto de grado dos en la síntesis. a_T sólo aparece a través de la radicalidad lineal (PC-ren). El paso de la
-afirmación de grado dos (saturación) a a_T ≥ 0 existe, pero es indirecto: por contradicción sobre un estado de
-primer contacto y por R161_037 (CITED). Por R161_038, ningún enunciado que use sólo (PC) + radicalidad + paridad
-fuerza el objeto de grado dos. (PROVED en la clase formal 2×2. Fuera de ella: OPEN.)
+**(c) a_T of degree one.** The objects of 035 are quadratic in the operator K_N, which is linear in Λ ∗ 1 = log, and
+hence of degree two in the synthesis. a_T only appears through linear radicality (PC-ren). The passage from the
+degree-two statement (saturation) to a_T ≥ 0 exists, but it is indirect: by contradiction on a first-contact
+state and by R161_037 (CITED). By R161_038, no statement that uses only (PC) + radicality + parity
+forces the degree-two object. (PROVED in the formal 2×2 class. Outside it: OPEN.)
 
-**(d) Término con signo y controles.** El único término con signo manifiesto es ¼‖(U_N−V_N)f‖². Ese término es
-≥ 0 para todo peso, también con c = 2, con una potencia de primo borrada y con un peso de Beurling. Es ciego, y
-no se rompe: es el patrón J2/L3. El término que debería romperse es la saturación, o el conmutador [P,S]. Ninguno
-de los dos tiene signo en el corpus, de modo que no hay un signo nombrado que se pierda. (ARGUED.)
+**(d) Term with a sign and checks.** The only term with a manifest sign is ¼‖(U_N−V_N)f‖². That term is
+≥ 0 for every weight, also with c = 2, with a deleted prime power and with a Beurling weight. It is blind, and
+does not break: it is pattern J2/L3. The term that should break is saturation, or the commutator [P,S]. Neither
+has a sign in the corpus, so there is no named sign that is lost. (ARGUED.)
 
-## 3. La hipótesis del cierre que no está forzada
+## 3. The hypothesis of the closure that is not forced
 
-Los contramodelos R161_038 (2×2) y R161_050 (3×3) refutan sólo la transferencia **puramente algebraica**. Lo dice
-explícitamente R161_050: «does not reproduce the integer translation semigroup, the explicit zeta product port, or
-the Gamma/Tate collars». La hipótesis no forzada del cierre es, por tanto, esta:
+The countermodels R161_038 (2×2) and R161_050 (3×3) refute only the **purely algebraic** transfer. R161_050 says
+so explicitly: «does not reproduce the integer translation semigroup, the explicit zeta product port, or
+the Gamma/Tate collars». The unforced hypothesis of the closure is, therefore, this:
 
-> que la saturación (o el signo del concomitante [P,S]) deba deducirse sin usar la ley de semigrupo
-> τ_{log k}τ_{log l} = τ_{log kl} sobre ℕ acoplada a la compresión P_T.
+> that saturation (or the sign of the concomitant [P,S]) must be deduced without using the semigroup law
+> τ_{log k}τ_{log l} = τ_{log kl} on ℕ coupled to the compression P_T.
 
-En los modelos finitos S es nilpotente o una permutación, sin estructura multiplicativa de enteros. Para reabrir
-haría falta un enunciado que use esa ley dentro del conmutador, de la forma [P,τ_{log kl}] = [P,τ_{log k}]τ_{log l}
-+ τ_{log k}[P,τ_{log l}] (regla de Leibniz del conmutador, PROVED trivialmente). Además, tendría que sumarse con
-pesos Λ∗Λ, y no sólo con Λ∗1. Ese enunciado tendría que producir un cuadrado y no una forma indefinida. No se
-construye aquí. Antes habría que contrastarlo con R161_045 (Toeplitz–Hankel local) y con la familia de transporte
-de la memoria de selecciones rechazadas.
+In the finite models S is nilpotent or a permutation, without multiplicative integer structure. To reopen
+one would need a statement that uses that law inside the commutator, of the form [P,τ_{log kl}] = [P,τ_{log k}]τ_{log l}
++ τ_{log k}[P,τ_{log l}] (Leibniz rule of the commutator, PROVED trivially). Moreover, it would have to be summed with
+weights Λ∗Λ, and not only with Λ∗1. That statement would have to produce a square and not an indefinite form. It is not
+built here. Beforehand it would have to be cross-checked with R161_045 (local Toeplitz–Hankel) and with the transport family
+of the memory of rejected selections.
 
-## 4. Lista de afirmaciones
+## 4. List of claims
 
-| # | Afirmación | Etiqueta |
+| # | Claim | Label |
 |---|---|---|
-| 1 | La exigencia de R161_034 §0 se ejecutó en R161_035 y R161_057–065 y se cerró | CITED (lectura en primaria) |
-| 2 | Concomitante candidato = ⟨g,[P,S]w⟩, indefinido | CITED (R161_065 (1.2)) |
-| 3 | La saturación no se sigue de (PC) + radicalidad + paridad | CITED (R161_038, R161_050) |
-| 4 | Esta ronda: repetición; la construcción se detiene | NO-GO (repetición) |
-| 5 | (a)–(b) como reescritura del paralelogramo de 035 | PROVED (reescritura) |
-| 6 | El término con signo es ciego al peso (c = 2, borrado, Beurling) | ARGUED |
-| 7 | Hipótesis no forzada: ausencia de la ley de semigrupo de ℕ en los contramodelos | ARGUED |
-| 8 | Regla de Leibniz del conmutador sobre τ_{log kl} | PROVED (trivial) |
-| 9 | Que esa regla dé un cuadrado | OPEN |
-| 10 | Signo global | OPEN |
+| 1 | The requirement of R161_034 §0 was executed in R161_035 and R161_057–065 and closed | CITED (primary-source reading) |
+| 2 | Candidate concomitant = ⟨g,[P,S]w⟩, indefinite | CITED (R161_065 (1.2)) |
+| 3 | Saturation does not follow from (PC) + radicality + parity | CITED (R161_038, R161_050) |
+| 4 | This round: repetition; the construction stops | NO-GO (repetition) |
+| 5 | (a)–(b) as a rewriting of the parallelogram of 035 | PROVED (rewriting) |
+| 6 | The term with a sign is blind to the weight (c = 2, deletion, Beurling) | ARGUED |
+| 7 | Unforced hypothesis: absence of the semigroup law of ℕ in the countermodels | ARGUED |
+| 8 | Leibniz rule of the commutator on τ_{log kl} | PROVED (trivial) |
+| 9 | That this rule gives a square | OPEN |
+| 10 | Global sign | OPEN |

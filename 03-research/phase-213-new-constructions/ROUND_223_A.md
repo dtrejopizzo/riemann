@@ -1,42 +1,42 @@
-# La constante de estabilidad de 222 es exacta para perturbaciones sobre los primos
+# The stability constant of 222 is exact for perturbations on the primes
 
-Para cada A>0 existen pesos relativos positivos λ_p→1, sobre los mismos primos, tales que D(x)=Σ_(p≤x)(λ_p−1)log p satisface la hipótesis de 222 con ese A y
+For each A>0 there exist positive relative weights λ_p→1, on the same primes, such that D(x)=Σ_(p≤x)(λ_p−1)log p satisfies the hypothesis of 222 with that A and
 
     limsup log(1+|C_k(λ)−C_k(1)|)/k = 4A^(3/2)/(9√3).
 
-Puede conservarse exactamente la masa en cada bloque modificado. La conclusión es para la diferencia de las muestras. No afirma un comportamiento extremo de la muestra auténtica C_k(1).
+The mass in each modified block can be preserved exactly. The conclusion is for the difference of the samples. It does not claim an extreme behaviour of the authentic sample C_k(1).
 
-**Escala que faltaba en 221.** Fijar z>0, N=k², L₀=z k^(3/2), X=exp(L₀), m(a)=log M_a(3) y elegir a por Nm'(a)=L₀. Existe para k grande y a=(9/2)z/√k+O(k^(−3/2)) por m(a)=a²/9+O(a⁴). Así
+**The scale that was missing in 221.** Fix z>0, N=k², L₀=z k^(3/2), X=exp(L₀), m(a)=log M_a(3) and choose a by Nm'(a)=L₀. It exists for large k and a=(9/2)z/√k+O(k^(−3/2)) by m(a)=a²/9+O(a⁴). Thus
 
     Nm(a)−aL₀=−9z² k/4+O(1).
 
-El perfil de 221 para a fijo no basta aquí. Para L=L₀+d con d en un compacto, s=−√k+ik e I_k de 218 se obtiene uniformemente
+The profile of 221 for fixed a does not suffice here. For L=L₀+d with d in a compact, s=−√k+ik and I_k from 218 one obtains uniformly
 
     L√N I_k(L)/(3^s exp(Nm(a)−aL))
        = Re[K_a exp(iNθ_a+ix_a d)/(a−ix_a)] + o(1).
 
-Las constantes x_a,K_a,θ_a son las de 212 a tasa 3; x_a→3 y K_a converge a una constante no nula.
+The constants x_a,K_a,θ_a are those of 212 at rate 3; x_a→3 and K_a converges to a nonzero constant.
 
-**Integrar primero en la tasa.** En el contorno a tasa 3 escribir u=3t. La integral de Fourier de I_k es 3^s/(2π) por el integral en τ de H₃(τ+ia)^N multiplicado por
+**Integrate first in the rate.** On the contour at rate 3 write u=3t. The Fourier integral of I_k is 3^s/(2π) times the integral in τ of H₃(τ+ia)^N multiplied by
 
     ∫₁^T t^s exp((iτ−a)Lt)dt.
 
-El extremo T viene del corte original y u≤N. Uniformemente en d compacto, T≥2 eventualmente porque log X_N(6) tiene orden N. Cerca de los dos máximos ±x_a, |a−iτ| está separado de cero. Integrando dos veces por partes se obtiene el término exp((iτ−a)L)/[(a−iτ)L] con error en módulo ≤C exp(−aL)/L por
+The endpoint T comes from the original cut and u≤N. Uniformly in compact d, T≥2 eventually because log X_N(6) has order N. Near the two maxima ±x_a, |a−iτ| is bounded away from zero. Integrating twice by parts one obtains the term exp((iτ−a)L)/[(a−iτ)L] with error in modulus ≤C exp(−aL)/L times
 
     O(k/L + k²/(aL²) + (1+k/L)exp(−aL)) = o(1)
 
-como factor adicional. Para el resto usar |s(s−1)t^(s−2)|≤Ck² y ∫₁^∞ exp(−aLt)dt=exp(−aL)/(aL). La elección de dos integraciones evita una pérdida al acercarse a cero la altura del contorno. Fuera de vecindades fijas de ±3 usar directamente |integral interior|≤exp(−aL)/(aL). La integral allí de |H₃(τ+ia)|^N es exponencialmente menor que exp(Nm(a)) por separación uniforme, incluyendo la cola racional. Los errores integrados en los dos picos usan ∫|H₃|^N≤C exp(Nm(a))/√N.
+as an additional factor. For the remainder use |s(s−1)t^(s−2)|≤Ck² and ∫₁^∞ exp(−aLt)dt=exp(−aL)/(aL). The choice of two integrations avoids a loss as the contour height approaches zero. Outside fixed neighbourhoods of ±3 use directly |inner integral|≤exp(−aL)/(aL). The integral there of |H₃(τ+ia)|^N is exponentially smaller than exp(Nm(a)) by uniform separation, including the rational tail. The integrated errors at the two peaks use ∫|H₃|^N≤C exp(Nm(a))/√N.
 
-**Uniformidad de la aproximación gaussiana.** Para 0≤a≤a₁ pequeño, los máximos siguen en dos vecindades disjuntas, con curvaturas reales negativas separadas de cero, por continuidad desde a=0. El logaritmo local tiene terceras derivadas acotadas en esas vecindades. En τ=x_a+w/√N el término lineal se cancela exactamente con iL₀(τ−x_a) por la elección de a. Tras extraer la fase central el integrando está dominado por C exp(−c w²); en compactos difiere en o(1) del perfil cuadrático con coeficiente h''(x_a+ia) y amplitud 1/(a−ix_a). Esto también vale uniformemente para d compacto. El otro pico es conjugado en el término principal; el prefactor complejo 3^s se extrajo antes. Queda probado el perfil relativo anterior, con control en la escala exponencial apropiada.
+**Uniformity of the Gaussian approximation.** For small 0≤a≤a₁, the maxima remain in two disjoint neighbourhoods, with negative real curvatures bounded away from zero, by continuity from a=0. The local logarithm has bounded third derivatives in those neighbourhoods. At τ=x_a+w/√N the linear term cancels exactly with iL₀(τ−x_a) by the choice of a. After extracting the central phase the integrand is dominated by C exp(−c w²); on compacts it differs by o(1) from the quadratic profile with coefficient h''(x_a+ia) and amplitude 1/(a−ix_a). This also holds uniformly for compact d. The other peak is conjugate in the main term; the complex prefactor 3^s was extracted earlier. The relative profile above is proved, with control at the appropriate exponential scale.
 
-**Pesos sobre los primos.** Sobre un compacto fijo de d que contenga varios períodos, el perfil real principal tiene un intervalo donde supera c y otro donde es menor que −c, ambos de una misma longitud fija, para todo k grande. Esto sigue del módulo no nulo de K_a/(a−ix_a) y x_a→3. Aplicar pesos relativos adicionales +b y −b' en los dos intervalos, con
+**Weights on the primes.** On a fixed compact of d containing several periods, the main real profile has an interval where it exceeds c and another where it is less than −c, both of the same fixed length, for all large k. This follows from the nonzero modulus of K_a/(a−ix_a) and x_a→3. Apply additional relative weights +b and −b' on the two intervals, with
 
     b=X^(−1/2)exp(A L₀^(2/3)).
 
-Escoger b' haciendo cero exactamente el cambio total de masa logarítmica. PNT da b'/b entre dos constantes positivas, uniformemente para estos intervalos móviles dentro del compacto. El cambio acumulado dentro del bloque está acotado por C√X exp(A L₀^(2/3)); se anula al salir. Los nuevos pesos son positivos para k grande. Al proyectar el cambio de C_k sobre la dirección 3^(ik), las dos contribuciones se suman con el mismo signo. La masa logarítmica en cada intervalo es comparable a X y allí p^(−1/2) es comparable a X^(−1/2). Por el perfil demostrado, la magnitud del cambio es al menos
+Choose b' making the total change of logarithmic mass exactly zero. PNT gives b'/b between two positive constants, uniformly for these moving intervals inside the compact. The accumulated change inside the block is bounded by C√X exp(A L₀^(2/3)); it vanishes on leaving. The new weights are positive for large k. On projecting the change of C_k onto the direction 3^(ik), the two contributions add with the same sign. The logarithmic mass on each interval is comparable to X and there p^(−1/2) is comparable to X^(−1/2). By the proved profile, the magnitude of the change is at least
 
     exp([A z^(2/3)−9 z²/4] k − o(k)).
 
-Para construir un único sistema fijo de pesos, elegir los bloques sucesivamente por encima del corte máximo de todos los órdenes anteriores. La perturbación previa es finita en cada paso y su efecto tiende a cero con k por la envolvente de 211 y el peso de 217. Los bloques futuros no afectan a la muestra actual. La cota de D(x) vale globalmente por la masa cero y por log x=L₀+O(1) dentro de cada bloque. Elegir z=(4A/27)^(3/4) maximiza el exponente positivo y alcanza la cota superior de 222. Para A=0 la estabilidad ya se probó allí.
+To build a single fixed system of weights, choose the blocks successively above the maximal cut of all previous orders. The previous perturbation is finite at each step and its effect tends to zero with k by the envelope of 211 and the weight of 217. Future blocks do not affect the current sample. The bound on D(x) holds globally by zero mass and by log x=L₀+O(1) within each block. Choosing z=(4A/27)^(3/4) maximises the positive exponent and attains the upper bound of 222. For A=0 stability was already proved there.
 
-**Decisión.** La barrera de 222 es exacta aun imponiendo positividad, soporte en los primos reales y conservación de masa por bloques. Rebajar la constante o reemplazar el o((log x)^(2/3)) por O((log x)^(2/3)) en un teorema general de transferencia subexponencial requiere hipótesis adicionales.
+**Decision.** The barrier of 222 is exact even imposing positivity, support on the real primes and blockwise mass preservation. Lowering the constant or replacing o((log x)^(2/3)) by O((log x)^(2/3)) in a general subexponential transfer theorem requires additional hypotheses.

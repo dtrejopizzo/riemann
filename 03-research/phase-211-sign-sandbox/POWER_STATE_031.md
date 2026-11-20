@@ -1,39 +1,39 @@
-# Estado031 — Alternancia real de bloques y presupuesto global inicial
+# State031 — Real alternation of blocks and initial global budget
 
-Estado: resultados parciales PROVED y auditados. Sustituye STATE030. Goal activo; signo global OPEN; papers intactos.
+Status: partial results PROVED and audited. Replaces STATE030. Goal active; global sign OPEN; papers untouched.
 
-## Prefijo adverso y recuperación a tasa fija
+## Adverse prefix and recovery at fixed rate
 
-POWER_WEIGHTED_BLOCK_031 conserva la representación W[g_N]/norma²=int G_N H de030. Para u=63/2 fijo demuestra:
+POWER_WEIGHTED_BLOCK_031 keeps the representation W[g_N]/norm²=int G_N H of030. For fixed u=63/2 it proves:
 
-    int_1^(225/64) G_N H <−3/1000, TODOS N>=2^24;
-    int_1^4 G_N H >3/200, TODOS N>=2^22;
-    int_(225/64)^4 G_N H >9/500, TODOS N>=2^24.
+    int_1^(225/64) G_N H <−3/1000, ALL N>=2^24;
+    int_1^4 G_N H >3/200, ALL N>=2^22;
+    int_(225/64)^4 G_N H >9/500, ALL N>=2^24.
 
-Los contactos2 y3 se incluyen exactamente. El contacto4, situado en el extremo, tiene contribución integral nula allí. La primitiva ponderada I_*(X)=int_1^X(3/2)x^-1/2H tiene valor negativo en225/64 y positivo en4. Los certificados racionales de esos extremos, combinados con un error gamma uniforme30u²/(2N−3), prueban los rangos completos en N; no hay campaña por órdenes.
+The contacts2 and3 are included exactly. The contact4, located at the endpoint, has zero integral contribution there. The weighted primitive I_*(X)=int_1^X(3/2)x^-1/2H has a negative value at225/64 and a positive one at4. The rational certificates of those endpoints, combined with a uniform gamma error30u²/(2N−3), prove the full ranges in N; there is no campaign over orders.
 
-Esto refuta el criterio I_*>=0 universal y demuestra una recuperación cuantitativa real. Ninguna integral parcial negativa es un contraejemplo a W total. El complemento desde4 hasta infinito permanece pendiente.
+This refutes the universal criterion I_*>=0 and shows a genuine quantitative recovery. No negative partial integral is a counterexample to total W. The complement from4 to infinity remains pending.
 
-## Factor gamma con variación controlada
+## Gamma factor with controlled variation
 
-POWER_GAMMA_WEIGHT_031 estudia R_N(t)=rho_N(t)−(2/3)rho_N'(t), de modo que G_N(x)=(3/2)x^-1/2R_N(logx). Para TODOS N>=2 a tasa fija, R parte de1, tiene un único máximo T_N<2/3 y tiende a0. Con M2=u²/(2N−3),
+POWER_GAMMA_WEIGHT_031 studies R_N(t)=rho_N(t)−(2/3)rho_N'(t), so that G_N(x)=(3/2)x^-1/2R_N(logx). For ALL N>=2 at fixed rate, R starts at1, has a unique maximum T_N<2/3 and tends to0. With M2=u²/(2N−3),
 
     0<R_N(T_N)−1<=2M2/9,
     TV(R_N)<=1+4M2/9.
 
-La unicidad usa la logconcavidad025; la cota de localización reutiliza Jensen026. Una barrera Riccati demuestra q''<0 para q=−rho'/rho, lo que afina el sobrepaso. Todo se refiere a la función gamma real.
+Uniqueness uses the logconcavity025; the localisation bound reuses Jensen026. A Riccati barrier proves q''<0 for q=−rho'/rho, which sharpens the overshoot. Everything refers to the real gamma function.
 
-Integración por partes preservando TODOS los contactos da
+Integration by parts preserving ALL contacts gives
 
-    W[g_N]/norma²=−int_0^infinito I_*(exp t)R_N'(t)dt
+    W[g_N]/norm²=−int_0^infinito I_*(exp t)R_N'(t)dt
       >=int_(T_N)^infinito I_*(exp t)[−R_N'(t)]dt−M2.
 
-La rama creciente termina antes del primer contacto y su costo adverso TOTAL es<=M2, de orden1/N. En el complemento el peso−R_N' es positivo, pero I_* tiene valores negativos reales: el signo de su promedio ponderado sigue abierto. Esta desigualdad cuantifica una parte del balance global; no declara resuelto el resto por cambiar de representación.
+The increasing branch ends before the first contact and its TOTAL adverse cost is<=M2, of order1/N. On the complement the weight−R_N' is positive, but I_* has real negative values: the sign of its weighted average remains open. This inequality quantifies one part of the global balance; it does not declare the rest resolved by changing representation.
 
-## Evidencia, cobertura y continuación
+## Evidence, coverage and continuation
 
-POWER_WEIGHTED_AUDIT_031 aprueba ambas pruebas. Root leyó los textos, revisó la identidad y las desigualdades de variación, y reprodujo el verificador exacto de bloques: PASS. El argumento de variación es analítico y no necesita recorrer parámetros.
+POWER_WEIGHTED_AUDIT_031 approves both proofs. The texts were read, the identity and the variation inequalities reviewed, and the exact block verifier reproduced: PASS. The variation argument is analytic and needs no sweep over parameters.
 
-No se amplía la cobertura de W total ni las ventanas T. A u31.5 siguen filas1..5 para todo k y cono k>=10000N²; resta N>=6 debajo del cono. Las regiones029 con u creciente mantienen su alcance separado y su obstrucción específica de puente.
+The coverage of total W and the windows T are not extended. At u31.5 rows1..5 for all k and cone k>=10000N² remain; N>=6 below the cone remains. The regions029 with increasing u keep their separate scope and their specific bridge obstruction.
 
-La próxima obligación es una desigualdad aritmética firmada para el promedio de I_* contra la medida gamma real de la rama descendente, o un mecanismo diferente que controle todos los contactos. Enumerar otros bloques positivos y negativos no sustituiría esa obligación.
+The next obligation is a signed arithmetic inequality for the average of I_* against the real gamma measure of the descending branch, or a different mechanism controlling all contacts. Enumerating other positive and negative blocks would not replace that obligation.

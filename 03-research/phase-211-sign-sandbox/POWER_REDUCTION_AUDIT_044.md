@@ -1,24 +1,24 @@
 # POWER REDUCTION AUDIT 044
 
-Estado: REFLECTION_TEST044 APROBADO; evaluación L55-B concluida sin nuevo lower construido. Papers intactos.
+Status: REFLECTION_TEST044 APPROVED; evaluation of L55-B concluded with no new lower bound constructed. Papers untouched.
 
-## 1. Corpus y restricciones
+## 1. Corpus and restrictions
 
-Consultados ROUTES-TRIED-INDEX/README yAUDIT_B, grid y crucigrama. L55-B sigue como candidato de par primal positivo en dato arquimediano desplazado, sujeto a W4; el gap-slice pequeño y la dualidad son antecedentes. La reducción de subfamilias debe preservar densidades y polar, sin invertir positivamente REC ni confundir una unión de conjuntos positivos con su suma.016/018/029/036 delimitan esas inferencias.
+Consulted ROUTES-TRIED-INDEX/README andAUDIT_B, grid and crossword. L55-B remains a candidate positive primal pair in a shifted archimedean datum, subject to W4; the small gap-slice and duality are antecedents. The reduction to subfamilies must preserve densities and polar, without positively inverting REC nor confusing a union of positive sets with their sum.016/018/029/036 delimit those inferences.
 
-## 2. Reflexión del puente017 — APROBADA
+## 2. Reflection of the bridge017 — APPROVED
 
-Revisados `POWER_REFLECTION_TEST_044.md` y `tools/power_reflection_test_044_verify.py`; ejecución independiente PASS. La descomposición única R(q)=A(q(1−q))+(2q−1)B(q(1−q)) es correcta por simetría y divisibilidad. Sólo da una representación firmada; no elimina un sector del funcional.
+Reviewed `POWER_REFLECTION_TEST_044.md` and `tools/power_reflection_test_044_verify.py`; independent run PASS. The unique decomposition R(q)=A(q(1−q))+(2q−1)B(q(1−q)) is correct by symmetry and divisibility. It only gives a signed representation; it does not eliminate a sector of the functional.
 
-Las funciones g_Q y g_L tienen norma uno y transformadas√(4u)s/(s+u)² y√(4u)u/(s+u)². Sus factores espectrales q y1−q se intercambian respecto a la medida común. Las combinaciones Laguerre dan gapARCH2b; el lower racional de trigamma prueba b>1. El polar evaluado en±1/2 da exactamente−2u(1+4u²)/(u²−1/4)²>−.5. Las autocorrelaciones e^−ua(1∓ua) son correctas y todo el peine diferencial es estrictamente positivo. Así W[g_Q]−W[g_L]>1.5 conserva TODAS las contribuciones reales.
+The functions g_Q and g_L have norm one and transforms√(4u)s/(s+u)² and√(4u)u/(s+u)². Their spectral factors q and1−q are interchanged relative to the common measure. The Laguerre combinations give gapARCH2b; the rational lower bound of trigamma proves b>1. The polar evaluated at±1/2 gives exactly−2u(1+4u²)/(u²−1/4)²>−.5. The autocorrelations e^−ua(1∓ua) are correct and the whole differential comb is strictly positive. Thus W[g_Q]−W[g_L]>1.5 keeps ALL the real contributions.
 
-El resultado refuta la simetría concreta que haría invisible el sector antisimétrico, no la positividad de W ni toda posible relación entre franjas. Ambos valores pertenecen a regiones ya positivas. No se ha probado una nueva subfamilia suficiente, nueva cobertura ni ventanaT; una reducción válida requiere un control desigual del sector restante.
+The result refutes the concrete symmetry that would make the antisymmetric sector invisible, not the positivity of W nor every possible relation between strips. Both values belong to regions already positive. No new sufficient subfamily, new coverage or windowT has been proved; a valid reduction requires an unequal control of the remaining sector.
 
 
-## 3. L55-B: orientación revisada, sin resultado nuevo
+## 3. L55-B: orientation reviewed, no new result
 
-La evaluación paralela no encontró un cierre posterior del candidato ni una construcción explícita de par primal. La transferencia condicional tiene orientación correcta: una representación positiva de TODAS las formas primitivas en un dato arquimediano desplazado, con slack r≤epsilon y mismatch primal de variación total≤eta en el intervalo relevante, daría lambda_A≥−epsilon−eta usando|c_F|≤norma². Con match exacto del peine, el piso sería−epsilon.
+The parallel evaluation found no later closure of the candidate nor an explicit construction of a primal pair. The conditional transfer has the correct orientation: a positive representation of ALL primitive forms in a shifted archimedean datum, with slack r≤epsilon and primal mismatch of total variation≤eta on the relevant interval, would give lambda_A≥−epsilon−eta using|c_F|≤norm². With exact match of the comb, the floor would be−epsilon.
 
-Esa medida representante no es el vector finito factible de la LP dual: los vectores de prueba y sus valores dan cotas superiores, no este lower. Tampoco basta que el mismatch sea una medida positiva, porque c_F puede tener signos. La representación positiva exacta del dato desplazado sería ya una extensión positiva de la forma; sigue faltando una construcción independiente que la demuestre.
+That representing measure is not the feasible finite vector of the dual LP: the test vectors and their values give upper bounds, not this lower one. Nor is it enough for the mismatch to be a positive measure, because c_F can have signs. The exact positive representation of the shifted datum would already be a positive extension of the form; an independent construction proving it is still missing.
 
-No se registra la fórmula de transferencia como avance aritmético ni como W4 renombrado. El candidato L55-B permanece abierto, sin piso nuevo probado y sin artefacto ficticio de construcción. Esto no es un no-go global. La ronda sólo añade el chequeo real de reflexión del§2 y conserva sin cambios la coberturaW/T.
+The transfer formula is not recorded as arithmetic progress nor as a renamed W4. The candidate L55-B remains open, with no new floor proved and no fictitious construction artifact. This is not a global no-go. The round only adds the real reflection check of§2 and keeps the coverageW/T unchanged.

@@ -1,97 +1,97 @@
-# POWER_POLE_MOVEMENT_004 — Movimiento individual de polos por covarianza
+# POWER_POLE_MOVEMENT_004 — Individual pole movement by covariance
 
-Estado: PROVED (movimiento de polos de la parte arquimediana y control uniforme prime/polar); CITED el certificado racional confluente de POWER_CONFLUENT_004. No modifica papers.
+Status: PROVED (pole movement of the archimedean part and uniform prime/polar control); CITED the confluent rational certificate of POWER_CONFLUENT_004. Does not modify papers.
 
-Revisión independiente: se aprobó la covarianza, la identificación común de numeradores y min–max para todas las eigenenergías; aprobó también WT=1302 y reejecutó el certificado confluente (margen 79/700>1/10). Las cotas de esta nota son deliberadamente algo más débiles que las obtenidas en dicha revisión.
+Independent review: the covariance, the common identification of numerators and min–max for all eigenenergies were approved; WT=1302 was also approved and the confluent certificate was rerun (margin 79/700>1/10). The bounds of this note are deliberately somewhat weaker than those obtained in that review.
 
-## 1. Corpus y diferencia concreta
+## 1. Corpus and concrete difference
 
-Búsquedas dirigidas: índice ROUTES-TRIED-INDEX (Takenaka, model space, confluent, pole movement, Müntz), grid maestro/partes, crucigrama, phase211. Antecedentes generales de bases racionales y funciones completamente monótonas no prueban el movimiento. POWER_ARCH_TRIPLE_004 registra explícitamente la conjetura local y un diagnóstico sin prueba. La razón nueva es una comparación EXACTA de cocientes Rayleigh conservando el numerador racional al mover un solo polo; no es dilatación global ni diferenciación de coeficientes fijos en una base móvil.
+Targeted searches: ROUTES-TRIED-INDEX index (Takenaka, model space, confluent, pole movement, Müntz), master grid/parts, crossword, phase211. General antecedents on rational bases and completely monotone functions do not prove the movement. POWER_ARCH_TRIPLE_004 explicitly records the local conjecture and a diagnostic without proof. The new reason is an EXACT comparison of Rayleigh quotients keeping the rational numerator when a single pole is moved; it is neither a global dilation nor differentiation of fixed coefficients in a moving basis.
 
-## 2. Teorema: todas las eigenenergías arquimedianas crecen al aumentar polos
+## 2. Theorem: all archimedean eigenenergies grow when poles increase
 
-Sean u_1,...,u_n>0, permitiendo multiplicidades; el espacio correspondiente es el span de y^k exp(-u_j y)1_{y>0}, con k menor que cada multiplicidad. Su transformada de Fourier es exactamente
+Let u_1,...,u_n>0, allowing multiplicities; the corresponding space is the span of y^k exp(-u_j y)1_{y>0}, with k less than each multiplicity. Its Fourier transform is exactly
 
     fhat(tau)=P(i tau)/Π_j(u_j+i tau), deg P<n.
 
-Los coeficientes de P son reales para f real; el mismo argumento admite complejos. Es un espacio de numeradores FIJO, independiente de los polos.
+The coefficients of P are real for real f; the same argument admits complex ones. It is a FIXED space of numerators, independent of the poles.
 
-Si v_j>=u_j para cada j, para un mismo numerador P el peso espectral nuevo es el antiguo multiplicado por
+If v_j>=u_j for each j, for the same numerator P the new spectral weight is the old one multiplied by
 
     R(tau)=Π_j (u_j²+tau²)/(v_j²+tau²).
 
-R es positiva, acotada y creciente como función de |tau|. El multiplicador m(tau)=Re psi(1/4+i tau/2)-log pi es también creciente en |tau|: cada sumando de su serie
+R is positive, bounded and increasing as a function of |tau|. The multiplier m(tau)=Re psi(1/4+i tau/2)-log pi is also increasing in |tau|: each summand of its series
 
     m(tau)=m(0)+Σ_{k>=0} [(tau/2)²/((k+1/4)((k+1/4)²+(tau/2)²))]
 
-lo es estrictamente. Normalice el peso antiguo a una probabilidad dμ. Entonces
+is strictly so. Normalise the old weight to a probability dμ. Then
 
     Rayleigh_v(P)-Rayleigh_u(P)
       =Cov_μ(m,R)/E_μ R >=0.
 
-La desigualdad no requiere ninguna propiedad de P: la covarianza es la mitad de la integral doble de
+The inequality requires no property of P: the covariance is half the double integral of
 
     [m(tau)-m(sigma)][R(tau)-R(sigma)],
 
-no negativa porque ambos factores tienen el mismo signo al comparar |tau| y |sigma|. La integrabilidad viene de deg P<n y m=O(log(2+|tau|)). Por min–max sobre el mismo espacio de polinomios, TODAS las eigenenergías comprimidas ordenadas son no decrecientes al aumentar individualmente los polos. En particular
+nonnegative because both factors have the same sign when comparing |tau| and |sigma|. Integrability comes from deg P<n and m=O(log(2+|tau|)). By min–max over the same polynomial space, ALL ordered compressed eigenenergies are nondecreasing when the poles are individually increased. In particular
 
     lambda_min_arch(u_1,...,u_n)
         >=lambda_min_arch(u,...,u),  u=min_j u_j.             (PM)
 
-Se permiten polos repetidos desde el principio, sin argumento de estabilidad numérica. La comparación entre espacios usa la correspondencia racional P/D_u -> P/D_v; no sostiene que una función temporal fija conserve sus coeficientes al mover polos.
+Repeated poles are allowed from the outset, without a numerical stability argument. The comparison between spaces uses the rational correspondence P/D_u -> P/D_v; it does not claim that a fixed time function keeps its coefficients when poles move.
 
-## 3. Forma diferencial exacta y estrictitud
+## 3. Exact differential form and strictness
 
-Al variar sólo u_k y conservar P,
+Varying only u_k and keeping P,
 
     d Rayleigh/du_k = Cov_μ(m, -2u_k/(u_k²+tau²)) >=0.
 
-Esta segunda función es creciente en |tau|. Se puede diferenciar bajo la integral, pues en compactos u_k>0 el factor logarítmico está acotado y m es integrable contra los pesos racionales. Es una fórmula que incluye la variación del denominador de la norma; omitir ese término daría una derivada incorrecta. Si el polo aumenta estrictamente y P no es nulo, la covarianza es estrictamente positiva, pues la densidad no está concentrada en un único |tau|.
+This second function is increasing in |tau|. One can differentiate under the integral, since on compacts u_k>0 the logarithmic factor is bounded and m is integrable against the rational weights. It is a formula that includes the variation of the norm denominator; omitting that term would give an incorrect derivative. If the pole increases strictly and P is not zero, the covariance is strictly positive, since the density is not concentrated on a single |tau|.
 
-## 4. Peine y polar uniformes sin cota superior de los polos
+## 4. Uniform comb and polar without an upper bound on the poles
 
-Esta sección aplica la observación del constructor principal. Para u_j>=u, la base ortonormal racional tiene transformada
+For u_j>=u, the rational orthonormal basis has transform
 
     F_j(s)=sqrt(2u_j)/(s+u_j) Π_{k<j}(s-u_k)/(s+u_k).
 
-Cada factor all-pass en tiempo es delta_0-2b exp(-by)1_{y>0}. Multiplicar por exp(uy/2) conjuga la convolución; la norma L1 de cada filtro ponderado es a lo sumo
+Each all-pass factor in time is delta_0-2b exp(-by)1_{y>0}. Multiplying by exp(uy/2) conjugates the convolution; the L1 norm of each weighted filter is at most
 
     1+2b/(b-u/2)<=5.
 
-La exponencial inicial normalizada tiene norma L2 ponderada <=sqrt2. Por Young y Cauchy--Schwarz en los coeficientes ortonormales,
+The normalised initial exponential has weighted L2 norm <=sqrt2. By Young and Cauchy--Schwarz on the orthonormal coefficients,
 
     ||exp(uy/2) f||² <= B_n ||f||²,
     B_n=2Σ_{j=0}^{n-1}25^j=(25^n-1)/12.                     (WT)
 
-Esto implica |c_f(t)|<=sqrt(B_n)exp(-ut/2)||f||². Para n=3 y u>=63/2, B_3=1302 y
+This implies |c_f(t)|<=sqrt(B_n)exp(-ut/2)||f||². For n=3 and u>=63/2, B_3=1302 and
 
-    |peine|<=2sqrt1302 Σ_{q>=2}Lambda(q)q^{-(u+1)/2}||f||²
+    |comb|<=2sqrt1302 Σ_{q>=2}Lambda(q)q^{-(u+1)/2}||f||²
           <=74 Σ_{q>=2}q^-15 ||f||²
           <=74/(28672)||f||² < (3/1000)||f||².
 
-Se usó sqrt1302<37, Lambda(q)<=logq<=q y (u-1)/2>=61/4>15, y Σ_{q>=2}q^-15<=2^-15(1+2/14)=1/28672.
+We used sqrt1302<37, Lambda(q)<=logq<=q and (u-1)/2>=61/4>15, and Σ_{q>=2}q^-15<=2^-15(1+2/14)=1/28672.
 
-Para el polar, sean A=∫f exp(y/2), B=∫f exp(-y/2). Para reales f,
+For the polar, let A=∫f exp(y/2), B=∫f exp(-y/2). For real f,
 
     2AB=(A+B)²/2-(A-B)²/2 >=-(A-B)²/2.
 
-La integral ponderada exacta es
+The exact weighted integral is
 
     ∫_0^∞4sinh²(y/2)exp(-uy)dy=2/[u(u²-1)].
 
-Por (WT) y Cauchy--Schwarz,
+By (WT) and Cauchy--Schwarz,
 
     polar >=-1302/[u(u²-1)] ||f||² >-(21/500)||f||²
 
-para u>=63/2, por aritmética racional. Se conserva la cancelación A≈B; la cota grosera por |AB| la destruye.
+for u>=63/2, by rational arithmetic. The cancellation A≈B is kept; the crude bound by |AB| destroys it.
 
-## 5. Consecuencia para TODAS las ternas de exponentes >=32
+## 5. Consequence for ALL triples of exponents >=32
 
-POWER_CONFLUENT_004 certifica con aritmética racional lambda_min_arch(63/2,63/2,63/2)>1/10 (input CITED aquí). Por (PM) y §4, para TODAS las ternas de exponentes a_i>=32 y todos los coeficientes reales,
+POWER_CONFLUENT_004 certifies with rational arithmetic lambda_min_arch(63/2,63/2,63/2)>1/10 (input CITED here). By (PM) and §4, for ALL triples of exponents a_i>=32 and all real coefficients,
 
     Q[Σ c_i X^-a_i] >= (1/10-21/500-3/1000)||f||²
                      =11/200 ||f||² >||f||²/20,
 
-con f=Σ c_i zeta(a_i)exp(-(a_i-1/2)y). El mismo razonamiento incluye límites confluentes de tres potencias, interpretados como exponenciales por polinomios.
+with f=Σ c_i zeta(a_i)exp(-(a_i-1/2)y). The same reasoning includes confluent limits of three powers, interpreted as exponentials times polynomials.
 
-Este resultado NO se extiende a n arbitrario con u fijo por §4: B_n crece como 25^n, y además la menor eigenenergía confluente disminuye al aumentar n. No se ha demostrado positividad arquimediana uniforme en dimensión. El avance analítico es eliminar por completo la separación y la cota superior de las tres tasas, mediante el nuevo teorema de movimiento individual de polos.
+This result does NOT extend to arbitrary n with fixed u by §4: B_n grows like 25^n, and moreover the smallest confluent eigenenergy decreases as n increases. Uniform archimedean positivity in dimension has not been proved. The analytic advance is to eliminate completely the separation and the upper bound of the three rates, by means of the new theorem of individual pole movement.

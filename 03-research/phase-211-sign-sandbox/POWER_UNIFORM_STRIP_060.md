@@ -1,238 +1,238 @@
-# POWER_UNIFORM_STRIP_060 — Contorno uniforme y cono de signo de orden n³ log³n
+# POWER_UNIFORM_STRIP_060 — Uniform contour and sign cone of order n³ log³n
 
-Estado: PROVED, revisión independiente aprobada en POWER_UNIFORM_STRIP_AUDIT_060.md. Papers intactos.
+Status: PROVED, independent review approved in POWER_UNIFORM_STRIP_AUDIT_060.md. Papers untouched.
 
-## 1. Resultados y alcance
+## 1. Results and scope
 
-Fijar u=63/2. Para n≥1 sea q_n el menor entero q≥1 tal que 2^q≥n+1, y definir
+Fix u=63/2. For n≥1 let q_n be the smallest integer q≥1 such that 2^q≥n+1, and define
 
     J(n)=10^12 (n q_n)^3.
 
-Para TODO polinomio real no nulo P de grado<n, TODO entero j≥J(n) y
+For EVERY nonzero real polynomial P of degree<n, EVERY integer j≥J(n) and
 
     F(s)=Q(s)^j P(s)/(s+u)^n, Q(s)=s/(s+u),
     ρ(z)=z^(2j)P(iz)P(−iz)/(u²+z²)^(n+j),
 
-se demuestra
+it is proved that
 
     ∫_R |ρ(x+3i)|dx <2∫_R ρ(x)dx,                      (STRIP3)
     W[F] > ||F||².                                      (CONE)
 
-La constante de STRIP3 es independiente de n y de P. El entero q_n es O(log(n+1)); el umbral es O(n³ log³n). Como q_n≤n, también basta el umbral polinómico más simple j≥10^12 n^6.
+The constant of STRIP3 is independent of n and of P. The integer q_n is O(log(n+1)); the threshold is O(n³ log³n). Since q_n≤n, the simpler polynomial threshold j≥10^12 n^6 also suffices.
 
-No se afirma signo para j<J(n), ni suficiencia de un cono cuadrático para todos los numeradores, ni cierre global. El resultado NECESSITY059 sólo exigía p≥2 para un STRIP uniforme y no contradice este umbral mayor.
+Not claimed: sign for j<J(n), sufficiency of a quadratic cone for all numerators, or global closure. The result NECESSITY059 only required p≥2 for a uniform STRIP and does not contradict this larger threshold.
 
-## 2. Corpus y diferencia específica
+## 2. Corpus and specific difference
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D; releídos HIGHPASS015, JOINT_SCALE016, QUADRATIC/QUADRATIC_EXPLICIT017, INVERSE_COEFFICIENT054 y EFFECTIVE_HIGHPASS054.015 ya ofrece eventualidad a dimensión fija;054 la hace efectiva a dimensión variable pagando una constante D_n muy grande.016 impide uniformizar en n las normas temporales exponenciales separadas; no impide STRIP para la densidad conjunta.
+Consulted the project rules, ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D; reread HIGHPASS015, JOINT_SCALE016, QUADRATIC/QUADRATIC_EXPLICIT017, INVERSE_COEFFICIENT054 and EFFECTIVE_HIGHPASS054. 015 already offers eventuality at fixed dimension; 054 makes it effective at variable dimension at the cost of a very large constant D_n. 016 prevents uniformizing in n the separate exponential time norms; it does not prevent STRIP for the joint density.
 
-La diferencia nueva es controlar derivadas de una amplitud SIN la fase causal mediante polinomios ortogonales del peso Student exacto. No se utilizan coeficientes monomiales absolutos para el segmento de Taylor. El bound grueso D_n de054 se usa sólo para la COLA de esa serie, con grado de truncación elegido de antemano. Los grados crecen al derivar y se contabilizan explícitamente. No se exponentia una norma de generador restringido a un espacio finito ni se reemplaza globalmente el peso Student por una gaussiana.
+The new difference is to control derivatives of an amplitude WITHOUT the causal phase via orthogonal polynomials of the exact Student weight. Absolute monomial coefficients are not used for the Taylor segment. The coarse bound D_n of 054 is used only for the TAIL of that series, with truncation degree chosen in advance. The degrees grow under differentiation and are accounted for explicitly. No norm of a generator restricted to a finite space is exponentiated, and the Student weight is not globally replaced by a Gaussian.
 
-## 3. Polinomios ortogonales del peso Student exacto
+## 3. Orthogonal polynomials of the exact Student weight
 
-Sean M=n+j, j≥n+8 y
+Let M=n+j, j≥n+8 and
 
     w(y)=(1+y²/j)^−M.
 
-El producto escalar es ∫p conjugate(q)w. Todos los momentos necesarios hasta grado n+3 existen, pues M>n+3+1/2. Por Gram–Schmidt sobre1,y,y²,... se obtienen polinomios mónicos p_k, de paridad k.
+The scalar product is ∫p conjugate(q)w. All necessary moments up to degree n+3 exist, since M>n+3+1/2. By Gram–Schmidt on 1,y,y²,... one obtains monic polynomials p_k, of parity k.
 
-El operador
+The operator
 
     L=−(j+y²)∂²+2(M−1)y∂
       =−w^−1 ∂[(j+y²)w∂]
 
-es simétrico en estos polinomios. Los bordes de integración por partes se anulan por el decaimiento del peso. Preserva el grado y su coeficiente principal es
+is symmetric on these polynomials. The integration-by-parts boundaries vanish by the decay of the weight. It preserves degree and its leading coefficient is
 
     λ_k=k(2M−k−1).
 
-La simetría y la ortogonalidad implican Lp_k=λ_k p_k, como en los lemas polinómicos049. Si p_k=y^k+c_k y^(k−2)+..., comparar el coeficiente de grado k−2 da
+Symmetry and orthogonality imply Lp_k=λ_k p_k, as in the polynomial lemmas 049. If p_k=y^k+c_k y^(k−2)+..., comparing the degree-(k−2) coefficient gives
 
     c_k=−j k(k−1)/[2(2M−2k+1)].
 
-La recurrencia de tres términos, por ortogonalidad y paridad, es
+The three-term recurrence, by orthogonality and parity, is
 
     y p_k=p_(k+1)+β_k p_(k−1),
     β_k=||p_k||²/||p_(k−1)||²
        =c_k−c_(k+1)
        =j k(2M−k)/[(2M−2k+1)(2M−2k−1)].              (REC)
 
-Para 1≤k≤n+2, j≥n+8 asegura 2M−2k−1≥2j−5≥j y M≤2j. Por tanto
+For 1≤k≤n+2, j≥n+8 ensures 2M−2k−1≥2j−5≥j and M≤2j. Therefore
 
     0<β_k≤4k.
 
-En la base ortonormal, multiplicar por y es la suma de un operador que sube el grado y otro que lo baja, con coeficientes √β. Para cualquier S de grado d≤n+1,
+In the orthonormal basis, multiplication by y is the sum of a degree-raising and a degree-lowering operator, with coefficients √β. For any S of degree d≤n+1,
 
     ||yS||_w≤4√(d+1)||S||_w.                            (MULT)
 
-También, expandir R de grado<n en los eigenpolinomios de L da
+Also, expanding R of degree<n in the eigenpolynomials of L gives
 
     ∫(j+y²)|R′|²w≤λ_(n−1)||R||_w²,
     ||R′||_w²≤3n||R||_w².                              (DER)
 
-No se pierde el factor j de la forma diferencial en este último paso.
+The factor j of the differential form is not lost in this last step.
 
-## 4. Primera derivada exacta de la amplitud sin fase
+## 4. Exact first derivative of the amplitude without phase
 
-Para un polinomio COMPLEJO p de grado<n, definir la función holomorfa en |Imz|<u
+For a COMPLEX polynomial p of degree<n, define the function holomorphic in |Imz|<u
 
     H(z)=z^j p(z)/(u²+z²)^((n+j)/2).
 
-La rama del denominador es la positiva en la recta real; existe en toda la franja porque Re(u²+z²)>0 allí. Poner a=u√j y R(y)=y^(n−1)p(a/y). El cambio τ=a/y sobre ambas semirrectas da
+The branch of the denominator is the positive one on the real line; it exists on the whole strip because Re(u²+z²)>0 there. Set a=u√j and R(y)=y^(n−1)p(a/y). The change τ=a/y on both half-lines gives
 
     ||H||_(L²(R))²=a^(1−2n)||R||_w².
 
-Diferenciar y hacer el mismo cambio da exactamente
+Differentiating and making the same change gives exactly
 
     ||H′||²=a^(−1−2n)||A_(n,j)R||_w²,
     A_(n,j)R=y²R′+yR−M y³R/(j+y²).                     (GEN)
 
-Esto es la conjugación por el cambio unitario de media densidad: el generador real de traslación es −(y²∂+y)/a. La identidad de normas se verifica en cada semirrecta; los factores constantes de fase o signo allí no afectan la norma.
+This is conjugation by the unitary half-density change: the real translation generator is −(y²∂+y)/a. The norm identity is verified on each half-line; the constant phase or sign factors there do not affect the norm.
 
-De MULT aplicado dos veces a R′ y tres veces a R, y de DER,
+From MULT applied twice to R′ and three times to R, and from DER,
 
     ||y²R′||_w≤28(n+2)^(3/2)||R||_w,
     ||yR||_w≤4(n+2)^(3/2)||R||_w,
     ||M y³R/(j+y²)||_w≤128(n+2)^(3/2)||R||_w.
 
-En el último paso M/j≤2. Se obtiene la cota holgada
+In the last step M/j≤2. One obtains the loose bound
 
     ||H′|| ≤ [200(n+2)^(3/2)/(u√j)]||H||,
     j≥n+8.                                             (FIRST)
 
-Es una desigualdad de primera derivada con el peso racional exacto, no una aproximación gaussiana ni una estimación supuesta para la traslación completa.
+It is a first-derivative inequality with the exact rational weight, not a Gaussian approximation nor an assumed estimate for the full translation.
 
-## 5. Cota gruesa de altura15 para una sola amplitud
+## 5. Coarse height-15 bound for a single amplitude
 
-Es necesario distinguir una amplitud compleja de la densidad del producto. El bound STRIP054 para un producto genérico NO se identifica sin prueba con ||H(·+15i)||².
+It is necessary to distinguish a complex amplitude from the density of the product. The STRIP054 bound for a generic product is NOT identified without proof with ||H(·+15i)||².
 
-Se usa en cambio la evaluación SINGLE de INVERSE_COEFFICIENT054: con H_0=∫|R(y)|²w(y)dy y C_n=9n²9^n,
+Instead the SINGLE evaluation of INVERSE_COEFFICIENT054 is used: with H_0=∫|R(y)|²w(y)dy and C_n=9n²9^n,
 
     |R(Y)|²≤C_n H_0 Σ_(r=0)^(n−1)|Y|^(2r).
 
-Exactamente,
+Exactly,
 
     |H(z)|²=a^(−2n+2)|z|^(2(n+j−1))|R(a/z)|²
                          /|u²+z²|^(n+j).
 
-Para j≥10000n², cada término de SINGLE es una densidad escalar017 de parámetros N′=r+1, k′=j+n−1−r. Su integral sobre Imz=±15 es≤5 veces su integral real. El caso N′=1 fue justificado en EFFECTIVE_HIGHPASS054§3 por WR11 y Cauchy; no se hereda sin prueba de la condición N′≥2.
+For j≥10000n², each term of SINGLE is a scalar density 017 with parameters N′=r+1, k′=j+n−1−r. Its integral over Imz=±15 is ≤5 times its real integral. The case N′=1 was justified in EFFECTIVE_HIGHPASS054§3 by WR11 and Cauchy; it is not inherited without proof from the condition N′≥2.
 
-Los momentos M_r=∫y^(2r)w(y)dy satisfacen ΣM_r≤2n! por054. Las potencias de a se cancelan exactamente como allí. Por tanto, para TODO p complejo de grado<n,
+The moments M_r=∫y^(2r)w(y)dy satisfy ΣM_r≤2n! by 054. The powers of a cancel exactly as there. Therefore, for EVERY complex p of degree<n,
 
     ||H(·±15i)||²≤D_n||H||²,
     D_n=10C_n n!=10n²9^(n+1)n!.                        (COARSE)
 
-No se separaron las normas temporales causales del problema original. COARSE es una estimación de una amplitud sin fase en frecuencia y se deriva directamente de SINGLE y las diagonales escalares.
+The causal time norms of the original problem were not separated. COARSE is an estimate of an amplitude without phase in frequency and is derived directly from SINGLE and the scalar diagonals.
 
-## 6. Cauchy en L² y cola de Taylor
+## 6. Cauchy in L² and Taylor tail
 
-Para |η|≤15, escribir N(η)=∫|H(x+iη)|²dx. Diferenciar e integrar por partes produce
+For |η|≤15, write N(η)=∫|H(x+iη)|²dx. Differentiating and integrating by parts produces
 
     N″(η)=4∫|H′(x+iη)|²dx≥0.
 
-Todos los bordes se anulan por el decaimiento racional; H y sus derivadas son integrables al cuadrado uniformemente en subfranjas cerradas. La convexidad y COARSE en ambos extremos implican N(η)≤D_n N(0), sin exigir coeficientes reales ni simetría de H.
+All boundaries vanish by the rational decay; H and its derivatives are square-integrable uniformly on closed substrips. Convexity and COARSE at both ends imply N(η)≤D_n N(0), without requiring real coefficients or symmetry of H.
 
-Para ζ complejo con |ζ|≤15, la traslación real de x no cambia la norma; así
+For complex ζ with |ζ|≤15, real translation in x does not change the norm; thus
 
     ||H(·+ζ)||≤√D_n||H||.
 
-La aplicación ζ→H(·+ζ) es holomorfa con valores en L² dentro de la franja. Esto puede verificarse directamente con Cauchy puntual y dominación uniforme de la cola |x|→∞. Cauchy y Minkowski dan para cada r≥0
+The map ζ→H(·+ζ) is holomorphic with values in L² inside the strip. This can be verified directly with pointwise Cauchy and uniform domination of the tail |x|→∞. Cauchy and Minkowski give for each r≥0
 
     ||H^(r)||/r!≤√D_n 15^−r||H||.
 
-Por tanto, a altura η=±3, la cola de Taylor desde el índice L cumple
+Therefore, at height η=±3, the Taylor tail from index L satisfies
 
     ||Σ_(r≥L)(iη)^r H^(r)/r!||
       ≤(5/4)√D_n 5^−L||H||.                            (TAYLOR-TAIL)
 
-La convergencia es en L². No se deduce esta cota repitiendo FIRST indefinidamente.
+Convergence is in L². This bound is not deduced by repeating FIRST indefinitely.
 
-## 7. Segmento finito de Taylor, con grados crecientes controlados
+## 7. Finite Taylor segment, with controlled growing degrees
 
-Sea q=q_n y fijar ANTES de estimar
+Let q=q_n and fix BEFORE estimating
 
     L=20nq, j≥10^12(nq)^3.
 
-La definición de q da n≤3^q. Usando n!≤n^n, n²≤3^(2q), 10<27 y9^(n+1)=3^(2n+2), se obtiene
+The definition of q gives n≤3^q. Using n!≤n^n, n²≤3^(2q), 10<27 and 9^(n+1)=3^(2n+2), one obtains
 
     D_n<3^(nq+2q+2n+5)≤3^(10nq).
 
-La última desigualdad vale para todos n,q≥1: su diferencia es9nq−2q−2n−5, mínima en q=1 y allí igual a7(n−1). Así TAYLOR-TAIL es menor que
+The last inequality holds for all n,q≥1: its difference is 9nq−2q−2n−5, minimal at q=1 and there equal to 7(n−1). Thus TAYLOR-TAIL is less than
 
     (5/4)3^(5nq)5^(−20nq)||H||
       <(5/4)3^(−15nq)||H|| <||H||/100.                 (TAIL-SMALL)
 
-Las primeras derivadas también se controlan sin una dimensión fija ficticia. Si H pertenece a la clase(n,j),
+The first derivatives are also controlled without a fictitious fixed dimension. If H belongs to the class (n,j),
 
     H′(z)=z^(j−1)[j u²p+z(u²+z²)p′−n z²p]
                          /(u²+z²)^((n+j+2)/2).
 
-El numerador entre corchetes tiene grado≤n+1<n+3. Por tanto H′ pertenece a la clase(n+3,j−1). Tras r derivadas se usa la clase(n+3r,j−r), nunca la original.
+The bracketed numerator has degree ≤n+1<n+3. Therefore H′ belongs to the class (n+3,j−1). After r derivatives the class (n+3r,j−r) is used, never the original.
 
-Para 0≤r<L, se cumplen j−r≥j/2 y j−r≥n+3r+8. También n+3r+2≤63nq. FIRST en cada paso da un cociente de normas menor que
+For 0≤r<L, one has j−r≥j/2 and j−r≥n+3r+8. Also n+3r+2≤63nq. FIRST at each step gives a norm ratio less than
 
     200(63nq)^(3/2)√2/(u√j)<1/100.
 
-Por ejemplo √63<8, √2<2 y√j≥10^6(nq)^(3/2) reducen la comparación a201600/31500000<1/100. Se obtiene ||H^(r)||≤100^−r||H|| para r≤L. Luego el segmento de Taylor a altura±3 tiene norma menor o igual que
+For example √63<8, √2<2 and √j≥10^6(nq)^(3/2) reduce the comparison to 201600/31500000<1/100. One obtains ||H^(r)||≤100^−r||H|| for r≤L. Hence the Taylor segment at height ±3 has norm less than or equal to
 
     Σ_(r=0)^(L−1)(3/100)^r/r! ·||H||
        ≤exp(3/100)||H||≤(100/97)||H||.
 
-Sumar TAIL-SMALL produce
+Adding TAIL-SMALL produces
 
     ||H(·±3i)|| <(100/97+1/100)||H||
                     <(11/10)||H||.                     (AMP3)
 
-Éste es el punto que recupera las cancelaciones del polinomio en norma. La constante grande D_n sólo pagó la cola Taylor, cuyo inicio L crece como n logn; no multiplicó el segmento que determina AMP3.
+This is the point that recovers the cancellations of the polynomial in norm. The large constant D_n paid only for the Taylor tail, whose start L grows like n logn; it did not multiply the segment that determines AMP3.
 
-## 8. Densidad completa y STRIP uniforme
+## 8. Full density and uniform STRIP
 
-Para el numerador real P del problema, tome p(z)=P(iz) en la definición de H. Sea H#(z)=overline(H(overline z)). Entonces EXACTAMENTE
+For the real numerator P of the problem, take p(z)=P(iz) in the definition of H. Let H#(z)=overline(H(overline z)). Then EXACTLY
 
     ρ(z)=H(z)H#(z).
 
-En la recta, ρ(x)=|H(x)|². En la recta desplazada no se confunde el producto con un cuadrado: Cauchy da
+On the line, ρ(x)=|H(x)|². On the shifted line the product is not confused with a square: Cauchy gives
 
     ∫|ρ(x+3i)|dx
       ≤||H(·+3i)||·||H(·−3i)||
       <(121/100)||H||²<2∫ρ(x)dx.
 
-Esto prueba STRIP3 para todos los numeradores simultáneamente. El mismo argumento incluso permite coeficientes complejos con el producto sesquilineal correspondiente; CONE se enuncia sólo para la clase real requerida.
+This proves STRIP3 for all numerators simultaneously. The same argument even allows complex coefficients with the corresponding sesquilinear product; CONE is stated only for the required real class.
 
-## 9. Forma completa: ARCH, peine infinito y polar
+## 9. Full form: ARCH, infinite comb and polar
 
-Desplazar el contorno de la densidad racional, analítica en |Imz|<u, y usar STRIP3 implica
+Shifting the contour of the rational density, analytic in |Imz|<u, and using STRIP3 implies
 
     |c_F(t)|≤2exp(−3|t|)||F||².
 
-Para t<0 se usa la franja inferior. Los bordes verticales tienden a cero por el decaimiento al menos cuadrático de ρ. Por tanto TODO el peine satisface, con Λ(m)≤m,
+For t<0 the lower strip is used. The vertical edges tend to zero by the at least quadratic decay of ρ. Therefore the WHOLE comb satisfies, with Λ(m)≤m,
 
     |Comb[F]|/||F||²
       ≤4Σ_(m≥2)Λ(m)m^(−7/2)
       ≤4Σ_(m≥2)m^(−5/2)
       ≤7/(3√2)<2.                                       (COMB)
 
-La última suma se limita por su primer término más la integral desde2; no se suma un símbolo infinito de cosenos ni se omiten contactos.
+The last sum is bounded by its first term plus the integral from 2; no infinite cosine symbol is summed and no contacts are omitted.
 
-MULT aplicado a R en frecuencia inversa da ∫y²|R|²w≤16n∫|R|²w. Así
+MULT applied to R in inverse frequency gives ∫y²|R|²w≤16n∫|R|²w. Thus
 
     E_F[τ^−2]≤16n/(u²j)≤1/(10000u²),
 
-pues el umbral actual implica j≥160000n. Jensen, Cauchy y el bound del símbolo de017 dan
+since the current threshold implies j≥160000n. Jensen, Cauchy and the symbol bound of 017 give
 
     ARCH[F]/||F||²
       ≥−(1/2)log Eτ^−2−log(2π)−√(Eτ^−2)−Eτ^−2/2
       ≥log(100u/(2π))−1>4.                              (ARCH)
 
-En efecto π<4, 100u/8>243=3^5>exp5 y la penalización inversa es<1.
+Indeed π<4, 100u/8>243=3^5>exp5 and the inverse penalty is <1.
 
-El bound POLAR de EFFECTIVE_HIGHPASS054§7 se probó ya para TODOS j≥10000n², sin utilizar su enorme umbral de signo. Por tanto se aplica aquí y da
+The POLAR bound of EFFECTIVE_HIGHPASS054§7 was already proved for ALL j≥10000n², without using its huge sign threshold. Therefore it applies here and gives
 
     |Polar[F]|<||F||².                                  (POLAR)
 
-Combinar ARCH, COMB y POLAR en la MISMA norma demuestra W[F]>(4−2−1)||F||²=||F||², probando CONE.
+Combining ARCH, COMB and POLAR in the SAME norm proves W[F]>(4−2−1)||F||²=||F||², proving CONE.
 
-## 10. Alcance
+## 10. Scope
 
-Se sustituye el corte enorme054 por un cono explícito de crecimiento n³ log³n, válido para TODOS los numeradores de dimensión n. La cota de contorno es uniforme y se obtuvo manteniendo la amplitud sin fase y el producto exacto de la densidad; no se elude016 suponiendo una norma causal ponderada uniforme.
+The huge cutoff 054 is replaced by an explicit cone of growth n³ log³n, valid for ALL numerators of dimension n. The contour bound is uniform and was obtained keeping the amplitude without phase and the exact product of the density; 016 is not evaded by assuming a uniform weighted causal norm.
 
-El interior j<J(n) sigue sin decidirse. No se deriva positividad global por las recurrencias016/036, no se afirma un cono uniforme cuadrático para todo P y no se amplía una ventana temporal T del Paper47. No hubo campañas numéricas ni selección de parámetros por autovalores flotantes. Papers intactos.
+The interior j<J(n) remains undecided. No global positivity is derived from the recurrences 016/036, no uniform quadratic cone for all P is claimed and no time window T of Paper 47 is extended. There were no numerical campaigns nor parameter selection by floating-point eigenvalues. Papers untouched.

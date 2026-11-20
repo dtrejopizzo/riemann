@@ -1,36 +1,36 @@
 # POWER BOUNDARY AUDIT 035
 
-Estado: BOUNDARY_BALANCE035 y SIGNED_TRANSFORM035 APROBADOS. Papers intactos.
+Status: BOUNDARY_BALANCE035 and SIGNED_TRANSFORM035 APPROVED. Papers untouched.
 
-## 1. Corpus y mecanismo nuevo
+## 1. Corpus and new mechanism
 
-Reconsultado el registro034 y antecedentes016/018/032. La recurrencia por sí sola no daba signo ni propagaba eventualidad sin ancla real; ese límite permanece. El mecanismo035 combina una columna k1 efectivamente positiva034 con UN terminal k0 positivo, elegido como extremo entero de esa columna a tasa fija. No es una campaña de entradas13,14,... ni una nueva hipótesis de monotonía AP.
+Re-consulted record034 and antecedents016/018/032. Recurrence by itself gave no sign and did not propagate eventuality without a real anchor; that limit remains. Mechanism035 combines an effectively positive k1 column034 with ONE positive k0 terminal, chosen as the integer endpoint of that column at fixed rate. It is not a campaign over entries13,14,... nor a new AP monotonicity hypothesis.
 
-## 2. Terminal17 completo — APROBADO
+## 2. Complete terminal17 — APPROVED
 
-Revisados `POWER_BOUNDARY_BALANCE_035.md` y `tools/power_boundary_balance_035_verify.py`; ejecución independiente PASS. La norma beta y A0 estable032 conservan los factores. EM2 hasta B4 usa resto integral absoluto periódicoB4, igual al módulo del último término incluido y válido sin decrecimiento de la expansión. Los extremos Hurwitz se multiplican por los coeficientes racionales antes del redondeo intervalar. Se certifica ARCH17>−.868 y polar17>.911 exacto y favorable.
+Reviewed `POWER_BOUNDARY_BALANCE_035.md` and `tools/power_boundary_balance_035_verify.py`; independent run PASS. The beta norm and stable A0 032 preserve the factors. EM2 up to B4 uses an absolute integral remainder with periodic B4, equal to the modulus of the last included term and valid without decrease of the expansion. The Hurwitz endpoints are multiplied by the rational coefficients before interval rounding. ARCH17>−.868 and polar17>.911 are certified, exact and favorable.
 
-ROOT/CURV026 y log2>2/3 dan q17(log2)>15 por u²>945. Como q′>0, la comparación diferencial rho(logn)≤rho(log2)(n/2)^−15 vale en TODA la cola. Horner positivo con el extremo superior de log2 y2^−u< (5/7)2^−31 prueba rho(log2)<1/600. La sustituciónΛ≤log n y suma–integral de(log x)x^−15 producen el factor(10/7)[(8/7)log2+1/98]<6/5. Por tanto todo el peine adverso tiene módulo<.002, sin omitir potencias primas ni cola. El terminal REAL tiene margen>.041>.04.
+ROOT/CURV026 and log2>2/3 give q17(log2)>15 via u²>945. Since q′>0, the differential comparison rho(logn)≤rho(log2)(n/2)^−15 holds on the WHOLE tail. Positive Horner with the upper endpoint of log2 and 2^−u< (5/7)2^−31 proves rho(log2)<1/600. The substitution Λ≤log n and the sum–integral of (log x)x^−15 produce the factor (10/7)[(8/7)log2+1/98]<6/5. Hence the whole adverse comb has modulus<.002, omitting neither prime powers nor tail. The REAL terminal has margin>.041>.04.
 
-## 3. Descenso simbólico completo — APROBADO
+## 3. Complete symbolic descent — APPROVED
 
-La identidad sin normalizar a_N0=a_N1+u²a_(N+1),0 vale para densidades y para el polar racional; mantiene todas las partes de W. Las razones de normas son1/(2N) y(2N−1)/(2N), positivas y de suma1. Así un terminal normalizado>.04 y la columna034>.025 propagan hacia atrás el margen>.025 a todos los bordes N3..16. No se evaluó cada borde.
+The unnormalized identity a_N0=a_N1+u²a_(N+1),0 holds for densities and for the rational polar; it keeps all parts of W. The norm ratios are 1/(2N) and (2N−1)/(2N), positive and summing to 1. Thus a normalized terminal>.04 and column034>.025 propagate the margin>.025 backwards to all edges N3..16. No edge was evaluated individually.
 
-Junto con la columna completa k≥1 de034 y las filas previas1,2, se prueban TODAS las filas1..17, TODOk≥0, a u31.5, con W>norma²/40. El resultado no se extrapola a terminal18, tasas variables, cruces arbitrarios ni ventana T. Es nueva cobertura real con datos de signo adicionales que estaban ausentes en los falsificadores estructurales018.
+Together with the complete column k≥1 of034 and the previous rows1,2, ALL rows1..17, ALL k≥0, at u31.5, are proved with W>norm²/40. The result is not extrapolated to terminal18, variable rates, arbitrary crossings or window T. It is genuine new coverage with additional sign data that were absent in the structural falsifiers018.
 
 
-## 4. Transformación gamma firmada — APROBADA
+## 4. Signed gamma transform — APPROVED
 
-Revisados `POWER_SIGNED_TRANSFORM_035.md` y `tools/power_signed_transform_035_verify.py`; ejecución independiente PASS. La normalización P_d(m)=h_m(v_m−v_(m+1)) es no negativa y suma1 por Abel yΣw_m=1. A_N es así la esperanza de t_m=T_m/h_m FIRMADO, no una mezcla de componentes cuyo signo se presupone.
+Reviewed `POWER_SIGNED_TRANSFORM_035.md` and `tools/power_signed_transform_035_verify.py`; independent run PASS. The normalization P_d(m)=h_m(v_m−v_(m+1)) is nonnegative and sums to 1 by Abel and Σw_m=1. A_N is thus the expectation of the SIGNED t_m=T_m/h_m, not a mixture of components whose sign is presupposed.
 
-La recurrencia diferencial de la forma y sus normas produce B(z)=E(u√(1−z))/√(1−z). Derivar da B′=(1/2)F(1−√(1−z)), con F exactamente el generador034. La fórmula Lagrange y la división por2d c_d reconstruyen los coeficientes Abel; no falta un factor u o z. La paridad permite cancelar la ramificación local en1, pero no prueba prolongación en todo el eje real positivo ni se traslada OSC034 como signo de A_N.
+The differential recurrence of the form and its norms produces B(z)=E(u√(1−z))/√(1−z). Differentiating gives B′=(1/2)F(1−√(1−z)), with F exactly generator034. The Lagrange formula and division by 2d c_d reconstruct the Abel coefficients; no factor u or z is missing. Parity allows cancelling the local branching at 1, but does not prove continuation along the whole positive real axis, nor does OSC034 carry over as a sign of A_N.
 
-TAIL es una identidad exacta de la probabilidad real; su diferencia entre r y r+1 coincide con P_d(r). SMALL sigue de a_m≤1, denominador≥d(d−1) y la suma cuártica indicada. LARGE usa log a_r≤−r(r−1)/(4d) y la corrección≤1+2x_r. Para r≤d/2, la serie logarítmica tiene resto≤Σ(j/d)²<r³/(3d²); la corrección de TAIL queda entre1+x_r y1+x_r+x_rr/d. WINDOW y la convergencia Gamma(shape2) en la escala móvil son correctas, sin extrapolarla a r de orden d.
+TAIL is an exact identity of the real probability; its difference between r and r+1 coincides with P_d(r). SMALL follows from a_m≤1, denominator≥d(d−1) and the indicated quartic sum. LARGE uses log a_r≤−r(r−1)/(4d) and the correction≤1+2x_r. For r≤d/2, the logarithmic series has remainder≤Σ(j/d)²<r³/(3d²); the TAIL correction lies between 1+x_r and 1+x_r+x_rr/d. WINDOW and the Gamma(shape2) convergence in the moving scale are correct, without extrapolating them to r of order d.
 
-BUDGET conserva el costo real de cualquier prefijo adverso FINITO y da un boundO(N^−2) con constante explícita B_R. No controla todas las lesiones, que son infinitas ni sus magnitudes en la ventana móvil. Las cotas de probabilidades no se convierten en bounds del producto con t_m sin información adicional.
+BUDGET keeps the real cost of any FINITE adverse prefix and gives a bound O(N^−2) with explicit constant B_R. It does not control all the lesions, which are infinite, nor their magnitudes in the moving window. The probability bounds do not turn into bounds of the product with t_m without additional information.
 
-El modelo cosh de§7 es el antecedente reutilizado de CONE001; su cálculo es correcto y sólo delimita la insuficiencia de simetría genérica. No es nuevo falsificador aritmético ni no-go global. La diferencia constructiva frente034 es la ley específica P_d y sus cotas uniformes, no una identidad o positividad de T_m reetiquetada.
+The cosh model of §7 is the reused antecedent of CONE001; its computation is correct and only delimits the insufficiency of generic symmetry. It is neither a new arithmetic falsifier nor a global no-go. The constructive difference with respect to034 is the specific law P_d and its uniform bounds, not a relabeled identity or positivity of T_m.
 
-## 5. Cierre
+## 5. Closure
 
-La ronda sí completa filas1..17 a tasa fija mediante dos datos reales y descenso finito. La segunda construcción cuantifica la transformación firmada, pero deja abierto el control aritmético de su ventana móvil. No se deduce positividad de mezclas arbitrarias, todos los órdenes ni nueva ventana T. Root coincide independientemente en la revisión del terminal y la propagación.
+The round does complete rows1..17 at fixed rate via two real data and finite descent. The second construction quantifies the signed transform, but leaves open the arithmetic control of its moving window. No positivity of arbitrary mixtures, all orders or a new window T is deduced. The terminal and propagation review was confirmed independently.

@@ -1,140 +1,140 @@
-# POWER_DIVISOR_COMPARISON_034 — Un comparador completo positivo uniforme
+# POWER_DIVISOR_COMPARISON_034 — A uniform positive complete comparator
 
-Estado: **PROVED; revisión independiente APROBADA en POWER_COMPARISON_AUDIT_034.md**. Para TODOS enteros N>=3,k>=1 y TODAS tasas reales u tales que
+Status: **PROVED; independent review APPROVED in POWER_COMPARISON_AUDIT_034.md**. For ALL integers N>=3,k>=1 and ALL real rates u such that
 
     u>=63/2,   u²>=225N/4,
     W[f_(N,k)]>(1/40)||f_(N,k)||².                       (NEW-REGION)
 
-Además, PARA k=1, el comparador inferior normalizado B_N+S_K de033 es >1/40 para CADA K impar. En la tasa FIJA u31.5 se cubren simultáneamente N3,...,17 en TODAS las columnas k>=1; N6,...,17 eran el segmento no cubierto por las filas completas1,...,5. Para k>=2 el margen mejora a3/20 mediante§7. No se afirma toda la tabla ni una nueva ventanaT. Papers intactos.
+Moreover, FOR k=1, the normalized lower comparator B_N+S_K of033 is >1/40 for EACH odd K. At the FIXED rate u31.5 one covers simultaneously N3,...,17 in ALL columns k>=1; N6,...,17 were the segment not covered by the complete rows1,...,5. For k>=2 the margin improves to3/20 via§7. Neither the whole table nor a new windowT is claimed. Papers untouched.
 
-## 1. Corpus y razón nueva
+## 1. Corpus and new reason
 
-Consultados ROUTES-TRIED-INDEX, grid maestro y CROSSWORD-TO-D sobre contactos, cotas beta y límites de identidades Euler; leídos ROW_PATTERN029, CONTACT_DECISION032 y PRIME_BALANCE033 con sus auditorías. No se presenta la fórmula beta, la monotonía arquimediana ni Euler como nuevas.
+Consulted ROUTES-TRIED-INDEX, master grid and CROSSWORD-TO-D on contacts, beta bounds and limits of Euler identities; read ROW_PATTERN029, CONTACT_DECISION032 and PRIME_BALANCE033 with their audits. The beta formula, archimedean monotonicity and Euler are not presented as new.
 
-La diferencia es que el peine FIRMADO de019/033 permite retirar el costo absoluto aritmético que limitaba la región029 u>=16sqrtN. El comparador completo de033 obtiene ahora un margen POSITIVO en un rango infinito nuevo, con constantes universales y sin certificar órdenes separados. La mejora procede aquí de ARCH−|POLAR|>0 más el peine favorable, NO de que Neumann compense un ARCH negativo como en el punto211. No se atribuye a esta región el mecanismo crítico de032.
+The difference is that the SIGNED comb of019/033 allows removing the absolute arithmetic cost that limited the region029 u>=16sqrtN. The complete comparator of033 now obtains a POSITIVE margin on a new infinite range, with universal constants and without certifying separate orders. The improvement here comes from ARCH−|POLAR|>0 plus the favourable comb, NOT from Neumann compensating a negative ARCH as at the point211. The critical mechanism of032 is not attributed to this region.
 
-## 2. La región satisface todas las hipótesis aritméticas
+## 2. The region satisfies all arithmetic hypotheses
 
-Puesto que N<=4u²/225,
+Since N<=4u²/225,
 
     2u²/9−u/3+3/2−N
       >=46u²/225−u/3+3/2>0,  u>=63/2.
 
-Así NEW-REGION está dentro de REGION033. TODOS los contactos son positivos por019 y las desigualdades033 son válidas: S_K>0 para cada K impar. Los tres contactos q2,3,4 que forman parte de B_N también son positivos. No se omite una cola de signo desconocido.
+Thus NEW-REGION lies inside REGION033. ALL contacts are positive by019 and the inequalities033 are valid: S_K>0 for each odd K. The three contacts q2,3,4 that form part of B_N are also positive. No tail of unknown sign is omitted.
 
-## 3. Margen arquimediano uniforme
+## 3. Uniform archimedean margin
 
-ARCH-GENERAL029 prueba, por Euler periódico B2 y los momentos beta exactos, para todo N>=2,
+ARCH-GENERAL029 proves, by periodic Euler B2 and the exact beta moments, for all N>=2,
 
     ARCH_(N,1)/norm²
       >=log(u/(2pi))+(1/2)[psi(3/2)−psi(N−1/2)]
                         −9(N−1/2)/u².                  (A)
 
-La cota psi(x)<=logx se sigue, por ejemplo, de Jensen sobre la ley Gamma(x): psi(x)=ElogX<=logEX. Como psi(3/2)=2−gamma−2log2 y u/sqrtN>=15/2, se obtiene
+The bound psi(x)<=logx follows, for example, from Jensen on the law Gamma(x): psi(x)=ElogX<=logEX. Since psi(3/2)=2−gamma−2log2 and u/sqrtN>=15/2, one obtains
 
     ARCH_(N,1)/norm²
       >log(15/2)−log(4pi)+1−gamma/2−4/25
       >7/200.                                          (ARCH)
 
-La última comparación es racional con las constantes auditadas003. Es una sola desigualdad de constantes; no un barrido de N ni una aproximación de ARCH en N concretos.
+The last comparison is rational with the audited constants003. It is a single inequality of constants; not a sweep over N nor an approximation of ARCH at concrete N.
 
-## 4. Polar exacto y pérdida uniforme
+## 4. Exact polar and uniform loss
 
-Las fórmulas beta029 dan
+The beta formulas029 give
 
     p_(N,0)=POLAR_(N,0)/norm_(N,0)²
       <=4sqrt(pi)sqrtN/u ·(1−1/(4u²))^(−N),
     |POLAR_(N,1)|/norm_(N,1)²
       =p_(N,0)·2N/(4u²−1).
 
-Como sqrt(pi)<9/5 y sqrtN/u<=2/15, el primer factor es <24/25. Bernoulli entero y N/(4u²)<=1/225 dan
+Since sqrt(pi)<9/5 and sqrtN/u<=2/15, the first factor is <24/25. Integer Bernoulli and N/(4u²)<=1/225 give
 
     (1−1/(4u²))^N>=1−N/(4u²)>=224/225,
     p_(N,0)<(24/25)(225/224)=27/28.
 
-Además N>=3 implica
+Moreover N>=3 implies
 
     2N/(4u²−1)<=2N/(225N−1)<=3/337.
 
-Por tanto el polar de k1, que es NEGATIVO, satisface
+Hence the polar of k1, which is NEGATIVE, satisfies
 
     |POLAR_(N,1)|/norm² <81/9436<9/1000.                  (POLAR)
 
-No se descarta su signo ni se uniformiza con una constante creciente en N.
+Its sign is not discarded nor uniformized with a constant growing in N.
 
-## 5. Comparador033 positivo y forma completa
+## 5. Positive comparator033 and complete form
 
-Por definición033 y la positividad aritmética,
+By definition033 and arithmetic positivity,
 
     B_N+S_K
       =ARCH/norm²+POLAR/norm²
          +log2 w(2)+log3 w(3)+log2 w(4)+S_K
       >7/200−9/1000=13/500>1/40                         (COMPARATOR)
 
-para CADA K impar. FULL033 conserva TODA la cola y da
+for EACH odd K. FULL033 keeps the WHOLE tail and gives
 
     W[f_(N,1)]/norm²>=B_N+S_K>1/40.
 
-Esto prueba NEW-REGION en k1. También puede probarse directamente ignorando el peine favorable; explicitar COMPARATOR muestra que el criterio033 ya no queda únicamente en una obligación formal. La contracción no es necesaria para el margen de esta región y no se afirma lo contrario.
+This proves NEW-REGION at k1. It can also be proved directly ignoring the favourable comb; making COMPARATOR explicit shows that the criterion033 no longer remains merely a formal obligation. The contraction is not necessary for the margin of this region and the contrary is not claimed.
 
-## 6. Alcance
+## 6. Scope
 
-La condición u²>=225N/4 mejora la condición029 u²>=256N para TODAS las columnas k>=1, usando el signo aritmético en k1 y el margen mayor en las columnas restantes. En u31.5, 4u²/225=441/25=17.64; de ahí el segmento entero N<=17 sin verificaciones individuales.
+The condition u²>=225N/4 improves the condition029 u²>=256N for ALL columns k>=1, using the arithmetic sign at k1 and the larger margin in the remaining columns. At u31.5, 4u²/225=441/25=17.64; hence the integer segment N<=17 without individual verifications.
 
-No se ha reparado aquí un ARCH negativo ni se ha decidido todo el rango033 N/u² cercano a2/9. La cancelación casi exacta de211 sigue siendo un certificado puntual032. El borde k0 no se incluye. Las columnas k>=2 se prueban aparte en§7, sin extrapolarles el signo aritmético de k1.
+No negative ARCH has been repaired here nor has the whole range033 N/u² near2/9 been decided. The almost exact cancellation of211 remains a pointwise certificate032. The edge k0 is not included. The columns k>=2 are proved separately in§7, without extrapolating to them the arithmetic sign of k1.
 
-Reproducción:
+Reproduction:
 
     python3 03-research/phase-211-sign-sandbox/tools/power_divisor_comparison_034_verify.py
 
-PASS; sólo constantes universales Fraction/intervalos. La uniformidad de N,u reside en las desigualdades escritas.
+PASS; only universal constants Fraction/intervals. The uniformity in N,u resides in the written inequalities.
 
 
-## 7. Extensión uniforme a TODAS las columnas k>=2
+## 7. Uniform extension to ALL columns k>=2
 
-La misma ARCH-GENERAL029, ahora con psi(k+1/2)>=psi(5/2)=psi(3/2)+2/3 y k−1/2>=3/2, da
+The same ARCH-GENERAL029, now with psi(k+1/2)>=psi(5/2)=psi(3/2)+2/3 and k−1/2>=3/2, gives
 
     ARCH_(N,k)/norm²
       >log(15/2)−log(4pi)+1−gamma/2+1/3−4/75
       >19/40,  k>=2.                                    (ARCH2)
 
-En efecto el margen respecto al bound arquimediano de k1 es1/3+8/75=11/25. No se evalúa ninguna columna por separado.
+Indeed the margin with respect to the archimedean bound of k1 is1/3+8/75=11/25. No column is evaluated separately.
 
-Aquí el peine no tiene signo supuesto. CENTERED029, válido para TODO k, con eta4 da
+Here the comb has no assumed sign. CENTERED029, valid for ALL k, with eta4 gives
 
     |c_f(t)|/norm²<=e^(-4t)R,
     R=[(u²−16)/(u²−64)]^(N−1/2)
       <=exp[48(N−1/2)/(u²−64)]
       <exp(9/10)<5/2.                                    (CENTER)
 
-Para el exponente, 48(N−1/2)/(u²−64)<9/10 equivale a48N+168/5<(9/10)u². Como 48N<=(64/75)u² y 9/10−64/75=7/150, basta u²>720, garantizado por u>=63/2. La última comparación usa el intervalo racional log(5/2)>9/10; no se reemplaza exp por un decimal.
+For the exponent, 48(N−1/2)/(u²−64)<9/10 is equivalent to48N+168/5<(9/10)u². Since 48N<=(64/75)u² and 9/10−64/75=7/150, it suffices that u²>720, guaranteed by u>=63/2. The last comparison uses the rational interval log(5/2)>9/10; exp is not replaced by a decimal.
 
-Usando TODOS los contactos, Lambda(q)<=logq y la integral decreciente de x^-4 logx,
+Using ALL contacts, Lambda(q)<=logq and the decreasing integral of x^-4 logx,
 
     sum_(q>=2)Lambda(q)q^(-9/2)
       <(5/7)2^-4[(5/3)log2+2/9]<31/500.
 
-Se utilizó q^-1/2<=2^-1/2<5/7. Por tanto
+We used q^-1/2<=2^-1/2<5/7. Hence
 
     |PRIME|/norm²<2R(31/500)<31/100.                     (PRIME2)
 
-Las fórmulas beta029 y binom(k+N−1,N−1)<=N^k, c_k>=2^-k prueban para CUALQUIER k
+The beta formulas029 and binom(k+N−1,N−1)<=N^k, c_k>=2^-k prove for ANY k
 
     |POLAR_(N,k)|/norm²<=p_(N,0)[2N/(4u²−1)]^k.
 
-Como 2N/(4u²−1)<=3/337<1 y p_(N,0)<27/28, el polar impar es <9/1000; el par es favorable. No se asume que el peine de estas columnas sea favorable.
+Since 2N/(4u²−1)<=3/337<1 and p_(N,0)<27/28, the odd polar is <9/1000; the even one is favourable. It is not assumed that the comb of these columns is favourable.
 
-Juntando las tres desigualdades,
+Putting the three inequalities together,
 
     W[f_(N,k)]/norm²>19/40−31/100−9/1000
                          =39/250>3/20,  k>=2.           (HIGHER)
 
-Así se completa NEW-REGION para TODOS k>=1. La prueba usa dos regímenes: el pequeño margen arquimediano de k1 necesita el signo real del peine019/033; desde k2, la ganancia beta permite un costo absoluto uniforme. El borde k0 permanece fuera de la afirmación.
+This completes NEW-REGION for ALL k>=1. The proof uses two regimes: the small archimedean margin of k1 needs the real sign of the comb019/033; from k2 on, the beta gain allows a uniform absolute cost. The edge k0 remains outside the statement.
 
-## 8. Corolarios de cobertura al combinar certificados ya auditados
+## 8. Coverage corollaries from combining already audited certificates
 
-En u FIJO63/2, ARITHMETIC_BLOCK007§1 prueba W>10^-4 norm² en TODO V12=e^(-uy)·{polinomios de grado<=11}. Para N<=12, g_N(y)=y^(N−1)e^(-uy)/(N−1)! pertenece a V12. Combinándolo con NEW-REGION (N<=17 en esta tasa), se completan las filas3<=N<=12 para TODOS k>=0, con margen>10^-4. Las filas1,2 ya estaban probadas. Para N13,...,17, este corolario deja únicamente k0 abierto; no extiende V12 a órdenes superiores.
+At FIXED u63/2, ARITHMETIC_BLOCK007§1 proves W>10^-4 norm² on ALL of V12=e^(-uy)·{polynomials of degree<=11}. For N<=12, g_N(y)=y^(N−1)e^(-uy)/(N−1)! belongs to V12. Combining it with NEW-REGION (N<=17 at this rate), the rows3<=N<=12 are completed for ALL k>=0, with margin>10^-4. Rows1,2 were already proved. For N13,...,17, this corollary leaves only k0 open; it does not extend V12 to higher orders.
 
-Para TODA tasa u>=63/2, SIGNED_TRANSFER014§1 permite ocho polos con multiplicidades y prueba W>10^-3 norm². El átomo g_N con N<=8 se representa en el espacio de denominador(s+u)^8 mediante numerador(s+u)^(8−N), de grado<8. Por tanto k0 está cubierto uniformemente hasta N8. NEW-REGION cubre k>=1 hasta N17 para todas esas tasas (pues u²>=u0²>225·17/4). Así se completan uniformemente las filas3<=N<=8, con margen>10^-3. No se afirma k0 uniforme en u para N9,...,12: el certificadoV12 sólo usa la tasa fija63/2.
+For EVERY rate u>=63/2, SIGNED_TRANSFER014§1 allows eight poles with multiplicities and proves W>10^-3 norm². The atom g_N with N<=8 is represented in the space of denominator(s+u)^8 via the numerator(s+u)^(8−N), of degree<8. Hence k0 is covered uniformly up to N8. NEW-REGION covers k>=1 up to N17 for all those rates (since u²>=u0²>225·17/4). Thus the rows3<=N<=8 are completed uniformly, with margin>10^-3. k0 uniform in u for N9,...,12 is not claimed: the certificateV12 uses only the fixed rate63/2.
 
-Estas inclusiones de espacios no alteran los certificados007/014 ni convierten la nueva región en una prueba de toda la tabla. El resto a tasa fija incluye k0 paraN>=13 y el interior no cubierto paraN>=18.
+These space inclusions do not alter the certificates007/014 nor turn the new region into a proof of the whole table. The remainder at fixed rate includes k0 forN>=13 and the uncovered interior forN>=18.

@@ -1,241 +1,241 @@
-# Ronda 4, candidata A — La meta SP-161 / L161.1 con pesos con signo y pesos de criba (memo de selección)
+# Round 4, candidate A — The SP-161 / L161.1 target with signed weights and sieve weights (selection memo)
 
-Memo de selección, no de construcción. Objetivo (★): λ_A(T) ≥ 0 para todo T, definiciones de
-`../phase-211-sign-sandbox/STATEMENT_001.md`. Notación de `../phase-161-row-d-sum-product-square/R161_001`
-(S_N, K_N, L_M, A_M = 𝓜 − L_M − L_M*, E_N, H_{M,N}) y de `ROUND_003_6.md` (M_N, U_N, c_N(k), f_0, f_1,
-g, R_0, R_1). Para un polinomio de Dirichlet finito P(s) = Σ p_n n^{−s} escribo P(∂) = Σ p_n n^{−1/2}τ_{log n};
-los traslados forman un álgebra conmutativa indexada por ℚ_{>0} (τ_{log r}, r = a/b), y «coeficiente en r»
-se refiere a esa álgebra. Etiquetas: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMÉRICO.
+Selection memo, not a construction memo. Target (★): λ_A(T) ≥ 0 for all T, definitions from
+`../phase-211-sign-sandbox/STATEMENT_001.md`. Notation from `../phase-161-row-d-sum-product-square/R161_001`
+(S_N, K_N, L_M, A_M = 𝓜 − L_M − L_M*, E_N, H_{M,N}) and from `ROUND_003_6.md` (M_N, U_N, c_N(k), f_0, f_1,
+g, R_0, R_1). For a finite Dirichlet polynomial P(s) = Σ p_n n^{−s} I write P(∂) = Σ p_n n^{−1/2}τ_{log n};
+the translations form a commutative algebra indexed by ℚ_{>0} (τ_{log r}, r = a/b), and "coefficient at r"
+refers to that algebra. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 
-## Cotejo
+## Cross-check
 
-Búsquedas hechas (grep sin distinción de mayúsculas, después lectura primaria de lo encontrado):
-«Selberg sieve / criba de Selberg / Barban / Vehov / GPY / Λ_R / mollif / Levinson / signed weights /
-pesos con signo / truncated Möbius / Möbius truncado / M_N S_N / discrete derivative» en todo
-`03-research/`, P47, P48, el índice, el grid y el crucigrama; «Möbius / M_N / truncat» en las fases 106,
-121, 122, 124 y en R162_405–408, R162_206, R162_401.
+Searches done (case-insensitive grep, followed by primary reading of what was found):
+"Selberg sieve / criba de Selberg / Barban / Vehov / GPY / Λ_R / mollif / Levinson / signed weights /
+pesos con signo / truncated Möbius / Möbius truncado / M_N S_N / discrete derivative" across all of
+`03-research/`, P47, P48, the index, the grid and the crossword; "Möbius / M_N / truncat" in phases 106,
+121, 122, 124 and in R162_405–408, R162_206, R162_401.
 
-Leídos en primaria: R161_000–004 enteros; `ROUND_003_6.md` entero; R170_853 §0, R170_878 §0 (con sus
-correcciones de truncamiento), R170_879–883 §0, R170_896 §§0–1; fase 200: `Q2_LADDER_001.md` §§0–2,
-`SPEC_SIGN_OBJECT_002.md` §B (Q1), `AUDIT_200_SPEC_002.md` §§3–5; índice README, entradas
+Read as primary sources: R161_000–004 in full; `ROUND_003_6.md` in full; R170_853 §0, R170_878 §0 (with its
+truncation corrections), R170_879–883 §0, R170_896 §§0–1; phase 200: `Q2_LADDER_001.md` §§0–2,
+`SPEC_SIGN_OBJECT_002.md` §B (Q1), `AUDIT_200_SPEC_002.md` §§3–5; index README, entries
 PROOF_L_SHARP_GG_001, AUDIT_200_SPEC_002, Q2 ladder, PI_MU_001, MULT_GAUGE_001; R162_1003 §§4–5;
-`P121_CAUSAL_MOBIUS_OBSERVABILITY.md` §§1–2; fase 167 (R167_102 Teor. B, R167_103 §§2, 4.1, R167_190);
-índice 04 filas G3D-159, G3E-159, G1C-R162_1003, P58-1; índice 05 L62.
+`P121_CAUSAL_MOBIUS_OBSERVABILITY.md` §§1–2; phase 167 (R167_102 Thm. B, R167_103 §§2, 4.1, R167_190);
+index 04 rows G3D-159, G3E-159, G1C-R162_1003, P58-1; index 05 L62.
 
-No abiertos en primaria (sólo título o línea de grep): los 15 archivos de la fase 106 que nombran Möbius
-(entre ellos 106_40, 106_117, 106_144), `P121_CMO_SOURCE_MATRIX_NO_GO.md` (lo conozco por R161_004 §3),
-R162_405 §4.3 («tests conjugados por Möbius»), R162_406 Prop. en l. 131, `phase-104/104_87`, fase 33
-(82, 83). En 122, 124, R162_206, R162_401 no hubo coincidencias. Una búsqueda sin coincidencias no
-prueba novedad.
+Not opened as primary sources (title or grep line only): the 15 files of phase 106 that name Möbius
+(among them 106_40, 106_117, 106_144), `P121_CMO_SOURCE_MATRIX_NO_GO.md` (known to me through R161_004 §3),
+R162_405 §4.3 ("Möbius-conjugated tests"), R162_406 Prop. at l. 131, `phase-104/104_87`, phase 33
+(82, 83). In 122, 124, R162_206, R162_401 there were no matches. A search without matches does not
+prove novelty.
 
-### (1) Antecedentes más cercanos
+### (1) Closest antecedents
 
-1. **R161_002 §§4–5 y §8** (meta L161.1 y Teor. 8.1): ninguna ponderación w_N ≥ 0 cancela la cola de
-   hipérbola; Cor. 8.2 sitúa el signo en la derivada discreta terminal −log p. La rama con signo no está
-   escrita en la fase (confirmado: `RULES_AVOID.md` K5, K7).
-2. **`ROUND_003_6.md` (4.2)–(4.5) y R170_878 (0.2)–(0.4)**: el test de Möbius, completo en R170_878
-   ((PS_N*P)^{−1} = PM*P) y truncado en 003_6; R3-e cierra los bloques exteriores separados con test
-   independiente del peso.
-3. **Fase 200, Q1–Q3 y escalera Q2** (`SPEC_SIGN_OBJECT_002` §B, `AUDIT_200_SPEC_002` §5,
-   `Q2_LADDER_001`): forma de Selberg del retículo cociente con varianza de Selberg como parte positiva
-   (Q1: tautología, y^T𝔅y = 𝒲[g]); escalera de mollifiers truncados c^{(Y)}_N (Q2: diferencia radical,
-   𝒲 = 0); correlaciones de c_N «de tipo Λ_R de Selberg» (Q3: no dependen del peine, no ven cΛ). Lema SQ.0:
-   todo exterior mollificado a cualquier nivel es −g módulo el radical.
-4. **MULT_GAUGE_001 (clase R-MOM, PROVED)**: todo |1 + ζH|², mollifier de cualquier longitud, da W_T
-   exacta. **PROOF_L_SHARP_GG_001**: «factorización del defecto del mollifier como fuente de signo», no
-   reintentar.
-5. **R162_1003 §4**: el problema de primer contacto es un problema extremal de tipo Selberg (Prop. 4.1);
-   el núcleo de Weil no es de tipo mcd (Prop. 4.2); toda representación de Selberg Z*DZ con Z unipotente es
-   una congruencia (Cor. 4.3).
-6. **Fase 167, Teor. B** (ceguera de las cribas: b_θ satisface toda cota superior de criba que cumple Λ) y
-   P121 (eliminación de Möbius unitriangular sobre el poset de divisores).
+1. **R161_002 §§4–5 and §8** (target L161.1 and Thm. 8.1): no weighting w_N ≥ 0 cancels the hyperbola
+   tail; Cor. 8.2 locates the sign in the terminal discrete derivative −log p. The signed branch is not
+   written in the phase (confirmed: `RULES_AVOID.md` K5, K7).
+2. **`ROUND_003_6.md` (4.2)–(4.5) and R170_878 (0.2)–(0.4)**: the Möbius test, complete in R170_878
+   ((PS_N*P)^{−1} = PM*P) and truncated in 003_6; R3-e closes the separate exterior blocks with a test
+   independent of the weight.
+3. **Phase 200, Q1–Q3 and the Q2 ladder** (`SPEC_SIGN_OBJECT_002` §B, `AUDIT_200_SPEC_002` §5,
+   `Q2_LADDER_001`): Selberg form of the quotient lattice with Selberg variance as the positive part
+   (Q1: tautology, y^T𝔅y = 𝒲[g]); ladder of truncated mollifiers c^{(Y)}_N (Q2: radical difference,
+   𝒲 = 0); correlations of c_N "of Selberg Λ_R type" (Q3: do not depend on the comb, do not see cΛ). Lemma SQ.0:
+   every mollified exterior at any level is −g modulo the radical.
+4. **MULT_GAUGE_001 (class R-MOM, PROVED)**: every |1 + ζH|², mollifier of any length, gives W_T
+   exactly. **PROOF_L_SHARP_GG_001**: "factorization of the mollifier defect as a sign source", do not
+   retry.
+5. **R162_1003 §4**: the first-contact problem is an extremal problem of Selberg type (Prop. 4.1);
+   the Weil kernel is not of gcd type (Prop. 4.2); every Selberg representation Z*DZ with Z unipotent is
+   a congruence (Cor. 4.3).
+6. **Phase 167, Thm. B** (blindness of sieves: b_θ satisfies every sieve upper bound that Λ satisfies) and
+   P121 (unitriangular Möbius elimination on the divisor poset).
 
-Conclusión del cotejo: la pregunta (iii) —pesos de criba de Selberg o Barban–Vehov como test o como
-mollifier— está cubierta por los antecedentes 3–5 en las formulaciones del radical y de la recta. Lo que
-no está escrito es la versión de L161.1 con pesos con signo en N y la comparación exacta entre L161.1 y la
-identidad de Möbius de 003_6. Eso es lo que esta memo escribe (§§(4)–(5)); son lemas de formato, sin signo.
+Conclusion of the cross-check: question (iii) —Selberg or Barban–Vehov sieve weights as a test or as a
+mollifier— is covered by antecedents 3–5 in the radical and line formulations. What is
+not written is the version of L161.1 with signed weights in N and the exact comparison between L161.1 and the
+Möbius identity of 003_6. That is what this memo writes (§§(4)–(5)); they are format lemmas, without sign.
 
-### (2) Objeto realmente nuevo
+### (2) Genuinely new object
 
-No hay objeto (ℋ_T, V_T, ρ_T). Se escriben tres lemas cortos, todos de clase declarada y sin signo:
+There is no object (ℋ_T, V_T, ρ_T). Three short lemmas are written, all of declared class and without sign:
 
-- **Lema 1** (telescopado con pesos escalares con signo en N): el único peso finito real que hace
-  telescopar exactamente los términos interiores de Σ_N w_N S_N*S_N es w = δ_{N=1}, y la identidad
-  resultante es a_T = a_T con borde nulo. Cierra la rama con signo de L161.1 en la clase algebraica de
-  R161_002 Teor. 8.1.
-- **Proposición 2** (respuesta a (i)): la identidad (4.2) de 003_6 no es instancia de L161.1 para ningún
-  peso con signo; sus pesos viven en el índice de dilatación n (μ(n)), no en N.
-- **Lema 3** (respuesta a (iii)): la identidad M^λS_N = I + (exterior) es exacta si y sólo si λ = μ en
-  [1, N]; los pesos de Selberg/Barban–Vehov la rompen con un bloque interior explícito, y la variante
-  cuadrática |M^λD_N|² no produce un cuadrado sino la forma A_M sobre vectores fuera de P_T.
+- **Lemma 1** (telescoping with signed scalar weights in N): the only finite real weight that makes
+  the interior terms of Σ_N w_N S_N*S_N telescope exactly is w = δ_{N=1}, and the
+  resulting identity is a_T = a_T with zero boundary. It closes the signed branch of L161.1 in the algebraic class of
+  R161_002 Thm. 8.1.
+- **Proposition 2** (answer to (i)): identity (4.2) of 003_6 is not an instance of L161.1 for any
+  signed weight; its weights live on the dilation index n (μ(n)), not on N.
+- **Lemma 3** (answer to (iii)): the identity M^λS_N = I + (exterior) is exact if and only if λ = μ on
+  [1, N]; Selberg/Barban–Vehov weights break it with an explicit interior block, and the
+  quadratic variant |M^λD_N|² does not produce a square but the form A_M on vectors outside P_T.
 
-### (3) ¿Evita la dificultad del antecedente?
+### (3) Does it avoid the antecedent's difficulty?
 
-No. Los tres lemas confirman la dificultad registrada: los pesos de Möbius o de criba fijados sin usar el
-peso dejan toda la identidad afín en Λ (R3-e) y la parte «cuadrática en λ» se aparea con A_M, cuyo signo es
-el objetivo (R162_1003 Cor. 4.3; fase 200 Q1). Ninguna de las elecciones introduce dependencia de grado ≥ 2
-en el peso.
+No. The three lemmas confirm the recorded difficulty: Möbius or sieve weights fixed without using the
+weight leave the whole identity affine in Λ (R3-e), and the part "quadratic in λ" pairs with A_M, whose sign is
+the target (R162_1003 Cor. 4.3; phase 200 Q1). None of the choices introduces dependence of degree ≥ 2
+on the weight.
 
-### (4) Identidades que conectan con la forma completa
+### (4) Identities connecting to the complete form
 
-Convenciones: F liso con soporte en I_T, T > ½ log 2, M ≥ N ≥ e^{2T}. De R161_001 §1 (CITED de esa memo):
-𝓕 es involución unitaria, 𝓕τ_a𝓕 = τ_{−a}, y 𝓕 conmuta con multiplicadores pares; como m es par y
-P_M = L_M + L_M* es par, 𝓕A_M𝓕 = A_M. Por tanto, para la forma orientada de R161_002 (OR),
+Conventions: F smooth with support in I_T, T > ½ log 2, M ≥ N ≥ e^{2T}. From R161_001 §1 (CITED from that memo):
+𝓕 is a unitary involution, 𝓕τ_a𝓕 = τ_{−a}, and 𝓕 commutes with even multipliers; since m is even and
+P_M = L_M + L_M* is even, 𝓕A_M𝓕 = A_M. Hence, for the oriented form of R161_002 (OR),
 
     B_{M,N}(F) = ⟨A_M𝓕F, S_N*S_N𝓕F⟩ = ⟨A_MF, S_N*S_NF⟩,                                 (4.1)
 
-y a_T(F) = ⟨A_MF, F⟩ (003_6 Paso 1).
+and a_T(F) = ⟨A_MF, F⟩ (003_6 Step 1).
 
-**Coeficientes de S_N*S_N (PROVED).** S_N*S_N = Σ_{m,n≤N}(mn)^{−1/2}τ_{log m − log n}. Para r = a/b con
-mcd(a,b) = 1 y q = max(a,b), los pares (m,n) = (ja, jb), j ≤ N/q, dan el coeficiente
-(ab)^{−1/2}Σ_{j ≤ N/q} 1/j. Para pesos reales w_N de soporte finito y Ω(m) := Σ_{N≥m} w_N,
+**Coefficients of S_N*S_N (PROVED).** S_N*S_N = Σ_{m,n≤N}(mn)^{−1/2}τ_{log m − log n}. For r = a/b with
+gcd(a,b) = 1 and q = max(a,b), the pairs (m,n) = (ja, jb), j ≤ N/q, give the coefficient
+(ab)^{−1/2}Σ_{j ≤ N/q} 1/j. For real weights w_N of finite support and Ω(m) := Σ_{N≥m} w_N,
 
     [r](Σ_N w_N S_N*S_N) = (ab)^{−1/2} G(q),   G(q) := Σ_{j≥1} Ω(jq)/j.                     (4.2)
 
-**Lema 1 (telescopado escalar con signo; PROVED).** Clase 𝒞_w: pesos reales w_N de soporte finito, test
-S_N𝓕F, y exigencia de L161.1 de que, en el álgebra de traslados, Σ_N w_N S_N*S_N = I + (términos en r
-con |log r| ≥ 2T). Entonces w = δ_{N=1}, Σ_N w_N B_{M,N} = B_{M,1} = a_T, el resto de borde es 0 y la cola
-de hipérbola es H_{M,1} = L_M entera.
+**Lemma 1 (signed scalar telescoping; PROVED).** Class 𝒞_w: real weights w_N of finite support, test
+S_N𝓕F, and the requirement of L161.1 that, in the translation algebra, Σ_N w_N S_N*S_N = I + (terms at r
+with |log r| ≥ 2T). Then w = δ_{N=1}, Σ_N w_N B_{M,N} = B_{M,1} = a_T, the boundary remainder is 0 and the
+hyperbola tail is H_{M,1} = L_M in full.
 
-*Demostración.* Para q ≥ 2 el par (q, q − 1) es coprimo y |log(q/(q−1))| ≤ log 2 < 2T; por (4.2), G(q) = 0
-para todo q ≥ 2, y G(1) = 1 por el coeficiente en r = 1. La inversión sobre múltiplos
-Ω(m) = Σ_j μ(j)G(jm)/j (comprobación: Σ_j μ(j)j^{−1}Σ_i Ω(ijm)/i = Σ_l Ω(lm)l^{−1}Σ_{j|l}μ(j) = Ω(m); las
-sumas son finitas) da Ω(1) = 1 y Ω(m) = 0 para m ≥ 2, luego w_1 = 1 y w_N = 0 para N ≥ 2. Con S_1 = I,
-(4.1) da B_{M,1} = a_T; K_1 = 0 y H_{M,1} = L_MS_1 − K_1 = L_M. ∎
+*Proof.* For q ≥ 2 the pair (q, q − 1) is coprime and |log(q/(q−1))| ≤ log 2 < 2T; by (4.2), G(q) = 0
+for all q ≥ 2, and G(1) = 1 by the coefficient at r = 1. Inversion over multiples
+Ω(m) = Σ_j μ(j)G(jm)/j (check: Σ_j μ(j)j^{−1}Σ_i Ω(ijm)/i = Σ_l Ω(lm)l^{−1}Σ_{j|l}μ(j) = Ω(m); the
+sums are finite) gives Ω(1) = 1 and Ω(m) = 0 for m ≥ 2, hence w_1 = 1 and w_N = 0 for N ≥ 2. With S_1 = I,
+(4.1) gives B_{M,1} = a_T; K_1 = 0 and H_{M,1} = L_MS_1 − K_1 = L_M. ∎
 
-Lectura. La exigencia de L161.1 («los términos interiores telescopan») ya fija los pesos sin ver Λ: con
-signo o sin él, la única solución es la trivial. Además el Teor. 8.1 de R161_002 en versión con signo pide
-algo incompatible: con soporte de w en N ≤ N_1 y un primo p > N_1, el coeficiente de Σ w_N H_{M,N} en p es
-log p · Σ_N w_N, de modo que cancelar la cola en los primos grandes exige Σ_N w_N = 0, mientras el Lema 1
-exige Σ_N w_N = Ω(1) = 1. **Corolario (PROVED):** en 𝒞_w no hay peso que telescope el interior y cancele
-la cola a la vez. La derivada discreta pura w = δ_{N+1} − δ_N (suma 0) da S_{N+1} − S_N =
-(N+1)^{−1/2}τ_{log(N+1)} y H_{M,N+1} − H_{M,N} = (N+1)^{−1/2}(L_M − log(N+1))τ_{log(N+1)}: es la identidad
-PC de un solo traslado, cuyo coeficiente en r = 1 de (4.2) es G(1) = Ω(1) = 0, de modo que a_T no aparece
-(PROVED, cálculo directo). No excluido: tests distintos de S_N𝓕F, pesos dependientes de F, telescopado
-sólo después de comprimir a la ventana (ahí 𝓜 no es local y los coeficientes con |log r| ≥ 2T no se
-anulan), y el uso de los cuadrados de fuga de C_T, que ningún peso de esta clase produce.
+Reading. The requirement of L161.1 ("the interior terms telescope") already fixes the weights without seeing Λ:
+signed or not, the only solution is the trivial one. Moreover, Thm. 8.1 of R161_002 in signed form asks for
+something incompatible: with support of w in N ≤ N_1 and a prime p > N_1, the coefficient of Σ w_N H_{M,N} at p is
+log p · Σ_N w_N, so cancelling the tail at large primes requires Σ_N w_N = 0, while Lemma 1
+requires Σ_N w_N = Ω(1) = 1. **Corollary (PROVED):** in 𝒞_w there is no weight that telescopes the interior and cancels
+the tail at the same time. The pure discrete derivative w = δ_{N+1} − δ_N (sum 0) gives S_{N+1} − S_N =
+(N+1)^{−1/2}τ_{log(N+1)} and H_{M,N+1} − H_{M,N} = (N+1)^{−1/2}(L_M − log(N+1))τ_{log(N+1)}: it is the
+single-translation PC identity, whose coefficient at r = 1 in (4.2) is G(1) = Ω(1) = 0, so a_T does not appear
+(PROVED, direct computation). Not excluded: tests other than S_N𝓕F, F-dependent weights, telescoping
+only after compression to the window (there 𝓜 is not local and the coefficients with |log r| ≥ 2T do not
+vanish), and the use of the leakage squares of C_T, which no weight of this class produces.
 
-**Proposición 2 (respuesta a (i); PROVED, con Bertrand CITED).** Para N ≥ 2, el multiplicador real de
-(4.2) de 003_6, I + ½(U_N + U_N*), no pertenece a span_ℝ{S_{N′}*S_{N′} : N′ ≥ 1}. Por tanto la identidad
-a_T = f_0 − f_1 − R_0 + R_1 no es instancia de L161.1 para ningún peso w_N con signo.
+**Proposition 2 (answer to (i); PROVED, with Bertrand CITED).** For N ≥ 2, the real multiplier of
+(4.2) of 003_6, I + ½(U_N + U_N*), does not belong to span_ℝ{S_{N′}*S_{N′} : N′ ≥ 1}. Hence the identity
+a_T = f_0 − f_1 − R_0 + R_1 is not an instance of L161.1 for any signed weight w_N.
 
-*Demostración.* Si Σ w_{N′}S_{N′}*S_{N′} = I + ½(U_N + U_N*), los coeficientes en r = a/b con a, b ≥ 2
-son 0 a la derecha (U_N sólo tiene coeficientes en enteros k ∈ (N, N²]); por (4.2), G(q) = 0 para todo
-q ≥ 3 (par (q, q − 1)), y el coeficiente en r = 2 es 0 a la derecha (2 ≤ N), luego G(2) = 0. Entonces la
-izquierda tiene coeficiente 0 en todo entero k ≥ 2, y haría falta c_N(k) = 0 para todo k ∈ (N, N²]. Sea p
-primo con N/2 < p ≤ N (Bertrand) y k = 2p ∈ (N, N²]: los divisores d de k con d ≤ N y k/d ≤ N son d = 2
-y d = p (si p ≠ 2), luego c_N(2p) = −2; para N = 2, k = 4 y c_2(4) = μ(2) = −1. Contradicción. ∎
+*Proof.* If Σ w_{N′}S_{N′}*S_{N′} = I + ½(U_N + U_N*), the coefficients at r = a/b with a, b ≥ 2
+are 0 on the right (U_N only has coefficients at integers k ∈ (N, N²]); by (4.2), G(q) = 0 for all
+q ≥ 3 (pair (q, q − 1)), and the coefficient at r = 2 is 0 on the right (2 ≤ N), hence G(2) = 0. Then the
+left side has coefficient 0 at every integer k ≥ 2, and one would need c_N(k) = 0 for all k ∈ (N, N²]. Let p be
+prime with N/2 < p ≤ N (Bertrand) and k = 2p ∈ (N, N²]: the divisors d of k with d ≤ N and k/d ≤ N are d = 2
+and d = p (if p ≠ 2), hence c_N(2p) = −2; for N = 2, k = 4 and c_2(4) = μ(2) = −1. Contradiction. ∎
 
-Correspondencia exacta. L161.1 pondera en el índice de corte N una familia de Grams autoadjuntos
-S_N*S_N (símbolo |D_N(½+iτ)|²). La identidad de 003_6 usa un único N y pondera en el índice de dilatación
-n con μ(n): su test M_N*F es causal (unilateral), y su símbolo real Re[M_N D_N] = 1 + Re U_N está fuera del
-cono y del span de {|D_{N′}|²}. Lo que ambas comparten es el álgebra PC; lo que 003_6 tiene y L161.1 no,
-es que el coeficiente 1 se aísla exactamente (M_NS_N = I + exterior); lo que L161.1 pide y 003_6 no tiene,
-es el término de borde con C_T. En (4.2)–(4.3) de 003_6 no aparece ningún cuadrado de fuga.
+Exact correspondence. L161.1 weights, on the cutoff index N, a family of self-adjoint Grams
+S_N*S_N (symbol |D_N(½+iτ)|²). The identity of 003_6 uses a single N and weights on the dilation index
+n with μ(n): its test M_N*F is causal (one-sided), and its real symbol Re[M_N D_N] = 1 + Re U_N lies outside the
+cone and the span of {|D_{N′}|²}. What both share is the PC algebra; what 003_6 has and L161.1 lacks
+is that the coefficient 1 is isolated exactly (M_NS_N = I + exterior); what L161.1 asks for and 003_6 lacks
+is the boundary term with C_T. No leakage square appears in (4.2)–(4.3) of 003_6.
 
-**Lema 3 (exactitud fuerza Möbius; pesos de criba; PROVED).** Sea λ real con λ_1 = 1, soporte en d ≤ R,
-M^λ = Σ_{d≤R} λ_d d^{−1/2}τ_{log d} y θ^λ_N(k) = Σ_{d|k, d≤R, k/d≤N} λ_d. Entonces
-M^λS_N = I + Σ_{k>N} θ^λ_N(k)k^{−1/2}τ_{log k} (sin coeficientes en 1 < k ≤ N) si y sólo si, extendiendo
-λ_d := 0 para d > R, se tiene λ_d = μ(d) para todo d ≤ N. (Si R < N esto exige μ(k) = 0 en (R, N], lo que
-ocurre sólo en casos degenerados como R = 3, N = 4; si R ≥ N, los λ_d con d > N quedan libres y sólo tocan
+**Lemma 3 (exactness forces Möbius; sieve weights; PROVED).** Let λ be real with λ_1 = 1, support in d ≤ R,
+M^λ = Σ_{d≤R} λ_d d^{−1/2}τ_{log d} and θ^λ_N(k) = Σ_{d|k, d≤R, k/d≤N} λ_d. Then
+M^λS_N = I + Σ_{k>N} θ^λ_N(k)k^{−1/2}τ_{log k} (no coefficients at 1 < k ≤ N) if and only if, extending
+λ_d := 0 for d > R, one has λ_d = μ(d) for all d ≤ N. (If R < N this requires μ(k) = 0 on (R, N], which
+happens only in degenerate cases such as R = 3, N = 4; if R ≥ N, the λ_d with d > N remain free and only touch
 k > N.)
 
-*Demostración.* Para k ≤ N la condición k/d ≤ N es automática, y θ(k) = Σ_{d|k}λ_d con λ extendida por 0.
-La anulación para 1 < k ≤ N, junto con λ_1 = 1, determina por inducción λ_k = −Σ_{d|k, d<k}λ_d = μ(k) para
-k ≤ N; recíprocamente λ = μ en [1, N] da Σ_{d|k}μ(d) = 0. ∎
+*Proof.* For k ≤ N the condition k/d ≤ N is automatic, and θ(k) = Σ_{d|k}λ_d with λ extended by 0.
+Vanishing for 1 < k ≤ N, together with λ_1 = 1, determines by induction λ_k = −Σ_{d|k, d<k}λ_d = μ(k) for
+k ≤ N; conversely λ = μ on [1, N] gives Σ_{d|k}μ(d) = 0. ∎
 
-Consecuencia para los pesos de Selberg/Barban–Vehov λ_d = μ(d)P(log(R/d)/log R) (P(0) = 0, P(1) = 1): para
-un primo p ≤ min(R, N), θ(p) = 1 − P(log(R/p)/log R) ≠ 0 en general, y la identidad deja de ser «I más
-exterior». Sigue siendo exacta como álgebra, con un bloque interior adicional:
+Consequence for the Selberg/Barban–Vehov weights λ_d = μ(d)P(log(R/d)/log R) (P(0) = 0, P(1) = 1): for
+a prime p ≤ min(R, N), θ(p) = 1 − P(log(R/p)/log R) ≠ 0 in general, and the identity ceases to be "I plus
+exterior". It remains exact as algebra, with an additional interior block:
 
     Re⟨M^λS_NA_MF, F⟩ = a_T(F) + I^λ(F) + R^λ(F),
     I^λ(F) = Σ_{1<k≤N} θ^λ(k)k^{−1/2} Re⟨A_Mτ_{−log k}F, F⟩,
     R^λ(F) = Σ_{k>N} θ^λ(k)k^{−1/2} Re⟨A_Mτ_{−log k}F, F⟩.                                (4.3)
 
-I^λ es una forma de casi-coincidencias dentro de la ventana con coeficientes θ^λ pequeños en media, sin
-signo; R^λ es el resto exterior de 003_6 con c_N sustituido por θ^λ.
+I^λ is a near-coincidence form inside the window with coefficients θ^λ small on average, without
+sign; R^λ is the exterior remainder of 003_6 with c_N replaced by θ^λ.
 
-**El «cuadrado de Selberg» (respuesta a (iii); PROVED como identidad).** La única forma en que el cuadrado
-(Σ_{d|k}λ_d)² entra es con el test M^λS_NF en los dos lados. Con V := M^λS_N − I, para F ∈ P_T liso,
+**The "Selberg square" (answer to (iii); PROVED as an identity).** The only way the square
+(Σ_{d|k}λ_d)² enters is with the test M^λS_NF on both sides. With V := M^λS_N − I, for smooth F ∈ P_T,
 
     ⟨A_M M^λS_NF, M^λS_NF⟩ = a_T(F) + 2 Re⟨A_M VF, F⟩ + ⟨A_M VF, VF⟩,                    (4.4)
 
-cuyo símbolo en la recta es s_M(τ)|M^λ(½+iτ)D_N(½+iτ)|² con coeficientes de Dirichlet θ^λ_N(k). Es decir:
-forma = Q^λ(F) − 2Re⟨A_MVF,F⟩ − ⟨A_MVF,VF⟩ con Q^λ el lado izquierdo de (4.4). Q^λ no es un cuadrado: es la
-forma A_M evaluada en M^λS_NF, que no está en P_T (soporte en [−T, T + log(NR)]); A_M sobre la recta es
-indefinida (R161_002 §2: fondo semilocal negativo). El resto 2Re⟨A_MVF,F⟩ + ⟨A_MVF,VF⟩ es afín en Λ
-(A_M lo es) y cuadrático en λ. La positividad de Selberg Σ_k θ(k)²w(k) ≥ 0 usa una medida w ≥ 0 sobre
-los enteros; aquí el lugar de w lo ocupa s_M, que es el objetivo. Es exactamente la situación de R162_1003
-Cor. 4.3 (congruencia) y de la fase 200 Q1 (tautología). Elegir λ minimizando la parte cuadrática es el
-problema extremal de R162_1003 Prop. 4.1: instala la respuesta.
+whose symbol on the line is s_M(τ)|M^λ(½+iτ)D_N(½+iτ)|² with Dirichlet coefficients θ^λ_N(k). That is:
+form = Q^λ(F) − 2Re⟨A_MVF,F⟩ − ⟨A_MVF,VF⟩ with Q^λ the left-hand side of (4.4). Q^λ is not a square: it is the
+form A_M evaluated at M^λS_NF, which is not in P_T (support in [−T, T + log(NR)]); A_M on the line is
+indefinite (R161_002 §2: negative semilocal background). The remainder 2Re⟨A_MVF,F⟩ + ⟨A_MVF,VF⟩ is affine in Λ
+(A_M is) and quadratic in λ. Selberg positivity Σ_k θ(k)²w(k) ≥ 0 uses a measure w ≥ 0 on
+the integers; here the place of w is taken by s_M, which is the target. This is exactly the situation of R162_1003
+Cor. 4.3 (congruence) and of phase 200 Q1 (tautology). Choosing λ to minimize the quadratic part is the
+extremal problem of R162_1003 Prop. 4.1: it installs the answer.
 
-**Respuesta a (iv): grado en el peso (PROVED).** Con λ fijado sin usar el peso (μ, Selberg, Barban–Vehov,
-GPY, Λ_R: todos se construyen con μ y log sobre los enteros, no con el peso), M^λ, S_N, V, E_N, 𝓕 no
-dependen del peso y A_M^{(c)} = 𝓜 − c(L_M + L_M*). Luego (4.3) y (4.4) son afines en c, con I^λ, R^λ y el
-resto de (4.4) de la forma (bloque independiente) − c·(bloque de primos). El test es independiente del
-peso, así que el Corolario 2 de 003_6 (R3-e) se aplica literalmente a I^λ_1 y R^λ_1: toda afirmación de
-signo sobre ellos por separado vale para todo c > 0 o para ninguno. La parte cuadrática en λ no aumenta el
-grado en el peso: sigue siendo 1. Los pesos de criba no introducen dependencia de grado ≥ 2 en el peso.
+**Answer to (iv): degree in the weight (PROVED).** With λ fixed without using the weight (μ, Selberg, Barban–Vehov,
+GPY, Λ_R: all are built with μ and log on the integers, not with the weight), M^λ, S_N, V, E_N, 𝓕 do not
+depend on the weight and A_M^{(c)} = 𝓜 − c(L_M + L_M*). Hence (4.3) and (4.4) are affine in c, with I^λ, R^λ and the
+remainder of (4.4) of the form (independent block) − c·(prime block). The test is independent of the
+weight, so Corollary 2 of 003_6 (R3-e) applies literally to I^λ_1 and R^λ_1: every sign
+statement about them separately holds for all c > 0 or for none. The part quadratic in λ does not raise the
+degree in the weight: it stays 1. Sieve weights introduce no dependence of degree ≥ 2 on the weight.
 
-Observación (ARGUED). La única manera de que λ dependa del peso de modo no lineal es usar el «Möbius del
-sistema»: para el peso a, μ_a = coeficientes de 1/ζ_a con −ζ_a′/ζ_a = Σ a(n)n^{−s}; para cΛ, ζ_{cΛ} = ζ^c y
-μ_{cΛ} son los coeficientes de ζ^{−c}, no polinomiales en c. Pero entonces el análogo de M_NS_N = I + exterior
-exige S^{(c)} con coeficientes de ζ^c, y L^{(c)}S^{(c)} = K^{(c)} vale para todo c: la anulación interior
-se vuelve una identidad válida para toda la familia (patrón B1), y E_N^{(c)} = S^{(c)}𝓕 − JS^{(c)} pierde
-la estructura de Poisson para c ≠ 1. No se ha escrito; no está excluido.
+Remark (ARGUED). The only way for λ to depend nonlinearly on the weight is to use the "Möbius of the
+system": for the weight a, μ_a = coefficients of 1/ζ_a with −ζ_a′/ζ_a = Σ a(n)n^{−s}; for cΛ, ζ_{cΛ} = ζ^c and
+μ_{cΛ} are the coefficients of ζ^{−c}, not polynomial in c. But then the analogue of M_NS_N = I + exterior
+requires S^{(c)} with coefficients of ζ^c, and L^{(c)}S^{(c)} = K^{(c)} holds for all c: interior vanishing
+becomes an identity valid for the whole family (pattern B1), and E_N^{(c)} = S^{(c)}𝓕 − JS^{(c)} loses
+the Poisson structure for c ≠ 1. Not written; not excluded.
 
-### (5) cΛ y a_P: por qué el resto deja de ser ≥ 0
+### (5) cΛ and a_P: why the remainder stops being ≥ 0
 
-No hay resto ρ con signo: ninguna de (4.1)–(4.4) separa una parte manifiestamente no negativa. Lo único
-que se puede decir con precisión es qué línea cambia:
+There is no signed remainder ρ: none of (4.1)–(4.4) separates a manifestly nonnegative part. The only
+thing that can be said precisely is which line changes:
 
-- **cΛ, c ≠ 1.** Lema 1: los pesos no dependen de Λ, la identidad trivial a_T = a_T se rompe sólo en el
-  sentido trivial. (4.3)–(4.4): todos los bloques que ven primos se multiplican por c; un signo de un bloque
-  separado sobrevive a todo c > 0 (R3-e), luego no puede ser el paso de signo.
-- **a_P, P > N.** Lema 3 y Prop. 2 no dependen del peso; en (4.3) cambian I^λ_1 y R^λ_1 (pierden los
-  términos con d < P y no son proporcionales a los de Λ). Como ninguno de ellos tiene signo escrito, no hay
-  «resto que deje de ser ≥ 0» que señalar.
+- **cΛ, c ≠ 1.** Lemma 1: the weights do not depend on Λ, the trivial identity a_T = a_T breaks only in the
+  trivial sense. (4.3)–(4.4): all blocks that see primes are multiplied by c; a sign of a separate block
+  survives every c > 0 (R3-e), hence cannot be the sign step.
+- **a_P, P > N.** Lemma 3 and Prop. 2 do not depend on the weight; in (4.3) I^λ_1 and R^λ_1 change (they lose the
+  terms with d < P and are not proportional to those of Λ). Since none of them has a written sign, there is no
+  "remainder that stops being ≥ 0" to point to.
 
-## Resultado
+## Result
 
-Sin mecanismo nuevo. Repetición en lo esencial para (iii) (fase 200 Q1–Q3 y escalera Q2, MULT_GAUGE R-MOM,
-GG_001, R162_1003 §4). Se añaden tres lemas de formato PROVED, sin signo, que cierran la rama con signo de
-L161.1 en su clase algebraica y responden (i) negativamente.
+No new mechanism. Essentially a repetition for (iii) (phase 200 Q1–Q3 and the Q2 ladder, MULT_GAUGE R-MOM,
+GG_001, R162_1003 §4). Three PROVED format lemmas are added, without sign, which close the signed branch of
+L161.1 in its algebraic class and answer (i) negatively.
 
-## Qué se probó
+## What was proved
 
-1. Lema 1 (PROVED): en la clase 𝒞_w (pesos escalares reales finitos en N, test S_N𝓕F, telescopado exacto
-   de coeficientes interiores), el único peso es δ_{N=1} y la identidad es a_T = a_T. Corolario (PROVED):
-   telescopar el interior (Σw = 1) y cancelar la cola de hipérbola en los primos grandes (Σw = 0) son
-   incompatibles. La derivada discreta en N es la PC de un solo traslado y no contiene a_T.
-2. Proposición 2 (PROVED, Bertrand CITED): la identidad de Möbius truncado de 003_6 no es instancia de
-   L161.1 para ningún peso con signo; c_N(2p) = −2 es el testigo.
-3. Lema 3 (PROVED): M^λS_N = I + exterior exactamente si y sólo si λ = μ en [1, N]. Pesos de Selberg o
-   Barban–Vehov añaden el bloque interior I^λ de (4.3). La versión cuadrática (4.4) da A_M sobre vectores
-   fuera de P_T, no un cuadrado.
-4. (iv) (PROVED): con pesos de criba fijados sin el peso, todo es afín en c; R3-e se aplica literalmente.
+1. Lemma 1 (PROVED): in the class 𝒞_w (finite real scalar weights in N, test S_N𝓕F, exact telescoping
+   of interior coefficients), the only weight is δ_{N=1} and the identity is a_T = a_T. Corollary (PROVED):
+   telescoping the interior (Σw = 1) and cancelling the hyperbola tail at large primes (Σw = 0) are
+   incompatible. The discrete derivative in N is the single-translation PC and does not contain a_T.
+2. Proposition 2 (PROVED, Bertrand CITED): the truncated Möbius identity of 003_6 is not an instance of
+   L161.1 for any signed weight; c_N(2p) = −2 is the witness.
+3. Lemma 3 (PROVED): M^λS_N = I + exterior exactly if and only if λ = μ on [1, N]. Selberg or
+   Barban–Vehov weights add the interior block I^λ of (4.3). The quadratic version (4.4) gives A_M on vectors
+   outside P_T, not a square.
+4. (iv) (PROVED): with sieve weights fixed without the weight, everything is affine in c; R3-e applies literally.
 
-## Qué falló y por qué
+## What failed and why
 
-- L161.1 fija sus pesos por una condición que no ve Λ y que sólo admite la solución trivial (Lema 1).
-- La positividad de Selberg necesita una medida positiva sobre los enteros; en la forma esa medida es s_M,
-  el propio objetivo (Cor. 4.3 de R162_1003).
-- Los pesos de criba o de Möbius son de grado 0 en el peso; la identidad queda afín (R3-e).
+- L161.1 fixes its weights by a condition that does not see Λ and admits only the trivial solution (Lemma 1).
+- Selberg positivity needs a positive measure on the integers; in the form that measure is s_M,
+  the target itself (Cor. 4.3 of R162_1003).
+- Sieve or Möbius weights are of degree 0 in the weight; the identity stays affine (R3-e).
 
-NO excluido (sin objeto escrito):
-1. tests no de la forma S_N𝓕F o M^λ*F, y pesos que dependan de F;
-2. telescopado tras la compresión a la ventana, con los cuadrados de fuga de C_T (ninguna identidad de
-   este memo los produce; la contabilidad conjunta R161_032 (4.2) sigue sin derivar);
-3. el «Möbius del sistema» μ_a (no polinomial en c), con su E_N^{(a)} sin Poisson para c ≠ 1;
-4. el bloque interior I^λ de (4.3) como forma de casi-coincidencias con coeficientes θ^λ de criba: su
-   signo no se examinó; por R3-e no puede dar signo por separado si λ no depende del peso.
+NOT excluded (no object written):
+1. tests not of the form S_N𝓕F or M^λ*F, and weights depending on F;
+2. telescoping after compression to the window, with the leakage squares of C_T (no identity of
+   this memo produces them; the joint accounting R161_032 (4.2) remains underived);
+3. the "Möbius of the system" μ_a (not polynomial in c), with its E_N^{(a)} without Poisson for c ≠ 1;
+4. the interior block I^λ of (4.3) as a near-coincidence form with sieve coefficients θ^λ: its
+   sign was not examined; by R3-e it cannot give a sign separately if λ does not depend on the weight.
 
-## Siguiente paso concreto
+## Concrete next step
 
-No construir en esta zona. Anotar en índice y grid: «Fase 212, ronda 4A: L161.1 con pesos con signo en N:
-NO-GO con clase 𝒞_w PROVED (telescopado exacto fuerza w = δ_1, identidad tautológica; incompatible con la
-cancelación de la cola); la identidad de Möbius truncado de 003_6 no es instancia de L161.1 (Prop. 2);
-exactitud de M^λS_N = I + exterior ⟺ λ = μ en [1, N]; pesos de Selberg/Barban–Vehov dan bloque interior
-y forma afín en c (R3-e). Repetición de fase 200 Q1–Q3, R-MOM, GG_001 y R162_1003 §4 para (iii). Signo
-global OPEN.» Un segundo lector debe verificar (4.1) (𝓕A_M𝓕 = A_M, que depende de las convenciones de
-R161_001 §1) y el cálculo de coeficientes (4.2).
+Do not build in this zone. Record in index and grid: "Phase 212, round 4A: L161.1 with signed weights in N:
+NO-GO with class 𝒞_w PROVED (exact telescoping forces w = δ_1, tautological identity; incompatible with
+cancelling the tail); the truncated Möbius identity of 003_6 is not an instance of L161.1 (Prop. 2);
+exactness of M^λS_N = I + exterior ⟺ λ = μ on [1, N]; Selberg/Barban–Vehov weights give an interior block
+and a form affine in c (R3-e). Repetition of phase 200 Q1–Q3, R-MOM, GG_001 and R162_1003 §4 for (iii). Global
+sign OPEN." A second reading should verify (4.1) (𝓕A_M𝓕 = A_M, which depends on the conventions of
+R161_001 §1) and the coefficient computation (4.2).

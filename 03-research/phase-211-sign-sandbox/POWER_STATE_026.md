@@ -1,30 +1,30 @@
-# Estado026 — Corte uniforme y balance conjunto firmado
+# State026 — Uniform cutoff and signed joint balance
 
-Estado: resultados parciales PROVED y auditados; signo global de W OPEN. Sustituye STATE025 como resumen vigente. Goal activo; papers intactos.
+Status: partial results PROVED and audited; global sign of W OPEN. Replaces STATE025 as the current summary. Goal active; papers untouched.
 
-## Corte uniforme, sin extrapolar certificados
+## Uniform cutoff, without extrapolating certificates
 
-POWER_UNIFORM_CUTOFF_026 demuestra para d=N−1>=2 dos cortes:
+POWER_UNIFORM_CUTOFF_026 proves for d=N−1>=2 two cutoffs:
 
     t_J=d(d+220)/(330d+6300),
     M=u²/(2d−1), Q=sqrt(9/4+M), t_R=2dQ/(u²−Q²), u=63/2.
 
-Para t>=min(t_J,t_R), D_N'/D_N<=30. Por ello la suma Möbius COMPLETA satisface K_N(x)>=x^-32 D_N(logx)/4>0 cuando logx supera ese corte. Ambos cortes son d/330+O(1), mejorando el anterior d/30. El caso N2 se trata mediante el polinomio afín. Jensen sobre los coeficientes y barreras elementales de Riccati proporcionan pruebas uniformes, no una campaña de filas.
+For t>=min(t_J,t_R), D_N'/D_N<=30. Hence the FULL Möbius sum satisfies K_N(x)>=x^-32 D_N(logx)/4>0 when logx exceeds that cutoff. Both cutoffs are d/330+O(1), improving the earlier d/30. The case N2 is treated through the affine polynomial. Jensen on the coefficients and elementary Riccati barriers provide uniform proofs, not a campaign over rows.
 
-Además K_N(x)>0 para TODOS 2<=N<=129 y x>=exp(2/3). La monotonía de la fórmula y dos comprobaciones racionales de extremos prueban el rango. Todas las celdas enteras contenidas en la cola tienen balance favorable y una cota gamma explícita. El interior sigue pendiente y crece con N.
+Moreover K_N(x)>0 for ALL 2<=N<=129 and x>=exp(2/3). Monotonicity of the formula and two rational endpoint checks prove the range. All integer cells contained in the tail have favourable balance and an explicit gamma bound. The interior remains pending and grows with N.
 
-## La comparación pendiente no queda resuelta por ERR129
+## The pending comparison is not resolved by ERR129
 
-POWER_ARCH_CELL_026 demuestra ARCH_sharp129/norma²<−.81. El beneficio garantizado por ERR129<−.66 no basta para certificar W129: sumar solamente .66 deja un comparador menor que −.15. NO es una cota superior de W ni un contraejemplo; el beneficio real puede ser mayor.
+POWER_ARCH_CELL_026 proves ARCH_sharp129/norm²<−.81. The benefit guaranteed by ERR129<−.66 does not suffice to certify W129: adding only .66 leaves a comparator less than −.15. It is NOT an upper bound for W nor a counterexample; the real benefit may be larger.
 
-La agrupación exacta W[g_N]/norma²=int K_N(t)Omega(t)dt conserva ARCH_sharp y todos los términos aritméticos. Sin embargo Omega(3/2)<−.1, demostrado exactamente. Queda refutada solamente la positividad puntual universal de ese peso. Las restricciones de K_N procedente de la autocorrelación gamma no se eliminan y pueden controlar el emparejamiento firmado.
+The exact grouping W[g_N]/norm²=int K_N(t)Omega(t)dt keeps ARCH_sharp and all arithmetic terms. However Omega(3/2)<−.1, proved exactly. Only universal pointwise positivity of that weight is refuted. The restrictions on K_N coming from the gamma autocorrelation are not eliminated and may control the signed pairing.
 
-## Evidencia y alcance
+## Evidence and scope
 
-POWER_ARCH_CELL_AUDIT_026 aprueba ambas pruebas, incluido Fubini agrupado, barreras Riccati y colas completas. Root leyó ambos textos y reprodujo los dos verificadores Fraction: PASS. No se atribuye uniformidad a los scripts: la proporcionan las demostraciones.
+POWER_ARCH_CELL_AUDIT_026 approves both proofs, including grouped Fubini, Riccati barriers and full tails. Both texts were read and the two Fraction verifiers reproduced: PASS. Uniformity is not attributed to the scripts: the proofs provide it.
 
-La cobertura de W permanece sin cambios: filas N1,2,3 para todo k, cono k>=10000N², ocho polos arbitrarios y bloque fijo12. El puente escalar017 exige TODOS N,k. No hay una nueva ventana T certificada ni cierre del signo global.
+The coverage of W remains unchanged: rows N1,2,3 for all k, cone k>=10000N², eight arbitrary poles and fixed block12. The scalar bridge017 requires ALL N,k. There is no new certified window T nor closure of the global sign.
 
-## Continuación027
+## Continuation027
 
-Buscar una desigualdad del balance conjunto que use la forma gamma real y su curvatura, conservando cancelaciones. Las masas integrales o discretas aisladas y la positividad exterior no sustituyen el control interior. Dos constructores continúan, con revisión independiente; no se reintenta positividad puntual universal de K ni Omega.
+Look for an inequality of the joint balance that uses the real gamma form and its curvature, keeping cancellations. Isolated integral or discrete masses and exterior positivity do not replace interior control. Two constructions continue, with independent review; universal pointwise positivity of K or Omega is not retried.

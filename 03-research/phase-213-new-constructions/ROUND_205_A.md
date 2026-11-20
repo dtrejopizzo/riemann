@@ -1,21 +1,21 @@
-# Un cono completo en la tabla escalar y 10¹⁵ filas enteras
+# A complete cone in the scalar table and 10¹⁵ entire rows
 
-En POWER_SCALAR_BRIDGE_017 fijar u=63/2 y F(s)=s^k/(s+u)^(N+k), N≥1, k≥0 enteros. Para la forma completa W se prueba:
+In POWER_SCALAR_BRIDGE_017 fix u=63/2 and F(s)=s^k/(s+u)^(N+k), N≥1, k≥0 integers. For the complete form W it is proved:
 
-1. W(f)>0 para TODO N si k≤10¹⁹N.
-2. W(f)>0 para TODO k si N≤10¹⁵.
+1. W(f)>0 for ALL N if k≤10¹⁹N.
+2. W(f)>0 for ALL k if N≤10¹⁵.
 
-No hay un límite en el grado total N+k del primer enunciado. La segunda conclusión completa filas de la tabla suficiente de 017; no afirma positividad de todo numerador del mismo grado.
+There is no limit on the total degree N+k in the first statement. The second conclusion completes rows of the sufficient table of 017; it does not claim positivity of every numerator of the same degree.
 
-**Costo de la cola sin una estimación de grado.** Usar la identidad espectral de 201, válida para cada F de grado finito. Escribir G=3·10¹². En los dos puntos s=±δ+iγ de cada término, |δ|≤1/2 y |s+u|²−|s|²=u²+2u Re s≥u(u−1)>0. Así |F(s)|≤|γ|^(−N) independientemente de k. Para N≥2 la suma absoluta de toda la cola |γ|>G es <10¹⁷ G^(−2N). En efecto en las bandas diádicas B<|γ|≤2B con B=2^jG, Z3 por resta de extremos da menos de 2B log(2B) ceros contando ambos signos (la derivada principal es ≤log(2B)/(2π) y ambos errores por extremo son ≤log(2B)). Pagando B^(−2N) y sumando, el factor después de extraer G^(−2N) es ≤2G Σ_{j≥0}2^(−3j)log(2^(j+1)G)<10¹⁷.
+**Cost of the tail without a degree estimate.** Use the spectral identity of 201, valid for each F of finite degree. Write G=3·10¹². At the two points s=±δ+iγ of each term, |δ|≤1/2 and |s+u|²−|s|²=u²+2u Re s≥u(u−1)>0. Thus |F(s)|≤|γ|^(−N) independently of k. For N≥2 the absolute sum of the whole tail |γ|>G is <10¹⁷ G^(−2N). Indeed on the dyadic bands B<|γ|≤2B with B=2^jG, Z3 by subtraction of endpoints gives fewer than 2B log(2B) zeros counting both signs (the main derivative is ≤log(2B)/(2π) and both endpoint errors are ≤log(2B)). Paying B^(−2N) and summing, the factor after extracting G^(−2N) is ≤2G Σ_{j≥0}2^(−3j)log(2^(j+1)G)<10¹⁷.
 
-**Un cuadrado verificado paga todo ese costo.** Por Z3 hay al menos una ordenada t₀∈[G/2,0.51G]: el incremento principal es ≥0.01G·log(G/(4π))/(2π), y la pérdida en los dos errores es ≤2 log G. Por Z2 su contribución es |F(it₀)|², y todas las demás hasta G son no negativas. Exactamente
+**One verified square pays all that cost.** By Z3 there is at least one ordinate t₀∈[G/2,0.51G]: the main increment is ≥0.01G·log(G/(4π))/(2π), and the loss in the two errors is ≤2 log G. By Z2 its contribution is |F(it₀)|², and all others up to G are nonnegative. Exactly
 
     |F(it₀)|²=t₀^(−2N)(1+u²/t₀²)^(−N−k)
             ≥G^(−2N) exp[2N log(1/0.51)−4u²(N+k)/G²].
 
-Si k≤10¹⁹N, el exponente es >1.3N, por los valores declarados de u y G. Para N≥100 se tiene exp(1.3N)>10¹⁷. La desigualdad resultante es estricta para la forma completa. No se localiza un cero concreto más allá de Z2 ni se supone el signo individual de la cola.
+If k≤10¹⁹N, the exponent is >1.3N, by the declared values of u and G. For N≥100 one has exp(1.3N)>10¹⁷. The resulting inequality is strict for the complete form. No specific zero beyond Z2 is located, nor is the individual sign of the tail assumed.
 
-**Empalme.** Para 2≤N<100 y k<10000N², el grado de denominador N+k es <10⁸; por 204 el bloque completo es positivo. Para k≥10000N² y N≥2, POWER_QUADRATIC_EXPLICIT_017 demuestra directamente el signo del átomo (resumido en POWER_STATE_018). N=1 ya está cubierto para todo k por POWER. Esto completa el primer enunciado. Cuando N≤10¹⁵ se cumple 10000N²≤10¹⁹N, y los dos conos cubren todos los enteros k. La mejora no procede de extrapolar filas consecutivas.
+**Splicing.** For 2≤N<100 and k<10000N², the denominator degree N+k is <10⁸; by 204 the complete block is positive. For k≥10000N² and N≥2, POWER_QUADRATIC_EXPLICIT_017 directly proves the sign of the atom (summarized in POWER_STATE_018). N=1 is already covered for all k by POWER. This completes the first statement. When N≤10¹⁵ one has 10000N²≤10¹⁹N, and the two cones cover all integers k. The improvement does not come from extrapolating consecutive rows.
 
-**Región que queda.** Para cerrar el puente por estos dos conos bastaría demostrar signo para N>10¹⁵ y 10¹⁹N<k<10000N². Otros resultados del corpus ya cubren parte de esa región, por ejemplo POWER_SUBQUADRATIC_COROLLARY_048 en su rango asintótico. Las constantes del nuevo cono son deliberadamente conservadoras. La cota absoluta de cola por sí sola deja de ser informativa cuando el amortiguamiento de (1+u²/t₀²)^(−k) vence la ventaja (G/t₀)^(2N). No se deduce un piso relativo uniforme al crecer los índices.
+**Remaining region.** To close the bridge by these two cones it would suffice to prove the sign for N>10¹⁵ and 10¹⁹N<k<10000N². Other results of the corpus already cover part of that region, for example POWER_SUBQUADRATIC_COROLLARY_048 in its asymptotic range. The constants of the new cone are deliberately conservative. The absolute tail bound alone stops being informative when the damping of (1+u²/t₀²)^(−k) beats the advantage (G/t₀)^(2N). No uniform relative floor as the indices grow is deduced.

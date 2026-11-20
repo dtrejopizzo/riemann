@@ -1,29 +1,29 @@
-# Diagnóstico sin núcleo: el error ordinario en cada banda de potencias
+# Kernel-free diagnosis: the ordinary error on each power band
 
-Sea E(x)=ψ(x)−x+1 para x≥1 y B=sup_ρ |Re ρ−1/2|. Para cada 0<α<1 fijo se tiene el límite ordinario
+Let E(x)=ψ(x)−x+1 for x≥1 and B=sup_ρ |Re ρ−1/2|. For each fixed 0<α<1 one has the ordinary limit
 
     lim_(X→∞) log(1+∫_(X^α)^X E(x)² dx/x²)/log X = 2B.
 
-En particular bastaría un techo X^o(1) para esa media en una sucesión X→∞, para un solo α fijo. La afirmación vale aunque no exista un cero extremo. Reemplazar E por ψ−x conserva el límite por desigualdad triangular en L²(dx/x²), ya que la diferencia tiene norma acotada. Es una consecuencia sobre medias del error clásico, no una cota aritmética nueva para B.
+In particular a ceiling X^o(1) for that mean along a sequence X→∞, for a single fixed α, would suffice. The statement holds even if there is no extreme zero. Replacing E by ψ−x preserves the limit by the triangle inequality in L²(dx/x²), since the difference has bounded norm. It is a consequence about means of the classical error, not a new arithmetic bound for B.
 
-**Quitar la acumulación ponderada de 228.** Escribir t=log x, T=2N, g=g_N, F(t)=exp(−t/2)P_N(exp t), Y(t)=exp(−t/2)g(t)E(exp t). En [0,T], integración por partes contra dE da
+**Removing the weighted accumulation of 228.** Write t=log x, T=2N, g=g_N, F(t)=exp(−t/2)P_N(exp t), Y(t)=exp(−t/2)g(t)E(exp t). On [0,T], integration by parts against dE gives
 
     F(t)=Y(t)+∫₀ᵗ exp(−(t−s)/2) (s/(2N))Y(s)ds.
 
-A la inversa, integrar g⁻¹ contra dP_N y multiplicar por exp(−t/2)g(t): Y=F menos el mismo operador aplicado a F, con factor adicional g(t)/g(s)≤1. No hay término inicial porque E(1)=0. Como s/(2N)≤1, ambas normas L² en [0,T] se mayoran entre sí con factor 3 por Young. En la cola de 228, ∫_X^∞P_N(r)²dr/r²=F(T)² con X=exp(T). En el extremo Y(T)=O(1/√N) por Chebyshev; la convolución que se añade en F(T) cuesta O(||Y||₂) por Cauchy–Schwarz. Además ∫dν_N(x)/x=∫P_N(r)dr/r², cuyo cuadrado está dominado por ∫P_N(r)²dr/r². En un intervalo fijo próximo y a la derecha de 1 donde E(x)=1−x, se ve ||Y||₂²≳1/N. Así V_N de 228 es comparable, con constantes absolutas, a ||Y||₂². Al extender el integral de |Y|² sin corte hasta t=∞, Chebyshev da para la cola O(1/N) por t−t²/(2N)≤−(t−2N) si t≥2N. En consecuencia, poniendo dμ(t)=exp(−t)E(exp t)²dt,
+Conversely, integrate g⁻¹ against dP_N and multiply by exp(−t/2)g(t): Y=F minus the same operator applied to F, with the additional factor g(t)/g(s)≤1. There is no initial term because E(1)=0. Since s/(2N)≤1, both L² norms on [0,T] bound each other with factor 3 by Young. In the tail of 228, ∫_X^∞P_N(r)²dr/r²=F(T)² with X=exp(T). At the endpoint Y(T)=O(1/√N) by Chebyshev; the convolution added in F(T) costs O(||Y||₂) by Cauchy–Schwarz. Moreover ∫dν_N(x)/x=∫P_N(r)dr/r², whose square is dominated by ∫P_N(r)²dr/r². On a fixed interval near and to the right of 1 where E(x)=1−x, one sees ||Y||₂²≳1/N. Thus V_N of 228 is comparable, with absolute constants, to ||Y||₂². On extending the integral of |Y|² without cut up to t=∞, Chebyshev gives O(1/N) for the tail by t−t²/(2N)≤−(t−2N) if t≥2N. Consequently, setting dμ(t)=exp(−t)E(exp t)²dt,
 
     W(N)=∫₀^∞ exp(−t²/(2N)) dμ(t),       log W(N)/N→2B².
 
-El factor 4πN retirado es sólo polinomial. Por monotonía de W, el límite se extiende de enteros a N real positivo.
+The removed factor 4πN is only polynomial. By monotonicity of W, the limit extends from integers to positive real N.
 
-**En qué escala se concentra la energía.** Si B>0, para cada 0<ε<2B, la fracción de W(N) en |t/N−2B|≥ε decae exponencialmente. Para t≥(2B+ε)N comparar con W((1+h)N): el logaritmo del cociente con W(N), dividido por N, tiene limsup a lo sumo
+**At which scale the energy concentrates.** If B>0, for each 0<ε<2B, the fraction of W(N) in |t/N−2B|≥ε decays exponentially. For t≥(2B+ε)N compare with W((1+h)N): the logarithm of the ratio with W(N), divided by N, has limsup at most
 
     2B² h − h(2B+ε)²/[2(1+h)] < 0
 
-si h>0 es suficientemente pequeño. Para t≤(2B−ε)N comparar con W((1−h)N); el techo correspondiente es −2B²h+h(2B−ε)²/[2(1−h)]<0. Sólo se usa positividad de μ y el límite ordinario de 228.
+if h>0 is sufficiently small. For t≤(2B−ε)N compare with W((1−h)N); the corresponding ceiling is −2B²h+h(2B−ε)²/[2(1−h)]<0. Only positivity of μ and the ordinary limit of 228 are used.
 
-**Quitar la gaussiana.** Poner L=log X. Si B>0, con N=L/(2B) se tiene μ([0,L])≤exp(L²/(2N))W(N), de tasa superior 2B por unidad de L. Si B=0 tomar N=cL y hacer c→∞ para obtener tasa superior cero. El 1 del enunciado da el piso en este último caso.
+**Removing the Gaussian.** Set L=log X. If B>0, with N=L/(2B) one has μ([0,L])≤exp(L²/(2N))W(N), of upper rate 2B per unit of L. If B=0 take N=cL and let c→∞ to obtain upper rate zero. The 1 in the statement gives the floor in this last case.
 
-Para el piso cuando B>0 fijar α<λ<1 y tomar N=λL/(2B). Elegir ε suficientemente pequeño para que [(2B−ε)N,(2B+ε)N] esté dentro de [αL,L]. Ese intervalo recibe (1−o(1))W(N) con la gaussiana. Al retirarla su masa sin peso es al menos exp((2B−ε)²N/2)(1−o(1))W(N). Por tanto el límite inferior por unidad de L es ≥λ[2B²+(2B−ε)²/2]/(2B). Hacer ε↓0 y después λ↑1 concluye para TODOS los X grandes, sin seleccionar alturas favorables.
+For the floor when B>0 fix α<λ<1 and take N=λL/(2B). Choose ε sufficiently small so that [(2B−ε)N,(2B+ε)N] lies inside [αL,L]. That interval receives (1−o(1))W(N) with the Gaussian. On removing it, its unweighted mass is at least exp((2B−ε)²N/2)(1−o(1))W(N). Hence the lower limit per unit of L is ≥λ[2B²+(2B−ε)²/2]/(2B). Letting ε↓0 and then λ↑1 concludes for ALL large X, without selecting favourable heights.
 
-**Consecuencia para la búsqueda.** Si B>0, para cada α y cada η>0, en toda banda [X^α,X] suficientemente alta hay un punto x con |E(x)|/√x≥X^(B−η), pues la longitud de la banda en t es sólo (1−α)log X. No se afirma lo mismo para bandas [X,2X]. La transferencia inversible muestra que separar el acumulado de 228 de su gaussiana no aporta una desigualdad adicional. El paso nuevo respecto de 219 (control uniforme puntual en todas las celdas) es que aquí basta UNA subsucesión de medias cuadráticas en bandas de potencias. No se establece ese techo para ninguna subsucesión ni prioridad frente a la literatura tauberiana.
+**Consequence for the search.** If B>0, for each α and each η>0, on every sufficiently high band [X^α,X] there is a point x with |E(x)|/√x≥X^(B−η), since the length of the band in t is only (1−α)log X. The same is not claimed for bands [X,2X]. The invertible transfer shows that separating the accumulation of 228 from its Gaussian does not provide an additional inequality. The new step relative to 219 (uniform pointwise control on all cells) is that here ONE subsequence of quadratic means on power bands suffices. That ceiling is not established for any subsequence, nor is priority claimed relative to the Tauberian literature.

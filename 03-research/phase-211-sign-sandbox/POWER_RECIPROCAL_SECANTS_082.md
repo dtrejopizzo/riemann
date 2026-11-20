@@ -1,135 +1,135 @@
-# POWER_RECIPROCAL_SECANTS_082 — Dos concavidades recíprocas para orden tres
+# POWER_RECIPROCAL_SECANTS_082 — Two reciprocal concavities for order three
 
-Estado: **PROVED como criterio algebraico, auditoría final de mapa aprobada.** Véase `POWER_RECIPROCAL_SECANTS_AUDIT_082.md`. Identidades y signos comprobados independientemente por root e insight048. No se afirma su descarga para todos los restos G_p, preservación por Schur, ni positividad de todos los órdenes. Papers intactos.
+Status: **PROVED as an algebraic criterion, final audit passed.** See `POWER_RECIPROCAL_SECANTS_AUDIT_082.md`. Identities and signs checked independently twice. No claim is made of its discharge for all remainders G_p, preservation under Schur, or positivity of all orders. Papers untouched.
 
-## 1. Consulta y diferencia precisa
+## 1. Consultation and precise difference
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D; cotejados POWER_SCHUR_003, POWER_TWO_COPY_SCOPE_074, POWER_THREE_SECANTS_079 y POWER_SCHUR_BASE_OBSTRUCTION_081.003/074 refutan inferencias desde pares o desde hipótesis genéricas de concavidad.079 prueba orden tres bajo BASE073 más una concavidad adicional;081 prueba que el resto REAL G_p no hereda esa BASE, porque su derivada puede ser negativa.
+Consulted the project rules, ROUTES-TRIED-INDEX/README, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D; cross-checked POWER_SCHUR_003, POWER_TWO_COPY_SCOPE_074, POWER_THREE_SECANTS_079 and POWER_SCHUR_BASE_OBSTRUCTION_081.003/074 refute inferences from pairs or from generic concavity hypotheses.079 proves order three under BASE073 plus an additional concavity;081 proves that the REAL remainder G_p does not inherit that BASE, because its derivative can be negative.
 
-El objeto nuevo es un criterio simétrico bajo F↔1/F que NO exige F creciente ni cóncava. Dentro de la clase de pares estrictamente positivos, dos concavidades en x=u² son necesarias y suficientes para todos los triples. El criterio permite las derivadas negativas de081. No se presenta como una solución de la obligación de probar esas concavidades para los restos reales.
+The new object is a criterion symmetric under F↔1/F that does NOT require F increasing or concave. Within the class of strictly positive pairs, two concavities in x=u² are necessary and sufficient for all triples. The criterion allows the negative derivatives of081. It is not presented as a solution of the obligation to prove those concavities for the real remainders.
 
-## 2. Definiciones y enunciado
+## 2. Definitions and statement
 
-Sea I un intervalo de números positivos, y F:I→(0,infinito) continua. Definir
+Let I be an interval of positive numbers, and F:I→(0,infinity) continuous. Define
 
     K_F(u,v)=[F(u)+F(v)]/(u+v),
     x=u², R(x)=u/F(u), S(x)=uF(u)=x/R(x).
 
-Para nodos distintos x_i, la notación R[x1,x2] y R[x1,x2,x3] indica diferencias divididas usuales, sin un factorial adicional. Suponer que TODOS los bloques de dos nodos distintos de K_F son definidos positivos. Entonces son equivalentes:
+For distinct nodes x_i, the notation R[x1,x2] and R[x1,x2,x3] denotes the usual divided differences, without an additional factorial. Suppose ALL blocks of two distinct nodes of K_F are positive definite. Then the following are equivalent:
 
-1. Todos los bloques de tres nodos de K_F son semidefinidos positivos.
-2. R y S son cóncavas en el intervalo de cuadrados I².
+1. All blocks of three nodes of K_F are positive semidefinite.
+2. R and S are concave on the interval of squares I².
 
-Para un triple distinto, la definición positiva equivale a que AMBAS diferencias divididas de orden dos sean estrictamente negativas. La concavidad estricta de ambas funciones es suficiente para todos los triples distintos definidos positivos; no se sustituye por una afirmación sobre sus derivadas segundas estrictas si sólo hay regularidad continua.
+For a distinct triple, positive definiteness is equivalent to BOTH second-order divided differences being strictly negative. Strict concavity of both functions is sufficient for all distinct triples to be positive definite; it is not replaced by a claim about their strict second derivatives if there is only continuous regularity.
 
-## 3. Identidad normalizada de orden dos
+## 3. Normalized identity of order two
 
-Para 0<u<v en I, poner x1=u²,x2=v² y Ri=R(xi). Una expansión directa da
+For 0<u<v in I, set x1=u²,x2=v² and Ri=R(xi). A direct expansion gives
 
     det K_F(u,v)
        =(u−v)²/(R1R2) · R[x1,x2] S[x1,x2].          (DET2)
 
-En efecto, al hacer la congruencia diag(R1,R2), el numerador de su determinante es
+Indeed, performing the congruence diag(R1,R2), the numerator of its determinant is
 
     (R2−R1)(v²R1−u²R2)/(u+v)².
 
-Los dos factores R2−R1 y v²R1−u²R2 no pueden ser ambos negativos: eso exigiría R2<R1 y R2/R1>v²/u²>1. Por tanto la hipótesis de pares estrictamente positivos equivale a
+The two factors R2−R1 and v²R1−u²R2 cannot both be negative: that would require R2<R1 and R2/R1>v²/u²>1. Hence the hypothesis of strictly positive pairs is equivalent to
 
-    R[x1,x2]>0, S[x1,x2]>0, TODOS x1<x2.             (PAIR)
+    R[x1,x2]>0, S[x1,x2]>0, ALL x1<x2.             (PAIR)
 
-En particular R y S son estrictamente crecientes. No se deduce que F sea creciente.
+In particular R and S are strictly increasing. It does not follow that F is increasing.
 
-## 4. Secantes de un triple
+## 4. Secants of a triple
 
-Fijar 0<u<v<w en I y escribir Hi=R(ui²), (u1,u2,u3)=(u,v,w). Definir
+Fix 0<u<v<w in I and write Hi=R(ui²), (u1,u2,u3)=(u,v,w). Define
 
     beta=(H2−H1)/(v²−u²)>0,
     delta_R=beta−(H3−H2)/(w²−v²),
     alpha=H1−beta u².
 
-PAIR para S da
+PAIR for S gives
 
     alpha=[v²H1−u²H2]/(v²−u²)>0.
 
-No se necesita la desigualdad alpha>beta uv de079: aquella expresaba que F era creciente. Los datos se parametrizan exactamente como
+The inequality alpha>beta uv of079 is not needed: it expressed that F was increasing. The data are parametrized exactly as
 
     H1=alpha+beta u²,
     H2=alpha+beta v²,
     H3=alpha+beta w²−delta_R(w²−v²).
 
-Definir también
+Define also
 
     delta_S=(S(v²)−S(u²))/(v²−u²)
              −(S(w²)−S(v²))/(w²−v²).
 
-S(x)=x/R(x) y denominadores Hi>0 dan la identidad
+S(x)=x/R(x) and denominators Hi>0 give the identity
 
     delta_S={alpha beta(w²−u²)
                 −delta_R[alpha w²+beta u²v²]}/(H1H2H3). (RECIPROCAL)
 
-Esta identidad se verifica multiplicando por H1H2H3 y sustituyendo los tres valores Hi; sólo quedan productos polinómicos.
+This identity is verified by multiplying by H1H2H3 and substituting the three values Hi; only polynomial products remain.
 
-En particular, si delta_R<=0, RECIPROCAL da delta_S>0. Ambos defectos nunca son no positivos a la vez. Esto es el punto de signo adicional que no contiene por sí sola una factorización del determinante.
+In particular, if delta_R<=0, RECIPROCAL gives delta_S>0. Both defects are never nonpositive at the same time. This is the additional sign point that a factorization of the determinant does not contain by itself.
 
-## 5. Identidad normalizada de orden tres
+## 5. Normalized identity of order three
 
-Poner D=diag(H1,H2,H3) y T=DK_FD. Entonces
+Set D=diag(H1,H2,H3) and T=DK_FD. Then
 
     T_ij=[ui Hj+uj Hi]/(ui+uj), T_ii=Hi.
 
-La expansión polinómica de079, ahora sin su hipótesis BASE, da
+The polynomial expansion of079, now without its BASE hypothesis, gives
 
     det T=delta_R (u−v)²(v−w)²/(u+w)²
        ·{alpha beta(w²−u²)
                   −delta_R[alpha w²+beta u²v²]}.
 
-Usando RECIPROCAL y det T=(H1H2H3)² det K_F,
+Using RECIPROCAL and det T=(H1H2H3)² det K_F,
 
     det K_F=delta_R delta_S/(H1H2H3)
                         ·(u−v)²(v−w)²/(u+w)².       (SECANTS)
 
-Como
+Since
 
     delta_R=−(w²−u²)R[u²,v²,w²],
     delta_S=−(w²−u²)S[u²,v²,w²],
 
-se obtiene la forma simétrica
+one obtains the symmetric form
 
     det K_F(u,v,w)
        =Vandermonde(u,v,w)²/(H1H2H3)
           ·R[u²,v²,w²] S[u²,v²,w²],                (DET3)
 
-donde Vandermonde(u,v,w)=(v−u)(w−u)(w−v). No queda un factor (u+w) en DET3: se cancela exactamente con (w²−u²)².
+where Vandermonde(u,v,w)=(v−u)(w−u)(w−v). No factor (u+w) remains in DET3: it cancels exactly with (w²−u²)².
 
-## 6. Prueba del criterio y bordes
+## 6. Proof of the criterion and boundaries
 
-Por PAIR todos los menores principales de orden uno y dos son positivos. Por el complemento de Schur de una diagonal, el bloque de orden tres es PSD si y sólo si su determinante es no negativo, y es PD si y sólo si su determinante es positivo.
+By PAIR all principal minors of order one and two are positive. By the Schur complement of a diagonal entry, the order-three block is PSD if and only if its determinant is nonnegative, and it is PD if and only if its determinant is positive.
 
-SECANTS exige delta_R delta_S>=0. RECIPROCAL excluye que ambos sean negativos y también excluye que uno sea negativo y el otro cero. En consecuencia
+SECANTS requires delta_R delta_S>=0. RECIPROCAL excludes both being negative and also excludes one being negative and the other zero. Consequently
 
-    det K_F>=0  iff delta_R>=0 y delta_S>=0;
-    det K_F>0   iff delta_R>0 y delta_S>0.
+    det K_F>=0  iff delta_R>=0 and delta_S>=0;
+    det K_F>0   iff delta_R>0 and delta_S>0.
 
-En términos de diferencias divididas, son exactamente las dos concavidades, o las dos desigualdades estrictas para ese triple. Imponerlas para todos los triples de un intervalo equivale a la concavidad de R y S; la continuidad permite la formulación usual sin regularidad diferencial adicional.
+In terms of divided differences, these are exactly the two concavities, or the two strict inequalities for that triple. Imposing them for all triples of an interval is equivalent to the concavity of R and S; continuity allows the usual formulation without additional differential regularity.
 
-Si delta_R=0, RECIPROCAL da delta_S>0 y el determinante es cero. La congruencia se reduce a T=alpha·11^t+beta·(u,v,w)^t(u,v,w), de rango dos. Si delta_S=0, el caso es su imagen por F↔1/F y también tiene rango dos. Bajo PAIR estricta no ocurren ambos defectos cero simultáneamente. No se extiende el argumento alpha beta>0 a clases de pares sólo PSD sin separar sus degeneraciones.
+If delta_R=0, RECIPROCAL gives delta_S>0 and the determinant is zero. The congruence reduces to T=alpha·11^t+beta·(u,v,w)^t(u,v,w), of rank two. If delta_S=0, the case is its image under F↔1/F and also has rank two. Under strict PAIR both defects do not vanish simultaneously. The argument alpha beta>0 is not extended to classes of merely PSD pairs without separating their degeneracies.
 
-Nodos repetidos producen columnas repetidas y matrices PSD cuando el bloque de nodos distintos lo sea. Se combinan los coeficientes: una función representada nula puede corresponder a un vector de coeficientes no nulo.
+Repeated nodes produce repeated columns and PSD matrices whenever the block of distinct nodes is. The coefficients are combined: a represented function that is zero can correspond to a nonzero coefficient vector.
 
-## 7. Simetría, relación con079 y alcance real
+## 7. Symmetry, relation with079 and real scope
 
-La identidad exacta
+The exact identity
 
     K_(1/F)(u,v)=K_F(u,v)/[F(u)F(v)]
 
-es una congruencia diagonal positiva. La inversión intercambia R y S, de modo que PAIR y el criterio de dos concavidades son invariantes. El criterio diferencial de pares |uF'/F|<=1 también admite derivadas negativas;081 no lo refuta.
+is a positive diagonal congruence. Inversion swaps R and S, so PAIR and the two-concavity criterion are invariant. The differential pair criterion |uF'/F|<=1 also admits negative derivatives;081 does not refute it.
 
-Para F=M real, R=u/M=(1+g(x))/a. Por tanto R''=g''/a. Además
+For F=M real, R=u/M=(1+g(x))/a. Hence R''=g''/a. Moreover
 
     S''(x)=[u²M''(u)+uM'(u)−M(u)]/(4u³)<0
 
-por073. Así DET3 recupera079: dentro de BASE073 sólo falta la concavidad de g. Se conserva el compacto real pendiente de080 y no se afirma aquí su resultado.
+by073. Thus DET3 recovers079: within BASE073 only the concavity of g is missing. The pending real compact of080 is kept and its result is not claimed here.
 
-Para F=G_p, el criterio se aplicaría SI se prueban sus pares estrictamente positivos y las dos nuevas concavidades R_p(x)=sqrt(x)/G_p(sqrt x), S_p(x)=sqrt(x)G_p(sqrt x).077 sólo prueba valores positivos;078 ofrece otro criterio suficiente condicional para pares.081 descarta exigir monotonía de G_p, pero no las dos concavidades actuales. Ni su descarga ni su preservación al repetir Schur se han demostrado aquí.
+For F=G_p, the criterion would apply IF its strictly positive pairs and the two new concavities R_p(x)=sqrt(x)/G_p(sqrt x), S_p(x)=sqrt(x)G_p(sqrt x) are proved.077 only proves positive values;078 offers another conditional sufficient criterion for pairs.081 discards requiring monotonicity of G_p, but not the current two concavities. Neither their discharge nor their preservation under repeated Schur has been proved here.
 
-DET2 y DET3 sugieren preguntar por identidades de orden mayor, pero no se declara patrón general, positividad de cuatro generadores o cierre global. El resultado de082 es el criterio exacto de orden tres para una clase que admite funciones F no monótonas.
+DET2 and DET3 suggest asking about identities of higher order, but no general pattern, positivity of four generators or global closure is declared. The result of082 is the exact order-three criterion for a class that admits non-monotone functions F.

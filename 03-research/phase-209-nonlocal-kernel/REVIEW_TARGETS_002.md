@@ -1,45 +1,45 @@
-# REVIEW_TARGETS_002 — Qué contaría como un positivo en la continuación O1
+# REVIEW_TARGETS_002 — What would count as a positive result in the O1 continuation
 
-2026-10-18. Revisor hostil. OPEN; no candidato ni nuevo NO-GO.
+2026-10-18. OPEN; neither a candidate nor a new NO-GO.
 
-## 1. Corpus y oportunidad realmente disponible
+## 1. Corpus and the opportunity actually available
 
-Consultados índice README y 06_OPEN_RESIDUES (R1, R4, R7–R9 y W₂), P1_BBSTAR_001 §§1–5, D_CONSTRUCTION_001 (resumen, defecto de rango y Lema 𝔇-Sch), R11_2_ORIGIN_001 (polar), CELL_001/AUDIT_207 y controles de esta fase. Revisión adicional de R152_001 para evitar presentar como nuevo un operador de transferencia ya examinado. No se reabre ninguno de esos métodos.
+Consulted the index README and 06_OPEN_RESIDUES (R1, R4, R7–R9 and W₂), P1_BBSTAR_001 §§1–5, D_CONSTRUCTION_001 (summary, rank defect and Lemma 𝔇-Sch), R11_2_ORIGIN_001 (polar), CELL_001/AUDIT_207 and controls of this phase. Additional review of R152_001 to avoid presenting as new a transfer operator already examined. None of those methods is reopened.
 
-**Hallazgo:** el corpus no contiene un lema positivo aritmética+FE listo para extraer por cambiar de representación. P1 no-BB* remite a crecimiento de secciones h⁰/𝔇-Sch, cuyo objeto sigue sin construirse. El defecto de rango de D_CONSTRUCTION no ofrece un positivo pequeño conocido: su dependencia de relaciones algebraicas entre log p es una dificultad propia; el memo observa que bajo Schanuel ese defecto desaparecería. No tomarlo como atajo constructivo.
+**Finding:** the corpus does not contain an arithmetic+FE positive lemma ready to be extracted by changing representation. P1 non-BB* refers to growth of h⁰/𝔇-Sch sections, whose object remains unconstructed. The rank defect of D_CONSTRUCTION offers no known small positive result: its dependence on algebraic relations among the log p is a difficulty of its own; the memo observes that under Schanuel that defect would disappear. Do not take it as a constructive shortcut.
 
-La oportunidad concreta de O1 es otra: **el primer enlace parcial que sobreviva al cálculo exacto de una correlación entre alturas distintas y cuyo signo dependa de una restricción aritmética explícita**. No necesita ya pagar todo Q_T. Pero debe contener un término identificado de Q_T o de su déficit, con orientación de desigualdad útil. Un kernel positivo desconectado, aunque nuevo por fórmula, no cumple este objetivo.
+The concrete opportunity of O1 is a different one: **the first partial link that survives the exact computation of a correlation between distinct heights and whose sign depends on an explicit arithmetic restriction**. It no longer needs to pay for all of Q_T. But it must contain an identified term of Q_T or of its deficit, with a useful orientation of the inequality. A disconnected positive kernel, even if new by formula, does not meet this goal.
 
-Esto especifica un ensayo comprobable; no afirma que tengamos hoy su fórmula ni que su demostración sea accesible. No recomiendo sustituir la ausencia de candidato por otra lista de barreras.
+This specifies a checkable test; it does not claim that we have its formula today nor that its proof is accessible. Replacing the absence of a candidate by another list of barriers is not recommended.
 
-## 2. Forma mínima del resultado positivo solicitado
+## 2. Minimal form of the requested positive result
 
-El constructor debería entregar simultáneamente estos datos:
+A candidate should deliver the following data simultaneously:
 
-1. Un dominio efectivo explícito 𝒱_b, construido antes de usar el signo, y una forma B_b(F,G) de dos alturas con dominio, pesos y regularización. Si 𝒱_b es no lineal, especificar qué afirmación de positividad se pretende; no atribuirle automáticamente codimensión.
-2. Una identidad exacta que use la FE sobre ese dominio. Invariancia J*BJ=B por promedio de una forma positiva no cuenta como acoplamiento aritmético demostrado.
-3. Una desigualdad no trivial B_Λ(F,F)≥0 demostrada sin Q_T≥0. Tiene que intervenir una restricción verificable que no satisfaga el dato de primo eliminado pertinente, o un enlace específico que deje de valer para él.
-4. Un enlace parcial de signo orientado: identificar qué contribución del nodo controla B, qué términos quedan y cuáles tienen signo probado. No es obligatorio cerrar el nodo para registrar el lema; sí obligatorio exhibir para qué sirve.
+1. An explicit effective domain 𝒱_b, constructed before using the sign, and a two-height form B_b(F,G) with domain, weights and regularisation. If 𝒱_b is nonlinear, specify which positivity claim is intended; do not automatically attribute codimension to it.
+2. An exact identity using the FE on that domain. Invariance J*BJ=B by averaging a positive form does not count as a proved arithmetic coupling.
+3. A non-trivial inequality B_Λ(F,F)≥0 proved without Q_T≥0. A verifiable restriction must intervene that the relevant deleted-prime datum does not satisfy, or a specific link that ceases to hold for it.
+4. An oriented partial sign link: identify which contribution of the node B controls, which terms remain and which have proved sign. It is not mandatory to close the node in order to record the lemma; it is mandatory to show what it is for.
 
-Si sólo se obtiene (1) y (2), etiquetar identidad estructural, no positivo. Si sólo se obtiene (3) para cualquier b, etiquetar norma/positividad genérica y reservar todo posible contenido para (4). Si (4) exige el signo desconocido del resto, declarar ese resto por separado: no adjudicarle positividad por nomenclatura.
+If only (1) and (2) are obtained, label it a structural identity, not a positive result. If only (3) is obtained for any b, label it a generic norm/positivity and reserve all possible content for (4). If (4) requires the unknown sign of the remainder, declare that remainder separately: do not assign positivity to it by nomenclature.
 
-## 3. Prueba temprana de especificidad
+## 3. Early specificity test
 
-Usar b=Λ y b^(p), con alguna potencia p^k interior que tenga peso efectivo no nulo en el ensayo. El defecto Σ_{d|n}b^(p)(d)=log n−v_p(n)log p identifica un fallo exacto disponible, pero C-data ya explica que añadir esa identidad como ecuación entre datos no mueve por sí solo la forma.
+Use b=Λ and b^(p), with some interior power p^k having nonzero effective weight in the test. The defect Σ_{d|n}b^(p)(d)=log n−v_p(n)log p identifies an available exact failure, but C-data already explains that adding that identity as an equation between data does not by itself move the form.
 
-**Pregunta concreta al candidato:** ¿en qué paso de la prueba de la desigualdad entra esa identidad de manera que intervenga una variable de la forma o del certificado? Si no hay tal paso, no atribuirle el signo. No basta que el kernel lleve Λ en sus coeficientes ni que cambiar p cambie sus entradas.
+**Concrete question to the candidate:** at which step of the proof of the inequality does that identity enter in such a way that a variable of the form or of the certificate is involved? If there is no such step, do not attribute the sign to it. It is not enough that the kernel carries Λ in its coefficients nor that changing p changes its entries.
 
-No pedir negatividad bajo todo borrado. No usar p exterior como falsificación de una afirmación local. No equiparar «no separa por el signo propio» con «ningún enlace específico puede funcionar»: ese salto sería incorrecto.
+Do not ask for negativity under every deletion. Do not use an exterior p as a falsification of a local claim. Do not equate «does not separate by its own sign» with «no specific link can work»: that leap would be incorrect.
 
-## 4. Qué no sería una continuación constructiva
+## 4. What would not be a constructive continuation
 
-- Reemplazar J+C compacto por I+J, proyecciones de J o promedios positivos: signo genérico ya identificado.
-- Gram, Schur finito, Cholesky o un menor 2×2 tomado como ruta nueva sin una relación aritmética realmente nueva: rutas ya registradas.
-- Volver a Gonek con peso indefinido o ignorando el resto y la escala.
-- Usar un conteo h⁰ formal y atribuirle RR, dualidad o crecimiento sin construir el espacio y probar esas propiedades.
-- Dar un signo que desaparece en el ortogonal polar: el objetivo vive precisamente allí.
-- Clasificar una propuesta como def:PD y considerarla por eso imposible: una construcción explícita de certificado seguiría siendo un resultado; lo que falta es construirla y probarla.
+- Replacing compact J+C by I+J, projections of J or positive averages: generic sign already identified.
+- Gram, finite Schur, Cholesky or a 2×2 minor taken as a new route without a genuinely new arithmetic relation: routes already recorded.
+- Returning to Gonek with an indefinite weight or ignoring the remainder and the scale.
+- Using a formal h⁰ count and attributing RR, duality or growth to it without constructing the space and proving those properties.
+- Giving a sign that disappears on the polar orthogonal: the goal lives precisely there.
+- Classifying a proposal as def:PD and therefore considering it impossible: an explicit construction of a certificate would still be a result; what is missing is to construct and prove it.
 
-## 5. Decisión de revisión
+## 5. Review decision
 
-**Oportunidad: OPEN, específica y falsable en §§1–3; no positivo probado todavía.** No identifico en los residuos examinados una desigualdad positiva independiente ya disponible que satisfaga esas condiciones. Esta conclusión es sobre lo encontrado en el corpus, no una imposibilidad matemática ni motivo para cerrar O1. La siguiente revisión debe centrarse en las fórmulas de CONSTRUCTOR_002, evitando fabricar una fuente de signo a partir de una norma genérica.
+**Opportunity: OPEN, specific and falsifiable in §§1–3; no positive result proved yet.** I do not identify in the examined residues an independent positive inequality already available that meets those conditions. This conclusion concerns what was found in the corpus, not a mathematical impossibility nor a reason to close O1. The next review must focus on the formulas of CONSTRUCTOR_002, avoiding manufacturing a source of sign from a generic norm.

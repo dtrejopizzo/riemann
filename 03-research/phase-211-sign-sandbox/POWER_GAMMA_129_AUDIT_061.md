@@ -1,41 +1,41 @@
 # POWER_GAMMA_129_AUDIT_061
 
-Estado: **APROBADO** POWER_GAMMA_129_DECISION_061 y su certificado completo, tras lectura final de las seis secciones. Papers intactos.
+Status: **APPROVED** POWER_GAMMA_129_DECISION_061 and its complete certificate, after a final reading of the six sections. Papers untouched.
 
-El único objeto es el átomo histórico N=129,k=0,u=63/2, no una campaña de órdenes. Los antecedentes025/026 dejaron ERR<−.66 sin decidir W;032 decide otro átomo,211,k1, y035 otro extremo,17,k0. El nuevo certificado conserva todas las piezas de la MISMA forma y decide el signo pendiente.
+The only object is the historical atom N=129,k=0,u=63/2, not a campaign of orders. The antecedents025/026 left ERR<−.66 without deciding W;032 decides another atom,211,k1, and035 another endpoint,17,k0. The new certificate keeps all pieces of the SAME form and decides the pending sign.
 
-## Reproducción y normalización
+## Reproduction and normalization
 
-Leído íntegro tools/power_gamma_129_decision_061_verify.py. Reproducción independiente con python3, exit0: **PASS** y los mismos extremos racionales impresos. La norma de g=y^128 exp(−uy)/128! es comb(256,128)/63^257. Los a_r=p_r r! satisfacen exactamente la recurrencia de la autocorrelación normalizadarho(0)=1; el Horner dividido por r+1 reconstruye sum a_r t^r/r!, sin factorial perdido.
+Read in full tools/power_gamma_129_decision_061_verify.py. Independent reproduction with python3, exit0: **PASS** and the same printed rational endpoints. The norm of g=y^128 exp(−uy)/128! is comb(256,128)/63^257. The a_r=p_r r! satisfy exactly the recurrence of the normalized autocorrelationrho(0)=1; the Horner divided by r+1 reconstructs sum a_r t^r/r!, with no lost factorial.
 
-ARCH usa A0 estable032, con HurwitzEM8/CUT32 y resto periódico absoluto. Los coeficientes exactos multiplican los extremos antes de crear intervalos redondeados. Gamma y logpi conservan las fuentes003 ya auditadas. La anchura final ARCH<10^−18 se comprueba. El polar2/(u²−1/4)^129 dividido por la norma es exacto racional. Se enumeran todos los primos y sus potencias hasta512 sin duplicar pesos; cada átomo usa2logp·m^−32P(logm), con la raíz de m cancelada exactamente.
+ARCH uses the stable A0 of032, with HurwitzEM8/CUT32 and absolute periodic remainder. The exact coefficients multiply the endpoints before creating rounded intervals. Gamma and logpi keep the already audited sources003. The final width ARCH<10^−18 is checked. The polar2/(u²−1/4)^129 divided by the norm is an exact rational. All primes and their powers up to512 are enumerated without duplicating weights; each atom uses2logp·m^−32P(logm), with the root of m cancelled exactly.
 
-## Cola adversa completa
+## Full adverse tail
 
-La positividad de los coeficientes de rho hace adversos todos los contactos de k=0. ROOT026 da q(t)>sqrt((128/t)²+u²)−128/t. En t=6 este lower supera16 porqueu²>256+4096/6. Como log512>6 y q′>0, toda la cola tiene q>16 y rho(t)<=rho(log512) exp(−16(t−log512)).
+Positivity of the coefficients of rho makes all contacts of k=0 adverse. ROOT026 gives q(t)>sqrt((128/t)²+u²)−128/t. At t=6 this lower bound exceeds16 becauseu²>256+4096/6. Since log512>6 and q′>0, the whole tail has q>16 and rho(t)<=rho(log512) exp(−16(t−log512)).
 
-La comparación suma-integral para TODOS los enteros m>=513 empieza en512, sin omitir el primer término de esa cola. Da
+The sum-integral comparison for ALL integers m>=513 starts at512, without omitting the first term of that tail. It gives
 
-    cola <=2rho(log512)sqrt512[2log512/31+4/961]
+    tail <=2rho(log512)sqrt512[2log512/31+4/961]
           =2·512·[P(log512)/512^32]·[2log512/31+4/961].
 
-Éste es exactamente TAIL del programa; las raíces se cancelan antes del redondeo. El signo adverso se resta en el extremo inferior de W y no se añade al superior. No se presume que el prefijo sea la suma completa.
+This is exactly TAIL of the program; the roots cancel before rounding. The adverse sign is subtracted at the lower endpoint of W and not added to the upper one. The prefix is not presumed to be the full sum.
 
-La salida de W se forma por suelo/techo EXACTOS de los extremos Fraction, no por impresión flotante:
+The output of W is formed by EXACT floor/ceiling of the Fraction endpoints, not by floating printing:
 
     W/||g||² ∈[13456684165,13456684168]/10^20.
 
-Por tanto el átomo es estrictamente positivo. Los decimales float auxiliares del tail no se usan como fuente de prueba.
+Hence the atom is strictly positive. The auxiliary float decimals of the tail are not used as a source of proof.
 
-## Compensación sharp y células
+## Sharp compensation and cells
 
-El resolvente exacto es2sum_(r=0)^128 a_r/32^(r+1), correspondiente a E[1/(tau²+1/4)]. ARCHsharp=ARCH+resolvente y ERR=ARCHsharp−W. El programa conserva las dependencias mediante la fórmula independiente ERR=PRIME_total−POLAR+resolvente. Se certifican
+The exact resolvent is2sum_(r=0)^128 a_r/32^(r+1), corresponding to E[1/(tau²+1/4)]. ARCHsharp=ARCH+resolvent and ERR=ARCHsharp−W. The program preserves the dependencies via the independent formula ERR=PRIME_total−POLAR+resolvent. Certified:
 
     ARCHsharp/||g||² ∈[−104219397018062543067,−104219397018062543064]/10^20,
     ERR ∈[−104219397031519227232,−104219397031519227231]/10^20.
 
-La normalización de ERR es la de rho(0)=1 usada en024/025. No se suma el antiguo beneficio .66 como si fuera otro término. Usando .33<S129(2)<1/3 ya certificado024, el beneficio conjunto de TODAS las células n>=3 es−ERR−2S129(2), entre.3755 y.3822. Los signos y la resta de la primera célula son correctos.
+The normalization of ERR is that of rho(0)=1 used in024/025. The old benefit .66 is not added as if it were another term. Using .33<S129(2)<1/3 already certified024, the joint benefit of ALL cells n>=3 is−ERR−2S129(2), between.3755 and.3822. The signs and the subtraction of the first cell are correct.
 
-La fuente final enuncia el tail sólo como<10^−24, exactamente la cota comprobada por Fraction; el decimal más ajustado está explícitamente marcado aproximado. Esta separación es correcta y no requiere cambiar ni repetir el verificador. Los intervalos estrechos impresos de W/ARCHsharp/ERR usan suelo y techo racionales exactos y sí son recintos certificados. La atribución del caso es documental: la ronda retoma una obligación histórica, sin atribuir al usuario la elección de N.
+The final source states the tail only as<10^−24, exactly the bound checked by Fraction; the tighter decimal is explicitly marked approximate. This separation is correct and requires neither changing nor rerunning the verifier. The narrow printed intervals of W/ARCHsharp/ERR use exact rational floor and ceiling and are indeed certified enclosures. The attribution of the case is documentary: the round takes up a historical obligation; the choice of N is not new.
 
-El resultado decide ese átomo y cuantifica su compensación real. No decide toda una fila, bloques generales, orden arbitrario ni una ventana temporal nueva.
+The result decides that atom and quantifies its real compensation. It does not decide a whole row, general blocks, arbitrary order nor a new time window.

@@ -1,110 +1,110 @@
-# Ninguna constante de autoenergía repara la parte finita ciclotómica
+# No self-energy constant repairs the cyclotomic finite part
 
-Estado: **PROVED**, con revisión independiente de la prueba y de su alcance. Se estudia una forma auxiliar, no el signo de la forma completa.
+Status: **PROVED**, with independent review of the proof and of its scope. An auxiliary form is studied, not the sign of the complete form.
 
-## Cotejo
+## Cross-check
 
-1. Antecedentes: `ROUND_095_A.md`, especialmente §§2–4, y el registro «Corte ciclotómico dependiente del índice» en la Parte V del índice maestro. El primero demuestra un valor negativo de J_sc; no demuestra que J_sc/A carezca de cota inferior. El segundo admite la libertad de cambiar la escala constante del corte.
-2. Afirmación nueva: inf_(β∈K_Z, β≠0) J_sc(β)/A(β)=−infinito, donde K_Z es el portador entero. Esto excluye J_sc+cA PSD para toda constante real c, no sólo para c=0.
-3. Operación: ponderar las dilataciones primas por 1/p, deteniendo la suma cuando su masa recíproca alcanza uno. Así A queda acotada mientras la escala mínima de los cruces tiende a infinito. Se justifica el paso de coeficientes racionales a enteros. La puerta independiente aprobó únicamente esta obstrucción de clase.
-4. Conexión: cambiar el corte ε por λε, con λ>0 fijo, cambia la parte finita a J_sc−Alogλ. El resultado impide usar cualquiera de esas partes finitas como pieza PSD universal en una separación de la forma completa. No excluye otros contratérminos ni una compensación conjunta con el resto.
+1. Antecedents: `ROUND_095_A.md`, especially §§2–4, and the record "Index-dependent cyclotomic cutoff" in Part V of the master index. The first proves a negative value of J_sc; it does not prove that J_sc/A has no lower bound. The second admits the freedom to change the constant scale of the cutoff.
+2. New claim: inf_(β∈K_Z, β≠0) J_sc(β)/A(β)=−infinity, where K_Z is the integer carrier. This excludes J_sc+cA PSD for every real constant c, not only for c=0.
+3. Operation: weight the prime dilations by 1/p, stopping the sum when its reciprocal mass reaches one. Thus A stays bounded while the minimum scale of the crossings tends to infinity. The passage from rational to integer coefficients is justified. The independent gate approved only this class obstruction.
+4. Connection: changing the cutoff ε to λε, with fixed λ>0, changes the finite part to J_sc−Alogλ. The result prevents using any of those finite parts as a universal PSD piece in a splitting of the complete form. It does not exclude other counterterms nor a joint compensation with the remainder.
 
-## 1. Formas y datos ya probados
+## 1. Forms and data already proved
 
-Usar el test b=b_6 y las dilataciones D_p de `ROUND_095_A.md`. Denotar por K_R el núcleo real de las restricciones Σ_jβ_j=0, Σ_jjβ_j=0 y Σ_jβ_jv_r(j)=0 para cada primo r, siempre sobre sucesiones de soporte finito; K_Z es su subconjunto de sucesiones enteras, el portador K de 095-A. Para sucesiones de soporte finito, poner
+Use the test b=b_6 and the dilations D_p of `ROUND_095_A.md`. Denote by K_R the real kernel of the constraints Σ_jβ_j=0, Σ_jjβ_j=0 and Σ_jβ_jv_r(j)=0 for each prime r, always on finitely supported sequences; K_Z is its subset of integer sequences, the carrier K of 095-A. For finitely supported sequences, set
 
     G(u,v)=Σ_(i,j≥1)gcd(i,j)u_i v_j,    A(u)=G(u,u),
     B(u,v)=−Σ_(i,j≥1)gcd(i,j)u_i v_j log((i+j)/gcd(i,j)),
     J_sc(u)=B(u,u).
 
-La identidad gcd(i,j)=Σ_(d|i,d|j)φ(d) da
+The identity gcd(i,j)=Σ_(d|i,d|j)φ(d) gives
 
-    A(u)=Σ_d φ(d)(Σ_(d|i)u_i)²>0 para u≠0 de soporte finito.
+    A(u)=Σ_d φ(d)(Σ_(d|i)u_i)²>0 for finitely supported u≠0.
 
-En efecto, si L es el mayor índice no nulo, el sumando d=L es positivo. Por tanto el cociente J_sc/A está bien definido.
+Indeed, if L is the largest nonzero index, the summand d=L is positive. Hence the ratio J_sc/A is well defined.
 
-Los datos de 095-A son
+The data of 095-A are
 
     A(b)=14,    J_sc(b)<3,
     A(D_p b)=14p,    J_sc(D_p b)=pJ_sc(b),
-    G(D_p b,D_q b)=14 para primos distintos p,q>6,
+    G(D_p b,D_q b)=14 for distinct primes p,q>6,
     B(D_p b,D_q b)=−14log max(p,q)+E_pq,
-    |E_pq|<1152 para esos mismos primos.
+    |E_pq|<1152 for those same primes.
 
-La igualdad de G usa la misma identidad gcd(pi,qj)=gcd(i,j) ya probada. Todos los cruces y diagonales son de las formas completas A y J_sc; no se omiten términos.
+The equality for G uses the same identity gcd(pi,qj)=gcd(i,j) already proved. All crossings and diagonals are of the complete forms A and J_sc; no terms are omitted.
 
-## 2. Selección finita de primos con masa recíproca controlada
+## 2. Finite selection of primes with controlled reciprocal mass
 
-Se necesita sólo la divergencia elemental Σ_(p primo)1/p=infinito. Una prueba suficiente es la siguiente. Si esa suma fuera finita, para todo N,
+Only the elementary divergence Σ_(p prime)1/p=infinity is needed. A sufficient proof is the following. If that sum were finite, for every N,
 
     Σ_(n≤N)1/n ≤ ∏_(p≤N)(1−1/p)^(−1)
 
-estaría uniformemente acotada: el logaritmo del producto es a lo sumo 2Σ_(p≤N)1/p, pues −log(1−x)≤2x para 0≤x≤1/2. La desigualdad del producto se obtiene expandiendo un número finito de series geométricas positivas; incluye todos los enteros hasta N. Contradice la divergencia de la suma armónica. Eliminar un número finito de primos conserva la divergencia.
+would be uniformly bounded: the logarithm of the product is at most 2Σ_(p≤N)1/p, since −log(1−x)≤2x for 0≤x≤1/2. The product inequality is obtained by expanding finitely many positive geometric series; it includes all integers up to N. It contradicts the divergence of the harmonic sum. Removing finitely many primes preserves divergence.
 
-Fijar un entero Q>6. Tomar, en orden creciente, primos p>Q hasta que la suma de sus recíprocos alcance uno por primera vez; sea S_Q ese conjunto finito. Definir
+Fix an integer Q>6. Take, in increasing order, primes p>Q until the sum of their reciprocals first reaches one; let S_Q be that finite set. Define
 
     s=Σ_(p∈S_Q)1/p,    r=Σ_(p∈S_Q)1/p²,
-    u=s²−r=Σ_(p≠q en S_Q)1/(pq).
+    u=s²−r=Σ_(p≠q in S_Q)1/(pq).
 
-Por la regla de parada,
+By the stopping rule,
 
     1≤s<1+1/Q<2,
     r≤s/Q<2/Q,
     1/2<u<4.
 
-La cota inferior usa Q>6 y s²≥1. La suma que define u cuenta pares ordenados.
+The lower bound uses Q>6 and s²≥1. The sum defining u counts ordered pairs.
 
-## 3. Autoenergía acotada y parte finita sin cota inferior
+## 3. Bounded self-energy and finite part without lower bound
 
-Poner
+Set
 
     γ_Q=Σ_(p∈S_Q)(1/p)D_p b.
 
-Es un test racional no nulo de K_R; los soportes de las dilataciones son disjuntos. Al expandir ambas formas, con todos los pares ordenados,
+It is a nonzero rational test of K_R; the supports of the dilations are disjoint. Expanding both forms, with all ordered pairs,
 
     A(γ_Q)=14(s+u),    0<A(γ_Q)<84,
     J_sc(γ_Q)≤J_sc(b)s+(1152−14log Q)u.
 
-Si log Q>100, el coeficiente de u es negativo. Usando s<2 y u>1/2,
+If log Q>100, the coefficient of u is negative. Using s<2 and u>1/2,
 
     J_sc(γ_Q)<6+(1152−14log Q)/2
                =582−7log Q<0.                         (NEG)
 
-Como A(γ_Q)<84 y el numerador acotado en (NEG) es negativo,
+Since A(γ_Q)<84 and the bounded numerator in (NEG) is negative,
 
-    J_sc(γ_Q)/A(γ_Q)<(582−7log Q)/84 → −infinito.
+    J_sc(γ_Q)/A(γ_Q)<(582−7log Q)/84 → −infinity.
 
-Para obtener tests enteros, multiplicar γ_Q por el entero M_Q=∏_(p∈S_Q)p. El vector β_Q=M_Qγ_Q es no nulo, entero y satisface las mismas restricciones lineales. Ambas energías se multiplican por M_Q², por lo que su cociente no cambia. Se concluye
+To obtain integer tests, multiply γ_Q by the integer M_Q=∏_(p∈S_Q)p. The vector β_Q=M_Qγ_Q is nonzero, integer and satisfies the same linear constraints. Both energies are multiplied by M_Q², so their ratio does not change. One concludes
 
-    inf_(β∈K_Z, β≠0) J_sc(β)/A(β)=−infinito.
+    inf_(β∈K_Z, β≠0) J_sc(β)/A(β)=−infinity.
 
-No se fija una dimensión ni se usa un barrido numérico: cada Q define un test finito por una regla exacta, cuya terminación quedó probada.
+No dimension is fixed and no numerical sweep is used: each Q defines a finite test by an exact rule, whose termination has been proved.
 
-## 4. Toda corrección cA y toda escala constante del corte
+## 4. Every correction cA and every constant scale of the cutoff
 
-Sea c real fijo y C=max(c,0). Elegir un entero Q con log Q>100+12C. Por (NEG) y A(γ_Q)<84,
+Let c be real and fixed and C=max(c,0). Choose an integer Q with log Q>100+12C. By (NEG) and A(γ_Q)<84,
 
     J_sc(γ_Q)+cA(γ_Q)
       ≤J_sc(γ_Q)+C A(γ_Q)
       <582−7log Q+84C<−118.
 
-Después de multiplicar por M_Q² se obtiene un test entero negativo de J_sc+cA. Ninguna constante real c produce PSD en todo el portador.
+After multiplying by M_Q² one obtains a negative integer test of J_sc+cA. No real constant c produces PSD on the whole carrier.
 
-El regularizador ya registrado satisface, para cada test finito fijo,
+The regularizer already recorded satisfies, for each fixed finite test,
 
     Q_ε(β)=−A(β)log ε+J_sc(β)+o(1).
 
-Para λ>0 fijo, sustituir ε por λε y mantener la sustracción A log ε da
+For fixed λ>0, replacing ε by λε and keeping the subtraction A log ε gives
 
     lim_(ε↓0)[Q_(λε)(β)+A(β)log ε]
        =J_sc(β)−A(β)logλ.
 
-Estas son exactamente correcciones cA con c=−logλ. Por tanto ninguna elección constante de la escala del corte convierte esa parte finita en una forma PSD sobre todo el portador.
+These are exactly corrections cA with c=−logλ. Therefore no constant choice of the cutoff scale turns that finite part into a PSD form on the whole carrier.
 
-## Resultado
+## Result
 
-**Qué se probó:** J_sc no está acotada inferiormente por ninguna constante por A, incluso sobre tests enteros que anulan los dos momentos y todas las filas de valuaciones. La negatividad de 095-A no se repara eligiendo otra constante de autoenergía o una escala fija diferente del mismo corte.
+**What was proved:** J_sc is not bounded below by any constant times A, even on integer tests annihilating the two moments and all valuation rows. The negativity of 095-A is not repaired by choosing another self-energy constant or a different fixed scale of the same cutoff.
 
-**Qué falló y por qué:** con masa recíproca aproximadamente uno, las diagonales y A permanecen acotadas, pero los cruces de J_sc contienen un término negativo proporcional al logaritmo de la escala mínima. Esta es una obstrucción a la clase de reparaciones cA, no a todo contratérmino.
+**What failed and why:** with reciprocal mass approximately one, the diagonals and A remain bounded, but the crossings of J_sc contain a negative term proportional to the logarithm of the minimum scale. This is an obstruction to the class of cA repairs, not to every counterterm.
 
-**Siguiente paso concreto:** una reapertura debe dar una compensación distinta, dependiente de los cruces y con identidad exacta para la forma completa. Esta prueba no la proporciona ni afirma que exista. No se decide el signo de a ni del resto a−J_sc, no se refuta J_sc≤a y no se excluyen escalas dependientes del test. No se ha dado un paso positivo sobre a al que aplicar la batería de falsificadores del objetivo; se ha refutado una reparación auxiliar. El signo global permanece abierto.
+**Concrete next step:** a reopening must give a different compensation, dependent on the crossings and with an exact identity for the complete form. This proof does not provide it nor claim that it exists. The sign of a or of the remainder a−J_sc is not decided, J_sc≤a is not refuted and test-dependent scales are not excluded. No positive step on a has been taken to which the target's falsifier battery could be applied; an auxiliary repair has been refuted. The global sign remains open.

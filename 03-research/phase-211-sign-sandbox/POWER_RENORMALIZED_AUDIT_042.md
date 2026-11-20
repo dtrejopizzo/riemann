@@ -1,29 +1,29 @@
 # POWER RENORMALIZED AUDIT 042
 
-Estado: RENORMALIZED_TAIL042 APROBADO. Papers intactos.
+Status: RENORMALIZED_TAIL042 APPROVED. Papers untouched.
 
-## 1. Corpus y diferencia
+## 1. Corpus and difference
 
-Reconsultados índice, grid y crucigrama y los antecedentes MASS022, ARCH_CELL026 y SAWTOOTH041. La masa y la integración celular son conocidas. La diferencia042 es un bound ABSOLUTO exponencialmente pequeño del residuo renormalizado posterior al mismo corte energético040. No es otra banda favorable de escalaC_N ni una identidad presentada como signo de W.
+Reconsulted index, grid and crossword and the antecedents MASS022, ARCH_CELL026 and SAWTOOTH041. The mass and the cellular integration are known. The difference042 is an exponentially small ABSOLUTE bound of the renormalized residue beyond the same energy cut040. It is not another favourable band of scaleC_N nor an identity presented as a sign of W.
 
-## 2. Renormalización global — APROBADA
+## 2. Global renormalization — APPROVED
 
-Revisados `POWER_RENORMALIZED_TAIL_042.md` y `tools/power_renormalized_tail_042_verify.py`; ejecución independiente PASS. En cada celda, integrarB1J′ incluye los dos semibordes y el salto periódico. Al sumar se obtiene∫J=1−J(1)/2+∫B1h. Integrar−xJ′ conserva el borde inferiorJ(1), dando∫xh=1+J(1)/2+∫B1h. Los bordes infinitos se anulan y las series/integrales son absolutos paraN fijo, sin sigma1 crítico.
+Reviewed `POWER_RENORMALIZED_TAIL_042.md` and `tools/power_renormalized_tail_042_verify.py`; independent run PASS. In each cell, integratingB1J′ includes the two half-edges and the periodic jump. Summing gives∫J=1−J(1)/2+∫B1h. Integrating−xJ′ keeps the lower edgeJ(1), giving∫xh=1+J(1)/2+∫B1h. The infinite edges vanish and the series/integrals are absolute for fixedN, with no critical sigma1.
 
-Sustituir SAWTOOTH produce exactamente F/2=−γ+(κ−γ/2)J(1)+R. La constanteκ y el términoJ(1) no se descartan. La identidad W=ARCH_sharp+2γ−(2κ−γ)J(1)−2R conserva todos los términos reales.
+Substituting SAWTOOTH produces exactly F/2=−γ+(κ−γ/2)J(1)+R. The constantκ and the termJ(1) are not discarded. The identity W=ARCH_sharp+2γ−(2κ−γ)J(1)−2R keeps all the real terms.
 
-## 3. Decaimiento del inverso y borde de cola — APROBADOS
+## 3. Decay of the inverse and tail edge — APPROVED
 
-El corte040 implica q(T)>.5+2000/N y q crece. Por ello la suma completaΣm^−1/2rho(t+logm) está dominada por rho(t)(1+N/2000)<N rho(t)/1000. El bound se usa DESPUÉS de eliminar el afín, no como una cancelación crítica no justificada.
+The cut040 implies q(T)>.5+2000/N and q increases. Hence the full sumΣm^−1/2rho(t+logm) is dominated by rho(t)(1+N/2000)<N rho(t)/1000. The bound is used AFTER eliminating the affine part, not as an unjustified critical cancellation.
 
-Los factores g≤32rho y|g′−1.5g|<1100rho son correctos. Al derivar h=Σμm·mH(mx), aparece m²H′ y queda de nuevo el peso m^−1/2; no falta un jacobiano. Las series de derivadas convergen con el mismo mayorante en la cola. Se obtienen|h|≤Nx^−3/2 y|h′|≤2Nx^−5/2, sin presumir signo deh′.
+The factors g≤32rho and|g′−1.5g|<1100rho are correct. Differentiating h=Σμm·mH(mx), m²H′ appears and the weight m^−1/2 remains again; no Jacobian is missing. The derivative series converge with the same majorant in the tail. One obtains|h|≤Nx^−3/2 and|h′|≤2Nx^−5/2, without presuming a sign ofh′.
 
-La primitivaQ2 es continua en enteros. Integrar−hVB1, V=logx+γ, deja el borde INFERIOR+h(X)V(X)Q2(X) y la integral de(h′V+h/x)Q2. El borde infinito se anula. El errorE se conserva en módulo≤1/x, sin signo favorable supuesto.
+The primitiveQ2 is continuous at integers. Integrating−hVB1, V=logx+γ, leaves the LOWER edge+h(X)V(X)Q2(X) and the integral of(h′V+h/x)Q2. The infinite edge vanishes. The errorE is kept in modulus≤1/x, with no favourable sign assumed.
 
-Los integrales explícitos producen exactamente NX^−3/2[(7/48)(T+1)+55/72]. El mayoranteN(T+2)e^−3T/2 es correcto. ComoT>N/992,T+2<N yN²<e^(N/2000), la diferencia3/1984−1/2000>1/1000 demuestra|R_tail|<e^−N/1000 para TODOSN≥2^80.
+The explicit integrals produce exactly NX^−3/2[(7/48)(T+1)+55/72]. The majorantN(T+2)e^−3T/2 is correct. SinceT>N/992,T+2<N andN²<e^(N/2000), the difference3/1984−1/2000>1/1000 proves|R_tail|<e^−N/1000 for ALLN≥2^80.
 
-## 4. Alcance
+## 4. Scope
 
-La cola residual queda controlada en escala absoluta con todos los bordes, saltos y divisores. El restante interiorRENORMALIZADO y su balance conARCH_sharp,J(1) no se han decidido. La identidad global y el error exponencial no equivalen a un margen positivo de W; tampoco se suma sin contabilidad el beneficioC_N de041. No hay nueva coberturaW o ventanaT ni modificación de papers.
+The residual tail is controlled at absolute scale with all edges, jumps and divisors. The remaining RENORMALIZED interior and its balance withARCH_sharp,J(1) have not been decided. The global identity and the exponential error do not amount to a positive margin of W; nor is the benefitC_N of041 added without accounting. There is no new coverageW or windowT nor modification of papers.
 
-Root revisó independientemente el memo completo y reprodujo el verificador PASS, coincidiendo en MASS, normalizaciones, derivadas, bordeX, coeficientes y escala exponencial absoluta. La revisión queda finalizada.
+The full memo was reviewed again independently and the verifier reproduced PASS, agreeing on MASS, normalizations, derivatives, edgeX, coefficients and absolute exponential scale. The review is finalized.

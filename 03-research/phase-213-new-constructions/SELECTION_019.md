@@ -1,9 +1,9 @@
-# Cruce remoto después de cancelar el término polar
+# Remote crossing after cancelling the polar term
 
-Antecedentes: 018-A y P47 lem:transl, thm:band, rem:polarelim-full. Se cotejó si permitir dos perfiles distintos con momentos libres cambia el criterio de banda.
+Antecedents: 018-A and P47 lem:transl, thm:band, rem:polarelim-full. It was cross-checked whether allowing two different profiles with free moments changes the band criterion.
 
-Con la notación de 018-A, K=exp(s) y φ(v)=∫conjugado(l(x))r(vx)dx, sea E_K=ΣΛ(n)φ(n/K)−K∫φ. Para soportes ya disjuntos y ordenados, el cruce de la forma completa es
+With the notation of 018-A, K=exp(s) and φ(v)=∫conj(l(x))r(vx)dx, let E_K=ΣΛ(n)φ(n/K)−K∫φ. For supports already disjoint and ordered, the crossing of the complete form is
 
-    W(L,V_sR)=a_arch(L,V_sR)−E_K/√K+conjugado(A(L))B(R)/√K.
+    W(L,V_sR)=a_arch(L,V_sR)−E_K/√K+conj(A(L))B(R)/√K.
 
-Es la misma polarización de dos posiciones, tras cancelar el producto polar dominante. La matriz positiva exige diagonales no negativas y |W(L,V_sR)|²≤W(L)W(R). La parte arquimediana permanece acotada para perfiles fijos. Así la banda exigiría E_K=O(√K) con el cruce completo dentro de su umbral preciso. El PNT usado en 018-A sólo da o(K). El teorema de banda de P47 ya aísla esta fluctuación para el mismo perfil primitivo. El cotejo independiente no identificó una operación aritmética distinta que pruebe o viole el umbral para los perfiles distintos. Selección detenida antes de cálculos. El signo global sigue abierto.
+It is the same two-position polarization, after cancelling the dominant polar product. The positive matrix requires non-negative diagonals and |W(L,V_sR)|²≤W(L)W(R). The archimedean part stays bounded for fixed profiles. Thus the band would require E_K=O(√K) with the complete crossing within its precise threshold. The PNT used in 018-A only gives o(K). The band theorem of P47 already isolates this fluctuation for the same primitive profile. The independent cross-check did not identify a different arithmetic operation that proves or violates the threshold for the different profiles. Selection stopped before computations. The global sign remains open.

@@ -1,55 +1,55 @@
-# POWER_AUDIT_006 — Revisión independiente del test reparado por el contacto 2
+# POWER_AUDIT_006 — Independent review of the test repaired by contact 2
 
-Estado: PROVED y reejecutado. Papers intactos. Audita POWER_ARITHMETIC_WITNESS_006.md y tools/power_arithmetic_witness_006_verify.py.
+Status: PROVED and rerun. Papers untouched. Audits POWER_ARITHMETIC_WITNESS_006.md and tools/power_arithmetic_witness_006_verify.py.
 
-## 1. Certificación aritmética y de matrices
+## 1. Arithmetic and matrix certification
 
-El verificador Fraction se ejecutó independientemente con salida PASS. La norma N=99993678, la reducción de bandas Toeplitz y los coeficientes T_r son correctos: el factor 2 de los pares de bandas cancela el factor 1/2 de b_k, y la sustitución psi^(r)(16)=(-1)^(r+1)r!sum m^(-r-1) cancela el factorial restante. Se comprobó que cada coeficiente de signo negativo usa la cola superior en el extremo inferior y viceversa. Los momentos polares producen 126AB con las sumas racionales declaradas. La certificación da estrictamente
+The Fraction verifier was run independently with output PASS. The norm N=99993678, the reduction of Toeplitz bands and the coefficients T_r are correct: the factor 2 of the band pairs cancels the factor 1/2 of b_k, and the substitution psi^(r)(16)=(-1)^(r+1)r!sum m^(-r-1) cancels the remaining factorial. It was checked that each coefficient of negative sign uses the upper tail at the lower endpoint and vice versa. The polar moments produce 126AB with the declared rational sums. The certification gives strictly
 
     -2/125 < (Arch+Polar)/N < -1/100.
 
-Las cotas de d, logaritmos y gamma son las mismas ya auditadas en la ronda005; las colas de cada derivada de psi se acotan por las integrales desde256 y255, con orientación correcta.
+The bounds for d, logarithms and gamma are the same already audited in round 005; the tails of each derivative of psi are bounded by the integrals from 256 and 255, with correct orientation.
 
-## 2. Autocorrelación verificada por un cálculo independiente
+## 2. Autocorrelation verified by an independent computation
 
-Además de ejecutar la fórmula del constructor, se expandió directamente el polinomio P(x)=sum v_j L_j(x) en monomios y se calculó
+Besides running the formula of the memo, the polynomial P(x)=sum v_j L_j(x) was expanded directly in monomials and
 
-    Q(t)=integral_0^infinito exp(-x)P(x)P(x+t)dx.
+    Q(t)=integral_0^infinito exp(-x)P(x)P(x+t)dx
 
-Si P(x)=sum p_a x^a, cada coeficiente se obtiene como
+was computed. If P(x)=sum p_a x^a, each coefficient is obtained as
 
     [t^k]Q=sum_{a=0}^{11}sum_{b=k}^{11} p_a p_b binom(b,k)(a+b-k)!.
 
-La integración exacta mediante Fraction/factoriales reproduce los doce coeficientes del memo, sin usar la identidad de Laguerre desplazada como premisa. Esto confirma la orientación de los términos cruzados y la ausencia de un factor dos faltante. Al escalar x=63y queda exactamente c_h(t)=e^(-31.5t)Q(63t).
+Exact integration via Fraction/factorials reproduces the twelve coefficients of the memo, without using the shifted Laguerre identity as a premise. This confirms the orientation of the cross terms and the absence of a missing factor two. Scaling x=63y gives exactly c_h(t)=e^(-31.5t)Q(63t).
 
-El desplazamiento Q(x+40) tiene doce coeficientes estrictamente negativos, verificados de nuevo por el script. Por tanto Q<0 y Q'<0 en [40,infinito). Como 63log2>42, cada contacto primo-potencia real aporta signo positivo:
+The shift Q(x+40) has twelve strictly negative coefficients, verified again by the script. Therefore Q<0 and Q'<0 on [40,infinity). Since 63log2>42, each real prime-power contact contributes positive sign:
 
     -2Lambda(n)n^-32 Q(63log n)>0.
 
-No se asigna signo estricto a enteros con Lambda(n)=0.
+No strict sign is assigned to integers with Lambda(n)=0.
 
-## 3. Reparación inferior sin estimar cola
+## 3. Lower repair without estimating the tail
 
-Las desigualdades -Q creciente y log2>2/3 justifican con su signo exacto
+The inequalities -Q increasing and log2>2/3 justify with their exact sign
 
     -2log2*2^-32 Q(63log2)/N >-(4/3)2^-32 Q(42)/N>1/25.
 
-Todos los demás términos del peine son no negativos. Su serie converge absolutamente porque Q es un polinomio de grado once y el peso es n^-32. En consecuencia
+All other terms of the comb are nonnegative. Their series converges absolutely because Q is a polynomial of degree eleven and the weight is n^-32. Consequently
 
     W[h]/N>1/25-2/125=3/125>1/50.
 
-La cola no se omite como error pequeño: se conserva como suma de términos de signo favorable, lo cual basta para esta cota inferior. No se deduce que retirar el contacto2 haga negativa la suma de los restantes; haría falta una cota superior adicional.
+The tail is not omitted as a small error: it is kept as a sum of terms of favourable sign, which suffices for this lower bound. It is not deduced that removing contact 2 makes the sum of the rest negative; an additional upper bound would be needed.
 
-## 4. Novedad y alcance
+## 4. Novelty and scope
 
-Se obtiene un caso exterior explícito en el que ARCH+POLAR es negativa y el contacto2 aislado compensa el déficit. Los antecedentes de necesidad aritmética general y de otros usos de Laguerre están detallados en POWER_AUDIT_005§7. La novedad concreta queda en el vector racional, la autocorrelación de signo comprobable y la reparación exacta del test presente; no es un certificado para todo el bloque de orden doce ni para el signo de todas las ventanas.
+An explicit exterior case is obtained in which ARCH+POLAR is negative and the isolated contact 2 compensates the deficit. The antecedents on general arithmetic necessity and other uses of Laguerre are detailed in POWER_AUDIT_005§7. The concrete novelty lies in the rational vector, the autocorrelation of checkable sign and the exact repair of the present test; it is not a certificate for the whole block of order twelve nor for the sign of all windows.
 
-## 5. Ampliación revisada: eliminar solamente el contacto2 cambia el signo
+## 5. Reviewed extension: removing only contact 2 changes the sign
 
-El constructor añadió después de §§1–4 una cota superior de la cola. Revisada y reejecutada: APROBADA, sustituye la limitación anterior sobre no disponer de esa cota. Para r<=12, log3>1 garantiza que f_r(x)=(log x)^r x^-32 decrece en x>=3. Su suma se controla por f_r(3)+integral_3^infinito f_r(x)dx. La sustitución t=log x y la expansión binomial dan exactamente la fórmula de §4 del memo principal; usar log3<11/10 tiene el signo correcto porque todos sus coeficientes son positivos.
+An upper bound for the tail was added after §§1–4. Reviewed and rerun: APPROVED; it replaces the earlier limitation of not having that bound. For r<=12, log3>1 guarantees that f_r(x)=(log x)^r x^-32 decreases on x>=3. Its sum is controlled by f_r(3)+integral_3^infinito f_r(x)dx. The substitution t=log x and the binomial expansion give exactly the formula of §4 of the main memo; using log3<11/10 has the correct sign because all its coefficients are positive.
 
-El script añadido certifica 1<log3<11/10 con J/E en r=1/2 y verifica, después de sumar los doce valores absolutos de coeficientes de Q, que la contribución TOTAL de n>=3 es menor que N/500. Por tanto
+The added script certifies 1<log3<11/10 with J/E at r=1/2 and verifies, after summing the twelve absolute values of the coefficients of Q, that the TOTAL contribution of n>=3 is less than N/500. Therefore
 
     W_sin_contacto2[h]/N < -1/100+1/500=-1/125.
 
-Este paso sí permite ahora afirmar el cambio de signo al retirar exclusivamente n=2, manteniendo todos los n>=3, incluidas las potencias de2. La afirmación previa de §§3–4 era deliberadamente condicionada a no tener cota superior; esta ampliación aporta exactamente la pieza faltante. El resultado sigue referido al test exterior explícito, no a todas las direcciones ni a otra clase de portadores.
+This step now allows asserting the sign change when removing exclusively n=2, keeping all n>=3, including the powers of 2. The earlier claim of §§3–4 was deliberately conditioned on not having an upper bound; this extension supplies exactly the missing piece. The result still refers to the explicit exterior test, not to all directions nor to another class of carriers.

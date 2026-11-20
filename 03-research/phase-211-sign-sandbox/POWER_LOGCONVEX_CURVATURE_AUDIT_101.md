@@ -1,29 +1,29 @@
-# POWER_LOGCONVEX_CURVATURE_AUDIT_101 — Auditoría independiente
+# POWER_LOGCONVEX_CURVATURE_AUDIT_101 — Independent audit
 
-Estado: **APROBADO / PROVED para la clase auxiliar declarada.** Fuente `POWER_LOGCONVEX_CURVATURE_OBSTRUCTION_101.md` leída íntegramente. Auditor mapa; coeficientes y presupuestos reproducidos por Fraction exacta. Papers intactos; sin campañas o evaluación numérica de integrales.
+Status: **APPROVED / PROVED for the declared auxiliary class.** Source `POWER_LOGCONVEX_CURVATURE_OBSTRUCTION_101.md` read in full. Coefficients and budgets reproduced by exact Fraction. Papers untouched; no campaigns or numerical evaluation of integrals.
 
-## Hipótesis globales
+## Global hypotheses
 
-V=A[cosh(t)+1e−4cosh(10t)], A=1e46, es par, analítica y crece superlinealmente. v''>=101/100>1 asegura modo único para cada inclinación. Las derivadas pares son positivas y las impares positivas ent>0. v'' es una suma positiva de exponenciales con tasas distintas±1,±10; la varianza de esas tasas prueba(logv'')''>0 para TODOt real. No sólo una región del potencial satisface la hipótesis extra.
+V=A[cosh(t)+1e−4cosh(10t)], A=1e46, is even, analytic and grows superlinearly. v''>=101/100>1 ensures a unique mode for each tilt. The even derivatives are positive and the odd ones positive fort>0. v'' is a positive sum of exponentials with distinct rates±1,±10; the variance of those rates proves(logv'')''>0 for ALLt real. Not just one region of the potential satisfies the extra hypothesis.
 
-La diferencia respecto074 es efectiva: su potencial polinómico tiene logcurvatura cóncava eventualmente y derivadas altas nulas. La clase nueva realmente refuerza aquella. No se atribuye esta clase a la Phi real.
+The difference relative to074 is effective: its polynomial potential has eventually concave log-curvature and vanishing high derivatives. The new class really strengthens that one. This class is not attributed to the real Phi.
 
-## Inversa y resto completo
+## Inverse and complete remainder
 
-alpha101/100,beta1/3,gamma101/120 son los tres primeros coeficientes de v'. Los coeficientes deq cancelan exactamente grados1,3,5; se verificó d=−51675000000000/107213535210701<−2/5, junto a>.99,−1/3<b<0 y−1<d. Para0<u<=3delta, los correctores negativos dejan0<q<=u y|w|<=2u³.
+alpha101/100,beta1/3,gamma101/120 are the first three coefficients of v'. The coefficients ofq cancel exactly degrees1,3,5; verified d=−51675000000000/107213535210701<−2/5, together with a>.99,−1/3<b<0 and−1<d. For0<u<=3delta, the negative correctors leave0<q<=u and|w|<=2u³.
 
-La expansión cúbica deja3u7+12u7+8u9<16u7; el valor medio de la quinta deja10u7. La cola COMPLETA de sinh tiene primercoef10001/5040<2 y razón<(10q)²/72<1/7200, por tanto<3u7. Se usó gamma<1 al pagar el coste total<20u7. La inversa es Lipschitz1 porque v''>=1, así la cota final100u7 es segura. No se usa un equivalente sinresto.
+The cubic expansion leaves3u7+12u7+8u9<16u7; the mean value of the fifth power leaves10u7. The COMPLETE tail of sinh has first coef10001/5040<2 and ratio<(10q)²/72<1/7200, hence<3u7. gamma<1 was used when paying the total cost<20u7. The inverse is Lipschitz1 because v''>=1, so the final bound100u7 is safe. No equivalent without remainder is used.
 
-## Forma negativa y concentración
+## Negative form and concentration
 
-El vector(1,−2,1) anula las sumas de potencias0 y1; las contribucioneslineal/cúbica desaparecen y la quintica es4d delta4. Dividir el resto usando(u7+w7)/(u+w)<=max(u,w)^6 da error<=16·100·729delta6=729/62500delta4<3/250delta4. El modo tiene forma<−397/250delta4.
+The vector(1,−2,1) annihilates the power sums0 and1; the linear/cubic contributions disappear and the quintic one is4d delta4. Dividing the remainder using(u7+w7)/(u+w)<=max(u,w)^6 gives error<=16·100·729delta6=729/62500delta4<3/250delta4. The mode has form<−397/250delta4.
 
-La integraciónporpartes en todaR tiene bordes nulos por exp[−A(v−ut)] y da E[(X−modo)(v'(X)−u)]=1/A. Monotonía fuerte v''>=1 controla el segundo momento respecto delmodo, y Cauchy da|media−modo|<=A^-1/2. No se confundió ese momento con una varianza sin centrar.
+Integration by parts on allR has vanishing boundary terms by exp[−A(v−ut)] and gives E[(X−mode)(v'(X)−u)]=1/A. Strong monotonicity v''>=1 controls the second moment about themode, and Cauchy gives|mean−mode|<=A^-1/2. That moment was not confused with an uncentered variance.
 
-La escala de kernel es B=A K_M(Aui,Auj). Cada entrada difiere delkernelmodos a lo sumo1/(delta sqrtA); la forma cuesta16/(delta sqrtA)=2/125delta4. El margen final es−393/250delta4<−3/2delta4, y dividir porA da exactamente la cotaNEGATIVE de la fuente. Todos estos presupuestos se reprodujeron racionalmente. Las diagonales son positivas por paridad/tilt, así el bloque auxiliar es indefinido.
+The kernel scale is B=A K_M(Aui,Auj). Each entry differs from themode kernel by at most1/(delta sqrtA); the form costs16/(delta sqrtA)=2/125delta4. The final margin is−393/250delta4<−3/2delta4, and dividing byA gives exactly the boundNEGATIVE of the source. All these budgets were reproduced rationally. The diagonals are positive by parity/tilt, so the auxiliary block is indefinite.
 
-## Alcance
+## Scope
 
-Se refuta SÓLO la suficiencia genérica de fuerteconvexidad, V''logconvexa y todos los signos de derivadas delpotencial para obtener tres nodos positivos. No es una Phi/W negativa. El ejemplo no incorpora simultáneamente los inputs específicos077/089/099, que ya garantizan los triples reales; no refuta una clase invariante que sí los conserve. Tampoco demuestra imposibilidad de Schur general o del objetivo global.
+Refuted ONLY: the generic sufficiency of strong convexity, log-convex V'' and all signs of derivatives of the potential to obtain three positive nodes. It is not a negative Phi/W. The example does not simultaneously incorporate the specific inputs077/089/099, which already guarantee the real triples; it does not refute an invariant class that does preserve them. Nor does it prove impossibility of general Schur or of the global goal.
 
-Se consultaron los tresregistros y003/074/081/099; no se halló este reforzamiento. No se propone continuar una campaña de fortalecimientos genéricos que ignore los datos reales disponibles. Todas las coberturas hasta099 permanecen válidas.
+The three records and003/074/081/099 were consulted; this strengthening was not found. Continuing a campaign of generic strengthenings ignoring the available real data is not proposed. All coverages up to099 remain valid.

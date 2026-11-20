@@ -1,4 +1,4 @@
-# Review 004 — hostile check of ROUND_005_C, ROUND_005_A, ROUND_005_E, ROUND_006_A
+# Review 004 — independent check of ROUND_005_C, ROUND_005_A, ROUND_005_E, ROUND_006_A
 
 Reference objects: STATEMENT_001.md (window form a_T, P_T, Lévy form), OBJECT_SPEC_001.md (R1–R5), Paper 47
 (04-papers/47-row-d-dual-certificates/main.tex). No equivalence of (★) with any other statement is used.

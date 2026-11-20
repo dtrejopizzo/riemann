@@ -1,17 +1,17 @@
-# Separación de las frecuencias que exige 184
+# Separation of the frequencies required by 184
 
-Para N grande, sea μ la probabilidad en los primos de [N,eN] proporcional a log p, U=log(p/N) y φ(t)=Eμ exp(itU). Hay constantes absolutas c,C>0 con esta propiedad: fijados 0<α<1 y 0<ε<c(1−α)², si |φ(t)| y |φ(t')| son ≥1−ε, entonces
+For large N, let μ be the probability on the primes of [N,eN] proportional to log p, U=log(p/N) and φ(t)=Eμ exp(itU). There are absolute constants c,C>0 with the following property: given 0<α<1 and 0<ε<c(1−α)², if |φ(t)| and |φ(t')| are ≥1−ε, then
 
-    |t−t'|≤C√ε   o   |t−t'|>N^α.
+    |t−t'|≤C√ε   or   |t−t'|>N^α.
 
-El umbral de N puede depender de α. Las alturas individuales son arbitrarias. En 184, escogiendo primero D suficientemente grande, esto excluye diferencias intermedias entre dos candidatos para el mismo bloque. Persiste la posibilidad de un pico aislado.
+The threshold for N may depend on α. The individual heights are arbitrary. In 184, choosing D large enough first, this excludes intermediate differences between two candidates for the same block. The possibility of an isolated peak persists.
 
-**Diferencia de fases.** Cada variable unitaria exp(itU) de media de módulo ≥1−ε dista en L² a lo sumo √(2ε) de una constante de módulo uno. Para el producto de una y la conjugada de la otra la distancia a la constante producto es ≤2√(2ε). Tomando parte real, |φ(t−t')|≥1−4ε.
+**Phase difference.** Each unit variable exp(itU) with mean of modulus ≥1−ε is at L² distance at most √(2ε) from a constant of modulus one. For the product of one and the conjugate of the other the distance to the product constant is ≤2√(2ε). Taking real parts, |φ(t−t')|≥1−4ε.
 
-**Frecuencia moderada.** Para 1≤s≤N^α y cualquier arco angular de semiancho η<1 fijo, la condición exp(is log(x/N)) en el arco corta [N,eN] en O(1+s) intervalos. Cada uno tiene longitud ≤2eηN/s por la regla de la cadena, también si toca un borde. Se pueden mayorar por intervalos de longitud H=ceil(2eηN/s)+2. La desigualdad clásica de Brun–Titchmarsh en módulo uno da O(H/log H) primos por intervalo; la constante es absoluta. Para N grande según η y α se tiene log H≥(1−α)log(N)/2. Multiplicando por log(eN) y dividiendo por la masa total (e−1+o(1))N, obtenemos probabilidad ≤C₀η/(1−α). Aquí sH=O(ηN) uniformemente, para N suficientemente grande. Tomar η=c₀(1−α) con c₀ absoluto pequeño deja al menos la mitad de la masa fuera de cualquier arco así. Centrar en el argumento de φ(s) da 1−|φ(s)|≥(1−cos η)/2≥c₁(1−α)².
+**Moderate frequency.** For 1≤s≤N^α and any angular arc of fixed half-width η<1, the condition exp(is log(x/N)) in the arc cuts [N,eN] in O(1+s) intervals. Each has length ≤2eηN/s by the chain rule, also if it touches an edge. They can be majorized by intervals of length H=ceil(2eηN/s)+2. The classical Brun–Titchmarsh inequality with modulus one gives O(H/log H) primes per interval; the constant is absolute. For N large depending on η and α one has log H≥(1−α)log(N)/2. Multiplying by log(eN) and dividing by the total mass (e−1+o(1))N, we obtain probability ≤C₀η/(1−α). Here sH=O(ηN) uniformly, for N sufficiently large. Taking η=c₀(1−α) with c₀ absolute and small leaves at least half of the mass outside any such arc. Centring at the argument of φ(s) gives 1−|φ(s)|≥(1−cos η)/2≥c₁(1−α)².
 
-**Frecuencia baja.** Para |s|≤1 y U' copia independiente, 1−|φ(s)|²=E[1−cos(s(U−U'))]≥c₂s² Var(U). Por PNT, U converge en ley a la densidad e^u/(e−1) en [0,1], de varianza positiva. Estas dos cotas y la diferencia de fases demuestran la separación.
+**Low frequency.** For |s|≤1 and U' an independent copy, 1−|φ(s)|²=E[1−cos(s(U−U'))]≥c₂s² Var(U). By PNT, U converges in law to the density e^u/(e−1) on [0,1], of positive variance. These two bounds and the phase difference prove the separation.
 
-**Forma local del pico.** Si φ(t)=|φ(t)|z, |z|=1, entonces |φ(t+s)−zφ(s)|≤√(2ε) para todo s por Cauchy–Schwarz. Para s en un compacto, φ(s) converge uniformemente a (exp(1+is)−1)/((e−1)(1+is)), por PNT y equicontinuidad. Esto identifica el perfil cerca de un candidato, con error O(√ε)+o(1).
+**Local shape of the peak.** If φ(t)=|φ(t)|z, |z|=1, then |φ(t+s)−zφ(s)|≤√(2ε) for all s by Cauchy–Schwarz. For s in a compact set, φ(s) converges uniformly to (exp(1+is)−1)/((e−1)(1+is)), by PNT and equicontinuity. This identifies the profile near a candidate, with error O(√ε)+o(1).
 
-181 estimaba la medida total de un conjunto excepcional para el peine global. Aquí la separación se deduce para dos frecuencias del promedio casi máximo de un mismo bloque y sin restricción sobre su altura absoluta. Brun–Titchmarsh ya figura entre las herramientas de R163_602; se aplica aquí a los intervalos de preimagen de un arco para la frecuencia diferencia. La prueba requiere masa de todos los primos y no se aplica a los pesos arbitrarios de 185.
+181 estimated the total measure of an exceptional set for the global comb. Here separation is deduced for two frequencies of the almost maximal average of the same block and without restriction on their absolute height. Brun–Titchmarsh already appears among the tools of R163_602; here it is applied to the preimage intervals of an arc for the difference frequency. The proof requires mass on all primes and does not apply to the arbitrary weights of 185.

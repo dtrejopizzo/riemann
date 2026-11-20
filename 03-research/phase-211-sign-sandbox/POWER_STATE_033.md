@@ -1,29 +1,29 @@
-# Estado033 — Cotas aritméticas relativas y agrupación finita de coeficientes
+# State033 — Relative arithmetic bounds and finite grouping of coefficients
 
-Estado: resultados parciales PROVED y auditados; condiciones finales OPEN. Sustituye STATE032. Goal activo; papers intactos.
+Status: partial results PROVED and audited; final conditions OPEN. Replaces STATE032. Goal active; papers untouched.
 
-## Peine completo con resto relativo firmado
+## Full comb with signed relative remainder
 
-POWER_PRIME_BALANCE_033 demuestra para u>=63/2 y3<=N<=2u²/9−u/3+3/2 que el kernel positivo de contactos k1 satisface w(mq)<=m^-2w(q) para q>=5,m>=1. El operador de dilataciones Df(q)=sum_(m>=2)f(mq) contrae esta clase real por rho=2389/3600<2/3.
+POWER_PRIME_BALANCE_033 proves for u>=63/2 and3<=N<=2u²/9−u/3+3/2 that the positive contact kernel k1 satisfies w(mq)<=m^-2w(q) for q>=5,m>=1. The dilation operator Df(q)=sum_(m>=2)f(mq) contracts this real class by rho=2389/3600<2/3.
 
-Restando correctamente los divisores pequeños2,3,4 de logn se obtiene un funcional L sobre enteros y la identidad L(f)=A((I+D)f), donde A es la cola aritmética real q>=5. Para K impar, el prefijo S_K=sum_(j=0)^K(−1)^j L(D^jw) cumple
+Correctly subtracting the small divisors2,3,4 of logn gives a functional L on integers and the identity L(f)=A((I+D)f), where A is the real arithmetic tail q>=5. For odd K, the prefix S_K=sum_(j=0)^K(−1)^j L(D^jw) satisfies
 
     0<S_K<=A(w)<=S_K/(1−rho^(K+1)).
 
-También A(w)>=3600L(w)/5989. Son cotas firmadas y uniformes, no prefijos arbitrarios de Möbius supuestos positivos. El error es relativo al peine o a su prefijo, NO al residuo pequeño de W. Añadir ARCH, polar y contactos2,3,4 da un comparador completo, pero su signo positivo en un rango nuevo aún no está demostrado.
+Also A(w)>=3600L(w)/5989. These are signed and uniform bounds, not arbitrary Möbius prefixes assumed positive. The error is relative to the comb or its prefix, NOT to the small residue of W. Adding ARCH, polar and contacts2,3,4 gives a full comparator, but its positive sign in a new range is not yet proved.
 
-## Mezcla finita que conserva la forma
+## Finite mixture preserving the form
 
-POWER_COEFFICIENT_BALANCE_033 representa exactamente la autocorrelación gamma como mezcla finita de perfiles Erlang S_j=e^-ut sum_(r<=j)(ut)^r/r!, con pesos w_Nj=a_Nj−a_N,j+1>=0. La funcional lineal conserva todos los contactos y el polar.
+POWER_COEFFICIENT_BALANCE_033 represents the gamma autocorrelation exactly as a finite mixture of Erlang profiles S_j=e^-ut sum_(r<=j)(ut)^r/r!, with weights w_Nj=a_Nj−a_N,j+1>=0. The linear functional keeps all contacts and the polar.
 
-La premisa de que cada componente tenga funcional positivo es falsa: para el único corte22 se prueba −.01<L[S22]<−.006. Su transformada de Fourier toma un valor negativo, por lo que S22 NO es una autocorrelación admisible; no es un contraejemplo a W. La pérdida de ese componente individual en la mezcla real está acotada por .22/(N−1), sin controlar por ello todos los demás.
+The premise that each component has a positive functional is false: for the single cutoff22 one proves −.01<L[S22]<−.006. Its Fourier transform takes a negative value, so S22 is NOT an admissible autocorrelation; it is not a counterexample to W. The loss of that individual component in the real mixture is bounded by .22/(N−1), without thereby controlling all the others.
 
-Una segunda agrupación de Abel da coeficientes no negativos para T_m=sum_(j=1)^m jL[S_j]. Probar TODOS T_m>=0 sería suficiente para la fila k0, pero sigue OPEN. No sería por sí solo un cierre de todos k ni del Paper47. La identidad generadora se conserva como descripción del requisito, no como prueba de signo.
+A second Abel grouping gives nonnegative coefficients for T_m=sum_(j=1)^m jL[S_j]. Proving ALL T_m>=0 would suffice for row k0, but remains OPEN. It would not by itself close all k nor Paper47. The generating identity is kept as a description of the requirement, not as a sign proof.
 
-## Evidencia y alcance
+## Evidence and scope
 
-POWER_BALANCE_AUDIT_033 aprueba ambos memos. Root revisó las identidades, fronteras de divisores, signos de restos y alcances, y reprodujo ambos verificadores exactos: PASS. No se certificaron nuevos N ni una campaña de cortes.
+POWER_BALANCE_AUDIT_033 approves both memos. The identities, divisor boundaries, signs of remainders and scopes were reviewed, and both exact verifiers reproduced: PASS. No new N nor a campaign of cutoffs was certified.
 
-No hay ampliación de cobertura W/T en033. Permanecen las filas1..5, el cono017, el único átomo211,1 decidido032, y las regiones029 de tasas crecientes con sus límites. El promedio firmado031 y el criterio nuevo de coeficientes siguen sin resolver la obligación global.
+There is no extension of W/T coverage in033. Rows1..5, the cone017, the single atom211,1 decided032, and the regions029 of increasing rates with their limits remain. The signed average031 and the new coefficient criterion still do not resolve the global obligation.
 
-La próxima construcción debe demostrar una comparación positiva completa con estos restos o controlar las compensaciones de T_m; convergencia de una aproximación y positividad de sus piezas no equivalen al signo total.
+The next construction must prove a full positive comparison with these remainders or control the compensations of T_m; convergence of an approximation and positivity of its pieces are not equivalent to the total sign.

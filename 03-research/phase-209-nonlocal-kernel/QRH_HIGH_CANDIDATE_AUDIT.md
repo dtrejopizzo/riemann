@@ -1,163 +1,162 @@
-# QRH — revisión alta de la geometría candidata
+# QRH — high review of the candidate geometry
 
-2026-10-19. Revisor independiente. **PROVED: cálculos de parámetros y
-fallo de aplicabilidad de hipótesis publicadas. CONDITIONAL: transporte
-de la fórmula alta a otra geometría. No nueva región libre de ceros.**
+2026-10-19. Independent review. **PROVED: parameter computations and
+failure of applicability of published hypotheses. CONDITIONAL: transport
+of the high formula to another geometry. No new zero-free region.**
 
-## Corpus, objeto y fuente
+## Corpus, object and source
 
-Consultados las reglas del proyecto, índice ROUTES-TRIED-INDEX, grid maestro y crucigrama
-actual. Diferencia escrita: verificar las hipótesis altas de una geometría
-específica que hasta ahora sólo tenía una plantilla baja formal. No se
-reabre una fuente de signo para D ni se considera probada una extensión
-de los lemas externos.
+Consulted: the project rules, the ROUTES-TRIED-INDEX index, master grid and current
+crossword. Written difference: verify the high hypotheses of a specific
+geometry that so far had only a formal low template. No
+source of sign for D is reopened, nor is an extension
+of the external lemmas considered proved.
 
-Fuente primaria: OpenAI, manuscrito30Sept2026, §§18–20, leído en
-`/tmp/qrh-review/september.txt`. Las referencias siguientes son al texto
-del manuscrito; no se realizó auditoría integral de sus demostraciones.
+Primary source: OpenAI, manuscript 30Sept2026, §§18–20, read in
+`/tmp/qrh-review/september.txt`. The following references are to the text
+of the manuscript; no full audit of its proofs was carried out.
 
-La candidata es
+The candidate is
 
     ell=1/5, b=1/10, lx=7/20, ly=9/20, h=17/20.
 
-## 1. Suministro de primos: estas desigualdades sí pasan
+## 1. Supply of primes: these inequalities do pass
 
-La comprobación de§20.5 exige ell/d>7/37 para el rango con selección.
-Para 1/2≤d≤h, el mínimo candidato es
+The check of §20.5 requires ell/d>7/37 for the range with selection.
+For 1/2≤d≤h, the candidate minimum is
 
     ell/h=4/17,     4/17−7/37=29/629>0.
 
-Además 5ell−h=3/20>0. Por ello cualquier extensión fija
-0<zeta<3/20 mantiene ell/(h+zeta)>1/5>7/37. Con K par fijo
-suficientemente grande, los tamaños de slot ell_i/d≤2ell/K pueden
-quedar bajo cualquier umbral positivo de malla ya disponible. Este
-cálculo no demuestra que dicho umbral esté disponible para los nuevos
-parámetros: ése es un requisito analítico separado.
+Moreover 5ell−h=3/20>0. Hence any fixed extension
+0<zeta<3/20 keeps ell/(h+zeta)>1/5>7/37. With a fixed even K
+sufficiently large, the slot sizes ell_i/d≤2ell/K can
+lie below any positive mesh threshold already available. This
+computation does not prove that such a threshold is available for the new
+parameters: that is a separate analytic requirement.
 
-La normalización de§20.1 tampoco introduce una potencia adicional:
-Z^(-ell/6)∏P_i^(1/6)=1 cuando Σell_i=ell. Su argumento de signo y
-subpotencia del normalizador conserva la misma aritmética formal con K
-par. Esto no valida todos los contornos ni la identidad alta modificada.
+The normalisation of §20.1 does not introduce an additional power either:
+Z^(-ell/6)∏P_i^(1/6)=1 when Σell_i=ell. Its sign and
+subpower argument for the normaliser keeps the same formal arithmetic with even
+K. This does not validate all contours nor the modified high identity.
 
-## 2. El trasplante dinámico no es la única elección de kappa
+## 2. The dynamic transplant is not the only choice of kappa
 
-Lemma18.1 empieza con **3/4≤kappa≤1**. Su uniformidad de malla también
-se declara sólo en ese intervalo. En§19 se usa la relación dinámica
+Lemma18.1 starts with **3/4≤kappa≤1**. Its mesh uniformity is also
+declared only in that interval. In §19 the dynamic relation is used
 
     kappa=2beta*−1,
 
-incluida en§20 como kappa=3/4+2Delta para Delta=beta*−7/8.
+included in §20 as kappa=3/4+2Delta for Delta=beta*−7/8.
 
-Si se intenta un extremo sigma0=13/15 y beta*=sigma0+Delta, resulta
+If an endpoint sigma0=13/15 and beta*=sigma0+Delta are attempted, one gets
 
     kappa=11/15+2Delta.
 
-Para 0<Delta<1/120, kappa<3/4: el Lemma18.1 publicado no se aplica
-con ESA elección dinámica.
-En el objetivo sigma0=4/5, kappa=3/5+2Delta y la misma insuficiencia
-se presenta para 0<Delta<3/40. Esto impide copiar literalmente la
-capacidad dinámica, pero NO obliga a extender el teorema de momentos.
+For 0<Delta<1/120, kappa<3/4: the published Lemma18.1 does not apply
+with THAT dynamic choice.
+At the target sigma0=4/5, kappa=3/5+2Delta and the same insufficiency
+appears for 0<Delta<3/40. This prevents literally copying the
+dynamic capacity, but does NOT force extending the moment theorem.
 
-La condición real de Lemma18.1 para slots positivos y kappa<1 es
-beta*≤(1+kappa)/2. Si se toma el resultado publicado7/8 como insumo,
-con el alcance declarado para toda la familia Hecke relevante, se puede
-usar conservadoramente kappa=3/4 para beta*≤7/8. Más generalmente,
-kappa=max{3/4,2beta*−1} respeta el rango del lema y su condición de
-ceros cuando beta*≤1. La malla uniforme publicada sí cubre esa elección.
-Esto no verifica independientemente el insumo externo7/8.
+The actual condition of Lemma18.1 for positive slots and kappa<1 is
+beta*≤(1+kappa)/2. If the published result 7/8 is taken as input,
+with the declared scope for the whole relevant Hecke family, one can
+conservatively use kappa=3/4 for beta*≤7/8. More generally,
+kappa=max{3/4,2beta*−1} respects the range of the lemma and its zero
+condition when beta*≤1. The published uniform mesh does cover that choice.
+This does not independently verify the external input 7/8.
 
-La capacidad pasa a ser z_P=(1−2m)/(6kappa); es menor que la capacidad
-dinámica formal cuando 2beta*−1<3/4. Deben recalcularse los cruces de
-testigos, cuentas de filas y márgenes altos para esa capacidad efectiva.
-El hallazgo es sólo una insuficiencia del trasplante DINÁMICO literal,
-no un obstáculo inevitable del dominio de Lemma18.1. El problema del
-piso de filas de la sección siguiente no depende de esta elección.
+The capacity becomes z_P=(1−2m)/(6kappa); it is smaller than the formal dynamic
+capacity when 2beta*−1<3/4. The witness crossings,
+row counts and high margins must be recomputed for that effective capacity.
+The finding is only an insufficiency of the literal DYNAMIC transplant,
+not an unavoidable obstacle of the domain of Lemma18.1. The problem of the
+row floor in the next section does not depend on this choice.
 
-## 3. El certificado del piso de filas tampoco se transporta intacto
+## 3. The row-floor certificate does not transfer intact either
 
-Conservar formalmente la primera línea de(20.4), reemplazando la
-geometría y la escala de referencia sigma0, da en d=h
+Formally keeping the first line of (20.4), replacing the
+geometry and the reference scale sigma0, gives at d=h
 
     E(h)=C_geom+(1/2+ell)delta+ell q−h(1−R),
     C_geom=lx/2−sigma0+5h/6.
 
-Prueba algebraica: sustituir a=(1+delta)/2 y usar
-ly=lx+b, 2lx+b+ell=1, h=1+ell−lx. Esta identidad es un cálculo de
-la plantilla, no un nuevo bound alto fuera de la geometría publicada.
+Algebraic proof: substitute a=(1+delta)/2 and use
+ly=lx+b, 2lx+b+ell=1, h=1+ell−lx. This identity is a computation of
+the template, not a new high bound outside the published geometry.
 
-Para la candidata,
+For the candidate,
 
     C_geom=53/60−sigma0.
 
-El piso de§20.2 usa delta0=1/50, R=1, q≤delta0/2, sin testigo de cero.
-Aplicar esa misma majoración da
+The floor of §20.2 uses delta0=1/50, R=1, q≤delta0/2, without a zero witness.
+Applying that same majorisation gives
 
     E(h)≤C_geom+(4/5)delta0.
 
-En sigma0=13/15, el lado derecho es
+At sigma0=13/15, the right-hand side is
 
     1/60+2/125=49/1500>0.
 
-Al comparar con C(beta*) se resta Delta. Así, el certificado conservado
-no da margen negativo para todos los Delta>0: para Delta≤49/1500 su
-cota superior no es negativa. Esto NO afirma que la contribución real
-sea positiva ni que la cota sea óptima. Identifica el paso publicado
-que ya no certifica el signo del exponente.
+When comparing with C(beta*) one subtracts Delta. Thus, the preserved certificate
+does not give a negative margin for all Delta>0: for Delta≤49/1500 its
+upper bound is not negative. This does NOT claim that the actual contribution
+is positive nor that the bound is optimal. It identifies the published step
+that no longer certifies the sign of the exponent.
 
-En sigma0=4/5, la misma cota sería149/1500. Incluso llevar el piso
-delta0 a cero dejaría C_geom=1/60>0 en sigma0=13/15; cambiar únicamente
-ese piso tampoco recuperaría el certificado formal. Una estimación
-distinta de filas, o una reorganización que mejore esta majoración,
-requiere demostración adicional.
+At sigma0=4/5, the same bound would be 149/1500. Even taking the floor
+delta0 to zero would leave C_geom=1/60>0 at sigma0=13/15; changing only
+that floor would not recover the formal certificate either. A different
+row estimate, or a reorganisation improving this majorisation,
+requires additional proof.
 
-## 4. Certificado conjunto relajado: no basta mover los slots
+## 4. Relaxed joint certificate: moving the slots is not enough
 
-Para una geometría formal variable, el mismo cálculo del piso exige que
-la escala de referencia supere el umbral de su majoración
+For a variable formal geometry, the same floor computation requires that
+the reference scale exceed the threshold of its majorisation
 
     sigma_floor=2/3+b/6+ell+(1/2+3ell/2)delta0.
 
-Con delta0=1/50 publicado, esto es
+With the published delta0=1/50, this is
 
     sigma_floor=203/300+(103/100)ell+b/6.
 
-Combinarlo con la plantilla baja de QRH_FOUR_FIFTHS_ATTEMPT da el
-problema puramente algebraico de minimizar, en ell,b≥0,
+Combining it with the low template of QRH_FOUR_FIFTHS_ATTEMPT gives the
+purely algebraic problem of minimising, over ell,b≥0,
 
     max{11/12−ell/4+(5ell−1)_+/8,
         203/300+(103/100)ell+b/6}.
 
-Relajar b a cero sólo puede reducir ese máximo. Antes de ell=1/5 la
-primera función decrece y la segunda crece; se cruzan en ell=3/16, con
-valor167/192. Después de ell=1/5 ambas crecen. Por tanto el ínfimo
-relajado es exactamente
+Relaxing b to zero can only reduce that maximum. Before ell=1/5 the
+first function decreases and the second increases; they cross at ell=3/16, with
+value 167/192. After ell=1/5 both increase. Hence the relaxed
+infimum is exactly
 
     167/192 > 13/15 > 4/5.
 
-En particular, para 0<b≤1 el cruce es
-ell=3/16−25b/192 y el mínimo aumenta a167/192+25b/768. El caso b=0
-relaja la aplicabilidad de Pa≥1 y no se declara realizable por el probe.
-Tampoco el ínfimo obtenido es una nueva región libre de ceros: sólo es
-el piso de este par de certificados formales conservados. Para obtener
-un margen estricto se requieren además las holguras y pérdidas analíticas.
+In particular, for 0<b≤1 the crossing is
+ell=3/16−25b/192 and the minimum increases to 167/192+25b/768. The case b=0
+relaxes the applicability of Pa≥1 and is not declared realisable by the probe.
+Nor is the infimum obtained a new zero-free region: it is only
+the floor of this pair of preserved formal certificates. To obtain
+a strict margin the analytic slacks and losses are additionally required.
 
-Si se permitiera llevar delta0 a cero, el problema relajado tendría
-ínfimo13/15 en ell=1/5,b=0. Así ni esa relajación puramente algebraica
-autoriza4/5 conservando estas majoraciones. Mejorar alguna de ellas o
-su compatibilidad es una tarea adicional; no se excluye que pueda hacerse.
+If delta0 were allowed to go to zero, the relaxed problem would have
+infimum 13/15 at ell=1/5, b=0. Thus not even that purely algebraic relaxation
+authorises 4/5 while preserving these majorisations. Improving any of them or
+their compatibility is an additional task; it is not excluded that it can be done.
 
-## 5. Balance de la revisión
+## 5. Balance of the review
 
-El suministro escalar de slots no bloquea esta candidata. En cambio,
-hay dos cambios concretos para reutilizar la parte alta: reemplazar la
-elección dinámica de kappa por una autorizada, recalculando sus capacidades,
-y reparar la pérdida de holgura del piso de filas en(20.5). El primero
-no exige por sí solo extender Lemma18.1 si se acepta el insumo externo7/8.
-No se han recalculado aquí el certificado
-adaptativo completo, las comparaciones de capacidades ni todos los
-contornos: siguen pendientes, no se declaran aprobados.
+The scalar supply of slots does not block this candidate. On the other hand,
+there are two concrete changes needed to reuse the high part: replace the
+dynamic choice of kappa by an authorised one, recomputing its capacities,
+and repair the loss of slack of the row floor in (20.5). The first
+does not by itself require extending Lemma18.1 if the external input 7/8 is accepted.
+The full adaptive certificate, the capacity comparisons and all the
+contours have not been recomputed here: they remain pending, they are not declared approved.
 
-La geometría candidata no constituye una prueba13/15 y mucho menos4/5.
-Estos hallazgos delimitan tareas matemáticas necesarias para esta
-extrapolación; no clasifican todos los probes o métodos externos y no
-aportan signo de D.
+The candidate geometry does not constitute a 13/15 proof, much less 4/5.
+These findings delimit necessary mathematical tasks for this
+extrapolation; they do not classify all external probes or methods and do not
+contribute a sign of D.

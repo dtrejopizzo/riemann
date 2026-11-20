@@ -1,273 +1,273 @@
-# Ronda 12, A: el residuo L161.4 y su paso a todo P_T
+# Round 12, A: the residue L161.4 and its passage to all of P_T
 
-Notación del brief común. P_T es el portador primitivo y H_T el operador autoadjunto de la forma a_T sobre P_T.
-El radical de primer contacto en T* es ker H_{T*}: PAPF = 0, es decir AF = r = αe^{−t/2} + βe^{t/2} sobre la ventana.
+Notation of the common brief. P_T is the primitive carrier and H_T the self-adjoint operator of the form a_T on P_T.
+The first-contact radical at T* is ker H_{T*}: PAPF = 0, i.e. AF = r = αe^{−t/2} + βe^{t/2} on the window.
 
-**Resultado.** L161.4 no se conecta con la positividad global por un camino propio. El cuadrado de fuga L^sc es
-estrictamente positivo sobre todo F ≠ 0, y lo es para cualquier peso de la corriente: cΛ, borrado de una potencia
-de primo, Λ exacto (Lema A). Por eso la cláusula «el primer contacto anula el miembro izquierdo» equivale, con
-la cadena de primer contacto, a ker H_{T*} = {0}, que es el objetivo mismo. La versión sobre todo P_T existe
-(Prop. B). Es un certificado de núcleo de tipo Lyapunov, L^sc(F) = Re⟨H_T F, M_T F⟩, y en ella L^sc puede
-cambiarse por cualquier forma definida positiva (por ejemplo ‖F‖²). Las dos normalizaciones canónicas que dicta el
-retículo recaen en R161_052 y R161_056 (tangente con orientación equivocada). Veredicto: NO-GO de selección. Es una
-reformulación (B3, B9), y el cuadrado tiene un signo ciego al peso. Queda la operación de reapertura del §4.
+**Result.** L161.4 does not connect with global positivity by a route of its own. The leakage square L^sc is
+strictly positive on every F ≠ 0, and it is so for any weight of the current: cΛ, deletion of a prime
+power, exact Λ (Lemma A). Hence the clause «the first contact annihilates the left-hand side» is equivalent, via
+the first-contact chain, to ker H_{T*} = {0}, which is the goal itself. The version on all of P_T exists
+(Prop. B). It is a Lyapunov-type kernel certificate, L^sc(F) = Re⟨H_T F, M_T F⟩, and in it L^sc can be
+replaced by any positive definite form (for example ‖F‖²). The two canonical normalizations dictated by the
+lattice fall back onto R161_052 and R161_056 (tangent with the wrong orientation). Verdict: selection NO-GO. It is a
+reformulation (B3, B9), and the square has a sign blind to the weight. The reopening operation of §4 remains.
 
-## 0. Paso 0, en primaria
+## 0. Step 0, in primary sources
 
-He leído completos R161_015, 016, 017, 018, 019, 020, 024, 052 y 075. De R161_003 leí §§0–1, de R161_040 §§2–6, de
-R161_056 §§1 y 4, y de R161_073 y R161_081 los encabezados. Leí también ROUND_010_A, ROUND_011_A, RULES_AVOID
-B, E, J, K, L, T y U, y ANNEX_161_FILES_1 §(c).
+I read R161_015, 016, 017, 018, 019, 020, 024, 052 and 075 in full. Of R161_003 I read §§0–1, of R161_040 §§2–6, of
+R161_056 §§1 and 4, and of R161_073 and R161_081 the headers. I also read ROUND_010_A, ROUND_011_A, RULES_AVOID
+B, E, J, K, L, T and U, and ANNEX_161_FILES_1 §(c).
 
-**Búsqueda.** Busqué «L161.4», «R161_020», «leakage square» y «cuadrado de fuga» en todo el corpus, en el índice y
-en la grilla. Las citas que siguen son todas las que hay.
+**Search.** I searched for «L161.4», «R161_020», «leakage square» and «cuadrado de fuga» across the whole corpus, the index and
+the grid. The citations that follow are all there are.
 - R161_021, 024, 030, 034, 039, 049, 052.
-- README 161 y R161_099 §269.
-- Índice 04 G1C-R161_020-021, con estado PARTIAL.
-- Índice README l.2454: «cuadrados correctos sin identidad con el defecto de PC».
-- Grilla, celda 1C: residuo vivo X_T, no realizado.
-- ANNEX_161_FILES_1 y _2, LEDGER l.45, RULES_AVOID K1 y U2, ROUND_011_A.
+- README 161 and R161_099 §269.
+- Index 04 G1C-R161_020-021, with status PARTIAL.
+- Index README l.2454: «correct squares without identity with the PC defect».
+- Grid, cell 1C: live residue X_T, not realized.
+- ANNEX_161_FILES_1 and _2, LEDGER l.45, RULES_AVOID K1 and U2, ROUND_011_A.
 
-«C_log», «E_N^ren» y «graph limit» aparecen en unos cincuenta archivos (fases 106, 114, 116, 161 y 162). Los
-pertinentes son los que se citan abajo.
+«C_log», «E_N^ren» and «graph limit» appear in about fifty files (phases 106, 114, 116, 161 and 162). The
+relevant ones are those cited below.
 
-### 0.1 Objetos
+### 0.1 Objects
 
-- **C_log.** Coseno logarítmico normalizado: autoadjunto, unitario e involutivo. En Mellin,
+- **C_log.** Normalized logarithmic cosine: self-adjoint, unitary and involutive. In Mellin,
   M(C_log u)(s) = χ(s)M(u)(1−s) (R161_017 (1.6)).
-- **Puerto producto g.** Es la transformada inversa de frontera de
-  G_+^can(s) = −ζ'(s)K_F(s−½) − ζ(s)Q_+(s−½) − c_+(F)ζ(s)Θ_T(s), con Θ_T(s) = e^{−T(s−1)}/s (R161_015 (1.1)–(1.3)).
-  - Q_+ es la transformada de la prehistoria compacta q_+ de la corriente de Euler derecha B_+F.
-  - Por tanto G_+ = ζ·(transformada de la cola exterior h_+ de B_+F). g está soportado en [T,∞) y es lineal en el peso.
-- **P_+.** Multiplicación por 1_{[T,∞)}. H_T^± son las proyecciones de Hardy correspondientes.
-- **E_N^ren.** Es S_N^ren𝓕 − JS_N^ren, con S_N^ren = S_N − C_N(D). S_N tiene pesos unidad n^{−1/2} y C_N(D) es el
-  continuo polar de Euler–Maclaurin (R161_003). En Mellin e_N = A_N u − B_N, con A_N = Z_N(s) y B_N = Z_N(1−s)
+- **Product port g.** It is the inverse boundary transform of
+  G_+^can(s) = −ζ'(s)K_F(s−½) − ζ(s)Q_+(s−½) − c_+(F)ζ(s)Θ_T(s), with Θ_T(s) = e^{−T(s−1)}/s (R161_015 (1.1)–(1.3)).
+  - Q_+ is the transform of the compact prehistory q_+ of the right Euler current B_+F.
+  - Hence G_+ = ζ·(transform of the exterior tail h_+ of B_+F). g is supported on [T,∞) and is linear in the weight.
+- **P_+.** Multiplication by 1_{[T,∞)}. H_T^± are the corresponding Hardy projections.
+- **E_N^ren.** It is S_N^ren𝓕 − JS_N^ren, with S_N^ren = S_N − C_N(D). S_N has unit weights n^{−1/2} and C_N(D) is the
+  Euler–Maclaurin polar continuum (R161_003). In Mellin e_N = A_N u − B_N, with A_N = Z_N(s) and B_N = Z_N(1−s)
   (R161_052 (1.1)).
-- **Radical.** El vector de primer contacto supuesto F ∈ ker H_{T*}, con paridad ε.
-- **V_{M,N,T}.** Una normalización por definir, lineal en F, heredada del producto zeta y de los términos de Tate
-  cruzados. No puede definirse a partir de L^sc.
+- **Radical.** The supposed first-contact vector F ∈ ker H_{T*}, with parity ε.
+- **V_{M,N,T}.** A normalization to be defined, linear in F, inherited from the zeta product and the crossed Tate
+  terms. It cannot be defined from L^sc.
 
-### 0.2 Lo PROVED
+### 0.2 What is PROVED
 
-- Rigidez de compresión unitaria (R161_020 Lema 1.1).
-- L^sc(g) = ‖(I−P_+)C_log g‖² = ‖g‖² − ‖P_+C_log g‖² (R161_020 (0.2)), y su forma de Hardy (4.3).
-- Defecto exacto G_+ + χG_− = ζW_ε (R161_017 Teor. 2.1), con restricción interior W_ε^∨ = r_ε (R161_017 (3.3)).
-- Red de polos Gamma: W^0 holomorfo en s = 3, 5, 7, … implica F = 0 (R161_019, R161_024 Teor. 1.1).
-- Equivalencia de R161_024 §2: la removibilidad equivale a que el puerto reflejado se anule en los ceros triviales.
-- Pendiente de norma N_T'(0+) = −2∫(t−T)|g|² (R161_015 Teor. 3.1).
-- Colligación unitaria finita θ_N = A_N u/B_N, con |θ_N| = 1 y defecto de Toeplitz igual a fuga exacta
+- Unitary compression rigidity (R161_020 Lemma 1.1).
+- L^sc(g) = ‖(I−P_+)C_log g‖² = ‖g‖² − ‖P_+C_log g‖² (R161_020 (0.2)), and its Hardy form (4.3).
+- Exact defect G_+ + χG_− = ζW_ε (R161_017 Thm. 2.1), with interior restriction W_ε^∨ = r_ε (R161_017 (3.3)).
+- Gamma pole lattice: W^0 holomorphic at s = 3, 5, 7, … implies F = 0 (R161_019, R161_024 Thm. 1.1).
+- Equivalence of R161_024 §2: removability is equivalent to the vanishing of the reflected port at the trivial zeros.
+- Norm slope N_T'(0+) = −2∫(t−T)|g|² (R161_015 Thm. 3.1).
+- Finite unitary colligation θ_N = A_N u/B_N, with |θ_N| = 1 and Toeplitz defect equal to exact leakage
   (R161_052 §§1–2).
 
-### 0.3 Enunciado abierto
+### 0.3 Open statement
 
-lim ‖H_T^− E_N^ren V_{M,N,T}F‖² = L^sc_T(F) (R161_020 (5.2)), y además la identidad finita de primer contacto anula
-el miembro izquierdo. La versión finita es R161_052 (5.1): ‖T_N x‖² − ‖x‖² → 0, con x = x_{M,N,T}(F) sacado de
+lim ‖H_T^− E_N^ren V_{M,N,T}F‖² = L^sc_T(F) (R161_020 (5.2)), and moreover the finite first-contact identity annihilates
+the left-hand side. The finite version is R161_052 (5.1): ‖T_N x‖² − ‖x‖² → 0, with x = x_{M,N,T}(F) taken from
 (PC-ren).
 
-### 0.4 Por qué se detuvo
+### 0.4 Why it stopped
 
-E_N^ren F → 0 sobre datos de Schwartz (R161_003). En consecuencia, todo límite fuerte acotado de mapas lineales
-construidos con E_N^ren tiene acción nula y mata ambos lados (R161_016 §3, PROVED en esa clase). Reescalar exigiría
-una cota de grafo uniforme nueva más la tipificación inversa, y nada de eso sale de (PC-ren). Además, la tangente
-unitaria de R161_052 lleva la media U+V y no la diferencia U−V (R161_056).
+E_N^ren F → 0 on Schwartz data (R161_003). Consequently, every bounded strong limit of linear maps
+built with E_N^ren acts as zero and kills both sides (R161_016 §3, PROVED in that class). Rescaling would require
+a new uniform graph bound plus the inverse typing, and none of that comes out of (PC-ren). Moreover, the unitary
+tangent of R161_052 carries the mean U+V and not the difference U−V (R161_056).
 
-### 0.5 Exclusión de R161_018 y su auditoría
+### 0.5 Exclusion of R161_018 and its audit
 
-R161_018 afirma ZA_∞ = [Z,D_Γ] = 0, de donde todo límite lineal de (PC-ren) sería tautológico (Teor. 2.1, Cor. 5.1).
+R161_018 claims ZA_∞ = [Z,D_Γ] = 0, whence every linear limit of (PC-ren) would be tautological (Thm. 2.1, Cor. 5.1).
 
-R161_075 muestra que esa identificación no está establecida. Producto en L², producto distribucional e identidad
-meromorfa son tres cosas distintas: en L², ZAf = 0 implicaría Af = 0, y en el sentido distribucional
-z·δ_γ = 0. La exclusión queda sin probar. No se usa abajo.
+R161_075 shows that this identification is not established. Product in L², distributional product and meromorphic
+identity are three different things: in L², ZAf = 0 would imply Af = 0, and in the distributional sense
+z·δ_γ = 0. The exclusion remains unproved. It is not used below.
 
-## 1. Filtro de cuatro puntos
+## 1. Four-point filter
 
-1. **Antecedente más próximo.** R161_020 §5 y R161_052 §5 (la misma meta en forma finita), además de R161_024 §2.
-   Para el paso a todo P_T: R161_073 (inverso estabilizado sobre ker H) y R161_081 (extensión de Q fuera del
-   radical; falla en autovectores con λ ≥ 0).
-2. **Lo nuevo.** (i) El Lema A: L^sc es definida positiva y su núcleo es trivial para todo peso de la corriente.
-   (ii) La Prop. B: la forma exacta que tendría L161.4 sobre todo P_T.
-   Ambas cosas son análisis de la meta. Ninguna es un mecanismo de signo.
-3. **Por qué evitaría la dificultad.** No la evita. El Lema A muestra que el único eslabón abierto es justamente
+1. **Closest antecedent.** R161_020 §5 and R161_052 §5 (the same target in finite form), plus R161_024 §2.
+   For the passage to all of P_T: R161_073 (stabilized inverse on ker H) and R161_081 (extension of Q outside the
+   radical; fails on eigenvectors with λ ≥ 0).
+2. **What is new.** (i) Lemma A: L^sc is positive definite and its kernel is trivial for every weight of the current.
+   (ii) Prop. B: the exact form that L161.4 would have on all of P_T.
+   Both are analysis of the target. Neither is a sign mechanism.
+3. **Why it would avoid the difficulty.** It does not. Lemma A shows that the only open link is precisely
    ker H_{T*} = {0}.
-4. **Enlace con la positividad global.** Sería la cadena de primer contacto del §2(a). Su eslabón abierto es el
-   objetivo mismo.
+4. **Link with global positivity.** It would be the first-contact chain of §2(a). Its open link is the
+   goal itself.
 
-Mi propio cotejo hostil detecta repetición (B3/B9). No hago ninguna derivación larga más allá de los lemas
-estructurales que lo prueban.
+A strict cross-check detects repetition (B3/B9). I do no long derivation beyond the structural
+lemmas that prove it.
 
-## 2. Paso 1
+## 2. Step 1
 
-### (a) Qué daría L161.4 si fuera cierto
+### (a) What L161.4 would give if it were true
 
-La cadena es la siguiente.
+The chain is the following.
 
-1. λ_A(T) > 0 para T pequeño. CITED: certificados de Paper 47.
-2. T ↦ λ_A(T) es continua (P47 lem:contA) y decreciente; H_T tiene resolvente compacta, así que λ_A se alcanza
-   (P47, párrafo previo a lem:contA). CITED.
-3. Si a_T toma un valor negativo para algún T, existen T* y F* ≠ 0 con H_{T*}F* = 0. PROVED a partir de 1 y 2.
-4. La reflexión t ↦ −t conserva W, K y P_T, así que ker H_{T*} se descompone por paridad y se puede tomar F* con
-   paridad ε. PROVED. No hace falta simplicidad.
-5. L161.4 (identidad más anulación en el radical) da L^sc(F*) = 0. OPEN: es la meta.
-6. L^sc(F*) = 0 implica F* = 0, sin usar el signo σ. Es el Lema A, abajo: PROVED.
-7. Contradicción, y por tanto a_T ≥ 0 sobre P_T para todo T.
+1. λ_A(T) > 0 for small T. CITED: certificates of Paper 47.
+2. T ↦ λ_A(T) is continuous (P47 lem:contA) and decreasing; H_T has compact resolvent, so λ_A is attained
+   (P47, paragraph before lem:contA). CITED.
+3. If a_T takes a negative value for some T, there exist T* and F* ≠ 0 with H_{T*}F* = 0. PROVED from 1 and 2.
+4. The reflection t ↦ −t preserves W, K and P_T, so ker H_{T*} decomposes by parity and one can take F* with
+   parity ε. PROVED. Simplicity is not needed.
+5. L161.4 (identity plus vanishing on the radical) gives L^sc(F*) = 0. OPEN: it is the target.
+6. L^sc(F*) = 0 implies F* = 0, without using the sign σ. It is Lemma A, below: PROVED.
+7. Contradiction, and hence a_T ≥ 0 on P_T for all T.
 
-**Lema A (PROVED).** Sea F ∈ L²(I) con puerto g ∈ L² construido con cualquier sucesión de pesos de la corriente
-(Λ, cΛ, o Λ con una potencia de primo borrada), manteniendo el multiplicador ζ de pesos unidad. Si
-(I−P_+)C_log g = 0, entonces F = 0.
+**Lemma A (PROVED).** Let F ∈ L²(I) with port g ∈ L² built with any sequence of weights of the current
+(Λ, cΛ, or Λ with a prime power deleted), keeping the unit-weight multiplier ζ. If
+(I−P_+)C_log g = 0, then F = 0.
 
-*Prueba.*
-1. Si C_log g está soportado en [T,∞), su transformada H(s) es holomorfa de clase de Hardy en Re s > ½
-   (Paley–Wiener, con la convención de R161_015 (2.2)).
-2. Sobre la recta, sus valores de frontera coinciden a.e. con M(s) = χ(s)G^can(1−s) (R161_017 (1.6)).
-3. M es holomorfa en una banda alrededor de la recta, porque los únicos polos de G^can están en s = 0 y s = 1.
-4. Entonces H − M tiene límite no tangencial 0 a.e. en un lado de una banda. Por el teorema de unicidad de
-   Lusin–Privalov, H ≡ M en la banda y, por continuación, en Re s > ½.
-5. χ tiene polos simples con residuo no nulo en s_m = 2m+1, m ≥ 1. Luego G^can(1−s_m) = G^can(−2m) = 0.
-6. En −2m se tiene ζ(−2m) = 0 (CITED: cero trivial simple, con ζ'(−2m) ≠ 0), mientras Q_+ es entera y Θ_T es
-   finita. Por tanto G^can(−2m) = −ζ'(−2m)K_F(−2m−½), y queda ∫F(t)e^{(2m+½)t}dt = 0 para todo m ≥ 1.
-7. El cambio x = e^{2t} y el argumento de completitud de R161_019 Teor. 3.1 (potencias x^m con m ≥ 1 sobre un
-   intervalo compacto separado de 0) dan F = 0. ∎
+*Proof.*
+1. If C_log g is supported on [T,∞), its transform H(s) is holomorphic of Hardy class in Re s > ½
+   (Paley–Wiener, with the convention of R161_015 (2.2)).
+2. On the line, its boundary values agree a.e. with M(s) = χ(s)G^can(1−s) (R161_017 (1.6)).
+3. M is holomorphic in a strip around the line, because the only poles of G^can are at s = 0 and s = 1.
+4. Then H − M has non-tangential limit 0 a.e. on one side of a strip. By the Lusin–Privalov uniqueness
+   theorem, H ≡ M in the strip and, by continuation, in Re s > ½.
+5. χ has simple poles with non-zero residue at s_m = 2m+1, m ≥ 1. Hence G^can(1−s_m) = G^can(−2m) = 0.
+6. At −2m one has ζ(−2m) = 0 (CITED: simple trivial zero, with ζ'(−2m) ≠ 0), while Q_+ is entire and Θ_T is
+   finite. Hence G^can(−2m) = −ζ'(−2m)K_F(−2m−½), and one gets ∫F(t)e^{(2m+½)t}dt = 0 for all m ≥ 1.
+7. The change x = e^{2t} and the completeness argument of R161_019 Thm. 3.1 (powers x^m with m ≥ 1 on a
+   compact interval separated from 0) give F = 0. ∎
 
-El peso de la corriente sólo entra en Q_+ y en el residuo c_+. Los dos aparecen multiplicados por ζ(−2m) = 0.
+The weight of the current only enters in Q_+ and in the residue c_+. Both appear multiplied by ζ(−2m) = 0.
 
-**Consecuencias.**
-- L^sc(F) > 0 para todo F ≠ 0, para Λ, para 2Λ y para el borrado. PROVED.
-- El eslabón 5 equivale exactamente a que ker H_{T*} = {0}: L^sc(F*) = 0 es imposible para F* ≠ 0. La cláusula
-  «el primer contacto anula el miembro izquierdo» es, por tanto, la afirmación de que no hay primer contacto.
-- La cadena 1–4, 6–7 está PROVED o CITED, y todo el peso recae en el eslabón 5. Ese eslabón es el objetivo (B9:
-  el signo queda en una afirmación sobre el minimizador). Me detengo, como pide el encargo.
-- Ni σ ni la compresión de R161_020 (3.5) son necesarios. Basta que la fuga sea nula, como ya observaba
-  R161_024 §2.
+**Consequences.**
+- L^sc(F) > 0 for all F ≠ 0, for Λ, for 2Λ and for deletion. PROVED.
+- Link 5 is exactly equivalent to ker H_{T*} = {0}: L^sc(F*) = 0 is impossible for F* ≠ 0. The clause
+  «the first contact annihilates the left-hand side» is therefore the assertion that there is no first contact.
+- The chain 1–4, 6–7 is PROVED or CITED, and all the weight falls on link 5. That link is the goal (B9:
+  the sign remains in a statement about the minimizer). I stop, as the brief asks.
+- Neither σ nor the compression of R161_020 (3.5) is needed. It suffices that the leakage vanish, as
+  R161_024 §2 already observed.
 
-### (b) Enunciado fuera del radical
+### (b) Statement outside the radical
 
-**Proposición B (PROVED).** Para cada T las afirmaciones (i) y (ii) son equivalentes. En (ii), Ł_T es cualquier
-forma acotada definida positiva e inyectiva sobre P_T, por ejemplo L^sc (si es acotada en el dominio) o ‖·‖².
+**Proposition B (PROVED).** For each T statements (i) and (ii) are equivalent. In (ii), Ł_T is any
+bounded positive definite injective form on P_T, for example L^sc (if bounded on the domain) or ‖·‖².
 - (i) ker H_T = {0}.
-- (ii) Existe un operador M_T, con dom H_T ⊂ dom M_T, tal que Ł_T(F) = Re⟨H_T F, M_T F⟩ para todo F ∈ dom H_T.
+- (ii) There exists an operator M_T, with dom H_T ⊂ dom M_T, such that Ł_T(F) = Re⟨H_T F, M_T F⟩ for all F ∈ dom H_T.
 
-*Prueba.*
-- De (ii) a (i): si H_T F = 0, entonces Ł_T(F) = 0 y F = 0.
-- De (i) a (ii): con resolvente compacta y núcleo trivial, H_T^{−1} existe y es acotado. Basta tomar
+*Proof.*
+- From (ii) to (i): if H_T F = 0, then Ł_T(F) = 0 and F = 0.
+- From (i) to (ii): with compact resolvent and trivial kernel, H_T^{−1} exists and is bounded. It suffices to take
   M_T = H_T^{−1}Ł_T. ∎
 
-Así pues, el candidato es «L^sc_T(F) = lim‖H_T^−E_N^ren V F‖² + Re⟨H_T F, M_T F⟩ sobre todo P_T», con un término
-extra que se anula en el radical. Existe en esa forma, y sólo en ella: cualquier término extra que se anule
-exactamente en ker H_T es una función de H_T F.
+Thus the candidate is «L^sc_T(F) = lim‖H_T^−E_N^ren V F‖² + Re⟨H_T F, M_T F⟩ on all of P_T», with an extra
+term vanishing on the radical. It exists in that form, and only in it: any extra term vanishing
+exactly on ker H_T is a function of H_T F.
 
-Combinado con la cadena (a), que se aplica a todo T a la vez, da a_T ≥ 0 para todo T. Pero no añade mecanismo, por
-tres razones.
-1. La única solución general, M_T = H_T^{−1}Ł_T, invierte la forma. Es circular en el sentido de J3.
-2. Por el Lema A, L^sc no tiene ningún papel privilegiado frente a ‖F‖². Elegir el cuadrado de fuga no aporta nada
-   mientras M_T no tenga fórmula propia.
-3. En dimensión finita, la identidad 2Ł = HM + M*H > 0 da In(H) = In(M) (Ostrowski–Schneider; CITED). La
-   obligación de signo pasa al espectro de M. Esto entra en L6 (inercia) y en B3 (reformulación).
+Combined with chain (a), which applies to all T at once, it gives a_T ≥ 0 for all T. But it adds no mechanism, for
+three reasons.
+1. The only general solution, M_T = H_T^{−1}Ł_T, inverts the form. It is circular in the sense of J3.
+2. By Lemma A, L^sc has no privileged role compared with ‖F‖². Choosing the leakage square contributes nothing
+   as long as M_T has no formula of its own.
+3. In finite dimension, the identity 2Ł = HM + M*H > 0 gives In(H) = In(M) (Ostrowski–Schneider; CITED). The
+   sign obligation passes to the spectrum of M. This falls into L6 (inertia) and B3 (reformulation).
 
-### (c) La normalización V
+### (c) The normalization V
 
-**Libertad.** V es una familia lineal V_{M,N,T}: P_T → L²(ℝ). Puede depender del corte de primos M, del corte
-reticular N y de T, a través de S_N, de C_N(D), de B_± y de los coeficientes de Tate.
+**Freedom.** V is a linear family V_{M,N,T}: P_T → L²(ℝ). It may depend on the prime cutoff M, the
+lattice cutoff N and T, through S_N, C_N(D), B_± and the Tate coefficients.
 
-**No circularidad.** Quedan prohibidos H_T^{−1}, el minimizador, L^sc y cualquier raíz o factorización de la forma
-(J3). La identidad tendría que probarse después de escribir V.
+**Non-circularity.** H_T^{−1}, the minimizer, L^sc and any root or factorization of the form
+(J3) are forbidden. The identity would have to be proved after writing V.
 
-**Elecciones canónicas del retículo.**
+**Canonical choices of the lattice.**
 
-1. *Renormalización polar a densidad mitad (R161_003).* Ya está dentro de S_N^ren y es justamente la que hace
-   E_N^ren → 0. No deja libertad.
+1. *Polar renormalization to half density (R161_003).* It is already inside S_N^ren and is precisely what makes
+   E_N^ren → 0. It leaves no freedom.
 
-2. *División por la orientación opuesta (R161_052).* e_N = B_N(θ_N − 1), con θ_N unimodular. Es la única
-   normalización dictada sólo por el retículo que deja un objeto de orden uno.
-   - Como e_N → 0 y B_N → ζ(1−s) donde no se anula, se tiene θ_N → 1 en medida, y por convergencia dominada
-     M_{θ_N} → I fuertemente. ARGUED: el paso «B_N → ζ(1−s) en medida» no está verificado en primaria.
-   - Por tanto ‖(I−P)M_{θ_N}x‖ → 0 para x fijo. Para que el límite sobreviva, x_N tiene que moverse.
-   - El reescalado por la tasa lleva a la tangente, es decir, a la corriente de fase (R161_052 §3), y esa
-     corriente lleva U+V, no U−V (R161_056, PROVED allí).
-   - Esta elección recae, entonces, en una tangente ya retirada.
+2. *Division by the opposite orientation (R161_052).* e_N = B_N(θ_N − 1), with θ_N unimodular. It is the only
+   normalization dictated by the lattice alone that leaves an object of order one.
+   - Since e_N → 0 and B_N → ζ(1−s) where it does not vanish, one has θ_N → 1 in measure, and by dominated convergence
+     M_{θ_N} → I strongly. ARGUED: the step «B_N → ζ(1−s) in measure» is not verified in primary sources.
+   - Hence ‖(I−P)M_{θ_N}x‖ → 0 for fixed x. For the limit to survive, x_N has to move.
+   - Rescaling by the rate leads to the tangent, i.e. to the phase current (R161_052 §3), and that
+     current carries U+V, not U−V (R161_056, PROVED there).
+   - This choice thus falls back onto an already withdrawn tangent.
 
-3. *Reescalado escalar λ_N V con λ_N → ∞.* La tasa de E_N^ren V F → 0 la fija la regularidad de 𝓕VF en el extremo
-   superior n ≈ N (Euler–Maclaurin) y depende de F.
-   - Un límite finito y no nulo para todo F de un subespacio denso exigiría una tasa uniforme, es decir, un
-     término de orden fijo. Ese término es otra vez el jet de la opción 2.
-   - ARGUED, no PROVED: no tengo la prueba de que ningún λ_N dé un límite no trivial.
+3. *Scalar rescaling λ_N V with λ_N → ∞.* The rate of E_N^ren V F → 0 is fixed by the regularity of 𝓕VF at the upper
+   endpoint n ≈ N (Euler–Maclaurin) and depends on F.
+   - A finite non-zero limit for all F in a dense subspace would require a uniform rate, i.e. a
+     term of fixed order. That term is again the jet of option 2.
+   - ARGUED, not PROVED: I do not have the proof that no λ_N gives a non-trivial limit.
 
-**Conclusión de (c).** Ninguna elección canónica escrita deja ambos lados finitos y no nulos con la orientación
-correcta. Las que existen están registradas (R161_052, R161_056, R161_016 §3). ARGUED, con las piezas citadas
-PROVED en sus memos.
+**Conclusion of (c).** No written canonical choice leaves both sides finite and non-zero with the correct
+orientation. Those that exist are recorded (R161_052, R161_056, R161_016 §3). ARGUED, with the cited pieces
+PROVED in their memos.
 
-### (d) Controles
+### (d) Checks
 
-- **Lado izquierdo.** E_N^ren no contiene Λ: sólo el retículo y n^{−1/2}. Así lo dicen el Lema 2 de ROUND_011_A
-  y el canal (β) de ROUND_010_A. Λ sólo podría entrar por V.
-- **Lado derecho.** g es lineal en el peso, así que L^sc se multiplica por c². Pero su positividad definida es
-  ciega al peso (Lema A).
+- **Left side.** E_N^ren contains no Λ: only the lattice and n^{−1/2}. So say Lemma 2 of ROUND_011_A
+  and channel (β) of ROUND_010_A. Λ could only enter through V.
+- **Right side.** g is linear in the weight, so L^sc is multiplied by c². But its positive definiteness is
+  blind to the weight (Lemma A).
 
-**cΛ con c = 2.** L^sc_2 = 4L^sc es definida positiva. Además, el enlace interior (R161_017 (3.3)) cambia: con
-corriente 2B_± y una forma cuyo primer contacto es D_ΓF − 2(B_++B_−)F = r, la restricción interior de W pasa a
-ser r + D_ΓF·(algo no nulo) en lugar de r. Así lo indica la cuenta de R161_017 (2.2) con c: queda (c−1)d_ΓK_F.
-ARGUED: la normalización exacta de D_Γ frente a Arch no está recalculada.
+**cΛ with c = 2.** L^sc_2 = 4L^sc is positive definite. Moreover, the interior link (R161_017 (3.3)) changes: with
+current 2B_± and a form whose first contact is D_ΓF − 2(B_++B_−)F = r, the interior restriction of W becomes
+r + D_ΓF·(something non-zero) instead of r. This is indicated by the computation of R161_017 (2.2) with c: (c−1)d_ΓK_F remains.
+ARGUED: the exact normalization of D_Γ against Arch is not recomputed.
 
-Si existe T con λ_A(T; 2Λ) < 0 (batería E, CITED), hay un vector radical F_2 ≠ 0 con L^sc_2(F_2) > 0. Entonces
-ninguna identidad de la Prop. B, con ningún M, puede valer para c = 2 en ese T. PROVED, condicionado a esa cita.
+If there exists T with λ_A(T; 2Λ) < 0 (battery E, CITED), there is a radical vector F_2 ≠ 0 with L^sc_2(F_2) > 0. Then
+no identity of Prop. B, with any M, can hold for c = 2 at that T. PROVED, conditional on that citation.
 
-¿Qué término nombrado pierde el signo? Ninguno: los dos cuadrados siguen ≥ 0. Lo que falla es la igualdad (la
-cláusula de anulación). Por la regla R3-i esto es lo automático. No hay resto con signo que deje de ser ≥ 0,
-porque el enunciado no tiene resto firmado.
+Which named term loses the sign? None: both squares remain ≥ 0. What fails is the equality (the
+vanishing clause). By rule R3-i this is the automatic case. There is no signed remainder that ceases to be ≥ 0,
+because the statement has no signed remainder.
 
-**Borrado de una potencia de primo.** Mismo análisis: L^sc sigue siendo definida positiva (Lema A), y la ruptura,
-si existe primer contacto, está otra vez en la igualdad.
+**Deletion of a prime power.** Same analysis: L^sc remains positive definite (Lemma A), and the breakdown,
+if there is a first contact, is again in the equality.
 
-**Beurling.** No hay multiplicador ζ con ceros triviales ni ecuación funcional. g y C_log g no quedan definidos de
-la misma manera, y el Lema A no se aplica. El enunciado no se formula: queda indefinido, no falsado.
+**Beurling.** There is no multiplier ζ with trivial zeros nor a functional equation. g and C_log g are not defined in
+the same way, and Lemma A does not apply. The statement cannot be formulated: it remains undefined, not falsified.
 
-**Conclusión de (d).** La parte con signo del enunciado (los dos cuadrados y la positividad estricta de L^sc) es
-ciega a c y al borrado. Todo el contenido discriminante está en una igualdad cuyo único realizador conocido es
-H_T^{−1}. Por el criterio del Lema 2 de la ronda 11, extendido de «libre de Λ» a «positividad invariante bajo los
-controles», el enunciado es ciego y se rechaza como mecanismo de signo.
+**Conclusion of (d).** The signed part of the statement (the two squares and the strict positivity of L^sc) is
+blind to c and to deletion. All the discriminating content lies in an equality whose only known realizer is
+H_T^{−1}. By the criterion of Lemma 2 of round 11, extended from «Λ-free» to «positivity invariant under the
+checks», the statement is blind and is rejected as a sign mechanism.
 
-## 3. Paso 2: veredicto
+## 3. Step 2: verdict
 
-L161.4 no se conecta con la positividad global por ninguna vía distinta de la cadena de primer contacto, y en esa
-cadena su eslabón abierto es exactamente ker H_{T*} = {0} (Lema A). Su versión sobre todo P_T es la Prop. B: un
-certificado de núcleo de tipo Lyapunov, que equivale a la inyectividad de H_T y cuya solución general es
+L161.4 does not connect with global positivity by any route other than the first-contact chain, and in that
+chain its open link is exactly ker H_{T*} = {0} (Lemma A). Its version on all of P_T is Prop. B: a
+Lyapunov-type kernel certificate, which is equivalent to injectivity of H_T and whose general solution is
 M = H^{−1}Ł (J3).
 
-**Clase que lo cierra.** «Identidades cuadrado = cuadrado con anulación en el radical, donde la positividad
-estricta de los cuadrados es invariante bajo cΛ y el borrado.» Es una reformulación (B3) con el signo en el
-minimizador (B9). Las normalizaciones canónicas recaen en R161_052 y R161_056.
+**Class that closes it.** «Square = square identities with vanishing on the radical, where the strict
+positivity of the squares is invariant under cΛ and deletion.» It is a reformulation (B3) with the sign in the
+minimizer (B9). The canonical normalizations fall back onto R161_052 and R161_056.
 
-## 4. Operación que lo reabriría
+## 4. Operation that would reopen it
 
-Hace falta un operador M_T (o una V) con fórmula propia, construido con E_N^ren, la corriente de Euler y los
-coeficientes de Tate, sin H_T^{−1}. Para él habría que probar después la identidad L^sc = lim‖H^−E V F‖² +
-Re⟨H_T F, M_T F⟩. Además, tiene que mostrarse por qué falla en c = 2, señalando la línea de su construcción que usa
-Σ_{d|n}Λ(d) = log n y no sólo la linealidad en el peso.
+An operator M_T (or a V) with its own formula is needed, built with E_N^ren, the Euler current and the
+Tate coefficients, without H_T^{−1}. For it one would then have to prove the identity L^sc = lim‖H^−E V F‖² +
+Re⟨H_T F, M_T F⟩. Moreover, it must be shown why it fails at c = 2, pointing to the line of its construction that uses
+Σ_{d|n}Λ(d) = log n and not only linearity in the weight.
 
-**Primer caso.** Cámara 0.8 < T < ½log5, contactos 2, 3 y 4, con Z_{T,−}^{−1} = I − K + K² (R161_005 §4). Ahí M_T
-sería una matriz explícita sobre los canales 2, 3, 4, más la cabeza Gamma. R161_016 §5 advierte que eso sólo
-controla el primer collar.
+**First case.** Chamber 0.8 < T < ½log5, contacts 2, 3 and 4, with Z_{T,−}^{−1} = I − K + K² (R161_005 §4). There M_T
+would be an explicit matrix on the channels 2, 3, 4, plus the Gamma head. R161_016 §5 warns that this only
+controls the first collar.
 
-**Falsificador.** c = 2 con δ = log 2 en k = 2 (R161_001 Teor. 4.1). Sin esa fórmula no hay candidata.
+**Falsifier.** c = 2 with δ = log 2 at k = 2 (R161_001 Thm. 4.1). Without that formula there is no candidate.
 
-## Afirmaciones y etiquetas
+## Claims and labels
 
-1. Objetos y estados del Paso 0, según R161_015–020, 024, 052, 056 y 075: CITED.
-2. La exclusión de R161_018 no está establecida (R161_075): CITED. No se usa.
-3. Lema A: fuga nula implica F = 0, para todo peso de la corriente, sin σ: PROVED (usa el CITED ζ'(−2m) ≠ 0,
-   Lusin–Privalov y R161_019 Teor. 3.1).
-4. L^sc es definida positiva sobre P_T para Λ, 2Λ y el borrado: PROVED (corolario de 3).
-5. Cadena de primer contacto, eslabones 1–2: CITED (P47 lem:contA, resolvente compacta, certificados).
-   Eslabones 3–4 y 6: PROVED. Eslabón 5 (L161.4): OPEN, y equivale al objetivo: PROVED, por 3.
-6. No hacen falta ni σ ni la compresión (3.5) de R161_020: PROVED (por 3; ya implícito en R161_024 §2).
-7. Prop. B (versión sobre todo P_T ⇔ ker H_T = {0}; solución general H^{−1}Ł): PROVED.
-8. Inercia: 2Ł = HM + M*H > 0 da In H = In M en dimensión finita: CITED (Ostrowski–Schneider).
-9. θ_N → 1 en medida y M_{θ_N} → I fuertemente: ARGUED.
-10. Las normalizaciones canónicas recaen en R161_052/056: ARGUED (las piezas citadas son PROVED).
-11. Ningún reescalado escalar da un límite no trivial uniforme: ARGUED.
-12. La interior de W bajo cΛ recibe un término proporcional a (c−1)d_ΓK_F: ARGUED (normalización no recalculada).
-13. Bajo c = 2 la Prop. B falla para todo M si hay primer contacto: PROVED, condicionado a la batería E (CITED).
-14. Positividad de los cuadrados ciega a c y al borrado; enunciado ciego como mecanismo de signo: PROVED (por 3)
-    / NO-GO de selección.
-15. Beurling: enunciado indefinido: ARGUED.
-16. Veredicto: L161.4 no pasa la puerta. Es una reformulación con el signo en el radical (B3, B9): NO-GO de
-    selección. Reapertura según el §4: OPEN.
-17. Signo global de a_T: OPEN.
+1. Objects and statuses of Step 0, according to R161_015–020, 024, 052, 056 and 075: CITED.
+2. The exclusion of R161_018 is not established (R161_075): CITED. Not used.
+3. Lemma A: vanishing leakage implies F = 0, for every weight of the current, without σ: PROVED (uses the CITED ζ'(−2m) ≠ 0,
+   Lusin–Privalov and R161_019 Thm. 3.1).
+4. L^sc is positive definite on P_T for Λ, 2Λ and deletion: PROVED (corollary of 3).
+5. First-contact chain, links 1–2: CITED (P47 lem:contA, compact resolvent, certificates).
+   Links 3–4 and 6: PROVED. Link 5 (L161.4): OPEN, and equivalent to the goal: PROVED, by 3.
+6. Neither σ nor the compression (3.5) of R161_020 is needed: PROVED (by 3; already implicit in R161_024 §2).
+7. Prop. B (version on all of P_T ⇔ ker H_T = {0}; general solution H^{−1}Ł): PROVED.
+8. Inertia: 2Ł = HM + M*H > 0 gives In H = In M in finite dimension: CITED (Ostrowski–Schneider).
+9. θ_N → 1 in measure and M_{θ_N} → I strongly: ARGUED.
+10. The canonical normalizations fall back onto R161_052/056: ARGUED (the cited pieces are PROVED).
+11. No scalar rescaling gives a uniform non-trivial limit: ARGUED.
+12. The interior of W under cΛ receives a term proportional to (c−1)d_ΓK_F: ARGUED (normalization not recomputed).
+13. Under c = 2 Prop. B fails for every M if there is a first contact: PROVED, conditional on battery E (CITED).
+14. Positivity of the squares blind to c and to deletion; statement blind as a sign mechanism: PROVED (by 3)
+    / selection NO-GO.
+15. Beurling: undefined statement: ARGUED.
+16. Verdict: L161.4 does not pass the gate. It is a reformulation with the sign in the radical (B3, B9): selection
+    NO-GO. Reopening according to §4: OPEN.
+17. Global sign of a_T: OPEN.

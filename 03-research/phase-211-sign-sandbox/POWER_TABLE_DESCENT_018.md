@@ -1,120 +1,120 @@
-# POWER_TABLE_DESCENT_018 — Primeras DOS diferencias estrictamente positivas, en todos los pasos
+# POWER_TABLE_DESCENT_018 — First TWO differences strictly positive, at all steps
 
-Estado: PROVED para todos k>=0 y u>=63/2. No demuestra completa monotonía de la fila ni signo de todas las filas. Papers intactos.
+Status: PROVED for all k>=0 and u>=63/2. It does not prove complete monotonicity of the row nor the sign of all rows. Papers untouched.
 
-## 1. Corpus y razón nueva frente al descenso estructural
+## 1. Corpus and new reason relative to the structural descent
 
-Leídos POWER_STATE_017, POWER_DESCENT_016, POWER_INTERIOR_017 §7, POWER_SCALAR_BRIDGE_017 y TATE_CHAIN/PACKET_SCOPE009; consultados índice/grid/crucigrama buscando primeras diferencias, fila N=2 y completa monotonía. La recurrencia exacta y las propiedades eventuales no bastan por sí solas, como muestra W4 de016.
+Read POWER_STATE_017, POWER_DESCENT_016, POWER_INTERIOR_017 §7, POWER_SCALAR_BRIDGE_017 and TATE_CHAIN/PACKET_SCOPE009; consulted index/grid/crossword looking for first differences, row N=2 and complete monotonicity. The exact recurrence and the eventual properties do not suffice by themselves, as W4 of 016 shows.
 
-La diferencia nueva es probar DOS niveles de descenso en TODOS los pasos, usando el multiplicador real, dos cotas explícitas de derivadas de digamma, la cota ponderada uniforme de017 y el signo alternado exacto del polar. No se deduce signo de una identidad ni se repite una campaña de certificados de k finitos.
+The new difference is to prove TWO levels of descent at ALL steps, using the real multiplier, two explicit bounds for digamma derivatives, the uniform weighted bound of 017 and the exact alternating sign of the polar. No sign is deduced from an identity and no campaign of certificates for finite k is repeated.
 
-Ponga F_{N,k}(s)=s^k/(s+u)^{N+k}, a_{N,k}=W[f_{N,k}], c_k=binom(2k,k)/4^k. Se demuestra
+Set F_{N,k}(s)=s^k/(s+u)^{N+k}, a_{N,k}=W[f_{N,k}], c_k=binom(2k,k)/4^k. We prove
 
     W[f_{2,k}]>(1/8)||f_{2,k}||²,
-    W[f_{3,k}]>(1/8)||f_{3,k}||², todos k>=0,u>=63/2.     (ROWS23)
+    W[f_{3,k}]>(1/8)||f_{3,k}||², all k>=0,u>=63/2.     (ROWS23)
 
-Por la recurrencia completa, esto implica desigualdades NUEVAS cuantitativas:
+By the complete recurrence, this implies NEW quantitative inequalities:
 
     a_{1,k}-a_{1,k+1}>c_k/[32u(k+1)],
     a_{1,k}-2a_{1,k+1}+a_{1,k+2}
                         >3c_k/[64u(k+1)(k+2)].           (DIFF)
 
-Así la fila de valores sin normalizar a_{1,k} es estrictamente decreciente y estrictamente convexa en TODO k, no sólo eventualmente.
+Thus the row of unnormalized values a_{1,k} is strictly decreasing and strictly convex in ALL k, not only eventually.
 
-## 2. Recurrencia exacta y normas
+## 2. Exact recurrence and norms
 
-Con Q=s/(s+u), L=u/(s+u), la identidad completa016 da
+With Q=s/(s+u), L=u/(s+u), the complete identity 016 gives
 
     a_{N,k}=a_{N,k+1}+u²a_{N+1,k}.
 
-Por inducción u^{2(N-1)}a_{N,k}=(-Δ)^{N-1}a_{1,k}. Esta parte sola no impone signo. Las normas exactas beta satisfacen
+By induction u^{2(N-1)}a_{N,k}=(-Δ)^{N-1}a_{1,k}. This part alone imposes no sign. The exact beta norms satisfy
 
     ||f_{N,k}||²/||f_{N,0}||²
       =c_k/binom(k+N-1,N-1),
     ||f_{2,k}||²=c_k/[4u³(k+1)],
     ||f_{3,k}||²=3c_k/[8u^5(k+1)(k+2)].
 
-(DIFF) se obtiene de (ROWS23) y estas normas, sin extrapolar una desigualdad entre cocientes normalizados.
+(DIFF) is obtained from (ROWS23) and these norms, without extrapolating an inequality between normalized quotients.
 
-## 3. Parte arquimediana: dos cotas de todos los órdenes k
+## 3. Archimedean part: two bounds for all orders k
 
-Para cada N,u fijo, el cambio k->k+1 repondera la probabilidad espectral por tau²/(u²+tau²). Covarianza positiva con m demuestra que Arch[f_{N,k}]/||f_{N,k}||² no disminuye con k. Basta entonces acotar k=0.
+For each fixed N,u, the change k->k+1 reweights the spectral probability by tau²/(u²+tau²). Positive covariance with m proves that Arch[f_{N,k}]/||f_{N,k}||² does not decrease with k. It then suffices to bound k=0.
 
-Sea d(u)=psi((u+1/2)/2)-logpi. Derivar la integral arquimediana de la exponencial, conservando la norma, da
+Let d(u)=psi((u+1/2)/2)-logpi. Differentiating the archimedean integral of the exponential, keeping the norm, gives
 
     A_{2,0}=d-u d',
     A_{3,0}=d-u d'+(u²/3)d''.
 
-La serie de polygamma e integración comparativa dan, para x>0,
+The polygamma series and comparative integration give, for x>0,
 
     psi'(x)<=1/x+1/x²,
     psi''(x)>=-2/x³-1/x².
 
-Con x=(u+1/2)/2, para todo u>=63/2,
+With x=(u+1/2)/2, for all u>=63/2,
 
     u d'<=1+2/u<=67/63,
     (u²/3)d''>=-1/3-4/(3u)>=-71/189.
 
-Además d aumenta porque psi'>0, y el intervalo racional ya probado en017 verifica d(63/2)>159/100>3/2. Por tanto
+Moreover d increases because psi'>0, and the rational interval already proved in 017 verifies d(63/2)>159/100>3/2. Therefore
 
     A_{2,k}>=A_{2,0}>3/2-67/63>2/5,
     A_{3,k}>=A_{3,0}>159/100-67/63-71/189
                               =2851/18900>3/20.          (ARCH)
 
-No se utilizó monotonía de AP bajo movimiento de polos, que en general es falsa: la uniformidad en u proviene de estas cotas explícitas de cada componente.
+Monotonicity of AP under motion of poles, which is false in general, was not used: the uniformity in u comes from these explicit bounds on each component.
 
-## 4. Control efectivo del peine infinito, uniforme en TODO k
+## 4. Effective control of the infinite comb, uniform in ALL k
 
-Use WRN de017 con eta=15, a=u-15, rho=(15/a)². Sus constantes para N=2,3 son
+Use WRN of 017 with eta=15, a=u-15, rho=(15/a)². Its constants for N=2,3 are
 
     R2=(u/a)^3(1+rho)/(1-rho)²,
     R3=(u/a)^5(1+2rho-rho²/3)/(1-rho)³.
 
-La representación por series de coeficientes positivos de017 muestra que ambas constantes decrecen al aumentar u>=63/2. En u=63/2,
+The representation by series with positive coefficients of 017 shows that both constants decrease as u>=63/2 increases. At u=63/2,
 
     R2=4641/11, 2sqrt(R2)<42,
     R3=15658881/1331, 2sqrt(R3)<220.
 
-Como ||e^{15y}f||²<=R_N||f||², la misma cota de autocorrelación usada en017 da, para TODOS los k y todos esos u,
+Since ||e^{15y}f||²<=R_N||f||², the same autocorrelation bound used in 017 gives, for ALL k and all those u,
 
     |Comb[f_{2,k}]|/||f_{2,k}||²
        <42Σ_{q>=2}q^-14<=42*15/[13*2^14]<3/1000,
     |Comb[f_{3,k}]|/||f_{3,k}||²
        <220Σ_{q>=2}q^-14<=220*15/[13*2^14]<1/60.         (PRIME)
 
-Se conserva el peine entero con sus coeficientes reales: se usó sólo Lambda(q)<=logq<=q y la cola integral convergente, sin truncamiento ni suposición de que cada contacto ayude.
+The whole comb is kept with its real coefficients: only Lambda(q)<=logq<=q and the convergent integral tail were used, without truncation or the assumption that each contact helps.
 
-## 5. El signo alternado del polar permite el segundo descenso
+## 5. The alternating sign of the polar allows the second descent
 
-Para cualquier N,k,
+For any N,k,
 
     Polar[f_{N,k}]=2(-1/4)^k/(u²-1/4)^{N+k}.
 
-Sea p_{N,0}=Polar[f_{N,0}]/||f_{N,0}||²>0 y q=1/(4u²-1). Las normas beta de§2 dan
+Let p_{N,0}=Polar[f_{N,0}]/||f_{N,0}||²>0 and q=1/(4u²-1). The beta norms of §2 give
 
     |Polar[f_{N,k}]|/||f_{N,k}||²
       =p_{N,0}q^k binom(k+N-1,N-1)/c_k.
 
-Por c_k>=2^-k y binom(k+N-1,N-1)<=N^k (contar multisets frente a secuencias ordenadas), esto es <=p_{N,0}(2Nq)^k. Los prefactores p_{N,0} y q decrecen con u; para p_{N,0}, la derivada logarítmica tiene numerador -u²-(2N-1)/4<0.
+By c_k>=2^-k and binom(k+N-1,N-1)<=N^k (counting multisets versus ordered sequences), this is <=p_{N,0}(2Nq)^k. The prefactors p_{N,0} and q decrease with u; for p_{N,0}, the logarithmic derivative has numerator -u²-(2N-1)/4<0.
 
-En N=2, p_{2,0}=8u³/(u²-1/4)²<13/50 y 4q<1, luego todo el polar tiene valor absoluto normalizado <13/50.
+For N=2, p_{2,0}=8u³/(u²-1/4)²<13/50 and 4q<1, so the whole polar has normalized absolute value <13/50.
 
-En N=3 no se desperdicia el signo positivo de k par. Para k impar se tiene k>=1 y 6q<1. En el extremo u=63/2,
+For N=3 the positive sign of even k is not wasted. For odd k one has k>=1 and 6q<1. At the endpoint u=63/2,
 
     p_{3,0}=32u^5/[3(u²-1/4)^3]<7/20,
     p_{3,0}(6q)<(7/20)*(6/3968)<1/1000.
 
-Así, para TODOS los k, el polar de N=3 es >=-(1/1000)||f||²; para k par es incluso no negativo. Esta conservación de su signo evita la pérdida demasiado grande que daría acotar todo el polar de N=3 por p_{3,0}.
+Thus, for ALL k, the polar of N=3 is >=-(1/1000)||f||²; for even k it is even nonnegative. This preservation of its sign avoids the excessively large loss that bounding the whole polar of N=3 by p_{3,0} would give.
 
-## 6. Cierre y alcance del descenso
+## 6. Closure and scope of the descent
 
-De ARCH, PRIME y§5,
+From ARCH, PRIME and §5,
 
     W[f_{2,k}]/||f_{2,k}||²
        >2/5-13/50-3/1000=137/1000>1/8,
     W[f_{3,k}]/||f_{3,k}||²
        >3/20-1/1000-1/60=397/3000>1/8.
 
-Quedan demostrados (ROWS23) y (DIFF). El verificador tools/power_table_descent_018_verify.py comprueba las constantes con Fraction y los intervalos racionales previos; no contiene muestreo en k ni un espectro numérico.
+(ROWS23) and (DIFF) are proved. The verifier tools/power_table_descent_018_verify.py checks the constants with Fraction and the previous rational intervals; it contains no sampling in k nor a numerical spectrum.
 
-Se obtuvieron sólo los dos primeros niveles de diferencias. No se infiere completa monotonía de a_{1,k}, ni signo de N>=4, ni la tabla completa necesaria en el puente escalar. La información que distingue el multiplicador real del desplazado W4 de016 está explícita en (ARCH) y su balance con PRIME/POLAR. El generador de la fila y la recurrencia siguen siendo identidades; el aporte nuevo es su signo cuantitativo en todos los pasos de estos dos niveles.
+Only the first two levels of differences were obtained. Neither complete monotonicity of a_{1,k}, nor the sign of N>=4, nor the complete table needed in the scalar bridge is inferred. The information that distinguishes the real multiplier from the shifted W4 of 016 is explicit in (ARCH) and its balance with PRIME/POLAR. The row generator and the recurrence are still identities; the new contribution is their quantitative sign at all steps of these two levels.

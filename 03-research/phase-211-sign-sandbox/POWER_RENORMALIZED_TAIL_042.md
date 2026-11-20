@@ -1,99 +1,99 @@
-# POWER_RENORMALIZED_TAIL_042 — Cancelación global del afín y cola en escala absoluta
+# POWER_RENORMALIZED_TAIL_042 — Global cancellation of the affine part and tail at absolute scale
 
-Estado: **PROVED**, revisión independiente aprobada en [POWER_RENORMALIZED_AUDIT_042.md](POWER_RENORMALIZED_AUDIT_042.md); verificador exacto PASS. u=63/2 fijo. Papers intactos. Signo W global OPEN.
+Status: **PROVED**, independent review approved in [POWER_RENORMALIZED_AUDIT_042.md](POWER_RENORMALIZED_AUDIT_042.md); exact verifier PASS. u=63/2 fixed. Papers untouched. Global sign of W OPEN.
 
-## 1. Corpus y diferencia
+## 1. Corpus and difference
 
-Consultados ROUTES-TRIED-INDEX/README, grid maestro y CROSSWORD-TO-D; releídos MASS022, ARCH_CELL026, INTERIOR_SCALE030, GAMMA_WEIGHT031, CRITICAL_BALANCE040 y ENERGY_BAND041§7. La masa exacta y la sumación Euler por celdas ya existen; no se ofrecen como otra prueba de signo.
+Consulted ROUTES-TRIED-INDEX/README, master grid and CROSSWORD-TO-D; reread MASS022, ARCH_CELL026, INTERIOR_SCALE030, GAMMA_WEIGHT031, CRITICAL_BALANCE040 and ENERGY_BAND041§7. The exact mass and the cellwise Euler summation already exist; they are not offered as another sign proof.
 
-La diferencia cuantitativa frente041 es eliminar GLOBALMENTE el afín−gamma x mediante MASS antes de acotar el complemento. Se prueba que la cola del residuo renormalizado, desde el MISMO corte cercano a la energía de040, es exponencialmente pequeña en escala ABSOLUTA. El beneficio041 era relativo a una energía C_N posiblemente exponencial; no se suma ese beneficio aquí sin su contabilidad de bordes.
+The quantitative difference from041 is to eliminate GLOBALLY the affine part−gamma x via MASS before bounding the complement. It is proved that the tail of the renormalized residue, from the SAME cut close to the energy of040, is exponentially small at ABSOLUTE scale. The benefit041 was relative to a possibly exponential energy C_N; that benefit is not added here without its accounting of edges.
 
-## 2. Normalización global sin Fubini crítico
+## 2. Global normalization without critical Fubini
 
-Conserve J_N,h_N de022, J'=−h, sum_(n>=1)J(n)=1 y J(x)->0. Todos los integrales y sumas siguientes son absolutos para N fijo por022; no se integra una serie Euler en sigma1. Sea B1({x})={x}−1/2 fuera de enteros y conserve SAWTOOTH041
+Keep J_N,h_N from022, J'=−h, sum_(n>=1)J(n)=1 and J(x)->0. All the following integrals and sums are absolute for fixed N by022; no Euler series is integrated at sigma1. Let B1({x})={x}−1/2 off the integers and keep SAWTOOTH041
 
     B(x)=−gamma x−B1({x})logx+kappa+E(x),
     kappa=(1/2)log(2pi)−1/2, |E(x)|<=1/x.
 
-La sumación Euler CELULAR con su borde1 da
+The CELLULAR Euler summation with its edge1 gives
 
     int_1^infty J(x)dx=1−J(1)/2+int_1^infty B1({x})h(x)dx.
 
-Se puede probar sin fórmula de sumación externa: en cada(n,n+1), integrar B1 J'; los bordes son[J(n)+J(n+1)]/2 y el integral−int J. Sumar hasta un entero y pasar al límite. Los saltos de B1 quedan exactamente incluidos.
+It can be proved without an external summation formula: on each(n,n+1), integrate B1 J'; the edges are[J(n)+J(n+1)]/2 and the integral−int J. Sum up to an integer and pass to the limit. The jumps of B1 are exactly included.
 
-Integrando−xJ' y usando xJ(x)->0,
+Integrating−xJ' and using xJ(x)->0,
 
     int_1^infty xh(x)dx
       =1+J(1)/2+int_1^infty B1({x})h(x)dx.
 
-En consecuencia, con F_N=2int hB,
+Consequently, with F_N=2int hB,
 
     F_N/2=−gamma+(kappa−gamma/2)J_N(1)+R_N,
     R_N=−int_1^infty h_N(x)B1({x})(logx+gamma)dx
                             +int_1^infty h_N(x)E(x)dx. (RENORMALIZED)
 
-Esta identidad por sí sola no prescribe signo. A continuación se controla una parte de R_N con precisión absoluta.
+This identity by itself prescribes no sign. Next a part of R_N is controlled with absolute precision.
 
-## 3. Resultado cuantitativo
+## 3. Quantitative result
 
-Para TODOS N>=2^80, sea
+For ALL N>=2^80, let
 
     T=(N−1)/992+5, X=exp(T),
     R_N^tail=−int_X^infty h_N B1({x})(logx+gamma)dx
                                   +int_X^infty h_N E dx.
 
-Entonces
+Then
 
     |R_N^tail|<=N(T+2)exp(−3T/2)<exp(−N/1000).       (ABS-TAIL)
 
-El complemento completo es, por tanto, interior en la fórmula exacta
+The full complement is therefore interior in the exact formula
 
     W[g_N]/norm²
       =ARCH_sharp+2gamma−(2kappa−gamma)J_N(1)
                  −2R_N^inside+epsilon_N,
     |epsilon_N|<2exp(−N/1000),
 
-con inside integrado de1 aX y con el mismo E REAL041. No se afirma signo de esa expresión interior ni que su margen sea mayor que el error.
+with inside integrated from1 toX and with the same REAL E041. No sign of that interior expression is claimed, nor that its margin exceeds the error.
 
-## 4. Dilatación real y derivada completa del inverso
+## 4. Real dilation and full derivative of the inverse
 
-Ponga delta0=2000/N, v0=1/2+delta0 y t0=2(N−1)v0/(u²−v0²). El corolario040 prueba t0<T y q(t0)>v0. La monotonía de q da, para t>=T,
+Set delta0=2000/N, v0=1/2+delta0 and t0=2(N−1)v0/(u²−v0²). The corollary040 proves t0<T and q(t0)>v0. Monotonicity of q gives, for t>=T,
 
     q(t)>1/2+2000/N,
     rho(t+logm)<=rho(t)m^(−q(t)).
 
-Por el integral elemental de una serie decreciente,
+By the elementary integral of a decreasing series,
 
     sum_(m>=1)m^(−1/2)rho(t+logm)
        <=rho(t)[1+N/2000]<N rho(t)/1000.              (DILATION)
 
-No se invoca cancelación de Möbius para este estimate. Es válido DESPUÉS de eliminar el afín; el peso residual permite aprovechar su ganancia adicional1/x.
+No Möbius cancellation is invoked for this estimate. It is valid AFTER eliminating the affine part; the residual weight allows exploiting its additional gain1/x.
 
-Escriba g=rho/2−rho'=(1/2+q)rho, H=x^(−3/2)g(logx). Se tienen0<q<u,0<q'<M=u²/(2N−3)<1 y rho<=1. Por tanto
+Write g=rho/2−rho'=(1/2+q)rho, H=x^(−3/2)g(logx). One has0<q<u,0<q'<M=u²/(2N−3)<1 and rho<=1. Hence
 
     |g|<=32rho,
     |g'−(3/2)g|
       =rho |q'−q(1/2+q)−(3/2)(1/2+q)|
       <=rho[1+(u+3/2)(u+1/2)]=1057rho<1100rho.
 
-Derivar la serie absoluta022 h(x)=sum mu(m)mH(mx) es legítimo en la cola; el mismo mayorante domina sus derivadas. DILATION produce
+Differentiating the absolute series022 h(x)=sum mu(m)mH(mx) is legitimate in the tail; the same majorant dominates its derivatives. DILATION produces
 
     |h_N(x)|<=N x^(−3/2),
     |h_N'(x)|<=2N x^(−5/2), x>=X.                    (REAL-DECAY)
 
-Estos bounds conservan TODOS los divisores. No se presupone h' negativo ni se deduce una monotonía no probada de h.
+These bounds keep ALL the divisors. h' negative is not presupposed nor is an unproved monotonicity of h deduced.
 
-## 5. Primitiva periódica y borde inferior contado
+## 5. Periodic primitive and counted lower edge
 
-Use Q2 de041, continua y periódica, Q2'=B1 casi por todas partes y||Q2||_infty=1/16. Si V(x)=logx+gamma, integración por partes da EXACTAMENTE
+Use Q2 from041, continuous and periodic, Q2'=B1 almost everywhere and||Q2||_infty=1/16. If V(x)=logx+gamma, integration by parts gives EXACTLY
 
     R_N^tail=h_N(X)V(X)Q2(X)
        +int_X^infty Q2(x)[h_N'(x)V(x)+h_N(x)/x]dx
        +int_X^infty h_N(x)E(x)dx.                    (TAIL-BOUNDARY)
 
-El borde infinito se anula por REAL-DECAY. Q2 no tiene saltos y los valores de B1 en enteros no cambian los integrales. El borde X se conserva, incluso cuando X fuese entero. No se supone que el error E tenga signo favorable.
+The infinite edge vanishes by REAL-DECAY. Q2 has no jumps and the values of B1 at integers do not change the integrals. The edge X is kept, even if X were an integer. The error E is not assumed to have a favourable sign.
 
-Con0<gamma<1, REAL-DECAY y |E|<=1/x,
+With0<gamma<1, REAL-DECAY and |E|<=1/x,
 
     |R_N^tail| <= (N X^(−3/2)/16)(T+1)
       +(N/16) int_X^infty x^(−5/2)[2(logx+1)+1]dx
@@ -101,18 +101,18 @@ Con0<gamma<1, REAL-DECAY y |E|<=1/x,
     =N X^(−3/2)[(7/48)(T+1)+55/72]
     <N(T+2)exp(−3T/2).
 
-Aquí se han contado todos los bordes y variaciones, incluidos los de la corrección periódica real.
+Here all edges and variations have been counted, including those of the real periodic correction.
 
-## 6. Constante exponencial absoluta y alcance
+## 6. Absolute exponential constant and scope
 
-T>N/992 y T+2<N para N>=2^80; por ello el último bound es menor que N²exp(−3N/1984). La desigualdad positiva de la exponencial
+T>N/992 and T+2<N for N>=2^80; hence the last bound is less than N²exp(−3N/1984). The positive inequality of the exponential
 
     exp(N/4000)> (N/4000)²/2>N
 
-vale ya para N>32000000. Así N²<exp(N/2000), y
+already holds for N>32000000. Thus N²<exp(N/2000), and
 
     3/1984−1/2000>1/1000
 
-prueba ABS-TAIL sin evaluar un N ni una suma prima.
+proves ABS-TAIL without evaluating an N or a prime sum.
 
-La obligación restante es el interior RENORMALIZADO y su balance con ARCH_sharp y J_N(1). A diferencia del coste energético041, el error aquí es absoluto y exponencialmente decreciente; no se identifica con un margen global ni se declara el interior favorable. La cancelación del afín se efectuó mediante MASS exacta, no por un Fubini crítico sum|mu|/m. No hay campaña de órdenes, contactos o precisiones.
+The remaining obligation is the RENORMALIZED interior and its balance with ARCH_sharp and J_N(1). Unlike the energy cost041, the error here is absolute and exponentially decreasing; it is not identified with a global margin nor is the interior declared favourable. The cancellation of the affine part was carried out via exact MASS, not by a critical Fubini sum|mu|/m. There is no campaign of orders, contacts or precisions.

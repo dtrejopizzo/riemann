@@ -1,223 +1,223 @@
-# Ronda 13, C — mapa de operaciones de combinación entre objetos con signo y objetos que ven el peso
+# Round 13, C — map of combination operations between signed objects and objects that see the weight
 
-Notación del brief común. a_T(F) = Arch(F) − Σ_n v_n c_F(log n) sobre P_T, v_n = 2Λ(n)/√n. Para un peso real
-a = (a_n) se escribe a_T^a la forma con v_n = 2a_n/√n, A(ξ) = Σ a_n n^{−1/2}n^{iξ}, A_M el multiplicador de
-R161_001, g_F = c_F ∗ c_F. Controles: 𝒞 = {2Λ, Λ con una potencia de primo borrada, peso de tipo Beurling}.
+Notation of the common brief. a_T(F) = Arch(F) − Σ_n v_n c_F(log n) on P_T, v_n = 2Λ(n)/√n. For a real weight
+a = (a_n) write a_T^a for the form with v_n = 2a_n/√n, A(ξ) = Σ a_n n^{−1/2}n^{iξ}, A_M the multiplier of
+R161_001, g_F = c_F ∗ c_F. Checks: 𝒞 = {2Λ, Λ with a prime power deleted, Beurling-type weight}.
 
-**Resultado de selección.** No se construyó una candidata con identidad completa y signo global.
-Las operaciones examinadas tienen antecedentes o dejan una obligación de signo sin resolver.
-El Lema T excluye transferencia sólo bajo TODAS sus hipótesis, incluida la no negatividad de la
-contribución adicional en el control. No prueba imposibilidad por la mera supervivencia del signo
-auxiliar. La paridad de los cuadrados canónicos de (PC) tampoco se extiende a todos los cuadrados
-mixtos; véase T5. Las listas siguientes son un inventario de selecciones, no una clasificación
-exhaustiva de las fuentes posibles de signo.
+**Selection result.** No candidate with a complete identity and global sign was built.
+The operations examined have antecedents or leave an unresolved sign obligation.
+Lemma T excludes transfer only under ALL its hypotheses, including nonnegativity of the
+additional contribution in the check. It does not prove impossibility from the mere survival of the auxiliary
+sign. The parity of the canonical squares of (PC) does not extend to all mixed
+squares either; see T5. The following lists are an inventory of selections, not an exhaustive
+classification of the possible sources of sign.
 
-Lectura en primaria para este memo: RULES_AVOID §§Q–V; ROUND_007_C completo; ROUND_009_G3; REVIEW_009;
-ROUND_010_A; ROUND_011_A; ROUND_012_A; ANNEX_SONIN_READING §§4–6; R161_002 §§0–2 y §8 (enunciado del Teor. 8.1).
-ROUND_009_G1, ROUND_009_G2 y ANNEX_LITERATURE_CONCENTRATION: a través de REVIEW_009 y RULES_AVOID S, T
-(lectura indirecta). Índice de rutas, grilla y crucigrama: a través de las citas de esos memos y anexos, que
-reproducen las entradas pertinentes (lectura indirecta; no se releyó el índice entero).
+Primary-source reading for this memo: RULES_AVOID §§Q–V; ROUND_007_C in full; ROUND_009_G3; REVIEW_009;
+ROUND_010_A; ROUND_011_A; ROUND_012_A; ANNEX_SONIN_READING §§4–6; R161_002 §§0–2 and §8 (statement of Thm. 8.1).
+ROUND_009_G1, ROUND_009_G2 and ANNEX_LITERATURE_CONCENTRATION: through REVIEW_009 and RULES_AVOID S, T
+(indirect reading). Routes index, grid and crossword: through the citations of those memos and annexes, which
+reproduce the relevant entries (indirect reading; the whole index was not reread).
 
-## 0. Filtro de cuatro puntos (del encargo en su conjunto)
+## 0. Four-point filter (of the brief as a whole)
 
-1. **Antecedente más cercano.** ROUND_007_C §3: a_T = αQ_T + R_T, con Q_T el canal cociente (≥ 0) y R_T el resto,
-   que es la combinación «suma» de un objeto S con un objeto W. R161_002 §2 (OR): el apareamiento orientado. ROUND_012_A
-   Prop. B: el certificado de Lyapunov Re⟨H_TF, M_TF⟩. ROUND_009_G3 §4: flujo con historia y funcional convexo, los dos
-   sin objeto.
-2. **Lo nuevo.** No es un objeto. Es (i) la tabla de operaciones de §2 y (ii) el Lema T de §3, que dice cuándo una
-   operación de combinación puede, en principio, discriminar los controles.
-3. **Por qué evitaría la dificultad.** No la evita. Localiza la dificultad: la operación no es el lugar del signo.
-4. **Enlace global.** Ninguno nuevo. (OR) es un enlace ya registrado, sin signo demostrado.
-   No se deduce del Lema T que toda candidata deba ser impar en A_M ni adoptar ese enlace.
+1. **Closest antecedent.** ROUND_007_C §3: a_T = αQ_T + R_T, with Q_T the ratio channel (≥ 0) and R_T the remainder,
+   which is the «sum» combination of an object S with an object W. R161_002 §2 (OR): the oriented pairing. ROUND_012_A
+   Prop. B: the Lyapunov certificate Re⟨H_TF, M_TF⟩. ROUND_009_G3 §4: flow with history and convex functional, both
+   without object.
+2. **What is new.** It is not an object. It is (i) the table of operations of §2 and (ii) Lemma T of §3, which says when a
+   combination operation can, in principle, discriminate the checks.
+3. **Why it would avoid the difficulty.** It does not. It localizes the difficulty: the operation is not the place of the sign.
+4. **Global link.** No new one. (OR) is an already recorded link, without proved sign.
+   It does not follow from Lemma T that every candidate must be odd in A_M or adopt that link.
 
-## 1. Las dos listas, exactas
+## 1. The two lists, exactly
 
-«Ciego» significa aquí: el enunciado de signo del objeto vale, sin cambios, para todo peso de 𝒞 (y para Λ).
-«Ve el peso» significa: el valor del objeto cambia bajo cada control y alguna identidad en la que entra falla en un
-término nombrado. «Sin signo» significa: hay F (o pesos) con los dos signos.
+«Blind» means here: the sign statement of the object holds, unchanged, for every weight of 𝒞 (and for Λ).
+«Sees the weight» means: the value of the object changes under each check and some identity in which it enters fails in a
+named term. «Without sign» means: there are F (or weights) with both signs.
 
-### Lista S (signo manifiesto, ciego)
+### List S (manifest sign, blind)
 
-| # | Objeto | Archivo, sección | Signo | Ceguera: qué y con qué estado |
+| # | Object | File, section | Sign | Blindness: what and with what status |
 |---|---|---|---|---|
-| S1 | Cuadrado de Sonin Son_S | R183_018 Prop 3.1; PROOF_L_SHARP_D_001 Thm 2.1; R186_015 | ≥ 0 (cuadrado de una involución unitaria) | Vale para cΛ y para el borrado: D_001 Thm 4.1, Cor 4.2, PROVED. Para Beurling: ARGUED (ANNEX_SONIN_READING §4; F_S es unitaria para toda fase impar) |
-| S2 | Canal cociente ∫\|F̂\|⁴\|A\|² | ROUND_007_C (1.1); R161_034 §§0–1 | ≥ 0 | ≥ 0 para todo peso real: PROVED (es \|·\|²) |
-| S3 | Cuadrados de fuga de la fase 161: L^sc = ‖(I−P_+)C_log g‖²; paralelogramo ¼‖(U_N−V_N)f‖²; Toeplitz–Hankel ‖(1−P)SP‖² | R161_020 (0.2); R161_035; R161_045; RULES_AVOID R2 | ≥ 0; L^sc > 0 si F ≠ 0 | ROUND_012_A Lema A: positividad estricta para Λ, 2Λ y el borrado, PROVED; Beurling sin definir. TH: ≥ 0 para todo S, PROVED (trivial) |
-| S4 | Cuadrado canónico de PC, ‖S_NA_M𝓕F‖² | R161_002 Teor. 1.1 | ≥ 0 | Par en A_M: PROVED. Ve A², no A |
-| S5 | Discrepancias reticulares Δ^R (test integral, Euler–Maclaurin) | ROUND_011_A §1, Lemas 1–2 | sólo con φ_t monótona; ningún signo uniforme en F (Lema 1) | Sin Λ: PROVED (Lema 2) |
-| S6 | Incertidumbre logarítmica (Arch como Beckner, constante C_0) | R160_C8_R1 Teor. 1, Cor. 2.4; ROUND_010_A Lema C (α) | ≥ 0 en la recta | Sin pesos: PROVED. En la ventana no es ≥ 0 más allá de T ≈ 0.60 (P47 cor:Tarch, CITED) |
-| S7 | Resto de hipérbola h(k) = Σ_{dm=k, d≤M, m≤N}Λ(d) ≥ 0 | R161_002 §8; RULES_AVOID K5, K7 | ≥ 0 | ≥ 0 para todo peso ≥ 0, y por tanto para 2Λ y el borrado: PROVED (trivial) |
+| S1 | Sonin square Son_S | R183_018 Prop 3.1; PROOF_L_SHARP_D_001 Thm 2.1; R186_015 | ≥ 0 (square of a unitary involution) | Holds for cΛ and for deletion: D_001 Thm 4.1, Cor 4.2, PROVED. For Beurling: ARGUED (ANNEX_SONIN_READING §4; F_S is unitary for every odd phase) |
+| S2 | Ratio channel ∫\|F̂\|⁴\|A\|² | ROUND_007_C (1.1); R161_034 §§0–1 | ≥ 0 | ≥ 0 for every real weight: PROVED (it is \|·\|²) |
+| S3 | Leakage squares of phase 161: L^sc = ‖(I−P_+)C_log g‖²; parallelogram ¼‖(U_N−V_N)f‖²; Toeplitz–Hankel ‖(1−P)SP‖² | R161_020 (0.2); R161_035; R161_045; RULES_AVOID R2 | ≥ 0; L^sc > 0 if F ≠ 0 | ROUND_012_A Lemma A: strict positivity for Λ, 2Λ and deletion, PROVED; Beurling undefined. TH: ≥ 0 for all S, PROVED (trivial) |
+| S4 | Canonical PC square, ‖S_NA_M𝓕F‖² | R161_002 Thm. 1.1 | ≥ 0 | Even in A_M: PROVED. Sees A², not A |
+| S5 | Lattice discrepancies Δ^R (integral test, Euler–Maclaurin) | ROUND_011_A §1, Lemmas 1–2 | only with monotone φ_t; no uniform sign in F (Lemma 1) | No Λ: PROVED (Lemma 2) |
+| S6 | Logarithmic uncertainty (Arch as Beckner, constant C_0) | R160_C8_R1 Thm. 1, Cor. 2.4; ROUND_010_A Lemma C (α) | ≥ 0 on the line | No weights: PROVED. In the window it is not ≥ 0 beyond T ≈ 0.60 (P47 cor:Tarch, CITED) |
+| S7 | Hyperbola remainder h(k) = Σ_{dm=k, d≤M, m≤N}Λ(d) ≥ 0 | R161_002 §8; RULES_AVOID K5, K7 | ≥ 0 | ≥ 0 for every weight ≥ 0, hence for 2Λ and deletion: PROVED (trivial) |
 
-S7 entra en la tabla de H_{M,N} (lista W) como pieza con signo. Su signo es el de un peso no negativo, y por eso es
-ciego a c = 2.
+S7 enters the table of H_{M,N} (list W) as a signed piece. Its sign is that of a nonnegative weight, and therefore it is
+blind to c = 2.
 
-### Lista W (ve el peso, sin signo)
+### List W (sees the weight, without sign)
 
-| # | Objeto | Archivo, sección | Sin signo | Ve el peso |
+| # | Object | File, section | Without sign | Sees the weight |
 |---|---|---|---|---|
-| W1 | Canal producto ∫\|F̂\|⁴ Re A² | ROUND_007_C (1.2)–(1.3), (2.1) | PROVED: un solo átomo da g_F(2log n) < 0 | Λ∗Λ = μ∗log² − Λ·log se rompe con el borrado: ARGUED en ROUND_007_C §3 |
-| W2 | Conmutador de soporte ⟨g,[P,S]w⟩ y concomitante de borde | R161_057–065; R161_042–044; RULES_AVOID R1, K1 | CITED (expansión positiva retirada) | lineal en la corriente: CITED |
-| W3 | Hipérbola H_{M,N} = L_MS_N − K_N y defecto δ_a(k) = Σ_{d\|k}a(d) − log k | R161_001 Teor. 3.1, 4.1 | δ_a cambia de signo según el control (log 2 en k = 2 con c = 2; −log 2 en k = 4 con el borrado de 4) | PROVED (ROUND_010_A afirmación 10) |
-| W4 | Parte de primos de Sonin: C_p, K_s, κ_S | R183_018 Prop 4.1; ANNEX_SONIN_READING §4 | C_p indefinido, espectro ± de multiplicidad infinita: CITED | el fallo bajo cΛ vive en C_{ε_c}: CITED (D_001 Cor 4.2) |
-| W5 | Puerto producto g y defecto G_+ + χG_− = ζW_ε | R161_015, R161_017 Teor. 2.1 | lineal en F | lineal en el peso: CITED |
+| W1 | Product channel ∫\|F̂\|⁴ Re A² | ROUND_007_C (1.2)–(1.3), (2.1) | PROVED: a single atom gives g_F(2log n) < 0 | Λ∗Λ = μ∗log² − Λ·log breaks under deletion: ARGUED in ROUND_007_C §3 |
+| W2 | Support commutator ⟨g,[P,S]w⟩ and boundary concomitant | R161_057–065; R161_042–044; RULES_AVOID R1, K1 | CITED (positive expansion withdrawn) | linear in the current: CITED |
+| W3 | Hyperbola H_{M,N} = L_MS_N − K_N and defect δ_a(k) = Σ_{d\|k}a(d) − log k | R161_001 Thm. 3.1, 4.1 | δ_a changes sign according to the check (log 2 at k = 2 with c = 2; −log 2 at k = 4 with deletion of 4) | PROVED (ROUND_010_A claim 10) |
+| W4 | Prime part of Sonin: C_p, K_s, κ_S | R183_018 Prop 4.1; ANNEX_SONIN_READING §4 | C_p indefinite, ± spectrum of infinite multiplicity: CITED | the failure under cΛ lives in C_{ε_c}: CITED (D_001 Cor 4.2) |
+| W5 | Product port g and defect G_+ + χG_− = ζW_ε | R161_015, R161_017 Thm. 2.1 | linear in F | linear in the weight: CITED |
 
-**Observación (ARGUED, por la tabla).** Todos los objetos de W son lineales en el peso, salvo W1, que es
-cuadrático y holomorfo (A², no |A|²). Todos los objetos de S son o bien libres de peso (S5, S6), o bien funciones
-de |A|² o de normas de operadores lineales en el peso (S1–S4), o bien funciones de un peso positivo (S7).
+**Observation (ARGUED, from the table).** All objects of W are linear in the weight, except W1, which is
+quadratic and holomorphic (A², not |A|²). All objects of S are either weight-free (S5, S6), or functions
+of |A|² or of norms of operators linear in the weight (S1–S4), or functions of a positive weight (S7).
 
-## 2. Operaciones de combinación: tabla
+## 2. Combination operations: table
 
-Cada fila indica S-objeto, W-objeto, antecedente y motivo del fracaso. «Lema T» remite a §3.
+Each row gives the S-object, W-object, antecedent and reason for failure. «Lemma T» refers to §3.
 
-| # | Operación | Antecedente (archivo, sección) | Estado | Motivo |
+| # | Operation | Antecedent (file, section) | Status | Reason |
 |---|---|---|---|---|
-| O1 | Suma o combinación positiva αS + R | ROUND_007_C §3; J2; L3 (BARRIER_D2_001); identidad de Sonin (T1) | NO-GO de selección, repetición | El signo queda en el resto R = W − αS; S es ≥ 0 bajo los controles y el fallo vive en R (R3-i automático). Lema T con Φ(s,w) = αs + w y hipótesis «w ≥ −αs», que es el objetivo |
-| O2 | Apareamiento orientado ⟨x, W x⟩ con x un vector S | R161_002 §2 (OR) = ⟨A_MG, S_N^*S_NG⟩; SP-161/K7; T3 (pesos w_N con signo, cerrado en L1, R4-a) | NO-GO / reformulación | En la recta equivale al signo del multiplicador (R161_002 §2). En la ventana es SP-161; la rama w_N ≥ 0 muere (Teor. 8.1) y la rama con signo queda cerrada por R4-a |
-| O3 | Cauchy–Schwarz / defecto de Gram | R161_035 (paralelogramo); R161_045 y R2 (PS²P − (PSP)² = \|(1−P)SP\|²); fase 122 | repetición | El defecto de Gram es ≥ 0 para todo peso (S3), y por tanto ciego. La identidad que lo une al defecto de PC no existe (K1) |
-| O4 | Complemento de Schur en un bloque [[S, W],[W*, S′]] | J3; L5; D17 (suelo de Schur); W11′ (R184_015 Teor. 2) | NO-GO con clase | Positividad del bloque ⟺ S′ ⪰ W*S^{−1}W: cota de norma de W relativa a S (W11′, B2), o raíz de la forma (J3) |
-| O5 | Conjugación U*WU con U un factor S (Sonin) | R186_015; ANNEX_SONIN_READING §4; L6 (inercia) | repetición | La conjugación unitaria es la identidad de Sonin misma, que vale para toda fase impar. La congruencia conserva la inercia (Sylvester): clase 6 de G3 |
-| O6 | Conmutador i[H, A] (Mourre, virial) | J5 (clase 18 de G3); R161_057–065; ROUND_012_A Prop. B; CS0_COMMUTE_001 | repetición | ⟨F, i[H,A]F⟩ = 2 Im⟨HF, AF⟩ es el formato Lyapunov Re⟨HF, MF⟩ con M = −2iA. Por Prop. B, sin una A de fórmula propia equivale a ker H = {0}. Con A = dilatación, el borde de la ventana deja un resto sin cota inferior (J5) |
-| O7 | Monotonía en un flujo (dS/dτ = W) | clase 16 de G3 (D17, B10 Danskin en c); R161_015 Teor. 3.1; R161_029 (monotonía FALSA); Q2/R7-b; G3 candidata A | NO-GO con paso uniforme; con historia, sin objeto (§4.1) | La derivada tiene que tener signo, y W no lo tiene. Los flujos naturales (T, c) dan la flecha equivocada o son genéricos en c |
-| O8 | Dualidad de Legendre / Fenchel–Young | Q1 (R7-a, contacto ≤ potencial); fase 154 (Teor. Z: certificado dual = fórmula explícita) | NO-GO con clase | ⟨x, W⟩ ≤ S(x) + S*(W) acota contactos por arriba con una pieza ≥ 0: muere antes de T ≈ 0.60 (cor:Tarch) |
-| O9 | Interlazado / min-max (n₋(W) ≤ rango de un defecto S) | L6 (R4-f); P47 Teor. P (n₋ ≤ 5/7/8); W-lin | repetición | Los índices son constantes cerca de c = 1; un conteo no ve el margen (P6 de G3) |
-| O10 | Producto tensorial / de Schur / segunda cuantización | R7-c §§1–2 (Λ∗Λ, grado 2); K2; J2; N3 (R5-c); N5 (R5-e) | repetición | El producto de Schur S∘W necesita W ⪰ 0. La exponencial (Schoenberg / Fock) de una forma es positiva ⟺ la forma es condicionalmente negativa: reformulación. El grado 2 en el peso cae en K2/J2 |
-| O11 | Posición relativa de dos subespacios (operador ángulo) | ANNEX_SONIN_READING §4 (construcción de Halmos); K1; R2 | repetición | La teoría de dos subespacios es la que produce Son_S y los cuadrados de fuga: sin\|ángulo\|² = ‖(1−P)SP‖², ciego |
-| O12 | Espacio de Kreĭn: S como simetría fundamental, W J-autoadjunto | L6; N1 (R5-a); M1 | repetición | Conteo de Pontryagin, constante cerca de c = 1 |
-| O13 | Contracción en métrica proyectiva de Hilbert (Birkhoff) | G3 candidata A | sin objeto | Falta un mapa T → T′ que preserve el cono; la inclusión P_T ⊂ P_T′ va en la dirección equivocada (G3 afirmación 7) |
-| O14 | Funcional convexo con hessiano a_T | G3 candidata B; N5 (R5-e) | sin objeto (§4.2) | Falta la identificación de la Hessiana positiva con la forma; su positividad auxiliar universal no es una exclusión (Lema K corregido) |
+| O1 | Sum or positive combination αS + R | ROUND_007_C §3; J2; L3 (BARRIER_D2_001); Sonin identity (T1) | selection NO-GO, repetition | The sign remains in the remainder R = W − αS; S is ≥ 0 under the checks and the failure lives in R (R3-i automatic). Lemma T with Φ(s,w) = αs + w and hypothesis «w ≥ −αs», which is the goal |
+| O2 | Oriented pairing ⟨x, W x⟩ with x an S vector | R161_002 §2 (OR) = ⟨A_MG, S_N^*S_NG⟩; SP-161/K7; T3 (signed weights w_N, closed in L1, R4-a) | NO-GO / reformulation | On the line it is equivalent to the sign of the multiplier (R161_002 §2). In the window it is SP-161; the branch w_N ≥ 0 dies (Thm. 8.1) and the signed branch is closed by R4-a |
+| O3 | Cauchy–Schwarz / Gram defect | R161_035 (parallelogram); R161_045 and R2 (PS²P − (PSP)² = \|(1−P)SP\|²); phase 122 | repetition | The Gram defect is ≥ 0 for every weight (S3), and therefore blind. The identity joining it to the PC defect does not exist (K1) |
+| O4 | Schur complement in a block [[S, W],[W*, S′]] | J3; L5; D17 (Schur floor); W11′ (R184_015 Thm. 2) | NO-GO with class | Positivity of the block ⟺ S′ ⪰ W*S^{−1}W: norm bound of W relative to S (W11′, B2), or root of the form (J3) |
+| O5 | Conjugation U*WU with U an S factor (Sonin) | R186_015; ANNEX_SONIN_READING §4; L6 (inertia) | repetition | Unitary conjugation is the Sonin identity itself, which holds for every odd phase. Congruence preserves inertia (Sylvester): class 6 of G3 |
+| O6 | Commutator i[H, A] (Mourre, virial) | J5 (class 18 of G3); R161_057–065; ROUND_012_A Prop. B; CS0_COMMUTE_001 | repetition | ⟨F, i[H,A]F⟩ = 2 Im⟨HF, AF⟩ is the Lyapunov format Re⟨HF, MF⟩ with M = −2iA. By Prop. B, without an A with its own formula it is equivalent to ker H = {0}. With A = dilation, the window boundary leaves a remainder without lower bound (J5) |
+| O7 | Monotonicity along a flow (dS/dτ = W) | class 16 of G3 (D17, B10 Danskin in c); R161_015 Thm. 3.1; R161_029 (monotonicity FALSE); Q2/R7-b; G3 candidate A | NO-GO with uniform step; with history, no object (§4.1) | The derivative has to have a sign, and W does not. The natural flows (T, c) give the wrong arrow or are generic in c |
+| O8 | Legendre / Fenchel–Young duality | Q1 (R7-a, contact ≤ potential); phase 154 (Thm. Z: dual certificate = explicit formula) | NO-GO with class | ⟨x, W⟩ ≤ S(x) + S*(W) bounds contacts from above with a piece ≥ 0: dies before T ≈ 0.60 (cor:Tarch) |
+| O9 | Interlacing / min-max (n₋(W) ≤ rank of a defect S) | L6 (R4-f); P47 Thm. P (n₋ ≤ 5/7/8); W-lin | repetition | The indices are constant near c = 1; a count does not see the margin (P6 of G3) |
+| O10 | Tensor / Schur product / second quantization | R7-c §§1–2 (Λ∗Λ, degree 2); K2; J2; N3 (R5-c); N5 (R5-e) | repetition | The Schur product S∘W needs W ⪰ 0. The exponential (Schoenberg / Fock) of a form is positive ⟺ the form is conditionally negative: reformulation. Degree 2 in the weight falls into K2/J2 |
+| O11 | Relative position of two subspaces (angle operator) | ANNEX_SONIN_READING §4 (Halmos construction); K1; R2 | repetition | Two-subspace theory is what produces Son_S and the leakage squares: sin\|angle\|² = ‖(1−P)SP‖², blind |
+| O12 | Kreĭn space: S as fundamental symmetry, W J-self-adjoint | L6; N1 (R5-a); M1 | repetition | Pontryagin count, constant near c = 1 |
+| O13 | Contraction in the projective Hilbert metric (Birkhoff) | G3 candidate A | no object | A map T → T′ preserving the cone is missing; the inclusion P_T ⊂ P_T′ goes in the wrong direction (G3 claim 7) |
+| O14 | Convex functional with Hessian a_T | G3 candidate B; N5 (R5-e) | no object (§4.2) | The identification of the positive Hessian with the form is missing; its universal auxiliary positivity is not an exclusion (corrected Lemma K) |
 
-Cotejos: ARGUED, por lectura de las entradas citadas; no exhaustivos.
+Cross-checks: ARGUED, by reading the cited entries; not exhaustive.
 
-## 3. La razón común
+## 3. The common reason
 
-**Clase 𝔐 (declarada).** Certificados de la forma a_T^a(F) = Φ(S^a(F), W^a(F)) + (términos que se anulan
-idénticamente para a = Λ), en los que la desigualdad Φ(s, w) ≥ 0 se deduce sólo de dos cosas:
-- (a) s ≥ 0, que es el enunciado de signo del objeto S;
-- (b) un conjunto ℛ de relaciones (identidades o desigualdades) entre s, w y los datos libres de peso.
+**Class 𝔐 (declared).** Certificates of the form a_T^a(F) = Φ(S^a(F), W^a(F)) + (terms vanishing
+identically for a = Λ), in which the inequality Φ(s, w) ≥ 0 is deduced from only two things:
+- (a) s ≥ 0, which is the sign statement of the object S;
+- (b) a set ℛ of relations (identities or inequalities) between s, w and the weight-free data.
 
-**Lema T (PROVED, con hipótesis de transferencia precisadas).** Sea 𝒜 el conjunto de pesos para los que
-valen (a), (b), la descomposición y la no negatividad de la contribución conjunta de los términos
-adicionales que se anulan para a = Λ. No se exige signo individual de esos términos. Si 𝒜 contiene un
-peso a con λ_A(T; a) < 0 para algún T, entonces ningún certificado de 𝔐 con esos (S, W, ℛ) prueba a_T^Λ ≥ 0 en P_T
-para todo T.
+**Lemma T (PROVED, with transfer hypotheses made precise).** Let 𝒜 be the set of weights for which
+(a), (b), the decomposition and the nonnegativity of the joint contribution of the additional
+terms vanishing for a = Λ hold. No individual sign of those terms is required. If 𝒜 contains a
+weight a with λ_A(T; a) < 0 for some T, then no certificate of 𝔐 with those (S, W, ℛ) proves a_T^Λ ≥ 0 on P_T
+for all T.
 
-*Prueba.* Para a ∈ 𝒜, (a) y (b) dan Φ ≥ 0; la contribución adicional también es no negativa por hipótesis.
-La descomposición da a_T^a ≥ 0 en P_T para todo T, lo que contradice λ_A(T; a) < 0. ∎
+*Proof.* For a ∈ 𝒜, (a) and (b) give Φ ≥ 0; the additional contribution is also nonnegative by hypothesis.
+The decomposition gives a_T^a ≥ 0 on P_T for all T, contradicting λ_A(T; a) < 0. ∎
 
-**Precisión de alcance.** La descomposición sola no transporta la nulidad de los términos adicionales
-desde Λ a otro peso. Por ejemplo q_w(x)=(2−w)|x|²=|x|²+(1−w)|x|² tiene segundo término nulo en w=1,
-pero es negativa para w>2 y x≠0. Tampoco se exige que una expresión auxiliar positiva pierda su signo:
-puede fallar únicamente su identificación con la forma objetivo. Estas precisiones corrigen la lectura
-literal anterior; no proporcionan una representación positiva de a_T.
+**Scope precision.** The decomposition alone does not transport the vanishing of the additional terms
+from Λ to another weight. For example q_w(x)=(2−w)|x|²=|x|²+(1−w)|x|² has a second term vanishing at w=1,
+but is negative for w>2 and x≠0. Nor is it required that a positive auxiliary expression lose its sign:
+only its identification with the target form may fail. These precisions correct the earlier literal
+reading; they do not provide a positive representation of a_T.
 
-Con la batería E (CITED: λ_A < 0 certificado para c > 1 en T = 1 y en ½log5, CERT_FALSIFIERS_001),
-alguna hipótesis completa de transferencia debe fallar en cada control negativo. Sólo si sobreviven
-la descomposición y los demás signos se fuerza un fallo de ℛ. Se tienen además los hechos siguientes.
+With battery E (CITED: λ_A < 0 certified for c > 1 at T = 1 and at ½log5, CERT_FALSIFIERS_001),
+some complete transfer hypothesis must fail in each negative check. Only if the decomposition and the other signs
+survive is a failure of ℛ forced. In addition the following facts hold.
 
-- (T1) Si S es ciego (lista S), (a) vale en todo 𝒞. PROVED, por la columna de ceguera de §1.
-- (T2) Una relación de ℛ que sea una desigualdad de signo sobre un peso no negativo (por ejemplo h(k) ≥ 0, o las
-  leyes de probabilidad de ζ^c) vale para 2Λ. PROVED (trivial).
-- (T3) Una relación que use sólo divisores, como Σ_{d|n}a(d) = log n, vale en Beurling (Lema A de R9-b, PROVED
-  allí). Una relación libre de peso (Tate–Beckner, Poisson sobre ℤ) vale para 2Λ y el borrado (ROUND_010_A Lema C
+- (T1) If S is blind (list S), (a) holds on all of 𝒞. PROVED, by the blindness column of §1.
+- (T2) A relation of ℛ that is a sign inequality on a nonnegative weight (for example h(k) ≥ 0, or the
+  probability laws of ζ^c) holds for 2Λ. PROVED (trivial).
+- (T3) A relation that uses only divisors, such as Σ_{d|n}a(d) = log n, holds in Beurling (Lemma A of R9-b, PROVED
+  there). A weight-free relation (Tate–Beckner, Poisson on ℤ) holds for 2Λ and deletion (ROUND_010_A Lemma C
   (α), (β), PROVED).
-- (T4) Por tanto ℛ tiene que contener, como restricción efectivamente usada, la conjunción de Poisson sobre ℤ con
-  Λ∗1 = log, que es la identidad (PC) de R161_001 (canal (γ)). Esto es PROVED dentro del inventario de relaciones de
-  ROUND_010_A Lema C; la exhaustividad de ese inventario es ARGUED.
-- (T5) **Paridad con clase precisada.** R161_002 Teor. 1.1 y Cor. 1.2 prueban invariancia bajo
-  A_M→−A_M del cuadrado ||S_N A_M 𝓕F||² y de sus sumas o integrales no negativas con coeficientes
-  independientes del signo. Esa información sola no determina la orientación de A_M. No cubre
-  todos los cuadrados construidos usando (PC): si L es lineal en A_M, entonces
+- (T4) Hence ℛ must contain, as an effectively used restriction, the conjunction of Poisson on ℤ with
+  Λ∗1 = log, which is the identity (PC) of R161_001 (channel (γ)). This is PROVED within the inventory of relations of
+  ROUND_010_A Lemma C; the exhaustiveness of that inventory is ARGUED.
+- (T5) **Parity with a precise class.** R161_002 Thm. 1.1 and Cor. 1.2 prove invariance under
+  A_M→−A_M of the square ||S_N A_M 𝓕F||² and of its nonnegative sums or integrals with coefficients
+  independent of the sign. That information alone does not determine the orientation of A_M. It does not cover
+  all squares built using (PC): if L is linear in A_M, then
 
       ||u_0+L(A_M)F||²
         =||u_0||²+2Re⟨u_0,L(A_M)F⟩+||L(A_M)F||²
 
-  contiene un término impar. No se deduce que una expresión candidata completa deba ser impar;
-  puede tener componentes pares e impares. Sigue vigente ROUND_003_2 Lema 3 para la subclase afín
-  cuyo cruce reproduce exactamente el peine. Una identidad específica para Λ con cruce distinto
-  requiere construcción y prueba propias; no se revalida ninguna candidata por esta corrección.
+  contains an odd term. It does not follow that a complete candidate expression must be odd;
+  it may have even and odd components. ROUND_003_2 Lemma 3 remains in force for the affine subclass
+  whose cross term reproduces exactly the comb. A Λ-specific identity with a different cross term
+  requires its own construction and proof; no candidate is revalidated by this correction.
 
-**Enunciado común con alcance precisado.** El Lema T transfiere la no negatividad al control
-sólo si sobreviven la descomposición, las relaciones empleadas y el signo conjunto de los términos
-adicionales. No basta que sobreviva el signo del objeto auxiliar. La identificación puede fallar
-únicamente en el control. La lista de objetos S/W no prueba que toda combinación quede en la
-clase excluida ni que deba reducirse a (OR).
+**Common statement with precise scope.** Lemma T transfers nonnegativity to the check
+only if the decomposition, the relations used and the joint sign of the additional terms
+survive. It is not enough that the sign of the auxiliary object survive. The identification may fail
+only in the check. The list of S/W objects does not prove that every combination stays in the
+excluded class nor that it must reduce to (OR).
 
-## 4. Los dos formatos sin objeto de ROUND_009_G3
+## 4. The two formats without object of ROUND_009_G3
 
-### 4.1 Flujo con paso dependiente de la historia (S monótono, W derivada)
+### 4.1 Flow with history-dependent step (S monotone, W derivative)
 
-Intento de par explícito, con el flujo en T:
-- 𝔖(T) := λ_min(Son_{S(T)}|P_T), con S(T) = {∞} ∪ {p ≤ e^{2T}};
-- derivada: entre saltos, 𝔖 es no creciente por inclusión de dominios, para todo peso (ciego); en T = ½log p,
-  el salto de 𝔖 viene de la entrada de p (es la parte W4).
+Attempt at an explicit pair, with the flow in T:
+- 𝔖(T) := λ_min(Son_{S(T)}|P_T), with S(T) = {∞} ∪ {p ≤ e^{2T}};
+- derivative: between jumps, 𝔖 is non-increasing by inclusion of domains, for every weight (blind); at T = ½log p,
+  the jump of 𝔖 comes from the entry of p (it is the part W4).
 
-El formato «entropía» exige una cantidad que no decrezca y cuyo valor inicial sea ≥ 0. Toda cantidad obtenida por
-inclusión P_T ⊂ P_T′ decrece (G3 afirmación 7, PROVED trivial), y por tanto la flecha es la equivocada. Para
-invertirla hace falta que el salto de W tenga signo en cada T = ½log p, y W4 es indefinido (CITED). La comparación
-𝔖 frente a λ_A es Lemma H (iv) de R186_029: 1 − ρ* ≤ λ_A/λ_min(Son_S|P_T), que hereda el margen (CITED).
-Conclusión: el par existe pero es repetición (R186_029, W-fam). ARGUED.
+The «entropy» format requires a quantity that does not decrease and whose initial value is ≥ 0. Every quantity obtained by
+the inclusion P_T ⊂ P_T′ decreases (G3 claim 7, PROVED trivial), and therefore the arrow is the wrong one. To
+reverse it one needs the jump of W to have a sign at each T = ½log p, and W4 is indefinite (CITED). The comparison
+𝔖 versus λ_A is Lemma H (iv) of R186_029: 1 − ρ* ≤ λ_A/λ_min(Son_S|P_T), which inherits the margin (CITED).
+Conclusion: the pair exists but is a repetition (R186_029, W-fam). ARGUED.
 
-Con el flujo en c (a_T^{cΛ}, c ∈ [0,1]): d/dc = −comb (W, sin signo) y a_T^0 = Arch, que no es ≥ 0 en P_T más allá
-de T ≈ 0.60. Es B10 / clase 16. Repetición.
+With the flow in c (a_T^{cΛ}, c ∈ [0,1]): d/dc = −comb (W, without sign) and a_T^0 = Arch, which is not ≥ 0 on P_T beyond
+T ≈ 0.60. It is B10 / class 16. Repetition.
 
-La dependencia de la historia pedida por Q2 tendría que entrar como dato de fórmula propia en el paso. Ningún objeto
-de S proporciona ese dato: todos son funciones del estado en T, sin memoria. ARGUED.
+The history dependence required by Q2 would have to enter as a datum with its own formula in the step. No object
+of S provides that datum: all are functions of the state at T, without memory. ARGUED.
 
-### 4.2 Funcional convexo con hessiano a_T (S convexo, W hessiano)
+### 4.2 Convex functional with Hessian a_T (S convex, W Hessian)
 
-**Lema K (PROVED).** Sea Φ(F) = ∫ ψ(F̂(ξ)) dμ_a(ξ) o Φ(F) = log Σ_n w_n e^{⟨F, φ_n⟩}, con ψ convexa, μ_a ≥ 0 y
-w_n ≥ 0 construidos a partir de un peso a. Entonces D²Φ(F_0) ⪰ 0 en todo punto base donde las expresiones y
-sus derivadas estén definidas, para todo peso con μ_a ≥ 0 (respectivamente w ≥ 0). Esto incluye 2Λ sólo
-si la construcción conserva allí esas hipótesis. El lema no excluye una identidad específica que
-identifique esta Hessiana positiva con a_T para Λ y falle para un falsificador.
+**Lemma K (PROVED).** Let Φ(F) = ∫ ψ(F̂(ξ)) dμ_a(ξ) or Φ(F) = log Σ_n w_n e^{⟨F, φ_n⟩}, with ψ convex, μ_a ≥ 0 and
+w_n ≥ 0 built from a weight a. Then D²Φ(F_0) ⪰ 0 at every base point where the expressions and
+their derivatives are defined, for every weight with μ_a ≥ 0 (respectively w ≥ 0). This includes 2Λ only
+if the construction preserves those hypotheses there. The lemma does not exclude a specific identity that
+identifies this positive Hessian with a_T for Λ and fails for a falsifier.
 
-*Prueba.* En el primer caso, D²Φ(F_0)[H,H] = ∫ D²ψ(F̂_0)[Ĥ,Ĥ] dμ_a ≥ 0. En el segundo, el hessiano es la
-covarianza de ⟨H, φ_n⟩ bajo la ley proporcional a w_ne^{⟨F_0,φ_n⟩}, que es ≥ 0. ∎
+*Proof.* In the first case, D²Φ(F_0)[H,H] = ∫ D²ψ(F̂_0)[Ĥ,Ĥ] dμ_a ≥ 0. In the second, the Hessian is the
+covariance of ⟨H, φ_n⟩ under the law proportional to w_ne^{⟨F_0,φ_n⟩}, which is ≥ 0. ∎
 
-Aplicaciones:
-- El canal cociente S2, visto como funcional cuártico F ↦ ∫|F̂|⁴|A|², es del primer tipo, con μ = |A|²dξ ≥ 0
-  para todo peso. Su hessiano en 0 es nulo, y en otros puntos es ≥ 0 y ciego.
-- El segundo tipo es la varianza N5 (R5-e).
-- Si la convexidad se certifica por un supremo de afines indexado por factorizaciones, cada rama es lineal en el
-  peso: G3 §4B, J2.
+Applications:
+- The ratio channel S2, seen as the quartic functional F ↦ ∫|F̂|⁴|A|², is of the first type, with μ = |A|²dξ ≥ 0
+  for every weight. Its Hessian at 0 vanishes, and at other points it is ≥ 0 and blind.
+- The second type is the variance N5 (R5-e).
+- If convexity is certified by a supremum of affine functions indexed by factorizations, each branch is linear in the
+  weight: G3 §4B, J2.
 
-Las dos fuentes del Lema K dan Hessianas positivas bajo sus hipótesis, pero no se ha construido
-su identificación con a_Λ. Esto es ausencia de objeto en la selección, no una exclusión universal.
-En particular, que la Hessiana auxiliar siga positiva bajo un falsificador no impide que falle allí
-la igualdad con la forma objetivo.
+The two sources of Lemma K give positive Hessians under their hypotheses, but their identification with a_Λ
+has not been built. This is absence of an object at selection, not a universal exclusion.
+In particular, that the auxiliary Hessian remains positive under a falsifier does not prevent the
+equality with the target form from failing there.
 
-## 5. Candidatas
+## 5. Candidates
 
-**No se obtuvo una candidata que pase la puerta.** No se afirma que O13, O14 y una rama impar
-no lineal de O2 agoten las operaciones abiertas. La restricción a esas tres posibilidades dependía
-de la generalización indebida de T5 y del uso de la ceguera auxiliar como exclusión.
+**No candidate passing the gate was obtained.** It is not claimed that O13, O14 and a nonlinear odd
+branch of O2 exhaust the open operations. The restriction to those three possibilities depended
+on the undue generalization of T5 and on the use of auxiliary blindness as an exclusion.
 
-Un bloque, Hessiana o cuadrado mixto explícito puede ser admisible si se demuestra su identidad
-completa con a_Λ y su signo sobre el portador. No se exige que pierda positividad el objeto auxiliar
-en c=2: puede fallar sólo la identidad. No se ha proporcionado aquí tal construcción.
+An explicit block, Hessian or mixed square may be admissible if its complete identity
+with a_Λ and its sign on the carrier are proved. It is not required that the auxiliary object lose positivity
+at c=2: only the identity may fail. No such construction has been provided here.
 
-Advertencia (PROVED, trivial). Si B(A_M) = f(A_M) con f ≥ 0, entonces ⟨A_MG, f(A_M)G⟩ = ∫ λ f(λ) dE_G(λ), cuyo signo
-es el de A_M sobre el soporte de f. Toda Φ de esta forma es una reformulación (B3). Una B que no conmute con A_M cae
-en el formato de Lyapunov de ROUND_012_A Prop. B.
+Warning (PROVED, trivial). If B(A_M) = f(A_M) with f ≥ 0, then ⟨A_MG, f(A_M)G⟩ = ∫ λ f(λ) dE_G(λ), whose sign
+is that of A_M on the support of f. Every Φ of this form is a reformulation (B3). A B that does not commute with A_M falls
+into the Lyapunov format of ROUND_012_A Prop. B.
 
-## 6. Afirmaciones y etiquetas
+## 6. Claims and labels
 
-| # | Afirmación | Etiqueta |
+| # | Claim | Label |
 |---|---|---|
-| 1 | Listas S y W con archivo, sección y estado de ceguera | CITED (columna por columna); la observación de §1 es ARGUED |
-| 2 | S2 ≥ 0 y S7 ≥ 0 para todo peso real (respectivamente no negativo) | PROVED (trivial) |
-| 3 | Tabla O1–O14: antecedentes y motivos | ARGUED (cotejo; no exhaustivo) |
-| 4 | O6: el formato Mourre/virial es el formato Lyapunov con M = −2iA | PROVED (⟨F,i[H,A]F⟩ = 2 Im⟨HF,AF⟩ para F en el dominio) |
-| 5 | Lema T | PROVED en la clase 𝔐 |
-| 6 | (T2), (T3) | PROVED (T3 a partir del Lema A de R9-b y del Lema C (α), (β), CITED) |
-| 7 | (T4): la restricción efectiva tiene que ser (PC) | PROVED dentro del inventario del Lema C; exhaustividad ARGUED |
-| 8 | (T5): paridad del cuadrado canónico y sus sumas con coeficientes independientes del signo; no extensión universal a cuadrados mixtos | PROVED en la clase citada; alcance corregido |
-| 9 | §4.1: el flujo en T da la flecha equivocada; el par con Son_{S(T)} es R186_029 | PROVED (inclusión) / CITED |
-| 10 | Lema K | PROVED |
-| 11 | Advertencia de §5 (f(A_M) conmutante ⇒ reformulación) | PROVED (trivial) |
-| 12 | Candidata que pasa la puerta: ninguna | NO-GO de selección |
-| 13 | Signo global de a_T | OPEN |
+| 1 | Lists S and W with file, section and blindness status | CITED (column by column); the observation of §1 is ARGUED |
+| 2 | S2 ≥ 0 and S7 ≥ 0 for every real (respectively nonnegative) weight | PROVED (trivial) |
+| 3 | Table O1–O14: antecedents and reasons | ARGUED (cross-check; not exhaustive) |
+| 4 | O6: the Mourre/virial format is the Lyapunov format with M = −2iA | PROVED (⟨F,i[H,A]F⟩ = 2 Im⟨HF,AF⟩ for F in the domain) |
+| 5 | Lemma T | PROVED in the class 𝔐 |
+| 6 | (T2), (T3) | PROVED (T3 from Lemma A of R9-b and Lemma C (α), (β), CITED) |
+| 7 | (T4): the effective restriction has to be (PC) | PROVED within the inventory of Lemma C; exhaustiveness ARGUED |
+| 8 | (T5): parity of the canonical square and its sums with sign-independent coefficients; no universal extension to mixed squares | PROVED in the cited class; scope corrected |
+| 9 | §4.1: the flow in T gives the wrong arrow; the pair with Son_{S(T)} is R186_029 | PROVED (inclusion) / CITED |
+| 10 | Lemma K | PROVED |
+| 11 | Warning of §5 (commuting f(A_M) ⇒ reformulation) | PROVED (trivial) |
+| 12 | Candidate passing the gate: none | selection NO-GO |
+| 13 | Global sign of a_T | OPEN |
 
-Para el revisor, hay que rederivar: el Lema T y su aplicación a la batería E; el Lema K (los dos casos); la
-identidad de O6; y la afirmación (T4), es decir, que ninguna relación de ℛ fuera de (PC) falle a la vez en los tres
-controles (ésta es la pieza más débil, porque depende de la exhaustividad ARGUED del Lema C de ROUND_010_A).
+For independent verification, the following must be rederived: Lemma T and its application to battery E; Lemma K (both cases); the
+identity of O6; and claim (T4), i.e. that no relation of ℛ outside (PC) fails simultaneously under the three
+checks (this is the weakest piece, because it depends on the ARGUED exhaustiveness of Lemma C of ROUND_010_A).

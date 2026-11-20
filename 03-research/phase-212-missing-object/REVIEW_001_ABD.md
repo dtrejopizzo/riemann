@@ -1,550 +1,550 @@
-# Revisión de las memos de selección ROUND_001_A, ROUND_001_B y ROUND_001_D
+# Review of the selection memos ROUND_001_A, ROUND_001_B and ROUND_001_D
 
-Objetivo de referencia (★): λ_A(T) ≥ 0 para todo T > 0, con las definiciones de
-`../phase-211-sign-sandbox/STATEMENT_001.md`. Se rehízo cada demostración, se cotejó con
+Reference target (★): λ_A(T) ≥ 0 for every T > 0, with the definitions of
+`../phase-211-sign-sandbox/STATEMENT_001.md`. Each proof was redone and cross-checked against
 P47 (`04-papers/47-row-d-dual-certificates/main.tex`: sec:firstcontact, thm:PCfinite, prop:GEgap,
 prob:annihilate, prop:annihilate-equiv, rem:returnremarks, prop:opcalc, thm:sos, rem:sosatoms,
-prop:nearfree, rem:boxes, thm:oneprofile, prop:AM, lem:shape-scale, thm:geo-split), con 211/LEDGER
-(C6, C7, C9, C33b, C49), con `phase-186-toolbox/R186_005` y `R186_092`, con el índice de rutas y con la
-fase 170 (`phase-170-global-prime-inequality/R170_811`–`R170_862`), que ninguna de las tres memos cita.
-Etiquetas: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMÉRICO. Los cómputos de esta
-revisión son comprobaciones de un punto y no prueban nada.
+prop:nearfree, rem:boxes, thm:oneprofile, prop:AM, lem:shape-scale, thm:geo-split), against 211/LEDGER
+(C6, C7, C9, C33b, C49), against `phase-186-toolbox/R186_005` and `R186_092`, against the routes index and against
+phase 170 (`phase-170-global-prime-inequality/R170_811`–`R170_862`), which none of the three memos cites.
+Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL. The computations of this
+review are single-point checks and prove nothing.
 
-Resumen de veredictos.
+Summary of verdicts.
 
-| Memo | Veredicto | Defecto más grave |
+| Memo | Verdict | Most serious defect |
 |---|---|---|
-| A (K1) | ACEPTAR con correcciones (mayores en el cotejo y en el alcance) | El Lema A(2) es vacío en el álgebra formal (allí A = 0) y la frase «la orientación entra exclusivamente por los defectos» es falsa; el cotejo omite la fase 170, donde la «pieza que falta» ya está registrada |
-| B (K2) | ACEPTAR con correcciones | La lectura de la Prop. 5 («no existe fórmula del pivote obtenida por Λ∗1 = log») es un non sequitur que la propia Prop. 6 contradice; el «se ha probado» del Resultado descansa en un dato NUMÉRICO |
-| D (K4) | ACEPTAR con correcciones | El caso (iv) del Teorema B no es un NO-GO, ni siquiera condicional, en la generalidad enunciada: hay instancias verdaderas PROVED |
+| A (K1) | ACCEPT with corrections (major ones in the cross-check and in the scope) | Lemma A(2) is empty in the formal algebra (there A = 0) and the sentence "the orientation enters exclusively through the defects" is false; the cross-check omits phase 170, where the "missing piece" is already recorded |
+| B (K2) | ACCEPT with corrections | The reading of Prop. 5 ("there is no formula for the pivot obtained via Λ∗1 = log") is a non sequitur that the memo's own Prop. 6 contradicts; the "it has been proved" of the Result rests on a NUMERICAL datum |
+| D (K4) | ACCEPT with corrections | Case (iv) of Theorem B is not a NO-GO, not even a conditional one, in the stated generality: there are true PROVED instances |
 
-Ninguna de las tres conclusiones «sin mecanismo nuevo» es una imposibilidad, y ninguna debe
-registrarse como tal. Las tres memos lo dicen en su sección de resultado, pero las tres contienen
-frases que lo contradicen (señaladas abajo).
+None of the three conclusions "no new mechanism" is an impossibility, and none should
+be recorded as such. The three memos say so in their result section, but all three contain
+sentences that contradict it (pointed out below).
 
 ---
 
 ## 1. Memo A
 
-### 1.1 Verificación de los enunciados
+### 1.1 Verification of the statements
 
-**Relaciones frente a P47.** Las definiciones coinciden con P47 (l. 6627–6665): X, 𝓕 = u_∞(D)J,
+**Relations against P47.** The definitions agree with P47 (l. 6627–6665): X, 𝓕 = u_∞(D)J,
 𝓕* = 𝓕⁻¹ = 𝓕, JV_aJ = V_{−a}, X + 𝓕X𝓕 = 𝓜, S_N, S′_N, L_M, A_M, E_N = S_N𝓕 − JS_N,
-H_{M,N} = L_MS_N − S′_N. Las relaciones (b) S𝓕 = JS y (c) [X,S] = −LS son E = 0 y H = 0. Correcto.
-La relación (a) J𝓜J = 𝓜 es la paridad de m. Correcto.
+H_{M,N} = L_MS_N − S′_N. Relations (b) S𝓕 = JS and (c) [X,S] = −LS are E = 0 and H = 0. Correct.
+Relation (a) J𝓜J = 𝓜 is the parity of m. Correct.
 
-**Lema A(1).** Rehecho: S𝓜𝓕 = SX𝓕 + S𝓕X = (XS + LS)𝓕 + JSX = XJS + LS𝓕 − XJS + L^♭JS
-= (L + L^♭)S𝓕. Correcto. La hipótesis (a) no se usa en (1). Con defectos el mismo cálculo da
-S_N𝓜𝓕 = JS′_N + S′_N𝓕 + {X,E_N}, que es la demostración de thm:PCfinite. PROVED.
+**Lemma A(1).** Redone: S𝓜𝓕 = SX𝓕 + S𝓕X = (XS + LS)𝓕 + JSX = XJS + LS𝓕 − XJS + L^♭JS
+= (L + L^♭)S𝓕. Correct. Hypothesis (a) is not used in (1). With defects the same computation gives
+S_N𝓜𝓕 = JS′_N + S′_N𝓕 + {X,E_N}, which is the proof of thm:PCfinite. PROVED.
 
-**Lema A(2).** Las cuatro comprobaciones ((𝓕°)² = 1, (b), (c), (a)) son correctas. Además la
-sustitución respeta la relación no listada 𝓕t = t^♭𝓕 (t ∈ 𝒯; u_∞(D) conmuta con las traslaciones) y
-es compatible con la involución * de la realización (X* = X, J* = J, 𝓕* = 𝓕, t* = t^♭). PROVED como
-enunciado algebraico. Defectos:
+**Lemma A(2).** The four checks ((𝓕°)² = 1, (b), (c), (a)) are correct. Moreover the
+substitution respects the unlisted relation 𝓕t = t^♭𝓕 (t ∈ 𝒯; u_∞(D) commutes with translations) and
+is compatible with the involution * of the realization (X* = X, J* = J, 𝓕* = 𝓕, t* = t^♭). PROVED as an
+algebraic statement. Defects:
 
-- **E-A1 (alcance; §3, «Lectura» del Lema A, y §2(iii)).** En el álgebra universal definida por las
-  relaciones del lema, la parte (1) da A = 0. Entonces «A ↦ −A» es 0 ↦ 0 y la frase en negrita «el
-  álgebra formal de las tres entradas no contiene orientación, en ningún grado» es una trivialidad:
-  en esa álgebra toda identidad A = ΣV_i*V_i + ρ dice 0 = ΣV_i*V_i + ρ. El enunciado (2) no añade
-  nada a (1) mientras las relaciones sean exactas.
-- **E-A2 (el caso con defectos no está demostrado ni enunciado).** Lo que importa es la versión con
-  truncaciones. Allí (b) y (c) no son relaciones: definen E_N y H_{M,N}. La tupla especular
-  (X, J, J𝓕J, S°, −L_M) satisface thm:PCfinite con A_M ↦ −A_M para **cualquier** S° ∈ 𝒯 (incluido
-  S° = S_N), con E° := S°J𝓕J − JS° y H° := −L_MS° − S°′. El «peine de Möbius» sólo interviene en
-  dónde se anula H°: con S° = Φ_{≤N}(μ) y M ≥ N, H° no tiene coeficiente en k ≤ N (porque
-  μ·log = −Λ∗μ) y fuera sus coeficientes −Σ_{dm=k, d≤M, m≤N}Λ(d)μ(m) no tienen signo (NUMÉRICO, M = 9,
-  N = 6: entre −1.95 y +2.71). El enunciado correcto es el Lema A′ de §1.3. Es una reformulación de
-  la observación de P47 tras thm:PCfinite (invariancia del cuadrado por A_M ↦ −A_M; código F2); no
-  la supera.
-- **E-A3 (afirmación falsa; §3, «Lectura», y §4 primera frase).** «La orientación entra exclusivamente
-  por la asimetría de los defectos» es falso. La imagen especular tampoco comparte: Λ ≥ 0 coeficiente
-  a coeficiente (pesos −Λ), b ≡ 1 ≥ 0 (frente a μ), y la positividad de la medida de Lévy K(u) > 0
-  de m (STATEMENT §1; la imagen tiene −m). Ninguna de las tres es un defecto de (b) o (c): son
-  propiedades de la realización que las relaciones (a)–(c) no expresan. h_{M,N} ≥ 0 es consecuencia
-  de la primera. La lista (α), (β) del §4 está incompleta en consecuencia.
-- **E-A4 (el álgebra está infradeterminada).** Las relaciones (a)–(c) omiten la graduación de 𝒯 por
-  log ℕ, Φ(α)Φ(β) = Φ(α∗β), [X, V_a] = aV_a y 𝓕t = t^♭𝓕. La simetría las respeta, de modo que la
-  conclusión no cambia, pero «toda identidad deducida formalmente de (a), (b), (c)» debe leerse como
-  «toda identidad polinómica válida en toda realización de las relaciones, sin usar ninguna
-  desigualdad de coeficientes ni la forma de E, H».
+- **E-A1 (scope; §3, "Reading" of Lemma A, and §2(iii)).** In the universal algebra defined by the
+  relations of the lemma, part (1) gives A = 0. Then "A ↦ −A" is 0 ↦ 0 and the bold sentence "the
+  formal algebra of the three inputs contains no orientation, in any degree" is a triviality:
+  in that algebra every identity A = ΣV_i*V_i + ρ says 0 = ΣV_i*V_i + ρ. Statement (2) adds
+  nothing to (1) as long as the relations are exact.
+- **E-A2 (the case with defects is neither proved nor stated).** What matters is the version with
+  truncations. There (b) and (c) are not relations: they define E_N and H_{M,N}. The mirror tuple
+  (X, J, J𝓕J, S°, −L_M) satisfies thm:PCfinite with A_M ↦ −A_M for **any** S° ∈ 𝒯 (including
+  S° = S_N), with E° := S°J𝓕J − JS° and H° := −L_MS° − S°′. The "Möbius comb" only intervenes in
+  where H° vanishes: with S° = Φ_{≤N}(μ) and M ≥ N, H° has no coefficient at k ≤ N (because
+  μ·log = −Λ∗μ) and outside, its coefficients −Σ_{dm=k, d≤M, m≤N}Λ(d)μ(m) have no sign (NUMERICAL, M = 9,
+  N = 6: between −1.95 and +2.71). The correct statement is Lemma A′ of §1.3. It is a reformulation of
+  the observation of P47 after thm:PCfinite (invariance of the square under A_M ↦ −A_M; code F2); it does not
+  go beyond it.
+- **E-A3 (false claim; §3, "Reading", and §4 first sentence).** "The orientation enters exclusively
+  through the asymmetry of the defects" is false. The mirror image also does not share: Λ ≥ 0 coefficient
+  by coefficient (weights −Λ), b ≡ 1 ≥ 0 (versus μ), and the positivity of the Lévy measure K(u) > 0
+  of m (STATEMENT §1; the image has −m). None of the three is a defect of (b) or (c): they are
+  properties of the realization that the relations (a)–(c) do not express. h_{M,N} ≥ 0 is a consequence
+  of the first. The list (α), (β) of §4 is consequently incomplete.
+- **E-A4 (the algebra is underdetermined).** The relations (a)–(c) omit the grading of 𝒯 by
+  log ℕ, Φ(α)Φ(β) = Φ(α∗β), [X, V_a] = aV_a and 𝓕t = t^♭𝓕. The symmetry respects them, so the
+  conclusion does not change, but "every identity formally deduced from (a), (b), (c)" should be read as
+  "every polynomial identity valid in every realization of the relations, without using any
+  coefficient inequality or the form of E, H".
 
-**Lema B.** Rehecho: [X,H] = −L′_MS_N − L_MS′_N + S″_N y S′_N = L_MS_N − H dan
-H⁽²⁾ = L_MH − [X,H]. Comprobado en coeficientes con pesos arbitrarios (NUMÉRICO, M = 9, N = 6, error
-10⁻¹⁵). PROVED. Consecuencias (1)–(3) correctas. La (4) es correcta con la definición
-P_{j+1} := L_MP_j − [X,P_j], H^{(j)} := P_jS_N − S^{(j)}_N, que da H^{(j+1)} = P_jH − [X,H^{(j)}]; la
-memo no escribe esa definición: ARGUED tal como está, PROVED con la línea añadida. Defectos:
+**Lemma B.** Redone: [X,H] = −L′_MS_N − L_MS′_N + S″_N and S′_N = L_MS_N − H give
+H⁽²⁾ = L_MH − [X,H]. Checked on coefficients with arbitrary weights (NUMERICAL, M = 9, N = 6, error
+10⁻¹⁵). PROVED. Consequences (1)–(3) correct. (4) is correct with the definition
+P_{j+1} := L_MP_j − [X,P_j], H^{(j)} := P_jS_N − S^{(j)}_N, which gives H^{(j+1)} = P_jH − [X,H^{(j)}]; the
+memo does not write that definition: ARGUED as it stands, PROVED with the added line. Defects:
 
-- **E-A5 (truncación).** «Pesos y truncaciones cualesquiera» vale para la truncación
-  (L′_M + L_M²), que es Φ(Λ_{≤M}∗Λ_{≤M}) y no Φ_{≤M}(Λ∗Λ). Con la segunda aparece otro defecto con
-  soporte en (M, M²]. Precisar.
-- **E-A6 (sobre-alcance grave; «Siguiente paso concreto», primera frase).** «No relanzar K1 con otra
-  relación del anillo de Dirichlet (grado tres, Vaughan, identidades de convolución): el Lema B las
-  deriva de (c) y el Lema A les quita la orientación.» Toda afirmación verdadera sobre Λ se deriva de
-  Λ∗1 = log, porque esa identidad define Λ. «Es consecuencia de (c)» no excluye nada y no puede
-  usarse como criterio de cierre. Lo que el Lema B demuestra es más estrecho: el defecto truncado de
-  grado j está en el ideal generado por H, [X,H], …, y se anula en k ≤ N cuando H se anula. No dice
-  que un uso de grado dos carezca de contenido de signo: dice que no introduce un defecto nuevo.
-  La frase debe retirarse del registro.
-- **E-A7 (antecedente no citado).** El contenido del Lema B y de su consecuencia (1) está en
-  `R170_851` §§0–2 (colisión de Selberg; el canal sincronizado se anula en k ≤ N y conserva sólo la
-  hipérbola incompleta) y `R170_841`. No es una pieza nueva.
+- **E-A5 (truncation).** "Arbitrary weights and truncations" holds for the truncation
+  (L′_M + L_M²), which is Φ(Λ_{≤M}∗Λ_{≤M}) and not Φ_{≤M}(Λ∗Λ). With the latter another defect appears with
+  support in (M, M²]. Specify.
+- **E-A6 (serious overreach; "Concrete next step", first sentence).** "Do not relaunch K1 with another
+  relation of the Dirichlet ring (degree three, Vaughan, convolution identities): Lemma B
+  derives them from (c) and Lemma A removes their orientation." Every true statement about Λ derives from
+  Λ∗1 = log, because that identity defines Λ. "Is a consequence of (c)" excludes nothing and cannot
+  be used as a closure criterion. What Lemma B proves is narrower: the truncated defect of
+  degree j lies in the ideal generated by H, [X,H], …, and vanishes at k ≤ N when H vanishes. It does not say
+  that a degree-two use lacks sign content: it says that it does not introduce a new defect.
+  The sentence must be withdrawn from the record.
+- **E-A7 (uncited antecedent).** The content of Lemma B and of its consequence (1) is in
+  `R170_851` §§0–2 (Selberg collision; the synchronized channel vanishes at k ≤ N and keeps only the
+  incomplete hyperbola) and `R170_841`. It is not a new piece.
 
-**Lema C.** Rehecho. El átomo de ΣV_i*V_i en log(3/2) proviene sólo de L*L con (n,m) = (3,2)
-(2n = 3m con n, m potencias de primo obliga n = 3, m = 2), vale (log 2·log 3/√6)Σ(|β_i|² + |γ_i|²), y
-el aislamiento de átomos es el de rem:sosatoms (l. 8469–8474), que aplica a la parte real par de la
-medida. La desigualdad estricta T > ½log3 es la correcta para L = Φ_{<N}(Λ). PROVED (con CITED).
-Es rem:sosatoms con coeficientes; la memo lo dice. Alcance: cuadrados de grado uno con coeficientes
-escalares; no dice nada de V_i con X, J, 𝓕.
+**Lemma C.** Redone. The atom of ΣV_i*V_i at log(3/2) comes only from L*L with (n,m) = (3,2)
+(2n = 3m with n, m prime powers forces n = 3, m = 2), equals (log 2·log 3/√6)Σ(|β_i|² + |γ_i|²), and
+the isolation of atoms is that of rem:sosatoms (l. 8469–8474), which applies to the even real part of the
+measure. The strict inequality T > ½log3 is the correct one for L = Φ_{<N}(Λ). PROVED (with CITED).
+It is rem:sosatoms with coefficients; the memo says so. Scope: degree-one squares with scalar
+coefficients; it says nothing about V_i with X, J, 𝓕.
 
-**§2(iv), identidad de signatura.** Errónea por un factor 2 (l. 125). El desarrollo del lado derecho
-da ½(u(λ) + u(μ)). La identidad correcta es
-u(λ) + u(μ) = (1/ε)(1 + εu(λ))(1 + εu(μ)) − 1/ε − ε u(λ)u(μ). La conclusión (signatura (1,1) del
-núcleo u⊗1 + 1⊗u para u no constante) es correcta. La etiqueta PROVED del resumen («Qué se probó»,
-último ítem) se mantiene sólo con la fórmula corregida.
+**§2(iv), signature identity.** Wrong by a factor 2 (l. 125). Expanding the right-hand side
+gives ½(u(λ) + u(μ)). The correct identity is
+u(λ) + u(μ) = (1/ε)(1 + εu(λ))(1 + εu(μ)) − 1/ε − ε u(λ)u(μ). The conclusion (signature (1,1) of the
+kernel u⊗1 + 1⊗u for non-constant u) is correct. The PROVED label of the summary ("What was proved",
+last item) stands only with the corrected formula.
 
-**§1(5), cΛ y a_P.** δ(k) = (c − 1) log k y, para a_P con P > N, δ(k) = −log k en k ≤ N: correcto
-(NUMÉRICO, c = ½ y c = 2). Pero la memo no extrae la consecuencia útil: véase R1 en §4.3.
+**§1(5), cΛ and a_P.** δ(k) = (c − 1) log k and, for a_P with P > N, δ(k) = −log k at k ≤ N: correct
+(NUMERICAL, c = ½ and c = 2). But the memo does not extract the useful consequence: see R1 in §4.3.
 
-**§5, batería.** La frase sobre cuartetos y f_t está etiquetada ARGUED por la propia memo; correcto.
+**§5, battery.** The sentence about quartets and f_t is labelled ARGUED by the memo itself; correct.
 
-### 1.2 Errores de cotejo y de cita
+### 1.2 Cross-check and citation errors
 
-- **E-A8 (omisión mayor en §0 y §1(1)).** La fase 170 trabajó exactamente los apareamientos de
-  thm:PCfinite: `R170_816` §2 (ecuación (2): ⟨JH_{M,N}F, g⟩ = 0 por soporte; (3)–(4): salida exacta
-  de la identidad con h_{M,N} ≥ 0), §3 (cota bilateral con pérdida √N), §4 (falsación explícita del
-  paso «h(k) ≥ 0 ⟹ el apareamiento es ≥ 0»), §6 (separación orientada del canal d = 2: quedan dos
-  correlaciones de Fourier sin signo); `R170_819`–`R170_823` (PC a dos escalas, la cancelación divisorial
-  sobrevive a la dilatación); `R170_837`, `R170_843`, `R170_847`–`R170_856`. La memo no los cita y
-  presenta §4 como «pieza que falta, señalada con precisión». El índice de rutas tiene la fila
-  G4A-R161_001-002 (catálogo 04, l. 759) pero no tiene filas para R170_811–R170_840; esa laguna del
-  índice explica la omisión y debe repararse (§4.5).
-- **E-A9 (identificación indebida; §4, última frase).** «Convertirlos en diagonales es exactamente lo
-  que piden las condiciones (ii)–(iii) de prob:annihilate … y prop:annihilate-equiv lo identifica con
-  (★).» prob:annihilate pide 𝒪_LF = 0 para vectores de primer contacto, con la minimalidad de la
-  ventana (i) como ingrediente; no menciona h_{M,N} ≥ 0 ni una diagonalización. La identidad del §4
-  es de otra forma: vale sobre todo P_T y no usa primer contacto. Que ambas impliquen (★) no las hace
-  la misma pregunta. Lo que P47 sí registra sobre la diagonalización está en rem:returnremarks
-  (l. 6940–6943): la varianza indexada por caminos de divisores no es la norma de la suma coherente
-  en k, que contiene términos de Gram cruzados entre k distintos; las fases aditivas diagonalizan en k
-  pero no factorizan por de = k, y los caracteres multiplicativos factorizan pero cambian el operador.
-  Ésa es la cita pertinente y la memo no la da.
-- Citas comprobadas y correctas: P1_BBSTAR_001 §2.8 y Teorema P1.A; índice README Prop N.2; R162_2301
-  Lema S; thm:sos y su extensión; observación tras thm:PCfinite. No se comprobaron N_BUILD_018/019/022
-  ni ROUND_023_A.
+- **E-A8 (major omission in §0 and §1(1)).** Phase 170 worked out exactly the pairings of
+  thm:PCfinite: `R170_816` §2 (equation (2): ⟨JH_{M,N}F, g⟩ = 0 by support; (3)–(4): exact exit
+  from the identity with h_{M,N} ≥ 0), §3 (two-sided bound with loss √N), §4 (explicit falsification of the
+  step "h(k) ≥ 0 ⟹ the pairing is ≥ 0"), §6 (oriented separation of the channel d = 2: two
+  unsigned Fourier correlations remain); `R170_819`–`R170_823` (PC at two scales, the divisorial cancellation
+  survives the dilation); `R170_837`, `R170_843`, `R170_847`–`R170_856`. The memo does not cite them and
+  presents §4 as "missing piece, pinpointed precisely". The routes index has the row
+  G4A-R161_001-002 (catalogue 04, l. 759) but no rows for R170_811–R170_840; that gap in the
+  index explains the omission and must be repaired (§4.5).
+- **E-A9 (improper identification; §4, last sentence).** "Converting them into diagonals is exactly what
+  conditions (ii)–(iii) of prob:annihilate ask for … and prop:annihilate-equiv identifies it with
+  (★)." prob:annihilate asks for 𝒪_LF = 0 for first-contact vectors, with minimality of the
+  window (i) as an ingredient; it mentions neither h_{M,N} ≥ 0 nor a diagonalization. The identity of §4
+  is of another kind: it holds on all of P_T and does not use first contact. That both imply (★) does not make them
+  the same question. What P47 does record about diagonalization is in rem:returnremarks
+  (l. 6940–6943): the variance indexed by divisor paths is not the norm of the coherent sum
+  in k, which contains cross Gram terms between distinct k; additive phases diagonalize in k
+  but do not factor through de = k, and multiplicative characters factor but change the operator.
+  That is the pertinent citation and the memo does not give it.
+- Citations checked and correct: P1_BBSTAR_001 §2.8 and Theorem P1.A; README index Prop N.2; R162_2301
+  Lemma S; thm:sos and its extension; observation after thm:PCfinite. N_BUILD_018/019/022
+  and ROUND_023_A were not checked.
 
-### 1.3 Enunciados corregidos
+### 1.3 Corrected statements
 
-- **Lema A′ (PROVED).** (1) En toda álgebra con las relaciones exactas del Lema A, 𝓜 = L + L^♭.
-  (2) Para M, N cualesquiera y todo S° ∈ 𝒯, la tupla (X, J, J𝓕J, S°, −L_M) satisface la identidad
-  de thm:PCfinite con A_M sustituido por −A_M y defectos E° = S°J𝓕J − JS°, H° = −L_MS° − S°′.
-  Consecuencia: una identidad polinómica deducida de thm:PCfinite que trate E_N y H_{M,N} como
-  símbolos no determina el signo de A_M. Alcance: identidades algebraicas que no usan ninguna
-  propiedad de E_N, H_{M,N}, Λ, b ≡ 1 ni K más allá de las relaciones. No es un NO-GO de ninguna
-  clase de construcciones: toda construcción que use Λ ≥ 0, K > 0, el soporte de H o el rango de E_∞
-  queda fuera.
-- **Lema B (PROVED, no nuevo: R170_851).** Como en la memo, con la truncación precisada y la
-  recursión de grado j escrita.
-- **Lema C (PROVED con CITED).** Como en la memo.
-- **Observación D.** ARGUED; se mantiene como tal.
+- **Lemma A′ (PROVED).** (1) In every algebra with the exact relations of Lemma A, 𝓜 = L + L^♭.
+  (2) For any M, N and every S° ∈ 𝒯, the tuple (X, J, J𝓕J, S°, −L_M) satisfies the identity
+  of thm:PCfinite with A_M replaced by −A_M and defects E° = S°J𝓕J − JS°, H° = −L_MS° − S°′.
+  Consequence: a polynomial identity deduced from thm:PCfinite that treats E_N and H_{M,N} as
+  symbols does not determine the sign of A_M. Scope: algebraic identities that use no
+  property of E_N, H_{M,N}, Λ, b ≡ 1 or K beyond the relations. It is not a NO-GO for any
+  class of constructions: every construction using Λ ≥ 0, K > 0, the support of H or the rank of E_∞
+  falls outside.
+- **Lemma B (PROVED, not new: R170_851).** As in the memo, with the truncation specified and the
+  degree-j recursion written.
+- **Lemma C (PROVED with CITED).** As in the memo.
+- **Observation D.** ARGUED; kept as such.
 
-### 1.4 ¿Cierra la pregunta de diseño?
+### 1.4 Does it close the design question?
 
-Cierra una cosa: la relación de grado dos no aporta un defecto independiente del de grado uno y, en
-la clase de multiplicadores, no completa un cuadrado (thm:sos, P1_BBSTAR §2.8, Lema C). No cierra
-K1 como conjunción separador + Poisson + factor arquimediano con paso no lineal; la memo lo dice en
-«Resultado» y lo contradice en «Siguiente paso concreto» (E-A6). El hueco concreto es el residuo
-común, tratado en §4.
+It closes one thing: the degree-two relation does not contribute a defect independent of the degree-one one and, in
+the class of multipliers, does not complete a square (thm:sos, P1_BBSTAR §2.8, Lemma C). It does not close
+K1 as a conjunction separator + Poisson + archimedean factor with a nonlinear step; the memo says so in
+"Result" and contradicts it in "Concrete next step" (E-A6). The concrete gap is the common
+residue, treated in §4.
 
-### 1.5 Qué puede registrarse
+### 1.5 What may be recorded
 
-Índice de rutas y grid, redacción admisible:
+Routes index and grid, admissible wording:
 
-> «Relación de grado dos del anillo de Dirichlet como paso no lineal junto con thm:PCfinite: sin
-> mecanismo nuevo. PROVED: el defecto truncado de grado dos es L_MH − [X,H] (ya en R170_851); la
-> identidad de thm:PCfinite admite una tupla especular con A_M ↦ −A_M, de modo que ninguna
-> consecuencia polinómica que trate E_N, H_{M,N} como símbolos fija el signo (reformulación de F2);
-> cuadrados de grado uno en (L, L*) con átomos en log ℕ son constantes para T > ½log3 (rem:sosatoms).
-> No es NO-GO de la conjunción (E)∧(F)∧(I). Antecedentes: R170_816, R170_819–823, R170_851,
-> P47 rem:returnremarks.»
+> "Degree-two relation of the Dirichlet ring as a nonlinear step together with thm:PCfinite: no
+> new mechanism. PROVED: the truncated degree-two defect is L_MH − [X,H] (already in R170_851); the
+> identity of thm:PCfinite admits a mirror tuple with A_M ↦ −A_M, so that no
+> polynomial consequence treating E_N, H_{M,N} as symbols fixes the sign (reformulation of F2);
+> degree-one squares in (L, L*) with atoms in log ℕ are constant for T > ½log3 (rem:sosatoms).
+> Not a NO-GO of the conjunction (E)∧(F)∧(I). Antecedents: R170_816, R170_819–823, R170_851,
+> P47 rem:returnremarks."
 
-No puede registrarse: «ninguna consecuencia formal de las tres relaciones está orientada» sin la
-cláusula de alcance (la fila K1 del LEDGER de la fase lo dice así y debe corregirse); «la orientación
-vive sólo en los defectos»; «no relanzar con grado tres, Vaughan o identidades de convolución»;
-cualquier redacción que presente los Lemas A, B, C como obstrucción a un objeto que use Λ ≥ 0 o K > 0.
+It may not be recorded: "no formal consequence of the three relations is oriented" without the
+scope clause (row K1 of the phase LEDGER says it this way and must be corrected); "the orientation
+lives only in the defects"; "do not relaunch with degree three, Vaughan or convolution identities";
+any wording presenting Lemmas A, B, C as an obstruction to an object that uses Λ ≥ 0 or K > 0.
 
 ---
 
 ## 2. Memo B
 
-### 2.1 Verificación de los enunciados
+### 2.1 Verification of the statements
 
-**Prop. 1.** Correcta. Falta declarar β > 0 como paso j = 0 de (a) (la memo lo usa: «β = π(∅; n_1) >
-0»). PROVED, reformulación.
+**Prop. 1.** Correct. It is missing the declaration of β > 0 as step j = 0 of (a) (the memo uses it: "β = π(∅; n_1) >
+0"). PROVED, reformulation.
 
-**Prop. 2.** Correcta (densidad de ℤ log p + ℤ log q, continuidad de 𝖡, thm:oneprofile). No requiere
-2T_0 < log 2. PROVED, reformulación.
+**Prop. 2.** Correct (density of ℤ log p + ℤ log q, continuity of 𝖡, thm:oneprofile). Does not require
+2T_0 < log 2. PROVED, reformulation.
 
-**Prop. 3.** Correcta como enunciado: es la unicidad de Kolmogórov de la realización de un núcleo
-semidefinido positivo. Defectos:
+**Prop. 3.** Correct as a statement: it is the Kolmogorov uniqueness of the realization of a positive
+semidefinite kernel. Defects:
 
-- **E-B1 (hipótesis oculta).** La existencia de r presupone que 𝖡 es definida positiva, es decir
-  (★). Sin ella la proposición es vacía; en espacios con forma indefinida la unicidad no vale en
-  general. Debe enunciarse «si existe».
-- **E-B2 (lectura que excede lo probado; «Lectura» del §2 y «Qué falló», primer ítem).** «La identidad
-  (G) tiene, si existe, una sola solución salvo isometría» sólo vale para la realización completa con
-  resto nulo sobre el portador de un perfil; la partición entre ‖V_TF‖² y ρ_T no es única. Y la
-  unicidad salvo isometría vale para todo núcleo semidefinido positivo: no distingue una presentación
-  explícita de otra ni dice nada sobre cuál existe. «K2 no es una reducción de (G), es (G) con una
-  condición de forma añadida» es correcto como clasificación (reformulación, B3), no como obstáculo.
+- **E-B1 (hidden hypothesis).** The existence of r presupposes that 𝖡 is positive definite, i.e.
+  (★). Without it the proposition is empty; in spaces with an indefinite form uniqueness fails in
+  general. It must be stated as "if it exists".
+- **E-B2 (reading exceeding what is proved; "Reading" of §2 and "What failed", first item).** "The identity
+  (G) has, if it exists, a single solution up to isometry" holds only for the complete realization with
+  zero remainder on the carrier of a profile; the split between ‖V_TF‖² and ρ_T is not unique. And
+  uniqueness up to isometry holds for every positive semidefinite kernel: it does not distinguish one explicit
+  presentation from another nor say anything about which one exists. "K2 is not a reduction of (G), it is (G) with an
+  added shape condition" is correct as a classification (reformulation, B3), not as an obstacle.
 
-**Lema 4.** Rehecho y comprobado (NUMÉRICO, conjunto cerrado por divisores de 9 elementos, error
-10⁻¹⁵): 𝕍_a = 2U⁻¹[D,U]; U Div_a U^⊤ = DG + GD − 2UDU^⊤; fórmulas de G y de Z Div Z^⊤. Las unidades
-para cΛ (d_c) y a_P (indicador de P-rugosos) son correctas. PROVED. Coincide con (𝕍_M)_{mk} = v_{m/k}
-de prop:AM(iii).
+**Lemma 4.** Redone and checked (NUMERICAL, divisor-closed set of 9 elements, error
+10⁻¹⁵): 𝕍_a = 2U⁻¹[D,U]; U Div_a U^⊤ = DG + GD − 2UDU^⊤; formulas for G and for Z Div Z^⊤. The units
+for cΛ (d_c) and a_P (indicator of P-rough numbers) are correct. PROVED. Agrees with (𝕍_M)_{mk} = v_{m/k}
+of prop:AM(iii).
 
-**Prop. 5.** Correcta (álgebra lineal estándar; C_f es triangular en el orden de toda cadena cerrada
-por divisores). PROVED. Defecto principal de la memo:
+**Prop. 5.** Correct (standard linear algebra; C_f is triangular in the order of every divisor-closed
+chain). PROVED. Main defect of the memo:
 
-- **E-B3 (non sequitur; «Lectura» del §3, frase en negrita, y «Qué falló», segundo ítem).** De «los
-  pivotes son invariantes por congruencias triangulares unipotentes» la memo concluye «no existe una
-  fórmula del pivote obtenida por Λ∗1 = log en esta clase». No se sigue. Los pivotes son invariantes
-  de la matriz; toda factorización LDL^⊤ **es** una congruencia triangular unipotente que los exhibe.
-  La invariancia no impide que una congruencia los haga visibles: es el modo en que se calculan. La
-  Prop. 6 de la propia memo es el contraejemplo: [log mcd(m,k)] = E diag(Λ) E^⊤ es la identidad
-  Σ_{d|n}Λ(d) = log n usada como congruencia por E⁻¹, elemento unipotente del álgebra de incidencia, y
-  da los pivotes Λ(n). Lo que el §3 demuestra es sólo esto: la congruencia por Z no diagonaliza 𝔸_𝒩;
-  transforma Div en DG + GD − 2ZDZ^⊤ y deja Arch y Near sin tratar. Si otra congruencia unipotente
-  (del álgebra de incidencia o no) lleva 𝔸_𝒩 a una forma manifiestamente positiva es la pregunta
-  abierta, no una pregunta cerrada.
-- **E-B4 (etiqueta; «Resultado», última frase; «Qué se probó», Prop. 6 y (4.1)).** «Se ha probado que
-  las tres fuentes de explicitud … no lo producen.» Para el patrón de incidencia, lo PROVED es la
-  condición necesaria (4.1); su fallo es NUMÉRICO. Esta revisión lo comprobó en el caso mínimo
-  𝒩 = {1,2,3} con el perfil a = 0.15, b = 1 (NUMÉRICO, c_0(0) = 1): β·𝖡(log(3/2)) = 0.1435 frente a
-  𝖡(log 3)·𝖡(log 2) = 0.3888; también falla en (4,3), (5,2), (5,3), (5,4). La exclusión del patrón de
-  incidencia queda como NO-GO NUMÉRICO en un perfil, no PROVED. Una demostración sin cómputo de que
-  (4.1) falla exigiría una cota inferior de β − |𝖡(log k)| que no está disponible sin estimaciones.
-  Para la sustitución por Z, lo probado es lo dicho en E-B3. Para el producto sobre primos (Prop. 8)
-  la afirmación es correcta en el modelo sin Near, que la memo reconoce que no describe 𝔸.
+- **E-B3 (non sequitur; "Reading" of §3, bold sentence, and "What failed", second item).** From "the
+  pivots are invariant under unipotent triangular congruences" the memo concludes "there is no
+  formula for the pivot obtained via Λ∗1 = log in this class". It does not follow. The pivots are invariants
+  of the matrix; every LDL^⊤ factorization **is** a unipotent triangular congruence exhibiting them.
+  Invariance does not prevent a congruence from making them visible: that is how they are computed. The
+  memo's own Prop. 6 is the counterexample: [log gcd(m,k)] = E diag(Λ) E^⊤ is the identity
+  Σ_{d|n}Λ(d) = log n used as a congruence by E⁻¹, a unipotent element of the incidence algebra, and
+  gives the pivots Λ(n). What §3 proves is only this: the congruence by Z does not diagonalize 𝔸_𝒩;
+  it transforms Div into DG + GD − 2ZDZ^⊤ and leaves Arch and Near untreated. Whether another unipotent congruence
+  (from the incidence algebra or not) takes 𝔸_𝒩 to a manifestly positive form is the open
+  question, not a closed one.
+- **E-B4 (label; "Result", last sentence; "What was proved", Prop. 6 and (4.1)).** "It has been proved that
+  the three sources of explicitness … do not produce it." For the incidence pattern, what is PROVED is the
+  necessary condition (4.1); its failure is NUMERICAL. This review checked it in the minimal case
+  𝒩 = {1,2,3} with the profile a = 0.15, b = 1 (NUMERICAL, c_0(0) = 1): β·𝖡(log(3/2)) = 0.1435 versus
+  𝖡(log 3)·𝖡(log 2) = 0.3888; it also fails at (4,3), (5,2), (5,3), (5,4). The exclusion of the incidence
+  pattern remains a NUMERICAL NO-GO on one profile, not PROVED. A computation-free proof that
+  (4.1) fails would require a lower bound on β − |𝖡(log k)| that is not available without estimates.
+  For the substitution by Z, what is proved is what E-B3 says. For the product over primes (Prop. 8)
+  the claim is correct in the model without Near, which the memo acknowledges does not describe 𝔸.
 
-**Prop. 6.** Correcta. Nota: sobre un 𝒩 que contiene al 1 la matriz [log mcd] es singular
-(pivote Λ(1) = 0 y Λ(n) = 0 fuera de potencias de primos); «pivotes Λ(n) ≥ 0» debe leerse con la
-factorización E diag(Λ) E^⊤, no con cocientes de menores.
+**Prop. 6.** Correct. Note: on an 𝒩 containing 1 the matrix [log gcd] is singular
+(pivot Λ(1) = 0 and Λ(n) = 0 outside prime powers); "pivots Λ(n) ≥ 0" should be read with the
+factorization E diag(Λ) E^⊤, not with quotients of minors.
 
-**Prop. 7.** Rehecha: π(S;n) ≤ 𝔞(e_{log n} − e_{log k}) = 2[β − 𝖡(log n − log k)]; para
-d < log 2 − 2T_0 no hay peine; 1 − cos x ≤ x²/2 da κ_0d². Comprobada en tres puntos (NUMÉRICO:
-d = 0.01, 0.03, 0.08; 2(β − 𝖡(d)) = 0.041, 0.311, 1.544 frente a κ_0d² = 0.046, 0.411, 2.925).
-PROVED. Defecto:
+**Prop. 7.** Redone: π(S;n) ≤ 𝔞(e_{log n} − e_{log k}) = 2[β − 𝖡(log n − log k)]; for
+d < log 2 − 2T_0 there is no comb; 1 − cos x ≤ x²/2 gives κ_0d². Checked at three points (NUMERICAL:
+d = 0.01, 0.03, 0.08; 2(β − 𝖡(d)) = 0.041, 0.311, 1.544 versus κ_0d² = 0.046, 0.411, 2.925).
+PROVED. Defect:
 
-- **E-B5 (lectura).** «La recursión de pivotes no tiene margen uniforme en ningún paso tardío» es un
-  efecto de normalización. La cota κ_0d² es la distancia al cuadrado entre dos traslados vecinos y
-  vale igual para la forma arquimediana sola. La cantidad con contenido es el cociente
-  π(S;n)/(2[β − 𝖡(log n − log k)]) ∈ [0,1] (o el pivote relativo al pivote arquimediano), sobre el
-  que la Prop. 7 no dice nada. «Idéntica para todo peine» describe la cota, no el pivote. La memo dice
-  que no es un NO-GO; la condición de reapertura («numerador que se anule al orden exigido») sí la
-  trata como restricción dura y debe rebajarse a observación.
+- **E-B5 (reading).** "The pivot recursion has no uniform margin at any late step" is a
+  normalization effect. The bound κ_0d² is the squared distance between two neighbouring translates and
+  holds equally for the archimedean form alone. The quantity with content is the ratio
+  π(S;n)/(2[β − 𝖡(log n − log k)]) ∈ [0,1] (or the pivot relative to the archimedean pivot), about
+  which Prop. 7 says nothing. "Identical for every comb" describes the bound, not the pivot. The memo says
+  it is not a NO-GO; the reopening condition ("a numerator vanishing to the required order") does
+  treat it as a hard restriction and must be downgraded to an observation.
 
-**Prop. 8.** Correcta. Coincide con rem:boxes (suma de Kronecker de matrices de Toeplitz de un
-primo). PROVED.
+**Prop. 8.** Correct. Agrees with rem:boxes (Kronecker sum of single-prime Toeplitz
+matrices). PROVED.
 
-**Cotejo con 211.** C49 y C9 están citados conforme al LEDGER (C49: NO-GO PROVED del producto de Schur
-local × arquimediano; C9: la dominancia diagonal ponderada se reduce a Σ_{n|m}Λ(n) = log m). C6 y C7
-figuran como NOT STARTED, como dice la memo. La propuesta «cerrar 211/C6 con la misma referencia» no
-procede: C6 queda «sin mecanismo en el orden multiplicativo», no cerrado.
+**Cross-check with 211.** C49 and C9 are cited in accordance with the LEDGER (C49: PROVED NO-GO of the Schur product
+local × archimedean; C9: weighted diagonal dominance reduces to Σ_{n|m}Λ(n) = log m). C6 and C7
+appear as NOT STARTED, as the memo says. The proposal "close 211/C6 with the same reference" is not
+warranted: C6 remains "without mechanism in the multiplicative order", not closed.
 
-**Dato NUMÉRICO heredado.** La memo usa de STATEMENT_001 §3 los valores β = 0.01492 y
-|𝖡(d)| ≤ 0.0122 en 0 < d ≤ 13. Esta revisión reproduce β = 0.014923 sólo **sin** normalizar F_0 (con
-‖F_0‖ = 1, como dice el texto de STATEMENT §2, β = 0.8973), y obtiene 𝖡(log 6) = 0.01373 en la misma
-escala (0.8253 normalizado), mayor que 0.0122 y menor que β (NUMÉRICO, dos mallas). El argumento de la
-memo para (4.1) no depende de ello (sólo necesita un valor menor que β), pero la cota 0.0122 de
-STATEMENT_001 debe recomprobarse y su normalización aclararse.
+**Inherited NUMERICAL datum.** The memo uses from STATEMENT_001 §3 the values β = 0.01492 and
+|𝖡(d)| ≤ 0.0122 on 0 < d ≤ 13. This review reproduces β = 0.014923 only **without** normalizing F_0 (with
+‖F_0‖ = 1, as the text of STATEMENT §2 says, β = 0.8973), and obtains 𝖡(log 6) = 0.01373 on the same
+scale (0.8253 normalized), larger than 0.0122 and smaller than β (NUMERICAL, two meshes). The memo's
+argument for (4.1) does not depend on it (it only needs a value smaller than β), but the bound 0.0122 of
+STATEMENT_001 must be rechecked and its normalization clarified.
 
-### 2.2 Enunciados corregidos
+### 2.2 Corrected statements
 
-- Prop. 1, 2, 4 (Lema), 5, 7, 8: PROVED como están, con las precisiones anteriores.
-- Prop. 3: PROVED, condicionada a que 𝖡 sea definida positiva.
-- (4.1): condición necesaria PROVED; fallo NUMÉRICO (caso {1,2,3} y otros cuatro pares).
-- Lectura del §3, corregida: «La congruencia por Z = C_z, que realiza Λ∗1 = log sobre Div, no
-  diagonaliza 𝔸_𝒩 ni cambia sus pivotes; no se conoce una congruencia unipotente explícita que lo
-  haga. OPEN.»
+- Props. 1, 2, 4 (Lemma), 5, 7, 8: PROVED as they stand, with the precisions above.
+- Prop. 3: PROVED, conditional on 𝖡 being positive definite.
+- (4.1): necessary condition PROVED; failure NUMERICAL (case {1,2,3} and four other pairs).
+- Reading of §3, corrected: "The congruence by Z = C_z, which realizes Λ∗1 = log on Div, does not
+  diagonalize 𝔸_𝒩 nor change its pivots; no explicit unipotent congruence that does so is known.
+  OPEN."
 
-### 2.3 ¿Cierra la pregunta de diseño?
+### 2.3 Does it close the design question?
 
-No. Deja establecido que K2 es una reformulación (Prop. 1–3) y que tres intentos concretos de
-explicitud no funcionan (uno de ellos sólo NUMÉRICO). Huecos que la memo no examina:
+No. It establishes that K2 is a reformulation (Props. 1–3) and that three concrete attempts at
+explicitness do not work (one of them only NUMERICAL). Gaps the memo does not examine:
 
-1. Congruencias unipotentes fuera del patrón de incidencia, o triangulares respecto de un orden que
-   no sea de divisibilidad. La condición de reapertura de la memo las excluye de palabra («que no sea
-   una congruencia triangular en el orden de divisibilidad») apoyándose en E-B3; debe invertirse:
-   son precisamente el terreno no examinado.
-2. La pieza 2ZDZ^⊤ = [2(mk)^{−1/2}Σ_{d|mcd(m,k)} d log d] que el Lema 4 saca de −Div es semidefinida
-   positiva y está escrita como suma de cuadrados (paradigma de mcd con g(d) = d log d). La memo no la
-   señala. Es genérica en el peine (UDU^⊤ ⪰ 0 para toda unidad u), luego por sí sola no es un paso de
-   signo (B1); pero Z𝔸Z^⊤ = Z(Arch − Near)Z^⊤ + 2ZDZ^⊤ − (DG + GD) es una identidad exacta donde
-   u ≡ 1 entra en G y en ZDZ^⊤, y la memo no analiza el término −(DG + GD) contra Z·Arch·Z^⊤. No se
-   propone como candidata: falta la operación que firme ese resto y no pasa el filtro de cuatro
-   puntos (el antecedente es C33b y A_MU_FACTORIZATION §1(f), y no hay mecanismo nuevo identificado).
-3. Pivotes relativos (E-B5).
+1. Unipotent congruences outside the incidence pattern, or triangular with respect to an order that
+   is not divisibility. The memo's reopening condition excludes them verbally ("that is not
+   a triangular congruence in the divisibility order") relying on E-B3; it must be inverted:
+   they are precisely the unexamined terrain.
+2. The piece 2ZDZ^⊤ = [2(mk)^{−1/2}Σ_{d|gcd(m,k)} d log d] that Lemma 4 extracts from −Div is positive
+   semidefinite and is written as a sum of squares (gcd paradigm with g(d) = d log d). The memo does not
+   point it out. It is generic in the comb (UDU^⊤ ⪰ 0 for every unit u), so by itself it is not a sign
+   step (B1); but Z𝔸Z^⊤ = Z(Arch − Near)Z^⊤ + 2ZDZ^⊤ − (DG + GD) is an exact identity where
+   u ≡ 1 enters in G and in ZDZ^⊤, and the memo does not analyse the term −(DG + GD) against Z·Arch·Z^⊤. It is not
+   proposed as a candidate: the operation that signs that remainder is missing and it does not pass the four-point
+   filter (the antecedent is C33b and A_MU_FACTORIZATION §1(f), and no new mechanism is identified).
+3. Relative pivots (E-B5).
 
-Ninguno de los tres es una candidata lista para construcción. La conclusión «sin mecanismo nuevo» es
-correcta; «la pregunta no se relance» (final del §0) excede lo demostrado.
+None of the three is a candidate ready for construction. The conclusion "no new mechanism" is
+correct; "the question should not be relaunched" (end of §0) exceeds what is proved.
 
-### 2.4 Qué puede registrarse
+### 2.4 What may be recorded
 
-> «K2, pivotes de Schur por anidamiento multiplicativo de índices: sin mecanismo nuevo; reformulación
-> (pivotes positivos a lo largo de una cadena que agota ⟺ objetivo salvo pivote nulo). Herramientas
-> PROVED: peine = 2U⁻¹[D,U] en el álgebra de incidencia (válido para todo peine; u ≡ 1 ⟺ Λ);
-> cota π(S;n) ≤ 2[β − 𝖡(log n/k)] ≤ κ_0 log²(n/k), independiente del peine; complemento de Schur de
-> una suma de Kronecker. Un factor triangular con patrón de incidencia exigiría
-> β𝖡(log m/k) = 𝖡(log m)𝖡(log k) en pares coprimos, que falla (NUMÉRICO). No es NO-GO de clase;
-> congruencias fuera del patrón de incidencia no examinadas.»
+> "K2, Schur pivots by multiplicative nesting of indices: no new mechanism; reformulation
+> (positive pivots along an exhausting chain ⟺ target up to a zero pivot). Tools
+> PROVED: comb = 2U⁻¹[D,U] in the incidence algebra (valid for every comb; u ≡ 1 ⟺ Λ);
+> bound π(S;n) ≤ 2[β − 𝖡(log n/k)] ≤ κ_0 log²(n/k), independent of the comb; Schur complement of
+> a Kronecker sum. A triangular factor with incidence pattern would require
+> β𝖡(log m/k) = 𝖡(log m)𝖡(log k) on coprime pairs, which fails (NUMERICAL). Not a class NO-GO;
+> congruences outside the incidence pattern not examined."
 
-No puede registrarse: «pivotes invariantes bajo el grupo unipotente de incidencia» como motivo de
-cierre; «la misma realización (Prop. 3)» como obstrucción; el cierre de 211/C6; «se ha probado que
-las tres fuentes de explicitud no lo producen».
+It may not be recorded: "pivots invariant under the unipotent incidence group" as a reason for
+closure; "the same realization (Prop. 3)" as an obstruction; the closure of 211/C6; "it has been proved that
+the three sources of explicitness do not produce it".
 
 ---
 
 ## 3. Memo D
 
-### 3.1 Verificación de los enunciados
+### 3.1 Verification of the statements
 
-**Lema 1 y Corolario 1.** Rehechos: soporte, condiciones A = B = 0, c_F = 2c_φ + ε c_φ(· − u)
-+ ε c_φ(· + u), separación |log n − log n_0| > 1/N > 2η. Correctos. PROVED.
+**Lemma 1 and Corollary 1.** Redone: support, conditions A = B = 0, c_F = 2c_φ + ε c_φ(· − u)
++ ε c_φ(· + u), separation |log n − log n_0| > 1/N > 2η. Correct. PROVED.
 
-**Lema A.** (i) κ_n = Σ_{d|n, d≥2}(x_d − Λ(d)) y la inversión de Möbius: correcto. (ii) y (iii):
-correctos. PROVED. Alcance real: (ii) es la tautología «un polinomio que se anula en un punto está en
-el ideal maximal del punto», con el conjunto **completo** de átomos 2 ≤ n < N. No es un enunciado
-sobre desigualdades ni sobre certificados de positividad. La «Lectura» («una no linealidad en Λ que
-decida el signo tiene que estar en el acoplamiento de Λ con F») no se deduce del lema: es ARGUED y
-coincide con la cláusula O2 de OBJECT_SPEC.
+**Lemma A.** (i) κ_n = Σ_{d|n, d≥2}(x_d − Λ(d)) and Möbius inversion: correct. (ii) and (iii):
+correct. PROVED. Actual scope: (ii) is the tautology "a polynomial vanishing at a point lies in
+the maximal ideal of the point", with the **complete** set of atoms 2 ≤ n < N. It is not a statement
+about inequalities or about positivity certificates. The "Reading" ("a nonlinearity in Λ that
+decides the sign must lie in the coupling of Λ with F") does not follow from the lemma: it is ARGUED and
+coincides with clause O2 of OBJECT_SPEC.
 
-**Principio de transferencia.** Correcto en la clase declarada. PROVED.
+**Transfer principle.** Correct in the declared class. PROVED.
 
-**Teorema B.** (i), (ii), (iii): correctos; (ii) no usa el signo de λ_A (dirección de recesión de un
-convexo cerrado no acotado y Corolario 1). PROVED. (iv): las dos desigualdades son consecuencias
-correctas de (MS) (la segunda, por Cauchy–Schwarz en q_± ≤ 2a_T). PROVED como implicaciones. Defectos:
+**Theorem B.** (i), (ii), (iii): correct; (ii) does not use the sign of λ_A (recession direction of an
+unbounded closed convex set and Corollary 1). PROVED. (iv): the two inequalities are correct consequences
+of (MS) (the second, by Cauchy–Schwarz in q_± ≤ 2a_T). PROVED as implications. Defects:
 
-- **E-D1 (etiqueta errónea; «Estado del caso (iv)/(c)», «Conclusión del §3», §7 (P2), §8).** El caso
-  (iv) se etiqueta «CONDITIONAL NO-GO» y «no es un objetivo razonable». En la generalidad del
-  Teorema B (K convexo cerrado cualquiera) es falso que sea un NO-GO: sea T ≤ ½log5, donde
-  λ_A(T) > 0 (PROVED, P47 thm:log5A y monotonía), E = ∅ y K la bola cerrada de radio r en torno a Λ.
-  Entonces Π es acotado, Π ≠ {Λ}, y para r·Σ_{n<N}2n^{−1/2} ≤ λ_A(T) se tiene
-  a_T^λ(F) ≥ (λ_A(T) − r Σ 2n^{−1/2})‖F‖² ≥ 0: (MS) es verdadero. El caso (iv) es «objetivo con
-  margen», cuya verdad depende del tamaño del politopo frente al margen; la etiqueta correcta es
-  OPEN en general, verdadero para politopos pequeños donde hay margen estricto, y CONDITIONAL
-  (falso bajo la hipótesis W[δ](F_⋆) ≠ 0 y s|W[δ](F_⋆)| > λ_A(T)) sólo para politopos de tamaño fijo
-  como los de K_0. La tricotomía enunciada en el resumen («o es falsa, o es identificación, o exige
-  margen») es correcta; lo incorrecto es llamar NO-GO al tercer brazo.
-- **E-D2 («estrictamente más fuerte»).** La memo define el sentido (existe F con h_Π(F) > 0), y en
-  ese sentido es correcto. No está probado que (★) en T no implique (MS): por E-D1, con margen
-  estricto lo implica para politopos pequeños. Sustituir por «implica (★) en T y añade la desigualdad
-  s|W[δ](F)| ≤ a_T(F)».
-- **E-D3 (sobre-alcance; resumen inicial (b) y §0(3)).** «Cierra esa dirección como fuente de signo» y
-  «ningún E la convierte en mecanismo». El brazo (iii) (Π = {Λ}) no está cerrado: es el caso en que
-  la clase no restringe nada, y por el Corolario C(b) se alcanza con E muy parcial (basta, para
-  N ≤ X², un n ∈ E con p^j ∥ n por cada potencia de primo p^j ∈ [X,N)). Lo que el §3 demuestra es
-  que una deducción con Π ≠ {Λ} o es falsa o paga margen. Eso es una clasificación, no un cierre.
+- **E-D1 (wrong label; "Status of case (iv)/(c)", "Conclusion of §3", §7 (P2), §8).** Case
+  (iv) is labelled "CONDITIONAL NO-GO" and "not a reasonable target". In the generality of
+  Theorem B (any closed convex K) it is false that it is a NO-GO: let T ≤ ½log5, where
+  λ_A(T) > 0 (PROVED, P47 thm:log5A and monotonicity), E = ∅ and K the closed ball of radius r around Λ.
+  Then Π is bounded, Π ≠ {Λ}, and for r·Σ_{n<N}2n^{−1/2} ≤ λ_A(T) one has
+  a_T^λ(F) ≥ (λ_A(T) − r Σ 2n^{−1/2})‖F‖² ≥ 0: (MS) is true. Case (iv) is "target with
+  margin", whose truth depends on the size of the polytope relative to the margin; the correct label is
+  OPEN in general, true for small polytopes where there is strict margin, and CONDITIONAL
+  (false under the hypothesis W[δ](F_⋆) ≠ 0 and s|W[δ](F_⋆)| > λ_A(T)) only for polytopes of fixed size
+  such as those of K_0. The trichotomy stated in the summary ("either it is false, or it is identification, or it requires
+  margin") is correct; what is incorrect is calling the third arm a NO-GO.
+- **E-D2 ("strictly stronger").** The memo defines the sense (there exists F with h_Π(F) > 0), and in
+  that sense it is correct. It is not proved that (★) at T does not imply (MS): by E-D1, with strict
+  margin it implies it for small polytopes. Replace by "implies (★) at T and adds the inequality
+  s|W[δ](F)| ≤ a_T(F)".
+- **E-D3 (overreach; opening summary (b) and §0(3)).** "Closes that direction as a source of sign" and
+  "no E turns it into a mechanism". Arm (iii) (Π = {Λ}) is not closed: it is the case in which
+  the class restricts nothing, and by Corollary C(b) it is reached with a very partial E (it suffices, for
+  N ≤ X², to have an n ∈ E with p^j ∥ n for each prime power p^j ∈ [X,N)). What §3 proves is
+  that a deduction with Π ≠ {Λ} is either false or pays margin. That is a classification, not a closure.
 
-**Corolario C.** (a) Rehecho: el cono de recesión es D(E) ∩ K_0 y un δ ≥ 0 con Σ_{d|n}δ(d) = 0 se
-anula en los divisores de n. Correcto. (b) Rehecho: para n < N ≤ X² las potencias de primo ≥ X que
-dividen a n son de un solo primo; el sistema se desacopla en sumas parciales por torre; solución
-única ⟺ 𝒯_p ⊂ J_p(E). Correcto. (c) Correcto, incluido el segmento |s| ≤ log p y la desigualdad
-exhibida. PROVED. Nota: la desigualdad de (c) es refutable o confirmable en una ventana concreta
-(por ejemplo p = 2, a = 2, X ∈ (2√2, 4), N ≤ X²), lo que decidiría el brazo (iv) para K_0 en esa
-ventana; no se hizo.
+**Corollary C.** (a) Redone: the recession cone is D(E) ∩ K_0 and a δ ≥ 0 with Σ_{d|n}δ(d) = 0
+vanishes at the divisors of n. Correct. (b) Redone: for n < N ≤ X² the prime powers ≥ X that
+divide n are of a single prime; the system decouples into partial sums per tower; unique
+solution ⟺ 𝒯_p ⊂ J_p(E). Correct. (c) Correct, including the segment |s| ≤ log p and the exhibited
+inequality. PROVED. Note: the inequality of (c) can be refuted or confirmed in a concrete window
+(for example p = 2, a = 2, X ∈ (2√2, 4), N ≤ X²), which would decide arm (iv) for K_0 in that
+window; this was not done.
 
-**Observaciones 1 y 2.** Rehechas: N_λ(q_1q_2) = λ(q_1)λ(q_2)/(log q_1 log q_2) para primos distintos
-y λ con soporte en potencias de primo; la hipérbola no es convexa pero es no acotada y el argumento
-con el Lema 1 en n_0 = q_1 vale. Correctas. PROVED.
+**Observations 1 and 2.** Redone: N_λ(q_1q_2) = λ(q_1)λ(q_2)/(log q_1 log q_2) for distinct primes
+and λ supported on prime powers; the hyperbola is not convex but it is unbounded and the argument
+with Lemma 1 at n_0 = q_1 holds. Correct. PROVED.
 
-**Proposición D.** Rehecha y comprobada (NUMÉRICO: X = 7, N = 49, todo n ∈ [7,49)). (E2), la
-triangularidad de 𝖳 (n/k ∈ [X,N) porque k ≤ n/X) y (I2) son correctas. PROVED. «Lo que (I2) no da»:
-(1) y (2) correctos; (3) es la tautología de que (I2) reescribe un mismo vector de pesos.
+**Proposition D.** Redone and checked (NUMERICAL: X = 7, N = 49, every n ∈ [7,49)). (E2), the
+triangularity of 𝖳 (n/k ∈ [X,N) because k ≤ n/X) and (I2) are correct. PROVED. "What (I2) does not give":
+(1) and (2) correct; (3) is the tautology that (I2) rewrites the same weight vector.
 
-**Cotejo con R186_005 / R186_092.** Las citas son fieles: Lema S0 (identidad de Selberg generalizada
-con sistema propio), Lema S1 (triangularidad), TB3-neg, el residuo «completitud más allá de X que no
-es identificación total: OPEN», y la corrección M5.1 de R186_092 al inciso (ii). El Corolario C(a)
-y la Observación 1 dan una demostración directa de lo que TB3-neg(ii) corregido afirma en la clase
-de átomos de completitud; es coherente con R186_092.
+**Cross-check with R186_005 / R186_092.** The citations are faithful: Lemma S0 (generalized Selberg identity
+with own system), Lemma S1 (triangularity), TB3-neg, the residue "completeness beyond X that is
+not total identification: OPEN", and correction M5.1 of R186_092 to item (ii). Corollary C(a)
+and Observation 1 give a direct proof of what corrected TB3-neg(ii) asserts in the class
+of completeness atoms; it is consistent with R186_092.
 
-**Cotejo con P47.** thm:geo-split(i) dice lo que la memo le atribuye (el signo en la clase es el
-signo en Λ más una rigidez sin signo), pero con hipótesis propias (funcional Δ, minimizador
-unitario F_⋆); la frase «por thm:geo-split su contenido de signo es el signo en Λ» es una analogía
-correcta, no una aplicación: el Teorema B(i) ya lo dice por sí mismo y la cita puede suprimirse.
-lem:shape-scale: «proved for c large and small, conditional for O₄^ε»; la memo no lo cita en falso.
-cor:margin1 se usa sólo en el brazo condicional.
+**Cross-check with P47.** thm:geo-split(i) says what the memo attributes to it (the sign in the class is the
+sign at Λ plus an unsigned rigidity), but with its own hypotheses (functional Δ, unit
+minimizer F_⋆); the sentence "by thm:geo-split its sign content is the sign at Λ" is a correct
+analogy, not an application: Theorem B(i) already says it by itself and the citation can be removed.
+lem:shape-scale: "proved for c large and small, conditional for O₄^ε"; the memo does not cite it falsely.
+cor:margin1 is used only in the conditional arm.
 
-- **E-D4 (clase más estrecha que el título).** El título habla de «Λ más allá de la ventana», pero
-  la clase del §3 sólo admite pesos en [2,N) y átomos en E ⊂ [X,N). Premisas que involucren
-  Λ(d) con d ≥ N (como los coeficientes h_{M,N}(k) con M > N de thm:PCfinite) no están en la clase.
-  La extensión es inmediata (variables en [2,N′), proyección de Π sobre [2,N), que sigue siendo
-  convexa) y el Teorema B se aplica a la proyección; debe decirse.
-- **E-D5 (cotejo).** Tampoco cita la fase 170 (`R170_819`–`R170_823`, PC a dos escalas), que es el
-  antecedente directo del «diseño X → X²» con la identidad de Poisson–Chebyshev.
+- **E-D4 (class narrower than the title).** The title speaks of "Λ beyond the window", but
+  the class of §3 only admits weights in [2,N) and atoms in E ⊂ [X,N). Premises involving
+  Λ(d) with d ≥ N (such as the coefficients h_{M,N}(k) with M > N of thm:PCfinite) are not in the class.
+  The extension is immediate (variables in [2,N′), projection of Π onto [2,N), which is still
+  convex) and Theorem B applies to the projection; this should be stated.
+- **E-D5 (cross-check).** It does not cite phase 170 either (`R170_819`–`R170_823`, PC at two scales), which is the
+  direct antecedent of the "design X → X²" with the Poisson–Chebyshev identity.
 
-### 3.2 Enunciados corregidos
+### 3.2 Corrected statements
 
-- **Teorema B (PROVED).** (i)–(iii) como en la memo. (iv): «Si Π es acotado y Π ≠ {Λ}, (MS) equivale
-  a la positividad en los puntos extremos, implica (★) en T y las desigualdades
-  s|W[δ](F)| ≤ a_T(F), s|W[δ](F,G)| ≤ 2(a_T(F)a_T(G))^{1/2}. Recíprocamente, si λ_A(T) > 0 y
-  sup_{λ∈Π}Σ_n 2n^{−1/2}|λ(n) − Λ(n)| ≤ λ_A(T), (MS) vale.» Estado del brazo (iv): OPEN; verdadero en
-  las instancias del recíproco; CONDITIONAL-falso para K_0 bajo la hipótesis sobre el minimizador.
-- **Conclusión del §3.** «Clasificación PROVED. NO-GO PROVED sólo en el brazo no acotado
-  (Teorema B(ii), Corolario C(a), Observación 1). El brazo de identificación es el objetivo sin
-  restricción añadida. El brazo de politopo es un objetivo con margen, no un NO-GO.»
-- Lema A, Corolario C, Proposición D: PROVED como están.
+- **Theorem B (PROVED).** (i)–(iii) as in the memo. (iv): "If Π is bounded and Π ≠ {Λ}, (MS) is equivalent
+  to positivity at the extreme points, implies (★) at T and the inequalities
+  s|W[δ](F)| ≤ a_T(F), s|W[δ](F,G)| ≤ 2(a_T(F)a_T(G))^{1/2}. Conversely, if λ_A(T) > 0 and
+  sup_{λ∈Π}Σ_n 2n^{−1/2}|λ(n) − Λ(n)| ≤ λ_A(T), (MS) holds." Status of arm (iv): OPEN; true in
+  the instances of the converse; CONDITIONAL-false for K_0 under the hypothesis on the minimizer.
+- **Conclusion of §3.** "Classification PROVED. NO-GO PROVED only in the unbounded arm
+  (Theorem B(ii), Corollary C(a), Observation 1). The identification arm is the target without
+  added restriction. The polytope arm is a target with margin, not a NO-GO."
+- Lemma A, Corollary C, Proposition D: PROVED as they stand.
 
-### 3.3 ¿Cierra la pregunta de diseño?
+### 3.3 Does it close the design question?
 
-Cierra el casillero «completitud parcial más allá de X» en un sentido preciso: en la clase de
-átomos lineales con K convexo, una premisa de completitud que no identifique a Λ o es falsa (PROVED)
-o pide margen. Eso responde a R7 mejor que el estado anterior («OPEN; no hay candidata»). No cierra:
-el brazo de identificación (que es donde vive cualquier objeto que cumpla O4); el brazo de politopo;
-clases no convexas; premisas que no son propiedades del peine. El enunciado (P1) del §7 es O2 ∧ O4 de
-OBJECT_SPEC y no es un resultado. No veo un objeto que satisfaga OBJECT_SPEC §1 y escape a los lemas
-de la memo, porque esos lemas no excluyen ningún objeto del brazo de identificación.
+It closes the cell "partial completeness beyond X" in a precise sense: in the class of
+linear atoms with convex K, a completeness premise that does not identify Λ is either false (PROVED)
+or asks for margin. That answers R7 better than the previous state ("OPEN; no candidate"). It does not close:
+the identification arm (which is where any object satisfying O4 lives); the polytope arm;
+non-convex classes; premises that are not properties of the comb. Statement (P1) of §7 is O2 ∧ O4 of
+OBJECT_SPEC and is not a result. I do not see an object that satisfies OBJECT_SPEC §1 and escapes the lemmas
+of the memo, because those lemmas exclude no object of the identification arm.
 
-### 3.4 Qué puede registrarse
+### 3.4 What may be recorded
 
-> «O166.802.1, completitud parcial más allá de X (átomos lineales Σ_{d|n}λ(d) = log n en E ⊂ [X,N),
-> restricción convexa K): clasificada. Π(E,K) no acotado ⟹ la clase contiene un peine con forma
-> negativa (NO-GO PROVED, sin usar el signo en Λ); para K_0 esto ocurre si y sólo si alguna potencia
-> de primo de [X,N) no divide a ningún elemento de E. Π = {Λ} ⟹ el enunciado es el objetivo en T
-> (para N ≤ X² y K_0: si y sólo si cada p^j ∈ [X,N) divide exactamente a algún n ∈ E). Π acotado
-> ≠ {Λ} ⟹ objetivo con margen s|W[δ](F)| ≤ a_T(F): OPEN, verdadero para politopos pequeños donde
-> λ_A(T) > 0. La identidad de dos escalas de grado dos es lineal en los contactos nuevos para
-> N ≤ X² (PROVED). Residuo vivo: identificación total con no linealidad en el acoplamiento peso–vector
-> (O2 ∧ O4).»
+> "O166.802.1, partial completeness beyond X (linear atoms Σ_{d|n}λ(d) = log n on E ⊂ [X,N),
+> convex restriction K): classified. Π(E,K) unbounded ⟹ the class contains a comb with negative
+> form (NO-GO PROVED, without using the sign at Λ); for K_0 this happens if and only if some prime
+> power in [X,N) divides no element of E. Π = {Λ} ⟹ the statement is the target at T
+> (for N ≤ X² and K_0: if and only if each p^j ∈ [X,N) exactly divides some n ∈ E). Π bounded
+> ≠ {Λ} ⟹ target with margin s|W[δ](F)| ≤ a_T(F): OPEN, true for small polytopes where
+> λ_A(T) > 0. The two-scale degree-two identity is linear in the new contacts for
+> N ≤ X² (PROVED). Live residue: total identification with nonlinearity in the weight–vector coupling
+> (O2 ∧ O4)."
 
-No puede registrarse: «NO-GO (clase) … CONDITIONAL en (iv)»; «cierra la dirección como fuente de
-signo»; «no es un objetivo razonable»; «ningún E la convierte en mecanismo».
+It may not be recorded: "NO-GO (class) … CONDITIONAL in (iv)"; "closes the direction as a source of
+sign"; "not a reasonable target"; "no E turns it into a mechanism".
 
 ---
 
-## 4. El residuo común de las memos A y D
+## 4. The common residue of memos A and D
 
-Enunciado en A §4 y recogido en D §8(3) y en la fila K1 del LEDGER de la fase: una identidad
+Stated in A §4 and taken up in D §8(3) and in row K1 of the phase LEDGER: an identity
 
-    a_T(F) = ‖V_TF‖² + Σ_{k>N} h_{M,N}(k) |ℓ_k(F)|² + (términos polares como cuadrados),
+    a_T(F) = ‖V_TF‖² + Σ_{k>N} h_{M,N}(k) |ℓ_k(F)|² + (polar terms as squares),
     h_{M,N}(k) = Σ_{dm=k, d≤M, m≤N} Λ(d) ≥ 0,   M ≥ N,
 
-que convierta en diagonales los apareamientos de H_{M,N} y E_N de thm:PCfinite.
+that converts into diagonals the pairings of H_{M,N} and E_N of thm:PCfinite.
 
-### 4.1 ¿Está bien enunciado?
+### 4.1 Is it well stated?
 
-La fórmula de h_{M,N} y su soporte en k > N coinciden con thm:PCfinite (l. 6673–6678); el rango dos
-de E_∞ sobre el núcleo de Schwartz es correcto (para F(t) = e^{t/2}f(e^t), SF − JS𝓕F
-= ½e^{−t/2}f̂(0) − ½e^{t/2}f(0)). Pero como objetivo está **infradeterminado**:
+The formula for h_{M,N} and its support in k > N agree with thm:PCfinite (l. 6673–6678); the rank two
+of E_∞ on the Schwartz kernel is correct (for F(t) = e^{t/2}f(e^t), SF − JS𝓕F
+= ½e^{−t/2}f̂(0) − ½e^{t/2}f(0)). But as a target it is **underdetermined**:
 
-- Con ℓ_k ≡ 0 es la identidad (G) de OBJECT_SPEC §1. Sin especificar de dónde salen los ℓ_k no es un
-  enunciado distinto de (G) con una forma prescrita para parte de ρ_T. Para que sea un residuo y no
-  un deseo hay que fijar los ℓ_k; lo único que thm:PCfinite ofrece es
-  ⟨Y, V_{−log k}𝓕F⟩ con Y = (S_N⁻¹)*F, que no es un módulo al cuadrado.
-- S_N⁻¹ es formal: el símbolo Σ_{n≤N}n^{−1/2−iτ} no está acotado inferiormente de manera uniforme y
-  P47 rem:Sren advierte que S_N no tiene límite; la identidad «despejada» de A §1(4) no está definida
-  como identidad de formas sobre P_T ∩ 𝒟_T. La memo lo marca «formal» y no lo resuelve.
-- thm:PCfinite es una identidad sobre la recta; no contiene la compresión a la ventana. Sobre la
-  recta, A_M no tiene signo (su símbolo es negativo en un conjunto no vacío). Todo el signo de a_T
-  depende de que F tenga soporte en I_T, mientras que 𝓕F y Y no lo tienen. El residuo no dice cómo
-  entra el soporte.
+- With ℓ_k ≡ 0 it is the identity (G) of OBJECT_SPEC §1. Without specifying where the ℓ_k come from it is not a
+  statement different from (G) with a prescribed form for part of ρ_T. For it to be a residue and not
+  a wish the ℓ_k must be fixed; the only thing thm:PCfinite offers is
+  ⟨Y, V_{−log k}𝓕F⟩ with Y = (S_N⁻¹)*F, which is not a squared modulus.
+- S_N⁻¹ is formal: the symbol Σ_{n≤N}n^{−1/2−iτ} is not uniformly bounded from below and
+  P47 rem:Sren warns that S_N has no limit; the "solved" identity of A §1(4) is not defined
+  as an identity of forms on P_T ∩ 𝒟_T. The memo marks it "formal" and does not resolve it.
+- thm:PCfinite is an identity on the line; it does not contain the compression to the window. On the
+  line, A_M has no sign (its symbol is negative on a nonempty set). The whole sign of a_T
+  depends on F being supported in I_T, whereas 𝓕F and Y are not. The residue does not say how
+  the support enters.
 
-### 4.2 ¿Está registrado en el corpus?
+### 4.2 Is it recorded in the corpus?
 
-Sí, en lo esencial, y las memos no lo citan.
+Yes, in essence, and the memos do not cite it.
 
-- `R170_816` §2: salida exacta de la identidad sobre vectores de ventana, con ⟨JH_{M,N}F, g⟩ = 0 por
-  soporte y C = Re⟨H_{M,N}𝓕F, g⟩ como único término de hipérbola; §3: sólo cota bilateral, pérdida
-  ≥ (log 2/2√2)√N con M = N²; §4: **falsación explícita** de «h(k) ≥ 0 ⟹ apareamiento ≥ 0» (dos
-  funciones u, τ_au de soporte pequeño); §6: separación orientada del canal d = 2, que deja dos
-  correlaciones de Fourier sin signo; §5 y §7: la correlación que falta «sería exactamente la ley
-  aritmética nueva».
-- `R170_819`–`R170_823`, `R170_837`, `R170_843`, `R170_847`–`R170_856`: variantes a dos escalas,
-  curvatura, Wronskiano exterior, extracción de Möbius, colisión de Selberg.
-- P47 rem:returnremarks: términos de Gram cruzados entre k distintos; fases aditivas frente a
-  caracteres multiplicativos.
-- P47 eq:Qbalance, eq:Qrecombine, eq:Qspectral: ya existe una identidad exacta con coeficientes
-  aritméticos no negativos emparejados con módulos al cuadrado de funcionales exteriores,
-  c_{N,L}(F) = Σ_{m≤L} d_{m,N}|(𝒪_LF)_m|², d_{m,N} = Σ_{n≤N}Λ(n)n^{−(a_m+1/2)} > 0; y P47 demuestra que
-  es ciega al signo (vale para todo autovector, con λ de cualquier signo) y que Q_{N,L} no admite
-  representación como suma de cuadrados sobre todo P_T.
-- Índice de rutas: fila G4A-R161_001-002 (catálogo 04, l. 759). **No hay filas para R170_811–R170_840**
-  (el catálogo 04 salta de R170_808 a R170_841). Los anexos de la fase 212 heredan la laguna
-  (`ANNEX_INDEX_04.md` sólo menciona la fila de la fase 160/161).
+- `R170_816` §2: exact exit from the identity on window vectors, with ⟨JH_{M,N}F, g⟩ = 0 by
+  support and C = Re⟨H_{M,N}𝓕F, g⟩ as the only hyperbola term; §3: only a two-sided bound, loss
+  ≥ (log 2/2√2)√N with M = N²; §4: **explicit falsification** of "h(k) ≥ 0 ⟹ pairing ≥ 0" (two
+  functions u, τ_au of small support); §6: oriented separation of the channel d = 2, leaving two
+  unsigned Fourier correlations; §5 and §7: the missing correlation "would be exactly the new arithmetic
+  law".
+- `R170_819`–`R170_823`, `R170_837`, `R170_843`, `R170_847`–`R170_856`: two-scale variants,
+  curvature, exterior Wronskian, Möbius extraction, Selberg collision.
+- P47 rem:returnremarks: cross Gram terms between distinct k; additive phases versus
+  multiplicative characters.
+- P47 eq:Qbalance, eq:Qrecombine, eq:Qspectral: there already exists an exact identity with non-negative
+  arithmetic coefficients paired with squared moduli of exterior functionals,
+  c_{N,L}(F) = Σ_{m≤L} d_{m,N}|(𝒪_LF)_m|², d_{m,N} = Σ_{n≤N}Λ(n)n^{−(a_m+1/2)} > 0; and P47 proves that
+  it is blind to the sign (holds for every eigenvector, with λ of either sign) and that Q_{N,L} admits no
+  representation as a sum of squares on all of P_T.
+- Routes index: row G4A-R161_001-002 (catalogue 04, l. 759). **There are no rows for R170_811–R170_840**
+  (catalogue 04 jumps from R170_808 to R170_841). The phase 212 annexes inherit the gap
+  (`ANNEX_INDEX_04.md` only mentions the row of phase 160/161).
 
-El residuo no es, por tanto, una pieza recién identificada: es la obligación abierta de R170_816 §5
-trasladada de «vectores de primer contacto» a «todo P_T», más la exigencia de forma diagonal.
+The residue is therefore not a newly identified piece: it is the open obligation of R170_816 §5
+transferred from "first-contact vectors" to "all of P_T", plus the requirement of diagonal form.
 
-### 4.3 ¿Algo de lo probado lo obstruye?
+### 4.3 Does anything proved obstruct it?
 
-No hay obstrucción PROVED. Los lemas de A no lo tocan (el Lema A′ deja fuera toda construcción que
-use h ≥ 0; los Lemas B y C no hablan de él). El Teorema B de D lo sitúa en el brazo de
-identificación (usa todos los átomos k ≤ N), donde no hay restricción. Sí hay cuatro restricciones
-que cualquier versión debe cumplir; las dos primeras se demuestran aquí.
+There is no PROVED obstruction. The lemmas of A do not touch it (Lemma A′ leaves out every construction that
+uses h ≥ 0; Lemmas B and C do not speak of it). Theorem B of D places it in the
+identification arm (it uses all atoms k ≤ N), where there is no restriction. There are, however, four restrictions
+that any version must satisfy; the first two are proved here.
 
-- **R1 (PROVED, con CITED lem:shape-scale, parte probada).** No existe una familia de identidades
-  a_T^a(F) = ‖V^aF‖² + Σ_{k≥2} h^a(k) q_k^a(F), válida para todo peso a ≥ 0 en un cono que contenga
-  {cΛ : c ≥ 1}, con q_k^a ≥ 0 y h^a(k) = Σ_{dm=k, d≤M, m≤N}a(d) − log k·1_{k≤N}.
-  *Demostración.* Para a = cΛ, c > 1, M ≥ N: h^a(k) = (c − 1) log k ≥ 0 en k ≤ N y h^a(k) = c·h(k)
-  ≥ 0 en k > N (NUMÉRICO de control, c = 2). La identidad daría a_T^{cΛ} ≥ 0 sobre P_T, falso para c
-  grande y T > ½log2 (lem:shape-scale; también Lema 1 de la memo D). ∎
-  Consecuencia: el residuo no puede obtenerse de la versión de thm:PCfinite con pesos genéricos
-  tratando por igual los coeficientes interiores y exteriores y especializando a Λ al final. Los
-  términos en k ≤ N no pueden entrar como cuadrados con el mismo patrón; la línea que se rompe para
-  cΛ (cláusula O4) tiene que ser ésa, y debe romperse también para c < 1, donde el defecto interior
-  es negativo y la restricción R1 no dice nada.
-- **R2 (PROVED; ya en R170_816 (2)).** Para F, G ∈ L²(I_T) y M ≥ N ≥ e^{2T}, ⟨G, H_{M,N}F⟩ = 0. Los
-  funcionales ℓ_k(F) no pueden ser funcionales de la compresión de H a la ventana; dependen de F a
-  través de vectores no locales (𝓕F, (S_N⁻¹)*F, colas exteriores). El nexo natural son los momentos
-  exteriores de P47 §collars, y allí está la advertencia de eq:Qspectral.
-- **R3 (CITED, R170_816 §4 y rem:returnremarks).** La positividad de los coeficientes no firma un
-  apareamiento entre dos vectores distintos, y la suma en k es coherente (términos cruzados entre k
-  distintos). Una diagonalización exige una operación que identifique los dos vectores
-  JS⁻¹JF y S⁻¹JSF (formales) o que cancele los cruces; ninguna está escrita.
-- **R4.** La identidad debe ser sensible al soporte de F en I_T (§4.1, tercer punto).
+- **R1 (PROVED, with CITED lem:shape-scale, proved part).** There is no family of identities
+  a_T^a(F) = ‖V^aF‖² + Σ_{k≥2} h^a(k) q_k^a(F), valid for every weight a ≥ 0 in a cone containing
+  {cΛ : c ≥ 1}, with q_k^a ≥ 0 and h^a(k) = Σ_{dm=k, d≤M, m≤N}a(d) − log k·1_{k≤N}.
+  *Proof.* For a = cΛ, c > 1, M ≥ N: h^a(k) = (c − 1) log k ≥ 0 at k ≤ N and h^a(k) = c·h(k)
+  ≥ 0 at k > N (NUMERICAL control, c = 2). The identity would give a_T^{cΛ} ≥ 0 on P_T, false for large c
+  and T > ½log2 (lem:shape-scale; also Lemma 1 of memo D). ∎
+  Consequence: the residue cannot be obtained from the version of thm:PCfinite with generic weights
+  treating interior and exterior coefficients alike and specializing to Λ at the end. The
+  terms at k ≤ N cannot enter as squares with the same pattern; the line that breaks for
+  cΛ (clause O4) has to be that one, and it must also break for c < 1, where the interior defect
+  is negative and restriction R1 says nothing.
+- **R2 (PROVED; already in R170_816 (2)).** For F, G ∈ L²(I_T) and M ≥ N ≥ e^{2T}, ⟨G, H_{M,N}F⟩ = 0. The
+  functionals ℓ_k(F) cannot be functionals of the compression of H to the window; they depend on F
+  through non-local vectors (𝓕F, (S_N⁻¹)*F, exterior tails). The natural link is the exterior
+  moments of P47 §collars, and there lies the warning of eq:Qspectral.
+- **R3 (CITED, R170_816 §4 and rem:returnremarks).** Positivity of the coefficients does not sign a
+  pairing between two distinct vectors, and the sum in k is coherent (cross terms between distinct
+  k). A diagonalization requires an operation that identifies the two vectors
+  JS⁻¹JF and S⁻¹JSF (formal) or that cancels the cross terms; none is written.
+- **R4.** The identity must be sensitive to the support of F in I_T (§4.1, third point).
 
-### 4.4 Filtro de cuatro puntos aplicado al residuo
+### 4.4 Four-point filter applied to the residue
 
-(1) Antecedente más cercano: `R170_816` §§2–7; P47 thm:PCfinite, rem:returnremarks, eq:Qbalance.
-(2) Objeto nuevo: ninguno escrito; ℓ_k y V_T sin definir. (3) Diferencia con el antecedente: forma
-global sobre P_T en lugar del radical de primer contacto, lo que evita necesitar la minimalidad de
-la ventana pero no evita la dificultad registrada (apareamiento entre dos vectores, cruces en k,
-pérdida √N en valor absoluto). (4) Identidad de conexión: thm:PCfinite, que es bilineal y sin signo.
-Conclusión: **no pasa el filtro**; no es una candidata lista para construcción. Es un casillero
-abierto con especificación R1–R4, no un mecanismo. Reabrirlo exige escribir la operación de R3.
+(1) Closest antecedent: `R170_816` §§2–7; P47 thm:PCfinite, rem:returnremarks, eq:Qbalance.
+(2) New object: none written; ℓ_k and V_T undefined. (3) Difference from the antecedent: global
+form on P_T instead of the first-contact radical, which avoids needing minimality of
+the window but does not avoid the recorded difficulty (pairing between two vectors, cross terms in k,
+loss √N in absolute value). (4) Connecting identity: thm:PCfinite, which is bilinear and unsigned.
+Conclusion: **it does not pass the filter**; it is not a candidate ready for construction. It is an
+open cell with specification R1–R4, not a mechanism. Reopening it requires writing the operation of R3.
 
-### 4.5 Qué registrar
+### 4.5 What to record
 
-> «Residuo PC-diagonal: identidad a_T = ‖V_TF‖² + Σ_{k>N}h_{M,N}(k)|ℓ_k(F)|² + polares. OPEN, sin
-> objeto. Antecedentes: R170_816 (salida exacta, falsación de h ≥ 0 ⟹ apareamiento ≥ 0, canal d = 2),
-> R170_819–823, P47 rem:returnremarks y eq:Qspectral. Restricciones: no puede ser especialización de
-> una identidad genérica en el peso con coeficientes interiores y exteriores tratados por igual
-> (falsificador cΛ, c grande; PROVED); los ℓ_k son funcionales exteriores (H se anula comprimido a la
-> ventana; PROVED); hace falta una operación que diagonalice los cruces en k (no escrita). No reabrir
-> sin esa operación.»
+> "PC-diagonal residue: identity a_T = ‖V_TF‖² + Σ_{k>N}h_{M,N}(k)|ℓ_k(F)|² + polar terms. OPEN, no
+> object. Antecedents: R170_816 (exact exit, falsification of h ≥ 0 ⟹ pairing ≥ 0, channel d = 2),
+> R170_819–823, P47 rem:returnremarks and eq:Qspectral. Restrictions: it cannot be a specialization of
+> an identity generic in the weight with interior and exterior coefficients treated alike
+> (falsifier cΛ, c large; PROVED); the ℓ_k are exterior functionals (H vanishes compressed to the
+> window; PROVED); an operation diagonalizing the cross terms in k is needed (not written). Do not reopen
+> without that operation."
 
-Además: añadir al catálogo 04 del índice las filas que faltan para R170_811–R170_840, y corregir la
-fila K1 del LEDGER de la fase («la orientación vive sólo en los defectos» → «en propiedades de la
-realización que las relaciones no expresan: Λ ≥ 0, b ≡ 1, K > 0 y los defectos»).
+In addition: add to catalogue 04 of the index the missing rows for R170_811–R170_840, and correct
+row K1 of the phase LEDGER ("the orientation lives only in the defects" → "in properties of the
+realization that the relations do not express: Λ ≥ 0, b ≡ 1, K > 0 and the defects").
 
 ---
 
-## 5. Lista de correcciones obligatorias antes de registrar
+## 5. List of mandatory corrections before recording
 
-| Ref. | Lugar | Corrección |
+| Ref. | Place | Correction |
 |---|---|---|
-| E-A1, E-A2 | A §3 Lema A, lectura; §2(iii) | Sustituir por Lema A′; declarar el alcance |
-| E-A3 | A §3 lectura; §4 | Retirar «exclusivamente»; añadir Λ ≥ 0, b ≡ 1, K > 0 |
-| E-A5 | A Lema B | Precisar la truncación; escribir la recursión de grado j |
-| E-A6 | A «Siguiente paso concreto» | Retirar la prohibición de grado tres / Vaughan / convolución |
-| E-A7, E-A8 | A §0, §1(1), §4 | Citar R170_816, R170_819–823, R170_851; rem:returnremarks |
-| E-A9 | A §4 | Retirar la identificación con prob:annihilate |
-| — | A §2(iv) | Corregir el factor 2 de la identidad de signatura |
-| E-B1, E-B2 | B Prop. 3 y lectura | Condicionar a 𝖡 definida positiva; rebajar la lectura |
-| E-B3 | B §3 lectura; «Qué falló» | Sustituir por la lectura corregida de §2.2 |
-| E-B4 | B «Resultado»; «Qué se probó» | (4.1): fallo NUMÉRICO; retirar «se ha probado» |
-| E-B5 | B Prop. 7 lectura; reapertura | Rebajar a observación; invertir la condición de reapertura |
-| — | B «Siguiente paso» | No cerrar 211/C6 |
-| E-D1, E-D2 | D §3, §7 (P2), §8 | Brazo (iv): OPEN / objetivo con margen; añadir el recíproco |
-| E-D3 | D resumen, §0(3) | Retirar «cierra la dirección» y «ningún E» |
-| E-D4, E-D5 | D §3, §0 | Declarar la extensión a pesos más allá de N; citar R170_819–823 |
-| — | STATEMENT_001 §3 (fuera de las memos) | Aclarar la normalización de β y recomprobar la cota 0.0122 (NUMÉRICO de esta revisión: 𝖡(log 6) = 0.01373 en la misma escala) |
+| E-A1, E-A2 | A §3 Lemma A, reading; §2(iii) | Replace by Lemma A′; declare the scope |
+| E-A3 | A §3 reading; §4 | Withdraw "exclusively"; add Λ ≥ 0, b ≡ 1, K > 0 |
+| E-A5 | A Lemma B | Specify the truncation; write the degree-j recursion |
+| E-A6 | A "Concrete next step" | Withdraw the prohibition of degree three / Vaughan / convolution |
+| E-A7, E-A8 | A §0, §1(1), §4 | Cite R170_816, R170_819–823, R170_851; rem:returnremarks |
+| E-A9 | A §4 | Withdraw the identification with prob:annihilate |
+| — | A §2(iv) | Correct the factor 2 in the signature identity |
+| E-B1, E-B2 | B Prop. 3 and reading | Make conditional on 𝖡 positive definite; downgrade the reading |
+| E-B3 | B §3 reading; "What failed" | Replace by the corrected reading of §2.2 |
+| E-B4 | B "Result"; "What was proved" | (4.1): NUMERICAL failure; withdraw "it has been proved" |
+| E-B5 | B Prop. 7 reading; reopening | Downgrade to observation; invert the reopening condition |
+| — | B "Next step" | Do not close 211/C6 |
+| E-D1, E-D2 | D §3, §7 (P2), §8 | Arm (iv): OPEN / target with margin; add the converse |
+| E-D3 | D summary, §0(3) | Withdraw "closes the direction" and "no E" |
+| E-D4, E-D5 | D §3, §0 | Declare the extension to weights beyond N; cite R170_819–823 |
+| — | STATEMENT_001 §3 (outside the memos) | Clarify the normalization of β and recheck the bound 0.0122 (NUMERICAL from this review: 𝖡(log 6) = 0.01373 on the same scale) |

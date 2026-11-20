@@ -1,146 +1,146 @@
-# CONSTRUCTOR_007 — Módulo de contracciones aritméticas del kernel −R
+# CONSTRUCTOR_007 — Module of arithmetic contractions of the kernel −R
 
-2026-10-18. Constructor. **PROVED, revisión final favorable en AUDIT_007:** representación multiplicativa por contracciones en la completación canónica de −R_α, con defecto positivo explícito y normalización crítica. No es todavía una representación de la forma Q_T.
+2026-10-18. **PROVED, favourable final review in AUDIT_007:** multiplicative representation by contractions on the canonical completion of −R_α, with explicit positive defect and critical normalisation. It is not yet a representation of the form Q_T.
 
-## 0. Corpus y razón nueva escrita
+## 0. Corpus and written new reason
 
-Consultados índice, grid y crucigrama por contracciones, isometrías, Frobenius, módulos y semigrupos de dilataciones. Entradas pertinentes: L2_016, L2_025–027, BUILD_R1_001 X1.0 (normas y ángulos entre datos exteriores, NO-GO como signo), INV_D (dilataciones unitarias y carácter), P1_BBSTAR y CELL_001.
+Consulted: index, grid and crossword for contractions, isometries, Frobenius, modules and semigroups of dilations. Pertinent entries: L2_016, L2_025–027, BUILD_R1_001 X1.0 (norms and angles between exterior data, NO-GO as sign), INV_D (unitary dilations and character), P1_BBSTAR and CELL_001.
 
-No se reintenta una cota de ángulo entre r y D_nr ni se afirma que una dilatación unitaria genere signo. **Razón nueva:** el espacio de Hilbert es el del kernel independiente −R_α recién identificado; la aritmética de divisibilidad y la gaussiana definen dos acciones que se entrelazan exactamente. El defecto no se estima por normas separadas: se calcula como una integral positiva con multiplicador explícito `1−q_n`. La ley isométrica del primer factor exige conservar cada primo observado. Esto cambia el objeto y la hipótesis respecto de las rutas indicadas, sin demostrar por sí solo un enlace al gamma del nodo.
+An angle bound between r and D_nr is not retried nor is it claimed that a unitary dilation generates a sign. **New reason:** the Hilbert space is that of the independent kernel −R_α just identified; divisibility arithmetic and the Gaussian define two actions that intertwine exactly. The defect is not estimated by separate norms: it is computed as a positive integral with explicit multiplier `1−q_n`. The isometric law of the first factor requires keeping every observed prime. This changes the object and the hypothesis with respect to the indicated routes, without by itself proving a link to the gamma of the node.
 
-## 1. Dominio y norma positiva ya probada
+## 1. Domain and already proved positive norm
 
-Sean s=2α∈(0,1), C_α=−Z_α>0. Sobre el álgebra de observables finitos de divisibilidad, tomo representantes **Haarcentrados**
+Let s=2α∈(0,1), C_α=−Z_α>0. On the algebra of finite divisibility observables, I take **Haar-centred** representatives
 
 `𝒜₀={A=Σ finite a_d X_d : E_1A=0}`,
 
-permitiendo X_1=1 para centrar. Para este dominio, CONSTRUCTOR_005 da
+allowing X_1=1 for centring. For this domain, CONSTRUCTOR_005 gives
 
 `𝒦_α(A)=−R_α(A)=C_α E_s|A|²+Π_α(A)`,
 
 `Π_α(A)=∫_0^∞ y^(α−1)τ(y)|E_yA|²dy`.
 
-La condición de centro hace converger Π en cero. Defino 𝓗_α como la completación de 𝒜₀ para 𝒦_α. No se identifica esta completación con el dominio de Q_T.
+The centring condition makes Π converge at zero. I define 𝓗_α as the completion of 𝒜₀ for 𝒦_α. This completion is not identified with the domain of Q_T.
 
-Puede realizarse sin asumir clausurabilidad de operadores auxiliares: cerrar en el producto de Hilbert la imagen
+It can be realised without assuming closability of auxiliary operators: close in the Hilbert product the image
 
 `A ↦ (√C_α A, y↦E_yA)`
 
-en `L²(P_s) ⊕ L²(y^(α−1)τ(y)dy)`. La norma de esa imagen es exactamente 𝒦_α.
+in `L²(P_s) ⊕ L²(y^(α−1)τ(y)dy)`. The norm of that image is exactly 𝒦_α.
 
-## 2. Acción de divisibilidad y memoria geométrica
+## 2. Divisibility action and geometric memory
 
-Para n≥1, defino
+For n≥1, I define
 
 `(D_nA)(N)=1_{n|N} A(N/n)`;
 
-sobre generadores, `D_nX_d=X_(nd)`. Entonces `D_mD_n=D_(mn)`.
+on generators, `D_nX_d=X_(nd)`. Then `D_mD_n=D_(mn)`.
 
-**Lema 1 (PROVED).** Para t>0 y A finito,
+**Lemma 1 (PROVED).** For t>0 and finite A,
 
 `E_t(D_nA)=n^(−t)E_tA`,
 
 `E_t|D_nA|²=n^(−t)E_t|A|²`.
 
-Es memoria geométrica de las valuaciones bajo P_t: condicionando v_p≥v_p(n), la diferencia tiene la misma ley independiente. En particular D_n conserva 𝒜₀ porque `E_1D_nA=(E_1A)/n=0`.
+It is the geometric memory of valuations under P_t: conditioning on v_p≥v_p(n), the difference has the same independent law. In particular D_n preserves 𝒜₀ because `E_1D_nA=(E_1A)/n=0`.
 
-En la gaussiana puncturada,
+In the punctured Gaussian,
 
 `E_y(D_nA)=q_n(y)E_(n²y)A`, `q_n(y)=τ(n²y)/τ(y)`.
 
-Esto sale del cambio N=nM en la suma; es exacto y no usa fase estacionaria.
+This comes from the change N=nM in the sum; it is exact and does not use stationary phase.
 
-## 3. Contracción normalizada y defecto positivo
+## 3. Normalised contraction and positive defect
 
-Defino `V_n=n^(s/2)D_n`. Su acción en el factor aritmético L²(P_s) es isométrica por el Lema 1. En el factor gaussiano, para f(y)=E_yA, actúa
+I define `V_n=n^(s/2)D_n`. Its action on the arithmetic factor L²(P_s) is isometric by Lemma 1. On the Gaussian factor, for f(y)=E_yA, it acts as
 
 `(G_nf)(y)=n^(s/2)q_n(y)f(n²y)`.
 
-Cambio u=n²y da
+The change u=n²y gives
 
 `Π_α(V_nA)=∫_0^∞ u^(α−1)τ(u)q_n(u/n²)|E_uA|²du`.
 
-**Teorema 2 (PROVED).** V_n se extiende a una contracción en 𝓗_α, `V_mV_n=V_(mn)`, y sobre el núcleo algebraico
+**Theorem 2 (PROVED).** V_n extends to a contraction on 𝓗_α, `V_mV_n=V_(mn)`, and on the algebraic core
 
 `𝒦_α(A)−𝒦_α(V_nA)`
 
 `=∫_0^∞ u^(α−1)τ(u)[1−q_n(u/n²)]|E_uA|²du ≥0`.   (1)
 
-Para n>1, la concavidad puncturada da q_n(z)<1/n para todo z>0, de modo que
+For n>1, punctured concavity gives q_n(z)<1/n for all z>0, so that
 
 `𝒦_α(A)−𝒦_α(V_nA) ≥(1−1/n)Π_α(A)`.              (2)
 
-No se necesita (2) para la contracción: q_n≤1 ya basta. La cota estricta ofrece el defecto explícito.
+(2) is not needed for the contraction: q_n≤1 already suffices. The strict bound offers the explicit defect.
 
-**Prueba.** Restar las dos normas; el término C_α E_s|A|² cancela por la isometría exacta. La representación multiplicativa es algebraica y se conserva al extender por continuidad. ∎
+**Proof.** Subtract the two norms; the term C_α E_s|A|² cancels by the exact isometry. The multiplicative representation is algebraic and is preserved when extending by continuity. ∎
 
-En α=1/4, la normalización es `V_n=n^(1/4)D_n`. Esto corresponde a una ley de normas n^(−1/2) antes de normalizar, no debe confundirse con un coeficiente n^(−1/2) que se haya identificado ya en Q_T.
+At α=1/4, the normalisation is `V_n=n^(1/4)D_n`. This corresponds to a norm law n^(−1/2) before normalising; it must not be confused with an n^(−1/2) coefficient already identified in Q_T.
 
-## 4. Adjunto en el factor gaussiano: cálculo exacto
+## 4. Adjoint on the Gaussian factor: exact computation
 
-Sobre `ℒ_α=L²(y^(α−1)τ(y)dy)`, el operador G_n es acotado y
+On `ℒ_α=L²(y^(α−1)τ(y)dy)`, the operator G_n is bounded and
 
 `(G_n* g)(u)=n^(−s/2)g(u/n²)`,
 
 `G_n*G_n f(u)=q_n(u/n²)f(u)`.
 
-**Prueba.** En el producto interno de G_nf con g, cambiar u=n²y; el factor τ(y)q_n(y) se vuelve τ(u), y la potencia deja n^(−s/2). ∎
+**Proof.** In the inner product of G_nf with g, change u=n²y; the factor τ(y)q_n(y) becomes τ(u), and the power leaves n^(−s/2). ∎
 
-Por tanto `I−G_n*G_n` es exactamente el multiplicador positivo de (1). Además `‖G_n‖≤1/√n` para n>1 y `G_mG_n=G_(mn)` por cancelación telescópica de los cocientes de τ.
+Hence `I−G_n*G_n` is exactly the positive multiplier of (1). Moreover `‖G_n‖≤1/√n` for n>1 and `G_mG_n=G_(mn)` by telescoping cancellation of the quotients of τ.
 
-**Cautela:** no se identifica el adjunto de V_n en 𝓗_α con una restricción del adjunto del producto de factores. La imagen cerrada puede ser sólo invariante, no reductora. Las identidades de norma y de semigrupo no requieren esa identificación.
+**Caution:** the adjoint of V_n on 𝓗_α is not identified with a restriction of the adjoint of the product of factors. The closed image may be only invariant, not reducing. The norm and semigroup identities do not require that identification.
 
-## 5. Borrado de un primo: qué identidad aritmética falla
+## 5. Deletion of a prime: which arithmetic identity fails
 
-En la ley P_s^P de CONSTRUCTOR_005 §10, si p|P entonces X_p=0 casi seguramente. En particular `D_pA=0` como observable de esa ley, mientras para A≠0
+In the law P_s^P of CONSTRUCTOR_005 §10, if p|P then X_p=0 almost surely. In particular `D_pA=0` as an observable of that law, while for A≠0
 
 `p^(−s)E_s^P|A|²>0`.
 
-Por ello la isometría normalizada de D_p del Lema 1 **no existe con esa misma ley borrada y el mismo primo p**. Para n coprimo con P, la memoria geométrica sigue valiendo y no se exige distinguir esas acciones supervivientes.
+Hence the normalised isometry of D_p of Lemma 1 **does not exist with that same deleted law and the same prime p**. For n coprime to P, geometric memory still holds and distinguishing those surviving actions is not required.
 
-Esto identifica una propiedad conjunta que exige todos los primos: la acción isométrica normalizada del factor aritmético para **cada** n≥1, entrelazada con la gaussiana completa. No prueba todavía que esa propiedad obligue al signo de Q_T ni que un cociente por acciones nulas no genere otro módulo positivo.
+This identifies a joint property requiring all primes: the normalised isometric action of the arithmetic factor for **every** n≥1, intertwined with the complete Gaussian. It does not yet prove that this property forces the sign of Q_T nor that a quotient by null actions does not generate another positive module.
 
-## 6. Conexión exacta con la FE ya calculada
+## 6. Exact connection with the FE already computed
 
-El factor gaussiano utiliza τ y Π, cuya inversión completa fue probada en CONSTRUCTOR_006. En α=1/4 el cambio de escala y↔1/y conserva el parámetro y transforma los incrementos de τ en diferencias de m entre y y y/d². Las acciones D_n de este memo son compatibles con las dilataciones enteras que aparecen allí.
+The Gaussian factor uses τ and Π, whose complete inversion was proved in CONSTRUCTOR_006. At α=1/4 the change of scale y↔1/y keeps the parameter and transforms the increments of τ into differences of m between y and y/d². The actions D_n of this memo are compatible with the integer dilations appearing there.
 
-No se ha demostrado que esa inversión actúe como una involución unitaria cerrada sobre 𝓗_α que conjugue V_n con un operador adjunto concreto. La fórmula del adjunto gaussiano, por sí sola, no proporciona tal involución global. Éste es un paso verificable adicional, y no se lo sustituye por la FE de un símbolo multiplicador.
+It has not been proved that this inversion acts as a closed unitary involution on 𝓗_α conjugating V_n with a concrete adjoint operator. The formula for the Gaussian adjoint does not by itself provide such a global involution. This is an additional verifiable step, and it is not replaced by the FE of a multiplier symbol.
 
-## 7. Residuo de enlace y alcance
+## 7. Link residue and scope
 
-Ahora se dispone de:
+Now available:
 
-- norma positiva independiente −R_α;
-- una representación explícita de todos los enteros por contracciones;
-- un factor aritmético isométrico con exponente s=1/2 en el caso crítico;
-- defectos gaussianos positivos calculados exactamente;
-- una FE de Π y un defecto de un perfil que falla tras el borrado.
+- independent positive norm −R_α;
+- an explicit representation of all integers by contractions;
+- an isometric arithmetic factor with exponent s=1/2 in the critical case;
+- positive Gaussian defects computed exactly;
+- an FE of Π and a single-profile defect that fails after deletion.
 
-Falta identificar una forma o traza de estas acciones, definida y convergente sobre todos los tests F del nodo, que dé exactamente el gamma y el peine de Q_T, y tratar su polo. Ninguna traza se da por existente, ni se importa una identidad de carácter cuyo signo sea el objetivo mismo.
+What is missing is to identify a form or trace of these actions, defined and convergent on all tests F of the node, giving exactly the gamma and the comb of Q_T, and to treat its pole. No trace is taken as existing, nor is a character identity whose sign is the target itself imported.
 
-Las desigualdades (1)–(2) son resultados positivos del módulo construido; **no se etiquetan como desigualdad de Q_T**. No cierran D ni O1. Constituyen un objeto más específico que una covarianza aislada y dejan un enlace concreto por construir: la inversión de §6 y una identidad de forma sobre el portador del paper.
+Inequalities (1)–(2) are positive results of the constructed module; **they are not labelled as an inequality for Q_T**. They close neither D nor O1. They constitute a more specific object than an isolated covariance and leave a concrete link to build: the inversion of §6 and a form identity on the carrier of the paper.
 
-## 8. Límite adicional de especificidad: estructura de monoide
+## 8. Additional limit of specificity: monoid structure
 
-La memoria geométrica y las leyes de norma de D_n, tomadas aisladamente,
-usan sólo la estructura multiplicativa y la norma n. La desigualdad
-q_n<1/n vale también para un factor de escala real n>1. Por ello una parte
-del cálculo puede formalizarse en otros monoides con normas; no se afirma
-que el módulo de contracciones solo distinga la aritmética de todos los
-enteros frente a sistemas de Beurling.
+Geometric memory and the norm laws of D_n, taken in isolation,
+use only the multiplicative structure and the norm n. The inequality
+q_n<1/n also holds for a real scale factor n>1. Hence part
+of the computation can be formalised in other normed monoids; it is not claimed
+that the contraction module alone distinguishes the arithmetic of all the
+integers from Beurling systems.
 
-Las igualdades adicionales que aquí sí se deben conservar son la realización
-de los observables por divisibilidad efectiva de enteros, la identidad con
-el R renormalizado concreto y la FE de un único perfil de CONSTRUCTOR_006.
-No se ha probado que esas igualdades produzcan la forma de Q_T. El test del
-primo borrado en §5 localiza una identidad que falla en esa ley, pero no
-constituye una batería completa de especificidad para el enlace final.
+The additional equalities that must be kept here are the realisation
+of the observables by effective divisibility of integers, the identity with
+the concrete renormalised R and the single-profile FE of CONSTRUCTOR_006.
+It has not been proved that those equalities produce the form of Q_T. The
+deleted-prime test in §5 locates an identity that fails in that law, but does not
+constitute a complete specificity battery for the final link.
 
 
-## Actualización de dominio — continuación015
+## Domain update — continuation015
 
-CONSTRUCTOR_015_DOMAIN_AND_CONE resuelve con otra sucesión la cuestión
-que aquí quedó abierta: H=L²(P_s)⊕V y el operador T de007 no es clausurable.
-El vectorvertical fuerte proviene de likelihoodtilts sobre primosaltos,
-no de la sucesiónprimorial divergente de008. No se afirmaV=todoGaussian
-ni invariancia porla FE ambiental; el enlaceQ sigueOPEN. AUDIT_015 favorable.
+CONSTRUCTOR_015_DOMAIN_AND_CONE resolves with another sequence the question
+left open here: H=L²(P_s)⊕V and the operator T of 007 is not closable.
+The strong vertical vector comes from likelihood tilts over large primes,
+not from the divergent primorial sequence of 008. V=all Gaussian is not claimed,
+nor invariance under the ambient FE; the Q link remains OPEN. AUDIT_015 favourable.

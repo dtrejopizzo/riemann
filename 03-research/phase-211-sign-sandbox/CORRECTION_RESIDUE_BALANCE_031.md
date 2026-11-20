@@ -1,66 +1,66 @@
-# Corrección de la cancelación residual de L2_BUILD_031
+# Correction of the residual cancellation in L2_BUILD_031
 
-Estado: **PROVED por cálculo exacto; auditorías literales aprobadas.** Sin datos numéricos, con aviso correctivo añadido al histórico031; papers intactos.
+Status: **PROVED by exact computation; literal audits approved.** No numerical data, with a corrective notice added to the historical file 031; papers untouched.
 
-## 1. Antecedente y afirmación corregida
+## 1. Antecedent and corrected claim
 
-Leídos las reglas del proyecto, ROUTES-TRIED-INDEX/README.md y06_OPEN_RESIDUES_DEAD_SUBROUTES.md(R9), grid R162_2300_MASTER_GRID, CROSSWORD-TO-D, P47 problema(S), P48 problema(S), L2_BUILD_030 y N_BUILD_022. El antecedente exacto es
+Read: the project rules, ROUTES-TRIED-INDEX/README.md and 06_OPEN_RESIDUES_DEAD_SUBROUTES.md (R9), grid R162_2300_MASTER_GRID, CROSSWORD-TO-D, P47 problem (S), P48 problem (S), L2_BUILD_030 and N_BUILD_022. The exact antecedent is
 
  `03-research/phase-188-closing-D/L2_BUILD_031_RESIDUE_BALANCED_SUBSPACE.md`.
 
-Su sección1 define(B_Q) mediante bloques constantes de longitud múltiplo del módulo. La suma NO PONDERADA de un Ramanujan sobre un bloque completo sí se anula. El paréntesis ya etiqueta ARGUED su extensión al pairing completo y advierte que multiplicar el índice por n sólo transporta balance si p no divide n. Sin embargo la sección3 presenta como identidad la omisión de todas las componentes de módulo p^b<=Q sobre(B_Q). Aquí se refuta esa omisión en el pairing completo definido en030, con una interpolación suave explícitamente admisible. No se refuta el Teorema E ni el signo de la forma real.
+Its section 1 defines (B_Q) through constant blocks whose length is a multiple of the modulus. The UNWEIGHTED sum of a Ramanujan sum over a complete block does vanish. The parenthetical remark already labels ARGUED its extension to the full pairing and warns that multiplying the index by n only transports balance if p does not divide n. However, section 3 presents as an identity the omission of all components of modulus p^b<=Q on (B_Q). Here that omission is refuted in the full pairing defined in 030, with an explicitly admissible smooth interpolation. Neither Theorem E nor the sign of the actual form is refuted.
 
-## 2. Todos los objetos fijados
+## 2. All objects fixed
 
-Tomar M=Q=2, q_Q=2, I={1,2} y s1=s2=1. Es un único bloque equilibrado(B_Q): una clase par y una impar con el mismo peso. Elegir el perfil de norma1 con
+Take M=Q=2, q_Q=2, I={1,2} and s1=s2=1. This is a single balanced block (B_Q): one even class and one odd class with the same weight. Choose the norm-1 profile with
 
  0<2T0<log(3/2).
 
-Su autocorrelación c0 tiene soporte en[-2T0,2T0] y c0(0)=1. Luego para m=1,2 y TODO entero j>=1,
+Its autocorrelation c0 is supported in [-2T0,2T0] and c0(0)=1. Hence for m=1,2 and EVERY integer j>=1,
 
  W1(m,j)=c0(log(m/j))=delta_mj.
 
-En efecto la distancia logarítmica mínima no nula entre uno de1,2 y otro entero positivo es log(3/2).
+Indeed, the minimal nonzero logarithmic distance between one of 1,2 and another positive integer is log(3/2).
 
-Fijar S suave de soporte compacto en(2/3,5/2), con S(1)=S(2)=1. Por ejemplo, si eta(x)=exp(1-1/(1-x^2)) para |x|<1 y0 fuera, tomar
+Fix S smooth with compact support in (2/3,5/2), with S(1)=S(2)=1. For example, if eta(x)=exp(1-1/(1-x^2)) for |x|<1 and 0 outside, take
 
  S(x)=eta(12(x-1))+eta(12(x-2)).
 
-Es C_infinito, vale1 en ambos enteros y vale0 en TODOS los enteros j>=3; interpola así toda la sucesión s, extendida por0 fuera de{1,2}. No se presupone una interpolación en puntos no enteros sin declararla.
+It is C_infinity, equals 1 at both integers and equals 0 at ALL integers j>=3; it thus interpolates the whole sequence s, extended by 0 outside {1,2}. No interpolation at non-integer points is presupposed without being declared.
 
-## 3. Componente completa de módulo2
+## 3. Full component of modulus 2
 
-En la descomposición Ramanujan030, para j entero positivo definir
+In the Ramanujan decomposition of 030, for a positive integer j define
 
  T_q(j)=c_q(j) sum_(n>=1,q|n) (v_n/n)S(j/n),
  v_n=2Lambda(n)/sqrt(n), v1=0.
 
-Esta fórmula viene de la identidad exacta sum_(q|n)c_q(j)=n*1_(n|j). La compactitud de S, alejada de0, hace finita cada suma para j fijo. El pairing de la componente q es
+This formula comes from the exact identity sum_(q|n)c_q(j)=n*1_(n|j). The compact support of S, away from 0, makes each sum finite for fixed j. The pairing of the component q is
 
  P_q=sum_(m=1)^2 s_m sum_(j>=1)W1(m,j)T_q(j)
     =T_q(1)+T_q(2).
 
-Para j=1,2 y n>=3 se tiene j/n<=2/3 y S(j/n)=0. Para n=2, S(1/2)=0 y S(2/2)=S(1)=1. Por tanto no existen otras contribuciones a q=2:
+For j=1,2 and n>=3 one has j/n<=2/3 and S(j/n)=0. For n=2, S(1/2)=0 and S(2/2)=S(1)=1. Therefore there are no other contributions to q=2:
 
  T_2(1)=0,
  T_2(2)=c_2(2)*(v2/2)*S(1)=v2/2,
  P_2=v2/2=log(2)/sqrt(2)>0.
 
-Aquí c2(j)=(-1)^j. El bloque original tiene sum_(k=1)^2 c2(k)=0, pero la multiplicación n=2 da sum_(k=1)^2 c2(2k)=2. El cálculo del pairing anterior es más fuerte que esta observación: fija también S, W1, todos los n y todos los índices que pueden contribuir; no deja una cancelación oculta de otras potencias de2.
+Here c2(j)=(-1)^j. The original block has sum_(k=1)^2 c2(k)=0, but the multiplication n=2 gives sum_(k=1)^2 c2(2k)=2. The pairing computation above is stronger than this observation: it also fixes S, W1, all n and all indices that can contribute; it leaves no hidden cancellation from other powers of 2.
 
-Como control, la componente q=1 de estas dos filas también es v2/2; juntas reproducen el término exacto n=2 de V sobre el vector s. El resultado no es una comparación de componentes aisladas con ARCH.
+As a control, the q=1 component of these two rows is also v2/2; together they reproduce the exact n=2 term of V on the vector s. The result is not a comparison of isolated components with ARCH.
 
-## 4. Corrección y alcance
+## 4. Correction and scope
 
-La identidad de sección3 de031 debe conservar las componentes pequeñas; no puede borrarlas sólo por(B_Q). La misma corrección se aplica a las frases de su sección4 que atribuyen esa cancelación a(B_Q). La prueba del Teorema E por aproximación de configuraciones usa sólo continuidad y bloques cortos en coordenada logarítmica: permanece válida y NO depende de Ramanujan. Tampoco se cambia la cancelación trivial de sumas sobre residuos completos sin los otros pesos.
+The identity of section 3 of 031 must keep the small components; it cannot delete them merely by (B_Q). The same correction applies to the sentences of its section 4 that attribute that cancellation to (B_Q). The proof of Theorem E by approximation of configurations uses only continuity and short blocks in the logarithmic coordinate: it remains valid and does NOT depend on Ramanujan. Nor does the trivial cancellation of sums over complete residue systems without the other weights change.
 
-La interpolación general de030 sección3 ya estaba etiquetada ARGUED; este ejemplo muestra que la elección suave aquí declarada no suministra la cancelación pretendida. No se afirma que toda interpolación imaginable dé el mismo componente individual; justamente una afirmación universal de cancelación necesita hipótesis adicionales. Las identidades totales de030 y el problema(S) no se modifican.
+The general interpolation of 030 section 3 was already labelled ARGUED; this example shows that the smooth choice declared here does not supply the intended cancellation. It is not claimed that every conceivable interpolation gives the same individual component; precisely, a universal cancellation claim needs additional hypotheses. The total identities of 030 and problem (S) are not modified.
 
-Esta nota no da un valor negativo de W ni un nuevo obstáculo global: corrige un paso algebraico local concreto que no puede usarse para eliminar componentes aritméticas del pairing completo. El histórico031 conserva su texto original y recibe un aviso que remite a esta corrección auditada.
+This note gives neither a negative value of W nor a new global obstruction: it corrects a concrete local algebraic step that cannot be used to eliminate arithmetic components of the full pairing. The historical file 031 keeps its original text and receives a notice pointing to this audited correction.
 
 
-## 5. Reparación universal en soporte rough: sólo el vector cero
+## 5. Universal repair on rough support: only the zero vector
 
-**PROVED, alcance restringido; auditorías root/casos/mapa.** Sea Q>=2 y s finito en R_Q, de soporte<=M. Suponga que su componente de módulo2 se anula para TODOS los perfiles permitidos y TODOS los interpolantes suaves compactos S de la sucesión. Elegir 2T0<log((M+1)/M) hace W1(m,j)=delta_mj para m<=M y TODO j>=1. Todos los j del soporte son impares. En el pairingq2, variar S con un bump en el punto no entero x=j/2 aísla el coeficiente -s_j v2/2: una coincidencia j'/2^a=j/2 obligaría j'=2^(a-1)j; como j' es impar, a=1 y j'=j. El bump puede evitar los enteros y las demás razones relevantes (localmente finitas), preservando la interpolación prescrita. La anulación universal fuerza s_j=0 para cada j. Así añadir soporte rough NO repara la cancelación universal salvo en el espacio nulo.
+**PROVED, restricted scope; audits of the main argument, cases and map.** Let Q>=2 and s finite in R_Q, with support <=M. Suppose its modulus-2 component vanishes for ALL allowed profiles and ALL compactly supported smooth interpolants S of the sequence. Choosing 2T0<log((M+1)/M) makes W1(m,j)=delta_mj for m<=M and EVERY j>=1. All j in the support are odd. In the q2 pairing, varying S by a bump at the non-integer point x=j/2 isolates the coefficient -s_j v2/2: a coincidence j'/2^a=j/2 would force j'=2^(a-1)j; since j' is odd, a=1 and j'=j. The bump can avoid the integers and the other relevant ratios (locally finite), preserving the prescribed interpolation. Universal vanishing forces s_j=0 for each j. Thus adding rough support does NOT repair the universal cancellation except on the null space.
 
-No se extiende este colapso al soporte mixto: las razones j/2^a colisionan dentro de rayas diádicas. Ejemplos para perfiles tan estrechos que W1 sea identidad no deciden la exigencia sobre TODOS los perfiles. En particular, para soporte hasta4 la identidad de todas las columnas necesita anchura<log(5/4), no basta anchura<log2. No se registra aquí un resultado de colapso general. El TeoremaE original sigue intacto; una restricción nueva al núcleo exacto de componentes requeriría una nueva prueba de aproximación.
+This collapse is not extended to mixed support: the ratios j/2^a collide inside dyadic rays. Examples for profiles so narrow that W1 is the identity do not decide the requirement over ALL profiles. In particular, for support up to 4 the identity of all columns needs width<log(5/4); width<log2 is not enough. No general collapse result is recorded here. The original Theorem E remains intact; a new restriction to the exact kernel of components would require a new approximation proof.

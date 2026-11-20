@@ -1,27 +1,27 @@
-# POWER_COEFFICIENT_BALANCE_033 — Mezcla finita gamma, prefijo Erlang adverso y Abel ponderado
+# POWER_COEFFICIENT_BALANCE_033 — Finite gamma mixture, adverse Erlang prefix and weighted Abel
 
-Estado: **PROVED**, revisión independiente aprobada en POWER_BALANCE_AUDIT_033.md y verificador PASS reproducido: mezcla finita y coeficientes Abel no negativos; **PROVED** funcional Erlang22 completo negativo. **FALSIFIED en034** la premisa de signo no negativo de TODOS los prefijos ponderados T_m (véase seguimiento al final). No se afirma nueva región W ni cierre. Papers intactos.
+Status: **PROVED**, independent review approved in POWER_BALANCE_AUDIT_033.md and verifier PASS reproduced: finite mixture and nonnegative Abel coefficients; **PROVED** complete negative Erlang22 functional. **FALSIFIED in034** the premise of nonnegative sign of ALL weighted prefixes T_m (see follow-up at the end). No new W region nor closure is claimed. Papers untouched.
 
-## 1. Corpus y razón nueva
+## 1. Corpus and new reason
 
-Leídos las reglas del proyecto, ARCH_EXACT032, ROW_PATTERN029 y GAIN, INTERIOR_CONSTRAINT027 (mezcla gamma–Gaussian), GAMMA_BALANCE030 y sus auditorías; consultados ROUTES-TRIED-INDEX, grid maestro y CROSSWORD-TO-D.md sobre Euler/Möbius, sumas parciales de coeficientes, medias Riesz y mezclas. Búsquedas dirigidas Erlang/supervivencia/exponencial truncada no dieron una construcción POWER previa del objeto finito usado aquí.
+Read the project rules, ARCH_EXACT032, ROW_PATTERN029 and GAIN, INTERIOR_CONSTRAINT027 (gamma–Gaussian mixture), GAMMA_BALANCE030 and their audits; consulted ROUTES-TRIED-INDEX, the master grid and CROSSWORD-TO-D.md on Euler/Möbius, partial sums of coefficients, Riesz means and mixtures. Targeted searches for Erlang/survival/truncated exponential found no previous POWER construction of the finite object used here.
 
-La diferencia respecto a la mezcla Gaussian027 es que la representación es FINITA en perfiles de supervivencia Erlang y sus pesos proceden directamente de los coeficientes gamma decrecientes. No depende de convexidad de la forma completa, refutada para la mezcla Gaussian030. La sumación de Abel y los perfiles Erlang son clásicos; la nueva información acotada es qué desigualdad concreta de componentes falla en el dato aritmético y qué prefijos ponderados sí serían compatibles con los pesos reales.
+The difference with respect to the Gaussian mixture027 is that the representation is FINITE in Erlang survival profiles and its weights come directly from the decreasing gamma coefficients. It does not depend on convexity of the complete form, refuted for the Gaussian mixture030. Abel summation and Erlang profiles are classical; the new bounded information is which concrete component inequality fails on the arithmetic datum and which weighted prefixes would be compatible with the real weights.
 
-Sólo se estudia el corte22, motivado por ulog2≈22 y el primer contacto aritmético. No se lanza una secuencia de nuevos cortes ni otra campaña por N. El criterio Abel se declara suficiente y OPEN; no se lo llama avance de signo por ser una identidad.
+Only cutoff22 is studied, motivated by ulog2≈22 and the first arithmetic contact. No sequence of new cutoffs nor another campaign over N is launched. The Abel criterion is declared sufficient and OPEN; it is not called sign progress for being an identity.
 
-## 2. Funcional lineal de autocorrelación y mezcla finita EXACTA
+## 2. Linear autocorrelation functional and EXACT finite mixture
 
-Fije u=63/2. Para una función par real rho con rho(0)=1 y los decaimientos aquí presentes, defina la extensión lineal del funcional explícito por
+Fix u=63/2. For a real even function rho with rho(0)=1 and the decays present here, define the linear extension of the explicit functional by
 
     L[rho]=m0+int_0^infty k_gamma(t)[1−rho(t)]dt
              −2sum_(q>=2)Lambda(q)q^(−1/2)rho(logq)
              +4int_0^infty cosh(t/2)rho(t)dt,
     k_gamma(t)=2e^(−t/2)/(1−e^(−2t)), m0=psi(1/4)−logpi.
 
-Se entiende la extensión homogénea usando m0rho(0) y rho(0)−rho(t) cuando rho no está normalizada. Para la autocorrelación gamma REAL rho_N, L[rho_N]=W[g_N]/norm². Una rho positiva como función temporal NO tiene por qué ser una autocorrelación admisible.
+The homogeneous extension using m0rho(0) and rho(0)−rho(t) is understood when rho is not normalized. For the REAL gamma autocorrelation rho_N, L[rho_N]=W[g_N]/norm². A rho positive as a temporal function NEED not be an admissible autocorrelation.
 
-Con d=N−1, escriba
+With d=N−1, write
 
     rho_N(t)=e^(−ut)sum_(j=0)^d p_jt^j,
     a_Nj=p_j j!/u^j,
@@ -29,108 +29,108 @@ Con d=N−1, escriba
     a_N,j+1/a_Nj=2(d−j)/(2d−j),
     a_N,d+1=0.
 
-Por tanto a_Nj decrece y los pesos
+Hence a_Nj decreases and the weights
 
     w_Nj=a_Nj−a_N,j+1=a_Nj·j/(2d−j)>=0, j0..d,
     sum_(j=0)^d w_Nj=1
 
-son exactos. Para S_j(t)=e^(−ut)sum_(r=0)^j (ut)^r/r!, intercambiar dos sumas FINITAS da
+are exact. For S_j(t)=e^(−ut)sum_(r=0)^j (ut)^r/r!, swapping two FINITE sums gives
 
     rho_N=sum_(j=0)^d w_Nj S_j,
     W[g_N]/norm²=sum_(j=1)^d w_Nj E_j,
     E_j=L[S_j].                                          (MIX)
 
-El término j0 pesa0. MIX conserva TODOS los contactos y el polar; no se supone positividad de los E_j ni positividad definida de cada S_j.
+The term j0 has weight0. MIX keeps ALL contacts and the polar; neither positivity of the E_j nor positive definiteness of each S_j is assumed.
 
-## 3. Coeficientes antes de acotar y el único corte22
+## 3. Coefficients before bounding and the single cutoff22
 
-ARCH_EXACT032, aplicado a los coeficientes u^r/r!, da EXACTAMENTE
+ARCH_EXACT032, applied to the coefficients u^r/r!, gives EXACTLY
 
     ARCH[S_J]=a(u)−sum_(r=1)^J (u/2)^r S_(r+1)(16),
     a(u)=psi(16)−logpi.
 
-Aquí S_p(16) denota la suma Hurwitz, distinta del perfil temporal S_j; se mantiene el índice p para distinguirlos. La contribución polar lineal es
+Here S_p(16) denotes the Hurwitz sum, distinct from the temporal profile S_j; the index p is kept to distinguish them. The linear polar contribution is
 
     POLAR[S_J]=2sum_(r=0)^J u^r[(u−1/2)^(−r−1)+(u+1/2)^(−r−1)],
 
-mientras el peine completo es
+while the complete comb is
 
     PRIME[S_J]=−2sum_(q>=2)Lambda(q)q^(−32)
                          sum_(r=0)^J (ulogq)^r/r!.
 
-Todas estas series son absolutas. Cada contacto no nulo del peine es NEGATIVO porque S_J(t)>0. Los signos se conservan antes de estimar.
+All these series are absolute. Each nonzero contact of the comb is NEGATIVE because S_J(t)>0. The signs are kept before estimating.
 
-Para J22 el certificado racional prueba
+For J22 the rational certificate proves
 
     −1/100<E_22<−3/500.                                  (ERLANG-FAIL)
 
-El upper usa el intervalo ARCH de032, el polar racional exacto y sólo los contactos2,3, cuyos valores reales son Lambda=log2,log3. TODOS los contactos restantes son adversos y omitirlos es legítimo sólo para ese upper.
+The upper bound uses the ARCH interval of032, the exact rational polar and only contacts2,3, whose real values are Lambda=log2,log3. ALL remaining contacts are adverse and omitting them is legitimate only for that upper bound.
 
-Para el lower se acota la cola COMPLETA q>=4 usando Lambda(q)<=logq. Cada x^(−32)(logx)^ell,1<=ell<=23, decrece para x>=4. Así su suma se acota por el extremo4 más la integral desde4, calculada con
+For the lower bound the COMPLETE tail q>=4 is bounded using Lambda(q)<=logq. Each x^(−32)(logx)^ell,1<=ell<=23, decreases for x>=4. Thus its sum is bounded by the endpoint4 plus the integral from4, computed with
 
     I0=4^(−31)/31,
     I_ell=4^(−31)(log4)^ell/31+(ell/31)I_(ell−1).
 
-La suma positiva de esos mayores con2u^r/r! prueba el lower de ERLANG-FAIL. No se toma el signo de un prefijo aritmético por el de la cola.
+The positive sum of those majorants with2u^r/r! proves the lower bound of ERLANG-FAIL. The sign of an arithmetic prefix is not taken for that of the tail.
 
-## 4. Por qué NO es un contraejemplo a W real
+## 4. Why it is NOT a counterexample to real W
 
-El perfil S22 NO es positivo definido. Para xi=tau/u>0, su transformada par es
+The profile S22 is NOT positive definite. For xi=tau/u>0, its even transform is
 
     Fourier(S_J)(tau)=[2/(u xi)] Im(1−i xi)^(−J−1).
 
-En J22,xi1, el cálculo racional complejo da Im((1+i)/2)^23=−1/4096, luego
+At J22,xi1, the rational complex computation gives Im((1+i)/2)^23=−1/4096, hence
 
     Fourier(S22)(u)=−1/(2048u)<0.
 
-Así ERLANG-FAIL refuta sólo la premisa «cada componente de la mezcla Erlang aporta un funcional no negativo». No es una dirección admisible con W<0 y no refuta MIX ni el signo de la función gamma real.
+Thus ERLANG-FAIL refutes only the premise «each component of the Erlang mixture contributes a nonnegative functional». It is not an admissible direction with W<0 and refutes neither MIX nor the sign of the real gamma function.
 
-Hay además una cota uniforme sobre el daño de ESTE componente a la mezcla real: para todo N>=23,d=N−1,
+There is moreover a uniform bound on the damage of THIS component to the real mixture: for all N>=23,d=N−1,
 
     w_N,22<=22/d,
     −11/(50d)<w_N,22 E_22<0.                              (WEIGHT)
 
-Se usó a_N,22<=1 y2d−22>=d. Esta pérdida particular es O(1/N); WEIGHT no controla la suma de TODOS los componentes adversos, que no se identifican mediante una campaña. Tampoco dice que el resto la compense automáticamente.
+One used a_N,22<=1 and2d−22>=d. This particular loss is O(1/N); WEIGHT does not control the sum of ALL adverse components, which are not identified via a campaign. Nor does it say that the rest compensates it automatically.
 
-## 5. Agrupación ponderada que sí respeta los pesos gamma
+## 5. Weighted grouping that does respect the gamma weights
 
-La condición más fuerte E_j>=0 falla. Una condición SUFICIENTE distinta conserva componentes negativos dentro de prefijos ponderados:
+The stronger condition E_j>=0 fails. A distinct SUFFICIENT condition keeps negative components inside weighted prefixes:
 
     T_m=sum_(j=1)^m j E_j.
 
-Defina v_Nj=w_Nj/j=a_Nj/(2d−j),j>=1 y v_N,d+1=0. Para1<=j<d,
+Define v_Nj=w_Nj/j=a_Nj/(2d−j),j>=1 and v_N,d+1=0. For1<=j<d,
 
     v_N,j+1/v_Nj=2(d−j)/(2d−j−1)<=1.
 
-La diferencia entre denominador y numerador es j−1>=0; en d>=2 la primera diferencia v_N1−v_N2 es exactamente0. En d1 hay sólo un coeficiente positivo y el resultado es inmediato. Sumación de Abel FINITA da exactamente
+The difference between denominator and numerator is j−1>=0; for d>=2 the first difference v_N1−v_N2 is exactly0. For d1 there is only one positive coefficient and the result is immediate. FINITE Abel summation gives exactly
 
     W[g_N]/norm²
       =sum_(m=1)^d [v_Nm−v_N,m+1]T_m,                   (ABEL)
     v_Nm−v_N,m+1>=0.
 
-Por tanto probar T_m>=0 para TODOS m implicaría el signo de TODA la fila k0 gamma. Es un criterio SUFICIENTE para esa fila, NO para todos k ni para el Paper47 completo. ERLANG-FAIL no lo refuta: jE_j puede ser negativo y quedar compensado en T_m.
+Hence proving T_m>=0 for ALL m would imply the sign of the WHOLE gamma row k0. It is a SUFFICIENT criterion for that row, NOT for all k nor for the complete Paper47. ERLANG-FAIL does not refute it: jE_j can be negative and be compensated in T_m.
 
-El perfil de T_m antes de aplicar L es explícito:
+The profile of T_m before applying L is explicit:
 
     sum_(j=1)^m j S_j(t)
       =e^(−ut)sum_(r=0)^m [m(m+1)−r(r−1)](ut)^r/(2r!).
 
-También, en un entorno convergente de z0, con v=u(1−z) y E0(v)=L[e^(−vt)]=2L_power(v+1/2) en la notación CONE001,
+Also, in a convergent neighborhood of z0, with v=u(1−z) and E0(v)=L[e^(−vt)]=2L_power(v+1/2) in the notation of CONE001,
 
     sum_(m>=1)T_m z^m
        =z[E0(v)−vE0'(v)]/(1−z)^3.
 
-La positividad real exterior de E0(v)−vE0'(v) de CONE001 NO prueba la positividad de todos los coeficientes de esta función. No se registra tal inferencia. Estas fórmulas describen la obligación aritmética de T_m, no la resuelven.
+The exterior real positivity of E0(v)−vE0'(v) from CONE001 does NOT prove positivity of all coefficients of this function. No such inference is recorded. These formulas describe the arithmetic obligation of T_m; they do not settle it.
 
-## 6. Alcance y siguiente desigualdad faltante
+## 6. Scope and next missing inequality
 
-Queda **OPEN** si TODOS los T_m son no negativos para la Lambda real. No se ha obtenido aquí una desigualdad elemental uniforme que pruebe ese signo; la identidad de generación no se vende como tal. Tampoco se han añadido nuevos diagnósticos en una secuencia de m.
+It remains **OPEN** whether ALL T_m are nonnegative for the real Lambda. No uniform elementary inequality proving that sign has been obtained here; the generating identity is not sold as such. Nor have new diagnostics been added in a sequence of m.
 
-Los resultados firmes son MIX con pesos gamma explícitos, ERLANG-FAIL con el peine completo, la pérdida uniforme individual WEIGHT y ABEL como implicación correctamente limitada. La continuación constructiva debe controlar las compensaciones de T_m con la aritmética real o encontrar un criterio integrado más preciso que conserve el peso gamma, sin volver a suponer positividad de cada componente ya refutada.
+The firm results are MIX with explicit gamma weights, ERLANG-FAIL with the complete comb, the individual uniform loss WEIGHT, and ABEL as a correctly limited implication. The constructive continuation must control the compensations of T_m with the real arithmetic or find a more precise integrated criterion that keeps the gamma weight, without again assuming the already refuted positivity of each component.
 
-Verificador exacto: tools/power_coefficient_balance_033_verify.py, Fraction/intervalos racionales y resto EM032; PASS. Un único corte22, dos contactos explícitos y una cola completa analítica. No nueva región W ni ventanaT. Papers intactos.
+Exact verifier: tools/power_coefficient_balance_033_verify.py, Fraction/rational intervals and EM remainder032; PASS. A single cutoff22, two explicit contacts and a complete analytic tail. No new W region nor windowT. Papers untouched.
 
 
-## Seguimiento034
+## Follow-up034
 
-POWER_WEIGHTED_COEFFICIENT_034, revisado en POWER_COMPARISON_AUDIT_034, demuestra infinitos términos positivos y negativos en T_m. La premisa suficiente que esta nota dejó abierta queda refutada, incluso salvo finitas excepciones. MIX y ABEL siguen siendo identidades válidas; el signo de sus combinaciones gamma no queda decidido por esta oscilación. No relanzar positividad de todos T_m como lema sin cambiar la agrupación o introducir una compensación real.
+POWER_WEIGHTED_COEFFICIENT_034, reviewed in POWER_COMPARISON_AUDIT_034, proves infinitely many positive and negative terms in T_m. The sufficient premise this note left open is refuted, even up to finitely many exceptions. MIX and ABEL remain valid identities; the sign of their gamma combinations is not decided by this oscillation. Do not relaunch positivity of all T_m as a lemma without changing the grouping or introducing a real compensation.

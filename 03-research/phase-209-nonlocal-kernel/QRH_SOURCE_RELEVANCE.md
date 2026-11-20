@@ -1,81 +1,81 @@
-# QRH — relevancia para el contratermino de017
+# QRH — relevance for the counterterm of 017
 
-2026-10-19. Lectura focal por constructor y revisor independiente.
-**EXTERNAL CLAIM / OPEN transfer**, no validación integral de los preprints.
+2026-10-19. Focused reading, independently reviewed.
+**EXTERNAL CLAIM / OPEN transfer**, not a full validation of the preprints.
 
-## Fuentes y versiones leídas
+## Sources and versions read
 
 - Shiva Kintali, *A Short Proof of the Quasi-Riemann Hypothesis*, 7Oct2026,
-  27 páginas: https://shivakintali.github.io/papers/QRH.pdf .
-  Thm1 afirma región libre Re s>47/48 para las familias declaradas.
-- OpenAI, *The Quasi-Riemann Hypothesis*, 5Oct2026, PDF actual, 47 páginas:
+  27 pages: https://shivakintali.github.io/papers/QRH.pdf .
+  Thm1 claims the free region Re s>47/48 for the declared families.
+- OpenAI, *The Quasi-Riemann Hypothesis*, 5Oct2026, current PDF, 47 pages:
   https://raw.githubusercontent.com/openai/math/main/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/paper2.pdf .
-  Thm1.1 afirma Re s>11/12; 7/8 es otro documento citado, no este teorema.
+  Thm1.1 claims Re s>11/12; 7/8 is another cited document, not this theorem.
 
-L74 ya registraba el segundo enfoque; se corrige la entrada desactualizada.
-La formalización completa en Lean y una presunta barrera3/4 no fueron
-verificadas aquí y no se usan como hechos. No se repite una ruta cerrada:
-se examinan herramientas e hipótesis de estas fuentes solicitadas.
+L74 already recorded the second approach; the outdated entry is corrected.
+The complete Lean formalisation and an alleged 3/4 barrier were not
+verified here and are not used as facts. No closed route is repeated:
+the tools and hypotheses of these requested sources are examined.
 
-## Herramientas concretas que sí aparecen
+## Concrete tools that do appear
 
-OpenAI Prop3.1 controla un segundo momento de sumas de Möbius torcidas.
-Prop5.2 y Lem5.3 completan índices cúbicos, aplican criba cuadrática y
-transfieren estimaciones por inversión de Möbius e iteración. Las cotas
-son superiores, promediadas sobre familias, con dependencia de derivadas
-de los tests. No son una cota inferior de la forma del paper47.
+OpenAI Prop3.1 controls a second moment of twisted Möbius sums.
+Prop5.2 and Lem5.3 complete cubic indices, apply a quadratic sieve and
+transfer estimates by Möbius inversion and iteration. The bounds
+are upper bounds, averaged over families, with dependence on derivatives
+of the tests. They are not a lower bound for the form of paper47.
 
-Kintali Lem3–4 y §3.3 controlan un probe mediante reflexión theta y energía
-balanceada. Lem7 compara probe y señal con ahorro1/4800 en el régimen
-de contradicción beta_*>47/48. La comparación usa clasificación por ceros
-y densidad de ceros; el numerador se controla como no nulo en Re s>11/12.
-No está justificado continuar ese bootstrap hasta1/2.
+Kintali Lem3–4 and §3.3 control a probe via theta reflection and balanced
+energy. Lem7 compares probe and signal with saving 1/4800 in the regime
+of contradiction beta_*>47/48. The comparison uses classification by zeros
+and zero density; the numerator is controlled as nonvanishing in Re s>11/12.
+Continuing that bootstrap down to 1/2 is not justified.
 
-Las exclusiones finitas de primos S forman parte explícita de ambos
-mecanismos. Sus normas positivas o estimaciones aisladas no seleccionan
-por sí solas el producto completo exigido por nuestro enlace.
+The finite exclusions of primes S are an explicit part of both
+mechanisms. Their positive norms or isolated estimates do not by themselves select
+the complete product required by our link.
 
-## Comparación exacta con017
+## Exact comparison with 017
 
-017 requiere, para cada ventana y cada test par polar libre,
+017 requires, for each window and each even polar-free test,
 
     E_pos(F) >= (A_T-C0)||F||².
 
-Ninguno de los lemas identificados representa este déficit mediante las
-familias estimadas ni aporta una dominación con la orientación requerida.
-La aplicación posible consiste en construir esa identidad aritmética;
-no basta importar el enunciado de región libre o la positividad de una norma.
+None of the identified lemmas represents this deficit through the
+estimated families nor contributes a domination with the required orientation.
+The possible application consists in constructing that arithmetic identity;
+importing the free-region statement or the positivity of a norm is not enough.
 
-Incluso concediendo una estimación E(x)=psi(x)-x=O(x^theta log^B x),
-theta>1/2, la integración por partes del término fluctuante involucra
+Even granting an estimate E(x)=psi(x)-x=O(x^theta log^B x),
+theta>1/2, integration by parts of the fluctuating term involves
 
     E(x)x^(-3/2)[c_F'(log x)-c_F(log x)/2].
 
-Su estimación absoluta hasta X=e^(2T) tiene escala
-X^(theta-1/2)log^B X, además del borde inferior. Para theta=11/12
-es exp(5T/6), y para47/48 es exp(23T/24), con factores de test/logs.
-Esto no es una fuente de signo ni una cota relativa al casi núcleo.
-Es insuficiencia de esta aplicación directa, NO un NO-GO de otros enlaces.
+Its absolute estimate up to X=e^(2T) has scale
+X^(theta-1/2)log^B X, in addition to the lower boundary. For theta=11/12
+it is exp(5T/6), and for 47/48 it is exp(23T/24), with test/log factors.
+This is not a source of sign nor a bound relative to the near-kernel.
+It is an insufficiency of this direct application, NOT a NO-GO for other links.
 
-## Resultado de la consulta
+## Outcome of the consultation
 
-Toolbox de transferencia de cancelación potencialmente reutilizable;
-no se identificó un control del contratermino017. No se integran estos
-resultados externos como teoremas probados en paper47. No se cierra D,
-no se crea una construcción018 y no se afirma una imposibilidad general.
+A potentially reusable toolbox for transfer of cancellation;
+no control of the counterterm 017 was identified. These external
+results are not integrated as proved theorems in paper47. D is not closed,
+no construction 018 is created and no general impossibility is claimed.
 
 
-## Contexto de publicación: Quanta19Oct2026
+## Publication context: Quanta 19Oct2026
 
 https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/
 
-Quanta distingue el manuscrito de30Sept (7/8) y el de5Oct (11/12).
-Reporta formalización Lean del primero y lectura favorable por expertos;
-no presenta el segundo como formalizado. Es atribución periodística:
-esta sesión no ejecutó el verificador ni auditó integralmente las pruebas.
-El README primario de30Sept confirma el título y el umbral7/8.
-El artículo destaca la selección de una familia metapléctica y la síntesis
-de técnicas existentes. No procede descartar una aplicación a D sólo
-porque use herramientas conocidas; se necesita identificar su enlace.
-La extrapolación cuantitativa solicitada se analiza por separado en
-QRH_EXPONENT_MAP.md: lema de réplicas probado, mejora crítica OPEN.
+Quanta distinguishes the manuscript of 30Sept (7/8) and that of 5Oct (11/12).
+It reports a Lean formalisation of the first and a favourable reading by experts;
+it does not present the second as formalised. This is journalistic attribution:
+this session did not run the verifier nor audit the proofs in full.
+The primary README of 30Sept confirms the title and the threshold 7/8.
+The article highlights the selection of a metaplectic family and the synthesis
+of existing techniques. It is not appropriate to discard an application to D merely
+because it uses known tools; its link needs to be identified.
+The requested quantitative extrapolation is analysed separately in
+QRH_EXPONENT_MAP.md: replica lemma proved, critical improvement OPEN.

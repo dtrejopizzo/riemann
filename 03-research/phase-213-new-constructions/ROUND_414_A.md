@@ -1,31 +1,31 @@
-# Eliminar la normalización desconocida sin perder el signo de cada cero
+# Eliminating the unknown normalization without losing the sign of each zero
 
-**Estado: PROVED, con revisión independiente de la derivada enR², la identidad diádica y la constante3.**
+**Status: PROVED, with independent review of the derivative inR², the dyadic identity and the constant3.**
 
-Sean X,P,D de 412, y definir con datos sólo a abscisas reales finitas
+Let X,P,D be from 412, and define with data only at finite real abscissae
 
     B(R)=2∫₀ᴿ log(X(w)/P(w))dw − 2∫ᴿ^(2R) log(X(w)/P(w))dw.
 
-Entonces B(R)=2D(R)−D(2R) y B(R)≥0. Más precisamente
+Then B(R)=2D(R)−D(2R) and B(R)≥0. More precisely
 
     B(R) ≍ Σ_{γ>0} δ² R³/(R²+γ²)²,      R B(R) → 3 Σ_{γ>0}δ²
 
-(incluido infinito). La constante c de 412 cancela exactamente. La fórmula no usa tapas de argumento. P aún requiere las ordenadas con multiplicidad.
+(including infinity). The constant c of 412 cancels exactly. The formula does not use argument caps. P still requires the ordinates with multiplicity.
 
-**Positividad por cero.** En la prueba de 412, para J_R(d)=∫_(−R)^R log((w−d)²+γ²)dw se tiene
+**Positivity per zero.** In the proof of 412, for J_R(d)=∫_(−R)^R log((w−d)²+γ²)dw one has
 
     J_R''(d)/R = 4a/(a²+4γ²d²),    a=R²+γ²−d².
 
-Para |d|≤1/2 y γ≥2 se tiene a≥γ²−1/4>2γ|d|, con margen relativo absoluto. La derivada de la expresión respecto de R² es negativa y su opuesto es comparable a 1/(R²+γ²)². Integrar esa derivada entre R² y 4R² da 2J_R''(d)−J_(2R)''(d)≍R³/(R²+γ²)² con signo positivo. Dos integraciones respecto de d como en 412 dan el mayorante y menorante afirmados para B. Para cada cero superior fijo su contribución multiplicada por R tiende a 3δ² por el equivalente individual de 412. Domina Cδ² si la suma es finita; en el caso infinito bastan sumas parciales positivas. En particular B(R)=o(1/R) sobre una sucesión implicaría RH.
+For |d|≤1/2 and γ≥2 one has a≥γ²−1/4>2γ|d|, with absolute relative margin. The derivative of the expression with respect to R² is negative and its opposite is comparable to 1/(R²+γ²)². Integrating that derivative between R² and 4R² gives 2J_R''(d)−J_(2R)''(d)≍R³/(R²+γ²)² with positive sign. Two integrations with respect to d as in 412 give the claimed upper and lower bounds for B. For each fixed upper zero its contribution multiplied by R tends to 3δ² by the individual equivalent of 412. Cδ² dominates if the sum is finite; in the infinite case positive partial sums suffice. In particular B(R)=o(1/R) along a sequence would imply RH.
 
-**Qué parte de la cola real es aritmética.** Como D(U)→0 por 413, D(R)=−2∫_R^∞ [log(X/P)−c]dw como integral impropia. Para R>1, X(w)=A(w)ζ(w+1/2), con A(w)=s(s−1)π^(−s/2)Γ(s/2)/(2ξ(1/2)), s=w+1/2. La porción de esta cola aportada por log ζ se calcula absolutamente por
+**Which part of the real tail is arithmetic.** Since D(U)→0 by 413, D(R)=−2∫_R^∞ [log(X/P)−c]dw as an improper integral. For R>1, X(w)=A(w)ζ(w+1/2), with A(w)=s(s−1)π^(−s/2)Γ(s/2)/(2ξ(1/2)), s=w+1/2. The portion of this tail contributed by log ζ is computed absolutely by
 
     ∫_R^∞ log ζ(w+1/2)dw = Σ_{n≥2} Λ(n)n^(−R−1/2)/(log n)² = O(2^(−R))  (R≥2).
 
-La identidad de cola no confiere ese ahorro al término log(A/P)−c. En la versión finita B se cancela c sin tomar una diferencia de integrales divergentes.
+The tail identity does not confer that saving on the term log(A/P)−c. In the finite version B, c cancels without taking a difference of divergent integrals.
 
-**Robustez al truncar alturas en la identidad por desplazamientos.** Para H≥R grande, la parte de B procedente de γ>H es O(R³/(H³ log H)) por M(T)≪T/log T de 413 y bloques diádicos. Este error corresponde a la expansión positiva en δ²; no autoriza reemplazar P por el producto truncado en las dos integrales reales con el mismo error. La desigualdad global pendiente es todavía una cota sobre la contribución de todas las alturas, no sobre el factor ζ en la cola derecha.
+**Robustness when truncating heights in the identity by displacements.** For large H≥R, the part of B coming from γ>H is O(R³/(H³ log H)) by M(T)≪T/log T of 413 and dyadic blocks. This error corresponds to the positive expansion in δ²; it does not authorize replacing P by the truncated product in the two real integrals with the same error. The pending global inequality is still a bound on the contribution of all heights, not on the factor ζ in the right tail.
 
-**Registro de revisión.** Para q=R², la derivada de4a/(a²+4γ²d²) es4(4γ²d²−a²)/(a²+4γ²d²)². La condiciónγ≥2, |d|≤1/2 da un margen absoluto entre a y2γ|d|; el opuesto de la derivada es comparable a1/(q+γ²)². Además2J_R''−J_(2R)''=2R[Q(R²)−Q(4R²)], con Q=J_R''/R, así que el factorR³ y su signo son correctos. La combinación2D(R)−D(2R) cancela exactamente los dos términos lineales en c y coincide con las integrales finitas definidas. El límite individual es2·(2δ²)−δ²=3δ² después de multiplicar porR, con un término por cero superior y sus multiplicidades; la dominación y las sumas parciales positivas cubren también el límite infinito.
+**Review record.** For q=R², the derivative of4a/(a²+4γ²d²) is4(4γ²d²−a²)/(a²+4γ²d²)². The conditionγ≥2, |d|≤1/2 gives an absolute margin between a and2γ|d|; the opposite of the derivative is comparable to1/(q+γ²)². Moreover2J_R''−J_(2R)''=2R[Q(R²)−Q(4R²)], with Q=J_R''/R, so the factorR³ and its sign are correct. The combination2D(R)−D(2R) cancels exactly the two terms linear in c and coincides with the defined finite integrals. The individual limit is2·(2δ²)−δ²=3δ² after multiplying byR, with one term per upper zero and its multiplicities; domination and positive partial sums also cover the infinite limit.
 
-El uso deD(U)→0 sólo establece la integral impropia de la cola completa, no convergencia absoluta de cada parte arquimediana por separado. La expansión positiva de log ζ permite Tonelli y da el factor(log n)^(−2) exacto. Finalmente, truncar la suma del déficit y truncarP son operaciones distintas: incluso bajoRH, cuando el déficitB es0, sustituirP porP_H deja log(P/P_H), creciente en w>0, y su diferencia diádica es negativa y no nula. No puede obedecer una cota basada sólo en los desplazamientosδ², todos nulos en ese caso.
+The use ofD(U)→0 only establishes the improper integral of the complete tail, not absolute convergence of each archimedean part separately. The positive expansion of log ζ allows Tonelli and gives the exact factor(log n)^(−2). Finally, truncating the sum of the deficit and truncatingP are different operations: even underRH, when the deficitB is0, replacingP byP_H leaves log(P/P_H), increasing in w>0, and its dyadic difference is negative and non-zero. It cannot obey a bound based only on the displacementsδ², all zero in that case.

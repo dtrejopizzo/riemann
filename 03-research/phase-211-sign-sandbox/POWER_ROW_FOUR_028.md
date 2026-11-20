@@ -1,116 +1,116 @@
-# POWER_ROW_FOUR_028 — Cuarta fila completa de la tabla escalar
+# POWER_ROW_FOUR_028 — Full fourth row of the scalar table
 
-Estado: **PROVED**, revisión independiente por mapa aprobada y verificador PASS reproducido. Para TODOS k>=0 y TODOS u>=63/2,
+Status: **PROVED**, independent review approved and verifier PASS reproduced. For ALL k>=0 and ALL u>=63/2,
 
     W[f_(4,k)]>(1/50)||f_(4,k)||²,
     F_(4,k)(s)=s^k/(s+u)^(4+k).                           (ROW4)
 
-Se conserva TODO el peine y el polar. Papers intactos. No se extrapola a otras filas ni al signo global.
+The WHOLE comb and the polar are kept. Papers untouched. No extrapolation to other rows or to the global sign.
 
-## 1. Corpus y razón nueva
+## 1. Corpus and new reason
 
-Leídos las reglas del proyecto, INTERIOR017 (WRN), TABLE_DESCENT018 (filas2/3), sus auditorías y STATE027; consultados índice de rutas, grid maestro y CROSSWORD-TO-D.md sobre filas, derivadas gamma y pesos. La prohibición018 de sustituir una prueba universal por una campaña de filas se conserva: esta fila es el objetivo concreto autorizado028 y no se presenta como cierre. Las recurrencias solas no dan signo, como prueba el falsificador018.
+Read the project rules, INTERIOR017 (WRN), TABLE_DESCENT018 (rows2/3), their audits and STATE027; consulted the routes index, master grid and CROSSWORD-TO-D.md on rows, gamma derivatives and weights. The prohibition018 on replacing a universal proof by a campaign of rows is kept: this row is the concrete authorized target028 and is not presented as closure. Recurrences alone give no sign, as the falsifier018 proves.
 
-La diferencia matemática frente018 es conservar la fórmula EXACTA de ARCH4, cuyo margen resulta pequeño pero positivo, y usar el peso racional eta12 en WR4 en lugar de fijar eta15. No es un barrido ni una búsqueda de otro N: una fórmula gamma y una elección analítica del peso producen un bound uniforme de la forma REAL para todo k y u. El signo alternado del polar se conserva; no se resta el polar positivo de los k pares.
+The mathematical difference from018 is to keep the EXACT formula of ARCH4, whose margin turns out small but positive, and to use the rational weight eta12 in WR4 instead of fixing eta15. It is not a sweep nor a search for another N: a gamma formula and an analytic choice of the weight produce a uniform bound of the REAL form for all k and u. The alternating sign of the polar is kept; the positive polar of even k is not subtracted.
 
-## 2. Monotonías arquimedianas legítimas y fórmula exacta
+## 2. Legitimate archimedean monotonicities and exact formula
 
-Sea m(tau)=Re psi(1/4+i tau/2)−logpi. Por la serie de psi, m crece con |tau|. Para N fijo, normalizar la densidad tau^(2k)/(u²+tau²)^(N+k) y reescalar tau=u xi da una probabilidad en xi independiente de u. Luego ARCH_(N,k)/norm² crece con u por comparación punto a punto de m(u xi).
+Let m(tau)=Re psi(1/4+i tau/2)−logpi. By the series of psi, m increases with |tau|. For fixed N, normalizing the density tau^(2k)/(u²+tau²)^(N+k) and rescaling tau=u xi gives a probability in xi independent of u. Hence ARCH_(N,k)/norm² increases with u by pointwise comparison of m(u xi).
 
-Al aumentar k, la probabilidad se repondera por xi²/(1+xi²), creciente en |xi|. La covarianza con m(u xi) es no negativa. Así para todo u>=u0=63/2 y k>=0,
+When k increases, the probability is reweighted by xi²/(1+xi²), increasing in |xi|. The covariance with m(u xi) is nonnegative. Thus for all u>=u0=63/2 and k>=0,
 
     ARCH_(4,k)(u)/norm²>=ARCH_(4,0)(u0)/norm².             (MON)
 
-Esto sólo usa ARCH, no movimiento de polos de la forma completa ni el lema global refutado007.
+This only uses ARCH, not pole motion of the full form nor the global lemma refuted in007.
 
-Ponga d(u)=psi((u+1/2)/2)−logpi. La integral de Poisson da I1=d(u)/(2u), y la recurrencia exacta I_(r+1)=−I_r'/[2ur] para el denominador (u²+tau²)^r permite calcular
+Set d(u)=psi((u+1/2)/2)−logpi. The Poisson integral gives I1=d(u)/(2u), and the exact recurrence I_(r+1)=−I_r'/[2ur] for the denominator (u²+tau²)^r allows computing
 
     ARCH_(4,0)/norm²=d−u d'+(2u²/5)d''−(u³/15)d'''.       (A4)
 
-La norma base es5/(32u^7). En u0, el argumento de psi es16. Usando psi^(r)(16) por sus series ABSOLUTAS,
+The base norm is5/(32u^7). At u0, the argument of psi is16. Using psi^(r)(16) through its ABSOLUTE series,
 
     A4(u0)=H15−gamma−logpi−(u0/2)S2−(u0²/5)S3−(u0³/20)S4,
     Sp=sum_(j=16)^infty j^(−p).
 
-Todos los Sp se restan. Por monotonía elemental,
+All the Sp are subtracted. By elementary monotonicity,
 
     Sp<=sum_(j=16)^115 j^(−p)+115^(1−p)/(p−1).
 
-El verificador Fraction y los intervalos explícitos003 de gamma/logpi prueban
+The Fraction verifier and the explicit intervals003 of gamma/logpi prove
 
     A4(u0)>11/400.                                       (ARCH)
 
-El extremo115 es un corte de las tres series de funciones especiales con resto integral, no una muestra de parámetros k o u. MON extiende ARCH a TODOS los parámetros declarados sin calcular otra matriz ni otro átomo.
+The endpoint115 is a cut of the three special-function series with integral remainder, not a sample of parameters k or u. MON extends ARCH to ALL declared parameters without computing another matrix or another atom.
 
-## 3. Peso eta12 y peine COMPLETO
+## 3. Weight eta12 and FULL comb
 
-El lema WRN017, válido para eta<u/2, prueba para toda k la cota
+The lemma WRN017, valid for eta<u/2, proves for all k the bound
 
     ||e^(eta y)f_(4,k)||²/||f_(4,k)||²<=R4(u,eta),
     R4=(u/(u−eta))^7 S4(rho), rho=(eta/(u−eta))²,
     S4(rho)=(1+3rho−rho²+rho³/5)/(1−rho)^4.
 
-La expresión se obtiene del producto diferencial017; equivalentemente,
+The expression is obtained from the differential product017; equivalently,
 
     S4(rho)=sum_(l>=0)[(2l+1)(2l+3)(2l+5)/15]rho^l.
 
-Esta última serie tiene coeficientes positivos, luego S4 crece con rho. Para eta12 fijo, u/(u−eta) y rho decrecen con u. Así R4(u,12)<=R4(u0,12)<400, comparación racional exacta con rho=64/169 y u0/(u0−12)=21/13.
+This last series has positive coefficients, so S4 increases with rho. For fixed eta12, u/(u−eta) and rho decrease with u. Thus R4(u,12)<=R4(u0,12)<400, an exact rational comparison with rho=64/169 and u0/(u0−12)=21/13.
 
-Por Cauchy–Schwarz ponderado,
+By weighted Cauchy–Schwarz,
 
     |c_f(t)|<=sqrt(R4)e^(−12t)||f||².
 
-Se controla TODA la contribución del peine por
+The WHOLE comb contribution is controlled by
 
     |PRIME|/norm²<40sum_(q>=2)Lambda(q)q^(−25/2).
 
-Usar Lambda(q)<=logq y q^(−1/2)<=2^(−1/2)<5/7 permite comparar con una sola integral decreciente:
+Using Lambda(q)<=logq and q^(−1/2)<=2^(−1/2)<5/7 allows comparison with a single decreasing integral:
 
     |PRIME|/norm²
       <(200/7)2^(−12)[log2+2log2/11+2/121]
       <3/500.                                           (PRIME)
 
-La última comparación usa log2<7/10 y Fraction. No se trunca Λ ni se descartan contactos adversos. La desigualdad f'(q)<0 para f(q)=q^(−12)logq,q>=2 se sigue ya de log2>2/3.
+The last comparison uses log2<7/10 and Fraction. Λ is not truncated nor are adverse contacts discarded. The inequality f'(q)<0 for f(q)=q^(−12)logq,q>=2 already follows from log2>2/3.
 
-## 4. Polar alternado, uniforme en TODO k
+## 4. Alternating polar, uniform in ALL k
 
-Escriba c_k=binom(2k,k)/4^k. La integral beta da
+Write c_k=binom(2k,k)/4^k. The beta integral gives
 
     norm_(4,k)²=[5/(32u^7)] c_k/binom(k+3,3),
     POLAR_(4,k)=2(−1/4)^k/(u²−1/4)^(4+k).
 
-Ponga q_u=1/(4u²−1) y p_40(u)=64u^7/[5(u²−1/4)^4]. Entonces
+Set q_u=1/(4u²−1) and p_40(u)=64u^7/[5(u²−1/4)^4]. Then
 
     |POLAR|/norm²=p_40(u) q_u^k binom(k+3,3)/c_k
                  <=p_40(u)(8q_u)^k.                      (P)
 
-En efecto c_k>=2^(−k) por Vandermonde y binom(k+3,3)<=4^k por contar los histogramas de palabras de longitud k en cuatro letras. Ambos p_40(u) y q_u decrecen con u>1/2: la derivada logarítmica de p_40 tiene numerador−u²−7/4<0.
+Indeed c_k>=2^(−k) by Vandermonde and binom(k+3,3)<=4^k by counting the histograms of words of length k in four letters. Both p_40(u) and q_u decrease with u>1/2: the logarithmic derivative of p_40 has numerator−u²−7/4<0.
 
-Para k PAR, el polar es positivo y no causa pérdida. Para k IMPAR>=1,8q_(u0)<1 y el verificador prueba
+For EVEN k, the polar is positive and causes no loss. For ODD k>=1,8q_(u0)<1 and the verifier proves
 
     |POLAR|/norm²<=p_40(u0)8q_(u0)<1/1000.                (POLAR)
 
-Este bound no resta el polar de k0 ni lo sustituye por su máximo de todo k, que sería demasiado grande.
+This bound does not subtract the polar of k0 nor replace it by its maximum over all k, which would be too large.
 
-## 5. Forma completa y región nueva
+## 5. Full form and new region
 
-Para toda k y u declarados, combinando ARCH, PRIME y POLAR,
+For all declared k and u, combining ARCH, PRIME and POLAR,
 
     W[f_(4,k)]/norm²
       >11/400−3/500−1/1000
       =41/2000>1/50.
 
-Así queda probado ROW4 con margen uniforme y con TODOS los términos de la forma explícita. El resultado cubre una fila completa adicional; no es una consecuencia formal de las otras filas ni de las identidades de filtros. Tampoco cierra la tabla de TODOS N,k requerida por SCALAR_BRIDGE017. No se afirma una nueva ventanaT por este resultado aislado.
+Thus ROW4 is proved with uniform margin and with ALL the terms of the explicit form. The result covers an additional full row; it is not a formal consequence of the other rows nor of the filter identities. Nor does it close the table of ALL N,k required by SCALAR_BRIDGE017. No new windowT is claimed from this isolated result.
 
-Por la recurrencia completa018, en particular la TERCERA diferencia de la fila1 es estrictamente positiva para todo k, con el factor u^6 correspondiente. Más precisamente, si a_(N,k)=W[f_(N,k)],
+By the full recurrence018, in particular the THIRD difference of row1 is strictly positive for all k, with the corresponding factor u^6. More precisely, if a_(N,k)=W[f_(N,k)],
 
     (−Delta)^3 a_(1,k)=u^6 a_(4,k)
       >3c_k/[160u(k+1)(k+2)(k+3)].
 
-No se afirma completa monotonía de orden arbitrario.
+Complete monotonicity of arbitrary order is not claimed.
 
-Reproducción:
+Reproduction:
 
     python3 03-research/phase-211-sign-sandbox/tools/power_row_four_028_verify.py
 
-El script ejecuta sólo comparaciones Fraction e intervalos de constantes elementales; PASS. La uniformidad en k y u pertenece a las demostraciones MON/WRN/P, no a un barrido numérico.
+The script runs only Fraction comparisons and intervals of elementary constants; PASS. Uniformity in k and u belongs to the proofs MON/WRN/P, not to a numerical sweep.

@@ -1,112 +1,112 @@
-# POWER_INVERSE_KERNEL_020 — Positividad del inverso COMPLETO fuera de un intervalo explícito
+# POWER_INVERSE_KERNEL_020 — Positivity of the COMPLETE inverse outside an explicit interval
 
-Estado: PROVED positividad del inverso completo en una región explícita para TODOS N; PROVED positividad global del inverso para N=2. Revisión independiente aprobada en POWER_BALANCE_AUDIT_020.md; root también verificó la prueba y el certificado. No se prueba el signo de ERR para todos N. Sin tablas numéricas. Papers intactos.
+Status: PROVED positivity of the complete inverse in an explicit region for ALL N; PROVED global positivity of the inverse for N=2. Independent review approved in POWER_BALANCE_AUDIT_020.md; the proof and the certificate were also checked separately. The sign of ERR for all N is not proved. No numerical tables. Papers untouched.
 
-## Antecedentes y razón nueva, antes de la construcción
+## Antecedents and new reason, before the construction
 
-Leídos las reglas del proyecto, SIGNED_MEAN019 y auditoría, LOW_TABLE018, TATE_CHAIN009; búsquedas dirigidas en índice ROUTES-TRIED-INDEX, grid parte3 y CROSSWORD-TO-D (Möbius/kernel/inversión/positividad/polinomios). Las identidades de inversión y sus limitaciones Euler/Möbius ya están registradas y no se relanzan como prueba de signo.
+Read: the project rules, SIGNED_MEAN019 and its audit, LOW_TABLE018, TATE_CHAIN009; targeted searches in the ROUTES-TRIED-INDEX index, grid part3 and CROSSWORD-TO-D (Möbius/kernel/inversion/positivity/polynomials). The inversion identities and their Euler/Möbius limitations are already recorded and are not relaunched as a sign proof.
 
-La diferencia nueva es aprovechar coeficientes POSITIVOS de un polinomio específico del kernel gamma para dominar la COLA COMPLETA de Möbius en un rango de x que depende explícitamente de N. No se infiere el signo del inverso desde un prefijo. Se busca además un caso en el que el inverso completo sea positivo para todo x.
+The new difference is to exploit POSITIVE coefficients of a specific polynomial of the gamma kernel to dominate the COMPLETE Möbius TAIL in a range of x that depends explicitly on N. The sign of the inverse is not inferred from a prefix. A case in which the complete inverse is positive for all x is also sought.
 
-## 1. Teoremas sobre el inverso COMPLETO
+## 1. Theorems on the COMPLETE inverse
 
-Mantenga u=63/2 y los kernels de019,
+Keep u=63/2 and the kernels of019,
 
     H_N(x)=−[x^-1/2 C_N(logx)]'/C_N(0)>0,
     h_N(x)=Σ(m>=1)mu(m)m H_N(mx), x>=1.
 
-Para todo N>=2 se prueba
+For all N>=2 we prove
 
     H_N(x)/4 <=h_N(x)<=7H_N(x)/4
-       si logx>=(N−1)/30.                              (OUTER)
+       if logx>=(N−1)/30.                              (OUTER)
 
-La serie de h_N es la COMPLETA. Como consecuencia, toda su parte negativa está contenida en1<=x<exp((N−1)/30).
+The series of h_N is the COMPLETE one. As a consequence, its whole negative part is contained in1<=x<exp((N−1)/30).
 
-Además, para N=2, se prueba positividad en TODA la semirrecta:
+Moreover, for N=2, positivity is proved on the WHOLE half-line:
 
     h_2(x)>=H_2(x)/[2zeta(32)]>H_2(x)/4>0, x>=1.       (ROW2)
 
-OUTER no declara el signo de h_N en el complemento. ROW2 no se extrapola a otros N.
+OUTER does not declare the sign of h_N on the complement. ROW2 is not extrapolated to other N.
 
-## 2. Polinomio gamma con todos sus coeficientes positivos
+## 2. Gamma polynomial with all coefficients positive
 
-Escriba rho_N(t)=C_N(t)/C_N(0)=e^-ut P_N(t), t>=0. La integral gamma de la autocorrelación da
+Write rho_N(t)=C_N(t)/C_N(0)=e^-ut P_N(t), t>=0. The gamma integral of the autocorrelation gives
 
     P_N(t)=Σ(j=0..N−1)p_j t^j,
     p_j=binom(N−1,j)(2u)^j Gamma(2N−1−j)/Gamma(2N−1)>0.
 
-Ponga d=N−1, s=u+1/2=32. Se tiene
+Set d=N−1, s=u+1/2=32. Then
 
     H_N(x)=x^-33 A_N(logx),
     A_N(t)=sP_N(t)−P_N'(t).
 
-Para0<=j<d,
+For0<=j<d,
 
     (j+1)p_(j+1)/p_j=2u(N−1−j)/(2N−2−j)<=u.
 
-Así cada coeficiente de A_N es >=(s−u)p_j=p_j/2>0; el último es sp_d>0. Su grado es exactamente d. Para N>=2, p_0=1,p_1=u, por lo que A_N(0)=1/2. La derivación no se basa en signos numéricos de un polinomio grande.
+Thus each coefficient of A_N is >=(s−u)p_j=p_j/2>0; the last one is sp_d>0. Its degree is exactly d. For N>=2, p_0=1,p_1=u, so A_N(0)=1/2. The derivation does not rely on numerical signs of a large polynomial.
 
-## 3. Dominación de TODA la suma de Möbius
+## 3. Domination of the WHOLE Möbius sum
 
-Si A es un polinomio de grado d con coeficientes no negativos y t>0,l>=0,
+If A is a polynomial of degree d with nonnegative coefficients and t>0,l>=0,
 
     A(t+l)/A(t)<=(1+l/t)^d<=exp(dl/t).
 
-Se aplica término a término a los monomios; no se supone monotonía de las derivadas de un inverso. La serie completa se escribe
+It is applied term by term to the monomials; no monotonicity of the derivatives of an inverse is assumed. The complete series is written
 
     h_N(x)/H_N(x)
        =1+Σ(m>=2)mu(m)m^-32
                      A_N(logx+logm)/A_N(logx).
 
-Para logx>=d/30, el cociente de polinomios es <=m^30. Como |mu(m)|<=1,
+For logx>=d/30, the polynomial quotient is <=m^30. Since |mu(m)|<=1,
 
     |h_N(x)/H_N(x)−1|
        <=Σ(m>=2)m^-2
        <=1/4+∫_2^infinito t^-2dt=3/4.
 
-Esto prueba OUTER y controla la cola COMPLETA antes de extraer el signo. No se utiliza el signo de ningún prefijo Möbius. Más generalmente, si q=32−d/logx>1, la misma prueba da
+This proves OUTER and controls the COMPLETE tail before extracting the sign. The sign of no Möbius prefix is used. More generally, if q=32−d/logx>1, the same proof gives
 
     |h_N/H_N−1|<=2^-q[1+2/(q−1)].                      (RANGE)
 
-La elección q>=2 produce el umbral simple de OUTER.
+The choice q>=2 produces the simple threshold of OUTER.
 
-## 4. Estructura global y caso N=2
+## 4. Global structure and the case N=2
 
-Expandiendo el polinomio finito A_N dentro de la serie absolutamente convergente, h_N(x)=x^-33 tildeA_N(logx), donde tildeA_N es un polinomio de grado d. Su coeficiente principal es el de A_N dividido por zeta(32), estrictamente positivo, pues Σmu(m)m^-32=1/zeta(32). En particular h_N tiene a lo sumo d raíces positivas en la coordenada logx; OUTER además da una ubicación uniforme explícita de todas las posibles regiones negativas.
+Expanding the finite polynomial A_N inside the absolutely convergent series, h_N(x)=x^-33 tildeA_N(logx), where tildeA_N is a polynomial of degree d. Its leading coefficient is that of A_N divided by zeta(32), strictly positive, since Σmu(m)m^-32=1/zeta(32). In particular h_N has at most d positive roots in the coordinate logx; OUTER moreover gives an explicit uniform location of all possible negative regions.
 
-Para N=2, P_2(t)=1+ut y
+For N=2, P_2(t)=1+ut and
 
     A_2(t)=1/2+1008t.
 
-Con M(s)=1/zeta(s), D(s)=Σ(q>=2)Lambda(q)q^-s, se cumple M'=DM. Así la suma COMPLETA se evalúa exactamente:
+With M(s)=1/zeta(s), D(s)=Σ(q>=2)Lambda(q)q^-s, one has M'=DM. Thus the COMPLETE sum is evaluated exactly:
 
     h_2(x)=x^-33/zeta(32)
                  [1/2+1008logx−1008D(32)].             (H2)
 
-La cota elemental Lambda(q)<=q y comparación integral dan
+The elementary bound Lambda(q)<=q and integral comparison give
 
     0<D(32)<=Σ(q>=2)q^-31
          <=2^-31(1+2/30),
     1008·2^-31(1+2/30)<1/4.
 
-Por H2, h_2(x)>x^-33[1/4+1008logx]/zeta(32)>=H_2(x)/[2zeta(32)]. Finalmente zeta(32)<2, por la misma cota de series positivas. Queda probado ROW2 sin descartar términos de la suma.
+By H2, h_2(x)>x^-33[1/4+1008logx]/zeta(32)>=H_2(x)/[2zeta(32)]. Finally zeta(32)<2, by the same bound for positive series. ROW2 is proved without discarding terms of the sum.
 
-La existencia de prefijos negativos para N grande en019 es compatible con ROW2 y OUTER: son afirmaciones de N y regiones distintos. No se ha probado aquí que h_N completo sea negativo en ningún punto.
+The existence of negative prefixes for large N in019 is compatible with ROW2 and OUTER: they are statements about different N and regions. It has not been proved here that the complete h_N is negative at any point.
 
-## 5. Parte negativa localizada y cola favorable del emparejamiento
+## 5. Localized negative part and favorable tail of the pairing
 
-Sea X_N=exp((N−1)/30), y B(x) el agrupamiento negativo de019. Allí se probó B(x)<=−a0(x−1), a0=1−log2>0, y F_N=2∫h_N B. Por OUTER,
+Let X_N=exp((N−1)/30), and B(x) the negative grouping of019. There it was proved that B(x)<=−a0(x−1), a0=1−log2>0, and F_N=2∫h_N B. By OUTER,
 
     F_N <=2∫_1^X_N h_N(x)B(x)dx
                 −(a0/2)∫_X_N^infinito H_N(x)(x−1)dx.   (LOCAL)
 
-La cola de LOCAL es favorable y explícita. Escribiendo w_N(x)=x^-1/2 C_N(logx), integración por partes da
+The tail of LOCAL is favorable and explicit. Writing w_N(x)=x^-1/2 C_N(logx), integration by parts gives
 
     ∫_X^infinito H_N(x)(x−1)dx
        =[(X−1)w_N(X)+∫_X^infinito w_N(x)dx]/C_N(0).
 
-Las integrales restantes son incompletas gamma de un polinomio por exponencial conocido, sin suma aritmética. El término adverso h_N^- emparejado con −B está rigurosamente restringido al intervalo finito[1,X_N]. Esto NO es aún una cota que lo compense: queda estimar unilateralmente ese emparejamiento interior.
+The remaining integrals are incomplete gammas of a known polynomial times exponential, with no arithmetic sum. The adverse term h_N^- paired with −B is rigorously restricted to the finite interval[1,X_N]. This is NOT yet a bound that compensates it: the one-sided estimate of that interior pairing remains.
 
-## 6. Resultado y alcance
+## 6. Result and scope
 
-Se estableció signo del kernel inverso COMPLETO en una región infinita explícita para todos N, y en toda la semirrecta para N=2. No se deduce positividad de h_N en todo x para todos N, ni el signo de ERR de la fila completa. ROW2 aporta una propiedad del kernel; aun F_N<=0 no compensaría automáticamente el déficit de Arch_sharp. La contribución que falta está localizada por LOCAL y debe conservar su signo aritmético.
+The sign of the COMPLETE inverse kernel was established on an explicit infinite region for all N, and on the whole half-line for N=2. Positivity of h_N for all x and all N is not deduced, nor the sign of ERR for the complete row. ROW2 contributes a property of the kernel; even F_N<=0 would not automatically compensate the deficit of Arch_sharp. The missing contribution is localized by LOCAL and must preserve its arithmetic sign.

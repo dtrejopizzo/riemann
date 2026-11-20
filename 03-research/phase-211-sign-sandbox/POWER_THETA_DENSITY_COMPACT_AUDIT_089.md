@@ -1,43 +1,43 @@
-# POWER_THETA_DENSITY_COMPACT_AUDIT_089 — Auditoría independiente
+# POWER_THETA_DENSITY_COMPACT_AUDIT_089 — Independent audit
 
-Estado: **APROBADO / PROVED con constructor40406 exit0/FULL PASS** de las dos ramas. Reproducción independiente root87911 exit0/FULL PASS1024origen+8192resto y mismo hash; no se duplicó innecesariamente. Fuente `POWER_THETA_DENSITY_COMPACT_089.md` completa y código final leídos; diseño y literal auditados ANTES de ejecutar. Hash comprobado localmente:
+Status: **APPROVED / PROVED with run 40406 exit0/FULL PASS** of the two branches. Independent reproduction 87911 exit0/FULL PASS 1024 origin + 8192 remainder and same hash; not duplicated unnecessarily. Source `POWER_THETA_DENSITY_COMPACT_089.md` complete and final code read; design and literal code audited BEFORE running. Hash checked locally:
 
     995ef292abf5a80a3d195b4e68a815e1b56f9b343531bc1c0786af682413d1aa
 
-Papers intactos.
+Papers untouched.
 
-## 1. Dos dominios y puente
+## 1. Two domains and bridge
 
-rho=tPhi(1,A,B,C); enlambda=t²,Psi=rho/t. La multiplicación común port y el cambio de variable de un Wronskiano4 dan EXACTAMENTE K=Wt(rho)=t4(2t)^6Wlambda(Psi)=64t10Wlambda(Psi). Así origenlambda[0,1/256] y restantet[1/16,1] cubren0<t<=1 sin hueco y evitan dividir por cantidades pequeñas.
+rho=tPhi(1,A,B,C); in lambda=t², Psi=rho/t. The common multiplication by t and the change of variable of a 4-Wronskian give EXACTLY K=Wt(rho)=t4(2t)^6Wlambda(Psi)=64t10Wlambda(Psi). Thus origin lambda [0,1/256] and remainder t [1/16,1] cover 0<t<=1 without gap and avoid dividing by small quantities.
 
-Las expresiones Psi=(phi,6phi'+4lambda phi'',−2phi',−12phi''−8lambda phi''') son correctas. Se usa phi=Phi(sqrtlambda) SIN normalizar; el signo no necesita dividir porPhi0.
+The expressions Psi=(phi,6phi'+4lambda phi'',−2phi',−12phi''−8lambda phi''') are correct. phi=Phi(sqrtlambda) is used WITHOUT normalizing; the sign does not need division by Phi0.
 
-## 2. Mayorantes analíticos y colas completas
+## 2. Analytic majorants and complete tails
 
-Las comparaciones complejas exp/cos de la fuente pagan |Phi_m|<152m4·4^−m² en|t|<=1/4, con suma geométrica<1000. Paridad holomorfa delPhi COMPLETO da phi holomorfa en el disco de lambda. Las cotas de sus derivadas por Cauchy, columnas dePsi y determinante24términos danB1e48 en|lambda|<=1/32. La cota redondeada de columnas ya basta; se corrigió un error de exponente del auditor durante el diseño, sin cambiar los parámetros del constructor.
+The complex exp/cos comparisons of the source pay for |Phi_m|<152m4·4^−m² on |t|<=1/4, with geometric sum <1000. Holomorphic parity of the COMPLETE Phi gives phi holomorphic on the lambda disc. The Cauchy bounds on its derivatives, the columns of Psi and the 24-term determinant give B 1e48 on |lambda|<=1/32. The rounded column bound already suffices; an exponent error in the audit was corrected during design, without changing the parameters of the certificate.
 
-Para la rama restante, los discos de radio1/32 alrededor de t∈[1/16,1] dan |Phi_m|<4288m4·8^−m² y |Phi|<10000. En discos interiores1/64 se obtienenp_k=10000k!64^k. Las columnas rawrho requieren como máximo(2p3+3p2,2p5+5p4,p4,p6); su producto24 es3936828360292381907930506017700508073984000000000000000000<1e60, reproducido conFraction.
+For the remaining branch, the discs of radius 1/32 around t∈[1/16,1] give |Phi_m|<4288m4·8^−m² and |Phi|<10000. On inner discs 1/64 one obtains p_k=10000k!64^k. The raw rho columns require at most (2p3+3p2,2p5+5p4,p4,p6); their 24-fold product is 3936828360292381907930506017700508073984000000000000000000<1e60, reproduced with Fraction.
 
-Las colas m>=17 se pagan COMPLETAS por304·17⁴/4²⁸⁹ y8576·17⁴/8²⁸⁹, respectivamente. Sus razones son<1/2. Los errores de TODOS los coeficientes se acotan por epsilon32^k usando discos centrados de radio1/32 contenidos en el dominio complejo mayor. Se incorporan ANTES de derivarPsi/rho, no sólo al determinantefinal. La cola theta y la cola deTaylor del determinante son errores distintos y ambos están incluidos.
+The tails m>=17 are paid COMPLETELY by 304·17⁴/4²⁸⁹ and 8576·17⁴/8²⁸⁹, respectively. Their ratios are <1/2. The errors of ALL coefficients are bounded by epsilon32^k using centred discs of radius 1/32 contained in the larger complex domain. They are incorporated BEFORE differentiating Psi/rho, not only in the final determinant. The theta tail and the Taylor tail of the determinant are distinct errors and both are included.
 
-Los restos finales son1e48(1/8192)^17/(1−1/8192)<1e−18 y1e60(15/4096)^41/(1−15/4096)<1e−39; comprobados porFraction exacta. No se usan funciones muestreadas para pagar puntos intermedios.
+The final remainders are 1e48(1/8192)^17/(1−1/8192)<1e−18 and 1e60(15/4096)^41/(1−15/4096)<1e−39; checked by exact Fraction. No sampled functions are used to pay for intermediate points.
 
-## 3. Literal y ejecución
+## 3. Literal code and execution
 
-ORIGIN:1024bits/cap23,1024panelesdyádicoslambda, evenpartial16=[Phi16(sqrtlambda)+Phi16(−sqrtlambda)]/2. La simetrización es indispensable porque un parcialtheta NOespar. Loscentros son positivos y susqrtformal válida. Se añaden errorescoef0..22; seisderivadasmáximas dejanWprec>=17.
+ORIGIN: 1024 bits/cap 23, 1024 dyadic lambda panels, evenpartial16=[Phi16(sqrtlambda)+Phi16(−sqrtlambda)]/2. The symmetrization is indispensable because a theta partial sum is NOT even. The centres are positive and their formal sqrt valid. Coefficient errors 0..22 are added; six maximal derivatives leave Wprec>=17.
 
-REST:512bits/cap47,8192panelesdyádicost, Phi16directa conerrorescoef0..46;Wprec>=41. Los dosdeterminantes se calculan por seisproductos2x2 sin divisiones. SignoLaplace(−1)^(i+j+1) correcto. Todos los coeficientes necesarios deben ser finitos; el bound superiorN0+sum|Nk|h^k+resto debe ser estrictamente negativo. Ambos dominios/extremos están cubiertos con centros/radios exactos.
+REST: 512 bits/cap 47, 8192 dyadic t panels, Phi16 direct with coefficient errors 0..46; Wprec>=41. The two determinants are computed by six 2x2 products without divisions. Laplace sign (−1)^(i+j+1) correct. All necessary coefficients must be finite; the upper bound N0+sum|Nk|h^k+remainder must be strictly negative. Both domains/endpoints are covered with exact centres/radii.
 
-Diseño, mallas, precisiones, modos y grados quedaron auditados y fijados antes del único proceso constructor40406. Terminó exit0/FULL PASS1024origen y8192resto; sinFAILni ajuste. El script no se modificó y hash arriba coincide localmente. No se ejecutó una copia adicional innecesaria mientrasrootreproduce.
+Design, meshes, precisions, modes and degrees were audited and fixed before the single process 40406. It finished exit0/FULL PASS 1024 origin and 8192 remainder; no FAIL or adjustment. The script was not modified and the hash above matches locally. No unnecessary additional copy was run while the independent reproduction was in progress.
 
-## 4. Transporte global REAL-R
+## 4. Global REAL-R transport
 
-Leída y aprobada la sección8 final de la fuente. Un desarrollo independiente está en `POWER_THETA_DENSITY_TRANSPORT_089.md`. BRIDGE+certificados+088 dan Wt(1,A,B,C)<0 paraTODOt>0. El orden correctoECT es[1,B,A,C], conWronskianos1,B'>0,(B')²J>0,−Woriginal>0. No se presupone A'>0. Rolle en la coordenadaB prueba el determinante de densidades original estrictamente negativo paraTODOSlos cuatro nodos.
+Read and approved the final section 8 of the source. An independent development is in `POWER_THETA_DENSITY_TRANSPORT_089.md`. BRIDGE+certificates+088 give Wt(1,A,B,C)<0 for ALL t>0. The correct ECT order is [1,B,A,C], with Wronskians 1, B'>0, (B')²J>0, −W original>0. A'>0 is not presupposed. Rolle in the coordinate B proves the original density determinant strictly negative for ALL four nodes.
 
-El kernelL=sinh(sqrtlambda t)/sqrtlambda esTP4 también enfilasconfluentes: seriepositiva,Cauchy–Binet,monomiales y término0..3estricto. Integración bilateralporpartes conserva losbordes;Andreief admite densidadesfirmadas porque cada término es absolutamente integrable por supercolas. F=(Z'/u,uZ',Z,u²Z)=F0(1,lambda,R,lambdaR), F0>0; la versiónconfluente da W(F)<0, exactamente−F0⁴T_R. Por tanto T_R>0 PUNTUALMENTE enTODOlambda>0, no sólo una desigualdad débil dejet.
+The kernel L=sinh(sqrtlambda t)/sqrtlambda is TP4 also in confluent rows: positive series, Cauchy–Binet, monomials and strict term 0..3. Two-sided integration by parts keeps the boundary terms; Andreief admits signed densities because each term is absolutely integrable by the supertails. F=(Z'/u,uZ',Z,u²Z)=F0(1,lambda,R,lambdaR), F0>0; the confluent version gives W(F)<0, exactly −F0⁴T_R. Therefore T_R>0 POINTWISE at ALL lambda>0, not only a weak jet inequality.
 
-## 5. Consecuencias y límites
+## 5. Consequences and limits
 
-090 deja de necesitar un inputthetaglobal no probado: T_Rglobal aplica sulemasecante y da h=1/bstrictconcava enTODOx>0. Junto086g_*=xbstrictconcava y078, se prueban todos los pares distintosdelkernelGp paraTODOp>0, incluidosremovibles. Esto permiteGp'negativa yno contradice081.
+090 no longer needs an unproved global theta input: global T_R applies its secant lemma and gives h=1/b strictly concave at ALL x>0. Together with 086 g_*=xb strictly concave and 078, all distinct pairs of the kernel Gp are proved for ALL p>0, including removable ones. This allows negative Gp' and does not contradict 081.
 
-No se descarga la otra curvatura recíproca delresto ni Turánsuposterior, noherenciageneralSchur. NoS4transporteglobal, cinco/todoslosórdenes,T oWnuevarespecto085. El resultado estructuralGLOBAL-R4/T_Rglobal no elimina sus antecedentescertificados: es independiente delcertificado085 enparámetrou, pero depende073/077/086/088 más elcertificadofijo089.
+The other reciprocal curvature of the remainder and its subsequent Turán inequality are not discharged, nor general Schur inheritance. No global S4 transport, five/all orders, T or new W relative to 085. The structural result GLOBAL-R4/global T_R does not eliminate its certified antecedents: it is independent of the certificate 085 in the parameter u, but depends on 073/077/086/088 plus the fixed certificate 089.

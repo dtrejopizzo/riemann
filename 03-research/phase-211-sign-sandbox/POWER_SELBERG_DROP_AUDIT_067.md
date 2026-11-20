@@ -1,25 +1,25 @@
 # POWER_SELBERG_DROP_AUDIT_067
 
-Estado: **APROBADO** POWER_SELBERG_DROP_OBSTRUCTION_067, tras lectura íntegra de seis secciones. Prueba analítica que reutiliza el certificado061; no requiere repetir cómputos. Papers intactos.
+Status: **APPROVED** POWER_SELBERG_DROP_OBSTRUCTION_067, after reading all six sections in full. Analytic proof that reuses the certificate061; it does not require repeating computations. Papers untouched.
 
-Se cotejaron índice/grid/crucigrama, ROUND_023_A, STATE055, GAMMA_BALANCE030 y DECISION061 con su auditoría.055 ya contenía S=U−V y el criterio más fuerte W>=2V, sin decidir su falsedad. El nuevo dato posterior061 permite decidir ese criterio en el MISMO átomo129, no en un test modificado.
+Cross-checked index/grid/crossword, ROUND_023_A, STATE055, GAMMA_BALANCE030 and DECISION061 with its audit.055 already contained S=U−V and the stronger criterion W>=2V, without deciding its falsity. The new later datum061 allows deciding that criterion on the SAME atom129, not on a modified test.
 
-## Identidad y convergencia
+## Identity and convergence
 
-Las definiciones S,U,V usan rho=c_g/c0; ARCH y POLAR se dividen por ese mismo c0. La identidad aritmética Lambda·log+Lambda*Lambda=mu*log², dividida por logm y multiplicada por m^−1/2 rho(logm), da exactamente S=U−V. Todas las sumas son absolutamente convergentes: la función gamma aporta m^−31.5 por un polinomio en logm y basta el majorante elemental m log²m para los coeficientes de convolución. No se usa positividad de un supuesto cuadrado de operador ni un reordenamiento no absolutamente convergente.
+The definitions S,U,V use rho=c_g/c0; ARCH and POLAR are divided by the same c0. The arithmetic identity Lambda·log+Lambda*Lambda=mu*log², divided by logm and multiplied by m^−1/2 rho(logm), gives exactly S=U−V. All sums are absolutely convergent: the gamma function contributes m^−31.5 times a polynomial in logm and the elementary majorant m log²m suffices for the convolution coefficients. No positivity of a supposed operator square nor a non-absolutely convergent rearrangement is used.
 
-Así W/c0=ARCH/c0+POLAR/c0−2U+2V, y descartar el término positivo requiere precisamente W/c0>=2V. No se presume que una identidad proporcione esa desigualdad.
+Thus W/c0=ARCH/c0+POLAR/c0−2U+2V, and discarding the positive term requires precisely W/c0>=2V. It is not presumed that an identity provides that inequality.
 
-## Lower real del término conservado
+## Real lower bound of the kept term
 
-El término m=4 tiene Lambda*Lambda(4)=(log2)² y factor1/(sqrt4·log4), de modo que aporta exactamente(log2)/4·rho(log4) aV. Los otros términos son no negativos para este gamma real.
+The term m=4 has Lambda*Lambda(4)=(log2)² and factor1/(sqrt4·log4), so it contributes exactly(log2)/4·rho(log4) toV. The other terms are nonnegative for this real gamma.
 
-La mezcla gaussiana030 da EZ=3969/2040<2. Jensen se aplica en la dirección correcta a exp(−Zt²); con log4<7/5 se obtiene rho(log4)>exp(−4)>1/81, usando e<3. Log2>2/3 implica2V>1/243. Todos los factores2 y las normalizaciones coinciden con FULL.
+The gaussian mixture030 gives EZ=3969/2040<2. Jensen is applied in the correct direction to exp(−Zt²); with log4<7/5 one obtains rho(log4)>exp(−4)>1/81, using e<3. Log2>2/3 implies2V>1/243. All factors2 and the normalizations coincide with FULL.
 
-061 certifica directamente0<W/c0<27/(2·10^11). Por tanto la forma al suprimir2V es menor que27/(2·10^11)−1/243<−1/250; la diferencia racional7/60750 supera ampliamente el upper citado deW. No se recertifica el pequeño margen mediante intervalos separados correlacionados.
+061 directly certifies0<W/c0<27/(2·10^11). Hence the form after suppressing2V is less than27/(2·10^11)−1/243<−1/250; the rational difference7/60750 widely exceeds the cited upper bound ofW. The small margin is not recertified through separate correlated intervals.
 
-## Calibración y alcance
+## Calibration and scope
 
-SiW/c0−2thetaV>=0, entonces theta<=W/(2Vc0)<6561/(2·10^11). La cota estricta y su conversión3.2805·10^−8 son correctas; theta=10^−7 la excede y hace negativo ese candidato. La afirmación sólo concierne a perder esa fracción AISLADA del aporte positivo en esta descomposición, no a toda estimación conjunta de Selberg.
+IfW/c0−2thetaV>=0, then theta<=W/(2Vc0)<6561/(2·10^11). The strict bound and its conversion3.2805·10^−8 are correct; theta=10^−7 exceeds it and makes that candidate negative. The claim only concerns losing that ISOLATED fraction of the positive contribution in this decomposition, not every joint Selberg estimate.
 
-El resultado no afirmaW negativa, no modifica la constante arquimediana, Lambda o el test, y no descarta conservar la cancelación entreU yV. No hay nuevo átomo de signo, fila, ventana temporal ni NO-GO global. La actualización del estado055 debe distinguir su antigua obligación abierta de esta refutación concreta posterior.
+The result does not claim negativeW, does not modify the archimedean constant, Lambda or the test, and does not discard keeping the cancellation betweenU andV. There is no new sign atom, row, time window nor global NO-GO. The update of the status055 must distinguish its old open obligation from this later concrete refutation.

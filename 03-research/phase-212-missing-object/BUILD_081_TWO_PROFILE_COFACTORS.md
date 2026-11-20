@@ -1,43 +1,43 @@
-# Construcción 081 — Cancelación de dos perfiles por cofactores
+# Construction 081 — Two-profile cancellation by cofactors
 
-Estado: diseño explícito, pendiente de revisión; signo global OPEN.
+Status: explicit design, pending review; global sign OPEN.
 
-Sean g0=Q(1_I M), g1=Q(1_I M′), perfiles primitivos explícitos. Sean l0=0,l1=log2,l2=log3 y U_l los desplazamientos causales comprimidos. Definir
+Let g0=Q(1_I M), g1=Q(1_I M′), explicit primitive profiles. Let l0=0,l1=log2,l2=log3 and U_l the compressed causal shifts. Define
 
     D F(t)=det [[g0(t),g1(t),F(t)],
                [U_l1 g0(t),U_l1 g1(t),U_l1 F(t)],
                [U_l2 g0(t),U_l2 g1(t),U_l2 F(t)]].
 
-El determinante es lineal en F. Expandiendo la última columna,
+The determinant is linear in F. Expanding along the last column,
 
     D F=c0 F+c1 U_l1 F+c2 U_l2 F,
     c0=(U_l1 g0)(U_l2 g1)−(U_l2 g0)(U_l1 g1),
     c1=(U_l2 g0)g1−g0(U_l2 g1),
     c2=g0(U_l1 g1)−(U_l1 g0)g1.
 
-Se tiene Dg0=Dg1=0 exactamente, incluso en nodos y degeneraciones del determinante. No se divide por ningún menor.
+One has Dg0=Dg1=0 exactly, even at nodes and degeneracies of the determinant. No minor is divided by.
 
-Definir C=Σ_{j=0}²||c_j||∞, α=1/[2(1+C)], W=α Q D Q, V=JW. Entonces ||W||<1/2 y Wg0=Wg1=0. Los perfiles y coeficientes son BV compactos; para F del núcleo suave, WF pertenece al dominio logarítmico de J.
+Define C=Σ_{j=0}²||c_j||∞, α=1/[2(1+C)], W=α Q D Q, V=JW. Then ||W||<1/2 and Wg0=Wg1=0. The profiles and coefficients are compactly supported BV; for F in the smooth core, WF belongs to the logarithmic domain of J.
 
-Para Z_jF=Q(c_j U_lj F), el cuadrado y el residuo son
+For Z_jF=Q(c_j U_lj F), the square and the residue are
 
     ||VF||²=α²Σ_{i,j=0}² b(Z_iF,Z_jF),
     ρ(F)=Arch(F)−2Re<F,LF>−α²Σ_{i,j=0}²b(Z_iF,Z_jF).
 
-No se descartan cruces. La identidad a_T=||V||²+ρ es exacta en el núcleo; no se afirma ρ≥0.
+No cross terms are discarded. The identity a_T=||V||²+ρ is exact on the core; ρ≥0 is not claimed.
 
-## Arimética y riesgo de degeneración
+## Arithmetic and degeneration risk
 
-Los retardos 2 y 3 participan juntos, pero los valores de Λ no aparecen en D. Multiplicar cada fila por un peso aritmético sólo multiplica D por el producto de los pesos. Esto no es un acoplamiento que explique el signo ni separa el reescalado de Λ. Es una limitación explícita de este diseño.
+The delays 2 and 3 take part together, but the values of Λ do not appear in D. Multiplying each row by an arithmetic weight only multiplies D by the product of the weights. This is not a coupling that explains the sign, nor does it separate the rescaling of Λ. It is an explicit limitation of this design.
 
-Si un retardo deja toda su fila fuera de I, la fila es cero y el determinante se anula. En particular para 2T≤log3 el operador D es cero. Una extracción cero no se interpreta como positividad del residuo.
+If a delay puts its whole row outside I, the row is zero and the determinant vanishes. In particular for 2T≤log3 the operator D is zero. A zero extraction is not interpreted as positivity of the residue.
 
-El diseño se ensaya para comprobar si anular dos perfiles resuelve el exceso de extracción visto en BUILD080. La anulación de una familia finita no constituye por sí sola una prueba global.
+The design is tested to check whether annihilating two profiles resolves the excess extraction seen in BUILD080. Annihilating a finite family does not by itself constitute a global proof.
 
-## Revisión y ensayo
+## Review and test
 
-Las fórmulas, signos de cofactores, anulación y dominio fueron revisados independientemente. Se precisó supp(DF)⊂(-T+log3,T). La proyección final Q puede extender el soporte, pero no cambia la anulación de los perfiles.
+The formulas, cofactor signs, annihilation and domain were checked independently. It was made precise that supp(DF)⊂(-T+log3,T). The final projection Q may extend the support, but it does not change the annihilation of the profiles.
 
-NUMÉRICO: el test par guardado T=0.8 produce ||WF||²=9.4765538142759e−5 (Gauss64), 9.4765538142757e−5 (Gauss96). La suma de supremos de cofactores fue muestreada: C≈1698.39301. No se certificaron estos supremos ni el valor guardado de la forma. Como este último es ≈5.2943e−12, el primer canal sigue siendo excesivo. La cancelación de dos perfiles no mejora este diagnóstico frente al corrector de un perfil.
+NUMERICAL: the saved even test T=0.8 gives ||WF||²=9.4765538142759e−5 (Gauss64), 9.4765538142757e−5 (Gauss96). The sum of cofactor suprema was sampled: C≈1698.39301. Neither these suprema nor the saved value of the form were certified. Since the latter is ≈5.2943e−12, the first channel is still excessive. The two-profile cancellation does not improve this diagnosis compared with the one-profile corrector.
 
-No se propone resolverlo aumentando mecánicamente el número de perfiles. La lección del ensayo es que anular perfiles explícitos por separado no reproduce necesariamente las cancelaciones del vector casi nulo. Una suma coherente sobre pares de retardos conservaría cruces entre pares, a diferencia de sumar sus normas, pero no se ha escrito aún una elección de coeficientes que firme el residuo.
+It is not proposed to resolve this by mechanically increasing the number of profiles. The lesson of the test is that annihilating explicit profiles separately does not necessarily reproduce the cancellations of the near-null vector. A coherent sum over pairs of delays would keep cross terms between pairs, unlike summing their norms, but a choice of coefficients that signs the residue has not yet been written.

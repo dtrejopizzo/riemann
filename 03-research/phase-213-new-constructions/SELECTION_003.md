@@ -1,39 +1,39 @@
-# Selección: agrupación theta por sumas de dos cuadrados
+# Selection: theta grouping by sums of two squares
 
-Estado: selección detenida; cotejo independiente completado. Sin construcción ni resultado nuevo de signo.
+Status: selection stopped; independent cross-check completed. No construction nor new sign result.
 
-## Cotejo
+## Cross-check
 
-Se consideró agrupar los pares de la expansión bilineal theta por N=m²+n²,
-conservando todas las representaciones, la dependencia angular y los cruces.
-No se propuso positividad de cada grupo por separado.
+Grouping the pairs of the bilinear theta expansion by N=m²+n² was considered,
+keeping all representations, the angular dependence and the crossings.
+Positivity of each group separately was not proposed.
 
-Antecedente principal: `../phase-211-sign-sandbox/POWER_GLOBAL_ROUTE_REVIEW.md`,
-«Cotejo posterior de paridad y modularidad». Allí la expansión del producto completo
-conserva los cruces y el factor firmado, pero no da una desigualdad conjunta.
-El índice maestro §1.18 registra esa selección.
+Main antecedent: `../phase-211-sign-sandbox/POWER_GLOBAL_ROUTE_REVIEW.md`,
+«Cotejo posterior de paridad y modularidad». There the expansion of the complete product
+keeps the crossings and the signed factor, but does not give a joint inequality.
+The master index §1.18 records that selection.
 
-`../phase-211-sign-sandbox/POWER_GRAM_SLICES_OBSTRUCTION.md` ya usa
-Q=n²+m² junto con d=n²−m² en el análisis de borde, y §19.2, (POLY-QB),
-contiene una expansión con exp[−π(n²+m²)t] y factores que dependen de ambos índices.
-No se encontró en el cotejo dirigido una construcción literal por los grupos
-propuestos; esa ausencia no acredita novedad conceptual.
+`../phase-211-sign-sandbox/POWER_GRAM_SLICES_OBSTRUCTION.md` already uses
+Q=n²+m² together with d=n²−m² in the boundary analysis, and §19.2, (POLY-QB),
+contains an expansion with exp[−π(n²+m²)t] and factors depending on both indices.
+The targeted cross-check did not find a literal construction by the proposed
+groups; that absence does not establish conceptual novelty.
 
-## Diferencia y obligación pendiente
+## Difference and pending obligation
 
-La organización por N conserva la información si también se mantienen los índices
-de sus representaciones. No se ha identificado una operación adicional que controle
-la contribución firmada de esos datos. En particular, no se ha escrito una identidad
-positiva ni una comparación conjunta para todos los tamaños.
+The organization by N preserves the information if the indices
+of its representations are also kept. No additional operation controlling
+the signed contribution of those data has been identified. In particular, no positive
+identity nor joint comparison for all sizes has been written.
 
-GRAM §17.2 ofrece un contraste: la transformación divisorial produce (RES-SOS) en la
-parte resonante mediante una operación explícita, pero no firma el resto (§17.6).
-Reagrupar los pares no aporta por sí mismo ese control faltante.
+GRAM §17.2 offers a contrast: the divisorial transformation produces (RES-SOS) in the
+resonant part through an explicit operation, but does not sign the remainder (§17.6).
+Regrouping the pairs does not by itself provide that missing control.
 
-## Resultado
+## Result
 
-La propuesta no pasa el filtro previo y se detiene sin derivaciones ni cálculos.
-No es un NO-GO universal, no refuta la forma completa y no excluye una futura
-compensación angular explícita entre grupos. Reabrir exige escribir esa operación
-y explicar cómo evita la dificultad del antecedente, antes de desarrollar pruebas.
-Positividad global OPEN; papers intactos.
+The proposal does not pass the prior filter and is stopped without derivations or computations.
+It is not a universal NO-GO, it does not refute the complete form and it does not exclude a future
+explicit angular compensation between groups. Reopening requires writing that operation
+and explaining how it avoids the difficulty of the antecedent, before developing proofs.
+Global positivity OPEN; papers untouched.

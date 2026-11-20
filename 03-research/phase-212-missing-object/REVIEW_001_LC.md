@@ -1,369 +1,369 @@
-# REVIEW_001_LC — Revisión hostil de ROUND_001_L y ROUND_001_C
+# REVIEW_001_LC — Critical review of ROUND_001_L and ROUND_001_C
 
-Alcance: lectura línea a línea de las dos memos, derivación propia de cada paso, cotejo de las citas
-contra `../phase-211-sign-sandbox/` (STATEMENT_001, POWER_CONE_001, POWER_BRIDGE_002,
-POWER_GRAM_SLICES_OBSTRUCTION §§17.2–17.5, 18.1–18.4, 18.7; POWER_GLOBAL_ROUTE_REVIEW «Comparador
-asinh», «Comparaciones primitivas», «Comparación hiperbólica pequeña», «Cierre…», «Filtro general
-reutilizable», «Extensión factorial…», «Escalas libres de cuadrados…»; POWER_HYPERBOLIC_MODEL_GRAM §4),
-búsqueda en el índice de rutas, el grid y `RULES_AVOID.md`, y caza de contraejemplos. Ningún archivo
-existente fue modificado. Etiquetas: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMÉRICO.
+Scope: line-by-line reading of the two memos, independent derivation of each step, cross-check of the citations
+against `../phase-211-sign-sandbox/` (STATEMENT_001, POWER_CONE_001, POWER_BRIDGE_002,
+POWER_GRAM_SLICES_OBSTRUCTION §§17.2–17.5, 18.1–18.4, 18.7; POWER_GLOBAL_ROUTE_REVIEW "asinh
+comparator", "Primitive comparisons", "Small hyperbolic comparison", "Closure…", "Reusable general
+filter", "Factorial extension…", "Squarefree scales…"; POWER_HYPERBOLIC_MODEL_GRAM §4),
+search in the routes index, the grid and `RULES_AVOID.md`, and a hunt for counterexamples. No
+existing file was modified. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 
-Resumen de veredictos.
+Summary of verdicts.
 
-| Memo | Veredicto | Error matemático en el núcleo | Corrección necesaria |
+| Memo | Verdict | Mathematical error in the core | Correction needed |
 |---|---|---|---|
-| ROUND_001_L | ACCEPT with corrections | ninguno hallado | etiquetas de §6.3(a) y §9; alcance real del corolario asinh; no efectividad; redacción de sandbox |
-| ROUND_001_C | ACCEPT with corrections | ninguno en Lema 1, (R0), (R1), (R2) nodos | laguna en la versión de modos; tres sobre-enunciados; novedad menor que la declarada |
+| ROUND_001_L | ACCEPT with corrections | none found | labels of §6.3(a) and §9; actual scope of the asinh corollary; non-effectiveness; sandbox wording |
+| ROUND_001_C | ACCEPT with corrections | none in Lemma 1, (R0), (R1), (R2) nodes | gap in the modes version; three overstatements; novelty smaller than declared |
 
 ---
 
-## Parte I — ROUND_001_L
+## Part I — ROUND_001_L
 
-### I.1 Verificación paso a paso (derivaciones propias)
+### I.1 Step-by-step verification (independent derivations)
 
-- **F2.** H par y real en ℝ ⟹ H(iτ) real ⟹ H′(iτ) ∈ iℝ ⟹ Re M(iτ) = 0 fuera de los polos. Correcto.
-- **F4.** Rehecha: para Re z ≥ 1, |k+z| ≥ k+1 da |ψ(z)+γ| ≤ (π²/6)|z−1|; con Re a ≥ 2,
-  |1/a|+|1/(a−1)| ≤ 3/2. (b) correcto; (a) correcto.
-- **C1.** Normalización comprobada: Re 1/(σ+i(τ−s)) = σ/(σ²+(τ−s)²), integral π; un átomo de masa m en
-  τ da m/(u−iτ), es decir residuo = masa. Coherente con el Paso 2 (masa r_k) y con 2u/(u²+τ²) por par.
-- **C2.** Teorema de Pick en Π, nodos arbitrarios de Π (los reales incluidos). La identidad de
-  transporte al disco fue recomputada:
-  1 − S(u)conj S(v) = 2(F(u)+conj F(v))/[(F(u)+1)conj(F(v)+1)] y análoga para z; el cociente es el
-  escrito. Re w_i ≥ 0 garantiza w_i ≠ −1. El caso S unimodular constante (F constante imaginaria) no
-  rompe nada. Correcto.
-- **C3 y Lema 1.2.** Condición de Blaschke de Π para ceros de una función de tipo acotado:
-  Σ Re u_n/(1+|u_n|²) < ∞. Para la escalera, Σ (31.5+n)/(1+(31.5+n)²) = ∞; trasladada al semiplano
-  Re u > 3/2 sigue divergiendo. Correcto. La clase en juego es la correcta: F y M0 son real-positivas
-  (luego de tipo acotado), y M es de tipo acotado en Re u > 3/2 porque M = [M/(u+1)]/[1/(u+1)] con
-  ambos factores acotados (F4(b)). No se necesita que M sea real-positiva para la unicidad: bien.
-- **Lema 1.3.** Montel + C2; el límite S cumple S(x_j) ≠ 1. Correcto. Caso no numerable: correcto.
-- **Teorema 2.1.** Correcto (requiere sólo que M sea finita en X; lo es, F1).
-- **Teorema 3.1, Paso 1.** G = M − εM0 − F es de tipo acotado en Re u > 3/2 y se anula en un conjunto
-  que viola Blaschke ⟹ G ≡ 0 allí ⟹ identidad meromorfa en Π. Correcto. **Paso 2.** Inversión de
-  Stieltjes con F2: fuera de los polos la densidad límite es 0; en un polo
-  (1/π)∫φ·r_kσ/(σ²+(τ−τ_k)²)dτ → r_kφ(τ_k). Correcto; c_M = 0 por F4(a). **Paso 3.** Unicidad de la
-  terna de Herglotz ⟹ c_0 = c_F = 0, εμ_0 ≤ μ_M. Correcto.
-- **Corolario 4.1.** Contrarrecíproco exacto del Teorema 3.1; lógicamente incondicional. Correcto.
-- **Proposición 4.2.** Correcta; CONDITIONAL bien puesta.
-- **§6.2.** REP de 211/HYP §4 dice exactamente M_a(u)/u = ½Tr(H_a+u²/4)^{-1}, con Tr R_x ≤ 1/(2a);
-  de ahí M_a = Σ_k 2u/(u²+ω_k²), ω_k = 2√λ_k. Correcto.
-- **§6.3.** El Gram real de los resolventes (u − 2i√H)^{-1} es Σ_k[1/((u−iω_k)(v+iω_k)) + c.c.], que es
-  el Lema 1.1 para μ_a; U_Phi = Σ_k G(ω_k)·(proyector k). La condición «U_Phi = 0» y «todo iω_k es polo
-  de M» coinciden. Correcto. **NUMÉRICO** (comprobación puntual, mpmath 30 dígitos): primer cero en ν
-  de K_{iν}(2π) en ν₁ = 9.768770…, ω₁ = 19.53754… ∈ [17, 41/2], coherente con la localización de 211.
-- **§6.4.** sinh aplica {Re w > 0, |Im w| < π/2} biyectivamente sobre Π; M_0 = ½asinh(u/4π) es
-  real-positiva, c_0 = 0, y en el borde Re M_0(iτ) = ½arccosh(|τ|/4π) > 0 para |τ| > 4π: densidad
-  (1/2π)arccosh. (E2) se cumple. Correcto.
-- **§7.1.** Complemento de Schur: K − g⊗g/K(w,w) ⪰ 0 si K ⪰ 0. Correcto.
-- **Circularidad.** No hay: ni el Teorema 3.1 ni el Cor. 4.1 suponen el signo de K_M. Lo que sí ocurre
-  (y la memo lo dice) es que la hipótesis del Teorema 3.1 contiene ese signo.
+- **F2.** H even and real on ℝ ⟹ H(iτ) real ⟹ H′(iτ) ∈ iℝ ⟹ Re M(iτ) = 0 away from the poles. Correct.
+- **F4.** Redone: for Re z ≥ 1, |k+z| ≥ k+1 gives |ψ(z)+γ| ≤ (π²/6)|z−1|; with Re a ≥ 2,
+  |1/a|+|1/(a−1)| ≤ 3/2. (b) correct; (a) correct.
+- **C1.** Normalization checked: Re 1/(σ+i(τ−s)) = σ/(σ²+(τ−s)²), integral π; an atom of mass m at
+  τ gives m/(u−iτ), i.e. residue = mass. Consistent with Step 2 (mass r_k) and with 2u/(u²+τ²) per pair.
+- **C2.** Pick's theorem on Π, arbitrary nodes of Π (real ones included). The transport identity
+  to the disc was recomputed:
+  1 − S(u)conj S(v) = 2(F(u)+conj F(v))/[(F(u)+1)conj(F(v)+1)] and analogously for z; the quotient is the one
+  written. Re w_i ≥ 0 guarantees w_i ≠ −1. The case of constant unimodular S (F constant imaginary) does not
+  break anything. Correct.
+- **C3 and Lemma 1.2.** Blaschke condition on Π for zeros of a function of bounded type:
+  Σ Re u_n/(1+|u_n|²) < ∞. For the ladder, Σ (31.5+n)/(1+(31.5+n)²) = ∞; transported to the half-plane
+  Re u > 3/2 it still diverges. Correct. The class at stake is the right one: F and M0 are positive-real
+  (hence of bounded type), and M is of bounded type on Re u > 3/2 because M = [M/(u+1)]/[1/(u+1)] with
+  both factors bounded (F4(b)). M need not be positive-real for uniqueness: good.
+- **Lemma 1.3.** Montel + C2; the limit S satisfies S(x_j) ≠ 1. Correct. Uncountable case: correct.
+- **Theorem 2.1.** Correct (requires only that M be finite on X; it is, F1).
+- **Theorem 3.1, Step 1.** G = M − εM0 − F is of bounded type on Re u > 3/2 and vanishes on a set
+  violating Blaschke ⟹ G ≡ 0 there ⟹ meromorphic identity on Π. Correct. **Step 2.** Stieltjes
+  inversion with F2: away from the poles the limit density is 0; at a pole
+  (1/π)∫φ·r_kσ/(σ²+(τ−τ_k)²)dτ → r_kφ(τ_k). Correct; c_M = 0 by F4(a). **Step 3.** Uniqueness of the
+  Herglotz triple ⟹ c_0 = c_F = 0, εμ_0 ≤ μ_M. Correct.
+- **Corollary 4.1.** Exact contrapositive of Theorem 3.1; logically unconditional. Correct.
+- **Proposition 4.2.** Correct; CONDITIONAL properly placed.
+- **§6.2.** REP of 211/HYP §4 says exactly M_a(u)/u = ½Tr(H_a+u²/4)^{-1}, with Tr R_x ≤ 1/(2a);
+  hence M_a = Σ_k 2u/(u²+ω_k²), ω_k = 2√λ_k. Correct.
+- **§6.3.** The real Gram of the resolvents (u − 2i√H)^{-1} is Σ_k[1/((u−iω_k)(v+iω_k)) + c.c.], which is
+  Lemma 1.1 for μ_a; U_Phi = Σ_k G(ω_k)·(projector k). The condition "U_Phi = 0" and "every iω_k is a pole
+  of M" coincide. Correct. **NUMERICAL** (spot check, mpmath 30 digits): first zero in ν
+  of K_{iν}(2π) at ν₁ = 9.768770…, ω₁ = 19.53754… ∈ [17, 41/2], consistent with the localization of 211.
+- **§6.4.** sinh maps {Re w > 0, |Im w| < π/2} bijectively onto Π; M_0 = ½asinh(u/4π) is
+  positive-real, c_0 = 0, and on the boundary Re M_0(iτ) = ½arccosh(|τ|/4π) > 0 for |τ| > 4π: density
+  (1/2π)arccosh. (E2) holds. Correct.
+- **§7.1.** Schur complement: K − g⊗g/K(w,w) ⪰ 0 if K ⪰ 0. Correct.
+- **Circularity.** None: neither Theorem 3.1 nor Cor. 4.1 assumes the sign of K_M. What does happen
+  (and the memo says so) is that the hypothesis of Theorem 3.1 contains that sign.
 
-### I.2 Caza de contraejemplos (NUMÉRICO, juguete)
+### I.2 Counterexample hunt (NUMERICAL, toy)
 
-Juguete: M_toy(u) = π coth(πu) − 1/u = Σ_{k≥1} 2u/(u²+k²) (medida de borde atómica, masas 1 en ±k),
-nodos 1.5 + n, n < N, mínimo autovalor de K_{M_toy − εM0}, aritmética de 150–260 dígitos.
+Toy: M_toy(u) = π coth(πu) − 1/u = Σ_{k≥1} 2u/(u²+k²) (atomic boundary measure, masses 1 at ±k),
+nodes 1.5 + n, n < N, smallest eigenvalue of K_{M_toy − εM0}, arithmetic with 150–260 digits.
 
-| comparador M0 | ε | N = 4 | 8 | 16 | 32 | 48 |
+| comparator M0 | ε | N = 4 | 8 | 16 | 32 | 48 |
 |---|---|---|---|---|---|---|
-| 1/(u+1) (borde continuo) | 0.9 | 2.6e−5 | 1.9e−11 | −2.8e−16 | −1.0e−15 | −1.2e−15 |
+| 1/(u+1) (continuous boundary) | 0.9 | 2.6e−5 | 1.9e−11 | −2.8e−16 | −1.0e−15 | −1.2e−15 |
 | 1/(u+1) | 0.3 | 3.1e−5 | 2.5e−11 | 1.5e−23 | −6.6e−30 | −2.3e−29 |
-| 2u/(u²+1.5²) (átomo ajeno) | 0.5 | 2.9e−5 | 2.5e−11 | 1.6e−23 | −2.0e−36 | −2.3e−35 |
-| u (término lineal) | 0.05 | 3.0e−5 | 2.1e−11 | −2.3e−9 | −2.3e−4 | −1.1e−2 |
-| 2u/(u²+1) (átomo propio), tamaños 3–24 | 0.5 | positivo en todos | | | | |
-| 2u/(u²+1) (átomo propio), tamaños 3–24 | 1.2 | negativo desde N = 6 (≈ −7e−6) | | | | |
-| ninguno (control) | — | 3.2e−5 | 2.6e−11 | 1.8e−23 | 7.0e−48 | 2.5e−72 |
+| 2u/(u²+1.5²) (foreign atom) | 0.5 | 2.9e−5 | 2.5e−11 | 1.6e−23 | −2.0e−36 | −2.3e−35 |
+| u (linear term) | 0.05 | 3.0e−5 | 2.1e−11 | −2.3e−9 | −2.3e−4 | −1.1e−2 |
+| 2u/(u²+1) (own atom), sizes 3–24 | 0.5 | positive in all | | | | |
+| 2u/(u²+1) (own atom), sizes 3–24 | 1.2 | negative from N = 6 on (≈ −7e−6) | | | | |
+| none (control) | — | 3.2e−5 | 2.6e−11 | 1.8e−23 | 7.0e−48 | 2.5e−72 |
 
-No se halló contraejemplo; todos los casos se comportan como predicen (E1)–(E4) y la Prop. 4.2. Dato
-que la memo no dice: la violación aparece tarde y con tamaño 10⁻¹⁶–10⁻³⁶ (con ε = 0.05 no aparece
-hasta N = 24). El Cor. 4.1 **no es efectivo**: no sirve como filtro numérico en doble precisión ni da
-el tamaño del bloque.
+No counterexample was found; all cases behave as predicted by (E1)–(E4) and Prop. 4.2. A fact
+the memo does not state: the violation appears late and with size 10⁻¹⁶–10⁻³⁶ (with ε = 0.05 it does not appear
+until N = 24). Cor. 4.1 **is not effective**: it is useless as a numerical filter in double precision and does not give
+the block size.
 
-### I.3 Errores y lagunas (con ubicación)
+### I.3 Errors and gaps (with location)
 
-L-1. **§6.3, punto (a) — etiqueta inflada.** «Vale para todo a > 0 y para las variantes Robin y las
-sumas w·b·M_{a,β}(bu)» figura bajo un encabezado PROVED sin que la memo demuestre que cada variante
-es real-positiva en Π con medida de borde atómica (para Robin hace falta la REP con operador positivo
-de resolvente de traza; para las sumas, la convergencia en el sentido de C1). Etiqueta correcta:
-**ARGUED** para Robin y sumas; **PROVED** sólo para Dirichlet y todo a > 0 (REP vale para todo a).
+L-1. **§6.3, point (a) — inflated label.** "Holds for every a > 0 and for the Robin variants and the
+sums w·b·M_{a,β}(bu)" appears under a PROVED heading without the memo proving that each variant
+is positive-real on Π with atomic boundary measure (for Robin one needs the REP with a positive operator
+with trace-class resolvent; for the sums, convergence in the sense of C1). Correct label:
+**ARGUED** for Robin and sums; **PROVED** only for Dirichlet and every a > 0 (REP holds for all a).
 
-L-2. **§9, primer punto, y «Qué se probó» 7 — dependencia de certificado omitida.** «Ningún modelo
-exterior… con un átomo fuera de los polos de M (hiperbólico a = 2π) sirve, para ningún ε» es PROVED
-sólo relativo al certificado de intervalos de 211 (G < −10⁻⁸ en [17, 41/2]). La memo lo reconoce en
-§6.3 pero lo omite en §9. Etiqueta correcta: **PROVED asistido (rel. certificado de 211, CITED)**.
+L-2. **§9, first point, and "What was proved" 7 — certificate dependence omitted.** "No exterior
+model… with an atom outside the poles of M (hyperbolic a = 2π) works, for any ε" is PROVED
+only relative to the interval certificate of 211 (G < −10⁻⁸ on [17, 41/2]). The memo acknowledges it in
+§6.3 but omits it in §9. Correct label: **assisted PROVED (rel. certificate of 211, CITED)**.
 
-L-3. **Cotejo (2) y §6.4 — alcance real de la novedad del corolario asinh.** Para ε > 1 la exclusión
-es trivial y no necesita la memo: M(u) − (ε/2)asinh(u/4π) ~ ((1−ε)/2)·log u → −∞, de modo que ya un
-bloque 1×1 de la escalera es negativo. Para ε = 1 ya estaba en el corpus (certificado de jets).
-El contenido nuevo es exactamente **0 < ε < 1**. Cotejado: `RULES_AVOID.md` B4, índice README
-(entradas «comparador asinh») y grid sólo registran ε = 1; el «Filtro general reutilizable» no aplica
-(D no es o(1/u)); la no positividad con ε = 1 no implica la de ε < 1. La novedad se sostiene en ese
-rango.
+L-3. **Cross-check (2) and §6.4 — actual scope of the novelty of the asinh corollary.** For ε > 1 the exclusion
+is trivial and does not need the memo: M(u) − (ε/2)asinh(u/4π) ~ ((1−ε)/2)·log u → −∞, so that already a
+1×1 block of the ladder is negative. For ε = 1 it was already in the corpus (jet certificate).
+The new content is exactly **0 < ε < 1**. Cross-checked: `RULES_AVOID.md` B4, README index
+(entries "asinh comparator") and grid record only ε = 1; the "Reusable general filter" does not apply
+(D is not o(1/u)); non-positivity with ε = 1 does not imply that for ε < 1. The novelty holds in that
+range.
 
-L-4. **Cor. 4.1 — falta declarar la no efectividad** (I.2) y que, como herramienta, sólo informa en
-la rama en que K_M es PSD (en la otra rama el enunciado es cierto por razones triviales:
-K_M − εK_{M0} ⪯ K_M). Es lógicamente incondicional; no es información independiente del objetivo.
-No es un error, es alcance que debe constar en el registro.
+L-4. **Cor. 4.1 — non-effectiveness must be declared** (I.2), as well as the fact that, as a tool, it only informs in
+the branch where K_M is PSD (in the other branch the statement is true for trivial reasons:
+K_M − εK_{M0} ⪯ K_M). It is logically unconditional; it is not information independent of the target.
+It is not an error; it is scope that must appear in the record.
 
-L-5. **Resumen de §4, segundo punto.** «Existe uno si y sólo si M es real-positiva en Π y tiene al
-menos un polo en el eje»: la segunda cláusula es redundante. Si M es real-positiva, c_M = 0 y
-M ≢ 0 obligan μ_M ≠ 0. Enunciado correcto: existe un comparador real-positivo no nulo admisible
-⟺ M es real-positiva en Π. Menor.
+L-5. **Summary of §4, second point.** "One exists if and only if M is positive-real on Π and has at
+least one pole on the axis": the second clause is redundant. If M is positive-real, c_M = 0 and
+M ≢ 0 force μ_M ≠ 0. Correct statement: there exists an admissible nonzero positive-real comparator
+⟺ M is positive-real on Π. Minor.
 
-L-6. **Lema 1.2, frase final** («la condición es también necesaria»). (i)/(ii) no son necesarias:
-un X que sólo se acumula en 0 con Σu = ∞ también viola Blaschke en Π y da unicidad del interpolante
-F (ambas funciones son de tipo acotado en Π). Lo único que falta en ese caso es identificar M con F
-(§7.5). La frase debe decir: la condición exacta para la unicidad del interpolante es
-Σ_{u∈X} u/(1+u²) = ∞. Menor.
+L-6. **Lemma 1.2, final sentence** ("the condition is also necessary"). (i)/(ii) are not necessary:
+an X accumulating only at 0 with Σu = ∞ also violates Blaschke on Π and gives uniqueness of the interpolant
+F (both functions are of bounded type on Π). The only thing missing in that case is identifying M with F
+(§7.5). The sentence should say: the exact condition for uniqueness of the interpolant is
+Σ_{u∈X} u/(1+u²) = ∞. Minor.
 
-L-7. **Redacción de sandbox (Teorema 3.1 punto 1, Cor. 2.2, F3).** El punto 1 y el Cor. 2.2 son
-reformulaciones del objetivo en términos de la localización de los polos de M; la regla 1 del brief
-prohíbe razonar por reducción de ese tipo y B3 prohíbe registrar reformulaciones como resultado. La
-demostración no lo necesita: basta «M − εM0 se extiende a una real-positiva» y la medida de borde.
-El Cor. 2.2 no debe anotarse en el índice ni en el grid; en el registro, la conclusión se enuncia por
-la medida de borde, no por la localización de polos.
+L-7. **Sandbox wording (Theorem 3.1 point 1, Cor. 2.2, F3).** Point 1 and Cor. 2.2 are
+reformulations of the target in terms of the localization of the poles of M; rule 1 of the brief
+forbids reasoning by reduction of that type and B3 forbids recording reformulations as a result. The
+proof does not need it: "M − εM0 extends to a positive-real function" and the boundary measure suffice.
+Cor. 2.2 must not be recorded in the index or the grid; in the record, the conclusion is stated through
+the boundary measure, not through pole localization.
 
-L-8. **§7.4.** Depende del lema «Comparaciones primitivas» de 211 (CITED); cotejado: el lema pide D
-impar y real-analítica en todo ℝ y todos los bloques primitivos de un intervalo abierto de (c,∞),
-c = ½, y concluye PSD completa. La memo lo usa dentro de ese alcance (M0 con hueco de la medida
-alrededor de 0). Correcto; etiqueta CITED + PROVED adecuada.
+L-8. **§7.4.** Depends on the "Primitive comparisons" lemma of 211 (CITED); cross-checked: the lemma requires D
+odd and real-analytic on all of ℝ and all primitive blocks of an open interval of (c,∞),
+c = ½, and concludes full PSD. The memo uses it within that scope (M0 with a gap of the measure
+around 0). Correct; label CITED + PROVED appropriate.
 
-No se encontró error en el Teorema 2.1, el Teorema 3.1 ni el Cor. 4.1. El reparto
-incondicional/condicional es correcto con la precisión L-4 y la corrección L-5.
+No error was found in Theorem 2.1, Theorem 3.1 or Cor. 4.1. The
+unconditional/conditional split is correct with precision L-4 and correction L-5.
 
-### I.4 Enunciado corregido, etiqueta y alcance
+### I.4 Corrected statement, label and scope
 
-**Lema de rigidez (PROVED relativo a C1–C3, CITED).** Sea X ⊂ (0,∞) con punto de acumulación en
-(0,∞) o con Σ_{u∈X,u≥2} 1/u = ∞ (p. ej. la escalera 31.5 + n), ε > 0, y M0 real-positiva en Π, real
-en (0,∞), con datos de Herglotz (c_0, μ_0). Si K_M − εK_{M0} es PSD en todo subconjunto finito de X,
-entonces M − εM0 se extiende a una función real-positiva en Π, la medida de borde de M es
-Σ_k r_k(δ_{τ_k}+δ_{−τ_k}), c_0 = 0 y εμ_0 ≤ μ_M. Contrarrecíproco (lógicamente incondicional, no
-efectivo): si c_0 > 0, o μ_0 tiene parte continua, o un átomo fuera de {±τ_k}, o μ_0({τ_k}) > r_k/ε,
-existe un bloque finito de X con energía negativa para K_M − εK_{M0}; no se da ni el tamaño ni el
-vector.
+**Rigidity lemma (PROVED relative to C1–C3, CITED).** Let X ⊂ (0,∞) have an accumulation point in
+(0,∞) or satisfy Σ_{u∈X,u≥2} 1/u = ∞ (e.g. the ladder 31.5 + n), ε > 0, and M0 positive-real on Π, real
+on (0,∞), with Herglotz data (c_0, μ_0). If K_M − εK_{M0} is PSD on every finite subset of X,
+then M − εM0 extends to a positive-real function on Π, the boundary measure of M is
+Σ_k r_k(δ_{τ_k}+δ_{−τ_k}), c_0 = 0 and εμ_0 ≤ μ_M. Contrapositive (logically unconditional, not
+effective): if c_0 > 0, or μ_0 has a continuous part, or an atom outside {±τ_k}, or μ_0({τ_k}) > r_k/ε,
+there exists a finite block of X with negative energy for K_M − εK_{M0}; neither the size nor the
+vector is given.
 
-**Corolario asinh (PROVED rel. C1–C3).** K_M − ε·K_{½asinh(u/4π)} no es PSD en la escalera para
-ningún ε > 0. Contenido nuevo: 0 < ε < 1 (ε = 1 ya certificado en 211; ε > 1 trivial por bloques 1×1).
+**asinh corollary (PROVED rel. C1–C3).** K_M − ε·K_{½asinh(u/4π)} is not PSD on the ladder for
+any ε > 0. New content: 0 < ε < 1 (ε = 1 already certified in 211; ε > 1 trivial by 1×1 blocks).
 
-**Instancia hiperbólica (PROVED asistido, rel. certificado de 211).** Para a = 2π Dirichlet, la
-condición necesaria del lema coincide con U_Phi = 0; el cierre de 211 es la verificación de un átomo
-ajeno. Para otros a > 0 Dirichlet el lema da la condición necesaria (PROVED) pero no la exclusión sin
-un certificado por átomo. Robin y sumas: ARGUED.
+**Hyperbolic instance (assisted PROVED, rel. certificate of 211).** For a = 2π Dirichlet, the
+necessary condition of the lemma coincides with U_Phi = 0; the closure of 211 is the verification of a foreign
+atom. For other a > 0 Dirichlet the lemma gives the necessary condition (PROVED) but not the exclusion without
+a per-atom certificate. Robin and sums: ARGUED.
 
-Alcance: sólo comparadores real-positivos en el mismo portador (o tras congruencia común), dominación
-en todos los tamaños. No cubre núcleos PSD generales, congruencias no comunes, compensaciones
-conjuntas, bloques de tamaño acotado, ventana fija ni la escalera discreta primitiva (OPEN, §7.4).
-No es paso de signo.
+Scope: only positive-real comparators on the same carrier (or after a common congruence), domination
+at all sizes. It does not cover general PSD kernels, non-common congruences, joint
+compensations, blocks of bounded size, a fixed window, or the primitive discrete ladder (OPEN, §7.4).
+It is not a sign step.
 
-### I.5 Qué puede anotarse en el índice y en el grid
+### I.5 What may be recorded in the index and the grid
 
-Puede anotarse, con este texto:
+It may be recorded, with this text:
 
-> **Fase 212, comparadores real-positivos en la escalera de potencias — NO-GO con clase, PROVED
-> relativo a tres teoremas clásicos citados (representación integral de funciones real-positivas,
-> interpolación de Pick, condición de Blaschke).** `ROUND_001_L.md`, Teorema 3.1 y Cor. 4.1; revisión
-> `REVIEW_001_LC.md`. Clase: núcleos [M0(u)+M0(v)]/(u+v) con M0 real-positiva en Re u > 0 y real en
-> (0,∞), comparados con el núcleo de la escalera en el mismo portador o tras congruencia común, con
-> dominación K_M − εK_{M0} ⪰ 0 en todos los tamaños sobre la escalera 31.5 + n (o cualquier conjunto
-> de nodos con Σ1/u = ∞ o con acumulación interior). Conclusión: M0 no tiene término lineal y su
-> medida de borde está dominada por (1/ε) veces la de M, que bajo esa hipótesis es puramente atómica;
-> quedan excluidos, para el ε correspondiente, todo término lineal, toda parte continua, todo átomo
-> ajeno y toda masa mayor que r_k/ε. Consecuencia nueva: ½asinh(u/4π) queda excluido para todo
-> 0 < ε < 1 sin certificado (ε = 1 ya registrado; ε > 1 trivial). La comparación hiperbólica pequeña
-> a = 2π de 211 es una instancia (misma condición necesaria; su cierre sigue dependiendo del
-> certificado de intervalos). Exclusión no efectiva: no da bloque ni vector. No cubre núcleos PSD
-> generales, congruencias no comunes, compensaciones conjuntas, tamaños acotados, ventana fija ni la
-> escalera primitiva discreta. No aporta signo.
+> **Phase 212, positive-real comparators on the power ladder — NO-GO with class, PROVED
+> relative to three cited classical theorems (integral representation of positive-real functions,
+> Pick interpolation, Blaschke condition).** `ROUND_001_L.md`, Theorem 3.1 and Cor. 4.1; review
+> `REVIEW_001_LC.md`. Class: kernels [M0(u)+M0(v)]/(u+v) with M0 positive-real on Re u > 0 and real on
+> (0,∞), compared with the ladder kernel on the same carrier or after a common congruence, with
+> domination K_M − εK_{M0} ⪰ 0 at all sizes on the ladder 31.5 + n (or any set
+> of nodes with Σ1/u = ∞ or with interior accumulation). Conclusion: M0 has no linear term and its
+> boundary measure is dominated by (1/ε) times that of M, which under that hypothesis is purely atomic;
+> excluded, for the corresponding ε, are every linear term, every continuous part, every foreign
+> atom and every mass larger than r_k/ε. New consequence: ½asinh(u/4π) is excluded for every
+> 0 < ε < 1 without a certificate (ε = 1 already recorded; ε > 1 trivial). The small hyperbolic comparison
+> a = 2π of 211 is an instance (same necessary condition; its closure still depends on the
+> interval certificate). Non-effective exclusion: gives no block or vector. It does not cover general PSD
+> kernels, non-common congruences, joint compensations, bounded sizes, a fixed window, or the
+> primitive discrete ladder. It contributes no sign.
 
-No puede anotarse: (a) el Cor. 2.2 ni el punto 1 del Teorema 3.1 como resultado (reformulación, B3;
-y redacción fuera del sandbox); (b) «la medida de borde de M es puramente atómica» sin la hipótesis;
-(c) las variantes Robin y sumas como PROVED; (d) la exclusión de a = 2π como «sin certificado»;
-(e) cualquier lectura de la memo como restricción sobre espacios ℋ que no provengan de un comparador
-de esta clase (§7.1 de la memo prueba que fuera de la clase no hay restricción).
+It may not be recorded: (a) Cor. 2.2 or point 1 of Theorem 3.1 as a result (reformulation, B3;
+and wording outside the sandbox); (b) "the boundary measure of M is purely atomic" without the hypothesis;
+(c) the Robin and sum variants as PROVED; (d) the exclusion of a = 2π as "without certificate";
+(e) any reading of the memo as a restriction on spaces ℋ that do not come from a comparator
+of this class (§7.1 of the memo proves that outside the class there is no restriction).
 
 ---
 
-## Parte II — ROUND_001_C
+## Part II — ROUND_001_C
 
-### II.1 Cotejo de (M1)–(M5) contra la fase 211
+### II.1 Cross-check of (M1)–(M5) against phase 211
 
-- **(M1)** GRAM §18.1: (GRAPH) y (A-GRAPH) coinciden con lo citado (T, Lg, C, F, G). Correcto.
-- **(M2)** GRAM §18.2: el texto fija una lista finita de κ_i, 0 < a < π·min(1, min κ_i), 0 < γ < 2a, y
-  prueba continuidad B_a² → H_γ × H_γ de P ↦ (F,G) y de la forma de (A-GRAPH), «sin presuponer PSD».
-  Para escalas enteras la condición es 0 < a < π, como dice la memo. La constante depende de (a,γ).
-  Rehecho aquí el único ingrediente remitido a §17.7: ‖F(m²·)‖_{H_γ} ≤ e^{−γ(m²−1)/2}‖F‖_{H_γ}, luego C
-  es acotado en H_γ para todo γ > 0. (M2) dice exactamente lo que la memo usa. Correcto.
-- **(M3)** GLOBAL, «Escalas libres de cuadrados»: holomorfía de z ↦ P_z en Re z > a/π con valores en
-  B_a² y cota C_δ(1+|z|)^{13/4} en Re z ≥ δ: literal. La afirmación sobre E_z es añadida por la memo;
-  verificada: sup_{t≥1} e^{at}|∂_t^j e^{−πzt}| ≤ (π|z|)^j e^{a−π Re z}.
-- **(M4)** (MOB-P) literal en GRAM §18.3, absoluta en B_a²; la expansión modal y b_λ = q^{−1/2}f_{d,q}
-  recomputadas (λ = kn², k^{5/4}n² = λ^{5/4}n^{−1/2}). Correcto.
-- **(M5)** GRAM §17.2–17.3: (RES-SOS) y D_q > 0 literales, válidos en y = 0. La cota D_q ≥ c_*I_q
-  (§17.5) se enuncia allí para una familia con parámetro 0 < ε ≤ 1; no se comprobó aquí que cubra
-  y = 0. No importa: la memo sólo usa D_q > 0.
+- **(M1)** GRAM §18.1: (GRAPH) and (A-GRAPH) agree with what is cited (T, Lg, C, F, G). Correct.
+- **(M2)** GRAM §18.2: the text fixes a finite list of κ_i, 0 < a < π·min(1, min κ_i), 0 < γ < 2a, and
+  proves continuity B_a² → H_γ × H_γ of P ↦ (F,G) and of the form of (A-GRAPH), "without presupposing PSD".
+  For integer scales the condition is 0 < a < π, as the memo says. The constant depends on (a,γ).
+  Redone here, the only ingredient deferred to §17.7: ‖F(m²·)‖_{H_γ} ≤ e^{−γ(m²−1)/2}‖F‖_{H_γ}, hence C
+  is bounded on H_γ for every γ > 0. (M2) says exactly what the memo uses. Correct.
+- **(M3)** GLOBAL, "Squarefree scales": holomorphy of z ↦ P_z on Re z > a/π with values in
+  B_a² and bound C_δ(1+|z|)^{13/4} on Re z ≥ δ: literal. The claim about E_z is added by the memo;
+  verified: sup_{t≥1} e^{at}|∂_t^j e^{−πzt}| ≤ (π|z|)^j e^{a−π Re z}.
+- **(M4)** (MOB-P) literal in GRAM §18.3, absolute in B_a²; the modal expansion and b_λ = q^{−1/2}f_{d,q}
+  recomputed (λ = kn², k^{5/4}n² = λ^{5/4}n^{−1/2}). Correct.
+- **(M5)** GRAM §17.2–17.3: (RES-SOS) and D_q > 0 literal, valid at y = 0. The bound D_q ≥ c_*I_q
+  (§17.5) is stated there for a family with parameter 0 < ε ≤ 1; it was not checked here whether it covers
+  y = 0. It does not matter: the memo only uses D_q > 0.
 
-### II.2 Verificación de los pasos
+### II.2 Verification of the steps
 
-- **Lema 1.** ‖Vc‖² = A_0 − ρ ≤ A_0 ≤ |A_0| ≤ C_a‖P(c)‖². Correcto; no supone signo. Un cuadrado
-  acotado por una forma continua en una norma es continuo en esa norma: inmediato, sin laguna.
-- **(R0).** El funcional está bien definido en el cociente (se anula donde P(c) = 0), Hahn–Banach en
-  el espacio de Banach complejo B_a², composición con una aplicación holomorfa: correcto. Los valores
-  N_g(k) no dependen de la extensión elegida.
-- **(R1), clase de crecimiento.** H = N/(z+1)⁴ es holomorfa y acotada en Re z ≥ δ; el cociente por
-  factores de Blaschke finitos del semiplano Re z > δ es acotado y continuo hasta el borde, con
-  módulo ≤ ‖H‖_∞ en el borde; el principio de Phragmén–Lindelöf para funciones acotadas da la cota
-  interior. Producto: Π(1 − 2(z₀−δ)/(k+z₀−2δ)) → 0 ⟺ Σ1/k = ∞. Correcto. El crecimiento polinómico
-  en un semiplano **es suficiente** (tras dividir por un polinomio la función es acotada; la
-  condición de Blaschke de la clase acotada se aplica). No hace falta un teorema de tipo exponencial.
-- **(R2), nodos.** Correcto: N_g − αN′_g se anula en {θ = α}, luego N_g = αN′_g; entonces N′_g se
-  anula en {θ ≠ α}.
-- **Proposición 3.** Correcta; no supone signo. Para RES-SOS coincide con (TAIL-ZERO) +
-  (NO-FIN-MARGIN) de GRAM §18.7 (f_{d,q} es de soporte finito): no es nueva.
-- **Proposición 4.** Trivial y correcta.
-- **Observación 5.** Recomputada contra STATEMENT_001 §2: x = δ_m − δ_k da x*𝔸x = 2B(0) − 2B(log(m/k));
-  para |d| < log 2 − 2T_0 la parte aritmética de B(d) es nula; F̂_0 = (τ²+¼)|ĝ|⁴ = O(τ^{−2}), de modo
-  que τ²m(τ)F̂_0² es integrable y B es C² par cerca de 0. Correcta relativa a STATEMENT_001 §2 (no
-  cotejada contra el texto del paper, como la propia memo advierte).
-- **Circularidad.** Ninguna.
+- **Lemma 1.** ‖Vc‖² = A_0 − ρ ≤ A_0 ≤ |A_0| ≤ C_a‖P(c)‖². Correct; does not assume a sign. A square
+  bounded by a form continuous in a norm is continuous in that norm: immediate, no gap.
+- **(R0).** The functional is well defined on the quotient (it vanishes where P(c) = 0), Hahn–Banach on
+  the complex Banach space B_a², composition with a holomorphic map: correct. The values
+  N_g(k) do not depend on the chosen extension.
+- **(R1), growth class.** H = N/(z+1)⁴ is holomorphic and bounded on Re z ≥ δ; the quotient by
+  finite Blaschke factors of the half-plane Re z > δ is bounded and continuous up to the boundary, with
+  modulus ≤ ‖H‖_∞ on the boundary; the Phragmén–Lindelöf principle for bounded functions gives the
+  interior bound. Product: Π(1 − 2(z₀−δ)/(k+z₀−2δ)) → 0 ⟺ Σ1/k = ∞. Correct. Polynomial growth
+  on a half-plane **is sufficient** (after dividing by a polynomial the function is bounded; the
+  Blaschke condition of the bounded class applies). No exponential-type theorem is needed.
+- **(R2), nodes.** Correct: N_g − αN′_g vanishes on {θ = α}, hence N_g = αN′_g; then N′_g
+  vanishes on {θ ≠ α}.
+- **Proposition 3.** Correct; does not assume a sign. For RES-SOS it coincides with (TAIL-ZERO) +
+  (NO-FIN-MARGIN) of GRAM §18.7 (f_{d,q} has finite support): not new.
+- **Proposition 4.** Trivial and correct.
+- **Observation 5.** Recomputed against STATEMENT_001 §2: x = δ_m − δ_k gives x*𝔸x = 2B(0) − 2B(log(m/k));
+  for |d| < log 2 − 2T_0 the arithmetic part of B(d) is zero; F̂_0 = (τ²+¼)|ĝ|⁴ = O(τ^{−2}), so
+  that τ²m(τ)F̂_0² is integrable and B is C² and even near 0. Correct relative to STATEMENT_001 §2 (not
+  cross-checked against the text of the paper, as the memo itself warns).
+- **Circularity.** None.
 
-### II.3 Caza de contraejemplos
+### II.3 Counterexample hunt
 
-Juguete exacto de la misma estructura: A_toy[c] = ∫_1^∞ |Σ_k c_k e^{−πkt}|² dt (forma continua en la
-norma del grafo, PSD, con sistema exacto V c = Σ c_k e^{−πk·} y ρ = 0). ¿Admite un cuadrado
-dependiente sólo del coeficiente c_1? La distancia relativa de e^{−πt} al span de {e^{−πkt}}_{2≤k≤K}
-en L² es exactamente Π_{k=2}^K (k−1)/(k+1) = 2/(K(K+1)) → 0 (fórmula de Müntz, que es el mismo
-producto de Blaschke de (R1)). Luego inf{A_toy[c] : c_1 = 1} = 0 y ningún cuadrado w|c_1|², w > 0,
-cabe en una identidad exacta: el juguete confirma el teorema y no lo refuta. Con nodos lacunares
-(k = 2^j) el producto no tiende a 0 y el cuadrado sí cabe: la hipótesis de divergencia es necesaria.
-**PROVED** (cálculo cerrado). No se halló contraejemplo al Lema 1, (R0), (R1) ni (R2).
+Exact toy of the same structure: A_toy[c] = ∫_1^∞ |Σ_k c_k e^{−πkt}|² dt (form continuous in the
+graph norm, PSD, with exact system V c = Σ c_k e^{−πk·} and ρ = 0). Does it admit a square
+depending only on the coefficient c_1? The relative distance of e^{−πt} to the span of {e^{−πkt}}_{2≤k≤K}
+in L² is exactly Π_{k=2}^K (k−1)/(k+1) = 2/(K(K+1)) → 0 (Müntz formula, which is the same
+Blaschke product as in (R1)). Hence inf{A_toy[c] : c_1 = 1} = 0 and no square w|c_1|², w > 0,
+fits in an exact identity: the toy confirms the theorem and does not refute it. With lacunary nodes
+(k = 2^j) the product does not tend to 0 and the square does fit: the divergence hypothesis is necessary.
+**PROVED** (closed computation). No counterexample to Lemma 1, (R0), (R1) or (R2) was found.
 
-Lo que sí existe, y limita el título de la memo: funcionales continuos cuyo ÍNDICE o cuyos PESOS son
-aritméticos, por ejemplo ℓ_{m,t₀}(c) = (TP(c))(t₀) − m^{−1/2}(TP(c))(m²t₀) con peso Λ(m). Sus
-coeficientes en k son valores de una función holomorfa de k, como exige (R0), y no caen en la clase 𝒜.
-La memo lo reconoce en §7(i); el título y §4 deben ser coherentes con ello (C-2).
+What does exist, and limits the title of the memo: continuous functionals whose INDEX or WEIGHTS are
+arithmetic, for example ℓ_{m,t₀}(c) = (TP(c))(t₀) − m^{−1/2}(TP(c))(m²t₀) with weight Λ(m). Their
+coefficients in k are values of a holomorphic function of k, as (R0) requires, and do not fall into class 𝒜.
+The memo acknowledges it in §7(i); the title and §4 must be consistent with it (C-2).
 
-### II.4 Errores y lagunas (con ubicación)
+### II.4 Errors and gaps (with location)
 
-C-1. **Versión de modos de (R1), (R2), clase 𝒜 «en el índice de modos», instancia 5 — laguna.**
-Los «coeficientes en modos» de un funcional no están definidos unívocamente sobre vectores c finitos:
-ningún c finito aísla un modo (b = δ_λ exige c_{λn²} = μ(n)n^{−1/2}, de soporte infinito). La memo
-aplica (R1) a un operador dado como «selección 1_S(λ) de un operador continuo» identificando sus
-coeficientes formales x_λ con n_g(λ) sin demostrarlo. Lema que falta (PROVED aquí): si
-ℓ(c) = Σ_λ b_λ(c)x_λ para todo c finito, ℓ es continuo en la norma del grafo y
-Σ_N d(N)N^{−1/2}|x_{λN²}| < ∞ para cada λ, entonces n_g(λ) = x_λ. Prueba: por (MOB-P) y continuidad,
+C-1. **Modes version of (R1), (R2), class 𝒜 "in the mode index", instance 5 — gap.**
+The "mode coefficients" of a functional are not uniquely defined on finite vectors c:
+no finite c isolates a mode (b = δ_λ requires c_{λn²} = μ(n)n^{−1/2}, of infinite support). The memo
+applies (R1) to an operator given as a "selection 1_S(λ) of a continuous operator", identifying its
+formal coefficients x_λ with n_g(λ) without proving it. Missing lemma (PROVED here): if
+ℓ(c) = Σ_λ b_λ(c)x_λ for every finite c, ℓ is continuous in the graph norm and
+Σ_N d(N)N^{−1/2}|x_{λN²}| < ∞ for each λ, then n_g(λ) = x_λ. Proof: by (MOB-P) and continuity,
 ℓ̃(E_λ) = λ^{−5/4}Σ_n μ(n)n^{−1/2}ℓ(δ_{λn²}) = λ^{−5/4}Σ_{n,n′} μ(n)(nn′)^{−1/2}x_{λn²n′²}
-= λ^{−5/4}Σ_N N^{−1/2}x_{λN²}Σ_{n|N}μ(n) = λ^{−5/4}x_λ, con reordenación justificada por la
-convergencia absoluta. En la instancia 5, x_λ = 1_{m²|λ}⟨h_λ, g⟩ decae exponencialmente y la
-hipótesis se cumple. Con este lema la versión de modos y la instancia 5 quedan PROVED; sin él son
+= λ^{−5/4}Σ_N N^{−1/2}x_{λN²}Σ_{n|N}μ(n) = λ^{−5/4}x_λ, with the reordering justified by
+absolute convergence. In instance 5, x_λ = 1_{m²|λ}⟨h_λ, g⟩ decays exponentially and the
+hypothesis holds. With this lemma the modes version and instance 5 become PROVED; without it they are
 ARGUED.
 
-C-2. **§4, instancia 2, última frase — falsa como está escrita.** «El índice “clase libre de
-cuadrados” no puede ser parte del índice de ningún sistema exacto.» Lo probado es que ningún cuadrado
-puede DEPENDER sólo de coeficientes de un conjunto de nodos de complemento divergente (en particular
-de un número finito de clases). Un sistema exacto puede estar indexado por d, por m o por cualquier
-etiqueta aritmética, siempre que cada funcional sea continuo en el grafo (ejemplo de II.3). Debe
-sustituirse por: «ningún cuadrado de un sistema exacto puede depender sólo de los coeficientes de
-una familia de clases cuyo complemento sea divergente».
+C-2. **§4, instance 2, last sentence — false as written.** "The index 'squarefree class' cannot be
+part of the index of any exact system." What is proved is that no square
+can DEPEND only on coefficients of a set of nodes with divergent complement (in particular
+on finitely many classes). An exact system may be indexed by d, by m or by any
+arithmetic label, provided each functional is continuous in the graph (example of II.3). It should
+be replaced by: "no square of an exact system can depend only on the coefficients of
+a family of classes whose complement is divergent".
 
-C-3. **§4, párrafo final — afirmación no demostrada y falsa en su literalidad.** «La única función
-aritmética clásica que pasa el filtro (R0) como torsión es log k.» Toda restricción a los enteros de
-una función holomorfa de crecimiento polinómico en el semiplano pasa la condición necesaria (k^s,
-k^{it}, polinomios en log k); y (R2) no dice nada de torsiones sin conjunto de nivel divergente
-(φ(k)/k, σ(k)/k, e(αk) con α irracional): ni excluidas ni admitidas. Debe eliminarse o quedar como
-observación sin etiqueta. Para e(αk) irracional una exclusión por un argumento de tipo exponencial
-más integrabilidad logarítmica en el borde es plausible (ARGUED, no escrita en la memo).
+C-3. **§4, final paragraph — unproved claim, false in its literal form.** "The only classical
+arithmetic function passing filter (R0) as a twist is log k." Every restriction to the integers of
+a holomorphic function of polynomial growth on the half-plane passes the necessary condition (k^s,
+k^{it}, polynomials in log k); and (R2) says nothing about twists without a divergent level set
+(φ(k)/k, σ(k)/k, e(αk) with α irrational): neither excluded nor admitted. It must be removed or left as an
+unlabelled observation. For irrational e(αk) an exclusion by an exponential-type argument
+plus logarithmic integrability on the boundary is plausible (ARGUED, not written in the memo).
 
-C-4. **Respuesta corta, §9 y título — alcance de «torsión aritmética».** (R2) cubre sólo torsiones θ
-con un valor α tal que {θ = α} y {θ ≠ α} son ambos divergentes (caracteres de módulo q ≥ 2, sumas de
-Ramanujan no constantes, μ, μ², Λ, indicadoras). La frase «ningún cuadrado puede depender de índices
-aritméticos» no está probada y no es cierta (C-2, II.3). El enunciado debe llevar la clase exacta.
+C-4. **Short answer, §9 and title — scope of "arithmetic twist".** (R2) covers only twists θ
+with a value α such that {θ = α} and {θ ≠ α} are both divergent (characters of modulus q ≥ 2, non-constant
+Ramanujan sums, μ, μ², Λ, indicators). The sentence "no square can depend on arithmetic
+indices" is not proved and is not true (C-2, II.3). The statement must carry the exact class.
 
-C-5. **Novedad sobrestimada en el cotejo.** El argumento de (R1) (holomorfía de z ↦ ℓ(P_z), división
-por (z+1)⁴, producto finito de factores de Schwarz del semiplano, divergencia de Σ1/d) es literalmente
-el de GLOBAL «Escalas libres de cuadrados» con «libres de cuadrados» sustituido por «conjunto de suma
-recíproca divergente»; las instancias 1, 2 y 6 son GRAM §18.7; la instancia 5 es la «Consecuencia
-para el resto conjunto» de GLOBAL. Lo nuevo respecto del corpus es: el Lema 1 como enunciado
-(exactitud con resto no negativo ⟹ continuidad de cada cuadrado), (R2), y las instancias 3–4
-(clases de residuos, caracteres, Ramanujan, μ, Λ, gcd). La memo lo dice a medias («generalización
-común»); el registro debe decirlo sin ambigüedad. No hay herramienta nueva.
+C-5. **Novelty overstated in the cross-check.** The argument of (R1) (holomorphy of z ↦ ℓ(P_z), division
+by (z+1)⁴, finite product of half-plane Schwarz factors, divergence of Σ1/d) is literally
+that of GLOBAL "Squarefree scales" with "squarefree" replaced by "set of divergent reciprocal
+sum"; instances 1, 2 and 6 are GRAM §18.7; instance 5 is the "Consequence
+for the joint remainder" of GLOBAL. What is new with respect to the corpus is: Lemma 1 as a statement
+(exactness with non-negative remainder ⟹ continuity of each square), (R2), and instances 3–4
+(residue classes, characters, Ramanujan, μ, Λ, gcd). The memo half-says it ("common
+generalization"); the record must say it unambiguously. There is no new tool.
 
-C-6. **§8 — etiqueta.** «(M2) vale para la forma análoga de cualquier peine con C_a acotado en H_γ,
-en particular cΛ, a_P…» no está demostrado en la memo ni en la cita (la identidad (GRAPH) usa
-Σ_{m|n}Λ(m) = log n; para otro peine la forma análoga no está escrita). Etiqueta: **ARGUED**.
+C-6. **§8 — label.** "(M2) holds for the analogous form of any comb with C_a bounded on H_γ,
+in particular cΛ, a_P…" is not proved in the memo or in the citation (the identity (GRAPH) uses
+Σ_{m|n}Λ(m) = log n; for another comb the analogous form is not written). Label: **ARGUED**.
 
-C-7. **Proposición 3, «Lectura».** «Off cancela a R_res por completo» es (TAIL-ZERO) reescrito:
-A_0 → 0 a lo largo de la sucesión con R_res ≥ √d·D_q. No añade nada a GRAM §18.7 y no debe figurar
-como resultado nuevo.
+C-7. **Proposition 3, "Reading".** "Off cancels R_res completely" is (TAIL-ZERO) rewritten:
+A_0 → 0 along the sequence with R_res ≥ √d·D_q. It adds nothing to GRAM §18.7 and must not appear
+as a new result.
 
-C-8. **Alcance respecto de la identidad (G) de OBJECT_SPEC.** El teorema restringe una identidad
-ÚNICA sobre el portador de escalas enteras en y = 0, en las coordenadas c. No restringe objetos
-escritos por ventana (a_T, P_T) ni sobre 𝔸_M (la memo lo dice en §7(ii)); el punto (4) del cotejo
-(«condición necesaria sobre el operador V de (G)») debe llevar esa restricción.
+C-8. **Scope with respect to the identity (G) of OBJECT_SPEC.** The theorem restricts a SINGLE
+identity on the integer-scale carrier at y = 0, in the coordinates c. It does not restrict objects
+written per window (a_T, P_T) nor on 𝔸_M (the memo says so in §7(ii)); point (4) of the cross-check
+("necessary condition on the operator V of (G)") must carry that restriction.
 
-### II.5 Enunciado corregido, etiqueta y alcance
+### II.5 Corrected statement, label and scope
 
-**Teorema R (PROVED, relativo a (M2)–(M4) de la fase 211, CITED y recomprobados aquí).** Sea
-0 < a < π. Si un sistema de cuadrados (ℋ, V) sobre coeficientes finitos en escalas enteras cumple
-‖Vc‖² ≤ M·A_0[c] para todo c (en particular si A_0 = ‖Vc‖² + ρ con ρ ≥ 0 para todo c), entonces para
-cada g ∈ ℋ:
-(i) c ↦ ⟨Vc, g⟩ es continuo en la norma ‖P(c)‖_{a,2};
-(ii) ⟨Vδ_k, g⟩ = N_g(k) con N_g holomorfa en Re z > a/π y |N_g(z)| ≤ C(1+|z|)^{13/4} en Re z ≥ δ;
-(iii) si ⟨Vδ_k, g⟩ = 0 para todo k de un conjunto con Σ1/k = ∞, entonces ⟨Vc, g⟩ = 0 para todo c;
-(iv) si V′ cumple la misma cota y Vδ_k = θ(k)V′δ_k con {θ = α} y {θ ≠ α} ambos de suma recíproca
-divergente para algún α, entonces V = V′ = 0;
-(v) lo mismo en el índice de modos para funcionales ℓ(c) = Σ_λ b_λ(c)x_λ con
-Σ_N d(N)N^{−1/2}|x_{λN²}| < ∞ (lema de C-1).
+**Theorem R (PROVED, relative to (M2)–(M4) of phase 211, CITED and rechecked here).** Let
+0 < a < π. If a system of squares (ℋ, V) on finite coefficients at integer scales satisfies
+‖Vc‖² ≤ M·A_0[c] for every c (in particular if A_0 = ‖Vc‖² + ρ with ρ ≥ 0 for every c), then for
+each g ∈ ℋ:
+(i) c ↦ ⟨Vc, g⟩ is continuous in the norm ‖P(c)‖_{a,2};
+(ii) ⟨Vδ_k, g⟩ = N_g(k) with N_g holomorphic on Re z > a/π and |N_g(z)| ≤ C(1+|z|)^{13/4} on Re z ≥ δ;
+(iii) if ⟨Vδ_k, g⟩ = 0 for every k in a set with Σ1/k = ∞, then ⟨Vc, g⟩ = 0 for every c;
+(iv) if V′ satisfies the same bound and Vδ_k = θ(k)V′δ_k with {θ = α} and {θ ≠ α} both of divergent
+reciprocal sum for some α, then V = V′ = 0;
+(v) the same in the mode index for functionals ℓ(c) = Σ_λ b_λ(c)x_λ with
+Σ_N d(N)N^{−1/2}|x_{λN²}| < ∞ (lemma of C-1).
 
-**Corolario (NO-GO con clase, PROVED).** En una identidad única A_0 = Σ cuadrados + ρ, ρ ≥ 0, sobre
-todo el portador de escalas enteras en y = 0, ningún cuadrado no nulo puede: depender sólo de un
-conjunto de nodos de complemento divergente (soporte finito, un número finito de clases libres de
-cuadrados, una clase de residuos, múltiplos de g ≥ 2, gcd(k,q) fijo); ser la torsión de un funcional
-continuo por un carácter aditivo o multiplicativo de módulo q ≥ 2, una suma de Ramanujan no
-constante, μ, μ² o Λ; ser la selección de un conjunto de modos de complemento divergente aplicada a
-un operador continuo, sola o sumada a un término continuo. Lo mismo vale con «‖Vc‖² ≤ M·A_0» en lugar
-de la identidad.
+**Corollary (NO-GO with class, PROVED).** In a single identity A_0 = Σ squares + ρ, ρ ≥ 0, on
+the whole integer-scale carrier at y = 0, no nonzero square can: depend only on a
+set of nodes with divergent complement (finite support, finitely many squarefree
+classes, a residue class, multiples of g ≥ 2, fixed gcd(k,q)); be the twist of a continuous
+functional by an additive or multiplicative character of modulus q ≥ 2, a non-constant
+Ramanujan sum, μ, μ² or Λ; be the selection of a set of modes with divergent complement applied to
+a continuous operator, alone or added to a continuous term. The same holds with "‖Vc‖² ≤ M·A_0" instead
+of the identity.
 
-No queda excluido: cuadrados continuos en el grafo con etiquetas o pesos aritméticos (índice de
-dilatación m, pesos Λ(m)); torsiones sin conjunto de nivel divergente; identidades con resto sin signo
-manifiesto o no negativo sólo en un subespacio; cualquier objeto escrito por ventana o sobre 𝔸_M
-(allí sólo la Observación 5, PROVED relativa a STATEMENT_001 §2). No es paso de signo.
+Not excluded: squares continuous in the graph with arithmetic labels or weights (dilation
+index m, weights Λ(m)); twists without a divergent level set; identities with a remainder without manifest
+sign or non-negative only on a subspace; any object written per window or on 𝔸_M
+(there only Observation 5, PROVED relative to STATEMENT_001 §2). It is not a sign step.
 
-### II.6 Qué puede anotarse en el índice y en el grid
+### II.6 What may be recorded in the index and the grid
 
-Puede anotarse (índice 06, residuo R9, subrutas muertas; grid), con este texto:
+It may be recorded (index 06, residue R9, dead subroutes; grid), with this text:
 
-> **Fase 212, sistema ampliado de cuadrados con selección o torsión aritmética en nodos o modos —
-> NO-GO con clase, PROVED (relativo a GRAM §18.2 y a la holomorfía de z ↦ P_z de GLOBAL «Escalas
-> libres de cuadrados»).** `ROUND_001_C.md`, Lema 1, Teorema R, Corolario 2; revisión
-> `REVIEW_001_LC.md` (lema de unicidad de coeficientes modales incluido allí). En una identidad única
-> A_0 = Σ cuadrados + resto no negativo sobre el portador de escalas enteras (y = 0), cada cuadrado
-> es continuo en la norma del grafo y sus coeficientes en k son los valores enteros de una función
-> holomorfa de crecimiento polinómico en un semiplano; por tanto ningún cuadrado no nulo puede
-> anularse sobre un conjunto de nodos o de modos de suma recíproca divergente, ni ser la torsión de
-> un funcional continuo por una función con un conjunto de nivel divergente de complemento divergente
-> (caracteres de módulo q ≥ 2, sumas de Ramanujan no constantes, μ, μ², Λ, indicadoras de clases de
-> residuos, de múltiplos o de gcd fijo). Generaliza con el mismo instrumento GRAM §18.7 (soporte
-> finito) y GLOBAL «Escalas libres de cuadrados» (cola libre de cuadrados, discontinuidad de S_sq); lo
-> nuevo es la clase, no la herramienta. No excluye cuadrados continuos con índice o pesos aritméticos
-> en la dilatación, torsiones sin conjunto de nivel divergente, restos sin signo manifiesto, ni
-> objetos por ventana o sobre 𝔸_M. No aporta signo. La dirección de R9 en la formulación (S) queda
-> abierta con una única restricción de módulo de continuidad (Observación 5).
+> **Phase 212, extended system of squares with arithmetic selection or twist at nodes or modes —
+> NO-GO with class, PROVED (relative to GRAM §18.2 and to the holomorphy of z ↦ P_z of GLOBAL "Squarefree
+> scales").** `ROUND_001_C.md`, Lemma 1, Theorem R, Corollary 2; review
+> `REVIEW_001_LC.md` (lemma on uniqueness of modal coefficients included there). In a single identity
+> A_0 = Σ squares + non-negative remainder on the integer-scale carrier (y = 0), each square
+> is continuous in the graph norm and its coefficients in k are the integer values of a holomorphic
+> function of polynomial growth on a half-plane; hence no nonzero square can
+> vanish on a set of nodes or modes of divergent reciprocal sum, nor be the twist of
+> a continuous functional by a function with a divergent level set of divergent complement
+> (characters of modulus q ≥ 2, non-constant Ramanujan sums, μ, μ², Λ, indicators of residue
+> classes, of multiples or of fixed gcd). It generalizes with the same instrument GRAM §18.7 (finite
+> support) and GLOBAL "Squarefree scales" (squarefree tail, discontinuity of S_sq); what is
+> new is the class, not the tool. It does not exclude continuous squares with arithmetic index or weights
+> in the dilation, twists without a divergent level set, remainders without manifest sign, or
+> per-window objects or objects on 𝔸_M. It contributes no sign. The direction of R9 in formulation (S) remains
+> open with a single modulus-of-continuity restriction (Observation 5).
 
-No puede anotarse: (a) «ningún cuadrado puede depender de índices aritméticos» ni «el índice clase
-libre de cuadrados no puede formar parte de un sistema exacto» (C-2, C-4); (b) «log k es la única
-torsión aritmética admisible» (C-3); (c) la genericidad en el peine de §8 como PROVED (C-6);
-(d) la Proposición 3 como resultado nuevo (C-7); (e) el cierre de R9: la memo no lo cierra.
+It may not be recorded: (a) "no square can depend on arithmetic indices" or "the squarefree class
+index cannot be part of an exact system" (C-2, C-4); (b) "log k is the only
+admissible arithmetic twist" (C-3); (c) the genericity in the comb of §8 as PROVED (C-6);
+(d) Proposition 3 as a new result (C-7); (e) the closure of R9: the memo does not close it.
 
 ---
 
-## Parte III — Veredicto
+## Part III — Verdict
 
-- **ROUND_001_L: ACCEPT with corrections.** Núcleo matemático correcto y completo relativo a tres
-  teoremas clásicos bien enunciados y con hipótesis satisfechas. Correcciones: L-1, L-2 (etiquetas),
-  L-3 (rango nuevo 0 < ε < 1), L-4 (no efectividad), L-5, L-6 (menores), L-7 (redacción de sandbox y
-  no registro del Cor. 2.2).
-- **ROUND_001_C: ACCEPT with corrections.** Lema 1 y Teorema R (nodos) correctos. Correcciones: C-1
-  (lema que falta en la versión de modos; suplido arriba), C-2 a C-4 (sobre-enunciados que deben
-  retirarse), C-5 y C-7 (novedad), C-6 (etiqueta), C-8 (alcance).
+- **ROUND_001_L: ACCEPT with corrections.** Mathematical core correct and complete relative to three
+  well-stated classical theorems with hypotheses satisfied. Corrections: L-1, L-2 (labels),
+  L-3 (new range 0 < ε < 1), L-4 (non-effectiveness), L-5, L-6 (minor), L-7 (sandbox wording and
+  non-recording of Cor. 2.2).
+- **ROUND_001_C: ACCEPT with corrections.** Lemma 1 and Theorem R (nodes) correct. Corrections: C-1
+  (missing lemma in the modes version; supplied above), C-2 to C-4 (overstatements that must be
+  withdrawn), C-5 and C-7 (novelty), C-6 (label), C-8 (scope).
 
-Ninguna de las dos memos aporta positividad de la forma; ambas son herramientas de descarte y así
-deben figurar.
+Neither memo contributes positivity of the form; both are discard tools and must
+appear as such.

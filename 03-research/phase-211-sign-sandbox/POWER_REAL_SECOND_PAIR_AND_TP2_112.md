@@ -1,48 +1,48 @@
-# POWER_REAL_SECOND_PAIR_AND_TP2_112 — Segunda pareja positiva y TP2 de la familia real
+# POWER_REAL_SECOND_PAIR_AND_TP2_112 — Second positive pair and TP2 of the real family
 
-## Actualización verificada: reproducción terminada y WM activada
+## Verified update: reproduction finished and WM activated
 
-Los logs constructor y reproducción independiente de110 son idénticos byte por byte, SHA256 `90a2ec137e806c8a7f8cce975f7af1cee375d9e48bdaf1c5bc302f7c06428539`. Driver: `c629d4ed4b5eeb625a69ee92f6000892b9493c50e825e9ade73bf3a5a9362108`; los cuatro módulos importados conservan los hashes auditados. Root comprobó por fracciones exactas el origen completo (16 hojas en lambda[0,1/4]) y 4198 hojas REST contiguas desde1/2 hasta845/32 en AMBOS logs. Ambos programas terminaron INCONCLUSIVE por8192 evaluaciones; no se cambia esa etiqueta ni se afirma FULLPASS hasta64.
+The logs of the original run and the independent reproduction of110 are byte-for-byte identical, SHA256 `90a2ec137e806c8a7f8cce975f7af1cee375d9e48bdaf1c5bc302f7c06428539`. Driver: `c629d4ed4b5eeb625a69ee92f6000892b9493c50e825e9ade73bf3a5a9362108`; the four imported modules keep the audited hashes. It was checked by exact fractions that the full origin (16 leaves in lambda[0,1/4]) and 4198 contiguous REST leaves from1/2 to845/32 appear in BOTH logs. Both programs ended INCONCLUSIVE at8192 evaluations; that label is not changed nor is FULLPASS up to64 claimed.
 
-La cola analítica104, auditada por root/casos/mapa, prueba Wmixed/Phi^4>6t^2/y^2 para todo t>=16. Por tanto la cobertura reproducida y esa cola se solapan y prueban WM para TODO t>0. Los tres prefijos103 completan MIXED4. Queda activada la aplicación real de las implicaciones auditadas112: segunda densidad Xi positiva para todos p,q>0, E/Psi decreciente, TP2 y confluencia estrictas. Root revisó también el literal§8 y las dos fuerzas verificadas independientemente por casos: se activan las comparaciones de la pareja límite estrella. No se afirma Xi_(p,q)/E_(p,q) decreciente para parámetros finitos, cinco potencias arbitrarias, todos los órdenes ni una ventana nueva.
+The analytic tail104, independently audited, proves Wmixed/Phi^4>6t^2/y^2 for every t>=16. Hence the reproduced coverage and that tail overlap and prove WM for EVERY t>0. The three prefixes103 complete MIXED4. The real application of the audited implications112 is thereby activated: second positive density Xi for all p,q>0, E/Psi decreasing, strict TP2 and confluence. The code of§8 and the two independently verified forcings were also reviewed: the comparisons of the limiting star pair are activated. Xi_(p,q)/E_(p,q) decreasing for finite parameters, five arbitrary powers, all orders or a new window are not claimed.
 
-Las menciones posteriores a réplica pendiente o aplicación condicional describen el estado anterior a esta actualización y quedan superadas exclusivamente por esta evidencia. El signo global permanece OPEN. Véase `POWER_REASSESSMENT.md` para el cambio de estrategia.
+The later mentions of a pending replica or conditional application describe the state prior to this update and are superseded exclusively by this evidence. The global sign remains OPEN. See `POWER_REASSESSMENT.md` for the change of strategy.
 
 
-Estado: **IMPLICACIÓN ANALÍTICA PROBADA; aplicación global REAL CONDICIONAL hasta confirmar la reproducción independiente del compacto mixto.** Esta fuente NO declara todavía probado el signo mixto global. La cola t>=16 de104 está probada analíticamente; el cierre compacto y su reproducción deben confirmarse por separado antes de activar los resultados siguientes. No nuevos cómputos en esta fuente. Papers intactos.
+Status: **ANALYTIC IMPLICATION PROVED; global REAL application CONDITIONAL until the independent reproduction of the mixed compact is confirmed.** This source does NOT yet declare the global mixed sign proved. The tail t>=16 of104 is proved analytically; the compact closure and its reproduction must be confirmed separately before activating the following results. No new computations in this source. Papers untouched.
 
-## 1. Consulta y diferencia sustantiva
+## 1. Consultation and substantive difference
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX/README.md, R162_2300_MASTER_GRID.md y CROSSWORD-TO-D.md; cotejados083,099,102,103,104,106–110 y111. Los tres índices registran el criterio mixto103 y el NO-GO auxiliar111, pero no una prueba global activada de la segunda pareja ni de TP2 de la familia REAL.
+Consulted the project rules, ROUTES-TRIED-INDEX/README.md, R162_2300_MASTER_GRID.md and CROSSWORD-TO-D.md; cross-checked083,099,102,103,104,106–110 and111. The three indexes record the mixed criterion103 and the auxiliary NO-GO111, but not an activated global proof of the second pair nor of TP2 of the REAL family.
 
-103 ya identificó las fuerzas mixtas y el puente exacto entre los pivotes finitos y la pareja(J,K). Aquí se demuestra completa la consecuencia de cerrar ese signo: un nuevo numerador temporal positivo para TODOS los dos pivotes finitos, monotonía de la segunda pareja y TP2 estricta entre distintos resolventes reales. No se infiere TP2 de las monotonías individuales o de monotonía completa paramétrica:111 falsifica esa implicación para otra clase. La entrada que se usa aquí es específica y más fuerte, el sistema mixto real con sus cuatro Wronskianos.
+103 already identified the mixed forcings and the exact bridge between the finite pivots and the pair(J,K). Here the full consequence of closing that sign is proved: a new positive time numerator for ALL two finite pivots, monotonicity of the second pair and strict TP2 between different real resolvents. TP2 is not inferred from the individual monotonicities or from full parametric monotonicity:111 falsifies that implication for another class. The input used here is specific and stronger, the real mixed system with its four Wronskians.
 
-No es la jerarquía Hankel abstracta083 ni una nueva escritura del objetivo global: se prueba un paso concreto de positividad temporal y comparación entre DOS parámetros. No se promueve ese paso a órdenes arbitrarios.
+It is neither the abstract Hankel hierarchy083 nor a new writing of the global target: a concrete step of time positivity and comparison between TWO parameters is proved. That step is not promoted to arbitrary orders.
 
-## 2. Hipótesis de activación, datos y conteo de raíces
+## 2. Activation hypothesis, data and root count
 
-Phi,J,K,a son exactamente los de102/103, con K PAR. Todas las funciones usadas son pares, reales analíticas y poseen supercolas con las derivadas necesarias. Definir Lp=D_t^2-p^2. La única hipótesis adicional a las fuentes ya probadas es
+Phi,J,K,a are exactly those of102/103, with K EVEN. All functions used are even, real analytic and have supertails with the necessary derivatives. Define Lp=D_t^2-p^2. The only hypothesis additional to the already proved sources is
 
-    W_t(K,J,Phi,J'')(t)>0 para TODO t>0.          (WM)
+    W_t(K,J,Phi,J'')(t)>0 for EVERY t>0.          (WM)
 
-103 sección11.4 prueba ya que los tres Wronskianos iniciales del orden[K,J,Phi,J''] son estrictamente positivos. Bajo WM, Rolle ponderado da un sistema Chebyshev extendido de dimensión4: toda combinación no trivial tiene a lo sumo tres raíces positivas contando multiplicidades. Ésta es la propiedad denominada MIXED4 abajo.
+103 section11.4 already proves that the three initial Wronskians of the order[K,J,Phi,J''] are strictly positive. Under WM, weighted Rolle gives an extended Chebyshev system of dimension4: every nontrivial combination has at most three positive roots counting multiplicities. This is the property called MIXED4 below.
 
-Se usan los lemas con bordes102. Una función par h de supercolas con m raíces positivas produce al menos m+1 de Lp h: dividir por cosh(pt), derivar y usar el borde par en0 y los bordes de infinito; la identidad es
+The lemmas with boundary conditions102 are used. An even function h with supertails and m positive roots produces at least m+1 of Lp h: divide by cosh(pt), differentiate and use the even boundary condition at0 and the boundary conditions at infinity; the identity is
 
     [cosh(pt)^2(h/cosh(pt))']'=cosh(pt)Lp h.
 
-Se conservan multiplicidades. Aplicar dos operadores Lp,Lq da al menos m+2 raíces positivas. Los argumentos se aplican a cualquier lista finita; no presuponen finitud de raíces antes de demostrarla. Las combinaciones nulas se descartan mediante el coeficiente explícito no nulo de la fuerza correspondiente y la independencia de MIXED4.
+Multiplicities are kept. Applying two operators Lp,Lq gives at least m+2 positive roots. The arguments apply to any finite list; they do not presuppose finiteness of roots before proving it. Null combinations are discarded by means of the explicit nonzero coefficient of the corresponding forcing and the independence of MIXED4.
 
-## 3. Segunda pareja: U tiene un cruce y Xi es positiva
+## 3. Second pair: U has one crossing and Xi is positive
 
-Para p>0 escribir c=M(p), beta=ap^2/(ap-c), lambda=p^2c/(ap-c).102/103 prueban
+For p>0 write c=M(p), beta=ap^2/(ap-c), lambda=p^2c/(ap-c).102/103 prove
 
     D_p>0, Psi_p>0,
     beta D_p+p^2Psi_p=lambda K,
     LpPsi_p=J-lambda K,
     (Psi_p/D_p)'<0.
 
-Para q>0 definir, con transformadas bilaterales,
+For q>0 define, with two-sided transforms,
 
     F(z)=z ZPsi_p(z)/ZD_p(z)=G_p(z)/c,
     d=F(q)>0,
@@ -51,120 +51,120 @@ Para q>0 definir, con transformadas bilaterales,
     alpha=gamma q-q^2>0,
     C=d lambda/beta>0, D=dp^2/beta+q>0.
 
-Aquí G_q es el Green anticausal102, no el resto G_p. Se tiene LqE=CK-DPsi_p y Cp^2-Dlambda=-qlambda. Los símbolos C,D en esta fuente son coeficientes; D_p sigue siendo la densidad del primer denominador.
+Here G_q is the anticausal Green function102, not the remainder G_p. One has LqE=CK-DPsi_p and Cp^2-Dlambda=-qlambda. The symbols C,D in this source are coefficients; D_p remains the density of the first denominator.
 
-El nuevo peso U=Psi_p-gamma E es par y de masa cero. El cálculo exacto103 da
+The new weight U=Psi_p-gamma E is even and of zero mass. The exact computation103 gives
 
     LpLqU=J''-a(lambda+gamma C)Phi
        +[lambda-q^2+gamma(C+D)]J-lambda alpha K. (U-FORCE)
 
-La combinación MIXED4 no es trivial: su coeficiente de J'' es1. Si U tuviese dos raíces positivas contando multiplicidades, los dos lemas Rolle producirían al menos cuatro de U-FORCE, contradicción. U tiene a lo sumo una raíz positiva simple. No es nulo y tiene masa cero, por lo que debe tener exactamente un cambio de signo.
+The MIXED4 combination is not trivial: its coefficient of J'' is1. If U had two positive roots counting multiplicities, the two Rolle lemmas would produce at least four of U-FORCE, a contradiction. U has at most one simple positive root. It is not zero and has zero mass, so it must have exactly one sign change.
 
-La orientación se fija usando únicamente un signo escalar no negativo YA PROBADO, sin inferir signos temporales de una transformada.099,102 y103 sección11.3 dan R_next(z)>=0 para todos p,q,z>0: los triples del kernel de F en nodos positivos pasan a un bloque auxiliar PSD al llevar un nodo a0, y sus dos pivotes d/q y aF-d/q son positivos. La doble congruencia de Schur deja R_next(z)/z no negativo. No se necesita trasladar estrictura mediante ese límite. Para Xi=G_0U, la masa cero asegura paridad suave y los bordes;102 da exactamente
+The orientation is fixed using only an ALREADY PROVED nonnegative scalar sign, without inferring time signs from a transform.099,102 and103 section11.3 give R_next(z)>=0 for all p,q,z>0: the triples of the kernel of F at positive nodes pass to an auxiliary PSD block when a node is taken to0, and its two pivots d/q and aF-d/q are positive. The double Schur congruence leaves R_next(z)/z nonnegative. There is no need to transfer strictness through that limit. For Xi=G_0U, zero mass ensures smooth parity and the boundary conditions;102 gives exactly
 
     Xi''=U, Xi'(0)=0,
     R_next(z)=d z ZXi(z)/ZE(z).
 
-Si el único cruce de U fuese positivo/negativo, todas sus integrales de cola serían negativas; Xi'>0 y Xi(infinito)=0 implicarían Xi<0. Esto haría ZXi(z)<0 y R_next(z)<0, contradicción. Luego
+If the unique crossing of U were positive/negative, all its tail integrals would be negative; Xi'>0 and Xi(infinito)=0 would imply Xi<0. This would make ZXi(z)<0 and R_next(z)<0, a contradiction. Hence
 
-    U(t)<0 para 0<t<b, U(t)>0 para t>b,
-    b es su único cruce positivo, simple,
-    Xi(t)>0 para TODO t real.                    (SECOND-POSITIVE)
+    U(t)<0 for 0<t<b, U(t)>0 for t>b,
+    b is its unique positive crossing, simple,
+    Xi(t)>0 for EVERY real t.                    (SECOND-POSITIVE)
 
-La estricta positividad de Xi sigue de la integral de cola de U, estrictamente positiva para todo t>0, y de Xi' negativa con límite0 en infinito. Ahora Xi>0 también implica R_next(z)>0, sin exigirlo en el argumento de orientación. Así E,Xi forman una NUEVA pareja positiva para TODOS los pivotes finitos p,q>0.
+Strict positivity of Xi follows from the tail integral of U, strictly positive for every t>0, and from Xi' negative with limit0 at infinity. Now Xi>0 also implies R_next(z)>0, without requiring it in the orientation argument. Thus E,Xi form a NEW positive pair for ALL finite pivots p,q>0.
 
-## 4. La segunda comparación temporal E/Psi_p también decrece
+## 4. The second time comparison E/Psi_p also decreases
 
-Para r>0 sea H_r=E-rPsi_p. Las mismas ecuaciones dan
+For r>0 let H_r=E-rPsi_p. The same equations give
 
     LpLqH_r=-rJ''+a(C+r lambda)Phi
        -[C+D+r(lambda-q^2)]J
        +lambda(q-rq^2)K.                         (RATIO-FORCE)
 
-El coeficiente de J'' es-r, estrictamente negativo. MIXED4 y dos lemas Rolle implican que H_r tiene a lo sumo una raíz positiva simple. Un punto estacionario de E/Psi_p, con r=E(t)/Psi_p(t)>0, produciría una raíz doble de H_r. Por tanto (E/Psi_p)' nunca se anula para p,q,t>0.
+The coefficient of J'' is-r, strictly negative. MIXED4 and two Rolle lemmas imply that H_r has at most one simple positive root. A stationary point of E/Psi_p, with r=E(t)/Psi_p(t)>0, would produce a double root of H_r. Hence (E/Psi_p)' never vanishes for p,q,t>0.
 
-La orientación se fija directamente en parámetros finitos, sin una estimación de cola ni un nuevo límite. La derivada continua nunca nula tiene signo constante en t. Por SECOND-POSITIVE,
+The orientation is fixed directly at finite parameters, without a tail estimate or a new limit. The continuous never-zero derivative has constant sign in t. By SECOND-POSITIVE,
 
     U=Psi_p[1-gamma E/Psi_p]
 
-es negativa antes de su cruce y positiva después; por tanto E/Psi_p pasa desde valores mayores que1/gamma a valores menores. Su derivada no puede ser positiva. En consecuencia
+is negative before its crossing and positive after; hence E/Psi_p passes from values greater than1/gamma to smaller values. Its derivative cannot be positive. Consequently
 
     (E_(p,q)/Psi_p)'(t)<0
-       para TODOS p,q,t>0.                      (SECOND-RATIO)
+       for ALL p,q,t>0.                      (SECOND-RATIO)
 
-Este argumento no requiere convergencia uniforme en toda la semirrecta temporal ni transporte desde p infinito: utiliza el cruce real finito ya probado y la no anulación global de la derivada.
+This argument requires neither uniform convergence on the whole time half-line nor transport from p infinite: it uses the already proved finite real crossing and the global non-vanishing of the derivative.
 
-## 5. Diferencia dividida exacta y TP2 estricta
+## 5. Exact divided difference and strict TP2
 
-Poner V(x,t)=Psi_(sqrt(x))(t), x>0. Para q!=p,
+Put V(x,t)=Psi_(sqrt(x))(t), x>0. For q!=p,
 
     lambda_p=ZJ(p)/ZK(p),
     v_pq=(lambda_q-lambda_p)/(q^2-p^2).
 
-La primera identidad procede de transformar LpPsi_p=J-lambda_pK y evaluar en z=p. Evaluar en z=q y usar el puente beta D_p=lambda_pK-p^2Psi_p da
+The first identity comes from transforming LpPsi_p=J-lambda_pK and evaluating at z=p. Evaluating at z=q and using the bridge beta D_p=lambda_pK-p^2Psi_p gives
 
     ZPsi_p(q)=v_pq ZK(q),
     d=q beta v_pq/(lambda_p-p^2v_pq),
     eta=q+dp^2/beta=q lambda_p/(lambda_p-p^2v_pq)>0,
     C=eta v_pq.
 
-El denominador es positivo porque es beta ZD_p(q)/ZK(q); no se supone su signo a partir de una diferencia dividida abstracta. Aplicar Lq y usar los dos bordes prueba la identidad exacta
+The denominator is positive because it is beta ZD_p(q)/ZK(q); its sign is not assumed from an abstract divided difference. Applying Lq and using the two boundary conditions proves the exact identity
 
     E_(p,q)(t)=eta[Psi_p(t)-Psi_q(t)]/(q^2-p^2). (DIVIDED-GREEN)
 
-En efecto Lq de su lado derecho es eta v_pq K-eta Psi_p=CK-DPsi_p, ya que eta=D. Es la fuerza de E. La diferencia homogénea con supercolas en ambos extremos es cero.
+Indeed Lq of its right side is eta v_pq K-eta Psi_p=CK-DPsi_p, since eta=D. It is the forcing of E. The homogeneous difference with supertails at both ends is zero.
 
-Al dividir por Psi_p y derivar en t, SECOND-RATIO implica
+Dividing by Psi_p and differentiating in t, SECOND-RATIO implies
 
     derivative_t[Psi_q/Psi_p]
        =-(q^2-p^2)/eta * derivative_t[E_(p,q)/Psi_p]
-       >0 para q>p.                             (CROSS-RATIO)
+       >0 for q>p.                             (CROSS-RATIO)
 
-Así, para 0<x1<x2 y0<t1<t2,
+Thus, for 0<x1<x2 and0<t1<t2,
 
     det[[V(x1,t1),V(x2,t1)],
          [V(x1,t2),V(x2,t2)]]>0.                 (STRICT-TP2)
 
-Se ha usado el signo temporal específico obtenido mediante MIXED4. No se deduce STRICT-TP2 de la mera positividad de E ni de monotonías individuales;111 demuestra por qué ese atajo sería incorrecto.
+The specific time sign obtained through MIXED4 has been used. STRICT-TP2 is not deduced from mere positivity of E nor from individual monotonicities;111 shows why that shortcut would be incorrect.
 
-## 6. Confluencia estricta
+## 6. Strict confluence
 
-Las integrales anticausales y los coeficientes lambda son suaves en los parámetros positivos, con derivadas continuas en t sobre compactos. Se puede demostrar directamente el caso confluente, sin trasladar estrictura mediante un límite. Escribir lambda(x)=ZJ(sqrt(x))/ZK(sqrt(x)) y Lx=D_t^2-x. La identidad LxV=J-lambda(x)K da
+The anticausal integrals and the coefficients lambda are smooth in the positive parameters, with continuous derivatives in t on compacts. The confluent case can be proved directly, without transferring strictness through a limit. Write lambda(x)=ZJ(sqrt(x))/ZK(sqrt(x)) and Lx=D_t^2-x. The identity LxV=J-lambda(x)K gives
 
     Lx(-partial_xV)=lambda'(x)K-V.
 
-Derivar la identidad transformada y evaluar en z=p, x=p^2, prueba lambda'(p^2)=ZPsi_p(p)/ZK(p)>0. En la fuerza LpE_(p,p)=CK-DPsi_p, el balance transformado en z=p da C/D=lambda'(p^2). Por unicidad con los bordes,
+Differentiating the transformed identity and evaluating at z=p, x=p^2, proves lambda'(p^2)=ZPsi_p(p)/ZK(p)>0. In the forcing LpE_(p,p)=CK-DPsi_p, the transformed balance at z=p gives C/D=lambda'(p^2). By uniqueness with the boundary conditions,
 
     E_(p,p)(t)=-eta_(p,p) partial_x V(p^2,t),
     eta_(p,p)=D=p+F_p(p)p^2/beta>0.
 
-La desigualdad SECOND-RATIO fue probada directamente también para q=p, mediante el mismo coeficiente-r de RATIO-FORCE. Dividir esta identidad por V(p^2,t) y derivar en t da
+The inequality SECOND-RATIO was also proved directly for q=p, by means of the same coefficient-r of RATIO-FORCE. Dividing this identity by V(p^2,t) and differentiating in t gives
 
     partial_t partial_x log V(x,t)>0
-       para TODO x,t>0.                         (STRICT-CONFLUENT)
+       for EVERY x,t>0.                         (STRICT-CONFLUENT)
 
-Como E_(p,p)>0, también partial_xV(x,t)<0, pero no se afirma monotonía completa en x de todos los órdenes. STRICT-CONFLUENT y STRICT-TP2 son comparaciones de orden2; no constituyen TP de órdenes arbitrarios.
+Since E_(p,p)>0, also partial_xV(x,t)<0, but complete monotonicity in x of all orders is not claimed. STRICT-CONFLUENT and STRICT-TP2 are comparisons of order2; they do not constitute TP of arbitrary orders.
 
-## 7. Alcance preciso y siguiente conservación no descargada
+## 7. Precise scope and next undischarged preservation
 
-Una vez activada WM mediante reproducción independiente, los resultados sustantivos son SECOND-POSITIVE, SECOND-RATIO, STRICT-TP2 y STRICT-CONFLUENT para la familia REAL. La no negatividad del resto transformado escalar, suficiente para la orientación, estaba probada099/102/103; lo nuevo es la positividad de su densidad inversa seleccionada y las comparaciones temporales, que no se habían inferido de aquel signo escalar.
+Once WM is activated by independent reproduction, the substantive results are SECOND-POSITIVE, SECOND-RATIO, STRICT-TP2 and STRICT-CONFLUENT for the REAL family. Nonnegativity of the scalar transformed remainder, sufficient for the orientation, was proved099/102/103; what is new is the positivity of its selected inverse density and the time comparisons, which had not been inferred from that scalar sign.
 
-Para la pareja de parámetros FINITOS(p,q) no queda probado que Xi/E decrezca. Para H=Xi-rE, el cálculo de la siguiente obligación muestra por qué no se repite el mismo argumento automáticamente:
+For the pair of FINITE parameters(p,q) it is not proved that Xi/E decreases. For H=Xi-rE, the computation of the next obligation shows why the same argument is not repeated automatically:
 
     LpLq(H'')=[1+r(C+D)]J''-raC Phi''
        -a[lambda+gamma C+rq lambda]Phi
        +[lambda-q^2+gamma(C+D)+rq lambda]J
        -lambda alpha K.
 
-Aparece la quinta función Phi'', además de MIXED4. Haría falta una comparación nueva para esa familia o para sus coeficientes restringidos. No se afirma esa conservación, ni TP3/TPinf, ni un cono positivo cerrado de todos los órdenes.
+The fifth function Phi'' appears, in addition to MIXED4. A new comparison for that family or for its restricted coefficients would be needed. That preservation is not claimed, nor TP3/TPinf, nor a closed positive cone of all orders.
 
-Tampoco se obtiene nueva ventana T ni cinco potencias arbitrarias de la forma completa W. La cobertura de cuatro exponentes arbitrarios085 y la de trece exponentes>=32 de053 permanecen como estaban. Los nodos0 de las congruencias usadas son auxiliares, no nuevos tests admisibles. La prueba del signo global permanece OPEN.
+Nor is a new window T or five arbitrary powers of the full form W obtained. The coverage of four arbitrary exponents085 and that of thirteen exponents>=32 of053 remain as they were. The nodes0 of the congruences used are auxiliary, not new admissible tests. The proof of the global sign remains OPEN.
 
-Hasta confirmar y registrar la reproducción compacta que activa WM, TODOS los resultados globales nuevos de esta fuente permanecen CONDITIONAL. No se modifica ningún paper ni se ejecuta cómputo para esta deducción.
+Until the compact reproduction that activates WM is confirmed and recorded, ALL new global results of this source remain CONDITIONAL. No paper is modified nor is computation run for this deduction.
 
-## 8. Comparación adicional de la pareja límite (J,K), para TODOS q>0
+## 8. Additional comparison of the limiting pair (J,K), for ALL q>0
 
-Esta ampliación también permanece **CONDITIONAL a WM**. Root y casos verificaron independientemente las identidades; no se ejecuta otro test. Para evitar confundirla con la pareja finita E_(p,q),Xi_(p,q), aquí se escriben estrellas para los objetos de103:
+This extension also remains **CONDITIONAL on WM**. The identities were verified independently; no other test is run. To avoid confusing it with the finite pair E_(p,q),Xi_(p,q), stars are written here for the objects of103:
 
     d*_q=q ZK(q)/ZJ(q)=q/lambda_q,
     E*_q=G_q(d*_q J-qK)>0,
@@ -172,49 +172,49 @@ Esta ampliación también permanece **CONDITIONAL a WM**. Root y casos verificar
     U*_q=K-gamma*_q E*_q,
     Xi*_q=G_0U*_q>0.
 
-La positividad y único cruce de esta pareja ESTRELLA ya están probados103 para todos q>0; lo nuevo bajo WM será su siguiente monotonía. Poner lambda0=massJ/massK=1/b0 y V0=lambda0H, con H de103. La convergencia V(x,t)->V0(t) en C1 local cuando x->0 procede de FINITE-GREEN y E*_q/q->H. Integrar LqPsi_q=J-lambda_qK da
+Positivity and unique crossing of this STAR pair are already proved103 for all q>0; what is new under WM will be its next monotonicity. Put lambda0=massJ/massK=1/b0 and V0=lambda0H, with H of103. The convergence V(x,t)->V0(t) in local C1 as x->0 comes from FINITE-GREEN and E*_q/q->H. Integrating LqPsi_q=J-lambda_qK gives
 
     lambda_q-lambda0
        =q^2 massPsi_q/massK>0.
 
-El puente exacto103 y las masas resultan
+The exact bridge103 and the masses give
 
     E*_q=(q/lambda_q)V(q^2,.),
     gamma*_q=q lambda_q/(lambda_q-lambda0).
 
-Además, diferenciar dos veces y usar los bordes verifica
+Moreover, differentiating twice and using the boundary conditions verifies
 
     Xi*_q=[V0-V(q^2,.)]/(lambda_q-lambda0).        (STAR-IDENTITY)
 
-En efecto, el numerador tiene segunda derivada (lambda_q-lambda0)K-q^2Psi_q, exactamente (lambda_q-lambda0)U*_q.
+Indeed, the numerator has second derivative (lambda_q-lambda0)K-q^2Psi_q, exactly (lambda_q-lambda0)U*_q.
 
-STRICT-TP2 extendida al parámetro0 por continuidad da que V(q^2,t)/V0(t) es NO DECRECIENTE en t. No se atribuye estrictura a este límite. Así
+STRICT-TP2 extended to the parameter0 by continuity gives that V(q^2,t)/V0(t) is NONDECREASING in t. Strictness is not attributed to this limit. Thus
 
     Xi*_q/E*_q
       =[lambda_q/(q(lambda_q-lambda0))]
                     [V0/V(q^2,.)-1]
 
-es no creciente. Para excluir estaciones, fijar r>0 y F=Xi*_q-rE*_q. Sus ecuaciones exactas dan
+is nonincreasing. To exclude stationary points, fix r>0 and F=Xi*_q-rE*_q. Its exact equations give
 
     Lq(F'')=a(1+rq)Phi
        -(1+gamma*_q d*_q+rq)J
        +(gamma*_q q-q^2)K-rd*_q J''.             (STAR-FORCE)
 
-El coeficiente-rd*_q es no nulo. MIXED4 y los dos lemas Rolle, D2 seguido de Lq, excluyen una raíz doble positiva de F. Por tanto la derivada del cociente nunca se anula. Junto con el signo no positivo ya demostrado,
+The coefficient-rd*_q is nonzero. MIXED4 and the two Rolle lemmas, D2 followed by Lq, exclude a positive double root of F. Hence the derivative of the quotient never vanishes. Together with the nonpositive sign already proved,
 
     (Xi*_q/E*_q)'(t)<0
-       para TODOS q,t>0.                        (STAR-RATIO)
+       for ALL q,t>0.                        (STAR-RATIO)
 
-### Confluencia adicional q->0
+### Additional confluence q->0
 
-103 prueba Xi*_q->Xi_lim y E*_q/q->H en C1 local. Así q Xi*_q/E*_q->Xi_lim/H en C1 local. STAR-RATIO sólo permite concluir de ese límite una derivada NO POSITIVA. Para obtener estrictura de forma independiente, fijar r>0 y F=Xi_lim-rH. Con gamma_bar=massK/massH y H''=b0J-K,
+103 proves Xi*_q->Xi_lim and E*_q/q->H in local C1. Thus q Xi*_q/E*_q->Xi_lim/H in local C1. STAR-RATIO only allows concluding from that limit a NONPOSITIVE derivative. To obtain strictness independently, fix r>0 and F=Xi_lim-rH. With gamma_bar=massK/massH and H''=b0J-K,
 
     F''''=a(1+r)Phi
        -(1+r+gamma_bar b0)J
        +gamma_bar K-rb0 J''.                     (ZERO-STAR-FORCE)
 
-Es una combinación MIXED4 no trivial, con coeficiente-rb0. Dos aplicaciones del lema D2 excluyen una raíz doble positiva de F; por tanto la derivada de Xi_lim/H no se anula. Se concluye
+It is a nontrivial MIXED4 combination, with coefficient-rb0. Two applications of lemma D2 exclude a positive double root of F; hence the derivative of Xi_lim/H does not vanish. We conclude
 
-    (Xi_lim/H)'(t)<0 para TODO t>0.               (ZERO-STAR-RATIO)
+    (Xi_lim/H)'(t)<0 for EVERY t>0.               (ZERO-STAR-RATIO)
 
-Esta ampliación prueba el siguiente cociente temporal para la pareja límite ESTRELLA, utilizando la misma comparación mixta bajo WM. No sustituye la obligación de cinco funciones para Xi_(p,q)/E_(p,q) de parámetros p,q FINITOS, exhibida en la sección7. No se afirma propagación indefinida, TP de órdenes superiores, cinco potencias W ni nueva ventana T. La reproducción que activa WM sigue siendo un requisito previo para declarar estas consecuencias globales como probadas.
+This extension proves the next time quotient for the limiting STAR pair, using the same mixed comparison under WM. It does not replace the five-function obligation for Xi_(p,q)/E_(p,q) of FINITE parameters p,q, exhibited in section7. Indefinite propagation, TP of higher orders, five W powers nor a new window T are claimed. The reproduction that activates WM remains a prerequisite for declaring these global consequences proved.

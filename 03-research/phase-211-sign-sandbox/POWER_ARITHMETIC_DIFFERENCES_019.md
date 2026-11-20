@@ -1,87 +1,87 @@
-# POWER_ARITHMETIC_DIFFERENCES_019 — Una frontera firmada del peine completo
+# POWER_ARITHMETIC_DIFFERENCES_019 — A signed frontier of the full comb
 
-Estado: **PROVED** lema de una sola transición para toda la columna k=1; **PROVED** signo positivo del peine para 1<=N<=211,u>=63/2. Signo completo de la tabla **OPEN**. Papers intactos.
+Status: **PROVED** single-transition lemma for the whole column k=1; **PROVED** positive sign of the comb for 1<=N<=211, u>=63/2. Full sign of the table **OPEN**. Papers untouched.
 
-## 1. Antecedentes y diferencia precisa
+## 1. Antecedents and precise difference
 
-Leídos las reglas del proyecto, STATE018, TABLE_DESCENT018, CONE001§4 (theta positiva no implica las desigualdades de cocientes), TATE_CHAIN009§§2–4 y LOW_TABLE018. Consultados el índice de rutas (residuos Euler/Möbius, Λ*1=log y momentos), el grid maestro (entradas Bernstein y POWER017/018) y CROSSWORD-TO-D.md (uso lineal de Λ*1=log, error aritmético firmado). No se atribuye signo a una identidad de Euler, a una medida abstracta de momentos ni a la positividad de la fila inicial.
+Read: the project rules, STATE018, TABLE_DESCENT018, CONE001§4 (positive theta does not imply the ratio inequalities), TATE_CHAIN009§§2–4 and LOW_TABLE018. Consulted the routes index (Euler/Möbius residues, Λ*1=log and moments), the master grid (Bernstein entries and POWER017/018) and CROSSWORD-TO-D.md (linear use of Λ*1=log, signed arithmetic error). No sign is attributed to an Euler identity, to an abstract moment measure, or to the positivity of the initial row.
 
-La diferencia es una propiedad exacta de la autocorrelación de TODA una columna de los átomos reales F_(N,k)(s)=s^k/(s+u)^(N+k): el kernel que pesa Λ en k=1 tiene una sola frontera de signo, localizada analíticamente en O(sqrt(N)). Esto permite sumar TODO el peine con signo en una región explícita de N variables, sin certificados separados de W para filas4,5,... y sin omitir el polar de la obligación final. Los polinomios Bessel inversos y Descartes son herramientas clásicas; el resultado específico es la frontera y la consecuencia firmada para estos contactos.
+The difference is an exact property of the autocorrelation of a WHOLE column of the real atoms F_(N,k)(s)=s^k/(s+u)^(N+k): the kernel weighting Λ at k=1 has a single sign frontier, located analytically at O(sqrt(N)). This allows summing the WHOLE comb with sign on an explicit region of N variables, without separate certificates of W for rows 4,5,... and without dropping the polar term from the final obligation. Reverse Bessel polynomials and Descartes are classical tools; the specific result is the frontier and the signed consequence for these contacts.
 
-## 2. Normalización y kernel
+## 2. Normalisation and kernel
 
-Sea u>0, g_M(y)=y^(M−1)e^(−uy)/(M−1)! para y>0, y C_M(t)=c_(g_M)(t). Su densidad de Fourier es (u²+tau²)^(-M). Para t>=0, x=ut y d=M−1,
+Let u>0, g_M(y)=y^(M−1)e^(−uy)/(M−1)! for y>0, and C_M(t)=c_(g_M)(t). Its Fourier density is (u²+tau²)^(-M). For t>=0, x=ut and d=M−1,
 
     C_M(t)=e^(−x) p_d(x)/[2^(d+1)u^(2d+1)d!],
     p_d(x)=sum_(j=0)^d (2d−j)! x^j/[2^(d−j)(d−j)!j!].             (C)
 
-Integrar g_M(y)g_M(y+t) da (C) directamente. Para f_(N,1), la densidad es tau²/(u²+tau²)^(N+1), por lo cual
+Integrating g_M(y)g_M(y+t) gives (C) directly. For f_(N,1), the density is tau²/(u²+tau²)^(N+1), whence
 
     c_(f_(N,1))(t)=−C_(N+1)''(t).                              (D)
 
-La derivación es legítima incluso N=1: la densidad multiplicada por tau² sigue siendo integrable. Aquí no se deriva una función causal en el borde.
+The differentiation is legitimate even for N=1: the density multiplied by tau² remains integrable. No causal function is differentiated at the boundary here.
 
-## 3. Una sola transición de signo para TODO N
+## 3. A single sign transition for EVERY N
 
-**Teorema.** Para cada N>=1 existe exactamente un chi_N>0 tal que c_(f_(N,1))(t)>0 si 0<=ut<chi_N, se anula en chi_N, y es negativa para ut>chi_N. La raíz es simple. Además
+**Theorem.** For each N>=1 there is exactly one chi_N>0 such that c_(f_(N,1))(t)>0 if 0<=ut<chi_N, it vanishes at chi_N, and it is negative for ut>chi_N. The root is simple. Moreover
 
     chi_1=1, chi_2=(1+sqrt(5))/2,
     sqrt(2N−3)<chi_N<(1+sqrt(8N−11))/2       (N>=3).             (B)
 
-Prueba. Escriba a_j=[x^j]p_N(x)>0 y r_N=p_N−2p_N'+p_N''. Para N>=2 el cociente de coeficientes se simplifica exactamente a
+Proof. Write a_j=[x^j]p_N(x)>0 and r_N=p_N−2p_N'+p_N''. For N>=2 the ratio of coefficients simplifies exactly to
 
     [x^j]r_N / a_j = [j(j+1)−2N]/[(2N−j)(2N−j−1)] .           (COEF)
 
-El denominador es positivo para 0<=j<=N,N>=2. El numerador crece estrictamente con j, es negativo en j=0 y positivo en j=N. Ignorando eventuales coeficientes nulos, hay exactamente un cambio de signo. Descartes da como máximo una raíz positiva contando multiplicidad; r_N(0)<0 y su coeficiente principal es positivo, así que existe una y es simple. Por (D) los signos son los declarados. Para N=1, r_1=x−1.
+The denominator is positive for 0<=j<=N, N>=2. The numerator increases strictly with j, is negative at j=0 and positive at j=N. Ignoring possible zero coefficients, there is exactly one sign change. Descartes gives at most one positive root counting multiplicity; r_N(0)<0 and its leading coefficient is positive, so one exists and it is simple. By (D) the signs are as declared. For N=1, r_1=x−1.
 
-Las identidades polinomiales clásicas, verificables coeficiente a coeficiente, son
+The classical polynomial identities, verifiable coefficient by coefficient, are
 
     (e^(−x)p_d(x))'=−x e^(−x)p_(d−1)(x),
     p_d=(2d−1)p_(d−1)+x²p_(d−2)              (d>=2).            (R)
 
-También p_j(x)>x p_(j−1)(x) para j>=1,x>=0. En efecto, para 1<=l<=j el cociente entre [x^l]p_j y [x^(l−1)]p_(j−1) es (2j−l)/l>=1; el término constante de p_j es positivo. Para j>=2 los otros coeficientes salvo el principal son estrictos.
+Also p_j(x)>x p_(j−1)(x) for j>=1, x>=0. Indeed, for 1<=l<=j the ratio between [x^l]p_j and [x^(l−1)]p_(j−1) is (2j−l)/l>=1; the constant term of p_j is positive. For j>=2 the other coefficients except the leading one are strict.
 
-Derivar la primera identidad de (R) da r_N=x²p_(N−2)−p_(N−1) para N>=2. Para N=2 se obtiene x²−x−1. Para N>=3, en la raíz,
+Differentiating the first identity of (R) gives r_N=x²p_(N−2)−p_(N−1) for N>=2. For N=2 one obtains x²−x−1. For N>=3, at the root,
 
     chi_N² = p_(N−1)(chi_N)/p_(N−2)(chi_N)
             = 2N−3 + chi_N² p_(N−3)(chi_N)/p_(N−2)(chi_N).
 
-Todos los polinomios son positivos; el último sumando pertenece estrictamente a (0,chi_N), por la desigualdad anterior. Resolver las dos desigualdades prueba (B). QED.
+All polynomials are positive; the last summand lies strictly in (0,chi_N), by the inequality above. Solving the two inequalities proves (B). QED.
 
-## 4. Consecuencia firmada para la aritmética REAL
+## 4. Signed consequence for the REAL arithmetic
 
-Defina exclusivamente la contribución del peine
+Define exclusively the contribution of the comb
 
     P_(N,k)(u)=−2 sum_(q>=2) Λ(q)q^(−1/2)c_(f_(N,k))(log q).
 
-Todas las series convergen absolutamente para u>1/2: la autocorrelación es e^(−ut) por un polinomio finito y Λ(q)<=log q. No es necesario truncar, reemplazar ni modificar Λ.
+All series converge absolutely for u>1/2: the autocorrelation is e^(−ut) times a finite polynomial and Λ(q)<=log q. There is no need to truncate, replace or modify Λ.
 
-**Corolario.** Para TODOS 1<=N<=211 y u>=63/2,
+**Corollary.** For ALL 1<=N<=211 and u>=63/2,
 
     P_(N,1)(u)>0.                                             (ARITH)
 
-En efecto log2>2/3 implica u log q>=u log2>21. Para 3<=N<=211, 21²−21−(2N−3)>=1>0, de modo que la raíz superior de (B) es menor que21. Los casos N1,2 son explícitos y también menores que21. Por tanto C_(N+1)''(log q)>0 en TODOS los contactos q>=2 y c_(f_(N,1))(log q)<0. Cada sumando no nulo del peine es positivo; q=2 asegura estrictitud.
+Indeed log2>2/3 implies u log q>=u log2>21. For 3<=N<=211, 21²−21−(2N−3)>=1>0, so the upper root of (B) is less than 21. The cases N1,2 are explicit and also less than 21. Therefore C_(N+1)''(log q)>0 at ALL contacts q>=2 and c_(f_(N,1))(log q)<0. Each nonzero summand of the comb is positive; q=2 ensures strictness.
 
-Más generalmente, para CUALQUIER N, el tramo q>exp(chi_N/u) del peine tiene sumandos positivos; los contactos con log q<chi_N/u tienen sumandos negativos. La frontera única es exacta, no una cota de error absoluto.
+More generally, for ANY N, the stretch q>exp(chi_N/u) of the comb has positive summands; the contacts with log q<chi_N/u have negative summands. The single frontier is exact, not an absolute error bound.
 
-## 5. Qué inferencia sobre diferencias queda falsificada
+## 5. Which inference about differences is falsified
 
-El peine aislado NO aporta siempre las diferencias positivas buscadas. En k=0, C_N(t)>0 para TODOS t>=0 por (C), y por tanto
+The isolated comb does NOT always supply the desired positive differences. At k=0, C_N(t)>0 for ALL t>=0 by (C), and therefore
 
     P_(N,0)(u)<0                 (N>=1,u>1/2).                 (NEG)
 
-La misma identidad complementaria que vale para W vale para P porque sólo utiliza las densidades racionales:
+The same complementary identity that holds for W holds for P because it only uses the rational densities:
 
     P_(N,k)=P_(N,k+1)+u²P_(N+1,k).
 
-Así para todo r>=0,
+Thus for all r>=0,
 
     (−Delta)^r P_(1,0)(u)=u^(2r) P_(r+1,0)(u)<0.              (FD)
 
-Esto falsifica explícitamente el lema concreto «la positividad Λ>=0 hace no negativas las diferencias completas de la contribución aritmética a la fila1». Se usa la Λ real y su suma completa, no una medida abstracta ni una constante arquimediana desplazada. En particular, para N<=211 el peine cambia de signo entre k0 y k1. No se afirma que (FD) falsifique las diferencias de la fila COMPLETA: sus contribuciones arquimediana y polar son esenciales.
+This explicitly falsifies the concrete lemma "the positivity Λ>=0 makes the full differences of the arithmetic contribution to row 1 nonnegative". The real Λ and its full sum are used, not an abstract measure nor a shifted archimedean constant. In particular, for N<=211 the comb changes sign between k0 and k1. It is not claimed that (FD) falsifies the differences of the FULL row: its archimedean and polar contributions are essential.
 
-## 6. Alcance y obligación restante
+## 6. Scope and remaining obligation
 
-ARITH es una desigualdad nueva firmada de una columna, válida simultáneamente para211 órdenes y todas las tasas declaradas; la frontera única vale para TODOS órdenes. No prueba W_(N,1)>=0 para esos órdenes y no borra el polar. Tampoco proporciona las diferencias completas de TODO orden. Para la obligación global falta una desigualdad que conserve la cancelación de ARCH, peine y polar a órdenes variables. Ni el generador de la fila1 ni esta frontera aportan por sí solos ese paso.
+ARITH is a new signed inequality for one column, valid simultaneously for 211 orders and all declared rates; the single frontier holds for ALL orders. It does not prove W_(N,1)>=0 for those orders and does not erase the polar term. Nor does it provide the full differences of EVERY order. For the global obligation one still needs an inequality preserving the cancellation of ARCH, comb and polar at variable orders. Neither the generator of row 1 nor this frontier supplies that step by itself.
 
-Verificación exacta auxiliar: tools/power_arithmetic_differences_019_verify.py comprueba las identidades polinomiales, los extremos y el umbral211; las pruebas simbólicas anteriores cubren todos los N sin depender de un barrido.
+Auxiliary exact verification: tools/power_arithmetic_differences_019_verify.py checks the polynomial identities, the endpoints and the threshold 211; the symbolic proofs above cover all N without depending on a sweep.

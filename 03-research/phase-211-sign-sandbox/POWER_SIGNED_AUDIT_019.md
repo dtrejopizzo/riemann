@@ -1,40 +1,40 @@
 # POWER SIGNED AUDIT 019
 
-Estado: APROBADOS ambos memos de construcción, con alcance local explícito; no certificado global nuevo. Papers intactos.
+Status: both construction memos APPROVED, with explicit local scope; no new global certificate. Papers untouched.
 
-## Antecedentes y restricción de novedad
+## Antecedents and novelty restriction
 
-La búsqueda dirigida del corpus sitúa la identidad de Euler/Möbius en los antecedentes ya citados por `POWER_TATE_CHAIN_009` §0: `PROOF_L_SHARP_E/J` (Λ*1=log y momentos), `A_MU_FACTORIZATION/AUDIT200` y `N_018`. La negatividad de una suma divisor acumulada no constituye por sí sola una nueva ruta de signo. El paso distinto que requeriría prueba es la desigualdad del kernel adjunto específico y completo, con sus signos de Möbius.
+The targeted search of the corpus places the Euler/Möbius identity in the antecedents already cited by `POWER_TATE_CHAIN_009` §0: `PROOF_L_SHARP_E/J` (Λ*1=log and moments), `A_MU_FACTORIZATION/AUDIT200` and `N_018`. The negativity of an accumulated divisor sum does not by itself constitute a new sign route. The distinct step that would require proof is the inequality of the specific and full adjoint kernel, with its Möbius signs.
 
-Descartes ya aparece en `phase-162-row-d-first-contact-closure/R162_1501_TARGET_AUDIT.md`, Lemma D, y en el inventario de `phase-200-sign-object/SPEC_SIGN_OBJECT_011.md`. Su aplicación a una autocorrelación racional concreta puede proporcionar un lema nuevo y local; no se presenta como nueva ruta nodal general.
+Descartes already appears in `phase-162-row-d-first-contact-closure/R162_1501_TARGET_AUDIT.md`, Lemma D, and in the inventory of `phase-200-sign-object/SPEC_SIGN_OBJECT_011.md`. Its application to a concrete rational autocorrelation may provide a new and local lemma; it is not presented as a new general nodal route.
 
-## Identidad acumulada: chequeo independiente inicial
+## Accumulated identity: initial independent check
 
-Si B(x)=log(n!)−xH_n+n, n=floor x, entonces B(1)=0, B tiene pendiente −H_n en cada intervalo [n,n+1) y sus máximos enteros satisfacen B(n+1)−B(n)=log(n+1)−H_n<0, por comparación suma/integral. Así B(x)<0 para x>1. La identificación con la suma divisor de E0 debe mantener la convención E0(1)=0 y los saltos log n.
+If B(x)=log(n!)−xH_n+n, n=floor x, then B(1)=0, B has slope −H_n on each interval [n,n+1) and its integer maxima satisfy B(n+1)−B(n)=log(n+1)−H_n<0, by sum/integral comparison. Thus B(x)<0 for x>1. The identification with the divisor sum of E0 must keep the convention E0(1)=0 and the jumps log n.
 
-Este signo escalar no certifica el signo del kernel adjunto. En particular, una truncación de sus sumandos m=1,2,3 negativa no implica negatividad de la suma infinita restante. Las revisiones completas de los memos entregados se registran a continuación.
+This scalar sign does not certify the sign of the adjoint kernel. In particular, a negative truncation of its summands m=1,2,3 does not imply negativity of the remaining infinite sum. The full reviews of the delivered memos are recorded below.
 
-## Revisión completa de SIGNED_MEAN019 — APROBADO
+## Full review of SIGNED_MEAN019 — APPROVED
 
-Leído `POWER_SIGNED_MEAN_019.md`. La suma divisor, la cota B(x)≤−(1−log2)(x−1), y la integración positiva MEAN son correctas. La monotonía de H_n−log(n+1) da la cota en enteros y la pendiente −H_n la prolonga entre ellos. La identidad ∫H_N(x)(x−1)dx=J_N(1/2) conserva los extremos. Así la media de TODAS las dilataciones es estrictamente negativa.
+Read `POWER_SIGNED_MEAN_019.md`. The divisor sum, the bound B(x)≤−(1−log2)(x−1), and the positive integration MEAN are correct. The monotonicity of H_n−log(n+1) gives the bound at integers and the slope −H_n extends it between them. The identity ∫H_N(x)(x−1)dx=J_N(1/2) keeps the endpoints. Thus the mean over ALL dilations is strictly negative.
 
-El adjunto h_N(x)=Σμ(m)mH_N(mx) contiene correctamente el jacobiano. La identidad Σd h_N(dy)=H_N(y) sale agrupando divisores; el emparejamiento F_N=2∫h_N B es correcto. Las permutaciones son absolutamente convergentes: H_N(x)=O_N(x^−33 polylog x), mientras |E0(x)|=O(x log x) basta. La condición SIGNED equivale exactamente a −F_N≥−Arch_sharp/c0; no se ha probado.
+The adjoint h_N(x)=Σμ(m)mH_N(mx) correctly contains the Jacobian. The identity Σd h_N(dy)=H_N(y) follows by grouping divisors; the pairing F_N=2∫h_N B is correct. The permutations are absolutely convergent: H_N(x)=O_N(x^−33 polylog x), while |E0(x)|=O(x log x) suffices. The condition SIGNED is exactly equivalent to −F_N≥−Arch_sharp/c0; it has not been proved.
 
-FAIL3 es correcto para N≥2^17: M2=u²/(2N−3)<1/128, rho(log m)≥1−2M2, rho′≤0 y 1/√2+1/√3>7/6 dan h_N^[3](1)<−19/256. Refuta positividad de cada prefijo inverso en el kernel real. No determina el signo de h_N completo, ni de F_N, ni de W. Resultado nuevo local: signo MEAN y fallo explícito de la preservación por prefijos; la identidad de Möbius por sí misma pertenece a los antecedentes.
+FAIL3 is correct for N≥2^17: M2=u²/(2N−3)<1/128, rho(log m)≥1−2M2, rho′≤0 and 1/√2+1/√3>7/6 give h_N^[3](1)<−19/256. It refutes positivity of each inverse prefix in the real kernel. It does not determine the sign of the full h_N, nor of F_N, nor of W. New local result: MEAN sign and explicit failure of preservation by prefixes; the Möbius identity by itself belongs to the antecedents.
 
-Root revisó independientemente SIGNED_MEAN019 y coincide en la aprobación de normalización ERR, saltos/extremos B, constante MEAN, adjunto absolutamente sumable y FAIL3 con su alcance parcial.
+A second independent review of SIGNED_MEAN019 agrees on the approval of the ERR normalization, jumps/endpoints of B, MEAN constant, absolutely summable adjoint and FAIL3 with its partial scope.
 
 
-## Revisión ARITHMETIC_DIFFERENCES019 — APROBADO
+## Review ARITHMETIC_DIFFERENCES019 — APPROVED
 
-Leídos `POWER_ARITHMETIC_DIFFERENCES_019.md` y su verificador `tools/power_arithmetic_differences_019_verify.py`; ejecución independiente PASS. La fórmula de C_M conserva la norma en t=0 y la identidad c_(N,1)=−C_(N+1)″ es legítima también para N=1: la densidad de la segunda derivada es integrable.
+Read `POWER_ARITHMETIC_DIFFERENCES_019.md` and its verifier `tools/power_arithmetic_differences_019_verify.py`; independent run PASS. The formula for C_M keeps the norm at t=0 and the identity c_(N,1)=−C_(N+1)″ is legitimate also for N=1: the density of the second derivative is integrable.
 
-Para N≥2, el cociente exacto de coeficientes de r_N=p_N−2p_N′+p_N″ tiene denominador positivo y numerador j(j+1)−2N estrictamente creciente. Ignorando ceros, tiene una variación. El signo constante negativo y el principal positivo dan existencia; Descartes da unicidad y simplicidad. El extremo N=1 es r_1=x−1. El extremo N=2 da x²−x−1. La recurrencia y p_j>x p_(j−1), probada por comparación de coeficientes, dan los límites declarados de la única raíz para N≥3. No falta un extremo pequeño.
+For N≥2, the exact coefficient quotient of r_N=p_N−2p_N′+p_N″ has positive denominator and strictly increasing numerator j(j+1)−2N. Ignoring zeros, it has one sign variation. The constant negative sign and the positive leading coefficient give existence; Descartes gives uniqueness and simplicity. The endpoint N=1 is r_1=x−1. The endpoint N=2 gives x²−x−1. The recurrence and p_j>x p_(j−1), proved by coefficient comparison, give the declared bounds of the unique root for N≥3. No small endpoint is missing.
 
-El umbral aritmético es correcto: u log2>21 y 21²−21−(2N−3)≥1 para N≤211. Así TODOS los contactos de la columna k=1 tienen autocorrelación negativa y el peine completo es estrictamente positivo. La suma es absolutamente convergente para u>1/2. No se ha omitido ningún contacto ni se ha inferido el signo de W a partir de este sumando.
+The arithmetic threshold is correct: u log2>21 and 21²−21−(2N−3)≥1 for N≤211. Thus ALL contacts of the column k=1 have negative autocorrelation and the full comb is strictly positive. The sum is absolutely convergent for u>1/2. No contact has been omitted nor has the sign of W been inferred from this summand.
 
-La identidad de diferencias del peine aislado es exacta por la misma identidad racional complementaria. C_N>0 da P_(N,0)<0, por lo que todas las diferencias (−Δ)^rP_(1,0) son negativas. Esto refuta sólo la atribución de diferencias positivas al peine por Λ≥0; no refuta las diferencias de la forma completa. La novedad relativa al corpus es la frontera única específica, sus límites y la consecuencia firmada de los 211 órdenes, no el uso general de Descartes.
+The difference identity of the isolated comb is exact by the same complementary rational identity. C_N>0 gives P_(N,0)<0, so all differences (−Δ)^rP_(1,0) are negative. This refutes only the attribution of positive differences to the comb via Λ≥0; it does not refute the differences of the full form. The novelty relative to the corpus is the specific unique boundary, its bounds and the signed consequence for the 211 orders, not the general use of Descartes.
 
-## Cierre de alcance de la ronda
+## Scope closure of the round
 
-Se aprueban MEAN y FAIL3, y la transición única de toda la columna k=1 con peine completo positivo para N≤211. Las dos construcciones conservan sus portadores: media de dilataciones frente a residuo original, y peine frente a W completo. El kernel inverso completo y el signo global de la tabla siguen abiertos. No hay nueva ventana T certificada ni modificación de papers.
+Approved: MEAN and FAIL3, and the unique transition of the whole column k=1 with full positive comb for N≤211. The two constructions keep their carriers: mean over dilations versus original residue, and comb versus full W. The full inverse kernel and the global sign of the table remain open. There is no new certified window T nor modification of papers.

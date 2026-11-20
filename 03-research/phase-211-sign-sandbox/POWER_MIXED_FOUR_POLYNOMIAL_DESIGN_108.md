@@ -1,54 +1,54 @@
-# POWER — Determinante polinómico correlacionado, diseño108
+# POWER — Correlated polynomial determinant, design108
 
-Estado: EJECUTADO / INCONCLUSO, reproducido independientemente. El diseño previo se conserva; signo compacto OPEN.
+Status: EXECUTED / INCONCLUSIVE, independently reproduced. The previous design is kept; compact sign OPEN.
 
-## 1. Antecedente y diferencia precisa
+## 1. Antecedent and precise difference
 
-Se conserva las reglas del proyecto y la consulta de ROUTES-TRIED-INDEX/README, R162_2300_MASTER_GRID y CROSSWORD-TO-D para el objeto mixto104–107. La corrida107 y su reproducción independiente terminaron INCONCLUSIVE:11 evaluaciones,0 aceptadas, lambda[0,1/65536], profundidad10. No fue un signo negativo. No se repite como prueba el sistema impar093 ni se presume herencia de099.
+The project rules and the consultation of ROUTES-TRIED-INDEX/README, R162_2300_MASTER_GRID and CROSSWORD-TO-D for the mixed object104–107 are kept. Run107 and its independent reproduction ended INCONCLUSIVE:11 evaluations,0 accepted, lambda[0,1/65536], depth10. It was not a negative sign. The odd system093 is not repeated as proof and inheritance from099 is not presumed.
 
-El único cambio108 es algebraico: formar el determinante en el anillo de polinomios intervalares ANTES de evaluar lambda. Así las24 permutaciones mantienen la misma variable; no se asume correlación entre errores de coeficientes. Se conserva intacto el builder107 y toda su prueba de truncamiento.
+The only change of108 is algebraic: form the determinant in the ring of interval polynomials BEFORE evaluating lambda. Thus the24 permutations keep the same variable; no correlation between coefficient errors is assumed. The107 builder and all its truncation proof are kept intact.
 
-## 2. Parámetros inalterados
+## 2. Unchanged parameters
 
-Origen:1024bits,128 modos, cap t1025, grado lambda512; dominio[0,1/4],16 celdas iniciales de ancho1/64, profundidad10, máximo8192 evaluaciones. Resto: módulo107 INTACTO,512bits, Gauss64 en10 segmentos hasta512, cap4/cap5,508 celdas iniciales temporales de ancho1/8, profundidad10, máximo8192 evaluaciones. Ningún cambio de modos, precision, geometría o criterio de aceptación.
+Origin:1024bits,128 modes, cap t1025, lambda degree512; domain[0,1/4],16 initial cells of width1/64, depth10, at most8192 evaluations. Remainder: module107 INTACT,512bits, Gauss64 on10 segments up to512, cap4/cap5,508 initial time cells of width1/8, depth10, at most8192 evaluations. No change of modes, precision, geometry or acceptance criterion.
 
-No se modifica power_mixed_four_origin_branch_107.py ni power_mixed_four_compact_107_verify.py. El nuevo controlador importa el builder sin ejecutar run_origin107. Antes de importar se comprueban hashes fijados al guardar el literal108. La importación107 no evalúa theta. La evaluación puntual de a y construcción de coeficientes ocurrirá sólo en la corrida108 autorizada, nunca durante este diseño.
+power_mixed_four_origin_branch_107.py and power_mixed_four_compact_107_verify.py are not modified. The new controller imports the builder without executing run_origin107. Before import, hashes fixed when saving the literal108 are checked. The import of107 does not evaluate theta. The pointwise evaluation of a and construction of coefficients will occur only in the authorized run108, never during this design.
 
-## 3. Polinomio y errores
+## 3. Polynomial and errors
 
-El builder entrega los polinomios conocidos para columnas K,J,phi,Q y sus derivadas lambda0..3. Formar mediante productos y sumas intervalares los24 términos del determinante y obtener un único polinomio P(lambda), conservando todos sus coeficientes. Su grado es finito y como máximo2048. No truncar el producto para reducir coste y no identificar coeficientes inciertos con cero.
+The builder delivers the known polynomials for columns K,J,phi,Q and their lambda derivatives0..3. Form, by interval products and sums, the24 terms of the determinant and obtain a single polynomial P(lambda), keeping all its coefficients. Its degree is finite and at most2048. Do not truncate the product to reduce cost and do not identify uncertain coefficients with zero.
 
-Los errores de momentos103, a y modos theta están YA en los coeficientes intervalares del builder y se propagan por todos los productos. El error restante de función por entrada es epsilon=2^-400, según107 auditado. No se introduce esa bola como coeficiente constante de P: se paga después como error independiente del determinante.
+The errors of moments103, a and theta modes are ALREADY in the interval coefficients of the builder and propagate through all products. The remaining function error per entry is epsilon=2^-400, according to the audited107. That ball is not introduced as a constant coefficient of P: it is paid afterwards as an independent error of the determinant.
 
-Para lambda real[0,1/4], los discos de radio1/8 quedan en |lambda|<=3/8. J,K<=2^42 en |lambda|<=1/2; Cauchy hasta derivada4 cuesta menos que4!8^4<2^17. La combinación Q^(j)=-(2j+1)phi^(j)-2lambda phi^(j+1), j<=3, queda asimismo bajo B=2^62. Las entradas polinómicas están bajo B+1. Telescopar cada producto de cuatro entradas, sin suponer dependencia favorable de errores, da
+For real lambda[0,1/4], the discs of radius1/8 lie in |lambda|<=3/8. J,K<=2^42 on |lambda|<=1/2; Cauchy up to derivative4 costs less than4!8^4<2^17. The combination Q^(j)=-(2j+1)phi^(j)-2lambda phi^(j+1), j<=3, likewise stays under B=2^62. The polynomial entries are under B+1. Telescoping each product of four entries, without assuming favourable dependence of errors, gives
 
- |det exacto-P| <=24*4*epsilon*(B+1)^3
+ |exact det-P| <=24*4*epsilon*(B+1)^3
                  =96*2^-400*(2^62+1)^3 <2^-200.
 
-Esta cota es uniforme en todo el origen. No exige positividad previa del determinante.
+This bound is uniform on the whole origin. It does not require prior positivity of the determinant.
 
-## 4. Evaluación fijada antes de datos
+## 4. Evaluation fixed before data
 
-Se elige traslado Taylor exacto del polinomio a cada centro racional c, y NO evaluación intervalar directa de sus24 términos. Si
+Exact Taylor shift of the polynomial to each rational centre c is chosen, and NOT direct interval evaluation of its24 terms. If
 
  P(c+s)=sum b_j s^j,
 
-se calcula el límite inferior b_0.lower - sum_(j>=1) abs(b_j).upper*h^j -2^-200, con h el semiancho exacto. Para un límite superior usar b_0.upper + la misma pérdida +2^-200. Todos los coeficientes del traslado son bolas outward, el centro y h son racionales dyádicos exactos. No se descartan coeficientes pequeños. La suma finita incorpora TODOS los grados conservados.
+compute the lower bound b_0.lower - sum_(j>=1) abs(b_j).upper*h^j -2^-200, with h the exact half-width. For an upper bound use b_0.upper + the same loss +2^-200. All shift coefficients are outward balls, the centre and h are exact dyadic rationals. Small coefficients are not discarded. The finite sum incorporates ALL kept degrees.
 
-Se acepta una celda sólo si el límite inferior es positivo. Un límite superior negativo da NEGATIVE para toda esa celda; en otro caso subdividir izquierda primero con los mismos presupuestos107. Si se agotan, INCONCLUSIVE. Una salida del origen distinta de PASS impide ejecutar el resto. Si pasa, se usa certify_rest107 sin alterar sus parámetros. No se reinterpreta un encierro inconcluso como refutación.
+A cell is accepted only if the lower bound is positive. A negative upper bound gives NEGATIVE for that whole cell; otherwise subdivide left first with the same budgets of107. If they are exhausted, INCONCLUSIVE. An origin output other than PASS prevents executing the remainder. If it passes, certify_rest107 is used without altering its parameters. An inconclusive enclosure is not reinterpreted as a refutation.
 
-## 5. Auditoría y tareas pendientes
+## 5. Audit and pending tasks
 
-Las cotas de entradas y de transferencia2^-200 fueron revisadas conceptualmente por mapa antes de datos. Pendiente: auditoría íntegra de este diseño, literal108 con hashes de los módulos107 y verificación de la API de traslado polinómico, auditoría literal y sólo después una corrida. El producto/traslado de grado hasta2048 puede ser costoso; el presupuesto matemático no implica garantía de viabilidad ni PASS.
+The entry bounds and the transfer2^-200 were reviewed conceptually before data. Pending: complete audit of this design, literal108 with hashes of the modules107 and verification of the polynomial shift API, literal audit and only afterwards a run. The product/shift of degree up to2048 may be costly; the mathematical budget does not imply a guarantee of viability or PASS.
 
-No hay nueva evaluación theta, resultado de signo, cobertura W ni transferencia global en este documento. La ganancia propuesta es preservar la variable común al evaluar; los errores intervalares de coeficientes siguen siendo independientes salvo las identidades algebraicas exactas explícitas.
+There is no new theta evaluation, sign result, W coverage nor global transfer in this document. The proposed gain is to preserve the common variable when evaluating; the interval coefficient errors remain independent except for the explicit exact algebraic identities.
 
-## 6. Ejecución fija y reproducción
+## 6. Fixed run and reproduction
 
-Root82660 y reproducción independiente mapa28564 terminaron exit2/INCONCLUSIVE. Polinomio grado2042;15 evaluaciones,4 hojas aceptadas, cobertura lambda[0,141/8192]. Parada por profundidad10 en[141/8192,1129/65536], determinante impreso[+/−2.04e−4]. REST NO se ejecutó. No se cambiaron scripts ni presupuestos.
+Run82660 and independent reproduction28564 ended exit2/INCONCLUSIVE. Polynomial degree2042;15 evaluations,4 accepted leaves, coverage lambda[0,141/8192]. Stop by depth10 at[141/8192,1129/65536], printed determinant[+/−2.04e−4]. REST was NOT executed. Scripts and budgets were not changed.
 
-Hash driver108:`eb200a9061a3761d2b1a5dc5ca38def6c5c16e1e0901524c39969555eb791f6a`. Módulos107 verificadosintactos: origen15d6f12c197ef52c062a12c59ee4a7c5db94c74e0073e8463a7ce03dd613e553; REST2a7d147caf8181adb5aa29eb6fcbe356f625e2743ad6765e6ac543aacad23054. Logs:`tools/power_mixed_four_polynomial_108_root.log` y`tools/power_mixed_four_polynomial_108_audit.log`.
+Driver hash108:`eb200a9061a3761d2b1a5dc5ca38def6c5c16e1e0901524c39969555eb791f6a`. Modules107 verified intact: origin15d6f12c197ef52c062a12c59ee4a7c5db94c74e0073e8463a7ce03dd613e553; REST2a7d147caf8181adb5aa29eb6fcbe356f625e2743ad6765e6ac543aacad23054. Logs:`tools/power_mixed_four_polynomial_108_root.log` and`tools/power_mixed_four_polynomial_108_audit.log`.
 
-La reproducción añadió exclusivamente un perfil de los valores YA calculados al retornar evaluate, sin nuevas evaluaciones theta, centros, coeficientes ni parámetros. En la celda final, coefficient0 trasladado ya tiene bola[+/−1.79e−4]; radio adicional por variación de celda aproximadamente2.4560159427e−5. Esto distingue incertidumbre del coeficiente central de la variación añadida, sin identificar una única causa del ancho ni afirmar que exista un cero real. Las lecturas decimales describen el log; no son un certificado de signo.
+The reproduction added exclusively a profile of the values ALREADY computed at the return of evaluate, with no new theta evaluations, centres, coefficients or parameters. In the final cell, the shifted coefficient0 already has ball[+/−1.79e−4]; additional radius due to cell variation approximately2.4560159427e−5. This distinguishes uncertainty of the central coefficient from the added variation, without identifying a single cause of the width nor claiming that a real zero exists. The decimal readings describe the log; they are not a sign certificate.
 
-Resultado INCONCLUSO: no signo contrario, falsificador, obstrucción matemática, Chebyshev4 global, Ufinito ni nueva cobertura W/T/allorders. Una representación posterior requerirá diseño y auditoría antes de otra corrida; no se reajusta ésta para forzar PASS.
+Result INCONCLUSIVE: no opposite sign, falsifier, mathematical obstruction, global Chebyshev4, finite U nor new W/T/allorders coverage. A later representation will require design and audit before another run; this one is not readjusted to force PASS.

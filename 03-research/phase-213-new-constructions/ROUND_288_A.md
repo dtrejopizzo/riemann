@@ -1,27 +1,27 @@
-# Mayorante unilateral para la paridad de Möbius y su primer fallo
+# One-sided majorant for the Möbius parity and its first failure
 
-Para un extremo N grande fijar κ>0 y δ=2 asinh(κ/(2√N)). Sea Wδ(v)=max(1−|v|/δ,0). Para n no libre de cuadrados poner Q(n)=0. Para n libre de cuadrados definir
+For a large endpoint N fix κ>0 and δ=2 asinh(κ/(2√N)). Let Wδ(v)=max(1−|v|/δ,0). For n not squarefree put Q(n)=0. For n squarefree define
 
     Q(n)=2^(−ω(n)) Σ_(d,e|n) μ(d)μ(e) Wδ(log(de/n)).
 
-Para cada κ≤√3 se tiene Q(n)≥μ(n) para todo n≤N y
+For each κ≤√3 one has Q(n)≥μ(n) for all n≤N and
 
     Σ_(n≤N) |Q(n)−μ(n)| ≪ √N/log log N.
 
-Para κ≤1 hay igualdad exacta. En cambio para cada √3<κ<2 hay infinitos N para los que Q(N)<μ(N). Así se localiza la primera pérdida de la mayoración puntual. La suma que define Q utiliza parejas de divisores y la condición de que n sea libre de cuadrados; no necesita multiplicar por el signo desconocido del entero completo.
+For κ≤1 there is exact equality. On the other hand, for each √3<κ<2 there are infinitely many N for which Q(N)<μ(N). This locates the first loss of the pointwise majorization. The sum defining Q uses pairs of divisors and the condition that n be squarefree; it does not need to multiply by the unknown sign of the whole integer.
 
-**Complementar y cancelar.** En n libre de cuadrados cambiar e por n/e: μ(n/e)=μ(n)μ(e). En la suma resultante con Wδ(log(d/e)), la diagonal d=e aporta μ(n). Para un término fuera de ella escribir a=d/mcd(d,e), b=e/mcd(d,e), y m=n/(ab). Los tres factores a,b,m son coprimos dos a dos. Para cada par ordenado reducido hay 2^ω(m) elecciones del factor común, y μ(n)μ(d)μ(e)=μ(m). Así la corrección es exactamente la suma, sobre pares ordenados a≠b con ab|n y (a,b)=1, de
+**Complement and cancel.** For squarefree n replace e by n/e: μ(n/e)=μ(n)μ(e). In the resulting sum with Wδ(log(d/e)), the diagonal d=e contributes μ(n). For an off-diagonal term write a=d/gcd(d,e), b=e/gcd(d,e), and m=n/(ab). The three factors a,b,m are pairwise coprime. For each reduced ordered pair there are 2^ω(m) choices of the common factor, and μ(n)μ(d)μ(e)=μ(m). Thus the correction is exactly the sum, over ordered pairs a≠b with ab|n and (a,b)=1, of
 
     μ(m) 2^(−ω(ab)) Wδ(log(a/b)).
 
-Si a<b y h=b−a, el término es distinto de cero sólo si
+If a<b and h=b−a, the term is nonzero only if
 
     h√m = 2√n sinh(log(b/a)/2) < κ√(n/N) ≤ κ.
 
-Para κ≤√3, sólo puede ser h=1 con m=1 ó 2. El caso m=2 exigiría que dos consecutivos fuesen ambos impares porque (ab,m)=1. Queda m=1, con signo positivo. Para κ≤1 ni siquiera esta posibilidad sobrevive. Esto controla el signo antes de promediar.
+For κ≤√3, only h=1 with m=1 or 2 is possible. The case m=2 would require two consecutive integers to be both odd, because (ab,m)=1. What remains is m=1, with positive sign. For κ≤1 not even this possibility survives. This controls the sign before averaging.
 
-**Precio total.** Las únicas correcciones positivas aparecen en n=a(a+1) y cuestan como máximo 2·2^(−ω(a(a+1))) por n. Para a≤√N mayorar el peso usando sólo primos p≤z, z=c log N. En cada primo hay dos residuos distintos con p|a(a+1), por lo que el promedio de ese peso truncado en un período primorial es exactamente ∏_(p≤z)(1−1/p). Éste es ≪1/log z, pues su inverso incluye la suma armónica hasta z. Por Chebyshev el período es ≤N^(1/4) si c es bastante pequeño. Contar períodos completos y el resto prueba el coste anunciado uniforme también para cualquier subintervalo.
+**Total price.** The only positive corrections occur at n=a(a+1) and cost at most 2·2^(−ω(a(a+1))) per n. For a≤√N bound the weight using only primes p≤z, z=c log N. At each prime there are two distinct residues with p|a(a+1), so the average of that truncated weight over a primorial period is exactly ∏_(p≤z)(1−1/p). This is ≪1/log z, since its inverse includes the harmonic sum up to z. By Chebyshev the period is ≤N^(1/4) if c is small enough. Counting complete periods and the remainder proves the announced cost, uniformly also for any subinterval.
 
-**Primer contraejemplo.** Tomar a≡1 mod 3 y a,a+1 ambos libres de cuadrados. El conjunto de tales a tiene densidad positiva: truncar los primos en z, usar el teorema chino, y acotar la densidad superior de la cola por 2Σ_(p>z)p^(−2), contando además O(√T) términos de redondeo hasta T. Para N=n=3a(a+1) el par (a,a+1) con m=3 está activo para a grande y todo κ>√3, por la identidad anterior. Si κ<2 todos los pares activos tienen h=1 y m=1,2,3. El caso 2 sigue excluido. El 1 exigiría 3a(a+1)=s(s+1), que implica s=√3 a+(√3−1)/2+O(1/a). Por equidistribución de los múltiplos del irracional √3, estos a tienen densidad cero (acotar primero por un entorno fijo y después reducirlo). En los demás sólo quedan términos negativos, por lo que falla la mayoración.
+**First counterexample.** Take a≡1 mod 3 and a,a+1 both squarefree. The set of such a has positive density: truncate the primes at z, use the Chinese remainder theorem, and bound the upper density of the tail by 2Σ_(p>z)p^(−2), counting in addition O(√T) rounding terms up to T. For N=n=3a(a+1) the pair (a,a+1) with m=3 is active for large a and every κ>√3, by the identity above. If κ<2 all active pairs have h=1 and m=1,2,3. Case 2 remains excluded. Case 1 would require 3a(a+1)=s(s+1), which implies s=√3 a+(√3−1)/2+O(1/a). By equidistribution of the multiples of the irrational √3, these a have density zero (bound first by a fixed neighborhood and then shrink it). In the others only negative terms remain, so the majorization fails.
 
-**Uso y alcance.** Para las subidas de 287 se puede sustituir μ por Q a la escala N del extremo derecho y el error en cualquier subintervalo cabe en el presupuesto. Equivalentemente Q es el promedio del cuadrado ordinario de Σ_(d|n)μ(d)exp(it log(d/√n)), normalizado por 2^ω(n), contra la densidad positiva cuya función característica es Wδ. El cuadrado ordinario puede ser negativo: no se está promediando un módulo cuadrado. El emparejamiento deja un mayorante explícito y una frontera exacta para su signo; falta una cota superior de raíz para las sumas de Q. La bilineal de 281–283 y la obstrucción de criba de 043 no evalúan esta primera colisión en la pareja de divisores complementarios.
+**Use and scope.** For the rises of 287 one can replace μ by Q at the scale N of the right endpoint, and the error on any subinterval fits in the budget. Equivalently, Q is the average of the ordinary square of Σ_(d|n)μ(d)exp(it log(d/√n)), normalized by 2^ω(n), against the positive density whose characteristic function is Wδ. The ordinary square can be negative: one is not averaging a squared modulus. The pairing leaves an explicit majorant and an exact boundary for its sign; a square-root upper bound for the sums of Q is still missing. The bilinear form of 281–283 and the sieve obstruction of 043 do not evaluate this first collision in the pair of complementary divisors.

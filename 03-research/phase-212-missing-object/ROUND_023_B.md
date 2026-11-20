@@ -1,72 +1,72 @@
-# ROUND_023_B — Puerta: (PC) comprimida antes de emparejar y orientación del salto terminal
+# ROUND_023_B — Gate: (PC) compressed before pairing and orientation of the terminal jump
 
-Pregunta. ¿Existe una operación fuera de 𝒞_w, que no sea un cuadrado, que oriente el salto
-h_p(p) − h_{p−1}(p) = −log p (R161_002 Cor. 8.2) usando la no conmutación de P_T con 𝓕, mediante
-C_T = (1−P_T)𝓕P_T, C_T^{(N)} = (1−P_T)S_N𝓕Π_T y E_{N,T} = P_T(S_N𝓕 − JS_N)Π_T?
+Question. Is there an operation outside 𝒞_w, not a square, that orients the jump
+h_p(p) − h_{p−1}(p) = −log p (R161_002 Cor. 8.2) using the non-commutation of P_T with 𝓕, through
+C_T = (1−P_T)𝓕P_T, C_T^{(N)} = (1−P_T)S_N𝓕Π_T and E_{N,T} = P_T(S_N𝓕 − JS_N)Π_T?
 
-Veredicto: **NO PASA (sin mecanismo).** No es repetición literal: el terreno figura como abierto
-(RULES_AVOID K7; ROUND_004_A, «No excluido»; índice maestro B.2 ítem 27). Pero no puedo escribir una
-fórmula que oriente el salto sin caer en un formato afín en el peso, en un cuadrado o en un
-peso que instala la respuesta.
+Verdict: **DOES NOT PASS (no mechanism).** It is not a literal repetition: the terrain is listed as open
+(RULES_AVOID K7; ROUND_004_A, «Not excluded»; master index B.2 item 27). But I cannot write a
+formula that orients the jump without falling into a format affine in the weight, into a square or into a
+weight that installs the answer.
 
-## (1) Antecedente más cercano (abierto y leído)
+## (1) Closest antecedent (open and read)
 
-- R161_002 §3: define C_T, C_T^{(N)} y E_{N,T}; único escape declarado = «keep the boundary compression
-  before taking the square or the oriented pairing»; el resto sin compresión vuelve a R160_D4_R2 Teor. 5.1.
-- R161_002 §4 (SP-161) y §5 (L161.1): a_T = Σ w_N Re⟨R_{M,N}F, S_N𝓕F⟩ + B_T(F); reglas: la norma
-  falla por Teor. 1.1, los pesos espectrales instalan la respuesta y una factorización de Douglas es EQUIV.
-- R161_002 §8: Teor. 8.1 (NO-GO, w ≥ 0) y Cor. 8.2 (−log p como derivada terminal).
-- ROUND_004_A Lema 1, Cor., Prop. 2: en 𝒞_w (w reales) no hay telescopado interior más cancelación de
-  cola (Σw = 1 contra Σw = 0); la derivada pura δ_{N+1} − δ_N da coeficiente G(1) = 0 (a_T no aparece).
-- R161_032 §§4–6: (4.2) 0 = X_T + ‖r‖² + D^orient + 2D^Γ, OPEN/TERMINAL; RULES_AVOID K1 («reabrir exige
-  una identidad que conecte un cuadrado de fuga con el defecto de PC, no otro cuadrado de fuga»), K2
-  (varianza orientada 030, genérica), U2 (L161.3 orientado OPEN; R161_029 monotonía falsa).
+- R161_002 §3: defines C_T, C_T^{(N)} and E_{N,T}; the only declared escape = «keep the boundary compression
+  before taking the square or the oriented pairing»; the remainder without compression returns to R160_D4_R2 Thm. 5.1.
+- R161_002 §4 (SP-161) and §5 (L161.1): a_T = Σ w_N Re⟨R_{M,N}F, S_N𝓕F⟩ + B_T(F); rules: the norm
+  fails by Thm. 1.1, spectral weights install the answer and a Douglas factorization is EQUIV.
+- R161_002 §8: Thm. 8.1 (NO-GO, w ≥ 0) and Cor. 8.2 (−log p as terminal derivative).
+- ROUND_004_A Lemma 1, Cor., Prop. 2: in 𝒞_w (real w) there is no interior telescoping plus tail
+  cancellation (Σw = 1 versus Σw = 0); the pure derivative δ_{N+1} − δ_N gives coefficient G(1) = 0 (a_T does not appear).
+- R161_032 §§4–6: (4.2) 0 = X_T + ‖r‖² + D^orient + 2D^Γ, OPEN/TERMINAL; RULES_AVOID K1 («reopening requires
+  an identity connecting a leakage square with the PC defect, not another leakage square»), K2
+  (oriented variance 030, generic), U2 (oriented L161.3 OPEN; R161_029 monotonicity false).
 
-## (2) Lo que sí se puede escribir y lo que no
+## (2) What can be written and what cannot
 
-Observación (ARGUED, cálculo de soporte, no derivado más allá de esto). Para un primo p > e^{2T}, el
-salto en N de E_{N,T} es
+Observation (ARGUED, support computation, not derived beyond this). For a prime p > e^{2T}, the
+jump in N of E_{N,T} is
 
   E_{p,T} − E_{p−1,T} = p^{−1/2} P_T(τ_{log p}𝓕 − Jτ_{log p})Π_T = p^{−1/2} P_T τ_{log p}(1−P_T)𝓕Π_T,
 
-porque Jτ_{log p}Π_T y τ_{log p}P_T𝓕Π_T se soportan fuera de (−T,T). Es decir: tras comprimir,
-**el salto terminal en los primos grandes vive entero en la fuga** (1−P_T)𝓕Π_T, y lo que no conmuta
-(P_T con 𝓕) es lo único que lo ve. Esto es exactamente lo que R161_002 §3 dejó anunciado.
+because Jτ_{log p}Π_T and τ_{log p}P_T𝓕Π_T are supported outside (−T,T). That is: after compression,
+**the terminal jump at large primes lives entirely in the leakage** (1−P_T)𝓕Π_T, and what does not commute
+(P_T with 𝓕) is the only thing that sees it. This is exactly what R161_002 §3 had announced.
 
-Lo que la operación pedida necesitaría: un funcional Φ_T(F), no cuadrado, fuera de 𝒞_w, con
-Φ_T = a_T(F) + (términos ≥ 0), en el que la suma de esos saltos ponderados por Λ entre con signo fijo.
-Las tres vías del encargo dan:
+What the requested operation would need: a functional Φ_T(F), not a square, outside 𝒞_w, with
+Φ_T = a_T(F) + (terms ≥ 0), in which the sum of those jumps weighted by Λ enters with fixed sign.
+The three routes of the assignment give:
 
-- (i) Tests distintos de S_N𝓕F: el par ⟨G, Σ_p Λ(p)p^{−1/2}P_Tτ_{log p}(1−P_T)𝓕F⟩ es lineal en Λ para
-  G fijo (afín en el peso: F3); con G = G(F) cuadrático o normado reaparece un cuadrado (Teor. 1.1) o
-  el test colapsa en el apareamiento mixto de (PC-ren) (R161_023; K1). No tengo un G que escape a ambos.
-- (ii) Pesos w_N(F): para cada F fijo la identidad es escalar y el peso es un real por F; elegirlo para
-  que la identidad cierre es resolver a_T(F) dentro del peso (SP-161: «installs the answer»). Sin una
-  regla canónica previa a Λ (exigencia de L161.1) no hay fórmula.
-- (iii) R161_032 (4.2): sigue sin derivar; la fuente exige partir de las dos orientaciones no
-  recombinadas y polarizar con el puerto reflejado. No dispongo de la identidad de Green de borde que
-  produzca ε⟨v,j⟩ junto a D^orient y D^Γ; no la invento.
+- (i) Tests other than S_N𝓕F: the pairing ⟨G, Σ_p Λ(p)p^{−1/2}P_Tτ_{log p}(1−P_T)𝓕F⟩ is linear in Λ for
+  fixed G (affine in the weight: F3); with G = G(F) quadratic or normalized a square reappears (Thm. 1.1) or
+  the test collapses into the mixed pairing of (PC-ren) (R161_023; K1). I do not have a G that escapes both.
+- (ii) Weights w_N(F): for each fixed F the identity is scalar and the weight is one real per F; choosing it so
+  that the identity closes is solving a_T(F) inside the weight (SP-161: «installs the answer»). Without a
+  canonical rule prior to Λ (requirement of L161.1) there is no formula.
+- (iii) R161_032 (4.2): still not derived; the source requires starting from the two non-recombined
+  orientations and polarizing with the reflected port. I do not have the boundary Green identity that
+  produces ε⟨v,j⟩ together with D^orient and D^Γ; I do not invent it.
 
-## (3) Por qué no evita el fracaso del antecedente
+## (3) Why it does not avoid the failure of the antecedent
 
-El fracaso de 𝒞_w es aritmético en el índice N: cualquier peso fijo da log p·Σ_{N<p}w_N en p. La
-compresión cambia el portador del salto (pasa a la fuga) pero no su forma: sigue siendo
-Λ(p)·(operador fijo independiente de Λ). Orientarlo requiere grado ≥ 2 en Λ (F3: lo afín es ciego)
-y el único término de grado 2 conocido en esta arquitectura es la varianza de divisores (K2), que se
-anula para todo peso (genérica). Ninguna de (i)–(iii) aporta un término de grado 2 no genérico.
+The failure of 𝒞_w is arithmetic in the index N: any fixed weight gives log p·Σ_{N<p}w_N at p. The
+compression changes the carrier of the jump (it moves to the leakage) but not its shape: it is still
+Λ(p)·(fixed operator independent of Λ). Orienting it requires degree ≥ 2 in Λ (F3: the affine is blind)
+and the only known degree-2 term in this architecture is the divisor variance (K2), which
+vanishes for every weight (generic). None of (i)–(iii) provides a non-generic degree-2 term.
 
-## (4) Conexión con 𝔸_M ⪰ 0 y controles
+## (4) Connection with 𝔸_M ⪰ 0 and controls
 
-Identidad necesaria (no disponible): a_T(F) = Φ_T(F) − (suma de cuadrados de fuga de C_T, C_T^{(N)})
-con Φ_T ≥ 0 por un signo orientado del salto comprimido; vía Paper 47 prop:AM daría 𝔸_M ⪰ 0 para M ≥ e^{2T}.
-Controles: con la observación de (2) el salto comprimido es p^{−1/2}·w(p)·(operador fijo) para
-cualquier peso w; por tanto (a) peso 2Λ sustituido, (b) potencia borrada y (c) Beurling pasan por el
-mismo paso sin romperse: **ningún paso con nombre falla** bajo los tres controles (F1 incumplido). Esa es
-la razón del veredicto.
+Necessary identity (not available): a_T(F) = Φ_T(F) − (sum of leakage squares of C_T, C_T^{(N)})
+with Φ_T ≥ 0 by an oriented sign of the compressed jump; via Paper 47 prop:AM it would give 𝔸_M ⪰ 0 for M ≥ e^{2T}.
+Controls: with the observation of (2) the compressed jump is p^{−1/2}·w(p)·(fixed operator) for
+any weight w; hence (a) substituted weight 2Λ, (b) deleted power and (c) Beurling pass through the
+same step without breaking: **no named step fails** under the three controls (F1 not met). That is
+the reason for the verdict.
 
-## Estado
+## Status
 
-- Observación del salto en la fuga: ARGUED (soporte; sin uso como prueba).
-- Operación orientadora fuera de 𝒞_w y no cuadrada: OPEN, sin fórmula.
-- K7 sigue abierto; esta puerta no lo cierra ni lo excluye.
-- Registro: no edito el índice (lo hace quien coordina).
+- Observation of the jump in the leakage: ARGUED (support; not used as proof).
+- Orienting operation outside 𝒞_w and not a square: OPEN, without formula.
+- K7 remains open; this gate neither closes nor excludes it.
+- Record: the index is not edited here (it is updated separately).

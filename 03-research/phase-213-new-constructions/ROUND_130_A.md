@@ -1,23 +1,23 @@
-# Supresión bilateral de escalas en el resto factorial
+# Two-sided suppression of scales in the factorial remainder
 
-Con las convenciones de 129 poner D=floor(M^(33/16)), V=M^(1/32)=X^(1/128). Se puede reemplazar el núcleo K por otro explícito K* tal que
+With the conventions of 129 set D=floor(M^(33/16)), V=M^(1/32)=X^(1/128). The kernel K can be replaced by another explicit K* such that
 
     A(M)=∫_{V<v≤16X/D}(W−K*) dE − (7/3)M² + o(M²).
 
-La parte v≤V se paga incluso en valor absoluto respecto de dψ+b(v)dv. Las dos cotas de escala se cumplen simultáneamente para la misma fórmula. La reparación no requiere ninguna estimación cancelatoria para μ.
+The part v≤V is paid even in absolute value with respect to dψ+b(v)dv. The two scale bounds hold simultaneously for the same formula. The repair requires no cancellation estimate for μ.
 
-**Dos coeficientes de corrección.** Conservar c_d=μ(d) hasta D. Poner S=Σ_{d≤D}μ(d), H=Σ_{d≤D}μ(d)/d y añadir c_{2D}=S−4DH y c_{4D}=4DH−2S. Entonces Σc_d=Σc_d/d=0 y Σ|c_d|≪D log(2D). Definir K* como K con estos coeficientes. Las dos dilataciones nuevas se anulan por encima de 16X/D, donde K=W. En la integral factorial completa se aplica 129 a los dos nuevos índices: la prueba allí da por índice grande Oε(M^(−2/25+ε) log²M + D/M⁴), también hasta 4D porque sus cotas de denominador admiten factores constantes. Multiplicar por O(D log D) sigue dando o(M²). Por tanto ∫K* dE=o(M²).
+**Two correction coefficients.** Keep c_d=μ(d) up to D. Set S=Σ_{d≤D}μ(d), H=Σ_{d≤D}μ(d)/d and add c_{2D}=S−4DH and c_{4D}=4DH−2S. Then Σc_d=Σc_d/d=0 and Σ|c_d|≪D log(2D). Define K* as K with these coefficients. The two new dilations vanish above 16X/D, where K=W. In the full factorial integral 129 is applied to the two new indices: the proof there gives per large index Oε(M^(−2/25+ε) log²M + D/M⁴), also up to 4D because its denominator bounds admit constant factors. Multiplying by O(D log D) still gives o(M²). Hence ∫K* dE=o(M²).
 
-**Extremo inferior.** Para todo v≥1 se obtiene exactamente
+**Lower endpoint.** For all v≥1 one obtains exactly
 
     K*(v)=Σ_d c_d (1/M) Σ_{M<m≤2M} (1/2−{m⁴/(dv)}).
 
-Los índices d≤M cuestan O(M) en módulo. Para M<d≤4D y v∈[1,V] basta ahora tratar el promedio completo de longitud M: ya no aparece el peso logarítmico de Stirling. Para h≤M^(1/8) aproximar h/(dv) por p/q mediante Dirichlet con Q=floor(M³), en términos reducidos, |q h/(dv)−p|≤1/Q y q≤Q. El numerador es positivo pues h/(dv)≫M^(−33/16−1/32)>1/Q para M grande. Así q≥dv/(2h)≫M^(7/8). En Weyl cuártico el paréntesis 1/q+1/M+q/M⁴ es O(M^(−7/8)); Erdős–Turán da para la media del diente de sierra Oε(M^(−7/64+ε)log M+M^(−1/8)). Esto es uniforme incluso en v real y en los átomos donde la parte fraccionaria se anula.
+The indices d≤M cost O(M) in modulus. For M<d≤4D and v∈[1,V] it now suffices to treat the full average of length M: the logarithmic Stirling weight no longer appears. For h≤M^(1/8) approximate h/(dv) by p/q via Dirichlet with Q=floor(M³), in lowest terms, |q h/(dv)−p|≤1/Q and q≤Q. The numerator is positive since h/(dv)≫M^(−33/16−1/32)>1/Q for M large. Thus q≥dv/(2h)≫M^(7/8). In quartic Weyl the parenthesis 1/q+1/M+q/M⁴ is O(M^(−7/8)); Erdős–Turán gives for the mean of the sawtooth Oε(M^(−7/64+ε)log M+M^(−1/8)). This is uniform even for real v and at the atoms where the fractional part vanishes.
 
-Por Chebyshev, la masa de dψ+b(v)dv hasta V es O(V); ambas medidas se anulan debajo de 1 (a_->1). Como |W|≤1, el coste absoluto inferior queda acotado por
+By Chebyshev, the mass of dψ+b(v)dv up to V is O(V); both measures vanish below 1 (a_->1). Since |W|≤1, the lower absolute cost is bounded by
 
     Oε(V (1+M+D log²M M^(−7/64+ε))) = o(M²),
 
-ya que 1/32+1/16−7/64=−1/64. Esto prueba la fórmula mediante 129. No implica una cota para la zona central: allí ha cambiado el peso, incluidas las dos dilataciones correctoras.
+since 1/32+1/16−7/64=−1/64. This proves the formula via 129. It does not imply a bound for the central zone: there the weight has changed, including the two correcting dilations.
 
-**Cotejo.** R162_801 ya contiene la identidad factorial exacta y su lectura por Stirling. 047 usa regularización del peso y localiza otra cuadratura con sumas internas de Möbius. Aquí se mantienen las muestras crudas de 127; la cancelación exacta de dos sumas de coeficientes permite retirar los átomos de argumento pequeño y la densidad de ese mismo intervalo en norma absoluta. El objetivo pendiente sigue siendo acotar superiormente el resto central de esta representación.
+**Cross-check.** R162_801 already contains the exact factorial identity and its reading via Stirling. 047 uses regularization of the weight and localizes another quadrature with internal Möbius sums. Here the raw samples of 127 are kept; the exact cancellation of two coefficient sums allows removing the atoms with small argument and the density of that same interval in absolute norm. The pending goal is still to bound from above the central remainder of this representation.

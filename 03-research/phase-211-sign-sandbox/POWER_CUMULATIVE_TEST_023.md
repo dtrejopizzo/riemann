@@ -1,59 +1,59 @@
-# POWER_CUMULATIVE_TEST_023 — Test dirigido del criterio relajado K=J+xh
+# POWER_CUMULATIVE_TEST_023 — Targeted test of the relaxed criterion K=J+xh
 
-Estado: PROVED un valor negativo del criterio relajado COMPLETO, certificado racional ejecutado. Revisión independiente aprobada en POWER_CUMULATIVE_AUDIT_023.md; verificador reproducido PASS. Un único N=129,x=1, sin campaña. Papers intactos.
+Status: PROVED a negative value of the COMPLETE relaxed criterion, executed rational certificate. Independent review approved in POWER_CUMULATIVE_AUDIT_023.md; verifier reproduced PASS. A single N=129,x=1, no campaign. Papers untouched.
 
-## Corpus y razón nueva antes de construir
+## Corpus and new reason before building
 
-Leídos las reglas del proyecto, INVERSE_KERNEL020, INVERSE_INTERIOR022 y auditoría; búsqueda dirigida en índice ROUTES-TRIED-INDEX, grid parte3 y CROSSWORD-TO-D (cumulativo/kernel relajado/inverso Möbius). La positividad de h completo ya fue refutada022. El nuevo criterio propuesto por `signo` usa K_N=J_N+xh_N, con h_N=−J_N': K>=0 fuerza que J_N/x sea decreciente y permite un argumento acumulativo más débil que exigir h>=0. Por ello el contraejemplo022 no lo decide.
+Read the project rules, INVERSE_KERNEL020, INVERSE_INTERIOR022 and audit; targeted search in the ROUTES-TRIED-INDEX index, grid part 3 and CROSSWORD-TO-D (cumulative/relaxed kernel/Möbius inverse). Positivity of the full h was already refuted022. The new criterion proposed by `signo` uses K_N=J_N+xh_N, with h_N=−J_N': K>=0 forces J_N/x to be decreasing and allows a cumulative argument weaker than requiring h>=0. Hence the counterexample022 does not decide it.
 
-Se elige SOLO el vecino N=129,x=1, sugerido por el margen positivo pequeño de K_128(1). El certificado conservará la cola infinita completa, no el signo de un prefijo. Ningún signo de K se atribuirá automáticamente al signo de W.
+ONLY the neighbour N=129,x=1 is chosen, suggested by the small positive margin of K_128(1). The certificate will keep the complete infinite tail, not the sign of a prefix. No sign of K will be automatically attributed to the sign of W.
 
-## 1. Resultado
+## 1. Result
 
-Para u=63/2, N=129, se prueba
+For u=63/2, N=129, we prove
 
     −1/250 <K_129(1)<−1/251<0.                           (NEG)
 
-Así es falso el lema K_N(x)>=0 para todos N>=2,x>=1, aun conservando el inverso Möbius COMPLETO. No se afirma que J_129 sea negativo, ni que la media ERR o la forma W tengan signo negativo. Se ha refutado solamente ese criterio suficiente.
+Thus the lemma K_N(x)>=0 for all N>=2,x>=1 is false, even keeping the COMPLETE Möbius inverse. It is not claimed that J_129 is negative, nor that the mean ERR or the form W have negative sign. Only that sufficient criterion has been refuted.
 
-## 2. Normalizaciones y polinomio correcto
+## 2. Normalizations and correct polynomial
 
-Con rho_N(t)=e^-ut P_N(t), P_N=Σp_jt^j de020, se define
+With rho_N(t)=e^-ut P_N(t), P_N=Σp_jt^j from020, define
 
     J_N(x)=Σ(m>=1)mu(m)(mx)^-1/2 rho_N(log(mx))
           =x^-32 Σ(m>=1)mu(m)m^-32 P_N(logx+logm),
     h_N(x)=−J_N'(x)=x^-33 Σ(m>=1)mu(m)m^-32 A_N(logx+logm),
     A_N=32P_N−P_N'.
 
-La derivación pasa por la serie absolutamente convergente a N fijo. Por tanto
+The differentiation goes through the absolutely convergent series at fixed N. Therefore
 
     K_N(x)=J_N(x)+xh_N(x)
           =x^-32 Σ(m>=1)mu(m)m^-32 [P_N+A_N](logx+logm).
 
-En x=1 no queda ningún factor adicional de x ni m. El polinomio relevante es P_N+A_N, no A_N solo. Sus129 coeficientes son racionales positivos y su grado es128.
+At x=1 no additional factor of x or m remains. The relevant polynomial is P_N+A_N, not A_N alone. Its129 coefficients are positive rationals and its degree is128.
 
-Si se tuviera K_N>=0 en toda la semirrecta, (J_N/x)'=−K_N/x²<=0 y J_N/x->0 en infinito forzarían J_N>=0. La prueba NEG muestra que esa premisa global no vale para la familia completa; no impide que otras desigualdades acumulativas decidan el emparejamiento.
+If one had K_N>=0 on the whole half-line, (J_N/x)'=−K_N/x²<=0 and J_N/x->0 at infinity would force J_N>=0. The proof NEG shows that this global premise does not hold for the complete family; it does not prevent other cumulative inequalities from deciding the pairing.
 
-## 3. Certificado finito y cola infinita
+## 3. Finite certificate and infinite tail
 
-El verificador `tools/power_cumulative_test_023_verify.py` reconstruye P_129 y A_129 por las recurrencias racionales de020/022, calcula mu(m) por factorización entera para1<=m<=64, encierra logm por series atanh con resto geométrico y evalúa P+A con Horner intervalar y redondeo exterior. No emplea funciones especiales flotantes.
+The verifier `tools/power_cumulative_test_023_verify.py` reconstructs P_129 and A_129 by the rational recurrences of020/022, computes mu(m) by integer factorization for1<=m<=64, encloses logm by atanh series with geometric remainder and evaluates P+A with interval Horner and outward rounding. It uses no floating-point special functions.
 
-Para cada0<=j<=128,
+For each0<=j<=128,
 
     log64=6log2>4>=j/32,
 
-de modo que x^-32(logx)^j decrece en x>=64. Con L=21/5>log64 y
+so that x^-32(logx)^j decreases on x>=64. With L=21/5>log64 and
 
     I_0=64^-31/31,
     I_j=64^-31 L^j/31+(j/31)I_(j−1),
 
-se obtiene una cota racional de la COLA COMPLETA:
+one obtains a rational bound of the COMPLETE TAIL:
 
     |Σ(m>=65)mu(m)m^-32[P_129+A_129](logm)|
        <=Σ(j=0..128)(p_j+a_j)I_j<10^-10.
 
-El intervalo del segmento m<=64 más ese error simétrico satisface exactamente los extremos de NEG. El verificador ejecutado da PASS. El valor aproximado−.003985845090 se da solo como orientación, no como input de la prueba.
+The interval of the segment m<=64 plus that symmetric error satisfies exactly the endpoints of NEG. The executed verifier gives PASS. The approximate value−.003985845090 is given only for orientation, not as input to the proof.
 
-## 4. Alcance
+## 4. Scope
 
-No hubo búsqueda de otros N ni una tabla de puntos. El resultado refuta el criterio K>=0 más débil que la positividad de h, que no estaba decidido por022. Al mismo tiempo conserva la necesidad de controlar el emparejamiento firmado o una desigualdad acumulativa distinta: K negativo en un punto no determina el signo de J, ERR, W, ni de otro objeto de signo.
+There was no search over other N nor a table of points. The result refutes the criterion K>=0, weaker than positivity of h, which was not decided by022. At the same time it keeps the need to control the signed pairing or a different cumulative inequality: K negative at one point does not determine the sign of J, ERR, W, nor of any other sign object.

@@ -1,19 +1,19 @@
-# POWER_RECIPROCAL_SECANTS_AUDIT_082 — Auditoría independiente
+# POWER_RECIPROCAL_SECANTS_AUDIT_082 — Independent audit
 
-Estado: **APROBADO / PROVED como criterio algebraico.** Fuente `POWER_RECIPROCAL_SECANTS_082.md`, lectura completa; auditor mapa. Root e insight verificaron las identidades independientemente. Papers intactos.
+Status: **APPROVED / PROVED as an algebraic criterion.** Source `POWER_RECIPROCAL_SECANTS_082.md`, read in full. The identities were verified independently twice. Papers untouched.
 
-## Comprobaciones
+## Checks
 
-DET2 y RECIPROCAL se reprodujeron por simplificación racional exacta. DET3 sigue de DET079 ya reproducido en079 y la identidad RECIPROCAL; la cancelación de (u+w)² mediante (w²−u²)² produce exactamente el Vandermonde impreso, sin factor pendiente.
+DET2 and RECIPROCAL were reproduced by exact rational simplification. DET3 follows from DET079 already reproduced in079 and the RECIPROCAL identity; the cancellation of (u+w)² through (w²−u²)² produces exactly the printed Vandermonde, with no pending factor.
 
-Para pares PD, el producto de las dos secantes R,S es positivo. Sus factores no pueden ser ambos negativos: R2<R1 y x2/R2<x1/R1 serían incompatibles con x2>x1. Así ambas secantes son estrictamente positivas, beta>0 y alpha>0. No se necesita F creciente ni alpha>beta uv.
+For PD pairs, the product of the two secants R,S is positive. Its factors cannot both be negative: R2<R1 and x2/R2<x1/R1 would be incompatible with x2>x1. Thus both secants are strictly positive, beta>0 and alpha>0. Neither increasing F nor alpha>beta uv is needed.
 
-La fórmula RECIPROCAL tiene numerador alpha beta(w²−u²)−delta_R(alpha w²+beta u²v²). Si delta_R<=0, delta_S>0. En particular el producto delta_R delta_S no negativo equivale a ambas diferencias no negativas: no se admite erróneamente el caso de ambas negativas. El mismo razonamiento cubre el caso delta_S<0 por simetría. Pares PD y diagonales positivas convierten el signo del determinante3 en PSD/PD por Schur2x2.
+The RECIPROCAL formula has numerator alpha beta(w²−u²)−delta_R(alpha w²+beta u²v²). If delta_R<=0, delta_S>0. In particular the nonnegative product delta_R delta_S is equivalent to both differences being nonnegative: the case of both negative is not erroneously admitted. The same reasoning covers the case delta_S<0 by symmetry. PD pairs and positive diagonals turn the sign of the determinant3 into PSD/PD by Schur2x2.
 
-Los bordes delta_R=0 o delta_S=0 son rango2; no pueden anularse simultáneamente bajo pares estrictos. Nodos repetidos y vectores que representan la función nula se separan correctamente. La equivalencia para todos los triples es exactamente concavidad de R y S en el intervalo de cuadrados, sin exigir diferenciabilidad. La congruencia F↔1/F y la recuperación de079 son correctas: para M, R''=g''/a y S''=[u²M''+uM'−M]/(4u³)<0 por073.
+The boundaries delta_R=0 or delta_S=0 are rank2; they cannot vanish simultaneously under strict pairs. Repeated nodes and vectors representing the zero function are separated correctly. The equivalence for all triples is exactly concavity of R and S on the interval of squares, without requiring differentiability. The congruence F↔1/F and the recovery of079 are correct: for M, R''=g''/a and S''=[u²M''+uM'−M]/(4u³)<0 by073.
 
-## Novedad y alcance
+## Novelty and scope
 
-Consultados los antecedentes003/074/079/081 y los tres registros. Se cambia de BASE073, que081 muestra no hereditaria por el resto REAL, a un criterio recíproco que permite funciones decrecientes. Es una condición necesaria y suficiente de orden3 en la clase de pares PD; no una prueba de sus hipótesis para G_p.
+Consulted the antecedents003/074/079/081 and the three records. One switches from BASE073, which081 shows is not hereditary for the REAL remainder, to a reciprocal criterion that allows decreasing functions. It is a necessary and sufficient condition of order3 in the class of PD pairs; not a proof of its hypotheses for G_p.
 
-Para el resto G_p todavía se deben probar pares PD y ambas concavidades, y cualquier preservación posterior sigue abierta.077 sólo da valores positivos. No se afirma orden4, todos los órdenes, descarga compacta080, nueva cobertura W ni una ventana temporal.081 permanece válido para su clase limitada.
+For the remainder G_p one must still prove PD pairs and both concavities, and any subsequent preservation remains open.077 only gives positive values. No claim is made of order4, all orders, compact discharge080, new W coverage or a time window.081 remains valid for its limited class.

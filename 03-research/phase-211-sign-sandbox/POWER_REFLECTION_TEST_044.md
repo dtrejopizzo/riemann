@@ -1,78 +1,78 @@
-# POWER_REFLECTION_TEST_044 — La reflexión de densidades no conserva la forma real
+# POWER_REFLECTION_TEST_044 — Reflection of densities does not preserve the real form
 
-Estado: **PROVED**, revisión independiente aprobada en [POWER_REDUCTION_AUDIT_044.md](POWER_REDUCTION_AUDIT_044.md); verificador exacto PASS. Tasa fija u=63/2. Papers intactos. No se refuta signo W ni toda posible reducción a subfamilias.
+Status: **PROVED**, independent review approved in [POWER_REDUCTION_AUDIT_044.md](POWER_REDUCTION_AUDIT_044.md); exact verifier PASS. Fixed rate u=63/2. Papers untouched. Neither the sign of W nor every possible reduction to subfamilies is refuted.
 
-## 1. Corpus y propuesta falsable
+## 1. Corpus and falsifiable proposal
 
-Consultados ROUTES-TRIED-INDEX/README, grid maestro, CROSSWORD-TO-D y SCALAR_BRIDGE017; releídos los límites DESCENT016, TABLE_AUDIT018, ROW_PATTERN029 y MOVING_BALANCE036. Estos antecedentes impiden inferir densidad o signo desde una unión de familias positivas. Aquí no se vuelve a una mezcla de tasas grandes ni a una recurrencia positiva supuesta.
+Consulted ROUTES-TRIED-INDEX/README, master grid, CROSSWORD-TO-D and SCALAR_BRIDGE017; reread the limits DESCENT016, TABLE_AUDIT018, ROW_PATTERN029 and MOVING_BALANCE036. These antecedents prevent inferring density or sign from a union of positive families. Here there is no return to a mixture of large rates nor to an assumed positive recurrence.
 
-La propuesta concreta a probar/refutar es eliminar por una simetría REAL los sectores antisimétricos de las densidades racionales, reduciendo el blanco escalar a una diagonal equilibrada. Se demuestra una desigualdad ESTRICTA de la forma completa, con TODOS los contactos, que refuta esa simetría. La diferencia es sobre el funcional real dado, no sólo una obstrucción de densidad ni un modelo genérico. La entrada arquimediana se reutiliza de004; la recurrencia completa y la monotonía arquimediana normalizada ya constan en018. No se presentan esos cálculos como una técnica nueva. El chequeo nuevo es su aplicación exacta a la hipótesis de reflexión del puente017; no amplía las regiones de signo conocidas.
+The concrete proposal to prove/refute is to eliminate, by a REAL symmetry, the antisymmetric sectors of the rational densities, reducing the scalar target to a balanced diagonal. A STRICT inequality of the full form, with ALL contacts, is proved that refutes that symmetry. The difference concerns the given real functional, not only a density obstruction nor a generic model. The archimedean entry is reused from004; the full recurrence and the normalized archimedean monotonicity are already recorded in018. Those computations are not presented as a new technique. The new check is their exact application to the reflection hypothesis of the bridge017; it does not enlarge the known sign regions.
 
-## 2. Por qué aparece la reflexión
+## 2. Why reflection appears
 
-Use q=tau²/(u²+tau²), t=q(1−q). Todo polinomio R(q) tiene una representación única
+Use q=tau²/(u²+tau²), t=q(1−q). Every polynomial R(q) has a unique representation
 
     R(q)=A(t)+(2q−1)B(t).
 
-Prueba: descomponer R en partes simétrica y antisimétrica para q↔1−q. La simétrica es polinomio de t, porque q satisface q²−q+t=0. La antisimétrica es divisible por2q−1 y su cociente es simétrico.
+Proof: decompose R into symmetric and antisymmetric parts for q↔1−q. The symmetric one is a polynomial in t, because q satisfies q²−q+t=0. The antisymmetric one is divisible by2q−1 and its quotient is symmetric.
 
-Los átomos equilibrados k=N−1 de017 tienen, respecto a la densidad común |F1|², perfiles t^(N−1). Dos diagonales adyacentes permiten reconstruir el sector antisimétrico con coeficientes FIRMADOS. Esta reconstrucción lineal no preserva positividad. Para DESCARTAR ese sector mediante la reflexión haría falta que la forma anulara |F1|²(2q−1)B(t). Ya falla B=1 para el dato real.
+The balanced atoms k=N−1 of017 have, relative to the common density |F1|², profiles t^(N−1). Two adjacent diagonals allow reconstructing the antisymmetric sector with SIGNED coefficients. This linear reconstruction does not preserve positivity. To DISCARD that sector via reflection the form would have to annihilate |F1|²(2q−1)B(t). Already B=1 fails for the real datum.
 
-No se afirma que cualquier reducción a una franja deba usar esta simetría ni que la representación firmada anterior sea un puente de positividad.
+It is not claimed that every reduction to a strip must use this symmetry nor that the signed representation above is a positivity bridge.
 
-## 3. Desigualdad completa que falsifica la simetría
+## 3. Full inequality falsifying the symmetry
 
-Tome dos funciones reales causales de norma L² uno:
+Take two real causal functions of L² norm one:
 
     g_Q(y)=sqrt(4u)(1−uy)e^(−uy),
     g_L(y)=sqrt(4u)uy e^(−uy), y>=0.
 
-Sus transformadas son sqrt(4u)QF1 y sqrt(4u)LF1, con Q=s/(s+u), L=u/(s+u), F1=1/(s+u). Las densidades se intercambian por q↔1−q. Se prueba
+Their transforms are sqrt(4u)QF1 and sqrt(4u)LF1, with Q=s/(s+u), L=u/(s+u), F1=1/(s+u). The densities are interchanged by q↔1−q. We prove
 
     W[g_Q]−W[g_L]>3/2.                              (ASYMMETRY)
 
-### Arquimediano
+### Archimedean
 
-La base ortonormal Laguerre de CONFLUENT004 es
+The orthonormal Laguerre basis of CONFLUENT004 is
 
     phi0=sqrt(2u)e^(−uy),
     phi1=sqrt(2u)(1−2uy)e^(−uy).
 
-Aquí g_Q=(phi0+phi1)/sqrt2, g_L=(phi0−phi1)/sqrt2. La entrada arquimediana mixta, ya calculada exactamente allí, es
+Here g_Q=(phi0+phi1)/sqrt2, g_L=(phi0−phi1)/sqrt2. The mixed archimedean entry, already computed exactly there, is
 
     b=(u/2)psi'((u+1/2)/2)=(63/4)sum_(r>=16)r^(−2).
 
-La comparación integral de la cola da
+Integral comparison of the tail gives
 
     b>(63/4)[sum_(r=16)^31 r^(−2)+1/32]>1,
 
-última desigualdad puramente racional. Por tanto el gap arquimediano es2b>2.
+the last inequality purely rational. Hence the archimedean gap is2b>2.
 
-### Polar exacto
+### Exact polar
 
-Evaluar las dos transformadas en s=±1/2 da
+Evaluating the two transforms at s=±1/2 gives
 
     Polar[g_Q]−Polar[g_L]
       =−2u(1+4u²)/(u²−1/4)²>−1/2.
 
-No se omite la contribución polar ni se infiere su signo desde las densidades en el semieje: se evalúa exactamente la identidad racional fuera de él.
+The polar contribution is not omitted nor is its sign inferred from the densities on the half-axis: the rational identity is evaluated exactly off it.
 
-### Peine completo, con signo favorable
+### Full comb, with favourable sign
 
-Integración elemental de las autocorrelaciones normalizadas produce para todo a>=0
+Elementary integration of the normalized autocorrelations produces for all a>=0
 
     c_Q(a)=e^(−ua)(1−ua),
     c_L(a)=e^(−ua)(1+ua).
 
-Así, con la convención Comb[g]=−2sum_(n>=2)Lambda(n)n^(−1/2)c_g(logn),
+Thus, with the convention Comb[g]=−2sum_(n>=2)Lambda(n)n^(−1/2)c_g(logn),
 
     Comb[g_Q]−Comb[g_L]
       =4u sum_(n>=2)Lambda(n)log(n)n^(−u−1/2)>0.
 
-La serie es absolutamente convergente y TODOS sus términos son no negativos, con el de n2 estrictamente positivo. No se trunca ni se utiliza una cota numérica del peine. Sumando las tres partes se obtiene ASYMMETRY.
+The series is absolutely convergent and ALL its terms are nonnegative, with that of n2 strictly positive. No truncation nor numerical bound of the comb is used. Adding the three parts yields ASYMMETRY.
 
-## 4. Alcance
+## 4. Scope
 
-El sector antisimétrico de las densidades no es invisible para la forma completa. En particular, la descomposición firmada del §2 no permite cerrar mediante sólo la diagonal equilibrada eliminando el sector restante por reflexión. El obstáculo proviene de una desigualdad del dato REAL y conserva su aritmética, no de un contraejemplo auxiliar.
+The antisymmetric sector of the densities is not invisible to the full form. In particular, the signed decomposition of §2 does not allow closing via only the balanced diagonal by eliminating the remaining sector through reflection. The obstacle comes from an inequality of the REAL datum and keeps its arithmetic, not from an auxiliary counterexample.
 
-ASYMMETRY compara dos valores W positivos ya incluidos en regiones probadas; no demuestra un valor W negativo ni excluye otra relación desigual entre franjas. No aporta por sí sola una nueva subfamilia suficiente. Una reducción válida tendría que controlar cuantitativamente el sector antisimétrico, no cancelarlo por una simetría inexistente. No hay campaña de parámetros.
+ASYMMETRY compares two positive W values already included in proved regions; it does not prove a negative W value nor exclude another unequal relation between strips. By itself it provides no new sufficient subfamily. A valid reduction would have to control the antisymmetric sector quantitatively, not cancel it by a nonexistent symmetry. There is no parameter campaign.

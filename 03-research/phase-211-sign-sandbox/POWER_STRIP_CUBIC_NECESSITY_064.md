@@ -1,163 +1,163 @@
-# POWER_STRIP_CUBIC_NECESSITY_064 — Para todos los numeradores, STRIP uniforme exige exponente al menos3
+# POWER_STRIP_CUBIC_NECESSITY_064 — For all numerators, uniform STRIP requires exponent at least 3
 
-Estado: PROVED/APROBADO, revisión independiente en POWER_STRIP_CUBIC_AUDIT_064.md, incluida la mejora al umbral j≥10^6n. Sólo limitación de un bound absoluto de contorno; no contraejemplo a W ni al signo global. Papers intactos.
+Status: PROVED/APPROVED, independent review in POWER_STRIP_CUBIC_AUDIT_064.md, including the improvement to the threshold j≥10^6n. Only a limitation of an absolute contour bound; not a counterexample to W nor to the global sign. Papers untouched.
 
-## 1. Enunciado cuantitativo y alcance
+## 1. Quantitative statement and scope
 
-Fijar u=63/2 y una altura cualquiera0<η<u. Para TODOS los enteros n≥4 y j≥10^6n existe un polinomio REAL no nulo P_(n,j), de grado<n, tal que la densidad completa del test racional causal
+Fix u=63/2 and any height 0<η<u. For ALL integers n≥4 and j≥10^6n there exists a nonzero REAL polynomial P_(n,j), of degree <n, such that the full density of the causal rational test
 
     F_(n,j)(s)=s^j P_(n,j)(s)/(s+u)^(n+j),
     ρ_(n,j)(z)=z^(2j)P_(n,j)(iz)P_(n,j)(−iz)/(u²+z²)^(n+j)
 
-satisface
+satisfies
 
     ∫_R |ρ_(n,j)(x+iη)|dx / ∫_R ρ_(n,j)(x)dx
        ≥1+η²n³/(1152u²j).                              (LOWER)
 
-Por tanto, para ningún C>0 y p<3 puede existir una constante D finita, independiente de n,j y del numerador, que limite ese cociente para TODOS los tests con j≥C n^p. Para verlo basta elegir
+Therefore, for no C>0 and p<3 can there exist a finite constant D, independent of n, j and the numerator, that bounds this quotient for ALL tests with j≥C n^p. To see this it suffices to choose
 
     j_n=max{ceil(C n^p),ceil(10^6n)}.
 
-Entonces j_n=o(n³), y LOWER diverge.
+Then j_n=o(n³), and LOWER diverges.
 
-La conclusión es sólo una obstrucción a la ESTRATEGIA STRIP absoluta con altura y constante fijas. No afirma W[F]<0, no excluye un cono de signo W de exponente menor y no requiere una afirmación de concentración espectral que no se haya probado. Se construyen los numeradores explícitamente mediante polinomios ortogonales determinados por un peso positivo; no se seleccionan casos por cómputo.
+The conclusion is only an obstruction to the absolute STRIP STRATEGY with fixed height and constant. It does not claim W[F]<0, does not exclude a W sign cone of smaller exponent and does not require a spectral concentration claim that has not been proved. The numerators are constructed explicitly via orthogonal polynomials determined by a positive weight; no cases are selected by computation.
 
-## 2. Antecedentes y diferencia nueva
+## 2. Antecedents and new difference
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID y CROSSWORD-TO-D; leídos JOINT_SCALE016, QUADRATIC017, STRIP_NECESSITY059 y UNIFORM_STRIP060.059 demuestra, con P=1, que un STRIP uniforme no puede cubrir la escala subcuadrática.060 establece suficiencia para TODOS los numeradores en j≥10^12(nq_n)^3, q_n=ceil(log2(n+1)).
+Consulted the project rules, ROUTES-TRIED-INDEX, grid R162_2300_MASTER_GRID and CROSSWORD-TO-D; read JOINT_SCALE016, QUADRATIC017, STRIP_NECESSITY059 and UNIFORM_STRIP060. 059 proves, with P=1, that a uniform STRIP cannot cover the subquadratic scale. 060 establishes sufficiency for ALL numerators in j≥10^12(nq_n)^3, q_n=ceil(log2(n+1)).
 
-La diferencia actual es que el numerador varía con n,j y utiliza la dirección de mayor grado del peso Student exacto. El generador inverso de traslación tiene una componente cúbica que sale del grado original. Se cuantifica esa componente mediante una proyección ortogonal y se paga el resto racional con una cota explícita. Esto produce la nueva necesidad p≥3, frente a p≥2 para el numerador constante.
+The present difference is that the numerator varies with n, j and uses the highest-degree direction of the exact Student weight. The inverse translation generator has a cubic component that leaves the original degree. That component is quantified via an orthogonal projection and the rational remainder is paid with an explicit bound. This yields the new necessity p≥3, versus p≥2 for the constant numerator.
 
-No se extrapola el límite gaussiano a colas complejas ni se supone que un pico estrecho implique varianza pequeña. La construcción inicial de paquetes Hermite fue sustituida por esta prueba Student exacta, que basta para el objetivo de contorno. El signo global permanece abierto y las formas y contactos aritméticos no se modifican.
+The Gaussian limit is not extrapolated to complex tails, nor is it assumed that a narrow peak implies small variance. The initial construction with Hermite packets was replaced by this exact Student proof, which suffices for the contour objective. The global sign remains open and the arithmetic forms and contacts are not modified.
 
-## 3. Peso y recurrencia exactos
+## 3. Exact weight and recurrence
 
-Poner M=n+j y
+Set M=n+j and
 
     w(y)=(1+y²/j)^−M.
 
-Sean p_k los polinomios mónicos ortogonales para w, y e_k=p_k/||p_k||_w. El peso es par, de modo que p_k tiene paridad k. Todos los momentos usados hasta grado n+5 existen: M>n+5+1/2 bajo las hipótesis actuales.
+Let p_k be the monic orthogonal polynomials for w, and e_k=p_k/||p_k||_w. The weight is even, so p_k has parity k. All moments used up to degree n+5 exist: M>n+5+1/2 under the present hypotheses.
 
-La prueba Pearson de060 aplica sin cambios. El operador simétrico
+The Pearson proof of 060 applies without changes. The symmetric operator
 
     L=−(j+y²)∂²+2(M−1)y∂
 
-preserva cada grado y tiene eigenvalor λ_k=k(2M−k−1) sobre p_k. Comparar el coeficiente subprincipal en p_k=y^k+c_k y^(k−2)+... da
+preserves each degree and has eigenvalue λ_k=k(2M−k−1) on p_k. Comparing the subleading coefficient in p_k=y^k+c_k y^(k−2)+... gives
 
     c_k=−j k(k−1)/[2(2M−2k+1)].
 
-La recurrencia monic y la ortonormal son, respectivamente,
+The monic and the orthonormal recurrences are, respectively,
 
     yp_k=p_(k+1)+β_k p_(k−1),
     ye_k=√β_(k+1)e_(k+1)+√β_k e_(k−1),
     β_k=j k(2M−k)/[(2M−2k+1)(2M−2k−1)].                (REC)
 
-Estas identidades se deducen de ortogonalidad, paridad y β_k=c_k−c_(k+1); no se presuponen asintóticos de Hermite. Los bordes del operador Pearson se anulan porque el grado máximo está muy por debajo de M−1/2.
+These identities follow from orthogonality, parity and β_k=c_k−c_(k+1); no Hermite asymptotics are presupposed. The boundary terms of the Pearson operator vanish because the maximal degree is far below M−1/2.
 
-Para 1≤k≤n+4, las hipótesis n≥4,j≥10^6n implican
+For 1≤k≤n+4, the hypotheses n≥4, j≥10^6n imply
 
     k≤2n, M≤2j,
     2M−k≥2j,
     2M−2k−1≥2j−9≥j.
 
-Por tanto los denominadores de REC son positivos y
+Therefore the denominators of REC are positive and
 
     k/8≤β_k≤4k.                                        (BETA)
 
-El lower usa que su numerador es≥2j²k y el denominador≤(2M)²≤16j². El upper usa numerador≤4j²k y denominador≥j².
+The lower bound uses that its numerator is ≥2j²k and the denominator ≤(2M)²≤16j². The upper bound uses numerator ≤4j²k and denominator ≥j².
 
-## 4. Una componente de grado n+2 que no puede cancelarse
+## 4. A degree n+2 component that cannot cancel
 
-Fijar d=n−1 y tomar
+Fix d=n−1 and take
 
     R=e_d, ||R||_w=1.
 
-El generador exacto de060 es
+The exact generator of 060 is
 
     A R=y²R′+yR−M y³R/(j+y²).
 
-Reescribirlo sin aproximación:
+Rewrite it without approximation:
 
     A R=y²R′+yR−(M/j)y³R+(M/j)y^5R/(j+y²).              (SPLIT)
 
-Los dos primeros términos tienen grado≤d+1, así que su proyección sobre e_(d+3) es CERO. En y³e_d, el coeficiente de e_(d+3) sólo procede de subir tres veces en REC y vale
+The first two terms have degree ≤d+1, so their projection onto e_(d+3) is ZERO. In y³e_d, the coefficient of e_(d+3) only comes from raising three times in REC and equals
 
     √(β_(d+1)β_(d+2)β_(d+3))
       ≥sqrt(n(n+1)(n+2))/sqrt(8³)>n^(3/2)/24.
 
-Como M/j≥1, ésa es una cota inferior para el módulo de la componente principal en SPLIT antes de pagar su resto.
+Since M/j≥1, this is a lower bound for the modulus of the leading component in SPLIT before paying its remainder.
 
-Para cualquier polinomio S de grado r≤n+3, BETA y la descomposición de multiplicación en sus partes ascendente y descendente dan
+For any polynomial S of degree r≤n+3, BETA and the decomposition of multiplication into its raising and lowering parts give
 
     ||yS||_w≤4√(r+1)||S||_w.
 
-Aplicar cinco veces, empezando en grado d, prueba
+Applying it five times, starting at degree d, proves
 
     ||y^5R||_w≤4^5(n+4)^(5/2).
 
-Además M/j≤2 y j+y²≥j. El resto racional de SPLIT satisface
+Moreover M/j≤2 and j+y²≥j. The rational remainder of SPLIT satisfies
 
     ||(M/j)y^5R/(j+y²)||_w
        ≤(2/j)4^5(n+4)^(5/2)
        ≤12288 n^(5/2)/j
        ≤n^(3/2)/48.                                    (REM)
 
-Se usaron n+4≤2n, 2^(5/2)<6 y j≥10^6n≥589824n. Proyectar SPLIT sobre el vector unitario e_(d+3), usar Cauchy para el resto y restar REM da
+We used n+4≤2n, 2^(5/2)<6 and j≥10^6n≥589824n. Projecting SPLIT onto the unit vector e_(d+3), using Cauchy for the remainder and subtracting REM gives
 
     ||A R||_w≥n^(3/2)/48.                              (GEN-LOWER)
 
-No se afirma que A preserve el espacio de grado d: precisamente su componente de grado d+3 es el mecanismo del lower.
+It is not claimed that A preserves the degree-d space: precisely its degree-d+3 component is the mechanism of the lower bound.
 
-## 5. Numerador real admisible y amplitud sin fase
+## 5. Admissible real numerator and phase-free amplitude
 
-Sea a=u√j y definir
+Let a=u√j and define
 
     p(z)=(z/a)^d R(a/z),
     P_(n,j)(s)=p(−is).
 
-Como R tiene paridad d, todas las potencias d−r que aparecen en p son PARES y no negativas. Por tanto p es un polinomio real par, no nulo y de grado≤d<n; P_(n,j) también tiene coeficientes reales. No hay numerador complejo inadmisible oculto en esta construcción.
+Since R has parity d, all powers d−r that appear in p are EVEN and nonnegative. Therefore p is a real even polynomial, nonzero and of degree ≤d<n; P_(n,j) also has real coefficients. There is no hidden inadmissible complex numerator in this construction.
 
-La amplitud sin fase de060 es
+The phase-free amplitude of 060 is
 
     H(z)=z^j p(z)/(u²+z²)^(M/2),
 
-con la rama holomorfa positiva sobre la recta. H es real sobre la recta. El cambio inverso se usa sólo para las normas, tratando las dos semirrectas con sus posibles fases constantes como en060. Se tiene EXACTAMENTE
+with the positive holomorphic branch on the line. H is real on the line. The inverse change is used only for the norms, treating the two half-lines with their possible constant phases as in 060. One has EXACTLY
 
     ||H||²=a^(1−2n)||R||_w²,
     ||H′||²=a^(−1−2n)||A R||_w².
 
-GEN-LOWER prueba
+GEN-LOWER proves
 
     ||H′||²/||H||²≥n³/(2304u²j).                       (DER-LOWER)
 
-Además P_(n,j)(iz)=p(z) y P_(n,j)(−iz)=p(−z)=p(z). En consecuencia la densidad del test causal original es
+Moreover P_(n,j)(iz)=p(z) and P_(n,j)(−iz)=p(−z)=p(z). Consequently the density of the original causal test is
 
     ρ_(n,j)(z)=H(z)²                                    (DENSITY)
 
-en toda la franja. Esta igualdad usa que p es PAR REAL; no se identifica un producto complejo genérico con un cuadrado.
+in the whole strip. This equality uses that p is REAL EVEN; a generic complex product is not identified with a square.
 
-## 6. Del lower de derivada al contorno absoluto
+## 6. From the derivative lower bound to the absolute contour
 
-Para |t|<u, definir N(t)=||H(·+it)||². Como en060, diferenciación e integración por partes dan
+For |t|<u, define N(t)=||H(·+it)||². As in 060, differentiation and integration by parts give
 
     N″(t)=4||H′(·+it)||².
 
-Todas las funciones y sus derivadas decaen en subfranjas cerradas; no hay bordes omitidos. Dado que H es real sobre la recta, N es par y N′(0)=0. La función D(t)=||H′(·+it)||² también es par y convexa, porque
+All functions and their derivatives decay in closed substrips; no boundary terms are omitted. Since H is real on the line, N is even and N′(0)=0. The function D(t)=||H′(·+it)||² is also even and convex, because
 
     D″(t)=4||H″(·+it)||²≥0.
 
-Así D(t)≥D(0). Integrar dos veces prueba para 0<η<u
+Thus D(t)≥D(0). Integrating twice proves, for 0<η<u,
 
     N(η)≥N(0)+2η²||H′||².
 
-Por DENSITY, ∫|ρ(x+iη)|dx=N(η), mientras ∫ρ(x)dx=N(0). Insertar DER-LOWER da exactamente LOWER.
+By DENSITY, ∫|ρ(x+iη)|dx=N(η), while ∫ρ(x)dx=N(0). Inserting DER-LOWER gives exactly LOWER.
 
-No se deduce esta desigualdad del signo de W ni de Cauchy–Schwarz en una forma no probada positiva. Es una identidad/convexidad L² ordinaria de una amplitud holomorfa explícita.
+This inequality is not deduced from the sign of W nor from Cauchy–Schwarz in a form not proved positive. It is an ordinary L² identity/convexity of an explicit holomorphic amplitude.
 
-## 7. Consecuencia de escala y límite del resultado
+## 7. Scaling consequence and limit of the result
 
-Si se pidiera un bound STRIP≤D para TODOS los numeradores y TODOS j≥C n^p con p<3, los tests construidos con j_n=max(ceil(C n^p),ceil(10^6n)) pertenecen a esa clase. Pero j_n=o(n³), así que LOWER tiende a infinito, contradiciendo D finita.
+If one asked for a bound STRIP≤D for ALL numerators and ALL j≥C n^p with p<3, the tests constructed with j_n=max(ceil(C n^p),ceil(10^6n)) belong to that class. But j_n=o(n³), so LOWER tends to infinity, contradicting finite D.
 
-Esto fija exponente necesario al menos3 para este tipo de control ABSOLUTO, mientras060 da suficiencia a orden n³ log³n. No se afirma optimalidad de los factores logarítmicos ni se intenta optimizar constantes.
+This fixes a necessary exponent of at least 3 for this type of ABSOLUTE control, while 060 gives sufficiency at order n³ log³n. No optimality of the logarithmic factors is claimed and no attempt is made to optimize constants.
 
-La obstrucción no prueba W negativa, no descarta mecanismos que conserven cancelación aritmética en vez del módulo de contorno, y no decide el interior escalar suficiente017. La Λ real, el polar y el símbolo permanecen sin cambios. No se ejecutaron campañas numéricas ni cálculos de nuevos casos de signo. Papers intactos.
+The obstruction does not prove negative W, does not rule out mechanisms that keep arithmetic cancellation instead of the contour modulus, and does not decide the sufficient scalar interior 017. The real Λ, the polar and the symbol remain unchanged. No numerical campaigns or computations of new sign cases were run. Papers untouched.

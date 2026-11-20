@@ -1,26 +1,26 @@
-# POWER_RECIPROCAL_PFAFFIANS_AUDIT_083 — Auditoría independiente
+# POWER_RECIPROCAL_PFAFFIANS_AUDIT_083 — Independent audit
 
-Estado: **APROBADO / PROVED como identidad algebraica en todos los órdenes.** Fuente `POWER_RECIPROCAL_PFAFFIANS_083.md`, lectura completa. Auditor mapa; root aprobó independientemente. Papers intactos.
+Status: **APPROVED / PROVED as an algebraic identity in all orders.** Source `POWER_RECIPROCAL_PFAFFIANS_083.md`, read in full. Approved after two independent checks. Papers untouched.
 
-## Verificaciones de signos y factores
+## Checks of signs and factors
 
-Con D=diag(u),E=diag(R),A=A_R y T=EKE, ambas identidades DISPLACEMENT se verifican entrada por entrada, incluidas diagonales. UPDATE tiene el signo correcto con Pf([[0,a],[-a,0]])=a: la forma de rango2 es descomponible, el Pfaffiano es afín en su parámetro y la derivada en0 del cuadrado fija el coeficiente Pf(V)b^tV^−1a.
+With D=diag(u),E=diag(R),A=A_R and T=EKE, both DISPLACEMENT identities are verified entry by entry, including diagonals. UPDATE has the correct sign with Pf([[0,a],[-a,0]])=a: the rank-2 form is decomposable, the Pfaffian is affine in its parameter and the derivative at0 of the square fixes the coefficient Pf(V)b^tV^−1a.
 
-En tamaño par, el determinante de DA+re^t y UPDATE para DAD+ru^t−ur^t contienen exactamente el mismo factor1+e^tA^−1D^−1r. Las congruencias pagan detD y productoR una sola vez. Resulta detK=Pf(A_R)Pf(A_S)/productoR. La extensión desde A invertible es legítima: para nodos distintos, R_i=u_i produce la matriz de Schur invertible. Su fórmula clásica es la Proposición2.2, ecuación(2.7), de Okada, https://arxiv.org/html/1706.01029; cotejada directamente. No se presenta esa fórmula clásica como un resultado original. Tras despejar denominadores la extensión a nodos coincidentes es continua.
+In even size, the determinant of DA+re^t and UPDATE for DAD+ru^t−ur^t contain exactly the same factor1+e^tA^−1D^−1r. The congruences pay detD and productR only once. The result is detK=Pf(A_R)Pf(A_S)/productR. The extension from invertible A is legitimate: for distinct nodes, R_i=u_i produces the invertible Schur matrix. Its classical formula is Proposition2.2, equation(2.7), of Okada, https://arxiv.org/html/1706.01029; cross-checked directly. That classical formula is not presented as an original result. After clearing denominators the extension to coincident nodes is continuous.
 
-En tamaño impar, los cofactores v_i=(−1)^(i+1)Pf(A sin i) satisfacen Av=0 y el borde FINAL tiene Pf=b^tv. adj(A)=vv^t se extiende correctamente al rango menor; n=1 usa Pfvacía=1. adj(DA)=detD·adj(A)D^−1 produce ODD-DET con el orden correcto de los factores. La congruencia Q=[[I,u],[0,1]] suma ru^t−ur^t, por lo que BORDER no invierte signo. Los bordes r=Ee y D^−1r pagan respectivamente productoR y detD. De nuevo no queda ningún producto u extra en detK. Esto cubre también matrices singulares.
+In odd size, the cofactors v_i=(−1)^(i+1)Pf(A without i) satisfy Av=0 and the FINAL border has Pf=b^tv. adj(A)=vv^t extends correctly to lower rank; n=1 uses Pfempty=1. adj(DA)=detD·adj(A)D^−1 produces ODD-DET with the correct order of the factors. The congruence Q=[[I,u],[0,1]] adds ru^t−ur^t, so BORDER does not flip sign. The borders r=Ee and D^−1r pay productR and detD respectively. Again no extra product of u remains in detK. This also covers singular matrices.
 
-Ambos factores cambian por el mismo signo al permutar nodos, de modo que el producto final es invariante. n=1,2,3 recuperan las normalizaciones previas; no se usan esos casos para extrapolar la prueba general.
+Both factors change by the same sign when nodes are permuted, so the final product is invariant. n=1,2,3 recover the previous normalizations; those cases are not used to extrapolate the general proof.
 
-## Antecedentes y alcance
+## Antecedents and scope
 
-Consultados los tres registros y003/074/079/081/082. Se acepta la atribución explícita a álgebra clásica de Pfaffianos, Cayley/Knuth y Cauchy–Schur; no se reclama prioridad mundial. La especialización nueva respecto del corpus organiza el determinante del kernel completo mediante A_R,A_S en todos los tamaños, sin quitar aritmética ni componentes.
+Consulted the three records and003/074/079/081/082. The explicit attribution to classical Pfaffian algebra, Cayley/Knuth and Cauchy–Schur is accepted; no worldwide priority is claimed. The specialization that is new relative to the corpus organizes the determinant of the full kernel through A_R,A_S in all sizes, without removing arithmetic or components.
 
-Esto es una IDENTIDAD, no una desigualdad firmada nueva para la Phi real. Para PSD deben controlarse los productos de Pfaffianos de TODOS los subconjuntos principales; un determinante total positivo no basta. Los signos de los Pfaffianos en órdenes arbitrarios no están probados. No hay cobertura W nueva, orden4 resuelto ni ventanaT nueva; el objetivo global sigue OPEN.
+This is an IDENTITY, not a new signed inequality for the real Phi. For PSD the products of Pfaffians of ALL principal subsets must be controlled; a positive total determinant does not suffice. The signs of the Pfaffians in arbitrary orders are not proved. There is no new W coverage, no resolved order4 and no new windowT; the global target remains OPEN.
 
 
-## Apéndice clásico añadido — revisión posterior
+## Added classical appendix — later review
 
-Leído íntegro el apéndice de interpolación/Rolle/Hankel. La especialización par de Ishikawa–Okada–Tagawa–Zeng Theorem1.1(b) y el límite impar con fultimo=uultimo conservan sigma_k y el borde final de unos. El orden dominante2k−1 y el cofactor final positivo justifican el límite. La identidad clásica fue cotejada en la primaria enlazada; no se reclama novedad.
+The interpolation/Rolle/Hankel appendix was read in full. The even specialization of Ishikawa–Okada–Tagawa–Zeng Theorem1.1(b) and the odd limit with flast=ulast preserve sigma_k and the final border of ones. The dominant order2k−1 and the positive final cofactor justify the limit. The classical identity was cross-checked in the linked primary source; no novelty is claimed.
 
-La jerarquía Dk,j≠0 asegura Chebyshev extendido mediante Rolle ponderado, con regularidadC^(2k−1) suficiente. Derivar k veces el sistema polinomial elimina la primera mitad y da las cuentas de ceros par/impar. La traslación de base y la inversión de columnas producen exactamente TAYLOR-HANKEL y sus factoriales. La condición adicional de momentos positivos desplazados de mu_m=(−1)^m a_(m+1) da los signos indicados por factorización de filas/columnas. Es sólo una condición suficiente NO verificada para los cocientes reales R,S; no se hereda de la positividad deJ/K. No hay descarga de Pfaffianos superiores.
+The hierarchy Dk,j≠0 ensures extended Chebyshev via weighted Rolle, with regularityC^(2k−1) sufficient. Differentiating the polynomial system k times eliminates the first half and gives the even/odd zero counts. The basis translation and column reversal produce exactly TAYLOR-HANKEL and its factorials. The additional condition of shifted positive moments of mu_m=(−1)^m a_(m+1) gives the indicated signs by row/column factorization. It is only a sufficient condition NOT verified for the real quotients R,S; it is not inherited from the positivity ofJ/K. There is no discharge of higher Pfaffians.

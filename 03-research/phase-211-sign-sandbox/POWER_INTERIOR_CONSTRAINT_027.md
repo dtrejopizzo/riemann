@@ -1,135 +1,135 @@
-# POWER_INTERIOR_CONSTRAINT_027 — Mezcla gamma real, resto positivo de Jensen y dirección de curvatura
+# POWER_INTERIOR_CONSTRAINT_027 — Real gamma mixture, positive Jensen remainder and curvature direction
 
-Estado: PROVED representación positiva del resto, desigualdad estricta para ARCH_sharp y refutación analítica de convexidad global del funcional gaussiano completo. Revisión independiente APROBADA y verificador reproducido. OPEN signo del emparejamiento interior. Papers intactos.
+Status: PROVED positive representation of the remainder, strict inequality for ARCH_sharp and analytic refutation of global convexity of the complete Gaussian functional. Independent review APPROVED and verifier reproduced. OPEN sign of the interior pairing. Papers untouched.
 
-## 1. Corpus y diferencia precisa
+## 1. Corpus and precise difference
 
-Leídos las reglas del proyecto, LOW_TABLE018, TATE_CHAIN009, PACKET_SCOPE009, ARCH_CELL026 y UNIFORM_CUTOFF026; búsquedas de Gaussian/heat mixture/convexidad en índice ROUTES-TRIED-INDEX, grid maestro y crucigrama. La mezcla de calor gamma ya se usó en018 para probar C_N>0 y C_N'<0: NO se atribuye novedad a esa representación conocida. Las rutas genéricas de heat trace o semigrupos también están registradas y no se relanzan.
+Read the project rules, LOW_TABLE018, TATE_CHAIN009, PACKET_SCOPE009, ARCH_CELL026 and UNIFORM_CUTOFF026; searches for Gaussian/heat mixture/convexity in the ROUTES-TRIED-INDEX index, master grid and crossword. The gamma heat mixture was already used in 018 to prove C_N>0 and C_N'<0: NO novelty is attributed to that known representation. The generic heat trace or semigroup routes are also recorded and are not relaunched.
 
-La diferencia específica es imponer esa mezcla REAL al kernel interior, construir un peso positivo para su resto respecto de la gaussiana de igual segundo momento, y comprobar la dirección de la desigualdad que aportaría Jensen. Se prueba una desigualdad genuina, pero su dirección ARCH_sharp es SUPERIOR, no inferior. Para la forma completa se identifica una curvatura firmada y se refuta una premisa concreta de convexidad mediante una cota elemental en todo un rango. No se presenta esa refutación como imposibilidad de otras desigualdades para la mezcla específica.
+The specific difference is imposing that REAL mixture on the interior kernel, building a positive weight for its remainder with respect to the Gaussian of equal second moment, and checking the direction of the inequality that Jensen would provide. A genuine inequality is proved, but its direction for ARCH_sharp is UPPER, not lower. For the complete form a signed curvature is identified and a concrete convexity premise is refuted through an elementary bound on a whole range. This refutation is not presented as impossibility of other inequalities for the specific mixture.
 
-## 2. Restricción gamma exacta del test real
+## 2. Exact gamma constraint of the real test
 
-Mantenga u=63/2, N>=2, rho_N(t)=C_N(t)/C_N(0). La mezcla de calor de018, normalizada, es
+Keep u=63/2, N>=2, rho_N(t)=C_N(t)/C_N(0). The heat mixture of 018, normalized, is
 
     rho_N(t)=E exp(−V_N t²),
     V_N=beta/G, beta=u²/4,
     G~Gamma(b,1), b=N−1/2.                             (MIX)
 
-En particular V_N tiene densidad positiva
+In particular V_N has positive density
 
     p_N(v)=beta^b v^(-b−1)exp(−beta/v)/Gamma(b), v>0,
     m_N=E V_N=beta/(b−1)=u²/[4(N−3/2)].
 
-Esto no permite elegir una mezcla arbitraria para fabricar K: la ley está completamente fijada por N y u. La densidad normalizada de la forma gaussiana que tiene autocorrelación exp(−vt²) corresponde al test de norma uno phi_v(y)=(4v/pi)^(1/4)exp(−2vy²), sobre toda la recta.
+This does not allow choosing an arbitrary mixture to manufacture K: the law is completely fixed by N and u. The normalized density of the Gaussian form with autocorrelation exp(−vt²) corresponds to the norm-one test phi_v(y)=(4v/pi)^(1/4)exp(−2vy²), on the whole line.
 
-Si G_W(v)=W[phi_v], se cumple exactamente
+If G_W(v)=W[phi_v], then exactly
 
     W[g_N]/||g_N||²=E G_W(V_N).                         (WG)
 
-La permutación es legítima pieza por pieza: el término de Lévy después de extraer C0 es no negativo; el peine en magnitud y el polar también. Tonelli identifica sus esperanzas con las del rho_N=e^-u|t| por polinomio, que son finitas porque u>1/2. No se integra una identidad formal condicionada ni se sustituye una suma infinita por su valor regularizado.
+The interchange is legitimate piece by piece: the Lévy term after extracting C0 is nonnegative; the comb in magnitude and the polar term too. Tonelli identifies their expectations with those of rho_N=e^-u|t| times polynomial, which are finite because u>1/2. No conditioned formal identity is integrated and no infinite sum is replaced by its regularized value.
 
-## 3. Un peso positivo PROPIO del resto de la mezcla
+## 3. A positive weight INTRINSIC to the remainder of the mixture
 
-Ponga delta_N(t)=rho_N(t)−exp(−m_Nt²)>=0. Es estrictamente positiva para t!=0 porque V_N no es constante y v↦exp(−vt²) es estrictamente convexa.
+Put delta_N(t)=rho_N(t)−exp(−m_Nt²)>=0. It is strictly positive for t!=0 because V_N is not constant and v↦exp(−vt²) is strictly convex.
 
-Defina el resto de funciones bisagra
+Define the remainder of hinge functions
 
     L_N(a)=E(V_N−a)_+−(m_N−a)_+,
     L_N(a)>=0.
 
-De forma explícita,
+Explicitly,
 
     L_N(a)=∫_0^a(a−v)p_N(v)dv, a<=m_N,
-    L_N(a)=∫_a^infinito(v−a)p_N(v)dv, a>=m_N.
+    L_N(a)=∫_a^infinity(v−a)p_N(v)dv, a>=m_N.
 
-Taylor con resto integral, o la representación de una función convexa mediante bisagras, prueba
+Taylor with integral remainder, or the representation of a convex function through hinges, proves
 
-    delta_N(t)=t^4∫_0^infinito exp(−at²)L_N(a)da.        (GAP)
+    delta_N(t)=t^4∫_0^infinity exp(−at²)L_N(a)da.        (GAP)
 
-Éste es un peso positivo explícito que conserva la restricción gamma; delta_N(t)/t^4 es completamente monótona en t². Para N>=3 tiene masa finita
+This is an explicit positive weight that preserves the gamma constraint; delta_N(t)/t^4 is completely monotone in t². For N>=3 it has finite mass
 
     ∫L_N(a)da=Var(V_N)/2
       =u^4/[32(N−3/2)²(N−5/2)].
 
-En N=2 esta masa es infinita, pero GAP sigue siendo válida para t!=0 por Tonelli y el primer momento finito. No se utiliza una varianza inexistente en ese extremo.
+At N=2 this mass is infinite, but GAP remains valid for t!=0 by Tonelli and the finite first moment. No nonexistent variance is used at that endpoint.
 
-## 4. Una desigualdad estricta: la reducción a la varianza da el sentido incorrecto para ARCH_sharp
+## 4. A strict inequality: the reduction to the variance gives the wrong direction for ARCH_sharp
 
-La forma sharp normalizada sobre una gaussiana es
+The normalized sharp form on a Gaussian is
 
-    A_sharp(v)=d_*+∫_0^infinito K_sharp(t)(1−e^-vt²)dt,
+    A_sharp(v)=d_*+∫_0^infinity K_sharp(t)(1−e^-vt²)dt,
     d_*=psi(5/4)−logpi,
     K_sharp(t)=2e^(-5t/2)/(1−e^-2t)>0.
 
-Por tanto A_sharp''(v)=−∫K_sharp(t)t^4e^-vt²dt<0. Integrando MIX, o directamente delta_N>0, se obtiene la desigualdad estricta de TODA la familia
+Hence A_sharp''(v)=−∫K_sharp(t)t^4e^-vt²dt<0. Integrating MIX, or directly delta_N>0, yields the strict inequality for the WHOLE family
 
     ARCH_sharp[g_N]/||g_N||²
       =E A_sharp(V_N)<A_sharp(E V_N).                  (UPPER)
 
-Así el lema propuesto como posible ayuda «la mezcla gamma queda acotada INFERIORMENTE por la gaussiana con igual segundo momento» es falso para ARCH_sharp: ocurre estrictamente lo contrario. UPPER es una cota superior real, no un certificado inferior del déficit interior. Esto no refuta una comparación distinta que conserve también ERR.
+Thus the lemma proposed as a possible aid, «the gamma mixture is bounded BELOW by the Gaussian with equal second moment», is false for ARCH_sharp: strictly the opposite happens. UPPER is a real upper bound, not a lower certificate of the interior deficit. This does not refute a different comparison that also keeps ERR.
 
-## 5. Curvatura completa: qué falta después de conservar TODA la cancelación
+## 5. Complete curvature: what is missing after keeping ALL the cancellation
 
-La forma completa gaussiana se escribe, con K(t) el Lévy original,
+The complete Gaussian form is written, with K(t) the original Lévy kernel,
 
     K(t)=2e^(-t/2)/(1−e^-2t)=e^(t/2)/sinh t,
     v_q=2Lambda(q)/sqrt(q), C0=psi(1/4)−logpi,
 
     G_W(v)=C0+∫K(t)(1−e^-vt²)dt
-       +4∫_0^infinito cosh(t/2)e^-vt²dt
+       +4∫_0^infinity cosh(t/2)e^-vt²dt
        −Σ(q>=2)v_q e^-v(logq)².
 
-Su segunda derivada es
+Its second derivative is
 
     R(v):=G_W''(v)
       =4∫cosh(t/2)t^4e^-vt²dt
         −∫K(t)t^4e^-vt²dt
         −Σ(q>=2)v_q(logq)^4e^-v(logq)².                 (CURV)
 
-Todas esas integrales y series convergen para v>0. GAP y Tonelli por cada pieza con signo fijo dan la identidad exacta
+All these integrals and series converge for v>0. GAP and Tonelli for each piece of fixed sign give the exact identity
 
-    W[g_N]/||g_N||²−G_W(m_N)=∫_0^infinito L_N(a)R(a)da. (JOINT-GAP)
+    W[g_N]/||g_N||²−G_W(m_N)=∫_0^infinity L_N(a)R(a)da. (JOINT-GAP)
 
-El intercambio en JOINT-GAP es absoluto por piezas: 0<=delta_N(t)<=min(rho_N(t),m_Nt²). La segunda cota controla el factor K(t)=O(1/t) en0; la primera controla el infinito, el polar y la suma de contactos mediante el decaimiento exponencial gamma. No se necesita finitud de ∫L_N cuando N=2 para estos intercambios. El polar es la única contribución favorable en CURV; ARCH y el peine son desfavorables. El peso positivo L_N no convierte por sí solo esa curvatura firmada en un lower bound.
+The interchange in JOINT-GAP is absolute piecewise: 0<=delta_N(t)<=min(rho_N(t),m_Nt²). The second bound controls the factor K(t)=O(1/t) at 0; the first controls infinity, the polar term and the sum of contacts through the gamma exponential decay. Finiteness of ∫L_N when N=2 is not needed for these interchanges. The polar term is the only favourable contribution in CURV; ARCH and the comb are unfavourable. The positive weight L_N does not by itself turn this signed curvature into a lower bound.
 
-## 6. Falsificador analítico de convexidad completa, sin certificados puntuales
+## 6. Analytic falsifier of complete convexity, without pointwise certificates
 
-La hipótesis «G_W es convexa en toda la semirrecta» es FALSA para la forma aritmética original. De hecho
+The hypothesis «G_W is convex on the whole half-line» is FALSE for the original arithmetic form. In fact
 
-    G_W''(v)<0 para TODO v>=65536.                      (FAIL-CONVEX)
+    G_W''(v)<0 for ALL v>=65536.                      (FAIL-CONVEX)
 
-Prueba. La fórmula K(t)=e^(t/2)/[2sinh(t/2)cosh(t/2)] y e^(t/2)>=cosh(t/2) implican K(t)>=1/[2sinh(t/2)]. Para0<t<=1 se tiene sinh(t/2)<=t; por ejemplo, cosh(s)<2 para0<=s<=1/2 e integración da esa cota. Por tanto K(t)>=1/(2t). Si v>=2,
+Proof. The formula K(t)=e^(t/2)/[2sinh(t/2)cosh(t/2)] and e^(t/2)>=cosh(t/2) imply K(t)>=1/[2sinh(t/2)]. For 0<t<=1 we have sinh(t/2)<=t; for instance, cosh(s)<2 for 0<=s<=1/2 and integration gives that bound. Hence K(t)>=1/(2t). If v>=2,
 
     −∫K(t)t^4e^-vt²dt
       <=−[1−(v+1)e^-v]/(4v²)<−1/(8v²).
 
-Se usó (v+1)e^-v<=3e^-2<1/2. Para el polar, cosh(t/2)<=e^(t/2) y t/2<=vt²/2+1/(8v) dan
+We used (v+1)e^-v<=3e^-2<1/2. For the polar term, cosh(t/2)<=e^(t/2) and t/2<=vt²/2+1/(8v) give
 
     4∫cosh(t/2)t^4e^-vt²dt
       <=3sqrt(pi)·2^(3/2)e^(1/(8v))v^(-5/2)
       <24v^(-5/2).
 
-Las cotas sqrt(pi)<2,2^(3/2)<3 y e^(1/(8v))<8/7 bastan para el último número. El término de primos en CURV es no positivo y no se omite con un signo favorable inventado. Si sqrt(v)>=256,
+The bounds sqrt(pi)<2, 2^(3/2)<3 and e^(1/(8v))<8/7 suffice for the last number. The prime term in CURV is nonpositive and is not omitted with an invented favourable sign. If sqrt(v)>=256,
 
     R(v)<v^-2[−1/8+24/256]<0.
 
-Esto prueba FAIL-CONVEX sobre un rango infinito del MISMO funcional. No se concluye que JOINT-GAP sea negativo para la ley específica L_N, ni que una envolvente convexa más fina sea imposible: la ley gamma distribuye masa en todo a>0 y hay que conservarla.
+This proves FAIL-CONVEX on an infinite range of the SAME functional. It is not concluded that JOINT-GAP is negative for the specific law L_N, nor that a finer convex envelope is impossible: the gamma law distributes mass over all a>0 and it must be kept.
 
-## 7. Obligación interior que permanece y alcance
+## 7. Interior obligation that remains, and scope
 
-MIX y GAP proporcionan restricciones reales adicionales a la masa y al signo exterior de K. Permiten reescribir el interior como una integral con peso positivo explícito L_N, en vez de permitir K arbitrarios que violen la autocorrelación. Pero no se obtuvo una desigualdad que haga no negativa la suma de G_W(m_N) y JOINT-GAP.
+MIX and GAP provide additional real constraints on the mass and the exterior sign of K. They allow rewriting the interior as an integral with explicit positive weight L_N, instead of allowing arbitrary K that violate the autocorrelation. But no inequality was obtained making the sum of G_W(m_N) and JOINT-GAP nonnegative.
 
-La continuación válida tendría que controlar unilateralmente la parte negativa de R CONTRA ESTA ley L_N, o aportar una comparación conjunta distinta que use su forma inversa gamma. No basta aplicar Jensen con el sentido incorrecto a ARCH_sharp ni suponer convexidad global del funcional completo, ambas premisas refutadas aquí. Tampoco se deduce signo de todas las combinaciones de g_N aunque se decidieran todas estas diagonales.
+A valid continuation would have to control one-sidedly the negative part of R AGAINST THIS law L_N, or provide a different joint comparison using its inverse gamma form. Applying Jensen in the wrong direction to ARCH_sharp, or assuming global convexity of the complete functional, does not suffice; both premises are refuted here. Nor is a sign of all combinations of g_N deduced even if all these diagonals were decided.
 
-Se registran como resultados la desigualdad UPPER para todos N, el peso positivo GAP y FAIL-CONVEX con rango explícito. No hay nueva cobertura W ni modificación de papers.
+Recorded as results: the inequality UPPER for all N, the positive weight GAP and FAIL-CONVEX with explicit range. There is no new W coverage nor modification of papers.
 
 
-## 8. Transferencia de los falsificadores inversos a gaussianas individuales
+## 8. Transfer of the inverse falsifiers to individual Gaussians
 
-**PROVED analítico; revisiones matemática y literal aprobadas.** No se atribuye novedad a MIX de§2. La diferencia frente al falsificador de convexidad de§6 es usar la LINEALIDAD exacta de los inversos Möbius, con Fubini absoluto, no Jensen ni una comparación entre valores de W. Dedup dirigido en índices/grid/crucigrama y fuentes019–023,027,030,039–040 no halló este corolario explicitado. Sin nuevos valores, parámetros calculados o certificados.
+**PROVED analytically; mathematical and literal reviews approved.** No novelty is attributed to MIX of §2. The difference with respect to the convexity falsifier of §6 is using the exact LINEARITY of the Möbius inverses, with absolute Fubini, not Jensen nor a comparison between values of W. Targeted dedup in indices/grid/crossword and sources 019–023, 027, 030, 039–040 did not find this corollary made explicit. No new values, computed parameters or certificates.
 
-Para a>0 y x>=1 definir
+For a>0 and x>=1 define
 
  w_a(x)=x^(-1/2)exp[-a(log x)^2],
  H_a(x)=-w_a'(x)=x^(-3/2)exp[-a(log x)^2](1/2+2a log x)>0,
@@ -137,35 +137,35 @@ Para a>0 y x>=1 definir
  h_a(x)=sum_(m>=1)mu(m)mH_a(mx),
  K_a(x)=J_a(x)+x h_a(x).
 
-Para cada a>0 y x>=1 las series son absolutas: la gaussiana en log m domina cualquier potencia de m y los factores polinomiales en log m. Así se consideran INVERSOS COMPLETOS, no prefijos. Las funciones en a son medibles por sus sumas parciales.
+For each a>0 and x>=1 the series are absolute: the Gaussian in log m dominates any power of m and the polynomial factors in log m. Thus COMPLETE INVERSES are considered, not prefixes. The functions in a are measurable via their partial sums.
 
-La ley positiva FIJA V_N de§2 da w_N(x)=E w_(V_N)(x), donde w_N=x^(-1/2)rho_N(log x). Para N=128 o129, E V_N es finita. Diferenciar bajo la esperanza es legítimo para x fijo en un compacto de[1,infinito): el derivado se domina por C(1+V_N), integrable. Luego
+The FIXED positive law V_N of §2 gives w_N(x)=E w_(V_N)(x), where w_N=x^(-1/2)rho_N(log x). For N=128 or 129, E V_N is finite. Differentiating under the expectation is legitimate for x fixed in a compact subset of [1,infinity): the derivative is dominated by C(1+V_N), integrable. Then
 
  H_N(x)=E H_(V_N)(x).
 
-Para pasar a h en x1, aplicar Tonelli primero a términos NO NEGATIVOS:
+To pass to h at x1, first apply Tonelli to NONNEGATIVE terms:
 
  E sum_(m>=1)|mu(m)|mH_(V_N)(m)
- <=sum_(m>=1)mH_N(m)<infinito.                        (ABS-H)
+ <=sum_(m>=1)mH_N(m)<infinity.                        (ABS-H)
 
-La última suma converge porque H_N(m)=m^(-33)A_N(log m), A_N un polinomio finito. Análogamente,
+The last sum converges because H_N(m)=m^(-33)A_N(log m), A_N a finite polynomial. Analogously,
 
  E sum_(m>=1)|mu(m)|w_(V_N)(m)
- <=sum_(m>=1)w_N(m)<infinito,                         (ABS-J)
+ <=sum_(m>=1)w_N(m)<infinity,                         (ABS-J)
 
-pues w_N(m)=m^(-32)P_N(log m). Fubini absoluto, con TODOS los signos de mu, prueba
+since w_N(m)=m^(-32)P_N(log m). Absolute Fubini, with ALL the signs of mu, proves
 
  h_N(1)=E h_(V_N)(1),
  J_N(1)=E J_(V_N)(1),
  K_N(1)=E K_(V_N)(1).                                (INV-MIX)
 
-Ahora se reutilizan exactamente los resultados completos previos, sin recalcularlos:
+Now the previous complete results are reused exactly, without recomputing them:
 
  POWER_INVERSE_INTERIOR_022: h_128(1)<-33/50<0,
  POWER_CUMULATIVE_TEST_023: K_129(1)<-1/251<0.
 
-Si h_a(1) fuera no negativa para TODO a>0, su esperanza bajo la ley V_128 no podría ser negativa. Por INV-MIX existe por tanto a_h>0 con h_(a_h)(1)<0. El mismo argumento bajo V_129 da a_K>0 con K_(a_K)(1)<0.
+If h_a(1) were nonnegative for ALL a>0, its expectation under the law V_128 could not be negative. By INV-MIX there is therefore a_h>0 with h_(a_h)(1)<0. The same argument under V_129 gives a_K>0 with K_(a_K)(1)<0.
 
-Los parámetros a_h y a_K pueden ser DISTINTOS. No se ha calculado ninguno, ni probado que una misma gaussiana tenga ambos signos. Quedan refutadas las dos hipótesis UNIVERSALES gaussianas h_a(x)>=0 y K_a(x)>=0 para todos a>0,x>=1, cada una ya en el punto x1. Una existencia en la familia gaussiana no se deduce de un prefijo: utiliza el certificado gamma COMPLETO y el intercambio absoluto de la ley real.
+The parameters a_h and a_K may be DIFFERENT. Neither has been computed, nor has it been proved that one Gaussian has both signs. The two UNIVERSAL Gaussian hypotheses h_a(x)>=0 and K_a(x)>=0 for all a>0, x>=1 are refuted, each already at the point x1. An existence statement in the Gaussian family is not deduced from a prefix: it uses the COMPLETE gamma certificate and the absolute interchange of the real law.
 
-No se infiere ERR negativa, W negativa ni negatividad del kernel de calor aritmético H_A-P deE101036. Tampoco se refuta la representación Stieltjes de N(x). Los presupuestos firmados de022–024 continúan siendo objetivos legítimos; lo refutado son esas dos premisas de positividad inversa uniforme. La forma gaussiana completa y su signo no son aquí el funcional transferido. Papers intactos.
+No negative ERR, negative W or negativity of the arithmetic heat kernel H_A-P of E101036 is inferred. Nor is the Stieltjes representation of N(x) refuted. The signed budgets of 022–024 remain legitimate goals; what is refuted are those two premises of uniform inverse positivity. The complete Gaussian form and its sign are not the transferred functional here. Papers untouched.

@@ -1,164 +1,164 @@
-# Ronda 7, memo A: el cuadrado del déficit, la representación de estado fundamental de los contactos y las condiciones de optimalidad del reparto
+# Round 7, memo A: the square of the deficit, the ground-state representation of the contacts, and the optimality conditions of the split
 
-Notación: I = (−T, T), u_p = log p, v_p = 2 log p/√p, S_u F(t) = F(t − u) truncado a I, Π_p(F) = Σ_{n=p^k} v_n c_F(log n)
-(para p = 2 incluye n = 4), ε_F(u) = ½‖F − F_u‖². Reparto DIR (`ROUND_006` §§2, 7–10):
+Notation: I = (−T, T), u_p = log p, v_p = 2 log p/√p, S_u F(t) = F(t − u) truncated to I, Π_p(F) = Σ_{n=p^k} v_n c_F(log n)
+(for p = 2 it includes n = 4), ε_F(u) = ½‖F − F_u‖². DIR split (`ROUND_006` §§2, 7–10):
 q_p(F) = ∫W_pF² + ¼∬θ_p(t,s)K(|t−s|)(F(t)−F(s))² − Π_p(F), θ_p ≥ 0, Σθ_p = 1, ΣW_p = W.
 
-## 0. Filtro de cuatro puntos
+## 0. Four-point filter
 
-**(1) Antecedentes leídos en primaria.**
-- `phase-212-missing-object/REVIEW_006.md` A1–A4 y D (condición de reapertura); `ROUND_006_WINDOW_SPLIT_NUMERIC.md`
-  §§5, 7–10 (dualidad discreta, par obstructor, transferencia mínima X = λℓ⊗ℓ).
-- `phase-211-sign-sandbox/ROUND_005_D.md` §2 Teor. 2.1 (representación de estado fundamental con el peine como medida
-  atómica de salto, respecto del estado fundamental h_T **de la forma completa**) y Teor. 6.1 (NO-GO de la clase 𝒦_gap:
-  cotas de hueco con pérdida intrínseca). LEDGER 211 C17.
+**(1) Antecedents read in primary sources.**
+- `phase-212-missing-object/REVIEW_006.md` A1–A4 and D (reopening condition); `ROUND_006_WINDOW_SPLIT_NUMERIC.md`
+  §§5, 7–10 (discrete duality, obstructing pair, minimal transfer X = λℓ⊗ℓ).
+- `phase-211-sign-sandbox/ROUND_005_D.md` §2 Thm. 2.1 (ground-state representation with the comb as an atomic jump
+  measure, relative to the ground state h_T **of the full form**) and Thm. 6.1 (NO-GO of the class 𝒦_gap:
+  gap bounds with intrinsic loss). LEDGER 211 C17.
 - `phase-195-modern-tools/INV_N_001_BAKRY_EMERY_GAMMA2_GAP_CEILING_NO_GO.md` §1: −v c_F(u) = ½v∫(F − F_u)² − v‖F‖²,
-  es decir el caso φ ≡ 1 de la identidad de §1 de esta memo.
-- P47 cor:Tarch (citado en `ANNEX_COTEJO_NULLDIR.md` §2.1; PROVED con intervalos): 0.58 ≤ T*_{∞,P} ≤ 0.60, el fondo de
-  Arch sobre P_T es < 0 para todo T ≥ 0.60. P47 thm:index: n₋(Arch|P_T) = 0, 1, 2 en (0,T*_ev), (T*_ev,T*_odd),
-  (T*_odd, 0.90], log 2 ≤ T*_odd ≤ 0.81. `R155_029` l.27: «por encima de T*_{∞,P} los primos son necesarios».
-- `phase-159-row-d-two-front-construction/G2_B8_R5.md` Def. 1 y Teorema D paso 4 (vía `REVIEW_006` A1; holgura
-  complementaria todo-o-nada).
-- Fases 202 y 205 (placa exterior, Toeplitz−Hankel de la cola): cotejadas por grep de «estado fundamental», «ground
-  state», «gauge», «Schur»; no contienen una cota por primo del contacto por un potencial. Sin valor de prueba de
-  ausencia.
+  i.e. the case φ ≡ 1 of the identity of §1 of this memo.
+- P47 cor:Tarch (cited in `ANNEX_COTEJO_NULLDIR.md` §2.1; PROVED with intervals): 0.58 ≤ T*_{∞,P} ≤ 0.60, the bottom of
+  Arch on P_T is < 0 for all T ≥ 0.60. P47 thm:index: n₋(Arch|P_T) = 0, 1, 2 on (0,T*_ev), (T*_ev,T*_odd),
+  (T*_odd, 0.90], log 2 ≤ T*_odd ≤ 0.81. `R155_029` l.27: «above T*_{∞,P} the primes are necessary».
+- `phase-159-row-d-two-front-construction/G2_B8_R5.md` Def. 1 and Theorem D step 4 (via `REVIEW_006` A1; all-or-nothing
+  complementary slackness).
+- Phases 202 and 205 (exterior plank, Toeplitz−Hankel of the tail): cross-checked by grep for «estado fundamental», «ground
+  state», «gauge», «Schur»; they contain no per-prime bound of the contact by a potential. No value as proof of
+  absence.
 
-**(2) Lo nuevo.** No hay objeto con signo. Lo que la memo afirma y no está en el corpus:
-(a) una prueba de imposibilidad para la clase 𝒢 de certificados que acotan cada contacto Π_p por un potencial
-V_p ≥ 0 (gauge, test de Schur, estado fundamental por primo con φ_p posicional, cadenas de cualquier longitud,
-combinado con cualquier θ_p(t,s) y W_p(t)); la clase muere en T*_{∞,P} ≤ 0.60, antes de log 2;
-(b) el dual continuo del reparto DIR y de la transferencia mínima, y la ecuación que cumple ℓ;
-(c) la lectura de ℓ como dirección «periódica de periodo log 2 a lo largo de las cadenas» (ARGUED).
+**(2) What is new.** There is no object with a sign. What the memo asserts and is not in the corpus:
+(a) an impossibility proof for the class 𝒢 of certificates that bound each contact Π_p by a potential
+V_p ≥ 0 (gauge, Schur test, per-prime ground state with positional φ_p, chains of any length,
+combined with any θ_p(t,s) and W_p(t)); the class dies at T*_{∞,P} ≤ 0.60, before log 2;
+(b) the continuous dual of the DIR split and of the minimal transfer, and the equation satisfied by ℓ;
+(c) the reading of ℓ as a direction «periodic with period log 2 along the chains» (ARGUED).
 
-**(3) Por qué evita la dificultad del antecedente.** No la evita: la hipótesis del encargo cae en (a). La diferencia
-con 211 ROUND_005_D (estado fundamental global h_T, comb incluido, y clase 𝒦_gap sobre el segundo autovalor) es real
-—aquí φ_p es por primo y la cota es sobre el fondo de cada q_p—, pero el resultado (a) muestra que esa diferencia no
-crea signo: el mecanismo se pierde por un hecho arquimediano ya probado, no por la geometría de las cadenas.
+**(3) Why it avoids the difficulty of the antecedent.** It does not: the working hypothesis falls under (a). The difference
+with 211 ROUND_005_D (global ground state h_T, comb included, and class 𝒦_gap on the second eigenvalue) is real
+—here φ_p is per prime and the bound is on the bottom of each q_p—, but result (a) shows that this difference does not
+create a sign: the mechanism is lost by an already proved archimedean fact, not by the geometry of the chains.
 
-**(4) Enlace con la positividad global.** Ninguno positivo. (a) es un cierre de clase; (b) da la ecuación que cualquier
-fórmula cerrada para ℓ, θ_p, W_p debería satisfacer, es decir el control que una futura candidata ha de pasar.
-Por la regla del filtro se detuvo toda construcción de una fórmula para ℓ dentro de 𝒢; el resto del esfuerzo se dedicó
-a (b) y (c).
+**(4) Link with global positivity.** No positive one. (a) is a class closure; (b) gives the equation that any
+closed formula for ℓ, θ_p, W_p would have to satisfy, i.e. the check a future candidate must pass.
+By the filter rule all construction of a formula for ℓ inside 𝒢 was stopped; the rest of the effort went
+to (b) and (c).
 
-## 1. La identidad de estado fundamental por primo (PROVED, elemental)
+## 1. The per-prime ground-state identity (PROVED, elementary)
 
-**Lema 1.1.** Sea u > 0, v > 0, φ > 0 medible en I, F ∈ L²(I) real. Sea J_u = {t ∈ I : t + u ∈ I}. Entonces
+**Lemma 1.1.** Let u > 0, v > 0, φ > 0 measurable on I, F ∈ L²(I) real. Let J_u = {t ∈ I : t + u ∈ I}. Then
 
 v∫_{J_u} F(t)F(t+u)dt = ∫_I V F² − (v/2)∫_{J_u} φ(t)φ(t+u)(F(t)/φ(t) − F(t+u)/φ(t+u))² dt,
 
 V(t) = (v/2)[𝟙_{J_u}(t)φ(t+u) + 𝟙_{J_u}(t−u)φ(t−u)]/φ(t).
 
-*Prueba.* Desarrollar el cuadrado: (v/2)∫_{J_u}[φ(t+u)F(t)²/φ(t) + φ(t)F(t+u)²/φ(t+u)] − v∫_{J_u}F(t)F(t+u); en el
-segundo sumando cambiar t + u → t. □
+*Proof.* Expand the square: (v/2)∫_{J_u}[φ(t+u)F(t)²/φ(t) + φ(t)F(t+u)²/φ(t+u)] − v∫_{J_u}F(t)F(t+u); in the
+first summand change t + u → t. □
 
-Para n = p^k se suma sobre u = k u_p con su propio φ_{p,k} (o un φ común). Con φ ≡ 1 se recupera INV_N_001 §1. Para
-T < u_p, J_u y J_u + u son disjuntos (las parejas forman un emparejamiento) y α(t) = φ(t+u)/φ(t) es la gauge libre
-del encargo; para T > u_p hay cadenas t − u, t, t + u y V(t) suma dos vecinos. **La identidad vale igual en ambos
-regímenes; la distinción emparejamiento/cadena no cambia el tipo de cota** (en ambos casos es la desigualdad de Schur
-Π_p ≤ ∫V_pF², exacta en F ∝ φ a lo largo de las cadenas).
+For n = p^k one sums over u = k u_p with its own φ_{p,k} (or a common φ). With φ ≡ 1 one recovers INV_N_001 §1. For
+T < u_p, J_u and J_u + u are disjoint (the pairs form a matching) and α(t) = φ(t+u)/φ(t) is the free gauge
+of the working hypothesis; for T > u_p there are chains t − u, t, t + u and V(t) sums two neighbours. **The identity holds equally in both
+regimes; the matching/chain distinction does not change the type of bound** (in both cases it is the Schur inequality
+Π_p ≤ ∫V_pF², exact at F ∝ φ along the chains).
 
-## 2. NO-GO de la clase 𝒢 (PROVED relativo a P47 cor:Tarch, CITED)
+## 2. NO-GO of the class 𝒢 (PROVED relative to P47 cor:Tarch, CITED)
 
-**Clase 𝒢.** Certificados de a_T ⪰ 0 sobre P_T de la forma: para cada primo p, una cota Π_p(F) ≤ ∫V_pF² sobre P_T
-con V_p ≥ 0 c.t.p. (en particular la del Lema 1.1 descartando el cuadrado, con φ_p arbitrario, posicional, con cadenas
-de cualquier longitud, para cualquier número de primos), y la positividad del resto
-R_p := ∫W_pF² + ¼∬θ_pK(F(t)−F(s))² − ∫V_pF² ⪰ 0 sobre P_T, con θ_p ≥ 0, Σθ_p = 1, ΣW_p = W libres (también θ_p de
-dos posiciones, también optimizados conjuntamente con los φ_p). Se admite además cualquier fracción κ_p ∈ [0,1) del
-cuadrado del Lema 1.1 descartada (el resto con fracción conservada es la clase con v_p sustituido por κ_pv_p más un
-término ⪰ 0 añadido a R_p, y el argumento se aplica igual porque sólo usa V_p ≥ 0).
+**Class 𝒢.** Certificates of a_T ⪰ 0 on P_T of the form: for each prime p, a bound Π_p(F) ≤ ∫V_pF² on P_T
+with V_p ≥ 0 a.e. (in particular the one of Lemma 1.1 discarding the square, with arbitrary, positional φ_p, with chains
+of any length, for any number of primes), and positivity of the remainder
+R_p := ∫W_pF² + ¼∬θ_pK(F(t)−F(s))² − ∫V_pF² ⪰ 0 on P_T, with θ_p ≥ 0, Σθ_p = 1, ΣW_p = W free (also θ_p with
+two positions, also optimized jointly with the φ_p). One also admits any fraction κ_p ∈ [0,1) of the
+square of Lemma 1.1 discarded (the remainder with retained fraction is the class with v_p replaced by κ_pv_p plus a
+term ⪰ 0 added to R_p, and the argument applies equally because it only uses V_p ≥ 0).
 
-**Teorema 2.1.** Para todo T ≥ 0.60 ningún certificado de 𝒢 existe. Para T ∈ (T*_{∞,P}, 0.60) tampoco.
+**Theorem 2.1.** For all T ≥ 0.60 no certificate of 𝒢 exists. For T ∈ (T*_{∞,P}, 0.60) neither.
 
-*Prueba.* Σ_p R_p = Arch − ∫(Σ_pV_p)F² ⪯ Arch sobre P_T porque ΣV_p ≥ 0. Si cada R_p ⪰ 0, Arch ⪰ 0 sobre P_T.
-Por cor:Tarch el fondo de Arch sobre P_T es < 0 para T > T*_{∞,P}, y T*_{∞,P} ≤ 0.60. □
+*Proof.* Σ_p R_p = Arch − ∫(Σ_pV_p)F² ⪯ Arch on P_T because ΣV_p ≥ 0. If each R_p ⪰ 0, Arch ⪰ 0 on P_T.
+By cor:Tarch the bottom of Arch on P_T is < 0 for T > T*_{∞,P}, and T*_{∞,P} ≤ 0.60. □
 
-**Corolario 2.2.** La representación de estado fundamental de los contactos (la hipótesis del encargo) no explica el
-umbral DIR en 0.695–0.70: la clase que usa esa representación como cota muere en T*_{∞,P} ∈ [0.58, 0.60], por
-debajo de log 2 = 0.6931, y en la misma forma en régimen de emparejamiento que de cadenas. Pasado T*_{∞,P} los
-contactos deben aportar **positivamente** (−Π(e) > 0 en la dirección e de fondo de Arch, pues a_T(e) ≥ 0 >
-Arch(e)); toda cota superior de Π_p por un potencial no negativo tira exactamente esa contribución. Esta es la
-forma por primo de la frase «por encima de T*_{∞,P} los primos son necesarios» de R155_029; el teorema es su
-consecuencia inmediata y no tiene más contenido que ese.
+**Corollary 2.2.** The ground-state representation of the contacts (the working hypothesis) does not explain the
+DIR threshold at 0.695–0.70: the class that uses that representation as a bound dies at T*_{∞,P} ∈ [0.58, 0.60],
+below log 2 = 0.6931, and in the same way in the matching regime as in the chain regime. Past T*_{∞,P} the
+contacts must contribute **positively** (−Π(e) > 0 in the bottom direction e of Arch, since a_T(e) ≥ 0 >
+Arch(e)); every upper bound of Π_p by a nonnegative potential throws away exactly that contribution. This is the
+per-prime form of the sentence «above T*_{∞,P} the primes are necessary» of R155_029; the theorem is its
+immediate consequence and has no more content than that.
 
-Lo que 𝒢 no cubre: cotas Π_p ⪯ M_{V_p} sobre P_T con V_p de signo variable (posibles por la restricción de Tate, pues
-Π_p es indefinida), y certificados que conservan el cuadrado del Lema 1.1 con peso completo (entonces el lema es una
-reescritura exacta de q_p y no aporta mecanismo: q_p ⪰ 0 vuelve a ser el problema). OPEN, sin objeto.
+What 𝒢 does not cover: bounds Π_p ⪯ M_{V_p} on P_T with sign-changing V_p (possible because of the Tate restriction, since
+Π_p is indefinite), and certificates that keep the square of Lemma 1.1 with full weight (then the lemma is an
+exact rewriting of q_p and contributes no mechanism: q_p ⪰ 0 is again the problem). OPEN, no object.
 
-**Respuesta a (ii).** La identidad está en el corpus para φ ≡ 1 (INV_N_001 §1) y para φ = h_T global (211 ROUND_005_D
-Teor. 2.1). Ninguno de los dos NO-GO registrados (𝒦_gap: segundo autovalor con pérdida; INV_N_001: techo de
-curvatura) cubre literalmente la variante por primo con φ_p posicional y reparto DIR conjunto; esa variante queda
-cubierta ahora por el Teorema 2.1, por una razón distinta (índice arquimediano, no pérdida de hueco).
+**Answer to (ii).** The identity is in the corpus for φ ≡ 1 (INV_N_001 §1) and for φ = h_T global (211 ROUND_005_D
+Thm. 2.1). Neither of the two recorded NO-GOs (𝒦_gap: second eigenvalue with loss; INV_N_001: curvature
+ceiling) literally covers the per-prime variant with positional φ_p and joint DIR split; that variant is now
+covered by Theorem 2.1, for a different reason (archimedean index, not gap loss).
 
-## 3. Condiciones de optimalidad del reparto en el continuo
+## 3. Optimality conditions of the split in the continuum
 
-**3.1 Dual del reparto DIR (ARGUED en el continuo; PROVED en cada discretización de Galerkin por dualidad SDP con
-Slater, que se cumple: θ_p = ½, W_p = W/2, τ muy negativo es estrictamente factible).** Primal:
-τ* = sup{τ : q_p − τ ⪰ 0 sobre P_T, p = 2, 3}. Lagrangiano con Y_p ⪰ 0 (núcleos de traza finita sobre P_T):
-τ + Σ_p tr(Y_p(q_p − τ)). Maximizar en τ da Σ tr Y_p = 1; en W_p con ΣW_p = W da diag Y_2 = diag Y_3 =: ρ (si no,
-+∞); en θ_2 ∈ [0,1] (θ_3 = 1 − θ_2), con E_Y(t,s) = ¼K(|t−s|)(ρ(t)+ρ(s)−2Y(t,s)), da max(E_{Y_2}, E_{Y_3}). Luego
+**3.1 Dual of the DIR split (ARGUED in the continuum; PROVED in each Galerkin discretization by SDP duality with
+Slater, which holds: θ_p = ½, W_p = W/2, τ very negative is strictly feasible).** Primal:
+τ* = sup{τ : q_p − τ ⪰ 0 on P_T, p = 2, 3}. Lagrangian with Y_p ⪰ 0 (trace-class kernels on P_T):
+τ + Σ_p tr(Y_p(q_p − τ)). Maximizing in τ gives Σ tr Y_p = 1; in W_p with ΣW_p = W it gives diag Y_2 = diag Y_3 =: ρ (otherwise
++∞); in θ_2 ∈ [0,1] (θ_3 = 1 − θ_2), with E_Y(t,s) = ¼K(|t−s|)(ρ(t)+ρ(s)−2Y(t,s)), it gives max(E_{Y_2}, E_{Y_3}). Hence
 
 τ* = inf { ∫Wρ + ¼∬K(|t−s|)[ρ(t)+ρ(s) − 2 min(Y_2(t,s), Y_3(t,s))] − tr(Y_2Π_2) − tr(Y_3Π_3) :
-           Y_p ⪰ 0 sobre P_T, diag Y_2 = diag Y_3 = ρ, ∫ρ = ½ }.
+           Y_p ⪰ 0 on P_T, diag Y_2 = diag Y_3 = ρ, ∫ρ = ½ }.
 
-Con Y_2 = Y_3 = Y el funcional es tr(Y a_T); el déficit del reparto respecto del techo es exactamente lo que se gana
-al separar los dos estados manteniendo densidad común: la energía de núcleo se cobra con min(Y_2,Y_3) en vez de con
-Y. Esto reproduce la fórmula verificada en `ROUND_006` §9.1.
+With Y_2 = Y_3 = Y the functional is tr(Y a_T); the deficit of the split relative to the ceiling is exactly what is gained
+by separating the two states while keeping a common density: the kernel energy is charged with min(Y_2,Y_3) instead of with
+Y. This reproduces the formula verified in `ROUND_006` §9.1.
 
-**Holgura complementaria.** (K1) Y_p(q_p − τ*) = 0: el rango de Y_p está en el autoespacio de fondo de q_p.
-(K2) θ_2(t,s) = 1 donde Y_3(t,s) > Y_2(t,s), = 0 donde Y_3 < Y_2 (todo-o-nada, `G2_B8_R5` Teor. D paso 4, ahora con
-dos posiciones). (K3) W_p libre sólo donde ρ = 0; donde ρ > 0 el reparto de W es indeterminado por el dual y lo fija
+**Complementary slackness.** (K1) Y_p(q_p − τ*) = 0: the range of Y_p lies in the bottom eigenspace of q_p.
+(K2) θ_2(t,s) = 1 where Y_3(t,s) > Y_2(t,s), = 0 where Y_3 < Y_2 (all-or-nothing, `G2_B8_R5` Thm. D step 4, now with
+two positions). (K3) W_p free only where ρ = 0; where ρ > 0 the split of W is undetermined by the dual and is fixed by
 (K1).
 
-**3.2 Transferencia mínima (`ROUND_006` §10.2).** Primal: min ‖X‖_* con q_2 + X ⪰ 0, q_3 − X ⪰ 0 (θ, W en DIR).
-Dual: Y_2, Y_3 ⪰ 0 con las mismas condiciones de densidad y de θ, y Y_3 − Y_2 ∈ ∂‖X‖_*. Si X = λℓ⊗ℓ, ‖ℓ‖ = 1,
-λ > 0, entonces
+**3.2 Minimal transfer (`ROUND_006` §10.2).** Primal: min ‖X‖_* with q_2 + X ⪰ 0, q_3 − X ⪰ 0 (θ, W in DIR).
+Dual: Y_2, Y_3 ⪰ 0 with the same density and θ conditions, and Y_3 − Y_2 ∈ ∂‖X‖_*. If X = λℓ⊗ℓ, ‖ℓ‖ = 1,
+λ > 0, then
 
 (E_ℓ)  (Y_3 − Y_2)ℓ = ℓ,  ‖Y_3 − Y_2‖_op ≤ 1,  (q_2 + λℓ⊗ℓ)Y_2 = 0,  (q_3 − λℓ⊗ℓ)Y_3 = 0,
 
-y por (K1) ℓ es la dirección de autovalor negativo de q_2 en el óptimo (los datos: solapamiento 0.92–0.95).
-**Ecuación de ℓ:** autovector de autovalor 1 (el máximo) de Y_3 − Y_2, con Y_p el par obstructor; equivalentemente
-ℓ ∝ (q_3 − λℓ⊗ℓ)-núcleo ∩ dirección negativa de q_2. Es un problema de punto fijo acoplado al par obstructor; no da
-fórmula sin resolverlo (ARGUED; sin prueba de existencia en el continuo).
+and by (K1) ℓ is the negative-eigenvalue direction of q_2 at the optimum (the data: overlap 0.92–0.95).
+**Equation for ℓ:** eigenvector of eigenvalue 1 (the maximum) of Y_3 − Y_2, with Y_p the obstructing pair; equivalently
+ℓ ∝ (q_3 − λℓ⊗ℓ)-kernel ∩ negative direction of q_2. It is a fixed-point problem coupled to the obstructing pair; it gives no
+formula without solving it (ARGUED; no existence proof in the continuum).
 
-## 4. Lectura de ℓ (ARGUED, sin prueba)
+## 4. Reading of ℓ (ARGUED, no proof)
 
-Por el Lema 1.1 con φ ≡ 1, el contacto de 2 es máximo relativo a ‖F‖² en las F con F(t) = F(t + log 2) a lo largo de
-las cadenas, y sobre ellas la energía de núcleo a distancia log 2 es nula. Para T < log 2 esa condición sólo
-empareja puntos y deja libre la mitad de la ventana; para T > log 2 liga ternas y fuerza periodicidad en la zona
-central (−T + log 2, T − log 2): la proyección de cos(2πt/log 2) sobre P_T es el representante natural, y coincide
-con el solapamiento observado 0.91–0.93. Esto es coherente con (K2) (2 cede el núcleo en la banda de log 2) pero
-**no explica el umbral**: la zona central tiene longitud 2(T − log 2), que es 0.013 en T = 0.70, y el término de n = 4
-se activa en el mismo T = log 2 (S_2² ≠ 0 ⟺ 2T > log 4), mientras que borrarlo no cambia el fallo (`ROUND_006` §7.3).
-Pregunta abierta concreta: si el umbral DIR coincide con T*_odd (P47 thm:index, log 2 ≤ T*_odd ≤ 0.81, segunda
-dirección negativa de Arch); ℓ es par, así que la coincidencia, si existe, no es directa. OPEN.
+By Lemma 1.1 with φ ≡ 1, the contact of 2 is maximal relative to ‖F‖² on the F with F(t) = F(t + log 2) along
+the chains, and on them the kernel energy at distance log 2 vanishes. For T < log 2 that condition only
+pairs points and leaves half the window free; for T > log 2 it binds triples and forces periodicity in the central
+zone (−T + log 2, T − log 2): the projection of cos(2πt/log 2) onto P_T is the natural representative, and it agrees
+with the observed overlap 0.91–0.93. This is consistent with (K2) (2 yields the kernel in the log 2 band) but
+**does not explain the threshold**: the central zone has length 2(T − log 2), which is 0.013 at T = 0.70, and the n = 4 term
+switches on at the same T = log 2 (S_2² ≠ 0 ⟺ 2T > log 4), whereas deleting it does not change the failure (`ROUND_006` §7.3).
+Concrete open question: whether the DIR threshold coincides with T*_odd (P47 thm:index, log 2 ≤ T*_odd ≤ 0.81, second
+negative direction of Arch); ℓ is even, so the coincidence, if it exists, is not direct. OPEN.
 
-## 5. Respuesta a (iv)
+## 5. Answer to (iv)
 
-No se produce fórmula cerrada para ℓ, θ_p, W_p. Lo que se prueba es la imposibilidad en la clase 𝒢 (Teorema 2.1),
-para cualquier número de primos (el argumento sólo usa ΣV_p ≥ 0), con lo que el enunciado de tres primos de la
-clase es el mismo NO-GO. Controles de falsificador: no proceden para un NO-GO; nótese que el Teorema 2.1 no depende
-del peso (vale para cΛ, para el peine sin una potencia y para pesos de tipo Beurling), lo cual confirma que 𝒢 no
-puede distinguir c = 1 y que, por `ROUND_006` §10.3 (ventana de positividad en c de anchura ≲ 10⁻³ en T = 0.70),
-cualquier fórmula superviviente debe caer fuera de 𝒢 y depender del peso con esa precisión.
+No closed formula for ℓ, θ_p, W_p is produced. What is proved is the impossibility in the class 𝒢 (Theorem 2.1),
+for any number of primes (the argument only uses ΣV_p ≥ 0), so the three-prime statement of the
+class is the same NO-GO. Falsifier checks: they do not apply to a NO-GO; note that Theorem 2.1 does not depend
+on the weight (it holds for cΛ, for the comb without one power and for Beurling-type weights), which confirms that 𝒢 cannot
+distinguish c = 1 and that, by `ROUND_006` §10.3 (positivity window in c of width ≲ 10⁻³ at T = 0.70),
+any surviving formula must fall outside 𝒢 and depend on the weight with that precision.
 
-Condición para reabrir el punto (iv): una cota Π_p ⪯ M_{V_p} sobre P_T con V_p de signo variable, escrita a partir de
-la restricción de Tate y de los valores exactos v_2, v_3, que cumpla (K1)–(K2) y (E_ℓ) en T = 0.70. No se propone.
+Condition for reopening point (iv): a bound Π_p ⪯ M_{V_p} on P_T with sign-changing V_p, written from
+the Tate restriction and the exact values v_2, v_3, satisfying (K1)–(K2) and (E_ℓ) at T = 0.70. None is proposed.
 
-## 6. Lista de afirmaciones
+## 6. List of claims
 
-| # | Afirmación | Etiqueta |
+| # | Claim | Label |
 |---|---|---|
-| 1 | Lema 1.1, identidad de estado fundamental por primo, con truncamiento | PROVED |
-| 2 | La gauge del régimen de emparejamiento y el estado fundamental de cadenas son la misma cota de Schur | PROVED (por 1) |
-| 3 | P47 cor:Tarch: fondo de Arch sobre P_T < 0 para T > T*_{∞,P}, T*_{∞,P} ∈ [0.58, 0.60] | CITED |
-| 4 | Teorema 2.1: la clase 𝒢 (contactos acotados por potenciales ≥ 0, φ_p posicional, cadenas, θ_p(t,s), W_p(t), cualquier número de primos) no certifica para T > T*_{∞,P} | PROVED relativo a 3 |
-| 5 | Corolario 2.2: la hipótesis del encargo no explica el umbral 0.695–0.70 | PROVED relativo a 3 |
-| 6 | Cobertura de los NO-GO previos (𝒦_gap, INV_N_001) sobre la variante por primo: no literal | ARGUED (lectura) |
-| 7 | Dual continuo del reparto DIR con min(Y_2, Y_3) y densidad común | PROVED en Galerkin; ARGUED en el continuo |
-| 8 | Holgura complementaria (K1)–(K3) | PROVED en Galerkin; ARGUED en el continuo |
-| 9 | Ecuación (E_ℓ) para ℓ | PROVED en Galerkin bajo rango uno de X; ARGUED en el continuo |
-| 10 | ℓ ≈ dirección periódica de periodo log 2 en cadenas | ARGUED |
-| 11 | Relación del umbral DIR con T*_odd | OPEN |
-| 12 | Clase de cotas con V_p de signo variable sobre P_T | OPEN, sin objeto |
-| 13 | Datos de ROUND_006 usados (umbral, ℓ, ventana en c) | NUMÉRICO (no recalculados) |
-| 14 | Signo global | OPEN |
+| 1 | Lemma 1.1, per-prime ground-state identity, with truncation | PROVED |
+| 2 | The gauge of the matching regime and the chain ground state are the same Schur bound | PROVED (by 1) |
+| 3 | P47 cor:Tarch: bottom of Arch on P_T < 0 for T > T*_{∞,P}, T*_{∞,P} ∈ [0.58, 0.60] | CITED |
+| 4 | Theorem 2.1: the class 𝒢 (contacts bounded by potentials ≥ 0, positional φ_p, chains, θ_p(t,s), W_p(t), any number of primes) does not certify for T > T*_{∞,P} | PROVED relative to 3 |
+| 5 | Corollary 2.2: the working hypothesis does not explain the threshold 0.695–0.70 | PROVED relative to 3 |
+| 6 | Coverage of the previous NO-GOs (𝒦_gap, INV_N_001) of the per-prime variant: not literal | ARGUED (reading) |
+| 7 | Continuous dual of the DIR split with min(Y_2, Y_3) and common density | PROVED in Galerkin; ARGUED in the continuum |
+| 8 | Complementary slackness (K1)–(K3) | PROVED in Galerkin; ARGUED in the continuum |
+| 9 | Equation (E_ℓ) for ℓ | PROVED in Galerkin under rank one of X; ARGUED in the continuum |
+| 10 | ℓ ≈ periodic direction of period log 2 on chains | ARGUED |
+| 11 | Relation of the DIR threshold with T*_odd | OPEN |
+| 12 | Class of bounds with sign-changing V_p on P_T | OPEN, no object |
+| 13 | Data of ROUND_006 used (threshold, ℓ, window in c) | NUMERICAL (not recomputed) |
+| 14 | Global sign | OPEN |

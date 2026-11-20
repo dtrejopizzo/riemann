@@ -1,21 +1,21 @@
-# POWER_STATE_053 — Transporte completo a trece polos
+# POWER_STATE_053 — Full transport to thirteen poles
 
-Estado: PROVED para la familia declarada; signo general OPEN. Papers intactos.
+Status: PROVED for the declared family; general sign OPEN. Papers untouched.
 
-Para todo polinomio real no nulo P de grado menor que13 y cualesquiera tasas reales v_i>=63/2, incluidas repeticiones,
+For every nonzero real polynomial P of degree less than13 and any real rates v_i>=63/2, repetitions included,
 
     W[P/prod_i(s+v_i)] > ||P/prod_i(s+v_i)||²/4000.
 
-Referencia: POWER_FULL_THIRTEEN_053.md. Resultado auxiliar: catorce polos con numerador D de grado<14 y D(0)=0 tienen W>norma²/1000. Es cero de la transformada en s=0, no un valor temporal en el origen.
+Reference: POWER_FULL_THIRTEEN_053.md. Auxiliary result: fourteen poles with numerator D of degree<14 and D(0)=0 have W>norm²/1000. It is a zero of the transform at s=0, not a temporal value at the origin.
 
-## Evidencia y mecanismo
+## Evidence and mechanism
 
-CENTERED_MOMENT_053 y su auditoría prueban E23[Q^j F]>norma²/10 para todo F en V13 y j>=96 mediante un único momento exacto y monotonía por covarianza. El segmento restante j=1,...,95 satisface E23>norma²/500: 95 certificados LDL racionales, con errores exteriores y error de operador pagado contra la matriz Gram. Constructor, auditor mapa y root reprodujeron el verificador completo con exit0 y todos los PASS. Root reprodujo también el verificador de momento.
+CENTERED_MOMENT_053 and its audit prove E23[Q^j F]>norm²/10 for all F in V13 and j>=96 through a single exact moment and monotonicity by covariance. The remaining segment j=1,...,95 satisfies E23>norm²/500: 95 rational LDL certificates, with outer errors and operator error paid against the Gram matrix. The full verifier was reproduced three times independently with exit0 and all PASS. The moment verifier was also reproduced.
 
-MULTI015 transfiere la órbita completa a catorce polos con numerador cero. La cola aritmética completa desde4 tiene norma<1/1000 por la traza B_T14=947334302964. FULLTEL014 conserva forma, norma, polar y aritmética y transfiere el margen del bloque confluyente13 de052 a todos los trece polos.
+MULTI015 transfers the full orbit to fourteen poles with zero numerator. The full arithmetic tail from4 has norm<1/1000 by the trace B_T14=947334302964. FULLTEL014 keeps form, norm, polar and arithmetic and transfers the margin of the confluent block13 of052 to all thirteen poles.
 
-La corrida inicial era lenta por denominadores gigantes en logaritmos exactos. Se sustituyó su evaluación por intervalos racionales exteriores en cada operación, conservando 512 términos, precisión260, márgenes y corte; no se relajó ninguna condición del certificado.
+The initial run was slow because of giant denominators in exact logarithms. Its evaluation was replaced by outer rational intervals at each operation, keeping 512 terms, precision260, margins and cutoff; no condition of the certificate was relaxed.
 
-## Alcance pendiente
+## Pending scope
 
-No prueba dimensión arbitraria ni catorce polos con numerador general. No establece una ventana T nueva. El signo global sigue abierto. El próximo trabajo debe buscar control uniforme del segmento inicial al variar la dimensión, no confundir positividad eventual con positividad de toda la órbita.
+It does not prove arbitrary dimension nor fourteen poles with general numerator. It does not establish a new window T. The global sign remains open. The next work must look for uniform control of the initial segment as the dimension varies, not confuse eventual positivity with positivity of the whole orbit.

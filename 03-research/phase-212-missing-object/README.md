@@ -71,12 +71,12 @@ Labels used: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL (N
 ## Contents
 
 **Core documents**
-- `OBJECT_SPEC.md` — specification of the object to build.
-- `RULES_AVOID.md` — hard rules, failure patterns, closed families, battery of falsifiers, non-excluded
+- `OBJECT_SPEC.md` — Phase 212 — Specification of the object to be built
+- `RULES_AVOID.md` — Phase 212 — What is not done
   ground.
-- `BRIEF_CONSTRUCTOR.md` — reading brief for every memo of the phase.
-- `LEDGER.md` — one line per candidate, rounds 1–18.
-- `NEAR_DOSSIER.md` — compilation of what the corpus knows about the near-coincidence term Near_M.
+- `BRIEF_CONSTRUCTOR.md` — Brief for every memo of phase 212
+- `LEDGER.md` — Candidate ledger (one line each; updated every round)
+- `NEAR_DOSSIER.md` — Dossier on the near-coincidence term (Near_M)
 - `TRIAGE_D_1.md` … `TRIAGE_D_5.md` — triage of row-D ideas recorded but never carried through.
 
 **Series**
@@ -110,133 +110,133 @@ validation tools for specific memos; a numerical output is not a proof.
 
 ## Full index of rounds, reviews, annexes and triage files
 
-- `ROUND_001_A.md` — Ronda 1, memo A — Candidata K1: realización de Gram desde el separador exacto con Poisson y el factor arquimediano
-- `ROUND_001_B.md` — Ronda 1 B — Candidata K2: pivotes de Schur a lo largo de un anidamiento multiplicativo de los enteros (memo de selección)
-- `ROUND_001_C.md` — Ronda 1 — Candidata K3: sistema ampliado de cuadrados para los cruces no resonantes
-- `ROUND_001_D.md` — Ronda 1, candidata K4 — desigualdad multiescala no lineal con Λ más allá de la ventana
-- `ROUND_001_L.md` — ROUND_001_L — Rigidez de comparadores de tipo Carathéodory en la escalera de potencias
-- `ROUND_002_A.md` — Ronda 2, candidata A — La cola exterior de la hipérbola como suma de cuadrados: memo de selección
-- `ROUND_002_B.md` — Ronda 2 B — La factorización de incidencia [log mcd] = E diag(Λ) Eᵀ actuando sobre F (memo de selección)
-- `ROUND_002_C.md` — Ronda 002 C — El canal de dos bases primas: memo de selección
-- `ROUND_003_1.md` — Ronda 3, opción 1 — Familias de funcionales que ven la ventana y no son la modal theta (memo de selección)
-- `ROUND_003_2.md` — Ronda 3, opción 2 — Funcionales y factores que dependen de Λ (memo de selección)
-- `ROUND_003_3.md` — Ronda 3, opción 3 — el sector de paridad: productos mn mediante la reflexión J
-- `ROUND_003_4.md` — ROUND_003_4 — Selección: coordenada de borde y ancla nula con borde dentro de (G)
-- `ROUND_003_5.md` — Ronda 3, opción 5 — el par virial: selección
-- `ROUND_003_6.md` — Ronda 3, opción 6 — Conversión conjunta de la identidad finita de Poisson–Chebyshev sin recombinar (memo de selección)
-- `ROUND_003_7.md` — Ronda 3, opción 7 — La formulación (S): incidencia de divisores sobre 𝔸_M (memo de selección)
-- `ROUND_003_8.md` — Ronda 3, opción 8 — el objeto cuadrático en el peso y la factorización tipo Riccati
-- `ROUND_003_9.md` — ROUND_003_9 — Selección: métrica no local de la realización theta
-- `ROUND_004_A.md` — Ronda 4, candidata A — La meta SP-161 / L161.1 con pesos con signo y pesos de criba (memo de selección)
-- `ROUND_004_B.md` — Ronda 4, zona 1 — Defecto de divisores cuadrático que entra sumando (memo de selección)
-- `ROUND_004_C.md` — Ronda 4, zona 3: el resto R(F) del test de Möbius truncado (memo de selección)
-- `ROUND_004_D.md` — Ronda 4, zona D — Factorización de 𝔸_M con soporte en las casi-coincidencias m ≈ kn (memo de selección)
-- `ROUND_004_E.md` — ROUND_004_E — Selección: formas indefinidas (Kreĭn/Pontryagin) con vector neutro no radical
-- `ROUND_005_G1.md` — Ronda 5, semilla G1: objeto de grado ≥ 3 cuya hessiana sea la forma
-- `ROUND_005_G2.md` — Ronda 5, semilla G2 — cierre bajo producto de factores de Euler aplicado a la signatura
-- `ROUND_005_G3.md` — Ronda 5, semilla G3 — una medida construida desde la forma cuyo cierre dé el signo
-- `ROUND_005_G4.md` — Ronda 5, semilla G4: inducción que alarga la ventana con la identidad de divisores en el paso
-- `ROUND_005_G5.md` — Ronda 5, memo G5: invención libre desde A1–A6 (deducción hacia atrás de los tipos de objeto)
-- `ROUND_006_WINDOW_SPLIT_NUMERIC.md` — Ronda 6 — Reparto local dependiente de la ventana en T = 0.5925 (NUMÉRICO)
-- `ROUND_007_A.md` — Ronda 7, memo A: el cuadrado del déficit, la representación de estado fundamental de los contactos y las condiciones de optimalidad del re
-- `ROUND_007_B.md` — Ronda 7, B — predicado de etapa para la inducción por primos
-- `ROUND_007_C.md` — Ronda 7, encargo C — relación no lineal en el peso entre convolución y ventana
-- `ROUND_008_A.md` — Ronda 8, encargo A — el concomitante de borde que convertiría el canal de producto en el de cocientes
-- `ROUND_009_G1.md` — Ronda 9, encargo G1 — objeto con papeles invertidos: la aritmética como fuente de signo
-- `ROUND_009_G2.md` — Ronda 9, G2: recursión con dato de etapa dependiente de la historia
-- `ROUND_009_G3.md` — Ronda 9, encargo G3 — dónde el mapa no tiene marcas
-- `ROUND_010_A.md` — Ronda 10, A: covariancia aditiva como mecanismo del signo
-- `ROUND_011_A.md` — Ronda 11, A: los residuos abiertos de (PC) y la discrepancia reticular unilateral
-- `ROUND_012_A.md` — Ronda 12, A: el residuo L161.4 y su paso a todo P_T
-- `ROUND_013_A.md` — Ronda 13 A — Ingeniería inversa en pequeño: la ventana ½log 4 < T < ½log 5
-- `ROUND_013_B.md` — Ronda 13, memo B: el peso como caso de igualdad de una positividad (Gram, Schur, cuadrado completado)
-- `ROUND_013_C.md` — Ronda 13, C — mapa de operaciones de combinación entre objetos con signo y objetos que ven el peso
-- `ROUND_014_A.md` — Ronda 14, A — linealizar el canal de cocientes: independencia de los primos, polarización y transporte desde el canal de productos
-- `ROUND_014_B.md` — Ronda 14, memo B: positividad de Schur–Schoenberg sobre el producto de Euler como fuente propia de un bloque no Gram
-- `ROUND_014_C.md` — Ronda 14, memo C: transición entre ventanas que no es la inclusión
-- `ROUND_015_A.md` — Ronda 15, memo A — Transporte de retardos no afín: cotejo y cierre por repetición
-- `ROUND_015_B.md` — Ronda 15, memo B: acoplar primos distintos en el reparto por bloques, y matrices GCD como acople
-- `ROUND_015_C.md` — Ronda 15, memo C — Funcional convexo con hessiano a_T (O14) y emparejamiento impar no lineal en A_M (O-odd)
-- `ROUND_015_D.md` — Ronda 15 — D. Umbral del reparto DIR, vector de transferencia y cuenta de cuadrados faltantes
-- `ROUND_016_A.md` — Ronda 16, memo A — Curvatura (Γ₂, Bakry–Émery, Lichnerowicz) como fuente del signo
-- `ROUND_016_B.md` — Ronda 16, memo B — estados KMS sobre álgebras donde actúan juntas la suma y el producto de ℕ
-- `ROUND_016_C.md` — Ronda 16, memo C: positividad por reflexión, desigualdades de correlación y dominación gaussiana como fuente del signo
-- `ROUND_017_A.md` — Ronda 17, memo A: el muro de log 2, el muro del reparto DIR y el reparto de los átomos
-- `ROUND_018_A.md` — Ronda 18, memo A: representación de estado fundamental con `φ` de signo variable para el reparto local en `T ∈ (0.60, 0.69)`
-- `ROUND_019_A.md` — Ronda 19, memo A — Control de escala: ¿es el margen `e^{−2πe^{2T}}` la cola reticular más allá de `N = e^{2T}`?
-- `ROUND_020_A.md` — Ronda 20, nota A — índice negativo de la forma arquimediana en P_T para todo T
-- `ROUND_020_B.md` — Ronda 20, memo B — La identidad de radical de `M` como una sola relación lineal entre el símbolo y los pesos
-- `ROUND_021_A.md` — Ronda 21, memo A — La familia casi radical `{Π_T(M∗φ)}`: cuenta y enunciado estructural
-- `ROUND_022_A.md` — Ronda 22, memo A — «Deshacer la suma»: ¿un solo objeto?, y la congruencia de Möbius sobre 𝔸_M
-- `ROUND_022_B.md` — Ronda 22, memo B — la reformulación «blanda» con una norma fuerte
-- `ROUND_022_C.md` — Ronda 22, memo C — Postura «primer contacto»: inventario del vector nulo y cotejo de dos ideas
-- `ROUND_023_A.md` — Ronda 23, memo A: positividad por reflexión a través de log m = log(kn)
-- `ROUND_023_B.md` — ROUND_023_B — Puerta: (PC) comprimida antes de emparejar y orientación del salto terminal
-- `ROUND_023_C.md` — Ronda 23, memo C — Bloque interior I^λ con pesos de criba y lema 𝒩_k(ν): puerta de selección
-- `ROUND_023_D.md` — Ronda 23, memo D — ¿identidad exacta de la cancelación por átomo para vectores generales?
-- `ROUND_024_A.md` — Ronda 24, memo A — Término principal del defecto de truncación: ROUND_019_A §§2–4 frente a ROUND_021_A §3
-- `ROUND_024_B.md` — Ronda 24, memo B — ¿Bloque casi nulo de la 211 = familia casi radical `{Π_T(M∗φ)}`?
-- `ROUND_024_C.md` — ROUND 024 C — Las tres comprobaciones baratas que dejó el triage de la fila D
-- `ROUND_024_D.md` — ROUND_024_D — Puerta: objeto de grado ≥ 2 con el Möbius del sistema μ_a y la fuga de borde
-- `ROUND_025_A.md` — ROUND_025_A — Cotejo de antecedentes: esquema «existencia + rigidez» (WF)/(R)/(E) contra Paper 47 y fases 153–160, 197
-- `ROUND_025_B.md` — Ronda 25, memo B — Ataque lógico al esquema «existencia + rigidez» (R)/(E)/(WF)
-- `ROUND_026_A.md` — ROUND_026_A — Cómputo del valor cóncavo V*_T frente a λ_A(T)
-- `ROUND_026_B.md` — Ronda 026 B — (PBP_T) como problema extremal exacto; argumento de Kreĭn y densidad; puerta de cuatro puntos
-- `ROUND_027_A.md` — Ronda 027-A — Verificación numérica hostil del peso atenuado `v_n cos(ω log n)`
-- `ROUND_027_B.md` — ROUND_027_B — Cotejo hostil de antecedentes: peso atenuado v_n·cos(ω log n) y clausura por K_T cerrado
-- `ROUND_027_C.md` — Ronda 27, memo C — Estructura de la forma atenuada `a^{(ω)}_T`
-- `ROUND_028_A.md` — Ronda 28, memo A — Estado extremal del problema de peso libre no negativo
-- `ROUND_029_A.md` — Ronda 029-A — Peso atenuado `w_n = v_n cos(kπ log n/(4T))` con base de elementos finitos hp
-- `ROUND_030_A.md` — Ronda 030-A — Rigidez del peso sin temperamento: el hueco en Z, formulado y atacado
-- `ROUND_030_B.md` — Ronda 030 B — Cadenas de divisores, masa espectral en baja frecuencia y primitividad en (PBP_T)
-- `ROUND_031_A.md` — Ronda 031 A — Cotejo de antecedentes: desigualdad de funciones enteras con ceros en ±i/2 para (PBP_T)
-- `ROUND_031_B.md` — Ronda 031 B — Primitividad como cota cuantitativa y generación del bloque negativo por traslaciones en log ℕ
-- `ROUND_032_A.md` — Ronda 032-A — ¿Es la existencia de pesos con margen una propiedad de los enteros? (NUMÉRICO)
-- `ROUND_032_B.md` — ROUND 032 B — Puerta de selección: (PBP_T) como problema de medidas representantes del origen en el polidisco infinito
-- `ROUND_095_A.md` — Dilataciones primas: signo negativo de la parte finita ciclotómica
-- `ROUND_095_B.md` — Ninguna constante de autoenergía repara la parte finita ciclotómica
-- `REVIEW_001_ABD.md` — Revisión de las memos de selección ROUND_001_A, ROUND_001_B y ROUND_001_D
-- `REVIEW_001_LC.md` — REVIEW_001_LC — Revisión hostil de ROUND_001_L y ROUND_001_C
-- `REVIEW_002_A.md` — REVIEW_002_A — Revisión hostil de ROUND_002_A (cola exterior de la hipérbola como suma de cuadrados)
-- `REVIEW_002_BC.md` — REVIEW_002_BC — Revisión hostil de ROUND_002_B y ROUND_002_C
-- `REVIEW_003.md` — Revisión de la ronda 3 (selección sobre nueve zonas no excluidas)
-- `REVIEW_004.md` — Revisión de la ronda 4 (meta SP-161 con pesos con signo y cuatro zonas no excluidas)
-- `REVIEW_005.md` — Revisión de la ronda 5 (generativa: escribir un objeto desde la especificación A1–A6)
-- `REVIEW_006.md` — Revisión de la puerta de selección tras la ronda 6 (reparto por reglas: bandas de distancia y potenciales por primo)
-- `REVIEW_007.md` — Revisión de la ronda 7 (`ROUND_007_A.md`, `ROUND_007_B.md`, `ROUND_007_C.md`)
-- `REVIEW_009.md` — Revisión de la ronda 9 (`ROUND_009_G1.md`, `ROUND_009_G2.md`, `ROUND_009_G3.md`)
-- `REVIEW_022_027.md` — Revisión hostil de ROUND_022_A, 024_A, 024_B, 025_B y 027_C
-- `REVIEW_030_031.md` — Revisión hostil de ROUND_030_A, ROUND_030_B y ROUND_031_B
-- `ANNEX_114_D163_D135.md` — Anexo — Los objetos D.163 y D.134/D.135 de la fase 114: enunciados, estatuto y relación con la fase 212
-- `ANNEX_161_FILES_1.md` — Anexo: lectura por archivo de la fase 161, tramo 1 (README y R161_000 a R161_027)
-- `ANNEX_161_FILES_2.md` — Anexo: lectura por archivo de la fase 161, tramo R161_028 – R161_055
-- `ANNEX_161_FILES_3.md` — Anexo: lectura por archivo de la fase 161, tramo 3 (R161_056 a R161_099)
-- `ANNEX_170_FILES_1.md` — Anexo 170 — archivos, tramo 1 (R170_000 a R170_822)
-- `ANNEX_170_FILES_2.md` — Anexo: fase 170, archivos R170_823 a R170_840
-- `ANNEX_170_FILES_3.md` — Anexo 170 — tramo 3: archivos R170_841 a R170_862
-- `ANNEX_170_FILES_4.md` — Anexo 170 — tramo 4: archivos R170_863 a R170_900
-- `ANNEX_211_FILES_1.md` — Anexo 211 — Archivos AUDIT_001 … POWER_DEFICIT_LIMIT_013 (61 archivos)
-- `ANNEX_211_FILES_2.md` — Anexo 211 — Archivos, segunda tanda (POWER_DESCENT_016 … POWER_INVERSE_INTERIOR_022)
-- `ANNEX_211_FILES_3.md` — Anexo 211 — tercer tramo de archivos (POWER_INVERSE_INTERIOR_AUDIT_022 … POWER_RECURRENCE_BOUNDARY_036)
-- `ANNEX_211_FILES_4.md` — Anexo 211 — Archivos POWER_REDUCTION_AUDIT_044 … POWER_THETA_DENSITY_ORIGIN_087 (106 archivos)
-- `ANNEX_211_FILES_5.md` — Anexo 211, bloque 5 — lectura completa de `POWER_THETA_DENSITY_ORIGIN_AUDIT_087.md` … `ROUND_001_A.md`
-- `ANNEX_211_FILES_6.md` — Anexo 211 — archivos ROUND_001_B a ROUND_007_B (lectura completa)
-- `ANNEX_211_FILES_7.md` — Anexo 211 — archivos ROUND_007_C a ROUND_016_A (lectura completa)
-- `ANNEX_211_FILES_8.md` — Fase 212 — Anexo de lectura completa: archivos de la fase 211, bloque 8
-- `ANNEX_211_GLOBAL_REVIEW.md` — Anexo — Lectura completa de `phase-211-sign-sandbox/POWER_GLOBAL_ROUTE_REVIEW.md`
-- `ANNEX_211_GRAM_HYPERBOLIC.md` — Anexo 211 — Kernel Gram por traslación, modelo hiperbólico y auditoría
-- `ANNEX_COTEJO_LORENTZ_1.md` — Anexo — Cotejo dirigido: Hodge, Lorentz, Alexandrov–Fenchel, log-concavidad
-- `ANNEX_COTEJO_LORENTZ_2.md` — Anexo de cotejo — signatura de tipo Lorentz y mecanismos con reglas de cierre (tramo 2: estabilidad, Lee–Yang, Laguerre–Pólya, positi
-- `ANNEX_COTEJO_NULLDIR.md` — Anexo de cotejo — direcciones casi nulas de a_T sobre P_T y ventana en c
-- `ANNEX_INDEX_04.md` — Fase 212 — Anexo al consolidado: índice de rutas, fases 100–189 (archivo 04)
-- `ANNEX_INDEX_README.md` — Anexo a RULES_AVOID — índice de rutas, README líneas 366–2396
-- `ANNEX_LITERATURE_CONCENTRATION.md` — Anexo — literatura: mecanismos de positividad de tipo concentración
-- `ANNEX_MARGIN_CONFLICT.md` — Anexo: el conflicto sobre el margen de λ_A(T)
-- `ANNEX_PHASE_193_LABELS.md` — Anexo — Re-etiquetado de las candidatas de la fase 193
-- `ANNEX_PHASE_193_PRIMARY.md` — Anexo — Lectura primaria completa de la fase 193 y contraste con ANNEX_PHASE_193_LABELS.md
-- `ANNEX_SONIN_READING.md` — Anexo — Lectura en primaria de la cadena de Sonin semilocal
-- `TRIAGE_D_1.md` — Triage D-1: ideas de la fila D registradas y nunca llevadas a término (lista 1, ítems 1–41)
-- `TRIAGE_D_2.md` — Triage D-2: ideas de la fila D escritas y nunca ejecutadas (ítems 42–82)
-- `TRIAGE_D_3.md` — Triage D, lista 3: ideas de la fila D registradas y no llevadas a término (ítems 83–123)
-- `TRIAGE_D_4.md` — Triage D — lista 4 (ítems 124–164, fases 170–211)
-- `TRIAGE_D_5.md` — Triage D, lista 5 (ítems 165–201)
+- `ROUND_001_A.md` — Round 1, memo A — Candidate K1: Gram realization from the exact separator with Poisson and the archimedean factor
+- `ROUND_001_B.md` — Round 1 B — Candidate K2: Schur pivots along a multiplicative nesting of the integers (selection memo)
+- `ROUND_001_C.md` — Round 1 — Candidate K3: enlarged system of squares for the non-resonant crossings
+- `ROUND_001_D.md` — Round 1, candidate K4 — non-linear multiscale inequality with Λ beyond the window
+- `ROUND_001_L.md` — ROUND_001_L — Rigidity of Carathéodory-type comparators on the power ladder
+- `ROUND_002_A.md` — Round 2, candidate A — The exterior tail of the hyperbola as a sum of squares: selection memo
+- `ROUND_002_B.md` — Round 2 B — The incidence factorization [log gcd] = E diag(Λ) Eᵀ acting on F (selection memo)
+- `ROUND_002_C.md` — Round 002 C — The two-prime-base channel: selection memo
+- `ROUND_003_1.md` — Round 3, option 1 — Families of functionals that see the window and are not the theta modal one (selection memo)
+- `ROUND_003_2.md` — Round 3, option 2 — Functionals and factors that depend on Λ (selection memo)
+- `ROUND_003_3.md` — Round 3, option 3 — the parity sector: products mn via the reflection J
+- `ROUND_003_4.md` — ROUND_003_4 — Selection: boundary coordinate and null anchor with boundary inside (G)
+- `ROUND_003_5.md` — Round 3, option 5 — the virial pair: selection
+- `ROUND_003_6.md` — Round 3, option 6 — Joint conversion of the finite Poisson–Chebyshev identity without recombining (selection memo)
+- `ROUND_003_7.md` — Round 3, option 7 — The formulation (S): divisor incidence on 𝔸_M (selection memo)
+- `ROUND_003_8.md` — Round 3, option 8 — the object quadratic in the weight and the Riccati-type factorization
+- `ROUND_003_9.md` — ROUND_003_9 — Selection: non-local metric of the theta realization
+- `ROUND_004_A.md` — Round 4, candidate A — The SP-161 / L161.1 target with signed weights and sieve weights (selection memo)
+- `ROUND_004_B.md` — Round 4, zone 1 — Quadratic divisor defect entering additively (selection memo)
+- `ROUND_004_C.md` — Round 4, zone 3: the remainder R(F) of the truncated Möbius test (selection memo)
+- `ROUND_004_D.md` — Round 4, zone D — Factorization of 𝔸_M with support on the near-coincidences m ≈ kn (selection memo)
+- `ROUND_004_E.md` — ROUND_004_E — Selection: indefinite forms (Kreĭn/Pontryagin) with a non-radical neutral vector
+- `ROUND_005_G1.md` — Round 5, seed G1: object of degree ≥ 3 whose Hessian is the form
+- `ROUND_005_G2.md` — Round 5, seed G2 — closure under products of Euler factors applied to the signature
+- `ROUND_005_G3.md` — Round 5, seed G3 — a measure built from the form whose closure gives the sign
+- `ROUND_005_G4.md` — Round 5, seed G4: induction that lengthens the window with the divisor identity in the step
+- `ROUND_005_G5.md` — Round 5, memo G5: free invention from A1–A6 (backward deduction of object types)
+- `ROUND_006_WINDOW_SPLIT_NUMERIC.md` — Round 6 — Window-dependent local distribution at T = 0.5925 (NUMERICAL)
+- `ROUND_007_A.md` — Round 7, memo A: the square of the deficit, the ground-state representation of the contacts, and the optimality conditions of the split
+- `ROUND_007_B.md` — Round 7, B — stage predicate for induction over primes
+- `ROUND_007_C.md` — Round 7, item C — nonlinear relation in the weight between convolution and window
+- `ROUND_008_A.md` — Round 8, item A — the boundary concomitant that would convert the product channel into the ratio channel
+- `ROUND_009_G1.md` — Round 9, item G1 — object with inverted roles: arithmetic as the source of the sign
+- `ROUND_009_G2.md` — Round 9, G2: recursion with a history-dependent stage datum
+- `ROUND_009_G3.md` — Round 9, item G3 — where the map has no marks
+- `ROUND_010_A.md` — Round 10, A: additive covariance as the mechanism of the sign
+- `ROUND_011_A.md` — Round 11, A: the open residues of (PC) and the one-sided lattice discrepancy
+- `ROUND_012_A.md` — Round 12, A: the residue L161.4 and its passage to all of P_T
+- `ROUND_013_A.md` — Round 13 A — Small-scale reverse engineering: the window ½log 4 < T < ½log 5
+- `ROUND_013_B.md` — Round 13, memo B: the weight as the equality case of a positivity (Gram, Schur, completed square)
+- `ROUND_013_C.md` — Round 13, C — map of combination operations between signed objects and objects that see the weight
+- `ROUND_014_A.md` — Round 14, A — linearizing the ratio channel: independence of the primes, polarization and transport from the product channel
+- `ROUND_014_B.md` — Round 14, memo B: Schur–Schoenberg positivity on the Euler product as an independent source of a non-Gram block
+- `ROUND_014_C.md` — Round 14, memo C: transition between windows that is not the inclusion
+- `ROUND_015_A.md` — Round 15, memo A — Non-affine delay transport: cross-check and closure by repetition
+- `ROUND_015_B.md` — Round 15, memo B: coupling distinct primes in the block split, and GCD matrices as coupling
+- `ROUND_015_C.md` — Round 15, memo C — Convex functional with Hessian a_T (O14) and nonlinear odd pairing in A_M (O-odd)
+- `ROUND_015_D.md` — Round 15 — D. Threshold of the DIR split, transfer vector and count of missing squares
+- `ROUND_016_A.md` — Round 16, memo A — Curvature (Γ₂, Bakry–Émery, Lichnerowicz) as source of the sign
+- `ROUND_016_B.md` — Round 16, memo B — KMS states on algebras where the sum and the product of ℕ act together
+- `ROUND_016_C.md` — Round 16, memo C: reflection positivity, correlation inequalities and Gaussian domination as source of the sign
+- `ROUND_017_A.md` — Round 17, memo A: the log 2 wall, the DIR split wall and the split of the atoms
+- `ROUND_018_A.md` — Round 18, memo A: ground-state representation with sign-changing `φ` for the local split at `T ∈ (0.60, 0.69)`
+- `ROUND_019_A.md` — Round 19, memo A — Scale control: is the margin `e^{−2πe^{2T}}` the lattice tail beyond `N = e^{2T}`?
+- `ROUND_020_A.md` — Round 20, note A — negative index of the archimedean form on P_T for all T
+- `ROUND_020_B.md` — Round 20, memo B — The radical identity of `M` as a single linear relation between the symbol and the weights
+- `ROUND_021_A.md` — Round 21, memo A — The near-radical family `{Π_T(M∗φ)}`: count and structural statement
+- `ROUND_022_A.md` — Round 22, memo A — «Undoing the sum»: a single object?, and the Möbius congruence on 𝔸_M
+- `ROUND_022_B.md` — Round 22, memo B — the «soft» reformulation with a strong norm
+- `ROUND_022_C.md` — Round 22, memo C — «First contact» standpoint: inventory of the null vector and cross-check of two ideas
+- `ROUND_023_A.md` — Round 23, memo A: reflection positivity through log m = log(kn)
+- `ROUND_023_B.md` — ROUND_023_B — Gate: (PC) compressed before pairing and orientation of the terminal jump
+- `ROUND_023_C.md` — Round 23, memo C — Interior block I^λ with sieve weights and lemma 𝒩_k(ν): selection gate
+- `ROUND_023_D.md` — Round 23, memo D — an exact identity for the per-atom cancellation for general vectors?
+- `ROUND_024_A.md` — Round 24, memo A — Leading term of the truncation defect: ROUND_019_A §§2–4 versus ROUND_021_A §3
+- `ROUND_024_B.md` — Round 24, memo B — Near-null block of 211 = near-radical family `{Π_T(M∗φ)}`?
+- `ROUND_024_C.md` — ROUND 024 C — The three cheap checks left by the row D triage
+- `ROUND_024_D.md` — ROUND_024_D — Gate: object of degree ≥ 2 with the Möbius of the system μ_a and the boundary leak
+- `ROUND_025_A.md` — ROUND_025_A — Cross-check of antecedents: "existence + rigidity" scheme (WF)/(R)/(E) against Paper 47 and phases 153–160, 197
+- `ROUND_025_B.md` — Round 25, memo B — Logical attack on the "existence + rigidity" scheme (R)/(E)/(WF)
+- `ROUND_026_A.md` — ROUND_026_A — Computation of the concave value V*_T against λ_A(T)
+- `ROUND_026_B.md` — Round 026 B — (PBP_T) as an exact extremal problem; Kreĭn and density argument; four-point gate
+- `ROUND_027_A.md` — Round 027-A — Adversarial numerical verification of the damped weight `v_n cos(ω log n)`
+- `ROUND_027_B.md` — ROUND_027_B — Adversarial cross-check of antecedents: damped weight v_n·cos(ω log n) and closure via closed K_T
+- `ROUND_027_C.md` — Round 27, memo C — Structure of the damped form `a^{(ω)}_T`
+- `ROUND_028_A.md` — Round 28, memo A — Extremal state of the nonnegative free-weight problem
+- `ROUND_029_A.md` — Round 029-A — Damped weight `w_n = v_n cos(kπ log n/(4T))` with an hp finite-element basis
+- `ROUND_030_A.md` — Round 030-A — Rigidity of the weight without temperedness: the gap on Z, formulated and attacked
+- `ROUND_030_B.md` — Round 030 B — Divisor chains, low-frequency spectral mass and primitivity in (PBP_T)
+- `ROUND_031_A.md` — Round 031 A — Cross-check of antecedents: inequality for entire functions with zeros at ±i/2 for (PBP_T)
+- `ROUND_031_B.md` — Round 031 B — Primitivity as a quantitative bound and generation of the negative block by translations in log ℕ
+- `ROUND_032_A.md` — Round 032-A — Is the existence of weights with margin a property of the integers? (NUMERICAL)
+- `ROUND_032_B.md` — ROUND 032 B — Selection gate: (PBP_T) as a problem of representing measures of the origin on the infinite polydisc
+- `ROUND_095_A.md` — Prime dilations: negative sign of the cyclotomic finite part
+- `ROUND_095_B.md` — No self-energy constant repairs the cyclotomic finite part
+- `REVIEW_001_ABD.md` — Review of the selection memos ROUND_001_A, ROUND_001_B and ROUND_001_D
+- `REVIEW_001_LC.md` — REVIEW_001_LC — Critical review of ROUND_001_L and ROUND_001_C
+- `REVIEW_002_A.md` — REVIEW_002_A — Critical review of ROUND_002_A (exterior tail of the hyperbola as a sum of squares)
+- `REVIEW_002_BC.md` — REVIEW_002_BC — Critical review of ROUND_002_B and ROUND_002_C
+- `REVIEW_003.md` — Review of round 3 (selection over nine non-excluded zones)
+- `REVIEW_004.md` — Review of round 4 (meta SP-161 with signed weights and four non-excluded zones)
+- `REVIEW_005.md` — Review of round 5 (generative: write an object from the specification A1–A6)
+- `REVIEW_006.md` — Review of the selection gate after round 6 (rule-based splitting: distance bands and per-prime potentials)
+- `REVIEW_007.md` — Review of round 7 (`ROUND_007_A.md`, `ROUND_007_B.md`, `ROUND_007_C.md`)
+- `REVIEW_009.md` — Review of round 9 (`ROUND_009_G1.md`, `ROUND_009_G2.md`, `ROUND_009_G3.md`)
+- `REVIEW_022_027.md` — Independent review of ROUND_022_A, 024_A, 024_B, 025_B and 027_C
+- `REVIEW_030_031.md` — Independent review of ROUND_030_A, ROUND_030_B and ROUND_031_B
+- `ANNEX_114_D163_D135.md` — Annex — The objects D.163 and D.134/D.135 of phase 114: statements, status and relation to phase 212
+- `ANNEX_161_FILES_1.md` — Annex: file-by-file reading of phase 161, part 1 (README and R161_000 to R161_027)
+- `ANNEX_161_FILES_2.md` — Annex: file-by-file reading of phase 161, part R161_028 – R161_055
+- `ANNEX_161_FILES_3.md` — Annex: file-by-file reading of phase 161, part 3 (R161_056 to R161_099)
+- `ANNEX_170_FILES_1.md` — Annex 170 — files, stretch 1 (R170_000 to R170_822)
+- `ANNEX_170_FILES_2.md` — Annex: phase 170, files R170_823 to R170_840
+- `ANNEX_170_FILES_3.md` — Annex 170 — stretch 3: files R170_841 to R170_862
+- `ANNEX_170_FILES_4.md` — Annex 170 — stretch 4: files R170_863 to R170_900
+- `ANNEX_211_FILES_1.md` — Annex 211 — Files AUDIT_001 … POWER_DEFICIT_LIMIT_013 (61 files)
+- `ANNEX_211_FILES_2.md` — Annex 211 — Files, second batch (POWER_DESCENT_016 … POWER_INVERSE_INTERIOR_022)
+- `ANNEX_211_FILES_3.md` — Annex 211 — third portion of files (POWER_INVERSE_INTERIOR_AUDIT_022 … POWER_RECURRENCE_BOUNDARY_036)
+- `ANNEX_211_FILES_4.md` — Annex 211 — Files POWER_REDUCTION_AUDIT_044 … POWER_THETA_DENSITY_ORIGIN_087 (106 files)
+- `ANNEX_211_FILES_5.md` — Annex 211, block 5 — complete reading of `POWER_THETA_DENSITY_ORIGIN_AUDIT_087.md` … `ROUND_001_A.md`
+- `ANNEX_211_FILES_6.md` — Annex 211 — files ROUND_001_B to ROUND_007_B (complete reading)
+- `ANNEX_211_FILES_7.md` — Annex 211 — files ROUND_007_C to ROUND_016_A (complete reading)
+- `ANNEX_211_FILES_8.md` — Phase 212 — Complete reading annex: files of phase 211, block 8
+- `ANNEX_211_GLOBAL_REVIEW.md` — Annex — Complete reading of `phase-211-sign-sandbox/POWER_GLOBAL_ROUTE_REVIEW.md`
+- `ANNEX_211_GRAM_HYPERBOLIC.md` — Annex 211 — Translation Gram kernel, hyperbolic model and audit
+- `ANNEX_COTEJO_LORENTZ_1.md` — Annex — Targeted cross-check: Hodge, Lorentz, Alexandrov–Fenchel, log-concavity
+- `ANNEX_COTEJO_LORENTZ_2.md` — Cross-check annex — Lorentz-type signature and mechanisms with closure rules (part 2: stability, Lee–Yang, Laguerre–Pólya, total positivity, closure under product or convolution, flows)
+- `ANNEX_COTEJO_NULLDIR.md` — Cross-check annex — near-null directions of a_T on P_T and window in c
+- `ANNEX_INDEX_04.md` — Phase 212 — Annex to the consolidated file: route index, phases 100–189 (file 04)
+- `ANNEX_INDEX_README.md` — Annex to RULES_AVOID — routes index, README lines 366–2396
+- `ANNEX_LITERATURE_CONCENTRATION.md` — Annex — literature: concentration-type positivity mechanisms
+- `ANNEX_MARGIN_CONFLICT.md` — Annex: the conflict over the margin of λ_A(T)
+- `ANNEX_PHASE_193_LABELS.md` — Annex — Relabelling of the candidates of phase 193
+- `ANNEX_PHASE_193_PRIMARY.md` — Annex — Complete primary reading of phase 193 and contrast with ANNEX_PHASE_193_LABELS.md
+- `ANNEX_SONIN_READING.md` — Annex — Primary-source reading of the semilocal Sonin chain
+- `TRIAGE_D_1.md` — Triage D-1: row D ideas recorded and never carried through (list 1, items 1–41)
+- `TRIAGE_D_2.md` — Triage D-2: row D ideas written and never executed (items 42–82)
+- `TRIAGE_D_3.md` — Triage D, list 3: row D ideas recorded and not carried through (items 83–123)
+- `TRIAGE_D_4.md` — Triage D — list 4 (items 124–164, phases 170–211)
+- `TRIAGE_D_5.md` — Triage D, list 5 (items 165–201)

@@ -1,41 +1,41 @@
-# POWER_STATE_055 — Auditoría del descenso después del corte efectivo
+# POWER_STATE_055 — Audit of the descent after the effective cutoff
 
-Estado: auditoría de alcance, sin nuevo teorema de signo. Cobertura054/053 vigente; signo global OPEN. Papers intactos.
+Status: scope audit, without new sign theorem. Coverage054/053 valid; global sign OPEN. Papers untouched.
 
-## El corte efectivo no basta para descender
+## The effective cutoff does not suffice to descend
 
-Root y mapa cotejaron DESCENT016§5 con EFFECTIVE054. La misma forma auxiliar W4=W−4norma² conserva EXACTAMENTE DEF/BIN/MIX/MULTI/FULLTEL, pues la norma satisface sus identidades. La prueba054 obtiene W/norma²>D_n+8 para j>=K(n); por tanto W4/norma²>D_n+4>1 con EL MISMO K(n), sin modificarlo.
+DESCENT016§5 was cross-checked with EFFECTIVE054. The same auxiliary form W4=W−4norm² keeps EXACTLY DEF/BIN/MIX/MULTI/FULLTEL, since the norm satisfies their identities. The proof054 obtains W/norm²>D_n+8 for j>=K(n); hence W4/norm²>D_n+4>1 with THE SAME K(n), without modifying it.
 
-Sin embargo, el dato explícito de016, f(t)=exp(−63t/2) sobre t>0, tiene W/norma²<3 y W4/norma²<−1. Esto verifica que añadir el corte efectivo concreto y margen>1 a las identidades no hace válida la inferencia de signo inicial.
+However, the explicit datum of016, f(t)=exp(−63t/2) on t>0, has W/norm²<3 and W4/norm²<−1. This verifies that adding the concrete effective cutoff and margin>1 to the identities does not make the inference of initial sign valid.
 
-Es una comprobación del alcance del falsificador016 con la información nueva054, no otro NO-GO global. W4 NO es la forma del paper y NO conserva los certificados finitos positivos de053 ni la constante arquimediana original. No excluye una desigualdad que use esos datos adicionales.
+It is a check of the scope of the falsifier016 with the new information054, not another global NO-GO. W4 is NOT the form of the paper and does NOT keep the positive finite certificates of053 nor the original archimedean constant. It does not exclude an inequality using those additional data.
 
-## Obligación firmada en estudio
+## Signed obligation under study
 
-El constructor revisa el promedio031 contra el peso positivo −R_N′ en su rama descendente, cuyo costo anterior al máximo está acotado por M2=u²/(2N−3). La primitiva I_* tiene prefijos negativos y recuperaciones probadas, por lo que exigir su positividad puntual ya está refutado. Usar la forma específica del peso para acoplar regiones de ambos signos requeriría una desigualdad nueva; todavía no se ha obtenido.
+The average031 against the positive weight −R_N′ on its descending branch is under review; its cost before the maximum is bounded by M2=u²/(2N−3). The primitive I_* has negative prefixes and proved recoveries, so requiring its pointwise positivity is already refuted. Using the specific form of the weight to couple regions of both signs would require a new inequality; it has not yet been obtained.
 
-La representación042 tiene cola absoluta exponencialmente pequeña, pero conserva sin resolver el interior. Renombrar ese interior o volver a su representación030 no contaría como avance. Se consultaron índice/grid/crucigrama y los resultados016,030,031,034,036,042,054 antes de continuar. No se hacen campañas numéricas ni se modifican papers.
+The representation042 has an exponentially small absolute tail, but leaves the interior unresolved. Renaming that interior or returning to its representation030 would not count as progress. The index/grid/crossword and the results016,030,031,034,036,042,054 were consulted before continuing. No numerical campaigns are done and papers are not modified.
 
-## Resultado de la revisión del emparejamiento
+## Result of the review of the pairing
 
-Casos confirmó que el emparejamiento local del bolsillo negativo hasta225/64 con la recuperación hasta4 reproduce WEIGHTED_BLOCK031; la recombinación del residuo042 vuelve a030. No se encontró una desigualdad nueva para intervalos móviles. Esta rama no produce nuevo signo ni nuevo NO-GO.
+The case review confirmed that the local pairing of the negative pocket up to225/64 with the recovery up to4 reproduces WEIGHTED_BLOCK031; the recombination of the residue042 returns to030. No new inequality for moving intervals was found. This branch produces neither new sign nor new NO-GO.
 
-## Comprobación adicional de identidad cuadrática
+## Additional check of a quadratic identity
 
-Se abrió una comprobación contra ROUND_023_A§2.1: para gamma temporal no negativa, el emparejamiento con la convolución Λ*Λ es positivo aunque el operador causal al cuadrado no sea un cuadrado de norma. Con rho la autocorrelación normalizada, integrar el parámetro de amortiguación da exactamente S=U−V, donde
+A check against ROUND_023_A§2.1 was opened: for nonnegative temporal gamma, the pairing with the convolution Λ*Λ is positive even though the squared causal operator is not a norm square. With rho the normalised autocorrelation, integrating the damping parameter gives exactly S=U−V, where
 
     S=sum_(m>=2) Λ(m)m^(-1/2)rho(logm),
     U=sum_(m>=2) (μ*log²)(m)m^(-1/2)rho(logm)/logm,
     V=sum_(m>=2) (Λ*Λ)(m)m^(-1/2)rho(logm)/logm >=0.
 
-Las sumas escalares convergen absolutamente por el decaimiento gamma; no se supone que el operador infinito sea acotado en L². La identidad implica W/norma²=ARCH/norma²+polar/norma²−2U+2V, pero no proporciona aún una cota del término adversoU. Es una comprobación de una propuesta, NO otro teorema de signo ni una afirmación de novedad de Selberg. Casos e insight048 revisaron la utilidad: V>=0 no controla U. Suprimir el término positivo exige W/norma²>=2V; el único par2·2 da V>=(log2)/4·rho_N(log4), que tiende a(log2)/4. Por tanto la pérdida no es un error que desaparezca conN. No se probó que ese criterio más fuerte sea falso, pero tampoco se obtuvo una cota que lo cumpla. La submultiplicatividad de rho sólo proporciona una cota superior del término cuadrático; no cierra el control requerido. Rama deduplicada sin nuevo NO-GO.
+The scalar sums converge absolutely by gamma decay; the infinite operator is not assumed bounded on L². The identity implies W/norm²=ARCH/norm²+polar/norm²−2U+2V, but does not yet provide a bound of the adverse termU. It is a check of a proposal, NOT another sign theorem nor a claim of Selberg novelty. The usefulness was reviewed in the case review and insight048: V>=0 does not control U. Dropping the positive term requires W/norm²>=2V; the single pair2·2 gives V>=(log2)/4·rho_N(log4), which tends to(log2)/4. Hence the loss is not an error that vanishes withN. It was not proved that this stronger criterion is false, but no bound satisfying it was obtained either. Submultiplicativity of rho only provides an upper bound of the quadratic term; it does not close the required control. Branch deduplicated without new NO-GO.
 
-**Actualización067.** El criterio de descartar2V queda refutado en el MISMO caso129 certificado061: 2V>1/243 mientras W/norma²<1.35·10^(−10), por lo que ARCH/norma²+polar/norma²−2U<−1/250. Ver POWER_SELBERG_DROP_OBSTRUCTION_067.md y POWER_SELBERG_DROP_AUDIT_067.md (PROVED/APROBADO). El texto anterior describe el estado histórico055; ya no queda abierta la falsedad de ese criterio particular. No se refuta W ni una comparación que conserve la cancelación de U y V.
+**Update067.** The criterion of discarding2V is refuted in the SAME case129 certified061: 2V>1/243 while W/norm²<1.35·10^(−10), so that ARCH/norm²+polar/norm²−2U<−1/250. See POWER_SELBERG_DROP_OBSTRUCTION_067.md and POWER_SELBERG_DROP_AUDIT_067.md (PROVED/APPROVED). The text above describes the historical state055; the falsity of that particular criterion is no longer open. Neither W nor a comparison keeping the cancellation of U and V is refuted.
 
-## Auditoría del candidato Turán (consulta056)
+## Audit of the Turán candidate (query056)
 
-Mapa localizó un antecedente explícito en el registro046: Turán de los valores completos vuelve a momentos/determinantes sin cota aritmética nueva. La propuesta no se relanza.
+An explicit antecedent was located in the record046: Turán for the full values returns to moments/determinants without a new arithmetic bound. The proposal is not relaunched.
 
-Para dejar claro qué se comprobó: a_(N,k)=W[s^k/(s+u)^(N+k)] sin normalizar. El determinante a_(N,k)a_(N+2,k)−a_(N+1,k)² es exactamente la restricción de W a numeradores1,u²−s² sobre base s^k/(s+u)^(N+k+2), incluyendo polar y todos los cruces. Su signo más dos valores iniciales positivos induciría la positividad enN. Cauchy sobreW no lo demuestra sin presuponer la obligación bidimensional.
+To make clear what was checked: a_(N,k)=W[s^k/(s+u)^(N+k)] unnormalised. The determinant a_(N,k)a_(N+2,k)−a_(N+1,k)² is exactly the restriction of W to numerators1,u²−s² on the basis s^k/(s+u)^(N+k+2), including polar and all cross terms. Its sign plus two positive initial values would induce positivity inN. Cauchy onW does not prove it without presupposing the two-dimensional obligation.
 
-Casos no encontró una estimación nueva; separar el polar devuelve además la cadena009. No hubo campaña ni otro artefacto de identidad. W4 no se usa como falsificador de esta hipótesis, porque no conserva las anclas positivas necesarias. Esta auditoría no descarta una futura prueba aritmética del determinante.
+The case review found no new estimate; separating the polar moreover returns the chain009. There was no campaign nor another identity artefact. W4 is not used as a falsifier of this hypothesis, because it does not keep the necessary positive anchors. This audit does not rule out a future arithmetic proof of the determinant.

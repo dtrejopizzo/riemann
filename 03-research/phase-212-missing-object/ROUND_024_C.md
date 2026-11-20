@@ -1,105 +1,105 @@
-# ROUND 024 C — Las tres comprobaciones baratas que dejó el triage de la fila D
+# ROUND 024 C — The three cheap checks left by the row D triage
 
-Pregunta: ejecutar las tres comprobaciones que `TRIAGE_D_1…5` y la entrada `212-triage-D` (Parte V del índice) dejaron
-como «deciden algo»: (a) `n_− ≤ 2` de D.53 (6.7) frente a Thm P y P47 thm:J / cor:nasym; (b) `n_odd(0.80)`; (c) medias
-de Fejér de CA_E_001 Cor 1.1. No se toca ningún paper ni el índice.
+Question: run the three checks that `TRIAGE_D_1…5` and the entry `212-triage-D` (Part V of the index) left
+as "decide something": (a) `n_− ≤ 2` of D.53 (6.7) against Thm P and P47 thm:J / cor:nasym; (b) `n_odd(0.80)`; (c) Fejér
+means of CA_E_001 Cor 1.1. No paper and not the index is touched.
 
-## 0. Archivos abiertos
+## 0. Files opened
 
-Abiertos: `TRIAGE_D_1.md` (ítem 38, §3), `TRIAGE_D_3.md` (ítem 111, §3), `TRIAGE_D_4.md` (ítem 150, §3);
-`phase-114-closing-the-four-rows/114_d_53_…GATE.md` §§1–7; P47 `main.tex` §«Bounds on the negative index»
+Opened: `TRIAGE_D_1.md` (item 38, §3), `TRIAGE_D_3.md` (item 111, §3), `TRIAGE_D_4.md` (item 150, §3);
+`phase-114-closing-the-four-rows/114_d_53_…GATE.md` §§1–7; P47 `main.tex` §"Bounds on the negative index"
 (thm:index l.2518, cor:P3 l.2662, thm:J l.2694, cor:nasym l.2722; parity l.2420–2434);
-`phase-155…/R155_052_ROUND8A_INDEX_MULTIBAND.md` (resumen y Thm 5.x), scripts `scripts/r8a/r8a_01_upper.py`, `r8a_lib.py`
-y el JSON archivado `r8a_01_0p80_par1_K30_K244_c24.json`; `phase-193…/CA_E_001_COMMUTATIVE_COLLAPSE.md` §§0–4,
-`CA_E_001_REVIEW.md` (cabecera); índice maestro: entradas 212-triage-D, 212-20-A y filas l.3688, l.5150.
-No abiertos: D.52 (se usa sólo la cita que hace D.53), R155_047/048, BRIEF_CONSTRUCTOR y RULES_AVOID (no hay
-construcción en este memo), P48.
+`phase-155…/R155_052_ROUND8A_INDEX_MULTIBAND.md` (summary and Thm 5.x), scripts `scripts/r8a/r8a_01_upper.py`, `r8a_lib.py`
+and the archived JSON `r8a_01_0p80_par1_K30_K244_c24.json`; `phase-193…/CA_E_001_COMMUTATIVE_COLLAPSE.md` §§0–4,
+`CA_E_001_REVIEW.md` (header); master index: entries 212-triage-D, 212-20-A and rows l.3688, l.5150.
+Not opened: D.52 (only the citation made by D.53 is used), R155_047/048, BRIEF_CONSTRUCTOR and RULES_AVOID (there is no
+construction in this memo), P48.
 
-## (a) D.53 (6.7) frente a Thm P, thm:J, cor:nasym
+## (a) D.53 (6.7) against Thm P, thm:J, cor:nasym
 
-**Qué dice cada enunciado (leído contra las definiciones).**
-- P47 thm:index (PROVED, certificado): para la forma **arquimediana sola** `A_∞ = 𝔪_T` sobre `P_T`,
-  `n_ev, n_odd ≤ 1` en `(0, 0.90]`; `n_−(A_∞|P_T) = 0/1/2` según `T` respecto de `T*_ev ∈ [0.58,0.60]`,
+**What each statement says (read against the definitions).**
+- P47 thm:index (PROVED, certified): for the **archimedean form alone** `A_∞ = 𝔪_T` on `P_T`,
+  `n_ev, n_odd ≤ 1` on `(0, 0.90]`; `n_−(A_∞|P_T) = 0/1/2` according to `T` relative to `T*_ev ∈ [0.58,0.60]`,
   `T*_odd ∈ [log 2, 0.81]`.
-- P47 cor:P3 («Thm P»; PROVED): **misma forma** `A_∞|P_T` y también `𝔪_T` en `L²(I_T)`:
-  `n_− ≤ 5` en `T=½log3`, `≤ 7` en `log 2`, `≤ 8` en `0.80` (cota prolata, más débil que thm:index en ese rango).
-- P47 thm:J (PROVED): cota inferior `n_−(A_∞|P_T) ≥ ⌈2Tτ_0/π⌉ − 3`, vacía hasta `T ≈ 0.75` y `≥ 3` desde
-  `2Tτ_0/π > 5`, es decir `T > 1.249`. cor:nasym (PROVED): `n_−(A_∞|P_T) ~ 4.004·T`, `T → ∞`.
-- D.53 (6.1)–(6.7): `A_T = K_{g,T}` sobre `H_T^0` (masa cero) donde, por (1.1)–(1.2), `K_g` es el núcleo **completo**
-  (Gamma más todas las bisagras de potencias de primos `a = k log p ≤ 2T`), en el pullback por derivadas:
-  `−B_T(F,F) = ⟨K_{g,T}F′, F′⟩`. `N_T` son los momentos `e^{±t/2}`, así `ker N_T` corresponde a `P_T`. (6.7) pide
-  `n_−(A_{T,P}) ≤ 2` para toda partición y la igualdad de índices con `𝒢_{T,P}`.
+- P47 cor:P3 ("Thm P"; PROVED): **same form** `A_∞|P_T` and also `𝔪_T` on `L²(I_T)`:
+  `n_− ≤ 5` at `T=½log3`, `≤ 7` at `log 2`, `≤ 8` at `0.80` (prolate bound, weaker than thm:index in that range).
+- P47 thm:J (PROVED): lower bound `n_−(A_∞|P_T) ≥ ⌈2Tτ_0/π⌉ − 3`, vacuous up to `T ≈ 0.75` and `≥ 3` from
+  `2Tτ_0/π > 5`, i.e. `T > 1.249`. cor:nasym (PROVED): `n_−(A_∞|P_T) ~ 4.004·T`, `T → ∞`.
+- D.53 (6.1)–(6.7): `A_T = K_{g,T}` on `H_T^0` (mass zero) where, by (1.1)–(1.2), `K_g` is the **complete** kernel
+  (Gamma plus all the prime-power hinges `a = k log p ≤ 2T`), in the pullback by derivatives:
+  `−B_T(F,F) = ⟨K_{g,T}F′, F′⟩`. `N_T` are the moments `e^{±t/2}`, so `ker N_T` corresponds to `P_T`. (6.7) asks for
+  `n_−(A_{T,P}) ≤ 2` for every partition and equality of indices with `𝒢_{T,P}`.
 
-**Resultado.** Los enunciados son **compatibles y no se tocan**: thm:index, cor:P3, thm:J y cor:nasym cuentan
-direcciones negativas de la parte arquimediana sola; (6.7) acota las del núcleo completo con el peine. Ninguna cota
-de Arch falsa ni prueba (6.7), salvo en el tramo sin primos `2T < log 2` (`T < 0.3466`), donde el núcleo de D.53 es
-sólo el término Gamma: allí thm:index da índice `0` sobre `P_T` (`T < 0.58`), coherente con (6.7).
-Etiqueta: **PROVED** (lectura de enunciados) para «no hay contradicción ni falsificador disponible»; la
-identificación de signos `n_−(A_T)` ↔ direcciones negativas de la forma completa en `H^1_0` es **ARGUED** (depende de la
-convención de D.52, no abierto).
-- Consecuencia de crecimiento: cor:nasym obliga a que, si (6.7) vale para `T > 1.25`, el peine de primos haya
-  eliminado al menos `⌈2Tτ_0/π⌉ − 5` de las direcciones negativas de Arch sobre `P_T` (se ganan a lo sumo 2 al pasar de
-  `P_T` a `H_T^0`). Esto es la misma observación de 212-20-A, ahora aplicada a (6.7): no es falsificador.
-- Qué decidiría (6.7) de verdad: sólo un cálculo de la matriz por celdas **con el peine** a `T` fijo y `n_− ≥ 3`. Ese
-  cálculo no es «barato» en el sentido del triage (valores exactos de Λ, cotas certificadas del núcleo completo) y no
-  se corrió. Etiqueta de (6.7): **OPEN**.
+**Result.** The statements are **compatible and do not touch each other**: thm:index, cor:P3, thm:J and cor:nasym count
+negative directions of the archimedean part alone; (6.7) bounds those of the complete kernel with the comb. No bound
+on Arch falsifies or proves (6.7), except in the prime-free stretch `2T < log 2` (`T < 0.3466`), where the kernel of D.53 is
+only the Gamma term: there thm:index gives index `0` on `P_T` (`T < 0.58`), consistent with (6.7).
+Label: **PROVED** (reading of statements) for "there is no contradiction and no falsifier available"; the
+identification of signs `n_−(A_T)` ↔ negative directions of the complete form on `H^1_0` is **ARGUED** (depends on the
+convention of D.52, not opened).
+- Growth consequence: cor:nasym forces that, if (6.7) holds for `T > 1.25`, the prime comb has
+  eliminated at least `⌈2Tτ_0/π⌉ − 5` of the negative directions of Arch on `P_T` (at most 2 are gained when passing from
+  `P_T` to `H_T^0`). This is the same observation as 212-20-A, now applied to (6.7): it is not a falsifier.
+- What would truly decide (6.7): only a computation of the cell matrix **with the comb** at fixed `T` and `n_− ≥ 3`. That
+  computation is not "cheap" in the triage sense (exact values of Λ, certified bounds on the complete kernel) and was
+  not run. Label of (6.7): **OPEN**.
 
-**Correcciones al índice/triage.**
-1. `TRIAGE_D_1.md` l.88: la condición «si Thm P es del mismo operador A_T restringido a la masa cero, el ítem 38
-   pasa a CERRADA» se resuelve en negativo: **no es el mismo operador** (Arch sola vs núcleo completo). Ítem 38 queda REF.
-2. Índice, entrada 212-triage-D, viñeta «Cómputos que deciden algo»: quitar «cotejar antes con el Teorema P, “cuenta
-   5 en log 2”»; sustituir por «Thm P / thm:J / cor:nasym son de Arch y no deciden (6.7)».
-3. Índice l.5150 («DEAD [cuenta 5 en log 2]») y l.3688 («n₋ ≤ 5/6/7 (5/7/8 serie)»): según P47 cor:P3 la cota es
-   `5` en `½log3`, `7` en `log 2`, `8` en `0.80`. «5 en log 2» y «5/6/7» son discrepancias de transcripción.
+**Corrections to the index/triage.**
+1. `TRIAGE_D_1.md` l.88: the condition "if Thm P is about the same operator A_T restricted to mass zero, item 38
+   becomes CLOSED" is resolved negatively: **it is not the same operator** (Arch alone vs complete kernel). Item 38 stays REF.
+2. Index, entry 212-triage-D, bullet "Computations that decide something": remove "cross-check first with Theorem P, “count
+   5 at log 2”"; replace with "Thm P / thm:J / cor:nasym are about Arch and do not decide (6.7)".
+3. Index l.5150 ("DEAD [count 5 at log 2]") and l.3688 ("n₋ ≤ 5/6/7 (5/7/8 series)"): according to P47 cor:P3 the bound is
+   `5` at `½log3`, `7` at `log 2`, `8` at `0.80`. "5 at log 2" and "5/6/7" are transcription discrepancies.
 
 ## (b) `n_odd(0.80)`
 
-**Qué decide.** Por monotonía estricta de `λ_odd` (P47 thm:index / R155_052 Lema 4.3) y `T*_odd ∈ [log 2, 0.81]`:
-`n_odd(0.80) = 0` ⟺ `T*_odd > 0.80` ⟺ (H1) vale en `0.80`. Es un dato del lado arquimediano; no decide el signo de `a_T`.
-Estado previo: P47 thm:index fija sólo `n_odd(0.80) ≤ 1` (l.2532, 2552); R155_052 punto 5: OPEN, segundo autovalor
-de la matriz certificante `−0.0047` (`τ_N` por defecto), `−0.0019` (`τ_N = 30`); extrapolación heurística `τ_N ≈ 60`.
+**What it decides.** By strict monotonicity of `λ_odd` (P47 thm:index / R155_052 Lemma 4.3) and `T*_odd ∈ [log 2, 0.81]`:
+`n_odd(0.80) = 0` ⟺ `T*_odd > 0.80` ⟺ (H1) holds at `0.80`. It is a datum of the archimedean side; it does not decide the sign of `a_T`.
+Prior state: P47 thm:index fixes only `n_odd(0.80) ≤ 1` (l.2532, 2552); R155_052 point 5: OPEN, second eigenvalue
+of the certifying matrix `−0.0047` (default `τ_N`), `−0.0019` (`τ_N = 30`); heuristic extrapolation `τ_N ≈ 60`.
 
-**Ejecución.** Script de registro `r8a_01_upper.py` sin modificar, copiado a
-un directorio temporal
-(aritmética de intervalos mpmath, 40 dígitos). Corridas a `T = 0.80`, sector impar:
-| K, K2, c_N objetivo | τ_N | resultado | 2.º autovalor (punto medio) |
+**Execution.** Recorded script `r8a_01_upper.py` unmodified, copied to
+a temporary directory
+(mpmath interval arithmetic, 40 digits). Runs at `T = 0.80`, odd sector:
+| K, K2, target c_N | τ_N | result | 2nd eigenvalue (midpoint) |
 |---|---|---|---|
-| 30, 44, 40 | — | falla `γ > 0` (K insuficiente) | — |
-| 44, 60, 40 | 50 | cota certificada `≤ 1`, margen `0.1644` | `−0.000299` |
-| 56, 76, 60 | — | falla de la librería («series did not converge; enlarge KM») | — |
-Salida: `r8a_run/r8a_01_0p80_par1_K44_K260_c40.json` y los `.log` en la misma carpeta.
+| 30, 44, 40 | — | fails `γ > 0` (K insufficient) | — |
+| 44, 60, 40 | 50 | certified bound `≤ 1`, margin `0.1644` | `−0.000299` |
+| 56, 76, 60 | — | library failure ("series did not converge; enlarge KM") | — |
+Output: `r8a_run/r8a_01_0p80_par1_K44_K260_c40.json` and the `.log` files in the same folder.
 
-**Resultado.** `n_odd(0.80) ≤ 1` re-certificado (**PROVED**, ya estaba en P47); `n_odd(0.80) = 0` sigue **OPEN**.
-La serie `−0.0047 → −0.0019 → −0.0003` al crecer `τ_N` es compatible con que el residuo lo fija el minorante constante
-más allá de `τ_N` y con certificar `0` a `τ_N` algo mayor (**NUMÉRICO**, diagnóstico). Ir más allá exige ampliar `KM`
-en `r8a_lib.moments`, es decir modificar el script de registro; no se hizo.
-Corrección: ninguna en el índice (ítem 111 ya decía «decide algo local»); añadir al ítem 111 de `TRIAGE_D_3.md` y a
-la entrada 212-triage-D el dato `τ_N = 50: −0.0003, sigue ≤ 1`.
+**Result.** `n_odd(0.80) ≤ 1` re-certified (**PROVED**, already in P47); `n_odd(0.80) = 0` remains **OPEN**.
+The series `−0.0047 → −0.0019 → −0.0003` as `τ_N` grows is compatible with the residue being fixed by the constant minorant
+beyond `τ_N` and with certifying `0` at somewhat larger `τ_N` (**NUMERICAL**, diagnostic). Going further requires enlarging `KM`
+in `r8a_lib.moments`, i.e. modifying the recorded script; this was not done.
+Correction: none in the index (item 111 already said "decides something local"); add to item 111 of `TRIAGE_D_3.md` and to
+the entry 212-triage-D the datum `τ_N = 50: −0.0003, still ≤ 1`.
 
-## (c) Medias de Fejér de CA_E_001 Cor 1.1 fuera de `ι(ℝ)`
+## (c) Fejér means of CA_E_001 Cor 1.1 outside `ι(ℝ)`
 
-**Qué afirma el triage** (`TRIAGE_D_4.md` ítem 150, l.40 y l.66): un negativo fuera de `ι(ℝ)` mostraría que
-(eq:target) es más fuerte que la positividad en `P_T` y falsaría esa reformulación.
+**What the triage claims** (`TRIAGE_D_4.md` item 150, l.40 and l.66): a negative outside `ι(ℝ)` would show that
+(eq:target) is stronger than positivity on `P_T` and would falsify that reformulation.
 
-**Resultado (PROVED, sin cómputo).** A `S` y `N` fijos la media de Fejér
-`Φ_{S,N}(y) = Σ_{q∈G_S, |v_p(q)|<N} φ(q) \overline{y(q)} Π_p(1−|v_p(q)|/N)` es una suma finita, luego continua en
-`y ∈ Ĝ`, y sólo depende de la proyección `y|_{G_S} ∈ 𝕋^S`. Los `log p`, `p ∈ S`, son ℚ-linealmente independientes, así
-que `τ ↦ (p^{iτ})_{p∈S}` tiene imagen densa en `𝕋^S` (Kronecker). Por tanto
-`inf_{y∈Ĝ} Φ_{S,N}(y) = inf_{τ∈ℝ} Φ_{S,N}(ι(τ))`. Un punto «fuera de la recta» nunca da un valor que no esté ya
-aproximado por puntos de la recta: la búsqueda fuera de `ι(ℝ)` **no decide nada nuevo**. La distinción recta/fuera de
-la recta sólo existe en `Ĝ` completo (Lemma 1, soporte de `μ_φ`), no a nivel finito.
-Además, por el propio Cor 1.1 un negativo en cualquier `y` falsaría (eq:target) entero, que por thm:oneprofile /
-prop:AM(i) es una consecuencia de la positividad sobre los `P_T` de todo `T` (no una forma «más fuerte» de ella):
-la lectura del triage está invertida (**ARGUED** en cuanto a la dirección exacta de thm:oneprofile, no reabierto aquí).
-Etiqueta del ítem 150: **NO-GO** como comprobación que decide algo; las cajas sobre la recta son la familia `s_w`
-torcida ya usada (CA_E_001 Cor 1.1, última frase).
-Correcciones: `TRIAGE_D_4.md` ítem 150 (l.40, l.66) pasa de «LOCAL/NUMÉRICA — decide algo» a «no decide: equivale por
-densidad a la recta»; quitar «medias de Fejér fuera de ι(ℝ)» de la viñeta «Cómputos que deciden algo» de 212-triage-D.
+**Result (PROVED, without computation).** At fixed `S` and `N` the Fejér mean
+`Φ_{S,N}(y) = Σ_{q∈G_S, |v_p(q)|<N} φ(q) \overline{y(q)} Π_p(1−|v_p(q)|/N)` is a finite sum, hence continuous in
+`y ∈ Ĝ`, and depends only on the projection `y|_{G_S} ∈ 𝕋^S`. The `log p`, `p ∈ S`, are ℚ-linearly independent, so
+`τ ↦ (p^{iτ})_{p∈S}` has dense image in `𝕋^S` (Kronecker). Therefore
+`inf_{y∈Ĝ} Φ_{S,N}(y) = inf_{τ∈ℝ} Φ_{S,N}(ι(τ))`. A point "off the line" never gives a value not already
+approximated by points of the line: the search outside `ι(ℝ)` **decides nothing new**. The on-line/off-line distinction
+exists only in the full `Ĝ` (Lemma 1, support of `μ_φ`), not at finite level.
+Moreover, by Cor 1.1 itself a negative at any `y` would falsify (eq:target) entirely, which by thm:oneprofile /
+prop:AM(i) is a consequence of positivity on the `P_T` of every `T` (not a "stronger" form of it):
+the triage reading is inverted (**ARGUED** as to the exact direction of thm:oneprofile, not reopened here).
+Label of item 150: **NO-GO** as a check that decides something; the boxes on the line are the twisted `s_w` family
+already used (CA_E_001 Cor 1.1, last sentence).
+Corrections: `TRIAGE_D_4.md` item 150 (l.40, l.66) goes from "LOCAL/NUMERICAL — decides something" to "does not decide: equivalent by
+density to the line"; remove "Fejér means outside ι(ℝ)" from the bullet "Computations that decide something" of 212-triage-D.
 
-## Resumen
-| ítem | resultado | etiqueta | corrección |
+## Summary
+| item | result | label | correction |
 |---|---|---|---|
-| (a) 38 | compatibles; Thm P/J/nasym son de Arch, (6.7) del núcleo completo; nada lo falsa | PROVED (lectura); (6.7) OPEN | TRIAGE_D_1 l.88; 212-triage-D; índice l.3688, l.5150 (5/7/8) |
-| (b) 111 | `≤ 1` re-certificado; `= 0` no alcanzado (−0.0003 a τ_N=50) | PROVED ≤1; OPEN =0; NUMÉRICO tendencia | añadir dato a ítem 111 / 212-triage-D |
-| (c) 150 | fuera de ι(ℝ) ≡ sobre ι(ℝ) por densidad a S finito | PROVED; ítem NO-GO | TRIAGE_D_4 ítem 150; 212-triage-D |
-Ninguna de las tres toca el signo de `a_T`.
+| (a) 38 | compatible; Thm P/J/nasym are about Arch, (6.7) about the complete kernel; nothing falsifies it | PROVED (reading); (6.7) OPEN | TRIAGE_D_1 l.88; 212-triage-D; index l.3688, l.5150 (5/7/8) |
+| (b) 111 | `≤ 1` re-certified; `= 0` not reached (−0.0003 at τ_N=50) | PROVED ≤1; OPEN =0; NUMERICAL trend | add datum to item 111 / 212-triage-D |
+| (c) 150 | outside ι(ℝ) ≡ on ι(ℝ) by density at finite S | PROVED; item NO-GO | TRIAGE_D_4 item 150; 212-triage-D |
+None of the three touches the sign of `a_T`.

@@ -1,31 +1,31 @@
 # POWER_UNIFORM_STRIP_AUDIT_060
 
-Estado: **APROBADO** POWER_UNIFORM_STRIP_060 tras lectura íntegra de sus diez secciones. Prueba analítica; no requiere campañas ni evaluar casos numéricos. Papers intactos.
+Status: **APPROVED** POWER_UNIFORM_STRIP_060 after a complete reading of its ten sections. Analytic proof; requires no campaigns nor evaluation of numerical cases. Papers untouched.
 
-Se obtiene STRIP3<2 y W>norma² para todos los numeradores reales propios de dimensiónn y todos j>=10^12(nq_n)^3, con q_n como en la fuente. El interior permanece abierto. La novedad respecto015/054 es una estimación uniforme de contorno cuya constante no crece conn, obtenida mediante derivadas de amplitud sin fase y una cola de Taylor controlada aparte. No se uniformizan las normas causales exponenciales refutadas016.
+One obtains STRIP3<2 and W>norm² for all proper real numerators of dimension n and all j>=10^12(nq_n)^3, with q_n as in the source. The interior remains open. The novelty relative to 015/054 is a uniform contour estimate whose constant does not grow with n, obtained via derivatives of an amplitude without phase and a Taylor tail controlled separately. The exponential causal norms refuted in 016 are not uniformized.
 
-## Peso Student y primera derivada
+## Student weight and first derivative
 
-Revisados el operador de Pearson, su coeficiente principal y la recurrencia. El término subprincipal monico es c_k=−jk(k−1)/[2(2M−2k+1)]; restar c_(k+1) produce exactamente beta_k declarado. Para k<=n+2 y j>=n+8, ambos factores del denominador son al menosj y el numerador es<=4j²k. Así beta_k<=4k. Los momentos, las normas de los grados requeridos y los bordes de integración por partes existen con holgura bajo esta hipótesis; no se aplica Gram–Schmidt a grados arbitrariamente altos con un peso de sólo finitos momentos.
+Checked the Pearson operator, its leading coefficient and the recurrence. The monic subleading term is c_k=−jk(k−1)/[2(2M−2k+1)]; subtracting c_(k+1) produces exactly the declared beta_k. For k<=n+2 and j>=n+8, both factors of the denominator are at least j and the numerator is <=4j²k. Thus beta_k<=4k. The moments, the norms of the required degrees and the integration-by-parts boundaries exist with room to spare under this hypothesis; Gram–Schmidt is not applied to arbitrarily high degrees with a weight having only finitely many moments.
 
-La multiplicación por y tiene norma<=4sqrt(d+1) sobre grado d<=n+1. La energía Sturm da j||R′||²<=lambda_(n−1)||R||² y lambda_(n−1)/j<=3n. Es esencial conservar ese factorj. La cota de y²R′ usa dos multiplicaciones después de esta desigualdad; la de y³R usa tres, dentro de todos los grados permitidos. Las constantes28,4,128 y su mayorante200 son válidas, también en n=1, donde R′ es cero.
+Multiplication by y has norm <=4sqrt(d+1) on degree d<=n+1. The Sturm energy gives j||R′||²<=lambda_(n−1)||R||² and lambda_(n−1)/j<=3n. It is essential to keep that factor j. The bound for y²R′ uses two multiplications after this inequality; that for y³R uses three, within all permitted degrees. The constants 28, 4, 128 and their majorant 200 are valid, also at n=1, where R′ is zero.
 
-El cambio inverso da las dos identidades exactas de norma en GEN. Las fases/signos constantes en cada semirrecta no contribuyen a la norma derivada; no se diferencia una fase causal dependiente de frecuencia. La función H holomorfa original es regular en cero y sus derivados allí no generan términos de borde. Su rama existe en la franja pues Re(u²+z²)>0 para|Imz|<u.
+The inverse change gives the two exact norm identities in GEN. The constant phases/signs on each half-line do not contribute to the derivative norm; no frequency-dependent causal phase is differentiated. The original holomorphic function H is regular at zero and its derivatives there generate no boundary terms. Its branch exists on the strip since Re(u²+z²)>0 for |Imz|<u.
 
-## Contorno grueso y Taylor
+## Coarse contour and Taylor
 
-La fuente distingue correctamente SINGLE-EVAL del producto de la densidad. Para p complejo, |H(z)|² se acota por la evaluación individual de R(a/z); cada diagonal resultante es una densidad escalar017. Las cancelaciones de a y de la norma son las mismas auditadas054. El extremo escalarN'=1 tiene su justificación independiente por WR11 y Cauchy. Se obtiene COARSE para AMBOS signos de altura15, sin suponer simetría inexistente de un polinomio complejo.
+The source correctly distinguishes SINGLE-EVAL from the product of the density. For complex p, |H(z)|² is bounded by the individual evaluation of R(a/z); each resulting diagonal is a scalar density 017. The cancellations of a and of the norm are the same as audited in 054. The scalar endpoint N'=1 has its independent justification by WR11 and Cauchy. COARSE is obtained for BOTH signs of height 15, without assuming a nonexistent symmetry of a complex polynomial.
 
-N″(eta)=4||H′(·+i eta)||² tiene la orientación correcta y los bordes se anulan. Convexidad entre−15 y15 da el bound en todas las alturas intermedias. La holomorfía con valores L² y las traslaciones reales isométricas permiten aplicar Cauchy en el círculo de radio15, contenido estrictamente en la franja analítica. Esto controla la cola de Taylor en norma; no se itera FIRST hasta infinito.
+N″(eta)=4||H′(·+i eta)||² has the correct orientation and the boundaries vanish. Convexity between −15 and 15 gives the bound at all intermediate heights. L²-valued holomorphy and isometric real translations allow applying Cauchy on the circle of radius 15, strictly contained in the analytic strip. This controls the Taylor tail in norm; FIRST is not iterated to infinity.
 
-Para las primeras L=20nq_n derivadas, la clase cambia exactamente a(n+3r,j−r), con numerador de grado menor que n+3r. El término j u²p+z(u²+z²)p′−n z²p es correcto. El umbral garantiza j−r>=j/2, j−r>=n+3r+8 y n+3r+2<=63nq_n en todos los pasos usados. El cociente FIRST queda<1/100, según la comparación racional de constantes escrita. Por tanto el segmento Taylor cuesta como máximo exp(.03), no la constante grandeD_n.
+For the first L=20nq_n derivatives, the class changes exactly to (n+3r,j−r), with numerator of degree less than n+3r. The term j u²p+z(u²+z²)p′−n z²p is correct. The threshold guarantees j−r>=j/2, j−r>=n+3r+8 and n+3r+2<=63nq_n at all steps used. The FIRST ratio stays <1/100, according to the written rational comparison of constants. Therefore the Taylor segment costs at most exp(.03), not the large constant D_n.
 
-Revisado también n=1,q_n=1: D_n<3^(10nq_n), las desigualdades de grados y la cola siguen estrictas. La estimación general D_n<3^(nq+2q+2n+5)<=3^(10nq) y la cola(5/4)3^(5nq)5^−20nq<.01 son correctas. Junto al segmento se obtiene AMP3<1.1 para ambos signos de altura. La comparación q_n<=n justifica el corolario más débil10^12n^6.
+Also checked n=1, q_n=1: D_n<3^(10nq_n), the degree inequalities and the tail remain strict. The general estimate D_n<3^(nq+2q+2n+5)<=3^(10nq) and the tail (5/4)3^(5nq)5^−20nq<.01 are correct. Together with the segment one obtains AMP3<1.1 for both signs of height. The comparison q_n<=n justifies the weaker corollary 10^12n^6.
 
-## Forma completa y alcance
+## Full form and scope
 
-Para p(z)=P(iz), la identidad rho=H H# es exacta. Fuera de la recta se utiliza Cauchy entre las normas de alturas opuestas; no se confunde ese producto con|H|² desplazada. Resulta STRIP3<1.21<2. Los lados verticales se anulan por el decaimiento de la densidad racional. El bound de autocorrelación2exp(−3|t|) suma TODO el peine, cuya cota7/(3sqrt2)<2 conserva todos los primos y potencias primas.
+For p(z)=P(iz), the identity rho=H H# is exact. Off the line Cauchy is used between the norms at opposite heights; that product is not confused with a shifted |H|². The result is STRIP3<1.21<2. The vertical sides vanish by the decay of the rational density. The autocorrelation bound 2exp(−3|t|) sums the WHOLE comb, whose bound 7/(3sqrt2)<2 keeps all primes and prime powers.
 
-MULT da el momento inverso16n/(u²j); el umbral implica j>=160000n y por ello ARCH>4 con el lower global de digamma. El polar054<1 ya era válido bajo j>=10000n², condición aquí satisfecha, sin usar su corte gigantesco. Todos los términos se comparan con la MISMA norma. El balance estricto4−2−1 da W>norma² como se afirma.
+MULT gives the inverse moment 16n/(u²j); the threshold implies j>=160000n and hence ARCH>4 with the global digamma lower bound. The polar 054 <1 was already valid under j>=10000n², a condition satisfied here, without using its gigantic cutoff. All terms are compared with the SAME norm. The strict balance 4−2−1 gives W>norm² as claimed.
 
-El resultado es un cono uniforme para todos los numeradores, no la tabla completa. No se deduce signo en j<J(n), ni un cono cuadrático, ni una ventana temporal nueva. NECESSITY059 y las obstrucciones016 permanecen intactas.
+The result is a uniform cone for all numerators, not the full table. Not deduced: sign for j<J(n), a quadratic cone, or a new time window. NECESSITY059 and the obstructions 016 remain intact.

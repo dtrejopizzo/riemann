@@ -1,41 +1,41 @@
-# POWER_CONTACT_BALANCE_021 — Escala de cancelación en un único átomo k1
+# POWER_CONTACT_BALANCE_021 — Cancellation scale in a single atom k1
 
-Estado: **PROVED** balance negativo usando sólo contactos2,3,4 y bound positivo de TODA la cola q>300. **NUMÉRICO** balance hasta300 con ARCH por cuadratura. No se decide el signo de W. Papers intactos; auditoría020 no modificada.
+Status: **PROVED** negative balance using only contacts2,3,4 and positive bound of the WHOLE tail q>300. **NUMERICAL** balance up to300 with ARCH by quadrature. The sign of W is not decided. Papers untouched; audit020 not modified.
 
-## 1. Objeto y autorización limitada
+## 1. Object and limited authorization
 
-Se continúa FAIL2 de SIGNED_BALANCE020 en UN solo átomo, F(s)=s/(s+63/2)^212, N211,k1. Leídos STATE019, ARITHMETIC_DIFFERENCES019, SIGNED_BALANCE020 y su revisión; antecedentes de índice/grid/crucigrama son los declarados en020. La diferencia es medir pocos contactos reparadores, comprobar la escala residual y acotar analíticamente su cola, no lanzar una campaña en N ni optimizar filas fijas. Por019 TODOS los contactos son favorables, pero su magnitud conjunta es la obligación.
+FAIL2 of SIGNED_BALANCE020 is continued in ONE single atom, F(s)=s/(s+63/2)^212, N211,k1. Read STATE019, ARITHMETIC_DIFFERENCES019, SIGNED_BALANCE020 and its review; index/grid/crossword antecedents are those declared in020. The difference is to measure a few repairing contacts, check the residual scale and bound its tail analytically, not to launch a campaign in N nor optimize fixed rows. By019 ALL contacts are favorable, but their joint magnitude is the obligation.
 
-Todas las energías abajo están divididas por norm². ARCH, POLAR y P_q conservan la normalización020. Los q compuestos que no son potencias primas aportan0.
+All energies below are divided by norm². ARCH, POLAR and P_q keep the normalization020. Composite q that are not prime powers contribute0.
 
-## 2. Resultado exacto con tres contactos
+## 2. Exact result with three contacts
 
-La cota U020 prueba ARCH<−.74. El polar exacto satisface POLAR<−.36. Para cada potencia prima q=p^a,
+The bound U020 proves ARCH<−.74. The exact polar satisfies POLAR<−.36. For each prime power q=p^a,
 
     P_q=2log(p) q^(−32) K_N r_N((63/2)log q),
     K_N=N2^(N−1)/[N!binom(2N−2,N−1)].
 
-Esto incluye tanto q3 como q4, sin aproximar Λ ni olvidar las potencias. La evaluación racional por Horner prueba
+This includes both q3 and q4, without approximating Λ nor forgetting the powers. Rational evaluation by Horner proves
 
     0<P_2+P_3+P_4<.89,
     ARCH+POLAR+P_2+P_3+P_4<−.21.                             (FAIL234)
 
-Por tanto ignorar la magnitud de TODOS los contactos restantes no certifica este átomo. FAIL234 no es el valor de W: los contactos q>=5 siguen presentes y positivos.
+Hence ignoring the magnitude of ALL remaining contacts does not certify this atom. FAIL234 is not the value of W: the contacts q>=5 are still present and positive.
 
-## 3. Diagnóstico NUMÉRICO de escala, no certificado de signo
+## 3. NUMERICAL scale diagnostic, not a sign certificate
 
-Una sola evaluación del átomo, mpmath a45 y65 dígitos; en65 dígitos:
+A single evaluation of the atom, mpmath at45 and65 digits; at65 digits:
 
     ARCH = −1.0941773847418061369452382637632905
     POLAR= −0.36603632954956029193069220397307442
 
-La integral usa t=tau/u y la probabilidad beta exacta
+The integral uses t=tau/u and the exact beta probability
 
     (2/B(3/2,N−1/2)) t²(1+t²)^(−N−1)dt, t>0,
 
-contra m(ut). Se divide la cuadratura en0,.025,.05,.1,.2,.4,1,infinito. Las potencias primas hasta300 se evalúan por la fórmula polinomial anterior. No hay barrido de otros parámetros.
+against m(ut). The quadrature is split at0,.025,.05,.1,.2,.4,1,infinity. The prime powers up to300 are evaluated by the previous polynomial formula. There is no sweep of other parameters.
 
-| Último contacto incluido | ARCH+POLAR+sum P_q, NUMÉRICO |
+| Last contact included | ARCH+POLAR+sum P_q, NUMERICAL |
 |---|---:|
 |2|−1.3854051001619002770|
 |4|−.57144083561183200587|
@@ -43,46 +43,46 @@ contra m(ut). Se divide la cuadratura en0,.025,.05,.1,.2,.4,1,infinito. Las pote
 |13|−.0046372288392951004140|
 |31|−.000029369239646495296493|
 |97|−.0000000062920938255926665143|
-|293 (todos q<=300)|−6.0812131368147274153·10^(−14)|
+|293 (all q<=300)|−6.0812131368147274153·10^(−14)|
 
-Los cálculos45/65 coinciden en los dígitos mostrados relevantes para la escala, pero no hay certificado de error de cuadratura. No se afirma que la suma COMPLETA sea negativa ni cero, ni se infiere signo de la diferencia de cantidades casi iguales. Se detiene aquí la enumeración: no se fuerza una verificación500/1000 ni una precisión masiva para perseguir un margen.
+The45/65 computations agree in the displayed digits relevant for the scale, but there is no quadrature error certificate. It is not claimed that the COMPLETE sum is negative or zero, nor is a sign inferred from the difference of nearly equal quantities. The enumeration stops here: no500/1000 verification nor massive precision is forced to chase a margin.
 
-## 4. Bound analítico de la cola COMPLETA, sin enumeración adicional
+## 4. Analytic bound of the COMPLETE tail, without additional enumeration
 
-Escriba r_N(x)=sum_j r_j x^j con coeficientes racionales conocidos. Usando Λ(q)<=log q,
+Write r_N(x)=sum_j r_j x^j with known rational coefficients. Using Λ(q)<=log q,
 
     0<sum_(q>300)P_q
       <=2K_N sum_(j=0)^N |r_j|u^j sum_(q>300)q^(−32)(log q)^(j+1).
 
-Para ell>=1, f_ell(x)=x^(−32)(log x)^ell es no negativa y unimodal en[300,infinito). Comparación de paneles en las dos ramas da
+For ell>=1, f_ell(x)=x^(−32)(log x)^ell is nonnegative and unimodal on[300,infinito). Panel comparison on the two branches gives
 
     sum_(q>300)f_ell(q)<=int_300^infty f_ell(x)dx+sup_(x>=300)f_ell(x).
 
-Además (log f_ell)'=−32/x+ell/(x log x)>=−32/300. Si x0 es un máximo, integrar la cota f_ell(x0+t)>=f_ell(x0)e^(−32t/300) prueba sup f_ell<=(32/300)int f_ell. Por tanto la suma anterior es <=(83/75)I_ell, donde
+Moreover (log f_ell)'=−32/x+ell/(x log x)>=−32/300. If x0 is a maximum, integrating the bound f_ell(x0+t)>=f_ell(x0)e^(−32t/300) proves sup f_ell<=(32/300)int f_ell. Hence the previous sum is <=(83/75)I_ell, where
 
     I_0=1/(31·300^31),
     I_ell=300^(−31)(log300)^ell/31+(ell/31)I_(ell−1).
 
-La recurrencia usa sólo sumandos positivos. Sustituir la cota racional superior de log300, sumar coeficientes absolutos y operar con Fraction prueba
+The recurrence uses only positive summands. Substituting the rational upper bound of log300, summing absolute coefficients and operating with Fraction proves
 
     0<sum_(q>300)P_q<5·10^(−13).                             (TAIL)
 
-El bound intermedio es aproximadamente4.47·10^(−13); sólo la desigualdad racional TAIL se usa como teorema. Es una cota del peine, independiente del cálculo numérico de ARCH. No convierte la tabla NUMÉRICA de§3 en un intervalo certificado para W.
+The intermediate bound is approximately4.47·10^(−13); only the rational inequality TAIL is used as a theorem. It is a bound of the comb, independent of the numerical computation of ARCH. It does not turn the NUMERICAL table of§3 into a certified interval for W.
 
-## 5. Resultado y paso que queda
+## 5. Result and remaining step
 
-FAIL234 y TAIL son pruebas exactas. El diagnóstico localiza una cancelación de componentes de orden1 hasta una escala de al menos10^(−13) en esta suma parcial. La cola favorable todavía importa en esa escala. El intento no obtiene W>0 ni W<0 y no elimina ninguna región admisible.
+FAIL234 and TAIL are exact proofs. The diagnostic locates a cancellation of order-1 components down to a scale of at least10^(−13) in this partial sum. The favorable tail still matters at that scale. The attempt obtains neither W>0 nor W<0 and eliminates no admissible region.
 
-La información útil para la siguiente construcción es que el signo favorable del peine requiere conservar su cancelación conjunta con ARCH y POLAR. Separar esas componentes mediante cotas gruesas deja de resolver el balance. Esto describe el alcance de estos bounds en este átomo; no constituye un NO-GO para otras desigualdades aritméticas o para todos los peines finitos.
+The useful information for the next construction is that the favorable sign of the comb requires keeping its joint cancellation with ARCH and POLAR. Separating those components via coarse bounds no longer settles the balance. This describes the scope of these bounds on this atom; it does not constitute a NO-GO for other arithmetic inequalities or for all finite combs.
 
-Reproducción:
+Reproduction:
 
     python3 03-research/phase-211-sign-sandbox/tools/power_contact_balance_021_verify.py
     python3 03-research/phase-211-sign-sandbox/tools/power_contact_balance_021_diagnostic.py 65
 
-El primer script es Fraction/intervalos exactos y PASS. El segundo es explícitamente NUMÉRICO, depende de mpmath y no certifica error de cuadratura.
+The first script is Fraction/exact intervals and PASS. The second is explicitly NUMERICAL, depends on mpmath and certifies no quadrature error.
 
 
-## Seguimiento032: candidato decidido
+## Follow-up032: candidate decided
 
-POWER_CONTACT_DECISION_032 y POWER_CONTACT_AUDIT_032 resuelven este mismo átomo mediante ARCH sin cuadratura y contactos hasta512 con cola completa: 3.4e−15<W/norma²<4.5e−15. El parcial negativo hasta300 de esta nota no era W total; la diferencia procede de contactos favorables omitidos, no de un signo global negativo previamente probado. Se conserva esta nota como registro histórico de021.
+POWER_CONTACT_DECISION_032 and POWER_CONTACT_AUDIT_032 settle this same atom via ARCH without quadrature and contacts up to512 with complete tail: 3.4e−15<W/norm²<4.5e−15. The negative partial up to300 of this note was not total W; the difference comes from omitted favorable contacts, not from a previously proved negative global sign. This note is kept as the historical record of021.

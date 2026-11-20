@@ -1,21 +1,21 @@
 # POWER_DIMENSIONAL_AUDIT_051
 
-Estado: **APROBADO** POWER_DIMENSIONAL_CUTOFF_051 como bound de momento y ARCH, no de W. Papers intactos.
+Status: **APPROVED** POWER_DIMENSIONAL_CUTOFF_051 as a moment and ARCH bound, not of W. Papers untouched.
 
-Cotejados los antecedentes de índice/crucigrama y HIGHPASS015, JOINT_SCALE016, CENTERED_CUTOFF049 y FULL_TWELVE050. La diferencia respecto de la eventualidad a dimensión fija es un corte explícito lineal en la dimensión, uniforme en TODOS los numeradores. No se presenta el cambio de coordenadas anterior como herramienta nueva.
+Cross-checked the index/crossword antecedents and HIGHPASS015, JOINT_SCALE016, CENTERED_CUTOFF049 and FULL_TWELVE050. The difference with respect to eventuality at fixed dimension is an explicit cutoff linear in the dimension, uniform over ALL numerators. The earlier change of coordinates is not presented as a new tool.
 
-Revisados el centrado y ambos casos de paridad: para d=n−1, el sector polinómico puro tiene grado<=d y peso j−1/2, y el sector con cos x tiene grado<=d−1 y peso j+1/2. Las paridades se intercambian al cambiar n, pero los cruces siempre son impares y se anulan incluso con coeficientes complejos. El segundo sector se omite en n=1. Las condiciones de borde a>0 se cumplen para j>=1; el momento inverso es integrable. La energía polinómica049 da d(d+2j) como majorante común. La raíz positiva y la mezcla de razones justifican GENERAL y ROOT; no se usa sólo densidad L² o un vector diagonal.
+Reviewed the centring and both parity cases: for d=n−1, the pure polynomial sector has degree<=d and weight j−1/2, and the sector with cos x has degree<=d−1 and weight j+1/2. The parities swap when n changes, but the crossings are always odd and vanish even with complex coefficients. The second sector is omitted at n=1. The boundary conditions a>0 hold for j>=1; the inverse moment is integrable. The polynomial energy049 gives d(d+2j) as a common majorant. The positive root and the mixture of ratios justify GENERAL and ROOT; not only L² density or a diagonal vector is used.
 
-Los coeficientes normalizados decrecen con j. Verificada algebraicamente la expansión en j0=7n/6: el margen cuadrático es(49n²+10878n+7569)/3600>0 y el lado no elevado al cuadrado también es positivo. Por tanto j>=ceil(7n/6) implica r<49/20, momento inverso<1/405 y ARCH>859/800. El caso n=1 también está incluido.
+The normalized coefficients decrease with j. The expansion at j0=7n/6 was verified algebraically: the quadratic margin is(49n²+10878n+7569)/3600>0 and the non-squared side is also positive. Hence j>=ceil(7n/6) implies r<49/20, inverse moment<1/405 and ARCH>859/800. The case n=1 is also included.
 
-Revisada la raíz general T(n,b): al poner t=2j−1, la desigualdad cuadrática tiene raíz mayor[(2n−1)+2sqrt((1+b)n(n−1))]/b. J=floor(T)+1 la supera estrictamente y satisface además bt−1>0. El margen ARCH-b tiene las orientaciones correctas por Jensen y Cauchy. Para la elección b_h se exige explícitamente h>=0; entonces sqrt(b_h)/u<1/8 y b_h/(2u²)<1/128, mientras el logaritmo supera h+1. Esto demuestra el margen ARCH pedido, sin afirmar margen completo.
+Reviewed the general root T(n,b): setting t=2j−1, the quadratic inequality has larger root[(2n−1)+2sqrt((1+b)n(n−1))]/b. J=floor(T)+1 strictly exceeds it and also satisfies bt−1>0. The ARCH-b margin has the correct orientations by Jensen and Cauchy. For the choice b_h, h>=0 is explicitly required; then sqrt(b_h)/u<1/8 and b_h/(2u²)<1/128, while the logarithm exceeds h+1. This proves the requested ARCH margin, without claiming a complete margin.
 
-## Corrección algebraica previa a integración
+## Algebraic correction prior to integration
 
-La primera lectura dejó pasar una errata del factor energético del segundo sector. Root la detectó y corrigió en la fuente: Degree=d−1 y a=j+1/2 dan exactamente(d−1)(d+2j+1), no(d−1)(d+2j). Revisada la corrección escrita: d(d+2j)−(d−1)(d+2j+1)=2j+1>0. El mismo majorante común sigue siendo válido; GENERAL, ROOT y todos los cortes y márgenes permanecen sin cambios. La aprobación se refiere a esta versión corregida.
+The first reading let through an erratum in the energy factor of the second sector. It was detected and corrected in the source: Degree=d−1 and a=j+1/2 give exactly(d−1)(d+2j+1), not(d−1)(d+2j). Reviewed the written correction: d(d+2j)−(d−1)(d+2j+1)=2j+1>0. The same common majorant remains valid; GENERAL, ROOT and all cutoffs and margins remain unchanged. The approval refers to this corrected version.
 
-## Obligaciones que permanecen
+## Remaining obligations
 
-El segmento inicial dependiente de n, el polar y el peine completo no están resueltos. No puede extenderse literalmente la conclusión parcial E2 de050 a toda órbita y toda dimensión: PRIME_TRANSFER014 da un falsificador exacto de esa hipótesis. Allí n=2^17, F=(s²−1/4)/(s+u)^n pertenece a V_n y la integral D prueba E2[QF]<0. Esto no refuta el corte j>=J(n), ni una hipótesis con más contactos, ni W completo. Impide únicamente declarar positivos todos los segmentos iniciales de E2 en todo orden.
+The n-dependent initial segment, the polar and the complete comb are not resolved. The partial conclusion E2 of050 cannot be literally extended to every orbit and every dimension: PRIME_TRANSFER014 gives an exact falsifier of that hypothesis. There n=2^17, F=(s²−1/4)/(s+u)^n belongs to V_n and the integral D proves E2[QF]<0. This does not refute the cutoff j>=J(n), nor a hypothesis with more contacts, nor the complete W. It only prevents declaring all initial segments of E2 positive at every order.
 
-La revisión complementaria de casos sobre trece polos generales no aportó una desigualdad nueva: ZERO13 controla un subespacio de codimensión uno, pero la positividad de un vector complementario no controla su acoplamiento de Schur. Los antecedentes de Schur del índice ya contienen esta obligación. No se registra un nuevo NO-GO global ni una ampliación de cobertura W por esa observación.
+The complementary review of cases over thirteen general poles did not provide a new inequality: ZERO13 controls a subspace of codimension one, but positivity of a complementary vector does not control its Schur coupling. The Schur antecedents of the index already contain this obligation. No new global NO-GO nor extension of W coverage is recorded from that observation.

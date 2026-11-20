@@ -1,36 +1,36 @@
 # POWER BALANCE AUDIT 033
 
-Estado: PRIME_BALANCE033 y COEFFICIENT_BALANCE033 APROBADOS. Papers intactos.
+Status: PRIME_BALANCE033 and COEFFICIENT_BALANCE033 APPROVED. Papers untouched.
 
-## 1. Corpus y obligación cuantitativa
+## 1. Corpus and quantitative obligation
 
-Reconsultados índice ROUTES-TRIED-INDEX, grid maestro y crucigrama, entradas032 y antecedentes019–027. El único punto032 tiene margen de orden10^−15 tras cancelación de componentes de orden1. Bounds gruesos por componentes no se convierten automáticamente en una prueba uniforme de ese residuo; esto exige una desigualdad conjunta o un control de error adecuado, no declara imposible una ruta por dificultad.
+Consulted again the ROUTES-TRIED-INDEX index, master grid and crossword, entries 032 and antecedents 019–027. The single point of 032 has a margin of order 10^−15 after cancellation of components of order 1. Coarse componentwise bounds do not automatically become a uniform proof of that residue; this requires a joint inequality or adequate error control; it does not declare a route impossible because of difficulty.
 
-## 2. Contracción real y peine firmado — APROBADOS
+## 2. Real contraction and signed comb — APPROVED
 
-Revisados `POWER_PRIME_BALANCE_033.md` y `tools/power_prime_balance_033_verify.py`; ejecución independiente PASS. REGION implica la frontera de019 bajo ulog2, así w(q)>0 para todo q≥2. RLOW se obtiene de la recurrencia y p_j>xp_(j−1), con casoN3 incluido. La derivada exacta DER y el signo de x²−R se conservan. SLOPE crece con log q y en log5>8/5 reduce a la desigualdad polinómica indicada; REGION deja4u(u−63/2)+270>0. Esto prueba la decadencia w(mq)≤m^−2w(q) en TODA q≥5 sin barrido de órdenes.
+Reviewed `POWER_PRIME_BALANCE_033.md` and `tools/power_prime_balance_033_verify.py`; independent run PASS. REGION implies the frontier of 019 below ulog2, so w(q)>0 for all q≥2. RLOW is obtained from the recurrence and p_j>xp_(j−1), with case N3 included. The exact derivative DER and the sign of x²−R are kept. SLOPE increases with log q and at log5>8/5 reduces to the indicated polynomial inequality; REGION leaves 4u(u−63/2)+270>0. This proves the decay w(mq)≤m^−2w(q) for ALL q≥5 without a sweep over orders.
 
-El operador D actúa sólo en q≥5. La clase DECAY se conserva bajo D y la suma de m^−2 está acotada por2389/3600<2/3. El coeficiente b(n)=log n−log2·1_(2|n)−log3·1_(3|n)−log2·1_(4|n) coincide exactamente conΣ_(d|n,d≥5)Λ(d). Por ello DIV relaciona la cola real A con L; no se usa log n sin corregir ni se extiende w artificialmente por0 debajo5. Las sumas convergen absolutamente y Tonelli es legítimo.
+The operator D acts only on q≥5. The class DECAY is preserved under D and the sum of m^−2 is bounded by 2389/3600<2/3. The coefficient b(n)=log n−log2·1_(2|n)−log3·1_(3|n)−log2·1_(4|n) coincides exactly with Σ_(d|n,d≥5)Λ(d). Hence DIV relates the real tail A to L; uncorrected log n is not used, nor is w artificially extended by 0 below 5. The sums converge absolutely and Tonelli is legitimate.
 
-La telescopía finita da TEL con signo(−1)^K y resto A(D^(K+1)w)≥0. CONTRACT lo controla porρ^(K+1)A(w)≤ρ^(K+1)L(w), justificando ambos extremos de BRACKET y los signos opuestos para K par/impar. FULL añade exactamente ARCH, polar y contactos2,3,4. Es un criterio suficiente con error firmado explícito; no se ha probado aún su lower positivo en un rango nuevo.
+The finite telescoping gives TEL with sign (−1)^K and remainder A(D^(K+1)w)≥0. CONTRACT controls it by ρ^(K+1)A(w)≤ρ^(K+1)L(w), justifying both ends of BRACKET and the opposite signs for K even/odd. FULL adds exactly ARCH, polar and contacts 2,3,4. It is a sufficient criterion with explicit signed error; its positive lower bound has not yet been proved in a new range.
 
-La novedad respecto019 y032 es la contracción de una clase gamma real que convierte inversión clásica en brackets unilaterales uniformes. No es sólo reescribir Euler. El error es relativo al peine, no al residuo W. Queρ^100<10^−17 muestra una escala finita de aproximación, pero no demuestra la desigualdad final ni eficiencia computacional global. No aumenta cobertura W/T.
+The novelty relative to 019 and 032 is the contraction of a real gamma class that converts classical inversion into uniform one-sided brackets. It is not merely rewriting Euler. The error is relative to the comb, not to the residue W. That ρ^100<10^−17 shows a finite approximation scale, but proves neither the final inequality nor global computational efficiency. It does not increase W/T coverage.
 
-Adición algebraica aprobada: L(w)=A(w)+A(Dw)≤(1+ρ)A(w), luego A(w)≥3600L(w)/5989. Para K impar, S_K≥(1−ρ^(K+1))A(w)>0 da el bracket intrínseco S_K≤A(w)≤S_K/(1−ρ^(K+1)). Estas cotas se incorporan al balance completo conservando B_N; ninguna demuestra su signo sin verificar el comparador correspondiente.
+Approved algebraic addition: L(w)=A(w)+A(Dw)≤(1+ρ)A(w), hence A(w)≥3600L(w)/5989. For K odd, S_K≥(1−ρ^(K+1))A(w)>0 gives the intrinsic bracket S_K≤A(w)≤S_K/(1−ρ^(K+1)). These bounds are incorporated into the full balance keeping B_N; none proves its sign without verifying the corresponding comparator.
 
 
-## 3. Mezcla finita y Abel — APROBADOS
+## 3. Finite mixture and Abel — APPROVED
 
-Revisados `POWER_COEFFICIENT_BALANCE_033.md` y `tools/power_coefficient_balance_033_verify.py`; ejecución independiente PASS. Los pesos w_Nj=a_Nj−a_N,j+1=a_Nj j/(2d−j) son no negativos y telescopan a1; intercambiar sumas finitas reconstruye exactamente rho_N. La extensión lineal del funcional se normaliza con rho(0) y mantiene ARCH, polar y todo el peine. No se presupone que cada perfil Erlang sea una autocorrelación.
+Reviewed `POWER_COEFFICIENT_BALANCE_033.md` and `tools/power_coefficient_balance_033_verify.py`; independent run PASS. The weights w_Nj=a_Nj−a_N,j+1=a_Nj j/(2d−j) are nonnegative and telescope to 1; interchanging finite sums reconstructs exactly rho_N. The linear extension of the functional is normalised with rho(0) and keeps ARCH, polar and the whole comb. It is not presupposed that each Erlang profile is an autocorrelation.
 
-La fórmula ARCH de S22 sigue de032 con b_j=(u/2)^j. El polar racional tiene el factor2 correcto. El upper conserva sólo los contactos negativos2,3 y por tanto es válido; el lower resta un majorante absoluto de TODOS q≥4 mediante el extremo4 más la integral recurrente, aplicable porque32log4>23. Se certifica−.01<E22<−.006. La transformada par enτ=u vale−1/(2048u), por lo que el perfil no es positivo definido: este funcional negativo no es W negativo en un dato admisible.
+The ARCH formula for S22 follows from 032 with b_j=(u/2)^j. The rational polar term has the correct factor 2. The upper bound keeps only the negative contacts 2,3 and is therefore valid; the lower bound subtracts an absolute majorant of ALL q≥4 via the endpoint 4 plus the recurrent integral, applicable because 32log4>23. −.01<E22<−.006 is certified. The even transform at τ=u equals −1/(2048u), so the profile is not positive definite: this negative functional is not W negative on an admissible datum.
 
-Para N≥23, w_N,22≤22/d y el daño individual es mayor que−11/(50d). No controla la suma de todos los componentes adversos. Los v_Nj=w_Nj/j tienen cociente2(d−j)/(2d−j−1)≤1, con igualdad inicial j1 y caso d1 separado. Abel finito da exactamente los coeficientes no negativos de T_m=ΣjE_j. El perfil explícito y su generador z[E0(v)−vE0′(v)]/(1−z)^3 son correctos en un entorno convergente del origen.
+For N≥23, w_N,22≤22/d and the individual damage is larger than −11/(50d). It does not control the sum of all adverse components. The v_Nj=w_Nj/j have ratio 2(d−j)/(2d−j−1)≤1, with initial equality j1 and case d1 separated. Finite Abel gives exactly the nonnegative coefficients of T_m=ΣjE_j. The explicit profile and its generator z[E0(v)−vE0′(v)]/(1−z)^3 are correct in a convergent neighbourhood of the origin.
 
-La condición TODOS T_m≥0 implicaría sólo la fila k0, y permanece OPEN. No se obtiene signo de coeficientes de un generador a partir de su positividad real. E22 negativo no refuta los prefijos T_m. La novedad respecto027 es la mezcla FINITA con pesos gamma decrecientes y el criterio ponderado compatible con ellos; la sumación de Abel y Erlang son herramientas clásicas. Se distingue esa reducción suficiente de una desigualdad final aún no demostrada.
+The condition ALL T_m≥0 would imply only the row k0, and remains OPEN. No sign of coefficients of a generator is obtained from its real positivity. Negative E22 does not refute the prefixes T_m. The novelty relative to 027 is the FINITE mixture with decreasing gamma weights and the weighted criterion compatible with them; Abel summation and Erlang are classical tools. That sufficient reduction is distinguished from a final inequality not yet proved.
 
-## 4. Cierre de alcance y escala
+## 4. Closure of scope and scale
 
-La contracción aritmética proporciona brackets efectivos uniformes; Abel proporciona una reducción finita compatible con los pesos reales y un fallo preciso de positividad componente a componente. Ninguna construcción demuestra el comparador final positivo en un rango nuevo. Frente al margen032 de10^−15, no basta aplicar presupuestos de componentes de orden1 o errores de10^−3: hace falta conservar cancelación o pagar un error bastante menor. La jerarquía relativa puede reducir su error, pero todavía requiere el signo de su lower; esto no es una clausura por dificultad ni un NO-GO global.
+The arithmetic contraction provides uniform effective brackets; Abel provides a finite reduction compatible with the real weights and a precise failure of componentwise positivity. No construction proves the final comparator positive in a new range. Against the margin of 032 of 10^−15, applying budgets of order-1 components or errors of 10^−3 is not enough: one must keep cancellation or pay a much smaller error. The relative hierarchy can reduce its error, but still requires the sign of its lower bound; this is neither a closure by difficulty nor a global NO-GO.
 
-No hay nuevo signo W, nueva fila/ventana T ni modificación de papers. Root coincide independientemente en la revisión de ambos memos y sus verificadores.
+There is no new W sign, new row/window T or modification of papers. A second independent review of both memos and their verifiers agrees.

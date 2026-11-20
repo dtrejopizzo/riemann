@@ -1,16 +1,16 @@
-# POWER_MIXED_VOLTERRA_OBSTRUCTION_105 — El kernel Volterra bruto cambia de signo
+# POWER_MIXED_VOLTERRA_OBSTRUCTION_105 — The raw Volterra kernel changes sign
 
-Estado: **PROVED analítico; auditorías matemática y literal independientes aprobadas.** No se ejecuta ningún certificado. El resultado sólo excluye tratar como positivo el kernel bruto especificado abajo. No refuta otras representaciones Volterra, gauges, compensaciones, el Wronskiano mixto ni W. Papers intactos.
+Status: **PROVED analytically; independent mathematical and literal audits approved.** No certificate is executed. The result only excludes treating the raw kernel specified below as positive. It does not refute other Volterra representations, gauges, compensations, the mixed Wronskian nor W. Papers untouched.
 
-## 1. Consulta y diferencia respecto de rutas registradas
+## 1. Consultation and difference from recorded routes
 
-Consultados las reglas del proyecto, ROUTES-TRIED-INDEX/README.md, R162_2300_MASTER_GRID.md y CROSSWORD-TO-D.md; cotejados077/088/091/092/095 y102/103. La búsqueda de Volterra y del kernel R(t)-T(t)tau(s) en esos tres índices y el corpus POWER no encontró esta ecuación de la pareja real. Las referencias Volterra antiguas del grid corresponden a otros objetos.091 estudia Pi(s)/s, un kernel de Peano construido con cofactores de cuatro nodos; aquí no hay tales nodos ni cofactores. El objeto nuevo es un kernel diferencial de las curvaturas temporales reales de103.
+Consulted the project rules, ROUTES-TRIED-INDEX/README.md, R162_2300_MASTER_GRID.md and CROSSWORD-TO-D.md; cross-checked077/088/091/092/095 and102/103. The search for Volterra and for the kernel R(t)-T(t)tau(s) in those three indices and the POWER corpus did not find this equation for the real pair. The old Volterra references of the grid correspond to other objects.091 studies Pi(s)/s, a Peano kernel built with four-node cofactors; here there are no such nodes or cofactors. The new object is a differential kernel of the real time curvatures of103.
 
-La motivación era transportar mediante una ecuación Volterra de kernel positivo la comparación de curvaturas original hasta la comparación mixta pendiente. Se prueba que ESE kernel bruto no es positivo, usando los datos reales y sus colas completas. No se afirma imposibilidad del transporte tras reordenar la ecuación.
+The motivation was to transport, via a Volterra equation with positive kernel, the original curvature comparison to the pending mixed comparison. It is proved that THAT raw kernel is not positive, using the real data and their complete tails. Impossibility of the transport after rearranging the equation is not claimed.
 
-## 2. Datos reales y ecuación diferencial exacta
+## 2. Real data and exact differential equation
 
-Mantener Phi,J,K de102/103, con K PAR. Para t>0 definir
+Keep Phi,J,K of102/103, with K EVEN. For t>0 define
 
     V=-logPhi, p=V', q=V'', r=V''',
     tau=J/Phi, kappa=K/Phi,
@@ -18,101 +18,101 @@ Mantener Phi,J,K de102/103, con K PAR. Para t>0 definir
     R=X'/E, T=Y'/E,
     S=kappa'/tau', w=-S', D=tau S-kappa.
 
-103 sección11.4 prueba S>0 y S'<0; por tanto w>0.102 prueba (kappa/tau)'=(K/J)'<0. Como
+103 section11.4 proves S>0 and S'<0; hence w>0.102 proves (kappa/tau)'=(K/J)'<0. Since
 
     (kappa/tau)'=tau' D/tau^2,
 
-se tiene D>0. También R>0 porque X'=p+tq>0. Los datos son suaves en toda la semirrecta; se conservan las normalizaciones reales de las densidades.
+one has D>0. Also R>0 because X'=p+tq>0. The data are smooth on the whole half-line; the real normalizations of the densities are kept.
 
-De J'=-tPhi y K''=aPhi-J se obtienen
+From J'=-tPhi and K''=aPhi-J one obtains
 
     tau'=p tau-t,
     kappa''-2p kappa'+Y kappa=a-tau,
     a=M'(0)>0.
 
-Sustituir kappa'=S tau', kappa=tau S-D y w=-S' da exactamente
+Substituting kappa'=S tau', kappa=tau S-D and w=-S' gives exactly
 
     E w+X S-Y D=a-tau,
     D'=-tau w, S'=-w.
 
-Al derivar la primera igualdad y usar E'=1-q tau+pE resulta
+Differentiating the first equality and using E'=1-q tau+pE yields
 
     E w'+(2-2q tau)w+X'S-Y'D=E.
 
-Dividir por E, que es estrictamente positivo, produce
+Dividing by E, which is strictly positive, produces
 
     w'+B w+R S-T D=1,
     B=(2-2q tau)/E.                               (ODE)
 
-No se asigna un signo supuesto a B ni a la combinación R S-T D.
+No assumed sign is assigned to B nor to the combination R S-T D.
 
-## 3. Bordes de S,D y representación Volterra
+## 3. Boundary values of S,D and Volterra representation
 
-103 ya demuestra que tau,kappa tienden a0. Como S>0 decrece estrictamente, existe ell>=0 con S(t)->ell. Además
+103 already proves that tau,kappa tend to0. Since S>0 decreases strictly, there exists ell>=0 with S(t)->ell. Moreover
 
     kappa(t)=int_t^infinito S(s)(-tau'(s))ds,
     tau(t)=int_t^infinito(-tau'(s))ds.
 
-La primera identidad usa kappa'=S tau' y el borde kappa(infinito)=0; su integral converge porque vale kappa(t). Por tanto kappa/tau es un promedio de cola de S y está entre ell y S(t).102 prueba kappa/tau=K/J->0, de modo que ell=0. Así
+The first identity uses kappa'=S tau' and the boundary value kappa(infinity)=0; its integral converges because it equals kappa(t). Hence kappa/tau is a tail average of S and lies between ell and S(t).102 proves kappa/tau=K/J->0, so that ell=0. Thus
 
     S(t)->0, 0<D(t)<tau(t)S(t)->0,
     S(t)=int_t^infinito w(s)ds,
     D(t)=int_t^infinito tau(s)w(s)ds.
 
-Insertar estas dos identidades en ODE da la ecuación exacta
+Inserting these two identities in ODE gives the exact equation
 
     w'(t)+B(t)w(t)
        +int_t^infinito H(t,s)w(s)ds=1,
     H(t,s)=R(t)-T(t)tau(s), s>=t.                 (RAW-VOLTERRA)
 
-La integral es absolutamente convergente para cada t: R(t),T(t) son constantes respecto de s, w es integrable en la cola y tau(s)<=tau(t). El signo w>0 está probado; no se lo obtiene de una supuesta positividad de H.
+The integral is absolutely convergent for each t: R(t),T(t) are constant with respect to s, w is integrable on the tail and tau(s)<=tau(t). The sign w>0 is proved; it is not obtained from an assumed positivity of H.
 
-## 4. Cola real: H(t,t)<0 y H(t,s)>0 para s suficientemente grande
+## 4. Real tail: H(t,t)<0 and H(t,s)>0 for s sufficiently large
 
-Los bounds completos de los jets theta de088/092 dan, con y=pi exp(2t),
+The complete bounds of the theta jets of088/092 give, with y=pi exp(2t),
 
-    p=2y+O(1), q=4y+O(1), r=8y+O(1), t->infinito.
+    p=2y+O(1), q=4y+O(1), r=8y+O(1), t->infinity.
 
-Aquí los restos provienen de las cotas ya auditadas para TODA la serie; no se deriva un equivalente real. En particular
+Here the remainders come from the bounds already audited for the WHOLE series; no real equivalent is differentiated. In particular
 
-    p->infinito, q/p->2, r/p^2->0.
+    p->infinity, q/p->2, r/p^2->0.
 
-Probamos directamente el único equivalente integral necesario:
+We prove directly the only integral equivalent needed:
 
     tau(t)p(t)/t ->1.                            (TAU-LIMIT)
 
-En efecto, cambiar s=t+u/p(t) en J(t)/Phi(t) da
+Indeed, changing s=t+u/p(t) in J(t)/Phi(t) gives
 
     tau(t)p(t)/t
       =int_0^infinito [1+u/(tp(t))]
                        Phi(t+u/p(t))/Phi(t)du.
 
-Para u en cualquier compacto, los bounds de p anteriores implican p(t+u/p(t))/p(t)->1 uniformemente. Por ello
+For u in any compact set, the above bounds for p imply p(t+u/p(t))/p(t)->1 uniformly. Hence
 
     Phi(t+u/p(t))/Phi(t)
       =exp[-int_0^u p(t+v/p(t))/p(t)dv] -> exp(-u).
 
-Como p es creciente por V''>0, el cociente de densidades es a lo sumo exp(-u). Para t suficientemente grande, tp(t)>=1 y todo el integrando queda dominado por (1+u)exp(-u), integrable. Convergencia dominada prueba TAU-LIMIT sin ningún dato puntual nuevo.
+Since p is increasing by V''>0, the quotient of densities is at most exp(-u). For t sufficiently large, tp(t)>=1 and the whole integrand is dominated by (1+u)exp(-u), integrable. Dominated convergence proves TAU-LIMIT without any new pointwise datum.
 
-Ahora X'=p+tq e Y'=2pq-r, de modo que
+Now X'=p+tq and Y'=2pq-r, so that
 
     [X'-tau Y']/(tp)
       =1/t+q/p-[tau p/t][2q/p-r/p^2]
       ->0+2-1*(4-0)=-2.                         (NEGATIVE-TAIL)
 
-Luego X'-tau Y'<0 para todo t suficientemente grande. Como E>0,
+Hence X'-tau Y'<0 for all sufficiently large t. Since E>0,
 
     H(t,t)=R(t)-T(t)tau(t)
           =[X'(t)-tau(t)Y'(t)]/E(t)<0.
 
-Para cada uno de esos t fijos, la continuidad en s da también H(t,s)<0 en un intervalo inmediatamente a la derecha de t. En cambio tau(s)->0 y
+For each such fixed t, continuity in s also gives H(t,s)<0 on an interval immediately to the right of t. On the other hand tau(s)->0 and
 
-    H(t,s)->R(t)>0 cuando s->infinito.
+    H(t,s)->R(t)>0 as s->infinity.
 
-Por tanto H(t,s) cambia de signo en la MISMA pareja real para todo t suficientemente grande. No se necesita determinar un umbral óptimo ni evaluar puntos.
+Hence H(t,s) changes sign for the SAME real pair for all sufficiently large t. Neither an optimal threshold nor point evaluations are needed.
 
-## 5. Alcance exacto
+## 5. Exact scope
 
-RAW-VOLTERRA no es una ecuación con kernel integral punto a punto no negativo. Queda excluido el paso que pretendiera invocar directamente esa positividad para probar una comparación de curvaturas o un cono preservado.
+RAW-VOLTERRA is not an equation with a pointwise nonnegative integral kernel. The step that would directly invoke that positivity to prove a curvature comparison or a preserved cone is excluded.
 
-No se afirma que la integral total tenga signo negativo, ni que otra ecuación obtenida mediante gauge, integración por partes, compensación, cambio de incógnita o reordenación carezca de un kernel positivo. El signo del cuarto Wronskiano mixto, el cruce finito de U, la conservación de pares y el signo global de W permanecen abiertos. Todos los resultados reales anteriores permanecen vigentes. No se ejecutó cómputo alguno ni se modificó un paper.
+It is not claimed that the total integral has negative sign, nor that another equation obtained via gauge, integration by parts, compensation, change of unknown or rearrangement lacks a positive kernel. The sign of the fourth mixed Wronskian, the finite crossing of U, the preservation of pairs and the global sign of W remain open. All previous real results remain in force. No computation was run and no paper was modified.

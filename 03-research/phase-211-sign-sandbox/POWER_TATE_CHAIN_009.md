@@ -1,129 +1,129 @@
-# POWER_TATE_CHAIN_009 — Identidad exacta de toda la suma para la cadena Tate
+# POWER_TATE_CHAIN_009 — Exact identity of the whole sum for the Tate chain
 
-Estado: PROVED identidades y reducción escalar de la familia; OPEN su signo para todos los órdenes. No se afirma una nueva prueba de convexidad. Papers intactos.
+Status: PROVED identities and scalar reduction of the family; OPEN its sign for all orders. No new convexity proof is claimed. Papers untouched.
 
-## 1. Antecedentes y razón explícita
+## 1. Antecedents and explicit reason
 
-Leídos las reglas del proyecto, POWER_PRIME_PATTERN_FALSIFIER_008/STATE008 y las entradas del índice: Euler/Möbius/N_018; PROOF_L_SHARP_E/J (colapso Λ*1=log y momentos); A_MU_FACTORIZATION/AUDIT200 (convexidad transversal no automática); LEMMA_F_HALFLINE (contraejemplo a convexidad uniforme). Consultados el grid parte3 (Laguerre/integrales de fluctuación) y el crucigrama según POWER_BRIDGE_002. R5 del inventario abierto registra E_gamma, con criticidad y fracaso de bounds uniformes genéricos.
+Read the project rules, POWER_PRIME_PATTERN_FALSIFIER_008/STATE008 and the index entries: Euler/Möbius/N_018; PROOF_L_SHARP_E/J (collapse Λ*1=log and moments); A_MU_FACTORIZATION/AUDIT200 (transversal convexity not automatic); LEMMA_F_HALFLINE (counterexample to uniform convexity). Consulted grid part 3 (Laguerre/fluctuation integrals) and the crossword according to POWER_BRIDGE_002. R5 of the open inventory records E_gamma, with criticality and failure of generic uniform bounds.
 
-La diferencia limitada aquí es evaluar una familia uniparamétrica MUY específica, de numerador fijo s²−1/4 y denominadores (s+31.5)^n. No se relanza convexidad de todas las colas ni se atribuye signo a una identidad de Euler. La pregunta pedida permite también una reducción exacta que identifique la estadística firmada restante; eso es lo que se obtiene.
+The difference delimited here is to evaluate a VERY specific one-parameter family, with fixed numerator s²−1/4 and denominators (s+31.5)^n. Convexity of all tails is not relaunched, nor is a sign attributed to an Euler identity. The question asked also allows an exact reduction that identifies the remaining signed statistic; that is what is obtained.
 
-## 2. Tres núcleos gamma, sin expandir un polinomio enorme
+## 2. Three gamma kernels, without expanding a huge polynomial
 
-Fije u=63/2, a=u²−1/4=992. Para n>=1 defina
+Fix u=63/2, a=u²−1/4=992. For n>=1 define
 
     g_n(y)=y^(n−1)e^-uy/(n−1)! ·1_(y>0),
     C_n(t)=c_gn(t),
     ghat_n(tau)=(u−i tau)^-n.
 
-Para n>=3 escriba f_n=(∂²−1/4)g_n; para evitar cualquier regularidad de borde en las formas puede tomarse n>=4, que incluye el caso008. Sus dos momentos polares se anulan y su transformada de Laplace es (s²−1/4)/(s+u)^n.
+For n>=3 write f_n=(∂²−1/4)g_n; to avoid any boundary regularity issue in the forms one may take n>=4, which includes case 008. Its two polar moments vanish and its Laplace transform is (s²−1/4)/(s+u)^n.
 
-La identidad de Fourier
+The Fourier identity
 
     (tau²+1/4)²/(tau²+u²)^n
        =a²/(tau²+u²)^n−2a/(tau²+u²)^(n−1)
                        +1/(tau²+u²)^(n−2)
 
-da exactamente, para todo t real,
+gives exactly, for all real t,
 
     c_fn(t)=a² C_n(t)−2a C_(n−1)(t)+C_(n−2)(t).          (G)
 
-Cada C_j es positiva. La autocorrelación firmada relevante es, sin embargo, una segunda diferencia de TRES núcleos positivos; no tiene signo impuesto por la positividad individual. Esta identidad conserva todas las cancelaciones sin imprimir los n coeficientes Laguerre.
+Each C_j is positive. The relevant signed autocorrelation is, however, a second difference of THREE positive kernels; it has no sign imposed by individual positivity. This identity keeps all cancellations without printing the n Laguerre coefficients.
 
-Por integración gamma, para t>=0,
+By gamma integration, for t>=0,
 
     C_n(t)=e^-ut/Γ(n)² Σ(j=0..n−1) β_nj t^j,
     β_nj=binom(n−1,j)Γ(2n−1−j)/(2u)^(2n−1−j)>0.         (CG)
 
-Todas las series aritméticas siguientes convergen absolutamente: u+1/2=32 y los polinomios son finitos para cada n.
+All the following arithmetic series converge absolutely: u+1/2=32 and the polynomials are finite for each n.
 
-## 3. La suma sobre TODOS los contactos como estadística escalar explícita
+## 3. The sum over ALL contacts as an explicit scalar statistic
 
-Defina
+Define
 
     I_n(u)=(1/2pi)∫_R m(tau)(tau²+u²)^-n d tau,
     J_n(u)=2Σ(m>=2)Lambda(m)m^-1/2 C_n(log m)>0.
 
-La parte arquimediana se calcula sin referencia espectral adicional por
+The archimedean part is computed without additional spectral reference by
 
     I_1(u)=[psi((u+1/2)/2)−log pi]/(2u),
     I_n(u)=−[2u(n−1)]^-1 ∂_u I_(n−1)(u).
 
-Si D(s)=Σ(m>=2)Lambda(m)m^-s=−zeta'(s)/zeta(s), s>1, entonces CG da
+If D(s)=Σ(m>=2)Lambda(m)m^-s=−zeta'(s)/zeta(s), s>1, then CG gives
 
     J_n(u)=2/Γ(n)² Σ(j=0..n−1)β_nj (−1)^j D^(j)(u+1/2). (J)
 
-Es la suma completa, no un truncamiento ni una expansión asintótica. Los términos de J por separado son positivos, pero la combinación de tres órdenes impuesta por G tiene coeficientes a²,−2a,1.
+It is the complete sum, not a truncation nor an asymptotic expansion. The terms of J separately are positive, but the combination of three orders imposed by G has coefficients a²,−2a,1.
 
-Los momentos de g_n son (u−1/2)^-n y (u+1/2)^-n. Por tanto
+The moments of g_n are (u−1/2)^-n and (u+1/2)^-n. Therefore
 
     W[g_n]=I_n−J_n+2a^-n.
 
-Ponga q_n=a^n W[g_n]=a^n(I_n−J_n)+2. Aplicando la linealidad de la distribución de Weil en la autocorrelación a G,
+Set q_n=a^n W[g_n]=a^n(I_n−J_n)+2. Applying linearity of the Weil distribution in the autocorrelation to G,
 
     W[f_n]=a^(2−n)[q_n−2q_(n−1)+q_(n−2)].              (CHAIN)
 
-Las contribuciones polares se cancelan exactamente: 2−4+2=0 tras la normalización. Este es un resultado para toda la familia, independiente de cualquier cómputo de coeficientes grandes.
+The polar contributions cancel exactly: 2−4+2=0 after normalization. This is a result for the whole family, independent of any computation of large coefficients.
 
-**Objetivo escalar preciso restante:** demostrar convexidad discreta de la sucesión explícita q_n para todos n>=4. CHAIN no demuestra esa convexidad. La sucesión mezcla la contribución gamma I_n con la estadística aritmética J_n completa.
+**Remaining precise scalar objective:** prove discrete convexity of the explicit sequence q_n for all n>=4. CHAIN does not prove that convexity. The sequence mixes the gamma contribution I_n with the complete arithmetic statistic J_n.
 
-## 4. Qué hace exactamente Λ*1=log y qué no hace
+## 4. What Λ*1=log does exactly and what it does not
 
-La identidad de Euler para s>1 es
+The Euler identity for s>1 is
 
     D(s) zeta(s)=Σ(m>=1)(log m)m^-s=−zeta'(s).
 
-Diferenciar j veces expresa los números de J como una recurrencia triangular entre sumas positivas. De forma explícita, con H_j(s)=ΣLambda(m)(log m)^j m^-s y Z_j(s)=Σ(log m)^j m^-s,
+Differentiating j times expresses the numbers of J as a triangular recurrence among positive sums. Explicitly, with H_j(s)=ΣLambda(m)(log m)^j m^-s and Z_j(s)=Σ(log m)^j m^-s,
 
     Σ(r=0..j)binom(j,r) H_r(s) Z_(j−r)(s)=Z_(j+1)(s).
 
-Despejar H_j requiere RESTAR todos los términos r<j; resolver de una vez introduce los signos de Möbius. Así Euler identifica exactamente los valores aritméticos y permite cálculos, pero no transforma automáticamente la segunda diferencia de CHAIN en una suma positiva. Este punto coincide con los antecedentes Euler/Möbius citados; no se presenta como descubrimiento de una nueva barrera.
+Solving for H_j requires SUBTRACTING all terms r<j; solving at once introduces the Möbius signs. Thus Euler identifies the arithmetic values exactly and allows computations, but does not automatically transform the second difference of CHAIN into a positive sum. This point coincides with the cited Euler/Möbius antecedents; it is not presented as the discovery of a new barrier.
 
-Ni la positividad H_j>0, ni la logconvexidad ordinaria de Z_j, ni la positividad de C_n justifican el signo de Δ²q_n: las tres combinaciones firmadas permanecen. No se afirma que sea imposible encontrar una identidad positiva más precisa para este dato; aquí no se la ha construido.
+Neither the positivity H_j>0, nor the ordinary log-convexity of Z_j, nor the positivity of C_n justify the sign of Δ²q_n: the three signed combinations remain. It is not claimed that it is impossible to find a more precise positive identity for this datum; one has not been constructed here.
 
-## 5. Relación exacta con el test008 y con E_gamma
+## 5. Exact relation with test 008 and with E_gamma
 
-El test008 es un múltiplo de f_n con n=2^17. Su obligación TAIL es CHAIN escrita separando los contactos m<=1024 del resto, conservando la misma autocorrelación G. Las fórmulas J/CHAIN suman formal y absolutamente toda esa cola, pero aún dejan su valor y signo en una combinación de derivadas de D en 32.
+Test 008 is a multiple of f_n with n=2^17. Its TAIL obligation is CHAIN written separating the contacts m<=1024 from the rest, keeping the same autocorrelation G. The J/CHAIN formulas sum formally and absolutely that whole tail, but still leave its value and sign in a combination of derivatives of D at 32.
 
-La densidad espectral normalizada de f_n es proporcional a (tau²+1/4)²/(tau²+u²)^n y se concentra en tau=0 al crecer n; sus momentos beta lo demuestran directamente. Esto la coloca en el régimen de paquetes concentrantes a frecuencia cero relacionado con el residuo E_gamma del inventario. No es un control uniforme de todos los paquetes ni una nueva desigualdad Chebyshev: solo es una familia gamma concreta, con fórmula de todos sus órdenes. Los problemas ya registrados no aportan la convexidad discreta específica de q_n; tampoco su criticidad prueba que dicha convexidad sea falsa.
+The normalized spectral density of f_n is proportional to (tau²+1/4)²/(tau²+u²)^n and concentrates at tau=0 as n grows; its beta moments prove this directly. This places it in the regime of zero-frequency concentrating packets related to the residue E_gamma of the inventory. It is not uniform control of all packets nor a new Chebyshev inequality: it is only a concrete gamma family, with a formula for all its orders. The problems already recorded do not supply the specific discrete convexity of q_n; nor does their criticality prove that this convexity is false.
 
-## 6. Desigualdad finita válida para toda la cadena: ARCH empeora estrictamente
+## 6. Finite inequality valid for the whole chain: ARCH strictly worsens
 
-Sea p_n la densidad espectral normalizada de f_n y E_n su esperanza. Entonces
+Let p_n be the normalized spectral density of f_n and E_n its expectation. Then
 
     p_(n+1)(tau)=w(tau)p_n(tau)/E_n w,
     w(tau)=1/(u²+tau²).
 
-Por tanto, para la energía arquimediana normalizada alpha_n=E_n m,
+Therefore, for the normalized archimedean energy alpha_n=E_n m,
 
     alpha_(n+1)−alpha_n=Cov_n(m,w)/E_n w<0.              (MON)
 
-El símbolo m es estrictamente creciente en |tau| y w estrictamente decreciente. El signo estricto de la covarianza se prueba integrando [m(x)−m(y)][w(x)−w(y)]/2 contra p_n(x)p_n(y). La densidad no es puntual. Así MON es una desigualdad finita de TODOS los órdenes, no una observación asintótica. Su límite es m(0), por las fórmulas beta y concentración.
+The symbol m is strictly increasing in |tau| and w strictly decreasing. The strict sign of the covariance is proved by integrating [m(x)−m(y)][w(x)−w(y)]/2 against p_n(x)p_n(y). The density is not a point mass. Thus MON is a finite inequality for ALL orders, not an asymptotic observation. Its limit is m(0), by the beta formulas and concentration.
 
-Una estimación cuantitativa adicional conserva explícitamente n. Para n>=7, los momentos beta de §008 dan
+An additional quantitative estimate keeps n explicit. For n>=7, the beta moments of §008 give
 
     E_n tau² ≤u²/n+24u^4/n²+240u^6/n³.
 
-Si n>=64u², el lado derecho es <2u²/n. Usando la cota m(tau)≤m(0)+17tau² ya demostrada en008,
+If n>=64u², the right-hand side is <2u²/n. Using the bound m(tau)≤m(0)+17tau² already proved in 008,
 
     alpha_n <m(0)+34u²/n,
     c_fn(t)/||f_n||² >1−u²t²/n.
 
-En particular, si n>=64u² y n>=2u²(log R)², cada contacto primo-potencia m<=R perjudica el signo con autocorrelación al menos ||f_n||²/2. Es una versión uniforme y explícita del cálculo008 para cualquier segmento finito. Recupera el mecanismo ya conocido de negatividad de sub-combs; no se presenta como nueva ruta al signo completo. La reparación debe venir de contactos que escapan con n.
+In particular, if n>=64u² and n>=2u²(log R)², each prime-power contact m<=R harms the sign with autocorrelation at least ||f_n||²/2. It is a uniform and explicit version of the computation 008 for any finite segment. It recovers the already known mechanism of negativity of sub-combs; it is not presented as a new route to the complete sign. The repair must come from contacts that escape with n.
 
-No se obtiene una desigualdad de una dirección para la energía COMPLETA: cambiar n multiplica también cada cos(tau log m), función no monótona. El término de covarianza del peine conserva ambos signos. Por eso MON no implica monotonía ni completa monotonía de q_n. La positividad de D y de sus derivadas alternadas tampoco da, por sí sola, esas propiedades de q_n, que incorpora la parte gamma y una combinación firmada de órdenes.
+No one-directional inequality is obtained for the COMPLETE energy: changing n also multiplies each cos(tau log m), a non-monotone function. The covariance term of the comb keeps both signs. Hence MON does not imply monotonicity nor complete monotonicity of q_n. Positivity of D and of its alternating derivatives does not by itself give those properties of q_n either, which incorporates the gamma part and a signed combination of orders.
 
-## 7. Por qué el signo de esta familia sola no cerraría todos los tests
+## 7. Why the sign of this family alone would not close all tests
 
-Cada miembro individual tiene la expresión temporal
+Each individual member has the time expression
 
     f_n(y)=y^(n−3)e^-uy/Γ(n)
         ·[(n−1)(n−2)−2u(n−1)y+a y²], y>0.
 
-Tiene como máximo dos cambios de signo. Los múltiplos escalares de miembros individuales no son densos en el conjunto de tests reales: un test que alterna signo con amplitud fija en cuatro intervalos disjuntos no se puede aproximar en L² por funciones con a lo sumo dos cambios. Si los intervalos tienen longitud positiva, todo aproximante deja un error L² uniforme en al menos uno.
+It has at most two sign changes. Scalar multiples of individual members are not dense in the set of real tests: a test that alternates sign with fixed amplitude on four disjoint intervals cannot be approximated in L² by functions with at most two changes. If the intervals have positive length, every approximant leaves a uniform L² error on at least one.
 
-Esto no afirma que su ENVOLVENTE lineal sea pequeña; las combinaciones y sus términos cruzados son otro problema. Probar W[f_n]>=0 para cada n solo prueba diagonales de una familia; no prueba W[Σc_n f_n]>=0. El puente de densidad de POWER_BRIDGE_002 requiere positividad de todas esas combinaciones, que no se deduce de convexidad escalar de q_n.
+This does not claim that its linear SPAN is small; combinations and their cross terms are another problem. Proving W[f_n]>=0 for each n only proves diagonals of a family; it does not prove W[Σc_n f_n]>=0. The density bridge of POWER_BRIDGE_002 requires positivity of all those combinations, which does not follow from scalar convexity of q_n.
 
-## Resultado y alcance
+## Result and scope
 
-Se obtuvo una identidad cerrada de tres núcleos gamma y una única sucesión escalar explícita que conservan TODA la suma aritmética y la anulación Tate. No se obtuvo signo de todos los n. El residuo nuevo en su detalle es Δ²[a^n(I_n−J_n)]>=0 para esta cadena fija, no convexidad transversal universal. Cualquier siguiente intento debe aportar una desigualdad para esta combinación firmada; repetir Λ*1=log, positividad de derivadas individuales o convexidad genérica no completa la prueba.
+A closed identity of three gamma kernels and a single explicit scalar sequence were obtained, which keep the WHOLE arithmetic sum and the Tate cancellation. The sign for all n was not obtained. The new residue in its detail is Δ²[a^n(I_n−J_n)]>=0 for this fixed chain, not universal transversal convexity. Any next attempt must supply an inequality for this signed combination; repeating Λ*1=log, positivity of individual derivatives or generic convexity does not complete the proof.

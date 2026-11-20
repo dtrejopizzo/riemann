@@ -1,22 +1,22 @@
-# Cancelación obligatoria entre dos sumas ya firmadas de primos
+# Forced cancellation between two already signed prime sums
 
-En la muestra C_k de 217 separar TODOS los primos p≤exp(k/3) de los mayores, conservando dentro de cada grupo sus signos y todo el integral oscilatorio en u. Llamar P_k al primer grupo. Se tiene
+In the sample C_k of 217 separate ALL primes p≤exp(k/3) from the larger ones, keeping within each group their signs and the whole oscillatory integral in u. Call the first group P_k. One has
 
     P_k ∼ 3^(−√k+ik) exp(k/6−ik) k^(−3/2) · H/(1/2−3i),
     H = 3 exp(−1/4)/(2√π) · ∫₀^∞ exp(−r−ir²/2)dr ≠ 0.
 
-La equivalencia es compleja. Luego C_k−P_k∼−P_k, incondicionalmente. En efecto 217 y |γ|>14, |δ|≤1/2 dan limsup log(1+|C_k|)/k≤arctan(1/28)<1/6. El margen es mayor usando la altura verificada. 211 daba cancelación de una suma prima corta a tasa fija, en una subsucesión. 216 daba el coste de tomar módulos por primo después del integral. Aquí la señal sobrevive a AMBAS sumas firmadas (en primos y en tasas) para TODO entero suficientemente grande. El corte k/3 se escoge para que las dos fases tengan derivadas iguales en u=3.
+The equivalence is complex. Hence C_k−P_k∼−P_k, unconditionally. Indeed 217 and |γ|>14, |δ|≤1/2 give limsup log(1+|C_k|)/k≤arctan(1/28)<1/6. The margin is larger using the verified height. 211 gave cancellation of a short prime sum at fixed rate, along a subsequence. 216 gave the cost of taking moduli per prime after the integral. Here the signal survives BOTH signed sums (over primes and over rates) for EVERY sufficiently large integer. The cut k/3 is chosen so that the two phases have equal derivatives at u=3.
 
-**Coeficiente de borde.** Para L=k/3+d, definir I_k(L) como en 216 pero con el peso u^(−√k+ik−1) de 217. Sea F_k=3^(−√k+ik) exp(−ik) k^(−3/2). Se tiene, para d en compactos,
+**Boundary coefficient.** For L=k/3+d, define I_k(L) as in 216 but with the weight u^(−√k+ik−1) of 217. Let F_k=3^(−√k+ik) exp(−ik) k^(−3/2). One has, for d in compacts,
 
     I_k(k/3+d)/F_k = H exp(−3id)+o(1).
 
-En efecto, en u=3exp(r/√k), du/u=dr/√k, el peso restante da 3^(−√k+ik)exp(−r+i√k r). Para cada r acotado el indicador de corte es uno eventualmente, pues log X_(k²)(u) es de orden k² allí. Por la escala y el perfil de 211,
+Indeed, in u=3exp(r/√k), du/u=dr/√k, the remaining weight gives 3^(−√k+ik)exp(−r+i√k r). For each bounded r the cut indicator is eventually one, since log X_(k²)(u) is of order k² there. By the scaling and the profile of 211,
 
     k c_(k²)(L;u) = u exp(−(uL/k)²/4) cos(uL)/√π + o(1)
 
-uniformemente en r,d compactos. La envolvente previa k|c|≤Cu da dominación en todo r≥0 por C exp(−r/2) tras el cambio, para k≥4, aun con el indicador. En la rama negativa del coseno usar uL=k+√k r+r²/2+3d+o(1). Tras quitar exp(−ik) queda el integral indicado. En la rama positiva queda la oscilación adicional exp(2i√k r), multiplicada por un prefactor de módulo uno y un perfil que converge en L¹ luego de extraer esa fase (y la fase constante). Riemann–Lebesgue da o(1). Los errores son uniformes en d compacto por Taylor uniforme en r acotado y la dominación común. El factor integral de H difiere de 1 en módulo de la diferencia estrictamente menos que ∫ exp(−r)r²/2 dr=1, pues |exp(−ix)−1|<x para x>0. Esto prueba H≠0.
+uniformly in compact r,d. The previous envelope k|c|≤Cu gives domination for all r≥0 by C exp(−r/2) after the change, for k≥4, even with the indicator. On the negative branch of the cosine use uL=k+√k r+r²/2+3d+o(1). After removing exp(−ik) the indicated integral remains. On the positive branch the additional oscillation exp(2i√k r) remains, multiplied by a prefactor of modulus one and a profile that converges in L¹ after extracting that phase (and the constant phase). Riemann–Lebesgue gives o(1). The errors are uniform in compact d by uniform Taylor in bounded r and the common domination. The integral factor of H differs from 1 in modulus of the difference by strictly less than ∫ exp(−r)r²/2 dr=1, since |exp(−ix)−1|<x for x>0. This proves H≠0.
 
-**Suma prima hasta el corte.** En d=log p−k/3 con −D≤d≤0 fijo, el PNT da convergencia débil de la medida exp(−k/3)Σ(log p)δ_d a exp(d)dd, en ese compacto. Multiplicar por p^(−1/2) exp(k/6)=exp(−d/2) y usar el perfil uniforme da, tras normalizar P_k por F_k exp(k/6), la contribución H∫_(−D)^0 exp((1/2−3i)d)dd. Para d<−D se usa |I_k(L)|≤C|F_k|, uniforme en L por la envolvente k|c|≤Cu y el cambio en r. Chebyshev y sumación parcial dan Σ_(p≤X)(log p)/√p≤C√X. La cola normalizada por tanto cuesta O(exp(−D/2)). Tomar D→∞ prueba la fórmula sin exigir tasa de error en PNT.
+**Prime sum up to the cut.** For d=log p−k/3 with fixed −D≤d≤0, PNT gives weak convergence of the measure exp(−k/3)Σ(log p)δ_d to exp(d)dd, on that compact. Multiplying by p^(−1/2) exp(k/6)=exp(−d/2) and using the uniform profile gives, after normalising P_k by F_k exp(k/6), the contribution H∫_(−D)^0 exp((1/2−3i)d)dd. For d<−D one uses |I_k(L)|≤C|F_k|, uniform in L by the envelope k|c|≤Cu and the change in r. Chebyshev and partial summation give Σ_(p≤X)(log p)/√p≤C√X. The normalised tail therefore costs O(exp(−D/2)). Letting D→∞ proves the formula without requiring an error rate in PNT.
 
-**Consecuencia para la ruta.** Estimar separadamente en módulo estos dos bloques de primos ya cuesta exp(k/6+o(k)); la meta de 217 es exp(o(k)) en una subsucesión. El término principal de P_k se obtiene de la densidad continua, con su fase compleja explícita. Restarlo puede quitar ese término, pero el o(1) relativo del PNT sólo da error o(|P_k|), insuficiente por sí solo en la escala requerida. No se ha probado control subexponencial del residuo conjunto.
+**Consequence for the route.** Estimating these two blocks of primes separately in modulus already costs exp(k/6+o(k)); the target of 217 is exp(o(k)) along a subsequence. The main term of P_k is obtained from the continuous density, with its explicit complex phase. Subtracting it can remove that term, but the relative o(1) of PNT only gives error o(|P_k|), insufficient by itself at the required scale. Subexponential control of the joint residue has not been proved.

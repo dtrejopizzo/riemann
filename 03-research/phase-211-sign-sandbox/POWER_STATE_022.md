@@ -1,19 +1,19 @@
-# Estado022 — Falsificador completo del inverso positivo
+# State022 — Full falsifier of the positive inverse
 
-Estado: PROVED negatividad de un kernel auxiliar completo; signo global de W OPEN. Goal activo. Papers intactos. Sustituye STATE021 como resumen vigente.
+Status: negativity of a full auxiliary kernel PROVED; global sign of W OPEN. Goal active. Papers untouched. Replaces STATE021 as the current summary.
 
-## Resultado nuevo y certificado
+## New certified result
 
-POWER_INVERSE_INTERIOR_022 demuestra −2/3<h_128(1)<−33/50. Se calcula un solo punto elegido por la escala del kernel, con coeficientes racionales, logaritmos intervalares y Möbius para m<=64. La COLA COMPLETA m>=65 queda acotada por10^-10 mediante una integral de polinomios logarítmicos positivos. Root ejecutó el certificado reforzado con PASS; POWER_INVERSE_INTERIOR_AUDIT_022 aprueba la prueba final y su alcance.
+POWER_INVERSE_INTERIOR_022 proves −2/3<h_128(1)<−33/50. A single point chosen by the scale of the kernel is computed, with rational coefficients, interval logarithms and Möbius for m<=64. The FULL TAIL m>=65 is bounded by10^-10 through an integral of positive logarithmic polynomials. The reinforced certificate was run with PASS; POWER_INVERSE_INTERIOR_AUDIT_022 approves the final proof and its scope.
 
-Esto FALSIFICA la hipótesis auxiliar h_N(x)>=0 para todos N,x. No es un contraejemplo a W ni decide ERR. En N128, la continuidad produce una región adversa h_N B>0 inmediatamente a la derecha de1; OUTER020 sigue dando h_N>0 cuando logx>=127/30. El emparejamiento total requiere conservar ambas regiones.
+This FALSIFIES the auxiliary hypothesis h_N(x)>=0 for all N,x. It is not a counterexample to W nor does it decide ERR. At N128, continuity produces an adverse region h_N B>0 immediately to the right of1; OUTER020 still gives h_N>0 when logx>=127/30. The total pairing requires keeping both regions.
 
-## Qué se mantiene probado sobre W
+## What remains proved about W
 
-Sin ampliación: filas N1,2,3 para todo k, cono k>=10000N², ocho polos arbitrarios y bloque fijo12. El puente escalar017 sigue exigiendo completar TODOS N,k. No hay nueva ventana T certificada. Las cotas parciales exactas021 y su diagnóstico numérico no determinan el signo del átomo211.
+No extension: rows N1,2,3 for all k, cone k>=10000N², eight arbitrary poles and fixed block12. The scalar bridge017 still requires completing ALL N,k. No new window T certified. The exact partial bounds021 and their numerical diagnosis do not determine the sign of atom211.
 
-## Pivot autorizado
+## Authorised pivot
 
-Se estudia una condición más débil sobre la primitiva exterior J_N(x)=integral_x^infinito h_N, que permite h_N negativo. El objeto K_N=J_N+xh_N regula la monotonía de J_N/x, y una descomposición por intervalos enteros conserva los saltos de B. Su suficiencia y su validez global deben comprobarse por separado. Un valor favorable en N128 no autoriza extrapolar a otros N; se está verificando un caso vecino con cola completa.
+A weaker condition is studied on the exterior primitive J_N(x)=integral_x^infinito h_N, which allows h_N negative. The object K_N=J_N+xh_N governs the monotonicity of J_N/x, and a decomposition by integer intervals keeps the jumps of B. Its sufficiency and its global validity must be checked separately. A favourable value at N128 does not authorise extrapolating to other N; a neighbouring case with full tail is being verified.
 
-No se relanza la positividad global de h_N ya refutada ni se usa el módulo para borrar la región adversa. El objetivo sigue activo y requiere una desigualdad aritmética firmada que controle el balance completo.
+The already refuted global positivity of h_N is not relaunched, nor is the modulus used to erase the adverse region. The objective remains active and requires a signed arithmetic inequality controlling the full balance.
