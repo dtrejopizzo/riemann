@@ -34,22 +34,22 @@ The result confirms the r51 finding that long-range zero-counting statistics —
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>sigma2_pvalue_matrix.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>4×4 matrix of pairwise permutation p-values for the test statistic |ΔΣ²(L=100)| between zero lists of ζ, L_DH, L(χ₅), and L(Δ,s). Generated with B=1000 spacing-pool permutations on empirically unfolded spacings; Σ²(L=100) estimated by 2000 random window centers per evaluation.</artifact-description>
 </artifact>
 <artifact>
 <file-name>sigma2_diff_matrix.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>4×4 matrix of observed absolute differences |Σ²_A(L=100) − Σ²_B(L=100)| for all pairs of the four L-functions, the test statistic underlying the permutation p-value matrix.</artifact-description>
 </artifact>
 <artifact>
 <file-name>sigma2_L100_values.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Per-function table of the number variance Σ²(L=100) computed on empirically unfolded zeros: ζ=0.362, L_DH=14.324, L(χ₅)=0.364, L(Δ,s)=0.298, along with the number of zeros used (5000, 5000, 5000, 1455).</artifact-description>
 </artifact>
 <artifact>
 <file-name>sigma2_pvalue_heatmap.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Annotated heat-map of the 4×4 permutation p-value matrix (log color scale) with observed |ΔΣ²(L=100)| values overlaid, visually demonstrating the L_DH outlier behavior vs. the three GRH-satisfying L-functions.</artifact-description>
 </artifact>
 </artifacts>

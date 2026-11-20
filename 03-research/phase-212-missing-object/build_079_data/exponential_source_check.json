@@ -1,0 +1,7 @@
+{
+  "status": "PASS_NUMERICAL_FORMULA_CHECK",
+  "decimal_digits": 70,
+  "integrals": 6,
+  "maximum_error": "4.527839539413356183754559645443895890341265599069569094791307444967751e-71",
+  "scope": "exponential moment-correction source formulas; no interval enclosure or sign certificate"
+}

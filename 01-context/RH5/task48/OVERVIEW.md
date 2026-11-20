@@ -29,12 +29,12 @@ The original ζ_δ control was specifically designed to be invisible to imaginar
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>zeta_delta_strong_N5000_dps50.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Strong ζ_δ control with 5000 entries, structured dtype [('re','<U10'),('im','<U51')]. Imaginary parts are bit-identical to `zeta_zeros_N5000_dps50.npy`. Real parts are '0.5' everywhere except at 20 non-contiguous indices {1000, 1020, 1040, …, 1380}, which are '1.5'. SHA256 `be6c93a83940ffe86f42e431cd8ca5fe9660b1f074b52f91219e18c21c4d153f`. Intended as a calibration standard for Front I (Jacobi, 1/|ρ|² weights) and Front III (delay-embedded Re(ρ) TDA) pipelines that were blind to the original ζ_δ.</artifact-description>
 </artifact>
 <artifact>
 <file-name>zeta_delta_strong_validation.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. (A) Bar chart on log scale comparing |S1| and S2 Front I observables (Σ 1/|ρ|² · (Re−½)^k) for original vs. strong ζ_δ; ratios 7.8× and 78×. (B) H0 persistence diagrams of d=5, τ=1 delay embeddings of Re(ρ) over window indices 950–1450 for the two controls, showing max H0 lifetime 0.10 (original) vs 1.00 (strong, 10× larger).</artifact-description>
 </artifact>
 </artifacts>

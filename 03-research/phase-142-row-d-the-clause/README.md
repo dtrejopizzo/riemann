@@ -72,7 +72,7 @@ is a simple on-line zero of `ξ`; (V2) no other zero has `|Im ρ| ≤ 21`. Rosse
 by interval arithmetic plus an argument-principle count. Q-B literature: Kreĭn–Nudel'man (AMS TMM 50,
 1977); Rudin, Illinois J. Math. **7** (1963); Akhiezer (1965); Hartshorne GTM **52** Ch. V; Lazarsfeld
 Ergebnisse **48** §2.2. **Beurling–Malliavin is a corpus cross-reference, not a new import**
-(`03-research/phase-33-dbn/85`, `/82` §5.2 — and it needs no RH).
+(`03-research/phase-33-dbn/85-completeness-of-exponential-systems.md`, `82-variational-reformulation-and-the-connection.md` §5.2 — and it needs no RH).
 
 ## Next
 

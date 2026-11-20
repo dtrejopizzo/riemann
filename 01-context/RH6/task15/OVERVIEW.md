@@ -35,12 +35,12 @@ The result directly confirms the hypothesis posed for r19: at a fixed sensitive 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_J_sweep_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON record of the Weil-form J-sweep at (T0=46.13, σ=1.0, prime bound=1000). Contains parameters, the inferred M_zeros convention (Re[v v^T], non-Hermitian), the eigenvalue table (λ_min, λ_max) for ζ and ζ_δ at J∈{4,8,12,16,20}, three candidate fits (power-law α≈17.9, exponential a≈1.93, super-exponential a≈0.57 J log J), local log-log slopes, and a cross-check against the published J=10 validation value. Computed at mpmath dps=80 for stability.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_J_sweep.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Summary figure: semi-log plot of |λ_min(Q)| vs basis dimension J for ζ_δ (δ=0.05, first 20 zeros) and the GRH-conforming ζ control, with the global power-law fit overlaid (J^17.9). Annotated separation of ~90 orders of magnitude at J=20.</artifact-description>
 </artifact>
 </artifacts>

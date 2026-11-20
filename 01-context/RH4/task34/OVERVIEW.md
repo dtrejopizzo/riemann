@@ -27,12 +27,12 @@ The simple-resonator change-of-measure framework — taking |R(t)|² as a weight
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>resonator_fit_results.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Empirical 8×8 zeta M_jk matrix and the best-fit theoretical M_jk(R) matrices and coefficient vectors for four resonator supports: naive R=1, simple Q={1,2,3,5}, Q={1..100}, and Q={1..200}. Coefficients optimized by L-BFGS-B / Nelder-Mead minimization of the Frobenius residual against the empirical target; theoretical matrices computed from the closed-form weighted-moment formula with N=10⁶ matching the empirical pipeline. Useful for downstream comparisons with longer / structured resonators (e.g., Bondarenko–Seip family).</artifact-description>
 </artifact>
 <artifact>
 <file-name>resonator_fit_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) heatmaps of empirical M_jk(ζ) vs best-fit M_jk(R) for Q={1..200}, with PC1 variance fractions; (B) eigenvalue spectra (log scale) and PC1 eigenvector profiles for empirical, naive R=1, simple {2,3,5}, and Q={1..200} fit, illustrating that the resonator matches the top-eigenvector shape but not the empirical PC1 concentration.</artifact-description>
 </artifact>
 </artifacts>

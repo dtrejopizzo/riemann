@@ -1,0 +1,24 @@
+# Separación uniforme de cabeza y cola para mezclas de variación total acotada
+
+Antecedentes 213-10-A, 213-11-A, 213-12-B y la cuadratura 106_47 §2. La operación adicional controla la variación del **test de cuadratura** trasladando la variación a la cabeza y usando únicamente la masa de la cola. Conservamos la autoenergía de la cola. Esto admite medidas con átomos dependientes de k. El cotejo dirigido con 106_118 distingue este uso de la variación de una cota absoluta sobre discrepancias de variación creciente.
+
+Con las notaciones de 012-B, sea μ una medida compleja en [0,δ] de norma TV≤1. Se incluyen las combinaciones finitas. Escribimos Y_k=U(A_k+D_k), con A la mezcla de la cabeza límite. Para algún δ>0 fijo y uniformemente en μ,
+    
+    a(Y_k)=a(UA)+a(UD_k)+o(1),
+    a(Y_k)≥c||UA||²+||UD_k||²−ε_k,    ε_k→0, c>0.
+
+Aquí el límite es k→∞. Para norma TV arbitraria el error se multiplica por ||μ||_TV².
+
+**Cuadratura.** Una mezcla física se integra con dμ(s)exp(−s/2) y argumento exp(−s)x. Los dos indicadores de cabeza tienen por ello, tras mezclar, norma sup y variación total en x acotadas por una constante de δ, también para A_k. Para G_k(y)=k D_k(ky), cada celda dilatada tiene longitud exp(s)/k en y. Por integración contra |μ| se obtiene ||G_k||₁≤|d|exp(δ/2), con soporte en [1,2exp δ]. Para k grande los soportes físicos cabeza y cola son disjuntos y ordenados. El término mixto del peine es 2 Re k⁻¹ Σ Λ(n) Φ_k(n/k), con
+
+    Φ_k(v)=v⁻¹ ∫G_k(y) conjugado(A_k(y/v))dy.
+
+Su soporte está en un compacto común [l,L]⊂(0,∞), que se elige con holgura. En ese compacto v↦y/v es monótona. La variación de v↦A_k(y/v) está acotada por la variación de A_k, y multiplicar por 1/v agrega una cota uniforme por su supremo. Integrar con |G_k| da variación acotada uniformemente para Φ_k. Esta función es continua por continuidad de las dilataciones en L¹ de G_k y acotación de A_k. Sumación por partes acota la diferencia entre la suma normalizada y ∫Φ_k por C sup_{l≤v≤L}|ψ(kv)/k−v|, que tiende a cero por PNT. El término continuo es (∫conjugado(A_k(x))dx/x)(∫G_k(y)dy). El primer factor es O(1/k): el de A se anula exactamente y la diferencia de coeficientes es O(log(1+1/k)). Así el cruce aritmético completo es o(1) uniforme.
+
+**Parte arquimediana.** En coordenadas logarítmicas, UA_k es una combinación de mezclas de dos perfiles fijos compactos de variación acotada, con coeficientes uniformemente acotados. El multiplicador m(D) aplicado a cada perfil pertenece a L² por 213-10-A. En [log k,∞), las normas L² de todas sus traslaciones por s∈[0,δ] tienden uniformemente a cero por integrabilidad de sus cuadrados. Por Minkowski la misma cota vale para m(D)UA_k. Por otra parte ||UD_k||₂≤|d| por la norma de la celda original y la isometría de las traslaciones logarítmicas. Su soporte empieza en log k, así que su cruce arquimediano es o(1). La sustitución de a(UA_k) por a(UA) cuesta O(1/k) uniformemente: las mezclas de los dos perfiles tienen norma de forma acotada en una ventana fija y los coeficientes difieren en O(1/k).
+
+**Pisos y alcance.** Para la cabeza usar el radio y la cota coerciva de 012-B. La cota se extiende de sumas finitas a medidas por aproximación de la integral vectorial de traslaciones continuas en norma de forma. Para la cola, encajar su soporte por traslación en una ventana fija de longitud 2. Elegir δ suficientemente pequeño en el piso de soporte corto de 010-A para esa ventana. La longitud δ+log(1+1/k) satisface entonces ese piso para todo k grande. Esto da a(UD_k)≥||UD_k||², sin condición de momentos. En esta argumentación cada pieza está en el dominio por integración de traslaciones de perfiles BV en una ventana finita para cada k.
+
+Por tanto, para cualquier η>0, las mezclas con ||UA||≥η||μ||_TV tienen energía estrictamente positiva para todo k suficientemente grande según η y δ, uniformemente sobre esas medidas. Una sucesión de energías no positivas con ||μ||_TV=1 y k→∞ obligaría a ||UA|| y ||UD_k|| a tender ambas a cero. La desigualdad deja abierto el signo precisamente a esa escala de cancelación. Estado PROVED tras revisión matemática independiente, incluido el corolario siguiente.
+
+**Radio uniforme en el cono de coeficientes no negativos.** Para μ positiva el momento físico ordinario de A es (b−a)∫exp(s/2)dμ(s). Su valor absoluto es al menos d||μ||_TV. El soporte de A tiene longitud a lo sumo 3exp δ y ||UA||₂=||A||₂, luego se cumple el criterio anterior con η=d/(3exp δ)^(1/2). El umbral K es común al cono. Para los finitos 3≤k<K tomar el mínimo de sus radios en 213-10-A y del δ ya obtenido. Cada cota coerciva de esos perfiles pasa a medidas de igual manera. Una mezcla no nula de medida positiva y perfil no nulo tampoco se anula: el producto de sus transformadas enteras no es idénticamente cero. Por tanto existe δ*>0 válido para todo k≥3 y toda medida positiva no nula en [0,δ*]. La energía completa de cada mezcla es estrictamente positiva.

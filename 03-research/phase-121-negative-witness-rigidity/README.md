@@ -1,4 +1,4 @@
-# Phase 121 -- beyond the positive-lift architecture
+# Phase 121 — Negative-witness rigidity, beyond the positive-lift architecture
 
 ## Status
 

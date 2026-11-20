@@ -35,7 +35,7 @@ Numerically every computed Q_N is well-conditioned, with λ_max ≈ 3.5–3.9 an
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_positivity_lambda_min.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Bar chart of λ_min(Q_N) at N=5000, W=5 with the Fejér-squared kernel for ζ, L(χ₄ mod 5), L_DH (critical-only and +110 off-line), ζ_δ_strong (=ζ under this construction), and L(Δ,s) (unavailable). Annotates the structural PSD-by-construction caveat. Generated via scipy.sparse.linalg.eigsh on banded sparse matrices built with empirical/analytic unfolding (Riemann–von Mangoldt for ζ and L(χ₄), 3-parameter empirical fit for L_DH).</artifact-description>
 </artifact>
 </artifacts>

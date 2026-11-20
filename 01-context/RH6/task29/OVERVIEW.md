@@ -25,12 +25,12 @@ The experiment was designed as the critical control distinguishing two hypothese
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_J_sweep_zeta_geom_LDH_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON record of the J-sweep experiment: full parameter set (T0=85.6993, σ=2.0, β=0.3085, prime_bound=100000, dps=80, basis formula, identification of shifted zero γ_23), λ_min/λ_max for J ∈ {4,8,12,16,20} for both the single-shifted ζ and a critical-only ζ control, local and global power-law fits, and a direct comparison against r28 L_DH and r51 small-δ ζ single-shift exponents. Construction was validated by bit-exact reproduction of r51's eigenvalues.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_zeta_LDH_geometry_comparison.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Log–log comparison plot of |λ_min| vs basis dimension J for three Weil-form configurations: (red) ζ single-shift at L_DH geometry (this study, α≈3.76), (blue) real L_DH off-critical (r28, α=0.90), (green) ζ single-shift with small δ at σ=1 (r51, α=13.98), plus an α=1 reference line. Demonstrates that matching the β/σ geometric ratio does not reproduce the L_DH growth exponent.</artifact-description>
 </artifact>
 </artifacts>

@@ -23,12 +23,12 @@ Under the hypothesis that the Euler-product structure leaves a fingerprint on th
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>omega_class_moments.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON file with per-L-function (ζ, L(Δ), L_DH) values of total Σ_k M_k, individual diagonal moments M_k for k=1,2,3,4, their fractions of the total, and the cross-moment Re/Im ∫_0^500 S_1 \bar S_2 dt for the truncated Dirichlet polynomial of length N_terms=10⁴. Computed by exact closed-form integration of e^{i(log n−log m)t} over t∈[0,500] in float64 with τ(n) coefficients from PARI/GP (mfDelta) and L_DH coefficients from `ldh_def.py`.</artifact-description>
 </artifact>
 <artifact>
 <file-name>omega_class_decomposition.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Single-panel summary bar chart of fractional ω-class moments (k=1..4) for ζ, L(Δ) and L_DH, with cross-moment Re∫S_1\bar S_2 / total annotated below; created with matplotlib from `omega_class_moments.json`.</artifact-description>
 </artifact>
 </artifacts>

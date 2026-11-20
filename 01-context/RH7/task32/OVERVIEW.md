@@ -18,12 +18,12 @@ The exact agreement (R²=1, mean rel. err 0.03 %) provides numerical proof that 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>c_pred_vs_c_emp_grid.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>60-row prediction-vs-empirical comparison table for the forced-negativity prefactor c at T₀=46.13. Columns: sigma, J, m, c_emp (= lambda_min_dQ/δ² at δ=1e-4 from forced_negativity_surface.csv), c_pred (= min eigenvalue of the summed rank-2 localized perturbation operator A(γ_k) = −2[φ′φ′ᵀ + ½(φφ″ᵀ + φ″φᵀ)] over zeros within the window |γ_k − T₀| ≤ 3σ√J), and rel_err_pct. Overall R² = 1.0000000000.</artifact-description>
 </artifact>
 <artifact>
 <file-name>final_figure_localized_rank_one_model.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Scatter plot of empirical vs predicted forced-negativity prefactor across all 60 grid points (T₀=46.13, σ∈{0.5,1,2,4}, J∈{4,8,12,16,20}, m∈{1,5,20}); points lie on y=x over 3 decades of magnitude, with overall R²=1 and median relative error <0.001%.</artifact-description>
 </artifact>
 </artifacts>

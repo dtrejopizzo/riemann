@@ -23,22 +23,22 @@ The calibration sharpens the picture from report r35: while r35 claimed ζ_δ_st
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>step0p5_power_calibration_table.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>The Step 0.5 Power Table for Front I and Front III observables. Rows are observables (Front I max relative change in a_n and b_n for n≤100; Front III H0 and H1 bottleneck distance). Columns give the signal at the original δ=0.1 control, the strong δ=1.0 control, and the strong/orig ratio. Produced by Lanczos (with re-orthogonalization) Jacobi coefficient calculation and ripser/persim TDA on the supplied N=5000 zero lists.</artifact-description>
 </artifact>
 <artifact>
 <file-name>zeta_delta_strong_a_weighted.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>1/|ρ|²-weighted Jacobi a_n coefficients (length 500) for the ζ_δ_strong control, computed via stable Lanczos with full re-orthogonalization on nodes γ_k and weights 1/(re_k² + γ_k²). Validated by reproducing the cached zeta_a_weighted.npy coefficients to absolute error < 10⁻¹¹. Extends the front1_jacobi_coefficients_N5000.npz family with the strong-control coefficients.</artifact-description>
 </artifact>
 <artifact>
 <file-name>zeta_delta_strong_b_weighted.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Companion 1/|ρ|²-weighted Jacobi b_n off-diagonal coefficients (length 499) for the ζ_δ_strong control, produced in the same Lanczos run as zeta_delta_strong_a_weighted.npy. Used in the Front I calibration to compute max_{n≤100} |Δb_n|/|b_n|.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front1_front3_power_calibration.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: log-scale relative change in Front I 1/|ρ|²-weighted Jacobi a_n coefficients vs n for ζ_δ original (δ=0.1) and ζ_δ strong (δ=1.0), with float64 noise floor shown. Panel B: bar chart of Front III H0 and H1 bottleneck distances from the ζ persistence diagram for each control. Clearly visualizes that Front III scales linearly in δ while Front I sits near machine precision.</artifact-description>
 </artifact>
 </artifacts>

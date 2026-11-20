@@ -28,7 +28,7 @@ The finding that M(t) and R_comp(t) are uncorrelated has significant implication
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>L_DH_M_Rcomp_timeseries.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Time series data containing 1000 samples of the cancellation metric M(t) and composite coherence metric R_comp(t) for the Davenport-Heilbronn function L_DH over t ∈ [1000, 2000] with truncation N = 10^6. Each row contains a time point t, the corresponding M(t) value (computed by partitioning terms by ω(n) and measuring |S_total|/√(Σ|S_k|²)), and the corresponding R_comp(t) value (mean resultant length for composite squarefree terms with ω(n) ≥ 2). This dataset enables correlation analysis and further investigation of the relationship between these two key L_DH diagnostic metrics.</artifact-description>
 </artifact>
 </artifacts>

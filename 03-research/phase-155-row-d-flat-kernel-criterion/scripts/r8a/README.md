@@ -93,7 +93,7 @@ Every run made uncontended is within 60 s.
 
 ## Audit re-runs (R155_061, 2026-09-22 23:03–23:05)
 
-The corrected `r8a_01_upper.py` (border sign `+`) was re-run by the hostile auditor on the eight archived default
+The corrected `r8a_01_upper.py` (border sign `+`) was re-run in the independent audit on the eight archived default
 cases, strictly one at a time on an idle machine. Outputs `r8a_01_{0p58,log2,0p80,0p90}_par{0,1}_rerun.json`
 (the script never overwrites an existing default output). Result: the same certified `r` and the same margins
 `μ` as the archived JSON to every printed digit; runtimes 13.2–14.0 s each. **These `_rerun.json` files are the

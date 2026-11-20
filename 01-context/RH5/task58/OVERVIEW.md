@@ -41,7 +41,7 @@ The qualitative observation that L_DH has the lowest Total H1 Persistence and th
 <artifacts>
 <artifact>
 <file-name>ldelta_zeros_N540_dps15.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>First 540 positive imaginary parts of nontrivial zeros of the L(Δ,s) Ramanujan-Δ L-function (LMFDB modular form 1.12.a.a) in analytic normalization, generated via cypari2 `lfunzeros(L,[0,500])` with `L=lfunmf(mfinit([1,12],1), mfeigenbasis(...)[1])`. Stored as a NumPy array of fixed-width Unicode strings (`<U30`) at ~15-digit precision (PARI default). The first eight values were spot-checked against the LMFDB-downloaded `2-1-1.1-c11-0-0` zero file. This is a small, partial input for the Front III pipeline at matched N=500; it does NOT replace the missing `ldelta_zeros_N3592_dps38.npy` artifact.</artifact-description>
 </artifact>
 </artifacts>

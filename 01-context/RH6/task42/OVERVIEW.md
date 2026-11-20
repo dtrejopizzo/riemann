@@ -24,17 +24,17 @@ The deliverables for the Ramanujan Δ L-function (a key Grand-RH positive contro
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldelta_zeros_2000_dps50.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Numpy array of 2000 decimal strings, each giving the imaginary part of the n-th nontrivial zero of L(Δ,s) (Ramanujan Δ cusp form, LMFDB 1.12.a.a) on the critical line, computed to 50-decimal precision using PARI/GP (`lfuninit`+`lfunzeros` on the modular-form L-function from `mfinit([1,12],1)` and `mfeigenbasis`). First zero 9.22237939992110252224376719..., last ≈ 1419.0232... Computation took 7.3 min on the analysis kernel.</artifact-description>
 </artifact>
 <artifact>
 <file-name>lchi_zeros_partial_dps50.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Numpy array of 2660 decimal strings (target was 5000) giving imaginary parts of nontrivial zeros of the Dirichlet L-function L(s, χ) where χ is the order-4 primitive Dirichlet character mod 5 with χ(2)=i (Conrey label 5.2, LMFDB 5.c.a), computed to 50-decimal precision via PARI/GP `lfunzeros`. First zero 6.18357819545085391437751730970869252592150057923, last ≈ 4499.1215... Run was interrupted by kernel cell timeout (900 s) before reaching 5000 zeros.</artifact-description>
 </artifact>
 <artifact>
 <file-name>compute_lchi_zeros.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Standalone Python script (pure mpmath, no PARI dependency) implementing the rotated Hardy-Z function Z(t)=exp(iθ(t))L(½+it,χ) for the order-4 primitive Dirichlet character mod 5 with χ(2)=i, with adaptive sign-change scanning, secant root finding (mpmath.findroot with anderson solver), bisection fallback, and checkpointing every 100 zeros. Independently validated to produce the same first 100 zeros as PARI to 50 digits; serves as a reproducible fallback method that does not depend on PARI/GP availability.</artifact-description>
 </artifact>
 </artifacts>

@@ -33,12 +33,12 @@ The hypothesis that the L(Δ,s) trace failure stems from a factor-of-2 double-co
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>cache/LDelta_zeros_N80_dps30.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle file containing the first 80 imaginary parts γ of zeros of L(Δ,s) in analytic normalisation, generated via `_zeros.L_Delta_zeros(80, dps=30, n_taus=200, y_max=12)` (mpmath sign-change scan on Λ(Δ, 6+it), bisection to ~25-digit precision). First zero matches LMFDB 1.12.a.a (γ₁ = 9.22237939992110…) to 16+ digits; last zero γ₈₀ ≈ 124.105. Generation cost: ~874 s of CPU. Reusable for future L(Δ,s) Weil-engine validation runs at any (T₀, σ, J) with T₀ ≲ 100, σ ≲ 5.</artifact-description>
 </artifact>
 <artifact>
 <file-name>lDelta_prime_halving_test.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Bar chart summarising the hypothesis test. Shows the relative trace residual (tr(M_arith) − tr(M_zeros))/tr(M_zeros) at (T₀=85.7, σ=2, J=10, X=10⁴, N_zeros=80) for three variants of `weil_modular.compute_Q_modular`: baseline (+4.352 %), proposed FIX with M_primes×0.5 (+4.564 %), and counter-test with M_primes×2.0 (+3.929 %). The required tolerance (|residual| < 1 %) is marked. The chart visually demonstrates that no scalar rescaling of M_primes can close the residual.</artifact-description>
 </artifact>
 </artifacts>

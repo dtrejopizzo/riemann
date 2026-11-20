@@ -5,7 +5,7 @@ A_M-minimizer family s_w = m^{−½}w(m/M)) in which (Λ(n))_{n<e^{2T}} enters n
 mechanism, the margin comes out of the identity, and which is none of the MUST-NOT objects (estimate with remainder, O1–O15-invariant class
 argument, symbol-statistic functional, shift-multiplier calculus, certificate, zero information, σ-transport, perturbative induction, REF-D
 restatement). Pen and paper only; no numerics.
-Mandatory reading done: P47 §20 (thm:shape, cor:shape, prob:region), ROUTES-TRIED-INDEX README (phases 190/191), 06_, SPEC_A, SPEC_B, EXP_005,
+Mandatory reading done: P47 §20 (thm:shape, cor:shape, prob:region), routes index (now ROUTES-MASTER-INDEX.md; phases 190/191), 06_, SPEC_A, SPEC_B, EXP_005,
 and the phase-188 memos L2_012, L2_014, L2_030, N_009, N_020, N_022, L2_008, R163_1001.
 
 **Headline.** Three exact-identity objects were built, each PROVED as an identity, each with a self-review and a clause table.
@@ -19,7 +19,7 @@ tests built from ζ's own coefficients (twisted second moments, EI_002/EI_003), 
 | file | object | exact identity | PROVED content | sign |
 |---|---|---|---|---|
 | EI_001_EXTERIOR_FIELD_IDENTITY.md | exterior field E = σ_T(D)h* outside I_T (SPEC_A's C*_A object) | E = (polar edge moment) − e^{−t/2}·(Chebyshev fluctuation of ψ−u at scale e^t tested by the minimizer, truncated at X) − (archimedean tail, exponent 5/2); Ê = (σ_T−λ)ĥ* − Tate, σ_T = R_X(½+iτ)+R_X(½−iτ) meromorphic with poles only at ±i(2k+½) | Thm 1, Thm 2, P1–P3 (Tate kills exactly the e^{−|t|/2} term and the full polar term; zeros invisible; polar partner of the atom n_j is the opposite-collar Tate moment, correcting SPEC_A §2(d)) | none; C*_A unchanged (REF-D as content) |
-| EI_002_LATTICE_MELLIN_IDENTITY.md | Q_M(w) on s_w (SPEC_B T*₃) | Q = (1/π)∫F̂₀²\|ζ_w\|²Re R_{X′}; polar-free split (2.1); ζ_w = cζ + M^{½−iτ}W(½−iτ) + ρ_M (exact Mellin = ℤ-Poisson); ℤ²-Poisson of atom sums with second-order Tate vanishing of (0,0); dual near-coincidences −ℓ₂ ≈ ℓ₁n (self-duality) | Thms 1–4; Fact N2 (phase 190) upgraded NUMÉRICO → PROVED (descriptive); SPEC_B Line 2 made exact in the bulk and corrected at the edge; Thm 5: no termwise sign (U_T ≠ ∅), Mellin split not estimable below M^{−3} | none; T*₃/C*₃ unchanged |
+| EI_002_LATTICE_MELLIN_IDENTITY.md | Q_M(w) on s_w (SPEC_B T*₃) | Q = (1/π)∫F̂₀²\|ζ_w\|²Re R_{X′}; polar-free split (2.1); ζ_w = cζ + M^{½−iτ}W(½−iτ) + ρ_M (exact Mellin = ℤ-Poisson); ℤ²-Poisson of atom sums with second-order Tate vanishing of (0,0); dual near-coincidences −ℓ₂ ≈ ℓ₁n (self-duality) | Thms 1–4; Fact N2 (phase 190) upgraded NUMERICAL → PROVED (descriptive); SPEC_B Line 2 made exact in the bulk and corrected at the edge; Thm 5: no termwise sign (U_T ≠ ∅), Mellin split not estimable below M^{−3} | none; T*₃/C*₃ unchanged |
 | EI_003_WINDOW_HARDY_FUNCTION.md | beyond-window Euler product Z_X = ζ/Z_{<X}, phase Θ_X, window Hardy function Z_T | σ_T = 2Θ_X′; R_X(½+iτ) = Θ_X′ + iZ_T′/Z_T; comb absorbed exactly into the Γ-factor; (2.1): the (iii) object as twisted second moment of the smoothed partial sum against the Euler tail; RS saddle at τ ≈ 2πM = integer resolution | Thm 1; **Thm 2 (symbol rigidity, NO-GO for "non-linear in Λ" on the symbol side)**; Corollary (shape of the mandate) | none |
 
 ## What moved between columns (requested bookkeeping)

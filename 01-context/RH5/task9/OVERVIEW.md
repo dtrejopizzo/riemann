@@ -34,12 +34,12 @@ This resolves the f9 conflict cleanly without changing any mathematics. r8 and r
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>f9_weil_matrix_resolution.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON summary of the f9 resolution: λ_min and λ_max for the r8 kernel-of-differences matrix Q_N[m,n] = φ((γ_m−γ_n)/W) over φ ∈ {quartic, triangle, Gaussian} and W ∈ {0.5,1,2,3,5,7.5,10,15}, and for the r24 Gram matrix Q = H Hᵀ over M ∈ {50,100,200} and σ ∈ {1, 2.5, 5}, computed on the first N=2000 ζ zeros. Includes the canonical W=σ=5 head-to-head comparison and a short interpretive note keyed to Bochner's theorem.</artifact-description>
 </artifact>
 <artifact>
 <file-name>f9_resolution_figure.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. (A) Sorted eigenvalue spectra at W=σ=5 for the r8 quartic-bump kernel (λ_min ≈ −0.229), the r8 Gaussian-φ control (λ_min ≈ 0), and the r24 Gram matrix Q=HHᵀ (λ_min ≈ +1.16). (B) λ_min vs window W showing the r8 quartic bump diving negative while triangle/Fejér and Gaussian φ's stay ≥ 0, with the r24 Gram-matrix floor (positive) marked for reference.</artifact-description>
 </artifact>
 </artifacts>

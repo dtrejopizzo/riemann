@@ -34,12 +34,12 @@ The ledger gives a one-glance, quantitative confirmation of the "Bottleneck" con
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>quantitative_bottleneck_ledger.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Consolidated 4-row summary CSV for the L-functions ζ, L_DH (5000 on-line + 110 off-line), L(χ₅) and L(Δ,s) (partial, N=1455), with columns for Front-I Jacobi bₙ residual variance (uniform and weighted) and B-parameter percentage shift under weight change (re-computed from `*_b_unif.npy` and `*_b_weighted.npy` via log-quadratic polyfit), Front-II λ_min(M_Weil) and I₂(T)/(a₂·log T), Front-III H₀ bottleneck distance vs ζ and Σ²(L=100). The L(Δ,s) row is explicitly flagged as partial-data in the `data_note` column.</artifact-description>
 </artifact>
 <artifact>
 <file-name>quantitative_bottleneck_ledger_figure.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Single-panel horizontal log-scale bar chart ranking the six key observables by L_DH separation magnitude relative to the {ζ, L(χ₅)} GRH-control mean, color-coded by proof-path status (blue = proof path / weak; green = proof path / targeted strong, i.e. Weil λ_min; gray = proof path / insensitive, I₂; red = no proof path / strong, Σ² and H₀ bottleneck). This figure summarizes the "Bottleneck" conclusion (f13) of the project.</artifact-description>
 </artifact>
 </artifacts>

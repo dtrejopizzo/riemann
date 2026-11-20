@@ -16,7 +16,7 @@
 **Status:** open · started · route proposed by A. Connes in response to the
 [2.3.F briefing](../phase-63-lefschetz-realization/BRIEFING-2.3.F-for-Connes.md).
 
-> **Paper:** the publishable consolidation of this phase is **P50** (`04-papers/P50-colligation-route/main.tex`).
+> **Paper:** the publishable consolidation of this phase is **P50** (`04-papers/35-colligation-route/main.tex`).
 > All development notes below live here in the research phase, not in the papers folder.
 
 ## ⇒ [THE-TARGET.md](THE-TARGET.md) — the single theorem that is RH, the exact obstruction, the new object to build

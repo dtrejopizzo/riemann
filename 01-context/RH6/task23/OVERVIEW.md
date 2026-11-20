@@ -25,7 +25,7 @@ The proposed W₁-based detector does not improve on the bottleneck-distance res
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>w1_vs_delta_loglog.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Log–log plot of the 1-Wasserstein distance W₁ between the H0 persistence diagram of the baseline 2000-point ζ-zero cloud P₀ = {(0.5, γₙ)} and deformed clouds P_δ (first 20 points shifted to (0.5+δ, γₙ)) for δ ∈ {10⁻³, 10⁻², 10⁻¹}. Includes the fitted line (slope 1.990) and slope-1 / slope-2 reference lines, showing W₁ scales quadratically with δ, refuting the linear-scaling hypothesis.</artifact-description>
 </artifact>
 </artifacts>

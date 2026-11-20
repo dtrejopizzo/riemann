@@ -1,0 +1,26 @@
+# Cruces arbitrariamente lejanos y representación con primos x^o(1)
+
+**Estado: PROVED, con revisión independiente de inclusión-exclusión, la ecuación diferencial y la elección diagonal de primos.**
+
+Sea W(y) la unión firmada de 386. Para cada real fijo u>1 no entero, poniendo b=L/u se cumple
+
+    W(exp b)=−JxE/b² · ω'(u) + o_u(xE/L²),
+
+donde ω es la función de Buchstab. El error es aditivo incluso en ceros de la derivada. Para todo ε>0 y todo x suficientemente grande hay una representación exacta del pulso S con factores primos ≤x^ε y un solo factor terminal ponderado como en 391. Se puede elegir el primo terminal p(x)=x^o(1). Esta conclusión existencial no especifica una tasa de decrecimiento del exponente.
+
+**Perfil general.** Sea k=floor u. Por la cola gaussiana, los términos con k+1 factores >exp b cuestan O_u(x exp(−c_u L²)) incluso con las marcas de cualquier orden ≤k. Aplicar inclusión-exclusión para la indicadora de al menos un factor. La marca binomial de orden j extrae j primos con signo (−1)^j y factor 1/j! sobre las ordenaciones. Multiplicar por (−1)^(j+1) deja el signo menos en todos los órdenes. Las colisiones de primos marcados entre sí o con el cofactor cuestan O_u(x L^(k+2) exp(−b)) por la suma sobre múltiplos de p² para n≤x²; para n>x² se usa la gaussiana con multiplicidad polinómica en log n. Las j sustituciones por el PNT de 391 cuestan O_u(x L^(k+2)exp(−c_u√L)), por integración por partes con |f|+|f'|≪exp v y masa recíproca O(L) de cada otro factor. Así, hasta o_u(x/L²), la unión es
+
+    −x ∫ exp(−v) f(v) H(L−v) dv,
+    H(D)=Σ_{j=1}^k (1/j!) (1_[b,∞)(w)/w)^{*j}(D),
+
+usando el cofactor de criba congelada de 384. En un entorno de L de radio c_u L la densidad es H(D)=ω(D/b)/b. En efecto, en la variable normalizada t=D/b la suma de todas las convoluciones es localmente finita y coincide allí con los j≤k. Si se llama ω a la suma normalizada, la simetría de los sumandos de t da tω(t)=1+∫₁^(t−1)ω(s)ds para t≥2 y tω(t)=1 para 1≤t≤2. Es la ecuación de Buchstab. Por pasos es suave fuera de los enteros; en el entorno indicado |H''|≪_u L^(−3). Globalmente la suma truncada es O_u(1/b) por la cota del simplex de 381. Taylor y los momentos cero y −JE de 384 dan el perfil con el signo indicado.
+
+**La derivada toma ambos signos en toda cola.** Si ω' fuese eventualmente ≥0, ω sería no decreciente y la ecuación uω'(u)=ω(u−1)−ω(u) daría ω'≤0 una unidad después. El caso ≤0 es simétrico. Una cola constante se propaga hacia atrás por la misma ecuación hasta (1,2), contradiciendo ω(u)=1/u. Luego para todo M>2 se pueden escoger u₁,u₂>M, no enteros, con derivadas de signo opuesto; se usa la continuidad de la derivada en (2,∞). Sólo hacen falta los dos perfiles a parámetros fijos; no se reclama uniformidad entre ellos.
+
+**Consecuencia aritmética.** Para M>1/ε los dos valores de W a esos extremos tienen signos contrarios para todo x suficientemente grande. Al variar el umbral entre ambos hay dos estados contiguos que encierran cero o un estado donde se alcanza cero. Como en 391, interpolar las masas retenidas equivale a ponderar un único factor terminal 1−λp^(−s), 0≤λ≤1, en el producto finito de los primos entre z y p. El resultado vale S exactamente. El primo está por debajo de x^ε (en caso de meseta basta el corte en la banda, o su último primo). Para escoger p=x^o(1), aplicar esto sucesivamente a ε=1/m con umbrales de validez crecientes que tiendan a infinito. Es también posible elegir el menor primo que admita tal interpolación, pues el conjunto de candidatos es finito bajo el primer corte obtenido.
+
+**Registro de revisión.** En cada orden j, el signo de la extracción es(−1)^j y el de inclusión-exclusión es(−1)^(j+1): su producto es siempre−1. La suma H lleva por eso todas las convoluciones positivas, no una alternancia adicional. Para los términos con más de k primos, el error de truncar la identidad binomial está acotado por una potencia fija de log n y sigue siendo absorbido por la cola n≥y^(k+1)>x^(1+c_u). Al multiplicar la suma normalizada de convoluciones por t se obtiene exactamente1+∫₁^(t−1)ω(s)ds; la diferenciación da tω'=ω(t−1)−ω(t) para t>2. Una eventual monotonía fuerza una cola constante y la ecuación la propaga hacia(1,2), contradiciendo1/t. Esto prueba ambos signos en toda cola sin necesitar una fórmula asintótica para su amplitud.
+
+La selección aritmética usa sólo dos parámetros fijos no enteros por cada ε: sus errores pueden depender de esos parámetros y no se suman sobre una familia creciente. Para obtener p=x^o(1), elegir umbrales de validez X_m estrictamente crecientes, con X_m→∞ y, si hace falta, X_m≥exp(m²), y usar la representación de ε=1/m en X_m≤x<X_(m+1). Entonces m→∞ y p≤x^(1/m); la identidad de interpolación sigue siendo exacta en cada escala. No se extrae una tasa de los límites puntuales ni se afirma que el error del perfil sea uniforme en u→∞. Las colisiones de marcas cuestan xL^(k+2)exp(−b), despreciable para cada u fijo aunque ese error no tenga por qué estar bajo raíz; la representación final conserva el peso terminal exacto y no lo redondea.
+
+**Límite de la conclusión.** El peso se elige con W, que requiere información sobre enteros con primos mayores que p. No es una fórmula para calcular S con datos de primos ≤p solamente. El signo de la suma finita ponderada sigue abierto.

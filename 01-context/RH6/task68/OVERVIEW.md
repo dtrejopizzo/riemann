@@ -31,12 +31,12 @@ The refined Weil form is even more sensitive than the hypothesis anticipated, bu
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_displacement_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON containing parameters (T0, σ, J, N, γ_k, baseline), max|λ| vs β table for the single-zero displacement protocol, the power-law fit (slope = 1.000, intercept = 0.055, prefactor = 1.135), parallel results for the FE-respecting pair-displacement variant, and the derived minimum detectable β. Produced by mpmath dps=80 reconstruction of the refined Weil quadratic form using closed-form Hermite-FT prime-side terms and quadrature-based archimedean term.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_displacement_scaling.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Log–log plot of |λ_max| vs β for the single-zero displacement experiment with fit line (slope = 1.000), reference horizontal lines for the GRH baseline (5.31×10⁻⁴⁰) and the 3-orders-of-magnitude detection threshold (5.31×10⁻³⁷), the hypothesized quadratic line anchored at the predicted β_min = 10⁻²⁰, and the measured β_min = 4.68×10⁻³⁶. Visualizes that the empirical scaling is linear rather than quadratic and the measured detection limit is far below 10⁻²⁰.</artifact-description>
 </artifact>
 </artifacts>

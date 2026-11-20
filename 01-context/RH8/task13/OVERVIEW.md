@@ -27,12 +27,12 @@ The exercise confirms that `mpmath.zetazero` is dependable for moderate heights 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>zeta_zeros_N5000_v1.ckpt.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle file containing a partial list of the first ~3929 non-trivial Riemann zeta zeros (imaginary parts only; real part is 1/2 by GRH). Stored as a dict `{"imag_strings": list[str], "dps": 50, "N_done": int}` where each string is the imaginary part formatted by `mpmath.nstr(..., 50, strip_zeros=False)` to preserve 50 decimal digits of precision. Generated with `mpmath.zetazero` at `mp.dps=50`. This is the checkpoint from an incomplete run that timed out before reaching N=5000; it can be resumed by re-running the same loop with `start_n = len(imag_strings)+1`.</artifact-description>
 </artifact>
 <artifact>
 <file-name>zeta_zeros_N5000_v1.time.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle containing `{"elapsed": float}`, the cumulative wall-clock seconds spent on `mpmath.zetazero` calls across multiple notebook cells during the (incomplete) generation of the first 5,000 ζ zeros at dps=50. Last recorded value: ~2500 s through n=3929; the additional in-memory work in the final timed-out cell would bring the projected full-run total to ~3500–3700 s.</artifact-description>
 </artifact>
 </artifacts>

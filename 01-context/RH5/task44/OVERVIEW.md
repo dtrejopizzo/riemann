@@ -34,17 +34,17 @@ The architectural part of the hypothesis is fully corroborated: the subprocess +
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldelta_zeros_N1455_dps80_partial.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Contiguous, sorted, dedup-validated list of the first 1455 nontrivial Ramanujan-Δ L-function zeros refined to dps=80 via `lfunhardy`+`solve` (LMFDB-validated γ₁ to 75 digits). Stored as a NumPy `<U81` array. Produced by running `refine_shard_runner.py` on `ldelta_zeros_N3405_approx_dps38.npy` across 8 parallel subprocesses and consolidating successful checkpoint rows. Represents the verified high-precision prefix toward the still-incomplete N=5000 target; the next run can resume by skipping orig_index ≤ 1454.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldelta_refined_all.tsv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Consolidated checkpoint TSV merging all per-shard refinement outputs (`ldelta_refine_shards/refined_{0..7}.tsv`) plus the one-zero supplemental refinement of index 1450. Columns: `orig_index`, `refined_dps80` (string), `seconds` (wall time of the refinement call). 1455 successful refinements, zero errors. Suitable as a drop-in `done`-set for any future invocation of `refine_shard_runner.py` since that script natively skips orig_indices already present in its output file.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldelta_N5000_progress_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure (A: zero index vs γₙ for refined dps=80 and approximate dps=38 lists, with hypothesized γ₅₀₀₀≈3033 and N=5000 target lines; B: per-zero `lfunhardy` refinement time vs T on a log axis with the fitted T^1.99 power law and the projected extension to T≈3100). Generated with matplotlib from the consolidated TSV checkpoints; documents both the partial-completion state and the cost-scaling reason the full N=5000 list could not be generated within the run budget.</artifact-description>
 </artifact>
 </artifacts>

@@ -68,17 +68,17 @@ are often strongly canceled, so the resulting \(C_{jk}=\Re(T_j\overline{T_k})\) 
 <artifacts>
 <artifact>
 <file-name>Mjk_Cjk_all_classes.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the 11 empirical 8x8 matrices M_jk, the 11 theoretical 8x8 matrices C_jk, and the corresponding 8-entry T_j vectors used to factorize C_jk. It was created directly from the workspace S_k arrays and reconstructed coefficient arrays at N=10^6.</artifact-description>
 </artifact>
 <artifact>
 <file-name>Mjk_Cjk_pairs.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Flattened table of all 704 class/pair observations used in the regression, with columns for class label, indices j and k, empirical M_jk, theoretical C_jk, diagonal indicator, fitted value, and residual. It was generated from the computed matrices in the notebook.</artifact-description>
 </artifact>
 <artifact>
 <file-name>regression_summary.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Summary table of overall and per-class linear regression results, including slope, intercept, R^2, and Pearson correlation. It was exported from the notebook after fitting the global and class-specific models.</artifact-description>
 </artifact>
 </artifacts>

@@ -51,12 +51,12 @@ The hypothesis predicted that systematic phase alignment at the peak level would
 <artifacts>
 <artifact>
 <file-name>Sk_complex_csv_peaks_all_classes.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing reconstructed complex S_k arrays (k=0..7) and aligned peak t-values for all 11 function classes at the 2200 CSV peak locations. It was generated from locally reconstructed coefficient sequences using a Numba-accelerated Kahan-summation engine and validated against the provided abs_Sk columns.</artifact-description>
 </artifact>
 <artifact>
 <file-name>phase_coherence_per_peak.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Per-peak results table with 2200 rows containing function label, GRH label, peak t, phase coherence score P_t, and the real and imaginary parts of S_0 through S_7. It was derived from the reconstructed complex S_k arrays and saved for reuse in downstream analyses.</artifact-description>
 </artifact>
 </artifacts>

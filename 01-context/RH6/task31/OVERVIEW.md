@@ -27,7 +27,7 @@ The QC step intended to unblock the main research thrusts cannot be completed: t
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldh_generation_status.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Summary figure plotting the observed cumulative L_DH zero count vs. elapsed time parsed from `run_log.txt`, with the 5,000-zero target and 3,578-zero resume checkpoint marked. An annotation reports the last logged value (3,617 zeros at 2.0 min), the observed throughput (~20 zeros/min) and the implied +69 min ETA that was never reached, visually documenting that the generation process stalled and that `ldh_zeros_5000_dps50.npy` was never produced.</artifact-description>
 </artifact>
 </artifacts>

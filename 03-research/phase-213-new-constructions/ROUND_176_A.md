@@ -1,0 +1,19 @@
+# Ley de altura suficiente para ventanas crecientes
+
+Sea A_T=Σ_{2≤n≤exp(2T)} 2Λ(n)/√n, la masa del peine en la ventana (incluir un contacto extremo sólo cambia la convención allí). Para todo T suficientemente grande, si todos los ceros hasta
+    G(T)=100 exp(A_T+5T)
+están sobre la recta crítica, W_T es estrictamente positiva en norma L². Más precisamente, en esa hipótesis W_T≥exp(−C T² exp(A_T))I con C absoluto. Los parámetros crecen con T y la prueba controla su crecimiento. Por PNT y sumación parcial A_T=(4+o(1))exp T. En consecuencia, para todo ε>0 fijo y G suficientemente grande, una verificación hasta G da positividad para toda ventana
+    0<T≤log log G−log 4−ε.
+La segunda afirmación se obtiene en la ventana extrema y luego por inclusión. Es una ley asintótica, no una estimación numérica mejor que 175 para G=3·10¹².
+
+**Peine sin sobrecoste multiplicativo.** Sea h=exp(−2T). Usar un corte aritmético par monótono, uno hasta 2T+h y cero desde 2T+2h. El ensanche agrega a lo sumo cuatro enteros para T grande, pues exp(2T)(exp(2h)−1)→2. La contribución adicional es O(T exp(−T)). Como en 175 la variación del término polar cuesta O(exp T) y la del término arquimediano exterior O(exp(−T)), independientemente de la pendiente del corte, por monotonía e integración por partes. Su densidad b satisface b≥−M con M=O(exp T) por las cotas de masa y b≥1/20 desde R=100 exp(A_T) por el menorante de la digamma: log(R/(2π))−A_T=log(100/(2π)), mientras los errores adicionales allí son o(1).
+
+**Parámetros de la fuga.** Tomar k=ceil(log R), m=ceil(4000TR), H=100km/h, G=R exp(5T). El radio de Fourier 2km/H=h/50 cabe en la guardia h. El argumento de interpolación de 175 con n=ceil(64(1+2RT)) da η≥exp(−1800(1+TR)) para TR grande; sus estimaciones dependen sólo de TR después del cambio de escala. Por tanto 2^mη/40−M>1. Para a=kR²/(3H²) se tiene 1−sinc(τ/H)^(2k)≤a en |τ|≤R y ≥2a en |τ|≥2R. Para el segundo extremo evaluar primero en v=2R/H: k v²=o(1), así que 1−(1−v²/4)^k ≥(3/4)kv²/4>2a. Usar monotonía hasta |v|=2 y después |sinc v|≤1/2. Además log(1/a)=O(T), pues k=O(exp T) y H/R=O(kT exp(2T)). La parte arquimediana con la reserva de 175 tiene margen al menos a^m≥exp(−C T²R).
+
+**Uniformidad del costo espectral.** Construir χ por convolución de la indicatriz de [−(2T+3),2T+3] con dos uniformes de radio 1/4 y N=floor(G/200) uniformes de radio 1/N. La meseta cubre el intervalo ampliado. La prueba de 175 da para el costo continuo en todo τ
+    |C(τ)| ≪ (1+T)exp(T) log(3+|τ|),
+porque el único prefactor procedente del nuevo intervalo es su longitud por exp((2T+O(1))/2). En |τ|≤G/2 los factores finos dan además 100^(−N). El error allí es exp(−cG) para alguna c>0 absoluta y T grande, mucho menor que el margen porque G/(T²R)→∞. En |τ|>G/2 el error enmascarado es a lo sumo
+    O((1+T)exp(T) log(3+G) m (2H/G)^(2k)).
+Aquí el máximo ocurre en el extremo inferior. Se tiene 2H/G≪T exp(−2T), mientras log m=log R+O(log T), k≥log R. Así este costo tiende a cero y φ<1/2: la mitad reservada de b lo absorbe punto a punto. La mezcla es exacta y la fracción de margen que sobrevive, con Plancherel, prueba el enunciado.
+
+**Distinción con el horizonte conocido.** El paper 47 ya da un horizonte doblemente exponencial del orden exp(A_T) para comprobar el símbolo de determinados certificados. Esa estimación por sí sola no implicaba que verificar los ceros hasta una altura comparable bastase para tener un certificado positivo. Aquí el costo adicional en el logaritmo de la altura suficiente es a lo sumo 5T+log 100. La deducción usa la corrección espectral completa y el margen de incertidumbre, no sólo el horizonte del símbolo. La ley es suficiente; no prueba que esa altura sea necesaria. Aplicarla a T arbitrario seguiría requiriendo una verificación de ceros no acotada, por lo que no cierra el signo global.

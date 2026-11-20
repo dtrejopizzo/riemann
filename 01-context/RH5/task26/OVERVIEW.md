@@ -32,17 +32,17 @@ The benchmarks and live progress confirm the qualitative finding from prior repo
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>run_parallel2_fixed.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Patched copy of `run_parallel2.py` with output paths redirected to the current task workspace (`/workspace/58ff7dcc-…`) for `partial_file` (`ldh_partial.pkl`) and `log_file` (`ldh_run.log`), so checkpointing actually writes to an accessible location in this run. All other logic (8-worker fork pool, 184 blocks of width 25 over t∈[0,4600], dps_scan=30, dps_final=50, step=0.5) is unchanged from the original script.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_partial.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle checkpoint produced by `run_parallel2_fixed.py` containing a dict `{"results": {block_idx: [zero_string, …]}, "blocks": [(t_lo,t_hi,step,dps_scan,dps_final), …]}` for the L_DH parallel run. At last successful read it held ≥144 of 184 completed blocks and ≥3,473 dps=50 zero strings spanning t∈[0, ≈3,600]; subsequent blocks may have been written before process termination. Suitable for resuming the run by skipping already-completed block indices.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_run.log</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Timestamped per-block progress log written by `run_parallel2_fixed.py`, recording for each completed block the block index, [t_lo,t_hi] interval, number of zeros found, and cumulative zero count. Useful for empirical wall-time scaling of the Hardy-Z scan for L_DH on 8 workers.</artifact-description>
 </artifact>
 </artifacts>

@@ -34,17 +34,17 @@ The hypothesis K=c cannot be cleanly confirmed under the literal task specificat
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>K_vs_c_summary.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Tabulation of theoretical K under 8 different interpretations of u(σ) (literal γ₁, in-window γ₈/γ₉, symmetric vs Hermitian norms, quartet-sum vs single-member, etc.), each compared against the empirical c=-23.5203 from forced_negativity_surface.csv at (T₀=46.13, σ=1, J=12, m=20). Includes absolute and relative differences; the closest match (γ₈+γ₉ quartet K sum, -23.42, 0.43% off) is highlighted.</artifact-description>
 </artifact>
 <artifact>
 <file-name>K_per_zero_results.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Per-zero theoretical K_quartet(γ_k) for the m=20 shifted Riemann zeros at (T₀=46.13, σ=1, J=12), computed in float64 with central finite differences. Reveals that only γ₇–γ₁₀ have physically meaningful K (zeros outside the basis window produce numerically spurious values from log of underflow-magnitude norms). Used to identify which interpretations of u(σ) match c.</artifact-description>
 </artifact>
 <artifact>
 <file-name>K_vs_c_final.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Single-panel horizontal bar chart of theoretical K under multiple interpretations of u(σ), with the empirical c=-23.520 marked as a dashed reference line on symlog x-axis. Green bars indicate <5% relative difference, yellow <30%, red ≥30%. Visually demonstrates that the literal "γ₁=14.13" interpretation fails (red) while in-window quartet-sum interpretations come close, with γ₈+γ₉ K-sum nearly matching c.</artifact-description>
 </artifact>
 </artifacts>

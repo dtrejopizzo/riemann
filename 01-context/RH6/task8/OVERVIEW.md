@@ -34,12 +34,12 @@ The result strongly supports the geometric-signature hypothesis. The α≈0.9 gr
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_J_sweep_artificial_zeta_offpair.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON record of the artificial-ζ + off-critical-pair Weil J-sweep at (T₀=85.7, σ=2.0, prime_bound=1000, dps=80). Contains full parameters, λ_min/λ_max for J∈{4,8,12,16,20} using both half_window=40 (main) and half_window=6σ (sensitivity check), a critical-only ζ control, local and global log-log slopes, and a side-by-side comparison with the L_DH (α≈0.90) and single-shift ζ_δ (α≈14) reference fits. Produced via the non-Hermitian Re[v v^T] mpmath implementation in this notebook.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_geometric_signature.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Log-log summary plot of |λ_min| vs J for three cases: L_DH off-critical (α≈0.90), artificial ζ+off-critical pair at the L_DH anomaly location (α≈1.06, this work), and ζ single-zero shift δ=0.05 (α≈14). The artificial-ζ curve nearly overlays the L_DH curve and is well separated from the single-shift curve, visually confirming the geometric-signature hypothesis.</artifact-description>
 </artifact>
 </artifacts>

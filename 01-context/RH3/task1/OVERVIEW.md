@@ -18,7 +18,7 @@ The results provide strong evidence that S₂-dominance in the L_DH function is 
 <artifact-description>Pre-computed array of Ω(n) values (prime factor count with multiplicity) for all integers n from 1 to 10⁶. This artifact uses 0-based indexing where omega_values[i] = Ω(i+1). Originally generated in previous analyses and used here to avoid recomputation. Essential for ω-class decomposition at N=10⁶.</artifact-description>
 </artifact> <artifact>
 <file-name>ldh_kappa_perturbation_results.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Complete results table containing 40 rows (20 peaks × 2 perturbations) with columns: t (refined peak location), magnitude (|D_F| at peak), red_S2_pct (percentage reduction from S₂ perturbation), red_S3_pct (percentage reduction from S₃ perturbation), difference_pct (red_S2 - red_S3), kappa (actual κ value used), and perturbation (±0.05 label). Generated via pandas DataFrame from causal perturbation analysis results.</artifact-description>
 </artifact>
 </artifacts> </output> DISCRETIONARY DECISIONS:

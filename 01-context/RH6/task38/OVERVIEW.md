@@ -30,27 +30,27 @@ The validated 2,772-zero partial output extends the existing 2,500-zero checkpoi
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldh_zeros_partial_dps50.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy object array of 2,772 strictly monotonic critical-line zero ordinates of the Davenport–Heilbronn L-function stored as decimal strings at 50-dps precision. Produced by running the adapted generation script from scratch in this task until the time budget was exhausted; first zero ≈ 5.0941598446, last zero ≈ 2827.6969810119, t_last ≈ 2828.2. Suitable as a checkpoint to resume toward the full 5,000-zero target.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_zeros_partial_meta.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Metadata sidecar for the partial zero file: {n_zeros, t_last, reason='keyboard_interrupt', elapsed_s}. Created by the adapted script's `save_partial` routine when the time-budget/SIGINT guard fired.</artifact-description>
 </artifact>
 <artifact>
 <file-name>checkpoints_ldh/</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Directory of 250-zero checkpoints produced by the run (ldh_ckpt_00250.npy … ldh_ckpt_02750.npy with matching `_meta.json`). Each `.npy` holds the cumulative validated zero list at 50-dps; each meta JSON records `n_zeros`, `t_last`, and `n_evals`. Used by `generate_ldh_zeros_run.py` to resume from the highest-numbered checkpoint.</artifact-description>
 </artifact>
 <artifact>
 <file-name>generate_ldh_zeros_run.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Adapted version of the original `generate_ldh_zeros.py` that (i) reads `LDH_WORK_DIR` and `LDH_TIME_BUDGET` from the environment, (ii) flushes a `ldh_zeros_partial_dps50.npy` on time-out or SIGINT via a `save_partial` routine, and (iii) preserves the original PARI/mpmath pipeline, monotonicity guard, and 250-zero checkpointing.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_log.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Execution log from the in-task generation run, including lfuninit timing, all 250-zero checkpoint entries (n_zeros, t, elapsed, rate, n_evals), 60-second PROGRESS lines, the resume notice from `ldh_ckpt_02500.npy`, and the two SIGINT-triggered partial saves. Used as the source for the throughput analysis and time projection.</artifact-description>
 </artifact>
 </artifacts>

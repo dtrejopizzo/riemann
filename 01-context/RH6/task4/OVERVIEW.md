@@ -30,12 +30,12 @@ The hypothesis ("running the script for the maximum time will significantly exte
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldh_ckpt_03578.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Resume checkpoint of L_DH critical-line zeros at the 3,578-zero milestone (t_last ≈ 3540.5683), 50 dps strings preserved via `mpmath.nstr`. Created by running the validated `generate_ldh_zeros_run.py` from the 3,250-zero checkpoint with `LDH_TIME_BUDGET=2800`; the script saved a partial after a `KeyboardInterrupt` triggered by the kernel cell-timeout at ~17 min. The partial was then promoted to a proper checkpoint by writing it as `ldh_ckpt_03578.npy`. Verified strictly monotonic. URI: data_entry:ldh-ckpt-03578-npy-zim2.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_ckpt_03578_meta.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Companion JSON metadata for `ldh_ckpt_03578.npy` containing `n_zeros=3578` and `t_last=3540.5683422188477656194607312068748287347053877505`, required by the resume logic in `generate_ldh_zeros_run.py`. URI: data_entry:ldh-ckpt-03578-meta-json-q1qr.</artifact-description>
 </artifact>
 </artifacts>

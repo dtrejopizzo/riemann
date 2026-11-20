@@ -37,17 +37,17 @@ The research hypothesis — that a from-scratch run with a 90-minute time budget
 <artifacts>
 <artifact>
 <file-name>generate_ldh_zeros_local.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Local copy of `generate_ldh_zeros.py` patched to use the current workspace path as `WORK_DIR` and to write a separate `run_log_local.txt`, so that the script can be executed in this environment without colliding with the historical hard-coded path or log.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_log_local.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Execution log for the from-scratch L_DH zero-generation run performed in this run, including lfuninit timing, per-250-zero checkpoint entries (count, t, elapsed, rate, n_evals), 60-second PROGRESS lines, and the resume notice from `ldh_ckpt_01750.npy`. Documents observed throughput decay with t.</artifact-description>
 </artifact>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_02500.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Validated 50-dps checkpoint containing the first 2,500 critical-line zeros of the Davenport-Heilbronn L-function, with an accompanying `ldh_ckpt_02500_meta.json` recording n_zeros, t_last, and n_evals. Regenerated in this run by the patched script; strict monotonicity held throughout. (Intermediate checkpoints at 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250 zeros were also produced.)</artifact-description>
 </artifact>
 </artifacts>

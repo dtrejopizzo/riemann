@@ -40,12 +40,12 @@ These results support the construction-sensitivity hypothesis described in the p
 <artifacts>
 <artifact>
 <file-name>F16_dose_response_peaks_N1e6.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the F16(c) peak datasets across the tested c grid. For each c value it stores the 200 peak locations, peak L-values, ω-stratified complex S_k arrays, and the class-level spectral matrix M, all generated from the N=10^6 coefficient sequences using finufft-based peak search and Numba Kahan summation.</artifact-description>
 </artifact>
 <artifact>
 <file-name>F16_dose_response_features.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV table summarizing family-level spectral features for each tested perturbation strength c, including pc1_complex, H_complex, mean log|S_k| statistics for k=1,…,6, peak-amplitude summaries, and baseline-relative deviation. It was derived directly from the peak-resolved outputs in the NPZ archive.</artifact-description>
 </artifact>
 </artifacts>

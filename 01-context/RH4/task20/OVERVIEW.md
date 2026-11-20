@@ -28,7 +28,7 @@ The objective's core premise — that recurrence relations alone are sufficient 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>coeffs_F13_N1e6.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the partial Dirichlet/Hecke coefficient array λ_f(n) of length 10⁶ for the first SL(2,Z) Maass form (LMFDB label 1.0.1.1.1, r≈9.533695). λ(n) is computed exactly via the Hecke recurrence + multiplicativity for all 5000-smooth n (551 153 of 10⁶, ≈55.12%) using 669 prime eigenvalues retrieved from LMFDB's `maass_newforms_coefficients` table (Holger Then). Entries with any prime factor &gt;4999 are stored as NaN — no fabrication. Archive also contains spectral parameter r, is_computed boolean mask, the 669 prime eigenvalues used, and a textual source/limitation note. Validated: max |λ_computed − λ_F13_smallN| = 4.19e-8 (n=1..999); max |λ_computed − λ_LMFDB5000| = 1.14e-7 (n=1..5000).</artifact-description>
 </artifact>
 </artifacts>

@@ -33,22 +33,22 @@ The experiment cleanly validates the *deformation* sensitivity of the Hermite-Ga
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldh_zeros_near_T700.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>38 imaginary parts of L_DH (Davenport-Heilbronn) zeros in t ∈ [680, 720] computed from sign changes of Z_DH(t) at mpmath dps=20–25, refined with mpmath.findroot anderson solver. Each zero stored as a high-precision decimal string. These are the zeros that contribute non-negligibly to the local Weil form at T₀=700 (within ~6σ for σ=2).</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_zeros_small_T.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>122 L_DH zeros in t ∈ [1, 200] computed via Z_DH sign changes at dps=20, refined via mpmath.findroot. First zero verified as 5.094159844571... matching documentation. Useful for benchmarking and for future T₀-sweep experiments near t≈85.7 (the Spira off-line zero region).</artifact-description>
 </artifact>
 <artifact>
 <file-name>lchi_zeros_near_T700.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>38 imaginary parts of L(s, χ) zeros for χ the primitive odd character mod 5 with χ(2)=i (LMFDB 5.c.a), in t ∈ [680, 720], computed via a custom Hardy-Z function Z_χ(t)=Re[e^{iθ_χ(t)} L(1/2+it,χ)] using root number ε=−iτ(χ)/√5. Computed because the pre-existing `lchi_zeros_partial_dps50.npy` has a large gap between t=212 and t=2500 (a data quality issue identified during this analysis).</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_form_results.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) Bar chart of λ_min(Q_N) for ζ, L(χ), L(Δ), L_DH, and ζ_δ (δ=0.1), showing all four GRH-controls positive and L_DH undetected; (B) Sweep of λ_min(ζ_δ) vs δ ∈ {0, 0.01, 0.05, 0.1, 0.2, 0.3, 0.5} showing strict monotonic decrease and sign change near δ≈0.3.</artifact-description>
 </artifact>
 </artifacts>

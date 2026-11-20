@@ -36,7 +36,7 @@ The analysis provides moderate support for the convergence hypothesis. The point
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>gev_convergence_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>
 Comprehensive JSON file containing all GEV fit results for N=10⁶ analysis including point estimates and 95% bootstrap confidence intervals for all three GEV parameters (ξ, μ, σ), goodness-of-fit metrics (KS test p-value), analysis parameters (N, t-range, number of blocks, bootstrap iterations, random seed), and detailed comparison with N=10⁵ results (parameter changes, convergence metrics, CI overlap analysis). Generated using scipy.stats.genextreme MLE fitting and 10,000 bootstrap iterations for CI estimation. This artifact provides complete statistical documentation for the convergence analysis and enables future meta-analyses across multiple N values.
 </artifact-description>

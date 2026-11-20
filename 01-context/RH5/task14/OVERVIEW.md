@@ -35,32 +35,32 @@ The bracket-then-refine pipeline works correctly and reproduces LMFDB to 28+ dig
 <artifacts>
 <artifact>
 <file-name>brackets_2500_4500.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickled list of 2,520 Hardy-Z sign-change brackets (a,b) for L(s, χ₄ mod 5) on the interval (2499.4, 4499.2], step h=0.1, computed at dps=15 with `mpmath.dirichlet`/`mpmath.gamma`. Produced by `run_scan.py` running `scan_interval` from `lchi5_module.py` in parallel across 8 processes; took 1,707 s.</artifact-description>
 </artifact>
 <artifact>
 <file-name>brackets_all_5141.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Combined, deduplicated, and sorted list of 5,141 sign-change brackets for L(s, χ₄ mod 5) covering t∈(6.6, 4499.2]. Built by merging the prior `brackets_0_2500.pkl` (2,622 brackets) with the newly produced `brackets_2500_4500.pkl` (2,520 brackets) and removing the single overlap at t≈2499.45. Sufficient to localize approximately the first 5,144 nontrivial zeros.</artifact-description>
 </artifact>
 <artifact>
 <file-name>brackets_first_5000.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Truncation of `brackets_all_5141.pkl` to the first 5,000 brackets (last bracket midpoint ≈ 4390.55), matching the N=5000 target in the specification. Intended as direct input to refinement.</artifact-description>
 </artifact>
 <artifact>
 <file-name>zeros_partial_dps15.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Partial sorted list of refined nontrivial zeros of L(s, χ₄ mod 5) at target dps=15 (~10–13 digits effective precision), produced by `run_refine.py` using a custom parallel secant refinement (`fast_refine_secant`) on `brackets_first_5000.pkl` with 8 worker processes. Refinement was still running at the time budget cutoff; this file is a periodic checkpoint containing the lowest-t zeros completed (~1,600+ zeros).</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_scan.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Driver script that loads `lchi5_module.scan_interval`, splits the interval [2499.4, 4500.0] into 81 chunks of width 25 at step h=0.1, dps=15, and runs them via `multiprocessing.Pool(8)` with periodic checkpointing.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_refine.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Driver script that loads `brackets_first_5000.pkl`, applies a custom secant refinement (`fast_refine_secant`) parallelized via `multiprocessing.Pool(8)` with `imap` (ordered, low-t first), chunked into groups of 25 brackets, configurable via `TARGET_DPS` and `MAXITER` env vars, with incremental checkpointing to `zeros_partial_dps{N}.pkl`.</artifact-description>
 </artifact>
 </artifacts>

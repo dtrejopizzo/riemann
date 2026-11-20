@@ -1,0 +1,13 @@
+R=2 T=0.8 Nb=48 J=30(rk 29) c=1.0: on V: Q/|F|^2 [0.5451 0.8803]  Q/l_g [0.8509 0.9619]  [min l_g/|F|^2 on V 5.22e-01]  l_g-units (lam/2)kappa=0.9469
+R=4 T=1.0 Nb=48 J=30(rk 29) c=1.0: on V: Q/|F|^2 [0. 0.]  Q/l_g [0.073 0.697]  [min l_g/|F|^2 on V 3.56e-06]  l_g-units (lam/2)kappa=0.0993
+R=2 T=1.0 Nb=48 J=30(rk 29) c=1.0: on V: Q/|F|^2 [0.5656 0.871 ]  Q/l_g [0.8581 0.9579]  [min l_g/|F|^2 on V 5.42e-01]  l_g-units (lam/2)kappa=1.1663
+R=3 T=0.8 Nb=48 J=30(rk 29) c=1.0: on V: Q/|F|^2 [0.0015 0.0617]  Q/l_g [0.7454 0.7937]  [min l_g/|F|^2 on V 1.07e-03]  l_g-units (lam/2)kappa=0.8294
+R=3 T=1.0 Nb=48 J=30(rk 29) c=1.0: on V: Q/|F|^2 [0.0008 0.0603]  Q/l_g [0.7422 0.7594]  [min l_g/|F|^2 on V 6.22e-04]  l_g-units (lam/2)kappa=1.0088
+R=4 T=0.8 Nb=48 J=30(rk 29) c=1.0: on V: Q/|F|^2 [0.     0.0003]  Q/l_g [0.6774 0.7178]  [min l_g/|F|^2 on V 3.95e-06]  l_g-units (lam/2)kappa=0.7538
+R=3 T=0.8 Nb=48 J=45(rk 44) c=1.0: on V: Q/|F|^2 [0.0015 0.0617]  Q/l_g [0.7576 0.8326]  [min l_g/|F|^2 on V 9.41e-04]  l_g-units (lam/2)kappa=0.8430
+R=6 T=0.8 Nb=48 J=30(rk 29) c=1.0: on V: Q/|F|^2 [-0.  0.]  Q/l_g [-0.      0.0007]  [min l_g/|F|^2 on V 3.15e-07]  l_g-units (lam/2)kappa=-0.0000
+R=3 T=0.8 Nb=64 J=30(rk 29) c=1.0: on V: Q/|F|^2 [0.0015 0.0587]  Q/l_g [0.7423 0.7944]  [min l_g/|F|^2 on V 1.03e-03]  l_g-units (lam/2)kappa=0.8260
+R=4 T=0.8 Nb=48 J=45(rk 44) c=1.0: on V: Q/|F|^2 [0.     0.0003]  Q/l_g [0.683 0.73 ]  [min l_g/|F|^2 on V 2.95e-06]  l_g-units (lam/2)kappa=0.7600
+R=4 T=0.8 Nb=64 J=30(rk 29) c=1.0: on V: Q/|F|^2 [0.     0.0003]  Q/l_g [0.6793 0.7201]  [min l_g/|F|^2 on V 3.87e-06]  l_g-units (lam/2)kappa=0.7559
+R=5 T=0.8 Nb=48 J=30(rk 29) c=1.0: on V: Q/|F|^2 [0. 0.]  Q/l_g [0.0049 0.0799]  [min l_g/|F|^2 on V 5.94e-07]  l_g-units (lam/2)kappa=0.0055
+R=8 T=0.8 Nb=48 J=30(rk 29) c=1.0: on V: Q/|F|^2 [-0. -0.]  Q/l_g [-0.0001 -0.    ]  [min l_g/|F|^2 on V 1.39e-07]  l_g-units (lam/2)kappa=-0.0001

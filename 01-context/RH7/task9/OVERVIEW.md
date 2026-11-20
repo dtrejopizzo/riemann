@@ -31,12 +31,12 @@ The exercise quantifies the minimum analytic hypothesis under which the Weil-qua
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>eta_bound_fit_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Fitted parameters, log-space R², MSE, and AIC for the three candidate bounds on η(X) at (T₀=46.13, σ=1), plus the predicted detection cutoff X under each model and the empirical X_min from the η scan. Produced by curve-fitting eta_residual_law.json["fine_X_scan_H2500"] data with scipy.optimize.curve_fit and brentq.</artifact-description>
 </artifact>
 <artifact>
 <file-name>eta_bound_fits.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) log–log plot of empirical η(X) overlaid with the three fitted bounds and the δ=10⁻³ signal level; (B) bar chart of the X cutoff required for detection under each bound vs the empirical X_min. Generated with matplotlib from the fit outputs above.</artifact-description>
 </artifact>
 </artifacts>

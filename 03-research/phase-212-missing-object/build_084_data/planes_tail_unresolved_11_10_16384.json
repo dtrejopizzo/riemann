@@ -1,0 +1,7 @@
+{
+  "status": "UNRESOLVED_TAIL_MAJORANT",
+  "mangoldt_scale": "11/10",
+  "tail_start": 16384,
+  "tail_comparison_interval": "[-0.085 +/- 5.02e-4]",
+  "meaning": "sufficient tail bound did not pass; no negative test or sign conclusion"
+}

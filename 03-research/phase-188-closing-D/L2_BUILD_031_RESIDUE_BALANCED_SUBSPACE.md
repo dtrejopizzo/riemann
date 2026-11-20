@@ -1,5 +1,7 @@
 # L2_BUILD_031 — Residue-balanced test vectors: the constrained target is equivalent to D, not weaker
 
+> **Aviso de corrección posterior (phase211, auditado):** la omisión de componentes p^b<=Q en§3 y su repetición en§4 no son válidas sólo por B_Q. CORRECTION_RESIDUE_BALANCE_031.md y su auditoría exhiben M=Q=2,s=(1,1), un perfil e interpolante suave declarados y pairingq2=v2/2>0. El TeoremaE de§2 permanece intacto. Se conserva abajo el texto histórico; no usar la supresión corregida.
+
 ## Corpus check
 030 (Q = m^♯-form − Chebyshev fluctuation (q=1) − Σ_{p^b} additive-character components), 028 §1 (A_M ⟺ D by approximation of configurations), 029
 (Near-free sets trivial); N_BUILD_021 (Prop 1: Near = s^T[Ξ_{F₀}(log(m/k)) − exact]s; Theorem 2: all progression/shifted-sum classes 𝒞_prog KILLED by finmod;

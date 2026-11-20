@@ -1,0 +1,32 @@
+{
+  "status": "NUMERICAL_ONLY",
+  "interval_enclosure": false,
+  "records": [
+    {
+      "parity": "even",
+      "outer_order": 128,
+      "inner_order": 192,
+      "block_order": 192,
+      "degree": 159,
+      "residual_gram_norm": 0.7990083068058568,
+      "sufficient_min": -1.1460407955366805,
+      "sufficient_negative_count": 6,
+      "S_bottom": 5.303839037702159e-12,
+      "bottom_penalty": 5.16042253772937e-13,
+      "sampled_low_orthogonality_error": 0.021304453659523055
+    },
+    {
+      "parity": "odd",
+      "outer_order": 128,
+      "inner_order": 192,
+      "block_order": 192,
+      "degree": 159,
+      "residual_gram_norm": 0.7992506278383408,
+      "sufficient_min": -1.1452373433094463,
+      "sufficient_negative_count": 6,
+      "S_bottom": 1.1281702825825179e-09,
+      "bottom_penalty": 8.059269420461191e-11,
+      "sampled_low_orthogonality_error": 0.0452348568037114
+    }
+  ]
+}

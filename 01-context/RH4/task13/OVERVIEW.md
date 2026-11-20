@@ -28,7 +28,7 @@ The hypothesis is confirmed and even understated: a purely arithmetic ablation �
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>Delta_ablation_results.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy .npz archive containing the results of the conductor-prime ablation experiment for F12 vs ζ. Contents: M_zeta and M_zeta_ablated (8×8 covariance matrices over 200 zeta peaks at N=10⁶), Δ_empirical and Δ_ablation (8×8), the underlying complex S_k(ζ) and S'_k(ζ) arrays at the 200 peaks (200×8 each), peak heights t_peaks, and summary scalars (cosine_similarity = 0.9730, pearson_r = 0.9613, alpha_best_fit = 1.096, r2_best_fit = 0.947, Frobenius norms). Created from scratch via a Numba-jitted Kahan-compensated summation engine; M_zeta was validated to 13-digit agreement against the on-disk matrix before ablation.</artifact-description>
 </artifact>
 </artifacts>

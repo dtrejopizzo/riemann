@@ -1,0 +1,8 @@
+Copyright (c) 2026 Hongmin Li. All rights reserved.
+
+The manuscript, verification programs and certificate data are submitted
+for review and publication under rStation's Terms of Service:
+https://rstation.ai/terms . The supplied programs and data may be inspected
+and run to reproduce the accompanying paper. No additional open-source or
+unrestricted redistribution license is granted. External dependencies retain
+their own licenses and are not bundled.

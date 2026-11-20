@@ -27,7 +27,7 @@ The experiment cleanly refutes the r32-proposed "arithmetic-side cancellation" h
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_mismatched_arith_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON record of the mismatched-arithmetic Weil-form J-sweep for L_DH at T₀=85.7, σ=2.0, prime_bound=1000, dps=80. Contains parameters, J ∈ {4,8,12,16,20} eigenvalue tables for Q′ = M_zeros − M′_arith (with ζ-style Λ(p^k)=log p), side-by-side comparison to original r28 L_DH eigenvalues and r32 ζ single-shift eigenvalues, power-law fits (α_mismatched = α_original = 0.9039, α_ζδ = 13.98), and a magnitude check on M_arith showing both Λ_DH and Λ_ζ matrices are ~10⁻⁶⁶⁵ versus M_zeros at 4.57. Produced by reproducing the r28 Weil form (validated to 14 sig figs against the JSON ground truth) and swapping in the ζ-style von Mangoldt arithmetic term.</artifact-description>
 </artifact>
 </artifacts>

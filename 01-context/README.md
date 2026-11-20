@@ -2,7 +2,7 @@
 
 These nine folders (`RH1` … `RH9`) are the **computational foundation** of the whole project:
 nine large research programs. Together they produced the data, the calibrations, and the phenomenology that the
-theoretical program (*Program 10*, [`../03-research/`](../03-research/), currently through phase 119) was built on.
+theoretical program (*Program 10*, [`../03-research/`](../03-research/), phases 0–213) was built on.
 
 Each `RHk/` folder is a full local download of that program's run: one subfolder per
 **task**, each containing an `OVERVIEW.md` (metadata + the full answer), the
@@ -22,7 +22,7 @@ executed notebook when available, and all input/output files.
 | RH8 | Localized Weil Form Stability and Monotonicity | 27 | Stability / monotonicity of the localized form |
 | RH9 | Arithmetic Surface Lefschetz Structure for Zeta | 79 | Lefschetz / arithmetic-surface structure (mostly literature search) |
 
-**Total:** 627 tasks across the nine programs across 10 years of work.
+**Total:** 627 tasks across the nine programs.
 
 ## Program summaries and key discoveries
 
@@ -115,8 +115,7 @@ Inside each `RHk/task-XXXXXXXX/`:
 
 ## Relationship to the rest of the program
 
-The bottom line of this empirical base is recorded in the program summary
-([`../COMPLETE-PROGRAM-SUMMARY.md`](../COMPLETE-PROGRAM-SUMMARY.md)): the ω-class work is
+The bottom line of this empirical base: the ω-class work is
 **descriptively rich but did not beat convexity**, and the localized-Weil detector (RH6–RH8)
 became the object the theoretical program pivoted to. The published distillations are in
 [`../04-papers/`](../04-papers/).

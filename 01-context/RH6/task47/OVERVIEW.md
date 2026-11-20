@@ -37,17 +37,17 @@ Within the tested regime, the data contradict the motivating asymptotic picture 
 <artifacts>
 <artifact>
 <file-name>fourth_moment_omega_decomposition_T5000_5500.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON artifact containing the full ω-class fourth-moment decomposition for ζ, L(Δ), and L_DH on the window t∈[5000,5500] with N_terms=10000, dt=0.01, and classes 0–5. It was created by reconstructing the validated r20 decomposition engine and applying it to the requested high-t window.</artifact-description>
 </artifact>
 <artifact>
 <file-name>fourth_moment_omega_decomposition_T20000_20500.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON artifact containing the full ω-class fourth-moment decomposition for ζ, L(Δ), and L_DH on the window t∈[20000,20500] with N_terms=10000, dt=0.01, and classes 0–5. It was produced with the same validated reconstruction used for the [5000,5500] window.</artifact-description>
 </artifact>
 <artifact>
 <file-name>fourth_moment_omega_window_comparison.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compact comparison artifact summarizing pure, diagonal-cross, and off-diagonal fractions across the three windows [500,1000], [5000,5500], and [20000,20500] for all three L-functions. It was assembled from the stored r20 baseline and the two newly computed high-t decompositions.</artifact-description>
 </artifact>
 </artifacts>

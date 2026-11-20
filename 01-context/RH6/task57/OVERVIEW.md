@@ -31,12 +31,12 @@ The completed ζ analysis strongly supports the core geometric claim from r61: a
 <artifacts>
 <artifact>
 <file-name>weil_detector_zeta_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON summary of the validated ζ analysis at `δ=4.8`, including parameters, eigenvalues for unshifted ζ and shifted `ζ_δ`, and notes documenting why the non-ζ controls were deferred. It was created directly from the notebook computations using `mpmath` at 80-digit precision.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_Q_matrices_zeta_delta4p8.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the final 12×12 Weil matrices `Q` for unshifted ζ and shifted `ζ_δ` at `δ=4.8`, together with metadata (`T0`, `σ`, `J`, `β`). It was produced from the validated high-precision reconstruction and converted to floating-point arrays for compact storage.</artifact-description>
 </artifact>
 </artifacts>

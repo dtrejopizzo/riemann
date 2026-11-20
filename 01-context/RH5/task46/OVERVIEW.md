@@ -31,17 +31,17 @@ The hypothesis specifically predicted that L_DH would exhibit a "significant, qu
 <artifacts>
 <artifact>
 <file-name>hybrid_I2_final_ratios.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>One-row summary table of the final hybrid Euler–Hadamard second-moment ratios I_2(T)/(e^(−γ_E)·log T) for ζ, L_DH (with and without off-line zeros), L(χ₅), and L(Δ,s) at the maximum available T for each function. Produced from the GHK Z_X-factor calculation with kernel u=δ(x−e) (U=E₁), logX=1, n_t=5000 Monte-Carlo samples per T, t∈[T/2,T].</artifact-description>
 </artifact>
 <artifact>
 <file-name>hybrid_I2_sweep.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Full T-sweep of the Z_X-factor second moment J₂(T) and the unitary-normalised ratio for ζ, L_DH (with off, no off), L(χ₅), and L(Δ,s) on a dense 20-point T-grid per function. Columns: function, T, J2_ZX, ratio_normalized.</artifact-description>
 </artifact>
 <artifact>
 <file-name>hybrid_second_moment_ratio.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final summary figure: hybrid Euler–Hadamard second-moment ratio I_2(T)/(a_2·log T) vs T (log scale) for all four L-functions, with the off-line vs on-line decomposition of L_DH and the unitary RMT reference line at 1.</artifact-description>
 </artifact>
 </artifacts>

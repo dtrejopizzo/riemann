@@ -39,22 +39,22 @@ The evidence supports the central engineering premise of the hypothesis: multipr
 <artifacts>
 <artifact>
 <file-name>ldh_worker.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Python worker module implementing block-wise Davenport–Heilbronn zero finding via a Hardy-Z sign-change scan and high-precision root refinement with mpmath. It was written to disk in the working directory so it could be imported by multiprocessing workers.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_parallel.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>First multiprocessing driver script for the full [0,4600] search using 100-unit blocks and 8 workers. This version scheduled high-t blocks first and therefore served mainly as a performance/scheduling diagnostic.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_parallel2.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Second multiprocessing driver script using 25-unit blocks in low-to-high order so that completed blocks appear quickly and can be checkpointed. This script successfully produced early completed blocks and partial zero totals before run expiration.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_run.log</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Log file from the second parallel run showing completed early blocks, per-block zero counts, and cumulative totals. It documents that the parallel pipeline was functioning and producing zeros before the runtime limit halted the run.</artifact-description>
 </artifact>
 </artifacts>

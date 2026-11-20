@@ -29,12 +29,12 @@ The single, fully-validated data point I produced is exactly consistent with the
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>partial_results.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle containing the 40 high-precision L(Δ) zero imaginary parts found in [61.7, 109.7] (window around T0=85.7), each refined to |ZH(γ)| ≤ 10⁻¹², together with the validated trace values tr(M_zeros)=13.4655, tr(M_arith)=13.4655, residual −5.1×10⁻¹³, and the reference λ_min = −3.57×10⁻¹³ at (T0=85.7, σ=2, J=16, X=10⁵). Generated in this run from scratch using mpmath (adaptive dps), numpy/scipy for matrix algebra, and the supplied tau_table.pkl for τ(n).</artifact-description>
 </artifact>
 <artifact>
 <file-name>LDelta_trace_gate_diagnostic.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel figure: (A) the 40 recovered L(Δ) zeros overlaid on the Hermite–Gauss diagonal kernel Σ_j φ_j²(t) at T0=85.7, σ=2, J=16 (showing the zeros lie inside the test-function support); (B) bar chart of tr(M_zeros), tr(M_arith), and its archimedean/prime components, illustrating the trace gate closing to ~5×10⁻¹³.</artifact-description>
 </artifact>
 </artifacts>

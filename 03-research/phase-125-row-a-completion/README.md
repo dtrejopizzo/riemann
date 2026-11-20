@@ -93,7 +93,7 @@ See [PLAN.md](PLAN.md) for the entry state and the note order.
   isomorphic-shadows theorem; the invariant is the analytic relative trace,
   with the smooth-model torsion identification of P123.060 §4.  The exact
   mixed computation and the label stand.  Consolidated in
-  [Paper 43](../../04-papers/43-row-a-torsion-theory/main.md).
+  [Paper 43](../../04-papers/43-row-a-torsion-theory/main.tex).
 
 ## The crux, and how it was resolved
 

@@ -28,17 +28,17 @@ Degree- and conductor-aware normalization moves the class-held-out classifier we
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>svm_norm_features_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Structured JSON summary of the held-out SVM experiment with degree/conductor-normalized features. Contains the exact normalization laws, the class→(q,d) table, AUCs for original and normalized feature sets (0.5335 → 0.7333), confusion matrices, classification reports, and a hypothesis-supported flag (False, threshold 0.80). Replicates the r10 protocol exactly so values can be compared one-to-one with svm_classification_results.json.</artifact-description>
 </artifact>
 <artifact>
 <file-name>peaks_features_F1_F12_normalized.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Augmented peak-feature table: original peaks_features_F1_F12.csv joined with class invariants (q, d) and four new normalized features (norm_amplitude, norm_curvature, norm_roughness, norm_xi) derived using analytic-conductor and Selberg-CLT scaling laws. Suitable for follow-on classification experiments.</artifact-description>
 </artifact>
 <artifact>
 <file-name>svm_norm_features_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) class-held-out ROC curves comparing original features (AUC=0.533) to normalized features (AUC=0.733) with hypothesis threshold annotated; (B) per-test-class mean predicted P(GRH=1) for both feature sets, color-coded by true GRH label, highlighting that F11/F9/F7 (true GRH) and F12 (true non-GRH) remain misclassified after normalization.</artifact-description>
 </artifact>
 </artifacts>

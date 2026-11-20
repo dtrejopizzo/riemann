@@ -49,42 +49,42 @@ Within the limits of the available data, the main research hypothesis is support
 <artifacts>
 <artifact>
 <file-name>lchi5_zeros_N5000_dps80.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Generated in this run using PARI via cypari2 with lfuncreate([znstar(5,1),[1]]) and lfunzeros over height intervals, then truncated to the first 5000 zeros. The filename reflects the intended precision target from the project objective, but PARI returned only about 19–20 significant digits, consistent with the dataset caveat. The file contains the imaginary parts of the first 5000 critical-line zeros for the primitive order-4 Dirichlet character mod 5.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldelta_zeros_N1298_dps80.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Partial Ramanujan-Delta zero list generated in this run using PARI modular-form routines mfinit([1,12],1), mfDelta(), lfunmf, and lfunzeros. Runtime constraints prevented completion of the requested N=5000 list, so this artifact contains only the first 1298 zeros obtained before timeout. It was used only for a partial Front I comparison and should not be treated as a complete N=5000 control.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front1_model_selection.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Table of AIC/BIC model-selection results for all analyzed coefficient sequences. Each row records the function, coefficient type, weight choice, AIC/BIC values for constant, log-linear, and log-quadratic fits, the winning model, and residual summaries. It was created from ordinary least-squares fits to the stable-window Jacobi coefficients.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front1_logquad_params.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Table of fitted log-quadratic parameters c0, c1, c2 and residual standard deviations for each function, coefficient type, and spectral weight. It summarizes the direct cross-control comparison of the selected Front I model. The values were extracted from the OLS fits used in model selection.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front1_spectral_audit.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Spectral-weight audit table comparing log-quadratic fit parameters under uniform and 1/|rho|^2 weights. It reports parameter values, relative parameter shifts, and residuals for each function and coefficient type. This artifact was created to assess whether Front I conclusions survive a change of spectral measure.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front1_jacobi_coefficients_N5000.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing reconstructed a_n and b_n sequences for each analyzed function under uniform and 1/|rho|^2 weights. The coefficients were produced by Lanczos tridiagonalization of the discrete zero spectra with double Gram-Schmidt reorthogonalization. For L_Delta the stored sequences correspond to the partial N=1298 dataset, not a full N=5000 reconstruction.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front1_summary_figure.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final summary figure containing two vertically stacked panels: residuals of a_n after log-quadratic fitting, and a bar chart of relative residual scales across controls, coefficient types, and weight choices. It was created with matplotlib at 300 dpi to summarize the core Front I result. A PDF version with the same content was also saved.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front1_summary_figure.pdf</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>PDF version of the final Front I summary figure. It contains the same two-panel visualization as the PNG file and was produced directly from the notebook analysis. This figure summarizes the model-class agreement and the elevated residual variance of L_DH.</artifact-description>
 </artifact>
 </artifacts>

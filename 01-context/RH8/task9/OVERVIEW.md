@@ -30,17 +30,17 @@ The research hypothesis is supported. The previous L(Δ,s) failure mode was attr
 <artifacts>
 <artifact>
 <file-name>zeros_LDelta_local_final.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle file containing the verified local and slightly extended L(Δ,s) zero list as high-precision strings, along with metadata on precision and method. The zeros were generated from the Hecke integral representation of Λ_an(1/2+it), refined with mpmath.findroot using secant/bisect-style bracketing inputs, and retained only if |Λ_an|<10^-70.</artifact-description>
 </artifact>
 <artifact>
 <file-name>matrices_LDelta_T0_85.7_sigma_2_J_10.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle file containing the computed M_zeros and M_arith matrices, their traces, the trace residual, and the Q-matrix eigenvalues at T0=85.7, σ=2, J=10, X=10^5, dps=80. Matrix entries were saved as strings to preserve high precision.</artifact-description>
 </artifact>
 <artifact>
 <file-name>tau_table.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle file containing the Ramanujan tau coefficient table τ(n) for n≤10^5. It was generated using python-flint integer polynomial arithmetic from the pentagonal-number theorem and the identity Δ(q)=q∏(1-q^n)^24.</artifact-description>
 </artifact>
 </artifacts>

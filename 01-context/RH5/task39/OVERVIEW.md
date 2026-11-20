@@ -31,12 +31,12 @@ The available data permits only a partial check of the hypothesis. For ζ and th
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>zeta_I2.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy archive with arrays `T` and `integral` giving the cumulative ∫₀ᵀ|ζ(½+it)|² dt for T = 50, 100, …, 4400, computed by chunked Gauss–Legendre quadrature in mpmath at dps=15. Validated against the Hardy–Littlewood asymptotic at T=1000 to 0.2 %.</artifact-description>
 </artifact>
 <artifact>
 <file-name>lchi5_I2.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy archive with arrays `T` and `integral` giving the cumulative ∫₀ᵀ|L(½+it, χ₅)|² dt for T = 50, 100, …, 3550, where χ₅ is the real quadratic character mod 5 (Kronecker symbol). Computed by chunked Gauss–Legendre quadrature in mpmath at dps=15 using a Hurwitz-zeta linear combination evaluator that was sanity-checked at s=1 against the analytic class-number formula 2 log((1+√5)/2)/√5.</artifact-description>
 </artifact>
 </artifacts>

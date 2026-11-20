@@ -39,17 +39,17 @@ The r13 observation that >99% of ∫|D_L|^4 dt on [0,500] is concentrated near t
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>fourth_moment_omega_decomposition_T500_1000.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Full ω-class fourth-moment decomposition for ζ, L(Δ), L_DH at N_terms=10^4, dt=0.01, on the high-t window t∈[500,1000]. Contains per-class pure integrals ∫|S_k|^4 dt for k=0..5, per-pair diagonal cross-class integrals ∫|S_j|^2|S_k|^2 dt for j<k, total ∫|D_L|^4 dt, and the pure/diagonal-cross-×4/off-diagonal fractions. Produced by re-running the r13 time-sampling engine with the integration window shifted.</artifact-description>
 </artifact>
 <artifact>
 <file-name>fourth_moment_decomposition_500_1000_vs_0_500.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Side-by-side comparative table of total ∫|D_L|^4 dt and the three fractional contributions (pure-class, diagonal cross-class ×4, off-diagonal residual) for ζ, L(Δ), L_DH between the original r13 window [0,500] and the new high-t window [500,1000].</artifact-description>
 </artifact>
 <artifact>
 <file-name>fourth_moment_high_t_window_comparison.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Summary figure: grouped bar chart of the three fractional decomposition components for ζ, L(Δ), L_DH in [0,500] (solid) vs [500,1000] (hatched), with annotated change in off-diagonal residual per L-function.</artifact-description>
 </artifact>
 </artifacts>

@@ -33,22 +33,22 @@ The current evidence does not support the hypothesis as stated. The `cypari2` pa
 <artifacts>
 <artifact>
 <file-name>run_lchi5/generate_lchi5.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Standalone Python script implementing the requested multiprocessing pipeline for `L(s, χ₄ mod 5)` zero generation with `T_MAX=4400`, `DPS=80`, `spawn` context, 8 linear sub-intervals, planned merge/dedup/validation, and NumPy output. It was created during this analysis in a writable subdirectory because the root worker file was read-only.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_lchi5/lchi5_cypari_worker.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Writable fixed copy of the `cypari2` worker module. The change assigns `lfunzeros` output to a PARI-session variable (`zlist`) before calling `Strprintf`, avoiding the original PARI indexing error caused by referencing a Python-side `Gen` object from PARI source text.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_lchi5/run.log</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Log file from the first standalone-script execution attempt. It records per-band completion times through band 6 before the subprocess was interrupted by notebook timeout behavior.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_lchi5/run2.log</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Log file from the second detached standalone-script execution attempt. It records successful completion of bands 0 through 3 before global time expired, showing that the job was progressing but not yet finished.</artifact-description>
 </artifact>
 <artifact>

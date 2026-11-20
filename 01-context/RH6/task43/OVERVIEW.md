@@ -32,12 +32,12 @@ The exponents a obtained from M_k(N) ≈ C·(log N)^a yield a quantitative finge
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>omega_class_growth_fits.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Per (L-function, ω-class k) fitted parameters for three growth models — (a) M = C·log N, (b) M = C·(log N)^k with k fixed by class, and (c) M = C·(log N)^a (two-parameter) — together with R² in linear M-space and in log–log space. Produced by OLS on (log log N, log M_k) using the three N values in omega_class_moments.csv.</artifact-description>
 </artifact>
 <artifact>
 <file-name>omega_class_growth_fits.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: log–log plot of M_k(N) vs log N for k=1..4 and L ∈ {ζ, L(Δ), L_DH}, showing ζ slopes are visually much steeper than for the other two L-functions. Panel B: fitted exponent a (from M_k ≈ C·(log N)^a) versus ω-class k for each L-function, showing ζ separated by a factor of 3–20 from L(Δ) and L_DH across all classes.</artifact-description>
 </artifact>
 </artifacts>

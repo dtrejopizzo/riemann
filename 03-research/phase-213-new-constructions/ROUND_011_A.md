@@ -1,0 +1,11 @@
+# Dos tubos de saltos distantes impiden un piso uniforme para restos libres
+
+Antecedentes 213-10-A, BUILD084 y P47 lem:transl. La prueba local exige un piso para cualquier resto del dominio soportado en los tubos. Se comprueba esa condición para la familia completa de perfiles, admitiendo sólo dos de los tubos físicos. El cotejo previo distinguió este test del problema de los restos efectivamente producidos por traslaciones del mismo perfil.
+
+Fijar cualquier δ>0 y tomar φ real suave, no negativa y no nula, de soporte compacto en (0,δ). Para k entero grande, g_k=φ+V_(log k)φ está soportada en dos tubos de longitud δ que empiezan en 0 y log k, posiciones de salto de F_k para k≥4. Su norma cuadrada es 2||φ||². La energía arquimediana es uniformemente acotada superiormente: la transformada es el producto de la de φ por un factor acotado por 2, y ∫|m||φ̂|² es finita.
+
+La autocorrelación c_φ es no negativa y supera b>0 en [−η,η] para algún η>0. La autocorrelación de g_k contiene c_φ(d−log k) con signo positivo y las restantes contribuciones también son no negativas. El peine en d=log n resta 2Λ(n)c_(g_k)(log n)/√n. Basta hacer crecer la masa prima en la banda |log(p/k)|≤η.
+
+Para h=η/2, dividir los primos por bandas jh≤log p<(j+1)h. Si todas las sumas de (log p)/√p en esas bandas estuvieran acotadas por C, la suma de 1/p en la banda j≥1 sería a lo sumo C exp(−jh/2)/(jh). Esto contradice la divergencia de la suma recíproca de primos (prueba elemental en 212-95-B). Hay una sucesión j→∞ con masas tendiendo a infinito. Tomar k el entero más próximo a exp((j+1/2)h). La banda entera cae en |log(p/k)|≤η para j grande. Por tanto a(g_k)/||g_k||²→−∞ sobre esa sucesión.
+
+Así para cada longitud fija de tubos falla incluso un piso inferior finito uniforme en k sobre los restos libres. Estos tests positivos como funciones tienen momentos no nulos. En la aplicación primitiva de 213-10-A el resto efectivo g=Y−cF_k tiene ambos momentos nulos, porque Y y F_k los tienen. La cuestión de un radio uniforme para combinaciones primitivas de traslaciones de F_k conserva la restricción algebraica que liga todas sus piezas. El argumento tampoco decide el signo global. PROVED para el piso sobre restos libres tras revisión matemática independiente.

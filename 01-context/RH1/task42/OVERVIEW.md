@@ -18,19 +18,19 @@ The results confirm the research hypothesis and reveal the mechanism of resonanc
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>phase_uniformity_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Complete numerical results of the Rayleigh uniformity tests for L_DH and Zeta at their respective peaks (N=10⁶). Contains peak locations (t_DH=84.208, t_zeta=102.460), partial sum magnitudes, and for each function and phase type (all-terms vs primes-only): number of terms, mean resultant length R, Rayleigh z-statistic, p-value, and uniformity rejection status. Structured JSON format enables programmatic access for downstream analyses.</artifact-description>
 </artifact> <artifact>
 <file-name>phase_uniformity_summary.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Tabular summary of Rayleigh test results in CSV format. Four rows (L_DH all-terms, L_DH primes-only, Zeta all-terms, Zeta primes-only) with columns: Function, Phase_Type, t_peak, N_terms, Mean_Resultant_R, Rayleigh_z, P_value, Uniformity_Status. Facilitates quick comparison and can be directly imported into statistical software or spreadsheet applications.</artifact-description>
 </artifact> <artifact>
 <file-name>final_phase_analysis_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final integrated figure (12×5 inches, 300 dpi) presenting the key result. Left panel: bar chart comparing p-values for all four test cases on log scale, with α=0.05 threshold line and annotations indicating uniform/non-uniform results. Right panel: text summary of key findings and conclusion. This figure captures the core result that composite terms drive L_DH resonance while both primes and composites contribute to Zeta peaks.</artifact-description>
 </artifact> <artifact>
 <file-name>phase_analysis_report.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Comprehensive text report documenting the complete analysis including research question, methodology, statistical test specification, detailed results with interpretation, mechanism explanation, comparison with Report r6, statistical notes on sample size effects and mean resultant length expectations, and list of all generated files. Serves as standalone documentation of the analysis for archival and reproducibility purposes.</artifact-description>
 </artifact>
 </artifacts>

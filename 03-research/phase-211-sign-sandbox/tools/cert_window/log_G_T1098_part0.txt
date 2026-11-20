@@ -1,0 +1,5 @@
+[scan] s_T > s_inf on [4004,4585] (min lower 0.5802058920132485); m(tauB)-A > s_inf; 24s
+[quad] 47656 nodes, err/entry (raw) [5.32e-45 +/- 4.50e-48], trace err [3.43e-46 +/- 2.68e-49]
+  nodes 1200/1589  243s
+  nodes 1589/1589  300s
+saved G_T1098_part0of30.pkl 594s

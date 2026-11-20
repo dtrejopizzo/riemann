@@ -29,12 +29,12 @@ A close match between Δ_empirical and the explicit-formula sensitivity Δ_predi
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>Sk_at_peaks_F4.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Davenport–Heilbronn (F4) ω-stratified partial sums S_k at the 200 ζ-peak t-values used in M_jk_peaks_zeta_N1e6.json. Computed at N=10⁶, K=8, with κ=0.28408 (operationally validated against ρ₀ = 0.80852 + 85.69935 i to |L_DH|<10⁻⁴⁹) using Numba-parallel Kahan-compensated summation. Stored as t_peaks, Sk_re, Sk_im, kappa, N, K. Enables future re-analyses of the L_DH peak-conditioned cross-term matrix without recomputing.</artifact-description>
 </artifact>
 <artifact>
 <file-name>Mjk_DH_vs_zeta_prediction.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel heatmap (A: Δ_empirical = M_jk(L_DH)−M_jk(ζ); B: Δ_predicted from injecting the canonical 4-zero DH quartet through the Riemann–Weil sensitivity model with log-Gaussian cutoff). Annotated with Frobenius norms and cosine similarity. Visually demonstrates the structural mismatch (uniform negative block in A vs. mixed-sign pattern in B).</artifact-description>
 </artifact>
 </artifacts>

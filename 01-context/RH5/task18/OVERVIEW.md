@@ -36,22 +36,22 @@ The research hypothesis is **operationally supported but not directly demonstrat
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldelta_zeros_N1843_dps80_partial.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Best-effort extension of the prior N=1455 dps=80 list. Contains 1843 unique L(Δ,s) zeros at 80-digit precision (dtype `<U81`): the first 1455 contiguous zeros from the input artifact plus 388 newly refined zeros at scattered orig-indices in [1455, 3404]. Produced by running `refine_shard_runner.py` across 8 cost-aware shards with TSV checkpointing; γ₁ matches the LMFDB reference to 81 digits.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldelta_refined_partial_state.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle recording the 388 orig-indices (>1454) successfully refined to dps=80 in this run, the contiguous prefix length (1455), and an empty error list. Use this to resume the run from exactly where it stopped without redoing completed work.</artifact-description>
 </artifact>
 <artifact>
 <file-name>refine_shards/refined_0.tsv … refined_7.tsv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Per-shard TSV checkpoints written line-by-line by `refine_shard_runner.py`. Each line is `<orig_index>\t<refined_80digit_string>\t<elapsed_seconds>`. These files are the canonical, resumable checkpoint of refinement progress and contain the per-zero timing data used to fit the empirical T^2.68 cost law.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldelta_refinement_progress.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) T-distribution of prior dps=80 zeros (blue), newly refined dps=80 zeros (red), and zeros still at dps=38 (gray) along the T-axis from 0 to 2300; (B) measured per-zero refinement time vs. T (log-log) with the empirical fit cost ≈ 6.72·10⁻⁸·T^2.68 s/zero.</artifact-description>
 </artifact>
 </artifacts>

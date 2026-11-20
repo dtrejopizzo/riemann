@@ -14,17 +14,17 @@ This result fundamentally challenges the assumption that strong constructive int
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>a_DH_coefficients_N1e6.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Dirichlet coefficients a_n for the Davenport-Heilbronn L-function extended to N=10⁶. Computed using the validated analytical formula a_n = ((1-iκ)/2)·χ(n) + ((1+iκ)/2)·χ̄(n) with κ ≈ 0.284 and primitive character χ mod 5 of order 4. Stored as a dictionary containing the complex128 coefficient array, formula metadata, and computational notes. This artifact enables future L_DH analyses at N=10⁶ without recomputation.</artifact-description>
 </artifact>
 <artifact>
 <file-name>summary_r_at_peaks_N1e6_with_LDH.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Extended summary table combining the canonical r statistics for L_DH with the existing multiplicative function results (zeta, f_rand, L_mobius) at N=10⁶. Contains mean, median, standard deviation, min, max, and mean peak height for each function. This artifact provides the primary comparative evidence that L_DH exhibits stronger constructive interference (mean r = 3.79) than any tested multiplicative function.</artifact-description>
 </artifact>
 <artifact>
 <file-name>L_DH_peak_details_N1e6.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Detailed results for all 50 L_DH peaks analyzed, containing the refined t location, peak magnitude |D_F(t)|, and canonical r value for each peak. This artifact documents the complete distribution of r values and enables verification of statistical analyses or investigation of individual peak structures.</artifact-description>
 </artifact>
 </artifacts>

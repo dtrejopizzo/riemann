@@ -33,17 +33,17 @@ The computation gives a concrete, falsifiable picture of "R7": positivity (or la
 </artifact>
 <artifact>
 <file-name>weil_matrix_lambdas.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Summary table of λ_min, λ_max, trace, and rank of the positive/negative subspaces of the Weil-type kernel matrix Q_N[m,n]=φ((γ_m−γ_n)/W) with the compactly supported bump φ(t)=exp(-1/(1-t²))·1_{|t|<1}, for N ∈ {100,250,500,1000,2000} and W ∈ {2,5,10}. Computed via scipy.linalg.eigvalsh on dense symmetric matrices assembled from the Odlyzko zero table.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_matrix_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON containing the R2 validation diffs, the bump-φ results across (N,W), the Fejér-φ comparator results at W=2, and provenance fields describing the construction. Produced from the same eigvalsh sweep as the CSV.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_matrix_lambda_min.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel figure: (A) λ_min(Q_N) vs N at three bandwidths for the bump test function, showing that λ_min is positive only for the smallest case and becomes increasingly negative with N or W; (B) λ_min(Q_N) vs N at W=2 for bump (sign-changing φ̂) vs Fejér sinc² (φ̂ ≥ 0), showing that Bochner-positive φ gives positive but vanishing λ_min — the R7 absence of a uniform-in-N lower bound.</artifact-description>
 </artifact>
 </artifacts>

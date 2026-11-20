@@ -24,22 +24,22 @@ The capstone evidence cleanly separates the three classes of "failure" in locali
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>final_aggregated_lambda_min.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Master aggregated table of λ_min and trace residuals across all three GRH controls and three source runs (r12 σ=1 X=5×10⁷; r14 σ=1 X=10⁹; r15 σ=2 X=10⁵). 217 rows × 17+ columns including function, T₀, σ, J, X, lambda_min, trace_residual, abs_lambda_min, H1_rel_err, source. Concatenated and harmonized from lambda_min_aggregate_sigma1.csv, r14_lambda_min_table.csv (function names normalized L_chi→Lchi), and M_zeros_grid_sigma2.csv. This is the single source-of-truth table for all H1/H2 verdicts.</artifact-description>
 </artifact>
 <artifact>
 <file-name>final_verdicts_H1_H2.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>3 controls × 2 hypotheses verdict table with quantitative evidence strings. Verdicts: ζ (H1 Supported, H2 Supported); L(χ₄ mod 5) (H1 Obstructed by formula error, H2 Obstructed by formula error); L(Δ,s) (H1 Supported locally, H2 Supported). Each row cites the specific numerical evidence (sup H1 rel err, sup |λ_min|, σ-sweep monotonicity, etc.).</artifact-description>
 </artifact>
 <artifact>
 <file-name>bottleneck_ledger_v3.md</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Updated capstone bottleneck ledger. Contains the original v2 table (7 empirical regularities + missing lemmas) followed by a capstone addendum with the cross-control H1/H2 verdict table and refinements to bottlenecks #1, #2, and #6. Bottleneck #6 (non-self-dual asymmetry) is upgraded with the X-independence finding for L(χ₄) — pinpointing the missing lemma as a closed-form arithmetic-side prefactor identity for non-self-dual Dirichlet characters in the localized Weil basis.</artifact-description>
 </artifact>
 <artifact>
 <file-name>final_summary_H1_H2.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) |λ_min| vs J at σ=1, X=10⁹ for ζ (~10⁻¹³ to 10⁻¹², green-shifted curves) and L(χ₄) (plateau at ~10⁻⁵ to 10⁻⁴, formula-floor dashed line) across five T₀ values, with the L(Δ,s) window-sweep overlay (top axis) saturating at ~10⁻¹² for W≥18. (B) σ-monotonicity: L(Δ,s) σ-sweep shows 12 orders of magnitude monotonic decrease from σ=0.25 to σ=2; horizontal dashed lines mark the X=10⁹ σ=1 plateaus for ζ (~10⁻¹³) and L(χ₄) (~10⁻⁵, the obstructed verdict).</artifact-description>
 </artifact>
 </artifacts>

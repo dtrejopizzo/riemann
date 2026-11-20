@@ -294,4 +294,4 @@ the two-channel inequality ‖x‖²≤Re⟨x,j⟩ ⟺ x=0. The contraction q_0<
 ## Rules
 
 Working rules: pure mathematics; at most 5 parallel lines of attack per step; check R160 survey/brief and R161 notes
-before building (feedback-check-corpus-first, feedback-five-agents-max).
+before building.

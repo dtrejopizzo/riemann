@@ -28,12 +28,12 @@ The proposed remedy—ratios designed to be scale-invariant and capture internal
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>hypothesis_AUC_ratio_features.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON record of the ratio-feature held-out experiment: lists the 6 baseline normalized log|S_k| features, the 12 added log|S_j|/log|S_k| ratio features (j,k ∈ {1..4}, j≠k), train/test class splits, the SVC model specification, and the train/main/strict test AUCs with 1000-iter percentile-bootstrap 95% CIs for three feature configurations (baseline reproduced, baseline+ratios, ratios-only). Also records the verdict (hypothesis rejected) with the negative effect size (ΔAUC = −0.123 on the strict protocol).</artifact-description>
 </artifact>
 <artifact>
 <file-name>ratio_features_AUC_comparison.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Bar chart comparing held-out test AUC (with bootstrap 95% CIs) under the main and strict protocols across three feature configurations: baseline log|S_k|, baseline + log-ratio features, and ratios-only. Includes the 0.85 hypothesis-threshold reference line, visually demonstrating that the ratio-augmented model falls below baseline on both protocols and that its strict-protocol CI lies entirely below the 0.85 target.</artifact-description>
 </artifact>
 </artifacts>

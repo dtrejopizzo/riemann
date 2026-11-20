@@ -32,12 +32,12 @@ The k=2 ω-class is the most discriminating between GRH-conforming L(Δ) (a ≈ 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>omega_slope_fits_LDelta_vs_LDH.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>OLS fit results for log M_k vs log log N, one row per (L-function, k) combination for L(Δ) and L_DH at k=1..4. Columns include slope, intercept, R², stderr, 95% CI bounds, n, p-value.</artifact-description>
 </artifact>
 <artifact>
 <file-name>omega_slope_comparison_table.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Side-by-side comparison of fitted slope a, 95% CI string, and R² for L(Δ) vs L_DH for each ω-class k=1..4, plus a boolean column `disjoint_95CI` indicating whether the two CIs are disjoint.</artifact-description>
 </artifact>
 </artifacts>

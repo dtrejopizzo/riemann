@@ -57,12 +57,12 @@ The available data do not support the stated hypothesis that Front II at N=5000 
 <artifacts>
 <artifact>
 <file-name>li_coefficients_N5000_dps50.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy archive containing λ_n for n=1..200 computed from the available N=5000 zero lists for ζ, ζ_δ, and L_DH, plus an exploratory L_DH variant augmented with the four canonical off-line zeros from the specification and the ζ N=2000 convergence comparison. Created in the notebook with numpy and mpmath.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front_ii_li_coefficients.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final summary figure for Front II. Panel A compares λ_n sequences for ζ, ζ_δ, L_DH critical-line zeros, and exploratory L_DH plus four off-line zeros; Panel B shows ζ truncation differences between N=5000 and N=2000. Generated with matplotlib.</artifact-description>
 </artifact>
 </artifacts>

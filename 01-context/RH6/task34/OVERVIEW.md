@@ -30,7 +30,7 @@ The numerical check confirms that `mpmath` at dps=50 reproduces the canonical fi
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>zeta_zeros_partial.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Partial high-precision list of imaginary parts of the first 4,285 non-trivial Riemann zeta zeros, stored as 50-decimal-place strings (from mpmath.mp.dps=50, mpmath.zetazero(n).imag, n=1..4285). Computation was interrupted by the runtime budget before reaching n=5000. Use mpmath.mpf(s) to rehydrate values at full precision. Verified to match project rule R2 reference values for γ₁, γ₂, γ₃ to ≥9 decimal places.</artifact-description>
 </artifact>
 </artifacts>

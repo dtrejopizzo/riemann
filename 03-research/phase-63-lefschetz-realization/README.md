@@ -83,6 +83,6 @@ Phase 10 "cohomological turn").
 
 ## First action
 
-**R1 — `E97_lefschetz_search.py`:** on ζ's `A` (and J from phase-62 E94), search for a Lefschetz
+**R1 — Lefschetz search (planned script, not produced; see `E97_polarized_isometry.py`):** on ζ's `A` (and J from phase-62 E94), search for a Lefschetz
 operator `L` and test the `sl₂` relations + Hard Lefschetz, with DH as falsador and (R3) an `F_q`
 curve as positive control.

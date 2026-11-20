@@ -299,7 +299,7 @@ divisor inequality. Neither obtained the requested sign.
 The second attempt's channel d=2 preserves the orientation and locates two
 Fourier correlations that do not cancel term by term.
 
-[R170_817](R170_817_AGENT_ROUND_VALIDATION.md) records the validation,
+[R170_817](R170_817_ROUND_VALIDATION.md) records the validation,
 the domain and scope corrections, and the negative result of the round.
 The proof of D was not completed.
 

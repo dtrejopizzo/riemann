@@ -18,5 +18,4 @@ source and figures as distributed by arXiv.
 
 - [../papers-ref-phase-60/](../papers-ref-phase-60/) — further Connes–Consani papers.
 - [../papers-nuevos/](../papers-nuevos/) — wider set of newer references.
-- [../../08-sent/connes-semilocal-sonin/](../../08-sent/connes-semilocal-sonin/) — note built on these works.
 - [../README.md](../README.md) — reference library overview.

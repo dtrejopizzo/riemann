@@ -26,12 +26,12 @@ While limited to $N=999$, the results strongly corroborate the research hypothes
 <artifacts>
 <artifact>
 <file-name>F13_smallN_data.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the LMFDB Hecke coefficients ($a_n$ up to $N=999$) for the first even Maass form on SL(2,Z) (F13), peak locations and magnitudes in $t \in [10^4, 2 \cdot 10^4]$, complex $S_k$ arrays, and the restricted $k=0..4$ spectral features and bootstrap data for both F13 and F14. It also includes the comparative class features (F1, F2, F6, F7, F9) evaluated at identical $N=999$ limits.</artifact-description>
 </artifact>
 <artifact>
 <file-name>F13_spectral_signature.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A 2D scatter plot visualizing the class-averaged spectral feature coordinates ($pc1_{\text{complex}}$ vs. $H_{\text{complex}}$) for F13, F14, and the five other comparison classes evaluated at $N=999$. Dashed boxes indicate 95% bootstrap confidence intervals for the F13 and F14 coordinates, illustrating their statistical separation.</artifact-description>
 </artifact>
 </artifacts>

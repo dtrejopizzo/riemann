@@ -24,7 +24,7 @@ The asymmetric generalization is informative. F4 is built by additively perturbi
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>lofo_auc_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Bar chart summarizing the two Leave-One-Family-Out folds (Fold 1 = held-out F4 family, AUC=0.705; Fold 2 = held-out F12, AUC=0.838) with 95% bootstrap CIs, against the strict-protocol baseline (0.828) and the hypothesis threshold (0.7). Generated via matplotlib from the LOFO experiment described in the methods.</artifact-description>
 </artifact>
 </artifacts>

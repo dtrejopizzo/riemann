@@ -1,0 +1,9 @@
+# Igual masa, igual hueco y signos opuestos sin primalidad
+
+En el modelo que permite enteros distintos con su peso exacto log k, existen dos prefijos de igual longitud, producto y último elemento, con el mismo elemento siguiente, en cruce estricto, cuyos márgenes B son de signos opuestos y de módulo ≫H/log H. Sirve para probar qué información adicional requiere 094.
+
+Para N grande y M entre 3.2N/log N y 3.5N/log N (redondeando), usar u=N+1,...,N+M. La lista A incluye u y 6u; la B, 2u y 3u. Dentro de cada lista todos son distintos por separación de bandas. La masa común es H₀=Σ log(6u²). Añadir a ambas el entero m=floor(H₀+log H₀)−1 como último elemento del prefijo y designar m+4 como siguiente. Se tiene H₀/N entre 6.4+o(1) y 7+o(1), luego m>6(N+M). Además H=H₀+log m satisface 1+o(1)≤H−m≤2+o(1), así que el cruce es estricto.
+
+La diferencia exacta de Q y de B es 2M log 2 log 3, por expansión de cada pareja. Para centrar los signos, sea D(M) el promedio de los dos márgenes. En ambos prefijos Q/H=log N+(log 6)/2+o(1) uniformemente: el promedio ponderado de los logaritmos de los dos miembros de una pareja difiere de su promedio simple por O(1/log N), y el último elemento tiene peso relativo O(log N/N). Así D/H=log(e√6 N/H)+o(1), positivo en el extremo inferior y negativo en el superior. Entre valores contiguos de M, H aumenta O(log N) y ambos Q cambian O(log²N), incluida la sustitución del último elemento. Luego |D(M+1)−D(M)|=O(log²N). En el primer cambio de signo |D|=O(log²N)=o(M). Cada margen difiere de D en ±M log 2 log 3, como se quería.
+
+La igualdad exacta de productos explota factorizaciones compuestas. La factorización única impide ese intercambio entre dos conjuntos distintos de primos. El modelo no reproduce la aritmética de ζ ni prueba que usar factorización única baste para el signo.

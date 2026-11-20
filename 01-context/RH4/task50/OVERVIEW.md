@@ -32,7 +32,7 @@ The r71 bottleneck stemmed from invoking τ via element-wise calls. PARI's `mfDe
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>coeffs_F15_N1e6.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive of the N=10⁶ Dirichlet coefficients for F15 = L(s, Δ⊗χ₅), where Δ is the Ramanujan Delta function and χ₅ is the primitive quartic character modulo 5 with χ₅(0,1,2,3,4) = (0,1,i,−i,−1). Generated via PARI/GP `mfDelta()` + `mfcoefs(1_000_000)` (cypari2, 4 GiB stack), validated against OEIS A000594 (100/100 first non-zero terms and 200 random samples). Contains exact Gaussian integer a_n via object arrays `a_n_real` and `a_n_imag` (since |τ(n)| reaches 4×10³³, exceeding int64), the raw `tau` (object int array), `chi5` (complex128), and the analytically normalized `lam = a_n / n^(11/2)` (complex128). Size 32.28 MB; intended to unblock S_k(F15) computation referenced in r71.</artifact-description>
 </artifact>
 </artifacts>

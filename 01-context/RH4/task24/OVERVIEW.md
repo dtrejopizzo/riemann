@@ -34,7 +34,7 @@ The result delivers a clear negative finding for the proposed phase-aware combin
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>lofo_phase_aware_results.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Bar chart summarizing LOFO test AUCs for the three feature sets (baseline log|S_k|, phase-aware projections only, combined 14-feature) on both folds (held-out F4 family and held-out F12), with reference lines at AUC=0.50 (random) and AUC=0.90 (hypothesis target). Highlights the asymmetric generalization failure of the F4-family fold.</artifact-description>
 </artifact>
 </artifacts>

@@ -26,12 +26,12 @@ The amplification-space coordinates encode information that is not captured by s
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>arithmetic_features_vs_PC.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Table with 11 rows (classes F1, F2, F4, F5p, F5m, F6, F7, F9, F10, F11, F12) and 10 columns: 8 arithmetic features of the Dirichlet coefficient sequence a_n up to N=10⁶ (mean/variance/skewness/kurtosis of |a_p| over 168 primes p<1000, real-part autocorrelations Σ a_n conj(a_{n+k})/(N−k) for k=1,2,3, and second moment Σ|a_n|²/n), plus the target PC1 and PC2 amplification-space coordinates loaded from `A_jk_matrices_and_PCA.npz`/`projections.npy`. Intended as the inputs/targets for any future regression attempts on this dataset.</artifact-description>
 </artifact>
 <artifact>
 <file-name>arithmetic_features_PC_prediction.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) PC1 predicted vs. actual; (B) PC2 predicted vs. actual. Blue circles are Ridge in-sample predictions (α=0.1, R²=0.555 and 0.896); red crosses are leave-one-out CV predictions (α=100, R²=−0.29 and −0.18). The contrast between in-sample fit and negative LOO R² visualises the over-fitting and lack of generalisation that lead us to reject the >75% explained-variance hypothesis.</artifact-description>
 </artifact>
 </artifacts>

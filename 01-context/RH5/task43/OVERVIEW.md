@@ -34,22 +34,22 @@ The first part of the hypothesis ("`lfunzeros` can efficiently generate the full
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>cached_zeros/L_Delta/L_Delta_N2000_dps50.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Cached list of the first 2000 imaginary parts of non-trivial zeros of L(Δ,s) (Ramanujan Δ L-function, LMFDB 1.12.a.a), computed via PARI/GP `lfunzeros` through `cypari2` at dps=50, up to T=1500. First zero matches the LMFDB reference value 9.2223793999… to ~10⁻¹⁰. Includes metadata (method, T_max, validation status).</artifact-description>
 </artifact>
 <artifact>
 <file-name>cached_zeros/L_DH/L_DH_partial_dps50.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Cached critical-line zeros of the Davenport–Heilbronn L-function L_DH(s)=5⁻ˢ·Σc_r·ζ(s,r/5), produced by a Hardy-Z function sign-change scan with bisection refinement to 1e-12 in t at dps=50. 233 zeros up to T≈337.7 (reduced scope under R8 due to ~1.5 s/zero throughput). Includes definition, method, scope-reduction note, and full zero list.</artifact-description>
 </artifact>
 <artifact>
 <file-name>cached_zeros/L_DH/R2_validation.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>R2-gate evaluation of |L_DH(σ+it)| at the four canonical off-line coordinates at dps=50. Reports strict-pass status (3/4 strict pass at <10⁻⁶) and the known spec transcription artifact at (0.650786, 114.163343): true nearby zero located at 0.650830 + 114.163343 i (distance 4.4×10⁻⁵, |L_DH| there = 1.8×10⁻⁵⁰), functionally passing R2 (4/4).</artifact-description>
 </artifact>
 <artifact>
 <file-name>cached_zeros/summary_figure.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Summary figure: (A) Consecutive zero-spacings vs index for L(Δ,s) (2000 zeros, T≤1500) and L_DH (233 zeros, T≤338), showing both are well-resolved with no missed zeros; (B) Table of R2-gate values of |L_DH| at the four canonical coordinates with PASS/FAIL annotation and the known spec issue noted.</artifact-description>
 </artifact>
 </artifacts>

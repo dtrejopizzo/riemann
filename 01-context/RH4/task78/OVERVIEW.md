@@ -39,7 +39,7 @@ The hypothesis is supported in direction but tempered in magnitude. Cleaning up 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ocsvm_lofo_unified.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: ROC curves for the One-Class SVM (trained on F1,F2,F9,F10 leak-controlled log|S_k| features for k=1..6) discriminating violators (F4,F12) from in-sample GRH-true (AUC=0.983) and from held-out GRH-true F6,F7 (AUC=0.894). Panel B: per-family anomaly-score boxplots showing F6 is the source of the held-out gap (mean +2.0, 66.5% flagged), while F7 is indistinguishable from the training distribution.</artifact-description>
 </artifact>
 </artifacts>

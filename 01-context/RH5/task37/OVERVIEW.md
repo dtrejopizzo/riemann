@@ -20,12 +20,12 @@ The hypothesis correctly observes that the true Weil explicit formula quadratic 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_matrix_eigenvalues.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A table containing the sorted eigenvalues for the explicit formula Weil matrix (size J=10, X=4) for the Riemann zeta function, the real quadratic L-function L(chi_5), and the Davenport-Heilbronn L-function. Computed using the arithmetic side of the explicit formula.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_positivity_eigenvalues.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A plot of the eigenvalue spectra (log-scale magnitude) for the three successfully evaluated L-functions. It visually confirms that all eigenvalues are non-negative and numerically bounded by a noise floor of approximately 1e-10.</artifact-description>
 </artifact>
 </artifacts>

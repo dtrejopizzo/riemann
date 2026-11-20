@@ -26,12 +26,12 @@ The hypothesis, taken literally with the constructed form, is mathematically unt
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_quadratic_form_results.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV with one row per L-function (ζ, L(χ), L(Δ), L_DH) giving the number of zeros in the local window |γ−85.7|<15, the full sorted eigenvalue spectrum (λ_0,…,λ_9), λ_min, λ_max, and numerical rank of the J=10 Hermite-Gauss Gram matrix M_{jk}=Σₙ φⱼ(γₙ)φₖ(γₙ) with φⱼ the Hermite-Gauss basis of order j centered at T₀=85.7, σ=2.0. Produced by direct computation from the four provided zero lists.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_quadratic_form_lambda_min.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) full eigenvalue spectra (log scale) of the Hermite-Gauss Gram matrices for the four L-functions; (B) bar chart of λ_min per L-function with the in-window zero counts annotated. Demonstrates that all λ_min are positive (PSD-by-construction) and that L_DH and ζ are rank-deficient relative to L(χ) and L(Δ).</artifact-description>
 </artifact>
 </artifacts>

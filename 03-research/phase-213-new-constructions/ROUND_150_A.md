@@ -1,0 +1,17 @@
+# Un promedio positivo fijo que conserva los polos de la suma de Liouville
+
+**Resultado.** Con U y R de 144, existe una densidad positiva fija w, independiente de T, para la cual un techo constante eventual de F(T)=∫w(y)U(T+y)dy equivale al signo global. Bajo RH se obtiene incluso F(T)<a/2 eventualmente, con a=1/ζ(1/2)<0. La cota incondicional sobre F queda abierta.
+
+**Construcción.** Sea p la densidad theta par de transformada bilateral M(s)=ξ(1/2+s)/ξ(1/2), con convención ∫exp(sy)p(y)dy. En y≥0 es proporcional a la suma sobre n≥1 de (4π²n⁴exp(9y/2)−6πn²exp(5y/2))exp(−πn²exp(2y)). La identidad se obtiene integrando dos veces por partes en la representación theta de ξ. Cada sumando es positivo y el primero da el equivalente en el infinito. Para q(y)=(p(y−1)+p(y+1))/2, el cociente q/(|y|p) tiende a infinito tanto en cero como en ambos extremos. Su ínfimo h es positivo por continuidad. Así w=q+εyp es una densidad estrictamente positiva de masa uno para 0<ε<h. Su transformada es M cosh+εM'.
+
+**Cálculo.** Poniendo z=1/2+s, B(z)=ζ(2z)(z−1)π^(−z/2)Γ(z/2)/(2ξ(1/2)), la transformada bilateral de F es exactamente
+
+    R(s)[M(s)cosh(s)+εM'(s)] = B(z)[cosh(s)+εξ'(z)/ξ(z)].
+
+Fubini vale inicialmente para Re s>1/2 por |U(t)|≤exp(t/2) para t≥0 y U=0 a la izquierda. La cola T<0 tiene transformada entera por el decaimiento doblemente exponencial de w. En cada cero ρ con Re ρ>1/2 queda un polo simple de residuo εmρ B(ρ) distinto de cero por convergencia del producto de Euler en 2ρ. En s=0 el residuo es a por M(0)=1 y M'(0)=0. No hay polos reales positivos, incluido z=1.
+
+**Elección previa de ε.** Por el conteo clásico de ceros en bandas unitarias existe una constante absoluta D con N(n+1)−N(n)≤D log(n+2), contando multiplicidades, n≥1. Tomar S=2D Σ log(n+2) sup_{n≤t≤n+1}|B(1/2+it)|, sumando n≥1 (el primer cero tiene altura >1). Es finito por Stirling y la cota logarítmica para ζ(1+it). Basta ε=min(h/2,|a|/(4+4S)). No se usan ordenadas individuales.
+
+**Las dos implicaciones.** Bajo RH, mover la inversión a Re s=−1/4 da F(T)=a+εΣ mρ B(ρ)exp(i Imρ T)+O(exp(−T/4)), sumando sobre ceros distintos. En esa línea la distancia horizontal a los ceros es 1/4 y la expansión local de ζ'/ζ da crecimiento polinómico. En bandas de altura unidad se pueden elegir horizontales separadas de las ordenadas por ≫1/log(t+2) por el mismo conteo. El factor gamma amortigua exponencialmente en toda la tira, justificando el desplazamiento y la convergencia absoluta. La suma oscilante multiplicada por ε tiene módulo ≤|a|/4. A la inversa, si F tiene techo eventual C, aplicar el teorema de Landau a la transformada unilateral de C−F desde ese instante. Una abscisa positiva exigiría singularidad real allí, imposible por la identidad. La holomorfía en Re s>0 excluye entonces todos los polos anteriores. La simetría de ξ da RH y el puente del paper 47 da el signo.
+
+**Antecedentes y límite.** La derivada logarítmica y Landau ya aparecen en R162_803 y G2_B7_R3. La diferencia frente a 149 es la realización mediante una densidad fija sobre U sin lista de ordenadas, recuperando cada multiplicidad sin estimar inversas de derivadas en ceros. El término q solo cancela todos los polos espectrales. Por tanto un argumento aritmético para la densidad par sola pierde precisamente la información necesaria. El control directo del término ∫yp(y)U(T+y)dy sigue siendo la obligación. No se certifica una ventana nueva.

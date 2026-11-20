@@ -1,0 +1,17 @@
+# Un umbral finito de verificación que basta para positividad estricta en cada ventana fija
+
+Para cada T>0 existen números G_T y c_T>0, determinados mediante datos arquimedianos, los primos de una ventana ampliada y cotas incondicionales de conteo de ceros, con la siguiente implicación: si todos los ceros hasta G_T están en la recta crítica, entonces W_T(f)≥c_T||f||₂² para toda prueba admisible. La conclusión sí es positividad estricta. El antecedente NO se ha verificado para una ventana nueva; en particular no se identifica G_T con la altura de Z2. La construcción no utiliza las ordenadas individuales de los ceros verificados.
+
+**Margen que antes se descartaba.** Mantener las extensiones b(τ)dτ y μ de 173 en |u|<2T+1. Elegir R≥1, M≥1 de modo que b≥1 en |τ|≥R y b≥−M en todo el eje; existen por la fórmula aritmética de 173. Para pruebas de soporte [−T,T] hay η>0, dependiente de T y R, con
+    ∫_{|τ|≥2R}|f̂|² ≥ η∫|f̂|².
+En efecto, la compresión a [−T,T] de la proyección Fourier a [−2R,2R] es un operador positivo compacto K con núcleo sinc continuo. Si su norma fuera uno, una autofunción de norma uno tendría simultáneamente ambos soportes compactos, lo que excluye la continuación entera de su transformada. Sirve η=1−||K||. Si se requiere obtener un inferior racional, K es de traza finita y Tr(K^n)→0. Buscar n hasta certificar Tr(K^n)<1 mediante integración con error controlado del producto de núcleos continuos en el cubo compacto; 1−Tr(K^n)^(1/n) da entonces un inferior positivo. Este argumento de terminación no estima el costo.
+
+Elegir m entero con 2^m η>2M y DESPUÉS fijar H>max(10R,2m+1). Escribir a=R²/(3H²), u(τ)=1−sinc²(τ/H) y φ=1−u^m. En |τ|≤R se tiene u≤a (por sinc v≥1−v²/6). En |τ|≥2R se tiene u≥2a: para |v|≤1 usar 1−sinc² v≥v²/4 por el Taylor alternado; en |v|≥1, |sinc v|≤max(sin(1),1/2) usando monotonía hasta 2 y el mayorante 1/|v| después. Por tanto, para Δ_T=a^m(2^mη−M)>0,
+    ∫ b(1−φ)|f̂|² ≥ Δ_T ∫|f̂|².
+La banda entre R y 2R sólo suma positivamente. El margen depende únicamente de los parámetros ya fijados, sin intervención de G.
+
+**Absorber la corrección.** Como 2m/H<1, λ=φμ+(1−φ)b dτ reproduce exactamente el dato de W_T por 173. Los átomos de φμ son positivos. Bajo verificación hasta G, para G grande el resto continuo satisface
+    ||φ C||∞ ≤ C_T [G^(−3)log(2G)+mH²G^(−2)log(2G)].
+Usar el exponente cuatro de la corrección de 172 cuando |τ|≤G/2 y φ≤m sinc²(τ/H) para |τ|>G/2. La constante se obtiene de cuatro normas de derivadas de un corte fijo en soporte compacto y el conteo unitario con multiplicidades, y es independiente de G. Elegir G_T tan grande que el lado derecho sea ≤Δ_T/2 para G≥G_T. Plancherel da el enunciado, con el factor 2π de la convención correspondiente. El núcleo suave se extiende al dominio de la forma como en 173.
+
+**Alcance frente al corpus.** finZ del paper impide certificar un perfil flat-top mediante una suma espectral truncada sola. Aquí se usa además la densidad aritmética exacta b de la ventana ampliada y una estimación de TODOS los ceros restantes. La incertidumbre sólo se usa para un margen positivo fijo; el umbral puede ser inmenso. La cota casi positiva de 173 por sí sola no daba esta implicación, porque su máscara dependía de G y su margen positivo no estaba controlado. Para obtener una nueva ventana efectiva hay que exhibir datos R,M,η,m,H y cotas de corrección que realmente pasen con la altura verificada, o mejorar el margen; no hay una estimación uniforme en T ni prueba del signo global.

@@ -33,12 +33,12 @@ The experiment cleanly separates three regimes of Weil-form sensitivity. The mul
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_J_sweep_single_shift_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON record of the single-zero ζ deformation J-sweep at (T0=46.1347, σ=1.0, prime_bound=1000, dps=80, δ=0.05). Contains the full parameter set, identification of the shifted zero (γ_9 ≈ 48.0052, the in-window zero closest to T0), λ_min/λ_max tables for J ∈ {4,8,12,16,20} for both the single-shifted ζ_δ and a critical-only ζ control (which reproduces r24), local log-log slopes, and global power-law/exponential fits compared against r24 multi-zero and r28 L_DH off-critical sweeps. Computed via the non-Hermitian Re[v vᵀ] Weil-form construction implemented in mpmath at dps=80.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_single_vs_multi_vs_ldh.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Log-log plot of |λ_min(Q)| vs basis dimension J ∈ {4,8,12,16,20} for three datasets: multi-zero ζ_δ (r24, α≈28), single-zero ζ_δ (this work, α≈14), and L_DH off-critical anomaly (r28, α≈0.9). Demonstrates that the single-zero artificial deformation has milder but still super-polynomial growth, not matching the nearly-flat L_DH pattern.</artifact-description>
 </artifact>
 </artifacts>

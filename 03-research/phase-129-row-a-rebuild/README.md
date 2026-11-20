@@ -1,7 +1,7 @@
 # Phase 129 — row A rebuild
 
 Four construction rounds and three audit rounds on
-[Paper 43](../../04-papers/43-row-a-torsion-theory/main.md), followed by a final
+[Paper 43](../../04-papers/43-row-a-torsion-theory/main.tex), followed by a final
 verification by hand of Theorems 9.7, 9.8,
 9.13(a), 14.1 and the restructured Definition 8.6.
 

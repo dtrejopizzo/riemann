@@ -42,12 +42,12 @@ The sweep cleanly separates two regimes. For σ=1.0 the Weil explicit formula co
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>sweep_results.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle containing the full sweep results: lists of dicts (X, trace_residual, lambda_min, lambda_max, n_primes) for σ∈{0.5, 1.0} at T₀=85.7, J=16; the localized zero windows used; and the σ=2/J=10 validation point. Produced by the Weil-detector engine implemented in float64 with a closed-form K_{ab}(k) computed via complex-shifted Gauss–Hermite quadrature; prime-power sum batched over n.</artifact-description>
 </artifact>
 <artifact>
 <file-name>X_sweep_results.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. A: log-log plot of trace residual and |λ_min| vs X for σ=1.0 (blue, converging through 10⁻¹⁰ near X≈3×10⁷) and σ=0.5 (red, not converging — staying near 10⁰–10¹). B: signed λ_min vs log X showing σ=1.0 collapsing to 0 while σ=0.5 grows monotonically more negative with X.</artifact-description>
 </artifact>
 </artifacts>

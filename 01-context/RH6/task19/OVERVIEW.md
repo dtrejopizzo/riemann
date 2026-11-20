@@ -38,17 +38,17 @@ The two-parameter model is a strictly better fit than the one-parameter model fo
 <artifacts>
 <artifact>
 <file-name>two_param_fits_all_Lfunctions.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Per-(L-function, ω-class) two-parameter OLS fits of log M_k vs. log log N and log log log N for L ∈ {ζ, L(Δ), L_DH} and k ∈ {M_1, M_2, M_3, M_4, M_geq5}, using all four N ∈ {10⁴, 5·10⁴, 10⁵, 10⁶} points from omega_class_moments_N1e6.csv. Columns include fitted a, b, their standard errors, R² of the two-parameter model, and the corresponding one-parameter a and R² for reference.</artifact-description>
 </artifact>
 <artifact>
 <file-name>two_param_stability_all_Lfunctions.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Stability table comparing the two-parameter fitted exponents (a, b) on the 4-point set {10⁴, 5·10⁴, 10⁵, 10⁶} vs. the 3-point subset {10⁴, 5·10⁴, 10⁵}, with percent changes, for each (L, k) combination. Quantifies the documented log-log-log collinearity problem on the current N grid.</artifact-description>
 </artifact>
 <artifact>
 <file-name>two_param_fits_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: panel A plots fitted exponent a±SE on log log N by ω-class for ζ, L(Δ), L_DH; panel B plots fitted exponent b±SE on log log log N. Shows that ζ sits in the (a>0, b<0) quadrant while L(Δ) and L_DH both sit in the (a≤0, b>0) quadrant.</artifact-description>
 </artifact>
 </artifacts>

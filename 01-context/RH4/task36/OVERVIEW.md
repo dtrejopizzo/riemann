@@ -33,7 +33,7 @@ The hypothesis that ‖Δ_jk‖_F encodes the off-line zero's real part β acros
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>inverse_bridge_F4_F12_F14.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: scatter of ‖Δ_jk‖_F versus the off-line zero's real part β for the three violator constructions (F4, F12, F14), with linear fit and reported Pearson/Spearman statistics. Panel B: heatmap of the three 8×8 difference matrices Δ_F4, Δ_F12, Δ_F14 on a shared symmetric color scale, showing F12's dominant positive mid-strata block and the smaller, mostly negative perturbations of F4 and F14.</artifact-description>
 </artifact>
 </artifacts>

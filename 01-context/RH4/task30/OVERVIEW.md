@@ -28,12 +28,12 @@ The key scientific result is nuanced: phase information is useful, but not domin
 <artifacts>
 <artifact>
 <file-name>phase_features_svm_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Structured JSON summary of the reconstructed ω-stratified S_k analysis, including held-out AUCs, confusion matrices, bootstrap confidence intervals, train/test protocol details, and documented exclusions for F9-F11. It was created from notebook cells after computing S_k(t;N) for N=10^6 and extracting phase and magnitude features.</artifact-description>
 </artifact>
 <artifact>
 <file-name>peaks_Sk_phase_features_F1_F12_subset.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Peak-level table for the analyzable 8-class subset containing the original peak metadata plus reconstructed complex S_k values, their phases, magnitudes, and derived phase features for k=1..4. It was generated from the peak list in `peaks_features_F1_F12.csv` using a from-scratch sieve and Numba-Kahan partial-sum engine.</artifact-description>
 </artifact>
 <artifact>

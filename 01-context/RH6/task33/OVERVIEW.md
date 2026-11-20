@@ -28,17 +28,17 @@ The detachment mechanism (`start_new_session=True`) behaved exactly as predicted
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_04000.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Validated L_DH zero checkpoint at 4,000 zeros (t≈3908.07), produced by `generate_ldh_zeros_run.py` resuming from `ldh_ckpt_03578.npy`. 50-dps decimal strings via `mpmath.nstr`; companion `ldh_ckpt_04000_meta.json` records `n_zeros=4000`, `t_last≈3908.07`.</artifact-description>
 </artifact>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_04250.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Validated L_DH zero checkpoint at 4,250 zeros (t≈4130.77), produced during the same detached run. 50-dps decimal strings; companion `ldh_ckpt_04250_meta.json` carries `n_zeros=4250`, `t_last≈4130.77`. This is the latest fully-written checkpoint observable at run timeout; the in-memory frontier had advanced to 4,439 zeros.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_log.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Timestamped progress log written by `generate_ldh_zeros_run.py`, documenting the resume from 3,578 zeros, periodic PROGRESS lines (~1/min), checkpoint events at 3,750 / 4,000 / 4,250 zeros, and instantaneous rates. Useful for the next run to assess elapsed time vs. TIME_BUDGET=10800 and to pick up the latest checkpoint.</artifact-description>
 </artifact>
 </artifacts>

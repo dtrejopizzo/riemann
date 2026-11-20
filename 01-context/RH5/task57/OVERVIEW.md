@@ -33,17 +33,17 @@ The hypothesis — that the validated subprocess+checkpointing architecture can 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>delta_shard_runner.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Standalone subprocess search worker for L(Δ,s) zeros. Initializes PARI/cypari2 with `lfunmf` for the weight-12 level-1 modular form (Ramanujan Δ), calls `lfunzeros(L, [T_min, T_max])` at user-specified `dps`, formats each zero with PARI-side `Strprintf("%.{dps}g", ...)` to obtain full precision, and writes results as a pickle file `{shard, tmin, tmax, n, zeros (list[str]), elapsed}`. Designed to be launched as a detached `subprocess.Popen` from a driver script. Smoke-tested on T∈[5,30] returning 8 zeros matching the canonical L(Δ,s) zero list to 38 digits.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldelta_shards/refine_shard_{0..7}.tsv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Per-shard TSV checkpoint files from the refinement campaign. Each line has the format `<orig_index>\t<refined_string_dps80>\t<elapsed_seconds>`. At submission time these collectively contain ~380 newly refined L(Δ,s) zeros (dps=80) in the T-range [1780, 1995], all originating from indices in the gap region [1455, 3404] of `ldelta_zeros_N3405_approx_dps38.npy`. Zero ERROR rows reported. These checkpoints allow seamless resumption of the refinement campaign in a future, longer-running run.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldelta_shards/refine_shard_{0..7}.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Per-shard input pickles for `refine_shard_runner.py`: each is a list of `(orig_index, approx_string)` tuples partitioned by greedy LPT bin-packing on the cost proxy T^2.68, yielding 8 shards with relative cost ratio max/min = 1.002. Combined they cover the full set of 1562 missing-from-N1843 approximate zeros that must be refined to dps=80 before any assembly toward N=5000 can proceed.</artifact-description>
 </artifact>
 </artifacts>

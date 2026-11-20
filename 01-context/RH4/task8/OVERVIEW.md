@@ -30,12 +30,12 @@ The empirical leading eigenvector of A_jk is unambiguously concentrated at highe
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>erdos_kac_tilt_fits.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Per-class non-linear least-squares fits of the leading eigenvector of the peak amplification matrix A_jk to the model C·exp(λk)·Poisson(k|μ=log log 10⁶) for k=0..7, including fitted C, λ, R², family, GRH status, and the leading eigenvalue. Generated via numpy.linalg.eigh on each (A+Aᵀ)/2 followed by scipy.optimize.curve_fit.</artifact-description>
 </artifact>
 <artifact>
 <file-name>erdos_kac_tilt_fit.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final two-panel summary figure: (A) class-averaged leading eigenvector vs. Poisson baseline and exp-tilted Poisson fit (λ=0.401, R²=0.861); (B) per-class fitted tilt λ colored by family with GRH violators hatched, showing modular forms with λ≈0.10–0.32 vs. non-modular classes at λ≈0.43–0.46.</artifact-description>
 </artifact>
 </artifacts>

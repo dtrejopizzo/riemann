@@ -37,12 +37,12 @@ The results corroborate the working hypothesis: L(χ₄ mod 5), in the regime wh
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>Lchi_Qform_results.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle containing the full λ_min eigenvalue spectrum, trace residuals, and reliability flags for both the σ-scan (σ ∈ {0.25, 0.5, 1, 2, 4} at T₀=85.7, J=16, X=10⁵) and the nested window-scan (|t| ≤ 50, 100, 150, 200 at T₀=85.7, σ=2, J=16) of the L(χ₄ mod 5) localized Weil quadratic form Q = M_zeros − M_arith. Construction uses the analytic Hermite-Gauss/Laguerre Fourier transform identity for M_prime; trace gate verified at ~10⁻¹¹ in the reliable regime.</artifact-description>
 </artifact>
 <artifact>
 <file-name>Lchi_monotonicity_results.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) window-monotonicity showing |λ_min(Q)| versus zero-window cutoff T_max = 50, 100, 150, 200 demonstrating strict monotone non-decrease and saturation at ~10⁻¹²; (B) σ-scan showing |λ_min| and |trace residual| versus σ, with reliable (σ=2, 4) and prime-cutoff-dominated (σ=0.25, 0.5, 1) points distinguished.</artifact-description>
 </artifact>
 </artifacts>

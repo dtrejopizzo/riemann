@@ -39,12 +39,12 @@ Within the reconstructed peak-conditioned dataset, the cross-term structure is h
 <artifacts>
 <artifact>
 <file-name>M_jk_peaks_zeta_N1e6.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON summary of the reconstructed peak-conditioned analysis for the zeta partial sum at N=10^6. It contains the full averaged cross-term matrix M_{jk}, bootstrap percentile 95% confidence intervals, diagonal terms, top positive and negative off-diagonal pair rankings, and metadata describing the grid-based peak reconstruction procedure.</artifact-description>
 </artifact>
 <artifact>
 <file-name>Sk_at_peaks_zeta_N1e6.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the reconstructed peak t-values, real and imaginary parts of all ω-stratified partial sums S_k at each peak, peak amplitudes, and the derived M matrix with confidence bounds. It was generated from the Numba/Kahan summation engine used in the notebook.</artifact-description>
 </artifact>
 </artifacts>

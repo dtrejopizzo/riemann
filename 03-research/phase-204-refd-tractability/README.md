@@ -5,7 +5,7 @@
 general theorems, even if they are stronger than D, solve them — something independent of D that is then used as
 input. One by one, with audit, so none is lost; it is likely that some of them can.»
 
-## Protocol (each reformulation goes through the 4 steps; ≤5 simultaneous agents)
+## Protocol (each reformulation goes through the 4 steps)
 1. **Inventory**: TRACT_001 (13 structural), TRACT_D_README (82 from the README), TRACT_E_PHASES (~250 from phases
    100–189 + residues). TRAT column = YES / TRANSFER / NO, unifying duplicates; each YES with a general theorem,
    missing hypothesis (other than the sign), first lemma, input for D.
@@ -14,7 +14,7 @@ input. One by one, with audit, so none is lost; it is likely that some of them c
 3. **Construction one by one**: for each YES (in ranking order), the first lemma is attempted with its own
    path; label PROVED/CONDITIONAL/OPEN/NO-GO; declares the trait of Λ (lem:transfer: every proof must fail on
    DH T≥9/5 and Epstein T≥1.59).
-4. **Audit of each construction** before recording; index in the same session; if PROVED, verification
+4. **Audit of each construction** before recording; index immediately; if PROVED, verification
    against the definitions of Paper 47 and integration as an independent result (input).
 
 ## Rules

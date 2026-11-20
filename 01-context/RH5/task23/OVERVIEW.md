@@ -28,17 +28,17 @@ This closes a small but blocking step for downstream Front analyses: the canonic
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>zeta_zeros_N5000_dps50.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Complete list of the first 5000 nontrivial Riemann ζ-zero imaginary parts at 50-decimal precision, stored as a NumPy array of fixed-width Unicode strings (dtype `<U51`). Produced by concatenating the 4705-entry cache `zeta_refined_partial.npy` with 295 newly refined zeros obtained by applying `mpmath.findroot(mpmath.siegelz, seed)` at `mp.dps=50` to Odlyzko seeds at indices 4705–4999, then sorting. R2 gate passes (first three zeros match spec to <1e-9) and `|Z(γ)|` at sampled indices is ≤ 5×10⁻⁴⁶.</artifact-description>
 </artifact>
 <artifact>
 <file-name>zeta_delta_zeros_N5000_dps50.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>ζ_δ control zero list with 5000 entries stored as a NumPy structured array (`re` as `<U10`, `im` as `<U51`). Imaginary parts are identical to those in `zeta_zeros_N5000_dps50.npy`; real parts are '0.5' for all zeros except indices 1000–1019, which are set to '0.6' (δ=0.1 one-sided perturbation per the r3/r10 protocol).</artifact-description>
 </artifact>
 <artifact>
 <file-name>zeta_zd_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) histogram of consecutive ζ-zero gaps for the completed N=5000, dps=50 list (median gap ≈ 1.013); (B) scatter of Re(ρ_n) vs n for the ζ_δ control showing the 20 perturbed zeros (indices 1000–1019) at Re=0.6 against the unperturbed Re=0.5 baseline.</artifact-description>
 </artifact>
 </artifacts>

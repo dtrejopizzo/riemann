@@ -30,17 +30,17 @@ The proposed nohup-based detachment delivered a modest but real improvement over
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_03930.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Resume checkpoint of L_DH critical-line zeros at the 3,930-zero milestone (t_last ≈ 3851.1865), stored as 50-dps decimal strings via `mpmath.nstr`. Created by running the validated `generate_ldh_zeros_run.py` as a nohup-detached background process with `LDH_TIME_BUDGET=4000`; the script saved a partial after a kernel-triggered SIGINT at ~18.3 min. The partial (3,931 entries) was deduplicated at the resume boundary (a single duplicate at t = 3540.5683) and the contiguous strictly-monotonic 3,930-entry list was promoted to this checkpoint. URI: data_entry:ldh-ckpt-03930-npy-pmqu.</artifact-description>
 </artifact>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_03930_meta.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Companion JSON metadata for `ldh_ckpt_03930.npy` containing `n_zeros=3930` and `t_last=3851.1864630833919059100187733494080032170584937087`, required by the resume logic in `generate_ldh_zeros_run.py` for the next chained run. URI: data_entry:ldh-ckpt-03930-meta-json-ugmg.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run.log</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Stdout/stderr log of the nohup-detached L_DH generation run, documenting startup, the autonomous 03750 checkpoint write, per-minute progress entries, and the SIGINT-triggered partial save at ~18.3 min. Useful provenance for the limitation that nohup+disown did not protect the child from kernel cell-timeout interrupts. URI: data_entry:run-log-tkdz.</artifact-description>
 </artifact>
 </artifacts>

@@ -32,17 +32,17 @@ The empirical noise floor of `L(χ₄ mod 5)` decays as a strict upper bound by 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>frontC_theory_vs_empirical_Lchi5.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Cross-validation results for the basis/PNT noise-floor model applied to L(χ₄ mod 5). Contains the X grid, η_empirical(X) for L(χ₄ mod 5) computed with the validated weil_quadratic_form_general engine at (T₀=46.13, σ=1, J=10) using 1582 zeros, the η_theory(X) values copied from frontC_theory_vs_empirical.json, and Pearson/regression statistics (r=0.9935, slope=1.12, R²=0.987). Includes documentation of the H=1582 vs H=2500 substitution and its analytical justification.</artifact-description>
 </artifact>
 <artifact>
 <file-name>cache/Lchi5_zeros_N1582_dps15.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle list of the first 1582 positive ordinates γ of the primitive odd Dirichlet L-function L(s, χ₄ mod 5), computed at dps=15 via Hardy-Z sign-changes and mp.findroot(anderson). Range γ ∈ [6.18, 1622.23], root tolerance ≈ 1e-10. Generated for the Front C cross-validation; sufficient for any Hermite-Gauss localized analysis with T₀ ≲ 100 and σ ≲ 5.</artifact-description>
 </artifact>
 <artifact>
 <file-name>eta_theory_vs_empirical_Lchi5.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A overlays log-log curves of η_theory(X) (basis × PNT bound), η_empirical(X) for L(χ₄ mod 5), and the reference η_empirical(X) for ζ. Panel B is the empirical-vs-theory scatter with y=x reference and best-fit line (slope 1.12, r 0.9935), showing both L-functions tracking the same bound.</artifact-description>
 </artifact>
 </artifacts>

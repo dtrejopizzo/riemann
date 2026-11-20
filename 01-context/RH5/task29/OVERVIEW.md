@@ -33,7 +33,7 @@ PARI/GP's `lfunzeros` accepts an `[Tmin, Tmax]` argument and produces, in that i
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>delta_worker.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Reusable Python worker module implementing the per-process Ramanujan Δ L-function zero-finding routine. Each call initializes its own `cypari2.Pari()` context at user-chosen `realprecision`, builds `L = lfunmf(mfinit([1,12],1), mfeigenbasis(...)[1])`, runs `lfunzeros(L, [Tmin, Tmax])`, and returns zeros as full-precision decimal strings together with timing metadata. Designed for use with `multiprocessing.get_context("spawn").Pool`. Validated end-to-end on [0, 1200] yielding 1627 zeros across 8 balanced workers in ~30 s wall.</artifact-description>
 </artifact>
 </artifacts>

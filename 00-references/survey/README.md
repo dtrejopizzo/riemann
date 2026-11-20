@@ -21,7 +21,7 @@ theorem is claimed here.
 
 ## Related folders
 
-- [../../05-meta-and-planning/ROUTES-TRIED-INDEX/](../../05-meta-and-planning/ROUTES-TRIED-INDEX/) — index of routes and literature entries.
+- [../../05-meta-and-planning/ROUTES-MASTER-INDEX.md](../../05-meta-and-planning/ROUTES-MASTER-INDEX.md) — index of routes and literature entries.
 - [../papers-nuevos/](../papers-nuevos/) — many of the surveyed papers.
 - [../../05-meta-and-planning/ABCD-CLOSURE-PLAN/](../../05-meta-and-planning/ABCD-CLOSURE-PLAN/) — row D plans.
 - [../README.md](../README.md) — reference library overview.

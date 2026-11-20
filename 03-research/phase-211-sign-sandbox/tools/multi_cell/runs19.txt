@@ -1,0 +1,317 @@
+MPB R=2 T=0.8 Nb=40 J=20 c=1.0 dps=50 theta=0.0 dim=29: Q/|F|^2 min 0.5466 | l_g/|F|^2 min 0.5683 | Q/l_g ['0.8092', '0.95537', '1.279'] | bottom conc 0.9929 | 164s
+MPB R=2 T=0.8 Nb=40 J=20 c=1.0 dps=50 theta=0.5 dim=10: Q/|F|^2 min 0.5813 | l_g/|F|^2 min 0.6526 | Q/l_g ['0.81588', '0.95988', '1.2985'] | bottom conc 0.9953 | 166s
+MPB R=2 T=0.8 Nb=40 J=20 c=1.0 dps=50 theta=0.9 dim=8: Q/|F|^2 min 0.8962 | l_g/|F|^2 min 0.8873 | Q/l_g ['0.98519', '1.0594', '1.4905'] | bottom conc 0.9999 | 166s
+MPB R=2 T=0.8 Nb=40 J=20 c=1.0 dps=50 theta=0.99 dim=7: Q/|F|^2 min 1.019 | l_g/|F|^2 min 0.9545 | Q/l_g ['1.0594', '1.3129', '1.5476'] | bottom conc 1.0000 | 167s
+MPB R=2 T=0.8 Nb=40 J=20 c=1.0 dps=50 theta=0.999 dim=6: Q/|F|^2 min 1.161 | l_g/|F|^2 min 0.9809 | Q/l_g ['1.1823', '1.369'] | bottom conc 1.0000 | 167s
+MPB R=3 T=1.0 Nb=40 J=20 c=1.0 dps=50 theta=0.0 dim=40: Q/|F|^2 min 0.0007778 | l_g/|F|^2 min 0.0007573 | Q/l_g ['0.68997', '0.73932', '0.8261'] | bottom conc 0.9997 | 266s
+MPB R=3 T=1.0 Nb=40 J=20 c=1.0 dps=50 theta=0.5 dim=29: Q/|F|^2 min 0.0008621 | l_g/|F|^2 min 0.0007918 | Q/l_g ['0.72541', '0.74769', '0.83698'] | bottom conc 0.9999 | 283s
+MPB R=3 T=1.0 Nb=40 J=20 c=1.0 dps=50 theta=0.9 dim=27: Q/|F|^2 min 0.01156 | l_g/|F|^2 min 0.009551 | Q/l_g ['0.74518', '0.80587', '0.97537'] | bottom conc 1.0000 | 305s
+MPB R=3 T=1.0 Nb=40 J=20 c=1.0 dps=50 theta=0.99 dim=25: Q/|F|^2 min 0.01639 | l_g/|F|^2 min 0.01311 | Q/l_g ['0.76057', '0.87659', '0.98759'] | bottom conc 1.0000 | 321s
+MPB R=3 T=1.0 Nb=40 J=20 c=1.0 dps=50 theta=0.999 dim=24: Q/|F|^2 min 0.02226 | l_g/|F|^2 min 0.01849 | Q/l_g ['0.76385', '0.87756', '0.9941'] | bottom conc 1.0000 | 334s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.0 dim=40: Q/|F|^2 min 6.502e-6 | l_g/|F|^2 min 3.386e-6 | Q/l_g ['0.67602', '0.72283', '0.81209'] | bottom conc 1.0000 | 381s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.5 dim=28: Q/|F|^2 min 7.216e-6 | l_g/|F|^2 min 3.468e-6 | Q/l_g ['0.6823', '0.75207', '0.81803'] | bottom conc 1.0000 | 400s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.9 dim=26: Q/|F|^2 min 1.223e-5 | l_g/|F|^2 min 8.261e-6 | Q/l_g ['0.69925', '0.78534', '0.8317'] | bottom conc 1.0000 | 424s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.99 dim=25: Q/|F|^2 min 1.851e-5 | l_g/|F|^2 min 1.224e-5 | Q/l_g ['0.75358', '0.82731', '0.85195'] | bottom conc 1.0000 | 443s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.999 dim=23: Q/|F|^2 min 2.409e-5 | l_g/|F|^2 min 1.499e-5 | Q/l_g ['0.8063', '0.84215', '0.87484'] | bottom conc 1.0000 | 451s
+MPB R=4 T=1.0 Nb=40 J=30 c=1.0 dps=70 theta=0.0 dim=40: Q/|F|^2 min 2.121e-6 | l_g/|F|^2 min 3.541e-6 | Q/l_g ['0.072748', '0.69577', '0.72866'] | bottom conc 1.0000 | 446s
+MPB R=4 T=1.0 Nb=40 J=30 c=1.0 dps=70 theta=0.5 dim=35: Q/|F|^2 min 7.358e-6 | l_g/|F|^2 min 3.857e-6 | Q/l_g ['0.50973', '0.71432', '0.74329'] | bottom conc 1.0000 | 505s
+MPB R=4 T=1.0 Nb=40 J=30 c=1.0 dps=70 theta=0.9 dim=33: Q/|F|^2 min 7.693e-6 | l_g/|F|^2 min 3.96e-6 | Q/l_g ['0.70944', '0.72635', '0.81071'] | bottom conc 1.0000 | 551s
+MPB R=4 T=1.0 Nb=40 J=30 c=1.0 dps=70 theta=0.99 dim=32: Q/|F|^2 min 1.7e-5 | l_g/|F|^2 min 1.195e-5 | Q/l_g ['0.71336', '0.7595', '0.81567'] | bottom conc 1.0000 | 575s
+MPB R=4 T=1.0 Nb=40 J=30 c=1.0 dps=70 theta=0.999 dim=30: Q/|F|^2 min 1.827e-5 | l_g/|F|^2 min 1.255e-5 | Q/l_g ['0.71669', '0.76517', '0.82299'] | bottom conc 1.0000 | 595s
+MPB R=5 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.0 dim=40: Q/|F|^2 min 5.796e-9 | l_g/|F|^2 min 1.138e-8 | Q/l_g ['0.16819', '0.66704', '0.71546'] | bottom conc 1.0000 | 447s
+MPB R=5 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.5 dim=32: Q/|F|^2 min 2.499e-8 | l_g/|F|^2 min 1.425e-8 | Q/l_g ['0.64422', '0.732', '0.81465'] | bottom conc 1.0000 | 476s
+MPB R=5 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.9 dim=31: Q/|F|^2 min 3.228e-8 | l_g/|F|^2 min 1.685e-8 | Q/l_g ['0.66494', '0.73654', '0.81471'] | bottom conc 1.0000 | 504s
+MPB R=5 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.99 dim=30: Q/|F|^2 min 3.895e-8 | l_g/|F|^2 min 2.059e-8 | Q/l_g ['0.7103', '0.74433', '0.81954'] | bottom conc 1.0000 | 534s
+MPB R=5 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.999 dim=27: Q/|F|^2 min 1.002e-7 | l_g/|F|^2 min 4.702e-8 | Q/l_g ['0.75402', '0.8029', '0.8318'] | bottom conc 1.0000 | 555s
+MPB R=5 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.0 dim=40: Q/|F|^2 min 1.814e-8 | l_g/|F|^2 min 1.336e-8 | Q/l_g ['0.020709', '0.66672', '0.69845'] | bottom conc 1.0000 | 754s
+MPB R=5 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.5 dim=37: Q/|F|^2 min 2.729e-8 | l_g/|F|^2 min 1.433e-8 | Q/l_g ['0.62987', '0.68605', '0.71898'] | bottom conc 1.0000 | 821s
+MPB R=5 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.9 dim=36: Q/|F|^2 min 2.963e-8 | l_g/|F|^2 min 1.544e-8 | Q/l_g ['0.65175', '0.70341', '0.72286'] | bottom conc 1.0000 | 868s
+MPB R=5 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.99 dim=35: Q/|F|^2 min 3.769e-8 | l_g/|F|^2 min 2.158e-8 | Q/l_g ['0.67508', '0.70728', '0.72881'] | bottom conc 1.0000 | 913s
+MPB R=5 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.999 dim=34: Q/|F|^2 min 4.746e-8 | l_g/|F|^2 min 2.589e-8 | Q/l_g ['0.67536', '0.71325', '0.73012'] | bottom conc 1.0000 | 955s
+MPB R=5 T=0.8 Nb=48 J=30 c=1.0 dps=70 theta=0.0 dim=47: Q/|F|^2 min 3.285e-9 | l_g/|F|^2 min 1.039e-8 | Q/l_g ['0.11237', '0.66245', '0.71237'] | bottom conc 1.0000 | 574s
+MPB R=5 T=0.8 Nb=48 J=30 c=1.0 dps=70 theta=0.5 dim=35: Q/|F|^2 min 2.286e-8 | l_g/|F|^2 min 1.165e-8 | Q/l_g ['0.6508', '0.73132', '0.81468'] | bottom conc 1.0000 | 620s
+MPB R=5 T=0.8 Nb=48 J=30 c=1.0 dps=70 theta=0.9 dim=33: Q/|F|^2 min 3.771e-8 | l_g/|F|^2 min 1.822e-8 | Q/l_g ['0.70328', '0.73651', '0.81762'] | bottom conc 1.0000 | 651s
+MPB R=5 T=0.8 Nb=48 J=30 c=1.0 dps=70 theta=0.99 dim=32: Q/|F|^2 min 3.945e-8 | l_g/|F|^2 min 2.021e-8 | Q/l_g ['0.71156', '0.77269', '0.82251'] | bottom conc 1.0000 | 685s
+MPB R=5 T=0.8 Nb=48 J=30 c=1.0 dps=70 theta=0.999 dim=30: Q/|F|^2 min 9.404e-8 | l_g/|F|^2 min 4.42e-8 | Q/l_g ['0.72223', '0.78972', '0.82893'] | bottom conc 1.0000 | 711s
+MPB R=6 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.0 dim=40: Q/|F|^2 min 2.028e-12 | l_g/|F|^2 min 1.449e-12 | Q/l_g ['0.10446', '0.64234', '0.65035'] | bottom conc 1.0000 | 697s
+MPB R=6 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.5 dim=34: Q/|F|^2 min 3.301e-12 | l_g/|F|^2 min 1.867e-12 | Q/l_g ['0.65179', '0.73453', '0.81606'] | bottom conc 1.0000 | 748s
+MPB R=6 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.9 dim=33: Q/|F|^2 min 3.649e-12 | l_g/|F|^2 min 1.938e-12 | Q/l_g ['0.66024', '0.7375', '0.81877'] | bottom conc 1.0000 | 784s
+MPB R=6 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.99 dim=32: Q/|F|^2 min 1.832e-11 | l_g/|F|^2 min 8.792e-12 | Q/l_g ['0.66284', '0.73851', '0.83049'] | bottom conc 1.0000 | 822s
+MPB R=6 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.999 dim=30: Q/|F|^2 min 5.716e-11 | l_g/|F|^2 min 4.529e-11 | Q/l_g ['0.66411', '0.75084', '0.83262'] | bottom conc 1.0000 | 851s
+MPB R=6 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.0 dim=40: Q/|F|^2 min 1.964e-12 | l_g/|F|^2 min 1.2e-12 | Q/l_g ['0.0023317', '0.627', '0.65774'] | bottom conc 1.0000 | 803s
+MPB R=6 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.5 dim=38: Q/|F|^2 min 2.658e-12 | l_g/|F|^2 min 2.175e-12 | Q/l_g ['0.57302', '0.65357', '0.71036'] | bottom conc 1.0000 | 867s
+MPB R=6 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.9 dim=37: Q/|F|^2 min 2.694e-12 | l_g/|F|^2 min 2.187e-12 | Q/l_g ['0.59851', '0.65806', '0.71228'] | bottom conc 1.0000 | 927s
+MPB R=6 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.99 dim=36: Q/|F|^2 min 2.915e-11 | l_g/|F|^2 min 2.205e-11 | Q/l_g ['0.62441', '0.7059', '0.71237'] | bottom conc 1.0000 | 980s
+MPB R=6 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.999 dim=35: Q/|F|^2 min 3.021e-11 | l_g/|F|^2 min 2.208e-11 | Q/l_g ['0.62442', '0.71068', '0.71914'] | bottom conc 1.0000 | 1020s
+MPB R=7 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.0 dim=40: Q/|F|^2 min 9.818e-17 | l_g/|F|^2 min 3.836e-15 | Q/l_g ['7.7086e-5', '0.60319', '0.61039'] | bottom conc 1.0000 | 914s
+MPB R=7 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.5 dim=36: Q/|F|^2 min 1.539e-14 | l_g/|F|^2 min 3.849e-15 | Q/l_g ['0.37981', '0.69743', '0.73313'] | bottom conc 1.0000 | 961s
+MPB R=7 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.9 dim=34: Q/|F|^2 min 1.606e-14 | l_g/|F|^2 min 3.939e-15 | Q/l_g ['0.64821', '0.7413', '0.8048'] | bottom conc 1.0000 | 1003s
+MPB R=7 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.99 dim=33: Q/|F|^2 min 1.638e-14 | l_g/|F|^2 min 4.086e-15 | Q/l_g ['0.65323', '0.74229', '0.82989'] | bottom conc 1.0000 | 1036s
+MPB R=7 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.999 dim=32: Q/|F|^2 min 1.904e-14 | l_g/|F|^2 min 5.27e-15 | Q/l_g ['0.65361', '0.7437', '0.83051'] | bottom conc 1.0000 | 1064s
+MPB R=8 T=0.8 Nb=40 J=40 c=1.0 dps=110 theta=0.0 dim=40: Q/|F|^2 min 7.692e-20 | l_g/|F|^2 min 3.689e-18 | Q/l_g ['1.5315e-7', '0.33363', '0.65463'] | bottom conc 1.0000 | 1067s
+MPB R=8 T=0.8 Nb=40 J=40 c=1.0 dps=110 theta=0.5 dim=37: Q/|F|^2 min 7.216e-18 | l_g/|F|^2 min 5.87e-18 | Q/l_g ['0.20718', '0.65596', '0.71297'] | bottom conc 1.0000 | 1116s
+MPB R=3 T=0.8 Nb=40 J=20 c=1.0 dps=50 theta=0.0 dim=35: Q/|F|^2 min 0.001515 | l_g/|F|^2 min 0.001164 | Q/l_g ['0.73856', '0.76729', '0.85893'] | out-of-band frac of bottom 2.671e-04 | 245s
+MPB R=3 T=0.8 Nb=40 J=20 c=1.0 dps=50 theta=0.5 dim=20: Q/|F|^2 min 0.00211 | l_g/|F|^2 min 0.001548 | Q/l_g ['0.74462', '0.79491', '0.87882'] | out-of-band frac of bottom 6.765e-05 | 255s
+MPB R=3 T=0.8 Nb=40 J=20 c=1.0 dps=50 theta=0.9 dim=18: Q/|F|^2 min 0.003672 | l_g/|F|^2 min 0.003059 | Q/l_g ['0.75801', '0.87201', '0.94702'] | out-of-band frac of bottom 1.478e-05 | 264s
+MPB R=3 T=0.8 Nb=40 J=20 c=1.0 dps=50 theta=0.99 dim=17: Q/|F|^2 min 0.04165 | l_g/|F|^2 min 0.03299 | Q/l_g ['0.77701', '0.91284', '1.0428'] | out-of-band frac of bottom 2.996e-06 | 274s
+PEN R=3 T=0.8 Nb=40 mu=1e-14: bottom Q/l_g=0.73744  out-of-band eps=0.0002932  Q/|F|^2=0.01388 l_g/|F|^2=0.01883
+PEN R=3 T=0.8 Nb=40 mu=1e-12: bottom Q/l_g=0.73744  out-of-band eps=0.0002932  Q/|F|^2=0.01388 l_g/|F|^2=0.01883
+PEN R=3 T=0.8 Nb=40 mu=1e-10: bottom Q/l_g=0.73744  out-of-band eps=0.0002932  Q/|F|^2=0.01388 l_g/|F|^2=0.01883
+PEN R=3 T=0.8 Nb=40 mu=1e-08: bottom Q/l_g=0.73744  out-of-band eps=0.0002932  Q/|F|^2=0.01388 l_g/|F|^2=0.01883
+PEN R=3 T=0.8 Nb=40 mu=1e-06: bottom Q/l_g=0.73744  out-of-band eps=0.0002932  Q/|F|^2=0.01388 l_g/|F|^2=0.01883
+PEN R=3 T=0.8 Nb=40 mu=1e-04: bottom Q/l_g=0.73744  out-of-band eps=0.0002931  Q/|F|^2=0.01388 l_g/|F|^2=0.01883
+PEN R=3 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=0.73745  out-of-band eps=0.0002781  Q/|F|^2=0.0137 l_g/|F|^2=0.01858
+PEN R=3 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=0.7401  out-of-band eps=7.805e-5  Q/|F|^2=0.01219 l_g/|F|^2=0.01646
+MPB R=4 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.0 dim=40: Q/|F|^2 min 6.502e-6 | l_g/|F|^2 min 3.386e-6 | Q/l_g ['0.67602', '0.72283', '0.81209'] | out-of-band frac of bottom 1.219e-05 | 514s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.5 dim=28: Q/|F|^2 min 7.216e-6 | l_g/|F|^2 min 3.468e-6 | Q/l_g ['0.6823', '0.75207', '0.81803'] | out-of-band frac of bottom 4.792e-06 | 552s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.9 dim=26: Q/|F|^2 min 1.223e-5 | l_g/|F|^2 min 8.261e-6 | Q/l_g ['0.69925', '0.78534', '0.8317'] | out-of-band frac of bottom 1.450e-06 | 573s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.99 dim=25: Q/|F|^2 min 1.851e-5 | l_g/|F|^2 min 1.224e-5 | Q/l_g ['0.75358', '0.82731', '0.85195'] | out-of-band frac of bottom 1.801e-08 | 594s
+PEN R=4 T=0.8 Nb=40 mu=1e-14: bottom Q/l_g=0.67602  out-of-band eps=1.219e-5  Q/|F|^2=0.0006864 l_g/|F|^2=0.001015
+PEN R=4 T=0.8 Nb=40 mu=1e-12: bottom Q/l_g=0.67602  out-of-band eps=1.219e-5  Q/|F|^2=0.0006864 l_g/|F|^2=0.001015
+PEN R=4 T=0.8 Nb=40 mu=1e-10: bottom Q/l_g=0.67602  out-of-band eps=1.219e-5  Q/|F|^2=0.0006864 l_g/|F|^2=0.001015
+PEN R=4 T=0.8 Nb=40 mu=1e-08: bottom Q/l_g=0.67602  out-of-band eps=1.219e-5  Q/|F|^2=0.0006864 l_g/|F|^2=0.001015
+PEN R=4 T=0.8 Nb=40 mu=1e-06: bottom Q/l_g=0.67602  out-of-band eps=1.219e-5  Q/|F|^2=0.0006864 l_g/|F|^2=0.001015
+PEN R=4 T=0.8 Nb=40 mu=1e-04: bottom Q/l_g=0.67602  out-of-band eps=1.219e-5  Q/|F|^2=0.0006867 l_g/|F|^2=0.001016
+PEN R=4 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=0.67602  out-of-band eps=1.2e-5  Q/|F|^2=0.00071 l_g/|F|^2=0.00105
+PEN R=4 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=0.67767  out-of-band eps=8.198e-6  Q/|F|^2=0.001408 l_g/|F|^2=0.002078
+MPB R=4 T=1.0 Nb=40 J=30 c=1.0 dps=70 theta=0.0 dim=40: Q/|F|^2 min 2.121e-6 | l_g/|F|^2 min 3.541e-6 | Q/l_g ['0.072748', '0.69577', '0.72866'] | out-of-band frac of bottom 3.522e-05 | 554s
+MPB R=4 T=1.0 Nb=40 J=30 c=1.0 dps=70 theta=0.5 dim=35: Q/|F|^2 min 7.358e-6 | l_g/|F|^2 min 3.857e-6 | Q/l_g ['0.50973', '0.71432', '0.74329'] | out-of-band frac of bottom 4.083e-05 | 594s
+MPB R=4 T=1.0 Nb=40 J=30 c=1.0 dps=70 theta=0.9 dim=33: Q/|F|^2 min 7.693e-6 | l_g/|F|^2 min 3.96e-6 | Q/l_g ['0.70944', '0.72635', '0.81071'] | out-of-band frac of bottom 4.837e-07 | 629s
+MPB R=4 T=1.0 Nb=40 J=30 c=1.0 dps=70 theta=0.99 dim=32: Q/|F|^2 min 1.7e-5 | l_g/|F|^2 min 1.195e-5 | Q/l_g ['0.71336', '0.7595', '0.81567'] | out-of-band frac of bottom 5.364e-08 | 678s
+PEN R=4 T=1.0 Nb=40 mu=1e-14: bottom Q/l_g=0.072748  out-of-band eps=3.522e-5  Q/|F|^2=2.645e-6 l_g/|F|^2=3.635e-5
+PEN R=4 T=1.0 Nb=40 mu=1e-12: bottom Q/l_g=0.072748  out-of-band eps=3.522e-5  Q/|F|^2=2.645e-6 l_g/|F|^2=3.635e-5
+PEN R=4 T=1.0 Nb=40 mu=1e-10: bottom Q/l_g=0.072748  out-of-band eps=3.522e-5  Q/|F|^2=2.645e-6 l_g/|F|^2=3.635e-5
+PEN R=4 T=1.0 Nb=40 mu=1e-08: bottom Q/l_g=0.072748  out-of-band eps=3.522e-5  Q/|F|^2=2.645e-6 l_g/|F|^2=3.635e-5
+PEN R=4 T=1.0 Nb=40 mu=1e-06: bottom Q/l_g=0.072748  out-of-band eps=3.522e-5  Q/|F|^2=2.645e-6 l_g/|F|^2=3.635e-5
+PEN R=4 T=1.0 Nb=40 mu=1e-04: bottom Q/l_g=0.072748  out-of-band eps=3.522e-5  Q/|F|^2=2.645e-6 l_g/|F|^2=3.635e-5
+PEN R=4 T=1.0 Nb=40 mu=1e-02: bottom Q/l_g=0.072762  out-of-band eps=3.513e-5  Q/|F|^2=2.646e-6 l_g/|F|^2=3.636e-5
+PEN R=4 T=1.0 Nb=40 mu=1e+00: bottom Q/l_g=0.6317  out-of-band eps=1.774e-5  Q/|F|^2=0.0002214 l_g/|F|^2=0.0003505
+MPB R=5 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.0 dim=40: Q/|F|^2 min 5.796e-9 | l_g/|F|^2 min 1.138e-8 | Q/l_g ['0.16819', '0.66704', '0.71546'] | out-of-band frac of bottom 7.306e-08 | 622s
+MPB R=5 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.5 dim=32: Q/|F|^2 min 2.499e-8 | l_g/|F|^2 min 1.425e-8 | Q/l_g ['0.64422', '0.732', '0.81465'] | out-of-band frac of bottom 3.512e-08 | 643s
+MPB R=5 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.9 dim=31: Q/|F|^2 min 3.228e-8 | l_g/|F|^2 min 1.685e-8 | Q/l_g ['0.66494', '0.73654', '0.81471'] | out-of-band frac of bottom 8.674e-08 | 671s
+MPB R=5 T=0.8 Nb=40 J=30 c=1.0 dps=70 theta=0.99 dim=30: Q/|F|^2 min 3.895e-8 | l_g/|F|^2 min 2.059e-8 | Q/l_g ['0.7103', '0.74433', '0.81954'] | out-of-band frac of bottom 3.286e-09 | 708s
+PEN R=5 T=0.8 Nb=40 mu=1e-14: bottom Q/l_g=0.16819  out-of-band eps=7.306e-8  Q/|F|^2=7.196e-9 l_g/|F|^2=4.279e-8
+PEN R=5 T=0.8 Nb=40 mu=1e-12: bottom Q/l_g=0.16819  out-of-band eps=7.306e-8  Q/|F|^2=7.196e-9 l_g/|F|^2=4.279e-8
+PEN R=5 T=0.8 Nb=40 mu=1e-10: bottom Q/l_g=0.16819  out-of-band eps=7.306e-8  Q/|F|^2=7.196e-9 l_g/|F|^2=4.279e-8
+PEN R=5 T=0.8 Nb=40 mu=1e-08: bottom Q/l_g=0.16819  out-of-band eps=7.306e-8  Q/|F|^2=7.196e-9 l_g/|F|^2=4.279e-8
+PEN R=5 T=0.8 Nb=40 mu=1e-06: bottom Q/l_g=0.16819  out-of-band eps=7.306e-8  Q/|F|^2=7.196e-9 l_g/|F|^2=4.279e-8
+PEN R=5 T=0.8 Nb=40 mu=1e-04: bottom Q/l_g=0.16819  out-of-band eps=7.306e-8  Q/|F|^2=7.197e-9 l_g/|F|^2=4.279e-8
+PEN R=5 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=0.16824  out-of-band eps=7.316e-8  Q/|F|^2=7.253e-9 l_g/|F|^2=4.311e-8
+PEN R=5 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=0.64326  out-of-band eps=3.762e-8  Q/|F|^2=1.456e-6 l_g/|F|^2=2.264e-6
+MPB R=5 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.0 dim=40: Q/|F|^2 min 1.814e-8 | l_g/|F|^2 min 1.336e-8 | Q/l_g ['0.020709', '0.66672', '0.69845'] | out-of-band frac of bottom 1.708e-06 | 1014s
+MPB R=5 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.5 dim=37: Q/|F|^2 min 2.729e-8 | l_g/|F|^2 min 1.433e-8 | Q/l_g ['0.62987', '0.68605', '0.71898'] | out-of-band frac of bottom 2.181e-06 | 1093s
+MPB R=5 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.9 dim=36: Q/|F|^2 min 2.963e-8 | l_g/|F|^2 min 1.544e-8 | Q/l_g ['0.65175', '0.70341', '0.72286'] | out-of-band frac of bottom 6.142e-10 | 1155s
+MPB R=6 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.0 dim=40: Q/|F|^2 min 2.028e-12 | l_g/|F|^2 min 1.449e-12 | Q/l_g ['0.10446', '0.64234', '0.65035'] | out-of-band frac of bottom 9.382e-11 | 934s
+MPB R=6 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.5 dim=34: Q/|F|^2 min 3.301e-12 | l_g/|F|^2 min 1.867e-12 | Q/l_g ['0.65179', '0.73453', '0.81606'] | out-of-band frac of bottom 1.102e-12 | 1003s
+MPB R=6 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.9 dim=33: Q/|F|^2 min 3.649e-12 | l_g/|F|^2 min 1.938e-12 | Q/l_g ['0.66024', '0.7375', '0.81877'] | out-of-band frac of bottom 1.105e-12 | 1036s
+MPB R=6 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.99 dim=32: Q/|F|^2 min 1.832e-11 | l_g/|F|^2 min 8.792e-12 | Q/l_g ['0.66284', '0.73851', '0.83049'] | out-of-band frac of bottom 4.788e-13 | 1066s
+PEN R=6 T=0.8 Nb=40 mu=1e-14: bottom Q/l_g=0.10446  out-of-band eps=9.382e-11  Q/|F|^2=6.594e-12 l_g/|F|^2=6.312e-11
+PEN R=6 T=0.8 Nb=40 mu=1e-12: bottom Q/l_g=0.10446  out-of-band eps=9.382e-11  Q/|F|^2=6.594e-12 l_g/|F|^2=6.312e-11
+PEN R=6 T=0.8 Nb=40 mu=1e-10: bottom Q/l_g=0.10446  out-of-band eps=9.382e-11  Q/|F|^2=6.594e-12 l_g/|F|^2=6.312e-11
+PEN R=6 T=0.8 Nb=40 mu=1e-08: bottom Q/l_g=0.10446  out-of-band eps=9.382e-11  Q/|F|^2=6.594e-12 l_g/|F|^2=6.312e-11
+MPB R=6 T=0.8 Nb=48 J=40 c=1.0 dps=90 theta=0.0 dim=48: Q/|F|^2 min 1.874e-12 | l_g/|F|^2 min 1.259e-12 | Q/l_g ['0.088236', '0.63818', '0.64565'] | out-of-band frac of bottom 1.232e-10 | 1173s
+MPB R=7 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.0 dim=40: Q/|F|^2 min 9.818e-17 | l_g/|F|^2 min 3.836e-15 | Q/l_g ['7.7086e-5', '0.60319', '0.61039'] | out-of-band frac of bottom 1.784e-12 | 1066s
+MPB R=7 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.5 dim=36: Q/|F|^2 min 1.539e-14 | l_g/|F|^2 min 3.849e-15 | Q/l_g ['0.37981', '0.69743', '0.73313'] | out-of-band frac of bottom 7.463e-13 | 1118s
+MPB R=7 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.9 dim=34: Q/|F|^2 min 1.606e-14 | l_g/|F|^2 min 3.939e-15 | Q/l_g ['0.64821', '0.7413', '0.8048'] | out-of-band frac of bottom 4.746e-13 | 1164s
+MPB R=3 T=0.8 Nb=40 J=20 c=1.1 dps=50 theta=0.0 dim=35: Q/|F|^2 min -0.007573 | l_g/|F|^2 min 0.001164 | Q/l_g ['-5.7614', '0.23189', '0.79679'] | out-of-band frac of bottom 3.359e-04 | 268s
+MPB R=3 T=0.8 Nb=40 J=20 c=1.1 dps=50 theta=0.5 dim=20: Q/|F|^2 min -0.006915 | l_g/|F|^2 min 0.001548 | Q/l_g ['-3.8504', '0.48099', '0.79968'] | out-of-band frac of bottom 7.039e-05 | 281s
+MPB R=3 T=0.8 Nb=40 J=20 c=1.1 dps=50 theta=0.9 dim=18: Q/|F|^2 min -0.005798 | l_g/|F|^2 min 0.003059 | Q/l_g ['-1.684', '0.57641', '0.8431'] | out-of-band frac of bottom 3.767e-05 | 291s
+MPB R=3 T=0.8 Nb=40 J=20 c=1.1 dps=50 theta=0.99 dim=17: Q/|F|^2 min 0.02218 | l_g/|F|^2 min 0.03299 | Q/l_g ['0.49682', '0.78295', '0.95349'] | out-of-band frac of bottom 1.581e-05 | 298s
+MPB R=3 T=0.8 Nb=40 J=20 c=1.1 dps=50 theta=0.999 dim=16: Q/|F|^2 min 0.02667 | l_g/|F|^2 min 0.03318 | Q/l_g ['0.61862', '0.82771', '1.0118'] | out-of-band frac of bottom 1.315e-07 | 304s
+PEN R=3 T=0.8 Nb=40 mu=1e-14: bottom Q/l_g=-5.7754  out-of-band eps=0.0003377  Q/|F|^2=-0.006913 l_g/|F|^2=0.001197
+PEN R=3 T=0.8 Nb=40 mu=1e-12: bottom Q/l_g=-5.7754  out-of-band eps=0.0003377  Q/|F|^2=-0.006913 l_g/|F|^2=0.001197
+PEN R=3 T=0.8 Nb=40 mu=1e-10: bottom Q/l_g=-5.7754  out-of-band eps=0.0003377  Q/|F|^2=-0.006913 l_g/|F|^2=0.001197
+PEN R=3 T=0.8 Nb=40 mu=1e-08: bottom Q/l_g=-5.7754  out-of-band eps=0.0003377  Q/|F|^2=-0.006913 l_g/|F|^2=0.001197
+PEN R=3 T=0.8 Nb=40 mu=1e-06: bottom Q/l_g=-5.7754  out-of-band eps=0.0003377  Q/|F|^2=-0.006913 l_g/|F|^2=0.001197
+PEN R=3 T=0.8 Nb=40 mu=1e-04: bottom Q/l_g=-5.7754  out-of-band eps=0.0003377  Q/|F|^2=-0.006913 l_g/|F|^2=0.001197
+PEN R=3 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=-5.7754  out-of-band eps=0.0003372  Q/|F|^2=-0.006913 l_g/|F|^2=0.001197
+PEN R=3 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=-5.7551  out-of-band eps=0.0002885  Q/|F|^2=-0.006915 l_g/|F|^2=0.001202
+MPB R=3 T=1.0 Nb=40 J=20 c=1.1 dps=50 theta=0.0 dim=40: Q/|F|^2 min -0.00859 | l_g/|F|^2 min 0.0007573 | Q/l_g ['-10.22', '0.20388', '0.79417'] | out-of-band frac of bottom 1.739e-04 | 364s
+MPB R=3 T=1.0 Nb=40 J=20 c=1.1 dps=50 theta=0.5 dim=29: Q/|F|^2 min -0.00847 | l_g/|F|^2 min 0.0007918 | Q/l_g ['-9.6452', '0.26639', '0.79484'] | out-of-band frac of bottom 1.215e-04 | 407s
+MPB R=3 T=1.0 Nb=40 J=20 c=1.1 dps=50 theta=0.9 dim=27: Q/|F|^2 min -0.001471 | l_g/|F|^2 min 0.009551 | Q/l_g ['-0.1187', '0.74944', '0.83311'] | out-of-band frac of bottom 5.302e-05 | 447s
+MPB R=3 T=1.0 Nb=40 J=20 c=1.1 dps=50 theta=0.99 dim=25: Q/|F|^2 min 0.003668 | l_g/|F|^2 min 0.01311 | Q/l_g ['0.22912', '0.77927', '0.91019'] | out-of-band frac of bottom 8.585e-07 | 472s
+MPB R=3 T=1.0 Nb=40 J=20 c=1.1 dps=50 theta=0.999 dim=24: Q/|F|^2 min 0.009563 | l_g/|F|^2 min 0.01849 | Q/l_g ['0.41937', '0.7872', '0.93221'] | out-of-band frac of bottom 1.251e-07 | 489s
+PEN R=3 T=1.0 Nb=40 mu=1e-14: bottom Q/l_g=-10.22  out-of-band eps=0.0001739  Q/|F|^2=-0.007841 l_g/|F|^2=0.0007672
+PEN R=3 T=1.0 Nb=40 mu=1e-12: bottom Q/l_g=-10.22  out-of-band eps=0.0001739  Q/|F|^2=-0.007841 l_g/|F|^2=0.0007672
+PEN R=3 T=1.0 Nb=40 mu=1e-10: bottom Q/l_g=-10.22  out-of-band eps=0.0001739  Q/|F|^2=-0.007841 l_g/|F|^2=0.0007672
+PEN R=3 T=1.0 Nb=40 mu=1e-08: bottom Q/l_g=-10.22  out-of-band eps=0.0001739  Q/|F|^2=-0.007841 l_g/|F|^2=0.0007672
+PEN R=3 T=1.0 Nb=40 mu=1e-06: bottom Q/l_g=-10.22  out-of-band eps=0.0001739  Q/|F|^2=-0.007841 l_g/|F|^2=0.0007672
+PEN R=3 T=1.0 Nb=40 mu=1e-04: bottom Q/l_g=-10.22  out-of-band eps=0.0001739  Q/|F|^2=-0.007841 l_g/|F|^2=0.0007672
+PEN R=3 T=1.0 Nb=40 mu=1e-02: bottom Q/l_g=-10.22  out-of-band eps=0.0001738  Q/|F|^2=-0.007841 l_g/|F|^2=0.0007672
+PEN R=3 T=1.0 Nb=40 mu=1e+00: bottom Q/l_g=-10.216  out-of-band eps=0.0001673  Q/|F|^2=-0.007842 l_g/|F|^2=0.0007676
+MPB R=4 T=0.8 Nb=40 J=30 c=0.9 dps=70 theta=0.0 dim=40: Q/|F|^2 min -0.008181 | l_g/|F|^2 min 3.386e-6 | Q/l_g ['-23.939', '0.73218', '0.77092'] | out-of-band frac of bottom 1.028e-04 | 497s
+MPB R=4 T=0.8 Nb=40 J=30 c=0.9 dps=70 theta=0.5 dim=28: Q/|F|^2 min -0.007372 | l_g/|F|^2 min 3.468e-6 | Q/l_g ['-13.191', '0.76799', '0.79816'] | out-of-band frac of bottom 1.171e-05 | 522s
+MPB R=4 T=0.8 Nb=40 J=30 c=0.9 dps=70 theta=0.9 dim=26: Q/|F|^2 min -0.007037 | l_g/|F|^2 min 8.261e-6 | Q/l_g ['-10.14', '0.7774', '0.8636'] | out-of-band frac of bottom 1.163e-05 | 544s
+MPB R=4 T=0.8 Nb=40 J=30 c=0.9 dps=70 theta=0.99 dim=25: Q/|F|^2 min 0.003585 | l_g/|F|^2 min 1.224e-5 | Q/l_g ['0.54405', '0.86359', '0.90071'] | out-of-band frac of bottom 2.603e-06 | 563s
+MPB R=4 T=0.8 Nb=40 J=30 c=0.9 dps=70 theta=0.999 dim=23: Q/|F|^2 min 0.005619 | l_g/|F|^2 min 1.499e-5 | Q/l_g ['0.66576', '0.88633', '0.91247'] | out-of-band frac of bottom 1.644e-07 | 580s
+PEN R=4 T=0.8 Nb=40 mu=1e-14: bottom Q/l_g=-23.939  out-of-band eps=0.0001028  Q/|F|^2=-0.005296 l_g/|F|^2=0.0002212
+PEN R=4 T=0.8 Nb=40 mu=1e-12: bottom Q/l_g=-23.939  out-of-band eps=0.0001028  Q/|F|^2=-0.005296 l_g/|F|^2=0.0002212
+PEN R=4 T=0.8 Nb=40 mu=1e-10: bottom Q/l_g=-23.939  out-of-band eps=0.0001028  Q/|F|^2=-0.005296 l_g/|F|^2=0.0002212
+PEN R=4 T=0.8 Nb=40 mu=1e-08: bottom Q/l_g=-23.939  out-of-band eps=0.0001028  Q/|F|^2=-0.005296 l_g/|F|^2=0.0002212
+PEN R=4 T=0.8 Nb=40 mu=1e-06: bottom Q/l_g=-23.939  out-of-band eps=0.0001028  Q/|F|^2=-0.005296 l_g/|F|^2=0.0002212
+PEN R=4 T=0.8 Nb=40 mu=1e-04: bottom Q/l_g=-23.939  out-of-band eps=0.0001028  Q/|F|^2=-0.005296 l_g/|F|^2=0.0002212
+PEN R=4 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=-23.939  out-of-band eps=0.0001027  Q/|F|^2=-0.005296 l_g/|F|^2=0.0002212
+PEN R=4 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=-23.928  out-of-band eps=9.79e-5  Q/|F|^2=-0.005303 l_g/|F|^2=0.0002216
+MPB R=4 T=0.8 Nb=40 J=30 c=1.1 dps=70 theta=0.0 dim=40: Q/|F|^2 min -0.08739 | l_g/|F|^2 min 3.386e-6 | Q/l_g ['-3899.1', '-145.61', '0.37122'] | out-of-band frac of bottom 3.565e-07 | 502s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.1 dps=70 theta=0.5 dim=28: Q/|F|^2 min -0.08705 | l_g/|F|^2 min 3.468e-6 | Q/l_g ['-3857.9', '-127.6', '0.42259'] | out-of-band frac of bottom 3.507e-07 | 530s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.1 dps=70 theta=0.9 dim=26: Q/|F|^2 min -0.08539 | l_g/|F|^2 min 8.261e-6 | Q/l_g ['-1535.6', '-99.091', '0.54901'] | out-of-band frac of bottom 6.788e-08 | 552s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.1 dps=70 theta=0.99 dim=25: Q/|F|^2 min -0.07289 | l_g/|F|^2 min 1.224e-5 | Q/l_g ['-1189.5', '-97.753', '0.58696'] | out-of-band frac of bottom 4.672e-08 | 573s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.1 dps=70 theta=0.999 dim=23: Q/|F|^2 min -0.06302 | l_g/|F|^2 min 1.499e-5 | Q/l_g ['-933.43', '-37.075', '0.77265'] | out-of-band frac of bottom 1.458e-09 | 592s
+PEN R=4 T=0.8 Nb=40 mu=1e-14: bottom Q/l_g=-3899.1  out-of-band eps=3.565e-7  Q/|F|^2=-0.01338 l_g/|F|^2=3.432e-6
+PEN R=4 T=0.8 Nb=40 mu=1e-12: bottom Q/l_g=-3899.1  out-of-band eps=3.565e-7  Q/|F|^2=-0.01338 l_g/|F|^2=3.432e-6
+PEN R=4 T=0.8 Nb=40 mu=1e-10: bottom Q/l_g=-3899.1  out-of-band eps=3.565e-7  Q/|F|^2=-0.01338 l_g/|F|^2=3.432e-6
+PEN R=4 T=0.8 Nb=40 mu=1e-08: bottom Q/l_g=-3899.1  out-of-band eps=3.565e-7  Q/|F|^2=-0.01338 l_g/|F|^2=3.432e-6
+PEN R=4 T=0.8 Nb=40 mu=1e-06: bottom Q/l_g=-3899.1  out-of-band eps=3.565e-7  Q/|F|^2=-0.01338 l_g/|F|^2=3.432e-6
+PEN R=4 T=0.8 Nb=40 mu=1e-04: bottom Q/l_g=-3899.1  out-of-band eps=3.565e-7  Q/|F|^2=-0.01338 l_g/|F|^2=3.432e-6
+PEN R=4 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=-3899.1  out-of-band eps=3.565e-7  Q/|F|^2=-0.01338 l_g/|F|^2=3.432e-6
+PEN R=4 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=-3899.1  out-of-band eps=3.565e-7  Q/|F|^2=-0.01338 l_g/|F|^2=3.432e-6
+CERTIFIED=True: Q[F] >= [0.60000000000000000000000000000000000000 +/- 2.36e-39] * l_g^fam[F] on V (3 cells, T=1.0, J=20); time 520s
+CERTIFIED=True: Q[F] >= [0.60000000000000000000000000000000000000 +/- 2.36e-39] * l_g^fam[F] on V (3 cells, T=0.8, J=20); time 400s
+CERTIFIED=True: Q[F] >= [0.20000000000000000000000000000000000000 +/- 2.95e-40] * l_g^fam[F] on V (3 cells, T=0.8, J=20); time 390s
+MPB R=3 T=0.8 Nb=40 J=20 c=1.1 dps=50 theta=0.0 dim=35: Q/|F|^2 min -0.007573 | l_g/|F|^2 min 0.001164 | Q/l_g ['-5.7614', '0.23189', '0.79679'] | out-of-band frac of bottom 3.359e-04 | 109s
+MPB R=3 T=0.8 Nb=40 J=20 c=1.1 dps=50 theta=0.5 dim=20: Q/|F|^2 min -0.006915 | l_g/|F|^2 min 0.001548 | Q/l_g ['-3.8504', '0.48099', '0.79968'] | out-of-band frac of bottom 7.039e-05 | 117s
+MPB R=3 T=0.8 Nb=40 J=20 c=1.1 dps=50 theta=0.9 dim=18: Q/|F|^2 min -0.005798 | l_g/|F|^2 min 0.003059 | Q/l_g ['-1.684', '0.57641', '0.8431'] | out-of-band frac of bottom 3.767e-05 | 123s
+MPB R=3 T=0.8 Nb=40 J=20 c=1.1 dps=50 theta=0.99 dim=17: Q/|F|^2 min 0.02218 | l_g/|F|^2 min 0.03299 | Q/l_g ['0.49682', '0.78295', '0.95349'] | out-of-band frac of bottom 1.581e-05 | 129s
+PEN R=3 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=-5.7754  out-of-band eps=0.0003372  Q/|F|^2=-0.006913 l_g/|F|^2=0.001197
+PEN R=3 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=-5.7551  out-of-band eps=0.0002885  Q/|F|^2=-0.006915 l_g/|F|^2=0.001202
+PEN R=3 T=0.8 Nb=40 mu=1e+02: bottom Q/l_g=-3.1407  out-of-band eps=3.457e-5  Q/|F|^2=-0.006615 l_g/|F|^2=0.002106
+MPB R=4 T=0.8 Nb=40 J=30 c=0.9 dps=70 theta=0.0 dim=40: Q/|F|^2 min -0.008181 | l_g/|F|^2 min 3.386e-6 | Q/l_g ['-23.939', '0.73218', '0.77092'] | out-of-band frac of bottom 1.028e-04 | 173s
+MPB R=4 T=0.8 Nb=40 J=30 c=0.9 dps=70 theta=0.5 dim=28: Q/|F|^2 min -0.007372 | l_g/|F|^2 min 3.468e-6 | Q/l_g ['-13.191', '0.76799', '0.79816'] | out-of-band frac of bottom 1.171e-05 | 196s
+MPB R=4 T=0.8 Nb=40 J=30 c=0.9 dps=70 theta=0.9 dim=26: Q/|F|^2 min -0.007037 | l_g/|F|^2 min 8.261e-6 | Q/l_g ['-10.14', '0.7774', '0.8636'] | out-of-band frac of bottom 1.163e-05 | 215s
+MPB R=4 T=0.8 Nb=40 J=30 c=0.9 dps=70 theta=0.99 dim=25: Q/|F|^2 min 0.003585 | l_g/|F|^2 min 1.224e-5 | Q/l_g ['0.54405', '0.86359', '0.90071'] | out-of-band frac of bottom 2.603e-06 | 233s
+PEN R=4 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=-23.939  out-of-band eps=0.0001027  Q/|F|^2=-0.005296 l_g/|F|^2=0.0002212
+PEN R=4 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=-23.928  out-of-band eps=9.79e-5  Q/|F|^2=-0.005303 l_g/|F|^2=0.0002216
+PEN R=4 T=0.8 Nb=40 mu=1e+02: bottom Q/l_g=-16.176  out-of-band eps=1.411e-5  Q/|F|^2=-0.0053 l_g/|F|^2=0.0003276
+MPB R=4 T=0.8 Nb=40 J=30 c=1.1 dps=70 theta=0.0 dim=40: Q/|F|^2 min -0.08739 | l_g/|F|^2 min 3.386e-6 | Q/l_g ['-3899.1', '-145.61', '0.37122'] | out-of-band frac of bottom 3.565e-07 | 176s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.1 dps=70 theta=0.5 dim=28: Q/|F|^2 min -0.08705 | l_g/|F|^2 min 3.468e-6 | Q/l_g ['-3857.9', '-127.6', '0.42259'] | out-of-band frac of bottom 3.507e-07 | 200s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.1 dps=70 theta=0.9 dim=26: Q/|F|^2 min -0.08539 | l_g/|F|^2 min 8.261e-6 | Q/l_g ['-1535.6', '-99.091', '0.54901'] | out-of-band frac of bottom 6.788e-08 | 219s
+MPB R=4 T=0.8 Nb=40 J=30 c=1.1 dps=70 theta=0.99 dim=25: Q/|F|^2 min -0.07289 | l_g/|F|^2 min 1.224e-5 | Q/l_g ['-1189.5', '-97.753', '0.58696'] | out-of-band frac of bottom 4.672e-08 | 239s
+PEN R=4 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=-3899.1  out-of-band eps=3.565e-7  Q/|F|^2=-0.01338 l_g/|F|^2=3.432e-6
+PEN R=4 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=-3899.1  out-of-band eps=3.565e-7  Q/|F|^2=-0.01338 l_g/|F|^2=3.432e-6
+PEN R=4 T=0.8 Nb=40 mu=1e+02: bottom Q/l_g=-3899.0  out-of-band eps=3.541e-7  Q/|F|^2=-0.01339 l_g/|F|^2=3.433e-6
+MPB R=5 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.0 dim=40: Q/|F|^2 min 1.814e-8 | l_g/|F|^2 min 1.336e-8 | Q/l_g ['0.020709', '0.66672', '0.69845'] | out-of-band frac of bottom 1.708e-06 | 422s
+MPB R=5 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.5 dim=37: Q/|F|^2 min 2.729e-8 | l_g/|F|^2 min 1.433e-8 | Q/l_g ['0.62987', '0.68605', '0.71898'] | out-of-band frac of bottom 2.181e-06 | 474s
+MPB R=5 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.9 dim=36: Q/|F|^2 min 2.963e-8 | l_g/|F|^2 min 1.544e-8 | Q/l_g ['0.65175', '0.70341', '0.72286'] | out-of-band frac of bottom 6.142e-10 | 526s
+MPB R=5 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.99 dim=35: Q/|F|^2 min 3.769e-8 | l_g/|F|^2 min 2.158e-8 | Q/l_g ['0.67508', '0.70728', '0.72881'] | out-of-band frac of bottom 9.028e-11 | 575s
+PEN R=5 T=1.0 Nb=40 mu=1e-02: bottom Q/l_g=0.020723  out-of-band eps=1.702e-6  Q/|F|^2=4.233e-8 l_g/|F|^2=2.042e-6
+PEN R=5 T=1.0 Nb=40 mu=1e+00: bottom Q/l_g=0.42819  out-of-band eps=1.755e-7  Q/|F|^2=4.439e-7 l_g/|F|^2=1.037e-6
+PEN R=5 T=1.0 Nb=40 mu=1e+02: bottom Q/l_g=0.66269  out-of-band eps=5.003e-11  Q/|F|^2=4.827e-7 l_g/|F|^2=7.284e-7
+MPB R=6 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.0 dim=40: Q/|F|^2 min 2.028e-12 | l_g/|F|^2 min 1.449e-12 | Q/l_g ['0.10446', '0.64234', '0.65035'] | out-of-band frac of bottom 9.382e-11 | 411s
+MPB R=6 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.5 dim=34: Q/|F|^2 min 3.301e-12 | l_g/|F|^2 min 1.867e-12 | Q/l_g ['0.65179', '0.73453', '0.81606'] | out-of-band frac of bottom 1.102e-12 | 460s
+MPB R=6 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.9 dim=33: Q/|F|^2 min 3.649e-12 | l_g/|F|^2 min 1.938e-12 | Q/l_g ['0.66024', '0.7375', '0.81877'] | out-of-band frac of bottom 1.105e-12 | 506s
+MPB R=6 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.99 dim=32: Q/|F|^2 min 1.832e-11 | l_g/|F|^2 min 8.792e-12 | Q/l_g ['0.66284', '0.73851', '0.83049'] | out-of-band frac of bottom 4.788e-13 | 544s
+PEN R=6 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=0.10452  out-of-band eps=9.1e-11  Q/|F|^2=6.445e-12 l_g/|F|^2=6.167e-11
+PEN R=6 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=0.60471  out-of-band eps=5.004e-12  Q/|F|^2=8.798e-11 l_g/|F|^2=1.455e-10
+PEN R=6 T=0.8 Nb=40 mu=1e+02: bottom Q/l_g=0.68667  out-of-band eps=7.025e-13  Q/|F|^2=3.118e-9 l_g/|F|^2=4.541e-9
+MPB R=6 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.0 dim=40: Q/|F|^2 min 1.964e-12 | l_g/|F|^2 min 1.2e-12 | Q/l_g ['0.0023317', '0.627', '0.65774'] | out-of-band frac of bottom 3.909e-09 | 607s
+MPB R=6 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.5 dim=38: Q/|F|^2 min 2.658e-12 | l_g/|F|^2 min 2.175e-12 | Q/l_g ['0.57302', '0.65357', '0.71036'] | out-of-band frac of bottom -2.469e-13 | 667s
+MPB R=6 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.9 dim=37: Q/|F|^2 min 2.694e-12 | l_g/|F|^2 min 2.187e-12 | Q/l_g ['0.59851', '0.65806', '0.71228'] | out-of-band frac of bottom -3.262e-13 | 722s
+MPB R=6 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.99 dim=36: Q/|F|^2 min 2.915e-11 | l_g/|F|^2 min 2.205e-11 | Q/l_g ['0.62441', '0.7059', '0.71237'] | out-of-band frac of bottom -4.525e-13 | 746s
+PEN R=6 T=1.0 Nb=40 mu=1e-02: bottom Q/l_g=0.0023631  out-of-band eps=2.697e-9  Q/|F|^2=8.016e-12 l_g/|F|^2=3.392e-9
+PEN R=6 T=1.0 Nb=40 mu=1e+00: bottom Q/l_g=0.3157  out-of-band eps=1.371e-12  Q/|F|^2=3.762e-12 l_g/|F|^2=1.192e-11
+PEN R=6 T=1.0 Nb=40 mu=1e+02: bottom Q/l_g=1.5327  out-of-band eps=-2.771e-13  Q/|F|^2=3.561e-12 l_g/|F|^2=2.324e-12
+MPB R=6 T=0.8 Nb=48 J=40 c=1.0 dps=90 theta=0.0 dim=48: Q/|F|^2 min 1.874e-12 | l_g/|F|^2 min 1.259e-12 | Q/l_g ['0.088236', '0.63818', '0.64565'] | out-of-band frac of bottom 1.232e-10 | 475s
+MPB R=6 T=0.8 Nb=48 J=40 c=1.0 dps=90 theta=0.5 dim=38: Q/|F|^2 min 3.328e-12 | l_g/|F|^2 min 1.807e-12 | Q/l_g ['0.66019', '0.73293', '0.81624'] | out-of-band frac of bottom 2.212e-12 | 546s
+MPB R=6 T=0.8 Nb=48 J=40 c=1.0 dps=90 theta=0.9 dim=37: Q/|F|^2 min 3.69e-12 | l_g/|F|^2 min 1.876e-12 | Q/l_g ['0.66521', '0.73488', '0.81804'] | out-of-band frac of bottom 3.686e-12 | 605s
+MPB R=6 T=0.8 Nb=48 J=40 c=1.0 dps=90 theta=0.99 dim=36: Q/|F|^2 min 1.325e-11 | l_g/|F|^2 min 5.718e-12 | Q/l_g ['0.66955', '0.73568', '0.82874'] | out-of-band frac of bottom 4.624e-13 | 663s
+PEN R=6 T=0.8 Nb=48 mu=1e-02: bottom Q/l_g=0.088293  out-of-band eps=1.195e-10  Q/|F|^2=6.135e-12 l_g/|F|^2=6.949e-11
+PEN R=6 T=0.8 Nb=48 mu=1e+00: bottom Q/l_g=0.62458  out-of-band eps=4.923e-12  Q/|F|^2=1.224e-10 l_g/|F|^2=1.959e-10
+PEN R=6 T=0.8 Nb=48 mu=1e+02: bottom Q/l_g=0.68994  out-of-band eps=6.951e-13  Q/|F|^2=3.857e-9 l_g/|F|^2=5.591e-9
+MPB R=7 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.0 dim=40: Q/|F|^2 min 9.818e-17 | l_g/|F|^2 min 3.836e-15 | Q/l_g ['7.7086e-5', '0.60319', '0.61039'] | out-of-band frac of bottom 1.784e-12 | 492s
+MPB R=7 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.5 dim=36: Q/|F|^2 min 1.539e-14 | l_g/|F|^2 min 3.849e-15 | Q/l_g ['0.37981', '0.69743', '0.73313'] | out-of-band frac of bottom 7.463e-13 | 538s
+MPB R=7 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.9 dim=34: Q/|F|^2 min 1.606e-14 | l_g/|F|^2 min 3.939e-15 | Q/l_g ['0.64821', '0.7413', '0.8048'] | out-of-band frac of bottom 4.746e-13 | 583s
+MPB R=7 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.99 dim=33: Q/|F|^2 min 1.638e-14 | l_g/|F|^2 min 4.086e-15 | Q/l_g ['0.65323', '0.74229', '0.82989'] | out-of-band frac of bottom 1.669e-13 | 625s
+PEN R=7 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=0.000176  out-of-band eps=1.996e-12  Q/|F|^2=2.557e-16 l_g/|F|^2=1.453e-12
+PEN R=7 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=0.53631  out-of-band eps=1.948e-12  Q/|F|^2=1.451e-11 l_g/|F|^2=2.705e-11
+PEN R=7 T=0.8 Nb=40 mu=1e+02: bottom Q/l_g=0.6613  out-of-band eps=2.571e-13  Q/|F|^2=1.158e-9 l_g/|F|^2=1.752e-9
+MPB R=7 T=1.0 Nb=40 J=40 c=1.0 dps=100 theta=0.0 dim=40: Q/|F|^2 min 9.409e-17 | l_g/|F|^2 min 3.814e-15 | Q/l_g ['6.6731e-6', '0.6027', '0.60854'] | out-of-band frac of bottom 1.163e-11 | 749s
+MPB R=7 T=1.0 Nb=40 J=40 c=1.0 dps=100 theta=0.5 dim=39: Q/|F|^2 min 1.533e-14 | l_g/|F|^2 min 3.816e-15 | Q/l_g ['0.37162', '0.60853', '0.65201'] | out-of-band frac of bottom -3.935e-13 | 773s
+MPB R=7 T=1.0 Nb=40 J=40 c=1.0 dps=100 theta=0.9 dim=38: Q/|F|^2 min 1.537e-14 | l_g/|F|^2 min 3.856e-15 | Q/l_g ['0.42929', '0.65168', '0.66882'] | out-of-band frac of bottom -4.554e-13 | 786s
+MPB R=7 T=1.0 Nb=40 J=40 c=1.0 dps=100 theta=0.99 dim=37: Q/|F|^2 min 1.771e-14 | l_g/|F|^2 min 4.975e-15 | Q/l_g ['0.60854', '0.66851', '0.71095'] | out-of-band frac of bottom -4.776e-13 | 794s
+PEN R=7 T=1.0 Nb=40 mu=1e-02: bottom Q/l_g=0.00018994  out-of-band eps=6.855e-12  Q/|F|^2=1.653e-15 l_g/|F|^2=8.701e-12
+PEN R=7 T=1.0 Nb=40 mu=1e+00: bottom Q/l_g=4.7574  out-of-band eps=-4.821e-13  Q/|F|^2=1.815e-14 l_g/|F|^2=3.815e-15
+PEN R=7 T=1.0 Nb=40 mu=1e+02: bottom Q/l_g=4.7933  out-of-band eps=-4.821e-13  Q/|F|^2=1.828e-14 l_g/|F|^2=3.814e-15
+MPB R=8 T=0.8 Nb=40 J=40 c=1.0 dps=100 theta=0.0 dim=40: Q/|F|^2 min 7.692e-20 | l_g/|F|^2 min 3.689e-18 | Q/l_g ['1.5315e-7', '0.33363', '0.65463'] | out-of-band frac of bottom 5.284e-13 | 684s
+MPB R=8 T=0.8 Nb=40 J=40 c=1.0 dps=100 theta=0.5 dim=37: Q/|F|^2 min 7.216e-18 | l_g/|F|^2 min 5.87e-18 | Q/l_g ['0.20718', '0.65596', '0.71297'] | out-of-band frac of bottom -7.505e-14 | 735s
+MPB R=8 T=0.8 Nb=40 J=40 c=1.0 dps=100 theta=0.9 dim=35: Q/|F|^2 min 2.801e-17 | l_g/|F|^2 min 1.932e-17 | Q/l_g ['0.5919', '0.70839', '0.7307'] | out-of-band frac of bottom -7.505e-14 | 755s
+MPB R=8 T=0.8 Nb=40 J=40 c=1.0 dps=100 theta=0.99 dim=34: Q/|F|^2 min 3.509e-17 | l_g/|F|^2 min 2.271e-17 | Q/l_g ['0.60105', '0.70911', '0.78791'] | out-of-band frac of bottom -7.483e-14 | 771s
+PEN R=8 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=7.3097  out-of-band eps=-7.521e-14  Q/|F|^2=2.723e-17 l_g/|F|^2=3.725e-18
+PEN R=8 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=11.969  out-of-band eps=-7.524e-14  Q/|F|^2=4.416e-17 l_g/|F|^2=3.689e-18
+PEN R=8 T=0.8 Nb=40 mu=1e+02: bottom Q/l_g=12.04  out-of-band eps=-7.524e-14  Q/|F|^2=4.442e-17 l_g/|F|^2=3.69e-18
+MPB R=8 T=1.0 Nb=40 J=40 c=1.0 dps=110 theta=0.0 dim=40: Q/|F|^2 min 7.453e-20 | l_g/|F|^2 min 2.213e-18 | Q/l_g ['3.2341e-8', '0.39021', '0.65686'] | out-of-band frac of bottom 3.187e-12 | 804s
+MPB R=8 T=1.0 Nb=40 J=40 c=1.0 dps=110 theta=0.5 dim=40: Q/|F|^2 min 7.453e-20 | l_g/|F|^2 min 2.213e-18 | Q/l_g ['3.2341e-8', '0.39021', '0.65686'] | out-of-band frac of bottom 3.187e-12 | 809s
+MPB R=8 T=1.0 Nb=40 J=40 c=1.0 dps=110 theta=0.9 dim=38: Q/|F|^2 min 7.217e-18 | l_g/|F|^2 min 3.468e-18 | Q/l_g ['0.40445', '0.65795', '0.71036'] | out-of-band frac of bottom 1.170e-12 | 814s
+MPB R=8 T=1.0 Nb=40 J=40 c=1.0 dps=110 theta=0.99 dim=38: Q/|F|^2 min 7.217e-18 | l_g/|F|^2 min 3.468e-18 | Q/l_g ['0.40445', '0.65795', '0.71036'] | out-of-band frac of bottom 1.170e-12 | 818s
+PEN R=8 T=1.0 Nb=40 mu=1e-02: bottom Q/l_g=0.00029347  out-of-band eps=4.131e-11  Q/|F|^2=1.391e-14 l_g/|F|^2=4.738e-11
+PEN R=8 T=1.0 Nb=40 mu=1e+00: bottom Q/l_g=0.2117  out-of-band eps=8.531e-12  Q/|F|^2=9.209e-12 l_g/|F|^2=4.35e-11
+PEN R=8 T=1.0 Nb=40 mu=1e+02: bottom Q/l_g=0.64702  out-of-band eps=3.563e-12  Q/|F|^2=1.198e-8 l_g/|F|^2=1.852e-8
+MPB R=6 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.99 dim=32: Q/|F|^2 min 1.832e-11 | l_g/|F|^2 min 8.792e-12 | Q/l_g ['0.66284', '0.73851', '0.83049'] | out-of-band frac of bottom 4.788e-13 | 123s
+Bc in ball arithmetic: max radius 1.6318572876597257e-106  max |Bc_mp - Bc_double| 4.11448652926083e-13
+PEN R=6 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=0.10452  out-of-band eps=9.03e-11  Q/|F|^2=6.426e-12 l_g/|F|^2=6.148e-11
+PEN R=6 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=0.6004  out-of-band eps=3.557e-12  Q/|F|^2=6.05e-11 l_g/|F|^2=1.008e-10
+PEN R=6 T=0.8 Nb=40 mu=1e+02: bottom Q/l_g=0.66365  out-of-band eps=2.19e-14  Q/|F|^2=2.627e-10 l_g/|F|^2=3.958e-10
+MPB R=6 T=1.0 Nb=40 J=40 c=1.0 dps=90 theta=0.99 dim=36: Q/|F|^2 min 2.915e-11 | l_g/|F|^2 min 2.205e-11 | Q/l_g ['0.62441', '0.7059', '0.71237'] | out-of-band frac of bottom -4.525e-13 | 213s
+Bc in ball arithmetic: max radius 2.7127227204431225e-106  max |Bc_mp - Bc_double| 4.71511718558304e-13
+PEN R=6 T=1.0 Nb=40 mu=1e-02: bottom Q/l_g=0.0023626  out-of-band eps=2.709e-9  Q/|F|^2=8.046e-12 l_g/|F|^2=3.406e-9
+PEN R=6 T=1.0 Nb=40 mu=1e+00: bottom Q/l_g=0.28725  out-of-band eps=2.973e-12  Q/|F|^2=4.844e-12 l_g/|F|^2=1.686e-11
+PEN R=6 T=1.0 Nb=40 mu=1e+02: bottom Q/l_g=0.62429  out-of-band eps=3.469e-15  Q/|F|^2=1.009e-10 l_g/|F|^2=1.616e-10
+MPB R=7 T=0.8 Nb=40 J=40 c=1.0 dps=90 theta=0.99 dim=33: Q/|F|^2 min 1.638e-14 | l_g/|F|^2 min 4.086e-15 | Q/l_g ['0.65323', '0.74229', '0.82989'] | out-of-band frac of bottom 1.669e-13 | 192s
+Bc in ball arithmetic: max radius 1.980870992481141e-106  max |Bc_mp - Bc_double| 1.7841284005726266e-13
+PEN R=7 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=0.00011421  out-of-band eps=1.645e-12  Q/|F|^2=1.466e-16 l_g/|F|^2=1.283e-12
+PEN R=7 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=0.52241  out-of-band eps=8.019e-13  Q/|F|^2=5.26e-12 l_g/|F|^2=1.007e-11
+PEN R=7 T=0.8 Nb=40 mu=1e+02: bottom Q/l_g=0.65382  out-of-band eps=9.755e-15  Q/|F|^2=7.535e-11 l_g/|F|^2=1.152e-10
+MPB R=7 T=1.0 Nb=40 J=40 c=1.0 dps=100 theta=0.99 dim=37: Q/|F|^2 min 1.771e-14 | l_g/|F|^2 min 4.975e-15 | Q/l_g ['0.60854', '0.66851', '0.71095'] | out-of-band frac of bottom -4.776e-13 | 319s
+Bc in ball arithmetic: max radius 1.987478693414349e-116  max |Bc_mp - Bc_double| 5.933031843596837e-13
+PEN R=7 T=1.0 Nb=40 mu=1e-02: bottom Q/l_g=9.284e-5  out-of-band eps=1.357e-11  Q/|F|^2=1.504e-15 l_g/|F|^2=1.62e-11
+PEN R=7 T=1.0 Nb=40 mu=1e+00: bottom Q/l_g=0.23156  out-of-band eps=2.448e-13  Q/|F|^2=5.632e-13 l_g/|F|^2=2.432e-12
+PEN R=7 T=1.0 Nb=40 mu=1e+02: bottom Q/l_g=0.59244  out-of-band eps=7.844e-15  Q/|F|^2=4.319e-11 l_g/|F|^2=7.29e-11
+MPB R=8 T=0.8 Nb=40 J=40 c=1.0 dps=100 theta=0.99 dim=34: Q/|F|^2 min 3.509e-17 | l_g/|F|^2 min 2.271e-17 | Q/l_g ['0.60105', '0.70911', '0.78791'] | out-of-band frac of bottom -7.483e-14 | 254s
+Bc in ball arithmetic: max radius 1.2584772735713961e-116  max |Bc_mp - Bc_double| 1.0125233984581428e-13
+PEN R=8 T=0.8 Nb=40 mu=1e-02: bottom Q/l_g=0.00017051  out-of-band eps=1.088e-13  Q/|F|^2=1.588e-17 l_g/|F|^2=9.315e-14
+PEN R=8 T=0.8 Nb=40 mu=1e+00: bottom Q/l_g=0.33087  out-of-band eps=1.53e-17  Q/|F|^2=3.669e-17 l_g/|F|^2=1.109e-16
+PEN R=8 T=0.8 Nb=40 mu=1e+02: bottom Q/l_g=0.62769  out-of-band eps=9.846e-20  Q/|F|^2=1.29e-15 l_g/|F|^2=2.056e-15
+MPB R=8 T=1.0 Nb=40 J=40 c=1.0 dps=110 theta=0.99 dim=38: Q/|F|^2 min 7.217e-18 | l_g/|F|^2 min 3.468e-18 | Q/l_g ['0.40445', '0.65795', '0.71036'] | out-of-band frac of bottom 1.170e-12 | 416s
+Bc in ball arithmetic: max radius 1.1858849620805897e-126  max |Bc_mp - Bc_double| 1.1498579866042746e-12
+PEN R=8 T=1.0 Nb=40 mu=1e-02: bottom Q/l_g=0.00010292  out-of-band eps=1.463e-13  Q/|F|^2=1.775e-17 l_g/|F|^2=1.725e-13
+PEN R=8 T=1.0 Nb=40 mu=1e+00: bottom Q/l_g=0.21983  out-of-band eps=7.582e-18  Q/|F|^2=2.744e-17 l_g/|F|^2=1.248e-16
+PEN R=8 T=1.0 Nb=40 mu=1e+02: bottom Q/l_g=0.45115  out-of-band eps=2.669e-20  Q/|F|^2=4.867e-17 l_g/|F|^2=1.079e-16
+MPB R=8 T=1.0 Nb=40 J=40 c=1.0 dps=110 theta=0.99 dim=38: Q/|F|^2 min 7.217e-18 | l_g/|F|^2 min 3.468e-18 | Q/l_g ['0.40445', '0.65795', '0.71036'] | out-of-band frac of bottom 1.170e-12 | 427s
+Bc in ball arithmetic: max radius 1.088596610983819e-126  max |Bc_mp - Bc_double| 1.1498579866042746e-12
+PEN R=8 T=1.0 Nb=40 mu=1e+00: bottom Q/l_g=0.21983  out-of-band eps=7.582e-18  Q/|F|^2=2.744e-17 l_g/|F|^2=1.248e-16
+PEN R=8 T=1.0 Nb=40 mu=1e+02: bottom Q/l_g=0.45115  out-of-band eps=2.669e-20  Q/|F|^2=4.867e-17 l_g/|F|^2=1.079e-16
+Bc in ball arithmetic: max radius 5.1604762404597954e-86  max |Bc_mp - Bc_double| 4.887201754399939e-13
+PEN R=4 T=1.0 Nb=40 mu=1e+02: bottom Q/l_g=0.70681  out-of-band eps=3.369e-7  Q/|F|^2=0.006196 l_g/|F|^2=0.008766
+PEN R=4 T=1.0 Nb=40 mu=1e+04: bottom Q/l_g=0.72207  out-of-band eps=2.199e-8  Q/|F|^2=0.03538 l_g/|F|^2=0.049
+PEN R=4 T=1.0 Nb=40 mu=1e+06: bottom Q/l_g=0.73883  out-of-band eps=3.288e-12  Q/|F|^2=0.0005608 l_g/|F|^2=0.0007591
+Bc in ball arithmetic: max radius 4.3324328926978805e-86  max |Bc_mp - Bc_double| 3.477773624638303e-14
+PEN R=5 T=0.8 Nb=40 mu=1e+02: bottom Q/l_g=0.70528  out-of-band eps=7.604e-10  Q/|F|^2=5.187e-6 l_g/|F|^2=7.354e-6
+PEN R=5 T=0.8 Nb=40 mu=1e+04: bottom Q/l_g=0.77684  out-of-band eps=2.465e-12  Q/|F|^2=5.092e-6 l_g/|F|^2=6.555e-6
+PEN R=5 T=0.8 Nb=40 mu=1e+06: bottom Q/l_g=0.79849  out-of-band eps=2.579e-13  Q/|F|^2=3.503e-5 l_g/|F|^2=4.386e-5
+Bc in ball arithmetic: max radius 2.1985044245774154e-106  max |Bc_mp - Bc_double| 4.3165471197426086e-13
+PEN R=5 T=1.0 Nb=40 mu=1e+02: bottom Q/l_g=0.6627  out-of-band eps=5.066e-11  Q/|F|^2=4.852e-7 l_g/|F|^2=7.322e-7
+PEN R=5 T=1.0 Nb=40 mu=1e+04: bottom Q/l_g=0.69908  out-of-band eps=1.181e-11  Q/|F|^2=2.21e-5 l_g/|F|^2=3.162e-5
+PEN R=5 T=1.0 Nb=40 mu=1e+06: bottom Q/l_g=0.71872  out-of-band eps=2.411e-14  Q/|F|^2=3.987e-6 l_g/|F|^2=5.548e-6
+Bc in ball arithmetic: max radius 1.6318572876597257e-106  max |Bc_mp - Bc_double| 4.11448652926083e-13
+PEN R=6 T=0.8 Nb=40 mu=1e+02: bottom Q/l_g=0.66365  out-of-band eps=2.19e-14  Q/|F|^2=2.627e-10 l_g/|F|^2=3.958e-10
+PEN R=6 T=0.8 Nb=40 mu=1e+04: bottom Q/l_g=0.69847  out-of-band eps=1.378e-15  Q/|F|^2=1.468e-9 l_g/|F|^2=2.102e-9
+PEN R=6 T=0.8 Nb=40 mu=1e+06: bottom Q/l_g=0.76414  out-of-band eps=1.769e-16  Q/|F|^2=6.487e-9 l_g/|F|^2=8.489e-9
+Bc in ball arithmetic: max radius 2.7127227204431225e-106  max |Bc_mp - Bc_double| 4.71511718558304e-13
+PEN R=6 T=1.0 Nb=40 mu=1e+02: bottom Q/l_g=0.62429  out-of-band eps=3.469e-15  Q/|F|^2=1.009e-10 l_g/|F|^2=1.616e-10
+PEN R=6 T=1.0 Nb=40 mu=1e+04: bottom Q/l_g=0.64216  out-of-band eps=3.807e-16  Q/|F|^2=3.061e-10 l_g/|F|^2=4.766e-10
+PEN R=6 T=1.0 Nb=40 mu=1e+06: bottom Q/l_g=0.67399  out-of-band eps=9.599e-18  Q/|F|^2=1.809e-9 l_g/|F|^2=2.683e-9
+Bc in ball arithmetic: max radius 1.980870992481141e-106  max |Bc_mp - Bc_double| 1.7841284005726266e-13
+PEN R=7 T=0.8 Nb=40 mu=1e+02: bottom Q/l_g=0.65382  out-of-band eps=9.755e-15  Q/|F|^2=7.535e-11 l_g/|F|^2=1.152e-10
+PEN R=7 T=0.8 Nb=40 mu=1e+04: bottom Q/l_g=0.69898  out-of-band eps=3.384e-17  Q/|F|^2=3.603e-11 l_g/|F|^2=5.155e-11
+PEN R=7 T=0.8 Nb=40 mu=1e+06: bottom Q/l_g=0.74617  out-of-band eps=2.748e-20  Q/|F|^2=1.817e-12 l_g/|F|^2=2.435e-12
+Bc in ball arithmetic: max radius 1.987478693414349e-116  max |Bc_mp - Bc_double| 5.933031843596837e-13
+PEN R=7 T=1.0 Nb=40 mu=1e+02: bottom Q/l_g=0.59244  out-of-band eps=7.844e-15  Q/|F|^2=4.319e-11 l_g/|F|^2=7.29e-11
+PEN R=7 T=1.0 Nb=40 mu=1e+04: bottom Q/l_g=0.63416  out-of-band eps=2.332e-17  Q/|F|^2=1.351e-11 l_g/|F|^2=2.131e-11
+PEN R=7 T=1.0 Nb=40 mu=1e+06: bottom Q/l_g=0.67222  out-of-band eps=1.055e-19  Q/|F|^2=2.373e-11 l_g/|F|^2=3.53e-11
+Bc in ball arithmetic: max radius 1.2584772735713961e-116  max |Bc_mp - Bc_double| 1.0125233984581428e-13
+PEN R=8 T=0.8 Nb=40 mu=1e+02: bottom Q/l_g=0.62769  out-of-band eps=9.846e-20  Q/|F|^2=1.29e-15 l_g/|F|^2=2.056e-15
+PEN R=8 T=0.8 Nb=40 mu=1e+04: bottom Q/l_g=0.64787  out-of-band eps=9.296e-21  Q/|F|^2=7.736e-15 l_g/|F|^2=1.194e-14
+PEN R=8 T=0.8 Nb=40 mu=1e+06: bottom Q/l_g=0.68708  out-of-band eps=5.481e-22  Q/|F|^2=5.502e-14 l_g/|F|^2=8.008e-14
+Bc in ball arithmetic: max radius 1.1858849620805897e-126  max |Bc_mp - Bc_double| 1.1498579866042746e-12
+PEN R=8 T=1.0 Nb=40 mu=1e+02: bottom Q/l_g=0.45115  out-of-band eps=2.669e-20  Q/|F|^2=4.867e-17 l_g/|F|^2=1.079e-16
+PEN R=8 T=1.0 Nb=40 mu=1e+04: bottom Q/l_g=0.54324  out-of-band eps=1.343e-21  Q/|F|^2=4.514e-16 l_g/|F|^2=8.31e-16
+PEN R=8 T=1.0 Nb=40 mu=1e+06: bottom Q/l_g=0.62702  out-of-band eps=1.223e-22  Q/|F|^2=5.759e-15 l_g/|F|^2=9.185e-15

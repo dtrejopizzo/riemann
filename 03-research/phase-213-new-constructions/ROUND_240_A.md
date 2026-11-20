@@ -1,0 +1,16 @@
+# Ley de transición para el ajuste polinómico de un conteo primo compacto
+
+Se mantienen A, D y el grado m de 239, cambiando una sola vez el núcleo fijo. Sean a_j=1/[20j(1+log j)²], W la convolución de las uniformes en [0,a_j], y H su transformada ∫W(v)exp(sv)dv. Para t=log X, 0<h≤1 y log(1/h)/(log t log log t)→λ finito, λ≥0, el resultado es
+
+    lim log(1+D(t,h))/t = 2 max(B−λ,0),
+    B=sup_ρ(Re ρ−1/2).
+
+**Núcleo.** La suma de longitudes es ≤1/10 por integración. La prueba por derivación de cajas de 239 da suavidad, y el producto H no se anula para Re s>0. Para |τ| grande los primeros J=floor(c|τ|/log²|τ|) factores tienen módulo ≤1/2 uniformemente en 0≤Re s≤1: tomar c pequeño para que a_J|τ|≥6. Los demás factores en producto cuestan ≤exp(1/10). Así |H(s)|≤C exp(−c'|τ|/log²|τ|).
+
+**Cota superior.** La fórmula explícita suavizada de 239 da A(u)=−Σ_ρ H(ρ)exp(ρu)+O(exp(u/2)poly(u)) para u grande, contando multiplicidad. El error incluye las potencias primas. Sea r=m+1. Por conteo unitario de ceros y el decaimiento anterior, Σ |H(ρ)| |ρ|^r≤exp(O(r log(r+2))) (basta la mayorante exp(−c√|τ|)). Usar el Taylor real de grado m de la suma espectral con su signo en u=t. La conjugación garantiza coeficientes reales. El resto en [t,t+h] cuesta a lo sumo exp((1/2+B)t+O(r log(r+2))) h^r. Aquí r log r=o(t) y r log(1/h)=λt+o(t). Integrar el cuadrado y añadir el error de potencias da el limsup anunciado.
+
+**Cota inferior.** Basta λ<B. Fijar un cero ρ₀ con β₀>1/2+λ y escoger 1/2<σ<β₀−λ. Hasta altura G=t(log t)³, Ingham como en 230 da M≤t^(q+o(1)) otros ceros distintos con β≥σ, q=3(1−σ)/(2−σ)<1. Por cada w=ρ−ρ₀ de esta lista tomar la medida de masa uno (δ_d−exp(wd)δ₀)/(1−exp(wd)), d=h/[10(G+1)(M+1)]. Su transformada exponencial se anula en w. Las distancias |w| están uniformemente separadas de cero por discreción alrededor del cero fijo; |wd|≤1/2 para t grande. El logaritmo de la variación del producto por convolución es O(M(log(G+2)+log(M+2)+log(1/h)+1))=o(t).
+
+Añadir r factores de la misma fórmula con w=−ρ₀ y d=h/(4r). Imponen un cero de multiplicidad r y cuestan en variación a lo sumo exp(λt+o(t)). Convolucionar con la uniforme de [0,h/4]. La densidad compleja f resultante tiene soporte en [0,h], masa uno y norma L²≤exp(λt+o(t)) pues log(1/h)=o(t). Al integrar (A(t+v)−P(v)) exp(−ρ₀(t+v))f(v)dv, todo polinomio de grado ≤m desaparece por multiplicidad. El cero elegido aporta exactamente −mult(ρ₀)H(ρ₀). Los demás ceros hasta G con β≥σ desaparecen. Los de β<σ y las potencias primas cuestan en conjunto ≤exp((σ−β₀+λ)t+o(t)); para |Im ρ|>G la suma absoluta de los pesos es ≤exp(−c G/log²G), que absorbe cualquier exp(Ct). Así el módulo de la integral queda separado de cero. Cauchy–Schwarz implica D≥exp((2β₀−1−2λ)t−o(t)). Tomar supremo en β₀ concluye. Para λ≥B la cota inferior para log(1+D) es inmediata.
+
+**Obligación aritmética.** Para este núcleo, una subsucesión con D=exp(o(t)) o menor a un λ fijo implica B≤λ. Basta lograr tal control para λ positivos arbitrariamente pequeños, incluso con subsucesiones diferentes. La prueba espectral calcula el coste exacto del ajuste pero no produce esas subsucesiones. Frente a 239 cambian el multiplicador y la eliminación finita de ceros, conservando la localidad en primos.

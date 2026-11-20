@@ -28,17 +28,17 @@ The hypothesis that peak amplification A_{k,F} = M_kk / C_k is dominantly govern
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>amplification_regression_data.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Long-format table of 83 (class, k) entries with C_k, M_kk, A=M_kk/C_k, log A, class invariants (degree d, conductor q, log d, log q), GRH status, and OLS residual from the log(A) ~ log(d)+log(q)+k fit. Built by merging the Ck_Mkk_diag_results arrays with class invariants taken from the v6 binding context.</artifact-description>
 </artifact>
 <artifact>
 <file-name>amplification_mean_residuals.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Per-class mean residual of log(A_{k,F}) from the (log d, log q, k) OLS model, with GRH status. 11 rows, used for the GRH-true vs GRH-false comparison (Welch t-test p=0.29).</artifact-description>
 </artifact>
 <artifact>
 <file-name>amplification_regression_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) predicted vs observed log(A_{k,F}) colored by GRH status with annotated R²=0.112 and coefficient p-values; (B) bar chart of per-class mean residuals colored by GRH status with the Welch t-test p-value annotated.</artifact-description>
 </artifact>
 </artifacts>

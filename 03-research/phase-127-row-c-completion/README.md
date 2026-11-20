@@ -1,7 +1,7 @@
 # Phase 127 — Row C completion
 
 Status: **ROW C WEIL-STRENGTH-COMPLETE**, with no analytic
-black box.  Deliverable: [Paper 45](../../04-papers/45-row-c-explicit-formula/main.md).
+black box.  Deliverable: [Paper 45](../../04-papers/45-row-c-explicit-formula/main.tex).
 
 | note | content |
 |---|---|
@@ -12,5 +12,5 @@ black box.  Deliverable: [Paper 45](../../04-papers/45-row-c-explicit-formula/ma
 | [C127.005](C127_005_LEDGER.md) | clause ledger, reclassified items, what D inherits |
 | [C127.006](C127_006_TWO_INVARIANTS_RECONCILED.md) | the two invariants reconciled: different domains, and why Thm. 5.4 turns a product into a sum |
 
-Rows A and B: [Paper 43](../../04-papers/43-row-a-torsion-theory/main.md) (phase 125),
-[Paper 44](../../04-papers/44-row-b-arithmetic-family/main.md) (phase 126).
+Rows A and B: [Paper 43](../../04-papers/43-row-a-torsion-theory/main.tex) (phase 125),
+[Paper 44](../../04-papers/44-row-b-arithmetic-family/main.tex) (phase 126).

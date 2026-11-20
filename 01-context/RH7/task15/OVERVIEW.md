@@ -28,12 +28,12 @@ The two control points sit in very different regimes. The optimal point has a st
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>detectability_summary.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Tabulated detectability conditions for the two common parameter points. Columns: point, T₀, σ, J, m, δ, c_prefactor, signal=c·δ², X_min (log‑log‑interpolated crossover where η(X)=signal), and η at X=10⁶. Built by combining the m=20 prefactor from forced_negativity_surface.csv (J=10 by linear interpolation between J=8 and J=12) with the η(X) fine scan at H=2500 from eta_residual_law.json.</artifact-description>
 </artifact>
 <artifact>
 <file-name>detectability_phase_diagram.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two‑panel detectability phase diagram. Panel A (optimal, T₀=46.13, σ=1, J=10, m=20): log‑log plot of noise floor η(X) with three horizontal signal levels c·δ² for δ∈{10⁻⁴,10⁻³,10⁻²} and an annotated X_min≈1.35×10⁵ for δ=10⁻³. Panel B (L_DH, T₀=85.7, σ=2, J=10, m=20): same overlay showing that η≈5×10⁻¹⁰ is below all three signal levels for every X tested.</artifact-description>
 </artifact>
 </artifacts>

@@ -26,12 +26,12 @@ This audit confirms the rationale for rule R13: the ad-hoc block size 2π/log N 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>gev_block_size_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON summary of the Step 0.5 GEV block-size audit on |ζ(½+it)| over t∈[10⁴,10⁵] with N=10⁶ Riemann–Siegel samples. Contains for each approach (A: b=2π/log N; B: b=2π/log T at T_geom, T_lower, T_upper) the block size, samples-per-block, number of blocks, MLE GEV (loc, scale, ξ), and 95 % non-parametric bootstrap CIs for ξ (n_boot=100). Also records the decision flags showing that ξ_B lies outside ξ_A's CI and Δξ ≈ −0.0124.</artifact-description>
 </artifact>
 <artifact>
 <file-name>gev_block_size_comparison.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Single-panel summary figure showing the GEV shape parameter ξ with 95 % bootstrap error bars for the two block-size choices, with the A-band shaded; the B point clearly falls below A's CI band, visually confirming the refutation of the hypothesis.</artifact-description>
 </artifact>
 </artifacts>

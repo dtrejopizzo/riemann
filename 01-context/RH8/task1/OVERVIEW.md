@@ -25,27 +25,27 @@ The central challenge of the Localized Weil form is the severe coupling between 
 <artifacts>
 <artifact>
 <file-name>lambda_min_aggregate_sigma1.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>The original CSV data for σ=1, enriched with local Riemann-von Mangoldt density estimations (`rho_RvM`), basis-completion trace errors (`H1_rel_err`), and a strict empirical reliability threshold column (`reliable`) indicating where prime-cutoff artifacts dominate.</artifact-description>
 </artifact>
 <artifact>
 <file-name>M_zeros_grid_sigma2.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A newly generated dataset mapping `tr(M_zeros)` and the corresponding local RvM density errors across a wider σ=2 localization, evaluating J=4 to 28 for ζ, L(χ₄ mod 5), and the localized window of L(Δ,s).</artifact-description>
 </artifact>
 <artifact>
 <file-name>verdict_table.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A summary evaluation table determining the verdict for H1 and H2 for each of the three GRH controls, integrating the supremum of trace identity errors against numerical floor limits.</artifact-description>
 </artifact>
 <artifact>
 <file-name>capstone_figure.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A high-resolution, two-panel diagnostic plot. Panel A shows the 3D surface mapping of log10|λ_min| over (T0, J) for ζ and L(χ₄) at σ=1, marking the precise boundary of prime-truncation artifacts. Panel B displays the relative deviation of tr(M_zeros)/J from the local RvM density ρ(T0) for all three controls at σ=2, demonstrating convergence.</artifact-description>
 </artifact>
 <artifact>
 <file-name>bottleneck_ledger_v2.md</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>The finalized markdown table summarizing the 7 core empirical regularities and the precise mathematical lemmas required to formalize them into rigorous proofs, updated with the consolidated capstone verdicts. (Written to a new _v2 file due to source file permissions.)</artifact-description>
 </artifact>
 </artifacts>

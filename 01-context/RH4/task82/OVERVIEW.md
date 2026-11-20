@@ -30,7 +30,7 @@ The one-class anomaly-detection paradigm meaningfully outperforms the binary dis
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ocsvm_grh_violator_detection.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: ROC curves for the two LOFO folds of the One-Class SVM (trained on GRH-true peaks with ν=0.1, γ='scale', features log|S_k|_norm for k=1..6). Panel B: Boxplots of OCSVM anomaly scores (= −decision_function) per class, with GRH-true classes (green) clearly below the decision boundary at 0 and GRH-violator classes (red) above it.</artifact-description>
 </artifact>
 </artifacts>

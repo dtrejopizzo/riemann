@@ -46,13 +46,13 @@ The dataset metadata mentions that "r becomes negative at high peaks for N≥10�
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>convergence_summary.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>
 Summary table of mean and standard deviation of the inter-class energy ratio r across truncation parameters N ∈ {10⁴, 10⁵, 10⁶, 10⁷} for zeta and Liouville functions. Contains columns: N, Zeta_mean_r, Zeta_std_r, Liouville_mean_r, Liouville_std_r, n_peaks. This table enables direct comparison of convergence behavior and is the basis for testing the hypothesis that |Δr(10⁶→10⁷)| < |Δr(10⁵→10⁶)|. Generated from 50 Q4 peaks at N=10⁴, 10 peaks at N=10⁵, and 5 peaks at N=10⁶ and N=10⁷.
 </artifact-description>
 </artifact> <artifact>
 <file-name>N10^7_detailed_results.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>
 Detailed peak-by-peak results for N=10⁷ computations. Contains columns: Function (Zeta/Liouville), N, t_value (refined peak location in t ∈ [10⁷, 2×10⁷]), peak_height (|D_F| at refined t), r_value (canonical inter-class energy ratio). This dataset provides the raw data for the N=10⁷ analysis including the 5 highest peaks for each function, enabling verification of mean/std calculations and future analysis of peak height vs r correlations. Computed using Kahan summation with k_max=24 ω-classes.
 </artifact-description>

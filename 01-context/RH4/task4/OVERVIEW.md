@@ -32,17 +32,17 @@ Under strict class-held-out evaluation, raw log|S_k| magnitudes are not just uni
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>peaks_features_F1_F12_normalized_full_with_spectral.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Augmented version of the r25 strict-protocol feature table (2200 rows × 33 columns) with two additional columns, pc1_variance_fraction and eigenvalue_entropy, computed per class from the eigenvalue spectrum of the class-averaged matrix M_jk = E[|S_j||S_k|] (a magnitude proxy for the canonical cross-term matrix, since complex S_k values were not available in the source CSV).</artifact-description>
 </artifact>
 <artifact>
 <file-name>strict_protocol_spectral_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON summary of held-out ROC-AUC and class-stratified bootstrap 95 % CIs for the three logistic-regression feature sets (log|S_k| only, spectral only, combined) under the strict r25 protocol (Train: F1, F4, F9 → Test: F2, F6, F7, F10, F11, F12), plus random-forest sanity-check AUCs.</artifact-description>
 </artifact>
 <artifact>
 <file-name>spectral_vs_logS_strict_protocol.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) per-class scatter of pc1_variance_fraction vs eigenvalue_entropy coloured by GRH status; (B) bar chart of held-out AUC with class-bootstrap 95 % CIs for the three feature sets.</artifact-description>
 </artifact>
 </artifacts>

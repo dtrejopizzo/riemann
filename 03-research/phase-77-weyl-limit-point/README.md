@@ -444,10 +444,8 @@ The phase ends when either:
 (c) the phase reaches ~150 documents without closure, in which case it
     stops, records its sharpest endpoint, and continues in Phase 78.
 
-## Nota personal (disciplina de fase)
+## Phase discipline
 
-Regla vigente desde la phase-74: al llegar a ~100-150 documentos, o cuando
-aparezca algo que amerite empezar de cero, se abre fase nueva.  La 76 se
-cerró en 67 documentos precisamente porque empezaba a reformular en vez de
-reducir; esta fase hereda ese criterio.  Aunque la sensacion es que estamos
-cerca, la regla aplica igual.
+Rule in force since phase 74: after roughly 100–150 documents, or when something warrants starting
+from scratch, a new phase is opened. Phase 76 was closed at 67 documents precisely because it had
+begun to reformulate instead of reduce; this phase inherits that criterion.

@@ -36,12 +36,12 @@ of the Hermite-Gauss Fourier transform. Multiplied against the elementary PNT de
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>frontC_theory_vs_empirical.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Numerical comparison of η_theory(X) versus η_empirical(X) at (T₀=46.13, σ=1, J=10, H=2500). Contains the X grid, empirical noise floor values, theoretical bound values computed via the closed-form Hermite-Gauss Fourier transform × PNT-density integral, both stretched-exponential fits, regression statistics, and the explicit formula. Produced by deriving the closed-form g_ij(u) using generalized Laguerre polynomials, then integrating exp(u/2)·||g(u)||_op from log X to ∞.</artifact-description>
 </artifact>
 <artifact>
 <file-name>frontC_eta_theory_vs_empirical.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final log-log figure overlaying empirical noise floor points (blue), the first-principles theoretical truncation bound (red solid), the constant-shifted theoretical bound (dashed red), and the empirical stretched-exponential fit (green dotted). Shows seven orders of magnitude of matching decay and quantifies the Front C verdict.</artifact-description>
 </artifact>
 </artifacts>

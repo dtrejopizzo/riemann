@@ -533,7 +533,7 @@ Gate 1 has a complete answer:
 \[
  \boxed{
  \text{the term }2M_\mu K\text{ cancels, but only as part of the
- larger cancellation }M_\mu K_-=0.}                         \tag{11.1}
+ larger cancellation }-M_\mu K_-+M_\mu K_-=0.}                         \tag{11.1}
 \]
 
 In particular, no `M_mu K2=W` remains to combine as an independent

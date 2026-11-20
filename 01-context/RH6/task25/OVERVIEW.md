@@ -49,17 +49,17 @@ The main scientific outcome is that the canonical Davenport–Heilbronn function
 <artifacts>
 <artifact>
 <file-name>ldh_def.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Python module containing the verified Davenport–Heilbronn L-function definition, the mod-5 character lists, and helper functions L_DH, theta_DH, and Z_DH. It was created directly in the workspace after verifying the functional equation and literature-known zeros.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_worker.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Python worker module used for multiprocessing-based chunked zero scanning and refinement. It evaluates Z_DH on a grid, refines sign-change brackets to dps=50 roots, and writes periodic checkpoint files for recovery.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_chunks/</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Directory of checkpoint pickle files produced during the parallel zero-finding run. Each chunk file stores partial or complete refined zeros for a specific t-interval and basic progress metadata such as bracket count and scan extent.</artifact-description>
 </artifact>
 </artifacts>

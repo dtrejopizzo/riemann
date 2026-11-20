@@ -29,22 +29,22 @@ The findings corroborate that the localized Weil explicit formula perfectly sati
 <artifacts>
 <artifact>
 <file-name>lambda_min_LDelta_sweep.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle dictionary containing the exact cell-by-cell engine trace identities (trMz, trArith, λ_min, residuals) across the full parameter grid: T0={30, 46.13, 60, 85.7, 120} × σ={0.5, 1, 2} × J={4..28}. This is the raw validated numerical data affirming the hypothesis.</artifact-description>
 </artifact>
 <artifact>
 <file-name>LDelta_zeros_extended.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle dictionary housing 98 verified zeroes of the L(Δ,s) function in analytic normalization on the critical line, ranging from T=9.222 to T=139.284. All zeroes were verified to `|Λ_an| < 10⁻³⁰` via multiprecision Hecke integration.</artifact-description>
 </artifact>
 <artifact>
 <file-name>LDelta_H1_final_results.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickled dictionary containing the final processed uniformity summary (λ_∞ estimates and supremum deviation values) and a pandas-ready sweep table representing the compiled conclusions of the experiment.</artifact-description>
 </artifact>
 <artifact>
 <file-name>LDelta_lambda_min_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A two-panel plot summarizing the minimum eigenvalue analysis. Panel A demonstrates uniform convergence to the positive numerical floor for σ=2. Panel B highlights the severe spurious negativity explosion for narrow localizations (σ ≤ 1) driven by the prime-cutoff artifact.</artifact-description>
 </artifact>
 </artifacts>

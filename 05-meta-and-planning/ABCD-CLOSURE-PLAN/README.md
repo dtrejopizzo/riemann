@@ -28,7 +28,7 @@ open, and how the record was kept consistent. None of them proves a new theorem 
 
 ## Related folders
 
-- [../ROUTES-TRIED-INDEX/](../ROUTES-TRIED-INDEX/) — index of routes already tried.
+- [../ROUTES-MASTER-INDEX.md](../ROUTES-MASTER-INDEX.md) — single master index of everything tried (replaces the former ROUTES-TRIED-INDEX folder).
 - [../../03-research/phase-162-row-d-first-contact-closure/grid/](../../03-research/phase-162-row-d-first-contact-closure/grid/) — master grid for row D.
 - [../../04-papers/](../../04-papers/) — papers integrating the results (Paper 47 for row D).
 - [../README.md](../README.md) — overview of meta and planning.

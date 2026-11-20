@@ -38,12 +38,12 @@ The result is a clean negative test of the proposed inverse-bridge mechanism. Th
 <artifacts>
 <artifact>
 <file-name>peaks_Sk_F_gamma_family.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the constructed five-function family F(γ)=L(s,χ₃)+c(γ)L(s,χ₅), the solved coefficients c(γ), the 200 refined peak locations in t∈[10^4,2·10^4], the corresponding peak amplitudes, and the complex ω-stratified sums S_k(t) for k=0..7 at N=10^6. It was generated directly from the definitions using mpmath for coefficient solving, a sieve for ω(n), and finufft for Dirichlet polynomial evaluation.</artifact-description>
 </artifact>
 <artifact>
 <file-name>demod_spectrum_P23.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing dense γ′ grids and the demodulated cross-spectrum P_23(γ′)=E[S₂(t)conj(S₃(t))e^{-iγ′t}] for each constructed function with γ∈{7,20,50,80,100}. It was produced from the peak-level S_k data stored in the companion archive and used for the quantitative resonance tests reported here.</artifact-description>
 </artifact>
 </artifacts>

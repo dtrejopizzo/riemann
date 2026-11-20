@@ -24,7 +24,7 @@ The results demonstrate that the Weil quadratic form works precisely as theoreti
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_augmented_EF_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A JSON dictionary containing all eigenvalues, power-law fits (alpha), and intermediate baseline/signal measurements for the GRH-conforming and Anomaly cases at J={4,8,12,16,20} with σ=2.0 and the fully augmented M_arith term.</artifact-description>
 </artifact>
 </artifacts>

@@ -23,27 +23,27 @@ The hypothesis was only partially supported. The new instantaneous spectral feat
 <artifacts>
 <artifact>
 <file-name>Sk_complex_all_2200peaks.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing reconstructed complex ω-stratified sums S_k(t) for all 2200 peaks in the main CSV across function classes F1, F2, F4, F5p, F5m, F6, F7, F9, F10, F11, and F12, along with their associated peak t-values. Generated from locally reconstructed or PARI-derived coefficients and Numba-evaluated partial sums up to N=10^6.</artifact-description>
 </artifact>
 <artifact>
 <file-name>instantaneous_spectral_features.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Per-peak table of the new instantaneous spectral features `pc1_instantaneous` and `H_instantaneous` derived from eigenspectra of m_{jk}(t)=Re(S_j(t)conj(S_k(t))). Computed from the reconstructed complex S_k arrays for all 2200 peaks.</artifact-description>
 </artifact>
 <artifact>
 <file-name>peaks_features_F1_F12_with_instantaneous_spectral.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Augmented version of the primary 2200-row feature table with the newly derived instantaneous spectral features merged in by class and peak index. Created by joining the original CSV with the reconstructed per-peak eigenspectrum summaries.</artifact-description>
 </artifact>
 <artifact>
 <file-name>coeffs_F9_lambda.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy array of normalized Ramanujan Delta coefficients λ_n=a_n/n^(11/2) for n=1..10^6, generated from scratch with cypari2/PARI `mfcoefs`. Used to reconstruct complex S_k values for class F9.</artifact-description>
 </artifact>
 <artifact>
 <file-name>coeffs_F10_lambda.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy array of normalized coefficients λ_n=a_n/sqrt(n) for the level-11 weight-2 newform used as class F10, generated from scratch with cypari2/PARI `mfcoefs` up to n=10^6. Used to reconstruct complex S_k values for class F10.</artifact-description>
 </artifact>
 </artifacts>

@@ -38,17 +38,17 @@ The completed ζ result strongly supports the core hypothesis at least for one f
 <artifacts>
 <artifact>
 <file-name>cache/zeta_zeros_T150.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle file containing the positive ζ zeros generated with `mpmath.zetazero` up to T=150 during this run. The values were serialized as strings to preserve precision. This is a partial cache, not the requested 5,000-zero final artifact.</artifact-description>
 </artifact>
 <artifact>
 <file-name>cache/Lchi5_zeros_T150.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle file containing the positive zeros found for the primitive quartic Dirichlet L-function mod 5 up to T=150. The zeros were obtained by scanning a constructed Hardy-type Z-function and refining sign-change brackets. This is a partial cache, not the requested 5,000-zero final artifact.</artifact-description>
 </artifact>
 <artifact>
 <file-name>cache/LDelta_zeros_partial.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle file containing a partially refined list of analytically normalized Ramanujan Δ L-function zeros obtained during exploratory critical-line root-finding. The file is explicitly incomplete and should not be treated as a validated final zero list. It is included only because it was actually produced and cached to disk.</artifact-description>
 </artifact>
 </artifacts>

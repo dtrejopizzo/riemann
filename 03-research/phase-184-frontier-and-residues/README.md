@@ -1,8 +1,8 @@
 # Phase 184 — Frontier and live residues
 
-Goal: continue without stopping until a closure of D, deciding each
+Goal: work toward a closure of D, deciding each
 round from the corpus (grid R162_2300 §3 walls, §4 falsifiers, §7 S1–S12,
-NO-GO-LIST). Rule: ≤5 agents per round; every closure goes through audit
+NO-GO-LIST). Rule: every closure goes through audit
 before being recorded.
 
 ## Round 1 (R184_001–004)

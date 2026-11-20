@@ -47,12 +47,12 @@ The central scientific finding is that the proposed correction is substantively 
 <artifacts>
 <artifact>
 <file-name>_zeros_v2.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>New Python module implementing a corrected Ramanujan Δ zero finder. It replaces the fixed-cutoff quadrature with an incomplete-gamma series equivalent to the symmetric integral representation, includes adaptive precision, and retains the original module’s other control-function routines by re-exporting them.</artifact-description>
 </artifact>
 <artifact>
 <file-name>L_Delta_zeros_200_reliable.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Checkpointed pickle file for the Ramanujan Δ zero list. During this run it was initialized with the prior reliable 50-zero artifact and extended at least through zero #55 before runtime expiration, but it does not contain a confirmed definitive 200-zero list from this run.</artifact-description>
 </artifact>
 <artifact>

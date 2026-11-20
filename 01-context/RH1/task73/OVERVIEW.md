@@ -42,7 +42,7 @@ This analysis provides strong validation that the composite-driven phase non-uni
 <artifact-description>Complete set of Davenport-Heilbronn coefficients a_n = ((1-iκ)/2)χ(n) + ((1+iκ)/2)χ̄(n) for n = 1 to 10^6, where χ is the primitive complex character modulo 5 and κ ≈ 0.3717. Contains columns: n, a_real, a_imag. Essential for computing individual term phases in partial sums.</artifact-description>
 </artifact> <artifact>
 <file-name>phase_uniformity_off_line_zeros.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Complete numerical results of Rayleigh uniformity tests for L_DH at off-line zero locations t≈114.16 and t≈166.48. For each location, contains: target t, actual t, off-line zero σ, partial sum magnitude, and for both all-terms and primes-only: n_terms, mean resultant length R, z-statistic, p-value, uniformity rejection status, mean vector components, and signature detection. Generated using scipy.stats Rayleigh test with α=0.05.</artifact-description>
 </artifact>
 </artifacts>

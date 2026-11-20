@@ -23,12 +23,12 @@ The unified range-matched recomputation reproduces the qualitative claim of the 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>class_spectral_features_unified.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Class-level spectral features for the 11 functions in the unified range-matched dataset. Columns: function, GRH_true, pc1_complex, H_complex. Computed by forming the 8×8 Hermitian matrix M_jk = E_p[S_j conj(S_k)] over the 200 highest-amplitude peaks per class, taking eigenvalues, and computing pc1_complex = λ_max/Σλ and H_complex = −Σ p_i log p_i with p_i = λ_i/Σλ_j. Serves as the validated, range-matched ground-truth spectral map for downstream modeling.</artifact-description>
 </artifact>
 <artifact>
 <file-name>class_spectral_map_unified.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) scatter of H_complex vs pc1_complex with one labeled point per function class, color-coded by GRH status, and the H_complex separating threshold at 0.383; (B) ranked bar chart of H_complex showing perfect monotonic separation of GRH-true (blue) from GRH-false (red) classes in-sample.</artifact-description>
 </artifact>
 </artifacts>

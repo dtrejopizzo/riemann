@@ -36,17 +36,17 @@ The central implication is that the proposed slope-based signature is not robust
 <artifacts>
 <artifact>
 <file-name>omega_class_moments_lchi.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Newly computed 4-point ω-class second-moment table for L(χ₄ mod 5) at N = 10^4, 5×10^4, 10^5, and 10^6. Generated with a validated `finufft.nufft1d3` implementation of the same t-grid integration pipeline used for the existing summary CSV.</artifact-description>
 </artifact>
 <artifact>
 <file-name>omega_class_moments_N1e6_with_lchi.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Extended version of the provided `omega_class_moments_N1e6.csv` including the newly generated L(χ₄ mod 5) rows. Useful as a unified input table for future cross-function comparisons.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ancova_lchi_vs_ldh_summary.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Tabular ANCOVA summary for L(χ₄ mod 5) vs L_DH, including fitted slopes, slope differences, interaction p-values, and R² values for ω-classes 1 through 4, along with side-by-side prior control comparisons.</artifact-description>
 </artifact>
 </artifacts>

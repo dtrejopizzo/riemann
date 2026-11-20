@@ -1,0 +1,67 @@
+{
+  "status": "NUMERICAL_ONLY",
+  "interval_enclosure": false,
+  "scope": "one enrichment direction; no positivity certificate",
+  "records": [
+    {
+      "parity": "even",
+      "order": 96,
+      "pieces": 6,
+      "nodes": 576,
+      "seed_norm_squared": 0.00026787194906848215,
+      "source_norm_squared": 0.006723014152458376,
+      "d": 0.09821955429541,
+      "b_norm": 0.6451519649064608,
+      "gain_trace": 4.237659810294192,
+      "input_low_orthogonality": 4.2571781967062616e-16,
+      "output_low_orthogonality": 1.7531266136872538e-15,
+      "input_moment": -1.5831257542419687e-17,
+      "output_moment": -2.9815559743351372e-18
+    },
+    {
+      "parity": "odd",
+      "order": 96,
+      "pieces": 6,
+      "nodes": 576,
+      "seed_norm_squared": 0.0002792899141537155,
+      "source_norm_squared": 0.0068599855962094385,
+      "d": 0.09733217908016255,
+      "b_norm": 0.6533300664997073,
+      "gain_trace": 4.3853962772267465,
+      "input_low_orthogonality": 2.272653320197893e-16,
+      "output_low_orthogonality": 1.6909802703187756e-15,
+      "input_moment": -3.9920662804095175e-18,
+      "output_moment": -2.1705219273391446e-19
+    },
+    {
+      "parity": "even",
+      "order": 128,
+      "pieces": 6,
+      "nodes": 768,
+      "seed_norm_squared": 0.00026787194906839336,
+      "source_norm_squared": 0.006734073692831812,
+      "d": 0.09839635920039654,
+      "b_norm": 0.6455260343627885,
+      "gain_trace": 4.234952028981868,
+      "input_low_orthogonality": 2.3899794941551784e-15,
+      "output_low_orthogonality": 1.1992675728791833e-14,
+      "input_moment": -1.8683386882414367e-16,
+      "output_moment": 9.354166001355503e-17
+    },
+    {
+      "parity": "odd",
+      "order": 128,
+      "pieces": 6,
+      "nodes": 768,
+      "seed_norm_squared": 0.0002792899141536274,
+      "source_norm_squared": 0.006871066971170785,
+      "d": 0.09750849352841529,
+      "b_norm": 0.6535430887877742,
+      "gain_trace": 4.380321687338923,
+      "input_low_orthogonality": 1.1886097184722841e-15,
+      "output_low_orthogonality": 1.3184812962503603e-14,
+      "input_moment": -1.3371222400686983e-17,
+      "output_moment": -3.2269520070665487e-17
+    }
+  ]
+}

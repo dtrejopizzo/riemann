@@ -36,12 +36,12 @@ The numerical evidence directly refutes the working hypothesis at the resolution
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>tda_lfunction_comparison.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) heat-map of the 4×4 pairwise H0 bottleneck distance matrix among ζ, L(χ), L(Δ), and L_DH (first 122 zeros each; L_DH includes the off-critical zero at (0.808517, 85.699348)); (B) 2-D classical MDS embedding of the same matrix annotated with the rank-based (p = 0.50) and randomised (p = 0.48) permutation p-values for L_DH separation. Generated with ripser/persim/sklearn/matplotlib.</artifact-description>
 </artifact>
 <artifact>
 <file-name>h0_bottleneck_distance_matrix.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>4×4 CSV table of pairwise H0 bottleneck distances among the H0 persistence diagrams of the four L-functions, computed with persim.bottleneck on ripser diagrams of (Re(s), Im(s)) point clouds built from the first 122 zeros of each function (L_DH cloud additionally contains the off-critical zero (0.808517, 85.699348)).</artifact-description>
 </artifact>
 </artifacts>

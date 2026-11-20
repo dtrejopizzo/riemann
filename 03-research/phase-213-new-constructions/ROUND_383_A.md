@@ -1,0 +1,21 @@
+# El cero real del peso de paridad cerca de uno
+
+**Estado: PROVED, con revisión independiente del salto de rama, las constantes y la uniformidad del contorno.**
+
+Sea U(r)=Σ_{P^−(n)>L²} μ(n) r^ω(n) g(log(x/n)), con L=log x, h=log L y E=∏_{p≤L²}(1−1/p)^−1. Para x suficientemente grande, U tiene un único cero r_x en [1−h^(−2),1+h^(−2)]. Allí, uniformemente,
+
+    U'(r)=(1+o(1)) J x E/L²,     J=exp(1/8).
+
+En consecuencia r_x−1=−U(1)L²/(JxE)·(1+o(1)), incluso como identidad con ambos lados cero si U(1)=0. Se tiene |r_x−1|≪exp(−cL/h) por 377. El objetivo de 368 equivale a probar r_x>1 eventualmente. El índice registra el mecanismo Selberg–Delange y sus límites (P7/P9 y R162_2802); la deducción aquí es del desplazamiento de un cero real para el pulso y el corte exactos, sin atribuir signo al extremo por continuidad.
+
+**Contorno.** La serie en Re s>1 tiene producto D_r=ζ(s)^(−r) H_r(s), con H_r igual al producto de (1−p^(−s))^(−r) para p≤L² y de (1−rp^(−s))/(1−p^(−s))^r para p>L². Este segundo producto converge absolutamente para Re s>0.9 y allí su logaritmo y su derivada en r son O(1). Desplazar la Mellin con factor x^s exp((s−1/2)²/2) como en 377 hasta 1−d, d=c₀/h, altura 2√L, abriendo una ranura desde 1−d a 1. Para r real en el intervalo considerado, D_r y ∂_r D_r sobre los bordes cuestan exp(O(h²)), salvo el factor gaussiano: la rama de log ζ se controla por los discos de 370 para |Im s|≥3 y a alturas pequeñas separando el polo. En el borde izquierdo a alturas pequeñas la distancia al polo es ≥d. El producto pequeño y su derivada cuestan exp(O(log h)) por p^d≤exp(2c₀). Las colas derechas también son despreciables por convergencia absoluta y la gaussiana (el producto con pesos absolutos y su derivada son polinomiales en L). Los errores exteriores para U y U' cuestan O(x exp(−cL/h)).
+
+**Salto.** Poner B_r(s)=((s−1)ζ(s))^(−r)H_r(s) exp((s−1/2)²/2), regular en un entorno de la ranura. Al sumar los dos lados de la rama de (s−1)^r queda para U(r) el término
+
+    −x sin(πr)/π ∫₀ᵈ exp(−Lv) v^r B_r(1−v) dv.
+
+El círculo infinitesimal en 1 desaparece también al derivar. En todo el segmento, ∂_r log B_r=O(log h+1) y ∂_s log B_r=O(h), por Σ_{p≤L²} log p/p≪h y p^d=O(1). Además B_1(1)=JE. Uniformemente para v≤h²/L se tiene B_r(1−v)=(1+o(1))JE, pues |r−1|≤h^(−2). Para el resto basta B_r(1−v)≪JE, por integración de las mismas derivadas y dh=O(1). Así la integral vale (1+o(1))JE/L² por el cambio w=Lv, Γ(1+r)→1 y L^(1−r)→1. Su derivada en r está acotada por O(h JE/L²), usando el momento absoluto de log v. Al derivar el salto, −cos(πr)=1+o(1) mientras |sin(πr)|h=o(1); resulta el equivalente de U'. La diferenciación del contorno es legítima por convergencia uniforme a x fijo y las cotas anteriores. Ahora 377 y el teorema del valor medio dan signos opuestos en los extremos, unicidad y la fórmula del desplazamiento.
+
+**Registro de revisión.** La orientación de Hankel da −sin(πr)/π, de acuerdo con 1/Γ(−r)=−Γ(1+r)sin(πr)/π; por eso al derivar cerca de1 el signo principal es −cos(πr)>0. El pequeño círculo cuesta O_x(ε^(1+r)(1+|log ε|)) también después de derivar y desaparece uniformemente en el intervalo de r. En la parte real de la ranura, ((s−1)ζ(s)) y todos los factores de H_r son positivos para x grande; B_r admite una rama regular y real positiva. Sus derivadas logarítmicas tienen los costes O(log h) y O(h) indicados, sin un factor que crezca como L. En particular |r−1|log L≤1/h→0 justifica L^(1−r)→1 uniformemente, mientras ∂_r de la integral introduce a lo sumo O(h). El error exterior de U' es despreciable frente a JxE/L². La convergencia gaussiana es uniforme en r en compactos a x fijo, legitimando la diferenciación de la suma y del contorno. Finalmente el desplazamiento máximo h^(−2) produce una variación ≍xE/(L²h²), mucho mayor que |U(1)|; esto garantiza signos opuestos en los extremos y unicidad, y el teorema del valor medio da la fórmula relativa incluso cuando U(1)=0. Los factores polinómicos L²/E del piso de la derivada se absorben al reducir la constante c en el techo exponencial para |r_x−1|.
+
+La derivada positiva se demuestra incondicionalmente. Su magnitud determina la sensibilidad al peso por primo. El lado de uno en que cae el cero requiere una estimación adicional.

@@ -38,7 +38,7 @@ strategy for $\overline{\mathrm{Spec}\,\mathbb Z}$, Hochschild homology and $\ze
 *Knots, Primes and the Adele Class Space*, the Jacobian of $\overline{\mathrm{Spec}\,\mathbb
 Z}$, and the absolute geometry of $\mathrm{Spec}\,\mathbb Z$ via the Fargues–Fontaine curve.
 This is the source material behind every place the corpus reads Connes–Consani directly (see
-`03-research/AUDIT_CONSOLIDATED.md` §3 and `05-meta-and-planning/archive-top-level/NO-GO-LIST.md` MW-5 for what the corpus concluded from
+`05-meta-and-planning/archive-top-level/NO-GO-LIST.md` MW-5 for what the corpus concluded from
 it).
 
 | Folder | Title |
@@ -58,7 +58,7 @@ it).
 ## `papers-nuevos/B` — Deninger's own programme, and its newest arithmetic input
 
 Deninger's foundational papers on dynamical systems for arithmetic schemes and foliated spaces —
-the source the corpus's own reading in `phase-107`/`phase-43`/`AUDIT_CONSOLIDATED.md` §3 is checked
+the source the corpus's own reading in phases 43 and 107 is checked
 against — plus one much newer paper that the corpus currently treats as its best row-(a) candidate.
 
 | Folder | Title |
@@ -68,7 +68,7 @@ against — plus one much newer paper that the corpus currently treats as its be
 | `arXiv-math0204110v1` | Number Theory and Dynamical Systems on Foliated Spaces |
 | `arXiv-math0505354v1` | Arithmetic Geometry and Analysis on Foliated Spaces |
 | `arXiv-2504.15767v3` | Is There a Birch and Swinnerton-Dyer Conjecture for Dedekind Zeta Functions? |
-| **`arXiv-2508.05329v1`** | **Rational Witt Vectors and Associated Sheaves** — Deninger's Theorem 5.1 (`W_rat(O(X)) ≅ Corr(X,A)`), the source of `05-meta-and-planning/archive-top-level/OPTIONS.md` §1a (G-4) and the "BUILT-MODULO-GAP" row-(a) candidate in `phase-114_a_03`. |
+| **`arXiv-2508.05329v1`** | **Rational Witt Vectors and Associated Sheaves** — Deninger's Theorem 5.1 (`W_rat(O(X)) ≅ Corr(X,A)`), the source of `05-meta-and-planning/archive-top-level/OPTIONS.md` §1a (G-4) and the "BUILT-MODULO-GAP" row-(a) candidate in phase 114 (document `114_a_03`). |
 
 ## `papers-nuevos/C` — foliated dynamical systems and leafwise cohomology
 
@@ -91,7 +91,7 @@ can carry a Kähler–Riemann foliation (it cannot, in the realized witness — 
 
 Row (d)'s own bibliography: the arithmetic Hodge index theorem for adelic line bundles (both
 parts), quadratic Riemann–Roch formulas, the Riemann–Hurwitz formula for arithmetic surfaces, and
-numerical cohomology for arithmetic surfaces. This is the literature `THE_BACKWARD_MAP.md` and
+numerical cohomology for arithmetic surfaces. This is the literature the backward-map audit of phases 107–113 and
 `05-meta-and-planning/archive-top-level/OPTIONS.md` §1d (R16 — does a quadratic Riemann–Roch exist over $\mathrm{Spec}\,\mathbb Z$ at
 all?) draw on.
 
@@ -103,10 +103,6 @@ all?) draw on.
 | `arXiv-2403.09266v1` | Quadratic Riemann–Roch Formulas |
 | `arXiv-2510.08033v2` | Riemann–Hurwitz Formula for Arithmetic Surfaces |
 | `arXiv-2512.01811v2` | Numerical Cohomology for Arithmetic Surfaces and Applications |
-
-**Not a paper:** `deel-David Alejandro Trejo Pizzo-contract-mz4wej8.pdf` — an unrelated signed
-document, not a reference. Left in place rather than moved without asking; flagged here so it is
-not mistaken for one of the sources above.
 
 ## `papers-nuevos/extension-clase-test` — loose PDF batch (Weil positivity / explicit formula)
 
@@ -147,7 +143,7 @@ is cheap.
 
 ## `papers-nuevos/Puente` — a Deninger/Connes–Consani bridge fragment
 
-`arXiv-2508.15971v5/Deninger_Connes-Consani.tex` — a single file, no recoverable `\title`/`\author`
+`papers-nuevos/Puente/arXiv-2508.15971v5/Deninger_Connes-Consani.tex` — a single file, no recoverable `\title`/`\author`
 (likely an extracted excerpt rather than a full paper source). Its acknowledgements thank Deninger,
 Connes, Consani, Borger and Morava directly, consistent with the folder's name ("Puente" = bridge):
 kept here as the one candidate source for a direct technical link between the two programmes,
@@ -162,7 +158,7 @@ unresolved as to its exact provenance.
 | `arXiv-2310.18423v2` | Zeta Zeros and Prolate Wave Operators — Semilocal Adelic Operators *(duplicate; see top-level)* |
 | `arXiv-2402.13082v1` | Heat Expansion and Zeta (Connes) |
 
-## `papers-ref-phase-60` — the sources `phase-60`'s CCM tribunal reviewed directly
+## `papers-ref-phase-60` — the sources phase 60's CCM tribunal reviewed directly
 
 | File | Title |
 |---|---|
@@ -171,7 +167,17 @@ unresolved as to its exact provenance.
 | `arXiv-2511.23257v1` | Quadratic Forms, Real Zeros and Echoes of the Spectral Action |
 | `arXiv-2602.04022v1.tex` | (single-file source; Connes's "Letter to Riemann," per `05-meta-and-planning/archive-top-level/NO-GO-LIST.md` §VII CAND-1) |
 | `arXiv-2606.06604v1` | On the Absolute Geometry of $\mathrm{Spec}\,\mathbb Z$ and the Fargues–Fontaine Curve *(duplicate of `papers-nuevos/A`'s copy)* |
-| `compareplots3.pdf`, `weilcomp.png` | Supporting figures used by `phase-60`'s numerical audit, not papers. |
+| `compareplots3.pdf`, `weilcomp.png` | Supporting figures used by phase 60's numerical audit, not papers. |
+
+## Other subfolders and files
+
+| Path | Contents |
+|---|---|
+| [`beurling-dmv/`](beurling-dmv/) | Beurling / Diamond–Montgomery–Vorhauer references (see its README) |
+| [`qrh-preprints/`](qrh-preprints/) | Quasi-Riemann hypothesis preprints (sources for phase 210) (see its README) |
+| [`survey/`](survey/) | Literature survey for row D (see its README) |
+| [`arxiv-math-nt-2026-review/`](arxiv-math-nt-2026-review/) | math.NT search, June–October 2026 |
+| [`PROLATE-REFERENCES.md`](PROLATE-REFERENCES.md) | Prolate / time–band-limiting bibliography (phase 155) |
 
 ## Status
 
@@ -181,4 +187,4 @@ The math.NT search for June–October 2026, with catalogue and reading order
 It includes both PDFs, 2278 catalogued entries and 27 screened abstracts.
 
 Reference material only. See `03-research/` for what the program actually did with any of it, and
-`05-meta-and-planning/ROUTES-TRIED-INDEX/` for the conclusions drawn.
+`05-meta-and-planning/ROUTES-MASTER-INDEX.md` for the conclusions drawn.

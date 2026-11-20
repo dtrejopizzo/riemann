@@ -1,0 +1,20 @@
+# Un promedio completo de Liouville con signo incondicional y frontera de varianza
+
+Usar U(u)=exp(−u/2)L(exp u) de 144. Para c>0 fijo poner I_c(T)=∫φ_{cT}(u−T)U(u)du, T=log x. Con c=1.25·10^(−25), para T→∞ se tiene incondicionalmente
+
+    I_c(T)=a + 2 exp(−c γ₁² T/2) Re(R₁ exp(iγ₁T)) + O(exp(−2·10^(−23)T)),
+    a=1/ζ(1/2)<0,   R₁=ζ(1+2iγ₁)/[(1/2+iγ₁)ζ'(1/2+iγ₁)].
+
+La misma expansión vale al cortar el integral superior en T+3√c T, dando una suma finita de Liouville con pesos positivos. Es un signo del promedio completo para toda escala suficientemente grande, sin suponer RH. No se especifica un valor efectivo de la primera escala.
+
+**Certificación con los datos ya usados en P47.** Por Z1 del paper 47, el primer par es simple, con 14.13≤γ₁≤14.14 y sin otros ceros de altura ≤21. Por Z2 todos los ceros hasta 3·10¹² están en la línea. La transformada R(s) es la de 144. Empezar en Re s=.54, donde R está acotada (la serie recíproca del denominador converge absolutamente). Elegir una altura fija G entre 2.99·10¹² y 3·10¹² que no sea ordenada de un cero. El exponente real en s=σ+it es T[σ+c(σ²−t²)/2]. En las colas de la línea derecha y en los horizontales del rectángulo hasta σ=−1/4 el exponente por unidad T es menor que −.01; esto se comprueba ya con .54−c(2.99·10¹²)²/2<−.018. El lado izquierdo cuesta O(exp(−.24T)). La gaussiana y la acotación en el contorno fijo justifican los errores integrados, con margen en los exponentes. Sólo se cruzan el polo real en cero y polos sobre el eje imaginario desplazado. El primero da a; el primer par da el segundo término escrito. Los restantes tienen tasa ≤−c·21²/2<−2.7·10^(−23) y son finitos en este rectángulo; sus factores polinómicos por posibles multiplicidades se absorben en el error anunciado. La cola física retirada cuesta ≤exp(T/2+cT/8) Prob(N(0,1)>(3−√c/2)√T) por la cota elemental de U. También queda dentro del error.
+
+**Frontera de los promedios de varianza lineal.** Para z=ρ−1/2=b+iγ definir
+
+    c*=sup_{b>0} 2b/(γ²−b²),
+
+con valor cero si el conjunto es vacío. Un valor positivo se alcanza: fuera de un conjunto finito las razones tienden a cero. Si c>c*, I_c(T)→a exponencialmente. Si 0<c<c*, I_c(T) toma ambos signos en intervalos de longitud acotada de T para T grande (la longitud puede depender de c). Por ello c* es el ínfimo de los coeficientes positivos con negatividad eventual, sin necesidad de decidir el valor frontera.
+
+En efecto la tasa de un polo con b>0 es b−(c/2)(γ²−b²), y su residuo no se cancela con ζ(1+2z) por convergencia del producto de Euler. Para el contorno general tomar el lado izquierdo −d con d<min(1/4,1/c), escogido sin polos en él, y una altura fija tan grande que los horizontales y las colas derechas tengan tasa estrictamente negativa. Los polos con −d<b≤0 y γ≠0 tienen tasa negativa. Si c>c*, todos los demás también tienen tasa negativa y sólo queda el sesgo. Si c<c*, hay polos de tasa positiva; se incluye a todos los maximizadores al escoger la altura. Extraer la mayor exponencial y dentro de ella el mayor grado en T por multiplicidad. El líder es un polinomio trigonométrico real no nulo de media cero: las frecuencias son las partes imaginarias de z+cz²/2, no nulas, y en el semiplano b>0 la aplicación es inyectiva por factorización de la diferencia. El coeficiente líder de cada polo contiene (1+cz)^(m−1)≠0. La función trigonométrica tiene valores positivos y negativos con margen y, por recurrencia de las traslaciones de un polinomio trigonométrico finito, ambos reaparecen con huecos acotados. El resto normalizado tiende a cero. Este enunciado general se refiere a los promedios sin truncar; el corte finito anterior se justifica para el c numérico escogido.
+
+**Alcance.** Z2 implica c*≤1/((3·10¹²)²−1/4). Probar c*=0 equivaldría a excluir todo cero fuera de la línea. El promedio de 144 tiene V/T→0 y queda fuera de la región positiva de coeficientes fijos certificada aquí. La base gaussiana y la separación de tasas están en 115/122/143/144. Lo añadido es el umbral para este promedio aritmético, el tratamiento de empates y la expansión incondicional con el signo y el primer término oscilatorio.

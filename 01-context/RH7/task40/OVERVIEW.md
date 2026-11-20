@@ -20,12 +20,12 @@ The Weil explicit formula provides an algebraic identity between zeros and prime
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_quadratic_form.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Self-contained Python module implementing compute_Q(zeros, T0, sigma, J, primes_cutoff=1e5, n_nodes_quad=200) that builds the full Weil quadratic form Q = M_zeros − M_arith per -v8-validated-data.md. Includes M_zeros (sum over both ±γ), M_primes (prime-power sum to X=10⁵), M_arch (digamma integral via Gauss–Hermite quadrature), and M_polar (log π term). Sign convention numerically validated to 10⁻¹⁵ against the Weil explicit formula. Available at data_entry:weil-quadratic-form-py-ob9h.</artifact-description>
 </artifact>
 <artifact>
 <file-name>Q_matrix_validation.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel figure validating the Q-matrix implementation against ζ controls. Panel A: log-scale plot of |λ_k(Q)| at the spec's optimal operating point (T₀=46.13, σ=1, J=10), showing tiny eigenvalues (≤10⁻⁴) consistent with GRH for ζ. Panel B: trace decomposition tr(M_zeros) ≡ tr(M_arith) at four operating points, with M_arith broken into prime/arch/polar components, confirming the Weil explicit formula identity holds numerically to ~10⁻¹⁵.</artifact-description>
 </artifact>
 </artifacts>

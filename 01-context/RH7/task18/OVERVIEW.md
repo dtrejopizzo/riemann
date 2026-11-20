@@ -29,7 +29,7 @@ The table operationalizes the project's two key theoretical advances: (1) Front 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>detector_feasibility_summary.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final Detector Feasibility Table integrating Front A signal model (c_pred·δ², with c_pred at J=10 interpolated between J=8 and J=12 from c_pred_vs_c_emp_grid.csv) with Front B noise model (η_theory(X) computed from the closed-form Hermite-Gauss/PNT bound in frontC_theory_vs_empirical.json). Six rows covering (T₀=46.13,σ=1) and (T₀=85.7,σ=2) at J=10, m=20, and δ∈{10⁻³,10⁻⁴,10⁻⁵}, with columns: T0, sigma, J, m, delta, c_pred, Signal_abs_lambda_min, Noise_eta_X1e6, X_min_for_Detection, SNR_at_X1e6. X_min computed by brentq root-finding on η_theory(X)=Signal.</artifact-description>
 </artifact>
 </artifacts>

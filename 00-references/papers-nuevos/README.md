@@ -16,4 +16,4 @@ This folder (Spanish name, "new papers") collects third-party arXiv papers gathe
 
 - [../README.md](../README.md) — reference library overview.
 - [../survey/](../survey/) — literature survey that discusses many of these works.
-- [../../05-meta-and-planning/ROUTES-TRIED-INDEX/](../../05-meta-and-planning/ROUTES-TRIED-INDEX/) — literature entries of the routes index.
+- [../../05-meta-and-planning/ROUTES-MASTER-INDEX.md](../../05-meta-and-planning/ROUTES-MASTER-INDEX.md) — literature entries of the routes index.

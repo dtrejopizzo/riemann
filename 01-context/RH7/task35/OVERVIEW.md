@@ -43,7 +43,7 @@ The evidence supports a narrower conclusion than the original hypothesis. The cu
 <artifacts>
 <artifact>
 <file-name>validation_report.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure generated from the notebook analysis. Panel A shows exploratory `ζ_δ` power-law scaling of `|λ_min|` versus `δ`; panel B shows exploratory J-amplification of `log|λ_min|`. The figure was created with matplotlib from computed benchmark values and saved in the working directory.</artifact-description>
 </artifact>
 </artifacts>

@@ -91,10 +91,10 @@ normal form, whose required identities are written explicitly.
 
 ## 3. Verification and delegated review
 
-Independent bounded checks were assigned to economical models:
+Independent bounded checks were carried out:
 
-* gpt-5.6-luna: classical cones/Frobenius and exact prior contact-source scan;
-* gpt-5.6-sol: adversarial review of the algebra and normalized transitions.
+* classical cones/Frobenius and exact prior contact-source scan;
+* adversarial review of the algebra and normalized transitions.
 
 Their findings were checked against the original source passages and
 incorporated into the scope restrictions, particularly the full-Hom
@@ -221,14 +221,14 @@ the complete packet of P123.032–033 after the explicit half-density
 change. This settles the local Fourier counterterm; the common-carrier
 and cutoff comparison is still missing.
 
-Independent bounded review by gpt-5.6-luna of P123.029–032 found no
+Independent bounded review of P123.029–032 found no
 critical mathematical error within their declared scope. Its sign-component
 observation was incorporated into P123.032: tests on R^* are restricted
 continuously to the open-and-closed positive component. This review is
 additional scrutiny, not a certificate for the unrepaired global gates.
 
 P123.035 derives the real Fourier finite part and Gamma multiplier with
-all constants. An independent gpt-5.6-luna review confirms the factor-two
+all constants. An independent review confirms the factor-two
 discrepancy in the literal cited Fourier-log computation under its stated
 full-line Lebesgue convention. This is a local normalization finding,
 not a retraction of the nuclear representation. The scalar Gamma and

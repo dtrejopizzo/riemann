@@ -49,17 +49,17 @@ The main result is a partial confirmation of the project’s arithmetic-readout 
 <artifacts>
 <artifact>
 <file-name>M_kk_vs_C_k_comparison.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV table containing, for each of the 11 function classes, the computed coefficient second moments C_k and empirical peak-averaged diagonal values M_kk for k=0..7. It was created from locally generated or loaded coefficient arrays and the `peaks_features_F1_F12_normalized_full.csv` feature table.</artifact-description>
 </artifact>
 <artifact>
 <file-name>Ck_Mkk_diag_results.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compact NumPy archive containing the ordered class labels and the 11×8 matrices of computed C_k and empirical M_kk values. It was saved after the final aggregation step to preserve the regression inputs in machine-readable form.</artifact-description>
 </artifact>
 <artifact>
 <file-name>Mkk_vs_Ck_scatter.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final summary figure with two vertically stacked subfigures: an original-scale scatter/regression panel and a log-log scatter/power-law panel comparing C_k against empirical M_kk across all 88 points. It was generated with matplotlib at the end of the analysis.</artifact-description>
 </artifact>
 </artifacts>

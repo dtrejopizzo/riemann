@@ -59,22 +59,22 @@ The experiment supports a nuanced conclusion. The eigenvalue spectrum of the pea
 <artifacts>
 <artifact>
 <file-name>peaks_features_F1F2F4F5F6F7_Sk_eig.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Per-peak feature table for the 7 locally reconstructable classes. It contains reconstructed |S_k| values, normalized log-|S_k| features for k=0..7, and the class-level eigenvalue-spectrum features added to each peak row. Created from peaks_features_F1_F12.csv using a from-scratch Numba/Kahan S_k engine with N=10^6.</artifact-description>
 </artifact>
 <artifact>
 <file-name>class_eigfeatures.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Class-level summary table containing λ1, λ2, pc1_variance_fraction, eigenvalue_entropy, and λ2/λ1 for each analyzed class. Derived from the peak-averaged M_jk matrices computed from reconstructed S_k values.</artifact-description>
 </artifact>
 <artifact>
 <file-name>M_jk_matrices.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive of the 8×8 peak-averaged cross-term matrices M_jk for each analyzed class. Each matrix was computed as E[Re(S_j conj(S_k))] across the 200 peaks of that class.</artifact-description>
 </artifact>
 <artifact>
 <file-name>Sk_complex_arrays.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the reconstructed per-peak complex S_k arrays (stored as real and imaginary parts) and the associated peak t-values for each analyzed class. This artifact preserves the expensive intermediate results that were missing from the workspace and can be reused in future analyses.</artifact-description>
 </artifact>
 </artifacts>

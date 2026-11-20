@@ -1,10 +1,10 @@
 # Papers
 
-Catalogue of the papers of the program, by David Alejandro Trejo Pizzo. No paper claims a proof of the
+Catalogue of the papers of the program. No paper claims a proof of the
 Riemann hypothesis. Folder names carry the paper number as a prefix. Papers 01–42 are the earlier arcs
 (ω-classes, inverse operators, the Weil form and its realizations, the Pick architecture, the first
 arithmetic Lefschetz construction). Papers 43–48 are the current programme: rows A–C (closed on the
-declared carrier), row D (open, certified to $T\le\tfrac12\log15$) and the map of routes.
+declared carrier), row D (open) and the map of routes.
 
 | # | Title | Content | Type / status |
 |---|---|---|---|
@@ -50,12 +50,12 @@ declared carrier), row D (open, certified to $T\le\tfrac12\log15$) and the map o
 | [40](40-connes-proof-skeleton/) | Branch Selection and Global Polarization in the Connes–CCM Route to RH: Finite Prime–Gamma Inertia, Tate Boundary Geometry, and the Divisor-Sensitivity Obstruction | Finite prime–gamma inertia, Tate boundary geometry and the divisor-sensitivity obstruction in the Connes–CCM route. | Spectral/operator analysis |
 | [41](41-obstruction-catalogue/) | Obstructions to Weil Positivity: A Catalogue of No-Go Theorems, Falsifiers and Countermodels in the Prime–Gamma Doob Coordinate | Companion to 40: thirty-one mechanisms recorded as no-go theorems, falsifiers or countermodels. | Structural no-go catalogue |
 | [42](42-arithmetic-lefschetz-programme/) | An Arithmetic Lefschetz Programme over $\Z$: A Metrized Bivariant Correspondence Square, its Determinant Pairing and its Corner Trace | The arithmetic Lefschetz programme: rows (a)–(c) of a Weil-style construction over Spec Z; superseded in detail by Papers 43–45. | Culmination (Arc C) |
-| [43](43-row-a-torsion-theory/) | A Correspondence Algebra with a Canonical Trace on the Idele Class Group, its Tate Symbol and its Numerical Form | Row A: the carrier, the canonical trace, twisted excision, Künneth decomposition and the torsion invariant. | Row A closed on the declared carrier |
-| [44](44-row-b-arithmetic-family/) | An Arithmetic Frobenius Family and its Integral Shadow on a Correspondence Algebra of the Idele Class Group | Row B: the Frobenius family as Haar measures of fixed-point strata, its integral shadow and two Gram forms. | Row B closed on the declared carrier |
-| [45](45-row-c-explicit-formula/) | An Explicit Formula and a Comparison Theorem for the Canonical Trace on a Correspondence Algebra of the Idele Class Group | Row C: the explicit formula for the canonical trace and the comparison theorem. | Row C closed on the declared carrier |
+| [43](43-row-a-torsion-theory/) | A Correspondence Algebra with a Canonical Trace on the Idele Class Group | Row A: a convolution algebra of semilocal idele class correspondences, its involution and canonical trace; two Tate functionals give the bidegree and define the primitive subspace of the intersection form. | Row A closed on the declared carrier |
+| [44](44-row-b-arithmetic-family/) | An Arithmetic Frobenius Family and its Integral Shadow on a Correspondence Algebra of the Idele Class Group | Row B: a Frobenius correspondence for each positive integer, with contact with the diagonal of weight $\Lambda(n)/\sqrt n$ on prime powers, and an integral model relating it to cyclotomic values. | Row B closed on the declared carrier |
+| [45](45-row-c-explicit-formula/) | An Explicit Formula and a Comparison Theorem for the Canonical Trace on a Correspondence Algebra of the Idele Class Group | Row C: Weil's explicit formula for the self-intersection of a radial class via its two Tate moments and the zeros; a zero off the critical line is detected by a smooth primitive test of compact support. | Row C closed on the declared carrier |
 | [46](46-intersection-frame-defect/) | An Intersection Frame for the Explicit Formula: Hodge-Index Transfer, a Frame Defect Theorem and a Function-Field Model | The Pólya class, radical and polar plane of the extended Weil form; a conditional Hodge-index transfer; the frame defect theorem; the same defect on a curve over a finite field. The earlier row D text is archived in the folder. | Structural theorems |
-| [47](47-row-d-dual-certificates/) | Weil Positivity on a Finite Window: Duality, Certificates and a Finite Reduction | Row D: dual theory, certificates up to $\tfrac12\log15$ (endpoint cited from Mori), barrier theorems, the finite reduction and the open node. | Row D OPEN |
-| [48](48-row-d-route-map/) | A Map of the Routes to Weil Positivity: Eight Arithmetic Inputs, Eight Carriers, and the Specification of a Closing Argument | The routes attempted for row D on an 8×8 grid, with walls, falsifiers and the specification of a closing argument. | Survey of routes |
+| [47](47-row-d-dual-certificates/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D: lower bounds for the Weil form on finite support intervals and a reduction of nonnegativity on arbitrary intervals to a sequence of matrix inequalities. | Row D OPEN |
+| [48](48-row-d-route-map/) | A Map of the Routes to Weil Positivity on Finite Windows: Barriers, Falsifiers, and the Open Inequality | The routes attempted for row D, with walls, falsifiers and the specification of a closing argument. | Survey of routes |
 
 ## Notes
 

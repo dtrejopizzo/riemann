@@ -33,12 +33,12 @@ The hypothesis — that a resumable, checkpointing refinement starting from the 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldelta_refiner.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Standalone checkpointing refinement worker. Reads a slice of an approximate-zero `.npy`, refines each zero to dps=80 using PARI `lfunhardy` plus a secant iteration with adaptive bracket widening, and persists progress to a pickle checkpoint after every 10 zeros (or any zero that takes >30 s). Resumable: a re-launch with the same checkpoint path picks up from `done_count`. Designed to be invoked as detached `subprocess.Popen` workers to avoid the cypari2/multiprocessing.Pool segfault.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldelta_refine_ckpts/shard_{0..7}.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Partial refinement checkpoints from an 8-way cost-aware partition (boundaries [0, 1576, 2040, 2371, 2637, 2864, 3063, 3241, 3405]) of the 3405 cached approximate L(Δ,s) zeros. Each pickle holds the list of refined dps=80 zero strings produced so far for that shard plus a `done_count`, enabling resumption. At time of shutdown the eight shards held approximately 1250, 200, 120, 90, 70, 70, 61, 54 refined zeros respectively (~1 915/3 405 ≈ 56 %).</artifact-description>
 </artifact>
 </artifacts>

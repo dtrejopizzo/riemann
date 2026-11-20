@@ -32,17 +32,17 @@ The asymptotic random-matrix / Conrey–Ghosh prediction for the fourth moment o
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>fourth_moment_omega_decomposition_T500_1000_N50000.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Full ω-class fourth-moment decomposition for ζ, L(Δ), and L_DH at N_terms=5·10⁴ on the high-t window t∈[500,1000] (Δt=0.01, left Riemann sum). Contains total ∫|D|⁴, per-class pure integrals (k=0..5), all C(6,2)=15 pairwise |S_j|²|S_k|² integrals, and derived percentages (pure, diag×4, off-diag). Direct N-extension of `fourth_moment_omega_decomposition_T500_1000.json`. Engine reconstructed from r16 spec; validated against the N=10⁴ JSON to <2·10⁻⁵ relative error on the zeta total.</artifact-description>
 </artifact>
 <artifact>
 <file-name>comparison_N1e4_vs_N5e4.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Side-by-side comparison table (3 rows × 10 columns) of total ∫|D|⁴, pure%, diag×4%, off-diag%, and the off-diagonal percentage-point change between N=10⁴ and N=5·10⁴, for ζ, L(Δ), and L_DH on t∈[500,1000].</artifact-description>
 </artifact>
 <artifact>
 <file-name>fourth_moment_N_dependence.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: grouped bar chart of pure / diag×4 / off-diag fractions at N=10⁴ (light) vs. N=5·10⁴ (solid) for the three L-functions. Panel B: off-diagonal residual % vs. N (log-x) showing zeta diverging more negative, L(Δ) essentially flat, and L_DH shrinking toward zero.</artifact-description>
 </artifact>
 </artifacts>

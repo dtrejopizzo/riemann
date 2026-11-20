@@ -33,12 +33,12 @@ The hypothesis that LMFDB offers a fast, ready-made route to 5000 high-precision
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>cache/L_delta_zeros_lmfdb.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON cache of the 10 high-precision (~33 decimal digits, 100-bit accuracy) positive zeros of the Ramanujan Δ L-function (LMFDB label 1.12.a.a / 2-1-1.1-c11-0-0), pulled from the LMFDB API endpoint `/api/lfunc_lfunctions/?label=2-1-1.1-c11-0-0`. Includes full provenance, the R2 validation record (γ₁ agreement of 30.67 decimal digits with an independent PARI/GP lfunzeros computation at dps=50), and a written notice that LMFDB does NOT supply 5000 zeros — only 10 — for this L-function.</artifact-description>
 </artifact>
 <artifact>
 <file-name>L_delta_zeros_validation.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: per-zero agreement digits −log₁₀|γ_n^LMFDB − γ_n^PARI| for n=1..10, all ≈30–31 decimal digits, well above the R2 threshold of 10. Panel B: log-log scaling of PARI `lfunzeros(L,T)` wall-clock time vs height T at dps=50 with a fitted power law t ∝ T^3.00 and the extrapolated cost (~1.7 h) to reach N≈5000 zeros at T≈4075.</artifact-description>
 </artifact>
 </artifacts>

@@ -37,12 +37,12 @@ A non-automorphic multiplicative deformation that preserves a formal functional 
 <artifacts>
 <artifact>
 <file-name>F15_Sk_complex_200peaks.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy archive containing the refined peak locations, complex S_k(t) arrays for k=0..7 at the 200 largest F15 peaks in t in [1e4,2e4], the derived 8x8 M_jk matrix, and the resulting spectral features pc1_complex and H_complex. It was generated from scratch using Numba-accelerated Kahan summation with analytic normalization of Ramanujan Delta coefficients twisted by the primitive quartic character mod 5.</artifact-description>
 </artifact>
 <artifact>
 <file-name>F15_peaks_features.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV table of the 200 refined F15 peak locations together with total peak amplitudes, abs_Sk and log_abs_Sk values for k=0..7, and the class-level spectral features pc1_complex and H_complex. It was created from the newly computed complex peak data for F15.</artifact-description>
 </artifact>
 </artifacts>

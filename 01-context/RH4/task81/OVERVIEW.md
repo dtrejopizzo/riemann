@@ -42,17 +42,17 @@ The literal hypothesis is supported under the specified held-out split: normaliz
 <artifacts>
 <artifact>
 <file-name>peaks_features_F1_F12_normalized_full.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Unified 2200-row feature table created in this run from locally generated peak locations and full-N S_k evaluations. It contains class labels, GRH labels, peak t values, main-sum magnitudes, and raw and normalized |S_k| features for k=0..7.</artifact-description>
 </artifact>
 <artifact>
 <file-name>hypothesis_AUC_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON summary of the held-out SVM experiment, including the train/test class split, selected normalized features, test AUCs, bootstrap confidence intervals, and confusion matrix. It also records the stricter F12-only held-out violator result.</artifact-description>
 </artifact>
 <artifact>
 <file-name>grh_classifier_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure produced at the end of the analysis. Panel A shows ROC curves for the main held-out test and the stricter F12-only test; Panel B shows per-class predicted violator-probability distributions for the held-out classes.</artifact-description>
 </artifact>
 </artifacts>

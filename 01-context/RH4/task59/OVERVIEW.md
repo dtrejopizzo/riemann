@@ -31,12 +31,12 @@ The main finding supports the hypothesis: the new arithmetic construction based 
 <artifacts>
 <artifact>
 <file-name>F14_data.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the fitted constant c, the target off-line zero rho0, Dirichlet coefficients a_n up to N=10^6, the selected top-200 peak locations and magnitudes, the complex S_k arrays for k=0..7, the class-level M_jk matrix, and the derived F14 spectral features. It was generated directly from the from-scratch notebook analysis.</artifact-description>
 </artifact>
 <artifact>
 <file-name>F14_peaks_features.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV table with 200 rows corresponding to the selected top peaks of |D_F14(t;10^6)|. It includes the peak locations, peak magnitudes, and the real, imaginary, and absolute values of S_k for k=0..7 at each peak.</artifact-description>
 </artifact>
 <artifact>

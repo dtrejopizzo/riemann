@@ -21,32 +21,32 @@ The analysis supports the research hypothesis. Phase-inclusive information in th
 <artifacts>
 <artifact>
 <file-name>peaks_features_F1_F12_normalized_full_with_spectral_complex.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Augmented 2200-row feature table derived from `peaks_features_F1_F12_normalized_full.csv` with four added class-level spectral columns: `pc1_complex`, `H_complex`, `pc1_mag`, and `H_mag`. The complex features were computed from reconstructed complex S_k arrays and the true class-averaged matrix M_jk = E[Re(S_j conj(S_k))].</artifact-description>
 </artifact>
 <artifact>
 <file-name>hypothesis_AUC_results_complex_M.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON summary of the strict-protocol classification results, including the train/test split, class-level spectral feature values, peak-level AUCs with bootstrap confidence intervals, class-level predictions, and explicit caveats about class-level feature replication.</artifact-description>
 </artifact>
 <artifact>
 <file-name>coeffs_F9_a.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Ramanujan Delta exact Dirichlet coefficients a_n for n = 1..10^6, generated from scratch with PARI/GP via `mfcoefs(mfeigenbasis(mfinit([1,12],0))[1], 1000000)`. Stored as a NumPy object array because the exact coefficients exceed int64 range.</artifact-description>
 </artifact>
 <artifact>
 <file-name>coeffs_F9_lambda.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Normalized Ramanujan Delta coefficients λ_n = a_n / n^(11/2) for n = 1..10^6, generated from the exact F9 coefficients and stored as float64 for use in S_k summation.</artifact-description>
 </artifact>
 <artifact>
 <file-name>coeffs_F10_a.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Level-11 weight-2 newform 11.2.a.a Dirichlet coefficients a_n for n = 1..10^6, generated from scratch with PARI/GP via `mfcoefs(mfeigenbasis(mfinit([11,2],0))[1], 1000000)`. Stored as int64.</artifact-description>
 </artifact>
 <artifact>
 <file-name>coeffs_F10_lambda.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Normalized 11.2.a.a coefficients λ_n = a_n / sqrt(n) for n = 1..10^6, derived from the generated F10 coefficients and stored as float64 for S_k computation.</artifact-description>
 </artifact>
 </artifacts>

@@ -1,0 +1,54 @@
+{
+  "status": "PASS_SYLVESTER",
+  "scope": "stored first eight even coordinates of criterion (69), plus previously proved infinite high-space coercivity; not full 95-coordinate positivity",
+  "method": "flint arb_mat.det on each leading principal submatrix; no LDL recurrence reused",
+  "flint_version": "0.9.0",
+  "decimal_digits": 500,
+  "matrix_file": "real_residual_block_even_8.json",
+  "matrix_sha256": "e2129a1cec7637c1e08ef69d794b9de79fd18963f538b32e75f29d5455de833d",
+  "frozen_corrector_sha256": "c8882cadcda1784f0ede948237aabd1b6083328e874749a79c51411f7f91febc",
+  "stored_entries_exactly_symmetric": true,
+  "leading_principal_minors": [
+    {
+      "order": 1,
+      "enclosure": "[0.2519673132466727407969558456690957078273489705956560402666800294610096850934486402921789940958736086707056292619032 +/- 1.92e-116]",
+      "strictly_positive": true
+    },
+    {
+      "order": 2,
+      "enclosure": "[0.0235431943987065230270014668677641121501407982574140578863718978415932541455069961296719250892881675782446781446235 +/- 9.71e-116]",
+      "strictly_positive": true
+    },
+    {
+      "order": 3,
+      "enclosure": "[0.001052869253228713147681107220462522029691351417970690212108423442170942320351655219779527922216556887357744533755 +/- 1.24e-115]",
+      "strictly_positive": true
+    },
+    {
+      "order": 4,
+      "enclosure": "[8.17178895494028453373731049817307633412396347714422603901983636789070271245609542381045645633050129176850478149e-6 +/- 8.89e-117]",
+      "strictly_positive": true
+    },
+    {
+      "order": 5,
+      "enclosure": "[8.9895194383122030990611952907197689005987221984548092116261708108246682787383817809567824038302207401184215225e-7 +/- 4.82e-117]",
+      "strictly_positive": true
+    },
+    {
+      "order": 6,
+      "enclosure": "[5.997139951313735998752126437072726547302628353929937891617604178299486291865429185274707282938870810200766673e-8 +/- 5.14e-117]",
+      "strictly_positive": true
+    },
+    {
+      "order": 7,
+      "enclosure": "[1.06415789042235714965156734844796908627431774511995514969872849023340953194445202556297166032447096965707203e-9 +/- 3.31e-117]",
+      "strictly_positive": true
+    },
+    {
+      "order": 8,
+      "enclosure": "[1.5918218400619969524892369466138750830363635677681238694751506091539507407853640140530459924081300518108188e-10 +/- 1.74e-117]",
+      "strictly_positive": true
+    }
+  ],
+  "consequence": "strict positivity on span(e_1,...,e_8) plus H_high at T=4/5; codimension 87 in the even primitive sector"
+}

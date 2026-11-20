@@ -52,7 +52,7 @@ The data support the view that LMFDB itself is not the source of the suspected n
 <artifacts>
 <artifact>
 <file-name>lmfdb_modular_audit_F9_F10.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Structured JSON summary of the Step 0.7 modular-form audit, including level, weight, dimension, first low-lying coefficients, maximum Deligne-bound ratios, and computed versus LMFDB central L-values where available. It was created from coefficients parsed from LMFDB q-expansion download pages and local approximate-functional-equation evaluations.</artifact-description>
 </artifact>
 <artifact>
@@ -62,7 +62,7 @@ The data support the view that LMFDB itself is not the source of the suspected n
 </artifact>
 <artifact>
 <file-name>_step_0_7_lmfdb_normalization_audit.pdf</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final summary figure in PDF format. Panel A shows Deligne-bound ratios across the first 168 primes for all audited newforms; Panel B shows absolute errors between computed and LMFDB central L-values for the forms whose L-values could be retrieved.</artifact-description>
 </artifact>
 </artifacts>

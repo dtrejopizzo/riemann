@@ -27,7 +27,7 @@ Combined with prior findings (r39, r44) that simple bulk a_n statistics fail to 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>invariants_to_PC_regression.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel figure summarizing the LOO regression of PC1/PC2 (from A_jk PCA projections) on the four functional-equation invariants. Panel A: scatter of true vs LOO-predicted PC coordinates per class, showing predictions collapse near zero with no alignment to y=x. Panel B: bar chart of in-sample and LOO R² for RidgeCV and OLS, with the hypothesis threshold R²=0.6 marked; all LOO bars are negative, refuting the hypothesis.</artifact-description>
 </artifact>
 </artifacts>

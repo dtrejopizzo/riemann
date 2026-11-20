@@ -30,22 +30,22 @@ The calibration supports the research hypothesis in a qualified way: some observ
 </artifact>
 <artifact>
 <file-name>cache/zeta_zeros_5000.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle file containing the first 5000 zeta zero ordinates extracted from the Odlyzko table and used in the Step 0.5 grid calculations. Created directly from cache/odlyzko_zeros1.txt in the notebook workflow.</artifact-description>
 </artifact>
 <artifact>
 <file-name>outputs/step0p5_results.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Serialized Python dictionary containing the full grid of computed observables for Step 0.5 across m ∈ {1,5,20} and δ ∈ {0,10^-3,10^-2,10^-1}. Includes Li coefficients, Jacobi coefficients, H1 persistence values, and metadata for reproducibility.</artifact-description>
 </artifact>
 <artifact>
 <file-name>outputs/detection_power_table.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Tabular summary of the detection-power analysis listing each observable, m value, baseline value, value at δ=0.1, relative change, and the minimum tested δ at which the 5% threshold was exceeded. Generated from the full Step 0.5 results object.</artifact-description>
 </artifact>
 <artifact>
 <file-name>outputs/detection_power_table.md</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Markdown version of the detection-power table for direct inspection outside Python. It was generated from the same pandas DataFrame saved to CSV.</artifact-description>
 </artifact>
 </artifacts>

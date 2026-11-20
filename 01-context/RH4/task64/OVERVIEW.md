@@ -31,12 +31,12 @@ The hypothesis is only partially supported. Projecting per‑peak complex S_k on
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>peaks_features_F1_F12_with_projection_features.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>The 2200×37 main feature table (`peaks_features_F1_F12_normalized_full.csv`) augmented with six new per‑peak features: proj_true_v{1,2,3}_sq (squared magnitudes of complex S_k(t) projected onto the top‑3 eigenvectors of M_true_avg = ½(M_F1+M_F9)) and proj_false_v{1,2,3}_sq (analogous projections onto eigenvectors of M_false_avg = M_F4). Computed using k=1..6 of the complex S_k arrays loaded from the per‑class .npy files. Eigendecomposition via numpy.linalg.eigh on the 6×6 symmetric M_jk = Re((SᵀS̄)/N) matrices.</artifact-description>
 </artifact>
 <artifact>
 <file-name>projection_features_strict_protocol.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two‑panel summary figure: (A) ROC curves on the 1200‑peak Strict‑Protocol test set for baseline log|S_k|_norm vs 2‑evec and 3‑evec log‑projection feature sets; (B) bar chart of held‑out AUCs with 95% bootstrap confidence intervals, including the reported instantaneous‑spectral baseline (0.59) for comparison.</artifact-description>
 </artifact>
 </artifacts>

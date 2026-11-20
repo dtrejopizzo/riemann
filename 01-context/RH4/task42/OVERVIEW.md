@@ -21,17 +21,17 @@ The central result is internally consistent but unfavorable to the hypothesis. T
 <artifacts>
 <artifact>
 <file-name>peaks_features_F1_F12.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Peak-level feature table generated in this run for 11 included classes over t in [10^4, 10^5]. Each row contains the class label, GRH label, class-level GEV shape parameter ξ, and three local peak features (log-amplitude, curvature, roughness) for one of the top 200 detected peaks.</artifact-description>
 </artifact>
 <artifact>
 <file-name>gev_xi_per_class.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV summary of estimated GEV shape parameters ξ per function class, fit from block maxima using the corrected block size 2π/log(T) with T equal to the geometric mean of the analysis window. Created from the grid-evaluated function magnitudes computed in this run.</artifact-description>
 </artifact>
 <artifact>
 <file-name>svm_classification_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Structured JSON summary of SVM validation outputs from this run, including class-held-out AUC, confusion matrix, exploratory held-out variants, and the 1000-replicate bootstrap AUC distribution summary. This file captures the quantitative basis for the conclusion that bootstrap performance does not generalize across unseen classes.</artifact-description>
 </artifact>
 <artifact>

@@ -1,0 +1,22 @@
+{
+  "status": "PASS_ANCHORED_PLANES",
+  "scope": "span(F_3,F_k) for each integer k>=4, common cell coordinates",
+  "mangoldt_scale": "1",
+  "decimal_digits": 100,
+  "fixed_pivot": "[0.0838106638705149725093247684631052028066229751265231602264073 +/- 1.76e-62]",
+  "finite_range": [
+    4,
+    16383
+  ],
+  "finite_count": 16380,
+  "finite_schur_lower": "1/1000",
+  "finite_cross_upper": "[0.113663227318353144883979764165341188873514284764222528264007 +/- 2.44e-62]",
+  "smallest_finite_lower": "[0.0452089647747650454184827578796867120456556090761141827605542 +/- 1.24e-62]",
+  "smallest_finite_index": 5,
+  "tail_start": 16384,
+  "tail_cross_upper": "[0.210070790179618197662020649253263930474613805628491038201676 +/- 5.79e-62]",
+  "tail_schur_lower": "[0.00270647567700233279412513564286278630912778324123373383090342 +/- 1.96e-63]",
+  "certified_tail_schur_lower": "2/1000",
+  "uniform_Rayleigh_lower": "1/50000",
+  "limitation": "no claim for sums involving several distinct moving indices"
+}

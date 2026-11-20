@@ -14,7 +14,7 @@ The "dataset" for v7 is intrinsically computational: cached high-precision lists
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>.prompts/MEMORY.md</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Structured dataset/project description for v7. Records the absence of v6 cached zero lists on disk, the nominal dataset schema (four L-function zero lists, sizes 5000/5000/5000/2000 at mpmath dps=50), the live R2 verification gate result, the installed/missing package inventory, measured mpmath cost calibration, v6 priors embedded in the v7 task statement (Weil HG λ_min, TDA H0 linearity, blind detectors, open ω-class TODO), and engineering caveats (R1/R3/R5/R7/R8 traps, ζ_δ must shift Re(ρ), Kahan summation for S_k). Written as a plain markdown file to seed future exploratory runs.</artifact-description>
 </artifact>
 </artifacts>

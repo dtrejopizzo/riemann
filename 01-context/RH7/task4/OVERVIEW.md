@@ -33,12 +33,12 @@ The corrected zero list resolves the *zero-side* uncertainty but reveals that th
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_quadratic_form_general.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Restored Python module implementing the generalized family-aware Weil explicit-formula engine (ζ and Dirichlet families). Provides `_phi_at_points(t,σ,T₀,J)`, `_g_at_u(u,σ,T₀,J,n)` (Gauss-Hermite-quadrature Fourier kernel of the Hermite-Gauss basis), and `compute_Q(...)`. Recovered verbatim from a prior sub-task task (`a2d36dd2-…`) message stream and written to the workspace because `weil_modular.py` imports from it; without it the L(Δ,s) engine cannot run.</artifact-description>
 </artifact>
 <artifact>
 <file-name>LDelta_trace_residual.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Bar chart of the five trace components (M_zeros, M_polar, M_arch, M_primes, M_arith) for L(Δ,s) at T₀=85.7, σ=2, J=10, X=10⁴, with the falsifying relative residual (8.6e−2) and the T₀=10 machine-precision diagnostic annotated in the figure.</artifact-description>
 </artifact>
 </artifacts>

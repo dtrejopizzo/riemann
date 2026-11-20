@@ -29,12 +29,12 @@ The result contradicts the conjectural mechanism behind the hypothesis. The prop
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>cov_conditional_results.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy archive containing the full computational outputs of this conditional covariance analysis for ζ(s), N=10⁶, K=20 dyadic blocks, t-grid [10⁴, 2·10⁴] with Δt=0.1 (100,001 points): t_grid, |D|, the (M,K) real and imaginary partial-sum block matrices Sre_blocks/Sim_blocks, conditioning indices idxA/idxB, 20×20 covariance matrices Cov_A/Cov_B/Cov_uncond, point-estimate percentages pct_A/pct_B/pct_uncond, B=1000 bootstrap distributions pct_A_boot/pct_B_boot/pct_U_boot, 95% bootstrap CIs ci_A/ci_B/ci_U, and the run parameters (block length L=100, threshB, dt_step). Created with a Numba-JIT Kahan-compensated dyadic engine validated against 50-digit mpmath.</artifact-description>
 </artifact>
 <artifact>
 <file-name>conditional_cov_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final summary figure (two stacked panels). Panel A: bootstrap distributions of % negative off-diagonal Cov(Re S_j, Re S_k) entries for Subset A, Subset B, and unconditional, with the 60% hypothesis threshold and 55% CI-lower-bound threshold annotated. Panel B: heatmap of the 20×20 conditional covariance matrix for Subset A, showing dominance of positive correlations among low-index dyadic blocks.</artifact-description>
 </artifact>
 </artifacts>

@@ -28,12 +28,12 @@ The hypothesis that M_jk tracks multiplicative arithmetic operations is **partia
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>F15_peaks_and_ablation.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive (46 KB) containing the r75-protocol F15 peak data and ablation results: t_peaks_F15 (200,), amp_peaks_F15 (200,), Sk_F15 (200,8 complex), Sk_F9_ablated (200,8 complex; F15-coefficients evaluated at F9 peaks), 8×8 covariance and correlation matrices M_jk for F15, F9, and F9_ablated, plus the empirical and predicted Δ matrices in both forms. Generated with finufft type-3 peak finding (Δt=0.05 + 0.001-refinement), Numba+Kahan critical-line stratified sums, N=10⁶, t∈[10⁴,2·10⁴].</artifact-description>
 </artifact>
 <artifact>
 <file-name>F15_F9_ablation_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel figure summarizing the arithmetic-ablation test: (A) side-by-side heatmaps of Δ_empirical = M^corr(F15)−M^corr(F9) and Δ_predicted (χ₅-ablation) for k,j ∈ {1,…,6}, sharing color scale; (B) scatter of vectorized 6×6 upper-triangle entries (n=21) of Δ_predicted vs Δ_empirical, with linear fit slope ≈ 0.37, cosine similarity 0.754, and Pearson r = 0.811 (p = 8.3×10⁻⁶).</artifact-description>
 </artifact>
 </artifacts>

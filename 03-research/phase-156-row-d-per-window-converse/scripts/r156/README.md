@@ -19,7 +19,7 @@ all other terms are exact closed forms evaluated at 30 digits.
 Validation: `r156_green_matrix.py 0.5493061443 20 --noprimes` reproduces the P47 Galerkin value
 lambda^{inf,P}(1/2 log 3) ~ +0.083 (P47 after cor:Tarch), and with primes lambda_min(A_T|P_T) ~ 9.5e-4 (P47: 9.89e-4 upper bound at 120 modes).
 
-## Audit re-verification (R156_004, hostile audit of R156_001)
+## Audit re-verification (R156_004, independent audit of R156_001)
 
 Outward-rounded mpmath interval arithmetic (`iv`, 40-50 digits) with exact sympy closed forms. These are the
 **certificates of record** for the two load-bearing witnesses. Each script runs in about 1 s, one at a time.

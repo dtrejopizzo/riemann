@@ -349,8 +349,8 @@ complex graph algebra cannot meet the integral-contact contract.
 
 ## Execution plan after the audit
 
-See the [A–B–C–D closure plan](../../05-meta-and-planning/ABCD-CLOSURE-PLAN/PLAN.md)
-and its [first campaign](../../05-meta-and-planning/ABCD-CLOSURE-PLAN/FIRST_CAMPAIGN.md).
+See the [A–B–C–D closure plan](../../../../../05-meta-and-planning/ABCD-CLOSURE-PLAN/PLAN.md)
+and its [first campaign](../../../../../05-meta-and-planning/ABCD-CLOSURE-PLAN/FIRST_CAMPAIGN.md).
 These specify proposed work; no additional row is closed by the plan.
 
 ## Files

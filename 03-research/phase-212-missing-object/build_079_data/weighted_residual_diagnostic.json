@@ -1,0 +1,66 @@
+{
+  "status": "NUMERICAL_ONLY",
+  "full_sign_certificate": false,
+  "records": [
+    {
+      "parity": "even",
+      "degree": 111,
+      "block_order": 160,
+      "outer_order": 256,
+      "rho": 3.566,
+      "minimum": 4.795265601821587e-12,
+      "negative_count": 0,
+      "first_eigenvalues": [
+        4.795265601821587e-12,
+        4.5294655023769467e-07,
+        0.002617860071969079,
+        0.6115970471050015
+      ]
+    },
+    {
+      "parity": "odd",
+      "degree": 111,
+      "block_order": 160,
+      "outer_order": 256,
+      "rho": 3.566,
+      "minimum": 1.0566682150309742e-09,
+      "negative_count": 0,
+      "first_eigenvalues": [
+        1.0566682150309742e-09,
+        4.6769231525896334e-05,
+        0.08239409975785111,
+        0.7786436591233077
+      ]
+    },
+    {
+      "parity": "even",
+      "degree": 159,
+      "block_order": 192,
+      "outer_order": 128,
+      "rho": 1.573,
+      "minimum": 5.191248135483454e-12,
+      "negative_count": 0,
+      "first_eigenvalues": [
+        5.191248135483454e-12,
+        4.892196283237765e-07,
+        0.002743064198254928,
+        0.6150981220205732
+      ]
+    },
+    {
+      "parity": "odd",
+      "degree": 159,
+      "block_order": 192,
+      "outer_order": 128,
+      "rho": 1.573,
+      "minimum": 1.1105606129959987e-09,
+      "negative_count": 0,
+      "first_eigenvalues": [
+        1.1105606129959987e-09,
+        4.8738150157563073e-05,
+        0.08634417827278322,
+        0.7835711163167838
+      ]
+    }
+  ]
+}

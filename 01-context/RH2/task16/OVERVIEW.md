@@ -13,12 +13,12 @@ The results provide definitive quantitative evidence that the composite-class su
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>analysis_summary.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Comprehensive text summary of the S_k covariance structure analysis, including methodology, key quantitative findings (Frobenius norms, correlation statistics, permutation test results), and interpretation of the structured dependencies in ζ(s) versus the random multiplicative function. This document synthesizes all major results for reference.</artifact-description>
 </artifact>
 <artifact>
 <file-name>final_figure.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel figure showing (A) bar chart comparing adjacent S_k correlations between F_zeta and F_rand for omega class pairs (k,k+1), highlighting significantly stronger correlations in ζ(s) with statistical significance markers, and (B) permutation test histogram showing the null distribution of differences in off-diagonal Frobenius norm with the observed difference marked as a red dashed line far in the tail (p<0.001, Z=3.30), demonstrating the statistical significance of the structured correlation difference.</artifact-description>
 </artifact>
 </artifacts> DISCRETIONARY DECISIONS:

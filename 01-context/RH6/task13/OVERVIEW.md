@@ -32,7 +32,7 @@ The hypothesis is confirmed in both qualitative and quantitative respects: the s
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ancova_zeta_vs_ldh_summary.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Per-ω-class ANCOVA summary comparing ζ vs L_DH (this analysis) side-by-side with the prior L(Δ) vs L_DH results. Columns include omega_class_k, slope_zeta, slope_L_DH, diff (L_DH − ζ), p_inter (ζ vs L_DH), R², plus the corresponding L(Δ) slopes/diffs/p-values from `ancova_omega_class_summary.csv`. Produced via statsmodels OLS on `log M_k ~ log log N * L_function` for k ∈ {1,2,3,4} using the 4-point N-series in `omega_class_moments_N1e6.csv`.</artifact-description>
 </artifact>
 </artifacts>

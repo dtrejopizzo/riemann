@@ -23,7 +23,7 @@ The main hypothesis was not supported quantitatively. The tuned multiplicative r
 <artifacts>
 <artifact>
 <file-name>Mjk_resonator_analysis.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the empirical 200-peak and top-50 M_jk matrices, the tuned resonator theoretical matrix, eigendecompositions, and summary similarity metrics. It was created directly from local zeta peak files `Sk_re.npy`, `Sk_im.npy`, `t_peaks.npy`, and `absD_peaks.npy` using NumPy-based exact summation formulas.</artifact-description>
 </artifact>
 </artifacts>

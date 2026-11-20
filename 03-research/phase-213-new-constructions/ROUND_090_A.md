@@ -1,0 +1,7 @@
+# Detección simultánea en una familia de pasos
+
+Fijar a≥1/2, una paridad de 088 sin amortiguación y una sucesión creciente r_n→∞ tal que r_(n+1)/r_n→1. Sea F(T) la energía normalizada de esa paridad, continua por convergencia local uniforme de las series de 088. Si el conjunto de h>0 tales que F(r_n h)≥0 eventualmente es no magro en (0,∞), vale el signo global. El umbral en n puede depender de h. Recíprocamente bajo el signo todos los pasos sirven. Se admite, por ejemplo, r_n=n^k para cualquier entero fijo k≥1.
+
+En efecto el conjunto de pasos buenos es la unión numerable de los cerrados E_N=∩_{n≥N}{h:F(r_n h)≥0}. Si todos carecieran de interior, la unión sería magra por definición. Algún E_N contiene por tanto [u,v] con 0<u<v. Para n grande, r_(n+1)u≤r_n v, así que los intervalos [r_n u,r_n v] cubren una semirrecta. En ella F≥0 y aplica 088. En particular si falla el signo, para un conjunto residual de pasos hay infinitas muestras estrictamente negativas. El mismo conjunto residual puede servir simultáneamente para ambas paridades y para una lista numerable prefijada de valores de a y sucesiones admisibles, tomando la intersección.
+
+**Alcance.** Es un lema topológico sobre funciones continuas aplicado a la equivalencia espectral de 088. Una lista numerable de pasos prefijados sigue siendo magra, incluso si es densa. El cuarteto de selección 089 explica el riesgo de una sola rejilla. Para usar el criterio en dirección de prueba falta una razón aritmética para obtener un conjunto no magro de pasos buenos.

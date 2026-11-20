@@ -26,12 +26,12 @@ The hypothesis predicted that a correctly-implemented L(Δ) arithmetic side woul
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_modular.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>New Python module implementing a degree-2 modular family for the Weil quadratic-form engine. Reuses `_phi_at_points` and `_g_at_u` from `weil_quadratic_form_general.py`, computes τ(n) via the Δ q-expansion η-product, builds prime-power coefficients via the Satake recurrence c_k(p)=a_p c_{k-1}−c_{k-2}, assembles M_polar (log N − 2 log 2π)/(2π)·I, M_arch from 2·Re ψ(k/2+ir), and M_primes via Σ c_k(p) log p / √p^k · Re g_ij(k log p)/π. Sign and normalization conventions match the existing Dirichlet path but produce a ~4% trace residual for L(Δ) — known bug to be resolved.</artifact-description>
 </artifact>
 <artifact>
 <file-name>cache/LDelta_zeros_fast_dps40.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle list of 65 high-precision (dps=40) zeros of L(Δ, s) in analytic normalization, spanning t ∈ [9.222379399921103, 105.170905016847]. Computed via Λ(Δ, t) sign-change scan + bisection using a custom finder (n_taus=300, y_max=12, step=0.3). First zero matches the §4 validation gate (9.2223793999211025) to 14 digits. Sufficient to cover the Hermite window at T₀=85.7, σ=2, J=10.</artifact-description>
 </artifact>
 </artifacts>

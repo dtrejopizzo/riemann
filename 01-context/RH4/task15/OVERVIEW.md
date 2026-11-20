@@ -26,12 +26,12 @@ The toy resonance model — the simplest possible one with a flat resonator — 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>toy_resonance_M_theory.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy archive containing the theoretical 8×8 M_jk matrix from the toy resonance model (R(t)=Σ_{m≤100} m^{-it}, N=10⁶), its unnormalized version, eigenvalues, eigenvectors, PC1, and parallel quantities for the empirical zeta M_jk reconstructed from Sk_re/Sk_im, plus the cosine similarity between PC1s. Computed via Numba-parallel enumeration of coprime-pair MVT contributions over ω-strata sieved up to N=10⁶.</artifact-description>
 </artifact>
 <artifact>
 <file-name>toy_resonance_vs_empirical.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel figure: (A) cumulative variance of empirical (peak-conditioned) and toy-resonance theoretical M_jk eigenvalues with the 90% hypothesis threshold marked; (B) bar comparison of PC1 entries across the 8 ω-strata showing both leading eigenvectors are all-positive and peak at ω=3 with cosine similarity 0.846.</artifact-description>
 </artifact>
 </artifacts>

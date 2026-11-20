@@ -28,7 +28,7 @@ This analysis confirms the research hypothesis: the Riemann zeta function exhibi
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>zeta_gev_analysis_results.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>
 Complete tabulated results of the GEV analysis for the Riemann zeta function across N ∈ {10⁴, 5×10⁴, 10⁵, 2×10⁵, 5×10⁵, 10⁶}. Contains columns: N (truncation parameter), xi (GEV shape parameter), xi_ci_lower and xi_ci_upper (95% bootstrap confidence interval bounds), location and scale (GEV distribution parameters), max_magnitude (maximum |D_ζ(t; N)| on the grid), mean_magnitude (mean |D_ζ(t; N)|), max_block_max and mean_block_max (statistics of the 100 block maxima). All values computed using 10,000-point grids in t ∈ [N, 2N], 100 blocks, and 500 bootstrap resamples with seed=42.
 </artifact-description>

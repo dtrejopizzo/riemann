@@ -27,17 +27,17 @@ The result formally validates `weil_modular.compute_Q_modular` as a correct degr
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>tau_at_primes_10M.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle (≈15 MB) of a dict mapping each of the 664,579 primes p ≤ 10⁷ to the exact integer τ(p). Produced in-session by computing Δ(q)/q = (Π(1−qⁿ))²⁴ mod q^{N+1} for N=10⁷ via Euler-pentagonal expansion (5,164 terms) followed by repeated squaring under 5 NTT primes (1107296257, 1711276033, 1811939329, 2013265921, 2113929217) with length-2²⁵ vectorised radix-2 DIT NTTs, and signed-CRT reconstruction (CRT modulus ≈1.5×10⁴⁶). Validated to 12/12 exact matches against `tau_at_primes_300k.pkl` (incl. p=299993, τ≈5.9×10²⁹). Deligne bound |τ(p)|≤2p^{11/2} satisfied for first 1000 primes.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_quadratic_form_general.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Reconstruction of the missing engine helpers required by `weil_modular.py`: `_phi_at_points` evaluates the L²(R,dt)-orthonormal Hermite–Gauss basis φⱼ(t)=(1/√σ)H_j((t−T₀)/σ)e^{−((t−T₀)/σ)²/2}/√(√π·2ʲ·j!) using a stable normalised three-term recurrence; `_g_at_u` evaluates g_ij(u)=∫φᵢφⱼ e^{iut}dt by Gauss–Hermite quadrature (default 200 nodes). Verified by orthonormality (Gram matrix ≈ I) and g(0)=I to machine precision.</artifact-description>
 </artifact>
 <artifact>
 <file-name>L_Delta_validation_X_sweep.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final summary figure: log-log plot of η(X) for X∈{10⁴,…,10⁷} at T₀=46.13, σ=1, J=10 with the 61-zero reliable L(Δ,s) list, super-polynomial fit log₁₀ η≈2.62−0.357(log₁₀X)² overlaid, validation gate η=10⁻¹² and X=10⁷ marked, and η(10⁷)=9.21×10⁻¹⁵ annotated.</artifact-description>
 </artifact>
 </artifacts>

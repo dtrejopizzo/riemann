@@ -23,22 +23,22 @@ The data refute the *quantitative* form of the hypothesis (slow polynomial term 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>tau_at_primes_300k.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle of dict mapping each prime p ≤ 3×10⁵ (25,997 entries) to the exact integer τ(p). Computed via 1728·Δ = E₄³ − E₆² using divisor-sieved σ_3,σ_5 and Kronecker substitution with gmpy2 GMP multiplication. Validated against Hecke relation τ(p²)=τ(p)²−p¹¹ (30/30 pass) and direct comparison to OEIS A000594 for small p. Used as input to weil_modular.compute_Q_modular for the X-sweep.</artifact-description>
 </artifact>
 <artifact>
 <file-name>L_Delta_eta_sweep_300k.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV table of the X-sweep results: columns X, tr(M_zeros), tr(M_arith), η, λ_min, for 17 values of X from 500 to 3×10⁵ at fixed (T₀=46.13, σ=1, J=10).</artifact-description>
 </artifact>
 <artifact>
 <file-name>eta_sweep_results.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle of raw (X, tr_M_zeros, tr_M_arith, η, λ_min) tuples from the convergence sweep; the same data as the CSV in Python-native form for reuse.</artifact-description>
 </artifact>
 <artifact>
 <file-name>L_Delta_eta_fit_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final summary figure: log-log plot of η(X) raw points, right-running envelope, and the fitted super-polynomial model 8.54·exp(−0.121·log²X), with the η=10⁻¹² target line. Shows extrapolated crossing at X ≈ 6×10⁶.</artifact-description>
 </artifact>
 </artifacts>

@@ -30,12 +30,12 @@ The Front I inverse spectral picture supports the qualitative hypothesis: the sm
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>front1_summary_table.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV summary of Front I log-quadratic model fits for b_n on the 5-function N=5000 panel (L(Δ,s) restricted to 128 coefficients from partial N=1298 list). Columns: function, N_coefs, selected model (AIC and BIC), fitted A/B/C under uniform and 1/|ρ|² weights, percent changes in parameters between weights, and normalized residual standard deviation under each weight. Produced by fitting candidate models {A+B·log n, A+B·log n + C·log² n} on n ∈ [5,N] via scipy.optimize.curve_fit and computing AIC/BIC.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front1_bn_logquad_fits.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final summary figure (2 stacked panels, A: uniform weight, B: 1/|ρ|² weight). Each panel overlays the Jacobi b_n sequences for all five control families together with their log-quadratic fits (dashed). The x-axis is log-n; the figure visualizes both the shared log-quadratic envelope and the differential sensitivity to spectral re-weighting that distinguishes L_DH / L(Δ,s) from ζ / L(χ₄ mod 5).</artifact-description>
 </artifact>
 </artifacts>

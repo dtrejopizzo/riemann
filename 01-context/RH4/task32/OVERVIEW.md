@@ -21,17 +21,17 @@ A persisted coefficient store for modular and symmetric-power L-functions up to 
 <artifacts>
 <artifact>
 <file-name>coeffs_F9_N1e6.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing Ramanujan Delta Dirichlet coefficients a_n for n=1..10^6, plus normalized coefficients lambda_n=a_n/n^(11/2), generated with cypari2/PARI mfcoefs and stored with exact integer values in a NumPy object array.</artifact-description>
 </artifact>
 <artifact>
 <file-name>coeffs_F10_N1e6.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing coefficients a_n for the level-11 weight-2 newform 11.2.a.a for n=1..10^6, plus normalized coefficients lambda_n=a_n/sqrt(n), generated with cypari2/PARI mfcoefs and stored as int64.</artifact-description>
 </artifact>
 <artifact>
 <file-name>coeffs_F11_N1e6.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing coefficients b_n for Sym^2(Delta) for n=1..10^6, derived from F9 using b_p=tau(p)^2-p^11, a prime-power Euler-factor recurrence, and multiplicativity; exact values are stored in a NumPy object array, together with normalized coefficients lambda_n=b_n/n^11.</artifact-description>
 </artifact>
 </artifacts>

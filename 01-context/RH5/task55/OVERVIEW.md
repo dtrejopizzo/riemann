@@ -42,27 +42,27 @@ Within the subset I could validate, the zeta results are qualitatively consisten
 <artifacts>
 <artifact>
 <file-name>abs_zeta_grid.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy array of sampled values |zeta(1/2+it)| on the uniform grid t = 0.2, 0.4, ..., 4000.0. Created with mpmath.siegelz at low working precision for numerical quadrature of central-line moments.</artifact-description>
 </artifact>
 <artifact>
 <file-name>abs_lchi5_grid.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy array of sampled values from the initial Dirichlet-L run on t = 0.2, 0.4, ..., 4000.0. This artifact was generated using an incorrect modulo-5 character and should be treated as invalid for scientific conclusions.</artifact-description>
 </artifact>
 <artifact>
 <file-name>abs_ldh_grid.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy array of sampled values |L_DH(1/2+it)| on the uniform grid t = 0.2, 0.4, ..., 4000.0. Created from the Hurwitz-zeta representation of the Davenport–Heilbronn function for numerical quadrature of central-line moments.</artifact-description>
 </artifact>
 <artifact>
 <file-name>lf_helpers.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Python helper module used to batch-evaluate zeta, the initial Dirichlet L-function, and L_DH on grid points for multiprocessing-based sampling. It includes the initial incorrect Dirichlet-character specification and is retained only for reproducibility of the partial run.</artifact-description>
 </artifact>
 <artifact>
 <file-name>lf_helpers2.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Partial helper module created to recompute the modulo-5 Dirichlet L-function using the corrected real quadratic character [0,1,-1,-1,1]. The corrected recomputation did not complete before runtime expiration.</artifact-description>
 </artifact>
 </artifacts>

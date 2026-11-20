@@ -1,0 +1,22 @@
+# El costo de altura usa la norma del peine comprimido
+
+Para cada κ>1 fijo y T suficientemente grande, la verificación de los ceros hasta G=exp(κ exp T) implica positividad estricta de W_T en todo su dominio. Así en 176 se mejora el coeficiente suficiente 4 a 1. Equivalente en la dirección de uso: para ε>0 fijo y G suficientemente grande, verificar hasta G basta para 0<T≤log log G−ε. Es una ley asintótica condicional. No se evalúa una ventana nueva con el G conocido en esta ronda.
+
+**Norma exacta en primer orden.** En el intervalo [−U,U] llamar Π_U a la suma de las traslaciones comprimidas a derecha e izquierda por log n, cada una de peso Λ(n)/√n. Esta convención da el peine completo de (form) del paper, con multiplicador 2Λ(n)cos(τ log n)/√n antes de comprimir. Para h(t)=cosh(t/2), L(y)=Σ_{n≤y}Λ(n)/n, ψ(y)=Σ_{n≤y}Λ(n), y y_±=exp(U±t), se obtiene casi por doquier
+    Π_U h/h = [e^(t/2)L(y_+)+e^(−t/2)ψ(y_+)
+                +e^(−t/2)L(y_−)+e^(t/2)ψ(y_−)]/[e^(t/2)+e^(−t/2)].
+Los términos L cuestan O(U+1) por Chebyshev. Sustituir ψ(y) por y da exactamente exp U en los otros dos. La sustitución cuesta o(exp U) uniformemente en t: dado ε>0, en y≥Yε el error es ≤εy por PNT, mientras en y<Yε cada error ponderado en el cociente cuesta O(Yε), fijo. Por el test de Schur para un núcleo simétrico de pesos positivos la norma en L² es ≤sup Π_U h/h (también se deduce aplicando 2ab≤a²+b² con los pesos h en cada traslación). El cociente de Rayleigh de h da el inferior por el ínfimo de la misma razón. En definitiva ||Π_U||=(1+o(1))exp U. El factor 4 de 176 procedía de tomar la masa de las traslaciones completas incluso en los extremos del intervalo.
+
+**Transferencia a la forma.** Fijar 1<r<κ y poner R=exp(r exp T), m el primer entero par ≥4000TR, k un entero fijo con 2k(κ−r)>r, H=100km T², u(τ)=1−sinc(τ/H)^(2k), φ=1−u^m. Definir ĝ=u^(m/2)f̂. El factor es un polinomio en sinc, y g tiene soporte en [−U,U], U=T+km/H=T+1/(100T²). El dominio logarítmico se conserva. Sea μ la extensión atómica con corrección continua de 172 exacta en |t|<2U+1. Por linealidad en la medida y por la identidad de la forma en ambas ventanas,
+    W_T(f)=W_U(g)+∫φ|f̂|² dμ.
+Aquí se usa que el filtro es real y par en el eje real y que m es par. En particular se puede aplicar la cota del peine comprimido directamente a g, evitando una cota puntual para la extensión aritmética.
+
+Por la definición de W del paper y Plancherel,
+    W_U(g) ≥ (1/(2π))∫ [m_arch(τ)−||Π_U||] u^m |f̂|² dτ − 2|A(g)B(g)|.
+Para |τ|≥R el corchete supera 2 para T grande porque log R=r exp T y ||Π_U||=(1+o(1))exp T. En toda la recta está acotado por abajo por −O(exp T). Reservar la mitad de su valor en |τ|>G/2. El argumento de incertidumbre de 175 da η≥exp(−1800(1+TR)); usando a=kR²/(3H²), u≤a en |τ|≤R, u≥2a en |τ|≥2R como en 176. La contribución integrada después de la reserva es al menos a^m[2^mη−O(exp T)]||f||², con el paréntesis mayor que dos para T grande.
+
+Los dos momentos polares de g son los de f multiplicados por u(i/2)^(m/2) por continuación entera y paridad. Por Cauchy–Schwarz 2|A(g)B(g)|≤O(exp T)|u(i/2)|^m||f||². Para k fijo, |u(i/2)|=O_k(H^(−2)), de modo que su razón a a es O_k(R^(−2)). Esto permite pagar el término polar con o(a^m)||f||².
+
+**Cierre del condicional.** El término atómico de φμ es positivo. Para el continuo usar exactamente el corte espectral de 176 con U en lugar de T y N=floor(G/200). En |τ|≤G/2 el costo es exp(−cG), frente a a^m≥exp(−O_k(TR log T)). Este último exponente en módulo es o(G) por r<κ. En |τ|>G/2 el techo de |φC| es O((1+U)exp(U)log(3+G)m(2H/G)^(2k)), cuyo logaritmo es ≤[r−2k(κ−r)+o(1)]exp T. Tiende a cero y se absorbe en la reserva puntual del corchete multiplicada por u^m/(2π), pues allí φ=o(1). Queda un margen estrictamente positivo uniforme en f. La inclusión de soportes extiende la conclusión a ventanas menores.
+
+**Cotejo.** 081 ya demostró la misma asintótica de la norma con el mismo peso cosh y PNT. La aplicación al filtro cuadrado y a sus momentos polares es la aportación de 177. El paper ya comprime el peine y contiene cotas locales de su norma (prop:coer-prime); 176 ya daba la ley doblemente exponencial usando A_T. El paso específico consiste en hacer actuar el filtro como cuadrado sobre una prueba todavía de soporte finito y pagar aparte sus dos momentos de Tate. El cálculo de Rayleigh explica también por qué mejorar sólo la norma absoluta del peine no puede bajar su coeficiente principal 1. Esto no es una cota inferior para la altura de verificación necesaria para el signo.

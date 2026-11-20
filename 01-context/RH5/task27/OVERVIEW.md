@@ -85,12 +85,12 @@ This workspace currently contains the project’s governing data specification r
 <artifacts>
 <artifact>
 <file-name>dataset_description_overview.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A 300-dpi summary figure created in Python/matplotlib that consolidates the dataset/specification file identity, control-panel definitions, validation gate, parameter grids, environment status, and workflow notes for future exploratory runs.</artifact-description>
 </artifact>
 <artifact>
 <file-name>dataset_summary_notes.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A short locally saved text note summarizing that the current on-disk dataset is a binding Markdown specification rather than the actual zero-list data and listing the primary artifacts produced during this pass.</artifact-description>
 </artifact>
 </artifacts>

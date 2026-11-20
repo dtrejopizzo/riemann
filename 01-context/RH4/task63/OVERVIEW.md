@@ -30,7 +30,7 @@ For F12 the ablation model worked (cos ≈ 0.97) because F12 is constructed by l
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>Delta_F10_ablation_results.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy .npz archive with the F10 vs ζ ablation experiment outputs at N=10⁶ over the 200 ζ-peaks: M_zeta and M_F10 (8×8), M_zeta_ablated_p11 (8×8 ζ minus all multiples of 11), Δ_empirical = M_F10 − M_zeta, Δ_ablation = M_zeta_ablated − M_zeta, complex Sk_zeta, Sk_F10, Sk_zeta_ablated_p11 (each 200×8), t_peaks (200), and summary scalars cosine_similarity = −0.1212, pearson_r = −0.1053, frob_emp = 2.84×10⁵, frob_abl = 23.14. Created with a Numba-jitted Kahan-compensated complex summation over ω(n)-stratified Dirichlet partial sums; verified by reproducing the saved Sk_zeta and M_zeta to machine precision.</artifact-description>
 </artifact>
 </artifacts>

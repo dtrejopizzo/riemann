@@ -32,17 +32,17 @@ The hypothesis as stated — "Executing the script will successfully complete th
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_02500.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Numpy object-array of the first 2,500 critical-line zeros of the Davenport-Heilbronn L-function, computed at 50-decimal precision and stored as decimal strings. Generated from scratch (t=1.0) by running `generate_ldh_zeros_local.py` (a writeable copy of `generate_ldh_zeros.py` with `WORK_DIR` redirected to the current task) in this run. All 2,500 zeros passed the script's strict-monotonicity guard during generation. The final 5,000-zero file `ldh_zeros_5000_dps50.npy` was NOT produced; intermediate checkpoints at every 250 zeros (00250, 00500, … 02500) and their `_meta.json` files reside in `/workspace/e9a6b3ae-12a5-441e-9840-35c70e32d255/checkpoints_ldh/`.</artifact-description>
 </artifact>
 <artifact>
 <file-name>generate_ldh_zeros_local.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Local writeable copy of `generate_ldh_zeros.py` with one edit: `WORK_DIR` updated from the inaccessible prior-task path `/workspace/c7eacfb8-052d-4c79-89db-dce9cc4b7e1d` to the current task's working directory `/workspace/e9a6b3ae-12a5-441e-9840-35c70e32d255`. All other logic (cypari2 lfuninit at T_max=5200, dps_pari=80, grid step h=0.1, anderson/illinois/bisect refinement, every-250 checkpointing, strict-monotonicity guard) is preserved. This is the script that was executed in this task.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_log.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Plain-text log emitted by `generate_ldh_zeros_local.py` recording startup, lfuninit timing, each 250-zero checkpoint (count, t, elapsed, cumulative rate, total Z-evaluations), and minute-level progress entries up to the task's wall-time termination. Useful for benchmarking the t-dependence of L_DH zero-finding throughput.</artifact-description>
 </artifact>
 </artifacts>

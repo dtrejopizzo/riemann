@@ -21,12 +21,12 @@ Within the framework of r45, the refined Weil form (N=10⁵) at J=12 is overwhel
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_sensitivity_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON containing per-β maximum |eigenvalue|, ratio to the r45 GRH baseline (5.31e-40), log₁₀(ratio), and a 3-order-of-magnitude detectability flag for J=12, N=10⁵, T₀=85.6993, σ=2, mp.dps=80. Includes a validation entry showing our reconstruction reproduces r45's anomaly value at β=0.3085 (1.8379186464 vs. 1.8379186463). Computed via mpmath using the closed-form rank-2 anomaly matrix A_ij(β)=φ_i(T₀+iβ)φ_j(T₀+iβ)+φ_i(T₀−iβ)φ_j(T₀−iβ) and mpmath.eig.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_sensitivity_figure.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Log-log plot of |λ_max(Q)| versus β ∈ {10⁻²,…,10⁻⁶} at J=12, N=10⁵, showing the signal (~1.527) sitting ~39 orders of magnitude above the GRH baseline (5.31×10⁻⁴⁰) and the 3-order detectability threshold.</artifact-description>
 </artifact>
 </artifacts>

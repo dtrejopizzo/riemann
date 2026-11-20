@@ -33,12 +33,12 @@ The Hermite–Gauss truncation-noise model derived for degree-1 L-functions in t
 <artifacts>
 <artifact>
 <file-name>universal_noise_floor.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Log–log comparison figure overlaying the empirical L(Δ,s) (degree-2) noise floor η(X) from the 300k-prime sweep, the empirical ζ (degree-1) noise floor, and the theoretical Hermite–Gauss × PNT bound for ζ (all at T₀=46.13, σ=1, J=10). The fitted L(Δ) stretched-exponential A·exp(−α·log²X) and an anchored σ²/8 reference line are shown alongside the fitted α values for each L-function and the theoretical prediction.</artifact-description>
 </artifact>
 <artifact>
 <file-name>L_Delta_universal_noise_floor_fit.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON summary of the L(Δ,s) noise-floor stretched-exponential fits: fit window (10⁴ ≤ X ≤ 10⁵), fitted α = 0.1442 ± 0.0206 with 95% CI, A = 224, R² = 0.907; plus the full X ≥ 10⁴ fit (α = 0.158, R² = 0.956), the reference α values (σ²/8, ζ empirical, ζ theory), and two-sided z-test p-values demonstrating statistical equivalence of all α coefficients.</artifact-description>
 </artifact>
 </artifacts>

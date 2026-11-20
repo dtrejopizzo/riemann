@@ -62,17 +62,17 @@ The evidence supports the research hypothesis in a qualified engineering sense: 
 <artifacts>
 <artifact>
 <file-name>refine_shard_runner.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Standalone subprocess worker written during the search to refine approximate Ramanujan Δ zeros to 80-digit precision using PARI `lfunhardy` and `solve`. It writes one checkpointed TSV line per completed zero so progress survives interruption. The script was created from the documented r37/r38 architectural pattern because the corresponding refinement script was not present in the workspace.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldelta_refine_shards/approx_shard_0.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>One of eight cost-balanced shard files containing `(original_index, approximate_zero_string)` pairs partitioned from `ldelta_zeros_N3405_approx_dps38.npy` using weights proportional to `T^2.31`. These pickles were used as inputs to independent refinement subprocesses. Equivalent shard files `approx_shard_1.pkl` through `approx_shard_7.pkl` were also created in the same directory.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldelta_refine_shards/refined_shard_0.tsv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Checkpointed partial refinement output from one subprocess worker, with tab-separated fields `original_index`, `refined_zero_or_error`, and `elapsed_seconds`. Equivalent partial outputs `refined_shard_1.tsv` through `refined_shard_7.tsv` were also produced. Together they document that 1907 of 3405 refinements had completed by the last successful poll.</artifact-description>
 </artifact>
 <artifact>

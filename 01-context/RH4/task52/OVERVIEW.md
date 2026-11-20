@@ -22,7 +22,7 @@ Within the available data and arithmetic baselines, the amplification process ap
 <artifacts>
 <artifact>
 <file-name>A_jk_matrices_and_PCA.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the 11 computed M_jk matrices, normalized amplification matrices A_jk, baseline diagonals D_k, PCA components, explained-variance ratios, and class projections. It was created directly from the local Fx.npy peak-sum arrays and coefficient files using numpy and scikit-learn.</artifact-description>
 </artifact>
 </artifacts>

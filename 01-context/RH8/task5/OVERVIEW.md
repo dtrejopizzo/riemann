@@ -36,22 +36,22 @@ The hypothesis is decisively supported. At every (T0, J) cell on the focused σ=
 <artifacts>
 <artifact>
 <file-name>engine_implementation.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Reimplemented L(Δ,s) Weil quadratic-form engine. Uses physicists' Hermite-Gauss basis, exact analytic Fourier transform of φ_j(r)φ_k(r) via the Hermite-product identity, Gauss-Hermite quadrature for the archimedean ψ(6+ir) integral, and Satake recurrence c_k = a_p c_{k-1} − c_{k-2} for λ_Δ(p^k). Validated against lambda_min_LDelta_sweep.pkl: reproduces all 14 σ=1 X=10⁵ cells to ≥4 sig figs.</artifact-description>
 </artifact>
 <artifact>
 <file-name>engine_validation.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Validation report documenting the engine reproducing tr(M_zeros) exactly and matching the full σ=1 X=10⁵ sweep cell-by-cell, with the trace gate met everywhere except the deepest σ=2 ref cell where double-vs-mpmath precision accounts for the difference.</artifact-description>
 </artifact>
 <artifact>
 <file-name>LDelta_X1e7_results.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle of new X=10⁷ results for L(Δ,s) at σ=1, T0∈{30, 85.7}, J∈{4,8,12,16,20,24,28}. Contains λ_min, tr(M_zeros), tr(M_arith), trace residual, and five smallest eigenvalues per cell.</artifact-description>
 </artifact>
 <artifact>
 <file-name>comparison_table.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Comparison table of λ_min and trace residual at X=10⁵ (from lambda_min_LDelta_sweep.pkl) vs the new X=10⁷ computation, across the σ=1 focused grid (T0∈{30,85.7}, J∈{4,8,12,16,20,24,28}).</artifact-description>
 </artifact>
 </artifacts>

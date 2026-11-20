@@ -31,37 +31,37 @@ The completed Bottleneck Ledger strictly bounds what numeric simulations can del
 <artifacts>
 <artifact>
 <file-name>bottleneck_ledger.md</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>The canonical Markdown table (R10) documenting the strongest proven statement, missing lemma, and plausible theoretical route for every analytical front across the control panel.</artifact-description>
 </artifact>
 <artifact>
 <file-name>_final_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A 300-dpi two-panel summary figure overlaying Jacobi $b_n$ fits and a heatmap of the Front III H0 bottleneck distances.</artifact-description>
 </artifact>
 <artifact>
 <file-name>_final_summary.pdf</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A vector-graphics (PDF) version of the two-panel summary figure overlaying Jacobi $b_n$ fits and the Front III H0 bottleneck distances.</artifact-description>
 </artifact>
 <artifact>
 <file-name>_supplementary_4panel.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A 300-dpi four-panel supplementary figure detailing Front I (Jacobi), Front II.5 (Li), Front II.6 (Gram $\lambda_{min}$), and Front III (Wasserstein-1 permutation test $p$-values).</artifact-description>
 </artifact>
 <artifact>
 <file-name>_supplementary_4panel.pdf</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A vector-graphics (PDF) version of the four-panel supplementary figure detailing Front I (Jacobi), Front II.5 (Li), Front II.6 (Gram $\lambda_{min}$), and Front III (Wasserstein-1 permutation test $p$-values).</artifact-description>
 </artifact>
 <artifact>
 <file-name>front3_bottleneck_distance_matrix.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A CSV matrix recording the exact pairwise H0 bottleneck distances between the $Re(\rho)$ distributions of the five main functions.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front3_perm_pvalues.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A CSV matrix of exact $p$-values derived from a 500-iteration Wasserstein-1 permutation test on the $Re(\rho)$ values.</artifact-description>
 </artifact>
 </artifacts>

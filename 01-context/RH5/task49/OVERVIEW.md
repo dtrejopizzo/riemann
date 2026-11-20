@@ -29,7 +29,7 @@ The Odlyzko-seed refinement strategy is methodologically clean: seeds are within
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>zeta_refined_partial.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy array of 4705 string-encoded imaginary parts of the first 4705 nontrivial Riemann ζ zeros, refined to dps=50 precision via `mpmath.findroot(mpmath.siegelz, seed)` starting from Odlyzko `zeros1` table seeds. Strings preserve the full 50-digit precision; reload with `np.load(...)` then `mpmath.mpf(s)` per element. This is a partial cache of the N=5000 target (94.1% complete); the remaining 295 zeros and the ζ_δ perturbation list were not produced due to runtime exhaustion.</artifact-description>
 </artifact>
 </artifacts>

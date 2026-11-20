@@ -26,12 +26,12 @@ The completed evidence supports the correctness of the from-scratch implementati
 <artifacts>
 <artifact>
 <file-name>validation_results.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Table of 150 completed D_F validation comparisons across 10 random t-values, 3 truncation levels, and 5 function classes. It includes mpmath and from-scratch real/imaginary parts, absolute and relative errors, and digit-agreement metrics. The file was generated directly from the notebook computations in this run.</artifact-description>
 </artifact>
 <artifact>
 <file-name>validation_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final two-panel summary figure showing absolute-error digit agreement by function and truncation level, and the relationship between relative-digit agreement and |D_F(t;N)|. The plot was generated from validation_results.csv at the end of the analysis.</artifact-description>
 </artifact>
 </artifacts>

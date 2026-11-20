@@ -14,12 +14,12 @@ The analysis reveals that N-dependent destructive interference dynamics, quantif
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>sk_covariance_classification.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Comprehensive classification results for all 8 L-function classes containing the two primary metrics (CS_N: cancellation strength as sum of negative off-diagonal covariance terms at N=10^6; CG_N: percentage change in total off-diagonal sum from N=10^5 to N=10^6), intermediate quantities (sums of off-diagonal terms at both N values, counts of negative terms, sums of negative terms), RH status labels, and Euclidean distances to the RH-satisfying cluster centroid in scaled (CS_N, CG_N/100) feature space. Generated via numpy covariance matrix computation on 2000-point time series of Re(S_k(t;N)) for k=1..6 over t∈[10000,20000] at N∈{10^5,10^6}.</artifact-description>
 </artifact>
 <artifact>
 <file-name>final_classification_figure.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Publication-quality 2D scatter plot displaying all 8 L-function classes in (CS_N, CG_N) feature space with color-coded RH status (red circles for RH-satisfying, blue square for RH-violating L_DH, gray triangles for unknown), annotated function IDs, 2σ ellipse highlighting the RH-satisfying cluster, reference lines at CG_N=0 and CS_N=0, and text box summarizing the three identified dynamical regimes (progressive cancellation, stable pattern, cancellation decay). Illustrates the primary finding that L_DH overlaps with RH-satisfying cluster while Liouville and Möbius occupy distinct regions.</artifact-description>
 </artifact>
 </artifacts>

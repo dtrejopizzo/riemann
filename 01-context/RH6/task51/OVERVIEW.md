@@ -27,12 +27,12 @@ This experiment cleanly isolates the role of basis placement in the Weil-form sp
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_J_sweep_zeta_oncenter_gamma23_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Full record of the on-center Weil J-sweep experiment: parameters (T₀=γ₂₃, σ=2.0, β=0.3085, half-window=40, prime_bound=10⁵, dps=80, 33 zeros in window), λ_min/λ_max for J ∈ {4,8,12,16,20} for both the shifted ζ and the critical-only control, power-law fits over J=8..20 and J=8..16, local log-log slopes, and a direct numerical comparison against r55. Produced by reconstructing the M_zeros − M_arith Weil form with the validated r55 Gaussian-monomial basis recipe at mpmath dps=80.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_oncenter_vs_offcenter.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: |λ_min| vs J on log scale, comparing r55 (T₀=85.6993, off-center, blue solid) with on-center (T₀=γ₂₃, red solid) for both the shifted system and the critical-only control (dashed). Panel B: ratio |λ_min|(shift) / |λ_min|(crit-only) vs J, showing the displacement signal grows ~13 orders of magnitude in r55 but only ~7 orders (and non-monotonically) in the on-center case.</artifact-description>
 </artifact>
 </artifacts>

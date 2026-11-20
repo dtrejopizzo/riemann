@@ -1,0 +1,7 @@
+{
+  "status": "PASS_NUMERICAL_FORMULA_CHECK",
+  "decimal_digits": 70,
+  "points": 4,
+  "maximum_error": "3.622271631530684947003647716355116712273012479255655275833045955974201e-71",
+  "scope": "unprojected step source; no interval enclosure or sign claim"
+}

@@ -66,7 +66,7 @@ $F\in C_c^\infty(\R)$ the self-intersection of the radial class $\Gamma_F$ is
   T_\infty(\Gamma_{F\star F^\dagger})
   =2\Phi_F(0)\Phi_F(1)-\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho),
 \]
-where $\Phi_F$ is the Mellin transform of $F$ and $\rho$ runs over the zeros
+where $\Phi_F$ is the centered Mellin transform of the radial test and $\rho$ runs over the zeros
 of the completed zeta function.  The polar term $2\Phi_F(0)\Phi_F(1)$ is the
 hyperbolic form of the Tate functionals, and it comes from the two simple
 poles, of residue $1$, of the continued Euler-product symbol.  We also show
@@ -206,7 +206,7 @@ quoted as numbered propositions in Section~\ref{sec:carrier} and at a few
 other points, each stated in full.
 
 \subsection*{Place in the series}
-This is one of five papers on a single construction. Paper 43 \cite{P43} constructs the carrier: the algebra $D_A=C_c^\infty(C_S)$, its involution, the canonical trace $T=\sum_{v\in S}W_v$, its Fourier symbol, the Tate functionals $M=(\lambda_-,\lambda_+)$ and the numerical form $I_A$; Paper 44 \cite{P44} builds the arithmetic family on that carrier (the Frobenius measures $\mathrm{Frob}_n$, whose contact with the diagonal is $\Lambda(n)n^{-1/2}$) and its two Gram forms; This paper proves Weil's explicit formula in the normalization of $T$ and identifies the trace on radial classes with the spectral side; Paper 47 \cite{P47} studies the positivity of the resulting window form on the primitive subspace; that problem is open, and Paper 47 records what is proved about it; Paper 48 \cite{P48} is a map of the routes towards that positivity. The results are stated on the declared carrier of the series, the algebra $\DA$ of a fixed finite $S$ and its colimit over $S$. No sign and no positivity of $I_A$ or of the zero sum is asserted; the only statement about zeros is the detection result, Theorem F. The letter $T$ denotes the trace here and in \cite{P43,P44}; in Theorem B and in \cite{P47} a positive real $T$ also denotes the half-length of a support window, and the two are never mixed in one formula.
+We use the trace and Tate functionals of \cite{P43} and the arithmetic contacts of \cite{P44}. The comparison below passes from the fixed-$S$ trace to its radial colimit. The window form in \cite{P47} uses this normalization. There $T$ denotes a support radius; here it denotes the trace except when used explicitly as a radius.
 
 Section~\ref{sec:carrier} recalls the algebra, the trace, its symbol and the
 Tate functionals.  Section~\ref{sec:radial} introduces the radial classes and
@@ -1392,7 +1392,7 @@ and consequently, when $\Gamma_F$ is primitive, that is, when $M(\Gamma_F)=0$,
 At a fixed finite chart $S$ identities \emph{(9.4)}--\emph{(9.5)} hold
 provided $R(\Gamma_h)<\log\ell_{\mathrm{next}}(S)$; outside that window the
 left-hand side omits the contributions of the primes $\ell\notin S_f$ and the
-identity fails.
+identity holds for the given test precisely when the omitted terms sum to zero.
 \end{theorem}
 
 \begin{proof}
@@ -2032,7 +2032,7 @@ that (11.7) applies to both factors; hence by (11.11) and (11.7),
 \]
 for all sufficiently large $N$.  Fixing one such $N$ in each parity and setting
 $F_\pm:=F_{N,\pm}$ gives (11.4); both tests are nonzero and primitive by
-Step 5.  The final assertion is Theorem~\ref{thm:comparison}, identity (9.5).
+Step 5.  The final assertion follows from the comparison identity in Theorem~\ref{thm:comparison}.
 \end{proof}
 
 \begin{remark}

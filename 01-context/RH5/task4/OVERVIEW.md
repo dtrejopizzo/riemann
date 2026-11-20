@@ -29,7 +29,7 @@ The r25 conjecture that adding the real coordinate would render Front III sensit
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>front_iii_2d_tda_calibration.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure (vertical layout). Panel A shows the 2D (Re,Im) point clouds for ζ (Re=0.5, blue) and the ζ_δ perturbed slab (Re=0.6, red, indices 1000–1019) over the perturbation region (zeros 900–1100). Panel B reports the H1 persistence-diagram comparison: both H1 diagrams are empty, bottleneck distance = 0.0, and permutation test (B=1000) p = 1.000 — matching the r25 standard-pipeline blindness.</artifact-description>
 </artifact>
 </artifacts>

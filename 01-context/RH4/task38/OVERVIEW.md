@@ -41,12 +41,12 @@ The cross-family AUC=1.0 result indicates that, *for the simple task of distingu
 <artifacts>
 <artifact>
 <file-name>r26_DH_vs_F12_KS_summary.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Summary table of two-sample Kolmogorov–Smirnov tests comparing the DH-family (F4, F5p, F5m; n=600) vs F12 (n=200) on the normalized log|S_k| features (k=1..6) plus the engineered s2_s3_ratio feature. Columns: feature, KS_stat, p_value, DH_mean, F12_mean. Generated in this analysis from peaks_features_F1_F12_normalized_full.csv using scipy.stats.ks_2samp.</artifact-description>
 </artifact>
 <artifact>
 <file-name>r26_DH_vs_F12_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel figure summarizing the cross-family analysis. Panel A: bar chart of KS statistics for DH family vs F12 across S_1..S_6 normalized features and the s2/s3 ratio, annotated with p-values. Panel B: histograms of s2_s3_ratio for the two families with the cross-family SVM AUCs in the title. Confirms that S_1–S_4 magnitudes are completely separated (KS=1.0) while the s2/s3 ratio is nearly identical (KS=0.14).</artifact-description>
 </artifact>
 </artifacts>

@@ -27,7 +27,7 @@ The hypothesis correctly identified the direction of improvement: moving from (T
 <artifacts>
 <artifact>
 <file-name>L_Delta_validation_T046.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure for the L(Δ,s) validation run. Panel A: log–log plot of the relative trace residual and |λ_min(Q)|/tr(M_zeros) versus prime cutoff X∈{5×10³, 10⁴, 2×10⁴} at the benchmark (T₀=46.13, σ=1, J=10), with the strict GRH-validation thresholds (10⁻¹² and 10⁻⁸) overlaid. Panel B: bar chart of the full Q spectrum at the benchmark (X=10⁴) on a log-|λ| scale with negative eigenvalues highlighted in red, showing λ_min = −1.12×10⁻².</artifact-description>
 </artifact>
 </artifacts>

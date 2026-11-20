@@ -27,17 +27,17 @@ The results provide powerful empirical backing for the basis-completion stabilit
 <artifacts>
 <artifact>
 <file-name>cache/results_v3.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickled dictionary containing full Q-matrix computed results mapping (T0, sigma, J) configurations to their respective lam_min, lam_max, tr_zeros, tr_arith, and tr_diff properties calculated utilizing the stabilized analytic Laguerre Fourier identity.</artifact-description>
 </artifact>
 <artifact>
 <file-name>analysis_summary.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON payload summarizing the evaluated parameter grid, limit fits for exponential and power-law models, precision limitations for the X=1e5 restriction, and overall conclusions drawn concerning λ_min asymptotic stability.</artifact-description>
 </artifact>
 <artifact>
 <file-name>cache/fits.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Raw fitted parameters and task residuals spanning all configurations mapping λ_min bounds utilizing least-squares optimization on analytical threshold distributions.</artifact-description>
 </artifact>
 </artifacts>

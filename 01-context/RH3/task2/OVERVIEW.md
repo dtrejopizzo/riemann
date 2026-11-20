@@ -19,11 +19,11 @@ The hypothesis predicted that combining two S₃-dominant multiplicative functio
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>F_zeta_plus_Lchi_causal_perturbation_N1e6.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Complete results table for all 20 analyzed peaks of F(s) = ζ(s) + L(s,χ) at N=10⁶. Contains peak number, t-value, baseline magnitude, S₂ and S₃ perturbation reductions (%), and causal dominance classification. Generated from causal perturbation analysis with Kahan-summed ω-class decompositions.</artifact-description>
 </artifact> <artifact>
 <file-name>F_zeta_plus_Lchi_summary.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Comparative summary table of ζ(s), L(s,χ), and F(s) = ζ(s) + L(s,χ) including density status, multiplicativity, mean causal perturbation reductions, and dominance classification. Synthesizes key findings across all three functions.</artifact-description>
 </artifact>
 </artifacts>

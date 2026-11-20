@@ -43,22 +43,22 @@ These results indicate that, for the actual provided ζ_δ artifact, the princip
 <artifacts>
 <artifact>
 <file-name>front2_li_calibration.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Table of Li coefficients λ_n for ζ and ζ_δ for n=1..200, including absolute and relative differences. Created from the provided zero lists using mpmath-based evaluation of the truncated Li zero sum with conjugate pairing.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front1_jacobi_a.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Table of Front I Jacobi diagonal coefficients a_n for n=0..499 under two spectral weights: uniform and 1/|ρ|^2, for both ζ and ζ_δ. Generated via Lanczos/Stieltjes reconstruction on the discrete γ-spectrum.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front1_jacobi_b.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Table of Front I Jacobi off-diagonal coefficients b_n for n=0..498 under two spectral weights: uniform and 1/|ρ|^2, for both ζ and ζ_δ. Generated via the same Lanczos/Stieltjes reconstruction used for the a_n table.</artifact-description>
 </artifact>
 <artifact>
 <file-name>step0p5_sensitivity_summary.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compact summary table classifying each tested observable by its measured sensitivity to the provided ζ_δ perturbation. Includes the maximum observed relative change, qualitative detectability, and sensitivity interpretation.</artifact-description>
 </artifact>
 </artifacts>

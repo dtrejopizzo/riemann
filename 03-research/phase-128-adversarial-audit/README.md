@@ -1,9 +1,9 @@
 # Phase 128 — adversarial audit of rows A, B, C, and its corrections
 
 Three audits were run against
-[Paper 43](../../04-papers/43-row-a-torsion-theory/main.md) (row A),
-[Paper 44](../../04-papers/44-row-b-arithmetic-family/main.md) (row B) and
-[Paper 45](../../04-papers/45-row-c-explicit-formula/main.md) (row C).
+[Paper 43](../../04-papers/43-row-a-torsion-theory/main.tex) (row A),
+[Paper 44](../../04-papers/44-row-b-arithmetic-family/main.tex) (row B) and
+[Paper 45](../../04-papers/45-row-c-explicit-formula/main.tex) (row C).
 
 **Outcome: none of the three `WEIL-STRENGTH-COMPLETE` labels is earned.  All
 three are withdrawn and replaced by honest labels.**  The audits found real

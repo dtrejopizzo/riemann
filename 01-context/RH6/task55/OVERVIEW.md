@@ -30,22 +30,22 @@ The r60 failure was reproducible and fixable: the previous detached process abor
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldh_relaunch_progress.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Summary figure of the L_DH zero-generation re-launch progress over the first ~24 minutes. Plots cumulative zeros vs. elapsed wall time, the resume point (n=3578) and target (n=5000), the two new checkpoints (n=3750, 4000), a linear extrapolation (19.1 zeros/min ⇒ ETA ≈ 74 min), and the 3-hour TIME_BUDGET marker. Generated with matplotlib from `run_log.txt` parsed regex-by-line.</artifact-description>
 </artifact>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_04000.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>New L_DH critical-line zero checkpoint at n=4000 produced by the re-launched `generate_ldh_zeros_run.py` (with companion `ldh_ckpt_04000_meta.json` containing `t_last≈3908.07`). 50-dps decimal strings written by `mpmath.nstr`. The file's existence is the operational confirmation that the r60 working-directory bug is fixed — file writes now succeed in the current workspace.</artifact-description>
 </artifact>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_03750.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Intermediate L_DH critical-line zero checkpoint at n=3750 (with companion `ldh_ckpt_03750_meta.json`, `t_last≈3691.77`) produced during the re-launched run, 50-dps decimal strings via `mpmath.nstr`. Useful as a fallback resume point.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_log.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Time-stamped log of the re-launched L_DH zero-generation run, including the resume confirmation, per-minute PROGRESS lines, and checkpoint events. Written by the `log()` function inside `generate_ldh_zeros_run.py`. Currently growing; will contain the final "DONE" line and strict-monotonicity confirmation when the run completes.</artifact-description>
 </artifact>
 </artifacts>

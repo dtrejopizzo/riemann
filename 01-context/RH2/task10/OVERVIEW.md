@@ -34,15 +34,15 @@ The fact that F_k3 approaches but does not cross the Gumbel boundary (ξ ≈ 0) 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>gev_analysis_results.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Comprehensive Python pickle file containing all GEV analysis results including fitted parameters (ξ, μ, σ), 95% confidence intervals, block maxima arrays, bootstrap distributions, and analysis metadata. Created via pickle.dump() of a nested dictionary structure. This file enables rapid reloading of results for downstream analyses or visualization without recomputing the 7.3-minute partial sum calculation.</artifact-description>
 </artifact> <artifact>
 <file-name>gev_analysis_summary.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Plain-text summary of GEV analysis results including analysis parameters, fitted GEV shape parameters with confidence intervals, and key findings. Human-readable format suitable for quick reference or inclusion in reports. Generated automatically from the results dictionary.</artifact-description>
 </artifact> <artifact>
 <file-name>gev_analysis_results.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>High-resolution (300 dpi) publication-quality figure with two vertically-stacked subfigures. Subfigure A shows GEV shape parameters ξ with 95% confidence intervals for ζ(s), F_k2, and F_k3, illustrating the statistically significant shift towards heavier tails. Subfigure B displays empirical distributions of block maxima (histograms) overlaid with fitted GEV probability densities for all three functions. Created using matplotlib with tight layout and saved as PNG.</artifact-description>
 </artifact>
 </artifacts>

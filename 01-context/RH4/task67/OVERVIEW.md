@@ -32,17 +32,17 @@ A parallel family built from a different non-automorphic additive perturbation w
 <artifacts>
 <artifact>
 <file-name>F16_perturbation_results.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV table of perturbation strengths c and the corresponding spectral summary statistics pc1_complex, H_complex, and matrix trace for the reconstructed F16 family. It was created from the from-scratch Numba/Kahan evaluation pipeline and includes both the primary grid points and additional refinement points near the threshold.</artifact-description>
 </artifact>
 <artifact>
 <file-name>partial_sums_F15_chi3_t10k_20k.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing coarse-grid partial sums for F15 and L(s, χ₃) over t ∈ [10^4, 2×10^4] with spacing 0.1. These arrays were generated using N = 10^6 coefficients and were used to identify the top-200 peaks for each perturbation level.</artifact-description>
 </artifact>
 <artifact>
 <file-name>F16_peaks_Sk.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive with summarized perturbation-level spectral outputs derived from the computed peak S_k values. It stores c values and associated pc1/H summaries from the final analysis pipeline.</artifact-description>
 </artifact>
 </artifacts>

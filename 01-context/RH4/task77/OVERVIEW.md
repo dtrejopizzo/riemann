@@ -32,12 +32,12 @@ The hypothesis splits into two empirically separable claims. The structural clai
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>DH_delta_eigenstructure.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive of the eigen-analysis of the Davenport–Heilbronn Δ_jk matrices. Contains: betas (7,), kappas (7,), M_F1 (8,8) baseline, M_betas (7,8,8), full sorted eigenvalues per member, sign-aligned leading eigenvectors (7,8), the 7×7 cosine-similarity matrix of v₁'s, λ₁²/‖Δ‖_F² rank-1 fractions, ‖Δ‖_F², λ₁, and entropy-based effective rank. Produced by symmetric eigendecomposition (`np.linalg.eigh`) of Δ⁽ⁱ⁾ = M_betas[i] − M_F1 with sign-alignment to the β=0.70 reference.</artifact-description>
 </artifact>
 <artifact>
 <file-name>DH_delta_lowrank_eigenstructure.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: rank-1 variance fraction λ₁²/‖Δ‖_F² versus β, annotated with κ values; mean = 0.900 across all 7 members, 0.939 excluding the β=0.55/κ=−1.09 outlier. Panel B: 7×7 heatmap of cosine similarities between sign-aligned leading eigenvectors v₁ of Δ_jk; mean off-diagonal value 0.9937, demonstrating that the orientation of the dominant Δ mode is highly stable across the DH family.</artifact-description>
 </artifact>
 </artifacts>

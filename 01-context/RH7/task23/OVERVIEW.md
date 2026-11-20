@@ -27,17 +27,17 @@ The research hypothesis is wrong in two complementary ways. First, in pure runti
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>cache/L_Delta_zeros_50_reliable.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle of a Python list of 50 mpmath mpc numbers ρ_n = 1/2 + iγ_n (dps=80) giving the first 50 non-trivial zeros of the Ramanujan L-function L(Δ,s) in analytic normalization. Produced by an optimized sign-change/bisection scanner over `_zeros.Lambda_Delta` with dps=80, n_taus=300, step=0.1, **y_max=25** (the documented default y_max=12 is incorrect), and 50-step bisection refinement. The first five ordinates were cross-validated digit-for-digit against LMFDB. Zeros 51+ found in the same run were rejected after diagnostic scans at dps=100, y_max=40 revealed at least one missed zero near t≈91.2, so the file is intentionally truncated at index 50.</artifact-description>
 </artifact>
 <artifact>
 <file-name>cache/L_Delta_zeros_55_attempted.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle of 55 mpmath mpc values produced by the same scan as `L_Delta_zeros_50_reliable.pkl`. Entries 1–50 are reliable; entries 51–55 are flagged as suspect because diagnostic high-precision (dps=100, y_max=40) re-evaluation showed at least one true sign change of Λ(Δ,6+it) is missed at dps=80,y_max=25 above t≈90 due to integration-truncation error exceeding |Λ|. This file is preserved for forensic comparison; it must not be used as a definitive zero list.</artifact-description>
 </artifact>
 <artifact>
 <file-name>L_Delta_zeros_diagnostic.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel diagnostic figure. (A) Scatter of the 55 computed γ_n vs index n, with the 50 reliable points in blue and the 5 suspect points in red. (B) Λ(Δ,6+it) for t∈[91,97] sampled at two precision configurations, showing that dps=80,y_max=25 (used by the production scan) misses the sign change near t≈91.2 that is clearly visible at dps=100,y_max=40, evidencing systematic missed zeros at high t.</artifact-description>
 </artifact>
 </artifacts>

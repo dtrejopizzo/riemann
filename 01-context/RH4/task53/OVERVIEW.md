@@ -28,12 +28,12 @@ The F4 result generalizes the r21 (F12 vs ζ) "arithmetic ablation" finding to a
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>Delta_ablation_results_F4.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy archive containing the F4 arithmetic-ablation experiment results: empirical and ablation 8×8 matrices M_zeta, M_F4, M_zeta_ablated_p5, Δ_empirical = M(F4)−M(ζ), Δ_ablation = M'(ζ;5|n excluded)−M(ζ); the underlying complex S_k arrays at 200 ζ-peak t-values for ζ, F4, and ablated-ζ (200×8 each); peak heights t_peaks; and summary scalars cosine_similarity = 0.9978, pearson_r = 0.9968, alpha_best_fit = 1.285, r2_best_fit = 0.9936, Frobenius norms. Produced from a Numba-parallel Kahan-compensated ω-stratified Dirichlet summation up to N=10^6 on a fixed shared 200-peak grid; M(ζ) was validated to 13-digit agreement against the on-disk r21 matrix before ablation.</artifact-description>
 </artifact>
 <artifact>
 <file-name>F4_ablation_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) scatter of Δ_empirical vs Δ_ablation entries with y=x and best-fit lines, annotated with cosine 0.9978, Pearson 0.9968, R² 0.9936; (B) side-by-side heatmaps of the 8×8 empirical and ablation Δ matrices on a shared diverging color scale, showing matched negative structure peaked at j=k=2.</artifact-description>
 </artifact>
 </artifacts>

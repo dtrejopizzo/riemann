@@ -43,7 +43,7 @@ This analysis provides a mechanistic resolution to the anomalous N-stable extrem
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>liouville_decomposition_analysis.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>
 Three-panel summary figure showing: (A) GEV shape parameter ξ_log as a function of log₁₀(N) for the total sum, even-Ω component, and odd-Ω component, with error bars and stability Z-scores annotated; (B) magnitude ratio |D_even|/|D_odd| at the top 10 resonance peaks at N=10⁶, showing all values cluster near 1.0; (C) phase difference Δφ = arg(D_even) - arg(D_odd) at the same peaks, demonstrating 100% constructive interference (all |Δφ| < 30°, most < 5°). Generated using matplotlib with vectorized partial sum computation via numpy for N ∈ {10⁴, 10⁵, 10⁶} over t ∈ [10000, 20000] with 2500-5000 t-points per N. GEV parameters fitted to block maxima of log|D| time series using scipy.optimize maximum likelihood estimation.
 </artifact-description>

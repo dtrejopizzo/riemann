@@ -29,12 +29,12 @@ The numerical evidence is essentially decisive. With the symmetrised, theoretica
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>r17_lambda_min_corrected_comparison.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Side-by-side comparison table (35 rows = 5 T₀ × 7 J) of the original r14 L(χ₄ mod 5) λ_min and trace residual versus the newly-computed corrected-formula values. Columns: T0, J, tr_Mz, lambda_min_original, trace_residual_original, lambda_min_corrected, trace_residual_corrected, Q_norm_F. Generated at σ=1, X=10⁸, with the corrected arithmetic side using 2·Re(χ(n))·Λ(n) and symmetrised conductor/archimedean terms.</artifact-description>
 </artifact>
 <artifact>
 <file-name>r17_corrected_formula_convergence.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: |λ_min| vs J for each T₀ (dashed = original r14, solid = corrected formula) on a log scale; corrected curves collapse to ~10⁻¹² floor for J ≤ 20. Panel B: |trace residual| vs J on log scale, showing the analogous 7-8 orders-of-magnitude drop. Confirms that the symmetrisation correction resolves the systematic analytical obstruction.</artifact-description>
 </artifact>
 </artifacts>

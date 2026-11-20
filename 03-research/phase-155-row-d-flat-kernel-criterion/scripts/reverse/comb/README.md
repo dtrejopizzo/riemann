@@ -17,7 +17,7 @@ panels, exact analytic `K`-tail beyond `Umax`) is evaluated at the argmin as a c
 | `count.py` | equalities `m`, dof, rank, nullity and least-squares residual of the comb system, for `T ∈ {½log3, 0.58, 0.62, log2}`, `U ∈ {3,…,8}`, `M ∈ {24,48}`. → `count.json` |
 | `lp.py` | the LP. The equalities are eliminated exactly (`x = x_p + N z`, `N = null(A)`), then `max_z min_τ f_w(τ)` on `[0, TAUMAX]` with cutting planes, `‖x‖_∞ ≤ 3`, `‖x‖₁ ≤ 60`. → `lp_<NAME>.json` |
 
-**Why the `ψ`-edge basis of `R155_011/dlib.py` could not be reused:** `ψ_s(v) = (1+sv+s²v²/2)e^{−sv}`
+**Why the `ψ`-edge basis of `../d1000/dlib.py` (round R155_011) could not be reused:** `ψ_s(v) = (1+sv+s²v²/2)e^{−sv}`
 has **infinite** support, so `E_at(w)` is an infinite sum and the comb conditions could never be a
 finite set. Compact support is a hypothesis of Cor. D.2, not a convenience.
 

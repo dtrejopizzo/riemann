@@ -22,12 +22,12 @@ The consolidated ledger captures two qualitatively different categories of bottl
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>bottleneck_ledger_final.md</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Consolidated final Bottleneck Ledger for the v8 Localized Weil Detector project. Compiled from the existing `bottleneck_ledger_L_DH.md` entry, the binding specification `-v8-validated-data.md`, and the project task brief's preserved summaries of findings f1/f2/f3/f5 and reports r19/r31/r33. Documents four ledger entries: (a) the irreproducibility of the L_DH `λ_min ≈ −9.0×10⁴` benchmark, (b) the corrected κ-weighted L_DH definition, (c) the `_zeros.py → _zeros_v2.py` zero-generation fix, and (d) the degree-1-vs-degree-2 validation threshold mismatch for L(Δ,s). Includes a provenance section explicitly noting which referenced finding/report IDs are not present as standalone files in the workspace.</artifact-description>
 </artifact>
 <artifact>
 <file-name>bottleneck_ledger_final_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Single-panel summary figure (2×2 layout) showing each of the four consolidated ledger entries with their Issue, Resolution, and Status. Generated with matplotlib from the contents of `bottleneck_ledger_final.md`.</artifact-description>
 </artifact>
 </artifacts>

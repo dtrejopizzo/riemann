@@ -25,12 +25,12 @@ The spectral signature (pc1_complex, H_complex) is a clean class-level summary, 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>auc_vs_sample_size.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV table with the macro OvR AUC and 1-NN accuracy of the spectral (pc1_complex, H_complex) classifier as a function of bootstrap sample size n ∈ {1,2,3,5,10,20,30,50,75,100,150,175,199}, for both the 11-class problem and the 4-family aggregation derived by hierarchical clustering of class centroids. 200 bootstrap resamples per class, 1-NN classifier on z-scored centroids, distance-softmax probabilities used for AUC.</artifact-description>
 </artifact>
 <artifact>
 <file-name>spectral_sample_size_auc.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: macro OvR AUC vs sample size n for 11-class and 4-family classification with the 0.95 threshold marked, showing that family-level AUC ≥ 0.95 at n ≈ 30 while 11-class AUC ≥ 0.95 only at n ≈ 150. Panel B: bootstrap clouds in (pc1_complex, H_complex) space at n=10 alongside the 11 class centroids, illustrating that several centroids are nearly degenerate at this resolution.</artifact-description>
 </artifact>
 </artifacts>

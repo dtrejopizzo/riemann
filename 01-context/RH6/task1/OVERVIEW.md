@@ -25,7 +25,7 @@ The hypothesis is confirmed: L_DH is the classical Davenport–Heilbronn functio
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>LDH_verification.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Bar chart (log y-axis) showing |L_DH(s)| at the four Rule R2 given points (rounded coordinates, blue) versus at the Newton-refined true zeros (red), annotated with the refined Re(s) values. Includes the Rule R2 threshold line at 10⁻⁶ and a header stating the verified L_DH definition with κ. Generated with matplotlib using mpmath-computed values at dps=50.</artifact-description>
 </artifact>
 </artifacts>

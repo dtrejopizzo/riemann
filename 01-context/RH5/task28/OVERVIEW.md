@@ -29,12 +29,12 @@ The observed behavior frames the Front I inverse Jacobi reconstruction clearly a
 <artifacts>
 <artifact>
 <file-name>front1_jacobi_comparative.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A comparative plot illustrating the Jacobi coefficients (a_n and b_n) extracted via the Lanczos method across the five control functions up to N=500, marking the stability window and the optimal log-polynomial degree 2 fit over the Riemann zeta function series.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front1_jacobi_coefficients.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A serialized NumPy archive storing the zero lists utilized (zeta, L(chi), L_DH, L(Delta)_proxy, zeta_delta) and their respective reconstructed Jacobi diagonal (a) and off-diagonal (b) coefficient vectors computed by the Stieltjes method.</artifact-description>
 </artifact>
 <artifact>

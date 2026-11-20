@@ -28,12 +28,12 @@ The hypothesis predicted a selective signal at k=2. The data instead show a glob
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ancova_omega_class_summary.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Summary table of the ANCOVA `log M_k ~ log log N * L_function` fitted separately for each ω-class k ∈ {1,2,3,4}, comparing L(Δ) and L_DH. Columns: omega_class_k, slope_L(Δ), slope_L_DH, slope_diff (L_DH − L(Δ)), p_interaction, significant_p<0.05, R². Derived from `omega_class_moments_N1e6.csv` using statsmodels OLS on the 4-point N-series (N = 10⁴, 5×10⁴, 10⁵, 10⁶).</artifact-description>
 </artifact>
 <artifact>
 <file-name>ancova_omega_class_figure.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Single summary figure overlaying log M_k vs log log N data points and fitted ANCOVA regression lines for L(Δ) (blue) and L_DH (red) across all four ω-classes k=1..4 (distinguished by marker shape and line style). Per-k interaction p-values are annotated on the plot, showing all four are significant at p<0.05.</artifact-description>
 </artifact>
 </artifacts>

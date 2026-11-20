@@ -1,4 +1,4 @@
-# The Research Program (Phases 0–209)
+# The Research Program (Phases 0–213)
 
 This folder is the core of the project: a single continuous research program, run as a sequence of
 numbered phases after nine early exploratory computational programs
@@ -13,11 +13,8 @@ work on row D (Weil positivity of the window form), which remains OPEN.
 ## How the phases connect to the papers
 
 The results distilled from these phases are in [`../04-papers/`](../04-papers/)
-(catalogued in [`../04-papers/README.md`](../04-papers/README.md)). The narrative is in
-[`../COMPLETE-PROGRAM-SUMMARY.md`](../COMPLETE-PROGRAM-SUMMARY.md) and [`../00-MAP.md`](../00-MAP.md);
-every route already tried is indexed in
-[`../05-meta-and-planning/ROUTES-TRIED-INDEX/`](../05-meta-and-planning/ROUTES-TRIED-INDEX/).
-The backward-map audit that organises phases 107–113 is [`THE_BACKWARD_MAP.md`](THE_BACKWARD_MAP.md).
+(catalogued in [`../04-papers/README.md`](../04-papers/README.md)). Every route already tried is indexed in
+[`../05-meta-and-planning/ROUTES-MASTER-INDEX.md`](../05-meta-and-planning/ROUTES-MASTER-INDEX.md).
 
 ## Phase index
 
@@ -143,7 +140,7 @@ The backward-map audit that organises phases 107–113 is [`THE_BACKWARD_MAP.md`
 | [phase-118-the-exact-threshold-inequality](phase-118-the-exact-threshold-inequality/) | Attacks the exact threshold condition directly — and **verifies against real zeros of ζ, to 10 digits, that `⟨A_T F,F⟩ = Σ_ρ h(γ_ρ)`**. The row-(d) inequality *is* localized Weil positivity on the primitive space, hence equivalent to RH (Weil 1952; Yoshida 1992; Bombieri 2000), so no internal reformulation can close it. `m₀`, the primitive space and the truncation all turn out **forced**, not chosen. Also: balanced factorization re-verified by an independent code path; Toeplitz/Hankel structure for the scattering operator refuted; the log-2 certificate reproduced and its limit diagnosed as analytic, not numerical. Closed |
 | [phase-119-what-a-finite-compression-certifies](phase-119-what-a-finite-compression-certifies/) | Pivot: stop asking whether Weil's form is positive (that question's only answer is RH) and ask what a **finite compression** certifies unconditionally — its inertia constrained by Sylvester, its moments computable from the prime side. Distinctive assets: the exact filtration, the balanced factorization as a second signature decomposition, a working Arb pipeline. Gated on the Davenport–Heilbronn test: does `Λ(n) = deg_det 𝕃_n` separate ζ from an object whose RH-analogue is false? |
 | [phase-120-global-polarization](phase-120-global-polarization/) | Global polarization |
-| [phase-121-negative-witness-rigidity](phase-121-negative-witness-rigidity/) | - beyond the positive-lift architecture |
+| [phase-121-negative-witness-rigidity](phase-121-negative-witness-rigidity/) | Negative-witness rigidity, beyond the positive-lift architecture |
 | [phase-122-row-d-integrity-and-construction](phase-122-row-d-integrity-and-construction/) | row (d): integrity audit before construction |
 | [phase-123-weil-strength-abc](phase-123-weil-strength-abc/) | Weil-strength A/B/C |
 | [phase-124-direct-first-contact](phase-124-direct-first-contact/) | Direct first-contact route |
@@ -232,6 +229,10 @@ The backward-map audit that organises phases 107–113 is [`THE_BACKWARD_MAP.md`
 | [phase-206-node-and-rigidity](phase-206-node-and-rigidity/) | The node (step 4) and the rigidity family E∧F |
 | [phase-207-class-impossibility-and-empty-cell](phase-207-class-impossibility-and-empty-cell/) | (1) Class impossibility theorem; (2) The empty-cell object |
 | [phase-208-node-scope-audit](phase-208-node-scope-audit/) | Audit of the node's scope |
-| [phase-209-nonlocal-kernel](phase-209-nonlocal-kernel/) | A genuine two-variable kernel (program O1); in progress |
+| [phase-209-nonlocal-kernel](phase-209-nonlocal-kernel/) | A genuine two-variable kernel (program O1); nonlocal kernel |
+| [phase-210-qrh-four-fifths](phase-210-qrh-four-fifths/) | Quasi-RH exponent study, from 7/8 to 4/5 (zero-free half-plane Re s > 4/5); independent of row D |
+| [phase-211-sign-sandbox](phase-211-sign-sandbox/) | The sign of the Paper 47 window form, treated as an isolated problem |
+| [phase-212-missing-object](phase-212-missing-object/) | Construction of the object that carries the sign |
+| [phase-213-new-constructions](phase-213-new-constructions/) | New constructions for the global positivity of the Paper 47 form |
 
-*Two `phase-44-*` folders exist (parallel threads under that number).*
+*Two `phase-44-*` and two `phase-147-*` folders exist (parallel threads under those numbers). The hidden folder `.phase-102-discard/` holds discarded phase-102 material.*

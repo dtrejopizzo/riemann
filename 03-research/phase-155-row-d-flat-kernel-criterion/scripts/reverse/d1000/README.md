@@ -1,7 +1,7 @@
 # `scripts/reverse/d1000` — R155_011: build `D` against a universe of 1000 zeros
 
-request: *"acotemos el universo de ceros a 1000 y construyamos ya mismo el `D`
-que los satisface sólo a esos; de ahí sacar el insight de cómo tiene que ser `D`."*
+Aim: restrict the zero universe to 1000 zeros, build the `D` satisfied by exactly those zeros, and
+read off from it what shape `D` must have.
 
 Protocol (non-circular by construction, **"zeros to FIND, primes to PROVE"**):
 

@@ -34,12 +34,12 @@ The hypothesis is quantitatively confirmed: the Weil quadratic form responds to 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_delta_sweep_J12.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON record of the δ-sweep of the Weil quadratic form Q at fixed J=12 (T₀=46.13, σ=1.0, prime_bound=1000, mpmath dps=80). Contains the seven δ values, the corresponding λ_min and λ_max, global and small-δ log-log power-law fit parameters (α, log C, R²), and local pairwise slopes. Confirms |λ_min| ∝ δ² in the asymptotic regime, with α_small = 2.032 (R² = 0.99987), and the bending toward higher-order even terms at δ ≳ 3·10⁻².</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_delta_sweep_J12.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final summary figure: log-log plot of |λ_min(Q)| versus δ for ζ_δ at J=12, with the data points, an α=2 reference line (|λ_min| = 610·δ²), the small-δ log-log fit (α=2.032), and local slope annotations between consecutive data points. Demonstrates the asymptotic α → 2 even-integer scaling.</artifact-description>
 </artifact>
 </artifacts>

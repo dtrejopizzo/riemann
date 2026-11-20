@@ -19,12 +19,12 @@ This analysis confirms Weil's positivity criterion as a numerical diagnostic for
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_quadratic_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON containing the full eigenvalue spectrum of Q = M_zeros − M_arith for each of the four L-functions (ζ, L(χ₄ mod 5), L(Δ), L_DH), along with λ_min, λ_max, tr(M_zeros), and the relative magnitude |λ_min|/tr(M_zeros). Parameters used: T₀ = 85.7, σ = 2.0, J = 10, prime-power bound 1000, zero half-window 20. Shows λ_min(L_DH) ≈ −9.0×10⁴ vs ~10⁻⁵ to ~10⁻² (numerical noise) for the controls.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_quadratic_form_lmin.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Bar chart (log scale) of |λ_min(Q)|/tr(M_zeros) for the four L-functions, visualizing the 7+ orders of magnitude separation between L_DH (relative magnitude ≈ 1.7) and the GRH-conforming controls (10⁻⁸ to 10⁻¹⁰).</artifact-description>
 </artifact>
 </artifacts>

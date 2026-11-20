@@ -32,22 +32,22 @@ This work closes the open gap from r33 in the -PROMPT-v6 pipeline: the L(s, χ�
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>lchi5_zeros_N5000_dps80.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy array of the first 5000 positive ordinates of nontrivial zeros of L(s, χ₄ mod 5), stored as fixed-width Unicode strings (dtype `<U81`) with ~65 significant digits each. Produced by `generate_lchi5_dps80_subproc.py` using 80 cost-balanced segments over T∈[0, 4500] dispatched to 8 independent `subprocess.Popen` workers running `shard_worker.py` (cypari2 + PARI/GP `lfunzeros` with `realprecision=80` and string extraction via `Strprintf`). Validated against `lmfdb_Lchi5.json`: max |diff| = 4.00e-28 across the 129 LMFDB reference zeros (LMFDB truncation precision).</artifact-description>
 </artifact>
 <artifact>
 <file-name>generate_lchi5_dps80_subproc.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Driver script implementing the r32-style architecture (independent file-writing `subprocess.Popen` workers) for L(s, χ₄ mod 5) zero generation. Reuses the cost-balanced 80-segment partition of [0, 4500] from `generate_lchi5_dps80.py`, schedules workers longest-first with a fan-out of 8, supports resume via shard-file existence checks, aggregates and dedupes shards, truncates to N=5000, validates against LMFDB, and writes the final `<U81` NumPy artifact.</artifact-description>
 </artifact>
 <artifact>
 <file-name>shard_worker.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Standalone subprocess worker for a single [tmin, tmax] shard of the L(s, χ₄ mod 5) zero search. Constructs the PARI L-function via `lfuncreate([znstar(5,1), [2]])`, allocates a 1 GB PARI stack, calls `lfunzeros` with `realprecision=80`, extracts each zero as a 65-digit decimal string using PARI-side `Strprintf("%.65g", zs[i])` (avoiding the broken Python-side indexing of the `Gen` return), and atomically writes its result to a JSON shard file. Designed to be invoked by `generate_lchi5_dps80_subproc.py`.</artifact-description>
 </artifact>
 <artifact>
 <file-name>lchi5_dps80_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure for the run: (A) per-segment worker elapsed time and per-segment zero count vs segment midpoint T, illustrating the cost-balanced partition and the rising work density at high T; (B) absolute differences between the generated zeros and the 129 LMFDB reference zeros plotted on a log scale, showing max |diff| = 4.00e-28 (well below the LMFDB ~28-digit truncation line).</artifact-description>
 </artifact>
 </artifacts>

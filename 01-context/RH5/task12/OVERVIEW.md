@@ -29,17 +29,17 @@ The Davenport–Heilbronn function L_DH is the canonical Dirichlet series satisf
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldh_off_line_zeros.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>List of 110 confirmed off-line zeros of the Davenport–Heilbronn L-function L_DH with Re(ρ)>0.501 and |L_DH(ρ)|<1e-40, refined to mpmath dps=50 via 2D Newton from the 190 candidates produced by local-minimum detection on the cached partial_chunks.pkl scan. Columns: sigma (float Re), t (float Im), sigma_str / t_str (≈50-digit string forms suitable for mpmath.mpf), absL (|L_DH(ρ)|). Covers t∈[114, 4999.6]; max |L_DH| = 1.04e-47.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_li_coefficients.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Li coefficients λ_n for n=1..200 for the Davenport–Heilbronn function. Columns: n, lambda_critical_only (using only 5000 critical-line zeros from ldh_zeros_N5000_dps50.npy with their ±iγ pairs), lambda_offline_contrib (added contribution from the 4-fold orbits of the 110 confirmed off-line zeros), lambda_total (sum). All values strictly positive; min total λ_n = 0.0967 at n=1, max = 434.68 at n=200. Computed at mpmath dps=60.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_offline_li_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: scatter of the 110 confirmed off-line zeros in the (t, σ) plane against the critical line σ=1/2. Panel B: λ_n for n=1..200, comparing critical-line-only sum to the augmented sum including all 110 off-line zero orbits; both curves are strictly positive across the full range.</artifact-description>
 </artifact>
 </artifacts>

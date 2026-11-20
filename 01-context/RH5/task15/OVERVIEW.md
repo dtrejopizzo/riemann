@@ -35,12 +35,12 @@ This rigorously corrects the failure mode of the prior r48 low-frequency Weil at
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_positivity_highaltitude.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure (300 dpi). Panel A: λ_min(M) versus wavelet bandwidth w for ζ, L(χ₅), L(Δ,s), and L_DH (with off-line correction) at J=10 Hermite–Gauss modes centered at t₀=114.163; L_DH is strictly negative for w≲2.25 while the three GRH-satisfying controls remain non-negative throughout. Panel B: λ_min(M_{L_DH}) versus the real part σ of a synthetic off-line zero at t=114.16, demonstrating the monotone Weil-positivity sensitivity — λ_min decreases monotonically with displacement off the critical line, crossing zero near σ≈0.61 and reaching −0.024 at the actual L_DH value σ=0.6508.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_lambda_min_results.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV with the primary numerical result: λ_min(M) for each of the four L-functions at the reporting parameters (J=10, t₀=114.16334, w=2.0). Includes a separately tabulated counterfactual row showing what L_DH would yield with only its on-line zeros (positive), to isolate the off-line contribution.</artifact-description>
 </artifact>
 </artifacts>

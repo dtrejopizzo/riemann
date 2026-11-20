@@ -49,12 +49,12 @@ The current evidence does not support the specific stated hypothesis that X=5×1
 <artifacts>
 <artifact>
 <file-name>lambda_min_sigma1.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV table of the completed σ=1, X=5×10^7 grid for ζ and L(χ₄ mod 5), including λ_min, traces, relative trace residuals, zero counts, and per-configuration runtime. It was created from the explicit-formula engine implemented in the notebook using cached zero lists and a generated ζ zero list.</artifact-description>
 </artifact>
 <artifact>
 <file-name>zeta_zeros.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Cached list of 49 Riemann zeta zeros generated with mpmath.zetazero up to imaginary part about 141, stored as strings in a pickle file. This file was produced during the analysis to support repeated localized computations without regenerating zeros.</artifact-description>
 </artifact>
 </artifacts>

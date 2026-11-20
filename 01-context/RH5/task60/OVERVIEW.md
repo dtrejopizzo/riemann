@@ -26,12 +26,12 @@ The pipeline is sound and reproducibly recovers the four canonical off-line zero
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldh_2d_worker.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Worker module implementing `make_L(dps)` (the L_DH engine extracted from `ldh_worker.py`), `scan_chunk((sigma, t_lo, t_hi, dt, dps))` for parallel vertical-line |L_DH| sampling, and `refine_candidate((sigma0, t0, dps_final, tol_exp))` for high-precision 2D Newton refinement via `mp.findroot`. Written to disk so it can be imported by `multiprocessing.Pool` workers. Reusable for completing the off-line zero search.</artifact-description>
 </artifact>
 <artifact>
 <file-name>partial_chunks.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle of all 80 completed scan chunks (σ_k ∈ {0.65, 0.75, 0.85, 0.95}, t ∈ [0, 5000], Δt = 0.5, dps=20), each entry is (sigma, t_lo, t_hi, t-array, |L_DH|-array). Allows the candidate-detection and refinement step to be re-run without re-executing the ~25-minute scan. The cached file is the slow input to the final off-line zero list.</artifact-description>
 </artifact>
 </artifacts>

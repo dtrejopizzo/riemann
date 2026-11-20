@@ -1,0 +1,19 @@
+# Hasta 72 000 polos y altura suficiente cuadrática en el orden
+
+Para todo bloque racional causal de n≤72000 polos reales −v_j, v_j>1/2 con multiplicidades arbitrarias, se tiene W(f)≥exp(−5000000)||f||₂² para todos los numeradores complejos de grado <n. Más generalmente las bandas altas de la suma verdadera sobre ceros tienen contribución positiva a partir de altura max(3·10¹²,150(2n+8)²) para todo orden n y dato no nulo. En 202 la altura crecía cúbicamente. Se conserva la altura verificada Z2 en el resultado incondicional para 72000.
+
+**Aproximación relativa del denominador en una banda proporcional.** Partir cada semieje de ordenadas de módulo >G=3·10¹² en bandas sucesivas I=(A,4A/3], H=A/3. Tratar cada signo por separado. Con c=±7iA/6 y D(s)=∏(s+v_j), desarrollar 1/D en c en el disco de radio 7A/12. En ese disco |1/D|≤2^n/|D(c)| porque |c+v_j|≥7A/6. Todos los puntos s=±it'+δ con t'∈I y |δ|≤1/2 tienen |s−c|≤A/6+1/2; la razón al radio es ≤0.287 y |D(s)|≤1.144^n |D(c)|. Si Q es el Taylor hasta grado n+8 inclusive, Cauchy con resto geométrico da
+
+    |D(s)Q(s)−1| ≤ 2.288^n (0.287)^(n+9)/(1−0.287) < 0.0001.
+
+Por tanto U=P Q es polinomio de grado <2n+8 que aproxima relativamente a F=P/D tanto en la banda como en todos los puntos donde se evalúan los ceros. Esta construcción se repite por banda sólo para estimar la suma exacta del mismo F; no se pega un test analítico a partir de polinomios diferentes.
+
+**Muestreo y desplazamiento.** La prueba de 202 por Legendre e integración por partes sigue válida con t=(2n+8)²/H, l=0.14−6t, h=0.17+6t. En efecto para A≤x≤4A/3 el resto de Z3 sigue ≤log A y el derivado principal está entre 0.14 log A y 0.17 log A para A≥G, directamente por sus fórmulas de P47. El muestreo incluye multiplicidades y el convenio de semibandas disjuntas de 201. Si X es el vector U(±iγ) en esta banda de alturas absolutas y X_± sus dos versiones desplazadas por las abscisas de los ceros, se tiene
+
+    ||X_±−X||₂ ≤ √(h/l)(exp(t)−1)||X||₂.
+
+Esta vez la estimación se aplica al polinomio U completo. El denominador real puede variar por un factor grande entre los extremos de I. No interviene ese factor en el error relativo. Para n≤72000 y A≥G se tiene t≤0.020739, l>0.0155, h<0.295 y √(h/l)(exp(t)−1)<0.092. Como |U−F|≤10⁻⁴|F| en cada punto, los dos vectores de valores verdaderos de F en las ordenadas desplazadas distan de X en norma a lo sumo [0.092+(1.092)10⁻⁴/(1−10⁻⁴)]||X||<0.1||X||. La suma de las partes reales de sus productos conjugados domina 0.79||X||². Por la desigualdad inferior de muestreo y la aproximación en el eje real de ordenadas, esto da más de 0.3∫_I |F(±ix)|²dx (0.79·l·log G·(1−10⁻⁴)²>0.3). Para todo n la condición A≥150(2n+8)² implica t≤0.02, así que basta la altura anunciada para controlar la contribución superior, con las mismas constantes.
+
+**Piso en norma.** Las ordenadas hasta G aportan cuadrados. Para comparar la energía baja de F con la primera banda usar el argumento final de 202, ahora sobre I=[G,4G/3] aplicado al numerador P original. La coordenada de Legendre de [−G,G] tiene módulo ≤13 (1+4G/H); por recurrencia cada Legendre normalizado en 1 tiene allí módulo ≤27^k. El denominador máximo en I dividido por su mínimo en [−G,G] es ≤(9·10¹²)^n por v_j>1/2. Por tanto la razón energía baja/energía alta es ≤6n²(27·9·10¹²)^(2n), de logaritmo <4800000 para n≤72000. Por Plancherel, el piso 0.3 sobre la energía alta implica el piso anunciado. La aproximación polinómica es un instrumento clásico; aquí permite bandas cuya longitud es una fracción fija de la altura y conserva las evaluaciones fuera de la recta.
+
+**Límite.** Para dimensión ilimitada, Z2 no cubre automáticamente toda la región anterior a la altura cuadrática. La obstrucción por interpolación en una banda fija de 201 continúa vigente. No cambia el radio de la ventana global en el dominio compacto.

@@ -46,22 +46,22 @@ The hypothesis H2 specialized to L(Δ,s) is confirmed in the reliable regime: (i
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>LDelta_monotonicity_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON summary of the σ-sweep (σ∈{0.25,0.5,1,2,4}) and window-sweep (W∈{5..40}) at T₀=85.7, J=16, X=10⁵ for L(Δ,s). Each record contains λ_min(Q), tr(M_zeros), tr(M_arith), trace residual, and the number of zeros used. Includes run parameters and methodology note.</artifact-description>
 </artifact>
 <artifact>
 <file-name>lambda_min_sigma_sweep.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV table of L(Δ,s) λ_min(Q) and trace residual versus σ at T₀=85.7, J=16, X=10⁵.</artifact-description>
 </artifact>
 <artifact>
 <file-name>lambda_min_window_sweep.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV table of L(Δ,s) λ_min(Q) and trace residual for nested zero-windows |γ−T₀|<W (W=5..40) at fixed T₀=85.7, σ=2, J=16, X=10⁵; demonstrates monotone-nondecreasing λ_min with W.</artifact-description>
 </artifact>
 <artifact>
 <file-name>LDelta_lambda_min_monotonicity.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: |λ_min(Q)| versus σ on a log scale, with overlaid trace residual; the prime-cutoff-dominated regime (σ≲1.5) is shaded. Panel B: |λ_min(Q)| versus window half-width W at σ=2 with overlaid trace residual, showing strictly monotone-nondecreasing behavior down to the numerical floor.</artifact-description>
 </artifact>
 </artifacts>

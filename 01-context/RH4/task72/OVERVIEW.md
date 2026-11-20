@@ -31,7 +31,7 @@ Future runs should treat the PDF as the single source of truth for binding rules
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>.prompts/MEMORY.md</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Persistent project-memory summary for the v6 workspace: lists the only primary file (the 4-page binding-context PDF and its metadata), records that no numeric dataset is present, enumerates pre-installed scientific packages and missing tooling (pypdf installed; pdfminer/pdftotext unavailable), notes outbound HTTPS to LMFDB works, and logs the preliminary κ numerical check (κ≈0.28408 yields |L_DH(ρ)|≪10⁻⁴ at the four canonical DH zeros while the literal `(1+i)/2` does not). Created in this turn so subsequent runs inherit environment context without redoing the inspection.</artifact-description>
 </artifact>
 </artifacts>

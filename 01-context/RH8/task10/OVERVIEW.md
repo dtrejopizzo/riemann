@@ -33,7 +33,7 @@ The framework — Hermite–Gauss kernel K_J, analytic FT G(x) via Hermite-basis
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>cache/L_delta_local_zeros_T0_85.7.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle file storing initial windowed L(Δ,s) zero list (18 zeros) in [75,96] with dps-80 string representations, computed via sign-scan of Λ_an(1/2+it) and findroot refinement. Note: subsequent verification showed several of these refined values are imprecise/spurious (e.g. 85.46580 actually mis-localized; true zero ≈ 85.46221814858) — to be re-refined with bisect and per-zero |Λ_an| verification before use. Includes window metadata (T0=85.7, σ=2, dps=80, Nmax=55).</artifact-description>
 </artifact>
 </artifacts>

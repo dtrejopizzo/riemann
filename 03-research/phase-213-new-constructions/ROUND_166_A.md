@@ -1,0 +1,15 @@
+# Un criterio en una familia de bloques de densidad cero en la variable logarítmica
+
+Sea S la suma de primos simples de 162. Definir
+    F(z)=(2π)^(−1/2) ∫_ℝ exp(−(z−v)²/2) S(exp v) dv.
+Para t_j=j log(j+1), el signo global equivale a la existencia de C tal que, eventualmente,
+    ∫_{t_j}^{t_j+1} |F(u)|² du ≤ C exp(t_j).
+Sólo se impone una desigualdad por bloque de longitud uno, dejando huecos de orden log t_j. La unión de los bloques tiene densidad cero en tiempo logarítmico. La afirmación se refiere al promedio gaussiano fijo de la suma prima; cada evaluación integra valores en escalas vecinas.
+
+**Por qué sirve para el signo.** S(exp v) es cero para v suficientemente negativo y O(exp v) en toda la recta por Chebyshev, el soporte en un extremo y la acotación de K. Por tanto F es entera y |F(a+ib)|≤C exp(a+b²/2). Hacia a→−∞ en el eje real decae gaussianamente por el extremo de soporte. En Re s>1 su Laplace bilateral es exp(s²/2) B(s) Σ_p (log p)p^(−s) por Fubini. La gaussiana conserva los polos a la derecha de 1/2 que detecta 162. Bajo RH, S(exp v)=O(exp(v/2)) por 160–161, por lo que F verifica el techo en todos los bloques. Para la vuelta bastará probar |F(t)|≤exp(t/2+o(t)) para todo t→∞. Entonces la transformada es holomorfa en Re s>1/2 y se aplica la misma contradicción por el cero extremo de 162.
+
+**Interpolación que cubre los huecos.** Tomar T=t_j≤t<t_{j+1}, de modo que t−T=O(log T). Por el techo cuadrático, en un conjunto de longitud ≥1/2 en [T,T+1] se cumple |F|≤C' exp(T/2). Elegir allí n=ceil(4T/log T) puntos con separación ≥1/(8n) mediante selección voraz: cada elección quita longitud a lo sumo 1/(4n). Para los nodos ordenados a_i, el producto de distancias del i-ésimo a los restantes está acotado inferiormente por (8n)^(1−n)(i−1)!(n−i)!. Al evaluar el interpolante de Lagrange en t, la suma de módulos de sus coeficientes es por tanto ≤(C log T)^n, usando la suma binomial de los inversos factoriales. Esto cuesta exp(o(T)).
+
+Para el error, usar la integral de Cauchy del resto de interpolación sobre |z−T|=√T. Allí |F(z)|≤C exp(3T/2+√T), mientras que el cociente ∏|t−a_i|/|z−a_i| está acotado por (C log T/(√T−1))^n. La longitud del contorno dividida por la distancia a t es O(1). El resto es ≤exp(−T/2+o(T)). Así se obtiene la cota deseada en todos los huecos. La demostración no presupone cotas de separación o multiplicidad de los ceros.
+
+**Cotejo y frontera.** El índice descarta argumentos de espesor para coercividad en P211-11A y D.132. Aquí los bloques ni siquiera tienen densidad positiva; lo que se recupera es sólo un exponente de crecimiento, y se permite perder exp(o(t)). La gaussiana proporciona crecimiento complejo explícito y la interpolación se realiza sobre la suma prima, no sobre los datos de prueba del paper. 145–149 ya empleaban gaussianas para la suma de Liouville. La aportación específica es la suficiencia de estos bloques dispersos para el promedio fijo de la suma prima de 162. La cota sobre los bloques seleccionados queda abierta. Esto no autoriza reemplazar F por S sin demostrar otra estimación.

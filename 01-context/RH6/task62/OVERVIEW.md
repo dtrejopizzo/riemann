@@ -30,12 +30,12 @@ The hypothesis that the N-drift of the off-diagonal residual R(N) can be summari
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>R_of_N_fits_summary.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON summary of the off-diagonal residual fits. Contains the three (N, R%) data points per L-function (ζ, L(Δ), L_DH) extracted from the existing fourth-moment decomposition artifacts, the fitted (A, B, R², SSE) for the four candidate 2-parameter models (log, log-log, 1/√N, 1/N) plus a 3-parameter free-α power law, and the best 2-parameter model selected per L-function. Also includes a note that with only 3 data points and 2 parameters the goodness-of-fit cannot meaningfully discriminate models.</artifact-description>
 </artifact>
 <artifact>
 <file-name>R_of_N_fits_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: log-x scatter of measured off-diagonal residual fractions R(N) at N=10⁴, 5·10⁴, 10⁶ for ζ, L(Δ), L_DH, overlaid with the best 2-parameter fit per L-function. Panel B: bar chart comparing the log-law fit parameters A (intercept) and B (slope per log N) for the three L-functions, with annotated R² values; all three B values are negative and of similar magnitude, illustrating that the fit parameters do not provide a clean separator.</artifact-description>
 </artifact>
 </artifacts>

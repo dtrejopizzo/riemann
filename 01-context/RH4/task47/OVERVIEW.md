@@ -41,12 +41,12 @@ The Step-0.4 hypothesis as stated has two parts: (i) ω=2 contributes ≈30% to 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>R_comp_omega_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON containing the full ω(n) histogram for n≤10⁶, the theoretical per-stratum E[|S_k|²]=Σ_{ω(n)=k} 1/n values, and the controlled-experiment results (ΔR_comp with 2000-replicate bootstrap 95% CIs) for both Definition I (R_comp = E_t|D_N(1/2+it)|²) and Definition B (ratio of empirical second moments), including pairwise ω=2-vs-others bootstrap contrasts. Generated from-scratch from the v6 specification with seed 20260509 and 500 random t-values in [10, 10⁴].</artifact-description>
 </artifact>
 <artifact>
 <file-name>R_comp_omega_decomposition.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure (300 dpi). Panel A: theoretical ω-stratified contribution percentages to E[|D_N|²] for ζ at N=10⁶ (ω=2 highlighted in red at 35.6%, with 30%-reference dashed line). Panel B: bootstrap-CI error bars for the relative change ΔR_comp/R_comp under Definition I when each S_k (k=1,2,3,4) is set to zero; the ω=2 effect (-37.5%) is largest but its 95% CI overlaps those of ω=1 and ω=3.</artifact-description>
 </artifact>
 </artifacts>

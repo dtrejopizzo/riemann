@@ -26,7 +26,7 @@ The Front III hypothesis cannot be evaluated at the requested scale until L(Δ, 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>lchi5_zeros_N5000_dps19.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>First 5000 nontrivial zero imaginary parts (γ_n > 0) of the Dirichlet L-function L(s, χ₄ mod 5), where χ₄ is the order-4 non-trivial character mod 5. Generated via cypari2 by `lfuncreate([znstar(5,1),[2]])` then `lfunzeros` in two calls (T∈[0,4000] giving 4498 zeros, then T∈[4000,4500] giving 647 more), truncating to 5000. Stored as a NumPy array of fixed-width Unicode strings (dtype `<U51`) for consistency with the existing zero-list files. Underlying precision is ~19 significant digits (the cypari2/`lfunzeros` ceiling regardless of `realprecision`), which is well above the precision required for TDA unfolding and Vietoris-Rips analysis but below the spec's nominal dps=50 target. First zero 6.6484533447277147 and last zero 4388.2090125941801.
 </artifact-description>
 </artifact>

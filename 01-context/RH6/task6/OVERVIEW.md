@@ -44,7 +44,7 @@ The analysis supports the practical utility of the Weil form as a detector of a 
 <artifacts>
 <artifact>
 <file-name>weil_J_sweep_ldh_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON file containing the full L_DH and control J-sweep results, including parameters, refined off-critical zero location, and eigenvalue tables for J in {4,8,12,16,20}. It was created from a high-precision mpmath implementation of the Weil form using the provided zero lists and the L_DH definition in `ldh_def.py`.</artifact-description>
 </artifact>
 </artifacts>

@@ -30,7 +30,7 @@ The cypari2 strategy from r18 transfers cleanly to `L(s, χ₄ mod 5)` once the 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>lchi5_cypari_worker.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Python worker module adapted from `delta_worker.py` for parallel zero-finding of the Dirichlet L-function `L(s, χ₄ mod 5)` (LMFDB 1-5-5.4-r0-0-0) using cypari2. Each invocation allocates a 1 GB PARI stack, sets `realprecision` (default target 80), constructs `L = lfuncreate([znstar(5,1),[2]])`, runs `lfunzeros(L, [tmin, tmax])`, and returns each zero as a 65-significant-digit string via `Strprintf`. The PARI L-function definition deviates from the spec's `lfuninit([5,[5,-4],0,1], …)` shorthand (rejected by PARI 2.x as `incorrect type in lfunmisc_to_ldata`); the substitute was validated against LMFDB to 30+ digits on the first two zeros. Intended to be driven by a `multiprocessing.get_context("spawn").Pool(8)` over a linear partition of `[0, 4400]`.</artifact-description>
 </artifact>
 </artifacts>

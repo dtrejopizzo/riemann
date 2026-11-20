@@ -52,12 +52,12 @@ These results support the hypothesis. At N=999 and k≤4, the spectral signature
 <artifacts>
 <artifact>
 <file-name>spectral_features_N999_all13.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV table containing the final N=999, k≤4 spectral features for all 13 classes, including GRH-status labels and each class's Euclidean distances to the GRH-true and GRH-false centroids. Created from direct computation of top-200-peak S_k(t) spectra in the notebook.</artifact-description>
 </artifact>
 <artifact>
 <file-name>spectral_features_N999_all13.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing per-class 5×5 M_jk matrices, top-200 peak locations and heights, S_k(t) arrays, class labels, and final pc1_complex/H_complex values for the 13-class N=999 analysis. Generated directly from the reconstructed coefficient sets and the peak-based spectral pipeline.</artifact-description>
 </artifact>
 </artifacts>

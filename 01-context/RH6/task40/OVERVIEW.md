@@ -35,22 +35,22 @@ The resume mechanics of `generate_ldh_zeros_run.py` work correctly: given the `l
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_03250_meta.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Synthesized resume metadata for the supplied `ldh_ckpt_03250.npy` artifact. Contains `n_zeros=3250`, `t_last="3248.39073003771449966904166542"` (last validated zero + 0.001 to avoid re-detection), and `n_evals=0`. Required by `generate_ldh_zeros_run.py` (lines 80–88) to trigger checkpoint-based resume.</artifact-description>
 </artifact>
 <artifact>
 <file-name>generate_ldh_zeros_run_local.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Local copy of the original `generate_ldh_zeros_run.py` with the single-line change of `LOG_PATH` from `run_log.txt` to `run_log_resume.txt`. Numerical logic, resume mechanics, T_MAX, DPS_PARI, and checkpointing are unchanged. Created because the project-supplied `run_log.txt` is root-owned with no group write permission, causing the original script to abort at the first log call.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_log_resume.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Execution log from the resume run. Documents successful resume from `ldh_ckpt_03250.npy`, per-minute PROGRESS lines and internal checkpoints at 3,500 / 3,750 / 4,000 zeros, with throughput around 19–20 zeros/min in the t∈[3260, 3910] range. Useful for verifying script correctness and updating project throughput estimates.</artifact-description>
 </artifact>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_04000.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>New internal resume checkpoint produced by the script during the search, containing the first 4,000 L_DH critical-line zeros at 50-decimal precision, strictly monotonic, with the last zero near t≈3909. Companion `ldh_ckpt_04000_meta.json` is auto-written by the script. This advances the project's last validated state past the previously published 3,465-zero / t≈3439 partial and is the recommended seed for future continuation attempts toward 5,000 zeros.</artifact-description>
 </artifact>
 </artifacts>

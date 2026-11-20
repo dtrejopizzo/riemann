@@ -38,12 +38,12 @@ This negative result is consistent with — and sharpens — the broader finding
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>lambda_arithmetic_features.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Per-class table (11 rows: F1, F2, F4, F5p, F5m, F6, F7, F9, F10, F11, F12) used in this analysis. Columns: class, family, GRH status, fitted tilt λ from `erdos_kac_tilt_fits.csv`, the engineered predictor mean(|λ_p|) over the 25 primes 2≤p<100, the analytic conductor q and log(q), and the leave-one-out cross-validated prediction `lambda_pred_loo` from a multiple linear regression on [mean|λ_p|, log q].</artifact-description>
 </artifact>
 <artifact>
 <file-name>lambda_regression_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: observed λ vs LOO-CV predicted λ (R²=−1.60), showing the model is worse than the mean baseline and that F12 in particular is grossly mis-predicted. Panel B: scatter of mean(|λ_p|) vs λ colored by GRH status, with class labels, illustrating the absence of a monotone relationship (Pearson r=0.25, p=0.47).</artifact-description>
 </artifact>
 </artifacts>

@@ -27,22 +27,22 @@ The result is consistent with R5 and Anti-pattern #6 of the v6 Binding Context D
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>sums_N1e5.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Dyadic block partial sums S_k(t) for ζ(s) at N=10⁵, computed via cross-validated chunked NumPy with Kahan-reference verification. Stores Re and Im parts on a 50001-point t-grid spanning [10⁴, 2·10⁴] (dt=0.2) for K=17 dyadic blocks. Used for the primary covariance and block-bootstrap analysis.</artifact-description>
 </artifact>
 <artifact>
 <file-name>sums_N1e6_partial.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Truncated dyadic block partial sums for ζ(s) at N=524 287 (blocks 0–18 of intended N=10⁶), on a 33334-point t-grid (dt=0.3) over [10⁴, 2·10⁴]. The k=19 block was not computed within the wall-clock budget; the 'done' index array records which blocks are populated.</artifact-description>
 </artifact>
 <artifact>
 <file-name>cov_results.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final covariance matrices C5 (16×16) and C6 (18×18), bootstrap distributions boot5/boot6 (B=200), point estimates pct5/pct6 (50.00% and 53.59%) and 95% CIs [39.17,65.02] and [41.18,63.42]. Demonstrates non-confirmation of the 67% claim.</artifact-description>
 </artifact>
 <artifact>
 <file-name>cov_negative_offdiag_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) bootstrap distributions of % negative off-diagonals for both N values with 50% null and 67% claim marked; (B) correlation heatmap of Corr(Re S_j, Re S_k) at N=10⁵ showing a near-tridiagonal sign structure rather than a globally negative one.</artifact-description>
 </artifact>
 </artifacts>

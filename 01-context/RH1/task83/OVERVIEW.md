@@ -61,19 +61,19 @@ The GEV shape parameters all show negative ξ values (bounded/light tails), but 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>r_comp_time_series.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy compressed archive containing the complete R_comp time series for all four functions (ζ, f_rand, f_alt, f_fully_rand) over t ∈ [1000, 10000] with 16,493 time points. Also includes the t_values array. This dataset enables future analyses without recomputing the computationally expensive R_comp calculations.</artifact-description>
 </artifact> <artifact>
 <file-name>r_comp_summary_statistics.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV file containing comprehensive summary statistics for all four functions, including mean and median R_comp values, standard deviations, GEV shape parameters (ξ) with 95% confidence intervals, and GEV location/scale parameters. This provides a compact reference for the key quantitative findings of the analysis.</artifact-description>
 </artifact> <artifact>
 <file-name>function_coefficients.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy compressed archive storing the Dirichlet coefficients a_n for all four functions up to N = 10^5. Includes a_zeta (all ones), a_f_rand (random multiplicative with seed=42), a_f_alt (μ(n)² × (-1)^ω(n)), and a_f_fully_rand (fully independent random ±1 for squarefree n). This enables reproduction of all computational results and supports derivative analyses without regenerating coefficients.</artifact-description>
 </artifact> <artifact>
 <file-name>r_comp_comparison_figure.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>High-resolution (300 DPI) publication-quality box plot comparing R_comp distributions across the four function classes. Shows statistical significance annotations from Tukey's HSD tests, with color-coded boxes for each function type. Includes embedded text summarizing key findings. This figure is the primary visual summary of the analysis results.</artifact-description>
 </artifact>
 </artifacts> </output> **DISCRETIONARY ANALYTICAL DECISIONS:** • **Truncation length N = 10^5:** Selected for computational feasibility. N = 10^6 would provide higher resolution but was deemed computationally prohibitive for the R_comp calculation (~10x increase in runtime). • **Time range [1000, 10000]:** Chosen to provide sufficient height for meaningful statistics while avoiding both low-t regime (where approximations may break down) and extremely high-t (where computational costs become prohibitive). • **Sampling resolution Δt = 2π/log(N):** Used Nyquist-like criterion to ensure adequate sampling of oscillatory behavior, yielding 16,493 time points. • **R_comp definition - composite squarefree terms only (ω(n) ≥ 2):** Followed the dataset description's standard definition, focusing on composite squarefree numbers as the primary contributors to coherence. • **Block size = 100 for GEV analysis:** Selected to balance between having sufficient blocks (164) for stable distribution fitting and capturing genuine extremes within each block. Alternative block sizes (50, 200) could be explored in sensitivity analysis. • **Bootstrap iterations n = 1,000 for GEV confidence intervals:** Standard choice balancing computational cost and CI stability. • **Significance threshold α = 0.05:** Standard convention for statistical hypothesis testing in scientific research. • **Random seed = 42:** Used consistently for f_rand and f_fully_rand to ensure reproducibility. Different seeds would produce different realizations but should yield similar statistical properties. • **Squarefree constraint for f_alt and f_fully_rand:** Explicitly enforced a_n = 0 for non-squarefree n as specified in the dataset description, ensuring consistency with the theoretical framework. • **Tukey's HSD post-hoc test:** Selected over Bonferroni or other corrections due to its balance between Type I error control and statistical power for multiple pairwise comparisons. • **GEV fitting method:** Used maximum likelihood estimation (scipy.stats.genextreme.fit) as the standard approach for GEV parameter estimation, with bootstrap for confidence intervals due to asymptotic theory limitations with small samples. 

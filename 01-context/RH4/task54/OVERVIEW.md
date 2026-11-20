@@ -44,17 +44,17 @@ The hypothesis is not supported by the computed data. The leading eigenvalue λ_
 <artifacts>
 <artifact>
 <file-name>selected_kappas.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON file containing the targeted β values, corresponding numerically recovered κ parameters, and the tracked first off-line zero locations used to define the Davenport–Heilbronn family members.</artifact-description>
 </artifact>
 <artifact>
 <file-name>A_B_grid_DH_N1e6.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the reusable coarse-grid decomposition S_k(t;κ)=A_k(t)+κB_k(t) for ω-strata k=0..7 on t∈[10^4,2×10^4] at N=10^6. This was generated with Numba-accelerated evaluation of Dirichlet polynomials from scratch.</artifact-description>
 </artifact>
 <artifact>
 <file-name>DH_family_results.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the final family-level results: β values, κ values, Δ statistics, baseline matrix, family-specific M matrices, refined peak locations, and complex S_k values at peaks. It was created from the full peak-conditioned analysis of the seven Davenport–Heilbronn family members.</artifact-description>
 </artifact>
 </artifacts>

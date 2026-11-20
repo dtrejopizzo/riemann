@@ -24,12 +24,12 @@ The results successfully isolate and cure the prime-cutoff pathology from prior 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>r14_lambda_min_table.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV summarizing all minimum eigenvalues, trace residuals, zero traces, and arithmetic traces for both $\zeta$ and $L(\chi_4 \bmod 5)$ across the comprehensive grid of $T_0$ and $J$ at $\sigma=1$ and $X=10^9$.</artifact-description>
 </artifact>
 <artifact>
 <file-name>r14_results_X1e9_sigma1.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Serialized dictionary containing all dense calculation results, $J$ grids, analytical eigenvalues, uniformity metrics, and $X$ cutoff parameters used to populate the tables and visualizations.</artifact-description>
 </artifact>
 </artifacts>

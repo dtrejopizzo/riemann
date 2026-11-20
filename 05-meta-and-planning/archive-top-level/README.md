@@ -1,4 +1,8 @@
-# The Riemann Program
+# The Riemann Program (archived top-level README)
+
+> Archived copy of an earlier top-level README of the repository, kept for the record. Counts and
+> status statements reflect the state at the time it was written; the current overview is the
+> repository's root `README.md`.
 
 An independent, computer-assisted research program on the **Riemann Hypothesis (RH)**, offered
 as a serious, fully-traceable contribution to one of mathematics' hardest open problems.
@@ -20,38 +24,36 @@ with reproducible code and a complete record.
 | **[Master plan](MASTER-PLAN.md)** | Audit of the corpus, its structure, and the open route ahead |
 | **[Complete program summary](COMPLETE-PROGRAM-SUMMARY.md)** | Every paper, phase, no-go, and wall, end to end |
 | **[No-go list](NO-GO-LIST.md)** | The permanent registry of everything that failed or hit a wall |
-| **[Papers index](04-papers/README.md)** | The 42 publishable papers, in order, with what each one establishes |
+| **[Papers index](../../04-papers/README.md)** | The 42 publishable papers, in order, with what each one establishes |
 | **[Options](OPTIONS.md)** | Where the corpus's own audit says work can still usefully continue, including targets not equivalent to RH |
 
 ## How the work is organized
 
 The program has two layers:
 
-- **Research Programs 1–9** — [`01-context/`](01-context/): nine large computational research
+- **Research Programs 1–9** — [`01-context/`](../../01-context/): nine large computational research
   programs (627 tasks). The empirical base.
-- **Program 10** — [`03-research/`](03-research/): the theoretical program built on that base,
+- **Program 10** — [`03-research/`](../../03-research/): the theoretical program built on that base,
   run as a sequence of numbered phases, currently through **phase 119**.
 
-Supporting material: the validated computational core ([`02-foundations/`](02-foundations/)),
-the publishable papers ([`04-papers/`](04-papers/), 42 of them, catalogued in
-[`04-papers/README.md`](04-papers/README.md)), external reference material
-([`00-references/`](00-references/)), the planning and audit notes
-([`05-meta-and-planning/`](05-meta-and-planning/)), illustrative visualization and sonification
-material not part of the phase sequence ([`06-grafico/`](06-grafico/)), and closed numerical
-side-audits from phase 115 ([`07-calculos-adicionales/`](07-calculos-adicionales/)).
+Supporting material: the validated computational core ([`02-foundations/`](../../02-foundations/)),
+the publishable papers ([`04-papers/`](../../04-papers/), 42 of them, catalogued in
+[`04-papers/README.md`](../../04-papers/README.md)), external reference material
+([`00-references/`](../../00-references/)), and the planning and audit notes
+([`05-meta-and-planning/`](../../05-meta-and-planning/)).
 
 ## Where the program stands now
 
 The program currently has **two** independent, structurally different reductions of RH to a
 single classical open input — not an ending, but the state of an active investigation.
 
-**Route 1 — the Pick/Nevanlinna chain (phases 0–76, [paper 36](04-papers/36-obstruction-ledger/)).**
+**Route 1 — the Pick/Nevanlinna chain (phases 0–76, [paper 36](../../04-papers/36-obstruction-ledger/)).**
 A fifteen-step arithmetic Pick/Nevanlinna architecture (ARP-P) reduces RH to the classical
 **Li–Keiper criterion**, $\lambda_n \ge 0$ for all $n$. Fourteen of the fifteen steps are fully
 closed.
 
 **Route 2 — the arithmetic-Lefschetz reconstruction (phases 107–119,
-[paper 42](04-papers/42-arithmetic-lefschetz-programme/)).** A direct imitation of Weil's own 1948
+[paper 42](../../04-papers/42-arithmetic-lefschetz-programme/)).** A direct imitation of Weil's own 1948
 proof of RH for curves over finite fields, built over $\mathrm{Spec}\,\mathbb Z$. Its own open
 input — row (d), the Hodge-index/Castelnuovo–Severi step — is proved equivalent to RH **twice**,
 independently: algebraically (phase 113, via Riemann–Roch and effectivity) and analytically

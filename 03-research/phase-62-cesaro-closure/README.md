@@ -40,7 +40,7 @@ carries an intrinsic **quaternionic Hodge–Riemann polarization** (Deninger obj
 
 | script | finding |
 |--------|---------|
-| [E92](E92_hodge_riemann.py) (phase-61, superseded) | wrong structure (involution `Σ²=+1`); form indefinite |
+| [E92](../phase-61-open-problems/E92_hodge_riemann.py) (phase-61, superseded) | wrong structure (involution `Σ²=+1`); form indefinite |
 | [E93](E93_quaternionic_HR.py) | with correct `J²=−1`, `AJ` is ≈antisymmetric for ζ → its symmetric part is `[A,J]/2`, tiny for ζ |
 | [E94](E94_Jcompat.py) + [E94_RESULTS.md](E94_RESULTS.md) | **ζ is positive-semidefinite on V₊ (J's +i-eigenspace) at every λ; DH and random-symmetric are indefinite** |
 

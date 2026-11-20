@@ -14,13 +14,13 @@ The absence of the expected negative correlation provides important scientific i
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>kurtosis_xi_results.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>
 Summary table containing the complete results for all eight α values tested in the parametric multiplicative function family. Columns include: α (probability of +1 at primes), excess_kurtosis (excess kurtosis of log|D(t;N)| distribution), gev_xi (GEV shape parameter from block maxima), and gev_xi_stderr (standard error estimate). This table documents the absence of correlation between kurtosis and ξ within this parametric family.
 </artifact-description>
 </artifact> <artifact>
 <file-name>kurtosis_xi_results.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>
 Complete pickled Python dictionary containing all analysis results, including the full time series data (5,000 log|D(t;N)| values for each of 8 α values), the summary DataFrame, all correlation statistics (Spearman and Pearson), and metadata (N=10⁵, t∈[5000,25000], n_t_points=5000). This file enables reproduction and further analysis without recomputing the computationally expensive time series generation step.
 </artifact-description>

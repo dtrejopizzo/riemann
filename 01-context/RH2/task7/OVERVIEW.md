@@ -47,19 +47,19 @@ The lack of a detectable ω(n) signature challenges models that attribute S_k co
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>permutation_test_results.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>
 Numerical results table containing the 5 individual phase difference tests (Δθ_1 through Δθ_5) and the global angular spread test. For each metric, the table reports: true value (degrees), null distribution mean and standard deviation (degrees), p-value, and significance status. All tests yielded non-significant results (p > 0.05), providing the core quantitative evidence for the analysis conclusion.
 </artifact-description>
 </artifact> <artifact>
 <file-name>permutation_test_N10e7.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>
 Six-panel visualization showing the null distributions from the permutation test. Five panels display histograms of the null distributions for each relative phase difference Δθ_k, with the true observed value marked in red. The sixth panel shows the null distribution of angular spreads with the true value and significance threshold marked. This figure provides visual evidence that all true values fall well within their respective null distributions, supporting the conclusion of no significant effect.
 </artifact-description>
 </artifact> <artifact>
 <file-name>phase_structure_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>
 Two-panel summary figure. Panel A shows the S_k vectors (k=1..6) in the complex plane for the true ω(n) configuration, illustrating their magnitudes and relative phases. Panel B shows the distribution of angular spreads from 200 permutations, with the true spread (30.82°), null mean (59.17°), and the p<0.05 threshold (24.74°) marked. This figure synthesizes the key geometric and statistical results, showing that while the true spread is below the null mean, it does not reach statistical significance.
 </artifact-description>

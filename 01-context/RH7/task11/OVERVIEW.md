@@ -27,7 +27,7 @@ The validation campaign demonstrates that the data layer of the -v8 specificatio
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>_v8_validation_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Single-panel summary figure showing pass/fail status of each -v8 validation gate. §1 (reference ζ zeros) and §2 (L_DH off-line-zero gate, with measured |L_DH| values shown in the analysis notebook) are marked PASS in green; the four §4 gates (L_DH λ_min benchmark, control baseline ratio, δ² scaling exponent α, J-amplification) are marked NOT EVALUABLE in red because Q-assembly is under-specified in the dataset. Generated with matplotlib from the validation results computed in this analysis.</artifact-description>
 </artifact>
 </artifacts>

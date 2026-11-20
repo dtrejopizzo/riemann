@@ -14,17 +14,17 @@ This run reproduces and extends the pattern documented in prior trajectories: L_
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldh_zeros_partial_3465_dps50.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy object array of 3,465 strictly-monotonic critical-line zero ordinates of the Davenport–Heilbronn L-function, stored as decimal strings at 50-dps. Produced by resuming `generate_ldh_zeros_run.py` from the 2,772-zero seed with a synthetic `ldh_ckpt_02750` seed checkpoint. The final zero is t ≈ 3,439.064. This supersedes the previous 2,772-zero partial and represents the most extended validated L_DH list available; the 5,000-zero target was not reached within this run's 60-min budget. URI: data_entry:ldh-zeros-partial-3465-dps50-npy-vjwz.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_ckpt_03250.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Resume checkpoint produced by `generate_ldh_zeros_run.py` at the 3,250-zero milestone (t_last≈3248.4). Companion file for any future continuation: drop into `checkpoints_ldh/` together with a matching `_meta.json` to resume cleanly past the current 3,465-zero partial. URI: data_entry:ldh-ckpt-03250-npy-43cc.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_generation_progress.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) cumulative L_DH zeros found vs imaginary height t for this run's run (resumed from 3,000 zeros, ending at 3,465; 5,000-zero target line shown for context); (B) throughput (zeros/min) vs t with a linear extrapolation projecting ≈80 min of additional compute to reach 5,000. Generated from PROGRESS records parsed out of `run_log.txt`.</artifact-description>
 </artifact>
 </artifacts>

@@ -36,17 +36,17 @@ The single-realization TP_H1 values reproduce the qualitative claim of the hypot
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldelta_zeros_N3592_dps38.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy fixed-width Unicode string array (dtype `<U51`) containing the first 3592 positive imaginary parts of the nontrivial zeros of L(Δ,s) for the Ramanujan Δ modular form (LMFDB 1.12.a.a) on the critical line, in analytic normalization. Generated in this task using cypari2 with PARI ≥ 2.17: `mfinit([1,12],1)`, `mfeigenbasis`, `lfunmf`, and contiguous-range `lfunzeros` calls at `realprecision=50` with a 2 GB stack, then PARI-side `Strprintf("%.50g", z[i])` string extraction. Covers T∈(0, 2300]. Falls short of the target N=5000 due to the documented T^2.85 cost scaling of lfunzeros for cuspidal L-functions, but is the most complete contiguous L(Δ,s) zero list produced in-session.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldelta_zeros_partial_T1500.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Intermediate checkpoint of the L(Δ,s) zero generation, containing the first 2139 zeros up to T=1500, dtype `<U51`. Same generation method as ldelta_zeros_N3592_dps38.npy.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldelta_zeros_partial_T2000.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Intermediate checkpoint of the L(Δ,s) zero generation containing the first 3035 zeros up to T=2000, dtype `<U51`. Same generation method as ldelta_zeros_N3592_dps38.npy.</artifact-description>
 </artifact>
 </artifacts>

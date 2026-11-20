@@ -14,15 +14,15 @@ This analysis provides definitive computational evidence that the research hypot
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldh_validation_results.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Comprehensive dataset containing computed partial sum magnitudes |D_LDH(ρ; N)| for all four canonical off-line zeros (ρ1, ρ2, ρ3, ρ4) across six truncation depths (N ∈ {10^4, 10^5, 10^6, 2×10^6, 5×10^6, 10^7}). Includes real and imaginary components of D, log-transformed values for regression analysis, validation status flags, and computation times. Generated using canonical L_DH implementation with Kahan compensated summation in float64 precision.</artifact-description>
 </artifact> <artifact>
 <file-name>ldh_validation_convergence.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Four-panel figure showing convergence behavior of |D_LDH(ρ; N)| versus log₁₀(N) for each off-line zero. Each panel displays observed data points (blue circles), theoretical power-law prediction (green line), validation threshold at 10^-6 (red dashed line), and mean magnitude (orange dashed line). Uses logarithmic y-scale to span range [10^-7, 10^0]. Clearly illustrates the failure of the theoretical prediction and the constant nature of observed magnitudes.</artifact-description>
 </artifact> <artifact>
 <file-name>ldh_validation_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: Panel A shows all four zeros plotted together on log-log axes, comparing observed magnitudes versus the 10^-6 validation threshold; Panel B displays a bar chart comparing theoretical growth exponents α_pred = σ - 1/2 (green bars) versus fitted exponents from log-log regression (blue bars with error bars), with percentage labels showing that fitted values are 0-2% of theoretical predictions. Provides a comprehensive visual summary of the negative result.</artifact-description>
 </artifact>
 </artifacts>

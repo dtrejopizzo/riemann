@@ -19,4 +19,3 @@ Numerics are used only where a proof step strictly needs them.
 - [../03-research/phase-60-discriminant/](../03-research/phase-60-discriminant/) — where the engine was first validated.
 - [../03-research/](../03-research/) — research phases that use these tools.
 - [../00-references/](../00-references/) — third-party papers behind the constructions.
-- [../07-calculos-adicionales/](../07-calculos-adicionales/) — additional calculations.

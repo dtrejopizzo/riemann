@@ -1,0 +1,50 @@
+{
+  "status": "NUMERICAL_ONLY",
+  "interval_enclosure": false,
+  "records": [
+    {
+      "parity": "even",
+      "outer_order": 128,
+      "inner_order": 160,
+      "residual_gram_norm": 0.9437812718021636,
+      "sufficient_min": -1.564293749641099,
+      "sufficient_negative_count": 11,
+      "S_bottom": 5.3140940233085315e-12,
+      "bottom_penalty": 8.130420748528579e-13,
+      "sampled_low_orthogonality_error": 0.022749644893685254
+    },
+    {
+      "parity": "odd",
+      "outer_order": 128,
+      "inner_order": 160,
+      "residual_gram_norm": 0.9424805010909232,
+      "sufficient_min": -1.5537699888994894,
+      "sufficient_negative_count": 10,
+      "S_bottom": 1.1294983106830504e-09,
+      "bottom_penalty": 1.2113829980933371e-10,
+      "sampled_low_orthogonality_error": 0.04953888801490165
+    },
+    {
+      "parity": "even",
+      "outer_order": 256,
+      "inner_order": 160,
+      "residual_gram_norm": 0.9898361495560416,
+      "sufficient_min": -1.5687675650517774,
+      "sufficient_negative_count": 11,
+      "S_bottom": 5.3140940233085315e-12,
+      "bottom_penalty": 8.149911612099963e-13,
+      "sampled_low_orthogonality_error": 0.005583767508747449
+    },
+    {
+      "parity": "odd",
+      "outer_order": 256,
+      "inner_order": 160,
+      "residual_gram_norm": 1.0657530340641466,
+      "sufficient_min": -1.562462891299529,
+      "sufficient_negative_count": 12,
+      "S_bottom": 1.1294983106830504e-09,
+      "bottom_penalty": 1.214735111462245e-10,
+      "sampled_low_orthogonality_error": 0.01226514557521104
+    }
+  ]
+}

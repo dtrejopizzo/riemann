@@ -45,17 +45,17 @@ The evidence gathered here does not support the hypothesis as stated for this ru
 <artifacts>
 <artifact>
 <file-name>delta_worker_v2.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A modified worker module created in the working directory to avoid returning large results directly through multiprocessing IPC. It defines a `worker_to_file` function that computes Δ zeros for one interval with `cypari2` and attempts to serialize shard outputs to disk. It was created as a workaround after the original pool-based transport failed with a segmentation fault.</artifact-description>
 </artifact>
 <artifact>
 <file-name>driver_v2.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A parallel driver script written in the working directory to orchestrate the 8-shard cube-root partitioned Δ-zero computation using `spawn` and the file-writing worker. It was intended to collect shard outputs, sort, deduplicate, truncate to 5000 zeros, and save a NumPy string array, but execution failed before completion due to the same multiprocessing/cypari2 crash.</artifact-description>
 </artifact>
 <artifact>
 <file-name>shard_runner.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A standalone shard execution script that runs one interval in an isolated Python subprocess and writes results directly to a shard-specific pickle file and done-marker. It was created as a lower-level workaround to bypass multiprocessing result transport entirely after pool-based approaches failed.</artifact-description>
 </artifact>
 </artifacts>

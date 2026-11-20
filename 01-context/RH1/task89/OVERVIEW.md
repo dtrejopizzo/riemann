@@ -35,11 +35,11 @@ The research objective aimed to confirm that L_DH's high cross-scale coherence "
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>coherence_analysis_results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Comprehensive quantitative results of the cross-scale coherence analysis including metadata (computation parameters, T-range [100,200], N-values {10⁴,10⁵,10⁶}, function classes), maximum coherence values for all function-scale-pair combinations, mean square values V_F(N) for each function and scale, hypothesis test verdict (REJECTED), and statistical groupings showing average coherence by function type. Created by computing D_F(t;N) using Kahan-compensated summation followed by cross-scale coherence calculation and statistical summarization.</artifact-description>
 </artifact> <artifact>
 <file-name>maximum_coherence_summary.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Summary table in CSV format containing maximum cross-scale coherence |X_F(t; N₁, N₂)| for each of five function classes (Riemann ζ, L(s,χ₄), f_rand, L_DH, L_DH(ε=0.01)) and two scale pairs ((10⁴,10⁵), (10⁵,10⁶)). Each row represents one function class with columns for function name and maximum coherence at each scale pair. Created from coherence_results dictionary after completing all D_F computations and coherence calculations.</artifact-description>
 </artifact>
 </artifacts>

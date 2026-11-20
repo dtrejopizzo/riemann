@@ -122,7 +122,7 @@ The decisive burden is **D8+D9**: `Short_{H_P} K_{A_P} → K_Ξ^{G5}`.
   "D8.5 not RH-strength" (it *is*, logically). 7 fixes: A D0 sign (`M_Ξ=−Ξ'/Ξ`), B D1 Schur-vs-Nevanlinna
   chart, C D2 circular source-richness, D D4 det₂ anomaly, E D8.3 meromorphic/divisor topology, F D9 false
   inference (`∂_V≠∂_z`), G D10 `Λ≥0` role. **Applied inline:** D0, D8, D9. **Pending inline:** D1, D2, D4,
-  D8.3, D10 (specs in the corrections doc). **Next:** write `D8.5-PRIMITIVE-MARKED-TATE-BINET.md` (9 blocks).
+  D8.3, D10 (specs in the corrections doc). **Next:** write the primitive marked Tate–Binet note (9 blocks; realized as `D8.5a-MARKED-TATE-BINET.md`).
 
 ## Earlier milestone drafts (M1–M3, being folded into D-structure)
 

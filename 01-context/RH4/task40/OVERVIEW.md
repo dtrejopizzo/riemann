@@ -59,12 +59,12 @@ The results do not support the central hypothesis in a robust way. Explicit extr
 <artifacts>
 <artifact>
 <file-name>Mjk_extreme_resonator.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the 200 refined resonator peak times, their amplitudes, the computed complex zeta omega-stratified sums S_k(t) at those times, and several derived M_jk matrices (raw, centered, and normalized variants). It was created from a from-scratch resonator simulation over t in [0,1e5] and sieve-based omega-stratified summation up to N=10^6.</artifact-description>
 </artifact>
 <artifact>
 <file-name>extreme_resonator_M_jk_comparison.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final two-panel summary figure showing PC1 variance fractions for the extreme-peak resonator model under several normalization schemes and the corresponding PC1 eigenvector comparisons against the empirical top-200 zeta matrix. It was generated with matplotlib from the matrices computed in this analysis and the saved empirical `.npy` comparison artifacts.</artifact-description>
 </artifact>
 <artifact>

@@ -1,0 +1,21 @@
+# Cancelación firmada en filas cuyo primo se repite en el segundo factor
+
+Usar los pesos y la compensación en primos de 050, con L=√x en x=j⁴, y=2x. Los términos de a+c se expanden por filas de primo potencia p^e>L/2 que divide k, con k=p^e v. El peso de cada fila, aparte de U(k), μ(m) y V(km/y), tiene módulo ≤C log p; las filas dobles sólo admiten v par y la compensación sólo e=1. Hay multiplicidad acotada por tres en esta descripción. En el soporte k≤CLT, m≥cL/T, v≤CT, con T=(log x)².
+
+**Umbral del método absoluto de 050.** Para m libre de cuadrados, sf(km)≥m/sf(k), por la fórmula sf(km)=m sf(k)/gcd(m,sf(k))². Si e es par, sf(k)≤v. Si e≥3 es impar, sf(k)≤pv y pv=k/(p^e)^((e−1)/e)≤C L^(1/3)T. Así todas las filas con e≥2 satisfacen sf(km)≥c L^(2/3)/T². Para e=1, p>L/2 supera a v. Si p no divide m, también divide sf(km); si divide m, escribir m=pw. De p²vw≤By se obtiene p≤CL y vw≤C. La suma absoluta de estas filas es O(L) por Chebyshev. En particular la eliminación absoluta de 050 llega a sf(km)≤x^(1/3−ε) para cualquier ε fijo positivo menor que 1/3.
+
+Para cada η>0 fijo, el extremo sf(km)≤ηL^(2/3) ya contiene términos positivos cuya suma es ≫η' L log log x, con η'>0 dependiente de η. Elegir p primo entre D L^(1/3) y 2D L^(1/3), D fijo suficientemente grande, v impar hasta log x y w en un intervalo [αy/(p⁴v),βy/(p⁴v)] con [α,β] interior al soporte y V acotado inferiormente allí. Tomar μ(w)=−1 y p que no divida w. Hay ≫y/(p⁴v) elecciones: la densidad de μ=−1 es 1/(2ζ(2)) por PNT y densidad de libres de cuadrados, válida uniformemente para intervalos de razón fija con extremo inferior tendiendo a infinito; excluir múltiplos de p cuesta o(y/(p⁴v)). En k=p³v, m=pw, el único peso de fila que sobrevive es +log p: k es impar, p²<L/2, v<p y todos los factores de v tienen potencias ≤v. U(k)=1 para x grande; μ(m)=+1 y sf(km)≤vw≤ηL^(2/3). Son pares distintos. Sumando primero sobre w, luego sobre v y p, la suma ponderada supera una constante por L log log x. Esta prueba se refiere al coeficiente reunido para cada par (k,m), y excluye una cota absoluta O(L) en el extremo.
+
+**Qué se puede eliminar conservando los signos.** El total firmado de todas las filas con e≥2 y p|m, sin restricción sobre sf(km), es O_A(L/(log x)^A) para cualquier A fijo. Para verlo, en la fila k=p^e v poner m=pw. Sólo cuentan w con p que no divide w, y μ(m)=−μ(w). El tamaño natural de w es W=y/(p^(e+1)v); como p≤(CLT)^(1/2), se tiene W≫L^(1/2)/T^(3/2). La cota cuantitativa clásica para M(u)=Σ_{n≤u}μ(n) usada en 045 da, uniformemente en p,
+
+    |Σ_{w≤u, p∤w} μ(w)| ≤ C_N u/(log u)^N     (u grande).
+
+En efecto, la suma es Σ_{a≥0, p^a≤u} M(u/p^a), por recurrencia. Hasta p^a≤√u aplicar la cota de M con log(u/p^a)≥(log u)/2; el resto cuesta O(√u) por serie geométrica. Por sumación parcial con el peso fijo V(w/W), el coste firmado por fila y v, incluido su peso, es O_N((log p)W/(log x)^N). Los pesos U(k) son independientes de w. Para sumar, se usa
+
+    Σ_{p^e≤CLT, p^e>L/2, e≥2} (log p)/p^(e+1) ≤ (C/L) Σ_{p≤√(CLT)} (log p)/p = O((log x)/L).
+
+La primera desigualdad suma la progresión geométrica desde la primera potencia permitida. Sumar también 1/v para v≤CT cuesta O(log x), y N es arbitrario. Para e=1 y p|m ya se probó la cota absoluta O(L). Se pueden por tanto eliminar todas las incidencias p|m, entendiendo la eliminación por fila si k admite más de una.
+
+**Criterio restante.** En cada fila conservada p no divide m. Todos los primos de m que no dividen v aparecen con exponente uno en km; por ello sf(km)≥m/gcd(m,v)≥m/v≥cL/(log x)^4. Para decidir el signo basta la misma cota superior O(L) sobre las filas con p que no divide m. La precisión se conserva por el control firmado anterior. No se ha acotado por este medio la suma original cortada arbitrariamente por sf: restringir w en función de su parte libre de cuadrados invalidaría la sumación parcial usada aquí.
+
+**Cotejo y alcance.** La herramienta de Möbius en progresiones de coprimalidad y el PNT son clásicos; 045 ya usa PNT cuantitativo. Aquí se aplican después de detectar una repetición entre el primo de una fila y el factor que lleva μ. Esa repetición aporta el factor 1/p requerido para sumar los errores a precisión de raíz. 044 retiraba índices de potencias en otra expresión y 050 sólo había estimado módulos. Sigue pendiente el signo del complemento.

@@ -41,12 +41,12 @@ The available validated data strongly support the existence of a severe prime-tr
 <artifacts>
 <artifact>
 <file-name>tau_table_1e7.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Ramanujan tau coefficient table τ(n) for 0≤n≤10^7 generated from scratch with python-flint using the eta-product identity Δ(q)=q∏(1−q^n)^24 and the pentagonal-number theorem, truncated via fmpz_poly arithmetic. The implementation was validated against the pre-existing tau_table.pkl on overlapping indices. This artifact demonstrates feasible extension of the arithmetic data by two decades, though not to 10^9.</artifact-description>
 </artifact>
 <artifact>
 <file-name>LDelta_X1e9_status.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Final summary figure showing the validated X=10^5 baseline |λ_min| versus J for L(Δ,s) at σ=1 and T₀=30,85.7, plus the hypothesized numerical floor and explicit annotation that the X=10^9 calculation was not executed because of computational and reproducibility limitations. The plot was generated with matplotlib from lambda_min_LDelta_sweep.pkl.</artifact-description>
 </artifact>
 <artifact>

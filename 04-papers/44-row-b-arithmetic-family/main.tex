@@ -63,41 +63,20 @@ and the von Mangoldt function as a shell volume}
 \date{\today}
 
 \begin{abstract}
-We study an arithmetic family of correspondences on the correspondence
-algebra of the semilocal idele class group $C_S$ of $\Q$.  For a prime power
-$p^k$ the \emph{Frobenius measure} $\Frob_{p^k}$ is the normalized Haar
-measure of the valuation shell $p^k\Z_p^\times$, transported to $C_S$ by the
-slice map, and $\Frob_n$ is the convolution of these over the prime powers
-dividing $n$.  The assignment $n\mapsto\Frob_n$ is a strong monoidal
-realization of $(\N_{\ge1},\times)$ whose unit is the diagonal; the support of
-$\Frob_n$ determines $n$ and the primes dividing it, and the family admits no
-continuous interpolation.  Its closure under the involution is a commutative
-inverse semigroup indexed by $\Q_{>0}^\times$ graded by finite sets of primes,
-whose idempotents are the Haar measures of compact subgroups $K_F$.  The
-identity $\Frob_n\star\Frob_n^\dagger=\Delta^{(n)}$ is an averaged,
-half-density normalized form of Weil's degree relation, and the bidegree of
-$\Frob_n$ is $(n^{1/2},n^{-1/2})$.
+For an integer $n\ge2$, choose a semilocal idele class group whose finite
+places contain the prime divisors of $n$. Convolution of the normalized
+valuation-shell measures defines a Frobenius correspondence $\Frob_n$ of
+bidegree $(n^{1/2},n^{-1/2})$. These correspondences multiply according to
+the product of their indices. Their finite-place contact with the diagonal
+has coefficient $\Lambda(n)/\sqrt n$: a shell for $n=p^k$ has multiplicative
+Haar volume $\log p$, whereas an index with two distinct prime divisors
+meets no single-place shell.
 
-The contact of $\Frob_n$ with the diagonal, measured by the trace of the
-ambient algebra, is $\Lambda(n)n^{-1/2}$ at every level of smoothing.  Here
-$\Lambda(p^k)=\log p$ appears as the multiplicative Haar volume of the support
-of the object, and the vanishing of $\Lambda$ at composite $n$ is the
-disjointness of that support from every valuation shell.  On the same objects
-we construct an integral shadow $\Sh_\Z(\Frob_n)=[L_S\xrightarrow{n}L_S]$
-whose M\"obius cofiber over the divisor poset is
-$[\Z\xrightarrow{\Phi_n(1)}\Z]$, and we prove the corresponding identities of
-degrees; since the complexification of the shadow is acyclic, no stronger
-identification is possible.
-
-We then compute two Gram forms.  The Frobenius family carries only the finite
-part of the kernel of Weil's quadratic form, its archimedean entries being
-killed by a congruence condition, whereas the unit-averaged family
-$\Frob_n\star\Delta^{\mathrm{rad}}$ carries the whole kernel.  Finally we show
-that the regularized self-intersection of the diagonal tends to $-\infty$ like
-$-\log(1/\varepsilon)$, that the finite-place form is positive on a primitive class (explicit up to the choice of one
-sufficiently large parameter) for every finite $S$, and that the normalization
-$\vol(\Z_p^\times)=\log p$ is, up to one global scale, the only one for which
-the local Tate residue is the same at every place.
+The integral model is the complex $[L_S\xrightarrow{n}L_S]$. Its
+M\"obius cofiber records the cyclotomic value $\Phi_n(1)$. We compute the
+Gram form both on the Frobenius family and after averaging over the unit
+group. The first calculation gives the finite-place kernel; the radial
+average also recovers the archimedean term.
 \end{abstract}
 
 \maketitle
@@ -154,7 +133,7 @@ no limit at the finite places,
 \]
 (Theorem~\ref{thm:frobcontact}).  Here $\Lambda(p^k)=\log p$ is the
 multiplicative Haar volume $\vol_{d^*x}(p^k\Z_p^\times)$ of the support of the
-object, and the vanishing at composite $n$ is the disjointness of that support
+object, and the vanishing at indices $n$ with at least two distinct prime divisors is the disjointness of that support
 from every valuation shell (Theorem~\ref{thm:compositedisjoint}).
 \end{itemize}
 
@@ -213,7 +192,7 @@ against a single-frequency test; it is not used elsewhere.  No sign of the
 Gram forms is asserted.
 
 \subsection*{Place in the series}
-This is one of five papers on a single construction. Paper 43 \cite{Companion} constructs the carrier: the algebra $D_A=C_c^\infty(C_S)$, its involution, the canonical trace $T=\sum_{v\in S}W_v$, its Fourier symbol, the Tate functionals $M=(\lambda_-,\lambda_+)$ and the numerical form $I_A$; This paper builds the arithmetic family on that carrier (the Frobenius measures $\Frob_n$, whose contact with the diagonal is $\Lambda(n)n^{-1/2}$) and its two Gram forms; Paper 45 \cite{P45} proves Weil's explicit formula in the normalization of $T$ and identifies the trace on radial classes with the spectral side; Paper 47 \cite{P47} studies the positivity of the resulting window form on the primitive subspace; that problem is open, and Paper 47 records what is proved about it; Paper 48 \cite{P48} is a map of the routes towards that positivity. The results are stated on the declared carrier of the series, the algebra $D_A$ of a fixed finite $S$. No sign of the Gram forms is asserted except the positivity of the finite-place form on one primitive class (Theorem~\ref{thm:qfinpositive}), and no positivity of the full form is claimed.
+We use the algebra, involution and trace of \cite{Companion}. The radial comparison theorem \cite{P45} uses the contact coefficients computed here. The sign problem in \cite{P47} concerns the complete radial form, including the archimedean term.
 
 Section~\ref{sec:prelim} fixes notation and recalls what we need from
 \cite{Companion}.  Sections~\ref{sec:radial} and \ref{sec:radtrace} treat the
@@ -720,7 +699,7 @@ because by Lemma~\ref{lem:notideal} the realization factors through
 $(\R_{>0},\times)$. It therefore proves nothing arithmetic on its own. What is
 realized as objects is the monoid $(\N_{\ge1},\times)$ embedded in the modulus
 group, with composition, unit, dagger on the group completion, and
-half-density; the objects forget factorization. For composite $n$ the object
+half-density; the objects forget factorization. For indices $n$ with at least two distinct prime divisors the object
 $\Gamma_n^{\mathrm{rad}}$ is structurally indistinguishable from a generic
 $\Gamma^{\mathrm{rad}}_{(t)}$. The divisor arrows of the divisor poset have no
 image at all: morphisms between distinct external classes vanish in the
@@ -788,7 +767,7 @@ Here
   \Lambda(p^k)=\log p=\vol_{d^*x}\bigl(p^k\Z_p^\times\bigr),
 \end{equation}
 the multiplicative Haar volume of the valuation shell, and $\Lambda(n)=0$ for
-composite $n$ because no single place has a shell of modulus $1/n$. On the
+indices $n$ with at least two distinct prime divisors because no single place has a shell of modulus $1/n$. On the
 colimit with the trace $T_\infty$ the restriction $p\in S_f$ disappears and the
 sums run over all prime powers $n$ with $|\log n|$ at most the support radius
 of $h$.
@@ -837,7 +816,7 @@ which is $\int_\R K(|t|)h(t)\,dt$.
 \emph{Grouping.} Setting $n=p^k$ turns $(\log p)p^{-k/2}$ into
 $\Lambda(n)n^{-1/2}$, which is \eqref{eq:radtraceprime}; and
 \eqref{eq:lambdavol} is the identification of $\log p$ as the shell volume just
-used. Composite $n$ contributes nothing because $n=p^k$ has no solution when
+used. indices $n$ with at least two distinct prime divisors contributes nothing because $n=p^k$ has no solution when
 $n$ has two prime divisors.
 
 \emph{Colimit.} By Proposition~\ref{prop:trace}(c) the passage to $T_\infty$
@@ -927,14 +906,12 @@ $\omega_{\mathrm{fin}}(\{\pm k\log p\})=(\log p)p^{-k/2}$, with $\log p$ the
 multiplicative Haar volume of $p^k\Z_p^\times$, independent of $k$;
 \item[(iii)] consequently, for every $t>0$,
 \[
-  \omega_{\mathrm{fin}}(\{t\})\ne0\iff e^t\ \text{is a prime power},
+  \omega_{\mathrm{fin}}(\{t\})\ne0\iff e^t=p^k\quad(p\in S_f,\ k\ge1),
 \]
-and then $\omega_{\mathrm{fin}}(\{t\})=\Lambda(e^t)e^{-t/2}$. In particular
-$\Lambda$, the set of prime powers, and the vanishing of $\Lambda$ at composite
-arguments are read off the contact locus of the one-parameter family
+with all primes allowed in the colimit. At such a point $\omega_{\mathrm{fin}}(\{t\})=\Lambda(e^t)e^{-t/2}$. In particular
+$\Lambda$, the set of prime powers, and the vanishing of $\Lambda$ at integers with at least two distinct prime divisors are read off the contact locus of the one-parameter family
 $\{\Gamma^{\mathrm{rad}}_{(t)}\}$, whose members by Lemma~\ref{lem:notideal}
-carry no arithmetic information themselves. Composite indices are exactly the $t$ at which the family
-has \emph{no} contact.
+carry no arithmetic information themselves. For $t=\log n$ with $n\ge2$ supported on the chart, there is no finite contact exactly when $n$ has at least two distinct prime divisors.
 \end{enumerate}
 \end{theorem}
 
@@ -971,7 +948,7 @@ $K(|t|)\,dt$.
 \begin{remark}\label{rem:lambdaderived}
 Formula \eqref{eq:lambdavol} exhibits $\Lambda(p^k)=\log p$ as the
 multiplicative Haar volume of a valuation shell, and the
-vanishing of $\Lambda$ at composite $n$ as the statement that no single place
+vanishing of $\Lambda$ at indices $n$ with at least two distinct prime divisors as the statement that no single place
 has a shell of modulus $1/n$. Nothing in the derivation selects an arithmetic
 family from outside or uses the von Mangoldt function as an input: the only
 ingredients are the local terms \eqref{eq:localterms}, the exact orbital values
@@ -1072,7 +1049,7 @@ We now construct objects that are not radial and that do carry the
 arithmetic: the Haar measures of the valuation shells of the local dilations.
 They compose with a genuine unit, their supports remember $n$ and $P(n)$, and
 in Section~\ref{sec:frobcontact} we compute their contact to be
-$\Lambda(n)n^{-1/2}$, which vanishes at composite $n$ for a reason visible in
+$\Lambda(n)n^{-1/2}$, which vanishes at indices $n$ with at least two distinct prime divisors for a reason visible in
 the support.
 
 Throughout, $S$ is a chart and $n\ge1$ with $P(n)\subseteq S_f$.
@@ -1391,7 +1368,7 @@ $\{q^{-m}:q\in S_f,\ m\in\Z\}$ other than $1/n$ itself. Then
 \end{equation}
 for every $N\ge1$, with no regularization, counterterm or limit at the
 finite places; and in particular the left-hand side is $0$ for
-every composite $n$. The archimedean term is
+every index $n$ with at least two distinct prime divisors. The archimedean term is
 \begin{equation}\label{eq:frobarch}
   W_\infty\bigl(\Frob_n^{[h,N]}\bigr)
    =\Bigl(\int_0^\infty K_s(t)\,h(e^{-t})\,dt\Bigr)\cdot
@@ -1440,7 +1417,7 @@ for \emph{every} $q$, whether $q\mid n$ or $q\nmid n$. The unit slice sits at
 archimedean coordinate $1$, and the Frobenius is supported at archimedean
 coordinate $1/n\ne1$, so no cancellation or principal value is involved.
 
-Summing gives \eqref{eq:frobcontacteq}, and $\Lambda(n)=0$ for composite $n$
+Summing gives \eqref{eq:frobcontacteq}, and $\Lambda(n)=0$ for indices $n$ with at least two distinct prime divisors
 matches the vanishing of all shell terms.
 
 \emph{Archimedean.} $j_\infty(x)=(x$ at $\infty$; $1$ at every finite place$)$,
@@ -1526,7 +1503,7 @@ Let $n\ge2$. Then
   \iff \supp\Frob_n\ \text{meets some shell}
 \]
 of some $\Iml\,j_q$ in a set of positive Haar measure; and in that case the intersection is the \emph{whole} shell, that is,
-$\supp\Frob_{p^k}=j_p(p^k\Z_p^\times)\subseteq\Iml\,j_p$. For composite $n$ the
+$\supp\Frob_{p^k}=j_p(p^k\Z_p^\times)\subseteq\Iml\,j_p$. For indices $n$ with at least two distinct prime divisors the
 support meets $\Iml\,j_q$ for no $q$ at all.
 \end{theorem}
 
@@ -1543,7 +1520,7 @@ disjoint.
 
 Theorem~\ref{thm:compositedisjoint} is a statement about the object, different
 for every $n$ by Theorem~\ref{thm:frobmonoidal}(iv): the vanishing of the
-contact at composite $n$ is the \emph{disjointness of the support from every
+contact at indices $n$ with at least two distinct prime divisors is the \emph{disjointness of the support from every
 valuation stratum}. In particular $\Frob_6$ and $\Frob_4$ have different supports.
 
 \subsection{The archimedean flow}

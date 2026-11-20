@@ -34,23 +34,23 @@ This result narrows the scope of the N=10⁵ mechanism: it is likely tied to ari
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>m4_decomposition_f_canon_rand.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Table of M₄ decomposition percentage contributions for f_canon_rand at N=10⁴, 10⁵, 10⁶. Each row shows the N value and five term type percentages (Diagonal, Mixed Diagonal, Three Equal, Two-Two, Four-Index), averaged over the top 10% of M₄(t) values. This is the primary result table for testing the universality hypothesis.</artifact-description>
 </artifact> <artifact>
 <file-name>m4_deviation_analysis_f_canon_rand.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Detailed analysis table showing M₄ term percentages at each N, expected values at N=10⁵ from linear interpolation, absolute and relative deviations, and monotonicity classification for each term type. Used to quantify whether N=10⁵ is an outlier.</artifact-description>
 </artifact> <artifact>
 <file-name>f_canon_rand_coefficients.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy archive containing precomputed f_canon_rand(n) values for n=1 to 10⁴, 10⁵, and 10⁶ (three separate arrays f_10k, f_100k, f_1M). Generated with random seed 42. Each array is complex-valued with f(n) computed via complete multiplicativity from prime values f(p) = exp(i*θ_p). Enables reproducible analysis without regenerating coefficients.</artifact-description>
 </artifact> <artifact>
 <file-name>f_canon_rand_prime_phases.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Python pickle file containing a dictionary mapping each prime p ≤ 10⁶ to its random phase θ_p ∈ [0, 2π). Generated with NumPy random seed 42. This is the fundamental definition of f_canon_rand and allows exact reproduction of the function or extension to larger N values.</artifact-description>
 </artifact> <artifact>
 <file-name>m4_decomposition_percentages_f_canon_rand.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy archive storing the M₄ percentage results as dictionaries (percentages_10k, percentages_100k, percentages_1M) along with the N values array. Contains the complete numerical results for all five term types at all three scales, suitable for programmatic access and further statistical analysis.</artifact-description>
 </artifact>
 </artifacts>

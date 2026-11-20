@@ -25,17 +25,17 @@ The results demonstrate the core conceptual danger highlighted in the v6.6 task 
 <artifacts>
 <artifact>
 <file-name>bottleneck_ledger.md</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>The final R10 deliverable markdown table. It synthesizes all observation fronts across the control panel, mapping definitive numerical results to their strongest proven statements, missing mathematical lemmas, and nearest known theoretical tools.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front2_weil_lambda_min.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV containing the minimum and maximum eigenvalues of the Front II.5 Weil form constructed as a PSD zeros-only Mercer kernel. Confirms analytical insensitivity to off-line zeros.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front2_moment_ratios.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV recording the Front II.7 number-variance $\Sigma^2(L)$ (proxy for $I_2$ moment ratios) for interval lengths $L \in [1, 100]$. Compares empirical zero spacing fluctuations of $\zeta$, $L(\chi_5)$, and $L_{DH}$ against the theoretical GUE prediction.</artifact-description>
 </artifact>
 </artifacts>

@@ -33,7 +33,7 @@ The amplification-ratio normalization successfully removes the catastrophic anti
 <artifacts>
 <artifact>
 <file-name>lofo_amplification_ratio_results.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: bar chart comparing r48 baseline AUCs (0.29, 0.86) against amplification-ratio AUCs (0.75, 0.72) on the two LOFO folds, with the 0.85 hypothesis target marked. Panel B: heatmap of class-wise mean amplification ratios a_k=⟨|S_k|²⟩/C_k for k=0..6 across the 11 classes, showing the residual systematic differences between the F4 and F12 violator families that explain why the hypothesis is not met.</artifact-description>
 </artifact>
 </artifacts>

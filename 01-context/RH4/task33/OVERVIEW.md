@@ -29,12 +29,12 @@ The hypothesis followed from a too-literal reading of the arithmetic-ablation mo
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>M_F9_comparison.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive with the empirical M_F9 (8×8) for the Ramanujan Delta function over 200 zeta peak heights at N=10⁶, the reference M_zeta (8×8), the underlying complex S_k(F9) array (200×8), the t_peaks array, and summary scalars (cosine_similarity=0.171346, frob_diff=109.033, frob_zeta_norm=109.396, ratio_frob=0.9967). Computed with a Numba-jitted Kahan compensated summation engine using a_n=λ_n, ω(n)-stratification (validated by exact reproduction of stored Sk_zeta).</artifact-description>
 </artifact>
 <artifact>
 <file-name>M_F9_vs_M_zeta_comparison.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: side-by-side symlog heatmaps of M_jk(ζ) (uniformly positive, large) vs M_jk(F9) (oscillatory, much smaller). Panel B: log-scale comparison of the diagonals M_kk(ζ) and M_kk(F9) over k=0..7, with a text box reporting cosine similarity 0.171, Frobenius difference ratio 99.7%, and explicit "REFUTED" annotations against the hypothesis thresholds.</artifact-description>
 </artifact>
 </artifacts>

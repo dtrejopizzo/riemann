@@ -27,7 +27,7 @@ The benchmark data strongly support the hypothesis's premise: per-100 PARI wall-
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>generate_lchi5_dps80.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Standalone Python script implementing the non-uniform partitioning strategy for generating the L(s, χ₄ mod 5) N=5000, dps=80 zero list. Builds a 80-segment cost-balanced partition of [0, 4500] using a benchmark-derived cost-rate model, dispatches segments to 8 workers via `multiprocessing.get_context('spawn').Pool` calling the existing `lchi5_cypari_worker.worker`, then merges, sorts by numeric value, de-duplicates within 1e-9, truncates to exactly 5000 zeros, saves as `dtype='<U81'`, and validates against the 129 LMFDB zeros in `lmfdb_Lchi5.json`. Script is complete and ready to run, but in the current sandbox the cypari2-under-multiprocessing launch hung; a subprocess-shard variant (per `delta_shard_runner.py` pattern) is the recommended next step.</artifact-description>
 </artifact>
 </artifacts>

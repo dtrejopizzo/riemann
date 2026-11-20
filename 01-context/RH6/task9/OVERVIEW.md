@@ -28,22 +28,22 @@ The experiment cleanly separates two questions: (a) Does `start_new_session=True
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_04000.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>L_DH critical-line zero checkpoint at the 4,000-zero milestone (t_last≈3908.07), 50-dps decimal strings. Produced by the detached `generate_ldh_zeros_run.py` child process launched with `subprocess.Popen(..., start_new_session=True)` and `LDH_TIME_BUDGET=7200`, resumed from `ldh_ckpt_03578.npy`. Accompanied by `ldh_ckpt_04000_meta.json` containing `n_zeros=4000` and `t_last`.</artifact-description>
 </artifact>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_04000_meta.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Companion metadata JSON for the 4,000-zero checkpoint, required by the resume logic in `generate_ldh_zeros_run.py`. Contains `n_zeros`, `t_last`, and `n_evals` fields.</artifact-description>
 </artifact>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_03750.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Intermediate L_DH critical-line zero checkpoint at the 3,750-zero milestone (t_last≈3691.77), 50-dps decimal strings, produced by the same detached run; companion `ldh_ckpt_03750_meta.json` is also present.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_log.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Time-stamped progress log written by `generate_ldh_zeros_run.py` during the detached run, documenting resume, lfuninit timing, per-minute zero counts, checkpoint events, and the confirmation that the child kept running uninterrupted across parent-kernel cell timeouts.</artifact-description>
 </artifact>
 </artifacts>

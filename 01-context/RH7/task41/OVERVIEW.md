@@ -33,22 +33,22 @@ The hypothesis is partially supported: L_DH does produce a clearly negative λ_m
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_quadratic_form_L_DH.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>New L_DH module extending the validated `weil_quadratic_form_general.py` engine. Implements zero side via complex Hermite–Gauss evaluation at γ_ρ = −i(ρ−1/2), exact archimedean/polar terms inherited from the underlying odd Dirichlet character mod 5, and a best-effort κ-weighted linear-combination prime sum that is explicitly labelled as inexact in the module docstring (since L_DH has no Euler product / public von Mangoldt coefficients). Validated against ζ (1e-14 trace identity) via the original engine and against the L_DH off-line spec zeros.</artifact-description>
 </artifact>
 <artifact>
 <file-name>bottleneck_ledger_L_DH.md</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Formal Bottleneck Ledger entry documenting that the spec's L_DH benchmark `λ_min ≈ −9.0×10⁴` is irreproducible from public information, and recording the best-effort reference value `λ_min = −7.77×10⁻¹`, `tr(M_zeros) = 5.214`, trace residual `−1.484` at (T₀=85.7, σ=2, J=10, X=10⁵, κ=0.28408). Includes ζ and L(χ₄) cross-checks as engine sanity controls.</artifact-description>
 </artifact>
 <artifact>
 <file-name>L_DH_best_effort_results.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pickle of full numerical results: parameters, L_DH zeros used (26 in upper half-plane), all 10 eigenvalues for ζ, L(χ₄ mod 5), and L_DH at the benchmark parameters, plus all component-matrix traces and the trace-identity residual.</artifact-description>
 </artifact>
 <artifact>
 <file-name>cache/L_DH_zeros_T85p7_window.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Refined L_DH zero list in window t ∈ [60, 110]: 24 on-line zeros found by scanning |L_DH(½+it)| and refining with Muller, plus the spec off-line zero (0.808517, 85.699348) and its functional-equation mirror (0.191483, 85.699348) refined to ~50-digit precision with Newton.</artifact-description>
 </artifact>
 </artifacts>

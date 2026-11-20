@@ -20,17 +20,17 @@ The results cleanly uphold the core expectation: preserving the functional/Euler
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>front_II_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A two-panel (with multi-subpanel) high-resolution figure. Subfigure A displays the Li coefficient values against n across the computed function panel on a symlog scale, prominently detailing the positive shift of the ζ_δ family. Subfigure B contains three plots detailing the GORZ block convergence, Weil form minimum eigenspectrum profiles, and the initial integration ratios for the Moments comparison.</artifact-description>
 </artifact>
 <artifact>
 <file-name>chi5_zeros_N258_dps50.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A NumPy array file containing the first 258 positive imaginary zero ordinates for L(χ₄ mod 5) derived directly using mpmath quadrature/bracket root finding at a working precision of 50. It caches the output of the Hardy-Z sign-change search.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front_II_results.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A serialized Python dictionary containing raw numeric vectors for the converged Front II indicators: Li sequences at N=5000 and N=2000 truncations for comparative diagnostic plotting, Weil matrix eigenvalues, GORZ recurrence coefficients, and explicit methodological notes outlining the limits of what was available versus derived.</artifact-description>
 </artifact>
 </artifacts>

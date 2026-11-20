@@ -37,7 +37,7 @@ The data answer the convergence question unambiguously in the negative: the diag
 <artifacts>
 <artifact>
 <file-name>fourth_moment_omega_decomposition_T500_1000_N1000000.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Full ω-class fourth-moment decomposition for ζ, L(Δ), and L_DH at N_terms=10^6, on the high-t window t∈[500,1000), dt=0.01 (50,000-point left Riemann sum). Contains total ∫|D|⁴ dt, per-class pure integrals (k=0..5), all C(6,2)=15 pairwise |S_j|²|S_k|² integrals, and derived pure / 4·diag-cross / off-diagonal residual percentages. Engine reconstructed from the r16/r26 spec, validated against the saved N=10^4 zeta result, and parallelized with Numba; Ramanujan τ(n) up to 10^6 computed exactly via python-flint power series of Δ=q∏(1-q^n)^{24}.</artifact-description>
 </artifact>
 </artifacts>

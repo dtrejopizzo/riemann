@@ -30,7 +30,7 @@ This analysis reveals that resonance suppression in ζ-like functions is surpris
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>critical_probability_analysis.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel visualization showing (top) GEV shape parameter ξ versus probability p across full range [0,1] with 95% confidence intervals, demonstrating transition from strong resonance suppression (ξ ≈ -0.31) at p=0 to weakened suppression at p≥0.4, with critical probability p*=0.40 marked where CI first includes zero; (bottom) detailed view of transition region p∈[0.3,0.6] showing high variance and non-monotonic behavior in critical regime. Generated using matplotlib with N=10^5, block maxima GEV fitting, and bootstrap confidence intervals.</artifact-description>
 </artifact>
 </artifacts>

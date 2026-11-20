@@ -1,6 +1,6 @@
 ## Overview <output>
 <conclusion>
-The iterative resume strategy works correctly and advanced the L_DH zero list from 2,772 → ~3,549 zeros over four agent-supervised runs, but it could not reach the 5,000-zero target within the available compute budget; producing the full 5,000-zero file requires substantially more wall-clock time than a single run run permits.
+The iterative resume strategy works correctly and advanced the L_DH zero list from 2,772 → ~3,549 zeros over four supervised runs, but it could not reach the 5,000-zero target within the available compute budget; producing the full 5,000-zero file requires substantially more wall-clock time than a single run run permits.
 </conclusion> <methods>
 1. Inspected the supplied artifacts: `generate_ldh_zeros_run.py` and `ldh_zeros_partial_dps50.npy`. The supplied partial file actually contained 2,772 zeros up to t≈2,827.70 (not 3,500 as suggested in the description); `checkpoints_ldh/` was absent. Confirmed by `np.load(... allow_pickle=True)`.
 2. Created a writable working directory `ldh_work/` (the original `run_log.txt` and script were owned by root with mode 644 and could not be appended to from a subprocess; this caused the script to crash immediately at log() until a writable copy was made). Copied the script and the prior `run_log.txt`, and seeded `checkpoints_ldh/ldh_ckpt_02772.npy` plus matching meta JSON (t_last = last_zero + 0.05) from the partial file so the script could resume.
@@ -32,17 +32,17 @@ The mechanical claim of the hypothesis — that `generate_ldh_zeros_run.py` will
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldh_work/checkpoints_ldh/ldh_ckpt_03549.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy object array of 3,549 strictly-monotonic critical-line zero ordinates of the Davenport–Heilbronn L-function, stored as 50-dps decimal strings. Produced by iteratively resuming `generate_ldh_zeros_run.py` from the supplied 2,772-zero seed across four runs (60 s smoke + ~830 s + 750 s + 700 s). Last ordinate t ≈ 3,513.26. Validated for strict monotonicity. Replaces the previous 2,772-zero partial as the most-advanced checkpoint toward the 5,000-zero target.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_work/run_log.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Appended execution log spanning the prior r27/r31 runs plus the four new resume runs performed here. Contains all checkpoint lines and per-minute PROGRESS lines used to compute incremental throughput by 250-zero band. Required input for parsing future cost-scaling analyses.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_work/generate_ldh_zeros_run.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Verbatim copy of the validated generation script placed in a writable working directory so it can append to its log. The original copy in the project root is read-only and crashes on first log() call.</artifact-description>
 </artifact>
 </artifacts>

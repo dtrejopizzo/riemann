@@ -26,12 +26,12 @@ The map η(T₀,σ,J,X,H) for GRH-consistent ζ behaves as the product of two in
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>eta_residual_law.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Numerical results of the η(T₀,σ,J,X,H) sweep. Contains the parameter points (optimal at (46.13,1,10) and L_DH at (85.7,2,10)), the main grid (X∈{1e4,1e5,5e5,1e6}, H∈{1000,2500,5000}) of |λ_min(Q)| values, and a finer X scan at H=2500 spanning X∈[10³,10⁶]. Produced by the validated Weil-quadratic-form engine using the first 5000 Riemann ζ zeros from Odlyzko's published table and Gauss-Hermite quadrature with 400 nodes (scipy.special.roots_hermite) for the prime kernel.</artifact-description>
 </artifact>
 <artifact>
 <file-name>eta_residual_law.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: η = |λ_min(Q)| versus prime-power cutoff X on log-log axes for both required (T₀,σ,J) parameter points, at H=2500 (solid markers = fine X scan; open markers = required X grid). Panel B: η versus zero cutoff H at X=10⁶, demonstrating saturation of the Riemann-side sum at H≈25 (optimal point) and H≈50 (L_DH point), with the required H grid lines marked.</artifact-description>
 </artifact>
 <artifact>

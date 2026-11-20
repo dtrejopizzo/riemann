@@ -40,7 +40,7 @@ A finer sweep near the observed peak (`δ` from 4.2 to 5.2 in steps of 0.05 or 0
 <artifacts>
 <artifact>
 <file-name>weil_lmin_vs_delta_sweep.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON file containing the full offset sweep for the reconstructed single-zero shifted zeta Weil form at J=12, including parameters, T0 values, zero counts in each window, sorted eigenvalues, lambda_min, lambda_max, and the identified optimal offset. It was created directly from the notebook analysis using `mpmath` at 80 decimal places and saved to the working directory.</artifact-description>
 </artifact>
 </artifacts>

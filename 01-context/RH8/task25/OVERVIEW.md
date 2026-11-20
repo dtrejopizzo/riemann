@@ -53,27 +53,27 @@ The results strongly support the hypothesis. In the validated wide-window regime
 <artifacts>
 <artifact>
 <file-name>results.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>JSON record of all 105 grid computations, including T0, sigma, J, lambda_min, lambda_max, traces, trace residuals, and full eigenvalue lists. Created from the explicit-formula matrix computations performed in Python with numpy, scipy, and mpmath.</artifact-description>
 </artifact>
 <artifact>
 <file-name>lam_min_results.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Tabular summary of the full grid of λ_min and trace statistics for L(χ₄ mod 5). Written from the aggregated pandas DataFrame used for downstream summaries and plotting.</artifact-description>
 </artifact>
 <artifact>
 <file-name>fits_sigma2.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Fit results for the σ=2 convergence analysis, including exponential and power-law model parameters, RSS, R^2, and AIC for each T0. Generated using scipy.optimize.curve_fit on the computed λ_min(J) values.</artifact-description>
 </artifact>
 <artifact>
 <file-name>Q_cache</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Directory containing 105 cached .npz files with Q, M_zeros, and M_arith matrices for every requested (T0, sigma, J) combination. Saved to avoid recomputation and preserve the full numerical outputs of the study.</artifact-description>
 </artifact>
 <artifact>
 <file-name>REPORT.md</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Short written report summarizing the implementation, trace validation, σ=2 convergence, σ≤1 failure regime, and overall conclusion. Produced directly from the numerical results after completion of the grid search.</artifact-description>
 </artifact>
 </artifacts>

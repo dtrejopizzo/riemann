@@ -24,12 +24,12 @@ H2: The residual scales as J × (n_nodes_quad)^{-c} or as a power of the basis-t
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_quadratic_form_general.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Reconstructed dependency module providing `_phi_at_points` (Hermite-Gauss basis evaluation at a list of frequency points, shape (N,J)) and `_g_at_u` (complex kernel g_{ij}(u)=(1/2π)∫φ_iφ_j e^{iru}dr evaluated via Gauss-Hermite quadrature, shape (Nu,J,J)). Reconstructed from the explicit Hermite/Gauss conventions already encoded in `weil_modular_arch.py`'s M_arch/M_polar construction. Validated independently to ~1e-13 by (a) orthonormality of φ_j on a dense r-grid and (b) pointwise agreement of g_{00}(u) with direct trapezoidal integration of the defining integral. Required to run `weil_modular_arch.compute_Q_modular`.</artifact-description>
 </artifact>
 <artifact>
 <file-name>arch_factor_scan.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Summary figure: log-scale relative trace residual |tr(M_zeros)−tr(M_arith)|/tr(M_zeros) as a function of arch_factor swept over [0,1.5] for L(Δ,s) at T₀=85.7, σ=2, J=10, X=10⁴ with the 61-zero reliable list. Annotates the hypothesis point (arch_factor=0.5 → 83.9%), default (arch_factor=1.0 → 9.0%), and the numerical optimum (arch_factor≈0.952 → 3×10⁻³).</artifact-description>
 </artifact>
 </artifacts>

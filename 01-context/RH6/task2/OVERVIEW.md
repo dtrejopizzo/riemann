@@ -38,7 +38,7 @@ The bottleneck for the L_DH zero list was confirmed to be `mpmath.dirichlet`, wh
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>ldh_fast_eval.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>
 Fast Python module that evaluates the Davenport–Heilbronn L-function L_DH(s), the θ_DH(t) phase, and the Hardy-Z analogue Z_DH(t), at arbitrary mpmath working precision. Internally it uses PARI/GP (via cypari2) with cached `lfuninit` evaluators for the two primitive mod-5 Dirichlet L-functions, combined in mpmath with the Davenport–Heilbronn coefficients A,B. Public API: `init_evaluator`, `set_height`, `L_chi_fast`, `L_chibar_fast`, `L_DH_fast`, `theta_DH`, `Z_DH_fast`. Verified to agree with `ldh_def.Z_DH` to ≥47 decimal places at t=100.1, 500.2, 1000.3 and to deliver 14–30× speedup at t>500.
 </artifact>

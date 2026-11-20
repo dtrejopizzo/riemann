@@ -21,22 +21,22 @@ The evidence supports the operational part of the hypothesis: `generate_ldh_zero
 <artifacts>
 <artifact>
 <file-name>run_log_prior.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Backup copy of the pre-existing `run_log.txt` made before recreating the file with writable permissions. It preserves the original historical log lines present in the workspace at the start of analysis.</artifact-description>
 </artifact>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_02750.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Seed checkpoint created from the available 2,772-zero partial list by truncating to the latest 250-aligned boundary required by the resume script. Saved as a NumPy object array of decimal strings for compatibility with `generate_ldh_zeros_run.py`.</artifact-description>
 </artifact>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_02750_meta.json</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Metadata JSON accompanying the seeded 2,750-zero checkpoint, containing `n_zeros` and `t_last` needed by the resume logic in `generate_ldh_zeros_run.py`.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldh_zeros_partial_dps50.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Updated partial Davenport–Heilbronn critical-line zero list written by the resumed generator during the search. It was extended from the original 2,772-zero state to at least 3,039 zeros before the detached process continued onward toward 3,500+ zeros.</artifact-description>
 </artifact>
 </artifacts>

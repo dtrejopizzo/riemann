@@ -14,19 +14,19 @@ This analysis provides strong evidence for the universality of constructive ω-c
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>summary_r_at_peaks_N1e6.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Summary table containing mean, median, standard deviation, min, and max canonical r values for the top 50 peaks of zeta, f_rand, and L_mobius functions at N=10⁶. Also includes mean peak heights and statistical parameters. This provides the primary quantitative comparison across functions.</artifact-description>
 </artifact> <artifact>
 <file-name>detailed_results_N1e6.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Comprehensive pickle file containing all computational results: coefficient arrays, magnitude evaluations on the t-grid, peak locations and heights, individual r values at all 50 peaks for each function, and derived statistics. This enables detailed post-hoc analysis and verification of results without recomputation.</artifact-description>
 </artifact> <artifact>
 <file-name>omega_values_N1e6.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Pre-computed array of Ω(n) values (prime factor count with multiplicity) for n=1 to 10⁶. This computationally expensive factorization (took ~10 seconds to compute) is stored for reuse in future analyses requiring ω-class decompositions at N=10⁶, avoiding redundant computation.</artifact-description>
 </artifact> <artifact>
 <file-name>detailed_comparison_table_N1e6.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Extended comparison table with detailed metrics for all three functions including t-statistics, percentages of positive r values, and correlation coefficients between peak height and r. This provides a comprehensive statistical characterization of the universality of constructive interference patterns.</artifact-description>
 </artifact>
 </artifacts>

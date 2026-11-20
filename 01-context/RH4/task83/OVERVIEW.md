@@ -25,17 +25,17 @@ The "constructive interference" interpretation of report r11 — that at large p
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>Sk_at_peaks_F4.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy archive with the Davenport–Heilbronn peak-conditioned ω-stratified analysis at N=10⁶. Contains refined peak t-values and |L_DH| values for the top 200 peaks of |L_DH(½+it)| over t∈[50,2000] (peak finding via truncated DP with M=10⁴ and 0.001-grid local refinement), the real and imaginary parts of S_k for k=0..7, the resulting 8×8 matrix M_jk = E[Re(S_j conj S_k)], its eigenvalues, and eigenvectors. κ=0.28408 was used per the binding-document audit.</artifact-description>
 </artifact>
 <artifact>
 <file-name>Sk_at_peaks_zeta_N1e6_regenerated.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Regenerated zeta peak-conditioned ω-stratified analysis at N=10⁶ (the original Sk_at_peaks_zeta_N1e6.npz was not present and the loose .npy files in the workspace had a t-range incompatible with the spec). Contains refined peak t-values and |Z| values for the top 200 peaks in t∈[10⁴,10⁵] (peak finding via Numba Riemann–Siegel Z with C0 correction, validated against mpmath.siegelz to ~10⁻⁵), the real/imaginary parts of S_k for k=0..7, the 8×8 M_jk matrix, eigenvalues, and eigenvectors.</artifact-description>
 </artifact>
 <artifact>
 <file-name>eigenvector_comparison.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) bar plot of the sign-aligned PC1 entries of M_jk for F1 (ζ) and F4 (L_DH) showing both are all-positive with maximum at the ω=2 stratum; (B) log-scale eigenvalue spectrum showing PC1 dominates more strongly for ζ (96.7 %) than for L_DH (80.5 %).</artifact-description>
 </artifact>
 </artifacts>

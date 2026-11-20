@@ -23,12 +23,12 @@ The zero-side matrix convergence firmly validates the spectral component of the 
 <artifacts>
 <artifact>
 <file-name>aggregate_trace_results.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A serialized Python dictionary containing the exact, freshly computed zero-side trace diagnostic errors (tr/J - rho) mapped across J (4 to 28) and sigma (0.5 to 4.0) grids. Contains density targets and zero-trace scaling verification for zeta, L(chi4 mod 5), and the local L(Delta,s) zeros.</artifact-description>
 </artifact>
 <artifact>
 <file-name>bottleneck_ledger.md</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>A Markdown table listing seven distinct empirical regularities identified by the engine specification and matching them to the precise, missing mathematical lemmas needed to formalize the analysis into proofs.</artifact-description>
 </artifact>
 </artifacts>

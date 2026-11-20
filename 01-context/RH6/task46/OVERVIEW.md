@@ -29,22 +29,22 @@ The infrastructure to complete the L_DH list is in place and validated: a writab
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_03250.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Latest validated L_DH critical-line zero checkpoint produced during the search: 3,250 zeros at 50-dps, stored as a NumPy object array of decimal strings, last zero at t ≈ 3,248.39. Created by resuming `generate_ldh_zeros_run.py` from the seeded 2,772-zero checkpoint and running for ≈13 min of compute before periodic 250-zero checkpointing fired.</artifact-description>
 </artifact>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_03000.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Intermediate L_DH checkpoint (3,000 zeros, t ≈ 3,031.65) generated during this run while extending the 2,772-zero seed. NumPy object array, decimal strings, 50-dps precision.</artifact-description>
 </artifact>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_02772.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Seed checkpoint constructed from the provided 2,772-zero `ldh_zeros_partial_dps50.npy` to bootstrap the resumable generator (the script auto-detects the latest `ldh_ckpt_*.npy`). Accompanied by a metadata JSON specifying `t_last` ≈ 2,827.70 so the loop continues just past the last known zero.</artifact-description>
 </artifact>
 <artifact>
 <file-name>run_log.txt</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Updated execution log appended during the search, now including the resume from the 2,772-zero seed, checkpoints at 3,000 and 3,250 zeros, and per-minute PROGRESS lines documenting throughput (~19 zeros/min) in the t ∈ [2,828, 3,454] range — useful for projecting remaining compute for the 5,000-zero target.</artifact-description>
 </artifact>
 </artifacts>

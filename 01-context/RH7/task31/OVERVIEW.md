@@ -23,12 +23,12 @@ This is a clean cross-validation of the r20 explicit perturbation theorem at a p
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>c_pred_vs_c_emp_T0_85p7.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Validation table for the explicit perturbation theorem at the second anchor point T₀=85.7, σ=2, J=10, m=40. Three rows for δ ∈ {1e-5, 1e-4, 1e-3} containing min_eig_dQ from the ζ_δ Weil-form simulation, c_emp = min_eig/δ², c_pred = −4.375767 (min eigenvalue of Σ A(γ_k) over the 16 Riemann zeros γ_16..γ_31 in the basis window), and relative error in percent. All rel-errors below 1.2×10⁻⁴ %, satisfying the 1% validation gate by 4+ orders of magnitude.</artifact-description>
 </artifact>
 <artifact>
 <file-name>perturbation_validation_T0_85p7.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Log-log plot of |λ_min(ΔQ)| vs δ at T₀=85.7 with empirical points overlaid on the theoretical |c_pred|·δ² line, demonstrating the δ² scaling and the predicted prefactor to numerical precision.</artifact-description>
 </artifact>
 </artifacts>

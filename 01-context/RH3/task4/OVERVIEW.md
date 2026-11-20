@@ -25,19 +25,19 @@ This analysis definitively resolves the r35 hypothesis regarding causal structur
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>f_canon_rand_N1e6.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Complete definition of the f_canon_rand function at N=10⁶. Contains: (1) f_values array with f(n) for n=1 to 10⁶ as complex numbers, (2) prime_phases dictionary mapping all 78,498 primes ≤10⁶ to their assigned random phases from Uniform[0,2π), (3) metadata including N=10⁶ and seed=42. This artifact enables exact reproduction of all f_canon_rand analyses and serves as the canonical reference implementation. Generated using numpy.random.seed(42) for full reproducibility.</artifact-description>
 </artifact> <artifact>
 <file-name>f_canon_rand_perturbation_data_N1e6.pkl</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Complete causal perturbation analysis results. Contains: (1) peak_data with full ω-class sums S_k (k=0..19) for all 20 peaks, (2) perturbation_results with magnitude reductions for S₂, S₃, S₄ perturbations at each peak, (3) summary_statistics including means, standard deviations, p-values, and Cohen's d effect sizes. This artifact supports downstream meta-analyses comparing causal structures across different multiplicative functions without recomputing expensive Dirichlet polynomial evaluations.</artifact-description>
 </artifact> <artifact>
 <file-name>f_canon_rand_perturbation_results.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Human-readable summary table of perturbation analysis results. Contains 22 rows (20 peaks + mean + std) with columns for peak rank, t value, magnitude, and reduction percentages for S₂, S₃, S₄ perturbations. Enables quick inspection and integration into reports or publications. Summary statistics: S₂ (35.72±12.86%), S₃ (45.29±13.26%), S₄ (37.92±15.44%).</artifact-description>
 </artifact> <artifact>
 <file-name>f_canon_rand_causal_perturbation_analysis.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel publication-quality figure (300 dpi) summarizing the causal perturbation analysis. Panel A: Bar chart of mean magnitude reductions for S₂, S₃, S₄ with error bars (std) and significance indicators (p-values from paired t-tests). Panel B: Line plot showing reduction percentages across all 20 peaks for each ω-class, illustrating variability and confirming S₃'s consistent dominance. Figure clearly demonstrates S₃ superiority over S₂ (p=0.034) and S₄ (p=0.013).</artifact-description>
 </artifact> <artifact>
 <file-name>omega_values_N1e6.pkl</file-name>

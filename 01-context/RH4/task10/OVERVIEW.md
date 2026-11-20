@@ -28,7 +28,7 @@ The motivation for the hypothesis was that the *shape* of the amplification spec
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>shape_features_ocsvm_results.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: ROC curves for One-Class SVM detection of the F4-family violators using the 6D `log|S_k|` baseline (AUC 0.878) versus the 8D feature set augmented with shape features `argmax_a` and `entropy_a` (AUC 0.831), evaluated on a held-out 20% split of GRH-true peaks. Panel B: per-family AUC comparison (F4, F5p, F5m, F4-family union, F12), with reference lines at the r52 baseline (0.844) and the 0.90 hypothesis target. The 8D model is uniformly at or below the 6D model.</artifact-description>
 </artifact>
 </artifacts>

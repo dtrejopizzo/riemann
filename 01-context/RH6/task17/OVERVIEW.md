@@ -32,12 +32,12 @@ The clean, contiguous list of the first 5,000 zeros of the Dirichlet L-function 
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>lchi_zeros_5000_dps50.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Numpy array (shape (5000,), dtype '&lt;U51') of 50-decimal-place string representations of the imaginary parts of the first 5,000 non-trivial zeros of the Dirichlet L-function L(s, χ) where χ is the primitive odd character mod 5 with χ(2)=i (LMFDB 5.c.a). Generated from scratch with cypari2 / PARI-GP 2.17.2 at real precision 50, using lfunzeros over chunks of length 100–200, with boundary-duplicate removal via mpmath. Verified to contain exactly 5,000 distinct, strictly increasing values spanning T∈(0, 4391.58]; cross-validated against the legacy partial file (2,380/2,380 string-identical matches in the overlap region).</artifact-description>
 </artifact>
 <artifact>
 <file-name>lchi_zeros_checkpoint.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Intermediate checkpoint file written every 500 zeros during the from-scratch generation; final checkpoint state matches the canonical 5,000-zero list. Same dtype/format as the final file. Kept as a recovery artifact.</artifact-description>
 </artifact>
 </artifacts>

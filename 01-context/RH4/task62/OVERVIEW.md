@@ -33,27 +33,27 @@ Within the constraints of the available data and runtime, the main methodologica
 <artifacts>
 <artifact>
 <file-name>peaks_features_F1_F4.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV table of the 200 extracted peak observations used for classification, including t-location, function label, GRH label, substitute feature values, and train/test split. It was created from local peak scans of the zeta and Davenport–Heilbronn functions using custom Python implementations of Riemann–Siegel / approximate functional-equation evaluations.</artifact-description>
 </artifact>
 <artifact>
 <file-name>bootstrap_aucs.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>NumPy archive containing bootstrap AUC results from the classification analysis. It includes the retraining-bootstrap distribution used to form the reported 95% confidence interval for held-out AUC.</artifact-description>
 </artifact>
 <artifact>
 <file-name>svm_validation_summary.pdf</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>PDF version of the final summary figure, containing the feature-space separation plot and the temporal-split ROC summary. It was generated with matplotlib at the end of the analysis.</artifact-description>
 </artifact>
 <artifact>
 <file-name>svm_validation_summary.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>PNG version of the final summary figure, containing the feature-space separation plot and the temporal-split ROC summary. It was generated with matplotlib at 300 dpi.</artifact-description>
 </artifact>
 <artifact>
 <file-name>final_report.xml</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Structured XML report of the full analysis, including methods, results, limitations, discussion, and artifact inventory. It was written directly to disk at the end of the notebook run.</artifact-description>
 </artifact>
 </artifacts>

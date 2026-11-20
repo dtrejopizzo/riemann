@@ -23,17 +23,17 @@ The completion of a synchronized, rigorous L-function peak matrix immediately co
 <artifacts>
 <artifact>
 <file-name>unified_range_matched_peaks_F1-F12.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Methodologically unified, range-matched dataset of the highest 200 peak amplitudes $t \in [10^4, 2\cdot10^4]$ and corresponding Kahan-summed $\omega$-stratified matrices $S_k(t_p)$ over indices $k \in \{0..7\}$ using a common $N=10^6$ for 11 L-functions. Evaluated natively using `finufft` and parabolic peak-refinement.</artifact-description>
 </artifact>
 <artifact>
 <file-name>coeffs_F9_N1e6.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Complete dataset containing Ramanujan Delta coefficients $\tau(n)$ and analytically normalized representations $\lambda_n = \tau(n)/n^{11/2}$ for indices up to $n=10^6$. Generated directly from `cypari2` and `PARI` stack interfaces.</artifact-description>
 </artifact>
 <artifact>
 <file-name>coeffs_F10_N1e6.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Complete dataset housing coefficients $a_n$ representing the newform 11.2.a.a (level 11, weight 2), structurally normalized as $\lambda_n = a_n/\sqrt{n}$ for indices ascending to $n=10^6$. Derived via `cypari2` generating algorithms.</artifact-description>
 </artifact>
 </artifacts>

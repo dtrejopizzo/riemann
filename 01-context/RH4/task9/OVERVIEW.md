@@ -26,7 +26,7 @@ The hypothesis is supported in the strict letter of the LOFO protocol: complex s
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>lofo_complex_spectral_results.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: scatter of all 11 class centers in the (pc1_complex, H_complex) plane with the trained Fold-1 RBF-SVM decision boundary overlaid; F4-family points (✕) and F12 (✚) clearly fall on the violator side. Panel B: bar chart comparing test AUC from r33 magnitude-only LOFO baseline (0.705) to the complex spectral Fold 1 (1.000) and Fold 2 (1.000) results, with the AUC=0.95 hypothesis threshold marked.</artifact-description>
 </artifact>
 </artifacts>

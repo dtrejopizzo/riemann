@@ -1,7 +1,7 @@
 # Phase 190 — Near-coincidence discovery experiment on the integer-lattice matrices A_M
 
 Nothing in this phase uses or mentions any equivalence
-between row D and any other statement. Approved numerical DISCOVERY run (double precision, convergence-checked, NUMÉRICO; not
+between row D and any other statement. Approved numerical DISCOVERY run (double precision, convergence-checked, NUMERICAL; not
 certified). No edits to Paper 47, the grid or the routes index; proposed index rows are in memos/EXP_005 §4.
 
 Object: Paper 47 sec:combs — profile F₀ of thm:oneprofile (g = e^{bt}1_{[0,a]}, |b| > ½, T₀ = 2a, F₀ = (¼−∂²)(g*g̃*g*g̃)), lag function
@@ -31,6 +31,6 @@ zero-side. The 2×2 band kills Poisson/Beurling/a₅ but is passed to d = 15 by 
 **No prime-side structural fact about Near was found that holds for Λ and fails for every control.** (Ω₀) holds for Λ on T ∈ [0.55, 1.10] with margin 𝔞_T(φ₀) ∈ [0.016, 0.091] (Galerkin, N = 14/20 agree to 2·10⁻⁴); a₃, a₅ fail from T = 0.60, Poisson combs fail at various T, but amp2(0.05) and the 10⁻² perturbations pass at every T — (Ω₀) is necessary only (EXP_004).
 
 ## Status labels
-NUMÉRICO for every numerical statement; PROVED for the lattice identity of EXP_003 §4 / EXP_005 C3 (elementary); no new label on any cell
+NUMERICAL for every numerical statement; PROVED for the lattice identity of EXP_003 §4 / EXP_005 C3 (elementary); no new label on any cell
 of the grid; R9 and R2 remain OPEN. Exact next step: EXP_005 §6 (explicit decomposition of Q_M(w) on the family s_w = m^{−½}w(m/M) into a
 bulk part — defects at N = 2, 3, 4 against archimedean energy — and an edge part at scale M; check the edge part against [void]).

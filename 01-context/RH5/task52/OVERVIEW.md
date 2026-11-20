@@ -26,12 +26,12 @@ The architectural hypothesis — that an independent-subprocess, file-IO pipelin
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>generate_ldelta.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Main driver script that partitions [0, T_max=4075] into 8 sub-intervals using cube-root spacing, launches 8 independent `subprocess.Popen` workers of `delta_shard_runner.py`, waits for all, merges the per-shard pickle files, sorts/dedups/truncates to N=5000 zeros, validates γ₁ against the LMFDB reference, and saves the result as `ldelta_zeros_N5000_dps80.npy` with dtype `<U81`. Uses no `multiprocessing.Pool`, bypassing the cypari2 segfault path.</artifact-description>
 </artifact>
 <artifact>
 <file-name>delta_shard_runner.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Standalone worker script (one PARI/GP instance per Linux process). Takes `idx tmin tmax dps out_pkl` on the command line, sets `realprecision = dps`, calls `pari.allocatemem(10**9)`, defines L(Δ,s) via `lfunmf(mfinit([1,12],1), mfeigenbasis(mfinit([1,12],1))[1])`, runs `lfunzeros(L,[tmin,tmax])`, and extracts each zero at full precision via PARI-side `Strprintf("%.<dps>g", Z[i])` for 81-character strings. Results are pickled to the provided path. Verified on `[0,20]` to reproduce γ₁ = 9.22237939992110252224… to 80 digits.</artifact-description>
 </artifact>
 </artifacts>

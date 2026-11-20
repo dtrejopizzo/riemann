@@ -1,0 +1,18 @@
+{
+  "status": "PASS_IMPLEMENTATION_CHECK",
+  "kernel_degree": 8,
+  "input_degree": 4,
+  "scope": "numerical quadrature cross-check and interval evaluation; not a sign certificate",
+  "records": [
+    {
+      "sigma": 1,
+      "pieces": 5,
+      "max_absolute_discrepancy": "4.286202717308531183309188306145028597944662480585494979556721912103622384650268233782930081975645111e-101"
+    },
+    {
+      "sigma": -1,
+      "pieces": 5,
+      "max_absolute_discrepancy": "3.393243817869253853453107409031480973372857797130183525482404847082034387848129018411486314897385713e-101"
+    }
+  ]
+}

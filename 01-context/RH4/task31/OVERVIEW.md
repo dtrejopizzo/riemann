@@ -49,28 +49,28 @@ The available evidence supports a narrower statement than the original hypothesi
 <artifacts>
 <artifact>
 <file-name>master_class_features.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Table of class-level spectral features pc1_complex and H_complex for all classes that could be computed from available data, plus F15 and the F16(c) sweep loaded from the provided CSV. Created from local .npy peak-level S_k arrays and reconstructed F14 S_k values.</artifact-description>
 </artifact>
 <artifact>
 <file-name>peak_level_logSk_features.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Peak-level feature table containing one row per peak and log10|S_k| values for all classes with available or reconstructed peak-level S_k arrays. Used as the main input table for One-Class SVM fitting and evaluation.</artifact-description>
 </artifact>
 <artifact>
 <file-name>peak_logSk_OCSVM_dataset.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the leak-controlled OC-SVM feature matrix, feature names, class labels, and peak locations. Generated from the consolidated peak-level table to provide a compact reusable modeling dataset.</artifact-description>
 </artifact>
 <artifact>
 <artifact>
 <file-name>F14_Sk_recomputed.npy</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Recomputed complex ω-stratified sums S_k(t) for F14 across its 200 stored peaks, generated from a_n_real.npy and a_n_imag.npy using a Numba-accelerated Kahan summation engine validated against the stored F1 arrays. This enabled direct inclusion of F14 in the peak-level anomaly analysis.</artifact-description>
 </artifact>
 <artifact>
 <file-name>OCSVM_AUC_summary.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>CSV summary of family-wise One-Class SVM AUCs and bootstrap 95% confidence intervals under both in-sample and held-out GRH-true evaluation protocols. Created from scikit-learn decision scores and 200 bootstrap resamples per family.</artifact-description>
 </artifact>
 </artifacts>

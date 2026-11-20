@@ -24,12 +24,12 @@ The hypothesis under test — that the residual ~4.4 % trace mismatch for L(Δ,s
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>weil_modular_arch.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Copy of weil_modular.py with an added `arch_factor=1.0` keyword argument to `compute_Q_modular`. The change multiplies the assembled M_arch matrix by `arch_factor` so the archimedean-normalization hypothesis can be tested by calling with `arch_factor=0.5` while leaving M_polar, M_primes, and M_zeros untouched. The file is unexercised in this run because the required 80 L(Δ,s) zeros were not obtained within the runtime budget; downstream code should `from weil_modular_arch import compute_Q_modular` and call it at (T₀=85.7, σ=2, J=10, X=10⁴, include_negative_zeros=True, arch_factor=0.5).</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_modular_orig.py</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Verbatim backup of the original weil_modular.py prior to the archimedean-factor modification, preserved so subsequent runs can A/B compare arch_factor=1.0 (original) vs. 0.5 (hypothesized fix).</artifact-description>
 </artifact>
 </artifacts>

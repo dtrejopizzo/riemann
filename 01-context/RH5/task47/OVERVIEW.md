@@ -29,12 +29,12 @@ The targeted high-altitude Hermite-Gauss Weil quadratic form behaves as expected
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>step0p5_power_calibration_table_v2.csv</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Updated Step 0.5 power calibration table containing the original four rows (Front I a_n/b_n, Front III H0/H1 bottleneck) plus a new fifth row for "Front II: Targeted Weil λ_min shift |Δλ_min| (J=10, σ=2, t₀=γ₁₀₀₀)" with δ_orig(0.1)=2.40e-2, δ_strong(1.0)=6.62, ratio=275.6. Saved as a new file because the original CSV is read-only in this workspace.</artifact-description>
 </artifact>
 <artifact>
 <file-name>weil_step0p5_power_calibration.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure: (A) λ_min(M) of the J=10, σ=2 Hermite-Gauss wavelet Weil matrix centered at t₀=γ₁₀₀₀ vs perturbation amplitude δ for single-zero and 20-zero-contiguous-cluster perturbations, with the zd_small and zd_strong control points overlaid and the zero-crossing δ_min annotated; (B) λ_min for the zd_strong control with the basis re-centered at each of its 20 perturbed γ_k, all of which fall well below zero, confirming uniform detection.</artifact-description>
 </artifact>
 </artifacts>

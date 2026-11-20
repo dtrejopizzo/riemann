@@ -25,7 +25,7 @@ Persisting `coeffs_F12_N1e6.npz` removes the data-availability blocker that excl
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>coeffs_F12_N1e6.npz</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Compressed NumPy archive containing the 1,000,000 complex Dirichlet coefficients a_n = χ₃(n) + c·χ₅(n) of the explicitly-constructed GRH-violating function F12 from r18, where χ₃ and χ₅ are the real primitive Dirichlet characters mod 3 and mod 5 and c = −0.16567330026345564 + 1.9009252335917202 i is chosen so that L_F12(s) = L(s,χ₃) + c·L(s,χ₅) has a zero at ρ₀ = 0.7 + 7 i. Keys: `a` (complex128, shape (1000000,)), `c` (complex128 scalar), `rho0` (complex128 scalar), and a `description` string. The construction was validated at 50-digit precision with mpmath: |L_F12(ρ₀)| ≈ 1.5×10⁻¹⁶, and partial Dirichlet sums match closed-form values within expected truncation tolerance (~6.7×10⁻¹⁰ at s=3, N=1000). Intended for inclusion as the GRH-violator test sample in future classification experiments.</artifact-description>
 </artifact>
 </artifacts>

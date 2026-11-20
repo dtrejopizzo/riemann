@@ -25,7 +25,7 @@ The result reveals a fundamental flaw in the stratification hypothesis as operat
 </proposed-next-hypotheses> <artifacts>
 <artifact>
 <file-name>stratified_ocsvm_results.png</file-name>
-<artifact-type>agent_produced</artifact-type>
+<artifact-type>computed</artifact-type>
 <artifact-description>Two-panel summary figure. Panel A: AUC bars comparing the r52 baseline single OCSVM, the prescribed max-combined stratified detector, and a sensitivity min-combiner, for F4-family and F12 violator detection, with the 0.90 target line. Panel B: per-class mean anomaly scores from the D1- and D2-trained OCSVMs (x-tick labels colored by GRH status), illustrating that the D2 model pathologically inflates the anomaly of all degree-1 classes (true and false), which collapses the F4-family AUC under the max-combiner.</artifact-description>
 </artifact>
 </artifacts>
