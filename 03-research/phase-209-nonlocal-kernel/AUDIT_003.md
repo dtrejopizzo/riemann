@@ -1,44 +1,44 @@
-# AUDIT_003 — Revisión hostil de ANTICORRELATION_003
+# AUDIT_003 — Independent review of ANTICORRELATION_003
 
-2026-10-18. Revisor independiente. Matemática pura; comprobación adicional de cuatro desigualdades racionales con Fraction exacta, sin evaluación numérica de theta.
+2026-10-18. Independent check. Pure mathematics; additional check of four rational inequalities with exact Fraction, without numerical evaluation of theta.
 
-**Veredicto: PROVED, teorema auxiliar de signo estricto. No cierre de O1 ni enlace Q_T.**
+**Verdict: PROVED, auxiliary strict-sign theorem. Not a closure of O1 nor a Q_T link.**
 
-## 1. Concavidad global de theta menos uno
+## 1. Global concavity of theta minus one
 
-La fórmula D²logτ=(πy)²V−πyM es correcta y las derivaciones término a término son válidas localmente en y>0 por convergencia de todas las series derivadas.
+The formula D²logτ=(πy)²V−πyM is correct and the termwise derivatives are locally valid on y>0 by convergence of all derived series.
 
-Para y≥1/2, V≤E((n²−1)²), y el denominador de la distribución dividido por el peso n=1 es ≥1. Cada y exp(−πy(n²−1)) decrece en ese intervalo. Las desigualdades n²−1≥3(n−1) y n⁴≤16^(n−1), n≥2, producen la serie geométrica anunciada. q<1/4 implica 16q³<1/4 y suma <1/3; el resultado πyV<π/6<1≤M es correcto y estricto.
+For y≥1/2, V≤E((n²−1)²), and the denominator of the distribution divided by the weight n=1 is ≥1. Each y exp(−πy(n²−1)) decreases on that interval. The inequalities n²−1≥3(n−1) and n⁴≤16^(n−1), n≥2, produce the announced geometric series. q<1/4 implies 16q³<1/4 and sum <1/3; the result πyV<π/6<1≤M is correct and strict.
 
-Para y≤1/2, Poisson da A=1−√y+ε y τ=y^(−1/2)A con A>0. Revisé por expansión AA''−(A')² el numerador de D²logA: los seis términos y todos sus signos son correctos. ε₂=2Σ[(πn²/y)²−πn²/y]exp(−πn²/y)>0. La cota por 2π²y^(−2)Σn⁴exp(−πn²/y) es válida.
+For y≤1/2, Poisson gives A=1−√y+ε and τ=y^(−1/2)A with A>0. I checked by expanding AA''−(A')² the numerator of D²logA: the six terms and all their signs are correct. ε₂=2Σ[(πn²/y)²−πn²/y]exp(−πn²/y)>0. The bound by 2π²y^(−2)Σn⁴exp(−πn²/y) is valid.
 
-Las funciones y^(−j)exp(−πn²/y) son crecientes en el intervalo indicado para j=0,1,5/2. Los cocientes geométricos y el factor 8√2π² para ε₂/r son correctos. Verificadas exactamente mediante fracciones racionales:
+The functions y^(−j)exp(−πn²/y) are increasing on the indicated interval for j=0,1,5/2. The geometric ratios and the factor 8√2π² for ε₂/r are correct. Verified exactly via rational fractions:
 
 - Σ_{k=0}^{20}(157/25)^k/k! >525.
-- Con q=1/525, 2q/(1−q³)<1/250.
-- Con π reemplazado por 22/7, 4πq/(1−4q³)<1/40.
-- Con √2 reemplazado por 99/70 y π por 22/7, 8√2π²q/(1−16q³)<11/50.
+- With q=1/525, 2q/(1−q³)<1/250.
+- With π replaced by 22/7, 4πq/(1−4q³)<1/40.
+- With √2 replaced by 99/70 and π by 22/7, 8√2π²q/(1−16q³)<11/50.
 
-Así el numerador es estrictamente menor que −103r/25000. La prueba cubre ambos intervalos incluido el punto de unión. **Teorema 1 aprobado.**
+Thus the numerator is strictly less than −103r/25000. The proof covers both intervals including the junction point. **Theorem 1 approved.**
 
-## 2. Anticorrelación y matrices
+## 2. Anticorrelation and matrices
 
-La integral doble de la segunda derivada estrictamente negativa prueba la desigualdad de cuatro valores sin aproximaciones. Para d,e coprimos, lcm=de y se obtiene covarianza estrictamente negativa para TODO y>0. Esto supera un signo asintótico y no es la PSD genérica de una covarianza.
+The double integral of the strictly negative second derivative proves the four-value inequality without approximations. For coprime d,e, lcm=de and one obtains strictly negative covariance for ALL y>0. This goes beyond an asymptotic sign and is not the generic PSD of a covariance.
 
-Para enteros coprimos dos a dos, la positividad definida de V_y se prueba evaluando una relación constante en N=1 y N=d_i, sucesos todos de probabilidad positiva. La construcción B=sI−V_y con s≥λ_max da entradas no negativas y espectro en [0,s−λ_min]; la serie de Neumann converge y sus primeros dos términos prueban positividad estricta de cada entrada de la inversa. m=1 tratado correctamente.
+For pairwise coprime integers, positive definiteness of V_y is proved by evaluating a constant relation at N=1 and N=d_i, all events of positive probability. The construction B=sI−V_y with s≥λ_max gives nonnegative entries and spectrum in [0,s−λ_min]; the Neumann series converges and its first two terms prove strict positivity of every entry of the inverse. m=1 handled correctly.
 
-**Precisión editorial necesaria en §5:** afirmar explícitamente que la inversa positiva entrada a entrada se refiere a una familia de índices coprimos DOS A DOS. No basta tener algún par coprimo; tampoco es válida una afirmación de definitud estricta si se admiten índices repetidos. Dentro de la familia de §3, todas las conclusiones de §5 están probadas: integración positiva preserva definitud estricta y signo cruzado; el argumento de la inversa vuelve a aplicar.
+**Necessary editorial precision in §5:** state explicitly that the entrywise positive inverse refers to a family of PAIRWISE coprime indices. Having some coprime pair is not enough; nor is a claim of strict definiteness valid if repeated indices are admitted. Within the family of §3, all conclusions of §5 are proved: positive integration preserves strict definiteness and cross sign; the inverse argument applies again.
 
-## 3. Valoraciones primas
+## 3. Prime valuations
 
-Las series de indicadores de p^j suman v_p y están dominadas en L² por log|N|/log p. La suma doble de covarianzas converge absolutamente: la suma de probabilidades conjuntas es E(v_pv_q)<∞ y la suma de productos de medias es E(v_p)E(v_q)<∞. Cada sumando para p≠q es estrictamente negativo. El resultado es, por tanto, estrictamente negativo.
+The indicator series of p^j sum to v_p and are dominated in L² by log|N|/log p. The double sum of covariances converges absolutely: the sum of joint probabilities is E(v_pv_q)<∞ and the sum of products of means is E(v_p)E(v_q)<∞. Each summand for p≠q is strictly negative. The result is therefore strictly negative.
 
-Al sumar sobre primos con pesos log p, la cota por E(log²|N|)+(Elog|N|)² justifica el intercambio absoluto. La suma diagonal es finita por Σ_p(log p)²v_p²≤log²|N|. La identidad de varianza, su diferencia exacta y la desigualdad estricta (4) quedan probadas. El par (2,3) asegura estrictitud.
+When summing over primes with weights log p, the bound by E(log²|N|)+(Elog|N|)² justifies the absolute interchange. The diagonal sum is finite by Σ_p(log p)²v_p²≤log²|N|. The variance identity, its exact difference and the strict inequality (4) are proved. The pair (2,3) ensures strictness.
 
-## 4. Alcance y novedad
+## 4. Scope and novelty
 
-El teorema proporciona un signo aritmético auxiliar, construido sobre una ley gaussiana discreta cuyo Poisson entra efectivamente en la prueba. No se obtuvo el signo por escribir una norma ni por asumir el signo de Q_T. La nota no afirma prioridad bibliográfica; ausencia de hit en el índice no es prueba de novedad global.
+The theorem provides an auxiliary arithmetic sign, built on a discrete Gaussian law whose Poisson formula effectively enters the proof. The sign was not obtained by writing a norm or by assuming the sign of Q_T. The note does not claim bibliographic priority; absence of a hit in the index is not proof of global novelty.
 
-El resultado aún puede heredarse bajo cambios aritméticos; no satisface por sí solo la especificidad Euler exigida al objeto completo. Tampoco identifica altura Mellin, peso del nodo, dominio polar ni dominación del déficit gamma. Las cautelas finales son correctas y deben permanecer. No atribuir a la estructura matricial de esta covarianza una estructura de la matriz de Weil sin demostrar el mapa.
+The result may still be inherited under arithmetic changes; it does not by itself satisfy the Euler specificity required of the complete object. Nor does it identify Mellin height, node weight, polar domain or domination of the gamma deficit. The final caveats are correct and must remain. Do not attribute to the matrix structure of this covariance a structure of the Weil matrix without proving the map.
 
-**Resultado final:** positivo auxiliar estricto verificado; el enlace con el nodo sigue OPEN. Se cumplió un hito matemático distinto y más pequeño que construir el núcleo O1 solicitado, y debe comunicarse con esa distinción.
+**Final result:** strict auxiliary positive verified; the link with the node remains OPEN. A mathematical milestone distinct from and smaller than building the requested O1 kernel was achieved, and must be communicated with that distinction.

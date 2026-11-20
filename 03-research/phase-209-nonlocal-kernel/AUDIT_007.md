@@ -1,59 +1,59 @@
-# AUDIT_007 — Módulo de contracciones del kernel canónico
+# AUDIT_007 — Contraction module of the canonical kernel
 
-2026-10-18. Revisor independiente. Leído CONSTRUCTOR_007 completo, incluido §8.
-**Veredicto: PROVED en el dominio auxiliar declarado. No enlace con Q_T ni cierre D.**
+2026-10-18. Independent check. CONSTRUCTOR_007 read in full, including §8.
+**Verdict: PROVED on the declared auxiliary domain. No link with Q_T nor closure of D.**
 
-## 1. Corpus y razón nueva
+## 1. Corpus and new reason
 
-Consulta dirigida de índice/grid/crucigrama por contracciones, dilataciones, Frobenius, isometría y Hecke; lectura de P44 (grado/half-density y Gram Frobenius), INV_B_002 y entradas L2_016, INV_V_001/002, P1_BBSTAR y CELL_001. Ninguna de esas rutas se reabre como prueba de signo.
+Targeted query of index/grid/crossword for contractions, dilations, Frobenius, isometry and Hecke; reading of P44 (degree/half-density and Frobenius Gram), INV_B_002 and entries L2_016, INV_V_001/002, P1_BBSTAR and CELL_001. None of those routes is reopened as a sign proof.
 
-La razón nueva de CONSTRUCTOR007 es suficiente para examinar el auxiliar: norma −R fijada antes, acción exacta sobre ella y defecto gaussiano calculado sin cota de ángulo. No es el transporte de la forma de ventana por n↦n^k de L2_016 ni una nueva lectura del grado aritmético de P44. Tampoco la existencia de este semigrupo entrega el arquimediano que faltaba en las construcciones anteriores. La diferencia reside en el objeto concreto y su defecto Π, no en renombrar dilataciones como Frobenius.
+The new reason of CONSTRUCTOR007 is sufficient to examine the auxiliary: norm −R fixed beforehand, exact action on it and Gaussian defect computed without an angle bound. It is not the transport of the window form by n↦n^k of L2_016 nor a new reading of the arithmetic degree of P44. Nor does the existence of this semigroup deliver the archimedean part missing in the previous constructions. The difference lies in the concrete object and its defect Π, not in renaming dilations as Frobenius.
 
-## 2. Dominio Haarcentrado y completación
+## 2. Haar-centred domain and completion
 
-𝒜₀ permite X₁ para imponer E₁A=0. La fórmula de −R se reduce entonces exactamente a C_αE_s|A|²+Π_α(A). Un observable constante en 𝒜₀ es cero, por lo que la norma es definida positiva.
+𝒜₀ allows X₁ in order to impose E₁A=0. The formula for −R then reduces exactly to C_αE_s|A|²+Π_α(A). A constant observable in 𝒜₀ is zero, so the norm is positive definite.
 
-La realización en el producto de Hilbert y el cierre de la imagen son correctos. No se necesita demostrar de antemano que el mapa A↦E_yA sea clausurable como operador desde el primer factor por separado. Las leyes P_s compatibles sobre finitísimos primos admiten la realización usual por producto de probabilidades; no son una ley normalizada sobre enteros bajo s<1.
+The realisation in the Hilbert product and the closure of the image are correct. It is not necessary to prove beforehand that the map A↦E_yA is closable as an operator from the first factor separately. The compatible laws P_s on finitely many primes admit the usual realisation as a product of probabilities; they are not a normalised law on the integers for s<1.
 
-No se supone continuidad global de E₁ en la norma K sobre un espacio mayor: se completa únicamente el subespacio algebraico ya centrado. Esa elección evita una condición de dominio no demostrada.
+Global continuity of E₁ in the K norm on a larger space is not assumed: only the already centred algebraic subspace is completed. This choice avoids an unproved domain condition.
 
-## 3. Memoria geométrica y cambio de escala
+## 3. Geometric memory and change of scale
 
-D_nA=1_{n|N}A(N/n) implica D_nX_d=X_nd y composición D_mD_n=D_mn. Bajo P_t, condicionar las valuaciones en v_p≥v_p(n) deja las diferencias con la misma ley geométrica independiente, incluso cuando n comparte primos con los índices de A. Por ello las dos identidades del Lema1 son correctas y D_n preserva el centro Haar.
+D_nA=1_{n|N}A(N/n) implies D_nX_d=X_nd and composition D_mD_n=D_mn. Under P_t, conditioning the valuations on v_p≥v_p(n) leaves the differences with the same independent geometric law, even when n shares primes with the indices of A. Hence the two identities of Lemma1 are correct and D_n preserves the Haar centre.
 
-En la gaussiana, la sustitución entera N=nM da exactamente E_yD_nA=q_n(y)E_{n²y}A. No interviene una aproximación de medias ni un argumento de fase estacionaria.
+In the Gaussian, the integer substitution N=nM gives exactly E_yD_nA=q_n(y)E_{n²y}A. No approximation of means nor stationary-phase argument intervenes.
 
-Con u=n²y y s=2α,
+With u=n²y and s=2α,
 
     Π(V_nA)=∫u^(α−1)τ(u)q_n(u/n²)|E_uA|²du.
 
-Los factores n^s y n^(−2α) cancelan correctamente. El componente aritmético es isométrico y la diferencia de normas es exactamente (1). Como q_n<1/n para n>1, la cota (2) tiene signo y constante correctos.
+The factors n^s and n^(−2α) cancel correctly. The arithmetic component is isometric and the difference of norms is exactly (1). Since q_n<1/n for n>1, the bound (2) has correct sign and constant.
 
-Los V_n son contracciones en el núcleo algebraico, por lo que se extienden a su completación. La igualdad de semigrupo pasa por continuidad. No se deduce automáticamente una acción unitaria invertible ni una relación de adjuntos.
+The V_n are contractions on the algebraic core, so they extend to its completion. The semigroup equality passes by continuity. An invertible unitary action or an adjoint relation is not deduced automatically.
 
-## 4. Adjunto gaussiano
+## 4. Gaussian adjoint
 
-Para G_nf(y)=n^(s/2)q_n(y)f(n²y), el cambio u=n²y en el producto interno deja n^(−s/2). Así
+For G_nf(y)=n^(s/2)q_n(y)f(n²y), the change u=n²y in the inner product leaves n^(−s/2). Thus
 
     G_n*g(u)=n^(−s/2)g(u/n²),
     G_n*G_nf(u)=q_n(u/n²)f(u).
 
-Ambas fórmulas son exactas en el L² con medida y^(α−1)τ(y)dy. El operador es acotado; la cota de norma ≤1/√n proviene del supremo del multiplicador q_n. La composición telescópica de cocientes de τ da G_mG_n=G_mn.
+Both formulas are exact in L² with measure y^(α−1)τ(y)dy. The operator is bounded; the norm bound ≤1/√n comes from the supremum of the multiplier q_n. The telescoping composition of quotients of τ gives G_mG_n=G_mn.
 
-La cautela del memo es indispensable y correcta: el cierre de la imagen en el producto de Hilbert está demostrado invariante por las acciones, no reductor. No se puede restringir sin más el adjunto ambiental para obtener V_n* en 𝓗_α.
+The memo's caution is indispensable and correct: the closure of the image in the Hilbert product is proved invariant under the actions, not reducing. One cannot simply restrict the ambient adjoint to obtain V_n* on 𝓗_α.
 
-## 5. Borrado y monoides
+## 5. Deletion and monoids
 
-Para p eliminado, D_pA=0 en la ley condicionada. Si A es NO NULO como observable de esa ley, p^(−s)E_s^P|A|²>0 y falla la identidad isométrica de ese mismo p. Esto no rompe contractividad: el operador cero también es una contracción. El enunciado sólo identifica una identidad de grado que desaparece.
+For removed p, D_pA=0 in the conditioned law. If A is NONZERO as an observable of that law, p^(−s)E_s^P|A|²>0 and the isometric identity for that same p fails. This does not break contractivity: the zero operator is also a contraction. The statement only identifies a degree identity that disappears.
 
-La precisión de §8 es correcta: memoria geométrica y escalamiento multiplicativo son propiedades de monoides con norma, y q_n<1/n se extiende a escalas reales n>1 por concavidad. La prueba del módulo por sí sola no discrimina todos los sistemas de Beurling ni produce especificidad completa. La interpretación como divisibilidad efectiva de enteros, la identidad con R y la FE de perfil único son información adicional cuya acción sobre Q_T todavía debe demostrarse.
+The precision of §8 is correct: geometric memory and multiplicative scaling are properties of normed monoids, and q_n<1/n extends to real scales n>1 by concavity. The proof of the module by itself does not discriminate all Beurling systems nor produce full specificity. The interpretation as effective divisibility of integers, the identity with R and the single-profile FE are additional information whose action on Q_T must still be proved.
 
-No usar el test de primo borrado como prueba de una batería completa de falsificadores ni convertir la genericidad parcial en un NO-GO absoluto para todo enlace.
+Do not use the deleted-prime test as proof of a complete battery of falsifiers nor turn the partial genericity into an absolute NO-GO for every link.
 
-## 6. Veredicto de alcance
+## 6. Verdict of scope
 
-La representación multiplicativa contractiva, sus dos factores, adjunto gaussiano y defecto positivo quedan PROVED. α=1/4 da normalización V_n=n^(1/4)D_n y ley de normas n^(−1/2) en el primer factor antes de normalizar; eso no identifica aún el coeficiente del peine de Q_T.
+The contractive multiplicative representation, its two factors, Gaussian adjoint and positive defect are PROVED. α=1/4 gives normalisation V_n=n^(1/4)D_n and norm law n^(−1/2) in the first factor before normalising; this does not yet identify the comb coefficient of Q_T.
 
-La inversión FE de Π no está demostrada como involución unitaria cerrada en 𝓗_α, ni como conjugación a V_n*. No hay traza o forma de caracteres sobre todos los tests del nodo construida aquí. Ninguna se obtiene sólo de que V_n sea contracción o de que una fórmula parezca Frobenius.
+The FE inversion of Π is not proved as a closed unitary involution on 𝓗_α, nor as a conjugation to V_n*. No trace or character form over all tests of the node is built here. None is obtained merely from V_n being a contraction or from a formula looking like Frobenius.
 
-**Resultado auxiliar aprobado. Objetivo íntegro D activo.** Siguiente obligación concreta: definir la realización/inversión y el enlace de forma o traza con dominio y convergencia, en vez de sustituirlo por una existencia abstracta o una norma genérica.
+**Auxiliary result approved. Full target D active.** Next concrete obligation: define the realisation/inversion and the form or trace link with domain and convergence, instead of replacing it by an abstract existence or a generic norm.

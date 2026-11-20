@@ -1,6 +1,6 @@
 # LINK_009 — Test of a direct continuous-flow realization of the module
 
-2026-10-19. Principal constructor. PROVED, independent review approved in AUDIT_009.
+2026-10-19. PROVED, independent review approved in AUDIT_009.
 This tests a proposed connection to the continuous Mellin carrier, rather
 than constructing another positive auxiliary norm. D remains OPEN.
 

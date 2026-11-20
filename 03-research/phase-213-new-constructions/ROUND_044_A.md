@@ -1,44 +1,44 @@
-# Una desigualdad local en los primos equivalente al criterio de 039
+# A local inequality on the primes equivalent to the criterion of 039
 
-Antecedente directo: [039, barrera e interpolación](ROUND_039_A.md). Allí se interpola entre muestras contiguas y se necesita una suma acumulada o una cola infinita. Aquí se resta la interpolación homogénea entre dos muestras a distancia logarítmica macroscópica. La resta anula exactamente ambos exteriores y se invierte por comparación en los índices enteros. La equivalencia final con P47 utiliza el puente analítico de 038–039.
+Direct antecedent: [039, barrier and interpolation](ROUND_039_A.md). There one interpolates between contiguous samples and needs an accumulated sum or an infinite tail. Here one subtracts the homogeneous interpolation between two samples at macroscopic logarithmic distance. The subtraction annihilates both exteriors exactly and is inverted by comparison at the integer indices. The final equivalence with P47 uses the analytic bridge of 038–039.
 
-Para j≥2 sean i=floor(j/2), m=2j, l=4 log i, r=4 log j, u=4 log m y b=3/2. Poner
-A=sinh(b(u−r))/sinh(b(u−l)), B=sinh(b(r−l))/sinh(b(u−l)). Definir un peso w sobre [i⁴,m⁴] mediante
+For j≥2 let i=floor(j/2), m=2j, l=4 log i, r=4 log j, u=4 log m and b=3/2. Put
+A=sinh(b(u−r))/sinh(b(u−l)), B=sinh(b(r−l))/sinh(b(u−l)). Define a weight w on [i⁴,m⁴] by
 
-    w(t)=A(t/i⁶−i⁶/t²)          para i⁴≤t≤j⁴,
-    w(t)=B(m⁶/t²−t/m⁶)          para j⁴≤t≤m⁴.
+    w(t)=A(t/i⁶−i⁶/t²)          for i⁴≤t≤j⁴,
+    w(t)=B(m⁶/t²−t/m⁶)          for j⁴≤t≤m⁴.
 
-Las dos fórmulas coinciden en j⁴. El peso es positivo en el interior y vale cero fuera de la banda. El signo global equivale a que exista C finita tal que eventualmente
+The two formulas agree at j⁴. The weight is positive in the interior and zero outside the band. The global sign is equivalent to the existence of a finite C such that eventually
 
     Σ_{i⁴<p<m⁴} w(p) log p ≥ ∫_{i⁴}^{m⁴} w(t) dt − C,
 
-donde p recorre sólo los primos. La integral vale exactamente (3/2)(j²−Ai²−Bm²).
+where p runs only over the primes. The integral equals exactly (3/2)(j²−Ai²−Bm²).
 
-**Prueba.** Escribir T f=f(r)−Af(l)−Bf(u). T anula exp(±bs) como funciones de s. Aplicado a exp(−b|s−log t|)/√t, da cero fuera de la banda. Dentro, al desarrollar los exponenciales da exactamente w(t). Integrar la identidad sobre t>0 da la fórmula de la integral, pues antes de aplicar T la integral es (3/2)exp(s/2). La identidad puntual de 039 da por tanto T E=∫w−Σ w(n)Λ(n), interpretando E en coordenada logarítmica.
+**Proof.** Write T f=f(r)−Af(l)−Bf(u). T annihilates exp(±bs) as functions of s. Applied to exp(−b|s−log t|)/√t, it gives zero outside the band. Inside, expanding the exponentials gives exactly w(t). Integrating the identity over t>0 gives the formula for the integral, since before applying T the integral is (3/2)exp(s/2). The pointwise identity of 039 therefore gives T E=∫w−Σ w(n)Λ(n), interpreting E in logarithmic coordinate.
 
-La contribución de las potencias propias es O(1) uniformemente. En la banda t≥j⁴/81, y la resta de dos términos positivos da w(t)≤1/√t≤9/j². Para X=m⁴, Chebyshev da Σ_{k≥2,p^k≤X}log p=O(√X+X^(1/3)log X)=O(j²).
+The contribution of proper powers is O(1) uniformly. In the band t≥j⁴/81, and the difference of two positive terms gives w(t)≤1/√t≤9/j². For X=m⁴, Chebyshev gives Σ_{k≥2,p^k≤X}log p=O(√X+X^(1/3)log X)=O(j²).
 
-Si vale el signo, 038 da |k(s)|≤k(0) y 039 da E=3k+O(1) en la semirrecta. Como A,B≤1/64 (ambas distancias al centro son ≥log 16), T E queda acotado en valor absoluto.
+If the sign holds, 038 gives |k(s)|≤k(0) and 039 gives E=3k+O(1) on the half-line. Since A,B≤1/64 (both distances to the centre are ≥log 16), T E stays bounded in absolute value.
 
-Recíprocamente la desigualdad local implica T E≤C. Escribir E_j=E(j⁴) en coordenada original. Elegir M≥0 que domine las muestras iniciales y tal que (1−2/64)M≥max(C,0). Para ε>0 la sucesión E_j−M−εj³ tiende a menos infinito porque E_j≤(3/2)j². En la cola, su imagen por T es ≤0, ya que Ai³+Bm³≤(1/8+8)j³/64. Un máximo positivo se alcanzaría en la cola, donde su imagen sería al menos (1−A−B) veces ese máximo. La contradicción y ε↓0 dan E_j≤M. Aplicar 039.
+Conversely the local inequality implies T E≤C. Write E_j=E(j⁴) in the original coordinate. Choose M≥0 dominating the initial samples and such that (1−2/64)M≥max(C,0). For ε>0 the sequence E_j−M−εj³ tends to minus infinity because E_j≤(3/2)j². In the tail, its image under T is ≤0, since Ai³+Bm³≤(1/8+8)j³/64. A positive maximum would be attained in the tail, where its image would be at least (1−A−B) times that maximum. The contradiction and ε↓0 give E_j≤M. Apply 039.
 
-**Obligación pendiente.** La integral es de orden j². La demostración requiere que el déficit ponderado de los primos esté acotado por una misma constante para todas las bandas. La cancelación de las colas y la eliminación de las potencias propias son exacta y a coste acotado, respectivamente. Ninguna estima ese déficit. El argumento no certifica una ventana adicional.
+**Pending obligation.** The integral is of order j². The proof requires that the weighted deficit of the primes be bounded by one and the same constant for all bands. The cancellation of the tails and the elimination of the proper powers are exact and at bounded cost, respectively. Neither estimates that deficit. The argument does not certify an additional window.
 
-## Qué ocurre al usar la identidad de divisores en esta banda
+## What happens when using the divisor identity on this band
 
-En 040 un perfil fijo perdía la cola exterior del objetivo. Aquí esa cola se eliminó y por eso hacía falta revisar la cuestión. Para j par, x=j⁴, escribir w_j(xt)=x^(−1/2)W(t). El sombrero W es continuo, positivo en (1/16,16) y cero fuera. Sus únicas esquinas están en 1/16, 1 y 16. En particular W'(1/16+)>0 por la fórmula del tramo izquierdo, y W'(1/16−)=0.
+In 040 a fixed profile lost the outer tail of the target. Here that tail was eliminated and that is why the question needed revisiting. For even j, x=j⁴, write w_j(xt)=x^(−1/2)W(t). The hat W is continuous, positive on (1/16,16) and zero outside. Its only corners are at 1/16, 1 and 16. In particular W'(1/16+)>0 by the formula of the left piece, and W'(1/16−)=0.
 
-Sea f un perfil continuo firmado con soporte compacto en (0,∞), fijo para todos los j pares. Escribir Df(t)=Σ_{m≥1} f(mt). La identidad Σ_{d|n}Λ(d)=log n permite evaluar el emparejamiento con Df usando log n. **Todo minorante Df≤W de esta clase pierde al menos c_f√x en la suma normalizada sobre los primos**, para todo j par suficientemente grande, con c_f>0 que puede depender de f.
+Let f be a signed continuous profile with compact support in (0,∞), fixed for all even j. Write Df(t)=Σ_{m≥1} f(mt). The identity Σ_{d|n}Λ(d)=log n allows evaluating the pairing with Df using log n. **Every minorant Df≤W of this class loses at least c_f√x in the normalised sum over the primes**, for every sufficiently large even j, with c_f>0 that may depend on f.
 
-En efecto, la igualdad Df=W obligaría a
-f(t)=Σ_{m≥1} μ(m)W(mt) por inversión finita en cada t>0. Para cada primo p, en t₀=1/(16p) sólo m=p,16p,256p pueden aportar un salto de derivada: los tres productos mt₀ posibles son precisamente las tres esquinas. Los dos últimos coeficientes de Möbius son cero por divisibilidad por 4. Por tanto el salto de la derivada del inverso es −pW'(1/16+)≠0. Sólo interviene un número finito de términos en un entorno de cada t₀. Hay tales esquinas arbitrariamente cerca de cero, donde f tendría que ser idénticamente cero. Esto excluye la igualdad incluso para perfiles continuos sin hipótesis de derivabilidad.
+Indeed, the equality Df=W would force
+f(t)=Σ_{m≥1} μ(m)W(mt) by finite inversion at each t>0. For each prime p, at t₀=1/(16p) only m=p,16p,256p can contribute a jump of the derivative: the three possible products mt₀ are precisely the three corners. The last two Möbius coefficients are zero by divisibility by 4. Therefore the jump of the derivative of the inverse is −pW'(1/16+)≠0. Only finitely many terms intervene in a neighbourhood of each t₀. There are such corners arbitrarily close to zero, where f would have to be identically zero. This excludes equality even for continuous profiles without differentiability hypotheses.
 
-Si Df≤W, la diferencia continua tiene entonces un intervalo [a,b]⊂(0,∞) donde vale al menos η>0. Los primos en [ax,bx] cuestan, en la normalización de 044, al menos η(θ(bx)−θ(ax))/√x salvo extremos, de orden √x por el teorema de los números primos. Incluso si se pide minoración sólo en las muestras primas de todos los j pares grandes, el mismo teorema y la continuidad implican la minoración global. La constante no es uniforme sobre perfiles. Quedan fuera de este descarte perfiles dependientes de la escala y métodos que evalúen el resto firmado.
+If Df≤W, the continuous difference then has an interval [a,b]⊂(0,∞) on which it is at least η>0. The primes in [ax,bx] cost, in the normalisation of 044, at least η(θ(bx)−θ(ax))/√x up to endpoints, of order √x by the prime number theorem. Even if minoration is required only at the prime samples of all large even j, the same theorem and continuity imply global minoration. The constant is not uniform over profiles. Outside this discard remain scale-dependent profiles and methods that evaluate the signed remainder.
 
-Cotejo dirigido con 040, P47 thm:band (banda móvil necesaria), fase 200 SPEC_SIGN_OBJECT_003 (anuladores de la suma por Mellin) y POWER_INTERIOR_SCALE_030 (singularidades bajo dilatación de Möbius). La prueba específica de la banda usa la colisión de sus tres esquinas y la divisibilidad por 4.
+Targeted cross-check with 040, P47 thm:band (moving band necessary), phase 200 SPEC_SIGN_OBJECT_003 (annihilators of the sum via Mellin) and POWER_INTERIOR_SCALE_030 (singularities under Möbius dilation). The proof specific to the band uses the collision of its three corners and divisibility by 4.
 
-Para soportes fijados [a,b] con a>0 hay, además, una pérdida *integral* uniforme en f. Denotar por g el inverso de W anterior, y elegir I=[l,h]⊂(0,a) con ∫_I|g|>0, posible por las esquinas y continuidad. Para V=W−Df≥0, B=max(b,16), la inversión de V en I vale g y sólo suma m≤B/l. Por cambio de variable y positividad,
+For fixed supports [a,b] with a>0 there is, moreover, an *integral* loss uniform in f. Denote by g the inverse of W above, and choose I=[l,h]⊂(0,a) with ∫_I|g|>0, possible by the corners and continuity. For V=W−Df≥0, B=max(b,16), the inversion of V on I equals g and only sums m≤B/l. By change of variable and positivity,
     
     ∫_I |g| ≤ Σ_{m≤B/l} (1/m) ∫_{mI} V ≤ H_floor(B/l) ∫_{l}^{Bh/l} V.
 
-Esta cota evita cualquier cuestión de integrabilidad en cero. La transferencia a las muestras primas es puntual en cada perfil fijo; el argumento de continuidad no da una tasa uniforme para perfiles que cambien con j.
+This bound avoids any question of integrability at zero. The transfer to the prime samples is pointwise for each fixed profile; the continuity argument does not give a uniform rate for profiles that change with j.

@@ -1,51 +1,51 @@
-# AUDIT_010 — Momento espectral necesario para comprimir D_n
+# AUDIT_010 — Spectral moment needed to compress D_n
 
-2026-10-19. Revisor independiente. Leído LINK_010_SPECTRAL_REGULARITY.
-**Veredicto: PROVED el límite inferior y la exclusión de la clase con momento espectral s finito. Compresión unitaria general de D_n OPEN. Objetivo D activo.**
+2026-10-19. Independent check. LINK_010_SPECTRAL_REGULARITY read.
+**Verdict: PROVED the lower bound and the exclusion of the class with finite spectral moment s. General unitary compression of D_n OPEN. Target D active.**
 
-## 1. Corpus y pregunta nueva
+## 1. Corpus and new question
 
-Búsqueda dirigida en índice de regularidad, momentos espectrales, dominios fraccionarios y continuidad; revisión de LINK009 y del módulo007, además de la distinción ya registrada con la no interpolación de Paper44. No se identifica esta condición de momento en las entradas consultadas. Eso no declara prioridad global.
+Targeted search in the index for regularity, spectral moments, fractional domains and continuity; review of LINK009 and of module007, besides the already recorded distinction with the non-interpolation of Paper44. This moment condition is not identified in the consulted entries. That does not declare global priority.
 
-La diferencia de clase está escrita: se mantienen D_n sin normalizar, se permite compresión SIN ley de semigrupo y se añade una hipótesis explícita sobre la medida espectral de JA. No se traslada ilegítimamente la obstrucción de V_n ni se usan valores en todos los racionales como si ya estuvieran fijados.
+The difference of class is written: D_n is kept unnormalised, compression WITHOUT semigroup law is allowed and an explicit hypothesis on the spectral measure of JA is added. The obstruction for V_n is not illegitimately transferred nor are values at all rationals used as if already fixed.
 
-## 2. Incrementos del observable finito
+## 2. Increments of the finite observable
 
-Sea S el soporte primo de A y L par divisible por todos esos primos. Con n=1+kL y m=n+L:
+Let S be the prime support of A and L even, divisible by all those primes. With n=1+kL and m=n+L:
 
-- n y m son coprimos con cada primo de S.
+- n and m are coprime to each prime of S.
 - gcd(n,m)=gcd(n,L)=1.
-- Dividir N por n o m no cambia las valuaciones de S, por lo que D_nA=X_nA y D_mA=X_mA.
+- Dividing N by n or m does not change the valuations of S, so D_nA=X_nA and D_mA=X_mA.
 
-Independencia de las valuaciones da
+Independence of the valuations gives
 
     E_s|D_nA−D_mA|²
       =a[n^(−s)+m^(−s)−2(nm)^(−s)], a=E_s|A|²>0.
 
-La identidad es válida también para A complejo, porque el producto cruzado contiene |A|². El componente gaussiano de la distancia es no negativo. Con h=log(m/n), nh→L y m/n→1, mientras n^s(nm)^(−s)=m^(−s)→0. Así el límite inferior anunciado es exactamente ≥2κa/L^s>0.
+The identity is also valid for complex A, because the cross product contains |A|². The Gaussian component of the distance is nonnegative. With h=log(m/n), nh→L and m/n→1, while n^s(nm)^(−s)=m^(−s)→0. Thus the announced lower limit is exactly ≥2κa/L^s>0.
 
-No se necesita regularidad gaussiana extra. Como control más fuerte opcional, su contribución dividida por h^s tiende a cero: de007, ||TD_nA||≤n^(−(s+1)/2)sqrt(Π(A)), y análogamente para m. Por tanto la distancia completa normalizada tiene de hecho límite 2κa/L^s. La versión liminf escrita es suficiente y correcta.
+No extra Gaussian regularity is needed. As an optional stronger control, its contribution divided by h^s tends to zero: from 007, ||TD_nA||≤n^(−(s+1)/2)sqrt(Π(A)), and analogously for m. Hence the full normalised distance actually has limit 2κa/L^s. The written liminf version is sufficient and correct.
 
-## 3. Compresión y teorema espectral
+## 3. Compression and spectral theorem
 
-Para mapas fijos acotados P,J y U(t)=exp(itB) unitario C₀,
+For fixed bounded maps P,J and C₀ unitary U(t)=exp(itB),
 
     ||D_mA−D_nA||≤||P||·||(U(h)−I)JA||.
 
-Sólo se usa unitariedad y la ley del GRUPO ambiental. No se presupone semigrupo de las compresiones ni que P=J*. La igualdad en n=1 obliga PJ=I en una realización, pero el argumento no necesita explotarla.
+Only unitarity and the law of the ambient GROUP are used. A semigroup law for the compressions or P=J* is not presupposed. Equality at n=1 forces PJ=I in a realisation, but the argument does not need to exploit it.
 
-Si ∫|λ|^s dμ_A<∞, para 0<s<2 se tiene
+If ∫|λ|^s dμ_A<∞, for 0<s<2 one has
 
     |exp(ihλ)−1|²/|h|^s≤4|λ|^s.
 
-El cociente tiende a cero para cada λ porque 2−s>0. Convergencia dominada da ||(U(h)−I)JA||²/|h|^s→0, contradiciendo el límite inferior positivo. Todos los exponentes y la constante de dominación son correctos.
+The quotient tends to zero for each λ because 2−s>0. Dominated convergence gives ||(U(h)−I)JA||²/|h|^s→0, contradicting the positive lower limit. All exponents and the domination constant are correct.
 
-La equivalencia con JA∉Dom(|B|^(s/2)) tiene el orden exacto: el cuadrado de la norma de |B|^(s/2) contiene |λ|^s. En α=1/4 se exige momento absoluto1/2 y se excluye Dom(|B|^(1/4)), no Dom(|B|^(1/2)) como equivalente.
+The equivalence with JA∉Dom(|B|^(s/2)) has the exact order: the square of the norm of |B|^(s/2) contains |λ|^s. At α=1/4 the absolute moment 1/2 is required and Dom(|B|^(1/4)) is excluded, not Dom(|B|^(1/2)) as equivalent.
 
-## 4. Lo que queda abierto
+## 4. What remains open
 
-La condición necesaria es fuerte: CADA observable algebraico no nulo debe tener imagen con momento s infinito en una compresión hipotética. No prueba que tal compresión sea imposible. Continuidad fuerte sólo exige que las diferencias tiendan a cero sin una tasa; permite el comportamiento irregular necesario aquí.
+The necessary condition is strong: EACH nonzero algebraic observable must have an image with infinite moment s in a hypothetical compression. It does not prove that such a compression is impossible. Strong continuity only requires the differences to tend to zero without a rate; it allows the irregular behaviour needed here.
 
-Tampoco se ha demostrado que los tests suaves de Q_T, bajo un enlace todavía no construido, deban corresponder a alguna de esas imágenes JA con regularidad espectral finita. Esa implicación requiere mapa y dominio explícitos. No se puede usar el resultado como barrera para todas las realizaciones de Q_T.
+Nor has it been proved that the smooth tests of Q_T, under a link not yet built, must correspond to some of those images JA with finite spectral regularity. That implication requires an explicit map and domain. The result cannot be used as a barrier for all realisations of Q_T.
 
-**Condición necesaria aprobada. Compresión general OPEN; no forma ni traza de Q_T construida.**
+**Necessary condition approved. General compression OPEN; no form or trace of Q_T constructed.**

@@ -1,63 +1,63 @@
-# AUDIT_009 — Prueba directa del enlace por flujo logarítmico
+# AUDIT_009 — Direct proof of the link by logarithmic flow
 
-2026-10-19. Revisor independiente. Leído LINK_009_CONTINUOUS_FLOW.
-**Veredicto: PROVED teoremas1–2 en sus clases precisas. No NO-GO de O1 ni de D.**
+2026-10-19. Independent check. LINK_009_CONTINUOUS_FLOW read.
+**Verdict: PROVED theorems1–2 in their precise classes. No NO-GO for O1 or D.**
 
-## 1. Corpus y diferencia respecto del intento anterior
+## 1. Corpus and difference with respect to the previous attempt
 
-Búsqueda en índice/grid/crucigrama de interpolación, continuidad fuerte, flujo y Frobenius; lectura de Paper44 rem:nointerp y 007–008. El cambio de objeto es explícito: esta prueba trabaja con V_n en la norma positiva canónica K, no con soportes de medidas Frobenius. La componente gaussiana se incluye y se prueba que no cancela la separación aritmética. Eso admite el test sin reintentar una construcción cerrada.
+Search in index/grid/crossword for interpolation, strong continuity, flow and Frobenius; reading of Paper44 rem:nointerp and 007–008. The change of object is explicit: this proof works with V_n in the canonical positive norm K, not with supports of Frobenius measures. The Gaussian component is included and it is proved that it does not cancel the arithmetic separation. This admits the test without retrying a closed construction.
 
-**Precisión de la referencia Paper44:** continuidad débil de una familia arbitraria de medidas compactas no puede descartarse sólo porque el soporte cambie de tipo. Los tiempos log n no tienen acumulación finita, y es posible interpolar convexamente entre medidas consecutivas sin ley de semigrupo ni requisito de seguir siendo objetos Frobenius puros. Por tanto la referencia previa no debe expresarse como prohibición de TODA interpolación continua. LINK009 no depende de esa afirmación: sus pruebas nuevas usan la ley de semigrupo/un grupo unitario y un límite de normas explícito.
+**Precision on the Paper44 reference:** weak continuity of an arbitrary family of compact measures cannot be ruled out merely because the support changes type. The times log n have no finite accumulation, and it is possible to interpolate convexly between consecutive measures without a semigroup law or the requirement of remaining pure Frobenius objects. Hence the previous reference must not be expressed as a prohibition of ALL continuous interpolation. LINK009 does not depend on that claim: its new proofs use the semigroup law/a unitary group and an explicit norm limit.
 
-## 2. Vector y separación exacta
+## 2. Vector and exact separation
 
-A=X₂−1/2 es Haarcentrado y |A|²=1/4 punto a punto. Para n,m impares coprimos, D_nA=X_n A y D_mA=X_m A: dividir por un impar no cambia v₂. Bajo P_s, las coordenadas de los primos de nm son independientes de v₂. Así
+A=X₂−1/2 is Haar-centred and |A|²=1/4 pointwise. For odd coprime n,m, D_nA=X_n A and D_mA=X_m A: dividing by an odd number does not change v₂. Under P_s, the coordinates of the primes of nm are independent of v₂. Thus
 
-    E_s(V_nA conjugado(V_mA))=(nm)^(−s/2)/4,
+    E_s(V_nA conjugate(V_mA))=(nm)^(−s/2)/4,
     E_s|V_nA|²=E_s|V_mA|²=1/4.
 
-La distancia cuadrática del factor aritmético es κ/2·[1−(nm)^(−s/2)]. La norma de K es SUMA de esta forma positiva y una norma gaussiana; no hay término de signo negativo capaz de cancelarla. La desigualdad(1) es correcta.
+The squared distance of the arithmetic factor is κ/2·[1−(nm)^(−s/2)]. The norm of K is the SUM of this positive form and a Gaussian norm; there is no negative-sign term able to cancel it. Inequality(1) is correct.
 
-n_k=2k+1 y m_k=2k+3 son impares coprimos porque su máximo común divisor divide2. Su razón tiende a1 y el límite inferior de la distancia no es cero. La cota ||G_nTA||≤sqrt(Π(A)/n) de007 da que la distancia gaussiana tiende a cero. El límite de la distancia cuadrática COMPLETA es por tanto κ/2>0. No se necesita ningún cálculo numérico.
+n_k=2k+1 and m_k=2k+3 are odd coprime because their gcd divides 2. Their ratio tends to 1 and the lower limit of the distance is not zero. The bound ||G_nTA||≤sqrt(Π(A)/n) of 007 gives that the Gaussian distance tends to zero. The limit of the FULL squared distance is therefore κ/2>0. No numerical computation is needed.
 
-## 3. Interpolación por semigrupos C₀
+## 3. Interpolation by C₀ semigroups
 
-Si W(log n)=V_n y W es un semigrupo C₀, escribir m/n>1 permite factorizar
+If W(log n)=V_n and W is a C₀ semigroup, writing m/n>1 allows factoring
 
     W(log m)−W(log n)=W(log n)[W(log(m/n))−I].
 
-En los tiempos muestreados se sabe exactamente ||W(log n)||=||V_n||≤1, lo que elimina el tiempo grande log n; no hace falta una cota global sobre W. La continuidad fuerte se aplica al vector FIJO A en tiempo log(m/n)→0. Contradicción con la separación de §2. La extensión a toda reescala n^βV_n se verifica en §6.
+At the sampled times one knows exactly ||W(log n)||=||V_n||≤1, which eliminates the large time log n; no global bound on W is needed. Strong continuity is applied to the FIXED vector A at time log(m/n)→0. Contradiction with the separation of §2. The extension to every rescaling n^βV_n is verified in §6.
 
-## 4. Compresión unitaria con mapas fijos
+## 4. Unitary compression with fixed maps
 
-Para V_n=P U(log n)J, con P,J acotados fijos y U unitario C₀,
+For V_n=P U(log n)J, with fixed bounded P,J and C₀ unitary U,
 
     ||V_mA−V_nA||≤||P||·||(U(log(m/n))−I)JA||→0.
 
-La unitariedad permite sacar U(log n) sin crecimiento de norma y la continuidad actúa sobre JA fijo. La contradicción no requiere invariancia de JH, reductividad, isometría de J ni P=J*. El teorema2 está probado exactamente en el alcance incluso más general que una compresión ortogonal usual. No cubre mapas que cambian con n ni mapas no acotados.
+Unitarity allows taking out U(log n) without norm growth and continuity acts on the fixed JA. The contradiction does not require invariance of JH, reducibility, isometry of J nor P=J*. Theorem2 is proved exactly in a scope even more general than a usual orthogonal compression. It does not cover maps changing with n nor unbounded maps.
 
-## 5. Alcance final y paso siguiente
+## 5. Final scope and next step
 
-El resultado cierra el enlace ESPECÍFICO que intenta declarar V_n, D_n o sus reescalas por potencias como valores de un semigrupo C₀; para V_n también excluye compresiones fijas de un flujo unitario. No descarta familias continuas sin ley de flujo, compresiones unitarias de D_n ni otros observables o portadores. Tampoco afecta por sí mismo una prueba del nodo basada en otro mapa.
+The result closes the SPECIFIC link that tries to declare V_n, D_n or their power rescalings as values of a C₀ semigroup; for V_n it also excludes fixed compressions of a unitary flow. It does not rule out continuous families without a flow law, unitary compressions of D_n, nor other observables or carriers. Nor does it by itself affect a proof of the node based on another map.
 
-Los resultados auxiliares positivos007 permanecen válidos. Lo que se ha eliminado es una forma concreta de importarlos al análisis de Mellin. Para continuar deben precisarse operadores, dominio, convergencia y correspondencia gamma/peine/polar; no usar el teorema espectral de un generador de V_n cuya existencia acaba de refutarse.
+The positive auxiliary results 007 remain valid. What has been eliminated is a concrete way of importing them into Mellin analysis. To continue, operators, domain, convergence and gamma/comb/polar correspondence must be specified; do not use the spectral theorem of a generator of V_n whose existence has just been refuted.
 
-**Objetivo íntegro D activo y OPEN. Resultado local de enlace aprobado, sin barrera global añadida.**
+**Full target D active and OPEN. Local link result approved, with no global barrier added.**
 
-## 6. Extensión final: todo semigrupo C₀ y reescalas por potencias
+## 6. Final extension: every C₀ semigroup and power rescalings
 
-**PROVED.** La exclusión no necesita uniformidad de normas fuera de los tiempos muestreados.
+**PROVED.** The exclusion does not need uniformity of norms outside the sampled times.
 
-Si S(t) es C₀ y S(log n)=V_n, entonces para los n,m del argumento
+If S(t) is C₀ and S(log n)=V_n, then for the n,m of the argument
 
     ||V_mA−V_nA||
       ≤||S(log n)||·||(S(log(m/n))−I)A||
       ≤||(S(log(m/n))−I)A||→0,
 
-porque EN ESOS tiempos ||S(log n)||=||V_n||≤1, independientemente del comportamiento de S en otros tiempos. Así ningún semigrupo C₀ interpola V_n, sin hipótesis extra de contracción o cota uniforme global.
+because AT THOSE times ||S(log n)||=||V_n||≤1, regardless of the behaviour of S at other times. Thus no C₀ semigroup interpolates V_n, without extra hypotheses of contraction or global uniform bound.
 
-Más generalmente, si W(log n)=n^βV_n para un β real fijo, definir S(t)=e^(−βt)W(t). Es un semigrupo C₀ y S(log n)=V_n, imposible por la prueba anterior. En particular D_n=n^(−s/2)V_n tampoco admite tal interpolación C₀ exacta.
+More generally, if W(log n)=n^βV_n for a fixed real β, define S(t)=e^(−βt)W(t). It is a C₀ semigroup and S(log n)=V_n, impossible by the previous proof. In particular D_n=n^(−s/2)V_n does not admit such an exact C₀ interpolation either.
 
-Esta extensión concierne semigrupos, cuya ley permitió factorizar la diferencia. La compresión de un grupo no hereda en general esa ley. El Teorema2 para compresiones UNITARIAS de V_n permanece probado, pero no se ha excluido con este argumento una compresión unitaria de D_n o de otra reescala: su distancia m,n puede tender a cero. No trasladar automáticamente la nueva exclusión de semigrupos a las compresiones reescaladas.
+This extension concerns semigroups, whose law allowed factoring the difference. The compression of a group does not in general inherit that law. Theorem2 for UNITARY compressions of V_n remains proved, but this argument has not excluded a unitary compression of D_n or of another rescaling: its m,n distance may tend to zero. Do not automatically transfer the new semigroup exclusion to rescaled compressions.
 
-El alcance sigue siendo el enlace logarítmico directo de ESTA familia, no todas las representaciones posibles del nodo. **Extensión final aprobada; D continúa OPEN.**
+The scope remains the direct logarithmic link of THIS family, not all possible representations of the node. **Final extension approved; D remains OPEN.**

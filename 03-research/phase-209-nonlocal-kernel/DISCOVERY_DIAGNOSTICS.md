@@ -1,24 +1,24 @@
-# Diagnósticos auxiliares de la segunda ronda
+# Auxiliary diagnostics of the second round
 
-2026-10-18. **NUMÉRICO exploratorio, no certificado.** No se usa en ninguna
-prueba de ANTICORRELATION_003 ni CONSTRUCTOR_004.
+2026-10-18. **NUMERICAL, exploratory, not certified.** Not used in any
+proof of ANTICORRELATION_003 or CONSTRUCTOR_004.
 
-Se evaluaron momentos gaussianos con corte n²πy≤45 para orientar la prueba
-de concavidad de log(θ−1)(e^x). El signo observado fue negativo; la nota003
-lo sustituye por una prueba analítica uniforme. Se probaron también pequeñas
-muestras de leyes con un primo excluido: no mostraron violación robusta de
-la anticorrelación puncturada. Esto NO demuestra herencia ni especificidad.
+Gaussian moments were evaluated with cutoff n²πy≤45 to guide the proof
+of concavity of log(θ−1)(e^x). The observed sign was negative; note 003
+replaces it by a uniform analytic proof. Small samples of laws with one
+prime excluded were also tested: they showed no robust violation of the
+punctured anticorrelation. This does NOT prove inheritance or specificity.
 
-Se comprobó una extensión tentadora del signo cruzado a orden de matrices:
+A tempting extension of the cross sign to matrix order was checked:
 
     D_y(d,e)=y^(-1/2)(gcd(d,e)-1)/(de)-τ(y)C_y(d,e).
 
-Con índices {2,3,5,7}, y=0.001, diagonalización en doble precisión dio un
-mínimo cercano a -0.04752. Por tanto la muestra no apoya D_y PSD. No se
-formula ni se usa esa dominación como lema; el test no es un NO-GO certificado.
-No confundir positividad de entradas coprimas de -τC con positividad de forma.
+With indices {2,3,5,7}, y=0.001, diagonalisation in double precision gave a
+minimum close to -0.04752. Hence the sample does not support D_y PSD. That
+domination is neither formulated nor used as a lemma; the test is not a certified NO-GO.
+Do not confuse positivity of the coprime entries of -τC with positivity of the form.
 
-Reproducción del diagnóstico de matrices, con Python3/numpy:
+Reproduction of the matrix diagnostic, with Python3/numpy:
 
 ```python
 import math
@@ -37,5 +37,5 @@ D=np.array([[(math.gcd(d,e)-1)/(d*e*math.sqrt(y))
 print(np.linalg.eigvalsh(D))
 ```
 
-Estos tests sólo impiden extrapolar las pruebas escalares a una desigualdad
-operatorial no demostrada. No alteran el estado de O1.
+These tests only prevent extrapolating the scalar proofs to an unproved
+operator inequality. They do not alter the status of O1.

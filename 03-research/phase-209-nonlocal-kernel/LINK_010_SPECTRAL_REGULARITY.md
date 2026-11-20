@@ -1,83 +1,83 @@
-# LINK_010 — Regularidad necesaria para una compresión de D_n
+# LINK_010 — Necessary regularity for a compression of D_n
 
-2026-10-19. Constructor principal. **PROVED, revisión independiente favorable en AUDIT_010.md.**
-No se construye el enlace Q_T ni se descarta una compresión general.
+2026-10-19. **PROVED, independent review favourable in AUDIT_010.md.**
+The Q_T link is not constructed nor is a general compression discarded.
 
-## Clase y consulta previa
+## Class and prior consultation
 
-Consultados índice de rutas (incluido archivo06), corpus209, grid maestro y
-crucigrama: no se reutiliza la exclusión de compresiones V_n como si cubriera
-D_n. La pregunta nueva conserva las amplitudes n^(−s/2) y añade una hipótesis
-explícita de regularidad espectral sobre vectores aritméticos finitos. La prueba
-de009 sólo daba distancias que ahora tienden a cero; aquí se calcula su tasa.
-No se usa un teorema de extensión positiva ni se supone que compresiones
-hereden una ley de semigrupo.
+Consulted the routes index (including archive 06), corpus 209, master grid and
+crossword: the exclusion of V_n compressions is not reused as if it covered
+D_n. The new question keeps the amplitudes n^(−s/2) and adds an explicit
+hypothesis of spectral regularity on finite arithmetic vectors. The proof
+of 009 only gave distances that now tend to zero; here their rate is computed.
+No positive extension theorem is used, nor is it assumed that compressions
+inherit a semigroup law.
 
-## 1. Incrementos de orden exacto en una sucesión
+## 1. Increments of exact order along a sequence
 
-Usar H_alpha de007, s=2alpha en(0,1) y kappa>0. Sea A no nulo en el álgebra
-finita de observables de divisibilidad, centrado por E_1 A=0. Sea S el conjunto
-finito de primos que aparecen en sus índices y L un entero positivo par divisible
-por todos ellos (por ejemplo 2 veces su producto). Tomar
+Use H_alpha of 007, s=2alpha in (0,1) and kappa>0. Let A be nonzero in the finite
+algebra of divisibility observables, centred by E_1 A=0. Let S be the finite
+set of primes appearing in its indices and L a positive even integer divisible
+by all of them (for example 2 times their product). Take
 
     n_k=1+kL,  m_k=n_k+L,  h_k=log(m_k/n_k).
 
-Entonces n_k,m_k son coprimos entre sí y con S. Dividir por ellos no cambia
-las valuaciones de S: D_n A=X_n A y D_m A=X_m A. Si a=E_s|A|²>0,
+Then n_k,m_k are coprime to each other and to S. Dividing by them does not change
+the valuations of S: D_n A=X_n A and D_m A=X_m A. If a=E_s|A|²>0,
 
     E_s|D_n A−D_m A|²
       =a[n^(−s)+m^(−s)−2(nm)^(−s)].
 
-La positividad de las dos componentes de la norma de007 implica
+The positivity of the two components of the norm of 007 implies
 
     liminf_k ||D_m A−D_n A||² / h_k^s >= 2 kappa a/L^s >0.       (1)
 
-En efecto n h_k→L, m/n→1, mientras n^s(nm)^(−s)→0. No se necesita
-calcular la componente gaussiana: no puede restar a la cota.
-La estricta positividad de a resulta de la independencia lineal de los
-indicadores finitos en la ley P_s, ya probada en005.
+Indeed n h_k→L, m/n→1, while n^s(nm)^(−s)→0. There is no need to
+compute the Gaussian component: it cannot subtract from the bound.
+The strict positivity of a follows from the linear independence of the
+finite indicators under the law P_s, already proved in 005.
 
-## 2. Teorema de regularidad necesaria
+## 2. Necessary regularity theorem
 
-Supónganse mapas acotados fijos J:H_alpha→K y P:K→H_alpha, un grupo
-unitario fuertemente continuo U(t)=exp(itB), y
+Suppose fixed bounded maps J:H_alpha→K and P:K→H_alpha, a strongly
+continuous unitary group U(t)=exp(itB), and
 
     P U(log n)J=D_n,   n>=1.                                    (2)
 
-No se exige P=J*, ni J isométrico. Para todo A anterior, la medida espectral
-positiva mu_A(E)=||1_E(B)JA||² satisface necesariamente
+Neither P=J* nor J isometric is required. For every A as above, the positive
+spectral measure mu_A(E)=||1_E(B)JA||² necessarily satisfies
 
-    integral |lambda|^s dmu_A(lambda)=infinito.                  (3)
+    integral |lambda|^s dmu_A(lambda)=infinity.                  (3)
 
-Prueba. Si ese momento fuera finito, el teorema espectral daría
+Proof. If that moment were finite, the spectral theorem would give
 
     ||[U(h)−I]JA||²/h^s
       = integral |exp(ih lambda)−1|²/h^s dmu_A(lambda) →0.
 
-Se aplica convergencia dominada: para0<s<2,
-|exp(ix)−1|²<=4|x|^s y el cociente puntual tiende a cero.
-Pero unitariedad y(2) implican
+Dominated convergence applies: for 0<s<2,
+|exp(ix)−1|²<=4|x|^s and the pointwise quotient tends to zero.
+But unitarity and (2) imply
 
     ||D_m A−D_n A|| <= ||P|| ||[U(log(m/n))−I]JA||,
 
-en contradicción con(1). Esto prueba(3).
+contradicting (1). This proves (3).
 
-Equivalente: JA no pertenece a Dom(|B|^(s/2)) para NINGÚN observable
-aritmético finito no nulo centrado. En alpha=1/4, se excluye el momento
-espectral absoluto1/2, o dominio Dom(|B|^(1/4)). Es esencial no confundir
-el orden del momento con la potencia del dominio.
+Equivalently: JA does not belong to Dom(|B|^(s/2)) for ANY nonzero centred finite
+arithmetic observable. At alpha=1/4, the absolute spectral moment 1/2
+is excluded, or the domain Dom(|B|^(1/4)). It is essential not to confuse
+the order of the moment with the power of the domain.
 
-## 3. Alcance para el enlace buscado
+## 3. Scope for the sought link
 
-Se descarta la clase de enlaces(2) que además lleve siquiera uno de esos
-observables a un vector con momento espectral s finito; en particular,
-una identificación que los lleve todos a vectores espectralmente suaves.
-El mero grupo C0 NO exige ese momento: no hay contradicción para una
-compresión con imágenes suficientemente irregulares. La compresión general
-de D_n continúa OPEN.
+The class of links (2) that additionally map even one of those
+observables to a vector with finite spectral moment s is discarded; in particular,
+an identification mapping all of them to spectrally smooth vectors.
+The mere C0 group does NOT require that moment: there is no contradiction for a
+compression with sufficiently irregular images. The general compression
+of D_n remains OPEN.
 
-Tampoco se ha probado que un mapa de los tests suaves de Q_T deba invertir
-esta correspondencia o enviar un observable A de este tipo a un vector suave.
-Tal afirmación requiere un mapa concreto y su dominio. No se usa este
-resultado para excluir todas las representaciones de Q_T ni para pagar gamma,
-peine o polo. D permanece OPEN; goal íntegro activo.
+Nor has it been proved that a map from the smooth tests of Q_T must invert
+this correspondence or send an observable A of this type to a smooth vector.
+Such a claim requires a concrete map and its domain. This result is not used
+to exclude all representations of Q_T nor to pay for gamma,
+comb or pole. D remains OPEN; full goal active.

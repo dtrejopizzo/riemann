@@ -1,41 +1,41 @@
-# AUDIT_002 — Covarianza puncturada y Mellin
+# AUDIT_002 — Punctured covariance and Mellin
 
-2026-10-18. Revisión independiente de CONSTRUCTOR_002 §§0–6. Fila D independiente.
+2026-10-18. Independent review of CONSTRUCTOR_002 §§0–6. Row D independent.
 
-**Veredicto: lemas 1–5 PROVED con sus alcances; enlace Q_T OPEN.** El propio constructor declara correctamente que no alcanzó el hito del README.
+**Verdict: lemmas 1–5 PROVED within their scope; Q_T link OPEN.** The memo itself correctly declares that it did not reach the README milestone.
 
-## 1. Probabilidad e identidad de divisores
+## 1. Probability and divisor identity
 
-La normalización τ=θ−1 es positiva y las probabilidades de divisibilidad son τ(d²y)/τ(y). X_d X_e=X_lcm. La PSD y su extensión por integración positiva son genéricas y el memo no las presenta como especificidad. Poisson para τ y para los cocientes es exacto, conservando el término de origen y las escalas fraccionarias.
+The normalisation τ=θ−1 is positive and the divisibility probabilities are τ(d²y)/τ(y). X_d X_e=X_lcm. PSD and its extension by positive integration are generic and the memo does not present them as specificity. Poisson for τ and for the quotients is exact, keeping the origin term and the fractional scales.
 
-La suma truncada de Λ(d)1_{d|N} está dominada por log|N| y converge a ella punto a punto; el momento cuadrático es finito bajo gaussiana. Convergencia en L² justifica la identidad de varianza como límite conjunto, sin intercambiar indebidamente una doble serie firmada.
+The truncated sum of Λ(d)1_{d|N} is dominated by log|N| and converges to it pointwise; the quadratic moment is finite under the Gaussian. L² convergence justifies the variance identity as a joint limit, without improperly interchanging a signed double series.
 
 ## 2. Mellin
 
-En cero, τ(y)=y^(−1/2)−1+error exponencial tras Poisson, por lo que q_y(d)=1/d+O_d(√y). La expansión de C_y es G₀+O(√y) y G₀=(gcd−1)/(de). En infinito las razones decrecen exponencialmente porque el menor entero no nulo del denominador tiene |N|=1. Esto prueba convergencia absoluta entrada a entrada de I_α para α>0 y PSD sobre sucesiones finitas.
+At zero, τ(y)=y^(−1/2)−1+exponential error after Poisson, so q_y(d)=1/d+O_d(√y). The expansion of C_y is G₀+O(√y) and G₀=(gcd−1)/(de). At infinity the ratios decrease exponentially because the smallest nonzero integer of the denominator has |N|=1. This proves entrywise absolute convergence of I_α for α>0 and PSD on finite sequences.
 
-La transformada separada de τ(l² y) para α>1/2 es 2π^(−α)Γ(α)ζ(2α)l^(−2α), con factor 2 correcto. El resto con denominador τ converge separadamente allí. La multiplicación por τ recupera la homogeneidad Mellin de un término a costa de perderla en el cociente: no se puede concluir una ley de peso crítico sólo por escoger α=1/4.
+The separate transform of τ(l² y) for α>1/2 is 2π^(−α)Γ(α)ζ(2α)l^(−2α), with correct factor 2. The remainder with denominator τ converges separately there. Multiplication by τ recovers the Mellin homogeneity of one term at the cost of losing it in the quotient: one cannot conclude a critical-weight law merely by choosing α=1/4.
 
-## 3. Renormalización
+## 3. Renormalisation
 
-B_y=y^(−1/2)G₀+O(1) cerca de cero y decae exponencialmente en infinito. Restar y^(−1/2)G₀ en toda la semirrecta da convergencia para 0<Re α<1/2. Dividiendo en 1, la resta de la cola produce G₀/(α−1/2), signo correcto, y −4G₀ en α=1/4. La expresión dividida prolonga meromórficamente desde Re α>1/2 hasta Re α>0 con posible polo en 1/2.
+B_y=y^(−1/2)G₀+O(1) near zero and decays exponentially at infinity. Subtracting y^(−1/2)G₀ on the whole half-line gives convergence for 0<Re α<1/2. Splitting at 1, the subtraction of the tail produces G₀/(α−1/2), correct sign, and −4G₀ at α=1/4. The split expression continues meromorphically from Re α>1/2 to Re α>0 with a possible pole at 1/2.
 
-La identidad R_α=I_α+H_α es exacta. H_α converge: cancelación del término y^(−1/2) en cero y potencia integrable en infinito. Ninguna positividad de H ni R se deriva de la de I. El constructor conserva explícitamente esta incógnita.
+The identity R_α=I_α+H_α is exact. H_α converges: cancellation of the y^(−1/2) term at zero and integrable power at infinity. No positivity of H or R is derived from that of I. The memo explicitly keeps this unknown.
 
-## 4. Origen y límite del signo
+## 4. Origin and limit of the sign
 
-La descomposición por el evento N=0 es exacta:
+The decomposition by the event N=0 is exact:
 
     C⁰=(1−p₀)C×+p₀(1−p₀)u_y u_y*, u_y(d)=1−r_d.
 
-No es lícito identificar esa dirección dependiente de escala con cosh(x/2) sin mapa de tests. Para coprimos d,e>1, la asintótica negativa de C× se sigue porque ((de)²−1)−(d²+e²−2)>0. No hay contradicción con PSD: una matriz PSD puede tener entradas cruzadas negativas.
+It is not legitimate to identify that scale-dependent direction with cosh(x/2) without a map of tests. For coprime d,e>1, the negative asymptotics of C× follows because ((de)²−1)−(d²+e²−2)>0. There is no contradiction with PSD: a PSD matrix may have negative cross entries.
 
-La asociación estricta de la theta completa, revisada separadamente en POSITIVE_ASSOCIATION_002, tiene una fuente efectiva en Poisson, pero quitar el origen ya cambia su signo cruzado aun sin borrar un primo. Eso impide presentar la especificidad por borrado como prueba suficiente de un nuevo signo para el ortogonal polar.
+The strict association of the full theta, reviewed separately in POSITIVE_ASSOCIATION_002, has an effective source in Poisson, but removing the origin already changes its cross sign even without deleting a prime. This prevents presenting deletion specificity as sufficient proof of a new sign for the polar orthogonal.
 
-## 5. Puertas
+## 5. Gates
 
-La familia C_y no es función universal de de, por el contraejemplo de límites (2,6) y (3,4). Esto no prueba una propiedad equivalente para I_α en un α fijado, y el memo lo distingue. Tampoco produce todavía un núcleo de alturas ni demuestra salida del álgebra efectiva en el dominio de Q_T.
+The family C_y is not a universal function of de, by the counterexample of limits (2,6) and (3,4). This does not prove an equivalent property for I_α at a fixed α, and the memo distinguishes this. Nor does it yet produce a height kernel or prove exit from the effective algebra in the domain of Q_T.
 
-No hay traducción a BR, certificado def:PD ni identidad puntual de thm:sos. Los lemas positivos de covarianza no reabren Gram como ruta al nodo: el enlace específico es el trabajo pendiente. La opción a_d=Λ(d)d^(−1/2)F(log d) es cuadrática en evaluaciones de F, pero no reproduce la dependencia de autocorrelación sin prueba adicional. La advertencia de grado cuatro al usar autocorrelaciones como coeficientes es correcta.
+There is no translation to BR, def:PD certificate or pointwise identity of thm:sos. The positive covariance lemmas do not reopen Gram as a route to the node: the specific link is the pending work. The option a_d=Λ(d)d^(−1/2)F(log d) is quadratic in evaluations of F, but does not reproduce the autocorrelation dependence without additional proof. The degree-four warning when using autocorrelations as coefficients is correct.
 
-Resultado: construcción explícita coherente y un resto de desnormalización localizado; no positivo aritmético útil demostrado para Q_T. El revisor continúa examinando un posible signo cruzado estricto de la covarianza puncturada, que sería un lema distinto de su PSD genérica y requerirá auditoría separada.
+Result: coherent explicit construction and a localised denormalisation remainder; no useful arithmetic positive proved for Q_T. A possible strict cross sign of the punctured covariance remains under examination; it would be a lemma distinct from its generic PSD and will require a separate audit.

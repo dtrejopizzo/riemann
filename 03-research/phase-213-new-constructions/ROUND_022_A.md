@@ -1,50 +1,50 @@
-# Varianza del cruce aritmético que toleraría el signo global
+# Variance of the arithmetic crossing that the global sign would tolerate
 
-Cotejo independiente previo con 213-019/020/021, P47 (band, oneprofile, AM), L2_BUILD_019, R186_005 y P2_SCHUR_001. La selección de un vector de prueba por proyección es clásica. La aplicación específica mide simultáneamente los residuos de todas las celdas después de quitar dos momentos. El cotejo no localizó esta condición en esos antecedentes.
+Prior independent cross-check with 213-019/020/021, P47 (band, oneprofile, AM), L2_BUILD_019, R186_005 and P2_SCHUR_001. Selecting a test vector by projection is classical. The specific application measures simultaneously the residues of all cells after removing two moments. The cross-check did not locate this condition in those antecedents.
 
-Fijar C>1. Para K entero grande usar las celdas completas de índices J=[K,floor(CK))∩ℤ. Usamos exactamente M, A, h y q de BUILD084 (3)-(4). Sean p=(log(3/2),−log 2) en las celdas 1,2 y d=log(4/3). Para j∈J escribir
+Fix C>1. For large integer K use the full cells with indices J=[K,floor(CK))∩ℤ. We use exactly M, A, h and q of BUILD084 (3)-(4). Let p=(log(3/2),−log 2) on cells 1,2 and d=log(4/3). For j∈J write
 
     s_j = Σ_{i=1,2} p_i Σ_{ni≤j<n(i+1), n≥2} Λ(n)/n,
     r_j = Σ_{i=1,2} p_i A_ij,     l_j=log(1+1/j).
 
-Sea H la matriz con filas 1 y K l. Definir b=Hᵀ(HHᵀ)⁻¹(d,0)ᵀ, v=s−Hᵀ(HHᵀ)⁻¹Hs, D=max(1,max_{i∈J} Σ_{j∈J}|M_ij|). Con al menos dos celdas H tiene rango dos. La cola x=b+v/D hace primitivo a p+x, pues Σp_i=−d, el momento inverso de p es cero y Hv=0. Los vectores b y v son ortogonales y ⟨s,v⟩=||v||². La fórmula matricial exacta de BUILD084 y la cota de suma por filas para la matriz simétrica dan
+Let H be the matrix with rows 1 and K l. Define b=Hᵀ(HHᵀ)⁻¹(d,0)ᵀ, v=s−Hᵀ(HHᵀ)⁻¹Hs, D=max(1,max_{i∈J} Σ_{j∈J}|M_ij|). With at least two cells H has rank two. The tail x=b+v/D makes p+x primitive, since Σp_i=−d, the inverse moment of p is zero and Hv=0. The vectors b and v are orthogonal and ⟨s,v⟩=||v||². The exact matrix formula of BUILD084 and the row-sum bound for the symmetric matrix give
 
     a(U(p+x)) ≤ q(0)+D||b||²−2⟨s,b⟩+2⟨r,x⟩−||v||²/D.       (1)
 
-Por tanto un miembro derecho estrictamente negativo para cualquier K con J separado de la cabeza (K≥4) y al menos dos celdas proporciona un contraejemplo completo. La prueba usa únicamente una cota superior de la energía de cola.
+Hence a strictly negative right-hand side for any K with J separated from the head (K≥4) and at least two cells provides a full counterexample. The proof uses only an upper bound on the tail energy.
 
-Para C fijo, HHᵀ/K converge por sumas de Riemann a la Gram de 1,1/u sobre [1,C], definida positiva. Así ||b||₂=O_C(K⁻¹ᐟ²) y ||b||₁=O_C(1). Por PNT y sumación parcial las dos sumas interiores en s_j tienden respectivamente a log 2 y log(3/2), uniformemente para j≥K; por tanto ||s||∞=o(1) y ||v||₂=o_C(√K). Además ||r||₂=O_C(K⁻¹ᐟ²) por (3) de BUILD084. En la matriz de cola la diagonal cuesta O_C(log K), la suma arquimediana fuera de diagonal cuesta O_C(log K) por h(0)=2log2 y h(m)≤1/m para m≥1. Para cada n con contacto en J se cumple n≤C. En una fila hay a lo sumo n columnas superiores y una inferior para ese n, de modo que toda la suma de pesos aritméticos es O_C(1). Luego D=O_C(log K).
+For fixed C, HHᵀ/K converges by Riemann sums to the Gram of 1,1/u on [1,C], positive definite. Thus ||b||₂=O_C(K⁻¹ᐟ²) and ||b||₁=O_C(1). By PNT and partial summation the two inner sums in s_j tend respectively to log 2 and log(3/2), uniformly for j≥K; hence ||s||∞=o(1) and ||v||₂=o_C(√K). Moreover ||r||₂=O_C(K⁻¹ᐟ²) by (3) of BUILD084. In the tail matrix the diagonal costs O_C(log K), the off-diagonal archimedean sum costs O_C(log K) by h(0)=2log2 and h(m)≤1/m for m≥1. For each n with contact in J one has n≤C. In a row there are at most n upper columns and one lower for that n, so the whole sum of arithmetic weights is O_C(1). Hence D=O_C(log K).
 
-En consecuencia (1) tiene la forma q(0)−||v||²/D+o_C(1). Si el signo global vale, necesariamente
+Consequently (1) has the form q(0)−||v||²/D+o_C(1). If the global sign holds, necessarily
 
     limsup_{K→∞} ||v||²/D ≤ q(0),    ||v||²=O_C(log K).
 
-La primera cota es un umbral asintótico con normalización computable. La decisión finita usa (1) con todos sus términos. Satisfacer la condición deja abierta la energía de otras colas, incluso dentro de la misma banda. No se ha verificado una violación para los pesos de von Mangoldt. PROVED para la condición necesaria y el criterio finito tras auditoría matemática independiente.
+The first bound is an asymptotic threshold with computable normalization. The finite decision uses (1) with all its terms. Satisfying the condition leaves open the energy of other tails, even within the same band. No violation has been verified for the von Mangoldt weights. PROVED for the necessary condition and the finite criterion after independent mathematical audit.
 
-## Evaluación finita del criterio
+## Finite evaluation of the criterion
 
-Con C=2 el peine interno es exactamente cero, pues j<2K≤2i en toda la banda. Se acumuló W(m)=Σ_{n≤m}Λ(n)/n por criba de potencias primas y se usó s_j=log(3/2)[W(j)−W(⌊j/2⌋)]−log(2)[W(⌊j/2⌋)−W(⌊j/3⌋)]. Se calcularon la proyección por QR, D por sumas absolutas de filas y la energía por la matriz exacta de BUILD084. Resultados en doble precisión, redondeados; no son certificados intervalares.
+With C=2 the internal comb is exactly zero, since j<2K≤2i throughout the band. W(m)=Σ_{n≤m}Λ(n)/n was accumulated by a prime-power sieve and s_j=log(3/2)[W(j)−W(⌊j/2⌋)]−log(2)[W(⌊j/2⌋)−W(⌊j/3⌋)] was used. The projection by QR, D by absolute row sums and the energy by the exact matrix of BUILD084 were computed. Results in double precision, rounded; they are not interval certificates.
 
-| K | D | Pérdida proyectada | Cota (1) | Energía del test |
+| K | D | Projected loss | Bound (1) | Test energy |
 |---:|---:|---:|---:|---:|
 | 16 | 5.030073 | 0.015720 | 0.822007 | 0.183973 |
 | 64 | 7.819384 | 0.014822 | 0.407719 | 0.149002 |
 | 256 | 10.595623 | 0.010248 | 0.239676 | 0.146535 |
 | 1024 | 13.369113 | 0.007644 | 0.185880 | 0.152829 |
 
-La energía de cabeza vale aproximadamente 0.167101. En las tres últimas bandas la cola reduce esa energía; los cuatro tests quedan por encima de cero. La tabla concierne a una sola cola seleccionada por banda.
+The head energy is approximately 0.167101. In the last three bands the tail reduces that energy; the four tests stay above zero. The table concerns a single tail selected per band.
 
-### Mínimo con la cabeza p fija
+### Minimum with the head p fixed
 
-Cotejo previo. BUILD084 (16)–(18), 212-59/75, 212 ROUND_001_B, P47 prop:schur y la entrada de Schur en P48 ya contienen la eliminación. Se usa sólo para decidir si la elección de cola ocultó una energía negativa en los cuatro ejemplos.
+Prior cross-check. BUILD084 (16)–(18), 212-59/75, 212 ROUND_001_B, P47 prop:schur and the Schur entry in P48 already contain the elimination. It is used only to decide whether the choice of tail hid a negative energy in the four examples.
 
-Para Z con columnas ortonormales que generan ker H, escribir x=b+Zu, B=ZᵀAZ y g=Zᵀ(Ab+r−s), donde A es el bloque de cola. Si B es definida positiva el mínimo se alcanza en u=−B⁻¹g. Se construyó Z por SVD, se comprobó el menor autovalor de B y se resolvió el sistema por Cholesky. El mayor residuo euclidiano de estacionariedad fue 2.1×10⁻¹⁵. Diagnóstico en doble precisión.
+For Z with orthonormal columns spanning ker H, write x=b+Zu, B=ZᵀAZ and g=Zᵀ(Ab+r−s), where A is the tail block. If B is positive definite the minimum is attained at u=−B⁻¹g. Z was built by SVD, the smallest eigenvalue of B was checked and the system was solved by Cholesky. The largest Euclidean stationarity residue was 2.1×10⁻¹⁵. Diagnosis in double precision.
 
-| K | Menor autovalor de B | Energía mínima con cabeza fija |
+| K | Smallest eigenvalue of B | Minimal energy with fixed head |
 |---:|---:|---:|
 | 16 | 0.606024 | 0.156323 |
 | 64 | 0.553454 | 0.116346 |
 | 256 | 0.547662 | 0.107085 |
 | 1024 | 0.547097 | 0.101826 |
 
-Incluye todas las colas constantes por celda en cada banda con ambos momentos impuestos y esa cabeza. La tabla no controla simultáneamente varias bandas ni establece una cota uniforme en K. Se cierra aquí el barrido.
+It includes all cellwise constant tails in each band with both moments imposed and that head. The table does not control several bands simultaneously nor establish a bound uniform in K. The sweep is closed here.

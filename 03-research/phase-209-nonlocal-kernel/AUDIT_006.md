@@ -1,74 +1,74 @@
-# AUDIT_006 — FE de Π y defecto de autodualidad
+# AUDIT_006 — FE of Π and self-duality defect
 
-2026-10-18. Revisión inicial y final de CONSTRUCTOR_006. No se construyeron candidatos paralelos. Objetivo D íntegro activo.
+2026-10-18. Initial and final review of CONSTRUCTOR_006. No parallel candidates were built. Full target D active.
 
-**Veredicto: PROVED las identidades FE y el defecto de autodualidad borrado, con precisión de alcance sobre no-Hankel indicada al final. Enlace Q_T OPEN.**
+**Verdict: PROVED the FE identities and the deleted self-duality defect, with a precision of scope on non-Hankel noted at the end. Q_T link OPEN.**
 
-## 1. Corpus y alcance de la ronda
+## 1. Corpus and scope of the round
 
-Consultados índice (Tate/Poisson, SPEC005, R11_2_ORIGIN, INV_C/V, auditorías de transporte Mellin) y las construcciones209. Se conserva la razón nueva: calcular la transformación EXACTA del kernel Π ya construido y preguntar por su enlace al nodo, sin cambiarlo por un Gram favorable. La masa m=c−τ autodual es clásica; no presentarla como segundo puente nuevo.
+Consulted: index (Tate/Poisson, SPEC005, R11_2_ORIGIN, INV_C/V, Mellin transport audits) and the 209 constructions. The new reason is kept: compute the EXACT transformation of the already built kernel Π and ask about its link to the node, without swapping it for a favourable Gram. The self-dual mass m=c−τ is classical; do not present it as a second new bridge.
 
-No se reabre el envío de coeficientes por inversión de Möbius como ruta de signo: demostrar PSD de un empuje finito de una forma PSD es una norma genérica. Para habilitar un enlace nuevo hay que explicar la diferencia frente a P1 y a los intentos indexados, además de demostrar la igualdad con términos de Q_T.
+Sending coefficients by Möbius inversion is not reopened as a sign route: proving PSD of a finite pushforward of a PSD form is a generic norm. To enable a new link one must explain the difference with respect to P1 and the indexed attempts, besides proving equality with terms of Q_T.
 
-## 2. Fórmula FE de W_d
+## 2. FE formula for W_d
 
-Sea W_d(y)=τ(d²y)−τ(y)/d. Entonces
+Let W_d(y)=τ(d²y)−τ(y)/d. Then
 
     Π_α(d,e)=∫_0^∞ y^(α−1)W_d(y)W_e(y)/τ(y)dy.
 
-Poisson da exactamente
+Poisson gives exactly
 
     W_d(1/y)=√y/d [θ(y/d²)−θ(y)]−(1−1/d).
 
-**PROVED:** τ(d²/y)=√y θ(y/d²)/d−1 y τ(1/y)/d=√y θ(y)/d−1/d. Restar. El término constante es negativo con el signo indicado. No se pierde al excluir el origen; es precisamente la corrección de origen.
+**PROVED:** τ(d²/y)=√y θ(y/d²)/d−1 and τ(1/y)/d=√y θ(y)/d−1/d. Subtract. The constant term is negative with the indicated sign. It is not lost when excluding the origin; it is precisely the origin correction.
 
-La FE transforma escalas enteras d² en escalas fraccionarias d^(−2). Para convertir esta identidad en una transformación cerrada de Π hace falta conservar esas escalas, sus denominadores y todos los términos cruzados; no sólo la parte homogénea. Ningún signo de Π resulta de ignorar los términos constantes.
+The FE transforms integer scales d² into fractional scales d^(−2). To turn this identity into a closed transformation of Π one must keep those scales, their denominators and all cross terms; not only the homogeneous part. No sign of Π results from ignoring the constant terms.
 
-## 3. Masa faltante clásica y test de borrado
+## 3. Classical missing mass and deletion test
 
-Para m(y)=c(y)−τ(y), la comparación integral de la gaussiana da m>0 y Poisson implica
+For m(y)=c(y)−τ(y), the integral comparison of the Gaussian gives m>0 and Poisson implies
 
     m(1/y)=√y m(y).
 
-Es un objeto positivo autodual preciso, pero anterior a esta ronda. Su Mellin es −Z_α en 0<α<1/2. Esto prueba la normalización del auxiliar; no produce por sí solo el arquimediano de Q_T.
+It is a precise self-dual positive object, but prior to this round. Its Mellin is −Z_α on 0<α<1/2. This proves the normalisation of the auxiliary; it does not by itself produce the archimedean part of Q_T.
 
-Para P>1 squarefree, τ_P=Σ_{a|P}μ(a)τ(a²y), δ_P=Π_{p|P}(1−1/p), m_P=δ_P c−τ_P. Como Σμ(a)=0,
+For squarefree P>1, τ_P=Σ_{a|P}μ(a)τ(a²y), δ_P=Π_{p|P}(1−1/p), m_P=δ_P c−τ_P. Since Σμ(a)=0,
 
     τ_P(1/y)=√y Σ_{a|P}μ(a)/a ·θ(y/a²).
 
-Éste es el defecto específico de la FE: aparecen simultáneamente coeficientes 1/a y escalas fraccionarias. No se puede reemplazar esa suma dual por τ_P(y) ni por θ(y) sin una identidad adicional.
+This is the specific defect of the FE: coefficients 1/a and fractional scales appear simultaneously. That dual sum cannot be replaced by τ_P(y) or θ(y) without an additional identity.
 
-En particular,
+In particular,
 
-    m_P(y)=O_P(c(y)exp(−c_P/y)) cuando y↓0,
-    m_P(y)~δ_P c(y) cuando y→∞,
+    m_P(y)=O_P(c(y)exp(−c_P/y)) as y↓0,
+    m_P(y)~δ_P c(y) as y→∞,
 
-porque la constante de τ_P se cancela en cero y τ_P decae exponencialmente en infinito. Así
+because the constant of τ_P cancels at zero and τ_P decays exponentially at infinity. Thus
 
-    m_P(1/y)−√y m_P(y)→−δ_P≠0 cuando y→∞.
+    m_P(1/y)−√y m_P(y)→−δ_P≠0 as y→∞.
 
-La autodualidad de m se rompe de modo exacto bajo este borrado. Esto es compatible con que el kernel −R^P conserve PSD después de integrar: positividad y autodualidad son propiedades distintas y no debe confundirse una con la otra.
+The self-duality of m breaks exactly under this deletion. This is compatible with the kernel −R^P keeping PSD after integration: positivity and self-duality are distinct properties and one must not be confused with the other.
 
-## 4. Qué se puede y no se puede concluir
+## 4. What can and cannot be concluded
 
-El defecto anterior localiza una identidad que falla para un falsificador. Aún no prueba que esa identidad aporte el signo de Q_T; separación no es dominación del déficit gamma. El rango uno de (5)/(7) tampoco se identifica con el polar cosh por analogía.
+The previous defect locates an identity that fails for a falsifier. It does not yet prove that this identity supplies the sign of Q_T; separation is not domination of the gamma deficit. The rank one of (5)/(7) is also not identified with the cosh polar part by analogy.
 
-La siguiente revisión debe exigir un mapa explícito y dominio, grado cuadrático, intercambio/límites justificados, y correspondencia término por término. Si sólo se obtiene FE para el auxiliar, registrarlo como identidad estructural. Si no hay enlace todavía, no cerrar el objetivo ni convertir una equivalencia interna en razón para abandonar.
+The next review must require an explicit map and domain, quadratic degree, justified interchanges/limits, and term-by-term correspondence. If only an FE for the auxiliary is obtained, record it as a structural identity. If there is no link yet, do not close the target nor turn an internal equivalence into a reason to abandon.
 
-Revisión final pendiente de CONSTRUCTOR_006.
+Final review pending CONSTRUCTOR_006.
 
-## 5. Revisión final de CONSTRUCTOR_006
+## 5. Final review of CONSTRUCTOR_006
 
-Aprobados §§1–4 en sus identidades y signos:
+§§1–4 approved in their identities and signs:
 
-- 0<m<1, m(y)=y^(−1/2)m(1/y), τ(1/y)=√y(1−m(y)): correctos. El primer límite viene de comparación integral estricta y el segundo de Poisson.
-- W_d=m/d−m(d²y): cancelación exacta del perfil c. La inversión produce W_d(1/u)=√u[d^(−1)](m(u)−m(u/d²)). Al dividir por τ(1/u), el jacobiano deja u^((1/2−α)−1)/(de). α=1/4 es punto fijo del parámetro de ESTA identidad.
-- La fórmula directa con τ lleva −(1−1/d); coincide con la fórmula θ porque las constantes dentro de la diferencia se cancelan. No hay omisión del origen.
-- Para P>1, m_P^∨=−Σ_{a|P}μ(a)τ(y/a²)/a. El término δ_P se cancela con Σμ(a)/a=δ_P. Las fórmulas Δ_P y sus límites δ_P en cero y −δ_Pc en infinito son correctas. La representación dual de Π_P conserva δ_P−m_P^∨>0 y es un Gram; no requiere signo de m_P ni de m_P^∨.
-- La discrepancia de perfiles es real y no idénticamente nula. La igualdad de un perfil forward/backward se pierde; esto no prueba que alguna parte del defecto tenga el signo requerido para Q_T.
+- 0<m<1, m(y)=y^(−1/2)m(1/y), τ(1/y)=√y(1−m(y)): correct. The first bound comes from strict integral comparison and the second from Poisson.
+- W_d=m/d−m(d²y): exact cancellation of the profile c. Inversion yields W_d(1/u)=√u[d^(−1)](m(u)−m(u/d²)). Dividing by τ(1/u), the Jacobian leaves u^((1/2−α)−1)/(de). α=1/4 is a fixed point of the parameter of THIS identity.
+- The direct formula with τ carries −(1−1/d); it coincides with the θ formula because the constants inside the difference cancel. There is no omission of the origin.
+- For P>1, m_P^∨=−Σ_{a|P}μ(a)τ(y/a²)/a. The term δ_P cancels with Σμ(a)/a=δ_P. The formulas Δ_P and their limits δ_P at zero and −δ_Pc at infinity are correct. The dual representation of Π_P keeps δ_P−m_P^∨>0 and is a Gram matrix; it requires no sign of m_P or of m_P^∨.
+- The discrepancy of profiles is real and not identically zero. The equality of a forward/backward profile is lost; this does not prove that any part of the defect has the sign required for Q_T.
 
-**Precisión de alcance §3:** la fórmula de Π mantiene dos escalas por separado. Eso no demuestra por sí solo que el kernel INTEGRADO Π_α sea diferente de toda función w(de) para un α fijo; una integral puede colapsar dependencias. El Teorema 3 de CONSTRUCTOR004 es sobre A_α, no sobre Π_α aislado. Se comunicó al coordinador para ajustar esa frase. No afecta ninguna identidad FE.
+**Precision of scope §3:** the formula for Π keeps two scales separately. That does not by itself prove that the INTEGRATED kernel Π_α differs from every function w(de) for a fixed α; an integral may collapse dependencies. Theorem 3 of CONSTRUCTOR004 is about A_α, not about Π_α in isolation. The sentence was flagged for adjustment. It does not affect any FE identity.
 
-El rechazo del empuje Möbius finito se entiende como filtro de la clase concreta de símbolos convolutivos de P1, no como un nuevo NO-GO para todo mapa lineal hacia el auxiliar. Tal mapa podría tener contenido si se construye su enlace específico; no basta su existencia abstracta ni su PSD.
+The rejection of the finite Möbius pushforward is understood as a filter of the concrete class of convolutive symbols of P1, not as a new NO-GO for every linear map towards the auxiliary. Such a map could have content if its specific link is built; its abstract existence or its PSD is not enough.
 
-Los §§5–6 conservan correctamente como pendientes mapa de dominio continuo, grados, lcm/cocientes, gamma, polo, colas y todos los modos. La autodualidad de m es un objeto clásico explícito; su acción sobre Π está calculada, pero no constituye por sí sola el segundo puente buscado. **FE y defecto probados; objetivo D activo y sin cerrar.**
+§§5–6 correctly keep as pending the continuous domain map, degrees, lcm/quotients, gamma, pole, tails and all modes. The self-duality of m is an explicit classical object; its action on Π is computed, but does not by itself constitute the second bridge sought. **FE and defect proved; target D active and not closed.**

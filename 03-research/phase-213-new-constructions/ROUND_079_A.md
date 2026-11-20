@@ -1,28 +1,28 @@
-# Cota uniforme del bloque cruzado y encierro explícito del mínimo completo
+# Uniform bound on the cross block and explicit enclosure of the full minimum
 
-En una ventana fija, dividir I_T en N celdas iguales de longitud h. Sea λ_h el mínimo de la matriz de 078 en la base de indicadores normalizados. Definir
+On a fixed window, divide I_T into N equal cells of length h. Let λ_h be the minimum of the matrix of 078 in the basis of normalized indicators. Define
      
     b_T=Σ_{2≤n<exp(2T)} v_n + 4 sinh T,
     d=m(π/h)−b_T,    B=45+b_T.
 
-Entonces, en toda la forma completa,
+Then, on the whole full form,
      
     (λ_h+d−√((d−λ_h)²+4B²))/2 ≤ λ_W(T) ≤ λ_h.
 
-La constante del cruce no crece con N. En particular, si d>0 y λ_h>B²/d se certifica signo estricto. Para cualquier T fijo con λ_W(T)>0 la condición se cumple a partir de algún refinamiento suficientemente fino. No exige una constante Sobolev estimada sobre el minimizador.
+The crossing constant does not grow with N. In particular, if d>0 and λ_h>B²/d, a strict sign is certified. For any fixed T with λ_W(T)>0 the condition holds from some sufficiently fine refinement on. It does not require a Sobolev constant estimated on the minimizer.
 
-**Cruce arquimediano.** Extender la malla a toda la recta, sea P su proyector por medias y Q=1−P. Por traslación tomar el origen en un borde. Las funciones constantes en celdas tienen transformada igual a la transformada del indicador de una celda multiplicada por una función periódica de período 2π/h. Por Plancherel, agrupando ξ=(θ+2πk)/h, −π≤θ≤π, esto identifica P en cada fibra ℓ² con la proyección a una recta cuyo vector unitario tiene pesos de módulo cuadrado
+**Archimedean crossing.** Extend the mesh to the whole line, let P be its projector by means and Q=1−P. By translation take the origin at an endpoint. Cellwise constant functions have transform equal to the transform of the indicator of one cell multiplied by a periodic function of period 2π/h. By Plancherel, grouping ξ=(θ+2πk)/h, −π≤θ≤π, this identifies P on each ℓ² fiber with the projection onto a line whose unit vector has weights of squared modulus
      
     w_k=(2 sin(θ/2)/(θ+2πk))²,     Σ_k w_k=1.
 
-La normalización resulta de Parseval para los coeficientes de Fourier de exp(iθt) sobre [0,1]. m(D) es diagonal en la fibra. La norma al cuadrado de su cruce desde esa recta a su ortogonal es la varianza ponderada de los valores m((θ+2πk)/h). Se puede mayorar tomando como centro el valor k=0. Esta estimación también justifica la identidad primero en entradas de soporte finito en celdas (sus saltos logarítmicos están en L²); el cruce así acotado se prolonga.
+The normalization follows from Parseval for the Fourier coefficients of exp(iθt) on [0,1]. m(D) is diagonal on the fiber. The squared norm of its crossing from that line to its orthogonal complement is the weighted variance of the values m((θ+2πk)/h). It can be majorized by taking the value at k=0 as the center. This estimate also justifies the identity first on inputs of finite support in cells (their logarithmic jumps are in L²); the crossing so bounded extends.
 
-Para M₁=sup |t m'(t)| vale M₁≤10. De 078 se tiene t m'(t)=Σ 4t²c_j/(c_j²+t²)² ≤Σ 4t²/(c_j²+t²)^(3/2), c_j=1/2+2j. El primer sumando es ≤8 y el resto se acota por la mitad de la integral de la función decreciente sobre c≥0, igual a 2. Para k≠0 y r=|θ|/π≤1, w_k≤r²/k², y el cociente |θ+2πk|/|θ| está entre 1 y 3|k|/r. Así el módulo del cruce queda acotado por
+For M₁=sup |t m'(t)|, M₁≤10. From 078, t m'(t)=Σ 4t²c_j/(c_j²+t²)² ≤Σ 4t²/(c_j²+t²)^(3/2), c_j=1/2+2j. The first summand is ≤8 and the rest is bounded by half the integral of the decreasing function over c≥0, equal to 2. For k≠0 and r=|θ|/π≤1, w_k≤r²/k², and the ratio |θ+2πk|/|θ| lies between 1 and 3|k|/r. Thus the modulus of the crossing is bounded by
      
     M₁ [2Σ_{k≥1}(log(3k)+1/e)²/k²]^(1/2) < 45.
 
-En efecto r log(1/r)≤1/e; para a=log3+1/e, la suma de (log k+a)²/k² es ≤a²+∫₁^∞(log t+a)²/t² dt=2a²+2a+2<10. El punto θ=0 es irrelevante. La restricción a I_T no aumenta el cruce: el proyector de soporte conmuta con P porque la ventana es unión de celdas. La parte prima y polar tiene norma a lo sumo b_T por P47. Resulta la cota B indicada.
+Indeed r log(1/r)≤1/e; for a=log3+1/e, the sum of (log k+a)²/k² is ≤a²+∫₁^∞(log t+a)²/t² dt=2a²+2a+2<10. The point θ=0 is irrelevant. Restriction to I_T does not increase the crossing: the support projector commutes with P because the window is a union of cells. The prime and polar part has norm at most b_T by P47. The stated bound B follows.
 
-**Paso a la forma completa.** Descomponer F=u+v en medias y complemento de medias dentro de I_T. De 078, W(v)≥d||v||², mientras W(u)≥λ_h||u||². La cota de cruce da el término −2B||u||||v||. Minimizar la matriz escalar de orden dos prueba el encierro. Si d>λ_h, la anchura es a lo sumo B²/(d−λ_h). Para una ventana fija, d→∞ y λ_h queda uniformemente acotada por arriba ensayando la constante de toda la ventana. Así el encierro converge, aunque el coste de lograr d muy grande puede ser prohibitivo. La cota de 078 por regularidad tiene mejor tasa asintótica, pero llevaba una constante no evaluada.
+**Passage to the full form.** Decompose F=u+v into means and the complement of means inside I_T. From 078, W(v)≥d||v||², while W(u)≥λ_h||u||². The crossing bound gives the term −2B||u||||v||. Minimizing the scalar matrix of order two proves the enclosure. If d>λ_h, the width is at most B²/(d−λ_h). For a fixed window, d→∞ and λ_h stays uniformly bounded above by testing the constant on the whole window. Thus the enclosure converges, although the cost of achieving very large d may be prohibitive. The bound of 078 via regularity has a better asymptotic rate, but carried an unevaluated constant.
 
-**Cotejo.** El método de Schur y el control de complementos ya figuran en P47 y 026. La comparación nueva frente a 078 es el control del cruce por una varianza explícita en las fibras de la malla, con una cota independiente del refinamiento. Es un certificado suficiente en cada ventana: no se ha probado λ_h>B²/d para una familia de ventanas que tienda a infinito, ni se ha ejecutado un nuevo certificado numérico.
+**Cross-check.** The Schur method and the control of complements already appear in P47 and 026. The new comparison against 078 is the control of the crossing by an explicit variance on the fibers of the mesh, with a bound independent of refinement. It is a sufficient certificate on each window: λ_h>B²/d has not been proved for a family of windows tending to infinity, nor has a new numerical certificate been run.

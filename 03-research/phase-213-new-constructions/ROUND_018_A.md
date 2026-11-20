@@ -1,29 +1,29 @@
-# Recuperación de la energía completa por dos correctores remotos
+# Recovery of the full energy by two remote correctors
 
-**Cotejo.** 012-B evalúa el retorno de una cola a una cabeza de momento inverso nulo. P47 lem:polarelim y rem:polarelim-full explicitan los términos polares. El cotejo con P45, P47, R160 y los correctores de momentos de 211/212 distinguió el alcance de una aproximación test por test. La operación es compensar ambos momentos en extremos opuestos y retener el cruce de los correctores entre sí. La suficiencia global del sector primitivo ya estaba establecida en el corpus.
+**Cross-check.** 012-B evaluates the return of a tail to a head of zero inverse moment. P47 lem:polarelim and rem:polarelim-full make the polar terms explicit. The cross-check with P45, P47, R160 and the moment correctors of 211/212 distinguished the scope of a test-by-test approximation. The operation is to compensate both moments at opposite ends and retain the crossing of the correctors with each other. The global sufficiency of the primitive sector was already established in the corpus.
 
-**Enunciado.** Sea F un test complejo suave compacto en la variable logarítmica t. Escribir A(F)=∫exp(t/2)F(t)dt, B(F)=∫exp(−t/2)F(t)dt, y a para la energía sin polos con todos los contactos visibles en el soporte. Hay tests suaves compactos F_s de momentos A=B=0 tales que ||F_s−F||₂→0 y
+**Statement.** Let F be a smooth compactly supported complex test in the logarithmic variable t. Write A(F)=∫exp(t/2)F(t)dt, B(F)=∫exp(−t/2)F(t)dt, and a for the pole-free energy with all contacts visible in the support. There are smooth compactly supported tests F_s with moments A=B=0 such that ||F_s−F||₂→0 and
 
-    a(F_s) → W(F)=a(F)+2 Re(conjugado(B(F)) A(F)).
+    a(F_s) → W(F)=a(F)+2 Re(conjugate(B(F)) A(F)).
 
-Las ventanas de los aproximantes pueden crecer. La convergencia indicada concierne a la distancia L² y a los valores de energía. No se presupone continuidad de la energía completa en L².
+The windows of the approximants may grow. The indicated convergence concerns the L² distance and the energy values. Continuity of the full energy in L² is not presupposed.
 
-**Cálculo de un cruce remoto.** Sean L=Ul y R=Ur dos perfiles suaves compactos en la variable logarítmica, Uf(t)=exp(t/2)f(exp t). Para una distancia s→∞ sólo uno de los dos sentidos del contacto entre L y V_s R puede contribuir. En la energía polarizada, con convención antilineal a la izquierda, el cruce arquimediano es O(1) por Cauchy–Schwarz con peso |m|. Para el peine, al multiplicar el cruce por exp(−s/2) y poner K=exp(s), la expresión que se resta es
+**Computation of a remote crossing.** Let L=Ul and R=Ur be two smooth compactly supported profiles in the logarithmic variable, Uf(t)=exp(t/2)f(exp t). For a distance s→∞ only one of the two directions of contact between L and V_s R can contribute. In the polarized energy, with the antilinear-on-the-left convention, the archimedean crossing is O(1) by Cauchy–Schwarz with weight |m|. For the comb, multiplying the crossing by exp(−s/2) and putting K=exp(s), the expression being subtracted is
 
-    K⁻¹ Σ_n Λ(n) φ(n/K),    φ(v)=∫conjugado(l(x)) r(vx)dx.
+    K⁻¹ Σ_n Λ(n) φ(n/K),    φ(v)=∫conjugate(l(x)) r(vx)dx.
 
-En efecto el perfil físico de V_s R es K^(−1/2)r(x/K). La correlación da un factor √n que cancela el denominador del peso. La suma es para un solo sentido en la forma polarizada, con factor dos al tomar el cruce real completo. La función φ es suave con soporte compacto en (0,∞). PNT en forma de cuadratura y Fubini dan ∫φ=conjugado(B(L))A(R). Por tanto
+Indeed the physical profile of V_s R is K^(−1/2)r(x/K). The correlation gives a factor √n that cancels the denominator of the weight. The sum is for a single direction in the polarized form, with factor two when taking the full real crossing. The function φ is smooth with compact support in (0,∞). PNT in quadrature form and Fubini give ∫φ=conjugate(B(L))A(R). Hence
 
-    exp(−s/2) a(L,V_s R) → −conjugado(B(L)) A(R).
+    exp(−s/2) a(L,V_s R) → −conjugate(B(L)) A(R).
 
-**Dos correctores.** Elegir perfiles suaves P,Q con A(P)=−A(F), B(P)=0 y B(Q)=−B(F), A(Q)=0. Existen porque los dos funcionales son independientes sobre los tests suaves compactos (dos traslaciones distintas de un bump positivo dan una matriz de momentos invertible). Tomar
+**Two correctors.** Choose smooth profiles P,Q with A(P)=−A(F), B(P)=0 and B(Q)=−B(F), A(Q)=0. They exist because the two functionals are independent on smooth compactly supported tests (two distinct translations of a positive bump give an invertible moment matrix). Take
 
     F_s=F+exp(−s/2)(V_s P+V_(−s) Q).
 
-Las leyes A(V_s P)=exp(s/2)A(P) y B(V_s P)=exp(−s/2)B(P) dan exactamente los dos momentos cero. La distancia L² tiende a cero por la isometría de traslación, y las dos autoenergías añadidas son O(exp(−s)). En orden espacial Q,F,P, las contribuciones mixtas al límite son menos dos veces la parte real de la suma
+The laws A(V_s P)=exp(s/2)A(P) and B(V_s P)=exp(−s/2)B(P) give exactly the two zero moments. The L² distance tends to zero by the isometry of translation, and the two added self-energies are O(exp(−s)). In spatial order Q,F,P, the mixed contributions to the limit are minus twice the real part of the sum
 
-    conjugado(B(Q)) A(F) + conjugado(B(F)) A(P) + conjugado(B(Q)) A(P).
+    conjugate(B(Q)) A(F) + conjugate(B(F)) A(P) + conjugate(B(Q)) A(P).
 
-Para el último término, trasladar conjuntamente por s y aplicar el cálculo anterior con distancia 2s: exp(−s) es precisamente el factor crítico. Al sustituir los momentos de P,Q, la suma equivale a −conjugado(B(F))A(F). Esto prueba la fórmula.
+For the last term, translate jointly by s and apply the previous computation with distance 2s: exp(−s) is precisely the critical factor. Substituting the moments of P,Q, the sum equals −conjugate(B(F))A(F). This proves the formula.
 
-**Consecuencia.** En la unión de ventanas, el ínfimo de W(F)/||F||² sobre los tests suaves compactos no nulos coincide con el de a sobre los tests suaves compactos primitivos con la misma normalización. Una dirección se sigue por inclusión y la otra por la aproximación anterior. Un test con W(F)<0 produciría tests primitivos de energía negativa. El argumento fija cómo se transporta un valor de energía y deja pendiente la desigualdad global que lo firmaría. PROVED tras auditoría matemática independiente.
+**Consequence.** On the union of windows, the infimum of W(F)/||F||² over nonzero smooth compactly supported tests coincides with that of a over primitive smooth compactly supported tests with the same normalization. One direction follows by inclusion and the other by the previous approximation. A test with W(F)<0 would produce primitive tests of negative energy. The argument fixes how an energy value is transported and leaves pending the global inequality that would sign it. PROVED after independent mathematical audit.

@@ -1,75 +1,75 @@
-# Cuánta inclusión-exclusión exige el valor de la criba original
+# How much inclusion-exclusion the value of the original sieve requires
 
-Mantener Y, N∼λx^(3/2) y el peso f de la sección de traslaciones de 042. En esta ronda h=0 en todos los módulos. Para n con Y<n≤N escribir r(n)=#{p≤Y:p divide n}. Sea V el valor exacto, es decir, x^(−1/2)Σf(n)1_{r(n)=0}. En V_k sustituir el indicador por Σ_{j=0}^k(−1)^j binom(r(n),j). Para cada constante 0<α<1 y cualquier k entero con k∼α log x/log log x, se cumple
+Keep Y, N∼λx^(3/2) and the weight f from the translations section of 042. In this round h=0 in all moduli. For n with Y<n≤N write r(n)=#{p≤Y:p divides n}. Let V be the exact value, that is, x^(−1/2)Σf(n)1_{r(n)=0}. In V_k replace the indicator by Σ_{j=0}^k(−1)^j binom(r(n),j). For each constant 0<α<1 and any integer k with k∼α log x/log log x, one has
 
     |V_k−V| = x^(1/2−α+o(1)).
 
-Para k impar, V_k es una cota inferior. Se puede elegir k impar con cualquier α>1/2 menor que uno y obtener un minorante a distancia o(1) del valor original. Para α<1/2 la pérdida diverge en módulo. Estas afirmaciones no fijan el comportamiento de una sucesión particular en el umbral α=1/2.
+For odd k, V_k is a lower bound. One can choose odd k with any α>1/2 less than one and obtain a minorant at distance o(1) from the original value. For α<1/2 the loss diverges in absolute value. These statements do not fix the behaviour of a particular sequence at the threshold α=1/2.
 
-**Cota superior uniforme.** Para r>0, la suma truncada es (−1)^k binom(r−1,k), con valor cero cuando k≥r. Para r=0 no hay error. En todo el soporte f(n)≥0 para x grande, pues la prueba de positividad de 042 sólo usa n>Y, y f(n)≤log(N)w(n/x). El error tiene por ello un solo signo y su módulo se mayora reemplazando binom(r−1,k) por binom(r,k+1). Este último cuenta los divisores cuadrados-libres de n con k+1 primos distintos ≤Y. Para cualquier d≥1,
+**Uniform upper bound.** For r>0, the truncated sum is (−1)^k binom(r−1,k), with value zero when k≥r. For r=0 there is no error. On the whole support f(n)≥0 for large x, since the positivity proof of 042 only uses n>Y, and f(n)≤log(N)w(n/x). The error therefore has a single sign and its absolute value is bounded above by replacing binom(r−1,k) with binom(r,k+1). The latter counts the squarefree divisors of n with k+1 distinct primes ≤Y. For any d≥1,
 
     Σ_{m≥1} w(dm/x) ≤ C x/d.
 
-Si d≤x separar en m=x/d y sumar m o m^(−2) en su rama correspondiente. Si d>x la suma es ζ(2)(x/d)². Sumando primero por divisores se deduce
+If d≤x split at m=x/d and sum m or m^(−2) in the corresponding branch. If d>x the sum is ζ(2)(x/d)². Summing over divisors first one deduces
 
     |V_k−V| ≤ C √x log(N) (Σ_{p≤Y}1/p)^(k+1)/(k+1)!.
 
-La suma de recíprocos es O(log log x); el logaritmo de su potencia es o(log x) para este k. Por Stirling, log((k+1)!)=(α+o(1))log x. Así se obtiene el exponente de la cota superior.
+The sum of reciprocals is O(log log x); the logarithm of its power is o(log x) for this k. By Stirling, log((k+1)!)=(α+o(1))log x. This gives the exponent of the upper bound.
 
-**Cota inferior en la fase cero.** Tomar D el producto de los primeros k+1 primos. Por el teorema de los números primos log D∼k log k y el mayor de sus primos es O(log x), menor que Y. Así D=x^(α+o(1)) y hay (1+o(1))x/D múltiplos suyos en [x,2x]. Todos pertenecen al soporte del peso f para x grande. Allí f(n)=(1−c)(x/n)²log n≳log x y binom(r(n)−1,k)≥1. Sin cancelaciones, estos enteros aportan al error absoluto al menos una constante por √x log x/D. Esto completa la igualdad de exponentes.
+**Lower bound at phase zero.** Take D the product of the first k+1 primes. By the prime number theorem log D∼k log k and the largest of its primes is O(log x), smaller than Y. Thus D=x^(α+o(1)) and there are (1+o(1))x/D multiples of it in [x,2x]. All of them belong to the support of the weight f for large x. There f(n)=(1−c)(x/n)²log n≳log x and binom(r(n)−1,k)≥1. Without cancellations, these integers contribute to the absolute error at least a constant times √x log x/D. This completes the equality of exponents.
 
-**Qué estima el resultado.** V_k se expresa por sumas ordinarias de f sobre múltiplos de productos de a lo sumo k primos de la criba; no interviene un promedio de fases. El coste calculado es el error de truncar esa fórmula concreta, no el error de V respecto de (3/2)√x. Sigue faltando demostrar V_k≥(3/2)√x−O(1) para alguna elección impar de profundidad suficiente. No hay aquí una barrera para otros pesos de criba. R166_601 ya usa inclusión-exclusión de Legendre, y el índice registra la identidad de Selberg como vía ya recorrida; no se ha reabierto esa identidad. Lo específico de este cotejo es el umbral de profundidad a precisión aditiva O(1) para 042.
+**What the result estimates.** V_k is expressed through ordinary sums of f over multiples of products of at most k sieve primes; no average over phases intervenes. The computed cost is the error of truncating that concrete formula, not the error of V with respect to (3/2)√x. It remains to prove V_k≥(3/2)√x−O(1) for some odd choice of sufficient depth. There is no barrier here for other sieve weights. R166_601 already uses Legendre inclusion-exclusion, and the index records the Selberg identity as a route already travelled; that identity has not been reopened. What is specific to this cross-check is the depth threshold at additive precision O(1) for 042.
 
-## ¿Ayuda optimizar los coeficientes del polinomio de conteo?
+## Does optimising the coefficients of the counting polynomial help?
 
-Con la notación anterior sea L_x(P)=x^(−1/2)Σ_{Y<n≤N} f(n)|1_{r(n)=0}−P(r(n))|. Para cualquier k∼α log x/log log x con 0<α<1,
+With the notation above let L_x(P)=x^(−1/2)Σ_{Y<n≤N} f(n)|1_{r(n)=0}−P(r(n))|. For any k∼α log x/log log x with 0<α<1,
 
     inf_{deg P≤k} L_x(P) = x^(1/2−α+o(1)).
 
-El mismo exponente vale restringiendo el ínfimo a minorantes punto a punto. Se permiten coeficientes reales que dependan libremente de x. La aproximación en error absoluto es importante: para polinomios sin restricción de signo no se afirma un límite inferior al error después de cancelar desviaciones positivas y negativas.
+The same exponent holds when the infimum is restricted to pointwise minorants. Real coefficients depending freely on x are allowed. Approximation in absolute error matters: for polynomials without sign restriction no lower limit is claimed for the error after cancelling positive and negative deviations.
 
-**Cada nivel de conteo necesario tiene masa.** Para cada j=0,...,k+1 escribir D_j=∏_{i≤j}p_i, D₀=1. Uniformemente en j, D_j≤x^(α+o(1)) y p_j=O(log x) para j≥1. Se pueden encontrar al menos x^(1−α−o(1)) enteros del soporte con r(n)=j y con f(n)≥x^(−o(1)):
+**Every necessary counting level has mass.** For each j=0,...,k+1 write D_j=∏_{i≤j}p_i, D₀=1. Uniformly in j, D_j≤x^(α+o(1)) and p_j=O(log x) for j≥1. One can find at least x^(1−α−o(1)) integers in the support with r(n)=j and with f(n)≥x^(−o(1)):
 
-* Si D_j≤x/(2Y), usar n=D_j q para primos x/D_j<q≤2x/D_j. Entonces q>Y y r(n)=j. El número de elecciones es ≫x/(D_j log x).
-* En la otra rama j≥1. Poner T=min(Y,x/D_{j−1}) y usar n=D_{j−1}q con q primo en (T/2,T]. Ahora D_{j−1}T=min(D_{j−1}Y,x)>x/(2p_j) o vale x. Por ello T≥x^(1−α−o(1)), q>p_j para x grande y q≤Y. Se obtiene r(n)=j con ≫T/log x elecciones.
+* If D_j≤x/(2Y), use n=D_j q for primes x/D_j<q≤2x/D_j. Then q>Y and r(n)=j. The number of choices is ≫x/(D_j log x).
+* In the other branch j≥1. Put T=min(Y,x/D_{j−1}) and use n=D_{j−1}q with q prime in (T/2,T]. Now D_{j−1}T=min(D_{j−1}Y,x)>x/(2p_j) or equals x. Hence T≥x^(1−α−o(1)), q>p_j for large x and q≤Y. One obtains r(n)=j with ≫T/log x choices.
 
-Las estimaciones de primos en intervalos de razón dos son uniformes porque el menor extremo usado tiende a infinito. En ambas ramas n está entre x/(C log x) y 2x, por lo que pertenece a (Y,N]. Si n≤x el cociente del corrector c(x/n)² respecto a w(n/x) es c(x/n)³=o(1) uniformemente, usando 042. Si n≥x ese cociente es c=o(1). En todo el intervalo f(n)≫1 para x grande. En consecuencia la masa normalizada de cada nivel j del listado es al menos x^(1/2−α−o(1)).
+The estimates for primes in intervals of ratio two are uniform because the smallest endpoint used tends to infinity. In both branches n lies between x/(C log x) and 2x, so it belongs to (Y,N]. If n≤x the ratio of the corrector c(x/n)² to w(n/x) is c(x/n)³=o(1) uniformly, using 042. If n≥x that ratio is c=o(1). On the whole interval f(n)≫1 for large x. Consequently the normalised mass of each level j in the list is at least x^(1/2−α−o(1)).
 
-**Obstrucción algebraica.** La diferencia de orden k+1 de P en los enteros 0,...,k+1 vale cero; para el indicador del nivel cero su módulo vale uno. La suma de los módulos de los coeficientes de esa diferencia vale 2^(k+1). Por tanto en algún nivel j la desviación tiene módulo al menos 2^(−k−1)=x^(−o(1)). Multiplicar por la masa de ese nivel prueba la cota inferior, uniforme en los coeficientes. Para la cota superior se puede elegir el mayor orden impar ≤k en el minorante de Bonferroni de la sección anterior. Su error no cambia de signo y alcanza el exponente indicado.
+**Algebraic obstruction.** The difference of order k+1 of P at the integers 0,...,k+1 is zero; for the indicator of level zero its absolute value is one. The sum of the absolute values of the coefficients of that difference is 2^(k+1). Therefore at some level j the deviation has absolute value at least 2^(−k−1)=x^(−o(1)). Multiplying by the mass of that level proves the lower bound, uniformly in the coefficients. For the upper bound one can choose the largest odd order ≤k in the Bonferroni minorant of the previous section. Its error does not change sign and attains the stated exponent.
 
-Así, dentro de la clase que sólo usa el número de factores distintos de la criba, modificar los coeficientes no rebaja el umbral de profundidad de primer orden. La demostración no se aplica a pesos que distingan cuáles primos dividen n, ni controla el valor firmado del minorante de profundidad suficiente.
+Thus, within the class that uses only the number of distinct sieve factors, modifying the coefficients does not lower the first-order depth threshold. The proof does not apply to weights that distinguish which primes divide n, nor does it control the signed value of the minorant of sufficient depth.
 
-**Pesos que sí distinguen los primos: una barrera parcial.** Hay además una cota inferior distinta para polinomios de grado ≤k en *todos* los indicadores 1_{p|n}, p≤Y, sin simetría en sus coeficientes. Se pueden tomar multiafines por ser variables booleanas. Para 0<α<3/4 el error ponderado L¹ de cualquiera de estos polinomios es al menos
+**Weights that do distinguish the primes: a partial barrier.** There is moreover a different lower bound for polynomials of degree ≤k in *all* the indicators 1_{p|n}, p≤Y, with no symmetry in their coefficients. They can be taken multiaffine since the variables are Boolean. For 0<α<3/4 the weighted L¹ error of any of these polynomials is at least
 
     x^( min(1/2−α, 3/4−2α) − o(1) ).
 
-En efecto restringir al cubo de los primeros k+1 primos dejando a cero las otras variables. En sus vértices el indicador objetivo es uno sólo en el vértice vacío. La diferencia mixta en las k+1 variables anula cualquier monomio de grado a lo sumo k, y vale ±1 en el objetivo. Algún vértice tiene por tanto error ≥2^(−k−1).
+Indeed restrict to the cube of the first k+1 primes, setting the other variables to zero. At its vertices the target indicator is one only at the empty vertex. The mixed difference in the k+1 variables annihilates any monomial of degree at most k, and equals ±1 on the target. Some vertex therefore has error ≥2^(−k−1).
 
-Para *cada* vértice S, sea d el producto de sus primos y T=max(Y,x/d). Tomar n=dq con q primo en (T,2T]. Así el conjunto exacto de pequeños divisores primos es S, incluso en las variables fuera del cubo. Se tiene x≤n≤2 max(x,Yd)≤N para x grande pues d≤x^(α+o(1)) y α<3/4. Hay ≫T/log T elecciones y cada una aporta x^(−1/2)(1−c)(x/n)² log n a la masa del vértice. Como log n≥log T, la masa es ≫x^(3/2)/(d² T). En las dos ramas esto es respectivamente x^(3/2)/(d²Y) o √x/d. El peor de estos órdenes da la cota anunciada. Multiplicar por el error puntual del vértice localizado completa la prueba.
+For *each* vertex S, let d be the product of its primes and T=max(Y,x/d). Take n=dq with q prime in (T,2T]. Thus the exact set of small prime divisors is S, even in the variables outside the cube. One has x≤n≤2 max(x,Yd)≤N for large x since d≤x^(α+o(1)) and α<3/4. There are ≫T/log T choices and each contributes x^(−1/2)(1−c)(x/n)² log n to the mass of the vertex. Since log n≥log T, the mass is ≫x^(3/2)/(d² T). In the two branches this is respectively x^(3/2)/(d²Y) or √x/d. The worse of these orders gives the stated bound. Multiplying by the pointwise error of the localised vertex completes the proof.
 
-Por tanto incluso ponderar cada intersección según los primos que la integran no permite pérdida acotada cuando α<3/8. Para α≤1/4 el exponente inferior de esta clase coincide con el superior de Bonferroni. Para 3/8≤α<1/2 esta prueba no decide si tales pesos pueden alcanzar pérdida O(1). Estas conclusiones requieren error absoluto o minoración puntual.
+Therefore even weighting each intersection according to the primes that make it up does not allow bounded loss when α<3/8. For α≤1/4 the lower exponent of this class coincides with the Bonferroni upper one. For 3/8≤α<1/2 this proof does not decide whether such weights can attain loss O(1). These conclusions require absolute error or pointwise minoration.
 
-## Un minorante más corto que usa la parte del logaritmo sin cribar
+## A shorter minorant that uses the unsieved part of the logarithm
 
-Para n en el soporte, calcular
+For n in the support, compute
 
     A(n)=1−[Σ_{p≤Y} ν_p(n) log p]/log n,
 
-donde ν_p cuenta la multiplicidad. Sólo requiere divisiones por los primos de la criba. Es la fracción del logaritmo de n que queda después de retirar esos factores. Satisface 0≤A≤1, vale uno en los enteros libres y cero si todos los primos de n son ≤Y. Multiplicar por A(n) el polinomio truncado de Bonferroni B_k(r)=Σ_{j≤k}(−1)^j binom(r,j), con índice inicial j=0. Para k impar se obtiene un minorante puntual del indicador de coprimalidad. Denotar por W_k el valor al sumarlo con el mismo peso normalizado de 042.
+where ν_p counts multiplicity. It only requires divisions by the sieve primes. It is the fraction of the logarithm of n that remains after removing those factors. It satisfies 0≤A≤1, equals one on the free integers and zero if all the primes of n are ≤Y. Multiply by A(n) the truncated Bonferroni polynomial B_k(r)=Σ_{j≤k}(−1)^j binom(r,j), with initial index j=0. For odd k one obtains a pointwise minorant of the coprimality indicator. Denote by W_k the value when summing it with the same normalised weight of 042.
 
-Para 0<α<3/4 y k∼α log x/log log x se cumple exactamente a escala de exponentes
+For 0<α<3/4 and k∼α log x/log log x one has exactly at the scale of exponents
 
     |W_k−V|=x^(min(1/2−α,3/4−2α)+o(1)).
 
-En particular cualquier α fijo en (3/8,1/2) ya da error o(1), tomando k impar. La modificación usa tanto las valoraciones como el valor de n, por lo que no es un polinomio únicamente en el conteo ni únicamente en los indicadores de pequeños divisores primos.
+In particular any fixed α in (3/8,1/2) already gives error o(1), taking k odd. The modification uses both the valuations and the value of n, so it is neither a polynomial only in the count nor only in the indicators of small prime divisors.
 
-**Cota superior.** Se conserva la primera cota de 043 porque A≤1 y el indicador se reproduce exactamente cuando r=0. Para la segunda, sólo puede haber error si n es múltiplo de un divisor d cuadrado-libre con k+1 primos ≤Y. Además, A(n)log n=Σ_{q>Y, e≥1, q^e|n} log q. Mayorar el módulo del resto de Bonferroni por binom(r,k+1), expandir ambas sumas y usar f(n)/log n≤(x/n)². Por coprimalidad de d y q, la suma de n⁻² sobre sus múltiplos comunes es ζ(2)/(dq^e)² si se extiende a todos los múltiplos. De ello resulta
+**Upper bound.** The first bound of 043 is kept because A≤1 and the indicator is reproduced exactly when r=0. For the second, there can be an error only if n is a multiple of a squarefree divisor d with k+1 primes ≤Y. Moreover, A(n)log n=Σ_{q>Y, e≥1, q^e|n} log q. Bound the absolute value of the Bonferroni remainder by binom(r,k+1), expand both sums and use f(n)/log n≤(x/n)². By coprimality of d and q, the sum of n⁻² over their common multiples is ζ(2)/(dq^e)² if extended to all multiples. This yields
 
-    |W_k−V| ≤ ζ(2) x^(3/2) [Σ_{q>Y primo} log(q)/(q²−1)]
+    |W_k−V| ≤ ζ(2) x^(3/2) [Σ_{q>Y prime} log(q)/(q²−1)]
                              [Σ_{d|P, ω(d)=k+1} d^(−2)].
 
-El primer corchete es O(1/Y) por Chebyshev y sumación parcial. Cada d del segundo es al menos el producto D de los primeros k+1 primos, que es x^(α+o(1)). Además, la suma de los inversos de esos d es a lo sumo (Σ_{p≤Y}1/p)^(k+1)/(k+1)!=x^(−α+o(1)) como cota superior. El resultado es ≤x^(3/4−2α+o(1)).
+The first bracket is O(1/Y) by Chebyshev and partial summation. Each d in the second is at least the product D of the first k+1 primes, which is x^(α+o(1)). Moreover, the sum of the inverses of those d is at most (Σ_{p≤Y}1/p)^(k+1)/(k+1)!=x^(−α+o(1)) as an upper bound. The result is ≤x^(3/4−2α+o(1)).
 
-**Cota inferior.** Con T=max(Y,x/D) tomar n=Dq para primos T<q≤2T. Entonces r(n)=k+1, el error de B_k tiene módulo uno y A(n)log n=log q. Todos estos enteros pertenecen a [x,N] para x grande por α<3/4. Como los errores tienen un solo signo, su contribución normalizada es ≫x^(3/2)/(D²T), usando que hay ≫T/log T primos en ese intervalo. Esto da el exponente anunciado en ambas ramas de T. El caso crítico α=3/8 no queda decidido para secuencias k dadas sólo a primer orden.
+**Lower bound.** With T=max(Y,x/D) take n=Dq for primes T<q≤2T. Then r(n)=k+1, the error of B_k has absolute value one and A(n)log n=log q. All these integers belong to [x,N] for large x since α<3/4. Since the errors have a single sign, their normalised contribution is ≫x^(3/2)/(D²T), using that there are ≫T/log T primes in that interval. This gives the stated exponent in both branches of T. The critical case α=3/8 is not decided for sequences k given only to first order.
 
-**Qué queda por demostrar.** La modificación evita pérdidas grandes en los enteros compuestos exclusivamente de primos pequeños. Esta ganancia se certifica antes de estimar el valor firmado de W_k. Para concluir el signo sigue haciendo falta W_k≥(3/2)√x−O(1). No se ha probado la optimalidad frente a todos los minorantes que usan valoraciones. Cotejo: la descomposición logarítmica es clásica y se usó en 041; R166_601 trata el cribado por factores pequeños. Lo adicional es el error de su combinación con el truncamiento de 043. Construcción y ambos exponentes auditados independientemente.
+**What remains to be proved.** The modification avoids large losses on integers composed exclusively of small primes. This gain is certified before estimating the signed value of W_k. To conclude the sign one still needs W_k≥(3/2)√x−O(1). Optimality against all minorants that use valuations has not been proved. Cross-check: the logarithmic decomposition is classical and was used in 041; R166_601 treats sieving by small factors. What is additional is the error of its combination with the truncation of 043. Construction and both exponents independently audited.

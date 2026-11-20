@@ -1,38 +1,38 @@
-# Alcance de la equivalencia de inercia del sector par
+# Scope of the even-sector inertia equivalence
 
-Estado: corrección documental verificada independientemente. No es una prueba nueva de signo.
+Status: documentary correction, independently verified. It is not a new proof of the sign.
 
-## Cotejo
+## Cross-check
 
-El antecedente es `../phase-211-sign-sandbox/DOSSIER_001.md` §6(c), resumido en las Partes VI, VII.A y VII.C del índice maestro. La fuente primaria es Paper 47, `prop:H`, junto con `cor:H1minus`. El resumen de resultados positivos en VII.C omitía que la cota superior de inercia era un lado de una equivalencia, no un teorema incondicional disponible.
+The antecedent is `../phase-211-sign-sandbox/DOSSIER_001.md` §6(c), summarized in Parts VI, VII.A and VII.C of the master index. The primary source is Paper 47, `prop:H`, together with `cor:H1minus`. The summary of positive results in VII.C omitted that the upper inertia bound was one side of an equivalence, not an available unconditional theorem.
 
-No se reabre una vía de inercia ni se construye otro criterio. Se corrige una premisa que podría producir un razonamiento circular al intentar demostrar el signo global. La diferencia es de alcance lógico de la herramienta registrada, no de notación ni de método matemático.
+No inertia route is reopened and no other criterion is built. A premise is corrected that could produce circular reasoning when trying to prove the global sign. The difference concerns the logical scope of the recorded tool, not notation or mathematical method.
 
-## Lo que afirman las fuentes
+## What the sources state
 
-Escribir I(T)=n_−(A_ev(T)) para el índice negativo de la forma par sin polo. La primera frase de `prop:H` afirma
+Write I(T)=n_−(A_ev(T)) for the negative index of the even form without pole. The first sentence of `prop:H` states
 
-    [I(T)≤1 para todo T]  ⇔  [W_T^ev es PSD para todo T].
+    [I(T)≤1 for all T]  ⇔  [W_T^ev is PSD for all T].
 
-La equivalencia está etiquetada PROVED. No se sigue de ello que alguno de sus dos lados esté probado por separado. No se reconstruye aquí su demostración.
+The equivalence is labelled PROVED. It does not follow that either of its two sides is proved separately. Its proof is not reconstructed here.
 
-`cor:H1minus` afirma la cota en la dirección contraria:
+`cor:H1minus` states the bound in the opposite direction:
 
-    I(T)≥1 para T≥0.12.
+    I(T)≥1 for T≥0.12.
 
-Por tanto, BAJO la hipótesis de positividad global del sector par, se obtiene I(T)=1 para T≥0.12. La corrección de DOSSIER §6(c) evita exigir I(T)=1 en ventanas arbitrariamente pequeñas; no descarga la cota superior global.
+Hence, UNDER the hypothesis of global positivity of the even sector, one obtains I(T)=1 for T≥0.12. The correction of DOSSIER §6(c) avoids requiring I(T)=1 on arbitrarily small windows; it does not discharge the global upper bound.
 
-## Corrección del registro
+## Correction of the record
 
-El resumen «≤1 autovalor negativo ∀T; =1 para T≥0.12 [PROVED]» debe sustituirse por:
+The summary «≤1 negative eigenvalue ∀T; =1 for T≥0.12 [PROVED]» must be replaced by:
 
-    PROVED: equivalencia entre I(T)≤1 para todo T y positividad global del sector par.
-    PROVED: I(T)≥1 para T≥0.12.
-    Bajo la primera condición, I(T)=1 para T≥0.12.
-    OPEN: establecer incondicionalmente la cota superior I(T)≤1 para todo T.
+    PROVED: equivalence between I(T)≤1 for all T and global positivity of the even sector.
+    PROVED: I(T)≥1 for T≥0.12.
+    Under the first condition, I(T)=1 for T≥0.12.
+    OPEN: establish unconditionally the upper bound I(T)≤1 for all T.
 
-La cota superior no ha sido refutada. Tampoco se identifica aquí el sector par con todos los sectores ni se ofrece una nueva condición suficiente para el objetivo completo.
+The upper bound has not been refuted. Nor is the even sector identified here with all sectors, nor is a new sufficient condition offered for the full target.
 
-## Resultado
+## Result
 
-Se corrigen los resúmenes operativos del índice y se conserva la fuente histórica con una aclaración. Ninguna prueba futura puede invocar esa cota superior global como insumo ya demostrado. No se modifican papers ni se añade un NO-GO matemático. La positividad global permanece OPEN.
+The operational summaries of the index are corrected and the historical source is kept with a clarification. No future proof may invoke that global upper bound as an already proved input. No papers are modified and no mathematical NO-GO is added. Global positivity remains OPEN.
