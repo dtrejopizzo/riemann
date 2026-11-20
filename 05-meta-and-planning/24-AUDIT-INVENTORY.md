@@ -7,10 +7,10 @@ plus the actions taken.
 ## What was found
 
 - **Two empirical/theoretical layers** under-documented by the top-level files: Research Programs
-  1–9 (`01-context/RH1…RH9`, 627 trajectories) and Program 10 (`03-research/`, **61 phases**).
+  1–9 (`01-context/RH2017…RH2025`, 627 trajectories) and Program 10 (`03-research/`, **61 phases**).
 - **Stale high-level docs.** `00-README.md` described a folder layout that no longer existed;
   `MASTER-PLAN.md` stopped ~P13/phase-4; `PROGRAMA-COMPLETO-*` stopped ~P30/phase-20-zero-omega-bridge; the
-  whitepapers predated the RH1–9 + 61-phase framing.
+  whitepapers predated the RH2017–9 + 61-phase framing.
 - **Duplication.** Root `MASTER-PLAN.md` vs `riemann-program/MASTER-PLAN.md`; root
   `PROGRAMA-COMPLETO-MAPA.md` vs `riemann-program/PROGRAMA-COMPLETO-RESUMEN.md`.
 - **Language.** A scan of 528 docs (excluding the RH dumps and reference PDFs) found **309 Spanish

@@ -7,7 +7,7 @@ Documentary coverage is complete for the three declared scopes. No broken links,
 ## Cross-checked inventory
 
 - Paper 36: `04-papers/36-obstruction-ledger/main.tex` has 8,806 lines and 54,962 words. The main audit and its logical fragment exist.
-- RH1–RH9: there are 626 `task` directories, distributed as 89, 94, 83, 83, 60, 68, 43, 27, and 79. Each series is continuous from `task1` to its maximum and belongs to a block audit.
+- RH2017–RH2025: there are 626 `task` directories, distributed as 89, 94, 83, 83, 60, 68, 43, 27, and 79. Each series is continuous from `task1` to its maximum and belongs to a block audit.
 - Phases: there are 101 `phase-*` directories. Labels 001 and 002 do not exist and 044 has two paths; both anomalies are on record. The five audits cover every interval from 000 to 101.
 - Block 076–089 accounts for the 512 Markdown files present. The nominal sweep for closures found no candidates outside the audited directories.
 

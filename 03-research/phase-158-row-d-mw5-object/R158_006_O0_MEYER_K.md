@@ -311,6 +311,6 @@ Grep over `03-research/`, `04-papers/` and `05-meta-and-planning/` for "double z
 "non-semisimple", "Dedekind"+multiplicity, "S₃", and `0311468`.
 * The `S₃`/Jordan argument appears only in phase 158: R158_002 A20 and R158_004 rows 12–12′.
 * Meyer Duke appears only in P46 (X33)(ii) ("not read"), phase 39 `119-forced-axioms-backward-derivation.md` (bibliography) and
-  `01-context/RH9/task31,33` (bibliography).
+  `01-context/RH2025/task31,33` (bibliography).
 * Phase 58 `192-conj-179-6` §(iii) discusses Artin L-functions in a different context (off-line zeros, Euler rigidity).
 * No earlier phase proves or refutes Theorem J_K or Corollary F.

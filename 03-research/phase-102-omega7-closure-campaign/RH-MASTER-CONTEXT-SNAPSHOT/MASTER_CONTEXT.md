@@ -137,7 +137,7 @@ stronger than what is actually proved.
 
 ## Compressed tour of the nine programs
 
-### RH1–RH3: coefficients, \(\omega\) classes and statistics
+### RH2017–RH2019: coefficients, \(\omega\) classes and statistics
 
 Dirichlet sums, decompositions by number of prime factors, coherences, extremes, classifiers and
 precision protocols were built. The energy identity survives
@@ -154,7 +154,7 @@ multiplicativity, small decoherence or an extreme-value law do not determine the
 The bridge from an off-line zero to a concrete slope of the truncated observable was also not proved
 and did not appear in the operative control.
 
-### RH4–RH6: peak matrices and localized Weil
+### RH2020–RH2022: peak matrices and localized Weil
 
 Class covariances respond mainly to coefficient mass, conductor, support and peak selection. The
 predominance of negative covariance and the causal exceptionality of \(\omega=2\) were withdrawn. A
@@ -166,7 +166,7 @@ uniform in dimension, center, width, prime cutoff, zero tail and normalization i
 observed linear and quadratic responses belong to different setups or expose an inconsistent
 specification; they do not constitute a universal law.
 
-### RH7–RH8: calibrated detector, missing transfer
+### RH2023–RH2024: calibrated detector, missing transfer
 
 The expansion of a perturbed quartet and several trace controls are correct for fixed sections. The
 H1/H2 meshes and minimal eigenvalues are numerical evidence. The step
@@ -178,7 +178,7 @@ Q_{J,\sigma,X,H}\longrightarrow Q_\infty
 with simultaneous uniformity is precisely the step capable of excluding every off-line zero. It
 cannot be treated as a routine extrapolation.
 
-### RH9: postulated geometry, not built
+### RH2025: postulated geometry, not built
 
 The program specifies what a useful geometry should supply: a global object, diagonal, cohomology,
 spectral reader, Lefschetz triple and independent polarization. Arakelov theory, scale dynamics,
@@ -473,7 +473,7 @@ deserves mathematical development or whether it too falls under an already-known
 ## Navigation
 
 - [`PAPER36_AUDIT.md`](PAPER36_AUDIT.md): detailed audit of the manuscript's column.
-- [`RH1_RH9_AUDIT.md`](RH1_RH9_AUDIT.md): balance of the nine programs.
+- [`RH2017_RH9_AUDIT.md`](RH2017_RH9_AUDIT.md): balance of the nine programs.
 - [`PHASES_AUDIT.md`](PHASES_AUDIT.md): complete genealogy of phases.
 - [`NO_GO_AND_RETRACTIONS.md`](NO_GO_AND_RETRACTIONS.md): walls, circularities and precedence.
 - [`LIVE_FRONTIER_AND_RESTART_PLAN.md`](LIVE_FRONTIER_AND_RESTART_PLAN.md): operative restart protocol.

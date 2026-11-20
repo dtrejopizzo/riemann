@@ -19,7 +19,7 @@ Seeds and screens: CA_F_000_SEEDS.md (15 seeds, two batches). No survivor ⇒ no
 | Perfectoid tilting | F13 | local at one p, no global surface | DEAD |
 | Homogeneous dynamics (exact) | F14 | Bochner class (N_018); σ_T(0) < 0; (B″) | NO-GO |
 | Nef/ample cones | F15 | ES-20; P41-1; Nakai = dual cone (D) | DEAD |
-| Tropical, Deninger, prismatic, AHK | F10 | excluded by brief (L10/L29, P42-2, RH9, P41-2) | — |
+| Tropical, Deninger, prismatic, AHK | F10 | excluded by brief (L10/L29, P42-2, RH2025, P41-2) | — |
 
 ## Structural observation (CA_F_003 §3: Prop 2 PROVED for unitary-invariant invariants; trichotomy outside ARGUED)
 Every topological/geometric invariant available here is of one of three kinds, each already excluded:

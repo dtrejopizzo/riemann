@@ -63,7 +63,7 @@ symbol") and comb-generic ((B″)). **DISCARD.**
 
 ### F7. Hyperbolic geometry, Selberg-type trace formula, horocycle/Ratner equidistribution
 Seed: Euler product as prime geodesic lengths; the Selberg Weil form is positive because Δ is self-adjoint. Exact horocycle integral
-∫₀¹E(x+iy,s)dx = y^s + φ(s)y^{1−s}. Screen: self-adjoint mechanism = Hilbert–Pólya family (closed, RH5); horocycle integrals of
+∫₀¹E(x+iy,s)dx = y^s + φ(s)y^{1−s}. Screen: self-adjoint mechanism = Hilbert–Pólya family (closed, RH2021); horocycle integrals of
 Eisenstein data unfold to Rankin–Selberg/Maass–Selberg = CA_A_001/005/006 (abscissa never moves, MW-2); equidistribution *rates*
 are estimates (B′). Selberg analogue L31 covered. **DISCARD.**
 
@@ -77,7 +77,7 @@ Seed: categorical (Lefschetz) traces, THH/TC of 𝕊 or ℤ, with 𝔞_T a trace
 polarization (Hodge index on a surface); no object built (ES-20, phase 135/149, T1); TC/THH of ℤ is torsion-heavy, produces integer
 or p-adic invariants (unordered, F3/F4). **DISCARD** (ES-20; method theorem T1).
 
-### F10. Tropical / foliations / prismatic / AHK — excluded by brief (scaling site L10/L29, Deninger P42-2, prismatic RH9, AHK P41-2).
+### F10. Tropical / foliations / prismatic / AHK — excluded by brief (scaling site L10/L29, Deninger P42-2, prismatic RH2025, AHK P41-2).
 
 ## Batch 2 (untouched subareas)
 

@@ -267,7 +267,7 @@ into branch 1.
 - (a) CITED (Tao–Thiele, NLFT notes, arXiv 1201.5129): the nonlinear Plancherel identity
   ∫_𝕋 log|a(z)| = −½ Σ_n log(1 − |F_n|²) ≥ 0. On the OPUC side, Szegő/Verblunsky gives
   Σ log(1 − |α_n|²) = ∫ log w.
-- (b) "nonlinear Fourier": 0 hits. OPUC/Verblunsky are in MOM (RH5, L44–L47: inverse Jacobi DEAD).
+- (b) "nonlinear Fourier": 0 hits. OPUC/Verblunsky are in MOM (RH2021, L44–L47: inverse Jacobi DEAD).
 - (d) There are two readings:
   - with the F_n as test coefficients, both sides are ≥ 0 for every test and no comb appears: C-pos (i)
     kills the identity;

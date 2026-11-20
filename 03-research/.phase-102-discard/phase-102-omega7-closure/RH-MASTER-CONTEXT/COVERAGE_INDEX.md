@@ -5,9 +5,9 @@
 | Sector | Inventory cross-checked | Reading evidence |
 |---|---:|---|
 | Paper 36 | 8,806 lines; 54,962 words | [`PAPER36_AUDIT.md`](PAPER36_AUDIT.md) and [`fragments/PAPER36_LOGIC_AUDIT.md`](fragments/PAPER36_LOGIC_AUDIT.md) |
-| RH1–RH3 | 266 task directories | [`RH1_RH9_AUDIT.md`](RH1_RH9_AUDIT.md) and [`fragments/RH1_RH3_AUDIT.md`](fragments/RH1_RH3_AUDIT.md) |
-| RH4–RH6 | 211 task directories | [`RH1_RH9_AUDIT.md`](RH1_RH9_AUDIT.md) and [`fragments/RH4_RH6_AUDIT.md`](fragments/RH4_RH6_AUDIT.md) |
-| RH7–RH9 | 149 task directories | [`RH1_RH9_AUDIT.md`](RH1_RH9_AUDIT.md) and [`fragments/RH7_RH9_AUDIT.md`](fragments/RH7_RH9_AUDIT.md) |
+| RH2017–RH2019 | 266 task directories | [`RH2017_RH9_AUDIT.md`](RH2017_RH9_AUDIT.md) and [`fragments/RH2017_RH3_AUDIT.md`](fragments/RH2017_RH3_AUDIT.md) |
+| RH2020–RH2022 | 211 task directories | [`RH2017_RH9_AUDIT.md`](RH2017_RH9_AUDIT.md) and [`fragments/RH2020_RH6_AUDIT.md`](fragments/RH2020_RH6_AUDIT.md) |
+| RH2023–RH2025 | 149 task directories | [`RH2017_RH9_AUDIT.md`](RH2017_RH9_AUDIT.md) and [`fragments/RH2023_RH9_AUDIT.md`](fragments/RH2023_RH9_AUDIT.md) |
 | Phases 000–025 | All existing directories in the interval | [`fragments/PHASES_000_025_AUDIT.md`](fragments/PHASES_000_025_AUDIT.md) |
 | Phases 026–050 | All existing directories in the interval, including the two 044 branches | [`fragments/PHASES_026_050_AUDIT.md`](fragments/PHASES_026_050_AUDIT.md) |
 | Phases 051–075 | All existing directories in the interval | [`fragments/PHASES_051_075_AUDIT.md`](fragments/PHASES_051_075_AUDIT.md) |
@@ -26,7 +26,7 @@ The nominal check for files with `CLOSURE`, `cierre` or `final` found no candida
 | [`00_SCOPE_AND_METHOD.md`](00_SCOPE_AND_METHOD.md) | Corpus, labels, H0 and precedence. |
 | [`MASTER_CONTEXT.md`](MASTER_CONTEXT.md) | Self-contained context of the full program. |
 | [`PAPER36_AUDIT.md`](PAPER36_AUDIT.md) | Step 1–15 column, H0–H8 and chain Ω. |
-| [`RH1_RH9_AUDIT.md`](RH1_RH9_AUDIT.md) | Synthesis of the nine programs. |
+| [`RH2017_RH9_AUDIT.md`](RH2017_RH9_AUDIT.md) | Synthesis of the nine programs. |
 | [`PHASES_AUDIT.md`](PHASES_AUDIT.md) | Mathematical genealogy of all phases. |
 | [`NO_GO_AND_RETRACTIONS.md`](NO_GO_AND_RETRACTIONS.md) | Closed classes, circularities and retractions. |
 | [`LIVE_FRONTIER_AND_RESTART_PLAN.md`](LIVE_FRONTIER_AND_RESTART_PLAN.md) | Real frontier, gates and work order. |

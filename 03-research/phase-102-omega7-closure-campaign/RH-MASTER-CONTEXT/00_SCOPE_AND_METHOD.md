@@ -7,7 +7,7 @@ The review covers three layers.
 | Layer | Size inspected | Protocol |
 |---|---:|---|
 | Paper 36 | `main.tex`: 8,806 lines, 54,962 words | Full reading and second independent logical audit. |
-| RH1–RH9 | 5,867 files; 743 Markdown; 629 `README`/`OVERVIEW` | Reading of all trajectory responses and cross-check against data, code or tables when they support a material claim. |
+| RH2017–RH2025 | 5,867 files; 743 Markdown; 629 `README`/`OVERVIEW` | Reading of all trajectory responses and cross-check against data, code or tables when they support a material claim. |
 | Phases | 101 directories; 4,052 files; 2,228 Markdown; 12 TeX; 1,067 Python probes | Block reading of all mathematical documents and closures; inspection of probes when they certify signs, identities or falsifiers. |
 
 The phase directories represent labels 0 and 3–101; 1–2 do not exist and there are two directories labeled 44. This irregularity is preserved as part of the record and is not artificially filled in.

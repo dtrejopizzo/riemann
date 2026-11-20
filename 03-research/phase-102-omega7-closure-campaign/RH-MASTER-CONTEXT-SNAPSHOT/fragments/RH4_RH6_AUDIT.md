@@ -1,11 +1,11 @@
-# Audit of RH4–RH6
+# Audit of RH2020–RH2022
 
 ## Executive verdict
 
 The three programs leave a useful base of instrumentation, controls, and counterexamples, but not a
-chain toward RH. RH4 discards its central premise: negative inter-class covariance and a singular role
-for \(\omega=2\). RH5 correctly identifies that zero Gram matrices are PSD by construction and,
-therefore, cannot detect a horizontal deviation. RH6 supplies an interesting numerical calibration of
+chain toward RH. RH2020 discards its central premise: negative inter-class covariance and a singular role
+for \(\omega=2\). RH2021 correctly identifies that zero Gram matrices are PSD by construction and,
+therefore, cannot detect a horizontal deviation. RH2022 supplies an interesting numerical calibration of
 the localized Weil formulary, but does not resolve — nor can it substitute for — the uniform step from
 finite data to Weil positivity. That step is precisely equivalent to RH when formulated for the whole
 class of admissible tests.
@@ -36,18 +36,18 @@ matrices, the explicit formula, zero lists, moments, and shift scales.
 
 | Program | Directories covered | Directories without an answer | Use in the synthesis |
 |---|---|---|---|
-| RH4 | `task1`–`task83` | `task11`, `task19`, `task22`, `task35`, `task39`, `task46`, `task49`, `task60`, `task68`, `task70`, `task73` | \(\omega\) engine, classification, arithmetic ablation, inverse-bridge attempts, and audit of inherited assumptions. |
-| RH5 | `task1`–`task60` | `task5` | Reconstruction from zeros, power calibrations, Jacobi/Gram/Weil, TDA, and a bottleneck log. |
-| RH6 | `task1`–`task68` | `task7`, `task26` | Localized Weil form, zero generation, \(\omega\)-moments, H0 persistence, and sensitivity tests. |
+| RH2020 | `task1`–`task83` | `task11`, `task19`, `task22`, `task35`, `task39`, `task46`, `task49`, `task60`, `task68`, `task70`, `task73` | \(\omega\) engine, classification, arithmetic ablation, inverse-bridge attempts, and audit of inherited assumptions. |
+| RH2021 | `task1`–`task60` | `task5` | Reconstruction from zeros, power calibrations, Jacobi/Gram/Weil, TDA, and a bottleneck log. |
+| RH2022 | `task1`–`task68` | `task7`, `task26` | Localized Weil form, zero generation, \(\omega\)-moments, H0 persistence, and sensitivity tests. |
 
 The table's intervals are inclusive: they constitute the complete list of `task` directories for each
 program, including those without an answer.
 
-## RH4 — reconstruction
+## RH2020 — reconstruction
 
 ### Goal and actual method
 
-RH4 tried to turn peak statistics of Dirichlet polynomials stratified by \(\omega(n)\) into an
+RH2020 tried to turn peak statistics of Dirichlet polynomials stratified by \(\omega(n)\) into an
 analytic chain distinguishing functions with and without off-line zeros. The design combined:
 
 - an audit of the Davenport–Heilbronn constant and coefficients;
@@ -95,11 +95,11 @@ reconstruction of a zero's real part.
    control bank to distinguish coefficient effects from zero effects. Do not again present a peak
    signature as a bridge to RH without a theorem eliminating those confounders.
 
-## RH5 — reconstruction
+## RH2021 — reconstruction
 
 ### Goal and actual method
 
-RH5 shifted focus to zero lists: reconstruction of Jacobi matrices, Li coefficients, Mercer matrices,
+RH2021 shifted focus to zero lists: reconstruction of Jacobi matrices, Li coefficients, Mercer matrices,
 Weil forms, and TDA. It introduced a healthy calibration: deform \(\zeta\)'s zeros and measure
 sensitivity before interpreting an observable. It also documented zero-list generation and precision
 failures for DH, \(L(\chi)\), and \(L(\Delta)\).
@@ -139,11 +139,11 @@ convergence curves for deterministic objects. Do not repeat: Gram PSD as a detec
 finite Li/Mercer signs, calling TDA a "proof", or regenerating in each task lists that should be a single
 validated artifact.
 
-## RH6 — reconstruction
+## RH2022 — reconstruction
 
 ### Goal and actual method
 
-RH6 concentrated effort on a localized Hermite–Gauss basis for the explicit formula, sensitivity to
+RH2022 concentrated effort on a localized Hermite–Gauss basis for the explicit formula, sensitivity to
 zero shifts, and \(\omega\)-class moments. It is the program with the best separation between an
 operative detector and the proof gap, although its own tasks reveal scale and data inconsistencies that
 prevent elevating the result.
@@ -202,7 +202,7 @@ positivity.
    must simultaneously quantify basis dimension, center, width, prime cutoff, and zero tail. If its
    conclusion is positivity for every test, classify it from the start as
    **EQUIVALENT-REFORMULATION-OF-RH**.
-3. Keep RH4/RH6 only as a falsification bank: before attributing an effect to zeros, rule out
+3. Keep RH2020/RH2022 only as a falsification bank: before attributing an effect to zeros, rule out
    coefficients, conductor, support, window, peak selection, and normalization. The minimal proof must
    survive controls with an Euler product and synthetic deformations whose arithmetic side is coherently
    defined.

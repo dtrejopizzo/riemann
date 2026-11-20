@@ -10,7 +10,7 @@ detected.
 
 - Paper 36: `04-papers/36-obstruction-ledger/main.tex` has 8,806 lines and 54,962 words. The main audit
   and its logic fragment exist.
-- RH1–RH9: there are 626 `task` directories, distributed as 89, 94, 83, 83, 60, 68, 43, 27 and 79. Each
+- RH2017–RH2025: there are 626 `task` directories, distributed as 89, 94, 83, 83, 60, 68, 43, 27 and 79. Each
   series is continuous from `task1` to its maximum and belongs to a block audit.
 - Phases: there are 101 `phase-*` directories. Labels 001 and 002 do not exist and 044 has two paths;
   both anomalies are recorded. The five audits cover all intervals from 000 to 101.

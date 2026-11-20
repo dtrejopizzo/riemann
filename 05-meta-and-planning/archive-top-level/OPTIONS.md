@@ -157,7 +157,7 @@ assuming it is the discreteness one — the corpus has both kinds on record.
 
 ## Data-quality items found during the audit, worth a cheap pass
 
-- Corrupted publication years in `01-context/RH9/task*` citation blocks (arXiv
+- Corrupted publication years in `01-context/RH2025/task*` citation blocks (arXiv
   IDs misread as years, e.g. "Jan 2401").
 - `phase-29-zeta-spectral-triples/52` labels a conjectural, unconstructed object "Teorema 2.1
   (Deninger, 1991)" against the corpus's own tagging discipline.

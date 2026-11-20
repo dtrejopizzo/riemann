@@ -1,4 +1,4 @@
-# Audit of RH7–RH9: local detector, stability, and geometry
+# Audit of RH2023–RH2025: local detector, stability, and geometry
 
 ## Scope and legend
 
@@ -15,7 +15,7 @@ aspiration.
 | **REFUTED** | The tried formulation fails, is inconsistent, or lacks sufficient data for the claimed use. |
 | **EQUIVALENT-REFORMULATION-OF-RH** | Swaps RH for a condition that, if true, already contains the positivity or the uniform step deciding RH. Supplies no independent proof. |
 
-## RH7 — Local detector of the Weil quadratic form
+## RH2023 — Local detector of the Weil quadratic form
 
 **Goal and method.** Build a localized form
 \(Q=M_{\rm zeros}-M_{\rm arith}\) in a Hermite–Gauss basis, validate it on \(\zeta\),
@@ -68,10 +68,10 @@ on \((T_0,\sigma,J,X,H)\); any reading that suppresses it is out of scope.
   `task37`) were partly overcome by `task20`, but must not be mixed with the final result.
 - **Zeros of \(\Delta\):** the fixed-cutoff integrator lost zeros; some initial lists contain doubtful
   entries. Only the verified lists and the later refinement protocol may feed a quantitative claim.
-- **Non-self-dual character:** the initial formula had a phase bias. RH7 uses a correction with the real
-  part; RH8 adopts a symmetrized formulation. Numbers must not be transferred between the two without
+- **Non-self-dual character:** the initial formula had a phase bias. RH2023 uses a correction with the real
+  part; RH2024 adopts a symmetrized formulation. Numbers must not be transferred between the two without
   fixing exactly the zero side, conductor, gamma terms, and conjugation convention.
-- **Documentary inconsistency:** the perturbative-operator formula written in RH7's synthesis does not
+- **Documentary inconsistency:** the perturbative-operator formula written in RH2023's synthesis does not
   literally match the one derived in `task32`. The canonical formula must be reconstructed from the
   expansion and verified against the CSV before being cited as a theorem.
 - **Law fits:** seven values of \(X\) do not identify a "zero-density regime". `task9` acknowledges
@@ -80,17 +80,17 @@ on \((T_0,\sigma,J,X,H)\); any reading that suppresses it is out of scope.
 
 ### Inheritance and route not to repeat
 
-RH8 inherits an engine that must be specified, with a validated zero list and a cutoff dependent on
+RH2024 inherits an engine that must be specified, with a validated zero list and a cutoff dependent on
 \(\sigma,J\). It leaves a single analytic task for any continuation: a norm inequality simultaneously
 controlling prime tails, zero tails, and numerical error over an explicit parameter class. Do not
 repeat: turning empirical fits into arithmetic hypotheses, using Davenport–Heilbronn quantitatively, or
 confusing the synthetic \(\Delta Q\) with a proof about \(Q_\infty\).
 
-## RH8 — Basis stability and localization monotonicity
+## RH2024 — Basis stability and localization monotonicity
 
 **Goal and method.** Study, across the three controls, the stability of
 \(\lambda_{\min}(Q(T_0,\sigma,J))\) as \(J\) grows (H1) and its response to \(\sigma\) and nested zero
-windows (H2). The program reuses RH7's engine, imposes a trace gate before interpreting an eigenvalue,
+windows (H2). The program reuses RH2023's engine, imposes a trace gate before interpreting an eigenvalue,
 and quantitatively excludes Davenport–Heilbronn.
 
 ### Audited result
@@ -117,7 +117,7 @@ and quantitatively excludes Davenport–Heilbronn.
 | "Finite stability or monotonicity implies RH" | **REFUTED** | The design itself forbids it; it also depends on the transition to the full functional. |
 | Sufficient scaling of \(X\) for the whole \((T_0,\sigma,J)\) family | **CONDITIONAL** | Practical frontiers were measured, not a proved uniform law. |
 
-**Dependencies and inheritance.** RH8 depends directly on RH7's local validity; its durable
+**Dependencies and inheritance.** RH2024 depends directly on RH2023's local validity; its durable
 contribution is methodological: do not interpret \(\lambda_{\min}\) without a trace residual, and
 separate three regimes: validated, recoverable by raising \(X\), and inaccessible with the current
 cutoff. It passes forward an admission condition for every numerical exploration, but no new route
@@ -126,11 +126,11 @@ toward RH.
 **No-go and corrections.** Do not reuse the results of `task8`, `task10`, `task12`, `task13`,
 `task22`, and `task23` as validations: they record incomplete implementation, missing data, or
 computational limits. Nor should the symmetrized correction be presented as if it automatically
-reconciled RH7's earlier conventions. The correct route is to fix a single mathematical specification,
+reconciled RH2023's earlier conventions. The correct route is to fix a single mathematical specification,
 add independent verification of matrix entries, and prove a tail bound before claiming asymptotic
 H1/H2.
 
-## RH9 — Arithmetic surface and Lefschetz structure
+## RH2025 — Arithmetic surface and Lefschetz structure
 
 **Goal and method.** Seek a geometry independent of the spectrum that produces an absolute surface
 \(S\), a diagonal \([\Delta]\), a Lefschetz triple, and a Hodge–Riemann form linked to Weil's criterion.
@@ -194,34 +194,34 @@ of G1–G4 without identifying it in advance with RH.
 
 | Program | Directories covered | Evidence type and fate |
 |---|---|---|
-| RH7 | `task1, task3, task7, task13, task14, task27, task30, task33, task38, task39, task43` | No substantive answer; do not support conclusions. |
-| RH7 | `task2, task4, task5, task6, task8, task11, task12, task17, task23, task24, task25, task26, task28, task35, task36, task37, task40, task41, task42` | Engine, normalization, data, and limit diagnostics; several are withdrawn or replaced by later validations. |
-| RH7 | `task9, task10, task15, task16, task18, task19, task20, task21, task22, task29, task31, task32, task34` | \(\delta^2\) signal, tails, detectability, and final validations; a mix of finite and numerical results, per the table above. |
-| RH8 | `task7, task8, task10, task12, task13, task15, task22, task23, task24` | No closure or insufficient implementation/data; excluded as H1/H2 evidence. |
-| RH8 | `task4, task9, task14, task17` | Trace gates and pointwise controls: numerical assembly evidence in the solved regime. |
-| RH8 | `task1, task2, task3, task5, task6, task11, task16, task18, task19, task20, task21, task25, task26, task27` | H1/H2 curves, cutoff sweeps, and the non-self-dual correction; exclusively numerical, regime-dependent evidence. |
-| RH9 | `task1–task13` | Review of Arakelov, scale, prismatic, and correspondence routes; bibliographic evidence, mostly conditional. |
-| RH9 | `task14` | \(\Delta_3\) notebook, withdrawn divergent formula, and semiclassical comparison: numerical/exploratory. |
-| RH9 | `task15–task35` | Gradings, Lefschetz, independence, trace, and prismatic theory: dependency and gap map, not a construction. |
-| RH9 | `task36` | Zero-pair statistic: numerical; does not prove a general spectral obstruction. |
-| RH9 | `task37–task45` | Arithmetic positivity, operators, \(\lambda\)-rings, and partial no-go: conditional. |
-| RH9 | `task46` | \(\Delta_3\) replica: numerical and not independent of the same data pipeline. |
-| RH9 | `task47–task54` | \(\Lambda\), correspondences, Frobenius/Sen theory, and absolute cohomology: identified gaps, not closed G1–G4 pieces. |
-| RH9 | `task55` | Commutator-construction notebook; exploratory artifact without certification of a geometric route. |
-| RH9 | `task56–task62` | Kernel transforms, Adams theory, traces, and statistics: proposals and constraints, not global proofs. |
-| RH9 | `task63` | Extensive literature synthesis; useful as inventory, not as proof of the reduction or of a construction. |
-| RH9 | `task64–task66` | Compatibility, Weil operator, and arithmetic star: conditional; the global objects are missing. |
-| RH9 | `task67` | Incomplete preprocessing; no usable evidence. |
-| RH9 | `task68–task69` | \(\log p\) weights and quantum deformation: partial/conjectural mechanisms. |
-| RH9 | `task70` | Riemann–GUE comparison of \(\Delta_3\): numerical, with normalizations and approximations to be checked. |
-| RH9 | `task71–task79` | Prolate theory, star, Hecke, unbounded operators, and von Neumann algebra: conditional constraints and literature review. |
+| RH2023 | `task1, task3, task7, task13, task14, task27, task30, task33, task38, task39, task43` | No substantive answer; do not support conclusions. |
+| RH2023 | `task2, task4, task5, task6, task8, task11, task12, task17, task23, task24, task25, task26, task28, task35, task36, task37, task40, task41, task42` | Engine, normalization, data, and limit diagnostics; several are withdrawn or replaced by later validations. |
+| RH2023 | `task9, task10, task15, task16, task18, task19, task20, task21, task22, task29, task31, task32, task34` | \(\delta^2\) signal, tails, detectability, and final validations; a mix of finite and numerical results, per the table above. |
+| RH2024 | `task7, task8, task10, task12, task13, task15, task22, task23, task24` | No closure or insufficient implementation/data; excluded as H1/H2 evidence. |
+| RH2024 | `task4, task9, task14, task17` | Trace gates and pointwise controls: numerical assembly evidence in the solved regime. |
+| RH2024 | `task1, task2, task3, task5, task6, task11, task16, task18, task19, task20, task21, task25, task26, task27` | H1/H2 curves, cutoff sweeps, and the non-self-dual correction; exclusively numerical, regime-dependent evidence. |
+| RH2025 | `task1–task13` | Review of Arakelov, scale, prismatic, and correspondence routes; bibliographic evidence, mostly conditional. |
+| RH2025 | `task14` | \(\Delta_3\) notebook, withdrawn divergent formula, and semiclassical comparison: numerical/exploratory. |
+| RH2025 | `task15–task35` | Gradings, Lefschetz, independence, trace, and prismatic theory: dependency and gap map, not a construction. |
+| RH2025 | `task36` | Zero-pair statistic: numerical; does not prove a general spectral obstruction. |
+| RH2025 | `task37–task45` | Arithmetic positivity, operators, \(\lambda\)-rings, and partial no-go: conditional. |
+| RH2025 | `task46` | \(\Delta_3\) replica: numerical and not independent of the same data pipeline. |
+| RH2025 | `task47–task54` | \(\Lambda\), correspondences, Frobenius/Sen theory, and absolute cohomology: identified gaps, not closed G1–G4 pieces. |
+| RH2025 | `task55` | Commutator-construction notebook; exploratory artifact without certification of a geometric route. |
+| RH2025 | `task56–task62` | Kernel transforms, Adams theory, traces, and statistics: proposals and constraints, not global proofs. |
+| RH2025 | `task63` | Extensive literature synthesis; useful as inventory, not as proof of the reduction or of a construction. |
+| RH2025 | `task64–task66` | Compatibility, Weil operator, and arithmetic star: conditional; the global objects are missing. |
+| RH2025 | `task67` | Incomplete preprocessing; no usable evidence. |
+| RH2025 | `task68–task69` | \(\log p\) weights and quantum deformation: partial/conjectural mechanisms. |
+| RH2025 | `task70` | Riemann–GUE comparison of \(\Delta_3\): numerical, with normalizations and approximations to be checked. |
+| RH2025 | `task71–task79` | Prolate theory, star, Hecke, unbounded operators, and von Neumann algebra: conditional constraints and literature review. |
 
 ## Synthesis for the global reformulation
 
-1. RH7 supplies a detector and a tail bound for a finite basis; RH8 shows which numerical regimes are
+1. RH2023 supplies a detector and a tail bound for a finite basis; RH2024 shows which numerical regimes are
    admissible. Neither resolves the jump to the infinite functional: that is the logical bottleneck and
    it is **EQUIVALENT-REFORMULATION-OF-RH**.
-2. RH9 does not deliver an absolute geometry; it delivers filters that a geometry would have to satisfy
+2. RH2025 does not deliver an absolute geometry; it delivers filters that a geometry would have to satisfy
    without circularity. Its best assets are the conditioned no-go results and the G1–G4 list, not an
    already-open demonstrative route.
 3. The continuation must separate three layers: a proved finite identity, an explicit analytic bound,

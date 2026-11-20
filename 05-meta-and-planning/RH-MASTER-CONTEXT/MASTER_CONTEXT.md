@@ -109,7 +109,7 @@ These corrections do not destroy the ARP-P–RH equivalence. They prevent using 
 
 ## Compressed tour of the nine programs
 
-### RH1–RH3: coefficients, \(\omega\) classes, and statistics
+### RH2017–RH2019: coefficients, \(\omega\) classes, and statistics
 
 Dirichlet sums, decompositions by number of prime factors, coherences, extremes, classifiers, and precision protocols were built. The energy identity
 
@@ -122,13 +122,13 @@ Dirichlet sums, decompositions by number of prime factors, coherences, extremes,
 
 survives, but not its reading as a zero criterion. Liouville's function and random multiplicative controls show that multiplicativity, small decoherence, or an extremes law do not determine the geometry of the divisor. The bridge from an off-line zero to a concrete slope of the truncated observable was likewise not proved and did not appear in the operational control.
 
-### RH4–RH6: peak matrices and localized Weil theory
+### RH2020–RH2022: peak matrices and localized Weil theory
 
 Class covariances respond mainly to coefficient mass, conductor, support, and peak selection. The predominance of negative covariance and the causal exceptionality of \(\omega=2\) were withdrawn. A Gram matrix built only from zeros is PSD by construction and may have eliminated the horizontal coordinate it was meant to detect.
 
 The Hermite–Gauss Weil detector does leave behind finite algebra and useful calibrations. A joint uniform bound in dimension, center, width, prime cutoff, zero tail, and normalization is missing. The observed linear and quadratic responses belong to different setups or expose an inconsistent specification; they do not constitute a universal law.
 
-### RH7–RH8: calibrated detector, missing transfer
+### RH2023–RH2024: calibrated detector, missing transfer
 
 The expansion of a perturbed quartet and several trace controls are correct for fixed sections. The H1/H2 meshes and minimal eigenvalues are numerical evidence. The step
 
@@ -138,7 +138,7 @@ Q_{J,\sigma,X,H}\longrightarrow Q_\infty
 
 with simultaneous uniformity is precisely the step capable of excluding every off-line zero. It cannot be treated as a routine extrapolation.
 
-### RH9: postulated geometry, not built
+### RH2025: postulated geometry, not built
 
 The program specifies what a useful geometry should deliver: a global object, a diagonal, cohomology, a spectral reader, a Lefschetz triple, and an independent polarization. Arakelov theory, scaling dynamics, noncommutative geometry, prolate/Sonin theory, and cohomological theories contribute analogies or pieces. The corpus does not build the joint object nor identify its intersection form with Weil without first inserting the divisor.
 
@@ -378,7 +378,7 @@ Until then, the work belongs to the planning dossier. The immediate priority is 
 ## Navigation
 
 - [`PAPER36_AUDIT.md`](PAPER36_AUDIT.md): detailed audit of the manuscript's column.
-- [`RH1_RH9_AUDIT.md`](RH1_RH9_AUDIT.md): balance of the nine programs.
+- [`RH2017_RH9_AUDIT.md`](RH2017_RH9_AUDIT.md): balance of the nine programs.
 - [`PHASES_AUDIT.md`](PHASES_AUDIT.md): complete genealogy of phases.
 - [`NO_GO_AND_RETRACTIONS.md`](NO_GO_AND_RETRACTIONS.md): walls, circularities, and precedence.
 - [`LIVE_FRONTIER_AND_RESTART_PLAN.md`](LIVE_FRONTIER_AND_RESTART_PLAN.md): operational restart protocol.

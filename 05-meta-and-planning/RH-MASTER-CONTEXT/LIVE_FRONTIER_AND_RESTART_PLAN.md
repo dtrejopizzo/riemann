@@ -625,7 +625,7 @@ It must exceed the already-closed Tauberian/local classes and distinguish \(\zet
 
 ### V.C External geometry
 
-Reopen the geometric route only if an independent object with a diagonal, polarization, and spectral reader is built first. Defining the star, metric, or correspondence from the divisor of \(\Xi\) is not allowed. Without a new object, returning to Hodge/Lefschetz would repeat RH9 and phases 39–45.
+Reopen the geometric route only if an independent object with a diagonal, polarization, and spectral reader is built first. Defining the star, metric, or correspondence from the divisor of \(\Xi\) is not allowed. Without a new object, returning to Hodge/Lefschetz would repeat RH2025 and phases 39–45.
 
 The recommended priority is V.A, starting from its direct one-sided version from Stage II. It is the currently specified direct route using the already-isolated Euler–Gamma structure without requiring a nonexistent geometry or an average.
 

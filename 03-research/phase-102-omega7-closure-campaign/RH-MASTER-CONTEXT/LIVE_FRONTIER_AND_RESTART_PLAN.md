@@ -673,7 +673,7 @@ control within a typed class.
 
 Only reopen the geometric route if an independent object with diagonal, polarization and spectral
 reader is built first. Defining the star, metric or correspondence from \(\Xi\)'s divisor is not
-allowed. Without a new object, returning to Hodge/Lefschetz would repeat RH9 and phases 39–45.
+allowed. Without a new object, returning to Hodge/Lefschetz would repeat RH2025 and phases 39–45.
 
 The recommended priority is V.A, starting from its direct one-sided version from Stage II. It is the
 currently specified direct route that uses the already-isolated Euler–Gamma structure without

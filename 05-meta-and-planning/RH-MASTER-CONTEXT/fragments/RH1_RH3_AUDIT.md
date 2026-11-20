@@ -1,8 +1,8 @@
-# Audit of RH1–RH3: usefulness, limits and restart
+# Audit of RH2017–RH2019: usefulness, limits and restart
 
 ## Executive verdict
 
-The three programs contain no proof of RH nor a new reduction that demonstrably brings it closer. Their useful output is diagnostic: they fix several numerical controls, show that multiplicativity alone does not classify the finite geometry of Dirichlet polynomials, and localize failures that a reformulation must block from the outset. RH1's guiding thesis — "the Euler product/multiplicativity suppresses the resonance that would allow off-line zeros" — is **REFUTED** as a general explanation by the random multiplicative families and, decisively, by Liouville. RH2 also eliminates the empirical arrows that aimed to turn those observables into a proof. RH3 preserves a phenomenology of \(\omega(n)\) classes, but only at finite scale and with marked sensitivity to definition, peak selection and implementation.
+The three programs contain no proof of RH nor a new reduction that demonstrably brings it closer. Their useful output is diagnostic: they fix several numerical controls, show that multiplicativity alone does not classify the finite geometry of Dirichlet polynomials, and localize failures that a reformulation must block from the outset. RH2017's guiding thesis — "the Euler product/multiplicativity suppresses the resonance that would allow off-line zeros" — is **REFUTED** as a general explanation by the random multiplicative families and, decisively, by Liouville. RH2018 also eliminates the empirical arrows that aimed to turn those observables into a proof. RH2019 preserves a phenomenology of \(\omega(n)\) classes, but only at finite scale and with marked sensitivity to definition, peak selection and implementation.
 
 **Reading rule.** PROVED means a mathematical identity or a correctly invoked external theorem, not a plot. CONDITIONAL means an implication that would require a new bound. NUMERICAL means a reproducible finite computation within an identified implementation. CONJECTURAL means interpretation or extrapolation. REFUTED means the program itself supplied a counterexample, a negative trial, or a methodological impossibility. EQUIVALENT-REFORMULATION-OF-RH flags a statement that, if true across the relevant domain, would already be RH and not an independent route.
 
@@ -12,10 +12,10 @@ The three READMEs, the 266 `OVERVIEW.md` files, and the mathematical or validati
 
 | Program | Directories reviewed | Coverage | Dominant focus |
 |---|---|---:|---|
-| RH1 | `task1`–`task89` | 89/89 | resonance detector, phases, GEV, classification and the DH crisis |
-| RH2 | `task1`–`task94` | 94/94 | attempted proof–diagnosis chain, perturbations and controls |
-| RH3 | `task1`–`task83` | 83/83 | \(\omega\)-class geometry, moments, finite causality and infrastructure |
-| **Total** | `RH1/task1`–`task89`; `RH2/task1`–`task94`; `RH3/task1`–`task83` | **266/266** | — |
+| RH2017 | `task1`–`task89` | 89/89 | resonance detector, phases, GEV, classification and the DH crisis |
+| RH2018 | `task1`–`task94` | 94/94 | attempted proof–diagnosis chain, perturbations and controls |
+| RH2019 | `task1`–`task83` | 83/83 | \(\omega\)-class geometry, moments, finite causality and infrastructure |
+| **Total** | `RH2017/task1`–`task89`; `RH2018/task1`–`task94`; `RH2019/task1`–`task83` | **266/266** | — |
 
 ## Inventory of mathematical status
 
@@ -26,19 +26,19 @@ The three READMEs, the 266 `OVERVIEW.md` files, and the mathematical or validati
 | \(\mu(n)^2(-1)^{\omega(n)}=\mu(n)\), so the corresponding series is \(1/\zeta(s)\). | **PROVED** | Corrects the false presentation of that object as a new independent function. |
 | \(|D|^2=\sum_k|S_k|^2+\sum_{j\ne k}\Re(S_j\overline{S_k})\). | **PROVED** | Algebraic identity. The ratio \(r\) is a parametrization of those cross terms, not a bound on zeros. |
 | Mean orthogonality of Dirichlet polynomials and the Montgomery–Vaughan paradigm for second moments. | **PROVED** | Does not turn the \(\omega\)-decomposition into information about \(\zeta(\rho)=0\). The finite trials are only consistent with the theorem. |
-| Vinogradov–Korobov and Selberg's CLT. | **PROVED** as external theorems; **NUMERICAL** as finite-scale checks in RH2. | Equidistribution or Gaussianity of averages does not give a uniform exclusion of off-line zeros. |
+| Vinogradov–Korobov and Selberg's CLT. | **PROVED** as external theorems; **NUMERICAL** as finite-scale checks in RH2018. | Equidistribution or Gaussianity of averages does not give a uniform exclusion of off-line zeros. |
 | Deforming \(S_k\mapsto -S_k\) reduces peaks of a selected Dirichlet polynomial. | **NUMERICAL** | Causal only for that finite variable, that grid, those peaks and that partition; not causality on the zeros of an \(L\)-function. |
 | SVM/LDA separation by CAS, \(M_{\rm coh}\), \(R_{\rm comp}\), entropy or ACF. | **NUMERICAL** | Classifies the samples and generators used. Even a perfect separation is not an analytic characterization nor an RH criterion. |
 | \(M_4\) anomaly near \(N\approx10^5\). | **NUMERICAL**, partially **REFUTED** as universal. | Appears in several real and arithmetic families, is absent in the i.i.d. null and in the complex random multiplicative function; also depends on the decomposition. |
 | "The phase or \(\omega\)-class architecture is the root cause of RH." | **CONJECTURAL** | The data only describe truncated polynomials and admit counterexamples among the compared families. |
 | "A root \(\beta+i\gamma\), \(\beta>1/2\), forces \(|D(\gamma;N)|\asymp N^{\beta-1/2}\)." | **CONDITIONAL** with no proof presented; **REFUTED** as an operational DH signature. | No theorem was derived for that truncated observable. In DH the observed slope was compatible with zero up to large scales. |
-| Small \(R_{\rm comp}\) \(\Rightarrow\xi<0\Rightarrow\) no growth \(\Rightarrow\) no off-line zero. | **REFUTED** | RH2 finds that the \(R_{\rm comp}\)-\(\xi\) relation is not universal and that GEV fits change with observable, blocks and selection. |
+| Small \(R_{\rm comp}\) \(\Rightarrow\xi<0\Rightarrow\) no growth \(\Rightarrow\) no off-line zero. | **REFUTED** | RH2018 finds that the \(R_{\rm comp}\)-\(\xi\) relation is not universal and that GEV fits change with observable, blocks and selection. |
 | Uniform decoherence bound for \(D_\zeta\), derived from prime exponential sums. | **CONDITIONAL** | It is the only recognizable form of a bridge to RH, but precisely the uniform bound for composite classes and the step from finite extremes to non-vanishing are missing. |
 | "The sweep regions cover the critical half-strip and there \(\zeta\ne0\)." | **EQUIVALENT-REFORMULATION-OF-RH** and **REFUTED as a proof** | Covering the whole strip and excluding zeros is already equivalent to RH. The manuscript uses that \(\zeta\) stays away from zero and controls \(\zeta'/\zeta\) across possible poles: these are the sought conclusions. |
 
-## RH1 — resonance detector and the actual result
+## RH2017 — resonance detector and the actual result
 
-**Goal and method.** RH1 compares \(\zeta\), Dirichlet characters, a random multiplicative function, DH and DH perturbations via truncated sums
+**Goal and method.** RH2017 compares \(\zeta\), Dirichlet characters, a random multiplicative function, DH and DH perturbations via truncated sums
 \[
 D_F(t;N)=\sum_{n\le N}a_n n^{-1/2-it}.
 \]
@@ -60,9 +60,9 @@ It measures extremes, tails, coherence across scales, prime and composite phases
 - DH was implemented in incompatible ways: periodic character combination, an artificial restriction to squarefree numbers, and reference data from different provenance. The "zero" and \(\kappa\) coordinates also vary. Any comparative conclusion mixing those variants is **REFUTED for lack of object identity**.
 - The periodic variant without the squarefree restriction is the only candidate that passed the internal numerical gate at the four refined points; even so, a small truncated sum is only **NUMERICAL**, not certification of the zeros of the full function. Definition, normalization, coordinates and a convergence proof must be fixed before reuse.
 
-## RH2 — from intuition to a proof chain that did not close
+## RH2018 — from intuition to a proof chain that did not close
 
-**Goal and method.** RH2 attempts to standardize a single engine, validate DH before analysis, and turn three empirical targets into a chain: composite decoherence \(\to\) GEV shape \(\to\) no growth \(\to\) absence of zeros. It adds \(\omega\)-class perturbations, pretentious distance, \(\xi\) fits, regressions, and numerical checks of known theorems.
+**Goal and method.** RH2018 attempts to standardize a single engine, validate DH before analysis, and turn three empirical targets into a chain: composite decoherence \(\to\) GEV shape \(\to\) no growth \(\to\) absence of zeros. It adds \(\omega\)-class perturbations, pretentious distance, \(\xi\) fits, regressions, and numerical checks of known theorems.
 
 **Closed results.**
 
@@ -72,13 +72,13 @@ It measures extremes, tails, coherence across scales, prime and composite phases
 - **NUMERICAL / REFUTED:** pretentious distance, global moments and regression models do not support a generalizable predictor of tail or coherence. Good internal \(R^2\) values fail cross-validation.
 - **PROVED / NUMERICAL:** the engine and precision controls are an operational improvement, and the checks of classical results are sanity controls, not new proofs.
 
-**Dependencies.** RH2 depends on a single validated DH, a fixed definition of \(S_k\), the same peak criterion, and a frozen GEV protocol. Those conditions were not maintained globally: the repository itself retains failed validations, different coordinates, and tasks halted by the precondition.
+**Dependencies.** RH2018 depends on a single validated DH, a fixed definition of \(S_k\), the same peak criterion, and a frozen GEV protocol. Those conditions were not maintained globally: the repository itself retains failed validations, different coordinates, and tasks halted by the precondition.
 
 **Do not repeat.** Do not chain finite-scale correlations as logical implications; do not interpret a penultimate \(\xi\) as an asymptotic tail type; do not use Vinogradov–Korobov or Selberg evidence to substitute for the missing uniform bound; do not accept DH results if the validation gate is not documented for exactly the same function.
 
-## RH3 — \(\omega\) geometry, moments and computational limits
+## RH2019 — \(\omega\) geometry, moments and computational limits
 
-**Goal and method.** RH3 studies \(S_k=\sum_{\omega(n)=k}a_n n^{-1/2-it}\), the canonical ratio \(r\), phase inversion of one class, second and fourth moment and their evolution with \(N\). It compares \(\zeta\), Liouville, Möbius, characters, random functions and DH; it adds a fixed-seed random multiplicative function and compiled acceleration.
+**Goal and method.** RH2019 studies \(S_k=\sum_{\omega(n)=k}a_n n^{-1/2-it}\), the canonical ratio \(r\), phase inversion of one class, second and fourth moment and their evolution with \(N\). It compares \(\zeta\), Liouville, Möbius, characters, random functions and DH; it adds a fixed-seed random multiplicative function and compiled acceleration.
 
 **Closed results.**
 

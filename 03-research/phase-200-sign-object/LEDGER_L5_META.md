@@ -26,9 +26,9 @@ catalog 𝒜 (A1–A9) is almost the same list seen from the premise side.
 | C7 | **Exact identity + Cauchy–Schwarz / Bochner / Schur** (coercivity, Wiener–Hopf, Kreĭn, de Branges, Hessian in c) | W-lin, W-det, W-fam, N_018, CC_001, BB_001 | C–S only gives upper bounds (wrong direction); the identity holds for every comb | PROVED (N_018, CC4) | ≈130 |
 | C8 | **Decomposition in a basis that cancels** (prolates, Galerkin, harmonics, Möbius cells, parity sectors, nodes, kinks) | AUDIT_L_SHARP 1–16, HH/kinks, sawtooth, Z_001 | 33–70 digit cancellation: no piece carries its own sign (restrictions 14, 18, 20, 24, 25, 28) | NO-GO by class (kink, diagonal) PROVED; "non-local cell content" ARGUED | ≈90 |
 | C9 | **Flow / homotopy / induction** (de Bruijn–Newman, heat, flow in T, Morse index, Maslov, Grönwall in c, continuation over combs) | N5, R164_502, BARRIER_W/D2, SPEC_A, D8, PROOF_H | n₋ is monotone and crossings have a single sign; index constancy is exactly what has to be proved; interpolation from integers is NO-GO | PROVED (W1–W3, D2 Thm 1, D8); SPEC_A with identities only OPEN | ≈100 |
-| C10 | **Global object never built** (surface Spec ℤ⊗Spec ℤ, Hodge index, h⁰, Arakelov, F₁, scaling site, condensates, G-F, MW-5) | phases 135/145/149, RH9, backward map d1, front F, INV_B/C, phase 196 | no death by theorem. The object is missing. INV_C Thm 4 rules out measures on log ℚ and MW-3 only falls into three classes | OPEN (missing construction, not impossibility) | ≈180 |
+| C10 | **Global object never built** (surface Spec ℤ⊗Spec ℤ, Hodge index, h⁰, Arakelov, F₁, scaling site, condensates, G-F, MW-5) | phases 135/145/149, RH2025, backward map d1, front F, INV_B/C, phase 196 | no death by theorem. The object is missing. INV_C Thm 4 rules out measures on log ℚ and MW-3 only falls into three classes | OPEN (missing construction, not impossibility) | ≈180 |
 
-Outside these ten classes there remain ≈200 routes of statistics and numerical phenomenology (RH1–RH4, RH6–RH8), refuted or
+Outside these ten classes there remain ≈200 routes of statistics and numerical phenomenology (RH2017–RH2020, RH2022–RH2024), refuted or
 merely NUMERICAL, with no sign mechanism to classify.
 
 Reading of the table: nine of the ten classes have a **class theorem** (PROVED) or an explicit falsifier. The

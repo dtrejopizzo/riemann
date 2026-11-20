@@ -19,7 +19,7 @@ Models (all with their own Gamma parameters, weights and pole set):
          line for a>0 (under RH).  It is the shifted-pair falsifier of
          P122_D_SPECIFICATION section 5.
   dh   : Davenport-Heilbronn.  Functional equation, no Euler product; used
-         QUALITATIVELY only (RH1_RH9_AUDIT retires it as a quantitative
+         QUALITATIVELY only (RH2017_RH9_AUDIT retires it as a quantitative
          control).
 
 Everything is a real symmetric form matrix in the piecewise-constant Galerkin

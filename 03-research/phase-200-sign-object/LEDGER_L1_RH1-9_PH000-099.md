@@ -1,6 +1,6 @@
-# Ledger L1 — insight about the sign, from RH1–RH9 and phases 0–99 (phase 200, stage 1)
+# Ledger L1 — insight about the sign, from RH2017–RH2025 and phases 0–99 (phase 200, stage 1)
 
-Scope: 01-context/RH1–RH9; 03-research/phase-0 … phase-99; maps ROUTES-TRIED-INDEX/01,02,03, NO-GO-LIST.md,
+Scope: 01-context/RH2017–RH2025; 03-research/phase-0 … phase-99; maps ROUTES-TRIED-INDEX/01,02,03, NO-GO-LIST.md,
 THE_BACKWARD_MAP.md. Target throughout: λ_A(T) ≥ 0 for the Weil window form (row D).
 This is an insight ledger, not a route list (routes: ROUTES-TRIED-INDEX).
 
@@ -29,27 +29,27 @@ quantitatively *exponentially* fine in the window length; a coarse (polynomial, 
 
 **F4. Off-line zeros force negativity at second order, with low rank.** For an off-line quartet at displacement δ,
 λ_min ≈ c(σ,J,T₀,m)·δ² < 0 with a rank-one/low-rank prefactor; validated to <0.001%. PROVED/NUMÉRICO
-(01-context/RH7 README Front A; RH6 task32,68). Insight: the sign is *quadratic* in the defect — the positive set is a
+(01-context/RH2023 README Front A; RH2022 task32,68). Insight: the sign is *quadratic* in the defect — the positive set is a
 cone tangent to the true datum, and the falsifying direction is low-rank. Any sign object must be second-order
 (a Hessian-type quantity), not a first-order discriminant (matches phase 186 "W-lin" and phase 197 D1 tangent = {0}).
 
 **F5. Davenport–Heilbronn is the standing falsifier for FE-only mechanisms.** L_DH: same functional equation, no
-Euler product, off-line zero ρ ≈ 0.80852 + 85.6993i (κ ≈ 0.28408 validated). CITED + NUMÉRICO (RH1–RH5; F-01 in
+Euler product, off-line zero ρ ≈ 0.80852 + 85.6993i (κ ≈ 0.28408 validated). CITED + NUMÉRICO (RH2017–RH2021; F-01 in
 index). Insight: whatever produces the sign must use the Euler product (multiplicative structure), not the FE alone.
 
 **F6. Multiplicativity alone does not carry it; *sign organisation* of coefficients does.** Liouville L(s,λ) is fully
 multiplicative yet shows the strongest, N-stable resonance (even/odd-Ω constructive interference); random
-multiplicative f has the heaviest tails. NUMÉRICO (RH1 Disc.5; RH2 Disc.3; F-02). Phase-60 discriminant: multiplicativity
+multiplicative f has the heaviest tails. NUMÉRICO (RH2017 Disc.5; RH2018 Disc.3; F-02). Phase-60 discriminant: multiplicativity
 not separated from smooth non-multiplicative controls; only a fixed-A *relative* discriminant survived. NUMÉRICO
 (phase-60-discriminant). Insight: the relevant datum is not "Euler product yes/no" but how additive and multiplicative
 structure of ℕ interact (semiring principle).
 
 **F7. Zero-only Gram matrices are PSD by construction (blind).** Kernel-of-differences φ((γ_m−γ_n)/W) is PSD iff φ is
-positive-definite (Bochner); naive Hermitian Weil Gram is always PSD. PROVED (RH5 task9,25,54; RH5 Disc.4;
+positive-definite (Bochner); naive Hermitian Weil Gram is always PSD. PROVED (RH2021 task9,25,54; RH2021 Disc.4;
 NO-GO-LIST NG-A8). Insight: the sign object cannot be built from ordinates; it must see the prime side.
 
 **F8. Uniform truncation transfer is not weaker than the target.** sup_X|λ_min(Q_X) − λ_min(Q_∞)| → 0 is as strong as
-the full sign statement. PROVED per README (RH7 Front C; NO-GO-LIST MW-6). Positive prime truncation ("positive
+the full sign statement. PROVED per README (RH2023 Front C; NO-GO-LIST MW-6). Positive prime truncation ("positive
 part minus small tail") FALSIFIED: finite sections negative while the full form is positive (NO-GO-LIST ES-10);
 term-by-term positivity of Λ(n) destroys interprime interference (ES-9). Insight: the sign is *non-monotone in the
 prime cutoff* and lives in interprime cross terms.
@@ -71,7 +71,7 @@ NUMÉRICO (phase-41-build-G2/125-construction-of-the-intersection-form.md). Insi
 from the integer lattice to the continuous flow — the integer structure is where the sign is "remembered".
 
 **F12. Operator obstruction to sl₂/Lefschetz on the zero spectrum.** Bounded L with [T,L] = cL forces arithmetic
-progressions in Spec T, incompatible with ℚ-independence of ordinates. PROVED (RH9 task43). Insight: a raising
+progressions in Spec T, incompatible with ℚ-independence of ordinates. PROVED (RH2025 task43). Insight: a raising
 operator cannot act on the zero spectrum; any Lefschetz structure must act on the *prime/integer* side, not the zeros.
 
 **F13. Per-place reflection positivity fails; OS at p computed.** G_p(0) > 0, G_p(π/log p) < 0 for p = 2..7. PROVED
@@ -85,7 +85,7 @@ Every route in this slice worked with one of two degraded objects: (a) a *scalar
 place-additive positivity (Bochner, PF, TP, CND, Bessel, real stability, heat-flow monotonicity) to deliver the sign.
 Both degradations erase precisely what F1/F8/F9 show carries the sign: the interference between different primes'
 negative plateaus and the archimedean Lévy symbol, at an exponentially fine (prolate) scale, organised by how additive
-shifts by log n interact with multiplicative composition. Detectors that had power (RH1–RH8) were finite-N
+shifts by log n interact with multiplicative composition. Detectors that had power (RH2017–RH2024) were finite-N
 phenomenology with no proof path; tools that had a proof path were sign-blind because they were PSD-by-construction,
 place-additive, or produced the wrong orientation (lower bounds). In short: the routes looked at *which* primes are
 present and *how big* they are, never at the *signed arithmetic coupling* m ≈ kn between them.
@@ -124,11 +124,11 @@ Now different: the semiring principle says the sign comes from (ℕ,+,·) at m �
 intersection numbers *are* integral and the toy signature is right, is the natural carrier. Concrete: restrict the
 tropical square to integer correspondences {(m,n): m = kn ± j} and compute signature at T ≤ 1.
 
-**S6. Unbounded raising operator (RH9 task75, OPEN).** F12 kills bounded L on zeros; the unbounded case was never
+**S6. Unbounded raising operator (RH2025 task75, OPEN).** F12 kills bounded L on zeros; the unbounded case was never
 decided, and F12 suggests putting L on the prime side. Concrete: L = multiplication by log n on ℓ²(ℕ, Λ-weighted),
 check [A_λ, L] against cL modulo the archimedean commutator.
 
-**S7. Sign-organisation of ω/Ω-classes (RH1–RH4).** Constructive even/odd-Ω interference for Liouville; DH resonance
+**S7. Sign-organisation of ω/Ω-classes (RH2017–RH2020).** Constructive even/odd-Ω interference for Liouville; DH resonance
 composite-driven. Dismissed as numerical-only. Now different: phase 198 split D into even/odd sectors with D_even
 binding; the Ω-parity of n is a natural arithmetic analogue of the parity sector. Low priority (numerical lineage).
 

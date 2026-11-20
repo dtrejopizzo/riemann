@@ -369,7 +369,7 @@ Theorem 3ter.10) ✓, so the would-be Frobenius satisfies
 relation ✓ — and this is a **pre-comparison** failure, as P122 §5 demands.  The
 bracketed note that the location of `Ξ_a`'s zeros is *not used* is exactly
 right and is the rule-compliant way to handle it.  Theorem 7.4 (DH) is
-structural and correctly scoped (`RH1_RH9_AUDIT` retires DH quantitatively;
+structural and correctly scoped (`RH2017_RH9_AUDIT` retires DH quantitatively;
 no DH computation is reported).  Proposition 7.5(b),(c) are honestly declared
 unanswered.  Rule 7.6 is the right gate.
 

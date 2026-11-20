@@ -21,7 +21,7 @@ comb; against ζ_K (same Γ) the difference is 10⁻⁶. New constraint C-E: any
 
 Grep on `05-meta-and-planning/ROUTES-TRIED-INDEX/` ("Epstein", "Davenport", "Heilbronn", "DH", "class 2", "h=2"):
 
-- **F-DH / F-01** (`01_PROGRAMS_RH1-RH5.md:59`, `04_*:78`): the corpus's DH falsifier is the Davenport–Heilbronn
+- **F-DH / F-01** (`01_PROGRAMS_RH1-RH2021.md:59`, `04_*:78`): the corpus's DH falsifier is the Davenport–Heilbronn
   function **mod 5**, linear combination f = ½(1−iκ)L(s,χ) + ½(1+iκ)L(s,χ̄) with χ a complex character mod 5,
   κ ≈ 0.28408, zero ρ ≈ 0.80852 + 85.6993i. **It is not Epstein**: it is a linear form of L(s,χ) mod 5, conductor 5, Γ
   factor Γ_ℝ(s+1) (degree 1). Epstein x²+5y² has degree 2 (Γ(s)), conductor 20, and a pole. These are two distinct

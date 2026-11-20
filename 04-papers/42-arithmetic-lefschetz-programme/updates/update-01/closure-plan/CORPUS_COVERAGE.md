@@ -17,7 +17,7 @@ There are 123 phase directories: the numbering reaches 123, labels 1 and 2 are m
 
 | Sector | Proposed use | Condition |
 |---|---|---|
-| RH1–RH9 | Empirical controls, omega history and falsifiers | Audit concrete data only if used in an argument. |
+| RH2017–RH2025 | Empirical controls, omega history and falsifiers | Audit concrete data only if used in an argument. |
 | Phases 0–28 | Detectors, signs, truncation and inertia | Verify hypotheses; do not transfer auxiliary positivity. |
 | Phases 29–61 | CCM, correspondences, Hodge, recurrence and barriers | Do not reopen a refuted class without changing a relevant hypothesis. |
 | Phases 62–76 | Index, Feshbach and Pick | Reuse identities; do not make LP+IDENT an extra obligation of A–D. |

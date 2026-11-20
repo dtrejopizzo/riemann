@@ -125,7 +125,7 @@ primes.**
 - (a) Gelfand–Levitan: the spectral measure determines the potential. The GL equation has a positive solution ⟺ the
   measure is positive (CITED). It is a potential ↔ spectral-data duality that is not Fourier, so it was a candidate
   for S3.
-- (b) Index: "Inverse spectral / Hilbert–Pólya / Jacobi / Mercer (RH5, L44–L47): closed." R6-01, inverse Jacobi,
+- (b) Index: "Inverse spectral / Hilbert–Pólya / Jacobi / Mercer (RH2021, L44–L47): closed." R6-01, inverse Jacobi,
   DEAD. L89 Faddeev–Pavlov / Lax–Phillips, NO-GO ARGUED.
 - (c) Corpus: R186_000/R186_045 (toolbox), "{W_T}_T resolved (Gelfand–Levitan–Kreĭn: H is obtained from the
   resolvents at the vertex)… Missing: TB-1, global existence for the non-linear Gelfand–Levitan equation with

@@ -1566,8 +1566,8 @@ carrier (1.1):
       no primitive sector to restrict to.
 
 *Proof.*  (i) and (ii) are the defining properties of the model, as recorded
-in `RH1_RH9_AUDIT` and implemented in `p124_lab.model_dh`; (iii) is (i)+(ii)
-against (1.5)–(1.7).  ∎  `PROVED`.  `RH1_RH9_AUDIT` retires DH as a
+in `RH2017_RH9_AUDIT` and implemented in `p124_lab.model_dh`; (iii) is (i)+(ii)
+against (1.5)–(1.7).  ∎  `PROVED`.  `RH2017_RH9_AUDIT` retires DH as a
 **quantitative** control; it is used here qualitatively only, and no DH
 computation is reported.
 

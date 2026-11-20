@@ -1,6 +1,6 @@
 # Phase 200 — The sign object
 
-re-analyze the ENTIRE program (RH1–RH9, phases 0–199, indices, maps, Paper 47) to extract the
+re-analyze the ENTIRE program (RH2017–RH2025, phases 0–199, indices, maps, Paper 47) to extract the
 positive insights about the sign, and with that map invent the "sign object": a new mathematical piece, that does not use
 any of the already exhausted tools (Chebyshev, Fourier, Euler–Poisson, Kreĭn–von Neumann, Schur, Möbius on lines,
 passivity, …), and that is the missing plank for Lemma L′♯ / row D.
@@ -10,7 +10,7 @@ building; every proposal must be falsifiable against Mori's certified extremal (
 falsifiers.
 
 ## Stage 1 — Insight ledgers (one verification per segment)
-- L1: RH1–RH9 (01-context) + phases 0–99
+- L1: RH2017–RH2025 (01-context) + phases 0–99
 - L2: phases 100–162
 - L3: phases 163–193
 - L4: phases 194–199 + Paper 47

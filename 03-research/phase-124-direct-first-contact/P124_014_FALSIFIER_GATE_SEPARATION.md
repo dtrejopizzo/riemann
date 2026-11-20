@@ -149,7 +149,7 @@ reason -- the local weights of `Xi_a` are `p^{-1/2\pm a}` rather than
 Euler product.
 
 Davenport--Heilbronn was **not** run.  It has no poles, hence no Tate block
-and no Gate R to test, and `RH1_RH9_AUDIT` retires it as a quantitative
+and no Gate R to test, and `RH2017_RH9_AUDIT` retires it as a quantitative
 control; it remains a qualitative contrast only.
 
 ## 4. What this changes

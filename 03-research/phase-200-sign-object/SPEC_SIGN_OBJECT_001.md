@@ -23,7 +23,7 @@ one line.)
 
 ### A.1 Cross table
 
-| Feature required of the sign object | L1 (RH1–9, 0–99) | L2 (100–162) | L3 (163–193) | L4 (194–199, P47) | L5 (meta) | Verdict |
+| Feature required of the sign object | L1 (RH2017–9, 0–99) | L2 (100–162) | L3 (163–193) | L4 (194–199, P47) | L5 (meta) | Verdict |
 |---|---|---|---|---|---|---|
 | **Second order** (Hessian, not a first-order discriminant) | F4: λ_min ≈ cδ², low rank | P16: only radical equations | F3: every first-order discriminant is a functional of h* | I11: Gram (g,Ψ̌) = W_T·[[1,−1],[−1,1]] | C7 (identity + C–S, wrong direction) | **unanimous** |
 | **Not factorized** (not place by place, not a sum of local signs) | F1, F9, F13: G_p indefinite; NG-E1 cross-place never built | P13 (meta-136: polar/Frobenius) | F5 separable only in Euler vectors; F8 irrelevant sites | I12 channel by channel PR, lossless loop | C5 dead by theorem | **unanimous** |

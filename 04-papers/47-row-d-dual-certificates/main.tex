@@ -2702,7 +2702,7 @@ all $2048$ continuous Schur rows, the mask bounds and both correction tails.
 All $17$ checks were independently reproduced with python-flint~0.9.0 at $192$ bits.
 Smaller radii follow by extension by zero. The endpoint $2.8022$ belongs
 to the quantitative certificate \eqref{eq:power-window}. The all-window
-sign under half-plane nonvanishing is proved in the conclusion.
+sign using \eqref{eq:dirichlet-input} is proved in the conclusion.
 
 \section{Reduction to piecewise exponentials}\label{sec:coer}
 
@@ -3274,24 +3274,1309 @@ strictly negative. Choose $T$ with $\supp F\subset I_T$. Both Tate moments
 vanish, hence $\mathfrak a_T(F)=W_T(F)<0$. Normalizing $F$ contradicts (3).
 \end{proof}
 
-\begin{corollary}[specialization from Dirichlet characters]
-Assume that for every modulus $q\ge1$ and Dirichlet character $\chi$
-modulo $q$, $L(s,\chi)\ne0$ whenever $\Re s>1/2$, with the pole of a
-principal character excluded. Then for every $T>0$,
-$W_T\ge0$ on $\mathcal D_T$ and $I_\infty(\Gamma_F,\Gamma_F)\le0$
-on smooth primitive radial tests.
-\end{corollary}
+Consider the following condition on $\zeta$:
+\begin{equation}\label{eq:dirichlet-input}
+ \zeta(s)\ne0\qquad (\Re s>\tfrac12,\ s\ne1).
+\end{equation}
+
+There is a one-sided arithmetic estimate sufficient for this condition.
+With $\gamma_E$ Euler's constant, put
+\[
+ G(x)=\sum_{n\le x}\Lambda(n)(x/n-1)-x\log x+(1+\gamma_E)x,
+ \qquad x\ge1.
+\]
+Suppose that for every $1/2<\theta<1$ there exist $C_\theta,X_\theta$
+such that $G(x)\le C_\theta x^\theta$ for $x\ge X_\theta$.
+Then \eqref{eq:dirichlet-input} follows. We give the argument because
+the direction of this bound matters.
+
+Fix $\theta$ and increase $C=C_\theta$ so that $H(x)=Cx^\theta-G(x)$
+is nonnegative on $[1,\infty)$. This is possible by continuity on
+compact intervals. For $\Re s>1$ termwise integration gives
+\[
+ M(s):=\int_1^\infty H(x)x^{-s-1}\,dx
+ =\frac C{s-\theta}
+ +\frac{\zeta'(s)}{s(s-1)\zeta(s)}
+ +\frac1{(s-1)^2}-\frac{1+\gamma_E}{s-1}.
+\]
+Indeed the integral of $(x/n-1)x^{-s-1}$ from $n$ to infinity is
+$n^{-s}/[s(s-1)]$, and the Euler product gives absolute convergence
+there. At $s=1$ both principal parts cancel by the Laurent expansion
+of $\zeta$. The right side is regular at every real $s>\theta$:
+for $0<s<1$ the alternating zeta series is positive by grouping
+successive pairs, and equals $(1-2^{1-s})\zeta(s)$.
+
+For completeness, if the integral had real abscissa of convergence
+$b>\theta$, its continuation would be regular on a disk of radius
+$r>0$ about $b$. Choose $0<d<r/4$. The Taylor series at $b+d$
+converges at $b-d$. Its terms there are the integrals of
+$H(x)x^{-b-d-1}(2d\log x)^k/k!$, by differentiation inside the
+convergence half-plane. Monotone convergence would then give a finite
+integral at $b-d$, a contradiction. Thus $M$ is holomorphic on
+$\Re s>\theta$. By meromorphic continuation the displayed identity
+holds there. A zero of $\zeta$ away from $1$ would give a pole of
+$\zeta'/\zeta$ of residue its multiplicity, impossible in this
+half-plane. Taking $\theta$ arbitrarily close to $1/2$ proves the claim.
+The outstanding arithmetic step in this argument is the upper estimate
+for $G(x)$ at all sufficiently large $x$ for each $\theta$.
+
+
+Writing $\psi(u)=\sum_{n\le u}\Lambda(n)$ makes the cancellation
+required of the primes precise. For $1\le x<y$,
+\[
+ \frac{G(y)}y-\frac{G(x)}x=\int_x^y\frac{\psi(u)-u}{u^2}\,du .
+\]
+Indeed differentiation gives the integrand between consecutive
+integers, and each new summand starts at zero. The classical prime
+number theorem with remainder $\psi(u)-u=O(u/\log^2 u)$ implies
+that $G(y)/y$ has a finite limit $L$. Its value follows from the
+regularity at $1$ of the Mellin transform of $G$ computed above:
+$h\int_1^\infty (G(y)/y)y^{-1-h}\,dy\to0$ as $h\downarrow0$.
+This limit equals $L$, since the weight has mass one and its mass on
+each compact interval tends to zero. Thus the desired upper bound
+is equivalent to
+\[
+ \int_x^\infty\frac{\psi(u)-u}{u^2}\,du\ge -C_\theta x^{\theta-1}.
+\]
+It suffices to establish this lower bound with upper limit $2x$ for
+all sufficiently large $x$: summing over $[2^jx,2^{j+1}x]$ costs
+the factor $(1-2^{\theta-1})^{-1}$. The prime number theorem used
+to identify the integration constant gives only a logarithmic saving.
+
+In fact the analytic implication also holds with a weaker arithmetic
+hypothesis. Fix $1/2<\theta<1$. Suppose there are arbitrarily large $Y$
+such that
+\[
+ G(x)\le C_\theta x^\theta\qquad(Y\le x\le Y^{3/2})
+\]
+with the same $C_\theta$ on all these intervals. Then $\zeta$ has no
+zero in $\Re s>\theta$.
+
+To see this, write $g(u)=G(e^u)$ and let $P(s)$ be its Laplace
+transform. The preceding Mellin calculation gives its meromorphic
+continuation to $\Re s>0$. Its poles there are precisely the nontrivial
+zeros of $\zeta$, all simple as poles of the logarithmic derivative,
+including at a multiple zero. It has no real pole there. The elementary
+bound $\Lambda(n)\le\log n$ gives $|g(u)|\ll e^{2u}$ for $u\ge0$.
+
+Put $U=\log Y$, let $\sigma>2$ be fixed, and take
+$k=\lfloor5\sigma U/4\rfloor$. Set $A_k(z)=(-1)^kP^{(k)}(z)/k!$.
+On $[U,3U/2]$ write $g=g_+-g_-$ with $g_\pm\ge0$. The triangle
+inequality for the oscillatory integral, added to the real integral,
+cancels the upper estimate contributed by $g_-$. Thus uniformly in $t$,
+\[
+ |A_k(\sigma+it)|+\Re A_k(\sigma)
+ \le {2\max(C_\theta,0)\over(\sigma-\theta)^{k+1}}
+ +O\!\left(\int_{u\notin[U,3U/2],\ u\ge0}
+          {u^k e^{-(\sigma-2)u}\over k!}\,du\right).
+\]
+Here the first term follows by extending the integral of the positive
+majorant to the whole half-line. To bound the tails put $a=\sigma-2$.
+After multiplication by $a^{k+1}$ the tail integral is the probability
+that a gamma random variable $V$ of shape $k+1$ and rate $a$ lies
+outside the indicated interval. For all sufficiently large $\sigma$
+and then $U$, one has $aU/(k+1)<0.9$ and $3aU/(2(k+1))>1.1$.
+For $v=0.9,1.1$ the corresponding lower or upper tail of $aV/(k+1)$
+is at most $(v e^{1-v})^{k+1}$: apply Markov's inequality to
+$\exp((1-1/v)aV)$, whose expectation is $v^{k+1}$.
+Both bases are strictly below one. Hence $\sigma$ can be fixed so large
+that both bases times $(\sigma-\theta)/a$ are below one. Along the
+resulting unbounded sequence of $k$ the entire right side is
+$O((\sigma-\theta)^{-k})$.
+
+Suppose now there were a pole $\rho$ with $\Re\rho>\theta$. Write
+$D$ for the distance from $\sigma$ to the nearest pole in $\Re s>0$,
+truncated at $\sigma-\theta$. There is a centre $z=\sigma+it$ with a
+unique nearest pole at distance $d<D$. Indeed, if $D=\sigma-\theta$,
+take first $t=\Im\rho$; otherwise move the real centre slightly
+toward the ordinate of a nearest pole, which is nonreal. In both cases
+the strict inequality persists on an open interval of ordinates.
+Ties can be avoided there: two distinct poles to the left of the
+vertical line are equidistant at at most one ordinate, and there are
+only countably many pairs. Choose $r$ strictly between $d$ and $D$
+so the closed disk about $z$ of radius $r$ contains only that pole.
+Subtracting its simple principal part and applying Cauchy's estimate
+gives $|A_k(z)|\ge c d^{-k}-O(r^{-k})$ with $c>0$.
+The real centre is regular throughout its closed disk of radius $r$,
+so $|A_k(\sigma)|=O(r^{-k})$. These estimates contradict the window
+bound as $k\to\infty$, since $d<r<\sigma-\theta$.
+This proves the implication. Its arithmetic hypothesis still requires
+a construction of the indicated intervals for every $\theta>1/2$
+sufficiently close to $1/2$.
+
+
+For the application to $\zeta$, the passage from a character family
+to the scalar function on these intervals is exact. Indeed, for a
+primitive character $\chi$, form the set $S_\chi$ of primitive
+characters inducing the powers $\chi^k$, $k\in\mathbb Z$. The level
+sum consists of $G(x)$ plus a weighted sum over
+$S_\chi\setminus\{\mathbf 1\}$. For the character of modulus one,
+every power is trivial and its conductor is one, so the latter set is
+empty. Thus an upper bound for this level sum on a window is already
+an upper bound for $G$ on the entire same window, with the same
+constant and exponent. The remaining requirement is the existence of
+arbitrarily large such windows with uniform exponents.
+
+For the trivial Dirichlet character the auxiliary fields in one
+cyclotomic construction of these intervals admit an elementary
+description. Let $q\equiv3\pmod8$ and $d\equiv7\pmod{16}$ be primes,
+$e\ge0$, and $m=2^{e+2}$. In the cyclotomic field of conductor $mqd$,
+consider the subgroup of units $a$ satisfying
+\[
+ a\equiv\pm1\pmod m,\qquad
+ \left(\frac{a}{q}\right)=\left(\frac{a}{d}\right)=1.
+\]
+Its fixed field is
+\[
+ E=\mathbb Q(\zeta_m+\zeta_m^{-1},\sqrt{-q},\sqrt{-d}),
+ \qquad [E:\mathbb Q]=2^{e+2}.
+\]
+Indeed the Chinese remainder theorem splits the unit group into three
+factors. The first subgroup fixes the maximal real subfield of
+$\mathbb Q(\zeta_m)$. For $p=q,d$ the quadratic Gauss sum
+$\sum_{a\bmod p}(a/p)\zeta_p^a$ transforms by the Legendre character
+and its square is $-p$, since $p\equiv3\pmod4$. Thus the stabilizer of
+all three generators is precisely the displayed subgroup. Its index is
+$(\varphi(m)/2)\cdot2\cdot2=2^{e+2}$. Passing to any cyclotomic
+conductor divisible by $mqd$ takes the inverse image of the same
+subgroup and leaves its fixed field unchanged. In particular, taking
+$e=\lceil(2+8\varepsilon)\log_2 x\rceil$ for $x\ge1$ gives
+$4x^{2+8\varepsilon}\le [E:\mathbb Q]<8x^{2+8\varepsilon}$.
+This determines the fields and their degrees; a uniform arithmetic
+estimate on these varying fields is still needed in the construction.
+
+The parameters controlling the twists can be constructed for a
+matrix on a free $\mathbb Z_\ell$-module. Let $S$ have size $r$ and
+let $u\in\mathbb Z_\ell^\times$ satisfy $v_\ell(u-1)=c\ge1$,
+with $c\ge2$ for $\ell=2$. Fix $j\ge0$ and put $v=u^{\ell^j}$.
+For $a,b\in\mathbb Z_\ell$, $a\ne b$, one has
+\[
+ |v^a-v^b|_\ell=\ell^{-(c+j)}|a-b|_\ell .
+\]
+For integral exponents this follows by binomial expansion: raising
+a principal unit to a power prime to $\ell$ preserves the valuation
+of its difference from one, and raising it to $\ell$ increases that
+valuation by one under the stated condition on $c$. Extension by
+continuity gives the displayed formula and defines the powers on
+$\mathbb Z_\ell$.
+
+For each eigenvalue $z$ of $S$ in a splitting field, counted with
+multiplicity, choose $s_z\in\mathbb Z_\ell$ minimizing
+$|v^s z-1|_\ell$; compactness ensures existence. The eigenvalues
+are integral since the characteristic polynomial is monic. If $z$
+is a unit, the ultrametric inequality and minimality imply
+$|v^a-v^{s_z}|_\ell\le |v^a z-1|_\ell$. If $|z|_\ell<1$,
+the right side is one and the inequality still holds. Multiplying
+over the eigenvalues gives
+\[
+ v_\ell(\det(v^a S-I))\le r(c+j)+\sum_z v_\ell(a-s_z),
+\]
+with $v_\ell(0)=+\infty$. Thus when every distance is at least
+$\ell^{-B}$ the determinant is nonzero and its valuation is at most
+$r(c+j+B)$. By Smith normal form this bounds the length of the
+cokernel on the free module. This also gives a single list of centres for all layers of a
+finitely generated module, including its torsion. Let $M$ have at most
+$R\ge1$ generators and let $g$ act unipotently on $M/\ell M$.
+Choose generators lifting a basis of $M/\ell M$ and write
+$\pi:\mathbb Z_\ell^r\twoheadrightarrow M$, $r\le R$, for the
+resulting presentation (Nakayama's lemma). Lift the images of the
+generators under $g$ to obtain a matrix $A$ with $\pi A=g\pi$.
+Its reduction modulo $\ell$ is unipotent since $\pi$ induces an
+isomorphism modulo $\ell$. Put $j_0=\lfloor\log_\ell R\rfloor+3$.
+Apply the preceding determinant estimate just once, with $j=j_0$ and
+$S=A^{\ell^{j_0}}$. Write $H=u^a A$ for an integral twist $a\ge1$.
+For $m\le j_0$, $H^{\ell^m}-I$ divides $H^{\ell^{j_0}}-I$ in
+the polynomial ring evaluated at $H$, so the earlier cokernel is a
+quotient of the later one.
+
+For $m\ge j_0$ put $U=H^{\ell^m}$. Then $U\equiv I\pmod{\ell^2}$:
+modulo $\ell$, $(H-I)^r=0$, so $H^{\ell^k}\equiv I\pmod\ell$
+once $\ell^k\ge r$, and one further $\ell$th power gives the stated
+congruence. Consequently $I+U+\cdots+U^{\ell-1}$ is $\ell$ times
+a matrix congruent to $I$ modulo $\ell$. The determinant valuation
+of $U^\ell-I$ therefore increases by exactly $r$ whenever
+$\det(U-I)\ne0$. The presentation induces a surjection from each
+free cokernel onto the corresponding cokernel on $M$. It follows
+that outside the balls of radius $\ell^{-B}$ around the same $r$
+centres the length on $M$ at every layer $m$ is at most
+$r(\max(m,j_0)+c+B)$. The zero module satisfies this directly.
+Identification of these module cokernels with arithmetic groups is
+a separate descent assertion.
+
+For the upper estimate the direction of the descent map matters:
+an injection into a group of bounded length suffices. Here is the
+injectivity argument for a nonzero cyclotomic twist. Let $P$ be the
+Galois group at a finite layer, $H$ the kernel of its cyclotomic
+character, and suppose $P/H$ is topologically generated by $\gamma$
+whose character value $u$ has infinite order. Give
+$D=\mathbb Q_\ell/\mathbb Z_\ell$ the action through the character
+to the power $-e$, where $e\ne0$. Restriction of continuous cocycles
+induces an injection
+\[
+ H^1(P,D)\longrightarrow \operatorname{Hom}_{\rm cont}(H,D).
+\]
+Indeed coboundaries restrict to zero since $H$ acts trivially. A
+cocycle restricting to zero factors through $P/H$. Multiplication
+by $u^{-e}-1$ is surjective on $D$, since this scalar is a nonzero
+$\ell$-adic integer. Subtracting a coboundary therefore kills its
+value on $\gamma$, and hence on all integral powers of $\gamma$.
+Continuity and density kill the cocycle everywhere. This injection
+restricts to the subgroup satisfying the local conditions. Let $X$ be the maximal abelian pro-$\ell$ quotient of $H$ on
+which all inertia subgroups intersected with $H$, and all
+decomposition subgroups above $\ell$ intersected with $H$, vanish.
+For a class locally trivial at the primes above $\ell$ and
+unramified elsewhere, its restriction $f$ factors through $X$:
+a local coboundary evaluates to zero on $H$, where the coefficient
+action is trivial. Continuity makes the factorization valid through
+the closed subgroup generated by the local relations. Write $A$ for
+conjugation by a lift of the generator on $X$. The cocycle identity
+applied to $gh=(ghg^{-1})g$ gives
+$f(ghg^{-1})=\chi(g)^{-e}f(h)$ for $h\in H$, where $\chi$ denotes
+the cyclotomic character. Thus $f$ kills $(u^e A-I)X$. At the layer
+generated in the cyclotomic quotient by $\gamma^{\ell^m}$ the
+same identity gives the operator $(u^e A)^{\ell^m}-I$, using the same quotient $X$. Indeed, in a common algebraic
+closure the subgroup $P_m$ of the layer contains $H$, so the kernel
+of the restricted cyclotomic character is still $H$. For any
+prolongation of a finite place the decomposition subgroup in $P_m$
+is the intersection of $P_m$ with its stabilizer in $P$; inertia
+is obtained by imposing trivial action on the residue field.
+Intersecting either subgroup with $H$ thus gives the original
+intersection. Taking all prolongations, with the same residue
+characteristic condition above $\ell$, gives identical local relations.
+For a finite cokernel its character group into
+$\mathbb Q_\ell/\mathbb Z_\ell$ has the same length, by decomposition
+into cyclic summands. Hence the injection suffices for the upper
+estimate once the uniform generator bound for $X$ is established.
+
+One source of exceptional twists is proximity to a finite list
+of $\ell$-adic parameters. Suppose a tower estimate applies to a
+twist $j$ whenever $|j-s_i|_\ell\ge\ell^{-B}$ for each of $r$
+parameters in a normed extension of $\mathbb Q_\ell$, with
+$|\ell|_\ell=\ell^{-1}$. For an integer cutoff $Z\ge1$ take
+$B=\lfloor\log_\ell Z\rfloor$. Each open ball of radius $\ell^{-B}$
+contains at most one integer in $[1,Z]$. Indeed two distinct such
+integers would have difference divisible by $\ell^{B+1}$, by the
+ultrametric inequality, while their ordinary distance is less than
+$Z<\ell^{B+1}$. Hence at most $r$ twists must be removed, regardless
+of the positions of the parameters or the cutoff. In applying this
+observation to varying fields, it is the number of parameters in the
+tower estimate that must be bounded uniformly.
+
+A finite exceptional set can be avoided on a whole square window
+with explicit dependence on its cardinality. Suppose $0<\eta\le A$,
+$X>1$, and $S$ is a set of at most $R$ exceptional twist indices.
+Put $D=2A/\eta$ and $Y_i=X^{1/(2D^i)}$ for $0\le i\le R$.
+For the window $[Y_i,Y_i^2]$ all the indices that could lie in
+$(x^\eta,x^A]$ at some point of the window belong to
+$(Y_i^\eta,Y_i^{2A}]$. These last intervals are pairwise disjoint:
+the upper endpoint for $i+1$ equals the excluded lower endpoint for
+$i$. At least one misses $S$. Its left endpoint $Y=Y_i$ satisfies
+\[
+ X^{1/(2D^R)}\le Y,\qquad Y^2\le X,\qquad
+ S\cap(x^\eta,x^A]=\varnothing\quad(Y\le x\le Y^2).
+\]
+Several arithmetic estimates can use the same window by taking the
+union of their exceptional sets before choosing $i$. Their sets may
+vary with $X$ and with the auxiliary primes; a bound on the cardinality
+of the union independent of these choices keeps $2D^R$ fixed.
+Applying this argument requires proving that outside the excluded
+indices the arithmetic estimates hold, as well as bounding their number.
+
+For the trivial character the number of primes above $q,d$ in
+$\mathbb Q(\mu_{2^\infty})$ is uniformly bounded. In fact it is
+exactly two above $q$ and four above $d$. At conductor $2^n$,
+$n\ge4$, an odd prime $p$ has residue degree
+$\operatorname{ord}_{2^n}(p)$ since Frobenius raises roots of
+unity to the $p$th power. Put $b=v_2(p+1)$, equal to $2$ for
+$q$ and $3$ for $d$. As $v_2(p-1)=1$, successive squaring gives
+$v_2(p^{2^k}-1)=b+k$ for $k\ge1$: after the first square the
+factor $p^{2^k}+1$ has valuation one. The order is therefore
+$2^{n-b}$, and its index in the unit group is $2^{b-1}$.
+The prime counts stabilize, giving the same counts in the union.
+Thus allowing ramification at these two rational primes introduces
+only six places in this tower, independently of their sizes.
+
+Suppose the space of everywhere unramified quadratic characters
+of this fixed infinite field has dimension at most $g$ over
+$\mathbb F_2$. Allowing ramification above $q,d$ increases the
+dimension by at most six: restriction to the six inertia groups
+has unramified kernel, and each restriction contributes at most
+one dimension since wild inertia has odd residue characteristic
+and the tame inertia has procyclic pro-$2$ quotient.
+
+Adjoining each of $\sqrt{-q},\sqrt{-d}$ at most doubles this
+new dimension bound. Indeed take the maximal pro-$2$ Galois group
+$P$ unramified outside these allowed places. Each quadratic step is
+unramified outside them (the quadratic discriminants are $-q,-d$).
+The maximal such extension upstairs lies in the same tower: the
+normal closure downstairs of a finite Galois $2$-extension upstairs
+has $2$-power degree, since over the quadratic field it is a compositum
+of two conjugate $2$-extensions. Unramifiedness is preserved in the
+compositum. If $\dim\operatorname{Hom}_{\rm cont}(P,\mathbb F_2)=h$,
+then $P$ has $h$ topological generators: lifts of a basis modulo the
+closed subgroup of squares and commutators generate, since every
+proper closed subgroup is contained in an open subgroup of index two.
+For an open subgroup of index two choose one generator outside it,
+and multiply the other generators outside it by its inverse.
+Rewriting words using the two coset representatives then gives at
+most $1+2(h-1)$ generators upstairs (the square of that generator,
+the remaining generators and their conjugates). A trivial field step
+preserves the bound. After both steps the dimension is at most
+$4(g+6)$, uniformly in $q,d$. Imposing extra local vanishing can
+only reduce it. This calculation requires a finite $g$ for the fixed
+base field.
+
+The passage from square windows to the intervals used in the pole
+argument allows a fixed normalization of the degree. Fix $c\ge1$, put
+$h=2+8\varepsilon$ and $k=c^{1/h}$. Suppose the arithmetic bounds
+hold throughout $[W,W^2]$ for the dyadic exponents $e(u)$ with
+$u^h\le2^{e(u)}\le2u^h$, up to twist $\lfloor u^{401}\rfloor$.
+Set $Y=kW$. Once $W\ge\max(k^3,k^{400})$, each
+$x\in[Y,Y^{3/2}]$ and $u=x/k$ both belong to $[W,W^2]$.
+Indeed $(kW)^{3/2}\le W^2$ and $W\le u\le x$. Then
+\[
+ x^h\le c\,2^{e(u)}\le2x^h,\qquad
+ x^{400}=k^{400}u^{400}\le u^{401}.
+\]
+Thus the same field at $u$ supplies the required degree at $x$,
+and any bound on a sum of nonnegative lengths up to the original
+cutoff applies up to $\lfloor x^{400}\rfloor$. Its allowed upper
+bound $\exp(u^\varepsilon/2)$ can be enlarged to
+$\exp(x^\varepsilon/2)$. If $W\ge X^{1/J}$ for arbitrarily large
+$X$ with fixed $J\ge1$, then $Y$ is arbitrarily large as well.
+The arithmetic input here is uniformity on the original square
+window for a single pair of auxiliary primes.
+
+The elementary size comparison in that estimate can be made uniform
+over the auxiliary primes. Fix $\varepsilon>0$. Let $2\le Z\le x$ and
+suppose
+\[
+ \log q\le Z^{\varepsilon/5},\qquad
+ \log d\le Z^{\varepsilon/5}(\log Z)^2 .
+\]
+Write $N=mqd$ and $t=\lfloor x^{401}\rfloor$. For each fixed $A,B\ge0$
+and all sufficiently large $x$, uniformly over these choices,
+\[
+ (Nt)^A+B\exp(x^{4\varepsilon/5})
+       \le \exp(x^\varepsilon/2).
+\]
+Indeed $m<8x^{2+8\varepsilon}$, whence
+$\log(Nt)\le\log8+(403+8\varepsilon)\log x+
+x^{\varepsilon/5}(1+(\log x)^2)=o(x^\varepsilon)$.
+Also $\log(1+B)+x^{4\varepsilon/5}=o(x^\varepsilon)$.
+Eventually each summand is at most $\exp(x^\varepsilon/4)$,
+which gives the asserted inequality. Thus a polynomial estimate of
+this shape for the weighted sum of cohomological lengths would give
+the requisite numerical bound. Its uniformity in the primes and
+the finiteness of the lengths are separate arithmetic assertions.
+
+There is a further simplification in separating the odd primes in
+the cohomological sum. For the trivial character the auxiliary prime
+$p_*$, the least prime at least $7$ congruent to $3$ modulo $4$ and
+coprime to the conductor, is $7$. The auxiliary quadratic field is
+$\mathbb Q(\sqrt{-7})$ and has class number one: its discriminant is
+$-7$, and Minkowski's ideal bound $(2/\pi)\sqrt7<2$ gives an integral
+ideal of norm one in each class. The second auxiliary prime is the
+least prime coprime to $2p_*$ and congruent to one modulo the odd part
+of the character order. That order is one, so this prime is $3$.
+Consequently the exceptional set in the odd-prime count, defined by
+adjoining $3$ to the odd prime divisors of the product of the character
+order, conductor, $p_*$, class number and second auxiliary prime,
+is exactly $\{3,7\}$. Bounds proved away from this set therefore
+require two exceptional odd-prime contributions; the prime $2$ is
+treated separately.
+
+The same field description removes one branch of the character
+count altogether. Write $j$ for the twist index, $1\le j<t$, and
+suppose $q,d>2t+1$. Every auxiliary character $\eta$ factors through
+$\mathrm{Gal}(E/\mathbb Q)$, of order $2^{e+2}$. Its order is
+therefore a power of two. In particular there is no nonprincipal
+character of odd order.
+
+More precisely, consider an odd prime $\ell$ with either
+$\ell\in\{3,7\}$ or $\ell-1\mid 2j$, taking $q,d>7$ as well.
+In the divisibility case $\ell\le2j+1<q,d$; in the exceptional case
+$\ell\le7<q,d$. Thus $\ell\nmid N$. Passing from $\eta$ to its
+prime-to-$\ell$ order part leaves it unchanged, since its order is
+a power of two. Removing its local component at $\ell$ also leaves it
+unchanged, since $\ell\nmid N$. Hence the odd-order condition on this
+modified character singles out the principal character exactly.
+The parity condition $\eta(-1)=(-1)^j$ then forces $j$ even.
+For all nonprincipal characters in these ranges the modified character
+has even order. The length estimates for those characters, and the
+estimate for $\ell\notin\{3,7\}$ with $\ell-1\nmid2j$, still require
+arithmetic input.
+
+For $j=1$ the conductor separation at the exceptional primes can be
+made explicit. Write $2^c$ for the conductor of the $2$-component
+of $\eta$. On removing this component one is left with a product of
+quadratic characters modulo $q,d$, of order at most two. The least
+common multiple of this order and four is therefore four. The
+multiplicative order of $\ell$ modulo four is two for both exceptional
+primes. Thus the parameter $v_2(\ell^2-1)$ is $3$ at $\ell=3$ and
+$4$ at $\ell=7$. The conductor test
+$2^c<16\ell^2 4^{v_2(\ell^2-1)}$ becomes respectively
+$c\le13$ and $c\le17$, since the two right sides are $9216$ and
+$200704$.
+
+In this range the field cut out by $\eta$ has degree at most $2048$
+at $3$ and $32768$ at $7$. Indeed the $2$-component is even and, for
+$c\ge3$, factors through the cyclic group
+$(\mathbb Z/2^c\mathbb Z)^\times/\{\pm1\}$ of order $2^{c-2}$.
+For $c<3$ it is trivial. Adjoining the two quadratic character
+components can raise the order of the product only to the least common
+multiple of this bound and two. The field cut out by the product has
+degree equal to its order. These bounds concern field degrees;
+estimating the cohomological lengths in those fields remains necessary.
+
+For these fields the local correction at $\ell$ can be evaluated.
+Let $L=\mathbb Q(\eta,\mu_\ell)$, where $\mathbb Q(\eta)$ denotes the
+field fixed by the kernel of $\eta$. For $v\mid\ell$, the completion
+$L_v$ is an unramified extension of $\mathbb Q_\ell(\mu_\ell)$:
+the conductor of $\eta$ divides $N$, which is prime to $\ell$.
+The extensions $\mathbb Q_\ell(\mu_{\ell^a})/
+\mathbb Q_\ell(\mu_\ell)$ are totally ramified, as follows from the
+Eisenstein polynomial $\Phi_{\ell^a}(1+X)$ over $\mathbb Q_\ell$.
+Consequently the cyclotomic character on the absolute Galois group
+of $L_v$ has image $1+\ell\mathbb Z_\ell$. For every $j\ge1$,
+\[
+ \operatorname{length}_{\mathbb Z_\ell}
+  H^0(L_v,\mathbb Q_\ell/\mathbb Z_\ell(-j))=1+v_\ell(j).
+\]
+Indeed $1+\ell$ topologically generates this image for odd $\ell$.
+The fixed points are the kernel of multiplication by $(1+\ell)^j-1$,
+up to a unit. Raising to an exponent prime to $\ell$ preserves the
+valuation of $(1+\ell)-1$, and each subsequent $\ell$th power
+increases it by one, by the binomial expansion. This proves the formula.
+
+In particular for $j=1$ the sum of local lengths is exactly the number
+of places above $\ell$, at most $[L:\mathbb Q]/(\ell-1)$ by the local
+degree formula. Since $[L:\mathbb Q]\le(\ell-1)[\mathbb Q(\eta):\mathbb Q]$,
+this contribution is bounded by $2048$ at $3$ and $32768$ at $7$
+in the small-conductor range. Passing from these local lengths to the
+global second cohomology still requires control of the kernel of
+localization.
+
+The finite class group calculation arising from cyclotomic descent
+has the following concrete form. Fix a base field $L$ containing
+$\mu_{\ell^c}$ but not $\mu_{\ell^{c+1}}$, with $\ell$ odd and $c\ge1$.
+At level $\nu\ge c$, put $F=L(\mu_{\ell^\nu})$, let $\gamma$ act
+on the roots by the exponent $1+\ell^c$, and set $a=(1+\ell^c)^j$.
+Such a generator exists since the cyclotomic extension above level $c$
+is cyclic of prime-power degree and every nontrivial intermediate
+extension contains its first degree-$\ell$ layer. Write $A$ for the
+ideal class group of $F$ in additive notation. The number of functions
+$f$ from its finite primes to $\mathbb Z/\ell^\nu$ satisfying
+\[
+ \sum_P v_P(u)f(P)=0\quad(u\in F^\times),\qquad
+ f(\gamma^{-1}P)=a f(P)
+\]
+is exactly
+\[
+ \left|A\big/\big(\ell^\nu A+(\gamma^{-1}-a)A\big)\right|.
+\]
+Indeed $f$ extends uniquely to a homomorphism on fractional ideals.
+The first equation makes it factor through $A$, and the second makes
+it annihilate $(\gamma^{-1}-a)A$. Since the target is killed by
+$\ell^\nu$, it factors through the displayed quotient. Conversely
+every homomorphism from that quotient satisfies both equations.
+Each cyclic summand of the quotient has order $\ell^h$ with
+$0\le h\le\nu$, and admits exactly $\ell^h$ homomorphisms to
+$\mathbb Z/\ell^\nu$, proving the count. In the fields just considered
+$c=1$ by the ramification calculation above. Finiteness of the class
+group gives a finite count at each level. To control the global kernel
+by this descent one needs a bound independent of $\nu$.
+
+One factor in the class group comparison can be evaluated in every
+layer. Put $n=[F:L]=\ell^{\nu-c}$, $r=r_2(L)$, and
+$U_F=\mathcal O_F^\times/\mu(F)$. For $a=(1+\ell^c)^j$ as above,
+\[
+ [U_F:(\gamma-a)U_F]=\frac{(a^n-1)^r}{a-1},
+ \qquad
+ v_\ell([U_F:(\gamma-a)U_F])
+ =r(\nu+v_\ell(j))-(c+v_\ell(j)).
+\]
+Here the free unit group is written additively. To prove the first
+identity, note that $L$ is totally imaginary and each of its $r$
+complex places splits into $n$ complex places on which $\gamma$ acts
+as an $n$-cycle. By the logarithmic unit theorem the real span of
+$U_F$ is the hyperplane of sum zero in this permutation representation.
+On the full space the characteristic polynomial is $(X^n-1)^r$;
+on the hyperplane it is $(X^n-1)^r/(X-1)$. Evaluating at $a>1$
+gives the absolute determinant, hence the index on the integral
+lattice. Finally for odd $\ell$ the binomial expansion gives
+$v_\ell((1+\ell^c)^h-1)=c+v_\ell(h)$ for $h\ge1$.
+Apply this with $h=jn$ and $h=j$ to obtain the second identity.
+
+Thus the $\ell$-part of this unit index grows by a factor
+$\ell^r$ whenever $\nu$ increases by one. A uniform estimate for the
+class group quotient needs a matching upper estimate on the arithmetic
+objects to which the units are compared; the determinant alone
+does not give it.
+
+One ingredient in the upper estimate is detection of powers by
+reduction. Let $m=\ell^\nu$, assume $\mu_m\subset F$, and let
+$\beta\in F^\times$. If $\beta$ is an $m$th power in the residue
+field at every prime of $F$ of residue degree one over $L$, apart
+from finitely many exceptions, then $\beta\in F^{\times m}$.
+
+Indeed, otherwise $K=F(\beta^{1/m})$ is a nontrivial Galois extension:
+all the roots differ by elements of $\mu_m$. A nonidentity automorphism
+fixes no root, since fixing any one root fixes $K$. By the Chebotarev
+density theorem a positive-density set of unramified primes of $F$
+has Frobenius in the conjugacy class of such an automorphism. Exclude
+the primes dividing $m$ or the divisor of $\beta$. At every remaining
+prime the roots reduce distinctly and Frobenius has no fixed root,
+so the reduction of $\beta$ is not an $m$th power. The primes of $F$
+of relative residue degree at least two have density zero: their
+Dirichlet series for real $s>1$ is bounded by
+$[F:L]\sum_{\mathfrak p\subset\mathcal O_L}
+(\mathrm N\mathfrak p)^{-2s}$, summed over nonzero prime ideals,
+which stays bounded as $s\downarrow1$. Thus the positive-density set
+contains a relative degree-one prime outside the exceptional set,
+a contradiction. Applied to a quotient of two elements, this proves
+that distinct classes modulo $F^{\times m}$ are distinguished by
+some such reduction. The argument allows the detecting prime to
+depend on the pair of classes and on $\nu$.
+
+The rank factor in the count can be understood from block sums.
+Write $D_\ell$ for the homology map induced by $g\mapsto
+\operatorname{diag}(g,\ldots,g)$ with $\ell$ blocks. Stabilization by
+identity blocks identifies the levels in the following calculation.
+For a degree-three class $z$, the two successive differences have
+stable image
+\[
+ P(D_\ell)z=(D_\ell-\ell^3)(D_\ell-\ell^2)z.
+\]
+In fact in every odd degree $m\ge3$ the image of the $m-1$
+successive differences has rational rank at most $r_2(L)$ for $L$
+totally imaginary. To see this, start at level $n\ge 2m+4$. The
+target level $\ell^{m-1}n$ is at least $4m+5$, so Charney's stability
+theorem for Dedekind domains identifies the target homology with
+stable homology. Only injectivity at this final level is needed.
+In stable rational homology the operator is
+$\prod_{h=2}^m(D_\ell-\ell^h)$.
+
+With direct sum as multiplication, stable rational homology is the
+free graded-commutative Hopf algebra on its primitives, whose degree
+$i$ part is $K_i(\mathcal O_L)\otimes\mathbb Q$ by the rational
+Hurewicz theorem for the plus construction. The block map is diagonal
+followed by $\ell$-fold direct sum. It therefore multiplies a
+primitive by $\ell$, and a product of $h$ primitives by $\ell^h$.
+Every monomial in positive degree $m$ has between one and $m$
+factors. The displayed polynomial kills all monomials of length at
+least two. Its image is contained in the degree-$m$ primitives,
+whose dimension is $r_2(L)$ by Borel's rank theorem for a totally
+imaginary field (see \cite{CharneyStab,WeibelK}, especially
+\cite[IV, \S1]{WeibelK}). This proves the asserted rank bound at
+the finite target level.
+
+For a finitely generated abelian group $M$ of rank at most $r$, any
+image of $M$ in a group killed by $q=\ell^\nu$ has at most
+$q^r|M_{\rm tors}|$ elements, by factoring through $M/qM$ and applying
+the elementary divisor theorem. This explains the power of $q$ in
+the homological count once the rank estimate is available. The integral torsion estimates needed for the arithmetic count remain to be supplied.
+
+For the integral estimate, one ingredient has a bound independent of
+the discriminant. Put $d=[L:\mathbb Q]$ and let $S$ be a finite
+subgroup of $\mathrm{GL}_N(\mathcal O_L)$. Then
+\[
+ |S|\le 3^{dN^2}.
+\]
+Indeed reduction modulo $3\mathcal O_L$ is injective on $S$.
+Otherwise its kernel contains an element $g$ of prime order $p$.
+Write $g=1+3^bA$ with $b\ge1$ maximal, using the freeness of the
+matrix ring over $\mathbb Z$. If $p\ne3$, the first term of $g^p-1$
+is $p3^b A$ and the remaining terms vanish modulo $3^{b+1}$,
+a contradiction. If $p=3$, division by $3^{b+1}$ in the cubic
+expansion gives $A+3^bA^2+3^{2b-1}A^3$, nonzero modulo three.
+Finally the matrix ring modulo three has $3^{dN^2}$ elements.
+
+In particular this bound applies to the stabilizer of an ordered
+simplex of positive definite Hermitian forms on the Minkowski space
+of $\mathcal O_L^N$. Fixing one vertex already forces the images of a
+lattice basis to have prescribed lengths in a positive definite real
+norm. Each image therefore has finitely many choices. This bounds
+the isotropy contribution in a cell count; the number of cell orbits
+and the resulting integral boundary maps must also be controlled to
+obtain a discriminant bound for homology torsion.
+
+More explicitly, suppose an augmented acyclic ordered simplicial
+chain complex with a group action has at most $A$ simplex orbits in
+each degree up to $m+1$, and all stabilizers have order at most $s$.
+Here the chains are freely generated by the ordered simplices and
+the action preserves their face maps. Then
+\[
+ \log|H_m(G,\mathbb Z)_{\rm tors}|
+ \le A\log(m+2)+A\log(s)\sum_{q=1}^m s^q .
+\]
+To prove this, tensor the chain complex with a free right bar
+resolution over $\mathbb ZG$. Exactness of the augmentation gives
+$H_*(G,\mathbb Z)$ as the total homology. Filtering by simplex degree
+gives in bidegree $(p,q)$ a direct sum of $H_q(S,\mathbb Z)$ over
+orbit representatives with stabilizers $S$, by the induced-module
+formula. For $q>0$ transfer kills each summand by $|S|$; the bar
+complex gives its cycles at most $|S|^q$ generators, since they form
+a subgroup of a free group of that rank. Its order is thus at most
+$s^{s^q}$. All subsequent terms in this bidegree are subquotients.
+
+In row zero the first differential is the signed face map on orbit
+generators. Every column from degree $m+1$ has Euclidean norm at most
+$m+2$, including when some faces coincide. If its rank is $b>0$,
+Smith normal form bounds the torsion order of its cokernel by the
+absolute value of any nonzero $b$-minor, at most $(m+2)^A$ by
+Hadamard's inequality; at rank zero the cokernel is free.
+Row-zero homology embeds in this cokernel. No later differential
+enters bidegree $(m,0)$, so its final torsion satisfies the same
+bound. Multiplying the bounds along total degree $m$ proves the
+inequality by the filtration of the abutment. Thus for the arithmetic
+group it remains in this step to exhibit such a complex with a
+sufficiently small orbit count.
+
+Here is an orbit estimate for the faces that have a common frame
+of minimal vectors. Put $b=dN$, $D=|\operatorname{disc}L|$ and
+$I=D^N b^b$. Write the form as $Q(v)=\sum_w v_w^*H_wv_w$, summing
+over the complex places. Normalize its minimum on nonzero integral
+vectors to one. In the Euclidean metric given by $Q$ the lattice has
+covolume $2^{-b/2}D^{N/2}\prod_w\det H_w$, by the discriminant formula
+and the real Jacobian of the complex linear map $H_w^{1/2}$.
+Balls of radius $1/2$ have disjoint interiors modulo this lattice;
+each contains a cube of side $1/\sqrt b$. Consequently
+$\prod_w\det H_w\ge I^{-1}$.
+
+Suppose the vertices of an ordered $p$-simplex share $N$ minimal
+vectors forming an invertible matrix $A$ over $L$. For any one of its
+vertices let $G_w=A_w^*H_w A_w$. All diagonal entries are at most one,
+so Hadamard's inequality gives $\det G_w\le1$. Moreover
+$\prod_w\det G_w=k\prod_w\det H_w$, where
+$k=|\mathrm N_{L/\mathbb Q}\det A|$ is the index of the column lattice.
+It follows that $k\le I$ and each $\det G_w\ge I^{-1}$.
+Two frames give the same left $\mathrm{GL}_N(\mathcal O_L)$-orbit
+if their lattices $A^{-1}\mathcal O_L^N$ agree, since then
+$A'A^{-1}$ preserves $\mathcal O_L^N$ in both directions.
+Such a lattice contains $\mathcal O_L^N$ with index $k$, and modulo
+$\mathcal O_L^N$ is a subgroup of $(\mathbb Z/k)^b$. It has at most
+$b$ generators by Smith normal form, hence at most $k^{b^2}$
+possibilities for fixed $k$. There are at most $I^{1+b^2}$ frame orbits.
+
+For any further minimal vector $v$, put $u=A^{-1}v$. Each $G_w$
+has trace at most $N$, so its smallest eigenvalue is at least
+$I^{-1}N^{1-N}$. Since $u_w^*G_w u_w\le1$ and $ku$ is integral,
+every conjugate of every coordinate of $ku$ has modulus at most
+$R=I\sqrt{IN^{N-1}}$. There are at most $(2R+1)^d$ algebraic integers
+in this box: distinct integers have distance at least one in the
+maximum norm on the complex places, by the field norm, and disjoint
+open balls of radius $1/2$ fit in the ball of radius $R+1/2$.
+Thus at most $(2R+1)^b$ vectors can be minimal with this frame.
+A perfect vertex is determined by $h=(d/2)N^2$ linearly independent
+equations $Q(v)=1$, since $h$ is the real dimension of the form
+space. The orbit count for ordered tuples of such vertices with a common
+frame is therefore at most $I^{1+b^2}(2R+1)^{bh(p+1)}$.
+
+For completeness construct the complex on the dual cone. Let
+$\mathcal R$ be the set of positive definite tuples $H$ satisfying
+$Q_H(v)\ge1$ for every nonzero integral $v$. It is nonempty by scaling
+and convex. For each positive definite dual tuple $X$, minimize
+$\sum_w\operatorname{tr}(X_wH_w)$ over $\mathcal R$. Bounded
+sublevels bound the traces of all $H_w$ from above, uniformly for
+$X$ in compact subsets of the open dual cone. The determinant bound
+just proved consequently bounds their least eigenvalues away from
+zero. These sublevels are compact and only finitely many lattice
+vectors can give active constraints there. The minimizing face is
+therefore a compact polytope, whose vertices are perfect forms:
+at an extreme point the active linear equations must span the dual,
+since otherwise a small displacement in both directions preserves
+all constraints. Conversely such a spanning set determines a vertex.
+
+The regions of dual tuples minimized by the various vertices form a
+locally finite polyhedral cover of the open dual cone. Indeed on a
+compact neighborhood the common trace bound applies by comparison
+with a single fixed feasible form. Only finitely many vertices can
+occur there by the finite active set, and their regions are cut out
+locally by the linear comparisons of their values. All nonempty
+intersections are convex. Their nerve is contractible by the
+polyhedral nerve theorem (subdivide the locally finite polyhedral
+decomposition inside the open cone to obtain a cover by subcomplexes).
+For vertices in a simplex of this nerve take their average $H$ and
+a common minimizing $X$. The active constraints at $H$ are precisely
+their common minimal vectors. If those vectors fail to span $L^N$,
+take a nonzero $L$-linear functional vanishing on them and let $P$
+be the positive semidefinite tuple of its squared absolute values.
+For small $s>0$, $H-sP$ remains feasible by local finiteness of the
+constraints. But $\sum_w\operatorname{tr}(X_wP_w)>0$, contradicting
+minimality. Thus every nerve simplex has the common frame used above.
+
+Use all ordered tuples supported on nerve simplices, allowing repeats,
+with the alternating deletion boundary. This augmented complex has
+the homology of the nerve: project a tuple to its oriented simplex
+(zero on repetitions) and choose a vertex ordering for a chain section.
+The composite is chain homotopic to the identity by induction on
+degree inside each support simplex, where prepending any fixed
+vertex contracts the augmented tuple complex. The acyclicity so
+obtained holds integrally; the section need not respect the group
+action. The tuple complex itself carries the required action. This
+supplies both the acyclicity and the orbit bound used above.
+
+Two integral constructions enter when passing from divisors to
+homology classes. First, let $I_j,J_j$ be nonzero fractional ideals
+of $F$, indexed by $1\le j\le n$, and suppose
+$\prod J_j=\beta\prod I_j$ as fractional ideals. There is an
+$F$-linear map carrying $\bigoplus I_j$ isomorphically to
+$\bigoplus J_j$ with determinant exactly $\beta$. Indeed Steinitz
+classification gives an isomorphism of the two projective modules,
+which extends to $F^n$. Its determinant $b$ satisfies
+$b\prod I_j=\prod J_j$ by taking top exterior powers. Hence
+$\beta/b$ is a unit, and multiplication by this unit on the first
+target summand corrects the determinant. In rank zero the assertion
+requires $\beta=1$.
+
+Second, one can isolate a prescribed slope over the integers before
+reducing the cycles. Put $q=\ell^\nu$, $d_0=\ell^c$,
+$\kappa=1+d_0$, $c\le\nu$, and fix $0\le t_0\le M<d_0$. Write
+$P(Z)=\prod_{j=0}^{M-1}(Z-\kappa^j)=\sum_i p_i Z^i$.
+In the integral group ring of $(\mathbb Z/q)^2$ there is an element
+whose image under $(x,y)\mapsto x+ty$ vanishes for
+$0\le t\le M$, $t\ne t_0$, and at $t_0$ equals
+$F(X)=\sum_i p_iX^{\kappa^i}$, with $X^q=1$.
+
+To prove this, set $u_i=(\kappa^i-1)/d_0$ and
+$H(Z)=\sum_i p_iZ^{u_i}$. For $0\le h<M$ the coefficient of $W^h$
+in $H(1+W)$ is $\sum_i p_i\binom{u_i}{h}=0$: the binomial is a
+polynomial of degree $h$ in $\kappa^i$, and
+$\sum_i p_i(\kappa^i)^j=P(\kappa^j)=0$ for $j<M$.
+Thus $(Z-1)^M$ divides $H$ in $\mathbb Z[Z]$, and
+$(X^{d_0}-1)^M$ divides $F(X)=XH(X^{d_0})$. For each
+$t\ne t_0$ in the range, $\gcd(t_0-t,q)$ divides $d_0$.
+Consequently $X^{t_0-t}-1$ divides $X^{d_0}-1$ in the group ring:
+choose an integer $n\ge0$ with $n(t_0-t)\equiv d_0\pmod q$
+and use the geometric sum. Hence $F$ is a multiple of
+$\prod_{t\ne t_0}(X^{t_0}-X^t)$ there, say with multiplier $B(X)$.
+Using the two generators $X,Y$ of the larger group ring, the required
+element is $B(X)\prod_{t\ne t_0}(Y-X^t)$. Substitution $Y=X^t$
+proves both assertions, without division in the residue ring.
+For odd $\ell$ the scalar in the corresponding separated weight
+has a loss independent of the layer. Indeed for $0\le u<M$ its
+integer value and valuation are
+\[
+ C_u=\prod_{0\le j<M,\ j\ne u}(\kappa^u-\kappa^j),\qquad
+ v_\ell(C_u)=(M-1)c+v_\ell(u!)+v_\ell((M-1-u)!).
+\]
+Each factor has valuation $c+v_\ell(|u-j|)$ by the binomial
+valuation formula above. In degree three ($M=3,u=1$) this gives
+$C_1=-\kappa\ell^{2c}$. Multiplication by $C_1$ on
+$\mathbb Z/\ell^\nu$ therefore has kernel of order
+$\ell^{\min(2c,\nu)}$, uniformly bounded with $c$ fixed.
+This isolates the determinant component in the coefficient construction;
+realizing the resulting data as a cycle with the specified reduction
+at every admissible residue field remains to be shown.
+
+The chain that realizes a slope relation has coefficients in
+$R=\mathbb Z/q$, $q=\ell^\nu$. Put $C=C_q$, $D=C\times C$, and
+$d_t(x)=(x,x^t)$. For any $R$-cycle $z$ of degree $h=2e+2$ in
+$C$, there exist coefficients $n_t\in R$, $0\le t\le h+1$, at
+least one a unit, and a chain $b$ in $D$ satisfying
+\[
+ \partial b=\sum_t n_t(d_t)_*z.
+\]
+Indeed the cyclic integral free resolution has alternating
+differentials $g-1$ and $1+g+\cdots+g^{q-1}$. Tensoring two copies
+over $\mathbb Z$ resolves the trivial module for $D$: both augmented
+complexes split over $\mathbb Z$. After taking coinvariants with
+coefficients $R$ both differentials vanish. Hence $H_h(D;R)$ is free
+of rank $h+1$, one summand for each bidegree of total degree $h$.
+Lift the $h+2$ coordinate columns of the indicated classes to
+$\mathbb Z^{h+1}$. They have an integral relation with relatively
+prime coefficients, obtained by clearing denominators in a nonzero
+rational relation and dividing by their gcd. Reduction gives a
+relation with a unit coefficient, and its vanishing in homology
+gives the asserted $b$ in the bar complex.
+
+For homomorphisms $\rho,\sigma:D\to H$ suppose that
+$\rho d_t=k_t^{-1}(\sigma d_t)k_t$ with $k_t\in H$.
+The conjugation prism $P_t$ on bar chains satisfies
+$\partial P_t+P_t\partial=(\rho d_t)_*-(\sigma d_t)_*$:
+it is the simplicial homotopy of the two one-object group functors
+given by conjugation, with the orientation chosen as displayed.
+Then the degree-$h+1$ chain
+\[
+ y=\sigma_*b-\rho_*b+\sum_t n_t P_tz
+\]
+is a cycle. Applying $\partial$ cancels the two differences term by
+term since $\partial z=0$. For $e=0$ this gives a degree-three cycle;
+the argument neither requires nor produces a lift to a cycle over
+$\mathbb Z$. Application to the divisor construction requires the two
+representations in the same integral lattice stabilizer and the
+prescribed values on the reduced prisms.
+
+In degree three the scalar evaluation of a reduced prism can be
+computed explicitly. Let $k$ be a finite field, $M=|k^\times|$,
+$q\mid M$, and $u$ a generator of $k^\times$. For $a\in k^\times$
+let $A(a)\in[0,M-1]$ be its discrete logarithm to base $u$. The
+integer carry
+\[
+ B(a,b)=(A(a)+A(b)-A(ab))/M
+\]
+is a symmetric two-cocycle by associativity. Write the chosen
+primitive $q$th root as $\zeta=u^{(M/q)s}$, so $s$ is a unit modulo
+$q$. For any homomorphism $v:k^\times\to R$ (written additively),
+the cup product $s^{-1}v\smile B$ is a three-cocycle over $R$.
+Take $z=\sum_{i=0}^{q-1}[g^i|g]$ for a generator $g$ of $C_q$;
+its boundary is $q[g]=0$ over $R$. On inserting $b\in k^\times$
+into the image of $z$ under $g\mapsto w=\zeta^x$, the last two
+insertion terms cancel by symmetry of $B$. The remaining value is
+\[
+ s^{-1}v(b)\sum_{i=0}^{q-1} B(w^i,w)
+   =s^{-1}v(b)\,q A(w)/M=xv(b)\quad\text{in }R.
+\]
+The middle equality telescopes since $w^q=1$. In degree $2j+1$,
+$j\ge1$, use $s^{-j}v\smile B^{\smile j}$ and the degree-$2j$
+cycle obtained by summing
+$[g^{i_1}|g|\cdots|g^{i_j}|g]$ over all residues $i_1,\dots,i_j$.
+Its first face has coefficient $q=0$; the adjacent internal faces
+cancel in pairs by shifting the summation indices, and the last
+internal face cancels the last face by the same shift.
+On inserting $b$, all terms except the first cancel in pairs:
+the two insertions in each carry slot interchange its arguments.
+The first term factors into $j$ copies of the telescoping sum.
+Its value is therefore $x^jv(b)$.
+
+Here is the extension to matrices. Let $\rho:G\to\mathrm{GL}(V)$
+be a representation over $k$. Choose a nonzero vector on each line
+in $\mathbb P(V)$. Regard $G$ as a category with one object. A bar
+simplex lifts to its action groupoid on the lines once the initial
+line is specified; sum over all initial lines. This operation commutes
+with the boundary: composing consecutive arrows commutes with lifting,
+and deleting the first arrow permutes the starting lines. Send each
+lifted arrow to the scalar by which it carries the chosen vector on
+its source to the chosen vector on its target. Scalars multiply under
+composition, giving a chain map to the bar complex of $k^\times$.
+Composing with the preceding cocycle defines an evaluation on cycles.
+Rescaling the chosen vectors gives naturally isomorphic functors,
+whose chain maps are homotopic by the bar prism. The evaluation is
+therefore independent of the choices and invariant under isomorphism.
+For a one-dimensional representation it is the original evaluation.
+
+For a block sum $V\oplus W$, send each line with nonzero first
+projection to its image in $V$ and the remaining lines to $\mathbb P(W)$.
+Over a line in $V$ with chosen vector $v$, the lifts are represented
+uniquely by $(v,w)$ with $w\in W$. With these representatives the
+scalar for a lifted arrow is precisely that on the first projection.
+Each line of $W$ has one lift and its usual scalar. Thus the transfer
+of the block sum is the sum of $|k|^{\dim W}$ copies of the first
+transfer and one of the second. Since $q\mid |k|-1$, the first
+multiplicity equals one in $R$. This proves additivity on cycles,
+including the contributions of mixed lines. In positive degree a
+trivial representation contributes zero, so stabilization preserves
+the evaluation and repeating a block $d$ times multiplies it by $d$.
+
+For a nonselected slope the lattice transport can also be made
+explicit. Let $J=(\mathbb Z/q)^2$ and write $\eta_z$ for the integral
+coefficient at $z$ of the selector above. For a fractional ideal
+$\mathfrak a$ form the lattices
+$M_0=\bigoplus_{z\in J}\mathcal O_F$ and
+$M_1=\bigoplus_{z\in J}\mathfrak a^{\eta_z}$ in $F^J$.
+The group $D$ acts diagonally by
+$\rho(u,v)e_z=\zeta^{uz_1+vz_2}e_z$ in additive coordinates and
+preserves both lattices. At $t\ne t_0$, every fiber of
+$z\mapsto z_1+t z_2$ has coefficient sum zero. The product of its
+target ideals is therefore $\mathcal O_F$. The determinant construction
+above gives on that fiber a map of determinant one carrying the source
+to the target lattice. Their direct sum $g_t$ carries $M_0$ onto
+$M_1$ and commutes with $\rho d_t$, which acts by a scalar on
+each fiber.
+
+At the selected slope write $x=z_1+t_0z_2$ and let $S$ act on
+divisors by $S\mathfrak d=\gamma^{-1}\mathfrak d$. The divisor
+condition on the input is
+$\operatorname{div}\alpha=(S-\kappa^j)\mathfrak d$, with
+$\mathfrak d=\operatorname{div}(\mathfrak a)$ here denoting the
+divisor of the fractional ideal. Put
+$Q(Z)=P(Z)/(Z-\kappa^j)=\sum_i b_i Z^i$ for $0\le j<M$, and set
+\[
+ \beta=\prod_i(\gamma^{-i}\alpha)^{b_i}.
+\]
+Equivariance of principal divisors gives
+$\operatorname{div}\beta=Q(S)(S-\kappa^j)\mathfrak d
+=P(S)\mathfrak d$.
+
+Change coordinates over $L$ as follows. On a coordinate of weight
+$x=\kappa^i\bmod q$ apply $\gamma^{-i}$, and on all other coordinates
+apply the identity. This is well-defined since $\gamma$ acts faithfully
+on $\zeta$ with exponent $\kappa$. Call the resulting map $U$.
+In the new coordinates the selected slope acts by $\zeta$ on the whole
+orbit of weight one, and by the original eigenvalues elsewhere.
+The source lattice is unchanged. In the weight-one block the product
+of the transformed target ideals has divisor
+$\sum_i p_i S^i\mathfrak d=P(S)\mathfrak d$ by the defining pushforward
+of $\eta$. This identity also handles collisions among the
+$\kappa^i\bmod q$, since their powers of $S$ then coincide. In each
+other block the divisor sum is zero. The weight-one block is nonempty
+(it contains $z=(1,0)$). The prescribed-determinant construction
+therefore gives a block diagonal map $g'$ from $M_0$ to $UM_1$
+with determinant $\beta$ on that block and one on the others.
+Now $g_0=U^{-1}g'U$ transports $M_0$ to $M_1$ over $L$ and commutes
+with the selected slope. With $H=\operatorname{Aut}_{\mathcal O_L}(M_0)$
+and $\sigma=g_0^{-1}\rho g_0$, both representations preserve $M_0$.
+Also $k_t=g_0^{-1}g_t\in H$ satisfies
+$k_t^{-1}(\sigma d_t)k_t=\rho d_t$, as required in the prism construction.
+
+The scalar that the determinant must recover can be checked before
+taking homology. Let $f$ be reduction followed by $v$ at a prime
+where all conjugates of $\alpha$ are units. For such units put
+$W(b)=\sum_{h=0}^{n-1}\kappa^{hj} f(\gamma^h b)$ in $R$, where
+$n=[F:L]$. Since $\kappa^n=1$ in $R$, reindexing gives
+$W(\gamma^{-i}\alpha)=\kappa^{ij}W(\alpha)$. Thus
+\[
+ W(\beta)=Q(\kappa^j)W(\alpha)
+ =C_j f\left(\prod_{h=0}^{n-1}
+                (\gamma^h\alpha)^{\kappa^{hj}}\right).
+\]
+To evaluate the cycle, exclude the finitely many primes dividing
+$q$, the relative discriminant, or the denominators of the lattices,
+maps and their inverses. At a remaining relative degree-one prime
+the Galois extension splits completely over the underlying prime.
+The Chinese remainder theorem identifies restriction of scalars
+after reduction with the direct sum of the $n$ conjugate blocks,
+with $\gamma^h$ acting on the entries in the $h$th evaluation.
+If $M_0$ is projective over $\mathcal O_L$, choose a projective
+complement to make it free and extend its automorphisms by the
+identity. Such a complement exists since a torsion-free finite
+module over a Dedekind domain is projective. The added trivial
+representation contributes zero.
+
+In the localized group, write $P_g$ for the homotopy from a
+representation to its conjugate by $g^{-1}$. On cycles the prisms
+for two successive conjugations add modulo boundaries: the two-edge
+path and its composite bound the natural-transformation triangle
+(the usual triangulation of the bar simplex times a two-simplex).
+Applying this with $g_t=g_0 k_t$ shows that the image of $y$ is
+homologous to $\sum_t n_t P_{g_t}(\rho d_t)_*z$.
+Indeed the terms $P_{g_0}(\rho d_t)_*z$ add to
+$P_{g_0}\rho_*\partial b$, homologous to
+$\sigma_*b-\rho_*b$ by the prism identity. All these maps can now
+be reduced at the chosen prime.
+
+For a scalar slope acting by $w$ on a block, evaluation of its prism
+is additive as a function of the commuting matrix $g$ by the same
+triangle. It factors through the determinant: over the residue field
+of size greater than two the elementary matrices are commutators
+(conjugate by a diagonal matrix with distinct entries in the two
+relevant positions), and generate the special linear group by
+elimination. On $g=\operatorname{diag}(b,1,\ldots,1)$ block
+additivity and the scalar calculation give $x^jv(b)$ for $w=\zeta^x$;
+the identity prism is null in homology. Thus the nonselected slopes
+give zero because their block determinants are one. On the selected
+slope use $U$ to read the reduced blocks in the coordinates of $g'$.
+In the $h$th conjugate the surviving block has weight $\kappa^h$
+and determinant the reduction of $\gamma^h\beta$. The evaluation
+of $y$ is therefore $n_{t_0}W(\beta)$. Scaling the cycle by the
+inverse of the unit $n_{t_0}$ gives the claimed determinant evaluation
+$C_jW(\alpha)$ at every allowed degree-one prime.
+
+We now count several divisor classes at once. Fix $m=2j+1$,
+$j\ge1$, and put $N_*=4m+5$. Let $T_i$ be the order of the torsion
+in $H_i(\mathrm{GL}_{N_*}(\mathcal O_L),\mathbb Z)$, for $i=m,m-1$.
+These two numbers are independent of $q$. Consider a finite set of
+inputs $\alpha$ satisfying the divisor condition. Write
+$u_\alpha=\prod_{h=0}^{n-1}(\gamma^h\alpha)^{\kappa^{hj}}$, and put
+$b=m-1+v_\ell(C_j)$. If the elements $u_\alpha^{\ell^b}$ are distinct
+in $F^\times/F^{\times q}$, the number of inputs is at most
+\[
+                     q^{r_2(L)}T_mT_{m-1}.
+\]
+
+Indeed exclude the union of the exceptional primes for this finite
+set. The power-detection argument supplies, for each distinct pair,
+a relative degree-one prime where their quotient after raising to
+$\ell^b$ is not a $q$th power. The residue group is cyclic and
+contains $\mu_q$, so there exists a homomorphism $v$ to $R$ detecting
+this quotient. Collect these finitely many evaluations in a single
+map $E$ with target a product of copies of $R$. The evaluations
+respect stabilization on positive-degree cycles. They thus define
+a homomorphism on stable homology with $R$ coefficients, since bar
+chains use finitely many matrices. By the determinant calculation,
+the vectors $\ell^{m-1}E(y_\alpha)$ are pairwise distinct: dividing
+$C_j$ by $\ell^{v_\ell(C_j)}$ gives a unit modulo $q$.
+
+It remains to bound the image of $\ell^{m-1}E$. In the coefficient
+exact sequence for stable group homology, the image of integral
+homology modulo $q$ has quotient $H_{m-1}(\mathbb Z)[q]$, of order
+at most $T_{m-1}$ by stability at $N_*$. On integral lifts use the
+endomorphism $P=\prod_{h=2}^m(D_\ell-\ell^h)$ from the rank calculation.
+Additivity under block sums gives
+$E(Pz)=\prod_{h=2}^m(\ell-\ell^h)E(z)$ on reduction modulo $q$.
+The coefficient on the right is $\ell^{m-1}$ times a unit modulo $q$.
+The integral image of $P$ has rank at most $r_2(L)$, and its torsion
+embeds in the stable torsion of order $T_m$. Its image in the target
+of $E$ therefore has order at most $q^{r_2(L)}T_m$. Each coset
+of the integral lifts contributes a translate of this image after
+the same unit rescaling. Multiplying by the number of cosets proves
+the estimate. In particular the loss in the power tested on the
+arithmetic side is fixed before the cyclotomic layer $\nu$ is chosen.
+
+To relate this count to the class group, write $F^\times$ additively
+in the following calculation. Put $S=\gamma^{-1}$, $a=\kappa^j$ and
+$\delta=S-a$. Form the group of pairs $(\alpha,\mathfrak d)$ with
+$\operatorname{div}\alpha=\delta\mathfrak d$, modulo pairs of the form
+$(\delta v,\operatorname{div}v)$, and denote it by $W_0$. There is
+an exact sequence
+\[
+ 0\longrightarrow \mathcal O_F^\times/\delta\mathcal O_F^\times
+ \longrightarrow W_0\longrightarrow \ker(\delta:\mathrm{Cl}(F)
+ \to\mathrm{Cl}(F))\longrightarrow0 .
+\]
+The last map takes the class of $\mathfrak d$. Its surjectivity is
+the definition of a principal divisor; if $\mathfrak d=\operatorname{div}v$,
+subtracting the relation leaves a unit in the first coordinate.
+Two such units differ by a relation precisely when that relation
+comes from a unit. Since the class group is finite, the cardinalities
+of the kernel and cokernel of $\delta$ on it agree.
+
+Let $T=\sum_{h=0}^{n-1}a^h\gamma^h$. Then
+$T\delta=\gamma^{-1}(1-a^n)$, and $q\mid1-a^n$.
+Consequently $(\alpha,\mathfrak d)\mapsto\ell^bT\alpha\bmod q F^\times$
+is well defined on $W_0$. The preceding homological count bounds its
+image. For the kernel estimate divide $F^\times$ by its roots of unity,
+writing $Y=F^\times/\mu(F)$ additively, and use the same definition
+of pairs with $Y$ in the first coordinate. Denote this quotient of
+$W_0$ by $W$. The exact sequence above now has free units modulo
+$\delta$ on the left. The target of the counting map becomes $Y/qY$,
+so the preceding image bound still applies. Both $Y$ and the divisor
+group are torsion-free, and $\delta$ is injective on each: $S^n=1$
+and $a^n>1$. In particular $W$ identifies, via the first coordinate,
+with a subgroup of $Y/\delta Y$.
+
+If a class in the counting kernel is represented by $y$, then
+$\ell^bTy=qz$ in $Y$. Applying $\delta$ and cancelling $q$ in $Y$
+gives $\ell^b(1-a^n)Sy/q=\delta z$. Thus the $\ell$-primary kernel
+is killed by $\ell^{b+v_\ell(j)}$, since
+$v_\ell(a^n-1)=\nu+v_\ell(j)$ and $S$ is invertible.
+
+Its number of generators also admits a bound independent of $\nu$.
+If a pair $(y,D')$ represents an element of $W[\ell]$, then
+$\ell y=\delta v$, $\ell D'=\operatorname{div}v$. The class of $v$
+in $Y/\ell Y$ is well-defined by injectivity of $\delta$, and it
+determines the pair class: if $v=\ell z$, the pair is the relation
+$(\delta z,\operatorname{div}z)$. This homomorphism embeds $W[\ell]$
+in the $S$-invariant classes represented by elements whose valuations
+are all divisible by $\ell$, since $a\equiv1\pmod\ell$.
+
+Here is a uniform count of the latter classes. In multiplicative
+notation choose a generator $\rho$ of $\mu(F)$ and represent an
+invariant class by $v$ with
+$S(v)/v=w^\ell\rho^i$, $0\le i<\ell$, absorbing any remaining
+power of $\rho^\ell$ into $w$. The pair $(i,\mathrm N_{F/L}w)$ has
+at most $\ell^2$ values since $(\mathrm N w)^\ell=(\mathrm N\rho)^{-i}$.
+For two representatives with the same pair, Hilbert's theorem 90
+gives $w/w'=S(z)/z$. Consequently $v/(v'z^\ell)$ lies in $L^\times$.
+Its valuations over $F$ are divisible by $\ell$; away from places
+above $\ell$ this also holds over $L$, since $F/L$ is unramified
+there. The number of such base classes modulo $L^{\times\ell}$ is
+at most $\ell^{r_2(L)+s_L}|\mathrm{Cl}(L)[\ell]|$, where $s_L$ is
+the number of primes above $\ell$. Indeed division of the divisor
+away from these primes by $\ell$ maps into the $\ell$-torsion of the
+localized class group, with kernel the localized units modulo
+$\ell$th powers. The unit theorem gives the stated unit factor;
+the localized class group is a quotient of the ordinary class group,
+so its $\ell$-rank is no larger. As $s_L\le[L:\mathbb Q]$, we may
+take $g=2[L:\mathbb Q]+2+\lfloor\log_2|\mathrm{Cl}(L)|\rfloor$ and
+obtain $|W[\ell]|\le\ell^g$.
+
+The elementary divisor theorem now bounds the $\ell$-part of $|W|$
+by $q^{r_2(L)}T_mT_{m-1}\ell^{(b+v_\ell(j))g}$.
+Divide by the $\ell$-part of the free unit index computed above
+(the determinants of $S-a$ and $\gamma-a$ agree in absolute value).
+Writing $A=\mathrm{Cl}(F)$, this yields
+\[
+ |A/(qA+\delta A)|\le
+ T_mT_{m-1}\ell^{(b+v_\ell(j))g+c+v_\ell(j)} .
+\]
+Indeed the quotient on the left has order at most the $\ell$-part
+of the cokernel of $\delta$ on $A$. The factor $q^{r_2(L)}$ has
+cancelled. This bound is independent of the layer for fixed base,
+$j$ and $c$, under the slope-separation hypothesis $2j+1<\ell^c$.
+
+The uniformity in $\nu$ permits descent to the localization kernel.
+Write $M=\mathbb Q_\ell/\mathbb Z_\ell(-j)$, $j\ge1$, and
+$L_\infty=L(\mu_{\ell^\infty})$. Use continuous cohomology of the
+maximal extension unramified outside $\ell$. A class in the
+localization kernel restricts to zero at every place above $\ell$.
+Restriction to $L_\infty$ is injective even on the whole $H^1$:
+by inflation--restriction its kernel comes from
+$H^1(\Gamma,M)$ with $\Gamma=\operatorname{Gal}(L_\infty/L)$.
+The value on a topological generator determines a continuous
+cocycle. Multiplication by $\kappa^{-j}-1$ is surjective on the
+divisible group $M$, since it is a nonzero $\ell$-adic integer.
+Thus a coboundary can be subtracted to kill this value, after which
+continuity kills the cocycle on all of $\Gamma$.
+
+Take any finite set of distinct classes in the localization kernel
+and choose continuous cocycles for them. Their images are finite by
+compactness. At each place above $\ell$ their restrictions are
+coboundaries; choose an element of $M$ giving each such coboundary.
+Take $\nu$ large enough that all values and all these finitely many
+elements are killed by $\ell^\nu$. Over $F=L(\mu_{\ell^\nu})$ the
+cocycles are now homomorphisms to $M[\ell^\nu]$, since the action
+on their values is trivial. They vanish on all decomposition groups
+above $\ell$: this holds at one prolongation of each base place by
+the chosen coboundaries, and at their conjugates by the cocycle law
+and triviality of the action on its finite image. They are unramified
+elsewhere. By unramified abelian class field theory each therefore
+factors through $A=\mathrm{Cl}(F)$. The resulting characters are
+distinct since their restrictions to $L_\infty$ are already distinct.
+
+Conjugating by a lift of $\gamma^{-1}$ multiplies these characters
+by $\kappa^j$ on their values; the extra coboundary term vanishes
+because the subgroup over $F$ acts trivially on the cocycle values.
+Equivariance of the Artin map therefore makes them factor through
+$A/(qA+\delta A)$. The order of this quotient bounds the size of
+the original finite set, by the elementary divisor theorem. Since
+the bound is independent of $\nu$, it bounds the cardinality of
+the entire localization kernel.
+
+One can first enlarge the base to attain $\ell^c>2j+1$. Indeed
+restriction from $L$ to any intermediate cyclotomic layer is
+injective by the same injectivity at $L_\infty$ and preserves
+local triviality. If the original top root has exponent $c_0$,
+take $c\ge c_0$ least with $\ell^c>2j+1$. The new relative
+degree is $\ell^{c-c_0}$; when $c>c_0$ it is at most $2j+1$,
+since $c_0\ge1$ and $\ell^{c-1}\le2j+1$.
+In particular for $j=1$ and $\ell=3$, adjoining $\mu_9$ to a base
+with $c_0=1$ suffices and has degree three.
+
+The dependence on the base in this descent is quantitative.
+Let $n_0=[L:\mathbb Q]$, $D_0=|\operatorname{disc}L|$, and write
+$s$ for the degree of the enlargement. The polynomial
+$X^s-\zeta_{\ell^{c_0}}$ generates it on choosing compatible primitive
+roots; its degree is the extension degree. Its discriminant is a
+unit times $s^s$, so the enlarged field has degree $d=sn_0$ and
+absolute discriminant $D\le D_0^s s^{sn_0}$. For any such field
+Minkowski's bound gives a representative of each ideal class of norm
+at most $2^d\sqrt D$. Counting all ideals up to this bound by their
+Dirichlet series at two gives
+$|\mathrm{Cl}|\le4^dD\zeta(2)^d$, using the Euler product.
+Also $\ell^{c-1}(\ell-1)\le d$, by the presence of the primitive
+root. Thus $g\ll d+\log(2D)$ and
+$b=2j+2jc+v_\ell(j!)+v_\ell(j!)$ at $M=2j+1$, $u=j$.
+
+In particular there is an absolute $C$ such that for odd $\ell$ the
+logarithm of the size of the localization kernel just bounded is at
+most $(2D_0)^{(2jn_0)^C}$. Here are the size comparisons. For
+$N_*=4(2j+1)+5$ and $p\le2j+2$ the explicit orbit estimate above
+gives $\log A\ll (2jd)^{C_1}\log(2D)$ for an absolute $C_1$,
+by taking logarithms of $I$ and $R$. The stabilizer bound has
+$\log |S|\le dN_*^2\log3$. Inserting these in the torsion
+inequality gives $\log T_i\le (2D)^{(2jd)^{C_2}}$ for both degrees.
+The additional term $((b+v_\ell(j))g+c+v_\ell(j))\log\ell$
+satisfies the same bound by the preceding class number and root
+estimates. Finally $s\le2j+1$ and the discriminant inequality
+absorb the change of base by increasing the absolute exponent $C$.
+
+This also bounds the global second cohomology. Write $S$ for the
+places above $\ell$ together with the archimedean places and
+$G_{L,S}$ for the Galois group unramified outside $S$.
+Poitou--Tate duality identifies the kernel of localization on
+$H^2(G_{L,S},\mathbb Z_\ell(j+1))$ with the Pontryagin dual of the
+localization kernel just bounded in degree one. The image embeds in
+the sum of the local groups. At $w\mid\ell$, local Tate duality identifies
+the latter group's dual with the invariants of
+$\mathbb Q_\ell/\mathbb Z_\ell(-j)$. Since $L$ contains $\mu_\ell$
+and $\ell$ is odd, the local cyclotomic image is $1+\ell^{c_w}\mathbb Z_\ell$,
+where $c_w$ is maximal with $\mu_{\ell^{c_w}}\subset L_w$.
+Indeed the closed subgroups of $1+\ell\mathbb Z_\ell$ are given by
+the $\ell$-adic logarithm, and the local cyclotomic image is open.
+Thus the local length is $c_w+v_\ell(j)$ and
+$\ell^{c_w-1}(\ell-1)\le[L_w:\mathbb Q_\ell]\le n_0$.
+There are at most $n_0$ such places, and the complex places contribute
+zero. In particular $H^2$ is finite and its logarithmic cardinality
+obeys the same bound $(2D_0)^{(2jn_0)^C}$ after increasing $C$.
+
+For the small-conductor branch at $j=1$ one can pass directly to the
+twisted degree-one kernel. Let $E_\ell$ be a finite coefficient
+extension of $\mathbb Q_\ell$ containing the values of $\eta$, with
+integer ring $O$ and ramification index $e_O$. Take
+$L=\mathbb Q(\eta,\mu_\ell)$. Its degree divides
+$\operatorname{ord}(\eta)(\ell-1)$ and is prime to $\ell$.
+Restriction on degree-one cohomology with coefficients
+$(E_\ell/O)(-1)\otimes\eta^{-1}$ is injective since corestriction
+composed with restriction is multiplication by $[L:\mathbb Q]$.
+Over $L$ the character twist disappears. Classes which vanish locally
+at the primes dividing $\ell N$ and on inertia elsewhere restrict
+to the untwisted localization kernel over $L$. Indeed they remain
+locally trivial above $\ell$ and are unramified elsewhere, where the
+untwisted coefficient module itself is unramified. Tensoring the
+untwisted discrete module with $O$ commutes with these kernel
+conditions by finite freeness over $\mathbb Z_\ell$. Consequently the
+$O$-length of the twisted kernel divided by $e_O$ is at most the
+$\mathbb Z_\ell$-length of the untwisted kernel: a cyclic summand of
+length $h$ extends to $O/\ell^h O$, of length $e_O h$.
+
+For $\ell=3,7$ the degrees of $L$ in the small-conductor branch are
+bounded absolutely as shown above. Its conductor divides $\ell N$,
+so the conductor-discriminant formula gives $D_0\le(\ell N)^{n_0}$.
+The preceding bound therefore gives a normalized length, multiplied
+by $\log\ell$, of at most $(\ell N)^{C'}$ with one absolute $C'$
+for both primes, uniformly in the auxiliary primes and in the
+coefficient extension. This supplies the exceptional small-conductor
+estimate at twist one.
+
+\begin{theorem}\label{thm:all-support}
+Assume \eqref{eq:dirichlet-input}. For every $T>0$ and every $F\in\mathcal D_T$ one has
+\[
+ W_T(F)=\sum_{\rho}|\Phi_F(\rho)|^2\ge0 .
+\]
+The series converges, with multiplicities. In particular
+$0\le\lambda^{\rm W}_T\le\lambda_{\rm A}(T)$, and
+$I_\infty(\Gamma_F,\Gamma_F)\le0$ for every smooth primitive radial test.
+\end{theorem}
 \begin{proof}
-Take $q=1$ and its unique character. Its $L$-function agrees with $\zeta$
-on $\Re s>1$ by the Dirichlet series and hence everywhere by continuation.
-Thus the completed function $\xi$ has no zero to the right of the line.
-A zero to the left would give one to the right by $\xi(s)=\xi(1-s)$.
-The preceding theorem gives the sign of $W_T$; \eqref{comparison}
-gives the asserted sign on primitive classes.
+Let $\rho$ be a nontrivial zero. Since $\rho\ne1$,
+\eqref{eq:dirichlet-input} implies $\Re\rho\le1/2$. If $\Re\rho<1/2$, the factors relating $\xi$ to
+$\zeta$ are finite and nonzero in the open critical strip. Hence
+$\xi(1-\rho)=\xi(\rho)=0$ gives a zero of $\zeta$ with real part
+$1-\Re\rho>1/2$, already excluded. Thus $\rho=1-\bar\rho$ for every
+nontrivial zero, with no restriction on its ordinate.
+
+Fix $T>0$. For real smooth tests the asserted identity follows from
+\eqref{comparison} as in the preceding theorem. It also holds for complex
+smooth tests $F=U+iV$: conjugate ordinates give opposite cross terms in
+$|\Phi_U(\rho)+i\Phi_V(\rho)|^2$, and $W_T(F)=W_T(U)+W_T(V)$.
+The rapid decay of both transforms justifies the pairing.
+
+For $F\in\mathcal D_T$, choose smooth tests $F_n$ converging in the form
+norm, using the core construction in the proof of Theorem~\ref{thm:KEP2}.
+The vectors $(\Phi_{F_n}(\rho))_\rho$ are Cauchy in $\ell^2$, since the
+squared distance between the $n$th and $m$th vectors is $W_T(F_n-F_m)$,
+which tends to zero by form continuity. Their limit has coordinates
+$\Phi_F(\rho)$: on the critical line Cauchy--Schwarz gives
+$|\Phi_{F_n-F}(\rho)|\le\sqrt{2T}\,\|F_n-F\|_2$. Taking squared norms
+gives the stated equality. The polar term vanishes on $\mathcal P_T$,
+so the infima over complete and primitive unit vectors are ordered as
+claimed. On smooth primitive tests \eqref{comparison} gives the
+intersection inequality with the opposite sign.
 \end{proof}
 
+For example, take $R=5$ or $R=10$. Under \eqref{eq:dirichlet-input},
+Theorem~\ref{thm:all-support} gives, for every $F\in\mathcal D_R$,
+\[
+ W_R(F)=\sum_{\gamma}
+   \left|\int_{-R}^{R}F(t)e^{i\gamma t}\,dt\right|^2 .
+\]
+Here $R$ bounds the support of the test; the sum runs over all ordinates
+with multiplicity at either radius. There is also an unconditional
+consequence of the bounded-window certificate at both radii. Put
+$r=2.8022$, take $G\in C_c^\infty(-r,r)$ and set $F(t)=G(t-h)$ with
+$|h|\le R-r$. Then $F$ is supported in $(-R,R)$ and
+$\Phi_F(s)=e^{(s-1/2)h}\Phi_G(s)$. In each term of the comparison
+formula the two translation factors have product
+$e^{(\rho-1/2)h}e^{(1/2-\rho)h}=1$. Thus
+$W_R(F)=W_r(G)$, and \eqref{eq:power-window} applies with the same
+norm since translation preserves $\|G\|_2$. For a sum of tests with
+different translations the mixed terms carry different exponential
+factors, so this argument gives no bound for them.
+
 \begin{proposition}[the matrices in every degree]\label{prop:all-degree-gram}
-Under the nonvanishing hypothesis of the preceding corollary, let $a_j>1$
+With the arithmetic input \eqref{eq:dirichlet-input}, let $a_j>1$
 and $u_j=a_j-\tfrac12$, $1\le j\le d$. Then, for $c_j\in\mathbb C$,
 \[
  \sum_{j,k=1}^d c_j\overline{c_k}K(a_j,a_k)
@@ -3304,7 +4589,7 @@ In particular the hypothesis of Proposition~\ref{ladder} holds in every degree.
 Write $X(z)=\xi(\tfrac12+z)$, where
 $\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$.
 The logarithmic derivative $X'(u)/X(u)$ is exactly $L(\tfrac12+u)$.
-By the preceding corollary's specialization all zeros of $X$ are imaginary.
+By the specialization in Theorem~\ref{thm:all-support} all zeros of $X$ are imaginary.
 Since $X$ is even, of order one and nonzero at the origin, its Hadamard
 product is $X(0)\prod_{\gamma>0}(1+z^2/\gamma^2)$.
 Indeed the exponential factors for $i\gamma$ and $-i\gamma$ cancel,
@@ -3330,11 +4615,10 @@ the primitive self-intersection with the negative of the zero sum.
 Together with the theorem above, these results complete the equivalence
 between the intersection inequality for every compact support and the
 classical Riemann hypothesis. The certificates of \S\ref{sec:log5} give explicit margins on
-bounded windows. Proposition~\ref{prop:all-degree-gram} identifies the matrices in every degree as Gram matrices under half-plane nonvanishing. Under the same
-hypothesis of the corollary, specialization to modulus one and the
-functional equation place every nontrivial zero on the critical line.
-The resulting sum of squares gives $W_T(F)\ge0$ for every $T>0$ and
-every $F\in\mathcal D_T$.
+bounded windows. Using \eqref{eq:dirichlet-input},
+Theorem~\ref{thm:all-support} gives the spectral identity on the full
+domain for every radius, and Proposition~\ref{prop:all-degree-gram}
+gives its matrix form in every degree.
 
 \begin{thebibliography}{99}
 \bibitem{BoasKac1945} R.~P.~Boas and M.~Kac, \emph{Inequalities for Fourier transforms of positive
@@ -3422,5 +4706,7 @@ premiers}, Comm.~S\'em.~Math.~Univ.~Lund (1952), 252--265.
 
 \bibitem{Zhu2026} X.~Zhu, \emph{Weil positivity in compact windows: a finite reduction, certified
 two-sided bounds, and a Landau--Widom decay law}, arXiv:2608.24827 (2026).
+\bibitem{CharneyStab} R. Charney, Homology stability for $GL_n$ of a Dedekind domain, Invent. Math. 56 (1980), 1--17.
+\bibitem{WeibelK} C. Weibel, The $K$-book, Graduate Studies in Mathematics 145, AMS, 2013.
 \end{thebibliography}
 \end{document}
