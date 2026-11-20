@@ -33,14 +33,17 @@ $\mathbb Q$.
   $T=2.8022$.
 - **Finite reduction.** On the arithmetic side the all-window inequality is reduced to positive
   semidefiniteness, in every degree, of a single sequence of explicit matrices.
-- **Conditional statement.** If $\zeta(s)$ has no zero to the right of the critical line, then
-  $W_T\ge 0$ on the entire form domain for every $T>0$.
+- **All windows, under half-plane nonvanishing.** Assume $L(s,\chi)\ne 0$ for $\Re s>1/2$ for
+  every Dirichlet character $\chi$ (the pole of a principal character excluded). Then $W_T\ge 0$
+  on the entire form domain for every $T>0$, the primitive self-intersection is $\le 0$, and the
+  matrices of the finite reduction are Gram matrices in every degree.
 
-**Status of the all-window sign.** As Paper 47 states in its own text, the sign for arbitrary $T$
-is not proved there by an independent arithmetic argument: it would follow from the matrix
-inequalities of the finite reduction in every degree. The papers therefore establish the complete
-Weil-type route and the exact equivalence of its last step with the Riemann hypothesis; they do
-not, as written, contain an unconditional proof of global positivity.
+**Status of the all-window sign.** In Paper 47 the sign for every window is proved under the
+half-plane nonvanishing hypothesis above; for modulus one that hypothesis is the statement that
+$\zeta$ has no zero to the right of the critical line. Unconditionally the paper proves the sign
+on bounded windows (up to $T=2.8022$) and the equivalence theorem. The papers therefore establish
+the complete Weil-type route and the exact equivalence of its last step with the Riemann
+hypothesis.
 
 ## Papers 43–48
 
