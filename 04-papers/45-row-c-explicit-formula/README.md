@@ -15,4 +15,4 @@ radial functions. The main identity is Weil's explicit formula, and the statemen
 It uses [Paper 43](../43-row-a-torsion-theory/) and [Paper 44](../44-row-b-arithmetic-family/).
 
 - Source: [`main.tex`](main.tex)
-- PDF: [`explicit-formula-trace-idele-class-group.pdf`](explicit-formula-trace-idele-class-group.pdf) (22 pages)
+- PDF: [`explicit-formula-trace-idele-class-group.pdf`](explicit-formula-trace-idele-class-group.pdf) (23 pages)

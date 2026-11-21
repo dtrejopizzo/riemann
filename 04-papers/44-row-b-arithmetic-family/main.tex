@@ -96,11 +96,15 @@ which composes according to the multiplication of positive integers, and
 computes on it the functional $T$ of \cite{Companion}. In
 \cite[Section~1]{Companion} the Hermitian form $T(F\star G^\dagger)$ is set
 beside the intersection pairing of correspondences on the square of a curve,
-as having the same formal shape. We extend that comparison by one step, which
-is ours and is not made in \cite{Companion}: since the intersection number of
+as having the same formal shape. That comparison can be taken one step
+further: since the intersection number of
 two correspondences is the intersection number with the diagonal of the
 composite of one with the transpose of the other, $T$ stands in the place
-of the intersection number with the diagonal. This is an analogy which
+of the intersection number with the diagonal. This reading is that of
+Connes, Consani and Marcolli \cite[Section~7.1]{CCM}, for whom the scaling
+correspondences of the adele class space, indexed by the idele classes,
+play the role of the Frobenius correspondences, and the local terms of the
+explicit formula that of their intersections with the diagonal. This is an analogy which
 motivates the constructions; no statement below depends on it.
 
 Let $S$ be a finite set of places of $\Q$ containing $\infty$ and at least
@@ -144,8 +148,15 @@ an integer $n\ge1$ with $P(n)\subseteq S_f$ we put $\Frob_n=\Frob_{n,P(n)}$.
 For a prime power, $\Frob_{p^k}$ is the image under $j_p$ of the normalized
 Haar measure of the shell $p^k\Z_p^\times$. We use the name ``Frobenius''
 only because of the composition law $\Frob_m\star\Frob_n=\Frob_{mn}$ and of
-the role of $\Frob_{p^k}$ in the trace (Theorem~\ref{thm:introB}). These
-measures are not Frobenius elements of a Galois group, and for $n>1$ they are
+the role of $\Frob_{p^k}$ in the trace (Theorem~\ref{thm:introB}). There
+is also a relation with class field theory: in the idele class group of $\Q$
+the reciprocity map carries the image of $\Z_p^\times$ onto the inertia group
+at $p$ of the maximal abelian extension, and the image of $p$ to a Frobenius
+element at $p$, up to the convention of sign, so that the shell
+$p^k\Z_p^\times$ which carries $\Frob_{p^k}$ corresponds to the coset of the
+inertia group formed by the $k$-th powers of the Frobenius elements. The
+measures $\Frob_n$ themselves
+are not Frobenius elements of a Galois group, and for $n>1$ they are
 not invertible in the monoid of compactly supported measures
 (Theorem~\ref{thm:introA}(b) and the remark after
 Theorem~\ref{thm:frobdagger}). Throughout the introduction,
@@ -174,7 +185,18 @@ $\mu_s\star\mu_t=\mu_{s+t}$ and $\mu_{\log q}=\Frob_q$.
 These statements are Theorems~\ref{thm:frobmonoidal}, \ref{thm:frobdagger}
 and~\ref{thm:invsemigroup} and Proposition~\ref{rem:nointerp}; they follow
 from the fact that the convolution of the Haar measures of two cosets is the
-Haar measure of the product coset (Lemma~\ref{lem:coset}). The convolution
+Haar measure of the product coset (Lemma~\ref{lem:coset}). They are
+instances of general facts: the idempotent probability measures on a compact
+group are the Haar measures of its closed subgroups \cite{Wendel}, the
+regular elements of the convolution semigroup of probability measures on a
+topological group are the translates of the idempotents
+\cite[Proposition~2.4]{BCHR}, and a commutative inverse semigroup is a
+semilattice of groups \cite{Lawson}. The relation
+$\Frob_m\star\Frob_n=\Frob_{mn}$ is shared with the isometries $\mu_n$ of
+the algebra of Bost and Connes \cite{BostConnes}; there
+$\mu_n^*\mu_n=1$ and $\mu_n\mu_n^*$ is a projection which depends on $n$,
+whereas $\Frob_n$ is normal and $\Frob_n\star\Frob_n^\dagger$ depends only
+on $P(n)$, so the two families are not images of one another. The convolution
 of $\Frob_n$ with the Haar measure $\Delta^{\mathrm{rad}}$ of the maximal
 compact subgroup of $C_S$ is the Haar probability measure
 $\Gamma_n^{\mathrm{rad}}$ of the level set $\{|x|_S=1/n\}$
@@ -267,8 +289,22 @@ at $p$ on a function concentrated near the shell $j_p(p^k\Z_p^\times)$, on
 which $\varrho_p=p^{-k/2}$ and whose volume is $\log p$; for the
 interpretation of these terms as contributions of periodic orbits of the
 action of the idele class group see \cite[Sections~IV and~VI]{Connes99}.
-What Theorem~\ref{thm:introB} adds is the statement for composite $n$ and
-the dependence of the archimedean term on the level $N$.
+What Theorem~\ref{thm:introB} adds is elementary, and follows in a few
+lines from the description of the maps $j_v$. For $n$ with two distinct
+prime divisors it records that the finite local terms vanish on
+$\Frob_n^{[h,N]}$, because the support of $\Frob_n$ meets no
+$j_q(\Q_q^\times)$; this is the form taken on the family $\Frob_n$ by the
+vanishing of $\Lambda$ off the prime powers, and it corresponds to the fact,
+established in \cite[Section~VII]{Connes99}, that the points of the adele
+class space with two vanishing coordinates do not contribute to the trace
+formula. It also records the factor $\iota$ of the archimedean term: the
+function $\Frob_n^{[h,N]}$ is nonzero on $j_\infty(\R_{>0})$ only if
+$n\equiv1$ modulo $s^N$ for every $s\in S_f\smallsetminus P(n)$, that is,
+only if the class of $n$ in $\prod_s(\Z/s^N)^\times$ is trivial; compare
+\cite[Theorem~1]{CCKnots}, where the monodromy of the periodic orbit of
+length $\log p$ in the cover attached to a finite abelian extension is the
+Frobenius element at $p$. We have not found either statement in the
+literature in this form, nor the family $\Frob_n$ itself.
 
 Frobenius correspondences in another sense were introduced by Connes and
 Consani on the square of the arithmetic site
@@ -2514,10 +2550,12 @@ We end this discussion with an analogy, on which no statement of this paper
 depends. In \cite[Section~1]{Companion} the form $I_A$ is compared, as to
 its formal shape, with the intersection pairing of correspondences on the
 square of a smooth projective curve; in the extension of that comparison
-made in the introduction, which is ours, the unit $\Delta$
+recalled in the introduction \cite[Section~7.1]{CCM}, the unit $\Delta$
 of $M_c(C_S)$ stands in the place of the diagonal. On the square of a curve
 of genus $\mathfrak g$ the diagonal has self-intersection number
-$2-2\mathfrak g$ \cite[Ch.~V, Exercise~1.6(a)]{Hartshorne}. Here $\Delta$ is
+$2-2\mathfrak g$ \cite[Ch.~V, Exercise~1.6(a)]{Hartshorne}; for a global
+field, the logarithm of the module of a differential idele is proposed as its
+analogue in \cite[Section~7.1]{CCM}, and for $\Q$ that number is $0$. Here $\Delta$ is
 not an element of $\DA$, the number $I_A(\Delta,\Delta)$ is not defined, and
 by Theorem~\ref{thm:infgenus} the values of $I_A$ on the approximations
 $\Delta_{\varepsilon,N}/\int\Delta_{\varepsilon,N}$ of $\Delta$ tend to
@@ -2780,6 +2818,17 @@ $\Rel s>0$, and $1-p^{-s}=s\log p+O(s^2)$.
 
 \begin{thebibliography}{99}
 
+\bibitem{BCHR}
+T.~Banakh, M.~Cencelj, O.~Hryniv and D.~Repov\v{s}, \emph{Characterizing
+compact Clifford semigroups that embed into convolution and
+functor-semigroups}, Semigroup Forum \textbf{83} (2011), 123--133,
+arXiv:0811.1026.
+
+\bibitem{BostConnes}
+J.-B.~Bost and A.~Connes, \emph{Hecke algebras, type III factors and phase
+transitions with spontaneous symmetry breaking in number theory}, Selecta
+Math. (N.S.) \textbf{1} (1995), 411--457.
+
 \bibitem{BurnolSimple}
 J.-F.~Burnol, \emph{The explicit formula in simple terms}, preprint, 1998,
 arXiv:math/9810169.
@@ -2795,6 +2844,17 @@ Paris \textbf{352} (2014), no.~12, 971--975.
 \bibitem{CCGeomArith}
 A.~Connes and C.~Consani, \emph{Geometry of the arithmetic site}, Adv. Math.
 \textbf{291} (2016), 274--329.
+
+\bibitem{CCKnots}
+A.~Connes and C.~Consani, \emph{Knots, primes and class field theory}, in:
+Regulators V, Contemp. Math. \textbf{842}, Amer. Math. Soc., Providence, RI,
+2026, 105--132, arXiv:2501.06560.
+
+\bibitem{CCM}
+A.~Connes, C.~Consani and M.~Marcolli, \emph{The Weil proof and the geometry
+of the ad\`eles class space}, in: Algebra, Arithmetic, and Geometry: in honor
+of Yu.~I.~Manin, Vol.~I, Progr. Math. \textbf{269}, Birkh\"auser, Boston,
+2009, 339--405, arXiv:math/0703392.
 
 \bibitem{Hartshorne}
 R.~Hartshorne, \emph{Algebraic Geometry}, Graduate Texts in Math.
@@ -2822,6 +2882,10 @@ d\'eduisent}, Actualit\'es Sci. Ind. \textbf{1041}, Hermann, Paris, 1948.
 A.~Weil, \emph{Sur les ``formules explicites'' de la th\'eorie des nombres
 premiers}, Comm. S\'em. Math. Univ. Lund (1952), Tome suppl\'ementaire,
 252--265.
+
+\bibitem{Wendel}
+J.~G.~Wendel, \emph{Haar measure and the semigroup of measures on a compact
+group}, Proc. Amer. Math. Soc. \textbf{5} (1954), 923--929.
 
 \end{thebibliography}
 

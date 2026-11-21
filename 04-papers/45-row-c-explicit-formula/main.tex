@@ -69,7 +69,7 @@ gives no information on the zeros.  The form
 $(F,G)\mapsto T(F\star G^\dagger)$ is nondegenerate on the functions
 $\Gamma_h$ for finite $S$; in the limit its radical consists of the
 $\Gamma_h$ with $\Phi_h$ vanishing at $0$, $1$ and the zeros of $\xi$, and
-is zero by Heath-Brown's theorem on simple zeros.
+is zero, the distinct zeros being too numerous.
 \end{abstract}
 
 \maketitle
@@ -238,10 +238,14 @@ $\Rel s=\frac12$ if and only if
 $\sum_\rho\Phi_F(\rho)\overline{\Phi_F(1-\bar\rho)}\ge0$ for all test
 functions $F$ of a suitable class; for real $F$ this sum is
 $\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$.  Several restricted forms of this
-criterion are known.  The class may be taken to be $C_c^\infty(\R)$; see
-Yoshida \cite{Yoshida}, Bombieri \cite{Bombieri} and Burnol \cite{BurnolCR}.
-Odd test functions suffice, and so do even ones, since $\xi$ has no real
-zero; this follows by the argument of \cite[Proposition~1]{Yoshida}, see
+criterion are known.  The class may be taken to be $C_c^\infty(\R)$: Yoshida
+\cite[Lemma~1 and Proposition~1]{Yoshida} gives a proof, for the Dedekind
+zeta function of any number field, and calls the statement a well known
+observation of Weil; see also Bombieri \cite{Bombieri} and Burnol
+\cite{BurnolCR}.  Odd test functions suffice
+\cite[Proposition~1(1)]{Yoshida}, and so do even ones: by
+\cite[Proposition~1(2)]{Yoshida} these detect every zero off the line which
+is not real, and $\xi$ has no real zero; see
 Theorem~\ref{thm:sufficiency}.  Connes and Consani
 \cite[Proposition~C.1]{CCWeilArch} show, following \cite{Yoshida}, that one
 may in addition require the Mellin transform of the test function to vanish
@@ -313,7 +317,13 @@ part (iii), to the statement that no nonzero $h\in C_c^\infty(\R)$ has
 $\Phi_h$ vanishing at $0$, at $1$ and at all zeros of $\xi$; the zeros enter
 here without multiplicity, and the statement follows from Jensen's formula
 and the theorem of Heath-Brown \cite{HeathBrown} that a positive proportion
-of the zeros of $\zeta$ are simple.
+of the zeros of $\zeta$ are simple.  That statement is known: it is
+contained in the nondegeneracy, proved by Yoshida
+\cite[Proposition~2 and its Corollary]{Yoshida}, of the form
+$\sum_\rho\Phi_h(\rho)\overline{\Phi_g(1-\bar\rho)}$ on $C_c^\infty(\R)$;
+see the end of Section~\ref{sec:sufficiency}.  What is proved here is the
+description (iii) of the radical of the form with its polar term, which
+reduces (ii) to it.
 
 Section~\ref{sec:carrier} recalls what is used from \cite{P43,P44}.
 Section~\ref{sec:EF} contains the explicit formula,
@@ -1552,8 +1562,15 @@ $F\in C_c^\infty(\R)$ be primitive with $h:=F\star F^\dagger$ vanishing
 outside $(-\log2,\log2)$.  Then the sum over $n$ in
 \eqref{eq:radialtracelim} is empty, so that
 $\Il(\Gamma_F,\Gamma_F)=W_\infty(\Gamma_h)$, and this number is $\le0$: this
-is Weil's inequality at the archimedean place, due to Yoshida
-\cite{Yoshida}; see \cite[Introduction]{CCWeilArch}, and
+is Weil's inequality at the archimedean place, in the terminology of
+\cite[Introduction]{CCWeilArch}.  It follows from
+\cite[Theorem~1]{Yoshida}, where it is shown, by a computation which is in
+part numerical, that
+$\sum_\rho\Phi_F(\rho)\overline{\Phi_F(1-\bar\rho)}>0$ for every nonzero
+smooth $F$ with support in an interval of length $\log2$, primitive or not;
+the support of a function $F$ as above lies in such an interval, because
+the convex hull of the support of $F\star F^\dagger$ is the difference set
+of that of the support of $F$.  See
 \cite[Section~5, after Convention~5.5]{P43} for the comparison of
 $W_\infty$ with the distribution used there; see also the remark after
 \cite[Theorem~6.18]{P43}.  For positivity under support conditions see also
@@ -1819,10 +1836,23 @@ large $T$ there is a zero $\rho$ with $|\Iml\rho-T|<A/\log\log\log T$
 \cite[\S9.12]{TitchmarshZeta}, which gives at least a constant times
 $X\log\log\log X$ distinct zeros with $0<\Iml\rho\le X$.  The statement that
 an entire function of exponential type which vanishes at all zeros of $\xi$
-is identically zero is proved in this way in \cite[Lemma~2.1]{Suzuki}.  For
-nondegeneracy statements for the form
-$\sum_\rho\Phi_F(\rho)\overline{\Phi_G(1-\bar\rho)}$ on test functions with
-support in a fixed interval see \cite{Yoshida}.  A lower bound of order $X$
+is identically zero is proved in this way in \cite[Lemma~2.1]{Suzuki}, and
+the same counting argument is in the proof of \cite[Theorem~2]{Yoshida},
+where the count of the distinct zeros is taken from a theorem of Siegel.
+The statement also follows, without any information on the zeros, from a
+theorem of Yoshida: for every $a>0$ the Hermitian form
+$(h,g)\mapsto\sum_\rho\Phi_h(\rho)\overline{\Phi_g(1-\bar\rho)}$ is
+nondegenerate on the smooth functions with support in $[-a,a]$, hence on
+$C_c^\infty(\R)$ \cite[Proposition~2 and its Corollary]{Yoshida}; this is
+proved there for the Dedekind zeta function of any number field, from the
+explicit formula.  If $\Phi_h$ vanishes at every zero of $\xi$, then $h$ is
+in the radical of that form, so $h=0$.  With
+Proposition~\ref{prop:radicallim}(i) this gives a second proof of
+Theorem~\ref{thm:radicallim} for $c=0$.  The form considered by Yoshida has
+no polar term; what Theorem~\ref{thm:radicallim} adds to his result is the
+polar term $\Phi_h(1)\overline{\Phi_g(0)}+\Phi_h(0)\overline{\Phi_g(1)}$ and
+the term in $c$, which are dealt with by Lemma~\ref{lem:radicalnec}.  A
+lower bound of order $X$
 for the number of distinct zeros would not suffice, since the bound for
 $n(R)$ is of that order; and the bound $O(\log X)$ for the multiplicity of a
 zero of height $X$, which follows from the second of the classical facts
@@ -1855,7 +1885,8 @@ zeta function}, Selecta Math. (N.S.) \textbf{5} (1999), 29--106.
 \bibitem{CCWeilArch}
 A.~Connes and C.~Consani, \emph{Weil positivity and trace formula, the
 archimedean place}, Selecta Math. (N.S.) \textbf{27} (2021), no.~4, Paper
-No.~77; arXiv:2006.13771.
+No.~77; arXiv:2006.13771.  Statements are cited with the numbering of the
+arXiv version; in the journal Proposition~C.1 is Proposition~6.12.
 
 \bibitem{Conrey}
 J.~B.~Conrey, \emph{More than two fifths of the zeros of the Riemann zeta

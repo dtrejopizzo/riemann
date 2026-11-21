@@ -102,7 +102,13 @@ Weil distribution, and we say below what is classical in it.  The definitions
 of the composition $\star$ and of the involution $\dagger$ in
 Section~\ref{sec:cat} are modelled on the convolution of kernels on
 $C\times C$ and on a duality functor; Appendix~\ref{sec:classical} proves the
-corresponding statements for graphs of automorphisms of a curve.
+corresponding statements for graphs of automorphisms of a curve.  The
+comparison of the explicit formula with the intersection theory of
+correspondences on a curve is older: Connes, Consani and Marcolli
+\cite[Section~7.1]{CCM} read the scaling action of the idele class group on
+the adele class space as a family of Frobenius correspondences, and the
+local terms of the explicit formula as their intersections with the
+diagonal.
 
 \subsection*{The setting}
 
@@ -341,7 +347,8 @@ positive (negative) definite on some infinite-dimensional subspace.  Part (i)
 uses only that $\widehat T+c$ is real-analytic, not identically zero on any
 component, and of at most logarithmic growth.  For $c=0$ and for functions of
 $|w|_S$ alone with small support the sign of the form is governed by Weil's
-inequality at the real place, due to Yoshida; see the remark after
+inequality at the real place, which follows from a theorem of Yoshida; see
+the remark after
 Theorem~\ref{thm:signature}.
 
 \subsection*{The completion and the rulings}
@@ -2554,7 +2561,7 @@ $\sup e^{l|t|}|D^{m}f|$ of $E_{\R}$ are equivalent to the Schwartz seminorms
 $\sup\langle x\rangle^{l}|\partial_x^{k}f|$, and $E_{\R}=\mathcal S(\mathbb L)$,
 the Schwartz functions on the two lines, with pointwise product.  Since
 $\mathcal S(\R^{m})\widehat\otimes\mathcal S(\R^{n})=\mathcal S(\R^{m+n})$
-\cite[Chapter~51]{Treves} and the completed tensor product commutes with
+\cite[Theorem~51.6]{Treves} and the completed tensor product commutes with
 finite direct sums, $E_{\R}^{\widehat\otimes k}=\mathcal S(\mathbb L^{k})$.  The
 bimodule structure of $E_{\R}\widehat\otimes V\widehat\otimes E_{\R}$ is
 multiplication by functions of the first and of the last variable, and
@@ -4719,9 +4726,10 @@ $W_p(F\star F^{\dagger})=0$ for every $p\in S_f$ by \eqref{eq:radialS}, so
 that $I_A(F,F)=W_{\infty}(F\star F^{\dagger})$.  By the comparison of
 $W_{\infty}$ with the distribution $W_{\R}$ of \cite{CCWeilArch} made after
 Convention~\ref{conv:Winf}, this number is $\le0$: this is Weil's inequality
-at the archimedean place, due to Yoshida \cite{Yoshida}; see
-\cite[Introduction and Theorem~1]{CCWeilArch}, and \cite{Bombieri,BurnolCR} for
-positivity under a support condition.  So a subspace of $\DA$ on which $I_A$
+at the archimedean place \cite[Introduction and Theorem~1]{CCWeilArch}, which
+follows from \cite[Theorem~1]{Yoshida}, proved there by a computation which
+is in part numerical; see \cite{Bombieri,BurnolCR} for positivity under a
+support condition.  So a subspace of $\DA$ on which $I_A$
 is positive definite, as in Theorem~\ref{thm:signature}(b),(d) and
 Remark~\ref{rem:plus}(iv), contains no nonzero $F$ of this kind.
 
@@ -5312,7 +5320,7 @@ $W_{\infty}(H)$ is given by \eqref{eq:Winfeven} with $b=h$, and $H(1)=h(0)$.
 \end{proof}
 
 Let $\Lambda$ be the von Mangoldt function.  By Mertens' theorem
-\cite{Mertens}, \cite[Chapter~2]{MontgomeryVaughan},
+\cite{Mertens}, \cite[Theorem~2.7]{MontgomeryVaughan},
 there is a constant $C_0$ such that
 \begin{equation}\label{eq:mertenssum}
 \sum_{r\le x}\frac{\Lambda(r)}{r}=\log x+E(x),\qquad|E(x)|\le C_0\quad(x\ge1).
@@ -5612,7 +5620,7 @@ D_h(D_h(K))=s^{*}\Bigl(\bigl(s^{*}(K^{\vee})\otimes\mathcal L[1]\bigr)^{\vee}
 base change to $Y$ of the structure morphism of $C$; it is smooth and
 projective of relative dimension one, with relative dualizing sheaf
 $q_2^{*}\omega_C$.  Grothendieck duality for $p_{13}$
-\cite[Ch.~VII, Corollary~3.4(c)]{HartshorneRD}, see also
+\cite[Ch.~VII, Theorem~3.3 and Corollary~3.4]{HartshorneRD}, see also
 \cite[Theorem~3.34]{Huybrechts}, gives
 \[
 \bigl(Rp_{13*}E\bigr)^{\vee}\cong
@@ -5715,7 +5723,15 @@ the Riemann zeta function}, Selecta Math. (N.S.) \textbf{5} (1999), 29--106.
 \bibitem{CCWeilArch}
 A.~Connes and C.~Consani, \emph{Weil positivity and trace formula, the
 archimedean place}, Selecta Math. (N.S.) \textbf{27} (2021), no.~4, Paper
-No.~77, arXiv:2006.13771.
+No.~77, arXiv:2006.13771.  Equations and statements are cited with the
+numbering of the arXiv version; in the journal the equations of the
+appendices are shifted by one and Proposition~C.1 is Proposition~6.12.
+
+\bibitem{CCM}
+A.~Connes, C.~Consani and M.~Marcolli, \emph{The Weil proof and the geometry
+of the ad\`eles class space}, in: Algebra, Arithmetic, and Geometry: in honor
+of Yu.~I.~Manin, Vol.~I, Progr. Math. \textbf{269}, Birkh\"auser, Boston,
+2009, 339--405, arXiv:math/0703392.
 
 \bibitem{DLMF}
 \emph{NIST Digital Library of Mathematical Functions},
@@ -5753,7 +5769,8 @@ J. Reine Angew. Math. \textbf{78} (1874), 46--62.
 \bibitem{MeyerIdele}
 R.~Meyer, \emph{On a representation of the idele class group related to
 primes and zeros of $L$-functions}, Duke Math. J. \textbf{127} (2005),
-519--595.
+519--595, arXiv:math/0311468; statements are cited with the numbering of the
+arXiv version.
 
 \bibitem{MeyerCrossed}
 R.~Meyer, \emph{The cyclic homology and $K$-theory of certain adelic crossed
