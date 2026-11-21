@@ -1,29 +1,29 @@
-# Paper 13 — A Lyapunov Theorem for the de Bruijn–Newman Flow, a Dynamical No-Go, and the Extremal Form of the Riemann Hypothesis as Gap Universality
+# Monotonicity of the Off-Line Mass under the de Bruijn–Newman Zero Flow
 
-The paper studies the de Bruijn–Newman heat flow. For this flow the Riemann hypothesis is
-equivalent to $\Lambda=0$, using the cited Rodgers–Tao bound $\Lambda\ge0$ and the Polymath15 bound
-$\Lambda\le0.2$. The total off-line-ness is a strict Lyapunov function, so the critical line is
-the global attractor of the flow. The Lyapunov identity is arithmetic-blind, which gives a no-go
-for arguments that use the flow alone. The constant $\Lambda$ is an extremal quantity, the first
-backward collision time of the zeros.
+The paper studies the zero dynamics of the backward heat flow $\partial_t p=-\partial_{zz}p$, which defines the
+de Bruijn–Newman deformation $H_t$ of the Riemann $\xi$-function. It records an identity for the off-line mass
+$\mathcal L=\sum_j(\operatorname{Im} z_j)^2$ and computes backward-collision times for a few windows of zeta zeros.
 
-## Main results
+## Contents
 
-- `thm:lyap`: $\mathcal L=\sum_j(\operatorname{Im}z_j)^2$ satisfies
-  $\dot{\mathcal L}=-2\sum_{j\ne k}(y_j-y_k)^2/|z_j-z_k|^2\le0$ — PROVED.
-- `cor:height`: any off-line zero has imaginary height $\le\sqrt{2\Lambda}\le0.63$ — PROVED
-  (uses the CITED bound $\Lambda\le0.2$).
-- `thm:nogo` (N5): the identity holds for every conjugate-symmetric configuration, so no
-  argument from the flow alone proves the Riemann hypothesis — NO-GO.
-- `prop:collision`: $\Lambda=\sup t_c$, with $t_c=-g_0^2/8$ to two-body order; one off-line zero
-  forces $\Lambda>0$ — PROVED at two-body order (the higher-order statement is ARGUED).
-- Normalized backward-collision margin $t_c/s^2$ clusters near $-0.02$ for real zeros — NUMERICAL.
-- Reduction to unconditional GUE gap universality — CONDITIONAL / OPEN.
+- Theorem 2.1: for a real polynomial with simple zeros,
+  $\dot{\mathcal L}=-2\sum_{j\ne k}(y_j-y_k)^2/|z_j-z_k|^2\le0$ (elementary finite-configuration identity).
+- Corollary 2.2: de Bruijn's strip bound, $\Lambda\le t_0+\Delta^2/2$ (known; cited to de Bruijn 1950), with an
+  exact polynomial example showing it is only an upper bound.
+- Remarks 3.1, 4.1, 4.2: the identity holds for every conjugate-symmetric configuration and so does not
+  distinguish $\xi$; two-body collision time $-g_0^2/8$; the computation yields no RH criterion in terms of gap statistics.
+- Numerical: backward-collision times $t_c$ and ratios $t_c/s^2$ for three windows of 20 zeta zeros.
+
+The flow, de Bruijn's bound and $\Lambda\ge0$ (Rodgers–Tao) are known; the paper's contribution is the
+monotonicity identity stated for the off-line mass and the small numerical table.
 
 ## Files
 
-- `main.tex`, `main.pdf` — source and compiled paper.
+- [main.tex](main.tex) — LaTeX source.
+- [heat-flow-lyapunov.pdf](heat-flow-lyapunov.pdf) — compiled paper (4 pages).
+- [collision_times.py](collision_times.py) — computes the table and the polynomial example.
+- [output.txt](output.txt) — output of the script.
 
 ## Relation to other papers
 
-A companion of the map in Papers 12 and 14.
+Companion to Paper 12.

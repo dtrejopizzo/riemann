@@ -1,0 +1,6 @@
+zeros 20-39: T=111.5 mingap=0.845 s=2.185 t_c=-0.0951 two-body=-0.0893 t_c/s^2=-0.0199
+zeros 600-619: T=946.9 mingap=0.313 s=1.253 t_c=-0.0127 two-body=-0.0123 t_c/s^2=-0.0081
+zeros 2500-2519: T=3043.9 mingap=0.385 s=1.016 t_c=-0.0197 two-body=-0.0185 t_c/s^2=-0.0191
+a=0.3: all-real time 0.0586 (de Bruijn bound y0^2/2 = 0.125)
+a=1.0: all-real time 0.0948 (de Bruijn bound y0^2/2 = 0.125)
+a=3.0: all-real time 0.1189 (de Bruijn bound y0^2/2 = 0.125)
