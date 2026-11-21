@@ -17,7 +17,7 @@ $\mathbb Q$.
 |---|---|---|---|
 | A | Correspondences, involution, trace, bidegree | [43](04-papers/43-row-a-torsion-theory/) | A convolution algebra of semilocal idele class correspondences with its involution and canonical trace; the two Tate characters give the bidegree and define the primitive subspace. |
 | B | Frobenius | [44](04-papers/44-row-b-arithmetic-family/) | A Frobenius measure for every positive integer with prime divisors in $S$; its contact with the diagonal has weight $\Lambda(n)/\sqrt n$, supported on prime powers. |
-| C | Fixed-point (explicit) formula | [45](04-papers/45-row-c-explicit-formula/) | Weil's explicit formula for the radial trace: the self-intersection of a radial class equals its two Tate moments minus a sum over the nontrivial zeros of $\zeta$; a zero off the critical line is detected by a smooth primitive test of compact support. |
+| C | Fixed-point (explicit) formula | [45](04-papers/45-row-c-explicit-formula/) | Weil's explicit formula for the radial trace: the self-intersection of a radial class equals its two Tate moments minus a sum over the nontrivial zeros of $\zeta$; if $\zeta$ had a zero off the critical line, a real primitive test function of compact support would detect it. |
 | D | Intersection inequality (the sign) | [47](04-papers/47-row-d-dual-certificates/) | The sign of the radial intersection form $W_T$ on functions supported in $(-T,T)$: see below. |
 
 ### What Paper 47 establishes
@@ -51,7 +51,7 @@ hypothesis.
 |---|---|---|
 | [43](04-papers/43-row-a-torsion-theory/) | A Correspondence Algebra with a Canonical Trace on the Idele Class Group | Row A. |
 | [44](04-papers/44-row-b-arithmetic-family/) | An Arithmetic Frobenius Family on the Idele Class Group | Row B. |
-| [45](04-papers/45-row-c-explicit-formula/) | An Explicit Formula and a Comparison Theorem for the Canonical Trace on a Correspondence Algebra of the Idele Class Group | Row C. |
+| [45](04-papers/45-row-c-explicit-formula/) | An Explicit Formula for the Trace on the Idele Class Group | Row C. |
 | [46](04-papers/46-intersection-frame-defect/) | An Intersection Frame for the Explicit Formula: Hodge-Index Transfer, a Frame Defect Theorem and a Function-Field Model | Structural theorems on the extended Weil form; no sign claimed. |
 | [47](04-papers/47-row-d-dual-certificates/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D. |
 | [48](04-papers/48-row-d-route-map/) | A Map of the Routes to Weil Positivity on Finite Windows: Barriers, Falsifiers, and the Open Inequality | Reference map of the routes attempted for the sign, with barrier theorems and falsifiers. |
