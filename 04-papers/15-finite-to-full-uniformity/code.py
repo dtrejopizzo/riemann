@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-HR stability dichotomy (Theorem: uniform HR <=> strictly definite limit).
+Continuity of the HR gap (Lemma 8.2): toy families constructed to have the stated gaps.
 
 We model a Hodge-Riemann tower by symmetric bilinear forms Q_m on a fixed space,
 converging to a limit Q_inf, and track the HR gap delta_m = smallest eigenvalue
 on the primitive subspace (here all of R^4).  Two families:
-  (a) definite limit  Q_inf = diag(0.5,1,1.5,2),  delta_inf = 0.5 > 0  -> uniform HR
-  (b) degenerate limit Q_inf = diag(0,  1,1.5,2),  delta_inf = 0       -> uniform HR fails
+  (a) definite limit  Q_inf = diag(0.5,1,1.5,2),  delta_inf = 0.5 > 0  -> inf_m delta_m > 0
+  (b) degenerate limit Q_inf = diag(0,  1,1.5,2),  delta_inf = 0       -> inf_m delta_m = 0
 The convergence Q_m -> Q_inf is at rate 1/sqrt(m) (a) and 1/m (b).
 """
 import numpy as np
@@ -23,12 +23,12 @@ Qinf_deg = np.diag([0.0, 1.0, 1.5, 2.0])   # delta_inf = 0
 
 ms = [2, 8, 32, 128, 512]
 
-print(" definite limit (delta_inf>0):  expect delta_m -> 0.5 (uniform HR holds)")
+print(" definite limit (delta_inf>0):  expect delta_m -> 0.5 (inf_m delta_m > 0)")
 for m in ms:
     Q = Qinf_def + (1.0/np.sqrt(m)) * R          # rate 1/sqrt(m)
     print(f"   m={m:4d}: delta={gap(Q):.4f}")
 
-print(" degenerate limit (delta_inf=0):  expect delta_m -> 0 (uniform HR fails)")
+print(" degenerate limit (delta_inf=0):  expect delta_m -> 0 (inf_m delta_m = 0; delta_m > 0 for every m)")
 for m in ms:
     Q = Qinf_deg + (1.0/m) * np.eye(4)           # smallest eigenvalue = 1/m
     print(f"   m={m:4d}: delta={gap(Q):.4f}")
