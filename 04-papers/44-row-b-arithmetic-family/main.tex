@@ -13,6 +13,7 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
+\newtheorem*{remark}{Remark}
 
 \newcommand{\C}{\mathbb C}
 \newcommand{\R}{\mathbb R}
@@ -24,7 +25,7 @@
 \newcommand{\Iml}{\operatorname{Im}}
 \newcommand{\Frob}{\operatorname{Frob}}
 \newcommand{\Sh}{\operatorname{Sh}}
-\newcommand{\Prim}{\operatorname{Prim}}
+\newcommand{\Prim}{\operatorname{Cof}}
 \newcommand{\supp}{\operatorname{supp}}
 \newcommand{\vol}{\operatorname{vol}}
 \newcommand{\Hom}{\operatorname{Hom}}
@@ -33,6 +34,8 @@
 \newcommand{\pr}{\operatorname{pr}}
 \newcommand{\degdet}{\operatorname{deg}_{\mathrm{det}}}
 \newcommand{\Knat}{K^{\natural}}
+\newcommand{\Ksh}{K_{\mathrm{sh}}}
+\newcommand{\Kch}{K_{\mathrm{ch}}}
 \newcommand{\Drad}{\mathcal D_A^{\mathrm{rad}}}
 \newcommand{\DA}{\mathcal D_A}
 \newcommand{\Doff}{\mathcal D_A^{\mathrm{off}}}
@@ -42,34 +45,39 @@
 \begin{document}
 
 \title[An arithmetic Frobenius family]
-{An arithmetic Frobenius family\\ on the idele class group}
+{An arithmetic Frobenius family\\ on semilocal idele class groups}
 
 \author{David Alejandro Trejo Pizzo}
 \thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
 
 \date{\today}
 
-\subjclass[2020]{Primary 11R56; Secondary 11M26, 43A05}
-\keywords{Idele class group, trace formula, explicit formula, von Mangoldt
+\subjclass[2020]{Primary 11R56; Secondary 11M06, 43A05}
+\keywords{Semilocal idele class group, explicit formula, von Mangoldt
 function, inverse semigroup}
 
 \begin{abstract}
 Let $S$ be a finite set of places of $\Q$ containing the real place and a
-prime, and let $C_S$ be the semilocal idele class group, with the trace whose
-local densities are $|x|_v^{1/2}/|1-x|_v$. For each integer $n\ge1$ with
-prime divisors in $S$ we define a probability measure $\Frob_n$ on $C_S$, the
-Haar measure of a coset of a compact subgroup. These measures satisfy
+prime, $C_S$ the quotient of the $S$-ideles by the positive $S$-units, and
+$T$ the functional on $C_c^\infty(C_S)$ given by the local terms of Weil's
+explicit formula at the places of $S$. For each integer $n\ge1$ with prime
+divisors in $S$ we define a probability measure $\Frob_n$ on $C_S$, the Haar
+measure of a coset. These measures satisfy
 $\Frob_m\star\Frob_n=\Frob_{mn}$ and, with their adjoints, generate a
-commutative inverse semigroup. On smooth approximations of $\Frob_n$ the
-finite local terms of the trace sum to $\Lambda(n)\,n^{-1/2}$ times the value
-of the archimedean profile at $1/n$. Averaged over the maximal compact
-subgroup, $\Frob_n$ becomes the Haar measure of the level set $|x|=1/n$; on
-this family the trace, off the unit level set, is the sum of the terms of the
-explicit formula at the places of $S$. We compute the Hermitian form of the
-trace on both families; on approximations of the unit of width $\varepsilon$
-and level $N$ it is $-\log(1/\varepsilon)-(N-1)\sum_{p\in S}\log p+O(1)$
-times the squared $L^2$ norm. For $n>1$ an associated integral complex has
-cohomology $\Z/\Phi_n(1)$, of order $e^{\Lambda(n)}$.
+commutative inverse semigroup. On test functions $\Frob_n^{[h,N]}$
+approximating $\Frob_n$, the finite local terms of $T$
+sum to $\Lambda(n)\,n^{-1/2}h(1/n)$; $T$ does not extend to $\Frob_n$ by
+weak continuity. Averaged over the maximal compact subgroup, $\Frob_n$
+becomes the Haar measure of the level set $|x|=1/n$, which defines an element
+of the completion of the test algebra; on this family $T$ is the known
+radial form of the explicit formula. We compute the Hermitian form
+$T(F\star G^\dagger)$ on both families; on approximations of the unit of
+width $\varepsilon$ and level $N$ it is
+$-\log(1/\varepsilon)-(N-1)\sum_{p}\log p+O(1)$ times the squared $L^2$
+norm, $p$ running over the primes of $S$. For $n>1$ a complex of abelian
+groups attached to the integer $n$ has cohomology $\Z/\Phi_n(1)$, of order
+$e^{\Lambda(n)}$. An appendix characterizes the normalization of the Haar
+measures by residues of local zeta integrals.
 \end{abstract}
 
 \maketitle
@@ -83,29 +91,39 @@ On a smooth projective curve over a finite field the graphs of the powers of
 the Frobenius endomorphism are correspondences. They compose according to
 the exponents, and their intersection numbers with the diagonal count the
 points of the curve over the extensions of the base field \cite{Weil1948}.
-This paper studies a family of measures on a semilocal idele class group of
-$\Q$ which composes according to the multiplication of positive integers,
-and computes on it the trace of \cite{Companion}, which there takes the
-place of the intersection number with the diagonal.
+This paper studies a family of measures on a semilocal adelic group of $\Q$
+which composes according to the multiplication of positive integers, and
+computes on it the functional $T$ of \cite{Companion}. In
+\cite[Section~1]{Companion} the Hermitian form $T(F\star G^\dagger)$ is set
+beside the intersection pairing of correspondences on the square of a curve,
+as having the same formal shape; in that comparison $T$ stands in the place
+of the intersection number with the diagonal. This is an analogy which
+motivates the constructions; no statement below depends on it.
 
 Let $S$ be a finite set of places of $\Q$ containing $\infty$ and at least
 one prime, let $S_f=S\smallsetminus\{\infty\}$, let $\Gamma_S$ be the group
 of positive rationals whose numerator and denominator are products of primes
 of $S_f$, and let
-$C_S=\Gamma_S\backslash(\R^\times\times\prod_{p\in S_f}\Q_p^\times)$, the
-group of invertible classes in the quotient of the semilocal adelic space by
-$\Gamma_S$; this quotient is the space of \cite{Companion}, which follows
-Connes's trace formula \cite{Connes99}. Dividing an idele $x$ by
-$\prod_{p\in S_f}p^{v_p(x_p)}$ identifies $C_S$ with
+$C_S=\Gamma_S\backslash(\R^\times\times\prod_{p\in S_f}\Q_p^\times)$.
+Dividing an idele $x$ by $\prod_{p\in S_f}p^{v_p(x_p)}$ identifies $C_S$ with
 $\R^\times\times\prod_{p\in S_f}\Z_p^\times$, and the module $|x|_S$ with
-$|x_\infty|$. For $v\in S$ let $j_v:\Q_v^\times\to C_S$ be the homomorphism
-induced by the inclusion of the factor at $v$. The algebra
+$|x_\infty|$. The group $C_S$ is the quotient by the positive $S$-units only:
+it is an extension, by the class $\epsilon$ of $-1$, which has order two, of
+the $S$-idele class group
+$(\R^\times\times\prod_{p\in S_f}\Q_p^\times)/\pm\Gamma_S$ on which Connes's
+$S$-local trace formula \cite[Section~VII]{Connes99} is set
+\cite[Lemma~2.5]{Companion}. For $v\in S$ let $j_v:\Q_v^\times\to C_S$ be
+the homomorphism induced by the inclusion of the factor at $v$. The algebra
 $\DA=C_c^\infty(C_S)$, with the convolution $\star$ and the involution
-$F^\dagger(x)=\overline{F(x^{-1})}$, carries the trace $T=\sum_{v\in S}W_v$ of
-\cite{Companion}. For $F$ vanishing near the identity,
+$F^\dagger(x)=\overline{F(x^{-1})}$, carries the functional
+$T=\sum_{v\in S}W_v$ of \cite{Companion}, which is called the trace there
+and here. It is not a new object: it is the sum over $v\in S$ of the local
+terms of Weil's explicit formula \cite{Weil1952}, in the form of Connes's
+$S$-local trace formula \cite[Theorem~4]{Connes99}, as explained in
+\cite[Section~1]{Companion}. For $F$ vanishing near the identity,
 \[
-  T(F)=\sum_{v\in S}\int_{\Q_v^\times}F(j_v(x))\,\tau_v(x)\,d^*x,\qquad
-  \tau_v(x)=\frac{|x|_v^{1/2}}{|1-x|_v},
+  T(F)=\sum_{v\in S}\int_{\Q_v^\times}F(j_v(x))\,\varrho_v(x)\,d^*x,\qquad
+  \varrho_v(x)=\frac{|x|_v^{1/2}}{|1-x|_v},
 \]
 where $d^*x$ gives $\Z_p^\times$ the volume $\log p$ and is $dx/(2|x|)$ on
 $\R^\times$. The associated Hermitian form is
@@ -117,18 +135,25 @@ $v_p(r)\ne0$. For $A\subseteq S_f$ let $K_A=\prod_{p\in A}j_p(\Z_p^\times)$, a
 compact subgroup of $C_S$, and for $r\in\Gamma_S$ let
 $c_r=\prod_{p\in S_f}j_p(p^{v_p(r)})$. For $P(r)\subseteq A$ we write
 $\Frob_{r,A}$ for the normalized Haar measure of the coset $c_rK_A$, and for
-an integer $n\ge1$ in $\Gamma_S$ we put $\Frob_n=\Frob_{n,P(n)}$. For a prime
-power, $\Frob_{p^k}$ is the image under $j_p$ of the normalized Haar measure
-of the shell $p^k\Z_p^\times$.
+an integer $n\ge1$ with $P(n)\subseteq S_f$ we put $\Frob_n=\Frob_{n,P(n)}$.
+For a prime power, $\Frob_{p^k}$ is the image under $j_p$ of the normalized
+Haar measure of the shell $p^k\Z_p^\times$. We use the name ``Frobenius''
+only because of the composition law $\Frob_m\star\Frob_n=\Frob_{mn}$ and of
+the role of $\Frob_{p^k}$ in the trace (Theorem~\ref{thm:introB}). These
+measures are not Frobenius elements of a Galois group, and for $n>1$ they are
+not invertible (Theorem~\ref{thm:introA}(b)). Throughout the introduction,
+every integer index $m,n$ satisfies $P(mn)\subseteq S_f$, and every rational
+index lies in $\Gamma_S$.
 
 \begin{theorem}\label{thm:introA}
 \begin{enumerate}
 \item[(a)] $\Frob_m\star\Frob_n=\Frob_{mn}$, and $\Frob_1$ is the point mass
 at the identity. The measure $\Frob_n$ determines $n$.
-\item[(b)] $\Frob_{r,A}\star\Frob_{s,B}=\Frob_{rs,A\cup B}$ and
+\item[(b)] $\Frob_{r,A}\star\Frob_{r',B}=\Frob_{rr',A\cup B}$ and
 $\Frob_{r,A}^\dagger=\Frob_{1/r,A}$. The measures $\Frob_{r,A}$ form the
 smallest set of measures which contains every $\Frob_n$ and is closed under
-$\star$ and $\dagger$. This set is a commutative inverse semigroup, and its
+$\star$ and $\dagger$. This set is a commutative inverse semigroup, the
+disjoint union over $A\subseteq S_f$ of groups isomorphic to $\Z^A$, and its
 idempotents are the Haar measures $\Frob_{1,A}$ of the groups $K_A$. In
 particular $\Frob_n\star\Frob_n^\dagger=\Frob_{1,P(n)}$ is not the unit for
 $n>1$, and $a/b\mapsto\Frob_a\star\Frob_b^\dagger$ is not well defined on
@@ -140,9 +165,11 @@ $\mu_s\star\mu_t=\mu_{s+t}$ and $\mu_{\log q}=\Frob_q$.
 \end{theorem}
 
 These statements are Theorems~\ref{thm:frobmonoidal}, \ref{thm:frobdagger}
-and~\ref{thm:invsemigroup} and Proposition~\ref{rem:nointerp}. The
-convolution of $\Frob_n$ with the Haar measure $\Delta^{\mathrm{rad}}$ of the
-maximal compact subgroup of $C_S$ is the Haar probability measure
+and~\ref{thm:invsemigroup} and Proposition~\ref{rem:nointerp}; they follow
+from the fact that the convolution of the Haar measures of two cosets is the
+Haar measure of the product coset (Lemma~\ref{lem:coset}). The convolution
+of $\Frob_n$ with the Haar measure $\Delta^{\mathrm{rad}}$ of the maximal
+compact subgroup of $C_S$ is the Haar probability measure
 $\Gamma_n^{\mathrm{rad}}$ of the level set $\{|x|_S=1/n\}$
 (Proposition~\ref{prop:avgtorad}). In contrast with (c), these measures are
 defined for every real $r>0$ in place of $n$, and
@@ -158,15 +185,16 @@ $\Gamma_h(x)=h(-\log|x|_S)$. If $0\notin\supp h$, the trace is
    +\int_\R\frac{e^{-|t|/2}}{1-e^{-2|t|}}\,h(t)\,dt
 \]
 (Theorem~\ref{thm:radtrace}); these are the terms of Weil's explicit formula
-\cite{Weil1952} at the places of $S$. We write
+\cite{Weil1952} at the places of $S$, and the formula is
+\cite[(82) and Lemma~A.1]{Companion}. We write
 \[
   \omega_{\mathrm{fin}}=\sum_{p\in S_f}\sum_{k\ge1}(\log p)\,p^{-k/2}
     \bigl(\delta_{k\log p}+\delta_{-k\log p}\bigr)
 \]
-for the measure in the first term. We also show that
-$\Gamma_n^{\mathrm{rad}}$ defines an element of the completion of $\DA$
-constructed in \cite{Companion}, with ruling component $(n^{1/2},n^{-1/2})$
-(Theorem~\ref{thm:radincompletion}).
+for the measure in the first term. We also show that, for every real $r>0$,
+the measure $\Gamma_r^{\mathrm{rad}}$ defines an element of the completion
+of $\DA$ constructed in \cite{Companion}, with ruling component
+$(r^{1/2},r^{-1/2})$ (Theorem~\ref{thm:radincompletion}).
 
 The measure $\Frob_n$ is not a test function. For $n\ge2$, $N\ge1$ and
 $h\in C_c^\infty(\R_{>0})$, now a function of the multiplicative variable
@@ -176,14 +204,14 @@ $x_\infty$, we consider the function
    \mathbf 1_{\,n^{-1}(1+s^N\Z_s)}(x_s)\quad(x_\infty>0),\qquad
   \Frob_n^{[h,N]}(x)=0\quad(x_\infty<0),
 \]
-and call $N$ its level. For $h\ge0$ and a suitable normalization, these
+and call $N$ its level. For $h\ge0$, after division by their integral, these
 functions converge weakly to $\Frob_n$ when the support of $h$ shrinks to
 $1/n$ and $N\to\infty$ (Lemma~\ref{lem:smearedfrobinDA}).
 
 \begin{theorem}\label{thm:introB}
-Let $n\ge2$, and let $h$ be supported in an open interval which is
-contained in $(n^{-2},1)$, contains $1/n$, and contains no other number
-$q^{-m}$ with $q\in S_f$ and $m\in\Z$. Then for every $N\ge1$
+Let $n\ge2$ with $P(n)\subseteq S_f$, and let $h$ be supported in an open
+interval which is contained in $(n^{-2},1)$ and contains no number $q^{-m}$,
+$q\in S_f$, $m\in\Z$, other than $1/n$. Then for every $N\ge1$
 \[
   \sum_{q\in S_f}W_q\bigl(\Frob_n^{[h,N]}\bigr)
    =\Lambda(n)\,n^{-1/2}\,h(1/n),
@@ -195,39 +223,92 @@ where $\iota=1$ if $s^N$ divides $n-1$ for every $s\in S_f\smallsetminus P(n)$
 and $\iota=0$ otherwise. If $S_f\ne P(n)$ and $2^N\ge n$, then $\iota=0$.
 \end{theorem}
 
-This is Theorem~\ref{thm:frobcontact}. For $n=p^k$ the coefficient
-$(\log p)\,p^{-k/2}$ is the volume $\log p$ of the shell $p^k\Z_p^\times$
-times the value $p^{-k/2}$ of $\tau_p$ on it. If $n$ has two distinct prime
-divisors, the support of $\Frob_n$ does not meet the image of any $j_q$,
-$q\in S_f$ (Theorem~\ref{thm:compositedisjoint}).
+This is Theorem~\ref{thm:frobcontact}. The hypothesis $P(n)\subseteq S_f$ is
+needed: for $S_f=\{2\}$ and $n=3$ the function $\Frob_3^{[h,N]}$ is defined
+and the left-hand side of the first formula is $0$ for every such $h$. For
+$n=p^k$ the coefficient $(\log p)\,p^{-k/2}$ is the volume $\log p$ of the
+shell $p^k\Z_p^\times$ times the value $p^{-k/2}$ of $\varrho_p$ on it. If
+$n$ has two distinct prime divisors, the support of $\Frob_n$ does not meet
+the image of any $j_q$, $q\in S_f$ (Theorem~\ref{thm:compositedisjoint}).
+
+The coefficient $\Lambda(n)n^{-1/2}$ belongs to the functions
+$\Frob_n^{[h,N]}$ as they stand, and we call it their finite contact; it is
+not an invariant of the measure $\Frob_n$. For the multiples of these
+functions which are probability densities and converge to $\Frob_n$, the
+left-hand side of the first formula is multiplied by
+$\prod_{s\in S_f\smallsetminus P(n)}(s-1)s^{N-1}$, which depends on $N$ and
+on $S$, and the value $h(1/n)$ is not bounded and may vanish; for a prime
+power $n$ the values of $T$ along such densities have no limit
+(Corollary~\ref{cor:frobinvariant}). More generally, $T$ does not extend by
+weak continuity to any probability measure on $C_S$: every sequence of
+probability densities in $\DA$ which converges weakly can be modified,
+without changing its limit, so that $T$ tends to $-\infty$ along it
+(Proposition~\ref{prop:noextension}). This applies to $\Frob_n$ for every
+$n$ and to $\Gamma_r^{\mathrm{rad}}$ for every $r$. For the radial family,
+$\Gamma_h\,d^*w$ is the integral of the measures
+$\Gamma_r^{\mathrm{rad}}$ against $h(\log r)\,d\log r$, and the mass
+$\Lambda(n)n^{-1/2}$ of the atom of $\omega_{\mathrm{fin}}$ at $\log n$ is
+attached to $\Gamma_n^{\mathrm{rad}}$ through this disintegration, without
+any choice of approximating functions; it is not a value of $T$ at
+$\Gamma_n^{\mathrm{rad}}$.
+
+The coefficients $(\log p)\,p^{-k/2}$ are not new. As recalled above, $T$ is
+the sum of the local terms of Weil's explicit formula in the form of
+\cite[Theorem~4]{Connes99}, and Theorem~\ref{thm:introB} evaluates the term
+at $p$ on a function concentrated near the shell $j_p(p^k\Z_p^\times)$, on
+which $\varrho_p=p^{-k/2}$ and whose volume is $\log p$; for the
+interpretation of these terms as contributions of periodic orbits of the
+action of the idele class group see \cite[Sections~IV and~VI]{Connes99}.
+What Theorem~\ref{thm:introB} adds is the statement for composite $n$ and
+the dependence of the archimedean term on the level $N$.
+
+Frobenius correspondences in another sense were introduced by Connes and
+Consani on the square of the arithmetic site
+\cite{CCArithSite,CCGeomArith}: a family $\Psi(\lambda)$,
+$\lambda\in\R_{>0}$, with
+$\Psi(\lambda)\circ\Psi(\lambda')=\Psi(\lambda\lambda')$ when
+$\lambda\lambda'\notin\Q$ and when $\lambda,\lambda'$ are both rational,
+while for irrational $\lambda,\lambda'$ with rational product the composite
+is $\Psi(\lambda\lambda')$ composed with a tangential deformation of the
+identity correspondence \cite[Theorem~4.3]{CCArithSite},
+\cite[Theorems~1.2 and~7.7]{CCGeomArith}. We do not relate the measures
+$\Frob_n$ to these correspondences. We only note that $\Psi(\lambda)$ is
+defined for every real $\lambda>0$, as is the radial family
+$\Gamma_r^{\mathrm{rad}}$, whereas by Theorem~\ref{thm:introA}(c) the family
+$\Frob_n$ has no weakly continuous extension to a real parameter.
 
 Section~\ref{sec:integral} concerns the complexes
 $[L_S\xrightarrow{\,n\,}L_S]$, where $L_S=\prod_{p\in S_f}\Z_p$ and
-$P(n)\subseteq S_f$. They form a functor on the set of indices ordered by
-divisibility, the cohomology of the $n$-th one is $\Z/n$ in degree $0$, and
-for $n>1$ the total cofiber $\Prim_n$ of the cube formed by the complexes of
-index $n/\prod_{p\in Z}p$, $Z\subseteq P(n)$, is isomorphic in the derived
-category to $[\Z\xrightarrow{\,\Phi_n(1)\,}\Z]$
-(Theorem~\ref{thm:shstructure}). Since $\Phi_n(1)=e^{\Lambda(n)}$, the
+$P(n)\subseteq S_f$. They depend on $\Frob_n$ only through the integer $n$,
+and are quasi-isomorphic to $[\Z\xrightarrow{\,n\,}\Z]$. They form a functor
+on the set of indices ordered by divisibility, the cohomology of the $n$-th
+one is $\Z/n$ in degree $0$, and for $n>1$ the total cofiber $\Prim_n$ of the
+cube formed by the complexes of index $n/\prod_{p\in Z}p$,
+$Z\subseteq P(n)$, is isomorphic in the derived category to
+$[\Z\xrightarrow{\,\Phi_n(1)\,}\Z]$ (Theorem~\ref{thm:shstructure}). This is
+a homological form of the classical identities
+$\Lambda=\mu*\log$ and $\Phi_n(1)=e^{\Lambda(n)}$. Consequently the
 logarithm of the order of the cohomology of $\Prim_n$ is $n^{1/2}$ times the
-coefficient of Theorem~\ref{thm:introB} (Theorem~\ref{thm:shdegrees}). The
-two sides of this identity are compared as real numbers only.
+coefficient of Theorem~\ref{thm:introB} (Theorem~\ref{thm:shdegrees}). This
+is an equality of two real numbers, one computed from $T$ and one from the
+integer $n$; we do not construct a map between the two sides.
 
 Section~\ref{sec:gram} computes the form $I_A$ on the functions
 $\Frob_n^{[h,N]}$ and on their averages over the maximal compact subgroup.
-For $m\ne n$ and profiles $h_m$, $h_n$ with small supports, the entry
+Let $m\ne n$ be integers $\ge2$ with $P(mn)\subseteq S_f$, and let $h_m$,
+$h_n$ be profiles with small supports. The entry
 $I_A(\Frob_m^{[h_m,N]},\Frob_n^{[h_n,N]})$ is a positive constant times
 \[
   \omega_{\mathrm{fin}}(\{\log m-\log n\})\,g(n/m)
-   +\iota\int_0^\infty g(x)\,\tau_\infty(x)\,\frac{dx}{2x},
+   +\iota\int_0^\infty g(x)\,\varrho_\infty(x)\,\frac{dx}{2x},
 \]
 where $g\in C_c^\infty(\R_{>0})$ is a multiplicative convolution of
-the two profiles, again a function of $x_\infty$, and $\iota\in\{0,1\}$ vanishes for large $N$ when
-$S_f\ne P(mn)$ (Theorem~\ref{thm:gramoff}). After averaging, the
-corresponding entry is a positive constant times
+the two profiles, again a function of $x_\infty$, and $\iota\in\{0,1\}$
+vanishes for large $N$ when $S_f\ne P(mn)$ (Theorem~\ref{thm:gramoff}).
+After averaging, the corresponding entry is a positive constant times
 \[
   \omega_{\mathrm{fin}}(\{\log m-\log n\})\,g(n/m)
-   +\int_0^\infty g(x)\bigl(\tau_\infty(x)+\tau_\infty(-x)\bigr)
+   +\int_0^\infty g(x)\bigl(\varrho_\infty(x)+\varrho_\infty(-x)\bigr)
      \frac{dx}{2x}
 \]
 for every $N$ (Theorem~\ref{thm:twohalves}). On the diagonal,
@@ -246,18 +327,27 @@ place, Theorem~\ref{thm:infgenus} gives
     -\sum_{s\in S_f}(\log s)\Bigl(\frac{s-2}{s-1}+N-1\Bigr)
 \]
 as $\varepsilon\to0$, uniformly in $N$, with a constant $C_\beta$ depending
-on the shape of the approximation. For comparison, the diagonal of the square
-of a smooth projective curve of genus $\mathfrak g$ has self-intersection
-number $2-2\mathfrak g$ \cite[Ch.~V, Exercise~1.6(a)]{Hartshorne}. The
-section ends with Theorem~\ref{thm:qfinpositive}: the finite-place part
+on the shape of the approximation. The two divergent terms correspond to the
+logarithmic decay of the archimedean part of the symbol of $T$ and to the
+conductor terms of its finite parts, computed in
+\cite[Theorem~5.12]{Companion}; see the remark after
+Theorem~\ref{thm:infgenus}. In the analogy
+mentioned at the beginning, the unit stands in the place of the diagonal,
+whose self-intersection number on the square of a smooth projective curve of
+genus $\mathfrak g$ is $2-2\mathfrak g$
+\cite[Ch.~V, Exercise~1.6(a)]{Hartshorne}; here no finite number is attached
+to the unit, and we claim no relation beyond this remark. The section ends
+with Theorem~\ref{thm:qfinpositive}: the finite-place part
 $\sum_{p\in S_f}W_p(\Gamma_h\star\Gamma_h^\dagger)$ of the form takes both
-signs on the real additive profiles $h\in C_c^\infty(\R)$ with $\int h(s)e^{\pm s/2}ds=0$.
+signs on the real additive profiles $h\in C_c^\infty(\R)$ with
+$\int h(s)e^{\pm s/2}ds=0$.
 
-The normalization $\vol_{d^*x}(\Z_p^\times)=\log p$ is used throughout. The
-appendix shows that, with $d^*x_\infty=dx/(2|x|)$, it is the only
-normalization for which the local zeta integrals
-$\int_{|x|_v\le1}|x|_v^s\,d^*x$ have the same residue at $s=0$ at every place
-(Theorem~\ref{thm:tateresidue}).
+The normalization $\vol_{d^*x}(\Z_p^\times)=\log p$ is used throughout. It is
+the normalization of Weil's explicit formula, see \cite{BurnolSimple} and
+\cite[Section~V]{Connes99}. The appendix shows that, with
+$d^*x_\infty=dx/(2|x|)$, it is the only normalization for which the local
+zeta integrals $\int_{|x|_v\le1}|x|_v^s\,d^*x$ have the same residue at $s=0$
+at every place (Theorem~\ref{thm:tateresidue}).
 
 The paper is organized as follows. Section~\ref{sec:prelim} fixes notation
 and recalls the trace. Section~\ref{sec:radial} treats the radial family,
@@ -285,7 +375,7 @@ Haar measure $d^*x$ is normalized by
 so that $d^*x=(\log p)\,du$ on $\Z_p^\times$ and, by translation invariance,
 $\vol_{d^*x}(p^k\Z_p^\times)=\log p$ for every $k\in\Z$. On $\R^\times$ we use
 $d^*x_\infty=dx/(2|x|)$. These are the normalizations of
-\cite[(8) and Definition~5.4]{Companion}.
+\cite[(9) and Definition~5.4]{Companion}.
 
 The rest of this section recalls from \cite{Companion} the statements used
 below, and fixes the notation for measures.
@@ -305,6 +395,20 @@ The module $|x|_S=\prod_{v\in S}|x_v|_v$ is trivial on $\Gamma_S$, and
 $|x|_S=|x_\infty|$ for $x\in\ker\varphi$.
 \end{proposition}
 
+The group $C_S$ is the quotient of $\A_S^\times$ by the positive $S$-units
+only. The group of all $S$-units is $\pm\Gamma_S$, and the quotient
+$\A_S^\times/\pm\Gamma_S$ is the $S$-idele class group on which Connes's
+$S$-local trace formula is set \cite[Section~VII]{Connes99}. The diagonal
+element $-1$ lies in $\ker\varphi$; its class
+$\epsilon=(-1;(-1)_{p\in S_f})\in C_S$ has order two, and
+$C_S/\{1,\epsilon\}=\A_S^\times/\pm\Gamma_S$. So $C_S$ is an extension of the
+$S$-idele class group by a group of order two, and the functions on the
+$S$-idele class group are the functions on $C_S$ invariant under translation
+by $\epsilon$ \cite[Lemma~2.5]{Companion}. Since $|\epsilon|_S=1$, every
+function of $|x|_S$ alone is $\epsilon$-invariant; the functions
+$\Frob_n^{[h,N]}$ of Section~\ref{sec:frob} vanish on $\{x_\infty<0\}$ and
+are not, unless they vanish identically.
+
 We always write classes in the coordinates
 $\R^\times\times\prod_{p\in S_f}\Z_p^\times$. The kernel of
 $|\cdot|_S:C_S\to\R_{>0}$ is the maximal compact subgroup
@@ -314,9 +418,9 @@ $|\cdot|_S:C_S\to\R_{>0}$ is the maximal compact subgroup
 and $C_S/\Knat\cong\R_{>0}$. The Haar measure $d^*w$ of $C_S$ is the product
 of $d^*x_\infty$ and of the probability measures of the factors $\Z_p^\times$;
 in the coordinate $t=\log|w|_S$ it is $dt\otimes du$, with $du$ the
-probability measure of $\Knat$ \cite[(8)]{Companion}.
+probability measure of $\Knat$ \cite[(9)]{Companion}.
 
-\begin{proposition}[{\cite[(27)]{Companion}}]\label{prop:slices}
+\begin{proposition}[{\cite[(28)]{Companion}}]\label{prop:slices}
 For $v\in S$ let $j_v:\Q_v^\times\to C_S$ send $x$ to the class of the idele
 with $x$ at $v$ and $1$ at the other places of $S$. Then, for $q\in S_f$,
 $k\in\Z$, $w\in\Z_q^\times$ and $x\in\R^\times$,
@@ -369,7 +473,7 @@ with the measure $F\,d^*w$, and the operations above then agree with those of
 $\DA$, because $d^*w$ is invariant under inversion. (In
 \cite[Section~3]{Companion} the letter $E$ denotes the graph bimodules $E_a$
 of ideles and the smeared objects $E_F$, $F\in\DA$, which compose in the same
-way \cite[(10), Corollary~3.4]{Companion}, and $\Delta$ denotes $E_1$; only
+way \cite[(11), Corollary~3.4]{Companion}, and $\Delta$ denotes $E_1$; only
 functions and measures are used here.) For a compact subgroup $H\le C_S$ and $c\in C_S$ we write $\mu_{cH}$
 for the image of the Haar probability measure of $H$ under $u\mapsto cu$; its
 support is the coset $cH$. For $\mu\in M_c(C_S)$ we put
@@ -402,16 +506,16 @@ $cH$, and $\mu_{cH}$ is a probability measure.
 \end{proof}
 
 \begin{proposition}[{\cite[Lemmas~5.2 and~8.2, Definition~5.4,
-Convention~5.5, Theorems~5.6, 8.3 and~8.4]{Companion}}]\label{prop:trace}
-Put $\tau_v(x):=|x|_v^{1/2}/|1-x|_v$ for $x\in\Q_v^\times$, $x\ne1$, and
+Convention~5.5, Theorem~5.6, Theorems~8.3 and~8.4]{Companion}}]\label{prop:trace}
+Put $\varrho_v(x):=|x|_v^{1/2}/|1-x|_v$ for $x\in\Q_v^\times$, $x\ne1$, and
 \[
-  K_s(t)=\frac1{4\sinh(t/2)},\qquad K_c(t)=\frac1{4\cosh(t/2)},\qquad
-  K(t)=K_s(t)+K_c(t)=\frac{e^{-t/2}}{1-e^{-2t}}\qquad(t>0).
+  \Ksh(t)=\frac1{4\sinh(t/2)},\quad \Kch(t)=\frac1{4\cosh(t/2)},\quad
+  K(t)=\Ksh(t)+\Kch(t)=\frac{e^{-t/2}}{1-e^{-2t}}\quad(t>0).
 \]
 The trace is the linear functional $T=T_S=\sum_{v\in S}W_v$ on $\DA$, where
 for $q\in S_f$
 \begin{equation}\label{eq:localterms}
-  W_q(F)=\sum_{k\ne0}\int_{q^k\Z_q^\times}(F\circ j_q)\,\tau_q\,d^*x
+  W_q(F)=\sum_{k\ne0}\int_{q^k\Z_q^\times}(F\circ j_q)\,\varrho_q\,d^*x
    +(\log q)\int_{\Z_q^\times}\frac{(F\circ j_q)(u)-(F\circ j_q)(1)}{|1-u|_q}
      \,du,
 \end{equation}
@@ -419,19 +523,19 @@ and, with the profiles $b_\pm(t):=F(j_\infty(\pm e^{t}))$,
 \begin{equation}\label{eq:archterm}
 \begin{aligned}
   W_\infty(F)={}&(\gamma+\log4\pi)\,F(1)
-   +\int_0^\infty\Bigl[K_s(t)\bigl(b_+(t)+b_+(-t)\bigr)
+   +\int_0^\infty\Bigl[\Ksh(t)\bigl(b_+(t)+b_+(-t)\bigr)
      -2K(t)F(1)e^{-t/2}\Bigr]dt\\
-   &+\int_0^\infty K_c(t)\bigl(b_-(t)+b_-(-t)\bigr)dt ,
+   &+\int_0^\infty \Kch(t)\bigl(b_-(t)+b_-(-t)\bigr)dt ,
 \end{aligned}
 \end{equation}
 $\gamma$ being Euler's constant. All integrals converge absolutely. Moreover:
 \begin{enumerate}
-\item[(a)] $\tau_q\equiv q^{-|k|/2}$ on the shell $q^k\Z_q^\times$, $k\ne0$.
+\item[(a)] $\varrho_q\equiv q^{-|k|/2}$ on the shell $q^k\Z_q^\times$, $k\ne0$.
 \item[(b)] If $F\in\Doff$ then
-$T(F)=\sum_{v\in S}\int_{\Q_v^\times}F(j_v(x))\tau_v(x)\,d^*x$, a finite sum of
+$T(F)=\sum_{v\in S}\int_{\Q_v^\times}F(j_v(x))\varrho_v(x)\,d^*x$, a finite sum of
 absolutely convergent integrals, and
-$W_\infty(F)=\int_0^\infty K_s(t)[b_+(t)+b_+(-t)]\,dt
-+\int_0^\infty K_c(t)[b_-(t)+b_-(-t)]\,dt$.
+$W_\infty(F)=\int_0^\infty \Ksh(t)[b_+(t)+b_+(-t)]\,dt
++\int_0^\infty \Kch(t)[b_-(t)+b_-(-t)]\,dt$.
 \item[(c)] Let $S\subseteq S'$ be charts, let $\pi_{S'S}:C_{S'}\to C_S$ be the
 coordinate projection, and $\operatorname{Inf}_{SS'}F:=F\circ\pi_{S'S}$. Then
 $\operatorname{Inf}_{SS'}$ is an injective homomorphism of $\dagger$-algebras
@@ -455,22 +559,32 @@ $T_{\lim}\circ\operatorname{Inf}_{SS'}=T_{\lim}$.
 
 The trace of \cite[Definition~5.4]{Companion} is $\sum_vW_v(F)+c\,F(1)$ with
 a real constant $c$, the same for all charts, and the results of
-\cite{Companion} hold for every $c$. In this paper $c=0$. The element
+\cite{Companion} hold for every $c$ \cite[Convention~5.8]{Companion}. In this
+paper $c=0$; by the same convention, the function $\widehat T$ of
+Proposition~\ref{prop:tate} below is then the Fourier transform of $T$. The
+functional $T$ is not new: for $c=0$ it is the sum over $v\in S$ of the local
+terms of Weil's explicit formula \cite{Weil1952}, with Weil's regularization
+at the identity, in the form of \cite[Theorem~4 and Appendix~II]{Connes99};
+the comparison is made in \cite[Section~1 and after
+Convention~5.5]{Companion}. The local density $\varrho_v$ and the names
+``trace'' for $T$ and ``symbol'' for $\widehat T$ are those of
+\cite{Companion}. The kernels $\Ksh$, $\Kch$ are denoted there by $K_s$,
+$K_c$; we change the notation because $s$ denotes a prime below. The element
 $\langle t\rangle_S$ is denoted by $\delta_S(t)$ in \cite{Companion}.
 
-For $t\ne0$ one has $\tau_\infty(e^{t})=2K_s(|t|)$ and
-$\tau_\infty(-e^{t})=2K_c(|t|)$, and $d^*x_\infty=dt/2$ on each half-line
-\cite[(8), (26), (32)]{Companion}; this is how (b) follows from \eqref{eq:archterm}. If
+For $t\ne0$ one has $\varrho_\infty(e^{t})=2\Ksh(|t|)$ and
+$\varrho_\infty(-e^{t})=2\Kch(|t|)$, and $d^*x_\infty=dt/2$ on each half-line
+\cite[(9), (27), (33)]{Companion}; this is how (b) follows from \eqref{eq:archterm}. If
 $F$ is invariant under translation by $j_\infty(-1)$, then $b_+=b_-=:b$ and
 \eqref{eq:archterm} becomes
 \begin{equation}\label{eq:archeven}
   W_\infty(F)=(\gamma+\log4\pi)F(1)+\int_0^\infty
     K(t)\bigl[b(t)+b(-t)-2F(1)e^{-t/2}\bigr]dt
 \end{equation}
-\cite[(31)]{Companion}. If $F$ vanishes on $\{x_\infty<0\}$, then $b_-=0$ and
-only $K_s$ enters.
+\cite[(32)]{Companion}. If $F$ vanishes on $\{x_\infty<0\}$, then $b_-=0$ and
+only $\Ksh$ enters.
 
-\begin{proposition}[{\cite[(39), (40), Theorems~5.11, 5.12 and~6.5,
+\begin{proposition}[{\cite[(40), (41), Theorem~5.11, Theorems~5.12 and~6.5,
 Proposition~6.3]{Companion}}]\label{prop:tate}
 On $\DA$ the functionals $\lambda_\mp$ are continuous and multiplicative for
 $\star$, $\lambda_\mp(F^\dagger)=\overline{\lambda_\pm(F)}$, and
@@ -515,13 +629,13 @@ $\psi$ being the digamma function, and
 with constants $\alpha_S$, $\alpha'_S$ depending only on $S$.
 \end{proposition}
 
-\noindent Formulas \eqref{eq:symbol} are \cite[(44), (46)]{Companion} on
-$\mathfrak c_0$, where the number $\zeta_p$ of \cite[(44)]{Companion} is
-$p^{-1/2+i\tau}$, and \eqref{eq:logbound} is \cite[(67)]{Companion} on
+\noindent Formulas \eqref{eq:symbol} are \cite[(45), (47)]{Companion} on
+$\mathfrak c_0$, where the number $\zeta_p$ of \cite[(45)]{Companion} is
+$p^{-1/2+i\tau}$, and \eqref{eq:logbound} is \cite[(69)]{Companion} on
 $\mathfrak c_0$. For $\mu\in M_c(C_S)$ and $G\in\DA$, Fubini's theorem gives
 $\widehat{\mu\star G}=\widehat\mu\,\widehat G$.
 
-\begin{proposition}[{\cite[Lemma~6.2, Theorems~6.11 and~6.13]{Companion}}]
+\begin{proposition}[{\cite[Lemma~6.2, Theorem~6.11, Theorem~6.13]{Companion}}]
 \label{prop:completion}
 Let $\DA'$ be the space of continuous conjugate-linear functionals on $\DA$
 with the topology of uniform convergence on bounded sets, and put
@@ -543,7 +657,7 @@ $|\widehat G(\mathfrak c,\tau)|\le C_{\mathcal B}\min(1,\tau^{-2})$ for all
 $G\in\mathcal B$, all components $\mathfrak c$ and all $\tau$.
 \end{proposition}
 
-\noindent The bound for $I_A$ holds by \cite[(66), (69)]{Companion}, and the
+\noindent The bound for $I_A$ holds by \cite[(68), (71)]{Companion}, and the
 last statement is established in the proof of \cite[Lemma~6.2]{Companion}.
 
 \section{The radial family}\label{sec:radial}
@@ -758,7 +872,8 @@ $\Gamma_h^\dagger(x)=\overline{h(\log|x|_S)}=h^\vee(-\log|x|_S)$.
 archimedean coordinate.
 \end{proof}
 
-\begin{theorem}\label{thm:radtrace}
+\begin{theorem}[{\cite[(82), (32) and Lemma~A.1]{Companion}}]
+\label{thm:radtrace}
 Let $h\in C_c^\infty(\R)$. For every $p\in S_f$,
 \begin{equation}\label{eq:lambdavol}
   W_p(\Gamma_h)=\sum_{k\ge1}\vol_{d^*x}\bigl(p^k\Z_p^\times\bigr)\,p^{-k/2}
@@ -811,9 +926,14 @@ $\Gamma_h(\langle\ell^{-k}\rangle_S)=h(k\log\ell)$ since
 $|\langle\ell^{-k}\rangle_S|_S=\ell^{-k}$.
 \end{proof}
 
-For $T_{\lim}$ this is \cite[Lemma~A.1]{Companion}, where the profile is
-$t\mapsto h(-t)$. The right-hand side of \eqref{eq:radtraceprime} is the sum
-of the terms of Weil's explicit formula \cite{Weil1952} at the places of $S$.
+This theorem is not new. In the terminology of \cite{Companion} the
+function $\Gamma_h$ is radial with profile $t\mapsto h(-t)$; the formula for
+$W_p(\Gamma_h)$ is \cite[(82)]{Companion}, the formula for
+$W_\infty(\Gamma_h)$ is \cite[(32)]{Companion}, and the statement for
+$T_{\lim}$ is \cite[Lemma~A.1]{Companion}. We have repeated the proof in the
+present notation because the formulas are used throughout. The right-hand
+side of \eqref{eq:radtraceprime} is the sum of the terms of Weil's explicit
+formula \cite{Weil1952} at the places of $S$.
 
 \begin{theorem}\label{thm:repmeasures}
 There is a unique Radon measure $\omega_{\mathrm{fin}}$ on
@@ -833,7 +953,7 @@ For an integer $n\ge2$,
 \begin{align}
   \omega_{\mathrm{fin}}(\{\log n\})&=\Lambda(n)\,n^{-1/2}
      \qquad\text{if } P(n)\subseteq S_f,\label{eq:radcontact}\\
-  \omega_\infty(\log n)&=\tfrac12\bigl[\tau_\infty(1/n)+\tau_\infty(-1/n)\bigr]
+  \omega_\infty(\log n)&=\tfrac12\bigl[\varrho_\infty(1/n)+\varrho_\infty(-1/n)\bigr]
      =\frac{n^{3/2}}{n^2-1}=n^{-1/2}\sum_{j\ge0}n^{-2j}.\label{eq:archdensity}
 \end{align}
 \end{theorem}
@@ -851,8 +971,8 @@ $(\log p)p^{-k/2}$ if $n=p^k$ with $p\in S_f$ and is absent if $n$ has two
 distinct prime divisors, which is \eqref{eq:radcontact}. For
 \eqref{eq:archdensity},
 \[
-  \tau_\infty(1/n)=\frac{n^{-1/2}}{1-1/n}=\frac{n^{1/2}}{n-1},\qquad
-  \tau_\infty(-1/n)=\frac{n^{-1/2}}{1+1/n}=\frac{n^{1/2}}{n+1},
+  \varrho_\infty(1/n)=\frac{n^{-1/2}}{1-1/n}=\frac{n^{1/2}}{n-1},\qquad
+  \varrho_\infty(-1/n)=\frac{n^{-1/2}}{1+1/n}=\frac{n^{1/2}}{n+1},
 \]
 with half-sum $n^{3/2}/(n^2-1)$, and
 $K(\log n)=n^{-1/2}/(1-n^{-2})=n^{3/2}/(n^2-1)=n^{-1/2}\sum_{j\ge0}n^{-2j}$.
@@ -866,7 +986,15 @@ We call
 the \emph{finite contact} of the norm class $\Gamma_n^{\mathrm{rad}}$, and
 $\omega_\infty(\log n)$ the \emph{archimedean density} of the radial family at
 $\log n$. The first is the mass of an atom; the second is the value of a
-continuous density, defined at $\log r$ for every real $r>0$, $r\ne1$. The
+continuous density, defined at $\log r$ for every real $r>0$, $r\ne1$. Both
+are determined by the family of measures $\Gamma^{\mathrm{rad}}_{(t)}$ alone:
+by Lemma~\ref{lem:smeared}(ii) the measure $\Gamma_h\,d^*w$ is the integral
+$\int h(t)\,\Gamma^{\mathrm{rad}}_{(t)}\,dt$, so
+$h\mapsto\sum_pW_p(\Gamma_h)$ and $h\mapsto W_\infty(\Gamma_h)$ are
+functionals of the densities of superpositions of norm classes, and no
+choice of approximating functions enters. They are not values of $T$ at the
+measure $\Gamma_n^{\mathrm{rad}}$, to which $T$ does not extend by weak
+continuity (Proposition~\ref{prop:noextension}). The
 measure $\omega_{\mathrm{fin}}$ is purely atomic, its atoms are the points
 $\pm k\log p$ with $p\in S_f$ and $k\ge1$, which are pairwise distinct by
 unique factorization and of absolute value at least $\log2$, and
@@ -877,60 +1005,60 @@ $\Gamma_n^{\mathrm{rad}}$ meets $\Iml\,j_\infty$. For $T_{\lim}$ the same
 statements hold with all primes in place of $S_f$.
 
 \begin{theorem}\label{thm:radincompletion}
-Let $n\ge2$. For $0<\varepsilon<1$ choose $h_\varepsilon\in C_c^\infty(\R)$
+Let $r>0$ be a real number. For $0<\varepsilon<1$ choose $h_\varepsilon\in C_c^\infty(\R)$
 with $h_\varepsilon\ge0$, $\int h_\varepsilon=1$ and
-$\supp h_\varepsilon\subseteq[\log n-\varepsilon,\log n+\varepsilon]$, and put
+$\supp h_\varepsilon\subseteq[\log r-\varepsilon,\log r+\varepsilon]$, and put
 $F_\varepsilon:=\Gamma_{h_\varepsilon}\in\DA$. Then:
 \begin{enumerate}
-\item[(i)] $\ell_n(G):=T(\Gamma_n^{\mathrm{rad}}\star G^\dagger)$ is defined
-for every $G\in\DA$; $\widehat{\Gamma_n^{\mathrm{rad}}}$ vanishes off the
-principal component and equals $n^{i\tau}$ on it; and
-$|\ell_n(G)|\le\mathcal N(G)$, so that $\ell_n\in\DA'$;
-\item[(ii)] $I_A(F_\varepsilon,\cdot)\to\ell_n$ in $\DA'$ as
+\item[(i)] $\ell_r(G):=T(\Gamma_r^{\mathrm{rad}}\star G^\dagger)$ is defined
+for every $G\in\DA$; $\widehat{\Gamma_r^{\mathrm{rad}}}$ vanishes off the
+principal component and equals $r^{i\tau}$ on it; and
+$|\ell_r(G)|\le\mathcal N(G)$, so that $\ell_r\in\DA'$;
+\item[(ii)] $I_A(F_\varepsilon,\cdot)\to\ell_r$ in $\DA'$ as
 $\varepsilon\to0$, that is, uniformly on every bounded subset of $\DA$;
-\item[(iii)] $M(F_\varepsilon)\to(n^{1/2},n^{-1/2})
-=M(\Gamma_n^{\mathrm{rad}})$;
+\item[(iii)] $M(F_\varepsilon)\to(r^{1/2},r^{-1/2})
+=M(\Gamma_r^{\mathrm{rad}})$;
 \item[(iv)] consequently $J(F_\varepsilon)$ converges in $\Dbar$ to
-$\bigl(\ell_n,(n^{1/2},n^{-1/2})\bigr)$, whose ruling component
-$(0,(n^{1/2},n^{-1/2}))$ is not zero; in particular the limit does not lie in
+$\bigl(\ell_r,(r^{1/2},r^{-1/2})\bigr)$, whose ruling component
+$(0,(r^{1/2},r^{-1/2}))$ is not zero; in particular the limit does not lie in
 $\Dbar^{\mathrm{prim}}$.
 \end{enumerate}
 \end{theorem}
 
 \begin{proof}
-(i) $\Gamma_n^{\mathrm{rad}}\star G^\dagger\in\DA$ by
+(i) $\Gamma_r^{\mathrm{rad}}\star G^\dagger\in\DA$ by
 Lemma~\ref{rem:multiplier}. For a character $\chi$ of $C_S$,
 \[
-  \widehat{\Gamma_n^{\mathrm{rad}}}(\chi)
-   =\overline{\chi(j_\infty(1/n))}\int_{\Knat}\overline{\chi(u)}\,du,
+  \widehat{\Gamma_r^{\mathrm{rad}}}(\chi)
+   =\overline{\chi(j_\infty(1/r))}\int_{\Knat}\overline{\chi(u)}\,du,
 \]
 which vanishes unless $\chi$ is trivial on $\Knat$, that is,
 $\chi=|\cdot|_S^{i\tau}$; and then it equals
-$\overline{(1/n)^{i\tau}}=n^{i\tau}$. The Fourier transform of
-$\Gamma_n^{\mathrm{rad}}\star G^\dagger$ is
-$\widehat{\Gamma_n^{\mathrm{rad}}}\,\overline{\widehat G}$, so by
+$\overline{(1/r)^{i\tau}}=r^{i\tau}$. The Fourier transform of
+$\Gamma_r^{\mathrm{rad}}\star G^\dagger$ is
+$\widehat{\Gamma_r^{\mathrm{rad}}}\,\overline{\widehat G}$, so by
 \eqref{eq:plancherelv}
 \[
-  \ell_n(G)=\int_{\R}n^{i\tau}\,\overline{\widehat G(\mathfrak c_0,\tau)}\,
+  \ell_r(G)=\int_{\R}r^{i\tau}\,\overline{\widehat G(\mathfrak c_0,\tau)}\,
     \widehat T(\mathfrak c_0,\tau)\,\frac{d\tau}{2\pi},\qquad
-  |\ell_n(G)|\le\mathcal N(G).
+  |\ell_r(G)|\le\mathcal N(G).
 \]
-Since $\mathcal N$ is a continuous seminorm, $\ell_n$ is continuous, and it
+Since $\mathcal N$ is a continuous seminorm, $\ell_r$ is continuous, and it
 is conjugate-linear.
 
 (ii) By Lemma~\ref{lem:smeared}(iv), $\widehat F_\varepsilon$ vanishes off
 $\mathfrak c_0$, where
 $\widehat F_\varepsilon(\tau)=\int_\R h_\varepsilon(s)e^{i\tau s}\,ds$. Put
-$d_\varepsilon(\tau):=\widehat F_\varepsilon(\tau)-n^{i\tau}
-=\int h_\varepsilon(s)(e^{i\tau s}-e^{i\tau\log n})\,ds$. Then
+$d_\varepsilon(\tau):=\widehat F_\varepsilon(\tau)-r^{i\tau}
+=\int h_\varepsilon(s)(e^{i\tau s}-e^{i\tau\log r})\,ds$. Then
 $|d_\varepsilon(\tau)|\le\min(2,|\tau|\varepsilon)$, since
-$|e^{i\theta}-e^{i\theta'}|\le|\theta-\theta'|$ and $|s-\log n|\le\varepsilon$
+$|e^{i\theta}-e^{i\theta'}|\le|\theta-\theta'|$ and $|s-\log r|\le\varepsilon$
 on $\supp h_\varepsilon$. Let $\mathcal B\subseteq\DA$ be bounded, take $C_{\mathcal B}$ as in
 Proposition~\ref{prop:completion}, and put
 $\mathcal N_{\mathcal B}:=\sup_{G\in\mathcal B}\mathcal N(G)<\infty$. By \eqref{eq:planch}, (i)
 and \eqref{eq:logbound}, for $G\in\mathcal B$ and $R\ge1$,
 \[
-  \bigl|I_A(F_\varepsilon,G)-\ell_n(G)\bigr|
+  \bigl|I_A(F_\varepsilon,G)-\ell_r(G)\bigr|
    \le\int_{\R}|d_\varepsilon(\tau)|\,|\widehat G(\mathfrak c_0,\tau)|\,
      |\widehat T(\mathfrak c_0,\tau)|\,\frac{d\tau}{2\pi}
    \le R\varepsilon\,\mathcal N_{\mathcal B}+\eta(R),
@@ -941,12 +1069,12 @@ where the first term bounds the integral over $|\tau|\le R$ and
     \frac{d\tau}{2\pi}
 \]
 bounds the integral over $|\tau|>R$. Hence
-$\limsup_{\varepsilon\to0}\sup_{G\in\mathcal B}|I_A(F_\varepsilon,G)-\ell_n(G)|
+$\limsup_{\varepsilon\to0}\sup_{G\in\mathcal B}|I_A(F_\varepsilon,G)-\ell_r(G)|
 \le\eta(R)$ for every $R\ge1$, and $\eta(R)\to0$ as $R\to\infty$.
 
 (iii) By Lemma~\ref{lem:smeared}(iv),
-$\lambda_\mp(F_\varepsilon)=\int h_\varepsilon(s)e^{\pm s/2}ds\to n^{\pm1/2}$,
-and $M(\Gamma_n^{\mathrm{rad}})$ is \eqref{eq:radbidegree}.
+$\lambda_\mp(F_\varepsilon)=\int h_\varepsilon(s)e^{\pm s/2}ds\to r^{\pm1/2}$,
+and $M(\Gamma_r^{\mathrm{rad}})$ is \eqref{eq:radbidegree}.
 
 (iv) $J(F_\varepsilon)=(I_A(F_\varepsilon,\cdot),M(F_\varepsilon))$; combine
 (ii) and (iii).
@@ -1116,13 +1244,18 @@ element $y$ with $xyx=x$ and $yxy=y$ \cite{Lawson}.
 
 \begin{theorem}\label{thm:invsemigroup}
 \begin{enumerate}
-\item[(i)] $\Frob_{r,A}\star\Frob_{s,B}=\Frob_{rs,\,A\cup B}$ and
+\item[(i)] $\Frob_{r,A}\star\Frob_{r',B}=\Frob_{rr',\,A\cup B}$ and
 $\Frob_{r,A}^\dagger=\Frob_{r^{-1},A}$, and the map
 $(r,A)\mapsto\Frob_{r,A}$ is injective.
 \item[(ii)] $\mathfrak F_S$ is a commutative inverse semigroup under
 $\star$: for every $x\in\mathfrak F_S$ the only $y\in\mathfrak F_S$ with
-$x\star y\star x=x$ and $y\star x\star y=y$ is $y=x^\dagger$. Its idempotents are the $\Delta^{(A)}$, $A\subseteq S_f$, and
-$\Delta^{(A)}\star\Delta^{(B)}=\Delta^{(A\cup B)}$.
+$x\star y\star x=x$ and $y\star x\star y=y$ is $y=x^\dagger$. Its
+idempotents are the $\Delta^{(A)}$, $A\subseteq S_f$, and
+$\Delta^{(A)}\star\Delta^{(B)}=\Delta^{(A\cup B)}$. For each $A$ the set
+$\{\Frob_{r,A}:P(r)\subseteq A\}$ is a group under $\star$ with unit
+$\Delta^{(A)}$, isomorphic to the free abelian group $\Z^A$ by
+$\Frob_{r,A}\mapsto(v_p(r))_{p\in A}$, and $\mathfrak F_S$ is the disjoint
+union of these groups.
 \item[(iii)] $\mathfrak F_S$ is the smallest subset of $M_c(C_S)$ that
 contains every $\Frob_n$ and is closed under $\star$ and $\dagger$.
 \item[(iv)] There is no map $\Gamma_S\to M_c(C_S)$ which sends $a/b$ to
@@ -1131,7 +1264,7 @@ $\Frob_a\star\Frob_b^\dagger$ for all positive integers $a,b\in\Gamma_S$.
 \end{theorem}
 
 \begin{proof}
-(i) The two formulas are Lemma~\ref{lem:coset} with $c_rc_s=c_{rs}$,
+(i) The two formulas are Lemma~\ref{lem:coset} with $c_rc_{r'}=c_{rr'}$,
 $c_r^{-1}=c_{r^{-1}}$ and $K_AK_B=K_{A\cup B}$. The support $c_rK_A$
 determines $r$ through the module, and it determines $K_A$ as the set of
 quotients of its elements, and hence $A$ as the set of $p$ at which $K_A$
@@ -1148,7 +1281,11 @@ x\star z=y\star x\star z$, and symmetrically $z=z\star x\star y$; hence
 $y=z$. Finally $\Frob_{r,A}\star\Frob_{r,A}=\Frob_{r^2,A}$ equals
 $\Frob_{r,A}$ if and only if $r^2=r$, by the injectivity in (i); so the
 idempotents are the $\Frob_{1,A}=\Delta^{(A)}$, and their products are given
-by (i).
+by (i). For fixed $A$, (i) shows that $r\mapsto\Frob_{r,A}$ is an injective
+homomorphism from the group $\{r\in\Gamma_S:P(r)\subseteq A\}$, which is free
+abelian on $A$, into $(M_c(C_S),\star)$, sending $1$ to $\Delta^{(A)}$; and
+$\Frob_{r,A}$ determines $A$ by the injectivity in (i), so the groups for
+different $A$ are disjoint.
 
 (iii) By (i), $\mathfrak F_S$ is closed under $\star$ and $\dagger$, and it
 contains $\Frob_n=\Frob_{n,P(n)}$. Conversely, let $P(r)\subseteq A$ and write
@@ -1245,7 +1382,7 @@ for every $N\ge1$. In particular the left-hand side is $0$ when $n$ has at
 least two distinct prime divisors. The archimedean term is
 \begin{equation}\label{eq:frobarch}
   W_\infty\bigl(\Frob_n^{[h,N]}\bigr)
-   =\Bigl(\int_0^\infty K_s(t)\,h(e^{-t})\,dt\Bigr)\cdot
+   =\Bigl(\int_0^\infty \Ksh(t)\,h(e^{-t})\,dt\Bigr)\cdot
      \prod_{s\in S_f\smallsetminus P(n)}\mathbf 1\bigl[\,s^N\mid n-1\,\bigr],
 \end{equation}
 and $T(\Frob_n^{[h,N]})$ is the sum of \eqref{eq:frobcontacteq} and
@@ -1257,7 +1394,7 @@ soon as $2^N\ge n$.
 Put $f:=\Frob_n^{[h,N]}$ and $a_q:=f\circ j_q$ for $q\in S_f$. By
 Lemma~\ref{lem:smearedfrobinDA}, $f\in\Doff$. By \eqref{eq:localterms},
 \[
-  W_q(f)=\sum_{m\ne0}\int_{q^m\Z_q^\times}a_q\,\tau_q\,d^*x
+  W_q(f)=\sum_{m\ne0}\int_{q^m\Z_q^\times}a_q\,\varrho_q\,d^*x
    +(\log q)\int_{\Z_q^\times}\frac{a_q(u)-a_q(1)}{|1-u|_q}\,du .
 \]
 By Proposition~\ref{prop:slices}, for $m\in\Z$ and $w\in\Z_q^\times$ the point
@@ -1275,10 +1412,10 @@ nonzero shell integral is the one with $q=p$ and $m=k$. Then $P=\{p\}$, and
 for $s\in S_f\smallsetminus\{p\}$ the $s$-coordinate of $j_p(p^kw)$ is
 $p^{-k}=1/n$, which lies in $n^{-1}(1+s^N\Z_s)$ for every $N$. So
 $a_p(p^kw)=h(1/n)$ for all $w\in\Z_p^\times$. On this shell
-$\tau_p=p^{-k/2}$ (Proposition~\ref{prop:trace}(a)) and the shell has $d^*x$-volume $\log p$ by
+$\varrho_p=p^{-k/2}$ (Proposition~\ref{prop:trace}(a)) and the shell has $d^*x$-volume $\log p$ by
 \eqref{eq:shellvol}. Therefore
 \[
-  \sum_{q\in S_f}W_q(f)=\int_{p^k\Z_p^\times}a_p\,\tau_p\,d^*x
+  \sum_{q\in S_f}W_q(f)=\int_{p^k\Z_p^\times}a_p\,\varrho_p\,d^*x
   =(\log p)\,p^{-k/2}\,h(1/n)=\Lambda(n)\,n^{-1/2}\,h(1/n).
 \]
 In both cases this is \eqref{eq:frobcontacteq}.
@@ -1292,7 +1429,7 @@ $b_-=0$ and
 \]
 where the $s$-th indicator is $1$ if and only if $n\in1+s^N\Z_s$, that is,
 $s^N\mid n-1$. Since $f\in\Doff$, the archimedean term is
-$W_\infty(f)=\int_0^\infty K_s(t)[b_+(t)+b_+(-t)]\,dt$
+$W_\infty(f)=\int_0^\infty \Ksh(t)[b_+(t)+b_+(-t)]\,dt$
 (Proposition~\ref{prop:trace}(b)). Here
 $h(e^t)=0$ for $t\ge0$ by \eqref{eq:hsupport} and $\varepsilon<\log n$, which
 leaves \eqref{eq:frobarch}. If $s\in S_f\smallsetminus P$ and $2^N\ge n$,
@@ -1301,29 +1438,94 @@ then $s^N\ge2^N>n-1\ge1$, so $s^N\nmid n-1$ and the product is $0$.
 
 \begin{corollary}\label{cor:frobinvariant}
 Let $n\ge2$, and let $I_n\subset(n^{-2},1)$ be an open interval that contains
-$1/n$ and no other point of $\{q^{-m}:q\in S_f,\ m\in\Z\}$. For every $N\ge1$
-the functional $h\mapsto\sum_{q\in S_f}W_q(\Frob_n^{[h,N]})$ on
-$C_c^\infty(I_n)$ is integration against the measure
-$\Lambda(n)n^{-1/2}\delta_{1/n}$, and this is the only Radon measure on $I_n$
-representing it. We define the \emph{finite contact} of $\Frob_n$ as the mass
-of this measure,
+$1/n$ and no other point of $\{q^{-m}:q\in S_f,\ m\in\Z\}$.
+\begin{enumerate}
+\item[(i)] For every $N\ge1$ the functional
+$h\mapsto\sum_{q\in S_f}W_q(\Frob_n^{[h,N]})$ on $C_c^\infty(I_n)$ is
+integration against the measure $\Lambda(n)n^{-1/2}\delta_{1/n}$, and this is
+the only Radon measure on $I_n$ representing it. We call the mass of this
+measure,
 \begin{equation}\label{eq:frobcontactdef}
-  \cfin(\Frob_n):=\Lambda(n)\,n^{-1/2}.
+  \cfin(\Frob_n):=\Lambda(n)\,n^{-1/2},
 \end{equation}
-It does not depend on $N$, on $I_n$ or on the chart. For $n=p^k$,
+the \emph{finite contact} of the functions $\Frob_n^{[h,N]}$. It does not
+depend on $N$, on $I_n$ or on the chart. For $n=p^k$,
 \begin{equation}\label{eq:frobvolume}
   \cfin(\Frob_{p^k})=\vol_{d^*x}\bigl(p^k\Z_p^\times\bigr)\cdot p^{-k/2}
    =(\log p)\,p^{-k/2},
 \end{equation}
 the volume of the shell whose image under $j_p$ is $\supp\Frob_{p^k}$, times
-the value of $\tau_p$ on it.
+the value of $\varrho_p$ on it.
+\item[(ii)] For the functions $\Frob_n^{[h,N],\flat}$ of
+Definition~\ref{def:smearedfrob} and $h\in C_c^\infty(I_n)$,
+\begin{equation}\label{eq:flatcontact}
+  \sum_{q\in S_f}W_q\bigl(\Frob_n^{[h,N],\flat}\bigr)
+   =\Lambda(n)\,n^{-1/2}\,h(1/n)\prod_{s\in S_f\smallsetminus P(n)}(s-1)s^{N-1}.
+\end{equation}
+\item[(iii)] Let $n=p^k$ be a prime power. There are two families
+$(h_\varepsilon)$, $(h'_\varepsilon)$ of non-negative functions satisfying
+\eqref{eq:hsupport} with $\int h_\varepsilon\,d^*x_\infty
+=\int h'_\varepsilon\,d^*x_\infty=1$, so that both
+$\Frob_n^{[h_\varepsilon,N],\flat}\,d^*w$ and
+$\Frob_n^{[h'_\varepsilon,N],\flat}\,d^*w$ converge weakly to $\Frob_n$ as
+$(\varepsilon,N)\to(0,\infty)$ by Lemma~\ref{lem:smearedfrobinDA}, such that
+for all small $\varepsilon$ and all $N$ with $2^N\ge n$
+\begin{align*}
+  \sum_{q\in S_f}W_q\bigl(\Frob_n^{[h_\varepsilon,N],\flat}\bigr)&=0,\qquad
+  0\le T\bigl(\Frob_n^{[h_\varepsilon,N],\flat}\bigr)\le\frac{2n^{1/2}}{n-1},\\
+  T\bigl(\Frob_n^{[h'_\varepsilon,N],\flat}\bigr)
+   &\ge\sum_{q\in S_f}W_q\bigl(\Frob_n^{[h'_\varepsilon,N],\flat}\bigr)
+   \ge\frac{(\log p)\,p^{-k/2}}{\varepsilon}.
+\end{align*}
+\end{enumerate}
+Thus $\cfin(\Frob_n)$ is a coefficient attached to the functions
+\eqref{eq:smearedfrob} as they stand, and neither $\sum_qW_q$ nor $T$ has a
+limit along the probability densities which converge weakly to
+$\Frob_{p^k}$: the trace does not extend by weak continuity to the measure
+$\Frob_{p^k}$. Proposition~\ref{prop:noextension} below, which does not use
+this corollary, shows that the same holds for $\Frob_n$ with $n$ arbitrary,
+by means of approximating densities which are not of the form
+$\Frob_n^{[h,N],\flat}$.
 \end{corollary}
 
 \begin{proof}
-The first assertion is \eqref{eq:frobcontacteq}; a Radon measure on $I_n$ is
-determined by its integrals against $C_c^\infty(I_n)$. Formula
+(i) The first assertion is \eqref{eq:frobcontacteq}; a Radon measure on $I_n$
+is determined by its integrals against $C_c^\infty(I_n)$. Formula
 \eqref{eq:frobvolume} restates the computation in the proof of
 Theorem~\ref{thm:frobcontact}, with Lemma~\ref{lem:frobsupport}.
+
+(ii) By definition $\Frob_n^{[h,N],\flat}$ is $\Frob_n^{[h,N]}$ divided by
+$\prod_{s\in S_f\smallsetminus P(n)}\vol(1+s^N\Z_s)$, and
+$\vol(1+s^N\Z_s)^{-1}=(s-1)s^{N-1}$; apply \eqref{eq:frobcontacteq}.
+
+(iii) Fix $\eta,\eta'\in C_c^\infty((-1,1))$, non-negative, with
+$\int\eta=\int\eta'=2$, $\eta(0)=0$ and $\eta'(0)\ge1$, and put
+$h_\varepsilon(x):=\varepsilon^{-1}\eta(\varepsilon^{-1}\log(nx))$ and
+$h'_\varepsilon(x):=\varepsilon^{-1}\eta'(\varepsilon^{-1}\log(nx))$. They
+satisfy \eqref{eq:hsupport}, and
+$\int_0^\infty h_\varepsilon\,d^*x_\infty
+=\tfrac12\int_\R\varepsilon^{-1}\eta(u/\varepsilon)\,du=1$, likewise for
+$h'_\varepsilon$. For small $\varepsilon$ the interval \eqref{eq:hsupport}
+contains no point of $\{q^{-m}\}$ other than $1/n$, so \eqref{eq:flatcontact}
+applies. Since $h_\varepsilon(1/n)=\varepsilon^{-1}\eta(0)=0$, the first sum
+vanishes. Since $h'_\varepsilon(1/n)\ge\varepsilon^{-1}$ and the product in
+\eqref{eq:flatcontact} is at least $1$, the second sum is at least
+$(\log p)p^{-k/2}/\varepsilon$. By \eqref{eq:frobarch} the archimedean term
+of $\Frob_n^{[h,N]}$ is non-negative for $h\ge0$, which gives
+$T\ge\sum_qW_q$ for $h'_\varepsilon$. For $h_\varepsilon$: if
+$S_f\ne\{p\}$ and $2^N\ge n$ the archimedean term vanishes by
+Theorem~\ref{thm:frobcontact}, so $T=0$; if $S_f=\{p\}$ there is no
+normalizing factor, and by \eqref{eq:frobarch}
+\[
+  T\bigl(\Frob_n^{[h_\varepsilon,N]}\bigr)
+   =\int_0^\infty\Ksh(t)\,h_\varepsilon(e^{-t})\,dt
+   \le\Ksh(\log n-\varepsilon)\int_\R h_\varepsilon(e^{-t})\,dt
+   =2\,\Ksh(\log n-\varepsilon),
+\]
+because $\Ksh$ is decreasing and $h_\varepsilon(e^{-t})$ vanishes for
+$t\le\log n-\varepsilon$; and $2\Ksh(\log n-\varepsilon)$ tends to
+$2\Ksh(\log n)=n^{1/2}/(n-1)$ as $\varepsilon\to0$, so it is at most
+$2n^{1/2}/(n-1)$ for small $\varepsilon$.
 \end{proof}
 
 \begin{theorem}\label{thm:compositedisjoint}
@@ -1375,9 +1577,19 @@ of abelian groups built from the lattice
 \[
   L_S:=\prod_{p\in S_f}\Z_p ,
 \]
-and we compute its total cofiber over the squarefree divisors. The notation
-$\Sh_\Z$ used below is not related to the Hochschild complex $\Sh(M)$ of
-\cite[(4)]{Companion}.
+and we compute its total cofiber over the squarefree divisors. The complex
+depends on the measure $\Frob_n$ only through the integer $n$, and on $S$
+only through $L_S$; by Theorem~\ref{thm:shstructure}(i) it is
+quasi-isomorphic to $[\Z\xrightarrow{n}\Z]$, which does not depend on $S$.
+The notation $\Sh_\Z(\Frob_n)$ records the index: we do not construct a
+functor on measures, and the homomorphism property $\Frob_m\star\Frob_n
+=\Frob_{mn}$ enters only through the multiplication of the indices. The
+results of this section are the homological form of the classical identities
+$\sum_{d\mid n}\Lambda(d)=\log n$ and $\Phi_n(1)=e^{\Lambda(n)}$
+(Lemma~\ref{lem:cyclotomicvalue}); their relation with the trace is the
+equality of real numbers stated in Theorem~\ref{thm:shdegrees}, and nothing
+more is claimed. The notation $\Sh_\Z$ used below is not related to the
+Hochschild complex $\Sh(M)$ of \cite[(4)]{Companion}.
 
 Complexes are cochain complexes of abelian groups, and $D(\Z)$ is the derived
 category of abelian groups.  For a homomorphism $f:V\to V'$ we write
@@ -1389,7 +1601,15 @@ functorial for commutative squares of chain maps.  If $f$ is injective in
 every degree, the projection $\Cone(f)\to V'/f(V)$ is a quasi-isomorphism,
 because it is surjective and its kernel is the cone of the identity of $V$,
 which is contractible; this quasi-isomorphism is natural for commutative
-squares of injective chain maps.
+squares of injective chain maps.  We say that an exact triangle
+$X_1\xrightarrow{u}X_2\xrightarrow{v}X_3\xrightarrow{w}X_1[1]$ in $D(\Z)$
+\emph{splits} if $w=0$.  In that case $X_2\cong X_1\oplus X_3$: the exact
+sequence $\Hom(X_3,X_2)\to\Hom(X_3,X_3)\to\Hom(X_3,X_1[1])$ gives
+$\sigma:X_3\to X_2$ with $v\sigma=\mathrm{id}$, the long exact cohomology
+sequence of the triangle breaks into short exact sequences
+$0\to H^i(X_1)\to H^i(X_2)\to H^i(X_3)\to0$ split by $H^i(\sigma)$, and so
+$(u,\sigma):X_1\oplus X_3\to X_2$ is an isomorphism on cohomology, hence an
+isomorphism in $D(\Z)$.
 
 \begin{definition}\label{def:shadow}
 For $n\ge1$ put
@@ -1589,15 +1809,17 @@ complexes
 gives an exact triangle in $D(\Z)$.  By (i) the map
 $\Sh_\Z(\Frob_n)\to(L_S/nL_S)[0]$ is a quasi-isomorphism, which gives
 \eqref{eq:triangle}.  If the triangle splits, then
-$\Sh_\Z(\Frob_{mn})\cong\Sh_\Z(\Frob_m)\oplus\Sh_\Z(\Frob_n)$ in $D(\Z)$, so
+$\Sh_\Z(\Frob_{mn})\cong\Sh_\Z(\Frob_m)\oplus\Sh_\Z(\Frob_n)$ in $D(\Z)$, as
+recalled at the beginning of this section, so
 $\Z/mn\cong\Z/m\oplus\Z/n$ by (i), which forces $\gcd(m,n)=1$.  Conversely
-the third map of the triangle is an element of
+the third morphism of the triangle is an element of
 \[
   \Hom_{D(\Z)}\bigl(\Sh_\Z(\Frob_n),\Sh_\Z(\Frob_m)[1]\bigr)
    =\mathrm{Ext}^1_\Z(\Z/n,\Z/m)\cong\Z/\gcd(m,n),
 \]
-which is $0$ when $\gcd(m,n)=1$, and a triangle whose third map is zero
-splits.
+by (i) and the identification of
+$\Hom_{D(\Z)}(M[0],M'[1])$ with $\mathrm{Ext}^1_\Z(M,M')$ for abelian groups
+$M,M'$; this group is $0$ when $\gcd(m,n)=1$.
 
 (iii) $L_S$ is torsion-free, hence flat over $\Z$.  By (i) the complexes
 $\Sh_\Z(\Frob_m)$ and $\Sh_\Z(\Frob_n)$ are flat resolutions of $\Z/m$ and
@@ -1622,13 +1844,17 @@ $\sum_{Z\subseteq P(n)}(-1)^{|Z|}\log n_Z$, which is $\Lambda(n)$ by
 \end{proof}
 
 \begin{theorem}\label{thm:shdegrees}
-Let $n\ge2$, and let $\cfin(\Frob_d)$ be the finite contact of
-Corollary~\ref{cor:frobinvariant}. Then
+Let $n\ge2$, and for $d\ge2$ let $\cfin(\Frob_d)=\Lambda(d)\,d^{-1/2}$ be the
+coefficient defined in Corollary~\ref{cor:frobinvariant}. Then the following
+equalities of real numbers hold:
 \begin{align}
   \cfin(\Frob_n)&=n^{-1/2}\,\degdet\Prim_n,\label{eq:shdeg1}\\
   \degdet\Sh_\Z(\Frob_n)&=\log n
     =\sum_{d\mid n,\ d>1}d^{1/2}\,\cfin(\Frob_d).\label{eq:shdeg2}
 \end{align}
+In each of them one side is defined through the functional $T$ and the
+functions $\Frob_d^{[h,N]}$, and the other depends only on the integers
+involved.
 \end{theorem}
 
 \begin{proof}
@@ -1643,17 +1869,30 @@ $\Lambda(1)=0$.
 By \eqref{eq:radcontact} the same two identities hold with
 $\cfin(\Gamma_d^{\mathrm{rad}})$ in place of $\cfin(\Frob_d)$.  In
 \eqref{eq:shdeg1} the left-hand side is computed from the trace: it is the
-Haar volume $\log p$ of a valuation shell times the value of $\tau_p$ on it.
-The right-hand side is computed from the indices of the lattices $dL_S$,
-$d\mid n$, in $L_S$.  The two sides are compared as real numbers only.  After
-tensoring with $\C$ the multiplication by a nonzero integer is invertible,
-so the complexes $\Sh_\Z(\Frob_n)\otimes_\Z\C$ and $\Prim_n\otimes_\Z\C$ are
-acyclic.
+Haar volume $\log p$ of a valuation shell times the value of $\varrho_p$ on
+it.  The right-hand side is computed from the indices of the lattices
+$dL_S$, $d\mid n$, in $L_S$.  The theorem asserts that the two real numbers
+are equal, and its proof consists in computing both; we do not construct a
+map or a functor relating the two sides.  After tensoring with $\C$ the
+multiplication by a nonzero integer is invertible, so the complexes
+$\Sh_\Z(\Frob_n)\otimes_\Z\C$ and $\Prim_n\otimes_\Z\C$ are acyclic.
 
 \section{The Gram forms}\label{sec:gram}
 
 Throughout this section $S$ is a fixed chart, $T=T_S$, and
-$I_A$ is the Hermitian form of Proposition~\ref{prop:tate}. The measure $\omega_{\mathrm{fin}}$ and the
+$I_A$ is the Hermitian form of Proposition~\ref{prop:tate}. Two kinds of
+profiles occur, and the domain is stated each time. Profiles in
+$C_c^\infty(\R_{>0})$, denoted $h$, $h_m$, $h_n$ and $g$ in
+Definition~\ref{def:smearedrF}, Lemmas~\ref{lem:smearedproduct}
+and~\ref{lem:boxtrace} and Theorems~\ref{thm:gramoff}, \ref{thm:gramdiag}
+and~\ref{thm:twohalves}, are functions of the multiplicative variable
+$x_\infty$, as in Section~\ref{sec:frob}. Profiles in $C_c^\infty(\R)$,
+denoted $h_1$, $h_2$ in Theorem~\ref{thm:fullweil}, $\tilde g$ in
+Theorem~\ref{thm:twohalves}, $\beta$ and $\phi$ in
+Theorem~\ref{thm:infgenus}, and $g$ in Theorem~\ref{thm:qfinpositive}, are
+functions of the additive variable $-\log|x|_S$, as in
+Section~\ref{sec:radial}; the two are related by $\tilde g(t)=g(e^{-t})$.
+The measure $\omega_{\mathrm{fin}}$ and the
 function $\omega_\infty$ are those of Theorem~\ref{thm:repmeasures}; thus for
 $t\ne0$
 \[
@@ -1671,7 +1910,7 @@ $\vol(U_s)=\bigl((s-1)s^{N-1}\bigr)^{-1}$, and for $A\subseteq S_f$
   \vol_N(A):=\prod_{s\in S_f\smallsetminus A}\vol(U_s).
 \end{equation}
 On $\R_{>0}$ we use the measure $d^*x_\infty=dx/(2x)$, and
-$\tau_\infty(\pm x)=x^{1/2}/|1\mp x|$.
+$\varrho_\infty(\pm x)=x^{1/2}/|1\mp x|$.
 
 \begin{definition}\label{def:smearedrF}
 Let $r\in\Q_{>0}$, let $A$ be a set of primes with $P(r)\subseteq A\subseteq
@@ -1764,7 +2003,7 @@ for every $s\in S_f\smallsetminus A$, and $\iota_N(r,A):=0$ otherwise. If
 $r\ne1$, then $\Theta\in\Doff$ and
 \begin{equation}\label{eq:boxoff}
   \sum_{q\in S_f}W_q(\Theta)=\omega_{\mathrm{fin}}(\{\log r\})\,g(1/r),\qquad
-  W_\infty(\Theta)=\iota_N(r,A)\int_0^\infty g(x)\,\tau_\infty(x)\,
+  W_\infty(\Theta)=\iota_N(r,A)\int_0^\infty g(x)\,\varrho_\infty(x)\,
     d^*x_\infty .
 \end{equation}
 If $r=1$, then
@@ -1779,17 +2018,17 @@ $b_-=0$.
 
 \begin{proof}
 (a) In \eqref{eq:archterm} write the first bracket, with
-$K_s(t)=1/(4\sinh(t/2))$ and $2K(t)e^{-t/2}=1/\sinh t$, as
+$\Ksh(t)=1/(4\sinh(t/2))$ and $2K(t)e^{-t/2}=1/\sinh t$, as
 \[
-  K_s(t)\bigl(b_+(t)+b_+(-t)-2b_+(0)\bigr)
+  \Ksh(t)\bigl(b_+(t)+b_+(-t)-2b_+(0)\bigr)
   +b_+(0)\Bigl(\frac1{2\sinh(t/2)}-\frac1{\sinh t}\Bigr).
 \]
 The first summand is $O(t)$ near $0$ by Taylor's formula and has compact
-support up to the term $-2b_+(0)K_s(t)=O(e^{-t/2})$; the second is $O(t)$ near
+support up to the term $-2b_+(0)\Ksh(t)=O(e^{-t/2})$; the second is $O(t)$ near
 $0$ and $O(e^{-t/2})$ at infinity. A primitive of the second parenthesis is
 $\log\bigl(\tanh(t/4)/\tanh(t/2)\bigr)$, which tends to $\log\tfrac12$ as
 $t\to0$ and to $0$ as $t\to\infty$; so its integral over $(0,\infty)$ is
-$\log2$. This gives \eqref{eq:Winfalt}, the last term being the $K_c$-integral
+$\log2$. This gives \eqref{eq:Winfalt}, the last term being the $\Kch$-integral
 of \eqref{eq:archterm}.
 
 (b) By Proposition~\ref{prop:slices}, for $q\in S_f$, $k\in\Z$ and
@@ -1817,7 +2056,7 @@ $\omega_{\mathrm{fin}}(\{\log r\})=0$. This is the first formula of
 equal to $1$, and $1\in r^{-1}U_s$ if and only if $r\in U_s$, that is,
 $v_s(r-1)\ge N$. So $\Theta(j_\infty(x))=\iota_N(r,A)\,g(x)$ for $x>0$ and
 $\Theta(j_\infty(x))=0$ for $x<0$, and Proposition~\ref{prop:trace}(b) gives the
-integral against $\tau_\infty\,d^*x_\infty$.
+integral against $\varrho_\infty\,d^*x_\infty$.
 
 \emph{The case $r=1$.} By hypothesis $g(q^{-k})=0$ for $k\ne0$, so no shell
 contributes. For $k=0$, \eqref{eq:boxslice} gives $\Theta(j_q(w))=g(1)$ for
@@ -1845,7 +2084,7 @@ Then
 \begin{equation}\label{eq:gramoffentry}
   I_A(\Theta_m,\Theta_n)=\vol_N\bigl(P(m)\cap P(n)\bigr)\Bigl[
    \omega_{\mathrm{fin}}(\{\log m-\log n\})\,g(n/m)
-   +\iota\int_0^\infty g(x)\,\tau_\infty(x)\,d^*x_\infty\Bigr],
+   +\iota\int_0^\infty g(x)\,\varrho_\infty(x)\,d^*x_\infty\Bigr],
 \end{equation}
 where $\iota=1$ if $s^N\mid(m-n)$ for every $s\in S_f\smallsetminus P(mn)$ and
 $\iota=0$ otherwise. In particular the first term is nonzero only if $m/n$ is
@@ -1985,11 +2224,11 @@ $\Theta\star\Delta^{\mathrm{rad}}=\tfrac12\vol_N(A)\,\Gamma_{\tilde g}$ with
 $\tilde g(t):=g(e^{-t})$, and
 \begin{align}
   T(\Theta)&=\omega_{\mathrm{fin}}(\{\log r\})\,g(1/r)
-   +\iota_N(r,A)\int_0^\infty g(x)\,\tau_\infty(x)\,d^*x_\infty,
+   +\iota_N(r,A)\int_0^\infty g(x)\,\varrho_\infty(x)\,d^*x_\infty,
    \label{eq:halfA}\\
   T\bigl(\Theta\star\Delta^{\mathrm{rad}}\bigr)&=\tfrac12\vol_N(A)\Bigl[
    \omega_{\mathrm{fin}}(\{\log r\})\,g(1/r)
-   +\int_0^\infty g(x)\bigl(\tau_\infty(x)+\tau_\infty(-x)\bigr)\,
+   +\int_0^\infty g(x)\bigl(\varrho_\infty(x)+\varrho_\infty(-x)\bigr)\,
      d^*x_\infty\Bigr].\label{eq:halfB}
 \end{align}
 In particular, for $m\ne n$ and $\Theta_m$, $\Theta_n$, $g$ as in
@@ -2000,7 +2239,7 @@ Theorem~\ref{thm:gramoff},
     \Theta_n\star\Delta^{\mathrm{rad}}\bigr)
   ={}&\tfrac12\,\vol_N(P(m))\,\vol_N(P(n))\Bigl[
    \omega_{\mathrm{fin}}(\{\log m-\log n\})\,g(n/m)\\
-  &+\int_0^\infty g(x)\bigl(\tau_\infty(x)+\tau_\infty(-x)\bigr)\,
+  &+\int_0^\infty g(x)\bigl(\varrho_\infty(x)+\varrho_\infty(-x)\bigr)\,
      d^*x_\infty\Bigr],
 \end{aligned}
 \end{equation}
@@ -2024,10 +2263,10 @@ points $t$ with $e^{-t}\in Q_S$, so by the hypothesis on $\supp g$ only the
 atom at $t=\log r$ can meet $\supp\tilde g$, and
 $\int\tilde g\,d\omega_{\mathrm{fin}}
 =\omega_{\mathrm{fin}}(\{\log r\})g(1/r)$. With $x=e^{-t}$ one has
-$dt=2\,d^*x_\infty$ and $2K(|t|)=\tau_\infty(x)+\tau_\infty(-x)$, by the
-formulas for $\tau_\infty$ recalled after Proposition~\ref{prop:trace}; so
+$dt=2\,d^*x_\infty$ and $2K(|t|)=\varrho_\infty(x)+\varrho_\infty(-x)$, by the
+formulas for $\varrho_\infty$ recalled after Proposition~\ref{prop:trace}; so
 the second integral is
-$\int_0^\infty g(x)(\tau_\infty(x)+\tau_\infty(-x))\,d^*x_\infty$. This is
+$\int_0^\infty g(x)(\varrho_\infty(x)+\varrho_\infty(-x))\,d^*x_\infty$. This is
 \eqref{eq:halfB}.
 
 For \eqref{eq:radgramentry}: $\Delta^{\mathrm{rad}}$ is real, invariant under
@@ -2045,7 +2284,7 @@ $\vol_N(P(m)\cap P(n))\,\vol_N(P(m)\cup P(n))=\vol_N(P(m))\,\vol_N(P(n))$. Apply
 In \eqref{eq:halfA} and \eqref{eq:halfB} the finite-place terms agree up to
 the factor $\tfrac12\vol_N(A)$. In the archimedean term the averaging replaces
 the factor $\iota_N(r,A)$, which is $0$ for large $N$ when $S_f\ne A$, by
-$\tfrac12\vol_N(A)$, and adds the density $\tau_\infty(-x)$ of the negative
+$\tfrac12\vol_N(A)$, and adds the density $\varrho_\infty(-x)$ of the negative
 half-line. So the Gram matrix of the averaged functions has entries given by
 $\omega_{\mathrm{fin}}$ and $\omega_\infty$ at every level $N$, whereas for
 large $N$ the off-diagonal Gram entries of the functions $\Theta_n$ involve
@@ -2055,10 +2294,10 @@ We turn to approximations of the units $\Delta$ and $\Delta^{\mathrm{rad}}$,
 which are measures and not elements of $\DA$. Fix a real
 $\beta\in C_c^\infty(\R)$ with $\beta\ge0$, $\beta\not\equiv0$, and put
 \[
-  \varrho(u):=\int_\R\beta(v)\beta(v-u)\,dv,\qquad
-  \varrho_0:=\varrho(0)=\|\beta\|_{L^2}^2 ,
+  \phi(u):=\int_\R\beta(v)\beta(v-u)\,dv,\qquad
+  \phi_0:=\phi(0)=\|\beta\|_{L^2}^2 ,
 \]
-an even function in $C_c^\infty(\R)$ with $0\le\varrho\le\varrho_0$. For
+an even function in $C_c^\infty(\R)$ with $0\le\phi\le\phi_0$. For
 $\varepsilon>0$ and $N\ge1$ let
 \[
   \Delta_{\varepsilon,N}:=\Frob_{1,\emptyset}^{[\beta_\varepsilon,N]},\quad
@@ -2069,11 +2308,11 @@ We write $\|\cdot\|$ for the norm of $L^2(C_S,d^*w)$ and
 $\int\Theta:=\int_{C_S}\Theta\,d^*w$.
 
 \begin{theorem}\label{thm:infgenus}
-Let $\varepsilon>0$ be so small that $\supp\varrho(\cdot/\varepsilon)\subset
+Let $\varepsilon>0$ be so small that $\supp\phi(\cdot/\varepsilon)\subset
 (-\log2,\log2)$, and let $N\ge1$. Put
 \[
   \Omega_\beta(\varepsilon):=\int_0^\infty
-   \frac{1-\varrho(t/\varepsilon)/\varrho_0}{2\sinh(t/2)}\,dt .
+   \frac{1-\phi(t/\varepsilon)/\phi_0}{2\sinh(t/2)}\,dt .
 \]
 \begin{enumerate}
 \item[(i)] As $\varepsilon\to0$ and $N\to\infty$,
@@ -2090,16 +2329,16 @@ $\Delta^{\mathrm{rad}}_\varepsilon/\int \Delta^{\mathrm{rad}}_\varepsilon\to\Del
 \begin{equation}\label{eq:diagdivnorm}
   \frac{I_A(\Delta^{\mathrm{rad}}_\varepsilon,\Delta^{\mathrm{rad}}_\varepsilon)}{\|\Delta^{\mathrm{rad}}_\varepsilon\|^2}
    =\gamma+\log8\pi-\Omega_\beta(\varepsilon)
-    +\int_0^\infty\frac{\varrho(t/\varepsilon)}{\varrho_0}\,
+    +\int_0^\infty\frac{\phi(t/\varepsilon)}{\phi_0}\,
       \frac{dt}{2\cosh(t/2)},
 \end{equation}
 and the last integral is at most
-$\tfrac12\varepsilon\varrho_0^{-1}\int_0^\infty\varrho$.
+$\tfrac12\varepsilon\phi_0^{-1}\int_0^\infty\phi$.
 \item[(iv)] As $\varepsilon\to0$,
 \[
   \Omega_\beta(\varepsilon)=\log\frac1\varepsilon+C_\beta+o(1),\qquad
-  C_\beta:=\log4+\int_0^1\Bigl(1-\frac{\varrho(u)}{\varrho_0}\Bigr)\frac{du}u
-   -\int_1^\infty\frac{\varrho(u)}{\varrho_0}\,\frac{du}u .
+  C_\beta:=\log4+\int_0^1\Bigl(1-\frac{\phi(u)}{\phi_0}\Bigr)\frac{du}u
+   -\int_1^\infty\frac{\phi(u)}{\phi_0}\,\frac{du}u .
 \]
 \end{enumerate}
 Consequently $I_A(\Delta^{\mathrm{rad}}_\varepsilon,\Delta^{\mathrm{rad}}_\varepsilon)/\|\Delta^{\mathrm{rad}}_\varepsilon\|^2
@@ -2108,7 +2347,7 @@ $I_A(\Delta_{\varepsilon,N},\Delta_{\varepsilon,N})/\|\Delta_{\varepsilon,N}\|^2
 =-\log(1/\varepsilon)-(N-1)\sum_{s\in S_f}\log s+O(1)$ with a remainder
 bounded uniformly in $N$. Moreover
 $\|\Delta_{\varepsilon,N}\|^2/(\int \Delta_{\varepsilon,N})^2
-=2\varrho_0\big/\bigl(\varepsilon\,\vol_N(\emptyset)(\int\beta)^2\bigr)$, so
+=2\phi_0\big/\bigl(\varepsilon\,\vol_N(\emptyset)(\int\beta)^2\bigr)$, so
 $I_A$ of the normalized functions $\Delta_{\varepsilon,N}/\int \Delta_{\varepsilon,N}$
 tends to $-\infty$ as $\varepsilon\to0$, $N\to\infty$.
 \end{theorem}
@@ -2133,49 +2372,49 @@ $\Delta_{\varepsilon,N}\star \Delta_{\varepsilon,N}^\dagger
 =\vol_N(\emptyset)\Frob_{1,\emptyset}^{[g,N]}$ with
 \[
   g(e^t)=\frac12\int_\R\beta(s/\varepsilon)\beta((s-t)/\varepsilon)\,ds
-   =\frac\varepsilon2\,\varrho(t/\varepsilon).
+   =\frac\varepsilon2\,\phi(t/\varepsilon).
 \]
 The support of $g$ lies in $(\tfrac12,2)$, which meets $Q_S$ only in $1$.
 Since $\|\Theta\|^2=(\Theta\star\Theta^\dagger)(1)$, we get
-$\|\Delta_{\varepsilon,N}\|^2=\vol_N(\emptyset)\varepsilon\varrho_0/2$, and
-\eqref{eq:unitpackettotal} with $A=\emptyset$ and $g(1)=\varepsilon\varrho_0/2$
+$\|\Delta_{\varepsilon,N}\|^2=\vol_N(\emptyset)\varepsilon\phi_0/2$, and
+\eqref{eq:unitpackettotal} with $A=\emptyset$ and $g(1)=\varepsilon\phi_0/2$
 gives \eqref{eq:diagdiv}, the integral there being
-$\tfrac12\varepsilon\varrho_0\Omega_\beta(\varepsilon)$ because $\varrho$ is even.
+$\tfrac12\varepsilon\phi_0\Omega_\beta(\varepsilon)$ because $\phi$ is even.
 Also $\int \Delta_{\varepsilon,N}=\vol_N(\emptyset)\int_0^\infty\beta_\varepsilon\,
 d^*x_\infty=\vol_N(\emptyset)\,\varepsilon\int\beta/2$, which gives the stated
 ratio.
 
 (iii) By Lemma~\ref{lem:smeared}(iii),
 $\Delta^{\mathrm{rad}}_\varepsilon\star
-(\Delta^{\mathrm{rad}}_\varepsilon)^\dagger=\Gamma_{\varrho_\varepsilon}$
-with $\varrho_\varepsilon(t):=\varepsilon\varrho(t/\varepsilon)$, and
-$\|\Delta^{\mathrm{rad}}_\varepsilon\|^2=\varrho_\varepsilon(0)
-=\varepsilon\varrho_0$. Since
-$\supp\varrho_\varepsilon\subset(-\log2,\log2)$ contains no point
+(\Delta^{\mathrm{rad}}_\varepsilon)^\dagger=\Gamma_{\phi_\varepsilon}$
+with $\phi_\varepsilon(t):=\varepsilon\phi(t/\varepsilon)$, and
+$\|\Delta^{\mathrm{rad}}_\varepsilon\|^2=\phi_\varepsilon(0)
+=\varepsilon\phi_0$. Since
+$\supp\phi_\varepsilon\subset(-\log2,\log2)$ contains no point
 $\pm k\log p$ with $k\ge1$, Theorem~\ref{thm:radtrace} gives
-$W_p(\Gamma_{\varrho_\varepsilon})=0$ for $p\in S_f$. Both archimedean
-profiles of $\Gamma_{\varrho_\varepsilon}$ are equal to
-$\varrho_\varepsilon$, which is even, so \eqref{eq:Winfalt} gives
+$W_p(\Gamma_{\phi_\varepsilon})=0$ for $p\in S_f$. Both archimedean
+profiles of $\Gamma_{\phi_\varepsilon}$ are equal to
+$\phi_\varepsilon$, which is even, so \eqref{eq:Winfalt} gives
 \[
-  W_\infty(\Gamma_{\varrho_\varepsilon})
-   =\varrho_\varepsilon(0)(\gamma+\log8\pi)
-   -\int_0^\infty\frac{\varrho_\varepsilon(0)-\varrho_\varepsilon(t)}
+  W_\infty(\Gamma_{\phi_\varepsilon})
+   =\phi_\varepsilon(0)(\gamma+\log8\pi)
+   -\int_0^\infty\frac{\phi_\varepsilon(0)-\phi_\varepsilon(t)}
      {2\sinh(t/2)}\,dt
-   +\int_0^\infty\frac{\varrho_\varepsilon(t)}{2\cosh(t/2)}\,dt .
+   +\int_0^\infty\frac{\phi_\varepsilon(t)}{2\cosh(t/2)}\,dt .
 \]
-Dividing by $\varrho_\varepsilon(0)$ gives \eqref{eq:diagdivnorm}. The
+Dividing by $\phi_\varepsilon(0)$ gives \eqref{eq:diagdivnorm}. The
 bound for the last integral follows from $\cosh\ge1$ and the substitution
 $t=\varepsilon u$.
 
 (iv) Substituting $t=\varepsilon u$ and writing
 $w_\varepsilon(u):=(\varepsilon u/2)/\sinh(\varepsilon u/2)\in(0,1]$,
 \[
-  \Omega_\beta(\varepsilon)=\int_0^1\Bigl(1-\frac{\varrho(u)}{\varrho_0}\Bigr)
+  \Omega_\beta(\varepsilon)=\int_0^1\Bigl(1-\frac{\phi(u)}{\phi_0}\Bigr)
    w_\varepsilon(u)\frac{du}u+\int_1^\infty w_\varepsilon(u)\frac{du}u
-   -\int_1^\infty\frac{\varrho(u)}{\varrho_0}w_\varepsilon(u)\frac{du}u .
+   -\int_1^\infty\frac{\phi(u)}{\phi_0}w_\varepsilon(u)\frac{du}u .
 \]
-The function $1-\varrho/\varrho_0$ is smooth, even and vanishes at $0$, hence
-is $O(u^2)$, and $\varrho$ has compact support; since $w_\varepsilon\to1$
+The function $1-\phi/\phi_0$ is smooth, even and vanishes at $0$, hence
+is $O(u^2)$, and $\phi$ has compact support; since $w_\varepsilon\to1$
 pointwise, dominated convergence gives the limits of the first and third
 integrals. The second is
 $\int_\varepsilon^\infty dt/(2\sinh(t/2))=-\log\tanh(\varepsilon/4)
@@ -2186,17 +2425,77 @@ $\gamma+\log8\pi-C_\beta-\sum_s(\log s)\tfrac{s-2}{s-1}+o(1)$, which does
 not depend on $N$.
 \end{proof}
 
-By (i), the functions
+The functions
 $\Delta_{\varepsilon,N}\star\Delta_{\varepsilon,N}^\dagger/
 (\int\Delta_{\varepsilon,N})^2$ converge weakly to
-$\Delta\star\Delta^\dagger=\Delta$, and by the theorem their trace tends to
-$-\infty$. Divided by $\|\Delta_{\varepsilon,N}\|^2$, the trace of
+$\Delta\star\Delta^\dagger=\Delta$ as $\varepsilon\to0$ and $N\to\infty$.
+Indeed, with $\supp\beta\subseteq[-a,a]$, the function
+$\Delta_{\varepsilon,N}\star\Delta_{\varepsilon,N}^\dagger$ is non-negative,
+it is supported in the set
+$\{x_\infty>0,\ |\log x_\infty|\le2a\varepsilon\}\times\prod_sU_s$, which is
+the product of the set in the proof of (i) with its inverse, the $U_s$ being
+groups, and its integral is $(\int\Delta_{\varepsilon,N})^2$, because the
+integral of a convolution is the product of the integrals and
+$\int\Theta^\dagger=\overline{\int\Theta}$; so the argument of (i) applies.
+By the theorem the trace of these functions tends to $-\infty$. Divided by
+$\|\Delta_{\varepsilon,N}\|^2$, the trace of
 $\Delta_{\varepsilon,N}\star\Delta_{\varepsilon,N}^\dagger$ is
 $-\log(1/\varepsilon)-(N-1)\sum_{s\in S_f}\log s+O(1)$: logarithmic in the
-archimedean width and linear in the level at each finite place. For
-comparison, on the square of a smooth projective curve of genus
-$\mathfrak g$ the diagonal has self-intersection number $2-2\mathfrak g$
-\cite[Ch.~V, Exercise~1.6(a)]{Hartshorne}.
+archimedean width and linear in the level at each finite place.
+
+\begin{remark}
+Formula \eqref{eq:diagdiv} can be read on the symbol $\widehat T$ of
+Proposition~\ref{prop:tate}. Put $\Theta:=\Delta_{\varepsilon,N}$. By
+\eqref{eq:planch} and the Plancherel formula
+$\|\Theta\|^2=\int|\widehat\Theta|^2d\chi$, the left-hand side of
+\eqref{eq:diagdiv} is the mean of $\widehat T$ for the probability measure
+$|\widehat\Theta|^2d\chi/\|\Theta\|^2$. Since
+$\Theta(x)=\beta_\varepsilon(x_\infty)\prod_s\mathbf 1_{U_s}(x_s)$ for
+$x_\infty>0$ and $\Theta(x)=0$ for $x_\infty<0$, one has
+\[
+  \widehat\Theta(\theta,\tau;(\kappa_s))
+   =\vol_N(\emptyset)\cdot\frac12\int_\R\beta(t/\varepsilon)e^{-i\tau t}\,dt
+\]
+if every $\kappa_s$ is trivial on $U_s$, and
+$\widehat\Theta(\theta,\tau;(\kappa_s))=0$ otherwise. So this probability
+measure gives the same weight to each of the
+$2\prod_s(s-1)s^{N-1}$ components on which $\widehat\Theta$ does not vanish,
+and on each of them it has the same density in $\tau$, concentrated at
+$|\tau|$ of order $1/\varepsilon$. The term $-\log(1/\varepsilon)$ then
+corresponds to
+$\widehat W_\infty(\theta,\tau)=-\log|\tau|+O(1)$ \cite[(46)]{Companion}.
+The sum over $s$ is the mean of the ramified values
+$\widehat W_s(\chi)=-\operatorname{cond}(\kappa_s)\log s$, $\kappa_s\ne1$, of
+\cite[(45)]{Companion}, where $\operatorname{cond}(\kappa_s)$ is the least
+$j\ge0$ such that $\kappa_s$ is trivial on $1+s^j\Z_s$, with
+$1+s^0\Z_s:=\Z_s^\times$: among the $(s-1)s^{N-1}$ characters of
+$\Z_s^\times/U_s$ there are $s-2$ with $\operatorname{cond}=1$ and
+$(s-1)^2s^{j-2}$ with $\operatorname{cond}=j$ for $2\le j\le N$, and
+\[
+  \frac{(s-2)+\sum_{j=2}^Nj\,(s-1)^2s^{j-2}}{(s-1)s^{N-1}}
+   =\frac{s-2}{s-1}+N-1 ,
+\]
+by induction on $N$: the claim is that the numerator $A_N$ equals
+$(s-2)s^{N-1}+(N-1)(s-1)s^{N-1}$, which holds for $N=1$, and both
+$A_{N+1}-A_N$ and the increment of this expression are equal to
+$(N+1)(s-1)^2s^{N-1}$. The components with $\kappa_s=1$
+contribute to $W_s(\Theta\star\Theta^\dagger)$, in total, its shell terms
+(on an individual component $\widehat W_s$ is not zero), which vanish
+here by the proof of Lemma~\ref{lem:boxtrace}(b). We do not use this remark.
+\end{remark}
+
+We end this discussion with an analogy, on which no statement of this paper
+depends. In \cite[Section~1]{Companion} the form $I_A$ is compared, as to
+its formal shape, with the intersection pairing of correspondences on the
+square of a smooth projective curve; in that comparison the unit $\Delta$
+of $M_c(C_S)$ stands in the place of the diagonal. On the square of a curve
+of genus $\mathfrak g$ the diagonal has self-intersection number
+$2-2\mathfrak g$ \cite[Ch.~V, Exercise~1.6(a)]{Hartshorne}. Here $\Delta$ is
+not an element of $\DA$, the number $I_A(\Delta,\Delta)$ is not defined, and
+by Theorem~\ref{thm:infgenus} the values of $I_A$ on the approximations
+$\Delta_{\varepsilon,N}/\int\Delta_{\varepsilon,N}$ of $\Delta$ tend to
+$-\infty$. We do not attach to $\Delta$ a number playing the role of
+$2-2\mathfrak g$.
 
 Finally we consider the finite-place part of the form on the radial family.
 For $g\in C_c^\infty(\R)$ put $\widehat g(\tau):=\int_\R g(s)e^{i\tau s}\,ds$,
@@ -2310,15 +2609,109 @@ gives $g_+$; with $\tau_1$ a point where
 $\widehat\omega_{\mathrm{fin}}(\tau_1)<0$ it gives $g_-$.
 \end{proof}
 
+We end with the precise sense in which $T$ is not defined on measures. Let
+us call \emph{probability density} a function $f\in\DA$ with $f\ge0$ and
+$\int_{C_S}f\,d^*w=1$, and say that a sequence $(f_j)$ of probability
+densities converges weakly to a probability measure $\mu$ on $C_S$ if
+$\int\vartheta f_j\,d^*w\to\int\vartheta\,d\mu$ for every bounded continuous
+function $\vartheta$.
+
+\begin{proposition}\label{prop:noextension}
+Let $(f_j)_{j\ge1}$ be a sequence of probability densities converging weakly
+to a probability measure $\mu$ on $C_S$. Then there is a sequence $(f'_j)$ of
+probability densities converging weakly to $\mu$ with $T(f'_j)\to-\infty$.
+Consequently there is no probability measure $\mu$ on $C_S$ which is a weak
+limit of probability densities and for which $T(f_j)$ has the same finite
+limit along all sequences of probability densities converging weakly to
+$\mu$. In particular this holds for $\mu=\Frob_n$ with $n\ge1$ and
+$P(n)\subseteq S_f$, and for $\mu=\Gamma_r^{\mathrm{rad}}$ with $r>0$.
+\end{proposition}
+
+\begin{proof}
+For $\varepsilon$ as in Theorem~\ref{thm:infgenus} put
+\[
+  e_\varepsilon:=\frac{\Delta_{\varepsilon,1}\star\Delta_{\varepsilon,1}^\dagger}
+   {(\int\Delta_{\varepsilon,1})^2}\in\DA .
+\]
+It is non-negative, because $\Delta_{\varepsilon,1}\ge0$, and its integral is
+$1$, because the integral of a convolution is the product of the integrals
+and $\int\Delta_{\varepsilon,1}^\dagger=\int\Delta_{\varepsilon,1}$; so
+$e_\varepsilon$ is a probability density. By Theorem~\ref{thm:infgenus}, with
+$N=1$,
+\[
+  T(e_\varepsilon)
+   =\frac{\|\Delta_{\varepsilon,1}\|^2}{(\int\Delta_{\varepsilon,1})^2}\cdot
+    \frac{I_A(\Delta_{\varepsilon,1},\Delta_{\varepsilon,1})}
+         {\|\Delta_{\varepsilon,1}\|^2}
+   =\frac{2\phi_0}{\varepsilon\,\vol_1(\emptyset)(\int\beta)^2}
+    \Bigl[\gamma+\log8\pi-\Omega_\beta(\varepsilon)
+     -\sum_{s\in S_f}(\log s)\frac{s-2}{s-1}\Bigr].
+\]
+As $\varepsilon\to0$ the first factor tends to $+\infty$ and, by
+Theorem~\ref{thm:infgenus}(iv), the bracket tends to $-\infty$. Hence
+$T(e_\varepsilon)\to-\infty$. The numbers $T(f_j)$ are real, because $f_j$
+is real-valued and the coefficients in \eqref{eq:localterms} and
+\eqref{eq:archterm} are real. For every $j$ we can choose
+$\varepsilon_j$ with
+\[
+  T(e_{\varepsilon_j})\le-j\bigl(j+|T(f_j)|\bigr).
+\]
+Put $f'_j:=(1-\tfrac1j)f_j+\tfrac1j\,e_{\varepsilon_j}$. This is a
+probability density, and
+\[
+  T(f'_j)=\bigl(1-\tfrac1j\bigr)T(f_j)+\tfrac1j\,T(e_{\varepsilon_j})
+   \le|T(f_j)|-j-|T(f_j)|=-j .
+\]
+For a bounded continuous function $\vartheta$,
+\[
+  \Bigl|\int\vartheta f'_j\,d^*w-\int\vartheta f_j\,d^*w\Bigr|
+   =\frac1j\Bigl|\int\vartheta\,(e_{\varepsilon_j}-f_j)\,d^*w\Bigr|
+   \le\frac{2\sup|\vartheta|}{j},
+\]
+so $(f'_j)$ converges weakly to $\mu$. This proves the first assertion, and
+the second follows: if $T(f_j)\to c\in\C$ for one sequence converging weakly
+to $\mu$, then $T(f'_j)\to-\infty$ for another.
+
+The measure $\Frob_n$ is a weak limit of probability densities: for $n\ge2$
+by Lemma~\ref{lem:smearedfrobinDA}, and for $n=1$ by
+Theorem~\ref{thm:infgenus}(i), since $\Frob_1=\Delta$. For
+$\Gamma_r^{\mathrm{rad}}$ take $h_j\in C_c^\infty(\R)$ with $h_j\ge0$,
+$\int h_j=1$ and $\supp h_j\subseteq[\log r-\tfrac1j,\log r+\tfrac1j]$. By
+Lemma~\ref{lem:smeared}(i),(ii), $\Gamma_{h_j}\in\DA$ is non-negative and
+$\Gamma_{h_j}\,d^*w=\int h_j(t)\,\Gamma^{\mathrm{rad}}_{(t)}\,dt$, which is a
+probability measure and converges weakly to
+$\Gamma^{\mathrm{rad}}_{(\log r)}=\Gamma_r^{\mathrm{rad}}$ by the weak
+continuity of $t\mapsto\Gamma^{\mathrm{rad}}_{(t)}$
+(Lemma~\ref{lem:notideal}).
+\end{proof}
+
+Proposition~\ref{prop:noextension} does not contradict the statements of
+Section~\ref{sec:radial}. Theorem~\ref{thm:radincompletion} asserts that for
+the particular functions $F_\varepsilon=\Gamma_{h_\varepsilon}$ the
+functionals $G\mapsto I_A(F_\varepsilon,G)=T(F_\varepsilon\star G^\dagger)$
+converge on $\DA$; it does not assert that $T(F_\varepsilon)$ converges, and
+it concerns one family of approximations. The atoms of
+$\omega_{\mathrm{fin}}$ are attached to the norm classes by the
+disintegration $\Gamma_h\,d^*w=\int h(t)\,\Gamma^{\mathrm{rad}}_{(t)}\,dt$,
+which is an identity between measures and involves no limit.
+
 \appendix
 
 \section{The normalization of the shell volumes}
 \label{sec:normalization}
 
 The identity $\Lambda(p^k)=\vol_{d^*x}(p^k\Z_p^\times)$ depends on the
-normalization \eqref{eq:shellvol}. The following statement characterizes
-that normalization. At a finite place the function $\zeta_p$ below is the
-local zeta integral of \cite{Tate} for the indicator function of $\Z_p$.
+normalization \eqref{eq:shellvol}. This normalization, together with
+$d^*x_\infty=dx/(2|x|)$, is the one of Weil's explicit formula: see the
+statement of Weil's theorem in \cite{BurnolSimple}, and
+\cite[Section~V, (14)]{Connes99}, where the multiplicative Haar measure of a
+local field is normalized by
+$\int_{1\le|\lambda|\le\Lambda}d^*\lambda\sim\log\Lambda$ as
+$\Lambda\to\infty$. The following elementary statement expresses the same
+condition by residues; the measure at the real place is taken as the
+reference, and the statement says which measures at the primes it
+determines. At a finite place the function $\zeta_p$ below is the local zeta
+integral of \cite{Tate} for the indicator function of $\Z_p$.
 
 \begin{theorem}\label{thm:tateresidue}
 For each prime $p$ let $d^*x_p$ be a Haar measure of $\Q_p^\times$, with
@@ -2341,7 +2734,7 @@ In particular, with $d^*x_\infty=dx/(2|x|)$ the normalization
 \eqref{eq:shellvol} is the only one for which these residues are equal at
 all places; and the normalizations with equal residues at all places are the
 multiples of this one by a common factor $\varkappa_\infty$, which multiplies
-every local term $\int F(j_v(x))\tau_v(x)\,d^*x_v$ of
+every local term $\int F(j_v(x))\varrho_v(x)\,d^*x_v$ of
 Proposition~\ref{prop:trace}(b) by $\varkappa_\infty$.
 \end{theorem}
 
@@ -2360,9 +2753,21 @@ $\Rel s>0$, and $1-p^{-s}=s\log p+O(s^2)$.
 
 \begin{thebibliography}{99}
 
+\bibitem{BurnolSimple}
+J.-F.~Burnol, \emph{The explicit formula in simple terms}, preprint, 1998,
+arXiv:math/9810169.
+
 \bibitem{Connes99}
 A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of
 the Riemann zeta function}, Selecta Math. (N.S.) \textbf{5} (1999), 29--106.
+
+\bibitem{CCArithSite}
+A.~Connes and C.~Consani, \emph{The arithmetic site}, C. R. Math. Acad. Sci.
+Paris \textbf{352} (2014), no.~12, 971--975.
+
+\bibitem{CCGeomArith}
+A.~Connes and C.~Consani, \emph{Geometry of the arithmetic site}, Adv. Math.
+\textbf{291} (2016), 274--329.
 
 \bibitem{Hartshorne}
 R.~Hartshorne, \emph{Algebraic Geometry}, Graduate Texts in Math.
@@ -2379,8 +2784,8 @@ A.~Fr\"ohlich (eds.), \emph{Algebraic Number Theory}, Academic Press, 1967,
 305--347.
 
 \bibitem{Companion}
-D.~A.~Trejo Pizzo, \emph{A correspondence algebra with a canonical trace on
-the idele class group}, preprint.
+D.~A.~Trejo Pizzo, \emph{A correspondence algebra and the Weil distribution
+on semilocal idele class groups}, preprint.
 
 \bibitem{Weil1948}
 A.~Weil, \emph{Sur les courbes alg\'ebriques et les vari\'et\'es qui s'en

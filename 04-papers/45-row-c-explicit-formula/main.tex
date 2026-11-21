@@ -11,6 +11,8 @@
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
 \numberwithin{equation}{section}
 
 \newcommand{\C}{\mathbb C}
@@ -35,33 +37,39 @@
 
 \begin{document}
 
-\title{An explicit formula for the trace on the idele class group}
+\title[An explicit formula for the trace]{An explicit formula for the
+trace on semilocal idele class groups}
 
 \author{David Alejandro Trejo Pizzo}
 \thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
 
 \subjclass[2020]{Primary 11M06; Secondary 11M26, 11R56}
-\keywords{Idele class group, trace, explicit formula, Riemann zeta function,
-Tate functionals}
+\keywords{Semilocal idele class group, trace, Weil's explicit formula,
+Weil's criterion, Riemann zeta function, Tate functionals}
 
 \begin{abstract}
-Let $C_S$ be the idele class group of $\Q$ for a finite set $S$ of places
-containing $\infty$, and let $T_S=\sum_{v\in S}W_v$ be the trace on
-$C_c^\infty(C_S)$ whose local terms are regularized integrals over the
-images of the groups $\Q_v^\times$.  For the radial functions $\Gamma_h(w)=h(-\log|w|_S)$,
-$h\in C_c^\infty(\R)$, and the limit $T_{\lim}$ of $T_S$ over $S$, we prove
-$T_{\lim}(\Gamma_h)=\Phi_h(0)+\Phi_h(1)-\sum_\rho\Phi_h(\rho)$, where
+For a finite set $S$ of places of $\Q$ containing $\infty$, let $C_S$ be the
+quotient of the $S$-ideles by the positive $S$-units, a twofold cover of the
+$S$-idele class group.  We call trace the functional $T_S=\sum_{v\in S}W_v$
+on $C_c^\infty(C_S)$ whose terms are the local terms of Weil's explicit
+formula in Connes's form.  For $\Gamma_h(w)=h(-\log|w|_S)$,
+$h\in C_c^\infty(\R)$, and the limit $T_{\lim}$ of $T_S$ over $S$, we verify
+that $T_{\lim}(\Gamma_h)=\Phi_h(0)+\Phi_h(1)-\sum_\rho\Phi_h(\rho)$, where
 $\Phi_h(s)=\int h(t)e^{(s-1/2)t}\,dt$ and $\rho$ runs over the zeros of the
-completed zeta function $\xi$, by comparison with Weil's explicit formula,
-which we prove in this normalization.  Adding a term $c\,F(1)$ to the
-trace adds $c\,h(0)$ to the right-hand side; so the identity holds for all
-$h$ only if $c=0$.  For even $h$, $T_{\lim}(\Gamma_h)$ is the integral of $\Phi_hA/\pi i$ over a line $\Rel s=b>1$, with
-$A(s)=\tfrac12\log\pi-\tfrac12\psi(s/2)-\zeta'/\zeta(s)$, and the sum of the
-residues of $\Phi_hA$; those at $s=0,1$ are the Tate functionals of
-$\Gamma_h$.  If $\xi$ has a zero off the critical line, there are real $F$
-with $\Phi_F(0)=\Phi_F(1)=0$ and
-$T_{\lim}(\Gamma_F\star\Gamma_F^\dagger)>0$.  For each finite $S$ the form
-$(F,G)\mapsto T_S(F\star G^\dagger)$ is nondegenerate on radial functions.
+completed zeta function $\xi$; this is Weil's explicit formula, of which we
+include a proof in this normalization.  Adding $c\,F(1)$ to the trace adds
+$c\,h(0)$, so the formula singles out the normalization of the archimedean
+term.  For even $h$ we write $T_{\lim}(\Gamma_h)$ as a contour integral and
+as a sum of residues, those at $s=0,1$ being the Tate functionals of
+$\Gamma_h$.  We recall, with a proof in this notation, the known form of
+Weil's criterion for real $F$ with $\Phi_F(0)=\Phi_F(1)=0$ (Yoshida;
+Connes--Consani): if $\xi$ has a zero off the critical line, there are such
+$F$, even and odd, with $T_{\lim}(\Gamma_F\star\Gamma_F^\dagger)>0$; this
+gives no information on the zeros.  The form
+$(F,G)\mapsto T(F\star G^\dagger)$ is nondegenerate on the functions
+$\Gamma_h$ for finite $S$; in the limit its radical consists of the
+$\Gamma_h$ with $\Phi_h$ vanishing at $0$, $1$ and the zeros of $\xi$, and
+is zero by Heath-Brown's theorem on simple zeros.
 \end{abstract}
 
 \maketitle
@@ -70,21 +78,31 @@ $(F,G)\mapsto T_S(F\star G^\dagger)$ is nondegenerate on radial functions.
 \label{sec:intro}
 
 Let $S=\{\infty\}\cup S_f$ be a finite set of places of $\Q$, with $S_f$ a
-nonempty set of primes, and let
+nonempty set of primes, let
+$\A_S^\times=\R^\times\times\prod_{p\in S_f}\Q_p^\times$, and let $\Gamma_S$
+be the group of positive $S$-units, embedded diagonally.  Put
 \[
-  \CS\;\cong\;\R^\times\times\prod_{p\in S_f}\Z_p^\times ,\qquad
-  |w|_S=|w_\infty| ,
+  \CS:=\Gamma_S\backslash\A_S^\times\;\cong\;
+  \R^\times\times\prod_{p\in S_f}\Z_p^\times ,\qquad
+  |w|_S=|w_\infty| .
 \]
-be the corresponding idele class group.  In \cite{P43} the convolution
-algebra $\DA(S)=C_c^\infty(\CS)$, with the involution
-$F^\dagger(w)=\overline{F(w^{-1})}$, is equipped with the functionals
+The $S$-idele class group of \cite{Connes99,MeyerIdele} is the quotient
+$\A_S^\times/\pm\Gamma_S$ of $\CS$ by the class $\epsilon$ of $-1$, which
+has order two, and the functions on it are the functions on $\CS$ that are
+invariant under $\epsilon$ \cite[Lemma~2.5]{P43}.  All functions considered
+in this paper depend only on $|w|_S$, and are therefore of this kind.
+
+In \cite{P43} the convolution algebra $\DA(S)=C_c^\infty(\CS)$, with the
+involution $F^\dagger(w)=\overline{F(w^{-1})}$, is equipped with the
+functionals
 \[
   T^{(c)}_S(F)=\sum_{v\in S}W_v(F)+c\,F(1)\qquad(c\in\R),
 \]
 where $W_v(F)$ is a regularization of the integral of $F$ over the image of
-$\Q_v^\times$ in $\CS$ against the density $|x|_v^{1/2}/|1-x|_v$.  These
-local terms are those of Weil's explicit formula \cite{Weil1952}, written
-idelically as in \cite{Connes99}.  The form
+$\Q_v^\times$ in $\CS$ against the density $|x|_v^{1/2}/|1-x|_v$.  For $c=0$
+these local terms are those of Weil's explicit formula \cite{Weil1952}, with
+Weil's principal values, in the idelic form of
+\cite[Appendix~II]{Connes99}; see \cite[Section~1]{P43}.  The form
 $I^{(c)}_S(F,G)=T^{(c)}_S(F\star G^\dagger)$ is Hermitian and nondegenerate,
 and the two Tate functionals
 $\lambda_\mp(F)=\int_{\CS}F(u)|u|_S^{\mp1/2}\,d^*u$ (the Tate characters
@@ -97,16 +115,16 @@ union of the algebras $\DA(S)$.  We write $T_S$, $\Tl$, $I_S$, $\Il$ when
 $c=0$.  All of this is recalled, with references, in
 Section~\ref{sec:carrier}.
 
-In this paper we compute these functionals on the functions that depend only
-on $|w|_S$.  For $h\in C_c^\infty(\R)$ put
+In this paper we evaluate these functionals on the functions that depend
+only on $|w|_S$.  For $h\in C_c^\infty(\R)$ put
 \[
   \Gamma_h(w)=h(-\log|w|_S),\qquad
   \Phi_h(s)=\int_\R h(t)\,e^{(s-\frac12)t}\,dt ;
 \]
 the functions $\Gamma_h$ are the elements of the algebra $\DAr$ of
-\cite[Definition~3.6, Lemma~3.7]{P44}; we call them radial classes.  Let
-$\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$, and let $\rho$ run
-over the zeros of $\xi$, repeated according to multiplicity.
+\cite[Definitions~3.2 and~3.6, Lemma~3.7]{P44}; we call them radial
+functions.  Let $\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$, and let
+$\rho$ run over the zeros of $\xi$, repeated according to multiplicity.
 
 \begin{theorem}[Theorem~\ref{thm:comparison} and
 Corollary~\ref{cor:c-unique}]
@@ -118,36 +136,66 @@ absolutely, and
 \]
 The same formula holds for $T_S(\Gamma_h)$ if $h$ vanishes outside
 $(-\log\ell,\log\ell)$, where $\ell$ is the least prime not in $S_f$.  For
-every real $F\in C_c^\infty(\R)$ and every $c\in\R$,
+all $F,G\in C_c^\infty(\R)$,
 \[
-  I^{(c)}_{\lim}(\Gamma_F,\Gamma_F)
-  =\beta_T\bigl(M(\Gamma_F),M(\Gamma_F)\bigr)
-   -\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)+c\int_\R F(t)^2\,dt ,
+  \Il(\Gamma_F,\Gamma_G)
+  =\beta_T\bigl(M(\Gamma_F),M(\Gamma_G)\bigr)
+   -\sum_\rho\Phi_F(\rho)\,\overline{\Phi_G(1-\bar\rho)} ,
 \]
-and $\beta_T(M(\Gamma_F),M(\Gamma_F))=2\,\Phi_F(0)\Phi_F(1)$.
+and $\beta_T(M(\Gamma_F),M(\Gamma_F))
+=2\Rel\bigl(\Phi_F(0)\overline{\Phi_F(1)}\bigr)$.  For every $c\in\R$ the
+same identities hold for $T^{(c)}_{\lim}$ and $I^{(c)}_{\lim}$ with the
+additional terms $c\,h(0)$ and $c\int_\R F(t)\overline{G(t)}\,dt$ on the
+right-hand sides.
 \end{theorem}
 
-Thus $c=0$ is the only value of the constant for which the form
-$I^{(c)}_{\lim}$ on radial classes is the sum of the Tate term and the sum
-over the zeros.  The proof of Theorem~\ref{thm:introA} is a comparison of
-the formula for $\Tl(\Gamma_h)$ that follows from \cite{P43,P44}
-(Lemma~\ref{lem:radial-trace}) with the explicit formula of Weil
-\cite{Weil1952}.  We need the latter for arbitrary $h\in C_c^\infty(\R)$,
-with the archimedean term in the form $\Rel\psi(\frac14+\frac{i\tau}2)-\log\pi$
-and with absolute convergence of the sum over the zeros, and we prove it in
-this form in Section~\ref{sec:EF} (Theorem~\ref{thm:EF}); for the formula
-under weaker hypotheses on $h$ see Barner \cite{Barner1981}.
+This is Weil's explicit formula \cite{Weil1952} for the test function $h$.
+Indeed, by \cite[Lemma~A.1]{P43} the left-hand side is
+\[
+\begin{aligned}
+  \Tl(\Gamma_h)={}&\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+     \bigl[h(\log n)+h(-\log n)\bigr]
+  +(\gamma+\log4\pi)\,h(0)\\
+  &+\int_0^\infty\frac{e^{-t/2}}{1-e^{-2t}}
+     \bigl[h(t)+h(-t)-2h(0)e^{-t/2}\bigr]dt ,
+\end{aligned}
+\]
+with $\Lambda$ the von Mangoldt function and $\gamma$ Euler's constant; with
+$f(x)=x^{-1/2}h(\log x)$ on $(0,\infty)$ one has
+$\Phi_h(s)=\int_0^\infty f(x)x^{s-1}dx$, and the identity is the explicit
+formula in the form \cite[(1)]{CCWeilArch} (Remark~\ref{rem:weilform}).
+What is verified here is that the normalizations of \cite{P43}, including
+the constant in the archimedean term, are those of this formula.  The proof
+is a comparison of Lemma~\ref{lem:radial-trace} with the explicit formula
+for arbitrary $h\in C_c^\infty(\R)$, with the archimedean term in the form
+$\Rel\psi(\frac14+\frac{i\tau}2)-\log\pi$ and with absolute convergence of
+the sum over the zeros.  For the convenience of the reader we prove the
+formula in this form in Section~\ref{sec:EF} (Theorem~\ref{thm:EF}), by the
+classical contour argument; for the formula under weaker hypotheses on $h$
+see Barner \cite{Barner1981}.
 
-The second result expresses the same value by residues.  Put
+The functional $W_\infty$ of \cite[Definition~5.4]{P43} is normalized by the
+constant $\gamma+\log4\pi$.  By \cite[Theorem~5.7]{P43} any other
+regularization without derivative terms differs from it by a multiple
+$c'F(1)$ of the value at the identity, with $c'\in\C$ ($c'$ real if the
+functional is Hermitian), and
+$T^{(c)}_{\lim}(\Gamma_h)=\Tl(\Gamma_h)+c\,h(0)$; so Weil's formula holds
+for the value $c=0$ of the constant and for no other
+(Corollary~\ref{cor:c-unique}).  This is a statement about the
+normalization fixed in \cite{P43}, which is Weil's; it does not single out
+$c=0$ independently of that choice.
+
+The same value can be written as a contour integral and as a sum of
+residues.  Put
 \[
   a(s)=\tfrac12\log\pi-\tfrac12\psi(s/2),\qquad
   f_p(s)=\frac{(\log p)\,p^{-s}}{1-p^{-s}},\qquad
   A_S=a+\sum_{p\in S_f}f_p,\qquad A=a-\frac{\zeta'}{\zeta},
 \]
 where $\psi=\Gamma'/\Gamma$, so that $A(s)=a(s)+\sum_pf_p(s)$ for
-$\Rel s>1$.  The restriction to $|w|_S^{i\tau}$ of the symbol of $T_S$, in
-the sense of \cite{P43}, is $A_S(s)+A_S(1-s)$ with $s=\frac12+i\tau$
-(Lemma~\ref{lem:localsymbols}).
+$\Rel s>1$.  The restriction to the characters $|w|_S^{i\tau}$ of the
+Fourier transform of $T_S$ computed in \cite{P43} is $A_S(s)+A_S(1-s)$ with
+$s=\frac12+i\tau$ (Lemma~\ref{lem:localsymbols}).
 
 \begin{theorem}[Theorem~\ref{thm:residues} and
 Proposition~\ref{cor:noncommute}]
@@ -171,17 +219,37 @@ $A_S(\sigma)\to+\infty$ for every $\sigma\in(0,1]$.
 \end{enumerate}
 \end{theorem}
 
-The remaining two results concern the form on radial classes.  Call
+Theorem~\ref{thm:introB} is the explicit formula in its contour form.  With
+$\zeta_p(s)=(1-p^{-s})^{-1}$ and $\zeta_\infty(s)=\pi^{-s/2}\Gamma(s/2)$ one
+has $A_S=-\frac{d}{ds}\log\prod_{v\in S}\zeta_v$, and
+$A(s)=\frac1s+\frac1{s-1}-\frac{\xi'}{\xi}(s)$; compare the proofs of the
+explicit formula in \cite{Weil1952,Barner1981}.  For the expression of the
+local terms by logarithmic derivatives of local factors on the critical
+line, at all places and for Hecke characters, see Burnol
+\cite{BurnolCR,BurnolConductor}.  For finite $S$ the poles of the symbol at
+$s=0,1$ and their residues are in \cite[Theorem~5.13]{P43}.
+
+The last section concerns the sign of the form on radial functions.  Call
 $F\in C_c^\infty(\R)$ primitive if $\Phi_F(0)=\Phi_F(1)=0$, that is, if
-$M(\Gamma_F)=0$.  By Theorem~\ref{thm:introA}, for real primitive $F$ one
-has $\Il(\Gamma_F,\Gamma_F)=-\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$.  Weil's
-criterion \cite{Weil1952} states that all zeros of $\xi$ lie on the line
+$M(\Gamma_F)=0$.  By Theorem~\ref{thm:introA}, for real primitive $F$ one has
+$\Il(\Gamma_F,\Gamma_F)=-\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$.  Weil
+\cite{Weil1952} observed that all zeros of $\xi$ lie on the line
 $\Rel s=\frac12$ if and only if
 $\sum_\rho\Phi_F(\rho)\overline{\Phi_F(1-\bar\rho)}\ge0$ for all test
 functions $F$ of a suitable class; for real $F$ this sum is
-$\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$.  The next theorem shows that in this
-criterion the test functions may be restricted to real primitive functions
-in $C_c^\infty(\R)$ of either parity.
+$\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$.  Several restricted forms of this
+criterion are known.  The class may be taken to be $C_c^\infty(\R)$; see
+Yoshida \cite{Yoshida}, Bombieri \cite{Bombieri} and Burnol \cite{BurnolCR}.
+Odd test functions suffice, and so do even ones, since $\xi$ has no real
+zero; this follows by the argument of \cite[Proposition~1]{Yoshida}, see
+Theorem~\ref{thm:sufficiency}.  Connes and Consani
+\cite[Proposition~C.1]{CCWeilArch} show, following \cite{Yoshida}, that one
+may in addition require the Mellin transform of the test function to vanish
+on a given finite set which contains $\{0,1\}$ and no zero of $\xi$; for the
+set $\{0,1\}$ this is the restriction to primitive functions.  The next
+theorem states the criterion for real primitive functions of either parity.
+It is a form of these known results, and we include a proof in the present
+notation.
 
 \begin{theorem}[Theorem~\ref{thm:sufficiency}]
 \label{thm:introC}
@@ -193,28 +261,57 @@ $F_+$ even and $F_-$ odd, such that
   \Il(\Gamma_{F_\pm},\Gamma_{F_\pm})>0 .
 \]
 Conversely, if every zero of $\xi$ lies on the line $\Rel s=\frac12$, then
-$\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)\ge0$ for every real
+$\sum_\rho\Phi_F(\rho)\overline{\Phi_F(1-\bar\rho)}\ge0$ for every
 $F\in C_c^\infty(\R)$.
 \end{theorem}
 
-The functions $F_\pm$ are of the form $q(i\,d/dt)\,\eta^{\star N}$, where
-$\eta$ is an even bump function, $\eta^{\star N}$ is its $N$-fold convolution
-power for a large integer $N$, and $q$ is a polynomial determined by $N$,
-$\eta$, $\rho_0$ and the finitely many zeros of height below a bound
-depending on $\rho_0$ and $\eta$.  The only information on the distribution
-of the zeros used in the proof is the convergence of
-$\sum_\rho|\rho|^{-2}$.
+Theorem~\ref{thm:introC} is an implication from a hypothesis on the zeros to
+a property of the form $\Il$, together with the elementary converse; it gives
+no information on the location of the zeros.  The functions $F_\pm$ are of
+the form $q(i\,d/dt)\,\eta^{\star N}$, where $\eta$ is an even bump function,
+$\eta^{\star N}$ is its $N$-fold convolution power for a large integer $N$,
+and $q$ is a polynomial determined by $N$, $\eta$, $\rho_0$ and the finitely
+many zeros of height below a bound depending on $\rho_0$ and $\eta$; the
+method is that of \cite{Yoshida,CCWeilArch}.  For the inequality on the sum
+over the zeros the proof uses only the functional equation, the reality of
+$\xi$ on the real axis, the absence of real zeros, and the convergence of
+$\sum_\rho|\rho|^{-2}$; the reformulation in terms of $\Il$ uses in addition
+Theorem~\ref{thm:introA}.  The points in which the statement differs from
+those quoted are that the functions are real-valued and of prescribed
+parity, that the multiplicities of the zeros are arbitrary, and that the
+sum over the zeros is evaluated as $-4m_0+O(4^{-N})$, where $m_0$ is the
+multiplicity of $\rho_0$; we make no claim that these points are new.  The
+functions $F_\pm$ necessarily have large support: if $F$ is primitive and
+$F\star F^\dagger$ vanishes outside $(-\log2,\log2)$, then
+$\Il(\Gamma_F,\Gamma_F)\le0$ unconditionally (Remark~\ref{rem:support}).
 
-\begin{theorem}[Theorem~\ref{thm:radical}]
+\begin{theorem}[Theorems~\ref{thm:radical} and~\ref{thm:radicallim},
+Proposition~\ref{prop:radicallim}]
 \label{thm:introD}
-Let $S$ be finite and $c\in\R$.  If $h\in C_c^\infty(\R)$ and
-$I^{(c)}_S(\Gamma_h,\Gamma_g)=0$ for every $g\in C_c^\infty(\R)$, then
-$h=0$.
+Let $c\in\R$ and $h\in C_c^\infty(\R)$.
+\begin{enumerate}
+\item[(i)] Let $S$ be finite.  If $I^{(c)}_S(\Gamma_h,\Gamma_g)=0$ for every
+$g\in C_c^\infty(\R)$, then $h=0$.
+\item[(ii)] If $I^{(c)}_{\lim}(\Gamma_h,\Gamma_g)=0$ for every
+$g\in C_c^\infty(\R)$, then $h=0$.
+\item[(iii)] One has $\Il(\Gamma_h,\Gamma_g)=0$ for every
+$g\in C_c^\infty(\R)$ if and only if $\Phi_h(0)=\Phi_h(1)=0$ and
+$\Phi_h(\rho)=0$ for every zero $\rho$ of $\xi$.
+\end{enumerate}
 \end{theorem}
 
 In \cite{P43} the form $I^{(c)}_S$ is shown to be nondegenerate on
-$\DA(S)$; Theorem~\ref{thm:introD} says that its restriction to the
-subalgebra of radial classes is nondegenerate as well.
+$\DA(S)$; part (i) says that its restriction to the subalgebra of radial
+functions is nondegenerate as well, and follows from the same argument.
+Part (ii) concerns the limit, to which the argument of \cite{P43} does not
+apply, because the functions $\widehat T_S(\cz,\cdot)$ do not converge as
+$S$ increases (Proposition~\ref{cor:noncommute}).  For $c\ne0$ it is
+elementary, given the explicit formula.  For $c=0$ it is equivalent, by
+part (iii), to the statement that no nonzero $h\in C_c^\infty(\R)$ has
+$\Phi_h$ vanishing at $0$, at $1$ and at all zeros of $\xi$; the zeros enter
+here without multiplicity, and the statement follows from Jensen's formula
+and the theorem of Heath-Brown \cite{HeathBrown} that a positive proportion
+of the zeros of $\zeta$ are simple.
 
 Section~\ref{sec:carrier} recalls what is used from \cite{P43,P44}.
 Section~\ref{sec:EF} contains the explicit formula,
@@ -236,7 +333,13 @@ $|x|_S=\prod_{v\in S}|x_v|_v$.  By \cite[Lemma~2.3]{P43},
   \CS:=\Gamma_S\backslash\A_S^\times\;\cong\;
   \R^\times\times\prod_{p\in S_f}\Z_p^\times ,
 \]
-and in these coordinates $|w|_S=|w_\infty|$.  The Haar measure $d^*w$ of $\CS$
+and in these coordinates $|w|_S=|w_\infty|$.  The group of all $S$-units is
+$\pm\Gamma_S$, and the $S$-idele class group $\A_S^\times/\pm\Gamma_S$ of
+\cite{Connes99,MeyerIdele} is the quotient of $\CS$ by the class $\epsilon$
+of the diagonal element $-1$, which has order two.  The functions on it are
+the elements of $\DA(S)$ invariant under translation by $\epsilon$
+\cite[Lemma~2.5]{P43}; since $|\epsilon|_S=1$, every function of $|w|_S$
+alone is of this kind \cite[Remark~6.19(iii)]{P43}.  The Haar measure $d^*w$ of $\CS$
 is the product of $dx/(2|x|)$ on $\R^\times$ and of the probability Haar
 measures of the groups $\Z_p^\times$, so that
 \begin{equation}
@@ -245,7 +348,7 @@ measures of the groups $\Z_p^\times$, so that
 \end{equation}
 with $\mu$ the probability Haar measure of the compact group
 $K_S:=\{\pm1\}\times\prod_{p\in S_f}\Z_p^\times$
-\cite[(8) and the lines following]{P43}.  The algebra
+\cite[(9) and the lines following]{P43}.  The algebra
 $\DA(S)=C_c^\infty(\CS)$ consists of the compactly supported functions on
 $\CS$ that are smooth in the archimedean coordinate and locally constant in
 the others \cite[Definition~2.4]{P43}.  With
@@ -257,7 +360,7 @@ it is a commutative $\dagger$-algebra.
 
 For $v\in S$ let $j_v\colon\Q_v^\times\to\CS$ send $x$ to the class of the
 idele with $x$ at $v$ and $1$ at the other places of $S$, and let
-$\tau_v(x)=|x|_v^{1/2}/|1-x|_v$ for $x\ne1$.  The Haar measure $d^*x$ of
+$\varrho_v(x)=|x|_v^{1/2}/|1-x|_v$ for $x\ne1$.  The Haar measure $d^*x$ of
 $\Q_p^\times$ is normalized by $\vol_{d^*x}(\Z_p^\times)=\log p$, and that of
 $\R^\times$ is $dx/(2|x|)$.
 
@@ -266,12 +369,12 @@ Proposition~6.3, Theorem~6.5]{P43}}]
 \label{prop:trace}
 For each $v\in S$ there is a linear functional $W_v$ on $\DA(S)$, defined in
 \cite[Definition~5.4]{P43} by regularizing the integral of
-$(F\circ j_v)\,\tau_v$ over $\Q_v^\times$ at $x=1$, such that
+$(F\circ j_v)\,\varrho_v$ over $\Q_v^\times$ at $x=1$, such that
 \[
-  W_v(F)=\int_{\Q_v^\times}F(j_v(x))\,\tau_v(x)\,d^*x ,
+  W_v(F)=\int_{\Q_v^\times}F(j_v(x))\,\varrho_v(x)\,d^*x ,
 \]
 the integral being absolutely convergent, whenever $F$ vanishes on a
-neighbourhood of the identity class \cite[(32) and the proof of
+neighbourhood of the identity class \cite[(33) and the proof of
 Theorem~5.6]{P43}.  For $c\in\R$ put
 \begin{equation}
 \label{eq:tracec}
@@ -283,8 +386,12 @@ $I_S:=I^{(0)}_S$.
 \end{proposition}
 
 In \cite{P43} the constant $c$ is fixed and omitted from the notation: the
-functional $T^{(c)}_S$ is denoted $T$ there, and the form $I^{(c)}_S$ is
-denoted $I_A$.
+functional $T^{(c)}_S$ is denoted $T$ there and is called the trace, its
+Fourier transform is called its symbol, and the form $I^{(c)}_S$ is denoted
+$I_A$.  For $c=0$ the functional $T_S$ is the sum over $v\in S$ of the local
+terms of Weil's explicit formula, with Weil's principal values, in the form
+of \cite[Appendix~II]{Connes99}; the comparison is made in
+\cite[Section~5]{P43}, after Definition~5.4 and Convention~5.5 there.
 
 The characters of $\CS$ are
 $\chi(w)=\operatorname{sgn}(w_\infty)^{\varepsilon}|w_\infty|^{i\tau}
@@ -295,9 +402,9 @@ $\widehat{\CS}$ is thus a disjoint union of lines with coordinate $\tau$, its
 $\varepsilon=0$ and all $\kappa_q$ trivial, and consists of the characters
 $w\mapsto|w|_S^{i\tau}$.  We put
 $\widehat F(\chi)=\int_{\CS}F(w)\overline{\chi(w)}\,d^*w$ and
-$d\chi=d\tau/2\pi$ on each component \cite[(39), (40) and the text after (42)]{P43}.
+$d\chi=d\tau/2\pi$ on each component \cite[(40), (41) and the text after (43)]{P43}.
 
-\begin{proposition}[{\cite[Theorem~5.12 and (67)]{P43}}]
+\begin{proposition}[{\cite[Theorem~5.12 and (69)]{P43}}]
 \label{prop:symbol}
 There is a real-valued function
 $\widehat T_S=\widehat W_\infty+\sum_{p\in S_f}\widehat W_p$ on
@@ -334,7 +441,7 @@ Part (a) is contained in \cite[Theorem~5.12(a),(b)]{P43}, part (b) is
 \cite[Theorem~5.12(c)]{P43}, and part (c) is \cite[Theorem~5.12(d)]{P43}.
 In part (d) the evenness follows from (a), since replacing $\tau$ by
 $-\tau$ conjugates $p^{-1/2+i\tau}$ and $\psi(\tfrac14+\tfrac{i\tau}2)$,
-and the bound is \cite[(67)]{P43} on $\cz$.
+and the bound is \cite[(69)]{P43} on $\cz$.
 
 \begin{proposition}[{\cite[Theorem~5.11]{P43}}]
 \label{prop:tate}
@@ -354,8 +461,8 @@ nondegenerate Hermitian form
 \end{equation}
 \end{proposition}
 
-The notation $\beta_T$ is that of \cite{P43}; the subscript refers to Tate
-and not to the trace.  As in \cite[Definition~6.6]{P43}, an element
+The notation $\beta_T$ is that of \cite{P43}; the subscript refers to
+Tate.  As in \cite[Definition~6.6]{P43}, an element
 $F\in\DA(S)$ is called \emph{primitive} if $M(F)=0$.
 
 We use the following conventions on $\R$.  For $u,g\in C_c^\infty(\R)$ we
@@ -375,7 +482,7 @@ For $h\in C_c^\infty(\R)$ put
   \Gamma_h(w):=h\bigl(-\log|w|_S\bigr),\qquad w\in\CS ,
 \]
 and let $\DAr(S):=\{\Gamma_h:h\in C_c^\infty(\R)\}$, the set of \emph{radial
-classes}.  Then $\DAr(S)$ is the set of elements of $\DA(S)$ that are
+functions}.  Then $\DAr(S)$ is the set of elements of $\DA(S)$ that are
 invariant under $K_S$, and for $h,g\in C_c^\infty(\R)$
 \begin{equation}
 \label{eq:radalg}
@@ -401,18 +508,25 @@ $h\mapsto\Gamma_h$ is injective.  By
   \lambda_-(\Gamma_h)=\Phi_h(1),\qquad\lambda_+(\Gamma_h)=\Phi_h(0),
 \end{equation}
 so that $\Gamma_h$ is primitive if and only if $\Phi_h(0)=\Phi_h(1)=0$; we
-then also call $h$ primitive.  If $F\in C_c^\infty(\R)$ is real, the numbers
-\eqref{eq:tatePhi} for $h=F$ are real, and \eqref{eq:betaT} gives
+then also call $h$ primitive.  For $F,G\in C_c^\infty(\R)$,
+\eqref{eq:betaT} and \eqref{eq:tatePhi} give
 \begin{equation}
 \label{eq:polarterm}
-  \beta_T\bigl(M(\Gamma_F),M(\Gamma_F)\bigr)=2\,\Phi_F(0)\,\Phi_F(1).
+\begin{aligned}
+  \beta_T\bigl(M(\Gamma_F),M(\Gamma_G)\bigr)
+  &=\Phi_F(1)\,\overline{\Phi_G(0)}+\Phi_F(0)\,\overline{\Phi_G(1)},\\
+  \beta_T\bigl(M(\Gamma_F),M(\Gamma_F)\bigr)
+  &=2\Rel\bigl(\Phi_F(0)\,\overline{\Phi_F(1)}\bigr).
+\end{aligned}
 \end{equation}
+If $F$ is real, the numbers \eqref{eq:tatePhi} for $h=F$ are real, and the
+last expression is $2\,\Phi_F(0)\,\Phi_F(1)$.
 
 We turn to the change of chart.  For charts $S\subseteq S'$ let
 $\Inf_{SS'}\colon\DA(S)\to\DA(S')$ be the composition with the coordinate
 projection $C_{S'}\to\CS$; it is an injective homomorphism of
 $\dagger$-algebras \cite[Lemma~8.2]{P43}.  Let $\DAl:=\varinjlim_S\DA(S)$ be
-the union of the algebras $\DA(S)$ along these maps.  A radial class is the
+the union of the algebras $\DA(S)$ along these maps.  A radial function is the
 same function of $|w|_S$ in every chart, $\Inf_{SS'}\Gamma_h=\Gamma_h$
 \cite[Lemma~3.7(v)]{P44}, and so defines an element of $\DAl$, again denoted
 $\Gamma_h$.  For $F\in\DA(S)$ let $\rd(F)$ be the supremum of
@@ -441,53 +555,63 @@ where $\ell$ runs over the primes not in $S_f$ and only the primes with
 $\log\ell\le\rd(\Gamma_h)$ contribute.
 \end{proposition}
 
-Formula \eqref{eq:chartchange} is \cite[(98)]{P43} for $F=\Gamma_h$: the term
+Formula \eqref{eq:chartchange} is \cite[(101)]{P43} for $F=\Gamma_h$: the term
 of the prime $\ell\notin S_f$ there is
 $(\log\ell)\sum_{k\ne0}\ell^{-|k|/2}\Gamma_h(w_{\ell,k})$ with
 $w_{\ell,k}\in\CS$ of module $\ell^{-k}$, so that
 $\Gamma_h(w_{\ell,k})=h(k\log\ell)$.
 
-\begin{lemma}
+\begin{lemma}[{\cite[(82) and Lemma~A.1]{P43}}]
 \label{lem:radial-trace}
 Let $h\in C_c^\infty(\R)$.  Then
 \begin{equation}
 \label{eq:radialtrace}
   T_S(\Gamma_h)=\sum_{p\in S_f}\sum_{k\ge1}(\log p)\,p^{-k/2}
-     \bigl[h(k\log p)+h(-k\log p)\bigr]
-   +\frac1{2\pi}\int_\R\hat h(-\tau)\,\widehat W_\infty(0,\tau)\,d\tau ,
+     \bigl[h(k\log p)+h(-k\log p)\bigr]+W_\infty(\Gamma_h) ,
 \end{equation}
-where the sum is finite and the integral, which equals
-$W_\infty(\Gamma_h)$, converges absolutely.  Moreover, with $\Lambda$ the
-von Mangoldt function,
+where the sum is finite and its inner sum is $W_p(\Gamma_h)$, and, with
+$\Lambda$ the von Mangoldt function,
 \begin{equation}
 \label{eq:radialtracelim}
   \Tl(\Gamma_h)=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
-     \bigl[h(\log n)+h(-\log n)\bigr]
-   +\frac1{2\pi}\int_\R\hat h(-\tau)\,\widehat W_\infty(0,\tau)\,d\tau ,
+     \bigl[h(\log n)+h(-\log n)\bigr]+W_\infty(\Gamma_h) ,
 \end{equation}
-the sum being finite.  For every $c\in\R$ one has
-$T^{(c)}_S(\Gamma_h)=T_S(\Gamma_h)+c\,h(0)$ and
+the sum being finite.  The archimedean term is
+\begin{equation}
+\label{eq:Winfkernel}
+\begin{aligned}
+  W_\infty(\Gamma_h)
+  &=(\gamma+\log4\pi)\,h(0)+\int_0^\infty K(t)
+    \bigl[h(t)+h(-t)-2h(0)e^{-t/2}\bigr]dt\\
+  &=\frac1{2\pi}\int_\R\hat h(-\tau)\,\widehat W_\infty(0,\tau)\,d\tau ,
+  \qquad K(t):=\frac{e^{-t/2}}{1-e^{-2t}} ,
+\end{aligned}
+\end{equation}
+where $\gamma$ is Euler's constant and both integrals converge absolutely.
+For every $c\in\R$ one has $T^{(c)}_S(\Gamma_h)=T_S(\Gamma_h)+c\,h(0)$ and
 $T^{(c)}_{\lim}(\Gamma_h)=\Tl(\Gamma_h)+c\,h(0)$.
 \end{lemma}
 
 \begin{proof}
-By \cite[Theorem~3.8]{P44}, for every $p\in S_f$,
+In the terminology of \cite{P43} the function $\Gamma_h$ is radial with
+profile $t\mapsto h(-t)$.  By \cite[(82)]{P43}, for every $p\in S_f$,
 \[
-  W_p(\Gamma_h)=\sum_{k\ge1}(\log p)\,p^{-k/2}
-  \bigl[h(k\log p)+h(-k\log p)\bigr],
+  W_p(\Gamma_h)=(\log p)\sum_{k\ne0}p^{-|k|/2}\,h(k\log p)
+  =\sum_{k\ge1}(\log p)\,p^{-k/2}\bigl[h(k\log p)+h(-k\log p)\bigr],
 \]
-a finite sum because $h$ has compact support.  By \eqref{eq:plancherel} and
-\eqref{eq:profile},
+a finite sum because $h$ has compact support; summing over $v\in S$ gives
+\eqref{eq:radialtrace}.  Formula \eqref{eq:radialtracelim} and the first
+expression in \eqref{eq:Winfkernel} are \cite[Lemma~A.1]{P43} for $c=0$; the
+expressions there are unchanged when the profile $t\mapsto h(-t)$ is
+replaced by $h$, and $\Lambda(p^k)=\log p$, while $\Lambda(n)=0$ when $n$ is
+not a prime power.  By \eqref{eq:plancherel} and \eqref{eq:profile},
 \[
   W_\infty(\Gamma_h)=\int_{\widehat{\CS}}\widehat{\Gamma_h}\,
   \widehat W_\infty\,d\chi
   =\frac1{2\pi}\int_\R\hat h(-\tau)\,\widehat W_\infty(0,\tau)\,d\tau ,
 \]
-absolutely convergent.  Summing over $v\in S$ gives \eqref{eq:radialtrace}.
-Adding the terms of \eqref{eq:chartchange} extends the sum to all primes, and
-since $\Lambda(p^k)=\log p$ and $\Lambda(n)=0$ when $n$ is not a prime power,
-the result is \eqref{eq:radialtracelim}.  The last assertion follows from
-\eqref{eq:tracec} and $\Gamma_h(1)=h(0)$.
+absolutely convergent.  The last assertion follows from \eqref{eq:tracec}
+and $\Gamma_h(1)=h(0)$.
 \end{proof}
 
 \section{The explicit formula}
@@ -532,10 +656,22 @@ such that
 \item[(ii)] $\Phi_h(1-s)=\Phi_{h^-}(s)$, and $\Phi_{h\star g}=\Phi_h\Phi_g$
 for $g\in C_c^\infty(\R)$.  In particular $\Phi_h(1-s)=\Phi_h(s)$ if $h$ is
 even.
-\item[(iii)] Let $F\in C_c^\infty(\R)$ be real with $\supp F\subseteq[-r,r]$,
-and put $h:=F\star F^\dagger$.  Then $h$ is real and even,
-$\supp h\subseteq[-2r,2r]$, $h(0)=\int_\R F(t)^2\,dt$,
-$\hat h=|\hat F|^2$, and
+\item[(iii)] $\Phi_{h^\dagger}(s)=\overline{\Phi_h(1-\bar s)}$.  Let
+$F,G\in C_c^\infty(\R)$ with supports in $[-r,r]$, and put
+$k:=F\star G^\dagger$.  Then $\supp k\subseteq[-2r,2r]$,
+$k(0)=\int_\R F(t)\overline{G(t)}\,dt$,
+$\hat k=\hat F\,\overline{\hat G}$, and
+\[
+  \Phi_k(s)=\Phi_F(s)\,\overline{\Phi_G(1-\bar s)},\qquad
+  \Phi_k(0)+\Phi_k(1)=\Phi_F(0)\,\overline{\Phi_G(1)}
+     +\Phi_F(1)\,\overline{\Phi_G(0)} .
+\]
+In particular $h:=F\star F^\dagger$ satisfies $h^\dagger=h$,
+$h(0)=\int_\R|F(t)|^2\,dt$, $\hat h=|\hat F|^2$, and
+$\Phi_h(0)+\Phi_h(1)=2\Rel\bigl(\Phi_F(0)\overline{\Phi_F(1)}\bigr)$.
+\item[(iv)] If $F\in C_c^\infty(\R)$ is real, then
+$\Phi_F(\bar s)=\overline{\Phi_F(s)}$, the function $h=F\star F^\dagger$ is
+real and even, and
 \[
   \Phi_h(s)=\Phi_F(s)\,\Phi_F(1-s),\qquad
   \Phi_h(0)=\Phi_h(1)=\Phi_F(0)\,\Phi_F(1).
@@ -562,15 +698,27 @@ Fubini's theorem,
   \,du\,dt=\Phi_h(s)\,\Phi_g(s).
 \]
 
-(iii) Since $F$ is real, $F^\dagger=F^-$ and
-$h(t)=\int F(u)F(u-t)\,du$, which is real, satisfies $h(-t)=h(t)$ by the
-substitution $u\mapsto u+t$, vanishes for $|t|>2r$, and equals
-$\int F^2$ at $t=0$.  By (ii),
-$\Phi_h(s)=\Phi_F(s)\Phi_{F^-}(s)=\Phi_F(s)\Phi_F(1-s)$.  For real $\tau$,
-by \eqref{eq:conventions},
-$\hat h(-\tau)=\Phi_h(\tfrac12+i\tau)=\hat F(-\tau)\hat F(\tau)
-=|\hat F(\tau)|^2$, because $\hat F(-\tau)=\overline{\hat F(\tau)}$ for real
-$F$; and $|\hat F|^2$ is even.
+(iii) The substitution $t\mapsto-t$ gives
+\[
+  \Phi_{h^\dagger}(s)=\int\overline{h(-t)}\,e^{(s-\frac12)t}\,dt
+  =\overline{\int h(u)\,e^{-(\bar s-\frac12)u}\,du}
+  =\overline{\Phi_h(1-\bar s)} ,
+\]
+and in the same way $\widehat{G^\dagger}=\overline{\hat G}$.  One has
+$k(t)=\int F(u)\overline{G(u-t)}\,du$, which vanishes for $|t|>2r$ and equals
+$\int F\overline G$ at $t=0$.  By (ii),
+$\Phi_k(s)=\Phi_F(s)\Phi_{G^\dagger}(s)=\Phi_F(s)\overline{\Phi_G(1-\bar s)}$,
+and $\hat k=\hat F\,\widehat{G^\dagger}=\hat F\,\overline{\hat G}$.  At
+$s=0$ and $s=1$ this gives $\Phi_k(0)=\Phi_F(0)\overline{\Phi_G(1)}$ and
+$\Phi_k(1)=\Phi_F(1)\overline{\Phi_G(0)}$.  For $G=F$ one has
+$h^\dagger=(F\star F^\dagger)^\dagger=F^\dagger\star F=h$, and
+$\Phi_h(1)=\overline{\Phi_h(0)}$.
+
+(iv) If $F$ is real, conjugating the integral defining $\Phi_F$ gives
+$\Phi_F(\bar s)=\overline{\Phi_F(s)}$, so that
+$\overline{\Phi_F(1-\bar s)}=\Phi_F(1-s)$ and, by (iii),
+$\Phi_h(s)=\Phi_F(s)\Phi_F(1-s)$.  The function $h$ is real, and
+$h(-t)=\overline{h(t)}=h(t)$ because $h^\dagger=h$.
 \end{proof}
 
 We use three classical facts about the zeros \cite[ch.~12 and~15]{Davenport}:
@@ -716,19 +864,21 @@ $\sum_\rho\Phi_h(\rho)$ converges absolutely, and
 \end{aligned}
 \end{equation}
 the integral being absolutely convergent.  In particular, if
-$F\in C_c^\infty(\R)$ is real with $\supp F\subseteq[-r,r]$, then
+$F\in C_c^\infty(\R)$ with $\supp F\subseteq[-r,r]$, then
 \begin{equation}
 \label{eq:EF}
 \begin{aligned}
-  \sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)
-  ={}&2\,\Phi_F(0)\Phi_F(1)
+  \sum_\rho\Phi_F(\rho)\,\overline{\Phi_F(1-\bar\rho)}
+  ={}&2\Rel\bigl(\Phi_F(0)\overline{\Phi_F(1)}\bigr)
   +\frac1{2\pi}\int_\R|\hat F(\tau)|^2
      \bigl[\Rel\psi(\tfrac14+\tfrac{i\tau}2)-\log\pi\bigr]\,d\tau\\
   &-\sum_{2\le n<e^{2r}}\frac{\Lambda(n)}{\sqrt n}
      \bigl[h(\log n)+h(-\log n)\bigr],
 \end{aligned}
 \end{equation}
-with $h=F\star F^\dagger$.
+with $h=F\star F^\dagger$; if $F$ is real, the left-hand side is
+$\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$ and the first term on the right is
+$2\,\Phi_F(0)\Phi_F(1)$.
 \end{theorem}
 
 \begin{proof}
@@ -807,11 +957,13 @@ continuous with support in $[-r,r]$.
 
 Inserting the two values into \eqref{eq:threeterms} gives \eqref{eq:EFh}.
 Formula \eqref{eq:EF} is \eqref{eq:EFh} for $h=F\star F^\dagger$, whose
-support lies in $[-2r,2r]$, by Lemma~\ref{lem:testfn}(iii).
+support lies in $[-2r,2r]$, by Lemma~\ref{lem:testfn}(iii); the statement
+for real $F$ is Lemma~\ref{lem:testfn}(iv).
 \end{proof}
 
 Formula \eqref{eq:EFh} is the explicit formula of Weil \cite{Weil1952} for
-the test function $h$; see also \cite{Barner1981}.
+the test function $h$, and the proof above is the classical one; see also
+\cite{Barner1981}.
 
 \section{The comparison theorem}
 \label{sec:comparison}
@@ -825,17 +977,20 @@ the test function $h$; see also \cite{Barner1981}.
   \Tl(\Gamma_h)=\Phi_h(0)+\Phi_h(1)-\sum_\rho\Phi_h(\rho),
 \end{equation}
 the sum being absolutely convergent.
-\item[(ii)] For every real $F\in C_c^\infty(\R)$,
+\item[(ii)] For all $F,G\in C_c^\infty(\R)$,
 \begin{equation}
 \label{eq:comparison}
-\begin{aligned}
-  \Il(\Gamma_F,\Gamma_F)=\Tl(\Gamma_{F\star F^\dagger})
-  &=2\,\Phi_F(0)\Phi_F(1)-\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)\\
-  &=\beta_T\bigl(M(\Gamma_F),M(\Gamma_F)\bigr)
-     -\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho).
-\end{aligned}
+  \Il(\Gamma_F,\Gamma_G)=\Tl(\Gamma_{F\star G^\dagger})
+  =\beta_T\bigl(M(\Gamma_F),M(\Gamma_G)\bigr)
+     -\sum_\rho\Phi_F(\rho)\,\overline{\Phi_G(1-\bar\rho)} ,
 \end{equation}
-In particular, if $F$ is primitive, then
+the sum being absolutely convergent.  In particular, if $F$ is real, then
+\begin{equation}
+\label{eq:comparisonreal}
+  \Il(\Gamma_F,\Gamma_F)
+  =2\,\Phi_F(0)\Phi_F(1)-\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho),
+\end{equation}
+and if $F$ is real and primitive, then
 \begin{equation}
 \label{eq:comparisonprim}
   \Il(\Gamma_F,\Gamma_F)=-\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho).
@@ -850,9 +1005,9 @@ In particular, if $F$ is primitive, then
 where $\ell$ runs over the primes not in $S_f$ and the double sum is finite.
 The double sum vanishes if $h$ vanishes outside the interval
 $(-\log\ell_S,\log\ell_S)$.  In that case $T_S(\Gamma_h)$ is equal to the
-right-hand side of \eqref{eq:comparisonh}; and for real $F$ the number
-$I_S(\Gamma_F,\Gamma_F)$ is equal to the right-hand side of
-\eqref{eq:comparison} if $F\star F^\dagger$ vanishes outside that interval.
+right-hand side of \eqref{eq:comparisonh}; and for $F,G\in C_c^\infty(\R)$
+the number $I_S(\Gamma_F,\Gamma_G)$ is equal to the right-hand side of
+\eqref{eq:comparison} if $F\star G^\dagger$ vanishes outside that interval.
 \end{enumerate}
 \end{theorem}
 
@@ -866,52 +1021,99 @@ $I_S(\Gamma_F,\Gamma_F)$ is equal to the right-hand side of
 \]
 The bracket is even in $\tau$, so $\hat h(-\tau)$ may be replaced by
 $\hat h(\tau)$.  The sum extends over $n<e^{r}$ if $\supp h\subseteq[-r,r]$.
-Comparing with \eqref{eq:EFh} gives \eqref{eq:comparisonh}.
+Here $W_\infty(\Gamma_h)$ has been written in the second form of
+\eqref{eq:Winfkernel}.  Comparing with \eqref{eq:EFh} gives
+\eqref{eq:comparisonh}.
 
 (ii) By \eqref{eq:radalg},
-$\Gamma_F\star\Gamma_F^\dagger=\Gamma_{F\star F^\dagger}$, so
-$\Il(\Gamma_F,\Gamma_F)=\Tl(\Gamma_h)$ with $h=F\star F^\dagger$.  By
-Lemma~\ref{lem:testfn}(iii), $\Phi_h(0)+\Phi_h(1)=2\Phi_F(0)\Phi_F(1)$ and
-$\Phi_h(\rho)=\Phi_F(\rho)\Phi_F(1-\rho)$, so the first line of
-\eqref{eq:comparison} is \eqref{eq:comparisonh}.  The second line is
-\eqref{eq:polarterm}, and it vanishes for primitive $F$.
+$\Gamma_F\star\Gamma_G^\dagger=\Gamma_{F\star G^\dagger}$, so
+$\Il(\Gamma_F,\Gamma_G)=\Tl(\Gamma_k)$ with $k=F\star G^\dagger$.  By
+Lemma~\ref{lem:testfn}(iii) and \eqref{eq:polarterm},
+$\Phi_k(0)+\Phi_k(1)=\beta_T(M(\Gamma_F),M(\Gamma_G))$ and
+$\Phi_k(\rho)=\Phi_F(\rho)\overline{\Phi_G(1-\bar\rho)}$, so
+\eqref{eq:comparison} is \eqref{eq:comparisonh} for $h=k$.  For real $F=G$,
+Lemma~\ref{lem:testfn}(iv) and \eqref{eq:polarterm} give
+\eqref{eq:comparisonreal}, whose first term vanishes for primitive $F$.
 
 (iii) Formula \eqref{eq:comparisonS} is \eqref{eq:chartchange} for $c=0$
 together with (i).  Every number $\pm k\log\ell$ occurring in the double sum
 has absolute value at least $\log\ell_S$.  The last assertion follows from
-$I_S(\Gamma_F,\Gamma_F)=T_S(\Gamma_{F\star F^\dagger})$ and the computation
+$I_S(\Gamma_F,\Gamma_G)=T_S(\Gamma_{F\star G^\dagger})$ and the computation
 in (ii).
 \end{proof}
 
 \begin{corollary}
 \label{cor:c-unique}
-Let $c\in\R$ and let $F\in C_c^\infty(\R)$ be real.  Then
-\begin{equation}
-\label{eq:comparisonc}
-  I^{(c)}_{\lim}(\Gamma_F,\Gamma_F)
-   =2\,\Phi_F(0)\Phi_F(1)-\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)
-   +c\int_\R F(t)^2\,dt .
-\end{equation}
-Consequently, if $F\ne0$, the identity \eqref{eq:comparison} holds with
-$I^{(c)}_{\lim}$ in place of $\Il$ if and only if $c=0$.  Likewise, for
-$h\in C_c^\infty(\R)$,
+Let $c\in\R$.  For every $h\in C_c^\infty(\R)$,
 \begin{equation}
 \label{eq:comparisonhc}
-  T^{(c)}_{\lim}(\Gamma_h)=\Phi_h(0)+\Phi_h(1)-\sum_\rho\Phi_h(\rho)+c\,h(0);
+  T^{(c)}_{\lim}(\Gamma_h)=\Phi_h(0)+\Phi_h(1)-\sum_\rho\Phi_h(\rho)+c\,h(0),
 \end{equation}
-so, for a given $h$ with $h(0)\ne0$, the identity \eqref{eq:comparisonh}
-holds with $T^{(c)}_{\lim}$ in place of $\Tl$ if and only if $c=0$.
+and for all $F,G\in C_c^\infty(\R)$,
+\begin{equation}
+\label{eq:comparisonc}
+  I^{(c)}_{\lim}(\Gamma_F,\Gamma_G)
+   =\beta_T\bigl(M(\Gamma_F),M(\Gamma_G)\bigr)
+   -\sum_\rho\Phi_F(\rho)\,\overline{\Phi_G(1-\bar\rho)}
+   +c\int_\R F(t)\overline{G(t)}\,dt .
+\end{equation}
+Consequently, for a given $h$ with $h(0)\ne0$, the identity
+\eqref{eq:comparisonh} holds with $T^{(c)}_{\lim}$ in place of $\Tl$ if and
+only if $c=0$; and for a given $F\ne0$, the identity \eqref{eq:comparison}
+with $G=F$ holds with $I^{(c)}_{\lim}$ in place of $\Il$ if and only if
+$c=0$.
 \end{corollary}
 
 \begin{proof}
-Let $h=F\star F^\dagger$.  By Lemma~\ref{lem:radial-trace},
-$I^{(c)}_{\lim}(\Gamma_F,\Gamma_F)=T^{(c)}_{\lim}(\Gamma_h)
-=\Tl(\Gamma_h)+c\,h(0)$, and $h(0)=\int F^2$ by
-Lemma~\ref{lem:testfn}(iii).  Now apply Theorem~\ref{thm:comparison}(ii).
-The assertion on $c$ holds because $\int F^2>0$ for $F\ne0$.  Formula
-\eqref{eq:comparisonhc} is Lemma~\ref{lem:radial-trace} and
-Theorem~\ref{thm:comparison}(i).
+By Lemma~\ref{lem:radial-trace},
+$T^{(c)}_{\lim}(\Gamma_h)=\Tl(\Gamma_h)+c\,h(0)$, and
+\eqref{eq:comparisonhc} follows from Theorem~\ref{thm:comparison}(i).  For
+$k=F\star G^\dagger$ one has
+$I^{(c)}_{\lim}(\Gamma_F,\Gamma_G)=T^{(c)}_{\lim}(\Gamma_k)
+=\Il(\Gamma_F,\Gamma_G)+c\,k(0)$ and $k(0)=\int F\overline G$ by
+Lemma~\ref{lem:testfn}(iii); now apply Theorem~\ref{thm:comparison}(ii).
+The assertions on $c$ hold because $h(0)\ne0$, respectively
+$\int|F|^2>0$.
 \end{proof}
+
+Corollary~\ref{cor:c-unique} is a statement about the normalization of the
+archimedean term.  The functional $W_\infty$ of
+\cite[Definition~5.4]{P43} is defined with the constant $\gamma+\log4\pi$,
+which appears in \eqref{eq:Winfkernel} and is the constant of Weil's
+formula (Remark~\ref{rem:weilform}).  By \cite[Theorem~5.7]{P43}, a
+continuous functional on $\DA(S)$ that agrees with $T_S$ on the functions
+vanishing near the identity class, and involves no derivative at the
+identity, is $T_S+c'F(1)$ for some $c'\in\C$ ($c'$ real if the functional
+is Hermitian, in which case it is $T^{(c')}_S$).  The corollary says that
+among these functionals exactly the one defined in \cite{P43} satisfies
+Weil's formula on radial functions; it does not give a characterization of
+the value $c=0$ that is independent of the choice of that constant.
+
+\begin{remark}[Weil's form of the formula]
+\label{rem:weilform}
+By \eqref{eq:radialtracelim} and the first form of \eqref{eq:Winfkernel},
+which are \cite[Lemma~A.1]{P43}, the left-hand side of
+\eqref{eq:comparisonh} is defined by the prime terms and the archimedean
+term of Weil's explicit formula \cite{Weil1952}, so that
+Theorem~\ref{thm:comparison}(i) is that formula.  Explicitly, put
+$f(x):=x^{-1/2}h(\log x)$ for $x>0$ and $f^\sharp(x):=x^{-1}f(1/x)$.  Then
+$\Phi_h(s)=\int_0^\infty f(x)x^{s-1}dx=:\tilde f(s)$,
+$f(n)=n^{-1/2}h(\log n)$, $f^\sharp(n)=n^{-1/2}h(-\log n)$, $f(1)=h(0)$, and
+the substitution $x=e^t$, for which $x\,dx/(x^2-1)=dt/(1-e^{-2t})$, turns
+\eqref{eq:comparisonh} into
+\[
+\begin{aligned}
+  \tilde f(0)+\tilde f(1)-\sum_\rho\tilde f(\rho)
+  ={}&\sum_{n\ge2}\Lambda(n)\bigl[f(n)+f^\sharp(n)\bigr]
+   +(\gamma+\log4\pi)\,f(1)\\
+  &+\int_1^\infty\Bigl[f(x)+f^\sharp(x)-\frac2x\,f(1)\Bigr]
+    \frac{x\,dx}{x^2-1}.
+\end{aligned}
+\]
+The left-hand side is that of \cite[(1)]{CCWeilArch}; for the
+identification of the local terms on the right with the distributions
+$W_v$ used there, see \cite[Sections~5 and~8]{P43}.
+\end{remark}
 
 \section{Residues}
 \label{sec:polar}
@@ -981,7 +1183,11 @@ from \eqref{eq:Asum} and the first bound.
 
 By (i) and (ii), the function $\tau\mapsto A_S(s)+A_S(1-s)$,
 $s=\tfrac12+i\tau$, is the meromorphic continuation of
-$\widehat T_S(\cz,\cdot)$ to $\tau\in\C$.  Its poles at $\tau=\pm i/2$, that
+$\widehat T_S(\cz,\cdot)$ to $\tau\in\C$.  Since
+$f_p=-\frac{d}{ds}\log(1-p^{-s})^{-1}$ and
+$a=-\frac{d}{ds}\log\bigl(\pi^{-s/2}\Gamma(s/2)\bigr)$, the function $A_S$ is
+minus the logarithmic derivative of the product of the local factors at the
+places of $S$; compare \cite{BurnolCR,BurnolConductor}.  Its poles at $\tau=\pm i/2$, that
 is at $s=0$ and $s=1$, have residues $\mp i(|S_f|+1)$ in the variable $\tau$;
 this is \cite[Theorem~5.13(c)]{P43}.
 
@@ -1020,7 +1226,7 @@ the sum running over the distinct zeros in the middle and over the zeros
 with multiplicity on the right, and both converging absolutely.  The residue
 at $s=0$ is $\Phi_h(0)=\lambda_+(\Gamma_h)$, and the residue at $s=1$ is
 $\Phi_h(1)=\lambda_-(\Gamma_h)$.  If $h=F\star F^\dagger$ with
-$F\in C_c^\infty(\R)$ real, their sum is
+$F\in C_c^\infty(\R)$ real, then $h$ is even and their sum is
 $2\Phi_F(0)\Phi_F(1)=\beta_T\bigl(M(\Gamma_F),M(\Gamma_F)\bigr)$.
 \end{enumerate}
 \end{theorem}
@@ -1082,15 +1288,15 @@ hypotheses of Lemma~\ref{lem:contour}.  By \eqref{eq:lineinf} for $b=2$,
 the series being absolutely convergent.  By (i), the residues of $\Phi_hA$ at
 $0$, at $1$ and at a zero $\rho$ are $\Phi_h(0)$, $\Phi_h(1)$ and
 $-m_\rho\Phi_h(\rho)$.  The remaining assertions are \eqref{eq:tatePhi},
-Lemma~\ref{lem:testfn}(iii) and \eqref{eq:polarterm}.
+Lemma~\ref{lem:testfn}(iv) and \eqref{eq:polarterm}.
 \end{proof}
 
 The proof of \eqref{eq:residuesum} does not use Theorem~\ref{thm:EF}; for
 even $h$ it is a second proof of \eqref{eq:comparisonh}.  For arbitrary
 $h\in C_c^\infty(\R)$ let $h_e:=\tfrac12(h+h^-)$ be its even part.  The
 right-hand sides of \eqref{eq:radialtrace} and \eqref{eq:radialtracelim}
-are the same for $h$ and for $h^-$, because $\widehat W_\infty(0,\cdot)$ is
-even; so $T_S(\Gamma_h)=T_S(\Gamma_{h_e})$ and
+are the same for $h$ and for $h^-$, by the first form of
+\eqref{eq:Winfkernel}; so $T_S(\Gamma_h)=T_S(\Gamma_{h_e})$ and
 $\Tl(\Gamma_h)=\Tl(\Gamma_{h_e})$, and the formulas \eqref{eq:lineS},
 \eqref{eq:lineinf} hold for $h$ with $\Phi_h(s)$ replaced by
 $\Phi_{h_e}(s)=\tfrac12\bigl(\Phi_h(s)+\Phi_h(1-s)\bigr)$.
@@ -1124,11 +1330,10 @@ $A_S(\sigma)\ge a(\sigma)+\sum_{p\in S_f}f_p(1)\to+\infty$.  The last
 assertion follows from Lemma~\ref{lem:localsymbols}(i) at $\tau=0$.
 \end{proof}
 
-Thus the passage to the limit over the charts commutes with the integration
-over $L_b$ for $b>1$, by \eqref{eq:lineinf}, but not with the continuation to
-$\Rel s\le1$: the residue of $A$ at $s=0$ is that of the archimedean term
-$a$ alone, since $A-a=-\zeta'/\zeta$ is holomorphic at $s=0$, and the residue
-of $A$ at $s=1$ is that of $-\zeta'/\zeta$.
+Thus $A_S$ converges to $A$ uniformly on $\Rel s\ge b$ for every $b>1$ and
+diverges at every point of $(0,1]$.  The residue of $A$ at $s=0$ is that of
+the archimedean term $a$ alone, since $A-a=-\zeta'/\zeta$ is holomorphic at
+$s=0$, and the residue of $A$ at $s=1$ is that of $-\zeta'/\zeta$.
 
 \section{Zeros off the line; nondegeneracy}
 \label{sec:sufficiency}
@@ -1186,15 +1391,26 @@ $F_+$ even and $F_-$ odd, such that
   \qquad\text{that is,}\qquad \Il(\Gamma_{F_\pm},\Gamma_{F_\pm})>0 .
 \end{equation}
 Conversely, if every zero of $\xi$ lies on the line $\Rel s=\tfrac12$, then
-$\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)\ge0$ for every real
+$\sum_\rho\Phi_F(\rho)\overline{\Phi_F(1-\bar\rho)}\ge0$ for every
 $F\in C_c^\infty(\R)$.
 \end{theorem}
 
+As recalled in the introduction, this is a form of Weil's criterion
+\cite{Weil1952} contained in the results of Yoshida \cite{Yoshida} and of
+Connes and Consani \cite[Proposition~C.1]{CCWeilArch}.
+
 \begin{proof}
-We prove the converse first.  If every zero lies on the line then
-$\mathcal Z\subset\R$, and for real $F$ and real $z$ the term
-$\widetilde F(z)\widetilde F(-z)$ of \eqref{eq:zsum} equals
-$|\widetilde F(z)|^2\ge0$ by \eqref{eq:realF}.
+The argument follows the method of \cite[Lemma~1 and Proposition~1]{Yoshida}
+in the form given in \cite[Appendix~C]{CCWeilArch}, where the test function
+is made to vanish at the finitely many zeros in a bounded region and at the
+points of a prescribed finite set, and to be small at the remaining zeros.
+Here these conditions are obtained by a polynomial in $i\,d/dt$ and by a
+convolution power.
+
+We prove the converse first.  If $\Rel\rho=\tfrac12$ then $1-\bar\rho=\rho$,
+so that the term of $\rho$ in the sum is $|\Phi_F(\rho)|^2\ge0$; the series
+converges absolutely by Lemma~\ref{lem:contour}, applied to
+$s\mapsto\Phi_F(s)\overline{\Phi_F(1-\bar s)}=\Phi_{F\star F^\dagger}(s)$.
 
 Now let $\rho_0$ be a zero with $\Rel\rho_0\ne\tfrac12$, and write
 $\rho_0=\tfrac12+iz_0$, $z_0=x_0+iy_0$, so that $x_0=\Iml\rho_0$ and
@@ -1322,7 +1538,26 @@ $\Il(\Gamma_{F_\pm},\Gamma_{F_\pm})
 =-\sum_\rho\Phi_{F_\pm}(\rho)\Phi_{F_\pm}(1-\rho)>0$.
 \end{proof}
 
-We turn to the form $I^{(c)}_S$ of a fixed chart.
+\begin{remark}[Scope and support]
+\label{rem:support}
+Theorem~\ref{thm:sufficiency} derives a property of the form $\Il$ from a
+hypothesis on the zeros of $\xi$, and gives no information on their
+location.  The functions $F_\pm$ cannot have small support.  Indeed, let
+$F\in C_c^\infty(\R)$ be primitive with $h:=F\star F^\dagger$ vanishing
+outside $(-\log2,\log2)$.  Then the sum over $n$ in
+\eqref{eq:radialtracelim} is empty, so that
+$\Il(\Gamma_F,\Gamma_F)=W_\infty(\Gamma_h)$, and this number is $\le0$: this
+is Weil's inequality at the archimedean place, due to Yoshida
+\cite{Yoshida}; see \cite[Section~1]{CCWeilArch}, and
+\cite[Section~5, after Convention~5.5]{P43} for the comparison of
+$W_\infty$ with the distribution used there; see also the remark after
+\cite[Theorem~6.18]{P43}.  For positivity under support conditions see also
+\cite{Bombieri,BurnolCR}.  Hence, for the functions of
+Theorem~\ref{thm:sufficiency}, the support of $F_\pm\star F_\pm^\dagger$ is
+not contained in $(-\log2,\log2)$.
+\end{remark}
+
+We turn to nondegeneracy, first for the form $I^{(c)}_S$ of a fixed chart.
 
 \begin{theorem}
 \label{thm:radical}
@@ -1336,7 +1571,7 @@ Let $S$ be a chart and $c\in\R$.  For all $h,g\in C_c^\infty(\R)$,
 the integral being absolutely convergent.  If $h\in C_c^\infty(\R)$ and
 $I^{(c)}_S(\Gamma_h,\Gamma_g)=0$ for every $g\in C_c^\infty(\R)$, then $h=0$.
 Thus the restriction of $I^{(c)}_S$ to the subalgebra $\DAr(S)$ of radial
-classes is nondegenerate.
+functions is nondegenerate.
 \end{theorem}
 
 \begin{proof}
@@ -1365,8 +1600,11 @@ $\widehat T_S(\cz,\cdot)+c$ form a discrete set.  Hence $\hat h$ vanishes off
 a discrete set, so $\hat h=0$ by continuity, and $h=0$.
 \end{proof}
 
+The proof is that of \cite[Theorem~6.5]{P43} on the principal component.
 The last assertion of Theorem~\ref{thm:radical} also follows from the
-nondegeneracy of $I^{(c)}_S$ on $\DA(S)$ \cite[Theorem~6.5]{P43}, by
+nondegeneracy of $I^{(c)}_S$ on $\DA(S)$ \cite[Theorem~6.5]{P43}, or on its
+subalgebra of functions invariant under $\epsilon$
+\cite[Remark~6.19(ii)]{P43}, by
 averaging the second argument over $K_S$.  For $G\in\DA(S)$ put
 $G^\natural(w):=\int_{K_S}G(wk)\,d\mu(k)$.  This is an element of $\DA(S)$
 invariant under $K_S$, so $G^\natural=\Gamma_g$ for some
@@ -1375,39 +1613,276 @@ $\widehat{G^\natural}(\chi)=\widehat G(\chi)\int_{K_S}\chi\,d\mu$ is equal to
 $\widehat G$ on $\cz$ and vanishes on the other components.  Since
 $\widehat{\Gamma_h}$ vanishes off $\cz$, the formula
 $I^{(c)}_S(F,G)=\int\widehat F\,\overline{\widehat G}\,(\widehat T_S+c)\,d\chi$
-of \cite[(69)]{P43} gives
+of \cite[(71)]{P43} gives
 $I^{(c)}_S(\Gamma_h,G)=I^{(c)}_S(\Gamma_h,\Gamma_g)$.  Hence, if $\Gamma_h$ is
-orthogonal to all radial classes, it is orthogonal to $\DA(S)$, and
+orthogonal to all radial functions, it is orthogonal to $\DA(S)$, and
 $\Gamma_h=0$.
 
-\begin{thebibliography}{9}
+In the limit over $S$ this argument is not available: by
+Proposition~\ref{cor:noncommute} the functions $\widehat T_S(\cz,\cdot)$ do
+not converge.  We first determine the conditions imposed on $h$ by
+orthogonality to all radial functions.
+
+\begin{lemma}
+\label{lem:radicalnec}
+Let $c\in\R$ and let $h\in C_c^\infty(\R)$ satisfy
+$I^{(c)}_{\lim}(\Gamma_h,\Gamma_g)=0$ for every $g\in C_c^\infty(\R)$.  Then
+$\Phi_h(0)=\Phi_h(1)=0$, and $\Phi_h(\rho)=0$ for every zero $\rho$ of $\xi$.
+\end{lemma}
+
+\begin{proof}
+Let $\supp h\subseteq[-r,r]$ and put
+\[
+  D(v):=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,h(v-\log n),\qquad
+  E(v):=\int_{-r}^{r}K(v-u)\,h(u)\,du\quad(v>r),
+\]
+with $K$ as in \eqref{eq:Winfkernel}.  On every bounded interval only
+finitely many terms of $D$ are not identically zero, so $D$ is a smooth
+function on $\R$, and $D(v)=0$ for $v<\log2-r$.  The function $E$ is
+continuous on $(r,\infty)$, because $K$ is continuous on $(0,\infty)$.
+
+\emph{Step 1: $D(v)+E(v)=0$ for $v>r$.}  Let $g\in C_c^\infty(\R)$ with
+$\supp g\subseteq[\alpha,\beta]$, $\alpha>r$, and put $k:=h\star g^\dagger$,
+so that $k(x)=\int h(u)\overline{g(u-x)}\,du$.  If $k(x)\ne0$ then
+$u-x\ge\alpha$ for some $u\le r$, so $x\le r-\alpha<0$.  Thus $k$ vanishes on
+a neighbourhood of $[0,\infty)$; in particular $k(0)=0$, and
+$T^{(c)}_{\lim}(\Gamma_k)=\Tl(\Gamma_k)$ by Lemma~\ref{lem:radial-trace}.  By
+\eqref{eq:radialtracelim} and the first form of \eqref{eq:Winfkernel},
+\[
+  I^{(c)}_{\lim}(\Gamma_h,\Gamma_g)=\Tl(\Gamma_k)
+  =\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,k(-\log n)
+   +\int_0^\infty K(t)\,k(-t)\,dt .
+\]
+Here $k(-x)=\int h(u)\overline{g(u+x)}\,du
+=\int\overline{g(v)}\,h(v-x)\,dv$.  The sum over $n$ is finite, and equals
+$\int\overline{g(v)}D(v)\,dv$.  In the integral, $h(v-t)\ne0$ with
+$v\in\supp g$ forces $t\ge v-r\ge\alpha-r>0$ and $t\le\beta+r$, and $K$ is
+bounded on $[\alpha-r,\beta+r]$; so Fubini's theorem applies and
+\[
+  \int_0^\infty K(t)\,k(-t)\,dt
+  =\int\overline{g(v)}\int_0^\infty K(t)\,h(v-t)\,dt\,dv
+  =\int\overline{g(v)}\,E(v)\,dv ,
+\]
+by the substitution $u=v-t$.  Hence
+$\int\overline{g(v)}\bigl(D(v)+E(v)\bigr)dv=0$ for every
+$g\in C_c^\infty((r,\infty))$, and $D+E=0$ on $(r,\infty)$ by continuity.
+
+\emph{Step 2: the function $\Phi_h(1-s)\,\zeta'/\zeta(s)$ is holomorphic in
+$\Rel s>0$.}  The function $K$ is positive and decreasing on $(0,\infty)$,
+so for $v\ge r+1$
+\[
+  |D(v)|=|E(v)|\le\|h\|_{L^1}\,K(v-r)
+  \le\frac{e^{r/2}\,\|h\|_{L^1}}{1-e^{-2}}\;e^{-v/2}.
+\]
+Since $D$ is continuous and vanishes for $v<\log2-r$, the integral
+\[
+  L(s):=\int_\R D(v)\,e^{-(s-\frac12)v}\,dv
+\]
+converges absolutely and locally uniformly for $\Rel s>0$, and $L$ is
+holomorphic there.  For $\Rel s=\sigma>1$,
+\[
+  \sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\int_\R|h(v-\log n)|\,
+  e^{-(\sigma-\frac12)v}\,dv
+  =\sum_{n\ge2}\Lambda(n)\,n^{-\sigma}\int_\R|h(u)|\,e^{-(\sigma-\frac12)u}\,du
+  <\infty ,
+\]
+so the sum defining $D$ may be integrated term by term, and by
+\eqref{eq:euler}
+\[
+  L(s)=\sum_{n\ge2}\Lambda(n)\,n^{-s}\int_\R h(u)\,e^{-(s-\frac12)u}\,du
+  =-\frac{\zeta'}{\zeta}(s)\,\Phi_h(1-s)\qquad(\Rel s>1).
+\]
+Both sides are meromorphic in $\Rel s>0$, so they agree there, and the
+right-hand side has no pole in $\Rel s>0$.
+
+\emph{Step 3: $\Phi_h(0)=0$, and $\Phi_h(1-\rho)=0$ for every zero $\rho$
+of $\xi$ with $\Rel\rho>0$.}  The function $\zeta'/\zeta$ has a pole at
+$s=1$, and at every zero $\rho$ of $\xi$, since these are zeros of $\zeta$.
+By Step~2 the entire function $s\mapsto\Phi_h(1-s)$ vanishes at each of
+these poles that lies in $\Rel s>0$.
+
+\emph{Step 4: conclusion.}  The function $h^-(t)=h(-t)$ satisfies the
+hypothesis of the lemma as well.  Indeed, for $g\in C_c^\infty(\R)$ one has
+$(g^-)^\dagger(y)=\overline{g(y)}=g^\dagger(-y)$, hence
+\[
+  (h^-\star g^\dagger)(x)=\int h(u)\,g^\dagger(x+u)\,du
+  =\int h(u)\,(g^-)^\dagger(-x-u)\,du=\bigl(h\star(g^-)^\dagger\bigr)(-x),
+\]
+and $T^{(c)}_{\lim}(\Gamma_{k^-})=T^{(c)}_{\lim}(\Gamma_k)$ for every
+$k\in C_c^\infty(\R)$, by Lemma~\ref{lem:radial-trace}, because
+\eqref{eq:radialtracelim}, the first form of \eqref{eq:Winfkernel} and
+$k(0)$ are unchanged when $k$ is replaced by $k^-$.  So
+$I^{(c)}_{\lim}(\Gamma_{h^-},\Gamma_g)=I^{(c)}_{\lim}(\Gamma_h,\Gamma_{g^-})=0$.
+Since $\Phi_{h^-}(s)=\Phi_h(1-s)$ by Lemma~\ref{lem:testfn}(ii), Step~3 for
+$h^-$ gives $\Phi_h(1)=0$, and $\Phi_h(\rho)=0$ for every zero $\rho$ with
+$\Rel\rho>0$.  Finally let $\rho$ be a zero with $\Rel\rho=0$.  Then
+$1-\rho$ is a zero with $\Rel(1-\rho)=1>0$, and Step~3 for $h$, applied to
+the zero $1-\rho$, gives $\Phi_h(\rho)=0$.
+\end{proof}
+
+\begin{proposition}
+\label{prop:radicallim}
+Let $h\in C_c^\infty(\R)$.
+\begin{enumerate}
+\item[(i)] One has $\Il(\Gamma_h,\Gamma_g)=0$ for every
+$g\in C_c^\infty(\R)$ if and only if $\Phi_h(0)=\Phi_h(1)=0$ and
+$\Phi_h(\rho)=0$ for every zero $\rho$ of $\xi$.
+\item[(ii)] Let $c\ne0$.  If $I^{(c)}_{\lim}(\Gamma_h,\Gamma_g)=0$ for every
+$g\in C_c^\infty(\R)$, then $h=0$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+By \eqref{eq:comparisonc} and \eqref{eq:polarterm}, for every $c\in\R$ and
+every $g\in C_c^\infty(\R)$,
+\begin{equation}
+\label{eq:radicalid}
+  I^{(c)}_{\lim}(\Gamma_h,\Gamma_g)
+  =\Phi_h(1)\,\overline{\Phi_g(0)}+\Phi_h(0)\,\overline{\Phi_g(1)}
+   -\sum_\rho\Phi_h(\rho)\,\overline{\Phi_g(1-\bar\rho)}
+   +c\int_\R h(t)\overline{g(t)}\,dt ,
+\end{equation}
+where $\rho$ runs over the zeros of $\xi$ repeated according to
+multiplicity; the term of a zero $\rho$ has the factor $\Phi_h(\rho)$,
+whatever the multiplicity of $\rho$.  Hence, if $\Phi_h$ vanishes at $0$, at
+$1$ and at every zero of $\xi$, then
+$I^{(c)}_{\lim}(\Gamma_h,\Gamma_g)=c\int h\overline g$.
+
+(i) For $c=0$ this shows that the three conditions imply
+$\Il(\Gamma_h,\Gamma_g)=0$ for every $g$.  The converse is
+Lemma~\ref{lem:radicalnec} for $c=0$.
+
+(ii) By Lemma~\ref{lem:radicalnec} the three conditions hold, so
+$c\int h\overline g=0$ for every $g\in C_c^\infty(\R)$.  Taking $g=h$ gives
+$\int|h|^2=0$, and $h=0$.
+\end{proof}
+
+Thus for $c\ne0$ the form $I^{(c)}_{\lim}$ is nondegenerate on radial
+functions by an elementary argument, and for $c=0$ its nondegeneracy is
+equivalent to the statement that no nonzero $h\in C_c^\infty(\R)$ has
+$\Phi_h$ vanishing at $0$, at $1$ and at every zero of $\xi$.  In these
+conditions the zeros enter without multiplicity.  To prove the statement we
+use two facts.  Let $N(X)$ be the number of zeros $\rho$ of $\xi$ with
+$0<\Iml\rho\le X$, counted with multiplicity.  Then
+$N(X)\sim\frac{X}{2\pi}\log X$ as $X\to\infty$ \cite[ch.~15]{Davenport}; and
+there are constants $\kappa>0$ and $X_0$ such that for $X\ge X_0$ at least
+$\kappa N(X)$ of these zeros are simple \cite{HeathBrown}; see also
+\cite{Conrey}.  Simple zeros are distinct points, so there are $\delta>0$
+and $X_1$ such that
+\begin{equation}
+\label{eq:distinct}
+  \#\bigl\{\rho\in\C:\ \xi(\rho)=0,\ 0<\Iml\rho\le X\bigr\}
+  \ \ge\ \delta\,X\log X\qquad(X\ge X_1),
+\end{equation}
+the zeros being counted without multiplicity.
+
+\begin{theorem}
+\label{thm:radicallim}
+Let $c\in\R$.  If $h\in C_c^\infty(\R)$ and
+$I^{(c)}_{\lim}(\Gamma_h,\Gamma_g)=0$ for every $g\in C_c^\infty(\R)$, then
+$h=0$.  Thus the restriction of $I^{(c)}_{\lim}$ to the radial functions is
+nondegenerate.
+\end{theorem}
+
+\begin{proof}
+For $c\ne0$ this is Proposition~\ref{prop:radicallim}(ii).  Let $c=0$, and
+suppose that $h\ne0$.  By Lemma~\ref{lem:radicalnec}, $\Phi_h$ vanishes at
+every zero of $\xi$.  The function $\Phi_h$ is not identically zero, because
+$\Phi_h(\tfrac12+i\tau)=\hat h(-\tau)$; choose $s_0$ with
+$\Phi_h(s_0)\ne0$.  For $R>0$ let $n(R)$ be the number of distinct zeros of
+$\Phi_h$ in the disc $|s-s_0|\le R$.  By Jensen's formula
+\cite[\S3.61]{Titchmarsh},
+\[
+  n(R)\log2\le\int_R^{2R}\frac{n(x)}{x}\,dx
+  \le\log\max_{|s-s_0|=2R}|\Phi_h(s)|-\log|\Phi_h(s_0)| .
+\]
+If $\supp h\subseteq[-r,r]$, then by \eqref{eq:Phibound} with $N=0$,
+$|\Phi_h(s)|\le\|h\|_{L^1}e^{r(|s|+\frac12)}$, so $n(R)\le C_1R+C_2$ with
+constants $C_1,C_2$ depending only on $h$ and $s_0$.  On the other hand, by
+\eqref{eq:distinct}, for $X\ge X_1$ the function $\Phi_h$ has at least
+$\delta X\log X$ distinct zeros $\rho$ with $0\le\Rel\rho\le1$ and
+$0<\Iml\rho\le X$, and these lie in the disc $|s-s_0|\le X+|s_0|+1$.  Hence
+$\delta X\log X\le C_1(X+|s_0|+1)+C_2$ for all $X\ge X_1$, which is false for
+large $X$.  So $h=0$.
+\end{proof}
+
+For $c=0$ the proof uses that the number of distinct zeros of $\xi$ with
+$0<\Iml\rho\le X$ is not $O(X)$.  A lower bound of order $X$ for this number
+would not suffice, since the bound for $n(R)$ is of that order; and the
+bound $O(\log X)$ for the multiplicity of a zero of height $X$, which
+follows from the second of the classical facts quoted before
+Lemma~\ref{lem:contour}, gives no more than a lower bound of order $X$.
+
+\begin{thebibliography}{99}
 
 \bibitem{Barner1981} K.~Barner,
 \emph{On A.~Weil's explicit formula},
 J.~Reine Angew. Math. \textbf{323} (1981), 139--152.
 
+\bibitem{Bombieri}
+E.~Bombieri, \emph{Remarks on Weil's quadratic functional in the theory of
+prime numbers. I}, Atti Accad. Naz. Lincei Cl. Sci. Fis. Mat. Natur. Rend.
+Lincei (9) Mat. Appl. \textbf{11} (2000), no.~3, 183--233.
+
+\bibitem{BurnolConductor}
+J.-F.~Burnol, \emph{The explicit formula and the conductor operator},
+preprint, 1999, arXiv:math/9902080.
+
+\bibitem{BurnolCR}
+J.-F.~Burnol, \emph{Sur les formules explicites. I. Analyse invariante},
+C. R. Acad. Sci. Paris S\'er. I Math. \textbf{331} (2000), no.~6, 423--428.
+
 \bibitem{Connes99} A.~Connes,
 \emph{Trace formula in noncommutative geometry and the zeros of the Riemann
 zeta function}, Selecta Math. (N.S.) \textbf{5} (1999), 29--106.
 
+\bibitem{CCWeilArch}
+A.~Connes and C.~Consani, \emph{Weil positivity and trace formula, the
+archimedean place}, Selecta Math. (N.S.) \textbf{27} (2021), no.~4, Paper
+No.~77.
+
+\bibitem{Conrey}
+J.~B.~Conrey, \emph{More than two fifths of the zeros of the Riemann zeta
+function are on the critical line}, J.~Reine Angew. Math. \textbf{399}
+(1989), 1--26.
+
 \bibitem{Davenport} H.~Davenport,
 \emph{Multiplicative Number Theory}, 3rd ed., revised by
 H.~L.~Montgomery, Graduate Texts in Mathematics \textbf{74}, Springer, New York, 2000.
+
+\bibitem{HeathBrown}
+D.~R.~Heath-Brown, \emph{Simple zeros of the Riemann zeta-function on the
+critical line}, Bull. London Math. Soc. \textbf{11} (1979), 17--18.
+
+\bibitem{MeyerIdele}
+R.~Meyer, \emph{On a representation of the idele class group related to
+primes and zeros of $L$-functions}, Duke Math. J. \textbf{127} (2005),
+519--595.
 
 \bibitem{NIST} F.~W.~J.~Olver, D.~W.~Lozier, R.~F.~Boisvert and C.~W.~Clark
 (eds.), \emph{NIST Handbook of Mathematical Functions},
 Cambridge University Press, Cambridge, 2010.
 
 \bibitem{P43} D.~A.~Trejo Pizzo,
-\emph{A correspondence algebra with a canonical trace on the idele class
-group}, preprint.
+\emph{A correspondence algebra and the Weil distribution on semilocal idele
+class groups}, preprint.
 
 \bibitem{P44} D.~A.~Trejo Pizzo,
-\emph{An arithmetic Frobenius family on the idele class group}, preprint.
+\emph{An arithmetic Frobenius family on semilocal idele class groups},
+preprint.
+
+\bibitem{Titchmarsh}
+E.~C.~Titchmarsh, \emph{The Theory of Functions}, 2nd ed., Oxford University
+Press, Oxford, 1939.
 
 \bibitem{Weil1952} A.~Weil,
 \emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
 Comm. S\'em. Math. Univ. Lund (1952), Tome suppl\'ementaire, 252--265.
+
+\bibitem{Yoshida}
+H.~Yoshida, \emph{On Hermitian forms attached to zeta functions}, in:
+Zeta Functions in Geometry (Tokyo, 1990), Adv. Stud. Pure Math. \textbf{21},
+Kinokuniya, Tokyo, 1992, 281--325.
 
 \end{thebibliography}
 

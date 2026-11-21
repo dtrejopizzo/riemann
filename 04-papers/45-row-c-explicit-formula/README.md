@@ -1,4 +1,4 @@
-# An explicit formula for the trace on the idele class group
+# An explicit formula for the trace on semilocal idele class groups
 
 The paper evaluates the trace on the radial functions `Γ_h(w) = h(−log|w|_S)` of the semilocal
 idele class group. For the limit `T_lim` of the trace over `S` it proves
@@ -10,9 +10,9 @@ by comparison with Weil's explicit formula, which is proved in this normalizatio
 `T_lim(Γ_h)`, for even `h`, as a line integral against an explicit function and as a sum of residues;
 shows that if the completed zeta function has a zero off the critical line, there are real primitive
 test functions that detect it; and proves that for each finite `S` the trace form is nondegenerate on
-radial functions. Nothing in the paper depends on the Riemann hypothesis.
+radial functions. The main identity is Weil's explicit formula, and the statement on zeros off the critical line is a known form of Weil's criterion (Yoshida; Connes–Consani), proved here in this notation; it gives no information on the location of the zeros. The paper also proves nondegeneracy of the form in the limit over `S`. Nothing in the paper depends on the Riemann hypothesis.
 
 It uses [Paper 43](../43-row-a-torsion-theory/) and [Paper 44](../44-row-b-arithmetic-family/).
 
 - Source: [`main.tex`](main.tex)
-- PDF: [`explicit-formula-trace-idele-class-group.pdf`](explicit-formula-trace-idele-class-group.pdf) (17 pages)
+- PDF: [`explicit-formula-trace-idele-class-group.pdf`](explicit-formula-trace-idele-class-group.pdf) (22 pages)
