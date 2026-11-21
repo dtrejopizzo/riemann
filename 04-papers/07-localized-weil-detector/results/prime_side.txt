@@ -1,0 +1,51 @@
+# Closed form of K_jk(w) = int psi_j psi_k e^{-iwx} dx against quadrature
+max |closed form - quadrature| over samples: 2.22e-16
+majorant |K_jk(w)| <= p_jk(w) e^{-w^2/4} holds at all samples
+
+# Remark 2.1: explicit formula on the basis, T0=46.13, sigma=1, J=6
+# zeros: first 30 ordinates; prime powers up to 19999999; polar term negligible
+||M_zeros||_op = 0.924575   ||M_arch||_op = 0.325179   ||prime sum||_op = 0.604488
+||M_zeros - M_arith||_op = 2.203e-13   |tr difference| = 9.493e-13
+lambda_min(M_zeros) = 1.166305e-17
+
+# Theorem 4.2 / Proposition 4.3: eta(X)=||E_X||_op for zeta against the bound
+# bound(X) = 2 c0 int_L^inf e^{u/2}(G/2+|G'|) du,  rate = -log(bound)/L^2
+T0=46.13 sigma=1 J=8   (sigma^2/4 = 0.25)
+         X        L       eta(X)     bound(X)     rate
+       100    4.605   2.5723e-01   1.2431e+04  -0.4446
+      1000    6.908   9.6651e-02   1.4519e+03  -0.1526
+     1e+04    9.210   4.6483e-03   8.4289e+00  -0.0251
+     1e+05   11.513   1.8064e-06   2.2602e-03   0.0460
+     1e+06   13.816   6.7612e-11   3.0147e-08   0.0907
+
+T0=46.13 sigma=1 J=10   (sigma^2/4 = 0.25)
+         X        L       eta(X)     bound(X)     rate
+       100    4.605   3.6955e-01   1.5953e+05  -0.5649
+      1000    6.908   1.9510e-01   3.6430e+04  -0.2201
+     1e+04    9.210   4.5597e-02   4.4237e+02  -0.0718
+     1e+05   11.513   7.2656e-05   2.3199e-01   0.0110
+     1e+06   13.816   6.0475e-09   5.6122e-06   0.0633
+
+T0=85.7 sigma=2 J=10   (sigma^2/4 = 1)
+         X        L       eta(X)     bound(X)     rate
+     3.162    1.151   4.1017e-01   4.0703e+04  -8.0077
+        10    2.303   3.9293e-01   2.7734e+04  -1.9296
+     31.62    3.454   2.4327e-01   4.9924e+03  -0.7138
+       100    4.605   1.2596e-02   3.7879e+01  -0.1714
+     316.2    5.756   3.0011e-06   1.1686e-02   0.1343
+
+# rate of the bound at large L, sigma=1, J=8
+L=  10  -log(bound)/L^2 = 0.0035
+L=  20  -log(bound)/L^2 = 0.1545
+L=  40  -log(bound)/L^2 = 0.2141
+L=  80  -log(bound)/L^2 = 0.2364
+L= 160  -log(bound)/L^2 = 0.2447
+
+# Table 1: cutoffs from Theorem 5.1, kappa=1/2, gamma=T0+0.47 sigma, alpha=sigma^2/5
+# X_int: least X with bound(X) <= kappa a delta^2;  X_min: formula (9) with A_tr(alpha)
+    T0 sigma   J   delta    a(gamma)           C        A_tr       X_int       X_min
+ 46.13     1  10   1e-03    17.88390  8.2778e+01  1.0249e+13  9.1505e+05  1.8289e+06
+ 46.13     1  10   1e-04    17.88390  8.2746e+01  1.0249e+13  2.1271e+06  3.9797e+06
+ 46.13     1  10   1e-05    17.88390  8.2746e+01  1.0249e+13  4.6344e+06  8.3379e+06
+  85.7     2  10   1e-05     2.23549  2.5858e+00  2.1297e+11  1.8611e+03  2.5053e+03
+

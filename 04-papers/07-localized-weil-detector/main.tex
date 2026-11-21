@@ -4,13 +4,12 @@
 \usepackage{geometry}
 \usepackage{booktabs}
 \usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{xcolor}
 \usepackage{enumitem}
+\usepackage{xcolor}
 \geometry{margin=1in}
 \hypersetup{colorlinks=true,linkcolor=blue!70!black,citecolor=blue!70!black,
   urlcolor=blue!70!black,
-  pdftitle={A Rigorous Localized Weil Detector for Off-Critical Zeros},
+  pdftitle={The localized Weil form on a Hermite--Gauss basis},
   pdfauthor={David Alejandro Trejo Pizzo}}
 
 \newtheorem{theorem}{Theorem}[section]
@@ -23,477 +22,571 @@
 \newtheorem{remark}[theorem]{Remark}
 
 \newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
 \newcommand{\tr}{\operatorname{tr}}
-\newcommand{\half}{\tfrac12}
 \newcommand{\lmin}{\lambda_{\min}}
 \newcommand{\Qzero}{Q_{0}}
-\newcommand{\LDH}{L_{\mathrm{DH}}}
-\newcommand{\E}{\mathbb{E}}
+\newcommand{\Atr}{A_{\mathrm{tr}}}
 
-\title[A Localized Weil Detector]{A Rigorous Localized Weil Detector for Off-Critical Zeros:\\[3pt]
-Forced Negativity, Unconditional Truncation Control, and the Logical Status of the Truncation Lemma}
+\title[The localized Weil form on a Hermite--Gauss basis]{The localized Weil form on a Hermite--Gauss basis:\\[3pt]
+the effect of an off-line zero pair and the truncation of the prime sum}
 \author{David Alejandro Trejo Pizzo}
-\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
-
+\address{Independent researcher}
+\email{dtrejopizzo@gmail.com}
 
 \begin{document}
-\nocite{bgConnes99,bgCC21,bgBombieriWeil,bgMont73,bgTitchmarsh}
 \begin{abstract}
-Weil's criterion identifies the Riemann Hypothesis (RH) with the positive
-semidefiniteness of the Weil functional---the explicit formula read as a
-quadratic form on test functions. We study its finite, localized
-realization $Q=Q(T_0,\sigma,J)$: the Gram matrix of the Weil functional on
-a Hermite--Gauss basis of $J$ test functions centered at height $T_0$ with
-width $\sigma$, assembled as $Q=M_{\mathrm{zeros}}-M_{\mathrm{arith}}$ from
-the full explicit formula. We prove three results.
-\textbf{(I) Forced negativity.} A zero off the critical line at displacement
-$\delta$ from the line, within $O(\sigma)$ of $T_0$, contributes a negative
-rank-one (to leading order) perturbation to $Q$, and forces
-$\lmin(Q)\le \lmin(\Qzero)-c(\delta,\sigma,J;\gamma)$ with an
-\emph{explicit} prefactor satisfying $c\sim \delta^2 A(\gamma)$; the
-constant matches high-precision computation to relative error below
-$10^{-5}$.
-\textbf{(II) Unconditional truncation control.} The truncation noise floor
-$\eta(X)$ obtained by cutting the prime sum at $X$ obeys an explicit bound
-$\eta(X)\le A\exp(-\alpha(\log X)^2)$, with $\alpha\approx\sigma^2/8$ set by
-the Gaussian decay of the Hermite--Gauss Fourier transform, requiring
-\emph{only the Prime Number Theorem}---no zero-density or GRH input.
-\textbf{(III) A rigorous detector and its logical status.} Combining (I) and
-(II) yields, for a \emph{fixed} off-critical zero, an explicit prime-cutoff
-threshold $X_{\min}$ beyond which $\lmin(Q_X)<0$ \emph{unconditionally}. We
-then resolve the status of the truncation lemma: the bound needed for the
-\emph{detector} is technical and unconditional, whereas the
-\emph{uniform} passage $\lmin(Q_X)\to\lmin(Q_\infty)$ is equivalent to Weil
-positivity, hence to RH. The detector is therefore a rigorous instrument,
-not a proof; the entire remaining difficulty is concentrated in a single
-named inequality---uniform spectral-gap control between $\lmin(Q_X)$ and
-$\lmin(Q_\infty)$.
+We consider the Gram matrix of Weil's quadratic form on $J$ Hermite--Gauss
+functions of width $\sigma$ centred at height $T_0$, written as the zero
+side minus the arithmetic side of the explicit formula.
+\textbf{(I)} Replacing a double point $\tfrac12+i\gamma$ of the zero configuration by the pair
+$\tfrac12\pm\delta+i\gamma$ changes the zero-side matrix by
+$\delta^2A(\gamma)+O(\delta^4)$, where $A=-(\Phi\Phi^{\top})''$ has rank at
+most three and least eigenvalue $-a(\gamma)<0$, with an explicit lower bound
+for $a(\gamma)$ and an explicit bound for the remainder.
+\textbf{(II)} The operator norm of the tail of the prime sum beyond $X$ is at
+most $\Atr\exp(-\alpha(\log X)^2)$ for every $\alpha<\sigma^2/4$, with an
+explicit majorant; only a Chebyshev bound for $\psi(x)$ is used.
+\textbf{(III)} For the model configuration obtained in (I), with the
+arithmetic side of $\zeta$ truncated at $X$, the matrix has a negative
+eigenvalue for all $X\ge X_{\min}$, given explicitly, provided $\delta$ is
+below an explicit threshold. For $\zeta$ itself the
+truncated matrix is the prime tail and tends to $0$ whether or not the
+Riemann Hypothesis holds; nothing here bears on RH. For a fixed basis the
+passage $X\to\infty$ is elementary; the bound is not uniform in $(\sigma,J)$,
+and positivity for all bases, which is what Weil's criterion requires, is not
+addressed. The expansion and the tail bound are checked numerically.
 \end{abstract}
 
 \maketitle
 
-
-
 \tableofcontents
-\newpage
 
 % ════════════════════════════════════════════════════════════════════════
 \section{Introduction}\label{sec:intro}
 \subsection{Weil positivity and its localization}
 
-For a suitable even test function $g$ with transform $h=\hat g$, the
-Riemann--Weil explicit formula reads
+Let $h$ be holomorphic in a strip $|\im r|\le\tfrac12+\epsilon$ with
+$h(r)\ll(1+|r|)^{-2-\epsilon}$ there, and put
+$g(u)=\frac1{2\pi}\int_{-\infty}^{\infty}h(r)e^{-iru}\,dr$. The
+Riemann--Weil explicit formula (see \cite{Weil1952}, \cite{bgBombieriWeil} for this class of test functions; \cite[Thm.~5.12]{IK} for compactly supported ones, from which the present case follows by approximation, the functions $g_{jk}$ below being of Gaussian decay) reads
 \begin{equation}\label{eq:explicit}
-  \underbrace{\sum_{\rho} h(\gamma_\rho)}_{\text{zero side }Z(g)}
+  \underbrace{\sum_{\rho} h(\gamma_\rho)}_{\text{zero side }Z(h)}
   \;=\;
   \underbrace{h(\tfrac i2)+h(-\tfrac i2)}_{\text{polar}}
   +\underbrace{\frac1{2\pi}\!\int_{-\infty}^{\infty}\! h(r)\,\Omega(r)\,dr}_{\text{archimedean}}
-  -\underbrace{2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,g(\log n)}_{\text{prime side}},
+  -\underbrace{\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,\bigl(g(\log n)+g(-\log n)\bigr)}_{\text{prime side}},
 \end{equation}
-where the sum runs over the non-trivial zeros $\rho=\tfrac12+i\gamma_\rho$,
-$\Lambda$ is the von Mangoldt function, and $\Omega(r)=\re\psi(\tfrac14+\tfrac{ir}{2})-\log\pi$.
-Weil's criterion \cite{Weil1952,Bombieri2000} states:
+where the sum runs over the non-trivial zeros $\rho=\tfrac12+i\gamma_\rho$
+(so $\gamma_\rho\in\mathbb C$, and both $\gamma_\rho$ and $-\gamma_\rho$
+occur), counted with multiplicity, $\Lambda$ is the von Mangoldt function and
+$\Omega(r)=\re\frac{\Gamma'}{\Gamma}(\tfrac14+\tfrac{ir}{2})-\log\pi$. For
+even $h$ the prime side is $2\sum\Lambda(n)n^{-1/2}g(\log n)$. Weil's
+criterion \cite{Weil1952,bgBombieriWeil} states that RH holds if and only if
 \begin{equation}\label{eq:weil-criterion}
-  \mathrm{RH}\iff B(f,f):=Z(f\star\tilde f)\ \ge\ 0\ \text{ for all admissible }f,
+  B(f,f):=Z\bigl(\hat f\cdot\overline{\hat f(\bar{\,\cdot\,})}\bigr)\ \ge\ 0
 \end{equation}
-where $\tilde f(x)=\overline{f(-x)}$. The functional $B$ is the Weil
-quadratic form; RH is its positive semidefiniteness.
+for all $f$ in a suitable class of test functions (for instance smooth and
+compactly supported on $\mathbb R$; see \cite{bgBombieriWeil} for the precise
+statement), where $\hat f$ is the transform in the normalisation above. The
+functional $B$ is the Weil quadratic form.
 
-We study the finite section of $B$ on a localized basis. Fix a center $T_0$,
-width $\sigma>0$, dimension $J$, and let $\{\varphi_j\}_{j=0}^{J-1}$ be the
-Hermite functions of width $\sigma$ modulated to $T_0$ in the spectral
-variable. Define the \emph{localized Weil quadratic form}
+We study the finite section of $B$ on a localized basis. Fix a centre $T_0$,
+a width $\sigma>0$, a dimension $J$, and the functions $\phi_j$ of
+Section~\ref{sec:setup}, Hermite functions of width $\sigma$ centred at $T_0$
+in the spectral variable. Define
 \begin{equation}\label{eq:Q}
-  Q_{jk} \;=\; B(\varphi_j,\varphi_k)
-  \;=\; \bigl(M_{\mathrm{zeros}}\bigr)_{jk}-\bigl(M_{\mathrm{arith}}\bigr)_{jk},
+  Q_{jk} \;=\; \bigl(M_{\mathrm{zeros}}\bigr)_{jk}-\bigl(M_{\mathrm{arith}}\bigr)_{jk},
 \end{equation}
 the zero side minus the arithmetic side of \eqref{eq:explicit} evaluated on
-$\varphi_j\star\tilde\varphi_k$. As an identity \eqref{eq:explicit} makes the
-two sides equal when complete, so $Q$ is exactly $0$ for a complete
-evaluation; the detector lives in the \emph{truncated} discrepancy, in which
-the prime sum is cut at $X$ and the zero data are finite. A purely
-zero-side Gram matrix built from on-line zeros is positive semidefinite by
-construction and carries no information; subtracting the arithmetic side is
-essential \cite{TrejoV7}.
+$h_{jk}(r)=\phi_j(r)\phi_k(r)$. For $\zeta$ the identity \eqref{eq:explicit}
+makes $Q$ identically $0$ when both sides are complete; when the prime sum is
+cut at $X$, $Q$ is the tail of the prime sum. A complete matrix
+$Q_\infty\ne0$ arises only when the zero side and the arithmetic side come
+from different data, as in the model configuration
+studied below.
 
 \subsection{Main results}
 
-We work throughout with the deformation family $\zeta_\delta$: the zeta
-function with a controlled set of zeros displaced to real part
-$\tfrac12+\delta$ (the functional-equation quartet
-$\{\rho,\bar\rho,1-\rho,1-\bar\rho\}$ is moved together to preserve the
-symmetry). This furnishes a clean, fully specified family of off-critical
-zeros against which the detector is calibrated, in contrast to genuine
-non-Euler examples whose arithmetic side is not benchmark-reproducible
-(Section~\ref{sec:scope}).
+We work with a model configuration $\mathcal Z_\delta$, a formal signed
+multiset. Let $\gamma>0$ be any real number (not necessarily an ordinate of
+a zero of $\zeta$) and $\delta>0$. Then $\mathcal Z_\delta$ consists of the
+zeros of $\zeta$ together with the four points $\tfrac12\pm\delta\pm i\gamma$
+with multiplicity $+1$ and the two points $\tfrac12\pm i\gamma$ with
+multiplicity $-2$; its zero-side matrix is by definition
+$M_{\mathrm{zeros}}(\mathcal Z_\delta)=M_{\mathrm{zeros}}(\zeta)+P_\delta$,
+with $P_\delta=P(\gamma,\delta)+P(-\gamma,\delta)$ as in
+Section~\ref{sec:forced}. Equivalently, $P_\delta$ is the change produced
+when a double point at $\tfrac12\pm i\gamma$ of an on-line configuration is
+split into the off-line points. We do not claim that $\mathcal Z_\delta$ is
+the zero set of a Dirichlet series, nor that $\zeta$ has a multiple zero; it
+is used with the arithmetic side of $\zeta$, held fixed.
 
 \begin{enumerate}[label=\textbf{(\Roman*)}]
-\item \textbf{Forced negativity} (Theorem~\ref{thm:forced}). An off-critical
-zero contributes, to leading order, a \emph{negative} rank-one update to
-$Q$; by the Courant--Fischer inequality this forces $\lmin(Q)$ below
-$\lmin(\Qzero)$ by an explicit amount $c(\delta,\sigma,J;\gamma)\sim
-\delta^2 A(\gamma)$. The $\delta^2$ law and the prefactor are confirmed
-numerically to relative error $<10^{-5}$ across a $60$-point parameter grid.
-\item \textbf{Unconditional truncation control} (Theorem~\ref{thm:trunc}).
-The noise floor $\eta(X)$ satisfies an explicit stretched-Gaussian bound
-$\eta(X)\le A\exp(-\alpha(\log X)^2)$, $\alpha\approx\sigma^2/8$, from the
-Hermite--Gauss Fourier decay and the Prime Number Theorem alone.
-\item \textbf{Rigorous detector and dichotomy}
-(Theorem~\ref{thm:detector}, Proposition~\ref{prop:dichotomy}). For a fixed
-off-critical zero there is an explicit cutoff $X_{\min}$ with
-$\lmin(Q_X)<0$ for $X\ge X_{\min}$, unconditionally. The lemma required for
-this is \emph{technical}; the \emph{uniform} passage to the full functional
-is RH-equivalent and is the single remaining obstruction.
+\item (Lemma~\ref{lem:rank2}, Theorem~\ref{thm:forced}.) The zero-side matrix
+changes by $P=\delta^2A(\gamma)+O(\delta^4)$, $A=-(\Phi\Phi^{\top})''$, of
+rank $\le3$, with $\lmin(A)=-a(\gamma)<0$ (and indefinite in all computed cases); hence by Weyl's
+inequality the least eigenvalue of the perturbed matrix is $-a(\gamma)\delta^2+O(\delta^4)$
+when the unperturbed complete matrix is $0$.
+\item (Theorem~\ref{thm:trunc}.) For every $\alpha<\sigma^2/4$ the tail of
+the prime sum beyond $X$ has operator norm at most $\Atr\exp(-\alpha(\log X)^2)$; the proof uses only the Chebyshev bound
+$\psi(x)<1.03883\,x$ of Rosser and Schoenfeld~\cite{RS62}.
+\item (Theorem~\ref{thm:detector}.) For the model configuration, if $a_*>0$
+and $C_*\delta^2\le\tfrac12(1-\kappa)a_*$, there is an explicit cutoff
+$X_{\min}$ with $\lmin(Q_X)<0$ for $X\ge\max(2,X_{\min})$.
+Proposition~\ref{prop:dichotomy} records what happens for a fixed basis as
+$X\to\infty$, and what is not proved.
 \end{enumerate}
 
-\subsection{What this paper is and is not}
+\subsection{Scope}
 
-This is a paper about a rigorous \emph{detector}: an unconditional finite
-test that flags a \emph{prescribed} off-critical zero. It is not a step
-toward a proof of RH, and we are explicit about why
-(Section~\ref{sec:dichotomy}): ruling out \emph{all} off-critical zeros
-would require the uniform statement, which is equivalent to Weil positivity.
-The value of the result is (a) that it converts the empirically observed
-``localized Weil signal'' into theorems with explicit constants, and (b)
-that it isolates, with precision, the one inequality on which a positivity
-proof would hinge.
+These statements concern the response of the localized matrix to an
+\emph{inserted} off-line pair. For $\zeta$ itself, $Q_X$ is the prime tail
+and tends to $0$ independently of RH, so the results give no test of RH
+from prime data. The existence direction of Weil's criterion (an off-line
+zero gives some test function with $B<0$) is classical
+\cite{Weil1952,bgBombieriWeil} and is not what a fixed finite basis gives.
 
 % ════════════════════════════════════════════════════════════════════════
 \section{The localized form and its assembly}\label{sec:setup}
 
 \subsection{Hermite--Gauss basis and the two sides}
 
-Let $\phi_j(\,\cdot\,)$ denote the $L^2$-normalized Hermite function of order
-$j$ and width $\sigma$ centered at $T_0$, regarded as a function on the
-spectral line. The zero side is the Gram matrix of the evaluation vectors,
+Let $\psi_j(x)=(2^jj!\sqrt\pi)^{-1/2}H_j(x)e^{-x^2/2}$ be the
+$L^2$-normalized Hermite functions and put
+\[
+  \phi_j(z)=\sigma^{-1/2}\psi_j\bigl((z-T_0)/\sigma\bigr),\qquad
+  \Phi(z)=\bigl(\phi_0(z),\dots,\phi_{J-1}(z)\bigr)^{\!\top},
+\]
+entire functions of $z$, real on $\mathbb R$, so that
+$\Phi(\bar z)=\overline{\Phi(z)}$. With $h_{jk}=\phi_j\phi_k$, which
+satisfies the hypotheses of \eqref{eq:explicit}, the zero side is
 \begin{equation}\label{eq:Mzero}
-  M_{\mathrm{zeros}} = \sum_{\rho}\Phi(\gamma_\rho)\,\Phi(\gamma_\rho)^{*},
-  \qquad \Phi(\gamma)=\bigl(\phi_0(\gamma),\dots,\phi_{J-1}(\gamma)\bigr)^{\!\top},
+  M_{\mathrm{zeros}} = \sum_{\rho}\Phi(\gamma_\rho)\,\Phi(\overline{\gamma_\rho})^{*}
+  =\sum_{\rho}\Phi(\gamma_\rho)\,\Phi(\gamma_\rho)^{\top},
 \end{equation}
-summed over the zeros (with their actual ordinates $\gamma_\rho$, which are
-real under RH and complex otherwise). The arithmetic side is assembled from
-the three remaining terms of \eqref{eq:explicit}:
-\begin{equation}\label{eq:Marith}
-  M_{\mathrm{arith}} = M_{\mathrm{prime}}^{(X)} + M_{\mathrm{arch}} + M_{\mathrm{polar}},
-\end{equation}
-with $M_{\mathrm{prime}}^{(X)}$ the prime-power sum through cutoff $X$ via
-the Fourier kernel $g_{ij}(u)=\int \phi_i\,\phi_j\,e^{-iut}\,dt$ evaluated at
-$u=\log p^{k}$, $M_{\mathrm{arch}}$ the archimedean digamma integral
-evaluated by Gauss--Hermite quadrature on the same nodes, and
-$M_{\mathrm{polar}}$ the $\log\pi$/pole term with the exponentially
-suppressed $2h(\tfrac i2)$ contribution at localized $T_0$. The detector is
-$Q_X=M_{\mathrm{zeros}}-M_{\mathrm{arith}}$ with prime cutoff $X$.
+the sum running over all non-trivial zeros, including those with
+$\re\gamma_\rho<0$. It converges absolutely, since
+$\|\Phi(\gamma_\rho)\|$ decays like a Gaussian in $|\gamma_\rho|$ while
+$N(T)\ll T\log T$. For real $\gamma_\rho$ the term is
+$\Phi\Phi^{\top}\succeq0$. A pair of zeros $\rho$, $1-\bar\rho$ with
+ordinates $\gamma\mp i\delta$ contributes
+$2(aa^{\top}-bb^{\top})$, $a=\re\Phi(\gamma-i\delta)$,
+$b=-\im\Phi(\gamma-i\delta)$, which is indefinite whenever $a$ and $b$ are
+linearly independent (in particular for small $\delta>0$ when $J\ge2$, by
+Lemma~\ref{lem:rank2}).
 
-\begin{remark}[Engine validation]\label{rem:engine}
-A single canonical implementation \cite{TrejoV8} assembles \eqref{eq:Q} and
-reproduces the explicit-formula trace identity
-$\tr(M_{\mathrm{zeros}})=\tr(M_{\mathrm{arith}})$ to relative error
-$\approx10^{-15}$ across the controls $\zeta$, a primitive complex Dirichlet
-$L(\chi_4\bmod5)$, and the degree-two modular $L(\Delta,s)$, validating the
-sign convention, quadrature, and symmetrization. All constants below are
-those of this validated engine.
+The arithmetic side consists of the three remaining terms of
+\eqref{eq:explicit}:
+\begin{equation}\label{eq:Marith}
+  M^{(X)}_{\mathrm{arith}} = M_{\mathrm{prime}}^{(X)} + M_{\mathrm{arch}} + M_{\mathrm{polar}},
+\end{equation}
+with
+\[
+M^{(X)}_{\mathrm{prime}}=-\sum_{n\le X}\Lambda(n)n^{-1/2}\bigl(g(\log n)+g(-\log n)\bigr),
+\]
+where $g=(g_{jk})$,
+$g_{jk}(u)=\frac1{2\pi}\int h_{jk}(r)e^{-iru}\,dr$;
+$M_{\mathrm{arch}}=\bigl(\frac1{2\pi}\int h_{jk}\Omega\,dr\bigr)_{jk}$; and
+$M_{\mathrm{polar}}=\bigl(h_{jk}(\tfrac i2)+h_{jk}(-\tfrac i2)\bigr)_{jk}$,
+which is of size $e^{-T_0^2/\sigma^2}$ times a polynomial. We write
+$M_{\mathrm{arith}}=M^{(\infty)}_{\mathrm{arith}}$,
+$Q_X=M_{\mathrm{zeros}}-M^{(X)}_{\mathrm{arith}}$,
+$Q_\infty=\lim_{X\to\infty}Q_X$, and
+$E_X=M^{(\infty)}_{\mathrm{prime}}-M^{(X)}_{\mathrm{prime}}$. For $\zeta$,
+\eqref{eq:explicit} gives $Q_\infty=0$ and $Q_X=E_X$.
+
+\begin{remark}[Check of the implementation]\label{rem:engine}
+For $\zeta$, $T_0=46.13$, $\sigma=1$, $J=6$, the first $30$ zeros, prime
+powers up to $2\cdot10^7$, and the archimedean integral computed by the
+trapezoidal rule, the scripts accompanying this paper give
+$\|M_{\mathrm{zeros}}-M_{\mathrm{arith}}\|_{\mathrm{op}}\approx2\cdot10^{-13}$,
+against $\|M_{\mathrm{zeros}}\|_{\mathrm{op}}\approx0.92$. This checks the
+sign conventions of \eqref{eq:explicit}--\eqref{eq:Marith}.
 \end{remark}
 
 \subsection{The on-line reference form}
 
-Let $\Qzero=\Qzero(T_0,\sigma,J)$ be the form \eqref{eq:Q} built with
-\emph{all zeros placed on the critical line} (every $\gamma_\rho$ real). Then
-$M_{\mathrm{zeros}}^{(0)}=\sum_\rho\Phi(\gamma_\rho)\Phi(\gamma_\rho)^*$ is a
-sum of rank-one positive terms, so the on-line zero side is positive
-semidefinite; subtracting the (matching) arithmetic side leaves $\Qzero$ at
-the numerical floor. This is the reference against which an off-critical
-perturbation is measured.
+If every $\gamma_\rho$ is real, $M_{\mathrm{zeros}}$ is a sum of positive
+semidefinite rank-one terms. We write $\Qzero$ for the complete form
+\eqref{eq:Q} of a configuration whose zero side and arithmetic side satisfy
+\eqref{eq:explicit}; then $\Qzero=0$. A general real symmetric $\Qzero$ is
+allowed in Theorem~\ref{thm:forced}(i).
 
 % ════════════════════════════════════════════════════════════════════════
-\section{Forced negativity from an off-critical zero}\label{sec:forced}
+\section{The effect of an off-line pair}\label{sec:forced}
 
 \subsection{The perturbation}
 
-Move a single functional-equation quartet
-$\{\rho,\bar\rho,1-\rho,1-\bar\rho\}$ from the line to real part
-$\tfrac12+\delta$, with imaginary part $\gamma$ inside the localization
-window $|\gamma-T_0|\le C\sigma$. On the zero side this replaces the
-real-argument evaluation $\Phi(\gamma)$ by a complex-argument one,
-$\Phi(\gamma-i\delta)$ (up to the quartet symmetrization). Expanding in
-$\delta$,
-\begin{equation}\label{eq:taylor}
-  \Phi(\gamma-i\delta)\Phi(\gamma-i\delta)^{*}
-  -\Phi(\gamma)\Phi(\gamma)^{*}
-  \;=\; \delta\,B_1(\gamma) + \delta^2\,A(\gamma) + O(\delta^3),
-\end{equation}
-where $B_1$ is the $O(\delta)$ term and $A(\gamma)$ is a rank-$\le2$,
-real-symmetric matrix built from the basis vector $\Phi(\gamma)$ and its
-derivative $\Phi'(\gamma)$. Summed over the symmetric quartet the odd term
-$B_1$ cancels, leaving a definite-signed $\delta^2$ contribution.
+Replace a double point $\tfrac12+i\gamma$ of the zero configuration, $\gamma\in\mathbb R$, by the
+pair $\tfrac12\pm\delta+i\gamma$, $\delta>0$ (the mirror points at $-\gamma$
+are treated in the same way, see \eqref{eq:taylor}). In the spectral
+variable the ordinates $\gamma,\gamma$ become $\gamma-i\delta,\gamma+i\delta$.
+Write $F(z)=\Phi(z)\Phi(z)^{\top}$, an entire matrix function.
 
-\begin{lemma}[Rank-two $\delta^2$ contribution]\label{lem:rank2}
-For the symmetric quartet, the leading change to the zero-side matrix is
-$\delta^2 A(\gamma)+O(\delta^3)$ with
+\begin{lemma}\label{lem:rank2}
+Let $J\ge2$, $\gamma\in\mathbb R$, $\delta>0$, and
 \[
-  A(\gamma) \;=\; 2\,\re\!\bigl[\Phi(\gamma)\,\Phi''(\gamma)^{*}\bigr]
-  \;+\; \text{(rank-two real-symmetric corrections)},
+P(\gamma,\delta)=F(\gamma-i\delta)+F(\gamma+i\delta)-2F(\gamma).
 \]
-a matrix of rank at most two whose most negative eigenvalue
-$-a(\gamma):=\lmin(A(\gamma))$ is strictly negative for generic $\gamma$ in
-the window. The perturbation to $Q$ is $P=\delta^2A(\gamma)+O(\delta^3)$,
-which to leading order is a negative semidefinite update of rank $\le2$.
+Then $P$ is real symmetric, $P=2(aa^{\top}-bb^{\top})-2\Phi\Phi^{\top}$ with
+$a=\re\Phi(\gamma-i\delta)$, $b=-\im\Phi(\gamma-i\delta)$, $\Phi=\Phi(\gamma)$, and
+\[
+P=\delta^{2}A(\gamma)+R,\qquad
+A(\gamma)=-\bigl(2\Phi'\Phi'^{\top}+\Phi\Phi''^{\top}+\Phi''\Phi^{\top}\bigr)=-F''(\gamma),
+\qquad
+\|R\|_{\mathrm{op}}\le C(\gamma,\delta)\,\delta^4,
+\]
+with $C(\gamma,\delta)=\frac1{12}\max_{|s|\le\delta}\|F''''(\gamma+is)\|_{\mathrm{op}}$.
+$A(\gamma)$ has rank at most $3$, is indefinite in general, and
+\[
+a(\gamma):=-\lmin(A(\gamma))\ \ge\ 2\Bigl(|\Phi'|^{2}-\frac{(\Phi\cdot\Phi')^{2}}{|\Phi|^{2}}\Bigr)>0 .
+\]
 \end{lemma}
 
-\subsection{Forced-negativity theorem}
-
-\begin{theorem}[Forced negativity, explicit constants]\label{thm:forced}
-Let $Q=\Qzero+P$ with $P$ the perturbation of Lemma~\ref{lem:rank2}. Then
-\begin{equation}\label{eq:forced}
-  \lmin(Q)\ \le\ \lmin(\Qzero)\ -\ c(\delta,\sigma,J;\gamma),
-  \qquad
-  c(\delta,\sigma,J;\gamma) = a(\gamma)\,\delta^{2} + O(\delta^{3}),
+\begin{proof}
+Since $\Phi(\bar z)=\overline{\Phi(z)}$, $\Phi(\gamma+i\delta)=a+ib$ and
+$\Phi(\gamma-i\delta)=a-ib$, so
+$F(\gamma-i\delta)+F(\gamma+i\delta)=(a-ib)(a-ib)^{\top}+(a+ib)(a+ib)^{\top}=2(aa^{\top}-bb^{\top})$.
+Let $G(s)=F(\gamma+is)+F(\gamma-is)$ for real $s$; $G$ is even and smooth,
+$G(0)=2F(\gamma)$, $G''(0)=-2F''(\gamma)$, and
+$\|G''''(t)\|_{\mathrm{op}}\le2\max_{|s|\le\delta}\|F''''(\gamma+is)\|_{\mathrm{op}}$
+for $|t|\le\delta$ (note $\|F''''(\gamma-is)\|=\|F''''(\gamma+is)\|$). Taylor's
+formula with integral remainder gives
+\begin{equation}\label{eq:taylor}
+  P(\gamma,\delta)=G(\delta)-G(0)=-\delta^2F''(\gamma)+R,\qquad
+  \|R\|_{\mathrm{op}}\le\frac{\delta^4}{24}\max_{|t|\le\delta}\|G''''(t)\|_{\mathrm{op}}\le C(\gamma,\delta)\delta^4 .
 \end{equation}
-where $a(\gamma)=-\lmin(A(\gamma))>0$. More generally, for $m$ displaced
-quartets with ordinates $\gamma_1,\dots,\gamma_m$ in the window,
+The range of $A$ lies in $\operatorname{span}\{\Phi,\Phi',\Phi''\}$, so
+$\operatorname{rank}A\le3$. If $\Phi$ and $\Phi'$ are linearly independent,
+let $v$ be the unit vector in $\operatorname{span}\{\Phi,\Phi'\}$ orthogonal
+to $\Phi$; then $v^{\top}Av=-2(v\cdot\Phi')^2$ and
+$(v\cdot\Phi')^2=|\Phi'|^2-(\Phi\cdot\Phi')^2/|\Phi|^2>0$, which gives the
+bound for $a(\gamma)$ by the Rayleigh quotient \cite[Thm.~4.2.2]{HJ}.
+Independence holds for $J\ge2$: with $x=(\gamma-T_0)/\sigma$,
+$\phi_0'/\phi_0=-x/\sigma$ and $\phi_1'/\phi_1=(1/x-x)/\sigma$ differ
+wherever $\phi_1\ne0$, while at $x=0$ one has $\phi_1=0\ne\phi_1'$ and
+$\phi_0\ne0$. That $A$ also has positive eigenvalues is not used; it holds in
+all computed cases (Proposition~\ref{prop:numconf}).
+\end{proof}
+
+For the four points $\tfrac12\pm\delta\pm i\gamma$ replacing double points at
+$\tfrac12\pm i\gamma$, the change of $M_{\mathrm{zeros}}$ is
+$P_\delta:=P(\gamma,\delta)+P(-\gamma,\delta)$, and by \eqref{eq:taylor}
 \[
-  \lmin(Q)\ \le\ \lmin(\Qzero)\ -\ \delta^2\,\lmin\!\Bigl(\textstyle\sum_{k=1}^m A(\gamma_k)\Bigr)\bigl(1+O(\delta)\bigr).
+\|P_\delta-\delta^2A_*\|_{\mathrm{op}}\le C_*\delta^4,\qquad
+A_*=A(\gamma)+A(-\gamma),\quad C_*=C(\gamma,\delta)+C(-\gamma,\delta).
 \]
+We put $a_*=-\lmin(A_*)$; by Weyl's inequality $a_*\ge a(\gamma)-\|A(-\gamma)\|_{\mathrm{op}}$,
+and $\|A(-\gamma)\|_{\mathrm{op}}$ and $C(-\gamma,\delta)$ are exponentially small
+in $(\gamma+T_0)^2/\sigma^2$ (Remark~\ref{rem:locality}).
+
+\subsection{Least eigenvalue of the perturbed form}
+
+\begin{theorem}\label{thm:forced}
+Let $Q=\Qzero+P$ with $P=P(\gamma,\delta)$ as in Lemma~\ref{lem:rank2}.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item For every real symmetric $\Qzero$,
+\begin{equation}\label{eq:forced}
+  \lmin(Q)\ \le\ \lmin(P)+\|\Qzero\|_{\mathrm{op}}
+  \ \le\ -a(\gamma)\,\delta^{2}+C(\gamma,\delta)\delta^{4}+\|\Qzero\|_{\mathrm{op}}.
+\end{equation}
+\item If $\Qzero=0$, then $|\lmin(Q)+a(\gamma)\delta^2|\le C(\gamma,\delta)\delta^4$.
+\item For $m$ displaced pairs with ordinates $\gamma_1,\dots,\gamma_m$ and the
+same $\delta$, the change is exactly $P=\sum_kP(\gamma_k,\delta)$, so
+$\|P-\delta^2\sum_kA(\gamma_k)\|_{\mathrm{op}}\le\delta^4\sum_kC(\gamma_k,\delta)$ and
+$\lmin(P)=\delta^{2}\lmin\bigl(\sum_kA(\gamma_k)\bigr)+O(\delta^{4})$.
+\end{enumerate}
 \end{theorem}
 
 \begin{proof}
-By the Courant--Fischer characterization, for any unit vector $v$,
-$\lmin(Q)\le v^{*}Qv = v^{*}\Qzero v + v^{*}Pv$. Choosing $v$ to be the
-unit eigenvector of $A(\gamma)$ for its least eigenvalue gives
-$v^{*}Pv=\delta^2\lmin(A(\gamma))+O(\delta^3)=-a(\gamma)\delta^2+O(\delta^3)$,
-and $v^{*}\Qzero v\le\lmin(\Qzero)+\|\,\Qzero v-\lmin(\Qzero)v\,\|$; on the
-$A$-eigendirection the latter defect is $O(\delta^0)$ but bounded, and the
-$\delta^2$ negative term dominates for $\delta$ small, yielding
-\eqref{eq:forced}. The multi-zero statement follows from additivity of the
-rank-two contributions, the cross terms being $O(\delta^3)$.
+Weyl's inequality $|\lmin(X+Y)-\lmin(X)|\le\|Y\|_{\mathrm{op}}$ for real
+symmetric $X,Y$ \cite[Thm.~4.3.1]{HJ}, applied with $X=P$, $Y=\Qzero$, and
+then with $X=\delta^2A(\gamma)$, $Y=R$, together with Lemma~\ref{lem:rank2}.
+For (iii), $M_{\mathrm{zeros}}$ is additive over zeros, so there are no
+cross terms.
 \end{proof}
 
-\begin{remark}[Strict locality and the amplification in $J$]\label{rem:locality}
-The contribution $A(\gamma)$ is supported on basis vectors evaluated at
-$\gamma$; if no displaced zero lies within $O(\sigma)$ of $T_0$ then
-$c\equiv0$ and $\lmin(Q)$ stays at the floor. This is the observed
-\emph{strict locality}: negativity appears only when the window contains an
-off-critical zero. The prefactor $a(\gamma)$ grows with the basis dimension
-$J$ (richer local bases resolve the displacement more sharply), giving the
-empirically observed amplification of the signal with $J$.
+In (iii), negativity of $P$ for small $\delta$ requires
+$\lmin\bigl(\sum_kA(\gamma_k)\bigr)<0$. This holds if some $v$ with
+$v\perp\Phi(\gamma_k)$ for all $k$ has $v\cdot\Phi'(\gamma_k)\ne0$ for some
+$k$, since then $v^{\top}A(\gamma_k)v=-2(v\cdot\Phi'(\gamma_k))^2\le0$ for
+all $k$ with strict inequality for one; such $v$ exists when
+$\Phi(\gamma_1),\dots,\Phi(\gamma_m)$ do not span $\mathbb R^J$ and the
+condition on $\Phi'$ is met, e.g.\ for $J>m$ outside a degenerate set.
+
+\begin{remark}[Locality and monotonicity in $J$]\label{rem:locality}
+Since $|\phi_j^{(\ell)}(\gamma)|\le C_{j,\ell}\,\sigma^{-1/2-\ell}(1+|x|)^{j+\ell}e^{-x^2/2}$,
+$x=(\gamma-T_0)/\sigma$, one has
+$\|A(\gamma)\|_{\mathrm{op}}\le C_J\sigma^{-3}(1+|x|)^{2J+2}e^{-x^{2}}$, and
+similarly for $C(\gamma,\delta)$ when $\delta\le\sigma$: the effect of a pair
+at distance $\gg\sigma$ from $T_0$ is exponentially small, though not zero.
+Moreover $A_J(\gamma)$ is the leading principal $J\times J$ block of
+$A_{J+1}(\gamma)$, so by Cauchy interlacing \cite[Thm.~4.3.28]{HJ}
+$a_J(\gamma)\le a_{J+1}(\gamma)$. At $(\gamma-T_0)/\sigma=0.47$, $\sigma=1$,
+the computed values are $a_J=1.30,\,3.76,\,12.19,\,24.35,\,38.97$ for
+$J=2,4,8,12,16$.
 \end{remark}
 
-\begin{proposition}[Numerical confirmation]\label{prop:numconf}
-For the validated engine \cite{TrejoV8}, the predicted prefactor
-$c_{\mathrm{pred}}=\delta^2\,a(\gamma)$ agrees with the directly computed
-$\lmin(\Delta Q)/\delta^2$ to median relative error $<0.001\%$ ($R^2=1.00000$)
-across a $60$-point grid in $(\sigma,J,m)$ with
-$\sigma\in\{0.5,1,2,4\}$, $J\in\{4,8,12,16,20\}$, $m\in\{1,5,20\}$ at
-$T_0=46.13$, over nine decades of dynamic range; a second anchor at
-$T_0=85.7$ reproduces the prefactor to relative error $<10^{-5}$. The fitted
-displacement exponent is $2.0003\pm0.0021$, confirming the $\delta^2$ law.
+\begin{proposition}[Numerical check of Lemma~\ref{lem:rank2}]\label{prop:numconf}
+For $T_0=46.13$, $\gamma=T_0+0.47\sigma$, $\sigma\in\{0.5,1,2,4\}$,
+$J\in\{4,8,12,16,20\}$ and $\delta/\sigma\in\{10^{-2},10^{-3},10^{-4},10^{-5}\}$
+($80$ cases), the computed $\lmin(P)$ satisfies
+$|\lmin(P)+a(\gamma)\delta^2|\le C(\gamma,\delta)\delta^4$ in every case,
+with $C$ evaluated by sampling, and the relative deviation
+$|\lmin(P)+a\delta^2|/(a\delta^2)$ is at most $8.2\cdot10^{-4}$, $8.2\cdot10^{-6}$,
+$8.2\cdot10^{-8}$, $8.2\cdot10^{-10}$ for the four values of $\delta/\sigma$.
+For $J=8$, $\sigma=1$, $\gamma=46.6$ the spectrum of $A(\gamma)$ is
+$\{-12.188,\,-2.392,\,0^{(5)},\,16.752\}$, so $A$ has rank $3$ and is
+indefinite, and the lower bound of Lemma~\ref{lem:rank2} gives
+$a(\gamma)\ge12.185$. For three and five pairs in $[44.1,47.9]$ ($J=8$,
+$\delta=10^{-3}$), $\lmin(P)/\delta^2$ agrees with
+$\lmin(\sum_kA(\gamma_k))$ ($-17.028$ and $-21.982$) to $5\cdot10^{-6}$
+relative error. These are checks of the expansion, computed with
+$50$-digit arithmetic by the scripts accompanying this paper.
 \end{proposition}
 
 % ════════════════════════════════════════════════════════════════════════
-\section{Unconditional truncation control}\label{sec:trunc}
+\section{Truncation of the prime sum}\label{sec:trunc}
 
-The detector uses a finite prime cutoff $X$; the residual between the
-truncated and complete arithmetic side is the noise floor against which the
-forced negativity of Section~\ref{sec:forced} must be detected.
+The cutoff $X$ in the prime sum produces the error $E_X$; this section
+bounds it.
 
-\begin{definition}[Truncation floor]
-For on-line (GRH-consistent) arithmetic, let
-$\eta(X)=\bigl|\tr(M_{\mathrm{zeros}})-\tr\bigl(M_{\mathrm{arith}}^{(X)}\bigr)\bigr|
-/\bigl|\tr(M_{\mathrm{zeros}})\bigr|$ be the normalized truncation residual
-at prime cutoff $X$.
+\begin{definition}[Truncation error]
+For the arithmetic side of $\zeta$ let
+\[
+\eta(X)=\|E_X\|_{\mathrm{op}},\qquad
+E_X=M^{(\infty)}_{\mathrm{prime}}-M^{(X)}_{\mathrm{prime}} .
+\]
 \end{definition}
 
-\begin{theorem}[Unconditional stretched-Gaussian truncation bound]\label{thm:trunc}
-The matrix-valued Fourier kernel of the prime side,
-$g_{ij}(u)=e^{-iT_0u}K_{ij}(\sigma u)$ with
-$K_{ij}(\omega)=(-i)^{i+j}e^{-\omega^2/4}p_{ij}(\omega)$ and $p_{ij}$ a
-polynomial of degree $\le i+j$, satisfies
-$\|g(u)\|_{\mathrm{op}}\le P_{2J}(u)\,e^{-\sigma^2u^2/4}$ for an explicit
-polynomial $P_{2J}$. Consequently, replacing the prime-power tail by its
-Prime Number Theorem density,
+With $h_{jk}=\phi_j\phi_k$ one has
+$g_{jk}(u)=\frac1{2\pi}e^{-iT_0u}K_{jk}(\sigma u)$,
+$K_{jk}(w)=\int\psi_j(x)\psi_k(x)e^{-iwx}\,dx$, and for $j\ge k$, $d=j-k$,
+\[
+K_{jk}(w)=\sqrt{k!/j!}\,\bigl(-iw/\sqrt2\bigr)^{d}e^{-w^2/4}L_k^{(d)}(w^2/2),
+\]
+with $L_k^{(d)}$ the Laguerre polynomial. Since
+\[
+L_k^{(d)}(t)=\sum_{i\le k}\binom{k+d}{k-i}\frac{(-t)^i}{i!},
+\]
+one has
+$|K_{jk}(w)|\le p_{jk}(|w|)e^{-w^2/4}$ with
+\[
+p_{jk}(w)=\sqrt{k!/j!}\,(w/\sqrt2)^{d}L_k^{(d)}(-w^2/2),
+\]
+a polynomial with
+non-negative coefficients of degree $j+k$. Hence
+\[
+\|g(\pm u)\|_{\mathrm{op}}\le\sum_{j,k}|g_{jk}(\pm u)|\le G(u):=\Pi(u)e^{-\sigma^2u^2/4},
+\qquad \Pi(u)=\frac1{2\pi}\sum_{j,k<J}p_{jk}(\sigma u),
+\]
+for $u\ge0$, with $\Pi$ of degree $2J-2$ and non-negative coefficients.
+
+\begin{theorem}\label{thm:trunc}
+Let $c_0=1.03883$. For $X\ge2$ and $L=\log X$,
 \begin{equation}\label{eq:eta-bound}
-  \eta(X)\ \le\ \frac{2}{\pi}\int_{\log X}^{\infty} e^{u/2}\,\|g(u)\|_{\mathrm{op}}\,du
-  \ \le\ A\,\exp\!\bigl(-\alpha(\log X)^2\bigr),
-  \qquad \alpha=\frac{\sigma^2}{8}+o(1),
+  \eta(X)\ \le\ 2\sum_{n>X}\frac{\Lambda(n)}{\sqrt n}\,G(\log n)
+  \ \le\ 2c_0\int_{L}^{\infty}e^{u/2}\Bigl(\tfrac12G(u)+|G'(u)|\Bigr)\,du ,
 \end{equation}
-with $A=A(\sigma,J,T_0)$ explicit. The bound uses only the Prime Number
-Theorem; no zero-density estimate or GRH input is required.
-\end{theorem}
-
-\begin{proof}[Sketch]
-The estimate $\|g(u)\|_{\mathrm{op}}\le P_{2J}(u)e^{-\sigma^2u^2/4}$ is the
-operator-norm form of the Gaussian decay of the Hermite--Gauss Fourier
-transform. The prime-power sum $\sum_{p^k>X}\Lambda(p^k)p^{-k/2}g(\log p^k)$
-is bounded, after partial summation against the PNT density
-$d\pi(e^u)\sim e^{u}/u\,du$ weighted by $p^{-k/2}=e^{-u/2}$, by the integral
-in \eqref{eq:eta-bound}; the Gaussian factor $e^{-\sigma^2u^2/4}$ dominates
-$e^{u/2}P_{2J}(u)$, and Laplace's method on $\int_{\log X}^\infty$ yields the
-stretched-Gaussian $\exp(-\alpha(\log X)^2)$ with $\alpha=\sigma^2/8$.
-\end{proof}
-
-\begin{proposition}[Empirical match across $L$-functions]\label{prop:eta-emp}
-The bound \eqref{eq:eta-bound} tracks the measured floor over seven decades
-in $X$ with Pearson correlation $r=0.9988$ in log--log space and regression
-slope $0.913$; the fitted decay constant is $\alpha\approx0.123$ for $\zeta$
-versus the basis prediction $\sigma^2/8=0.125$ at $\sigma=1$, and
-$\alpha\approx0.144$ for the degree-two $L(\Delta,s)$, indistinguishable
-from $0.135$ (theory) and $0.125$ (basis), confirming that the floor is a
-property of the basis and its Fourier width rather than of the deep
-arithmetic of the particular $L$-function \cite{TrejoV8}.
-\end{proposition}
-
-% ════════════════════════════════════════════════════════════════════════
-\section{A rigorous detector}\label{sec:detector}
-
-\begin{theorem}[Rigorous, unconditional detector]\label{thm:detector}
-Fix $(T_0,\sigma,J)$ and suppose $\zeta$ (or $\zeta_\delta$) has an
-off-critical quartet at displacement $\delta>0$ with ordinate $\gamma$
-satisfying $|\gamma-T_0|\le C\sigma$. Let $c=a(\gamma)\delta^2$ be the
-forced-negativity prefactor of Theorem~\ref{thm:forced} and $\eta(X)$ the
-floor of Theorem~\ref{thm:trunc}. Then there is an explicit threshold
-\begin{equation}\label{eq:Xmin}
-  X_{\min}(\delta,\sigma,J,T_0)
-  \;=\;\exp\!\Bigl(\sqrt{\tfrac1\alpha\,\log\tfrac{A}{\kappa\,c}}\Bigr),
-  \qquad \kappa\in(0,1)\text{ a fixed safety factor},
-\end{equation}
-such that for every $X\ge X_{\min}$ one has $\lmin(Q_X)<0$. The detection is
-unconditional: it uses Theorem~\ref{thm:forced} (finite-dimensional
-perturbation theory) and Theorem~\ref{thm:trunc} (Prime Number Theorem)
-only.
+and the right side is $\exp\bigl(-\tfrac{\sigma^{2}}{4}L^{2}+\tfrac12L+O_{\sigma,J}(\log L)\bigr)$.
+In particular, for every $\alpha<\sigma^2/4$,
+$\eta(X)\le\Atr\exp(-\alpha L^2)$ with
+$\Atr=\Atr(\alpha,\sigma,J)=2c_0\int_0^\infty e^{\alpha u^2+u/2}\bigl(\tfrac12G+|G'|\bigr)\,du<\infty$.
 \end{theorem}
 
 \begin{proof}
-By Theorems~\ref{thm:forced} and \ref{thm:trunc},
-$\lmin(Q_X)\le\lmin(\Qzero)+\eta(X)-c\le \eta(X)-c+o(c)$. Requiring
-$\eta(X)\le\kappa c$ and inverting the bound \eqref{eq:eta-bound},
-$A\exp(-\alpha(\log X)^2)\le\kappa c$, gives \eqref{eq:Xmin}; for such $X$,
-$\lmin(Q_X)\le-(1-\kappa)c+o(c)<0$.
+The first inequality is the triangle inequality with the bound for
+$\|g(\pm u)\|$. Put $f(x)=x^{-1/2}G(\log x)\ge0$. Partial summation gives,
+for $Y>X$,
+$\sum_{X<n\le Y}\Lambda(n)f(n)=\psi(Y)f(Y)-\psi(X)f(X)-\int_X^Y\psi(x)f'(x)\,dx$;
+letting $Y\to\infty$ (the first term tends to $0$) and dropping
+$-\psi(X)f(X)\le0$,
+\[
+\sum_{n>X}\Lambda(n)f(n)\le\int_X^\infty\psi(x)|f'(x)|\,dx\le c_0\int_X^\infty x|f'(x)|\,dx,
+\]
+by $\psi(x)<c_0x$ for $x>0$ \cite[Thm.~12]{RS62}. With $x=e^u$,
+$x|f'(x)|\,dx=e^{u/2}|G'(u)-\tfrac12G(u)|\,du$, which gives
+\eqref{eq:eta-bound}. Since $|G'(u)|\le(|\Pi'(u)|+\tfrac{\sigma^2u}{2}\Pi(u))e^{-\sigma^2u^2/4}$,
+the integrand is $e^{u/2-\sigma^2u^2/4}$ times a polynomial, and
+$\int_L^\infty e^{u/2-\sigma^2u^2/4}u^m\,du=\exp(-\tfrac{\sigma^2}{4}L^2+\tfrac12L+O(\log L))$;
+the lower bound of the same order follows since $\tfrac12G+|G'|\ge\tfrac{\sigma^2u}{2}\Pi(u)e^{-\sigma^2u^2/4}-|\Pi'(u)|e^{-\sigma^2u^2/4}$.
+Finally $e^{\alpha u^2}\ge e^{\alpha L^2}$ for $u\ge L$, so the right side of
+\eqref{eq:eta-bound} is at most $e^{-\alpha L^2}\Atr$.
 \end{proof}
+
+\begin{proposition}[Numerical comparison]\label{prop:eta-emp}
+For $T_0=46.13$, $\sigma=1$ and $J\in\{8,10\}$, the computed $\eta(X)$ (prime
+powers up to $2\cdot10^7$ standing for the complete sum) and the right side
+of \eqref{eq:eta-bound} at $X=10^2,\dots,10^6$ are listed in the output of
+the accompanying scripts; the bound holds in every case and exceeds $\eta(X)$
+by a factor between $4\cdot10^{2}$ and $5\cdot10^{5}$; the same holds for
+$T_0=85.7$, $\sigma=2$, $J=10$ at $X=10^{1/2},\dots,10^{5/2}$. At large $L$ the quantity
+$-L^{-2}\log$ of the right side increases towards $\sigma^2/4$, as
+Theorem~\ref{thm:trunc} predicts (for $\sigma=1$, $J=8$ it is $0.155$, $0.214$,
+$0.236$, $0.245$ at $L=20,40,80,160$); over $X\le10^6$ it is still far below
+$\sigma^2/4$ because of the polynomial factor and the term $\tfrac12L$.
+\end{proposition}
+
+% ════════════════════════════════════════════════════════════════════════
+\section{The model configuration}\label{sec:detector}
+
+\begin{theorem}\label{thm:detector}
+Fix $(T_0,\sigma,J)$, $J\ge2$, $\gamma>0$, $\delta>0$, $\kappa\in(0,1)$ and
+$\alpha<\sigma^2/4$. Let
+$Q_X=M_{\mathrm{zeros}}(\mathcal Z_\delta)-M^{(X)}_{\mathrm{arith}}(\zeta)$,
+where $\mathcal Z_\delta$ is the configuration of the introduction, and let
+$a_*,C_*$ be as after Lemma~\ref{lem:rank2}. Then $Q_X=P_\delta+E_X$ and
+\[
+\lmin(Q_X)\le\lmin(P_\delta)+\eta(X)\le-a_*\delta^{2}+C_*\delta^{4}+\Atr e^{-\alpha(\log X)^{2}}.
+\]
+Consequently, if $a_*>0$, $C_*\delta^{2}\le\tfrac12(1-\kappa)a_*$ and
+\begin{equation}\label{eq:Xmin}
+  X\ \ge\ \max(2,X_{\min}),\qquad X_{\min}
+  \;=\;\exp\Bigl(\sqrt{\alpha^{-1}\log^{+}\bigl(\Atr/(\kappa\,a_*\delta^{2})\bigr)}\Bigr),
+\end{equation}
+then $\lmin(Q_X)\le-\tfrac12(1-\kappa)a_*\delta^{2}<0$.
+\end{theorem}
+
+\begin{proof}
+The explicit formula for $\zeta$ gives
+$M_{\mathrm{zeros}}(\zeta)-M^{(X)}_{\mathrm{arith}}(\zeta)=E_X$, and
+$M_{\mathrm{zeros}}(\mathcal Z_\delta)=M_{\mathrm{zeros}}(\zeta)+P_\delta$
+by the definition of $\mathcal Z_\delta$. Weyl's inequality, the bound after
+Lemma~\ref{lem:rank2}, and Theorem~\ref{thm:trunc} give the first display.
+For $X\ge\max(2,X_{\min})$, $\Atr e^{-\alpha(\log X)^2}\le\kappa a_*\delta^2$, hence
+$\lmin(Q_X)\le-(1-\kappa)a_*\delta^2+\tfrac12(1-\kappa)a_*\delta^2$.
+\end{proof}
+
+\begin{remark}
+For $\zeta$ itself $Q_X=E_X\to0$ whether or not RH holds. The theorem
+concerns the response of the matrix to an inserted off-line pair and gives
+no test of RH from prime data. Moreover, a genuine off-line zero of $\zeta$
+would not by itself force $\lmin(M_{\mathrm{zeros}})<0$ for a fixed finite
+basis: the negative direction of $2(aa^{\top}-bb^{\top})$ would also have to
+be nearly orthogonal to $\Phi(\gamma_\rho)$ for the other zeros.
+\end{remark}
 
 \begin{table}[ht]
 \centering
-\caption{Detector feasibility: minimal prime cutoff $X_{\min}$ for
-signal-to-noise $\ge1$, from \eqref{eq:Xmin} with the validated constants
-\cite{TrejoV8}. Increasing $\sigma$ trades a modest reduction of the signal
-prefactor for many orders of magnitude in the floor, an advantageous regime
-for detection.}
+\caption{Cutoffs for the model configuration, $\gamma=T_0+0.47\sigma$,
+$\kappa=\tfrac12$. $X_{\mathrm{int}}$ is the least $X$ at which the right side
+of \eqref{eq:eta-bound} is $\le\kappa a_*\delta^2$ (which already gives
+the conclusion of Theorem~\ref{thm:detector}); $X_{\min}$ is \eqref{eq:Xmin}
+with $\alpha=\sigma^2/5$. Here $a_*$ and $a(\gamma)$ agree to all digits
+shown.}
 \label{tab:feasibility}
-\begin{tabular}{@{}lllll@{}}
+\begin{tabular}{@{}rrrrrrr@{}}
 \toprule
-$T_0$ & $\sigma$ & $J$ & $\delta$ & $X_{\min}$ (SNR $\ge1$) \\
+$T_0$ & $\sigma$ & $J$ & $\delta$ & $a(\gamma)$ & $X_{\mathrm{int}}$ & $X_{\min}$ \\
 \midrule
-$46.13$ & $1$ & $10$ & $10^{-3}$ & $\approx 3.9\times10^{5}$ (SNR $\approx91$ at $10^6$) \\
-$46.13$ & $1$ & $10$ & $10^{-4}$ & $\approx 1.0\times10^{6}$ \\
-$46.13$ & $1$ & $10$ & $10^{-5}$ & $\approx 2.4\times10^{6}$ \\
-$85.70$ & $2$ & $10$ & $10^{-5}$ & $\approx 1.2\times10^{3}$ \\
+$46.13$ & $1$ & $10$ & $10^{-3}$ & $17.884$ & $9.2\times10^{5}$ & $1.8\times10^{6}$ \\
+$46.13$ & $1$ & $10$ & $10^{-4}$ & $17.884$ & $2.1\times10^{6}$ & $4.0\times10^{6}$ \\
+$46.13$ & $1$ & $10$ & $10^{-5}$ & $17.884$ & $4.6\times10^{6}$ & $8.3\times10^{6}$ \\
+$85.70$ & $2$ & $10$ & $10^{-5}$ & $2.2355$ & $1.9\times10^{3}$ & $2.5\times10^{3}$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:feasibility} makes the detector operational: a prescribed
-off-critical zero of displacement as small as $\delta\sim10^{-5}$ is
-provably visible in a finite computation with an explicitly bounded cutoff.
+The values in Table~\ref{tab:feasibility} are produced by the accompanying
+scripts; $C_*$ is evaluated there by sampling, so the hypothesis
+$C_*\delta^2\le\frac12(1-\kappa)a_*$ is checked numerically, with a wide
+margin.
 
 % ════════════════════════════════════════════════════════════════════════
-\section{Logical status of the truncation lemma}\label{sec:dichotomy}
+\section{Fixed bases and the limit \texorpdfstring{$X\to\infty$}{X to infinity}}\label{sec:dichotomy}
 
-We now address the question that motivates the construction: does the
-detector bear on RH? The answer is a sharp dichotomy.
-
-\begin{proposition}[Detection vs.\ proof: the dichotomy]\label{prop:dichotomy}
+\begin{proposition}\label{prop:dichotomy}
 \leavevmode
 \begin{enumerate}[label=\textup{(\alph*)}]
-\item \textbf{(Technical / unconditional.)} The truncation control required to
-detect a \emph{fixed} off-critical zero---namely $\eta(X)\le\kappa c$ for one
-$X$---is Theorem~\ref{thm:trunc}, which uses only the Prime Number Theorem.
-Hence the detector theorem~\ref{thm:detector} is unconditional and the
-truncation lemma it needs is \emph{not} equivalent to RH.
-\item \textbf{(RH-equivalent.)} A \emph{uniform} bound
+\item For fixed $(T_0,\sigma,J)$ and any zero configuration used with the
+arithmetic side of $\zeta$, and every $\alpha<\sigma^2/4$ and $X_0\ge2$,
 \begin{equation}\label{eq:uniform}
-  \sup_{X\ge X_0}\bigl|\lmin(Q_X)-\lmin(Q_\infty)\bigr|\ \le\ \varepsilon(X_0)\xrightarrow[X_0\to\infty]{}0,
+  \sup_{X\ge X_0}\bigl|\lmin(Q_X)-\lmin(Q_\infty)\bigr|\ \le\ \Atr(\alpha,\sigma,J)\,e^{-\alpha(\log X_0)^2}\xrightarrow[X_0\to\infty]{}0 .
 \end{equation}
-transferring the sign of $\lmin$ from all finite truncations to the full
-functional $Q_\infty=B$, is equivalent to Weil positivity \eqref{eq:weil-criterion},
-hence to RH.
+\item If RH holds, then $M_{\mathrm{zeros}}(T_0,\sigma,J)\succeq0$ for all
+$(T_0,\sigma,J)$.
 \end{enumerate}
 \end{proposition}
 
 \begin{proof}
-(a) is immediate from Theorems~\ref{thm:trunc} and \ref{thm:detector}. For
-(b): if \eqref{eq:uniform} holds then $\lmin(B)=\lim_X\lmin(Q_X)$, and since
-each $\Qzero$ is positive semidefinite and the off-critical contribution is
-the only source of negativity, $\lmin(B)\ge0$ for all localizations is
-exactly $B\succeq0$, i.e.\ RH by \eqref{eq:weil-criterion}; conversely RH
-gives $B\succeq0$ and the uniform convergence of the (positive) sections.
+(a) $Q_X-Q_\infty=E_X$; apply Weyl's inequality and Theorem~\ref{thm:trunc}.
+(b) Under RH every $\gamma_\rho$ is real and \eqref{eq:Mzero} is a sum of
+terms $\Phi\Phi^{\top}\succeq0$.
 \end{proof}
 
-\begin{corollary}[The single missing inequality]\label{cor:LB}
-Modulo the unconditional Theorems~\ref{thm:forced}--\ref{thm:detector}, the
-Riemann Hypothesis is equivalent to the uniform spectral-gap estimate
-\eqref{eq:uniform}. This is the one inequality on which a positivity proof
-along these lines hinges.
+\begin{corollary}\label{cor:LB}
+If RH holds, then for every $(T_0,\sigma,J)$, every $\alpha<\sigma^2/4$ and
+every $X\ge2$,
+\[
+\lmin\bigl(M^{(X)}_{\mathrm{arith}}(\zeta)\bigr)\ge-\Atr(\alpha,\sigma,J)\,e^{-\alpha(\log X)^2}.
+\]
 \end{corollary}
 
-The dichotomy explains, in precise terms, why the localized Weil signal is a
-powerful instrument but not a proof: the truncation that makes the
-\emph{detector} rigorous (controlling the floor below a \emph{fixed} signal)
-is genuinely easier than the truncation that would make the \emph{functional}
-positive (controlling the floor below \emph{all} signals uniformly). Only the
-latter is RH. Approaches that aim to establish \eqref{eq:uniform}
-structurally---through the trace formalism of Connes \cite{Connes1999} or the
-de~Branges theory of Hilbert spaces of entire functions \cite{deBranges}---are
-the natural continuations.
+\begin{proof}
+$M^{(X)}_{\mathrm{arith}}=M_{\mathrm{zeros}}-E_X$; use
+Proposition~\ref{prop:dichotomy}(b) and Weyl's inequality.
+\end{proof}
+
+The converse of Proposition~\ref{prop:dichotomy}(b) would follow from density
+of the functions $\sum_jc_j\phi_j$ (over all $T_0,\sigma,J$) in a class for
+which Weil's criterion is known, together with continuity of $B$ on that
+class; we do not prove this. The constant $\Atr(\alpha,\sigma,J)$ is not
+bounded as $J\to\infty$ or $\sigma\to0$, so the truncation estimate gives no
+information uniform in the basis; this non-uniformity, and not the estimate
+\eqref{eq:uniform} for a fixed basis, is where the difficulty of Weil
+positivity lies. Structural approaches to positivity include the trace
+formula of Connes \cite{Connes1999} and its archimedean analysis by Connes
+and Consani \cite{bgCC21}, and de~Branges' theory of Hilbert spaces of entire
+functions \cite{deBranges}.
 
 % ════════════════════════════════════════════════════════════════════════
-\section{Scope, controls, and honest limitations}\label{sec:scope}
+\section{Scope and limitations}\label{sec:scope}
 
-\paragraph{The deformation family is the rigorous testbed.}
-All explicit-constant statements are established for $\zeta_\delta$, where the
-off-critical zeros are introduced by hand and the arithmetic side is that of
-$\zeta$, held fixed. This isolates the zero-location physics cleanly and is
-the correct setting for the perturbation theory of Section~\ref{sec:forced}.
+\paragraph{The model configuration.}
+All quantitative statements concern $\mathcal Z_\delta$, where the off-line
+pair is inserted by hand and the arithmetic side is that of $\zeta$, held
+fixed.
 
-\paragraph{Davenport--Heilbronn is only a qualitative control.}
-A natural genuine example of off-critical zeros is the Davenport--Heilbronn
-function $\LDH$. We caution that $\LDH$ is \emph{not} suitable for the
-quantitative claims here: lacking an Euler product, its prime side requires
-the logarithmic derivative of a \emph{sum} of $L$-functions, and ``the log of
-a sum is not the sum of logs''---no public source fixes a benchmark-ready
-generalized von Mangoldt sequence reconstructing $M_{\mathrm{arith}}$
-uniquely. Empirically the validated engine still separates $\LDH$ from the
-GRH-respecting controls by roughly thirteen orders of magnitude in the
-normalized negativity ratio, but the absolute value is not reproducible from
-published definitions \cite{TrejoV8}; we therefore use $\LDH$ only as a
-qualitative positive control and base all theorems on $\zeta_\delta$.
+\paragraph{Davenport--Heilbronn.}
+The Davenport--Heilbronn function $L_{\mathrm{DH}}(s)=\sum a_nn^{-s}$, studied
+in Paper~04 of this series \cite{P04}, has off-line zeros but no Euler
+product. Since $a_1=1$, $-L_{\mathrm{DH}}'/L_{\mathrm{DH}}=\sum_n\Lambda_{\mathrm{DH}}(n)n^{-s}$
+with $\Lambda_{\mathrm{DH}}=(a\log)*a^{-1}$ (Dirichlet convolution with the
+Dirichlet inverse), uniquely determined but not supported on prime powers;
+its arithmetic side is
+$-\sum_n\Lambda_{\mathrm{DH}}(n)n^{-1/2}(g(\log n)+g(-\log n))$ plus the
+archimedean term of its functional equation (there is no polar term,
+$L_{\mathrm{DH}}$ being entire), and Theorem~\ref{thm:trunc} does not apply
+without a bound for $\sum_{n\le x}|\Lambda_{\mathrm{DH}}(n)|$. We do not treat
+it here.
 
-\paragraph{Not a path to RH.}
-By Proposition~\ref{prop:dichotomy} the detector establishes the
-\emph{existence-direction} of Weil's criterion (an off-critical zero forces
-negativity) rigorously and unconditionally; the \emph{universal} direction
-(positivity everywhere) is RH and is untouched. We make no claim beyond this.
+\paragraph{No bearing on RH.}
+See the remark after Theorem~\ref{thm:detector} and
+Section~\ref{sec:dichotomy}.
 
 % ════════════════════════════════════════════════════════════════════════
-\section{Computational reproducibility}\label{sec:repro}
+\section{Numerical checks}\label{sec:repro}
 
-The validated engine \cite{TrejoV8} assembling $Q=M_{\mathrm{zeros}}-
-M_{\mathrm{arith}}$ on the Hermite--Gauss basis, the forced-negativity
-surface $c(\delta,\sigma,J;\gamma)$, and the truncation floor $\eta(X)$ are
-provided as a self-contained, fixed-seed notebook. It (i) generates the
-control zero lists and passes the explicit-formula trace identity to
-$\approx10^{-15}$; (ii) reproduces the $\delta^2$ law and the prefactor of
-Proposition~\ref{prop:numconf} ($R^2=1.00000$); and (iii) reproduces the
-stretched-Gaussian floor of Proposition~\ref{prop:eta-emp} over seven
-decades. Per-step CPU/memory costs and all parameter grids are recorded with
-the notebook.
+The script \texttt{numerics.py} accompanying this paper computes, with
+$50$-digit arithmetic for the zero side, the spectra of $A(\gamma)$ and
+$P(\gamma,\delta)$ and the constants $a(\gamma)$, $C(\gamma,\delta)$
+(Proposition~\ref{prop:numconf}, Remark~\ref{rem:locality}); checks the closed
+form of $K_{jk}$ and its majorant against quadrature; checks the explicit
+formula on the basis (Remark~\ref{rem:engine}); computes $\eta(X)$ and the
+bound \eqref{eq:eta-bound} (Proposition~\ref{prop:eta-emp}); and produces
+Table~\ref{tab:feasibility}. Its output is in \texttt{results/}.
 
 % ════════════════════════════════════════════════════════════════════════
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
 
-\bibitem{Weil1952} A. Weil, \emph{Sur les ``formules explicites'' de la
-th\'eorie des nombres premiers}, Comm. S\'em. Math. Univ. Lund (1952),
-252--265.
+\bibitem{bgBombieriWeil} E.~Bombieri, \emph{Remarks on Weil's quadratic
+functional in the theory of prime numbers, I}, Rend.\ Mat.\ Acc.\ Lincei (9)
+\textbf{11} (2000), 183--233.
 
-\bibitem{Bombieri2000} E. Bombieri, \emph{Problems of the Millennium: The
-Riemann Hypothesis}, Clay Mathematics Institute (2000).
+\bibitem{bgCC21} A.~Connes and C.~Consani, \emph{Weil positivity and trace
+formula, the archimedean place}, Selecta Math.\ (N.S.) \textbf{27} (2021),
+no.~77.
 
 \bibitem{Connes1999} A. Connes, \emph{Trace formula in noncommutative
 geometry and the zeros of the Riemann zeta function}, Selecta Math. (N.S.)
@@ -502,21 +595,22 @@ geometry and the zeros of the Riemann zeta function}, Selecta Math. (N.S.)
 \bibitem{deBranges} L. de Branges, \emph{Hilbert Spaces of Entire
 Functions}, Prentice--Hall, 1968.
 
-\bibitem{Lagarias2007} J.\,C. Lagarias, \emph{Li coefficients for automorphic
-$L$-functions}, Ann. Inst. Fourier \textbf{57} (2007), 1689--1740.
+\bibitem{HJ} R.~A.~Horn and C.~R.~Johnson, \emph{Matrix Analysis}, 2nd ed.,
+Cambridge Univ.\ Press, 2013.
 
-\bibitem{TrejoV7} D.\,A. Trejo Pizzo, \emph{Localized Weil positivity for
-zeta zeros: a computational study} (companion report, 2026).
+\bibitem{IK} H.~Iwaniec and E.~Kowalski, \emph{Analytic Number Theory},
+Amer.\ Math.\ Soc.\ Colloq.\ Publ.\ \textbf{53}, 2004.
 
-\bibitem{TrejoV8} D.\,A. Trejo Pizzo, \emph{Canonical engine and validation
-of the localized Weil quadratic-form detector: forced negativity and
-unconditional truncation control} (companion computational report, 2026).
+\bibitem{RS62} J.~B.~Rosser and L.~Schoenfeld, \emph{Approximate formulas for
+some functions of prime numbers}, Illinois J.\ Math.\ \textbf{6} (1962),
+64--94.
 
-\bibitem{bgConnes99} M.~V.~Berry and J.~P.~Keating, \emph{The Riemann zeros and eigenvalue asymptotics}, SIAM Rev.\ \textbf{41} (1999), 236--266.
-\bibitem{bgCC21} A.~Connes and C.~Consani, \emph{Weil positivity and trace formula, the archimedean place}, Selecta Math.\ (N.S.) \textbf{27} (2021), no.~77.
-\bibitem{bgBombieriWeil} E.~Bombieri, \emph{Remarks on Weil's quadratic functional in the theory of prime numbers, I}, Rend.\ Mat.\ Acc.\ Lincei (9) \textbf{11} (2000), 183--233.
-\bibitem{bgMont73} H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta function}, Proc.\ Sympos.\ Pure Math.\ \textbf{24} (1973), 181--193.
-\bibitem{bgTitchmarsh} E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd ed., rev.\ D.~R.~Heath-Brown, Oxford Univ.\ Press, 1986.
+\bibitem{P04} D.\,A. Trejo Pizzo, \emph{Partial sums of the Davenport--Heilbronn function at the ordinates of its off-line zeros}, Paper~04 of this series.
+
+\bibitem{Weil1952} A. Weil, \emph{Sur les ``formules explicites'' de la
+th\'eorie des nombres premiers}, Comm. S\'em. Math. Univ. Lund [Medd. Lunds
+Univ. Mat. Sem.], Tome Suppl\'ementaire (1952), 252--265.
+
 \end{thebibliography}
 
 \end{document}
