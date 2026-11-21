@@ -7,22 +7,18 @@
 \usepackage{enumitem}
 \geometry{margin=1in}
 \hypersetup{colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black,
-  pdftitle={The omega-class hierarchy of the Riemann zeta function},
+  pdftitle={The omega-hierarchy of the Riemann zeta function: per-prime weights, moment exponents and the branching picture of the maximum},
   pdfauthor={David Alejandro Trejo Pizzo}}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{conjecture}[theorem]{Conjecture}
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{heuristic}[theorem]{Heuristic}
 
-\newcommand{\ZZ}{\mathbb Z}
-\newcommand{\RR}{\mathbb R}
-\newcommand{\CC}{\mathbb C}
 \newcommand{\NN}{\mathbb N}
 \newcommand{\Ee}{\mathbb E}
 \newcommand{\Pp}{\mathbb P}
@@ -32,130 +28,125 @@
 \newcommand{\dk}{d_k}
 \newcommand{\loglog}{\log\log}
 \newcommand{\llll}{\log\log\log}
-\DeclareMathOperator{\Li}{Li}
 
-\title[The $\omega$-Class Hierarchy of $\zeta$]{The $\omega$-Class Hierarchy of the Riemann Zeta Function:\\[4pt]
-Per-Prime Weights, Multiplicative Chaos, and the\\[2pt]
-Branching Structure of the Maximum}
+\title[The $\omega$-hierarchy of $\zeta$]{The \texorpdfstring{$\omega$}{omega}-hierarchy of the Riemann zeta
+function: per-prime weights, moment exponents and the branching picture of the maximum}
 \author{David Alejandro Trejo Pizzo}
 \thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
 
 
 \begin{document}
 \begin{abstract}
-We give a structural synthesis, independent of the Riemann Hypothesis, of three families of objects attached to
-the Riemann zeta function: the moment exponents $(\log T)^{k^2}$, the multiplicative-chaos exponents of
-$|\zeta(\half+it)|^{2\beta}$, and the recently established two-term asymptotics of the maximum of $\log|\zeta|$
-over short intervals (the Fyodorov--Hiary--Keating phenomenon). The unifying device is the \emph{per-prime
-weight} carried by the number-of-prime-factors function $\omega(n)$. We prove (Theorem~\ref{thm:weight}) that on
-squarefree integers the $k$-fold divisor function satisfies $\dk(n)=k^{\omega(n)}$, hence $\dk(n)^2=(k^2)^{\omega(n)}$,
-so that the moment exponent $k^2$ is exactly the per-prime $\omega$-weight $z=k^2$, factored as $k\times k$ (one
-$k$ from $\zeta^k$, one from $\overline{\zeta}^{\,k}$); and that the analytic count $\sum_{n\le N}z^{\omega(n)}/n$
-has exponent $z$ by the Landau--Selberg--Delange method. This furnishes a dictionary in which the chaos parameter
-$\beta$ and the $\omega$-weight are linked by $z=\beta^2$, the freezing transition $\beta_c=1$ corresponds to the
-neutral weight $z_c=1$, and the supercritical regime $\beta>1$ corresponds to the large deviations of $\omega(n)$
-(Theorem~\ref{thm:ld}): the chaos is carried by integers with anomalously many prime factors,
-$\omega(n)\sim z\loglog N$. Finally we make explicit the branching structure: organizing the primes by the level
-$\lfloor\loglog p\rfloor$ produces, by Mertens' theorem, a hierarchy of $\loglog T$ levels each of equal
-variance $\tfrac12$ (Proposition~\ref{prop:levels}); the associated branching random walk has leading height
-$2V=\loglog T$ and universal Bramson correction $-\tfrac34\llll T$, reproducing both terms of the maximum of
-$\log|\zeta|$. The arithmetic core (\S\S3--6) is rigorous; the identification with the maximum (\S7) is the
-established multiplicative-chaos/branching picture and is presented as such, not as a new proof. We close with
-numerical confirmation and a list of the precise points at which the rigorous and heuristic strata meet.
+This expository note relates three descriptions of the size of the Riemann zeta function on the critical line
+--- the moment exponents $(\log T)^{k^2}$, the exponents $\beta^2$ attached to the powers
+$|\zeta(\half+it)|^{2\beta}$, and the Fyodorov--Hiary--Keating law for the maximum of $\log|\zeta|$ on short
+intervals --- to the weight $z^{\omega(n)}$, where $\omega(n)$ is the number of distinct prime factors of $n$. We
+recall that $\dk(n)=k^{\omega(n)}$ on squarefree $n$, so that the diagonal sum $\sum_{n\le N}\dk(n)^2/n$ has the
+Selberg--Delange exponent $k^2$ (Theorem~\ref{thm:weight}); we prove that under the weight $z^{\omega(n)}/n$ on
+$n\le N$ the function $\omega(n)$ concentrates at $z\loglog N$ with Gaussian fluctuations, for every $z>0$
+(Theorem~\ref{thm:ld}); and we record that grouping the primes by $\lfloor\loglog p\rfloor=j$ gives levels of
+variance $\half+O(e^{-j})$ (Proposition~\ref{prop:levels}). Sections 3, 5 and 6 and Proposition~\ref{prop:dict} are proved and classical in
+substance. The link with the powers $|\zeta|^{2\beta}$ in Section 4 and the whole of Section 7 are heuristic and
+restate the known branching picture: under the substitution
+$z=\beta^2$ the critical value $\beta_c=1$ of the short-interval chaos corresponds formally to the trivial weight
+$z=1$, and a branching random walk with $\loglog T$ generations, $\log T$ leaves and increment variance $\half$
+has maximum $\loglog T-\tfrac34\llll T+O_{\Pp}(1)$, the form of the maximum of $\log|\zeta|$ for which the upper
+bound and the tightness are theorems of Arguin, Bourgade and Radziwi{\l}{\l}. Section 8 contains small-scale
+numerical illustrations.
 \end{abstract}
 
 \maketitle
 
-
-
 \tableofcontents
-\newpage
 
 \section{Introduction}\label{sec:intro}
-\subsection{Large values of $\zeta$ on the critical line}
-Let $\zeta$ denote the Riemann zeta function and write, for $T\to\infty$,
+\subsection{Large values of \texorpdfstring{$\zeta$}{zeta} on the critical line}
+Let $\zeta$ denote the Riemann zeta function and write
 \[
 F(t):=\log|\zeta(\half+it)| .
 \]
-Three quantitative theories describe the size of $F$.
+Three quantitative theories describe the size of $F$ as $T\to\infty$.
 
-\emph{(i) Typical size.} Selberg's central limit theorem states that $F(t)/\sqrt{\half\loglog T}$ converges in
-distribution, for $t$ chosen uniformly in $[T,2T]$, to a standard Gaussian; in particular the variance of $F$
-is $\sim\half\loglog T$.
+\emph{(i) Typical size.} Selberg's central limit theorem \cite{Selberg} states that $F(t)/\sqrt{\half\loglog T}$
+converges in distribution, for $t$ chosen uniformly in $[T,2T]$, to a standard Gaussian, and Selberg's moment
+computation gives the second moment of $F$ on $[T,2T]$ as $\sim\half\loglog T$.
 
 \emph{(ii) Moments.} For $k\in\NN$ one expects
 \[
-\frac1T\int_T^{2T}\bigl|\zeta(\half+it)\bigr|^{2k}\,dt\ \sim\ a_k\,g_k\,(\log T)^{k^2},
+\frac1T\int_T^{2T}\bigl|\zeta(\half+it)\bigr|^{2k}\,dt\ \sim\ \frac{a_k\,g_k}{(k^2)!}\,(\log T)^{k^2},
 \]
-with $a_k$ an arithmetic (Euler-product) factor and $g_k$ a random-matrix factor; this is a theorem for
-$k=1,2$ (Hardy--Littlewood; Ingham) and the conjecture of Conrey--Farmer--Keating--Rubinstein--Snaith for
-general $k$, proven as an upper bound of the right order under the Riemann Hypothesis (Soundararajan; Harper).
-The exponent $k^2$ is the object of central interest below.
+with $a_k$ an arithmetic (Euler-product) factor and $g_k$ an integer; this is a theorem for $k=1,2$
+\cite{HL,Ingham} (with $g_1=1$, $g_2=2$) and, with $g_k/(k^2)!=G(k+1)^2/G(2k+1)$ in terms of the Barnes
+$G$-function, the conjecture of Keating and Snaith \cite{KS} for general $k$ (see \cite{CFKRS} for the full main
+term). Under the Riemann Hypothesis the upper bound $\ll_k(\log T)^{k^2}$ is due to Harper \cite{HarperMoments},
+sharpening Soundararajan's $(\log T)^{k^2+\varepsilon}$ \cite{Sound}. The exponent $k^2$ is the object of interest
+below.
 
-\emph{(iii) The maximum.} Fyodorov, Hiary and Keating conjectured, on the basis of a log-correlated /
-branching heuristic, that
+\emph{(iii) The maximum.} Fyodorov, Hiary and Keating \cite{FHK,FK} conjectured, on the basis of a
+log-correlated/branching heuristic, that for $t$ chosen uniformly in $[T,2T]$,
 \begin{equation}\label{eq:fhk}
-\max_{t\in[T,T+1]}\log\bigl|\zeta(\half+it)\bigr|\ =\ \loglog T\ -\ \tfrac34\,\llll T\ +\ O_{\Pp}(1).
+\max_{|h|\le1}\log\bigl|\zeta(\half+i(t+h))\bigr|\ =\ \loglog T\ -\ \tfrac34\,\llll T\ +\ O_{\Pp}(1).
 \end{equation}
-The leading term is now a theorem (Arguin--Belius--Bourgade--Radziwi{\l}{\l}--Soundararajan for the upper bound,
-Najnudel and others for the lower bound), and the tightness underlying the subleading term has been established
-by Arguin--Bourgade--Radziwi{\l}{\l} and Harper. Thus $\zeta$ on the line behaves, in its extreme values, like a
-log-correlated field, and \eqref{eq:fhk} carries the universal branching-random-walk signature: a leading term
-equal to twice the variance, and a $-\tfrac32$ Bramson correction.
+The leading term is a theorem of Arguin--Belius--Bourgade--Radziwi{\l}{\l}--Soundararajan \cite{ABBRS} (and, with
+the lower bound conditional on the Riemann Hypothesis, of Najnudel \cite{Najnudel}; see the survey
+\cite{HarperBourbaki}); the upper bound with the correction $-\tfrac34\llll T$ and the tightness of the recentred
+maximum are due to Arguin--Bourgade--Radziwi{\l}{\l} \cite{ABR1,ABR2}, after Harper \cite{HarperFHK}. Thus $F$
+behaves, in its extreme values, like a log-correlated field, and \eqref{eq:fhk} has the form of the maximum of a
+branching random walk: a leading term $c\,n$ and a logarithmic correction $-\frac{3}{2\theta}\log n$ in the number
+$n=\loglog T$ of generations (\S\ref{sec:max}).
 
-\subsection{The $\omega$-class viewpoint}
-A parallel line of investigation organizes the multiplicative structure of $\zeta$ by the number of distinct
-prime factors. For $n\in\NN$ write $\omega(n)$ for the number of distinct primes dividing $n$ and $\Omega(n)$ for
-the number with multiplicity. Sums weighted by $z^{\omega(n)}$ are governed by the Landau--Selberg--Delange
-method and produce powers of $\log N$ whose exponent is the weight $z$; the distribution of $\omega(n)$ itself is
-the content of the Erd\H{o}s--Kac theorem and, in its tails, of the work of Sathe and Selberg. In earlier parts
-of the present program the moment-growth exponents of $\zeta$ at its large values were measured and recorded as
-an ``$\omega$-class fingerprint.'' The purpose of this paper is to explain, structurally and for the most part
-rigorously, why that fingerprint coincides with the moment exponents $k^2$ and with the multiplicative-chaos
-exponents, and to exhibit the branching hierarchy that produces \eqref{eq:fhk}.
+\subsection{The \texorpdfstring{$\omega$}{omega}-viewpoint}
+For $n\in\NN$ write $\omega(n)$ for the number of distinct primes dividing $n$ and $\Omega(n)$ for the number
+with multiplicity. Sums weighted by $z^{\omega(n)}$ are governed by the Selberg--Delange method
+\cite{SelbergSathe,Delange}, \cite[Ch.~II.5]{Tenenbaum}, and produce powers of $\log N$ whose exponent is the
+weight $z$; the distribution of $\omega(n)$ itself is the content of the Erd\H{o}s--Kac theorem \cite{ErdosKac}
+and, for the local laws, of the work of Sathe and Selberg \cite{Sathe,SelbergSathe}. Since
+$\dk(n)=k^{\omega(n)}$ on squarefree $n$, the exponent $k^2$ of the diagonal of the $2k$-th moment is the
+Selberg--Delange exponent of the weight $z=k^2$. The purpose of this note is to set out this elementary link, to
+describe the measure $z^{\omega(n)}/n$ on $n\le N$ for every $z>0$, and to display the level structure of the
+primes behind the branching heuristic for \eqref{eq:fhk}.
 
 \subsection{Results and organization}
-Our contribution is a dictionary, summarized in Table~\ref{tab:dictionary}, together with its rigorous
-arithmetic core and an explicit branching model.
+The correspondences discussed are summarized in Table~\ref{tab:dictionary}.
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular}{lll}
 \toprule
-analytic object & $\omega$-class object & link \\
+analytic object & $\omega$-side object & link \\
 \midrule
-moment exponent $k^2$ & per-prime weight $z=k^2$ & $\dk(n)^2=(k^2)^{\omega(n)}$ (Thm.~\ref{thm:weight}) \\
-chaos parameter $\beta$ & weight $z=\beta^2$ & $|\zeta|^{2\beta}\leftrightarrow d_\beta$ (\S\ref{sec:dict}) \\
-freezing $\beta_c=1$ & neutral weight $z_c=1$ & $\sum 1^{\omega(n)}/n=\log N$ \\
-supercritical $\beta>1$ & large deviations of $\omega$ & $\omega(n)\sim z\loglog N$ (Thm.~\ref{thm:ld}) \\
-branching depth & $\#$ levels $=\loglog T$ & $\lfloor\loglog p\rfloor$ (Prop.~\ref{prop:levels}) \\
-FHK leading $\loglog T$ & $2V=2\cdot\tfrac12\loglog T$ & variance of the model (\S\ref{sec:max}) \\
-FHK subleading $-\tfrac34\llll T$ & Bramson $\times$ depth & $-\tfrac32\cdot\tfrac12\log(\loglog T)$ (\S\ref{sec:max}) \\
+moment exponent $k^2$ & weight $z=k^2$ & $\dk(n)^2=(k^2)^{\omega(n)}$ (Thm.~\ref{thm:weight}) \\
+parameter $\beta$ of $|\zeta|^{2\beta}$ & weight $z=\beta^2$ & $\sum d_\beta(n)^2/n$
+(Prop.~\ref{prop:dict}) \\
+critical value $\beta_c=1$ & trivial weight $z=1$ & $\beta=1$ in $z=\beta^2$; no transition \\
+ & & on the arithmetic side (Rem.~\ref{rem:dict}) \\
+tilt by $z^{\omega(n)}$ & $\omega(n)\sim z\loglog N$ & concentration (Thm.~\ref{thm:ld}) \\
+branching depth & $\loglog T+O(1)$ levels & $\lfloor\loglog p\rfloor$ (Prop.~\ref{prop:levels}) \\
+FHK leading $\loglog T$ & $c\,n$ with $c=\sqrt{2\kappa\sigma^2}=1$ & $\kappa=1$, $\sigma^2=\half$
+(\S\ref{sec:max}) \\
+FHK subleading $-\tfrac34\llll T$ & $-\frac{3}{2\theta}\log n$, $\theta=2$ & $n=\loglog T$ (\S\ref{sec:max}) \\
 \bottomrule
 \end{tabular}
-\caption{The dictionary established in this paper. Rows 1--5 are rigorous arithmetic; rows 6--7 are the
-established multiplicative-chaos/branching picture, re-derived through the $\omega$-hierarchy.}
+\caption{The correspondences discussed in this note. Rows 1, 4, 5 are proved; rows 2, 3, 6, 7 are heuristic.}
 \label{tab:dictionary}
 \end{table}
 
-Section~\ref{sec:prelim} fixes notation and recalls the analytic background. Section~\ref{sec:weight} proves the
-per-prime-weight identity and its consequence for the moment exponent. Section~\ref{sec:dict} sets up the chaos
-dictionary $z=\beta^2$ and the freezing point. Section~\ref{sec:ld} identifies the supercritical regime with the
-large deviations of $\omega(n)$. Section~\ref{sec:branch} exhibits the branching hierarchy and the equal-variance
-level decomposition. Section~\ref{sec:max} assembles the two terms of the maximum from the branching model.
-Section~\ref{sec:numerics} reports numerical confirmation. Section~\ref{sec:discussion} discusses the meaning of
-the synthesis and the precise rigorous/heuristic boundary.
+Section~\ref{sec:prelim} fixes notation and recalls the analytic background. Section~\ref{sec:weight} treats the
+identity $\dk(n)=k^{\omega(n)}$ and the exponent of the diagonal sum. Section~\ref{sec:dict} discusses the
+substitution $z=\beta^2$. Section~\ref{sec:ld} determines the distribution of $\omega(n)$ under the weight
+$z^{\omega(n)}/n$. Section~\ref{sec:branch} gives the decomposition of the primes into levels of asymptotically
+equal variance. Section~\ref{sec:max} recalls how the two terms of \eqref{eq:fhk} arise from a branching random
+walk with these parameters. Section~\ref{sec:numerics} reports numerical illustrations, and
+Section~\ref{sec:discussion} separates what is proved from what is heuristic.
 
-\subsection{Scope and honesty of claims}
-We are explicit about what is and is not proved. The identities of \S\ref{sec:weight}, the asymptotic of
-\S\ref{sec:dict}, the large-deviation statement of \S\ref{sec:ld}, and the variance computation of
-\S\ref{sec:branch} are rigorous and classical or elementary. The passage from the random-field/branching model
-to the actual maximum of $\log|\zeta|$ in \S\ref{sec:max} is \emph{not} proved here; it is the content of the
-works cited above, and we present our derivation as a structural \emph{explanation} of \eqref{eq:fhk} through the
-$\omega$-hierarchy, organized so that the two terms of \eqref{eq:fhk} appear as the depth and the Bramson
-correction of the hierarchy. No statement in this paper depends on, or bears upon, the truth of the Riemann
-Hypothesis.
+\subsection{Scope}\label{ssec:scope}
+The statements of \S\ref{sec:weight}, \S\ref{sec:ld} and \S\ref{sec:branch}, and Proposition~\ref{prop:dict}, are
+proved; they are classical in substance or routine consequences of the Selberg--Delange method and of Mertens'
+theorem. The relation between the weight $z=\beta^2$ and the powers $|\zeta|^{2\beta}$ in \S\ref{sec:dict}, and
+the passage from the branching model to the maximum of $\log|\zeta|$ in \S\ref{sec:max}, are heuristic: nothing
+about the maximum is proved here, the theorems being those of \cite{ABBRS,Najnudel,ABR1,ABR2,HarperFHK}. The
+computations of \S\ref{sec:numerics} are at small scale ($\loglog X<3$) and confirm no asymptotic statement.
 
 \section{Notation and analytic background}\label{sec:prelim}
 
@@ -166,52 +157,102 @@ $a_i=1$. The $k$-fold divisor function is
 \dk(n)=\#\Bigl\{(m_1,\dots,m_k)\in\NN^k:\ m_1\cdots m_k=n\Bigr\}=\sum_{m_1\cdots m_k=n}1,
 \]
 multiplicative, with $\dk(p^a)=\binom{a+k-1}{k-1}$ and Dirichlet series $\sum_n\dk(n)n^{-s}=\zeta(s)^k$
-($\re s>1$).
+($\re s>1$). More generally, for $z\in\mathbb C$ we write $d_z$ for the multiplicative function with
+$d_z(p^a)=\binom{a+z-1}{a}$, so that $\sum_n d_z(n)n^{-s}=\zeta(s)^z$ for $\re s>1$ (principal branch).
 
-\subsection{The Landau--Selberg--Delange method}
-We will use the following standard consequence of the Landau--Selberg--Delange (LSD) method
-(see Tenenbaum, \emph{Introduction to Analytic and Probabilistic Number Theory}, II.5).
+\subsection{The Selberg--Delange method}
+We use the following consequence of the Selberg--Delange method \cite[Ch.~II.5]{Tenenbaum}.
 
-\begin{lemma}[LSD]\label{lem:lsd}
-Let $g$ be a multiplicative function with $\sum_p\bigl(g(p)-z\bigr)p^{-1}$ and $\sum_p\sum_{a\ge2}|g(p^a)|p^{-a}$
-convergent, and suppose the Dirichlet series $G(s)=\sum_n g(n)n^{-s}$ factors as $G(s)=\zeta(s)^z H(s)$ with
-$H$ holomorphic and nonzero in a neighborhood of $s=1$. Then, for $\re z$ in a fixed compact set,
+\begin{lemma}[Selberg--Delange]\label{lem:lsd}
+Let $A>0$ and $0<\delta\le1$. Let $z\in\mathbb C$ with $|z|\le A$, and let $g$ be an arithmetic function with
 \[
-\sum_{n\le N}\frac{g(n)}{n}\ =\ \frac{H(1)}{\Gamma(z+1)}\,(\log N)^{z}\,\bigl(1+O((\log N)^{-1})\bigr).
+\sum_{n\ge1}\frac{g(n)}{n^{s}}=\zeta(s)^z H(s)\quad(\re s>1),\qquad
+H(s)=\sum_{n\ge1}\frac{h(n)}{n^{s}},\qquad \sum_{n\ge1}\frac{|h(n)|}{n^{1-\delta}}\le A .
 \]
+Then, uniformly in such $z$ and $g$, for $N\ge3$,
+\[
+\sum_{n\le N}\frac{g(n)}{n}\ =\ \frac{H(1)}{\Gamma(z+1)}\,(\log N)^{z}
++O_{A,\delta}\Bigl(\bigl(1+(\log N)^{\re z-1}\bigr)\loglog N\Bigr).
+\]
+In particular, if $z>0$ is real and $H(1)\ne0$, then
+$\sum_{n\le N}g(n)/n\sim H(1)\,\Gamma(z+1)^{-1}(\log N)^{z}$.
 \end{lemma}
+\begin{proof}
+The function $H$ is holomorphic for $\re s>1-\delta$ and bounded by $A$ for $\re s\ge1-\delta$. By
+\cite[Thm.~II.5.2]{Tenenbaum} (with one term of the expansion), uniformly for $|z|\le A$ and $t\ge3$,
+\[
+D(t):=\sum_{n\le t}g(n)=t(\log t)^{z-1}\Bigl(\frac{H(1)}{\Gamma(z)}+O_{A,\delta}\Bigl(\frac1{\log t}\Bigr)\Bigr).
+\]
+For $t<3$ one has $D(t)=O_A(1)$, since $g=d_z*h$, $|d_z(n)|\le A$ for $n=2,3$ and $|h(n)|\le3A$ for $n\le3$.
+By partial summation,
+\[
+\begin{aligned}
+\sum_{n\le N}\frac{g(n)}{n}&=\frac{D(N)}{N}+\int_1^N\frac{D(t)}{t^2}\,dt\\
+&=\frac{H(1)}{\Gamma(z)}\int_3^N\frac{(\log t)^{z-1}}{t}\,dt
++O_{A,\delta}\Bigl(1+(\log N)^{\re z-1}+\int_3^N\frac{(\log t)^{\re z-2}}{t}\,dt\Bigr).
+\end{aligned}
+\]
+The first integral equals $\bigl((\log N)^z-(\log3)^z\bigr)/z$ (and $\loglog N-\loglog3$ for $z=0$, where
+$1/\Gamma(z)=0$), and $z\,\Gamma(z)=\Gamma(z+1)$, so the main term is
+$H(1)\Gamma(z+1)^{-1}(\log N)^z+O_A(1)$. In the last integral
+$(\log t)^{\re z-2}\le\bigl(1+(\log N)^{\re z-1}\bigr)(\log t)^{-1}$ for $3\le t\le N$, which gives the bound
+$\bigl(1+(\log N)^{\re z-1}\bigr)\loglog N$.
+\end{proof}
 
-In particular, taking $g(n)=z^{\omega(n)}$ (so $g(p)=z$, $g(p^a)=z$ for $a\ge1$, and
-$G(s)=\prod_p\bigl(1+z(p^s-1)^{-1}\bigr)=\zeta(s)^z\prod_p(1-p^{-s})^{z}\bigl(1+z(p^s-1)^{-1}\bigr)$ with the
-product convergent and nonzero near $s=1$), Lemma~\ref{lem:lsd} gives
+The hypothesis on $H$ is verified in the same way in all the applications below. There $g$ is multiplicative
+with $g(p)=z$ and $|g(p^a)|\le K(a+1)^K$ for a constant $K$ depending only on $A$; then $h$ is multiplicative,
+its local factor is $(1-x)^z\sum_{a\ge0}g(p^a)x^a=1+O(x^2)$ with $x=p^{-s}$, so that $h(p)=0$ and
+$|h(p^a)|\le K'(a+1)^{K'}$ with $K'=K'(A)$, and
+\[
+\sum_{n\ge1}\frac{|h(n)|}{n^{3/4}}\le\prod_p\Bigl(1+\sum_{a\ge2}\frac{K'(a+1)^{K'}}{p^{3a/4}}\Bigr)<\infty .
+\]
+Thus Lemma~\ref{lem:lsd} applies with $\delta=\tfrac14$, and $H$ is an Euler product absolutely convergent for
+$\re s>\half$.
+
+In particular, for $g(n)=z^{\omega(n)}$ one has
+$\sum_n g(n)n^{-s}=\prod_p\bigl(1+z(p^s-1)^{-1}\bigr)=\zeta(s)^zH_z(s)$ with
+$H_z(s)=\prod_p(1-p^{-s})^{z}\bigl(1+z(p^s-1)^{-1}\bigr)$, and Lemma~\ref{lem:lsd} gives, for every real $z>0$,
 \begin{equation}\label{eq:zomega}
 \sum_{n\le N}\frac{z^{\omega(n)}}{n}\ \sim\ C(z)\,(\log N)^{z},\qquad
 C(z)=\frac{1}{\Gamma(z+1)}\prod_p\Bigl(1-\tfrac1p\Bigr)^{z}\Bigl(1+\tfrac{z}{p-1}\Bigr).
 \end{equation}
-
-\subsection{The prime model of $\log|\zeta|$}
-On the critical line one has, in the precise sense made rigorous by Selberg's method and its descendants, the
-approximation
+The function $C$ is entire, positive on $(0,\infty)$, and $C(1)=1$. More precisely, writing
+$S_N(z)=\sum_{n\le N}z^{\omega(n)}/n$, the lemma gives, uniformly for complex $z$ with $|z|\le A$ and $N\ge3$,
 \[
-\log\bigl|\zeta(\half+it)\bigr|\ \approx\ \re\sum_{p}\frac{1}{p^{\,1/2+it}}\ =\ \sum_{p}\frac{\cos(t\log p)}{\sqrt p}\ =:\ G(t),
+S_N(z)=C(z)(\log N)^z+O_A\Bigl(\bigl(1+(\log N)^{\re z-1}\bigr)\loglog N\Bigr).
 \]
-with prime-power and remainder terms of lower order, valid after truncation at primes $p\le X$ with a
-suitable $X=X(T)$. We will use $G$ as a \emph{model}; its second moment is, by Mertens' theorem,
+
+\subsection{The prime model of \texorpdfstring{$\log|\zeta|$}{log|zeta|}}
+On the critical line one has, in the sense made precise by Selberg's method \cite{Selberg} and its descendants,
+the approximation
+\[
+\log\bigl|\zeta(\half+it)\bigr|\ \approx\ \re\sum_{p\le X}\frac{1}{p^{\,1/2+it}}\ =\ \sum_{p\le X}\frac{\cos(t\log p)}{\sqrt p}\ =:\ G(t),
+\]
+with prime-power and remainder terms of lower order, for a suitable truncation $X=X(T)$. We use $G=G_X$ as a
+\emph{model}. Expectations and variances of $G$ are taken with respect to $t$ uniform on $[T,2T]$ in the limit
+$T\to\infty$ with $X$ fixed; equivalently, the numbers $p^{-it}$ are replaced by independent random variables
+uniform on the unit circle. Then $\Ee G=0$ and, by Mertens' theorem \cite{Mertens},
 \begin{equation}\label{eq:variance}
 V:=\Var G=\half\sum_{p\le X}\frac1p\ \sim\ \half\loglog X,
 \end{equation}
-matching Selberg's variance when $X$ is taken at the relevant scale. The covariance
-$\Ee[G(t)G(t')]\sim-\half\log|t-t'|$ over the mesoscopic range is the log-correlation responsible for the
+matching Selberg's variance when $\loglog X\sim\loglog T$. The covariance is
+\[
+\Ee\bigl[G(t)G(t+h)\bigr]=\half\sum_{p\le X}\frac{\cos(h\log p)}{p}=\half\log\frac1{|h|}+O(1)
+\qquad\bigl((\log X)^{-1}\le|h|\le1\bigr),
+\]
+by the prime number theorem with remainder and partial summation: the primes with $\log p\le1/|h|$ contribute
+$\half\loglog e^{1/|h|}+O(1)$ and the remaining ones $O(1)$. This logarithmic correlation is the source of the
 branching structure.
 
 \subsection{Multiplicative chaos}
-For $\beta>0$ the (sub)critical multiplicative chaos of $\zeta$ is the family of random measures
-$|\zeta(\half+it)|^{2\beta}\,dt$. For $\beta\in(0,1)$ these converge, after normalization, to a Gaussian
-multiplicative chaos (Saksman--Webb); the value $\beta_c=1$ is the freezing/critical point, beyond which the
-measure is dominated by its maximum. The partition function
-$Z(\beta)=\frac1T\int_T^{2T}|\zeta(\half+it)|^{2\beta}\,dt$ has, in the model, the annealed asymptotic
-$Z(\beta)\asymp(\log T)^{\beta^2}$ in the subcritical range, the exponent $\beta^2$ being the object we now
-explain.
+For $\beta>0$ consider the random measures $|\zeta(\half+i(t+h))|^{2\beta}\,dh$ on $|h|\le1$, with $t$ uniform
+on $[T,2T]$. Saksman and Webb \cite{SaksmanWebb} relate $\zeta$ on such intervals to Gaussian multiplicative
+chaos. For a field of covariance $\half\log(1/|h|)$ the chaos of parameter $\beta$ is subcritical for $\beta<1$
+and $\beta_c=1$ is its critical value: for $\beta>1$ the mass of the measure is expected to be dominated by the
+neighbourhood of the maximum (freezing; see \cite{FHK,FK,HarperFHK}). This transition concerns the short-interval
+partition function $\int_{-1}^{1}|\zeta(\half+i(t+h))|^{2\beta}\,dh$ for typical $t$. For the average
+$\frac1T\int_T^{2T}|\zeta(\half+it)|^{2\beta}\,dt$ the conjectured order of magnitude is $(\log T)^{\beta^2}$ for
+every $\beta>0$, with no transition; the exponent $\beta^2$ is the subject of \S\ref{sec:dict}.
 
 \section{The per-prime weight and the moment exponent}\label{sec:weight}
 
@@ -223,205 +264,285 @@ $\dk$ is multiplicative and $\dk(p)=\binom{k}{k-1}=k$. For squarefree $n=p_1\cdo
 $\dk(n)=\prod_{i=1}^r\dk(p_i)=k^r=k^{\omega(n)}$. Squaring gives $\dk(n)^2=k^{2\omega(n)}=(k^2)^{\omega(n)}$.
 \end{proof}
 
-The combinatorial content is transparent: writing a squarefree $n$ as an ordered product of $k$ factors amounts
-to assigning each of its $\omega(n)$ prime factors to one of the $k$ slots, whence $k^{\omega(n)}$ choices.
+Combinatorially, writing a squarefree $n$ as an ordered product of $k$ factors amounts to assigning each of its
+$\omega(n)$ prime factors to one of the $k$ slots, whence $k^{\omega(n)}$ choices. The identity is of course
+standard.
 
 \begin{theorem}\label{thm:weight}
-The diagonal of the $2k$-th moment of $\zeta$ has exponent $k^2$ equal to the per-prime $\omega$-weight $z=k^2$:
+Let $k\ge1$ be an integer.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item For every $N\ge1$,
 \[
-\sum_{n\le N}\frac{\dk(n)^2}{n}\ \sim\ A_k\,(\log N)^{k^2},
+\lim_{T\to\infty}\frac1T\int_0^T\Bigl|\sum_{n\le N}\frac{\dk(n)}{n^{1/2+it}}\Bigr|^2dt=\sum_{n\le N}\frac{\dk(n)^2}{n},
+\qquad\text{and}\qquad
+\sum_{n\le N}\frac{\dk(n)^2}{n}\ \sim\ A_k\,(\log N)^{k^2}
 \]
-and, restricted to squarefree $n$, $\sum_{n\le N}^{\flat}\dk(n)^2/n=\sum_{n\le N}^{\flat}(k^2)^{\omega(n)}/n\sim
-C^{\flat}(k^2)(\log N)^{k^2}$, where $\flat$ denotes the squarefree restriction and the exponent is given by
-\eqref{eq:zomega}. The exponent $k^2$ factors as $k\times k$: one factor of $k$ from $\zeta^k$ and one from
-$\overline{\zeta}^{\,k}$.
+as $N\to\infty$, with $A_k=B_k(1)/\Gamma(k^2+1)$ and $B_k$ as in the proof.
+\item For every real $z>0$, the sum restricted to squarefree $n$ (denoted by $\flat$) satisfies
+\[
+\sideset{}{^\flat}\sum_{n\le N}\frac{z^{\omega(n)}}{n}\ \sim\ C^{\flat}(z)\,(\log N)^{z},\qquad
+C^{\flat}(z)=\frac1{\Gamma(z+1)}\prod_p\Bigl(1-\tfrac1p\Bigr)^{z}\Bigl(1+\tfrac zp\Bigr).
+\]
+In particular $\sum^{\flat}_{n\le N}\dk(n)^2/n=\sum^{\flat}_{n\le N}(k^2)^{\omega(n)}/n\sim
+C^{\flat}(k^2)(\log N)^{k^2}$.
+\end{enumerate}
 \end{theorem}
 \begin{proof}
-The classical identity $\sum_n\dk(n)^2 n^{-s}=\zeta(s)^{k^2}\,B_k(s)$ with $B_k$ holomorphic and nonzero for
-$\re s>\half$ (an Euler-product computation; for $k=2$, $\sum d(n)^2 n^{-s}=\zeta(s)^4/\zeta(2s)$) shows, with
-Lemma~\ref{lem:lsd} applied to $g=\dk^2$ (so $z=k^2$), that $\sum_{n\le N}\dk(n)^2/n\sim A_k(\log N)^{k^2}$ with
-$A_k=B_k(1)/\Gamma(k^2+1)$. For the squarefree part, Proposition~\ref{prop:dk} gives $\dk(n)^2=(k^2)^{\omega(n)}$,
-and \eqref{eq:zomega} with $z=k^2$ gives the exponent $k^2$ directly. The factorization $k^2=k\cdot k$ records
-that $|\zeta|^{2k}=\zeta^k\overline{\zeta}^{\,k}$ contributes one divisor weight $\dk$ from each factor; on the
-diagonal these are paired prime-by-prime, multiplying the per-prime multiplicities $k$ and $k$.
+(a) Expanding the square, the mean value of $(m/n)^{it}$ over $[0,T]$ tends to $1$ if $m=n$ and to $0$
+otherwise, which gives the first identity. One has $\sum_n\dk(n)^2n^{-s}=\zeta(s)^{k^2}B_k(s)$, where
+\[
+B_k(s)=\prod_p\,(1-p^{-s})^{k^2}\sum_{a\ge0}\binom{a+k-1}{k-1}^2p^{-as}
+\]
+is an Euler product absolutely convergent for $\re s>\half$, with $B_k(1)>0$ since every factor is positive at
+$s=1$ (for $k=2$, $B_2(s)=1/\zeta(2s)$). Lemma~\ref{lem:lsd} applied to $g=\dk^2$, $z=k^2$, $H=B_k$ gives the
+asymptotic.
+
+(b) Apply Lemma~\ref{lem:lsd} to $g=\mu^2z^{\omega}$, for which
+$\sum_ng(n)n^{-s}=\prod_p(1+zp^{-s})=\zeta(s)^z\prod_p(1-p^{-s})^z(1+zp^{-s})$. The last assertion follows from
+Proposition~\ref{prop:dk}.
 \end{proof}
 
 \begin{remark}
-Theorem~\ref{thm:weight} reframes the much-studied exponent $k^2$ as an instance of the universal
-$\omega$-weight law \eqref{eq:zomega} at $z=k^2$. The point is not the asymptotic itself (classical) but the
-identification: the moment exponent is the \emph{per-prime weight}, and its value $k^2$ is the square of the
-per-factor multiplicity $k$. This is the rigorous root of the coincidence between the $\omega$-class fingerprint
-and the moment exponents.
+We call $\sum_{n\le N}\dk(n)^2/n$ the \emph{diagonal} of the $2k$-th moment: it is the mean square of the
+Dirichlet polynomial approximating $\zeta^k$. Theorem~\ref{thm:weight} places its exponent $k^2$ among the
+exponents of the $\omega$-weighted sums \eqref{eq:zomega}, at $z=k^2$; the asymptotic itself is classical. The
+value $k^2=k\cdot k$ records that in $|\zeta|^{2k}=\zeta^k\overline{\zeta}^{\,k}$ each factor contributes one
+divisor weight $\dk$, with $\dk(p)=k$, and that on the diagonal the two are multiplied prime by prime. The
+diagonal sum is not the moment: for $k=1$ it gives the correct asymptotic $\log T$ with $N=T$, but for $k=2$
+the diagonal constant $A_2=1/(4\pi^2)$ is half of Ingham's constant $1/(2\pi^2)$, and for $k\ge3$ the factor
+$g_k$ has no counterpart in the diagonal.
 \end{remark}
 
-\section{The chaos dictionary $z=\beta^2$ and the freezing point}\label{sec:dict}
+\section{The substitution \texorpdfstring{$z=\beta^2$}{z=beta\textasciicircum 2} and the critical value}\label{sec:dict}
 
-Replacing the integer $k$ by a real parameter $\beta>0$ in the diagonal heuristic of \S\ref{sec:weight}, the
-$2\beta$-power $|\zeta|^{2\beta}=\zeta^\beta\overline{\zeta}^{\,\beta}$ contributes, on the diagonal, the
-generalized divisor function $d_\beta$ with $d_\beta(p)=\beta$, hence a per-prime weight $\beta\cdot\beta=\beta^2$.
-We record the resulting dictionary.
+Replacing the integer $k$ by a real parameter $\beta>0$, the generalized divisor function $d_\beta$ has
+$d_\beta(p)=\beta$, hence $d_\beta(p)^2=\beta^2$.
 
-\begin{proposition}[the dictionary]\label{prop:dict}
-In the diagonal/model approximation, the multiplicative-chaos partition function of exponent $\beta$ has
-$\omega$-weight $z=\beta^2$:
+\begin{proposition}\label{prop:dict}
+Let $\beta>0$ and let $d_\beta$ be the multiplicative function with $d_\beta(p^a)=\binom{a+\beta-1}{a}$, so
+that $\sum_nd_\beta(n)n^{-s}=\zeta(s)^\beta$. Then $d_\beta(n)=\beta^{\omega(n)}$ for squarefree $n$, and
 \[
-Z(\beta)\ \asymp\ \sum_{n\le N}\frac{d_\beta(n)^2}{n}\ \asymp\ (\log N)^{\beta^2},\qquad N=N(T),
+\sum_{n\le N}\frac{d_\beta(n)^2}{n}\ \sim\ A_\beta\,(\log N)^{\beta^2},\qquad
+A_\beta=\frac1{\Gamma(\beta^2+1)}\prod_p\Bigl(1-\tfrac1p\Bigr)^{\beta^2}\sum_{a\ge0}\binom{a+\beta-1}{a}^2p^{-a}.
 \]
-and consequently:
-\begin{enumerate}[label=\textup{(\roman*)}]
-\item the subcritical range $0<\beta<1$ corresponds to $0<z<1$, where $\sum z^{\omega(n)}/n$ is dominated by
-integers of typical prime-factor count $\omega(n)\approx\loglog N$ (Gaussian multiplicative chaos,
-Saksman--Webb);
-\item the freezing point $\beta_c=1$ corresponds to the neutral weight $z_c=1$, where
-$\sum_{n\le N}1^{\omega(n)}/n=\sum_{n\le N}1/n=\log N$;
-\item the supercritical range $\beta>1$ corresponds to $z>1$, treated in \S\ref{sec:ld}.
-\end{enumerate}
 \end{proposition}
+\begin{proof}
+The first assertion follows from multiplicativity and $d_\beta(p)=\beta$. For the second, the local factor of
+$\sum_nd_\beta(n)^2n^{-s}$ is $1+\beta^2p^{-s}+\cdots$, so Lemma~\ref{lem:lsd} applies with $z=\beta^2$ and
+$H(s)=\prod_p(1-p^{-s})^{\beta^2}\sum_{a\ge0}\binom{a+\beta-1}{a}^2p^{-as}$, and $H(1)>0$.
+\end{proof}
 
-The freezing transition thus sits exactly at the neutral $\omega$-weight $z=1$: below it the tilt
-$z^{\omega(n)}$ does not move the bulk of the mass off the Erd\H{o}s--Kac typical value $\omega(n)\approx
-\loglog N$; at $z=1$ the tilt is trivial; above it the mass condenses on integers with anomalously many prime
-factors, the arithmetic image of the chaos ``thick points.''
+\begin{remark}\label{rem:dict}
+The following is heuristic. The diagonal of the $2\beta$-th moment of $\zeta$ is the sum of
+Proposition~\ref{prop:dict} with $N=T$, which suggests
+$\frac1T\int_T^{2T}|\zeta(\half+it)|^{2\beta}\,dt\asymp(\log T)^{\beta^2}$. The lower bound
+$\gg_\beta(\log T)^{\beta^2}$ is known for all $\beta>0$ \cite{HS}; the upper bound is known for $0<\beta\le2$
+\cite{HRS} and, under the Riemann Hypothesis, for all $\beta>0$ \cite{HarperMoments}. Under the
+substitution $z=\beta^2$ the critical value $\beta_c=1$ of the short-interval chaos corresponds to $z=1$, where
+the weight $z^{\omega(n)}$ is trivial and $\sum_{n\le N}1/n=\log N+O(1)$. This correspondence is formal: the
+$\omega$-weighted sum itself shows no transition at $z=1$, since \eqref{eq:zomega} and Theorem~\ref{thm:ld} hold
+in the same form for all $z>0$. The values $0<\beta<1$, $\beta=1$, $\beta>1$ correspond to $0<z<1$, $z=1$, $z>1$,
+and for every $z\ne1$, below as well as above $1$, the weight moves the mass away from the integers with
+$\omega(n)\approx\loglog N$ (Theorem~\ref{thm:ld}).
+\end{remark}
 
-\section{The supercritical regime as the large deviations of $\omega(n)$}\label{sec:ld}
+\section{The distribution of \texorpdfstring{$\omega(n)$}{omega(n)} under the weight
+\texorpdfstring{$z^{\omega(n)}/n$}{z\textasciicircum omega(n)/n}}\label{sec:ld}
 
-Under the harmonic weight $1/n$ the function $\omega(n)$ behaves, for $n\le N$, like a Poisson random variable of
-mean $\loglog N$: indeed, by \eqref{eq:zomega} the probability generating function is
+Put $\lambda=\loglog N$. By \eqref{eq:zomega}, $S_N(z)/S_N(1)\sim C(z)e^{(z-1)\lambda}$, which is $C(z)$ times
+the generating function $\Ee[z^{P}]$ of a Poisson variable $P$ of mean $\lambda$; the factor $C(z)$ is the
+analogue, for the harmonic weight $1/n$, of the Sathe--Selberg correction \cite{Sathe,SelbergSathe},
+\cite[Ch.~II.6]{Tenenbaum}. Tilting by $z^{\omega(n)}$ moves the mean of $\omega$ from $\lambda$ to $z\lambda$.
+
+\begin{theorem}\label{thm:ld}
+Fix $z>0$, put $\lambda=\loglog N$ and $S_N(z)=\sum_{n\le N}z^{\omega(n)}/n$, and let $\mu_{N,z}$ be the
+probability measure on $\{1,\dots,N\}$ with
 \[
-\frac1{\log N}\sum_{n\le N}\frac{z^{\omega(n)}}{n}\ \sim\ \frac{C(z)}{1}\,(\log N)^{z-1}\ \xrightarrow[\ \loglog N\to\infty\ ]{}\ \exp\bigl((z-1)\loglog N\bigr)\cdot(1+o(1)),
+\mu_{N,z}(\{n\})=\frac{z^{\omega(n)}}{n\,S_N(z)} .
 \]
-the exponential of a Poisson cumulant of parameter $\loglog N$ (up to the bounded factor $C(z)$). The tilt by
-$z^{\omega(n)}$ shifts the mean of this Poisson variable to $z\loglog N$. This is the Sathe--Selberg description
-of the moderate and large deviations of $\omega$.
-
-\begin{theorem}[supercritical $=$ $\omega$-large deviations]\label{thm:ld}
-For fixed $z>1$, the harmonic sum $\sum_{n\le N}z^{\omega(n)}/n$ is, to leading exponential order, carried by the
-dyadic range of $n\le N$ with
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item For every $\varepsilon\in(0,1)$ there is $c=c(z,\varepsilon)>0$ such that
 \[
-\omega(n)\ \sim\ z\,\loglog N,
+\mu_{N,z}\bigl(\,|\omega(n)-z\lambda|>\varepsilon z\lambda\,\bigr)\ \ll_{z,\varepsilon}\ (\log N)^{-c}.
 \]
-i.e. by integers with $z$ times the typical number of prime factors; the saddle point of
-$\sum_m z^m\,\Pp_N(\omega=m)$ (with $\Pp_N$ the harmonic-weighted law, asymptotically Poisson$(\loglog N)$) is at
-$m^\ast=z\loglog N$, and the value is $(\log N)^{z}$ as in \eqref{eq:zomega}. Equivalently, the supercritical
-multiplicative chaos of $\zeta$ (parameter $\beta=\sqrt z>1$) is governed by the large deviations of $\omega(n)$,
-its ``thick points'' being the integers with $\omega(n)\sim\beta^2\loglog N$ prime factors.
+One may take $c=z\bigl((1+\varepsilon)\log(1+\varepsilon)-\varepsilon\bigr)$.
+\item Under $\mu_{N,z}$, the variable $(\omega(n)-z\lambda)/\sqrt{z\lambda}$ converges in distribution to a
+standard Gaussian as $N\to\infty$.
+\end{enumerate}
 \end{theorem}
 \begin{proof}
-With $\Pp_N(\omega=m)\sim e^{-\lambda}\lambda^{m}/m!$, $\lambda=\loglog N$ (the harmonic-weighted Poisson law,
-a restatement of \eqref{eq:zomega} at $z=1$ refined by the Selberg--Sathe local law), the tilted sum
-$\sum_m z^m\Pp_N(\omega=m)=e^{\lambda(z-1)}$ has, by the standard Poisson saddle point, its mass concentrated at
-$m^\ast=\lambda z=z\loglog N$ with Gaussian width $\sqrt{\lambda z}$. Multiplying by $\log N=e^{\lambda}$ (the
-total harmonic mass) recovers $\sum_{n\le N}z^{\omega(n)}/n\sim C(z)e^{\lambda z}=C(z)(\log N)^{z}$, consistent
-with \eqref{eq:zomega}. The translation to the chaos uses $z=\beta^2$ (Proposition~\ref{prop:dict}).
+For $w\in\mathbb C$ one has $\Ee_{\mu_{N,z}}[w^{\omega}]=S_N(zw)/S_N(z)$. By the uniform form of
+\eqref{eq:zomega} stated after it, for $|w|\le2$,
+\begin{align*}
+S_N(zw)&=C(zw)(\log N)^{zw}+O_z\Bigl(\bigl(1+(\log N)^{z\re w-1}\bigr)\lambda\Bigr),\\
+S_N(z)&=C(z)(\log N)^z\bigl(1+O_z(\lambda(\log N)^{-\min(1,z)})\bigr),
+\end{align*}
+and $C(z)>0$. Hence
+\begin{equation*}
+\Ee_{\mu_{N,z}}[w^{\omega}]=\frac{C(zw)}{C(z)}\,e^{z\lambda(w-1)}\bigl(1+o(1)\bigr)
++O_z\Bigl(\lambda\,(\log N)^{-z}+\lambda\,(\log N)^{z\re w-z-1}\Bigr).
+\end{equation*}
+
+(i) Let $0<w\le2$ be real. Both error terms are
+$\ll_z\lambda(\log N)^{-\min(1,zw)}e^{z\lambda(w-1)}$, so that
+$\Ee_{\mu_{N,z}}[w^{\omega}]\ll_{z,w}e^{z\lambda(w-1)}$. By Markov's inequality with $w=1+\varepsilon$,
+\[
+\mu_{N,z}\bigl(\omega\ge(1+\varepsilon)z\lambda\bigr)\le w^{-(1+\varepsilon)z\lambda}\,\Ee_{\mu_{N,z}}[w^{\omega}]
+\ll\exp\bigl(-z\lambda\,((1+\varepsilon)\log(1+\varepsilon)-\varepsilon)\bigr),
+\]
+and with $w=1-\varepsilon$,
+\[
+\mu_{N,z}\bigl(\omega\le(1-\varepsilon)z\lambda\bigr)\le w^{-(1-\varepsilon)z\lambda}\,\Ee_{\mu_{N,z}}[w^{\omega}]
+\ll\exp\bigl(-z\lambda\,((1-\varepsilon)\log(1-\varepsilon)+\varepsilon)\bigr).
+\]
+Both exponents are positive multiples of $\lambda=\loglog N$, and
+$(1-\varepsilon)\log(1-\varepsilon)+\varepsilon\ge(1+\varepsilon)\log(1+\varepsilon)-\varepsilon>0$ for
+$0<\varepsilon<1$ (the difference of the two sides vanishes at $\varepsilon=0$ and has derivative
+$-\log(1-\varepsilon^2)\ge0$).
+
+(ii) Fix $u\in\mathbb R$ and take $w=e^{i\theta}$ with $\theta=u/\sqrt{z\lambda}$. Then
+$z\lambda(w-1)=iu\sqrt{z\lambda}-u^2/2+O_u(\lambda^{-1/2})$; in particular
+$|e^{z\lambda(w-1)}|\asymp_u1$, the two error terms above are $O(\lambda(\log N)^{-\min(1,z)})=o(1)$ (note
+$z\re w\le z$), and $C(zw)/C(z)\to1$ by continuity of $C$. Therefore
+\[
+\Ee_{\mu_{N,z}}\Bigl[\exp\Bigl(iu\,\frac{\omega-z\lambda}{\sqrt{z\lambda}}\Bigr)\Bigr]
+=e^{-iu\sqrt{z\lambda}}\ \Ee_{\mu_{N,z}}[w^{\omega}]\ \longrightarrow\ e^{-u^2/2},
+\]
+and the claim follows from L\'evy's continuity theorem.
 \end{proof}
 
 \begin{remark}
-Theorem~\ref{thm:ld} is the conceptual heart of the synthesis on the arithmetic side: the \emph{extreme} behavior
-of $\zeta$ (its large moments, its supercritical chaos, ultimately its maximum) is the image, under the per-prime
-weight $z=\beta^2$, of the \emph{large deviations of the number of prime factors}. The two literatures --- the
-extreme-value theory of $\zeta$ (Fyodorov--Hiary--Keating and its rigorous developments) and the distributional
-theory of $\omega(n)$ (Erd\H{o}s--Kac, Sathe--Selberg) --- are here the same statement viewed through $z=\beta^2$.
+For $z=1$, Theorem~\ref{thm:ld} is the Erd\H{o}s--Kac theorem \cite{ErdosKac} for the harmonic weight $1/n$ on
+$n\le N$; for general $z$ it is the corresponding statement for the tilted weight and belongs to the
+Sathe--Selberg circle of results \cite{Sathe,SelbergSathe}. The concentration is slow, the relative width being
+$(z\loglog N)^{-1/2}$ and the factor $C(zw)/C(z)$ being far from $1$ at accessible $N$ (see
+\S\ref{sec:numerics}). The following interpretation is heuristic. For $z=\beta^2$ the measure
+$\mu_{N,\beta^2}$ restricted to squarefree $n$ is proportional to the diagonal weight $d_\beta(n)^2/n$
+(Proposition~\ref{prop:dict}), so in the diagonal approximation the $2\beta$-th moment of $\zeta$ is carried by
+integers with about $\beta^2\loglog N$ prime factors. In this sense the distributional theory of $\omega(n)$ and
+the moment theory of $\zeta$ are linked, at the level of the diagonal exponent, by $z=\beta^2$; no statement
+about the chaos measures of \S\ref{sec:prelim} or about the maximum of $\zeta$ follows from
+Theorem~\ref{thm:ld}.
 \end{remark}
 
 \section{The branching hierarchy}\label{sec:branch}
 
-We now make the branching structure of the model $G$ explicit, organizing the primes by a logarithmic-scale
-level so that the hierarchy becomes a branching random walk whose depth is the source of the subleading FHK term.
+We organize the primes of the model $G$ by a doubly logarithmic scale.
 
 \begin{definition}
 For an integer $j\ge0$ the \emph{$j$-th level} is the set of primes
-$\mathcal L_j=\{p:\ \lfloor\loglog p\rfloor=j\}=\{p:\ e^{e^{j}}\le p<e^{e^{j+1}}\}$.
+$\mathcal L_j=\{p:\ \lfloor\loglog p\rfloor=j\}=\{p:\ e^{e^{j}}\le p<e^{e^{j+1}}\}$, and
+$\mathcal L_{-1}=\{2\}$ (the only prime with $\loglog p<0$).
 \end{definition}
 
-\begin{proposition}[equal-variance levels]\label{prop:levels}
+\begin{proposition}[levels of asymptotically equal variance]\label{prop:levels}
 The variance of the model contributed by level $\mathcal L_j$ is
 \[
-V_j:=\half\sum_{p\in\mathcal L_j}\frac1p\ =\ \half\bigl(\loglog e^{e^{j+1}}-\loglog e^{e^{j}}\bigr)+o(1)\ =\ \half\bigl((j+1)-j\bigr)+o(1)\ =\ \half+o(1),
+V_j:=\half\sum_{p\in\mathcal L_j}\frac1p\ =\ \half+O(e^{-j})\qquad(j\ge0),
 \]
-by Mertens' theorem $\sum_{p\le x}1/p=\loglog x+M+o(1)$. Consequently, truncating at primes $p\le T$
-(equivalently $\loglog p\le\loglog T$), the model $G$ is a sum of
+by Mertens' theorem in the form $\sum_{p\le x}1/p=\loglog x+M+O(1/\log x)$. Consequently, for the truncation
+$X=T$ and $n=\lfloor\loglog T\rfloor$, the model $G$ is the sum of the contributions of the single prime $2$
+(of variance $V_{-1}=\tfrac14$), of the full levels $\mathcal L_0,\dots,\mathcal L_{n-1}$ and of the partial
+level $\mathcal L_n\cap[2,T]$, and
 \[
-n\ =\ \loglog T\ +\ O(1)
+V=\half\sum_{p\le T}\frac1p=\half\loglog T+\frac M2+O\Bigl(\frac1{\log T}\Bigr)=\frac n2+O(1),
 \]
-levels, each contributing variance $\half$, with total variance $V=\sum_{j<n}V_j\sim\tfrac n2=\half\loglog T$, in
-agreement with \eqref{eq:variance}.
+in agreement with \eqref{eq:variance}.
 \end{proposition}
 \begin{proof}
-By Mertens, $\sum_{p\in\mathcal L_j}1/p=\loglog e^{e^{j+1}}-\loglog e^{e^{j}}+o(1)=(j+1)-j+o(1)=1+o(1)$, whence
-$V_j=\half+o(1)$. Summing over $0\le j<n$ with $n=\loglog T+O(1)$ gives $V\sim n/2$.
+By Mertens' theorem with remainder \cite{Mertens}, \cite[Ch.~I.1]{Tenenbaum},
+\[
+\sum_{p\in\mathcal L_j}\frac1p=\loglog e^{e^{j+1}}-\loglog e^{e^{j}}+O(e^{-j})=1+O(e^{-j}),
+\]
+since $\log e^{e^{j}}=e^{j}$. The decomposition of the primes $p\le T$ is the definition of the levels, and the
+formula for $V$ is Mertens' theorem at $x=T$.
 \end{proof}
 
-Proposition~\ref{prop:levels} is the structural statement that the primes, organized by the doubly-logarithmic
-scale of their size, form a hierarchy of $\loglog T$ equal-variance levels. Together with the logarithmic
-covariance $\Ee[G(t)G(t')]\sim-\half\log|t-t'|$, this is precisely the data of a branching random walk (BRW) with
-$n=\loglog T$ generations and increment variance $\half$: each level refines the previous one, the partial sums
-$G_j(t)=\sum_{p\in\mathcal L_0\cup\cdots\cup\mathcal L_j}\cos(t\log p)/\sqrt p$ playing the role of the walk after
-$j$ generations, with values at nearby $t$ decorrelating as the level increases.
+Thus the primes $p\le T$, organized by the doubly logarithmic scale of their size, form about $\loglog T$ levels
+whose variances tend to $\half$ (numerically $V_0=0.422$, $V_1=0.461$; see \S\ref{sec:numerics}). The partial sums
+\[
+G_j(t)=\sum_{p\in\mathcal L_{-1}\cup\mathcal L_0\cup\cdots\cup\mathcal L_j}\frac{\cos(t\log p)}{\sqrt p}
+\]
+play the role of a walk after $j$ generations: by the covariance formula of \S\ref{sec:prelim}, the values of
+$G_j$ at two points $t$, $t+h$ are strongly correlated when $|h|\le e^{-j}$ and the later increments at these
+two points decorrelate. This is the approximate branching structure used in \cite{ABBRS}; the level sums are
+not exactly the independent increments of a tree-indexed walk.
 
 \section{The two terms of the maximum}\label{sec:max}
 
-We assemble \eqref{eq:fhk} from the branching model. We emphasize (\S\ref{sec:intro}.4) that the rigorous passage
-from the model to the true maximum of $\log|\zeta|$ is the content of the cited works; the purpose here is to
-display both terms as features of the $\omega$-hierarchy.
+We recall how \eqref{eq:fhk} is read off the branching model. As stated in \S\ref{ssec:scope}, the passage from
+the model to the maximum of $\log|\zeta|$ is the content of the cited works and is not reproved here.
 
 \begin{heuristic}[the maximum from the hierarchy]\label{heur:max}
-For a branching random walk with $n$ generations, increment variance $\sigma^2$, and the relevant branching/
-covariance normalization, the maximum satisfies the Bramson asymptotic
+For a Gaussian branching random walk with $n$ generations, $e^{\kappa n}$ leaves and increment variance
+$\sigma^2$, the maximum over the leaves is
 \[
-\max\ =\ c\,n\ -\ \frac{3}{2c}\log n\ +\ O_{\Pp}(1),
+c\,n\ -\ \frac{3}{2\theta}\log n\ +\ O_{\Pp}(1),\qquad c=\sigma\sqrt{2\kappa},\quad\theta=\frac{c}{\sigma^2}
 \]
-where $c$ is the leading velocity. For the model $G$, with $n=\loglog T$ levels (Proposition~\ref{prop:levels}),
-$\sigma^2=\half$, and the log-correlated normalization fixing $c$ so that the leading height equals
-$2V=n=\loglog T$, one obtains
+\textup{(}Bramson \cite{Bramson} for branching Brownian motion; Addario-Berry--Reed \cite{ABReed} and A\"{\i}d\'ekon
+\cite{Aidekon} for branching random walks\textup{)}. In the model $G$, level $j$ consists of the primes with
+$\log p\in[e^{j},e^{j+1})$, so $G_j$ varies on the scale $e^{-j}$ in $t$ and an interval of length $1$ carries
+about $e^{j}$ distinct values: $\kappa=1$. With $\sigma^2=\half$ (Proposition~\ref{prop:levels}) and
+$n=\loglog T$ this gives $c=1$, $\theta=2$, hence, for $t$ uniform on $[T,2T]$,
 \[
-\max_{t\in[T,T+1]}G(t)\ =\ \underbrace{2V}_{=\,\loglog T}\ -\ \underbrace{\frac32\cdot\frac12}_{=\,3/4}\,\log n\ +\ O_{\Pp}(1)\ =\ \loglog T\ -\ \tfrac34\,\llll T\ +\ O_{\Pp}(1),
+\max_{|h|\le1}G(t+h)\ =\ \loglog T\ -\ \tfrac34\,\llll T\ +\ O_{\Pp}(1),
 \]
-since $\log n=\log(\loglog T)=\llll T$. The leading term is twice the total variance $V=\half\loglog T$; the
-subleading coefficient $-\tfrac34=\tfrac32\cdot\tfrac12$ is the universal Bramson constant $-\tfrac32$ times the
-velocity/variance factor $\tfrac12$, and the argument $\log n=\llll T$ is the logarithm of the hierarchy
-\emph{depth} $n=\loglog T$.
+since $\log n=\llll T$. The coefficient $\tfrac34$ is $3/(2\theta)$ with $\theta=2$, and the argument
+$\log n=\llll T$ is the logarithm of the number $n=\loglog T$ of levels.
 \end{heuristic}
 
-Thus both terms of \eqref{eq:fhk} are read off the $\omega$-hierarchy: the leading $\loglog T$ from its total
-variance (equivalently its depth, since each of the $\loglog T$ levels carries variance $\half$), and the
-subleading $-\tfrac34\llll T$ from the universal branching (Bramson) correction applied to that depth. Replacing
-$G$ by $\log|\zeta|$ and the heuristic by the theorems of Arguin--Belius--Bourgade--Radziwi{\l}{\l}--Soundararajan,
-Najnudel, Arguin--Bourgade--Radziwi{\l}{\l} and Harper makes \eqref{eq:fhk} rigorous; the $\omega$-hierarchy
-supplies the interpretation of its two constants.
+Thus the leading term $\loglog T$ of \eqref{eq:fhk} is $c\,n$ with $c=\sqrt{2\kappa\sigma^2}=1$; it equals
+twice the total variance $V\sim\half\loglog T$ because $\kappa=2\sigma^2$ here (about $\log T=e^{2V}$
+effectively independent values on an interval of length $1$). The subleading term $-\tfrac34\llll T$ is the
+logarithmic correction of the branching random walk with these parameters. For $\log|\zeta|$ in place of $G$,
+the leading term is the theorem of \cite{ABBRS} (see also \cite{Najnudel}), and the upper bound with the
+correction and the tightness are the theorems of \cite{ABR1,ABR2}, after \cite{HarperFHK}.
 
-\section{Numerical confirmation}\label{sec:numerics}
+\section{Numerical illustration}\label{sec:numerics}
 
-All computations below use only elementary sieving and are reproducible with a few lines of \texttt{numpy}.
+The computations below are produced by the script \texttt{numerics.py} accompanying this note (sieving in
+double precision). They are at small scale, $\loglog N<3$, and illustrate the statements above without
+confirming any asymptotic.
 
-\paragraph{The per-prime weight (Proposition~\ref{prop:dk}).} For squarefree $n$ and $k=3$, direct evaluation
-gives $\dk(6)=9=3^2=k^{\omega(6)}$, $\dk(30)=27=3^3=k^{\omega(30)}$, etc., confirming $\dk(n)=k^{\omega(n)}$.
+\paragraph{The per-prime weight (Proposition~\ref{prop:dk}).} For $k=3$: $d_3(6)=9=3^{\omega(6)}$ and
+$d_3(30)=27=3^{\omega(30)}$.
 
-\paragraph{The exponent of the $\omega$-weighted sum \eqref{eq:zomega}.} Fitting
-$\log\sum_{n\le N}z^{\omega(n)}/n$ against $\log\log N$ over $N\in[3\cdot10^4,2\cdot10^6]$ yields fitted exponents
-tracking $z$ (with the slow finite-$N$ drift characteristic of $(\log N)^z$): for $z=1$ the fitted exponent is
-$1.04$; for $z=\tfrac14$ ($\beta=\tfrac12$), $0.46$; the large-$z$ values ($z=4,9$) drift well below their
-asymptote, as for all divisor moments at accessible $N$.
+\paragraph{The \texorpdfstring{$\omega$}{omega}-weighted sum \eqref{eq:zomega}.} A least-squares fit of $\log S_N(z)$ against
+$\loglog N$ on $30$ logarithmically spaced values of $N$ in $[3\cdot10^4,2\cdot10^6]$ gives slopes
+$0.25$, $0.96$, $2.84$, $4.61$ for $z=\tfrac14,1,4,9$. At $N=2\cdot10^6$ the ratio $S_N(z)/(\log N)^z$ equals
+$1.189$ for $z=\tfrac14$ (against $C(\tfrac14)=1.191$) and $1.040$ for $z=1$ (against $C(1)=1$; here
+$S_N(1)=\log N+\gamma+O(1/N)$), while for $z=4$ and $z=9$ it is still about $4$ and $10^3$ times $C(z)$. For the
+squarefree sum of Theorem~\ref{thm:weight}(b) the ratio is $1.013$ for $z=\tfrac14$ (against
+$C^\flat(\tfrac14)=1.006$) and $0.680$ for $z=1$ (against $C^\flat(1)=6/\pi^2=0.608$).
 
-\paragraph{Equal-variance levels (Proposition~\ref{prop:levels}).} Sieving primes to $X=10^7$ and grouping by
-$j=\lfloor\loglog p\rfloor$ gives level variances $V_j=\tfrac12\sum_{p\in\mathcal L_j}1/p$ equal to
-$0.42,\,0.46,\,0.39$ for $j=0,1,2$, each near $\tfrac12$, with total variance $V=1.27$ and
-$\loglog X=2.78$, so $V\approx\tfrac n2$.
+\paragraph{The tilted mean (Theorem~\ref{thm:ld}).} At $N=2\cdot10^6$, where $\loglog N=2.675$, the mean of
+$\omega$ under $\mu_{N,z}$ is $0.77$, $2.06$, $3.76$, $4.61$ for $z=\tfrac14,1,4,9$, against
+$z\loglog N=0.67$, $2.67$, $10.70$, $24.07$: the mean increases with $z$, but for $z=4$ and $z=9$ it is far
+below its asymptotic value at this height.
 
-\paragraph{The leading height $2V$ (\S\ref{sec:max}).} For $G(t)=\sum_{p\le X}\cos(t\log p)/\sqrt p$ on a window
-at height $10^7$, $V=\Var G\approx\tfrac12\loglog X$ and the empirical maximum over the window is comparable to
-$2V$, the ratio $\max G/2V$ decreasing toward $1$ from above as $X$ grows ($1.72,1.44,1.40$ for
-$X=2\cdot10^3,2\cdot10^4,2\cdot10^5$), consistent with the finite-length field not yet attaining its asymptotic
-extreme.
+\paragraph{Levels (Proposition~\ref{prop:levels}).} Sieving to $X=10^7$: $V_{-1}=0.25$ (the prime $2$),
+$V_0=0.422$, $V_1=0.461$, and the part of $\mathcal L_2$ below $10^7$ (the level ends at
+$e^{e^3}\approx5.3\cdot10^8$) contributes $0.388$. The total is $V=1.521$, against
+$\half(\loglog X+M)=1.521$.
+
+\paragraph{The maximum of the model (\S\ref{sec:max}).} For $X=2\cdot10^3,\,2\cdot10^4,\,2\cdot10^5$ we
+computed $\max_{0\le h\le1}G_X(t+h)$, sampled with step $0.002$ in $h$, for the $200$ values
+$t=10^7+10i$, $0\le i<200$.
+The mean of these $200$ maxima is $0.98$, $1.16$, $1.32$ (with standard deviation about $0.9$ in each
+case), that is $0.43$, $0.45$, $0.48$ times $2V=2.29,\,2.55,\,2.76$; the corresponding values of
+$(\loglog X-\tfrac34\llll X)/(2V)$ are $0.65$, $0.65$, $0.66$ (this expression is for the window $|h|\le1$ of \eqref{eq:fhk}; the change of window
+length alters the maximum by $O(1)$). The maximum over a unit window is thus well below
+$2V$ at these heights and increases with $X$, as the model predicts; the difference from the two-term
+expression is of the size of the $O_{\Pp}(1)$ term, which is not negligible when $\loglog X<3$.
 
 \section{Discussion}\label{sec:discussion}
 
-\subsection{What the synthesis says}
-The single device $z=\beta^2$ --- the per-prime weight of the chaos parameter --- ties together objects usually
-treated by different techniques:
+\subsection{Summary}
+The substitution $z=\beta^2$ places side by side objects usually treated by different techniques:
 \begin{multline*}
-\underbrace{k^2\text{ moment exponent}}_{\text{Thm.~\ref{thm:weight}}}
+\underbrace{\text{exponent $k^2$ of the diagonal}}_{\text{Thm.~\ref{thm:weight}}}
 \ \longleftrightarrow\
-\underbrace{\beta^2\text{ chaos exponent}}_{\text{Prop.~\ref{prop:dict}}}
+\underbrace{\text{exponent $\beta^2$}}_{\text{Prop.~\ref{prop:dict}}}
 \ \longleftrightarrow\
 \underbrace{z\loglog N\text{ prime factors}}_{\text{Thm.~\ref{thm:ld}}}\\
 \longleftrightarrow\
@@ -429,63 +550,93 @@ treated by different techniques:
 \ \longrightarrow\
 \underbrace{\eqref{eq:fhk}}_{\S\ref{sec:max}}.
 \end{multline*}
-The exponent $k^2$ is the square of the per-factor multiplicity; the freezing of the chaos is the neutral weight
-$z=1$; the supercritical (extreme) regime is the large-deviation regime of $\omega(n)$; and the two constants of
-the maximum are the depth and Bramson correction of the prime hierarchy organized by doubly-logarithmic scale.
-The ``$\omega$-class fingerprint'' recorded earlier in this program is, by Theorem~\ref{thm:weight}, simply the
-moment exponent; the present paper explains why, and extends the identification to the chaos and the maximum.
+The exponent $k^2$ of the diagonal sum is the square of the value $\dk(p)=k$; the critical value $\beta_c=1$
+corresponds formally to the trivial weight $z=1$; under the weight $z^{\omega(n)}/n$ the integers that matter
+have about $z\loglog N$ prime factors; and the two constants of the maximum are those of a branching random walk
+with $\loglog T$ levels, branching rate $\kappa=1$ and increment variance $\half$. The statements under the
+braces (Theorem~\ref{thm:weight}, Proposition~\ref{prop:dict}, Theorem~\ref{thm:ld},
+Proposition~\ref{prop:levels}) are proved. The arrows between them are not theorems: the first two are the
+substitutions $z=k^2$ and $z=\beta^2$; the third is an analogy (by Mertens' theorem each level carries
+$\sum_{p\in\mathcal L_j}1/p=1+O(e^{-j})$, so that under $\mu_{N,z}$ an integer has on average about $z$ prime
+factors in each level below $N$); the last is heuristic (\S\ref{sec:max}).
 
-\subsection{The rigorous/heuristic boundary}
-The arithmetic statements (Propositions~\ref{prop:dk}, \ref{prop:dict}, \ref{prop:levels} and
-Theorems~\ref{thm:weight}, \ref{thm:ld}) are unconditional. The only non-rigorous step is the identification of
-the random-field model $G$ with $\log|\zeta|$ at the level of the maximum (\S\ref{sec:max}); for the moments and
-the subcritical chaos this identification is itself a theorem, and for the maximum it is the cited body of work,
-which we do not reprove. We have placed the boundary explicitly so that the synthesis cannot be mistaken for a
-new theorem about the maximum.
+\subsection{Proved and heuristic statements}
+Lemma~\ref{lem:lsd}, Propositions~\ref{prop:dk}, \ref{prop:dict}, \ref{prop:levels} and
+Theorems~\ref{thm:weight}, \ref{thm:ld} are unconditional. The identification of the diagonal sums with moments
+of $\zeta$ is heuristic except in the following cases: for $k=1,2$ the moment asymptotics are theorems
+\cite{HL,Ingham} (with a constant that for $k=2$ is twice the diagonal one), and for real $\beta$ the order of
+magnitude $(\log T)^{\beta^2}$ is known in the ranges recalled in Remark~\ref{rem:dict}. The identification of
+the model $G$ with $\log|\zeta|$ at the level of the maximum (\S\ref{sec:max}) is the content of
+\cite{ABBRS,Najnudel,ABR1,ABR2,HarperFHK}.
 
 \subsection{Relation to the Riemann Hypothesis}
-Nothing here is conditional on, or implies, the Riemann Hypothesis. The objects studied --- moments, chaos,
-maximum, and the distribution of $\omega(n)$ --- are features of $\zeta$ on the critical line and of the
-multiplicative structure of the integers, independent of the location of the nontrivial zeros. We regard this
-RH-independence as a feature: the value of the synthesis is intrinsic to the analytic and arithmetic theory of
-large values, and does not rest on a hypothesis.
+No statement of this note assumes or bears on the Riemann Hypothesis.
 
 \subsection{Open directions}
-Three questions seem natural. First, to upgrade Heuristic~\ref{heur:max} to a statement \emph{about} $\log|\zeta|$
-by tracking the $\omega$-level decomposition through the rigorous moment method, recovering the
-Arguin--Belius--Bourgade--Radziwi{\l}{\l}--Soundararajan upper bound in $\omega$-class language. Second, to read
-the random-matrix factor $g_k$ in the moment conjecture --- the off-diagonal contribution absent from
-Theorem~\ref{thm:weight} --- in terms of correlations between $\omega$-levels (the additive-divisor/shifted-
-convolution problem). Third, to express the lower-order terms of the Fyodorov--Hiary--Keating law beyond
-\eqref{eq:fhk} via finer features (fluctuations, the derivative martingale) of the $\omega$-hierarchy. Each is a
-concrete, RH-independent problem at the interface of the two literatures the dictionary connects.
+Three questions seem natural. First, to follow the level decomposition of \S\ref{sec:branch} through the moment
+method of \cite{ABBRS}, so as to state its upper bound in terms of the levels $\mathcal L_j$. Second, to
+describe the factor $g_k$ of the moment conjecture, which is absent from Theorem~\ref{thm:weight}, in terms of
+correlations between levels (the additive divisor problem). Third, to relate the finer features of the
+Fyodorov--Hiary--Keating law beyond \eqref{eq:fhk}, such as the limiting distribution of the recentred maximum,
+to the level structure.
 
 \begin{thebibliography}{99}
+\bibitem{ABReed} L.~Addario-Berry, B.~Reed, \emph{Minima in branching random walks},
+Ann.\ Probab.\ \textbf{37} (2009), 1044--1079.
+\bibitem{Aidekon} E.~A\"{\i}d\'ekon, \emph{Convergence in law of the minimum of a branching random walk},
+Ann.\ Probab.\ \textbf{41} (2013), 1362--1426.
 \bibitem{ABBRS} L.-P.~Arguin, D.~Belius, P.~Bourgade, M.~Radziwi{\l}{\l}, K.~Soundararajan,
 \emph{Maximum of the Riemann zeta function on a short interval of the critical line},
 Comm.\ Pure Appl.\ Math.\ \textbf{72} (2019), 500--535.
-\bibitem{ABR} L.-P.~Arguin, P.~Bourgade, M.~Radziwi{\l}{\l},
-\emph{The Fyodorov--Hiary--Keating conjecture}, parts I--II, preprints (2020s).
+\bibitem{ABR1} L.-P.~Arguin, P.~Bourgade, M.~Radziwi{\l}{\l},
+\emph{The Fyodorov--Hiary--Keating conjecture.~I}, preprint, arXiv:2007.00988 (2020).
+\bibitem{ABR2} L.-P.~Arguin, P.~Bourgade, M.~Radziwi{\l}{\l},
+\emph{The Fyodorov--Hiary--Keating conjecture.~II}, preprint, arXiv:2307.00982 (2023).
 \bibitem{Bramson} M.~Bramson, \emph{Convergence of solutions of the Kolmogorov equation to travelling waves},
-Mem.\ Amer.\ Math.\ Soc.\ \textbf{44} (1983).
+Mem.\ Amer.\ Math.\ Soc.\ \textbf{44} (1983), no.~285.
 \bibitem{CFKRS} J.~B.~Conrey, D.~W.~Farmer, J.~P.~Keating, M.~O.~Rubinstein, N.~C.~Snaith,
-\emph{Integral moments of $L$-functions}, Proc.\ London Math.\ Soc.\ \textbf{91} (2005), 33--104.
+\emph{Integral moments of $L$-functions}, Proc.\ London Math.\ Soc.\ (3) \textbf{91} (2005), 33--104.
+\bibitem{Delange} H.~Delange, \emph{Sur des formules de Atle Selberg}, Acta Arith.\ \textbf{19} (1971), 105--146.
+\bibitem{ErdosKac} P.~Erd\H{o}s, M.~Kac, \emph{The Gaussian law of errors in the theory of additive number
+theoretic functions}, Amer.\ J.\ Math.\ \textbf{62} (1940), 738--742.
 \bibitem{FHK} Y.~V.~Fyodorov, G.~A.~Hiary, J.~P.~Keating,
 \emph{Freezing transition, characteristic polynomials of random matrices, and the Riemann zeta function},
 Phys.\ Rev.\ Lett.\ \textbf{108} (2012), 170601.
-\bibitem{Harper} A.~J.~Harper, \emph{The Riemann zeta function in short intervals} and
-\emph{On the partition function of the Riemann zeta function, and the Fyodorov--Hiary--Keating conjecture},
-preprints (2019).
+\bibitem{FK} Y.~V.~Fyodorov, J.~P.~Keating, \emph{Freezing transitions and extreme values: random matrix theory,
+$\zeta(\frac12+it)$ and disordered landscapes}, Philos.\ Trans.\ R.\ Soc.\ A \textbf{372} (2014), 20120503.
+\bibitem{HL} G.~H.~Hardy, J.~E.~Littlewood, \emph{Contributions to the theory of the Riemann zeta-function and
+the theory of the distribution of primes}, Acta Math.\ \textbf{41} (1918), 119--196.
+\bibitem{HarperMoments} A.~J.~Harper, \emph{Sharp conditional bounds for moments of the Riemann zeta function},
+preprint, arXiv:1305.4618 (2013).
+\bibitem{HarperFHK} A.~J.~Harper, \emph{On the partition function of the Riemann zeta function, and the
+Fyodorov--Hiary--Keating conjecture}, preprint, arXiv:1906.05783 (2019).
+\bibitem{HarperBourbaki} A.~J.~Harper, \emph{The Riemann zeta function in short intervals [after Najnudel, and
+Arguin, Belius, Bourgade, Radziwi{\l}{\l} and Soundararajan]}, S\'eminaire Bourbaki, exp.~1159,
+Ast\'erisque \textbf{422} (2020).
+\bibitem{HRS} W.~Heap, M.~Radziwi{\l}{\l}, K.~Soundararajan, \emph{Sharp upper bounds for fractional moments of
+the Riemann zeta function}, Q.\ J.\ Math.\ \textbf{70} (2019), 1387--1396.
+\bibitem{HS} W.~Heap, K.~Soundararajan, \emph{Lower bounds for moments of zeta and $L$-functions revisited},
+Mathematika \textbf{68} (2022), 1--14.
+\bibitem{Ingham} A.~E.~Ingham, \emph{Mean-value theorems in the theory of the Riemann zeta-function},
+Proc.\ London Math.\ Soc.\ (2) \textbf{27} (1926), 273--300.
+\bibitem{KS} J.~P.~Keating, N.~C.~Snaith, \emph{Random matrix theory and $\zeta(1/2+it)$},
+Comm.\ Math.\ Phys.\ \textbf{214} (2000), 57--89.
+\bibitem{Mertens} F.~Mertens, \emph{Ein Beitrag zur analytischen Zahlentheorie},
+J.\ reine angew.\ Math.\ \textbf{78} (1874), 46--62.
 \bibitem{Najnudel} J.~Najnudel, \emph{On the extreme values of the Riemann zeta function on random intervals of
 the critical line}, Probab.\ Theory Related Fields \textbf{172} (2018), 387--452.
 \bibitem{SaksmanWebb} E.~Saksman, C.~Webb, \emph{The Riemann zeta function and Gaussian multiplicative chaos:
 statistics on the critical line}, Ann.\ Probab.\ \textbf{48} (2020), 2680--2754.
+\bibitem{Sathe} L.~G.~Sathe, \emph{On a problem of Hardy on the distribution of integers having a given number
+of prime factors.\ I--IV}, J.\ Indian Math.\ Soc.\ \textbf{17} (1953), 63--141; \textbf{18} (1954), 27--81.
 \bibitem{Selberg} A.~Selberg, \emph{Contributions to the theory of the Riemann zeta-function},
 Arch.\ Math.\ Naturvid.\ \textbf{48} (1946), 89--155.
+\bibitem{SelbergSathe} A.~Selberg, \emph{Note on a paper by L.~G.~Sathe},
+J.\ Indian Math.\ Soc.\ \textbf{18} (1954), 83--87.
 \bibitem{Sound} K.~Soundararajan, \emph{Moments of the Riemann zeta function},
-Ann.\ of Math.\ \textbf{170} (2009), 981--993.
+Ann.\ of Math.\ (2) \textbf{170} (2009), 981--993.
 \bibitem{Tenenbaum} G.~Tenenbaum, \emph{Introduction to Analytic and Probabilistic Number Theory},
-3rd ed., Amer.\ Math.\ Soc., 2015.
+3rd ed., Graduate Studies in Mathematics~163, Amer.\ Math.\ Soc., 2015.
 \end{thebibliography}
 
 \end{document}
