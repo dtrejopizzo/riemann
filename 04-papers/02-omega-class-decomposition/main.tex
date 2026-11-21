@@ -1,24 +1,15 @@
 \documentclass[11pt]{amsart}
 
-% ── Packages ──────────────────────────────────────────────────────────────
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{graphicx}
 \usepackage{booktabs}
-\usepackage{hyperref}
-\usepackage{microtype}
-\usepackage{enumitem}
 \usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
 \usepackage{float}
 \usepackage{caption}
-\usepackage{subcaption}
-\usepackage{mathtools}
-\usepackage{tikz}
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-\usepackage[numbers,sort&compress]{natbib}
 
-% ── Theorem environments ──────────────────────────────────────────────────
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
@@ -26,22 +17,15 @@
 \newtheorem{conjecture}[theorem]{Conjecture}
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{observation}[theorem]{Observation}
 
-% ── Macros ────────────────────────────────────────────────────────────────
 \newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Nat}{\mathbb{N}}
 \newcommand{\half}{\tfrac{1}{2}}
 \newcommand{\abs}[1]{\lvert #1 \rvert}
-\newcommand{\norm}[1]{\lVert #1 \rVert}
 \newcommand{\re}{\operatorname{Re}}
-\newcommand{\im}{\operatorname{Im}}
-\DeclareMathOperator{\ord}{ord}
 
 \hypersetup{
   colorlinks=true,
@@ -50,1024 +34,1038 @@
   urlcolor=blue!70!black
 }
 
-% ══════════════════════════════════════════════════════════════════════════
-\title[The $\omega$-Class Decomposition]{The $\omega$-Class Decomposition of Dirichlet Polynomials:\\
-A New Framework for the Lindel\"of Hypothesis}
+\title[The $\omega$-class decomposition]{The $\omega$-class decomposition of
+Dirichlet polynomials:\\ elementary bounds and computations}
 
 \author{David Alejandro Trejo Pizzo}
 \thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
 
+\raggedbottom
 \begin{document}
 \begin{abstract}
-We introduce the \emph{$\omega$-class decomposition}, a partition of the
-standard Dirichlet polynomial $D(t;N) = \sum_{n \le N} n^{-1/2-it}$
-into sub-sums $S_k(t;N)$ indexed by $\omega(n) = k$, the number of
-distinct prime factors.  We prove four unconditional theorems bounding
-the amplification ratio $(1+r) = |D|^2 / \sum_k |S_k|^2$, culminating
-in a reduction: a uniform pointwise bound
-$B(N) = \max_{t,k} |S_k(t;N)|^2 \le C_\varepsilon N^\varepsilon$
-on the individual class sums, for every $\varepsilon > 0$, \emph{implies}
-the Lindel\"of Hypothesis.  We stress that this is a one-directional
-\emph{sufficient} condition: because $B(N)$ controls each $\omega$-class
-separately, whereas the Lindel\"of Hypothesis constrains only the full
-sum~$D$, the bound $B(N)\le N^\varepsilon$ is plausibly \emph{strictly
-stronger} than LH and is not known to follow from it.  We prove a conditional \emph{Master Theorem}
-linking $B(N) \le N^\alpha$ to the bound
-$|\zeta(\half + it)| \ll t^{\alpha/2 + \varepsilon}$
-via the Approximate Functional Equation.
-Extensive computation at $N \in \{10^4, 5 \times 10^4, 10^5, 1.5 \times 10^5\}$
-reveals: (i)~the empirical exponent $\alpha_B = \log B(N)/\log N$ decreases
-from $0.428$ to $0.395$ in the $k{=}2$ regime;
-(ii)~a dominance transition from $k{=}2$ (semiprimes) to $k{=}3$
-(triprimes) occurs near $N \approx 10^5$, causing a reversal in
-$\alpha_B$; (iii)~a phase resonance mechanism with Rayleigh statistic
-$R \approx 0.92$ explains the hardness gap between large-sieve mean
-bounds and observed maxima.  We formulate the open problem of
-bounding $B(N)$ uniformly over all $\omega$-classes and discuss
-connections to bilinear and multilinear exponential sum estimates.
-Full reproduction code is provided.
+We split the Dirichlet polynomial
+$D(t;N)=\sum_{2\le n\le N} n^{-1/2-it}$ into the sub-sums $S_k(t;N)$ over the
+integers with $\omega(n)=k$ distinct prime factors.  Since there are
+$K_N\le\log_2 N$ classes, the Cauchy--Schwarz inequality gives
+$|D|^2\le K_N\sum_k|S_k|^2\le K_N^2\max_k|S_k|^2$.  Combined with the
+classical approximation of $\zeta(\half+it)$ by its partial sum of length
+$\lceil t\rceil$, this shows that a bound
+$B(N)=\max_{t\in[N/10,N],\,k}|S_k(t;N)|^2\le N^{\alpha}$ implies
+$\zeta(\half+it)\ll t^{\alpha/2}\log t$.  The implication uses only the
+number of classes.  The hypothesis for every $\alpha>0$ is sufficient for
+the Lindel\"of hypothesis; it is not known to follow from it, and already
+for the class $k=1$ it is expected to be of the strength of the Riemann
+hypothesis.  We also record the mean square of each $S_k$, which follows
+from the mean value theorem of Montgomery and Vaughan.
+
+The second part of the paper is numerical.  For
+$N\in\{10^4,\,5\times10^4,\,10^5,\,1.5\times10^5\}$ we compute the class
+sums on a grid of spacing $\pi/\log N$ in $t\in[N/10,N]$ and refine the
+largest local maxima; the resulting values are lower bounds for $B(N)$.
+On this range $\log B(N)/\log N$ stays between $0.41$ and $0.43$ and shows
+no monotone trend; the class attaining the maximum changes from $k=2$ to
+$k=3$ between $N=5\times10^4$ and $N=10^5$; the largest values of
+$|S_k|^2$ at $N=1.5\times10^5$ exceed the mean square by factors between
+$8.6$ and $131$; and at
+the largest value found of $|S_3|^2$ the contributions of the five decades
+of $n$ have nearly equal arguments (resultant length $0.95$).  The code
+that produces every number, table and figure is supplied.
 \end{abstract}
 
 \maketitle
 
-% ══════════════════════════════════════════════════════════════════════════
-
-
-\tableofcontents
-\newpage
-
-% ══════════════════════════════════════════════════════════════════════════
 \section{Introduction}\label{sec:intro}
-The Lindel\"of Hypothesis (LH) asserts that for every $\varepsilon > 0$,
+The Lindel\"of hypothesis (LH) asserts that for every $\varepsilon > 0$,
 \begin{equation}\label{eq:lindelof}
   \abs{\zeta(\half + it)} \ll_\varepsilon t^\varepsilon
   \qquad (t \to \infty).
 \end{equation}
-This would follow from the Riemann Hypothesis (RH), but the converse
-is false: LH is strictly weaker than RH.
-Despite a century of effort, the best unconditional bound remains
-subconvex: $\abs{\zeta(\half+it)} \ll t^{13/84+\varepsilon}$
-(Bourgain~\cite{bourgain2017}).
+It follows from the Riemann hypothesis (RH) \cite[\S14.2]{titchmarsh1986}.
+The converse implication is not known; LH is equivalent to the statement
+that $N(\sigma,T+1)-N(\sigma,T)=o(\log T)$ for every $\sigma>\half$, where
+$N(\sigma,T)$ counts the zeros $\beta+i\gamma$ of $\zeta$ with
+$\beta>\sigma$, $0<\gamma\le T$ \cite[Theorem~13.5]{titchmarsh1986}.
+The best published exponent known to us is that of Bourgain
+\cite{bourgain2017}: $\abs{\zeta(\half+it)} \ll t^{13/84+\varepsilon}$.
 
-Our approach begins with the observation that the Dirichlet polynomial
+The Dirichlet polynomial
 \begin{equation}\label{eq:D_def}
   D(t;N) = \sum_{n=2}^{N} n^{-1/2 - it}
 \end{equation}
-approximates $\zeta(\half+it)$ for $N \sim t$ (via the Approximate
-Functional Equation, Theorem~\ref{thm:master}).  We decompose $D$
-by the arithmetic function $\omega(n)$, the number of distinct prime
-factors of~$n$:
+satisfies $\zeta(\half+it)=1+D(t;N)+O(t^{-1/2})$ for $N=\lceil t\rceil$
+(by \cite[Theorem~4.11]{titchmarsh1986}; see the proof of
+Theorem~\ref{thm:master}).  We decompose $D$ according to the arithmetic
+function $\omega(n)$, the number of distinct prime factors of~$n$:
 \begin{equation}\label{eq:Sk_def}
-  S_k(t;N) = \sum_{\substack{n \le N \\ \omega(n) = k}}
+  S_k(t;N) = \sum_{\substack{2\le n \le N \\ \omega(n) = k}}
     n^{-1/2-it}, \qquad
   D(t;N) = \sum_{k=1}^{K_N} S_k(t;N),
 \end{equation}
-where $K_N = \max\{\omega(n) : 2 \le n \le N\}$.
+where $K_N = \max\{\omega(n) : 2 \le n \le N\}$.  The term $n=1$, the only
+integer with $\omega(n)=0$, is kept apart.
 
-The ratio between $|D|^2$ and the diagonal energy
-$E = \sum_k |S_k|^2$ encodes the interference structure:
+We compare $|D|^2$ with the sum $E = \sum_k |S_k|^2$ through the ratio
 \begin{equation}\label{eq:1pr_def}
-  1 + r(t;N) = \frac{|D(t;N)|^2}{E(t;N)}.
+  1 + r(t;N) = \frac{|D(t;N)|^2}{E(t;N)}\qquad (E(t;N)\neq0).
 \end{equation}
 
-Our main results are:
+The statements proved are the following.
 \begin{enumerate}[label=(\roman*)]
-  \item \textbf{Amplification Bound} (Theorem~\ref{thm:CS}):
-    $(1+r) \le K_N \le \lfloor \log_2 N \rfloor$, unconditionally.
-  \item \textbf{Reduction} (Theorem~\ref{thm:reduction}):
-    $|D|^2 \le K_N^2 \cdot B(N)$, reducing LH to bounding
-    individual class sums.
-  \item \textbf{Effective Class Count} (Theorem~\ref{thm:Kcount}):
-    $K_N \sim \log N / \log\log N$.
-  \item \textbf{Refined Bound} (Theorem~\ref{thm:refined}):
-    $(1+r) \le (\sum_k \sqrt{p_k})^2$, 5--23\% tighter than~(i).
-  \item \textbf{Master Theorem} (Theorem~\ref{thm:master}):
-    If $B(N) \le N^\alpha$, then
-    $|\zeta(\half+it)| \ll t^{\alpha/2+\varepsilon}$.
+  \item Amplification bound (Theorem~\ref{thm:CS}):
+    $|D|^2\le K_N E$, that is, $1+r \le K_N \le \lfloor \log_2 N \rfloor$.
+  \item Reduction to class sums (Theorem~\ref{thm:reduction}):
+    $|D|^2 \le K_N^2 \max_k|S_k|^2$.
+  \item Number of classes (Theorem~\ref{thm:Kcount}):
+    $K_N \sim \log N / \log\log N$; this is classical.
+  \item A refinement (Theorem~\ref{thm:refined}):
+    $1+r \le (\sum_k \sqrt{p_k})^2$ with $p_k=|S_k|^2/E$; the right-hand
+    side is at most $K_N$, with equality only if all $p_k$ are equal.
+  \item A conditional bound for $\zeta$ (Theorem~\ref{thm:master}):
+    if $B(N) \le N^\alpha$ for all large $N$, where $B(N)$ is the maximum
+    of $|S_k(t;N)|^2$ over $k$ and $t\in[N/10,N]$, then
+    $\zeta(\half+it) \ll t^{\alpha/2}\log t$.
 \end{enumerate}
 
 \noindent
-Theorems (i)--(iv) are unconditional.  Theorem~(v) is conditional
-on a hypothesis about~$B(N)$ and uses the Approximate Functional Equation.
+Items (i)--(iv) are unconditional and elementary: (i), (ii) and (iv) are
+the Cauchy--Schwarz and triangle inequalities, and they use no property of
+$\omega$ beyond the number of classes.  Item~(v) is conditional on the
+hypothesis on~$B(N)$ and uses the classical approximation of
+$\zeta(\half+it)$ by a partial sum of its Dirichlet series.
 
 \medskip
 \noindent\textbf{On the direction of the reduction.}
-We emphasize at the outset that the chain Theorem~\ref{thm:reduction}
-$\to$ Theorem~\ref{thm:master} is \emph{one-directional}:
-$B(N)\le N^\varepsilon \Rightarrow \mathrm{LH}$.  The converse fails, or at
-least is not available: $B(N)=\max_{t,k}|S_k|^2$ bounds each $\omega$-class
-\emph{individually}, whereas LH bounds only the total $|D|\approx|\zeta|$,
-which may remain small through cancellation \emph{between} classes even
-when some $|S_k|$ is large (Proposition~\ref{prop:stronger}).  Thus
-$B(N)\le N^\varepsilon$ is a \emph{sufficient} condition for LH that is
-plausibly strictly stronger.  This is not a defect of the framework but its
-content: it isolates the precise pointwise quantity whose control would
-yield LH, and the computations below measure exactly how far that quantity
-is from the required bound.
+The chain Theorem~\ref{thm:reduction} $\to$ Theorem~\ref{thm:master} gives
+one implication: if $B(N)\le C_\varepsilon N^\varepsilon$ for every
+$\varepsilon>0$, then LH holds (Corollary~\ref{cor:lindelof}).  The
+converse is not known: $B(N)$ bounds each class sum separately, whereas LH
+bounds only the total $1+\sum_kS_k$.  What is known unconditionally is the
+mean square of each $S_k$ (Proposition~\ref{prop:stronger}).  Moreover the
+hypothesis is expected to be much stronger than LH: already for $k=1$, where
+$S_1$ is a sum over prime powers, a bound $|S_1(t;N)|\ll N^{\varepsilon}$
+for $t\asymp N$ is of the type that is known only under RH
+(Section~\ref{sec:discussion}).  The paper therefore does not make progress
+on LH; it records the elementary inequalities, and measures the class sums
+numerically.
 
 \medskip
 
-\noindent\textbf{Computational findings.}
-We compute $B(N)$ at four values of~$N$ up to $1.5 \times 10^5$ and
-observe:
+\noindent\textbf{Numerical results.}
+We compute lower bounds for $B(N)$ at four values of~$N$ up to
+$1.5 \times 10^5$ (Section~\ref{sec:computation}).  We find:
 \begin{itemize}
-  \item The empirical exponent $\alpha_B(N)$ \emph{decreases} in the
-    semiprime-dominated regime ($N \le 10^5$), consistent with
-    $\alpha_B \to 0$ as $N \to \infty$.
-  \item A dominance transition $k^* = 2 \to k^* = 3$ occurs near
-    $N \approx 10^5$, causing $\alpha_B$ to increase temporarily.
-  \item The large-sieve inequality bounds the \emph{mean}
-    $\langle |S_k|^2\rangle$ well, but the \emph{maximum} exceeds the
-    mean by factors of 25--90 due to phase resonance.
+  \item The exponent $\alpha_B(N)=\log B(N)/\log N$ lies between $0.41$
+    and $0.43$ on this range, with no monotone trend.
+  \item The class attaining the maximum changes from $k = 2$ to $k = 3$
+    between $N=5\times10^4$ and $N = 10^5$.
+  \item The mean square of $S_k$ agrees with the value given by the mean
+    value theorem, while the largest values of $|S_k|^2$ found exceed the
+    mean by factors between $8.6$ and $131$ at $N=1.5\times10^5$.
 \end{itemize}
 
 \medskip
 
 \noindent\textbf{Organization.}
-Section~\ref{sec:setup} establishes notation.
-Sections~\ref{sec:thm1}--\ref{sec:thm5} contain the five theorems
-with complete proofs.  Section~\ref{sec:computation} presents
-computational results.
-Section~\ref{sec:resonance} analyzes the phase resonance mechanism.
-Section~\ref{sec:discussion} discusses connections and open problems.
-Appendix~\ref{app:code} provides reproduction code.
+Section~\ref{sec:setup} fixes notation.
+Sections~\ref{sec:thm1}--\ref{sec:thm5} contain the statements (i)--(v)
+with proofs.  Section~\ref{sec:computation} presents the computations.
+Section~\ref{sec:resonance} describes the largest value found of $|S_3|^2$
+and two further numerical observations.
+Section~\ref{sec:discussion} relates the class sums to known results and
+states open problems.  Appendix~\ref{app:code} describes the code.
 
-% ══════════════════════════════════════════════════════════════════════════
 \section{Setup and Notation}\label{sec:setup}
 
-Throughout, $N \ge 2$ is a positive integer and $t \in \R$.
+Throughout, $N \ge 2$ is an integer and $t \in \R$.
 We write $\omega(n)$ for the number of distinct prime factors of~$n$
-(with $\omega(1) = 0$), and $\Omega(n)$ for the number counted with
-multiplicity.  The notation $f \ll g$ and $f = O(g)$ are synonymous;
-$f \ll_\varepsilon g$ means the implied constant depends on~$\varepsilon$.
-We write $f \lesssim g$ to mean $f \ll_\varepsilon g \cdot N^\varepsilon$
-(or $t^\varepsilon$) for every $\varepsilon > 0$.
+(with $\omega(1) = 0$).  The notations $f \ll g$ and $f = O(g)$ are
+synonymous; $f \ll_\varepsilon g$ means that the implied constant may
+depend on~$\varepsilon$.  Logarithms are natural unless a base is shown.
 
 \begin{definition}[Dirichlet polynomial and $\omega$-class sums]
 \label{def:D_and_Sk}
-Let $F$ be a completely multiplicative function with $|a_n| \le 1$.
-Define:
+Let $a=(a_n)_{n\ge2}$ be complex numbers and let
+$K_N=\max\{\omega(n):2\le n\le N\}$.  Define
 \begin{align}
-  D_F(t;N) &= \sum_{n=2}^{N} a_n \, n^{-1/2-it}, \label{eq:DF}\\
-  S_k(t;N) &= \sum_{\substack{n \le N \\ \omega(n) = k}}
+  D_a(t;N) &= \sum_{n=2}^{N} a_n \, n^{-1/2-it}, \label{eq:DF}\\
+  S_{a,k}(t;N) &= \sum_{\substack{2\le n \le N \\ \omega(n) = k}}
     a_n \, n^{-1/2-it}, \qquad k = 1, 2, \ldots, K_N. \label{eq:SkF}
 \end{align}
-For $\zeta$, we take $a_n = 1$ for all~$n$.
+For $a_n = 1$ for all~$n$ we write $D=D_\zeta$ and $S_k$; these are the
+sums \eqref{eq:D_def} and \eqref{eq:Sk_def}.  When the sequence $a$ is
+clear we also write $S_k$ for $S_{a,k}$.
 \end{definition}
 
-\begin{definition}[Energy, cross-terms, amplification ratio]
+\begin{definition}[Energy, cross terms, amplification ratio]
 \label{def:energy}
 \begin{align}
   E(t;N) &= \sum_{k=1}^{K_N} |S_k(t;N)|^2, \label{eq:E}\\
   X(t;N) &= |D(t;N)|^2 - E(t;N)
     = 2 \sum_{j < k} \re\bigl(\overline{S_j} \, S_k\bigr), \label{eq:X}\\
   r(t;N) &= \frac{X(t;N)}{E(t;N)}, \qquad
-  1 + r(t;N) = \frac{|D(t;N)|^2}{E(t;N)}. \label{eq:r}
+  1 + r(t;N) = \frac{|D(t;N)|^2}{E(t;N)}\qquad(E(t;N)\ne0). \label{eq:r}
 \end{align}
+The same definitions apply to a general sequence $a$, with $D_a$,
+$S_{a,k}$, $E_a$, $r_a$.
 \end{definition}
 
-\begin{definition}[Maximum class-sum and empirical exponent]
+\begin{definition}[Maximum class sum and its exponent]
 \label{def:BN}
+For the sequence $a_n=1$,
 \begin{align}
   B(N) &= \max_{\substack{t \in [N/10, N] \\
     1 \le k \le K_N}} |S_k(t;N)|^2, \label{eq:BN}\\
   \alpha_B(N) &= \frac{\log B(N)}{\log N}. \label{eq:alphaB}
 \end{align}
+We write $k^*(N)$ for a class attaining the maximum in \eqref{eq:BN}.
 \end{definition}
 
-The energy fractions are $p_k(t) = |S_k(t)|^2 / E(t)$, satisfying
-$\sum_k p_k = 1$.
+When $E(t)\ne0$ the energy fractions are $p_k(t) = |S_k(t)|^2 / E(t)$;
+they satisfy $\sum_k p_k = 1$.
 
-% ══════════════════════════════════════════════════════════════════════════
-\section{Theorem 1: Amplification Bound}\label{sec:thm1}
+\section{The amplification bound}\label{sec:thm1}
 
-\begin{theorem}[Cauchy--Schwarz Amplification Bound]\label{thm:CS}
-For any completely multiplicative function $F$ with $|a_n| \le 1$,
-any $N \ge 2$, and any $t \in \R$:
+\begin{theorem}[Amplification bound]\label{thm:CS}
+For any complex sequence $a$, any $N \ge 2$ and any $t \in \R$,
 \begin{equation}\label{eq:CS_bound}
-  1 + r_F(t;N) \le K_N.
+  |D_a(t;N)|^2 \le K_N\,E_a(t;N),
 \end{equation}
+with equality if and only if $S_{a,1}=S_{a,2}=\dots=S_{a,K_N}$.  In
+particular $1 + r_a(t;N) \le K_N$ whenever $E_a(t;N)\ne0$.
 Moreover, $K_N \le \lfloor \log_2 N \rfloor$.
 \end{theorem}
 
 \begin{proof}
-By the Cauchy--Schwarz inequality applied to $K_N$ complex numbers
-$S_1, \ldots, S_{K_N}$:
+By the Cauchy--Schwarz inequality applied to the $K_N$ complex numbers
+$S_1, \ldots, S_{K_N}$ and the vector $(1,\dots,1)$,
 \[
   \abs{\sum_{k=1}^{K_N} S_k}^2
   \le K_N \sum_{k=1}^{K_N} |S_k|^2,
 \]
-with equality if and only if all $S_k$ are proportional.
-Dividing both sides by $E = \sum_k |S_k|^2$:
-\[
-  1 + r = \frac{|D|^2}{E}
-  = \frac{|\sum_k S_k|^2}{\sum_k |S_k|^2}
-  \le K_N.
-\]
+with equality if and only if $(S_1,\dots,S_{K_N})$ is a multiple of
+$(1,\dots,1)$, that is, if and only if all $S_k$ are equal.  This is
+\eqref{eq:CS_bound}; dividing by $E\neq0$ gives $1+r\le K_N$.
 
 For the bound on $K_N$: every integer $n \ge 2$ satisfies
-$n \ge \prod_{p \mid n} p \ge 2^{\omega(n)}$,
-since each prime $p \ge 2$.  Therefore
-$\omega(n) \le \log_2 n \le \log_2 N$,
-giving $K_N \le \lfloor \log_2 N \rfloor$.
+$n \ge \prod_{p \mid n} p \ge 2^{\omega(n)}$.  Therefore
+$\omega(n) \le \log_2 n \le \log_2 N$ for $n\le N$, and
+$K_N \le \lfloor \log_2 N \rfloor$.
 \end{proof}
 
 \begin{remark}
-The bound is tight in the sense that equality $(1+r) = K_N$
-requires all $K_N$ class sums to have equal magnitude and aligned phases.
-Computationally, we observe $\max_t(1+r) \approx 4.0$ at $N = 10^4$
-(where $K_N = 5$), so the bound has roughly~20\% slack.
+Equality $1+r = K_N$ requires all $K_N$ class sums to be equal as complex
+numbers.  In the computations of Section~\ref{sec:computation} the largest
+value found of $1+r$ lies between $4.1$ and $4.9$, about $17$--$24\%$
+below $K_N$ (Table~\ref{tab:BN}).
 \end{remark}
 
-% ══════════════════════════════════════════════════════════════════════════
-\section{Theorem 2: Reduction to Class Sum Bounds}\label{sec:thm2}
+\section{Reduction to class sums}\label{sec:thm2}
 
 \begin{theorem}[Reduction]\label{thm:reduction}
-For any $N \ge 2$ and $t \in \R$:
+For any complex sequence $a$, any $N \ge 2$ and $t \in \R$,
 \begin{equation}\label{eq:reduction}
-  |D_F(t;N)|^2 \le K_N^2 \cdot
-  \max_{1 \le k \le K_N} |S_k(t;N)|^2.
+  |D_a(t;N)|^2 \le K_N^2 \cdot
+  \max_{1 \le k \le K_N} |S_{a,k}(t;N)|^2.
 \end{equation}
 \end{theorem}
 
 \begin{proof}
-From Theorem~\ref{thm:CS}:
-$|D|^2 \le K_N \cdot E$.
-Since $E = \sum_{k=1}^{K_N} |S_k|^2
-\le K_N \cdot \max_k |S_k|^2$,
-we obtain
-$|D|^2 \le K_N \cdot (K_N \max_k |S_k|^2)
-= K_N^2 \max_k |S_k|^2$.
+By Theorem~\ref{thm:CS}, $|D|^2 \le K_N \cdot E$, and
+$E = \sum_{k=1}^{K_N} |S_k|^2 \le K_N \cdot \max_k |S_k|^2$.
+(Equivalently, $|D|\le\sum_k|S_k|\le K_N\max_k|S_k|$.)
 \end{proof}
 
-\begin{corollary}[Reduction to Lindel\"of]\label{cor:lindelof}
+The argument uses only the number of classes: the same inequality holds
+for any partition of $\{2,\dots,N\}$ into $K$ classes, with $K$ in place
+of $K_N$, and it loses only a factor $N^{o(1)}$ whenever $K=N^{o(1)}$.
+
+\begin{corollary}[A sufficient condition for the Lindel\"of hypothesis]
+\label{cor:lindelof}
 If for every $\varepsilon > 0$ there exists $C_\varepsilon$ such that
-$B(N) \le C_\varepsilon N^\varepsilon$, then the Lindel\"of Hypothesis
-holds.
+$B(N) \le C_\varepsilon N^\varepsilon$ for all $N\ge2$, then the Lindel\"of
+hypothesis holds.
 \end{corollary}
 
 \begin{proof}
-This follows from Theorem~\ref{thm:reduction} combined with
-Theorem~\ref{thm:master} below, setting $\alpha = \varepsilon$.
+Let $\varepsilon>0$.  Then $B(N)\le N^{2\varepsilon}$ for all sufficiently
+large $N$, and Theorem~\ref{thm:master} below (whose proof does not use the
+present corollary) with $\alpha = 2\varepsilon$ gives
+$\zeta(\half+it)\ll t^{\varepsilon}\log t$.
 \end{proof}
 
-\begin{proposition}[The reduction is sufficient, not equivalent]
+\begin{proposition}[Mean square of the class sums]
 \label{prop:stronger}
-The implication of Corollary~\ref{cor:lindelof} is one-directional. If LH
-holds then, for fixed~$k$ and $N\sim t$, the mean value satisfies
-$\frac1T\int_0^T |S_k(\half+it;N)|^2\,dt \ll N^\varepsilon$ (a consequence
-of the large sieve, Section~\ref{sec:discussion}); but the \emph{pointwise}
-maximum $B(N)=\max_{t,k}|S_k|^2$ is not controlled by LH, since LH bounds
-only $|D|=|\sum_k S_k|$ and a single class sum may be large while the total
-is small through inter-class cancellation. Consequently $B(N)\le
-N^\varepsilon$ implies, but is not implied by, LH; it is plausibly strictly
-stronger. The gap between the mean (large-sieve--controlled) and the
-maximum is quantified in Section~\ref{sec:resonance} (peak-to-mean ratios
-of $25$--$90$).
+Let $N\ge3$, $1\le k\le K_N$ and $T>0$.  Then
+\[
+  \frac1T\int_0^T |S_k(t;N)|^2\,dt
+  =\sum_{\substack{2\le n\le N\\ \omega(n)=k}}\frac1n
+  +O\Bigl(\frac{\pi_k(N)}{T}\Bigr),
+  \qquad \pi_k(N)=\#\{n\le N:\omega(n)=k\},
+\]
+with an absolute implied constant, and
+\[
+  \sum_{\substack{2\le n\le N\\ \omega(n)=k}}\frac1n
+  \le\frac{(\log\log N+c_0)^k}{k!}
+\]
+for an absolute constant $c_0$.
 \end{proposition}
 
-% ══════════════════════════════════════════════════════════════════════════
-\section{Theorem 3: Effective Class Count}\label{sec:thm3}
+\begin{proof}
+By the mean value theorem of Montgomery and Vaughan
+\cite[Corollary~3]{montgomery-vaughan1974},
+\[
+  \int_0^T\Bigl|\sum_{n\le N}b_nn^{-it}\Bigr|^2dt
+  =\sum_{n\le N}|b_n|^2\bigl(T+O(n)\bigr)
+\]
+for any complex $b_n$.  Taking $b_n=n^{-1/2}$ if $\omega(n)=k$ and $b_n=0$
+otherwise gives the first statement.  For the second, every $n$ with
+$\omega(n)=k$ can be written in exactly $k!$ ways as an ordered product
+$q_1\cdots q_k$ of powers of pairwise distinct primes, and each
+$q_i\le N$.  Hence
+\[
+  k!\sum_{\substack{n\le N\\ \omega(n)=k}}\frac1n
+  \le\Bigl(\sum_{p^a\le N}\frac1{p^a}\Bigr)^k,
+\]
+and
+$\sum_{p^a\le N}p^{-a}\le\sum_{p\le N}1/p+\sum_p1/(p(p-1))
+=\log\log N+O(1)$ by Mertens' theorem.
+\end{proof}
 
-\begin{theorem}[Class Count]\label{thm:Kcount}
+Thus the mean square of each class sum over $0\le t\le T$, $T\ge N$, is at
+most $(\log\log N+c_0)^k/k!+O(1)$, which is far below $N^\varepsilon$.
+The hypothesis of Corollary~\ref{cor:lindelof} concerns instead the
+maximum over $t\in[N/10,N]$.  Corollary~\ref{cor:lindelof} is an
+implication only: we do not know whether LH implies its hypothesis, since
+LH bounds the total $1+\sum_kS_k$ and not the individual~$S_k$.  The ratio
+between the largest values found and the mean square is tabulated in
+Section~\ref{sec:computation} (Table~\ref{tab:Rk}).
+
+\section{The number of classes}\label{sec:thm3}
+
+\begin{theorem}[Class count]\label{thm:Kcount}
 $K_N = \max\{\omega(n) : n \le N\}$ satisfies:
 \begin{enumerate}[label=(\alph*)]
-  \item $K_N \le \lfloor \log_2 N \rfloor$ \textup{(}exact\textup{)}.
-  \item $K_N \sim \frac{\log N}{\log\log N}$ as $N \to \infty$
-    \textup{(}asymptotic\textup{)}.
-  \item The maximum is achieved by the largest primorial
-    $P_m = p_1 p_2 \cdots p_m \le N$.
+  \item $K_N \le \lfloor \log_2 N \rfloor$.
+  \item $K_N \sim \dfrac{\log N}{\log\log N}$ as $N \to \infty$.
+  \item $K_N=\max\{m: P_m\le N\}$, where $P_m = p_1 p_2 \cdots p_m$ is
+    the product of the first $m$ primes.
 \end{enumerate}
 \end{theorem}
 
-\begin{proof}
-Part~(a) is proven in Theorem~\ref{thm:CS}.
+Parts (b) and (c) are classical; see \cite[\S22.10]{hardy-wright2008}.
+We include the short proof.
 
-For~(c): among all $n \le N$ with $\omega(n) = m$, the smallest is the
-$m$-th primorial $P_m = 2 \cdot 3 \cdot 5 \cdots p_m$, since replacing
-any prime factor by a larger prime only increases~$n$.  Therefore
+\begin{proof}
+Part~(a) is proved in Theorem~\ref{thm:CS}.
+
+For~(c): among all $n$ with $\omega(n) = m$, the smallest is
+$P_m = 2 \cdot 3 \cdot 5 \cdots p_m$, since such an $n$ is divisible by
+$m$ distinct primes and their product is at least $P_m$.  Therefore
 $K_N = \max\{m : P_m \le N\}$.
 
-For~(b): by the Prime Number Theorem, $p_m \sim m \log m$, so
-$\log P_m = \sum_{j=1}^m \log p_j \sim m \log m$.
-Setting $\log P_m \approx \log N$ gives
-$m \log m \approx \log N$,
-and the standard inversion yields
-$m \sim \log N / \log\log N$.
+For~(b): by the prime number theorem,
+$\log P_m = \sum_{j\le m} \log p_j=\theta(p_m)\sim p_m \sim m \log m$.
+Since $P_{K_N}\le N<P_{K_N+1}$, we get $\log N\sim K_N\log K_N$, whence
+$\log\log N\sim\log K_N$ and $K_N\sim\log N/\log\log N$.
+\end{proof}
 
-\medskip
-\noindent\textit{Numerical values:}
+For orientation, some numerical values:
 \begin{center}
 \begin{tabular}{cccc}
 \toprule
-$N$ & $\lfloor \log_2 N \rfloor$ & $K_N$ (primorial) &
+$N$ & $\lfloor \log_2 N \rfloor$ & $K_N$ &
 $\log N / \log\log N$ \\
 \midrule
-$10^4$ & 13 & 5 & 4.28 \\
-$10^5$ & 16 & 6 & 4.93 \\
-$10^6$ & 19 & 7 & 5.58 \\
+$10^4$ & 13 & 5 & 4.15 \\
+$10^5$ & 16 & 6 & 4.71 \\
+$10^6$ & 19 & 7 & 5.26 \\
 \bottomrule
 \end{tabular}
 \end{center}
-The primorial values match the computation: $2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 = 2310 \le 10^4$ but $2310 \cdot 13 = 30030 > 10^4$, giving $K_{10^4} = 5$.
-\end{proof}
+For instance $P_5=2310 \le 10^4<P_6=30030$, so $K_{10^4} = 5$.
 
-% ══════════════════════════════════════════════════════════════════════════
-\section{Theorem 4: Refined Bound via Energy Concentration}
+\section{A refinement in terms of the energy fractions}
 \label{sec:thm4}
 
-\begin{theorem}[Refined Amplification Bound]\label{thm:refined}
-For any $t$ and $N$:
+\begin{theorem}[Refined amplification bound]\label{thm:refined}
+For any $t$ and $N$ with $E(t;N)\ne0$,
 \begin{equation}\label{eq:refined}
   1 + r(t;N) \le \Bigl(\sum_{k=1}^{K_N} \sqrt{p_k(t)}\Bigr)^2,
 \end{equation}
 where $p_k(t) = |S_k(t)|^2 / E(t)$ are the energy fractions.
 
-If a single class $k^*$ carries energy fraction $p_{k^*} \ge \delta$,
-then:
+If a class $k^*$ carries energy fraction $p_{k^*}(t) \ge \delta$ for some
+$\delta\ge 1/K_N$, then
 \begin{equation}\label{eq:refined_delta}
-  1 + r \le \bigl(\sqrt{\delta} +
+  1 + r(t;N) \le \bigl(\sqrt{\delta} +
     \sqrt{(K_N-1)(1-\delta)}\bigr)^2.
 \end{equation}
 \end{theorem}
 
+The condition $\delta\ge1/K_N$ cannot be dropped in the inequality for general class
+sums: if all $S_{a,k}$ are equal and nonzero then $1+r_a=K_N$, while the right-hand side of
+\eqref{eq:refined_delta} with $\delta=0$ is $K_N-1$.
+
 \begin{proof}
-By the triangle inequality:
+By the triangle inequality,
 $|D| = |\sum_k S_k| \le \sum_k |S_k|$.
-Writing $|S_k| = \sqrt{p_k \cdot E}$:
+Writing $|S_k| = \sqrt{p_k E}$,
 \[
-  |D|^2 \le \Bigl(\sum_k \sqrt{p_k \cdot E}\Bigr)^2
+  |D|^2 \le \Bigl(\sum_k \sqrt{p_k E}\Bigr)^2
   = E \cdot \Bigl(\sum_k \sqrt{p_k}\Bigr)^2.
 \]
 Dividing by $E$ gives~\eqref{eq:refined}.
 
-For~\eqref{eq:refined_delta}: with $p_{k^*} = \delta$ and
-$\sum_{k \ne k^*} p_k = 1 - \delta$, the Cauchy--Schwarz inequality gives
+For~\eqref{eq:refined_delta}: since
+$\sum_{k \ne k^*} p_k = 1 - p_{k^*}$, the Cauchy--Schwarz inequality gives
 \[
   \sum_{k \ne k^*} \sqrt{p_k}
   \le \sqrt{(K_N-1)\sum_{k \ne k^*} p_k}
-  = \sqrt{(K_N-1)(1-\delta)},
+  = \sqrt{(K_N-1)(1-p_{k^*})},
 \]
-with equality when all remaining $p_k$ are equal.  Therefore
-$\sum_k \sqrt{p_k} \le \sqrt{\delta} + \sqrt{(K_N-1)(1-\delta)}$.
+so that $\sum_k\sqrt{p_k}\le f(p_{k^*})$ with
+$f(p)=\sqrt p+\sqrt{(K_N-1)(1-p)}$.  For $0<p<1$,
+\[
+  f'(p)=\frac1{2\sqrt p}-\frac{\sqrt{K_N-1}}{2\sqrt{1-p}}\le0
+  \iff 1-p\le (K_N-1)p\iff p\ge\frac1{K_N},
+\]
+so $f$ is non-increasing on $[1/K_N,1]$.  As
+$p_{k^*}\ge\delta\ge1/K_N$, we get $f(p_{k^*})\le f(\delta)$, which is
+\eqref{eq:refined_delta}.
 \end{proof}
 
 \begin{remark}\label{rem:refinement_numerical}
-At $N = 10^5$, the dominant class $k{=}2$ carries $\delta \approx 0.42$
-of the energy, and $K_N = 6$.  The refined bound gives
-$(1+r) \le (\sqrt{0.42} + \sqrt{5 \cdot 0.58})^2 = (0.648 + 1.703)^2
-\approx 5.52$,
-compared to the Cauchy--Schwarz bound $K_N = 6$.
-This is an~8\% improvement.
-At $N = 10^4$ with $\delta \approx 0.42$ and $K_N = 5$,
-the improvement is~5\%.
+For illustration: if $p_{k^*}(t)=0.42$ and $K_N = 6$, the bound
+\eqref{eq:refined_delta} is
+$(\sqrt{0.42} + \sqrt{5 \cdot 0.58})^2 = (0.648 + 1.703)^2\approx 5.53$,
+which is $8\%$ below $K_N$; if $p_{k^*}(t)=0.42$ and $K_N = 5$ it is
+$4.71$, which is $6\%$ below $K_N$.
 \end{remark}
 
-% ══════════════════════════════════════════════════════════════════════════
-\section{Theorem 5: Master Theorem}\label{sec:thm5}
+\section{A conditional bound for \texorpdfstring{$\zeta$}{zeta}}\label{sec:thm5}
 
-\begin{theorem}[Master Theorem]\label{thm:master}
-Suppose $B(N) \le N^\alpha$ for all $N$ sufficiently large.  Then:
+\begin{theorem}[Conditional bound]\label{thm:master}
+Let $\alpha\ge0$ and suppose that $B(N) \le N^\alpha$ for all sufficiently
+large $N$.  Then
 \begin{equation}\label{eq:master}
-  \abs{\zeta(\half + it)} \lesssim t^{\alpha/2 + \varepsilon}
+  \zeta(\half + it) \ll t^{\alpha/2}\log t\qquad(t\to\infty).
 \end{equation}
-for every $\varepsilon > 0$.
-
-In particular:
-\begin{center}
-\begin{tabular}{lcc}
-\toprule
-Target & Bound $\beta$ in $|\zeta(\half+it)| \le t^{\beta+\varepsilon}$
-  & Requires $\alpha <$ \\
-\midrule
-Lindel\"of & $0$ & $0$ \\
-Bourgain improvement & $13/84 \approx 0.155$ & $13/42 \approx 0.310$ \\
-Convexity improvement & $1/4$ & $1/2$ \\
-\bottomrule
-\end{tabular}
-\end{center}
 \end{theorem}
 
 \begin{proof}
-The proof proceeds in four steps.
-
-\medskip
-\noindent\textbf{Step 1: Approximate Functional Equation.}
-By Titchmarsh~\cite[Theorem~5.3]{titchmarsh1986}:
-for $x \sim t/(2\pi)$ and $t \ge 2$,
+\noindent\textbf{Step 1: approximation of $\zeta$ by a partial sum.}
+By \cite[Theorem~4.11]{titchmarsh1986}, for a fixed constant $C>1$,
 \begin{equation}\label{eq:AFE}
-  \zeta(\half + it) = \sum_{n \le x} n^{-1/2-it}
-  + \chi(\half+it) \sum_{n \le y} n^{-1/2+it} + O(x^{-1/2}),
+  \zeta(s) = \sum_{n \le x} n^{-s}-\frac{x^{1-s}}{1-s} + O(x^{-\sigma})
 \end{equation}
-where $xy = t/(2\pi)$ and
-$\chi(\half+it) = (t/(2\pi))^{-it} e^{-i\pi/4} (1 + O(1/t))$.
-Taking $x = t$ (and absorbing the second sum and error term):
+uniformly for $s=\sigma+it$ with $\sigma\ge\sigma_0>0$ and
+$|t|<2\pi x/C$.  Let $t\ge2$, $s=\half+it$ and $x=N=\lceil t\rceil$, so
+that $|t|\le x<2\pi x/C$ with $C=2$.  Since $\sum_{n\le N}n^{-s}=1+D_\zeta(t;N)$ and
+$|N^{1/2-it}/(\half-it)|\le N^{1/2}/t\le 2t^{-1/2}$,
 \begin{equation}\label{eq:AFE_simple}
-  \abs{\zeta(\half+it)} = \abs{D_\zeta(t;t)} + O(t^{-1/2+\varepsilon}).
+  \zeta(\half+it) = 1+D_\zeta(t;N) + O(t^{-1/2}),\qquad N=\lceil t\rceil.
 \end{equation}
-The error is negligible for our purposes.
 
 \medskip
-\noindent\textbf{Step 2: Setting $N = t$.}
-In our framework, $B(N)$ is defined with $t \in [N/10, N]$.
-To bound $|\zeta(\half+it)|$ at height~$t$, we use $D_\zeta(t;t)$,
-which requires $N = t$.  Since $t \in [t/10, t] = [N/10, N]$,
-this is within the valid range.
+\noindent\textbf{Step 2: the range of $t$.}
+In Definition~\ref{def:BN} the maximum is over $t \in [N/10, N]$.  For
+$N=\lceil t\rceil\ge2$ we have $N/10\le N-1<t\le N$, so the pair $(t,N)$
+is admissible and $|S_k(t;N)|^2\le B(N)$ for every $k$.
 
 \medskip
-\noindent\textbf{Step 3: Apply Theorem~\ref{thm:reduction}.}
-From Theorem~\ref{thm:reduction}:
-$|D_\zeta(t;t)|^2 \le K_t^2 \cdot B(t)$.
-Since $K_t \le \log_2 t$:
+\noindent\textbf{Step 3: Theorem~\ref{thm:reduction}.}
+By Theorem~\ref{thm:reduction}, the bound $K_N\le\log_2N$ and the
+hypothesis, for $t$ large and $N=\lceil t\rceil\le t+1$,
 \begin{equation}\label{eq:master_chain}
-  |D_\zeta(t;t)|^2 \le (\log_2 t)^2 \cdot B(t) \le (\log_2 t)^2 \cdot t^\alpha
-  \lesssim t^{\alpha + \varepsilon}.
+  |D_\zeta(t;N)|^2 \le K_N^2 \, B(N) \le (\log_2 N)^2 N^\alpha
+  \le \bigl(\log_2 (t+1)\bigr)^2 (t+1)^{\alpha}.
 \end{equation}
 
 \medskip
-\noindent\textbf{Step 4: Combine.}
-From~\eqref{eq:AFE_simple} and~\eqref{eq:master_chain}:
+\noindent\textbf{Step 4: conclusion.}
+From~\eqref{eq:AFE_simple} and~\eqref{eq:master_chain},
 \[
-  |\zeta(\half+it)|^2 \lesssim t^{\alpha+\varepsilon}.
+  |\zeta(\half+it)|\le 1+\log_2(t+1)\,(t+1)^{\alpha/2}+O(t^{-1/2})
+  \ll t^{\alpha/2}\log t .\qedhere
 \]
-Taking the square root:
-$|\zeta(\half+it)| \lesssim t^{\alpha/2+\varepsilon}$.
-
-For the thresholds: we need $\alpha/2 \le \beta$, i.e., $\alpha \le 2\beta$.
-\begin{itemize}
-  \item Lindel\"of ($\beta \to 0$): requires $\alpha \to 0$.
-  \item Bourgain ($\beta = 13/84$): requires
-    $\alpha < 2 \cdot 13/84 = 13/42 \approx 0.3095$.
-  \item Convexity ($\beta = 1/4$): requires
-    $\alpha < 2 \cdot 1/4 = 1/2$.
-    \qedhere
-\end{itemize}
 \end{proof}
 
-\begin{remark}[Effective form]\label{rem:effective}
-The estimate~\eqref{eq:master_chain} is effective before the
-$\varepsilon$-absorption. Tracking constants through
-Steps~1--4, for $t \ge t_0$ one has
+The size of $\alpha$ is to be read as follows.  Trivially
+$|S_k(t;N)|\le\sum_{n\le N}n^{-1/2}\le2\sqrt N$, so $B(N)\le 4N$, which
+corresponds to $\alpha=1$ and gives only $\zeta(\half+it)\ll t^{1/2}\log t$.
+The convexity bound $t^{1/4}$ is matched for $\alpha=\half$, the exponent
+$13/84$ of \cite{bourgain2017} for $\alpha=13/42\approx0.3095$, and LH
+corresponds to the hypothesis for every $\alpha>0$.  The hypothesis
+cannot hold with $\alpha<0$: by the mean value theorem
+(Section~\ref{sec:discussion}) the mean of $|S_1(t;N)|^2$ over
+$t\in[N/10,N]$ is $\sum_{p^a\le N}p^{-a}+O(1/\log N)$, which tends to
+infinity with~$N$.
+
+\begin{remark}[Explicit form]\label{rem:effective}
+Before the logarithm is absorbed, the proof gives, for $t\ge2$ and
+$N=\lceil t\rceil$,
 \[
   |\zeta(\half+it)|
-  \;\le\; (\log_2 t)\, t^{\alpha/2}\,\bigl(1 + O(t^{-1/2+\alpha/2})\bigr),
+  \;\le\; 1+K_N\,B(N)^{1/2}+O(t^{-1/2}),
 \]
-where the $\log_2 t = K_t$ factor is the Cauchy--Schwarz loss of
-Theorem~\ref{thm:reduction} and the error term comes from the tail of the
-Approximate Functional Equation~\eqref{eq:AFE}. The single logarithmic
-factor is harmless: $(\log_2 t)\ll_\varepsilon t^\varepsilon$, which is why
-it is absorbed in the statement. (Theorem~\ref{thm:refined} replaces
-$K_t$ by the smaller $(\sum_k\sqrt{p_k})^2$, sharpening the constant by
-$5$--$23\%$ but not the exponent.)
+with an absolute implied constant; here the $1$ is the term $n=1$, the
+factor $K_N\le\log_2(t+1)$ is the loss in Theorem~\ref{thm:reduction}, and
+the error term is that of~\eqref{eq:AFE_simple}.  At a given $t$,
+Theorem~\ref{thm:refined} allows one factor $K_N^{1/2}$ to be replaced by
+$\sum_k\sqrt{p_k(t)}$, since
+$|D|\le E^{1/2}\sum_k\sqrt{p_k}\le (K_NB(N))^{1/2}\sum_k\sqrt{p_k}$; this
+does not change the exponent.
 \end{remark}
 
 \begin{proposition}[Square-root scaling]\label{prop:sqrt_scaling}
-Define $\widetilde B(N)=\max_{t\in[N,N^2]}\max_k|S_k(t;\sqrt{N})|^2$. If
-$\widetilde B(N)\le N^\alpha$ for all large~$N$, then
-$|\zeta(\half+it)|\ll t^{\alpha/4+\varepsilon}$ for every $\varepsilon>0$.
+For an integer $M\ge2$ let
+\[
+  \widetilde B(M)=\max\bigl\{|S_k(t;M)|^2:\ 1\le k\le K_M,\
+  2\pi M^2\le t\le2\pi(M+1)^2\bigr\}.
+\]
+Let $\alpha\ge0$. If $\widetilde B(M)\le M^\alpha$ for all large~$M$, then
+$\zeta(\half+it)\ll t^{\alpha/4}\log t$.
 \end{proposition}
 \begin{proof}
-Using the Approximate Functional Equation~\eqref{eq:AFE} with the balanced
-choice $x=y=\sqrt{t/2\pi}$ gives
-$|\zeta(\half+it)|\le 2\,|D_\zeta(t;\sqrt{t})| + O(t^{-1/4+\varepsilon})$.
-By Theorem~\ref{thm:reduction} applied at truncation $\sqrt{t}$,
-$|D_\zeta(t;\sqrt t)|^2\le K_{\sqrt t}^2\,\widetilde B(t)\le(\log_2 t)^2
-t^\alpha$, so $|\zeta(\half+it)|^2\ll t^{\alpha+\varepsilon}$ in the
-variable $\sqrt t$, i.e.\ $\ll (\sqrt t)^{\,2\alpha+\varepsilon}$; taking
-square roots in $t$ yields $|\zeta(\half+it)|\ll t^{\alpha/4+\varepsilon}$.
+The approximate functional equation
+\cite[Theorem~4.13]{titchmarsh1986} states that, for $0<\sigma<1$, $x,y\ge h>0$ and $2\pi xy=t$,
+\[
+  \zeta(s)=\sum_{n\le x}n^{-s}+\chi(s)\sum_{n\le y}n^{s-1}
+  +O(x^{-\sigma})+O(t^{1/2-\sigma}y^{\sigma-1}).
+\]
+Take $s=\half+it$ and $x=y=\sqrt{t/2\pi}$, and let
+$M=\lfloor\sqrt{t/2\pi}\rfloor$, so that
+$2\pi M^2\le t<2\pi(M+1)^2$.  Both sums have absolute value
+$|1+D_\zeta(t;M)|$ and $|\chi(\half+it)|=1$, hence
+$|\zeta(\half+it)|\le 2\,|1+D_\zeta(t;M)| + O(t^{-1/4})$.
+By Theorem~\ref{thm:reduction},
+$|D_\zeta(t;M)|\le K_M\,\widetilde B(M)^{1/2}\le(\log_2 M)\,M^{\alpha/2}
+\ll t^{\alpha/4}\log t$.
 \end{proof}
 \begin{remark}
-Proposition~\ref{prop:sqrt_scaling} halves the required exponent
-($\alpha<2$ for convexity, $\alpha<4\cdot 13/84$ for Bourgain) at the cost
-of searching $|S_k|$ over the wider range $t\in[N,N^2]$ at the shorter
-truncation $\sqrt N$. The $N=t$ scaling of Theorem~\ref{thm:master} is
-more natural for the present computations; the two are complementary
-windows on the same quantity.
+In Proposition~\ref{prop:sqrt_scaling} the trivial bound
+$|S_k(t;M)|^2\le4M$ corresponds to $\alpha=1$ and recovers the convexity
+bound $t^{1/4}$ up to the logarithm; improving on convexity requires
+$\alpha<1$, and reaching the exponent $13/84$ requires $\alpha\le13/21$.
+The price is that $|S_k(t;M)|$ must be controlled for $t\asymp M^2$
+instead of $t\asymp M$.  The computations of
+Section~\ref{sec:computation} are made in the scaling $t\asymp N$ of
+Theorem~\ref{thm:master}.
 \end{remark}
 
-% ══════════════════════════════════════════════════════════════════════════
 \section{Computational Results}\label{sec:computation}
 
-We compute $B(N)$, $\alpha_B(N)$, and related quantities at
-$N \in \{10^4, 5 \times 10^4, 10^5, 1.5 \times 10^5\}$.
-The computation uses a uniform grid of $t$-values in $[N/10, N]$
-with spacing $\Delta t = \pi / \log N$ (Nyquist-compatible for
-$n^{-it}$ oscillations at $n = N$), with sparse sampling at
-larger~$N$.  Full code is in Appendix~\ref{app:code}.
+We compute the class sums for
+$N \in \{10^4, 5 \times 10^4, 10^5, 1.5 \times 10^5\}$ on the grid
+\[
+  t_j=\frac N{10}+j\,\Delta t,\qquad \Delta t=\frac{\pi}{\log N},\qquad
+  t_j\le N ,
+\]
+without thinning.  As a function of $t$, $|S_k(t;N)|^2$ is a trigonometric
+polynomial with frequencies $\log(m/n)$, $|\log(m/n)|\le\log N$, so
+$\Delta t$ is its critical sampling interval; the grid determines the mean
+square but does not locate the maxima.  For each $k$ the $40$ largest
+local maxima of $|S_k(t_j;N)|^2$ on the grid, and likewise those of
+$1+r$, are therefore refined on $[t_j-\Delta t,t_j+\Delta t]$ by three
+successive $17$-point subdivisions.  All maxima reported below are the
+largest values found in this way.  They are \emph{lower bounds} for the
+true maxima over $[N/10,N]$, and the quantities derived from them
+(the exponent $\alpha_B$, the ratios in Table~\ref{tab:Rk}) are lower
+bounds as well; we keep the notation $B(N)$, $\alpha_B(N)$ for these
+computed values.  The code is described in Appendix~\ref{app:code}.
 
-\subsection{$B(N)$ and $\alpha_B$}
+\subsection{\texorpdfstring{$B(N)$ and $\alpha_B$}{B(N) and alpha\_B}}
+
+The exponent $\alpha_B$ takes the values $0.429$, $0.410$, $0.417$,
+$0.420$: on this range it stays between $0.41$ and $0.43$ and shows no
+monotone trend.  These values lie between the thresholds
+$\alpha=13/42\approx0.31$ and $\alpha=\half$ of Section~\ref{sec:thm5}.
+Being values at $N\le1.5\times10^5$, they carry no information on the
+hypothesis of Theorem~\ref{thm:master}, which concerns $N\to\infty$.
+
+The refinement between grid points changes the grid maximum by less than
+$1\%$ at three of the four values of $N$ and by $4.5\%$ at $N=10^5$
+($121.57$ against $116.29$); this indicates the size of the error made
+when maxima are read off the grid alone.  The largest value found of
+$1+r$ is $17$--$24\%$ below the bound $K_N$ of Theorem~\ref{thm:CS}.
 
 \begin{table}[H]
 \centering
-\caption{Maximum class-sum squared $B(N)$ and empirical exponent
-$\alpha_B(N)$.}
+\caption{Largest value found of $\max_k|S_k(t;N)|^2$ (a lower bound for
+$B(N)$), the class $k^*$ attaining it, the exponent
+$\alpha_B=\log B/\log N$ and the largest value found of $1+r$.  In
+parentheses: the maximum over the grid points alone.}
 \label{tab:BN}
 \begin{tabular}{rrrrcr}
 \toprule
-$N$ & $K_N$ & $B(N)$ & $k^*$ & $\alpha_B$ & $\max(1{+}r)$ \\
+$N$ & $K_N$ & $B(N)\ge$ & $k^*$ & $\alpha_B\ge$ & $\max(1{+}r)\ge$ \\
 \midrule
-$10\,000$ & 5 & 51.69 & 2 & 0.4284 & 3.995 \\
-$50\,000$ & 6 & 84.35 & 2 & 0.4099 & 4.455 \\
-$100\,000$ & 6 & 94.56 & 2 & 0.3951 & 4.378 \\
-$150\,000$ & 6 & 147.20 & 3 & 0.4188 & 4.715 \\
+$10\,000$ & 5 & 52.08 (51.69) & 2 & 0.4292 & 4.150 (4.022) \\
+$50\,000$ & 6 & 84.40 (84.35) & 2 & 0.4100 & 4.552 (4.515) \\
+$100\,000$ & 6 & 121.57 (116.29) & 3 & 0.4170 & 4.771 (4.657) \\
+$150\,000$ & 6 & 148.40 (147.20) & 3 & 0.4195 & 4.873 (4.720) \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\noindent\textbf{Key observations:}
-\begin{enumerate}
-  \item $\alpha_B$ \emph{decreases} from 0.428 to 0.395 in the $k{=}2$
-    regime ($N \le 10^5$), consistent with $\alpha_B \to 0$.
-  \item At $N = 1.5 \times 10^5$, the dominant class transitions to
-    $k{=}3$, and $\alpha_B$ \emph{increases} to~0.419.
-  \item The Cauchy--Schwarz bound $\max(1{+}r) \le K_N$ is verified at all~$N$
-    with 15--25\% slack.
-\end{enumerate}
-
-The current value $\alpha_B(1.5 \times 10^5) = 0.419$ is above the
-Bourgain threshold ($\alpha < 0.310$) by~35\%, but below the convexity
-threshold ($\alpha < 0.5$) by~16\%.
-
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.72\textwidth]{figures/fig1_alpha_B_trend.pdf}
-\caption{The empirical exponent $\alpha_B(N)=\log B(N)/\log N$. In the
-$k^*{=}2$ (semiprime-dominated) regime $\alpha_B$ decreases
-($0.428\to0.395$); at the $k{=}3$ transition near $N=1.5\times10^5$ it
-reverses upward to $0.419$. Reaching even the Bourgain threshold
-($\alpha<0.310$, dashed) would require the decrease to resume and persist;
-the convexity bound ($\alpha<0.5$, dotted) is met throughout. The
-asymptotic behavior is genuinely open (Section~\ref{sec:discussion}).}
+\includegraphics[width=0.66\textwidth]{figures/fig1_alpha_B_trend.pdf}
+\caption{The computed exponent $\alpha_B(N)=\log B(N)/\log N$ (lower
+bounds), with the class $k^*$ attaining $B(N)$.  The horizontal lines
+are the values $\alpha=1/2$ and $\alpha=13/42$ at which
+Theorem~\ref{thm:master} would match the convexity bound and the exponent
+$13/84$.}
 \label{fig:alphaB}
 \end{figure}
 
-\subsection{The $k{=}2 \to k{=}3$ dominance transition}
+\subsection{The change of the maximising class from \texorpdfstring{$k=2$ to $k=3$}{k=2 to k=3}}
 \label{subsec:crossover}
+
+The ratio of the largest value found of $|S_2|^2$ to that of $|S_3|^2$
+decreases from $1.29$ to $0.73$ over the range, and among the values found
+the class $k=3$ attains the maximum at $N=10^5$ and $N=1.5\times10^5$.
+A bound for $B(N)$ therefore has to control all classes, and cannot be
+obtained from a single fixed class.
 
 \begin{table}[H]
 \centering
-\caption{Class-sum maxima by $\omega$-class.}
+\caption{Largest values found of $|S_2|^2$ and $|S_3|^2$.}
 \label{tab:crossover}
 \begin{tabular}{rrrrr}
 \toprule
-$N$ & $\max|S_2|^2$ & $\max|S_3|^2$ & Ratio $S_2/S_3$ & Dominant \\
+$N$ & $\max|S_2|^2$ & $\max|S_3|^2$ & ratio & $k^*$ \\
 \midrule
-$10\,000$ & 51.69 & 35.39 & 1.461 & $k=2$ \\
-$50\,000$ & 84.35 & 62.52 & 1.349 & $k=2$ \\
-$100\,000$ & 94.56 & 90.88 & 1.041 & $k=2$ \\
-$150\,000$ & 107.76 & 147.20 & 0.732 & $k=3$ \\
+$10\,000$ & 52.08 & 40.44 & 1.29 & 2 \\
+$50\,000$ & 84.40 & 75.59 & 1.12 & 2 \\
+$100\,000$ & 98.09 & 121.57 & 0.81 & 3 \\
+$150\,000$ & 107.76 & 148.40 & 0.73 & 3 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.72\textwidth]{figures/fig2_crossover.pdf}
-\caption{Class-sum maxima $\max_t|S_2|^2$ (semiprimes) and
-$\max_t|S_3|^2$ (triprimes) versus~$N$. The triprime class overtakes the
-semiprime class in the shaded window $N\in[10^5,1.5\times10^5]$,
-establishing that any bound on $B(N)$ must control all $\omega$-classes
-simultaneously rather than the dominant one alone.}
+\includegraphics[width=0.66\textwidth]{figures/fig2_crossover.pdf}
+\caption{Largest values found of $|S_2(t;N)|^2$ and $|S_3(t;N)|^2$ for
+$t\in[N/10,N]$, as functions of~$N$.  The class $k=3$ overtakes the class
+$k=2$ between $N=5\times10^4$ and $N=10^5$, which shows that the class
+attaining $B(N)$ depends on~$N$.}
 \label{fig:crossover}
 \end{figure}
 
-The ratio $\max|S_2|^2 / \max|S_3|^2$ decreases as a power law
-$\sim N^{-0.22}$, predicting a crossover near $N^* \approx 8 \times 10^4$.
-The actual transition occurs between $10^5$ and $1.5 \times 10^5$.
-
-This transition has significant theoretical implications: any approach
-to bounding $B(N)$ must handle \emph{all} classes simultaneously,
-not just semiprimes.
-
 \subsection{Peak-to-mean ratios}
+
+The grid mean of $|S_k|^2$ agrees with $\sum_{\omega(n)=k,\,n\le N}1/n$
+within the error $O(\pi_k(N)/N)$ allowed by the mean value theorem
+(Section~\ref{sec:discussion}).  The largest values found exceed the mean
+by factors $R_k$ which increase from $8.6$ for $k=1$ to $131$ for $k=5$;
+for the class $k=6$, which has only $64$ terms, $R_6=30.6$.  Like the
+maxima, the ratios $R_k$ are lower bounds.
 
 \begin{table}[H]
 \centering
-\caption{Peak-to-mean ratio $R_k = \max|S_k|^2 / \langle|S_k|^2\rangle$
-at $N = 1.5 \times 10^5$.}
+\caption{Class sums at $N = 1.5 \times 10^5$: number of terms, the value
+$\sum_{\omega(n)=k,\,n\le N}1/n$ given by the mean value theorem, the
+mean of $|S_k|^2$ over the grid, the largest value found, and the ratio
+$R_k = \max|S_k|^2 / \langle|S_k|^2\rangle$.}
 \label{tab:Rk}
-\begin{tabular}{rrrr}
+\begin{tabular}{rrrrrr}
 \toprule
-$k$ & $\langle|S_k|^2\rangle$ & $\max|S_k|^2$ & $R_k$ \\
+$k$ & terms & $\sum 1/n$ & $\langle|S_k|^2\rangle$ & $\max|S_k|^2$ & $R_k$ \\
 \midrule
-1 & 3.50 & 27.6 & 7.9 \\
-2 & 4.35 & 107.8 & 24.8 \\
-3 & 2.38 & 147.2 & 61.9 \\
-4 & 0.60 & 51.4 & 86.3 \\
-5 & 0.05 & 4.9 & 91.2 \\
+1 & $13\,972$ & 3.5125 & 3.4964 & 30.20 & 8.6 \\
+2 & $49\,142$ & 4.5843 & 4.3613 & 107.76 & 24.7 \\
+3 & $58\,195$ & 2.6792 & 2.3920 & 148.40 & 62.0 \\
+4 & $25\,333$ & 0.6646 & 0.5976 & 54.24 & 90.8 \\
+5 & $3\,293$ & 0.0543 & 0.0538 & 7.04 & 130.9 \\
+6 & 64 & 0.0007 & 0.0007 & 0.021 & 30.6 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.72\textwidth]{figures/fig3_peak_to_mean.pdf}
-\caption{Mean and maximum of $|S_k|^2$ by $\omega$-class at
-$N=1.5\times10^5$ (bars, left axis), and the peak-to-mean ratio
-$R_k=\max/\mathrm{mean}$ (triangles, right axis). $R_k$ grows from $7.9$
-($k{=}1$) to $91$ ($k{=}5$): higher $\omega$-classes are markedly spikier.
-The large sieve controls the mean (the bars) but not the maximum, which is
-the hardness gap of Proposition~\ref{prop:stronger}.}
+\includegraphics[width=0.66\textwidth]{figures/fig3_peak_to_mean.pdf}
+\caption{Grid mean and largest value found of $|S_k(t;N)|^2$ by class at
+$N=1.5\times10^5$ (logarithmic scale), together with
+$\sum_{\omega(n)=k,\,n\le N}1/n$ (horizontal marks).  The mean value
+theorem accounts for the mean (Proposition~\ref{prop:stronger}) and gives
+no information on the maximum.}
 \label{fig:Rk}
 \end{figure}
 
-The peak-to-mean ratio $R_k$ grows rapidly with~$k$: higher $\omega$-classes
-produce ``spikier'' sums.  This is the \emph{hardness gap} that makes
-bounding $B(N)$ difficult: large-sieve inequalities control the mean
-but not the maximum.
+\subsection{The growth of \texorpdfstring{$B(N)$}{B(N)}}
 
-\subsection{$\alpha_B$ extrapolation}
-
-The best-fitting model for $\alpha_B$ in the $k{=}2$ regime is:
+Four values of $N$ within little more than one decade, each a lower
+bound, do not determine the behaviour of $\alpha_B(N)$ as $N\to\infty$.
+A second normalisation is
 \begin{equation}\label{eq:alphaB_model}
-  \alpha_B(N) \approx \frac{0.98}{\log\log N}.
+  c_B(N) = \frac{\log B(N)}{\log\log N},
+  \qquad\text{so that } B(N)=(\log N)^{c_B(N)} .
 \end{equation}
-If this decay continues (a major open question), the Bourgain threshold
-$\alpha_B < 0.310$ would be reached at
-$N \approx 1.9 \times 10^{10}$---computationally challenging but not
-impossible with HPC resources.
+The computed values are $c_B=1.78$, $1.86$, $1.96$, $2.02$ for the four
+values of $N$, so that $B(N)$ lies between $(\log N)^{1.7}$ and
+$(\log N)^{2.1}$ on this range, while the slope of $\log B$ against
+$\log\log N$ between the first and the last value of $N$ is about~$4.1$.
+On this range the data do not determine the behaviour of $\alpha_B$: they
+are compatible with $B(N)$ growing like a power of $\log N$, which would
+give $\alpha_B\to0$, and equally with $\alpha_B$ bounded below.  Since the
+cost of the computation grows like $N^2\log N$, a substantially larger
+range would require a different algorithm.
 
-However, the $k{=}3$ transition disrupts this trend.  If similar
-transitions ($k{=}3 \to 4$, etc.) occur at larger~$N$, each transition
-resets $\alpha_B$ upward, and the asymptotic behavior of $\alpha_B$
-remains genuinely uncertain.
+\section{The largest value of \texorpdfstring{$|S_3|^2$}{|S\_3|\textasciicircum 2} and two further observations}
+\label{sec:resonance}
 
-\medskip
-\noindent\textbf{The decisive computation.}
-The four points $N\le 1.5\times10^5$ available here cannot distinguish a
-genuine decay $\alpha_B\to0$ from a sequence of transition-driven plateaus.
-The immediate next step---computation of $B(N)$ at
-$N\in\{10^6,3\times10^6,10^7\}$, where the $k{=}3\to4$ transition (if any)
-would appear---is what would settle Conjecture~\ref{conj:decay} empirically.
-We report this extended range, together with a model-selection analysis
-(power-law versus $1/\log\log N$ decay with bootstrap confidence
-intervals), in companion work.
-% ===== WAIT: insert extended-N B(N) refit (10^6--10^7) when available =====
+This section describes the point at which the largest value of $|S_3|^2$
+was found, and records two further computations.  We call \emph{phase
+resonance} the situation in which the contributions of different ranges
+of $n$ to a class sum have nearly equal arguments; this is a description
+of the computed values and not an explanation of them.
 
-% ══════════════════════════════════════════════════════════════════════════
-\section{Phase Resonance Mechanism}\label{sec:resonance}
-
-We now explain \emph{why} the maximum $|S_k|^2$ far exceeds the mean.
-
-At the peak $t^* = 100{,}799$ (where $|S_3|^2 = 147.2$ at
-$N = 1.5 \times 10^5$), we decompose $S_3$ by the size of its summands:
+For $N = 1.5 \times 10^5$ the largest value found of $|S_3(t;N)|^2$ is
+$148.40$, at $t^* = 100799.243$.  We split $S_3(t^*;N)$ according to the
+size of~$n$:
 
 \begin{table}[H]
 \centering
-\caption{Size-bin decomposition of $S_3$ at its peak ($N = 1.5 \times 10^5$).}
+\caption{Contributions $c_j$ to $S_3(t^*;N)$ of the ranges of $n$
+indicated, $N = 1.5 \times 10^5$.  There is no integer with $\omega(n)=3$
+below $30$.}
 \label{tab:resonance}
 \begin{tabular}{lrrr}
 \toprule
-Bin & Count & $|\text{contribution}|$ & Phase \\
+range of $n$ & terms & $|c_j|$ & $\arg c_j$ \\
 \midrule
-$[10, 100)$ & 8 & 0.91 & $-1.83$ \\
-$[100, 10^3)$ & 267 & 3.91 & $-0.96$ \\
-$[10^3, 10^4)$ & 3\,420 & 4.16 & $-0.61$ \\
-$[10^4, 10^5)$ & 35\,149 & 2.98 & $-1.06$ \\
-$[10^5, 1.5 {\times} 10^5)$ & 19\,351 & 0.78 & $-1.07$ \\
+$[10, 100)$ & 8 & 0.91 & $-1.99$ \\
+$[100, 10^3)$ & 267 & 3.92 & $-1.19$ \\
+$[10^3, 10^4)$ & $3\,420$ & 4.18 & $-0.92$ \\
+$[10^4, 10^5)$ & $35\,149$ & 2.97 & $-1.48$ \\
+$[10^5, 1.5 {\times} 10^5]$ & $19\,351$ & 0.78 & $-1.54$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\noindent\textbf{Phase alignment.}
-The Rayleigh statistic, computed as
-$R = |\sum_j w_j e^{i\theta_j}| / \sum_j w_j$
-over the bin contributions, gives $R = 0.923$---very high alignment.
-For comparison, $S_2$ at its peak has $R = 0.859$.
+\medskip
+\noindent\textbf{Alignment of the arguments.}
+The five contributions have arguments within an interval of length $1.07$.
+Their resultant length
+$R=\abs{\sum_j c_j}/\sum_j\abs{c_j}=12.18/12.76$ is $0.95$.  For $S_2$ at the point $t=100799.205$ where its largest value
+$107.76$ was found, the same quantity for the six ranges $[1,10)$,
+\dots, $[10^5,1.5\times10^5]$ is $0.94$.
 
-\noindent\textbf{Amplification factor.}
-The ratio of actual $|S_3|^2$ to the incoherent sum
-$\sum_j |\text{contribution}_j|^2$ is:
+\medskip
+\noindent\textbf{Comparison with the sum of squares.}
+The ratio of $|S_3(t^*;N)|^2$ to $\sum_j |c_j|^2$ is $148.40/43.12 = 3.44$,
+whereas it would be $1$ on average if the arguments of the $c_j$ were
+independent and uniformly distributed, and it is at most $5$.
+
+\medskip
+\noindent\textbf{The other classes at $t^*$.}
+The largest values found of $|S_2|^2$ and $|S_4|^2$ ($107.76$ and $54.24$)
+are located at $t=100799.205$ and $t=100799.353$, within $0.15$
+of~$t^*$.  At $t^*$ itself
 \[
-  \frac{147.2}{42.9} = 3.43 \times.
+  \bigl(|S_k(t^*;N)|^2\bigr)_{k=1,\dots,6}
+  =(23.90,\ 106.80,\ 148.40,\ 52.71,\ 3.86,\ 0.006),\qquad E=335.7,
 \]
-This quantifies the constructive interference from phase alignment
-across size scales.
+while $1+r(t^*;N)=0.022$, that is, $|D(t^*;N)|^2=7.2$.  So the largest
+class sums found occur at a point where the classes cancel one another
+almost completely and the full polynomial $D$ is of ordinary size.  This
+is a concrete instance of the remark following
+Proposition~\ref{prop:stronger}: a bound for $D$, and hence for $\zeta$,
+does not by itself bound the class sums.  It is qualitatively what the
+formal relation $S_k\approx S_1^k/k!$ (which ignores the truncation at $N$
+and the terms with repeated primes) suggests: a large value of $|S_1|$
+makes several $|S_k|$ large at the same time, whereas
+$\sum_{k\ge1}S_1^k/k!=e^{S_1}-1$ has modulus governed by $\re S_1$ alone.
+We do not make this precise.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.62\textwidth]{figures/fig4_resonance.pdf}
-\caption{Phasor (tip-to-tail) diagram of the five size-bin contributions to
-$S_3$ at its peak ($t^*=100{,}799$, $N=1.5\times10^5$). The contributions
-are strongly phase-aligned, so the resultant $|S_3|$ is close to the
-arithmetic sum of magnitudes rather than the (much smaller) incoherent
-root-sum-of-squares: the coherent amplification is
-$|S_3|^2/\sum_j|c_j|^2 = 147.2/42.9 \approx 3.43\times$. This phase
-resonance is the mechanism behind the large peak-to-mean ratios of
-Figure~\ref{fig:Rk}.}
+\includegraphics[width=0.5\textwidth]{figures/fig4_resonance.pdf}
+\caption{The five contributions $c_j$ of Table~\ref{tab:resonance}, drawn
+tip to tail in the complex plane, and their sum $S_3(t^*;N)$ (dashed),
+$N=1.5\times10^5$.}
 \label{fig:resonance}
 \end{figure}
 
-\medskip
+The mean value theorem accounts for the mean of $|S_k|^2$, in which the
+cross terms between different $n$ average out; it gives no information on
+points such as $t^*$, where they do not cancel.  A bound for $B(N)$ would
+have to show that such alignment cannot persist over all ranges of $n$
+simultaneously as $N\to\infty$, or bound the class sums directly, for
+instance as multilinear sums (Section~\ref{sec:discussion}).
 
-This mechanism---\emph{phase resonance}---explains the hardness gap
-in Table~\ref{tab:Rk}.  The large sieve controls the incoherent sum
-(the denominator) but cannot account for the coherent amplification
-in the numerator.  Any improvement to $\alpha_B$ must either:
-\begin{enumerate}
-  \item Prove that phase alignment degrades as $N \to \infty$, or
-  \item Develop techniques that bound coherent sums directly
-    (bilinear/multilinear methods in the spirit of~\cite{heath-brown1995}).
-\end{enumerate}
+\subsection{The Liouville function: completely multiplicative coefficients
+and large values}\label{sec:liouville}
 
-\subsection{The Liouville parity counterexample: multiplicativity does not
-suppress resonance}\label{sec:liouville}
-
-It is tempting to expect that complete multiplicativity, with its clean Euler
-product, would force cancellation in the partial sums and so suppress the
-phase-alignment mechanism above. It does not. The sharpest counterexample is the
-Liouville function $\lambda(n)=(-1)^{\Omega(n)}$, which is \emph{completely}
-multiplicative, $\lambda(mn)=\lambda(m)\lambda(n)$, with
+One may ask whether the large values of the class sums are tied to the
+coefficients $a_n=1$.  They are not tied to the absence of sign changes,
+nor are they excluded by complete multiplicativity of the coefficients.
+The Liouville function $\lambda(n)=(-1)^{\Omega(n)}$, where $\Omega(n)$ is
+the number of prime factors of $n$ counted with multiplicity, is
+completely multiplicative, and
 \[
-\sum_{n\ge1}\frac{\lambda(n)}{n^s}=\frac{\zeta(2s)}{\zeta(s)}=\prod_p(1+p^{-s})^{-1}
-\qquad(\Re s>1),
+\sum_{n\ge1}\frac{\lambda(n)}{n^s}=\frac{\zeta(2s)}{\zeta(s)}
+=\prod_p(1+p^{-s})^{-1}
+\qquad(\re s>1).
 \]
-a perfectly convergent Euler product in the same half-plane as $\zeta$.
+The polynomial $D_\lambda(t;N)=\sum_{n\le N}\lambda(n)n^{-1/2-it}$ (here
+including $n=1$) is a partial sum of this Dirichlet series on the line
+$\re s=\half$, and the function $\zeta(2s)/\zeta(s)$ has poles at the
+zeros of $\zeta$ on that line.
 
-The error in the naive expectation is that the decomposition into local Euler
-factors is valid only for the \emph{infinite} product: partial sums of a
-multiplicative Dirichlet series do not factor as partial Euler products, and the
-sign pattern of the coefficients can create correlations across the prime-factor
-classes $S_k=\sum_{\Omega(n)=k}a_n n^{-1/2-it}$ that the Euler structure does not
-see. Numerically the effect is large: at $t^\ast=7563.5$ with $N=10^5$, the signed
-Liouville polynomial reaches $|D_\lambda(t^\ast;N)|=46.88$, far above the typical
-fluctuation scale $\sim N^{1/2}(\log N)^{-1}\approx3$, with class-vector alignment
-ratio $\mathcal R=0.822$ --- the net sum retaining $82.2\%$ of the maximal coherent
-value $(\sum_k|S_k|^2)^{1/2}$, and a circular phase spread of only $40.4^\circ$.
-
-\begin{observation}[Sign structure, not multiplicativity, governs alignment]
+\begin{observation}[A large value of $D_\lambda$ near zeros of $\zeta$]
 \label{obs:liouville}
-Complete multiplicativity with a convergent Euler product is compatible with
-near-maximal constructive interference in the partial sums. The discriminant of
-resonance suppression is therefore not multiplicativity but the
-\emph{coefficient sign and entropy structure}: a controlled phase-correction
-experiment (replacing $\lambda(n)$ by $|\lambda(n)|=1$ on the class vectors)
-removes the alignment, isolating the parity pattern $(-1)^{\Omega(n)}$ --- not the
-Euler product --- as its source.
+For $N=10^5$ and $t=7563.5$ one finds $|D_\lambda(t;N)|=46.88$, whereas
+$(\sum_{n\le N}1/n)^{1/2}=3.48$ is the root mean square of
+$D_\lambda(\,\cdot\,;N)$ over long ranges of $t$ given by the mean value
+theorem.  The point $t$ lies among the consecutive zeros of $\zeta$ with
+ordinates $7563.18$, $7563.52$, $7563.77$, and
+$|\zeta(\half+it)|=0.0128$,
+$|\zeta(1+2it)/\zeta(\half+it)|=136.7$.  If $D_\lambda$ is split according
+to $\omega(n)$ (the term $n=1$ forming the class $k=0$), then
+$|D_\lambda|=0.93\sum_k|S_{\lambda,k}|$ at this point.
 \end{observation}
 
-This places the amplification bound of \S\ref{sec:thm5} in its proper light: the
-quantity that must be controlled is the coherent alignment of the class vectors,
-and that alignment is a property of the coefficient architecture, against which
-multiplicativity offers no protection.
+So complete multiplicativity of the coefficients does not prevent large
+values of the partial sums, and the alignment of the class sums is not
+special to $a_n=1$.  In this example the large value occurs next to a
+cluster of zeros of $\zeta$, as the factor $1/\zeta(s)$ suggests.
 
-\subsection{$\omega$-class geometry at extreme peaks of $\zeta$}\label{sec:peaks}
+\subsection{The ratio \texorpdfstring{$1+r$}{1+r} at large values of \texorpdfstring{$|D|$}{|D|}}\label{sec:peaks}
 
-The same class decomposition, applied to $\zeta$ itself at its largest values on
-the critical line, yields a descriptive finding worth recording, with an explicit
-correction of an earlier over-claim. Comparing the inter-class interference of
-$\zeta$ at extreme peaks to a phase-randomized ensemble, one finds, through the
-canonical (sign-consistent) comparison pipeline:
+The ratio $1+r=|D|^2/E$ can also be examined at the points where $|D|$ is
+largest.  These are the large values of $\zeta$ in the range considered:
+by \eqref{eq:AFE} with $x=N$, as in the proof of
+Theorem~\ref{thm:master}, $\zeta(\half+it)=1+D(t;N)+O(N^{-1/2})$
+uniformly for $t\in[N/10,N]$.  For each $N$ we take the
+$1\%$ of the grid points $t_j\in[N/10,N]$ with the largest $|D(t_j;N)|^2$
+and compare the mean of $1+r$ over these points with its mean over the
+whole grid.
 
-\begin{observation}[$\zeta$ is slightly more constructive at peaks; no transition]
+\begin{observation}[$1+r$ at large values of $|D|$]
 \label{obs:peaks}
-At its extreme peaks $\zeta$ is \emph{more} constructive than the
-phase-randomized ensemble throughout the accessible range; the constructive gap
-$\Delta r$ has a single sign (no sign change), and it \emph{decays monotonically}
-with $N$. There is no phase transition between the $k=2$ and $k=3$ regimes: an
-earlier reading that located a threshold transition was an artifact of a
-non-canonical normalization and is withdrawn. The honest statement is the weaker
-and cleaner one --- a vanishing constructive bias, not a transition.
+For $N=10^4$, $5\times10^4$, $10^5$, $1.5\times10^5$ the mean of $1+r$
+over the $1\%$ of grid points with the largest $|D|^2$ is $2.89$, $2.99$,
+$3.00$, $3.04$, against a mean over the whole grid of $0.68$, $0.69$,
+$0.69$, $0.69$.  The smallest value of $1+r$ among these points is $1.07$,
+$0.91$, $0.77$, $0.67$.  Thus at the largest values of $|D|$ on the grid
+the class sums add constructively on average, with $1+r$ about one half
+of $K_N$, and to the same extent at the four values of~$N$.
 \end{observation}
 
-This is consistent with, and refines, the sign-reconciliation analysis of the
-inter-class interference $r$: $r$ is conditioning-dependent
-(constructive at peaks, destructive in troughs, mean zero), so a peak-conditioned
-comparison sees the constructive side, decaying as the conditioning is averaged
-out.
+That $1+r$ is larger where $|D|$ is large is to be expected, since
+$|D|^2=(1+r)E$; the content of the observation is the size of the effect
+and the absence of any visible change of behaviour between the values of
+$N$ at which $k^*=2$ and those at which $k^*=3$.
 
-% ══════════════════════════════════════════════════════════════════════════
 \section{Discussion and Open Problems}\label{sec:discussion}
 
 \subsection{Connection to bilinear and multilinear estimates}
 
-The class sum $S_2(t;N) = \sum_{pq \le N} (pq)^{-1/2-it}$ is a
-\emph{bilinear Dirichlet polynomial}: it can be written as
+The class sum $S_2$ is
 \[
-  S_2(t;N) = \sum_{p \le \sqrt{N}} p^{-1/2-it}
-  \sum_{\substack{q \le N/p \\ q \ne p}} q^{-1/2-it}.
+  S_2(t;N) = \sum_{p<q}\ \sum_{\substack{a,b\ge1\\ p^aq^b\le N}}
+  (p^aq^b)^{-1/2-it},
 \]
-Bounding $\max_t |S_2|^2$ is closely related to bilinear exponential
-sum estimates~\cite{heath-brown1995,iwaniec-kowalski2004}.
-The Heath-Brown identity decomposes $\zeta^k$ into multilinear sums
-of precisely this type, suggesting a deep connection between
-$\omega$-class structure and known analytic techniques.
+whose main part $\sum_{p<q,\ pq\le N}(pq)^{-1/2-it}$ is a bilinear form in
+the primes; similarly the main part of $S_3$ is a trilinear form.  Sums of
+this shape occur in the treatment of sums over primes by the identities of
+Vaughan and Heath-Brown \cite{heath-brown1982},
+\cite[Chapter~13]{iwaniec-kowalski2004}, where they are estimated by
+bilinear methods.  We do not know of estimates of this kind that apply in
+the range $t\asymp N$ with the strength required here.
 
-Similarly, $S_3$ is a \emph{trilinear} sum.  The $k{=}2 \to k{=}3$
-transition we observe may reflect the point at which trilinear methods
-become necessary for optimal bounds.
-
-\subsection{Connection to the moments of $\zeta$}
+\subsection{Mean values of the class sums}
 \label{subsec:moments}
-The bilinear and large-sieve connections above concern the \emph{hard,
-blocked} direction---pointwise control of $\max_t|S_k|^2$. A second,
-more fruitful direction connects the $\omega$-decomposition to the
-\emph{moment} theory of $\zeta$. Writing
-$|D_\zeta|^{2k}=\bigl(\sum_j S_j\bigr)^k\bigl(\sum_j \overline{S_j}\bigr)^k$
-and integrating, the $2k$-th moment
-$I_k(T)=\int_0^T|\zeta(\half+it)|^{2k}\,dt$ admits an exact decomposition
-into contributions indexed by $\omega$-class multi-indices.
-
-We have carried out this decomposition computationally for the partial-sum
-proxy. Two robust phenomena emerge.
-
-\textbf{(a) A growth-exponent fingerprint.}
-Fitting the second moment of each class, $M_k(N)=\int|S_k(t;N)|^2\,dt
-\propto (\log N)^{a_k}$, gives a sequence of exponents that \emph{sharply
-separates} $\zeta$ from non-Euler-product and even from other genuine
-$L$-functions:
-\begin{center}
-\begin{tabular}{lccccc}
-\toprule
-$k$ & 1 & 2 & 3 & 4 & 5 \\
-\midrule
-$a_k$ for $\zeta$ & $5.9$ & $9.2$ & $11.3$ & $14.8$ & $19.3$ \\
-$a_k$ for $L(\Delta,s)$, $L_{\mathrm{DH}}$ & \multicolumn{5}{c}{cluster at much smaller values} \\
-\bottomrule
-\end{tabular}
-\end{center}
-The dramatically larger exponents for $\zeta$ reflect the logarithmic
-divergence of its coefficient energy sums $\sum_{\omega(n)=k}n^{-1}$;
-functions with near-convergent coefficient sums show slow redistribution.
-
-\textbf{(b) Off-diagonal dominance of the fourth moment.}
-Decomposing $\int|D_F|^4\,dt$ into pure-class terms, diagonal cross-class
-terms, and the off-diagonal residual, $\zeta$ is overwhelmingly governed by
-cross-class interaction:
-\begin{center}
-\begin{tabular}{lccc}
-\toprule
-& pure-class & diagonal cross-class & off-diagonal residual \\
-\midrule
-$\zeta$            & $5.1\%$  & $12.6\%$ & $\mathbf{82.3\%}$ \\
-$L(\Delta,s)$      & \multicolumn{2}{c}{$56.5\%$ diagonal-dominant} & smaller \\
-$L_{\mathrm{DH}}$  & \multicolumn{2}{c}{$76.4\%$ diagonal-dominant} & near zero \\
-\bottomrule
-\end{tabular}
-\end{center}
-The Euler-product structure of $\zeta$ thus manifests as \emph{outsized
-inter-class correlation} ($82\%$ of the fourth moment), precisely the
-$j\neq k$ interaction that the $\omega$-decomposition isolates.
-
-\textbf{Honest scope.} These are robust \emph{finite-$N$} fingerprints, not
-an asymptotic law. The \emph{fractional} class allocations
-$M_k/\sum_j M_j$ do \emph{not} converge as $N\to\infty$: by the
-Erd\H{o}s--Kac theorem the integer pool drifts toward higher $\omega$, so
-the leading $\omega$-class shifts with $N$. Consequently the decomposition
-does \emph{not} yield a clean distribution of the Keating--Snaith constant
-$C_k$ across fixed classes; the exponents and the off-diagonal fraction are
-the stable, regime-robust quantities. Establishing how the cross-class
-interaction connects to the genuine moment asymptotics
-$I_k(T)\sim C_k\,T(\log T)^{k^2}$---in particular whether the off-diagonal
-share has a limit---is the natural open problem this framework raises.
-
-\subsection{The large sieve and its limitations}
-
-The large sieve inequality~\cite{montgomery-vaughan1974} gives:
+By Proposition~\ref{prop:stronger},
 \[
-  \sum_r |S_k(t_r;N)|^2
-  \le (N + T) \sum_{\substack{n \le N \\ \omega(n) = k}} n^{-1}
+  \frac1T\int_0^T|S_k(t;N)|^2\,dt
+  =\sum_{\substack{n\le N\\ \omega(n)=k}}\frac1n+O\Bigl(\frac NT\Bigr).
 \]
-for well-spaced $\{t_r\}$.  This bounds the \emph{mean} of $|S_k|^2$
-over the grid.  The gap between this mean bound and the observed
-\emph{maximum} (Table~\ref{tab:Rk}) is the phase resonance phenomenon.
+For fixed $k$ the sum on the right is asymptotic to
+$(\log\log N)^k/k!$ as $N\to\infty$: the upper bound is in
+Proposition~\ref{prop:stronger}, and the squarefree $n=p_1\cdots p_k$ with
+all $p_i\le N^{1/k}$ contribute at least
+$\frac1{k!}\bigl(u^k-\binom k2u^{k-2}\sum_pp^{-2}\bigr)$ with
+$u=\sum_{p\le N^{1/k}}1/p=\log\log N+O_k(1)$.  Consequently the classes
+that carry most of the mean square are those with $k$ of the order of
+$\log\log N$ (for $N=1.5\times10^5$, $\log\log N=2.48$ and the largest
+mean is that of $k=2$; see Table~\ref{tab:Rk}), and the share of any fixed
+class in $\sum_k\int_0^T|S_k|^2$ tends to zero as $N\to\infty$.  In
+particular, for fixed $k$ and every $\delta>0$,
+$\int_0^T|S_k(t;N)|^2dt\ll_{k,\delta}T(\log N)^{\delta}$ for $T\ge N$.
 
-Closing this gap---obtaining \emph{pointwise} bounds on $|S_k|^2$---is the
-central challenge.  Known pointwise results for single exponential sums
-(van der Corput, Vinogradov) do not directly apply to the
-class-restricted sums~$S_k$.
+For the fourth power there is the pointwise identity
+\[
+  |D|^4=(E+X)^2=\sum_k|S_k|^4+\sum_{j\ne k}|S_j|^2|S_k|^2+\bigl(2EX+X^2\bigr),
+\]
+which separates the terms involving one class, the products of the
+squared moduli of two classes, and the remainder, which involves the
+arguments of the class sums.  This identity concerns the Dirichlet
+polynomial $D$; we do not derive from it any statement on the moments of
+$\zeta$.
+On the grids of Section~\ref{sec:computation} the three groups account for
+the following shares of the grid mean of $|D|^4$:
+\begin{center}
+\begin{tabular}{rccc}
+\toprule
+$N$ & $\sum_k|S_k|^4$ & $\sum_{j\ne k}|S_j|^2|S_k|^2$ & $2EX+X^2$ \\
+\midrule
+$10\,000$  & $18.7\%$ & $30.2\%$ & $51.1\%$ \\
+$50\,000$  & $14.8\%$ & $26.8\%$ & $58.4\%$ \\
+$100\,000$ & $13.6\%$ & $25.6\%$ & $60.7\%$ \\
+$150\,000$ & $13.1\%$ & $25.2\%$ & $61.8\%$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+More than half of the mean fourth power of $|D|$ thus comes from the
+remainder, and its share increases slowly on this range.  This is a
+numerical observation at four values of~$N$.
+
+\subsection{The mean value theorem and its limitations}
+
+By \cite[Corollary~3]{montgomery-vaughan1974},
+\[
+  \int_{N/10}^{N} |S_k(t;N)|^2\,dt
+  = \frac{9N}{10} \sum_{\substack{n \le N \\ \omega(n) = k}} \frac1n
+  +O\bigl(\pi_k(N)\bigr),
+\]
+so that the mean of $|S_k|^2$ over $[N/10,N]$ equals
+$\sum_{\omega(n)=k,\,n\le N}1/n$ up to an error $O(\pi_k(N)/N)$.  The
+third and fourth columns of Table~\ref{tab:Rk} show this agreement.
+The gap between the mean and the largest values is the subject of
+Section~\ref{sec:resonance}.
+
+Obtaining pointwise bounds on $|S_k|^2$ is the problem.  The methods of
+van der Corput and Vinogradov, which give pointwise bounds for
+$\sum_{n\le N}n^{-it}$, use the regularity of the phase $t\log n$ along
+all integers of an interval and do not apply directly to sums restricted
+to $\omega(n)=k$.
 
 \subsection{Open problems}
 
 \begin{conjecture}[$\alpha_B$ decay]\label{conj:decay}
-$\alpha_B(N) \to 0$ as $N \to \infty$.
+$\alpha_B(N) \to 0$ as $N \to \infty$; here $B(N)$ is the true maximum
+of Definition~\ref{def:BN}.
 \end{conjecture}
 
-If true, the Lindel\"of Hypothesis follows from
-Theorem~\ref{thm:master}.  Our data is consistent with
-$\alpha_B \sim c / \log\log N$, but the $k{=}3$ transition
-prevents a definitive conclusion from the available range.
+Conjecture~\ref{conj:decay} is the hypothesis of
+Corollary~\ref{cor:lindelof}, so it implies the Lindel\"of hypothesis.
+The computations of Section~\ref{sec:computation} neither support nor
+contradict it.
 
 \begin{conjecture}[Uniform class bound]\label{conj:uniform}
-For every $\varepsilon > 0$ and every $k \le K_N$:
+For every $\varepsilon > 0$ there is $C_\varepsilon$ such that for all
+$N\ge2$ and every $k \le K_N$,
 \[
   \max_{t \in [N/10, N]} |S_k(t;N)|^2
-  \le C_{\varepsilon,k} \, N^\varepsilon.
+  \le C_{\varepsilon} \, N^\varepsilon.
 \]
 \end{conjecture}
 
-This is stronger than Conjecture~\ref{conj:decay} (it requires
-the bound for \emph{each} class separately).  If true for $k = 1$
-(primes), it would follow from known bounds on
-$\sum_{p \le x} p^{-it}$ (see Vinogradov~\cite{vinogradov1958}).
-For $k = 2$ (semiprimes), it is related to bounds on bilinear
-Kloosterman-type sums.
+Conjecture~\ref{conj:uniform} is a restatement of
+Conjecture~\ref{conj:decay}.  Already the case $k=1$, in which $S_1$ is a
+sum over prime powers, is far beyond present knowledge.  For $t\asymp N$
+the known bounds for $\sum_{p\le N}p^{-it}$, which rest on the zero-free
+region of Vinogradov and Korobov (see \cite[Chapter~VI]{titchmarsh1986}
+and the notes to that chapter), save less than any power of $N$ over the
+trivial bound, whereas the conjecture asks for square-root cancellation.
+Heuristically, by the explicit formula, a zero of $\zeta$ with real part
+$\beta>\half$ and ordinate $\gamma\in[N/10,N]$ contributes to
+$S_1(\gamma;N)$ a term of size about $N^{\beta-1/2}/\log N$.  For this
+reason the hypothesis $B(N)\le C_\varepsilon N^\varepsilon$ is expected to
+be of the strength of RH, and not merely of LH; we have no proof of
+either implication between it and RH.
 
-\begin{conjecture}[$k$-transition sequence]\label{conj:transitions}
-There exist $N_2 < N_3 < N_4 < \cdots$ such that $k^*(N) = j$ for
-$N \in [N_{j}, N_{j+1})$.  The transition points satisfy
-$\log N_{j+1} / \log N_j \to c > 1$.
-\end{conjecture}
+\begin{question}[Sequence of maximising classes]\label{conj:transitions}
+Is $k^*(N)$ eventually non-decreasing in $N$?  If so, how do its jump
+points $N_3 < N_4 < \cdots$ grow, where $N_j$ is the least $N$ from which
+on $k^*(N)\ge j$?
+\end{question}
 
-Our single observed transition ($N_2 \approx 10^5$) is insufficient to
-determine the sequence; computation at $N \ge 10^6$ would test whether
-$k{=}3 \to k{=}4$ occurs.
+In our computations the class attaining the maximum is $k^*=2$ for
+$N\le5\times10^4$ and $k^*=3$ for $N=10^5$ and $1.5\times10^5$.  One
+change of class does not indicate how the sequence continues.
 
-% ══════════════════════════════════════════════════════════════════════════
-\begin{thebibliography}{20}
+\begin{thebibliography}{9}
 
 \bibitem{bourgain2017}
 J.~Bourgain, \emph{Decoupling, exponential sums and the Riemann
 zeta function}, J.~Amer.\ Math.\ Soc.\ \textbf{30} (2017), 205--224.
 
-\bibitem{heath-brown1995}
-D.~R.~Heath-Brown, \emph{A new form of the circle method,
-and its application to quadratic forms},
-J.~Reine Angew.\ Math.\ \textbf{481} (1996), 149--206.
+\bibitem{hardy-wright2008}
+G.~H.~Hardy and E.~M.~Wright,
+\emph{An Introduction to the Theory of Numbers},
+6th ed., Oxford University Press, Oxford, 2008.
+
+\bibitem{heath-brown1982}
+D.~R.~Heath-Brown, \emph{Prime numbers in short intervals and a
+generalized Vaughan identity},
+Canad.\ J.~Math.\ \textbf{34} (1982), 1365--1377.
 
 \bibitem{iwaniec-kowalski2004}
 H.~Iwaniec and E.~Kowalski,
 \emph{Analytic Number Theory},
-Amer.\ Math.\ Soc.\ Colloq.\ Publ.\ \textbf{53}, 2004.
+Amer.\ Math.\ Soc.\ Colloq.\ Publ.\ \textbf{53},
+Amer.\ Math.\ Soc., Providence, RI, 2004.
 
 \bibitem{montgomery-vaughan1974}
 H.~L.~Montgomery and R.~C.~Vaughan,
 \emph{Hilbert's inequality},
-J.~London Math.\ Soc.\ \textbf{8} (1974), 73--82.
+J.~London Math.\ Soc.\ (2) \textbf{8} (1974), 73--82.
 
 \bibitem{titchmarsh1986}
 E.~C.~Titchmarsh,
 \emph{The Theory of the Riemann Zeta-Function},
-2nd ed.\ (revised by D.~R.~Heath-Brown), Oxford, 1986.
-
-\bibitem{vinogradov1958}
-I.~M.~Vinogradov,
-\emph{The Method of Trigonometrical Sums in the Theory of Numbers},
-Interscience, 1954.
-
-\bibitem{hardy-wright2008}
-G.~H.~Hardy and E.~M.~Wright,
-\emph{An Introduction to the Theory of Numbers},
-6th ed., Oxford, 2008.
-
-\bibitem{granville-sound2003}
-A.~Granville and K.~Soundararajan,
-\emph{Decay of mean values of multiplicative functions},
-Canad.\ J.~Math.\ \textbf{55} (2003), 1191--1230.
-
-\bibitem{montgomery1971}
-H.~L.~Montgomery,
-\emph{Topics in Multiplicative Number Theory},
-Lecture Notes in Mathematics \textbf{227}, Springer, 1971.
-
-\bibitem{selberg1946}
-A.~Selberg,
-\emph{Contributions to the theory of the Riemann zeta-function},
-Arch.~Math.~Naturvid.\ \textbf{48} (1946), 89--155.
+2nd ed.\ (revised by D.~R.~Heath-Brown), Oxford University Press,
+Oxford, 1986.
 
 \end{thebibliography}
 
-% ══════════════════════════════════════════════════════════════════════════
 \appendix
 \section{Reproduction Code}\label{app:code}
 
-All computations and figures in this paper are reproduced by two
-self-contained Python artifacts provided alongside it, requiring no
-external data:
-\begin{itemize}
-  \item \texttt{reproduce\_colab.py} --- a single-file, Google
-  Colab--ready notebook (dependencies: \texttt{numpy}; \texttt{mpmath}
-  optional for validation) that recomputes $B(N)$, $\alpha_B(N)$, the
-  per-class maxima, the $k{=}2\to k{=}3$ transition, and the peak-to-mean
-  ratios $R_k$, and cross-checks $D_\zeta$ against a $50$-digit
-  \texttt{mpmath} reference. The default range $N\in\{10^4,5\times10^4\}$
-  runs in under a minute; $N$ up to $1.5\times10^5$ (full grid) reproduces
-  the headline numbers of Tables~\ref{tab:BN}--\ref{tab:Rk} exactly.
-  \item \texttt{reproduce.py} --- the full driver that additionally
-  regenerates Figures~\ref{fig:alphaB}--\ref{fig:resonance} (300\,dpi
-  PDF/PNG) and writes a structured \texttt{results.json}.
-\end{itemize}
-
-\noindent\textbf{Validation.} The engine is verified against
-arbitrary-precision \texttt{mpmath}: for $N=10^4$ and random
-$t\in[N/10,N]$, the float64 class-sum engine agrees with the $50$-digit
-reference to $\ge 10$ significant digits, confirming that the reported
-maxima are not numerical artifacts.
-
-The core algorithm:
+The numbers in Tables~\ref{tab:BN}--\ref{tab:resonance}, in
+Observations~\ref{obs:liouville} and~\ref{obs:peaks} and in
+Section~\ref{subsec:moments}, and
+Figures~\ref{fig:alphaB}--\ref{fig:resonance}, are produced by
+the script \texttt{reproduce.py} supplied with the paper; it needs no
+external data and writes the file
+\texttt{results/computation\_results.json}, from which the tables were
+transcribed, and the four figures.  Its steps are:
 
 \begin{enumerate}
-  \item \textbf{Sieve:} Compute $\omega(n)$ for $n \le N$ via the
-    smallest-prime-factor sieve in $O(N \log\log N)$ time.
-  \item \textbf{Grid:} Generate $t$-values in $[N/10, N]$ with
-    spacing $\Delta t = \pi / \log N$.
-  \item \textbf{Class sums:} For each~$t$, compute
-    $S_k(t) = \sum_{\omega(n)=k} n^{-1/2-it}$ for $k = 1, \ldots, K_N$.
-  \item \textbf{Statistics:} Compute $|D|^2$, $E$, $(1+r)$, $B(N)$,
-    $\alpha_B$.
+  \item \textbf{Sieve.} Compute $\omega(n)$ for $n \le N$ with a sieve
+    over the primes.
+  \item \textbf{Grid.} Take $t_j=N/10+j\,\Delta t$,
+    $\Delta t = \pi / \log N$, $t_j\le N$; this is $26\,386$, $154\,982$, $329\,822$ and $512\,156$ points for
+    the four values of $N$.
+  \item \textbf{Class sums.} For each~$t_j$ compute
+    $S_k(t_j;N) = \sum_{\omega(n)=k} n^{-1/2-it_j}$, $k = 1, \ldots, K_N$,
+    in double precision, and from them $|D|^2$, $E$ and $1+r$.
+  \item \textbf{Refinement.} For each $k$, and for $1+r$, refine the $40$
+    largest local maxima on the grid: on $[t_j-\Delta t,t_j+\Delta t]$
+    evaluate at $17$ equally spaced points, re-centre at the largest
+    value with half-width equal to the spacing, and repeat three times
+    (final resolution $\Delta t/512$).
+  \item \textbf{Output.} $B(N)$, $k^*$, $\alpha_B$, the per-class means
+    and maxima, the size-bin decomposition at the largest values of
+    $|S_2|^2$ and $|S_3|^2$, the statistics of $1+r$, and the Liouville
+    polynomial of Observation~\ref{obs:liouville}.
 \end{enumerate}
 
-See the accompanying file \texttt{reproduce.py} for the complete
-implementation, including figure generation.
+The computation of the class sums for the four values of $N$ took about
+one hour with $16$ processes.  With the option \texttt{--validate}
+the script compares $D_\zeta(t;10^4)$ at three random $t\in[10^3,10^4]$
+with a $50$-digit evaluation; the absolute differences were below
+$10^{-11}$.  With the same option it computes, in $20$-digit arithmetic,
+the zeros of $\zeta$ and the values of $\zeta$ quoted in
+Observation~\ref{obs:liouville}.  The file \texttt{reproduce\_colab.py} is a shorter
+single-file version that computes the grid values (without refinement)
+for one value of $N$; its output agrees with the grid maxima given in
+parentheses in Table~\ref{tab:BN}.
 
 \end{document}
