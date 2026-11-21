@@ -1,0 +1,131 @@
+== A. coefficients, functional equation, zeros
+kappa = 0.284079043840412   a_1..a_5 = 1, kappa, -kappa, -1, 0
+functional equation at s=0.3+7i: |lhs-rhs|/|lhs| = 1.25e-30
+zero  0.8085171825 + 85.69934849 i   |L(1/2+i*85.70)| = 0.35683192   |L(1/2+i*gamma)| = 0.35686722
+zero  0.6508300806 + 114.1633427 i   |L(1/2+i*114.16)| = 0.095855075   |L(1/2+i*gamma)| = 0.095886088
+zero  0.5743560505 + 166.4793059 i   |L(1/2+i*166.48)| = 0.028740592   |L(1/2+i*gamma)| = 0.028742024
+zero  0.7242576946 + 176.7024612 i   |L(1/2+i*176.70)| = 0.2282959   |L(1/2+i*gamma)| = 0.22812005
+growth factor 10^(5*0.3085) = 34.87
+
+== B. exact partial sums at the rounded ordinates (Hurwitz identity)
+t = 85.70  |L| = 0.356832
+   |D(t;N)|, N=1e4..1e9: 0.351225 0.358907 0.356303 0.356903 0.356848 0.356817
+   slope 0.000787 +/- 0.000748  R2 0.216  p 0.353  mean 0.3562  CV 0.66%  |D(1e9)|/|D(1e4)| 1.0159  (alpha_pred - slope)/se = 411
+   N=1e4  |L-D| = 6.568e-03  bound(2.3) = 2.214e+00   |L-D-Abar N^-s| = 3.356e-07  bound(6.1) = 3.217e-03  sqrt(N)|L-D| = 0.6568
+   N=1e5  |L-D| = 2.077e-03  bound(2.3) = 7.001e-01   |L-D-Abar N^-s| = 1.061e-09  bound(6.1) = 1.017e-04  sqrt(N)|L-D| = 0.6568
+   N=1e6  |L-D| = 6.568e-04  bound(2.3) = 2.214e-01   |L-D-Abar N^-s| = 3.356e-12  bound(6.1) = 3.217e-06  sqrt(N)|L-D| = 0.6568
+   N=1e7  |L-D| = 2.077e-04  bound(2.3) = 7.001e-02   |L-D-Abar N^-s| = 1.061e-14  bound(6.1) = 1.017e-07  sqrt(N)|L-D| = 0.6568
+   N=1e8  |L-D| = 6.568e-05  bound(2.3) = 2.214e-02   |L-D-Abar N^-s| = 3.356e-17  bound(6.1) = 3.217e-09  sqrt(N)|L-D| = 0.6568
+   N=1e9  |L-D| = 2.077e-05  bound(2.3) = 7.001e-03   |L-D-Abar N^-s| = 1.070e-19  bound(6.1) = 1.017e-10  sqrt(N)|L-D| = 0.6568
+t = 114.16  |L| = 0.095855
+   |D(t;N)|, N=1e4..1e9: 0.090569 0.096033 0.096443 0.096031 0.095853 0.095837
+   slope 0.003385 +/- 0.002220  R2 0.368  p 0.202  mean 0.0951  CV 2.15%  |D(1e9)|/|D(1e4)| 1.0582  (alpha_pred - slope)/se = 66
+   N=1e4  |L-D| = 6.569e-03  bound(2.3) = 2.945e+00   |L-D-Abar N^-s| = 5.955e-07  bound(6.1) = 5.707e-03  sqrt(N)|L-D| = 0.6569
+   N=1e5  |L-D| = 2.077e-03  bound(2.3) = 9.312e-01   |L-D-Abar N^-s| = 1.883e-09  bound(6.1) = 1.805e-04  sqrt(N)|L-D| = 0.6568
+   N=1e6  |L-D| = 6.568e-04  bound(2.3) = 2.945e-01   |L-D-Abar N^-s| = 5.954e-12  bound(6.1) = 5.707e-06  sqrt(N)|L-D| = 0.6568
+   N=1e7  |L-D| = 2.077e-04  bound(2.3) = 9.312e-02   |L-D-Abar N^-s| = 1.883e-14  bound(6.1) = 1.805e-07  sqrt(N)|L-D| = 0.6568
+   N=1e8  |L-D| = 6.568e-05  bound(2.3) = 2.945e-02   |L-D-Abar N^-s| = 5.954e-17  bound(6.1) = 5.707e-09  sqrt(N)|L-D| = 0.6568
+   N=1e9  |L-D| = 2.077e-05  bound(2.3) = 9.312e-03   |L-D-Abar N^-s| = 1.891e-19  bound(6.1) = 1.805e-10  sqrt(N)|L-D| = 0.6568
+t = 166.48  |L| = 0.028741
+   |D(t;N)|, N=1e4..1e9: 0.035295 0.030817 0.029397 0.028947 0.028805 0.028761
+   slope -0.015406 +/- 0.005142  R2 0.692  p 0.040  mean 0.0303  CV 7.67%  |D(1e9)|/|D(1e4)| 0.8149  (alpha_pred - slope)/se = 17
+   N=1e4  |L-D| = 6.569e-03  bound(2.3) = 4.288e+00   |L-D-Abar N^-s| = 1.266e-06  bound(6.1) = 1.214e-02  sqrt(N)|L-D| = 0.6569
+   N=1e5  |L-D| = 2.077e-03  bound(2.3) = 1.356e+00   |L-D-Abar N^-s| = 4.004e-09  bound(6.1) = 3.838e-04  sqrt(N)|L-D| = 0.6568
+   N=1e6  |L-D| = 6.568e-04  bound(2.3) = 4.288e-01   |L-D-Abar N^-s| = 1.266e-11  bound(6.1) = 1.214e-05  sqrt(N)|L-D| = 0.6568
+   N=1e7  |L-D| = 2.077e-04  bound(2.3) = 1.356e-01   |L-D-Abar N^-s| = 4.004e-14  bound(6.1) = 3.838e-07  sqrt(N)|L-D| = 0.6568
+   N=1e8  |L-D| = 6.568e-05  bound(2.3) = 4.288e-02   |L-D-Abar N^-s| = 1.266e-16  bound(6.1) = 1.214e-08  sqrt(N)|L-D| = 0.6568
+   N=1e9  |L-D| = 2.077e-05  bound(2.3) = 1.356e-02   |L-D-Abar N^-s| = 4.013e-19  bound(6.1) = 3.838e-10  sqrt(N)|L-D| = 0.6568
+t = 176.70  |L| = 0.228296
+   |D(t;N)|, N=1e4..1e9: 0.234757 0.227987 0.227644 0.228315 0.228361 0.228295
+   slope -0.001634 +/- 0.001095  R2 0.358  p 0.210  mean 0.2292  CV 1.08%  |D(1e9)|/|D(1e4)| 0.9725  (alpha_pred - slope)/se = 206
+   N=1e4  |L-D| = 6.570e-03  bound(2.3) = 4.551e+00   |L-D-Abar N^-s| = 1.427e-06  bound(6.1) = 1.367e-02  sqrt(N)|L-D| = 0.6570
+   N=1e5  |L-D| = 2.077e-03  bound(2.3) = 1.439e+00   |L-D-Abar N^-s| = 4.511e-09  bound(6.1) = 4.324e-04  sqrt(N)|L-D| = 0.6568
+   N=1e6  |L-D| = 6.568e-04  bound(2.3) = 4.551e-01   |L-D-Abar N^-s| = 1.426e-11  bound(6.1) = 1.367e-05  sqrt(N)|L-D| = 0.6568
+   N=1e7  |L-D| = 2.077e-04  bound(2.3) = 1.439e-01   |L-D-Abar N^-s| = 4.511e-14  bound(6.1) = 4.324e-07  sqrt(N)|L-D| = 0.6568
+   N=1e8  |L-D| = 6.568e-05  bound(2.3) = 4.551e-02   |L-D-Abar N^-s| = 1.426e-16  bound(6.1) = 1.367e-08  sqrt(N)|L-D| = 0.6568
+   N=1e9  |L-D| = 2.077e-05  bound(2.3) = 1.439e-02   |L-D-Abar N^-s| = 4.519e-19  bound(6.1) = 4.324e-10  sqrt(N)|L-D| = 0.6568
+Abar = (3+kappa)/5 = 0.656816
+
+== C. direct double-precision summation versus the exact values (N <= 1e+09)
+t = 85.70  relative errors: 3.2e-13 2.5e-13 7.3e-14 1.9e-13 2.8e-13 4.3e-13
+t = 114.16  relative errors: 1.2e-12 3.6e-13 7.1e-13 2.6e-13 4.8e-13 8.0e-13
+t = 166.48  relative errors: 1.9e-12 2.9e-12 8.2e-12 1.5e-11 2.1e-11 2.8e-11
+t = 176.70  relative errors: 6.2e-13 6.7e-13 6.8e-13 9.1e-13 1.2e-12 1.3e-12
+median 7.0e-13   max 2.8e-11   cases 24
+
+== D. scan of t in [100,200], step 0.05, N <= 1e+07
+checkpoints N: [10000, 31623, 100000, 316228, 1000000, 3162278, 10000000]
+-- window maxima M_F(N) and the two fits of log M_F (least squares in log N, resp. sqrt(log N))
+zeta                     M: 6.1976 7.0153 7.8857 10.2172 14.2892 21.2471 34.1985
+                         alpha = 0.2461 +/- 0.0267   dAIC(power - sqrtlog) = -2.12   limit max|F(1/2+it)| = -
+zeta, main term removed  M: 6.0599 6.0627 6.0633 6.0618 6.0631 6.0623 6.0627
+                         alpha = 0.0000 +/- 0.0000   dAIC(power - sqrtlog) = +0.21   limit max|F(1/2+it)| = 6.0626
+L(s,chi5)                M: 9.0757 9.0760 9.0758 9.0764 9.0758 9.0762 9.0758
+                         alpha = 0.0000 +/- 0.0000   dAIC(power - sqrtlog) = +0.05   limit max|F(1/2+it)| = 9.0758
+f_rand                   M: 13.5983 14.3308 14.9652 15.4827 15.4548 16.8445 17.4409
+                         alpha = 0.0342 +/- 0.0030   dAIC(power - sqrtlog) = -0.56   limit max|F(1/2+it)| = -
+L_DH                     M: 4.4801 4.4737 4.4719 4.4743 4.4741 4.4736 4.4739
+                         alpha = -0.0001 +/- 0.0001   dAIC(power - sqrtlog) = +0.24   limit max|F(1/2+it)| = 4.4738
+L_DH^(eps)               M: 4.4920 4.4856 4.4838 4.4862 4.4860 4.4855 4.4858
+                         alpha = -0.0001 +/- 0.0001   dAIC(power - sqrtlog) = +0.25   limit max|F(1/2+it)| = 4.4857
+-- kurtosis and resonance score (max/median) of |D_F(t;10^6)| on the grid
+zeta                     kurtosis 3.17   RS 2.06   max 14.289  median 6.953
+zeta, main term removed  kurtosis 3.82   RS 5.19   max 6.063  median 1.169
+L(s,chi5)                kurtosis 6.69   RS 7.97   max 9.076  median 1.139
+f_rand                   kurtosis 11.52   RS 12.33   max 15.455  median 1.253
+L_DH                     kurtosis 2.89   RS 3.38   max 4.474  median 1.325
+L_DH^(eps)               kurtosis 2.89   RS 3.38   max 4.486  median 1.328
+-- prime phases at N = 10^6: mean resultant length R, p = exp(-M R^2)
+zeta       M=78498  top-20 local maxima of |D_F(t;10^6)|: mean R 0.0081  p<0.05: 17/20  p<0.001: 6/20   all 2001 grid points: mean R 0.0063  p<0.05: 48.2%  p<0.001: 5.4%
+           t of the 20 maxima: 100.20 100.70 101.95 102.45 102.95 107.80 108.30 108.80 109.30 109.80 117.45 125.60 126.10 126.60 136.05 136.55 137.05 154.25 171.55 172.05
+L(s,chi5)  M=78497  top-20 local maxima of |D_F(t;10^6)|: mean R 0.0016  p<0.05: 0/20  p<0.001: 0/20   all 2001 grid points: mean R 0.0022  p<0.05: 0.0%  p<0.001: 0.0%
+           t of the 20 maxima: 104.85 111.70 113.40 121.30 123.05 131.15 133.95 140.55 149.70 151.25 157.50 159.10 162.80 167.90 169.50 175.55 185.70 191.90 194.40 195.80
+L_DH       M=78497  top-20 local maxima of |D_F(t;10^6)|: mean R 0.0013  p<0.05: 0/20  p<0.001: 0/20   all 2001 grid points: mean R 0.0018  p<0.05: 0.0%  p<0.001: 0.0%
+           t of the 20 maxima: 101.70 105.80 107.35 110.10 115.65 119.95 129.50 133.40 138.90 144.20 146.80 152.10 161.10 165.15 170.20 175.45 179.05 189.20 193.05 196.60
+zeta: R*|1-it| over the grid: min 0.375  mean 0.911  max 1.326
+zeta, t in [100,150): p<0.05 at 74.8% of the grid points
+zeta, t in [150,200]: p<0.05 at 21.7% of the grid points
+-- single ordinates
+t=  84.20  1/|1-it|=0.01188   zeta R=0.01020 p=0.00028   L(s,chi5) R=0.00097 p=0.93   L_DH R=0.00214 p=0.7
+t=  85.70  1/|1-it|=0.01167   zeta R=0.01113 p=6e-05   L(s,chi5) R=0.00065 p=0.97   L_DH R=0.00188 p=0.76
+t=  90.00  1/|1-it|=0.01111   zeta R=0.01028 p=0.00025   L(s,chi5) R=0.00175 p=0.79   L_DH R=0.00084 p=0.95
+t= 300.00  1/|1-it|=0.00333   zeta R=0.00100 p=0.93   L(s,chi5) R=0.00137 p=0.86   L_DH R=0.00355 p=0.37
+t=1000.00  1/|1-it|=0.00100   zeta R=0.00293 p=0.51   L(s,chi5) R=0.00498 p=0.14   L_DH R=0.00299 p=0.5
+
+== E. omega-class strata, N = 10^6
+-- mean resultant length of theta_n = arg(a_n) - t log n
+t=114.16  all n, 5 not | n       M= 800000  R=1.00e-05  p=1.00
+t=114.16  squarefree, omega=1    M=  78497  R=2.05e-03  p=0.72
+t=114.16  squarefree, omega=2    M= 191884  R=1.28e-03  p=0.73
+t=114.16  squarefree, omega=3    M= 166022  R=9.69e-04  p=0.86
+t=114.16  squarefree, omega=4    M=  61227  R=4.68e-03  p=0.26
+t=114.16  bound of Proposition 5.2: 5|t|log N/(2N) = 3.94e-03
+t=166.48  all n, 5 not | n       M= 800000  R=1.36e-05  p=1.00
+t=166.48  squarefree, omega=1    M=  78497  R=2.66e-03  p=0.57
+t=166.48  squarefree, omega=2    M= 191884  R=2.24e-03  p=0.38
+t=166.48  squarefree, omega=3    M= 166022  R=8.42e-04  p=0.89
+t=166.48  squarefree, omega=4    M=  61227  R=2.56e-03  p=0.67
+t=166.48  bound of Proposition 5.2: 5|t|log N/(2N) = 5.75e-03
+-- classes at t=85.7, squarefree n
+   k=0  |S_k| = 1.000  arg =     0.0 deg
+   k=1  |S_k| = 1.539  arg =   128.5 deg
+   k=2  |S_k| = 2.175  arg =   161.1 deg
+   k=3  |S_k| = 2.489  arg =   -75.3 deg
+   k=4  |S_k| = 0.682  arg =    28.9 deg
+   k=5  |S_k| = 0.183  arg =   101.8 deg
+   k=6  |S_k| = 0.019  arg =  -126.4 deg
+   |sum| = 0.8347   (sum|S_k|^2)^(1/2) = 3.8458   calR = 0.2170   r = calR^2-1 = -0.9529
+-- classes at t=85.7, all n
+   k=0  |S_k| = 1.000  arg =     0.0 deg
+   k=1  |S_k| = 1.913  arg =   146.8 deg
+   k=2  |S_k| = 0.431  arg =  -171.9 deg
+   k=3  |S_k| = 1.642  arg =   -71.0 deg
+   k=4  |S_k| = 0.706  arg =    66.7 deg
+   k=5  |S_k| = 0.136  arg =   173.1 deg
+   k=6  |S_k| = 0.012  arg =   -62.6 deg
+   |sum| = 0.3563   (sum|S_k|^2)^(1/2) = 2.8391   calR = 0.1255   r = calR^2-1 = -0.9843
+   angle between S_2 and S_3 (squarefree): 123.6 deg
+
+== F. figures written to figures/
+
+total time 2714 s
