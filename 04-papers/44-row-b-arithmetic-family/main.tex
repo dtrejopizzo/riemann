@@ -96,7 +96,10 @@ which composes according to the multiplication of positive integers, and
 computes on it the functional $T$ of \cite{Companion}. In
 \cite[Section~1]{Companion} the Hermitian form $T(F\star G^\dagger)$ is set
 beside the intersection pairing of correspondences on the square of a curve,
-as having the same formal shape; in that comparison $T$ stands in the place
+as having the same formal shape. We extend that comparison by one step, which
+is ours and is not made in \cite{Companion}: since the intersection number of
+two correspondences is the intersection number with the diagonal of the
+composite of one with the transpose of the other, $T$ stands in the place
 of the intersection number with the diagonal. This is an analogy which
 motivates the constructions; no statement below depends on it.
 
@@ -118,8 +121,10 @@ $\DA=C_c^\infty(C_S)$, with the convolution $\star$ and the involution
 $F^\dagger(x)=\overline{F(x^{-1})}$, carries the functional
 $T=\sum_{v\in S}W_v$ of \cite{Companion}, which is called the trace there
 and here. It is not a new object: it is the sum over $v\in S$ of the local
-terms of Weil's explicit formula \cite{Weil1952}, in the form of Connes's
-$S$-local trace formula \cite[Theorem~4]{Connes99}, as explained in
+terms of Weil's explicit formula \cite{Weil1952}, with Weil's principal
+values, in the form of \cite[Appendix~II]{Connes99}; on the functions
+invariant under $\epsilon$ these are the terms of Connes's $S$-local trace
+formula \cite[Theorem~4]{Connes99}, as explained in
 \cite[Section~1]{Companion}. For $F$ vanishing near the identity,
 \[
   T(F)=\sum_{v\in S}\int_{\Q_v^\times}F(j_v(x))\,\varrho_v(x)\,d^*x,\qquad
@@ -141,7 +146,9 @@ Haar measure of the shell $p^k\Z_p^\times$. We use the name ``Frobenius''
 only because of the composition law $\Frob_m\star\Frob_n=\Frob_{mn}$ and of
 the role of $\Frob_{p^k}$ in the trace (Theorem~\ref{thm:introB}). These
 measures are not Frobenius elements of a Galois group, and for $n>1$ they are
-not invertible (Theorem~\ref{thm:introA}(b)). Throughout the introduction,
+not invertible in the monoid of compactly supported measures
+(Theorem~\ref{thm:introA}(b) and the remark after
+Theorem~\ref{thm:frobdagger}). Throughout the introduction,
 every integer index $m,n$ satisfies $P(mn)\subseteq S_f$, and every rational
 index lies in $\Gamma_S$.
 
@@ -254,6 +261,7 @@ $\Gamma_n^{\mathrm{rad}}$.
 
 The coefficients $(\log p)\,p^{-k/2}$ are not new. As recalled above, $T$ is
 the sum of the local terms of Weil's explicit formula in the form of
+\cite[Appendix~II]{Connes99}, and on $\epsilon$-invariant functions of
 \cite[Theorem~4]{Connes99}, and Theorem~\ref{thm:introB} evaluates the term
 at $p$ on a function concentrated near the shell $j_p(p^k\Z_p^\times)$, on
 which $\varrho_p=p^{-k/2}$ and whose volume is $\log p$; for the
@@ -274,8 +282,13 @@ identity correspondence \cite[Theorem~4.3]{CCArithSite},
 \cite[Theorems~1.2 and~7.7]{CCGeomArith}. We do not relate the measures
 $\Frob_n$ to these correspondences. We only note that $\Psi(\lambda)$ is
 defined for every real $\lambda>0$, as is the radial family
-$\Gamma_r^{\mathrm{rad}}$, whereas by Theorem~\ref{thm:introA}(c) the family
-$\Frob_n$ has no weakly continuous extension to a real parameter.
+$\Gamma_r^{\mathrm{rad}}$, whereas, when $S_f$ contains at least two primes,
+by Theorem~\ref{thm:introA}(c) the family $\Frob_n$ has no weakly continuous
+extension to a real parameter. The hypothesis is needed: for $S_f=\{q\}$ the
+measures $\mu_t$, $t>0$, the products of the point mass at $e^{-t}$ in
+$\R^\times$ and of the Haar probability measure of $\Z_q^\times$, satisfy
+$\mu_s\star\mu_t=\mu_{s+t}$, depend weakly continuously on $t$, and
+$\mu_{k\log q}=\Frob_{q^k}$ for every $k\ge1$.
 
 Section~\ref{sec:integral} concerns the complexes
 $[L_S\xrightarrow{\,n\,}L_S]$, where $L_S=\prod_{p\in S_f}\Z_p$ and
@@ -564,7 +577,8 @@ paper $c=0$; by the same convention, the function $\widehat T$ of
 Proposition~\ref{prop:tate} below is then the Fourier transform of $T$. The
 functional $T$ is not new: for $c=0$ it is the sum over $v\in S$ of the local
 terms of Weil's explicit formula \cite{Weil1952}, with Weil's regularization
-at the identity, in the form of \cite[Theorem~4 and Appendix~II]{Connes99};
+at the identity, in the form of \cite[Appendix~II]{Connes99}, and on
+$\epsilon$-invariant functions of \cite[Theorem~4]{Connes99};
 the comparison is made in \cite[Section~1 and after
 Convention~5.5]{Companion}. The local density $\varrho_v$ and the names
 ``trace'' for $T$ and ``symbol'' for $\widehat T$ are those of
@@ -657,7 +671,9 @@ $|\widehat G(\mathfrak c,\tau)|\le C_{\mathcal B}\min(1,\tau^{-2})$ for all
 $G\in\mathcal B$, all components $\mathfrak c$ and all $\tau$.
 \end{proposition}
 
-\noindent The bound for $I_A$ holds by \cite[(68), (71)]{Companion}, and the
+\noindent The seminorm $\mathcal N$ is denoted $N$ in \cite{Companion}, where
+the letter $\mathcal N$ has another meaning. The bound for $I_A$ holds by
+\cite[(68), (71)]{Companion}, and the
 last statement is established in the proof of \cite[Lemma~6.2]{Companion}.
 
 \section{The radial family}\label{sec:radial}
@@ -1226,6 +1242,12 @@ $K_{P(n)}K_{P(n)}=K_{P(n)}$. (iv) For $n>1$ the group $K_{P(n)}$ contains a
 copy of some $\Z_p^\times$ and is infinite; the Haar measure of an infinite
 compact group has no atoms, whereas $\Delta$ is a point mass.
 \end{proof}
+
+For $n>1$ the measure $\Frob_n$ is not invertible in the monoid
+$(M_c(C_S),\star)$. Indeed $\Frob_n\star\Delta^{(P(n))}=\Frob_n$ by
+Lemma~\ref{lem:coset}; if $\nu\in M_c(C_S)$ satisfied $\Frob_n\star\nu=\Delta$,
+then $\Delta^{(P(n))}=\Delta^{(P(n))}\star\Frob_n\star\nu=\Frob_n\star\nu
+=\Delta$, contrary to (iv).
 
 For $r\in\Gamma_S$ and $A\subseteq S_f$ with $P(r)\subseteq A$ put
 \begin{equation}\label{eq:gradedfrob}
@@ -1892,6 +1914,10 @@ Theorem~\ref{thm:twohalves}, $\beta$ and $\phi$ in
 Theorem~\ref{thm:infgenus}, and $g$ in Theorem~\ref{thm:qfinpositive}, are
 functions of the additive variable $-\log|x|_S$, as in
 Section~\ref{sec:radial}; the two are related by $\tilde g(t)=g(e^{-t})$.
+The only exception is the function $\Delta_{\varepsilon,N}$ of
+Theorem~\ref{thm:infgenus}, in which $\beta$ is applied to
+$+\varepsilon^{-1}\log x_\infty$; the statements of that theorem involve
+$\beta$ only through the even function $\phi$ and through $\int\beta$.
 The measure $\omega_{\mathrm{fin}}$ and the
 function $\omega_\infty$ are those of Theorem~\ref{thm:repmeasures}; thus for
 $t\ne0$
@@ -2487,7 +2513,8 @@ here by the proof of Lemma~\ref{lem:boxtrace}(b). We do not use this remark.
 We end this discussion with an analogy, on which no statement of this paper
 depends. In \cite[Section~1]{Companion} the form $I_A$ is compared, as to
 its formal shape, with the intersection pairing of correspondences on the
-square of a smooth projective curve; in that comparison the unit $\Delta$
+square of a smooth projective curve; in the extension of that comparison
+made in the introduction, which is ours, the unit $\Delta$
 of $M_c(C_S)$ stands in the place of the diagonal. On the square of a curve
 of genus $\mathfrak g$ the diagonal has self-intersection number
 $2-2\mathfrak g$ \cite[Ch.~V, Exercise~1.6(a)]{Hartshorne}. Here $\Delta$ is

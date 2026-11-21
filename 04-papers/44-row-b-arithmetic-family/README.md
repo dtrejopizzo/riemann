@@ -13,4 +13,4 @@ It uses the algebra, involution and trace of
 [Paper 43](../43-row-a-torsion-theory/).
 
 - Source: [`main.tex`](main.tex)
-- PDF: [`arithmetic-frobenius-family-idele-class-group.pdf`](arithmetic-frobenius-family-idele-class-group.pdf) (33 pages)
+- PDF: [`arithmetic-frobenius-family-idele-class-group.pdf`](arithmetic-frobenius-family-idele-class-group.pdf) (34 pages)

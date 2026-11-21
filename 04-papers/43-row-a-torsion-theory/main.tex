@@ -71,7 +71,8 @@ composition and involution for graphs of automorphisms of a curve.
 
 In an independent part we study on $C_c^{\infty}(C_S)$ the functional $T$,
 the sum over $S$ of Weil's local terms in Connes's form plus a free constant
-$c$ at the identity.  Its Fourier transform has an explicit supremum $m$ and,
+$c$ at the identity.  The Fourier transform of the sum of the local terms has an explicit supremum
+$m$ and,
 on the principal component, simple poles including $\pm i/2$.  The form
 $T(F\star G^{\dagger})$ is nondegenerate, has infinite positive index if and
 only if $c>-m$, and has no continuous extension to the two eigenvectors of
@@ -225,7 +226,8 @@ T(F)=\sum_{v\in S}W_v(F)+c\,F(1),
 where $W_v(F)$ is a regularization at $x=1$ of the integral of
 $(F\circ j_v)\,\varrho_v$ over $\Q_v^{\times}$ and $c$ is a real constant
 (Definition~\ref{def:trace}); in the body of the paper we call $T$ the
-trace and its Fourier transform $\widehat T$ its symbol.  For $c=0$ this is the sum over $v\in S$ of the
+trace and the Fourier transform $\widehat T$ of $\sum_vW_v$, which is that
+of $T$ when $c=0$, its symbol.  For $c=0$ this is the sum over $v\in S$ of the
 local terms of Weil's explicit formula \cite{Weil1952}, with Weil's
 principal values, in the form
 $\mathrm{Pfw}\!\int f(u)\,|u|^{1/2}|1-u|^{-1}d^{*}u$ of
@@ -1133,7 +1135,8 @@ lattice label $\gamma$ is homotopy equivalent to an exterior algebra with zero
 differential if $\gamma w_{\infty}\ne1$, and to the sum of such an algebra
 and two copies of a Koszul complex
 $\mathcal K_{\Gamma}(\alpha;E_{Z\cup\{\infty\}})$ of the lattice acting on a
-function algebra if $\gamma w_{\infty}=1$.  We do not compute the homology of
+function algebra ($Z$ as in Theorem~\ref{thm:shadow}(e)) if
+$\gamma w_{\infty}=1$.  We do not compute the homology of
 these Koszul complexes, and the homotopy equivalences are constructed for one
 lattice label at a time, without uniformity in $\gamma$; so the total complex
 $\Sh(E_w)$ is not determined beyond Proposition~\ref{prop:crossed}.
@@ -1147,11 +1150,13 @@ paper in \cite[Section~1]{MeyerCrossed}.  In \cite[Section~2]{MeyerCrossed}
 the part of the Hochschild homology belonging to the trivial group element is
 $\mathcal S\Omega^{n}(\mathbb A_K)/K^{\times}$ in degree $n$, the higher
 homology of $K^{\times}$ with coefficients in the Schwartz forms being zero,
-and the remaining part is that of the group algebra $\C[K^{\times}]$,
-detected by evaluation at $0\in\mathbb A_K$.  Theorem~\ref{thm:shadow} has
+and the remaining part is isomorphic, through evaluation at
+$0\in\mathbb A_K$, to the corresponding part of the Hochschild homology of
+the group algebra $\C[K^{\times}]$.  Theorem~\ref{thm:shadow} has
 the same shape when $w=1$: the part of lattice label $\gamma\ne1$ is
 $\Lambda^{\bullet}(\C^{d})$, the Hochschild homology of $\C[\Gamma_S]$ at
-$\gamma$, carried by the summand $C^{\mathrm{sc}}$, and the part of label $1$
+$\gamma$, carried by the summand $C^{\mathrm{sc}}$ of Theorem~\ref{thm:B2},
+and the part of label $1$
 contains in addition the Koszul complex of $\Gamma_S$ on the function algebra,
 in two consecutive degrees.  The
 setting is different: $S$ is finite, the function algebra is $E_P\oplus\C1$
@@ -1895,7 +1900,7 @@ idempotent.  They hold also for the bimodules used below.  If $\rho$ fixes every
 idempotent, as the identity and the dilations by units do, then
 $e_a\cdot m\cdot e_b=\rho(e_a)me_b$ vanishes for $a\ne b$, and
 \eqref{eq:blockM} follows in the same way as \eqref{eq:blockA}, with
-$\nu'=2v_{l+l',N}$ for $\mu=v_{l,N}$, $\nu=v_{l',N'}$.  If $A=F_p^{\ge0}$ and
+$\mu'=2v_{l+l',N}$ for $\mu=v_{l,N}$, $\nu=v_{l',N'}$.  If $A=F_p^{\ge0}$ and
 $\rho(1_a)=1_{a-k}$ for $a\ge k$, $\rho(1_a)=0$ for $a<k$, with a fixed
 $k\ge1$, then $\rho(1_a)1_b$ is $1_b$ if $a=b+k$ and $0$ otherwise; so
 $\sum_{a,b}e_a\cdot m\cdot e_b=\sum_{b\ge0}1_bm=m$, and \eqref{eq:blockM}
@@ -2565,7 +2570,9 @@ with differential the multiplication by $\mathsf d$ and augmentation the
 restriction $\mu$ to the diagonal.  Fix $\varphi\in\mathcal S(\R)$ with
 $\varphi(0)=1$.  The augmented complex is contracted by
 $c_{-1}(g)(z,z'):=g(z)\varphi(x(z)-x(z'))\mathbf 1_{z\sim z'}$ and
-$c_0(F):=(F-c_{-1}\mu F)/\mathsf d$.  On the two components of $\mathbb L^{2}$
+$c_0(F):=(F-c_{-1}\mu F)/\mathsf d$.  The function $c_{-1}(g)$ lies in
+$\mathcal S(\mathbb L^{2})$ and depends continuously on $g$, because
+$\langle x(z')\rangle\le2\langle x(z)\rangle\langle x(z)-x(z')\rangle$.  On the two components of $\mathbb L^{2}$
 where the points lie on different lines, $\mathsf d=1$ and $c_{-1}\mu F=0$, so
 $c_0F=F$ there.  On the other two we use that for $F\in\mathcal S(\R^{2})$
 vanishing on the diagonal the function
@@ -2765,7 +2772,7 @@ $\gamma$ is homotopy equivalent to $\Lambda^{\bullet}(\C^{d})$ with zero
 differential, $\Lambda^{m}$ in degree $m$.
 \item[(e)] If $\gamma w_{\infty}=1$, let $Z:=\{p\in S_f:\gamma w_p=1\}$, let
 $\Gamma_S$ act by dilations on every factor of the algebra
-$E_{Z\cup\{\infty\}}$ of Lemma~\ref{lem:hunital}, and let
+$E_{Z\cup\{\infty\}}$ defined before Lemma~\ref{lem:hunital}, and let
 $\mathcal K_{\Gamma}(\alpha;E_{Z\cup\{\infty\}})$ denote
 $\mathcal K_{\Gamma}(\alpha;W)$ for $W=E_{Z\cup\{\infty\}}[0]$.  Then the part of
 $\Sh(E_w)$ of lattice label $\gamma$ is homotopy equivalent to
@@ -2960,6 +2967,8 @@ with the kernels
 K_{s}(t)=\frac{1}{4\sinh(t/2)},\qquad K_{c}(t)=\frac{1}{4\cosh(t/2)},\qquad
 K(t)=K_{s}(t)+K_{c}(t)=\frac{e^{-t/2}}{1-e^{-2t}} .
 \]
+Here and in the rest of the paper, except where an element of $\Gamma_S$ is
+meant, $\gamma$ in $\gamma+\log4\pi$ denotes Euler's constant.
 \end{definition}
 
 For $c=0$ the functional $T$ is the sum over $v\in S$ of the local terms of
@@ -3269,7 +3278,7 @@ $\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$.
 \end{theorem}
 
 \begin{proof}
-$|\gamma|_S=1$ for $\gamma\in\Gamma_S$ by Lemma~\ref{lem:prodformula}, so
+$|\delta|_S=1$ for $\delta\in\Gamma_S$ by Lemma~\ref{lem:prodformula}, so
 $|\cdot|_S^{\pm1/2}$ is constant on $\Gamma_S$-orbits and \eqref{eq:rhoT}
 descends to $C_S$; its values are real, so
 $\rho_T(u^{-1})=(|u|_S^{1/2},|u|_S^{-1/2})=\rho_T(u)^{\sharp}$.  On the
@@ -3333,8 +3342,8 @@ F(\mathfrak c,\cdot)$ is a Schwartz function of $\tau$ and, by the
 Paley--Wiener theorem \cite[Theorem~7.3.1]{Hormander}, extends to an entire function
 of $\tau$ with
 \begin{equation}\label{eq:PW}
-|\widehat F(\mathfrak c,\xi+iy)|\le C_n\,e^{R|y|}(1+|\xi|)^{-n}
-\qquad(n\ge0),
+|\widehat F(\mathfrak c,\xi+iy)|\le C_k\,e^{R|y|}(1+|\xi|)^{-k}
+\qquad(k\ge0),
 \end{equation}
 where $\supp f_{\mathfrak c}\subset[-R,R]$.  The two Tate characters are
 values of this continuation off the real axis:
@@ -3638,10 +3647,10 @@ right-hand sides of \eqref{eq:plancherel} and \eqref{eq:plancherelv} converge
 absolutely.
 \end{proof}
 
-The values in Theorem~\ref{thm:symbol}(a),(b) are classical.  With
-$\zeta_p(s)=(1-p^{-s})^{-1}$ and $\zeta_{\infty}(s)=\pi^{-s/2}\Gamma(s/2)$
+The values in Theorem~\ref{thm:symbol}(a),(b) are classical.  With the local factors
+$L_p(s)=(1-p^{-s})^{-1}$ and $L_{\infty}(s)=\pi^{-s/2}\Gamma(s/2)$
 one has, on the principal component,
-$\Wh_v(\mathfrak c_0,\tau)=-2\,\Rel\,(\zeta_v'/\zeta_v)(\tfrac12+i\tau)$ for
+$\Wh_v(\mathfrak c_0,\tau)=-2\,\Rel\,(L_v'/L_v)(\tfrac12+i\tau)$ for
 every $v\in S$; for the expression of the local terms of the explicit
 formula by logarithmic derivatives of local factors on the critical line see
 Burnol \cite{BurnolCR}.  The value $-\cond(\kappa_p)\log p$ on a ramified
@@ -3892,10 +3901,10 @@ constant depending only on $B$; integrating by parts twice gives
 $|\widehat G(\mathfrak c,\tau)|\le C'_B\min(1,\tau^{-2})$, uniformly in
 $\mathfrak c$ and in $G\in B$.  By Theorem~\ref{thm:symbol}(a),(b),
 \begin{equation}\label{eq:logbound}
-|\Th(\mathfrak c,\tau)|\le A_S+\sum_{p\in S_f}\cond(\kappa_p)\log p
-+B_S\log(2+|\tau|)=:A_{\mathfrak c}+B_S\log(2+|\tau|),
+|\Th(\mathfrak c,\tau)|\le\alpha_S+\sum_{p\in S_f}\cond(\kappa_p)\log p
++\alpha'_S\log(2+|\tau|)=:A_{\mathfrak c}+\alpha'_S\log(2+|\tau|),
 \end{equation}
-where $A_S$ and $B_S$ depend only on $S$: the unramified terms of
+where $\alpha_S$ and $\alpha'_S$ depend only on $S$: the unramified terms of
 \eqref{eq:Wphat} are bounded, $\Wh_{\infty}$ is continuous and satisfies
 \eqref{eq:Winfhat} uniformly in the parity, and the ramified terms
 $-\cond(\kappa_p)\log p$ of \eqref{eq:Wphat} are constant on each component.  The
@@ -3904,7 +3913,7 @@ is unbounded over $\Ch$.  Let $A_B$ be the maximum of $A_{\mathfrak c}$ over
 the $d$ components met by $B$.  Then
 \[
 N(G)\le d\,C'_B\int_{\R}\min(1,\tau^{-2})
-\bigl(A_B+|c|+B_S\log(2+|\tau|)\bigr)\frac{d\tau}{2\pi}<\infty
+\bigl(A_B+|c|+\alpha'_S\log(2+|\tau|)\bigr)\frac{d\tau}{2\pi}<\infty
 \]
 for every $G\in B$.  The case $B=\{G\}$ gives finiteness for a single $G$.
 A seminorm $p$ on a Fr\'echet space $E$ which is bounded on bounded sets is
@@ -4321,7 +4330,7 @@ With \eqref{eq:logbound} on $\mathfrak c_0$ this gives the bound for $N(F_n)$
 with
 \[
 C_1:=\lVert\vartheta''\rVert_{L^{1}}\int_{\R}
-\frac{A_{\mathfrak c_0}+|c|+B_S\log(2+|\tau|)}{\frac14+\tau^{2}}\,
+\frac{A_{\mathfrak c_0}+|c|+\alpha'_S\log(2+|\tau|)}{\frac14+\tau^{2}}\,
 \frac{d\tau}{2\pi}<\infty .
 \]
 Finally $\widehat G_n=\overline{\widehat F_n}$ by
@@ -4590,7 +4599,7 @@ I_A(F[\varphi],F[g])=\int_{\R}\widehat\varphi(\tau)\,
 \]
 We write $\lVert g\rVert^{2}:=\int_{\R}|g|^{2}\frac{d\tau}{2\pi}$ and
 $\omega(\tau):=|\Th(\mathfrak c,\tau)|+|c|$.  By \eqref{eq:logbound},
-$\omega(\tau)\le A_{\mathfrak c}+|c|+B_S\log(2+|\tau|)$.
+$\omega(\tau)\le A_{\mathfrak c}+|c|+\alpha'_S\log(2+|\tau|)$.
 
 \emph{Concentration.}  Fix $\varphi_0\in C_c^{\infty}(\R)$ with
 $\lVert\widehat\varphi_0\rVert=1$; $\widehat\varphi_0$ is a Schwartz function.
@@ -4602,7 +4611,7 @@ substitution $s=\delta(\tau-a)$ gives
 \begin{equation}\label{eq:weightedtail}
 \int_{|\tau-a|>\rho}\omega(\tau)
 |\widehat\varphi_{a,\delta}(\tau)|^{2}\frac{d\tau}{2\pi}
-\le\int_{|s|>\delta\rho}\Bigl(A_{\mathfrak c}+|c|+B_S\log\bigl(2+|a|+|s|\bigr)\Bigr)
+\le\int_{|s|>\delta\rho}\Bigl(A_{\mathfrak c}+|c|+\alpha'_S\log\bigl(2+|a|+|s|\bigr)\Bigr)
 |\widehat\varphi_0(s)|^{2}\frac{ds}{2\pi}\ \longrightarrow\ 0
 \end{equation}
 as $\delta\to\infty$, the integrand on the right being integrable over $\R$.
@@ -4698,6 +4707,10 @@ for $c>-m$ the form $I_A$ is semidefinite on no subspace of finite codimension
 of $\DA$; in particular $\DA$ is not the orthogonal sum of a plane and a
 subspace on which $I_A$ is definite, which is the decomposition that the Hodge
 index theorem provides for divisors on a surface.
+Theorem~\ref{thm:signature} concerns the form of a fixed finite set $S$;
+$T_S$ differs from $T_{\lim}$ by the terms \eqref{eq:Tinf} of the primes
+outside $S$, and the theorem gives no information on $I_{\lim}$ or on the
+zeros of the zeta function.
 
 For comparison, let $c=0$ and let $F\in\DA^{\mathrm{prim}}$ be radial, in the
 sense defined before Proposition~\ref{prop:rulingsdiv}, with
@@ -5702,7 +5715,7 @@ the Riemann zeta function}, Selecta Math. (N.S.) \textbf{5} (1999), 29--106.
 \bibitem{CCWeilArch}
 A.~Connes and C.~Consani, \emph{Weil positivity and trace formula, the
 archimedean place}, Selecta Math. (N.S.) \textbf{27} (2021), no.~4, Paper
-No.~77.
+No.~77, arXiv:2006.13771.
 
 \bibitem{DLMF}
 \emph{NIST Digital Library of Mathematical Functions},

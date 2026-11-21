@@ -274,7 +274,9 @@ and $q$ is a polynomial determined by $N$, $\eta$, $\rho_0$ and the finitely
 many zeros of height below a bound depending on $\rho_0$ and $\eta$; the
 method is that of \cite{Yoshida,CCWeilArch}.  For the inequality on the sum
 over the zeros the proof uses only the functional equation, the reality of
-$\xi$ on the real axis, the absence of real zeros, and the convergence of
+$\xi$ on the real axis, the location of the zeros in the strip
+$0\le\Rel s\le1$, the absence of real zeros (including
+$\xi(0)=\xi(1)\ne0$), and the convergence of
 $\sum_\rho|\rho|^{-2}$; the reformulation in terms of $\Il$ uses in addition
 Theorem~\ref{thm:introA}.  The points in which the statement differs from
 those quoted are that the functions are real-valued and of prescribed
@@ -386,9 +388,10 @@ $I_S:=I^{(0)}_S$.
 \end{proposition}
 
 In \cite{P43} the constant $c$ is fixed and omitted from the notation: the
-functional $T^{(c)}_S$ is denoted $T$ there and is called the trace, its
-Fourier transform is called its symbol, and the form $I^{(c)}_S$ is denoted
-$I_A$.  For $c=0$ the functional $T_S$ is the sum over $v\in S$ of the local
+functional $T^{(c)}_S$ is denoted $T$ there and is called the trace, the
+function $\widehat T_S$ of Proposition~\ref{prop:symbol} below, which is its
+Fourier transform for $c=0$, is called its symbol, and the form $I^{(c)}_S$
+is denoted $I_A$.  For $c=0$ the functional $T_S$ is the sum over $v\in S$ of the local
 terms of Weil's explicit formula, with Weil's principal values, in the form
 of \cite[Appendix~II]{Connes99}; the comparison is made in
 \cite[Section~5]{P43}, after Definition~5.4 and Convention~5.5 there.
@@ -1187,9 +1190,11 @@ $\widehat T_S(\cz,\cdot)$ to $\tau\in\C$.  Since
 $f_p=-\frac{d}{ds}\log(1-p^{-s})^{-1}$ and
 $a=-\frac{d}{ds}\log\bigl(\pi^{-s/2}\Gamma(s/2)\bigr)$, the function $A_S$ is
 minus the logarithmic derivative of the product of the local factors at the
-places of $S$; compare \cite{BurnolCR,BurnolConductor}.  Its poles at $\tau=\pm i/2$, that
-is at $s=0$ and $s=1$, have residues $\mp i(|S_f|+1)$ in the variable $\tau$;
-this is \cite[Theorem~5.13(c)]{P43}.
+places of $S$; compare \cite{BurnolCR,BurnolConductor}.  The poles of the
+continuation $A_S(s)+A_S(1-s)$ of $\widehat T_S(\cz,\cdot)$ at
+$\tau=\pm i/2$, that is at $s=0$ and $s=1$, have residues
+$\mp i(|S_f|+1)$ in the variable $\tau$; this is
+\cite[Theorem~5.13(c)]{P43}.
 
 \begin{theorem}
 \label{thm:residues}
@@ -1548,7 +1553,7 @@ outside $(-\log2,\log2)$.  Then the sum over $n$ in
 \eqref{eq:radialtracelim} is empty, so that
 $\Il(\Gamma_F,\Gamma_F)=W_\infty(\Gamma_h)$, and this number is $\le0$: this
 is Weil's inequality at the archimedean place, due to Yoshida
-\cite{Yoshida}; see \cite[Section~1]{CCWeilArch}, and
+\cite{Yoshida}; see \cite[Introduction]{CCWeilArch}, and
 \cite[Section~5, after Convention~5.5]{P43} for the comparison of
 $W_\infty$ with the distribution used there; see also the remark after
 \cite[Theorem~6.18]{P43}.  For positivity under support conditions see also
@@ -1806,12 +1811,23 @@ $\delta X\log X\le C_1(X+|s_0|+1)+C_2$ for all $X\ge X_1$, which is false for
 large $X$.  So $h=0$.
 \end{proof}
 
-For $c=0$ the proof uses that the number of distinct zeros of $\xi$ with
-$0<\Iml\rho\le X$ is not $O(X)$.  A lower bound of order $X$ for this number
-would not suffice, since the bound for $n(R)$ is of that order; and the
-bound $O(\log X)$ for the multiplicity of a zero of height $X$, which
-follows from the second of the classical facts quoted before
-Lemma~\ref{lem:contour}, gives no more than a lower bound of order $X$.
+For $c=0$ the proof uses only that the number of distinct zeros of $\xi$
+with $0<\Iml\rho\le X$ is not $O(X)$.  We have deduced this from the theorem
+of Heath-Brown; it also follows from a weaker classical input, the theorem
+of Littlewood that there is a constant $A$ such that for every sufficiently
+large $T$ there is a zero $\rho$ with $|\Iml\rho-T|<A/\log\log\log T$
+\cite[\S9.12]{TitchmarshZeta}, which gives at least a constant times
+$X\log\log\log X$ distinct zeros with $0<\Iml\rho\le X$.  The statement that
+an entire function of exponential type which vanishes at all zeros of $\xi$
+is identically zero is proved in this way in \cite[Lemma~2.1]{Suzuki}.  For
+nondegeneracy statements for the form
+$\sum_\rho\Phi_F(\rho)\overline{\Phi_G(1-\bar\rho)}$ on test functions with
+support in a fixed interval see \cite{Yoshida}.  A lower bound of order $X$
+for the number of distinct zeros would not suffice, since the bound for
+$n(R)$ is of that order; and the bound $O(\log X)$ for the multiplicity of a
+zero of height $X$, which follows from the second of the classical facts
+quoted before Lemma~\ref{lem:contour}, gives no more than a lower bound of
+order $X$.
 
 \begin{thebibliography}{99}
 
@@ -1839,7 +1855,7 @@ zeta function}, Selecta Math. (N.S.) \textbf{5} (1999), 29--106.
 \bibitem{CCWeilArch}
 A.~Connes and C.~Consani, \emph{Weil positivity and trace formula, the
 archimedean place}, Selecta Math. (N.S.) \textbf{27} (2021), no.~4, Paper
-No.~77.
+No.~77; arXiv:2006.13771.
 
 \bibitem{Conrey}
 J.~B.~Conrey, \emph{More than two fifths of the zeros of the Riemann zeta
@@ -1871,9 +1887,17 @@ class groups}, preprint.
 \emph{An arithmetic Frobenius family on semilocal idele class groups},
 preprint.
 
+\bibitem{Suzuki}
+M.~Suzuki, \emph{Aspects of the screw function corresponding to the Riemann
+zeta-function}, preprint, arXiv:2206.03682.
+
 \bibitem{Titchmarsh}
 E.~C.~Titchmarsh, \emph{The Theory of Functions}, 2nd ed., Oxford University
 Press, Oxford, 1939.
+
+\bibitem{TitchmarshZeta}
+E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-function}, 2nd ed.,
+revised by D.~R.~Heath-Brown, Oxford University Press, Oxford, 1986.
 
 \bibitem{Weil1952} A.~Weil,
 \emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
