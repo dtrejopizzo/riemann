@@ -1,18 +1,19 @@
-# Paper 25 — Pontryagin spectral index of the Weil form and the Connes scaling operator: a bridge theorem for the Riemann Hypothesis
+# The Weil form and the scaling operator: a Pontryagin-index dictionary in zero coordinates
 
-Under Hypothesis D (exactly m orbits of zeros off the critical line) the Weil quadratic form Q has Kreĭn negative index κ = 2m. The paper formulates a bridge conjecture identifying κ(Q) with the number of complex eigenvalue pairs of the Connes scaling operator H_C, viewed as a Q-symmetric operator on a Pontryagin space built from (L²(C_ℚ), Q). The Kreĭn–Langer theorem gives the inequality neg.ind(H_C) ≤ κ once H_C is Q-symmetric; the reverse inequality needs a Pontryagin completion and a distributional extension carrying the characters x^{b_j+iγ_j} as generalized eigenvectors. A verification program V.1–V.4 is stated, with V.2 the central open problem.
+The paper studies the Weil quadratic form Q(f,g) = W(f * g~) on C_c^infty(R_+^*) together with the generator H_C of the unitary scaling action. It writes Q in the coordinates f -> (hat f(rho)) given by the Mellin transform at the zeros of zeta, and uses this to describe the Pontryagin completion of the test space and a Q-self-adjoint extension of H_C when the off-line zeros are finitely many.
 
-## Main results
-- `thm:weil-positivity` (Weil): CITED.
-- `thm:kappa-2m`: κ = 2m under Hypothesis D. CITED from the companion papers (Papers 18–19); CONDITIONAL on Hypothesis D.
-- `prop:indefinite` (Weil form as indefinite inner product): PROVED.
-- `thm:KL` (Kreĭn–Langer): CITED; gives neg.ind(H_C) ≤ κ, CONDITIONAL on Q-symmetry of H_C (V.1).
-- `conj:bridge` (Bridge Theorem): κ(Q) = neg.ind(H_C). OPEN.
-- `cor:rh-hc`: RH ⟺ neg.ind(H_C) = 0. CONDITIONAL on the bridge conjecture.
-- Program V.1–V.4; V.2 (spectral correspondence of off-line zeros with complex eigenvalues): OPEN.
+What the paper proves:
 
-## Files
-- `main.tex`, `main.pdf` — source and compiled paper.
+- Q is Hermitian and invariant under unitary scaling, so H_C is Q-symmetric on test functions (Prop. 4.1, Lemma 4.4).
+- Zero-side form: Q(f,g) = sum over zeros of n_rho hat f(rho) conj(hat g(1 - conj rho)); if the off-line zeros form m quartets (Hypothesis D), then the negative index kappa(Q) is at most 2m (Lemma 4.6).
+- Under Hypothesis D: kappa(Q) = 2m exactly, ker Q = {f : hat f(rho) = 0 for all rho}, and the completion is l^2 over the critical zeros plus a 4m-dimensional hyperbolic space (Prop. 4.7).
+- Under Hypothesis D, H_C extends to a Q-self-adjoint diagonal operator in this completion with real spectrum the ordinates of the critical zeros and with 4m simple non-real eigenvalues i(1/2 - rho), 2m of them in the upper half-plane, so the count equals kappa(Q); J(S) is a core, and M is the unique Q-self-adjoint extension (Prop. 5.3).
 
-## Relation to other papers
-- Uses the index results of Papers 18 and 19.
+All of this is a restatement of Q in zero coordinates: it does not decide whether off-line zeros exist, and nothing about RH is proved. The case of infinitely many off-line zeros is left open. There are no numerical computations.
+
+Known and new: Weil's criterion, the explicit formula (Bombieri's form), Pontryagin's theorem and Connes' trace-formula approach are known. The zero-side description of the completion and of the scaling operator under Hypothesis D, elementary as it is, is the content of the paper; it complements the bound kappa_V <= m on even test functions of Paper 18.
+
+Files:
+
+- [main.tex](main.tex) - LaTeX source
+- [bridge-theorem.pdf](bridge-theorem.pdf) - compiled paper (8 pages)
