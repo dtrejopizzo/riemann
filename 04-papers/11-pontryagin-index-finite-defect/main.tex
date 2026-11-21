@@ -13,193 +13,250 @@
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{observation}[theorem]{Numerical observation}
 
-\newcommand{\bbR}{\mathbb{R}}
-\newcommand{\bbZ}{\mathbb{Z}}
 \newcommand{\fa}{\mathfrak a}
 \newcommand{\fp}{\mathfrak p}
 \newcommand{\ft}{\mathfrak t}
 \newcommand{\RH}{\mathrm{RH}}
-\DeclareMathOperator{\Spec}{Spec}
 
-\title[The Pontryagin-Index Route]{The off-line zeros as a Pontryagin index: a tail relative-form-bound
-reduction, and two computations closing the finite-defect route}
+\title[The Pontryagin-Index Route]{The off-line zeros as a Pontryagin index: a conditional reduction and numerical observations on the prime tail}
 \author{David Alejandro Trejo Pizzo}
 \thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
 
 
 \begin{document}
-\nocite{bgdeBranges,bgKL,bgBognar,bgAzizov,bgLagarias,bgLevinson,bgConrey89}
 \begin{abstract}
-We study the localized Weil form $\ft=\fa-\fp$ (archimedean minus prime) as a
-quadratic form on a Kre\u\i n space, and track not its sign but its
-\emph{negative index} $\kappa$, equal to the number of off-line zeros. The
-hierarchy $\kappa=0\,(\RH)\subset\kappa<\infty\subset\kappa=\infty$ suggests an
-infinite-dimensional analogue of finitization: \emph{finite defect}
-($\kappa<\infty$, a Pontryagin space $\Pi_\kappa$), where Kre\u\i n--Langer
-theory bounds the non-real spectrum. We reduce $\kappa<\infty$ to a single
-relative form bound on the prime tail (RFB$_X$) and then close the two natural
-mechanisms for it, by computation on the validated band-limited engine. First,
-the relative-form-subordination cutoff scales with the band,
-$X^\ast(d)\sim e^{2d}/10$, so no fixed prime head captures the negative squares.
-Second, the saturation $\lambda_{\max}=1$ of the prime-vs-archimedean pencil is
-\emph{approached}, not attained: the near-critical multiplicity grows linearly
-with the band and the spectral gap closes, so the near-null space is
-infinite-dimensional. Hence the off-line zero count is not finite-rank
-detectable; the criticality is self-similar across $\log$-prime scale; and the
-question returns, with no finite shortcut, to the semiboundedness of $\ft$ on an
-infinite-dimensional near-null space. No claim about RH is made.
+We study the Weil form $\ft=\fa-\fp$ (archimedean minus prime) as a quadratic
+form and track not its sign but its \emph{negative index} $\kappa$, the number
+of its negative squares. Weil's criterion gives $\kappa=0$ under RH; the
+intermediate condition $\kappa<\infty$ (finite defect, a Pontryagin space
+$\Pi_\kappa$) is the setting of Kre\u\i n--Langer theory. We prove a
+conditional reduction: if the archimedean form has compact resolvent on the
+ambient Hilbert space and the prime tail beyond a cutoff $X$ is
+relatively bounded by the archimedean form with bound $<1$, then $\kappa$ is
+finite, with an explicit bound. On the space $\mathcal H_d$ of functions
+supported in $[-d,d]$ the hypotheses hold, so $\kappa_d<\infty$ for every $d$,
+and the open question is the uniformity in $d$. We also describe, qualitatively,
+exploratory computations on finite-dimensional band-limited subspaces which
+suggest that the form of the hypothesis with $C=0$ and constants uniform in the
+band fails: the cutoff at which the prime tail becomes subordinate appeared to
+grow with the band, and the number of near-critical directions of the
+prime-versus-archimedean pencil appeared to grow with the band. These
+computations are not reproduced here and do not decide whether $\kappa$ is
+finite. No claim about RH is made.
 \end{abstract}
 \maketitle
 
-\tableofcontents
-\newpage
-
 \section{Introduction}
-The Weil explicit formula realizes a quadratic functional
+The Weil explicit formula \cite{Weil} realizes a quadratic functional
 $\ft(g)=\sum_\rho h_g(\gamma_\rho)$ over the nontrivial zeros
-$\tfrac12+i\gamma_\rho$, with $h_g$ the entire extension of $|\widehat g|^2$;
+$\tfrac12+i\gamma_\rho$, with $h_g(r)=\widehat g(r)\overline{\widehat g(\bar r)}$
+the entire extension of $|\widehat g|^2$ (for compactly supported $g$), where
+$\widehat g(r)=\int_{\mathbb R}g(x)e^{irx}\,dx$;
 on-line zeros contribute nonnegatively, off-line zeros contribute indefinite
-quartets, and $\RH\iff\ft\succeq0$ (Weil's criterion). Realized on a Kre\u\i n
-space \cite{P8}, $\ft$ carries a \emph{negative index}
+quartets, and $\RH\iff\ft\succeq0$ (Weil's criterion \cite{Weil}). On
+band-limited tests the zero side can be written, with $F=\widehat g$ and $E$
+the evaluation map at the zeros, $\ft(F)=\langle JEF,EF\rangle$
+with a fundamental symmetry $J$ whose negative part is supported on the
+off-line zeros \cite[Theorem~1.2]{P8}. We write
 \[
-\kappa\;=\;\#\{\text{negative squares of }\ft\}\;=\;\#\{\text{off-line zeros}\}.
+\kappa\;=\;\#\{\text{negative squares of }\ft\}\in\{0,1,2,\dots,\infty\}
 \]
-This paper asks whether $\kappa$ is \emph{finite} --- a question strictly
-weaker than RH ($\kappa=0$) and strictly stronger than any zero-density
-estimate --- because $\kappa<\infty$ would place $\ft$ in a Pontryagin space
-$\Pi_\kappa$, where the Kre\u\i n--Langer theory \cite{KL} gives a self-adjoint
-operator with at most $\kappa$ non-real eigenvalue pairs and a definitizing
-structure. Finite defect is the infinite-dimensional analogue of the
-finitization (a finite-rank model) that the function-field proof of RH supplies
-geometrically.
+for its negative index, the maximal dimension of a subspace on which $\ft$ is
+negative definite. We take $\kappa$ on compactly supported $g$, so
+$\kappa=\sup_d\kappa_d$, where $\kappa_d$ is the negative index of $\ft$ on
+$\mathcal H_d=\{g\in L^2(\mathbb R):\operatorname{supp}g\subset[-d,d]\}$.
+Heuristically, by the identity just quoted, since each off-line quartet
+contributes an indefinite term, one expects $\kappa$ to be finite exactly when only finitely
+many zeros lie off the line, and then to be comparable with their number; we
+do not prove this and use $\kappa$ only as defined above.
 
-We reduce $\kappa<\infty$ to a concrete inequality (\S\ref{sec:red}) and then
-close its two natural mechanisms by computation (\S\S\ref{sec:c1}--\ref{sec:c2}).
-The outcome is negative for finite defect and structurally informative: the
-off-line negative squares are not confined to any finite set of primes, and the
-criticality of $\ft$ is carried by an infinite-dimensional, self-similar
-near-null space.
+This paper asks whether $\kappa$ is \emph{finite}. An affirmative
+answer is implied by RH ($\kappa=0$). If $\kappa<\infty$ and $\ft$ is
+nondegenerate, completion gives a Pontryagin space $\Pi_\kappa$, in which every
+self-adjoint operator has at most $\kappa$ eigenvalues in the open upper
+half-plane (Pontryagin's theorem; see \cite{KL} and the references there). Finite defect is an
+infinite-dimensional analogue of the finite-rank models that the function-field
+proof of RH supplies geometrically.
+
+We prove a conditional reduction of $\kappa<\infty$ to a relative form bound
+on the prime tail (\S\ref{sec:red}), show that its hypotheses hold on each $\mathcal H_d$, and describe
+exploratory computations (\S\S\ref{sec:c1}--\ref{sec:c2}) suggesting that a
+$d$-uniform bound (RFB$_X$) with $C=0$ fails.
 
 \section{The reduction to a tail relative form bound}\label{sec:red}
-On band-limited test functions write
+\subsection*{Setting}
+For $g\in L^2(\mathbb R)$ write $\tilde g(x)=\overline{g(-x)}$ and
+$(g\star\tilde g)(s)=\int_{\mathbb R}g(x+s)\overline{g(x)}\,dx=\langle\tau_{-s}g,g\rangle$,
+where $\tau_s g(x)=g(x-s)$ and $\|g\|$ is the $L^2(\mathbb R)$ norm. The prime
+form is
 \[
-\ft[g]=\fa[g]-\fp[g],\qquad
 \fp[g]=2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,\mathrm{Re}\,(g\star\tilde g)(\log n),
 \]
-with $\fa$ the archimedean form (gamma-factor multiplier
-$\Omega(r)=\mathrm{Re}\,\psi(\tfrac14+\tfrac{ir}{2})-\log\pi$, positive at
-height). Split the prime form at a cutoff $X$, $\fp=\fp_{\le X}+\fp_{>X}$; the
-head $\fp_{\le X}$ is finite rank.
+and the archimedean form is
+\[
+\fa[g]=\frac1{2\pi}\int_{\mathbb R}\Omega(r)\,|\widehat g(r)|^2\,dr
++h_g(\tfrac i2)+h_g(-\tfrac i2),
+\qquad \Omega(r)=\mathrm{Re}\,\psi(\tfrac14+\tfrac{ir}{2})-\log\pi,
+\]
+the last two terms being the contributions of the poles $s=0,1$ in the explicit
+formula \cite{Weil} (with $\widehat g$ as above, $h_g(\pm\tfrac i2)
+=\widehat g(\pm\tfrac i2)\overline{\widehat g(\mp\tfrac i2)}$, and
+$\widehat g(\pm\tfrac i2)=\int g(x)e^{\mp x/2}dx$). For $g\in\mathcal H_d$
+these terms are finite, $(g\star\tilde g)(s)=0$ for $|s|>2d$, and so the prime
+sum is finite (only $n\le e^{2d}$ occur). We work on a closed subspace
+$\mathcal H\subset L^2(\mathbb R)$ of test functions on which these
+expressions are defined (for instance $\mathcal H_d$), and we define
+$\ft=\fa-\fp$ on the domain of $\fa$; for smooth $g\in\mathcal H_d$ this agrees
+with the sum over zeros by the explicit formula \cite{Weil}. Split the prime form at a cutoff
+$X$, $\fp=\fp_{\le X}+\fp_{>X}$ (terms $n\le X$ and $n>X$). Since
+$|(g\star\tilde g)(s)|\le\|g\|^2$, the head is bounded:
+\begin{equation}\label{eq:head}
+|\fp_{\le X}[g]|\le B_X\|g\|^2,\qquad B_X=2\sum_{n\le X}\Lambda(n)n^{-1/2}.
+\end{equation}
+It is not of finite rank: each term is the form of $(\tau_s+\tau_{-s})/2$,
+which has continuous spectrum on $L^2(\mathbb R)$.
 
 \begin{proposition}[Reduction]\label{prop:red}
-If for some $X$ the tail satisfies the relative form bound
+Assume that $\fa$ is a closed form on $\mathcal H$, bounded below, whose
+associated self-adjoint operator $A$ has compact resolvent (its eigenvalues
+tend to $+\infty$). If for some $X$ the tail satisfies the one-sided relative
+form bound
 \begin{equation}\tag{RFB$_X$}
-\bigl|\fp_{>X}[g]\bigr|\le a\,\fa[g]+C\|g\|^2,\qquad a<1,
+\fp_{>X}[g]\le \alpha\,\fa[g]+C\|g\|^2\qquad(g\in\operatorname{dom}\fa),\qquad 0\le\alpha<1,
 \end{equation}
-then $\ft$ has finitely many negative squares, $\kappa<\infty$.
+then $\ft$ has finitely many negative squares on $\operatorname{dom}\fa$, and
+\[
+\kappa\le N:=\#\{\text{eigenvalues }\mu\text{ of }A\text{ with }(1-\alpha)\mu<C+B_X\},
+\]
+counted with multiplicity. In particular (RFB$_X$) with the two-sided bound
+$|\fp_{>X}[g]|\le\alpha\fa[g]+C\|g\|^2$ suffices.
 \end{proposition}
 \begin{proof}
-$\ft=\fa-\fp_{\le X}-\fp_{>X}\succeq(1-a)\fa-\fp_{\le X}-C$. The form
-$(1-a)\fa-C$ is bounded below; subtracting the finite-rank form $\fp_{\le X}$
-adds at most $\operatorname{rank}\fp_{\le X}<\infty$ negative squares. Hence
-$\kappa\le\operatorname{rank}\fp_{\le X}<\infty$.
+By (RFB$_X$) and \eqref{eq:head},
+$\ft[g]\ge(1-\alpha)\fa[g]-(C+B_X)\|g\|^2$ for $g\in\operatorname{dom}\fa$.
+Let $E$ be the closed span of the eigenvectors of $A$ with
+$(1-\alpha)\mu<C+B_X$; $N=\dim E<\infty$ by compactness of the resolvent. For
+$g\in\operatorname{dom}\fa\cap E^\perp$, the spectral theorem gives
+$\fa[g]\ge\mu_\ast\|g\|^2$ with $(1-\alpha)\mu_\ast\ge C+B_X$, hence
+$\ft[g]\ge0$. A subspace on which $\ft$ is negative definite meets
+$E^\perp$ only in $0$, so its dimension is at most $N$.
 \end{proof}
 
-The quantity controlling negative squares is the one-sided maximal generalized
-eigenvalue
-$\lambda_{\max}(X,d)=\sup_g \fp_{>X}[g]/\fa[g]$ on band $d$ (primes $\le e^{2d}$);
-$\ft$ stops producing negative squares from the tail once
-$\lambda_{\max}(X,d)\le1$. (RFB$_X$) for a \emph{fixed} $X$ as $d\to\infty$ is
-exactly what Proposition~\ref{prop:red} needs.
-
-\begin{remark}[Why this is hard, in one line]
-$\sum_{n\le N}\Lambda(n)n^{-1/2}\sim2\sqrt N$ dominates $\fa\sim\log$, so
-(RFB$_X$) holds only through cancellation: the prime tail must exhibit
-square-root cancellation \emph{in the relative-form sense}. This is the same
-$\sqrt N$-vs-$\log N$ obstruction met at the foundation of this line of work.
+\begin{remark}
+On $\mathcal H=L^2(\mathbb R)$ the hypothesis cannot hold: the pole terms are
+not defined there, and the multiplier $\Omega$ has continuous spectrum. On $\mathcal H_d$ it holds. Indeed $\Omega$ is
+continuous, $\Omega(r)=\log|r|+O(1)$ as $|r|\to\infty$ (Stirling), hence
+$\Omega\ge-c$. The form $g\mapsto\frac1{2\pi}\int(\Omega+c)|\widehat g|^2$ is
+closed and nonnegative on $L^2(\mathbb R)$ (a multiplication form), so its
+restriction to the closed subspace $\mathcal H_d$ is closed; its domain contains
+$C_c^\infty(-d,d)$, hence is dense in $\mathcal H_d$. The pole terms satisfy
+$|\widehat g(\pm\tfrac i2)|\le e^{d/2}\sqrt{2d}\,\|g\|$ on $\mathcal H_d$, so they
+form a bounded form of rank at most $2$, and $\fa$ is closed and bounded below
+on $\mathcal H_d$. Choose $c'$ with $\fa[g]+c'\|g\|^2\ge0$ on $\mathcal H_d$. For
+compactness of the resolvent it suffices that the set
+$K=\{g\in\mathcal H_d:\fa[g]+(c'+1)\|g\|^2\le1\}$, the unit ball of the form
+domain, is precompact in $L^2$. Functions in $K$ are supported in $[-d,d]$ and
+satisfy $\int_{|r|>R}|\widehat g|^2\le C_d/\inf_{|r|>R}(\Omega+c)$, with
+$C_d$ depending only on $d$, $c$ and $c'$; the right-hand side tends to $0$
+as $R\to\infty$, uniformly on $K$. By the Kolmogorov--Riesz criterion (uniform
+localisation in $x$ and in $r$) $K$ is precompact. Moreover $\fp$ involves only
+$n\le e^{2d}$ on $\mathcal H_d$. Proposition~\ref{prop:red} with
+$X=e^{2d}$, $\alpha=0$, $C=0$ then gives
+$\kappa_d\le\#\{\text{eigenvalues of }A_d\text{ below }B_{e^{2d}}\}<\infty$
+for every $d$, where $A_d$ is the operator of $\fa$ on $\mathcal H_d$. The open
+question is whether $\kappa_d$ stays bounded as $d\to\infty$; (RFB$_X$) for a
+fixed $X$ with constants independent of $d$ bounds $\kappa_d$ by the number of
+eigenvalues $\mu$ of $A_d$ with $(1-\alpha)\mu<C+B_X$, a number which itself may
+grow with $d$.
 \end{remark}
 
-\section{Computation I: the subordination cutoff scales with the
+For a finite-dimensional subspace $V\subset\mathcal H_d$ on which $\fa\succ0$
+(in \S\S\ref{sec:c1}--\ref{sec:c2}, a space spanned by finitely many functions
+whose Fourier transforms are sinc functions at spacing $\pi/d$ centred near a
+frequency $T_0$; we call such a space a band-$d$ space at height $T_0$), define
+\begin{equation}\label{eq:lmax}
+\lambda_{\max}(X,d)=\sup_{0\ne g\in V}\frac{\fp_{>X}[g]}{\fa[g]}.
+\end{equation}
+If (RFB$_X$) holds with $C=0$ on $\mathcal H_d$, then
+$\lambda_{\max}(X,d)\le\alpha$ for every such $V\subset\mathcal H_d$;
+conversely, $\lambda_{\max}(X,d)\le\alpha$ gives (RFB$_X$) with $C=0$ on $V$
+only. Both statements are immediate from \eqref{eq:lmax}. The quantity
+$\lambda_{\max}(X,d)$ depends on $V$, that is, on $T_0$ and on the dimension,
+which the notation suppresses. On a single band the tail is a finite sum, so the content of
+(RFB$_X$) is the uniformity in $d$ for fixed $X$.
+
+\begin{remark}[Why this is hard]
+$\sum_{n\le N}\Lambda(n)n^{-1/2}\sim2\sqrt N$ dominates the logarithmic growth
+of $\Omega$, so a termwise estimate cannot give (RFB$_X$); heuristically it can hold
+only through cancellation in the prime tail.
+\end{remark}
+
+\section{Computation I: the subordination cutoff grows with the
 band}\label{sec:c1}
-On the validated band-limited engine (sinc basis at spacing $\pi/d$, height
-$T_0=10^3$ where $\fa\succ0$), we computed $\lambda_{\max}(X,d)$.
+We discretised the forms on band-$d$ spaces at height $T_0=10^3$ where
+$\fa\succ0$, and computed $\lambda_{\max}(X,d)$ as the largest generalized
+eigenvalue of the pencil $(\fp_{>X},\fa)$. These were exploratory computations;
+their code and data are not part of this paper and the basis dimensions are not
+recorded, so we state only the qualitative behaviour observed, as numerical
+observations that the reader cannot check from this paper.
 
 \begin{observation}\label{obs:c1}
-For $d=4$ ($e^{2d}\approx2981$) and $d=5$ ($e^{2d}\approx22026$):
-$\lambda_{\max}(1,d)=1.00000$ (the full form saturates, reproducing the
-Carleson-saturation result $C\equiv1$); and $\lambda_{\max}(X,d)$ first drops
-below $1$ at
-\[
-X^\ast(d)\;\approx\;\tfrac1{10}\,e^{2d}\qquad(X^\ast(4)\approx300,\ X^\ast(5)\approx2000).
-\]
-Equivalently, in $\log$-scale the subordinate tail is the fixed-width top slice
-$[\,2d-\log10,\,2d\,]$, of width $\approx2.3$ independent of $d$; for any fixed
-$X$, $\lambda_{\max}(X,d)$ increases with $d$ and recrosses above $1$.
+For $d=4,5$, the computed $\lambda_{\max}(1,d)$ was equal to $1$ within the
+working precision, and the cutoff $X^\ast(d)$ at which $\lambda_{\max}(X,d)$
+first dropped below $1$ was a fixed fraction of $e^{2d}$ (of order $e^{2d}/10$),
+so that it grew with the band.
 \end{observation}
 
-\begin{corollary}\label{cor:c1}
-(RFB$_X$) fails for every fixed $X$ in the limit $d\to\infty$: the cutoff making
-the tail subordinate diverges, $X^\ast(d)\to\infty$. The finite-rank-head
-mechanism of Proposition~\ref{prop:red} does not establish $\kappa<\infty$.
-\end{corollary}
+\begin{observation}\label{cor:c1}
+If the behaviour of Observation~\ref{obs:c1} persists, then for every fixed $X$
+the bound (RFB$_X$) with $C=0$ cannot hold uniformly in $d$. This does not
+decide whether $\kappa$ is finite: (RFB$_X$) is only a sufficient condition,
+and the case $C>0$ is not tested.
+\end{observation}
 
-Removing small primes \emph{raises} $\lambda_{\max}$ above $1$ before it falls,
-so the saturation at exactly $1$ is a global property of all primes, not a
-small-prime artifact; the offending directions recur at every scale.
-
-\section{Computation II: the saturation is approached, not
-attained}\label{sec:c2}
-We next ask whether the saturation $\lambda_{\max}=1$ of the full pencil
-$(\fp,\fa)$ is carried by finitely many directions. We computed the full
-spectrum for increasing band, with basis dimension scaled to the band.
+\section{Computation II: near-critical directions of the full
+pencil}\label{sec:c2}
+We next asked whether the value $\lambda_{\max}\approx1$ of the full pencil
+$(\fp,\fa)$ is carried by few directions, computing its spectrum on band-$d$
+spaces for $d=3,\dots,6$ (same discretisation and same caveat as in
+\S\ref{sec:c1}).
 
 \begin{observation}\label{obs:c2}
-At $T_0=10^3$, the near-critical multiplicity of $(\fp,\fa)$ grows linearly with
-the band:
-\[
-\#\{\lambda>0.99\}\;=\;3,\,11,\,19,\,27\quad\text{for }d=3,4,5,6,
-\]
-(constant increment $8$), the spectral gap $\lambda_{\max}-\lambda_2$ is
-$\le10^{-4}$ throughout, and the near-critical fraction rises from $10\%$ to
-$55\%$ of the spectrum.
+At $T_0=10^3$, the number of generalized eigenvalues of $(\fp,\fa)$ close to
+$1$ increased with $d$ over $d=3,\dots,6$, roughly linearly, and the top
+eigenvalues were nearly degenerate.
 \end{observation}
 
-\begin{corollary}\label{cor:c2}
-The saturation is \emph{approached}: a subspace of growing dimension (indeed a
-growing positive fraction) satisfies $\fp\approx\fa$, i.e. $\ft\approx0$. The
-near-null space of $\ft$ is infinite-dimensional in the limit. Hence the
-finite-defect picture fails: there is no finite critical structure to which a
-$\Pi_\kappa$ realization with $\kappa<\infty$ could attach.
-\end{corollary}
+\begin{observation}\label{cor:c2}
+In these computations, a subspace of growing dimension satisfies
+$\fp\approx\fa$, i.e.\ $\ft\approx0$. If the growth persists, the near-null
+space of $\ft$ is not finite-dimensional in the limit $d\to\infty$, and no
+finite critical subspace carries the near-saturation. This does not decide
+whether $\kappa$ is finite.
+\end{observation}
 
 \section{Conclusion}
-Corollaries~\ref{cor:c1} and \ref{cor:c2} close, by computation, both natural
-routes to $\kappa<\infty$: the off-line negative squares are neither captured by
-removing a finite prime head, nor concentrated in a finite critical subspace.
-Two structural facts emerge. The criticality is \emph{self-similar}: the linear
-growth of the near-null dimension with the band (a $\log$-prime range, equally a
-height-scale) matches the $\log T$ growth of the zero density, and the
-subordination window of Computation~I slides to infinity at a fixed $\log$-width.
-And the off-line zero count is \emph{not finite-rank detectable}: any control of
-$\kappa$ must face the form on an infinite-dimensional near-null space. The
-problem therefore returns to the semiboundedness of $\ft$ --- this line of work's
-central inequality --- now equipped with the fact that no finite-defect
-shortcut exists. We make no claim about RH; we have determined the shape of the
-obstruction in the Pontryagin framework and shown it admits no finite reduction.
+Proposition~\ref{prop:red} reduces finite defect, under a compact-resolvent
+hypothesis on $\fa$, to a one-sided relative bound on the prime tail; on each
+$\mathcal H_d$ it gives $\kappa_d<\infty$. The exploratory computations of
+\S\S\ref{sec:c1}--\ref{sec:c2} suggest that a $d$-uniform bound (RFB$_X$)
+with $C=0$ fails: in the computed range the prime tail is not made subordinate
+to $\fa$ (with $C=0$) by a cutoff $X$ independent of the band, and the
+near-saturation
+of the pencil $(\fp,\fa)$ is spread over a subspace whose dimension grows with
+the band. As a heuristic remark, this linear growth in the band is reminiscent
+of the $\log T$ growth of the zero density, but we have no computation
+supporting a precise relation. Nothing here decides whether $\kappa$ is finite,
+and no claim about RH is made.
 
 \begin{thebibliography}{9}
-\bibitem{P8} D.~A.~Trejo Pizzo, \emph{A faithful Kre\u\i n-space realization of
-the Weil form}, this program.
 \bibitem{KL} M.~G.~Kre\u\i n and H.~Langer, \emph{\"Uber die
 $Q$-Funktion eines $\pi$-hermiteschen Operators im Raume $\Pi_\kappa$}, Acta
-Sci. Math. (Szeged) \textbf{34} (1973).
-\bibitem{bgdeBranges} L.~de Branges, \emph{Hilbert Spaces of Entire Functions}, Prentice-Hall, 1968.
-\bibitem{bgKL} M.~G.~Kre\u\i n and H.~Langer, \emph{\"Uber die verallgemeinerten Resolventen und die charakteristische Funktion eines isometrischen Operators im Raume $\Pi_\kappa$}, Colloq.\ Math.\ Soc.\ J\'anos Bolyai \textbf{5} (1972), 353--399.
-\bibitem{bgBognar} J.~Bogn\'ar, \emph{Indefinite Inner Product Spaces}, Springer, 1974.
-\bibitem{bgAzizov} T.~Ya.~Azizov and I.~S.~Iokhvidov, \emph{Linear Operators in Spaces with an Indefinite Metric}, Wiley, 1989.
-\bibitem{bgLagarias} J.~C.~Lagarias, \emph{Hilbert spaces of entire functions and Dirichlet $L$-functions}, in: Frontiers in Number Theory, Physics, and Geometry I, Springer, 2006, 365--377.
-\bibitem{bgLevinson} N.~Levinson, \emph{More than one third of zeros of Riemann's zeta-function are on $\sigma=1/2$}, Adv.\ Math.\ \textbf{13} (1974), 383--436.
-\bibitem{bgConrey89} J.~B.~Conrey, \emph{More than two fifths of the zeros of the Riemann zeta function are on the critical line}, J.\ Reine Angew.\ Math.\ \textbf{399} (1989), 1--26.
+Sci. Math. (Szeged) \textbf{34} (1973), 191--230.
+\bibitem{P8} D.~A.~Trejo Pizzo, \emph{A Kre\u\i n-space formulation of the zero
+side of the Weil quadratic form on Paley--Wiener spaces}, preprint (Paper 08).
+\bibitem{Weil} A.~Weil, \emph{Sur les ``formules explicites'' de la th\'eorie
+des nombres premiers}, Comm.\ S\'em.\ Math.\ Univ.\ Lund (1952), 252--265.
 \end{thebibliography}
 
 \end{document}

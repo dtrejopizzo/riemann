@@ -1,27 +1,18 @@
-# Paper 11 — The off-line zeros as a Pontryagin index: a tail relative-form-bound reduction, and two computations closing the finite-defect route
+# The off-line zeros as a Pontryagin index: a conditional reduction and numerical observations on the prime tail
 
-The paper treats the localized Weil form $t=a-p$ (archimedean minus prime) as a quadratic form on
-a Kreĭn space. Instead of its sign, it tracks its negative index $\kappa$, which equals the number
-of off-line zeros. The intermediate case $\kappa<\infty$ (a Pontryagin space, where Kreĭn–Langer
-theory applies) is reduced to a single relative form bound on the prime tail, RFB$_X$. Both
-natural mechanisms for this bound are then closed by computation. The subordination cutoff grows
-with the band, and the saturation $\lambda_{\max}=1$ is approached but not attained, so the
-near-null space is infinite-dimensional. The paper makes no claim about the Riemann hypothesis.
+The paper studies the Weil form t = a - p (archimedean minus prime) through its negative index kappa, the number of its negative squares, taken on compactly supported test functions (kappa = sup_d kappa_d, with kappa_d the index on functions supported in [-d,d]). Weil's criterion gives kappa = 0 under RH; the paper asks whether kappa is finite.
 
-## Main results
+## What the paper contains
 
-- `prop:red`: RFB$_X$ for a finite prime head implies $\kappa<\infty$ — PROVED.
-- `cor:c1`: the cutoff scales as $X^*(d)\sim e^{2d}/10$, so RFB$_X$ fails for every fixed $X$
-  as $d\to\infty$ — NUMERICAL (computation on the band-limited engine); NO-GO for the
-  finite-head mechanism.
-- `cor:c2`: near-critical multiplicity grows linearly with the band and the gap closes; the
-  near-null space is infinite-dimensional — NUMERICAL; NO-GO for the finite-defect route.
-- Semiboundedness of $t$ on the infinite-dimensional near-null space — OPEN.
+- Proposition 2.1 (proved): if the archimedean form has compact resolvent and the prime tail beyond a cutoff X satisfies a one-sided relative form bound (RFB_X) with constant below 1, then kappa is finite, with an explicit bound.
+- Remark 2.2 (proved): on L^2(R) the hypothesis fails; on the space H_d of functions supported in [-d,d] it holds, so kappa_d is finite for every d. The open question is whether kappa_d stays bounded as d grows.
+- Numerical observations (qualitative only; code and data are not included): on band-limited sinc subspaces at height 1000, the cutoff at which the prime tail becomes subordinate with C = 0 appeared to grow with the band, and the number of near-critical directions of the pencil (p, a) appeared to grow with the band. They suggest that a d-uniform bound (RFB_X) with C = 0 fails; they do not decide whether kappa is finite. Nothing about RH is claimed.
+
+## Known and new
+
+Weil's criterion and Pontryagin-space theory are known. The conditional reduction, its verification on each H_d, and the exploratory computations are new.
 
 ## Files
 
-- `main.tex`, `main.pdf` — source and compiled paper.
-
-## Relation to other papers
-
-Uses the Kreĭn structure of Paper 08 and the band-limited form of Paper 12.
+- [main.tex](main.tex): LaTeX source
+- [pontryagin-index-finite-defect.pdf](pontryagin-index-finite-defect.pdf): the paper (4 pages)
