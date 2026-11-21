@@ -7,7 +7,7 @@
 \usepackage{enumitem}
 \geometry{margin=1in}
 \hypersetup{colorlinks=true,linkcolor=blue!70!black,citecolor=blue!70!black,urlcolor=blue!70!black,
-  pdftitle={Stable local arithmetic fingerprints from localized Weil forms},
+  pdftitle={Stable local arithmetic fingerprints of localized explicit-formula forms},
   pdfauthor={David Alejandro Trejo Pizzo}}
 
 \newtheorem{theorem}{Theorem}[section]
@@ -25,201 +25,214 @@
 \newcommand{\Norm}[1]{\lVert #1\rVert}
 \newcommand{\Rprof}{\mathcal R}
 
-\title[Stable Arithmetic Fingerprints]{Stable Local Arithmetic Fingerprints from Localized Weil Forms}
+\title[Stable Arithmetic Fingerprints]{Stable Local Arithmetic Fingerprints of Localized Explicit-Formula Forms}
 \author{David Alejandro Trejo Pizzo}
 \thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
 
 
 \begin{document}
-\nocite{bgCC21,bgIK}
 \begin{abstract}
-To a localization of the Riemann--Weil explicit formula---a height $T_0$, a width $\sigma$, and a finite
-basis of band-limited test functions---and to any L-function $L$ (with Euler product, $\Gamma$-factor, and
-functional equation) we associate a finite Hermitian \emph{localized Weil form} $Q(L)$, its bottom eigenvalue
-$\lmin(Q(L))$, and a per-prime \emph{anatomy profile} $\Rprof(L)=(R_p(L))_p$. We prove that these objects are
-\emph{exponentially stable local-arithmetic fingerprints}: if two L-functions share their local data
-$\Lambda_L(n)$ for all $n\le P$, then
-\[
-\Norm{Q(L)-Q(L')}\le A\,e^{-\alpha(\log P)^2},\qquad |\lmin(L)-\lmin(L')|\le A\,e^{-\alpha(\log P)^2},
-\]
-with $\alpha\approx\sigma^2/8$ (unconditionally, from the Ramanujan bound and the Gaussian window), and, when
-the bottom eigenvalue is simple with spectral gap $g$, $\Norm{\Rprof(L)-\Rprof(L')}\le (C/g)\,e^{-\alpha(\log P)^2}$.
-We further give an exact \emph{anatomy identity} $\lmin=R_\infty-\sum_p R_p$ realizing the bottom as a mass
-competition between an archimedean term and a per-prime prime-mass, an explicit Hellmann--Feynman gradient,
-and a \emph{concavity + monotonicity} structure yielding an extremal reduction of positivity over coefficient
-boxes. All results are elementary and \textbf{independent of the Riemann Hypothesis}; they isolate, as a
-self-contained statement, the local-arithmetic robustness underlying localized explicit-formula detectors.
+We consider a finite Hermitian matrix $Q(L)$ modelled on a localized Riemann--Weil explicit formula: to a
+height $T_0$, a width $\sigma$, a finite orthonormal family of Schwartz test functions with Gaussian decay,
+and an L-function $L$ with real coefficients $\Lambda_L(n)$, it attaches an archimedean block minus a
+weighted sum of rank-one prime terms. We study $Q(L)$, its bottom eigenvalue $\lmin(Q(L))$ and a per-prime
+profile $\Rprof(L)=(R_p(L))_p$, and show that all three depend on $\Lambda_L(n)$, $n\le P$, up to an error
+$O_\alpha(e^{-\alpha(\log P)^2})$ for every $\alpha<\sigma^2/2$, provided the archimedean data agree; for the
+profile a spectral gap is required. We also record a decomposition $\lmin=R_\infty-\mu_{u_0}(\mathbb R)$ of
+the bottom eigenvalue into an archimedean and a prime part, the Hellmann--Feynman gradient, and the concavity
+and monotonicity of $\lmin$ in the coefficients, which reduce positivity over a coefficient box to one
+corner. The results are elementary and do not depend on the Riemann hypothesis.
 \end{abstract}
 
 \maketitle
-
-
 
 \tableofcontents
 \newpage
 
 \section{Introduction}\label{sec:intro}
-The Riemann--Weil explicit formula reads the positivity of zeta (and L-function) zeros as the positivity of a
-quadratic functional---Weil's criterion. \emph{Localized} versions of this functional, assembled on a
-finite basis of test functions concentrated near a height $T_0$, have been used as numerical and rigorous
-probes of off-critical zeros \cite{P7}. This note isolates a structural fact about such localizations that is
-of independent interest and \emph{does not depend on the Riemann Hypothesis}: the localized form, its bottom
-eigenvalue, and its per-prime profile are \textbf{exponentially stable functionals of the small-prime
-arithmetic} of the underlying L-function. In other words, the localized Weil form is a \emph{local-arithmetic
-fingerprint}, robust to the (globally inaccessible) tail of the coefficients.
+Weil's criterion expresses the Riemann hypothesis as the positivity of a quadratic functional built from
+the explicit formula \cite{Weil}. Localized versions of this functional, assembled on a finite basis of
+test functions concentrated near a height $T_0$, have been used as probes of off-critical zeros \cite{P7}.
+This note studies a finite Hermitian matrix of the same shape---an archimedean block minus a weighted sum of
+prime contributions---and proves that it, its bottom eigenvalue and its per-prime profile depend on the
+coefficients of the underlying L-function, up to an error $O_\alpha(e^{-\alpha(\log P)^2})$, only through
+the primes $p\le P$. The matrix studied here uses rank-one prime terms; it has the shape of a localized
+explicit-formula form but is not the Weil Gram matrix of \cite{P7}, whose prime terms involve the Fourier
+transform of a product of test functions.
 
-The point is simple but, we believe, worth recording cleanly: a Gaussian (or prolate) window of width
-$\sigma$ in the spectral variable suppresses the contribution of a prime $p$ super-exponentially in $\log p$,
-so the entire localized object is determined---up to error $e^{-\alpha(\log P)^2}$---by the primes $p\le P$.
-We make this a theorem (\S\ref{sec:stab}), and we accompany it with three elementary structural results that
-together give the fingerprint a usable internal geometry: an exact per-prime decomposition (\S\ref{sec:anat}),
-its Hellmann--Feynman gradient (\S\ref{sec:anat}), and a concavity/monotonicity extremal reduction
-(\S\ref{sec:concave}).
-
-\paragraph{What is and is not claimed.} Nothing here proves, or attempts to prove, the Riemann Hypothesis.
-The bottom eigenvalue's \emph{sign} (local Weil positivity) is exactly the hard arithmetic question and is
-untouched; what we establish is the \emph{stability and internal structure} of the fingerprint, which hold
-unconditionally.
+The mechanism is simple: a window of Gaussian decay of width $\sigma$ suppresses the contribution of a prime
+power $n$ like $e^{-\sigma^2(\log n)^2/2}$. We make this quantitative (\S\ref{sec:stab}) and add three
+elementary structural results: a per-prime decomposition of the bottom eigenvalue (\S\ref{sec:anat}), its
+Hellmann--Feynman gradient (\S\ref{sec:anat}), and a concavity/monotonicity reduction over coefficient boxes
+(\S\ref{sec:concave}). The sign of $\lmin$ is not addressed.
 
 \section{Setup}\label{sec:setup}
-Fix $d>\half$, a height $T_0$, a width $\sigma$, and an orthonormal basis $\{\phi_1,\dots,\phi_J\}$ of
-band-limited test functions concentrated near $T_0$ in the spectral variable (e.g. Hermite--Gauss or Slepian
-prolates). For an L-function $L$ with $-L'/L(s)=\sum_n\Lambda_L(n)n^{-s}$, completed $\Lambda$-factor and
-conductor $N$, the \emph{localized Weil form} is the $J\times J$ Hermitian Gram matrix of the Weil functional
-$\mathfrak t_L$ on the basis, written via the explicit formula's arithmetic side (prime cutoff $X$):
+Fix a height $T_0$, a width $\sigma>0$, and an orthonormal family $\{\phi_1,\dots,\phi_J\}$ of Schwartz
+test functions concentrated near $T_0$ (e.g.\ Hermite--Gauss functions of width $\sigma$). Let $L$ be an
+L-function with Euler product, completed L-function and conductor $N$, and $-L'/L(s)=\sum_n\Lambda_L(n)n^{-s}$.
+Throughout, $\Lambda_L(n)$ is assumed real (for instance $L$ self-dual). For a prime cutoff $X$ we study the
+$J\times J$ Hermitian matrix
 \begin{equation}\label{eq:Q}
 Q(L)\ :=\ A_\infty\ -\ \sum_{n\le X}\frac{\Lambda_L(n)}{\sqrt n}\,w_nw_n^{*},\qquad (w_n)_i:=\widehat{\phi_i}(\log n),
 \end{equation}
-where $A_\infty=A_\infty(\Gamma_L,N)\succeq0$ is the (L-independent within a family) archimedean$+$polar block,
-and $w_n\in\mathbb C^J$ is the basis' frequency content at $\log n$. The only L-dependence is the
-\emph{local data} $D_X(L):=\{\Lambda_L(n)\}_{n\le X}$. We write $\lmin(L):=\lmin(Q(L))$.
+where $A_\infty=A_\infty(\Gamma_L,N)$ is a fixed Hermitian archimedean$+$polar block, depending on the
+gamma factor, the conductor and the polar part of $L$, and $w_n\in\mathbb C^J$ is the frequency content of
+the family at $\log n$. This is a model rank-one form of the shape of a localized explicit formula
+(cf.\ \cite[Thm.~5.12]{bgIK}); it is not the Weil Gram matrix of \cite{P7}. Once $A_\infty$ is fixed, the
+only L-dependence is the \emph{local data} $D_X(L):=\{\Lambda_L(n)\}_{n\le X}$. We write $\lmin(L):=\lmin(Q(L))$
+and, for $u\in\mathbb C^J$, $\widehat u(\log n):=w_n^*u=\sum_i u_i\overline{\widehat{\phi_i}(\log n)}$, so that
+$|\widehat u(\log n)|=|\langle u,w_n\rangle|$.
 
 \begin{definition}[Anatomy profile]\label{def:profile}
-Let $u_0$ be a unit bottom eigenvector of $Q(L)$ and $\widehat{u_0}(x):=\sum_i (u_0)_i\widehat{\phi_i}(x)$.
-The \emph{anatomy profile} is $\Rprof(L):=(R_p(L))_p$ with
+Let $u_0$ be a unit bottom eigenvector of $Q(L)$. The \emph{anatomy profile} is $\Rprof(L):=(R_p(L))_p$ with
 \[
-R_p(L):=\sum_{k\ge1}\frac{\Lambda_L(p^k)}{\sqrt{p^k}}\,\big|\widehat{u_0}(k\log p)\big|^2 .
+R_p(L):=\sum_{k\ge1,\ p^k\le X}\frac{\Lambda_L(p^k)}{\sqrt{p^k}}\,\big|\widehat{u_0}(k\log p)\big|^2 .
 \]
+When $\lmin(L)$ is simple, $\Rprof(L)$ does not depend on the choice of $u_0$.
 \end{definition}
 
-We assume the standard \textbf{window decay} and \textbf{Ramanujan} inputs:
+We assume the following \emph{window decay} and \emph{Ramanujan} inputs:
 \begin{equation}\label{eq:inputs}
-\Norm{w_n}^2\le W(\log n),\quad W(x)\le A_0 e^{-\sigma^2 x^2/2}\ \ (\text{Gaussian window}); \qquad |\Lambda_L(p^k)|\le (k+1)\log p .
+\Norm{w_n}^2\le W(\log n),\quad 0\le W(x)\le A_0 e^{-\sigma^2 x^2/2}; \qquad |\Lambda_L(p^k)|\le (k+1)\log p .
 \end{equation}
-(The Ramanujan bound holds for $\zeta$ and Dirichlet $L$ trivially and for $\mathrm{GL}(2)$ cusp forms by
-Deligne; for the stability theorem any polynomial bound on $\Lambda_L$ suffices.)
+The Ramanujan bound holds trivially for $\zeta$ and Dirichlet L-functions, and for holomorphic
+$\mathrm{GL}(2)$ cusp forms by Deligne \cite{Deligne}; for the stability theorem any polynomial bound on
+$\Lambda_L$ would suffice, with a different constant.
 
 \section{The anatomy identity and gradient}\label{sec:anat}
 \begin{proposition}[Anatomy identity]\label{prop:anat}
-With $R_\infty(u):=\langle u,A_\infty u\rangle$,
+With $R_\infty(u):=\langle u,A_\infty u\rangle$ and the \emph{anatomy measure}
 \[
-\lmin(L)\ =\ R_\infty(u_0)\ -\ \sum_p R_p(L)\ =\ R_\infty(u_0)-\Norm{\mu_{u_0}},
+\mu_u:=\sum_{2\le n\le X}\frac{\Lambda_L(n)}{\sqrt n}|\widehat u(\log n)|^2\delta_{\log n},
 \]
-where
+a finite signed measure of total mass
+$\mu_u(\mathbb R)=\sum_{n\le X}\Lambda_L(n)n^{-1/2}|\widehat u(\log n)|^2$, one has
 \[
-\mu_u:=\sum_{n\ge2}\frac{\Lambda_L(n)}{\sqrt n}|\widehat u(\log n)|^2\delta_{\log n}
+\lmin(L)\ =\ R_\infty(u_0)\ -\ \sum_p R_p(L)\ =\ R_\infty(u_0)-\mu_{u_0}(\mathbb R).
 \]
-is the \emph{anatomy measure}. Equivalently $\lmin(L)=\min_{\Norm u=1}[R_\infty(u)-\Norm{\mu_u}]$.
+Equivalently $\lmin(L)=\min_{\Norm u=1}[R_\infty(u)-\mu_u(\mathbb R)]$.
 \end{proposition}
 \begin{proof}
-$\lmin=\langle u_0,Qu_0\rangle=\langle u_0,A_\infty u_0\rangle-\sum_n\frac{\Lambda_L(n)}{\sqrt n}|\langle u_0,w_n\rangle|^2$;
-group $n=p^k$ and use $\langle u_0,w_{p^k}\rangle=\widehat{u_0}(k\log p)$. The variational form is the
-Rayleigh principle. \end{proof}
+$\lmin=\langle u_0,Qu_0\rangle=\langle u_0,A_\infty u_0\rangle-\sum_{n\le X}\frac{\Lambda_L(n)}{\sqrt n}|\langle u_0,w_n\rangle|^2$;
+group $n=p^k\le X$ and use $|\langle u_0,w_{p^k}\rangle|=|\widehat{u_0}(k\log p)|$. The variational form is
+the Rayleigh principle, since $\langle u,Qu\rangle=R_\infty(u)-\mu_u(\mathbb R)$ for every $u$. \end{proof}
 
 \begin{proposition}[Gradient]\label{prop:grad}
-If $\lmin(L)$ is simple with unit eigenvector $u_0$, then for $n\le X$
+If $\lmin(L)$ is simple with unit eigenvector $u_0$, then, as a function of the real coordinates
+$\Lambda_L(n)$, $n\le X$,
 \[
 \frac{\partial\lmin}{\partial\Lambda_L(n)}\ =\ -\frac{1}{\sqrt n}\big|\widehat{u_0}(\log n)\big|^2\ \le 0 .
 \]
 \end{proposition}
 \begin{proof}
-$\partial Q/\partial\Lambda_L(n)=-\tfrac1{\sqrt n}w_nw_n^{*}$; Hellmann--Feynman for the simple eigenvalue
-$\lmin$ gives
+$\partial Q/\partial\Lambda_L(n)=-\tfrac1{\sqrt n}w_nw_n^{*}$; the Hellmann--Feynman formula for a simple
+eigenvalue of a real-analytic Hermitian family \cite[Ch.~II]{Kato} gives
 \[
 \partial\lmin/\partial\Lambda_L(n)=\langle u_0,(\partial Q/\partial\Lambda_L(n))u_0\rangle.
 \]
 \end{proof}
 
-Thus the gradient is the (negative) density of $\mu_{u_0}$: the anatomy profile is the first-order response of
+Thus the gradient is the negative density of $\mu_{u_0}$: the anatomy profile is the first-order response of
 the bottom eigenvalue to the local arithmetic.
 
 \section{The stability theorem}\label{sec:stab}
 \begin{theorem}[Local-arithmetic stability]\label{thm:stab}
-Suppose $\Lambda_L(n)=\Lambda_{L'}(n)$ for all $n\le P$, and both satisfy the inputs \eqref{eq:inputs}. Then,
-with $\alpha=\sigma^2/2$ and $A=A(\sigma,J,T_0)$:
+Let $P\ge2$ be an integer. Suppose $L$ and $L'$ have the same gamma factor, conductor and polar part, so that $A_\infty(L)=A_\infty(L')$,
+that $\Lambda_L(n)=\Lambda_{L'}(n)$ for all $n\le P$, and that both satisfy \eqref{eq:inputs}. Put
+\[
+B(P):=\frac{8A_0}{\sigma^2}\,P^{1/2}e^{-\sigma^2(\log P)^2/2}.
+\]
+If $X\le P$ then $Q(L)=Q(L')$. If $\log P\ge\max(1/\sigma,1/\sigma^2)$, then:
 \begin{enumerate}[label=\textnormal{(\roman*)}]
-\item \textbf{(operator)} $\Norm{Q(L)-Q(L')}\ \le\ A\,e^{-\alpha(\log P)^2}$;
-\item \textbf{(spectrum, unconditional)} $\ |\lmin(L)-\lmin(L')|\ \le\ A\,e^{-\alpha(\log P)^2}$, and more
-generally $|\lambda_j(L)-\lambda_j(L')|\le A e^{-\alpha(\log P)^2}$ for every eigenvalue;
-\item \textbf{(profile, gap-conditional)} if $\lmin$ is simple with gap $g=\lambda_2-\lambda_1>0$ on both,
-then $\Norm{\Rprof(L)-\Rprof(L')}\ \le\ \dfrac{C}{g}\,e^{-\alpha(\log P)^2}$.
+\item \textbf{(operator)} $\Norm{Q(L)-Q(L')}\le B(P)$; in particular, for every $\alpha<\sigma^2/2$ there is
+$A_\alpha=A_\alpha(\sigma,A_0)$ with $\Norm{Q(L)-Q(L')}\le A_\alpha e^{-\alpha(\log P)^2}$;
+\item \textbf{(spectrum)} $|\lambda_j(L)-\lambda_j(L')|\le B(P)$ for every eigenvalue, in particular for $\lmin$;
+\item \textbf{(profile, gap-conditional)} if $\lmin(L)$ is simple with gap $g=\lambda_2(L)-\lambda_1(L)>0$
+and $B(P)\le g/2$, then
+\[
+\Norm{\Rprof(L)-\Rprof(L')}_{\ell^1}\ \le\ \Big(\frac{4\sqrt2\,S}{g}+1\Big)B(P),\qquad
+S:=\sum_{n\le X}\frac{|\Lambda_L(n)|}{\sqrt n}W(\log n),
+\]
+for any unit bottom eigenvector $u_0'$ of $Q(L')$ used to define $\Rprof(L')$.
 \end{enumerate}
 \end{theorem}
 \begin{proof}
-(i) Since the local data agree up to $P$, $Q(L)-Q(L')=-\sum_{n>P}\frac{\Lambda_L(n)-\Lambda_{L'}(n)}{\sqrt n}w_nw_n^{*}$,
-hence
+If $X\le P$ the two sums in \eqref{eq:Q} coincide. (i) Since $A_\infty(L)=A_\infty(L')$ and the local data
+agree up to $P$,
+$E:=Q(L)-Q(L')=-\sum_{P<n\le X}\frac{\Lambda_L(n)-\Lambda_{L'}(n)}{\sqrt n}w_nw_n^{*}$. By \eqref{eq:inputs},
+$|\Lambda_L(p^k)|\le(k+1)\log p\le 2\log p^k$, so
 \[
-\Norm{Q(L)-Q(L')}\le\sum_{n>P}\frac{|\Lambda_L(n)|+|\Lambda_{L'}(n)|}{\sqrt n}\Norm{w_n}^2
-\le 2\sum_{n>P}\frac{(\Omega(n)+1)\log n}{\sqrt n}\,A_0 e^{-\sigma^2(\log n)^2/2},
+\Norm{E}\le\sum_{n>P}\frac{|\Lambda_L(n)|+|\Lambda_{L'}(n)|}{\sqrt n}\Norm{w_n}^2
+\le 4A_0\sum_{n>P}f(n),\qquad f(t):=\frac{\log t}{\sqrt t}\,e^{-\sigma^2(\log t)^2/2}.
 \]
-using \eqref{eq:inputs} ($\Omega(n)=$ number of prime factors with multiplicity; $|\Lambda_L(n)|\le(\Omega(n)+1)\log n$).
-The summand decays like $e^{-\sigma^2(\log n)^2/2}$, so the tail over $n>P$ is $\le A e^{-\alpha(\log P)^2}$
-with $\alpha=\sigma^2/2$ (absorbing the slowly varying factors into $A$ and a harmless reduction of $\alpha$).
-(ii) is Weyl's inequality applied to (i). (iii) By the Davis--Kahan $\sin\Theta$ theorem, the bottom
-eigenprojector obeys $\Norm{P_1(L)-P_1(L')}\le \Norm{Q(L)-Q(L')}/g$; the unit eigenvector (up to phase) and
-hence $\widehat{u_0}$ and each $R_p$ are Lipschitz in $P_1$ on the unit sphere, and $\sum_p$ of the
-window-weighted contributions converges by \eqref{eq:inputs}; combine with (i). \end{proof}
+With $x=\log t$, $\frac{d}{dx}\log f=-\tfrac12+\tfrac1x-\sigma^2x<0$ for $x\ge1/\sigma$, so $f$ is
+decreasing on $[P,\infty)$ and, $P$ being an integer, $\sum_{n>P}f(n)=\sum_{n\ge P+1}f(n)\le\int_P^\infty f(t)\,dt=\int_{\log P}^\infty x\,e^{\varphi(x)}dx$
+with $\varphi(x)=x/2-\sigma^2x^2/2$. For $x\ge\log P\ge1/\sigma^2$ we have
+$\varphi'(x)=\tfrac12-\sigma^2x\le-\sigma^2x/2$, hence $x e^{\varphi}\le-\tfrac{2}{\sigma^2}\varphi'e^{\varphi}$ and
+\[
+\int_{\log P}^\infty x\,e^{\varphi(x)}dx\le\frac{2}{\sigma^2}e^{\varphi(\log P)}=\frac{2}{\sigma^2}P^{1/2}e^{-\sigma^2(\log P)^2/2}.
+\]
+Thus $\Norm E\le B(P)$. For $\alpha<\sigma^2/2$, $P^{1/2}e^{-(\sigma^2/2-\alpha)(\log P)^2}$ is bounded in $P$,
+which gives the second statement. (ii) is Weyl's inequality \cite[Ch.~II]{Kato} applied to (i).
+
+(iii) Let $u_0,u_0'$ be unit bottom eigenvectors of $Q(L),Q(L')$. By Weyl, $\lambda_2(L')\ge\lambda_2(L)-\Norm E$,
+so the separation between $\lambda_1(L)$ and $\{\lambda_j(L')\}_{j\ge2}$ is at least $g-\Norm E\ge g/2$. The
+Davis--Kahan $\sin\Theta$ theorem \cite{DK} gives $\sin\angle(u_0,u_0')\le 2\Norm E/g$, and after fixing the
+phase of $u_0'$, $\Norm{u_0-u_0'}\le\sqrt2\sin\angle(u_0,u_0')\le 2\sqrt2\Norm E/g$. Writing
+\begin{multline*}
+R_p(L)-R_p(L')=\sum_{p^k\le X}\frac{\Lambda_L(p^k)}{\sqrt{p^k}}\big(|\widehat{u_0}|^2-|\widehat{u_0'}|^2\big)(k\log p)\\
++\sum_{P<p^k\le X}\frac{\Lambda_L(p^k)-\Lambda_{L'}(p^k)}{\sqrt{p^k}}|\widehat{u_0'}(k\log p)|^2,
+\end{multline*}
+and using $\big||\widehat u(\log n)|^2-|\widehat{u'}(\log n)|^2\big|\le 2\Norm{w_n}^2\Norm{u-u'}$ for unit
+$u,u'$ and $|\widehat{u_0'}(\log n)|^2\le\Norm{w_n}^2$, we get, summing over $p$,
+$\Norm{\Rprof(L)-\Rprof(L')}_{\ell^1}\le 2S\cdot 2\sqrt2\Norm E/g+B(P)$, where the last term is the tail
+estimated in (i). \end{proof}
 
 \begin{corollary}[Fingerprint]\label{cor:finger}
-The map $L\mapsto(Q(L),\lmin(L),\Rprof(L))$ is, up to error $e^{-\alpha(\log P)^2}$, a function of the
-truncated local data $D_P(L)=\{\Lambda_L(n)\}_{n\le P}$ alone. In particular it is a \emph{local} invariant:
-two L-functions indistinguishable on small primes are indistinguishable, exponentially, by the localized Weil
-form.
+Let the archimedean block $A_\infty$ be fixed and let $P\ge2$ be an integer. Then the matrix $Q(L)$, the eigenvalue $\lmin(L)$ and
+the profile $\Rprof(L)$ are determined by the truncated local data $D_P(L)=\{\Lambda_L(n)\}_{n\le P}$ up to an error
+$O_\alpha(e^{-\alpha(\log P)^2})$ for every $\alpha<\sigma^2/2$ (for $\Rprof$, with the constant of
+Theorem~\ref{thm:stab}(iii), under its gap hypothesis).
 \end{corollary}
 
 \section{Concavity, monotonicity, and an extremal reduction}\label{sec:concave}
-Viewing $\lmin$ as a function of the coefficient vector $\Lambda=(\Lambda_L(n))_{n\le X}$:
+Viewing $\lmin$ as a function of the real coefficient vector $\Lambda=(\Lambda_L(n))_{n\le X}$ (with
+$A_\infty$ fixed):
 \begin{theorem}[Extremal reduction]\label{thm:concave}
 \begin{enumerate}[label=\textnormal{(\arabic*)}]
-\item $\Lambda\mapsto\lmin(Q(\Lambda))$ is \textbf{concave}.
-\item On $\Lambda_n\ge0$ it is \textbf{coordinate-wise non-increasing}.
+\item $\Lambda\mapsto\lmin(Q(\Lambda))$ is concave.
+\item It is coordinate-wise non-increasing.
 \item On a box $\mathcal B=\{0\le\Lambda_n\le c_n\}$, $\ \min_{\Lambda\in\mathcal B}\lmin(Q(\Lambda))=\lmin(Q(c))$
-is attained at the all-upper corner. Hence positivity ($\lmin\ge0$) holds throughout $\mathcal B$ iff it holds
-at the single corner $\Lambda\equiv c$.
+is attained at the all-upper corner. Hence $\lmin\ge0$ throughout $\mathcal B$ iff $\lmin(Q(c))\ge0$.
 \end{enumerate}
 \end{theorem}
 \begin{proof}
-(1) $\lmin(M)=\min_{\Norm u=1}\langle u,Mu\rangle$ is concave in $M$; $Q(\Lambda)$ is affine in $\Lambda$;
-concave$\circ$affine is concave. (2) $\partial Q/\partial\Lambda_n=-\tfrac1{\sqrt n}w_nw_n^{*}\preceq0$ and
-$\lmin(M-\text{PSD})\le\lmin(M)$ (Weyl). (3) A concave function on a compact convex set attains its minimum at
-an extreme point; non-increasingness selects the upper corner. \end{proof}
+(1) $\lmin(M)=\min_{\Norm u=1}\langle u,Mu\rangle$ is concave in $M$, and $Q(\Lambda)$ is affine in $\Lambda$.
+(2) $\partial Q/\partial\Lambda_n=-\tfrac1{\sqrt n}w_nw_n^{*}\preceq0$, and $\lmin(M-N)\le\lmin(M)$ for $N\succeq0$
+(Weyl). (3) Since $\lmin$ is non-increasing in each coordinate, $\lmin(Q(\Lambda))\ge\lmin(Q(c))$ for every
+$\Lambda\in\mathcal B$, and $c\in\mathcal B$. \end{proof}
 
 \begin{remark}[Reading]
-Theorem~\ref{thm:concave} reduces the positivity of an entire coefficient box to a single extremal object. It
-is a statement about the \emph{prime masses} $\Lambda_n$ (in which $\lmin$ is concave and monotone), with no
-natural analogue in the raw normalized coefficients $a_p$ (whose sign-oscillation hides the monotone
-structure). For the $\mathrm{GL}(2)$-tempered non-negative box $0\le a_{p^k}\le2$ the corner is the
-$\zeta^2$-point $a_{p^k}\equiv2$; \textbf{the reduction is the theorem---whether the corner itself is positive
-is a separate question, not addressed here.}
+Theorem~\ref{thm:concave} reduces the positivity of a whole coefficient box to a single corner. It is a
+statement about the prime masses $\Lambda_n$, in which $\lmin$ is concave and monotone, and not about the
+normalized coefficients $a_n$, whose signs oscillate. For the box $0\le\Lambda_{p^k}\le 2\log p$ the corner is
+$\Lambda_{\zeta^2}$, the von Mangoldt function of $\zeta^2$.
 \end{remark}
 
 \section{Relation to localized detectors, and scope}\label{sec:scope}
-Theorem~\ref{thm:stab} is the structural reason localized explicit-formula detectors \cite{P7} are
-well-defined and reproducible: the localized form depends on the arithmetic only through small primes, up to
-super-polynomially small error. Corollary~\ref{cor:finger} turns this into a classification-flavored
-statement---an exponentially stable local fingerprint---that stands on its own, independent of the Riemann
-Hypothesis. The \emph{sign} of $\lmin$ (local Weil positivity) is the hard arithmetic content and is
-deliberately left untouched: this paper concerns the fingerprint's \emph{stability and geometry}, not its
-sign.
+Theorem~\ref{thm:stab} shows that, for the model form \eqref{eq:Q}, a localized explicit-formula matrix with
+Gaussian window depends on the arithmetic only through small primes, up to an error that decays faster than any
+negative power of $P$. The same argument applies to localized forms whose prime terms are bounded in norm by
+$A_0e^{-\beta(\log n)^2}$, with $\sigma^2/2$ replaced by $\beta$; for the Weil Gram matrix of \cite{P7} on Hermite--Gauss functions the prime terms are bounded by a polynomial times $e^{-\sigma^2(\log n)^2/4}$, so every $\beta<\sigma^2/4$ is admissible \cite[truncation theorem]{P7}; the anatomy identity and Theorem~\ref{thm:concave}(2)
+use the rank-one structure and are not claimed there.
 
 \begin{thebibliography}{9}
-\bibitem{P7} D.~A.~Trejo Pizzo, \emph{A rigorous localized Weil detector for off-critical zeros}, 2026.
-\bibitem{Weil} A.~Weil, \emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers}, 1952.
-\bibitem{Kato} T.~Kato, \emph{Perturbation Theory for Linear Operators}, Springer, 1976.
+\bibitem{P7} D.~A.~Trejo Pizzo, \emph{The localized Weil form on a Hermite--Gauss basis: the effect of an off-line zero pair and the truncation of the prime sum}, Paper 07 of this series.
+\bibitem{Weil} A.~Weil, \emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers}, Comm.\ S\'em.\ Math.\ Univ.\ Lund, Tome suppl\'ementaire (1952), 252--265.
+\bibitem{Kato} T.~Kato, \emph{Perturbation Theory for Linear Operators}, 2nd ed., Grundlehren Math.\ Wiss.\ \textbf{132}, Springer, 1976.
 \bibitem{DK} C.~Davis, W.~M.~Kahan, \emph{The rotation of eigenvectors by a perturbation. III}, SIAM J.\
 Numer.\ Anal.\ \textbf{7} (1970), 1--46.
 \bibitem{Deligne} P.~Deligne, \emph{La conjecture de Weil. I}, Publ.\ IHÉS \textbf{43} (1974), 273--307.
-\bibitem{bgCC21} A.~Connes and C.~Consani, \emph{Weil positivity and trace formula, the archimedean place}, Selecta Math.\ (N.S.) \textbf{27} (2021), no.~77.
 \bibitem{bgIK} H.~Iwaniec and E.~Kowalski, \emph{Analytic Number Theory}, Amer.\ Math.\ Soc.\ Colloq.\ Publ.\ \textbf{53}, AMS, 2004.
 \end{thebibliography}
 

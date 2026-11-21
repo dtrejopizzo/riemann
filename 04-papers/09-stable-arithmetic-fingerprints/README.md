@@ -1,29 +1,17 @@
-# Paper 09 — Stable Local Arithmetic Fingerprints from Localized Weil Forms
+# Stable Local Arithmetic Fingerprints of Localized Explicit-Formula Forms
 
-To a localization of the explicit formula (height $T_0$, width $\sigma$, a finite band-limited
-basis) and an $L$-function $L$, the paper attaches a finite Hermitian form $Q(L)$, its bottom
-eigenvalue $\lambda_{\min}$ and a per-prime anatomy profile $(R_p(L))_p$. If two $L$-functions share
-$\Lambda_L(n)$ for $n\le P$, these objects differ by at most $A e^{-\alpha(\log P)^2}$, with
-$\alpha\approx\sigma^2/8$. The paper also proves an exact anatomy identity, a gradient formula and
-a concavity/monotonicity structure. All results are elementary and do not depend on the Riemann
-hypothesis.
+The paper studies a finite Hermitian matrix $Q(L)$ modelled on a localized explicit formula: an archimedean block minus a weighted sum of rank-one prime terms $\Lambda_L(n)n^{-1/2}w_nw_n^*$, built on Schwartz test functions with Gaussian decay of width $\sigma$. It is a model form with the shape of a localized explicit formula, not the Weil Gram matrix of Paper 07. The paper asks how much of $Q(L)$, its bottom eigenvalue and a per-prime profile is determined by the coefficients $\Lambda_L(n)$ with $n\le P$.
 
-## Main results
+## Results
 
-- `prop:anat`: $\lambda_{\min}=R_\infty-\sum_p R_p$ (anatomy identity) — PROVED.
-- `prop:grad`: explicit Hellmann–Feynman gradient — PROVED (simple bottom eigenvalue assumed).
-- `thm:stab`: exponential stability of $Q$ and $\lambda_{\min}$ under agreement of local data up to
-  $P$ (Ramanujan bound, Gaussian window) — PROVED; profile stability with constant $C/g$ —
-  PROVED given a spectral gap $g$.
-- `cor:finger`: $Q(L)$ and the profile are local-arithmetic fingerprints — PROVED.
-- `thm:concave`: concavity and monotonicity of $\lambda_{\min}$ in the coefficients; extremal
-  reduction over coefficient boxes — PROVED.
-- Illustrations of the bounds — NUMERICAL.
+- Anatomy identity (Prop. 3.1): $\lambda_{\min}=R_\infty(u_0)-\sum_p R_p$, where the prime sum runs over $p^k\le X$.
+- Gradient (Prop. 3.2): Hellmann–Feynman formula for $\partial\lambda_{\min}/\partial\Lambda_L(n)$ when the bottom eigenvalue is simple and the coefficients are real.
+- Stability (Thm. 4.1): for an integer $P\ge2$, if $L,L'$ have the same archimedean block and $\Lambda_L(n)=\Lambda_{L'}(n)$ for $n\le P$, then $\|Q(L)-Q(L')\|$ and all eigenvalue differences are at most $(8A_0/\sigma^2)P^{1/2}e^{-\sigma^2(\log P)^2/2}$, when $\log P\ge\max(1/\sigma,1/\sigma^2)$, hence $O_\alpha(e^{-\alpha(\log P)^2})$ for every $\alpha<\sigma^2/2$; the profile satisfies an explicit $\ell^1$ bound under a spectral-gap hypothesis.
+- Concavity and monotonicity (Thm. 5.1): $\lambda_{\min}$ is concave and coordinate-wise non-increasing in the real coefficients, so positivity over a coefficient box reduces to its upper corner.
+
+Known ingredients: Weyl, Davis–Kahan, Hellmann–Feynman, concavity of $\lambda_{\min}$. What is new is their assembly into quantitative stability statements for this form. The paper contains no numerics, and the sign of $\lambda_{\min}$ is not addressed.
 
 ## Files
 
-- `main.tex`, `main.pdf` — source and compiled paper.
-
-## Relation to other papers
-
-Uses the localized form of Paper 07; Paper 10 extends the anatomy to a complete local invariant.
+- [main.tex](main.tex) — LaTeX source.
+- [stable-arithmetic-fingerprints.pdf](stable-arithmetic-fingerprints.pdf) — compiled paper (5 pages).
