@@ -1,18 +1,9 @@
 #!/usr/bin/env python3
 """
-Option (b) experiment - the prime-TAIL relative form bound a_tail(X).
-
-  a_tail(X) := sup_g  |p_{>X}[g]| / a[g]  =  spectral radius of the pencil (P_F^{>X}, A_Phi),
-
-where P_F^{>X} uses ONLY prime powers n in (X, e^{2d}], and a[g] is the archimedean form.
-RFB_X:  |p_{>X}[g]| <= a * a[g] + C||g||^2 with a<1  ==>  kappa<infinity (finitely many off-line zeros).
-
-THE FORK we decide numerically:
-  a_tail(X) < 1 for some finite X   ==>  tail is form-subordinate, kappa<infinity unconditionally.
-  a_tail(X) ~ 1 for all X           ==>  knife-edge intrinsic to the tail (shares N3 marginality).
-
-We reuse the validated Phase-7 engine (Phi, prime_powers, sinc basis) and just (i) restrict primes to the
-tail and (ii) report max(|lambda_max|, |lambda_min|) of the generalized pencil.
+Largest and smallest generalized eigenvalues of the pencil (p_{>X}, a) on a
+band-d sinc space at height T0 = 1000, where p_{>X} keeps only the prime
+powers n in (X, e^{2d}] and a is the archimedean multiplier form
+(without pole terms). Prints a_tail(X) = max(|lambda_max|, |lambda_min|).
 """
 import numpy as np, mpmath as mp
 mp.mp.dps = 18
@@ -64,8 +55,8 @@ def a_tail(d, T0, X, N=10, grid_pts=8000):
 
 if __name__ == "__main__":
     print("="*86)
-    print(" a_tail(X) = spectral radius of (P_F^{>X}, A_Phi).  RFB_X needs a_tail<1 (tail subordinate).")
-    print(" FORK:  a_tail(X)<1 some X  => kappa<inf (finitely many off-line zeros) ;  ~1 => knife-edge.")
+    print(" a_tail(X) = spectral radius of (P_F^{>X}, A_Phi).  X = head cutoff.")
+    print(" flag: <1, ~1 (within 5e-3) or >1.")
     print("="*86)
     for d in [4.0, 5.0]:
         Nmax = np.exp(2*d)
