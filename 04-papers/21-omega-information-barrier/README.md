@@ -1,17 +1,29 @@
-# Paper 21 — An exact information barrier in the ω-class: the unique RH-sensitive window and the impossibility of algebraic cancellation
+# Logarithmic sums of q^omega(n) and their shifted correlations: remarks
 
-The paper studies the arithmetic functions q^{ω(n)}, q = k² > 0, whose Dirichlet series factor as ζ(s)^q G_q(s). Because the zeros of ζ appear as zeros, not poles, the partial sums M_k(N) are monotone and carry no oscillatory terms. The paper proves that the only zero-sensitive observable in this class is the convergence rate of the normalized shifted correlation C_k(h,N)/M_k(N)² to an explicit Euler product, gives an explicit error formula with a strictly positive arithmetic coefficient, and shows that no positive combination of ω-class correlations can cancel the zero contribution. Nothing depends on or proves RH.
+The paper studies the weights q^omega(n), q > 0, through the logarithmic sums
+M_q(N) = sum_{n<=N} q^omega(n)/n and the shifted correlations
+C(h,N;q) = sum_{n<=N} q^omega(n) q^omega(n+h)/n. The Dirichlet series factors as
+zeta(s)^q G_q(s), and the paper records what this factorisation gives. Nothing in it depends on,
+or proves, the Riemann Hypothesis.
 
-## Main results
-- (L1): G_q holomorphic and non-vanishing in Re s > ½ (Selberg–Delange, CITED). PROVED.
-- Monotonicity of M_k(N), no N^{ρ−1} terms. PROVED.
-- `thm:LD` (T2): Poisson large-deviation rate for ω(n); no zero enters at any finite order. PROVED.
-- `prop:limit`: C_k(h,N)/M_k(N)² → r_q(h), an explicit Euler product. PROVED.
-- `thm:error` (T4): explicit error formula with coefficient A_q(h) > 0. PROVED.
-- `thm:rh` (T4.1): RH ⟺ the convergence rate is O(N^{−1/2+ε}) for all h, q. PROVED (equivalence).
-- `thm:impossible` (T5): impossibility of algebraic cancellation, A_{q₁…q_r}(h₁…h_r) > 0. PROVED.
-- `prop:ratio`: M_k/M_1^{k²} = C_q + O(1/log N). PROVED.
-- `thm:barrier` (Information barrier): the ω-class has exactly one zero-sensitive window. PROVED; NO-GO for the ω-class as a route.
+## Results
+
+- Lemma 2.1: G_q is holomorphic in Re s > 1/2, and zero-free there exactly when q <= 1 + sqrt 2.
+- Proposition 3.1: M_q(N) = C_q (log N)^q + O((log N)^{q-1} + 1) (Selberg-Delange); for integer q,
+  M_q(N) = P_q(log N) + O(N^{-delta}) for every delta < min(1/2, 1/q).
+- Theorem 4.1: the Poisson large-deviation principle for omega(n) (classical).
+- Proposition 5.2: for q >= 1, log N <= C(h,N;q) << (log N)^{2q-1}, via the Nair-Tenenbaum theorem.
+- Theorem 5.3: divisor expansion of C(h,N;q) into harmonic sums over arithmetic progressions.
+- Theorem 7.1: positivity and an explicit formula for the local densities.
+- Proposition 8.1: M_q(N)/M_1(N)^q = C_q + O(1/log N) for q >= 1.
+- Numerical observations (not proofs): (log N) C(1,N;4)/M_4(N)^2 stays near 0.9 for N up to 10^7;
+  the O(1/log N) rate in Proposition 8.1 for q = 2 appears to be sharp.
+
+The asymptotics are classical consequences of the Selberg-Delange method and of the
+Nair-Tenenbaum theorem; the paper collects them and states them precisely. An asymptotic for
+C(h,N;q) is left open.
 
 ## Files
-- `main.tex`, `main.pdf` — source and compiled paper.
+
+- [main.tex](main.tex): LaTeX source
+- [omega-information-barrier.pdf](omega-information-barrier.pdf): compiled paper, 7 pages
