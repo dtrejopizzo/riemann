@@ -1,0 +1,24 @@
+================================================================================
+ Real zeros of the autocorrelation c(u) of Hermite--Gauss modes, u in [0,12]
+================================================================================
+
+ (a) lowest mode (Gaussian), sigma=1.5,2,3:
+   sigma=1.5:  #real zeros in [0,12] = 0   (c>0 on grid: True)
+   sigma=2.0:  #real zeros in [0,12] = 0   (c>0 on grid: True)
+   sigma=3.0:  #real zeros in [0,12] = 0   (c>0 on grid: True)
+
+ (b) Hermite modes H_k (autocorr = Laguerre L_k(u^2/2s^2)e^{-u^2/4s^2}, k positive zeros), sigma=2:
+   H_2:  #real zeros=2  zeros u=[2.165, 5.226]
+   H_4:  #real zeros=4  zeros u=[1.606, 3.737, 6.024, 8.670]
+   H_6:  #real zeros=6  zeros u=[1.335, 3.084, 4.893, 6.797, 8.871, 11.308]
+
+ (c) first three real zeros of c (mode H_4) vs sigma:
+     sigma   first three real zeros u*
+      1.40   1.124  2.616  4.217
+      1.60   1.285  2.990  4.819
+      1.80   1.446  3.363  5.422
+      2.00   1.606  3.737  6.024
+      2.20   1.767  4.111  6.627
+      2.50   2.008  4.671  7.530
+      3.00   2.410  5.606  9.037
+================================================================================
