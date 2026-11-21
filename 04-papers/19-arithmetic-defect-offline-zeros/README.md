@@ -1,18 +1,19 @@
-# Paper 19 — The arithmetic defect of off-line zeros: parity, the modified explicit formula, and two-scale structure
+# The arithmetic defect of off-line zeros: the modified explicit formula and two-scale structure
 
-The paper studies the arithmetic footprint a finite set of off-line zeros would leave. Each Klein four-orbit contributes exactly two independent negative directions of the localized Weil form, so κ = 2m is even, and directions from distinct heights are exponentially nearly orthogonal. Under Hypothesis D (0 < κ = 2m < ∞) ξ factors as ξ₀·P_{4m}, giving an exact modified explicit formula with an explicit defect D_m. The companion ζ₀ has poles in the strip, so by Landau's theorem it has no Euler product; this incompatibility is named the wall (RSRP). The two-scale signature of one orbit is shown compatible with the prime number theorem and the multiplicative-chaos model.
+The paper asks what a finite set of zeros of the Riemann zeta function off the critical line would do to the distribution of primes and to the values of zeta on the line. It works under Hypothesis D: the Riemann Hypothesis fails, and there are only finitely many off-line zeros, at least one (m Klein quartets counted with multiplicity, 0 < m < ∞).
 
-## Main results
-- `prop:restricted`, `prop:orth`: one sub-orbit gives a signature-(1,1) block; exponential near-orthogonality across heights. PROVED.
-- `thm:parity` (Parity of the index): κ ≡ 0 mod 2, κ = 2m; also for primitive real Dirichlet L-functions. PROVED.
-- `thm:lorentz` (Lorentz-plane decomposition): CONDITIONAL on Hypothesis D.
-- `cor:trichotomy`: κ ∈ {0} ∪ 2ℤ_{>0} ∪ {∞}. PROVED.
-- `prop:factor`, `thm:mef`, `prop:Dj`, `prop:energy`: factorization, modified explicit formula ψ = ψ₀ − D_m, single-orbit defect, defect energy ~ X^{2b_max}. CONDITIONAL on Hypothesis D.
-- Wall (RSRP): Euler product incompatible with finite nonzero index. CONDITIONAL on Hypothesis D (follows from RH, does not imply it).
-- Exclusion principle κ ∈ {0, ∞}: OPEN; three required inputs (F1)–(F3) stated, none available.
+## Results
+- Count (Proposition 2.3): m quartets with multiplicity give exactly 2m zeros of ξ in Re s < 1/2. On even real test functions Paper 18 (*The localized Weil form on even test functions: off-line Lorentzian blocks and obstructions to positive-kernel realizations*, Thm. 3.1, Cor. 6.5, Prop. 7.2) gives one Lorentzian block per quartet and negative index at most the number of distinct quartets; no index equal to 2m is claimed, and the de Branges space of ξ(1/2+iz) is {0} (Paper 18, Rem. 6.6). Remarks 2.1, 2.2, 2.5 are heuristic.
+- Mean square of the localized term (Proposition 6.2) bounds only log(1+b²/(t−γ)²), not the whole excess.
+- Under Hypothesis D: ξ = ξ₀·P_{4m}, with all zeros of ξ₀ on the line, and the modified explicit formula ψ = ψ₀ − D_m with ψ₀(x) − x = O(x^{1/2} log² x) (Theorem 3.3).
+- A single orbit contributes a defect term of exact order x^{1/2+b} and logarithmic energy ≍ X^{2b} on [X, 2X], with an explicit formula (Propositions 4.1, 4.2).
+- The companion ζ₀ = s(s−1)ζ(s)/(2P_{4m}(s)) is entire and is not a Dirichlet series. The reason is elementary (growth along the real axis) and does not depend on whether the divided-out zeros are off the line (Lemma 5.1). By Hamburger's theorem, the statement (RSRP) (only a label) is just the negation of Hypothesis D (Remark 5.4).
+- The exact contribution of a quartet to log|ξ(1/2+it)| is computed. The localized term log(1+b²/(t−γ)²) of its excess over a double zero on the line has mean square at most 8π log 2 · b/T on [T, 2T] (Theorem 6.1, Proposition 6.2).
+- The structure function of the normalized Chebyshev error has size ≍ e^{2bT}/T under Hypothesis D, which is compatible with the de la Vallée Poussin error term (Theorem 6.3).
+- Two inputs that would suffice to exclude Hypothesis D are listed (Remark 7.3). Neither is known.
+
+The explicit formula, the zero-free regions and Hamburger's theorem are classical. What is new here is the explicit bookkeeping of a finite off-line set. No numerical computation is used.
 
 ## Files
-- `main.tex`, `main.pdf` — source and compiled paper.
-
-## Relation to other papers
-- Builds on the localized Weil form and index of Paper 18.
+- [main.tex](main.tex): LaTeX source.
+- [arithmetic-defect-offline-zeros.pdf](arithmetic-defect-offline-zeros.pdf): compiled paper, 7 pages.
