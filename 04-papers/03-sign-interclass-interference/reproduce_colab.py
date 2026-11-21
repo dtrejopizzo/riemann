@@ -1,184 +1,225 @@
 # =============================================================================
-#  P6 — On the Sign of Inter-Class Interference in Dirichlet Partial Sums
-#  Reproducibility notebook (Google Colab ready, self-contained, no external data)
+#  On the sign of inter-class interference in Dirichlet partial sums
+#  Computations for the paper (self-contained, no external data).
 #
-#  Paste into a Colab cell (or run as a script). It reproduces every
-#  quantitative claim of the note:
-#    * the monotone curve  r_bar(q)  vs the |D| quantile  (Theorem 5.1 / Fig. 1)
-#    * destructive r<0 at troughs, constructive r>0 at peaks
-#    * the t=150000 anchor is a trough with r ~ -0.82       (Prop. 6.1)
-#    * the random-multiplicative control
+#  Produces:
+#    * the decile means of r by decile of |D|          (Observation 4.1, Table 1)
+#    * the sample statistics of r, X and E quoted in Sections 3 and 4
+#    * the same profile for the random completely multiplicative control
+#    * the values at the point t = 150000                        (Remark 5.1)
+#    * the figure rbar_vs_quantile.{pdf,png}                        (Figure 1)
 #
-#  Author: D. A. Trejo Pizzo, 2026.  License: CC-BY.
+#  Requirements: numpy, matplotlib.  All arithmetic is in double precision.
 # =============================================================================
 
-# ---- 0. Config -------------------------------------------------------------
 import numpy as np
 
 CFG = dict(
-    N            = 100_000,         # number of terms in the Dirichlet sum
-    T_LO         = 100_000.0,       # window for the quantile analysis: lower t
-    WIN_WIDTH    = 3000.0,          # window width (kept modest so Colab is fast)
-    N_QUANTILES  = 10,              # deciles for r_bar(q)
-    SEEDS        = [42, 137, 271, 314, 577],   # random-multiplicative realisations
-    ANCHOR_T     = 150_000.0,       # the historically-cited abscissa
-    ANCHOR_HALFWIDTH = 50.0,        # neighbourhood for the local-rank test
+    N            = 100_000,         # length of the Dirichlet partial sum
+    T_LO         = 100_000.0,       # sample window [T_LO, T_LO + WIN_WIDTH)
+    WIN_WIDTH    = 3000.0,
+    N_BANDS      = 10,              # deciles of |D|
+    SEEDS        = [42, 137, 271, 314, 577],   # random multiplicative control
+    POINT_T      = 150_000.0,       # the point of Section 5
+    POINT_HALFWIDTH = 50.0,         # neighbourhood [POINT_T - 50, POINT_T + 50)
+    N_ALT        = 150_000,         # second length used at POINT_T
 )
-# For the paper's N=10^6 numbers and the full [1e5,2e5] trough census,
-# set N=1_000_000 and WIN_WIDTH larger; expect minutes-to-tens-of-minutes.
 
 
-# ---- 1. omega(n) via smallest-prime-factor sieve ---------------------------
-def omega_array(N):
-    """omega(n) = number of DISTINCT prime factors, for n=1..N. omega(1)=0."""
-    spf = np.zeros(N + 1, dtype=np.int64)          # smallest prime factor
+# ---- 1. smallest prime factor and omega(n) ---------------------------------
+def spf_array(N):
+    """Smallest prime factor of n for 2 <= n <= N (entries 0, 1 are 0)."""
+    spf = np.zeros(N + 1, dtype=np.int64)
     for p in range(2, N + 1):
-        if spf[p] == 0:                             # p is prime
-            spf[p::p][spf[p::p] == 0] = p
-    omega = np.zeros(N + 1, dtype=np.int8)
+        if spf[p] == 0:
+            seg = spf[p::p]
+            seg[seg == 0] = p
+    return spf
+
+
+def omega_array(N, spf=None):
+    """omega(n) = number of distinct prime factors of n, 0 <= n <= N."""
+    if spf is None:
+        spf = spf_array(N)
+    omega = np.zeros(N + 1, dtype=np.int64)
     for n in range(2, N + 1):
-        m, last = n, 0
-        c = 0
-        while m > 1:
-            p = spf[m]
-            if p != last:
-                c += 1
-                last = p
-            m //= p
-        omega[n] = c
+        p = spf[n]
+        m = n // p
+        omega[n] = omega[m] + (1 if m % p else 0)
     return omega
 
 
-# ---- 2. coefficient generators --------------------------------------------
+# ---- 2. coefficients -------------------------------------------------------
 def coeffs_zeta(N):
     a = np.ones(N + 1, dtype=np.complex128)
     a[0] = 0.0
     return a
 
+
 def coeffs_random_mult(N, seed):
-    """a_p = e^{i theta_p} on primes, extended multiplicatively."""
+    """a_p = exp(i theta_p), theta_p i.i.d. uniform on [0, 2 pi), drawn in
+    increasing order of p, and a_{mn} = a_m a_n for all m, n."""
     rng = np.random.default_rng(seed)
-    spf = np.zeros(N + 1, dtype=np.int64)
-    for p in range(2, N + 1):
-        if spf[p] == 0:
-            spf[p::p][spf[p::p] == 0] = p
-    ap = {}
+    spf = spf_array(N)
     a = np.zeros(N + 1, dtype=np.complex128)
     a[1] = 1.0
     for n in range(2, N + 1):
-        p = spf[n]; m = n // p
-        if m == 1:                                  # n is prime
-            ap[p] = np.exp(1j * rng.uniform(0, 2*np.pi))
-            a[n] = ap[p]
+        p = spf[n]
+        if p == n:
+            a[n] = np.exp(1j * rng.uniform(0, 2 * np.pi))
         else:
-            a[n] = a[m] * ap[p] if (m % p) else a[m] * ap[p]   # fully mult.
+            a[n] = a[n // p] * a[p]
     return a
 
 
-# ---- 3. Kahan-compensated class sums S_k(t) and r(t) -----------------------
-def class_sums_at_t(t, n, n_pow, logn, omega, a, Kmax):
-    """Return S_k for k=0..Kmax at a single t, Kahan-summed per class."""
-    phase = np.exp(-1j * t * logn)                  # n^{-it}
-    term  = a * n_pow * phase                       # a_n * n^{-1/2-it}
-    S = np.zeros(Kmax + 1, dtype=np.complex128)
-    # group by omega using bincount on real/imag separately (Kahan-lite)
-    for k in range(Kmax + 1):
-        mask = (omega == k)
-        if mask.any():
-            S[k] = np.sum(term[mask])               # numpy pairwise sum
-    return S
+# ---- 3. class sums S_k(t), D, E and r --------------------------------------
+class Engine:
+    """Evaluates the class sums of sum_{n<=N} a_n n^{-1/2-it}."""
 
-def r_of_t(t, n, n_pow, logn, omega, a, Kmax):
-    S = class_sums_at_t(t, n, n_pow, logn, omega, a, Kmax)
-    D = S.sum()
-    E = np.sum(np.abs(S)**2)
-    X = np.abs(D)**2 - E
-    return X / E, np.abs(D)
+    def __init__(self, a, N):
+        omega = omega_array(N)[1:]
+        n = np.arange(1, N + 1, dtype=np.float64)
+        order = np.argsort(omega, kind="stable")       # group n by omega(n)
+        self.N = N
+        self.logn = np.log(n)[order]
+        self.coef = (a[1:] * n ** -0.5)[order]
+        counts = np.bincount(omega)
+        self.bounds = np.concatenate(([0], np.cumsum(counts)))
+        self.K = len(counts)                           # number of classes
+
+    def classes(self, t):
+        term = self.coef * np.exp(-1j * t * self.logn)
+        b = self.bounds
+        return np.array([term[b[k]:b[k + 1]].sum() for k in range(self.K)])
+
+    def point(self, t):
+        """Return (r, |D|, E) at t."""
+        S = self.classes(t)
+        D2 = abs(S.sum()) ** 2
+        E = float(np.sum(np.abs(S) ** 2))
+        return (D2 - E) / E, np.sqrt(D2), E
+
+    def sample(self, ts):
+        out = np.array([self.point(t) for t in ts])
+        return out[:, 0], out[:, 1], out[:, 2]
 
 
-# ---- 4. driver: quantile-stratified r_bar(q) -------------------------------
-def analyse(a, label, cfg=CFG):
-    N = cfg["N"]
-    idx   = np.arange(1, N + 1)
-    omega = omega_array(N)[1:]
-    a     = a[1:]
-    n_pow = idx.astype(np.float64) ** -0.5
-    logn  = np.log(idx.astype(np.float64))
-    Kmax  = int(omega.max())
+def zero_crossing(q, y):
+    """Abscissa where the piecewise linear interpolant of (q, y) vanishes."""
+    i = np.where(np.diff(np.sign(y)) != 0)[0][0]
+    return q[i] - y[i] * (q[i + 1] - q[i]) / (y[i + 1] - y[i])
 
-    dt = 2*np.pi / np.log(N)
+
+# ---- 4. decile profile on the sample window --------------------------------
+def analyse(eng, label, cfg=CFG, full=False):
+    N = eng.N
+    dt = 2 * np.pi / np.log(N)
     ts = np.arange(cfg["T_LO"], cfg["T_LO"] + cfg["WIN_WIDTH"], dt)
-    rs = np.empty_like(ts); Ds = np.empty_like(ts)
-    for i, t in enumerate(ts):
-        rs[i], Ds[i] = r_of_t(t, idx, n_pow, logn, omega, a, Kmax)
+    r, D, E = eng.sample(ts)
 
-    # stratify r by the quantile band of |D|
-    order = np.argsort(Ds)
-    qbands = np.array_split(order, cfg["N_QUANTILES"])
-    rbar = np.array([rs[b].mean() for b in qbands])
-    qmid = (np.arange(cfg["N_QUANTILES"]) + 0.5) / cfg["N_QUANTILES"]
+    order = np.argsort(D)
+    bands = np.array_split(order, cfg["N_BANDS"])
+    rbar = np.array([r[b].mean() for b in bands])
+    q = (np.arange(cfg["N_BANDS"]) + 0.5) / cfg["N_BANDS"]
 
-    # peak / trough census
-    top_decile = qbands[-1]; bot_decile = qbands[0]
-    print(f"\n=== {label}  (N={N}, {len(ts)} t-samples) ===")
-    print(" q-band   r_bar")
-    for q, rb in zip(qmid, rbar):
-        print(f"  {q:4.2f}   {rb:+.4f}")
-    print(f" troughs (lowest decile): mean r = {rs[bot_decile].mean():+.4f}, "
-          f"frac r<0 = {(rs[bot_decile]<0).mean():.2f}")
-    print(f" peaks   (top   decile):  mean r = {rs[top_decile].mean():+.4f}, "
-          f"frac r>0 = {(rs[top_decile]>0).mean():.2f}")
-    # zero crossing
-    sign_change = np.where(np.diff(np.sign(rbar)) != 0)[0]
-    if len(sign_change):
-        print(f" r_bar(q) crosses zero near q = {qmid[sign_change[0]]:.2f}")
-    return qmid, rbar, ts, rs, Ds, (idx, n_pow, logn, omega, a, Kmax)
+    print(f"\n=== {label}  (N={N}, {len(ts)} points, "
+          f"t in [{ts[0]:.0f}, {ts[-1]:.2f}], classes K={eng.K}) ===")
+    print("  band   mean r   mean E")
+    for qq, b in zip(q, bands):
+        print(f"  {qq:4.2f}  {r[b].mean():+.4f}  {E[b].mean():8.3f}")
+    print(f"  lowest decile : mean r = {r[bands[0]].mean():+.4f}, "
+          f"fraction r<0 = {(r[bands[0]] < 0).mean():.3f}")
+    print(f"  highest decile: mean r = {r[bands[-1]].mean():+.4f}, "
+          f"fraction r>0 = {(r[bands[-1]] > 0).mean():.3f}")
+    print(f"  band means increasing: {bool(np.all(np.diff(rbar) > 0))}; "
+          f"sign change (linear interpolation) at q = {zero_crossing(q, rbar):.3f}")
+    if full:
+        top50 = order[-50:]
+        X = D ** 2 - E
+        print(f"  50 largest |D|: mean r = {r[top50].mean():+.4f}, "
+              f"fraction r>0 = {(r[top50] > 0).mean():.2f}")
+        print(f"  whole sample: r in [{r.min():+.4f}, {r.max():+.4f}], "
+              f"mean r = {r.mean():+.4f}, median r = {np.median(r):+.4f}, "
+              f"fraction r<0 = {(r < 0).mean():.3f}")
+        print(f"  whole sample: mean X = {X.mean():+.3f}, mean E = {E.mean():.3f}, "
+              f"mean |D|^2 = {(D ** 2).mean():.3f}")
+        print(f"  E in [{E.min():.3f}, {E.max():.2f}], sd(E)/mean(E) = "
+              f"{E.std() / E.mean():.3f}")
+    return q, rbar
 
 
-# ---- 5. the t=150000 anchor: is it a trough? -------------------------------
-def anchor_test(engine, cfg=CFG):
-    idx, n_pow, logn, omega, a, Kmax = engine
-    dt = 2*np.pi / np.log(cfg["N"])
-    loc = np.arange(cfg["ANCHOR_T"] - cfg["ANCHOR_HALFWIDTH"],
-                    cfg["ANCHOR_T"] + cfg["ANCHOR_HALFWIDTH"], dt)
-    rloc = np.empty_like(loc); Dloc = np.empty_like(loc)
-    for i, t in enumerate(loc):
-        rloc[i], Dloc[i] = r_of_t(t, idx, n_pow, logn, omega, a, Kmax)
-    j = np.argmin(np.abs(loc - cfg["ANCHOR_T"]))
-    rank = (Dloc < Dloc[j]).mean()                  # local quantile rank of |D|
-    print(f"\n=== anchor t={cfg['ANCHOR_T']:.0f} ===")
-    print(f"  r(t)             = {rloc[j]:+.4f}")
-    print(f"  local |D| rank   = {rank:.2f}  (0 = deepest trough, 1 = highest peak)")
-    print(f"  verdict          = {'TROUGH' if rank < 0.5 else 'PEAK'}")
-    return rloc[j], rank
+# ---- 5. the point t = 150000 -----------------------------------------------
+def point_test(eng, cfg=CFG):
+    t0 = cfg["POINT_T"]
+    N = eng.N
+    r0, D0, E0 = eng.point(t0)
+    print(f"\n=== t = {t0:.0f}, N = {N} ===")
+    print(f"  |D| = {D0:.4f}, E = {E0:.4f}, r = {r0:+.4f}")
+
+    # nearest local minimum of |D|
+    fine = np.arange(t0 - 1.0, t0 + 1.0, 1e-3)
+    rf, Df, _ = eng.sample(fine)
+    j = np.argmin(Df)
+    print(f"  on [t0-1, t0+1]: min |D| = {Df[j]:.4f} at t = {fine[j]:.3f} "
+          f"(r = {rf[j]:+.4f}); r ranges over [{rf.min():+.3f}, {rf.max():+.3f}]")
+
+    # neighbourhood sample of spacing 2 pi / log N
+    dt = 2 * np.pi / np.log(N)
+    loc = np.arange(t0 - cfg["POINT_HALFWIDTH"], t0 + cfg["POINT_HALFWIDTH"], dt)
+    rl, Dl, _ = eng.sample(loc)
+    top = np.array_split(np.argsort(Dl), cfg["N_BANDS"])[-1]
+    print(f"  neighbourhood sample: {len(loc)} points; fraction with |D| smaller "
+          f"than at t0 = {(Dl < D0).mean():.3f}")
+    print(f"  neighbourhood top decile of |D|: mean r = {rl[top].mean():+.4f}")
 
 
 # ---- 6. run ----------------------------------------------------------------
 if __name__ == "__main__":
-    # zeta
-    qz, rz, *_z, eng_z = analyse(coeffs_zeta(CFG["N"]), "zeta")
-    anchor_test(eng_z)
+    N = CFG["N"]
 
-    # random multiplicative control (averaged over seeds)
+    eng_z = Engine(coeffs_zeta(N), N)
+    qz, rz = analyse(eng_z, "zeta", full=True)
+    point_test(eng_z)
+
+    N2 = CFG["N_ALT"]
+    r2, D2, E2 = Engine(coeffs_zeta(N2), N2).point(CFG["POINT_T"])
+    print(f"\n=== t = {CFG['POINT_T']:.0f}, N = {N2} ===")
+    print(f"  |D| = {D2:.4f}, E = {E2:.4f}, r = {r2:+.4f}")
+
     rbars = []
     for s in CFG["SEEDS"]:
-        q, rb, *_ = analyse(coeffs_random_mult(CFG["N"], s), f"rand-mult seed={s}")
+        q, rb = analyse(Engine(coeffs_random_mult(N, s), N),
+                        f"random multiplicative, seed {s}")
         rbars.append(rb)
-    rbar_rand = np.mean(rbars, axis=0)
+    rbars = np.array(rbars)
+    r_mean, r_sd = rbars.mean(axis=0), rbars.std(axis=0)
+    print("\n=== random multiplicative control, five seeds ===")
+    print("  band   mean     s.d.")
+    for qq, m, s in zip(qz, r_mean, r_sd):
+        print(f"  {qq:4.2f}  {m:+.4f}  {s:.4f}")
+    print(f"  mean over the sample (average of the band means) = {r_mean.mean():+.4f}")
+    print(f"  sign change (linear interpolation) at q = {zero_crossing(qz, r_mean):.3f}")
 
-    # figure
     try:
+        import matplotlib
+        matplotlib.use("Agg")
         import matplotlib.pyplot as plt
-        plt.figure(figsize=(6, 4))
-        plt.axhline(0, color="gray", lw=0.8)
-        plt.plot(qz, rz, "o-", label=r"$\zeta$")
-        plt.plot(qz, rbar_rand, "s--", label="random mult. (mean of 5 seeds)")
-        plt.xlabel(r"conditioning quantile $q$ of $|D_F|$")
-        plt.ylabel(r"$\bar r(q)$")
-        plt.title("Inter-class ratio: destructive at troughs, constructive at peaks")
-        plt.legend(); plt.tight_layout()
-        plt.savefig("P6_rbar_vs_quantile.png", dpi=300)
-        plt.savefig("P6_rbar_vs_quantile.pdf")
-        print("\nSaved P6_rbar_vs_quantile.{png,pdf}")
+
+        q0 = zero_crossing(qz, rz)
+        fig, ax = plt.subplots(figsize=(6, 4))
+        ax.axhline(0, color="gray", lw=0.8)
+        ax.axvline(q0, color="black", lw=0.8, ls=":")
+        ax.plot(qz, rz, "o-", color="C0", label=r"$\zeta$")
+        ax.errorbar(qz, r_mean, yerr=r_sd, fmt="s--", color="C1", capsize=2,
+                    label=r"random mult. (mean $\pm$ s.d., 5 seeds)")
+        ax.annotate(rf"sign change at $q\approx{q0:.2f}$", (q0 + 0.01, -0.5),
+                    fontsize=8)
+        ax.set_xlabel(r"decile of $|D_F|$ (band midpoint $q$)")
+        ax.set_ylabel(r"$\bar r(q)$")
+        ax.legend(loc="upper left")
+        fig.tight_layout()
+        fig.savefig("rbar_vs_quantile.png", dpi=300)
+        fig.savefig("rbar_vs_quantile.pdf")
+        print("\nSaved rbar_vs_quantile.png and rbar_vs_quantile.pdf")
     except Exception as e:
         print("plot skipped:", e)

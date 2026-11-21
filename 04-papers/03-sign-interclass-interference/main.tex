@@ -17,62 +17,56 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
+\newtheorem{observation}[theorem]{Observation}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 
 \newcommand{\re}{\operatorname{Re}}
-\newcommand{\E}{\mathbb{E}}
 
 \title[Inter-Class Interference]{On the Sign of Inter-Class Interference in Dirichlet
 Partial Sums: A Peak--Trough Reconciliation}
 \author{David Alejandro Trejo Pizzo}
-\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
+\address{Independent researcher}
+\email{dtrejopizzo@gmail.com}
 
 
 \begin{document}
-\nocite{bgTitchmarsh,bgMV,bgTenenbaum,bgSelberg46}
 \begin{abstract}
-The $\omega$-class decomposition of a Dirichlet partial sum
-$D_F(t;N)=\sum_{n\le N}a_n n^{-1/2-it}$ partitions it into sub-sums
-$S_k$ indexed by the number of distinct prime factors $\omega(n)=k$,
-and the \emph{inter-class energy ratio}
+For the $\omega$-class decomposition $D_F=\sum_kS_k$ of a Dirichlet
+partial sum $D_F(t;N)=\sum_{n\le N}a_n n^{-1/2-it}$, where $S_k$
+collects the terms with $\omega(n)=k$, the \emph{inter-class energy
+ratio}
 $r(t;N)=\big(|D_F|^2-\sum_k|S_k|^2\big)/\sum_k|S_k|^2$
-measures whether the classes interfere constructively ($r>0$) or
-destructively ($r<0$). Two lines of computational investigation within a
-single research program have reported \emph{opposite} signs for this
-quantity: an early phase reported a representative \emph{destructive}
-value $r\approx-0.82$ (interpreted as characteristic of the Riemann zeta
-function), while a later, canonical pipeline found $r$ to be strongly
-\emph{constructive} at the largest values of $|D_F|$. We resolve the
-apparent contradiction. The resolution is structural rather than
-numerical: by the mean value theorem for Dirichlet polynomials the
-\emph{unconditional} average of $r$ vanishes, so $r$ carries information
-only \emph{conditionally}, and its sign is governed entirely by the event
-on which one conditions. We show that $r$ is a monotone increasing
-function of the conditioning quantile of $|D_F|$: it is negative at
-\emph{troughs} (local minima of $|D_F|$) and positive at \emph{peaks}
-(local maxima), crossing zero in the bulk. The frequently cited value
-$r\approx-0.82$ was measured at $t=150000$, which we identify as a trough
-of $|D_\zeta(t;N)|$, not a peak. Both prior reports are therefore correct
-about their respective conditioning sets; we recommend that all
-inter-class interference statements specify the conditioning explicitly.
-A fully reproducible Google Colab notebook accompanies the note.
+measures whether the classes add constructively ($r>0$) or destructively
+($r<0$). We point out that $r$ has no characteristic sign. By the
+Montgomery--Vaughan mean value theorem the average of the cross-term
+$X=|D_F|^2-\sum_k|S_k|^2$ over an interval of length $H$ is $O(N/H)$, so
+over long ranges neither sign of $X$ dominates. For the ratio itself we
+find numerically, for $\zeta$ at $N=10^5$ on $5498$ points of
+$[10^5,1.03\times10^5]$, that the mean of $r$ over the deciles of
+$|D_\zeta|$ increases from $-0.998$ on the lowest decile (where every
+point has $r<0$) to $+1.544$ on the highest decile (where $92\%$ of the
+points have $r>0$), changing sign near the $69$th percentile; the mean of
+$r$ over the whole sample is $-0.26$, and $73\%$ of the points have
+$r<0$. A random completely multiplicative model behaves in the same way.
+In particular the value $r=-0.78$ at the single point $t=150000$ and the
+positive values of $r$ at the largest values of $|D_\zeta|$ are
+consistent with each other: the former reflects the proximity of a point
+where $D_\zeta$ nearly vanishes, not a general property of $\zeta$. Statements about the
+sign of $r$ should therefore specify the set of $t$ over which it is
+taken.
 \end{abstract}
 
 \maketitle
-
-\tableofcontents
-\newpage
 
 
 
 \section{Introduction}
 \label{sec:intro}
 
-Decomposing a Dirichlet partial sum by the number of distinct prime
-factors of its index---the \emph{$\omega$-class decomposition}---has
-proved a useful lens on how large values of $L$-functions are assembled
-from their arithmetic building blocks. Writing
+The $\omega$-class decomposition of a Dirichlet partial sum~\cite{P02}
+groups the terms by the number of distinct prime factors of the index.
+Writing
 \begin{equation}\label{eq:Sk}
 D_F(t;N)=\sum_{n\le N}\frac{a_n}{n^{1/2+it}}
 =\sum_{k\ge0}S_k(t;N),\qquad
@@ -83,31 +77,28 @@ one asks how the class-sums $S_k$ combine: do their phases reinforce
 natural scalar summarizing this is the inter-class energy ratio
 $r(t;N)$ of Definition~\ref{def:r} below.
 
-A tension has appeared in the computational record of this program. An
-early phase, calibrating against the Davenport--Heilbronn function and
-sampling $D_\zeta$ near $t=1.5\times10^5$, reported a representative
-\emph{negative} value $r\approx-0.82$ and described the inter-class
-interference of $\zeta$ as predominantly \emph{destructive}---a
-``cancellation architecture'' among composite classes. A later phase,
-using a canonical Parseval-validated pipeline and conditioning on the
-largest values of $|D_\zeta|$, found the opposite: at the highest peaks
-$r$ is strongly \emph{positive} (constructive), with mean
-$r\approx+1.5$ and more than $90\%$ of peaks satisfying $r>0$. Taken at face
-value the two reports contradict one another.
+Two computations of $r$ for $F=\zeta$ point in opposite directions.
+Evaluated at the single point $t=150000$ the ratio is negative
+($r=-0.78$ at $N=10^5$), which suggests that the interference between
+classes is destructive. Averaged over the largest values of $|D_\zeta|$
+it is positive (mean $+1.54$ over the top decile of a sample, with $92\%$
+of the points positive), which suggests that it is constructive.
 
-The purpose of this note is to show that they do not. The contradiction
-dissolves once one recognizes that $r$ is an intrinsically
-\emph{conditional} quantity (Section~\ref{sec:conditional}): its
-unconditional mean is zero, so any nonzero value is an artifact of the
-conditioning event, and \emph{the sign of $r$ is a function of which
-event one selects}. We establish (Section~\ref{sec:main}) that $r$
-increases monotonically with the conditioning quantile of $|D_F|$,
-passing from negative at troughs to positive at peaks. In
-Section~\ref{sec:150000} we show that the often-cited point $t=150000$ is
-a trough, which is exactly why it returns a negative $r$, and we
-reconcile the two reports. Section~\ref{sec:implications} states the
-recommended convention for the corpus. Appendix~\ref{app:repro} provides
-a self-contained, reproducible computation.
+The purpose of this note is to explain why the two readings are
+consistent. The ratio $r$ takes both signs, and which sign one sees
+depends on the set of $t$ over which $r$ is evaluated or averaged. In
+Section~\ref{sec:conditional} we record what the Montgomery--Vaughan mean
+value theorem gives: the average of the cross-term $X=|D_F|^2-\sum_k|S_k|^2$
+over an interval of length $H$ is $O(N/H)$. This concerns $X$ and long
+intervals; it does not give the mean of $r$. In Section~\ref{sec:main}
+we find numerically, on one window at $N=10^5$, that the mean of $r$ over
+the deciles of $|D_\zeta|$ increases with the decile, from negative
+values on the low deciles to positive values on the top deciles. In
+Section~\ref{sec:150000} we examine the point $t=150000$: it lies next
+to a point where $D_\zeta$ nearly vanishes, in the lower half of the local distribution of
+$|D_\zeta|$, and its negative value of $r$ is the one expected there.
+Section~\ref{sec:implications} lists the consequences, and
+Appendix~\ref{app:repro} describes the computations.
 
 \section{Setup}
 \label{sec:setup}
@@ -120,97 +111,148 @@ $D_F=\sum_k S_k$.
 \end{definition}
 
 \begin{definition}[Inter-class energy ratio]\label{def:r}
-Define the \emph{class energy} $E(t)=\sum_k|S_k(t)|^2$, the
-\emph{cross-term} $X(t)=|D_F(t)|^2-E(t)=\sum_{j\ne k}\re[S_j\overline{S_k}]$,
+Assume $a_1\neq0$. Define the \emph{class energy}
+$E(t)=\sum_k|S_k(t)|^2$, the \emph{cross-term}
+$X(t)=|D_F(t)|^2-E(t)=\sum_{j\ne k}\re[S_j\overline{S_k}]$,
 and the \emph{inter-class energy ratio}
 \begin{equation}\label{eq:r}
 r(t;N)=\frac{X(t)}{E(t)}.
 \end{equation}
-From the identity $|D_F|^2=E(1+r)$: $r>0$ is constructive interference
-between classes, $r<0$ destructive, $r=0$ independent.
+Thus $|D_F|^2=E(1+r)$. We call the interference between classes
+\emph{constructive} at $t$ if $r>0$ and \emph{destructive} if $r<0$.
 \end{definition}
 
-We take $F=\zeta$ ($a_n=1$) throughout, with a random multiplicative
-control (coefficients $a_p=e^{i\theta_p}$, $\theta_p$ i.i.d.\ uniform,
-extended multiplicatively) for comparison. All sums use Kahan compensated
-summation; the $t$-grid uses spacing $\Delta t=2\pi/\log N$;
-$D_\zeta(t;10^4)$ agrees with a $50$-digit \texttt{mpmath} reference to
-$\ge10$ digits.
+Here and below $N$ is fixed and is omitted from the notation $E(t)$,
+$X(t)$, $S_k(t)$. Since $S_0=a_1$, one has $E\ge|a_1|^2>0$, so $r$ is
+well defined. By the Cauchy--Schwarz inequality
+$|D_F|^2\le K_N E$, where $K_N$ is the number of non-empty classes
+($K_N=7$ for $N=10^5$), and therefore
+\[
+-1\le r(t;N)\le K_N-1 ,
+\]
+with $r=-1$ exactly at the zeros of $D_F$.
 
-\section{$r$ is a conditional quantity}
+We take $F=\zeta$ ($a_n=1$) throughout, with a random multiplicative
+control (coefficients $a_p=e^{i\theta_p}$, $\theta_p$ i.i.d.\ uniform on
+$[0,2\pi)$, extended completely multiplicatively) for comparison; in both
+cases $a_1=1$ and $E\ge1$. All sums are evaluated in double precision.
+The sample consists of the points
+\begin{equation*}
+t_j=10^5+j\,\frac{2\pi}{\log N},\qquad 0\le j<5498,\qquad N=10^5,
+\end{equation*}
+which fill the window $[10^5,1.03\times10^5]$. For a subset $\mathcal E$
+of the sample we write $\langle r\rangle_{\mathcal E}$ for the mean of
+$r$ over $\mathcal E$ (Definition~\ref{cor:signfree}).
+
+\section{The mean of the cross-term}
 \label{sec:conditional}
 
-The single fact that organizes everything is that $r$ has no
-unconditional content.
+The one general fact available is a bound for the mean of the cross-term
+over long intervals.
 
-\begin{proposition}[Unconditional vanishing]\label{prop:mvt}
-By the Montgomery--Vaughan mean value theorem for Dirichlet polynomials,
-for $j\ne k$,
-\begin{equation}
-\frac{1}{T}\int_0^T \re\!\big[S_j(t)\,\overline{S_k(t)}\big]\,dt
-= O\!\left(\frac{N}{T}\right)\qquad(T\to\infty),
+\begin{proposition}[Mean of the cross-term]\label{prop:mvt}
+Let $|a_n|\le1$ for all $n$. For all $N\ge1$, $T_0\in\mathbb{R}$ and
+$H>0$,
+\begin{equation}\label{eq:mvt}
+\bigg|\frac{1}{H}\int_{T_0}^{T_0+H} X(t)\,dt\bigg|
+\le\frac{12\pi N}{H},
 \end{equation}
-and hence $\frac1T\int_0^T X(t)\,dt=O(N/T)$. Consequently the
-unconditional average of the cross-term vanishes, and any persistent
-nonzero value of $r$ is a property of a \emph{conditional} ensemble, not
-of $D_F$ as a whole.
+and the same bound holds with $X$ replaced by
+$2\re\big[S_j\overline{S_k}\big]$ for any $j\ne k$.
 \end{proposition}
 
+\begin{proof}
+Let $\mathcal N\subseteq\{1,\dots,N\}$ and let $b_n$, $n\in\mathcal N$,
+be complex numbers. The numbers $\log n$, $n\in\mathcal N$, are distinct,
+and the distance from $\log n$ to the nearest other one is at least
+$\log\frac{n+1}{n}\ge\frac1{n+1}$. The mean value theorem of Montgomery
+and Vaughan~\cite{MV74}, which follows from their weighted
+form of Hilbert's inequality, therefore gives (trivially so if
+$\mathcal N$ has a single element)
+\begin{equation*}
+\bigg|\int_{0}^{H}\Big|\sum_{n\in\mathcal N}b_n n^{-it}\Big|^2dt
+-H\sum_{n\in\mathcal N}|b_n|^2\bigg|
+\le 3\pi\sum_{n\in\mathcal N}(n+1)\,|b_n|^2 .
+\end{equation*}
+Replacing $b_n$ by $b_nn^{-iT_0}$ gives the same inequality for the
+integral over $[T_0,T_0+H]$. Apply it with $b_n=a_nn^{-1/2}$, first to
+$\mathcal N=\{1,\dots,N\}$, which gives $D_F$, and then to each class
+$\mathcal N_k=\{n\le N:\omega(n)=k\}$, which gives $S_k$. The classes
+partition $\{1,\dots,N\}$, so the main terms $H\sum_{n}|a_n|^2/n$ cancel
+in $\int(|D_F|^2-\sum_k|S_k|^2)\,dt$, and
+\[
+\bigg|\int_{T_0}^{T_0+H}X(t)\,dt\bigg|
+\le 2\cdot3\pi\sum_{n\le N}\frac{n+1}{n}\,|a_n|^2
+\le 6\pi\,(N+1+\log N)\le 12\pi N .
+\]
+For a single pair $j\ne k$ use
+$2\re\big[S_j\overline{S_k}\big]=|S_j+S_k|^2-|S_j|^2-|S_k|^2$ and apply
+the inequality to $\mathcal N_j\cup\mathcal N_k$, $\mathcal N_j$ and
+$\mathcal N_k$.
+\end{proof}
+
 \noindent
-The proposition has an immediate and decisive corollary for the present
-question.
+The bound~\eqref{eq:mvt} is informative only for $H$ large compared with
+$N$: over such ranges neither sign of the cross-term dominates on
+average. It says nothing about the mean of $r=X/E$, because $E$ is not
+constant. It is also vacuous in the regime of our computations
+($N=10^5$, $H=3000$), where the mean of $X$ over the sample is $-0.92$
+against a mean of $E$ of $11.75$.
 
-\begin{corollary}\label{cor:signfree}
-The sign of $r$ is not an intrinsic attribute of $F$. It is defined only
-relative to a conditioning event $\mathcal{E}\subseteq[T,2T]$, as
-$\langle r\rangle_{\mathcal{E}}=\E[r(t)\mid t\in\mathcal{E}]$. Different
-$\mathcal{E}$ may---and, as we show, do---yield opposite signs.
-\end{corollary}
+\begin{definition}\label{cor:signfree}
+For a finite sample $\mathcal T$ of abscissae and a non-empty subset
+$\mathcal E\subseteq\mathcal T$, write
+$\langle r\rangle_{\mathcal E}=|\mathcal E|^{-1}\sum_{t\in\mathcal E}r(t)$.
+\end{definition}
 
-Because the bulk average is zero while individual values of $r$ are
-$O(1)$, the distribution of $r$ over $t$ is two-sided with mean near
-zero. Selecting the high-$|D_F|$ tail samples one side of this
-distribution; selecting the low-$|D_F|$ tail samples the other. The
-remainder of the note makes this quantitative.
+Since $r(t)$ takes both signs (Section~\ref{sec:main}), a statement about
+``the sign of $r$'' is meaningful only once $\mathcal E$ is specified;
+different choices of $\mathcal E$ can give opposite signs, and do.
+On our sample the distribution of $r$ is two-sided and skewed:
+$r\in[-1.00,3.90]$, with mean $-0.26$, median $-0.73$, and $r<0$ at $73\%$
+of the points. Selecting the points where $|D_F|$ is large samples the
+positive side; selecting the points where $|D_F|$ is small samples the
+negative side. The next section makes this quantitative.
 
-\section{Main result: $r$ increases with the conditioning quantile}
+\section{Numerical observation: the decile means of \texorpdfstring{$r$}{r}}
 \label{sec:main}
 
-Fix $N$ and a window $[T,2T]$. For $q\in[0,1]$ let
-$Q_q$ denote the event ``$|D_F(t;N)|$ lies in the $q$-th quantile band of
-its distribution over the window.'' Write
-$\bar r(q)=\langle r\rangle_{Q_q}$ for the conditional mean of $r$ on that
-band.
+Order the sample of Section~\ref{sec:setup} by increasing $|D_F|$ and
+split it into ten consecutive bands $B_1,\dots,B_{10}$ of $550$ or $549$
+points (the deciles of $|D_F|$). Write $\bar r(q)=\langle r\rangle_{B_i}$, $q=(i-\tfrac12)/10$,
+for the mean of $r$ over $B_i$. We call \emph{troughs} the points of the
+lowest decile $B_1$ and \emph{peaks} those of the highest decile
+$B_{10}$; these are not the local extrema of $|D_F|$.
 
-\begin{theorem}[Peak--trough sign reversal; empirical]\label{thm:main}
-For $F=\zeta$ at $N=10^5$, sampled over $5498$ abscissae with spacing
-$\Delta t=2\pi/\log N$, the decile-conditional mean $\bar r(q)$
-(Table~\ref{tab:rbar}, Figure~\ref{fig:rbar}) is a strictly monotone
-increasing function of $q$:
+\begin{observation}[Sign reversal between low and high deciles; numerical]\label{thm:main}
+Let $F=\zeta$ and $N=10^5$, on the sample of $5498$ points of
+$[10^5,1.03\times10^5]$. The band means $\bar r(q)$
+(Table~\ref{tab:rbar}, Figure~\ref{fig:rbar}) increase from each band to
+the next:
 \begin{enumerate}[label=\textup{(\roman*)}]
-\item \textbf{Troughs} (lowest decile of $|D_\zeta|$): \emph{every}
-sampled point has $r<0$ (fraction $1.00$), with mean $\bar r=-0.998$.
-\item \textbf{Bulk}: $\bar r(q)$ crosses zero near $q\approx0.69$.
-\item \textbf{Peaks} (top decile): $\bar r=+1.544$, with $92\%$ of points
-satisfying $r>0$; both the fraction and the magnitude rise further for the
-most extreme peaks.
+\item \textbf{Troughs} (lowest decile of $|D_\zeta|$): every point has
+$r<0$, and $\bar r=-0.998$.
+\item \textbf{Middle}: the band means change sign between the seventh and
+eighth bands (linear interpolation: $q\approx0.69$).
+\item \textbf{Peaks} (top decile): $\bar r=+1.544$, with $92\%$ of the
+points having $r>0$; for the $50$ largest values of $|D_\zeta|$ the mean
+of $r$ is $2.30$ and all $50$ have $r>0$.
 \end{enumerate}
-The random multiplicative control (mean of five seeds
-$\{42,137,271,314,577\}$) exhibits the same profile, with peak mean
-$\bar r=+1.41\pm0.04$ and the same zero-crossing near $q\approx0.65$. The
-peak/trough \emph{sign} structure is independent of~$N$; the relative
-ordering of $\zeta$ and the random control at peaks does depend on~$N$ (at
-$N=10^5$, $\zeta$ exceeds the control; at $N=10^6$ the broader study of
-this program finds top-$50$-peak means $\bar r\approx2.5$ for $\zeta$
-versus $\bar r\approx2.8$ for the control, the ordering reversing across
-$N_c\approx1.2\times10^5$; see the companion phase-transition analysis).
-\end{theorem}
+The random multiplicative control (five seeds
+$\{42,137,271,314,577\}$) has the same profile, with top-decile mean
+$\bar r=+1.41\pm0.04$ (mean and standard deviation over the seeds) and
+sign change at $q\approx0.68$.
+\end{observation}
 
-\begin{table}[h!]
+These are statements about one window and one value of $N$; we make no
+claim about other ranges.
+
+\begin{table}[ht]
 \centering
-\caption{Decile-conditional mean $\bar r(q)$ of the inter-class energy
-ratio at $N=10^5$ ($5498$ abscissae). Monotone in $q$: destructive at
-troughs, constructive at peaks. Regenerated by the notebook of
+\caption{Mean $\bar r(q)$ of the inter-class energy ratio over the
+deciles of $|D_F|$ at $N=10^5$ ($5498$ points), and, for $\zeta$, the
+mean of the class energy $E$ over the same bands. Third row: mean over
+the five seeds. Produced by the script of
 Appendix~\ref{app:repro}.}\label{tab:rbar}
 \vspace{2pt}
 \small
@@ -219,133 +261,130 @@ Appendix~\ref{app:repro}.}\label{tab:rbar}
 $q$ & $0.05$ & $0.15$ & $0.25$ & $0.35$ & $0.45$ & $0.55$ & $0.65$ & $0.75$ & $0.85$ & $0.95$\\
 \midrule
 $\zeta$ & $-0.998$ & $-0.987$ & $-0.950$ & $-0.860$ & $-0.738$ & $-0.498$ & $-0.169$ & $+0.297$ & $+0.770$ & $+1.544$\\
+$\zeta$, mean $E$ & $13.95$ & $10.52$ & $8.77$ & $6.66$ & $7.10$ & $6.35$ & $7.37$ & $9.36$ & $12.85$ & $34.64$\\
 rand.\ mult. & $-0.983$ & $-0.939$ & $-0.868$ & $-0.762$ & $-0.608$ & $-0.386$ & $-0.118$ & $+0.275$ & $+0.727$ & $+1.406$\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
 \centering
-\includegraphics[width=0.72\textwidth]{P6_rbar_vs_quantile.pdf}
-\caption{The decile-conditional mean $\bar r(q)$ of the inter-class energy
-ratio at $N=10^5$, for $\zeta$ (circles) and the random multiplicative
-control (squares, mean $\pm$ s.d.\ over five seeds). The curve is monotone
-increasing, negative at troughs (low $q$), positive at peaks (high $q$),
-crossing zero near $q\approx0.69$. By Proposition~\ref{prop:mvt} the
-two regimes average to zero over all~$t$; the sign of $r$ is therefore an
-attribute of the conditioning, not of $\zeta$.}
+\includegraphics[width=0.72\textwidth]{rbar_vs_quantile.pdf}
+\caption{The mean $\bar r(q)$ of the inter-class energy ratio over the
+deciles of $|D_F|$ at $N=10^5$, for $\zeta$ (circles) and the random
+multiplicative control (squares, mean $\pm$ s.d.\ over five seeds). The
+band means increase with $q$, are negative on the low deciles and
+positive on the top ones, and change sign near $q\approx0.69$. The sign
+of the mean of $r$ therefore depends on the band over which it is
+taken.}
 \label{fig:rbar}
 \end{figure}
 
-The mechanism is transparent. A peak of $|D_F|^2=E(1+r)$ is, by
-definition, an event of anomalously large $|D_F|^2$; since the diagonal
-energy $E$ is comparatively rigid, a large $|D_F|^2$ is achieved
-\emph{precisely} by a large positive cross-term, i.e.\ $r>0$. A trough is
-the reverse: an anomalously small $|D_F|^2$ at fixed $E$ requires a large
-negative cross-term, $r<0$. Constructive interference at peaks and
-destructive interference at troughs are thus two faces of the same
-identity $|D_F|^2=E(1+r)$, selected by the sign of the conditioning.
-Proposition~\ref{prop:mvt} guarantees the two effects average to zero.
+The direction of the effect is forced by the identity
+$|D_F|^2=E(1+r)$ together with the bounds $-1\le r\le K_N-1$ and $E\ge1$
+of Section~\ref{sec:setup}: $|D_F|$ can be small only if $r$ is close to
+$-1$, which explains the lowest deciles. At the top, a large value of
+$|D_F|^2$ is produced jointly by $E$ and by $1+r$. On our sample $E$ is
+far from constant (it ranges over $[1.1,230]$, with standard deviation
+$1.43$ times its mean); its mean over the top decile is $34.6$, against
+about $7$ in the middle deciles, and the mean of $r$ there is $1.54$.
+The mean of $E$ over the lowest decile is $13.9$, so troughs are not
+low-energy events but events of nearly complete cancellation between
+classes.
 
 \begin{remark}
-This also explains why an \emph{unconditional} or weakly-conditioned
-estimate of $r$ can land on either sign or near zero depending on the
-sampling window and the implicit weighting, which is the source of the
-discrepancy addressed next.
+The mean of $r$ over a set of points thus depends on how the set meets
+the deciles of $|D_F|$, and on the weighting. On the whole sample the
+unweighted mean of $r$ is $-0.26$, while the mean weighted by $E$, which
+is the ratio of the mean of $X$ to the mean of $E$, is $-0.08$. A single
+point, or a small or selected set of points, can give either sign.
 \end{remark}
 
-\section{The $t=150000$ discrepancy resolved}
+\section{The point \texorpdfstring{$t=150000$}{t=150000}}
 \label{sec:150000}
 
-The negative ``gold-standard'' value $r\approx-0.82$ that anchored the
-early destructive-interference reading was obtained at the specific
-abscissa $t=150000$. We claim this point is a \emph{trough}.
+We now look at the single point $t=150000$ mentioned in the
+introduction, where $r$ is negative.
 
-\begin{proposition}[The anchor point is a trough]\label{prop:150000}
-At $N=10^5$, the abscissa $t=150000$ has local $|D_\zeta|$-rank $0.12$
-within its neighbourhood (on the scale where $0$ is the deepest trough and
-$1$ the highest peak)---squarely in the lower tail---and correspondingly
-$r(150000;N)=-0.998$. The point is unambiguously a \emph{trough}. The
-historically-cited value $r\approx-0.82$, obtained at the nearby scale
-$N=1.5\times10^5$, is likewise a trough reading. Conditioning instead on
-the peaks of the same neighbourhood returns $\bar r>0$, in accordance with
-Theorem~\ref{thm:main}.
-\end{proposition}
+\begin{remark}[The point $t=150000$]\label{prop:150000}
+At $N=10^5$ one has $|D_\zeta(150000;N)|=0.741$, $E=2.49$ and
+$r(150000;N)=-0.779$ (for $N=1.5\times10^5$: $r=-0.787$). The point lies
+$0.26$ to the left of a near-zero of $D_\zeta$ (at $t\approx150000.26$,
+where $|D_\zeta|$ falls to $0.002$ and $r=-1.000$). Among the $184$ points of
+spacing $2\pi/\log N$ in $[149950,150050]$, $35\%$ have smaller
+$|D_\zeta|$. The point therefore lies in the lower half of the local
+distribution of $|D_\zeta|$, next to a near-zero, and its value of $r$ is
+close to the mean $\bar r=-0.86$ of the band $0.3<q<0.4$ of
+Table~\ref{tab:rbar}. On the $18$ points with the largest $|D_\zeta|$ in the same
+neighbourhood (its top decile) the mean of $r$ is $+1.42$, in line with Observation~\ref{thm:main}.
+\end{remark}
 
-Thus the early measurement was not erroneous: it correctly reported the
-value of $r$ at a trough. The error was only one of \emph{interpretation}
----reading a trough value as representative of $\zeta$ in general, when by
-Corollary~\ref{cor:signfree} no such representative value exists. Once
-the conditioning is made explicit, the early report ($r<0$ at a trough)
-and the later report ($r>0$ at peaks) are not merely compatible: they are
-two predicted points on the single monotone curve $\bar r(q)$ of
-Theorem~\ref{thm:main}.
+Thus the negative value at $t=150000$ is the value of $r$ at a point of
+the lower part of the distribution of $|D_\zeta|$. It is not
+representative of $\zeta$ in general, and no single value is. The
+negative value at this point and the positive mean over the top decile
+both fit the increasing profile $\bar r(q)$ of
+Observation~\ref{thm:main}.
 
-\section{Recommended convention and implications}
+\section{Consequences}
 \label{sec:implications}
 
 \begin{enumerate}[label=(\alph*)]
-\item \textbf{Always specify the conditioning.} An inter-class
-interference statement of the form ``$\zeta$ exhibits destructive
-(resp.\ constructive) interference'' is incomplete. The correct forms are
-``destructive \emph{at troughs}'' and ``constructive \emph{at peaks}.''
-\item \textbf{Restatement of prior claims.} The early
-``cancellation-architecture'' observations are correct as statements
-about troughs and low-$|D_F|$ events. The later phase-coordination
-observations are correct as statements about peaks. Neither is contradicted.
-\item \textbf{Peaks are the RH-relevant regime.} Since the Riemann
-Hypothesis constrains the \emph{growth} of $|\zeta(1/2+it)|$---i.e.\ its
-large values---the peak conditioning, where $r>0$, is the one relevant to
-the hypothesis. The structural asymmetry between $\zeta$ and the random
-multiplicative control reported elsewhere in this program is correctly
-formulated at peaks.
-\item \textbf{The monotone profile $\bar r(q)$ is itself the object of
-interest.} Rather than a single number, the full curve $\bar r(q)$
-(negative at troughs, zero in bulk, positive at peaks) is the reproducible
-invariant; its slope and zero-crossing are the quantities worth comparing
-across function classes.
+\item \textbf{Specify the set of $t$.} A statement of the form ``$\zeta$
+exhibits destructive (resp.\ constructive) interference between classes''
+is incomplete. What the computations support is ``$r$ is negative on the
+low deciles of $|D_\zeta|$'' and ``$r$ is positive on the top decile of
+$|D_\zeta|$'', on the window and at the value of $N$ considered.
+\item \textbf{Single points.} The value of $r$ at one point mostly
+records where the point sits in the distribution of $|D_F|$, in
+particular how close it is to a zero of $D_F$, where $r=-1$. It should
+not be read as a property of $F$.
+\item \textbf{Large values.} Questions about the size of
+$|\zeta(1/2+it)|$ (the Lindel\"of hypothesis, which follows from the
+Riemann hypothesis) concern the top of the distribution of $|D_\zeta|$;
+comparisons with random models aimed at such questions should be made on
+the top quantiles. The present computations do not bear on either
+hypothesis: at $N=10^5$ the profile of $\zeta$ and that of the random
+multiplicative control are close throughout (Table~\ref{tab:rbar}).
+\item \textbf{The profile $\bar r(q)$ is the object of interest.} Rather
+than a single number, the full profile $\bar r(q)$ (negative on the low
+deciles, positive on the top ones) is the natural object to compare
+across functions, through its slope and the location of its sign change.
 \end{enumerate}
 
 \appendix
-\section{Computational reproducibility}
+\section{Computations}
 \label{app:repro}
 
-All quantitative claims in this note are reproduced by a single
-self-contained Python notebook,
-\texttt{P6\_inter\_class\_ratio.ipynb} (also provided as
-\texttt{reproduce\_colab.py}), runnable end-to-end in Google Colab with no
-external data. The notebook:
+All numerical values in Sections~\ref{sec:conditional}, \ref{sec:main}
+and~\ref{sec:150000} are produced by the Python script
+\texttt{reproduce\_colab.py} distributed with this note, which needs no
+external data. The script:
 \begin{enumerate}[label=(\arabic*)]
-\item builds $\omega(n)$ for $n\le N$ via a smallest-prime-factor sieve;
-\item computes the class-sums $S_k(t;N)$ and $D_\zeta=\sum_kS_k$ with
-Kahan-compensated summation on a $t$-grid of spacing $2\pi/\log N$, and
-validates $D_\zeta(t;10^4)$ against a $50$-digit \texttt{mpmath}
-reference;
-\item forms $r(t;N)=X/E$ and stratifies its conditional mean
-$\bar r(q)$ by the quantile of $|D_\zeta|$, producing the monotone curve
-of Theorem~\ref{thm:main};
-\item evaluates $r$ and the local rank of $|D_\zeta|$ at $t=150000$,
-confirming Proposition~\ref{prop:150000};
-\item repeats for the random multiplicative control with fixed seeds
-$\{42,137,271,314,577\}$.
+\item builds $\omega(n)$ for $n\le N$ from a smallest-prime-factor sieve;
+\item computes the class-sums $S_k(t;N)$, $D_F=\sum_kS_k$, $E$ and
+$r=X/E$ in double precision at the sample points
+$t_j=10^5+2\pi j/\log N$, $0\le j<5498$, with $N=10^5$;
+\item sorts the sample by $|D_F|$, splits it into ten consecutive bands of
+$550$ or $549$ points and prints the band means of $r$ and of $E$, together with the
+statistics of $r$, $X$ and $E$ over the whole sample quoted in the text
+(Table~\ref{tab:rbar}, Observation~\ref{thm:main});
+\item evaluates $|D_\zeta|$, $E$ and $r$ at $t=150000$ for $N=10^5$ and
+$N=1.5\times10^5$, locates the minimum of $|D_\zeta|$ on $[149999,150001]$, and ranks
+the value $|D_\zeta(150000)|$ among those at the $184$ points of spacing
+$2\pi/\log N$ in $[149950,150050]$ (Remark~\ref{prop:150000});
+\item repeats steps (2)--(3) for the random multiplicative control with
+seeds $\{42,137,271,314,577\}$ and draws Figure~\ref{fig:rbar}.
 \end{enumerate}
-Default parameters ($N=10^5$, a finely sampled window) run in a few
-minutes on a free Colab instance; the $N=10^6$ configuration and the
-full $[10^5,2\times10^5]$ trough census are provided as optional cells
-with stated runtimes. Random seeds are fixed; every figure and table in
-the note is regenerated by the notebook.
-
-All numerical values reported in Section~\ref{sec:main} and
-Section~\ref{sec:150000} (Table~\ref{tab:rbar}, Figure~\ref{fig:rbar}, and
-Proposition~\ref{prop:150000}) are the verbatim output of this notebook at
-$N=10^5$; they are reproduced bit-for-bit from the fixed seeds and require
-no external data.
+The random seeds are fixed. The run takes between ten and thirty minutes on a
+desktop machine.
 
 \begin{thebibliography}{9}
-\bibitem{bgTitchmarsh} E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd ed., rev.\ D.~R.~Heath-Brown, Oxford Univ.\ Press, 1986.
-\bibitem{bgMV} H.~L.~Montgomery and R.~C.~Vaughan, \emph{Multiplicative Number Theory I: Classical Theory}, Cambridge Univ.\ Press, 2007.
-\bibitem{bgTenenbaum} G.~Tenenbaum, \emph{Introduction to Analytic and Probabilistic Number Theory}, 3rd ed., Grad.\ Stud.\ Math.\ \textbf{163}, AMS, 2015.
-\bibitem{bgSelberg46} A.~Selberg, \emph{Contributions to the theory of the Riemann zeta-function}, Arch.\ Math.\ Naturvid.\ \textbf{48} (1946), no.~5, 89--155.
+\bibitem{MV74} H.~L.~Montgomery and R.~C.~Vaughan, \emph{Hilbert's
+inequality}, J.~London Math.\ Soc.~(2) \textbf{8} (1974), 73--82.
+\bibitem{P02} D.~A.~Trejo Pizzo, \emph{The $\omega$-class decomposition
+of Dirichlet polynomials: elementary bounds and computations},
+Paper~02 of this series.
 \end{thebibliography}
 
 \end{document}
