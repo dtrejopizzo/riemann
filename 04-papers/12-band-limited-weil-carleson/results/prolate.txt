@@ -1,0 +1,5 @@
+c=5  1-lambda_max=6.476e-04  #{lambda>0.999}=1
+c=10  1-lambda_max=4.409e-08  #{lambda>0.999}=3
+c=20  1-lambda_max=-2.109e-14  #{lambda>0.999}=9
+c=40  1-lambda_max=-2.731e-14  #{lambda>0.999}=21
+Phi(r)=0 at r = 6.2898359888369

@@ -1,30 +1,23 @@
-# Paper 12 — The Band-Limited Weil–Carleson Form: a saturated positivity constant, its sine-kernel second order, and a five-language map of the Riemann wall
+# The Band-Limited Weil–Carleson Form: a numerically saturated generalized eigenvalue, sine-kernel structure of its spectrum, and a comparison of five reformulations
 
-For band-limited test functions of type $d$ the prime side of the explicit formula truncates
-exactly. Weil positivity then becomes a generalized-eigenvalue inequality $C_{\mathrm{band}}(d,T_0)\le1$
-for the prime Gram matrix relative to the archimedean Gram matrix. The paper studies this constant
-for ζ. To first order it is saturated, so arithmetic incoherence of $\{\log p\}$ gives no margin.
-At second order the subdominant spectrum is the sine-kernel Gram of the zeros. The paper
-identifies the form with the Connes–Consani prolate compression. Its closing map shows that five
-reformulations of the positivity all reduce to the same residual statement.
+The paper looks at Weil's explicit formula for ζ restricted to test functions of exponential type d. On that class the prime side is a finite sum. On a sinc basis at height T₀ it studies, numerically, the largest generalized eigenvalue C of the prime Gram matrix relative to the archimedean Gram matrix.
 
-## Main results
+## Results
 
-- `thm:saturation`: $C_{\mathrm{band}}=1$ exactly once $2d/\log T_0\gtrsim0.85$; sub-unit values only in
-  the prime-deficient regime, governed by archimedean density — NUMERICAL (verified on the
-  computational engine); consequence: no arithmetic margin — NO-GO for that lever.
-- `thm:sinekernel`: subdominant spectrum equals the sine-kernel determinantal Gram; an off-line
-  displacement gives $\lambda_{\min}=-c\delta^2+O(\delta^4)$, with $c\to0$ at Lehmer pairs —
-  ARGUED with NUMERICAL verification.
-- Identification with the Connes–Consani prolate compression ($c=Wd$); their archimedean
-  contraction $\lambda_{\max}(c)<1$ — CITED; the identification — PROVED.
-- `thm:wall`: in five languages the archimedean part is positive (provably in three) and the
-  prime part is not separately controllable — ARGUED (structural synthesis).
+- **Proved (Proposition 2.1):** for f the Fourier transform of a function of bounded variation supported in [−d, d] (a class containing the sinc basis), only n ≤ e^{2d} enter the prime side. The full identity includes the pole term 2 Re(f(i/2)·conj f(−i/2)), which in general has no sign.
+- **Numerical (Observation 3.1):** at T₀ = 1000 with a 29-dimensional sinc basis, C equals 1 to five digits at the two computed values d = 3 and d = 5 (2d/log T₀ = 0.87 and 1.45) and is below 1 at d = 1, 2, 2.5 (0.339, 0.785, 0.922 for d = 1, 2, 2.5). The archimedean Gram matrix is numerically positive definite in all cases computed. C is a diagnostic only: C ≤ 1 is neither implied by RH nor known to imply it.
+- **Numerical (Observation 4.1):** at d = 1.3, T₀ = 80 the spectrum has 27 eigenvalues of order one, one for each of the 27 zeros in the window (the smallest 1.2), followed by 0.5 and 0.04. The normalised zero Gram matrix agrees with the sine kernel to 7·10⁻².
+- **Numerical (Observation 5.1):** a table of eigenvalues of the prolate (sinc) kernel.
+- **Heuristic:** the analogy with the Connes–Consani prolate approach (Section 5) and the comparison of five reformulations (Section 6).
+
+## Known and new
+
+Weil's criterion, the explicit formula, the prolate eigenvalue facts (Slepian–Pollak) and the Connes–Consani archimedean positivity are known results. What is new is the band-limited generalized-eigenvalue diagnostic and the numerical observations about it.
 
 ## Files
 
-- `main.tex`, `main.pdf` — source and compiled paper.
-
-## Relation to other papers
-
-Consolidates Papers 07–11; Paper 14 extends the map to eight paradigms.
+- [main.tex](main.tex): LaTeX source
+- [band-limited-weil-carleson.pdf](band-limited-weil-carleson.pdf): compiled paper (6 pages)
+- [carleson_engine.py](carleson_engine.py): computes C(d, T₀) (Observation 3.1), including the archimedean tails beyond the quadrature window; output in [results/carleson_engine.txt](results/carleson_engine.txt)
+- [sinekernel.py](sinekernel.py): spectrum at d = 1.3, T₀ = 80 and the comparison with the sine kernel (Observation 4.1); output in [results/sinekernel.txt](results/sinekernel.txt)
+- [prolate.py](prolate.py): prolate eigenvalue table and the zero of Φ (Observation 5.1); output in [results/prolate.txt](results/prolate.txt)
