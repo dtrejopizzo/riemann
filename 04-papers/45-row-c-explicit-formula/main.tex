@@ -66,7 +66,7 @@ Weil's criterion for real $F$ with $\Phi_F(0)=\Phi_F(1)=0$ (Yoshida;
 Connes--Consani): if $\xi$ has a zero off the critical line, there are such
 $F$, even and odd, with $T_{\lim}(\Gamma_F\star\Gamma_F^\dagger)>0$; this
 gives no information on the zeros.  The form
-$(F,G)\mapsto T(F\star G^\dagger)$ is nondegenerate on the functions
+$(F,G)\mapsto T_S(F\star G^\dagger)$ is nondegenerate on the functions
 $\Gamma_h$ for finite $S$; in the limit its radical consists of the
 $\Gamma_h$ with $\Phi_h$ vanishing at $0$, $1$ and the zeros of $\xi$, and
 is zero, the distinct zeros being too numerous.
@@ -107,7 +107,7 @@ $I^{(c)}_S(F,G)=T^{(c)}_S(F\star G^\dagger)$ is Hermitian and nondegenerate,
 and the two Tate functionals
 $\lambda_\mp(F)=\int_{\CS}F(u)|u|_S^{\mp1/2}\,d^*u$ (the Tate characters
 of \cite[Theorem~5.11]{P43}) define a homomorphism
-$M=(\lambda_-,\lambda_+)$ of $\DA(S)$ onto $\C^2$, which carries the
+$M=(\lambda_-,\lambda_+)$ of $\DA(S)$ onto $\C^2$; on $\C^2$ we use the
 Hermitian form $\beta_T(z,w)=z_-\overline{w_+}+z_+\overline{w_-}$.  When $S$
 increases, the functionals $T^{(c)}_S$ stabilize on every element, and
 define a functional $T^{(c)}_{\lim}$ and a form $I^{(c)}_{\lim}$ on the
@@ -1025,7 +1025,8 @@ the number $I_S(\Gamma_F,\Gamma_G)$ is equal to the right-hand side of
 \end{theorem}
 
 \begin{proof}
-(i) By \eqref{eq:radialtracelim} and \eqref{eq:symbolclosed},
+(i) By \eqref{eq:radialtracelim}, the second form of \eqref{eq:Winfkernel}
+and \eqref{eq:symbolclosed},
 \[
   \Tl(\Gamma_h)=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
      \bigl[h(\log n)+h(-\log n)\bigr]
@@ -1034,8 +1035,7 @@ the number $I_S(\Gamma_F,\Gamma_G)$ is equal to the right-hand side of
 \]
 The bracket is even in $\tau$, so $\hat h(-\tau)$ may be replaced by
 $\hat h(\tau)$.  The sum extends over $n<e^{r}$ if $\supp h\subseteq[-r,r]$.
-Here $W_\infty(\Gamma_h)$ has been written in the second form of
-\eqref{eq:Winfkernel}.  Comparing with \eqref{eq:EFh} gives
+Comparing with \eqref{eq:EFh} gives
 \eqref{eq:comparisonh}.
 
 (ii) By \eqref{eq:radalg},
@@ -1411,8 +1411,9 @@ $F\in C_c^\infty(\R)$.
 \end{theorem}
 
 As recalled in the introduction, this is a form of Weil's criterion
-\cite{Weil1952} contained in the results of Yoshida \cite{Yoshida} and of
-Connes and Consani \cite[Proposition~C.1]{CCWeilArch}.
+\cite{Weil1952} which follows the results of Yoshida \cite{Yoshida} and of
+Connes and Consani \cite[Proposition~C.1]{CCWeilArch}; the points in which
+it differs from them are listed there.
 
 \begin{proof}
 The argument follows the method of \cite[Lemma~1 and Proposition~1]{Yoshida}
@@ -1559,20 +1560,29 @@ Theorem~\ref{thm:sufficiency} derives a property of the form $\Il$ from a
 hypothesis on the zeros of $\xi$, and gives no information on their
 location.  The functions $F_\pm$ cannot have small support.  Indeed, let
 $F\in C_c^\infty(\R)$ be primitive with $h:=F\star F^\dagger$ vanishing
-outside $(-\log2,\log2)$.  Then the sum over $n$ in
-\eqref{eq:radialtracelim} is empty, so that
+outside $(-\log2,\log2)$.  Then every term of the sum over $n$ in
+\eqref{eq:radialtracelim} vanishes, so that
 $\Il(\Gamma_F,\Gamma_F)=W_\infty(\Gamma_h)$, and this number is $\le0$: this
 is Weil's inequality at the archimedean place, in the terminology of
 \cite[Introduction]{CCWeilArch}.  It follows from
 \cite[Theorem~1]{Yoshida}, where it is shown, by a computation which is in
 part numerical, that
 $\sum_\rho\Phi_F(\rho)\overline{\Phi_F(1-\bar\rho)}>0$ for every nonzero
-smooth $F$ with support in an interval of length $\log2$, primitive or not;
-the support of a function $F$ as above lies in such an interval, because
-the convex hull of the support of $F\star F^\dagger$ is the difference set
-of that of the support of $F$.  See
-\cite[Section~5, after Convention~5.5]{P43} for the comparison of
-$W_\infty$ with the distribution used there; see also the remark after
+smooth $F$ with support in $[-\tfrac12\log2,\tfrac12\log2]$, primitive or
+not.  By Lemma~\ref{lem:testfn}(iii) this sum depends only on
+$F\star F^\dagger$, which is unchanged when $F$ is replaced by a translate
+$t\mapsto F(t+\tau)$; so the same holds when the support of $F$ lies in any
+interval of length $\log2$.  The support of a function $F$ as above lies in
+such an interval: if $[\alpha,\beta]$ is the convex hull of the support of
+$F$, then by the theorem of supports \cite[Theorem~4.3.3]{Hormander} the
+convex hull of the support of $F\star F^\dagger$ is
+$[\alpha-\beta,\beta-\alpha]$, so that $\beta-\alpha<\log2$.  Since $F$ is
+primitive, \eqref{eq:comparison} gives
+$\Il(\Gamma_F,\Gamma_F)=-\sum_\rho\Phi_F(\rho)\overline{\Phi_F(1-\bar\rho)}$,
+which is therefore $<0$ for $F\ne0$.  In \cite{CCWeilArch} the inequality is
+written $W_\infty(f)\ge0$ with $W_\infty:=-W_\R$; the functional $W_\infty$
+of the present paper is that distribution $W_\R$, see
+\cite[Section~5, after Convention~5.5]{P43}; see also the remark after
 \cite[Theorem~6.18]{P43}.  For positivity under support conditions see also
 \cite{Bombieri,BurnolCR}.  Hence, for the functions of
 Theorem~\ref{thm:sufficiency}, the support of $F_\pm\star F_\pm^\dagger$ is
@@ -1831,15 +1841,16 @@ large $X$.  So $h=0$.
 For $c=0$ the proof uses only that the number of distinct zeros of $\xi$
 with $0<\Iml\rho\le X$ is not $O(X)$.  We have deduced this from the theorem
 of Heath-Brown; it also follows from a weaker classical input, the theorem
-of Littlewood that there is a constant $A$ such that for every sufficiently
-large $T$ there is a zero $\rho$ with $|\Iml\rho-T|<A/\log\log\log T$
-\cite[\S9.12]{TitchmarshZeta}, which gives at least a constant times
+of Littlewood that there is a constant $B$ such that for every sufficiently
+large $T$ there is a zero $\rho$ with $|\Iml\rho-T|<B/\log\log\log T$
+\cite[Theorem~9.12]{TitchmarshZeta}, which gives at least a constant times
 $X\log\log\log X$ distinct zeros with $0<\Iml\rho\le X$.  The statement that
 an entire function of exponential type which vanishes at all zeros of $\xi$
 is identically zero is proved in this way in \cite[Lemma~2.1]{Suzuki}, and
 the same counting argument is in the proof of \cite[Theorem~2]{Yoshida},
 where the count of the distinct zeros is taken from a theorem of Siegel.
-The statement also follows, without any information on the zeros, from a
+For the functions $\Phi_h$, $h\in C_c^\infty(\R)$, which are the ones needed
+here, the statement also follows, without any count of the zeros, from a
 theorem of Yoshida: for every $a>0$ the Hermitian form
 $(h,g)\mapsto\sum_\rho\Phi_h(\rho)\overline{\Phi_g(1-\bar\rho)}$ is
 nondegenerate on the smooth functions with support in $[-a,a]$, hence on
@@ -1901,6 +1912,10 @@ H.~L.~Montgomery, Graduate Texts in Mathematics \textbf{74}, Springer, New York,
 D.~R.~Heath-Brown, \emph{Simple zeros of the Riemann zeta-function on the
 critical line}, Bull. London Math. Soc. \textbf{11} (1979), 17--18.
 
+\bibitem{Hormander}
+L.~H\"ormander, \emph{The Analysis of Linear Partial Differential Operators
+I}, 2nd ed., Springer, Berlin, 1990.
+
 \bibitem{MeyerIdele}
 R.~Meyer, \emph{On a representation of the idele class group related to
 primes and zeros of $L$-functions}, Duke Math. J. \textbf{127} (2005),
@@ -1909,14 +1924,6 @@ primes and zeros of $L$-functions}, Duke Math. J. \textbf{127} (2005),
 \bibitem{NIST} F.~W.~J.~Olver, D.~W.~Lozier, R.~F.~Boisvert and C.~W.~Clark
 (eds.), \emph{NIST Handbook of Mathematical Functions},
 Cambridge University Press, Cambridge, 2010.
-
-\bibitem{P43} D.~A.~Trejo Pizzo,
-\emph{A correspondence algebra and the Weil distribution on semilocal idele
-class groups}, preprint.
-
-\bibitem{P44} D.~A.~Trejo Pizzo,
-\emph{An arithmetic Frobenius family on semilocal idele class groups},
-preprint.
 
 \bibitem{Suzuki}
 M.~Suzuki, \emph{Aspects of the screw function corresponding to the Riemann
@@ -1929,6 +1936,14 @@ Press, Oxford, 1939.
 \bibitem{TitchmarshZeta}
 E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-function}, 2nd ed.,
 revised by D.~R.~Heath-Brown, Oxford University Press, Oxford, 1986.
+
+\bibitem{P43} D.~A.~Trejo Pizzo,
+\emph{A correspondence algebra and the Weil distribution on semilocal idele
+class groups}, preprint.
+
+\bibitem{P44} D.~A.~Trejo Pizzo,
+\emph{An arithmetic Frobenius family on semilocal idele class groups},
+preprint.
 
 \bibitem{Weil1952} A.~Weil,
 \emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},

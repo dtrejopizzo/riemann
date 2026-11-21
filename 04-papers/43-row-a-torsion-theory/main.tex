@@ -61,23 +61,24 @@ excision, Weil distribution, explicit formula, Tate characters}
 Let $S$ be a finite set of places of $\Q$ containing $\infty$ and a prime,
 and $C_S$ the quotient of the semilocal idele group by the positive
 $S$-units, a twofold cover of the $S$-idele class group of Connes and Meyer.
-For the graph bimodules of idele classes over a crossed product we compute
-each lattice part of the Hochschild complex up to homotopy: an exterior
-algebra on $|S_f|$ generators unless the twist is trivial at the real place,
-where two copies of a Koszul complex of the lattice, not computed here, are
-added.
-A twisted excision theorem is proved; an appendix treats the analogous
+For the graph bimodules of idele classes over a crossed product by the
+positive $S$-units, the Hochschild complex splits according to the elements
+of that group.  We determine each summand up to homotopy: it is an exterior
+algebra on $|S_f|$ generators, to which two copies of a Koszul complex of the
+group are added when the twist is trivial at the real place; the homology of
+this Koszul complex is not computed.  The proof uses a twisted form of
+excision in Hochschild homology.  An appendix treats the analogous
 composition and involution for graphs of automorphisms of a curve.
 
 In an independent part we study on $C_c^{\infty}(C_S)$ the functional $T$,
 the sum over $S$ of Weil's local terms in Connes's form plus a free constant
-$c$ at the identity.  The Fourier transform of the sum of the local terms has an explicit supremum
-$m$ and,
-on the principal component, simple poles including $\pm i/2$.  The form
+$c$ at the identity.  The Fourier transform of the sum of the local terms has
+an explicit supremum $m$ and, on the principal component, simple poles including $\pm i/2$.  The form
 $T(F\star G^{\dagger})$ is nondegenerate, has infinite positive index if and
-only if $c>-m$, and has no continuous extension to the two eigenvectors of
-$|w|_S^{\mp1/2}$ in a completion, in which the cone of non-negative functions
-remains proper.  On a Banach completion we define a determinant
+only if $c>-m$, and does not extend continuously to a completion containing
+two eigenvectors of the convolution action, with eigencharacters
+$F\mapsto\int F\,|w|_S^{\mp1/2}$; the closure of the cone of non-negative
+functions in this completion is proper.  On a Banach completion we define a determinant
 relative to $T$ and a Riemann--Roch pairing.  In the limit over $S$ the form
 on slowly varying radial approximations tends to $1$.
 \end{abstract}
@@ -97,7 +98,9 @@ of a part in this plane, recorded by its bidegree, and a primitive part.
 This paper studies two constructions on a semilocal adelic space which have
 the same formal shape: bimodules which compose as graphs of dilations do, and
 a Hermitian form on a convolution algebra together with two characters of
-that algebra.  The first is new.  The second is built on a known object, the
+that algebra.  The first starts from the classical bimodule attached to an
+automorphism of an algebra; what is new is the computation of the Hochschild
+complexes of these bimodules in Section~\ref{sec:shadow}.  The second is built on a known object, the
 Weil distribution, and we say below what is classical in it.  The definitions
 of the composition $\star$ and of the involution $\dagger$ in
 Section~\ref{sec:cat} are modelled on the convolution of kernels on
@@ -140,7 +143,8 @@ a crossed product by $\Gamma_S$.  Sections~\ref{sec:trace}--\ref{sec:charts}
 and Appendix~\ref{app:mertens} concern a linear functional $T$ on $D_A$ and
 use only the group $C_S$ and its Haar measure.  The only point of contact is
 Proposition~\ref{prop:haarrank}: for a unit $x\in1+q_p\Z_p$, $x\ne1$, where
-$q_p=p$ for odd $p$ and $q_2=4$, the local density of $T$ at $x$ is
+$q_p=p$ for odd $p$ and $q_2=4$, the density $|1-x|_p^{-1}$ of the local term
+of $T$ at $p$, defined below, is
 $(1-p^{-1})^{-1}$ times the dimension of the space of coinvariants of the
 dilation by $x$ on the functions on a valuation shell
 (Lemma~\ref{lem:coinv}).  This space is not a Hochschild homology group, and
@@ -199,7 +203,7 @@ $\gamma w_p=1$.  Then it is homotopy equivalent to
 \]
 where $\mathcal K$ is the Koszul complex of the commuting operators
 $\alpha_p-1$, $p\in S_f$, on the function algebra
-$E_{\R}\widehat\otimes\bigotimes_{p\in Z}E_p$, $\alpha_p$ being the dilation
+$E_{\R}\widehat\otimes\widehat\bigotimes_{p\in Z}E_p$, $\alpha_p$ being the dilation
 by $p$.
 \end{enumerate}
 \end{theorem}
@@ -207,8 +211,8 @@ by $p$.
 We do not compute the homology of the Koszul complexes $\mathcal K$, and the
 homotopy equivalences are constructed for one lattice label at a time.  The
 local ingredients are the twisted Hochschild complexes of the local function
-algebras: at a finite place the complex is homotopy equivalent to one class in
-degree zero for every dilation other than the identity, and at the real place
+algebras: at a finite place the complex is homotopy equivalent to $\C$ in
+degree zero, spanned by one class, for every dilation other than the identity, and at the real place
 it is contractible for every dilation other than the identity
 (Theorem~\ref{thm:shadow}(c)).  The places are assembled by a K\"unneth
 theorem (Theorem~\ref{thm:kunneth}) and by a twisted form of excision in
@@ -231,9 +235,9 @@ T(F)=\sum_{v\in S}W_v(F)+c\,F(1),
 \]
 where $W_v(F)$ is a regularization at $x=1$ of the integral of
 $(F\circ j_v)\,\varrho_v$ over $\Q_v^{\times}$ and $c$ is a real constant
-(Definition~\ref{def:trace}); in the body of the paper we call $T$ the
-trace and the Fourier transform $\widehat T$ of $\sum_vW_v$, which is that
-of $T$ when $c=0$, its symbol.  For $c=0$ this is the sum over $v\in S$ of the
+(Definition~\ref{def:trace}); in the body of the paper $T$ is called the
+trace, and the Fourier transform $\widehat T$ of $\sum_vW_v$ its symbol; the
+Fourier transform of $T$ itself is $\widehat T+c$.  For $c=0$ this is the sum over $v\in S$ of the
 local terms of Weil's explicit formula \cite{Weil1952}, with Weil's
 principal values, in the form
 $\mathrm{Pfw}\!\int f(u)\,|u|^{1/2}|1-u|^{-1}d^{*}u$ of
@@ -255,7 +259,8 @@ $(\kappa_q)_{q\in S_f}$ of characters of finite order of the groups
 $\Z_q^{\times}$; the coordinate on each component is $\tau$, with
 $\chi(w)=\sgn(w_{\infty})^{\varepsilon}|w_{\infty}|^{i\tau}\prod_q\kappa_q(w_q)$.
 The principal component is the one with $\varepsilon=0$ and all $\kappa_q$
-trivial.  We write $\cond(\kappa)$ for the conductor exponent of $\kappa$.
+trivial.  We write $\cond(\kappa_p)=\cond_p(\kappa_p)$ for the conductor exponent of
+$\kappa_p$.
 
 \begin{theorem}[Theorems~\ref{thm:symbol} and \ref{thm:ML}]\label{thm:introB}
 For every $H\in D_A$,
@@ -392,7 +397,9 @@ $|I_A(F_{\alpha},G_{\beta})|\le\lVert F_{\alpha}\rVert_{L^{1}}
 and $(G_n)=(F_n^{\dagger})$ of \eqref{eq:spread} are $N$-bounded admissible
 approximations of $e_+$ and of $e_-$, with $J(F_n)\to\bar e_+$,
 $J(G_n)\to\bar e_-$ and
-$|I_A(F_n,G_k)|\le C_1e^{-na/2}k^{-2}e^{-ka/2}$ for all $n,k\ge1$.
+$|I_A(F_n,G_k)|\le C_1e^{-na/2}k^{-2}e^{-ka/2}$ for all $n,k\ge1$, where
+$[a,b]\subset(0,\infty)$ contains the support of the profile $\vartheta$ in
+\eqref{eq:spread} and $C_1$ is the constant of \eqref{eq:supFhat}.
 \item[(iii)] For every $p\in S_f$ there are admissible approximations
 $(\Phi_n)$ of $e_+$, with $(\Phi_n^{\dagger})$ admissible for $e_-$, such that
 $I_A(\Phi_n,\Phi_n^{\dagger})\ge\tfrac12\log p$ for all $n$, and others such
@@ -480,7 +487,8 @@ $\ell\in S'_f\setminus S_f$ and exponents $k\ne0$ for which $\ell^{k}$ is a
 value of the modulus on the support of $F$ (Theorem~\ref{thm:chartcomp}).
 Hence $T$ stabilizes, and defines a functional $T_{\lim}$ and a Hermitian
 form $I_{\lim}$ on the union of the algebras $D_A(S)$
-(Theorem~\ref{thm:colimtrace}).  No explicit formula is used in this
+(Theorem~\ref{thm:colimtrace}).  The explicit formula itself, that is, the
+identity between these local terms and a sum over zeros, is not used in this
 paper; Mertens' theorem is used only in Appendix~\ref{app:mertens}.
 
 \subsection*{Graphs of automorphisms of a curve}
@@ -611,7 +619,7 @@ $\beta_a\beta_b=\beta_{ab}$.
 
 The coefficient algebra is the completed projective tensor product
 \begin{equation}\label{eq:coeff}
-E_P:=E_{\R}\,\widehat\otimes\,\bigotimes_{p\in S_f}E_p ,
+E_P:=E_{\R}\,\widehat\otimes\,\widehat\bigotimes_{p\in S_f}E_p ,
 \end{equation}
 a Fr\'echet algebra on which $A_S^{\times}$ acts by the automorphisms
 $\beta_a$; its topology is defined by the projective tensor products
@@ -717,7 +725,14 @@ $|v_p(\gamma)|$ in absolute value, of $v_{l,N}$-size at most
 $|v_p(\gamma)|\,p^{l|v_p(\gamma)|}\le H(\gamma)^{l+1}$.  At the real place
 $\alpha_{\gamma}$ translates $t$ by $\log\gamma$, and
 $p_{l,m}(\alpha_{\gamma}f)\le e^{l|\log\gamma|}p_{l,m}(f)\le
-H(\gamma)^{l}p_{l,m}(f)$.
+H(\gamma)^{l}p_{l,m}(f)$.  On $E_P$ the automorphism $\alpha_{\gamma}$ is the
+completed tensor product of its local actions, and a projective tensor
+product of seminorms $\nu_v$ satisfies
+$(\bigotimes_v\nu_v)(\alpha_{\gamma}e)\le\prod_vC_vH(\gamma)^{M_v}\,
+(\bigotimes_v\nu'_v)(e)$ when each factor satisfies
+$\nu_v(\alpha_{\gamma}f)\le C_vH(\gamma)^{M_v}\nu'_v(f)$; moreover
+$\alpha_{\gamma}$ fixes $1$.  So the actions on $E_P$ and on $E_P\oplus\C1$
+are tempered.
 
 The \emph{source algebra} is
 \begin{equation}\label{eq:source}
@@ -827,9 +842,9 @@ $1+q^{0}\Z_q:=\Z_q^{\times}$; these are open subgroups of the compact part of
 $C_S$ and form a neighbourhood basis of $1$ in $\prod_q\Z_q^{\times}$.
 
 \begin{definition}\label{def:DA}
-$\DA:=C_c^{\infty}(C_S)$ is the space of functions on $C_S$ which are smooth
-in the $\R^{\times}$ coordinate, locally constant in the
-$\prod_p\Z_p^{\times}$ coordinates, and compactly supported.  It carries the
+$\DA:=C_c^{\infty}(C_S)$ is the space of compactly supported functions on
+$C_S$ which are invariant under $\Theta_n$ for some $n\ge0$ and smooth in
+the $\R^{\times}$ coordinate.  It carries the
 strict inductive limit topology of the Fr\'echet spaces of functions supported
 in a fixed compact set and invariant under a fixed $\Theta_n$; this topology
 is of type LF.  We equip $\DA$ with the convolution
@@ -848,7 +863,7 @@ and $(F\star G)^{\dagger}=F^{\dagger}\star G^{\dagger}$ follows from the
 invariance of Haar measure under inversion.  Each step is a closed subspace of
 the later ones with the induced topology, and countably many steps suffice.
 By the Dieudonn\'e--Schwartz theorem on strict inductive limits
-\cite[Ch.~II, \S6]{Schaefer}, a bounded subset of $\DA$ lies in a single step: there are a compact
+\cite[Ch.~II, 6.5]{Schaefer}, a bounded subset of $\DA$ lies in a single step: there are a compact
 $K\subseteq C_S$ and an integer $n\ge0$ such that all its members are supported
 in $K$, are invariant under $\Theta_n$, and have uniformly bounded step
 seminorms.
@@ -856,7 +871,7 @@ seminorms.
 Let $\epsilon$ be the class \eqref{eq:epsclass} of $-1$, let
 $\varpi:C_S\to C_S/\{1,\epsilon\}=A_S^{\times}/\Z_S^{\times}$ be the
 quotient map, and for a function $F$ on $C_S$ put
-$(\epsilon^{*}F)(w):=F(\epsilon w)$.  Every continuous character of
+$(\epsilon^{*}F)(w):=F(\epsilon w)$.  Every continuous unitary character of
 $C_S\cong\R^{\times}\times\prod_q\Z_q^{\times}$ has the form
 $\chi(w)=\sgn(w_{\infty})^{\varepsilon}|w_{\infty}|^{i\tau}
 \prod_{q\in S_f}\kappa_q(w_q)$ with $\varepsilon\in\{0,1\}$, $\tau\in\R$ and
@@ -877,7 +892,7 @@ ideals stable under $\dagger$, and $\DA^{+}\star\DA^{-}=0$.
 $\dagger$-algebras from $C_c^{\infty}(A_S^{\times}/\Z_S^{\times})$, with the
 convolution defined by the Haar measure $\varpi_{*}(\dstar w)$, onto
 $\DA^{+}$.
-\item[(d)] For every continuous character $\chi$ of $C_S$ one has
+\item[(d)] For every continuous unitary character $\chi$ of $C_S$ one has
 $\chi(\epsilon)=(-1)^{\varepsilon}\prod_{q\in S_f}\kappa_q(-1)\in\{\pm1\}$
 and
 \[
@@ -1084,7 +1099,8 @@ second identity is the definition of $F^{\dagger}$.
 \end{proof}
 
 Thus the smeared objects, with these operations, are the convolution algebra
-$\DA$ in another notation; from Section~\ref{sec:trace} on only $\DA$ is
+$\DA$ in another notation; we call $\DA$, regarded in this way, the
+\emph{correspondence algebra}; from Section~\ref{sec:trace} on only $\DA$ is
 used.  The corollary rests on the fact that $\sigma$ is a homomorphism:
 
 \begin{remark}\label{rem:types}
@@ -1173,7 +1189,7 @@ Theorem~\ref{thm:shadow}(c)--(e).  The homology of the complexes
 $\mathcal K_{\Gamma}(\alpha;E_{Z\cup\{\infty\}})$ is the homology of $\Gamma_S$
 with coefficients in $E_{Z\cup\{\infty\}}$; the corresponding statement for
 $\mathcal S(\mathbb A_K)$ is the vanishing theorem of
-\cite{MeyerIdele,MeyerCrossed}.
+\cite[Corollary~4.17 and Theorem~5.1]{MeyerIdele}, \cite{MeyerCrossed}.
 
 \subsection{Conventions and homotopy lemmas}
 
@@ -1751,34 +1767,34 @@ V\subseteq S$.
 \end{theorem}
 
 \begin{proof}
-We argue by induction on $|V|$, the case $|V|=1$ being empty.  Let $|V|\ge2$,
+We argue by induction on $|V|$, the case $|V|=1$ being trivial.  Let $|V|\ge2$,
 fix $v\in V$, and put $I:=E_v$, $J:=E_{V\setminus\{v\}}$,
 $\rho':=\bigotimes_{u\ne v}\rho_u$, $K:=I\widehat\otimes J=E_V$.  Let
 $I^{+}=\C1\oplus I$, $J^{+}=\C1\oplus J$ and
 \[
-T:=I^{+}\widehat\otimes J^{+}=\C\oplus I\oplus J\oplus K ,
+\mathcal T:=I^{+}\widehat\otimes J^{+}=\C\oplus I\oplus J\oplus K ,
 \]
 with $\rho$ extended unitally.  Call the \emph{support} of a letter in
 $\C,I,J,K$ the set $\emptyset,\{1\},\{2\},\{1,2\}$, and the support of a word
 the union of the supports of its letters.  A product of letters has support the
 union of their supports or vanishes, and $\rho$ preserves the four summands;
-so $C(T,T_{\rho})$ is the direct sum of its subcomplexes of given support.
+so $C(\mathcal T,\mathcal T_{\rho})$ is the direct sum of its subcomplexes of given support.
 
-\emph{Step 1.}  Grade $I^{+}$, $J^{+}$ and $T$ by the monoid of subsets of
+\emph{Step 1.}  Grade $I^{+}$, $J^{+}$ and $\mathcal T$ by the monoid of subsets of
 $\{1,2\}$ under union, through the supports.  The total complex $P$ of
 $\mathrm{Bar}(I^{+})\widehat\otimes\mathrm{Bar}(J^{+})$ has the terms
 $\mathrm{Bar}_p(I^{+})\widehat\otimes\mathrm{Bar}_q(J^{+})\cong
-T\widehat\otimes\bigl((I^{+})^{\widehat\otimes p}\widehat\otimes
-(J^{+})^{\widehat\otimes q}\bigr)\widehat\otimes T$, which are free
-$T$-bimodules, and by Lemma~\ref{lem:tensor} it is contractible when augmented
-to $I^{+}\widehat\otimes J^{+}=T$.  Its differential, augmentation and
-contraction are graded.  Since $T_{\rho}=I^{+}_{\rho_v}\widehat\otimes
-J^{+}_{\rho'}$ as a bimodule, $(T_{\rho})_{\natural}(P)$ is the total complex
+\mathcal T\widehat\otimes\bigl((I^{+})^{\widehat\otimes p}\widehat\otimes
+(J^{+})^{\widehat\otimes q}\bigr)\widehat\otimes \mathcal T$, which are free
+$\mathcal T$-bimodules, and by Lemma~\ref{lem:tensor} it is contractible when augmented
+to $I^{+}\widehat\otimes J^{+}=\mathcal T$.  Its differential, augmentation and
+contraction are graded.  Since $\mathcal T_{\rho}=I^{+}_{\rho_v}\widehat\otimes
+J^{+}_{\rho'}$ as a bimodule, $(\mathcal T_{\rho})_{\natural}(P)$ is the total complex
 of $C(I^{+},I^{+}_{\rho_v})\widehat\otimes C(J^{+},J^{+}_{\rho'})$.
-Lemma~\ref{lem:compare}, applied to $\mathrm{Bar}(T)$ and $P$, gives a graded
+Lemma~\ref{lem:compare}, applied to $\mathrm{Bar}(\mathcal T)$ and $P$, gives a graded
 homotopy equivalence
 \[
-C(T,T_{\rho})\ \simeq\ \mathrm{Tot}\bigl(C(I^{+},I^{+}_{\rho_v})\widehat\otimes
+C(\mathcal T,\mathcal T_{\rho})\ \simeq\ \mathrm{Tot}\bigl(C(I^{+},I^{+}_{\rho_v})\widehat\otimes
 C(J^{+},J^{+}_{\rho'})\bigr).
 \]
 A pair of words has support $\{1,2\}$ if and only if its two components lie in
@@ -1786,21 +1802,21 @@ $C^{+}(I^{+},I^{+}_{\rho_v})$ and $C^{+}(J^{+},J^{+}_{\rho'})$, in the
 notation of Theorem~\ref{thm:B2}.  Hence, by Theorem~\ref{thm:B2} and the right
 splittings of Lemma~\ref{lem:hunital}(i),
 \[
-C(T,T_{\rho})^{(12)}\ \simeq\ \mathrm{Tot}\bigl(C^{+}(I^{+})\widehat\otimes
+C(\mathcal T,\mathcal T_{\rho})^{(12)}\ \simeq\ \mathrm{Tot}\bigl(C^{+}(I^{+})\widehat\otimes
 C^{+}(J^{+})\bigr)\ \simeq\ \mathrm{Tot}\bigl(C(I,I_{\rho_v})\widehat\otimes
 C(J,J_{\rho'})\bigr),
 \]
-where $C(T,T_{\rho})^{(12)}$ is the part of support $\{1,2\}$.
+where $C(\mathcal T,\mathcal T_{\rho})^{(12)}$ is the part of support $\{1,2\}$.
 
-\emph{Step 2.}  The inclusion $C(K,K_{\rho})\to C(T,T_{\rho})^{(12)}$ is a
-homotopy equivalence.  Indeed, $K$ is a closed ideal of $T$ with topological
-complement $\C\oplus I\oplus J\ni1$, and its right splitting is $T$-linear on
+\emph{Step 2.}  The inclusion $C(K,K_{\rho})\to C(\mathcal T,\mathcal T_{\rho})^{(12)}$ is a
+homotopy equivalence.  Indeed, $K$ is a closed ideal of $\mathcal T$ with topological
+complement $\C\oplus I\oplus J\ni1$, and its right splitting is $\mathcal T$-linear on
 the right by Lemma~\ref{lem:hunital}.  By Theorem~\ref{thm:excision-input},
-$C(K,K_{\rho})\to\mathcal D(T,K)$ is a homotopy equivalence.  The complex
-$\mathcal D(T,K)$ is spanned by the words with a letter in $K$, so it is a
-graded-split subcomplex of $C(T,T_{\rho})^{(12)}$, and the quotient is the
+$C(K,K_{\rho})\to\mathcal D(\mathcal T,K)$ is a homotopy equivalence.  The complex
+$\mathcal D(\mathcal T,K)$ is spanned by the words with a letter in $K$, so it is a
+graded-split subcomplex of $C(\mathcal T,\mathcal T_{\rho})^{(12)}$, and the quotient is the
 support-$\{1,2\}$ part $C(Q',Q'_{\rho})^{(12)}$ of the complex of
-$Q':=T/K=\C\oplus I\oplus J$, in which $IJ=JI=0$.  By
+$Q':=\mathcal T/K=\C\oplus I\oplus J$, in which $IJ=JI=0$.  By
 Lemma~\ref{lem:split}(a) it remains to show that
 $C(Q',Q'_{\rho})^{(12)}$ is contractible.
 
@@ -2081,7 +2097,7 @@ number of characters of $\Z_p^{\times}$ trivial on $H_u$ is the index of $H_u$
 if this is finite and is infinite otherwise.
 \end{proof}
 
-\subsection{The shadow of a graph bimodule}
+\subsection{The crossed product decomposition}
 
 The decomposition of the Hochschild complex of a crossed product over the
 group elements is classical in the algebraic setting; see Nistor
@@ -2151,7 +2167,7 @@ e_I\otimes x\longmapsto\sum_{r}(-1)^{r-1}e_{I\setminus i_r}\otimes
 plus $(-1)^{|I|}$ times the differential of $W$.
 
 \begin{proposition}\label{prop:crossed}
-Let $A$ be a unital complete Fr\'echet algebra with an action $\alpha$ of
+Let $A$ be a unital Fr\'echet algebra with an action $\alpha$ of
 $\Gamma$ which is tempered with respect to $H$, let
 $B=A\rtimes_{\mathrm{rapid}}\Gamma$, and let $\beta$ be a continuous
 automorphism of $B$ with $\beta(A)=A$ and $\beta(U_{\gamma})=U_{\gamma}$ for
@@ -2329,7 +2345,7 @@ $\mathcal K_{\Gamma}(\alpha;C(A,{}_{1}A_{\alpha_{\gamma}\beta}))$ onto this
 complex.
 \end{proof}
 
-\subsection{Trivial twists}
+\subsection{Trivial twists and the shadow of a graph bimodule}
 
 For $a\in A_S^{\times}$ we write $(E_P^{u})_{a}$ for $E_P^{u}:=E_P\oplus\C1$
 twisted by the dilation $\beta_a$, and $(E_v)_{x}$ for the local algebra $E_v$
@@ -2388,6 +2404,8 @@ W_r=\mathrm{Tot}\,\widehat\bigotimes_{v\in V}C\bigl(E_v,(E_v)_{\rho_v}\bigr),
 \qquad r=3(|V|-1),
 \]
 on each of which every $\varsigma\in\mathfrak S$ acts by a chain automorphism,
+the actions of two elements of $\mathfrak S$ which commute on $E_V$ commuting
+on every $W_i$,
 on $W_0$ and $W_r$ by its action on all letters, and for every $1\le i\le r$ a
 chain map $W_{i-1}\to W_i$ or $W_i\to W_{i-1}$ which is a homotopy equivalence
 and commutes with $\mathfrak S$.  For $V=S$ the inclusion
@@ -2399,10 +2417,10 @@ equivalence which commutes with $\mathfrak S$.
 \begin{proof}
 The last assertion is Theorem~\ref{thm:B2}; an inclusion commutes with
 $\mathfrak S$.  For the first we argue by induction on $|V|$; if $|V|=1$ then
-$r=0$.  Let $|V|\ge2$, and let $v$, $I$, $J$, $K=E_V$, $T$, $\rho'$ be as in
+$r=0$.  Let $|V|\ge2$, and let $v$, $I$, $J$, $K=E_V$, $\mathcal T$, $\rho'$ be as in
 the proof of Theorem~\ref{thm:kunneth}.  Consider
 \[
-C(K,K_{\rho})\longrightarrow C(T,T_{\rho})^{(12)}
+C(K,K_{\rho})\longrightarrow C(\mathcal T,\mathcal T_{\rho})^{(12)}
 \longrightarrow\mathrm{Tot}\bigl(C^{+}(I^{+})\widehat\otimes C^{+}(J^{+})\bigr)
 \longleftarrow\mathrm{Tot}\bigl(C(I,I_{\rho_v})\widehat\otimes C(J,J_{\rho'})\bigr).
 \]
@@ -2416,14 +2434,14 @@ suffices to prove that the three displayed arrows are homotopy equivalences
 commuting with $\mathfrak S$.
 
 Let $\varsigma\in\mathfrak S$.  It extends unitally to $I^{+}$, $J^{+}$ and
-$T$ and
+$\mathcal T$ and
 preserves the four summands $\C,I,J,K$, hence the supports; so it acts on
 every complex displayed.  The first arrow is the inclusion of Step 2 of the
 proof of Theorem~\ref{thm:kunneth}, and the third is the tensor product of the
 inclusions of Theorem~\ref{thm:B2}; they are homotopy equivalences, and they
 commute with $\varsigma$.  The second arrow is the restriction to the parts of
 support $\{1,2\}$ of the map $f_{\natural}$ of Lemma~\ref{lem:compare} from
-$C(T,T_{\rho})$ to $\mathrm{Tot}(C(I^{+},I^{+}_{\rho_v})\widehat\otimes
+$C(\mathcal T,\mathcal T_{\rho})$ to $\mathrm{Tot}(C(I^{+},I^{+}_{\rho_v})\widehat\otimes
 C(J^{+},J^{+}_{\rho'}))$.  Since $f$ and the homotopies of
 Lemma~\ref{lem:compare} are graded for the supports, this restriction is a
 homotopy equivalence.  In the proof of Lemma~\ref{lem:compare}, $f$ is defined
@@ -2432,13 +2450,13 @@ $f_n(\xi)=c'_{n-1}f_{n-1}\partial\xi$, where $c'$ is the contraction of
 $\mathrm{Bar}(I^{+})\widehat\otimes\mathrm{Bar}(J^{+})$ given by
 Lemma~\ref{lem:tensor}: $c'_{-1}=\iota\otimes\iota'$ and
 $c'_n=s\otimes1+\iota\varepsilon\otimes s'$ with $s(\xi)=1\otimes\xi$,
-$\iota(b)=1\otimes b$.  The automorphism $\varsigma$ acts on $\mathrm{Bar}(T)$
+$\iota(b)=1\otimes b$.  The automorphism $\varsigma$ acts on $\mathrm{Bar}(\mathcal T)$
 and on $\mathrm{Bar}(I^{+})\widehat\otimes\mathrm{Bar}(J^{+})$ on all tensor
 factors.  Being a unital algebra automorphism, it preserves the generators and
 commutes with the differentials, the augmentations and $c'$.  By induction
 $f_n$ commutes with $\varsigma$ on generators, and then everywhere, because
 $\varsigma(x\cdot\eta\cdot y)=\varsigma(x)\cdot\varsigma(\eta)\cdot\varsigma(y)$.
-In $T_{\rho}$ one has $\varsigma(y\cdot m\cdot x)=\rho(\varsigma y)\,\varsigma(m)\,
+In $\mathcal T_{\rho}$ one has $\varsigma(y\cdot m\cdot x)=\rho(\varsigma y)\,\varsigma(m)\,
 \varsigma(x)=\varsigma(y)\cdot\varsigma(m)\cdot\varsigma(x)$, because $\varsigma$
 commutes with $\rho$; so $f_{\natural}$ commutes with $\varsigma$.  The homotopy
 inverses of the arrows need not commute with $\varsigma$;
@@ -3055,8 +3073,10 @@ evaluated by means of
 \]
 and $\log2\pi+\gamma+\log2=\gamma+\log4\pi$.  For $F$ invariant under
 translation by $j_{\infty}(-1)$, formula \eqref{eq:Winfeven} is the
-distribution $W_{\R}$ of \cite[(150)]{CCWeilArch} applied to
-$x\mapsto x^{-1/2}b(\log x)$.  The measures $\dstar x$ of
+distribution $\mathcal W_{\R}$ of \cite[(150)]{CCWeilArch} applied to
+$x\mapsto x^{-1/2}b(\log x)$; equivalently it is the distribution
+$W_{\R}=\mathcal W_{\R}\circ\Delta^{-1/2}$ of
+\cite[Introduction]{CCWeilArch} applied to $x\mapsto b(\log x)$.  The measures $\dstar x$ of
 Definition~\ref{def:trace} and \eqref{eq:archmeasure} are those of
 \cite[Section~V, (14)]{Connes99}: the set $\{1\le|x|_v\le\Lambda\}$ has
 volume $\log\Lambda+O(1)$.
@@ -3149,12 +3169,12 @@ $\Th$ of Theorem~\ref{thm:symbol} is the symbol of $T$, by
 \subsection{Separation}
 
 The following computation involves no regularization.  It exhibits two test
-functions with the same pushforward to the modulus group on which $T$
-differs.
+functions which have the same pushforward to the modulus group and on which
+$T$ takes different values.
 
 \begin{theorem}\label{thm:separate}
 Fix $p\in S_f$ and units $u,u'\in1+p\Z_p$, $u,u'\ne1$, with
-$j:=v_p(1-u)\ne j':=v_p(1-u')$, and fix an integer $r>\max(j,j')$.  Let
+$\ell:=v_p(1-u)\ne \ell':=v_p(1-u')$, and fix an integer $r>\max(\ell,\ell')$.  Let
 $\theta:=\min_{q\in S_f}q^{1/2}>1$ and let $h\in C_c^{\infty}(\R^{\times})$
 satisfy $h\ge0$, $\supp h\subset(\theta^{-1},\theta)$ and $h(1)>0$.  In the
 coordinates of Lemma~\ref{thm:split} define
@@ -3165,8 +3185,8 @@ F\bigl(x_{\infty},(w_q)\bigr):=h(x_{\infty})\cdot
 and $F'$ by the same formula with $u$ replaced by $u'$.  Then $F,F'\in
 \DA^{\mathrm{off}}$ and, with $\nu:=h(1)\vol(1+p^{r}\Z_p)>0$,
 \begin{equation}\label{eq:sepvalues}
-T(F)=\nu(\log p)p^{\,j},\qquad T(F')=\nu(\log p)p^{\,j'},\qquad
-T(F)-T(F')=\nu(\log p)\bigl(p^{\,j}-p^{\,j'}\bigr)\neq0,
+T(F)=\nu(\log p)p^{\,\ell},\qquad T(F')=\nu(\log p)p^{\,\ell'},\qquad
+T(F)-T(F')=\nu(\log p)\bigl(p^{\,\ell}-p^{\,\ell'}\bigr)\neq0,
 \end{equation}
 while $F$ and $F'$ have the same pushforward under
 $|\cdot|_S:C_S\to\R_{>0}$; in particular
@@ -3178,7 +3198,7 @@ $s\in\C$.
 \emph{Membership.}  $F$ and $F'$ are finite products of a compactly supported
 smooth function of $x_{\infty}$ with characteristic functions of compact open
 subsets of the compact groups $\Z_q^{\times}$, hence lie in $\DA$.  The
-identity class is $1=(1,(1)_q)$; since $u\in1+p\Z_p$ with $v_p(1-u)=j<r$, we
+identity class is $1=(1,(1)_q)$; since $u\in1+p\Z_p$ with $v_p(1-u)=\ell<r$, we
 have $1\notin u(1+p^{r}\Z_p)$, and that set is open and closed, so $F$ vanishes
 on a neighbourhood of $1$.  By Theorem~\ref{thm:absconv} the value $T(F)$ is
 the sum \eqref{eq:absconv}.
@@ -3202,11 +3222,11 @@ $a(w)=h(1)\mathbf 1_{u(1+p^{r}\Z_p)}(w)$ and $a(1)=0$, so by \eqref{eq:Wp}
 W_p(F)=(\log p)\,h(1)\int_{u(1+p^{r}\Z_p)}|1-w|_p^{-1}\,dw .
 \]
 On the coset write $w=u(1+p^{r}y)$ with $y\in\Z_p$; then $1-w=(1-u)-up^{r}y$,
-and since $v_p(1-u)=j<r$ we get $v_p(1-w)=j$, so $|1-w|_p^{-1}=p^{j}$
+and since $v_p(1-u)=\ell<r$ we get $v_p(1-w)=\ell$, so $|1-w|_p^{-1}=p^{\ell}$
 is constant on the coset.  Therefore
-$W_p(F)=(\log p)h(1)p^{j}\vol(1+p^{r}\Z_p)=\nu(\log p)p^{j}$, with $\nu>0$
+$W_p(F)=(\log p)h(1)p^{\ell}\vol(1+p^{r}\Z_p)=\nu(\log p)p^{\ell}$, with $\nu>0$
 because $h(1)>0$.  The same computation with $u'$, and subtraction, gives
-\eqref{eq:sepvalues}; the difference is nonzero because $j\ne j'$.
+\eqref{eq:sepvalues}; the difference is nonzero because $\ell\ne \ell'$.
 
 \emph{The pushforwards agree.}  By Lemma~\ref{thm:split}, $|w|_S=|w_\infty|$
 on $C_S$, and $h$ is supported in $\R_{>0}$, so the pushforward of
@@ -3833,7 +3853,7 @@ the sum converging absolutely by \eqref{eq:PW} at height $\tfrac12$.
 Dividing by $2\pi$ gives \eqref{eq:contourp}.  For \eqref{eq:poisson} set
 $g(t):=f(t)e^{t/2}\in C_c^{\infty}(\R)$; then
 $\widehat F(i/2+2\pi k/L)=\int f(t)e^{t/2}e^{-2\pi ikt/L}dt=\widehat g(2\pi k/L)$,
-and the Poisson summation formula \cite[\S7.2]{Hormander} for
+and the Poisson summation formula \cite[Theorem~7.2.1]{Hormander} for
 $g\in C_c^{\infty}(\R)$ gives $\sum_k\widehat g(2\pi k/L)=L\sum_mg(mL)$.
 
 (e)  By \eqref{eq:plancherelv}, as in (d),
@@ -4188,8 +4208,9 @@ invariant under $\Theta_n$.  So the subsequence converges in the step.  The
 step is metrizable, so $B$ is relatively compact in it, hence in $\DA$.
 
 (c)  The space $\DA$ is an inductive limit of Fr\'echet spaces, hence
-barrelled.  With (b), it is a Montel space, and Montel spaces are reflexive
-\cite[Ch.~IV, \S5]{Schaefer}: every continuous linear functional on the
+barrelled.  With (b), its bounded subsets are relatively compact, and a
+barrelled space with this property is reflexive
+\cite[Ch.~IV, Theorem~5.6]{Schaefer}: every continuous linear functional on the
 strong dual of $\DA$ is the evaluation at a unique element of $\DA$.
 Transporting this by the homeomorphism $\ell\mapsto\ell(\overline{\,\cdot\,})$
 gives (c).
@@ -4447,7 +4468,10 @@ admissible approximation of $e_{\mp}$, then
 \beta_T(MF_{\alpha},MG_{\beta})\to\beta_T(e_{\pm},e_{\mp})=1 .
 \end{equation}
 The hypothesis that $(G_{\beta})$ is $N$-bounded cannot be omitted in the
-first statement (Proposition~\ref{prop:rulingsdiv}).
+first statement (Proposition~\ref{prop:rulingsdiv}).  The iterated limits in
+\eqref{eq:doublelimit} vanish for every pair of admissible approximations of
+$e_{\pm}$ and $e_{\mp}$, by the same proof; $N$-boundedness is used only for
+the uniformity in $\beta$.
 \item[(c)] The sequences \eqref{eq:spread} are admissible and $N$-bounded:
 $(F_n)$ for $e_+$ and $(G_n)$ for $e_-$.
 \end{enumerate}
@@ -4560,9 +4584,10 @@ $I(J(\Phi_n),J(\Phi_n^{\dagger}))=I_A(\Phi_n,\Phi_n^{\dagger})$ would also
 tend to $0$.
 \end{proof}
 
-Thus, for a fixed $S$, the scalar form $I_A$ tends to $0$ along pairs of
-admissible approximations of the two rulings one of which is $N$-bounded, and
-it stays away from $0$, or tends to $+\infty$, along others.  The form $I_A$
+Thus, for a fixed $S$, the scalar form $I_A$ tends to $0$, uniformly in the second
+index, along pairs of admissible approximations of the two rulings one of
+which is $N$-bounded, while along other pairs the diagonal values stay away
+from $0$ or tend to $+\infty$, although both iterated limits are $0$.  The form $I_A$
 does not extend by continuity to the rulings, and the form $\beta_T$ on the
 ruling plane is not a limit of $I_A$.
 
@@ -4726,9 +4751,12 @@ $W_p(F\star F^{\dagger})=0$ for every $p\in S_f$ by \eqref{eq:radialS}, so
 that $I_A(F,F)=W_{\infty}(F\star F^{\dagger})$.  By the comparison of
 $W_{\infty}$ with the distribution $W_{\R}$ of \cite{CCWeilArch} made after
 Convention~\ref{conv:Winf}, this number is $\le0$: this is Weil's inequality
-at the archimedean place \cite[Introduction and Theorem~1]{CCWeilArch}, which
-follows from \cite[Theorem~1]{Yoshida}, proved there by a computation which
-is in part numerical; see \cite{Bombieri,BurnolCR} for positivity under a
+at the archimedean place, in the form stated in
+\cite[Introduction]{CCWeilArch}, where it is written for $-W_{\R}$.  It
+follows from \cite[Theorem~1]{Yoshida}, whose proof reduces it to an explicit
+computation which is in part numerical, and \cite[Theorem~1]{CCWeilArch}
+gives an operator-theoretic proof under the additional condition that the
+Fourier transform vanishes at $0$; see \cite{Bombieri,BurnolCR} for positivity under a
 support condition.  So a subspace of $\DA$ on which $I_A$
 is positive definite, as in Theorem~\ref{thm:signature}(b),(d) and
 Remark~\ref{rem:plus}(iv), contains no nonzero $F$ of this kind.
@@ -4833,7 +4861,8 @@ $I_A(F_{\alpha},G)\to\ell(G)$, we get $\ell=0$.
 
 \section{The determinant and the Riemann--Roch pairing}\label{sec:banach}
 
-We construct a complete algebra norm on $\DA$ for which $T$ is continuous,
+We construct a submultiplicative norm on $\DA$ for which $T$ is continuous,
+we pass to the completion $\mathcal A_{\mathrm{tr}}$, a Banach algebra,
 and we study the series $\sum_r(-1)^{r+1}z^{r}T(F^{\star r})/r$, the value of
 $T$ on the logarithm of $1+zF$.  Its exponential $\Delta_F(z)$ is called the
 \emph{determinant of $1+zF$ relative to $T$}: it is defined by the rule
@@ -5506,7 +5535,7 @@ $Y$, hence an effective Cartier divisor.
 
 We assume that there is a line bundle $h$ on $C$ with $h^{2}\cong\omega_C$,
 and we fix one.  This holds after a finite extension of $k$: over an algebraic
-closure $\bar k$ there is a line bundle $N$ of degree $g-1$, $g$ the genus,
+closure $\bar k$ there is a line bundle $N$ of degree $\tfrac12\deg\omega_C$,
 the class of $\omega_C\otimes N^{-2}$ lies in the group of line bundles of
 degree zero on $C_{\bar k}$, which is divisible, and a line bundle on
 $C_{\bar k}$ and an isomorphism of its square with $\omega_C$ are defined over
@@ -5734,7 +5763,9 @@ of Yu.~I.~Manin, Vol.~I, Progr. Math. \textbf{269}, Birkh\"auser, Boston,
 2009, 339--405, arXiv:math/0703392.
 
 \bibitem{DLMF}
-\emph{NIST Digital Library of Mathematical Functions},
+F.~W.~J.~Olver, A.~B.~Olde Daalhuis, D.~W.~Lozier, B.~I.~Schneider,
+R.~F.~Boisvert, C.~W.~Clark, B.~R.~Miller, B.~V.~Saunders, H.~S.~Cohl and
+M.~A.~McClain (eds.), \emph{NIST Digital Library of Mathematical Functions},
 \texttt{https://dlmf.nist.gov/}, Chapters 4 and 5.
 
 \bibitem{GetzlerJones}
@@ -5769,8 +5800,7 @@ J. Reine Angew. Math. \textbf{78} (1874), 46--62.
 \bibitem{MeyerIdele}
 R.~Meyer, \emph{On a representation of the idele class group related to
 primes and zeros of $L$-functions}, Duke Math. J. \textbf{127} (2005),
-519--595, arXiv:math/0311468; statements are cited with the numbering of the
-arXiv version.
+519--595, arXiv:math/0311468.
 
 \bibitem{MeyerCrossed}
 R.~Meyer, \emph{The cyclic homology and $K$-theory of certain adelic crossed
@@ -5786,8 +5816,8 @@ V.~Nistor, \emph{Group cohomology and the cyclic cohomology of crossed
 products}, Invent. Math. \textbf{99} (1990), 411--424.
 
 \bibitem{Schaefer}
-H.~H.~Schaefer, \emph{Topological Vector Spaces}, Graduate Texts in Math.
-\textbf{3}, Springer, 1971.
+H.~H.~Schaefer and M.~P.~Wolff, \emph{Topological Vector Spaces}, 2nd ed.,
+Graduate Texts in Math. \textbf{3}, Springer, New York, 1999.
 
 \bibitem{Tate}
 J.~Tate, \emph{Fourier analysis in number fields and Hecke's
