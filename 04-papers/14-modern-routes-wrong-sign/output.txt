@@ -1,0 +1,24 @@
+Part 1: K=25 consecutive zeros above T0, x_i = gamma_i log(T0/2pi)/(2pi)
+    T0    lam_min   beta_min    1-sinc(b)      ratio    bound
+   100     0.0094     0.3722       0.2128      0.068       ok
+  1000     0.0672     0.3568       0.1967      0.528       ok
+  3000     0.0593     0.3452       0.1849      0.497       ok
+ 10000     0.0609     0.3125       0.1531      0.624       ok
+
+Part 2: moments of Phi
+k=0  2^(2k+3) m_2k/(2k)! = 0.497120778188   (-1)^k a(k) from Taylor = 0.497120778188
+k=1  2^(2k+3) m_2k/(2k)! = 0.0114859721576   (-1)^k a(k) from Taylor = 0.0114859721576
+k=2  2^(2k+3) m_2k/(2k)! = 0.00012345201807   (-1)^k a(k) from Taylor = 0.00012345201807
+k=3  2^(2k+3) m_2k/(2k)! = 8.32355481386e-7   (-1)^k a(k) from Taylor = 8.32355481386e-7
+k=4  2^(2k+3) m_2k/(2k)! = 3.99222655134e-9   (-1)^k a(k) from Taylor = 3.99222655134e-9
+Turan b(k)^2 > b(k-1)b(k+1), k=1..7: True
+Hermite form min eigenvalue of J^{d,n} (normalized by leading coeff):
+  d=2 n=0  0.130146
+  d=2 n=1  0.111455
+  d=2 n=2  0.0979342
+  d=3 n=0  0.0243401
+  d=3 n=1  0.0180301
+  d=3 n=2  0.0140138
+  d=4 n=0  0.00514993
+  d=4 n=1  0.00339275
+  d=4 n=2  0.00237961
