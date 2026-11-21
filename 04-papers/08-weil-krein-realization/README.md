@@ -1,32 +1,34 @@
-# Paper 08 — A Faithful Kreĭn-Space Realization of the Weil Quadratic Form, with a No-Go Theorem for the Zero-Side Attack on Positivity
+# A Kreĭn-space formulation of the zero side of the Weil quadratic form on Paley–Wiener spaces
 
-The paper realizes the Weil functional as an operator on the band-limited Paley–Wiener class
-$PW_d$, $d>\tfrac12$, in three layers. (A) Under one isolated hypothesis (H), a uniform
-short-interval zero-density statement, the form is closable and gives a self-adjoint operator
-bounded below. (B) The form factors as $E^*JE$, where $E$ is evaluation at the zeros and $J$ is a
-fundamental symmetry whose negative directions are the off-line zeros. This is a Kreĭn-space
-structure, and the angular operator $K$ gives a single-axis dictionary. (C) A no-go theorem shows
-that bounding $\|K\|\le1$ from the zero side is the same problem as proving Weil positivity. The
-paper places the construction next to the Connes–Consani and Suzuki approaches. It locates the
-sign barrier and does not claim to cross it.
+The paper rewrites the zero side of the Riemann–Weil explicit formula, for band-limited tests
+$F\in PW_d$, as $\mathfrak t(F)=\langle JEF,EF\rangle$, where $E$ is evaluation at the zeros of
+$\zeta$ and $J$ is the involution induced by $\rho\mapsto1-\bar\rho$ ($J=I$ under RH). It studies
+the resulting Kreĭn-space structure and the angular operator of the range of $E$.
 
-## Main results
+## Results
 
-- `thm:A`, `cor:Aprime`: semibounded self-adjoint realization and faithful reformulation —
-  CONDITIONAL on (H).
-- `lem:A`–`lem:D`: integration by parts, quadrature error, vertical $L^2$ bound, Plancherel–Pólya
-  off-line bound — PROVED (unconditional).
-- `lem:E`: (H) implies coercivity — CONDITIONAL on (H).
-- `thm:B`, `prop:identity`: Kreĭn identity $E^*JE$; $\|K\|<\infty$ iff the bottom is finite —
-  PROVED (the domain statements CONDITIONAL on (H)).
-- `lem:inj`: qualitative injectivity — PROVED.
-- `thm:C`, `cor:circular`: the zero-side realization is circular as a tool for the sign — NO-GO.
+- The identity $\mathfrak t=\langle JEF,EF\rangle=\|P_+EF\|^2-\|P_-EF\|^2$ (Proposition 6.1).
+- Weighted bounds for sums over the zeros: $\sum_\rho|F(t_\rho+ib_\rho)|^2\le C_d\|F\|_w^2$ with
+  $\|F\|_w^2=\int|F|^2\log(2+|t|)\,dt$ (Lemma 3.5; auxiliary Lemmas 3.1, 3.2, 3.4).
+- Injectivity of the positive projection on the range of $E$, using Selberg's theorem on zeros
+  on the line (Lemma 7.1).
+- The range of $E$ is the graph of an angular operator $K_d$, and $\|K_d\|\le1$ iff
+  $\mathfrak t\ge0$ on the dense test class $\mathcal D_d\subset PW_d$; RH iff this holds for all $d$ (Theorem 1.2, Proposition 1.3).
+  This contraction criterion is a restatement of Weil positivity; no progress on the sign is
+  claimed.
+- Conditional on a coercivity hypothesis (Coer$_d$) that is not proved: $\mathfrak t$ is bounded
+  relative to the on-line sampling norm and is represented by a bounded self-adjoint operator
+  (Theorem 1.1).
+
+There is no numerical content.
+
+## Known and new
+
+Classical inputs: the explicit formula and Weil's criterion, Riemann–von Mangoldt, Beurling's
+sampling theorem, Selberg's theorem on zeros on the critical line. The new content is the
+rewriting $\mathfrak t=\langle JEF,EF\rangle$ and the angular-operator restatement.
 
 ## Files
 
-- `main.tex`, `main.pdf` — source and compiled paper.
-
-## Relation to other papers
-
-Continues the localized form of Paper 07. Paper 11 studies the negative index of the same Kreĭn
-structure.
+- [main.tex](main.tex) — LaTeX source.
+- [weil-krein-realization.pdf](weil-krein-realization.pdf) — compiled paper (8 pages).
