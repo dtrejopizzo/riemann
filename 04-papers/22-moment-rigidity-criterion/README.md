@@ -1,16 +1,21 @@
-# Paper 22 — The Riemann Hypothesis as moment rigidity over Meixner–Pollaczek polynomials
+# The Riemann Hypothesis as moment rigidity over Meixner–Pollaczek polynomials
 
-Let m_∞ be the archimedean spectral probability measure (2π)^{−3/2}|Γ(¼+is/2)|² ds from the work of Connes, Consani and Moscovici, with orthonormal polynomials P_n (a rescaled Meixner–Pollaczek family). Let ζ_on be obtained by projecting every nontrivial zero horizontally onto the critical line, and let ν = (|ζ(½+is)|² − |ζ_on(½+is)|²) m_∞. The paper proves unconditionally that ν is a finite, non-negative, even measure with all moments finite, and that RH is equivalent to constancy in n of Δ_n = ∫ P_n² dν. The proof uses triangularity, Carleman's condition and Hardy's theorem; no orthogonal-polynomial asymptotics or kernel positivity. It is an equivalence, not a proof.
+The paper studies the discrepancy measure dν = (|ζ(½+is)|² − |ζ_on(½+is)|²) dm∞(s), where ζ_on is obtained from ζ by moving every non-trivial zero horizontally onto the critical line and m∞ is the archimedean probability measure (2π)^{-3/2}|Γ(¼+is/2)|² ds of Connes–Consani–Moscovici. The spectral moments Δ_n = ∫ P_n² dν are taken against the orthonormal polynomials P_n of m∞, which are rescaled Meixner–Pollaczek polynomials.
 
-## Main results
-- `prop:mp` (Meixner–Pollaczek identification): Jacobi coefficients a_n = ½√((2n+1)(2n+2)). PROVED.
-- `prop:positivity` (Pointwise domination; vanishing iff RH): ν ≥ 0, ν = 0 ⟺ RH. PROVED.
-- `prop:moments`: ν finite, even, all moments finite. PROVED.
-- `thm:rigidity` (Moment rigidity): constant Δ_n forces ν = c·m_∞ (Carleman determinacy). PROVED.
-- `thm:main` (RH as moment rigidity): RH ⟺ Δ_n constant in n. PROVED (equivalence; Hardy's theorem CITED).
+## Results
+
+- Unconditionally, ν is a finite, non-negative, even measure with a continuous density and all moments finite; its density vanishes identically iff RH holds. Since ν ≥ 0 has a continuous density, RH ⟺ ν(ℝ) = 0 trivially (and RH ⟺ Δ_n = 0 for each fixed n).
+- Main theorem: RH ⟺ Δ_n is constant in n ⟺ ∫ κ_n dν = 0 for all n, with κ_n = a_n²(P_{n+1}² − P_n²). The theorem shows that constancy of Δ_n, without knowing its value, already forces ν = 0. The proof uses triangularity of {P_n²}, determinacy of the moment problem of m∞ (due to Connes–Consani–Moscovici, re-proved via Carleman), and one zero of ζ on the critical line.
+- Jacobi coefficients a_n = ½√((2n+1)(2n+2)) re-derived from the Meixner–Pollaczek tables.
+- The criterion is a reformulation, not a proof of RH: evaluating ν requires the zeros. An open question asks for an arithmetic interpretation; h_n = κ_n w is not admissible in the Weil explicit formula, and condition (iii) is not a sum over zeros.
+
+No numerics are used.
+
+## Known and new
+
+The measure m∞, its Jacobi coefficients, its moments and the determinacy of its moment problem are due to Connes–Consani–Moscovici; Carleman's criterion and Hardy's theorem are classical. The criterion and its proof are new to the author's knowledge.
 
 ## Files
-- `main.tex`, `main.pdf` — source and compiled paper.
 
-## Relation to other papers
-- The measure ν is the one studied in Paper 24; the criterion is invoked there as the moment-rigidity criterion.
+- [main.tex](main.tex) — LaTeX source
+- [moment-rigidity-criterion.pdf](moment-rigidity-criterion.pdf) — compiled paper, 9 pages

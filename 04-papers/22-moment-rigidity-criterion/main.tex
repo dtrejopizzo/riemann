@@ -49,17 +49,18 @@ d\nu(s)=\Bigl(\bigl|\zeta(\tfrac12+is)\bigr|^{2}
 -\bigl|\zon(\tfrac12+is)\bigr|^{2}\Bigr)\,d\minf(s).
 \]
 We prove unconditionally that $\nu$ is a finite, non-negative, even measure
-with all moments finite, and that the Riemann Hypothesis is equivalent to the
-\emph{moment rigidity} statement: the spectral moments
-$\Delta_n=\int_\bbR\mathcal P_n^{2}\,d\nu$ are constant in $n$. The proof of
+with all moments finite, whose continuous density vanishes identically if
+and only if $\RH$ holds, so that trivially $\RH\iff\nu(\bbR)=0$; we show
+that the weaker-looking \emph{moment rigidity} condition, that the spectral
+moments $\Delta_n=\int_\bbR\mathcal P_n^{2}\,d\nu$ are constant in $n$ (with
+no condition on their value), already implies RH, so that RH is equivalent
+to it. The proof of
 the non-trivial direction uses no asymptotics of orthogonal polynomials and
 no positivity of any kernel. Constancy of $\Delta_n$ forces, by
 triangularity of $\{\mathcal P_n^{2}\}$ inside the even polynomials, the
-proportionality of all moments of $\nu$ to those of $\minf$; Carleman's
-condition---verified in one line from
-$a_n=\tfrac12\sqrt{(2n+1)(2n+2)}$---makes the moment problem of $\minf$
-determinate, whence $\nu=c\,\minf$ as measures; and Hardy's 1914 theorem on
-the existence of zeros on the critical line forces $c=0$, hence $\nu=0$,
+proportionality of all moments of $\nu$ to those of $\minf$; the moment problem of $\minf$ is determinate (a result of
+Connes--Consani--Moscovici, re-proved here by Carleman's condition), whence $\nu=c\,\minf$ as measures; and the existence of one zero on the critical line
+(Hardy's theorem gives infinitely many) forces $c=0$, hence $\nu=0$,
 hence RH. The criterion is an equivalence, not a proof of RH; we state
 precisely what it does and does not give.
 \end{abstract}
@@ -90,27 +91,26 @@ $P^{(1/4)}_n(s/2;\pi/2)$.
 \subsection{Why this measure}
 The measure $\minf$ is not chosen for convenience. In the
 spectral-realization programme of Connes, Consani and Moscovici
-\cite{CCMprolate,CCMq,CCMtriples}, the operator-theoretic framework built on
-the semilocal trace formula attaches, to each finite set $S$ of places of
-$\bbQ$ containing the archimedean place, a determinate moment problem whose
-measure is the squared absolute value, restricted to the critical line, of
-the product of the local factors over $S$. For $S=\{\infty\}$ the local
-factor is the archimedean one, $\pi^{-s/2}\Gamma(s/2)$, and the resulting
-measure is exactly $\minf$. Connes--Consani--Moscovici prove
-\cite[Prop.~3.3]{CCMprolate} that the orthonormal polynomials of $\minf$
+\cite{CCMprolate,CCMq,CCMtriples}, a moment problem is attached to the
+archimedean local factor $\pi^{-s/2}\Gamma(s/2)$: its measure is the squared
+absolute value of this factor on the critical line, which, normalised to total mass~$1$, is $\minf$.
+Connes--Consani--Moscovici prove \cite[Prop.~3.3 and Thm.~5.2]{CCMprolate} that the orthonormal polynomials of $\minf$
 realize the scaling operator as the Jacobi matrix with zero diagonal and
 off-diagonal entries $a_n=\tfrac12\sqrt{(2n+1)(2n+2)}$, and they determine
-its moments \cite[Prop.~5.2]{CCMprolate}; the deformation of this moment
-problem by adjoining finite places is studied in \cite{CCMq}, and the
+its moments \cite[Prop.~5.2]{CCMprolate}; for a finite set $S$ of places
+containing the archimedean one, the moment problem of the measure given by
+the product over $S$ of the local factors on the critical line is shown to
+be determinate in \cite[Prop.~3.1]{CCMq}, where the case $S=\{\infty,p\}$ is
+studied in detail, and the
 framework is developed further in \cite{CCMtriples}. The measure $\minf$ is
 thus the canonical archimedean reference measure of that programme, and
 $|\zeta(\tfrac12+is)|^{2}\,d\minf(s)$ is its natural global counterpart. The
-present paper takes from \cite{CCMprolate} only two inputs, both
-re-verifiable from classical sources: the measure $\minf$ itself
-(Lemma~\ref{lem:mass} re-derives its normalization) and the exact value of
-its Jacobi coefficients (Proposition~\ref{prop:mp} re-derives them from the
-Meixner--Pollaczek tables \cite{KLS}). Everything else is proved here from
-scratch.
+present paper takes from that work three inputs, all re-derived here from
+classical sources: the measure $\minf$ (Lemma~\ref{lem:mass}), the exact
+value of its Jacobi coefficients (Proposition~\ref{prop:mp}, from the
+Meixner--Pollaczek tables \cite{KLS}), and the determinacy of its moment
+problem (Lemma~\ref{lem:carleman}; \cite[Thm.~5.2]{CCMprolate},
+\cite[Prop.~3.1]{CCMq}).
 
 \subsection{The shape of the proof}
 The implication $\RH\Rightarrow(\Delta_n\ \text{constant})$ is trivial:
@@ -134,6 +134,9 @@ $c\,w>0$ unless $c=0$. Hence $c=0$, so $\nu=0$, and the unconditional
 equality case of the Hadamard-product inequality
 (Proposition~\ref{prop:positivity}) gives RH.
 \end{enumerate}
+Since $\nu\ge0$ has a continuous density, $\RH\iff\Delta_0=0$ is immediate
+from Proposition~\ref{prop:positivity}; Theorem~\ref{thm:main} strengthens
+this by replacing the value $0$ with mere constancy.
 No asymptotics of $\mathcal P_n$, no Christoffel-function estimates, and no
 positivity of any indefinite kernel enter the argument. The unconditional
 inputs are collected in Section~\ref{sec:facts}: $d\nu\ge0$ (an explicit
@@ -145,13 +148,14 @@ and parity.
 The criterion is an exact reformulation of RH inside classical moment
 theory: \emph{the only non-negative even measure all of whose
 $\mathcal P_n$-spectral moments are equal is a multiple of the reference
-measure, and arithmetic---one application of Hardy's theorem---kills the
-multiple}. It is not, in its present form, a strategy of proof: evaluating
+measure, and the existence of one zero of $\zeta$ on the critical line
+excludes a nonzero multiple}. It is not, in its present form, a strategy of proof: evaluating
 $\nu$ requires knowing the zeros of $\zeta$ (Remark~\ref{rem:barrier}). Its
-interest, we believe, lies in the exact division of labour it
-exhibits---moment rigidity does all the analytic work, and the arithmetic
-input is confined to a single point---and in the family of explicit-formula
-identities it suggests (Question~\ref{q:arith}). All statements below are
+interest, we believe, lies in the exact division it exhibits between
+moment determinacy and the use of one critical zero (the other inputs on
+$\zeta$ being the product inequality of Proposition~\ref{prop:positivity}
+and the convexity bound), and in the question of an arithmetic
+interpretation that it raises (Question~\ref{q:arith}). All statements below are
 unconditional theorems about $\zeta$; none assumes RH.
 
 \section{The archimedean measure and its orthonormal polynomials}
@@ -238,8 +242,8 @@ $a_n=\sqrt{(n+1)(n+\tfrac12)}=\tfrac12\sqrt{(2n+1)(2n+2)}$.
 \end{proof}
 
 \begin{remark}
-The value $a_n=\tfrac12\sqrt{(2n+1)(2n+2)}$ agrees with
-\cite[Prop.~3.3]{CCMprolate}, where it is derived through the metaplectic
+The value $a_n=\tfrac12\sqrt{(2n+1)(2n+2)}$ agrees with the value
+in \cite[Prop.~3.3, Thm.~5.2(i)]{CCMprolate}, where it is derived through the metaplectic
 representation; Proposition~\ref{prop:mp} certifies it independently against
 the classical tables. Consistency check at small order:
 \eqref{eq:recurrence} gives $\mu_2(\minf)=a_0^{2}=\tfrac12$ and
@@ -256,11 +260,17 @@ $C$; hence $\mu_{2k}(\minf)^{1/(2k)}=O(k)$ and
 \[
 \sum_{k\ge1}\mu_{2k}(\minf)^{-1/(2k)}=\infty .
 \]
-Consequently, for every $c>0$ the Hamburger moment problem with moment
-sequence $\bigl(c\,\mu_j(\minf)\bigr)_{j\ge0}$ is determinate: $c\,\minf$ is
+Consequently, for every $c>0$ the Hamburger moment problem with
+moment sequence $\bigl(c\,\mu_j(\minf)\bigr)_{j\ge0}$ is determinate: $c\,\minf$ is
 the unique non-negative Borel measure on $\bbR$ with these moments
 \cite{Carleman,Akhiezer,Simon}.
 \end{lemma}
+
+Determinacy of this moment problem is due to Connes--Consani--Moscovici:
+\cite[Thm.~5.2(ii)]{CCMprolate} (from $\sum1/a_n=\infty$, as in
+Remark~\ref{rem:jacobicarleman}) and \cite[Prop.~3.1]{CCMq} (from
+Carleman's criterion, for every finite set of places containing $\infty$).
+We include the short proof for completeness.
 
 \begin{proof}
 By Stirling's formula in the form
@@ -291,7 +301,7 @@ Proposition~\ref{prop:mp},
 so the Jacobi matrix of $\minf$ is essentially self-adjoint and the moment
 problem is determinate. The divergence is logarithmic: the weight
 $e^{-\pi|s|/2}$ sits exactly at the boundary of determinacy, like
-$e^{-|x|}$. This borderline determinacy is the engine of the whole paper.
+$e^{-|x|}$.
 \end{remark}
 
 \begin{lemma}[triangularity of the squares]\label{lem:triangular}
@@ -482,8 +492,9 @@ For every $k\ge0$,
 \;<\;\infty .
 \]
 In particular $\nu(\bbR)<\infty$, all moments of $\nu$ are finite, all odd
-moments vanish, and the Carleman condition
-$\sum_k\mu_{2k}(\nu)^{-1/(2k)}=\infty$ holds for $\nu$ as well.
+moments vanish, and, if $\nu\neq0$, the Carleman condition
+$\sum_k\mu_{2k}(\nu)^{-1/(2k)}=\infty$ holds for $\nu$ as well (this is not
+needed below).
 \end{proposition}
 
 \begin{proof}
@@ -497,7 +508,8 @@ Lemma~\ref{lem:carleman}) dominate the integrand by
 $C_\varepsilon\,s^{2k}(1+|s|)^{2\varepsilon}e^{-\pi|s|/2}$, which is
 integrable; as in Lemma~\ref{lem:carleman} this also gives
 $\mu_{2k}(\nu)\le C\,\Gamma(2k+2)(2/\pi)^{2k}$, whence
-$\mu_{2k}(\nu)^{1/(2k)}=O(k)$ and the Carleman divergence. Odd moments
+$\mu_{2k}(\nu)^{1/(2k)}=O(k)$ and, if $\nu\neq0$ (so that every
+$\mu_{2k}(\nu)>0$), the Carleman divergence. Odd moments
 vanish because $\tilde g$ and $w$ are even. Note that no information about
 the configuration of hypothetical off-line zeros is needed: the domination
 $\tilde g\le|\zeta|^{2}$ is global.
@@ -543,8 +555,8 @@ unconditional positivity $d\nu\ge0$ of
 Proposition~\ref{prop:positivity} enters the chain. Note also what the
 theorem does \emph{not} say: it does not force $\sigma=0$. The measure
 $\sigma=\minf$ itself satisfies the hypothesis with $c=1$. Separating
-$c\,\minf$ from $0$ requires one further input, and that input is
-arithmetic.
+$c\,\minf$ from $0$ requires one further input: a zero of $\zeta$ on the
+critical line (Lemma~\ref{lem:hardy}).
 \end{remark}
 
 \begin{lemma}[Hardy kills the constant]\label{lem:hardy}
@@ -562,7 +574,8 @@ conclude $\tilde g(s)=c$ for all $s\in\bbR$.
 
 By Hardy's theorem \cite{Hardy1914} (see also
 \cite[Thm.~10.2]{Titchmarsh}), $\zeta$ has at least one zero---in fact
-infinitely many---on the critical line; let $\tfrac12+i\gamma_*$ be one,
+infinitely many---on the critical line (only one such zero is needed,
+e.g.\ the one with $\gamma_*\approx14.1347$); let $\tfrac12+i\gamma_*$ be one,
 $\gamma_*\in\bbR$. Then $|\zeta(\tfrac12+i\gamma_*)|^{2}=0$, and by
 \eqref{eq:quadprod} also $|\zon(\tfrac12+i\gamma_*)|^{2}=0$ (the product
 factor lies in $[0,1]$). Hence $c=\tilde g(\gamma_*)=0-0=0$.
@@ -606,20 +619,20 @@ condition, where any $a_n=O(n)$ would do); the Hadamard quadruple inequality
 with its equality case; the convexity bound for $\zeta$; Stirling; and
 Hardy's theorem. It uses no asymptotics of the polynomials
 $\mathcal P_n$, no Christoffel--Darboux kernel estimates, and no positivity
-of the (indefinite) functions $\kappa_n$. The division of labour is sharp:
-moment theory proves ``$\nu$ is a multiple of $\minf$''; the arithmetic of
-$\zeta$ enters exactly once, to prove ``the multiple is zero''.
+of the (indefinite) functions $\kappa_n$. Moment theory proves ``$\nu$ is a
+multiple of $\minf$''; the existence of one zero on the critical line is
+then used once, to prove ``the multiple is zero''.
 \end{remark}
 
-\begin{remark}[the universal quantifier is essential]\label{rem:quantifier}
-No finite subfamily of the conditions in Theorem~\ref{thm:main}(iii)
-characterizes RH, and there is no single-index version. Indeed
-$\int\kappa_n\,d\minf=a_n^{2}(1-1)=0$ for every $n$: each $\kappa_n$ has
-mean zero against the reference measure, so each condition
-$\int\kappa_n\,d\nu=0$ is a single linear constraint that non-zero
-non-negative measures satisfy in abundance (any truncation of the family
-cuts out a set of measures of finite codimension, which contains, e.g., a
-positive multiple of $\minf$ plus suitable even perturbations). The
+\begin{remark}[the role of the universal quantifier]\label{rem:quantifier}
+For each fixed $n$ one has $\RH\iff\Delta_n=0$, since $\tilde g\,w\,\mathcal
+P_n^2\ge0$ is continuous and vanishes identically only if $\tilde g\equiv0$;
+in particular $\RH\iff\nu(\bbR)=0$. The content of Theorem~\ref{thm:main} is
+that constancy of $\Delta_n$, with no knowledge of its value, already
+suffices. For this, finitely many of the conditions (iii) are not enough at
+the level of measures: $\int\kappa_n\,d\minf=a_n^{2}(1-1)=0$ for every $n$,
+and finitely many linear constraints do not force a non-negative even
+measure to be a multiple of $\minf$. The
 criterion does not detect the mass of $\nu$ through the sign of any test
 function---it cannot, since the $\kappa_n$ are indefinite---but through the
 \emph{completeness} of $\{\mathcal P_n^{2}\}$ in the even polynomials
@@ -631,23 +644,25 @@ converts rigidity into RH.
 
 \begin{remark}[partial-sum versions]\label{rem:partialsums}
 It is tempting to repackage the family (iii) as a single function of a
-height parameter, e.g.\
-$T_\lambda:=\sum_{n:\,\gamma_n\le\lambda}\int\kappa_n\,d\nu$, where
-$\gamma_n$ runs over the ordinates of the zeros of $\xi$ in non-decreasing
-order, and to assert $\RH\iff T_\lambda=0$ for all $\lambda$. One direction
+height parameter: list the ordinates of the zeros of $\xi$ with
+$\gamma>0$, with multiplicity and in non-decreasing order, as
+$\gamma^{(1)}\le\gamma^{(2)}\le\cdots$, let $N(\lambda)$ be the number of
+them in $(0,\lambda]$, attach the $m$-th zero to the index $n=m-1$ of
+$\kappa_n$, and put
+$T_\lambda:=\sum_{n<N(\lambda)}\int\kappa_n\,d\nu$; one might then try to assert $\RH\iff T_\lambda=0$ for all $\lambda$. One direction
 is again trivial, but the converse \emph{as stated} recovers the per-index
-family only if the ordinates $\gamma_n$ are pairwise distinct, since the
+family only if the ordinates $\gamma^{(m)}$ are pairwise distinct, since the
 jumps of $\lambda\mapsto T_\lambda$ then isolate each term. Under $\neg\RH$
 distinctness fails automatically---$\beta+i\gamma$ and $(1-\beta)+i\gamma$
 share the ordinate $\gamma$---so the $\lambda$-form only yields block sums
 $\sum_{n\in B}a_n^{2}(\Delta_{n+1}-\Delta_n)=0$ over blocks $B$ of
-coinciding ordinates, and these do not force constancy of $\Delta_n$ (one
-free parameter per block). We therefore regard the per-index form
-(ii)/(iii) as the correct formulation and state this caveat explicitly: we
-do not claim the $\lambda$-indexed equivalence.
+coinciding ordinates, and these do not force constancy of $\Delta_n$ (a
+block of $b$ coinciding ordinates gives one constraint on $b$ differences).
+We therefore use the per-index form (ii)/(iii) and do not claim the
+$\lambda$-indexed equivalence.
 \end{remark}
 
-\begin{remark}[the barrier, stated honestly]\label{rem:barrier}
+\begin{remark}[the barrier]\label{rem:barrier}
 The criterion is a reformulation of RH, not progress towards its proof: to
 evaluate $\nu$---hence any $\Delta_n$---one must know the multiset of zeros
 of $\zeta$, since $\zon$ is built from it. A proof of RH through
@@ -660,8 +675,9 @@ zeros, and no such mechanism is offered here.
 \label{rem:ccm}
 What is taken from \cite{CCMprolate,CCMq,CCMtriples} is the measure $\minf$
 and the exact value of its Jacobi coefficients, i.e.\ the identity of the
-reference moment problem; both are re-derived here from classical sources
-(Lemma~\ref{lem:mass}, Proposition~\ref{prop:mp}). The criterion of
+reference moment problem, and the determinacy of the reference moment
+problem; all three are re-derived here from classical sources
+(Lemma~\ref{lem:mass}, Proposition~\ref{prop:mp}, Lemma~\ref{lem:carleman}). The criterion of
 Theorem~\ref{thm:main} and its proof are, to the best of the author's
 knowledge, not contained in those works, and conversely nothing here bears
 on the operator-theoretic statements proved there (semilocal trace formula,
@@ -674,23 +690,19 @@ Connes--Consani--Moscovici framework at the archimedean place.
 \end{remark}
 
 \begin{question}[arithmetic content]\label{q:arith}
-Each function $h_n(s):=\kappa_n(s)\,w(s)$ is even, real-analytic, and decays
-like $e^{-\pi|s|/2}$ times a polynomial, so it is an admissible test
-function for the Weil explicit formula; condition (iii) of
-Theorem~\ref{thm:main} is then a countable family of identities between a
-sum over the zeros and a sum over prime powers. Is there a direct arithmetic
-interpretation of the spectral moments $\Delta_n$---for instance, a closed
-expression for the prime side $\sum_p(\log p/\sqrt p)\,\widehat h_n(\log p)$
-in terms of the Meixner--Pollaczek data---that would let the constancy of
-$\Delta_n$ be studied as a statement about primes rather than about zeros?
-We leave this as the natural open question raised by the criterion.
+Each $h_n=\kappa_n w$ is even and real-analytic on $\bbR$, but $w$ has
+poles at $s=\pm i/2$, so $h_n$ lies exactly on the boundary of the
+admissible class of the Weil explicit formula: the polar terms
+$h_n(\pm i/2)$ are infinite, and $\widehat h_n(x)$ decays only like
+$e^{-|x|/2}$, so the prime sum diverges.
+Moreover condition (iii) is an integral against
+$(|\zeta|^2-|\zon|^2)\,w$, not a sum of $h_n$ over the zeros, so the
+explicit formula does not apply to it directly. Is there a regularised explicit
+formula (for example, using the decay of $\widehat h_n$ against the prime
+sum together with a limiting form of the polar terms) that interprets
+condition (iii) as a statement about primes?
 \end{question}
 
-\section*{Acknowledgments}
-The author thanks the internal audits of this line of workme within which
-this criterion was found; their adversarial standards are responsible for
-the present formulation, in particular for the caveat of
-Remark~\ref{rem:partialsums}. Any errors are the author's own.
 
 \begin{thebibliography}{99}
 
@@ -707,7 +719,8 @@ Gauthier-Villars, Paris, 1926.
 \bibitem{CCMprolate}
 A.~Connes, C.~Consani, H.~Moscovici,
 \emph{Zeta zeros and prolate wave operators},
-Ann. Funct. Anal. \textbf{15} (2024), art. 87.
+Ann. Funct. Anal. \textbf{15} (2024), art. 87,
+doi:10.1007/s43034-024-00388-z.
 arXiv:2310.18423.
 
 \bibitem{CCMq}
