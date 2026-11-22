@@ -18,6 +18,4 @@ Files:
 - [intersection-frame-defect.pdf](intersection-frame-defect.pdf) — compiled paper, 15 pages.
 - [scripts/constants.py](scripts/constants.py) — reproduces the numerical constants (mpmath, 40 digits).
 
-The folder also contains [archive/](archive/) and [CHANGES_rebuild.md](CHANGES_rebuild.md), which are working material and not part of the paper.
-
 Build: `pdflatex -jobname=intersection-frame-defect main.tex` three times.

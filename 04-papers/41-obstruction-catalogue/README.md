@@ -1,4 +1,4 @@
-# Obstructions to Weil Positivity: A Catalogue of No-Go Theorems, Falsifiers and Countermodels in the Prime–Gamma Doob Coordinate
+# Obstructions to Weil Positivity: A Catalogue of No-Go Theorems and Observations in the Prime–Gamma Doob Coordinate
 
 Paper 40 reduces the remaining sign on every finite row of the Connes–Consani–Moscovici and Suzuki route to one strict inequality, the source surplus g > δ♭. Assuming a ground-state identity, which Paper 39 (Theorem 23.1) supplies, the surplus on a cofinal family of rows gives Weil positivity on even tests, and that is equivalent to RH by Paper 39, Corollary 23.2. This paper does not attempt the surplus. It collects 38 mechanisms in eight families that do not give it, working in the Doob coordinate, where even Weil positivity is the sharp Poincaré inequality E_K(r) ≥ ½ Var_{μ_K}(r). Each entry is marked as proved, as an explicit countermodel, or as an observation.
 

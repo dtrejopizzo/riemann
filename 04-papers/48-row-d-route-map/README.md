@@ -13,5 +13,4 @@ family, with the updated 8×8 grid (1100 routes through phase 184) and family ta
 Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL. No equivalence between row D and any
 other statement is used. Memo identifiers appear only in Appendix A.
 
-Build: `pdflatex main.tex` three times (25 pp., 0 errors, 0 undefined references). Previous version:
-`main_pre_complete.tex`; change memo `CHANGES_complete.md`.
+Build: `pdflatex main.tex` three times (25 pp., 0 errors, 0 undefined references).
