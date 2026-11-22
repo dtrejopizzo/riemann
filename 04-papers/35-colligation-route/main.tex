@@ -4,7 +4,6 @@
 \usepackage{hyperref}
 \usepackage{array}
 \usepackage{booktabs}
-\usepackage{longtable}
 \usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{tikz}
@@ -19,10 +18,10 @@
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{example}[theorem]{Example}
+\newtheorem{heuristic}[theorem]{Heuristic}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{notation}[theorem]{Notation}
-
 
 %% Math macros
 \newcommand{\RH}{\mathrm{RH}}
@@ -49,104 +48,99 @@
 \newcommand{\Sk}{S_\kap}
 \newcommand{\Ek}{E_\kap}
 \newcommand{\indm}{\operatorname{ind}_-}
+\newcommand{\bk}{\mathsf{b}}
 \DeclareMathOperator{\ind}{ind}
 
-\title[The Colligation Route to RH]{The Colligation Route to the Riemann Hypothesis:\\
-de Branges Realization, a Curvature Theorem, and the\\
-Pole-Pinned Spectral Radius at the Wall}
+\title[The colligation route]{The colligation route to the Riemann Hypothesis:\\
+a Kre\u\i n--Langer index, a Laplace--pole argument,\\
+and heuristic reformulations of Weil positivity}
 
 \author{David Alejandro Trejo Pizzo}
 \thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
 
 \begin{document}
-\maketitle
 
 \begin{abstract}
-We develop and rigorously assemble a single route to the Riemann Hypothesis (RH) built on the
-de~Branges / Lax--Phillips colligation attached to the completed zeta function $\xi$, and we
-localize the remaining obstruction with full precision. Four results are unconditional and new
-or newly-sharpened. \textbf{(A)} The finite-window boundedness $L1$ of the oscillatory part of
-the Weil form \emph{implies} RH ($L1\Rightarrow\RH$, the Laplace--pole theorem), whose only non-formal
-input --- a Paley--Wiener nonvanishing lemma --- is proved unconditionally (the converse
-$\RH\Rightarrow L1$ is conditional on a regularized zero-sum estimate). \textbf{(B)} The correct index of the route is the Kre\u\i n--Langer
-negative-square count $\indm(K_{\Sk})=\#\{\text{off-line zeros}\}$, so $\RH\Leftrightarrow
-\indm=0$. \textbf{(C)} After Doob conjugation the prime part of the Weil generator is a
-Beurling--Deny Dirichlet form whose iterated carr\'e-du-champ satisfies
-$\Gamma_2\ge 0$ \emph{unconditionally} (a Bakry--\'Emery $CD(0,\infty)$ curvature bound), by a
-Schur-product mechanism rooted in $\Lam\ge 0$; the Davenport--Heilbronn falsifier fails this bound.
-\textbf{(D)} The wall $\eps_0(\lambda)\ge 0$ (Weil positivity) is realized as the absence of a
-\emph{Schr\"odinger bound state}, equivalently $\|K_\lambda(0)\|\le 1$ for an explicit
-Birman--Schwinger operator, in which the pole of $\zeta$ at $s=1$ acts as a repulsive barrier
-pinning the spectral radius from below at $1$, and the Perron--Frobenius ground state $u_0$ is the
-threshold resonance.
-
-The synthesis is a single sharp statement: \emph{every geometric and functional-analytic structure
-on the route is Doob-invariant and therefore proves the unconditional ``shape'' (the $(k+1)^2$
-ladder, the curvature, the colligation), while RH is the ``sign'' $\eps_0\ge0$ --- the
-\emph{upper} pinning of the Birman--Schwinger spectral radius at $1$.} In the function-field model
-this upper pinning is the Weil pairing (Frobenius is a $\sqrt q$-isometry); over $\Spec\Z$ it is
-missing. We state the missing object precisely (an arithmetic intersection pairing on the square of
-the arithmetic site, with a Hodge-index sign), give a candidate construction, and argue that
-crossing the wall requires \emph{creating} this piece of arithmetic geometry. Nothing here proves
-RH; the boundary is mapped exactly.
+We study the de~Branges / Lax--Phillips colligation attached to the completed zeta function $\xi$
+and several reformulations of Weil positivity on a finite window. We record:
+(i) a Laplace--pole argument showing that the $(0,0)$ entry of the window Weil matrix, written as
+a sum over zeros, is bounded uniformly in the window length if and only if the Riemann
+Hypothesis (RH) holds;
+(ii) a proof that, for $\om>0$, the number of negative squares of the kernel of
+$\Th_\om(z)=\xi(\half+\om+iz)/\xi(\half+\om-iz)$ equals the number of poles of $\Th_\om$ in the
+upper half-plane, which is the number of zeros of $\xi$ with $\Re\rho>\half+\om$ for all but
+countably many $\om$, so that RH holds if and only if this index vanishes for every $\om>0$;
+(iii) the curvature bound $CD(0,\infty)$ for translation-invariant pure-jump generators with
+finitely many prime-power jumps and weights $\Lam(n)n^{-1/2}$, an instance of a known fact for
+L\'evy generators with non-negative jump measure; and (iv) heuristic Birman--Schwinger and
+intersection-theoretic reformulations of Weil positivity, which are not proved. We also show that
+the naive ``Hodge-index'' form built from the shifted Weil matrix is positive semidefinite for every
+window, so that its signature carries no information about RH. Nothing here proves RH.
 \end{abstract}
 
-\tableofcontents
-\newpage
+\maketitle
 
-%% =====================================================================
-\section*{Preface}
-%% =====================================================================
-This is not a proof of the Riemann Hypothesis. It is a precise, honest account of a single
-route --- the de~Branges/colligation route in the form proposed by Connes --- carried as far as it
-rigorously goes, together with the exact localization of what remains. The programme operates under
-one non-negotiable rule: \emph{a false positive is worse than a failure}. Every statement is either
-proved (and labelled Theorem/Lemma/Proposition) or explicitly flagged as Conjecture or Open target.
-Several places record corrections of the authors' own earlier proposals; these are structural data,
-not embarrassments. The companion letter to A.~Connes summarizes the strategic picture and the map.
+\tableofcontents
 
 %% =====================================================================
 \section{Foundations: the window, the Weil form, and the wall}
 %% =====================================================================
 
 \subsection{The completed zeta function and the spectral window}
-Let $\xi(s)=\half s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ be the completed Riemann zeta function:
-entire of order $1$, $\xi(s)=\xi(1-s)$, real on $\R$ and on the critical line $\Re s=\half$. Write
+Let $\xi$ be the completed Riemann zeta function,
+$\xi(s)=\half s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$; it is entire of order $1$, $\xi(s)=\xi(1-s)$, real on $\R$ and on the critical line $\Re s=\half$.
+Write
 \[
    \Xibar(z):=\xi(\half+iz),\qquad \phi(z):=\frac{\Xibar'(z)}{\Xibar(z)},\qquad
    m(z):=-\phi(z).
 \]
-RH is the statement that all zeros of $\Xibar$ are real.
+RH is the statement that all zeros of $\Xibar$ are real. Nontrivial zeros of $\zeta$ are written
+$\rho=\beta+i\gam$.
 
-Fix $\lambda>1$ and set $L=2\log\lambda$. On the window $[0,L]$ with the Fourier basis
-$e_n(y)=e^{2\pi iny/L}$ ($n=-N,\dots,N$), the Riemann--Weil explicit formula realizes the Weil
-quadratic form as a symmetric matrix $A=A_\lambda$, split into archimedean/pole and prime parts,
+Fix $\lambda>1$ and set $L=2\log\lambda$. Let $W$ denote the Weil functional: for a test
+function $g\in C_c^\infty(\R)$ with $G(s)=\int_\R g(y)e^{(s-\half)y}\,dy$, $W(g)=\sum_\rho G(\rho)$
+(sum over nontrivial zeros, symmetrically in $\gam$), which by the Riemann--Weil explicit formula
+equals an archimedean term plus the pole terms minus the prime sum
+$\sum_n\Lam(n)n^{-1/2}(g(\log n)+g(-\log n))$ \cite{Weil,Bombieri}. On the window $[0,L]$ with
+the Fourier basis $e_n(y)=e^{2\pi iny/L}\mathbf 1_{[0,L]}(y)$ ($n=-N,\dots,N$) set
 \[
-   A_\lambda=L_{\mathrm{arch}}-L_{\mathrm{prime}},\qquad
-   A_\lambda[m,n]=A^{\mathrm{sm}}_\lambda[m,n]+A^{\mathrm{osc}}_\lambda[m,n],
+   A_\lambda[m,n]:=W(e_m^*\star e_n),\qquad e_m^*(y)=\overline{e_m(-y)},
 \]
-the smooth part governed by the prime number theorem (PNT) and the oscillatory part
-$A^{\mathrm{osc}}_\lambda=-\sum_\rho c_{m,n}(\rho)\,\lambda^{2\rho-1}(1+o(1))$ the sum over
-nontrivial zeros.
+a Hermitian $(2N+1)\times(2N+1)$ matrix. The function $e_m^*\star e_n$ is continuous and
+piecewise smooth with support in $[-L,L]$, not $C^\infty$; for it, with $a=\rho-\half$,
+\begin{equation}\label{eq:Gmn}
+   G_{m,n}(\rho)=\int_\R(e_m^*\star e_n)(y)e^{ay}\,dy
+   =\frac{e^{aL}+e^{-aL}-2}{(a+2\pi im/L)(a+2\pi in/L)}=O\big(e^{L/2}|\gam|^{-2}\big),
+\end{equation}
+so the zero sum $A_\lambda[m,n]=\sum_\rho G_{m,n}(\rho)$ converges absolutely, and the explicit
+formula extends to this class \cite{Bombieri}. Splitting the explicit formula gives
+$A_\lambda=L_{\mathrm{arch}}-L_{\mathrm{prime}}$, where $L_{\mathrm{arch}}$ collects the
+archimedean and pole terms and $L_{\mathrm{prime}}$ the prime sum.
 
 \subsection{Doob conjugation and the wall}
-By Perron--Frobenius (the unconditional Theorem~2.2 of the programme), $A_\lambda$ has a simple
-lowest eigenvalue $\eps_0=\eps_0(\lambda)$ with strictly positive eigenvector $u_0>0$. Doob
-conjugation by $u_0$ produces the generator
-\[
-   G_\lambda:=u_0^{-1}(A_\lambda-\eps_0)u_0\ \succeq 0,
-\]
-a positive form whose internal structure (the $(k+1)^2$ Dirichlet ladder of Lemma~2.3.F) is
-\emph{shape} data, while the additive constant $\eps_0$ is \emph{sign} data.
+Let $\eps_0=\eps_0(\lambda)$ be the lowest eigenvalue of $A_\lambda$. We use two structural
+properties as informal assumptions; they are not proved in this paper and are used only in the
+remarks of Sections~5.1 and~5.3, in no proved statement.
+\begin{enumerate}[label=(H\arabic*)]
+\item \emph{Perron--Frobenius property.} $\eps_0$ is simple and has an eigenvector $u_0$ with
+strictly positive entries in the real basis $\{1,\cos(2\pi ny/L),\sin(2\pi ny/L)\}$.
+\item \emph{Ladder.} The Doob-conjugated generator
+$G_\lambda:=u_0^{-1}(A_\lambda-\eps_0)u_0\succeq0$ has the $(k+1)^2$ Dirichlet ladder structure,
+with lowest nonzero level $(\pi/L)^2$ after normalisation.
+\end{enumerate}
+The positive form $G_\lambda$ carries what we call \emph{shape} data, while the additive constant
+$\eps_0$ is \emph{sign} data.
 
-\medskip\noindent\textbf{Wall $W$: the sign $\eps_0\ge0$.}
-The single surviving obstruction of the route is Weil positivity in window form:
-\[
-   \boxed{\ \eps_0(\lambda)\ge 0\ \text{ for all }\lambda\ \Longleftrightarrow\ \RH.\ }
-\]
-Equivalently $L_{\mathrm{prime}}\preceq L_{\mathrm{arch}}$, equivalently
-$\mu_{\max}(L_{\mathrm{prime}},L_{\mathrm{arch}})\le1$. Numerically (companion computations,
-not reproduced here) the value is marginal: $\mu_{\max}=1$ for $\zeta$.
+\medskip\noindent\textbf{The wall: the sign $\eps_0\ge0$.}
+By Weil's criterion \cite{Weil,Bombieri}, RH holds if and only if $W(g^*\star g)\ge0$ for all
+$g\in C_c^\infty(\R)$; it suffices to take $g$ supported in $[0,L]$ for every $L>0$. Under RH, for $g=\sum_nc_ne_n$ the absolutely convergent zero sum gives
+$\sum_{m,n}\bar c_mc_nA_\lambda[m,n]=\sum_\gamma|\hat g(\gamma)|^2\ge0$ with
+$\hat g(\gamma)=\int_0^Lg(y)e^{i\gamma y}\,dy$, so $\eps_0(\lambda)\ge0$ for all $\lambda$ and all $N$. The converse would require the
+window trigonometric polynomials to be dense in a topology for which $W$ is continuous; we do not
+use it. We call the family of inequalities $\eps_0(\lambda)\ge0$ the \emph{wall}; equivalently
+$L_{\mathrm{prime}}\preceq L_{\mathrm{arch}}$, equivalently, when
+$L_{\mathrm{arch}}$ is positive definite,
+$\mu_{\max}(L_{\mathrm{prime}},L_{\mathrm{arch}})\le1$ for the largest generalised eigenvalue.
 \medskip
 
 %% =====================================================================
@@ -160,368 +154,417 @@ For $\kap>0$ set $\Ek(z)=\Xibar'(z)-i\kap\Xibar(z)$, $\Ek^\#(z)=\overline{\Ek(\b
    \Sk(z)=\frac{\Ek^\#(z)}{\Ek(z)}=\frac{\phi(z)+i\kap}{\phi(z)-i\kap},\qquad
    K_S(z,w)=\frac{1-S(z)\overline{S(w)}}{2\pi i(\bar w-z)} .
 \]
-For the shifted family, $\Th_\om(z)=\xi(\half+\om+iz)/\xi(\half+\om-iz)$ ($\om>0$).
+For the shifted family, $\Th_\om(z)=\xi(\half+\om+iz)/\xi(\half+\om-iz)$ ($\om>0$); thus
+$\Th_\om=E_\om^\#/E_\om$ with $E_\om(z)=\xi(\half+\om-iz)$.
 
 \begin{proposition}[de Branges--Rovnyak; safe region]\label{prop:model}
 If $S$ is holomorphic with $|S|\le1$ on $\C_+$ (\emph{Schur}), then $K_S\succeq0$ and the
 reproducing-kernel space $\mathcal H(S)$ is a Hilbert space; when $S$ is inner,
 $\mathcal H(S)=H^2\ominus SH^2$ is a closed subspace of the Hardy space and carries a conservative
 unitary colligation with transfer function $S$. Moreover $\Th_\om$ is inner on $\C_+$ for every
-$\om>\tfrac12$.
+$\om\ge\tfrac12$.
 \end{proposition}
 \begin{proof}
-The first statement is classical (Sz.-Nagy--Foia\c s, de~Branges--Rovnyak). For the second:
-$|\Th_\om|=1$ on $\R$ since numerator and denominator are conjugates there; a pole of $\Th_\om$ is a
-zero of $\xi(\half+\om-iz)$, located at $\Im z=\beta-\half-\om$ for a zero $\rho=\beta+i\gam$ with
-$0<\beta<1$, hence in the lower half-plane when $\om>\half$. Thus $\Th_\om$ is bounded by $1$ and
-holomorphic on $\C_+$.
+The first statement is classical \cite{SNF,deB}. For the second we prove a factorisation valid for
+every $\om>0$, used again in Section~4.
+
+The zeros of $E_\om$ are $w_\rho=i(\rho-\half-\om)=-\gam+i(\beta-\half-\om)$, and those of
+$E_\om^\#(z)=\xi(\half+\om+iz)$ are $\bar w_\rho$. Since $E_\om$ has order $1$ and
+$E_\om(0)=\xi(\half+\om)\neq0$, Hadamard's theorem gives
+$E_\om(z)=E_\om(0)e^{bz}\prod_\rho(1-z/w_\rho)e^{z/w_\rho}$ and the conjugate expansion for
+$E_\om^\#$. As $1/\bar w-1/w=2i\Im w/|w|^2$ and $\sum_\rho|w_\rho|^{-2}<\infty$, the exponential
+convergence factors combine, and
+\begin{equation}\label{eq:factor}
+   \Th_\om(z)=e^{i\tau z}\prod_\rho\frac{1-z/\bar w_\rho}{1-z/w_\rho},\qquad
+   |\Th_\om(z)|=e^{-\tau\Im z}\prod_\rho\frac{|z-\bar w_\rho|}{|z-w_\rho|},
+\end{equation}
+with $\tau\in\R$ and an absolutely convergent product, since
+$|(1-z/\bar w)/(1-z/w)-1|\ll_z|\Im w|/|w|^2$. For $z\in\C_+$ a factor is $\le1$ if
+$\Im w_\rho<0$, equals $1$ if $\Im w_\rho=0$, and is $\ge1$ if $\Im w_\rho>0$.
+
+We show $\tau\ge0$. On $z=iy$, $y\ge\half+\om$, the functional equation gives
+$|\Th_\om(iy)|=\xi(\half-\om+y)/\xi(\half+\om+y)\le1$, because $\xi$ is positive and increasing on
+$[1,\infty)$: there $\xi'/\xi(\sigma)=\sum_\rho\Re\frac1{\sigma-\rho}
+=\sum_\rho\frac{\sigma-\beta}{|\sigma-\rho|^2}>0$ (zeros summed in conjugate pairs). For a factor
+with $w=a-ib$, $0<b<\half+\om=:B$, and $y\ge8B$,
+\[
+  \log\frac{|iy-\bar w|}{|iy-w|}=\tfrac12\log\Big(1-\frac{4by}{a^2+(y+b)^2}\Big)
+  \ge-\frac{4By}{a^2+y^2},
+\]
+using $4by/(a^2+(y+b)^2)\le4b/y\le\half$ and $\log(1-x)\ge-2x$ on $[0,\half]$. Since the number of
+zeros with $|\gam|\le T$ is $O(T\log T)$, $\sum_\rho y/(\gam^2+y^2)=O(\log y)$, so the product of
+the factors with $\Im w_\rho<0$ is $\ge y^{-C}$ on $iy$; the factors with $\Im w_\rho\ge0$ are
+$\ge1$ there. Hence $e^{-\tau y}y^{-C}\le1$ for large $y$, so $\tau\ge0$.
+
+If $\om\ge\half$, then $\beta-\half-\om<0$ for every zero (as $\beta<1$), so all factors are
+$\le1$ on $\C_+$, $\Th_\om$ is holomorphic and bounded by $1$ there, and $|\Th_\om|=1$ on $\R$.
+Thus $\Th_\om$ is inner. (Compare the de~Branges structure-function property of the shifted
+$\xi$ for shifts $\ge\half$ in \cite{Lagarias}.)
 \end{proof}
 
 \subsection{The adelic realization and the angle reduction}
 Let $\Hil=L^2(\Ad_\Q^\times/\Q^\times,d^\times x)$ with the scaling action $(U_tf)(x)=f(e^tx)$.
-Define the Lax--Phillips incoming/outgoing subspaces
+Define the Lax--Phillips \cite{LP} incoming/outgoing subspaces
 \[
    \Dm_-=\{f:f(x)=0\ \text{for } |x|>1\},\qquad \Dm_+=\mathcal F\,\Dm_-,
 \]
-$\mathcal F$ the adelic (Tate) Fourier transform. The scattering operator has characteristic
-function $\Th_0$ (the ratio of completed zeta across the functional equation; Connes' spectral
-realization / trace formula), and the interaction space is $K=\Hil\ominus(\Dm_-\oplus\Dm_+)$.
+$\mathcal F$ the adelic (Tate) Fourier transform, and the interaction space
+$K=\Hil\ominus(\Dm_-\oplus\Dm_+)$. This set-up is suggested by Connes' spectral realization of the
+zeros \cite{Connes}.
 
-\begin{proposition}[angle criterion --- an equivalence, not an independent route]\label{thm:angle}
-If $\Dm_-\oplus\Dm_+$ is a closed direct sum, then $K$ is a closed subspace of the Hilbert space
-$\Hil$, the model identification $K\cong\mathcal H(\Th_0)$ is isometric, $K_{\Th_0}\succeq0$, and RH
-holds. Consequently
+\begin{conjecture}[angle criterion; heuristic]\label{thm:angle}
+The Lax--Phillips characteristic function of $(\Hil,U_t,\Dm_\pm)$ is $\Th_0$ (suitably
+regularised at the zeros on the critical line, where $\Th_0$ has real poles), and
 \[
    \RH\ \Longleftrightarrow\ \angle(\Dm_-,\Dm_+)>0\ \Longleftrightarrow\
    \text{the overlap form on }\Dm_-\cap\overline{\Dm_+}\ \text{is}\ \succeq0 .
 \]
-\emph{This is a reformulation, not a proof route: the closedness / positive-angle hypothesis is itself
-RH-strength} (it is equivalent to $K_{\Th_0}\succeq0$), so it must be supplied by an independent
-construction. The Davenport--Heilbronn falsifier illustrates where such a construction must use
-arithmetic: $\Dm_+=\mathcal F\Dm_-$ uses the adelic Fourier transform $\mathcal F=\bigotimes'_v
-\mathcal F_v$, the \emph{Euler product over places}; a function with a functional equation but no Euler
-product has no such $\Dm_+$.
-\end{proposition}
+\end{conjecture}
 
 \begin{remark}
-The naive scalar Euler product diverges at the critical line, so $\Th_0$ on $\C_+$ is obtained by
-analytic continuation, not literal product convergence; the Euler product enters only as the
-restricted-tensor structure of $\mathcal F$. This is the corrected reading (Connes).
+We do not prove that the Lax--Phillips characteristic function of $(\Hil,U_t,\Dm_\pm)$ is
+$\Th_0$, nor the stated equivalences. Even if true, this would be a reformulation: the
+positive-angle hypothesis would itself be of the strength of RH. The construction of $\Dm_+$ uses
+the adelic Fourier transform $\mathcal F=\bigotimes'_v\mathcal F_v$, i.e.\ the product structure
+over places, which a function with a functional equation but no Euler product (such as the
+Davenport--Heilbronn function) does not have.
+The scalar Euler product does not converge on the critical line, so $\Th_0$ on $\C_+$ is defined by
+analytic continuation; in the set-up above the Euler product enters only through the
+restricted-tensor structure of $\mathcal F$.
 \end{remark}
 
 %% =====================================================================
-\section{$L1\Leftrightarrow\RH$: the Laplace--pole theorem}
+\section{\texorpdfstring{$L1\Rightarrow\RH$}{L1 implies RH}: a Laplace--pole argument}\label{sec:L1}
 %% =====================================================================
-Let $B(t)=A^{\mathrm{osc}}_{e^t}$ and $\mathcal L B(w)=\int_0^\infty e^{-wt}B(t)\,dt$, with residue
-$R_\rho=\operatorname{Res}_{w=2\rho-1}\mathcal LB$. Write \textbf{$L1$}: $\sup_\lambda\max_{m,n}
-|A^{\mathrm{osc}}_\lambda[m,n]|<\infty$.
+Let $B(t)=A_{e^t}$ ($t>0$, so $L=2t$) and $\mathcal LB(q)=\int_0^\infty e^{-qt}B(t)\,dt$
+(entrywise). For fixed $N$ write \textbf{$L1$}: $\sup_{\lambda>1}\max_{m,n}|A_\lambda[m,n]|<\infty$.
+By \eqref{eq:Gmn} the zero $\rho$ contributes $G_{m,n}(\rho)$ to $A_\lambda[m,n]$, with
+$a=\rho-\half$, $|\Re a|<\half$.
 
-\begin{lemma}[Paley--Wiener nonvanishing; unconditional]\label{lem:pw}
-For every nontrivial zero $\rho$ and all $m,n$, $R_\rho[m,n]\ne0$.
+\begin{lemma}[nonvanishing of the window transform]\label{lem:pw}
+If $\Re\rho\neq\half$, then $G_{m,n}(\rho)\neq0$ for all $m,n$ and all $L>0$.
 \end{lemma}
 \begin{proof}
-$R_\rho[m,n]=w(\rho)\,\hat e_m(\rho)\hat e_n(\rho)$ with $w(\rho)\ne0$ and the window transform
-\[
-   \hat e_n(\rho)=\int_0^L e^{2\pi iny/L}e^{\rho y}\,dy=\frac{e^{\rho L}-1}{\rho+2\pi in/L}.
-\]
-This vanishes iff $e^{\rho L}=1$, i.e.\ iff $\rho=2\pi ik/L$ is purely imaginary. A nontrivial zero
-has $\Re\rho\in(0,1)$, hence is never purely imaginary, so $\hat e_n(\rho)\ne0$ for all $n$.
+The numerator of \eqref{eq:Gmn} is $(e^{aL/2}-e^{-aL/2})^2$, which vanishes iff $e^{aL}=1$, i.e.\
+iff $a\in2\pi i\Z/L$; this forces $\Re a=0$.
 \end{proof}
 
-\begin{theorem}[$L1\Rightarrow\RH$; the Laplace--pole theorem]\label{thm:L1}
-If $L1$ holds, then RH holds.
+\begin{theorem}[a Laplace--pole characterisation]\label{thm:L1}
+$\sup_{\lambda>1}|A_\lambda[0,0]|<\infty$ if and only if RH holds. In particular, for every $N$,
+$L1$ implies RH.
 \end{theorem}
 \begin{proof}
-If $L1$ holds, each entry $B[m,n](t)$ is bounded, so $\mathcal LB[m,n]$ is holomorphic in
-$\Re w>0$; hence $R_\rho[m,n]=0$ for every zero with $\Re\rho>\half$. By Lemma~\ref{lem:pw} this
-forces the absence of such zeros, and the functional equation removes $\Re\rho<\half$; thus RH.
+For $m=n=0$, \eqref{eq:Gmn} with $L=2t$ gives
+$B[0,0](t)=\sum_\rho a^{-2}(e^{2at}+e^{-2at}-2)$, $a=\rho-\half$. Since $|e^{\pm2at}|\le e^t$ and
+$\sum_\rho|a|^{-2}<\infty$, dominated convergence allows termwise integration for $\Re q>1$:
+\[
+   \mathcal LB[0,0](q)=\sum_\rho\frac1{a^2}\Big(\frac1{q-2a}+\frac1{q+2a}-\frac2q\Big).
+\]
+The series converges locally uniformly on $\C$ minus the discrete set $\{0\}\cup\{\pm2a\}$, so it
+defines a meromorphic function on $\C$. Suppose $\rho_0$ is a zero with $\Re\rho_0>\half$, of
+multiplicity $\mu$, and $a_0=\rho_0-\half$. At $q=2a_0$ ($\Re q>0$) only the terms of $\rho_0$
+(through $1/(q-2a)$) and of $1-\rho_0$ (through $1/(q+2a)$ with $a=-a_0$) are singular, and the
+residue is $2\mu/a_0^2\neq0$. If $B[0,0]$ is bounded, $\mathcal LB[0,0]$ is holomorphic on
+$\Re q>0$ and coincides with the meromorphic continuation, a contradiction; the functional
+equation excludes $\Re\rho<\half$ as well. Conversely, under RH, $a=i\gam$ and
+$A_\lambda[0,0]=\sum_\gam4\sin^2(\gam\log\lambda)/\gam^2\le4\sum_\gam\gam^{-2}$. Since $L1$ bounds
+in particular the $(0,0)$ entry, $L1\Rightarrow\RH$.
 \end{proof}
 
-\begin{remark}[the converse, conditional --- Connes' audit]\label{rem:converse}
-The reverse implication $\RH\Rightarrow L1$ is \emph{not} automatic from the boundedness of each
-factor $\lambda^{2i\gam}$: the zero-sum is infinite and only conditionally (regularly) convergent, so
-$L1$ requires a precise summation prescription and a uniform-in-$\lambda$ estimate of the regularized
-zero-sum. We therefore state only $L1\Rightarrow\RH$ as proved, and regard the equivalence
-$L1\Leftrightarrow\RH$ as established \emph{modulo} that regularized zero-sum estimate, which is left
-open. The forward (and load-bearing) direction is unconditional.
+\begin{remark}[The converse and the other entries]\label{rem:converse}
+Under RH, $L1$ holds for every fixed $N$: $|G_{m,n}(\rho)|\le\|e_m^*\star e_n\|_1\le L^2$, and for
+$|\gam|\ge4\pi N/L$ both factors of the denominator of \eqref{eq:Gmn} have modulus $\ge|\gam|/2$
+while the numerator has modulus $\le4$, so $|G_{m,n}(\rho)|\le16/\gam^2$. The zeros with
+$|\gam|<4\pi N/L$ number $O((N/L)\log(2+N/L))$ and there are none when $4\pi N/L<14$, so their
+contribution is $O(L^2(N/L)\log(2+N/L))$, bounded in $L$. For $(m,n)\neq(0,0)$ the term of a zero is
+$e^{2at}$ times a rational function of $t$, whose Laplace transform has a logarithmic branch point at
+$q=2a$ besides a pole; the statement that $\mathcal LB[m,n]$ does not extend holomorphically to
+$\Re q>0$ when $\xi$ has a zero with $\Re\rho>\half$ is plausible by Lemma~\ref{lem:pw} but is not
+proved here.
 \end{remark}
 
 \begin{remark}
-The forward implication uses only the raw matrix entries (Lemma~\ref{lem:pw}) and is independent of
-the Lanczos/Jacobi coordinate phrasing of $L1$; the latter requires only the cyclicity of the
-near-radical windows. Thus the program's central reduction $\text{2.3.F}\Leftarrow L1$ now reads
-$\text{2.3.F}\Leftarrow L1\Leftrightarrow\RH$: there is no easier route hidden inside $L1$. DH has
-an off-line zero, hence (Lemma~\ref{lem:pw}) unbounded $A^{\mathrm{osc}}\sim\lambda^{2\beta-1}$.
+The argument uses only the matrix entry $A_\lambda[0,0]$.
+It uses no Euler product: for any entire function of order $1$ with a functional equation
+$s\mapsto1-s$, zeros in a vertical strip of finite width, none at $s=\half$, and
+$\sum_\rho|\rho-\half|^{-2}<\infty$ (for instance the completed Davenport--Heilbronn function), the
+same proof, with $\Re q$ large in place of $\Re q>1$, shows that a zero with $\Re\rho>\half$ makes the
+corresponding $(0,0)$ entry unbounded.
 \end{remark}
 
 %% =====================================================================
 \section{The Kre\u\i n--Langer index}
 %% =====================================================================
-A meromorphic $S$ with $|S|=1$ on $\R$ is a \emph{generalized Schur function}; by Kre\u\i n--Langer
-its kernel $K_S$ has a finite number of negative squares equal to the number of poles of $S$ in
-$\C_+$.
+We use the theorem of Kre\u\i n and Langer \cite{KL72}: if $S$ is meromorphic in $\C_+$ and $K_S$
+has $\kappa<\infty$ negative squares, then $S=S_0/B$ with $S_0$ a Schur function and $B$ a
+Blaschke product of degree $\kappa$ without common zeros with $S_0$; conversely every such quotient
+has exactly $\kappa$ negative squares (see also \cite{ADRS}; the half-plane version follows from
+the disc version by a Cayley transform). In particular, if $\indm(K_S)$ is finite then it equals the
+number of poles of $S$ in $\C_+$ counted with multiplicity; if $S$ has infinitely many poles in
+$\C_+$ then $\indm(K_S)=\infty$.
 
-\begin{theorem}[the sharp index]\label{thm:kl}
-For the shifted scattering function, $\indm(K_{\Th_\om})=\#\{\text{zeros }\rho=\beta+i\gam\ \text{of}
-\ \xi\ \text{with}\ \beta-\half>\om\}$. Consequently
-\[
-   \RH\ \Longleftrightarrow\ \indm(K_{\Sk})=0 .
-\]
-This is strictly stronger than the boundary certificate $\mu_{\max}=1$, which is blind to the
-interior off-line spectrum; the index is an exact integer and a robust invariant.
-\end{theorem}
-\noindent A planted off-line zero of real part $\beta$ contributes $2$ to $\indm$ (poles at
-$z=\pm\gam_0+i(\beta-\half-\om)$ once $\om<\beta-\half$); $\zeta$ has $\indm=0$, DH has
-$\indm=2\cdot\#\{\text{its off-line zeros}\}$.
-
-%% =====================================================================
-\section{The arithmetic spectral surface and the curvature theorem}
-%% =====================================================================
-
-\subsection{The surface and its polarization}
-Let $V=\C^{2N+1}$, $\mathcal S=V\otimes V$, with intersection form
-$\mathcal I=A\boxtimes I+I\boxtimes A-2\eps_0(I\boxtimes I)$ and polarization $H=u_0\otimes u_0$ (the
-Perron--Frobenius class, unconditional and strictly positive).
-
-\begin{proposition}[Hodge-index reformulation]\label{prop:hodge}
-$\RH$ is equivalent to: $\mathcal S$ has Hodge-index signature $(1,\dim-1)$ with the positive
-direction $H$; equivalently the primitive part is negative semidefinite, equivalently
-$W(f)=-\mathcal I^-_{\mathrm{prim}}(Z_f,Z_f)\ge0$ for the correspondence classes $Z_f$.
-\end{proposition}
-
-\subsection{Curvature: the new unconditional theorem}
-After Doob conjugation, $G_\lambda$ is a Beurling--Deny pure-jump Dirichlet form
-\[
-   L\,v(\theta)=\sum_j c_j\big[v(\theta+a_j)+v(\theta-a_j)-2v(\theta)\big],\qquad
-   a_j=k\log p,\ \ c_j=\tfrac{\Lam(p^k)}{\sqrt{p^k}}>0,
-\]
-with L\'evy symbol $\psi(\xi)=\sum_j 2c_j(1-\cos a_j\xi)\ge0$, carr\'e-du-champ
-$\Gamma(u,v)=\half(L(uv)-uLv-vLu)$, and iterated $\Gamma_2(u,v)=\half(L\Gamma(u,v)-\Gamma(Lu,v)
--\Gamma(u,Lv))$.
-
-\begin{theorem}[exact $\Gamma_2$ kernel]\label{thm:gamma2kernel}
-$\Gamma_2(e^{i\xi\theta},e^{-i\eta\theta})(\theta)=B(\xi,\eta)^2\,e^{i(\xi-\eta)\theta}$, where
-$B(\xi,\eta)=\half[\psi(\xi)+\psi(\eta)-\psi(\xi-\eta)]$. Hence for $v=\sum_\xi a_\xi e^{i\xi\theta}$,
-$\Gamma_2(v,\bar v)$ is the Gram form of the Hadamard square $B^{\circ2}=[B(\xi,\eta)^2]$.
+\begin{theorem}[the index of $\Th_\om$]\label{thm:kl}
+Let $\om>0$ and let $P_\om\in[0,\infty]$ be the number of poles of $\Th_\om$ in $\C_+$, counted
+with multiplicity. Then $\indm(K_{\Th_\om})=P_\om$. Moreover $P_\om\le N_\om$, the number of zeros
+of $\xi$ with $\beta>\half+\om$ counted with multiplicity, with equality for all $\om$ outside a
+countable set.
 \end{theorem}
 \begin{proof}
-With $u=e^{i\xi\theta}$, $w=e^{-i\eta\theta}$: $Lu=-\psi(\xi)u$, $Lw=-\psi(\eta)w$,
-$L(uw)=-\psi(\xi-\eta)uw$, so $\Gamma(u,w)=B(\xi,\eta)e^{i(\xi-\eta)\theta}$. Then
-$L\Gamma(u,w)=-\psi(\xi-\eta)B\,e^{\,\cdot}$, $\Gamma(Lu,w)=-\psi(\xi)B\,e^{\,\cdot}$,
-$\Gamma(u,Lw)=-\psi(\eta)B\,e^{\,\cdot}$, whence $\Gamma_2=\half B[\psi(\xi)+\psi(\eta)
--\psi(\xi-\eta)]e^{\,\cdot}=B^2e^{\,\cdot}$.
+By \eqref{eq:factor} the poles of $\Th_\om$ in $\C_+$ lie among the $w_\rho$ with
+$\Im w_\rho=\beta-\half-\om>0$. A pole $w_\rho$ can be cancelled only by a zero $\bar w_{\rho'}$ of
+the numerator, i.e.\ $w_{\rho'}=\bar w_\rho$, which means $\rho'=1+2\om-\beta+i\gam$ is a zero;
+for each pair of zeros this fixes $\om=(\beta+\beta'-1)/2$, so outside a countable set of $\om$
+there is no cancellation and $P_\om=N_\om$; always $P_\om\le N_\om$.
+
+If $P_\om=\infty$, then $\indm(K_{\Th_\om})=\infty$, since a finite index would give finitely many
+poles by \cite{KL72}. If $P_\om<\infty$, let $B_\om$ be the finite Blaschke product with zeros at the
+poles of $\Th_\om$ in $\C_+$. In \eqref{eq:factor}, the factors of a cancelling pair
+($w_{\rho'}=\bar w_\rho$) have product of moduli $1$, the remaining factors with $\Im w>0$ are
+removed by $B_\om$, and all other factors are $\le1$; with $\tau\ge0$ this gives
+$|\Th_\om B_\om|\le1$ on $\C_+$ (regrouping is allowed since the product converges absolutely).
+So $\Th_\om=S_0/B_\om$ with $S_0$ Schur and, by construction, no common zeros, and \cite{KL72}
+gives $\indm(K_{\Th_\om})=\deg B_\om=P_\om$.
 \end{proof}
 
-\begin{theorem}[$CD(0,\infty)$ for the prime kernel; unconditional]\label{thm:CD0}
-If all jump weights $c_j\ge0$ (the von Mangoldt case, $\zeta$), then $B$ is a positive-definite
-kernel, hence $B^{\circ2}$ is positive-definite (Schur product theorem), hence $\Gamma_2\ge0$:
-the prime Dirichlet generator satisfies $CD(0,\infty)$. The Davenport--Heilbronn kernel
-($c_j$ twisted by a non-principal character) is not positive-definite and $\Gamma_2$ acquires a
-negative part.
-\end{theorem}
+\begin{corollary}\label{cor:kl}
+$\RH$ holds if and only if $\indm(K_{\Th_\om})=0$ for every $\om>0$.
+\end{corollary}
 \begin{proof}
-Using $\cos a(\xi-\eta)=\cos a\xi\cos a\eta+\sin a\xi\sin a\eta$,
-\[
-   \psi(\xi)+\psi(\eta)-\psi(\xi-\eta)=\sum_j 2c_j\big[(1-\cos a_j\xi)(1-\cos a_j\eta)+\sin a_j\xi\,
-   \sin a_j\eta\big],
-\]
-so $B=\sum_j c_j\,(g_j\otimes g_j+h_j\otimes h_j)$ with $g_j(\xi)=1-\cos a_j\xi$,
-$h_j(\xi)=\sin a_j\xi$ --- a sum, with coefficients $c_j\ge0$, of rank-one positive-definite
-kernels. Hence $B\succeq0$, and by Schur $B^{\circ2}\succeq0$; Theorem~\ref{thm:gamma2kernel} gives
-$\Gamma_2\ge0$. The twisted case has some $c_j<0$, breaking positive-definiteness of $B$.
+Under RH, $N_\om=0$ for all $\om>0$. Conversely, if $\xi$ has a zero with $\beta_0>\half$, choose
+$\om\in(0,\beta_0-\half)$ outside the countable exceptional set; then
+$\indm(K_{\Th_\om})=N_\om\ge1$.
 \end{proof}
 
-\medskip\noindent\textbf{Result (curvature positivity $=$ Euler positivity).}
-Theorem~\ref{thm:CD0} identifies the curvature positivity of $\zeta$'s prime kernel with the
-positivity of the von Mangoldt weights, i.e.\ with the Euler product ($\log=\Lam*1$ with nonnegative
-coefficients). This is a local, algebraic place where multiplicativity enters; the falsifier breaks
-it. The archimedean Laplacian ($\psi=\xi^2$, $B_\phi(\xi,\eta)=\xi\eta$) is also positive-definite,
-and the combined cross term $B_\phi\circ B_{\text{prime}}$ is positive-definite by Schur, so
-$\Gamma_2\ge0$ persists for the full generator.
-\medskip
-
-\subsection{The honest limit of curvature: marginality}
-$CD(0,\infty)$ is the flat case and gives no spectral gap: $\Gamma_2\ge\rho\,\Gamma$ amounts to
-$\psi(\xi)\ge\rho$, which fails near $\xi=0$ since $\psi(0)=0$. The genuine gap is the Dirichlet
-ground state $(\pi/L)^2$ of the confinement (Lemma~2.3.F), but this is the gap of the
-\emph{Doob-reduced} $G_\lambda$, i.e.\ $\eps_1-\eps_0$, not $\eps_0$ itself.
-
-\medskip\noindent\textbf{Result (shape vs.\ sign --- the crystallization).}
-Every structure on the route --- curvature, de~Branges colligation, Kre\u\i n--Langer index,
-Hodge-index surface --- is built from $G_\lambda=A-\eps_0$ and is therefore \emph{blind to the
-additive constant $\eps_0$}. It proves the \emph{shape} positivity unconditionally (the $(k+1)^2$
-ladder, $CD(0,\infty)$, the internal gap $(\pi/L)^2$). RH is the \emph{sign} $\eps_0\ge0$ --- the
-one quantity invisible to all Doob/scale-invariant structure. This explains uniformly why every
-route in the wider programme terminates at the same wall.
-\medskip
+\noindent A zero $\beta_0+i\gam_0$ off the line with $\beta_0>\half+\om$ comes with its conjugate
+and contributes poles at $z=\mp\gam_0+i(\beta_0-\half-\om)$, hence $2$ to $N_\om$. For the function
+$\Sk$ of Section~2 we only record the easy direction: under RH, $\Xibar$ is in the
+Laguerre--P\'olya class, $\phi(z)=\sum_k\big(\frac1{z-t_k}+\frac1{z+t_k}\big)$ with real $t_k$, so
+$\Im\phi<0$ on $\C_+$, whence $|\Sk|\le1$ there and $\indm(K_{\Sk})=0$. We do not relate the poles
+of $\Sk$ (the zeros of $\Xibar'-i\kap\Xibar$ in $\C_+$) to off-line zeros of $\xi$.
 
 %% =====================================================================
-\section{The sign as a Schr\"odinger bound state: the pole as barrier}
+\section{A positive form and the curvature of prime jump generators}
 %% =====================================================================
-In the geometric coordinate $\theta=\pi y/L\in[0,\pi]$ the Weil form is a Dirichlet Schr\"odinger
-operator
-\[
-   H_\lambda=-\frac{d^2}{d\theta^2}+W_\lambda(\theta),\qquad
-   W_\lambda=W^{\mathrm{pole}}_\lambda+W^{\mathrm{arch}}_\lambda-W^{\mathrm{prime}}_\lambda,\qquad
-   \eps_0(\lambda)=\inf\operatorname{spec}H_\lambda,
-\]
-so $\eps_0\ge0\Leftrightarrow H_\lambda$ has no negative bound state. The pole of $\zeta$ at $s=1$
-contributes $W^{\mathrm{pole}}=+p_\lambda\ge0$: a strictly positive, $\lambda$-stable
-\emph{repulsive barrier}. The prime part is a \emph{well}.
 
-\begin{proposition}[Birman--Schwinger form]\label{prop:bs}
-$\eps_0(\lambda)\ge0\Leftrightarrow\|K_\lambda(0)\|\le1$, where
-$K_\lambda(0)=G_{\mathrm{Dir}}^{1/2}\,W_\lambda^-\,G_{\mathrm{Dir}}^{1/2}$ is the Birman--Schwinger
-operator, $G_{\mathrm{Dir}}$ the Dirichlet Green's function (gap $1$), and $W_\lambda^-$ the
-negative part of $W_\lambda$ (the prime well minus the pole barrier). The Perron--Frobenius $u_0$ is
-the threshold resonance: it is the eigenvector of $K_\lambda(0)$ at eigenvalue $1$, pinned there by
-the pole.
-\end{proposition}
+\subsection{The tensor form}
+Let $V=\C^{2N+1}$, $\mathcal S=V\otimes V$, and
+$\mathcal I=A\otimes I+I\otimes A-2\eps_0(I\otimes I)$.
 
-\begin{remark}[a self-correction]
-A Lieb--Thirring/trace bound $\Tr K_\lambda<1$ is too lossy at marginality: $\Tr K_\lambda\ge
-\|K_\lambda\|$, and at the edge $\|K_\lambda\|=1$ while $\Tr K_\lambda>1$. The sharp tool is the
-Birman--Schwinger principle (the top eigenvalue), not the trace.
+\begin{remark}\label{prop:hodge}
+If $A u_i=\eps_iu_i$ with $\eps_0\le\eps_1\le\cdots$, then $\mathcal I(u_i\otimes u_j)=
+((\eps_i-\eps_0)+(\eps_j-\eps_0))\,u_i\otimes u_j$. Hence $\mathcal I\succeq0$ for every $\lambda$
+and $N$, with kernel $\C(u_0\otimes u_0)$ when $\eps_0$ is simple. Its signature therefore carries
+no information about RH; in particular $\mathcal S$ never has a Hodge-index signature
+$(1,\dim-1)$ with respect to $\mathcal I$. Any intersection-theoretic reformulation of the wall
+must involve $\eps_0$ itself, not only $A-\eps_0$.
 \end{remark}
 
-\medskip\noindent\textbf{Open target (the pole-pinned spectral radius).}
-Since $G_{\mathrm{Dir}}>0$ and $W^-\ge0$, $K_\lambda(0)$ is positivity-improving, so by
-Perron--Frobenius its top eigenvector is the positive $u_0$. Thus
+\subsection{Curvature of the truncated prime jump generator}
+Fix $L>0$ and the finite set of prime powers $p^k\le e^L$; write $a_j=k\log p$ and
+$c_j=\Lam(p^k)p^{-k/2}>0$ for these jumps. Define on trigonometric polynomials on $\R$ the
+translation-invariant pure-jump generator
 \[
-   \RH\ \Longleftrightarrow\ \text{the spectral radius of the pole-barriered von Mangoldt}\
-   K_\lambda(0)\ \text{equals }1\ \text{uniformly in }\lambda .
+   \mathcal G v(\theta)=\sum_j c_j\big[v(\theta+a_j)+v(\theta-a_j)-2v(\theta)\big],
 \]
-The pole pins the radius $\ge1$ from below ($u_0$ resonance); the DH falsifier, being entire,
-has \emph{no pole}, hence no barrier, hence radius $>1$ and $\eps_0<0$ --- the cleanest statement of
-why the falsifier cannot be positive. \textbf{What pins the radius $\le1$ from above is RH and is the
-missing object.}
+with L\'evy symbol $\psi(u)=\sum_j 2c_j(1-\cos a_ju)\ge0$ (a finite sum), carr\'e-du-champ
+$\Gamma(f,g)=\half(\mathcal G(fg)-f\mathcal Gg-g\mathcal Gf)$, and iterated
+$\Gamma_2(f,g)=\half(\mathcal G\Gamma(f,g)-\Gamma(\mathcal Gf,g)-\Gamma(f,\mathcal Gg))$. We do not
+identify $\mathcal G$ with the Doob-conjugated matrix $G_\lambda$.
+
+\begin{theorem}[$\Gamma_2$ kernel]\label{thm:gamma2kernel}
+$\Gamma_2(e^{iu\theta},e^{-iv\theta})(\theta)=\bk(u,v)^2\,e^{i(u-v)\theta}$, where
+$\bk(u,v)=\half[\psi(u)+\psi(v)-\psi(u-v)]$. Hence for $f=\sum_u a_u e^{iu\theta}$ and each
+$\theta$, $\Gamma_2(f,\bar f)(\theta)$ is the Hermitian form of the Hadamard square
+$\bk^{\circ2}=[\bk(u,v)^2]$ evaluated at the vector $(a_ue^{iu\theta})_u$.
+\end{theorem}
+\begin{proof}
+With $f=e^{iu\theta}$, $g=e^{-iv\theta}$: $\mathcal Gf=-\psi(u)f$, $\mathcal Gg=-\psi(v)g$ ($\psi$
+is even), $\mathcal G(fg)=-\psi(u-v)fg$, so $\Gamma(f,g)=\bk(u,v)fg$. Then
+$\mathcal G\Gamma(f,g)=-\psi(u-v)\bk\,fg$, $\Gamma(\mathcal Gf,g)=-\psi(u)\bk\,fg$,
+$\Gamma(f,\mathcal Gg)=-\psi(v)\bk\,fg$, whence $\Gamma_2=\half\bk[\psi(u)+\psi(v)-\psi(u-v)]fg
+=\bk^2fg$.
+\end{proof}
+
+\begin{theorem}[$CD(0,\infty)$ for the truncated prime generator]\label{thm:CD0}
+The kernel $\bk$ is positive semidefinite, hence so is $\bk^{\circ2}$, and
+$\Gamma_2(f,\bar f)\ge0$ pointwise for every trigonometric polynomial $f$; that is, $\mathcal G$
+satisfies $CD(0,\infty)$.
+\end{theorem}
+\begin{proof}
+Using $\cos a(u-v)=\cos au\cos av+\sin au\sin av$,
+\[
+   \psi(u)+\psi(v)-\psi(u-v)=\sum_j 2c_j\big[(1-\cos a_ju)(1-\cos a_jv)+\sin a_ju\,\sin a_jv\big],
+\]
+so $\bk=\sum_j c_j\,(g_j\otimes g_j+h_j\otimes h_j)$ with $g_j(u)=1-\cos a_ju$,
+$h_j(u)=\sin a_ju$, a non-negative combination of rank-one positive semidefinite kernels. Hence
+$\bk\succeq0$, by Schur $\bk^{\circ2}\succeq0$, and Theorem~\ref{thm:gamma2kernel} gives
+$\Gamma_2\ge0$.
+\end{proof}
+
+\noindent This is an elementary and known property of translation-invariant generators with
+non-negative jump measure (the semigroup commutes with translations); for the $\Gamma$-calculus see
+\cite{BE,BGL}. Only $c_j\ge0$ is used, not
+the multiplicativity of $\Lam$. Adding the archimedean Laplacian ($\psi(u)=u^2$, $\bk(u,v)=uv$)
+keeps the total kernel a sum of positive semidefinite kernels, so $\Gamma_2\ge0$ persists for the
+sum of the two generators.
+
+\subsection{The limit of curvature: marginality}
+$CD(0,\infty)$ is the flat case and gives no spectral gap: $\Gamma_2\ge r\,\Gamma$ on exponentials
+amounts to $\bk(u,u)=\psi(u)\ge r$, which fails near $u=0$ since $\psi(0)=0$. Under (H2) the gap
+$(\pi/L)^2$ is the gap of the Doob-reduced $G_\lambda$, i.e.\ $\eps_1-\eps_0$, not $\eps_0$ itself;
+and $G_\lambda$ is a different object from $\mathcal G$.
+
+\medskip\noindent\textbf{Observation (shape versus sign).}
+The generator $\mathcal G$ of Section~5.2 does not involve $\eps_0$ at all, and the structures
+built from $G_\lambda$ or $A-\eps_0$ (the ladder (H2), the form $\mathcal I$ of Remark~\ref{prop:hodge}) are unchanged when $A$ is shifted by a
+multiple of the identity, and so cannot detect the sign of $\eps_0$. This is an observation about
+these particular structures, not a theorem about all approaches.
 \medskip
 
 %% =====================================================================
-\section{The map and the missing object}
+\section{A heuristic Birman--Schwinger reformulation}
+%% =====================================================================
+Suppose, as a heuristic, that in the coordinate $\theta=\pi y/L\in[0,\pi]$ the Weil form on the
+window were represented by a Dirichlet Schr\"odinger operator
+\[
+   H_\lambda=H_0+V^+_\lambda-V^-_\lambda,\qquad H_0=-\frac{d^2}{d\theta^2},\qquad V^\pm_\lambda\ge0,
+\]
+with $\eps_0(\lambda)=\inf\operatorname{spec}H_\lambda$, where $V^+$ would collect the
+archimedean and pole contributions (the pole of $\zeta$ at $s=1$ giving a positive barrier) and
+$V^-$ the prime contribution. The Weil form is non-local, and no such representation is proved
+here.
+
+\begin{heuristic}[Birman--Schwinger form]\label{prop:bs}
+If the Weil form on the window were represented by $H_\lambda=H_0+V^+-V^-$ with $V^\pm\ge0$, then
+\[
+   \eps_0(\lambda)\ge0\iff r(\tilde K_\lambda)\le1,\qquad
+   \tilde K_\lambda=(H_0+V^+)^{-1/2}\,V^-\,(H_0+V^+)^{-1/2}.
+\]
+\end{heuristic}
+\noindent Given the representation, this is the Birman--Schwinger principle: writing $v=(H_0+V^+)^{1/2}u$,
+one has
+$\langle H_\lambda u,u\rangle=\|v\|^2-\langle\tilde K_\lambda v,v\rangle$. The weaker operator
+$G_{\mathrm{Dir}}^{1/2}V^-G_{\mathrm{Dir}}^{1/2}$, $G_{\mathrm{Dir}}=H_0^{-1}$, gives only the
+sufficient condition $r\le1\Rightarrow\eps_0\ge0$ when $V^+\ne0$. Since $V^+\ge0$ lowers
+$r(\tilde K_\lambda)$, the barrier helps positivity but cannot bound the radius from below.
+
+\begin{remark}[trace bounds]
+For a positive trace-class $\tilde K$, $\Tr\tilde K\ge\|\tilde K\|$, so a trace bound
+$\Tr\tilde K_\lambda\le1$ is only sufficient; when $\eps_0$ is close to $0$ it is expected to be
+too lossy, and the relevant quantity is the top eigenvalue.
+\end{remark}
+
+%% =====================================================================
+\section{The map and an open problem}
 %% =====================================================================
 
 \subsection{The route as a map}
 \begin{center}
 \begin{tikzpicture}[
-   node distance=6mm and 10mm,
+   node distance=6mm and 8mm,
    box/.style={draw, rounded corners, align=center, font=\small, inner sep=3pt, text width=33mm},
    posb/.style={box},
    red/.style={box, dashed},
    open/.style={box, double},
    ar/.style={-{Stealth[length=2mm]}, thick}
 ]
-\node[posb] (l1) {$L1\Rightarrow\RH$\\ \scriptsize Thm.~\ref{thm:L1} (Lem.~\ref{lem:pw} uncond.)};
-\node[posb, right=of l1] (kl) {$\indm(K_{\Sk})=0$\\ \scriptsize Thm.~\ref{thm:kl}};
-\node[posb, right=of kl] (cd) {$\Gamma_2\ge0$ (prime)\\ \scriptsize Thm.~\ref{thm:CD0} uncond.};
-\node[red, below=12mm of kl] (wall) {Wall $W$: $\eps_0\ge0$\\ \scriptsize marginal $\mu_{\max}=1$};
-\node[posb, left=of wall] (shape) {SHAPE (Doob-inv.)\\ \scriptsize $(k+1)^2$, curvature, colligation\\ \textbf{unconditional}};
-\node[open, right=of wall] (sign) {SIGN $=$ RH\\ \scriptsize BS radius $\le1$ from above};
-\node[open, below=12mm of sign] (weil) {Missing object:\\ \scriptsize Weil-pairing analogue / arithmetic\\ Hodge index on $\widehat{\Spec\Z}^2$};
-\node[red, below=12mm of shape] (pole) {Pole of $\zeta$ at $s=1$\\ \scriptsize barrier: radius $\ge1$ from below\\ (DH entire: none)};
+\node[posb] (l1) {$\sup|A_\lambda[0,0]|<\infty\iff\RH$\\ \scriptsize Thm.~\ref{thm:L1}};
+\node[posb, right=of l1] (kl) {$\indm(K_{\Th_\om})=0\ \forall\om$\\ \scriptsize Thm.~\ref{thm:kl}, Cor.~\ref{cor:kl}};
+\node[posb, right=of kl] (cd) {$\Gamma_2\ge0$ (truncated)\\ \scriptsize Thm.~\ref{thm:CD0}};
+\node[red, below=12mm of kl] (wall) {Wall: $\eps_0\ge0$\\ \scriptsize implied by RH};
+\node[red, left=of wall] (shape) {Shape data\\ \scriptsize (H1), (H2), shift-invariant};
+\node[open, right=of wall] (sign) {Sign\\ \scriptsize heuristic: $r(\tilde K_\lambda)\le1$};
+\node[open, below=12mm of sign] (weil) {Problem~9.1:\\ \scriptsize arithmetic intersection\\ pairing (open)};
 
-\draw[ar] (l1)--(kl); \draw[ar] (kl)--(cd);
-\draw[ar] (shape)--(wall); \draw[ar] (pole)--(wall);
-\draw[ar] (wall)--(sign); \draw[ar] (weil)--(sign);
-\draw[ar, dashed] (cd) to[bend left=10] (sign);
+\draw[ar] (shape)--(wall);
+\draw[ar] (wall)--(sign); \draw[ar, dashed] (weil)--(sign);
 \end{tikzpicture}
 \end{center}
-\noindent Solid boxes are unconditional; dashed boxes meet at the wall; double-ruled boxes are the
-open content. The pole pins the Birman--Schwinger radius from below; the missing object would pin it
-from above.
+\noindent Solid boxes are proved statements; dashed boxes are conditional or hypothetical;
+double-ruled boxes are heuristic or open.
 
-\subsection{What must be created}
-The upper pinning is, in the function-field model, the \emph{Weil pairing}: Frobenius acts on
-$H^1$ of a curve $C/\Fq$ as an isometry (up to $q$) of a positive intersection form, so its
-eigenvalues lie on $|z|=\sqrt q$ (the curve RH). The $\Spec\Z$ analogue requires an arithmetic
-intersection theory on the square of the Connes--Consani arithmetic site $\widehat{\Spec\Z}$ with
-Frobenius correspondences $[F_t]$, a diagonal $[\Delta]$, and a Hodge-index sign, in which the
-realization $f\mapsto Z_f$ satisfies $(Z_f\cdot Z_f)=W(f)$ (formally, by the trace formula) and
-Abboud's arithmetic Hodge index $(D\cdot D)\le0$ for primitive $D$ applies. The degree condition
-$(Z_f\cdot H)=0$ is exactly $\mu_{\max}=1$.
-
-\medskip\noindent\textbf{Open target (the single remaining theorem, M3a).}
-Construct $\widehat{\mathrm{CH}}^1(\widehat{\Spec\Z}^{\,2})$ with a symmetric pairing for which the
-scaling correspondences $[F_t]$ and the diagonal are classes, $(Z_f\cdot Z_f)=W(f)$, and the
-Hodge-index inequality holds; then RH. This is the Weil-pairing analogue over $\Spec\Z$; it does not
-presently exist and must be \emph{created}.
-\medskip
+\subsection{An analogy with the function-field case}
+In the function-field case, Frobenius acts on $H^1$ of a curve $C/\Fq$ and the Castelnuovo--Severi
+(Hodge index) inequality on $C\times C$ forces its eigenvalues onto $|z|=\sqrt q$. An analogue over
+$\Spec\Z$ would require an intersection theory on a square of an arithmetic object, such as the
+arithmetic site of Connes and Consani \cite{CC}, with scaling correspondences $[F_t]$, a diagonal
+and a Hodge-index sign, and with a realisation $f\mapsto Z_f$ such that $(Z_f\cdot Z_f)=W(f)$.
+The arithmetic Hodge index theorem for adelic line bundles on arithmetic varieties
+\cite{YuanZhang} is a model for the kind of inequality required, but it does not apply to such an
+object, which is not constructed here. By Remark~\ref{prop:hodge}, the naive tensor form
+$\mathcal I$ cannot play this role.
 
 %% =====================================================================
 \section{Synthesis}
 %% =====================================================================
-The route is assembled rigorously around a single arithmetic-geometric obstruction:
-\[
-   \RH\ \Longleftarrow\
-   \underbrace{\big[\text{model space},\ \text{Lax--Phillips},\ \indm,\ \Gamma_2\ge0,\ \mu_{\max}=1,
-   \ \text{Abboud}\big]}_{\text{rigorous / assembled}}\ \Longleftarrow\
-   \underbrace{\text{M3a}}_{\text{open: the upper pinning}} .
-\]
-Three facts make this the honest endpoint. First, $L1\Rightarrow\RH$ (Theorem~\ref{thm:L1}):
-the boundedness is not a lemma below RH, it is RH; the Laplace--pole obstruction is exactly the
-off-line poles, so no analytic averaging can reach it (the Cesàro and monotone-continuation routes
-are RH-equivalent). Second, $\Gamma_2\ge0$ (Theorem~\ref{thm:CD0}): the curvature/shape positivity
-is unconditional and rooted in $\Lam\ge0$; the falsifier fails it. Third, the wall is the
-\emph{sign} $\eps_0\ge0$, the Birman--Schwinger spectral radius pinned at $1$ --- from below by the
-pole (which DH lacks), from above by the missing Weil-pairing analogue.
-
-\begin{center}\itshape
-The geometry proves the shape; RH is the sign; the sign is the upper pinning of the spectral radius;
-the upper pinning is a piece of arithmetic geometry over $\Spec\Z$ that does not yet exist and must
-be created.
-\end{center}
+The proved content of the paper is: the factorisation \eqref{eq:factor} and the inner property of
+$\Th_\om$ for $\om\ge\half$ (Proposition~\ref{prop:model}); the equivalence of RH with the
+boundedness of $A_\lambda[0,0]$ (Theorem~\ref{thm:L1}) and the nonvanishing
+Lemma~\ref{lem:pw}; the identification of $\indm(K_{\Th_\om})$ with the number of poles of $\Th_\om$ in
+$\C_+$ and the resulting characterisation of RH (Theorem~\ref{thm:kl}, Corollary~\ref{cor:kl}); and the
+$CD(0,\infty)$ property of truncated prime jump generators (Theorem~\ref{thm:CD0}), an instance of a
+known fact. The angle criterion and the Birman--Schwinger form are heuristic. The tensor form of
+Remark~\ref{prop:hodge} is positive semidefinite for every
+window, so it carries no information about RH.
 
 %% =====================================================================
 \section{Open problems}
 %% =====================================================================
-\begin{enumerate}[label=\textbf{O\arabic*.}]
-\item \textbf{M3a (the upper pinning).} Construct the arithmetic intersection pairing on
-$\widehat{\Spec\Z}^{\,2}$ with Frobenius correspondences and the Hodge-index sign. Candidate input:
-the two-variable kernel $\xi(\half+iz)\xi(\half+iw)$ and the arithmetic-site Frobenius.
+\begin{enumerate}[label=\textbf{Problem 9.\arabic*.}, leftmargin=*]
+\item \textbf{Arithmetic intersection pairing.} Construct an intersection pairing on a square of an
+arithmetic object attached to $\Spec\Z$, with scaling correspondences, a diagonal, a realisation
+$f\mapsto Z_f$ with $(Z_f\cdot Z_f)=W(f)$, and a Hodge-index inequality on primitive classes.
 \item \textbf{Sharp curvature.} Is there a curvature-dimension refinement $CD(0,N)$ (finite $N$, from
-the archimedean diffusion) that survives the Doob reduction and reaches $\eps_0$, or is the
-Doob-invariance obstruction absolute?
-\item \textbf{Positivity-improving with pinned radius.} Identify a structural reason the
-pole-barriered von Mangoldt Birman--Schwinger kernel has spectral radius exactly $1$, analogous to
-the Frobenius $\sqrt q$-isometry; this is the operator form of O1.
-\item \textbf{Cyclicity for $L1$.} Prove the cyclicity/density of the near-radical windows needed for
-the Jacobi-coordinate phrasing of Theorem~\ref{thm:L1} (the forward direction is already
-coordinate-free).
+the archimedean diffusion) that is not invariant under shifts of $A$ and therefore sees $\eps_0$?
+\item \textbf{Birman--Schwinger representation.} Find a representation of the window Weil form of
+the type assumed in Heuristic~\ref{prop:bs}, and a structural reason for
+$r(\tilde K_\lambda)\le1$.
+\item \textbf{Other entries.} Prove that, if $\xi$ has a zero with $\Re\rho>\half$, then
+$\mathcal LB[m,n]$ does not extend holomorphically to $\Re q>0$ for every $(m,n)$
+(Remark~\ref{rem:converse}).
 \end{enumerate}
 
 %% =====================================================================
 \section{Conclusion}
 %% =====================================================================
-We carried the de~Branges/colligation route to its rigorous limit. The boundedness $L1$ is proved
-equivalent to RH with an unconditional Paley--Wiener lemma; the correct invariant is the
-Kre\u\i n--Langer index; the prime generator has unconditionally nonnegative Bakry--\'Emery
-curvature by a Schur-product mechanism rooted in $\Lam\ge0$; and the wall is realized as a
-pole-pinned Birman--Schwinger spectral radius, with the pole providing the lower pinning that the
-Davenport--Heilbronn falsifier lacks. The remaining content is one object --- the Weil-pairing
-analogue over $\Spec\Z$ --- which provides the upper pinning and which does not yet exist. Crossing
-the wall is, precisely, creating it. Nothing here proves RH; the boundary is mapped exactly, and the
-next step is an act of construction in arithmetic geometry.
+We show that the $(0,0)$ entry of the window Weil matrix is bounded uniformly in the window
+length if and only if RH holds; hence $L1$ implies RH, and under RH $L1$ holds for every fixed
+$N$. We prove that the number of negative squares of the kernel of
+$\Th_\om$ equals the number of its poles in $\C_+$, which for all but countably many $\om$ is the
+number of zeros of $\xi$ with $\beta>\half+\om$, so that RH is equivalent to the vanishing of this
+index for every $\om>0$. The truncated prime jump generator has non-negative Bakry--\'Emery
+curvature, a consequence of $\Lam\ge0$ that does not use multiplicativity. The Birman--Schwinger
+and intersection-theoretic reformulations of the wall remain heuristic. Nothing here proves RH.
 
 %% =====================================================================
 \begin{thebibliography}{99}
+\bibitem{ADRS} D.~Alpay, A.~Dijksma, J.~Rovnyak, H.~de~Snoo, \emph{Schur Functions, Operator
+Colligations, and Reproducing Kernel Pontryagin Spaces}, Oper. Theory Adv. Appl. \textbf{96},
+Birkh\"auser, 1997.
+\bibitem{BE} D.~Bakry, M.~\'Emery, \emph{Diffusions hypercontractives}, S\'eminaire de
+Probabilit\'es XIX, Lecture Notes in Math. \textbf{1123}, Springer, 1985, 177--206.
+\bibitem{BGL} D.~Bakry, I.~Gentil, M.~Ledoux, \emph{Analysis and Geometry of Markov Diffusion
+Operators}, Springer, 2014.
+\bibitem{Bombieri} E.~Bombieri, \emph{Remarks on Weil's quadratic functional in the theory of
+prime numbers, I}, Rend. Mat. Acc. Lincei (9) \textbf{11} (2000), 183--233.
 \bibitem{Connes} A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of the
 Riemann zeta function}, Selecta Math. \textbf{5} (1999), 29--106.
-\bibitem{CC} A.~Connes, C.~Consani, \emph{The Arithmetic Site}, C. R. Acad. Sci. Paris (2014); and
-subsequent works on the scaling/arithmetic site.
-\bibitem{CM} A.~Connes, H.~Moscovici, \emph{The UV prolate spectrum matches the zeros of zeta}
-(2022).
+\bibitem{CC} A.~Connes, C.~Consani, \emph{The arithmetic site}, C. R. Math. Acad. Sci. Paris
+\textbf{352} (2014), 971--975.
 \bibitem{deB} L.~de~Branges, \emph{Hilbert Spaces of Entire Functions}, Prentice-Hall, 1968.
+\bibitem{KL72} M.~G.~Kre\u\i n, H.~Langer, \emph{\"Uber die verallgemeinerten Resolventen und
+die charakteristische Funktion eines isometrischen Operators im Raume $\Pi_\kappa$}, in: Hilbert
+Space Operators and Operator Algebras, Colloq. Math. Soc. J\'anos Bolyai \textbf{5}, North-Holland,
+1972, 353--399.
+\bibitem{Lagarias} J.~C.~Lagarias, \emph{Zero spacing distributions for differenced
+$L$-functions}, Acta Arith. \textbf{120} (2005), 159--184.
+\bibitem{LP} P.~D.~Lax, R.~S.~Phillips, \emph{Scattering Theory}, Academic Press, 1967.
 \bibitem{SNF} B.~Sz.-Nagy, C.~Foia\c s, \emph{Harmonic Analysis of Operators on Hilbert Space},
 North-Holland, 1970.
-\bibitem{KL} M.~G.~Kre\u\i n, H.~Langer, \emph{\"Uber die verallgemeinerten Resolventen \dots},
-Acta Sci. Math. (Szeged) (1977).
-\bibitem{LP} P.~D.~Lax, R.~S.~Phillips, \emph{Scattering Theory}, Academic Press, 1967.
-\bibitem{BE} D.~Bakry, M.~\'Emery, \emph{Diffusions hypercontractives}, S\'eminaire de
-Probabilit\'es XIX (1985).
-\bibitem{Weil} A.~Weil, \emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
-Comm. S\'em. Math. Lund (1952).
-\bibitem{Abboud} A.~Abboud, \emph{On the arithmetic Hodge index theorem} (arithmetic intersection
-on arithmetic surfaces).
+\bibitem{Weil} A.~Weil, \emph{Sur les ``formules explicites'' de la th\'eorie des nombres
+premiers}, Comm. S\'em. Math. Univ. Lund, tome suppl\'ementaire (1952), 252--265.
+\bibitem{YuanZhang} X.~Yuan, S.-W.~Zhang, \emph{The arithmetic Hodge index theorem for adelic line
+bundles}, Math. Ann. \textbf{367} (2017), 1123--1171.
 \end{thebibliography}
 
 \end{document}
