@@ -1,20 +1,17 @@
-# Paper 29 — One wall in many coordinates: closure of the propagation trichotomy and the master quantifier for the Riemann Hypothesis
+# One wall in many coordinates: a heuristic synthesis of the propagation trichotomy and a master quantifier for the Riemann Hypothesis
 
-The paper collects the closure theorems for the three argument-forms that survived the structural no-go of the companion papers within the Connes–Consani–Moscovici framework: two-dimensional propagation (Form A), index amplification (Form B) and effective self-approximation (Form C). Its central claim is that the three closures are one obstruction in three coordinate systems: the unconditionally controlled object is always an averaged, generic or interior quantity, while the target is its individual, uniform or boundary refinement. This quantifier inversion is identified with the parity barrier of the ω-class arc, the propagation wall MW-2, the Hadamard barrier MW-7 and the individual-versus-generic obstruction in Bagchi's criterion. The paper also records the unconditional ledger left by the programme.
+The paper collects the status of three argument-forms for the Riemann Hypothesis (two-dimensional propagation, index amplification, effective self-approximation) discussed in Papers 27 and 28, and proposes a heuristic description of what they have in common: the unconditionally controlled quantity is averaged, generic or interior, while the RH-type statement is its individual, uniform or boundary refinement.
 
-## Main results
+What the paper states:
 
-- `thm:C` (Form C: the self-blocking amplifier) — NO-GO, cited from the companion papers.
-- `thm:A` (Form A: degeneration) — NO-GO, cited from the companion papers.
-- `thm:B` (Form B: inertia is not autonomous) — NO-GO, cited from the companion papers.
-- `thm:autonomy` (value autonomous, inertia not): the value of the quadratic functional is computable from the primes alone, its inertia is not — PROVED in the companion paper, restated here.
-- Master quantifier principle: stated as a synthesis principle — ARGUED, not a theorem.
+- Forms A and C: heuristic statements only (from Paper 28, Heuristics 2.1, 2.2, 3.1).
+- Form B (Proposition 2.3, cited from Paper 28): under finitely many off-line zeros, the tensor index identity, the realisation of the tensor square on thickened diagonals, and the prime-only evaluation of the two-variable functional; the sieve-to-index bridge is open and, under that hypothesis, equivalent to RH.
+- A heuristic principle (the "master quantifier") and a heuristic contrast between the autonomous value and the apparently non-autonomous inertia of a quadratic functional.
+- A list of available results from Papers 24-28 with their hypotheses.
 
-## Files
+No new theorem toward RH is proved; there is no numerical content. The proved inputs are known results of the cited papers and classical theory; what is new is the heuristic synthesis.
 
-- `main.tex` — LaTeX source.
-- `main.pdf` — compiled paper.
+Files:
 
-## Relation to other papers
-
-Synthesizes the walls found in Papers 27–28; the quantifier wall is reused as the common failure mode in Papers 30 and 36.
+- [main.tex](main.tex) - LaTeX source
+- [master-quantifier.pdf](master-quantifier.pdf) - compiled paper (7 pages)
