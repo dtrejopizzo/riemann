@@ -1,19 +1,24 @@
-# Paper 32 — The Riemann zeta function is not Stepanov almost periodic in any sub-strip of the critical strip
+# The Riemann zeta function is not Stepanov almost periodic in any band of the critical strip
 
-For σ > 1 the zeta function is Bohr almost periodic on vertical lines, and inside the critical strip it is Besicovitch B² almost periodic. The paper proves, unconditionally, that ζ is not Stepanov almost periodic for any exponent p ≥ 1 on any closed sub-strip [σ₁, σ₂] ⊂ (1/2, 1) in the band (vector-valued) sense: the vectorial Stepanov norm is infinite, so t ↦ ζ(·+it), viewed as an L^p(σ₁, σ₂)-valued function, is not S^p almost periodic. The proof combines Ω-theorems for large values of ζ on fixed interior lines with subharmonicity of |ζ|^p, which promotes a large point value to a large area integral over a band-times-unit-window rectangle. The result places ζ in a dichotomy: seminorms under which ζ is almost periodic in the strip (B², Weyl) are blind to compact windows, while seminorms that see compact windows are destroyed by the growth of ζ. The paper is independent of the Riemann hypothesis.
+The paper studies where ζ sits among the classical almost-periodicity scales (Bohr, Stepanov, Weyl, Besicovitch) inside the critical strip. It treats t ↦ ζ(·+it) as a function with values in L^p(σ₁, σ₂) for a band [σ₁, σ₂] ⊂ (0, 1) and asks whether it is Stepanov almost periodic.
 
-## Main results
+## Results
 
-- `thm:titchmarsh` (Ω-theorem on fixed interior lines) — CITED.
-- `thm:aistleitner` (large values of ζ on interior lines) — CITED.
-- `thm:main` (no Stepanov almost-periodicity in the band sense, every p ≥ 1, every closed sub-strip) — PROVED, unconditional.
-- The fixed-line scalar version of the statement — OPEN; the paper explains why the method does not decide it.
+- Lemma 2.3: an S^p almost periodic function (under either the trigonometric-approximation or the almost-period definition) has finite Stepanov norm.
+- Theorem 3.3 (= Paper 30, Theorem 4.1): for every band [σ₁, σ₂] ⊂ (0, 1), σ₁ < σ₂, and every p ≥ 1, the band Stepanov norm of ζ is infinite, so ζ is not S^p almost periodic in the band sense. Unconditional; the proof uses subharmonicity of |ζ|^p and unboundedness of ζ on vertical lines (Titchmarsh, Thm 8.12).
+- Remark 3.4: the band integral also diverges for 0 < p < 1.
+- Observation 4.1: ζ is B² almost periodic on every line 1/2 < σ < 1; its band Stepanov and Weyl seminorms are infinite.
+- Proposition 4.2: on every fixed line 1/2 < σ₀ < 1 the scalar Stepanov norm is infinite (Voronin universality), so ζ is not Stepanov or Weyl almost periodic on any such line.
 
-## Files
+## Known and new
 
-- `main.tex` — LaTeX source.
-- `main.pdf` — compiled paper.
+B² almost periodicity of ζ in the strip is classical, and Theorem 3.3 is Theorem 4.1 of Paper 30. Proposition 4.2 is a direct consequence of the Voronin universality theorem, which also gives Theorem 3.3 for bands in (1/2, 1); the subharmonicity proof is an elementary alternative that also covers bands in (0, 1/2]. New here are Lemma 2.3, the case 0 < p < 1 and the consequence for the Weyl scale.
 
 ## Relation to other papers
 
-Standalone version of the byproduct theorem `thm:stepanov` of Paper 30.
+Theorem 3.3 is Theorem 4.1 of Paper 30 (Finiteness of off-line zeros and sequential self-approximation of zeta: a conditional reduction of the Riemann Hypothesis).
+
+## Files
+
+- [main.tex](main.tex): LaTeX source.
+- [stepanov-band.pdf](stepanov-band.pdf): compiled paper, 7 pages.

@@ -21,7 +21,7 @@
 \DeclareMathOperator{\Real}{Re}
 
 \title[$\zeta$ is not Stepanov a.p.]{The Riemann zeta function is not Stepanov almost periodic\\
-in any sub-strip of the critical strip}
+in any band of the critical strip}
 
 \author{David Alejandro Trejo Pizzo}
 \thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
@@ -31,28 +31,33 @@ in any sub-strip of the critical strip}
 
 \begin{abstract}
 For $\sigma>1$ the Riemann zeta function is Bohr almost periodic on
-vertical lines, and inside the critical strip it is almost periodic in
+vertical lines, and on every line $\tfrac12<\sigma<1$ it is almost periodic in
 the Besicovitch $B^2$ sense. Between the uniform and the Besicovitch
 scales sits the Stepanov scale, the only one of the classical
-almost-periodicity scales whose seminorm sees windows of fixed length.
+almost-periodicity scales whose seminorm is defined by windows of fixed
+length.
 We prove, unconditionally, that $\zeta$ is not Stepanov almost periodic,
 for any exponent $p\geq1$, on any closed sub-strip
-$[\sigma_1,\sigma_2]\subset(\tfrac12,1)$, in the band (vector-valued)
+$[\sigma_1,\sigma_2]\subset(0,1)$, $\sigma_1<\sigma_2$, in the band (vector-valued)
 sense: the vectorial Stepanov norm
 $\sup_x\bigl(\int_x^{x+1}\int_{\sigma_1}^{\sigma_2}
 |\zeta(\sigma+it)|^p\,d\sigma\,dt\bigr)^{1/p}$ is infinite, so
 $t\mapsto\zeta(\cdot+it)$, viewed as an
 $L^p(\sigma_1,\sigma_2)$-valued function, is not $S^p$-almost periodic.
+This statement is Theorem~4.1 of an earlier paper of the author; here
+we add a proof that a Stepanov almost periodic function, under either of
+the two standard definitions, has finite Stepanov norm, the extension of
+the divergence to exponents $0<p<1$, and the fixed-line statement
+(Proposition~4.2).
 The proof combines the unconditional $\Omega$-theorems for large values
 of $\zeta$ on fixed interior lines (Titchmarsh; Aistleitner) with the
 subharmonicity of $|\zeta|^p$, which promotes a large point value to a
-large area integral over a band-times-unit-window rectangle. The
-fixed-line scalar version of the statement is not claimed and remains
-open; we explain precisely why the method does not decide it. The
-result places $\zeta$ inside a clean dichotomy: the seminorms under
-which $\zeta$ \emph{is} almost periodic in the strip ($B^2$, Weyl)
-are blind to compact windows, while the seminorms that see compact
-windows (uniform, Stepanov) are destroyed by the growth of $\zeta$.
+large area integral over a band-times-unit-window rectangle. On a
+fixed line $\tfrac12<\sigma_0<1$ the scalar Stepanov norm is also
+infinite, by the universality theorem. The result separates the
+classical scales: $\zeta$ is $B^2$ almost periodic on every line
+$\tfrac12<\sigma<1$, whereas its Stepanov and Weyl norms are infinite,
+both on lines and in the band sense.
 \end{abstract}
 
 \maketitle
@@ -62,7 +67,7 @@ windows (uniform, Stepanov) are destroyed by the growth of $\zeta$.
 
 \section{Introduction}\label{sec:intro}
 
-\subsection{Almost periodicity of $\zeta$: the two classical scales}
+\subsection{Almost periodicity of \texorpdfstring{$\zeta$}{zeta}: the two classical scales}
 The connection between the Riemann zeta function and almost periodicity
 is as old as the theory of almost periodic functions itself: Bohr
 created the theory in large part as a tool for the Riemann Hypothesis
@@ -74,8 +79,9 @@ $t\mapsto\zeta(\sigma+it)$ is a uniform limit of trigonometric
 polynomials $\sum_{n\leq N}n^{-\sigma}e^{-it\log n}$ and is therefore
 Bohr (uniformly) almost periodic, on each line and indeed uniformly in
 the half-plane \cite{Bohr22,Besicovitch}. This fails on every line
-$\sigma\leq1$, simply because $t\mapsto\zeta(\sigma+it)$ is unbounded
-there (see the $\Omega$-theorems quoted in \S\ref{sec:main}), and Bohr
+$0<\sigma\leq1$, simply because $t\mapsto\zeta(\sigma+it)$ is unbounded
+there (\cite[Ch.~VIII]{Titchmarsh} for $\tfrac12\le\sigma\le1$, and the functional
+equation for $0<\sigma<\tfrac12$; see \S\ref{sec:main}), and Bohr
 almost periodic functions are bounded.
 
 Second, inside the critical strip the almost periodicity survives in
@@ -90,7 +96,7 @@ intervals: by the classical mean-value theorems
 \]
 so $t\mapsto\zeta(\sigma+it)$ is almost periodic in the Besicovitch
 $B^2$ sense \cite[Ch.~II]{Besicovitch} on every line
-$\sigma>\tfrac12$. Thus $\zeta$ is almost periodic in the strip---but
+$\sigma>\tfrac12$. Thus $\zeta$ is almost periodic in the half-strip $\tfrac12<\sigma<1$---but
 only for a seminorm that averages over windows of \emph{growing}
 length.
 
@@ -105,20 +111,18 @@ where $S^p$ is the Stepanov class, with seminorm
 $\|f\|_{S^p}=\sup_x\bigl(\int_x^{x+1}|f|^p\bigr)^{1/p}$, and $W^p$,
 $B^p$ are the Weyl and Besicovitch classes, whose seminorms average
 over windows of length $L\to\infty$. The Stepanov seminorm is the only
-intermediate one that \emph{sees windows of fixed length}: it controls
-the $L^p$ mass of $f$ on every interval of length $1$, uniformly in
-the position of the interval. The Weyl and Besicovitch seminorms do
-not: for any $f\in L^p_{\mathrm{loc}}$ and any compact $K$, the Weyl
-and Besicovitch seminorms of $f\cdot\mathbf{1}_K$ vanish, because the
-average of a fixed compact contribution over windows of length
-$L\to\infty$ decays like $1/L$, uniformly in the window position.
+intermediate one that is \emph{defined by windows of fixed length}: it
+controls the $L^p$ mass of $f$ on every interval of length $1$,
+uniformly in the position of the interval. The Besicovitch seminorm
+does not: it is an average over $[-T,T]$ with $T\to\infty$, and is
+insensitive to the values of $f$ on any set of zero density.
 
 This makes the Stepanov scale the natural question for $\zeta$ in the
-strip. Any almost-periodicity statement strong enough to transport
-local information---values, or zeros via Rouch\'e-type arguments---from
-one window of the critical strip to another must control fixed
-windows, which is exactly what $B^2$ almost periodicity does not do
-and Stepanov almost periodicity would. The question is therefore:
+strip. An almost-periodicity statement that transports local
+information (values, or zeros by Rouch\'e's theorem) from one window
+of the critical strip to another must control fixed windows. The $B^2$
+almost periodicity of $\zeta$ does not do this; Stepanov almost
+periodicity would. The question is therefore:
 \emph{does the almost periodicity of $\zeta$ in the strip survive at
 the Stepanov scale?}
 
@@ -130,7 +134,7 @@ seminorm in the strip, once the pointwise large values are converted
 into area integrals by subharmonicity.
 
 \begin{theorem*}[Main theorem; see Theorem~\ref{thm:main}]
-Let $B=[\sigma_1,\sigma_2]\subset(\tfrac12,1)$ with
+Let $B=[\sigma_1,\sigma_2]\subset(0,1)$ with
 $\sigma_1<\sigma_2$, and let $p\geq1$. Then the vectorial Stepanov norm
 \[
 \|\zeta\|_{S^p(B)}
@@ -143,34 +147,38 @@ $S^p$-almost periodic, for any sub-strip $B$ of the open critical
 strip and any $p\geq1$.
 \end{theorem*}
 
+Theorem~\ref{thm:main} is Theorem~4.1 of \cite{P30}, where it is proved
+by the same argument and extended to bands in $(0,\tfrac12)$ by the
+functional equation. This paper adds Lemma~\ref{lem:bounded}
+(finiteness of the Stepanov norm under either definition of almost
+periodicity), the divergence of the band integral for $0<p<1$
+(Remark~\ref{rem:robust}), and the fixed-line statement
+(Proposition~\ref{prop:fixedline}).
+
 The statement and proof concern the \emph{band} norm: $\zeta$ is
 treated as a function of the single real variable $t$ with values in
 the Banach space $L^p(\sigma_1,\sigma_2)$, and the Stepanov seminorm
 is the classical scalar one with $|f(t)|$ replaced by
 $\|\zeta(\cdot+it)\|_{L^p(\sigma_1,\sigma_2)}$. This is the standard
 vector-valued (Banach-space-valued) almost periodicity of
-Levitan--Zhikov \cite{LevitanZhikov}. We emphasise, and discuss in
-\S\ref{sec:discussion}, that the fixed-line scalar version---whether
-$t\mapsto\zeta(\sigma_0+it)$ can be $S^p$-almost periodic for some
-single $\sigma_0\in(\tfrac12,1)$---is \emph{not} decided by our
-method and remains open.
+Levitan--Zhikov \cite{LevitanZhikov}. The fixed-line scalar version is not reached by this method; it
+follows from the universality theorem
+(Proposition~\ref{prop:fixedline}).
 
 The proof is short and entirely classical in its ingredients: an
 unconditional $\Omega$-theorem on a fixed interior line
-(Titchmarsh \cite[Ch.~VIII]{Titchmarsh}; quantitatively Aistleitner
+(Titchmarsh \cite[Thm.~8.12]{Titchmarsh}; quantitatively Aistleitner
 \cite{Aistleitner}), the sub-mean-value inequality for the subharmonic
 function $|\zeta|^p$ on disks of a fixed radius contained in the band,
 and a monotone inclusion of domains. What may be of interest beyond
-the statement itself is the position the result occupies: together
-with the classical positive results it exhibits an exact dichotomy in
-seminorm coordinates (Observation~\ref{obs:dichotomy})---every
-almost-periodicity seminorm that sees compact windows is destroyed by
-the growth of $\zeta$ in the strip, and every seminorm under which
-$\zeta$ is almost periodic there is blind to compact windows.
+the statement itself is its position among the classical scales
+(Observation~\ref{obs:dichotomy}): $\zeta$ is $B^p$ almost periodic,
+$p\le2$, on every line $\tfrac12<\sigma<1$, while its uniform norm on lines
+and its band Stepanov and Weyl norms are infinite.
 
 \section{Stepanov almost periodicity in the band sense}\label{sec:defs}
 
-Throughout, $B=[\sigma_1,\sigma_2]\subset(\tfrac12,1)$ is a closed
+Throughout, $B=[\sigma_1,\sigma_2]\subset(0,1)$ is a closed
 band with $\sigma_1<\sigma_2$, and $p\geq1$.
 
 \begin{definition}[Vectorial Stepanov norm]\label{def:norm}
@@ -268,11 +276,11 @@ The analytic input is an unconditional lower bound for large values of
 $\zeta$ on a fixed line in the interior of the strip. Two classical
 sources suffice, and either one alone is enough for our purposes.
 
-\begin{theorem}[Titchmarsh {\cite[Ch.~VIII]{Titchmarsh}}]
+\begin{theorem}[Titchmarsh {\cite[Thm.~8.12]{Titchmarsh}}]
 \label{thm:titchmarsh}
 For fixed $\sigma\in(\tfrac12,1)$ and every $\varepsilon>0$,
 \[
-|\zeta(\sigma+it)|=\Omega\Bigl(\exp\bigl((\log t)^{1-\sigma-\varepsilon}\bigr)\Bigr)
+\log|\zeta(\sigma+it)|=\Omega_+\bigl((\log t)^{1-\sigma-\varepsilon}\bigr)
 \qquad(t\to\infty),
 \]
 unconditionally. In particular $t\mapsto\zeta(\sigma+it)$ is unbounded
@@ -297,8 +305,8 @@ that the quantitative rates play no role below: the proof needs only
 the qualitative conclusion that $\zeta$ is unbounded on one interior
 line of each sub-band.
 
-\begin{theorem}[Main theorem]\label{thm:main}
-Let $B=[\sigma_1,\sigma_2]\subset(\tfrac12,1)$ with
+\begin{theorem}[Main theorem; \cite{P30}, Thm.~4.1]\label{thm:main}
+Let $B=[\sigma_1,\sigma_2]\subset(0,1)$ with
 $\sigma_1<\sigma_2$, and let $p\geq1$. Then
 \[
 \|\zeta\|_{S^p(B)}=\infty .
@@ -309,6 +317,19 @@ function, under either definition in Definition~\ref{def:sp-ap}.
 \end{theorem}
 
 \begin{proof}
+\emph{Reduction.} The quantity $\|\zeta\|_{S^p(B)}$ is monotone in
+$B$. If $B\cap[\tfrac12,1)$ has nonempty interior, we may replace $B$ by
+a sub-band contained in $(\tfrac12,1)$. Otherwise $B\subset(0,\tfrac12]$
+and we replace $B$ by a sub-band contained in $(0,\tfrac12)$; for
+$0<\sigma<\tfrac12$ the functional equation
+$\zeta(s)=\chi(s)\zeta(1-s)$ with
+$|\chi(\sigma+it)|\asymp|t|^{1/2-\sigma}\geq c>0$ for $|t|\geq1$
+\cite[(4.12.3)]{Titchmarsh} shows, via Theorem~\ref{thm:titchmarsh} at
+$1-\sigma$, that $\zeta$ is unbounded on the line $\Real s=\sigma$
+(compare \cite{P30}, proof of Thm.~4.1). In both cases $\zeta$ is
+unbounded on every vertical line meeting the interior of $B$, and this is
+all that Step~1 uses.
+
 Fix $\sigma\in(\sigma_1,\sigma_2)$ and set
 \[
 r:=\tfrac12\min\bigl(\sigma-\sigma_1,\ \sigma_2-\sigma,\ \tfrac14\bigr)>0 ,
@@ -322,8 +343,8 @@ because $r\leq(\sigma-\sigma_1)/2$ and $r\leq(\sigma_2-\sigma)/2$.
 
 \medskip
 \emph{Step 1: a sequence of large values.}
-By Theorem~\ref{thm:titchmarsh} (or Theorem~\ref{thm:aistleitner})
-there exists a sequence $t_n\to\infty$ with
+By Theorem~\ref{thm:titchmarsh} (or Theorem~\ref{thm:aistleitner}),
+or by the reduction above when $\sigma<\tfrac12$, there exists a sequence $t_n\to\infty$ with
 \[
 V_n:=|\zeta(\sigma+it_n)|\longrightarrow\infty .
 \]
@@ -384,7 +405,7 @@ average, and Step~3 is a monotone inclusion of domains with a
 nonnegative integrand---no Fubini, no choice of a distinguished
 vertical line inside the disk. This is precisely why the theorem is a
 statement about the band norm and not about any fixed line; see
-Problem~\ref{prob:fixedline}.
+Proposition~\ref{prop:fixedline}.
 (b) The growth \emph{rate} in
 Theorems~\ref{thm:titchmarsh}--\ref{thm:aistleitner} is irrelevant:
 $S^p$-almost periodicity would impose one fixed finite bound
@@ -407,65 +428,65 @@ consequence via Lemma~\ref{lem:bounded}.
 
 \section{Discussion}\label{sec:discussion}
 
-\subsection{A dichotomy in seminorm coordinates}
+\subsection{Position among the classical scales}
 
-\begin{observation}[Seeing windows versus surviving growth]
+\begin{observation}[The classical scales in the strip]
 \label{obs:dichotomy}
-In the strip $\tfrac12<\sigma<1$, the classical almost-periodicity
-seminorms split into two groups, and $\zeta$ separates them exactly.
+In the strip $\tfrac12<\sigma<1$ the classical scales behave as
+follows.
 \begin{enumerate}[(a)]
-\item \emph{Seminorms blind to compact windows ($B^p$, $W^p$):} the
-Besicovitch and Weyl seminorms average over windows of length
-$L\to\infty$, so the seminorm of $f\cdot\mathbf{1}_K$ vanishes for
-every compact $K$ (for Weyl, note that the supremum over the window
-position is taken \emph{before} the limit $L\to\infty$, and the
-average of a fixed compact contribution still decays like $1/L$
-uniformly in the position). Under these seminorms $\zeta$ \emph{is}
-almost periodic in the strip ($B^2$, classically, from the mean-square
-approximation by partial sums; \S\ref{sec:intro}).
-\item \emph{Seminorms that see compact windows (uniform, $S^p$):} the
-uniform norm and the Stepanov seminorms control fixed windows
-uniformly in their position. Under these, almost periodicity of
-$\zeta$ fails in the strip: uniformly because $\zeta$ is unbounded on
-every line $\sigma<1$ (Theorem~\ref{thm:titchmarsh}), and in the
-Stepanov band sense by Theorem~\ref{thm:main}.
+\item \emph{Besicovitch ($B^p$, $p\le2$):} $t\mapsto\zeta(\sigma+it)$
+is $B^2$ almost periodic on every line, classically, from the
+mean-square approximation by partial sums (\S\ref{sec:intro}), and
+hence $B^p$ almost periodic for $p\le2$.
+\item \emph{Uniform, Stepanov, Weyl:} almost periodicity fails
+uniformly on lines because $\zeta$ is unbounded on every line
+$\sigma<1$ (Theorem~\ref{thm:titchmarsh}), and in the Stepanov band
+sense by Theorem~\ref{thm:main}. Weyl: the $W^p$ seminorm is
+$\lim_{L\to\infty}\sup_x(\frac1L\int_x^{x+L}\|F\|^p)^{1/p}$; since
+$\sup_x\frac1L\int_x^{x+L}\ge\frac1L\sup_x\int_x^{x+1}$ for $L\ge1$,
+Theorem~\ref{thm:main} makes the inner supremum infinite for every
+$L$, so the band $W^p$ seminorm is infinite and $\zeta$ is not $W^p$ almost periodic in the band sense (a
+$W^p$ almost periodic function has finite $\sup_x\frac1L\int_x^{x+L}$
+for some $L$, by the argument of Lemma~\ref{lem:bounded}). On a fixed
+line the scalar $S^p$ and $W^p$ norms are infinite by
+Proposition~\ref{prop:fixedline}.
 \end{enumerate}
-In short: \emph{every seminorm under which $\zeta$ is almost periodic
-in the strip is blind to compact windows, and every seminorm that sees
-compact windows is destroyed by the growth of $\zeta$.} The mechanism
-of failure is in both cases growth, not arithmetic: the unconditional
-large values of $\zeta$ are incompatible with any almost-periodicity
-seminorm that assigns mass to windows of fixed length.
+In each failure the mechanism is growth: the unconditional large values
+of $\zeta$ make every norm that takes a supremum over window positions
+infinite.
 \end{observation}
 
-\subsection{The open fixed-line problem}
+\subsection{Fixed lines}
 
-\begin{problem}[Fixed-line scalar Stepanov almost periodicity]
-\label{prob:fixedline}
-Is $t\mapsto\zeta(\sigma_0+it)$ $S^p$-almost periodic, as a scalar
-function, for some $\sigma_0\in(\tfrac12,1)$ and some $p\geq1$?
-Equivalently, in the bounded direction: is
-$\sup_x\int_x^{x+1}|\zeta(\sigma_0+it)|^p\,dt$ finite for some such
-$\sigma_0$?
-\end{problem}
+\begin{proposition}[Fixed lines]\label{prop:fixedline}
+For every $\sigma_0\in(\tfrac12,1)$ and every $p>0$,
+$\sup_x\int_x^{x+1}|\zeta(\sigma_0+it)|^p\,dt=\infty$. Consequently
+$t\mapsto\zeta(\sigma_0+it)$ is neither $S^p$ nor $W^p$ almost periodic
+for any $p\ge1$.
+\end{proposition}
 
-We claim nothing about this problem; in particular,
-Theorem~\ref{thm:main} does \emph{not} decide it, and the reason is
-structural. The sub-mean-value inequality spreads the mass of a large
-point value over a two-dimensional neighbourhood, not over the line
-through the point: from $|\zeta(\sigma_0+it_n)|$ large one can only
-conclude that the area integral over a disk is large, hence that
-\emph{some} abscissa $\sigma''_n$ (depending on $n$) carries a large
-one-dimensional window integral---and there is no way, within this
-argument, to pin the moving $\sigma''_n$ to the fixed line
-$\sigma_0$. Nor do the classical convexity tools apply: the
-logarithmic convexity in $\sigma$ of $L^p$ means of holomorphic
-functions on vertical lines is a statement about integrals over the
-whole line, not over unit windows, and there is no one-dimensional
-sub-mean-value inequality for $|g|^p$, $g$ holomorphic, along a
-vertical segment. The band formulation of Theorem~\ref{thm:main} is
-not a technical convenience but the exact boundary of what the
-subharmonicity method proves.
+\begin{proof}
+The segment $K=\{\sigma_0+iu:0\le u\le1\}$ is a compact subset of the
+strip $\tfrac12<\Real s<1$ with connected complement, and a nonzero
+constant $M$ is a nonvanishing continuous function on $K$, holomorphic
+in its (empty) interior. By the Voronin universality theorem in the
+form for such compact sets (Voronin, Reich, Bagchi; see
+\cite[Ch.~1]{Steuding}), for every $M>1$ there is $\tau>0$ with
+$|\zeta(\sigma_0+i(u+\tau))-M|<1$ for all $u\in[0,1]$, so
+$\int_\tau^{\tau+1}|\zeta(\sigma_0+it)|^p\,dt\ge(M-1)^p$. Since $M$ is
+arbitrary the supremum is infinite. The last assertion follows from the
+scalar case of Lemma~\ref{lem:bounded} and the inequality of
+Observation~\ref{obs:dichotomy}(b).
+\end{proof}
+
+The subharmonicity argument of Theorem~\ref{thm:main} does not give
+this: it does not pin the large mass to a fixed abscissa. Universality
+does, and applied to a closed rectangle it also gives
+Theorem~\ref{thm:main} for bands in $(\tfrac12,1)$. The proof of
+\S\ref{sec:main} is an elementary alternative that uses only
+unboundedness on one line, and it also covers bands in $(0,\tfrac12]$.
+The lines $\sigma_0\le\tfrac12$ are not treated here.
 
 \subsection{Relation to the Riemann Hypothesis}
 The result is a negative theorem about seminorms and is logically
@@ -476,17 +497,12 @@ equivalent to a strong recurrence (self-approximation) property of
 $\zeta$ in compact subsets of the strip, so one might hope to approach
 such recurrence statements through an almost-periodicity seminorm
 strong enough to control compact windows. Theorem~\ref{thm:main} shows
-that the Stepanov scale---the only classical intermediate scale with
-that property---is unconditionally unavailable in the band sense; any
+that the Stepanov scale is unconditionally unavailable in the band sense; any
 window-localised recurrence for $\zeta$ must therefore be obtained by
 mechanisms other than membership of $\zeta$ in a classical
-almost-periodicity class that sees windows. We make no claim beyond
+almost-periodicity class defined by a supremum over window
+positions. We make no claim beyond
 this.
-
-\section*{Acknowledgements}
-The author thanks the broader analytic number theory literature cited
-here; all results used are classical or published, and all statements
-proved here are elementary consequences of them.
 
 \begin{thebibliography}{9}
 
@@ -515,6 +531,15 @@ Differential Equations}, Cambridge University Press, Cambridge, 1982.
 \bibitem{Montgomery}
 H.~L.~Montgomery, \emph{Extreme values of the Riemann zeta function},
 Comment. Math. Helv. \textbf{52} (1977), 511--518.
+
+\bibitem{P30}
+D.~A.~Trejo Pizzo, \emph{Finiteness of off-line zeros and sequential
+self-approximation of zeta: a conditional reduction of the Riemann
+Hypothesis}, Paper 30 of this series.
+
+\bibitem{Steuding}
+J.~Steuding, \emph{Value-Distribution of $L$-Functions}, Lecture Notes
+in Math. 1877, Springer, Berlin, 2007.
 
 \bibitem{Titchmarsh}
 E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-Function},
