@@ -19,10 +19,9 @@
 \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\LP}{\mathrm{LP}}
-\newcommand{\diag}{\operatorname{diag}}
 
-\title[A Curvature Criterion for RH]{A curvature criterion for the Riemann Hypothesis\\
-  and the unification of four analytic frameworks}
+\title[The second $\sigma$-derivative of $\log|\xi|$]{The second $\sigma$-derivative of $\log|\xi|$\\
+  on the critical line}
 \author{David Alejandro Trejo Pizzo}
 \thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
 
@@ -30,39 +29,18 @@
 \begin{document}
 
 \begin{abstract}
-We derive an explicit curvature criterion equivalent to the Riemann Hypothesis (RH) and
-use it to unify four analytic frameworks that have separately been proposed as proof
-strategies: the de~Bruijn--Newman heat flow and Kre\u{\i}n monotonicity~(A), the
-APS spectral-flow approach~(B), the $K$-theoretic obstruction class~(C), and a
-transversal energy functional~(D).
-
-The central new result is the \emph{curvature formula}: for $s = \sigma + i\gamma$
-with $\sigma = 1/2$ and $\gamma \notin \{\gamma_\rho\}$,
-\[
-  \mathcal{C}(\gamma)
-  \;:=\;
-  \frac{\partial^2}{\partial\sigma^2}\log|\xi(\sigma+i\gamma)|
-  \bigg|_{\sigma=1/2}
-  \;=\;
-  \sum_\rho \frac{(\gamma-\gamma_\rho)^2 - (\sigma - \beta_\rho)^2}{|s-\rho|^4},
-\]
-where the sum runs over all non-trivial zeros $\rho = \beta_\rho + i\gamma_\rho$ of~$\zeta$.
-We prove:
-\[
-  \mathrm{RH}
-  \;\iff\;
-  \mathcal{C}(\gamma) > 0 \quad \forall\,\gamma \notin \{\gamma_\rho\},
-\]
-or equivalently, $f(t) := \xi(1/2+it)$ belongs to the Laguerre--P\'olya class~$\LP$.
-
-We further prove the explicit sector decomposition
-$G(t) = G_{\mathrm{poly}}(t) + G_\Gamma(t) + G_\zeta(t)$ of the function
-$G(t) = (\xi'/\xi)'(1/2+it)$, with exact formulas for the analytic sector
-($G_{\mathrm{poly}}$ and $G_\Gamma$ computable from the functional equation alone)
-and identify the arithmetic sector $G_\zeta$ as the irreducible obstruction.
-The paper concludes with a precise statement of the remaining wall: proving
-$G_\zeta(t) > -G_{\mathrm{ana}}(t)$ for all $t > t_*$ without assuming RH
-is equivalent to RH.
+We record the Hadamard-product formula for $\partial^2_\sigma\log|\xi(\sigma+i\gamma)|$,
+show that it is positive at $\sigma=1/2$ off the ordinates of the zeros under the
+Riemann Hypothesis (RH), compute its gamma-factor and polynomial parts explicitly, and
+discuss why the converse remains open. Writing
+$\mathcal C(\gamma)=\partial^2_\sigma\log|\xi(\sigma+i\gamma)|\big|_{\sigma=1/2}$, an off-line
+zero $\rho_0=\tfrac12+b_0+i\gamma_0$ contributes, together with $1-\bar\rho_0$, the amount
+$-2/b_0^2$ to $\mathcal C(\gamma_0)$; whether $\mathcal C>0$ on $\mathbb R$ implies RH is
+open, and the analogous implication fails for general real entire functions of order one.
+We also relate this positivity to the de~Bruijn--Newman constant and to the negative index
+of the Weil quadratic form, and we write $\mathcal C$ as the sum of an explicit analytic
+part, which is negative near $t=0$ and behaves like $7/(4t^2)$ for large $t$, and an
+arithmetic part coming from $\zeta(\tfrac12+it)$.
 \end{abstract}
 
 \maketitle
@@ -76,95 +54,101 @@ is equivalent to RH.
 %------------------------------------------------------------------
 
 The Riemann Hypothesis asserts that every non-trivial zero $\rho$ of the Riemann
-$\zeta$-function satisfies $\Re(\rho) = 1/2$.
-Since Riemann's memoir of 1859, this statement has accumulated more than a dozen
-equivalent reformulations, each exposing a different face of the same problem.
-The present paper contributes a new face---the \emph{curvature diagnostic}---and
-shows that four independent frameworks proposed in the literature
-as potential proof strategies are all equivalent to this single analytic criterion.
+$\zeta$-function satisfies $\Re(\rho) = 1/2$. This paper studies the function
+\[
+  \mathcal{C}(\gamma) := \frac{\partial^2}{\partial\sigma^2}\log|\xi(\sigma+i\gamma)|\bigg|_{\sigma=1/2},
+  \qquad \gamma\in\mathbb R,\ \xi(\tfrac12+i\gamma)\neq0,
+\]
+the second $\sigma$-derivative of $\log|\xi|$ on the critical line. By harmonicity of
+$\log|\xi|$ away from its zeros, $\mathcal C=-(\log|f|)''$ with $f(t)=\xi(1/2+it)$.
 
-\subsection*{Main contributions}
+\subsection*{Contents}
 
 \begin{enumerate}
-  \item \textbf{Curvature formula (Theorem~\ref{thm:curvature}).} An explicit formula
-    for $\partial^2_{\sigma\sigma}\log|\xi(\sigma+i\gamma)|$ in terms of the non-trivial zeros.
-  \item \textbf{Exact equivalence (Theorem~\ref{thm:rh-curvature}).} $\mathrm{RH}
-    \iff \mathcal{C}(\gamma) > 0$ for all $\gamma \notin \{\gamma_\rho\}$.
-  \item \textbf{LP-class unification (Theorem~\ref{thm:lp}).} $f(t) = \xi(1/2+it)$
-    belongs to the Laguerre--P\'olya class $\iff$ $\mathcal{C}(t) > 0$ $\iff$ all
-    four analytic frameworks (A)--(D) hold simultaneously.
-  \item \textbf{Sector decomposition (Theorem~\ref{thm:sectors}).} Exact closed-form
-    expressions for $G_{\mathrm{poly}}(t)$ and $G_\Gamma(t)$; precise identification
-    of $G_\zeta(t)$ as the irreducible arithmetic obstruction.
-  \item \textbf{Negative result on $\sigma$-concavity (Proposition~\ref{prop:sigma-convex}).}
-    Under RH, $\log|\xi(\sigma+i\gamma)|$ is $\sigma$-\emph{convex} (not concave) on the
-    critical line; the correct direction is $t$-concavity.
+  \item \textbf{Hadamard formula (Theorem~\ref{thm:curvature}).} The classical formula
+    $\partial^2_{\sigma}\log|\xi(s)|=\sum_\rho\Re\bigl(-(s-\rho)^{-2}\bigr)$, written in
+    Cartesian coordinates.
+  \item \textbf{One direction (Theorem~\ref{thm:rh-curvature}).} Under RH,
+    $\mathcal C(\gamma)=\sum_\rho(\gamma-\gamma_\rho)^{-2}>0$ off the ordinates. Conversely, an
+    off-line zero $\rho_0=\tfrac12+b_0+i\gamma_0$ contributes $-2/b_0^2$ to $\mathcal C(\gamma_0)$
+    (with $1-\bar\rho_0$), and $\mathcal C(\gamma_0)<0$ whenever the other zeros contribute
+    less than $2/b_0^2$. Whether $\mathcal C>0$ on $\mathbb R$ implies RH is open; the
+    analogous statement for general real entire functions is false
+    (Remark~\ref{rem:counterexample}).
+  \item \textbf{Relation to known criteria (Theorem~\ref{thm:lp}).} The conditions
+    $\Lambda=0$, $\kappa(Q)=0$, $f\in\LP$ and RH are equivalent (by known results), and imply
+    $\mathcal C>0$.
+  \item \textbf{Sector decomposition (Theorem~\ref{thm:sectors}).} Closed-form expressions for
+    the contributions of the polynomial and gamma factors of $\xi$ to $\mathcal C$, with
+    their asymptotics (Proposition~\ref{prop:gana}).
 \end{enumerate}
 
 \subsection*{Relation to known results}
 
-The equivalence $\mathrm{RH} \iff \xi(1/2+it) \in \LP$ is due to de~Bruijn~\cite{deBruijn1950}
-(see also Newman~\cite{Newman1976}). The inequality $\Lambda \geq 0$ was proved by
-Rodgers--Tao~\cite{RodgersTao2020}. The connection between spectral flow and $\kappa(Q)$
-uses the Atiyah--Patodi--Singer theorem~\cite{APS1975}.
-The new content of the present paper is:
-(i) the explicit Hadamard-product formula for $\mathcal{C}(\gamma)$ and its sign analysis;
-(ii) the resolution of the direction of concavity (Proposition~\ref{prop:sigma-convex});
-(iii) the exact sector decomposition with polygamma formulas;
-(iv) the synthesis showing A--D reduce to the same LP-class problem.
+The formula of Theorem~\ref{thm:curvature} is immediate from the Hadamard product, and the
+positivity of $\mathcal C$ under RH is a one-line consequence. Positivity criteria of this
+type are known: Lagarias~\cite{Lagarias1999} proved that RH holds if and only if
+$\Re(\xi'/\xi)(s)>0$ for $\Re s>1/2$. The equivalence $\mathrm{RH}\iff f\in\LP$, $f(t)=\xi(1/2+it)$,
+goes back to P\'olya and is the starting point of de~Bruijn~\cite{deBruijn1950} and
+Newman~\cite{Newman1976}; $\Lambda \geq 0$ is due to Rodgers--Tao~\cite{RodgersTao2020}.
+The equivalence $\mathrm{RH}\iff\kappa(Q)=0$ for the Weil form is Weil's positivity theorem,
+in the form recorded in \cite[Thm.~2.2, Def.~2.3]{P25}. What this paper adds is the explicit
+computation of the analytic part of $\mathcal C$ (Theorem~\ref{thm:sectors},
+Proposition~\ref{prop:gana}) and the discussion of the converse.
 
 \subsection*{Notation}
 Throughout, $\xi(s) = \frac{1}{2}s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ is the completed
 zeta function; non-trivial zeros of $\zeta$ are written $\rho = \beta_\rho + i\gamma_\rho$
-with $0 < \beta_\rho < 1$; $\psi^{(1)}$ denotes the trigamma function.
-We write $f(t) := \xi(1/2+it)$ for $t \in \mathbb{R}$.
+with $0 < \beta_\rho < 1$, counted with multiplicity; $\psi^{(1)}$ denotes the trigamma
+function. We write $f(t) := \xi(1/2+it)$ for $t \in \mathbb{R}$.
 
 %------------------------------------------------------------------
-\section{The Hadamard curvature formula}
+\section{The Hadamard formula}
 \label{sec:curvature}
 %------------------------------------------------------------------
 
 \subsection{Setup}
 
-The function $\xi$ is entire of order one, with Hadamard product
+The function $\xi$ is entire of order one, and $\sum_\rho|\rho|^{-2}<\infty$. Its Hadamard
+product is
 \begin{equation}\label{eq:hadamard}
-  \xi(s) = \xi(0)\prod_\rho\!\left(1-\frac{s}{\rho}\right)
-  \quad\text{(convergent in pairs $\rho,1-\rho$)}.
+  \xi(s) = e^{A+Bs}\prod_\rho\!\left(1-\frac{s}{\rho}\right)e^{s/\rho}
 \end{equation}
-Write $\mathcal{L}(s) = \log|\xi(s)|$ (harmonic away from zeros).
-By the Hadamard product,
+for constants $A,B$. Write $\mathcal{L}(s) = \log|\xi(s)|$, which is harmonic away from the
+zeros. Taking real parts of the logarithm,
 \begin{equation}\label{eq:log-xi}
-  \mathcal{L}(s) = \log|\xi(0)| + \sum_\rho \Re\log\!\left(1-\frac{s}{\rho}\right)+\frac{s}{\rho}.
+  \mathcal{L}(s) = \Re(A+Bs) + \sum_\rho \Re\!\left[\log\!\left(1-\frac{s}{\rho}\right)+\frac{s}{\rho}\right].
 \end{equation}
 
-\begin{theorem}[Curvature formula]\label{thm:curvature}
-For $s = \sigma + i\gamma$ with $\sigma \neq \beta_\rho$ for all $\rho$,
+\begin{theorem}[Hadamard formula]\label{thm:curvature}
+For $s = \sigma + i\gamma$ not a zero of $\xi$,
 \begin{equation}\label{eq:curvature-cartesian}
   \frac{\partial^2}{\partial\sigma^2}\,\mathcal{L}(\sigma+i\gamma)
-  \;=\;
+  \;=\;\sum_\rho\Re\frac{-1}{(s-\rho)^2}\;=\;
   \sum_\rho \frac{(\gamma-\gamma_\rho)^2 - (\sigma-\beta_\rho)^2}{|s-\rho|^4}.
 \end{equation}
 \end{theorem}
 
 \begin{proof}
-Differentiate~\eqref{eq:log-xi} twice in $\sigma$.  From a single factor:
+The linear terms $\Re(A+Bs)$ and $\Re(s/\rho)$ have vanishing second $\sigma$-derivative.
+For a single factor, $\partial_\sigma$ acts on holomorphic functions as $d/ds$, so
 \[
   \frac{\partial^2}{\partial\sigma^2}\Re\log\!\left(1-\frac{s}{\rho}\right)
   = \Re\frac{-1}{(s-\rho)^2}
-  = -\frac{(\sigma-\beta_\rho)^2-(\gamma-\gamma_\rho)^2}{|s-\rho|^4}
   = \frac{(\gamma-\gamma_\rho)^2-(\sigma-\beta_\rho)^2}{|s-\rho|^4}.
 \]
-Summing over $\rho$ (the series converges absolutely for $s$ away from zeros
-by the Riemann--von Mangoldt density $N(T) = O(T\log T)$) gives~\eqref{eq:curvature-cartesian}.
+On a compact set $K$ avoiding the zeros, $|s-\rho|\ge c_K|\rho|$ for all but finitely many
+$\rho$, so $\sum_\rho|s-\rho|^{-2}$ converges uniformly on $K$ because
+$\sum_\rho|\rho|^{-2}<\infty$. Hence the series of second derivatives converges uniformly on
+$K$; since the series of logarithms in~\eqref{eq:log-xi} converges locally uniformly as well,
+term-by-term differentiation is justified.
 \end{proof}
 
 \begin{remark}
-The angular form is equivalent: writing $s - \rho = |s-\rho|e^{i\theta_\rho}$,
-the numerator equals $|s-\rho|^2 \cos(2\theta_\rho)$, so
-$\partial^2_{\sigma\sigma}\mathcal{L} = -\sum_\rho \cos(2\theta_\rho)/|s-\rho|^2$.
-The sign of each term is determined by the angle $\theta_\rho$: positive in the
-``vertical cone'' $|\theta_\rho| > \pi/4$, negative in the ``horizontal cone''
-$|\theta_\rho| < \pi/4$.
+In polar form, writing $s - \rho = |s-\rho|e^{i\theta_\rho}$,
+$\partial^2_{\sigma}\mathcal{L} = -\sum_\rho \cos(2\theta_\rho)/|s-\rho|^2$.
+A term is positive when $\pi/4<|\theta_\rho|<3\pi/4$ (the zero lies in the vertical double
+cone at $s$) and negative when $|\theta_\rho|<\pi/4$ or $|\theta_\rho|>3\pi/4$.
 \end{remark}
 
 \subsection{Sign on the critical line under RH}
@@ -174,357 +158,360 @@ Assume RH. Then for all $\gamma \notin \{\gamma_\rho\}$,
 \[
   \frac{\partial^2}{\partial\sigma^2}\,\mathcal{L}\!\left(\tfrac{1}{2}+i\gamma\right) > 0.
 \]
-That is, $\sigma \mapsto \log|\xi(\sigma+i\gamma)|$ is \emph{strictly convex} in $\sigma$
+That is, $\sigma \mapsto \log|\xi(\sigma+i\gamma)|$ is strictly convex in $\sigma$
 at $\sigma = 1/2$.
 \end{proposition}
 
 \begin{proof}
-Under RH, $\beta_\rho = 1/2$ for all $\rho$, so $\sigma - \beta_\rho = 0$
-at $\sigma = 1/2$.  Each term in~\eqref{eq:curvature-cartesian} becomes
-$(\gamma-\gamma_\rho)^2/|s-\rho|^4 = 1/(\gamma-\gamma_\rho)^2 > 0$.
+Under RH, $\beta_\rho = 1/2$ for all $\rho$, so each term in~\eqref{eq:curvature-cartesian}
+at $\sigma=1/2$ equals $1/(\gamma-\gamma_\rho)^2 > 0$.
 \end{proof}
 
-\begin{remark}[Resolution of the ``wrong direction'' error]
-A natural initial intuition is that RH should imply \emph{concavity} of
-$\log|\xi|$ in $\sigma$ (since the critical line is a ``preferred'' locus).
-Proposition~\ref{prop:sigma-convex} shows this is \emph{false}: RH implies
-\emph{convexity}. The correct direction for LP-class characterization is
-$t$-concavity, not $\sigma$-concavity (see Section~\ref{sec:lp}).
+\begin{remark}[Direction of convexity]
+Under RH, $\log|\xi|$ is convex in $\sigma$ and, by harmonicity, concave in $t$ at
+$\sigma = 1/2$.
 \end{remark}
 
 %------------------------------------------------------------------
-\section{The curvature criterion and the Laguerre--P\'olya class}
+\section{Positivity of \texorpdfstring{$\mathcal C$}{C} and the Laguerre--P\'olya class}
 \label{sec:lp}
 %------------------------------------------------------------------
 
-\subsection{The function $f(t) = \xi(1/2+it)$ is real-valued}
+\subsection{The function \texorpdfstring{$f(t) = \xi(1/2+it)$}{f(t)=xi(1/2+it)} is real-valued}
 
 \begin{proposition}\label{prop:real}
 For all $t \in \mathbb{R}$, $\xi(1/2+it) \in \mathbb{R}$.
 \end{proposition}
 
 \begin{proof}
-Combining the functional equation $\xi(s) = \xi(1-s)$ with the reality
-$\overline{\xi(s)} = \xi(\bar{s})$ (entire function with real Taylor coefficients at
-$s = 1/2$):
+Combining the functional equation $\xi(s) = \xi(1-s)$ with
+$\overline{\xi(s)} = \xi(\bar{s})$:
 $\overline{\xi(1/2+it)} = \xi(1/2-it) = \xi(1-(1/2+it)) = \xi(1/2+it)$.
 \end{proof}
 
 \subsection{The Laguerre--P\'olya class}
 
 \begin{definition}
-An entire function $f: \mathbb{C} \to \mathbb{C}$ belongs to the
-\emph{Laguerre--P\'olya class}~$\LP$ if it is a uniform limit on compact sets of
-polynomials with only real zeros, or equivalently if it has the form
+An entire function $f$ belongs to the \emph{Laguerre--P\'olya class}~$\LP$ if it is a
+uniform limit on compact sets of real polynomials with only real zeros, or equivalently if
+it has the form
 \[
   f(t) = c\,t^m e^{-\alpha t^2+\beta t}\prod_k\!\left(1-\frac{t}{t_k}\right)e^{t/t_k},
 \]
 with $c,\beta,t_k \in \mathbb{R}$, $\alpha \geq 0$, $\sum_k t_k^{-2} < \infty$.
 \end{definition}
 
-The class $\LP$ consists exactly of the entire real functions with all real zeros.
-The following is the fundamental equivalence (de~Bruijn~\cite{deBruijn1950},
-Newman~\cite{Newman1976}):
+In particular,
+a real entire function of genus at most one with only real zeros belongs to $\LP$. The
+function $f$ is real on $\mathbb R$ (Proposition~\ref{prop:real}) and of order one, so the
+following holds (see de~Bruijn~\cite{deBruijn1950}, Newman~\cite{Newman1976}):
 
 \begin{proposition}\label{prop:rh-lp}
 The following are equivalent:
 \begin{enumerate}
   \item[\rm(1)] RH: every non-trivial zero of $\zeta$ satisfies $\Re(\rho) = 1/2$.
-  \item[\rm(2)] $f(t) = \xi(1/2+it)$ belongs to~$\LP$.
+  \item[\rm(2)] $f \in\LP$.
 \end{enumerate}
 \end{proposition}
 
-\subsection{The curvature criterion}
+\begin{proof}
+The zeros of $f$ are $t=-i(\rho-\tfrac12)$, which are real exactly when $\Re\rho=\tfrac12$.
+If RH holds, $f$ is real entire of order one (hence genus at most one) with real zeros, so
+$f\in\LP$. Conversely, functions in $\LP$ have only real zeros.
+\end{proof}
 
-\begin{theorem}[Curvature criterion]\label{thm:rh-curvature}
-Define $\mathcal{C}(\gamma) := -\partial^2_{tt}\log|f(t)||_{t=\gamma}
-= \partial^2_{\sigma\sigma}\mathcal{L}(1/2+i\gamma)$ (using harmonicity of $\mathcal{L}$).
-Then:
+\subsection{Positivity of the curvature}
+
+For $\gamma\in\mathbb R$ with $f(\gamma)\neq0$ we have, by harmonicity of $\mathcal L$,
 \[
-  f \in \LP
-  \;\iff\;
-  \mathcal{C}(\gamma) > 0
-  \quad\forall\,\gamma \notin \{\gamma_\rho\}.
+  \mathcal{C}(\gamma) = \partial^2_{\sigma}\mathcal{L}(\tfrac12+i\gamma)
+  = -\frac{d^2}{dt^2}\log|f(t)|\Big|_{t=\gamma}.
 \]
-In particular, $\mathrm{RH} \iff \mathcal{C}(\gamma) > 0$ for all such $\gamma$.
+This is the only definition of $\mathcal C$ used below.
+
+\begin{theorem}\label{thm:rh-curvature}
+If RH holds, then $\mathcal C(\gamma)=\sum_\rho(\gamma-\gamma_\rho)^{-2}>0$ for every
+$\gamma\notin\{\gamma_\rho\}$. Conversely, let $\rho_0=\tfrac12+b_0+i\gamma_0$ with
+$b_0\neq0$ be a zero, and assume $\xi(\tfrac12+i\gamma_0)\neq0$. Its contribution to
+$\mathcal C(\gamma_0)$, counted together with the zero $1-\bar\rho_0$, is $-2/b_0^2$, and
+$\mathcal C(\gamma_0)<0$ whenever
+\[
+  \sum_{\rho\neq\rho_0,\,1-\bar\rho_0}\Re\frac{-1}{(\tfrac12+i\gamma_0-\rho)^2}<\frac{2}{b_0^2},
+\]
+where the sum removes one copy of each of $\rho_0$ and $1-\bar\rho_0$.
 \end{theorem}
 
 \begin{proof}
-For $f \in \LP$, the Hadamard product gives all $t_k$ real, hence
-$\partial^2_{tt}\log|f(t)| = -2\alpha - \sum_k (t-t_k)^{-2} < 0$,
-i.e., $\mathcal{C}(t) > 0$.
-
-Conversely, suppose $f$ has a non-real zero $t_0 = \gamma_0 + ib_0$ ($b_0 > 0$).
-The conjugate pair $\{t_0, \bar t_0\}$ contributes
-\[
-  \Re\!\left(\frac{-1}{(t-t_0)^2} - \frac{1}{(t-\bar t_0)^2}\right)
-  = \frac{-2(t-\gamma_0)^2 + 2b_0^2}{[(t-\gamma_0)^2+b_0^2]^2},
-\]
-which is \emph{positive} for $|t-\gamma_0| < b_0$.  Thus $\partial^2_{tt}\log|f| > 0$
-(i.e., $\mathcal{C}(t) < 0$) in the strip $(\gamma_0-b_0, \gamma_0+b_0)$.
-Hence $f \notin \LP$ implies $\mathcal{C} < 0$ somewhere.
+The first statement is Proposition~\ref{prop:sigma-convex}. For the second, put
+$s=\tfrac12+i\gamma_0$. Then $s-\rho_0=-b_0$ and $s-(1-\bar\rho_0)=b_0$, so each of these two
+zeros contributes $\Re(-1/b_0^2)=-1/b_0^2$ to~\eqref{eq:curvature-cartesian}. The total is
+$-2/b_0^2$ plus the remaining sum, which is negative under the stated inequality.
 \end{proof}
 
 \begin{corollary}
-$\mathrm{RH} \iff \mathcal{C}(t) = \displaystyle\sum_\rho \frac{1}{(t-\gamma_\rho)^2}$
-for all $t \notin \{\gamma_\rho\}$.
+If RH holds, then $\mathcal{C}(t) = \displaystyle\sum_\rho \frac{1}{(t-\gamma_\rho)^2}$
+for all $t \notin \{\gamma_\rho\}$. Conversely, if this identity holds for all such $t$,
+then RH holds.
 \end{corollary}
 
 \begin{proof}
-Under RH, $\beta_\rho = 1/2$, so Theorem~\ref{thm:curvature} gives
-$\mathcal{C}(t) = \sum_\rho 1/(t-\gamma_\rho)^2 > 0$. Conversely, if
-$\mathcal{C}(t) > 0$ for all $t$, Theorem~\ref{thm:rh-curvature} gives $f \in \LP$,
-hence RH by Proposition~\ref{prop:rh-lp}.
+The first statement is Theorem~\ref{thm:curvature} with $\beta_\rho=\tfrac12$. Conversely,
+suppose the identity holds and let $\rho_0=\tfrac12+b_0+i\gamma_0$ with $b_0\ne0$ be a zero;
+the right-hand side converges since $\sum_\rho\gamma_\rho^{-2}<\infty$. Let $k\ge0$ be the
+number of zeros $\tfrac12+i\gamma_0$ and $k'\ge2$ the number of zeros with ordinate $\gamma_0$
+off the line ($\rho_0$ and $1-\bar\rho_0$ among them). By~\eqref{eq:curvature-cartesian},
+$(t-\gamma_0)^2\mathcal C(t)\to k$ as $t\to\gamma_0$, since the off-line zeros give bounded
+terms near $t=\gamma_0$; while $(t-\gamma_0)^2\sum_\rho(t-\gamma_\rho)^{-2}\to k+k'$. This
+contradicts the identity, so RH holds.
 \end{proof}
 
+\begin{remark}\label{rem:counterexample}
+Whether $\mathcal C>0$ on $\mathbb R\setminus\{\gamma_\rho\}$ implies RH is open. The
+negative contribution of an off-line pair can be masked by the positive contributions
+$(\gamma-\gamma_\rho)^{-2}$ of nearby zeros on the line, whose number grows like
+$(\log T)/2\pi$ per unit length. The analogous statement for general real entire functions
+is false: $g(t)=(t^2+1)\sin\pi t$ is real entire of order one with the non-real zeros $\pm i$,
+yet
+\[
+  -\frac{d^2}{dt^2}\log|g(t)|=\frac{\pi^2}{\sin^2\pi t}-\frac{2(1-t^2)}{(1+t^2)^2}
+  \ge\pi^2-2>0\qquad(t\notin\mathbb Z).
+\]
+\end{remark}
+
+
 %------------------------------------------------------------------
-\section{The four analytic frameworks and their unification}
+\section{Related formulations}
 \label{sec:fronts}
 %------------------------------------------------------------------
 
-We now show that four frameworks separately proposed in the literature as potential
-RH proof strategies reduce to a single condition: $f(t) \in \LP$.
+We compare the positivity of $\mathcal C$ with several known formulations of RH.
 
-\subsection{Framework A: de Bruijn--Newman flow and Kre\u{\i}n monotonicity}
+\subsection{The de Bruijn--Newman constant}
 
-The de~Bruijn--Newman constant $\Lambda \in \mathbb{R}$ is defined as the infimum of
-$t \geq 0$ for which $H_t(z) = \int_0^\infty \Phi(u)e^{tu^2}\cos(uz)\,du$ has only
-real zeros, where $\Phi$ is the Fourier transform weight of $\xi$.
-The key results are:
-\begin{itemize}
-  \item $\mathrm{RH} \iff \Lambda = 0$ (de~Bruijn~\cite{deBruijn1950}, Newman~\cite{Newman1976}).
-  \item $\Lambda \geq 0$ (Rodgers--Tao~\cite{RodgersTao2020}).
-  \item The flow $t \mapsto H_t$ is the gradient flow of the log-repulsion energy
-    $E_{\log} = -\sum_{j\neq k}\log|z_j-z_k|$ (Csordas--Norfolk--Varga~\cite{CNV1988}).
-\end{itemize}
-The critical line is the \emph{attractor} of the de~Bruijn--Newman flow.
-Framework A reduces to: is $\Lambda = 0$?  This is equivalent to $H_0 = f \in \LP$.
-
-\subsection{Framework B: APS spectral flow}
-
-Let $\{T_\lambda\}_{\lambda \in [0,1]}$ be a family of self-adjoint operators on $L^2(\mathbb{R})$
-associated to the Weil explicit formula, with $T_\lambda$ passing through zero eigenvalues.
-The Atiyah--Patodi--Singer spectral flow $\mathrm{sf}(\{T_\lambda\})$ counts signed eigenvalue
-crossings.
-
-\begin{proposition}
-$\mathrm{sf}(\{T_\lambda\}) = \kappa(Q)$, where $\kappa(Q)$ is the Kre\u{\i}n negative
-index of the Weil quadratic form $Q$.
-\end{proposition}
-
-By the APS formula, $\kappa = \mathrm{Ind}(D_{\mathrm{APS}}) + \eta(T_0)/2$.
-Framework B reduces to: is $\kappa = 0$?  Since $\kappa = 0 \iff$ no off-line zeros
-$\iff$ RH $\iff f \in \LP$, Framework B reduces to the same LP condition.
-
-\subsection{Framework C: $K$-theoretic obstruction}
-
-The Connes scaling operator $H_C$ acts on $L^2(C_\mathbb{Q})$ where
-$C_\mathbb{Q} = \mathbb{A}_\mathbb{Q}^*/\mathbb{Q}^*$ is the id\`ele class group.
-The Baum--Connes isomorphism (which holds for $C_\mathbb{Q}$ since it is amenable) gives
-$K_0(C^*(C_\mathbb{Q})) \cong \mathbb{Z}$.
-The projection $P_- = \mathbf{1}_{(-\infty,0)}(Q)$ onto the negative part of $Q$ defines
-an element $[P_-] \in K_0(C^*(C_\mathbb{Q}))$.
-
-\begin{proposition}
-$[P_-] = \kappa \in K_0 \cong \mathbb{Z}$.
-Hence $[P_-] = 0 \iff \kappa = 0 \iff f \in \LP \iff \mathrm{RH}$.
-\end{proposition}
-
-Framework C reduces to: is $[P_-] = 0$ in $K_0$?
-
-\subsection{Framework D: transversal energy functional}
-
-Define the transversal energy $\Phi = \sum_j b_j^2$ (where $b_j = \Re(\rho_j) - 1/2$
-for off-line zeros) and the arithmetic energy $E_\mathrm{arith} = E_\mathrm{log} + E_\mathrm{conf} + \Phi$.
-By symmetry of the Weil form, $b_j = 0$ is always a \emph{stationary point} of
-$E_\mathrm{arith}$.  The question is whether it is a \emph{minimum}.
-
-The energy diagnostic is:
+Let
 \[
-  E_{\mathrm{curv}}(f) := \int_\mathbb{R} \mathcal{C}(t)\,dt.
+  \Phi(u)=\sum_{n\ge1}(2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}}
 \]
+and $H_t(z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du$, so that
+$H_0(z)=\tfrac18\xi(\tfrac12+\tfrac{iz}{2})$. Let
+\[
+  \Lambda := \inf\{t \in \mathbb{R} : H_t \text{ has only real zeros}\}.
+\]
+De~Bruijn~\cite{deBruijn1950} and Newman~\cite{Newman1976} showed that $\Lambda$ is finite
+and that $\mathrm{RH}\iff\Lambda\le0$; with $\Lambda\ge0$ \cite{RodgersTao2020}, RH holds if
+and only if $\Lambda=0$. Since $H_0(z)=\tfrac18 f(z/2)$, the condition $\Lambda\le 0$ is
+equivalent to $f\in\LP$.
 
-\begin{proposition}
-$E_{\mathrm{curv}}(f) > 0$ for all $f \in \LP$.
-Moreover, $\mathcal{C}(t) > 0$ for all $t$ $\iff$ $f \in \LP$ $\iff$ $\mathrm{RH}$.
-\end{proposition}
+\subsection{The negative index of the Weil form}
 
-Framework D reduces to: is the Hessian of $E_\mathrm{arith}$ in the transversal $b_j$-direction
-positive definite?  The answer is yes $\iff f \in \LP \iff$ RH.
+Let $Q$ be the Weil quadratic form on the test space $\mathcal S$ of \cite[Def.~2.1]{P25}
+and $\kappa(Q)$ its negative index \cite[Def.~2.3]{P25}.
 
-\subsection{The unification theorem}
+\begin{remark}\label{rem:kappa}
+By Weil's positivity theorem \cite[Thm.~2.2]{P25}, $\mathrm{RH}\iff\kappa(Q)=0$. If $\zeta$
+has finitely many zeros off the critical line, forming $m\ge1$ orbits under
+$\rho\mapsto\bar\rho,\ \rho\mapsto1-\rho$ (Hypothesis~D of \cite[Def.~2.4]{P25}), then
+$\kappa(Q)=2m$ \cite[Prop.~4.7]{P25}. Without the finiteness hypothesis no formula for
+$\kappa(Q)$ in terms of the off-line zeros is proved there. A spectral-flow interpretation of
+$\kappa(Q)$, in the spirit of Atiyah--Patodi--Singer~\cite{APS1975}, would require a family
+of self-adjoint operators whose spectral flow equals $\kappa(Q)$; we do not construct one.
+\end{remark}
 
-\begin{theorem}[Unification]\label{thm:lp}
+\subsection{\texorpdfstring{$K$}{K}-theory}
+
+\begin{remark}\label{rem:ktheory}
+A $K$-theoretic formulation in the spirit of Connes~\cite{Connes1999} would require a class
+in $K_0$ detecting $\kappa(Q)$; we do not construct one. Note that the naive candidate does
+not work: $C_\mathbb{Q}\cong\mathbb R_+^*\times\hat{\mathbb Z}^*$, so
+$C^*(C_\mathbb Q)\cong C_0(\mathbb R\times D)$ with $D$ the countable discrete dual of
+$\hat{\mathbb Z}^*$, and $K_0(C^*(C_\mathbb Q))\cong\bigoplus_D K^0(\mathbb R)=0$.
+\end{remark}
+
+\subsection{Transversal energy}
+
+\begin{remark}\label{rem:energy}
+One may ask whether RH can be phrased as the minimality, in the transversal directions
+$b_j=\Re\rho_j-\tfrac12$, of an energy of the zero configuration such as the transversal
+energy $\mathcal T=\sum_j b_j^2$ plus logarithmic interaction terms. This is a heuristic: the
+sums over infinitely many zeros diverge without renormalization, and we prove nothing about
+it. Note also that $\int_{\mathbb R}\mathcal C(t)\,dt$ diverges under RH, since
+$\mathcal C(t)\ge(t-\gamma_\rho)^{-2}$ near each ordinate.
+\end{remark}
+
+\subsection{Summary}
+
+\begin{theorem}\label{thm:lp}
 The following conditions are equivalent:
 \begin{enumerate}
   \item[\rm(A)] $\Lambda = 0$ (de Bruijn--Newman).
-  \item[\rm(B)] $\kappa(Q) = 0$ (spectral flow / Kre\u{\i}n index).
-  \item[\rm(C)] $[P_-] = 0$ in $K_0(C^*(C_\mathbb{Q}))$.
-  \item[\rm(D)] $\mathcal{C}(t) > 0$ for all $t \notin \{\gamma_\rho\}$ (curvature criterion).
-  \item[\rm(E)] $f(t) = \xi(1/2+it) \in \LP$.
+  \item[\rm(B)] $\kappa(Q) = 0$ (negative index of the Weil form).
+  \item[\rm(E)] $f \in \LP$.
   \item[\rm(F)] RH.
+\end{enumerate}
+Each of them implies
+\begin{enumerate}
+  \item[\rm(D)] $\mathcal{C}(t) > 0$ for all $t \notin \{\gamma_\rho\}$.
 \end{enumerate}
 \end{theorem}
 
 \begin{proof}
-(F)$\iff$(E): Proposition~\ref{prop:rh-lp} (de~Bruijn--Newman).
-(E)$\iff$(D): Theorem~\ref{thm:rh-curvature}.
-(D)$\iff$(F): by the equivalences above.
-(A)$\iff$(F): $\Lambda = 0 \iff H_0 \in \LP \iff$ (E).
-(B)$\iff$(F): $\kappa = \#\{\text{off-line zero orbits}\}\cdot 2 = 0 \iff$ RH.
-(C)$\iff$(F): Proposition above.
+(F)$\iff$(E): Proposition~\ref{prop:rh-lp}.
+(A)$\iff$(F): de~Bruijn--Newman and Rodgers--Tao, as recalled above.
+(B)$\iff$(F): \cite[Thm.~2.2, Def.~2.3]{P25}.
+(F)$\Rightarrow$(D): Theorem~\ref{thm:rh-curvature}.
 \end{proof}
 
 %------------------------------------------------------------------
-\section{The sector decomposition of $G(t)$}
+\section{The sector decomposition of \texorpdfstring{$G(t)$}{G(t)}}
 \label{sec:sectors}
 %------------------------------------------------------------------
 
-Define $G(t) := (\xi'/\xi)'(1/2+it)$.  By the Hadamard product,
-$G(t) = \sum_\rho d^2/dt^2 \log|1/2+it-\rho|$, and by harmonicity,
-$G(t) = \mathcal{C}(t)$.  We decompose $G$ according to the three factors of $\xi$.
+Define $G(t) := \Re\,(\xi'/\xi)'(1/2+it)$. By the Hadamard product,
+\[
+  G(t)=\sum_\rho\Re\frac{-1}{(1/2+it-\rho)^2}=-\frac{d^2}{dt^2}\log|f(t)|=\mathcal C(t).
+\]
+We decompose $G$ according to the factors of $\xi$.
 
 \begin{theorem}[Sector decomposition]\label{thm:sectors}
+For $t\in\mathbb R$ with $\zeta(\tfrac12+it)\neq0$,
 \[
   G(t) = G_{\mathrm{poly}}(t) + G_\Gamma(t) + G_\zeta(t),
 \]
-where:
+where
 \begin{align}
-  G_{\mathrm{poly}}(t) &= \frac{2(1/4 - t^2)}{(t^2+1/4)^2}, \label{eq:gpoly}\\[4pt]
-  G_\Gamma(t) &= -\tfrac{1}{4}\,\Re\!\left[\psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right)\right],
+  G_{\mathrm{poly}}(t) &= \frac{2(t^2-1/4)}{(t^2+1/4)^2}, \label{eq:gpoly}\\[4pt]
+  G_\Gamma(t) &= \tfrac{1}{4}\,\Re\!\left[\psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right)\right],
   \label{eq:ggamma}\\[4pt]
-  G_\zeta(t) &= \frac{d^2}{dt^2}\log|\zeta\!\left(\tfrac{1}{2}+it\right)|.
+  G_\zeta(t) &= -\frac{d^2}{dt^2}\log|\zeta\!\left(\tfrac{1}{2}+it\right)|.
   \label{eq:gzeta}
 \end{align}
 \end{theorem}
 
 \begin{proof}
-From $\log|\xi(s)| = \log|\tfrac{1}{2}s(s-1)| - \tfrac{\log\pi}{2}\sigma + \log|\Gamma(s/2)| + \log|\zeta(s)|$,
-differentiate twice in $t$ and use harmonicity ($\partial_{tt} = -\partial_{\sigma\sigma}$).
+On $s=\tfrac12+it$,
+$\log|f(t)| = \log|\tfrac{1}{2}s(s-1)| - \tfrac{\log\pi}{4} + \log|\Gamma(s/2)| + \log|\zeta(s)|$,
+and $G=-\frac{d^2}{dt^2}\log|f|$.
 
-\medskip\noindent\textit{Polynomial sector.} $|\tfrac{1}{2}s(s-1)|_{s=1/2+it} = \tfrac{1}{2}(t^2+1/4)$, so
-$\log|\tfrac{1}{2}s(s-1)| = \log\tfrac{1}{2}+\log(t^2+1/4)$, and~\eqref{eq:gpoly} follows.
+\medskip\noindent\textit{Polynomial sector.} $|\tfrac{1}{2}s(s-1)| = \tfrac{1}{2}(t^2+1/4)$,
+and $-\frac{d^2}{dt^2}\log(t^2+\tfrac14)=2(t^2-\tfrac14)/(t^2+\tfrac14)^2$.
 
-\medskip\noindent\textit{Gamma sector.} $d^2/dt^2\log|\Gamma(1/4+it/2)| = \Re[(i/2)^2\psi^{(1)}(1/4+it/2)]
-= -\tfrac{1}{4}\Re\psi^{(1)}(1/4+it/2)$, giving~\eqref{eq:ggamma}.
+\medskip\noindent\textit{Gamma sector.} $\frac{d^2}{dt^2}\log|\Gamma(1/4+it/2)| =
+\Re[(i/2)^2\psi^{(1)}(1/4+it/2)] = -\tfrac{1}{4}\Re\psi^{(1)}(1/4+it/2)$, giving~\eqref{eq:ggamma}.
+The $\zeta$ sector is~\eqref{eq:gzeta} by definition.
 \end{proof}
 
-\subsection{Properties of the analytic sector $G_{\mathrm{ana}} = G_{\mathrm{poly}} + G_\Gamma$}
+\subsection{Properties of the analytic sector \texorpdfstring{$G_{\mathrm{ana}} = G_{\mathrm{poly}} + G_\Gamma$}{G\_ana}}
 
 \begin{proposition}\label{prop:gana}
 The analytic sector satisfies:
 \begin{enumerate}
-  \item[\rm(i)] $G_{\mathrm{poly}}(t) > 0$ for $|t| < 1/2$ and $G_{\mathrm{poly}}(t) < 0$ for $|t| > 1/2$.
-    Asymptotically $G_{\mathrm{poly}}(t) \sim -2/t^2$ as $t \to +\infty$.
-  \item[\rm(ii)] From the Stirling expansion of $\psi^{(1)}$: $G_\Gamma(t) \sim +1/(2t^2)$ as
-    $t \to +\infty$.
-  \item[\rm(iii)] The following identity holds (from the reflection formula for $\psi^{(1)}$):
+  \item[\rm(i)] $G_{\mathrm{poly}}(t) < 0$ for $|t| < 1/2$ and $G_{\mathrm{poly}}(t) > 0$ for
+    $|t| > 1/2$; $G_{\mathrm{poly}}(t) = 2/t^2+O(t^{-4})$ as $t \to +\infty$.
+  \item[\rm(ii)] $G_\Gamma(t) = -\tfrac1{4t^2}+O(t^{-4})$ as $t \to +\infty$.
+  \item[\rm(iii)] For real $t$,
     \[
       \Re\!\left[\psi^{(1)}\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right)\right]
       + \Re\!\left[\psi^{(1)}\!\left(\tfrac{3}{4}+\tfrac{it}{2}\right)\right]
       = 2\pi^2\operatorname{sech}^2(\pi t).
     \]
-  \item[\rm(iv)] $G_{\mathrm{ana}}(0) = 8 - \tfrac{1}{4}\psi^{(1)}(1/4) \approx 8 - 4.30 = 3.70 > 0$.
-  \item[\rm(v)] $G_{\mathrm{ana}}(t) \sim -3/(2t^2) < 0$ for $t \to +\infty$.
+  \item[\rm(iv)] $G_{\mathrm{ana}}(0) = -8 + \tfrac{1}{4}\psi^{(1)}(1/4) = -8+\tfrac{\pi^2}4+2K
+    \approx -3.70 < 0$, where $K$ is Catalan's constant.
+  \item[\rm(v)] $G_{\mathrm{ana}}(t) = \tfrac{7}{4t^2}+O(t^{-4})$ as $t \to +\infty$.
 \end{enumerate}
-In particular, $G_{\mathrm{ana}}$ changes sign: there exists $t_* > 0$ such that
-$G_{\mathrm{ana}}(t_*) = 0$, $G_{\mathrm{ana}}(t) > 0$ for $t < t_*$, and $G_{\mathrm{ana}}(t) < 0$ for $t > t_*$.
+In particular, $G_{\mathrm{ana}}$ has at least one positive zero; let $t_*$ denote the
+smallest one. Since $G_{\mathrm{ana}}$ is even, continuous and $G_{\mathrm{ana}}(0)<0$, we have
+$G_{\mathrm{ana}}<0$ on $(-t_*,t_*)$. Numerically, $t_*\approx 0.4406$, and on $(0,50]$ this is the only zero.
 \end{proposition}
 
 \begin{proof}
-(i): Direct from~\eqref{eq:gpoly}.
-(ii): The Stirling expansion $\psi^{(1)}(s) \approx s^{-1} + (2s^2)^{-1} + \cdots$ for $|s| \to \infty$
-applied to $s = 1/4+it/2 \approx it/2$ gives
-$\psi^{(1)}(1/4+it/2) \approx -2i/t - 2/t^2 + O(t^{-3})$,
-so $\Re\psi^{(1)} \approx -2/t^2$ and $G_\Gamma \approx 1/(2t^2) > 0$.
-(iii): Reflection formula $\psi^{(1)}(z)+\psi^{(1)}(1-z) = \pi^2/\sin^2(\pi z)$ applied to
-$z = 1/4+it/2$ and the duplication formula (Abramowitz--Stegun \cite{AS1964} \S6.4).
-(iv): Numerical evaluation using $\psi^{(1)}(1/4) = \pi^2 + 8G \approx 17.20$ where $G$ is
-Catalan's constant.
-(v): Combining (i) and (ii): $G_{\mathrm{ana}} \approx -2/t^2 + 1/(2t^2) = -3/(2t^2)$.
+(i) is immediate from~\eqref{eq:gpoly}.
+(ii) Stirling's formula gives
+$\psi^{(1)}(z)=z^{-1}+\tfrac12z^{-2}+\tfrac16z^{-3}+O(|z|^{-5})$ as $|z|\to\infty$ in
+$|\arg z|<\pi-\delta$. For $z=\tfrac14+\tfrac{it}2$,
+$\Re z^{-1}=\tfrac14/(\tfrac1{16}+\tfrac{t^2}4)=t^{-2}+O(t^{-4})$,
+$\Re\tfrac12z^{-2}=-2t^{-2}+O(t^{-4})$ and $\Re z^{-3}=O(t^{-4})$, since
+$z^{-3}=(it/2)^{-3}(1+O(t^{-1}))$ with $(it/2)^{-3}$ purely imaginary. Hence
+$\Re\psi^{(1)}(z)=-t^{-2}+O(t^{-4})$ and $G_\Gamma(t)=-\tfrac1{4t^2}+O(t^{-4})$.
+(iii) The reflection formula $\psi^{(1)}(z)+\psi^{(1)}(1-z)=\pi^2/\sin^2(\pi z)$ with
+$z=\tfrac14+\tfrac{it}2$ gives, since $\Re\psi^{(1)}(\bar w)=\Re\psi^{(1)}(w)$, that the
+left-hand side equals $\Re\,\pi^2/\sin^2(\tfrac\pi4+\tfrac{i\pi t}2)$. Now
+$\sin^2(\tfrac\pi4+iy)=\tfrac12(1-\cos(\tfrac\pi2+2iy))=\tfrac12(1+i\sinh 2y)$, so
+$\Re\,1/\sin^2(\tfrac\pi4+iy)=2/(1+\sinh^2 2y)=2\operatorname{sech}^2(2y)$; with
+$y=\pi t/2$ this is the claim.
+(iv) $G_{\mathrm{poly}}(0)=-8$ and $\psi^{(1)}(1/4)=\pi^2+8K\approx17.197$.
+(v) Combine (i) and (ii): $2/t^2-1/(4t^2)=7/(4t^2)$.
+The existence of a positive zero follows from (iv), (v) and continuity. The location and
+uniqueness on $(0,50]$ are numerical evidence from evaluation of $t^2G_{\mathrm{ana}}(t)$ on a
+grid; we do not prove uniqueness.
 \end{proof}
 
-\subsection{The arithmetic obstruction}
+\subsection{The arithmetic part}
 
-\begin{proposition}[The wall]\label{prop:wall}
-The inequality $G_\zeta(t) > -G_{\mathrm{ana}}(t)$ for all $t > t_*$ is equivalent to RH.
-More precisely:
-\begin{enumerate}
-  \item[\rm(i)] If $\rho_0 = 1/2 + b_0 + i\gamma_0$ with $b_0 \neq 0$ is a zero of $\zeta$, then
-    $G(t) < 0$ for $t$ near $\gamma_0$, violating the curvature criterion.
-  \item[\rm(ii)] Controlling $G_\zeta(t)$ in the critical line $\sigma = 1/2$ requires control
-    over the distribution of zeros of $\zeta$---precisely the content of RH.
-\end{enumerate}
-\end{proposition}
-
-\begin{proof}
-For (i): if $\rho_0 = 1/2+b_0+i\gamma_0$ is off-line, the quartet
-$\{\rho_0, 1-\rho_0, \bar\rho_0, \overline{1-\rho_0}\}$ contributes to $G(t)$ near $t = \gamma_0$
-terms of the form $-b_0^2/((t-\gamma_0)^4)$ with negative leading coefficient, so
-$G(t) \to -\infty$ as $t \to \gamma_0$ from outside the zero.  Hence $G < 0$ near $\gamma_0$.
-
-For (ii): the Euler product $\zeta(s) = \prod_p(1-p^{-s})^{-1}$ converges absolutely only
-for $\Re(s) > 1$.  On the critical line $\sigma = 1/2$, the series
-$-(\zeta'/\zeta)(1/2+it) = \sum_n \Lambda(n)n^{-1/2-it}$ (von Mangoldt) diverges absolutely.
-Conditional convergence depends on cancellation between prime powers, which is controlled
-by the zero distribution of $\zeta$---i.e., by RH.
-\end{proof}
+\begin{remark}[Off-line zeros]\label{prop:wall}
+An off-line zero $\rho_0=\tfrac12+b_0+i\gamma_0$ contributes $-2/b_0^2$ to
+$\mathcal C(\gamma_0)=G(\gamma_0)$, together with $1-\bar\rho_0$
+(Theorem~\ref{thm:rh-curvature}); this contribution is finite, and whether it makes $G$
+negative depends on the other zeros. The positivity of $G=\mathcal C$ for $t$ outside the
+ordinates is a consequence of RH; whether it implies RH is open. Since $G_{\mathrm{ana}}>0$
+for large $t$ by Proposition~\ref{prop:gana}(v), positivity of $G$ for large $t$ would follow
+from $G_\zeta(t)>-G_{\mathrm{ana}}(t)$; the term $G_\zeta$ is governed by the zeros of $\zeta$,
+and the Dirichlet series $-(\zeta'/\zeta)(s)=\sum_n\Lambda_{\mathrm{vM}}(n)n^{-s}$ ($\Lambda_{\mathrm{vM}}$ the von
+Mangoldt function) has abscissa of convergence $1$ and diverges for $\Re s<1$, so it gives no direct control of $G_\zeta$
+on $\sigma=1/2$.
+\end{remark}
 
 %------------------------------------------------------------------
-\section{The wall: precise statement}
+\section{Summary of the decomposition}
 \label{sec:wall}
 %------------------------------------------------------------------
 
-Combining the results above, the following is the minimal precise statement of the
-remaining obstruction:
-
-\begin{theorem}[The wall]\label{thm:wall}
-The following are equivalent:
+\begin{theorem}\label{thm:wall}
+The following hold.
 \begin{enumerate}
-  \item[\rm(1)] RH.
-  \item[\rm(2)] $G(t) = G_{\mathrm{ana}}(t) + G_\zeta(t) > 0$ for all $t \notin \{\gamma_\rho\}$.
-  \item[\rm(3)] $G_\zeta(t) > -G_{\mathrm{ana}}(t) \sim 3/(2t^2)$ for all $t > t_*$.
-  \item[\rm(4)] $f(t) = \xi(1/2+it) \in \LP$.
+  \item[\rm(1)] RH is equivalent to $f \in \LP$ (Proposition~\ref{prop:rh-lp}).
+  \item[\rm(2)] RH implies $G(t) = G_{\mathrm{ana}}(t) + G_\zeta(t) > 0$ for all
+    $t \notin \{\gamma_\rho\}$.
+  \item[\rm(3)] RH implies $G_\zeta(t) > -G_{\mathrm{ana}}(t)$ for all
+    $t \notin \{\gamma_\rho\}$; for large $t$ the right-hand side is
+    $-\tfrac{7}{4t^2}+O(t^{-4})$, and for $|t|<t_*$ it is positive.
 \end{enumerate}
-The analytic sector $G_{\mathrm{ana}}(t)$ is computable from the functional equation alone.
-Controlling $G_\zeta(t)$ unconditionally on $\sigma = 1/2$ is equivalent to~\rm{(1)}.
-A proof of the Riemann Hypothesis requires either a direct proof of~\rm{(3)} or a proof
-of~\rm{(4)} by methods that bypass the Euler product on the critical line.
+The analytic sector $G_{\mathrm{ana}}$ is explicit (Theorem~\ref{thm:sectors}).
+Whether {\rm(2)} or {\rm(3)} implies RH is open.
 \end{theorem}
+
+\begin{proof}
+(1) is Proposition~\ref{prop:rh-lp}; (2) is Theorem~\ref{thm:rh-curvature} with
+$G=\mathcal C$; (3) is (2) rewritten with Theorem~\ref{thm:sectors} and
+Proposition~\ref{prop:gana}.
+\end{proof}
 
 %------------------------------------------------------------------
 \section{Conclusions}
 \label{sec:conclusions}
 %------------------------------------------------------------------
 
-We have derived the curvature formula~\eqref{eq:curvature-cartesian} as an explicit
-expression for $\partial^2_{\sigma\sigma}\log|\xi|$ and shown it to be positive everywhere
-outside zeros if and only if RH holds (Theorems~\ref{thm:rh-curvature}).  We have
-further shown that the four frameworks (A)--(D) in the literature are all equivalent
-to this single criterion (Theorem~\ref{thm:lp}).
+The Hadamard formula~\eqref{eq:curvature-cartesian} expresses
+$\partial^2_{\sigma}\log|\xi|$ through the zeros; under RH it is positive on the critical line
+outside the ordinates (Theorem~\ref{thm:rh-curvature}). The converse is open, and its analogue
+for general real entire functions of order one is false
+(Remark~\ref{rem:counterexample}). The positivity is implied by each of the equivalent
+conditions $\Lambda=0$, $\kappa(Q)=0$, $f\in\LP$ (Theorem~\ref{thm:lp}).
 
-The sector decomposition (Theorem~\ref{thm:sectors}) shows that the analytic sector
-$G_{\mathrm{ana}} = G_{\mathrm{poly}} + G_\Gamma$ is explicitly computable and changes sign
-at a threshold $t_*$; for $t > t_*$ the arithmetic sector $G_\zeta$ must compensate.
-This compensation is provably equivalent to RH (Proposition~\ref{prop:wall}), and
-constitutes the irreducible obstruction.
+The sector decomposition (Theorem~\ref{thm:sectors}) shows that the analytic part
+$G_{\mathrm{ana}} = G_{\mathrm{poly}} + G_\Gamma$ is negative on $(-t_*,t_*)$, where $t_*$ is its smallest positive zero
+(numerically $t_*\approx0.44$), and is asymptotic to $7/(4t^2)$; near $t=0$ the arithmetic
+part $G_\zeta$ must compensate whenever $G>0$.
 
 \medskip
 
-\noindent\textbf{What is new.}
-\begin{itemize}
-  \item The explicit Hadamard formula for $\mathcal{C}(\gamma)$ in Cartesian coordinates~\eqref{eq:curvature-cartesian}.
-  \item The resolution of the concavity direction: $\sigma$-convexity (not concavity) holds under RH.
-  \item The exact sector decomposition with polygamma formulas (Theorem~\ref{thm:sectors},
-    Proposition~\ref{prop:gana}).
-  \item The unification Theorem~\ref{thm:lp} synthesizing frameworks (A)--(D) into one object.
-\end{itemize}
-
-\noindent\textbf{What is not new.}
-The equivalences $\mathrm{RH}\iff\LP\iff\Lambda=0$ are due to de~Bruijn~\cite{deBruijn1950}
-and Newman~\cite{Newman1976}.  The inequality $\Lambda\ge0$ is Rodgers--Tao~\cite{RodgersTao2020}.
-The APS connection uses standard spectral geometry.  The $K$-theoretic formulation
-follows Connes~\cite{Connes1999}.
+\noindent\textbf{What is known.}
+The formula~\eqref{eq:curvature-cartesian} follows directly from the Hadamard product; a
+related positivity criterion for $\Re(\xi'/\xi)$ is due to Lagarias~\cite{Lagarias1999}.
+The equivalences $\mathrm{RH}\iff f\in\LP\iff\Lambda\le0$ are due to
+de~Bruijn~\cite{deBruijn1950} and Newman~\cite{Newman1976}; $\Lambda\ge0$ is
+Rodgers--Tao~\cite{RodgersTao2020}; $\mathrm{RH}\iff\kappa(Q)=0$ is Weil's theorem
+\cite[Thm.~2.2]{P25}. The explicit polygamma formulas of
+Theorem~\ref{thm:sectors} and Proposition~\ref{prop:gana} are elementary computations.
 
 %------------------------------------------------------------------
 \begin{thebibliography}{99}
@@ -533,16 +520,6 @@ follows Connes~\cite{Connes1999}.
 M.~F. Atiyah, V.~K. Patodi, and I.~M. Singer,
 \textit{Spectral asymmetry and Riemannian geometry. I},
 Math.\ Proc.\ Cambridge Philos.\ Soc.\ \textbf{77} (1975), 43--69.
-
-\bibitem{AS1964}
-M.~Abramowitz and I.~A. Stegun (eds.),
-\textit{Handbook of Mathematical Functions},
-National Bureau of Standards, Washington, D.C., 1964.
-
-\bibitem{CNV1988}
-G.~Csordas, R.~S. Norfolk, and R.~S. Varga,
-\textit{The Riemann hypothesis and the Turán inequalities},
-Trans.\ Amer.\ Math.\ Soc.\ \textbf{296} (1986), 521--541.
 
 \bibitem{Connes1999}
 A.~Connes,
@@ -555,6 +532,11 @@ N.~G. de~Bruijn,
 \textit{The roots of trigonometric integrals},
 Duke Math.\ J.\ \textbf{17} (1950), 197--226.
 
+\bibitem{Lagarias1999}
+J.~C. Lagarias,
+\textit{On a positivity property of the Riemann $\xi$-function},
+Acta Arith.\ \textbf{89} (1999), 217--234.
+
 \bibitem{Newman1976}
 C.~M. Newman,
 \textit{Fourier transforms with only real zeros},
@@ -564,6 +546,11 @@ Proc.\ Amer.\ Math.\ Soc.\ \textbf{61} (1976), 245--251.
 B.~Rodgers and T.~Tao,
 \textit{The de Bruijn--Newman constant is non-negative},
 Forum Math.\ Pi \textbf{8} (2020), e6.
+
+\bibitem{P25}
+D.~A.~Trejo Pizzo,
+\textit{The Weil form and the scaling operator: a Pontryagin-index dictionary in zero
+coordinates}, Paper~25 of this series.
 
 \end{thebibliography}
 
