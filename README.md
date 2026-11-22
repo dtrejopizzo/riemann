@@ -69,12 +69,36 @@ The full catalogue of papers 01–48 is in [`04-papers/README.md`](04-papers/REA
 | [`04-papers/`](04-papers/) | Papers 01–48. |
 | [`05-meta-and-planning/`](05-meta-and-planning/) | Plans, audits and the master index of all routes attempted for the sign ([`ROUTES-MASTER-INDEX.md`](05-meta-and-planning/ROUTES-MASTER-INDEX.md)). |
 
-Papers, READMEs and indices are in English. Many working memos of the later phases are written
-in Spanish.
+## Building the papers
 
-## Labels
+Each paper folder in `04-papers/` contains a self-contained LaTeX source `main.tex` and the compiled
+PDF. To rebuild, run `pdflatex main.tex` three times inside the folder (so that references and the
+table of contents settle); some folders give a `-jobname` in their own README so that the PDF
+carries a descriptive name. The numerical certificates are reproduced by the scripts kept beside
+each paper or in the phase folders cited in it; the computational core they rely on is described
+in [`02-foundations/`](02-foundations/).
 
-Used throughout: PROVED, CITED, CONDITIONAL, ARGUED, OPEN, NO-GO, NUMERICAL.
+## Conventions and status labels
+
+Every result in the papers and in the research record carries one of the following labels.
+
+| Label | Meaning |
+|---|---|
+| PROVED | Complete proof in the text, checked. |
+| CITED | Taken from the literature, with reference. |
+| CONDITIONAL | Proved under an explicitly stated hypothesis. |
+| ARGUED | A proof sketch or argument with an identified gap; not relied upon. |
+| NUMERICAL | Supported by computation (interval-certified where stated); not a proof unless certified. |
+| NO-GO | A negative result: a route or class of constructions shown not to work. |
+| OPEN | Not established. |
+
+A label is changed only on a written proof or a recorded retraction; retractions are recorded in the phase folder
+where they occurred. No paper claims a proof of the Riemann hypothesis.
+
+## Language
+
+Papers, READMEs and indices are in English. Many working memos of the later phases are written in
+Spanish.
 
 ## Author
 

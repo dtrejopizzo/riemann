@@ -1,6 +1,8 @@
 # Option 2 — B2conj: precise formulation and the forward direction (proven)
 
-**Auditor build · 2026-06-05.** RH-independent. We make Conjecture B2 precise, prove the forward direction
+**Date:** 2026-06-05 · **Status:** executed through Day 45: forward direction proved, converse proved in the localized-detector regime; RH-independent.
+
+**Purpose.** RH-independent. We make Conjecture B2 precise, prove the forward direction
 rigorously, and set up the converse against the backdrop of converse theorems. This is standalone new mathematics:
 a characterization of Euler products by the *locality* of the localized-Weil anatomy.
 

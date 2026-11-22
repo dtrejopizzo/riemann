@@ -26,3 +26,26 @@ This phase connects the de Bruijn–Newman constant $\Lambda$ to the CCM Jacobi 
 
 ## Relation to other phases
 Builds directly on Phase 32 (Jacobi trace $T_\lambda$, PTC equivalence). The unresolved "Hadamard Barrier" synthesized in Doc 89 is carried forward into Phase 34, which seeks further constraints on $d\nu$.
+
+## Contents
+
+- `70-de-bruijn-newman-and-the-ccm-trace.md` — Document 70 — De Bruijn-Newman and the CCM trace: $\Lambda$ as the extinction time of $T_\lambda(t)$
+- `71-time-derivative-of-and-the-coefficients.md` — Document 71 — Time derivative of $T_\lambda$ and the coefficients $c_k$
+- `72-ccm-trace-and-weil-s-explicit.md` — Document 72 — The CCM trace and Weil's explicit formula
+- `73-proof-attempt-three-attacks.md` — Document 73 — Proof attempt: three attacks on $T_\lambda = 0$ and the fundamental obstacle
+- `74-weil-mechanism-function-field-number-field.md` — Document 74 — The Weil mechanism: function-field ↔ number-field analogy
+- `75-li-s-criterion-and-the-ccm-trace.md` — Document 75 — Li's criterion and the CCM trace: comparison and quantitative connection
+- `76-explicit-computation.md` — Document 76 — Explicit computation of $\widehat{W_\lambda\, dm_\infty}(r)$
+- `77-arithmetic-frobenius-construction-and-obstacles.md` — Document 77 — Arithmetic Frobenius: construction and obstacles in the CCM formalism
+- `78-transform-between-li-s-criterion.md` — Document 78 — The transform between Li's criterion and the CTP-CCM criterion
+- `79-exponential-decay-the-sum-over-primes.md` — Document 79 — Exponential decay, the sum over primes, and the cancellation conditions
+- `80-arithmetic-castelnuovo-severi-construction-and-critical.md` — Document 80 — The "arithmetic Castelnuovo-Severi": construction and critical analysis of the Pillar III …
+- `81-positivity-of-on-the-unit-circle.md` — Document 81 — Positivity of $L(z)$ on the unit circle and the reformulation via the disk
+- `82-variational-reformulation-and-the-connection.md` — Document 82 — The variational reformulation and the connection with Nyman-Beurling
+- `83-does-the-difference-have-a-sign-measure.md` — Document 83 — Does the difference $|\zeta|^2 - |\zeta_{on}|^2$ have a sign? Measure domination, Jacobi …
+- `84-does-satisfy-any-property-that-forces-non.md` — Document 84 — Does $F(z)$ satisfy any property that forces non-zeros in the disk?
+- `85-completeness-of-exponential-systems.md` — Document 85 — Completeness of exponential systems in $L^2(W_\lambda\,dm_\infty)$
+- `86-relative-entropy-and-extremality-of-synthesis.md` — Document 86 — Relative entropy and extremality of $dm_{full}$: synthesis of Path 1
+- `87-integral-jensen-poisson-xi.md` — Document 87 — The Jensen integral via the Poisson-Jensen formula in the critical strip
+- `88-dbn-flow-as-a-trajectory-toward.md` — Document 88 — The DBN flow as a trajectory toward the Hadamard-critical manifold
+- `89-central-object-as-synthesis.md` — Document 89 — The central object: $d\nu = dm_{full} - dm_{full,on}$ as synthesis of the three paths

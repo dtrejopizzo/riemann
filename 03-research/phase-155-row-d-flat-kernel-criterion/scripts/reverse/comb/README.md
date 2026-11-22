@@ -44,3 +44,7 @@ Arguments: `NAME T U M BETA [TAUMAX] [nocomb]`; `BETA=1` frees `(β₀−2, β�
 **Every window is negative**; the comb equalities are always *feasible* (residual `0`) but the
 null space **saturates** at `U ≈ 5` (`M=24`) / `U ≈ 6` (`M=48`) — comb-vanishing ⟹ effectively
 bounded support. See `../../../03-research/phase-155-row-d-flat-kernel-criterion/R155_016_COMB_VANISHING_LP.md`.
+
+## Other files in this folder
+
+- `*.json` (10 files, e.g. `lp_c_log3h_M48.json`) — output data files.

@@ -91,3 +91,25 @@ separate technical fronts:
   DIRECTIONAL-TAIL-CONTINUITY for PROLATE and WEIL-TAIL;
   SAFE-PROLATE-BRIDGE.
 ```
+
+## Outcome
+
+Closed at reduction grade; see [`PHASE_80_CLOSURE.md`](PHASE_80_CLOSURE.md) (“Corrected minimal cut to Omega7”). No positivity statement toward Ω7 is proved here; the phase is an exact reduction.
+Open items carried forward: A1--D3 in (3.1).
+
+## Contents
+
+- `E80_001_PHASE_CONTRACT.md` — E80.001 - Phase contract and dependency cut
+- `E80_002_INDEPENDENT_EULER_GAMMA_PRODUCT.md` — E80.002 - Independent finite Euler--Gamma product
+- `E80_003_BILATERAL_RDI_EQUIVALENCE.md` — E80.003 - Bilateral relative determinant equivalence
+- `E80_004_COHERENCE_INSUFFICIENCY.md` — E80.004 - Coherence and summability do not identify the limit
+- `E80_005_HPR_AND_THE_ARITHMETIC_COCYCLE.md` — E80.005 - HPR compression and the arithmetic cocycle
+- `E80_006_GAP_Z_MINIMAL_CONVERGENCE.md` — E80.006 - Minimal convergence requirements behind GAP-Z
+- `E80_007_MU_FREE_DISK_INTERSECTION_DECISION.md` — E80.007 - Decision of the mu-free disk-intersection alternative
+- `E80_008_RADICAL_TAIL_CUT_AUDIT.md` — E80.008 - Radical-tail cut audit
+- `E80_009_LP_BTG_MINIMALITY.md` — E80.009 - Minimal LP boundary-trace cut
+- `PHASE_80_CLOSURE.md` — Phase 80 closure - Corrected minimal cut to Omega7
+
+## Relation to other phases
+
+Continues [`phase-79-shared-convergence-and-ident-discriminant`](../phase-79-shared-convergence-and-ident-discriminant/); its open target passes to [`phase-81-secular-arithmetic-anchor`](../phase-81-secular-arithmetic-anchor/). The chain of phases 80–101 is the finite real-rooted CCM route to Ω7 (the Li–Keiper positivity statement), opened in phases 71–79.

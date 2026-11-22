@@ -1,6 +1,10 @@
 # PLAN-RH-MAXIMAL — The Maximal Attempt on the Riemann Hypothesis
 
-**Author:** D. Torres · **Compiled:**  · **Status:** living document, post-Lise-Science-run-7
+**Author:** David Alejandro Trejo Pizzo · **Status:** executed; kept as a living document from Lise Science run 7 through the
+Phase 26–27 results recorded in §9; its structural flank continued in plans 02–04 and the arc was closed in plan 05.
+
+**Purpose.** Lay out the maximal realistic attempt on RH: provable groundwork, the truncation theorem, the
+contradiction architecture, the structural assault and dissemination, with the wall named in advance.
 
 ---
 
@@ -159,7 +163,7 @@ ingredient that is missing.
   explicit dependence on $(T_0,\sigma,J)$. **This conjecture is equivalent to (a localized form of)
   RH** — say so explicitly (R7 discipline). The value is that it is now *one precise inequality*,
   not a vague program.
-- 2.3 Test $\mathbf{(LB)}$ computationally across the full 5-control panel + ζ_δ at many
+- 2.3 Test $\mathbf{(LB)}$ computationally across the full set of 5 controls + ζ_δ at many
   $(T_0,\sigma,J)$: does the empirical $\lambda_{\min}$ floor for genuine L-functions obey a clean
   law? A clean empirical law for $\eta(T_0,\sigma,J)$ is the strongest possible hint at how to
   prove (LB).
@@ -175,7 +179,7 @@ genuine L-functions and fails exactly for off-line zeros. This is open research;
   to stability under basis restriction." This is the single most promising structural lead.
 - 3.2 **de Branges flank:** identify the canonical system / structure function whose reproducing
   kernels are our $\varphi_j$. RH-for-this-space ⟺ a monotonicity (the de Branges chain condition).
-  Test the chain condition numerically on the panel before investing in proof.
+  Test the chain condition numerically on the set of controls before investing in proof.
 - 3.3 **Function-field template:** look for the analogue of the *intersection-form positivity*
   (the Hodge-index / Riemann–Roch step) that proves RH for curves. Is there an arithmetic analogue
   of "the intersection form is negative-definite on the primitive part" that maps to (LB)?
@@ -186,7 +190,7 @@ genuine L-functions and fails exactly for off-line zeros. This is open research;
   the wall is, and where the attempt most likely stops with "here is precisely the open lemma."
 
 ### Phase 4 — Community & dissemination (non-negotiable for a real attempt)
-RH will not fall to a closed AI+cloud loop. The maximal attempt *requires* putting the sharpened
+RH will not fall to a closed computational loop. The maximal attempt *requires* putting the sharpened
 objects in front of working analytic number theorists.
 - 4.1 Publish P7 (Phase 1) — a clean rigorous result is the credibility that earns expert attention.
 - 4.2 Bring (LB) and the empirical floor law (Phase 2) to the people whose tools are nearest:
@@ -375,27 +379,27 @@ local-to-global principle for the Weil form.
 **Why new:** Phases 21–25 exhausted all spectral/analytic tools. Phase 27 brings new tools:
 local-global principle, adelic factorization Q = ∏_p Q_p, representation theory of C_Q.
 
-**Documents ejecutados:**
+**Documents executed:**
 - `phase-27-adelic-rigidity/00-setup.md` ✅
-- `phase-27-adelic-rigidity/01-A-B-classification.md` ✅ — 27-A (clasificación) + 27-B (interpretación adélica); Teorema 27-B.4: V.2 = 27-B son el mismo obstáculo
-- `phase-27-adelic-rigidity/02-C-wall-analysis.md` ✅ — Wall A (no-factorización de Q_zero, Prop. 27-C.1) + Wall B (Hasse–Minkowski no aplica en dimensión infinita, Prop. 27-C.6); equivalencia Wall A = sitio aritmético de Connes–Consani (Prop. 27-C.5)
-- `phase-27-adelic-rigidity/03-verdict.md` ✅ — Veredicto final
+- `phase-27-adelic-rigidity/01-A-B-classification.md` ✅ — 27-A (classification) + 27-B (adelic interpretation); Theorem 27-B.4: V.2 and 27-B are the same obstacle
+- `phase-27-adelic-rigidity/02-C-wall-analysis.md` ✅ — Wall A (non-factorization of Q_zero, Prop. 27-C.1) + Wall B (Hasse–Minkowski does not apply in infinite dimension, Prop. 27-C.6); equivalence Wall A = Connes–Consani arithmetic site (Prop. 27-C.5)
+- `phase-27-adelic-rigidity/03-verdict.md` ✅ — Final verdict
 
-**Resultados de Phase 27:**
+**Results of Phase 27:**
 
-1. **Identificación V.2 = 27-B** (Teorema 27-B.4): El obstáculo $x^{b_j+i\gamma_j} \notin L^2(C_\mathbb{Q})$ (Phase 26) es idéntico a la no-unitaridad del carácter (Phase 27). Phase 27 no es una ruta alternativa a V.2 — es la misma ruta en lenguaje adélico.
+1. **Identification V.2 = 27-B** (Theorem 27-B.4): The obstacle $x^{b_j+i\gamma_j} \notin L^2(C_\mathbb{Q})$ (Phase 26) is identical to the non-unitarity of the character (Phase 27). Phase 27 is not an alternative route to V.2 — it is the same route in adelic language.
 
-2. **Wall A es no-factorización** (Prop. 27-C.1): El término de ceros $Q_{\rm zero} = \sum_\rho \hat{h}(\rho)$ no factoriza sobre primos. Los ceros de $\zeta$ son objetos globales; los factores de Euler $(1-p^{-s})^{-1}$ nunca se anulan. No existe análogo del "Frobenius en un primo" para $\zeta/\mathbb{Q}$.
+2. **Wall A is non-factorization** (Prop. 27-C.1): The zero term $Q_{\rm zero} = \sum_\rho \hat{h}(\rho)$ does not factor over primes. The zeros of $\zeta$ are global objects; the Euler factors $(1-p^{-s})^{-1}$ never vanish. There is no analogue of "Frobenius at a prime" for $\zeta/\mathbb{Q}$.
 
-3. **Wall A = sitio aritmético de Connes–Consani** (Prop. 27-C.5): La factorización $Q = Q_\infty + \sum_p Q_p$ requiere construir $H^1(\mathrm{Spec}\,\mathbb{Z}, \mathcal{F})$ con operador de Frobenius aritmético y forma de intersección positiva. Ésto es exactamente el programa de Connes–Consani.
+3. **Wall A = the Connes–Consani arithmetic site** (Prop. 27-C.5): The factorization $Q = Q_\infty + \sum_p Q_p$ requires constructing $H^1(\mathrm{Spec}\,\mathbb{Z}, \mathcal{F})$ with an arithmetic Frobenius operator and a positive intersection form. This is exactly the Connes–Consani program.
 
-4. **Wall B sin solución conocida** (Prop. 27-C.6): El teorema de Hasse–Minkowski clásico no aplica a formas hermitianas infinito-dimensionales.
+4. **Wall B has no known solution** (Prop. 27-C.6): The classical Hasse–Minkowski theorem does not apply to infinite-dimensional Hermitian forms.
 
-**Diagrama de equivalencias completo:**
+**Complete diagram of equivalences:**
 
 $$\text{RH} \iff \kappa(Q) = 0 \iff \mathrm{neg.ind}(H_C) = 0 \iff Q \ge 0 \iff \text{Wall A + } Q_p \ge 0 \forall p \iff H^1(\mathrm{Spec}\,\mathbb{Z}) \ge 0.$$
 
-**Veredicto Phase 27:** Éxito metodológico. Wall W4-RSRP identificado con precisión máxima como el programa de Connes–Consani. El obstáculo final está más precisamente caracterizado que en cualquier fase anterior.
+**Phase 27 verdict:** Methodological success. Wall W4-RSRP identified with maximal precision as the Connes–Consani program. The final obstacle is more precisely characterized than in any earlier phase.
 
 ### 9.8 Papers P33–P35 — status
 

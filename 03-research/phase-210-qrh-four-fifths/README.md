@@ -37,7 +37,7 @@ So 4/5 requires at least one new estimate, not a new choice of parameters.
    to a mean square over H = D^{18/25} rows: below the diagonal. The obstacle there is
    located precisely (the term 𝓗²/X of the quadratic large sieve in the dual).
 4. **Attack** the most tractable target inequality from steps 2–3, one estimate at a time,
-   each with an independent hostile audit.
+   each with an independent adversarial audit.
 
 Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO. The preprints' results are
 CITED, not PROVED here; nothing in them has been audited line by line.
@@ -77,7 +77,7 @@ Status of 4/5: OPEN. No progress on a proof; the obstacles are now located.
 - `REQUIREMENTS_001.md` — step 2.
 - `RECURSIVE_TRANSFER_001.md` — step 3.
 - `MOMENTS_001.md` — the two moment estimates: ranges, contraction, terminal bounds.
-- `AUDIT_210_001.md` — hostile audit of the round.
+- `AUDIT_210_001.md` — adversarial audit of the round.
 
 ## Suggested reading order
 

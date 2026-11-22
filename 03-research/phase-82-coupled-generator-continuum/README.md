@@ -33,3 +33,20 @@ E82.003  arithmetic identification of the limiting profile.
 E82.004  outer limit or exact obstruction.
 ```
 
+## Outcome
+
+Closed at exact-reduction grade; see [`PHASE_82_CLOSURE.md`](PHASE_82_CLOSURE.md) (“Projective generator loop”). No positivity statement toward Ω7 is proved here; the phase is an exact reduction.
+Open items carried forward: `TWO-GENERATOR-ARITHMETIC-COBOUNDARY`.
+
+## Contents
+
+- `E82_001_PROJECTIVE_GENERATOR_ENDPOINT.md` — E82.001 - Exact projective generator endpoint
+- `E82_002_CLUSTER_PROJECTIVE_THEOREM.md` — E82.002 - Cluster-projective convergence theorem
+- `E82_003_HOMOGENEOUS_LIMIT_LOSS.md` — E82.003 - Homogeneous-limit loss and radical re-entry
+- `E82_004_NON_DUPLICATION_AUDIT.md` — E82.004 - Non-duplication audit against the prolate leakage route
+- `E82_005_TWO_TERM_COBBOUNDARY_EQUIVALENCE.md` — E82.005 - Two-term expansion and coboundary equivalence
+- `PHASE_82_CLOSURE.md` — Phase 82 closure - Projective generator loop
+
+## Relation to other phases
+
+Continues [`phase-81-secular-arithmetic-anchor`](../phase-81-secular-arithmetic-anchor/); its open target passes to [`phase-83-gamma-euler-coboundary`](../phase-83-gamma-euler-coboundary/). The chain of phases 80–101 is the finite real-rooted CCM route to Ω7 (the Li–Keiper positivity statement), opened in phases 71–79.

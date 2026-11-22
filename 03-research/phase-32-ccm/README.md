@@ -24,3 +24,17 @@ Starting from the Connes–Consani–Moscovici (2024) theory of semilocal cyclic
 
 ## Relation to other phases
 Continues Phase 29 (deficit $C_\infty$, arithmetic formula Doc 54) and Phase 31 (moment/attainment question). The main equivalence RH $\iff T_\lambda=0$ feeds into Phase 33 (de Bruijn–Newman / CCM trace).
+
+## Contents
+
+- `59-bridge-between-the-ccm-program.md` — Document 59 — Bridge between the CCM program and the deficit $C_\infty$
+- `60-decay-and-sum-of-the-semilocal-jacobi.md` — Document 60 — Decay and sum of the semilocal Jacobi discrepancy
+- `61-locality-of-the-functional-and-the-de.md` — Document 61 — Locality of the functional $L_n$ and the de Branges kernel
+- `62-kcp-via-the-stieltjes-transform.md` — Document 62 — The KCP via the Stieltjes transform and the Sonin space
+- `63-christoffel-scale-oscillations-of-and-global-positivity.md` — Document 63 — Christoffel scale, oscillations of $\kappa_n$, and global positivity
+- `64-ptc-is-equivalent-to-rh-closure.md` — Document 64 — The PTC is equivalent to RH: closure of the program
+- `65-ppp-recurrencia-prolate.md` — Document 65 — PPP via prolate recurrence: concentration of coefficients $c_k = \langle \Xi, P_k \rangle$
+- `66-plancherel-rotach-dm-infty.md` — Document 66 — Plancherel-Rotach asymptotics for $P_k$ with the CCM measure $dm_\infty$
+- `67-bessel-asymptotics-in-the-left-edge-region.md` — Document 67 — Bessel asymptotics in the left-edge region and the unconditional PPP
+- `68-rigorous-verification-of-the-wronskian-ppp.md` — Document 68 — Rigorous verification of the Wronskian: PPP from the difference equation
+- `69-synthesis-of-phase-32-exact-structure.md` — Document 69 — Synthesis of Phase 32: exact structure of $F_n$ and closure of the program

@@ -20,7 +20,7 @@ needed; |cos| measured 0.644/−0.48 vs < 0.6 needed; resonances with sign μ(n)
   (R-K1/Schur: the coupling needs a sign-sensitive bound), nothing via the minimizer (Theorem X), nothing via symbol.
 
 ## Death criterion (fixed before starting)
-The phase dies if, after three rounds of the fixed team, (a) no intermediate PROVED statement exists that uses the
+The phase dies if, after three rounds of the fixed line of work, (a) no intermediate PROVED statement exists that uses the
 exact values of Λ in the exterior and that is not an identity valid for Epstein/DH, or (b) the only available
 inequality for the tail-dilation coupling is one of norms (margin ≥ 98 measured), or (c) the quantity that carries
 the sign turns out to be a functional of the minimizer.
@@ -33,3 +33,17 @@ the sign turns out to be a functional of the minimizer.
   converge at ½); exterior Poisson = half-line identity. Residue without a proposal: layer edges κ_{T+log n} (size
   bound).
 - No sign. (★★), L′♯, row D OPEN.
+
+## Other files in this folder
+
+- `AUDIT_202_R1_001.md` — Audit, phase 202, round 1 (object: BUILD_R1_001).
+- `BUILD_R1_001.md` — Phase 202, round 1: the exterior table as an inequality, its exact decomposition by ratio classes, and the first sub-lemma.
+- `BUILD_R2_001.md` — Phase 202, round 2: audit corrections and the "𝔅_n nearly multiplicative" lead. Verdict: DIES.
+- `CALIB_R1_001.md` — Numerical calibration, phase 202, round 1 (NUMERICAL).
+- `CALIB_R2_001.md` — Numerical calibration, phase 203: P6 per class and interior vs exterior pairing (NUMERICAL).
+- `CALIB_R3_001.md` — Numerical calibration, phase 203, object III: contact ladder (NUMERICAL).
+- `CALIB_R4_001.md` — Numerical calibration, phase 204n: Lemma WT (prop:WT, P46 l.4358) by sectors (NUMERICAL + one interval result).
+- `CALIB_R5_001.md` — Numerical calibration, phase 205, Piece 5: 𝔪 and comb in the Dirichlet sine basis (NUMERICAL).
+- `REVIEW_STATE.md` — State of the audits of this phase.
+- `WORK_STATE.md` — State of the construction work of this phase.
+- `CALIB_001_data/` — numerical data for `CALIB_001` (30 files).

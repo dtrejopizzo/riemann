@@ -16,7 +16,7 @@
 **Status:** open · started · route proposed by A. Connes in response to the
 [2.3.F briefing](../phase-63-lefschetz-realization/BRIEFING-2.3.F-for-Connes.md).
 
-> **Paper:** the publishable consolidation of this phase is **P50** (`04-papers/35-colligation-route/main.tex`).
+> **Paper:** the publishable consolidation of this phase is **Paper 35** ([`04-papers/35-colligation-route/`](../../04-papers/35-colligation-route/)).
 > All development notes below live here in the research phase, not in the papers folder.
 
 ## ⇒ [THE-TARGET.md](THE-TARGET.md) — the single theorem that is RH, the exact obstruction, the new object to build
@@ -25,7 +25,7 @@
 
 ## Theory development (pure-math, no numerics) — the `𝖳𝖶^can_ℤ` construction
 
-The handoff/construction notes, in logical order:
+The construction notes, in logical order:
 - [THEOREM-adelic-colligation.md](THEOREM-adelic-colligation.md) — the de Branges equivalences + the target theorem
 - [TASK-A-CLOSURE.md](TASK-A-CLOSURE.md) — `L1 ⟹ RH` proved (Paley–Wiener lemma unconditional)
 - [CURVATURE-computation.md](CURVATURE-computation.md) — `Γ₂≥0` (`CD(0,∞)`) for ζ's prime kernel (new theorem)
@@ -175,3 +175,16 @@ No false victory. Reuse phase-61 engine; the E3 CCM operator (phase-60) for the 
 
 D (clean, nearly proven) → A detector-nonvanishing (numeric, via DH growth → `2β−1`) →
 B relative determinant (the central new positivity object) → C de Branges (deepest).
+
+## Other files in this folder
+
+Files not described above:
+
+- `E100_detector_nonvanishing.py` — E100 — Task A (Connes route): detector-nonvanishing => L1 implies RH (numerical confirmation).
+- `E101_relative_determinant.py` — E101 — Task B (Connes route): relative determinant / spectral shift vs a no-oscillation model.
+- `E103_inner_colligation.py` — E103 — Task C crossing: the colligation/Herglotz characterization on the TRUE zeta.
+- `E105_RESULTS.md` — E105 — Tate factorization of the shifted scattering colligation (ω>½): confirmed, with a refinement
+- `E105_tate_factorization.py` — E105 — Connes Sec.3 / Q1: the unconditional omega>1/2 colligation = restricted tensor product
+- `E106_debranges_kernel.py` — E106 — Connes Section 1: the canonical de Branges kernel positivity (the crossing object).
+- `E107_RESULTS.md` — E107 — the ω↓0 continuation margin: a regularized positivity that survives the limit
+- `E107_omega_margin.py` — E107 — probing the omega->0 continuation margin (RH-strength question).

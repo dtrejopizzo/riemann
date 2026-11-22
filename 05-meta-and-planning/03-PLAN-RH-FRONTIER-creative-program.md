@@ -1,9 +1,9 @@
 # PLAN — RH Creative Frontier: mixing the Connes program with new, falsifiable, ambitious ideas
 
-**Author:** David Alejandro Trejo Pizzo · **Opened:**  · **Status:** the forward program after
-M1–M3 closed the identification phase of Route B.
+**Author:** David Alejandro Trejo Pizzo · **Status:** the forward program after M1–M3 closed the identification phase
+of Route B; followed by the moonshot plan 04 and closed in the synthesis of plan 05.
 
-This continues `PLAN-RH-ROUTE-B-structural-positivity.md`. M1–M3 (`phase-5-structural/`) established the
+**Purpose.** This continues `PLAN-RH-ROUTE-B-structural-positivity.md`. M1–M3 (`phase-5-structural/`) established the
 candid map: the **only** zero-free, unobstructed structural attack surface is the **Connes–Consani
 semi-local residual**, and the sign — if it exists — lives in **cross-place cancellation** (archimedean
 manifest square vs. prime negativity), i.e. a *global* square over the adèle class space (Connes' geometric
@@ -115,7 +115,7 @@ machinery already exists; add the prolate basis and the $L_{\mathrm{DH}}$ data f
 - **Zero-independence (B0):** every admissible positive structure must be writable without assuming RH.
 - **Magnitude ≠ sign:** a numerical/analytic bound $\|K\|\le1$ for $\zeta$ is magnitude/evidence; the sign is
   RH. Never present a sharper estimate as the proof.
-- **Audit before pillarizing; retraction is cheap, false victory is expensive.** The panel sees every claim.
+- **Audit before pillarizing; retraction is cheap, false victory is expensive.** Every claim is checked before it is recorded.
 - **Candid priors up front.** RH from any of these: $<1\%$. Real structural results: plausible. That asymmetry
   is the point — we are mining the frontier for durable structure, with RH as the north star, not the
   deliverable.
@@ -131,9 +131,9 @@ machinery already exists; add the prolate basis and the $L_{\mathrm{DH}}$ data f
    $\Gamma$-factor vs coefficient-architecture) separating RH-true/false residuals.
 3. **M6 (β/γ):** if the sine-kernel match lands, pursue the GUE/Connes-emission bridge; otherwise probe γ
    (GNS/global-square) for a handle surfaced by M4–M5.
-4. **Each milestone** → `00-MAP.md`, the proof log, project memory. Share with the panel immediately.
+4. **Each milestone** → `00-MAP.md`, the proof log, the project notes. Record it immediately.
 
-**One-line framing for the panel.** *Having mapped where the advance is not (P8 zero-side, de Branges) and
+**One-line framing.** *Having mapped where the advance is not (P8 zero-side, de Branges) and
 where the only zero-free surface is (the Connes semi-local residual), we now mix that frontier with an asset
 the literature lacks — a computable semi-local localized Weil engine and an explicit RH-violator — to ask the
 sharper, falsifiable question: which arithmetic invariant forces the residual operator's norm below 1 for

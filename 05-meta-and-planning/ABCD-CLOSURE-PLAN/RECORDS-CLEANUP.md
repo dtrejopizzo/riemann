@@ -13,7 +13,7 @@ changes; no contact with the sign; row D: OPEN.
 
 Historical memos from the plan that used the equivalence or "E1" as a criterion: **intact**, with a dated editor note at the start
 ("use without effect; current reading: …"): `PLAN.md`, `INVENTORY-PHASES-168-184.md`,
-`ROW-D-CLOSURE-PLAN.md`, `HANDOFF-PHASE-149.md`. Historical mention only (no note):
+`ROW-D-CLOSURE-PLAN.md`, `STATE-AT-PHASE-149.md`. Historical mention only (no note):
 `CORPUS_COVERAGE.md` l.215 (cites the veto in OPTIONS.md and corrects it), `CORPUS_CHECK_ROW_D_PLAN.md` l.318 (cites M1).
 No findings: `PATH-TO-D`, `SIGN-REAUDIT`, `SUPPORT-DESCENT-TEST`, `FIRST_CAMPAIGN`, `ROW-D-COMPLETION-PLAN`,
 `ROW-D-MAP`, `ROW-D-SYNTHESIS`, `PLAN_PRIORITARIO`. `03-research/phase-186-toolbox/README.md`: only the premise (l.4)

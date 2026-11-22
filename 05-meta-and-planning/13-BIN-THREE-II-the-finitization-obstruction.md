@@ -1,6 +1,8 @@
 # Bin three, second attempt: what a finitization *is*, and the obstruction to it
 
-**Auditor build · 2026-06-05.** Bin three's only possible occupant was characterized as a **finitization** of ζ's
+**Date:** 2026-06-05 · **Status:** closed with a conditional obstruction (under LI); the program turned to option (b), plans 14–17.
+
+**Purpose.** Bin three's only possible occupant was characterized as a **finitization** of ζ's
 full positivity. The candid next move is the fork: **construct** such a finitization, or **prove an obstruction**
 to it. I make the finitization concept exact (it is a *Frobenius periodicity*), then find the obstruction — which
 is conditional (it rests on the Linear Independence conjecture) but sharp, and it explains, structurally, why the

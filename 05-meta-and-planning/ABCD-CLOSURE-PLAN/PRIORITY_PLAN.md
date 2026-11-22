@@ -47,7 +47,7 @@ The old indexes guide searches; a later specific correction prevails over their 
 | Meyer, [math/0412277v3](https://arxiv.org/abs/math/0412277v3) | Nuclear realization and a character formula. | Identifying that character with the geometric shadow of A. It is imported in C. |
 | Connes–Consani–Moscovici, [Zeta Spectral Triples, 2511.22755](https://arxiv.org/html/2511.22755#S8) | Spectral approximants; §8 states as pending the simplicity/parity of the minimum and the eigenvector approximation that would allow convergence. | It does not provide the positivity or limiting identification that would close RH. |
 
-The local sources `2510.08033` and `2512.01811` from `00-references/papers-nuevos/D` were also reviewed: their results on ordinary arithmetic surfaces require a geometry whose identification with our square is not constructed. The bridge [Morishita, 2508.15971](https://arxiv.org/abs/2508.15971), theorem 3.6 of local version v5, gives compatible maps of flows/orbits, not an equivalence of cohomologies with polarization.
+The local sources `2510.08033` and `2512.01811` from `00-references/papers-nuevos/arithmetic-intersection-theory` were also reviewed: their results on ordinary arithmetic surfaces require a geometry whose identification with our square is not constructed. The bridge [Morishita, 2508.15971](https://arxiv.org/abs/2508.15971), theorem 3.6 of local version v5, gives compatible maps of flows/orbits, not an equivalence of cohomologies with polarization.
 
 **Proposed priority import:** divisor and section geometry from 2602.15941 + the common source P123.121–125 + relative computation of kernels. The realization that unites them is a new, explicit problem; it is not claimed to exist merely by combining these references.
 

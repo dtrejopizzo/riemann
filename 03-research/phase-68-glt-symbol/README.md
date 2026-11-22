@@ -53,3 +53,17 @@ touch), `-> -infinity` for off-line. So the corrected target is symbol-DEPTH non
 No fabricated closure. Every lemma passes a numerical gate before being written. The detector is not a
 proof. If the forcer lands on the Weil wall again, characterize the wall precisely in GLT language --
 that is itself a result.
+
+## Contents
+
+- `E68_1_2_RESULTS.md` — E68.1-E68.2 -- the GLT symbol: not a clean GLT sequence, but a faithful depth detector
+- `E68_1_glt_symbol.py` — E68.1 -- identify the GLT symbol kappa(x,theta) and verify the distribution against exact eigenvalues.
+- `E68_2_glt_interior.py` — E68.2 -- does an interior, symmetric-window local symbol pass the GLT distribution law?
+- `E68_3_RESULTS.md` — E68.3 -- audit + step 2: the 1D symbol is the spectral object; Omega_7 = envelope dominates prime comb
+- `E68_3_symbol_analytic.py` — E68.3 -- audit the 1D symbol as the correct spectral object, and identify it analytically.
+- `E68_4_RESULTS.md` — E68.4 -- the prime-comb hypothesis FAILS; Omega_7 localizes near theta ~ pi/2
+- `E68_4_prime_comb.py` — E68.4 -- is sigma_P a prime comb? Locate the single-frequency peaks and the theta <-> log n map.
+- `E68_5_RESULTS.md` — E68.5 -- the symbol detector is gauge-fragile (false negatives); the exact signed index is the robust object
+- `E68_5_touch_local.py` — E68.5 -- local structure of the touch point theta* and gauge-dependence of the margin.
+- `E68_6_RESULTS.md` — E68.6 -- auditing the audit: the detector is gauge-FRAGILE, not broken
+- `E68_6_audit_the_audit.py` — E68.6 -- audit the audit (E68.5). Was the symbol's 'false negative' a detector failure,

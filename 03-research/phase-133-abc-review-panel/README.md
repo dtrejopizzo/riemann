@@ -1,4 +1,4 @@
-# Phase 133 — ABC review panel
+# Phase 133 — ABC review
 
 Three independent review passes with disjoint mandates
 over Papers 43, 44, 45 after their closures (phases 130–132); one apparatus

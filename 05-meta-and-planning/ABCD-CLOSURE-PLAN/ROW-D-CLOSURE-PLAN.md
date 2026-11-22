@@ -1,7 +1,7 @@
 # Row D closure plan —
 
-Inputs: a sweep of the corpus by four independent reviews (route catalog, Connes
-material, inventory 134–149, analogies examined) and an adversarial audit review of `R149_001`
+Inputs: four independent sweeps of the corpus (route catalog, Connes
+material, inventory 134–149, analogies examined) and an adversarial check of `R149_001`
 (recorded in `R149_002_AUDIT.md`). Everything that follows cites a file; nothing is reconstructed.*
 
 ---
@@ -81,7 +81,7 @@ must bring additive energy to the zeros **through the phase**, not through the m
 that the block of zeros is NUMERATOR (holomorphic) and contributes no singularities; Landau only needs
 the first real singularity of the family's `L`-function to be the a priori pole. A finiteness-free
 reformulation of the Missing Lemma 5.3 (Doc 106): *the contribution of the zeros to the family's series must
-be holomorphic to the left of the a priori pole* — equivalently (auditor R149_002 §3):
+be holomorphic to the left of the a priori pole* — equivalently (`R149_002` §3):
 **promote the singular density series to a polar divisor.** Over `F_q` this is done by Künneth + weight
 filtration on `H_c(X×X)`; over `Z`, nobody has done it.
 
@@ -142,7 +142,7 @@ fails). Cheap. **Phase 152**, one round.
 **L4 — Beurling calibration (T3).** Not a route: it is the missing falsifier (3.2). It is
 incorporated as a mandatory gate from phase 150 onward and as a method theorem in Paper 47 §18.
 
-**L5 — Honest closure of (P149).** Record that it is the `k`-tuple conjecture (auditor §4);
+**L5 — Honest closure of (P149).** Record that it is the `k`-tuple conjecture (`R149_002` §4);
 O-149.5 is merged with O-148.2. Not pursued.
 
 **Discarded after checking (with reason):** Taylor–Wiles (patching = a free family over the group
@@ -153,7 +153,7 @@ temperature: no theorem; CAND-3); Kesten/Haagerup/Ramanujan graphs (finiteness o
 Shahidi); Rankin–Selberg toward Ramanujan (bounds local parameters `α_p`, not zeros: Deligne over
 `Q` already exists and is Kim–Sarnak).
 
-## 5. Circuit (same as 138–149: constructor + adversarial auditor; pure mathematics)
+## 5. Circuit (same as 138–149: construction + adversarial check; pure mathematics)
 
 | phase | content | deliverables | gates |
 |---|---|---|---|
@@ -223,7 +223,7 @@ gain attacks a part that is **not the wall**. The wall is 3.4 (holomorphy / rati
 of the zero block) and Laumon inherits it intact. Real value of L1: the dictionary (major arcs =
 pointwise part of `FT`; local monodromy at `∞` = Gamma factor = polar block `K` of rows A–C;
 singular series = weights of the pointwise part), which for the first time connects the polar block with the
-singular series. **Reclassified: round 0 of dictionary-building (one constructor, one auditor), not a full phase;
+singular series. **Reclassified: round 0 of dictionary-building (one construction, one check), not a full phase;
 expectation: it relocates the wall, it does not remove it.**
 
 **8.3 Bourgain–Dyatlov (L2).** It is the only mechanism with the correct form (upper bound without
@@ -300,11 +300,11 @@ decades; the corpus already has the dictionary. If the author wants to "create t
 **Recommendation**: do (i) in phase 150, decide (ii) according to budget, and do not open (iii) without a
 concrete idea for the pointwise/smooth part of the square.
 
-## 10. After closure in the map (night session): the bridge and the unanalyzed mechanisms
+## 10. After closure in the map (same night): the bridge and the unanalyzed mechanisms
 
 **10.1 Phase 151 (T6) closed.** Every family with fibers as nonnegative summands has, by
 Pringsheim–Landau, abscissa `≥ 2kβ_max`: Deligne's "bridge" over `Z` is the theorem itself at each `k`
-(restatement of Thm 26.4 + Cor 27.10a; new only Lemma 2.4). Auditor correction, recorded finding:
+(restatement of Thm 26.4 + Cor 27.10a; new only Lemma 2.4). Correction from the check, recorded finding:
 spectral positivity `⟨Hf,f⟩ = Σλ_j|⟨f,e_j⟩|²` is also a nonnegative sum; **the axis is summand vs.
 numerator**. Deligne works because the zeros of the fibers enter the family's trace formula with
 numerator sign (odd cohomology). Over `Z` the only numerator-sign mechanism is de la Vallée
@@ -329,7 +329,7 @@ bounded archimedean penalty (none known), or a mechanism that is not positivity.
 unanalyzed candidates; none today has a formulated statement that produces the sign. **Phase 152 = feasibility
 round 0** on (1) and (2), with a death criterion set in advance; (3)–(5) in reserve.
 
-**10.4 Phase 152, round 0 (closed the same night).** Auditor's verdict, accepted: *no path
+**10.4 Phase 152, round 0 (closed the same night).** Verdict of the check, accepted: *no path
 found; no impossibility proved*. On record: Prop A.4 (the branch series of the Gauss map has
 abscissa `Re s = ½`: the Dolgopyat route via branch sums is MW-2 in dynamical form) and Prop B.3 (potential
 theory on the tree `M(Z)` is branch-wise, blind to the coupling between places where the sign lives). Withdrawn:

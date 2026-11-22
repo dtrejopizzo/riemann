@@ -73,7 +73,7 @@
 - `03-research/phase-113-the-trace-on-schwartz-data/113_15_THE_FOUR_ROW_LEDGER.md` — §1 a4, §6, §7 R16.
 - `03-research/phase-107-arithmetic-lefschetz-reconstruction/107_146_ABSOLUTE_DIMENSION_HIGHER_RANK.md`
   — §1, Thm A, Thm B, §5 Cor C, §8 (its open question on the $\ell^1$ gauge).
-- `00-references/papers-nuevos/D/arXiv-2512.01811v2/Numerical_cohomology_for_arithmetic_surfaces_and_applications.tex`
+- `00-references/papers-nuevos/arithmetic-intersection-theory/arXiv-2512.01811v2/Numerical_cohomology_for_arithmetic_surfaces_and_applications.tex`
   — §1 (definitions of $h^0_{\mathcal O}$, $h^0_{\mathcal X}$, $h^1_{\mathcal X}$, $h^2_{\mathcal X}$, $\chi_{\mathcal X}$) and Theorem `main1`. Read; quoted verbatim in §8.
 - `00-references/papers-nuevos/A/arXiv-2205.01391v2/RR-J-final.tex` — CC §2–§3 (the absolute dimension).
 

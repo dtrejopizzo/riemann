@@ -65,7 +65,7 @@ conditional on.
   structure.
 - `paper42-notebook/`: the notebook before this phase's update and an exact
   snapshot of the updated Paper 42 notebook. The live copy is in
-  `04-papers/42-arithmetic-lefschetz-programme/paper42-notebook/`.
+  `04-papers/42-arithmetic-lefschetz-programme/certificates/` (`arithmetic_lefschetz_certificates.ipynb`).
 - `MANIFEST.txt`: generated inventory of every file in this directory.
 
 Binary references and caches from phase 114 were deliberately not copied;

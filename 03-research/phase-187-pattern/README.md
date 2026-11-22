@@ -82,3 +82,9 @@ window written on completion, with a lock). Environment: venv with python-flint 
 * Extrapolation admissible but of indeterminate form beyond T ≈ 1.3 (−log₁₀ λ_A ≈ 41 at 1.2, 89–101 at 1.5, 278–371 at 2).
 * Preregistered test (PREREG_LAW_TEST.md) on 4 random windows T = 1.128, 1.236, 1.316, 1.447: in progress.
 * — **Campaign and preregistered test INTERRUPTED** (no more resources to be consumed). Final state: 48 rows in DATA_100_WINDOWS.csv (47 converged up to T = 1.075; T = 1.135 NOT CONVERGED, −ln λ_A ≥ 78.9); DATA_PREREG_4.csv with one row (T = 1.128, M = 120, −ln λ_A ≥ 77.05, not converged, at the upper edge of the exponential-law band and inside that of "2π per zero"); verdict §7 of PREREG_LAW_TEST.md not completed. Standing conclusion: the per-window observable pattern is a class property (M₁ falsifier); the sign lives in the extreme eigenvalue of the truncated Wiener–Hopf W_T(σ₊ − σ₋/β) at the inertia crossing (R186_042), with no literature.
+
+## Other files in this folder
+
+- `CONSTRAINTS_FOR_PATTERN.md` — Corpus constraints on any pattern T ↦ λ_A(T) and on the per-window observables.
+- `windows_mm/` — subfolder (8 files).
+- `r187_mm.py`, `r187_pattern.py`, `r187_prereg_verdict.py` — scripts.

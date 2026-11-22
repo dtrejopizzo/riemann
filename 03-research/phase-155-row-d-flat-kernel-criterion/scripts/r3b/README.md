@@ -63,3 +63,7 @@ python3 r3b_enclosure.py 0.68 24 121 6 0.2          # one enclosure, ~50 s
 
 Runtimes are in each JSON (`sec_double`, `sec_quad`, `sec_total`); every single run is `< 60 s`
 single-process with `OMP_NUM_THREADS=1`.
+
+## Other files in this folder
+
+- `explore_T0.68_M24.json`, `r3b_Reps.json` — output data files.

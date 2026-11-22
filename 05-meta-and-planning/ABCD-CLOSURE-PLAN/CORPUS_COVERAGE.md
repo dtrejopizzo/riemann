@@ -211,7 +211,7 @@ Each row records presence and count. The link leads to the directory; the strate
 
 1. The root indices still mainly describe the state up to phase 119; the present inventory reaches 123.
 2. The RH-MASTER-CONTEXT dossier keeps a historical inventory up to phase 101. It is used as an audit of that cut, not as the current census.
-3. The handoff proposed carrying out the finite two-prime model, but P122.028 already contains its computation and a negative result for the harmonicity → zero-flow inference.
+3. The earlier state note proposed carrying out the finite two-prime model, but P122.028 already contains its computation and a negative result for the harmonicity → zero-flow inference.
 4. `OPTIONS.md` advises against working on Weil because it is equivalent to RH; the historical reset expressly corrects that veto. The logical correction is adopted.
 5. P123.018 invalidates two explicit maps and reopens other obligations: it prevails over the earlier labels of global acceptance.
 6. The classical control P123.011 requires review of the category bridge and of the relation between squares and effective cycles; it is not certified again here.
@@ -220,7 +220,7 @@ Each row records presence and count. The link leads to the directory; the strate
 
 - [Connes–Consani, Knots, primes and class field theory](https://arxiv.org/html/2501.06560v1), §5: algebraic sheaf and coefficient maps. The relevant statements were contrasted; not the whole proof was audited.
 - [Deninger, Rational Witt vectors and associated sheaves](https://arxiv.org/html/2508.05329v1), Theorem 5.1 and Proposition 5.2: entry point to finite cycles, with its hypotheses. Not a bridge already built towards Corr_A.
-- [Meyer, A spectral interpretation for the zeros of the Riemann zeta function](https://arxiv.org/abs/math/0412277v3): title and version corrected. The broader attribution of the handoff document is not the title of this identifier.
+- [Meyer, A spectral interpretation for the zeros of the Riemann zeta function](https://arxiv.org/abs/math/0412277v3): title and version corrected. The broader attribution in the earlier state note is not the title of this identifier.
 - [Connes–Consani, On the Jacobian of Spec Z compactified](https://arxiv.org/abs/2602.15941): entry and abstract contrasted; geometric resource, without importing a mixed Hodge structure.
 - [Grubb, mu-transmission theory](https://arxiv.org/abs/1310.0951): source contrasted; its applicability to the concrete jumps is governed by P122.029.
 

@@ -33,10 +33,10 @@ Input: R183.015, 017–020. Neither RH nor the closure of D is claimed.
   a new proof.
 * Missing lemma, self-contained: (L-C) in §5.
 
-## 1. CCM source (CITED, local tex `00-references/papers-ref-2/arXiv-2310.18423v2/mainc2m24fine.tex`)
+## 1. CCM source (CITED, local tex `00-references/prolate-and-zeta-cycles/arXiv-2310.18423v2/mainc2m24fine.tex`)
 
 §5 (l.692–1072) and the introduction were read. The published PDF
-(`Zeta-zeros-and-prolateproofs-final-2024.pdf`) has the same content.
+(`00-references/prolate-and-zeta-cycles/Zeta-zeros-and-prolateproofs-final-2024.pdf`) has the same content.
 CM 2022 (UV prolate) is purely archimedean and does not mention the
 semilocal case.
 

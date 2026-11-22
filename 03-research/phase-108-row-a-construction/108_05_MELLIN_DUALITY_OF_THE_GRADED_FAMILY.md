@@ -16,7 +16,7 @@ two sides is already published.
 
 Lagarias, *Li coefficients for automorphic L-functions*, arXiv:math/0404394,
 Appendix §9 (text extracted from the PDF, now in
-`00-references/papers-nuevos/extension-clase-test/`).
+`00-references/papers-nuevos/weil-form-and-explicit-formula/`).
 
 Test space $A_\delta$: those $f$ whose Mellin transform
 $\hat f(s)=\int_0^\infty f(x)x^s\,\frac{dx}{x}$ is analytic in the strip

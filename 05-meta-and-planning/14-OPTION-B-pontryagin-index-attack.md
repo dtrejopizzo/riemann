@@ -1,6 +1,8 @@
 # Option (b), attacked: the infinite-dimensional route via the Pontryagin index — pushed to its quantitative core
 
-**Auditor build · 2026-06-05.** Option (b): an *infinite-dimensional* general positivity that supplies $\zeta$'s
+**Date:** 2026-06-05 · **Status:** executed numerically in plans 15–17.
+
+**Purpose.** Option (b): an *infinite-dimensional* general positivity that supplies $\zeta$'s
 constraint without being object-special. The classifier predicts re-entry into CAP. Instead of accepting that, I
 push the most aggressive concrete realization — the **Pontryagin negative-index** $\kappa$ — until it gives a
 *new intermediate target* and a *single explicit inequality* whose crossing is the whole game. The wall is not a

@@ -50,7 +50,7 @@ The remaining central target is the infinite range:
 
 ## Working documents
 
-- `PHASE_102_EXECUTION_PLAN.md`: ordered plan and ownership of each open point.
+- `PHASE_102_EXECUTION_PLAN.md`: ordered plan with each open point assigned.
 - `PHASE_102_OBLIGATION_LEDGER.md`: live ledger of closed, reduced and open items.
 - `102_A0_UNIFORM_TAIL_TARGET.md`: first technical target for the direct Li route.
 - `102_A0_UNIFORM_TAIL_THEOREM.md`: proved tail theorem conditional on an
@@ -848,3 +848,18 @@ This phase closes Omega7 only if it contains a complete proof of
 
 with the finite range and the infinite range both proved, all limits declared,
 and Li's theorem applied without an open intermediate hypothesis.
+
+## Other files in this folder
+
+Files not described above:
+
+- `102_A0_UNIFORM_TAIL_AUDIT.md` — 102 A0 uniform tail audit
+- `104_A0_MELLIN_LAGUERRE_TAIL.md` — A0 - Mellin-Laguerre uniform tail
+- `105_POINT_06_BOUNDARY_LIMIT.md` — Point 06 - Boundary limit
+- `106_POINT_07_ALL_N_SCALES.md` — Point 07 - All scales in n
+- `107_POINT_08_SIGN_PRESERVATION.md` — Point 08 - Sign preservation
+- `108_POINT_09_ARITHMETIC_DISCRIMINANT.md` — Point 09 - Arithmetic discriminant
+- `109_POINT_10_TYPED_OFFLINE_SENSITIVITY.md` — Point 10 - Typed off-line sensitivity
+- `110_POINT_11_LI_ASSEMBLY.md` — Point 11 - Li assembly
+- `111_A1_SIGNED_CORE_REDUCTION.md` — A1 - Signed compact core reduction
+- `tools/` — subfolder (0 entries)

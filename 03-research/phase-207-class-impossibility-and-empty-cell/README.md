@@ -21,3 +21,8 @@ Memos: CLASS_*.md (lead 1), CELL_*.md (lead 2), AUDIT_207_*.md.
   outside the node's band (ARGUED). The node's window is not J-stable (PROVED).
 - **Live gate (the only one):** premises that are a theorem only for log-derivatives of L with Euler product over ALL primes
   (not inherited by a_P), with margin ≤ e^{−15.449T}. No candidate. Row D OPEN.
+
+## Other files in this folder
+
+- `CELL_001.md` — Lead 2 of phase 207: the empty-cell object.
+- `CLASS_001.md` — Lead 1 (phase 207): class impossibility theorem for the node's sign step.

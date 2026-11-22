@@ -28,7 +28,7 @@ non-circular paths forward.
 - `M3-attempt5` through `M3-attempt8`, `M3-genuine-attempts-on-the-core.md` — the eight attempts at the Hodge-index step.
 - `M4-the-chosen-direction-archimedean-modular-omega.md`, `M5-the-lefschetz-dichotomy-closure.md`, `M6-the-prismatic-route-assessment.md` — further direction-finding and closures.
 - `SYNTHESIS-M1-to-M3-and-the-precise-gap.md` — the full self-contained synthesis, the precise gap statement, and five concrete forward paths.
-- `M7-advisor-incompleteness-theorem-audit.md`, `M8-front1-proof-audit-REFUTED.md`, `M9-kosmos-run-1-assessment.md`, `M10-arakelov-equivalence-audit.md` — audits of external claims.
+- `M7-advisor-incompleteness-theorem-audit.md`, `M8-front1-proof-audit-REFUTED.md`, `M9-discovery-run-1-assessment.md`, `M10-arakelov-equivalence-audit.md` — audits of external claims.
 - `experiments/` — supporting numerical verification scripts (including a falsifier for the M8 claim).
 
 ## Relation to other phases

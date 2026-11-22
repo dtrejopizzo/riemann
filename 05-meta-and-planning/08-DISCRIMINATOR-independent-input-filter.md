@@ -1,6 +1,8 @@
 # The discriminator: an operational filter for "new object" vs "CAP/SURF in disguise"
 
-**Auditor build · 2026-06-05.** Purpose: convert the collapse map into an *instrument*. Given any candidate
+**Date:** 2026-06-05 · **Status:** completed; the discriminator D0 was hardened in plans 09–11.
+
+**Purpose.** Convert the collapse map into an *instrument*. Given any candidate
 structure, decide — cheaply, before deep investment — whether it can possibly escape CAP/SURF, or is ζ re-encoded.
 The filter is **calibrated on known objects** (it must correctly classify everything we already understand,
 including the one *proven* RH) before it is trusted on unknowns. Working hypothesis (conceded, not proven):

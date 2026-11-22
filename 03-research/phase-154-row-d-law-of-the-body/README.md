@@ -19,3 +19,22 @@ written in LaTeX from this phase: `04-papers/46-row-d-dual-certificates/main.tex
 explicit formula on `w(u)cos(τu)`, value = flat-top smoothing of the zero measure; RH ⟺ one-sided smoothing for every window).
 Off-machine computation package for the two-prime window: `scripts/offmachine/` (E1 M-sweep, E2 hybrid N=6 with IPM + control check,
 E3 certify). Successor phase: `phase-155-row-d-flat-kernel-criterion` (Problem A, class-dependent value bounds).
+
+## Other files in this folder
+
+- `R154_013_LITERATURE_AND_CORPUS_REVIEW.md` — (P154.2) Literature and corpus review for Theorems A / O / D1 / C(½log3).
+- `R154_015_ROUND5.md` — Round 5: the two-frequency staircase above `½log3`.
+- `R154_016_AUDIT_R5.md` — Audit of round 5 (phase 154).
+- `R154_017_ROUND6.md` — Round 6: cutting planes, column generation, and an **INTERIM** close.
+- `R154_018_ROUND7_BLUEPRINT.md` — Blueprint, round 7 of phase 154: PURE MATHEMATICS — the approximation theory of the dual certificate.
+- `R154_019_ROUND7.md` — Round 7: the certificate problem is a **spectral-gap one-sided approximation problem**, and its rate is a **zero-counting wall**.
+- `R154_020_AUDIT_R7.md` — Audit, round 7 of phase 154.
+- `R154_021_ROUND7_CLOSING_DECISION.md` — Closing decision, round 7 (pure mathematics: approximation theory of the certificate).
+- `R154_022_CLUSTER_FALSIFIER.md` — Round 8: the clustered-atom falsifier at `T = 0.58`.
+- `R154_023_ROUND8_CLOSING_DECISION.md` — Closing decision, round 8 (the clustering falsifier) and state of phase 154.
+- `R154_024_ROUND9_BLUEPRINT.md` — Blueprint, round 9: smooth exponential certificates (the tail problem solved by construction) and mass-vs-value.
+- `R154_025_ROUND9.md` — Round 9: smooth (Laplace/Laguerre) columns, Lemma T, and the sharpness of the mass–value exchange.
+- `R154_026_AUDIT_R9.md` — Audit, round 9 (`R154_025`).
+- `R154_027_ROUND10_BLUEPRINT.md` — Blueprint, round 10: the hybrid certificate (lattice + canonical Lévy column) and the repair of Lemma V.
+- `R154_028_ROUND10.md` — Round 10: the repair of Lemma V, the Hybrid Lemma, and the tail price of the canonical column.
+- `R154_029_AUDIT_R10.md` — Audit, round 10 (`R154_027` orders, `R154_028` deliverable).

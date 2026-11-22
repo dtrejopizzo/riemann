@@ -1,6 +1,8 @@
 # Balance of the program — from the beginning to here
 
-**Auditor build · 2026-06-05.** A complete, strict assessment of everything built, what is durable, what is
+**Date:** 2026-06-05 · **Status:** assessment; its three options were pursued in plans 21–23.
+
+**Purpose.** A complete, strict assessment of everything built, what is durable, what is
 RH-directed vs RH-independent, and where the wall actually is. No claim toward RH.
 
 ---

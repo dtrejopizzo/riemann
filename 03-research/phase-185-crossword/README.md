@@ -53,3 +53,7 @@ Status: D OPEN. The gains are barrier theorems; none gives a sign.
 | R185_008 | W11 literally false for finite T; W11-∞/W11-fin; **Lemma 1.1(b) PROVED** (finite index ⟹ finitely many off-line zeros; sup N = 2m) → R183_031 Thm 1 without RH; correction: archimedean indefinite from 0.4608 (full) / 0.58 (primitive) |
 | R185_093 | audit of 006–008 (in progress; priority Lemma 1.1(b)) |
 </content>
+
+## Other files in this folder
+
+- `R185_005B_BR_WITHOUT_EQUIVALENCE.md` — Relative barrier theorem BR, rewritten with no equivalence.

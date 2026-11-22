@@ -44,3 +44,21 @@ E84.003  rank-two source coboundary.
 E84.004  spectral-cluster moment selection.
 E84.005  parity split and cofinal-rank obstruction.
 ```
+
+## Outcome
+
+Closed at exact-construction grade; see [`PHASE_84_CLOSURE.md`](PHASE_84_CLOSURE.md) (“endpoint source and inverse-free corrector”). No positivity statement toward Ω7 is proved here; the phase is an exact reduction.
+Open items carried forward: cofinal cluster-rank selection; safe reduced response; outer arithmetic identification; `Omega7`.
+
+## Contents
+
+- `E84_001_ENDPOINT_EULER_ORBIT.md` — E84.001 - Endpoint Euler orbit and Fourier symbols
+- `E84_002_FULL_WEIL_DISTRIBUTION.md` — E84.002 - Full Weil sine distribution
+- `E84_003_RANK_TWO_SOURCE_COBBOUNDARY.md` — E84.003 - Rank-two source coboundary
+- `E84_004_CLUSTER_MOMENT_SELECTION.md` — E84.004 - Cluster moment selection
+- `E84_005_PARITY_MOMENT_SPLIT.md` — E84.005 - Parity split of the moment problem
+- `PHASE_84_CLOSURE.md` — Phase 84 closure - endpoint source and inverse-free corrector
+
+## Relation to other phases
+
+Continues [`phase-83-gamma-euler-coboundary`](../phase-83-gamma-euler-coboundary/); its open target passes to [`phase-85-parity-weyl-defect`](../phase-85-parity-weyl-defect/). The chain of phases 80–101 is the finite real-rooted CCM route to Ω7 (the Li–Keiper positivity statement), opened in phases 71–79.

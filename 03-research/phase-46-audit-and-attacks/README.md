@@ -3,7 +3,7 @@
 This phase adversarially audits the main theorems of Phase 45 (local purity, the two-prime theorem, the Weil–Toeplitz trichotomy) and Phase 44's repaired logistic-signature criterion, then launches new direct attacks on the repulsion lemma LP-134 and on the semilocal gap GAP-135.B (destructive regime beyond the two-prime constructive case) and the quantitative localized positivity problem 136.A.
 
 ## Results
-- Adversarial audit of the Local Purity Theorem (Doc 131, Thm. 6.7): full destroy-mandate protocol executed. (AUDIT — see document for the piece-by-piece verdict)
+- Adversarial audit of the Local Purity Theorem (Doc 131, Thm. 6.7): full adversarial check executed. (AUDIT — see document for the piece-by-piece verdict)
 - Adversarial audit of the two-prime theorem (Doc 135): closed-form re-derivation of all central identities. (AUDIT)
 - Adversarial audit of the logistic equivalence RH $\iff \lim\sigma_{\mathrm{loc}}^{(k)}=0$ (Doc 136): the logistic law itself survives exactly; the RH$\Rightarrow$limit-0 branch survives; the ¬RH$\Rightarrow$limit-½ branch dies as a "theorem with complete proof" (two real gaps — a false uniformity claim and unannihilated resonant pairs), downgraded to CONDITIONAL/OPEN, repairable in principle. (PARTIAL NO-GO — repairable gap identified)
 - Adversarial audit of the Weil–Toeplitz algebra, visibility trichotomy, and Fredholm theorem (Doc 134): the C*-algebraic skeleton survives intact; the boundedness needed for the Weil instance of the field is an explicitly declared gap (GAP-134.R); construction B.4 survives as the most solid piece; the trichotomy is literally true but its [THEOREM] label oversells it (largely axiomatic). (AUDIT — mixed verdict, core survives, some claims downgraded)

@@ -37,7 +37,7 @@ The remaining fragments are the block audits listed in the coverage table. A dis
 
 ## Size control
 
-The complete dossier contains twenty Markdown files, fewer than 50,000 words and fewer than 350,000 bytes. Even with the deliberately conservative bound of one token per byte, the context stays below 350,000 tokens.
+The complete dossier contains twenty Markdown files, fewer than 50,000 words and fewer than 350,000 bytes. The whole dossier can therefore be read in a single sitting.
 
 ## Integrity checks
 

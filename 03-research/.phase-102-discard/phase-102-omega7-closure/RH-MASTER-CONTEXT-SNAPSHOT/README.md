@@ -1,5 +1,7 @@
 # Master context of the RH program
 
+*This folder is an earlier frozen copy of [`../RH-MASTER-CONTEXT/`](../RH-MASTER-CONTEXT/); the two differ only in the verification script under `tools/`.*
+
 This directory freezes the comprehensive review of the program before continuing with \(\Omega_7\). It
 is not a new phase and contains no claim of a proof of RH. Its function is to prevent three research
 errors: counting an equivalence as progress, reusing a withdrawn claim, and re-traveling a class
@@ -50,7 +52,7 @@ Therefore no continuation should reuse the previous version without repair.
 1. [`00_SCOPE_AND_METHOD.md`](00_SCOPE_AND_METHOD.md): corpus, protocol and meaning of the labels.
 2. `MASTER_CONTEXT.md`: self-contained synthesis of the full path and current mathematical status.
 3. `PAPER36_AUDIT.md`: logical column, confirmed results and necessary repairs.
-4. `RH2017_RH9_AUDIT.md`: balance of the nine exploratory programs.
+4. `RH1_RH9_AUDIT.md`: balance of the nine exploratory programs.
 5. `PHASES_AUDIT.md`: tour of all phases, without counting reparametrizations as new closures.
 6. `NO_GO_AND_RETRACTIONS.md`: register of discarded routes, exact scope and precedence of
    corrections.
@@ -61,6 +63,8 @@ Therefore no continuation should reuse the previous version without repair.
 The files in [`fragments/`](fragments/) preserve the block audits that support the synthesis. They are
 traceability evidence; in case of any discrepancy, a later mathematical correction that exhibits the
 exact step prevails.
+The folder [`tools/`](tools/) holds the interval-arithmetic verification script for the finite
+certificate of point 4 of \(\Omega_7\).
 
 ## Binding labels
 

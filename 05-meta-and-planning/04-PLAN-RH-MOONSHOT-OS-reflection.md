@@ -1,7 +1,9 @@
 # PLAN — RH MOONSHOT: Osterwalder–Schrader reflection positivity via the Euler-product lattice
 
-**The path past the wall.** Author: David Alejandro Trejo Pizzo · 2026-06-03.
-A genuinely novel synthesis — not another reformulation, a *mechanism to force the sign*. High-risk,
+**Author:** David Alejandro Trejo Pizzo · **Date:** 2026-06-03 · **Status:** high-risk plan; superseded the next day by the
+closing synthesis (plan 05), which charts the wall it aimed to cross.
+
+**Purpose.** The path past the wall. A genuinely novel synthesis — not another reformulation, a *mechanism to force the sign*. High-risk,
 principled, and it unifies the entire program (the Kreĭn $J$, the anatomy $R_p$, Conjecture B2, the validated
 engine) into one attack. Candid odds for full RH: $<1\%$; but every sub-step is a real result, and the route
 is one no one has assembled.

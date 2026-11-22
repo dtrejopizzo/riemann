@@ -1,7 +1,8 @@
 # Repository Audit & Reorganization Inventory
 
-**Date:** 
-**Scope:** Full audit of `/Users/dt/riemann` for ordering, currency, and English-only language,
+**Status:** completed; record of a reorganization of the repository (layout, duplicates, language).
+
+**Purpose.** Full audit of `/Users/dt/riemann` for ordering, currency, and English-only language,
 plus the actions taken.
 
 ## What was found
@@ -26,12 +27,12 @@ plus the actions taken.
 | Reconciled duplicates | Single canonical `MASTER-PLAN.md` (in-folder, rewritten current); root duplicates deleted |
 | Translated + updated front-door docs | `README.md`, `EXPLANATION.md`, `00-README.md`, `NO-GO-LIST.md`, `COMPLETE-PROGRAM-SUMMARY.md` (from the Spanish RESUMEN), folder READMEs — all English & current through Phase 61 |
 | Extended `00-MAP.md` | Appended English continuation through Phase 61 |
-| Per-phase translation | Per user decision: **summary/setup/verdict docs only** translated; granular working notes left in original Spanish as the raw record |
-| Reproducibility notebook | Replaced with an candid "checks that pass" notebook |
+| Per-phase translation | By decision: **summary/setup/verdict docs only** translated; granular working notes left in original Spanish as the raw record |
+| Reproducibility notebook | Replaced with a candid "checks that pass" notebook |
 
 ## Deliberately left in Spanish
 
 The ~300 granular internal phase notes inside `03-research/phase-*/` (e.g. step-by-step
-derivations, audit logs). These are the raw research record; per the agreed scope, only each
+derivations, audit logs). These are the raw research record; per the scope adopted, only each
 phase's top-level summary/setup/verdict documents were translated. A future pass can translate the
 remainder if needed.

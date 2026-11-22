@@ -87,6 +87,56 @@ The **decisive logical-status result (Front C)** is that a lemma uniformly trans
 - Delivered the headline logical-status verdict: the **detection** mechanism (signal > noise for a fixed off-critical zero) requires only unconditional PNT-level input, but the **uniform convergence** of finite truncations to the true infinite Weil functional is **RH-equivalent** — precisely separating what is provable now from what would constitute a proof of RH.
 - Produced the integrated Detector Feasibility Table combining the δ² signal law and the η(X) noise bound, giving concrete minimal prime-cutoff thresholds X_min for detecting hypothetical off-line zeros at specified displacement magnitudes and basis geometries.
 
-## Files
+## Connection to later work
 
-Each subfolder is a single task from the underlying investigation, covering the canonical engine validation across control L-functions, the forced-negativity perturbation theorem (Front A), the uniform truncation noise-floor law (Front B), and the decisive logical-status classification (Front C) described above.
+The separation between detection (PNT-level input) and uniform convergence (RH-equivalent) frames the stability and monotonicity tests of RH2024 and the later theoretical work on Weil positivity on finite intervals.
+
+## Structure of the folder
+
+The program is divided into 43 numbered phases, one subfolder `phase-N/` each. A phase folder normally contains `OVERVIEW.md` (the written result of that phase), the executed notebook when one exists (`notebook_executed.ipynb` and/or a notebook with a hexadecimal name) and the input and output files (data arrays, tables, figures). The one-line descriptions below are taken from each phase's `OVERVIEW.md`; where a phase has no written summary this is stated.
+
+| Phase | Content |
+|---|---|
+| [1](phase-1/) | (No written summary; data files only.) |
+| [2](phase-2/) | I was unable to confirm or refute the factor-of-2 archimedean-normalization hypothesis within the time budget; a careful first-principles re-derivation indicates the existing 2·Re … |
+| [3](phase-3/) | (No written summary; data files only.) |
+| [4](phase-4/) | At the benchmark parameters (T₀=85.7, σ=2, J=10, X=10⁴) the L(Δ,s) Weil-explicit-formula trace residual is /tr(M_zeros) − tr(M_arith)///tr(M_zeros)/ ≈ 8.6×10⁻², which falsifies … |
+| [5](phase-5/) | Data preparation: files prepared for analysis (first file `LDelta_zeros_80.txt`). |
+| [6](phase-6/) | A consolidated Bottleneck Ledger (bottleneck_ledger_final.md) was assembled, documenting four formal entries that cover the irreproducibility of the spec's L_DH benchmark, the … |
+| [7](phase-7/) | (No written summary; data files only.) |
+| [8](phase-8/) | I cannot conclude that the corrected algorithm efficiently generated a definitive validated list of the first 200 L(Δ,s) zeros because the rewritten AFE-based method was validated … |
+| [9](phase-9/) | The truncation noise floor η(X) at (T₀=46.13, σ=1) decays much faster than either the unconditional (log X)²/X bound (R²=0.50) or the RH-like (log X)²/√X bound (R²=0.21); only the … |
+| [10](phase-10/) | The basis-derived theoretical noise-floor model η_theory(X) quantitatively tracks the empirical noise floor of L(χ₄ mod 5) over three decades of X, with Pearson r = 0.9935 and … |
+| [11](phase-11/) | The engine validation cannot be completed end-to-end from the provided specification: the §1 reference-zero gate and the §2 L_DH off-line-zero gate both PASS, but the §4 gates … |
+| [12](phase-12/) | The hypothesis is REFUTED: introducing a factor of 0.5 in M_primes does not correct the L(Δ,s) trace residual — at (T₀=85.7, σ=2, J=10, X=10⁴) the absolute residual actually … |
+| [13](phase-13/) | (No written summary; data files only.) |
+| [14](phase-14/) | (No written summary; data files only.) |
+| [15](phase-15/) | Detection is theoretically possible at both common parameter points: at the optimal point (T₀=46.13, σ=1, J=10, m=20) a δ=10⁻³ off-critical zero rises above the truncation noise … |
+| [16](phase-16/) | The trace residual η(X) for L(Δ,s) at T₀=46.13, σ=1, J=10 is empirically explained by a single super-polynomial Gaussian-in-log-X envelope η(X) ≈ 8.54·exp(−0.121·log²X); the data … |
+| [17](phase-17/) | Scaling M_arch by 0.5 does NOT resolve the L(Δ,s) trace mismatch at the benchmark — it makes the relative trace residual ~9.4× worse (≈83.9% with arch_factor=0.5 vs |
+| [18](phase-18/) | The Front A signal model (c_pred·δ²) and Front B noise model (η_theory(X)) successfully integrate into a Detector Feasibility Table that quantitatively guides the … |
+| [19](phase-19/) | The literal rank-one prediction K = -2 ∂²/∂σ² log‖u(σ)‖ evaluated at the specified first zero γ₁≈14.13 fails by orders of magnitude to match the empirical c=-23.5203 (K=-2.02 with … |
+| [20](phase-20/) | At the specified parameters T₀=46.13, σ=1, J=10, X=10⁷ with the 61-zero reliable L(Δ,s) list and exact τ(p) for all primes ≤ 10⁷, the relative trace residual is η = 9.21×10⁻¹⁵ … |
+| [21](phase-21/) | The residual baseline η = /λ_min(Q)/ of the Riemann ζ Weil quadratic form is a strongly monotone-decreasing function of the prime cutoff X at the optimal point … |
+| [22](phase-22/) | The minimum eigenvalue of the localized Weil quadratic form Q is a predictable, sharply δ²-scaling negative function of the off-critical zero displacement δ, with secondary … |
+| [23](phase-23/) | The hypothesis is REFUTED in its stated form: _zeros.L_Delta_zeros cannot generate the first 100 zeros of L(Δ,s) within a 1-hour budget at the requested settings (dps=80 … |
+| [24](phase-24/) | I successfully generalized the Weil quadratic-form engine so that it validates both the Riemann ζ and the primitive complex Dirichlet control L(χ₄ mod 5), but I cannot claim … |
+| [25](phase-25/) | I implemented and validated a Python zero-generation module for all five control L-functions, and the generators passed the specification’s validation checks, but I cannot … |
+| [26](phase-26/) | The primary dataset is a single 5,530-byte authoritative reference markdown specification (-v8-validated-data.md) that encodes constants, definitions, validation gates, cutoffs … |
+| [27](phase-27/) | (No written summary; data files only.) |
+| [28](phase-28/) | The archimedean-normalization hypothesis could not be empirically tested because computing the first 80 zeros of L(Δ,s) at sufficient precision exceeded the available compute … |
+| [29](phase-29/) | The super-polynomial decay law η(X) ≈ A·exp(−α·log²X) describes the degree-2 L(Δ,s) truncation noise floor with α = 0.144 ± 0.021, statistically indistinguishable from the … |
+| [30](phase-30/) | (No written summary; data files only.) |
+| [31](phase-31/) | The explicit perturbation theorem successfully predicts the forced-negativity prefactor at the second anchor T₀=85.7: c_pred = −4.375767 agrees with c_emp = −4.375767 (δ=10⁻⁴) to … |
+| [32](phase-32/) | The "localized rank-one" perturbation model predicts the empirical forced-negativity prefactor c(T₀=46.13, σ, J, m) with R² = 1.00000 and median relative error < 0.001 % across … |
+| [33](phase-33/) | (No written summary; data files only.) |
+| [34](phase-34/) | The theoretical truncation-error bound built from the Gaussian decay of the Hermite-Gauss Fourier transform combined with the PNT density of prime powers quantitatively tracks the … |
+| [35](phase-35/) | I cannot validate the claim that the existing _zeros.py and weil_quadratic_form.py modules reproduce all four §4 reference behaviors because weil_quadratic_form.py is a ζ-specific … |
+| [36](phase-36/) | A modular family for L(Δ,s) was implemented and integrated with the existing Weil engine, but the trace identity tr(M_zeros)=tr(M_arith) did NOT hold at the standard validation … |
+| [37](phase-37/) | At the benchmark point (T₀=46.13, σ=1, J=10, X=10⁴), the L(Δ,s) engine yields a trace residual of 6.26×10⁻⁴ and a /λ_min(Q)//tr(M_zeros) ratio of 1.75×10⁻³, both about 8–9 orders … |
+| [38](phase-38/) | (No written summary; data files only.) |
+| [39](phase-39/) | (No written summary; data files only.) |
+| [40](phase-40/) | A Python function compute_Q(zeros, T0, sigma, J, primes_cutoff=1e5) was implemented that constructs the full localized Weil quadratic form Q = M_zeros − M_arith with M_arith … |
+| [41](phase-41/) | The Davenport–Heilbronn benchmark λ_min ≈ −9.0×10⁴ is formally irreproducible from public information; a best-effort implementation at (T₀=85.7, σ=2, J=10, X=10⁵) yields λ_min = … |
+| [42](phase-42/) | The hypothesis could not be empirically tested within the time budget because generating the first 80 zeros of L(Δ,s) at the precision required for the diagnostic window (T₀=85.7 … |
+| [43](phase-43/) | (No written summary; data files only.) |

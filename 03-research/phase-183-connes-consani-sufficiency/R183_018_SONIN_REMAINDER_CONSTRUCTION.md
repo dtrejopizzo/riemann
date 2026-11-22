@@ -26,7 +26,7 @@ semilocal remainder and its inertia.
 
 ## 1. Source (local copy, 2006.13771v1)
 
-Source: 00-references/2006.13771v1.pdf. The same text is in
+Source: 00-references/papers-nuevos/weil-form-and-explicit-formula/2006.13771v1.pdf. The same text is in
 phase-137/cc_2006.13771_text.txt. In v1 the numbering is Lemma 6.9 and
 Theorem 6.11; R183.017 calls them "Lemma 9" and "Theorem 11", following
 the html numbering.

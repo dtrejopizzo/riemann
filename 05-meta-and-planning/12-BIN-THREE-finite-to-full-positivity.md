@@ -1,6 +1,8 @@
 # Bin three — a genuine attempt at new mathematics, and what the wall said
 
-**Auditor build · 2026-06-05.** Bin three = NEW-THEOREM-REQUIRED: a class $\mathcal C$ with a *new* general
+**Date:** 2026-06-05 · **Status:** closed negative (bin three stays empty, its occupant characterized as a finitization); continued in plan 13.
+
+**Purpose.** Bin three = NEW-THEOREM-REQUIRED: a class $\mathcal C$ with a *new* general
 positivity theorem into which ζ's data embeds so the off-line bound is a corollary, bypassing the missing-geometry
 root (R1–R3) and the object-special trap (R4). Discipline (the program's ethos): **construct, then destroy in the
 same act.** I take the least-explored positivity family for ζ — **total positivity / Pólya frequency functions** —

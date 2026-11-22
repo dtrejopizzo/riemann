@@ -83,3 +83,21 @@ No paper was modified.
 
 Python 3 with `numpy`, `scipy`, `mpmath` and `python-flint` (Arb). Run from inside the data folder,
 e.g. `cd LINK012_data && python3 certify.py`. Outputs are the JSON files stored alongside.
+
+## Other files in this folder
+
+- `AUDIT_002.md` — Punctured covariance and Mellin.
+- `AUDIT_005.md` — Premise of the diagonal/same-prime round.
+- `AUDIT_006.md` — FE of Π and self-duality defect.
+- `AUDIT_007.md` — Contraction module of the canonical kernel.
+- `AUDIT_008.md` — Ambient inversion, adjoint and graph domain.
+- `AUDIT_009.md` — Direct proof of the link by logarithmic flow.
+- `AUDIT_010.md` — Spectral moment needed to compress D_n.
+- `AUDIT_011.md` — Continuous Mellin–Gauss map and cross-check with the paper's form.
+- `AUDIT_012.md` — Falsifier of the domination of map011.
+- `AUDIT_013.md` — Universal scales of the Mellin–Gauss map011.
+- `AUDIT_014.md` — Gaussian component after removing the rank one.
+- `AUDIT_015.md` — Completed domain, non-closability and global cone.
+- `AUDIT_016.md` — Dense range of map011.
+- `CONSTRUCTOR_002.md` — Design of a normalised theta covariance.
+- `CONSTRUCTOR_007.md` — Module of arithmetic contractions of the kernel −R.

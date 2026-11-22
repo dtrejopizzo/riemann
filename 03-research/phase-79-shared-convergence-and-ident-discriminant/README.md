@@ -991,3 +991,11 @@ Run **E79.1** (nail the ZERO exponent to N=40+). It is decisive and cheap: it
 tells you whether GAP-Z is TRUE (summable) before any proof effort, and whether
 the whole finite-section convergence is safe or marginal. Everything downstream
 depends on that number.
+
+## Contents
+
+The files follow the numbering of the memos; grouped by prefix and type:
+
+- 80 data files with prefix `E79` (e.g. `E79_101_outlier_escape_agreement_results.json`, `E79_104_outlier_fraction_reconstruction_results.json`, …, `E79_97_escape_geometry_sqrt_law_results.json`)
+- 106 memos with prefix `E79` (e.g. `E79_100_SHARED_LADDER_SPECTRAL_READING.md`, `E79_101_OUTLIER_ESCAPE_AGREEMENT.md`, …, `E79_99_PAIR_DEFECT_NOT_LOAD_BEARING.md`)
+- 79 scripts with prefix `E79` (e.g. `E79_101_outlier_escape_agreement_probe.py`, `E79_104_outlier_fraction_reconstruction_probe.py`, …, `E79_97_escape_geometry_sqrt_law_probe.py`)

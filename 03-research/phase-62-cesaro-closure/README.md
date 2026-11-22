@@ -93,3 +93,11 @@ not more brute force on the window.
 dps ≥ 40; DH falsador mandatory in every test; no "RH proved" claim until C0–C3 all close;
 a false victory is worse than failure. The engine and disk cache live in
 [../phase-61-open-problems/](../phase-61-open-problems/) and are imported, not duplicated.
+
+## Other files in this folder
+
+Files not described above:
+
+- `E91_cesaro_convergence.py` — E91 — CESARO CONVERGENCE CURVE of the intrinsic-Jacobi band width (Phase 62, step C1 evidence).
+- `E95_cascade_origin.py` — E95 — origin of the V_+ positivity cascade (Phase 62, MW-5 crossing attempt).
+- `E96_euler_comparison.py` — E96 — is the V_+ positivity an EULER (multiplicativity) comparison? (Phase 62, MW-5 crossing).

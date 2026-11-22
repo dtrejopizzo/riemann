@@ -21,7 +21,7 @@ R158_004 rows 11, 12, 12′, R158_005 §1. No numerics. No paper, README or earl
 I fetched the arXiv e-print sources this review into the scratchpad; they were not added to `00-references`.
 Line numbers below refer to those sources: `math/0311468` (`Primes_Rep.tex`, Latin-1, 5381 lines), `math/9811068`
 (`zeta.tex`), and `math/0703392` (`Yuri70v2.tex`). For math/0412277 I used the local copy
-`00-references/papers-nuevos/C/arXiv-math0412277v3`.
+`00-references/papers-nuevos/foliated-dynamics/arXiv-math0412277v3`.
 
 **1.1 Meyer, *On a representation of the idele class group related to primes and zeros of L-functions*, Duke Math. J.
 127 (2005) 519–595, arXiv math/0311468.** P47 (X33)(ii) lists this paper as "not read"; it has now been read.

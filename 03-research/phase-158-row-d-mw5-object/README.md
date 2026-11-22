@@ -9,3 +9,7 @@
 | `R158_004_AUDIT_ADELE.md` | Verdict holds (25 fixes); Prop B normalisations fixed; five exhaustiveness rows; corpus-check failure recorded (no novelty for Lemma U / Construction C). |
 | `R158_005_CLOSING_DECISION.md` | Closing. |
 Status: CLOSED . MW-5 stays NOT EXCLUDED and unbuilt; its adèle-class instance is a restatement. Row-D label unchanged.
+
+## Other files in this folder
+
+- `R158_006_O0_MEYER_K.md` — Optional follow-up O0: the number-field version of Meyer's spectral realisation and the `S₃` falsifier.

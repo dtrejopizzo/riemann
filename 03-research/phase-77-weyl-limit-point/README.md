@@ -449,3 +449,13 @@ The phase ends when either:
 Rule in force since phase 74: after roughly 100–150 documents, or when something warrants starting
 from scratch, a new phase is opened. Phase 76 was closed at 67 documents precisely because it had
 begun to reformulate instead of reduce; this phase inherits that criterion.
+
+## Other files in this folder
+
+Files not described above, grouped by prefix and type:
+
+- 111 data files with prefix `E77` (e.g. `E77_1_attribution_results.json`, `E77_1b_attribution_results.json`, …, `E77_7y_intrinsic_schur_regularization_results.json`)
+- 63 memos with prefix `E77` (e.g. `E77_1_ATTRIBUTION_RUN.md`, `E77_7AA_KERNEL_ANCHOR_AUDIT.md`, …, `E77_OMEGA7_CLOSURE_PLAN_V2.md`)
+- 5 other files with prefix `E77` (e.g. `E77_1_attribution_results.tsv`, `E77_1b_attribution_results.tsv`, …, `E77_1b_smoke.tsv`)
+- 79 scripts with prefix `E77` (e.g. `E77_1b_attribution_probe.py`, `E77_3_generator_escape_probe.py`, …, `E77_7y_intrinsic_schur_regularization_probe.py`)
+- 1 memos with prefix `PHASE` (e.g. `PHASE_77_MISSION_UPDATED.md`, …, `PHASE_77_MISSION_UPDATED.md`)

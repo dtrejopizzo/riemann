@@ -1980,3 +1980,10 @@ E72.338 audits this and corrects the gate. Absolute `PACK-SMOOTH` is too strong:
 `A_z(r)=iLe^(z(L-r))`, whose `L^1` norm is exponential for `Re z>0`. The valid target must keep the
 pairing before absolute values. The replacement is `POSC`, a paired oscillatory contour estimate
 obtained from `M_z^M(w)+M_z^M(-w)`.
+
+## Other files in this folder
+
+Files not described above, grouped by prefix and type:
+
+- 332 memos with prefix `E72` (e.g. `E72_105_POST_MAIN_HPAC_GAUGE.md`, `E72_106_POST_MAIN_SOURCE_CONSTRUCTION.md`, …, `E72_AUX_PROOF_ATTEMPT_UX.md`)
+- 205 scripts with prefix `E72` (e.g. `E72_106_post_main_source_probe.py`, `E72_107_spectral_divergence_probe.py`, …, `E72_396_cauchy_projection_probe.py`)

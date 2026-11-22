@@ -1,3 +1,3 @@
 # The sign of the radial intersection form
 
-The paper proves lower bounds for the Weil form on finite support intervals and reduces nonnegativity on arbitrary intervals to a sequence of matrix inequalities. Its conclusion identifies the sign on all primitive radial classes with the classical Riemann hypothesis and shows how Dirichlet nonvanishing in the right half of the critical strip implies that sign.
+The paper identifies the sign of the radial Weil form for the Riemann zeta function. It derives nonnegativity at every support radius from the character-family window estimate at modulus one and gives explicit lower bounds on finite windows.

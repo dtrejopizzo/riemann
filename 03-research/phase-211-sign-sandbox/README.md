@@ -114,3 +114,9 @@ python3 03-research/phase-211-sign-sandbox/tools/power_exact_h_global_099_verify
 Each POWER memo names its verifier; a passing run exits with status 0 and, where recorded, its
 output hash matches the `.sha256` file next to the script. Some scripts write caches under
 `/tmp/phase211/`.
+
+## Further series in this folder
+
+- `POWER*` series (122 further memos, `POWER_ARCH_CELL_026.md` … `POWER_WEIGHTED_COEFFICIENT_034.md`).
+- `REVIEW*` series (8 further memos, `REVIEW_002.md` … `REVIEW_009.md`).
+- `ROUND*` series (41 further memos, `ROUND_003_A.md` … `ROUND_025_B.md`).

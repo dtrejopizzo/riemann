@@ -1,30 +1,36 @@
-# Research Programs 1–9 — The Empirical Base
+# Research Programs RH2017–RH2025: the empirical base
 
-These nine folders (`RH2017` … `RH2025`) are the **computational foundation** of the whole project:
-nine large research programs. Together they produced the data, the calibrations, and the phenomenology that the
-theoretical program (*Program 10*, [`../03-research/`](../03-research/), phases 0–213) was built on.
+This directory holds nine early research programs, carried out year by year from 2017 to 2025. They are the computational foundation of the project: they produced the data, the calibrations and the phenomenology on which the later theoretical work ([`../03-research/`](../03-research/)) was built. The distilled results are published in [`../04-papers/`](../04-papers/).
 
-Each `RH<year>/` folder is a full local download of that program's run: one subfolder per
-**task**, each containing an `OVERVIEW.md` (metadata + the full answer), the
-executed notebook when available, and all input/output files.
+The programs move along one line of questions. The first four (RH2017–RH2020) ask whether multiplicative arithmetic structure suppresses the coherent phase alignment ("resonance") that a zero off the critical line would require, using the Davenport–Heilbronn function, which has proven off-line zeros, as calibration target; they study extreme values, ω-class (number of distinct prime factors) decompositions and classifiers of Dirichlet partial sums. RH2021 turns to inverse-spectral and positivity tests and finds the localized Weil quadratic form, which RH2022–RH2024 then develop as a detector and analyse (truncation, perturbation theory, stability, monotonicity). RH2025 is a literature-and-proof program on a Lefschetz-type structure on an "arithmetic surface".
+
+## Layout
+
+Each `RH<year>/` folder contains a `README.md` (objective, method, main findings, connection to later work, and a table of all phases with a one-line description) and one subfolder per phase, `phase-1/`, `phase-2/`, … A phase folder normally contains:
+
+- **`OVERVIEW.md`** — the written result of that phase;
+- **the executed notebook**, when one exists (`notebook_executed.ipynb` and/or a notebook with a hexadecimal name);
+- **input and output files** — data arrays, tables, figures, scripts.
+
+References inside the files to other phases of the same program use the form `phase-N` (for example, in RH2018, `phase-73` is the historical Davenport–Heilbronn reconstruction). Labels such as `r61` or `f5` refer to individual reports and findings within a program and are kept as they appear.
 
 ## The nine programs
 
-| # | Program | Tasks | Theme |
+| Program | Title | Phases | Theme |
 |---|---|---|---|
-| RH2017 | Resonance Detection and Class Separation in Arithmetic L-Functions | 89 | Resonance phenotype; ω-class separation (→ Arc A) |
-| RH2018 | Resonance Suppression for RH Proof | 95 | GEV / R_comp / CAS / Liouville parity |
-| RH2019 | Omega-Class Geometry of Dirichlet Polynomials at Large Values | 83 | ω-geometry at extreme peaks (large values) |
-| RH2020 | Omega-Stratified Conditional Covariance Reconstruction | 83 | Conditional cross-class covariance |
-| RH2021 | Inverse Spectral Positivity for Zeta Zeros | 60 | Inverse operator / Hilbert–Pólya angle |
-| RH2022 | Localized Weil Positivity and Omega-Class Moments | 68 | The localized Weil form + ω-moments |
-| RH2023 | Localized Weil Quadratic Form Detector | 43 | The detector Q = M_zeros − M_arith |
-| RH2024 | Localized Weil Form Stability and Monotonicity | 27 | Stability / monotonicity of the localized form |
-| RH2025 | Arithmetic Surface Lefschetz Structure for Zeta | 79 | Lefschetz / arithmetic-surface structure (mostly literature search) |
+| [RH2017](RH2017/) | Resonance Detection and Class Separation in Arithmetic L-Functions | 89 | Resonance phenotype; ω-class separation |
+| [RH2018](RH2018/) | Resonance Suppression for RH Proof | 94 | GEV extremes, R_comp, CAS, Liouville parity |
+| [RH2019](RH2019/) | Omega-Class Geometry of Dirichlet Polynomials at Large Values | 83 | ω-geometry at extreme peaks |
+| [RH2020](RH2020/) | Omega-Stratified Conditional Covariance Reconstruction | 83 | Conditional cross-class covariance; forensic re-validation |
+| [RH2021](RH2021/) | Inverse Spectral Positivity for Zeta Zeros | 60 | Inverse operator, positivity tests, TDA |
+| [RH2022](RH2022/) | Localized Weil Positivity and Omega-Class Moments | 68 | Localized Weil form; ω-moments |
+| [RH2023](RH2023/) | Localized Weil Quadratic Form Detector | 43 | The detector Q = M_zeros − M_arith; truncation |
+| [RH2024](RH2024/) | Localized Weil Form Stability and Monotonicity | 27 | Stability and monotonicity of λ_min(Q) |
+| [RH2025](RH2025/) | Arithmetic Surface Lefschetz Structure for Zeta | 79 | Lefschetz / arithmetic-surface structure (mainly literature study) |
 
-**Total:** 627 tasks across the nine programs.
+**Total:** 626 phases.
 
-## Program summaries and key discoveries
+## Main findings by program
 
 ### RH2017 — Resonance Detection and Class Separation in Arithmetic L-Functions (2017)
 
@@ -38,7 +44,7 @@ Tests whether Euler-product (multiplicative) structure suppresses the coherent p
 
 ### RH2018 — Resonance Suppression for RH Proof (2018)
 
-Extends the resonance-suppression program with strict methodological rules (single implementation, N-dependence tracking, candid reporting) across 8 function classes including Liouville and Möbius.
+Extends the resonance-suppression program with strict methodological rules (single implementation, N-dependence tracking, candid reporting) across eight function classes, including Liouville and Möbius.
 
 - Confirmed persistent, pre-asymptotic Weibull-type extreme-value tails (GEV shape ξ<0) for ζ and DH, stable across N∈[10⁴,10⁶].
 - Discovered the **Liouville counterexample**: L(s,λ) is fully multiplicative yet exhibits large, N-stable, sign-organized resonance — a "multiplicativity illusion."
@@ -104,18 +110,8 @@ A literature-and-proof program that reframes RH as equivalent to the existence o
 - Proved a structural obstruction ruling out the Connes-Consani noncommutative/adèle-class route: its positivity is provably equivalent to RH (not independent), and no compatible Lefschetz operator can be built from the spectral operator given the expected ℚ-linear independence of zero ordinates.
 - Identified Arakelov geometry as the most promising partial blueprint: it supplies a non-circular Lefschetz class and Hodge-Riemann-type positivity via the arithmetic Hodge Index theorem, but the absolute surface and a geometric lowering operator remain unconstructed.
 - Showed absolute prismatic cohomology offers a plausible cohomological scaffold but no global spectral (Frobenius/Sen-type) generator whose spectrum could equal the Riemann zeros.
-- Established a precise, quantitative target for any future construction: reproducing the long-range spectral-rigidity plateau of the Riemann zeros (Δ₃^∞≈0.1908) via an explicit prime-power series — directly motivating the geometric obstruction studied in Program 10.
+- Established a precise, quantitative target for any future construction: reproducing the long-range spectral-rigidity plateau of the Riemann zeros (Δ₃^∞≈0.1908) via an explicit prime-power series — directly motivating the geometric obstruction studied in the later theoretical work (`../03-research/`).
 
-## How to read a task
+## Relationship to the rest of the project
 
-Inside each `RHk/task-XXXXXXXX/`:
-- **`OVERVIEW.md`** — A written result of that step.
-- **`notebook_executed.ipynb`** — the executed analysis notebook, when the underlying run produced one.
-- **output / input files** — datasets, figures, and other generated things.
-
-## Relationship to the rest of the program
-
-The bottom line of this empirical base: the ω-class work is
-**descriptively rich but did not beat convexity**, and the localized-Weil detector (RH2022–RH2024)
-became the object the theoretical program pivoted to. The published distillations are in
-[`../04-papers/`](../04-papers/).
+In summary, the ω-class work (RH2017–RH2020) is descriptively rich but did not beat convexity, while the localized Weil detector (RH2021–RH2024) became the object to which the theoretical work turned: RH2023 separates what is provable with unconditional input (detecting a fixed off-critical zero) from what is equivalent to RH (uniform convergence of the finite truncations). RH2025 fixed a quantitative spectral-rigidity target and an obstruction for the noncommutative route that the later geometric questions start from. The published distillations are in [`../04-papers/`](../04-papers/).

@@ -1,9 +1,9 @@
 # PLAN — RH Route B: Structural Positivity (is the Weil operator a square?)
 
-**Author:** David Alejandro Trejo Pizzo · **Opened:**  · **Status:** the only open route to RH
-after P8.
+**Author:** David Alejandro Trejo Pizzo · **Status:** executed through milestones M1–M3 (`phase-5-structural/`), which
+closed the identification phase; continued by plan 03. When opened it was the only open route to RH after P8.
 
-This is the companion plan to **P8** (`06-papers/P8-weil-krein-realization/`). P8 closed the
+**Purpose.** This is the companion plan to **P8** (`06-papers/P8-weil-krein-realization/`). P8 closed the
 explicit-formula / **zero-side** line: it built a faithful semibounded realization $\mathcal T$ of the Weil
 form with $\mathrm{RH}\iff\inf\mathrm{spec}(\mathcal T)\ge0\iff\|K\|\le1$, **and proved a no-go**
 (P8 Thm C) — the zero side cannot decide the sign, because the off-line depths enter only through
@@ -63,7 +63,7 @@ whose positivity structure is studied.
   $\vartheta$ onto **Sonin's space** $\mathbf S$ (zero-independent!): $\mathrm{Tr}(\vartheta(g)\mathbf S\vartheta(g)^*)$.
   Question: is $\mathcal T_{\text{archimedean}}$ (the realization built from $\mathfrak a$, not from $E$) a
   compression of a *positive* operator? Is $\mathbf S\,\vartheta(g)$ the square root $A$? Read
-  `papers-referencia/2006.13771v1.pdf` §§4–6 and Thm 6.11 carefully; locate the exact operator whose
+  `00-references/papers-nuevos/weil-form-and-explicit-formula/2006.13771v1.pdf` §§4–6 and Thm 6.11 carefully; locate the exact operator whose
   eigenvalues-below-1 give positivity. **Deliverable:** a precise statement of what is positive
   *by construction* there, and whether our $\mathfrak t$ inherits it.
 - **B3.2 — de Branges chain.** Under RH the completion is $\mathcal H(E_\xi)$, $E_\xi=\xi(\tfrac12-iz)+\xi'(\tfrac12-iz)$
@@ -146,7 +146,7 @@ candor that made P8's Theorem C the most valuable output of the zero-side line.
 3. **M3 (B2.1):** the residual-positivity question stated exactly; the $PW_d$/Slepian angle assessed.
 4. **M4 (B1.3):** attempt a structural no-go for the admissible square; if it lands, **route B closes**.
 5. **Each milestone** updates `00-MAP.md` (route-B branch) and `phase-4-handoff/proofs/00-PROOF-LOG.md`
-   (or a new `phase-5-structural/` log), and the project memory.
+   (or a new `phase-5-structural/` log), and the project notes.
 
 ---
 
@@ -159,7 +159,7 @@ candor that made P8's Theorem C the most valuable output of the zero-side line.
 - **Log:** route-B entries continue the chronology; the first entry records the opening of this plan and the
   P8 no-go as the reason the zero side is closed.
 
-**One-line framing for the team.** *P8 proved the zero side cannot reach the sign; route B asks the only
+**One-line framing.** *P8 proved the zero side cannot reach the sign; route B asks the only
 remaining question — does $\mathcal T$ carry an independently-given positive structure (a square)? — with
 the candid expectation that the deliverable is most likely another no-go or a clean identification with
 Connes/de Branges, not RH itself.*

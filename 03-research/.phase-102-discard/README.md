@@ -13,11 +13,12 @@ and is not part of the active corpus.
 - Signed finite core for n ≥ 8 (point A1): the central remaining obligation. OPEN.
 - Carril B (BTG-DIV, LP interface, GAP-Z, RDI-ANCHOR, RDP-SHELL, SAFE-PROLATE-BRIDGE, SR-SAFE): alternative route, left mostly OPEN; one minimal bridge theorem (RDI ⟹ Li) stated. OPEN / CONDITIONAL.
 
-## Documents
-- `phase-102-omega7-closure/README.md`, `PHASE_102_EXECUTION_PLAN.md`, `PHASE_102_OBLIGATION_LEDGER.md` — plan and live ledger of closed/open obligations.
-- `102_A0_*`, `102_A1_*`, `102_BOUNDARY_LIMIT_AND_LIMIT_ORDER.md`, `102_SCALE_DECOMPOSITION_AND_TRUNCATION.md`, `102_RDI_*`, `102_LI_ASSEMBLY_CONDITIONAL_THEOREM.md` — the technical targets, theorems, and bridges listed in the ledger above.
+## Contents
+All material is in the subfolder [`phase-102-omega7-closure/`](phase-102-omega7-closure/):
+- `README.md`, `PHASE_102_EXECUTION_PLAN.md`, `PHASE_102_OBLIGATION_LEDGER.md` — plan and ledger of closed/open obligations.
+- `102_A0_*`, `102_A1_*`, `102_BOUNDARY_LIMIT_AND_LIMIT_ORDER.md`, `102_SCALE_DECOMPOSITION_AND_TRUNCATION.md`, `102_RDI_*`, `102_LI_ASSEMBLY_CONDITIONAL_THEOREM.md` — the technical targets, theorems and bridges listed in the ledger.
 - `RH-MASTER-CONTEXT/`, `RH-MASTER-CONTEXT-SNAPSHOT/` — inherited master-context audits and restart plan the phase builds on.
-- `audits/`, `tools/`, `work/` — supporting audit notes and scripts for the above targets.
+- `audits/`, `tools/`, `work/` — empty placeholders (their contents were not kept).
 
 ## Relation to other phases
-Inherits its restart plan and master-context audit from a prior frontier snapshot (`RH-MASTER-CONTEXT-SNAPSHOT`); superseded and moved to discard, so later phases do not build on it directly.
+Inherits its restart plan and master-context audit from a prior frontier snapshot (`RH-MASTER-CONTEXT-SNAPSHOT`). The active version of the campaign is [`../phase-102-omega7-closure-campaign/`](../phase-102-omega7-closure-campaign/); this copy was superseded and moved to discard, so later phases do not build on it.

@@ -38,11 +38,11 @@ No continuation should therefore reuse the earlier version without repair.
 1. [`00_SCOPE_AND_METHOD.md`](00_SCOPE_AND_METHOD.md): corpus, protocol and meaning of the labels.
 2. `MASTER_CONTEXT.md`: self-contained synthesis of the whole path and current mathematical state.
 3. `PAPER36_AUDIT.md`: logical spine, confirmed results and necessary repairs.
-4. `RH2017_RH9_AUDIT.md`: assessment of the nine exploratory programs.
+4. `RH1_RH9_AUDIT.md`: assessment of the nine exploratory programs.
 5. `PHASES_AUDIT.md`: walk through all phases, without counting reparametrisations as new closures.
 6. `NO_GO_AND_RETRACTIONS.md`: record of discarded routes, exact scope and precedence of corrections.
 7. `LIVE_FRONTIER_AND_RESTART_PLAN.md`: admission criterion and restart plan centred on the RH-strength step.
-8. `COVERAGE_INDEX.md`: coverage check and size of the context.
+8. `COVERAGE_INDEX.md`: coverage check and size of the dossier.
 
 The files in [`fragments/`](fragments/) keep the block audits that support the synthesis. They are traceability evidence; in case of discrepancy, a later mathematical correction exhibiting the exact step prevails.
 

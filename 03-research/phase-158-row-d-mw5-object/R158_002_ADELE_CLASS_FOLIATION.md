@@ -124,8 +124,8 @@ Connes trace formula. Findings used below:
 
 Local sources read this review: Connes, *An essay on the Riemann Hypothesis* (arXiv 1509.05576,
 `00-references/papers-nuevos/A/`); Connes–Consani, *The Riemann–Roch strategy* (1805.10501, same place); Meyer
-(math/0412277, `papers-nuevos/C/`); Deninger (math/0204110 and 1807.06400, `papers-nuevos/B/`); Morishita (2508.15971,
-`papers-nuevos/Puente/`); CC (2006.13771, `phase-137…/cc_2006.13771_text.txt`). Fetched from arXiv this review:
+(math/0412277, `papers-nuevos/foliated-dynamics/`); Deninger (math/0204110 and 1807.06400, `papers-nuevos/deninger-programme/`); Morishita (2508.15971,
+`papers-nuevos/deninger-connes-consani-bridge/`); CC (2006.13771, `phase-137…/cc_2006.13771_text.txt`). Fetched from arXiv this review:
 Connes (math/9811068) and CCM (math/0703392), both as full text.
 
 ---

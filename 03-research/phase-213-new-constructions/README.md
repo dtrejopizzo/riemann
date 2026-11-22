@@ -487,3 +487,9 @@ Outputs validate specific points of the corresponding memo; they are not proofs 
 - `SELECTION_098.md` — Local cost of majorizing the prime weight via positive counts of multiples
 - `SELECTION_099.md` — A fixed binomial splitting does not reproduce the logarithmic weight with positive dilations
 - `SELECTION_128.md` — Required resolution of a factorial majorant of the prime mean
+
+## Other files in this folder
+
+- `ROW*` series (6 further files, `ROW_D_COMPILED_REFERENCES.json.gz` … `ROW_D_PROOF_DEPENDENCIES.md`).
+- `verify*` series (30 further scripts, `verify_039_interval.py` … `verify_spline_nodes_5.py`).
+- `CHEBYSHEV_TRIVIAL_CHARACTER_MELLIN.md` — Fractional weight of the trivial character.

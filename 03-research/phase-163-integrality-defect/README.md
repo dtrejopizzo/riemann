@@ -24,7 +24,7 @@ Background: `../phase-162-row-d-first-contact-closure/R162_2901_GENERALIZED_INTE
 ## Later development: closure of the rounding conjecture, not of Row D
 - [R163_103](R163_103_RANDOM_WITT_ROUNDING.md): internal proof of `C_{1/3}` via independent rounding of **Witt multiplicities** and a moment bound of all orders for the full convolution. Produces discrete systems with `N=ρx+O_ε(x^{θ+ε})` and zeros at `Re s=(1+θ)/2` for every `θ∈(1/3,1/2)`; at `θ=1/3` it gets `O_ε(x^{1/3+ε})`. Pending external review. Combined with Broucke for `θ≥1/2`, the construction rules out universal thresholds `1/3<θ₀<1`; by itself it covers `θ₀<3/4`. Does not imply RH.
 - [R163_104](R163_104_TRANSPORT_AND_GAUSSIAN_BENCHMARK.md): proved criterion for zero transfer by paired prime transport; also `Q(i)` satisfies an integer bound with exponent `131/416<1/3`, so a class theorem with threshold `1/3` would also imply GRH for `L(s,χ_{−4})`.
-- [R163_105](R163_105_INTERNAL_AUDIT_OF_WITT_ROUNDING.md): internal audit of `R163_103`'s five critical steps and questions for the panel; does not replace independent review.
+- [R163_105](R163_105_INTERNAL_AUDIT_OF_WITT_ROUNDING.md): internal audit of `R163_103`'s five critical steps and open questions for an independent review; does not replace independent review.
 - [R163_106](R163_106_NONLINEAR_TORSION_ENTROPY_GATE.md): exact entropy identity for `Φ_Λ`'s `×p` cocycle with non-band-limited exponential tests; gives a strict quadratic sign, but faithful coupling with first contact and its geometric sign remain open.
 - [R163_107](R163_107_CANONICAL_ENTROPY_COLLAPSE.md): exact NO-GO for coupling `R163_106` with the canonical Möbius lift: `h_F(0)−∫h_F=2||F||²` for every `F`, regardless of `λ=0`. The route could only survive with a new kernel incorporating the polar/exterior profile without artificial normalization.
 - [R163_108](R163_108_ATOMIC_INFINITE_EXCHANGE_MODEL.md): exact model `E=1+sinh²(aδ)/cosh²(a(s−1/2))` of infinitely many quartets whose current falls **only** on powers of 2. Falsifies extrapolating "negative continuous density" from the finite case; the exact `1/k` prime capacity does fail by amplitude. The heights are artificial, not zeros of ζ: it is an adversarial test, not a closure.
@@ -128,3 +128,20 @@ Background: `../phase-162-row-d-first-contact-closure/R162_2901_GENERALIZED_INTE
 -, phase 165 closed (R165_190): Det+ (T_c ≤ min_ρ τ(ρ)), Det− DEAD, geometric branch refuted (R165_201 Thm 3(a)); R163_401 v10 (§4.11(g)). Grid part 16 (997 routes, ■10 ◩20 ◧34). (★_cell), row D: OPEN.
 -, phase 166 closed (R166_190): jet hierarchy (R166_201 Thm 1.3), rough-tail split 𝒯^det + ζ_{≥X}, falsifier P_{a,c}, OS-2 closed negatively; R163_401 v11 (§4.11(h)). Grid part 17 (1009 routes, ■10 ◩20 ◧34). (★_cell), row D: OPEN.
 -, phases 166 (rounds 9–12) and 167 closed (R166_190, R167_190): Thm A (iii) ⇒ (ii), circularity of the inequality over Λ, requirements (G)+(N′); exact target (WS*) characterized: unreachable without zeros (Thm B′, b_θ), circular with them. R163_401 v12 (§4.11(i)). Grid part 18 (1022 routes, ■11 ◩19 ◧34). (★_cell), row D: OPEN.
+
+## Other files in this folder
+
+- `R163_202_EULER_GATE_ANALYSIS.md` — Euler gate: uniqueness lemma, zero-side meaning, falsifiers.
+- `R163_203_EULER_GATE_STRESS.md` — Euler gate: stress test on the two-atom Type I curve, Beurling-like atom, deletion; quantitative (U).
+- `R163_290_AUDIT_EULER_GATE.md` — Audit of the Euler-gate proposal (round 31).
+- `R163_490_AUDIT_CLOSURE.md` — Audit of R163_401 (D-closure candidate) and R163_402 (light cone).
+- `R163_502_DENSITY_Q_AND_DELTA_BOUND.md` — The density hypothesis (Q) and the Σδ² bound of R163_401 §4.2.
+- `R163_591_REAUDIT_V3.md` — Re-audit of R163_401 v3 against R163_590.
+- `R163_602_TWISTED_PRIME_SUMS.md` — Local Weil positivity from the prime side: twisted prime sums, Selberg, Levinson–Conrey.
+- `R163_603_WITNESS_MOLLIFIER_COUPLING.md` — Coupling the first-contact witness with a mollified Hardy function.
+- `R163_701_SUBLANDAU_ZERO_FREE.md` — The sub-Landau part of $P_{\rm loc}$ on actual ζ: zero-free regions in both directions.
+- `R163_702_SUPRALANDAU_VERIFIED.md` — Supra-Landau cells and the verified height: what verification gives, and what it cannot give.
+- `R163_790_AUDIT_601_603.md` — Review of R163_601, R163_602, R163_603.
+- `R163_891_AUDIT_C13.md` — Check of R163_803 (Theorem C, discrete C_{1/3}).
+- `R163_892_C13_NOVELTY.md` — External novelty check for Theorem C (R163_803, discrete C_{1/3}).
+- `scripts/` — supporting scripts (5 files).

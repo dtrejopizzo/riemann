@@ -1,7 +1,7 @@
 # 115.12 — What CCM 2310.18423 actually gives, and the exact size of the gap in (H)
 
 Point 3 of the attack order.  Read from the local source
-`00-references/papers-ref-2/arXiv-2310.18423v2/mainc2m24fine.tex`
+`00-references/prolate-and-zeta-cycles/arXiv-2310.18423v2/mainc2m24fine.tex`
 (Connes–Consani–Moscovici, *Zeta zeros and prolate wave operators — semilocal
 adelic operators*), §4 `sectsemilocal` and §4.3 `sectsonin`.
 

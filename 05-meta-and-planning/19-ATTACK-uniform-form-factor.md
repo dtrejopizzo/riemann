@@ -1,6 +1,8 @@
 # Attacking the uniform form factor: exact identity, unconditional core, and the precise gap
 
-**Auditor build · 2026-06-05.** Target (non-circular, sub-RH): the uniform bound $V(d,T)\ll dN$ on the mesoscopic
+**Date:** 2026-06-05 · **Status:** completed with an unconditional bound modulo a power of log T; continued as option 1 in plan 22.
+
+**Purpose.** Target (non-circular, sub-RH): the uniform bound $V(d,T)\ll dN$ on the mesoscopic
 second moment, equivalently a finite bottom $(LB)$ for the Weil form. We push it rigorously: an exact identity
 making $V$ a manifest square, the unconditional ingredients, the unconditional *equivalence* to short-interval
 prime variance (the non-circular bridge), and the exact residual gap. No claim of crossing.

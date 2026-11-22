@@ -199,7 +199,7 @@ finite-window route is being pursued by matrix methods only.
 - M. Suzuki, *The screw line of the Riemann zeta-function and its applications*, arXiv:2209.04658v3
   (17 May 2023), 9 pp. MSC 11M26, 42A82, 46E22.
 - M. Suzuki, *On the Hilbert space derived from the Weil distribution*, arXiv:2301.00421v3
-  (7 Nov 2025), 20 pp. — local copy `00-references/2301.00421v3.pdf`, read in full.
+  (7 Nov 2025), 20 pp. — local copy `00-references/papers-nuevos/weil-form-and-explicit-formula/2301.00421v3.pdf`, read in full.
 
 **The screw function (2206.03682, §1, eq. (1.1) and (1.8)), verbatim.**
 

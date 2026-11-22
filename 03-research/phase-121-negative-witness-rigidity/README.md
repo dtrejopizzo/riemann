@@ -601,3 +601,10 @@ separation proves that this localized normal cannot determine the global
 tame value can be nonzero on a primitive source.  Thus the causal lift is a
 valid local identity but not the missing global Poisson/Rees lift; the
 latter remains an additional source theorem.
+
+## Other files in this folder
+
+- `P121_COPRIME_CONTACT_VS_OPPOSITE_RETURN_AUDIT.md` — Coprime contact does not kill the opposite causal return.
+- `P121_ENDPOINT_REGULARITY_POISSON_NO_GO.md` — Endpoint regularity does not by itself produce the Poisson lift.
+- `P121_FIVE_NONCIRCULARITY_AUDITS.md` — Five radical-only noncircularity audits.
+- `P121_MULTIPLICATIVE_FIRST_CHARACTER_K2.md` — Multiplicative first character before scalar supertrace.

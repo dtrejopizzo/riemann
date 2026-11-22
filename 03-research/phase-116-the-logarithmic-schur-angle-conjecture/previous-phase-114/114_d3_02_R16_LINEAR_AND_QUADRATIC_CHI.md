@@ -37,7 +37,7 @@ theorems, Gap G-1).
 External sources, read in this phase:
 - Wei He, *Numerical cohomology for arithmetic surfaces and applications*,
   arXiv:2512.01811v2, at
-  `00-references/papers-nuevos/D/arXiv-2512.01811v2/Numerical_cohomology_for_arithmetic_surfaces_and_applications.tex`.
+  `00-references/papers-nuevos/arithmetic-intersection-theory/arXiv-2512.01811v2/Numerical_cohomology_for_arithmetic_surfaces_and_applications.tex`.
 - A. Connes and C. Consani, *Riemann–Roch for `Spec Z-bar`*,
   arXiv:2205.01391v2, at `00-references/papers-nuevos/A/arXiv-2205.01391v2/RR-J-final.tex`.
 

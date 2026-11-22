@@ -1,6 +1,8 @@
 # Option 4 — the finite-to-full gap is a uniformity gap: a general framework
 
-**Auditor build · 2026-06-05.** New mathematics, potentially RH-independent. P15 stated that for $\zeta$ every
+**Date:** 2026-06-05 · **Status:** executed through Day 45; ends with a stability theorem for Hodge–Riemann under limits; no sub-RH opening.
+
+**Purpose.** New mathematics, potentially RH-independent. P15 stated that for $\zeta$ every
 finite-order positivity is unconditional while the full order is RH. Here we identify the *general* phenomenon —
 it is a **uniformity (quantifier-order) gap**, not a logical-implication gap — give the criterion that decides it,
 and locate $\zeta$ and matroids on opposite sides. The point is a transferable principle about positivity

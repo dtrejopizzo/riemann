@@ -78,3 +78,7 @@ Ergebnisse **48** §2.2. **Beurling–Malliavin is a corpus cross-reference, not
 
 Closing decision `R142_005`. Phase 143 opens on the two horns: **O-22 / O-18′** (Horn A) and
 **O-22′** (Horn B, i.e. (T1),(T2) and the `C'_{F_0} ≥ G` test for the trace-positive cone).
+
+## Other files in this folder
+
+- `R142_004_CONFIRMATION.md` — Confirmation, phase 142: repairs verified, §D.32 audited.

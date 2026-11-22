@@ -87,6 +87,73 @@ A cross-front Quantitative Bottleneck Ledger makes the central trade-off explici
 - Achieved the program's central positive result: an adaptively localized Weil quadratic form (Hermite-Gauss basis, centered at the known off-line zero) produces a strictly negative minimum eigenvalue for L_DH while remaining non-negative for all GRH-consistent controls — a proof-relevant, feasible-N detector of GRH violation, contingent on correctly using the symmetric spectral-side Gram matrix rather than a naive (always-PSD) Hermitian form.
 - Produced a cross-front Quantitative Bottleneck Ledger quantifying which diagnostics are proof-relevant vs merely phenomenological, clarifying the practical path toward scaling proof-linked RH numerics.
 
-## Files
+## Connection to later work
 
-Each subfolder is a single task from the underlying investigation, covering the Step-0 engine/zero-list construction, the Step-0.5 detection-power calibration, the topological/statistical separators of Davenport-Heilbronn (Front III), and the proof-relevant fronts culminating in the adaptive Weil quadratic form breakthrough (Fronts I/II) described above.
+The adaptively localized Weil quadratic form found here became the main object of RH2022–RH2024 and, through them, of the later theoretical work on Weil positivity.
+
+## Structure of the folder
+
+The program is divided into 60 numbered phases, one subfolder `phase-N/` each. A phase folder normally contains `OVERVIEW.md` (the written result of that phase), the executed notebook when one exists (`notebook_executed.ipynb` and/or a notebook with a hexadecimal name) and the input and output files (data arrays, tables, figures). The one-line descriptions below are taken from each phase's `OVERVIEW.md`; where a phase has no written summary this is stated.
+
+| Phase | Content |
+|---|---|
+| [1](phase-1/) | I was unable to fully execute the non-uniform partitioning strategy to generate the L(s, χ₄ mod 5) N=5000, dps=80 zero list: the script and partition were designed and benchmarked … |
+| [2](phase-2/) | The number variance Σ²(L=100) is a powerful detector that sharply separates L_DH from the three GRH-satisfying L-functions: pairwise permutation tests yield p<0.01 for L_DH vs |
+| [3](phase-3/) | A parallelized de novo Hardy-Z sign-change scan was implemented for L(s, χ₄ mod 5) and successfully generated and refined zeros, validating against LMFDB; however, runtime limits … |
+| [4](phase-4/) | The hypothesis is REFUTED in its specified form: a raw Vietoris–Rips H1 persistence pipeline on the 2D point cloud (Re(ρ), Im(ρ)) of zeros 900–1100 yields empty H1 diagrams for … |
+| [5](phase-5/) | (No written summary; data files only.) |
+| [6](phase-6/) | The Li coefficients λ_n are positive for the computed n≤200 window for ζ, the generated subset of L(χ₄ mod 5), and the ζ_δ perturbation family, with ζ_δ exhibiting the … |
+| [7](phase-7/) | Using N=1000 unfolded zeros per family, the TDA permutation test found that the persistence diagrams of ζ and L_DH are strongly distinguishable, whereas ζ and L(χ) are much … |
+| [8](phase-8/) | The resumable checkpointing refinement workflow was successfully designed and partially executed, refining roughly 2000+ of the 3405 cached approximate L(Δ,s) zeros from dps≈38 to … |
+| [9](phase-9/) | The hypothesis is confirmed: the f9 conflict is purely a matrix-construction artifact — r8's kernel-of-differences matrix Q_N[m,n]=φ((γ_m−γ_n)/W) is PSD only when φ is a … |
+| [10](phase-10/) | The Step 0.5 power calibration shows a stark asymmetry: Front III (TDA on Re(ρ)) responds linearly and predictably to δ (H0 bottleneck ≈ δ/2, giving signal 0.500 at δ=1.0 vs 0.050 … |
+| [11](phase-11/) | I cannot conclude that the standalone 8-way linear-partition cypari2 script successfully generated the complete lchi5_zeros_N5000_dps80.npy list within the available compute … |
+| [12](phase-12/) | Refining the candidates from the cached r34 scan yielded 110 confirmed off-line zeros of L_DH (all with Re(ρ)>0.501 and /L_DH(ρ)/<1e-40), but including them in the Front II … |
+| [13](phase-13/) | I cannot conclude that the parallel cypari2 pipeline in delta_worker.py generates a complete N=5000 Ramanujan Δ zero list within a single run, because the attempted full-scale … |
+| [14](phase-14/) | The parallelized Hardy-Z scan was successfully completed up to t≈4500, producing 5,141 sign-change brackets that cover the first ~5,000 nontrivial zeros of L(s,χ₄ mod 5), but the … |
+| [15](phase-15/) | The Weil quadratic form built from a high-altitude Hermite–Gauss wavelet basis (J=10 modes centered at t₀=114.163, bandwidth w=2.0) yields a strictly NEGATIVE minimum eigenvalue … |
+| [16](phase-16/) | I cannot complete the full L(Δ,s) N=5000, dps=80 zero-list generation within the 3600 s runtime budget, but I did implement and validate the hybrid search/refine architecture … |
+| [17](phase-17/) | A parallel cypari2 worker for L(s, χ₄ mod 5) was implemented and validated for correctness against LMFDB, but the full N=5000 generation could not be completed within the run's … |
+| [18](phase-18/) | The validated checkpointing subprocess architecture works correctly and is empirically on track to complete the N=5000, dps=80 L(Δ,s) zero list within ~3 hours on 8 cores, but it … |
+| [19](phase-19/) | In this Step 0.5 calibration, the Li coefficients were the most sensitive observables to the ζ_δ deformation, one Jacobi coefficient (Re(a_4)) showed limited sensitivity only at … |
+| [20](phase-20/) | At the available full-scale Front I resolution, the Jacobi coefficient sequences for all analyzable controls—including L_DH—are best described by a log-quadratic law, but L_DH … |
+| [21](phase-21/) | A synthesis of all v6.6 analytical fronts establishes a strict inverse correlation between sensitivity and relevance to Riemann Hypothesis (RH) proofs: topological methods (TDA) … |
+| [22](phase-22/) | The Front I comparative analysis on the available five-function panel confirms the research hypothesis: all five Jacobi b_n sequences share a log-quadratic growth law, but L_DH … |
+| [23](phase-23/) | The hypothesis is confirmed: refining only the remaining 295 Odlyzko seeds (indices 4705–4999) at dps=50 was computationally trivial (~229 s on a single core) and successfully … |
+| [24](phase-24/) | The final synthesis establishes a definitive sensitivity hierarchy where Topological Data Analysis (TDA) and moment-statistic spacing variances ($\Sigma^2(L)$) successfully detect … |
+| [25](phase-25/) | For the specified compactly supported C∞ bump test function φ(t)=exp(-1/(1-t²)), the smallest eigenvalue λ_min(Q_N) of the finite-N Weil-type kernel matrix Q_N[m,n] = … |
+| [26](phase-26/) | Execution of run_parallel2.py made substantial progress toward generating the N=5000, dps=50 zero list for L_DH (≥144/184 blocks completed yielding ≥3,473 validated zeros), but … |
+| [27](phase-27/) | The current primary dataset is not a numeric zero table but a binding Markdown specification file that fully defines the required future zero-list inputs, validation gates … |
+| [28](phase-28/) | The reconstructed Jacobi coefficients $(a_n, b_n)$ exhibit common macro-structural trends across the control functions, but the hypothesized simple asymptotic laws for the Riemann … |
+| [29](phase-29/) | The parallelization strategy is empirically valid — partitioning the height range into K=8 cube-root-spaced (~T³-equal-cost) sub-intervals and running cypari2.lfunzeros in 8 … |
+| [30](phase-30/) | Within achievable N and the budget constraints, all computed Li coefficients λ_n (n = 1…200) for the Euler-product / RH-controls (ζ at N=5000, L(χ₄ mod 5) at N=1450, L(Δ,s) at … |
+| [31](phase-31/) | I cannot generate the complete ldelta_zeros_N5000_dps80.npy file within the available runtime because the validated subprocess-based lfunhardy refinement is computationally … |
+| [32](phase-32/) | Front iii tda analysis of unfolded zero spacings on the available N=5000 panel (with L(Δ,s) limited to N=3592 due to extreme cypari2 cost) yields a clear separation in H1 total … |
+| [33](phase-33/) | I cannot complete the full five-function Front II comparative analysis as specified because the required N=5000 zero lists for L(χ₄ mod 5) and L(Δ,s) are not present in the … |
+| [34](phase-34/) | A working L_DH (Davenport-Heilbronn) implementation was constructed and three of the four R2 off-line zeros pass /L_DH(ρ)/<10⁻⁶ exactly at the given six-digit coordinates (the … |
+| [35](phase-35/) | Using the achievable five-control dataset generated within the runtime budget (common N=800 rather than the target N=5000 for all controls), Front I supports a shared degree-2 … |
+| [36](phase-36/) | The hypothesis is REFUTED for this target: LMFDB does not host a downloadable list of 5000 zeros for L(Δ, s); its public interfaces supply only the first 10 zeros (at ~33 decimal … |
+| [37](phase-37/) | The quantitative implementation of the Weil explicit formula quadratic form reveals that the Davenport-Heilbronn L-function L_DH does NOT produce a negative minimum eigenvalue … |
+| [38](phase-38/) | Using the final N=5000, dps=50 ζ and ζ_δ datasets, the Step 0.5 calibration does not support the hypothesis that Front II is highly sensitive and Front I moderately sensitive to … |
+| [39](phase-39/) | The analysis was only partially completed within the time budget: the second moment I_2(T) for ζ was computed up to T≈4400 and for L(χ₅) up to T≈3550 via direct numerical … |
+| [40](phase-40/) | The mpmath library can reliably generate and validate zero lists that satisfy the R2 gate for both ζ(s) and L(s, χ₄ mod 5) — verified at dps=50 for N=2000 (ζ) and demonstrated at … |
+| [41](phase-41/) | The parallelized Hardy-Z scan for L_DH was successfully resumed from the ldh_partial.pkl checkpoint, extended beyond the original 184-block grid (which only reached ~4,580 zeros … |
+| [42](phase-42/) | I could not complete the Front iii tda permutation comparison at full N=5000 across all five control families because two of the five required zero lists (L(χ₄ mod 5) and L(Δ, s) … |
+| [43](phase-43/) | The hypothesis is only partially supported: PARI/GP's lfunzeros reliably produces L(Δ,s) zeros (first zero γ₁ = 9.2223793999211025… matches LMFDB exactly), but it scales as ~T⁴ in … |
+| [44](phase-44/) | The full ldelta_zeros_N5000_dps80.npy could NOT be generated within the 3600 s runtime budget: the validated subprocess-checkpoint architecture is correct (γ₁ matches LMFDB to 75 … |
+| [45](phase-45/) | The consolidated Quantitative Bottleneck Ledger confirms hypothesis f13: number-theoretic statistics with no proof path (Σ²(L=100) and H₀ bottleneck distance) separate L_DH from … |
+| [46](phase-46/) | The hybrid Euler–Hadamard second-moment ratio I_2(T)/(a_2·log T) converges to ≈1 for ζ, L(χ₅), and L_DH (including its off-line zeros), and to ≈1.22 for the partial L(Δ,s) — … |
+| [47](phase-47/) | The high-altitude targeted Weil positivity test is a strongly sensitive detector of real-part perturbations in the ζ_δ family: its minimum eigenvalue λ_min becomes negative for δ … |
+| [48](phase-48/) | A new zeta_delta_strong_N5000_dps50.npy control with Re shifted 0.5→1.5 at non-contiguous indices {1000, 1020, …, 1380} produces a clear, ~8–78× larger Front I (1//ρ/² weighted) … |
+| [49](phase-49/) | The Odlyzko-seed + mpmath refinement strategy successfully produced high-precision (dps=50) ζ zeros at ~18 ms/zero for low-index zeros but became significantly slower (~0.7–0.85 … |
+| [50](phase-50/) | Injecting m=10 off-line zeros (Re=½+0.1) into the N=5000 ζ-zero list produces a small but nonzero bottleneck distance of 5.76×10⁻³ between the H1 persistence diagrams, but creates … |
+| [51](phase-51/) | In a reduced-scope Front III analysis, the H1 persistence diagram of the Davenport–Heilbronn function (L_DH) differed significantly from both ζ and L(χ₄ mod 5), while ζ and ζ_δ … |
+| [52](phase-52/) | I implemented the prescribed independent-subprocess strategy for L(Δ,s) zero generation, which successfully bypasses the multiprocessing.Pool cypari2 segfault, but the full … |
+| [53](phase-53/) | The hypothesis is confirmed: re-implementing the parallel zero generation with independent subprocess.Popen shard workers (per r32) bypasses the multiprocessing.Pool + cypari2 … |
+| [54](phase-54/) | With the Q_N construction specified in the objective (Q_N[m,n]=φ((γ_m−γ_n)/W) using the positive-definite Fejér-squared kernel φ(x)=max(0,1−/x/)²), λ_min(Q_N) is strictly positive … |
+| [55](phase-55/) | Using direct numerical integration of central-line values up to T=4000, the Riemann zeta function is broadly consistent with the Keating–Snaith moment predictions at this finite … |
+| [56](phase-56/) | I cannot claim that a fully validated N=5000, dps=50 Davenport–Heilbronn zero list was generated within this run because the full parallel run did not complete before the runtime … |
+| [57](phase-57/) | The N=5000, dps=80 zero list for L(Δ,s) could NOT be completed within the available 1-hour runtime; the hypothesis that 5–6 hours on 8 cores would suffice remains plausible but … |
+| [58](phase-58/) | The Front iii tda pipeline (unfolded spacings → 3D sliding-window embedding → ripser H1 → Total H1 Persistence) was assembled and executed on the available zero lists, but the … |
+| [59](phase-59/) | Importing trusted low-precision zero tables and refining them in mpmath is feasible for ζ and the small LMFDB-provided χ₄ mod 5 list, but it yields only a modest ~1.1–1.3× speedup … |
+| [60](phase-60/) | I implemented a 2D search pipeline for off-line zeros of L_DH but ran out of compute budget before completing the high-precision refinement step; I therefore could not produce the … |

@@ -62,3 +62,7 @@ Pending for the phase: confirmation of round 2, and `R143_005` (closing decision
 python3 scripts/certify_s_star.py --fast     # ~2 min, mp.dps = 20
 python3 scripts/certify_s_star.py            # mp.dps = 40 (slower)
 ```
+
+## Other files in this folder
+
+- `R143_004_CONFIRMATION.md` — Confirmation, round 2, phase 143.

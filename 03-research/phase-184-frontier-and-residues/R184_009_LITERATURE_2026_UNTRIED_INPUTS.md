@@ -1,6 +1,6 @@
 # R184_009 — Local 2025–2026 literature: inputs not used for row D
 
-No web, no numerics. Sources: `00-references/arxiv-math-nt-2026-review/` (27 works, abstracts + .txt), `papers-nuevos/{A,B,C,D,Puente,extension-clase-test,mas-papers}`, `papers-ref-2/`, `arXiv-2511.11199v1/RH.tex`.
+No web, no numerics. Sources: `00-references/arxiv-math-nt-2026-review/` (27 works, abstracts + .txt), `papers-nuevos/{A,deninger-programme,foliated-dynamics,arithmetic-intersection-theory,deninger-connes-consani-bridge,weil-form-and-explicit-formula,mas-papers}`, `prolate-and-zeta-cycles/`, `arXiv-2511.11199v1/RH.tex`.
 Walls and specification: R162_2300_MASTER_GRID §3 (W1–W12, W-identification, W-jet, W-sieve, (N′)), §4, §7 (S1–S12).
 Does not duplicate R168_001, R160_S1/S5, R166_400–405, R169_000, R170_801–805, NO-GO-LIST §VII–VIII, phases 183–184.
 
@@ -41,7 +41,7 @@ Does not duplicate R168_001, R160_S1/S5, R166_400–405, R169_000, R170_801–80
 | 2609.33953 Irfan | Λ^{*k}, U(N), random matrices | δ_k(c) as a matrix integral (function-field analogue) | YES: R170_804; falsifier F_q / W8 |
 | 2610.01035 de Faveri–Pandey | sixth moment | moment + large values | YES: R170_804; W2, R164_502 (moments DEAD) |
 
-### 1.2 `papers-nuevos`, `papers-ref-2`, RH.tex
+### 1.2 `papers-nuevos`, `prolate-and-zeta-cycles`, RH.tex
 
 | id | topic | result (CITED) | in corpus? |
 |---|---|---|---|

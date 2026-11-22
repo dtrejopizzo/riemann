@@ -1,6 +1,6 @@
 # Phase 59 — Total closure: certifying remaining results and closing every GAP
 
-Following the director's mandate to leave nothing at "we don't know," this phase re-audits the last
+With the aim of leaving nothing at "we don't know," this phase re-audits the last
 publishable results of phase-58 (Doc 191's mollifier floor, Docs 189/190/192), closes several
 technical GAPs outright with full proofs, axiomatizes the non-collapsibility no-go of Doc 190 into a
 genuine theorem over a precisely defined class, and ends with a master ledger giving every open GAP in

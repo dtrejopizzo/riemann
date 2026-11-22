@@ -56,3 +56,10 @@ remaining open content in Weyl limit-point language.
 Continues the paper-53 proof chain inherited from earlier phases (71–73, which successively shrank the
 target from an operator-convergence statement to a leakage estimate to a single nodal identity); hands
 off its final endpoint (LP and IDENT, plus the radical-tail terms and RDP-SHELL) to `phase-77-weyl-limit-point`.
+
+## Other files in this folder
+
+Files not described above, grouped by prefix and type:
+
+- 59 memos with prefix `P76` (e.g. `P76_001_ENDPOINT_CORRECTION.md`, `P76_001_RESULTS.md`, …, `P76_067_LP_IDENT_SPLIT.md`)
+- 53 scripts with prefix `P76` (e.g. `P76_001_dependency_audit.py`, `P76_002_mp_entry_audit.py`, …, `P76_066_weyl_disk_probe.py`)

@@ -110,7 +110,8 @@ roots that S needs.
 
 ## Standing methodological note (`[phase 134]`)
 
-Recorded from Paper 47 §9.3 (`04-papers/47-intersection-frame-defect/archive/main.md`) and from
+Recorded from §9.3 of an earlier draft of Paper 47 (the passage is not in the current
+version of that paper) and from
 the independent re-runs in `R134_002_AUDIT_ROUND1.md` §§4, 6.  It does not
 retract any result of this phase; it fixes how this phase's numbers may be
 read.
@@ -143,3 +144,11 @@ read.
    not the shell volumes `vol(p^k Z_p^x) = log p`, so its would-be Frobenius
    satisfies `F_n * F_n^dagger = (n^a + n^-a) Delta^(n)` and is **not** a
    partial isometry — it fails Paper 44 Theorem 3ter.6, before any comparison.
+
+## Other files in this folder
+
+- `P124_001_JOINT_VARIATION.md` — Joint Gamma--Euler variation.
+- `P124_002_TRANSMISSION_ATTACK.md` — Superseded transmission note.
+- `P124_011_SCHUR_COLLAR_REDUCTION.md` — Schur reduction of the Tate collar at first contact.
+- `P124_012_CAUSAL_STORAGE_SCALAR_SEAM_GATE.md` — Causal storage reduces the seam gate to one scalar surplus.
+- `scripts/` — supporting scripts (3 files).

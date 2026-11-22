@@ -3,7 +3,7 @@
 ```
 IMPORTED, READ FIRST-HAND: Faltings-Hriljac-Moriwaki arithmetic Hodge index
                       theorem and the Yuan-Zhang adelic version, from
-                      00-references/papers-nuevos/D/arXiv-1304.3538v1.
+                      00-references/papers-nuevos/arithmetic-intersection-theory/arXiv-1304.3538v1.
                       Both are LORENTZIAN: n_+ = 1, exactly.
 THE CHEAP TEST:       PASSED, and the brief's worry was based on a MISREADING
                       of 107_241 Thm 3.1.  In that theorem P is the set of
@@ -34,7 +34,7 @@ coordinate model (2.2)), 113_09 (`rad = (chi)`, `s(H,H) = 2`), 113_10 (degree,
 `<=>` RH), 113_14 (the two analytic gaps), 113_15 (the four-row ledger, R16).
 External: Yuan–Zhang, *The arithmetic Hodge index theorem for adelic line
 bundles I*, arXiv:1304.3538v1 — read in this phase at
-`00-references/papers-nuevos/D/arXiv-1304.3538v1`.
+`00-references/papers-nuevos/arithmetic-intersection-theory/arXiv-1304.3538v1`.
 
 Verifier: `114_d3_01_imported_index_theorems.py` — 43 checks, all pass, run
 below.
@@ -75,7 +75,7 @@ all: it is 1 on every truncation. Section 3 below proves this and measures it.
 
 ## 1. The two imported theorems, verbatim
 
-Source: `00-references/papers-nuevos/D/arXiv-1304.3538v1`, Xinyi Yuan and
+Source: `00-references/papers-nuevos/arithmetic-intersection-theory/arXiv-1304.3538v1`, Xinyi Yuan and
 Shou-Wu Zhang, *The arithmetic Hodge index theorem for adelic line bundles I:
 number fields* (2013). Theorem numbering in that source: `\newtheorem{thm}{Theorem}[section]`
 with all environments sharing the counter, `\section{Introduction}`, then
@@ -684,7 +684,7 @@ VERDICT: ALL CHECKS PASS
 - Yuan–Zhang, arXiv:1304.3538v1, Theorem 1.1 (= Faltings–Hriljac–Moriwaki),
   Definition 1.2, Theorem 1.3, and the signature paragraph following Theorem
   1.3 — quoted verbatim in section 1, read in full at
-  `00-references/papers-nuevos/D/arXiv-1304.3538v1` lines 339–395.
+  `00-references/papers-nuevos/arithmetic-intersection-theory/arXiv-1304.3538v1` lines 339–395.
 - 107_241 section 3: the definitions of `L` and `P`, Theorem 3.1, Corollaries
   3.2 and 3.3 — read in full; the brief's paraphrase corrected in section 0.
 - 113_12 Theorem 4.1 (Hodge index `<=>` RH) with its proof; 113_12 Def 1.1 and

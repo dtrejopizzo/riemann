@@ -4,7 +4,7 @@
 
 M. Morishita, *On a relation between Deninger's foliated dynamical systems
 and Connes--Consani's adelic spaces*, arXiv:2508.15971v5, read in full
-(`Puente/arXiv-2508.15971v5`), including the proof of Theorem 3.6.
+(`00-references/papers-nuevos/deninger-connes-consani-bridge/arXiv-2508.15971v5`), including the proof of Theorem 3.6.
 
 Purpose: decide whether row (b) -- Deninger's correspondence -- can be
 assembled as a component of the row-(a) construction, which lives in the

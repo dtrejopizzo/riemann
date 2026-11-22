@@ -1,9 +1,11 @@
 # THE RIEMANN PROGRAM — Master Closing Document: The Wall, Charted, Priced, and Explained
 
-**Author: David Alejandro Trejo Pizzo**
-**Status: closing synthesis of the analytic arc (P1–P12, Phases 0–9). 2026-06-04.**
+**Author:** David Alejandro Trejo Pizzo · **Date:** 2026-06-04 · **Status:** closing synthesis of the analytic arc (P1–P12,
+Phases 0–9), later extended with Phases 10–12; the corpus it summarizes was mapped in plan 06.
 
-> *"Una falsa victoria sería peor que un fracaso."* This document records, without ornament, what a long and
+**Purpose.**
+
+> *"A false victory would be worse than a failure."* This document records, without ornament, what a long and
 > disciplined assault on the Riemann Hypothesis established, what it proved impossible, and exactly where —
 > and why — the problem resists. It does not prove RH. It charts the wall with unusual completeness, names the
 > single irreducible obstruction, prices the cost of crossing it, and explains, in one principle, why every

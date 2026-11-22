@@ -240,3 +240,10 @@ validation tools for specific memos; a numerical output is not a proof.
 - `TRIAGE_D_3.md` — Triage D, list 3: row D ideas recorded and not carried through (items 83–123)
 - `TRIAGE_D_4.md` — Triage D — list 4 (items 124–164, phases 170–211)
 - `TRIAGE_D_5.md` — Triage D, list 5 (items 165–201)
+
+## Other files in this folder
+
+- `BUILD_080_ARITHMETIC_WRONSKIAN.md` — Construction 080 — Arithmetic corrector annihilating an explicit profile.
+- `BUILD_081_TWO_PROFILE_COFACTORS.md` — Construction 081 — Two-profile cancellation by cofactors.
+- `BUILD_082_BALANCED_DEFECT.md` — Construction 082 — Balanced defect with archimedean regularization.
+- `BUILD_083_SIGNED_MOMENT_TRANSPORT.md` — Construction 083 — Moment transport between the sign zones.

@@ -53,3 +53,7 @@ The only place an exact object can be non-linear in Λ and not REF-D by construc
 ∫F̂₀²|ζ_w|²Re R_{X′} (EI_002 Thm 1, EI_003 (2.1)), i.e. problem (S) on the family — whose sign is T*₃(η) (OPEN; REF-D for η ≤ η₀). What such an
 object would need beyond the record is a sign statement about the low-frequency twisted second moment of ζ against the beyond-window Euler
 tail that is not the explicit formula; nothing in the corpus or the literature sweep supplies one.
+
+## Other files in this folder
+
+- `PHASE_192_REVIEW_SUMMARY.md` — Review summary.

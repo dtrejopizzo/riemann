@@ -96,3 +96,8 @@ over `ℝ`: they are not certificates and they bound neither `λ^W` nor `λ^P`. 
 beside a genuine coarse-grid enclosure, and `TV_exact`/`A_T` beside the old `E₁,E₂,E₃`.
 **The `M = 24` lattice is NOT "above the Theorem-N/TK ceiling"**: `prop:TK`/`thm:N` cover
 lattice-supported measures and do not have the flat-top class in their hypotheses.
+
+## Other files in this folder
+
+- `*.json` (25 files, e.g. `chk_log3h.json`) — output data files.
+- `*.log` (8 files, e.g. `chk_log3h.log`) — run logs.

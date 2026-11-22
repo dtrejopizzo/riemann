@@ -89,7 +89,7 @@ model:  s_Frob = 2/3,  s_AutFrob = cos(pi/4) = 1/sqrt2,  s_End = 2/sqrt5   (all 
   and makes no transfer theorem run. Round 2's "first support function in row D to reach `1`" is
   **withdrawn**.
 * **No label anywhere else in the corpus is changed.** One repair issued to R145 Prop. D.41.12′
-  (F-147-1, the `n = −1` exclusion clause; auditor-confirmed, R145's record curve unaffected).
+  (F-147-1, the `n = −1` exclusion clause; confirmed on re-checking, R145's record curve unaffected).
 
 ## What is closed, and what is not
 

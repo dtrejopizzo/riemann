@@ -1,6 +1,8 @@
 # Option 1 — reducing the logarithmic loss: the $|\alpha|\ge1$ tail, precisely
 
-**Auditor build · 2026-06-05.** Goal: shrink the loss $c$ in the unconditional $\ft\ge-C(\log T)^c\|g\|^2$ toward
+**Date:** 2026-06-05 · **Status:** executed through Day 45; the elementary approach reached its natural terminus.
+
+**Purpose.** Shrink the loss $c$ in the unconditional $\ft\ge-C(\log T)^c\|g\|^2$ toward
 the clean $(LB)$, by isolating the $|\alpha|\ge1$ contribution and applying the unconditional tools (positivity of
 the form factor, Selberg's second moment, the diagonal). Strictly sub-RH and non-circular (Goldston--Montgomery).
 We set up the reduction exactly and identify what is unconditional, what each tool buys, and where the residual
@@ -159,4 +161,4 @@ factor to the extreme-value distribution (FHK; the $(\log T)^{k^2}$ moment growt
 
 > **Net.** Front 1's residue is not an isolated analytic obstacle: it is Arc A's extreme-value problem, viewed from
 > the localized Weil form. The two ends of the program meet at the large values of $\zeta$ --- a clean structural
-> closure, and a concrete handoff target (bound the extreme-value heights' form-factor contribution).
+> closure, and a concrete next target (bound the extreme-value heights' form-factor contribution).

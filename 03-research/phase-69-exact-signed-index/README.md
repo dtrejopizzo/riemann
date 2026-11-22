@@ -44,3 +44,11 @@ stable across gauges, so a proof can target the uniform structure directly rathe
 
 Carried from Phase 67-68. No fabricated closure; every lemma passes a numerical gate; audit the audits.
 If the forcer lands on the Weil wall, characterize it precisely -- that is itself a result.
+
+## Contents
+
+- `E69_1_RESULTS.md` — E69.1 -- the gauge-invariant object: the Nevanlinna/Hermite-Biehler condition on -xi'/xi
+- `E69_1_nevanlinna.py` — E69.1 -- the gauge-invariant object: Nevanlinna condition of -xi'/xi (no gauge z0).
+- `E69_1b_nevanlinna.py` — E69.1b -- gauge-free Nevanlinna detector, with the grid covering the off-line zero's z-image.
+- `E69_2_RESULTS.md` — E69.2 -- decomposition overturns the arch-cushion hope; positivity is prime-side
+- `E69_2_decompose.py` — E69.2 -- decompose the Nevanlinna function N = N_arch + N_prime and study the sign structure.

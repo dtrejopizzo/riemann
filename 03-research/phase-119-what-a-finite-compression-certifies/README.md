@@ -62,3 +62,9 @@ corrected results file.
 The corrected separator and its limitations are now recorded in paper 42.
 
 See [`PLAN.md`](PLAN.md).
+
+## Other files in this folder
+
+Files not described above:
+
+- `scripts/` — subfolder (3 entries)

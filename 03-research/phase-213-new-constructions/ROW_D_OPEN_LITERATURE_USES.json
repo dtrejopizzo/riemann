@@ -1,0 +1,2307 @@
+{
+  "source": "EveryCharacterOfLiteratureOfVWin.lean",
+  "root": "every_character_of_literature_of_vWin",
+  "explicit_parameter": "O",
+  "nodes": {
+    "every_character_of_literature_of_vWin": {
+      "line": 810,
+      "calls": [
+        "ar_degree_of_literature",
+        "fargues_exact_of_literature",
+        "grothendieck_deformation_of_literature",
+        "local_langlands_gl_recT_exists_of_literature",
+        "nef_rr_of_literature",
+        "poincare_lelong_inv_of_literature",
+        "point_separation_pair_of_literature",
+        "principalisation_char_zero_of_literature",
+        "published_results_arithmetic",
+        "published_results_eigen",
+        "published_results_first",
+        "resolution_char_zero_of_literature",
+        "semi_abelian_lie_seminegative_of_literature",
+        "siegel_toroidal_integral_of_literature",
+        "theta_integrals_agree_and_local_matching_of_literature",
+        "toroidal_for_fan_ks_of_literature",
+        "zarhin_statement"
+      ],
+      "fields": [],
+      "transitive_fields": [
+        "caraianiLocalGlobalDual",
+        "galoisRepOfPolarizedPairLit",
+        "localLanglandsExists"
+      ],
+      "written_qualified_references": [
+        "PositivityTheory.Pf1.HilbertSamuelMoriwaki.hsUse_outright",
+        "PositivityTheory.Pf1.HilbertSamuelMoriwaki.moriwakiBig_outright",
+        "SelfIntersectionVolumeEstimates.topCovolSlim2_use_alt_alt",
+        "UpperTheory.Lit.every_character_of_theta_integrals_local_matching"
+      ]
+    },
+    "ar_degree_of_literature": {
+      "line": 251,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.ArithmeticHeightTower.ArakelovDirectHeights.cycleHeights_direct",
+        "GlobalTheory.Published.CycleHeights.heightProjection",
+        "PositivityTheory.Prw.arDegree_of",
+        "PositivityTheory.ResPlug.FromRes.resK",
+        "PositivityTheory.Tls2.Chern2.chernDegreeComplex",
+        "PositivityTheory.Tls2.Pl.poincareLelong"
+      ]
+    },
+    "fargues_exact_of_literature": {
+      "line": 549,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.Lit.farguesExact"
+      ],
+      "direct_alias": "UpperTheory.Lit.farguesExact"
+    },
+    "grothendieck_deformation_of_literature": {
+      "line": 405,
+      "calls": [
+        "abelian_de_rham_of_literature",
+        "abelian_lifting_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Published.grothendieckDeformation_of_lifting"
+      ]
+    },
+    "abelian_de_rham_of_literature": {
+      "line": 239,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.DualRT.abelianDeRham"
+      ],
+      "direct_alias": "PositivityTheory.DualRT.abelianDeRham"
+    },
+    "abelian_lifting_of_literature": {
+      "line": 403,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.abelianScheme_hom_lifting_nilpotent_dividedPowers"
+      ],
+      "direct_alias": "GlobalTheory.abelianScheme_hom_lifting_nilpotent_dividedPowers"
+    },
+    "local_langlands_gl_recT_exists_of_literature": {
+      "line": 313,
+      "calls": [
+        "bernstein_zelevinsky_finiteness_of_literature",
+        "brauer_degree_zero_of_literature",
+        "chevalley_units_of_literature",
+        "depth_zero_induction_of_literature",
+        "geometric_restriction_of_literature",
+        "global_artin_reciprocity_of_literature",
+        "langlands_exhaustion_gl_of_literature",
+        "langlands_multisegments_of_literature",
+        "local_converse_gl_of_literature",
+        "local_langlands_recT_exists_of_literature",
+        "standard_cosocle_gl_of_literature",
+        "zelevinsky_polynomial_ring_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [
+        "localLanglandsExists"
+      ],
+      "written_qualified_references": [
+        "UpperTheory.One.M.New.llOf_alt"
+      ]
+    },
+    "bernstein_zelevinsky_finiteness_of_literature": {
+      "line": 265,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Prw.bernsteinZelevinskyFiniteness_holds"
+      ],
+      "direct_alias": "PositivityTheory.Prw.bernsteinZelevinskyFiniteness_holds"
+    },
+    "brauer_degree_zero_of_literature": {
+      "line": 275,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.BrauerZero.brauerDegreeZero"
+      ],
+      "direct_alias": "GlobalTheory.BrauerZero.brauerDegreeZero"
+    },
+    "chevalley_units_of_literature": {
+      "line": 295,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Published.chevalleyUnits'"
+      ],
+      "direct_alias": "GlobalTheory.Published.chevalleyUnits'"
+    },
+    "depth_zero_induction_of_literature": {
+      "line": 305,
+      "calls": [
+        "bernstein_zelevinsky_finiteness_of_literature",
+        "geometric_restriction_of_literature",
+        "zelevinsky_polynomial_ring_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.DepthZeroPass.depthZeroInduction"
+      ]
+    },
+    "geometric_restriction_of_literature": {
+      "line": 297,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.CompanionTheory.GeoLink.geometricLemma"
+      ],
+      "direct_alias": "GlobalTheory.CompanionTheory.GeoLink.geometricLemma"
+    },
+    "zelevinsky_polynomial_ring_of_literature": {
+      "line": 303,
+      "calls": [
+        "grothendieck_ring_polynomial_of_literature",
+        "segment_representation_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Prw.bernsteinZelevinskyFiniteness_holds",
+        "PositivityTheory.Prw.zelevinskyPolynomialRing_of"
+      ]
+    },
+    "grothendieck_ring_polynomial_of_literature": {
+      "line": 299,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Groth.grothendieckRingPolynomial_of_seg",
+        "PositivityTheory.RgGu.segmentRepresentation"
+      ]
+    },
+    "segment_representation_of_literature": {
+      "line": 301,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.RgGu.segmentRepresentation"
+      ],
+      "direct_alias": "PositivityTheory.RgGu.segmentRepresentation"
+    },
+    "global_artin_reciprocity_of_literature": {
+      "line": 243,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.globalArtinReciprocity_holds"
+      ],
+      "direct_alias": "GlobalTheory.globalArtinReciprocity_holds"
+    },
+    "langlands_exhaustion_gl_of_literature": {
+      "line": 307,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Exh.langlandsExhaustionGL_of_seg",
+        "PositivityTheory.RgGu.segmentRepresentation"
+      ]
+    },
+    "langlands_multisegments_of_literature": {
+      "line": 309,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Exh.langlandsMultisegments_of_seg",
+        "PositivityTheory.RgGu.segmentRepresentation"
+      ]
+    },
+    "local_converse_gl_of_literature": {
+      "line": 281,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "DiscreteGroups.sglob"
+      ]
+    },
+    "local_langlands_recT_exists_of_literature": {
+      "line": 283,
+      "calls": [],
+      "fields": [
+        "localLanglandsExists"
+      ],
+      "transitive_fields": [
+        "localLanglandsExists"
+      ],
+      "written_qualified_references": []
+    },
+    "standard_cosocle_gl_of_literature": {
+      "line": 311,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Exh.standardCosocleGL_of_seg",
+        "PositivityTheory.RgGu.segmentRepresentation"
+      ]
+    },
+    "nef_rr_of_literature": {
+      "line": 551,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Tls2.Nef.nefRR"
+      ],
+      "direct_alias": "PositivityTheory.Tls2.Nef.nefRR"
+    },
+    "poincare_lelong_inv_of_literature": {
+      "line": 553,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Tls2.Pl.poincareLelongInv"
+      ],
+      "direct_alias": "PositivityTheory.Tls2.Pl.poincareLelongInv"
+    },
+    "point_separation_pair_of_literature": {
+      "line": 471,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "NadelVanishingSeparation.NSI.pointSeparationPair"
+      ],
+      "direct_alias": "NadelVanishingSeparation.NSI.pointSeparationPair"
+    },
+    "principalisation_char_zero_of_literature": {
+      "line": 555,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.ResPlug.WeightsCompactStabilizer.principalisationCharZero_closed"
+      ],
+      "direct_alias": "PositivityTheory.ResPlug.WeightsCompactStabilizer.principalisationCharZero_closed"
+    },
+    "published_results_arithmetic": {
+      "line": 781,
+      "calls": [
+        "ab_mul_n_st_of_literature",
+        "abelian_de_rham_of_literature",
+        "ar_calc_of_literature",
+        "arith_hilbert_samuel_of_literature",
+        "chow_form_exists_of_literature",
+        "cycle_heights_of_literature",
+        "formal_algebraisation_of_literature",
+        "good_chern_weil_of_literature",
+        "green_series_st_of_literature",
+        "grothendieck_messing_of_literature",
+        "hasse_norm_st_of_literature",
+        "induced_simple_lowest_alcove_of_literature",
+        "kawamata_viehweg_of_literature",
+        "l2_extension_log_canonical_of_literature",
+        "landherr_st_of_literature",
+        "nadel_vanishing_and_non_klt_divisor_of_literature",
+        "nef_numerics_of_literature",
+        "principal_polarisation_one_section_of_literature",
+        "principalisation_of_literature",
+        "prismatic_dieudonne_hodge_of_literature",
+        "ray_class_field_st_of_literature",
+        "semi_abelian_hom_extension_of_literature",
+        "semistable_reduction_st_of_literature",
+        "serre_holomorphic_sections_of_literature",
+        "strong_approx_su_of_literature",
+        "toroidal_compactification_of_literature",
+        "vol_ge_of_literature",
+        "vol_nef_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": []
+    },
+    "ab_mul_n_st_of_literature": {
+      "line": 237,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.abMulN_holds"
+      ],
+      "direct_alias": "GlobalTheory.abMulN_holds"
+    },
+    "ar_calc_of_literature": {
+      "line": 249,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.ArithmeticHeightTower.ArakelovDirectHeights.arCalc_direct",
+        "PositivityTheory.ResPlug.FromRes.resK",
+        "PositivityTheory.Tls2.Pl.poincareLelong"
+      ]
+    },
+    "arith_hilbert_samuel_of_literature": {
+      "line": 255,
+      "calls": [
+        "principalisation_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.arithHilbertSamuel_of_principalisation"
+      ]
+    },
+    "principalisation_of_literature": {
+      "line": 253,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.ResPlug.WeightsCompactStabilizer.principalisation_closed"
+      ],
+      "direct_alias": "PositivityTheory.ResPlug.WeightsCompactStabilizer.principalisation_closed"
+    },
+    "chow_form_exists_of_literature": {
+      "line": 325,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Published.chowFormExists_holds"
+      ],
+      "direct_alias": "GlobalTheory.Published.chowFormExists_holds"
+    },
+    "cycle_heights_of_literature": {
+      "line": 347,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.ArithmeticHeightTower.ArakelovDirectHeights.cycleHeights_direct",
+        "PositivityTheory.ResPlug.FromRes.resK",
+        "PositivityTheory.Tls2.Pl.poincareLelong"
+      ]
+    },
+    "formal_algebraisation_of_literature": {
+      "line": 381,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.FormalThickening.formalAlgebraisation"
+      ],
+      "direct_alias": "PositivityTheory.FormalThickening.formalAlgebraisation"
+    },
+    "good_chern_weil_of_literature": {
+      "line": 395,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.GoodMetric.goodChernWeil"
+      ],
+      "direct_alias": "GlobalTheory.GoodMetric.goodChernWeil"
+    },
+    "green_series_st_of_literature": {
+      "line": 401,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Prw.greenSeriesSt_of",
+        "PositivityTheory.Stage1.PM.greenCuspidal"
+      ]
+    },
+    "grothendieck_messing_of_literature": {
+      "line": 407,
+      "calls": [
+        "grothendieck_deformation_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Published.GrothendieckDeformation.grothendieckMessing"
+      ]
+    },
+    "hasse_norm_st_of_literature": {
+      "line": 417,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.QNorm.hasseNormSt"
+      ],
+      "direct_alias": "GlobalTheory.QNorm.hasseNormSt"
+    },
+    "induced_simple_lowest_alcove_of_literature": {
+      "line": 441,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Alc.inducedSimpleLowestAlcove"
+      ],
+      "direct_alias": "GlobalTheory.Alc.inducedSimpleLowestAlcove"
+    },
+    "kawamata_viehweg_of_literature": {
+      "line": 447,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "And.left",
+        "GlobalTheory.KVFromPair.kawamataViehweg_of_nadelVanishingPair",
+        "GlobalTheory.nefNumerics_outright",
+        "NadelVanishingSeparation.NSI.nadelVanishingAndNonKltDivisor"
+      ]
+    },
+    "l2_extension_log_canonical_of_literature": {
+      "line": 451,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.l2ExtensionLogCanonical'"
+      ],
+      "direct_alias": "GlobalTheory.l2ExtensionLogCanonical'"
+    },
+    "landherr_st_of_literature": {
+      "line": 453,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.QNorm.landherr_and_landherrSt"
+      ]
+    },
+    "nadel_vanishing_and_non_klt_divisor_of_literature": {
+      "line": 467,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "NadelVanishingSeparation.NSI.nadelVanishingAndNonKltDivisor"
+      ],
+      "direct_alias": "NadelVanishingSeparation.NSI.nadelVanishingAndNonKltDivisor"
+    },
+    "nef_numerics_of_literature": {
+      "line": 469,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.nefNumerics_outright"
+      ],
+      "direct_alias": "GlobalTheory.nefNumerics_outright"
+    },
+    "principal_polarisation_one_section_of_literature": {
+      "line": 409,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.AbLaw.principalPolarisation_unique_section"
+      ],
+      "direct_alias": "GlobalTheory.AbLaw.principalPolarisation_unique_section"
+    },
+    "prismatic_dieudonne_hodge_of_literature": {
+      "line": 475,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.Lit.prismaticDieudonneHodge"
+      ],
+      "direct_alias": "UpperTheory.Lit.prismaticDieudonneHodge"
+    },
+    "ray_class_field_st_of_literature": {
+      "line": 489,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.rayClassFieldSt"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.rayClassFieldSt"
+    },
+    "semi_abelian_hom_extension_of_literature": {
+      "line": 497,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.semiAbelianHomExtension_holds"
+      ],
+      "direct_alias": "GlobalTheory.semiAbelianHomExtension_holds"
+    },
+    "semistable_reduction_st_of_literature": {
+      "line": 501,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.SS.semistableReductionSt"
+      ],
+      "direct_alias": "GlobalTheory.SS.semistableReductionSt"
+    },
+    "serre_holomorphic_sections_of_literature": {
+      "line": 503,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Published.serreHolomorphicSections_holds"
+      ],
+      "direct_alias": "GlobalTheory.Published.serreHolomorphicSections_holds"
+    },
+    "strong_approx_su_of_literature": {
+      "line": 517,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.StrongApproxSUProof.strongApproxSU"
+      ],
+      "direct_alias": "GlobalTheory.StrongApproxSUProof.strongApproxSU"
+    },
+    "toroidal_compactification_of_literature": {
+      "line": 521,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.toroidalCompactification_holds"
+      ],
+      "direct_alias": "GlobalTheory.toroidalCompactification_holds"
+    },
+    "vol_ge_of_literature": {
+      "line": 531,
+      "calls": [
+        "ar_calc_of_literature",
+        "arith_hilbert_samuel_of_literature",
+        "nef_numerics_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.VolBr.volGe_of_hilbertSamuel"
+      ]
+    },
+    "vol_nef_of_literature": {
+      "line": 533,
+      "calls": [
+        "arith_hilbert_samuel_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Published.ArithHilbertSamuel.volNef"
+      ]
+    },
+    "published_results_eigen": {
+      "line": 666,
+      "calls": [
+        "automorphic_forms_finite_gl_of_literature",
+        "base_change_definite_unitary_group_of_literature",
+        "bernstein_unitary_product_irreducible_of_literature",
+        "bernstein_zelevinsky_finiteness_of_literature",
+        "bhatt_scholze_crystalline_lattices_of_literature",
+        "carU_above_l_of_literature",
+        "casselman_wallach_of_literature",
+        "cheb_of_literature",
+        "chebotarev_degree_one_of_literature",
+        "clozel_cohomological_of_literature",
+        "cm_curve_good_outside_prime_st_of_literature",
+        "cusp_rapid_decay_of_literature",
+        "cusp_trace_class_of_literature",
+        "cusp_u_of_literature",
+        "de_rham_pot_semistable_of_literature",
+        "depth_zero_jacquet_injective_of_literature",
+        "depth_zero_support_of_literature",
+        "discrete_series_classification_of_literature",
+        "discrete_series_cover_exists_of_literature",
+        "discrete_series_cover_of_literature",
+        "discrete_series_exists_of_literature",
+        "dixmier_malliavin_factorisation_of_literature",
+        "doubling_method",
+        "flath_factorisation_of_literature",
+        "formal_degree_compact_dual_of_literature",
+        "generic_unitary_dual_gl_of_literature",
+        "geometric_restriction_filtration_of_literature",
+        "global_artin_reciprocity_of_literature",
+        "green_cuspidal_of_literature",
+        "green_regular_characters_of_literature",
+        "harish_chandra_analyticity_of_literature",
+        "harish_chandra_finite_of_literature",
+        "harish_chandra_modules_of_literature",
+        "hecke_l_adic_character_above_of_literature",
+        "hecke_l_adic_character_of_literature",
+        "hecke_l_adic_parameter_above_of_literature",
+        "jacquet_shalika_of_literature",
+        "literature_nonexistence",
+        "localEulerChar_alt_alt",
+        "local_finiteness_of_literature",
+        "local_tate_duality_of_literature",
+        "published_results_analytic",
+        "published_results_local",
+        "ray_character_artin_of_literature",
+        "ray_class_field_st_of_literature",
+        "regular_algebraic_purity_of_literature",
+        "schur_orthogonality_square_integrable_of_literature",
+        "siegelWeilU_unitary_convergent_of_literature",
+        "siegel_eisenstein_continuation_of_literature",
+        "siegel_eisenstein_simple_pole",
+        "siegel_weil_unitary_convergent_of_literature",
+        "siegel_weil_unitary_schrodinger_of_literature",
+        "standard_cosocle_gl_of_literature",
+        "strong_approx_su_of_literature",
+        "unlinked_product_irreducible_of_literature",
+        "unramified_doubling_gl_of_literature",
+        "weber_ray_field_st_of_literature",
+        "weil_representation_unitary_pair_of_literature",
+        "weil_siegel_formula_unitary_of_literature",
+        "zelevinsky_polynomial_ring_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [
+        "caraianiLocalGlobalDual",
+        "galoisRepOfPolarizedPairLit",
+        "localLanglandsExists"
+      ],
+      "written_qualified_references": []
+    },
+    "automorphic_forms_finite_gl_of_literature": {
+      "line": 257,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "CuspFormAutomorphicBounds.automorphicFormsFiniteGL"
+      ],
+      "direct_alias": "CuspFormAutomorphicBounds.automorphicFormsFiniteGL"
+    },
+    "base_change_definite_unitary_group_of_literature": {
+      "line": 261,
+      "calls": [
+        "base_change_isobaric"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.BaseChangeIdentities.definiteN_of"
+      ]
+    },
+    "base_change_isobaric": {
+      "line": 259,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.BaseChangeIdentities.baseChangeN"
+      ],
+      "direct_alias": "UpperTheory.BaseChangeIdentities.baseChangeN"
+    },
+    "bernstein_unitary_product_irreducible_of_literature": {
+      "line": 263,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.RgUd.All.bernsteinUnitaryProductIrreducible"
+      ],
+      "direct_alias": "PositivityTheory.RgUd.All.bernsteinUnitaryProductIrreducible"
+    },
+    "bhatt_scholze_crystalline_lattices_of_literature": {
+      "line": 269,
+      "calls": [
+        "bhatt_scholze_integral_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.bhattScholze_coeff"
+      ]
+    },
+    "bhatt_scholze_integral_of_literature": {
+      "line": 267,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.BSP.bhattScholzeIntegral"
+      ],
+      "direct_alias": "GlobalTheory.BSP.bhattScholzeIntegral"
+    },
+    "carU_above_l_of_literature": {
+      "line": 461,
+      "calls": [
+        "automorphic_forms_finite_gl_of_literature",
+        "carU_local_global_of_literature",
+        "local_langlands_gl_recT_exists_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [
+        "caraianiLocalGlobalDual",
+        "localLanglandsExists"
+      ],
+      "written_qualified_references": [
+        "UpperTheory.GalS.carU_of_finite_gl_recT"
+      ]
+    },
+    "carU_local_global_of_literature": {
+      "line": 459,
+      "calls": [
+        "cuspidal_multiplicity_one_of_literature",
+        "jacquet_shalika_rigidity_of_literature"
+      ],
+      "fields": [
+        "caraianiLocalGlobalDual"
+      ],
+      "transitive_fields": [
+        "caraianiLocalGlobalDual"
+      ],
+      "written_qualified_references": [
+        "GlobalTheory.CompanionTheory.CuspFinGL.cuspFormsBoundedGL",
+        "PositivityTheory.PRW.GKD.gelfandKazhdanDual_of_multiplicityOne",
+        "UpperTheory.GalS.ofDual_star_alt"
+      ]
+    },
+    "cuspidal_multiplicity_one_of_literature": {
+      "line": 457,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.jumpWindows"
+      ]
+    },
+    "jacquet_shalika_rigidity_of_literature": {
+      "line": 289,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.AdelicQuotientData.jacquetShalikaRigidity"
+      ],
+      "direct_alias": "PositivityTheory.AdelicQuotientData.jacquetShalikaRigidity"
+    },
+    "casselman_wallach_of_literature": {
+      "line": 321,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.CWB.casselmanWallach"
+      ],
+      "direct_alias": "PositivityTheory.CWB.casselmanWallach"
+    },
+    "cheb_of_literature": {
+      "line": 559,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Published.cheb_holds"
+      ],
+      "direct_alias": "GlobalTheory.Published.cheb_holds"
+    },
+    "chebotarev_degree_one_of_literature": {
+      "line": 323,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Published.chebotarevDegreeOne'"
+      ],
+      "direct_alias": "GlobalTheory.Published.chebotarevDegreeOne'"
+    },
+    "clozel_cohomological_of_literature": {
+      "line": 327,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Rg.Cz.clozelCohomological"
+      ],
+      "direct_alias": "PositivityTheory.Rg.Cz.clozelCohomological"
+    },
+    "cm_curve_good_outside_prime_st_of_literature": {
+      "line": 277,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Published.cmCurveGoodOutsidePrime"
+      ],
+      "direct_alias": "GlobalTheory.Published.cmCurveGoodOutsidePrime"
+    },
+    "cusp_rapid_decay_of_literature": {
+      "line": 339,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.RapidDecay.cuspRapidDecay"
+      ],
+      "direct_alias": "GlobalTheory.RapidDecay.cuspRapidDecay"
+    },
+    "cusp_trace_class_of_literature": {
+      "line": 341,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Prw.cuspTraceClass_of",
+        "PositivityTheory.Prw.dixmierMalliavinFactorisation_holds"
+      ]
+    },
+    "cusp_u_of_literature": {
+      "line": 389,
+      "calls": [
+        "gelfand_kazhdan_dual_of_literature",
+        "pair_u_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [
+        "galoisRepOfPolarizedPairLit",
+        "localLanglandsExists"
+      ],
+      "written_qualified_references": [
+        "UpperTheory.GalS.bridgeStar_alt"
+      ]
+    },
+    "gelfand_kazhdan_dual_of_literature": {
+      "line": 291,
+      "calls": [
+        "cusp_forms_bounded_gl_of_literature",
+        "jacquet_shalika_rigidity_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.JMult1.gelfandKazhdanDual_of_rigidity"
+      ]
+    },
+    "cusp_forms_bounded_gl_of_literature": {
+      "line": 287,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.V.Af.cuspSpectrumGL"
+      ]
+    },
+    "pair_u_of_literature": {
+      "line": 285,
+      "calls": [
+        "local_converse_gl_of_literature",
+        "local_langlands_recT_exists_of_literature"
+      ],
+      "fields": [
+        "galoisRepOfPolarizedPairLit"
+      ],
+      "transitive_fields": [
+        "galoisRepOfPolarizedPairLit",
+        "localLanglandsExists"
+      ],
+      "written_qualified_references": [
+        "PositivityTheory.Exh.langlandsExhaustionGL_of_seg",
+        "PositivityTheory.RgGu.segmentRepresentation",
+        "UpperTheory.GalS.field_of_starFull_alt"
+      ]
+    },
+    "de_rham_pot_semistable_of_literature": {
+      "line": 241,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.deRham_potentiallySemistable"
+      ],
+      "direct_alias": "GlobalTheory.deRham_potentiallySemistable"
+    },
+    "depth_zero_jacquet_injective_of_literature": {
+      "line": 349,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.DepthZeroJac.depthZeroJacquetInjective"
+      ],
+      "direct_alias": "GlobalTheory.DepthZeroJac.depthZeroJacquetInjective"
+    },
+    "depth_zero_support_of_literature": {
+      "line": 351,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.SmGL.depthZeroSupport"
+      ],
+      "direct_alias": "GlobalTheory.SmGL.depthZeroSupport"
+    },
+    "discrete_series_classification_of_literature": {
+      "line": 353,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "CompanionTheory.RgExh.discreteSeriesClassification"
+      ],
+      "direct_alias": "CompanionTheory.RgExh.discreteSeriesClassification"
+    },
+    "discrete_series_cover_exists_of_literature": {
+      "line": 357,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "CompanionTheory.RgDs.B.discreteSeriesCoverExists"
+      ],
+      "direct_alias": "CompanionTheory.RgDs.B.discreteSeriesCoverExists"
+    },
+    "discrete_series_cover_of_literature": {
+      "line": 355,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "CompanionTheory.RgExh.discreteSeriesCover"
+      ],
+      "direct_alias": "CompanionTheory.RgExh.discreteSeriesCover"
+    },
+    "discrete_series_exists_of_literature": {
+      "line": 359,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "CompanionTheory.RgDs.B.discreteSeriesExists"
+      ],
+      "direct_alias": "CompanionTheory.RgDs.B.discreteSeriesExists"
+    },
+    "dixmier_malliavin_factorisation_of_literature": {
+      "line": 367,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.dixmierMalliavinFactorisation_fromLibrary"
+      ],
+      "direct_alias": "GlobalTheory.dixmierMalliavinFactorisation_fromLibrary"
+    },
+    "doubling_method": {
+      "line": 371,
+      "calls": [
+        "cusp_rapid_decay_of_literature",
+        "siegel_eisenstein_continuation_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "ResidueKilled.dm_of_two"
+      ]
+    },
+    "siegel_eisenstein_continuation_of_literature": {
+      "line": 369,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.RgEis.Sp.Hd.siegelEisensteinContinuation"
+      ],
+      "direct_alias": "PositivityTheory.RgEis.Sp.Hd.siegelEisensteinContinuation"
+    },
+    "flath_factorisation_of_literature": {
+      "line": 377,
+      "calls": [
+        "flath_tensor_product_of_literature",
+        "unitary_irreducible_admissible_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Prw.flathFactorisation_of"
+      ]
+    },
+    "flath_tensor_product_of_literature": {
+      "line": 373,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "CompanionTheory.Rg.Fl.B.flathTensorProduct"
+      ],
+      "direct_alias": "CompanionTheory.Rg.Fl.B.flathTensorProduct"
+    },
+    "unitary_irreducible_admissible_of_literature": {
+      "line": 375,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "CompanionTheory.Rg.Fl.B.unitaryIrreducibleAdmissible"
+      ],
+      "direct_alias": "CompanionTheory.Rg.Fl.B.unitaryIrreducibleAdmissible"
+    },
+    "formal_degree_compact_dual_of_literature": {
+      "line": 383,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.RgFd.B.formalDegreeCompactDual"
+      ],
+      "direct_alias": "PositivityTheory.RgFd.B.formalDegreeCompactDual"
+    },
+    "generic_unitary_dual_gl_of_literature": {
+      "line": 391,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Gud.Fin.genericUnitaryDualGL_holds"
+      ],
+      "direct_alias": "PositivityTheory.Gud.Fin.genericUnitaryDualGL_holds"
+    },
+    "geometric_restriction_filtration_of_literature": {
+      "line": 393,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.geometricLemmaFiltration_holds"
+      ],
+      "direct_alias": "GlobalTheory.geometricLemmaFiltration_holds"
+    },
+    "green_cuspidal_of_literature": {
+      "line": 397,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.greenCuspidal"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.greenCuspidal"
+    },
+    "green_regular_characters_of_literature": {
+      "line": 399,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.greenRegularCharacters"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.greenRegularCharacters"
+    },
+    "harish_chandra_analyticity_of_literature": {
+      "line": 411,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.CompanionTheory.Hypotheses\u2082.harishChandra_analyticity_density"
+      ],
+      "direct_alias": "GlobalTheory.CompanionTheory.Hypotheses\u2082.harishChandra_analyticity_density"
+    },
+    "harish_chandra_finite_of_literature": {
+      "line": 413,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.RgHf.harishChandraFinite"
+      ],
+      "direct_alias": "PositivityTheory.RgHf.harishChandraFinite"
+    },
+    "harish_chandra_modules_of_literature": {
+      "line": 415,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.harishChandraModules"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.harishChandraModules"
+    },
+    "hecke_l_adic_character_above_of_literature": {
+      "line": 423,
+      "calls": [
+        "de_rham_pot_semistable_of_literature",
+        "hecke_l_adic_character_crystalline_of_literature",
+        "hecke_l_adic_character_de_rham_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [
+        "localLanglandsExists"
+      ],
+      "written_qualified_references": [
+        "GlobalTheory.HeckeAboveBridge.heckeLAdicCharacterAbove_of_potSemistable"
+      ]
+    },
+    "hecke_l_adic_character_crystalline_of_literature": {
+      "line": 421,
+      "calls": [
+        "algebraic_character_wd_of_literature",
+        "de_rham_pot_semistable_of_literature",
+        "hecke_l_adic_character_de_rham_of_literature",
+        "local_langlands_gl_recT_exists_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [
+        "localLanglandsExists"
+      ],
+      "written_qualified_references": [
+        "UpperTheory.Lit.heckeLAdicCharacterCrystalline_of_deRham"
+      ]
+    },
+    "algebraic_character_wd_of_literature": {
+      "line": 247,
+      "calls": [
+        "de_rham_pot_semistable_of_literature",
+        "global_artin_reciprocity_of_literature",
+        "hecke_l_adic_character_de_rham_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.Lit.CharWD.algebraicCharacterWD"
+      ]
+    },
+    "hecke_l_adic_character_de_rham_of_literature": {
+      "line": 245,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.Lit.heckeLAdicCharacterDeRham"
+      ],
+      "direct_alias": "UpperTheory.Lit.heckeLAdicCharacterDeRham"
+    },
+    "hecke_l_adic_character_of_literature": {
+      "line": 419,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.heckeLAdicCharacter"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.heckeLAdicCharacter"
+    },
+    "hecke_l_adic_parameter_above_of_literature": {
+      "line": 425,
+      "calls": [
+        "algebraic_character_wd_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.heckeLAdicParameterAbove_of_algebraicCharacterWD_alt"
+      ]
+    },
+    "jacquet_shalika_of_literature": {
+      "line": 443,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.AdelicQuotientData.jacquetShalika"
+      ],
+      "direct_alias": "PositivityTheory.AdelicQuotientData.jacquetShalika"
+    },
+    "literature_nonexistence": {
+      "line": 639,
+      "calls": [
+        "heckeTateFunctionalEquation'",
+        "join_out_of_literature",
+        "literature_automorphy",
+        "literature_cohomology",
+        "literature_local"
+      ],
+      "fields": [],
+      "transitive_fields": [
+        "caraianiLocalGlobalDual",
+        "galoisRepOfPolarizedPairLit",
+        "localLanglandsExists"
+      ],
+      "written_qualified_references": []
+    },
+    "heckeTateFunctionalEquation'": {
+      "line": 223,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Top.heckeTateFE"
+      ],
+      "direct_alias": "GlobalTheory.Top.heckeTateFE"
+    },
+    "join_out_of_literature": {
+      "line": 233,
+      "calls": [
+        "ellipticMainTheoremCM'",
+        "heckeTateFunctionalEquation'",
+        "hilbertClassFieldJ'",
+        "partial_zeta_functional_equation_of_literature",
+        "siegel_klingen_deligne_ribet_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.JoinFun.joinOut_of_five"
+      ]
+    },
+    "ellipticMainTheoremCM'": {
+      "line": 221,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Prw.ellipticMainTheoremCM_holds"
+      ],
+      "direct_alias": "PositivityTheory.Prw.ellipticMainTheoremCM_holds"
+    },
+    "hilbertClassFieldJ'": {
+      "line": 225,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Laid.hcfj_holds"
+      ],
+      "direct_alias": "GlobalTheory.Laid.hcfj_holds"
+    },
+    "partial_zeta_functional_equation_of_literature": {
+      "line": 227,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Prw.partialZetaFunctionalEquation_holds"
+      ],
+      "direct_alias": "PositivityTheory.Prw.partialZetaFunctionalEquation_holds"
+    },
+    "siegel_klingen_deligne_ribet_of_literature": {
+      "line": 231,
+      "calls": [
+        "deligne_ribet_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Prw.siegelKlingenDeligneRibet_of",
+        "PositivityTheory.Prw.siegelKlingen_holds"
+      ]
+    },
+    "deligne_ribet_of_literature": {
+      "line": 229,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.PfDR.deligneRibet_holds"
+      ],
+      "direct_alias": "PositivityTheory.PfDR.deligneRibet_holds"
+    },
+    "literature_automorphy": {
+      "line": 609,
+      "calls": [
+        "algebraic_character_wd_of_literature",
+        "automorphic_forms_finite_gl_of_literature",
+        "base_change_isobaric",
+        "clozel_cohomological_of_literature",
+        "clozel_purity_of_literature",
+        "cusp_rapid_decay_of_literature",
+        "cuspidal_spectrum_gl_of_literature",
+        "de_rham_pot_semistable_of_literature",
+        "gelfand_kazhdan_dual_of_literature",
+        "global_artin_reciprocity_of_literature",
+        "harish_chandra_finite_of_literature",
+        "hecke_l_adic_character_above_of_literature",
+        "jacquet_shalika_of_literature",
+        "pair_u_of_literature",
+        "ray_class_field_st_of_literature"
+      ],
+      "fields": [
+        "caraianiLocalGlobalDual"
+      ],
+      "transitive_fields": [
+        "caraianiLocalGlobalDual",
+        "galoisRepOfPolarizedPairLit",
+        "localLanglandsExists"
+      ],
+      "written_qualified_references": []
+    },
+    "clozel_purity_of_literature": {
+      "line": 329,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Lit1.ClozelPurity.clozelPurity"
+      ],
+      "direct_alias": "PositivityTheory.Lit1.ClozelPurity.clozelPurity"
+    },
+    "cuspidal_spectrum_gl_of_literature": {
+      "line": 345,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "RfCs.cuspidalSpectrumGL"
+      ],
+      "direct_alias": "RfCs.cuspidalSpectrumGL"
+    },
+    "literature_cohomology": {
+      "line": 626,
+      "calls": [
+        "bloch_kato_local_of_literature",
+        "global_euler_char_of_literature",
+        "global_finiteness_of_literature",
+        "greenberg_wiles_of_literature",
+        "localEulerChar_alt_alt",
+        "local_euler_char_k_of_literature",
+        "local_finiteness_k_of_literature",
+        "local_finiteness_of_literature",
+        "local_tate_duality_k_of_literature",
+        "local_tate_duality_of_literature",
+        "poitou_tate_normalised_of_literature",
+        "unramified_orthogonality_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": []
+    },
+    "bloch_kato_local_of_literature": {
+      "line": 271,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.Lit.blochKatoLocal"
+      ],
+      "direct_alias": "UpperTheory.Lit.blochKatoLocal"
+    },
+    "global_euler_char_of_literature": {
+      "line": 567,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Lit1.GEN.globalEulerChar_full"
+      ],
+      "direct_alias": "PositivityTheory.Lit1.GEN.globalEulerChar_full"
+    },
+    "global_finiteness_of_literature": {
+      "line": 569,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Lit1.GF.globalFiniteness"
+      ],
+      "direct_alias": "PositivityTheory.Lit1.GF.globalFiniteness"
+    },
+    "greenberg_wiles_of_literature": {
+      "line": 577,
+      "calls": [
+        "global_euler_char_of_literature",
+        "localEulerChar_alt_alt",
+        "local_finiteness_of_literature",
+        "local_tate_duality_of_literature",
+        "poitou_tate_normalised_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.Lit.greenbergWiles"
+      ]
+    },
+    "localEulerChar_alt_alt": {
+      "line": 571,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Laid.loceuler_holds"
+      ],
+      "direct_alias": "GlobalTheory.Laid.loceuler_holds"
+    },
+    "local_finiteness_of_literature": {
+      "line": 573,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Laid.locfin_holds"
+      ],
+      "direct_alias": "GlobalTheory.Laid.locfin_holds"
+    },
+    "local_tate_duality_of_literature": {
+      "line": 575,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.LocalDualityAll.localTateDuality"
+      ],
+      "direct_alias": "GlobalTheory.LocalDualityAll.localTateDuality"
+    },
+    "poitou_tate_normalised_of_literature": {
+      "line": 473,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Lit1.PTN.poitouTateNormalised_holds"
+      ],
+      "direct_alias": "PositivityTheory.Lit1.PTN.poitouTateNormalised_holds"
+    },
+    "local_euler_char_k_of_literature": {
+      "line": 583,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "CompanionTheory.LocalTateOrthogonality.Gcoh.top_euler"
+      ],
+      "direct_alias": "CompanionTheory.LocalTateOrthogonality.Gcoh.top_euler"
+    },
+    "local_finiteness_k_of_literature": {
+      "line": 585,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "CompanionTheory.LocalTateOrthogonality.Gcoh.top_locfin"
+      ],
+      "direct_alias": "CompanionTheory.LocalTateOrthogonality.Gcoh.top_locfin"
+    },
+    "local_tate_duality_k_of_literature": {
+      "line": 587,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "CompanionTheory.LocalTateOrthogonality.Gcoh.top_tate"
+      ],
+      "direct_alias": "CompanionTheory.LocalTateOrthogonality.Gcoh.top_tate"
+    },
+    "unramified_orthogonality_of_literature": {
+      "line": 579,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.unramifiedOrthogonality_holds"
+      ],
+      "direct_alias": "GlobalTheory.unramifiedOrthogonality_holds"
+    },
+    "literature_local": {
+      "line": 589,
+      "calls": [
+        "bernstein_unitary_product_irreducible_of_literature",
+        "bernstein_zelevinsky_finiteness_of_literature",
+        "brauer_degree_zero_of_literature",
+        "chevalley_units_of_literature",
+        "depth_zero_induction_of_literature",
+        "ess_square_integrable_segments_of_literature",
+        "generic_unlinked_gl_of_literature",
+        "geometric_restriction_of_literature",
+        "green_regular_characters_of_literature",
+        "langlands_exhaustion_gl_of_literature",
+        "langlands_multisegments_of_literature",
+        "local_converse_gl_of_literature",
+        "local_langlands_recT_exists_of_literature",
+        "moy_prasad_jacquet_iso_of_literature",
+        "square_integrable_segment_of_literature",
+        "standard_cosocle_gl_of_literature",
+        "tempered_product_of_square_integrable_of_literature",
+        "totally_disjoint_product_irreducible_of_literature",
+        "zelevinsky_polynomial_ring_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [
+        "localLanglandsExists"
+      ],
+      "written_qualified_references": []
+    },
+    "ess_square_integrable_segments_of_literature": {
+      "line": 279,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Exh.essSquareIntegrableSegments_of_seg",
+        "PositivityTheory.RgGu.segmentRepresentation"
+      ]
+    },
+    "generic_unlinked_gl_of_literature": {
+      "line": 293,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.RgGu.genericUnlinkedGL_of_segRep2",
+        "PositivityTheory.RgGu.segmentRepresentation"
+      ]
+    },
+    "moy_prasad_jacquet_iso_of_literature": {
+      "line": 465,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Prw.moyPrasadJacquetIso_holds"
+      ],
+      "direct_alias": "PositivityTheory.Prw.moyPrasadJacquetIso_holds"
+    },
+    "square_integrable_segment_of_literature": {
+      "line": 513,
+      "calls": [
+        "ess_square_integrable_segments_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Prw.squareIntegrableSegment_of"
+      ]
+    },
+    "tempered_product_of_square_integrable_of_literature": {
+      "line": 319,
+      "calls": [
+        "bernstein_zelevinsky_finiteness_of_literature",
+        "ess_square_integrable_segments_of_literature",
+        "geometric_restriction_of_literature",
+        "irreducible_admissible_gl_of_literature",
+        "langlands_exhaustion_gl_of_literature",
+        "langlands_multisegments_of_literature",
+        "standard_cosocle_gl_of_literature",
+        "standard_functors_finite_length_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.Lit.Cas.temperedProduct"
+      ]
+    },
+    "irreducible_admissible_gl_of_literature": {
+      "line": 315,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Tls2.BZGL.irreducibleAdmissibleGL_top"
+      ],
+      "direct_alias": "PositivityTheory.Tls2.BZGL.irreducibleAdmissibleGL_top"
+    },
+    "standard_functors_finite_length_of_literature": {
+      "line": 317,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Tls2.BZGL.standardFunctorsFiniteLength_top"
+      ],
+      "direct_alias": "PositivityTheory.Tls2.BZGL.standardFunctorsFiniteLength_top"
+    },
+    "totally_disjoint_product_irreducible_of_literature": {
+      "line": 525,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.geometricLemma_of_filtration",
+        "PositivityTheory.Geo.geometricLemmaFiltration",
+        "PositivityTheory.Groth.grothendieckRingPolynomial_of_seg",
+        "PositivityTheory.Prw.bernsteinZelevinskyFiniteness_holds",
+        "PositivityTheory.RgGu.segmentRepresentation",
+        "PositivityTheory.SlGl.totallyDisjointProductIrreducible_of_parts"
+      ]
+    },
+    "published_results_analytic": {
+      "line": 645,
+      "calls": [
+        "cusp_trace_class_of_literature",
+        "discrete_series_classification_of_literature",
+        "discrete_series_exists_of_literature",
+        "dixmier_malliavin_factorisation_of_literature",
+        "doubling_method",
+        "flath_factorisation_of_literature",
+        "harish_chandra_analyticity_of_literature",
+        "hecke_l_partial_continuation_of_literature",
+        "ht_card_of_literature",
+        "unramified_doubling_gl_of_literature",
+        "weil_representation_unitary_pair_of_literature",
+        "weil_siegel_formula_unitary_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": []
+    },
+    "hecke_l_partial_continuation_of_literature": {
+      "line": 429,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.heckeLPartialContinuation"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.heckeLPartialContinuation"
+    },
+    "ht_card_of_literature": {
+      "line": 235,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.HtCardProof.htCard"
+      ],
+      "direct_alias": "GlobalTheory.HtCardProof.htCard"
+    },
+    "unramified_doubling_gl_of_literature": {
+      "line": 529,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.UnramDoublingProof.unramifiedDoublingGL"
+      ],
+      "direct_alias": "GlobalTheory.UnramDoublingProof.unramifiedDoublingGL"
+    },
+    "weil_representation_unitary_pair_of_literature": {
+      "line": 539,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.weilRepresentationUnitaryPair"
+      ],
+      "direct_alias": "GlobalTheory.weilRepresentationUnitaryPair"
+    },
+    "weil_siegel_formula_unitary_of_literature": {
+      "line": 541,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.Lit.Sw47.weilUnitary"
+      ],
+      "direct_alias": "UpperTheory.Lit.Sw47.weilUnitary"
+    },
+    "published_results_local": {
+      "line": 658,
+      "calls": [
+        "bhatt_scholze_integral_of_literature",
+        "bloch_kato_local_of_literature",
+        "fontaine_bcris_of_literature",
+        "global_artin_reciprocity_of_literature",
+        "local_euler_char_k_of_literature",
+        "local_finiteness_k_of_literature",
+        "local_tate_duality_k_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": []
+    },
+    "fontaine_bcris_of_literature": {
+      "line": 379,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.MemLoc.fontaineBcris"
+      ],
+      "direct_alias": "GlobalTheory.MemLoc.fontaineBcris"
+    },
+    "ray_character_artin_of_literature": {
+      "line": 487,
+      "calls": [
+        "global_artin_reciprocity_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Published.GlobalArtinReciprocity.rayCharacterArtin"
+      ]
+    },
+    "regular_algebraic_purity_of_literature": {
+      "line": 493,
+      "calls": [
+        "clozel_cohomological_of_literature",
+        "clozel_purity_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.regularAlgebraicPurity_of_clozel"
+      ]
+    },
+    "schur_orthogonality_square_integrable_of_literature": {
+      "line": 495,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.schurOrthogonalitySquareIntegrable"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.schurOrthogonalitySquareIntegrable"
+    },
+    "siegelWeilU_unitary_convergent_of_literature": {
+      "line": 581,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.CompanionTheory.SW.siegelWeilUnitaryConvergent"
+      ],
+      "direct_alias": "GlobalTheory.CompanionTheory.SW.siegelWeilUnitaryConvergent"
+    },
+    "siegel_eisenstein_simple_pole": {
+      "line": 505,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": []
+    },
+    "siegel_weil_unitary_convergent_of_literature": {
+      "line": 481,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.Lit.Sw47.convergent"
+      ],
+      "direct_alias": "UpperTheory.Lit.Sw47.convergent"
+    },
+    "siegel_weil_unitary_schrodinger_of_literature": {
+      "line": 511,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.SiegelWeilCoefficients.field"
+      ],
+      "direct_alias": "PositivityTheory.SiegelWeilCoefficients.field"
+    },
+    "unlinked_product_irreducible_of_literature": {
+      "line": 527,
+      "calls": [
+        "totally_disjoint_product_irreducible_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.TotDisjUnlinked.main"
+      ]
+    },
+    "weber_ray_field_st_of_literature": {
+      "line": 535,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Prw.weberRayFieldSt_holds"
+      ],
+      "direct_alias": "PositivityTheory.Prw.weberRayFieldSt_holds"
+    },
+    "published_results_first": {
+      "line": 727,
+      "calls": [
+        "bernstein_unitary_product_irreducible_of_literature",
+        "bernstein_zelevinsky_finiteness_of_literature",
+        "borel_casselman_of_literature",
+        "casselman_wallach_of_literature",
+        "complex_multiplication_j_st_of_literature",
+        "cusp_bounded_of_literature",
+        "cusp_decay_bound_of_literature",
+        "cusp_decay_sobolev_of_literature",
+        "cusp_rapid_decay_of_literature",
+        "cusp_trace_class_of_literature",
+        "cuspidal_mirabolic_of_literature",
+        "discrete_series_cover_exists_of_literature",
+        "discrete_series_cover_of_literature",
+        "discrete_series_exists_of_literature",
+        "discrete_series_hermitian_unique_of_literature",
+        "discrete_series_lowest_k_type_of_literature",
+        "discrete_series_upq_exists_of_literature",
+        "dixmier_malliavin_factorisation_of_literature",
+        "doubling_method",
+        "flath_factorisation_of_literature",
+        "formal_degree_compact_dual_of_literature",
+        "gk_globalisation_of_literature",
+        "gl_howe_duality_of_literature",
+        "green_series_st_of_literature",
+        "harish_chandra_finite_of_literature",
+        "harish_chandra_modules_of_literature",
+        "hecke_l_entire_and_nonzero_at_one_of_literature",
+        "hecke_l_partial_continuation_of_literature",
+        "hermitian_hasse_principle_of_literature",
+        "hermitian_local_global_of_literature",
+        "holomorphic_discrete_series_of_literature",
+        "howe_duality_real_of_literature",
+        "ideal_invariants_one_orbit_st_of_literature",
+        "k_finite_vectors_unitary_of_literature",
+        "kudla_splitting_split_unitary_of_literature",
+        "linnik_of_literature",
+        "logDerivOne",
+        "metaplectic_representation_of_literature",
+        "quadratic_class_field_theory_of_literature",
+        "radford_shuffle_polynomial_of_literature",
+        "rallis_inner_product_convergent_of_literature",
+        "real_metaplectic_representation_of_literature",
+        "schur_orthogonality_square_integrable_of_literature",
+        "siegel_set_unitary_of_literature",
+        "stone_von_neumann_of_literature",
+        "strong_approx_su_of_literature",
+        "theta_rational_invariance_of_literature",
+        "unramified_doubling_gl_of_literature",
+        "weil_representation_exists_of_literature",
+        "weil_representation_unitary_pair_of_literature",
+        "weil_siegel_formula_unitary_of_literature",
+        "weyl_branching_of_literature",
+        "zelevinsky_polynomial_ring_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": []
+    },
+    "borel_casselman_of_literature": {
+      "line": 273,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.borelCasselman"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.borelCasselman"
+    },
+    "complex_multiplication_j_st_of_literature": {
+      "line": 331,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.CompanionTheory.Published.complexMultiplicationJ"
+      ],
+      "direct_alias": "GlobalTheory.CompanionTheory.Published.complexMultiplicationJ"
+    },
+    "cusp_bounded_of_literature": {
+      "line": 333,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.cuspBounded"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.cuspBounded"
+    },
+    "cusp_decay_bound_of_literature": {
+      "line": 335,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.CuspGeo.cuspDecayBound"
+      ],
+      "direct_alias": "GlobalTheory.CuspGeo.cuspDecayBound"
+    },
+    "cusp_decay_sobolev_of_literature": {
+      "line": 337,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.cuspDecaySobolev"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.cuspDecaySobolev"
+    },
+    "cuspidal_mirabolic_of_literature": {
+      "line": 343,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.cuspidalMirabolic_holds"
+      ],
+      "direct_alias": "GlobalTheory.cuspidalMirabolic_holds"
+    },
+    "discrete_series_hermitian_unique_of_literature": {
+      "line": 361,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Prw.discreteSeriesHermitianUnique_holds"
+      ],
+      "direct_alias": "PositivityTheory.Prw.discreteSeriesHermitianUnique_holds"
+    },
+    "discrete_series_lowest_k_type_of_literature": {
+      "line": 363,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Prw.discreteSeriesLowestKType_holds"
+      ],
+      "direct_alias": "PositivityTheory.Prw.discreteSeriesLowestKType_holds"
+    },
+    "discrete_series_upq_exists_of_literature": {
+      "line": 365,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "CompanionTheory.RgDs.B.discreteSeriesUpqExists"
+      ],
+      "direct_alias": "CompanionTheory.RgDs.B.discreteSeriesUpqExists"
+    },
+    "gk_globalisation_of_literature": {
+      "line": 385,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.gkGlobalisation_holds"
+      ],
+      "direct_alias": "GlobalTheory.gkGlobalisation_holds"
+    },
+    "gl_howe_duality_of_literature": {
+      "line": 387,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.gLHoweDuality"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.gLHoweDuality"
+    },
+    "hecke_l_entire_and_nonzero_at_one_of_literature": {
+      "line": 427,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.heckeLEntireAndNonzeroAtOne"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.heckeLEntireAndNonzeroAtOne"
+    },
+    "hermitian_hasse_principle_of_literature": {
+      "line": 431,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.hermitianHassePrinciple"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.hermitianHassePrinciple"
+    },
+    "hermitian_local_global_of_literature": {
+      "line": 433,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.hermitianLocalGlobal"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.hermitianLocalGlobal"
+    },
+    "holomorphic_discrete_series_of_literature": {
+      "line": 435,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.HolDS.holomorphicDiscreteSeries_holds"
+      ],
+      "direct_alias": "GlobalTheory.HolDS.holomorphicDiscreteSeries_holds"
+    },
+    "howe_duality_real_of_literature": {
+      "line": 437,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.howeDualityReal_holds"
+      ],
+      "direct_alias": "GlobalTheory.howeDualityReal_holds"
+    },
+    "ideal_invariants_one_orbit_st_of_literature": {
+      "line": 439,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Prw.idealInvariantsOneOrbitSt_holds"
+      ],
+      "direct_alias": "PositivityTheory.Prw.idealInvariantsOneOrbitSt_holds"
+    },
+    "k_finite_vectors_unitary_of_literature": {
+      "line": 445,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.KFinLinkPort.kFiniteVectors_irreducibleUnitary_unitaryGroupPQ"
+      ],
+      "direct_alias": "GlobalTheory.KFinLinkPort.kFiniteVectors_irreducibleUnitary_unitaryGroupPQ"
+    },
+    "kudla_splitting_split_unitary_of_literature": {
+      "line": 449,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.kudlaSplittingSplitUnitary"
+      ],
+      "direct_alias": "GlobalTheory.kudlaSplittingSplitUnitary"
+    },
+    "linnik_of_literature": {
+      "line": 455,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.Lit.linnik"
+      ],
+      "direct_alias": "UpperTheory.Lit.linnik"
+    },
+    "logDerivOne": {
+      "line": 219,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.LogDerOneProof.logDerOne_holds"
+      ],
+      "direct_alias": "GlobalTheory.LogDerOneProof.logDerOne_holds"
+    },
+    "metaplectic_representation_of_literature": {
+      "line": 463,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.metaplecticRepresentation_holds"
+      ],
+      "direct_alias": "GlobalTheory.metaplecticRepresentation_holds"
+    },
+    "quadratic_class_field_theory_of_literature": {
+      "line": 477,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.quadraticClassFieldTheory"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.quadraticClassFieldTheory"
+    },
+    "radford_shuffle_polynomial_of_literature": {
+      "line": 479,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.radfordShufflePolynomial"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.radfordShufflePolynomial"
+    },
+    "rallis_inner_product_convergent_of_literature": {
+      "line": 485,
+      "calls": [
+        "doubling_method",
+        "siegel_weil_unitary_convergent_of_literature",
+        "weil_theta_convergence_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.Lit.Rallis.RallisIPProof.rallis_of_dm"
+      ]
+    },
+    "weil_theta_convergence_of_literature": {
+      "line": 483,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.Lit.weilThetaConvergence"
+      ],
+      "direct_alias": "UpperTheory.Lit.weilThetaConvergence"
+    },
+    "real_metaplectic_representation_of_literature": {
+      "line": 491,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.realMetaplecticRepresentation"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.realMetaplecticRepresentation"
+    },
+    "siegel_set_unitary_of_literature": {
+      "line": 507,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.Lit.siegelSetUnitary_of_core"
+      ],
+      "direct_alias": "UpperTheory.Lit.siegelSetUnitary_of_core"
+    },
+    "stone_von_neumann_of_literature": {
+      "line": 515,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.stoneVonNeumann"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.stoneVonNeumann"
+    },
+    "theta_rational_invariance_of_literature": {
+      "line": 519,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.thetaRationalInvariance"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.thetaRationalInvariance"
+    },
+    "weil_representation_exists_of_literature": {
+      "line": 537,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "UpperTheory.Lit.weilRepresentationExists_pair"
+      ],
+      "direct_alias": "UpperTheory.Lit.weilRepresentationExists_pair"
+    },
+    "weyl_branching_of_literature": {
+      "line": 543,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Stage1.PM.weylBranching"
+      ],
+      "direct_alias": "PositivityTheory.Stage1.PM.weylBranching"
+    },
+    "resolution_char_zero_of_literature": {
+      "line": 557,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.Resplug.ResolutionBlowup.resolutionCharZero"
+      ],
+      "direct_alias": "PositivityTheory.Resplug.ResolutionBlowup.resolutionCharZero"
+    },
+    "semi_abelian_lie_seminegative_of_literature": {
+      "line": 499,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.Nef.semiAbelianLieSeminegative"
+      ],
+      "direct_alias": "GlobalTheory.Nef.semiAbelianLieSeminegative"
+    },
+    "siegel_toroidal_integral_of_literature": {
+      "line": 509,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.siegelToroidalIntegral_holds"
+      ],
+      "direct_alias": "GlobalTheory.siegelToroidalIntegral_holds"
+    },
+    "theta_integrals_agree_and_local_matching_of_literature": {
+      "line": 565,
+      "calls": [
+        "eis_bl_of_literature",
+        "siegel_weil_std_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.ThKR.theoremK_head2"
+      ]
+    },
+    "eis_bl_of_literature": {
+      "line": 561,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.RgEis.Hd.eisBL"
+      ],
+      "direct_alias": "PositivityTheory.RgEis.Hd.eisBL"
+    },
+    "siegel_weil_std_of_literature": {
+      "line": 563,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.SiegelWeilFormula.Fin.siegelWeilStd"
+      ],
+      "direct_alias": "PositivityTheory.SiegelWeilFormula.Fin.siegelWeilStd"
+    },
+    "toroidal_for_fan_ks_of_literature": {
+      "line": 523,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.TorKSField.toroidalForFanKS"
+      ],
+      "direct_alias": "GlobalTheory.TorKSField.toroidalForFanKS"
+    },
+    "zarhin_statement": {
+      "line": 547,
+      "calls": [
+        "dual_abelian_scheme_of_literature"
+      ],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "PositivityTheory.HtPt.Narrow.zarhin"
+      ]
+    },
+    "dual_abelian_scheme_of_literature": {
+      "line": 545,
+      "calls": [],
+      "fields": [],
+      "transitive_fields": [],
+      "written_qualified_references": [
+        "GlobalTheory.dualAbelianScheme"
+      ],
+      "direct_alias": "GlobalTheory.dualAbelianScheme"
+    }
+  },
+  "reference_scope": "Qualified identifiers written in declaration bodies, excluding same-package calls tracked separately. Textual index only."
+}

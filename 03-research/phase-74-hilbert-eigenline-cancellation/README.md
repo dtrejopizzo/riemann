@@ -56,10 +56,10 @@ continues `SQB => CB => RNS => MC-NZ => NZ-MSD => scalar WRL => Omega7`. Since O
 statement `lambda_n >= 0`, which is equivalent to RH, `HPR-DIV` is the single remaining load-bearing
 inequality of the program.
 
-## Why a new phase (personal note - David)
+## Why a new phase (personal note)
 
 > **Personal note.** From here on, whenever a phase reaches roughly 100-150 documents, or whenever
-> something genuinely warrants starting fresh, we open a new phase. Reading 300 documents inside a
+> something genuinely warrants starting fresh, I open a new phase. Reading 300 documents inside a
 > single phase is too much and one loses focus -- that was the lesson of Phases 72 (396 entries) and
 > 73 (305 entries). Even though it feels like we are in the last phase(s), close to a complete proof,
 > the rule still applies: Phase 74 caps at about E74.150 and continues as Phase 75 if needed.
@@ -394,3 +394,61 @@ E74.27       Final research ledger.
              theorem-grade autopsy naming EG_LOCK / CCM-ROOT-LOCK as the
              irreducible missing arithmetic identity.
 ```
+
+## Contents
+
+- `E74_001_003_RESULTS.md` — E74.1-E74.3 results
+- `E74_001_003_hilbert_eigenline_probe.py` — script
+- `E74_001_BRIDGE_AND_LEVER_A.md` — E74.1-E74.3 - Bridge identity and Lever A first audit
+- `E74_002_CLOSED_MESH_HILBERT_ACTION.md` — E74.2 - Closed finite-mesh Hilbert action on Cauchy rows
+- `E74_002_RESULTS.md` — E74.2 results
+- `E74_002_closed_mesh_action_probe.py` — script
+- `E74_003_HARMONIC_SYMBOL_NORMAL_FORM.md` — E74.3 - Harmonic-symbol normal form
+- `E74_003_RESULTS.md` — E74.3 results
+- `E74_003_harmonic_symbol_normal_form_probe.py` — script
+- `E74_004_OPERATOR_ROW_EQUIVALENCE.md` — E74.4 - Harmonic row equals the CCM operator row
+- `E74_004_RESULTS.md` — E74.4 results
+- `E74_004_harmonic_row_vs_operator_probe.py` — script
+- `E74_005_RESULTS.md` — E74.5 results
+- `E74_005_SCHUR_BRANCH_FORMULA.md` — E74.5 - Exact 2x2 Schur branch formula
+- `E74_005_schur_branch_formula_probe.py` — script
+- `E74_006_BRANCH_NO_GO_AND_CELL_TARGET.md` — E74.6 - Branch no-go and return to the cell target
+- `E74_007_CELL_DIVISIBILITY_PROBE.md` — E74.7 - Cell divisibility probe target
+- `E74_007_RESULTS.md` — E74.7 results
+- `E74_007_cell_divisibility_probe.py` — script
+- `E74_008_EIGENLINE_SPECIFIC_CANCELLATION.md` — E74.8 - Eigenline-specific Gamma-prime cancellation
+- `E74_008_RESULTS.md` — E74.8 results
+- `E74_008_eigenline_specific_cancellation_probe.py` — script
+- `E74_009_HARMONIC_COBORDER_AUDIT.md` — E74.9 - Harmonic left-coborder audit
+- `E74_009_RESULTS.md` — E74.9 results - harmonic left-coborder audit
+- `E74_009_harmonic_coborder_probe.py` — script
+- `E74_010_CLOSURE_LEDGER.md` — E74.10 - Residual-slot closure ledger for Omega7
+- `E74_011_ALGEBRAIC_QUOTIENT_BRIDGE.md` — E74.11 - Algebraic quotient bridge
+- `E74_011_RESULTS.md` — E74.11 results - algebraic quotient bridge
+- `E74_011_algebraic_quotient_bridge_probe.py` — script
+- `E74_012_NAMED_RESIDUAL_FORMULA.md` — E74.12 - Named residual formula after the quotient bridge
+- `E74_013_RESIDUAL_PAIRING_ESTIMATE.md` — E74.13 - Residual pairing estimate target
+- `E74_014_CERTIFICATION_AND_FALSIFIERS.md` — E74.14 - Certification and falsifiers
+- `E74_014_certification_falsifiers.py` — script
+- `E74_015_ASSEMBLY.md` — E74.15 - Conditional assembly and candid endpoint
+- `E74_016_PRECISION_FLOOR_AUDIT.md` — E74.16 - Precision-floor audit
+- `E74_016_precision_floor_probe.py` — script
+- `E74_017_SCHUR_TRANSFER_NO_GO.md` — E74.17 - Exact Schur-transfer identity and quotient no-go
+- `E74_017_schur_transfer_probe.py` — script
+- `E74_018_TRANSFER_INVARIANTS.md` — E74.18 - Schur-transfer invariants and compression criterion
+- `E74_018_transfer_invariants_probe.py` — script
+- `E74_019_TRUNCATION_COMPRESSION_AUDIT.md` — E74.19 - Truncation and compression audit
+- `E74_019_truncation_compression_probe.py` — script
+- `E74_020_FESHBACH_BLOCK_EQUATION.md` — E74.20 - Exact Feshbach block equation and bootstrap target
+- `E74_020_feshbach_block_probe.py` — script
+- `E74_021_CAUCHY_JET_NO_GO.md` — E74.21 - Cauchy-jet no-go and critical numerator endpoint
+- `E74_021_cauchy_jet_bootstrap_probe.py` — script
+- `E74_022_ROOT_TRANSPORT_IDENTITY.md` — E74.22 - Critical root transport identity
+- `E74_022_root_transport_probe.py` — script
+- `E74_023_PLANTED_NODAL_FALSIFIER.md` — E74.23 - Planted off-line nodal falsifier
+- `E74_023_planted_nodal_falsifier.py` — script
+- `E74_024_ENDPOINT_AUTOPSY.md` — E74.24 - Endpoint autopsy after the Schur and nodal audits
+- `E74_025_EULER_GAMMA_ERROR_AUDIT.md` — E74.25 - Euler/Gamma error-formula audit
+- `E74_026_DAVENPORT_HEILBRONN_FALSIFIER.md` — E74.26 - Davenport--Heilbronn nodal falsifier
+- `E74_026_davenport_heilbronn_nodal_falsifier.py` — script
+- `E74_027_FINAL_RESEARCH_LEDGER.md` — E74.27 - Final research ledger after E74.17

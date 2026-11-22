@@ -9,7 +9,7 @@ This order is kept even if further candidates appear. The selected
 anticoncentration proofs of Dubon and the lifting and boundary-repair steps of
 Freedman were reviewed. Scope and results are in
 [R170_804](../../03-research/phase-170-global-prime-inequality/R170_804_LITERATURE_TRANSFER_REVIEW.md).
-No full audit of these two manuscripts has been completed.
+Neither manuscript has been checked in full.
 
 ## Coverage and traceability
 
@@ -31,7 +31,7 @@ identifier, title and listing month of each entry. A broad title filter produced
 330 candidates (`title-shortlist.json`). 27 abstracts chosen for relevance were
 read and are kept with their pages in `abstract-screening.json` and `*-abs.html`.
 Introductions and statements of some candidates were also consulted. The 2278
-papers were not all read, nor was every proof audited. The filter may miss
+papers were not all read, nor was every proof checked. The filter may miss
 relevant titles; it does not systematically cover recent revisions of older
 preprints.
 
@@ -65,7 +65,7 @@ uniformity the text leaves open.
 | Medium, inverse structure | [Dong–Wang–Wang–Zhang, 2608.31060](https://arxiv.org/abs/2608.31060) | Large values of sums of n^{it} force nearby zeros. A different direction from the required one-sided bound; examine a possible incompatibility with minimality, do not assume it. |
 | Medium, tools | [Ramaré, 2609.25879](https://arxiv.org/abs/2609.25879) and [2609.25885](https://arxiv.org/abs/2609.25885) | Parseval, regularity and weighted sieve. Smaller loss in inequalities, but control of the selected witness is missing. |
 | Already incorporated | [Groskin, 2607.02828](https://arxiv.org/abs/2607.02828) and [Zhu, 2608.24827](https://arxiv.org/abs/2608.24827) | Paper 46 already cites and discusses them. Not to be counted as new. Revisions/certificates may help implementation. |
-| Separate audit | [Desogus, 2609.20367](https://arxiv.org/abs/2609.20367) | The manuscript claims RH via Schur induction with inherited response and polar debit. Not validated here. Audit the conservation of budgets before the common infimum and the induction, without adopting its conclusion. |
+| Separate check | [Desogus, 2609.20367](https://arxiv.org/abs/2609.20367) | The manuscript claims RH via Schur induction with inherited response and polar debit. Not validated here. Check the conservation of budgets before the common infimum and the induction, without adopting its conclusion. |
 
 The Carleson candidate is a math.CA cross-list in math.NT: it is kept because the
 search includes cross-listed categories, not only the primary one.

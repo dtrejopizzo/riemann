@@ -1,6 +1,8 @@
 # Option (b), the fork decided numerically: the negative index is not finite-rank-capturable
 
-**Auditor build · 2026-06-05.** `phase-14-off-diagonal-anchor-asymmetry/experiments/a_tail_relative_form_bound.py`. The Pontryagin route reduced
+**Date:** 2026-06-05 · **Status:** fork decided against a finite-rank head; the remaining sub-fork was decided in plan 16.
+
+**Purpose.** Experiment: `phase-14-off-diagonal-anchor-asymmetry/experiments/a_tail_relative_form_bound.py`. The Pontryagin route reduced
 RH-adjacency to one inequality: **(RFB$_X$)** — is the prime tail $\mathfrak p_{>X}$ relatively form-bounded by the
 archimedean form with constant $<1$ for some *fixed* cutoff $X$? If yes, $\kappa<\infty$ (finitely many off-line
 zeros). The relevant one-sided quantity (the one that controls *negative squares* of $\mathfrak t=\mathfrak a-

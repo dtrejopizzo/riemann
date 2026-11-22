@@ -89,7 +89,7 @@ gives exactly P123.032 equation (2.3). This explicitly checks the
 half-density change of test convention on the radial sector. It does
 not import a ramified character theorem or a common-carrier realization.
 
-Primary source: [Meyer, corrected source](../../00-references/papers-nuevos/C/arXiv-math0412277v3),
+Primary source: [Meyer, corrected source](../../00-references/papers-nuevos/foliated-dynamics/arXiv-math0412277v3),
 introductory equations eq:Wp and eq:Winfty; see also
 [Meyer, arXiv version 3](https://arxiv.org/abs/math/0412277v3).
 

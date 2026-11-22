@@ -155,3 +155,7 @@ object, constructed before the sign comparison, whose independently proved
 structural theorem implies the row-(d) inequality.
 
 Until that theorem is proved, the notation `D_candidate` is mandatory.
+
+## Other files in this folder
+
+- `scripts/` — supporting scripts (2 files).

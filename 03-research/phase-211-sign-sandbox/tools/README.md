@@ -73,3 +73,16 @@ with Bernstein-ellipse remainders, spherical Bessel by ball recurrence at adapti
 already saved). cert.py G.pkl par k1 mu[,mu…]: Householder + Haynsworth + Gershgorin-on-XSXᵀ positive-definiteness
 certificate (prints "certified": true/false). inertia_mid.py: NUMERICAL inertia of the midpoint Schur complement.
 Validated: reproduces thm:log5A (2.5e-12 even / 3.0e-10 odd). Timings: T = 1 build 5 × 40 min, certificate 2–20 min.
+
+## Further series in this folder
+
+- `band*` series (6 further scripts, `band_cand.py` … `band_screen.py`).
+- `power*` series (109 further files, `power_arch_cell_026_verify.py` … `power_zero_fourteen_endpoint_053_verify.py`).
+- `prolate*` series (11 further scripts, `prolate_anal.py` … `prolate_selfdual_schur.py`).
+- `align21/` — subfolder (16 files).
+- `coprime_pair/` — subfolder (1 file).
+- `first_cell/` — subfolder (6 files).
+- `multi_cell/` — subfolder (24 files).
+- `rstation45_reproduction/` — subfolder (26 files).
+- `strip22/` — subfolder (27 files).
+- `*.py` (17 files, e.g. `A_tau_lmax.py`) — scripts.

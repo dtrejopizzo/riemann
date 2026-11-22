@@ -102,7 +102,7 @@ And the defining property (Krein–Langer): \(g\) is a screw function iff
 
 > **Wei He, *Numerical cohomology for arithmetic surfaces and applications*,
 > arXiv:2512.01811 (Dec 2025).**  Local source in
-> `00-references/papers-nuevos/D/`.
+> `00-references/papers-nuevos/arithmetic-intersection-theory/`.
 
 He constructs **numerical cohomology \(h^0,h^1,h^2\) for arithmetic surfaces**
 and derives an **absolute arithmetic Riemann–Roch formula**.  That is the shape

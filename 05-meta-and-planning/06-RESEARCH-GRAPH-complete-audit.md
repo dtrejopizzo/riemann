@@ -1,6 +1,8 @@
 # Research Graph — complete audit of the Riemann program corpus
 
-**Auditor build · 2026-06-05.** Scope: map only. No proof attempt, no new conjectures, no gap-filling, no
+**Date:** 2026-06-05 · **Status:** completed (map only); the map fed the novel-structure search (plan 07) and the discriminator (plans 08–11).
+
+**Purpose.** Map only. No proof attempt, no new conjectures, no gap-filling, no
 speculation. Sources: `06-papers/` (P1–P14 + 00-INDEX), `phase-4-handoff/proofs/00-PROOF-LOG.md` (Days 0–36),
 `MASTER-CLOSING-the-wall-charted.md`, `00-MAP.md`, `phase-14-off-diagonal-anchor-asymmetry/*` (N7, M14.1–3, N8, BREAK-N8, anchor framework,
 Stages 1–2), Arc-A `eslabones` / `03-arc-A` (P2–P6).

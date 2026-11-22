@@ -82,3 +82,14 @@ lives at the meeting point `Lambda = 0`.
 Carried from Phase 67-69. The dBN framework is real and active (Rodgers-Tao); the NEW work is connecting
 its monotonicity to our terminal defect. No fabricated closure; audit the audits. If the flow gives only
 `Lambda >= 0` again (the known half), say so -- the closure needs the other half (`Lambda <= 0`).
+
+## Other files in this folder
+
+Files not described above:
+
+- `E70_1_RESULTS.md` — E70.1 -- de Bruijn-Newman connection: Omega_7 = (Lambda <= 0), and the direction problem
+- `E70_1_heatflow.py` — E70.1 -- the de Bruijn-Newman heat flow Xi_lambda and zero migration.
+- `E70_1b_heatflow.py` — E70.1b -- de Bruijn-Newman heat flow, with the oscillatory integral resolved and validated.
+- `E70_2_RESULTS.md` — E70.2 -- monotonicity confirms the direction problem (numerically)
+- `E70_2_monotone.py` — E70.2 -- monotonicity of the Nevanlinna positivity under the dBN heat flow (true xi).
+- `dbg.py` — script

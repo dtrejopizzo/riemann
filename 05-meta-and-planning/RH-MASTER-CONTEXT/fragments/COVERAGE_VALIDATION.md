@@ -15,7 +15,7 @@ Documentary coverage is complete for the three declared scopes. No broken links,
 
 The 42 local Markdown links resolve. The eight reading-order documents, the textual scope references, and the index map exist.
 
-Excluding this report to avoid circularity, the other nineteen Markdown files contain 45,101 words, 320,961 Unicode characters, and 326,879 bytes. The mechanical bound of one token per byte comes to 326,879 tokens. Including this report, the dossier keeps twenty Markdown files, fewer than 50,000 words, and fewer than 350,000 bytes, within the declared limit.
+Excluding this report to avoid circularity, the other nineteen Markdown files contain 45,101 words, 320,961 Unicode characters, and 326,879 bytes. Including this report, the dossier keeps twenty Markdown files, fewer than 50,000 words, and fewer than 350,000 bytes, within the declared limit.
 
 ## LaTeX balance
 

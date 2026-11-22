@@ -34,3 +34,20 @@ E86.002  crude ceiling autopsy.
 E86.003  variation-weighted return criterion.
 E86.004  first complementary mode and lower-variation tail.
 ```
+
+## Outcome
+
+Closed at localization grade; see [`PHASE_86_CLOSURE.md`](PHASE_86_CLOSURE.md) (“variation localization”). No positivity statement toward Ω7 is proved here; the phase is an exact reduction.
+Open items carried forward: FM-E and FM-O; the two d_2 tail estimates; a cofinal rank schedule preserving the projective limit; the outer arithmetic anchor and Omega7.
+
+## Contents
+
+- `E86_001_FINITE_ABEL_IDENTITY.md` — E86.001 - Exact finite spectral Abel identity
+- `E86_002_CEILING_AUTOPSY.md` — E86.002 - Autopsy of the crude cumulative ceiling
+- `E86_003_VARIATION_WEIGHTED_RETURN.md` — E86.003 - Variation-weighted return criterion
+- `E86_004_FIRST_MODE_LOCALIZATION.md` — E86.004 - First complementary mode localization
+- `PHASE_86_CLOSURE.md` — Phase 86 closure - variation localization
+
+## Relation to other phases
+
+Continues [`phase-85-parity-weyl-defect`](../phase-85-parity-weyl-defect/); its open target passes to [`phase-87-euler-deformation-discriminant`](../phase-87-euler-deformation-discriminant/). The chain of phases 80–101 is the finite real-rooted CCM route to Ω7 (the Li–Keiper positivity statement), opened in phases 71–79.

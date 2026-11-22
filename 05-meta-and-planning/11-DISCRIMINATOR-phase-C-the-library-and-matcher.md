@@ -1,6 +1,8 @@
 # Phase C — the library of admissible constraint-theorems, the matcher, and the systematic blocker map
 
-**Auditor build · 2026-06-05.** Phase B made I2b checkable but expert-bound: it needs (1) a finite **library** of
+**Date:** 2026-06-05 · **Status:** completed; the empty third bin (new theorem required) was taken up in plans 12–13.
+
+**Purpose.** Phase B made I2b checkable but expert-bound: it needs (1) a finite **library** of
 admissible general theorems $T$ (the only ones that have ever *forced* eigenvalues/zeros to a locus), and (2) a
 **matcher** protocol. Phase C builds both and *runs* the matcher over the library against $\zeta$, producing the
 complete table: *for each general positivity theorem, the precise structure that would let it apply to $\zeta$,

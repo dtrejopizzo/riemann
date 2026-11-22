@@ -79,7 +79,7 @@ to be supplied by arithmetic.
 
 Connes–Consani–Moscovici, arXiv:2310.18423v2, *"Zeta zeros and prolate wave
 operators — semilocal adelic operators"* (Oct 2023, v2 May 2024).  Local copy
-`00-references/papers-ref-2/arXiv-2310.18423v2/`.
+`00-references/prolate-and-zeta-cycles/arXiv-2310.18423v2/`.
 
 * **Theorem 4.6.**  For \(S\ni\infty\) finite and \(\lambda>0\), the map
   \(\theta_S\) is a Hilbertian isomorphism of Sonin spaces
@@ -135,5 +135,5 @@ supplying what none of them supplies.
 
 2008.10974 (Quasi-inner functions), 2206.03682 and 2308.11860 (Suzuki),
 2607.02828 and 2605.20224 (Groskin).  Already local:
-`papers-nuevos/extension-clase-test/` holds 2006.13771, 2310.18423, 2511.22755,
+`papers-nuevos/weil-form-and-explicit-formula/` holds 2006.13771, 2310.18423, 2511.22755,
 2606.09096; `papers-ref-phase-60/` holds 2602.04022, 2511.23257, 2511.22755.

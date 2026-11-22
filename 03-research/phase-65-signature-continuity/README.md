@@ -115,7 +115,7 @@ The decisive burden is **D8+D9**: `Short_{H_P} K_{A_P} → K_Ξ^{G5}`.
   pole-relative self-adjoint completion, (5) verdict on whether any is genuinely weaker than RH.
 
 - **[PHASE65-CONSOLIDATED-FOR-CONNES.md](PHASE65-CONSOLIDATED-FOR-CONNES.md)** — **single-file delivery**
-  of the whole package (D0–D12 + Stage 1, ~2.3k lines), corrections doc up front, for fast reading/handoff.
+  of the whole package (D0–D12 + Stage 1, ~2.3k lines), corrections doc up front, for fast reading.
 - **[CORRECTIONS-CONNES-R1.md](CORRECTIONS-CONNES-R1.md)** — **Connes round-1 review, accepted in full.**
   Major: no sourced Euler product (det doesn't factor) → **D8.5′** = Green-matrix convergence `G_P^∘→G_Ξ^{G5}`,
   split **D8.5a** (benign marked Tate/Binet) vs **D8.5b** (endpoint id — RH-strength). Retracts my
@@ -163,3 +163,9 @@ This phase consolidates and continues the Connes-route arc of
 [../phase-64-connes-route/](../phase-64-connes-route/), whose [THE-TARGET.md](../phase-64-connes-route/THE-TARGET.md)
 isolated this object. All prior development notes (the canonical system, the Gram positivity, the
 faces of the wall, the audits) live there.
+
+## Other files in this folder
+
+Files not described above:
+
+- `CORRECTIONS-CONNES-R3.md` — CORRECTIONS — Connes/Consani audit, round R3 (the log-derivative closure)

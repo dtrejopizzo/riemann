@@ -119,6 +119,81 @@ Together, these results demonstrate that H0 persistence on (Re, Im) zero clouds 
 - Demonstrated that H0 topological persistence is only quadratically sensitive to real-part zero displacements (δ² scaling, confirmed via both bottleneck and Wasserstein distances), and empirically fails to flag the Davenport-Heilbronn function as an outlier at matched sample size — closing this specific TDA approach as an RH-relevant route and redirecting attention toward the more sensitive Weil-form detector.
 - Updated the cross-program Bottleneck Ledger with quantified gaps (explicit-formula truncation bound; ω-class asymptotic connection to Keating-Snaith) as the concrete next steps toward proof-relevant statements.
 
-## Files
+## Connection to later work
 
-Each subfolder is a single task from the underlying investigation, covering the localized Weil quadratic form detector and basis-geometry sweeps (Front A), the ω-class moment decomposition study (Front B), and the H0 topological persistence confirmation/limitation analysis (Front C) described above.
+The missing uniform-in-basis truncation lemma identified here is the central question of RH2023; the closing of the H0 persistence approach concentrated later work on the Weil-form detector.
+
+## Structure of the folder
+
+The program is divided into 68 numbered phases, one subfolder `phase-N/` each. A phase folder normally contains `OVERVIEW.md` (the written result of that phase), the executed notebook when one exists (`notebook_executed.ipynb` and/or a notebook with a hexadecimal name) and the input and output files (data arrays, tables, figures). The one-line descriptions below are taken from each phase's `OVERVIEW.md`; where a phase has no written summary this is stated.
+
+| Phase | Content |
+|---|---|
+| [1](phase-1/) | The Davenport–Heilbronn function defined as L_DH(s) = ½(1 − iκ) L(s, χ) + ½(1 + iκ) L(s, χ̄), where χ is the primitive complex Dirichlet character mod 5 with χ(2) = i and κ = … |
+| [2](phase-2/) | A fast PARI/GP-based evaluator for the Davenport–Heilbronn L-function was implemented in ldh_fast_eval.py; it agrees with the verified mpmath baseline to ≥45 decimal places at all … |
+| [3](phase-3/) | For the reconstructed single-zero shifted zeta system at J=12, the Weil-form minimum eigenvalue is strongly non-monotonic in offset and is smallest in magnitude near δ=0, reaches … |
+| [4](phase-4/) | Running generate_ldh_zeros_run.py from the 3,250-zero checkpoint extended the L_DH zero list by 328 zeros to 3,578 (t≈3540.57) — meaningful but partial progress toward the … |
+| [5](phase-5/) | The ANCOVA does not confirm the visual finding from r56: the slope difference between L(Δ) and L_DH in the log M_k vs log log N model is statistically significant (p<0.05) for … |
+| [6](phase-6/) | The Weil form does detect the real Davenport–Heilbronn anomaly near t≈85.7, but in this implementation its minimum eigenvalue does not show the super-polynomial negative growth … |
+| [7](phase-7/) | (No written summary; data files only.) |
+| [8](phase-8/) | The slow growth exponent α≈0.9 observed for the L_DH off-critical anomaly is a geometric signature of projecting a single off-critical zero pair onto the Gaussian-monomial basis … |
+| [9](phase-9/) | Launching generate_ldh_zeros_run.py via subprocess.Popen(..., start_new_session=True) successfully isolates the child process from kernel-cell SIGINTs — the child survived … |
+| [10](phase-10/) | At J=12 with the refined Weil form (N=10⁵), the signal from an artificial off-critical ζ-zero pair exceeds the GRH baseline (5.31×10⁻⁴⁰) by ~39 orders of magnitude for every … |
+| [11](phase-11/) | The H0 bottleneck distance between the persistence diagram of the baseline ζ-zero point cloud P₀ and each deformed cloud P_δ is strictly monotonically increasing in δ over {10⁻³ … |
+| [12](phase-12/) | The iterative resume strategy works correctly and advanced the L_DH zero list from 2,772 → ~3,549 zeros over four supervised runs, but it could not reach the 5,000-zero target … |
+| [13](phase-13/) | The ANCOVA shows highly statistically significant differences (p < 0.05 for all ω-classes k=1..4) in the log M_k vs log log N growth slopes between ζ and L_DH, and — as … |
+| [14](phase-14/) | The 5,000-zero list for the Riemann ζ function was successfully completed and verified, but the L(χ₄ mod 5) list was only partially completed because the supplied "partial" file … |
+| [15](phase-15/) | Increasing the basis dimension J sharply sharpens detection: /λ_min(Q)/ for ζ_δ (δ=0.05 on the first 20 zeros) grows super-polynomially with J — by roughly 13 orders of magnitude … |
+| [16](phase-16/) | The target file ldh_zeros_5000_dps50.npy does not exist; a detached resumable subprocess (PID 235, start_new_session=True, own run id 235 distinct from the kernel run id 20) has … |
+| [17](phase-17/) | The hypothesis is confirmed: a from-scratch cypari2 computation with periodic checkpointing successfully produced a complete, contiguous, strictly monotonic list of the first … |
+| [18](phase-18/) | The ω-class decomposition of the second moment ∑_k ∫₀^500 /S_k(t)/² dt with N_terms=10⁴ exhibits clearly distinct shapes for ζ, L(Δ) (both Euler-product) and L_DH (no Euler … |
+| [19](phase-19/) | The two-parameter model log M_k = log C + a·log log N + b·log log log N fits the ω-class second moments of ζ, L(Δ) and L_DH with R²≈0.999–1.000, and the fitted (a, b) pairs … |
+| [20](phase-20/) | At N=10^6 the ω-class fourth-moment decomposition fractions for ζ, L(Δ), and L_DH continue to drift dramatically rather than converge, decisively confirming that the signature has … |
+| [21](phase-21/) | The from-scratch generation of the first 5,000 L_DH critical-line zeros at 50-dps did NOT complete within the allotted runtime: under the available time budget the script reached … |
+| [22](phase-22/) | The hypothesis is rejected: increasing N from 10⁴ to 5·10⁴ does NOT drive the L(Δ) and L_DH off-diagonal residuals toward zero in a way that approaches zeta's diagonal-dominant … |
+| [23](phase-23/) | The 1-Wasserstein distance W₁ between the H0 persistence diagrams of the baseline ζ-zero point cloud and the deformed clouds P_δ scales quadratically with δ (fitted log–log slope … |
+| [24](phase-24/) | I cannot conclude that the iterative checkpoint-resume procedure successfully completed the first 5,000 critical-line zeros within this run because the available runtime ended … |
+| [25](phase-25/) | I cannot complete the requested computation of the first 5000 Davenport–Heilbronn zeros at mpmath.dps = 50 within the available runtime because the verified but naive … |
+| [26](phase-26/) | (No written summary; data files only.) |
+| [27](phase-27/) | The ω-class moment growth exponents for ζ remain dramatically larger than those for L(Δ) and L_DH when N is extended from 10⁵ to 10⁶, confirming that the (log N)^a signature … |
+| [28](phase-28/) | The two-parameter model M_k(N) = C·(log N)^a·(log log N)^b yields uniformly better R² than the one-parameter (log N)^a model for ζ and produces more stable exponents for the … |
+| [29](phase-29/) | The hypothesis is NOT supported: applying the L_DH geometric parameters (β=0.3085, σ=2.0) to a single-zero asymmetric displacement of the closest ζ zero produces a Weil-form … |
+| [30](phase-30/) | Extending the prime-power sum cutoff from N=1000 to N=100000 dramatically suppresses the absolute baseline of the Weil quadratic form (by 20–27 orders of magnitude at J=12–20) … |
+| [31](phase-31/) | The hypothesis is FALSIFIED: the target file ldh_zeros_5000_dps50.npy does not exist; the detached L_DH zero-generation process stalled shortly after resuming, with its log frozen … |
+| [32](phase-32/) | At fixed basis dimension J=12, the magnitude of the minimum eigenvalue of the Weil quadratic form for the deformed zeta function ζ_δ scales as a power law /λ_min/ ∝ δ^α with the … |
+| [33](phase-33/) | The subprocess.Popen(..., start_new_session=True) launch strategy successfully isolated the generate_ldh_zeros_run.py script from the run kernel and resumed cleanly from the … |
+| [34](phase-34/) | Generating all 5000 non-trivial Riemann ζ zeros to 50 decimal places with mpmath.zetazero is feasible in principle but did NOT complete within a reasonable single-session time … |
+| [35](phase-35/) | The fourth-moment ω-class decomposition reveals a markedly stronger structural split between Euler-product and non-Euler-product L-functions than the second moment: for the same … |
+| [36](phase-36/) | The hypothesis is REFUTED in this phase: the full 6-hour generation of the first 5,000 Davenport–Heilbronn L-function zeros could not be completed because the run's runtime cap is … |
+| [37](phase-37/) | The hypothesis is supported in the signal-only (off-critical pair contribution) sense — α grows monotonically from ≈0 to ≈17.5 as β/σ increases from 0.15 to 2.47, crossing the … |
+| [38](phase-38/) | The hypothesis is not supported by this run: under the available compute budget the script could not complete 5,000 zeros, and an empirical projection from in-run telemetry shows … |
+| [39](phase-39/) | The full Weil quadratic form Q = M_zeros − M_arith yields an enormously negative minimum eigenvalue for L_DH (λ_min ≈ −9.0×10⁴, relative magnitude ≈ 1.7 of trace(M_zeros)) at the … |
+| [40](phase-40/) | The hypothesis was NOT confirmed within the available compute budget: resuming generate_ldh_zeros_run.py from the ldh_ckpt_03250.npy checkpoint produced clean, monotonic progress … |
+| [41](phase-41/) | The hypothesis was NOT confirmed within the available compute budget: iterative execution of generate_ldh_zeros_run.py extended the L_DH zero list but did not reach 5,000 zeros … |
+| [42](phase-42/) | The L(Δ) target was fully achieved (2000 zeros computed to dps=50 in ~7.3 minutes via PARI/GP), but the L(χ₄ mod 5) computation only completed 2660 of the requested 5000 zeros … |
+| [43](phase-43/) | The ω-class second moments M_k(N) for ζ, L(Δ), and L_DH are all well-described in log–log space by a power-of-log model M_k(N) ≈ C_k·(log N)^a, and the fitted exponent a forms a … |
+| [44](phase-44/) | Under the most direct (zero-side Gram-matrix) reading of the Hermite-Gauss Weil quadratic form, the hypothesis is NOT confirmed: all four L-functions yield strictly non-negative … |
+| [45](phase-45/) | The hypothesis is refuted: a single-zero artificial shift of ζ produces growth that is milder than the multi-zero shift but still strongly super-polynomial (power-law α≈14) … |
+| [46](phase-46/) | The hypothesis was not confirmed within the available runtime: the iterative resumption pipeline was set up successfully and is functioning correctly, but only a partial extension … |
+| [47](phase-47/) | Across the tested high-t windows, the ω-class fourth-moment decomposition does not support the hypothesis that the zeta-function off-diagonal residual fraction approaches zero … |
+| [48](phase-48/) | The "arithmetic-side cancellation" hypothesis is refuted: replacing the L_DH-specific arithmetic side with a ζ-style prime-power sum yields eigenvalues numerically identical to … |
+| [49](phase-49/) | The hypothesis is NOT supported: the H0 persistence-diagram bottleneck distances do not separate L_DH from the GRH-conforming functions — in this analysis L_DH is the SECOND-most … |
+| [50](phase-50/) | The simple one-parameter model log M_k = log C + a·log log N yields disjoint 95% CIs for the slope a between L(Δ) and L_DH only for the ω-class k=2 (1 of 4 classes), so the … |
+| [51](phase-51/) | The hypothesis is refuted: centering the Weil basis on the displaced ζ zero γ₂₃ does NOT modestly increase the growth exponent α — instead it collapses /λ_min/ super-exponentially … |
+| [52](phase-52/) | Data preparation: files prepared for analysis (first file `explicit_formula_dirichlet_L.md`). |
+| [53](phase-53/) | The fast L_DH evaluator from ldh_fast_eval.py (PARI/GP lfuninit via cypari2) is fast enough in principle to generate the first 5,000 critical-line zeros of the Davenport–Heilbronn … |
+| [54](phase-54/) | The hypothesis is not supported: ANCOVA found no statistically significant difference in ω-class growth slopes between L(χ₄ mod 5) and L_DH for k = 1, 2, 3, or 4, so the … |
+| [55](phase-55/) | The L_DH zero-generation process was successfully re-launched as a detached background job from the n=3578 checkpoint and is producing new zeros at a steady ~19 zeros/min, with … |
+| [56](phase-56/) | The Hermite-Gauss Weil quadratic form is sensitive to real-part shifts (λ_min decreases monotonically with δ and turns negative near δ≈0.3) but, with the spec parameters (N=800 … |
+| [57](phase-57/) | I cannot fully test the stated cross-L-function hypothesis because I verified and completed the Weil-form computation only for ζ and the shifted positive control ζ_δ, but for … |
+| [58](phase-58/) | Shifting the integration window from [0,500] to [500,1000] dramatically removes the t=0 dominance of the Dirichlet polynomial and reveals very different ω-class decomposition … |
+| [59](phase-59/) | The investigation could not be completed: the N=10⁶ ω-class second moments for ζ, L(Δ), and L_DH were not computed in the available runtime, so the stability of the (log N)^a … |
+| [60](phase-60/) | The hypothesis is partially confirmed: while the overall growth exponent α does not reduce to O(1) across the full range of J due to severe prime-tail truncation noise at high J … |
+| [61](phase-61/) | No primary dataset file exists on disk for this v7 RH project; the nominal "dataset" is a set of four cached L-function zero lists (ζ, L_DH, L(χ₄ mod 5), L(Δ, FROZEN)) that R8 … |
+| [62](phase-62/) | With only three N-values available, every two-parameter trend model (log, log-log, 1/√N, 1/N) can be fit to each L-function, but the resulting parameters do NOT provide a stable … |
+| [63](phase-63/) | The script could not complete generation of 5,000 L_DH zeros within the phase's 3,600-second budget because the previously generated ldh_ckpt_02500.npy checkpoint was not … |
+| [64](phase-64/) | The fractional ω-class second-moment contributions do NOT converge to stable values over N_terms∈{10⁴,5×10⁴,10⁵} for any of the three L-functions (ζ, L(Δ), L_DH); mass … |
+| [65](phase-65/) | The nohup/&/disown detachment strategy did NOT fully insulate generate_ldh_zeros_run.py from the interactive kernel: the script ran for only ~18.3 min (well below the 4000 s … |
+| [66](phase-66/) | The proposed reparameterization log M_k = log C + α·(log log N) + β·(log log log N / log log N) does NOT improve numerical stability over the original (a, b) model on the current … |
+| [67](phase-67/) | Sweeping the Weil quadratic form's centre T₀ and width σ produces a clear sensitivity map: ζ_δ (zeta with its first 20 zeros artificially shifted off the critical line) yields a … |
+| [68](phase-68/) | The Weil quadratic form's signal scales LINEARLY (exponent = 1.000) — not quadratically — with the real-part displacement β when a single existing ζ zero is moved off the critical … |

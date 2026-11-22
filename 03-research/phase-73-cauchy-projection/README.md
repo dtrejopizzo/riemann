@@ -3046,3 +3046,10 @@ sum_j eta_j r_j U^even_j
 
 The probe shows none of the three terms is individually small enough; the
 smallness is the same load-bearing cancellation in a product-rule normal form.
+
+## Contents
+
+The files follow the numbering of the memos; grouped by prefix and type:
+
+- 462 memos with prefix `E73` (e.g. `E73_001_NAT_PROJ_FINITE_IDENTITY.md`, `E73_002_RATIONAL_CAUCHY_PROJECTION_FORMULA.md`, …, `E73_305_RESULTS.md`)
+- 225 scripts with prefix `E73` (e.g. `E73_002_rational_projection_probe.py`, `E73_003_critical_source_probe.py`, …, `E73_305_hilbert_product_rule_probe.py`)

@@ -68,4 +68,4 @@ An earlier closure label is withdrawn if a later document identifies an open hyp
 
 The review determines internal consistency, scope of proofs and duplications within the repository. It does not by itself certify bibliographic priority. Before declaring an idea new, the restart requires a separate search of primary sources and a comparison by statement, hypotheses and mechanism, not by vocabulary.
 
-The dossier is deliberately kept well below one million tokens. The exact measurement and the final inventory are in `COVERAGE_INDEX.md`.
+The dossier is deliberately kept compact (well below one megabyte). The exact measurement and the final inventory are in `COVERAGE_INDEX.md`.

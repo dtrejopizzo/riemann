@@ -49,3 +49,9 @@ Memos: NODE_*.md (track A), RIGID_*.md (track B), AUDIT_206_*.md (audit).
 ## Status after AUDIT_206_001
 - Node PROVED for T ≤ ½log5 (corollary of P46 thm:log5W); OPEN in general. The 2×2 margin at ½log5 is a truncation artifact
   (with 3 modes: 1e−6–1e−7). Resonance of 2: coincidence. N5-uniform withdrawn. No sign step in either track A or B.
+
+## Other files in this folder
+
+- `INTEGRATION_206_ZCERT_001.md` — Integration of rem:zcert into Paper 46 (phase 206).
+- `ZCERT_001.md` — Certificate of the node from the zero side (phase 206).
+- `ZCERT_001_data/` — numerical data for `ZCERT_001` (9 files).

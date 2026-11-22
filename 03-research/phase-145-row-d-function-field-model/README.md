@@ -91,3 +91,7 @@ translation of α goes across too: `J` is the intersection form of a **larger** 
 acquires more negative directions, and those come from correspondences that are *not* Frobenius powers.
 **Proposition D.42.5 must be printed in the phase-146 blueprint**: it is the statement of what α may
 not assume.
+
+## Other files in this folder
+
+- `R145_004_CONFIRMATION.md` — Confirmation, phase 145.

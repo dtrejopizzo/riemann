@@ -36,3 +36,12 @@ Skeleton → skeleton audit → pieces one by one (numerical verification in Mor
   node; P1.c NO-GO (pole failure at high frequencies); P1.c′ OPEN (upper bound of A∞ in P_T + control of 𝓕_T = M1).
 - Pieces PROVED: P2a (comb matrix in Dirichlet sines), coefficients c_k of χ_ev, A∞(t₀′) ≈ 3.90T.
 - **No node exists in the corpus that composes E and F (Def O1.2) with an identified abstract falsifier.**
+
+## Other files in this folder
+
+- `AUDIT_205_SKELETON_001.md` — Skeleton review (phase 205).
+- `BIBLIO_CHECK_001.md` — Bibliographic verification, phases 200–205 and Paper 46.
+- `INTEGRATION_205_001.md` — Integration into Paper 46, phase 205.
+- `REVIEW_STATE.md` — State of the audits of this phase.
+- `RFIN_TRACT_001.md` — Tractability review: the finite reformulation "n₋(𝔄_N(T)) = 1 ∀T" (phase 205, part R-fin).
+- `INTEGRATION_205_001_check.py` — script.

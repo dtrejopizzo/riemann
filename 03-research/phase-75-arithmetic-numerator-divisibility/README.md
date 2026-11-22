@@ -37,3 +37,11 @@ prime bounds, and roundoff-level inference are excluded.
 | P75.010-P75.012 | `P75_010_012_SCALING_CERTIFICATION_FALSIFIERS.md`, `P75_010_scaling_falsifier_harness.py` | written / probed |
 | P75.013-P75.015 | `P75_013_015_THEOREM_ASSEMBLY_OR_AUTOPSY.md` | final gate |
 
+## Other files in this folder
+
+Files not described above:
+
+- `P75_002_RESULTS.md` — P75.002 results
+- `P75_003_RESULTS.md` — P75.003 results
+- `P75_010_RESULTS.md` — P75.010 results
+- `P75_016_FINAL_LEDGER.md` — P75.016 - Final ledger

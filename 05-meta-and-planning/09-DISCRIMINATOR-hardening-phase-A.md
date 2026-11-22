@@ -1,6 +1,8 @@
 # Hardening D0 — Phase A: adversarial test against ~30 historical RH programs
 
-**Auditor build · 2026-06-05.** The instrument is worthless unless it survives a deliberate attempt to falsify
+**Date:** 2026-06-05 · **Status:** completed; D0 survived falsification; clause I2b operationalized in plan 10.
+
+**Purpose.** The instrument is worthless unless it survives a deliberate attempt to falsify
 it. Falsification target: **a known program that passes $I1\wedge I2\wedge I3\wedge I4$ yet has not proven RH**
 (a false positive) — or a program that fails but is a genuine full-RH lever (a false negative). The single-PASS
 calibration (function fields) is the overfit risk; I hunt for false positives, false negatives, and intermediates.

@@ -55,15 +55,15 @@ Implement D_F(t;N) = Σ_{n=1}^N a_n/n^(1/2+it) with Kahan summation, coefficient
 
 Numerical validation: D_F checked against 50-digit mpmath for N=10⁴ (12-digit agreement); L_DH validated at 4 zeros (<10⁻⁶); λ-multiplicativity checked over 1000 pairs.
 
-### Step 2 — Frente 1: Conditional anti-correlation
+### Step 2 — Front 1: Conditional anti-correlation
 
 For ζ, N∈{10⁴,10⁵,10⁶,10⁷}: find top 200 peaks in t∈[T,2T], T=10⁴. Compute r(t;N) at each peak — report mean, median, std. Bin peaks by magnitude into quartiles Q1 (smallest)..Q4 (largest); compute r per quartile — is r more negative for Q4 than Q1? Repeat for L_DH, L(s,λ), f_rand, f_fully_rand: is r<0 unique to ζ-type functions? Track N-dependence per quartile. At peaks conditioned on |D|>threshold (median, 75th, 90th, 95th, 99th percentile), compute the full signed covariance matrix Cov(Re S_j, Re S_k) — report fraction of negative off-diagonal entries and net sum vs threshold. Test on non-ζ RH-satisfying functions (F2, F3, F7): does the conditional anti-correlation hold for all multiplicative functions, or only for a_n=1?
 
-### Step 3 — Frente 2: Moment decomposition
+### Step 3 — Front 2: Moment decomposition
 
 **Second moment (k=1):** for N∈{10⁴,10⁵,10⁶}, T=10⁵: compute ∫|D_N|²dt decomposed as Σ_k∫|S_k|²dt + 2Σ_{j<k}∫Re[S_j·conj(S_k)]dt, verifying cross-terms ≈ 0 (MVT check) and reporting the fraction from each ω-class. **Fourth moment (k=2):** compute ∫|D_N|⁴dt, decomposed into contributions from all (j₁,k₁,j₂,k₂) index tuples, grouped by "diagonal" vs "off-diagonal" — what fraction of I₂ comes from cross-class interactions? **Sixth moment (k=3, exploratory):** at N∈{10⁴,10⁵}, identify dominant multi-indices. Repeated for L_DH and L(s,λ), comparing cross-term structures. **Conditional moments:** restrict integration to P_T(α)={t : |D|>(log T)^α}; compute conditional cross-term contributions as a potential mechanism consistent with observed peak behavior. **Moment ratios:** for all 8 function classes, compute M_k=(1/T)∫|D_F|^{2k}dt for k=1,2,3,4; report M_k/(M_1)^k as a measure of tail shape.
 
-### Step 4 — Frente 3: Semiprime fragility
+### Step 4 — Front 3: Semiprime fragility
 
 Investigate why ω=2 appears to be the fragile link in ζ's cancellation architecture. At top 50 peaks of ζ, compute the empirical distribution of {t(log p + log q) mod 2π : pq≤N} for S_2, compared to {t log p mod 2π} for primes. Test whether the phase offset Δφ(1,2)=arg(S_1)−arg(S_2) is systematically near π (anti-phase); repeat for Δφ(1,3), Δφ(2,3), Δφ(1,4) to see whether anti-phase increases or decreases with class separation. A convolution test compares the observed S_2 phase distribution to the theoretical prediction assuming i.i.d. prime phases. A continuous perturbation multiplies ω=2 coefficients by e^{iθ}, θ∈[0,π] in steps of π/20, tracking |D_F(θ)| and R_comp(θ), identifying the critical angle where r crosses zero. Covariance propagation anatomy decomposes exactly which (j,k) covariance pairs change when flipping ω=2 signs — is Cov(S_1,S_2) the dominant change, or does Cov(S_2,S_3) matter equally? This is repeated for L_DH and L(s,λ) to test whether the composite-driven vs. sign-driven mechanisms differ.
 
@@ -133,6 +133,96 @@ Finally, a canonical Davenport-Heilbronn implementation established that the cha
 - Built a scalable, Numba-accelerated Dirichlet-polynomial evaluation engine (up to 37× speedup at N=10⁷) with a reproducible, hash-verified random multiplicative baseline.
 - Definitively invalidated a previously circulated list of Davenport-Heilbronn off-line zero locations, redirecting future work toward validated coefficients and zero data.
 
-## Files
+## Connection to later work
 
-Each subfolder is a single task from the underlying investigation, covering the canonical engine and validation, the conditional anti-correlation analysis (Frente 1), the moment decomposition study (Frente 2), the semiprime fragility mechanism (Frente 3), and the synthesis/infrastructure work described above.
+The constructive-interference finding and the invalidated DH zero list were re-checked in the forensic audit of RH2020; the moment decomposition reappears in the ω-moment front of RH2022.
+
+## Structure of the folder
+
+The program is divided into 83 numbered phases, one subfolder `phase-N/` each. A phase folder normally contains `OVERVIEW.md` (the written result of that phase), the executed notebook when one exists (`notebook_executed.ipynb` and/or a notebook with a hexadecimal name) and the input and output files (data arrays, tables, figures). The one-line descriptions below are taken from each phase's `OVERVIEW.md`; where a phase has no written summary this is stated.
+
+| Phase | Content |
+|---|---|
+| [1](phase-1/) | S₂-dominance in the L_DH function is a robust structural feature that persists under ±0.05 perturbations of the κ parameter, with the κ⁻ perturbation showing enhanced S₂ vs S₃ … |
+| [2](phase-2/) | The synthetic function F(s) = ζ(s) + L(s,χ) remains S₃-dominant, contradicting the hypothesis that combining two S₃-dominant multiplicative functions would produce an S₂-dominant … |
+| [3](phase-3/) | M4 Decomposition for Zeta Function at N=10^6 — Main Result The hypothesis that four-index terms Re[S_j S_k S̄_l S̄_m] dominate the off-diagonal M4 contribution is partially … |
+| [4](phase-4/) | The tentative finding of r35 is incorrect: for f_canon_rand (a dense multiplicative function with complex random phases), S₃ is the causally dominant ω-class with a mean magnitude … |
+| [5](phase-5/) | The hypothesis that the divergence of the r distribution is driven by faster growth in the variance of the numerator compared to the denominator is REFUTED for the N=10⁵ to N=10⁶ … |
+| [6](phase-6/) | The synthetic non-multiplicative function F(s; N) = ζ_N(s) + Λ_N(s) exhibits MIXED S₂/S₄ dominance rather than clear S₂-dominance, with 60% of peaks being S₂-dominant (12/20) and … |
+| [7](phase-7/) | Analysis Incomplete: Computational Infeasibility at N=10⁶ CONCLUSION: I cannot complete the requested analysis due to computational constraints |
+| [8](phase-8/) | Analysis of f_canon_rand r-metric evolution from N=10^4 to N=10^7 |
+| [9](phase-9/) | Analysis of F(s) = L(s, χ₃) + L(s, χ₅): Causal Dominance in Non-Multiplicative Arithmetic Functions |
+| [10](phase-10/) | The zeta function does NOT exhibit a statistically significant power concentration reversal at N=10⁷ |
+| [11](phase-11/) | Analysis Summary At N=10,000, the phase offset Δφ(1,2) between S₁ and S₂ at peak locations shows fundamentally opposite clustering patterns for the zeta and Liouville functions |
+| [12](phase-12/) | Analysis of Inter-Class Energy Ratio r for f_canon_rand: N=10^6 Results and N=10^7 Computational Limits |
+| [13](phase-13/) | Hypothesis rejected The hypothesis that the Liouville r-value increase from N=10^6 to N=10^7 is caused by accelerating power redistribution to higher ω-classes (k≥4) is firmly … |
+| [14](phase-14/) | Moment decomposition analysis: n-dependence of ω-class structure |
+| [15](phase-15/) | The hypothesis cannot be conclusively tested due to computational constraints |
+| [16](phase-16/) | Analysis of the Liouville Function's r Metric Increase at N=10⁷ — Main Finding I cannot conclusively confirm or refute the research hypothesis due to computational time … |
+| [17](phase-17/) | Analysis Summary For the L_DH (Davenport-Heilbronn) function at N=10⁶, I identified the top 20 highest-magnitude peaks in t ∈ [10⁶, 2·10⁶] using a two-phase approach: coarse grid … |
+| [18](phase-18/) | The Numba-accelerated implementation achieves 86.54x speedup at N=10⁶ and 37.24x speedup at N=10⁷, substantially exceeding the >10x requirement |
+| [19](phase-19/) | I cannot determine whether S₂-dominance strength in the L_DH function is a non-monotonic function of κ or identify κ_optimal because computational time constraints prevented … |
+| [20](phase-20/) | M₄ structural anomaly in L(s,χ) with complex character mod 5 |
+| [21](phase-21/) | The hypothesis that Three-Index Type A (3A) term dominance in the fourth moment M₄ strengthens with increasing N is REJECTED |
+| [22](phase-22/) | Evolution of Canonical r-Value Distributions with N |
+| [23](phase-23/) | Analysis of inter-class energy ratio r AT N=10^7 |
+| [24](phase-24/) | The M₄ anomaly is robustly preserved under Dirichlet convolution. The product function F(s) = ζ(s) * L(s, χ₃) exhibits a strong non-monotonic evolution in its fourth moment term … |
+| [25](phase-25/) | The Davenport-Heilbronn L-function implementation has been systematically validated from scratch |
+| [26](phase-26/) | L_DH M₄ anomaly confirmed — Main Finding The Davenport-Heilbronn L-function exhibits strong non-monotonic M₄ structural evolution at N=10⁵, confirming that the anomaly is tied to … |
+| [27](phase-27/) | Analysis of the Decrease in Mean r for Zeta Function from N=10⁶ to N=10⁷ — Main Finding The decrease in mean r from 2.71 (N=10⁶) to 1.84 (N=10⁷) — a decline of -0.87 (-32%) — is … |
+| [28](phase-28/) | The canonical r metric implementation reveals that r is POSITIVE at high peaks (Q4 mean r ≈ +1.49 for zeta, +1.39 for liouville) and NEGATIVE at troughs (mean r ≈ -0.83), directly … |
+| [29](phase-29/) | The Riemann zeta function ζ(s) exhibits non-monotonic evolution of its GEV shape parameter ξ in the vicinity of N=10⁵, with a local maximum at N=10⁵ (ξ = -0.006) followed by a dip … |
+| [30](phase-30/) | Yes, the arithmetic structure of integer factorizations near N=10⁵ exhibits multiple statistically significant anomalies that provide a plausible explanation for the observed M₄ … |
+| [31](phase-31/) | The Möbius function L(s,μ) exhibits strong non-monotonic behavior in its M₄ term structure across N ∈ {10⁴, 10⁵, 10⁶}, with Mixed Diagonal contributions showing a peak (15.7% → … |
+| [32](phase-32/) | The hypothesis is partially confirmed. Using the canonical r metric from Report r11, the mean r value for the highest-magnitude peaks (Q4) is consistently positive for both zeta … |
+| [33](phase-33/) | The hypothesis is CONFIRMED. At peaks with the most negative r values (for the zeta function at N=10⁶ in t ∈ [10⁶, 2×10⁶]), the negative contribution to r does not come from the … |
+| [34](phase-34/) | Analysis Summary The hypothesis that the r-value sign flip between N=10⁴ and N=10⁶ is caused by a phase inversion (Δφ(1,2) shifting from ~0° to ~±180°) is REJECTED by the data |
+| [35](phase-35/) | The hypothesis that positive inter-class energy ratio r at N=10,000 is a small-N artifact has been strongly validated for the zeta function |
+| [36](phase-36/) | Analysis of ω-class interaction universality at N=10⁶ PEAKS |
+| [37](phase-37/) | M₄ Decomposition Classification for Möbius Function — Main Finding The discrepancy between r33's M₄ decomposition values and the historically cited values stems from different … |
+| [38](phase-38/) | Partial N-Dependence Study of Inter-Class Energy Ratio r — Research Question Extend the N-dependence analysis of the inter-class energy ratio r to N=10⁷ for zeta and Liouville … |
+| [39](phase-39/) | Analysis of f_canon_rand at N=10^6: r metric and ω-class structure Due to computational limitations at N=10^7 (each Dirichlet sum evaluation taking >30 seconds with vectorized … |
+| [40](phase-40/) | Analysis Summary For the Möbius function L(s,μ) at N=10⁶, I identified the top 20 highest-magnitude peaks in the interval [10⁶, 2×10⁶] and performed systematic phase perturbation … |
+| [41](phase-41/) | M₄ Decomposition Analysis: Testing Universality of Three-Index Type A Dominance — Main Conclusion The hypothesis that "Three-Index Type A" (Re[/S_j/² S_k S̄_l]) terms universally … |
+| [42](phase-42/) | Causal structure analysis: L(s,χ) vs L_DH |
+| [43](phase-43/) | At N=10^5, NO function among zeta, L(s,χ₄), f_rand, L(s,μ), and L(s,λ) exhibits strong conditional anti-correlation at peaks |
+| [44](phase-44/) | At high zeta peaks where r is strongly positive (N=10⁶), the analysis reveals that contrary to the initial hypothesis, the dominant positive contribution to r does NOT come from … |
+| [45](phase-45/) | Analysis of f_canon_rand Inter-Class Energy Ratio Evolution from N=10^6 to N=10^7 — Summary of Findings I successfully performed sparse grid searches (1,000 points) for the … |
+| [46](phase-46/) | At N=10⁶, all three multiplicative functions (zeta, f_rand, and L_mobius) exhibit strongly positive mean canonical r values at their highest peaks (2.457, 2.769, and 1.653 … |
+| [47](phase-47/) | Causal Architecture of f_rand Peaks at N=10⁶ — Executive Summary The phase perturbation analysis reveals that S₂ is the causally dominant ω-class for f_rand peak formation, with a … |
+| [48](phase-48/) | At N=10^6, the off-diagonal M₂ contribution converges dramatically toward zero (0.045 for zeta, 0.017 for Liouville), confirming Montgomery-Vaughan predictions, but the M₄ … |
+| [49](phase-49/) | Systematic parameter search for L_DH FUNCTION: validation failure — Summary After an extensive systematic search over 500+ parameter combinations, I was unable to identify … |
+| [50](phase-50/) | Moment decomposition analysis of dirichlet partial sums The hypothesis is CONFIRMED: Cross-class interactions in the fourth moment differ substantially between zeta, Liouville … |
+| [51](phase-51/) | Causal Architecture of the Non-Multiplicative L_DH Function The non-multiplicative Davenport-Heilbronn L-function exhibits strong S₂ dominance with a mean causal reduction of … |
+| [52](phase-52/) | Statistics N = 10⁴ (n_peaks = 42, Q4 peaks): - Numerator: Mean = 24.741, Std = 38.263, Variance = 1464.04 - Denominator: Mean = 30.282, Std = 22.079, Variance = 487.49 N = 10⁵ … |
+| [53](phase-53/) | Dataset description: ω-class geometry of dirichlet polynomials |
+| [54](phase-54/) | I cannot complete the requested analysis because computational constraints prevented generation of the required peak data at N=10⁶, and the analysis requires data at all three N … |
+| [55](phase-55/) | (No written summary; data files only.) |
+| [56](phase-56/) | (No written summary; data files only.) |
+| [57](phase-57/) | The M₄ structural anomaly at N=10⁵ is not universal; f_canon_rand exhibits monotonic M₄ term evolution across scales with only one term type (Three Equal) showing a non-monotonic … |
+| [58](phase-58/) | Analysis of Power Redistribution in L(s,μ) and f_canon_rand — Main Finding The power redistribution mechanism observed in the zeta function is NOT a universal feature of … |
+| [59](phase-59/) | Comprehensive analysis results: Inter-class Energy Ratio r at N=10⁵ |
+| [60](phase-60/) | Moment Decomposition at N=10⁶ for Zeta and Liouville Functions — Main Results Second Moment (M₂) Decomposition: - Zeta: M₂ = 14.8675, off-diagonal contribution = 3.47% - Trend … |
+| [61](phase-61/) | F_fully_rand does not Exhibit the M₄ Structural Anomaly at N=10⁵ The f_fully_rand function, with i.i.d |
+| [62](phase-62/) | Analysis Summary I conducted a systematic parameter search to identify the correct Dirichlet character (χ) and constant (κ) used to generate the L_DH function data in the primary … |
+| [63](phase-63/) | Analysis of f_canon_rand at N=10^7: Computational Infeasibility Encountered |
+| [64](phase-64/) | The hypothesis that the mean r value stabilizes at N=10⁷ is rejected: both zeta and Liouville functions show increasing (not decreasing) absolute differences in mean r between … |
+| [65](phase-65/) | Analysis of r-Divergence Mechanism: Sparsity vs Phase The r-divergence mechanism (power redistribution to higher ω-classes with increasing N) is governed by coefficient sparsity … |
+| [66](phase-66/) | Validation result: INCOMPLETE - cannot verify hypothesis |
+| [67](phase-67/) | The sparse multiplicative function f_sparse_rand with complex random phases exhibits a clear S₂-dominant causal architecture at N=10⁶, confirming that density, not phase … |
+| [68](phase-68/) | The non-multiplicative Davenport-Heilbronn L-function exhibits significantly stronger constructive interference at peaks (mean r = 3.792 ± 1.985) than all tested multiplicative … |
+| [69](phase-69/) | The original hypothesis is REFUTED. The increased variance of Den between N=10⁵ and N=10⁶ is NOT driven by a more diverse distribution of dominant ω-class contributions (k_max) |
+| [70](phase-70/) | The hypothesis that the non-monotonic M₄ structural anomaly at N=10⁵ would coincide with a non-monotonic change in the GEV shape parameter ξ is partially supported |
+| [71](phase-71/) | Analysis: Coefficient Properties and M₄ Structure The analysis confirms the research hypothesis with strong quantitative support: sparse coefficient sequences favor simpler Mixed … |
+| [72](phase-72/) | Character-Conjugate Structure Does NOT Produce S₂ Dominance — Summary of Results The synthetic function F_conj(s) = L(s, χ₅) + i·L(s, χ̄₅) was constructed to test whether … |
+| [73](phase-73/) | The hypothesis is CONFIRMED: A random multiplicative function with real-valued coefficients (f_real_rand, where a_p ∈ {-1, 1}) exhibits the M₄ structural anomaly at N=10⁵, unlike … |
+| [74](phase-74/) | The Liouville function L(s,λ) with coefficients λ(n) = (-1)^Ω(n) exhibits STRONG non-monotonic M₄ structural evolution at N=10⁵ |
+| [75](phase-75/) | (No written summary; data files only.) |
+| [76](phase-76/) | Analysis of M₄ structural anomaly for L(s, χ₃) |
+| [77](phase-77/) | The non-multiplicative Davenport-Heilbronn function L_DH exhibits a clear M₄ structural anomaly at N=10⁵, confirming that this phenomenon is a general feature of arithmetic … |
+| [78](phase-78/) | Hypothesis Rejected The hypothesis that "the increase in the Liouville function's r value from N=10⁶ to N=10⁷ is driven by a disproportionate strengthening of constructive … |
+| [79](phase-79/) | The canonical random multiplicative function f_canon_rand achieves perfect reproducibility with all three independent validation runs matching to machine precision (17 decimal … |
+| [80](phase-80/) | The hypothesis that constructive phase alignment between S₂ and S₃ is critical for creating high-magnitude zeta peaks is strongly confirmed by this causal perturbation analysis |
+| [81](phase-81/) | Analysis Conclusion: I cannot complete the hypothesis test due to computational time constraints |
+| [82](phase-82/) | The hypothesis from report r62 is REFUTED when selection bias is removed |
+| [83](phase-83/) | The hypothesis that L_DH's strong constructive interference (mean r = +3.79) is a resonance effect highly sensitive to κ ≈ 0.284 is REJECTED |

@@ -86,8 +86,8 @@
 - `00-references/papers-nuevos/A/arXiv-2602.15941v1/Jacobian.tex` — abstract. Read.
 - `00-references/papers-nuevos/A/arXiv-2606.06604v1/FF.tex` — abstract. Read.
 - `00-references/papers-nuevos/A/arXiv-1709.05831v1/HARAN_Dec2016_updated_4.tex` — §10. Read.
-- `00-references/papers-nuevos/B/arXiv-2508.05329v1/*.tex` — Deninger, *Rational Witt vectors and associated sheaves*: Introduction, Thm 2.8, Thm 5.1. Read.
-- `00-references/papers-nuevos/D/arXiv-2512.01811v2/…` — Thm `main1`. Read (see `114_a_02` §8).
+- `00-references/papers-nuevos/deninger-programme/arXiv-2508.05329v1/*.tex` — Deninger, *Rational Witt vectors and associated sheaves*: Introduction, Thm 2.8, Thm 5.1. Read.
+- `00-references/papers-nuevos/arithmetic-intersection-theory/arXiv-2512.01811v2/…` — Thm `main1`. Read (see `114_a_02` §8).
 
 ---
 

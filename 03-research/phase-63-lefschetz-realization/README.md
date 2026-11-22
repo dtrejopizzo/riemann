@@ -1,6 +1,6 @@
 # Phase 63 — The MW-5 Realization Frontier: the missing Lefschetz operator
 
-**Status:** open · no proof reached · started · road chosen by David after Phase 62 closed.
+**Status:** open · no proof reached · started · road chosen after Phase 62 closed.
 
 ## Where we are
 
@@ -59,7 +59,7 @@ out why gives the program's sharpest statement of the wall:
 > *regularized* positivity (Deninger regularized determinants), not a finite gap — a theory problem
 > beyond numerics.
 
-Per David's plan, the program stops here on this frontier — now with the obstruction pinned not just
+As planned, the program stops here on this frontier — now with the obstruction pinned not just
 as "MW-5" but as the structural impossibility of a finite gap for an object with infinitely many zeros.
 | **R3** | `F_q` positive control: build the analog for a curve `ζ_C/F_q`; confirm `L`=Frobenius gives the gap (HL = the proven `F_q` RH). | construct `A` for a known curve; verify gap present where it must be |
 | **R4** | Contrast: show precisely *which* property of `L` exists over `F_q` and is obstructed over Spec ℤ. | the sharp MW-5 statement |
@@ -86,3 +86,11 @@ Phase 10 "cohomological turn").
 **R1 — Lefschetz search (planned script, not produced; see `E97_polarized_isometry.py`):** on ζ's `A` (and J from phase-62 E94), search for a Lefschetz
 operator `L` and test the `sl₂` relations + Hard Lefschetz, with DH as falsador and (R3) an `F_q`
 curve as positive control.
+
+## Other files in this folder
+
+Files not described above:
+
+- `BRIEFING-2.3.F-for-Connes.md` — Lemma 2.3.F — what it is, everything we tried, and where the wall is
+- `E98_fq_control.py` — E98 — F_q POSITIVE CONTROL (Phase 63, R3): why the curve case crosses and Spec-Z does not.
+- `E99_squaring_sectors.py` — E99 — the SQUARING lever: is the J-LINEAR sector of the polarization GAPPED? (Phase 63, R6).

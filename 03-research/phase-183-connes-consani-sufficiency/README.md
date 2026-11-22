@@ -74,3 +74,32 @@ identified in phase 155; the super-exponential gap behavior found here is
 read as the Sonin-side manifestation of that same ceiling. No sign result
 is produced beyond the certified window; the route is left open with a
 precisely stated necessary condition for any further attempt.
+
+## Other files in this folder
+
+- `R183_003_SEMILOCAL_RETURN_OPERATOR.md` — The semilocal return operator.
+- `R183_004_POISSON_MOBIUS_WIENER_HOPF.md` — Poisson--Möbius factorization of the semilocal scattering.
+- `R183_005_FIRST_CROSSING_INTERFERENCE.md` — Arithmetic interference of the first crossings.
+- `R183_006_GCD_FIBER_LAURENT_BRIDGE.md` — Laurent bridge between the semilocal interference and D.247.
+- `R183_007_POSITIVE_LAURENT_FAMILY_AND_KERNEL_TEST.md` — Positive Gram family and the polar kernel test.
+- `R183_008_WHITE_LIGHT_RESIDUE_NO_GO.md` — The white-light residue and the raw-Gram no-go.
+- `R183_009_LAURENT_TANGENT_NORMALIZATION.md` — The finite part is a tangent pairing, not a norm.
+- `R183_010_SUPERPOSED_CENTRAL_TANGENT_DEFECT.md` — The central--tangent transversal defect.
+- `R183_011_ROUGH_TAIL_OBSERVABILITY.md` — Bilateral observability of the exterior leak.
+- `R183_012_TYPE_AUDIT_AND_CORRECT_REDUCTION.md` — Type audit and the correct Connes–Consani reduction.
+- `R183_013_TRACE_ANOMALY_AND_RELATIVE_OBJECT.md` — The semilocal Weil form is a trace anomaly.
+- `R183_014_SECOND_AUDIT_TRACE_LIMIT.md` — Second audit: restoring the limit and the no-go's scope.
+- `R183_015_TRACE_CLASS_ON_MODULUS_SECTOR.md` — Trace class and sign on the modulus sector.
+- `R183_018_SONIN_REMAINDER_CONSTRUCTION.md` — Construction of the semilocal Sonin remainder and its inertia.
+- `R183_019_SONIN_ALIGNMENT_AND_EVALUATION_DIRECTION.md` — Sonin alignment and evaluation direction.
+- `R183_020_REVIEW_018_019.md` — Review of R183.018 and R183.019.
+- `R183_021_SEMILOCAL_SONIN_SPACE.md` — The semilocal Sonin space as a positive part: what it gives and what it does not.
+- `R183_022_PARTIAL_SONIN_MULTIPLIER.md` — Partial Sonin multiplier: Toeplitz / Wiener–Hopf analysis of Q_H.
+- `R183_023_RELATIVE_BOUND_AND_FINITE_INDEX.md` — Null relative bound of the prime term against Sonin and finite index of E_S − (1−η)Son.
+- `R183_024_CONNES_LATER_ROUTE_INVENTORY.md` — Connes's "later" route: inventory, implicit mechanism, and the C_T conjecture.
+- `R183_025_LEMMA_L1_SEMILOCAL_WIDOM.md` — Lemma L1 (semilocal Widom): exact reduction, two-edge model, and the only missing estimate.
+- `R183_026_SZEGO_FALSIFIER_ARCHIMEDEAN_BAND.md` — Szegő falsifier: the archimedean band and lemma L2.
+- `R183_027_REVIEW_021_024.md` — Review of R183.021–024.
+- `R183_030_INERTIA_FIRST_SEMILOCAL_WINDOW.md` — Inertia in the first semilocal window (ξ metric).
+- `R183_031_GAP_REQUIREMENT_AND_PROLATE_SPECTRUM.md` — Gap requirement and prolate spectrum: theorem, source, and NO-GO.
+- `R183_032_REVIEW_029_031.md` — Review of R183_029, R183_030, and R183_031.

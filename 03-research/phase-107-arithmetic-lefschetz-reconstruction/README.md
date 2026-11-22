@@ -1762,3 +1762,10 @@ remove at most two dimensions, so the quotient by the exact Weil radical is
 still infinite-dimensional. Any faithful realization must therefore retain
 an infinite-dimensional Green, distributional, or cohomological component;
 Neron--Severi or any other finitely generated additive shadow cannot suffice.
+
+## Other files in this folder
+
+Files not described above, grouped by prefix and type:
+
+- 104 memos with prefix `other` (e.g. `107_129_IVSTAR_MOD8_RESIDUE_FAMILY_WITNESS.md`, `107_144_LOCAL_NERON_COMPONENT_NO_GO.md`, …, `107_244_AXIS_RESTRICTED_RANK_TWO_CONSTANT.md`)
+- 131 scripts with prefix `other` (e.g. `107_117_s3_attempt_a1_prime_genus_discriminant_gate.py`, `107_118_s3_attempt_a2_add_tamagawa_gate.py`, …, `107_244_axis_restricted_rank_two_constant.py`)

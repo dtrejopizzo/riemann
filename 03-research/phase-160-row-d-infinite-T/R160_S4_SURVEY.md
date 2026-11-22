@@ -36,7 +36,7 @@ App. B (all labelled statements), Paper 47 `main.md` §§0–1, 11.1, 11.7, 12.3
 | 146 coupled pairing | degree form on `Z⟨Frob_n⟩` zero-blind, indefinite; computed Frobenius diagonal (`P(m)=P(n) ⟹ δ_m=δ_n`); single-prime tower = magnitude only | `phase-146-…/R146_005_CLOSING_DECISION.md` |
 | 147 Galois ring | `Z[G]` supplies a `+` on the packet-graded carrier but the `χ=1` slot is exactly `𝓔^∞` (Thm D.55.9′): inert at `ζ` (`phase-147-row-d-single-prime-tower/` holds only `CORPUS_CHECK_R147.md`) | `phase-147-row-d-galois-ring/R147_005_CLOSING_DECISION.md` |
 | 148 mixed effectivity | mixed effectivity = tropical condition; vacuous or infinite (D.56.4′); O-148.2 | `phase-148-…/R148_005_CLOSING_DECISION.md` |
-| 149 additive pencil | Deligne route over `Z`: extraction D.59 (a Hölder inequality), kill test `c = ½`, `κ(d) = d/φ(d)`, "exponents add/subtract"; (P149) = `k`-tuple conjecture | `phase-149-…/R149_005_CLOSING_DECISION.md`; `ABCD/HANDOFF-PHASE-149.md` |
+| 149 additive pencil | Deligne route over `Z`: extraction D.59 (a Hölder inequality), kill test `c = ½`, `κ(d) = d/φ(d)`, "exponents add/subtract"; (P149) = `k`-tuple conjecture | `phase-149-…/R149_005_CLOSING_DECISION.md`; `ABCD/STATE-AT-PHASE-149.md` |
 | 150 method theorems | **T5 PROVED**; T4 → polar/entire classification (classical); T3 conditional on (H-DMV) | `phase-150-…/R150_005_CLOSING_DECISION.md` |
 | — decision | **row D closed in the map**; Paper 47 Part IV §§24–28; six-clause reopening criterion §28.4 | P47 `main.md:12611–12654`; `ABCD/ROW-D-CLOSURE-PLAN.md` |
 | 151 the bridge | T6: nonnegative families give no a-priori pole; new Lemma 2.4 (ascent `σ_{2k} ≥ 2kσ_2`); axis "summand vs numerator" (O-151.4) | `phase-151-…/R151_005_CLOSING_DECISION.md` |

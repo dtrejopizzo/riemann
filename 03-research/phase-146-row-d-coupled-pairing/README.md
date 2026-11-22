@@ -44,3 +44,8 @@ a negative that does **not** separate `ξ` from the falsifier.
 
 **Phase-147 target:** the same tower for object (B), `Frob ⋆ Δ^{rad}` (Paper 44 Thm 8bis.1e), which carries
 the full kernel `W_{fin}+ω_∞` — not an imported archimedean model. No label proposed; no label changed.
+
+## Other files in this folder
+
+- `R146_004_CONFIRMATION.md` — Confirmation, phase 146 (final round).
+- `R146_005_CLOSING_DECISION.md` — Closing decision, phase 146 (the degree form on `Z[Frob]` with a count interpretation).

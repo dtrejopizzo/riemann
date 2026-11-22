@@ -49,3 +49,14 @@ optimistic by a factor `≈2` (see `R155_005` §3.1), a truncated zero table, an
 `τ_env`. The LP is trained on a table of zeros and therefore cannot enter a proof
 (`phase-4/00-PROOF-LOG:168`, `phase-136/MAP_1:141` ES-2). `zeros1.txt` is kept uncompressed so the
 scripts run as archived.
+
+## Other files in this folder
+
+- `comb/` — subfolder (15 files).
+- `d1000/` — subfolder (48 files).
+- `dinf/` — subfolder (1 file).
+- `mechanism/` — subfolder (7 files).
+- `regime/` — subfolder (17 files).
+- `TABLE.txt` — text output.
+- `*.json` (11 files, e.g. `extrap_20.0.json`) — output data files.
+- `regime_table.csv` — table.

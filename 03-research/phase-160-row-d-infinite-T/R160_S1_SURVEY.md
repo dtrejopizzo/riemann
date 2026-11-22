@@ -386,7 +386,7 @@ Rows (a)–(d) are named only from phase 107 on; phases 0–40 contain their pre
 * **Row A (the space).** Pre-image: the SURF witness variety (`phase-16-surf-witness-variety/00-SURF-SPEC-SHEET.md`: four pillars,
   independence filter "zeros must be output, not input") and G1 (cohomology of the square;
   `phase-39-…/119-…`, `121-…`). State in scope: **no space**. CC's scaling-site Riemann–Roch has real-valued
-  `χ(D)=\deg D` (`phase-15-arithmetic-hodge-index/M9-kosmos-run-1-assessment.md`, Discovery 1; `THE_BACKWARD_MAP.md` §4: curve-like
+  `χ(D)=\deg D` (`phase-15-arithmetic-hodge-index/M9-discovery-run-1-assessment.md`, Discovery 1; `THE_BACKWARD_MAP.md` §4: curve-like
   `Θ(\deg D)`, the quadratic growth of a surface is missing); tolerance gives a cokernel but not a rank on the square
   (`123` §3). Premise 1 (rows A–C WEIL-STRENGTH-COMPLETE on the declared carrier) is outside this scope; nothing here
   contradicts it.

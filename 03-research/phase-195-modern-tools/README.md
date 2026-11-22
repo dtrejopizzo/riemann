@@ -12,3 +12,7 @@
 - AUDIT_195_3.md — audit of S and T: S1/S2 verified (−8.31416 NUMERICAL), S3 ARGUED (42/e depends on the test family; footnote recommended); T1/T1′/T2 verified, "exactly def:PD" corrected (distributional ν), T3 citation corrected to thm:log5A, T4(⇐) PROVED for finite-atomic certificates ⇒ sup gauge = λ_P. No sign.
 - INV_U_001_CONTACT_CROSSING_EDGE_LAW_LOG_ONSET_C1_NO_GO.md — track U (residual seed of INV_S §5): no Tate clamping (PROVED); U1 edge mass ≤ (Q+2)/log(1/δ) and U2 crossing modulus v_nC_T/log(1/2η) (PROVED); U3 edge law h*~(log κ/δ)^{−1/2} (ARGUED; a≈0.15–0.25 of R186_048 = artefact); onset 2η/log(κ/2η), λ_A C¹ across crossings (ARGUED; jump formula CONDITIONAL on traces); crossing-local data comb-generic under O_4/O_6/Beurling ⇒ NO-GO 𝒦_cross. No sign.
 - VERIFY_CLAMPED_AND_EDGE_LAW.md — verifier: P_T = moment conditions in F and = clamped ends G(±T)=G′(±T)=0 in G = (¼−∂²)^{−1}F (H²₀ bijection, PROVED); no corpus file misattributes clamping to F/h*; U3 stays ARGUED (Chen–Weth 2019 framework, optimal ℓ^{1/2} law is Hernández-Santamaría–López Ríos–Saldaña 2024; scope needs kernel-perturbation lemma, no Hopf for sign-changing h*); R186_048/SPEC_A power fits relabelled ARGUED artefacts.
+
+## Other files in this folder
+
+- `INV_O_001_BOOTSTRAP_CROSSING_FUNCTIONALS.md` — Modular/conformal bootstrap as a clause-5 object (track O).

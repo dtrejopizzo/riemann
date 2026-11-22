@@ -870,7 +870,7 @@ multi-part day driven by the external team (adversarial review mode). Records: `
 
 **Day 23 (cont.). PAPER P8 written + compiled; ROUTE-B plan opened.** Next: write the
 closing paper, compile it, open the route-B plan.
-- **Read both reference PDFs** (`papers-referencia/2006.13771v1.pdf` CC, `2301.00421v3.pdf` Suzuki).
+- **Read both reference PDFs** (`00-references/papers-nuevos/weil-form-and-explicit-formula/2006.13771v1.pdf` CC, `00-references/papers-nuevos/weil-form-and-explicit-formula/2301.00421v3.pdf` Suzuki).
   Confirmed: CC's positive object = **compression of the scaling action onto Sonin's space**
   (zero-INDEPENDENT), residual via prolate spheroidal + Toeplitz, eigenvalue-below-1 (Thm 6.11). Suzuki's
   de Branges completion is **RH-CONDITIONAL** ($E_\xi$ Hermite–Biehler needs RH; unconditional needs screw

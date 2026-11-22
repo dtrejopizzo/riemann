@@ -1,7 +1,7 @@
 # Phase 104 — close A1
 
 **Phase closed.** The objective was not proved. The binding balance,
-the permanent pieces, and the handoff to Phase 105 are in
+the permanent pieces, and what passes to Phase 105 are in
 [`PHASE_104_CLOSURE.md`](PHASE_104_CLOSURE.md). No document in this
 folder can be cited as proof of RH.
 
@@ -1373,3 +1373,48 @@ linear prime--pole source. Opening the current toward the continuous comparator
 exactly reproduces \(M_s(f)\), and closing it to obtain positivity
 eliminates it. Hence Mecke is proved, but it does not supply the positive remainder
 required for A1.
+
+## Other files in this folder
+
+Files not described above:
+
+- `104_100_FUNCTIONAL_TWO_SHEET_COMPLETION_GATE.md` — 104_100 — Functional two-sheet average and completion-corrector gate
+- `104_101_PRIME_GAP_VARIATIONAL_AND_COMPOSITION_GATE.md` — 104_101 — Exact gap coordinate, convexity, and composition gate
+- `104_102_ANALYTIC_RATIONAL_LANDAU_RIGIDITY.md` — 104_102 — Analytic/rational rigidity of the Landau transform
+- `104_103_INTEGRAL_STEP_EULER_OFFLINE_FALSIFIER.md` — 104_103 — Integer-step Euler falsifier with an off-line zero
+- `104_104_REAL_JET_TANGENT_DISK_GATE.md` — 104_104 — Real jets, tangent discs, and the Li-block gate
+- `104_105_DEEP_AND_DISCRETE_ENERGY_ADVERSARIAL_AUDIT.md` — 104_105 — Adversarial audit of Deep-Λ and of the discrete energy
+- `104_106_BLOCK_RESIDUE_SELECTOR_GATE.md` — 104_106 — Block averages, residues, and the exact selector gate
+- `104_107_FEJER_BLOCK_PHASE_TRANSPORT_GATE.md` — 104_107 — Fejér blocks and the exact phase-transport gate
+- `104_108_MODULATED_FEJER_MATCHED_FILTER_GATE.md` — 104_108 — Modulated Fejér, matched filters, and the resonance gate
+- `104_109_LOW_RESIDUE_BLOCK_TRANSPORT_GATE.md` — 104_109 — Low residue, block barrier, and the transport-average gate
+- `104_110_LITERAL_PRIME_FEJER_VK_GATE.md` — 104_110 — Literal prime Fejér kernel and the exterior-ray VK gate
+- `104_111_DEEP_BLASCHKE_FACTOR_REDUCTION.md` — 104_111 — Exact reduction of Deep to the Blaschke factor
+- `104_112_DEEP_MARKOV_HEIGHT_BOX_GATE.md` — 104_112 — Deep height box and the no-slack Markov gate
+- `104_113_HEIGHT_BOX_CLASSICAL_INPUTS_GATE.md` — 104_113 — Classical-inputs gate for the deep box
+- `104_114_BOX_BLASCHKE_POISSON_DETECTOR.md` — 104_114 — Blaschke–Poisson detector of the deep box
+- `104_115_NEIGHBOR_PRIME_RESOLVENT_GATE.md` — 104_115 — Global resolvent gate and pivot to neighboring prime towers
+- `104_116_TRIANGLE_EXCHANGE_MECKE_IDENTITY.md` — 104_116 — Triangular-exchange Mecke identity and the source–circulation gate
+- `104_82_Q_INDEPENDENT_TORUS_UNTWISTED_GATE.md` — 104_82 — Independence of prime lengths and the untwisted-point gate
+- `104_83_XI_FOURIER_DEEP_GATE.md` — 104_83 — Fourier gate for \(\Xi\): exact cumulants and modular boundary cancellation
+- `104_84_BLASCHKE_EULER_RIGIDITY_GATE.md` — 104_84 — Inner Blaschke factor and rigidity of local Euler identities
+- `104_85_NONLOCAL_PRIME_HURWITZ_NYMAN_GATE.md` — 104_85 — Global renormalization of primes, Hurwitz, and non-local Nyman form
+- `104_86_BOSE_MELLIN_SINE_REFLECTION_GATE.md` — 104_86 — Positive Bose kernel and Mellin sine self-reflection
+- `104_87_NYMAN_FLOOR_MOBIUS_TAIL_GATE.md` — 104_87 — Finite Nyman section, `max` inversion, and Möbius tail
+- `104_88_DIRECT_DEEP_VISUAL_AND_ORDINARY_PRIME_UNIQUENESS.md` — 104_88 — Direct diagnostic of Deep-\(\Lambda\) and uniqueness of ordinary primes
+- `104_89_BSY_ONE_SIDED_EULER_BOUNDARY_GATE.md` — 104_89 — One-sided BSY gate for real Euler truncations
+- `104_90_DEEP_SCALE_EFFECTIVE_BOUND_AND_PNT_COUNTERMODEL.md` — 104_90 — Effective bound on the Deep scale and PNT countermodel
+- `104_91_DUAL_PD_AND_REMOTE_TOWER_PREFIX_GATE.md` — 104_91 — Exact PD duality and the remote tower gate
+- `104_92_ABEL_CESARO_EULER_TIGHTNESS_GATE.md` — 104_92 — Euler tightness gate under Abel--Cesàro smoothings
+- `104_93_DISCRETE_CRAMER_ENERGY_AND_VARIABLE_SELBERG_GATE.md` — 104_93 — Discrete Cramér energy and variable-order Selberg gate
+- `104_94_ORDINARY_PRIME_CORE_AND_PRIME_POWER_FINITE_ENERGY_GATE.md` — 104_94 — Core of ordinary primes and finite energy of the powers
+- `104_95_POLE_CANCELLATION_POSITIVE_DIFFERENTIAL_NO_GO.md` — 104_95 — Pole cancellation and rigidity of positive differential polynomials
+- `104_96_DISCRETE_CRAMER_ENERGY_VISUAL_DIAGNOSTIC.md` — 104_96 — Dyadic visual diagnostic of the discrete Cramér energy
+- `104_97_DYADIC_ONE_EIGHTH_CRITICAL_LINE_ADVERSARIAL_GATE.md` — 104_97 — Critical adversarial gate for the dyadic constant $1/8$
+- `104_98_PRIME_ENERGY_MELLIN_MONODROMY_GATE.md` — 104_98 — Mellin factorization of the prime energy and monodromy gate
+- `104_99_ERATOSTHENES_PARITY_ENERGY_GATE.md` — 104_99 — Exact Eratosthenes, parity identity and energy gate
+- `deep_lambda_visual_diagnostic.png` — figure
+- `deep_lambda_visual_diagnostic.svg` — figure
+- `discrete_cramer_energy_dyadic.csv` — data (CSV)
+- `discrete_cramer_energy_visual.png` — figure
+- `discrete_cramer_energy_visual.svg` — figure

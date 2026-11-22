@@ -1,6 +1,6 @@
 # Phase 134 — row D opening campaign (the sign)
 
-after the ABC review panel (phase 133) and the
+after the ABC review (phase 133) and the
 acceptance of the A.8 and B.7 amendments.
 Construction and audit of record:
 

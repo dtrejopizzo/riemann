@@ -95,6 +95,40 @@ Together with the ζ benchmark, these results establish analytic symmetrization 
 - Discovered and resolved a critical implementation bias for non-self-dual L-functions: the standard (unsymmetrized) explicit formula for L(χ₄ mod 5) produces an X-independent, J-amplifying trace defect; pairing χ with χ̄ and using 2·Re(χ(n)) on the arithmetic side eliminates this bias by 78 orders of magnitude, unlocking H1/H2 validation for complex-character Dirichlet L-functions.
 - Delivered, throughout, the explicit caveat that all observed finite-parameter numerical stability (J-convergence, σ-monotonicity, window-saturation) is consistent with — but does not constitute a proof of — the Riemann Hypothesis, and identified prime-cutoff scaling with 1/σ as the precise, quantifiable mechanism separating genuine spectral floor behavior from truncation artifacts.
 
-## Files
+## Connection to later work
 
-Each subfolder is a single task from the underlying investigation, covering the canonical engine construction and validation across GRH controls, the basis-completion (J) stability tests, the σ/window localization monotonicity tests, and the analytic symmetrization fix for the non-self-dual Dirichlet control described above.
+The stability and monotonicity results for λ_min(Q) close the numerical study of the localized Weil form; the subsequent work is theoretical (see `../03-research/` and `../04-papers/`).
+
+## Structure of the folder
+
+The program is divided into 27 numbered phases, one subfolder `phase-N/` each. A phase folder normally contains `OVERVIEW.md` (the written result of that phase), the executed notebook when one exists (`notebook_executed.ipynb` and/or a notebook with a hexadecimal name) and the input and output files (data arrays, tables, figures). The one-line descriptions below are taken from each phase's `OVERVIEW.md`; where a phase has no written summary this is stated.
+
+| Phase | Content |
+|---|---|
+| [1](phase-1/) | The full body of evidence, correctly stratified to isolate the prime-cutoff numerical artifact, supports both basis-completion stability (H1) and localization monotonicity (H2) … |
+| [2](phase-2/) | With the corrected symmetrized explicit formula, the localized Weil quadratic form for L(χ₄ mod 5) shows no de Branges/Conrey–Li obstruction in any engine-valid regime — λ_min is … |
+| [3](phase-3/) | The proposed formula correction — replacing the prime-sum coefficient with the symmetrised form involving 2·Re(χ(n))·Λ(n) — eliminates the systematic ~10⁻⁴ trace residual and … |
+| [4](phase-4/) | The trace identity tr(M_zeros) = tr(M_arith) for L(χ₄ mod 5) is satisfied at the reference point (T₀=85.7, σ=2, J=10, dps=50) with a residual of 4.57 × 10⁻²⁷, passing the ≈10⁻¹⁵ … |
+| [5](phase-5/) | Increasing the prime cutoff from X=10⁵ to X=10⁷ at σ=1 produces a strictly monotonic, multiple-order-of-magnitude reduction in both /λ_min(Q)/ and the trace residual at every … |
+| [6](phase-6/) | Increasing the prime cutoff X drives both the trace residual and λ_min toward zero for the σ=1.0 problem at (T₀=85.7, J=16), confirming the hypothesis there (target tr-residual … |
+| [7](phase-7/) | (No written summary.) Reference values to validate against (T0=46.13, J=12) corrected: lambda_min ≈ -1.265e-12, trace_residual ≈ -1.463e-11 |
+| [8](phase-8/) | I cannot conclude that a faithful implementation fully passes all specified validation gates for all three GRH controls because the engine was only fully validated for ζ … |
+| [9](phase-9/) | Using an 80-digit bracketing-based local zero finder with post-refinement verification produced a verified L(Δ,s) zero list that reduced the trace residual at T0=85.7, σ=2, J=10 … |
+| [10](phase-10/) | The windowed high-precision zero-finding strategy for L(Δ,s) around T₀=85.7 did NOT achieve the 10⁻¹⁵ trace-identity gate at the target reference point; the best residual obtained … |
+| [11](phase-11/) | H1 (basis-completion stability) and H2 (localization monotonicity) are SUPPORTED for ζ and L(Δ,s) in their validated regimes, and for L(χ₄ mod 5) are OBSTRUCTED by an … |
+| [12](phase-12/) | The "dataset" is a single 5,530-byte specification file (engine-spec.md) that defines the localized Weil Detector engine, its five control L-functions, validation gates … |
+| [13](phase-13/) | Mpmath.zetazero is a reliable but slow method for generating the first 5,000 non-trivial zeros of ζ(s); the phase could not be completed within the available runtime budget … |
+| [14](phase-14/) | Hypotheses H1 (basis-completion stability) and H2 (localization monotonicity) are supported by both the validated specification trace-identity records and the freshly computed … |
+| [15](phase-15/) | (No written summary; data files only.) |
+| [16](phase-16/) | The hypothesis H1 is definitively confirmed for the Riemann zeta function, as λ_min at σ=1 successfully converges uniformly to the numerical floor (< 10⁻¹¹) across all T₀ up to … |
+| [17](phase-17/) | At the single reference point (T0=85.7, σ=2, J=16) I implemented and validated the L(Δ,s) Weil quadratic-form engine — passing the trace-identity gate tr(M_zeros) − tr(M_arith) ≈ … |
+| [18](phase-18/) | At σ=1, the analysis shows that X=5×10^7 is sufficient only up to about J≤16; for J≥20 the trace gate fails increasingly badly (up to ~10^-5 relative for ζ at J=28), so the … |
+| [19](phase-19/) | For the Ramanujan L-function L(Δ,s), the minimum eigenvalue λ_min(Q) at σ=2 rapidly converges to a uniform numerical floor (~10⁻¹⁴) as J increases, while at narrow localizations … |
+| [20](phase-20/) | For L(Δ,s) at (T₀=85.7, J=16, X=10⁵), λ_min(Q) is strictly monotone-nondecreasing under nested window enlargement and is monotone with σ wherever the calculation is not … |
+| [21](phase-21/) | For ζ at T₀=85.7, J=16, λ_min(Q) is monotonically non-decreasing in σ over {0.25, 0.5, 1, 2, 4} and is constant (numerically) under nested zero-window enlargement … |
+| [22](phase-22/) | I cannot complete the requested λ_min convergence analysis for L(Δ,s) because the workspace contains only the specification and τ(n) table, but not the previously validated … |
+| [23](phase-23/) | I cannot conclude whether increasing the prime cutoff to X=10⁹ resolves the large negative λ_min artifact for L(Δ,s) at σ=1 because the required X=10⁹ arithmetic data and a … |
+| [24](phase-24/) | (No written summary; data files only.) |
+| [25](phase-25/) | For L(χ₄ mod 5), λ_min(Q(T0,σ,J)) converges uniformly in T0 to 0 for σ=2, while the apparent failure of convergence for σ≤1 is explained by systematic truncation error from the … |
+| [26](phase-26/) | For L(χ₄ mod 5) at T₀=85.7, J=16, X=10⁵, λ_min(Q) is monotone non-decreasing under nested zero-window enlargement and is consistent with monotonicity in σ wherever the trace gate … |
+| [27](phase-27/) | The minimum eigenvalue λ_min(Q(T0,σ,J)) for the Riemann zeta function converges to a stable limit (λ_∞ ≈ 0) uniformly across T0 when evaluated in the numerically stable regime … |

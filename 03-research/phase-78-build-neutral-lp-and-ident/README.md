@@ -2265,3 +2265,13 @@ NO-GO walls MW-1..MW-6; kill-tests K1-K5; zero-filter gate E72.16; no ambient
 Never claim Omega7 or RH proved. Autopsy every wall; name the next finite object.
 Phase-size: ~100-150 documents, then close. Do NOT restart a detector spiral.
 ```
+
+## Contents
+
+The files follow the numbering of the memos; grouped by prefix and type:
+
+- 115 data files with prefix `E78` (e.g. `E78_101_mu_dir_basepoint_results.json`, `E78_102_paired_dmu_groundmode_results.json`, …, `E78_cluster_residue_plant_results.json`)
+- 156 memos with prefix `E78` (e.g. `E78_100_SHELL_LOG_ROUTE_AUTOPSY.md`, `E78_101_MU_DIR_BASEPOINT_REDUCTION.md`, …, `E78_9_W_QUOTIENT_LINEARIZATION.md`)
+- 2 other files with prefix `E78` (e.g. `E78_137_run.log`, `E78_140_run.log`, …, `E78_140_run.log`)
+- 122 scripts with prefix `E78` (e.g. `E78_101_mu_dir_basepoint_probe.py`, `E78_102_paired_dmu_groundmode_probe.py`, …, `E78_cluster_residue_probe.py`)
+- 2 text outputs with prefix `projective` (e.g. `projective_collar_plant_results.txt`, `projective_collar_results.txt`, …, `projective_collar_results.txt`)

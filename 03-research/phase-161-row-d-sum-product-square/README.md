@@ -296,3 +296,21 @@ See [R161_046](R161_046_BACKWARD_CHAIN_AND_FINITE_RADICAL_DETECTION.md): the abs
 [R161_080](R161_080_POLE_ESCAPE_AND_TWO_SCALE_OBSERVATION.md) tests the new limit against Gamma-residue extraction. An explicit escaping exterior tail retains its residue while tending to zero even in every fixed Sobolev norm. It gives exact noncommuting Abel limits, the two spatial scales required to detect the escaping coefficient, and a conditional extraction estimate with its weighted remainder hypothesis exposed. The weak-limit construction alone cannot annihilate the residue.
 
 [R161_081](R161_081_SIGN_TEST_ON_WEIL_EIGENVECTORS.md) tests the proposed direct sign proof. With a canonical Tate forcing away from the kernel, the exact remainder on a parity eigenvector Hf=lambda f is Q=-2 sum_m(d_(m,N)+lambda)|(R_L f)_m|^2. Hence Q cannot have a nonnegative-square representation valid throughout the primitive space, even when H is nonnegative. A radical-specific arithmetic proof or a genuinely different comparison is still required.
+
+## Other files in this folder
+
+- `R161_030_ORIENTED_DIVISOR_VARIANCE_GATE.md` — The algebraic gate: oriented divisor variance before scalar synthesis.
+- `R161_031_PATHWISE_REALIZATION_OF_THE_GATE.md` — Pathwise realization: the divisor seam collapses and the Poisson seam survives.
+- `R161_032_PARITY_TURNS_THE_CROSSED_TATE_BLOCK_POSITIVE.md` — Parity turns the crossed Tate block into the missing positive square.
+- `R161_033_COHERENT_TO_DIRECT_SUM_GAP.md` — Audit: `(PC-ren)` is coherent in `k`; the direct-sum square needs a proved dilation.
+- `R161_034_MELLIN_GRAM_AND_PRODUCT_RATIO_COLLISION.md` — Exact Mellin Gram: the missing interference is the product--ratio channel.
+- `R161_035_COHERENT_TWO_ORIENTATION_GATE.md` — The correct algebraic gate is the coherent two-orientation parallelogram.
+- `R161_036_COVARIANT_DERIVATIVE_AND_CRITICAL_JET.md` — The coherent orientation difference is the Gamma-covariant critical jet.
+- `R161_037_SATURATION_ALONE_FORCES_THE_SOURCE_TO_ZERO.md` — Saturation alone forces `F=0`; no differentiated strong graph limit is needed.
+- `R161_038_FINITE_MATRIX_COUNTERMODEL_TO_AUTOMATIC_SATURATION.md` — Exact matrix countermodel: `(PC)` plus radicality does not imply coherent saturation.
+- `R161_039_TERMINAL_EQUIVALENCE_AND_BLOCKED_LEDGER.md` — Terminal equivalence: coherent saturation is the missing uniqueness theorem.
+- `R161_040_POISSON_IDENTIFIES_THE_TWO_EXTERIOR_HISTORIES.md` — Poisson identifies the two exterior histories missing in phase 121.
+- `R161_041_SUM_DIFFERENCE_DERIVATIVE_AUDIT.md` — Orientation audit: the Poisson defect differentiates to the mean, the Poisson sum to the jet.
+- `R161_043_OPPOSITE_PARITY_KILLS_THE_SOURCE_DERIVATIVE_TATE_TERM.md` — The `Xf` Tate correction has opposite parity and pairs to zero.
+- `R161_045_TOEPLITZ_HANKEL_LOCAL_SQUARE_DOES_NOT_GLOBALIZE_THE_GATE.md` — Brown--Halmos supplies the local square, not the global Gamma--Tate trivialization.
+- `R161_099_SYNTHESIS.md` — Synthesis of phase 161, first construction.

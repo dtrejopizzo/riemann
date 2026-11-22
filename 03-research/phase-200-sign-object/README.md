@@ -104,3 +104,33 @@ falsifiers.
   gauge (R-MOM as a class theorem); Π.5 (|f♯(0)|² ≤ Cℓ, tool without Λ).
 - Round 26 DONE: MULT_GAUGE (M.2 PROVED; R-MOM class theorem; additive+multiplicative gauges = REF-D);
   PI5_TATE (Π.5 PROVED by N with e^{4πN}, uniform NO-GO; ℓ* of MORI15 is an upper bound). Phase 200: 26 rounds.
+
+## Other files in this folder
+
+- `A_MU_FACTORIZATION_001.md` — Round 4 of phase 200: the factorization operator A_μ in the leak quotient.
+- `B1_FLAT_001.md` — Lemma B.1♭ (phase 200, round 4, parallel).
+- `CS0_COMMUTE_001.md` — Phase 200, round 24a: Lemma CS-0 (differential commutant of the window form).
+- `F0_TEST_001.md` — Test F₀ of candidate (f) at the Mori extremal μ = 15 (phase 200, round 4; NUMERICAL).
+- `LEDGER_L2_PH100-162.md` — LEDGER L2 — insight ledger on the sign, phases 100–162 (phase 200, stage 1).
+- `LEDGER_L3_PH163-193.md` — LEDGER L3 — insight on the sign, phases 163–193 (phase 200, stage 1).
+- `LEDGER_L4_PH194-199_P47.md` — LEDGER L4 — insight ledger on the sign, phases 194–199 + Paper 46.
+- `LEDGER_L5_META.md` — LEDGER L5 — meta layer (routes index, grid, crossword, surveys, maps) — phase 200.
+- `LEMMA_12_1_H3_001.md` — Lemma 12.1 and the h = 3 calibrator (D = −23).
+- `LEMMA_13_1_CUMULANT_001.md` — Lemma 13.1, the full cumulant form.
+- `LEMMA_E_EPSTEIN_001.md` — Lemma E: the Epstein window form x²+5y² is negative on P_T for T ≥ 1.59 (certificate).
+- `LEMMA_I3_001.md` — Lemma I.3: comb signature on the gauge radical and non-degeneracy of the quotient (phase 200, round 10, Q1).
+- `MOMENTS_001.md` — Phase 200, round 25: moments (mollified, fourth moment, Motohashi) as a source of sign.
+- `P2_GAUGE_RADICAL_001.md` — Angle between the gauge and the radical of 𝒲_a (phase 200, round 7, question P2).
+- `P3_SMOOTH_B1_001.md` — Lemma B.1 restricted to a smooth sector (phase 200, round 7).
+- `PI4_JUMPS_001.md` — Lemma Π.4, jumps of the minimal-leak representative and jump comb (phase 200, round 5b).
+- `PI_MU_001.md` — The Ramanujan quotient Π_μ (phase 200, round 5).
+- `Q2_DEGREE2_001.md` — Eisenstein–Epstein family E(τ,·): the window form as a function on the upper half-plane (phase 200, round 10).
+- `R11_2_ORIGIN_001.md` — R11.2: coupling "lattice origin / polar term" × multiplicativity in the window form.
+- `XI1_VN_DIM_001.md` — Lemma Ξ1.1: trace of the "Chebyshev element" and ax+b von Neumann dimension (phase 200, round 16).
+- `XI2_LOEB_001.md` — Lemma Ξ2.1 (Loeb form over Ẑ) and closure of the Łoś dichotomy Φ.13.
+- `F0_TEST_001_data/` — numerical data for `F0_TEST_001` (24 files).
+- `LEMMA_12_1_H3_001_data/` — numerical data for `LEMMA_12_1_H3_001` (2 files).
+- `LEMMA_13_1_CUMULANT_001_data/` — numerical data for `LEMMA_13_1_CUMULANT_001` (5 files).
+- `LEMMA_E_EPSTEIN_001_data/` — numerical data for `LEMMA_E_EPSTEIN_001` (26 files).
+- `LEMMA_I3_001_data/` — numerical data for `LEMMA_I3_001` (16 files).
+- `P2_GAUGE_RADICAL_001_data/` — numerical data for `P2_GAUGE_RADICAL_001` (16 files).

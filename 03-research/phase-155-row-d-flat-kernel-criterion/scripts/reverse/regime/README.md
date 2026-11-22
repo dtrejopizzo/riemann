@@ -64,3 +64,8 @@ so truncating the prime sum at `e^U` (as `revlib2`'s own driver does) leaves a s
 gives `1.60e−4 / 1.71e−5 / 1.54e−6 / 1.16e−7`; the Gauss–Legendre order (200/800/3000) is irrelevant
 at this `h`. `analysis_primecut_eU.log` is the run with the `e^U` cutoff, kept as the record of the
 artefact; `analysis2.log` is the corrected run used in `R155_008`.
+
+## Other files in this folder
+
+- `domain_probe.json` — output data.
+- `domain_probe.py` — script.

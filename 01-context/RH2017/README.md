@@ -153,6 +153,102 @@ Finally, resonance extremes are not stationary with height. For the Davenport-He
 - Discovered that the fully multiplicative Liouville function L(s,λ) exhibits the strongest resonance of any tested function via **intrinsic constructive interference** among prime-factor-count classes — refuting the idea that multiplicativity per se suppresses resonance, and showing that coefficient sign structure, not multiplicativity, is the operative driver.
 - Produced the first systematic comparison dataset for ζ, L(s,χ₄), a random multiplicative model, DH, and perturbed DH across multiple scales.
 
-## Files
+## Connection to later work
 
-Each subfolder is a single task from the underlying investigation. Tasks include numerical validation of the Dirichlet series computation, resonance/model-selection analyses, the killer-signature growth test at DH zeros, phase-decomposition studies isolating prime- vs composite-driven mechanisms, the metric-space classification work (R_comp, M, CAS, entropy), and the intrinsic-constructive-interference analysis of Liouville/Möbius series described above.
+Its validated Dirichlet-series pipeline, the Davenport–Heilbronn calibration and the classification metrics (R_comp, M, CAS) are the starting point of RH2018; the ω-class decomposition introduced here is developed in RH2019–RH2020.
+
+## Structure of the folder
+
+The program is divided into 89 numbered phases, one subfolder `phase-N/` each. A phase folder normally contains `OVERVIEW.md` (the written result of that phase), the executed notebook when one exists (`notebook_executed.ipynb` and/or a notebook with a hexadecimal name) and the input and output files (data arrays, tables, figures). The one-line descriptions below are taken from each phase's `OVERVIEW.md`; where a phase has no written summary this is stated.
+
+| Phase | Content |
+|---|---|
+| [1](phase-1/) | Classification analysis: perfect separation of multiplicative and non-multiplicative functions |
+| [2](phase-2/) | Coefficient Autocorrelation Score Successfully Resolves Function Classification |
+| [3](phase-3/) | The peak tracking method does NOT reveal a growth exponent closer to the theoretical value of 0.31 |
+| [4](phase-4/) | For the perturbed Davenport-Heilbronn function L_DH^(ε=0.01) with κ' = κ + 0.01 = 0.2586, the highest magnitude peak in the partial sum D(t; 10^6) over the range t ∈ [80, 120] … |
+| [5](phase-5/) | The GEV shape parameter ξ_DH for the Davenport-Heilbronn function increased from 0.090 at N=10^5 to 0.105 at N=10^6, representing a 17.2% increase |
+| [6](phase-6/) | Dataset Generation for Multiplicative Resonance Program — Executive Summary I successfully generated a complete dataset of complex-valued time series D_F(t; N) for five function … |
+| [7](phase-7/) | At the highest peak of the random multiplicative function f_rand (t* = 3231.25, /D(t*)/ = 42.23), the cancellation metric is M = 1.928, which is 9.6 times larger than the L_DH … |
+| [8](phase-8/) | Analysis of L_DH Vector Summation at t=84.208, N=10⁶ — Main Finding The hypothesis that composite squarefree terms cancel a non-uniform prime signal is not supported by the data |
+| [9](phase-9/) | The Davenport-Heilbronn function exhibits perfect structural coherence (cross-scale coherence ≈1.0, CV≈0.000001) and constant variance (V≈3.4 across all scales), while the Riemann … |
+| [10](phase-10/) | Comprehensive dataset description for riemann hypothesis research program I have created a complete dataset description document (DATASET_DESCRIPTION.md, 18,000+ words) covering … |
+| [11](phase-11/) | Correlation analysis of M(t) AND R_comp(t) for davenport-heilbronn function The hypothesis that the cancellation metric M(t) and composite coherence R_comp(t) are independent for … |
+| [12](phase-12/) | Hypothesis rejected: At its highest peak (t* = 9908.5, /D/ = 11.77), the structured multiplicative function L(χ₄) exhibits M = 1.969, indicating constructive interference similar … |
+| [13](phase-13/) | The hypothesis is REJECTED. The random multiplicative function with non-negative coefficients (f_rand_pos) does NOT exhibit the predicted destructive interference mechanism (M … |
+| [14](phase-14/) | R_comp Sensitivity to Character Structure in Multiplicative L-functions |
+| [15](phase-15/) | Comparative GEV Analysis on R_comp Metric for Multiplicative Functions The hypothesis that "all multiplicative functions exhibit GEV shape parameter ξ ≤ 0 for R_comp extremes" is … |
+| [16](phase-16/) | Growth of /D_DH(85.7; N)/ for the Davenport-Heilbronn Function — Main Finding The hypothesis is REJECTED |
+| [17](phase-17/) | The (M_coh, R_comp) classification framework successfully generalizes to functions with varying sparsity and randomness: sparse L(s,χ_4) mod 4 shows 30.4% higher R_comp than dense … |
+| [18](phase-18/) | The GEV shape parameter ξ for R_comp block maxima PARTIALLY separates the four function classes, but NOT as hypothesized |
+| [19](phase-19/) | The hypothesis is CONFIRMED: The multiplicative structure of f_rand generates a significantly heavier-tailed distribution of partial sum magnitudes than a function with fully … |
+| [20](phase-20/) | The hypothesis that the GEV shape parameter ξ_DH would be larger in the low-t range [80, 200] (rich with known off-line zeros) compared to ξ_DH = 0.090 from the high-t range … |
+| [21](phase-21/) | (No written summary; data files only.) |
+| [22](phase-22/) | The GEV shape parameter for the Riemann zeta function converges toward zero as truncation length increases: ξ_zeta(N=10⁶) = -0.118 is 13.35% closer to zero than ξ_zeta(N=10⁵) = … |
+| [23](phase-23/) | The research hypothesis is strongly confirmed: The phase coherence of composite squarefree terms in L_DH, as measured by the Rayleigh mean resultant length R_comp, peaks … |
+| [24](phase-24/) | Analysis Status: INCOMPLETE - Computational Infeasibility I was unable to complete the GEV analysis on the R_comp metric for the three multiplicative function classes (ζ, L(χ₄) … |
+| [25](phase-25/) | Analysis of L_DH^(ε) family in 3D classification space |
+| [26](phase-26/) | Validation of the historical davenport-heilbronn function |
+| [27](phase-27/) | Power-Law Phase Coherence at L_DH Zero t≈114.16 — Quantitative Findings I performed a complete phase coherence analysis at the L_DH off-line zero at t≈114.16 using N=10⁶ … |
+| [28](phase-28/) | The hypothesis is REJECTED. The validated L_DH function does NOT exhibit a qualitatively different ξ(t) trend pattern compared to multiplicative functions (ζ, L(s,χ₄)) |
+| [29](phase-29/) | Analysis of Extreme Metric Values for L_DH^(ε=0) — Main Finding At the resonance peak t* = 1054.94, the L_DH^(ε=0) function exhibits /D(t*)/ = 19.55, which is 69.9× larger than … |
+| [30](phase-30/) | The analysis successfully identified a resonance location for L_DH^(ε=-0.05) at t* ≈ 80.86 (with /D_F(t*;N=10^6)/ = 3.54, Z-score = 2.60) |
+| [31](phase-31/) | The analysis refutes the research hypothesis. Contrary to predictions, the Riemann zeta function exhibits statistically significant non-uniform prime phase distributions at peak … |
+| [32](phase-32/) | Analysis Summary The hypothesis that the discrepancy in L_DH's R_comp GEV shape parameter ξ between reports r47 and r59 is due to differences in t-range is CONFIRMED |
+| [33](phase-33/) | The extreme values of /D_ζ(t)/ and /D_{f_rand}(t)/ belong to different statistical universality classes, with ζ exhibiting Weibull-type behavior (ξ = -0.136, 95% CI: [-0.263 … |
+| [34](phase-34/) | The hypothesis is strongly supported: The structured coefficients (a_n = 1) of the Riemann zeta function impose significant constraints that tame the extreme values seen in the … |
+| [35](phase-35/) | The hypothesis that a feature space combining resonance metrics (M_coh, R_comp) with coefficient structure (Sum of Squared ACF) would provide complete separation between … |
+| [36](phase-36/) | Comprehensive answer to research hypothesis — Main Finding The research hypothesis stated: "The resonance strength of L_DH^(ε) is not a simple monotonic function of ε |
+| [37](phase-37/) | The hypothesis that the "Anomalous-Resonant" class would have a GEV shape parameter ξ statistically distinct from both "Standard" and "Control" classes is not supported by the data |
+| [38](phase-38/) | R_comp(N) Scaling Analysis |
+| [39](phase-39/) | Analysis of Phase Coherence Ratios at L_DH Resonances — Summary of Results Using the corrected squarefree-enforced implementation of the Davenport-Heilbronn function L_DH with … |
+| [40](phase-40/) | Numerical validation of dirichlet series computation |
+| [41](phase-41/) | The strong resonance observed in L(s, λ(n)) at t* = 7563.5 with /D(t*)/ = 46.88 is caused by constructive alignment of term-class vectors S_k, but the mechanism differs … |
+| [42](phase-42/) | At the resonant peak of L_DH (t=84.21, N=10⁶), the phase distribution of all terms is non-uniform (p=0.0034) while the prime-only subset is uniform (p=0.70), confirming that … |
+| [43](phase-43/) | The extreme value behavior of the M_coh and R_comp metrics for the Riemann zeta function is NON-STATIONARY with respect to height t |
+| [44](phase-44/) | The composite phase coherence metric R_comp is confirmed to be specific to the non-multiplicative resonance mechanism of L_DH |
+| [45](phase-45/) | Complete analysis report — Main Conclusion The hypothesis is strongly rejected |
+| [46](phase-46/) | Shannon entropy successfully distinguishes the riemann ζ FUNCTION |
+| [47](phase-47/) | Analysis of Perturbed Davenport-Heilbronn Function L_DH^(ε=0.01) |
+| [48](phase-48/) | Critical Discovery: The Validated Historical L_DH with coefficients a_n = (-1)^ω(n) is mathematically MULTIPLICATIVE, not non-multiplicative as hypothesized |
+| [49](phase-49/) | Analysis of L_DH^(ε=-0.05) fine-grained resonance scan |
+| [50](phase-50/) | The hypothesis that "the refined resonance metric R_comp will exhibit clear power-law growth with N at L_DH resonance locations" is REFUTED by the data |
+| [51](phase-51/) | Resonance Detection in L-Functions |
+| [52](phase-52/) | The cancellation metric M(t) and composite coherence metric R_comp(t) for the Davenport-Heilbronn function L_DH are not significantly correlated (Pearson r = -0.0082, p = 0.796 … |
+| [53](phase-53/) | Analysis Summary The hypothesis that multiplicativity determines R_comp scaling behavior is NOT supported by the empirical data |
+| [54](phase-54/) | The hypothesis is confirmed. Using the intuitive coherence metric M_coh = /ΣS_k/ / √Σ/S_k/², all 200 peaks (50 per function) from the four function classes (ζ, L(χ₄), f_rand … |
+| [55](phase-55/) | The cancellation metric M for the perturbed Davenport-Heilbronn function L_DH^(ε=-0.05) at the resonance location t* = 80.910 is M = 1.837144 (computed for N = 10^6, partitioning … |
+| [56](phase-56/) | (No written summary; data files only.) |
+| [57](phase-57/) | GEV Analysis: Comparison of Riemann ζ and Davenport-Heilbronn L_DH — Answer The GEV analysis reveals that ξ_DH = 0.0896 [95% CI: -0.067, 0.235] is significantly greater than ξ_ζ = … |
+| [58](phase-58/) | Vector Interference Pattern of L_DH at Non-Resonant Locations — Main Conclusion The hypothesis that "destructive interference (M≈0.2) is specific to L_DH resonances while random … |
+| [59](phase-59/) | Composite Coherence (R_comp) Comparison of f_rand vs f_alt |
+| [60](phase-60/) | Analysis Summary Using the correct squarefree-enforced L_DH implementation at t=85.70 (known zero location) and N=10^6, I analyzed the phase distribution of squarefree terms … |
+| [61](phase-61/) | Resolution of the r12 vs r16 DISCREPANCY The hypothesis is CONFIRMED. The discrepancy in prime phase uniformity for L_DH between report r12 (p=0.70, uniform) and report r16 … |
+| [62](phase-62/) | Analysis Summary The hypothesis that L_DH resonances correspond to a "balanced" state of interference is partially supported by the data |
+| [63](phase-63/) | The hypothesis is REJECTED. The phase structure of the random multiplicative function f_rand at its highest peak does NOT resemble that of the Riemann zeta function |
+| [64](phase-64/) | I cannot complete the requested analysis because the required pre-computed metrics are not available in the working directory |
+| [65](phase-65/) | (No written summary; data files only.) |
+| [66](phase-66/) | DEFINITIVE 2D classification map of function peak mechanisms |
+| [67](phase-67/) | The hypothesis that phase non-uniformity in L_DH is primarily driven by semiprimes is REJECTED |
+| [68](phase-68/) | A canonical implementation of the Davenport-Heilbronn function was created strictly according to the definition in research-program-v3.pdf: L_DH(s) = ((1-iκ)/2)·L(s,χ) + … |
+| [69](phase-69/) | Analysis Report: Stability of Cancellation Metric M for Riemann Zeta Function Peaks — Main Findings The cancellation metric M for the Riemann zeta function's 20 largest peaks … |
+| [70](phase-70/) | Analysis of phase coherence vs. number-theoretic complexity in L_DH At the L_DH resonant peak (t=84.208, N=10⁶), I partitioned all squarefree integers n ≤ 10⁶ by their number of … |
+| [71](phase-71/) | Cross-scale coherence decomposition analysis |
+| [72](phase-72/) | Analysis of 2D classification map of function peak mechanisms The analysis successfully generated a 2D classification map using the cancellation metric M and composite coherence … |
+| [73](phase-73/) | The composite-driven phase non-uniformity signature (all-terms non-uniform, primes-only uniform) observed at t≈84.2 is confirmed to be present at both additional L_DH off-line … |
+| [74](phase-74/) | The resonance mechanism for L(s, μ(n)) is identical to that of L(s, λ(n)), driven by intrinsic alignment of term-class sums S_k, not by phase-corrected vectors (-1)^k S_k |
+| [75](phase-75/) | Vector Interference Pattern at Riemann Zeta Peak |
+| [76](phase-76/) | (No written summary; data files only.) |
+| [77](phase-77/) | The M_coh metric for L_DH exhibits clear non-stationary extreme value behavior with height t |
+| [78](phase-78/) | Analysis of GEV Shape Parameter ξ vs Resonance Strength in Perturbed L_DH Functions — Main Finding The hypothesis is REJECTED |
+| [79](phase-79/) | The fine-grained analysis of the perturbed Davenport-Heilbronn function L_DH^(ε=0.01) with N=10^6 confirms that the composite phase coherence metric R_comp(t) and the partial sum … |
+| [80](phase-80/) | Using the canonical definition M = sqrt(Σ/S_k/²) / /Σ S_k/ from the literature, all four function classes exhibit destructive interference (M < 1) at their top 20 peaks, with … |
+| [81](phase-81/) | Analysis of peak magnitude scaling in l-functions |
+| [82](phase-82/) | The research hypothesis is REJECTED. The GEV shape parameter ξ of the R_comp metric distribution does NOT reliably distinguish "standard" L-functions from "anomalous" ones in the … |
+| [83](phase-83/) | The composite coherence R_comp is predominantly a measure of coefficient sign structure rather than multiplicativity, as demonstrated by the statistical indistinguishability (p = … |
+| [84](phase-84/) | The hypothesis that perturbed L_DH^(ε) functions cluster with the original L_DH in the (M_coh, R_comp) space is REJECTED |
+| [85](phase-85/) | The analysis reveals a suggestive but not statistically significant pattern distinguishing multiplicative from non-multiplicative functions based on the non-stationarity of … |
+| [86](phase-86/) | The research hypothesis is REJECTED. The surprising R_comp hierarchy observed in r49 (L(χ₄) > L_DH) does NOT persist after correcting the L(χ₄) implementation to use the real … |
+| [87](phase-87/) | The research hypothesis that the extreme values of the resonance-specific metric R_comp exhibit a heavy-tailed distribution with a shape parameter significantly larger than that … |
+| [88](phase-88/) | GEV Analysis of L(χ₄) and L_DH^(ε=0.01): Complete Classification |
+| [89](phase-89/) | The hypothesis that L_DH shows high cross-scale coherence clearly separating it from multiplicative functions is REJECTED: for T ∈ [100, 200], L_DH shows maximum coherence … |

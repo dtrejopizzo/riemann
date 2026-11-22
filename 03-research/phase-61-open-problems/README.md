@@ -5,7 +5,7 @@ phase-60 and works systematically through its twelve-step proof outline, closing
 (unconditional) loose end with finite, named work, while isolating exactly which step is equivalent to
 RH itself. A large bank of numerical experiments (`E10`–`E96`) backs each closure, and several rounds of
 outside mathematical review (`respuestas-matematicos.md`, `respuesta4.md`, correspondence with named
-reviewers) independently confirm which pieces are closable and which are not. A companion detector paper
+mathematicians) independently confirm which pieces are closable and which are not. A companion detector paper
 and open-problems inventory track the state of each sub-problem.
 
 ## Results
@@ -33,7 +33,7 @@ and open-problems inventory track the state of each sub-problem.
   mechanism; the band-edge closure (Doc R10) proves the limiting ratio law for the averaged bulk
   coefficients with Dirichlet ends: PROVED (unconditional) for the averaged model, NUMERICAL confirmation
   for the full intrinsic operator.
-- Outside review (`respuestas-matematicos.md`): an independent reviewer, after verifying the cited CCM
+- Outside review (`respuestas-matematicos.md`): an independent mathematician, after verifying the cited CCM
   and Connes–van Suijlekom source theorems are real and say what is claimed, confirms the same
   division — O1–O3 fully closable, O4/O6/O7 closable with named standard inputs, O11's functional-analytic
   content can be stated precisely, but explicitly refuses to "close" O5 (full uniformity), O9, or O10,
@@ -54,6 +54,9 @@ and open-problems inventory track the state of each sub-problem.
 - `papers-cierre-2.3/` — reference papers (prolate/Slepian, Meixner–Pollaczek) used in the O6/2.3 closures.
 
 ## Relation to other phases
-Directly continues `phase-60-discriminant`'s CCM reduction chain and tribunal audit; the isolated wall
+Directly continues `phase-60-discriminant`'s CCM reduction chain and three-part audit; the isolated wall
 (step 12, $\varepsilon_0 \ge 0\ \forall\lambda$) is the same RH-equivalent core identified by the
-phase-60 tribunal, now sharpened to a single scalar sign question.
+phase-60 audit, now sharpened to a single scalar sign question.
+
+
+Also present: `E87b_prime_mechanism.py.bak`, a backup copy of an earlier version of the E87b script.

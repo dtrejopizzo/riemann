@@ -43,7 +43,7 @@ obstacle, (c) where it is documented.
 **[NG-A6] The r4/r5 phase transition as an RH-relevant result**
 - Attempted: claim that the transition N_c ≈ 1.18×10⁵ in ω-class geometry constitutes new insight toward RH.
 - Why it fails: the phase-transition headline was refuted by canonical re-verification. Reframed to the weaker, candid result (ζ MORE constructive at peaks, no transition).
-- File: memory `project-p5-transition-refuted.md`
+- Source: working note `project-p5-transition-refuted.md` (not kept in the repository)
 
 **[NG-A7] TDA (Topological Data Analysis) as an RH detector**
 - Attempted: use persistent homology (H0, H1) of the zero set to distinguish ζ from L_DH.

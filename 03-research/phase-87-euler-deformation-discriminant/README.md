@@ -41,3 +41,21 @@ E87.003  exact bordered tangent anomaly.
 E87.004  endpoint boundary-layer split.
 E87.005  archimedean-base autopsy and combined anomaly.
 ```
+
+## Outcome
+
+Closed; see [`PHASE_87_CLOSURE.md`](PHASE_87_CLOSURE.md) (“corrected arithmetic discriminant”). No positivity statement toward Ω7 is proved here; the phase is an exact reduction.
+Open items carried forward: effective endpoint-layer pencil; signed base-layer cancellation; RDI-ANCHOR and Omega7.
+
+## Contents
+
+- `E87_001_DISCRIMINANT_CORRECTION.md` — E87.001 - Correction of the sign-coherence discriminant
+- `E87_002_EULER_SEMIGROUP_DEFORMATION.md` — E87.002 - Exact Euler semigroup deformation
+- `E87_003_BORDERED_TANGENT_ANOMALY.md` — E87.003 - Exact bordered tangent anomaly
+- `E87_004_ENDPOINT_BOUNDARY_LAYER.md` — E87.004 - Endpoint boundary layer in the arithmetic deformation
+- `E87_005_ARCH_BASE_AUTOPSY.md` — E87.005 - Archimedean-base autopsy and combined anomaly
+- `PHASE_87_CLOSURE.md` — Phase 87 closure - corrected arithmetic discriminant
+
+## Relation to other phases
+
+Continues [`phase-86-signed-spectral-abel`](../phase-86-signed-spectral-abel/); its open target passes to [`phase-88-endpoint-layer-pencil`](../phase-88-endpoint-layer-pencil/). The chain of phases 80–101 is the finite real-rooted CCM route to Ω7 (the Li–Keiper positivity statement), opened in phases 71–79.

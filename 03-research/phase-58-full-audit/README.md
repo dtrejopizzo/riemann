@@ -4,7 +4,7 @@ This phase performs a systematic, line-by-line adversarial audit of every result
 phases 55–57 (the Green–Littlewood identity, the energy dichotomy, the coercivity/backward dynamics,
 the Hermite takeoff, the log-improvement pivot, and the desingularized Dirichlet energy), reconstructing
 each proof independently before checking it against the source. It also opens and resolves two
-residual "chinks" left by the audit, and formalizes a director's structural question about whether any
+residual "chinks" left by the audit, and formalizes a structural question about whether any
 single object can carry both the fine second-order correlation data and the global coercivity needed
 to close the tower.
 

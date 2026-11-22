@@ -28,7 +28,7 @@ But integral_R phi(y)/|y| dy=1/pi. Therefore the off-origin coefficient
 of F(log|x|) is -1/2, not -1. A delta term cannot change this test,
 because phi(0)=0.
 
-The local [Meyer source](../../00-references/papers-nuevos/C/arXiv-math0412277v3),
+The local [Meyer source](../../00-references/papers-nuevos/foliated-dynamics/arXiv-math0412277v3),
 end of section 5, explicitly obtains the coefficient c=-1 with that
 Fourier definition. The [online version checked](https://arxiv.org/html/math/0412277v3)
 also displays the unhalved archimedean kernel in equation (3). Those

@@ -25,5 +25,5 @@ Outcome:
     I_∂ ≤ 0 on primitive radial classes of D_A^∞ with c = 0.
 
 Cross-paper records `[phase 132]` in Papers 43 and 44 (no theorem, proof or
-row label changed). Rows A, B, C are complete; next the review panel,
+row label changed). Rows A, B, C are complete; next the independent review,
 then row D.

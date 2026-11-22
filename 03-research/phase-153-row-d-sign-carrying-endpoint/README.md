@@ -11,3 +11,16 @@ Round 4: decay law of λ_min(A_T) on [0.30, log 2] — c(T) → ≈76 at log 2; 
 Rounds 5–6: Φ_N built at the symbol level (hand proof by uncertainty fails at both endpoints; Bochner kills soft minorants); prime-free body W_T vs arithmetic half-space: W_T is NOT the cos(π/m) box (deficit 1.28 in the w_ζ direction) — no projection-only argument reaches Weil positivity; Lemma 3.1 (exact autocorrelation extrema on an interval) PROVED; "weights at the band edge" = λ≈0 restated, WITHDRAWN. See R153_015–R153_021.
 
 Files: R153_000 blueprint · R153_001 construction r1 (§§1.3, 2, 3 superseded) · R153_002 audit · R153_003 construction r2 + certificate · R153_004 confirmation (PROOF ACCEPTED) · **R153_005 review closing decision (labels of record)** · `scripts/`, `scripts/audit/`, `scripts/certificate/` (`cert.py`, mpmath.iv, ≥ 300 bits).
+
+## Other files in this folder
+
+- `R153_007_TRACK1_SINGLE_PAIR.md` — Round 3, Track 1 (P153.5): the single off-line pair for `ζ` itself.
+- `R153_008_TRACK2_NEEDLE.md` — Track 2 (P153.4): the `b`-needle at `T = log 2`.
+- `R153_009_ROUND3_AUDIT.md` — Audit, round 3 (Tracks 1 and 2).
+- `R153_012_ROUND4_DECAY_LAW.md` — Round 4 (construction): the decay law of `λ(T) = λ_min(A_T|P_T)` on `[0.30, log 2]`.
+- `R153_013_ROUND4_AUDIT.md` — Round 4,  audit of `R153_012_ROUND4_DECAY_LAW.md`.
+- `R153_016_ROUND5_PHI_CONSTRUCTION.md` — Round 5, construction: the truncated Weil symbol `σ_T`, its negative set, the prime bands `Φ_2, Φ_3`, and the attempted mesh-free endpoint proof.
+- `R153_017_ROUND5_CLOSING_DECISION.md` — Closing decision, round 5 (construction of Φ_N at the symbol level).
+- `R153_018_ROUND6_BLUEPRINT.md` — Blueprint, round 6: the prime-free body W_T and the arithmetic half-space.
+- `R153_019_ROUND6_BODY.md` — Round 6, construction: the prime-free body `W_T`, its facet at `w_ζ`, and the Krein bands.
+- `R153_020_ROUND6_AUDIT.md` — Round 6,  audit: the body `W_T`, the bands, and what "at the edge" means.

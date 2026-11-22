@@ -133,7 +133,7 @@ the zeros.
 
 ## 2. Connes–Moscovici 2022: what exactly is there (CITED)
 
-Source: `00-references/connes-moscovici-2022-the-uv-prolate-spectrum-matches-the-zeros-of-zeta.pdf`,
+Source: `00-references/prolate-and-zeta-cycles/connes-moscovici-2022-the-uv-prolate-spectrum-matches-the-zeros-of-zeta.pdf`,
 PNAS 119(22) e2123174119, 7 pp.
 
 1. **Operator** (p. 1, eq. [1]): (W_λ ξ)(x) = −∂_x((λ²−x²)∂_x ξ) + (2πλ)² x² ξ, defined on S(ℝ)

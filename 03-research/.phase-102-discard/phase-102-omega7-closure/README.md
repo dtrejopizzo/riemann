@@ -50,7 +50,7 @@ The remaining central target is the infinite range:
 
 ## Working documents
 
-- `PHASE_102_EXECUTION_PLAN.md`: ordered plan and ownership of each open point.
+- `PHASE_102_EXECUTION_PLAN.md`: ordered plan with each open point assigned.
 - `PHASE_102_OBLIGATION_LEDGER.md`: live ledger of closed, reduced and open items.
 - `102_A0_UNIFORM_TAIL_TARGET.md`: first technical target for the direct Li route.
 - `102_A0_UNIFORM_TAIL_THEOREM.md`: proved tail theorem conditional only on explicit PNT and archimedean lower-bound constants.
@@ -62,6 +62,8 @@ The remaining central target is the infinite range:
 - `102_RDI_BRIDGE_TRIAGE.md`: carril B bridge status.
 - `102_RDI_TO_LI_MINIMAL_BRIDGE.md`: minimal theorem needed for RDI to re-enter.
 - `102_LI_ASSEMBLY_CONDITIONAL_THEOREM.md`: final Li assembly once the infinite range is proved.
+- `RH-MASTER-CONTEXT/`, `RH-MASTER-CONTEXT-SNAPSHOT/`: the inherited master context (each with its own README).
+- `audits/`, `tools/`, `work/`: empty placeholders.
 
 ## Closing criterion
 

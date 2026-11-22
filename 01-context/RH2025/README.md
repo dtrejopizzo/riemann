@@ -4,7 +4,7 @@
 
 ## Research Objective
 
-This program's task is constructing the geometric class K_geom / SURF behind the Riemann Hypothesis. The run is instructed to work rigorously and report only what it can justify — a false proof is worse than an candid negative result: never present an unproven step as proven, never cite an open conjecture as if established.
+This program aims to construct the geometric class K_geom / SURF behind the Riemann Hypothesis. The working rule throughout is to report only what can be justified — a false proof is worse than a candid negative result: no unproven step is presented as proven, and no open conjecture is cited as if established.
 
 ### 1. Setting (definitions)
 
@@ -19,21 +19,21 @@ RH holds iff there is a hard-Lefschetz sl₂-triple (L, Λ, H) on H⁺ with a po
 
 **Consequence:** ω/L must come from an independent arithmetic geometry — the "arithmetic surface" S = "Spec ℤ ×_{Spec F₁} Spec ℤ" — with L = class of the diagonal Δ. Required properties: **G1** (independence): a cohomology H¹(S) with Frobenius = T and Lefschetz class L=[Δ] ∉ W*(T). **G2** (hard Lefschetz / integer grading): L generates an integer-graded (lowest-weight) sl₂ on H¹(S). **G3** (Tate twist): [T, L]=cL realized geometrically (Hecke/Frobenius). **G4** (Hodge-Riemann positivity): the Hodge index ω ≥ 0 on primitives. G1–G4 for S are exactly Grothendieck's Standard Conjectures (types B, C, D) for that absolute product — **OPEN in 2026**.
 
-### 3. Task
+### 3. Goal
 
-Make genuine, rigorous progress toward (S, Δ, L, ω) satisfying G1–G4, OR prove a precise obstruction. Pick ONE route, go deep:
+The goal is genuine, rigorous progress toward (S, Δ, L, ω) satisfying G1–G4, or a precise obstruction. Three routes were considered, each to be followed in depth:
 
 - **Route A** (λ₁ / λ-rings; Borger, Connes-Consani): define S and [Δ] with L; test whether ample/Hodge-Riemann positivity can hold.
 - **Route B** (absolute prismatic cohomology; Bhatt-Scholze; Sen/monodromy operator): build a global prismatic site over ℤ with Poincaré duality and a diagonal trace; check whether prismatic Frobenius eigenvalues are the GLOBAL zeros γ_ρ — NOT merely the local Satake α_p (for ζ these are trivially 1, the anatomy s_k(p)=1).
-- **Route C** (Connes scaling / adele class space): **WARNING** — the scaling generator has CONTINUOUS spectrum (=ℝ); that is exactly why prior attempts failed (no compact integration → no integer grading; the invariant measure dλ is INFINITE, so "integration to SU(2)" is FALSE). If you use Route C, you must produce the integer grading from genuine compact/finite geometry you exhibit, never assert it.
+- **Route C** (Connes scaling / adele class space): **WARNING** — the scaling generator has CONTINUOUS spectrum (=ℝ); that is exactly why prior attempts failed (no compact integration → no integer grading; the invariant measure dλ is INFINITE, so "integration to SU(2)" is FALSE). Any use of Route C must produce the integer grading from an explicitly exhibited compact/finite geometry, not assert it.
 
-### 4. Hard gates (anti-fabrication; non-negotiable)
+### 4. Hard gates
 
-For each claimed theorem: give a complete proof, or label it "OPEN" and stop. Never invoke an open Standard Conjecture, weight-monodromy, an unbuilt motivic category over F₁, or a global prismatic Poincaré duality AS IF proven. **Independence gate:** for any class/operator L you build, PROVE L ∉ W*(T). If you obtain L by inverting spectral moments M_k = Tr(L·T^k), you FAILED — that fixes only the marginal γ_ρ, not L, and lands in W*(T). **Integrality gate:** do NOT deduce h_ρ ∈ ℤ from sl₂ relations alone (false for continuous spectrum). Integrality must follow from a genuine compact/finite geometric structure you exhibit. **Positivity gate:** any formula for ω or h_ρ containing the off-line signs ε_ρ, or whose positivity equals "Q ≥ 0", is CIRCULAR — flag and discard. **Adversarial self-audit:** after each candidate, spend equal effort trying to BREAK it; report the break. Numerics: verify checkable claims against the first ~10³ zeros, von Mangoldt Λ, and Ψ(r).
+Every claimed theorem receives a complete proof or is labelled "OPEN". No open Standard Conjecture, weight-monodromy, an unbuilt motivic category over F₁, or global prismatic Poincaré duality is used as if proven. **Independence gate:** for any class/operator L constructed, L ∉ W*(T) must be proved. An L obtained by inverting spectral moments M_k = Tr(L·T^k) fails the gate — that fixes only the marginal γ_ρ, not L, and lands in W*(T). **Integrality gate:** h_ρ ∈ ℤ is not deduced from sl₂ relations alone (false for continuous spectrum); integrality must follow from an exhibited compact/finite geometric structure. **Positivity gate:** any formula for ω or h_ρ containing the off-line signs ε_ρ, or whose positivity equals "Q ≥ 0", is circular and is discarded. **Adversarial self-audit:** each candidate receives equal effort aimed at breaking it, and the break is reported. Numerics: checkable claims are verified against the first ~10³ zeros, von Mangoldt Λ, and Ψ(r).
 
-### 5. Deliverable
+### 5. Expected outcome
 
-Output exactly one of: (i) A rigorous construction of S/Δ/L/ω: an explicit definition independent of the spectrum; a proof (or numerically-verified strong evidence) of whichever of G1–G4 is established; the independence + integrality certificates; an candid list of axioms still open. (ii) A precise obstruction theorem: a proved statement that route X cannot supply some G_i, for a specific structural reason, sharpening why RH resists. **DO NOT output a claimed proof of RH.** If a construction's positivity reduces to RH, classify it as a REDUCTION, not a proof. Report sections: setup → route → construction → gates passed/failed → numerical verification → partial result or obstruction → open items.
+Exactly one of: (i) A rigorous construction of S/Δ/L/ω: an explicit definition independent of the spectrum; a proof (or numerically-verified strong evidence) of whichever of G1–G4 is established; the independence + integrality certificates; a candid list of axioms still open. (ii) A precise obstruction theorem: a proved statement that route X cannot supply some G_i, for a specific structural reason, sharpening why RH resists. No proof of RH is claimed; a construction whose positivity reduces to RH is classified as a reduction, not a proof. Each report is organised as: setup → route → construction → gates passed/failed → numerical verification → partial result or obstruction → open items.
 
 ## Results
 
@@ -103,6 +103,92 @@ Together, these results sharpen a concrete, testable requirement for K_geom: the
 - Showed that Route B (absolute prismatic cohomology) provides a plausible cohomological scaffold but no global spectral (Frobenius/Sen-type) generator whose spectrum could equal the Riemann zeros, due to a fundamental division of labor between prismatic Frobenius (L-factors) and Sen operators (Hodge-Tate weights).
 - Established a precise, quantitative, non-circular empirical target for any future K_geom construction: reproduction of the long-range spectral-rigidity plateau Δ₃^∞ ≈ 0.1908 (matching the Berry semiclassical prime-orbit prediction to ≈2%) via a prime-power series Σ_{p,r}1/(r²p^r), directly motivating and connecting to the geometric obstruction studied in Program 10.
 
-## Files
+## Connection to later work
 
-Each subfolder is a single task from the underlying investigation, covering the noncommutative-geometry obstruction analysis (Route C), the Arakelov-λ-ring blueprint (Route A), the absolute prismatic cohomology assessment (Route B), and the long-range spectral-statistics constraint described above.
+The quantitative spectral-rigidity target and the obstruction for the noncommutative route feed directly into the geometric questions of the later theoretical program (`../03-research/`).
+
+## Structure of the folder
+
+The program is divided into 79 numbered phases, one subfolder `phase-N/` each. A phase folder normally contains `OVERVIEW.md` (the written result of that phase), the executed notebook when one exists (`notebook_executed.ipynb` and/or a notebook with a hexadecimal name) and the input and output files (data arrays, tables, figures). The one-line descriptions below are taken from each phase's `OVERVIEW.md`; where a phase has no written summary this is stated.
+
+| Phase | Content |
+|---|---|
+| [1](phase-1/) | Survey the literature on Shimura varieties and automorphic forms to verify the commutation of Lefschetz and Hecke operators |
+| [2](phase-2/) | Survey the literature on Shimura varieties, automorphic forms, and Arakelov geometry to find a proof of the invariance of canonical metrics under Hecke correspondences |
+| [3](phase-3/) | Conduct a literature search focused on the prolate spheroidal wave function, Sonin space, and cyclic pair constructions in the work of Connes, Consani, and Moscovici |
+| [4](phase-4/) | Search the literature of p-adic Hodge theory and p-adic analysis for attempts to write local L-factors as regularized determinants |
+| [5](phase-5/) | Survey the literature on motivic cohomology for Spec ℤ and number fields |
+| [6](phase-6/) | Survey the literature on motives for arithmetic schemes, including Voevodsky's motives, mixed motives, and Arakelov-Chow-theory based constructions |
+| [7](phase-7/) | Survey literature at the intersection of Arakelov geometry, dynamical systems, and number theory to find a definition of an intersection pairing that uses von Mangoldt-type weights |
+| [8](phase-8/) | Investigate the definition and functoriality of the Sen operator in p-adic Hodge theory and its proposed analogues in prismatic cohomology |
+| [9](phase-9/) | Search the literature on the Connes-Consani scaling site and related trace formulas to explicitly derive the von Mangoldt sum |
+| [10](phase-10/) | Search the literature to find the necessary components to compare the Arakelov self-intersection number and a dynamical trace formula for P¹_ℤ |
+| [11](phase-11/) | Investigate the sl₂ structure on the arithmetic Chow groups of abelian varieties, focusing on the explicit construction of the lowering operator |
+| [12](phase-12/) | Survey the literature on derived Hecke algebras and the cohomology of arithmetic manifolds to find an explicit construction of a Lefschetz lowering operator Λ as an adjoint |
+| [13](phase-13/) | Conduct a literature review on the interplay between the Beauville sl₂ action on Chow groups and the Adams operations on K-theory for abelian varieties |
+| [14](phase-14/) | (No written summary.) Identify the empirical plateau |
+| [15](phase-15/) | Conduct a literature review of Arakelov motivic cohomology and related theories to find evidence for a tensor-product-like structure |
+| [16](phase-16/) | Review the literature on the Connes-Consani construction of P¹_F1 and its sheaf cohomology |
+| [17](phase-17/) | Conduct a literature search to translate the components of the Weil-Hodge form ω(x,y) = Q(JLx,y) into the language of Arakelov intersection theory |
+| [18](phase-18/) | Survey the literature on cyclic homology, Hochschild homology, and related invariants of the Bost-Connes C*-algebra and its dense subalgebras |
+| [19](phase-19/) | Survey the literature on Arakelov geometry and arithmetic K-theory to find a proof of the commutation relation [L, T_n]=0 |
+| [20](phase-20/) | Conduct a detailed literature review of the sl₂-action on the Chow groups and K-theory of abelian varieties |
+| [21](phase-21/) | Examine the literature on λ-rings and their connection to sl₂ representations |
+| [22](phase-22/) | Apply the obstruction theorem formalized in report r9 to the candidate Lefschetz operator from Route A |
+| [23](phase-23/) | Survey the literature on derived Hecke algebras, motivic cycles, and correspondence algebras to find an explicit construction of an sl₂-triple |
+| [24](phase-24/) | Search the literature for the analytical properties of operators on Arakelov, Deligne, and related arithmetic cohomology spaces |
+| [25](phase-25/) | Search the literature for explicit computations of metric-dependent arithmetic characteristic classes |
+| [26](phase-26/) | Search the Arakelov geometry literature for a definition of the Lefschetz lowering operator Λ as the adjoint of the raising operator L with respect to the arithmetic intersection … |
+| [27](phase-27/) | Conduct a literature review of p-adic Hodge theory, focusing on the theory of (φ, Γ)-modules over the Robba ring |
+| [28](phase-28/) | Survey the literature on noncommutative geometry and operator algebras for analogues of Arakelov intersection theory and Hodge-Index positivity |
+| [29](phase-29/) | Search the literature for explicit formulas and calculations related to arithmetic intersection theory on P¹_ℤ |
+| [30](phase-30/) | Survey the advanced literature on integral prismatization (Σ_Z), syntomic cohomology, and topological cyclic/Hochschild homology (TC/THH) over Spec ℤ |
+| [31](phase-31/) | Conduct a literature search at the intersection of operator algebras, Arakelov theory, and the Weil explicit formula |
+| [32](phase-32/) | Conduct a deep literature survey on the prismatization stack Σ_Z and related global prismatic/syntomic theories |
+| [33](phase-33/) | Conduct a literature search to formalize the local variation argument for operator independence |
+| [34](phase-34/) | Conduct a detailed analysis of the Connes-Consani construction of H¹(P¹_F1, Ω) |
+| [35](phase-35/) | Analyze the structure of the Gillet-Soulé Arithmetic Riemann-Roch (ARR) theorem and investigate its relationship to the Weil explicit formula |
+| [36](phase-36/) | (No written summary.) 1. Obtain ~10^6 nontrivial Riemann zeros. Odlyzko hosts these. Try lmfdb api or Odlyzko's site |
+| [37](phase-37/) | Review literature on the arithmetic Hodge Index conjecture, arithmetic intersection theory, and related positivity conditions |
+| [38](phase-38/) | Survey the literature on the K-theory and cyclic homology of C*-algebras relevant to number theory |
+| [39](phase-39/) | Survey the literature on advanced and specialized Arithmetic Riemann-Roch theorems to find one where the sum over finite places structurally resembles the prime sum from the Δ₃ … |
+| [40](phase-40/) | Search the literature on Arakelov theory and related analytic number theory to find a mechanism that could produce spectral rigidity |
+| [41](phase-41/) | Perform a targeted search of the literature to locate the proof of adjointness for the sl₂ operators on arithmetic Chow groups of abelian varieties |
+| [42](phase-42/) | Conduct a comparative literature review of advanced p-adic and archimedean Hodge theories |
+| [43](phase-43/) | Search the literature in functional analysis and mathematical physics for theorems regarding operators satisfying [T,L]=cL (Heisenberg-Weyl or ladder operator relations) |
+| [44](phase-44/) | Survey the literature on the Bost-Connes system, its generalizations, and other QSM models with connections to class field theory and the Riemann zeta function |
+| [45](phase-45/) | Conduct a comprehensive literature survey on F1-geometry, λ-rings, and associated motivic theories |
+| [46](phase-46/) | (No written summary.) The CSV parses cleanly. No malformed UUID present in current file. Let's verify |
+| [47](phase-47/) | Search the Arakelov geometry literature for definitions of a Λ operator and calculations of the [L,Λ] commutator |
+| [48](phase-48/) | Survey the literature on Fourier-Mukai transforms and abelian varieties to identify the minimal geometric prerequisites for constructing the sl₂ lowering operator |
+| [49](phase-49/) | Survey the literature on correspondences, Chow groups, and derived algebraic geometry to find an explicit construction of a Lefschetz lowering operator Λ as the transpose of a … |
+| [50](phase-50/) | Search the literature for explicit formulas in Arakelov theory and related fields (e.g., noncommutative geometry) that connect global geometric invariants of arithmetic schemes … |
+| [51](phase-51/) | Survey the literature in geometric representation theory, quantum field theory, and string theory for examples of sl₂ or other Lie algebra actions on tensor product Hilbert spaces … |
+| [52](phase-52/) | Review the literature on prismatic cohomology and related topics (e.g., syntomic, motivic cohomology) with a focus on a potential global application over Spec Z |
+| [53](phase-53/) | Conduct a targeted literature search on the latest developments in integral prismatic cohomology, topological cyclic homology (TC), and related theories over Spec ℤ |
+| [54](phase-54/) | Conduct a comparative literature review of Sen theory and archimedean Hodge theory |
+| [55](phase-55/) | (No written summary.) Step 1-6: Set up the symbolic framework and confirm the classical obstruction for weighted shifts |
+| [56](phase-56/) | Survey the literature on advanced geometric transforms and motivic structures to find a replacement for the Fourier-Mukai sl₂ construction applicable to Spec ℤ |
+| [57](phase-57/) | Survey the literature on the representation theory of λ-rings and the action of Adams operations ψ^n on cohomology theories over Spec ℤ (e.g., K-theory, TC, or conjectural motivic … |
+| [58](phase-58/) | Perform a comparative analysis of Deninger's program on zeta functions and the formalism of absolute prismatic cohomology |
+| [59](phase-59/) | (No written summary.) Try Odlyzko's zeros1 file - first 100,000 zeros |
+| [60](phase-60/) | Conduct a literature review on Arakelov motivic cohomology and arithmetic K-theory |
+| [61](phase-61/) | Survey the literature on Arakelov theory, dynamical systems on p-adic spaces, and connections to noncommutative geometry to find an alternative formulation of arithmetic … |
+| [62](phase-62/) | Analyze the structure of the NCG trace formula to identify a mechanism that could cause the saturation of the Δ₃(L) statistic |
+| [63](phase-63/) | Question: Your goal is to write a clear and thorough literature review for this primary objective that others can easily use for future work |
+| [64](phase-64/) | Search the literature on Arakelov motivic cohomology and λ-rings to determine if a "decoupled compatibility" structure exists |
+| [65](phase-65/) | Conduct a literature search on advanced Arakelov/Deligne cohomology theories |
+| [66](phase-66/) | Survey the literature on duality, pairings, and conjectural structures in Arakelov geometry |
+| [67](phase-67/) | (No written summary; data files only.) |
+| [68](phase-68/) | Search the literature for geometric frameworks that produce sums weighted by log p over prime powers, resolving the m log p mismatch from classical arithmetic geometry |
+| [69](phase-69/) | Survey the literature on quantum groups and their applications in geometry |
+| [70](phase-70/) | (No written summary.) Inspect zeros6.txt format and load first 1,000,000 zeros |
+| [71](phase-71/) | Conduct a detailed literature review of the Connes-Consani-Moscovici prolate operator framework |
+| [72](phase-72/) | Investigate the spectral properties of the sl₂(ℝ) action within the prolate/Sonin model |
+| [73](phase-73/) | Search the literature for any definition of a "global arithmetic Hodge star" operator and its use in constructing a Lefschetz sl₂-triple |
+| [74](phase-74/) | Search the literature on motivic and Arakelov cohomology for definitions of Hecke operators and their commutation relations with Lefschetz operators |
+| [75](phase-75/) | Conduct a focused search in the functional analysis and mathematical physics literature on commutators involving unbounded operators |
+| [76](phase-76/) | Search the literature of spectral geometry and noncommutative geometry for an explicit formula relating the Green's function contribution in Arakelov intersection theory to a … |
+| [77](phase-77/) | Survey the literature at the intersection of Arakelov geometry, noncommutative geometry, and index theory to find an explicit mapping between Arakelov and NCG formalisms |
+| [78](phase-78/) | Review foundational papers on prismatic cohomology by Bhatt-Scholze and others |
+| [79](phase-79/) | Conduct a targeted literature search in functional analysis and operator algebras to identify theorems or criteria for proving that an operator L is not an element of a von … |

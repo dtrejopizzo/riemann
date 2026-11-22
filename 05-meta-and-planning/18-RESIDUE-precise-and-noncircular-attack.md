@@ -1,6 +1,8 @@
 # The prime-side residue, formulated precisely — and where it separates from RH (non-circular)
 
-**Auditor build · 2026-06-05.** Goal: state the cross-scale cancellation residue as a precise prime-side
+**Date:** 2026-06-05 · **Status:** completed; the attack it proposes was carried out in plan 19.
+
+**Purpose.** State the cross-scale cancellation residue as a precise prime-side
 proposition, decide whether attacking it is RH-circular, and locate the exact point where it becomes a recognized
 (non-RH) frontier. Result: the residue is the boundedness of a single mesoscopic second moment $V(d,T)$; it is
 **strictly weaker than RH** and **non-circular**; its unconditional part is Montgomery's proven pair-correlation

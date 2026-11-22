@@ -1,4 +1,4 @@
-# Phase 4 — Handoff: a faithful Kreĭn-space realization of the Weil quadratic form
+# Phase 4 — A faithful Kreĭn-space realization of the Weil quadratic form
 
 The phase asks whether the Weil positivity criterion can be given a rigorous operator-theoretic
 realization on the classical band-limited (Paley–Wiener) test class, and whether that realization
@@ -30,4 +30,6 @@ on zero-side attacks.
 
 ## Relation to other phases
 `phase-5-structural` (Route B, milestones M1–M5) builds directly on this phase's Kreĭn template and
-no-go theorem, comparing it to the Connes–Consani and de Branges frameworks.
+no-go theorem, comparing it to the Connes–Consani and de Branges frameworks. The folder name
+`phase-4-handoff` is historical. The results are written up in Paper 08
+([`../../04-papers/08-weil-krein-realization/`](../../04-papers/08-weil-krein-realization/)).

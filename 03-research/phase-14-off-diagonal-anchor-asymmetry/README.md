@@ -22,7 +22,7 @@ already reducible to a known barrier.
 
 ## Documents
 
-- `STRATEGIC-where-omega-touches-the-zeros.md`, `M14.1-...motohashi.md`, `M14.2-...spectral-modification.md`, `M14.3-...self-referential-close-the-line.md` — the ω/Motohashi line, from strategic redirection to closure.
+- `STRATEGIC-where-omega-touches-the-zeros.md`, `M14.1-verdict-additive-divisor-motohashi.md`, `M14.2-verdict-nontrivial-spectral-modification.md`, `M14.3-VERDICT-self-referential-close-the-line.md` — the ω/Motohashi line, from strategic redirection to closure.
 - `N8-the-density-to-absence-gap.md` — characterization of the square-root cancellation barrier.
 - `BREAK-N8-the-anchor-asymmetry.md` — refutation of N8's claimed universality via de la Vallée Poussin; introduces the anchor-asymmetry reframing.
 - `ANCHOR-framework-a-classification-of-zero-absence.md` — the ζ-free anchor/sum-rule/Landau-singularity framework and its open construction question Q(anchor).

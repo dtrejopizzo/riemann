@@ -295,3 +295,11 @@ the two-channel inequality ‖x‖²≤Re⟨x,j⟩ ⟺ x=0. The contraction q_0<
 
 Working rules: pure mathematics; at most 5 parallel lines of attack per step; check R160 survey/brief and R161 notes
 before building.
+
+## Other files in this folder
+
+- `R162_102_B2_GAMMA_RESIDUE_UNIQUENESS.md` — B2: Gamma-residue uniqueness of the homogeneous mode.
+- `R162_103_B3_FIRST_CHAMBER.md` — B3: the first chamber 0.8 < T_* < ½ log 5.
+- `R162_2200_GRID_MAP.md` — Grid-paper map of row D (audit).
+- `scripts/` — supporting scripts (8 files).
+- `R162_2200_grid.json` — output data.

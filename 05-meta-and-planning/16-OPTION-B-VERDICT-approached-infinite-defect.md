@@ -1,6 +1,8 @@
 # Option (b), sub-fork decided: APPROACHED — the critical structure is infinite-dimensional
 
-**Auditor build · 2026-06-05.** `phase-14-off-diagonal-anchor-asymmetry/experiments/near_critical_multiplicity.py`. The surviving sub-fork of
+**Date:** 2026-06-05 · **Status:** closed negative (APPROACHED); the last door of option (b) was probed in plan 17.
+
+**Purpose.** Experiment: `phase-14-off-diagonal-anchor-asymmetry/experiments/near_critical_multiplicity.py`. The surviving sub-fork of
 the Pontryagin route was: in the genuine ($d\to\infty$) Weil form, is the saturation $\lambda_{\max}=1$ **attained**
 (finite critical structure $\Rightarrow$ finite defect $\kappa<\infty$ possible) or **approached** (growing number
 of near-critical directions $\Rightarrow$ infinite-dimensional marginality)? Computed.

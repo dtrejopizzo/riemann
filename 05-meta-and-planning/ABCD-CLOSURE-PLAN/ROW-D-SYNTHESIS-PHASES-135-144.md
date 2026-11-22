@@ -50,7 +50,7 @@ Hilbert–Pólya/KMS realization (MW-4, Thm 161.9).
   ingredient (a sections functor; a cone that is not a thin moment cone — `s₁ < 1` is the numerical
   signature of its absence). β is to be judged only on whether it names that ingredient, and α cannot be
   scoped before it does.
-* **(γ) Horn A / (T2)-type cones** (O-19′, O-18′, O-26): inside the frame; the auditor keeps them as the
+* **(γ) Horn A / (T2)-type cones** (O-19′, O-18′, O-26): inside the frame; the adversarial check keeps them as the
   only defensible frame-internal continuations, but §2 argues they will meet the same ray.
 
 ## 4. Recommendation

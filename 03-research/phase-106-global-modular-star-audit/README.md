@@ -2568,3 +2568,12 @@ Therefore the cyclotomic resultants remain exact finite local input, but
 the standalone classical surface cannot supply the global diagonal; the
 construction stops rather than borrowing the cardinality diagonal from a
 different pairing.
+
+## Other files in this folder
+
+Files not described above, grouped by prefix and type:
+
+- 90 memos with prefix `other` (e.g. `106_130_MULTIPLICATIVE_CELL_AND_CUTOFF_COMMUTATOR_GATE.md`, `106_131_EXACT_DELAY_BANK_KREIN_REALIZATION_AND_ABEL_PASSIVITY_GATE.md`, …, `106_97_SPECTRAL_DISPERSION_AND_TWO_PACKET_GATE.md`)
+- 20 scripts with prefix `other` (e.g. `106_04_cofinal_weil_defect_probe.py`, `106_05_scalar_summability_check.py`, …, `106_22_translation_metric_probe.py`)
+- 10 scripts with prefix `verify` (e.g. `verify_106_195_archimedean_determinant.py`, `verify_106_196_boundary_pushout.py`, …, `verify_106_206_resonant_model_space.py`)
+- `tools/` — subfolder (14 entries)

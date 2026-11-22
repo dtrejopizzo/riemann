@@ -139,3 +139,8 @@ independently from the other side. Phases 145–148 have now named the missing i
 has been stable under every enlargement tried. Per `R147_005` §5: record phases 134–148 in Paper 47
 Part IV and close row D at the map, unless O-47.7 is judged (a defect theorem for `L(s,χ)`) worth
 having.
+
+## Other files in this folder
+
+- `R148_004_CONFIRMATION.md` — Confirmation pass, phase 148.
+- `R148_005_CLOSING_DECISION.md` — Closing decision, phase 148: mixed effectivity on the full square.

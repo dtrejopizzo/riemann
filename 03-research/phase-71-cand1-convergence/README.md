@@ -61,7 +61,7 @@ and the convergence-horizon framing in `E6_convergence_horizon.py`. Phase 71 iso
   CCM determinant/de Branges normalization.
 
 - **[E71.7](E71_7_NOGO_WALL_AUDIT.md)** -- audits Phase 71 against the NO-GO list, Phase 53
-  inverted-Stone wall, and the Phase 60 tribunal. Verdict: CAND-1 remains live only as a
+  inverted-Stone wall, and the Phase 60 audit. Verdict: CAND-1 remains live only as a
   normal-family/Hurwitz convergence theorem for finite real-rooted CCM determinants; any appeal to
   global unitarity, positivity, or `epsilon_0>0` falls back into old walls.
 
@@ -124,3 +124,18 @@ proof: the spectrum is real for ANY input, so reality alone proves nothing -- th
 the operators converge to the ACTUAL zeta zeros. DH/planted falsador mandatory. No false victory;
 `sp(H_x)→{γ}` with all-real limit = RH is the target, and proving the convergence (not the reality)
 is the CCM open frontier.
+
+## Other files in this folder
+
+Files not described above:
+
+- `E71_11_logder_background_probe.py` — script
+- `E71_12_persistence_filter.py` — script
+- `E71_13_persistent_product_probe.py` — script
+- `E71_1_reality_mechanism.py` — script
+- `E71_2_convergence_detector.py` — script
+- `E71_3_convergence_rate_pnt.py` — script
+- `E71_4_riesz_window_stability.py` — script
+- `E71_6_characteristic_convergence_probe.py` — script
+- `E71_8_canonical_product_probe.py` — script
+- `E71_9_relative_arch_background_probe.py` — script

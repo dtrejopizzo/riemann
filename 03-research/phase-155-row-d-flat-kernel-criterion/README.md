@@ -114,3 +114,8 @@ Status (round 8): **P6 and P7 CLOSED** (8b, 8c), **P9 proved** (8d); round 8a (e
 | `R155_061_AUDIT_R8A.md` | audit of 8a. **All headline claims PASS**; amendments A1–A6 (re-run certificates `*_rerun.json` of record; `r8a_03` is the certificate of record for lower bounds because `r8a_02`'s `C₀` guard is 1e-55 against a 1e-51 error; exact `s ≤ c_N`; wording). Border sign `+` derived independently; eight archived runs regenerated one at a time (< 15 s each), identical. |
 
 Status (round 8 complete evening): 8a written and audited — **(H1) proved at `log 2`, the archimedean threshold certified in `[0.58, 0.60]`**; 8b/8d integrated into Paper 46 (erratum to 8b Prop 2.3(v) appended to `R155_053`); 8a integration and whole-paper review R4 in progress. Row-D label, endpoint of record and sign status unchanged; no sign for `ζ` beyond `log 2`.
+
+## Other files in this folder
+
+- `R155_030_ARXIV_NOVELTY_CHECK.md` — arXiv/literature novelty check for Paper 46.
+- `R155_060_CLOSING_DECISION_R8.md` — Closing decision, round 8, and closing summary of phase 155.

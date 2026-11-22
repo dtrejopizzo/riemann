@@ -1,6 +1,6 @@
 # scripts/r8d — round 8d, the margin-decay bound (R155_055)
 
-`r8d_margin_bound.py` — one script, runtime **5–13 s** depending on load (auditor measured 12.8 s; numpy/scipy/mpmath). Outputs `r8d_margin_bound.json`.
+`r8d_margin_bound.py` — one script, runtime **5–13 s** depending on load (an independent rerun measured 12.8 s; numpy/scipy/mpmath). Outputs `r8d_margin_bound.json`.
 
 * (A) constants of Theorem 1: `γ₁⁴ ≥ 14.13⁴`, `21⁹`, the Rosser (1941, Thm 19, constant `1.588`, `t ≥ 2`) and
   Trudgian (2014) upper bounds for `N(t)` at `t = 21` (`4.06`, `4.73`), and the check that `N(t) ≤ (t/2π) log t`

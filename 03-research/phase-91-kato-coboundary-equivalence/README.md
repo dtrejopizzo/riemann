@@ -28,3 +28,19 @@ E91.003  Euler gauge derivation defect;
 E91.004  no-bypass theorem and minimal remaining target.
 ```
 
+## Outcome
+
+Closed; see [`PHASE_91_CLOSURE.md`](PHASE_91_CLOSURE.md) (“Coboundary localization of the line current”). No positivity statement toward Ω7 is proved here; the phase is an exact reduction.
+Open items carried forward: LINE-EULER-COBOUNDARY reduced leakage; `PROJECTIVE-KATO-EULER`; RDI-ANCHOR and Omega7.
+
+## Contents
+
+- `E91_001_LINE_RESPONSE_EQUATION.md` — E91.001 - Exact line-response equation
+- `E91_002_INVERSE_FREE_EQUIVALENCE.md` — E91.002 - Inverse-free coboundary equivalence
+- `E91_003_EULER_DERIVATION_DEFECT.md` — E91.003 - Euler gauge derivation defect
+- `E91_004_NO_BYPASS_THEOREM.md` — E91.004 - No-bypass theorem for the Kato current
+- `PHASE_91_CLOSURE.md` — Phase 91 closure - Coboundary localization of the line current
+
+## Relation to other phases
+
+Continues [`phase-90-projective-kato-euler-current`](../phase-90-projective-kato-euler-current/); its open target passes to [`phase-92-cluster-adjugate-projectivization`](../phase-92-cluster-adjugate-projectivization/). The chain of phases 80–101 is the finite real-rooted CCM route to Ω7 (the Li–Keiper positivity statement), opened in phases 71–79.

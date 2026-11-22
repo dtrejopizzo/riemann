@@ -18,7 +18,7 @@ corpus (routes index, now ROUTES-MASTER-INDEX.md; ~1,700 routes) nor in the lite
 ## Stages
 1. Inventory of virgin families (two disjoint work lines) → FAMILIES_A/B_001.md.
 2. Synthesis and ranking by S1–S6 → SPEC_201_001.md. Choice of ONE family.
-3. Long constructive attempt with a fixed team (persistent line + audit + calibration).
+3. Long constructive attempt along one fixed line (persistent construction + audit + calibration).
 
 ## Status
 - Stage 1 DONE: FAMILIES_A (30) + FAMILIES_B (32): 39 non-virgin, 21 virgin-but-dead (G1, Thm 3′, Φ200 branches),
@@ -36,3 +36,8 @@ corpus (routes index, now ROUTES-MASTER-INDEX.md; ~1,700 routes) nor in the lite
   Main output (h1): non-uniform construction = exterior = table (★★) of phase 199. Decision pending.
 </content>
 </invoke>
+
+## Other files in this folder
+
+- `FAMILIES_C_001.md` — Inventory C (phase 201): infinite-dimensional nonlinear invariants of the test, with S7 and S8 by construction.
+- `V2_RECURRENCE_001.md` — Family B-V2: additive-multiplicative recurrence {x+y, xy}.

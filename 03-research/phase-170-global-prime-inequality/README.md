@@ -686,3 +686,15 @@ tail `H_(M,N)`, the Wronskians with `k>N`, Gamma, the Fourier jet, and the
 exterior ports. In Tate coordinates two copies of
 `rho (dot b^0,b)` appear; cancelling one would require a tangency of the
 contact branch that has not been proved.
+
+## Other files in this folder
+
+- `R170_840_BILATERAL_COLLAR_LAW.md` — Bilateral collar law: normal form, no-go, and minimal virial datum.
+- `R170_841_VIRIAL_LB.md` — VIR--LB: derivative of the finite hyperbola, first-order no-go and oriented residue.
+- `R170_843_ANTISYMMETRIC_HYPERBOLA_GREEN.md` — Antisymmetric Green of the hyperbola: Laplace sign, support collision and minimal Hankel lift.
+- `R170_844_WRONSKIAN_PHYSICAL_LIFT.md` — Physical lift of the Wronskian: full expansion, Fredholm obstruction and minimal covariant derivative.
+- `R170_848_FOURIER_REMOVED_PC_CURVATURE.md` — PC curvature with right Fourier removed: joint appearance of the archimedean virial and the Wronskian.
+- `R170_849_FINITE_EXTRACTION_AND_METRIC_MISMATCH.md` — Finite causal extraction and clash between the physical metric and the Hankel metric.
+- `R170_850_MOBIUS_EXTRACTED_WRONSKIAN_LAW.md` — Arithmetic law of the Wronskian extracted by Möbius.
+- `R170_851_SELBERG_COLLISION_AND_BOUNDARY_ATOMS.md` — Selberg collision of the Möbius law and boundary atoms of the extracted port.
+- `R170_885_EXACT_EULER_MACLAURIN_WRONSKIAN_PORT.md` — Exact Euler--Maclaurin Wronskian port.

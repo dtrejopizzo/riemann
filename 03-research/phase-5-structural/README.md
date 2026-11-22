@@ -10,7 +10,7 @@ that separates RH-consistent from RH-violating L-functions, independent of zero 
 - Connes–Consani comparison: both $K_{\mathrm{P8}}$ and $K_{\mathrm{CC}}$ instantiate the same
   abstract Kreĭn positivity template, but admit no natural zero-independent unitary identification;
   P8's no-go does **not** transport to the Connes residual, leaving it a live attack surface:
-  PROVED/ARGUED (panel-revised wording).
+  PROVED/ARGUED (wording revised on re-checking).
 - De Branges comparison: the chain-of-subspaces mechanism gives the same Kreĭn template via a
   different route; its positivity certificate is itself equivalent to the sign question, and
   proposed unconditional substitutes were historically REFUTED (Conrey–Li); the de Branges chain

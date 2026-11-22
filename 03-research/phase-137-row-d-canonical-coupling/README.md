@@ -54,3 +54,7 @@ Proposition `prop:crossed`, Koszul bimodule resolution with height-weighted
 contractions), so A.5 is no longer CONDITIONAL; the Hom transfer `Tr` is also
 proved (Proposition `prop:hom`, with `E_R` on `R^×`). Reflected in Paper 43
 `main.md` and README.
+
+## Other files in this folder
+
+- `R137_007_CLOSING_DECISION.md` — Closing decision, phase 137 (row D, canonical coupling).

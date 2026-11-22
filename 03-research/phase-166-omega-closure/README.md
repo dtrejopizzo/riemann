@@ -37,3 +37,7 @@ Round 9: survey of the whole corpus against (i)–(iii): none satisfies all thre
 **Phase 166 closed (rounds 6–7 and 9–12); (★_cell) OPEN; row D OPEN.** Requirements for any future route (after round 12): **(G)** a non-constant invariant S of the witness, global in X; **(N′)** control of Λ beyond the window with zero-localization strength. No class, window, zero, or Λ-inequality route satisfies them without being RH. Continues in phase 167 (the (WS*) bound).
 Editor (R164_301 §13): grid part 17 (1009 routes, ■10 ◩20 ◧34), R163_401 v11 (§4.11(h)), Paper 48 ("Phase 166" paragraph, Theorem jet hierarchy; 29 pages).
 Editor (R164_301 §15): grid part 18 (1022 routes, ■11 ◩19 ◧34; 7C painted), R163_401 v12 (§4.11(i)), Paper 48 ("Phases 166–167" paragraph; 31 pages).
+
+## Other files in this folder
+
+- `R166_301_TOEPLITZ_KERNEL.md` — The first-contact witness as a Toeplitz kernel element (Makarov–Poltoratski route).

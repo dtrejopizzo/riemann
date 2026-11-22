@@ -6,3 +6,7 @@
  cross-checked against 2Σ_{γ≤1419}|F̂(γ)|² to 6 digits (100000-zero column in the __main__ output is aliased: ignore).
 - `why.py` / `why.out` — 12 random F per support U: min W, mean pole/gamma, prime range, cancellation ratio.
 - GUE spacing check and the off-line quadruple counterexample are inline in R155_022.
+
+## Other files in this folder
+
+- `zeros_100000000057.npy`, `zeros_101.npy` — zero table / array data.

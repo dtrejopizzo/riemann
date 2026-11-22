@@ -135,6 +135,96 @@ Finally, a focused literature synthesis clarified why a zero-localization bridge
 - Demonstrated that differences in M_jk across L-functions are governed by **coefficient/conductor arithmetic**, not by off-line zero location — explicit-formula zero injection fails to reproduce empirical M_jk differences, while a simple arithmetic ablation (removing conductor-divisible integers) succeeds almost perfectly (cosine similarity up to 0.998).
 - Concluded that M_jk is best understood as a Gram-type/coefficient-arithmetic observable rather than a direct discretization of a Hilbert-Pólya-style operator, closing this specific inverse-spectral-reconstruction route while preserving the spectral-entropy discriminator as a genuine open lead.
 
-## Files
+## Connection to later work
 
-Each subfolder is a single task from the underlying investigation, covering the Step 0 forensic audit, the Selberg-class universality tests (Front 3), the S₂/higher-ω reconciliation (Front 4), the conditional second-moment theorem work (Front 1), explicit-formula sensitivity analysis (Front 5), and the inverse spectral reconstruction attempts (Front 2) described above.
+Having closed the inverse-spectral route from the cross-term matrix, the work moved to the operator and positivity questions of RH2021.
+
+## Structure of the folder
+
+The program is divided into 83 numbered phases, one subfolder `phase-N/` each. A phase folder normally contains `OVERVIEW.md` (the written result of that phase), the executed notebook when one exists (`notebook_executed.ipynb` and/or a notebook with a hexadecimal name) and the input and output files (data arrays, tables, figures). The one-line descriptions below are taken from each phase's `OVERVIEW.md`; where a phase has no written summary this is stated.
+
+| Phase | Content |
+|---|---|
+| [1](phase-1/) | The hypothesis is refuted: a multiple linear regression of the per-class peak-amplification tilt λ on the mean of /λ_p/ for primes p<100 and log(conductor) achieves only an … |
+| [2](phase-2/) | The hypothesis is refuted: a linear regression of log(A_{k,F}) on log(d), log(q), and k explains only R²≈0.11 of the variance — far below the predicted 80% — and the residual … |
+| [3](phase-3/) | Normalizing the four peak features by L-function degree and analytic-conductor scaling laws improves the class-held-out AUC from 0.534 to 0.733, a substantial gain over the r10 … |
+| [4](phase-4/) | Spectral features of the class-averaged cross-term matrix yield a numerically higher held-out AUC than raw log/S_k/ magnitudes under the strict protocol (logreg AUC 0.60 vs 0.08 … |
+| [5](phase-5/) | The analysis could not be completed because the precise definition (and Dirichlet coefficients) of the baseline function F15 is not recorded in the workspace, and attempts to … |
+| [6](phase-6/) | I cannot strictly complete the requested re-analysis on the exact prior “top 200 peak t-values from Direction 2, Task 2.1” because that peak list is not present in the current … |
+| [7](phase-7/) | Using the true complex-valued class-averaged cross-term matrix M_jk = E[Re(S_j conj(S_k))], the resulting spectral features strongly outperformed the magnitude-only proxy under … |
+| [8](phase-8/) | The exponential-tilt-of-Poisson model captures the qualitative shape of the leading eigenvector of the peak amplification matrix A_jk but does NOT meet the hypothesized R² > 0.95 … |
+| [9](phase-9/) | The complex spectral features (pc1_complex, H_complex) achieve perfect classification (AUC=1.000, 95% CI [1.000, 1.000]) on both LOFO folds, decisively overcoming the r33 … |
+| [10](phase-10/) | The hypothesis is refuted: augmenting the One-Class SVM feature set with the proposed scale-invariant shape features (argmax_a, entropy_a) of the per-peak amplification spectrum … |
+| [11](phase-11/) | (No written summary; data files only.) |
+| [12](phase-12/) | On the available 7-class subset, eigenvalue-spectrum features of the peak-conditioned matrix M_jk were class-discriminative but did not improve class-held-out SVM performance … |
+| [13](phase-13/) | The arithmetic ablation model — comparing M_jk(ζ) to M'_jk(ζ) computed with multiples of 3 and 5 (the conductor primes of F12) excluded from the ω-stratified Dirichlet partial … |
+| [14](phase-14/) | The proposed 6-D spectral feature vector does not lift the GRH-true centroid degeneracies: the 12-class macro-OvR AUC plateaus at ≈0.937 and never crosses the 0.95 target at any … |
+| [15](phase-15/) | The toy resonance model qualitatively reproduces the sign-coherent (all-positive PC1), low-rank-leaning structure of the empirical peak-conditioned M_jk for ζ at N=10⁶, but it … |
+| [16](phase-16/) | The hypothesis is rejected: conditioning on large /D(t;N)/ does not increase the percentage of negative off-diagonal entries in Cov(Re S_j, Re S_k); on the contrary, both … |
+| [17](phase-17/) | The tested additive perturbation F16 = F15 + 0.1·χ_3 did not measurably shift the spectral signature toward the known violator region: its pc1_complex remained 0.9412 (vs 0.9413 … |
+| [18](phase-18/) | Peak-level phase coherence P(t)=/Σ_{k=1..4}S_k(t)/²/Σ_{k=1..4}/S_k(t)/² does not support the hypothesis as stated: across all 2200 peaks, GRH-false classes had a slightly higher … |
+| [19](phase-19/) | (No written summary.) Inspect existing files to understand their content |
+| [20](phase-20/) | The research hypothesis is FALSIFIED: the N=10⁶ Hecke coefficients of the first SL(2,Z) Maass form (F13) cannot be generated from recurrence relations alone, because Hecke … |
+| [21](phase-21/) | The hypothesis is rejected: a Ridge/Lasso regression on simple arithmetic statistics of the Dirichlet coefficients (/a_p/ moments, low-lag autocorrelations, Σ/a_n/²/n) does NOT … |
+| [22](phase-22/) | (No written summary; data files only.) |
+| [23](phase-23/) | For the constructed five-function violator family F(γ)=L(s,χ₃)+c(γ)L(s,χ₅) with forced zero at 0.7+iγ, the demodulated observable P_23(γ′)=E[S₂(t)conj(S₃(t))e^{-iγ′t}] did not … |
+| [24](phase-24/) | The hypothesis is rejected: a 14-feature classifier combining normalized log/S_k/ magnitudes with phase-aware projection features Re/Im(v·S) does not achieve AUC>0.90 on either … |
+| [25](phase-25/) | The hypothesis is refuted: the empirical change Δ_empirical = M_jk(L_DH) − M_jk(ζ) is not quantitatively reproduced by injecting one (or even the canonical 4) off-line DH zero(s) … |
+| [26](phase-26/) | The empirical peak-conditioned matrix difference Δ_empirical = M_jk(F12) − M_jk(ζ) is NOT well-modelled by the r13-style explicit-formula sensitivity Δ_predicted obtained by … |
+| [27](phase-27/) | After regressing the linear effect of /κ/ out of every candidate Δ-matrix statistic, none of the residuals show a statistically significant monotonic correlation with β; in fact … |
+| [28](phase-28/) | The hypothesis is not supported on the original linear scale: across the 88 class-by-stratum points, a simple linear model of empirical peak-averaged diagonal entries M_kk by … |
+| [29](phase-29/) | I cannot confirm the full stated hypothesis as written because I completed only a partial validation (10/30 random t-values), but within the completed checks the from-scratch … |
+| [30](phase-30/) | On the analyzed 8-class subset, phase-only features from ω-stratified partial sums improved held-out discrimination relative to the original r10 feature set but were not more … |
+| [31](phase-31/) | The hypothesis is not supported by the available data: a One-Class SVM on leak-controlled log/S_k/ features detects F4/F5±/F12/F14 well against the in-sample GRH-true baseline … |
+| [32](phase-32/) | The hypothesis is supported for F9 and F10 and operationally supported for F11: using a dedicated cypari2/PARI workflow, I successfully generated coefficient tables to N=10^6 and … |
+| [33](phase-33/) | The hypothesis is REFUTED: the M_jk matrix of the Ramanujan Δ function (F9, conductor 1) is not nearly identical to that of ζ at the 200 zeta-peak heights — the cosine similarity … |
+| [34](phase-34/) | A simple change-of-measure resonator R(t) does substantially improve the fit of the empirical zeta M_jk over a naive (no-resonator) model, but it cannot fully reproduce the most … |
+| [35](phase-35/) | (No written summary; data files only.) |
+| [36](phase-36/) | Across the three known GRH-violator constructions (F4, F12, F14), the Frobenius norm of the difference matrix Δ_jk = M(violator) − M(F1) shows essentially no correlation with the … |
+| [37](phase-37/) | Under a Leave-One-Family-Out (LOFO) protocol, the baseline RBF-SVM on normalized log/S_k/ features (k=1..6) shows asymmetric, partial generalization: it fails to cleanly classify … |
+| [38](phase-38/) | The hypothesis is partially refuted: the F4 (DH) and F12 violator families do show massive systematic differences in individual normalized log/S_k/ features (k=1..4 are … |
+| [39](phase-39/) | (No written summary; data files only.) |
+| [40](phase-40/) | The extreme-value resonator-peak model did not convincingly reproduce the empirical zeta-function M_jk spectrum: although one normalization reached a PC1 variance fraction of … |
+| [41](phase-41/) | The scale-invariant amplification-ratio features (a_k(t)=/S_k(t)/²/C_k) substantially repair Fold 1 of the LOFO protocol (AUC 0.29 → 0.75) but degrade Fold 2 (AUC 0.86 → 0.72), so … |
+| [42](phase-42/) | The hypothesis was refuted under candid class-held-out validation: the RBF-SVM achieved AUC=0.5335 when trained on held-out classes, although stratified bootstrap splits gave an … |
+| [43](phase-43/) | The F12 coefficients a_n = χ₃(n) + c·χ₅(n) for n = 1..1,000,000 (with c = −0.16567330026345564 + 1.9009252335917202 i, recovered from the r18 artifacts) have been generated … |
+| [44](phase-44/) | The LMFDB coefficients for the audited modular forms in classes F9 and F10 are correctly arithmetic-normalized, satisfy the Deligne bound for all tested low primes, and reproduce … |
+| [45](phase-45/) | The analysis could not be completed within the runtime budget; the hypothesis that degree-and-conductor-normalized log-magnitudes of ω-stratified sums S_k achieve a class-held-out … |
+| [46](phase-46/) | (No written summary; data files only.) |
+| [47](phase-47/) | The hypothesis is REFUTED: under every operational definition of R_comp consistent with the v6 specification, the ω=2 stratum is the largest contributor to ζ's partial-sum second … |
+| [48](phase-48/) | The hypothesis is refuted: replacing the ad-hoc block size 2π/log(N) with the theoretically justified 2π/log(T) significantly lowers the GEV shape parameter ξ for /ζ(½+it)/ on … |
+| [49](phase-49/) | (No written summary; data files only.) |
+| [50](phase-50/) | The cypari2 bottleneck for generating Ramanujan τ(n) up to N=10⁶ is overcome by using PARI's modular-forms machinery (mfDelta() + mfcoefs) instead of a per-n vector call; this … |
+| [51](phase-51/) | The χ₅-twist arithmetic ablation predicts the *normalized cross-stratum correlation pattern* between F15 and F9 (Pearson r = 0.811, p = 8.3 × 10⁻⁶, n = 21; cosine similarity = … |
+| [52](phase-52/) | The 11 class-level amplification matrices exhibit a strongly low-dimensional structure: under the normalization A_jk = M_jk/sqrt(D_j D_k), PC1 explains 89.96% of the variance and … |
+| [53](phase-53/) | The arithmetic-ablation model robustly predicts Δ_empirical = M_jk(F4) − M_jk(ζ): excluding terms with 5 / n from the ω-stratified zeta sum reproduces the empirical difference … |
+| [54](phase-54/) | In this controlled Davenport–Heilbronn family, the difference-matrix statistics did not show a statistically significant monotonic relationship with the off-line zero location β … |
+| [55](phase-55/) | The 67% negative off-diagonal claim for the covariance matrix Cov(Re S_j, Re S_k) of the Riemann zeta function is NOT confirmed: at N=10⁵ we observe exactly 50.0% (95% … |
+| [56](phase-56/) | The Maass form L-function (F13) exhibits a spectral signature that is statistically distinct from a known GRH-violator and closely aligned with the GRH-true cluster, supporting … |
+| [57](phase-57/) | The hypothesis is refuted: across all 11 function classes and all 64 matrix entries per class, the unconditional theoretical cross-moment matrix \(C_{jk}\) is a very weak linear … |
+| [58](phase-58/) | The tested multiplicative twist F15 = L(s,\Delta\otimes\chi_5^{\mathrm{quartic}}) did not show evidence of GRH violation and its spectral features place it with the GRH-true … |
+| [59](phase-59/) | The newly constructed GRH-violating function F14 = L(s, χ_7) + c·L(s, χ_11) has a clearly violator-like class-level spectral signature, with pc1_complex = 0.890882 placing it … |
+| [60](phase-60/) | (No written summary; data files only.) |
+| [61](phase-61/) | The tuned multiplicative resonator improved alignment of the predicted leading eigenvector with the empirical zeta peak-conditioned structure but did not quantitatively reproduce … |
+| [62](phase-62/) | Using a transparent substitute feature set built from peak-local statistics, the SVM still achieved essentially perfect temporal-split discrimination between F1 (ζ) and F4 (L_DH) … |
+| [63](phase-63/) | The arithmetic ablation model (removing multiples of p = 11 from the ζ partial sum) does NOT predict the empirical difference Δ_empirical = M_jk(F10) − M_jk(ζ); the cosine … |
+| [64](phase-64/) | Eigenvector‑projection features substantially beat the instantaneous‑spectral baseline (AUC≈0.59) but only modestly improve on the log/S_k/ baseline (best AUC=0.851 vs 0.828) — … |
+| [65](phase-65/) | The hypothesis is rejected: adding log/S_j//log/S_k/ ratio features (j,k ∈ {1..4}) to the baseline log/S_k/ feature set degrades, rather than improves, class-held-out … |
+| [66](phase-66/) | The degree-stratified One-Class SVM detector with the prescribed max-combiner does NOT support the hypothesis: while F12 detection improves marginally to AUC=0.972, F4-family … |
+| [67](phase-67/) | The hybrid family F16(c) = L(s, Δ⊗χ₅) + c·L(s, χ₃) does enter the violator-like spectral regime, with pc1_complex crossing below 0.92 at approximately c ≈ 0.411 in the tested … |
+| [68](phase-68/) | (No written summary; data files only.) |
+| [69](phase-69/) | The hypothesis is refuted: a regression of PC1/PC2 of the amplification matrix A_jk on the fundamental functional-equation invariants (degree d, log conductor, Σ Re(μ_j), number … |
+| [70](phase-70/) | (No written summary; data files only.) |
+| [71](phase-71/) | The F16(c)=L(s,Δ⊗χ₅)+c·L(s,χ₃) family shows a smooth but non-monotonic spectral dose-response, with maximal departure from the c=0 GRH-true baseline near c≈0.8 rather than a … |
+| [72](phase-72/) | The workspace contains no numeric primary dataset; the only primary file is a 4-page PDF context document ( v6 — Binding Context Document.pdf) that defines the binding rules … |
+| [73](phase-73/) | (No written summary; data files only.) |
+| [74](phase-74/) | The hypothesis that AUC ≥ 0.95 can be reached at n ≤ 20 peaks is rejected: full 11-class classification using (pc1_complex, H_complex) requires n ≈ 150–175 peaks to cross 0.95 … |
+| [75](phase-75/) | On the unified range-matched dataset, the class-level spectral feature H_complex alone perfectly separates the 7 GRH-true from the 4 GRH-false function classes (in-sample accuracy … |
+| [76](phase-76/) | At the truncated scale N=999 with ω-strata k=0..4, the spectral features (pc1_complex, H_complex) retain the same qualitative clustering seen previously at larger scale: the … |
+| [77](phase-77/) | The Δ_jk matrices for the 7-member Davenport–Heilbronn family are strongly low-rank (mean λ₁²/‖Δ‖_F² ≈ 0.90, ≈0.94 excluding the κ=−1.09 outlier) and their leading eigenvectors … |
+| [78](phase-78/) | On the unified, range-matched dataset, the One-Class SVM trained on core GRH-true peaks (F1,F2,F9,F10) shows a clear, quantifiable generalization gap — held-out GRH-true AUC=0.894 … |
+| [79](phase-79/) | A methodologically consistent, range-matched dataset of 200 top Dirichlet-polynomial peaks and their corresponding $\omega$-stratified sums $S_k(t)$ has been successfully … |
+| [80](phase-80/) | Peak-level instantaneous spectral features derived from m_{jk}(t)=Re(S_j(t)conj(S_k(t))) do not provide a viable standalone classifier under the strict protocol, achieving … |
+| [81](phase-81/) | Using the specified class-held-out split (train: F1, F4, F9; test: F2, F5±, F6, F7, F10, F11, F12), an SVM trained on normalized log-magnitude /S_k/ features achieved held-out AUC … |
+| [82](phase-82/) | A One-Class SVM trained only on log/S_k/_norm features (k=1..6) of GRH-true peaks identifies unseen GRH-violator families as anomalies with AUC = 0.844 for the F4/F5p/F5m family … |
+| [83](phase-83/) | Contrary to the hypothesis, the leading principal component of the peak-conditioned ω-stratified cross-term matrix M_jk has all-positive entries for BOTH the Riemann ζ-function … |

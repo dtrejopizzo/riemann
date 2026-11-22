@@ -697,3 +697,12 @@ These specify proposed work; no additional row is closed by the plan.
 6. `RETRACTED/REFUTED`
 
 No unlabelled arrow is load-bearing.
+
+## Other files in this folder
+
+- `A_DUALITY_WORK.md` — A contravariant kernel duality and its classical control.
+- `A_MIXED_METRIC_WORK.md` — Working construction of the trace-product metric.
+- `P123_124_COMMON_SOURCE_LOCALIZED_DERIVED_TENSORS.md` — Localized derived tensors in the common smooth source.
+- `P123_125_ZERO_STRATUM_DERIVED_QUOTIENTS.md` — Finite projective Cech models for the closed zero-stratum quotients.
+- `endpoint_replay_20260905/` — subfolder (10 files).
+- `p123_036_check_replay.py`, `p123_036_replay_endpoint.py` — scripts.

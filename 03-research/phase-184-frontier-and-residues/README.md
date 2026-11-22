@@ -61,3 +61,11 @@ State: in progress. D OPEN.
 * CROSSWORD-TO-D (05-meta): E1 cluster (19), 14 intermediate nodes, 18 meta-theorems; minimal crossword {A1,(Dom_θ),(P_gap)}.
 * R184_016: A1 is E1 (PROVED given (Dom_θ)). Only blank square: O166.802.1.
 * Paper 48 updated to phase 184 (main_pre_p184.tex; 33 pp., compiles).
+
+## Other files in this folder
+
+- `R184_011_MULTIGENERATOR_AND_LP152.md` — Residues (6F) of the grid: multigenerator rigidity (G2_B7_R5) and LP-152.
+- `R184_012_POLARCAP_AND_MINOR_RESIDUES.md` — `prop:polarcap` in T and minor residues of master grid item 59.
+- `R184_013_FULL_SYSTEM_DITHER.md` — The full system with dither: the composites are the exponential, and the exponential sees all frequencies.
+- `R184_093_REVIEW_009_010_012.md` — Review of R184_010 (priority), R184_009 and R184_012.
+- `R184_094_REVIEW_016.md` — Review of R184_016 (A1 selector check).

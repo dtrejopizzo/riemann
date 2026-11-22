@@ -128,3 +128,11 @@ This phase is intentionally broad.  Further documents remain here while
 they refine the same covariant determinant, prolate endpoint, Fourier collar
 and matched-current problem.  A technical subproblem is not by itself a
 reason to create another phase.
+
+## Contents
+
+The files follow the numbering of the memos; grouped by prefix and type:
+
+- 96 memos with prefix `E101` (e.g. `E101_001_CHARACTERISTIC_TANGENT_PROJECTION.md`, `E101_002_BORDERED_HORIZONTAL_LIFT.md`, …, `E101_096_HOLOMORPHIC_ONE_LEVEL_INVERSION_AND_CONJUGATION_TOPOLOGY_NO_GO.md`)
+- 3 scripts with prefix `E101` (e.g. `E101_040_heat_spectral_shift_probe.py`, `E101_061_abel_polynomial_probe.py`, …, `E101_064_jacobi_projective_probe.py`)
+- 1 memos with prefix `PHASE` (e.g. `PHASE_101_LEDGER.md`, …, `PHASE_101_LEDGER.md`)

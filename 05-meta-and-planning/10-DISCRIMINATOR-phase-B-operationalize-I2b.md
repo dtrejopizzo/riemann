@@ -1,6 +1,8 @@
 # Phase B — operationalizing I2b, and surviving the circularity attack
 
-**Auditor build · 2026-06-05.** Phase A localized the entire fragility of D0 to one clause, **I2b** ("the
+**Date:** 2026-06-05 · **Status:** completed; library and matcher built in plan 11.
+
+**Purpose.** Phase A localized the entire fragility of D0 to one clause, **I2b** ("the
 independent input comes with a *decisive theorem* that supplies the constraint"). For a *search* — screening
 candidates *before* a proof exists — I2b must be (i) checkable without already having the proof, and (ii)
 **non-circular**: it must not secretly equal "proves RH," which would make D0 vacuous. This is the make-or-break

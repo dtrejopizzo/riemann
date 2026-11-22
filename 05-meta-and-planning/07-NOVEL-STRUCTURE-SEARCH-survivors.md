@@ -1,6 +1,8 @@
 # Autonomous novel-structure search — literature-merged, adversarially audited
 
-**Auditor build · 2026-06-05.** Objective: not to prove RH, but to find genuinely new structures that survive
+**Date:** 2026-06-05 · **Status:** completed; every new candidate collapsed; the survivors are B2conj (continued in plan 21) and P14.
+
+**Purpose.** Not to prove RH, but to find genuinely new structures that survive
 collapse + adversarial destruction. Discipline: every candidate is attacked before it is kept; literature
 precedent is checked. Candid prior (from the corpus's own track record): most/all RH-directed candidates collapse.
 **They do.**

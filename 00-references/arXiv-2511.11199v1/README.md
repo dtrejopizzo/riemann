@@ -1,7 +1,7 @@
 # arXiv:2511.11199v1
 
 This folder holds the arXiv source package of a third-party paper, "The Riemann Hypothesis
-Emerges in Dynamical Quantum Phase Transitions". It relates zeros of the zeta function to
+Emerges in Dynamical Quantum Phase Transitions" (S. Wei, Y. Zhai, Q. Lu, W. Yang, P. Gao, C. Wei, J. Song, F. Nori, T. Xin, G. Long). It relates zeros of the zeta function to
 dynamical quantum phase transitions in a physical model. It is kept as background reading on
 physical realisations of zeta zeros; it is not used as an input to any proof in the project.
 
@@ -12,6 +12,7 @@ physical realisations of zeta zeros; it is not used as an input to any proof in 
 - `Fig1.pdf` – `Fig4.pdf` — main figures.
 - `Ex_fig1.pdf`, `Ex_fig2.pdf` — extra figures.
 - `00README.json` — arXiv build metadata.
+- `arXiv-2511.11199v1.tar.gz` — the original arXiv source archive.
 
 ## Related folders
 

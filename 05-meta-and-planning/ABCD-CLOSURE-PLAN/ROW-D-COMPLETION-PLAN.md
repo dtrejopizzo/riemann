@@ -97,7 +97,7 @@ frame, and the outcome of 142. Label row D by the grep-verified record.
 4. Nothing defined through zero locations; `ξ`, `ξ_K`, `Λ_Q` admissible as data.
 5. Numerics only to certify a constant, with a stated robustness margin.
 6. A statement that with Paper 47 Thm 3.7 would prove RH or ¬RH is FATAL: flag, do not fix.
-7. Each phase ends with a closing decision, PLAN.md paragraph, memory update.
+7. Each phase ends with a closing decision, PLAN.md paragraph, update of the notes.
 
 ## 3. What would count as completing row D
 A function `h⁰` (or an equivalent structure) on the field-uniform frame satisfying (a), (b′), (c) of
