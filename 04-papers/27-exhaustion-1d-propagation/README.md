@@ -1,16 +1,17 @@
-# Paper 27 — The exhaustion of one-dimensional propagation: a structural no-go for the Riemann Hypothesis, and two directions that survive it
+# One-dimensional propagation and the Riemann Hypothesis: a heuristic survey of obstructions and two open directions
 
-Within the Connes–Consani–Moscovici framework the program reduces RH to the vanishing of the non-negative measure dν (Paper 24) and catalogues seven structural walls MW-1 to MW-7. The paper isolates their common logical form: each route presents RH as the boundary point of a one-parameter family whose other members are unconditional theorems (de Bruijn–Newman time, approximation parameter, place set, Abel scale). It examines each classical one-dimensional propagation mechanism (limit/continuity, analyticity, parabolic backward uniqueness, monotonicity/integrality, ergodic recurrence) and locates where it is blocked or coincides with RH. It also proves strict pointwise positivity of the Abel kernel, so a single scale suffices in the trace criterion. Two logical forms survive: two-dimensional propagation and index amplification; both are specified with falsifiers and left open.
+Several reformulations of the Riemann Hypothesis (RH) present it as the boundary member of a one-parameter family whose other members are controlled unconditionally: the de Bruijn–Newman time, the self-approximation parameter, the support in semilocal Weil positivity, the abscissa of convergence of the Dirichlet series of 1/zeta. The paper discusses, heuristically, why five classical one-dimensional mechanisms for passing from the interior to the boundary do not reach RH, and states the forms of argument the discussion does not cover as open problems.
 
-## Main results
-- `thm:wlambda-strict` (Strict pointwise positivity of W_λ): PROVED.
-- `thm:single-scale` (A single scale suffices): the λ-family in the trace criterion collapses to one scale. PROVED.
-- `prop:analytic` (No faithful analytic detector): PROVED.
-- Exhaustion of one-dimensional propagation across the five mechanisms: ARGUED (structural no-go, mechanism by mechanism).
-- Survivors: two-dimensional propagation (Form A) and index amplification (Form B), with an auxiliary Form C. OPEN.
+What the paper proves or observes:
 
-## Files
-- `main.tex`, `main.pdf` — source and compiled paper.
+- Heuristic discussion (not a theorem; the list is not proved exhaustive): limit/continuity, analyticity, parabolic backward uniqueness, monotonicity/integrality of the negative index, and ergodic recurrence (via Bagchi's theorem) each either reduce to a statement of the strength of RH or do not apply.
+- Proposition 5.1 (elementary): a real-analytic function of t that vanishes exactly when the zeros of Ξ_t are all real would already prove RH.
+- Theorem 4.2 (elementary): the Christoffel-type kernel W_λ is strictly positive on the real line. Hence a single scale suffices in the corresponding trace statement (Theorem 4.4), as for the Poisson kernel in Paper 24. This is a trivial restatement of dν = 0.
+- Three open problems, each with a stated falsifier: a coupled two-dimensional monotonicity (Problem 6.1), a superadditive amplification of a negative index in the spirit of Deligne (Problem 7.1), and the effective degeneration of self-approximation as d → 0 (Problem 8.1).
 
-## Relation to other papers
-- Builds on the measure dν and trace criterion of Paper 24; Paper 28 reports the outcomes of Forms A, B, C.
+Nothing about RH is proved. The results used (Bagchi's equivalence, the bounds of de Bruijn and Rodgers–Tao on the de Bruijn–Newman constant, the self-approximation theorems of Nakamura and Pańkowski, the archimedean positivity of Connes–Consani, Littlewood's criterion for the series of 1/zeta, and dν ≥ 0 from Paper 24) are known. What is new is the elementary positivity of W_λ, Proposition 5.1 and the formulation of the problems. There is no numerical content.
+
+Files:
+
+- [main.tex](main.tex): LaTeX source
+- [exhaustion-1d-propagation.pdf](exhaustion-1d-propagation.pdf): compiled paper (9 pages)

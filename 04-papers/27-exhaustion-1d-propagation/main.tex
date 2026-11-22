@@ -11,7 +11,7 @@
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{problem}[theorem]{Problem}
-\newtheorem{principle}[theorem]{Meta-principle}
+\newtheorem{principle}[theorem]{Heuristic principle}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{observation}[theorem]{Observation}
@@ -32,46 +32,33 @@
 \DeclareMathOperator{\Real}{Re}
 \DeclareMathOperator{\Imag}{Im}
 
-\title[Exhaustion of 1-D Propagation]{The exhaustion of one-dimensional propagation:\\
-a structural no-go for the Riemann Hypothesis,\\
-and two directions that survive it}
+\title[One-dimensional propagation and RH]{One-dimensional propagation and the Riemann
+Hypothesis:\\ a heuristic survey of obstructions and two open directions}
 
 \author{David Alejandro Trejo Pizzo}
 \thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}}
 
 
 \begin{document}
-\nocite{bgConnes99,bgDeninger}
 
 \begin{abstract}
-A research programme spanning thirty-five phases has reduced the Riemann
-Hypothesis (RH), under the Connes--Consani--Moscovici (CCM) framework, to
-the vanishing of a single non-negative measure $d\nu=\dmfull-\dmon$, and
-has catalogued seven structural walls (MW-1 through MW-7) that block every
-attempted proof. We make two contributions. \emph{First (the no-go):} we
-isolate the common logical form of all seven walls. Every live or recently
-closed route presents RH as the \emph{boundary point} of a one-parameter
-family whose every other member is an unconditional theorem (the
-De~Bruijn--Newman time $t$, the spectral-triple approximation parameter
-$x$, the place-set $S$, the Abel scale $\lambda$). We argue that the walls
-are precisely the statement that \emph{no one-dimensional propagation
-principle reaches that boundary}, and we verify this by exhibiting, for
-each classical 1D mechanism --- limit/continuity, analyticity, parabolic
-backward uniqueness, monotonicity/integrality, ergodic recurrence --- the
-exact point at which it either is excluded by a wall or coincides with RH
-itself. As a sharpening internal to the framework we prove that the Abel
-kernel $\Wl$ is \emph{strictly positive at every real point}, whence the
-universal quantifier in the trace criterion ``$\Tl=0$ for all $\lambda$''
-is redundant: a single scale suffices, and the $\lambda$-family collapses
-to a point. \emph{Second (the survivors):} we show the no-go leaves
-exactly two logical forms unexcluded --- \emph{two-dimensional propagation}
-(coupling the heat time with the arithmetic filtration via a maximum or
-monotonicity principle on a quadrant) and \emph{index amplification} (a
-non-grouplike tensor operation on the Pontryagin space $(K,Q)$ realising
-the Deligne mechanism: integer invariant, multiplicative defect,
-sublinear uniform bound). We give each a precise functional specification,
-identify what would falsify it, and state the open problems. We do not
-solve them.
+The Riemann Hypothesis (RH) is equivalent to the vanishing of the non-negative measure
+$d\nu=\dmfull-\dmon$ comparing $|\zeta|^2$ with the modulus squared of its on-line Hadamard
+projection against the archimedean measure. Several known reformulations of RH share a common
+shape: RH is the \emph{boundary point} of a one-parameter family whose other members are
+unconditional theorems or are controlled unconditionally (the de~Bruijn--Newman time $t$, the
+self-approximation parameter $d$, the set of places, the abscissa of convergence of
+$\sum\mu(n)n^{-s}$). We suggest, as an informal heuristic, that this shape explains why five
+classical one-dimensional mechanisms --- limit/continuity, analyticity, parabolic backward
+uniqueness, monotonicity/integrality, ergodic recurrence --- do not reach RH, and we discuss for
+each where it fails or reduces to RH. Two elementary facts are proved: a real-analytic faithful
+detector of reality of the zeros of $\Xi_t$ would already prove RH (Proposition~5.1), and the
+Christoffel-type polynomial kernel $\Wl$ built from the orthogonal polynomials of the
+archimedean measure is strictly positive, so that, as for the Poisson kernel in the trace
+criterion, a single scale suffices; this is a restatement of $d\nu=0$. Finally we formulate two directions not covered by the heuristic,
+\emph{two-dimensional propagation} and \emph{index amplification} in the spirit of Deligne, as
+open problems with stated falsifiers, together with a third, more modest problem on the
+self-approximation family. Nothing about RH is proved.
 \end{abstract}
 
 \maketitle
@@ -81,151 +68,150 @@ solve them.
 \section{Introduction}
 
 \subsection{What this paper is, and is not}
-This is not a paper that proves the Riemann Hypothesis, nor one that
-claims partial progress toward a proof. It is a paper about the
-\emph{shape} of the obstruction. After a long programme of attempts---each
-documented, each refuted or reduced to a known wall---we are in the
-unusual position of possessing a near-complete map of why RH resists the
-methods currently available. A complete map of failure is itself a
-mathematical object, and it has a use: it constrains, by elimination, the
-logical form that any successful argument must take. The purpose of this
-paper is to extract that constraint rigorously and to deduce from it where
-the search should go next.
+This paper does not prove the Riemann Hypothesis, nor does it claim partial progress toward a
+proof. It is a discussion of the \emph{shape} of several known reformulations of RH and of why
+the classical one-dimensional mechanisms for passing from an interior statement to a boundary
+statement do not apply to them. The discussion is heuristic: the list of mechanisms is not
+proved exhaustive, and the conclusions are suggestions, not theorems. Its purpose is to isolate
+two logical forms of argument that the discussion does not rule out and to state them as precise
+open problems.
 
-We work throughout inside the CCM framework \cite{CCM24}, in the form
-developed in \cite{P39,P40}. We recall the minimum needed in
-\S\ref{sec:framework}. The two halves of the paper are independent in
-spirit: \S\ref{sec:metapattern}--\S\ref{sec:nogo} are a structural no-go
-argument (with one new unconditional theorem, \S\ref{sec:wlambda});
-\S\ref{sec:formA}--\S\ref{sec:formC} are a forward research agenda with
-falsifiable specifications but no theorems claiming to reach RH.
+We use the comparison of $\zeta$ with its on-line projection and the reformulations of RH in
+terms of the measure $\dnu$ from \cite{P24}, and the localized Weil form and its negative index
+from \cite{P18,P25}. We recall the minimum needed in \S\ref{sec:framework}. Sections
+\ref{sec:metapattern}--\ref{sec:nogo} contain the heuristic discussion, with two elementary
+results (\S\ref{sec:wlambda} and Proposition~\ref{prop:analytic}); Sections
+\ref{sec:formA}--\ref{sec:formC} state open problems.
 
-\subsection{The one new theorem}
-The only genuinely new unconditional result proved here is
-Theorem~\ref{thm:wlambda-strict}: the Abel kernel $\Wl$ of the CCM trace
-criterion is strictly positive at every real point (not merely almost
-everywhere), and consequently the trace criterion of \cite{P39} holds at a
-\emph{single} scale $\lambda$ rather than requiring all $\lambda>0$. This
-is modest in difficulty---a three-term-recurrence argument---but it is
-exactly the kind of statement the structural analysis predicts should be
-available: it removes a spurious degree of freedom from the map without
-touching the hard core.
+\subsection{The elementary results}
+Theorem~\ref{thm:wlambda-strict} shows that the Christoffel-type kernel $\Wl$ of
+\eqref{eq:wlambda} is strictly positive at every real point; its proof is a three-term recurrence
+argument. For the Christoffel-type kernel \eqref{eq:wlambda} the same single-scale statement
+holds as for the Poisson kernel of \cite[Thm.~5.3]{P24}; like that statement it is a trivial
+consequence of $d\nu\ge0$ \cite[Cor.~3.2]{P24} and of the strict positivity of the kernel
+(Theorem~\ref{thm:wlambda-strict}). Proposition~\ref{prop:analytic} records that a real-analytic
+faithful detector of reality of the zeros along the de~Bruijn--Newman flow would already prove
+RH.
 
 \section{The framework, recalled}\label{sec:framework}
 
-We fix notation following \cite{P39,P40}.
+We fix notation following \cite{P24}. Let $0<\gamma_1\le\gamma_2\le\cdots$ denote the positive
+ordinates of the non-trivial zeros of $\zeta$, listed with multiplicity.
 
 \begin{itemize}
 \item The archimedean spectral measure is
-$\dm(s)=(2\pi)^{-2}\,|\Gamma(1/4+is/2)|^2\,ds$ on $\bbR$, a probability
-measure (after normalisation) with density decaying like
-$|s|^{-1/2}e^{-\pi|s|/2}$.
+$\dm(s)=(2\pi)^{-3/2}\,|\Gamma(1/4+is/2)|^2\,ds$ on $\bbR$, a probability measure whose
+density decays like $|s|^{-1/2}e^{-\pi|s|/2}$ \cite[Def.~2.1]{P24}.
 \item $\{\mathcal{P}_n\}_{n\geq0}$ are the orthonormal polynomials for
 $\dm$, with $\mathcal{P}_0\equiv1$ and Jacobi data $b_n=0$ (parity),
 $a_n^\infty=\tfrac12\sqrt{(2n+1)(2n+2)}$. They obey the three-term
 recurrence
 \begin{equation}\label{eq:ttr}
 s\,\mathcal{P}_n(s)=a_n^\infty\,\mathcal{P}_{n+1}(s)+a_{n-1}^\infty\,\mathcal{P}_{n-1}(s),
-\qquad a_k^\infty>0.
+\qquad a_k^\infty>0,
 \end{equation}
+with the convention $\mathcal P_{-1}\equiv0$.
 \item $\dmfull=|\zeta(1/2+is)|^2\,\dm$ and $\dmon=|\zeta_{\mathrm{on}}(1/2+is)|^2\,\dm$,
-where $\zeta_{\mathrm{on}}$ is the Hadamard product of $\zeta$ restricted to
-its on-line zeros.
-\item The central object is the difference measure
-$\dnu=\dmfull-\dmon$. By \cite[]{P40} it is \emph{unconditionally a
-non-negative measure}: $\dnu=(R-1)\,|\zeta_{\mathrm{on}}|^2\,\dm$ with
-$R=|\zeta/\zeta_{\mathrm{on}}|^2\geq1$, each off-critical zero quadruple
-contributing a factor $\geq1$.
-\item The Abel kernel is, for $N=N(\lambda):=\#\{n:\gamma_n\leq\lambda\}$,
+where $\zeta_{\mathrm{on}}$ is obtained from $\zeta$ by moving each off-line zero quartet to the
+critical line, as in \cite[Def.~2.1]{P24}.
+\item The central object is the difference measure $\dnu=\dmfull-\dmon$. It is unconditionally
+non-negative, $\dnu=(R-1)\,\dmon$ with $R=|\zeta/\zeta_{\mathrm{on}}|^2\geq1$, it has a
+continuous density with respect to Lebesgue measure, and $\dnu=0$ if and only if RH holds
+\cite[Thm.~3.1, Cor.~3.2]{P24}; the dominance $R\ge1$ is taken in \cite{P24} from the
+moment-rigidity paper cited there.
+\item Following \cite{P13}, write $\Phi$ for the Riemann--P\'olya kernel and
+$\Xi_t(z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du$ for $t\in\bbR$, so that
+$\Xi_0(z)$ is a constant multiple of $\xi(1/2+iz/2)$. The de~Bruijn--Newman constant $\Lambda$ is
+the real number such that $\Xi_t$ has only real zeros exactly when $t\ge\Lambda$ (de~Bruijn
+\cite{dB}, Newman \cite{New76}; see \cite{P13}); RH is equivalent to the reality of the zeros of $\Xi_0$.
+\item For $\lambda>0$ with $N=N(\lambda):=\#\{n:\gamma_n\leq\lambda\}$, the Christoffel-type
+kernel is
 \begin{equation}\label{eq:wlambda}
-\Wl(s)=\sum_{n=1}^{N} n\,|\mathcal{P}_n(s)|^2+(a_N^\infty)^2\,|\mathcal{P}_{N+1}(s)|^2\;\geq0.
+\Wl(s)=\sum_{n=1}^{N} n\,|\mathcal{P}_n(s)|^2+(a_N^\infty)^2\,|\mathcal{P}_{N+1}(s)|^2\;\geq0,
 \end{equation}
-\item The trace is $\Tl=\int_\bbR \Wl\,\dnu$. The CCM trace criterion
-\cite[Thm]{P39} states
+and we put $\Tl=\int_\bbR \Wl\,\dnu$.
+\item The trace criterion of \cite[Thm.~5.3]{P24} is stated there for the Poisson kernel
+$\lambda^2/(\lambda^2+s^2)$ in place of \eqref{eq:wlambda}: with that kernel,
 \begin{equation}\label{eq:p39}
-\RH\iff \Tl=0\ \text{for all }\lambda>0.
+\RH\iff \Tl=0\ \text{for one (equivalently, every) }\lambda>0,
 \end{equation}
-\item \cite[]{P40} lists eight equivalent reformulations of RH as
-functionals of $\dnu$ ($\dnu=0$; the Cauchy transform $\mathcal{G}\equiv0$;
-$\Tl=0$; the Jensen defect $\delta=0$; the variational distance
-$\tilde\delta_\lambda^2=0$; $\mathrm{KL}=0$; $d_{\mathrm{CCM}}=0$).
+and \cite{P24} states that this is a trivial restatement of $\dnu=0$.
+\item \cite[Thm.~4.1]{P24} lists seven reformulations of RH, six of them positive functionals of $\dnu$ and one a sum of positive terms over the off-line zeros ($\dnu=0$;
+the vanishing of a Nevanlinna transform of $\dnu$; the trace; the Jensen excess; an $L^2$
+distance; a relative entropy; and $\sup_\lambda\Tl=0$), all trivially equivalent to $\dnu=0$
+\cite[Rem.~7.2]{P24}.
 \end{itemize}
 
-\begin{definition}[The Hadamard barrier, MW-7]\label{def:hadamard}
-No property of $\zeta$ that is verifiable without knowledge of the
-positions of its zeros implies $\dnu=0$.
+\begin{definition}[The Hadamard barrier {\cite[Def.~7.1]{P24}}]\label{def:hadamard}
+By the \emph{Hadamard barrier} we mean the gap between two facts: (a) the comparison of $\xi$
+with its on-line projection yields, unconditionally, $R\ge1$, i.e.\ $\dnu\ge0$; (b) $\dnu=0$ is
+equivalent to RH.
 \end{definition}
 
-The Hadamard barrier is the framework-internal face of the master
-obstruction. Its companions across the programme are: MW-1 (Weil
-positivity $\equiv$ RH), MW-2 (the arithmetic propagation wall: the Euler
-product converges only for $\Real(s)>1$ and its information does not
-propagate to the critical strip; zeros are global objects), MW-3 (no
-Hasse--Minkowski in infinite dimension), MW-4 (every unconditional tool
-yields a positivity bound of the wrong sign), MW-5 (the arithmetic-site
-factorisation requires the unfinished Connes--Consani programme), MW-6
-(uniform spectral-gap control $\equiv$ RH). The thesis of
-\S\ref{sec:metapattern}--\S\ref{sec:nogo} is that these seven are seven
-faces of one fact.
+A non-negative measure need not vanish, so (a) alone carries no information on whether
+$\dnu=0$. Other well-known obstructions of the same flavour are: Weil positivity of the explicit
+formula is itself equivalent to RH; the Euler product converges absolutely only for $\Real s>1$
+and its local information does not by itself control the critical strip; unconditional
+estimates typically give positivity bounds of the wrong sign. The heuristic of
+\S\ref{sec:metapattern}--\S\ref{sec:nogo} is that these obstructions have a common shape.
 
 \section{The meta-pattern: RH as a boundary point}\label{sec:metapattern}
 
 \subsection{The recurring shape}
-Across the programme, every route to RH---whether eventually closed or
-still live---instantiates one template. There is a one-parameter family of
-mathematical objects; for all parameter values except one boundary value
-the relevant statement is an unconditional theorem; and the boundary value
-is exactly RH. We tabulate the instances, with their sources.
+Several known reformulations of RH instantiate one template. There is a one-parameter family of
+statements; for the parameter values away from one boundary value the statement is an
+unconditional theorem, or is controlled unconditionally; and the boundary value is RH.
 
 \begin{center}
 \renewcommand{\arraystretch}{1.3}
 \begin{tabular}{llll}
 \textbf{Family} & \textbf{Parameter} & \textbf{Unconditional control} & \textbf{Boundary $\iff$ RH}\\
 \hline
-Self-approximation $\mathrm{SR}_d$ & $d$ & proved for all $d\neq0$ & $d=0$\\
-DBN flow $\Tl(t)$ & $t$ & $\Tl(t)=0$ for $t\geq\Lambda$ & $t=0$\\
-Spectral triples $H_x$ & $x$ & real spectrum, all finite $x$ & $x=\infty$\\
-Semilocal index $\mu_S$ & $S$ & positivity for small $S$ & $S=$ all places\\
-Pontryagin $\kappa_\lambda(N)$ & $N$ & controllable, all finite $N$ & $N=\infty$\\
-Euler product & $\sigma$ & converges for $\sigma>1$ & $\sigma=1/2$\\
+Self-approximation $\mathrm{SR}_d$ & $d$ & proved for all irrational $d$ & $d=0$\\
+de Bruijn--Newman $\Xi_t$ & $t$ & real zeros for $t\geq\Lambda$ & $t=0$\\
+Semilocal Weil positivity & support & archimedean place, & all places,\\
+ & & support in $[\lambda^{-1},\lambda]$, $\lambda\le\sqrt2$ & all supports\\
+$\sum\mu(n)n^{-s}$ & $\sigma$ & converges for $\sigma\ge1$ & converges\\
+ & & & for every $\sigma>1/2$\\
 \end{tabular}
 \end{center}
 
-The sources are, respectively: the Bagchi/Voronin self-approximation
-family (proved for all $d\neq0$ by Baker, Nakamura, Pa\'nkowski,
-Garunk\v{s}tis; the closing of $d=0$ is RH \cite[]{P40}); the
-De~Bruijn--Newman flow with $\Lambda$ the DBN constant
-\cite[Docs~70--71]{P40}; the CCM finite-Euler spectral triples
-\cite{CCM25} analysed in \cite[]{P40}; the semilocal Weil
-positivity of Connes--Consani \cite{CC21} analysed in \cite[]{P40};
-the Pontryagin negative-index packet \cite[]{P40}; and the classical
-Euler product itself.
+The sources are as follows. $\mathrm{SR}_d$ is the statement that for every compact
+$K\subset\{1/2<\Real s<1\}$ and $\varepsilon>0$ the set of $\tau$ with
+$\max_K|\zeta(s+id\tau)-\zeta(s+i\tau)|<\varepsilon$ has positive lower density; for $d=0$ this
+is strong recurrence, equivalent to RH by Bagchi's theorem \cite{Bagchi}; it was proved for
+algebraic irrational $d$ by Nakamura \cite{Nak09} and for all irrational $d$ by Pa\'nkowski
+\cite{Pan10}. For the de Bruijn--Newman family, $\Xi_t$ has only real zeros for $t\ge\Lambda$,
+with $\Lambda\le1/2$ (de~Bruijn \cite{dB}) and $\Lambda\ge0$ (Rodgers--Tao \cite{RT}), and RH
+holds if and only if $\Lambda=0$; see \cite{P13} for this setting. The semilocal row is the
+archimedean positivity of Connes--Consani \cite{CC21}. The series $\sum_n\mu(n)n^{-s}$ of
+$1/\zeta(s)$ converges for $\Real s\ge1$ (the case $\Real s=1$ being equivalent to the prime
+number theorem), and it converges for every $\Real s>1/2$ if and only if RH holds (Littlewood;
+\cite[Thm.~14.25(A)]{Tit}). The finite-Euler spectral triples of
+\cite{CCM25} give a further family of the same shape, indexed by the set of primes used; we do
+not state any unconditional control for it here.
 
 \begin{principle}[The boundary-point pattern]\label{prin:boundary}\sloppy
-In every analysed approach, RH is the limit/boundary member of a
-one-parameter family whose interior is unconditionally controlled. The
-structural walls MW-1--MW-7 are, jointly, the assertion that no
-one-dimensional propagation principle carries the interior control to the
-boundary.
+In each of the families above, RH is the boundary member of a one-parameter family whose
+interior is unconditionally controlled. The obstructions recalled in \S\ref{sec:framework} may
+be read as the assertion that no one-dimensional propagation principle carries the interior
+control to the boundary.
 \end{principle}
 
-We do not claim Meta-principle~\ref{prin:boundary} as a theorem; it is an
-empirical regularity of the corpus, stated to be tested. \S\ref{sec:nogo}
-gives it teeth by checking the propagation mechanisms one by one.
+Heuristic principle~\ref{prin:boundary} is not a theorem, and we do not know how to make it one.
+Section~\ref{sec:nogo} discusses the propagation mechanisms one by one.
 
-\section{Sharpening: the Abel family collapses to a point}\label{sec:wlambda}
+\section{Strict positivity of the Christoffel-type kernel}\label{sec:wlambda}
 
-Before the no-go we record the one place where the boundary-point pattern
-degenerates favourably: the Abel scale $\lambda$ is not a genuine
-parameter at all.
+Before the discussion we record an elementary fact about the kernel \eqref{eq:wlambda}.
 
 \begin{lemma}[No shared zeros of consecutive orthogonal polynomials]\label{lem:noshared}
 For every $n\geq0$, the polynomials $\mathcal{P}_n$ and $\mathcal{P}_{n+1}$
 have no common zero in $\bbC$.
 \end{lemma}
 \begin{proof}
-Suppose $\mathcal{P}_{n+1}(s_0)=\mathcal{P}_n(s_0)=0$. Equation
-\eqref{eq:ttr} at index $n$ gives
+For $n=0$ this is clear since $\mathcal P_0\equiv1$. Suppose $n\ge1$ and
+$\mathcal{P}_{n+1}(s_0)=\mathcal{P}_n(s_0)=0$. Equation \eqref{eq:ttr} at index $n$ gives
 $0=a_n^\infty\mathcal{P}_{n+1}(s_0)+a_{n-1}^\infty\mathcal{P}_{n-1}(s_0)
 =a_{n-1}^\infty\mathcal{P}_{n-1}(s_0)$, so $\mathcal{P}_{n-1}(s_0)=0$ since
 $a_{n-1}^\infty>0$. Descending induction yields
@@ -244,152 +230,139 @@ $\mathcal{P}_{N+1}(s_0)=0$. This contradicts Lemma~\ref{lem:noshared}.
 \end{proof}
 
 \begin{remark}
-This strengthens \cite[Cor.~7.5]{P40}, which established
-$\Wl>0$ off a finite set (the nodes of $\mathcal{P}_{N+1}$) and neutralised
-that set using the absolute continuity of $\dnu$. The exceptional set is in
-fact empty, and the conclusion needs no hypothesis on $\dnu$. For the
-degenerate range $N(\lambda)=0$ one has $\Wl=(a_0^\infty)^2|\mathcal{P}_1|^2$,
-vanishing only at $s=0$, and the original argument applies.
+Any continuous kernel that is strictly positive everywhere gives the same conclusion as
+Theorem~\ref{thm:single-scale} below; this is the case of the Poisson kernel in
+\cite[Thm.~5.3]{P24}. For the degenerate range $N(\lambda)=0$ one has
+$\Wl=(a_0^\infty)^2|\mathcal{P}_1|^2$, which vanishes only at $s=0$; since $\dnu$ has a continuous
+density with respect to Lebesgue measure \cite[Cor.~3.2]{P24}, a single point is $\dnu$-null and
+the proof of Theorem~\ref{thm:single-scale} applies unchanged.
 \end{remark}
 
 \begin{theorem}[A single scale suffices]\label{thm:single-scale}
-Fix any $\lambda_0>0$ with $N(\lambda_0)\geq1$. Then $\RH\iff\Tl[\lambda_0]=0$.
-The universal quantifier in \eqref{eq:p39} is redundant.
+Fix any $\lambda_0>0$ with $N(\lambda_0)\geq1$. Then $\RH\iff\Tl[\lambda_0]=0$. Like
+\eqref{eq:p39}, this is a trivial restatement of $\dnu=0$.
 \end{theorem}
 \begin{proof}
 ($\Rightarrow$) Under RH, $\dnu=0$, so $\Tl[\lambda_0]=0$. ($\Leftarrow$)
 Write $\Tl[\lambda_0]=\int \Wl[\lambda_0]\,(R-1)\,|\zeta_{\mathrm{on}}|^2\,\dm$
-with $R-1\geq0$ (\cite[]{P40}) and $\Wl[\lambda_0]>0$ everywhere
+with $R-1\geq0$ \cite[Cor.~3.2]{P24} and $\Wl[\lambda_0]>0$ everywhere
 (Theorem~\ref{thm:wlambda-strict}). The integrand is non-negative; its
-integral vanishing forces $(R-1)|\zeta_{\mathrm{on}}|^2=0$ $\dm$-a.e.; since
-$|\zeta_{\mathrm{on}}|^2>0$ off a null set, $R\equiv1$ a.e., i.e.\ $\dnu=0$,
-i.e.\ RH (\cite[]{P40}, condition 2).
+integral vanishing forces $(R-1)|\zeta_{\mathrm{on}}|^2=0$ $\dm$-a.e., i.e.\ $\dnu=0$,
+i.e.\ RH \cite[Cor.~3.2]{P24}.
 \end{proof}
 
-The Abel family is thus not a propagation problem at all: its boundary is
-already glued to its interior. This is the exception that proves the rule.
-For every \emph{other} family in the table, the boundary is genuinely
-detached, and \S\ref{sec:nogo} explains why no 1D principle can reattach it.
+For this family the boundary is thus attached to the interior in a trivial way. For the other
+families in the table no such argument is known, and \S\ref{sec:nogo} discusses why the
+classical one-dimensional mechanisms do not supply one.
 
-\section{The no-go: one-dimensional propagation is exhausted}\label{sec:nogo}
+\section{One-dimensional propagation mechanisms}\label{sec:nogo}
 
-We now run through the classical mechanisms by which an unconditional
-interior statement could be propagated to a boundary value, and show each
-is either excluded by a named wall or is logically equivalent to RH. The
-list is intended to be exhaustive over the 1D toolkit; we invite the reader
-to supply a mechanism not reducible to one of these entries.
+We discuss the classical mechanisms by which an unconditional interior statement could be
+propagated to a boundary value, and indicate for each where it fails or reduces to RH. The
+list is not claimed to be exhaustive, and the discussion is heuristic except where a statement
+is proved.
 
-\subsection{Limit / continuity}
-If the family $f(\theta)$ were continuous at the boundary and identically
-zero on the interior, the boundary value would vanish by continuity. For
-$H_x\to H_\infty$ this is exactly the route: Hurwitz's theorem applied to
-the regularised determinants would transfer reality of zeros from finite
-$x$ to $x=\infty$ \cite[Prop.~5.3]{P40}. But the quantitative core
-of that limit is $\lim\mu_\lambda\geq0$, the semilocal Weil positivity in
-the limit---this is MW-1 wearing the mask of MW-6. Continuity to the
-boundary \emph{is} the prize, not a tool for it.
+\subsection{Limit / continuity}\label{ssec:limit}
+If a family $f(\theta)$ were continuous at the boundary and identically zero on the interior, the
+boundary value would vanish by continuity. For the finite-Euler spectral triples of
+\cite{CCM25} one would like to apply Hurwitz's theorem to the regularised determinants and
+transfer reality of zeros to the limit; but Hurwitz's theorem requires locally uniform
+convergence to a function that does not vanish identically on the region in question, and
+establishing this in the critical strip is not available. In a related setting it is noted in
+\cite[\S4]{P23} that Hurwitz's theorem and the maximum principle do not give non-vanishing on an
+unbounded region. Heuristically, continuity up to the boundary is of the same strength as the
+conclusion.
 
 \subsection{Analyticity}\label{ssec:analyticity}
-This deserves a clean statement because it explains a recurring
-frustration.
-
 \begin{proposition}[No faithful analytic detector]\label{prop:analytic}
 Suppose $F:[0,\infty)\to\bbR$ is real-analytic and satisfies $F(t)=0$ if
 and only if the zeros of $\Xi_t$ are all real. Then RH holds.
 \end{proposition}
 \begin{proof}
-The DBN flow has $\Xi_t$ with only real zeros for all $t\geq\Lambda$
-(definition of the DBN constant $\Lambda$, with $\Lambda\geq0$ known
-unconditionally and $\Lambda\leq0$ being RH). Hence $F\equiv0$ on
-$[\Lambda,\infty)$. A real-analytic function vanishing on a set with a
-limit point vanishes identically, so $F\equiv0$, whence $F(0)=0$, i.e.\ the
-zeros of $\Xi_0=\Xi$ are all real: RH.
+The de~Bruijn--Newman constant $\Lambda$ is finite (de~Bruijn \cite{dB}: $\Lambda\le1/2$;
+Rodgers--Tao \cite{RT}: $\Lambda\ge0$), and $\Xi_t$ has only real zeros for all $t\geq\Lambda$.
+Hence $F\equiv0$ on $[\Lambda,\infty)$. A real-analytic function on the connected interval
+$[0,\infty)$ vanishing on a set with a limit point vanishes identically, so $F(0)=0$, i.e.\ the
+zeros of $\Xi_0$ are all real, which is RH (\S\ref{sec:framework}).
 \end{proof}
 
-Proposition~\ref{prop:analytic} shows that constructing a real-analytic
-faithful detector of zero-reality is \emph{already} a proof of RH. This is
-why the natural detector $\Tl(t)$ is non-analytic precisely at $t=\Lambda$:
-the on/off split that defines $\dmon$ jumps there. Analyticity is not an
-available tool; it is the trophy. Any candidate ``analytic monotone
-quantity'' must be checked against this proposition---if it is faithful and
-analytic, the work is already done, which means it cannot be both faithful
-and constructible without circularity.
+Proposition~\ref{prop:analytic} shows that constructing a real-analytic faithful detector of
+zero-reality is already a proof of RH. Any candidate ``analytic monotone quantity'' must be
+checked against this proposition: if it is faithful and analytic, the work is already done.
 
-\subsection{Parabolic backward uniqueness}
-The DBN flow is a (backward) heat flow, and backward uniqueness for
-parabolic equations would propagate $u(\Lambda)=0\Rightarrow u\equiv0$.
-This works for quantities \emph{linear} in $\Xi_t$. The reality-of-zeros
-detector is nonlinear (it sees the imaginary parts of zeros, not a linear
-functional of $\Xi_t$). This is the ``linear $\neq$ nonlinear'' gap
-identified as the terminus of Path~III in \cite{P40}; backward uniqueness
-is available exactly where it is useless.
+\subsection{Parabolic backward uniqueness}\label{ssec:backward}
+The de~Bruijn--Newman flow is a backward heat flow, and backward uniqueness for parabolic
+equations would propagate $u(\Lambda)=0\Rightarrow u\equiv0$. This works for quantities
+\emph{linear} in $\Xi_t$. The reality-of-zeros detector is nonlinear (it sees the imaginary parts
+of zeros, not a linear functional of $\Xi_t$), so backward uniqueness does not apply to it
+directly.
 
-\subsection{Monotonicity / integrality}
-The Pontryagin negative index $\kappa(Q)=\negind(H_C)$ is an integer
-(\cite{P35}, with $\kappa=2m$, localised in $\mathcal{K}_{\mathrm{off}}$ by
-\cite[Thm~8.1]{P40}) and upper semicontinuous. If a local principle
-forbade its jumps along a deformation to the on-line configuration,
-integrality would force $\kappa=0$. But the jumps occur exactly at zero
-collisions, and nothing local prohibits them---generic heat flow
-\emph{creates} complex pairs on crossing $\Lambda$ for other entire
-functions. Integrality constrains the value but not its constancy.
+\subsection{Monotonicity / integrality}\label{ssec:integrality}
+The negative index $\kappa$ of the localized Weil form on the even class $\mathcal V$ is an
+integer. When the off-line zeros form $m<\infty$ quartets it satisfies $\kappa\le m$
+\cite[Prop.~2.5]{P25}, \cite[Cor.~6.5]{P18}; whether equality holds is open \cite{P25}. Its
+negative directions come from the off-line part $Q_{\mathrm{off}}$ of the decomposition
+$Q=Q_{\mathrm{on}}+Q_{\mathrm{off}}$ \cite[Thm.~3.1]{P18}, and $Q_{\mathrm{off}}$ has signature
+$(m,m)$ \cite[Cor.~6.5]{P18}. The negative index of a continuous family of Hermitian forms is
+lower semicontinuous and is locally constant wherever the form stays non-degenerate
+\cite[Thm.~5.3]{P18}. If a local principle forbade its jumps along a deformation to the on-line
+configuration, integrality would force $\kappa$ to keep its on-line value $0$. But jumps occur
+where the form degenerates, and nothing local prohibits them. Integrality constrains the value
+but not its constancy.
 
-\subsection{Ergodic recurrence}
-Bagchi's criterion makes RH equivalent to strong recurrence of the
-vertical flow $\tau\mapsto\zeta(\cdot+i\tau)$ on the Bohr torus
-$\Omega=\prod_p\mathbb{T}_p$. The Kronecker flow is uniquely ergodic, so the
-arithmetic point $\omega_0$ is uniformly recurrent unconditionally; the
-obstruction is not recurrence but the continuity of the Euler observable
-$\Phi(\omega)=\prod_p(1-\omega(p)p^{-s})^{-1}$ at the arithmetic point,
-which holds iff $\sum_p p^{-s}$ converges in the strip, iff RH
-\cite[Prop.~7.2]{P40}. The ergodic route is MW-2 in dynamical
-language, with no residue.
+\subsection{Ergodic recurrence}\label{ssec:ergodic}
+The vertical flow $\tau\mapsto\zeta(\cdot+i\tau)$ is modelled on the Bohr torus
+$\Omega=\prod_p\mathbb{T}_p$, on which the Kronecker flow is uniquely ergodic, so the arithmetic
+point is uniformly recurrent unconditionally. Thus the obstruction is not recurrence of the flow
+but strong recurrence of $\zeta$ itself in the sense of Bagchi: by Bagchi's theorem
+\cite{Bagchi}, $\RH$ holds if and only if for every compact $K\subset\{1/2<\Real s<1\}$ and every
+$\varepsilon>0$ the set of $\tau$ with $\max_K|\zeta(s+i\tau)-\zeta(s)|<\varepsilon$ has positive
+lower density. The ergodic route therefore reduces to a known equivalent of RH.
 
-\subsection{Conclusion of the no-go}
+\subsection{Summary of the discussion}\label{ssec:summary}
 \begin{observation}\label{obs:nogo}
-Each classical 1D propagation mechanism, applied to the boundary-point
-families of \S\ref{sec:metapattern}, either coincides with RH
-(continuity \S5.1, analyticity \S5.2) or is excluded by a named wall
-(backward uniqueness by nonlinearity, integrality by collision jumps,
-ergodicity by MW-2). The 1D toolkit is exhausted.
+Each of the five one-dimensional propagation mechanisms above, applied to the boundary-point
+families of \S\ref{sec:metapattern}, either reduces to a statement of the strength of RH
+(continuity, \S\ref{ssec:limit}; analyticity, \S\ref{ssec:analyticity}; ergodic recurrence,
+\S\ref{ssec:ergodic}) or does not apply for a structural reason (backward uniqueness by
+nonlinearity, \S\ref{ssec:backward}; integrality by jumps at degeneracies,
+\S\ref{ssec:integrality}).
 \end{observation}
-Consequently, an argument that reaches RH cannot be a one-dimensional
-propagation principle. By elimination, the candidate logical forms that
-remain are: \emph{(A)} two-dimensional propagation, where information flows
-across a region from its sides to a corner without passing continuously
-through any single boundary point; and \emph{(B)} amplification, where a
-defect is multiplied until it collides with an unconditional sublinear
-bound. The rest of the paper specifies these.
+This suggests, but does not prove, that an argument reaching RH is not a one-dimensional
+propagation principle. Two logical forms are not covered by the discussion: \emph{(A)}
+two-dimensional propagation, where information flows across a region from its sides to a corner
+without passing continuously through any single boundary point; and \emph{(B)} amplification,
+where a defect is multiplied until it collides with an unconditional sublinear bound. The rest of
+the paper formulates these as open problems.
 
 \section{Form A: two-dimensional propagation}\label{sec:formA}
 
 \subsection{Why a second dimension is not excluded}
-Every wall in \S\ref{sec:nogo} concerns a \emph{1D} boundary. MW-2 says the
-$x$-axis (arithmetic filtration) alone does not reach the corner; the DBN
-analysis says the $t$-axis (heat time) alone does not. \emph{No result in
-the corpus addresses their coupling.} Two-dimensional propagation
-principles---the maximum principle, Almgren-type monotonicity, logarithmic
-convexity along diagonals---move information from the \emph{edges} of a
-region into its interior and corners, and do not require continuity through
-any single point. This is the gap.
+The discussion of \S\ref{sec:nogo} concerns one-parameter families. The Euler-product
+filtration alone does not reach the boundary, and the heat time alone does not; we are not aware
+of results addressing their coupling. Two-dimensional propagation principles---the maximum
+principle, Almgren-type monotonicity, logarithmic convexity along diagonals---move information
+from the \emph{edges} of a region into its interior and corners, and do not require continuity
+through any single point.
 
 \subsection{The candidate object}
-Define the joint trace
+Heuristically, consider a joint trace
 \begin{multline*}
-\mathcal{T}(t,x)=\text{(CCM trace of the finite-Euler approximant indexed by }x\text{,}\\
-\text{evolved by the DBN heat flow to time }t).
+\mathcal{T}(t,x)=\text{(trace of the finite-Euler approximant indexed by }x\text{,}\\
+\text{evolved by the de Bruijn--Newman heat flow to time }t).
 \end{multline*}
-Its edges and corner are controlled by results already in hand:
+We do not define $\mathcal T$ rigorously here; making it precise is part of the problem. The
+features one would want are:
 \begin{itemize}
-\item Edge $\{t\geq\Lambda\}$: $\mathcal{T}=0$ unconditionally (DBN, \cite[Docs~70--71]{P40}).
-\item Edge $\{x\text{ finite}\}$: real spectrum unconditionally (CF rigidity of the CCM triples, \cite[]{P40}, which passed the circularity filter I2a at finite level).
+\item Edge $\{t\geq\Lambda\}$: control coming from the reality of the zeros of $\Xi_t$ for
+$t\ge\Lambda$ \cite{dB,RT,P13}.
+\item Edge $\{x\text{ finite}\}$: control at each finite level of the approximation; we do not
+claim such control is known.
 \item Corner $(t,x)=(0,\infty)$: RH.
-\item $\partial_t\mathcal{T}$ is computed: a quadratic form in the Jacobi data $c_k$, with exact cancellation under RH \cite[]{P40}.
-\item $\partial_x\mathcal{T}$ is computed in discrete form: primes enter one at a time through $\Tl=A_\lambda^{\mathrm{off}}-\sum_p(\log p/\sqrt p)B_\lambda(\log p)$ \cite[]{P40}.
 \end{itemize}
 
 \begin{problem}[The coupling inequality]\label{prob:coupling}
-Does $\mathcal{T}(t,x)$ satisfy a differential inequality coupling
+Can $\mathcal{T}(t,x)$ be defined so that it satisfies a differential inequality coupling
 $\partial_t$ and $\partial_x$---parabolic, monotone, or logarithmically
 convex along diagonals of the quadrant---under which positivity propagates
 from the two edges to the corner $(0,\infty)$, even though it fails along
@@ -397,148 +370,155 @@ each axis separately?
 \end{problem}
 
 \begin{remark}[What would falsify Form A]
-If $\partial_t\mathcal{T}$ and $\partial_x\mathcal{T}$ have no fixed sign
-relation on the quadrant---equivalently, if the mixed second variation
-$\partial_t\partial_x\mathcal{T}$ changes sign with no diagonal along which
-a monotone quantity is built---then no maximum/monotonicity principle
-applies and Form~A is dead. The first test is finite and honest: compute
-$\partial_t\mathcal{T}$ for the two-prime approximant and compare its sign
-to $\partial_x\mathcal{T}$.
+If $\partial_t\mathcal{T}$ and $\partial_x\mathcal{T}$ have no fixed sign relation on the
+quadrant, for a suitable discrete difference in $x$, then no maximum or monotonicity
+principle applies and Form~A fails. A first finite test is to compute $\partial_t\mathcal{T}$ for
+a two-prime approximant and compare its sign to $\partial_x\mathcal{T}$.
 \end{remark}
 
 \section{Form B: index amplification (the Deligne mechanism)}\label{sec:formB}
 
-\subsection{The skeleton of the one proof of RH that exists}
-RH is a theorem over function fields \cite{Del74}. Stripped to its logical
-skeleton, Deligne's mechanism is not a positivity argument:
-\begin{enumerate}[\rm(1)]
-\item an \emph{integer} invariant (the weight of a Frobenius eigenvalue);
-\item an \emph{amplification}: a tensor/symmetric power multiplies the
-defect, $\kappa\mapsto k\kappa$;
-\item a \emph{uniform sublinear bound} ($k\kappa\leq C(k)$ with $C(k)/k\to0$,
-from rationality of the family's $L$-function: the poles do not move);
-\item conclusion: $k\kappa\leq C(k)$ for all $k$ forces $\kappa=0$.
-\end{enumerate}
-None of (1)--(4) is a CAP-type positivity. The programme audited the
-\emph{cohomological formalism} of Weil--Deligne (it is MW-5); it did not
-audit the \emph{amplification trick} as an abstract skeleton. The skeleton
-is what we transplant.
+\subsection{The amplification step in Deligne's proof}
+RH is a theorem over finite fields \cite{Del74}. A central step of Deligne's argument is not a
+positivity argument: for every integer $k\ge1$ Deligne applies Rankin's method to the $2k$-th
+tensor power of the sheaf: its $L$-function is rational, its local factors have non-negative
+coefficients, and its poles are located through the monodromy coinvariants; this gives
+$|\alpha|^{2k}\le q^{k\beta+1}$ for an eigenvalue $\alpha$ and reference weight $\beta$, and
+letting $k\to\infty$ gives $|\alpha|\le q^{\beta/2}$ \cite[\S3]{Del74}. The structure we wish to
+isolate is: an invariant (the weight of a Frobenius eigenvalue), an amplification (even tensor
+powers multiply the
+deviation from the expected weight), and a bound that grows more slowly than the amplification,
+so that the deviation must vanish.
 
-\subsection{What the programme already supplies}
-Ingredient (1) is in hand: $\kappa(Q)=\negind(H_C)$ is an integer,
-$\kappa=2m$, localised in $\mathcal{K}_{\mathrm{off}}$
-(\cite{P35}; \cite[]{P40}). The missing ingredient is the
+\subsection{What is available}
+The negative index $\kappa$ of the localized Weil form is an integer, it vanishes under RH, and
+when the off-line zeros form $m<\infty$ quartets it satisfies $\kappa\le m$ while
+$Q_{\mathrm{off}}$ has signature $(m,m)$ \cite[Prop.~2.5]{P25}, \cite[Thm.~3.1, Cor.~6.5]{P18}.
+Whether $\kappa\ge1$ on $\mathcal V$ when off-line zeros exist is open \cite{P25}; for the full
+form on its whole test space, $\kappa(Q)=2m$ in that case \cite[Prop.~4.7]{P25}. The missing ingredient is the
 amplification.
 
 \begin{problem}[The amplifying functor]\label{prob:amplify}
-Does there exist an operation $\boxtimes$ on the Pontryagin space $(K,Q)$,
-or on the category of CCM spectral triples, such that
+Does there exist a class of objects $\psi$ (Hermitian forms such as the Weil form $Q$ on its
+test space, or spectral triples), each with a negative index $\kappa(\psi)\in\{0,1,\dots\}$, and
+an operation $\boxtimes$ on this class such that
 \begin{enumerate}[\rm(a)]
 \item $\kappa(\psi_1\boxtimes\psi_2)\geq\kappa(\psi_1)+\kappa(\psi_2)$
 (superadditivity of the negative index), and
 \item there is a bound $\kappa(\psi^{\boxtimes k})\leq f(k)$ with
-$f(k)/k\to0$, provable by a finiteness condition of type C5
-(\cite[]{P40})?
+$f(k)/k\to0$, provable by a finiteness argument?
 \end{enumerate}
-If both hold, then $2mk\leq f(k)$ for all $k$ forces $m=0$, i.e.\ RH.
+If both hold, then $k\,\kappa(\psi)\leq f(k)$ for all $k$ forces $\kappa(\psi)=0$. For the full
+Weil form $\kappa(Q)=0$ is equivalent to RH by Weil's criterion \cite[Def.~2.3]{P25}; for the
+localized form on $\mathcal V$ one would in addition need $\kappa_{\mathcal V}\ge1$ whenever
+off-line zeros exist, which is not known \cite[Cor.~6.5]{P18}.
 \end{problem}
 
-\subsection{Why it has not been tried, and where to look}
+\subsection{Where to look}
 For $\zeta$---a $\mathrm{GL}(1)$ object---the \emph{grouplike} tensor theory
 is trivial: $\mathrm{sym}^k$ of the trivial character is trivial, which is
 why the Langlands route to Ramanujan-type bounds works for modular forms
 but says nothing about $\zeta$. The operation $\boxtimes$ must therefore be
 \emph{non-grouplike}: a candidate is the $\lambda$-ring / Frobenius-lift
 structure on the Connes--Consani scaling site, or a Rankin--Selberg-type
-convolution realised directly on $(K,Q)$ rather than on automorphic data.
+convolution realised directly on the test space with the form $Q$ rather than on automorphic data; for spectral and dynamical analogies of this kind see \cite{bgConnes99,bgDeninger}.
 
 \begin{remark}[What would falsify Form B]
 If $\kappa$ is exactly additive under every available $\boxtimes$ (not
 strictly superadditive) and the bound $f(k)$ is genuinely linear, there is
-no contradiction to extract and Form~B is dead. The decisive sub-question
-is whether \emph{any} natural product on $(K,Q)$ makes the negative index
+no contradiction to extract and Form~B fails. The decisive sub-question
+is whether \emph{any} natural product on the test space with the form $Q$ makes the negative index
 strictly superadditive.
 \end{remark}
 
-\begin{remark}[Resonance with the one non-CAP mechanism found]
-The single mechanism in the entire corpus that is provably not a CAP
-positivity is Bagchi's amplification \cite[]{P40}: one off-critical
-zero, replicated by strong recurrence to a positive-density family,
-contradicts the unconditional zero-density bound $N(\sigma,T)=o(T)$.
-Form~B is that same skeleton with an algebraic amplifier in place of the
-ergodic one. The ergodic version failed only because its premise (strong
-recurrence) is RH-equivalent (\S\ref{sec:nogo}); the skeleton itself is
-sound. This is the strongest single piece of evidence that the
-amplification \emph{form} is the right place to look.
+\begin{remark}[Relation with Bagchi's argument]
+Bagchi's proof that strong recurrence implies RH \cite{Bagchi} has the same amplification
+shape: one off-critical zero, replicated by strong recurrence and Rouch\'e's theorem to a family
+of zeros of positive density, contradicts the unconditional zero-density bound
+$N(\sigma,T)=o(T)$ for $\sigma>1/2$. Form~B is that skeleton with an algebraic amplifier in place
+of the ergodic one. The ergodic version does not prove RH because its premise (strong
+recurrence) is equivalent to RH (\S\ref{ssec:ergodic}); the skeleton itself is sound.
 \end{remark}
 
 \section{Form C: the boundary point as a quantitative singularity}\label{sec:formC}
 
-A cheaper, lower-risk line. The self-approximation family $\mathrm{SR}_d$ is
-proved unconditionally for all $d\neq0$, with $d=0\iff$RH
-\cite[]{P40}. The effective question has not been asked.
+A more modest line. The self-approximation statement $\mathrm{SR}_d$ is proved unconditionally
+for all irrational $d$ \cite{Nak09,Pan10}, while $\mathrm{SR}_0$ is equivalent to RH
+\cite{Bagchi}. We are not aware of an effective study of the degeneration as $d\to0$.
 
 \begin{problem}[Effective degeneration of $\mathrm{SR}_d$]\label{prob:effective}
-As $d\to0$, how do the constants in the proof of $\mathrm{SR}_d$ degrade?
-If the degradation is $e^{-c/|d|}$, this is quantified MW-2 and the line
-closes cleanly. If it is polynomial in $1/|d|$, there is a genuine tension
-with the Rouch\'e argument linking recurrence to zero density, deserving
-a dedicated analysis.
+As $d\to0$ through irrational values, how do the constants (the lower density, as a function of
+$K$ and $\varepsilon$) in the proof of $\mathrm{SR}_d$ degrade? If the degradation is like
+$e^{-c/|d|}$, this quantifies the failure of the Euler product to propagate into the strip; if it
+is polynomial in $1/|d|$, there is a tension with the Rouch\'e argument linking recurrence to zero
+density which would deserve a dedicated analysis.
 \end{problem}
 
-Form~C produces knowledge either way: a closed line (with MW-2 quantified)
-or a tension to exploit. It is the natural first move because it is finite,
-falsifiable, and independent of the harder Forms A and B.
+Form~C is finite, falsifiable, and independent of Forms A and B.
 
-\section{Honest assessment}\label{sec:assessment}
+\section{Summary}\label{sec:assessment}
 
-We claim no proof and no partial proof of RH. We claim three things.
-First, a structural no-go (Observation~\ref{obs:nogo}): the
-one-dimensional propagation toolkit is exhausted against the
-boundary-point families that organise the subject, and we have checked the
-mechanisms individually. Second, one new unconditional theorem internal to
-the framework (Theorem~\ref{thm:single-scale}): the trace criterion holds at
-a single scale, the $\lambda$-family being spurious. Third, a forward
-agenda (Problems~\ref{prob:coupling},~\ref{prob:amplify},~\ref{prob:effective})
-that is precisely the set of logical forms the no-go does not exclude, each
-with a stated falsifier.
-
-If Forms A and B also collapse onto known walls, that collapse will itself
-be informative: it would show the obstruction is deeper than the
-1D/2D/amplification trichotomy can express, and would be the first
-evidence that RH is unreachable by \emph{any} of the argument-forms
-currently known to mathematics. That, too, would be a result. The honest
-position is that we have narrowed the search for the missing idea from
-``anything'' to ``a non-grouplike amplification of the Pontryagin index,
-or a coupled monotonicity on the heat-time/filtration quadrant,'' and that
-this narrowing---not any claim of progress toward the proof itself---is the
-contribution.
+We claim no proof and no partial proof of RH. The paper contains: a heuristic discussion
+(Heuristic principle~\ref{prin:boundary} and Observation~\ref{obs:nogo}) of why five classical
+one-dimensional propagation mechanisms do not carry interior control to the boundary in several
+reformulations of RH, which suggests but does not prove that an argument reaching RH is not of
+this type; two elementary results, the strict positivity of the Christoffel-type kernel
+(Theorem~\ref{thm:wlambda-strict}, with the trivial single-scale restatement
+Theorem~\ref{thm:single-scale}) and Proposition~\ref{prop:analytic}; and three open problems
+(Problems~\ref{prob:coupling},~\ref{prob:amplify},~\ref{prob:effective}), each with a stated
+falsifier, corresponding to forms of argument not covered by the discussion.
 
 \begin{thebibliography}{99}
 
-\bibitem{CCM24} A.~Connes, C.~Consani, H.~Moscovici,
-\emph{Spectral realisation of zeta zeros and the Riemann--Roch programme}
-(2024). Foundational construction underlying this paper.
+\bibitem{Bagchi} B.~Bagchi, \emph{Recurrence in topological dynamics and the Riemann
+hypothesis}, Acta Math. Hungar. \textbf{50} (1987), 227--240.
 
-\bibitem{CCM25} A.~Connes, C.~Consani, H.~Moscovici,
-\emph{Zeta spectral triples and finite Euler approximation},
-arXiv:2511.22755 (2025); A.~Connes, arXiv:2602.04022 (2026).
+\bibitem{CCM25} A.~Connes, C.~Consani, H.~Moscovici, \emph{Zeta spectral triples}, preprint, arXiv:2511.22755 (2025).
+
+\bibitem{Tit} E.~C.~Titchmarsh, \emph{The theory of the Riemann zeta-function}, 2nd ed., revised
+by D.~R.~Heath-Brown, Oxford Univ. Press, 1986.
 
 \bibitem{CC21} A.~Connes, C.~Consani,
-\emph{Weil positivity and trace formula for the archimedean place},
-Selecta Math. \textbf{27} (2021), arXiv:2006.13771.
+\emph{Weil positivity and trace formula, the archimedean place},
+Selecta Math. (N.S.) \textbf{27} (2021), no.~4, Paper No.~77; arXiv:2006.13771.
+
+\bibitem{New76} C.~M.~Newman, \emph{Fourier transforms with only real zeros}, Proc. Amer. Math. Soc.
+\textbf{61} (1976), 245--251.
+
+\bibitem{dB} N.~G.~de Bruijn, \emph{The roots of trigonometric integrals}, Duke Math. J.
+\textbf{17} (1950), 197--226.
 
 \bibitem{Del74} P.~Deligne, \emph{La conjecture de Weil. I},
 Publ. Math. IH\'ES \textbf{43} (1974), 273--307.
 
-\bibitem{P35} D.~A.~Trejo Pizzo, \emph{Pontryagin spectral index of the Weil form and the Connes scaling operator: a bridge theorem for the Riemann Hypothesis}, preprint, 2026.
+\bibitem{Nak09} T.~Nakamura, \emph{The joint universality and the generalized strong recurrence
+for Dirichlet $L$-functions}, Acta Arith. \textbf{138} (2009), 357--362.
 
-\bibitem{P39} D.~A.~Trejo Pizzo, \emph{A trace and measure criterion for the Riemann Hypothesis from the zeta spectral triple}, preprint, 2026.
+\bibitem{Pan10} \L.~Pa\'nkowski, \emph{Some remarks on the generalized strong recurrence for
+$L$-functions}, in: New Directions in Value-Distribution Theory of Zeta and $L$-Functions,
+Shaker Verlag, Aachen, 2009, 305--315.
 
-\bibitem{P40} D.~A.~Trejo Pizzo, \emph{The localized Weil form and its Kre\u\i n--Pontryagin index: localization, obstruction, and rigidity}, preprint, 2026.
+\bibitem{RT} B.~Rodgers and T.~Tao, \emph{The de Bruijn--Newman constant is non-negative},
+Forum Math. Pi \textbf{8} (2020), e6.
 
-\bibitem{bgConnes99} A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of the Riemann zeta function}, Selecta Math.\ (N.S.) \textbf{5} (1999), 29--106.
-\bibitem{bgDeninger} C.~Deninger, \emph{Some analogies between number theory and dynamical systems on foliated spaces}, Doc.\ Math.\ ICM \textbf{I} (1998), 163--186.
+\bibitem{P13} D.~A.~Trejo Pizzo, \emph{Monotonicity of the off-line mass under the de
+Bruijn--Newman zero flow}, Paper~13 of this series.
+
+\bibitem{P18} D.~A.~Trejo Pizzo, \emph{The localized Weil form on even test functions: off-line
+Lorentzian blocks and obstructions to positive-kernel realizations}, Paper~18 of this series.
+
+\bibitem{P23} D.~A.~Trejo Pizzo, \emph{Jacobi operators, a prime-sum potential and the logarithmic derivative of zeta on the critical line}, Paper~23 of this series.
+
+\bibitem{P24} D.~A.~Trejo Pizzo, \emph{Trace and measure reformulations of the Riemann
+Hypothesis through the discrepancy measure of the on-line projection}, Paper~24 of this series.
+
+\bibitem{P25} D.~A.~Trejo Pizzo, \emph{The Weil form and the scaling operator: a
+Pontryagin-index dictionary in zero coordinates}, Paper~25 of this series.
+
+\bibitem{bgConnes99} A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of
+the Riemann zeta function}, Selecta Math.\ (N.S.) \textbf{5} (1999), 29--106.
+\bibitem{bgDeninger} C.~Deninger, \emph{Some analogies between number theory and dynamical
+systems on foliated spaces}, Doc.\ Math.\ ICM \textbf{I} (1998), 163--186.
 \end{thebibliography}
 
 \end{document}
