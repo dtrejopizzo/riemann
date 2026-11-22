@@ -28,7 +28,7 @@ Li's criterion (Theorem 2.1), the Bombieri–Lagarias theorem and the classical 
 ## Files
 
 - `main.tex`: LaTeX source.
-- `death-of-the-positivity-family.pdf`: compiled paper, 63 pages.
+- `death-of-the-positivity-family.pdf`: compiled paper, 61 pages.
 - `scripts/`: supporting computations, cited in the text by relative path. Ball-arithmetic certificate of λ_n > 0 for 1 ≤ n ≤ 150 (requires python-flint): `li_ball_certificate.py`. Exact rational checks: `m1_cumulative_sign_certificate.py`, `m1_global_hessian_check.py`, `global_compound_poisson_tp_check.py`, `incomplete_abel_stop_gate_check.py`, `jordan_cocycle_sign_gate.py`, `li_interval_enclosures.py`, `local_tower_square_check.py`, `near_quartic_margin_check.py`, `fejer_caratheodory_gate_check.py`, `quartic_square_stop_gate_check.py`, `three_channel_cocycle_check.py`. Minimal cutoffs of Remark 2.11: `minimal_cutoffs.py`. Double-precision diagnostics: `global_cocycle_probe.py`, `cubic_cocycle_probe.py`, and the helper `zeta_tools.py`.
 
 ## Relation to other papers

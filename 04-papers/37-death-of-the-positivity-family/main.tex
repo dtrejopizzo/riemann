@@ -81,71 +81,27 @@ density-relaxed criteria}}
 \maketitle
 
 
-\newpage\enlargethispage{14pt}
 \begin{abstract}
-The direct route from the Li--Keiper criterion to the Riemann Hypothesis developed here
-terminates in a compact--tail inequality $(\star)$, bounding the prime counting error weighted by
-a Laguerre kernel.  The constants $2002/501$ and $A_n/1001$ describe only a sufficient transfer at the floor
-$T\ge1000$; since admissibility is upward closed, the cofinal statement is $4\lambda_n-A_n>0$
-(Theorem~\ref{thm:four}).  Moreover $4\lambda_n-A_n\ge0$ for all large $n$ already proves the Riemann
-Hypothesis, by Li's criterion together with the Bombieri--Lagarias theorem that a zero off the
-line forces $\lambda_n<0$ for infinitely many $n$.
-
-What survives, and is the thesis of the title, is sharper and independent of the cutoff
-arithmetic. Every instrument in the catalogue certifies that some \emph{auxiliary} object is
-nonnegative: a measure, a square, a Gram form, a totally positive kernel, a completely monotone
-function. The object whose nonnegativity is actually at stake is the completed cocycle
-$H_u^{r}K_u^{r-1}$, and we prove that it is not of that kind. Its Euler and Gamma factors are
-positive for every real exponent by infinite divisibility; its polar factor is signed for every
-exponent, with an exactly computable negative density at $x_0=\tfrac12\log2$ equal, up to the positive normalizing factor $e^{-\eps x_0}$, to
-$-r+(r-1)/\sqrt2$, which is bounded away from zero and whose absolute value grows linearly in $r$ and never vanishes. The target is
-therefore a signed comparison between two divergent blocks of the same order, $A_n$ and
-$A_n-\lambda_n=-\lambda_n^{\mathrm{prime}}$, whose sign cannot be read off from the positivity of any single factor.
-
-Sixteen positivity attacks on that inequality are closed, each with an explicit obstruction; for most of
-them an exact witness is given, and the remaining ones are stated as structural observations.
-They range from Gram, energy and order-kernel positivity, M\"obius and Selberg sieves, Abel and
-Fej\'er summation, compound-Poisson and total-positivity structure, complete monotonicity and
-sums of squares; a further route through a tail sign drawn from a Vinogradov--Korobov envelope is closed as well (\S\S\ref{sec:mech-gram}--\ref{sec:mech-envelope}).
-
-Every attack tries to transfer the nonnegativity of an auxiliary object to the compact
-certificate.  At a \emph{prefixed} cutoff the bare conclusion $D_n^{[4]}=4\lambda_n-A_n\ge0$
-leaves an uncontrolled signed tail; at the floor $T=1000$ the sufficient condition is
-$D_n^{[4]}\ge A_n/1001$.  None of the catalogued transfers supplies that extra information (a
-classification by inspection of the catalogue, restricted to the catalogued fixed-cutoff transfers).  This does not show that positivity of $D_n^{[4]}$ is inadequate, nor that a
-proportional margin is necessary.  Three falsifiers implement the failures: an exact negative Laplace density at $x_0=\tfrac12\log2$, strictly below the first
-prime atom, where the Euler channel has no support; off-line symmetric quartets, one of them
-placed uniformly inside the Laguerre bulk and one giving
-$16\bigl(1-\cosh(na)\cos(n\vartheta)\bigr)<0$ already at the first target index $n=150$; and
-sign changes of the genuinely arithmetic blocks, certified in rational arithmetic
-($H(2969)<-21<0<110<H(3167)$; a $\mathrm{PF}_2$ minor equal to $-1/2916$ at the primes $2$ and
-$3$).
-
-We isolate the $\tfrac12\log2$ phenomenon as a structural wall for the positive-measure
-transfer in its own right --- the
-arithmetic-propagation wall localized in the Laplace variable --- and prove that it is not a
-near miss: the defect is $-r+(r-1)/\sqrt2<0$ for every $r>1$, with defect of absolute value
-$r(1-1/\sqrt2)+1/\sqrt2$. We then describe two genuinely weaker successor criteria.  The
-dominant-mode argument behind Bombieri--Lagarias implies that, if RH is false, exponentially
-negative Li coefficients occur on a syndetic set.  Consequently it is enough to prove any
-subexponential lower bound outside an exceptional set of logarithmic density zero, or on
-consecutive blocks of unbounded length.  A smooth criterion that retains exactly this weakening is
-the bounded Fermi average
-$H_X^{-1}\sum_{n\le X}[n(1+e^{t(\lambda_n+b_n)})]^{-1}\to0$, where
-$b_n\to\infty$ and $\log(1+b_n)=o(n)$.  We give its exact regularized prime--pole form, while
-explicitly leaving its estimate open.  The exponential partition
-$\sum_{n\le X}e^{-t\lambda_n}/n=O_t(\log X)$ is retained only as a stronger algebraic auxiliary:
-it already forces a lower bound at every degree.  Finally, we explain
-why, if the operator realizes the Weil form, an operator-norm gap for the whitened arithmetic jet is incompatible with RH,
-and distinguish the extremal (gapless, marginal) problem from the fixed-family problem that
-$(\star)$ poses.  Fixed-vector non-alignment remains one possible stronger route, not a logically
-necessary form of the missing theorem.
-
-Nothing in this paper proves $(\star)$, the Riemann Hypothesis, or its negation. Every
-no-go is stated relative to an explicitly declared list of admissible inputs, and none of them
-refutes the existence of a signed non-local inequality special to the real von Mangoldt weights
-$\Lambda(m)$.  The new density and partition criteria are equivalences and not estimates of the
-real arithmetic side.
+The Li--Keiper route to the Riemann Hypothesis developed in Paper~36 ends in a compact--tail
+inequality $(\star)$, which bounds the prime counting error weighted by a Laguerre kernel. We
+recall the reductions with their proofs, show that admissible cutoffs are upward closed, so that
+the cofinal form of $(\star)$ is $4\lambda_n-A_n>0$, and certify $\lambda_n>0$ for
+$1\le n\le149$ by an included ball-arithmetic script. We then study sixteen attempts to prove
+$(\star)$ by transferring the nonnegativity of an auxiliary object, such as a measure, a square,
+a Gram form, a totally positive kernel or a completely monotone function, to the compact
+certificate. The main structural result is that the completed cocycle $H_u^rK_u^{r-1}$ is not
+the Laplace transform of a positive measure: its Euler and Gamma factors are positive, but its
+polar factor has, up to a positive normalization, density $-r+(r-1)/\sqrt2$ at
+$\tfrac12\log2$, below the first prime atom, so the defect has absolute value at least
+$(1-1/\sqrt2)\,r$ for every $r>1$. Each attempt is closed relative to the inputs declared in its
+section, in most cases by an exact witness, such as a $\mathrm{PF}_2$ minor equal to
+$-1/2916$ at the primes $2$ and $3$, or the sign change $H(2969)<0<H(3167)$ certified in
+rational arithmetic. As successors we prove that, if the Riemann Hypothesis fails, exponentially
+negative Li coefficients occur on a syndetic set, so that a subexponential lower bound outside a
+set of logarithmic density zero, or on blocks of unbounded length, would suffice; we give the
+exact prime--pole form of a bounded Fermi average expressing this criterion without estimating
+it. The paper proves neither $(\star)$ nor the Riemann Hypothesis nor its negation, and its
+no-go results do not exclude a signed inequality special to the von Mangoldt weights.
 \end{abstract}
 
 \tableofcontents
