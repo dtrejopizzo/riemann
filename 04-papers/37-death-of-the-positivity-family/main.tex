@@ -80,17 +80,16 @@ density-relaxed criteria}}
 \begin{document}
 \maketitle
 
+
+\newpage\enlargethispage{14pt}
 \begin{abstract}
 The direct route from the Li--Keiper criterion to the Riemann Hypothesis developed here
 terminates in a compact--tail inequality $(\star)$, bounding the prime counting error weighted by
-a Laguerre kernel.  The cutoff audit in this paper corrects an important overstatement of its
-required margin.  The constants $2002/501$ and $A_n/1001$ describe only a convenient sufficient
-transfer obtained by replacing the actual cutoff by the raw validity floor $T\ge1000$.  Since
-admissibility is upward closed, the intrinsic cofinal statement is instead
-$4\lambda_n-A_n>0$: for each strict positive margin one may move the cutoff far enough out to
-prove $(\star)$.  Moreover $4\lambda_n-A_n\ge0$ for all large $n$ already proves the Riemann
-Hypothesis directly by Li's criterion.  Thus no \emph{quantitative} claim that
-``semidefiniteness falls short by a divergent amount'' survives the cutoff correction.
+a Laguerre kernel.  The constants $2002/501$ and $A_n/1001$ describe only a sufficient transfer at the floor
+$T\ge1000$; since admissibility is upward closed, the cofinal statement is $4\lambda_n-A_n>0$
+(Theorem~\ref{thm:four}).  Moreover $4\lambda_n-A_n\ge0$ for all large $n$ already proves the Riemann
+Hypothesis, by Li's criterion together with the Bombieri--Lagarias theorem that a zero off the
+line forces $\lambda_n<0$ for infinitely many $n$.
 
 What survives, and is the thesis of the title, is sharper and independent of the cutoff
 arithmetic. Every instrument in the catalogue certifies that some \emph{auxiliary} object is
@@ -98,35 +97,23 @@ nonnegative: a measure, a square, a Gram form, a totally positive kernel, a comp
 function. The object whose nonnegativity is actually at stake is the completed cocycle
 $H_u^{r}K_u^{r-1}$, and we prove that it is not of that kind. Its Euler and Gamma factors are
 positive for every real exponent by infinite divisibility; its polar factor is signed for every
-exponent, with an exactly computable negative density at $x_0=\tfrac12\log2$ equal to
-$-r+(r-1)/\sqrt2$, which is bounded away from zero and worsens linearly in $r$. The target is
-therefore a signed cancellation between two divergent blocks of the same order, $A_n$ and
-$B_n=A_n-\lambda_n$, with a margin proportional to either. That is a coercivity estimate, not a
-semidefiniteness one.
+exponent, with an exactly computable negative density at $x_0=\tfrac12\log2$ equal, up to the positive normalizing factor $e^{-\eps x_0}$, to
+$-r+(r-1)/\sqrt2$, which is bounded away from zero and whose absolute value grows linearly in $r$ and never vanishes. The target is
+therefore a signed comparison between two divergent blocks of the same order, $A_n$ and
+$A_n-\lambda_n=-\lambda_n^{\mathrm{prime}}$, whose sign cannot be read off from the positivity of any single factor.
 
-This paper is the record of a systematic failure. Sixteen documented attacks on that inequality
-were closed, each with an exact witness rather than a report of difficulty: local
-positive-semidefiniteness of an order kernel; the global Gram/energy factorization of the same
-kernel; the non-local zero--lobe Gram; M\"obius inversion as a positive adjoint; the positive
-Euler--Gamma Koszul complex; the nonnegative Jordan hierarchy $\mu*\log^{k}\ge0$; Selberg's
-$\mu*\log^{2}\ge0$ with its $O(x)$ summation and the associated Riccati induction; radial Abel
-and Ces\`aro--Fej\'er positivity of the incomplete Li block; real order and monotonicity of a
-correlated-shift cocycle; the three-channel Jordan--Beta expansion with a positive polar square;
-tower-by-tower algebraic squares; global compound-Poisson structure together with
-$\mathrm{PF}_2/\mathrm{TP}_2$, log-concavity, decreasing variation and stochastic order;
-complete monotonicity in the sense of Bernstein; Stein--Mecke generator positivity;
-Fej\'er--Carath\'eodory's $\Re\Phi\le1$; the fourth power as a sum of squares; and a favourable
-tail sign extracted from an absolute Vinogradov--Korobov envelope.
+Sixteen positivity attacks on that inequality are closed, each with an explicit obstruction; for most of
+them an exact witness is given, and the remaining ones are stated as structural observations.
+They range from Gram, energy and order-kernel positivity, M\"obius and Selberg sieves, Abel and
+Fej\'er summation, compound-Poisson and total-positivity structure, complete monotonicity and
+sums of squares; a further route through a tail sign drawn from a Vinogradov--Korobov envelope is closed as well (\S\S\ref{sec:mech-gram}--\ref{sec:mech-envelope}).
 
-The sixteen failures are nevertheless strongly related.  Every attack tries to transfer the
-nonnegativity of an auxiliary kernel, measure, moment sequence, or square to the compact
-certificate.  At a \emph{prefixed} finite cutoff, and using only the two-sided tail envelope, the
-bare conclusion $D_n^{[4]}=4\lambda_n-A_n\ge0$ leaves an uncontrolled signed tail; at the
-coarse floor $T=1000$ the stronger sufficient condition is exactly
-$D_n^{[4]}\ge A_n/1001$.  The catalogue proves that the proposed transfers do not supply that
-extra information.  It does not prove that positivity of $D_n^{[4]}$ is globally inadequate,
-nor that proportional coercivity is necessary for RH.  Three universal falsifiers implement
-the transfer failures: an exact negative Laplace density at $x_0=\tfrac12\log2$, strictly below the first
+Every attack tries to transfer the nonnegativity of an auxiliary object to the compact
+certificate.  At a \emph{prefixed} cutoff the bare conclusion $D_n^{[4]}=4\lambda_n-A_n\ge0$
+leaves an uncontrolled signed tail; at the floor $T=1000$ the sufficient condition is
+$D_n^{[4]}\ge A_n/1001$.  None of the catalogued transfers supplies that extra information (a
+classification by inspection of the catalogue, restricted to the catalogued fixed-cutoff transfers).  This does not show that positivity of $D_n^{[4]}$ is inadequate, nor that a
+proportional margin is necessary.  Three falsifiers implement the failures: an exact negative Laplace density at $x_0=\tfrac12\log2$, strictly below the first
 prime atom, where the Euler channel has no support; off-line symmetric quartets, one of them
 placed uniformly inside the Laguerre bulk and one giving
 $16\bigl(1-\cosh(na)\cos(n\vartheta)\bigr)<0$ already at the first target index $n=150$; and
@@ -137,7 +124,7 @@ $3$).
 We isolate the $\tfrac12\log2$ phenomenon as a structural wall for the positive-measure
 transfer in its own right --- the
 arithmetic-propagation wall localized in the Laplace variable --- and prove that it is not a
-near miss: the defect is $-r+(r-1)/\sqrt2<0$ for every $r>1$, failing by the constant factor
+near miss: the defect is $-r+(r-1)/\sqrt2<0$ for every $r>1$, with defect of absolute value
 $r(1-1/\sqrt2)+1/\sqrt2$. We then describe two genuinely weaker successor criteria.  The
 dominant-mode argument behind Bombieri--Lagarias implies that, if RH is false, exponentially
 negative Li coefficients occur on a syndetic set.  Consequently it is enough to prove any
@@ -148,8 +135,8 @@ $H_X^{-1}\sum_{n\le X}[n(1+e^{t(\lambda_n+b_n)})]^{-1}\to0$, where
 $b_n\to\infty$ and $\log(1+b_n)=o(n)$.  We give its exact regularized prime--pole form, while
 explicitly leaving its estimate open.  The exponential partition
 $\sum_{n\le X}e^{-t\lambda_n}/n=O_t(\log X)$ is retained only as a stronger algebraic auxiliary:
-it already forces a lower bound at every degree.  Finally, we prove
-that operator-norm coercivity for the whitened arithmetic jet is \emph{false} rather than hard,
+it already forces a lower bound at every degree.  Finally, we explain
+why, if the operator realizes the Weil form, an operator-norm gap for the whitened arithmetic jet is incompatible with RH,
 and distinguish the extremal (gapless, marginal) problem from the fixed-family problem that
 $(\star)$ poses.  Fixed-vector non-alignment remains one possible stronger route, not a logically
 necessary form of the missing theorem.
@@ -169,26 +156,20 @@ real arithmetic side.
 \label{sec:prologue}
 %% ======================================================================
 
-There is a particular kind of experience in long research programmes which is almost never
-written down, because the conventions of publication reward the announcement of a theorem and
-are silent about the announcement of a category error. One works for a long time on a target
-inequality. One tries a mechanism; it fails, and one records the failure. One tries a second,
-structurally different mechanism; it fails too, for what appears to be an unrelated reason. One
-tries a third. After the tenth or twelfth such episode the suspicion becomes unavoidable that
-the failures are not independent events --- that they are one failure, seen from twelve angles,
-and that the reason they keep recurring is not that the mechanisms are weak but that, for the
-specific transfer they were asked to perform, they all use the same missing input.
+When many structurally different mechanisms fail on the same target inequality, each for what
+appears to be an unrelated reason, one may ask whether the failures are independent, or whether
+they are one failure seen from several angles: for the specific transfer they are asked to
+perform, they may all lack the same input.
 
-This paper is the written form of that suspicion, made precise and proved. The investigation it
-reports on had reduced the Riemann Hypothesis, along a route we shall recall in
-\S\ref{sec:target}, to a single unconditional inequality about the Li--Keiper coefficients
-$\lambda_n$ of the Riemann zeta function. The reduction is exact, the inequality is explicit,
-and its truth would close the Hypothesis. Over the course of the work reported here, sixteen
-distinct attacks on that inequality were opened and closed. Each was closed with what we shall call a
+This paper makes that question precise for one target. Along a route recalled in
+\S\ref{sec:target}, the Riemann Hypothesis reduces to a single unconditional inequality about
+the Li--Keiper coefficients $\lambda_n$ of the Riemann zeta function. The reduction is exact,
+the inequality is explicit, and its truth would imply the Hypothesis. Sixteen distinct attacks
+on that inequality are examined and closed here. Most were closed with what we shall call a
 \emph{witness}: a rational number, an exact identity, a specific pair of primes, a specific
 index $n$ --- something one can check, rather than a report that a route ``did not seem to
-work''. The discipline of witnesses is what makes the present synthesis possible: because every
-death is a computation, one can ask what the computations have in common.
+work''. The remaining ones are closed by structural observations stated as such. Because most
+deaths are computations, one can ask what the computations have in common.
 
 They have this in common. Every one of the sixteen mechanisms is an instrument for proving that
 some auxiliary object is nonnegative. Their outputs are: a Gram matrix is positive semidefinite; a
@@ -200,51 +181,48 @@ keeping. But their conclusion is always of one shape, namely
 \[
    (\text{something})\ \ge\ 0 .
 \]
-At the time these mechanisms were built, the compact inequality was transferred through the
-uniform floor $T\ge1000$ to the stronger target
+If the compact inequality is transferred through the uniform floor $T\ge1000$, one obtains the
+stronger target
 \[
    \lambda_n\ \ge\ c\,A_n,\qquad c>\tfrac14\ \text{fixed},
 \]
 a bound in which the right-hand side is of size $\asymp n\log n$.  At that fixed floor the
 algebraic gap between $D_n^{[4]}\ge0$ and the declared sufficient transfer is exactly
 $A_n/1001$.  This is a valid diagnosis of those transfer attempts, but it is not the intrinsic
-logical frontier: the actual cutoff may be enlarged separately for each $n$.  The corrected
+logical frontier: the actual cutoff may be enlarged separately for each $n$.  The
 frontier for cofinal cutoffs is the strict inequality $D_n^{[4]}>0$, while the non-strict
-inequality $D_n^{[4]}\ge0$ for all large $n$ already implies RH directly.  Accordingly this
-paper no longer promotes coercivity as a necessary category for a proof of RH.
+inequality $D_n^{[4]}\ge0$ for all large $n$ already implies RH directly.  Accordingly
+coercivity is not a necessary category for a proof of RH.
 
-The sharpest and most useful form of the lesson is chronological. The \emph{declared fixed-cutoff
-transfer} changed type before we distinguished it from the master criterion. The reductions that
-improved that sufficient margin --- from
-$2\lambda_n\ge A_n$ down through $3\lambda_n\ge A_n$ to
-$\tfrac{2002}{501}\lambda_n\ge A_n$ --- were real progress, and were correctly recorded as
-such for a cutoff controlled only by its floor. But in pushing that sufficient exponent
-\emph{below} the integer four they moved this particular transfer across the boundary of what a
-bare square, positive measure, or semidefinite form certifies.
+The \emph{declared fixed-cutoff transfer} must be distinguished from the master criterion. The
+sufficient margins $2\lambda_n\ge A_n$, $3\lambda_n\ge A_n$ and
+$\tfrac{2002}{501}\lambda_n\ge A_n$ are successively weaker, and each is valid for a cutoff
+controlled only by its floor. But the last exponent lies \emph{below} the integer four, which
+moves this particular transfer across the boundary of what a bare square, positive measure, or
+semidefinite form certifies.
 The exponent four is precisely where factorization lives: $H_u^4K_u^3=(H_u^2K_u^{3/2})^2$, and
 $\mathrm{PF}_2$, sums of squares and Gram representations are all built for even exponents.
 At the fixed floor, the inequality one gets from those structures, namely
 $4\lambda_n-A_n\ge0$, does not by itself imply the compact certificate through the unsigned tail
 estimate; the convenient stronger condition is
-$4\lambda_n-A_n\ge A_n/1001$. Six of the sixteen mechanisms were opened without making this
-distinction. Their individual witnesses remain valid, but the former conclusion that
-semidefiniteness itself could never close RH is withdrawn.
+$4\lambda_n-A_n\ge A_n/1001$. Six of the sixteen mechanisms are measured against this fixed-floor
+condition. Their individual witnesses are valid, but they do not show that semidefiniteness
+itself could never prove RH.
 
 We think this is worth writing down for three reasons.
 
-First, because it is the truth about how this piece of the work went, and an account that reports
-only its live fronts is not reporting on itself. We therefore collect in \S\ref{sec:scope} the
-corrections and retractions this paper carries, several of them to our own earlier claims.
+First, because the corrections matter: we collect in \S\ref{sec:scope} the corrections and
+retractions this paper carries, several of them to statements made in earlier versions of this work.
 
 Second, because the negative result still shrinks the search space for the \emph{specific
 transfers} catalogued here.  Their witnesses rule out positive-measure, local-square and
-operator-norm shortcuts.  They do not force the successor to be coercive: after the quantifier
-audit in \S\ref{sec:successor}, a nonlinear density estimate in the degree is another, strictly
-weaker possibility.  We also prove there that operator-norm coercivity for the whitened
-arithmetic jet is false, while fixed-vector non-alignment remains an optional stronger route.
+operator-norm shortcuts.  They do not force the successor to be coercive: by the quantifier analysis
+in \S\ref{sec:successor}, a nonlinear density estimate in the degree is another, strictly
+weaker possibility.  We also explain there why, if the operator realizes the Weil form, an operator-norm gap
+for the whitened arithmetic jet is incompatible with RH, while fixed-vector non-alignment remains an optional stronger route.
 
 Third, because several of the identities established on the way to these deaths are exact,
-reusable and, as far as our bibliographic audit could determine, not in the literature in the
+reusable and, as far as our search of the literature could determine, not in the literature in the
 combination in which they appear here: the global energy identity for the order kernel
 $w(\max(x,y))$ against $d\psi-dx$ (Theorem~\ref{thm:max-energy}); the exact Hessian cancellation
 that collapses that mechanism (Theorem~\ref{thm:hessian-zero}); the local tower identities
@@ -264,13 +242,14 @@ happens to be negative.
 We claim: the reductions of \S\ref{sec:target}, including upward closure of admissible cutoffs,
 the cofinal exponent-four criterion (Theorem~\ref{thm:four}), the fixed-ratio sufficient form
 (Theorem~\ref{thm:scalefree}) and the algebraic fixed-floor identity
-(Theorem~\ref{thm:threshold}); the sixteen no-gos of
-\S\S\ref{sec:mech-gram}--\ref{sec:mech-envelope}, each within the list of admissible inputs
-declared at its head; the classification theorem of \S\ref{sec:synthesis}; the structural wall
-of \S\ref{sec:halflog2}; and the negative result about operator-norm coercivity in
-\S\ref{sec:successor}; and the density, block and nonlinear partition criteria proved there.
+(Theorem~\ref{thm:threshold}); the tail estimate of Theorem~\ref{thm:a0}, proved here from an imported effective prime number theorem \cite{JohnstonYang}, which is not re-derived; the no-gos of
+\S\S\ref{sec:mech-gram}--\ref{sec:mech-envelope} (sixteen positivity mechanisms and the tail-sign route), each within the list of admissible inputs
+declared at its head; the summary of the catalogue in \S\ref{sec:synthesis} (a classification by inspection,
+restricted to the catalogued fixed-cutoff transfers); the structural wall
+of \S\ref{sec:halflog2}; and the density, block and nonlinear partition criteria proved there.
 
-We do not claim: $(\star)$; the Riemann Hypothesis; the negation of any of the sixteen target
+The conditional discussion of operator-norm gaps in
+\S\ref{sec:successor} is a remark, not a theorem. We do not claim: $(\star)$; the Riemann Hypothesis; the negation of any of the sixteen target
 inequalities. A no-go in this paper says that a \emph{specified} mechanism cannot produce the
 target from a \emph{specified} list of inputs. In particular, not one of them excludes the
 existence of a signed, non-local inequality valid for the actual von Mangoldt sequence
@@ -282,23 +261,36 @@ Every sign decision quoted as a certificate is exact. The rational witnesses of
 \S\ref{sec:falsifiers} are computed in exact rational arithmetic with outward-rounded intervals
 for the logarithms of primes; no floating-point comparison enters any statement labelled a
 theorem, proposition or witness. Two numerical diagnostics appear in the text
-(Remarks~\ref{rmk:diag-cubic} and \ref{rmk:diag-global}); both are explicitly labelled as
-directional evidence, and neither is used in the proof of anything.
+(Remarks~\ref{rmk:diag-cubic} and \ref{rmk:diag-global}); the first is a failed diagnostic (its two radii disagree
+by far more than the reported value, so it carries no sign information), the second is directional evidence only,
+and neither is used in the proof of anything.
 \end{convention}
 
 \begin{convention}[unconditionality]\label{conv:cond}
 Every statement in this paper is unconditional unless it is explicitly said to hold under the
 Riemann Hypothesis, and every imported statement is marked accordingly at the point of import.
-We are pedantic about this because one of the errors we had to correct was exactly the importation
-of a conditional asymptotic as though it were unconditional; see Remark~\ref{rmk:erratum}.
+This matters because a conditional asymptotic is easily quoted as though it were unconditional;
+see Remark~\ref{rmk:erratum}.
 \end{convention}
 
 %% ======================================================================
 \section{The target, its exact reductions, and the margin ladder}\label{sec:target}
 %% ======================================================================
 
-This section fixes notation and recalls, with proofs where they are short, the chain that
-produces the inequality whose attempted proof is the subject of the paper. Nothing in this
+This section fixes notation and recalls, with proofs, the chain that produces the inequality
+whose attempted proof is the subject of the paper. The chain is the direct Li--Keiper route of
+Paper~36 of this series \cite{Paper36}, where the decomposition \eqref{eq:split}--\eqref{eq:lamprime} and
+the compact--tail identity are its Proposition~9.131 (``exact Li--compact--tail assembly''), the tail
+estimate is its Lemma~9.132 (``A0: uniform far-tail theorem'') with Corollary~9.133 retaining the factor
+$(1+T_n)^{-1}$. For the finite range, positivity of $\lambda_n$ for every $1\le n\le149$ is
+certified by the ball-arithmetic computation \texttt{scripts/li\_ball\_certificate.py}: it encloses the
+Taylor coefficients of $\log\xi(1/(1-z))$ in Arb balls (python-flint) and finds a strictly positive
+lower endpoint for every $\lambda_n$, $1\le n\le150$. Two independent partial checks agree with it: the
+rational interval enclosures of \texttt{scripts/li\_interval\_enclosures.py} for $1\le n\le7$, and
+Proposition~9.137 (``finite computation and effective conditional range'') of Paper~36, whose rational
+interval computation gives $2\lambda_n-A_n>0$ unconditionally for $9\le n\le20$ (for $21\le n\le149$ it
+assumes an unproved coefficient-tail bound, and for $1\le n\le8$ it rests on uncertified values). To keep the present paper self-contained we give the short proofs
+here, except for the finite verification and the explicit formula behind \eqref{eq:lamprime}. Nothing in this
 section is negative; everything in it is an exact identity or an unconditional estimate. The
 reader who knows the chain may skip to \S\ref{sec:ladder}, and the reader who wants only the
 punchline may skip to Theorem~\ref{thm:threshold}.
@@ -355,9 +347,15 @@ and the prime block is
    =-n+\int_1^\infty\bigl(\psi(y)-y\bigr)f_n'(y)\,dy
    =\int_1^\infty\bigl(\psi(y)-y+1\bigr)f_n'(y)\,dy ,
 \end{equation}
-with $f_n$ the Laguerre test function recalled below. We record once and for all that the
-boundary term $-n$ in \eqref{eq:lamprime} arises from $\psi(1)=0$ and must never be discarded;
-an earlier version of this work discarded it and had to retract the consequence.
+with the Laguerre test function
+\[
+   f_n(y)=y^{-1}L^{(1)}_{n-1}(\log y)\qquad(y\ge1),
+\]
+so that $f_n(1)=L^{(1)}_{n-1}(0)=n$ and $f_n(y)\to0$ as $y\to\infty$; hence
+$\int_1^\infty f_n'(y)\,dy=-n$, which is the second equality in \eqref{eq:lamprime}. (This is the
+explicit formula with the pole--prime Abel regularization of Paper~36, Proposition~9.126 and the
+assembly of Proposition~9.131.) We record that the
+boundary term $-n$ in \eqref{eq:lamprime} arises from $\psi(1)=0$ and must not be discarded.
 
 \begin{notation}[the Laguerre kernel]\label{not:kernel}
 Write $L_n^{(\alpha)}$ for the generalized Laguerre polynomials. Put
@@ -369,6 +367,21 @@ identity $\bigl(L_n^{(1)}\bigr)'=-L^{(2)}_{n-1}$, which is what converts \eqref{
 into the compact form used below. Replacing it requires rebuilding every boundary term in the
 chain.
 \end{notation}
+
+Concretely, with $y=e^u$ one has $f_n(e^u)=e^{-u}L^{(1)}_{n-1}(u)$ and, by
+$(L^{(\alpha)}_k)'=-L^{(\alpha+1)}_{k-1}$ and $L^{(1)}_{n-1}+L^{(2)}_{n-2}=L^{(2)}_{n-1}$,
+\[
+   \frac{d}{du}\bigl[e^{-u}L^{(1)}_{n-1}(u)\bigr]=-e^{-u}L^{(2)}_{n-1}(u)=-K_n(u),
+\]
+so that
+\[
+   \int_1^\infty\bigl(\psi(y)-y\bigr)f_n'(y)\,dy=-\int_0^\infty E(u)K_n(u)\,du ,
+\]
+and \eqref{eq:split}, \eqref{eq:lamprime} take the compact form
+\[
+   \lambda_n=A_n-n-\int_0^\infty E(u)K_n(u)\,du .
+\]
+For $T>0$ we put $C_n(T):=\tfrac34A_n-n-\int_0^TE(u)K_n(u)\,du$.
 
 \subsection{The compact--tail identity and the inequality $(\star)$}\label{sec:a1}
 
@@ -387,17 +400,24 @@ and $C_n(T)\ge0$ if and only if
 \end{equation}
 \end{theorem}
 
+\begin{proof}
+Splitting the compact form of $\lambda_n$ at $T$ gives $\lambda_n=\tfrac14A_n+C_n(T)+R_n(T)$. On
+$[0,\log2)$ one has $\psi(e^u)=0$, so $E(u)K_n(u)=-L^{(2)}_{n-1}(u)=\bigl(L^{(1)}_n\bigr)'(u)$ and
+$\int_0^{\log2}EK_n=L^{(1)}_n(\log2)-(n+1)$. Hence $C_n(T)\ge0$ if and only if
+$\int_{\log2}^TEK_n\le\tfrac34A_n-n-L^{(1)}_n(\log2)+n+1=q_n$.
+\end{proof}
+
 We shall refer to \eqref{eq:a1} throughout as \emph{the compact inequality}, and to the
 statement that it holds for every $n\ge150$ with an admissible cutoff $T=T_n$ as $(\star)$
 without further qualification. It is the sole unconditional assertion that the route recalled here
 leaves to be proved: granted \eqref{eq:a1} for all $n\ge150$, together with the tail estimate of
-\S\ref{sec:a0} and the finitely many verified indices $1\le n\le149$, Li's criterion
-(Theorem~\ref{thm:li}) gives the Riemann Hypothesis. Everything negative in this paper is a
-statement about attempts to prove $(\star)$.
+\S\ref{sec:a0} and the finitely many indices $1\le n\le149$ (the ball-arithmetic certificate \texttt{scripts/li\_ball\_certificate.py} cited above gives
+$\lambda_n>0$ for all of them; see also \cite{Maslanka}), Li's criterion (Theorem~\ref{thm:li}) gives the Riemann Hypothesis. Everything
+negative in this paper is a statement about attempts to prove $(\star)$.
 
-The reserve $q_n$ must be used in this exact form. Its asymptotic $\tfrac38n\log n$ is correct
-but has already caused one retraction in this work, because the difference between $q_n$
-and its leading term is of the same order as the quantities being compared at moderate $n$.
+The reserve $q_n$ must be used in this exact form. Its asymptotic $\tfrac38n\log n$ is correct,
+but the difference between $q_n$ and its leading term is of the same order as the quantities
+being compared at moderate $n$.
 
 There is a one-parameter family worth recording, because it clarifies that the coefficient
 $\tfrac14$ is not a lucky accident and cannot be improved for free.
@@ -412,19 +432,27 @@ $C_n^\theta(T)=(1-\theta)A_n-n-\int_0^TE K_n$. Then
 \end{equation}
 and $C_n^\theta(T)\ge0$ is equivalent to the inequality \eqref{eq:a1} with $q_n$ replaced by
 $q_{n,\theta}$; we write $(\star_\theta)$ for that variant, so that
-$(\star)=(\star_{1/4})$. Moreover, if $T_n(\theta)$ denotes the minimal admissible cutoff for which the
-tail estimate $|R_n(T_n(\theta))|\le\theta A_n$ is available from a fixed effective prime
-number theorem, then $\theta\mapsto T_n(\theta)$ is non-increasing, and the two values
-$\theta,\theta'$ are connected by the \emph{signed transport}
+$(\star)=(\star_{1/4})$.
+\end{theorem}
+
+\begin{proof}
+$C_n^\theta(T)-C_n(T)=(\tfrac14-\theta)A_n$, so the identity follows from
+Theorem~\ref{thm:compact-tail}, and the equivalence follows from its proof with $\tfrac34$ replaced
+by $1-\theta$.
+\end{proof}
+
+\emph{The cutoff as a function of $\theta$.} Let $T_n(\theta)$ denote the minimal admissible cutoff in the sense of Lemma~\ref{lem:upward}
+below. The admissibility condition there weakens as $\theta$ grows, so $\theta\mapsto
+T_n(\theta)$ is non-increasing. Passing from $\theta=\tfrac14$ to another $\theta$ moves the
+cutoff and with it the \emph{signed transport}
 \begin{equation}\label{eq:transport}
    \Delta_{n,\theta}=-\int_{T_n(1/4)}^{T_n(\theta)}E(u)K_n(u)\,du
    =R_n\bigl(T_n(\tfrac14)\bigr)-R_n\bigl(T_n(\theta)\bigr),
 \end{equation}
-whose net effect on the requirement satisfies the two-sided bracket
-$-2\theta A_n\le\mathcal N_n(\theta)\le\tfrac12A_n$ with indeterminate sign.
-\end{theorem}
+an identity which follows from the definition of $R_n$; its sign is not determined by the
+estimates of \S\ref{sec:a0}.
 
-The content of the bracket is that lowering $\theta$ raises the reserve and simultaneously
+The content of this transport is that lowering $\theta$ raises the reserve and simultaneously
 pushes $T_n(\theta)$ outwards, transferring tail mass into the compact block that
 \eqref{eq:a1} must control. In the limit $\theta\to0$ the requirement tends to the full Li
 inequality. This is a redistribution of the content of the Hypothesis, not a discount, and we
@@ -438,16 +466,41 @@ is the floor $U_0=1000$.
 \subsection{The tail estimate, and the factor its published form discards}\label{sec:a0}
 
 The tail $R_n(T_n)$ is controlled unconditionally by a Vinogradov--Korobov type zero-free region
-\cite{Korobov,MTY}, in the following shape.
+\cite{Korobov,MTY}, in the following shape. The only imported input is an effective prime number
+theorem $|E(u)|\le A\,e^{u-\eta(u)}$ for $u\ge U_0$, with constants $A,U_0$ and a function $\eta$
+as in \S\ref{sec:a1}. Let $n$ be such that $A_n>0$ (this holds for every $n\ge8$; see Lemma~9.121 of
+Paper~36). A cutoff $T\ge U_0$ is called \emph{admissible} at level $\theta\in(0,1)$
+if
+\begin{equation*}
+   \eta(u)\ \ge\ (n+1)\log(1+u)+\log\frac{3An^2}{\theta A_n}\qquad\text{for every }u\ge T ;
+\end{equation*}
+unless stated otherwise $\theta=\tfrac14$.
 
 \begin{theorem}[unconditional tail estimate]\label{thm:a0}
-For every admissible cutoff $T_n$ there is $0<B_n\le A_n$ with
+For every cutoff $T_n$ admissible at level $\theta\le\tfrac34$, the number $B_n:=\tfrac43\theta A_n$
+satisfies $0<B_n\le A_n$ and
 \begin{equation}\label{eq:a0-raw}
    |R_n(T_n)|\ \le\ \frac{B_n}{4}\int_{T_n}^\infty(1+u)^{-2}\,du .
 \end{equation}
 \end{theorem}
 
-The integral in \eqref{eq:a0-raw} evaluates exactly, and the published form of the estimate
+\begin{proof}
+From $L^{(2)}_{n-1}(u)=\sum_{k=0}^{n-1}\binom{n+1}{k+2}\frac{(-u)^k}{k!}$ and
+$\binom{n+1}{k+2}\big/\bigl(k!\binom{n-1}{k}\bigr)=\frac{n(n+1)}{(k+1)(k+2)\,k!}\le\frac{n(n+1)}2$
+we get, for $u\ge0$,
+\[
+   |L^{(2)}_{n-1}(u)|\ \le\ \tfrac{n(n+1)}2\sum_{k=0}^{n-1}\tbinom{n-1}{k}u^k\ \le\ n^2(1+u)^{n-1}.
+\]
+For $u\ge T_n$ admissibility gives $e^{-\eta(u)}\le\theta A_n(3An^2)^{-1}(1+u)^{-n-1}$, hence
+\[
+   |E(u)K_n(u)|\ \le\ A\,e^{-\eta(u)}\,n^2(1+u)^{n-1}\ \le\ \tfrac13\theta A_n(1+u)^{-2}
+   =\tfrac{B_n}{4}(1+u)^{-2}.
+\]
+Integrating over $[T_n,\infty)$ gives \eqref{eq:a0-raw}; and $0<B_n\le A_n$ since $A_n>0$ and
+$\theta\le\tfrac34$.
+\end{proof}
+
+The integral in \eqref{eq:a0-raw} evaluates exactly; the commonly quoted form of the estimate
 discards the result. Retaining it costs nothing.
 
 \begin{corollary}[the retained tail estimate]\label{cor:a0plus}
@@ -495,7 +548,7 @@ quantity. This is the point on which the sharp form of the target turns, so we i
 
 \begin{lemma}[admissibility is upward closed]\label{lem:upward}
 Fix $n$ and $\theta$. The defining requirement for a cutoff --- that the declared effective prime
-number theorem give $|E(u)|\le C\,e^{u-\eta(u)}$ with
+number theorem give $|E(u)|\le A\,e^{u-\eta(u)}$ with
 $\eta(u)\ge(n+1)\log(1+u)+\log\bigl(3An^2/(\theta A_n)\bigr)$ for every $u\ge T$ --- is a
 pointwise condition imposed on a ray. Hence if $T$ is admissible and $T'\ge T$, then $T'$ is
 admissible.
@@ -517,7 +570,8 @@ The supremum is approached and never attained. Consequently the sharp form of th
 \begin{enumerate}[label=\textup{(\roman*)},leftmargin=*]
 \item If $\lambda_n>\tfrac14A_n$ for every $n\ge150$, then for each such $n$ there is an
 admissible cutoff $T_n$ at which $(\star)$ holds; together with Theorem~\ref{thm:li} and the
-verified indices $1\le n\le149$ this gives the Riemann Hypothesis.
+verified indices $1\le n\le149$ (\texttt{scripts/li\_ball\_certificate.py}, as in \S\ref{sec:target}) this
+gives the Riemann Hypothesis.
 \item Conversely, if for some $n$ the inequality $(\star)$ holds at arbitrarily large admissible
 cutoffs, then $\lambda_n\ge\tfrac14A_n$.
 \item For every admissible cutoff $T$, the semidefinite conclusion $D_n^{[4]}\ge0$ is
@@ -558,12 +612,14 @@ floor gives the single exponent
 valid simultaneously for all $n$; the corresponding sufficient condition is
 $D_n^{[4]}\ge A_n/1001$. But $1000$ is only the threshold of validity of the imported estimate,
 not the cutoff the estimate produces. The condition of Lemma~\ref{lem:upward} forces
-$\eta(T)\gtrsim(n+1)\log T$, hence $T_n\gg n^{5/3}$ up to logarithmic factors; numerically the
-minimal admissible cutoffs at $\theta=\tfrac14$ run from about $7.9\times10^{4}$ at $n=8$ to
-about $5.5\times10^{8}$ at $n=1000$. Using the cutoff actually available rather than its floor
-replaces the sufficient slack $A_n/1001$ by $A_n/(1+T_n)$, a reduction by the factor
-$(1+T_n)/1001\approx5.5\times10^{5}$ at $n=1000$ and growing like $n^{5/3}$ thereafter. In
-absolute terms the slack $A_n/(1+T_n)=O\bigl(n^{-2/3}\log n\bigr)$ tends to zero. What it never
+$\eta(T)\gtrsim(n+1)\log T$, hence $T_n\asymp n^{5/3}(\log n)^{2}$; numerically (with $A=1$, the
+$\eta$ of \S\ref{sec:a1} and $A_n$ from \eqref{eq:An}; script \texttt{scripts/minimal\_cutoffs.py})
+the minimal admissible cutoffs at $\theta=\tfrac14$ are about $1.4\times10^{5}$ at $n=8$,
+$2.1\times10^{7}$ at $n=150$ and $6.9\times10^{8}$ at $n=1000$. Using the cutoff actually
+available rather than its floor replaces the sufficient slack $A_n/1001$ by $A_n/(1+T_n)$, a
+reduction by the factor $(1+T_n)/1001\approx6.9\times10^{5}$ at $n=1000$, growing like
+$n^{5/3}(\log n)^2$ thereafter. In absolute terms the slack satisfies
+$A_n/(1+T_n)\asymp n^{-2/3}(\log n)^{-1}\to0$. What it never
 does is vanish, by \eqref{eq:sup4}.
 \end{remark}
 
@@ -624,19 +680,19 @@ the subject of this paper.
 \begin{remark}[the exact condition versus the sufficient one]\label{rmk:overshoot}
 The exact form of $(\star)$ is $\lambda_n\ge\tfrac14A_n+R_n(T_n)$, with the true signed tail.
 At a fixed $T_n$, replacing $R_n(T_n)$ by its ceiling from \eqref{eq:a0plus} gives a sufficient
-condition. The overshoot is bounded: it lies
-in $\bigl[0,\,A_n/(2(1+T_n))\bigr]\subseteq[0,A_n/2002]$, which is half of the slack
-$A_n/1001$ appearing in Theorem~\ref{thm:threshold} only when one replaces $T_n$ by its floor.
+condition. The overshoot is bounded: measured on $D_n^{[4]}$, it lies in
+$\bigl[0,\,2A_n/(1+T_n)\bigr]$, twice the slack $A_n/(1+T_n)$; at the floor $T_n=1000$ this is
+$[0,2A_n/1001]$, twice the slack $A_n/1001$ of Theorem~\ref{thm:threshold}.
 For the actual cutoffs it is $o(1)$ in absolute size.  It would matter further only if a mechanism
 could exploit the sign of $R_n(T_n)$, and
 \S\ref{sec:mech-envelope} proves that no such mechanism is available from the tail estimate,
 the prime number theorem and eventual monotonicity alone.
 \end{remark}
 
-\begin{remark}[a binding erratum, and why the labelling convention of
-Convention~\ref{conv:cond} exists]\label{rmk:erratum}
-An earlier stage of this work imported Lagarias's asymptotic for the Li coefficients of
-automorphic $L$-functions \cite{Lagarias2007} with the sign of the incomplete block inverted.
+\begin{remark}[the orientation of the incomplete block in Lagarias's asymptotic]\label{rmk:erratum}
+Lagarias's asymptotic for the Li coefficients of
+automorphic $L$-functions \cite{Lagarias2007} is easily applied with the sign of the incomplete
+block inverted.
 With $k_n(s)=(1+1/s)^n-1$, the residue of $k_n(s)\,(-L'/L)(s+1)$ at $s=\rho-1$ is
 $-m_\rho k_n(\rho-1)$, and retaining the orientation of the contour throughout gives, in the
 case of $\zeta$,
@@ -647,9 +703,9 @@ case of $\zeta$,
 where $\lambda_n(T)=\sum_{|\Im\rho|<T}\bigl[1-(1-1/\rho)^n\bigr]$ is the incomplete Li
 coefficient, \emph{not} $A_n-\lambda_n(\sqrt n)+O(\sqrt n\log n)$. Consequently the small
 remainder is $\widetilde\eps_n:=A_n-\lambda_n+\lambda_n(\sqrt n)=O(\sqrt n\log n)$, and the
-quantity $\eps_n^-:=A_n-\lambda_n-\lambda_n(\sqrt n)$, which the earlier treatment used as
+quantity $\eps_n^-:=A_n-\lambda_n-\lambda_n(\sqrt n)$, which might be mistaken for
 small, satisfies $\eps_n^-=\widetilde\eps_n-2\lambda_n(\sqrt n)$ and has \emph{no}
-unconditional $O(\sqrt n\log n)$ bound. Every corollary resting on such a bound was withdrawn.
+unconditional $O(\sqrt n\log n)$ bound, and no corollary may rest on such a bound.
 The clean asymptotic $\lambda_n=\tfrac12n\log n+C_1n+O(\sqrt n\log n)$ without the incomplete
 block holds only under the Riemann Hypothesis, and must not be quoted as unconditional. We mention this here
 because it is the reason the present paper labels every import, and because it illustrates the
@@ -661,7 +717,7 @@ precisely the sign one is trying to establish.
 \section{Two certificate types and the fixed-cutoff transfer}\label{sec:dichotomy}
 %% ======================================================================
 
-We now record a distinction that remains useful for auditing the sixteen mechanisms, but whose
+We now record a distinction that remains useful for classifying the sixteen mechanisms, but whose
 scope must be stated precisely.  The quantitative identity in \S\ref{sec:threshold} concerns the
 single sufficient transfer obtained from the floor $T\ge1000$.  It does not show that the master
 criterion sits beyond all semidefinite arguments: $D_n^{[4]}\ge0$ for all large $n$ already
@@ -720,7 +776,7 @@ not logically necessary for the master criterion.
 
 \subsection{The algebraic gap at the declared cutoff floor}\label{sec:threshold}
 
-Here is the quantitative statement for the historical fixed-floor transfer. The exponent four is
+Here is the quantitative statement for the fixed-floor transfer. The exponent four is
 where every instrument in class (S1)--(S3) naturally lives, because $4=2\cdot2$ and because the
 completed cocycle admits the formal factorization
 $H_u^4K_u^3=\bigl(H_u^2K_u^{3/2}\bigr)^2$ recorded in \S\ref{sec:sos}. Replacing the actual
@@ -766,22 +822,19 @@ by a bounded correction: their declared deficit grows with the archimedean block
 read as a deficit at the actual $n$-dependent cutoff, where the required slack is
 $A_n/(1+T_n)=o(1)$, or as a deficit in Li's criterion, where $D_n^{[4]}\ge0$ already suffices.
 
-\begin{remark}[the chronology of the mismatch]\label{rmk:chronology}
-Before the retention of the factor $(1+T_n)^{-1}$ in Corollary~\ref{cor:a0plus}, the sufficient
-target was the \emph{strong margin} $D_n^{[2]}=2\lambda_n-A_n\ge0$, and the exponent two is where
-a Gram or sum-of-squares certificate would have delivered exactly the right conclusion. The
-successive weakenings to $r=3$ and then to $r=r_*<4$ were real improvements in a uniform
-fixed-cutoff sufficient condition.  They also obscured the stronger cutoff fact: $r_*$ was never
-intrinsic.  Six mechanisms were evaluated against that unnecessarily strong benchmark.  Their
-explicit internal falsifiers remain valid; the global diagnosis ``positivity cannot suffice''
-does not.
+\begin{remark}[the fixed-floor benchmark]\label{rmk:chronology}
+Without the factor $(1+T_n)^{-1}$ of Corollary~\ref{cor:a0plus}, the sufficient target is the
+\emph{strong margin} $D_n^{[2]}=2\lambda_n-A_n\ge0$, and the exponent two is where a Gram or
+sum-of-squares certificate would deliver exactly the right conclusion. The weaker sufficient
+conditions $r=3$ and $r=r_*<4$ are uniform fixed-cutoff conditions, and $r_*$ is not intrinsic.
+Six mechanisms are measured against this fixed-floor benchmark.  Their explicit internal
+falsifiers are valid; they do not support the global diagnosis ``positivity cannot suffice''.
 \end{remark}
 
 \subsection{What the title asserts, precisely}\label{sec:thesis}
 
 Theorem~\ref{thm:threshold} and Corollary~\ref{cor:shortfall} are statements about one
-historical transfer, and Remark~\ref{rmk:1000} has just deprived them of the global reading they
-were originally given. The thesis of this paper does not rest on them. It rests on the following,
+fixed-floor transfer, and Remark~\ref{rmk:1000} shows that they have no global reading. The thesis of this paper does not rest on them. It rests on the following,
 which is proved in \S\ref{sec:halflog2} and is independent of every choice of cutoff, exponent
 and normalization.
 
@@ -797,7 +850,7 @@ first prime atom, the first variation of the completed inverse equals
    e^{-\eps x_0}\Bigl(-r+\frac{r-1}{\sqrt2}\Bigr)
    =-e^{-\eps x_0}\Bigl[\Bigl(1-\tfrac1{\sqrt2}\Bigr)r+\tfrac1{\sqrt2}\Bigr]\ <\ 0 ,
 \]
-a defect bounded away from zero which worsens linearly in $r$.
+where the bracket (the defect of \eqref{eq:defect}) has absolute value at least $(1-1/\sqrt2)\,r$.
 \end{proposition}
 
 \begin{proof}
@@ -808,14 +861,15 @@ Proposition~\ref{prop:not-near-miss} for the quantitative form.
 This is the exact sense in which semidefiniteness is not coercivity here. A semidefiniteness
 certificate establishes $X\ge0$ by exhibiting $X$ as a member of a class every member of which is
 nonnegative by construction; Definition~\ref{def:semidef} lists the classes that were tried.
-Proposition~\ref{prop:thesis} says that the quantity at stake belongs to none of them, provably,
-with a rational witness, and that the failure is not a small perturbation to be absorbed by a
-sharper constant but a fixed proportion of the object. What is then left to prove is that a
-difference of two divergent blocks of the same order has a definite sign with a proportional
-margin --- a coercivity estimate in the sense of Definition~\ref{def:coerc}.
+Proposition~\ref{prop:thesis} says that the quantity at stake is not the Laplace transform of a
+positive measure, with an explicit closed-form witness, and that the defect is a fixed proportion
+of the object rather than a small perturbation. What is then left to prove is a definite sign for
+a difference of two divergent blocks of the same order, which none of the classes of
+Definition~\ref{def:semidef} supplies; a proportional (coercive) margin is one stronger way to
+obtain it.
 
 Two disclaimers, both of which we mean literally. This does not assert that no positivity
-argument whatever can succeed: it asserts that the sixteen classes actually attempted certify
+argument whatever can succeed: it asserts that the sixteen mechanisms actually attempted, drawn from the seven classes of Definition~\ref{def:semidef}, certify
 objects other than the one in question. And it does not assert that a proportional bound is
 logically necessary for the Riemann Hypothesis; \S\ref{sec:cushion} and
 Theorem~\ref{thm:density-block} show that it is not.
@@ -854,8 +908,8 @@ a positive form in the same variables. One may of course add signed terms to can
 but then one is left with a difference of Gram forms, and controlling the negative part returns
 one to $\mathcal A$ itself. One may also pass to nonlinear variables such as
 $\sqrt{\Lambda(m)}$, but then cross terms appear which must vanish for independent weights,
-leaving the oscillatory diagonal already refuted. Both escapes are executed and closed in
-\S\ref{sec:m3}.
+leaving the oscillatory diagonal already refuted. Neither escape is pursued here (see the end of
+\S\ref{sec:m3}).
 \end{remark}
 
 %% ======================================================================
@@ -863,21 +917,18 @@ leaving the oscillatory diagonal already refuted. Both escapes are executed and 
 %% ======================================================================
 
 A catalogue of failures is only as trustworthy as its bibliographic hygiene. It is embarrassingly
-easy to spend months rediscovering an obstruction that a published paper recorded decades ago, and
+easy to rediscover an obstruction that a published paper recorded decades ago, and
 it is equally easy to claim novelty for an identity that is a special case of something standard. This
 section therefore does two things. It situates each of the seven positivity classes of
 Definition~\ref{def:semidef} in the literature it comes from, so that the reader can see which
 classical theorem each mechanism was trying to invoke. And it states, class by class, what the
 present account duplicates and what it does not.
 
-The discipline behind this section was imposed on us by an earlier episode in which a mechanism was
-developed at length before an external search revealed that its analytic content was already
-published. Two routes were eliminated on those grounds in the course of the present work: the
-scalar least-common-multiple form of the prime correlator, whose content is contained in Coffey's
-effective work on the Li coefficients and the Stieltjes constants \cite{Coffey2005,Coffey2008}; and
-the model-space/de~Branges route, whose relation between Weil positivity, model spaces and
-de~Branges spaces \cite{deBranges} is covered by Suzuki \cite{Suzuki2025}, so that the novelty
-claimed for it did not exist.
+Two routes are not pursued because their content is already published: the scalar
+least-common-multiple form of the prime correlator, whose content is contained in Coffey's
+effective work on the Li coefficients and the Stieltjes constants \cite{Coffey2005,Coffey2008};
+and the model-space/de~Branges route, whose relation between Weil positivity, model spaces and
+de~Branges spaces \cite{deBranges} is covered by Suzuki \cite{Suzuki2025}.
 
 \subsection{The route itself}
 
@@ -885,7 +936,7 @@ The criterion used here is Li's \cite{Li1997}, with the complements of Bombieri 
 Lagarias \cite{BombieriLagarias1999}; the coefficients had been introduced in the power-series form
 by Keiper \cite{Keiper1992}. The literature on them divides sharply along the conditional line, and
 Convention~\ref{conv:cond} exists because of it. Unconditional statements: Lagarias's asymptotic
-with the incomplete block retained \cite{Lagarias2007}, whose sign we correct in
+with the incomplete block retained \cite{Lagarias2007}, whose orientation is fixed in
 Remark~\ref{rmk:erratum}; the effective computations of Coffey \cite{Coffey2005,Coffey2008}; the
 numerical surveys of Ma\'slanka \cite{Maslanka}. Conditional statements: the clean asymptotic
 $\lambda_n=\tfrac12n\log n+C_1n+O(\sqrt n\log n)$, which requires the Hypothesis; Voros's
@@ -982,7 +1033,7 @@ The instruments of Definition~\ref{def:coerc} come from a different literature a
 Poincar\'e and logarithmic Sobolev inequalities \cite{Gross,BGL}, and the spectral theory of
 semibounded operators \cite{ReedSimon,Davies}. It is worth noting that this literature is organized
 around lower bounds by a fixed multiple of a scale and around the phenomenon that
-Proposition~\ref{prop:no-gap} identifies: in the absence of a spectral gap, one may instead bound
+Remark~\ref{prop:no-gap} identifies: in the absence of a spectral gap, one may instead bound
 a fixed vector's quotient. That is the technical content of Problem~\ref{prob:nonalign}.  The
 density-relaxed criteria of \S\ref{sec:density-criterion} show that this is not the only possible
 successor class.
@@ -993,7 +1044,7 @@ The effective prime number theory is imported and never re-derived: the Vinograd
 zero-free region \cite{Vinogradov,Korobov} with Ford's explicit form \cite{Ford} and the current
 explicit constants \cite{MTY}, the effective error term of Johnston and Yang
 \cite{JohnstonYang} which supplies the triple realizing $T_n(\theta)$ in
-Theorem~\ref{thm:theta}, and the verified height of Platt and Trudgian \cite{PlattTrudgian} with
+\S\ref{sec:a1}, and the verified height of Platt and Trudgian \cite{PlattTrudgian} with
 B\"uthe's partial-hypothesis estimates \cite{Buthe} --- the last used only as verification, never as
 an input to the uniform statement, since by design the proof of $(\star)$ for all $n\ge150$ may
 not depend on finite zero localization. Large-value and density technology
@@ -1033,7 +1084,7 @@ of \S\ref{sec:falsifiers}. We use the algebraically simpler symmetric quartets i
 they can be placed at prescribed indices and uniformly inside the bulk, which the
 Davenport--Heilbronn zeros cannot.
 
-\subsection{Summary of the audit}
+\subsection{Summary}
 
 Duplicated, and therefore not claimed: the Jordan totient and its positivity; the Selberg identity;
 the compound-Poisson representation of a multiplicative law; Bernstein's theorem and its use; the
@@ -1049,7 +1100,7 @@ equivalence between the holomorphy of the regulated Cayley discs and the Hypothe
 (Theorem~\ref{thm:fejer-rh}); the fixed-floor identity \eqref{eq:threshold}, the cutoff-upward
 closure and the cofinal exponent-four criterion; the density/block extraction of
 Theorem~\ref{thm:syndetic-li} from the Bombieri--Lagarias dominant modes; and the sign correction
-of Remark~\ref{rmk:erratum}, which is an audit of \cite{Lagarias2007} performed here and not an
+of Remark~\ref{rmk:erratum}, which is a correction of a sign in the use of \cite{Lagarias2007} and not an
 official corrigendum.
 
 %% ======================================================================
@@ -1077,7 +1128,7 @@ with $\Psi_j=\sum_{i\le j}\ell_i$ and $d_j=q_j-1-\Psi_{j-1}-\ell_j/2$; arbitrary
 $w_1,\dots,w_M$. \emph{Regulated arithmetic level:} $q_j$ runs over the prime powers with
 $\ell_j=\Lambda(q_j)$; for $n\ge0$ and $\eps>0$,
 \begin{equation}\label{eq:tau}
-   \tau(x)=x^{-1-\eps}L_n(\log x),\qquad w(x)=\tau'(x),\qquad E(x)=\psi(x)-x+1 ,
+   \tau(x)=x^{-1-\eps}L_n(\log x),\qquad w(x)=\tau'(x),\qquad E_1(x)=\psi(x)-x+1 ,
 \end{equation}
 and the prime number theorem is used only to kill the boundary as $X\to\infty$ at fixed
 $\eps>0$.
@@ -1087,24 +1138,24 @@ cleanest available algebraic form of the prime-side functional and because the f
 term it contains is mandatory and easy to lose.
 
 \begin{theorem}[regulated finite identity with its boundary]\label{thm:m1-finite}
-Let $X>1$ not be a prime power, put $C_{n,\eps}(X)=-\int_1^XE(x)\tau'(x)\,dx$, and let
+Let $X>1$ not be a prime power, put $C_{n,\eps}(X)=-\int_1^XE_1(x)\tau'(x)\,dx$, and let
 \[
    \mathcal H(X)=\sum_{q_j\le X}\ell_j(q_j-1)-\frac{\psi(X)^2}{2}.
 \]
-Then $\mathcal H(X)=-\int_1^XE-\tfrac12E(X)^2$, $d\mathcal H=\sum_j\ell_jd_j\delta_{q_j}$, and
+Then $\mathcal H(X)=-\int_1^XE_1-\tfrac12E_1(X)^2$, $d\mathcal H=\sum_j\ell_jd_j\delta_{q_j}$, and
 \begin{equation}\label{eq:m1-finite}
    C_{n,\eps}(X)=\sum_{q_j<X}\ell_jd_jw(q_j)
-   -\frac12\int_1^XE(x)^2\tau''(x)\,dx
-   +\frac12E(X)^2w(X).
+   -\frac12\int_1^XE_1(x)^2\tau''(x)\,dx
+   +\frac12E_1(X)^2w(X).
 \end{equation}
 \end{theorem}
 
 \begin{proof}
-Write $G(x)=\int_1^xE$. Since $G'=E$, one integration by parts gives
-$C(X)=-G(X)w(X)+\int_1^XG\tau''$. Substituting $G=-\mathcal H-E^2/2$ and integrating
+Write $G(x)=\int_1^xE_1$. Since $G'=E_1$, one integration by parts gives
+$C_{n,\eps}(X)=-G(X)w(X)+\int_1^XG\tau''$. Substituting $G=-\mathcal H-E_1^2/2$ and integrating
 $-\int\mathcal H\tau''$ in the Stieltjes sense produces
 $-\mathcal H(X)w(X)+\int w\,d\mathcal H$; the two boundary contributions combine to
-$-[G(X)+\mathcal H(X)]w(X)=\tfrac12E(X)^2w(X)$, which is \eqref{eq:m1-finite}.
+$-[G(X)+\mathcal H(X)]w(X)=\tfrac12E_1(X)^2w(X)$, which is \eqref{eq:m1-finite}.
 \end{proof}
 
 At the finite algebraic level, grouping the double sum by its larger index gives the identity
@@ -1120,8 +1171,8 @@ non-increasing sequence with limit $w_\infty\ge0$ it is, by the telescoping repr
    w_{\max(i,j)}=w_\infty+\sum_{k\ge\max(i,j)}(w_k-w_{k+1})
    =w_\infty+\sum_k(w_k-w_{k+1})\mathbf1_{i\le k}\mathbf1_{j\le k},
 \end{equation}
-which exhibits $K$ as a nonnegative combination of rank-one projections onto prefix vectors. The
-proposal was to split $\tau'$ into blocks of monotone variation and use \eqref{eq:m1-telescope}
+which exhibits $K$ as a nonnegative combination of rank-one projections onto prefix vectors. One
+may split $\tau'$ into blocks of monotone variation and use \eqref{eq:m1-telescope}
 on each decreasing block. The exact block decomposition is
 \begin{equation}\label{eq:m1-blocks}
 \begin{split}
@@ -1156,7 +1207,9 @@ which collapses the two pieces to a single signed correlator against the increme
 discrete boundary term $H_Mw_M$ is mandatory; writing only the sum over a finite prefix is
 false. And $H$ itself oscillates. Writing
 $H(x)=\sum_{q\le x}\Lambda(q)(q-1)-\psi(x)^2/2$ for the arithmetic version, an exact rational
-computation with outward-rounded prime logarithms certifies
+computation with outward-rounded prime logarithms (script
+\texttt{scripts/m1\_cumulative\_sign\_certificate.py}) gives $H(2969)\in[-21.0338,-21.0337]$ and
+$H(3167)\in[110.686,110.687]$, so
 \begin{equation}\label{eq:H-witness}
    H(2969)<-21,\qquad H(3167)>110 .
 \end{equation}
@@ -1173,20 +1226,26 @@ $\delta_j=w_j-w_{j+1}$ for $j<M$ and $\delta_M=w_M$, and $v_j$ the prefix indica
 \end{equation}
 and the matrix with columns $v_j$ is triangular and invertible. By Sylvester's law of inertia
 \cite{HornJohnson}, the inertia of $K$ is \emph{exactly} the tally of signs among
-$w_1-w_2,\dots,w_{M-1}-w_M,w_M$. So \eqref{eq:inertia} is the maximal factorization, and for the
-Laguerre weight it is indefinite: with $a=1+\eps$ and $u=\log x$,
+$w_1-w_2,\dots,w_{M-1}-w_M,w_M$. So \eqref{eq:inertia} is the maximal factorization, and the
+matrix $K$ is indefinite exactly when the numbers $w_1-w_2,\dots,w_{M-1}-w_M,w_M$ take both
+signs. For the Laguerre weight with $n$ odd, $\tau''>0$ near $x=1$ and $\tau''<0$ for large $x$
+(so $w=\tau'$ is increasing near $1$ and decreasing for large $x$), and this happens on every
+grid with two points in the first region and two in the second; for example for $n=1$ on the
+prime-power grid with $X$ large, where $w(2)<w(3)$ while $w>0$ is decreasing for large $x$. Here,
+with $a=1+\eps$ and $u=\log x$,
 \[
    \tau''(x)=x^{-a-2}\bigl\{L_n''(u)-(2a+1)L_n'(u)+a(a+1)L_n(u)\bigr\},
 \]
 whose brace equals $\tfrac{n(n-1)}{2}+(2a+1)n+a(a+1)>0$ at $x=1$ and has leading term
-$a(a+1)(-1)^nu^n/n!$ as $u\to\infty$. For every odd $n$ the weight changes sign.
+$a(a+1)(-1)^nu^n/n!$ as $u\to\infty$. For every odd $n$, therefore, $\tau''$ changes sign on
+$(1,\infty)$.
 \end{remark}
 
 \subsection{The global energy of the same kernel, and an exactly vanishing Hessian}
 \label{sec:m1-global}
 
 The local no-go leaves open the possibility that the mechanism works globally: perhaps the
-compensator $-\tfrac12\int E^2\tau''$ in \eqref{eq:m1-finite} is itself a positive energy, and
+compensator $-\tfrac12\int E_1^2\tau''$ in \eqref{eq:m1-finite} is itself a positive energy, and
 the sum of the two terms is coercive. It is a positive energy. It is the energy of the very same
 kernel, and this is fatal.
 
@@ -1196,7 +1255,7 @@ Fix $X>1$, not a prime power, and $w\in C^1([1,X])$. Put
    d\nu=\mathbf1_{[1,X]}(x)\,dx,\qquad
    d\sigma=d\mu-d\nu ,
 \end{equation}
-so that $E(x)=\sigma([1,x])=\psi(x)-x+1$, and define
+so that $E_1(x)=\sigma([1,x])=\psi(x)-x+1$, and define
 \begin{align}
    Q_X(w;\sigma)&=\frac12\iint_{[1,X]^2}w(\max\{x,y\})\,d\sigma(x)\,d\sigma(y),
    \label{eq:QX}\\
@@ -1210,8 +1269,8 @@ For the von Mangoldt measure, \eqref{eq:SX} is exactly $\sum_{q_j<X}\ell_jd_jw(q
 \begin{theorem}[the compensator is the max-energy]\label{thm:max-energy}
 With the conventions above,
 \begin{equation}\label{eq:max-energy}
-   Q_X(w;\sigma)=\frac12E(X)^2w(X)-\frac12\int_1^XE(x)^2w'(x)\,dx
-   =\frac{w(X)}{2}E(X)^2+\frac12\int_1^X\bigl[-w'(t)\bigr]E(t)^2\,dt .
+   Q_X(w;\sigma)=\frac12E_1(X)^2w(X)-\frac12\int_1^XE_1(x)^2w'(x)\,dx
+   =\frac{w(X)}{2}E_1(X)^2+\frac12\int_1^X\bigl[-w'(t)\bigr]E_1(t)^2\,dt .
 \end{equation}
 In particular, for $w=\tau'$ the second term is precisely the compensator appearing in
 \eqref{eq:m1-finite}, boundary included.
@@ -1219,9 +1278,9 @@ In particular, for $w=\tau'$ the second term is precisely the compensator appear
 
 \begin{proof}
 The pushforward of $\sigma\otimes\sigma$ under $(x,y)\mapsto\max\{x,y\}$ has cumulative function
-$(\sigma\otimes\sigma)\{\max(x,y)\le t\}=E(t)^2$, an identity which absorbs the atomic diagonal
-automatically. Hence $2Q_X=\int_{[1,X]}w(t)\,d\bigl(E(t)^2\bigr)$, and Stieltjes integration by
-parts with $E(1)=0$ gives \eqref{eq:max-energy}.
+$(\sigma\otimes\sigma)\{\max(x,y)\le t\}=E_1(t)^2$, an identity which absorbs the atomic diagonal
+automatically. Hence $2Q_X=\int_{[1,X]}w(t)\,d\bigl(E_1(t)^2\bigr)$, and Stieltjes integration by
+parts with $E_1(1)=0$ gives \eqref{eq:max-energy}.
 \end{proof}
 
 The second form in \eqref{eq:max-energy} is a genuine positive mixture of squares of prefix
@@ -1232,8 +1291,8 @@ every finite measure and requires no arithmetic at all.
 \begin{theorem}[global collapse of the mechanism]\label{thm:hessian-zero}
 For every finite measure $\mu$ on $[1,X]$ --- not only the von Mangoldt measure ---
 \begin{equation}\label{eq:collapse}
-   S_X(w;\mu)+Q_X(w;\mu-\nu)=-\int_1^XE(x)w(x)\,dx ,
-   \qquad E(x)=\mu([1,x])-(x-1).
+   S_X(w;\mu)+Q_X(w;\mu-\nu)=-\int_1^XE_1(x)w(x)\,dx ,
+   \qquad E_1(x)=\mu([1,x])-(x-1).
 \end{equation}
 Consequently, for any finite signed measure $\eta$ with $F(x)=\eta([1,x])$ and every $t\in\R$,
 \begin{equation}\label{eq:affine-exact}
@@ -1269,19 +1328,21 @@ Theorem~\ref{thm:max-energy} to $\eta$ gives
 \end{equation}
 and omitting the term $w(X)F(X)^2$ would manufacture a spurious residual Hessian. Thus
 factorizing the compensator factorizes only \emph{one} of the two cancelling terms; keeping both
-coupled, as the discipline adopted here requires, leaves neither a positive nor a negative
+coupled leaves neither a positive nor a negative
 quadratic form.
 
-There is a second, quantitative reason the route is closed. Once \eqref{eq:affine-exact} holds,
-taking absolute values no longer estimates a collective energy; it estimates the original linear
-functional. With $w=\tau'$ and the regulator removed, the pointwise Vinogradov--Korobov envelope
-produces an absolute load $\mathcal B_n$ for which
+There is also a quantitative reason to expect the route to fail, which we record as a heuristic
+only. Once \eqref{eq:affine-exact} holds, taking absolute values no longer estimates a collective
+energy; it estimates the original linear functional term by term. If, with $w=\tau'$ and the
+regulator removed, one bounds $|\int E_1w|$ by the absolute load
+$\mathcal B_n=\int_1^\infty\mathcal E(x)\,|w(x)|\,dx$, where $\mathcal E$ is a pointwise
+Vinogradov--Korobov envelope for $|E_1|$, a saddle-point heuristic for the Laguerre weight
+suggests
 \begin{equation}\label{eq:load}
-   \mathcal B_n\ \ge\ \exp\Bigl(\tfrac23n\log n+\tfrac13n\log\log n-O(n)\Bigr),
+   \mathcal B_n\ \approx\ \exp\Bigl(\tfrac23n\log n+\tfrac13n\log\log n+O(n)\Bigr),
 \end{equation}
-against a first-difference budget of size $O(\log n)$. So the absolute-value exit is not merely
-inconclusive: it loses a superpolynomial factor. This is the factorial loss that any
-term-by-term use of the nonnegativity of $\Lambda$ incurs, in its sharpest local form.
+that is, a superpolynomial loss in $n$. We do not prove \eqref{eq:load}; wherever it is mentioned
+in this paper it serves only as a heuristic indication of size, and no theorem depends on it.
 
 \subsection{The non-local zero--lobe Gram}\label{sec:m3}
 
@@ -1290,13 +1351,18 @@ The Weil autocorrelation of the Laguerre test; the stationary map between zero h
 Laguerre lobes; conjugation and the functional equation; the geometry of Laguerre oscillation.
 Nothing about the real values $\Lambda(m)$.
 
-Put $f_n(x)=\mathbf1_{[0,\infty)}(x)L^{(1)}_{n-1}(x)$, $f^{\#}(x)=e^x\overline{f(-x)}$, and
-$h_n=f_n*f_n^{\#}$. With $w=(s-1)/s$ its Laplace transform is
+Put $f_n(x)=\mathbf1_{[0,\infty)}(x)L^{(1)}_{n-1}(x)$ (in the additive variable $x=\log y$; this is $y\,f_n(y)$ for the $f_n$ of \eqref{eq:lamprime}, and from here on $f_n$ denotes this function), $f^{\#}(x)=e^x\overline{f(-x)}$, and
+$h_n=f_n*f_n^{\#}$. With the Cayley variable $w=(s-1)/s$ (from here on $w$ denotes this variable,
+not the weight of \S\ref{sec:m1-global}) its Laplace transform is
 \begin{equation}\label{eq:hn-symbol}
    \mathcal Lh_n(s)=\bigl(1-w^n\bigr)\bigl(1-w^{-n}\bigr)=2-w^n-w^{-n},
 \end{equation}
 and the completed explicit formula, with pole, Gamma, primes, conjugation and boundary retained
-before evaluation, gives $\mathcal W_\zeta(h_n)=2\lambda_n$. Combining with \eqref{eq:theta}:
+before evaluation, gives $\mathcal W_\zeta(h_n)=2\lambda_n$, where
+$\mathcal W_\zeta(h)=\sum_\rho\mathcal Lh(\rho)$ is the zero side of the explicit formula (sum over
+the nontrivial zeros with multiplicity, taken in symmetric pairs); indeed
+$w_{1-\rho}=w_\rho^{-1}$, so $\sum_\rho(2-w_\rho^n-w_\rho^{-n})=2\sum_\rho(1-w_\rho^n)=2\lambda_n$.
+Combining with \eqref{eq:theta}:
 
 \begin{theorem}[$(\star)$ as a Weil autocorrelation]\label{thm:weil-a1}
 For every $\theta\in(0,1)$ and every admissible $T$,
@@ -1366,7 +1432,7 @@ with $a=-\log r>0$ and $100\mid n$ one has $n\vartheta=2\pi(n/100)$, so $\cos(n\
 \eqref{eq:quartet-8} equals $8-8\cosh(na)<0$; repeating the quartet with multiplicity $M$
 multiplies this by $M$ without changing any height. By contrast, the critical pair
 $\half\pm i\gam$ with multiplicity two has the \emph{same} height multiset, hence the same
-stationary data, and contributes $8\{1-\cos(n\phi)\}\ge0$. The inputs the map sees agree; the
+stationary data, and contributes $8\{1-\cos(n\phi)\}\ge0$, where $\phi=\arg w_{\half+i\gam}$. The inputs the map sees agree; the
 signs do not. Therefore no sign rule depending only on heights, lobe occupancy, conjugation and
 the functional equation can represent the completed form.
 
@@ -1376,6 +1442,9 @@ $\mathcal A(c)=q_{n,\theta}-\sum_jc_j$, and Lemma~\ref{lem:affine-gram} forbids 
 semidefinite Gram representation of it outright. This is the abstract reason the mechanism has no
 chance, and it is worth noticing that it is the same reason as Theorem~\ref{thm:hessian-zero}:
 the target is affine in the arithmetic data, and semidefinite certificates are quadratic objects.
+The two escapes described in Remark~\ref{rmk:affine-scope} (a difference of Gram forms, and a
+change of variables to $\sqrt{\Lambda(m)}$) lie outside the scope of the lemma and are not
+pursued here.
 
 \subsection{M\"obius inversion as a positive adjoint}\label{sec:m5-gram}
 
@@ -1386,7 +1455,7 @@ term before $\eps\downarrow0$. Not admissible: a sign from the M\"obius coeffici
 a norm of each factor separately, the functional equation without the real weights, or a metric
 constructed after assuming the desired positivity.
 
-The exact structure this mechanism was built to exploit is genuine and worth recording. With
+The exact structure behind this mechanism is genuine and worth recording. With
 $a=1+\eps$, put
 \begin{equation}\label{eq:MB}
    \mathfrak M_j(a)=\sum_{d\ge1}\frac{\mu(d)}{d^a}L_j(\log d),
@@ -1428,9 +1497,13 @@ operation on the divisor poset: it is lower-triangular with ones on the diagonal
 basis. A Hilbert square, by contrast, introduces the adjoint, and the adjoint of the divisor
 operator involves the quotients $n/m$, i.e.\ the very off-diagonal structure whose cancellation
 was the goal. On $\{1,p\}$, requiring $Z^{-1}=Z^{\dagger}$ in a positive metric forces the
-metric to be degenerate. Filtering by Euler factors does not help, because the filtration is not
-monotone for the Laguerre response; and separating the norms of $\mathfrak M$ and $\mathfrak B$
-in \eqref{eq:degree-conv} recreates exactly the exponential loss \eqref{eq:load}. What survives
+metric to be degenerate. Indeed, with the divisor (zeta) matrix
+$Z=\begin{pmatrix}1&0\\1&1\end{pmatrix}$ on $\{1,p\}$ and a metric
+$G=\begin{pmatrix}g&h\\h&k\end{pmatrix}$, the condition $Z^{\dagger}=G^{-1}Z^{\top}G=Z^{-1}$ reads
+$Z^{\top}G=GZ^{-1}$, whose entries give $h=-h$ and $h+k=h$, so $h=k=0$ and $G$ is degenerate.
+Separating the norms of $\mathfrak M$ and $\mathfrak B$
+in \eqref{eq:degree-conv} leads, heuristically, to the same superpolynomial loss as
+\eqref{eq:load}. What survives
 is a coordinate, not a mechanism: the degree convolution \eqref{eq:degree-conv} is an exact and
 useful rewriting whose estimation is again the original problem.
 
@@ -1446,25 +1519,54 @@ The last of the Gram-type mechanisms is the most structurally ambitious: build a
 whose Hodge Laplacian cancels the mixed prime channels, so that positivity of the metric
 delivers the missing sign. The complex exists and does cancel them.
 
+For $r\in P$ let $N_r$ be the operator on $V_P$ defined by $N_re_m=e_{m/r}$ if $r\mid m$ and
+$N_re_m=0$ otherwise; the $N_r$ commute, and their adjoints are $N_r^*e_m=e_{mr}$ if $r\nmid m$ and
+$N_r^*e_m=0$ otherwise. Let $\eps_r$ and $\iota_r=\eps_r^*$ be exterior multiplication and
+contraction by the $r$-th generator of $\Lambda^\bullet\R^P$, so that
+$\eps_r\iota_s+\iota_s\eps_r=\delta_{rs}$, and work on $V_P\otimes\Lambda^\bullet\R^P$ with the
+tensor product of the canonical inner products. By a \emph{mixed channel} we mean an operator of
+the form $N_rN_s^*$ or $N_s^*N_r$ with $r\ne s$, which moves $e_m$ to $e_{ms/r}$.
+
 \begin{theorem}[the minimal positive complex]\label{thm:koszul}
 On the boolean divisor cube the Koszul differential
 \begin{equation}\label{eq:koszul}
    d_E=\sum_rN_r\otimes\eps_r
 \end{equation}
-satisfies $d_E^2=0$, with a positive ordinary metric --- no supertrace and no Krein form. On
-$\{1,p,q,pq\}$ its Hodge Laplacian cancels the mixed channels $p/q$ and $q/p$ exactly.
+satisfies $d_E^2=0$, with a positive ordinary metric --- no supertrace and no Krein form. For
+every $r\in P$ one has $d_E\iota_r+\iota_rd_E=N_r\otimes1$, writing $\iota_r$ for
+$1\otimes\iota_r$. Its Hodge Laplacian contains no mixed channel:
+\[
+   d_Ed_E^*+d_E^*d_E=\sum_{r\in P}\bigl(N_rN_r^*\otimes\eps_r\iota_r
+   +N_r^*N_r\otimes\iota_r\eps_r\bigr);
+\]
+in particular, on $\{1,p,q,pq\}$ the channels $p/q$ and $q/p$ cancel exactly.
 \end{theorem}
+
+\begin{proof}
+$d_E^2=\sum_{r,s}N_rN_s\otimes\eps_r\eps_s=0$, because the $N_r$ commute and
+$\eps_r\eps_s=-\eps_s\eps_r$ (so also $\eps_r^2=0$). Next,
+$d_E\iota_r+\iota_rd_E=\sum_sN_s\otimes(\eps_s\iota_r+\iota_r\eps_s)=N_r\otimes1$. Finally, with
+$d_E^*=\sum_sN_s^*\otimes\iota_s$,
+\[
+   d_Ed_E^*+d_E^*d_E=\sum_{r,s}\bigl(N_rN_s^*\otimes\eps_r\iota_s+N_s^*N_r\otimes\iota_s\eps_r\bigr).
+\]
+For $r\ne s$ one has $\iota_s\eps_r=-\eps_r\iota_s$, and $N_rN_s^*=N_s^*N_r$ on the cube: both send
+$e_m$ to $e_{ms/r}$ when $r\mid m$ and $s\nmid m$, and to $0$ otherwise. So the terms with $r\ne s$
+cancel in pairs, leaving the diagonal terms.
+\end{proof}
 
 \begin{nogo}[the complex annihilates the current it was built to carry]\label{ng:koszul}
 The same differential makes the M\"obius--divisor connection null-homotopic, hence zero in
 cohomology.
 \end{nogo}
 
-\noindent Because $N_r=d_E\iota_r+\iota_rd_E$ for the contraction $\iota_r$, and
+\noindent On the cube $\{1,p,q,pq\}$ the M\"obius--divisor connection is the operator
 \begin{equation}\label{eq:MdZ}
    M\,\delta Z=(\log p)N_p+(\log q)N_q ,
 \end{equation}
-the connection $M\delta Z$ is a sum of null-homotopic operators, hence induces zero on
+which carries the weight $\log r=\Lambda(r)$ along each divisor edge $m\to m/r$; we take
+\eqref{eq:MdZ} as its definition here. Because $N_r\otimes1=d_E\iota_r+\iota_rd_E$ by
+Theorem~\ref{thm:koszul}, the connection $M\delta Z\otimes1$ is a sum of null-homotopic operators, hence induces zero on
 cohomology. Already on the poset $\{1,p\}$, the hermitized channel one wishes to declare a
 boundary is exactly the channel that must survive as the prime current. The complex satisfies the
 quotient-cancellation requirement and fails the current-survival requirement, and it fails the
@@ -1509,30 +1611,37 @@ the Jordan totient in its analytic normalization; on a prime power, $J_u(p^0)=1$
 $J_u(p^j)=(q-1)q^{j-1}$ with $q=p^u$. Differentiating \eqref{eq:jordan} in $u$ at $u=0$
 generates the full hierarchy $\mu*\log^k\ge0$, of which the first two members are Chebyshev's
 $\Lambda=\mu*\log$ and Selberg's $\mu*\log^2=\Lambda\log+\Lambda*\Lambda$. All of these are
-nonnegative arithmetic functions, and their positivity is exact and unconditional.
+nonnegative arithmetic functions, and their positivity is exact and unconditional. Write
+$\mathcal D_k(s)=\partial_u^kA_u(s)|_{u=0}$, so that $\mathcal D_k(s)=\sum_m(\mu*\log^k)(m)m^{-s}$.
 
 \begin{nogo}[the polar pairing converts the hierarchy into a difference]\label{ng:jordan}
-Keeping the pole coupled, as any correct treatment must, replaces the positive hierarchy by
-$D_k-\tfrac{k}{s-1}D_{k-1}$, whose Cayley--Laguerre coefficients already change sign at low
-degree; and completing the cocycle so as to restore positivity produces a Schur family whose
-contractivity is equivalent to the Hypothesis.
+Keeping the pole coupled replaces the positive hierarchy by
+$\mathcal D_k-\tfrac{k}{s-1}\mathcal D_{k-1}$, whose Cayley--Laguerre coefficients already change sign at low
+degree; and completing the cocycle with the archimedean factor leads to a holomorphy condition
+equivalent to the Hypothesis.
 \end{nogo}
 
-\noindent The first jet of the coupled cocycle is exactly the regulated cost functional
-$C_{n,\eps}$ of \eqref{eq:m5-paired}, and an exact rational computation with outward-rounded
-intervals gives
+\noindent First, $\partial_u^k\bigl[(1-\tfrac{u}{s-1})A_u(s)\bigr]_{u=0}
+=\mathcal D_k-\tfrac{k}{s-1}\mathcal D_{k-1}$, which is the $k$-th jet of the coupled cocycle
+$H_u(s)=F(s-u)/F(s)$, $F(s)=(s-1)\zeta(s)$. The first jet of the coupled cocycle is the regulated
+cost functional $C_{n,\eps}$ of \eqref{eq:m5-paired}. Its limit $\eps\downarrow0$ exists and equals
+$C_n=\lambda_n^{\mathrm{prime}}-\lambda_{n+1}^{\mathrm{prime}}$, the $n$-th coefficient of
+$-(1-z)\frac{d}{dz}\log\bigl[(s-1)\zeta(s)\bigr]_{s=1/(1-z)}$. Interval arithmetic with rational
+endpoints (script \texttt{scripts/jordan\_cocycle\_sign\_gate.py}, which uses the enclosures of
+\texttt{scripts/li\_interval\_enclosures.py}) gives
 \begin{equation}\label{eq:jordan-witness}
-   C_1<0<C_6 ,
+   C_1\in[-0.38967,-0.38966],\qquad C_6\in[0.0081074,0.0081075],
 \end{equation}
-so no sign or convexity statement can be read off coefficient by coefficient. Second, the
+so $C_1<0<C_6$, and no sign or convexity statement can be read off coefficient by coefficient. Second, the
 falsifier $X_a(s)=\xi(s+a)\xi(s-a)$ with $0<a<\half$ satisfies $X_a(1-s)=X_a(s)$, has all the
 Euler-side positivity of the hierarchy in its half-plane of absolute convergence, and has zeros
 at $\half\pm a+i\gam$, off the line of symmetry. Hence ``nonnegative Jordan coefficients plus the
-functional equation'' cannot force the Cayley sign. Third, and this is the sharpest form, the
-completed family $\xi(s-u)/\xi(s)$ is Schur for all $u\downarrow0$ if and only if the Hypothesis
-holds, and its half-completion has coefficient exactly $-\tfrac12\Delta D_n$: the mechanism
-returns the very gate it was supposed to open. There is no intermediate inequality anywhere in
-the family.
+functional equation'' cannot force the Cayley sign. Third, the completed
+family $\xi(s-u)/\xi(s)$ and its relatives $Y(s-u)/Y(s)$, $Y_3(s-u)/Y_3(s)$, pulled back by $s_\eps$,
+lead to the holomorphy condition of Theorem~\ref{thm:fejer-rh}, which is equivalent to the
+Hypothesis (the theorem is stated for $Y_3$, and its proof applies verbatim to $\xi$ and $Y$); and for the family $Y(s-u)/Y(s)$ the first-order coefficients are $-\Delta D_n$ by
+Theorem~\ref{thm:three} (and $-\Delta\lambda_n$, $-\Delta(3\lambda_n-A_n)$ for $\xi$ and $Y_3$ by the same computation), with $\Delta D_n=D_{n+1}-D_n$ and $D_n=2\lambda_n-A_n$ as in
+\eqref{eq:Ycoc}. The mechanism returns the very coefficients it was supposed to control.
 
 \subsection{Selberg's positivity, the $O(x)$ summation, and the Riccati induction}
 \label{sec:selberg}
@@ -1540,7 +1649,7 @@ the family.
 \subsubsection*{Admissible inputs}
 $b:=\Lambda\log+\Lambda*\Lambda=\mu*\log^2\ge0$; Selberg's effective summatory formula
 $\sum_{m\le x}b(m)=x\log x-\ldots+O(x)$ in the classical form; partial summation; the Laguerre
-degree recurrence; the Riccati identity for $Z^{-1}\delta Z$.
+degree recurrence; the Riccati identity $\zeta''/\zeta=(\zeta'/\zeta)'+(\zeta'/\zeta)^2$.
 
 Write $a=1+\eps$, $t=z/(1-z)$, $s=a+t$, and
 \[
@@ -1548,22 +1657,22 @@ Write $a=1+\eps$, $t=z/(1-z)$, $s=a+t$, and
    j_n=\int_1^\infty x^{-a}L_n(\log x)\,dx=\frac{(\eps-1)^n}{\eps^{n+1}},\qquad
    c_n=p_n-j_n .
 \]
-Selberg's identity induces an exact recurrence in the Laguerre degree for $c_n$, and the Riccati
-identity for the logarithmic derivative of the zeta germ is its differentiated form. Both are
-exact and both are, by themselves, sign-free.
+Selberg's identity and the Riccati identity for the logarithmic derivative of $\zeta$ are exact
+and, by themselves, sign-free; we do not reproduce the recurrence in the Laguerre degree that
+they induce for $c_n$.
 
 \begin{nogo}[a positive convolution with a matching cancellation is not a one-sided
 inequality]\label{ng:selberg}
-Splitting the double pole makes the centred Selberg coefficient cancel another term of size
-$\eps^{-n-1}$ in the recurrence. The classical $O(x)$ summation controls both pieces only at that
-same scale, so at $\eps=1/n$ its dual norm is at least $n(n-1)^n-1$ against a budget of size
-$O(\log n)$.
+The exact identity $c_n=p_n-j_n$ pairs two terms of which one has modulus
+$|j_n|=|\eps-1|^n\eps^{-n-1}=n(n-1)^n$ at $\eps=1/n$. Any estimate that bounds $p_n$ and $j_n$
+separately, in particular one obtained from Selberg's formula with its $O(x)$ remainder, carries
+an error of that size, which exceeds every polynomial in $n$.
 \end{nogo}
 
 \noindent The failure here is quantitative rather than structural, and the scale is worth naming
 because it recurs: any exit that estimates the two colliding pieces separately pays
-$\eps^{-n-1}$, which at the natural choice $\eps=1/n$ is $n^{n+1}$-sized. Compare
-\eqref{eq:load}: the two losses are the same phenomenon in different coordinates. A residue
+$\eps^{-n-1}$, which at the natural choice $\eps=1/n$ is $n^{n+1}$-sized. Heuristically this is
+the same superpolynomial loss as in \eqref{eq:load}, seen in different coordinates. A residue
 estimate strong enough to be sufficient would again contain the correlator $C_{n,\eps}$
 explicitly, i.e.\ would already be the theorem. What this no-go closes is the \emph{autonomous}
 use of Selberg--Riccati; it does not close the existence of a new signed theorem about the real
@@ -1581,22 +1690,22 @@ Put $b_u=J_u*J_u$, so that $A_u(s)^2=\sum_mb_u(m)m^{-s}$ with $b_u\ge0$, multipl
 \begin{equation}\label{eq:bu-tower}
    b_u(p^k)=2(q-1)q^{k-1}+(k-1)(q-1)^2q^{k-2},\qquad q=p^u,\ k\ge1 .
 \end{equation}
-The hope is that the lattice sequence $k\mapsto b_u(p^k)r^k$, $r=p^{-1-\eps}$, is a Polya
+The hope is that the lattice sequence $k\mapsto b_u(p^k)x_p^k$, $x_p=p^{-1-\eps}$, is a Polya
 frequency sequence, so that the Euler product acts as a variation-diminishing operator and the
 oscillations of the Laguerre test cannot increase in number. This would be a very strong
 structural statement, and it is false at the second minor.
 
 \begin{theorem}[the exact $\mathrm{PF}_2$ minor]\label{thm:pf2}
-With $a_k=b_u(p^k)r^k$,
+With $a_k=b_u(p^k)x_p^k$,
 \begin{equation}\label{eq:pf2}
-   a_1^2-a_0a_2=r^2(Q-1)(Q-3),\qquad Q=p^u ,
+   a_1^2-a_0a_2=x_p^2(Q-1)(Q-3),\qquad Q=p^u ,
 \end{equation}
 so the sequence is neither log-concave nor $\mathrm{PF}_2$ --- hence not
-$\mathrm{PF}_\infty$ --- for every $1<Q<3$. For the general convolution power $J_u^{*r}$ the
+$\mathrm{PF}_\infty$ --- for every $1<Q<3$. For the general convolution power $J_u^{*k}$ the
 corresponding minor is
 \begin{equation}\label{eq:pf2-general}
-   w_1^2-w_0w_2=\frac{\rho^2r}{2}(Q-1)\bigl((r-1)Q-(r+1)\bigr),
-   \qquad w_k=\bigl(J_u^{*r}\bigr)(p^k)\rho^k .
+   w_1^2-w_0w_2=\frac{x_p^2k}{2}(Q-1)\bigl((k-1)Q-(k+1)\bigr),
+   \qquad w_j=\bigl(J_u^{*k}\bigr)(p^j)x_p^j .
 \end{equation}
 \end{theorem}
 
@@ -1608,14 +1717,15 @@ Take $u=1$, $\eps=2$, and write $w(m)=b_1(m)m^{-3}$. Then
 and the $\mathrm{PF}_2$ minor on the fibre $3\cdot2^k$ is
 \begin{equation}\label{eq:pf2-witness}
    \det\begin{pmatrix}w(6)&w(12)\\ w(3)&w(6)\end{pmatrix}
-   =w(6)^2-w(3)w(12)=-\frac{1}{2916}\ <\ 0 .
+   =w(6)^2-w(3)w(12)=-\frac{1}{2916}\ <\ 0 
 \end{equation}
+(exact rational check: script \texttt{scripts/global\_compound\_poisson\_tp\_check.py}).
 Normalizing multiplies this by a positive constant and does not change its sign. The witness uses
 the actual primes $2$ and $3$; it does not replace the arithmetic by an abstract divisor.
 \end{witness}
 
 \begin{witness}[the quartic minor]\label{wit:pf2-quartic}
-With $r=4$, $p=2$, $u=\half$, $\eps=1$, so $\rho=\tfrac14$ and $Q=\sqrt2$, equation
+With $k=4$, $p=2$, $u=\half$, $\eps=1$, so $x_p=\tfrac14$ and $Q=\sqrt2$, equation
 \eqref{eq:pf2-general} gives
 \begin{equation}\label{eq:pf2-quartic}
    w_1^2-w_0w_2=\frac{11-8\sqrt2}{8}\ <\ 0 ,
@@ -1626,7 +1736,7 @@ since $121<128$. The fourth convolution power is not $\mathrm{PF}_2$ either.
 \begin{nogo}[total positivity is unavailable on the exponent lattice]\label{ng:pf2}
 The local factors are not $\mathrm{TP}_2$, so the Euler product cannot be presented as a
 variation-diminishing operator built from totally positive local blocks, and no
-$\mathrm{PF}_\infty$, $\mathrm{TP}$ or decreasing-variation argument is available for the gate.
+$\mathrm{PF}_\infty$, $\mathrm{TP}$ or decreasing-variation argument is available for $(\star)$.
 \end{nogo}
 
 \noindent It is worth being clear about why this closure is more than a technical annoyance.
@@ -1641,8 +1751,7 @@ the general shape of the mismatch this paper is about.
 \label{sec:mech-measure}
 %% ======================================================================
 
-We come now to the family of mechanisms that seemed, for a while, the most promising, and whose
-death is the most instructive. The completed cocycle is an infinitely divisible object: its
+We come now to the family of mechanisms whose failure is the most instructive. The completed cocycle is an infinitely divisible object: its
 arithmetic factor is a compound-Poisson law over the additive semigroup generated by the
 $\log p$, its Gamma factor has an explicitly positive L\'evy density, and the two are exactly
 ordered in the shift parameter. If the \emph{whole} completed cocycle were the Laplace transform
@@ -1663,17 +1772,17 @@ Fix $0<u<\eps$, $s_0=1+\eps$, and normalize the arithmetic coefficients to a pro
    \mathbb P(N=m)=\frac{b_u(m)\,m^{-1-\eps}}{A_u(1+\eps)^2} .
 \end{equation}
 Since $b_u$ is multiplicative, writing $N=\prod_pp^{K_p}$ makes the exponents $K_p$ independent,
-and with $r=p^{-1-\eps}$, $Q=p^u$, $R=Qr$ the normalized local generating function is
+and with $x_p=p^{-1-\eps}$, $Q=p^u$, $R_p=Qx_p$ the normalized local generating function is
 \begin{equation}\label{eq:cp-local}
    G_p(z)=\mathbb Ez^{K_p}
-   =\Bigl(\frac{1-R}{1-r}\Bigr)^{\!2}\Bigl(\frac{1-rz}{1-Rz}\Bigr)^{\!2},
+   =\Bigl(\frac{1-R_p}{1-x_p}\Bigr)^{\!2}\Bigl(\frac{1-x_pz}{1-R_pz}\Bigr)^{\!2},
 \end{equation}
 each unsquared factor being the generating function of a zero-inflated geometric law:
-$\mathbb P(X_p=0)=\tfrac{1-R}{1-r}$ and
-$\mathbb P(X_p=k)=\tfrac{1-R}{1-r}(R-r)R^{k-1}$ for $k\ge1$, with total mass exactly one. Taking
+$\mathbb P(X_p=0)=\tfrac{1-R_p}{1-x_p}$ and
+$\mathbb P(X_p=k)=\tfrac{1-R_p}{1-x_p}(R_p-x_p)R_p^{k-1}$ for $k\ge1$, with total mass exactly one. Taking
 logarithms in \eqref{eq:cp-local},
 \begin{equation}\label{eq:cp-levy}
-   \log G_p(z)=2\sum_{j\ge1}\frac{R^j-r^j}{j}\bigl(z^j-1\bigr),
+   \log G_p(z)=2\sum_{j\ge1}\frac{R_p^j-x_p^j}{j}\bigl(z^j-1\bigr),
 \end{equation}
 so $X=\log N$ is compound-Poisson with L\'evy measure
 \begin{equation}\label{eq:nuA}
@@ -1688,20 +1797,21 @@ arithmetic law is thus increasing in convolution order, hence in stochastic orde
 
 \begin{remark}[why the ordering does not transfer]\label{rmk:order}
 Stochastic order orders expectations of \emph{monotone} functions, and its convex refinements
-order convex ones. The Laguerre tests of the gate are neither: they change sign $n$ times. The
+order convex ones. The Laguerre tests in $(\star)$ are neither: they change sign $n$ times. The
 ordering \eqref{eq:nuA} is a true and exact structural fact about the arithmetic factor which is
 simply orthogonal to the question being asked. This is the mismatch in its mildest form: the
 positive structure exists, is exactly identified, and does not couple to the target.
 \end{remark}
 
-The corresponding Gamma channel is also positive. The normalized Gamma ratio
-$K_u(s)=\pi^{u/2}\Gamma(1+(s-u)/2)/\Gamma(1+s/2)$ is the Laplace transform of
-$\eta=-\tfrac12\log V$ with $V\sim\mathrm{Beta}\bigl(\tfrac{3+\eps-u}{2},\tfrac u2\bigr)$, and
+The corresponding Gamma channel is also positive. The Gamma ratio
+$K_u(s)=\pi^{u/2}\Gamma(1+(s-u)/2)/\Gamma(1+s/2)$ satisfies
+$K_u(s_0+t)/K_u(s_0)=\mathbb E\,e^{-t\eta}$, where $\eta=-\tfrac12\log V$ and
+$V\sim\mathrm{Beta}\bigl(\tfrac{3+\eps-u}{2},\tfrac u2\bigr)$, and the L\'evy density of $\eta$ is
 \begin{equation}\label{eq:nuK}
    \nu_K(x)\,dx=\frac{e^{-(3+\eps-u)x}-e^{-(3+\eps)x}}{x\bigl(1-e^{-2x}\bigr)}\,dx\ \ge\ 0 .
 \end{equation}
-Both channels are infinitely divisible for \emph{every} real exponent, not only integers, which
-is what allows the near-quartic exponent $r_*$ of \eqref{eq:rstar} to be used at all:
+Both channels are infinitely divisible for \emph{every} real exponent, not only integers, so
+the real exponent $r_*$ of \eqref{eq:rstar} is covered:
 $A_u^r$ has L\'evy measure $r\,\nu_A/2$ and $K_u^{r-1}$ has $(r-1)\nu_K$.
 
 \subsection{The polar channel is signed, and no value of the correlation parameter repairs it}
@@ -1711,13 +1821,13 @@ The third channel is the pole, and it is where all the sign lives. Write
 $P_u(s)=1-\tfrac{u}{s-1}$.
 
 \begin{theorem}[exact polar densities]\label{thm:polar}
-In the coordinate $t=s-1-\eps$, after the substitutions $u=c\eps$ and $r=\eps y$:
+In the coordinate $t=s-1-\eps$, after the substitutions $u=c\eps$ and $q=\eps y$:
 \begin{enumerate}[label=\textup{(\roman*)},leftmargin=*]
 \item the squared pole $P_u^2$ has inverse Laplace transform
-      $\delta_0(dr)+c(cr-2)e^{-r}dr$, whose continuous density is strictly negative on
-      $0<r<2/c$ for \emph{every} $c>0$;
+      $\delta_0(dq)+c(cq-2)e^{-q}dq$, whose continuous density is strictly negative on
+      $0<q<2/c$ for \emph{every} $c>0$;
 \item the cubed pole $P_u^3$ has continuous density
-      $c\bigl(-3+3cr-\tfrac12c^2r^2\bigr)e^{-r}dr$, negative near $r=0$ and for large $r$, for
+      $c\bigl(-3+3cq-\tfrac12c^2q^2\bigr)e^{-q}dq$, negative near $q=0$ and for large $q$, for
       every $c>0$.
 \end{enumerate}
 \end{theorem}
@@ -1725,12 +1835,11 @@ In the coordinate $t=s-1-\eps$, after the substitutions $u=c\eps$ and $r=\eps y$
 \begin{proof}
 Expand $(1-u/(s-1))^k$ in powers of $(s-1)^{-1}$ and use
 $(\eps+t)^{-(j+1)}=\int_0^\infty\tfrac{y^j}{j!}e^{-\eps y}e^{-ty}dy$ termwise; substitute
-$u=c\eps$, $r=\eps y$. For (ii) the quadratic $-\tfrac12c^2r^2+3cr-3$ has roots
-$cr=3\pm\sqrt3$.
+$u=c\eps$, $q=\eps y$. For (ii) the quadratic $-\tfrac12c^2q^2+3cq-3$ has roots
+$cq=3\pm\sqrt3$.
 \end{proof}
 
-For real, non-integer exponents the polar density does not truncate, but it sums in closed form,
-which is the technical fact that made the near-quartic reduction usable.
+For real, non-integer exponents the polar density does not truncate, but it sums in closed form.
 
 \begin{theorem}[the real polar density is a confluent hypergeometric]
 \label{thm:polar-1F1}
@@ -1769,12 +1878,12 @@ We now come to the witness that recurs, in five different disguises, throughout 
 paper. It is worth stating in the most concrete available form first.
 
 \begin{theorem}[exact inverse density of the completed cocycle]\label{thm:cm}
-Take the rational parameters $u=1$, $\eps=2$, $c=\tfrac12$. Then
+Let $\mathcal S_u=\mathcal S_u^{[2]}=H_u^2K_u=A_u^2P_u^2K_u$ \textup{(}cf.\ \eqref{eq:Ycoc}\textup{)}, and take the rational parameters $u=1$, $\eps=2$, $c=\tfrac12$. Then
 $V\sim\mathrm{Beta}(2,\tfrac12)$, the normalized density of $\eta=-\tfrac12\log V$ is
 \begin{equation}\label{eq:beta-density}
    f(x)=\frac32\,\frac{e^{-4x}}{\sqrt{1-e^{-2x}}},\qquad x>0 ,
 \end{equation}
-the inverse transform of the polar factor is $\delta_0-2e^{-2x}dx+xe^{-2x}dx$, and the
+the inverse transform of the polar factor $P_1^2$ is $\delta_0-2e^{-2x}dx+xe^{-2x}dx$, and the
 absolutely continuous part of the convolution is, with $Q=\sqrt{1-e^{-2x}}$,
 \begin{equation}\label{eq:h-exact}
    h(x)=\frac32e^{-2x}\Bigl(\frac1Q-4Q+\artanh Q\Bigr),
@@ -1808,19 +1917,19 @@ variation obtained by factorizing the product over prime coordinates, killed by
 Theorem~\ref{thm:pf2} and Witness~\ref{wit:pf2}; (ii) representing the completed cocycle as the
 transform of a positive probability law and applying stochastic order, killed by
 Corollary~\ref{cor:bernstein}; (iii) transferring the increasing coupling
-$X(u_2)=X(u_1)+Z$ directly to the Laguerre coefficients, killed because the polar factor is a
-deconvolution and the oscillatory test does not preserve the order.
+$X(u_2)=X(u_1)+Z$ directly to the Laguerre coefficients, which would need the test to be monotone
+(Remark~\ref{rmk:order}), whereas $L_n$ changes sign $n$ times, so stochastic order gives no
+information on these coefficients.
 \end{nogo}
 
 \noindent We emphasize what is \emph{not} concluded. Corollary~\ref{cor:bernstein} does not imply
-that any coefficient of the gate has the wrong sign; the gate may well hold. What it excludes is a
-proof of the gate through positivity of the completed generator.
+that any coefficient $D_n$ has the wrong sign; the target inequality may well hold. What it excludes is a
+proof of it through positivity of the completed generator.
 
 \subsection{Stein--Mecke: the identity that keeps every other prime}\label{sec:stein}
 
-The successor left alive by \S\ref{sec:cm} was the one global identity that does not require
-positivity anywhere: Mecke's equation for a compound-Poisson law, which retains inside the
-expectation all primes other than the selected jump. Executed on the cubic cocycle it produces a
+The remaining global identity, which does not require positivity anywhere, is Mecke's equation for a compound-Poisson law, which retains inside the
+expectation all primes other than the selected jump. Applied to the cubic cocycle it produces a
 genuinely global recurrence, and then dies for the same reason at the same point.
 
 Let $d_u=J_u*J_u*J_u\ge0$, $s_0=1+\eps$, $u=c\eps$, and let $\mu_3$ be defined by
@@ -1829,7 +1938,7 @@ $\mathcal S_u^{[3]}=H_u^3K_u^2$. Its L\'evy exponent has the \emph{signed} kerne
 \begin{equation}\label{eq:nu3}
    \nu_3=\nu_A^{[3]}+2\nu_K-3\nu_P ,
 \end{equation}
-where $\nu_A^{[3]}=3\sum_p\sum_{j\ge1}\tfrac{R_p^j-r_p^j}{j}\delta_{j\log p}$,
+where $\nu_A^{[3]}=3\sum_p\sum_{j\ge1}\tfrac{R_p^j-x_p^j}{j}\delta_{j\log p}$,
 $\nu_K$ is \eqref{eq:nuK}, and
 $\nu_P(y)dy=\tfrac{e^{-(\eps-u)y}-e^{-\eps y}}{y}dy$.
 
@@ -1876,7 +1985,7 @@ continuous density at $y_0$ equal to
 
 \begin{nogo}[generator positivity plus jump ordering is not available]\label{ng:stein}
 The implication ``positivity of the completed L\'evy measure and ordering of the jumps
-$\Rightarrow$ the gate'' has a false premise, by Theorem~\ref{thm:stein-witness}, and the defect
+$\Rightarrow$ $3\lambda_n-A_n\ge0$'' has a false premise, by Theorem~\ref{thm:stein-witness}, and the defect
 persists exactly in the regime $u=c\eps$, $\eps\downarrow0$ that extracts
 $3\lambda_n-A_n$.
 \end{nogo}
@@ -1916,24 +2025,41 @@ subject produces repeatedly: a positivity criterion whose hypothesis contains it
 The exact contribution of a quartet to the Li coefficients; radial Abel summation; Ces\`aro and
 Fej\'er triangular means of fixed order; no information about the real weights.
 
-After the sign erratum of Remark~\ref{rmk:erratum}, the correct coordinate for the target is
+By Remark~\ref{rmk:erratum}, the correct coordinate for the target is
 \begin{equation}\label{eq:abel-coord}
    (\star_\theta)\iff
    -\lambda_n(\sqrt n)+\widetilde\eps_n+R_n\bigl(T_n(\theta)\bigr)\le(1-\theta)A_n ,
 \end{equation}
 so what is needed is a \emph{lower} bound for the incomplete Li coefficient
 $\lambda_n(\sqrt n)$. An average cannot substitute for it without a signed Tauberian theorem, and
-the mechanism of this subsection was the attempt to supply one from radial positivity.
+the mechanism of this subsection seeks one in radial positivity.
 
 Let $\rho=\beta+i\gam$ with $0<\beta<1$, $\gam\ne0$, $\beta\ne\half$, let
 $\mathcal O(\rho)=\{\rho,\bar\rho,1-\rho,1-\bar\rho\}$, and put $w=w_\rho=re^{i\vartheta}$, so
 that the symmetries give $w_{\bar\rho}=\bar w$, $w_{1-\rho}=w^{-1}$,
-$w_{1-\bar\rho}=\bar w^{-1}$.
+$w_{1-\bar\rho}=\bar w^{-1}$. Let $Q_n=\sum_{\zeta}(1-\zeta^n)$, the sum over
+$\zeta\in\{w,\bar w,w^{-1},\bar w^{-1}\}$, be the quartet's contribution to $\lambda_n$, and put
+$Q_0=0$. For $0\le q<\min(|w|,|w|^{-1})$ the series $\sum_{n\ge1}Q_nq^n$ converges to
+\[
+   \mathcal Q_\rho(q)=\sum_\zeta\frac{q(1-\zeta)}{(1-q)(1-\zeta q)},
+\]
+a rational function of $q$ which is regular on $[0,1)$ because $\zeta\notin\R$; we call
+$\mathcal Q_\rho$ on $0<q<1$ the \emph{radial Abel germ} of the quartet.
 
 \begin{theorem}[radial positivity holds even off the line]\label{thm:abel}
-For every quartet $\mathcal O(\rho)$ --- including quartets strictly off the critical line --- the
-radial Abel germ of its Li contribution is strictly positive.
+For every quartet $\mathcal O(\rho)$ --- including quartets strictly off the critical line ---
+one has $\mathcal Q_\rho(q)>0$ for all $0<q<1$.
 \end{theorem}
+
+\begin{proof}
+Since $\sum_{n\ge1}(1-\zeta^n)q^n=q(1-\zeta)/((1-q)(1-\zeta q))$, summing over the four values of
+$\zeta$ and using $\zeta=1-1/\rho'$ for $\rho'\in\mathcal O(\rho)$ gives
+\[
+   \mathcal Q_\rho(q)=\frac{2q(1+q)X}{(1-q)^3(X^2+Y^2)},\qquad x=\frac{q}{1-q},\quad
+   X=(x+\beta)(x+1-\beta)+\gam^2,\quad Y=\gam(1-2\beta).
+\]
+For $0<q<1$ one has $x>0$, and $0<\beta<1$ gives $X>0$; hence $\mathcal Q_\rho(q)>0$.
+\end{proof}
 
 \begin{nogo}[radial positivity is compatible with exponentially negative
 coefficients]\label{ng:abel}
@@ -1943,12 +2069,13 @@ means, so no Tauberian argument local in the radial variable can supply the lowe
 \end{nogo}
 
 \begin{witness}[Abel-positive, coefficient-negative]\label{wit:abel}
-For $w=2i$ the exact rational values of the quartet's fourth Li coefficient and its eighth
-triangular mean are
+For $w=2i$, that is $\rho=\tfrac15+\tfrac25i$, the exact rational values of the quartet's fourth
+Li coefficient and of its eighth (unnormalized) triangular sum are
 \[
-   Q_4=-\frac{225}{8},\qquad F_8=-\frac{10885}{128},
+   Q_4=-\frac{225}{8},\qquad F_8=\sum_{k=0}^{8}(9-k)Q_k=-\frac{10885}{128},
 \]
-both strictly negative, while the radial Abel germ of the same quartet is strictly positive.
+both strictly negative, while the radial Abel germ of the same quartet is strictly positive by
+Theorem~\ref{thm:abel} (exact check: script \texttt{scripts/incomplete\_abel\_stop\_gate\_check.py}).
 \end{witness}
 
 \noindent The structural reason is not subtle and is worth spelling out, because it recurs in
@@ -1957,13 +2084,10 @@ boundary point along a single direction; the coefficients probe all frequencies.
 quartet has $|w|\ne1$, so its coefficient sequence contains $\cosh(na)$, which grows; the
 radial germ, being an average with rapidly decaying weights, does not see the growth. This is the
 same phenomenon as the Bombieri--Lagarias exponential blowup \cite{BombieriLagarias1999}, and it
-means that any averaging device whose kernel decays must be discarded before it is tried.
+means that no averaging device with a decaying kernel can detect it.
 
-We record, for completeness, that pointwise Fej\'er positivity on the circle had already been
-shown not to survive a reciprocal off-line quartet;
-Theorem~\ref{thm:abel} and Witness~\ref{wit:abel} add the exact cumulative and triangular sums and
-the radial statement, which is the part that identifies \emph{why} a radial Tauberian argument
-cannot be the missing mechanism.
+Theorem~\ref{thm:abel} and Witness~\ref{wit:abel} together identify \emph{why} a radial Tauberian
+argument cannot be the missing mechanism.
 
 \subsection{Real order and monotonicity of the correlated shift}\label{sec:shift}
 
@@ -1977,23 +2101,21 @@ finite and correlated,
 \begin{equation}\label{eq:shift}
    s_\eps(z)=1+\eps+\frac{z}{1-z},\qquad u=c\eps,\quad0<c<1 ,
 \end{equation}
-and retains $H_{c\eps}$ exactly until after the coefficient is extracted. It produces an exact
-finite recurrence and an exact renewal equation --- both new and both sign-free --- and then
-returns to the starting point.
+and retains $H_{c\eps}$ exactly until after the coefficient is extracted. This leads to a finite
+recurrence in the degree, which we do not reproduce; it is sign-free, and the mechanism returns to
+the starting point.
 
 \begin{nogo}[the real order of the cocycle does not control its Cayley
 coefficients]\label{ng:shift}
-Removing the regulator returns exactly the cost functional
-$C_n=\lambda_n^{\mathrm{prime}}-\lambda_{n+1}^{\mathrm{prime}}$. Real monotonicity of
-$(s-1)\zeta(s)$ on the ray is compatible with $C_6>0$; the third difference in $c$ has the sign
-opposite to the one a Hausdorff-type argument would need; and uniqueness of Dirichlet series
-forbids annihilating the explicit channel identically with a nontrivial finite system of constant
-weights.
+Removing the regulator returns exactly
+$C_n=\lambda_n^{\mathrm{prime}}-\lambda_{n+1}^{\mathrm{prime}}$, and by
+\eqref{eq:jordan-witness} this sequence takes both signs although $(s-1)\zeta(s)$ is increasing
+on $(1,\infty)$; hence real monotonicity on the ray does not control the Cayley coefficients.
 \end{nogo}
 
 \noindent The lesson of this entry is about the direction of the implication. One has a positive
-object ($J_{c\eps}\ge0$) and a contraction property on a ray ($H_{c\eps}<1$ there), and the hoped
-conclusion was that $C_n$ has the required sign. Both hypotheses hold; the conclusion does not
+object ($J_{c\eps}\ge0$) and a contraction property on a ray ($H_{c\eps}<1$ there), and one might
+hope that $C_n\le0$ follows (the sign that helps the target, cf.\ Proposition~\ref{thm:classification}). Both hypotheses hold; the conclusion does not
 follow, because the ray is a one-dimensional probe of a two-dimensional problem, exactly as in
 \S\ref{sec:abel}.
 
@@ -2097,6 +2219,15 @@ Fix $u>0$ and put
    \qquad
    Q(z)=\frac{1-\Phi(z)}{u(1-z)^2}=\sum_{m\ge0}q_mz^m .
 \end{equation}
+Here $\mathcal S_u^{[3]}=H_u^3K_u^2$ as in \S\ref{sec:stein}. Put $G(s)=\half s\pi^{-s/2}\Gamma(s/2)$, so
+that $\xi=G\cdot F$ with $F(s)=(s-1)\zeta(s)$ and $G(s-u)/G(s)=K_u(s)$, and put
+$Y_3(s)=\xi(s)^3/G(s)$. Then
+\[
+   \frac{Y_3(s-u)}{Y_3(s)}=H_u(s)^3K_u(s)^2=\mathcal S_u^{[3]}(s),\qquad
+   \log\frac{Y_3((1-z)^{-1})}{Y_3(1)}=\sum_{n\ge1}\frac{3\lambda_n-A_n}{n}z^n ,
+\]
+the second identity because $\log\xi((1-z)^{-1})/\xi(1)$ has coefficients $\lambda_n/n$ and, by
+\eqref{eq:Ycoc} (where $Y=\xi^2/(2G)$), $\log G((1-z)^{-1})/G(1)$ has coefficients $A_n/n$.
 Multiplying series, with no analytic hypothesis whatsoever,
 \begin{equation}\label{eq:fejer-coeff}
    q_m=\frac1u\Bigl[(m+1)-\sum_{k=0}^m(m-k+1)a_k\Bigr]
@@ -2124,8 +2255,8 @@ imaginary constant may be taken to vanish. Then \eqref{eq:fejer-coeff} becomes
 the Fej\'er kernel \cite{Fejer}. The stronger hypothesis $|\Phi|\le1$ suffices as well.
 \end{proof}
 
-This is a correct and complete mechanism: it converts one classical inequality into every sign of
-the cubic margin at once. The difficulty is entirely in its hypothesis.
+Theorem~\ref{thm:fejer} is a valid implication: it converts one classical inequality into every
+sign of the cubic margin at once. The difficulty is entirely in its hypothesis.
 
 \begin{theorem}[the required holomorphy is equivalent to the Hypothesis]
 \label{thm:fejer-rh}
@@ -2177,7 +2308,7 @@ Let $0<R<1$, choose $N$ with $R^{-N}>N+1$, and take
 \end{equation}
 Then $|\Phi(z)|\le1$ for $|z|\le R$, while
 $q_N=\bigl[(N+1)(1-a)-M\bigr]/u<0$. Concretely, $R=\tfrac12$ and $\Phi(z)=6z^4$ have local
-supremum norm $\tfrac38$ on $|z|\le R$ and $q_4=-1$.
+supremum norm $\tfrac38$ on $|z|\le R$ and $q_4=-1/u<0$.
 \end{witness}
 
 \noindent So the information on any strictly smaller disc does not suffice without a new
@@ -2219,10 +2350,10 @@ Laguerre variable as $\Pp_{\eps,c}=I-c\Aa_\eps$ with $u=c\eps$, and integration 
 \begin{equation}\label{eq:P-form}
    \Pp_{\eps,c}=(1-c)I+\frac{c}{\eps}\Aa_\eps N .
 \end{equation}
-Similarly, with $\rho=p^{-1-\eps}$ and $(E_\ell f)(x)=f(x+\ell)$, one has
+Similarly, with $x_p=p^{-1-\eps}$ and $(E_\ell f)(x)=f(x+\ell)$, one has
 $\Uu_\ell N=I-E_\ell$ and therefore
 \begin{equation}\label{eq:B-form}
-   I-\rho E_\ell=(1-\rho)I+\rho\,\Uu_\ell N .
+   I-x_p E_\ell=(1-x_p)I+x_p\,\Uu_\ell N .
 \end{equation}
 
 \begin{theorem}[exact local differences on a prime tower]\label{thm:tower-diff}
@@ -2239,17 +2370,17 @@ both sides having generating function $\bigl(\tfrac{1-x}{1-Qx}\bigr)^r$. In part
 convolution power is $d_u(p^k)=\nabla^4\bigl[\binom{k+3}{3}Q^k\bigr]$. Consequently, for every
 polynomial $f$,
 \begin{equation}\label{eq:tower-sum}
-   \sum_{k\ge0}b_u(p^k)\rho^kf(x+k\ell)
-   =\sum_{k\ge0}(k+1)(Q\rho)^k\,(I-\rho E_\ell)^2f(x+k\ell),
+   \sum_{k\ge0}b_u(p^k)x_p^kf(x+k\ell)
+   =\sum_{k\ge0}(k+1)(Qx_p)^k\,(I-x_p E_\ell)^2f(x+k\ell),
 \end{equation}
-and analogously with $(I-\rho E_\ell)^r$ and $\binom{k+r-1}{r-1}$; both series converge absolutely
-because $Q\rho=p^{-1-(1-c)\eps}<1$.
+and analogously with $(I-x_p E_\ell)^r$ and $\binom{k+r-1}{r-1}$; both series converge absolutely
+because $Qx_p=p^{-1-(1-c)\eps}<1$.
 \end{theorem}
 
 The operators \eqref{eq:P-form} and \eqref{eq:B-form} commute on polynomials, so setting
 \begin{equation}\label{eq:C-op}
    \Cc_{p,\eps,c}
-   =\bigl((1-\rho)I+\rho\,\Uu_\ell N\bigr)
+   =\bigl((1-x_p)I+x_p\,\Uu_\ell N\bigr)
     \Bigl((1-c)I+\tfrac{c}{\eps}\Aa_\eps N\Bigr)
 \end{equation}
 one obtains the factorization that names the mechanism.
@@ -2258,14 +2389,14 @@ one obtains the factorization that names the mechanism.
 A complete tower $p^k$, with all three polar channels retained,
 satisfies
 \begin{equation}\label{eq:tower-square}
-   \sum_{k\ge0}b_u(p^k)\rho^k\,\Pp_{\eps,c}^2f(x+k\ell)
-   =\sum_{k\ge0}(k+1)(Q\rho)^k\,\Cc_{p,\eps,c}^2f(x+k\ell),
+   \sum_{k\ge0}b_u(p^k)x_p^k\,\Pp_{\eps,c}^2f(x+k\ell)
+   =\sum_{k\ge0}(k+1)(Qx_p)^k\,\Cc_{p,\eps,c}^2f(x+k\ell),
 \end{equation}
 and, expanding $\Cc=a_0+a_1N+a_2N^2$ with
 \[
-   a_0=(1-\rho)(1-c)I,\qquad
-   a_1=(1-\rho)\tfrac{c}{\eps}\Aa_\eps+\rho(1-c)\Uu_\ell,\qquad
-   a_2=\tfrac{\rho c}{\eps}\Uu_\ell\Aa_\eps ,
+   a_0=(1-x_p)(1-c)I,\qquad
+   a_1=(1-x_p)\tfrac{c}{\eps}\Aa_\eps+x_p(1-c)\Uu_\ell,\qquad
+   a_2=\tfrac{x_p c}{\eps}\Uu_\ell\Aa_\eps ,
 \]
 all of which are positive combinations of translations and mutually commute, the relation
 $N^jL_n=L^{(j)}_{n-j}$ gives
@@ -2291,8 +2422,8 @@ $b_u(m)m^{-1-\eps}$ times
 \begin{equation}\label{eq:block-1}
    K_0M_p\Bigl[(1-c)^2\bigl(1-\log m-\bar\eta-\ell\mu_p\bigr)+\frac{2c(1-c)}{\eps}\Bigr],
 \end{equation}
-where $K_0=K_u(1+\eps)>0$, $M_p=\bigl(\tfrac{1-\rho}{1-Q\rho}\bigr)^2=\sum_kb_u(p^k)\rho^k>0$,
-$\mu_p=\tfrac{2\rho(Q-1)}{(1-\rho)(1-Q\rho)}>0$ is the exact mean of $k$ under those normalized
+where $K_0=K_u(1+\eps)>0$, $M_p=\bigl(\tfrac{1-x_p}{1-Qx_p}\bigr)^2=\sum_kb_u(p^k)x_p^k>0$,
+$\mu_p=\tfrac{2x_p(Q-1)}{(1-x_p)(1-Qx_p)}>0$ is the exact mean of $k$ under those normalized
 weights, and
 $\bar\eta=\tfrac12\bigl[\psi\bigl(\tfrac{3+\eps}{2}\bigr)-\psi\bigl(\tfrac{3+\eps-u}{2}\bigr)\bigr]>0$
 is the mean of $-\tfrac12\log v$ under the normalized Beta measure. The block changes sign exactly
@@ -2310,8 +2441,8 @@ generally, the leading coefficient in $\log m$ of the degree-$n$ block is
 so for every \emph{even} $n$, including every even $n\ge150$, there are infinitely many coprime
 backgrounds whose canonical block is positive. Hence the global sign cannot be closed by imposing
 a sign on each canonical block. The quartic analogue is identical in form: with
-$M_{p,4}=\bigl(\tfrac{1-\rho}{1-Q\rho}\bigr)^4$ and
-$\mu_{p,4}=\tfrac{4\rho(Q-1)}{(1-\rho)(1-Q\rho)}$, the degree-one block is a positive prefactor
+$M_{p,4}=\bigl(\tfrac{1-x_p}{1-Qx_p}\bigr)^4$ and
+$\mu_{p,4}=\tfrac{4x_p(Q-1)}{(1-x_p)(1-Qx_p)}$, the degree-one block is a positive prefactor
 times
 \begin{equation}\label{eq:block-4}
    (1-c)^4\bigl(1-\log m-3\bar\eta-\ell\mu_{p,4}\bigr)+\frac{4c(1-c)^3}{\eps},
@@ -2323,20 +2454,23 @@ This no-go kills the strategy ``sign per tower, then sum''. It does not refute t
 complete sum. With the exact global identity
 $g_{n,\eps,c}\to-\Delta D_n$ of Theorem~\ref{thm:three}, the statement
 \begin{equation}\label{eq:global-gate}
-   \exists\,c\in(0,1)\ \forall n\ge149:\qquad
+   \exists\,c\in(0,1)\ \forall n\ge150:\qquad
    \limsup_{\eps\downarrow0}g_{n,\eps,c}\le0
 \end{equation}
-is pointwise equivalent to $\Delta D_n\ge0$ (the limit exists), and together with the finite
-certificates would give the strong margin, hence $(\star)$. A proof of \eqref{eq:global-gate}
+is pointwise equivalent to $\Delta D_n\ge0$ (the limit exists), and together with the single base
+inequality $D_{150}=2\lambda_{150}-A_{150}\ge0$ would give the strong margin, hence $(\star)$. A proof of \eqref{eq:global-gate}
 may not use a sign per tower, a sign per background, or a norm of $\Cc$: it must retain the
 multiplicative interactions between distinct primes. That is the narrowest live point of this
 mechanism, and it is one of the two successors we return to in \S\ref{sec:successor}.
 \end{remark}
 
 \begin{remark}[numerical diagnostic, not evidence in any proof]\label{rmk:diag-global}
-A Cauchy/Borwein extraction in double precision found $g_{n,\eps,c}<0$ up to $n=1200$ for
+A double-precision Cauchy extraction (script \texttt{scripts/global\_cocycle\_probe.py}) gives
+$g_{n,\eps,c}<0$ for $1\le n\le300$ for
 $(\eps,c)\in\{(10^{-3},\tfrac12),(10^{-2},\tfrac12),(10^{-1},\tfrac12),(1,\tfrac12),
-(10^{-1},\tfrac9{10})\}$. This is not a certified interval and enters no proof. Its only use is
+(10^{-1},\tfrac9{10})\}$, with agreement between two contour radii (difference below $10^{-8}$); for
+larger $n$ the two radii progressively disagree and no sign is reported. This is not a certified computation and
+enters no proof. Its only use is
 directional: no counterexample to the global sum appeared, even though \eqref{eq:block-1} and
 \eqref{eq:leading-n} prove rigorously that its local summands take both signs.
 \end{remark}
@@ -2361,8 +2495,8 @@ independent ways.
 \begin{nogo}[the local fourth power is algebraic, not a norm]\label{ng:sos-local}
 By \eqref{eq:tower-r} with $r=4$, the tower sum is
 \begin{equation}\label{eq:sos-tower}
-   \sum_{k\ge0}d_u(p^k)\rho^k\Pp^4f(x+k\ell)
-   =\sum_{k\ge0}\binom{k+3}{3}(Q\rho)^k\,\Cc^4f(x+k\ell),
+   \sum_{k\ge0}d_u(p^k)x_p^k\Pp^4f(x+k\ell)
+   =\sum_{k\ge0}\binom{k+3}{3}(Qx_p)^k\,\Cc^4f(x+k\ell),
 \end{equation}
 and although $\Cc^4=(\Cc^2)^2$, this is a composition, not $\Cc^{*}\Cc$. It defines no norm; and by
 Witness~\ref{wit:pf2-quartic} the fourth convolution power is not even $\mathrm{PF}_2$, while
@@ -2426,7 +2560,7 @@ $A_n/1001$, and in cocycle language the correction that subtracts it is fraction
    =\mathcal S_u^{[4]}\Bigl(\frac{\xi(s-u)}{\xi(s)}\Bigr)^{\!-2/501} .
 \end{equation}
 The fractional corrector in \eqref{eq:frac-corrector} removes precisely the slack of
-\eqref{eq:threshold} and reintroduces the zero and branch gate. This explains the failure of that
+\eqref{eq:threshold} and reintroduces the zeros and the choice of branch. This explains the failure of that
 particular fixed-floor transfer. It is not a correction required by Li's criterion or by an
 adapted cofinal cutoff.
 
@@ -2507,13 +2641,12 @@ way. That is the same conclusion as every other section above.
 \section{The three universal falsifiers}\label{sec:falsifiers}
 %% ======================================================================
 
-Sixteen mechanisms were closed, but only three falsifiers were needed. Understanding the division
-of labour among them is what turns the catalogue from a list into a classification, because each
-falsifier refutes a different \emph{kind} of hypothesis, and together they exhaust the ways a
-semidefiniteness certificate can be assembled.
+Three falsifiers account for most of the witnesses; each refutes a different \emph{kind} of
+hypothesis. The entries of \S\S\ref{sec:m1-global}, \ref{sec:m5-gram}, \ref{sec:koszul},
+\ref{sec:selberg}, \ref{sec:cp}, \ref{sec:three-channel} and \ref{sec:mech-envelope} are closed by
+structural arguments of their own.
 
-We first state the methodological rule that governs their use, because it was arrived at painfully
-and it is the reason the conclusions reached here are stable.
+We first state the methodological rule that governs their use, because it is the reason the conclusions reached here are stable.
 
 \begin{convention}[the pre-registration rule]\label{conv:prereg}
 Every mechanism opens with (i) its statement, (ii) an explicit enumeration of the axioms and inputs
@@ -2585,8 +2718,9 @@ positivity argument must begin. Three instances were used:
       \eqref{eq:pf2-quartic};
 \item the canonical block of the tower square changes sign as the coprime background varies,
       at the exact threshold \eqref{eq:threshold-m}, with leading coefficient
-      \eqref{eq:leading-n} of sign $(-1)^n$ --- so for every even degree there are infinitely many
-      positive blocks and infinitely many negative ones.
+      \eqref{eq:leading-n} of sign $(-1)^n$ --- so for every even degree all sufficiently large
+      coprime backgrounds give a positive block, and for every odd degree a negative one; at
+      degree one both signs occur \eqref{eq:threshold-m}.
 \end{itemize}
 The first two use the primes $2$ and $3$ and the actual von Mangoldt values; the third uses the
 actual multiplicative structure. These are not relaxations. They prove that positivity is not a
@@ -2599,7 +2733,7 @@ The third falsifier is the sharpest and the most structural, and it is the subje
 section. It refutes every hypothesis of the form ``the completed cocycle is the transform of a
 positive measure'', including Bernstein, complete monotonicity, stochastic order,
 $\mathrm{PF}_\infty$, decreasing variation, and generator positivity in the Stein--Mecke sense. It
-does so by evaluating an exact density at the single rational point
+does so by evaluating an exact density at the single explicit point
 \begin{equation}\label{eq:x0}
    x_0=\tfrac12\log2 .
 \end{equation}
@@ -2618,7 +2752,7 @@ where the Euler product converges does not propagate into the region $\half<\Re 
 Hypothesis lives. We now show that the
 recurring witness at $x_0=\tfrac12\log2$ is precisely that wall, transported into the Laplace
 variable of the completed cocycle, and that it is not a near miss but a robust structural
-obstruction with a rational certificate.
+obstruction with a closed-form certificate.
 
 \begin{theorem}[the completed first variation is negative below the first atom]
 \label{thm:halflog2}
@@ -2641,6 +2775,21 @@ $e^{-3x_0}/(1-e^{-2x_0})=1/\sqrt2$,
 \end{equation}
 The normalized arithmetic factor $A_u^r$ has positive mass at zero and all its remaining support in
 $[\log2,\infty)$; since $0<x_0<\log2$, it cannot alter the density in a neighbourhood of $x_0$.
+For fixed $\eps$ and $0<u\le u_1<\eps$: (a) by the binomial series the normalized polar factor is
+the transform of $a_u\delta_0+u\,p_u(x)\,dx$ with $a_u=1+O(u)$ and $p_u(x)=-r\,e^{-\eps x}+O(u)$
+locally uniformly; (b) the normalized Gamma factor is the transform of an infinitely divisible
+probability law $\gamma_u$ on $[0,\infty)$ whose L\'evy density is $(r-1)$ times that of
+\eqref{eq:nuK}, i.e.\ $u(r-1)g_u(x)$ with $g_u(x)\to e^{-(3+\eps)x}/(1-e^{-2x})$ locally
+uniformly on $(0,\infty)$; it has no atom at $0$, satisfies $\int\min(1,x)\,\gamma_u(dx)=O(u)$,
+and, by the small-time behaviour of infinitely divisible laws \cite{Sato} (applied with the L\'evy densities $g_u$, which are bounded on compact subsets of $(0,\infty)$ uniformly in $u\le u_1$ and satisfy $\int_0^1xg_u(x)dx=O(1)$: splitting the jumps at a level $\delta'\to0$, the small jumps contribute $O(u\delta')$ by Markov's inequality and two or more large jumps contribute $O(u^2\log^2(1/\delta'))$), for
+$\varphi\in C_c^\infty((0,\infty))$,
+$\langle\varphi,\gamma_u\rangle=u(r-1)\int\varphi(x)\frac{e^{-(3+\eps)x}}{1-e^{-2x}}dx+o(u)$;
+(c) the normalized Euler factor is $a'_u\delta_0$ plus a measure supported in $[\log2,\infty)$,
+with $a'_u=1+O(u)$. For $\varphi\in C_c^\infty((0,\log2))$ the part of (c) on $[\log2,\infty)$
+does not contribute, and $\langle\varphi,p_u*\gamma_u\rangle=\int\varphi p_u+O(u)$ because
+$y\mapsto\int\varphi(x+y)p_u(x)\,dx$ is Lipschitz. Hence
+$\langle\varphi,\mu_u\rangle=u\int\varphi f_{r,\eps}+o_\varphi(u)$, where $\mu_u$ is the inverse
+Laplace transform of the normalized completed cocycle.
 Hence, testing against a nonnegative bump supported in that neighbourhood, for every fixed $r>1$
 and $\eps>0$ there is $u_0(r,\eps)>0$ such that for $0<u<u_0(r,\eps)$ the normalized completed
 cocycle is not the Laplace transform of a positive measure.
@@ -2680,7 +2829,7 @@ The defect at $x_0$ is
    -r+\frac{r-1}{\sqrt2}=-\Bigl(1-\frac1{\sqrt2}\Bigr)r-\frac1{\sqrt2}
    \approx-0.2929\,r-0.7071 ,
 \end{equation}
-so it is bounded away from zero by a constant proportion of $r$, uniformly. In particular there is
+so its absolute value is at least $(1-1/\sqrt2)\,r$, uniformly. In particular there is
 no exponent $r>0$ for which the combination is nonnegative: that would require
 $r(1-\sqrt2)\ge1$, impossible for $r>0$.
 \end{proposition}
@@ -2693,12 +2842,13 @@ r(1/\sqrt2-1)\ge1/\sqrt2\iff r(1-\sqrt2)\ge1$, and $1-\sqrt2<0$.
 Proposition~\ref{prop:not-near-miss} is what elevates the witness from a computation to a wall.
 Had the defect been a small negative number, one could reasonably hope that a sharper treatment of
 the Gamma factor, a better normalization, or a cleverer choice of correlation $c$ would push it
-across zero. It is not small, it does not depend on $c$, and it does not improve with $r$: it gets
-\emph{worse} linearly in $r$, so the ``more copies of the Euler factor'' strategy that motivated the
-whole ladder $2\to3\to4$ makes this particular obstruction monotonically stronger.
+across zero. It is not small and it does not depend on $c$. Its absolute size grows linearly in $r$, and
+relative to the size $r$ of the polar term it tends to $-(1-1/\sqrt2)\approx-0.293$ as
+$r\to\infty$. Adding copies of the Euler factor, as in the ladder $2\to3\to4$, therefore never
+removes the obstruction.
 
 \begin{remark}[the honest reading]\label{rmk:halflog2-reading}
-Wall~\ref{ob:halflog2} does not say that the global sign of the gate is wrong. It says that the
+Wall~\ref{ob:halflog2} does not say that the sign of the target inequality is wrong. It says that the
 region $(0,\log2)$ --- which is fully explicit, containing no arithmetic --- has a definite negative
 contribution to any pointwise positivity claim. Whether the arithmetic mass on $[\log2,\infty)$
 dominates that explicit negative mass in the \emph{integrated} sense is a completely different
@@ -2711,24 +2861,24 @@ therefore of the right type. We return to it in \S\ref{sec:successor}.
 \end{remark}
 
 %% ======================================================================
-\section{Synthesis: why sixteen failures are one failure}\label{sec:synthesis}
+\section{Synthesis: what the sixteen failures have in common}\label{sec:synthesis}
 %% ======================================================================
 
-We now assemble the catalogue and prove the classification that the paper's title asserts.
+We now assemble the catalogue and summarize what its entries have in common.
 
 \subsection{The catalogue}
 
-Table~\ref{tab:census} records the sixteen mechanisms. The column ``output'' states the strongest
+Table~\ref{tab:census} records the sixteen positivity mechanisms and, as a last row, the tail-sign
+route of \S\ref{sec:mech-envelope}. The column ``output'' states the strongest
 conclusion the mechanism can reach about the target, assuming everything it wanted to be true were
 true. The column ``class'' assigns it to Definition~\ref{def:semidef}. The column ``witness''
-names the falsifier of \S\ref{sec:falsifiers} that closed it. We note that the count depends on
-how one bundles the families --- \S\ref{sec:cm} alone closes four classical routes, and the earlier
-running summary of this work counted fourteen rather than sixteen --- and that the precise number is
-immaterial. What matters is the last two columns, which are constant down the table.
+names the witness or structural fact that closed it. We note that the count depends on
+how the families are bundled (\S\ref{sec:cm} alone closes four classical routes), and the precise
+number is immaterial. What matters is the last column, which is the same for all sixteen positivity rows.
 
 {\small
 \begin{longtable}{@{}p{0.235\textwidth}p{0.215\textwidth}p{0.115\textwidth}p{0.185\textwidth}p{0.12\textwidth}@{}}
-\caption{The sixteen closed mechanisms.}\label{tab:census}\\
+\caption{The sixteen closed positivity mechanisms and, as a last row, the tail-sign route.}\label{tab:census}\\
 \toprule
 \textbf{mechanism} & \textbf{object produced} & \textbf{class} &
 \textbf{witness} & \textbf{output} \\
@@ -2751,7 +2901,7 @@ Local PSD of the order kernel $w(\max(i,j))$ (\S\ref{sec:m1-local})
 Global Gram/energy of the same kernel (\S\ref{sec:m1-global})
 & max-energy identity \eqref{eq:max-energy}; affine identity \eqref{eq:affine-exact}
 & (S1)
-& Hessian $\equiv0$; load \eqref{eq:load}
+& Hessian $\equiv0$ (load \eqref{eq:load}: heuristic)
 & $\ \ge0$ \\[2pt]
 Non-local zero--lobe Gram (\S\ref{sec:m3})
 & Weil form \eqref{eq:weil-a1}; stationary map \eqref{eq:stationary}
@@ -2774,9 +2924,9 @@ Jordan hierarchy $\mu*\log^k\ge0$ (\S\ref{sec:jordan})
 & $C_1<0<C_6$; $X_a$; Schur $\Leftrightarrow\RH$
 & $\ \ge0$ \\[2pt]
 Selberg $\mu*\log^2\ge0$ + $O(x)$ + Riccati (\S\ref{sec:selberg})
-& exact degree recurrence
+& identity $c_n=p_n-j_n$
 & (S4)
-& dual load $\ge n(n-1)^n-1$
+& separate bounds lose $|j_n|=n(n-1)^n$ at $\eps=1/n$
 & $\ \ge0$ \\[2pt]
 $\mathrm{PF}_2/\mathrm{TP}_2$, log-concavity (\S\ref{sec:pf2})
 & minors \eqref{eq:pf2}, \eqref{eq:pf2-general}
@@ -2822,23 +2972,28 @@ Quartic sum of squares (\S\ref{sec:sos})
 & factorization \eqref{eq:sos-root}; tower sum \eqref{eq:sos-tower}
 & (S2)
 & $(1-B_u)^2/u\to0$; $n=150$ quartet
-& $\ \ge0$ \\[2pt]
+& $\ \ge0$ \\
+\midrule
 Favourable tail sign from the VK envelope (\S\ref{sec:mech-envelope})
 & two-sign saturation \eqref{eq:tail-signs}
 & ---
 & \eqref{eq:tail-lower}, \eqref{eq:tail-smooth}
-& $\ \ge0$ \\
+& $R_n(T_n)\le0$ \\
 \end{longtable}
 }
 
-\subsection{The classification theorem}
+\subsection{The classification}
 
-\begin{theorem}[the category mismatch]\label{thm:classification}
-Let $\mathcal M$ be any of the mechanisms of Table~\ref{tab:census}, and suppose --- contrary to the
+\begin{proposition}[summary of the catalogue]\label{thm:classification}
+Let $\mathcal M$ be one of the mechanisms of \S\S\ref{sec:m1-local}, \ref{sec:m1-global},
+\ref{sec:jordan}, \ref{sec:selberg}, \ref{sec:cm}, \ref{sec:stein}, \ref{sec:shift},
+\ref{sec:three-channel}, \ref{sec:fejer}, \ref{sec:tower}, \ref{sec:sos}, and suppose --- contrary to the
 witnesses --- that the positivity it seeks were established. Then the conclusion $\mathcal M$
-delivers about the target is of the form $D_n^{[m]}\ge0$ for an even integer $m\in\{2,4\}$, or of the
-form $\Delta D_n^{[m]}\ge0$, or $\lambda_n^{\mathrm{prime}}\ge-A_n/m$; in every case a
-semidefiniteness statement in the sense of Definition~\ref{def:semidef}. If $m=2$ this is
+delivers about the target is of the form $D_n^{[m]}\ge0$ with $m\in\{2,3,4\}$, or
+$\Delta D_n=D^{[2]}_{n+1}-D^{[2]}_n\ge0$, or the first-difference inequality $-C_n\ge0$, where
+$C_n=\lambda_n^{\mathrm{prime}}-\lambda_{n+1}^{\mathrm{prime}}$ (equivalently
+$\Delta D_n\ge\Delta A_n$); in every case a
+semidefiniteness statement in the sense of Definition~\ref{def:semidef}. If $m\in\{2,3\}$ this is
 sufficient for $(\star)$; if $m=4$, its bare nonnegativity does not force the compact certificate
 at the prescribed floor through \eqref{eq:a0plus}, and the convenient floor-$1000$ sufficient
 condition exceeds it by
@@ -2848,30 +3003,20 @@ condition exceeds it by
 This last statement concerns only the formal transfer from the listed auxiliary
 nonnegativities: those facts alone yield no positive lower bound on a pairing with a
 sign-changing test. It does not preclude an additional arithmetic argument, and it does not make
-a proportional bound necessary for RH.
-\end{theorem}
+a proportional bound necessary for RH. The remaining rows (\S\S\ref{sec:m3},
+\ref{sec:m5-gram}, \ref{sec:koszul}, \ref{sec:pf2}, \ref{sec:cp}, \ref{sec:abel}) are positivity
+statements about an auxiliary object that were never transferred to a margin, and the tail-sign
+route of \S\ref{sec:mech-envelope} seeks $R_n(T_n)\le0$ and is not of semidefinite type.
+\end{proposition}
 
-\begin{remark}[the quartic case fails by non-existence, not by weakness]\label{rmk:quartic-exists}
-It must be said plainly that the $m=4$ clause above is \emph{not} the reason the quartic
-mechanism fails. If a certificate delivered $D_n^{[4]}\ge0$ for every $n\ge150$, then
-$\lambda_n\ge\tfrac14A_n>0$ there, and Li's criterion together with the verified finite range
-would give the Riemann Hypothesis outright, with no passage through $(\star)$ and no slack to
-recover. The quartic route fails for a different and more basic reason: \emph{no such
-certificate exists}. Section~\ref{sec:sos} proves that the fourth power is an algebraic square
-and not a metric one, that the local fourth convolution fails $\mathrm{PF}_2$
-(Witness~\ref{wit:pf2-quartic}), that the genuinely quadratic part vanishes in the extraction
-limit \eqref{eq:sos-lin}, and that a certificate using only symmetry would falsify an off-line
-divisor already at $n=150$ (Witness~\ref{wit:sos-offline}). The same holds at $m=2$ and $m=3$.
-The catalogue is a statement about existence, and only secondarily about strength.
-\end{remark}
 
 \begin{proof}
-The first assertion is a reading of the table: \S\S\ref{sec:m1-local}--\ref{sec:m1-global} and
+By the sections listed: \S\S\ref{sec:m1-local}--\ref{sec:m1-global} and
 \ref{sec:three-channel}, \ref{sec:tower} produce $D_n^{[2]}$ or $\Delta D_n$;
 \S\S\ref{sec:selberg}, \ref{sec:shift}, \ref{sec:jordan} produce the first difference $C_n$;
 \S\S\ref{sec:cm}, \ref{sec:stein}, \ref{sec:fejer} produce $D_n^{[3]}$; \S\ref{sec:sos} produces
-$D_n^{[4]}$. The quantitative statement is Theorem~\ref{thm:threshold}. For the last assertion, note
-that each mechanism's final step has the form
+$D_n^{[4]}$. The quantitative statement is Theorem~\ref{thm:threshold}. For the last assertion we
+give a heuristic explanation, which is not part of the proof. Each mechanism's final step has the form
 \[
    \text{target}=\int T\,d\pi\quad\text{or}\quad\text{target}=\langle T,\mathcal K\,T\rangle,
 \]
@@ -2881,14 +3026,28 @@ square; it gives no bound at all when $T$ changes sign, and it certainly gives n
 to a divergent quantity $A_n$ built from a different (archimedean) channel. To produce
 $\kappa A_n$ one would have to bound below the pairing of a positive object with an oscillatory test
 by a positive multiple of an independent scale, which is a coercivity statement in the sense of
-Definition~\ref{def:coerc}. On the other hand, if a mechanism really established
+Definition~\ref{def:coerc}. Finally, if a mechanism really established
 $D_n^{[4]}\ge0$ for all large $n$, then $\lambda_n\ge A_n/4>0$ and it would prove RH directly.
 The classification therefore concerns the attempted transfer to a prefixed compact certificate,
 not the logical sufficiency of quartic positivity.
 \end{proof}
 
+\begin{remark}[the quartic case does not fail by weakness]\label{rmk:quartic-exists}
+It must be said plainly that the $m=4$ clause above is \emph{not} the reason the quartic
+mechanism fails. If a certificate delivered $D_n^{[4]}\ge0$ for every $n\ge150$, then
+$\lambda_n\ge\tfrac14A_n>0$ there, and Li's criterion together with the verified finite range
+would give the Riemann Hypothesis outright, with no passage through $(\star)$ and no slack to
+recover. The quartic route fails for a different reason: none of the catalogued constructions
+produces such a certificate. Section~\ref{sec:sos} shows that the fourth power is an algebraic
+and not a metric square, that the local fourth convolution fails $\mathrm{PF}_2$
+(Witness~\ref{wit:pf2-quartic}), that the genuinely quadratic part vanishes in the extraction
+limit \eqref{eq:sos-lin}, and that a certificate using only symmetry inputs would be refuted by an
+off-line divisor already at $n=150$ (Witness~\ref{wit:sos-offline}). This says nothing about
+certificates that use the arithmetic of $\Lambda$.
+\end{remark}
+
 \begin{corollary}[scope of the common obstruction]\label{cor:one-failure}
-The sixteen entries of Table~\ref{tab:census} are instances of one obstruction to the proposed
+The sixteen positivity entries of Table~\ref{tab:census} are instances of one obstruction to the proposed
 \emph{fixed-cutoff transfers}: auxiliary nonnegativity neither controls the signed tail nor gives
 a positive margin against a sign-changing test. No purely formal recombination preserving only
 those auxiliary facts repairs that transfer. A new signed arithmetic input, an adapted-cutoff
@@ -2902,21 +3061,27 @@ Beyond the classification, two quantities recur across the entries and are worth
 they measure the two ways the mechanisms fail.
 
 \begin{definition}[the absolute-value load]\label{def:load}
-Whenever a mechanism exits by taking absolute values on the kernel --- which the discipline of the
-discipline adopted here forbids, but which is the only available exit once a Hessian cancels --- the cost is the
-absolute load $\mathcal B_n$ of \eqref{eq:load}, satisfying
-$\mathcal B_n\ge\exp\bigl(\tfrac23n\log n+\tfrac13n\log\log n-O(n)\bigr)$, against a
-first-difference budget of size $O(\log n)$. In the regulated coordinate the same loss appears as
+Whenever a mechanism exits by taking absolute values on the kernel --- the only available exit
+once a Hessian cancels --- the cost is the absolute load $\mathcal B_n$ of \S\ref{sec:m1-global}, which
+the saddle-point heuristic \eqref{eq:load} (not proved here) puts at
+$\exp\bigl(\tfrac23n\log n+\tfrac13n\log\log n+O(n)\bigr)$, against
+first differences $\Delta A_n\sim\tfrac12\log n$ of the quantity to be bounded. In the regulated coordinate the same loss appears as
 $\eps^{-n-1}$, i.e.\ $n^{n+1}$ at the natural scale $\eps=1/n$ (\S\ref{sec:selberg}).
 \end{definition}
 
 \begin{definition}[the propagation defect]\label{def:defect}
 Whenever a mechanism requires a positive representation of the completed cocycle, the cost is the
 defect \eqref{eq:defect} at $x_0=\tfrac12\log2$, namely $-(1-1/\sqrt2)r-1/\sqrt2$, which is
-bounded away from zero and increases linearly in the exponent $r$.
+bounded away from zero and has absolute value at least $(1-1/\sqrt2)r$.
 \end{definition}
 
-Every entry of Table~\ref{tab:census} pays one of these two. Definition~\ref{def:load} is the price
+Several entries of Table~\ref{tab:census} pay one of these two costs: the absolute-value exits of
+\S\S\ref{sec:m1-global}, \ref{sec:selberg} pay the load, and the positive-representation routes of
+\S\S\ref{sec:cm}, \ref{sec:stein}, \ref{sec:sos} pay the defect; the entries of
+\S\S\ref{sec:m1-local}, \ref{sec:m3}, \ref{sec:jordan}, \ref{sec:pf2}, \ref{sec:abel},
+\ref{sec:shift}, \ref{sec:tower} fail through Falsifiers I or II, and those of
+\S\S\ref{sec:m5-gram}, \ref{sec:koszul}, \ref{sec:cp}, \ref{sec:three-channel},
+\ref{sec:mech-envelope} through the structural obstruction stated in their own section. Definition~\ref{def:load} is the price
 of abandoning the coupling; Definition~\ref{def:defect} is the price of demanding a positive
 measure in the particular cocycle coordinate. These exhaust the transfers catalogued here, not
 all possible positivity arguments for the Li coefficients.
@@ -2928,16 +3093,15 @@ Wall~\ref{ob:halflog2}, localized in the Laplace variable. \emph{Sign versus mag
 Definition~\ref{def:load}: absolute envelopes measure magnitude, and the target needs sign.
 \emph{Uniform norm}, or rank-one escape, appears in \S\ref{sec:successor}, where the relevant
 operator bound turns out to be saturated exactly. And \emph{Weil positivity} appears as
-Theorem~\ref{thm:weil-a1}: the target \emph{is} a Weil positivity statement, which is why no
-reformulation of it can be easier than itself.
+Theorem~\ref{thm:weil-a1}: the target \emph{is} a Weil positivity statement.
 \end{remark}
 
 %% ======================================================================
 \section{What remains after the cutoff and quantifier corrections}\label{sec:successor}
 %% ======================================================================
 
-A negative result earns its keep only if it narrows the search. This section first audits two
-stronger routes retained from the fixed-cutoff programme: operator coercivity is unavailable,
+A negative result earns its keep only if it narrows the search. This section first examines two
+stronger routes retained from the fixed-cutoff analysis: operator coercivity is unavailable,
 whereas fixed-vector non-alignment is not ruled out. It then uses the dominant-mode structure of
 Bombieri--Lagarias to weaken the quantifier itself. The resulting block, density and nonlinear
 partition criteria are logically sufficient for RH without coefficientwise positivity or a
@@ -2951,21 +3115,18 @@ $S$ for the archimedean whitening, one would want
 \begin{equation}\label{eq:gap-false}
    \lambda_{\max}\bigl(S\mathcal P_\Lambda S\bigr)\ \le\ 1-c
 \end{equation}
-for a fixed $c>0$. Structural and numerical work in the broader investigation from which this paper
-is drawn (\S\ref{sec:availability}) establishes three things about that quantity: the sharp form of
-the prime-side reduction is exactly $\lambda_{\max}\le1$; $\zeta$ sits \emph{at} the marginal value;
-and the measured margin decays to zero exponentially in the window size, with twelve digits of
-saturation already at window $N=8$. Consequently:
+for a fixed $c>0$.
 
-\begin{proposition}[no proportional gap in the operator coordinate]\label{prop:no-gap}
-Under the Riemann Hypothesis the extremal quantity is pinned at the positivity floor,
-$\lambda_{\max}(S\mathcal P_\Lambda S)=1$. Hence a statement of the form
-$\lambda_{\max}\le1-c$ with fixed $c>0$ is \emph{false} if the Hypothesis holds, and cannot serve
-as a lemma toward it. The same applies to the quaternionic Hodge--Riemann polarization, whose
-spectrum on the relevant eigenspace decays exponentially with no uniform lower bound.
-\end{proposition}
+\begin{remark}[operator-norm gaps]\label{prop:no-gap}
+Suppose a self-adjoint whitening $S$ and prime block $\mathcal P_\Lambda$ realize the Weil
+quadratic form, i.e.\ $\langle h,(I-S\mathcal P_\Lambda S)h\rangle$ equals the Weil functional of
+$h*h^\#$ on a class of tests whose closure contains near-extremal sequences. Then under RH,
+$\inf\operatorname{spec}(I-S\mathcal P_\Lambda S)=0$, because the Weil form has no proportional
+gap over all tests. Hence a bound $\lambda_{\max}\le1-c$ with fixed $c>0$ cannot be a step
+towards RH.
+\end{remark}
 
-Proposition~\ref{prop:no-gap} eliminates a whole quadrant of the coercivity family in one stroke,
+Under its hypothesis, Remark~\ref{prop:no-gap} excludes certificates of type (C1),
 and it does so for a reason worth internalizing: the extremal problem \emph{is} Weil positivity,
 and Weil positivity is marginal by construction. Any faithful reformulation of it will be marginal
 too. Coercivity, if it exists at all, cannot live at the level of the operator.
@@ -2978,18 +3139,21 @@ finite cutoff,
    \mu_n:=\frac{\bigl|\lambda_n^{\mathrm{prime}}\bigr|}{A_n}
    =\frac{\text{prime-side energy of }h_n}{\text{archimedean energy of }h_n},
 \end{equation}
-so that by \eqref{eq:split} and Remark~\ref{rmk:75} the target \eqref{eq:frontier} is
+so that by \eqref{eq:split} and Remark~\ref{rmk:75} the target \eqref{eq:frontier} follows from
 \begin{equation}\label{eq:mu-target}
    \mu_n\ \le\ 1-c\ \approx\ \tfrac34 .
 \end{equation}
 The ``gapless'' and ``marginal'' verdicts one meets in this subject concern
-$\sup_h\mu(h)$, the supremum over \emph{all} admissible test functions. That supremum equals $1$;
+$\sup_h\mu(h)$, the supremum over \emph{all} admissible test functions. Under RH that supremum is at most $1$, and in the realizations of
+Remark~\ref{prop:no-gap} it equals $1$;
 that is the content of Weil positivity, and it is marginal by definition. But $(\star)$ does
 not take a supremum. It concerns one explicit sequence $h_n=f_n*f_n^{\#}$, and for that sequence
 the true value is, under the Hypothesis,
 \begin{equation}\label{eq:mu-true}
-   \mu_n=\frac{O(\sqrt n\log n)}{\tfrac12n\log n\,(1+o(1))}=O\bigl(n^{-1/2}\bigr)\longrightarrow0 .
+   \mu_n=\frac{O(\sqrt n\log n)}{\tfrac12n\log n\,(1+o(1))}=O\bigl(n^{-1/2}\bigr)\longrightarrow0 ,
 \end{equation}
+by the conditional asymptotic for the Li coefficients \cite{Lagarias2007} (with the sign of
+Remark~\ref{rmk:erratum}).
 So the fixed family is not near the extremum, and a gap for it is not excluded by the marginality
 of the extremum. We state this explicitly because reading the gapless verdicts quickly would
 suggest that the route of this paper is self-defeating, and it is not: marginality is a property of
@@ -3000,14 +3164,16 @@ The price of the distinction is that one loses every tool that works uniformly o
 A statement about a fixed sequence cannot be proved by bounding an operator; it requires knowing
 something about that sequence's position relative to the operator's near-extremal directions. This
 is precisely Definition~\ref{def:coerc}(C3), and it is the only cell of the coercivity table that
-Proposition~\ref{prop:no-gap} does not empty. The density-relaxed route below does not belong to
+Remark~\ref{prop:no-gap} does not empty. The density-relaxed route below does not belong to
 that table at all.
 \end{remark}
 
 \subsection{A remaining stronger route: fixed-vector coercivity and non-alignment}\label{sec:nonalign}
 
 \begin{problem}[uniform non-alignment]\label{prob:nonalign}
-Prove that there exists $c>\tfrac14$ such that, for all $n\ge150$,
+Prove that there is $c>\tfrac14$ with $\lambda_n\ge cA_n$ for all $n\ge150$, i.e.\
+\eqref{eq:frontier}. In any operator realization as in Remark~\ref{prop:no-gap} with
+$\langle f_n,(I-S\mathcal P_\Lambda S)f_n\rangle=\lambda_n$ and $\|f_n\|^2=A_n$ this reads
 \begin{equation}\label{eq:nonalign}
    \bigl\langle f_n,\bigl(I-S\mathcal P_\Lambda S\bigr)f_n\bigr\rangle
    \ \ge\ c\,\|f_n\|^2 ,
@@ -3020,8 +3186,8 @@ Problem~\ref{prob:nonalign} is a coercivity statement for a fixed vector against
 operator, and that is a recognized and distinct kind of problem: it is not solved by exhibiting a
 spectral gap, because there is none, but by a resolvent or quantitative-unique-continuation
 estimate showing that $f_n$ cannot concentrate in the subspace where the operator approaches $1$ ---
-a subspace whose dimension grows with the window. It satisfies the five requirements that
-\S\ref{sec:synthesis} imposes on any successor: it is proportional rather than semidefinite; it is
+a subspace whose dimension grows with the window. It has five properties that the catalogued
+mechanisms lack: it is proportional rather than semidefinite; it is
 not an absolute bound, so it does not pay the load of Definition~\ref{def:load}; it does not require
 a positive representation, so it does not pay the defect of Definition~\ref{def:defect}; it uses
 $\Lambda(m)\ge0$ non-termwise, through the operator, so it is not refuted by Falsifier~II; and it
@@ -3032,9 +3198,8 @@ this form.
 \begin{remark}[a cheap diagnostic for the optional non-alignment route]\label{rmk:diag-overlap}
 Before developing Problem~\ref{prob:nonalign} it is worth computing the overlap
 $\langle f_n,v_{\max}\rangle/\|f_n\|$ of the Laguerre test with the top eigenvector of the whitened
-jet, at moderate window sizes and several base points. If the overlap decays, non-alignment is
-plausible and the investment is justified; if it is $\Theta(1)$, Problem~\ref{prob:nonalign} is dead
-before it starts and weeks are saved. This is a diagnostic in the sense of
+jet in such a realization, truncated to finitely many primes, at moderate window sizes and several base points. If the overlap decays, non-alignment is
+plausible and the investment is justified; if it is $\Theta(1)$, Problem~\ref{prob:nonalign} fails. This is a diagnostic in the sense of
 Convention~\ref{conv:standard}, and would enter no proof.
 \end{remark}
 
@@ -3059,10 +3224,9 @@ depend on the exterior zeros; no universal positive density follows from this ar
 \begin{proof}
 For $u_\rho=\rho/(\rho-1)$, failure of RH gives $|u_\rho|>1$ for some zero on the right of the
 critical line. Functional symmetry gives $\lambda_{-n}=\lambda_n$, so the dominant-mode
-calculation with $u_\rho^n$ has the orientation used below. The hypotheses used in the proof of
-Bombieri--Lagarias imply that the maximal
-modulus $R>1$ is attained by finitely many modes
-$u_j=Re^{i\phi_j}$ and that, for some $R_1<R$,
+calculation with $u_\rho^n$ has the orientation used below. Since $|u_\rho|\to1$ as $|\Im\rho|\to\infty$, the maximum $R=\max|u_\rho|>1$ is attained by
+finitely many zeros. Listing the corresponding modes $u_j=Re^{i\phi_j}$ with multiplicity, the
+argument of \cite[proof of Theorem~1]{BombieriLagarias1999} gives, for some $R_1<R$,
 \[
    \lambda_n=-R^n\sum_{j=1}^{K}\cos(n\phi_j)
               +O(n^2R_1^n+n^2).
@@ -3089,7 +3253,7 @@ Let $b_n\ge0$ satisfy $\log(1+b_n)=o(n)$.  The following are equivalent:
 \item there is $E$ with $\overline\delta_{\log}(E)=0$ such that
       $\lambda_n\ge-b_n$ for every sufficiently large $n\notin E$;
 \item there are consecutive integer intervals $I_j$, with $|I_j|\to\infty$, on each of which
-      $\lambda_n\ge-b_n$ at every index;
+      $\lambda_n\ge-b_n$ at every index.
 \end{enumerate}
 The theorem remains true with $b_n=1$.  It also implies the quartic variant: RH is equivalent to
 $4\lambda_n>A_n$ outside an exceptional set of logarithmic density zero.
@@ -3098,7 +3262,7 @@ $4\lambda_n>A_n$ outside an exceptional set of logarithmic density zero.
 \begin{proof}
 Under RH, Li's criterion gives $\lambda_n\ge0$ for every $n$, so (ii)--(iii) follow (and the
 quartic statement follows eventually from
-$\lambda_n=A_n+O(\sqrt n\log n)$).  If RH is false, choose the syndetic set of
+$\lambda_n=A_n+O(\sqrt n\log n)$ \cite{Lagarias2007}).  If RH is false, choose the syndetic set of
 Theorem~\ref{thm:syndetic-li}.  Since $b_n=e^{o(n)}$, its tail satisfies
 $b_n<cR^n$, so every sufficiently large element of $\mathcal S$ violates the lower bound.
 Positive logarithmic density rules out (ii), and bounded gaps rule out (iii).
@@ -3207,27 +3371,27 @@ a positive density of excursions.  Jensen has the wrong direction, taking absolu
 destroys the cancellation as $\varepsilon\downarrow0$, and the linear Abel means catalogued above
 control neither nonlinear observable.
 
-\begin{remark}[post-audit of the first two Fermi attacks]\label{rmk:fermi-postaudit}
-Two natural continuations of \eqref{eq:fermi-arith} have been closed quantitatively.  First, the
+\begin{remark}[two continuations of \eqref{eq:fermi-arith} that do not give an estimate]\label{rmk:fermi-continuations}
+First, the
 Fourier identity
 \[
  (1+e^y)^{-1}=\frac12-\int_0^\infty\frac{\sin(sy)}{\sinh(\pi s)}\,ds
 \]
 lifts the complete prime--pole block to an exact product of unit-modulus phases, so it removes the
 artificial explosion caused by separating positive exponentials.  It does not remove the decisive
-scale: an excursion of depth $Y$ is detected at $s=O(Y^{-1})$.  For the rational off-line quartet
-$w=2i$, one has $Y_n\ge2^n$ on $n\equiv0\pmod4$, so every fixed-frequency or polynomial-resolution
-estimate misses the Fermi signal.  The diagonal change $s=e^{-nv}$ moves an exponential rate to a
+scale (heuristic; not proved here): an excursion of depth $Y$ is detected only at frequencies
+$s=O(Y^{-1})$.  For the off-line quartet $w=2i$ the depth is $Y_n=4\cosh(n\log2)-4\ge2^n$ for
+$n\equiv0\pmod4$, $n\ge4$, so the relevant frequencies satisfy $s\le2^{-n}$, beyond the reach of
+fixed-frequency or polynomial-resolution estimates.  The diagonal change $s=e^{-nv}$ moves an exponential rate to a
 fixed $v$, but the Laguerre generating function then controls a \emph{geometric product} of phases,
-whereas Fermi requires their \emph{arithmetic mean}; at the critical scale all Hadamard powers
-survive.
+whereas Fermi requires their \emph{arithmetic mean}.
 
 Second, the cross-degree Parseval and Christoffel--Darboux identities are exact, but their
 archimedean--pole square, prime square and mixed term are each of order
-$\varepsilon^{-4N}$ on degrees $N<n\le2N$.  Only their complete signed cancellation has a finite
-limit.  Positivity of the Christoffel--Darboux kernel controls one piece and supplies no upper bound
-for the coupled energy.  Thus the unitary microfrequency branch and the bare Parseval/CD branch are
-both no-gos.  They add useful exact identities, but \eqref{eq:fermi-bound} remains an equivalence
+$\varepsilon^{-4N}$ on degrees $N<n\le2N$ (heuristic; not proved here), so that only their complete
+signed cancellation has a finite limit.  Positivity of the Christoffel--Darboux kernel controls one
+piece and supplies no upper bound for the coupled energy.  Neither continuation yields an estimate.
+They add useful exact identities, but \eqref{eq:fermi-bound} remains an equivalence
 without an unconditional estimate.
 \end{remark}
 
@@ -3246,15 +3410,13 @@ where arithmetic begins,
 and compare the exactly computable negative mass of the first block against the arithmetic mass of
 the second. The first block involves only the Gamma and polar channels, both in closed form, with
 first variation \eqref{eq:frq}; the second is where $\Lambda(m)\ge0$ lives. The cut at $\log2$ is
-not an adjustable parameter --- earlier attempts of ours were forced to fix an arbitrary $\delta$
-because shrinking windows scaled out of the estimate --- it is the location of the first atom.
+not an adjustable parameter; it is the location of the first atom.
 
 This is exactly the ``specific signed non-local cancellation'' that \S\ref{sec:stein} left open, and
 the ``global multiplicative sum retaining inter-prime interactions'' that
 Remark~\ref{rmk:tower-alive} left open, with the correct partition supplied. We record the obvious
 risk: the negative mass on $(0,\log2)$ may be of order $A_n$ and so may the positive mass, leaving
-another marginality. If so, the matter closes quickly and with a witness, which is the standard
-adopted throughout.
+another marginality.
 
 \subsection{The cushion in the stronger fixed-ratio route}\label{sec:cushion}
 
@@ -3269,14 +3431,20 @@ Under the Riemann Hypothesis,
 \]
 whereas the sufficient condition \eqref{eq:frontier} requires only $\lambda_n/A_n>\tfrac14$, and
 the fixed-ratio variant of Theorem~\ref{thm:scalefree} only $\lambda_n/A_n\ge c$ for some fixed
-$c>\tfrac14$ --- for instance $c=501/2002=0.250250\ldots$ at the declared cutoff floor. Either
+$c>\tfrac14$ --- for instance $c=501/2002=0.2502497\ldots$ at the declared cutoff floor. Either
 way the route carries a cushion of a factor four against the truth and needs no sharp constant.
 \end{proposition}
+
+\begin{proof}
+Under RH, $\lambda_n-A_n=\lambda_n^{\mathrm{prime}}=O(\sqrt n\log n)$ by \cite{Lagarias2007} and
+Remark~\ref{rmk:erratum}, while $A_n\sim\tfrac12n\log n$.
+\end{proof}
 
 Proposition~\ref{prop:cushion} locates the difficulty of the proportional route. It does not say
 that a proportional lower bound is necessary: Theorem~\ref{thm:density-block} permits a merely
 subexponential lower bound on sparse blocks. Absolute envelopes still fail for the fixed-ratio route:
-an estimate that loses $\exp\bigl(\tfrac23n\log n\bigr)$, as in Definition~\ref{def:load}, is not
+an estimate that loses a superpolynomial factor, as the heuristic \eqref{eq:load} suggests and as
+the size $n(n-1)^n$ of the separately bounded term in \S\ref{sec:selberg} shows, is not
 ``a bit too lossy'' for a target with a factor-four cushion --- it is off by a superpolynomial
 factor, and no amount of cushion helps.
 
@@ -3294,6 +3462,9 @@ $\mathcal I$. The no-go asserts:
 no derivation of the target using only the inputs in $\mathcal I$ can succeed, because there exists
 an object satisfying every element of $\mathcal I$ for which the target fails.
 \end{quote}
+For the mechanisms closed by a structural observation rather than a witness (see
+Table~\ref{tab:census}), the no-go asserts only that the declared inputs do not determine the
+sign of the target.
 It does \emph{not} assert that the target is false, nor that no derivation exists, nor that some
 other mechanism using $\mathcal I$ plus additional arithmetic information must fail. In particular,
 not one of the sixteen excludes:
@@ -3314,26 +3485,26 @@ not one of the sixteen excludes:
 
 \subsection{Retractions and corrections carried by this paper}
 
-We list the corrections applied in the course of this work, because an audit trail that hides its
-own repairs is not an audit trail.
+The following statements, made in earlier versions of this work, are corrected here.
 \begin{itemize}[leftmargin=*]
 \item \emph{The sign of the incomplete Li block.} See Remark~\ref{rmk:erratum}. The corrected
       unconditional form is $\lambda_n=A_n+\lambda_n(\sqrt n)+O(\sqrt n\log n)$. Every corollary
       resting on an unconditional bound for $A_n-\lambda_n-\lambda_n(\sqrt n)$ is withdrawn,
-      including a finite-range corollary derived from an effective constant. Making that constant
-      effective is not an outstanding technical task: the asserted estimate itself had the wrong
-      sign. The contour proof additionally requires repairing the horizontal segment, whose printed
-      geometric ratio is $e/2>1$; taking $T=2\sqrt n+\eps_n$ gives ratio $e^{1/4}/2<1$ via
+      including a finite-range corollary derived from an effective constant. In the earlier version the formula was imported with the
+      sign of the incomplete block inverted, and the bound used is not known unconditionally. The contour proof additionally requires repairing the horizontal segment, whose geometric ratio, in the argument as given in the earlier version of this work, is $e/2>1$; taking $T=2\sqrt n+\eps_n$, with $0\le\eps_n\le1$ chosen so that no zero ordinate lies on the segment, gives ratio $e^{1/4}/2<1$ via
       $G_n(s+1)/G_n(s)=(1-1/(s+1)^2)^n$, after which one returns to $\sqrt n$ at cost
       $O(\sqrt n\log n)$.
 \item \emph{A claimed free relaxation from lowering $\theta$.} Withdrawn: by
-      Theorem~\ref{thm:theta} the transport is signed and the net bracket
-      $-2\theta A_n\le\mathcal N_n(\theta)\le\tfrac12A_n$ has indeterminate sign. There is no
-      discount.
+      \eqref{eq:transport} the transport $\Delta_{n,\theta}$ is signed and its sign is not
+      determined by the estimates of \S\ref{sec:a0}. There is no discount.
 \item \emph{A claimed equivalence between $(\star)$ and an upper bound for
       $\lambda_n(\sqrt n)$ ``with the same implied constant both ways''.} Withdrawn: the
       $O(\cdot)$ hides exactly the required sign. The correct statements are one sufficient and one
-      necessary condition with an explicit gap of $2\theta A_n+2C_*\sqrt n\log n$.
+      necessary condition with an explicit gap: by \eqref{eq:abel-coord}, if
+      $|\widetilde\eps_n|\le C_*\sqrt n\log n$ (with $C_*$ as in Problem~\ref{prob:effective}) and
+      $|R_n|\le\theta A_n$, then $-\lambda_n(\sqrt n)\le(1-2\theta)A_n-C_*\sqrt n\log n$ is
+      sufficient and $-\lambda_n(\sqrt n)\le A_n+C_*\sqrt n\log n$ is necessary for
+      $(\star_\theta)$; the two differ by $2\theta A_n+2C_*\sqrt n\log n$.
 \item \emph{A claimed derivation of $(\star)$ from $\lambda_n>0$.} Withdrawn: the exact
       condition is $\lambda_n\ge\tfrac14A_n+R_n(T_n)$. Li positivity alone is not enough; see the
       second registered trap below.
@@ -3341,27 +3512,18 @@ own repairs is not an audit trail.
       They are the same coarse datum, obtained by replacing the actual cutoff with its validity
       floor $T\ge1000$.  Admissibility is upward closed.  Thus $D_n^{[4]}>0$ permits an adapted
       finite cutoff proving $(\star)$, while $D_n^{[4]}\ge0$ for all large $n$ proves RH directly.
-      The fixed-floor threshold remains a valid sufficient condition and a valid historical audit
-      of the transfers tested against it.
-\item \emph{Two editions of the range formula.} The published version of \cite{Lagarias2007}
-      (Ann.\ Inst.\ Fourier \textbf{57} (2007), 1689, p.~1694) prints
-      $n\le T^2/2(\log T)^2$; the arXiv source prints $T^2/4(\log T)^2$. At $T=3\times10^{12}$
-      these are $\approx5.5\times10^{21}$ and $\approx2.7\times10^{21}$. We register the editorial
-      discrepancy and do not dismiss the larger range; determining why the smaller is stated
-      remains open.
-\item \emph{A numerical table without a stability guard.} Withdrawn and replaced: agreement between
-      two Cauchy radii is necessary but not sufficient, since both radii share the same zeta
-      evaluation, transform length and floating-point format, so a common systematic error is
-      invisible. Rows are reported as ``stable between two radii'', never as ``a reliable range''.
+      The fixed-floor threshold remains a valid sufficient condition.
 \end{itemize}
 
 \subsection{Two registered traps}
 
 \begin{enumerate}[label=\textup{(T\arabic*)},leftmargin=*]
-\item There is no unconditional bound
-      $\bigl|A_n-\lambda_n-\lambda_n(\sqrt n)\bigr|\ll\sqrt n\log n$. The small remainder has the
-      opposite sign, $A_n-\lambda_n+\lambda_n(\sqrt n)$, and using the old remainder as small
-      injects exactly $\RH$-strength content.
+\item No unconditional bound
+      $\bigl|A_n-\lambda_n-\lambda_n(\sqrt n)\bigr|\ll\sqrt n\log n$ is known. The remainder that
+      is unconditionally small has the opposite sign, $\widetilde\eps_n=A_n-\lambda_n+\lambda_n(\sqrt n)$,
+      and $A_n-\lambda_n-\lambda_n(\sqrt n)=\widetilde\eps_n-2\lambda_n(\sqrt n)$. Such a bound is
+      therefore equivalent to $\lambda_n(\sqrt n)=O(\sqrt n\log n)$, which holds under $\RH$;
+      treating the quantity as small imports $\RH$-strength content.
 \item For $(\star)$ it does not suffice that $\lambda_n>0$. The exact condition is
       $\lambda_n\ge\tfrac14A_n+R_n(T_n)$. Under the crude form of the tail estimate the strong margin
       $2\lambda_n-A_n\ge0$ was sufficient but never necessary; retaining the factor of
@@ -3404,21 +3566,20 @@ declared fixed $r<4$) along $u=c\eps$.
 \begin{problem}\label{prob:effective}
 Make the remainder constant $C_*$ in $\widetilde\eps_n=O(\sqrt n\log n)$ effective for $\zeta$;
 the implied constants in \cite{Lagarias2007} depend on the automorphic datum and are not effective
-as stated.
+as stated.  No statement of this paper depends on the value of $C_*$.
 \end{problem}
 
 Problem~\ref{prob:nonalign} is an optional stronger route. Problems~\ref{prob:main},
 \ref{prob:a1-cofinal} and \ref{prob:nonalign} are of the strength of the Riemann Hypothesis;
 Problems~\ref{prob:global-sum} and \ref{prob:mass} are concrete possible arithmetic inputs;
-Problem~\ref{prob:effective} is bookkeeping that was deliberately deferred.
+Problem~\ref{prob:effective} is an effectivity question that the results of this paper do not need.
 
 %% ======================================================================
 \section{Reproducibility}\label{sec:repro}
 %% ======================================================================
 
 Every sign decision quoted as a certificate in this paper is exact. We record here which
-statements were verified mechanically and in what arithmetic, so that a reader can reconstruct the
-audit rather than trust it.
+statements were verified mechanically and in what arithmetic, so that a reader can check them.
 
 \begin{itemize}[leftmargin=*]
 \item \emph{Rational arithmetic, no floating point.} The cumulative sign changes
@@ -3443,23 +3604,30 @@ audit rather than trust it.
       Remarks~\ref{rmk:diag-cubic} and \ref{rmk:diag-global}. Both compare two radii; both share the
       same zeta evaluation, transform length and floating-point format, so their agreement is
       necessary but not sufficient, and a common systematic error would be invisible. Neither is
-      used in the proof of anything, and rows are described as stable between two radii, never as a
+      used in the proof of anything; a row is treated as directional evidence only if the two radii agree to within one per
+      cent of the quantity (the rows of Remark~\ref{rmk:diag-global} do; those of
+      Remark~\ref{rmk:diag-cubic} do not and are reported as a failure), and such rows are described as stable between two radii, never as a
       reliable range. For non-integer exponents the probe uses pointwise principal logarithms rather
       than an unwound analytic branch, so its non-integer rows are exploratory and are not cited as
       evidence anywhere in this paper.
 \end{itemize}
 
-\begin{remark}[the numerical trap that the guard was installed to catch]\label{rmk:guard}
-At one index the two-radius disagreement was $1.1\times10^{2}$ while the quantity being certified
-was $17.3$. Without an automatic discard rule --- reject a row unless the two-radius disagreement is
-below one per cent of the quantity --- the table would have appeared to confirm a theorem on a row
-with no content. This is the reason for the wording of Convention~\ref{conv:standard}.
+\begin{remark}[the discard rule]\label{rmk:guard}
+A double-precision row is discarded unless the disagreement between the two radii is below one per
+cent of the quantity extracted. Agreement between two radii is necessary but not sufficient, since
+both radii share the same zeta evaluation, transform length and floating-point format; this is the
+reason for the wording of Convention~\ref{conv:standard}.
 \end{remark}
 
-\begin{remark}[the diagnostic for the cubic margin]\label{rmk:diag-cubic}
-For $\eps=0.1$, $c=\tfrac12$, a double-precision extraction of the normalized cubic cocycle gave
-$h^{[3]}_{n-1,\eps,c}<0$ for $1\le n\le1201$, the largest observed value in the target range
-$150\le n\le1201$ being approximately $-390.1$ at $n=150$. This is evidence, not a certificate.
+\begin{remark}[a failed diagnostic for the cubic margin]\label{rmk:diag-cubic}
+For $\eps=0.1$, $c=\tfrac12$ a double-precision two-radius extraction (radii $0.97$, $0.965$) of
+the normalized cubic cocycle returns the largest value $h^{[3]}_{149,\eps,c}\approx-390.1$ on
+$149\le n\le1201$, where $h^{[r]}_{n,\eps,c}$ is the coefficient of $z^n$ in
+$\bigl(Y_r(s_\eps(z)-u)/Y_r(s_\eps(z))-1\bigr)/\bigl(u(1-z)^2\bigr)$, with
+$Y_r(s)=\xi(s)^r/(s\pi^{-s/2}\Gamma(s/2))$, $s_\eps$ as in \eqref{eq:shift}
+and $u=c\eps$; its coefficient $n-1$ tends to $-(r\lambda_n-A_n)$ as $\eps\downarrow0$. The disagreement between the two radii, however, reaches $3.5\times10^{5}$ on
+this range, so by the discard rule of Remark~\ref{rmk:guard} these rows carry no information on
+the sign. The script is \texttt{scripts/cubic\_cocycle\_probe.py}.
 \end{remark}
 
 %% ======================================================================
@@ -3467,7 +3635,8 @@ $150\le n\le1201$ being approximately $-390.1$ at $n=150$. This is evidence, not
 %% ======================================================================
 
 The result of this work, stated without decoration, has two layers.  The first is a catalogue of
-sixteen failed transfers, each closed by an explicit witness.  The second is a correction to the
+sixteen failed transfers, each closed by an explicit obstruction (for most of them an exact
+witness; the others are structural observations).  The second is a correction to the
 interpretation originally placed on that catalogue.  The descent from $2$ through $3$ to
 $2002/501$ concerned a uniform sufficient transfer at the coarse floor $T=1000$; it was not the
 intrinsic frontier.  Because cutoffs are upward closed, strict quartic positivity realizes the
@@ -3475,9 +3644,10 @@ compact certificate at adapted cutoffs, and non-strict quartic positivity alread
 directly.  Thus the paper's valid negative result concerns the listed transfer mechanisms, not
 semidefiniteness as a universal proof category.  What the title names survives that correction on
 different ground, stated as Proposition~\ref{prop:thesis}: the object whose nonnegativity is at
-stake is provably not a positive object, the defect is a fixed proportion rather than a small
-perturbation, and what remains is a signed cancellation between two divergent blocks with a
-proportional margin.
+stake is provably not a positive object: its polar factor carries a negative first variation,
+bounded away from zero, at $x_0=\tfrac12\log2$. What remains is a signed cancellation between two
+divergent blocks of the same order, and a strictly positive (not necessarily proportional) margin suffices for $(\star)$ by
+Theorem~\ref{thm:four}.
 
 We do not think this reflects badly on the mechanisms, and we would build several of them again.
 The order kernel identity of Theorem~\ref{thm:max-energy}, the tower differences of
@@ -3486,10 +3656,10 @@ Theorem~\ref{thm:polar-1F1}, the Stein--Mecke recurrence of Theorem~\ref{thm:ste
 Fej\'er coefficient identity of \eqref{eq:fejer-coeff} are exact, and they are the kind of object
 that survives its own no-go. What we do think is that the discipline which produced them --- state
 the axioms first, build the falsifier to satisfy exactly those axioms, and accept the witness when
-it arrives --- is the reason the sixteen deaths can now be read as one theorem rather than as
-sixteen disappointments.
+it arrives --- is what lets the sixteen no-gos be organized by the classification of
+\S\ref{sec:synthesis}, each relative to its declared inputs.
 
-The quantifier audit then weakens the live task in a different direction.  Failure of RH forces
+The quantifier analysis of \S\ref{sec:successor} weakens the live task in a different direction.  Failure of RH forces
 exponentially negative Li coefficients on a syndetic set.  It is therefore enough to prove a
 subexponential lower bound on arbitrarily long consecutive blocks, or the bounded Fermi limit
 \eqref{eq:fermi-bound}.  Equation \eqref{eq:fermi-arith} keeps pole, Gamma, primes and prime powers
@@ -3497,55 +3667,21 @@ coupled and states the density-relaxed arithmetic front exactly.  We do not esti
 The exponential partition $\mathcal Z_t$ remains an algebraically simple but stronger auxiliary:
 its $O(\log X)$ bound already implies the pointwise estimate \eqref{eq:partition-pointwise}.
 Between the Fermi identity and its vanishing limit still lies the Riemann Hypothesis; this paper
-supplies a narrower target and an audit trail, not its proof.
+supplies a narrower target, not its proof.
 
 %% ======================================================================
 \section{Source material and supporting computations}\label{sec:availability}
 %% ======================================================================
 
-The investigation from which this paper is drawn --- the full derivations, the verification scripts
-in exact rational arithmetic, the numerical diagnostics with their stability guards, and the
-complete record of the mechanisms catalogued above, including the ones whose deaths are only
-summarized here --- is maintained in the public repository
-\begin{center}
-\url{https://github.com/dtrejopizzo/riemann}
-\end{center}
-A reader who wishes to reconstruct rather than trust the audit will find the underlying material in
-three places within it.
-
-\emph{The reduction of the criterion.} The identification of Li--Keiper positivity with the
-localized Weil form, the completed autocorrelation of Theorem~\ref{thm:weil-a1}, the whitened
-arithmetic jet and the numerical facts about $\lambda_{\max}(S\mathcal P_\Lambda S)$ quoted in
-\S\ref{sec:no-operator-gap}, and the gapless quaternionic polarization referred to in
-\S\ref{sec:fixed-family}, are developed in \texttt{03-research/phase-102-omega7-closure-campaign}.
-
-\emph{The direct route and its finite certificates.} The compact--tail identity
-\eqref{eq:CnT}, the unconditional tail estimate of Theorem~\ref{thm:a0} in its original form, the
-rational certificates for the finitely many indices below the target range, the collective
-order-kernel identity behind \S\ref{sec:m1-local}, the earlier non-local and Sturm--Liouville
-closures referred to in \S\S\ref{sec:m3} and \ref{sec:selberg}, and the absolute-load estimate
-\eqref{eq:load}, are in \texttt{03-research/phase-103-direct-a1-closure}.
-
-\emph{The sixteen mechanisms of this paper, and their successors.} Every entry of
-Table~\ref{tab:census}, with its declared inputs, its exact identities, its witness, and its
-mechanical verifier, together with the margin ladder of \S\ref{sec:ladder}, the cutoff audit of
-Remark~\ref{rmk:1000}, the sign correction of Remark~\ref{rmk:erratum} and the bibliographic
-audit of \S\ref{sec:biblio}, is in
-\texttt{03-research/phase-104-unconditional-a1-closure}. That directory also records the further
-mechanisms closed after the sixteen catalogued here --- among them the connected-cumulant
-classification, which shows that every additive polynomial identity in the joint moments of
-several prime towers collapses to single-tower cumulants, and the Gibbs/Chernoff gate, which
-fails because all nontrivial exponential moments of the unit-Palm defect diverge. Neither is
-needed for the results of this paper, and both sharpen the conclusion of \S\ref{sec:successor}
-that the surviving front is non-additive and non-exponential. The verification scripts live in the
-\texttt{tools} subdirectory of that directory; those that decide a sign use Python's
-\texttt{Fraction} arithmetic exclusively, and the two that do not are named as diagnostics in their
-own headers.
-
-No document in that repository may be cited as a proof of the Riemann Hypothesis, and none of them
-claims to be.
+The scripts that check the exact identities and rational witnesses listed in \S\ref{sec:repro}
+are in the \texttt{scripts/} subfolder of this paper. Those that decide a sign use exact rational
+arithmetic (Python \texttt{Fraction}). The two double-precision diagnostics are marked as such in
+their headers. The items of \S\ref{sec:repro} are checked, in order, by \texttt{scripts/\allowbreak m1\_\allowbreak cumulative\_\allowbreak sign\_\allowbreak certificate.py}, \texttt{scripts/\allowbreak m1\_\allowbreak global\_\allowbreak hessian\_\allowbreak check.py}, \texttt{scripts/\allowbreak global\_\allowbreak compound\_\allowbreak poisson\_\allowbreak tp\_\allowbreak check.py}, \texttt{scripts/\allowbreak local\_\allowbreak tower\_\allowbreak square\_\allowbreak check.py}, \texttt{scripts/\allowbreak near\_\allowbreak quartic\_\allowbreak margin\_\allowbreak check.py}, \texttt{scripts/\allowbreak fejer\_\allowbreak caratheodory\_\allowbreak gate\_\allowbreak check.py}, \texttt{scripts/\allowbreak quartic\_\allowbreak square\_\allowbreak stop\_\allowbreak gate\_\allowbreak check.py}, \texttt{scripts/\allowbreak incomplete\_\allowbreak abel\_\allowbreak stop\_\allowbreak gate\_\allowbreak check.py} and \texttt{scripts/\allowbreak three\_\allowbreak channel\_\allowbreak cocycle\_\allowbreak check.py}. No script is used as a proof of the Riemann Hypothesis.
 
 \begin{thebibliography}{99}
+
+\bibitem{Paper36} D.~A.~Trejo Pizzo, \emph{The Riemann Hypothesis: An Obstruction Ledger and an Arithmetic
+Pick Reformulation}, Paper~36 of this series.
 
 %% --- Foundational and classical ---
 \bibitem{Riemann} B.~Riemann, \emph{\"Uber die Anzahl der Primzahlen unter einer gegebenen
@@ -3606,8 +3742,8 @@ Riemann zeta function}, Selecta Math.\ (N.S.) \textbf{5} (1999), no.~1, 29--106.
 arXiv:math/9811068.
 \bibitem{ConnesConsani2021} A.~Connes and C.~Consani, \emph{Weil positivity and trace formula: the
 archimedean place}, Selecta Math.\ (N.S.) \textbf{27} (2021), no.~4, art.~77. arXiv:2006.13771.
-\bibitem{ConnesConsaniRR} A.~Connes and C.~Consani, \emph{Riemann--Roch for $\Spec\Z$}, C.~R.\
-Math.\ Acad.\ Sci.\ Paris \textbf{362} (2024), 1727--1732. arXiv:2306.00456.
+\bibitem{ConnesConsaniRR} A.~Connes and C.~Consani, \emph{Riemann--Roch for $\overline{\Spec\Z}$}, Bull.\ Sci.\
+Math.\ \textbf{187} (2023), art.~103293. arXiv:2205.01391.
 \bibitem{Burnol} J.-F.~Burnol, \emph{Sur les formules explicites.~I: analyse invariante}, C.~R.\
 Acad.\ Sci.\ Paris S\'er.\ I Math.\ \textbf{331} (2000), no.~6, 423--428.
 \bibitem{Suzuki2025} M.~Suzuki, \emph{On the Hilbert space derived from the Weil distribution},
