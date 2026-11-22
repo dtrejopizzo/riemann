@@ -1,23 +1,33 @@
 # Paper 42 — An Arithmetic Lefschetz Programme over Z: A Metrized Bivariant Correspondence Square, its Determinant Pairing and its Corner Trace
 
-The paper develops an arithmetic Lefschetz programme over Z organized by four requirements: a common correspondence source, integral primitive contacts, a global Lefschetz trace comparison, and a global Hodge sign. None of the four complete rows is claimed closed. The construction repairs local bimodules and coherent gauge changes, builds semilocal relative test algebras with faithful coefficients, constructs integral contacts for 2, 4, 3, 6, and supplies induced normal boundary representations with Fourier-normalized relative traces, a finite-zero source filtration and an attaching transgression on integrable domains. The existing T = log 2 endpoint certificate is retained with its finite scope. A corrective section and archived notes specify which earlier closure claims are superseded.
+## What the paper studies
 
-## Main results
+Weil's proof of the Riemann Hypothesis for curves over F_q uses four ingredients: (a) the surface C×C, (b) the Frobenius correspondences, (c) the identity Γ_n·Δ = N_n between intersection numbers and point counts, and (d) the Hodge index theorem. The paper asks what each of these would be over Z, inside the framework of Connes and Consani (arithmetic site, scaling site, Riemann–Roch strategy), and builds candidate local objects for each. None of the four requirements is established over Z, and nothing in the paper proves or implies the Riemann Hypothesis. A standing rule (Section 1.4) is that no definition may use the zeros of ξ or the sign of the Weil form.
 
-- `prop:sphericalnoncollapse`, divisor tensor law and principal descent, external classes and effectivity — PROVED.
-- Bare symmetrization is blind to the zeros; raw spherical Künneth obstruction — NO-GO.
-- Separation of the mixed code; `thm:cotangentKunneth`; universal framed linear envelope; `prop:nuclearDirichlet`; continuous normalized code determinant; internal periodic sections and Künneth; regular section-moduli cotangent; categorical gluing — PROVED.
-- T = log 2 endpoint certificate — NUMERICAL (interval-arithmetic certificate), finite scope only.
-- Common-source mixed Riemann–Roch, global trace localization and the global sign — OPEN.
-- Earlier claims of full closure of rows A–C — superseded by the corrected status table.
+## What is proved
+
+- Proposition 1.1: the symmetrized logarithmic derivative ζ'/ζ(s)+ζ'/ζ(1−s) is an elementary Gamma function; functionals built from it cannot see the zeros.
+- Section 2: a metrized spherical correspondence square with noncollapse (Proposition 2.2), cotangent Künneth (Theorem 2.9), nuclear Dirichlet coefficients (Proposition 2.11) and a continuous code determinant, which is a degree-matching normalization with no arithmetic content beyond deg D·deg E. Theorem 2.23 constructs the components of the requirement-(a) structure; the identification with a common correspondence source and the global comparisons are not established.
+- Sections 3–6: the corner pairing and its Mellin descent. Theorem 4.15: the descent identity holds for the c_g-weighted combination of divisors, not for plain differences. Theorems 4.6 and 4.11 concern the unregularized unit-shell integrals; with the principal value of the semilocal trace formula no divergent constant arises. The signed-kernel principal value is π cot(πs/2); the archimedean Weil term is log π − ½ψ(s/2) − ½ψ((1−s)/2). Theorem 6.2: with the regularized local function Φ fixed by convention (signed-kernel archimedean term π cot(πs/2), not the archimedean term of the explicit formula, for which Φ ≡ 0), Φ is strictly decreasing on (0,1), so the pairing does not descend to Pic; on c_g-weighted mass-zero combinations it is a linear functional and no radical is defined.
+- Sections 7–8: integral contact complexes [Z → Z] of torsion degree log Φ_n(1) = Λ(n), and a faithful multiplicative family of decorated objects carrying them (Theorems 7.2, 7.4, Corollary 7.5). Theorem 7.8 and Corollary 8.5 match the coefficients of Meyer's nuclear explicit-formula trace with these degrees (after the central substitution). These objects are not shown to be cohomological correspondences, and no intersection product on an arithmetic square is constructed.
+- Section 9 (the sign requirement (d)): Theorem 9.1 (infinite-rank contact excludes a finite-rank geometric route); Propositions 9.4 and 9.6 (norm-indexed Hankel positivity separates ζ from Davenport–Heilbronn but is not invariant under passing to places; for Dedekind zeta functions the sign statement is GRH); Theorem 9.25 (a canonical, not unique, positive-reference/positive-load factorization of the localized primitive operator); Theorem 9.37 (exactness of the threshold step); Proposition 9.40 and Corollary 9.41 (no scalar norm comparison of the two terms can give positivity for large T, since the localized operator is not nonnegative on all of L²(I_T); positivity on P_T must use the primitive constraint); Theorem 9.63 (threshold condition reduced to a unit output-capacity bound, for a strict contraction); Theorem 9.64 (regularized one-step criterion); Theorem 9.54 (every connected leakage cluster lies in one reciprocal half-integer band, hull length at most (3/2) log(3/2)); Lemma 9.52 (Gamma–Tate estimate for each connected leakage cluster).
+- Theorem 9.18 and Corollary 9.20 (computer-assisted): the localized primitive Weil operator is strictly positive on P_T for every 0 < T ≤ log 2, by an interval-arithmetic computation recorded in `certificates/row_d_log2`. Positivity of the truncated operator is not shown directly; it rests on a positive Gamma-tail capacity bound. Positivity for small T is due to Yoshida. The endpoint T = ½ log 5 is not proved.
+
+## Conditional, heuristic and numerical statements
+
+- Corollary 9.60: the conjectured uniform Schur angle bound (Conjecture 9.58) implies the source estimate; together with nonnegativity of the regularized threshold Schur complements at every threshold it would give the primitive inequality for all T. Both hypotheses are open. The transfer comparison of Problem 9.65 is open; floating-point computations not in the companion (Remark 9.66) indicate that its constant is below 1 for the three identifications tested.
+- Theorem 9.14 and Problem 9.15: a subquadratic growth criterion; without an independent construction it is equivalent in strength to the primitive inequality.
+- Remark 9.43: of three possible routes to the primitive sign, one is excluded by Theorem 9.1; the other two are not constructed.
+- The remark in Section 1.2 on the Deninger–Morishita map is heuristic.
+- Section 10 summarizes further local constructions, announced with sketched arguments (no complete proof here or elsewhere, not counted among the results), (rapid crossed products, the integral deformation F_n, normalized local distributions, induced boundary operators, smooth diagonals, relative determinants, local bimodules and gauge changes, semilocal relative test algebras); no other section depends on it. Section 10.17 lists what remains open for each requirement.
+
+## Known and new
+
+Weil's proof, the Connes–Consani framework, Meyer's spectral realization, the Connes–Consani–Moscovici semilocal chain and Yoshida's small-window positivity are known and are cited. The constructions, the descent computation, the factorization and threshold criteria, the scalar-route limits and the interval certificate at T = log 2 are new here. Pointers to Papers 43–45 (later papers of the series treating requirements (a)–(c)) do not occur in the text; no statement here depends on them. Papers 40 and 41 are described in Section 1.1; nothing is proved from them.
 
 ## Files
 
-- `main.tex` — LaTeX source; `main.pdf` — compiled paper; `main.aux`, `main.log`, `main.out` — build files.
-- `certificates/` — certificate notebook and `row_d_log2/` (verification scripts, manifests and certificate notes for the log 2 and log 3 endpoints).
-- `paper42-notebook/` — earlier versions of the certificate notebook.
-- `updates/` — integrated update texts (`abcd-current.tex`, `a-progress.tex`), build records and annexes `update-01` to `update-03`; see `updates/README.md`.
-
-## Relation to other papers
-
-Superseded in detail by Papers 43–45.
+- `main.tex` — LaTeX source.
+- `arithmetic-lefschetz-programme.pdf` — compiled paper (99 pages).
+- `certificates/arithmetic_lefschetz_certificates.ipynb` — executable companion notebook (exact finite arithmetic, finite models, floating-point cells and stored interval data).
+- `certificates/row_d_log2/` — the certificates cited for Theorem 9.18 (the certified operator is the localized operator plus 1000 times a rank-two Tate-moment form vanishing on P_T): `114_d_77_LOG3_LEGENDRE_ARB_ENDPOINT_CERTIFICATE.md`, `114_d_85_LOG2_FULL_SPACE_ENDPOINT_CERTIFICATE.md`, `114_d_85_log2_full_space_manifest.json`, and the verifier scripts `114_d_85_two_level_endpoint_budget_verify.py` (standard library), `114_d_84_log2_degree23_projected_gap_arb_verify.py`, `114_d_85_fixed_vector_analytic_verify.py`, `114_d_85_capacity_arb_prototype.py`, `114_d_77_log3_legendre_arb_verify.py`, `114_d_79_stable_projected_tangency_verify.py` (these need `python-flint`), and `README.md` describing the two verification tiers.

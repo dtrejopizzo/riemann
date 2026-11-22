@@ -6,7 +6,7 @@ This directory backs Theorem *Certified primitive initial interval*
 primitive operator on `P_T` for every `0 < T ≤ log 2`.
 
 These are **endpoint theorems**. They do not claim that row (d) is globally closed.
-The global statement remains open; see the closure ledger in `main.tex`.
+The global statement remains open; see `main.tex`.
 
 ## What is here
 
@@ -64,9 +64,8 @@ D85_GENERIC_BOUNDS=1     PYTHONPATH=<flint> python3 114_d_85_fixed_vector_analyt
                          PYTHONPATH=<flint> python3 114_d_85_capacity_arb_prototype.py
 ```
 
-The `python_flint_path` field in the manifest records `/tmp/d61-flint`, the
-throwaway location used in the original run. Substitute any working
-`python-flint` installation.
+The `python_flint_path` field in the manifest is a local path. Substitute any
+working `python-flint` installation.
 
 Floating point enters only to *select* the fixed vectors `v₁, v₂, v_o` and to
 precondition congruences; every stated inequality is recomputed with Arb balls,
@@ -79,8 +78,8 @@ vector badly can only weaken a bound, never invalidate one.
 python3 -c "
 import json,hashlib,pathlib
 m=json.load(open('114_d_85_log2_full_space_manifest.json'))
-for n,w in m['sha256'].items:
-    g=hashlib.sha256(pathlib.Path(n).read_bytes).hexdigest
+for n,w in m['sha256'].items():
+    g=hashlib.sha256(pathlib.Path(n).read_bytes()).hexdigest()
     print(('OK  ' if g==w else 'FAIL'),n)
 "
 ```
@@ -94,12 +93,9 @@ All five pinned files verify as shipped.
   Galerkin matrix.
 - What is *not* certified here: any statement about `T > log2`, and therefore
   row (d), condition G, or the Riemann Hypothesis.
-- The endpoint `T = ½log5` is **not** claimed. An earlier version of that
-  calculation was invalid; `main.tex` records the retraction and the reason (the
-  five-column Gram was formed after eliminating two finite safe blocks, so it did
-  not control the complement of the whole space). The surviving pieces of that
-  computation remain rigorous as separate statements but do not prove positivity
-  at that endpoint.
+- The endpoint `T = ½log5` is **not** claimed. A five-column Gram matrix formed
+  after eliminating two finite safe blocks does not control the complement of the
+  whole space, so that computation does not prove positivity at that endpoint.
 - Prior art: that *some* initial window is positive is not new — it is
   Yoshida's Lemma 2, reproved unconditionally in Suzuki. What is new here is the
   quantitative, interval-certified reach to `log 2`, with the margins above.
