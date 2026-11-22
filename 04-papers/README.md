@@ -61,5 +61,5 @@ declared carrier), row D (Paper 46, open), the intersection frame (Paper 47) and
 
 - Papers 01, 27, 29 and 34 are surveys; 36 is a ledger of obstructions with a Pick reformulation of RH; 42 is a programme paper.
 - Papers 43–45 supersede the row constructions of Paper 42. Paper 46 is the single paper of record for row D.
-- Papers 43–46 carry rows A–D in order. The papers on the sign (row D) and on the intersection frame exchanged numbers: in working notes under `../03-research/` and `../05-meta-and-planning/` written before the exchange, "Paper 47" is the paper on the sign (now 46) and "Paper 46" is the intersection frame (now 47).
+- Papers 43–46 carry rows A–D in order. The papers on the sign (row D) and on the intersection frame exchanged numbers, and the working notes under `../03-research/` and `../05-meta-and-planning/` use the current ones. A few file names of notes still contain `P47` or `PAPER47`; they refer to the paper on the sign (Paper 46). Files that were being edited at the time of the exchange and scripts were left as they were.
 - The earlier version of this index, with dependencies and the publication flow, is in `../05-meta-and-planning/archive-top-level/04-papers-README.md`.
