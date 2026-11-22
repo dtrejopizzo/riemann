@@ -54,7 +54,7 @@ hypothesis.
 | [45](04-papers/45-row-c-explicit-formula/) | An Explicit Formula for the Trace on Semilocal Idele Class Groups | Row C. |
 | [46](04-papers/46-intersection-frame-defect/) | An Intersection Frame for the Explicit Formula: Hodge-Index Transfer, a Frame Defect Theorem and a Function-Field Model | Structural theorems on the extended Weil form; no sign claimed. |
 | [47](04-papers/47-row-d-dual-certificates/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D. |
-| [48](04-papers/48-row-d-route-map/) | A Map of the Routes to Weil Positivity on Finite Windows: Barriers, Falsifiers, and the Open Inequality | Reference map of the routes attempted for the sign, with barrier theorems and falsifiers. |
+| [48](04-papers/48-row-d-route-map/) | Routes to Weil positivity on finite intervals: a cartography of attempts, barriers and open problems | Survey of the routes attempted toward the sign, in twenty-six families, with the mechanism of failure and the status of each, proved barriers and the map of what is open. |
 
 The full catalogue of papers 01–48 is in [`04-papers/README.md`](04-papers/README.md).
 
