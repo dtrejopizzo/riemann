@@ -43,8 +43,9 @@ and the Global Branch Obstruction}
 
 \begin{document}
 
-\begin{abstract}
-Connes--Consani--Moscovici construct finite self-adjoint operators from
+\maketitle
+
+\begingroup\small\noindent\textsc{Abstract.}\ Connes--Consani--Moscovici construct finite self-adjoint operators from
 principal Fourier restrictions of the semilocal Weil form, after shifting by
 the least Ritz value and quotienting by the resulting radical.  Suzuki
 develops a related continuous localized operator and formulates an expected
@@ -67,16 +68,16 @@ For the scalar second-resolvent trace we prove the characteristic formula
  =\sum_{|k|\le N}(s-2\pi k/L)^{-2}
   -\bigl(\log\mathcal C_N(s)\bigr)'',
 \]
-where \(\mathcal C_N\) is the Cauchy transform of the least Ritz vector.  It
-implies absolute local-uniform summability along a cofinal subsequence at
-every fixed \(L\).  We also prove a uniform Weyl bound and show that
+where \(\mathcal C_N\) is the Cauchy transform of the least Ritz vector.  Using the compact form embedding of CCM it implies absolute local-uniform
+summability along a cofinal subsequence at every fixed \(L\), and a uniform
+Weyl bound; we also show that
 summability of the transported resolvent defect automatically implies
 summability of the two-dimensional shell of new modes.  For consecutive
 cutoffs we isolate one sufficient gap--drop series and exhibit a compact-form
 counterexample showing that abstract Galerkin compactness alone cannot prove
 that series.  We identify the fixed-\(L\) sum with the logarithmic curvature
 of the selected continuum ground transform.  After an explicit exterior
-mesh error \(O_K(L^2/N)\), the global limit is equivalent to
+mesh error \(O_K(L^2/N)\), the global limit in the strip, off the real axis, is equivalent to
 
 \[
  \partial_z^2\log(\widehat\phi_L/\widehat k_L)\longrightarrow0,
@@ -89,8 +90,9 @@ proved equivalent, modulo affine normalization, to transform convergence,
 and a contour formula shows that it carries the complete zero-divisor
 content.  Failure of RH is shown to produce fixed compactly supported
 negative tests in both parity sectors.  Replacing the fixed model by a
-moving co-Poisson radical yields an exact identity retaining primes, prime
-powers, Gamma and pole jointly, and a constrained prolate ladder with
+moving co-Poisson radical yields an exact zero-side identity which, through
+the explicit source form of the paper, retains primes, prime powers, Gamma
+and pole jointly, and a constrained prolate ladder with
 levels \(d_4\) and \(d_8\), \(d_4/d_8\asymp\lambda^{-8}\).
 
 The branch choice is first isolated as a signed source estimate.  On
@@ -149,9 +151,9 @@ identification.  A direct closure of RH requires the all-atom sharp
 Doob--variance inequality above, equivalently the exclusion of spectrum
 below \(1/2\) in the even mean-zero sector of the full Doob operator.  That
 inequality is not proved here, and no conclusion about RH is claimed.
-\end{abstract}
+\par\endgroup
+\bigskip
 
-\maketitle
 \tableofcontents
 
 \section{Introduction and scope}
@@ -177,8 +179,9 @@ There are two limiting operations:
 The first asks whether the finite radical quotients and their arithmetic
 generators form a coherent system.  The second asks whether the resulting
 spectral divisor is the divisor of \(\XiR\).  The purpose of this paper is to
-resolve a substantial part of the first question without conflating it with
-the second.
+give exact identities for the first question and a cofinal (subsequence)
+summability result, without conflating it
+with the second; consecutive summability is left open.
 
 The main conclusions are:
 \begin{enumerate}
@@ -190,8 +193,8 @@ formula;
 subsequence for every fixed \(L\);
 \item the apparent new-mode shell is not an independent summability
 obligation;
-\item consecutive absolute summability requires source regularity not
-provided by abstract compactness;
+\item the gap--drop criterion for consecutive summability is not implied by
+abstract compactness;
 \item logarithmic curvature is an exact relative-divisor observable;
 \item failure of RH is detected by fixed tests in both parity sectors;
 \item a moving co-Poisson vector gives exact coupled
@@ -214,9 +217,11 @@ Doob energy minus one half of an explicit polar variance;
 and the central crossing region are load-bearing at that sharp constant.
 \end{enumerate}
 
-All finite-level statements below are conditional only on the same
-simple-even and nonzero-source-overlap hypotheses needed to define the CCM
-radical quotient in the indicated coordinate.  No location hypothesis on
+All finite-level statements are conditional on the simple-even and
+nonzero-overlap hypotheses needed to define the CCM radical quotient in the
+indicated coordinate; the fixed-\(L\) limit statements of
+Sections~\ref{sec:summability}--\ref{sec:shell} also use the compactness and core properties
+\textup{(C\(_L\))} proved in \cite{CCM}.  No location hypothesis on
 the zeros of \(\zeta\) is used.
 
 \section{Starting point in the CCM--Suzuki operator program}
@@ -239,7 +244,7 @@ an automatic consequence of the finite constructions.
 
 The present paper builds the intermediate analytic layers needed to move in
 that direction.  It first constructs a metric-compatible transport between
-successive CCM quotients, computes its defect and proves fixed-cutoff
+successive CCM quotients, computes its defect and proves cofinal fixed-cutoff
 summability.  It then identifies the outer logarithmic-curvature gate,
 tracks the two branch signs, and keeps primes, prime powers, Gamma and pole
 coupled through the source compensation.  Finally it removes the cutoff
@@ -253,13 +258,15 @@ form that underlies both operator programs.  It therefore separates two
 questions which should not be conflated: convergence of the particular
 finite operators to the zero divisor, and direct positivity of the limiting
 completed Weil form.  The first retains the moving/model identification;
-the second is equivalent to the sharp full-kernel inequality proved below
-to be the sole remaining condition in that coordinate.
+the second is equivalent to the sharp full-kernel inequality of
+Section~\ref{sec:doob-variance}.
 
 \section{Finite Weil data and the canonical connection}
 \label{sec:finite}
 
-Fix \(L>0\), put \(c_L=2\pi/L\), and let
+Fix \(L=2\log\lambda>0\), put \(c_L=2\pi/L\), let
+\(U_k(u)=L^{-1/2}(\lambda u)^{2\pi ik/L}\) on \([\lambda^{-1},\lambda]\) (the basis \(V_k\) of \cite[(3.21)]{CCM}) with the
+measure \(d^*u=du/u\), and let
 \[
  V_N=\operatorname{span}\{U_k:|k|\le N\},
  \qquad D_{0,N}U_k=kU_k.
@@ -272,7 +279,10 @@ restriction property of the finite Weil matrices is
 \tag{3.2}
 \]
 Their entries contain the coupled polar, Gamma and prime-power terms of the
-semilocal Weil form.
+semilocal Weil form.  The matrices \(W_N\) commute with the parity
+\(JU_k=U_{-k}\), since the Weil form is invariant under \(u\mapsto u^{-1}\)
+\cite[Lemma~5.2]{CCM}; hence \(T_N\) and \(S_N\) below preserve the even and
+odd sectors.
 
 Assume that the least eigenvalue is simple, its eigenvector is even, and its
 overlap with
@@ -571,12 +581,12 @@ use cyclicity of the finite trace.
 \end{proof}
 
 There is also an exact Hilbert--Schmidt identity.  Put
-\(H_N(z)=\|G_N(z)\|_{\Schatten_2}^2\).  Then
+\(h_N(z)=\|G_N(z)\|_{\Schatten_2}^2\).  Then
 \[
 \boxed{
 \begin{aligned}
 \|G_{N+1}Q_N^{\rm new}\|_{\Schatten_2}^2
-={}&H_{N+1}-H_N
+={}&h_{N+1}-h_N
 -2\Re\Tr((\mathsf U_NG_N)^*E_N)-\|E_N\|_{\Schatten_2}^2.
 \end{aligned}}
 \tag{6.5}
@@ -712,7 +722,10 @@ For \(j=0,1,2\), the vectors
 belong uniformly to \(\ell^2(\mathbb Z)\) for \(s\in K\).  Equations
 (7.9)--(7.10) imply
 \(\sum_N\|\mathcal C_{N+1}-\mathcal C_N\|_{C^2(K)}<\infty\).
-The limit is nonzero and, by Hurwitz, zero-free off \(\R\).  After finitely
+By (7.9)--(7.10), \((\phi_N)\) is Cauchy in \(\ell^2(\mathbb Z)\) with a
+unit limit \(\phi\); its Cauchy transform is not identically zero, because
+its residues at \(c_Lk\) are the coefficients \(\phi_k\).  By Hurwitz it is
+zero-free off \(\R\).  After finitely
 many indices, \(f\mapsto(\log f)''\) is Lipschitz on this bounded subset of
 \(C^2(K)\).  The two new lattice summands in (7.3) are \(O_K(N^{-2})\).
 Summing proves (7.11).
@@ -720,9 +733,13 @@ Summing proves (7.11).
 
 \subsection{Rate-free cofinal summability}
 
+\textbf{Fact (C\(_L\))} \cite[Prop.~3.3, Prop.~3.4, Thm.~3.6 with Prop.~3.5]{CCM}.
+The semilocal Weil form at cutoff \(L\) is lower bounded and closed, its
+form embedding into \(L^2\) is compact, and \(\bigcup_NV_N\) is a form core.
+
 \begin{theorem}[Fixed-\(L\) cofinal summability]
-Assume that the quotient construction is defined on a cofinal set of
-levels.  There exists a cofinal sequence \(N_j\to\infty\) such that, for
+By \textup{(C\(_L\))}, assume only that the quotient construction is
+defined on a cofinal set of levels.  There exists a cofinal sequence \(N_j\to\infty\) such that, for
 every compact \(K\Subset\C\setminus\R\),
 \[
 \boxed{
@@ -737,8 +754,9 @@ of \(\C\setminus\R\).
 \begin{proof}
 The unit Ritz vectors have uniformly bounded shifted form norm because
 their Rayleigh values decrease to the lower bound of the closed semilocal
-Weil form.  The compact form embedding proved in the CCM construction makes
-them precompact in \(L^2\).  Select coherent phases and a subsequence with
+Weil form (the Fourier span is a form core by \textup{(C\(_L\))}).  The
+compact form embedding of \textup{(C\(_L\))} makes them precompact in
+\(L^2\).  Select coherent phases and a subsequence with
 \[
  \phi_{N_j}\to\phi,\qquad
  \|\phi_{N_j}-\phi\|_2\le2^{-j-2}.
@@ -762,8 +780,8 @@ gives the last assertion.
 \end{proof}
 
 \begin{corollary}[Selected continuum transform]
-The Fourier transform of the continuum ground state selected in the proof
-has no nonreal zero.
+By \textup{(C\(_L\))}, the Fourier transform of the continuum
+ground state selected in the proof has no nonreal zero.
 \end{corollary}
 
 \begin{proof}
@@ -774,10 +792,13 @@ excludes nonreal zeros.
 \end{proof}
 
 \begin{theorem}[Identification of the fixed-\(L\) sum]
-Let \(\phi_L\) be the continuum ground state selected above and write its
-Fourier transform in the CCM normalization as
+By \textup{(C\(_L\))}, the following holds.  Let \(\phi_L\) be the continuum
+ground state selected above, write \(\phi_{L,N}\) for the unit Ritz vector
+at cutoff \(L\), \(\tau_{L,N}=\tau^{\rm q}_{L,N}\) for (7.2) at cutoff
+\(L\), and
 \[
  \widehat\phi_{L,N}(z)
+ =\int_{\lambda^{-1}}^{\lambda}\phi_{L,N}(u)u^{-iz}\,d^*u
  =2L^{-1/2}\sin\left(\frac{Lz}{2}\right)
    \sum_{k=-N}^{N}\frac{(\phi_{L,N})_k}{z-c_Lk}.
 \tag{7.14}
@@ -810,7 +831,7 @@ Taking the limit in
 \label{sec:shell}
 
 \begin{theorem}[Uniform fixed-\(L\) Weyl bound]
-For each \(z\notin\R\),
+By \textup{(C\(_L\))}, for each \(z\notin\R\),
 \[
 \boxed{\sup_N\|G_N(z)\|_{\Schatten_2}^2<\infty.}
 \tag{8.1}
@@ -819,7 +840,7 @@ For each \(z\notin\R\),
 
 \begin{proof}
 Let \(\mathcal K_L\) be the \(L^2\)-closure of the unit Ritz vectors.  The
-compact form embedding makes \(\mathcal K_L\) compact and disjoint from
+compact form embedding of \textup{(C\(_L\))} makes \(\mathcal K_L\) compact and disjoint from
 zero.  Fourier transform is continuous and injective on this set.  Hence
 there exist finitely many points \(w_1,\ldots,w_r\) and \(c>0\) such that
 \[
@@ -876,10 +897,10 @@ of (6.5) and use the uniform bound (8.1).
 Thus the two-series trace-Cauchy package reduces to the single transported
 series (8.5).
 
-\section{Why compactness does not prove consecutive summability}
+\section{Why compactness does not give the gap--drop series}
 \label{sec:counterexample}
 
-CCM's monotone Ritz theorem gives
+The monotone Ritz limit \cite[Prop.~3.4]{CCM} gives
 \[
  \sum_N\Delta_N
  =\eps_{N_0}-\inf\Spec A_L<\infty,
@@ -926,26 +947,30 @@ Therefore
 which proves (9.2).
 \end{proof}
 
-Consequently, consecutive summability must use additional regularity of the
-actual polar--Gamma--Euler ground state.  For example, a source-specific
+Thus (7.10) cannot be obtained from compactness and a positive gap alone.
+(In the model above the vector increments are
+\(\|I_N\phi_N-\phi_{N+1}\|\asymp N^{-3/2}\), so consecutive summability itself
+holds there; the example shows that the bound (7.9) is lossy, not that
+consecutive summability fails.)  Whether consecutive summability holds for the
+actual polar--Gamma--Euler ground state is open; a source-specific
 Ritz estimate
 \[
- \eps_N-\inf\Spec A_L=O(N^{-p}\log N),\qquad p>1,
+ \eps_N-\inf\Spec A_L=O(N^{-p}\log N),\qquad p>2,
 \tag{9.6}
 \]
-together with a limiting positive gap would suffice.  Neither audited source
-proves such a rate.
+together with a limiting positive gap would suffice, since
+\(\Delta_N\le\eps_N-\inf\Spec A_L\).  (A rate \(\Delta_N=O(N^{-p})\) for the
+individual drops with \(p>2\) is the direct condition.)  Neither \cite{CCM}
+nor \cite{Suzuki} proves such a rate.
 
-\section{Reproducible finite-level check}
+\section{Direct check of the finite identities}
 
-The accompanying NumPy-only script
-\texttt{106\_04\_cofinal\_weil\_defect\_probe.py}, retained in the research
-archive, constructs one largest Weil matrix and obtains all lower levels by
-principal compression.  It checks the shifted compression, the rank-two
-formula (4.2), the complete defect (5.8), the metric conjugation (5.10), the
-resolvent identity (6.2), and the shell increment (6.4).  A separate scalar
-script checks (7.3) and the summability bookkeeping.  These calculations are
-diagnostic: floating-point decay is not used in any theorem.
+The finite identities can be checked directly: construct one largest Weil
+matrix and obtain all lower levels by principal compression; then the
+shifted compression, the rank-two formula (4.2), the complete defect (5.8),
+the metric conjugation (5.10), the resolvent identity (6.2), the shell
+increment (6.4) and the characteristic formula (7.3) are finite matrix
+identities.  No theorem of this paper depends on numerical computation.
 
 \section{The remaining global limit}
 \label{sec:global}
@@ -983,7 +1008,7 @@ Thus the desired global statement can be written equivalently as
 There is no additional sign or scale factor.
 
 Let \(k_L\) be the explicit prolate model denoted \(k_\lambda\) by CCM,
-where \(L=2\log\lambda\).  Their model theorem gives
+where \(L=2\log\lambda\).  Their model lemma \cite[Lemma~7.3]{CCM} gives
 \[
  \widehat k_L\longrightarrow\XiR
 \tag{11.5}
@@ -1009,8 +1034,11 @@ fixed-\(L\) cofinal sequences so that, on a compact exhaustion,
 Such a diagonal exists by (7.12).  If the exterior factor is discarded,
 choose it simultaneously so that \(N(L)/L^2\to\infty\); if that factor is
 retained or divided out exactly, no exterior rate is needed.  Under these
-diagonal conditions, the global second-resolvent identification (11.4)
-holds if and only if
+diagonal conditions the following are equivalent:
+\textup{(a)} \(\tau^{\rm full}_{L,N(L)}(z)\to(\xi'/\xi)'(\tfrac12+iz)\)
+locally uniformly on
+\(\Omega_0=\{0<|\Im z|<\tfrac12\}\setminus\XiR^{-1}(0)\);
+\textup{(b)}
 \[
 \boxed{
  \partial_z^2\log
@@ -1018,12 +1046,15 @@ holds if and only if
  \longrightarrow0}
 \tag{11.8}
 \]
-locally uniformly on every simply connected compact set in the open strip
-which avoids the zeros of both transforms.
+locally uniformly on \(\Omega_0\).  Outside the strip no statement is
+made, since \textup{(11.5)} is used.
 \end{theorem}
 
 \begin{proof}
-Choose compatible logarithms on the compact set.  The identity
+On a compact subset of \(\Omega_0\), the second logarithmic derivatives
+are single-valued (both transforms are zero-free there: \(\widehat\phi_L\)
+has only real zeros, and \(\widehat k_L\) is zero-free for large \(L\) by
+\textup{(11.5)} and Hurwitz).  The identity
 \[
 \begin{aligned}
  \partial_z^2\log\widehat\phi_L-\partial_z^2\log\XiR
@@ -1083,8 +1114,8 @@ Indeed, \(|u^{-iz}|=u^{\Im z}\), so (11.12) bounds the numerator in
 uniformly positive away from the zeros of \(\XiR\), and the lemma implies
 (11.8).
 
-In the operator program adopted here, (11.8) and (11.12) are the
-force-bearing global source-identification estimates.  They do not follow
+In this operator program, (11.8) and (11.12) are the global estimates
+that would be needed.  They do not follow
 from fixed-\(L\) compactness, and the present paper does not assume them.
 
 \section{Curvature rigidity and the zero divisor}
@@ -1109,8 +1140,9 @@ locally uniformly if and only if there are \(a_j,b_j\in\C\) such that
 \[
  e^{-a_j-b_jz}\frac{F_j(z)}{G_j(z)}\longrightarrow1
 \]
-locally uniformly.  If \(0\in\Omega\), both functions are even, and
-\(F_j(0)=G_j(0)\ne0\), then \(a_j=b_j=0\).
+locally uniformly.  If
+\(\Omega=-\Omega\ni0\), \(F_j,G_j\) are even and \(F_j(0)=G_j(0)\ne0\), one
+may take \(a_j=b_j=0\).
 \end{theorem}
 
 \begin{proof}
@@ -1132,12 +1164,13 @@ holomorphic near the closure of a Jordan domain \(D\), with no zero on
 \(C=\partial D\), then for every \(z_*\in\C\),
 \[
  \boxed{
- N_F(D)=-\frac1{2\pi i}\int_C(z-z_*)\mathcal K_F(z)\,dz.}
+ N_F(D)=\frac1{2\pi i}\int_C(z-z_*)\mathcal K_F(z)\,dz.}
  \tag{12.1}
 \]
-Indeed, a zero of multiplicity \(m\) contributes
-\(\mathcal K_F(z)=-m(z-a)^{-2}+O(1)\), and the residue in (12.1) is
-\(-m\).
+Indeed, a zero of multiplicity \(m\) at \(a\) contributes
+\(\mathcal K_F(z)=m(z-a)^{-2}+(\text{holomorphic})\), and the residue of
+\((z-z_*)\mathcal K_F\) at \(a\) is \(m\); equivalently, integrate by parts,
+using that \(F'/F\) is single-valued on \(C\).
 
 \begin{theorem}[Divisor rigidity]
 \label{thm:divisor-rigidity}
@@ -1239,19 +1272,24 @@ negative constant for every sufficiently large support window.
 \end{theorem}
 
 \begin{proof}
-Use the centered zero parameter \(s\), so that an off-line quartet is
-\(\{s_0,\bar s_0,-s_0,-\bar s_0\}\), with
-\(\Re s_0\Im s_0\ne0\).  For a real even test with transform \(F\), the
-quartet contributes \(4m\Re F(s_0)^2\); for a real odd test it contributes
-\(-4m\Re F(s_0)^2\).  Thus the target values \(F_+(s_0)=i\) and
-\(F_-(s_0)=1\) make both contributions negative.
+Write an off-line zero as \(\rho_0=\tfrac12+s_0\) with
+\(\Re s_0\Im s_0\ne0\), and pass to the transform variable
+\(z_0=-is_0\), so that \(\Im z_0\ne0\ne\Re z_0\); the off-line quartet is
+\(\{z_0,\bar z_0,-z_0,-\bar z_0\}\), of multiplicity \(m\).  All transforms
+are evaluated at \(z_0\).  For a real even test with transform \(F\) one has
+\(\overline{F(\bar z)}=F(z)=F(-z)\), so the quartet contributes
+\(4m\Re F(z_0)^2\); for a real odd test \(\overline{F(\bar z)}=-F(z)=F(-z)\),
+and it contributes \(-4m\Re F(z_0)^2\).  Thus the target values
+\(F_+(z_0)=i\) and \(F_-(z_0)=1\) make both contributions negative.
 
-Choose a real even Paley--Wiener damping transform \(\Phi\), first fixing
-it and then a finite zero box on whose complement
-\(|\Phi(s)/\Phi(s_0)|\le1/2\).  Delete the full target orbit, with
+Choose a real even Paley--Wiener damping transform \(\Phi\) with
+\(\Phi(z_0)\ne0\), first fixing it and then a finite zero box on whose
+complement \(|\Phi(z)/\Phi(z_0)|\le1/2\).  Delete the full target orbit, with
 multiplicity, and let \(Z_R\) be the real even polynomial annihilating the
-remaining finite divisor.  Since \(\Im(s_0^2)\ne0\), the real-linear map
-\((a,b)\mapsto a+bs_0^2\) is an isomorphism.  Hence one can choose real
+remaining finite divisor; \(Z_R(z_0)\ne0\) because the target orbit was
+deleted.  Since \(\Im(z_0^2)=2\Re z_0\Im z_0\ne0\), the real-linear map
+\((a,b)\mapsto a+bz_0^2\) from \(\R^2\) to \(\mathbb C\) is an
+isomorphism, and \(z_0Z_R(z_0)\Phi(z_0)^N\ne0\).  Hence one can choose real
 coefficients so that
 \[
  F_{N,+}(z)=Z_R(z)(a_N+b_Nz^2)\Phi(z)^N,
@@ -1278,19 +1316,31 @@ This gate is weaker than (13.3), but neither an endpoint normalization nor
 qualitative positivity can control its denominator.
 
 \begin{remark}[Sharpness of both quotients]
-For \(0<\eta<1\), the positivity-improving matrix
+For \(0<\eta<1\), the matrix
 \[
  A_\eta=\begin{pmatrix}-1&-\eta\\-\eta&0\end{pmatrix},
  \qquad q_\eta=\frac{(\eta^2,1)}{\|(\eta^2,1)\|}
 \]
-has a simple strictly positive ground whose eigenvalue tends to \(-1\),
+(whose semigroup \(e^{-tA_\eta}\) is positivity improving) has a simple
+strictly positive ground whose eigenvalue
+\(-\tfrac12(1+\sqrt{1+4\eta^2})=-1-\eta^2+O(\eta^4)\) tends to \(-1\),
 while \(\|A_\eta q_\eta\|\sim\eta\) and its overlap with the ground is also
 asymptotic to \(\eta\).  Thus the quotient in (13.6) does not improve.
 
-Likewise, on \(L^2([-1,1])^{\rm even}\), the two real-rooted transforms
-\(\sin z/z\) and \((\sin(z/2)/(z/2))^2\) can be made respectively the ground
-and a quasimode with Rayleigh excess tending to zero but a gap collapsing at
-the same rate.  Their logarithmic curvatures remain different.  Hence
+Likewise, on \(L^2([-1,1])^{\rm even}\), let \(\phi\) be the normalized
+indicator of \([-1,1]\), with transform proportional to \(\sin z/z\), let
+\(q\) be the normalized triangle \(1-|x|\), with transform proportional to
+\((\sin(z/2)/(z/2))^2\), and put
+\(A_\delta=\delta\sum_{n\ge1}n|e_n\rangle\langle e_n|\), \(\delta>0\), where
+\((e_n)_{n\ge1}\) is an orthonormal basis of \(\phi^\perp\) with \(e_1\)
+proportional to \(q-\langle\phi,q\rangle\phi\).  Then \(A_\delta\) has compact
+resolvent,
+\(\phi\) is the simple ground with eigenvalue \(0\), the gap equals
+\(\delta\), and the Rayleigh excess of \(q\) is
+\(\delta\,|\langle q,e_1\rangle|^2=\delta(1-|\langle q,\phi\rangle|^2)=\delta/4\).  As \(\delta\to0\) the
+excess tends to zero and the gap collapses at the same rate, while the
+curvatures \(\mathcal K\) at the origin of the two real-rooted transforms
+remain different (\(1/3\) and \(1/6\)).  Hence
 compact resolvent, simplicity, real-rootedness and an unscaled quasimode
 estimate cannot replace (13.3).
 \end{remark}
@@ -1328,7 +1378,8 @@ the prime powers are bounded by
  \qquad(1/2<b'<b).
 \]
 
-Choose a smooth cutoff \(\chi_a\), equal to one on \([-a,a]\), and put
+Choose a smooth cutoff \(\chi_a\) supported in \([-a,a]\) and equal to one
+on \([-a+1,a-1]\), and put
 \(v_{j,a}=\chi_aK_j\), \(e_{j,a}=v_{j,a}-K_j\), with
 \(a=\log\lambda\).  The theta-series decay of \(K\) gives
 \[
@@ -1347,6 +1398,9 @@ Therefore, for \(i,j\in\{0,1,2\}\),
  \tag{14.3}
 \]
 
+The Gram matrix of \(v_{0,a},v_{2,a}\) converges to that of \(K,K''\),
+which is nondegenerate, so the Rayleigh quotients on their span are
+bounded by a constant times the right side of (14.3).
 Min--max applied to \(\operatorname{span}\{v_{0,a},v_{2,a}\}\) and
 \(\operatorname{span}\{v_{1,a}\}\) gives unconditional upper bounds of
 this size for the second even and first odd eigenvalues.  Under RH, and
@@ -1356,11 +1410,11 @@ ordinary exponential gap can close (13.3).
 
 The quantitative CCM model estimate has a different and much coarser
 scale.  With \(k_\lambda\) the compact prolate model and \(k\) the full
-kernel, the Meixner estimate and the Gaussian exterior tail give
+kernel, the estimate \cite[(7.8)]{CCM} and the first inequality in the proof of \cite[Lemma~7.3]{CCM} give \(|k_\lambda(u)-k(u)|\le c\lambda^{-1}u^{-1/2}\) on \([\lambda^{-1},\lambda]\), hence \(\|k_\lambda-k\|_{L^2([\lambda^{-1},\lambda],d^*u)}^2=O(\lambda^{-1})\).  Cauchy--Schwarz against
+\(e^{-iz x}\) on the window (with the weight \(W_{L,B}\)) and the Gaussian
+exterior tail of \(k\) give
 \[
  \boxed{
- \|k_\lambda-k\|_2^2=O(\lambda^{-1}),
- \qquad
  \sup_{|\Im z|\le B}|\widehat k_\lambda(z)-\XiR(z)|
  =O_B(\lambda^{B-1/2})}
  \tag{14.4}
@@ -1371,11 +1425,16 @@ This does not control the Weil form.  The Gamma multiplier grows like
 \((2\pi)^{-1}\log|t|\), and hence is unbounded in the \(L^2\) topology.
 The finite prime block satisfies only
 \[
- \left\|\sum_{1<n\le\lambda^2}\Lambda(n)T(n)\right\|
+ \left\|\sum_{1<n\le\lambda^2}\frac{\Lambda(n)}{\sqrt n}
+ \bigl(\tau_{\log n}+\tau_{-\log n}\bigr)\right\|
  \le4C_\psi\lambda,
+ \qquad C_\psi=\sup_{x\ge1}\frac{\psi(x)}x,
  \tag{14.5}
 \]
-which consumes the full squared gain in (14.4).  Although radicality gives
+since the translations are unitary and, by partial summation,
+\(\sum_{n\le X}\Lambda(n)n^{-1/2}
+=\psi(X)X^{-1/2}+\tfrac12\int_1^X\psi(t)t^{-3/2}dt\le2C_\psi\sqrt X\);
+this consumes the full squared gain of the model estimate.  Although radicality gives
 the exact scalar identity
 \[
  QW(k_\lambda,k_\lambda)=QW(k_\lambda-k,k_\lambda-k),
@@ -1427,7 +1486,9 @@ attached to every nontrivial zero.  Let \(P_I\) be restriction to
 
 \begin{theorem}[Moving-radical cancellation]
 \label{thm:moving-radical}
-For every semilocal core vector \(G\) supported in \(I_\lambda\),
+For every vector \(G\) of the smooth core \(\mathcal C=C_c^\infty(I_L)\)
+(in the variable \(x=\log u\), with \(L=2\log\lambda\) and
+\(QW_L=QW_\lambda\)),
 \[
  \boxed{
  QW_\lambda(V_\lambda,G)=-QW(R_\lambda,G),
@@ -1435,7 +1496,17 @@ For every semilocal core vector \(G\) supported in \(I_\lambda\),
  QW_\lambda(V_\lambda,V_\lambda)=QW(R_\lambda,R_\lambda).}
  \tag{15.3}
 \]
-The right sides are absolutely convergent zero-side values.
+Here
+\(QW(R_\lambda,G):=\sum_\rho\mathcal MR_\lambda(\rho-\tfrac12)
+\overline{\mathcal MG(\tfrac12-\bar\rho)}\), and similarly
+\(QW(R_\lambda,R_\lambda)\), are defined by their zero-side series (the
+source-side form of \(R_\lambda\) need not exist, since by (15.5)
+\(R_\lambda(u)\sim-\tfrac12u^{1/2}f(0)\) as \(u\to0\)).  These series
+converge absolutely: \(\mathcal MR_\lambda=-\mathcal MV_\lambda\) at every
+zero, \(V_\lambda\) is of bounded variation with compact support in
+\(\R_+^*\), so \(\mathcal MV_\lambda(\sigma+it)=O_\lambda(1/(1+|t|))\)
+uniformly for \(|\sigma|\le\tfrac12\), and \(N(T)=O(T\log T)\); note that
+\(\tfrac12-\bar\rho=\rho'-\tfrac12\) for the zero \(\rho'=1-\bar\rho\).
 \end{theorem}
 
 \begin{proof}
@@ -1444,19 +1515,21 @@ At every zero, the transform of \(R_\lambda\) is the negative of that of
 formula, first with \(G\), and then in both entries.
 \end{proof}
 
-If \(H=V_\lambda^**G\), Connes' semilocal trace formula
-\cite{Connes2026} rewrites (15.3)
-without separating any source term:
+Write \(QW_\lambda^{\rm src}(V,G)\) for the polarization of the explicit
+source form (19.1), in the additive variable \(x=\log u\), with \(N=\lambda^2\):
+the Gamma multiplier \(2\theta'\), the prime and prime-power terms
+\(w_n\cos(t\log n)\), \(n\le\lambda^2\), and the two polar evaluations,
+kept together.  For core vectors it equals \(QW_\lambda\), and
+(15.3) reads
 \[
 \boxed{
- W_{0,2}(H)+\log(TW)H(1)
- +\Tr\!\left(\vartheta(H)
- (1-P_T^S-\widehat P_W^S)\right)
+ QW_\lambda^{\rm src}(V_\lambda,G)
  =-QW(R_\lambda,G).}
 \tag{15.4}
 \]
 This is the exact joint prime--prime-power--Gamma--pole cancellation used
-below.
+below; no source term is separated.  (Compare the semilocal trace formula of
+\cite{Connes2026}.)
 
 Poisson summation gives, for \(0<u<\lambda^{-1}\),
 \[
@@ -1502,7 +1575,15 @@ where
  \tag{15.7}
 \]
 
-To verify (15.6), put \(q_r=1-\chi_{4r}\).  The constraints in the
+To verify (15.6), put \(q_r=1-\chi_{4r}\).  For fixed even order,
+\(\psi_{4r,\lambda}(0)\) tends to the nonzero value \((2\pi)^{1/4}h_{4r}(0)\)
+of the normalized Hermite function, so
+the change of variables \(c\mapsto x\) below is uniformly bounded with
+bounded inverse; and
+\(\mathfrak A_\lambda(\sum c_r\psi_{4r},\sum c_r\psi_{4r})
+=\sum d_{4r}'|c_r|^2\) with \(d'_{4r}=\|(1-P_\lambda)\widehat\psi_{4r}\|^2
+=d_{4r}\), because both \(\widehat\psi_j\) and
+\(P_\lambda\widehat\psi_j\) are orthogonal families.  The constraints in the
 coordinates \(x_r=\psi_{4r}(0)c_r\) are
 \(\sum x_r=\sum q_rx_r=0\), while
 \(q_r/q_{r+1}=O(\lambda^{-8})\).  The min--max test vectors
@@ -1511,11 +1592,14 @@ coordinates \(x_r=\psi_{4r}(0)c_r\) are
  \quad
  (0,q_2-q_3,q_3-q_1,q_1-q_2)
 \]
-give the matching upper bounds \(q_1,q_2\); the two constraints give the
-corresponding lower bounds.  Since \(d_j\asymp q_j\), (15.6) follows.
+satisfy the constraints; the first gives \(\alpha_0\le Cd_4\) and the second
+gives \(\alpha_1\ge cd_8\).  The constraints give
+\(|x_0|\le|x_1|+|x_2|+|x_3|\), hence \(\alpha_0\ge cd_4\), and
+\(|x_3|=O(\lambda^{-8})|x|\), hence \(\alpha_1\le Cd_8\).  Since \(d_j\asymp q_j\), (15.6) follows.
 
-The polynomial separation in (15.6) is more than sufficient for the
-Paley--Wiener weight in (13.3).  The unresolved issue is transferring this
+The polynomial separation \(d_4/d_8\asymp\lambda^{-8}\) in (15.6) is
+larger than the polynomial weight \(W_{L,B}\asymp\lambda^B\) in (13.3); it
+would suffice if it transferred to the Weil operator.  The unresolved issue is transferring this
 angle hierarchy to the signed Weil operator and selecting the correct
 branch.
 
@@ -1655,19 +1739,33 @@ When the leakage \(d=1-\chi^2\) tends to zero, both branches remain of
 order one.  Prolate concentration fixes the square in (17.1), not the sign
 of its square root.
 
-Let \(q_L^{\rm mov}=V_\lambda/\|V_\lambda\|\) be the normalized first
-moving vector and \(e_L^{\rm ext}=R_\lambda/\|V_\lambda\|\).  Put
+Since \(\mathcal M[F(u^{-1})](s)=\mathcal MF(-s)\) and the set
+\(\{\rho-\tfrac12\}\) is symmetric under \(s\mapsto-s\), the function
+\(u\mapsto F(u^{-1})\) also has vanishing Mellin transform at every
+nontrivial zero; as \(P_I\) commutes with \(u\mapsto u^{-1}\), (15.3) holds
+with \(V_\lambda,R_\lambda\) replaced by their even parts
+\(V_\lambda^+(u)=\tfrac12(V_\lambda(u)+V_\lambda(u^{-1}))=P_IF^+\) and
+\(R_\lambda^+=(1-P_I)F^+\), \(F^+(u)=\tfrac12(F(u)+F(u^{-1}))\).
+Let \(q_L^{\rm mov}=V_\lambda^+/\|V_\lambda^+\|\) be the normalized first
+(even) moving vector and \(e_L^{\rm ext}=R_\lambda^+/\|V_\lambda^+\|\).  Put
 \[
- r_L^{\rm mov}=\langle A_Lq_L^{\rm mov},q_L^{\rm mov}\rangle,
+ r_L^{\rm mov}=QW_L(q_L^{\rm mov},q_L^{\rm mov}),
  \quad
- r_L^\perp=(1-|q_L^{\rm mov}\rangle\langle q_L^{\rm mov}|)
-             A_Lq_L^{\rm mov}.
+ \|r_L^\perp\|=\sup_{\substack{g\perp q_L^{\rm mov},\,g\in\mathcal C\\\|g\|=1}}
+ |QW_L(q_L^{\rm mov},g)|,
 \]
+where \(\mathcal C=C_c^\infty(I_L)\) is the smooth core.  Since
+\(V_\lambda^+\) is of bounded variation with compact support,
+\(|\widehat V_\lambda^+(t)|=O(1/|t|)\), so
+\(\log(2+|t|)\widehat V_\lambda^+\in L^2\) and
+\(V_\lambda^+\in\operatorname{Dom}(A_L)\); thus \(\|r_L^\perp\|\) is the
+\(L^2\) norm of
+\((1-|q_L^{\rm mov}\rangle\langle q_L^{\rm mov}|)A_Lq_L^{\rm mov}\).
 The moving-radical identity gives the exact first-variation formulas
 \[
  \boxed{
  \|r_L^\perp\|
- =\sup_{\substack{g\perp q_L^{\rm mov}\\\|g\|=1}}
+ =\sup_{\substack{g\perp q_L^{\rm mov},\,g\in\mathcal C\\\|g\|=1}}
  |QW(e_L^{\rm ext},g)|,
  \qquad
  r_L^{\rm mov}=QW(e_L^{\rm ext},e_L^{\rm ext}).}
@@ -1698,7 +1796,8 @@ Define the complementary bottom
  =\inf_{\substack{g\perp q_L^{\rm mov}\\\|g\|=1}}
    QW_L(g,g).
 \]
-If \(r_L^{\rm mov}<\gamma_L^\perp\), scalar Schur complementation gives
+If \(r_L^{\rm mov}<\gamma_L^\perp\), scalar Schur complementation of the
+closed form gives
 \[
  0\le r_L^{\rm mov}-\epsilon_{0,L}
  \le\frac{\|r_L^\perp\|^2}
@@ -1723,25 +1822,27 @@ Prove, from the actual ordinary-prime source, that
  \quad(\sigma<1/2).
  \tag{17.5}
 \]
-Equivalently, for \(\mathcal H=(q_L^{\rm mov})^**g\), keep all terms
-coupled and prove
+Given \(r_L^{\rm mov}=O(d_4)=o(d_8)\) and the diagonal lower bound
+\(\gamma_L^\perp\ge cd_8\), the third condition follows, keeping all source
+terms coupled, from
 \[
- \sup_{\substack{g\perp q_L^{\rm mov}\\\|g\|=1}}
- \left|
- W_{0,2}(\mathcal H)+\log(TW)\mathcal H(1)
- +\Tr\!\left(\vartheta(\mathcal H)
-   (1-P_T^S-\widehat P_W^S)\right)
- \right|
+ \sup_{\substack{g\perp q_L^{\rm mov},\,g\in\mathcal C\\\|g\|=1}}
+ \left|QW_L^{\rm src}(q_L^{\rm mov},g)\right|
  =o(\lambda^{-\sigma}d_8),
  \tag{17.6}
 \]
-and the corresponding diagonal lower bound \(cd_8\) on the orthogonal
-complement.
+since by (15.4) and (17.2)
+the left side of (17.6) equals \(\|r_L^\perp\|\).
 \end{problem}
 
-Gate SPG and Theorem~\ref{thm:bilateral} imply RH through
-Theorem~\ref{thm:residual-overlap}, without identifying the entire ground
-transform.  To deduce the stronger curvature limit (11.8), one additionally
+Gate SPG and Theorem~\ref{thm:bilateral} imply RH, without identifying
+the entire ground transform.  Indeed \(q_L^{\rm mov}\) is even by construction, so all quantities
+in (17.4)--(17.5) refer to the even sector; min--max and
+(14.3) give \(\gamma_L^\perp\le\epsilon_{1,L}\le C\lambda^Me^{-c\lambda^2}\);
+hence (17.4) and (17.5) give
+\(\epsilon_{0,L}\ge r_L^{\rm mov}-o(\lambda^{-2\sigma})
+\,C\lambda^Me^{-c\lambda^2}\) and \(\liminf_L\epsilon_{0,L}\ge0\),
+contradicting the even case of (13.5).  To deduce the stronger curvature limit (11.8), one additionally
 needs the distinct moving/model identification
 \[
  \partial_z^2\log
@@ -1810,7 +1911,7 @@ prime norm confines possible negative wells only to
 \(|t|\le e^{C\lambda}\).  Summing the local budget over all block centers
 returns \(O(Le^{C\lambda})\).  Nor can (18.1) exclude one negative well.
 
-The loss is certified by twisting the coefficients:
+The loss is shown by twisting the coefficients:
 \[
  a_n^{(\tau)}=\frac{\Lambda(n)}{\sqrt n}n^{i\tau},
  \qquad
@@ -2043,12 +2144,12 @@ If the separate Gate-SPG Rayleigh estimate
 \(r_L^{\rm mov}=O(d_4)\) is proved, then
 \(\ell_N^+(q_L,q_L)=\kappa_N+O(d_4)\).  Together with that estimate,
 (19.12)--(19.13) assert that \(q_L\) is a first-level
-\(\mathcal L_N^+\)-quasimode to the required form-dual accuracy and that
+\(\mathcal L_N^+\)-quasimode to the required accuracy and that
 the next level clears the explicit threshold.  Positivity of
 \(\mathcal L_N^+\) alone does not imply these assertions.
 
 For qualitative nonnegativity there is a narrower conditional rank-one
-criterion.  Assume the force-bearing inertia statement
+criterion.  Assume the inertia condition
 \[
  \lambda_1(\mathcal D_N)<\kappa_N<\lambda_2(\mathcal D_N).
 \]
@@ -2059,7 +2160,8 @@ Then rank-one inertia gives
  1+2\langle h_L,(\mathcal D_N-\kappa_N)^{-1}h_L\rangle\le0.
 \tag{19.14}
 \]
-At finite Galerkin level the second factor is the determinant ratio
+At finite Galerkin level the quantity
+\(1+2\langle h_L,(\mathcal D_N-z)^{-1}h_L\rangle\) is the determinant ratio
 \[
  \frac{\det(\mathcal L_N^+-z)}
  {\det(\mathcal D_N-z)}
@@ -2080,10 +2182,13 @@ the logarithmic form domain as the completion of \(C_c^\infty(I_L)\) under
  \|F\|_2^2+
  \int_{\mathbb R}\log(2+|t|)|\widehat F(t)|^2\,dt.
 \]
-Then the identity extends to that domain by closure.
-For translations comparable with \(L\), zero extension creates a boundary
-loss which cancels the \(O(\lambda)\) constant in (19.3).  Replacing
-\(\tau_a\) by periodic translation gives a false formula.
+Both sides of (19.4) are continuous in this norm (the prime part is
+bounded, the Gamma jump part has multiplier \(O(\log(2+|t|))\) and the
+polar evaluations are bounded on \(L^2(I_L)\)), so the identity extends to
+that domain by closure.  Heuristically, for translations comparable with
+\(L\) the zero-extension loss \(\|F-\tau_aF\|^2\) offsets the constant
+\(\kappa_N\); replacing \(\tau_a\) by periodic translation changes (19.6)
+and gives a false formula.
 \end{remark}
 
 \section{Exact PNT-discrepancy compensation}
@@ -2234,7 +2339,7 @@ Equation (20.7) is not proved here.  It is the one-sided signed theorem
 left after the continuous PNT main term, Gamma and both polar branches have
 been cancelled algebraically.
 
-This reduction is already nontrivial on a normalized Fejer packet
+This reduction is already nontrivial on a normalized Fej\'er packet
 \[
  f_{L,U}(x)=L^{-1/2}e^{iUx}\mathbf1_{I_L}(x).
 \]
@@ -2315,7 +2420,7 @@ and
  m_0=\frac2\pi\int_0^1\left(\frac{\sin y}{y}\right)^2dy
  \ge\frac{2\sin^2(1)}{\pi}.
 \]
-The Fejer kernel of \(f_{L,U}\) has mass \(m_0\) on
+The Fej\'er kernel of \(f_{L,U}\) has mass \(m_0\) on
 \(|t-U|\le2/L\), while Stieltjes integration by parts gives
 \[
  |S_L(U)|\le S_L(0)\le\frac{4C_\psi e^{L/2}}L.
@@ -2361,7 +2466,7 @@ For
  \sum_{n\le e^L}\frac{\Lambda(n)}{\sqrt n}
  \left(1-\frac{\log n}{L}\right)n^{-it},
 \]
-The classical zero-free-region PNT and the two-sided
+the classical zero-free-region PNT and the two-sided
 Montgomery--Vaughan theorem give, uniformly in \(U\),
 \[
  \frac1{2Y}\int_{U-Y}^{U+Y}
@@ -2389,8 +2494,13 @@ Write
  +\frac{e^{-u/2}}{1-e^{-2u}}\,du.
 \tag{21.1}
 \]
-Let \(v>0\) on \(I_L\), extend \(v\) by zero, and write \(r=f/v\) on
-\(I_L\).
+Let \(v\in C^2(I_L^\circ)\) be bounded, \(v>0\) on \(I_L^\circ\), extended by zero,
+and let \(f\) range over smooth functions with compact support in
+\(I_L^\circ\); write \(r=f/v\).  Here \(\mathcal D_Nv\) is defined
+pointwise by
+\(\int_{(0,\infty)}(2v(x)-v(x-u)-v(x+u))\,\nu_N(du)\), which converges
+near \(u=0\) because \(v\) is \(C^2\) near each point of
+\(\operatorname{supp}f\).
 
 \begin{theorem}[Zero-extension Picone identity]
 \label{thm:picone}
@@ -2428,8 +2538,22 @@ Integration against \(\nu_N\) proves (21.2), including the zero-extension
 boundary killing.
 \end{proof}
 
-If \(\varphi_1>0\) is the normalized ground state of \(\mathcal D_N\),
-with eigenvalue \(\mu_1\), then
+Identity (21.2) is the nonlocal ground-state representation; cf.\
+\cite{FrankSeiringer}.
+
+The same pointwise identity, integrated without separating the last
+term, gives for every positive \(v\) in the form domain and every
+\(f=vr\) with \(r\) bounded and \(|f|^2/v\) in the form domain
+\[
+ \mathcal D_N(f,f)=\iint v(x)v(x-u)|r(x)-r(x-u)|^2\,dx\,\nu_N(du)
+ +\mathcal D_N\bigl(v,|f|^2/v\bigr).
+\]
+Let \(\varphi_1\) be the normalized ground state of \(\mathcal D_N\),
+with eigenvalue \(\mu_1\).  Since the jump density of \(\nu_N\) is
+positive for every \(u>0\), the form is irreducible, so \(\varphi_1\) may
+be taken positive almost everywhere; and
+\(\mathcal D_N(\varphi_1,g)=\mu_1\langle\varphi_1,g\rangle\) for \(g\) in
+the form domain.  Taking \(v=\varphi_1\) gives, for such \(f\),
 \[
 \begin{aligned}
  \mathcal D_N(f,f)-\mu_1\|f\|_2^2
@@ -2443,7 +2567,7 @@ with eigenvalue \(\mu_1\), then
 \end{aligned}
 \tag{21.3}
 \]
-Consequently \(\lambda_2(\mathcal D_N)\ge\kappa_N\) is exactly the
+Consequently \(\lambda_2(\mathcal D_N)\ge\kappa_N\) implies the
 weighted Poincare inequality
 \[
 \int\!\!\int\varphi_1(x)\varphi_1(x-u)|r(x)-r(x-u)|^2
@@ -2451,13 +2575,14 @@ weighted Poincare inequality
 \ge(\kappa_N-\mu_1)\int\varphi_1^2|r|^2,
 \tag{21.4}
 \]
-for \(\int\varphi_1^2r=0\).  The transform is lossless: its required
+for \(\int\varphi_1^2r=0\), for these \(f\), and is equivalent to it because such \(f\) form a form core (bounded functions are dense in the domain of the Doob-transformed Dirichlet form \cite{FOT}).  The transform is lossless: its required
 constant is the missing second-level bound itself.
 
 The resolvent sign is equally exact.  Put
-\(B_N=\mathcal D_N-\kappa_NI\), assume the strict one-negative-level
-inertia from (19.14), and set
-\(r_N=\langle h_L,B_N^{-1}h_L\rangle<0\).  Then
+\(B_N=\mathcal D_N-\kappa_NI\).  Assume
+\(\lambda_1(\mathcal D_N)<\kappa_N<\lambda_2(\mathcal D_N)\) and
+\(r_N=\langle h_L,B_N^{-1}h_L\rangle<0\) (then \(B_N>0\) on
+\(h_L^\perp\)).  Then
 \[
  \inf_{\langle h_L,f\rangle=1}B_N(f,f)=\frac1{r_N},
 \tag{21.5}
@@ -2469,15 +2594,15 @@ so
  \inf_{\langle h_L,f\rangle=1}B_N(f,f)\ge-2.
 \tag{21.6}
 \]
-Together with \(B_N\ge0\) on \(h_L^\perp\), this is precisely the original
-completed even Weil inequality.
+Under these assumptions (21.6) is equivalent to the semilocal even
+inequality \(Q_L^+\ge0\) of (19.10).
 
 The following countermodel shows why generic jump positivity cannot prove
 the inertia premise.
 
 \begin{proposition}[Positive one-atom obstruction]
 \label{prop:one-atom}
-Fix \(a>0\) and \(M\ge6\).  There is a positive jump form with the same
+Fix \(a>0\), \(M\ge2\), and \(L>(M-1)a+a/3\).  There is a positive jump form with the same
 Gamma channel, zero-extension boundary killing and polar rank-one
 perturbation whose scalar-shifted compression has at least
 \(\lfloor M/2\rfloor\) negative eigenvalues.
@@ -2486,7 +2611,7 @@ perturbation whose scalar-shifted compression has at least
 \begin{proof}
 Choose normalized smooth bumps
 \(\phi_j=\tau_{(j-1)a}\phi_1\), \(1\le j\le M\), with disjoint supports
-of width below \(a/3\), inside a sufficiently long interval.  Add the
+of width below \(a/3\), inside \(I_L\).  Add the
 positive atom \(w\delta_a\) and subtract its scalar contribution \(2wI\),
 as in (19.3).  On their span the atomic part is
 \[
@@ -2498,11 +2623,11 @@ where \(A_M\) is the path adjacency matrix, with eigenvalues
  \qquad1\le k\le M.
 \]
 The fixed Gamma, scalar and polar compressions have norm independent of
-\(w\).  Weyl's inequality therefore leaves at least
+\(w\).  Weyl's inequality \cite[Ch.~III]{Bhatia} therefore leaves at least
 \(\lfloor M/2\rfloor\) negative levels for sufficiently large \(w\).
 \end{proof}
 
-Thus positivity of the jump measure, Picone algebra, Hardy completion and
+Thus positivity of the jump measure, Picone algebra and
 rank-one perturbation do not select the fundamental branch.  The actual
 locations and magnitudes \(\Lambda(n)/\sqrt n\) must enter through the
 literal compensated inequality (20.7), quantitatively strengthened to the
@@ -2582,24 +2707,27 @@ The Riesz representative of this functional is \(A_L^+v_L\).  Finally
 \(v_L\to K\) in \(L^2\), so its norm stays bounded away from zero.
 \end{proof}
 
-Theorem~\ref{thm:full-kernel-quasimode} closes the residual half of the
-finite-cutoff branch criterion.  It does not supply its complementary
-spectral floor.  Ordinary cyclicity of translates and derivatives of
+Theorem~\ref{thm:full-kernel-quasimode} gives, for the vector \(q_L^K\),
+a super-exponentially small residual.  In a Schur-complement criterion of
+the form (17.4) with \(q_L^{\rm mov}\) replaced by \(q_L^K\), this is the
+residual input.  It gives no lower bound for the complementary bottom
+\(\inf_{g\perp q_L^K,\|g\|=1}QW_L(g,g)\), and it does not address Gate
+SPG as stated for \(q_L^{\rm mov}\).  Ordinary cyclicity of translates and derivatives of
 \(K\) cannot supply that floor at the required scale.  Indeed, if an
 off-line zero \(\rho=\beta+i\gamma\), \(\beta>1/2\), exists and a
-fixed compactly supported \(h\) detects it, then every truncated radical
-approximant \(w_L\) with
+fixed compactly supported \(g_0\) detects it, then every truncated radical
+approximant \(w_L\) supported in \(I_L\) with
 \(\widehat w_L(z_\rho)=o(1)\) satisfies
 \[
- \|h-w_L\|_2^2\gg_{h,\rho}
+ \|g_0-w_L\|_2^2\gg_{g_0,\rho}
  \lambda^{-2(\beta-1/2)},\qquad
- \kappa_{e^L}\|h-w_L\|_2^2
- \gg_{h,\rho}\lambda^{2(1-\beta)}\longrightarrow\infty,
+ \kappa_N\|g_0-w_L\|_2^2
+ \gg_{g_0,\rho}\lambda^{2(1-\beta)}\longrightarrow\infty,
 \tag{22.9}
 \]
-where \(\kappa_{e^L}=4\lambda+o(\lambda)\).  Thus qualitative
-\(L^2\)-density has exactly the wrong conditioning for the semilocal
-inertia problem.
+where \(\kappa_N=4\lambda+o(\lambda)\), \(N=e^L\).  Thus approximation
+in \(L^2\) alone yields an error which, weighted by \(\kappa_N\),
+diverges; it cannot by itself supply the complementary floor.
 
 \section{A cutoff-free normalization of the classical Weil criterion}
 \label{sec:doob-variance}
@@ -2657,9 +2785,19 @@ For every even complex \(r\in C_c^\infty(\mathbb R)\),
 \end{theorem}
 
 \begin{proof}
-Use a common smooth spatial regulator and the same prime cutoff in the two
-physical-side Weil forms \(QW(Kr,Kr)\) and
-\(QW(K,K|r|^2)\).  At every retained jump, with
+Let \(Q_N\) be the form (19.1) on the full line (no restriction to
+\(I_L\), \(N\) a free parameter), with the prime sum restricted to
+\(n\le N\), for Schwartz \(F,G\) with
+\(e^{|x|/2}F,e^{|x|/2}G\in L^1\).  By the proof of
+Theorem~\ref{thm:centered-square},
+\(Q_N(F,G)=\mathcal D_N(F,G)-\kappa_N\langle F,G\rangle+\text{polar}\)
+for even \(F,G\).  Since \(\langle Kr,Kr\rangle=\langle K,K|r|^2\rangle\),
+the scalars cancel in \(Q_N(Kr,Kr)-Q_N(K,K|r|^2)\).  If
+\(\operatorname{supp}r\subset[-b,b]\), then \(Q_N(Kr,Kr)=QW(Kr,Kr)\) for
+\(N\ge e^{2b}\).  Weil's explicit formula applies to
+\(K*\widetilde{(K|r|^2)}\) because of (22.3), so
+\(Q_N(K,K|r|^2)\to QW(K,K|r|^2)=0\), the zero-side expression vanishing
+because \(\widehat K\) vanishes at every zero.  At every retained jump, with
 \(y=x-u\), the pointwise identity
 \[
  |K_xr_x-K_yr_y|^2
@@ -2678,13 +2816,11 @@ two polar evaluations contribute
 \]
 Since \(2c_K^2=1/2\), this is the second term of (23.5).
 
-The zero-side radical identity \(QW(K,g)=0\), applied to
-\(g=K|r|^2\), removes the second regulated Weil form in the limit.
 The Gamma contribution is integrable at zero because the squared
-difference in (23.4) is \(O(u^2)\), and the prime sum converges after the
-spatial regulator is removed because one translated \(K\)-factor has
-double-exponential decay.  Monotone convergence applies to the nonnegative
-prime energy.  Removing the two regulators therefore proves (23.5).
+difference in (23.4) is \(O(u^2)\), and the prime sum in (23.4) converges
+because one translated \(K\)-factor has double-exponential decay.
+Monotone convergence applies to the nonnegative prime energy as
+\(N\to\infty\).  Letting \(N\to\infty\) therefore proves (23.5).
 \end{proof}
 
 The jump form (23.4) is closable on \(L^2(\mu_K)\).  Indeed, define the
@@ -2711,8 +2847,7 @@ whose weak action on the core is
  \end{aligned}
 \tag{23.7b}
 \]
-Let
-and put
+Put
 \[
  \mathcal H_{0,+}
  =\left\{r\in L^2(\mu_K):
@@ -2739,8 +2874,16 @@ Every compactly supported smooth even test \(f\) has the unique form
 \(f=Kr\), since \(K>0\).  By the bilateral parity theorem, failure of
 RH already produces a negative even Weil test.  Theorem
 \ref{thm:doob-variance} therefore converts the even Weil criterion exactly
-into the middle inequality of (23.9).  Closing the form gives the spectral
-statement.
+into the middle inequality of (23.9).  The form is closable since
+\(J_K\) is symmetric and \(\int(|x-y|^2\wedge1)\,J_K(dx,dy)\) is locally
+finite \cite[Thm.~3.1.1, Example~1.2.4]{FOT}.  Parity commutes with
+\(\mathcal L_K\) because \(K\) and \(h\) are even.  Constants lie in the
+form domain with zero energy (approximate by \(\chi_a\)), so
+\(\mathcal H_{0,+}\) reduces \(\mathcal L_K\).  Since
+\(\mathscr E_K(r)=\mathscr E_K(r-\int r\,d\mu_K)\), the middle inequality
+is the form inequality \(\mathscr E_K\ge\frac12\|\cdot\|^2\) on a core of
+the restricted form, which is equivalent to the spectral bound
+\cite[Ch.~VI]{Kato}.
 \end{proof}
 
 Corollary~\ref{cor:exact-spectral-floor} is a reformulation of the classical
@@ -2760,8 +2903,8 @@ For \(m\ge1\), define
  r_m=\frac{K^{(2m)}}K-4^{-m}.
 \tag{23.10}
 \]
-Then \(r_m\in\mathcal H_{0,+}\) belongs to the extended form domain and
-is a weak eigenfunction of \(\mathcal L_K\) with eigenvalue \(1/2\).
+Then \(r_m\in\mathcal H_{0,+}\) belongs to the domain of the closed form
+and is an eigenfunction of \(\mathcal L_K\) with eigenvalue \(1/2\).
 The family \((r_m)_{m\ge1}\) is linearly independent.  Consequently
 \(1/2\) is an infinite-multiplicity, hence essential, spectral point.
 \end{proposition}
@@ -2782,8 +2925,13 @@ Polarizing (23.5) therefore yields
  =\frac12\langle r_m,s\rangle_{L^2(\mu_K)}
 \tag{23.11}
 \]
-for every even test \(s\), and cutoff approximation extends the identity
-to the form domain.  Finally, the theta asymptotics make
+for every even test \(s\).  Since \(K^{(2m)}/K\) is a polynomial in
+\(e^{2|x|}\) up to lower-order terms and \(\mu_K\), \(J_K\) decay
+double-exponentially, \(\chi_ar_m\to r_m\) in \(L^2(\mu_K)\) and
+\(\mathscr E_K(\chi_ar_m-r_m)\to0\) by dominated convergence (the Gamma
+part near \(u=0\) is controlled by \(|\partial_x(\chi_ar_m)|^2u^2\)).
+Hence \(r_m\) lies in the domain of the closed form, (23.11) extends to
+it, and \(\mathcal L_Kr_m=\tfrac12r_m\).  Finally, the theta asymptotics make
 \(K^{(2m)}/K\) a function with a distinct highest growth degree in
 \(e^{2|x|}\) for each \(m\); hence no nontrivial finite linear
 combination can vanish.
@@ -2871,9 +3019,9 @@ omitted atoms from (23.5), and retaining one omitted \(m_0\), gives
 \end{proof}
 
 The theta series contains an exact dilation which exposes the missing
-coupling.  Suppressing the common positive normalization, put
+coupling.  Put
 \[
- k_j(x)=\pi j^2e^{5x/2}
+ k_j(x)=2\pi j^2e^{5x/2}
  \left(2\pi j^2e^{2x}-3\right)e^{-\pi j^2e^{2x}},
  \qquad K(x)=\sum_{j\ge1}k_j(x)
  \quad(x\ge0).
@@ -2893,9 +3041,16 @@ Consequently, when \(x\ge\log n\),
 \tag{24.9}
 \]
 Dropping the second term and the central crossing region
-\(0<x<\log n\) produces a valid lower bound, but Theorem
-\ref{thm:atomwise-load} shows that it is strictly too small at the sharp
-constant.  Thus the all-prime theorem must preserve simultaneously:
+\(0<x<\log n\) produces a valid lower bound, but it is strictly too small at the sharp
+constant.  Indeed, with \(r_a=\chi_aK''/K\) as in (24.4), the discarded
+part of \(\frac{\Lambda(n)}{\sqrt n}\mathcal J_{\log n}(r_a)\) is
+nonnegative, since each \(k_j\) is positive on \([0,\infty)\) and
+\(K>0\).  By dominated convergence, as in (24.5), it converges to the
+corresponding quantity for \(K''/K\), which is strictly positive: the
+weights are positive on open sets, and vanishing would make the real
+analytic function \(K''/K\) \(\log n\)-periodic.  Since
+\(QW(f_a,f_a)\to0\), the argument of (24.6) gives a negative limsup for
+the reduced energy minus \(\tfrac12\operatorname{Var}_{\mu_K}\).  Thus the all-prime theorem must preserve simultaneously:
 \begin{enumerate}
 \item every atom \(\Lambda(p^k)\);
 \item the theta indices divisible by the corresponding dilation;
@@ -2912,7 +3067,7 @@ The arithmetic identity
 shows the natural point at which the divisible theta channel can couple to
 the logarithmic derivative implicit in the Gamma term.  It does not control
 the nondivisible and crossing channels separately; those channels cannot be
-discarded, by (24.6).
+discarded, by the argument following (24.9).
 
 There is, however, an exact reorganization which retains all of those
 channels.  Write
@@ -3093,15 +3248,17 @@ Riemann-radical modes exactly at \(1/2\).  Theorem
 \ref{thm:atomwise-load} also proves that every literal von Mangoldt atom is
 load-bearing.  The exact theta dilation cannot be weakened to its divisible
 part, because the nondivisible theta indices and the central crossing region
-carry a strictly positive part of the threshold energy.  Thus finite-prime
-certificates, positive-tail completion, generic Picone identities and
-termwise dilation estimates cannot establish the sharp floor.
+carry a strictly positive part of the threshold energy.  Thus any
+argument that bounds \(\mathscr E_K\) from below by a sub-energy omitting
+a prime-power atom, or by the divisible theta channel alone, proves a
+false inequality at the sharp constant.
 
 There are consequently two related but distinct unresolved statements.
 For convergence of the particular CCM--Suzuki spectral approximants, the
 remaining conditions are the signed branch selector and moving/model
 identification.  For a direct proof of RH in the full-kernel coordinate, the
-single remaining theorem is Problem~\ref{prob:all-source-gate}: preserve
+remaining statement is Problem~\ref{prob:all-source-gate}, which by
+Corollary~\ref{cor:exact-spectral-floor} is equivalent to RH: preserve
 all prime atoms, divisible and nondivisible theta indices, the central
 crossing, Gamma and the polar variance, and prove that no spectrum lies
 below \(1/2\).  Proving first that the essential spectrum has floor
@@ -3150,6 +3307,16 @@ Graduate Texts in Mathematics 169, Springer, 1997.
 T.~Kato,
 \emph{Perturbation Theory for Linear Operators},
 Classics in Mathematics, Springer, 1995.
+
+\bibitem{FrankSeiringer}
+R.~L.~Frank and R.~Seiringer,
+\emph{Non-linear ground state representations and sharp Hardy inequalities},
+J. Funct. Anal. \textbf{255} (2008), 3407--3430.
+
+\bibitem{FOT}
+M.~Fukushima, Y.~Oshima, and M.~Takeda,
+\emph{Dirichlet Forms and Symmetric Markov Processes},
+de Gruyter Studies in Mathematics 19, de Gruyter, 1994.
 
 \end{thebibliography}
 
