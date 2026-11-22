@@ -1,6 +1,6 @@
 # INV_T_001: the unimodular gauge in the log-free Green identity (track T)
 
-Inputs: INV_R_001 (R1), AUDIT_195_2 (b), INV_L_001 (L1–L3), INV_P_001 (P2 on ½<σ<1), Paper 47 (def:PD, lem:spec-collapse, thm:Z,
+Inputs: INV_R_001 (R1), AUDIT_195_2 (b), INV_L_001 (L1–L3), INV_P_001 (P2 on ½<σ<1), Paper 46 (def:PD, lem:spec-collapse, thm:Z,
 thm:D1, thm:A, O_6 = prop:shape-eulerdel). Notation follows INV_R_001: Φ(½+iτ)=F̂(τ), Ω=Ω_{σ_1}={½<σ<σ_1}, 𝓓(f)=∬_Ω|f′|²dA, and
 ψ^♭ ≡ ψ means ∫(ψ^♭−ψ)|F̂|²dτ=0 for every test of the class considered (band equality).
 
@@ -57,7 +57,7 @@ so as a method it is comb-generic. Any discrimination can only come from whether
 (a) Modulus domination is gauge-invariant: |I_2|≤|I_1| ⟺ |q|≤1.
 (b) If q is admissible on a class containing F and |q|≤1 on Ω∩{neighbourhood of the line}, then log|q|≤0 there and =0 on the line, so
 ψ_q≤0 pointwise. Hence 𝔞_T(F)=(1/2π)∫ψ_q|F̂|²≤0.
-(c) At T≤log 2, λ_A(T)>0 (Paper 47 thm:A, PROVED internally), so 𝔞_T(F)>0 for every 0≠F∈𝒫_T. **Therefore no admissible q (for ℤ, on
+(c) At T≤log 2, λ_A(T)>0 (Paper 46 thm:A, PROVED internally), so 𝔞_T(F)>0 for every 0≠F∈𝒫_T. **Therefore no admissible q (for ℤ, on
 𝒫_T) is contractive near the line at any T≤log 2.** Under the standing positivity premise the same holds at every T. The proposed key idea
 "|Iρ|≤|I| ⇒ 𝓓(IΦ)≥𝓓(IρΦ)" has the wrong orientation. Energy comparison is not monotone in modulus: by T2 with q=e^{ε(s−½)}, ε>0
 (|q|≥1), 𝓓(G_λ)−𝓓(qG_λ) → (ε/2)∫|F̂|²dτ > 0 (G_λ=e^{−λ(s−½)}Φ), so an *expansive* multiplier lowers the localized energy. For ε<0 the sign

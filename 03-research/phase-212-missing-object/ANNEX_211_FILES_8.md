@@ -294,7 +294,7 @@ file. Abbreviations: 𝒯 Poisson tail map; Ψ_f = 𝒯(ℱf) the tail of Ef on 
   F.2/J.3). Not taken up in the block.
 
 ### 1.17 ROUND_026_A.md — computer-assisted lower certificate for λ_A beyond ½log5
-- Object: certificate of P47 prop:lowercert (frequency-truncated symbol, Legendre block, Haynsworth inertia),
+- Object: certificate of P46 prop:lowercert (frequency-truncated symbol, Legendre block, Haynsworth inertia),
   with floor s_∞ certified by an interval sweep of s_T on [τ_N, τ_B], g = (s_∞ − s_T)1_{|τ|<τ_N}, 𝒢 = Q_Tg(D)Q_T,
   a_T(F) ≥ s_∞‖F‖² − ⟨𝒢F, F⟩, 0 ≤ 𝒢_± ≤ ω_±S_c, c = Tτ_N; positivity by Gershgorin of XSXᵀ with X ≈ L⁻¹ exact.
 - §1.1–1.4 PROVED (lower form, Bernstein-ellipse quadrature bounds, Bessel enclosures, positivity criterion).
@@ -308,7 +308,7 @@ file. Abbreviations: 𝒯 Poisson tail map; Ψ_f = 𝒯(ℱf) the tail of Ef on 
 - No falsifiers (it is a window certificate). No explicit «next step» at the end. Within the cited range.
 
 ### 1.18 ROUND_027_A.md — is the comb weight vector the global maximizer of μ_T?
-- Object: μ_T(v) = floor of Arch − Σ_n v_nΠ_n on P_T, v ∈ ℝ^{N_T}, concave (P47 lem:degen), μ_T(v_T(Λ)) = λ_A(T); hypotheses
+- Object: μ_T(v) = floor of Arch − Σ_n v_nΠ_n on P_T, v ∈ ℝ^{N_T}, concave (P46 lem:degen), μ_T(v_T(Λ)) = λ_A(T); hypotheses
   (A) v_T(Λ) = argmax μ_T and (B) there exists an explicit v̂ with μ_T(v̂) ≥ 0.
 - NUMERICAL: simple floor at T = 0.8, 1.0, 1.2, gradient g = (c_{F*}(log n))_n ≠ 0, hence 0 ∉ ∂μ_T(v_T(Λ));
   M_{0.8} = 0.04735, maximizer v* = (0.0843, −0.858, −1.820)·v_T(Λ); M_{1.0} = 0.02968 with sixfold floor.
@@ -331,7 +331,7 @@ file. Abbreviations: 𝒯 Poisson tail map; Ψ_f = 𝒯(ℱf) the tail of Ef on 
 - No next step; «no pending audits remain».
 
 ### 1.20 SQUARE_COMPLETENESS_OBSTRUCTION.md — completeness on squares and perfect powers: sufficiency falsifiers
-- Object: primitive form with fixed archimedean floor with weights v_n = 2ℓ(n)/√n (ROUND_007_C/P47); Euler families
+- Object: primitive form with fixed archimedean floor with weights v_n = 2ℓ(n)/√n (ROUND_007_C/P46); Euler families
   F_p(z) = (1 + c_pz)/(1 − z²) (§2), F_square = ζ(s)/(1 + 2^{−s}) (§3), F_m = ζ(s)(1 − 2^{−s})/(1 − 2^{−ms}) (§8),
   F_all = ζ(s)[1 − 2^{−s}/2 + 2^{−2s}/2] (§9), F_norm = ζ(s)R(s) with high factors (1 + δz − δz²)/(1 − z) (§11).
 - §2 PROVED: N_c(n²) = 1 for all n, 0 ≤ N_c ≤ 1, ℓ_c(p^k)/log p = c_p^k (k odd), 2 − c_p^k (k even), ℓ_c ≥ 0.
@@ -370,7 +370,7 @@ file. Abbreviations: 𝒯 Poisson tail map; Ψ_f = 𝒯(ℱf) the tail of Ef on 
   Div/Near) PROVED with reduced scope; C10 dominated by C8; Candidate I as a universal step PIVOT.
 - Round-4 annex: NO-GO (Prop B PROVED): no condition on a fixed Λ-free finite subspace with positive margin can
   carry the sign (it survives small changes and cΛ); the next object must have dimension growing with T.
-- Corrections to P47 (12 items; apply only at closure): eq:coer-sandwich, normalization of F_0, prop:H, §ext-constraints,
+- Corrections to P46 (12 items; apply only at closure): eq:coer-sandwich, normalization of F_0, prop:H, §ext-constraints,
   rem:directbound, thm:nyq-schur(ii), labels, thm:ext-half, sign of the comb, range of σ₂, term K3, reading of ROUND_001_C §4.
 - Open (§5.5): (a) Θ_T(Λ) ≥ 0 (Lévy form ≥ 0 on the null quadric of the comb); (b) 1 ∈ J_T; (c) mechanism producing
   the almost-degenerate pair; (P1) second even eigenvalue almost null; (P2) Π indefinite on the even pair.
@@ -400,13 +400,13 @@ file. Abbreviations: 𝒯 Poisson tail map; Ψ_f = 𝒯(ℱf) the tail of Ef on 
   Λ-specific content is exactly R10, always used as an identity, never as an inequality.
 - Open targets in order (see §C/§D): (B_δ, s); uniformity in R with quantitative band; (HB_η) uniform in T;
   (ii_s); (H₋) and (EB_C); lower half of prob:ext-L and (HR) in ℓ_g.
-- Corrections to P47 added 8–13. Verdict: status of (★) unchanged.
+- Corrections to P46 added 8–13. Verdict: status of (★) unchanged.
 
 ### 1.23 STATEMENT_001.md — record statement of the phase
 - Object: a_T(F) = (1/2π)∫s_T|F̂|², s_T = m − Σ_{log n<2T}v_n cos(τ log n), P_T = {A(F) = B(F) = 0}, λ_A(T); Lévy form
   K(u) = 1/(2sinh(u/2)) + 1/(2cosh(u/2)), C_0 = ψ(¼) − log π = −5.3721834…; unique profile F_0 = (¼ − ∂²)G_0 and function B(d);
   matrices 𝔸_M = [B(log m − log k)] = Arch_M − Div_M − Near_M (2T_0 < log 2).
-- PROVED (cited from P47): Lévy form (lem:K, thm:A); continuity and nonincreasing monotonicity of λ_A; thm:oneprofile ((★) ⟺ B
+- PROVED (cited from P46): Lévy form (lem:K, thm:A); continuity and nonincreasing monotonicity of λ_A; thm:oneprofile ((★) ⟺ B
   positive definite); prop:AM ((★) ⟺ 𝔸_M ⪰ 0 ∀M); 2×2 band |B(d)| ≤ B(0) necessary (Bochner). CITED: smoothed Chebyshev
   fluctuation form B(log x) = −x^{−1/2}ΣΛ(n)φ(n/x) − Σ_{j≥1}γ_jx^{−(2j+½)}, ∫φ = ∫φ/y = 0. NUMERICAL: B(0) = 0.01492,
   |B(d)| ≤ 0.0122 on 0 < d ≤ 13 (a = 0.15, b = 1).
@@ -514,7 +514,7 @@ A21. Partial completeness on squares, on powers of fixed order m or on all power
 A22. Cheap locators of minima of the band margin: tone function g_T, dense block k ≤ 96, diagonal, alignment of
      small primes h₄ (ROUND_017_B §2.3; ROUND_021_B; «not reused as a shortcut»); Lanczos with pure warm start.
      Reopening: certified locator via a Lipschitz bound in τ (ROUND_022_B). [ABSENT] (operational, not mathematical)
-A23. Lower certificates of the class of P47 prop:lowercert (constant floor of the symbol) beyond contact 8 on the
+A23. Lower certificates of the class of P46 prop:lowercert (constant floor of the symbol) beyond contact 8 on the
      available machine (ROUND_026_A §3.3; NO-GO of the machine, not of principle). Reopening: bound of the complement without a positive
      floor at every frequency (average of s_T on windows of width π/T). [ABSENT]
 A24. From STATE_001 (rounds 1–3): C1 smooth family s_w (ARGUED) [PRESENT D8]; C5 moment-only criteria of the

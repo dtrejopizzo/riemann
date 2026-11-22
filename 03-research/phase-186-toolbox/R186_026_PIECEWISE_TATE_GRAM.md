@@ -1,6 +1,6 @@
 # R186_026 — The piecewise Tate Gram matrix G_k(T): closed form, structure, positivity, limit
 
-Phase 186, round 13. Sources: Paper 47 (thm:A Lévy form in x-space, lem:K, thm:S(iii), thm:margin), R186_024 (𝒱_k ⊕ E_k, §1.3–1.4: K₁ = K − 2e^{−u/2}), R186_104 (audit: (L2) inherits the entire margin), R186_019/R155 (edge-mode Schur).
+Phase 186, round 13. Sources: Paper 46 (thm:A Lévy form in x-space, lem:K, thm:S(iii), thm:margin), R186_024 (𝒱_k ⊕ E_k, §1.3–1.4: K₁ = K − 2e^{−u/2}), R186_104 (audit: (L2) inherits the entire margin), R186_019/R155 (edge-mode Schur).
 Script: `r026_gram.py` (standalone; mpmath dps = 30 for the closed form, 1-D quadrature in float64 as an independent check, `r024_schur.py` as a third check). Labels: PROVED / NUMERICAL / CONDITIONAL / OPEN / NO-GO.
 
 ## 0. Verdict
@@ -10,7 +10,7 @@ Script: `r026_gram.py` (standalone; mpmath dps = 30 for the closed form, 1-D qua
 3. **Positivity** (§3): the exact finite inequality (L2_k) has margin λ_min(W|E_k) ≥ λ_A, decreasing in k toward λ_A (E_k is a form core: PROVED). This is a pure rewriting: **NO-GO as a route**; the closed form is kept as a lemma, with two honest uses: **exact, certifiable** upper bounds on λ_A (λ_A ≤ λ_min(W|E_k), elementary functions) and the scalar criterion of Lemma 2.4.
 4. **Limit k → ∞** (§4): G_k converges to the jump kernel 𝒢_T(x,x′) = 𝔞_T(ψ_x, ψ_{x′}), ψ_x(y) = 2 sinh((y−x)/2)1_{(x,T)}(y), explicit in the same functions; D on the window T ⟺ conditional positivity (modulo the two Tate functionals) of the 2×2 matrix kernel (𝒢^{χχ}, 𝒢^{χψ}; 𝒢^{ψχ}, 𝒢^{ψψ}) over finite jump configurations (PROVED as a reformulation; OPEN as a tool).
 
-**Sign contact: none.** No computation gives λ_min(W|E_k) < 0: all values are positive (table §3), consistent with λ_A > 0 from Paper 47. The single negative direction of G_k in the full basis is eliminated by the two Tate conditions.
+**Sign contact: none.** No computation gives λ_min(W|E_k) < 0: all values are positive (table §3), consistent with λ_A > 0 from Paper 46. The single negative direction of G_k in the full basis is eliminated by the two Tate conditions.
 
 ## 1. Closed form of G_k(T) (PROVED)
 
@@ -27,7 +27,7 @@ The only parameters that appear are a ∈ {0, ¼, ½} (and 5/4, 3/2 in ψ), for 
  = −E(α−½;a,b)E(β+½;c,d) − ¼ Σ_{x∈{a,b}} Σ_{y∈{c,d}} σ_xσ_y e^{αx+βy−(x−y)/2} Λ(z_{x−y}; ¼−α/2, ¼+β/2), (1.2)
 
 with σ_a = σ_d = +1, σ_b = σ_c = −1 and Λ(z;a₁,a₂) := Σ_{m≥1}z^m/((m+a₁)(m+a₂)) = [S₁(z,a₁) − S₁(z,a₂)]/(a₂−a₁) if a₁ ≠ a₂ (and = [ψ(1+a₂) − ψ(1+a₁)]/(a₂−a₁) if z = 1, adjacent blocks), Λ = S₂(z,a₁) if a₁ = a₂ (ζ(2,1+a₁) if z = 1). The first term is the m = 0 term from R186_024 §1.4 (2e^{−u/2}, rank one, killed by the Tate condition of either block); the sum is the coupling with kernel K₁. The (+,+) and (−,−) entries are log/artanh; the (+,−) and (−,+) ones (a₁ = a₂) carry Li₂/χ₂.
-*Proof.* For disjoint supports ⟨F,G⟩ = 0 and 𝒞_{FG}(u) = ½∫F(t)G(t−u)dt, so the entry is −½∬K(x−y)F(x)G(y) (prop:nodes of Paper 47); inserting the series from lem:K (Tonelli, everything positive) and integrating term by term; E(α−s;a,b)E(β+s;c,d) is expanded at the four vertices with 1/((s_m−α)(s_m+β)) = ¼/((m+¼−α/2)(m+¼+β/2)) and e^{−s_m(x−y)} = e^{−(x−y)/2}z^m. ∎
+*Proof.* For disjoint supports ⟨F,G⟩ = 0 and 𝒞_{FG}(u) = ½∫F(t)G(t−u)dt, so the entry is −½∬K(x−y)F(x)G(y) (prop:nodes of Paper 46); inserting the series from lem:K (Tonelli, everything positive) and integrating term by term; E(α−s;a,b)E(β+s;c,d) is expanded at the four vertices with 1/((s_m−α)(s_m+β)) = ¼/((m+¼−α/2)(m+¼+β/2)) and e^{−s_m(x−y)} = e^{−(x−y)/2}z^m. ∎
 
 **Lemma 1.2 (same-block entries).** With L = b−a, z = z_L, γ = α+β:
 
@@ -83,7 +83,7 @@ Application (CONDITIONAL on n₋(G_k) = 1): positivity per window on E_k is the 
 
 with constants: |C₀| = 5.3721834, v₂ = 0.9803, v₃ = 1.2686, v₄ = 0.6931, and all entries from (1.2)–(1.6).
 
-**3.2 Margin (NUMERICAL; k equal blocks; λ_A from Paper 47 / r024 as a reference).**
+**3.2 Margin (NUMERICAL; k equal blocks; λ_A from Paper 46 / r024 as a reference).**
 
 | T | k=3 | k=5 | k=9 | k=13 | k=20 | k=30 | λ_A (Galerkin) |
 |---|---|---|---|---|---|---|---|
@@ -115,4 +115,4 @@ that is, **conditional positivity (modulo two explicit functionals) of the conti
 - n₋(G_k) = 1 and the −1 eigenvalue of S_k are NUMERICAL on the grid (T ≤ ½log5, k ≤ 13, Galerkin dim ≤ 70); nothing is claimed beyond that. Lemma 2.4 is algebra; its application is CONDITIONAL.
 - Theorem 3.3 (form core) uses only the domain of thm:A and the bound uK ≤ 1 (R186_024 §1.4); Theorem 4.1 is bilinearity + 3.3.
 - Nothing is claimed about the sign: all λ_min(W|E_k) are positive. No equivalence between row D and other statements is used.
-- For Paper 47: Lemmas 1.1–1.4 and Theorem 3.3 (exact upper bound on λ_A via piecewise Tate exponentials) can be integrated as lemmas (verified against thm:A/lem:K/thm:S iii); the n₋ = 1 observation only as NUMERICAL. Do not integrate "(L2_k) as a finite target".
+- For Paper 46: Lemmas 1.1–1.4 and Theorem 3.3 (exact upper bound on λ_A via piecewise Tate exponentials) can be integrated as lemmas (verified against thm:A/lem:K/thm:S iii); the n₋ = 1 observation only as NUMERICAL. Do not integrate "(L2_k) as a finite target".

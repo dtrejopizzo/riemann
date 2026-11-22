@@ -65,7 +65,7 @@ Let f be a primitive Hecke form of level 1, weight k, with Satake parameters {α
 second equality: α^j+β^j = λ(p^j) − λ(p^{j−2}) by Hecke. The sym² decomposition is that of |tr|² = 1 + tr(sym²) for
 SU(2). ∎
 
-**Proposition 19.2 (PROVED).** With P_T and 𝔞 as in Paper 47 (sec:spec, thm:shape, rem:shape-additive):
+**Proposition 19.2 (PROVED).** With P_T and 𝔞 as in Paper 46 (sec:spec, thm:shape, rem:shape-additive):
 (i) 𝔞^{f×f̄}_T = 𝔞^ζ_T + 𝔞^{sym²f}_T in P_T (Φ.12; additive conductors and Γ);
 (ii) any derivation of 𝔞^ζ_T ⪰ 0 from this identity needs 𝔞^{sym²f}_T ⪯ 𝔞^{f×f̄}_T, which is literally 𝔞^ζ_T ⪰ 0
 (REF-D);

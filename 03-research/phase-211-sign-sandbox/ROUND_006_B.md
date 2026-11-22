@@ -12,9 +12,9 @@ CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL. No equivalence of (★) with an
 As in ROUND_005_A §0: I = (−T, T), Q = 1_I, R = 1 − Q, V_a the shift, c_x = ½(V_x + V_{−x}), S_x = Qc_xQ the
 truncated shift, contacts N_T = {n ≥ 2 : log n < 2T}, x_n = log n, v_n = 2Λ(n)/√n, Π = Σ v_n S_{x_n} on L²(I),
 𝔪 the multiplier by m(τ), M_0 = Q𝔪Q, P the orthogonal projection of L²(I) onto P_T (two Tate conditions),
-M = PM_0P|_{P_T} (the operator of Arch on P_T; compact resolvent, CITED Paper 47 prop:nodes), Π_P = PΠP|_{P_T},
+M = PM_0P|_{P_T} (the operator of Arch on P_T; compact resolvent, CITED Paper 46 prop:nodes), Π_P = PΠP|_{P_T},
 A = M − Π_P. K(u) = 2Σ_{j≥0} e^{−(2j+½)u} the Lévy kernel; (𝔪F)(t) = C_0F(t) + ½∫_ℝ (F(t) − F(s))K(|t − s|) ds
-(the Lévy form of Paper 47 lem:K, CITED; the factor ½ is checked in §4.3). 𝒩_T = negative spectral subspace of M
+(the Lévy form of Paper 46 lem:K, CITED; the factor ½ is checked in §4.3). 𝒩_T = negative spectral subspace of M
 on P_T, n_T = dim 𝒩_T; Band = E_{n_P} = span of the eigenvectors of M with eigenvalue ≤ λ_max(Π_P) (the sharp
 band of ROUND_005_E); U_δ = spectral subspace of A for eigenvalues < δ (the cluster), m_δ = dim U_δ.
 
@@ -40,7 +40,7 @@ and 𝒲_j({Π_P, [M, Π_P]}; S) (comb and commutator), with S = 𝒩_T and S = 
   identified as "what reaches the bottom". The hypothesis tested is 5A's: that the M-steps break the set-invariance
   and generate the pair. §4.1 proves this hypothesis false for every word family; the memo is therefore not a retry
   but the closure of the proposal, with the mechanism.
-- Nothing of the index is retried. Paper 47's coercivity reduction (thm:coer-B, cor:coer-L1, k_0(T)) is the exact
+- Nothing of the index is retried. Paper 46's coercivity reduction (thm:coer-B, cor:coer-L1, k_0(T)) is the exact
   band/Schur reduction that §5 points to; it is CITED, not rebuilt.
 
 ## 2. The object and its regularity
@@ -58,7 +58,7 @@ Then 𝓗 is invariant under V_x, Q, P, 𝔪-compressions (M_0, M), S_x, Π, Π_
 vanishes at ±T and has F̂ = O(τ^{−2}); for the spectral cone it is the regularity hypothesis (H_𝓗)), then K̃_j ⊂ 𝓗
 ⊂ 𝒟_T ∩ Dom(M^k) for all j, k, and all form values below are finite.
 Proof. V_x is the unitary multiplier e^{ixτ} on every weighted space. 𝔪 is the multiplier m(τ) with C_0 ≤ m ≤
-C + log(2 + |τ|) (Paper 47 lem:mbounds, CITED), so it maps weight s to weight s − 2. Q is multiplication by
+C + log(2 + |τ|) (Paper 46 lem:mbounds, CITED), so it maps weight s to weight s − 2. Q is multiplication by
 1_I = ½(sgn(t + T) − sgn(t − T)); multiplication by sgn(t − a) is, in Fourier variables, the Hilbert transform
 conjugated by the modulation e^{iaτ}, and the Hilbert transform is bounded on L²(w dτ) for every weight w in the
 Muckenhoupt class A_2 (CITED: Hunt–Muckenhoupt–Wheeden), which contains w_s(τ) = (1 + log(2 + |τ|))^s for every real
@@ -256,7 +256,7 @@ L_x* − L_x, and explicitly
     (H_xF)(t) = −¼ [ 1_{(−T, x−T)}(t) ∫_I K(|t − x − s|) F(s) ds + 1_{(T−x, T)}(t) ∫_I K(|t + x − s|) F(s) ds ].
 Hence [M_0, Π] = L* − L with L := Σ_{n∈N_T} v_n L_{x_n}, and [M, Π_P] = P(L* − L)P − PM_0ΓΠP + PΠΓM_0P on P_T
 (the last two terms of rank ≤ 2 each).
-Proof. The Lévy form (𝔪F)(t) = C_0F(t) + ½∫(F(t) − F(s))K(|t − s|)ds (Paper 47 lem:K, CITED; the ½ is forced by
+Proof. The Lévy form (𝔪F)(t) = C_0F(t) + ½∫(F(t) − F(s))K(|t − s|)ds (Paper 46 lem:K, CITED; the ½ is forced by
 m(τ) − C_0 = ∫_0^∞(1 − cos τu)K(u)du = ½∫_ℝ(1 − cos τu)K(|u|)du) gives both formulas by F(t) = 0 for t ∉ I, resp.
 G(t) = 0 for t ∈ I. H_x* = Q𝔪Rc_xQ = L_x since Q, R, 𝔪, c_x are self-adjoint. [M_0, S_x] = Q𝔪Qc_xQ − Qc_xQ𝔪Q; write
 the middle Q as 1 − R and use [𝔪, c_x] = 0 on L²(ℝ): Q𝔪c_xQ − Qc_x𝔪Q = 0, leaving −Q𝔪Rc_xQ + Qc_xR𝔪Q. The explicit
@@ -337,7 +337,7 @@ finite depth (Prop. 4.2). (ii) Any homogeneous family must first contain U_δ(T)
 known ordering is the archimedean one (E_k, k ≈ 2.3m(T) ≈ 0.35e^{4T}, 5E), and the words need, in the tested range,
 ≈ 0.8 of the section — the depth at which they capture is the depth at which they are the section. (iii) Hence the
 sign cannot be carried by the *choice of a family*; it must be carried by an inequality on the captured block, i.e.
-by the n_P × n_P (or k × k) Schur complement of a_T on the band E_{n_P} (Paper 47's coercivity reduction thm:coer-B /
+by the n_P × n_P (or k × k) Schur complement of a_T on the band E_{n_P} (Paper 46's coercivity reduction thm:coer-B /
 cor:coer-L1, CITED; 5E §1), whose entries are the exact resolvent-weighted iterated comb correlations
 Π_bc (Arch_c − Π_cc)^{−1} Π_cb, non-linear in v from degree 2, with K entering through the resolvent of Arch on the
 complement. The margin of that condition is λ_A(T) itself (it is exact), so no truncation with a margin can
@@ -396,7 +396,7 @@ Stop building families from Λ-free seeds with homogeneous generators (closed cl
 sign into the exact Schur complement of a_T on the sharp band (or on E_k with k ≥ 2.3m(T)): S_T := D_b − Π_bb −
 Π_bc (Arch_c − Π_cc)^{−1} Π_cb, exact, with Arch_c − Π_cc ≥ α_{n_P+1} − λ_max(Π_P) > 0 on the complement (by the
 definition of the sharp band and Lemma 3.0 of 5E; coercivity is PROVED once the band threshold is λ_max(Π_P)). The
-step is: (a) corpus check of this object against Paper 47's coercivity reduction (thm:coer-B, cor:coer-L1, k_0(T))
+step is: (a) corpus check of this object against Paper 46's coercivity reduction (thm:coer-B, cor:coer-L1, k_0(T))
 and the (L2′) reduction of ROUND_001_C, to state in writing what differs (band threshold λ_max(Π_P) instead of
 A_T; exact resolvent instead of a scalar floor); (b) expand (Arch_c − Π_cc)^{−1} in the Neumann series in
 Arch_c^{−1/2}Π_ccArch_c^{−1/2} (convergent when the band threshold is max(π_+, π_−); the ratio is ≈ π/α_{n_P+1},

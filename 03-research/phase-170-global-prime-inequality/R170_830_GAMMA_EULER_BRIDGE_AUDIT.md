@@ -23,7 +23,7 @@ Over the radical,
  D_\Delta=B+\tfrac12Q^{(1)},
 \]
 
-because Paper 47 proves
+because Paper 46 proves
 
 \[
  2\langle F,\Delta F\rangle

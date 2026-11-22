@@ -29,6 +29,6 @@ Script: scratchpad `r022.py` (uses `r021_vec_24.npy`, `g1_A_5_8_1_0.npz`, M = 24
 3. Normalization: s₀ unit-normalized in L²(h), h = ½ξ − ξ′; spectral mass 0.9995 (tail outside [0,40] negligible).
 4. Prime-term convention: E_S − E_∞ = −2Λ(2)/√2 · c(log 2) in `build`; with c = 0.145 this gives −0.142, consistent with ΔC − ΔSon ≈ 0.15 from R186_017.
 
-## For Paper 47
+## For Paper 46
 
 Do not integrate as a theorem. As an observation (NUMERICAL): the fragile direction of the archimedean Sonin form on 𝒫_T is a window mode of frequency ≈ 4/T, whose autocorrelation at log 2 is positive for T ∈ [0.40, ½log3]; the truncated symbol m + ε̂_T changes sign, so any positivity argument for Son via a pointwise symbol is ruled out in the window (NO-GO for that class of method).

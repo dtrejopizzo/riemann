@@ -51,7 +51,7 @@ z·z̄² = z̄, which must be ≥ 0 ν-a.e.: z = 1, i.e. τ log p ∈ 2πℤ. Co
 Periodicity: 𝖡 = ν̂, and ν on the lattice (π/log p)ℤ is equivalent to 𝖡(d + 2log p) = 𝖡(d) (uniqueness of Fourier–Stieltjes transforms). ∎
 
 **Corollary 3 (two primes; PROVED modulo CITED explicit formula).** Under the premise, φ is site-RP in two distinct primes p ≠ p′ only
-if supp ν ⊂ (π/log p)ℤ ∩ (π/log p′)ℤ = {0}, i.e. 𝖡 ≡ 𝖡(0). This is false: by the explicit formula in the form of P47 thm:Z (CITED),
+if supp ν ⊂ (π/log p)ℤ ∩ (π/log p′)ℤ = {0}, i.e. 𝖡 ≡ 𝖡(0). This is false: by the explicit formula in the form of P46 thm:Z (CITED),
 ν = Σ_γ m_γ ĉ₀(γ)δ_γ over the zero ordinates, ĉ₀ = F̂₀² > 0 on ℝ for every profile in 𝒫_{T₀} (F̂₀ = (τ² + ¼)|ĝ|⁴ and |ĝ(τ)| ≥
 |e^{ba} − 1|/|b + iτ| > 0), and ζ has a zero on the line (Hardy, CITED). Hence **chessboard estimates in ≥ 2 prime directions have no input.**
 

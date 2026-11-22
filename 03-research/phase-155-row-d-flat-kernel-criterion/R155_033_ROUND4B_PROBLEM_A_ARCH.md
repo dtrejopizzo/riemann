@@ -1,14 +1,14 @@
 # R155.033 — round 4b: Problem A on the archimedean form alone, and (H1)
 
 *Phase 155, round 4b. Executes the the round-4 orders (c) and (b) of `R155_029 §3`.
-Inherits Paper 47 §2 (`lem:K`, `thm:S`, `thm:A`, `lem:mbounds`), §3 (`thm:D1`, `thm:O`, `rem:OvsB`,
+Inherits Paper 46 §2 (`lem:K`, `thm:S`, `thm:A`, `lem:mbounds`), §3 (`thm:D1`, `thm:O`, `rem:OvsB`,
 `thm:W`), §4 (`lem:F1`), §8 (`prob:A`, `prop:TK`, `lem:R1`, `thm:R`, `cor:R3`, `prop:arch`), and
 `R155_001` (L1 negatives, Prop. L1.1, §2.3 endpoint profile), `R155_004 §6` (Lemma R1),
 `R155_010 §5`, `R155_023` (amended: `τ₀ = 6.28983599`, `λ^{∞,P}_min`, `n₋`), `R155_029 §3`.
-Paper 47 and `scripts/r4a` are **not** touched. Scripts: `scripts/r4b/`.*
+Paper 46 and `scripts/r4a` are **not** touched. Scripts: `scripts/r4b/`.*
 
 **No sign for `ζ` is claimed at any `T`. Endpoint of record unchanged:
-`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` (Paper 47 Thm C). Every number below is `DIAGNOSTIC`
+`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` (Paper 46 Thm C). Every number below is `DIAGNOSTIC`
 (double precision, no interval arithmetic).**
 
 ---
@@ -16,12 +16,12 @@ Paper 47 and `scripts/r4a` are **not** touched. Scripts: `scripts/r4b/`.*
 ## §0 Verdict
 
 1. **(c) is a STRUCTURAL NEGATIVE, and it is now quantitative.** Removing the primes does *not* make
- Problem A easier. Two independent facts say so. (α) Paper 47 `thm:O` is stated "for every finite
+ Problem A easier. Two independent facts say so. (α) Paper 46 `thm:O` is stated "for every finite
  weight family, **including `v = 0`**", and its proof locates the obstruction in `K(u) ~ 1/u` as
  `u → 0⁺` — *inside the window, at its edge* — not in the prime atoms (`rem:OvsB` already says this
  in words). So the archimedean dual is never attained either, and the rate question survives intact.
  (β) [amended per R155_049: this clause holds for `(D_∞)` only; in the full programme of
- Paper 47 the sampling cost is `Θ(1/M)`, charged to the polar block's edge jump] **Theorem AL** below proves that for a *fixed smooth* flat-top weight the lattice
+ Paper 46 the sampling cost is `Θ(1/M)`, charged to the polar block's edge jump] **Theorem AL** below proves that for a *fixed smooth* flat-top weight the lattice
  restriction costs only `O_r(M^{−r})`, arbitrarily fast — so [amended per R155_037] **at
  fixed smoothness the lattice is free at rate `M^{−r}`; the deficit is the trade-off between the
  edge approximation and `V_r M^{−r}`** (in the joint optimisation `V_r(w)M^{−r}` *is* the lattice
@@ -56,13 +56,13 @@ Paper 47 and `scripts/r4a` are **not** touched. Scripts: `scripts/r4b/`.*
 
 | query | hits | what is already there | what is new here |
 |---|---|---|---|
-| `Problem A` | 98 files | `prob:A` (Paper 47 §8.4); `R155_010 §5` ("Problem A proper: a class-dependent **lower** bound. Everything in rounds 1–2 and the reverse track is upper-bound-side"); `R155_029 §2.4` (same); `R155_000 §2` levers L1–L4. Older hits (`phase-124`, `phase-16-surf-witness-variety`, `phase-136`) are a different "Problem A" | the archimedean specialisation `(D_∞)`, and the first **lower**-bound theorem of the phase (Theorem AL) |
+| `Problem A` | 98 files | `prob:A` (Paper 46 §8.4); `R155_010 §5` ("Problem A proper: a class-dependent **lower** bound. Everything in rounds 1–2 and the reverse track is upper-bound-side"); `R155_029 §2.4` (same); `R155_000 §2` levers L1–L4. Older hits (`phase-124`, `phase-16-surf-witness-variety`, `phase-136`) are a different "Problem A" | the archimedean specialisation `(D_∞)`, and the first **lower**-bound theorem of the phase (Theorem AL) |
 | `one-sided approximation` | 10 files | `R154_018 §`/`R154_019` (the reformulation, and "its rate is a zero-counting wall"); `R154_019:28` records the corpus was empty before that round; `R154_020` audit | nothing new on the gapped one-sided side; §2.4 records **why** the Jackson route does not start |
 | `Jackson` | 4 files | `R154_018:28` (the order), `R154_019:118` ("for the band-limited (classical) side, rates are sharp and classical"), `E67_1c` (unrelated) | §2.4: the Jackson rate is available for the *approximation*, useless because the **constraint is a spectral gap, not a degree bound**, and the cost reappears as `V_r ↑ ∞` |
-| `prolate` | 389 files | Connes–Consani prolate compression (Paper 47 `subsec:arch` remark); `phase-7-weil-carleson-sine-kernel/connes/prolate_bridge.py`; `phase-93`, `phase-137` | the prolate operator used as a **negative-index counter** for `A_∞|P_T` (§3), via `θ(τ₁)` |
+| `prolate` | 389 files | Connes–Consani prolate compression (Paper 46 `subsec:arch` remark); `phase-7-weil-carleson-sine-kernel/connes/prolate_bridge.py`; `phase-93`, `phase-137` | the prolate operator used as a **negative-index counter** for `A_∞|P_T` (§3), via `θ(τ₁)` |
 | `Slepian` | 57 files | Landau–Widom quoted in `R155_023 §4` (Prop. 3(ii), lower half `HEURISTIC`) | §3.2 replaces the `HEURISTIC` splitting by a `PROVED` min–max count, and then **measures how lossy it is** |
 | `Bonami` | 1 file | `phase-61-open-problems/respuestas3.md` only — the Bonami–Karoui explicit prolate bounds are **not** in `00-references` | not used; §3.4 records that importing them would move `47 → ≈8`, still not `1` |
-| `Poisson summation` | 66 files | `R154_025:284` and Paper 47 `lem:F1`: the **dual** direction (a lattice `ν` makes `ν̂` periodic); `R155_004 §6`/`lem:R1`: the **primal** direction (periodising `μ` gives a test kernel) | the **third** direction — *sampling a smooth continuous dual density onto the lattice*, with the aliasing error controlled by smoothness (Theorem AL). Grep for `Euler--Maclaurin`/`sampling the certificate` in phases 153–155 and Paper 47: no hits |
+| `Poisson summation` | 66 files | `R154_025:284` and Paper 46 `lem:F1`: the **dual** direction (a lattice `ν` makes `ν̂` periodic); `R155_004 §6`/`lem:R1`: the **primal** direction (periodising `μ` gives a test kernel) | the **third** direction — *sampling a smooth continuous dual density onto the lattice*, with the aliasing error controlled by smoothness (Theorem AL). Grep for `Euler--Maclaurin`/`sampling the certificate` in phases 153–155 and Paper 46: no hits |
 | `aliasing` | 15 files | `phase-106`, `phase-114` (unrelated Green/Legendre contexts) | new in this line of work |
 
 Nothing below duplicates a corpus statement; Theorem AL and Proposition NC are new, Theorem R∞ is a
@@ -74,7 +74,7 @@ specialisation of `thm:R`.
 
 ### 2.1 The programme `(D_∞)`
 
-With the comb deleted the symbol is `σ_∞ = m`, `A_T = 0`, and Paper 47 §3 reads verbatim:
+With the comb deleted the symbol is `σ_∞ = m`, `A_T = 0`, and Paper 46 §3 reads verbatim:
 
 > **(P_∞)** `λ^{∞,P}(T) = inf{ ∫ m dμ : μ` even probability on `ℝ`, `μ̌(u) = 0` for `|u| ≥ 2T }`.
 > **(D_∞)** `sup{ c : m + ν̂ + β·ĝ ≥ c` on `ℝ`, `ν` finite even signed, `supp ν ⊆ {|u| ≥ 2T} }`.
@@ -96,13 +96,13 @@ It is still an **upper** bound on the ceiling, i.e. upper-bound-side.
 
 ### 2.2 The certificate-as-weight dictionary, with no primes
 
-`m(τ) = C₀ + ∫₀^∞ (1 − cos τu)K(u)du` (Paper 47 `thm:S`). For `w : [0,∞) → ℝ` with `w ≡ 1` on
+`m(τ) = C₀ + ∫₀^∞ (1 − cos τu)K(u)du` (Paper 46 `thm:S`). For `w : [0,∞) → ℝ` with `w ≡ 1` on
 `[0,2T]`, put `G(u) := (1 − w(u))K(u)·1_{u ≥ 2T}`, extended evenly, and `ν_w := G(|u|)du`. Then
 `supp ν_w ⊆ {|u| ≥ 2T}` and
 
  **`m(τ) + ν̂_w(τ) = C₀ + ∫₀^∞ (1 − w(u)cos τu)K(u)du =: f_w(τ)`**, `β = 0`. (2.1)
 
-This is Paper 47 `thm:Z` with the prime atoms deleted; `β = 0` because on `P_T` the two polar
+This is Paper 46 `thm:Z` with the prime atoms deleted; `β = 0` because on `P_T` the two polar
 functionals are free. So `(D_∞)` **is** the problem: choose a weight `w`, flat-top `≡ 1` on the
 window, maximising `inf_τ f_w(τ)`; and `(P_∞)` is: choose an autocorrelation `c_F` supported in the
 window with `c_F(0) = 1`, minimising `C₀ + Lev(c_F)`. Two elementary but sharp remarks:
@@ -122,7 +122,7 @@ window with `c_F(0) = 1`, minimising `C₀ + Lev(c_F)`. Two elementary but sharp
 
 > **[amended per TEX_R2 finding 1 / R155_049]** Theorem AL and Corollary AL′ below are
 > **correct as stated, for the archimedean programme `(D_∞)` of §2.1 only**, where `G = (1−w)K`
-> vanishes at `u = 2T⁺` (`w(2T) = 1`) so that `G_e ∈ C^{r−1}`. They were transplanted into Paper 47
+> vanishes at `u = 2T⁺` (`w(2T) = 1`) so that `G_e ∈ C^{r−1}`. They were transplanted into Paper 46
 > (`thm:AL`, `cor:ALdef`) for the **full** programme, and there they are **FALSE**: by `eq:nuw` the
 > a.c. density of `ν_w` is `½(1−w)K + 2w cosh(u/2)`, which at `u = 2T⁺` equals `2cosh T ≠ 0` — a jump,
 > so no `O(M^{−r})` Poisson bound holds. `R155_049` proves the correct replacement: the sampling of a
@@ -346,7 +346,7 @@ was wrong.)
 | statement | label |
 |---|---|
 | Theorem R∞ (`thm:R` at `𝒩 = ∅`; `Δ_∞ = Δ − 2A_T`) | `PROVED` (specialisation, proof re-read) |
-| Dictionary (2.1): `(D_∞)` = flat-top weights, `m + ν̂_w = f_w`, `β = 0` | [amended per R155_037] `PROVED` as algebra, but **not** `thm:Z`: (2.1) drops the primes **and** the polar term `2ĝ₀`, whereas Paper 47's flat-top dual point is `(ν_w, β=(2,0))`; carries **no** explicit-formula/zero-sum reading via `thm:Z` |
+| Dictionary (2.1): `(D_∞)` = flat-top weights, `m + ν̂_w = f_w`, `β = 0` | [amended per R155_037] `PROVED` as algebra, but **not** `thm:Z`: (2.1) drops the primes **and** the polar term `2ĝ₀`, whereas Paper 46's flat-top dual point is `(ν_w, β=(2,0))`; carries **no** explicit-formula/zero-sum reading via `thm:Z` |
 | `τ = 0` cap: a certificate of value `≥ λ^{∞,P}` needs `∫_{2T}^∞(1−w)K ≥ λ^{∞,P} − C₀`, i.e. `w` must go negative outside (factor `≥ 2.3`, `≥ 2.5`) | `PROVED`; the two factors `DIAGNOSTIC` [amended per R155_037: `≥2.6` corrected to `≥2.5`, exact factors `2.307`, `2.576`] |
 | `ν = 0, β = 0` feasible with value `C₀` | `PROVED` |
 | **Theorem AL** (lattice sampling of a smooth weight; `ε_r(M) = 2(1−2^{−r})ζ(r)V_r(πM/2T)^{−r}`) | **`PROVED`** (Poisson summation + `lem:mbounds`(i)); **new**; [amended per R155_037] hypothesis unpacked: `w ≡ 1` on `[0,2T]` and on `[U,∞)` with `C^{r−1}` contact at both ends |
@@ -365,7 +365,7 @@ was wrong.)
 
 ---
 
-## §5 Proposal for Paper 47 (not applied here)
+## §5 Proposal for Paper 46 (not applied here)
 
 1. **`§8.4` (`prob:A`) gains a reduction and a floor.** Add Theorem AL and Corollary AL′ as a
  subsection of `§8`: they say that for the archimedean form the lattice class is not the obstruction

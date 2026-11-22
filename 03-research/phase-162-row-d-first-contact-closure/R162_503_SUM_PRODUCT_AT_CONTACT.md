@@ -29,7 +29,7 @@ Gate 1 remains OPEN. No label moves.
   An identity does not qualify. O-D4.1 has to be restated with "Λ*1=log" replaced by one of these,
   and §5 gives the one restatement that survives F1–F4 formally.
 
-Notation: Paper 47 §sec:firstcontact. a_T, H_T, Π, P, 𝓕 = u_∞(D)J, S_N, K_N, L_M, A_M, E_N and
+Notation: Paper 46 §sec:firstcontact. a_T, H_T, Π, P, 𝓕 = u_∞(D)J, S_N, K_N, L_M, A_M, E_N and
 H_{M,N} as in thm:PCfinite. a_m = 2m+½, s_m = 2m+1, K_F(a) = ∫e^{−at}F, r is the Tate vector of
 eq:localweak, and ε is the parity of F.
 
@@ -40,7 +40,7 @@ eq:localweak, and ε is the parity of F.
   *inside the Rayleigh pairing at the kernel vector*, which D4 did not treat. Its Thm 2.2 claims
   that (Z2) against 1_ℕ fails for DH. That is correct as a statement about the comb, and §4.3
   explains why it still gives no DH line inside a PC-type argument.
-- Paper 47 eq:Qbalance / eq:Qspectral are the case Θ = S_L (Gamma Hankel) of (2.3). The
+- Paper 46 eq:Qbalance / eq:Qspectral are the case Θ = S_L (Gamma Hankel) of (2.3). The
   coefficient is −2(d_m+λ), which is negative, so the sign is wrong.
 - R162_305 (trivial-zero cancellation), R162_401 (log channel cancels by [X,S_N] = −K_N), and
   R162_403 (smooth comb: H^{(P)} = 0, symbol identities fail F1). §3 identifies these as one

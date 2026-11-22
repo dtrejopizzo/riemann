@@ -56,7 +56,7 @@ Theorem 11.14.
 | file | content |
 |---|---|
 | `R142_000_BLUEPRINT.md` | the blueprint's blueprint: Q-A (1–3), Q-B (1–4), falsifier protocol, FATAL rule |
-| `R142_001_ROUND1.md` | **report round 1, repaired in place for round 2** — §D.31: D.31.2 (the exact constant as a support function); D.31.4–5 (the sharp modulus bound, `s(γ,θ) < 1`, `s_1`); D.31.7 (`F_0`); D.31.8 (exact (C4.1)); **D.31.9 (decision: FALSE)**; **D.31.10–11**; **D.31.12 (obstruction)**; D.31.14 (ray-restricted); the table of eight necessary conditions × `ξ`/`ξ_K`/`Ξ_a`; falsifier runs; Q-B.1–4; corpus check; paper-facing list P46-26…P46-33; open list; §Label. Round-2 repairs carry bracketed `[…, round 2, finding H…]` notes |
+| `R142_001_ROUND1.md` | **report round 1, repaired in place for round 2** — §D.31: D.31.2 (the exact constant as a support function); D.31.4–5 (the sharp modulus bound, `s(γ,θ) < 1`, `s_1`); D.31.7 (`F_0`); D.31.8 (exact (C4.1)); **D.31.9 (decision: FALSE)**; **D.31.10–11**; **D.31.12 (obstruction)**; D.31.14 (ray-restricted); the table of eight necessary conditions × `ξ`/`ξ_K`/`Ξ_a`; falsifier runs; Q-B.1–4; corpus check; paper-facing list P47-26…P47-33; open list; §Label. Round-2 repairs carry bracketed `[…, round 2, finding H…]` notes |
 | `R142_002_AUDIT.md` | audit: verdict on D.31.12 (**STANDS**), findings H1–H10, independent recomputation of every constant, the geometric diagnosis, required actions |
 | `R142_003_ROUND2.md` | **round 2** — per-finding ledger (all ten accepted) and **§D.32**: what is vacuous / what survives; the geometric diagnosis as Restatement D.32.1; **Prop. D.32.3 (HORN A)**; **Thm D.32.4 (the HORN B test)** with the five-candidate table; O-18′, O-19, O-22, O-22′, O-23 |
 | `scripts/certify_sF.py` | certifies `s_1 = 0.9984601627188091092345474…`, `u^* = 0.11099156…`, `d_0 = 324.9598…`, and the nonempty witness windows (mpmath, 40 digits) |
@@ -66,7 +66,7 @@ Scripts certify constants only; no claim rests on unverified numerics.
 
 ## Imports
 
-**(X19)** (new to Paper 46 / row D; Platt–Trudgian is already cited in papers 01, 36, 37) = (V1) `ρ_1`
+**(X19)** (new to Paper 47 / row D; Platt–Trudgian is already cited in papers 01, 36, 37) = (V1) `ρ_1`
 is a simple on-line zero of `ξ`; (V2) no other zero has `|Im ρ| ≤ 21`. Rosser–Yohe–Schoenfeld (IFIP
 1968); Platt–Trudgian, Bull. LMS **53** (2021), 792–797. *A cheaper form is available:* `ξ'(ρ_1) ≠ 0`
 by interval arithmetic plus an argument-principle count. Q-B literature: Kreĭn–Nudel'man (AMS TMM 50,

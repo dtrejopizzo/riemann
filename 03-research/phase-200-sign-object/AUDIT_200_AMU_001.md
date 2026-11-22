@@ -1,7 +1,7 @@
 # AUDIT_200_AMU_001 — Audit of A_MU_FACTORIZATION_001 (phase 200, round 4)
 
 Phase 200, pen and paper. Row D / L′♯ as independent goal.
-Read: A_MU_FACTORIZATION_001; AUDIT_200_SPEC_003 (R-Q6, §7.2); SPEC_002 (T.1); Q2_LADDER_001 (Lemma R); Paper 47 §22
+Read: A_MU_FACTORIZATION_001; AUDIT_200_SPEC_003 (R-Q6, §7.2); SPEC_002 (T.1); Q2_LADDER_001 (Lemma R); Paper 46 §22
 (def. of Z_log l.9615, thm:ext-half l.9651/9721, rem:ext-killing l.9669); README index, in particular l.463
 (PROOF_L_SHARP_R_001), l.505 (PROOF_L_SHARP_MM_001), l.390 (INV_C_001) and l.407 (INV_T_001).
 
@@ -36,7 +36,7 @@ circular" (§2).
 
 **Computation (correct).** With h_n(y) := e^{y/2}r(ne^y),
 - Z^{(ε)}r = Σ_n n^ε h_n;
-- ∂_εZ^{(ε)}r|₀ = Σ log n·h_n = Z_log r (Paper 47 l.9615; the term n = 1 contributes log 1 = 0, so it coincides with the
+- ∂_εZ^{(ε)}r|₀ = Σ log n·h_n = Z_log r (Paper 46 l.9615; the term n = 1 contributes log 1 = 0, so it coincides with the
   sum from n ≥ 2 in the paper);
 - F_r′(0) = 2Re⟨Zr, Z_log r⟩ = 2⟨Ψ̌, Z_log r⟩ for real r.
 
@@ -51,7 +51,7 @@ arithmetic content.
   −2⟨Zr, Z_w r⟩ with weights w_n = log n is an ε-derivative, and the convolution with Λ has already been spent in rem:ext-killing(ii) before
   writing (1.0).
 - The "semiring" (log(nξ) = log n + log ξ) only contributes (2.3). It is the trivial change-of-variable identity ξ = ne^y, already
-  present in Paper 47 l.10343 ("For Z_log use log n = log b + log k").
+  present in Paper 46 l.10343 ("For Z_log use log n = log b + log k").
 - **Label:** PROVED (given thm:ext-half) **as rewriting**. Precedent: AUDIT_19 on M1 ("I1 renamed, nothing is actually varied").
 
 ---
@@ -230,7 +230,7 @@ The inventory (a)–(e) holds up, although (a) duplicates PROOF_L_SHARP_R_001 (l
 check omitted.
 
 Theorem D is correct, but it is notation: the chain rule applied to the definition of Z_log. The semiring only contributes
-the change of variable already present in Paper 47.
+the change of variable already present in Paper 46.
 
 The n^ε deformation is, by (2.1), the Mellin shift σ = ½ + ε. It falls under "do not retry σ-derivatives in the
 Mellin variable", and the cutoff at T is the circular truncation energy of MM_001.

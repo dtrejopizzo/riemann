@@ -1,5 +1,5 @@
 # CA_E_001 — Review
-Checked vs P47 thm:oneprofile, prop:AM(i), §subsec:oneprofile; my CA_E_000 pre-flag.
+Checked vs P46 thm:oneprofile, prop:AM(i), §subsec:oneprofile; my CA_E_000 pre-flag.
 
 ## Verdict
 **Lemma 0, Lemma 1, Theorem 1, Cor 1.1, Cor 1.2, Theorem 2: CONFIRMED PROVED. EXCLUDED as sign steps ((B″), REF-D) — memo agrees. Pre-flag resolved: the theorems concern the global target via prop:AM(i) (PD on G = ℚ_{>0}^×), so neither the M-cutoff nor the window compression enters; self-review 4 correctly leaves fixed-T compression to the closed Sonin/WH walls.**

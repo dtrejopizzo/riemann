@@ -19,7 +19,7 @@ Fix a real even `g ∈ C_c^∞(R)`, `g ≥ 0`, `g ≢ 0` (so `Z(g) ≠ 0` generi
 
     t_n(E) := I_∞(E, τ_{log n} g)   (n ≥ 1),      t_0(E) := (deg⁻E, deg⁺E).
 
-By Paper 46 Def. 11.4 / Lemma 11.4a each `t_n(E)` is `PRIME − ARCH` of `E ⋆ (τ_{log n}g)^∨` — an
+By Paper 47 Def. 11.4 / Lemma 11.4a each `t_n(E)` is `PRIME − ARCH` of `E ⋆ (τ_{log n}g)^∨` — an
 arithmetic quantity naming no zero — and by the explicit formula
 `t_n(E) = [polar] − Σ_ρ Φ_E(ρ)Φ_g(1−ρ) n^{½−ρ}`. (Variant to compare: `X_n := Frob_n^{sm}` of Paper 44
 mapped into `D^W` through the radial profile — decide which family is used and why; the smeared Frobenius
@@ -30,7 +30,7 @@ the prime sum inside `PRIME`.)
 of Theorem 12.3 for every `ξ_K` (with `g`, `τ`, `I_∞` read over `K`), and name the lines using A3 and A8.
 
 ## D.26 — What the traces determine (RESTATEMENT + new)
-1. Prove: `(t_0(E), (t_n(E))_n)` determines `E` modulo `𝓝_∞` (Paper 46 Thm 11.11 gives `(M(E), Z(E))`;
+1. Prove: `(t_0(E), (t_n(E))_n)` determines `E` modulo `𝓝_∞` (Paper 47 Thm 11.11 gives `(M(E), Z(E))`;
    the exponentials `n ↦ n^{½−ρ}` separate the zeros — give the argument: a finite or convergent linear
    combination `Σ_ρ a_ρ n^{½−ρ} = 0` for all `n ≥ 1` forces `a_ρ = 0`, by uniqueness for general Dirichlet
    series / Bohr almost-periodicity in `log n`). So `h⁰` may legitimately be a function of the traces.
@@ -68,7 +68,7 @@ with `C` a symmetric kernel on `N_0 × N_0` to be chosen — a **quadratic form 
    `E = mK + λ` and on primitive `E`.
 
 ## D.28 — O-17 (primitive bridge for `Ξ_Q`; R8)
-Transpose Paper 46 Prop. 12.4B to `Z = Ξ_Q` with `P = {0,1}`: from R139's effective non-primitive witness
+Transpose Paper 47 Prop. 12.4B to `Z = Ξ_Q` with `P = {0,1}`: from R139's effective non-primitive witness
 produce a `Ξ_Q`-primitive `C_c^∞` test with `Ŵ^{(Ξ_Q)} > 0`; use a non-real Davenport–Heilbronn zero
 (`γ_0 ≠ 0`) and widen the strip as R8 says. If it closes, (AT-1)(ii) returns to a refutation.
 

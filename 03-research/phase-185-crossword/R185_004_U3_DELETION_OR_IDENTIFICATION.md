@@ -221,13 +221,13 @@ corpus's methods is ARGUED (it is Table §2 plus the I1–I18 inventory).
 7. **Zero exclusion vs witness exclusion.** (i) uses Ex_W (R166_802 framework); (ii)–(iii) use Ex over zeros. The two
    connect via R166_802 Thm 2 (transfer), PROVED in the record; not reproved here.
 
-## For Paper 47/48
+## For Paper 46/48
 
 - **Paper 48 §sec:walls (W-identification):** add Lemma 3 (exact completeness in measures) and Obs 4 (in the positive
   discrete class, EF₁ alone identifies ζ by Thm R). Propose Thm U3 as `thm:deletion-or-identification`, with Def 5
   explicit and branch (iii) as a remark with the three sub-cases and their labels.
 - **Paper 48 Problem 6 (BF^disc_θ):** cite Cor 6: the boundary θ ≤ ⅓ is exactly U3's residual; its positive resolution
   implies RH and is a priori stronger.
-- **Paper 47 §7 (alongside Thm finZ and Thm F):** one sentence: "structural conditions on Λ are closed under
+- **Paper 46 §7 (alongside Thm finZ and Thm F):** one sentence: "structural conditions on Λ are closed under
   deletion; those that are not go through Λ∗1_ℕ = log (identification) or through a lower count (exponent)".
 - Vocabulary: do not write "U3 proved" without "relative to 𝔐_Λ (Def 5)"; do not write "absolute barrier".

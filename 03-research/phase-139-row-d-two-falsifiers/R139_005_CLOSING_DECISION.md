@@ -3,7 +3,7 @@
 1–2 in place), R139_002 (audit, 16 findings), R139_003 (ledger), R139_004 (confirmation: CONFIRMED
 with residue H17–H21, applied in place). Checks in this closing round: D.19.5's Landau argument with real
 zeros present; the Stirling exponent `πd/4` and the contour-shift existence proof of `K_K`; the
-Prop. 12.6 reading (P46-5 correctly withdrawn).*
+Prop. 12.6 reading (P47-5 correctly withdrawn).*
 
 ## 1. Results of record
 
@@ -20,7 +20,7 @@ Prop. 12.6 reading (P46-5 correctly withdrawn).*
 | D.21 | consolidated ledger of Weil's proof vs rows A–C; **W2 (Riemann–Roch on the square) ABSENT**, everything else PRESENT or PRESENT-CONDITIONAL | PROVED-IN-REPOSITORY + new ledger |
 | (P139) | see §2 | OPEN (the construction problem) |
 
-Withdrawn/downgraded during the phase: P46-5 (Prop. 12.6 conflation) — a misreading, now editorial;
+Withdrawn/downgraded during the phase: P47-5 (Prop. 12.6 conflation) — a misreading, now editorial;
 Thm D.20.2 general case — conditional; D.19.3–D.19.6 restricted to principal forms (O-10 for general `Q`).
 
 ## 2. The construction problem (P139), final form
@@ -45,6 +45,6 @@ where phase 140 builds.
 
 ## 4. Decision
 
-Phase 139 closed; no label change for row D. Paper-facing list (P46-6, P46-7, P46-8, P46-9, P42-1,
+Phase 139 closed; no label change for row D. Paper-facing list (P47-6, P47-7, P47-8, P47-9, P42-1,
 doc-80 numbering) recorded for Part III. Open items O-1…O-12 carried; O-9 (`Sh_Z` for a general number
 field) is the first task of phase 140.

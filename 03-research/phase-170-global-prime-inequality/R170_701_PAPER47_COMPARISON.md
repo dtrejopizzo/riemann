@@ -1,4 +1,4 @@
-# R170_701 — What phase 170 contributes relative to Paper 47
+# R170_701 — What phase 170 contributes relative to Paper 46
 
 Status: structural comparison and check of the
 relevant proofs; not an independent audit of every proof
@@ -12,14 +12,14 @@ not yet contribute a sign-arithmetic inequality stronger than Paper
 47.** Some necessary pieces of our construction are already better
 resolved in that paper.
 
-| Phase 170 construction | Precedent / difference in Paper 47 |
+| Phase 170 construction | Precedent / difference in Paper 46 |
 |---|---|
 | Positive archimedean energy after subtracting `m(0)` | Lemma K and theorems S/A: Lévy representation and Bernstein structure. |
 | Split `W=E-C`, gain, and coherent paths (301) | The paper already uses Schur and polar capacities; the explicit series of paths and their tails is an additional implementation, not a proof of the budget. |
 | Contact response and second-order coupling (401) | The Schur complement and the prime coupling are already present. A perturbation formula must not be confused with the sign of its outcome. |
 | Phase compensation (501) and nonlocal storage (601) | Both preserve or reformulate the spectral difficulty; neither uses the minimality of the first contact to force a new sign. |
-| Möbius-commutator detector (601) | Its fidelity remained open. Paper 47's Gamma detector is already injective on all of `L²(-T,T)`. |
-| Galerkin diagnostics | Paper 47 also controls the infinite complement with interval certificates. Our floating-point matrices do not improve on that certificate. |
+| Möbius-commutator detector (601) | Its fidelity remained open. Paper 46's Gamma detector is already injective on all of `L²(-T,T)`. |
+| Galerkin diagnostics | Paper 46 also controls the infinite complement with interval certificates. Our floating-point matrices do not improve on that certificate. |
 
 ## What remained to incorporate
 
@@ -50,7 +50,7 @@ obstacle.
 
 ## Verifiable adjustments to the paper text
 
-References: `04-papers/47-row-d-dual-certificates/main.tex`, stable labels.
+References: `04-papers/46-row-d-dual-certificates/main.tex`, stable labels.
 
 - Before the concentration (approx. line 714), "The program (P) has no
   minimizer (Theorem O)" contradicts the proof of O and the OvsB

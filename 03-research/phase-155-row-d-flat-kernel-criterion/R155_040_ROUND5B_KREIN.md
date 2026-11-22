@@ -1,6 +1,6 @@
 # R155_040 — round 5b: the Kreĭn extension problem for the ζ window datum (P5)
 
-Inputs: Paper 47 §7 (`def:W`, `thm:Z`, `thm:Zexh`, `cor:RH`, `lem:fdict`, `thm:finZ`, `rem:loc`,
+Inputs: Paper 46 §7 (`def:W`, `thm:Z`, `thm:Zexh`, `cor:RH`, `lem:fdict`, `thm:finZ`, `rem:loc`,
 `cor:infinite`, `prop:finuniv`, the unnumbered *Remark (Kreĭn extension)* after `rem:RHcert`),
 `R155_014` §2.2 Remark 2.5 (amended), `R155_031` §3(iv) and §4 P5, `R155_038` §3 (iii).
 Corpus grep for `Krein|Kreĭn|indeterminate|determinate|extension problem|screw|de Branges|Suzuki`:
@@ -47,12 +47,12 @@ and produces no new access to the sign. Recommend closing P5 as a route.
 |---|---|---|
 | `R155_014` Rem. 2.5 | finite `Z` = Carathéodory–Fejér/Kreĭn determinate case; "for ζ the extension problem is indeterminate at every scale, and the obstruction disappears" | first sentence `PROVED` (= §2 of that file); ζ sentence and the `dim ℋ(E_N)=2N` gloss `HEURISTIC` (amended per `R155_015`) |
 | `R155_031` §3(iv), §4 P5 | the dichotomy is the right frame, never proved for ζ; "indeterminacy is necessary, not sufficient"; difficulty "moderate … likely routine" | **superseded by §3 below on both counts** |
-| Paper 47, Remark (Kreĭn extension) | a certificate of value `λ^W_T` is a PD extension of `σ̌_T + 2g₀ − λ^W_T δ₀`; the distributional version of Kreĭn's theorem "not pursued"; would give a third proof of `thm:D1` | the present file pursues it for the *complete* datum `g` and finds the equivalence, not a third proof |
-| Paper 47 open item (5) | "the distributional Kreĭn extension route to Theorem D1" | untouched; see §4(iii) |
+| Paper 46, Remark (Kreĭn extension) | a certificate of value `λ^W_T` is a PD extension of `σ̌_T + 2g₀ − λ^W_T δ₀`; the distributional version of Kreĭn's theorem "not pursued"; would give a third proof of `thm:D1` | the present file pursues it for the *complete* datum `g` and finds the equivalence, not a third proof |
+| Paper 46 open item (5) | "the distributional Kreĭn extension route to Theorem D1" | untouched; see §4(iii) |
 
 Kreĭn's theorem itself (M. G. Kreĭn 1940; Akhiezer, *The Classical Moment Problem*, continuous analogue;
 Sasvári, *Positive definite and definitizable functions*) is **cited nowhere in the proofs below** — every
-statement of §3 is proved from Paper 47 and elementary Fourier analysis. That is deliberate: the classical
+statement of §3 is proved from Paper 46 and elementary Fourier analysis. That is deliberate: the classical
 theorem is stated for *continuous* PD functions on an interval, and our datum is a distribution with atoms,
 so the citation would be a gap. `CITED-NOT-VERIFIED` marks are therefore unnecessary.
 
@@ -62,13 +62,13 @@ so the citation would be a gap. `CITED-NOT-VERIFIED` marks are therefore unneces
 ```
 ⟨g, h⟩ := C₀h(0) + ∫₀^∞ (h(0) − h(u)) K(u) du − Σ_{n≥2} v_n h(log n) + 2∫_ℝ h(u) cosh(u/2) du. (2.1)
 ```
-This is the right-hand side of the Weil explicit formula in the normalisation of Paper 47 (`thm:Z`(ii)),
+This is the right-hand side of the Weil explicit formula in the normalisation of Paper 46 (`thm:Z`(ii)),
 read as a tempered distribution: `g` is the even distribution
 ```
 g = [C₀ + ∫₀^∞K]·δ₀ − ½ Pf K(|u|) + 2cosh(u/2) − Σ_{n≥2} (v_n/2)(δ_{log n} + δ_{−log n}), (2.2)
 ```
 the first two terms being the Lévy-regularised pair whose Fourier transform is the archimedean multiplier
-`m(τ) = C₀ + ∫₀^∞(1−cos τu)K(u)du ≥ 0` (Paper 47 `thm:A`, `eq:m`); the `2cosh(u/2)` term is not tempered
+`m(τ) = C₀ + ∫₀^∞(1−cos τu)K(u)du ≥ 0` (Paper 46 `thm:A`, `eq:m`); the `2cosh(u/2)` term is not tempered
 on ℝ but every pairing below is against a `w ∈ 𝒲_T` (exponential decay `> ½`), which is what
 `def:W` is for. By `thm:Z`, for `w ∈ 𝒲_T^{reg}`,
 ```
@@ -131,7 +131,7 @@ If `𝔈(T) ≠ ∅` then `W_T(F) ≥ 0` for every `F ∈ C_c^∞(−T,T)`, i.e.
 `C_c^\infty(I_T)` to be a form core for `\mathfrak a_T` (`main.tex` l. 123 states the form domain but
 not the core property); with that one line, `λ^W_T ≥ 0` follows by density.
 
-**Theorem 3 (the dichotomy, and its RH-equivalence).** `PROVED` (given Paper 47 `cor:RH`, `thm:Zexh`).
+**Theorem 3 (the dichotomy, and its RH-equivalence).** `PROVED` (given Paper 46 `cor:RH`, `thm:Zexh`).
 (a) *Per window, `T ≥ ½log2`.* `λ^W_T > 0 ⟹ KEP(T) is indeterminate ⟹ λ^W_T ≥ 0.`
 Hence certificates and indeterminacy coincide except on the boundary set `{T : λ^W_T = 0}`.
 (b) *Global.* The following are equivalent: **(1)** RH; **(2)** KEP(T) is solvable for every `T > 0`;
@@ -214,7 +214,7 @@ the extension-problem shadow of the phase-21-negative-directions-geometry–26 i
 the polar term, not the coefficient `β₀ = 2` itself: uniqueness of `β₀ = 2` is already `PROVED` in
 `prop:P` (`main.tex` l. 604 ff., via `\Rel(A\bar B)` taking both signs), and comes from the polar term
 `2\Rel(A\bar B)`, not from Lemma 2.2. What remains heuristic in `rem:RHcert` is only the convergence of
-optimiser duals to `(2,0)` (Paper 47 open item (2)).
+optimiser duals to `(2,0)` (Paper 46 open item (2)).
 
 ## §5 Labels
 
@@ -233,7 +233,7 @@ optimiser duals to `(2,0)` (Paper 47 open item (2)).
 | §4(iii) extremal-extension route | `HEURISTIC` |
 | Row-D label | **unchanged**; no sign, no new endpoint |
 
-## §6 Proposal for Paper 47 (not applied here — Paper 47 untouched by instruction)
+## §6 Proposal for Paper 46 (not applied here — Paper 46 untouched by instruction)
 
 1. Replace the unnumbered *Remark (Kreĭn extension)* of §7 by a short subsection "§7.x The extension
  problem", containing Definition 2.1, Lemma 2.2, and Theorems 1–3 with the proofs above. It costs ≈ one

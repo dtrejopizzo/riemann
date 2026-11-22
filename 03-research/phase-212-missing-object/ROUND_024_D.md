@@ -60,7 +60,7 @@ No type changes the hypothesis that caused the failure; only the notation (μ �
 ## (4) Connection with 𝔸_M ⪰ 0 and controls
 
 Identity that would be needed (not available): a_T(F) = Φ_T(F) − ‖C-leaks‖² with Φ_T ≥ 0 by a term of
-degree 2 in a that vanishes exactly at a = 2Λ (or Λ) and not on the controls; via Paper 47 prop:AM it would give
+degree 2 in a that vanishes exactly at a = 2Λ (or Λ) and not on the controls; via Paper 46 prop:AM it would give
 𝔸_M ⪰ 0 for M ≥ e^{2T}.
 Named steps under the controls:
 - weight cΛ / substituted weight: (C),(D) Riccati and μ_a∗b_a = δ_1 hold for every a: they do not fail. (A) ≥ 0

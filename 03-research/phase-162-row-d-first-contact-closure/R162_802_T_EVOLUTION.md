@@ -1,6 +1,6 @@
 # R162_802 — Round 8: evolution in T of the resolvent flow
 
-Notation from Paper 47 (eq:form, eq:W, lem:monoT, thm:parityschur),
+Notation from Paper 46 (eq:form, eq:W, lem:monoT, thm:parityschur),
 R162_504 (f_par, μ_k, Perron vector ψ_T) and R162_703 (g_par, Type I/II, T_W ≤ T_*).
 
 **Status.**
@@ -26,7 +26,7 @@ No sign is claimed. Gate 1 remains OPEN.
 - Kreĭn/de Branges/canonical systems, the global Hamiltonian: phase 64
   (CONSTRUCTION-TW-canonical-system: the positive von Mangoldt Hamiltonian; the rank-one escape
   theorem is RH-strength), phase 120 (C.1), and R162_590 §1a row 2 (E1).
-- Kreĭn indeterminacy: phase 155 round 5, Paper 47 thm:KEP3. RH ⟺ KEP(T) is indeterminate for all T.
+- Kreĭn indeterminacy: phase 155 round 5, Paper 46 thm:KEP3. RH ⟺ KEP(T) is indeterminate for all T.
 - Riccati: phase 102 (Turán–Riccati), phase 104 (Selberg–Riccati, "Riccati identity without an
   independent Gamma term"), P122_006/008 (Riccati pole-order quantization, PROVED-CONDITIONALLY, no
   source theorem).
@@ -118,7 +118,7 @@ localisation). Let T_P be the Perron crossing, the unique T with μ₁(T) = 0. T
 - (i) is implied by (ii) together with ι ≡ 0.
 
 *Proof.*
-- (⇒) Under RH, λ_W ≥ 0 for all T. So λ_A > 0 (Paper 47), and ι ≡ 0. μ₂ ≥ 0 gives N₋^ev ≡ 1 past
+- (⇒) Under RH, λ_W ≥ 0 for all T. So λ_A > 0 (Paper 46), and ι ≡ 0. μ₂ ≥ 0 gives N₋^ev ≡ 1 past
   T_P and N₋^odd ≡ 0. Hence f has no poles, and it is monotone. g_par ≥ 0 gives the bounds.
 - (⇐) Monotone and bounded with ι ≡ 0 gives g_par(T) ≥ 0 for all T. Thm 2.2 of R162_703 then gives
   λ_W ≥ 0 for all T, which is RH (thm:KEP3). ∎

@@ -8,7 +8,7 @@ For every causal rational block of n≤72000 real poles −v_j, v_j>1/2 with arb
 
 Therefore U=P Q is a polynomial of degree <2n+8 that relatively approximates F=P/D both on the band and at all points where the zeros are evaluated. This construction is repeated per band only to estimate the exact sum of the same F; no analytic test is glued together from different polynomials.
 
-**Sampling and shift.** The proof of 202 via Legendre and integration by parts remains valid with t=(2n+8)²/H, l=0.14−6t, h=0.17+6t. Indeed for A≤x≤4A/3 the remainder of Z3 is still ≤log A and the main derivative lies between 0.14 log A and 0.17 log A for A≥G, directly from their formulas in P47. The sampling includes multiplicities and the disjoint half-band convention of 201. If X is the vector U(±iγ) on this band of absolute heights and X_± its two versions shifted by the abscissae of the zeros, one has
+**Sampling and shift.** The proof of 202 via Legendre and integration by parts remains valid with t=(2n+8)²/H, l=0.14−6t, h=0.17+6t. Indeed for A≤x≤4A/3 the remainder of Z3 is still ≤log A and the main derivative lies between 0.14 log A and 0.17 log A for A≥G, directly from their formulas in P46. The sampling includes multiplicities and the disjoint half-band convention of 201. If X is the vector U(±iγ) on this band of absolute heights and X_± its two versions shifted by the abscissae of the zeros, one has
 
     ||X_±−X||₂ ≤ √(h/l)(exp(t)−1)||X||₂.
 

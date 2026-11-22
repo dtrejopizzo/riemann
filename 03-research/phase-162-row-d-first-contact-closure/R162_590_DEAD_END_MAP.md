@@ -31,7 +31,7 @@ so no gap/compactness argument can work.
 | Window variation / retard range / Toeplitz leakage | P124_004–010 | shorting estimate not provided; needs external centering | F1 |
 | Negative-witness normal form + opposite-metric trace (F2 arrow) | phase 121 | conservation law missing; F2 equivalent in force to global square | E1 |
 | Locality–phase–sign trilemma lifts | phase 120 | common-failure theorem | trilemma |
-| Tropical/mixed effectivity, Künneth, finite-S factorisation, nonnegative family | phases 141–149 (Paper 46) | no-go theorems T1+T2+T5+polar/entire | T5, polar/entire |
+| Tropical/mixed effectivity, Künneth, finite-S factorisation, nonnegative family | phases 141–149 (Paper 47) | no-go theorems T1+T2+T5+polar/entire | T5, polar/entire |
 | Beurling T3, Laumon one-round dictionary | phase 150 | T3 conditional; Laumon inherits rationality wall | Beurling (Φ) |
 | Summand vs numerator axis, dlVP | phase 151 | dlVP capped by archimedean density | M |
 
@@ -41,7 +41,7 @@ so no gap/compactness argument can work.
 |---|---|---|---|
 | FUP / Dolgopyat, Berkovich–Poineau | 152 | Hecke operators unbounded on relevant states (R152_002) | no form |
 | Cross-term identity for Ξ_a (Thm A), single-pair, needle | 153 | separates ζ from Ξ_a only; short support = concentration | Ξ_Q, Beurling |
-| Finite dual certificates, flat-top LP, Theorem Z | 154 (Paper 47) | no attained dual; no finite truncation; no induction in T | Thm finZ, M |
+| Finite dual certificates, flat-top LP, Theorem Z | 154 (Paper 46) | no attained dual; no finite truncation; no induction in T | Thm finZ, M |
 | Flat-kernel criterion, TK/N/N′, lattice classes M≤24, AL (retracted→AL′) | 155 | class-dependent ceilings; lattice loses Θ(1/M) | TK ceiling, arena ≥12 modes |
 | Archimedean positivity | 155 | indefinite from T≈0.58–0.60; primes must create sign | prop:archneg |
 | Kreĭn indeterminacy | 155 r5 | RH ⟺ indeterminacy; restatement | E1 |
@@ -96,7 +96,7 @@ so no gap/compactness argument can work.
 Ranked by the survey's own novelty/falsifiability ordering (R160_020 §6, R160_010 round-2 table, S4 §5).
 "Not in 162" means no R162 file addresses it.
 
-1. **Signed bilinear inequality in the alignment band** (R160_020 Option 3; S4 §5.15; P46 Rem 27.15(42)).
+1. **Signed bilinear inequality in the alignment band** (R160_020 Option 3; S4 §5.15; P47 Rem 27.15(42)).
    Heath-Brown/Friedlander–Iwaniec applied to the *quadratic form* on the low-frequency block of A_T|P_T, keeping
    Λ*1=log to the end. M7 only rewrote eq:form (restatement); the signed version was never built. First falsifiable
    lemma: signed bound uniform in T with main term a sum×product square, no gap used. Kill: any line valid for Λχ₂.

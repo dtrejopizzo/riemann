@@ -1,8 +1,8 @@
 # CA_F_000 — Seeds, front F (topology and geometry), phase 193
 
  Pen and paper; **no numerics run**. **No sign contact. No negative value for ζ.**
-Notation of Paper 47: window form 𝔞_T on P_T (tests on I_T with the two Tate conditions A(F)=B(F)=0), bottom λ_A(T),
-archimedean part m_T (C₀ + Lev), comb weights v_n = 2Λ(n)/√n, autocorrelation c_F. O-labels are Paper 47's (l. 8331–8345).
+Notation of Paper 46: window form 𝔞_T on P_T (tests on I_T with the two Tate conditions A(F)=B(F)=0), bottom λ_A(T),
+archimedean part m_T (C₀ + Lev), comb weights v_n = 2Λ(n)/√n, autocorrelation c_F. O-labels are Paper 46's (l. 8331–8345).
 Screen columns: Idx = ROUTES-TRIED-INDEX retry?; (R) = Problem (R) clause failed; (P) = CA_B (P1)–(P6) failed; O = surviving
 falsifier; B′/B″ = shape theorem; FE = FE-class generic; REF-D; [crit] = can it reach relative precision M^{−3} at the central cell.
 

@@ -1,6 +1,6 @@
 # Round 28, memo A — Extremal state of the nonnegative free-weight problem
 
-Everything that follows is NUMERICAL (double precision, Legendre Galerkin of P47 eq:Aform, SDP with SCS; bases 30 and 40).
+Everything that follows is NUMERICAL (double precision, Legendre Galerkin of P46 eq:Aform, SDP with SCS; bases 30 and 40).
 The scripts and outputs are in the temporary working folder `pbp_dual/` (`dual.py`, `analyze.py`, `an_T_N.txt`,
 `crho_T_N.csv`). The computation was interrupted before the reading; this memo records only what the outputs show.
 

@@ -1,6 +1,6 @@
 # The positive bias of the sieved product and a sign criterion without barrier
 
-For the same Q_a of 365, z=L², L=log x and fixed a>0, **eventual positivity Q_a(x)>0 is equivalent to the parabolic exclusion of 364**. Hence it suffices to prove eventual positivity for a in a positive sequence tending to zero. For each a in the verified range of 364 the sign is already strictly positive at every sufficiently large scale. This concerns the new observable, not an enlargement of the support window of P47.
+For the same Q_a of 365, z=L², L=log x and fixed a>0, **eventual positivity Q_a(x)>0 is equivalent to the parabolic exclusion of 364**. Hence it suffices to prove eventual positivity for a in a positive sequence tending to zero. For each a in the verified range of 364 the sign is already strictly positive at every sufficiently large scale. This concerns the new observable, not an enlargement of the support window of P46.
 
 **Formula in the regime without forbidden zeros.** Define K(s)=LΦ_a(s)+log E_z(s) using the real branch on the real axis and let s₀ be the real solution of K'(s₀)=0 near 1/2. Then
 

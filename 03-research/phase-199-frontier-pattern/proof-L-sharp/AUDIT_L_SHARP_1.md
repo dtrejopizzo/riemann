@@ -3,7 +3,7 @@
 Pen and paper, plus one numerical check that was strictly necessary to decide a label
 (§3: Slepian's derivative identity and the Connes–Consani kink value).
 
-Sources checked against the memos: Paper 47 (eq:symbol, eq:form, eq:W, thm:A/eq:Aform, the "Dirichlet form with
+Sources checked against the memos: Paper 46 (eq:symbol, eq:form, eq:W, thm:A/eq:Aform, the "Dirichlet form with
 killing" display in the proof after thm:A, def:PD, lem:roughEF, prop:archneg, prop:env, rem:moriceiling,
 subsec:shape-geom thm:geo-tv and prop:geo-int); Guo (Zenodo 23297284) (2.4), (2.10), Lemmas 4.1–4.4, Thm 4.5,
 Rem 4.6, (5.6); Connes–Consani 2006.13771 Def 4.4, Prop 4.5, Thm 4.7/(84), Lemma 5.4/(100); Mori VII §3
@@ -37,11 +37,11 @@ So A (arithmetic side, quadratic form of W on the tail), C (zero side, zero sum 
 of A) are the same number. They are consistent, and all three use the full form of the zero-extended tail.
 
 **1.2 E's correction (PROVED, and A's displayed formula is wrong as a display).** The archimedean part of ∫Ψ̄WΨ for
-Ψ extended by zero is (1/2π)∫Θ_∞|FΨ|² = b_∞‖Ψ‖² + ½∫∫_{ℝ²}|Ψ(x)−Ψ(x′)|²ν(x−x′)dxdx′ (ν = K/2 of Paper 47 lem:K; the
+Ψ extended by zero is (1/2π)∫Θ_∞|FΨ|² = b_∞‖Ψ‖² + ½∫∫_{ℝ²}|Ψ(x)−Ψ(x′)|²ν(x−x′)dxdx′ (ν = K/2 of Paper 46 lem:K; the
 factor ½ is checked: ∫∫_{ℝ²}|Ψ(x)−Ψ(x−u)|²ν(u) = 2∫_0^∞ν(u)(2‖Ψ‖²−2Re C_Ψ(u))du = 2·[Plancherel of
 2∫_0^∞(1−cos τu)ν(u)du]). Splitting ℝ² into (−∞,−a)² and the two strips on which one factor vanishes gives the
 **killing term** ∫_{y<−a}|Ψ(y)|²κ_a(y)dy, κ_a(y) = ∫_{|y+a|}^∞ν(t)dt ≈ ½log(1/|y+a|) + O(1) (ν(t) ~ 1/(2t)), integrable
-against |Ψ|² although Ψ jumps at −a (Ψ(−a−) = Φ_f(−a) = λ^{−1/2}Σ_n f(n/λ) ≠ 0 in general). This is exactly Paper 47's
+against |Ψ|² although Ψ jumps at −a (Ψ(−a−) = Φ_f(−a) = λ^{−1/2}Σ_n f(n/λ) ≠ 0 in general). This is exactly Paper 46's
 "Dirichlet form with killing" (Lev = ¼∫∫_{I×I}K|F(x)−F(y)|² + ½∫_Iκ|F|² with K = 2ν) transported to the half-line.
 A's display of 𝒲_ext (half-line double integral only) omits it; A's Theorem 1.1 is unaffected because its proof
 uses ∫Ψ̄WΨ, never the display. **Consequences:** A Prop 2.1, Thm 3.1, (★), Lemma 4.1, Cor 4.3 unchanged (none uses the
@@ -121,7 +121,7 @@ logarithmic c-derivative of the total leakage Π_n(1−λ_n(c)) of the even prol
 
 **4.1 B Lemma 4.1 (barrier for the complete form and for (B_μ)): PROVED, one normalisation remark.** The form
 ⟨f,(M+V)f⟩ = ⟨f,(γ+V)f⟩ − ⟨f,C_νf⟩ is of the shape 𝒜 − ∫c_f dν with 𝒜 comb-independent, so the δ_{u_0} perturbation
-applies. With Paper 47's convention (ν = Σv_nδ_{log n} on u > 0, thm:geo-tv) the radius bound is r ≤ (1+ε)λ_min, not
+applies. With Paper 46's convention (ν = Σv_nδ_{log n} on u > 0, thm:geo-tv) the radius bound is r ≤ (1+ε)λ_min, not
 ½(1+ε)λ_min; B's ½ comes from a symmetrised measure. Harmless (both ≪ any estimate slack); to be normalised as in
 AUDIT_197_2.
 
@@ -183,7 +183,7 @@ ARGUED. NO-GO for classwise SOS stands.
 ((L_ext) ⟺ L′♯), §3.2 Mellin truncation structure, Rem 3.3 (symbol identity, checked from ξ(s) = ξ(1−s)), Lemma 4.1,
 Lemma 4.2 (ℓ(g) ≤ 4μ(1+4μc_B)‖g‖², checked), Cor 4.3 (trivial: the subspace 𝒯_* is where g sits at frequency
 > e^{𝒜_T+λ}), §6 table. B: Lemma 1.1, Cor 1.2, Lemma 3.1 (checked: ψ(z)+1/z = ψ(z+1), F(e^{−|a|/2}) = (¼+t²)^{−1}),
-Lemma 3.2, Prop 3.3, Prop 3.4 (identity), Lemma 4.1 (normalisation ½ → 1 in Paper 47's convention). C: Props 1.1–1.2,
+Lemma 3.2, Prop 3.3, Prop 3.4 (identity), Lemma 4.1 (normalisation ½ → 1 in Paper 46's convention). C: Props 1.1–1.2,
 Thm 2.1, Thm 3.1, Props 4.1–4.2, Cor 4.3, Props 5.1–5.2. D: Thm 2.1 (level (1,1), given CC Thm 4.7), Cor 2.2, the
 formula of Prop 2.3 (not its size), "𝔐 ≠ function of W_λ", Prop 3.1 (qualitative), Thm 4.1, Cor 4.2 (given the
 R186_014 structure, CITED). E: §1 correction, Thm E.1, E.1′, E.2, Cor E.3, Rems 3.1–3.2, Lemma E.4, Thm E.5 (on

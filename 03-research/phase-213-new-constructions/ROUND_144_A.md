@@ -4,7 +4,7 @@ For T≥2 set j=floor(log₂ T), V=j log(j+2) and φ_V the centered normal densi
 
     B(T)=∫₀^{T+3√(TV)} φ_V(u−T) U(u) du.
 
-The global sign of P47 is equivalent to B(T)≤0 for all sufficiently large real T. Under RH one has B(T)→1/ζ(1/2)<0. If there is a zero off the critical line, B(T)>0 at some point of every sufficiently distant [2^j,2^(j+1)]. The integral is a finite sum of λ(n) with positive coefficients, integrating from log n to the upper limit. The typical deviation in log x is √V; for x=exp T it corresponds to a multiplicative factor exp(√V)=(log x)^o(1). Not all terms at more than one typical deviation are discarded.
+The global sign of P46 is equivalent to B(T)≤0 for all sufficiently large real T. Under RH one has B(T)→1/ζ(1/2)<0. If there is a zero off the critical line, B(T)>0 at some point of every sufficiently distant [2^j,2^(j+1)]. The integral is a finite sum of λ(n) with positive coefficients, integrating from log n to the upper limit. The typical deviation in log x is √V; for x=exp T it corresponds to a multiplicative factor exp(√V)=(log x)^o(1). Not all terms at more than one typical deviation are discarded.
 
 **Bias under RH.** Let I_V(T) be the same average with infinite upper limit. The truncation error is o(1) uniformly: by |U(u)|≤exp(u/2) and the exponentially tilted normal tail it costs at most exp(T/2+V/8) Prob(N(0,1)>3√T−√V/2). By Gaussian inversion as in 142, I_V(T) is the vertical integral of R(s)exp(Ts+Vs²/2), divided by 2πi, with
 

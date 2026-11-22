@@ -3,7 +3,7 @@
 All numbers NUMÉRICO (double precision; floor = 2.2·10⁻¹⁶‖A_M‖M; "negative" means λ_min < −10·floor). Profile b = 1.
 Controls (same lattice {log m : m ≤ M}, same profile, same code path as Λ; data/controls_T00.3.json, controls_T00.15.json):
 a_P = Λ with primes < P deleted (P = 3, 5); pert_n(±ε) = v_n multiplied by 1 ± ε (n = 2, 3, 7; ε = 10⁻⁵, 10⁻²); amp2(c) = v₂ + c;
-Poisson combs (Paper 47 thm:poisson: Poisson process on (log 2, ∞), intensity e^u/u, weights 2xe^{−x/2}; 5 seeds; atom counts match the
+Poisson combs (Paper 46 thm:poisson: Poisson process on (log 2, ∞), intensity e^u/u, weights 2xe^{−x/2}; 5 seeds; atom counts match the
 prime-power counts, e.g. 428–467 vs 450 at M = 1500, T₀ = 0.3); Beurling combs (generalized primes q = p·e^{ε_p}, ε_p uniform in
 ±0.02, weights 2 log q·q^{−a/2} on powers; evaluated both on the integer lattice and on the lattice of its own generalized integers
 ≤ M, where the exact products are its "Div"); quartet model M₁ = Λ + 𝔮_{δ,γ₁}, γ₁ = 14.1347, δ = 0.1 and 0.3 (rank-4 Toeplitz kernel
@@ -67,7 +67,7 @@ sup_{2T₀<d≤15}|B(d)|/a₀ (no violation means the 2×2 sections are all posi
 | Poisson (5) | 3.5–5.8, ≈3000 points each | 1.9–2.5, 330–810 | 0.66–0.88, 0 |
 | Beurling (2) | 1.28–1.44, 113–304 | 0.88, 0 | 0.71, 0 |
 So: the 2×2 band kills Poisson, Beurling (T₀ = 0.3) and a₅, but **a₃, amp2(0.05) and pert₂(1.01) pass the band up to d = 15 and are
-indefinite at M = 100–200**. At T₀ ≤ 0.15 the band kills nothing among the arithmetic controls. Confirms the index (L2_023, P47 (S)): the
+indefinite at M = 100–200**. At T₀ ≤ 0.15 the band kills nothing among the arithmetic controls. Confirms the index (L2_023, P46 (S)): the
 2×2 sections are necessary only; the sign is in the multi-scale joint matrix. Note for Λ at T₀ = 0.3 the band is nearly saturated
 (0.942 at d = 12.69) without being violated — recorded in EXP_005 as a (zero-side) observation, not as a ζ-specific prime-side fact.
 

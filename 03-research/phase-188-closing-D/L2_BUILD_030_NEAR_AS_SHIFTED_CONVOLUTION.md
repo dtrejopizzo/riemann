@@ -3,7 +3,7 @@
 Scope (coordinator): operator/matrix structure only; the arithmetic of the shifted sums Σ_{m−kn=h}Λ(n) is left to the track (N).
 
 ## Corpus check
-028 (A_M = Arch − Div − Near), 029 (Near-free sets are trivial), N_BUILD_001 (A),(B) (polar elimination, m^♯ form), Paper 47 eq:Aform; R186_001 (Gram of
+028 (A_M = Arch − Div − Near), 029 (Near-free sets are trivial), N_BUILD_001 (A),(B) (polar elimination, m^♯ form), Paper 46 eq:Aform; R186_001 (Gram of
 translates); phase 167 (shifted sums, Titchmarsh divisor problem mentions). grep "Ramanujan sum / c_q / shifted convolution / m − kn = h / Dirichlet
 polynomial times": no row-D memo writes the integer-lattice form as W(Vs). New: §1–§4.
 

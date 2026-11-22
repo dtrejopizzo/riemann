@@ -1,6 +1,6 @@
 # Strict positivity of the full form up to T=21/10
 
-For 0<T≤21/10 and every f in the domain of the full form of paper 47,
+For 0<T≤21/10 and every f in the domain of the full form of paper 46,
     W_T(f) ≥ exp(−32000000001)||f||₂².
 Use Z1–Z3 as in 175, in particular the already verified height G=3·10¹². Both parities and the two polar moments are kept. RH is not postulated. We give the parameters and the scalar certificate to avoid extrapolating the asymptotic law of 177.
 

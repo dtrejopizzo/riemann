@@ -1,6 +1,6 @@
 # INV_U_001 — The contact-crossing event: edge law, onset, one-sided derivatives (track U, residual seed of INV_S_001 §5)
 
- Notation of Paper 47: 𝔞_T(F)=C₀‖F‖²+Lev(c_F)−Σ_{n∈𝒩_T}v_n c_F(log n) (eq:Aform),
+ Notation of Paper 46: 𝔞_T(F)=C₀‖F‖²+Lev(c_F)−Σ_{n∈𝒩_T}v_n c_F(log n) (eq:Aform),
 P_T={A=B=0}, λ_A(T)=min 𝔞_T on unit P_T∩𝒟_T (lem:compact), T_n=½log n, v_n=2Λ(n)n^{−½}. Labels: PROVED / ARGUED / CONDITIONAL / NUMÉRICO.
 No new numerics were run; NUMÉRICO items below are quotations of R186_048 Tabla 4.2.
 

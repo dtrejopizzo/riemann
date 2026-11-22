@@ -1,8 +1,8 @@
-# Review 010: rounds 014_A through 024_A against their proofs and against Paper 47
+# Review 010: rounds 014_A through 024_A against their proofs and against Paper 46
 
 Scope. ROUND_014_A, ROUND_015_A, ROUND_015_B, ROUND_015_C, ROUND_016_A, ROUND_016_B, ROUND_017_A, ROUND_017_B, ROUND_017_C,
 ROUND_018_A, ROUND_018_B, ROUND_019_A, ROUND_019_B, ROUND_020_A, ROUND_021_A, ROUND_022_A, ROUND_023_A, ROUND_024_A. Every claim
-labelled PROVED is checked against its written proof and against Paper 47 (04-papers/47-row-d-dual-certificates/main.tex:
+labelled PROVED is checked against its written proof and against Paper 46 (04-papers/46-row-d-dual-certificates/main.tex:
 def:W and eq:nuw L.1225–1235, form-core argument L.1825–1838, prop:arch L.2323–2345, def:ext L.9867–9897, lem:ext-mob,
 thm:ext-half L.9913–9936, prop:ext-gauge, prob:ext-L, prop:ext-consol L.9972–10000). Verdicts: CONFIRMED / REFUTED /
 DOWNGRADE. Line numbers are memo line numbers. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
@@ -13,7 +13,7 @@ reduction to any other statement.
 
 ## 0. A definitional point that affects rounds 14–16
 
-Paper 47 def:ext defines the complete form on the line with the polar term: 𝒲[Ψ] = (1/2π)∫m|Ψ̂|² − Σ_{n≥2}v_n c_Ψ(log n) +
+Paper 46 def:ext defines the complete form on the line with the polar term: 𝒲[Ψ] = (1/2π)∫m|Ψ̂|² − Σ_{n≥2}v_n c_Ψ(log n) +
 2A(Ψ)B(Ψ), and thm:ext-half states W_T(Ef) = 𝒲[Ψ_f] for that form. ROUND_001_B (Thm 1.1, the bilinear 𝒲 with A(F)B(G) +
 B(F)A(G)) agrees. ROUND_015_A (L.7–9) defines 𝒲 without the polar term, and ROUND_014_A uses 12B Thm 1.1 with the tail form
 written as 𝒲 = 𝒜_∞ − comb. With the 15A definition, the identities "M[a] = 𝒢[Sa]" (14A Thm 1.1, 15A Prop 1.1(iii)) and
@@ -23,8 +23,8 @@ B = 0.479). Ruling: every 14A/15A statement in which 𝒢 or 𝒲 is identified 
 the complete form of def:ext; with the 15A definition it is false in general. The numbers of 14A/15A stand (polar part
 measured negligible on those vectors).
 
-A second normalisation point. Paper 47 sets ℓ(g) = 2 dist²_{L²(λ,∞)}(r_f, Ḡ_T) (prop:ext-gauge). Rounds 16B–19A use ℓ_g :=
-dist² on (λ, ∞) (one half of Paper 47's ℓ); 18A Thm 4.1(ii) (L.197) writes ℓ_g^S = 2ℓ_g, which is consistent with Paper 47.
+A second normalisation point. Paper 46 sets ℓ(g) = 2 dist²_{L²(λ,∞)}(r_f, Ḡ_T) (prop:ext-gauge). Rounds 16B–19A use ℓ_g :=
+dist² on (λ, ∞) (one half of Paper 46's ℓ); 18A Thm 4.1(ii) (L.197) writes ℓ_g^S = 2ℓ_g, which is consistent with Paper 46.
 Any transfer of a constant κ from these rounds to prob:ext-L must divide by 2.
 
 ## 1. ROUND_014_A
@@ -61,7 +61,7 @@ statement about the mollified family M^ρ; the identification of the raw SMS wit
 estimate of L.59–62, which is ARGUED (labelled so in the section heading but not in this sentence).
 
 **Theorem 3.1 (L.128–153).** CONFIRMED. For x < −T and m ≥ 2, τ_{log m}F_n = m^{1/2}F_{nm} on the half-line (the indicator
-1_{x−log m<−T} is automatic); Σ_{m|N}Λ(m) = log N; the rearrangement is justified by Σ log N‖F_N‖ < ∞. This is Paper 47
+1_{x−log m<−T} is automatic); Σ_{m|N}Λ(m) = log N; the rearrangement is justified by Σ log N‖F_N‖ < ∞. This is Paper 46
 thm:ext-half (last display) and phase 199 E.2 written for 𝒯; it is used, not new. With 15A's 𝒲 the displayed formula
 𝒲[𝒯u] = 𝒜_∞[𝒯u] − 2⟨𝒯_log u, 𝒯u⟩ lacks + 2A(𝒯u)B(𝒯u) (§0).
 
@@ -156,7 +156,7 @@ the comb and the product A·B (translation multiplies A by e^{T/2}, B by e^{−T
 **Lemma 2.2 (L.97–102).** CONFIRMED (supports; the comb shift log 2 meets the cell in one point). Here 𝒲 is 15A's polar-free
 form; the complete form adds 2A(F₁)B(F₁) (Lemma 2.3).
 
-**Lemma 2.3 (L.104–110).** CITED + NUMERICAL as labelled; agrees with Paper 47 def:ext and thm:ext-half. This lemma is the
+**Lemma 2.3 (L.104–110).** CITED + NUMERICAL as labelled; agrees with Paper 46 def:ext and thm:ext-half. This lemma is the
 correction recorded in §0.
 
 **Remark 2.4 (L.112–116).** CONFIRMED for the isolated exponential piece J·1_{x<−T}e^{β(x+T)}; the cross terms between that piece
@@ -207,7 +207,7 @@ L^{1/2}(|τ|L/2)^n/n! integrated over |τ| < τ* and over y gives the Hilbert–
 **Theorem 3.1 (L.88–97).** CONFIRMED and re-run: python3 cert_f0.py 100 112 returns PD = True, γ = 2.6976772206,
 ε = 2.61·10⁻⁸, η = 3.29·10⁻²⁶⁸, μ₀ ∈ [0.06961173221 ± 4.38·10⁻¹²] (CERTIFIED), identical to the memo.
 
-**Corollary 3.2 (L.98–99).** CONFIRMED. On {B(F) = ∫Fe^{−x/2} = 0} the polar term vanishes. Note: prop:arch of Paper 47 writes
+**Corollary 3.2 (L.98–99).** CONFIRMED. On {B(F) = ∫Fe^{−x/2} = 0} the polar term vanishes. Note: prop:arch of Paper 46 writes
 𝒜_∞ = C₀‖F‖² + Lev without the polar term and (iii) calls "complete form" W_T on windows with empty contact set; the memo's
 "complete form = 2AB + 𝒜_∞" is def:ext's reading. Either reading gives the corollary on {B = 0}.
 
@@ -259,7 +259,7 @@ collapsed weight c·log N, rung data frozen, tested for falsifier (a) only. It d
 
 **Proposition 1.1 (L.22–41).** CONFIRMED. The annihilator argument is correct: ℓ(ℱf) = ∫fΦ with Φ entire, Φ(x) + Φ(−x) = 0 on
 [−λ, λ] hence everywhere, and every h ∈ C^∞(J̄_R) is the restriction of ℱ of an even Schwartz function. Form-norm density
-follows from H¹ ⊂ H^s (s < ½) and density of C^∞ in the form domain (the core argument of Paper 47 L.1832–1837); the
+follows from H¹ ⊂ H^s (s < ½) and density of C^∞ in the form domain (the core argument of Paper 46 L.1832–1837); the
 constraint correction by d_i is valid. NO-GO for the qualitative band constraint: PROVED, class correct.
 
 **Lemma 2.1 (L.60–64).** CONFIRMED. The gloss "the band information actual R-cell data carry is exactly" (L.63) overstates:
@@ -278,16 +278,16 @@ summation set changes nothing at the sign level, which supports the frozen-weigh
 ## 13. ROUND_019_B
 
 **Proposition 1.1 (L.31–37).** CONFIRMED (Möbius inversion Σ_nΣ_{d}μ(d)g(dnu) = g(u); the free values on (0, 1/λ) are fixed by
-one bump for ∫f = 0; the difference of two preimages is in 𝒢_T). It is lem:ext-mob of Paper 47.
+one bump for ∫f = 0; the difference of two preimages is in 𝒢_T). It is lem:ext-mob of Paper 46.
 
-**Corollary 1.2 (L.39–54).** CONFIRMED as a rewriting of λ_A(T) ≥ 0 through the core of Paper 47 L.1832 and the half-line
+**Corollary 1.2 (L.39–54).** CONFIRMED as a rewriting of λ_A(T) ≥ 0 through the core of Paper 46 L.1832 and the half-line
 identity; the comparison with prob:ext-L (κ = 0 versus κ > 0) is correct.
 
 **Theorem 2.1 (L.63–82).** CONFIRMED. Φ_φ = Σn^{−1/2}h(· + log n), Φ̃_φ = ζ·Mφ, B(Φ_φ) = ζ(0)Mφ(0) = 0 after the correction,
 |ĥ_R|² = R|η̂(R·)|² of mass 2π‖η‖²; limits m(0)ζ(½)²‖η‖² = −11.457‖η‖² and m(10)|ζ(½ + 10i)|²‖η‖² > 0. The bumps χ_r, χ_l must
 sit inside (−∞, −T) in the u-variable, which holds for R > 1. Zero-free.
 
-**Corollary 2.2 (L.84–89).** CONFIRMED (Ψ_{f+tφ} = Ψ_f + tΦ_φ; 𝒲̂^c = 𝒲̂ + (1 − c)𝒞; 𝒞 = 𝒜𝒫 on Φ_φ by radicality, Paper 47
+**Corollary 2.2 (L.84–89).** CONFIRMED (Ψ_{f+tφ} = Ψ_f + tΦ_φ; 𝒲̂^c = 𝒲̂ + (1 − c)𝒞; 𝒞 = 𝒜𝒫 on Φ_φ by radicality, Paper 46
 prop:ext-gauge).
 
 **Corollary 2.3 (L.91–97).** CONFIRMED as NO-GO, class correct (inequalities 𝒜𝒫 − c𝒞 ≥ 0 on the full class of admissible tails,

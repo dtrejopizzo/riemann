@@ -29,19 +29,19 @@ and the note on R186_114 (l.226); clean. `03-research/phase-187-pattern/*.md`: c
   (§0 item 2(iii), Thm 2.3 statement and proof, note after the proof) and in the phase-186 README (entry R186_042).
 - **Grid**: `R162_2300_MASTER_GRID.md` §8 log, new entry **43**; entries 32 and 39 are to be read with these
   corrections. No other grid or crossword entry cites "tan²" or the interval [λ_A/Pos(h*), λ_A/c_P] (grep).
-- **Verification against the definitive Paper 47 main.tex**: `thm:wh-pencil`(ii)–(iii), eq:wh-sandwich (λ_A/Pos_T(u₁) ≤ 1−β₁ ≤
+- **Verification against the definitive Paper 46 main.tex**: `thm:wh-pencil`(ii)–(iii), eq:wh-sandwich (λ_A/Pos_T(u₁) ≤ 1−β₁ ≤
   λ_A/Pos_T(h*_T) ≤ λ_A/c_P; proof by Rayleigh at u₁ and at h*) and `thm:wh-angles` (𝔫₀/𝔭₀ = (s₋/s₊)cot²φ(Qu), cos²φ =
   ‖Q₋v‖²/‖v‖²; `cor:wh-nogap` β_j = (s₋/s₊)λ_j/(1−λ_j)): **agree** with the corrections. Manual check: the
   lower bound follows from 𝔞(u₁) = (1−β₁)Pos(u₁) ≥ λ_A, the upper one from Neg ≤ β₁Pos at h*; cot² = cos²/sin² = λ/(1−λ).
 
-## 3. Kahane–Mandelbrojt reference (Paper 47)
+## 3. Kahane–Mandelbrojt reference (Paper 46)
 
 Verified (numdam, WebSearch): J.-P. Kahane, S. Mandelbrojt, *Sur l'équation fonctionnelle de Riemann et la
 formule sommatoire de Poisson*, Ann. Sci. École Norm. Sup. (3) **75** (1958), no. 1, 57–80, DOI 10.24033/asens.1066
 (numdam ASENS_1958_3_75_1_57_0). The `\bibitem{KahaneMandelbrojt1958}` in main.tex already had the correct venue/year/pages;
 "no. 1" and the DOI were added. `DEFINITIVE_CHANGES.md` l.43 updated (the "to confirm" item closed).
 
-## 4. Overfull boxes in Paper 47 main.tex (done last)
+## 4. Overfull boxes in Paper 46 main.tex (done last)
 
 main.tex re-read right before editing (md5 0e5763f9… identical to the one at the start of the round: no concurrent change
 between the reading and the editing); backup `main_pre_overfull.tex.bak`. 11 local edits, without changing any

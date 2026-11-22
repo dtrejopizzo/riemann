@@ -1,7 +1,7 @@
 # CA_C_006 (front C batch 3) — Review
 
 ## Verdict
-**All six discards CONFIRMED; no wrong discard. Two FIXes: (1) the "fixed input" (criticality on the prime-free *family*) is not established — CA_C_005 shows it for the span only (see CA_C_005 review); the [crit] screen should cite P47's margin (cor:margin1 / lem:shape-est(i)) and the span data, not a family claim. (2) E2's O5 argument: a change of one weight v_n is not a rank-one change of A_M (it moves the whole band m/k = n); replace by: a weight change of size ≍ λ_A/κ_T moves every normalized moment by O(that size) while it can flip the bottom (rem:wit-sens; lem:shape-weight conditional) — the conclusion stands as (R)(5).**
+**All six discards CONFIRMED; no wrong discard. Two FIXes: (1) the "fixed input" (criticality on the prime-free *family*) is not established — CA_C_005 shows it for the span only (see CA_C_005 review); the [crit] screen should cite P46's margin (cor:margin1 / lem:shape-est(i)) and the span data, not a family claim. (2) E2's O5 argument: a change of one weight v_n is not a rank-one change of A_M (it moves the whole band m/k = n); replace by: a weight change of size ≍ λ_A/κ_T moves every normalized moment by O(that size) while it can flip the bottom (rem:wit-sens; lem:shape-weight conditional) — the conclusion stands as (R)(5).**
 
 | seed | review |
 |---|---|

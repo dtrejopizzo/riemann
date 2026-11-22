@@ -1,7 +1,7 @@
 # INV_I_001 — Integrality as a constraint on the comb: the c = 1 pin, its exact orbit, and the (1, Λ) forms (track I, phase 194)
 
 Track I. Labels PROVED / CITED / CONDITIONAL / ARGUED / OPEN /
-NO-GO / REF-D; pure mathematics, no numerics. Notation of Paper 47: 𝔞_T^{(a)}(F) = 𝔪_T(F) − Σ_{n∈N_T} 2a(n)n^{−½} c_F(log n), N_T = {n ≥ 2 :
+NO-GO / REF-D; pure mathematics, no numerics. Notation of Paper 46: 𝔞_T^{(a)}(F) = 𝔪_T(F) − Σ_{n∈N_T} 2a(n)n^{−½} c_F(log n), N_T = {n ≥ 2 :
 log n < 2T}, μ_T(v) = λ_A(T; v) concave (lem:degen), WP_T(a) = "𝔞_T^{(a)} ≥ 0 on 𝒫_T". Track H (additive structure of ℕ) is not touched.
 
 ## 0. Corpus / index check
@@ -37,7 +37,7 @@ Let 𝒞_{01} = {a ≥ 0 : b ∈ {0,1}^ℕ}, 𝒞_ℤ = {a ≥ 0 : b ∈ ℤ_{�
   Λ·1_{𝒮} (b = 1_{⟨𝒮⟩}); 𝒞_ℤ is closed under O_4^ℕ, under O_6, and under products f_a f_{a′} (a + a′). Not convex (INV_F C3 type:
   (1+2^{−s}) has a_4 < 0, and averages leave {0,1}).
 
-## 3. Theorem I2 (integrality NO-GO trichotomy; PROVED, using Paper 47 lem:shape-scale, cor:Tarch, prop:shape-eulerdel)
+## 3. Theorem I2 (integrality NO-GO trichotomy; PROVED, using Paper 46 lem:shape-scale, cor:Tarch, prop:shape-eulerdel)
 Let 𝒜 be a deduction class whose arithmetic premises are membership in one of the classes of I1 plus cone premises on log f (INV_F Thm F2) plus
 comb-generic identities (thm:shape B″).
 (a) 𝒞_ℤ: 𝒜 contains no valid deduction of WP_T at any T > ½log2. *Proof.* The proof of lem:shape-scale (c large) uses c → ∞ only:
@@ -76,7 +76,7 @@ identity, each one Selberg-type for k ≥ 2).
 **Proposition I5 (WP for the whole {0,1}-class on short windows; PROVED given CITED inputs).** For 0 < T ≤ ½log3, WP_T(a) holds for every
 a ∈ 𝒞_{01} and every a ∈ [0,1]·Λ.
 *Proof.* N_T = {2}; by I1(ii) a|_{N_T} ∈ {0, Λ(2)}. WP_T(0): arch form PD on 𝒫_{½log3} (cor:Tarch, interval arithmetic, CITED-in-paper).
-WP_T(Λ): proved through log 2 (Theorem A / D.12-α, Paper 47). μ_T concave ⇒ WP on the segment. ∎
+WP_T(Λ): proved through log 2 (Theorem A / D.12-α, Paper 46). μ_T concave ⇒ WP on the segment. ∎
 For ½log3 < T < 0.58: 𝒞_{01}|_{N_T} = {0, Λ, Λ1_{2}, Λ1_{3}}; the first two hold (same citations); **Λ1_{3} and Λ1_{2} are OPEN** (they are
 vertices of the box, not reached by concavity). Honest status: I5 is implied by known facts; it does not extend the T-range of WP_T(Λ).
 
@@ -89,7 +89,7 @@ vertices of the box, not reached by concavity). Honest status: I5 is implied by 
 - Corpus: I2(c) = R163_1001 Thm O (not claimed new); I3 overlaps N_022 §1 (identity) — new only as the inequality and its homogeneity.
 
 ## 7. Verdict
-PROVED: (E), I1(i)–(iv), I2(a)–(c) and Corollary, I3, I4; I5 (given cor:Tarch and Theorem A, both in Paper 47).
+PROVED: (E), I1(i)–(iv), I2(a)–(c) and Corollary, I3, I4; I5 (given cor:Tarch and Theorem A, both in Paper 46).
 ARGUED: Bell-jet boundary after I4. OPEN: WP_T for Λ1_{2}, Λ1_{3} at ½log3 < T < 0.58; H_mono (find a non-monotone, non-identifying
 integrality premise); degree-≥2 forms not reducing to Selberg. NO-GO: integrality classes 𝒞_{01}, 𝒞_ℤ as class premises (I2); degree-≤1 (1,Λ) forms (I4).
 No contact with the sign.

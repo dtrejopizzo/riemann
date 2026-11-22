@@ -17,7 +17,7 @@ reducing row D's closure to one precise, isolated statement.
 
 ## Documents
 
-- `R174_FINAL.md` — the precise statement of TC-174, the exact stopping point (which two sub-results remain open), and its relation to phase 173's residue and Paper 46 §28.4's six clauses.
+- `R174_FINAL.md` — the precise statement of TC-174, the exact stopping point (which two sub-results remain open), and its relation to phase 173's residue and Paper 47 §28.4's six clauses.
 
 ## Relation to other phases
 

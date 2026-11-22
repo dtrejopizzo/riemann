@@ -6,7 +6,7 @@ file is written; the index entry goes in §6 for the coordinator to copy.
 Sources read: TRACT_D_README_001, TRACT_001, L2_INTERLACE_001, POLAR_CAP_001 (summary and index l.598),
 BARRIER_SOUND_001 (header), ROUTES-TRIED-INDEX/README.md (l.55, 135, 138–145, 146–148, 165, 174–178, 186, 205–212,
 247–248, 263, 296, 340–382, 390–391, 415, 427, 451, 460, 502, 504, 507, 523, 538, 539, 552, 560, 571, 588, 589,
-597–598), INV_U_001 (U0, U2, U5b, 𝒦_cross), BARRIER_W_001 (class header), Paper 47 main.tex lem:monoT (l.502) and
+597–598), INV_U_001 (U0, U2, U5b, 𝒦_cross), BARRIER_W_001 (class header), Paper 46 main.tex lem:monoT (l.502) and
 lem:flowdet (l.8134).
 
 ## Summary (≤300 words)
@@ -37,7 +37,7 @@ reformulations of D. Next construction to launch: G16.0 (descent to the quotient
 
 The object of this audit is the inventory itself, not a new route; no construction is proposed that is not already
 in the index. The hits relevant to the verdicts are cited inline. For (a) all SPEC_A entries were read
-(l.138–145, 345–349, 362–382); for (b) BARRIER_W_001 and Paper 47 lem:monoT, lem:flowdet; for (c) POLAR_CAP_001
+(l.138–145, 345–349, 362–382); for (b) BARRIER_W_001 and Paper 46 lem:monoT, lem:flowdet; for (c) POLAR_CAP_001
 (index l.598); for (d) R186 Thm A/B as summarized by L2_INTERLACE_001 §1.
 
 ## 1. The 31 NO and the 46 TRANSFER, one by one
@@ -211,7 +211,7 @@ Precision: for a C¹ family of self-adjoint A(T) on **a fixed space**, the cross
 Γ(T*)(v) = ⟨v, A′(T*)v⟩, v ∈ ker A(T*); a crossing is regular if Γ is nondegenerate, and the local spectral flow is
 sign Γ (Robbin–Salamon 1995, CITED). Comparison:
 
-- **lem:flowdet** (P47 l.8134): μ₁′ = ⟨A′φ₁, φ₁⟩ where μ₁ is simple. At a simple crossing μ₁(T*) = 0, φ₁ = v:
+- **lem:flowdet** (P46 l.8134): μ₁′ = ⟨A′φ₁, φ₁⟩ where μ₁ is simple. At a simple crossing μ₁(T*) = 0, φ₁ = v:
   **Γ(v) = μ₁′(T*)**. It is the same formula.
 - **BARRIER_W_001 §5:** the only Λ-specific crossing datum is Σ v_n c_{h*}(log n), a functional of the minimizer;
   L2_INTERLACE (3.2) shows that in the finite basis the derivative jumps by −2v_nF(−T)F(T): an edge datum of the
@@ -235,7 +235,7 @@ direction of h* (L2_INTERLACE §3), 𝒦_H.
 
 ### (c) G4: does 𝔊_T invert 𝔞|P_T?
 
-Yes. By P47's definition (thm:parityschur l.4176, prop:polarcap l.4316) as transcribed by POLAR_CAP_001 §1 and
+Yes. By P46's definition (thm:parityschur l.4176, prop:polarcap l.4316) as transcribed by POLAR_CAP_001 §1 and
 index l.598: 𝔤_par = W_T(h_par), h_par = H₀ − (𝔞_T|𝒬^par)^{−1}𝔞_T(H₀,·). It is a bordered Schur complement that
 contains (𝔞_T|𝒬^par)^{−1}; every use (Hadamard in T, Weyl–Kreĭn–Langer, non-crossing T6.2) consumes λ_A > 0 on the
 primitive sector, and the additive inertia In(W_T) = In(𝔞_T|P_T) + In(𝔊_T) (thm:parityschur) separates the sign of

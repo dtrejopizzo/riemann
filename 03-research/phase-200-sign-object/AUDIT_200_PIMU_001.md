@@ -1,7 +1,7 @@
 # AUDIT_200_PIMU_001: audit of PI_MU_001 (phase 200, round 5)
 
 Row D and Lemma L′♯ as independent goals.
-ARGUED / OPEN / NO-GO / REF-D / NUMERICAL. Verified against Paper 47 §22 (def:ext l.9601, lem:ext-mob, thm:ext-half,
+ARGUED / OPEN / NO-GO / REF-D / NUMERICAL. Verified against Paper 46 §22 (def:ext l.9601, lem:ext-mob, thm:ext-half,
 prop:ext-gauge, prop:ext-consol, prop:ext-univ), Q2_LADDER_001 (Lemma R, l.49), SPEC_003 A.1 and MORI15_EXTREMAL_001
 (l.15, 65, 80, 170, 198).
 

@@ -85,7 +85,7 @@ claiming novelty.
 
 ## 2. Two natural extensions that do not coincide
 
-Set, as in Paper 47 and R170_702,
+Set, as in Paper 46 and R170_702,
 
 \[
  a_m=2m+\tfrac12,\qquad
@@ -129,7 +129,7 @@ The left tail exchanges the two lines:
 This is a perfectly well-defined choice compatible with reflection. It is
 not a consequence of the weak equation: the global characters are not
 \(L^2(\mathbb R)\) vectors, and only their restriction to \(I_T\) appears
-in Paper 47.
+in Paper 46.
 
 ### 2.2. The boundary form of the canonical Hardy port
 
@@ -328,7 +328,7 @@ and
 
 Formulas (2.2), (4.1) of R170_831 compute every entry of
 \(\Gamma_{\pm,M}\); (1.1), (2.6), and (5.2) compute the whole Hardy
-block; and Paper 47 computes
+block; and Paper 46 computes
 
 \[
  D_\Delta=R_L^*(I-D_{N,L})R_L.                    \tag{5.5}

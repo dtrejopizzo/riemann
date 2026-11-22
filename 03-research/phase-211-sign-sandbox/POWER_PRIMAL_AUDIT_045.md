@@ -4,11 +4,11 @@ Status: CONTACT_FLOOR045 and PRIMAL_PAIR045 APPROVED; documentary inventory of w
 
 ## 1. Inherited floor and cross terms — APPROVED
 
-Reviewed `POWER_CONTACT_FLOOR_045.md`, its exact verifier and Paper47 `prop:lowercert`. Independent run of `tools/power_contact_floor_045_verify.py`: PASS. The massA2345 includesΛ4=log2 and its rational bounds give>17/4. Complex EulerB1 at1/4+120i has remainder<π/480<.01; the term−1/(2z) has negative real part. The bound of log(121/3) by the positive Taylor expansion of exp(187/50) proves m240<15/4. Thus the RAW floor m240−A2345<−.5.
+Reviewed `POWER_CONTACT_FLOOR_045.md`, its exact verifier and Paper46 `prop:lowercert`. Independent run of `tools/power_contact_floor_045_verify.py`: PASS. The massA2345 includesΛ4=log2 and its rational bounds give>17/4. Complex EulerB1 at1/4+120i has remainder<π/480<.01; the term−1/(2z) has negative real part. The bound of log(121/3) by the positive Taylor expansion of exp(187/50) proves m240<15/4. Thus the RAW floor m240−A2345<−.5.
 
 Under the explicit admissible conditions mu≥0,omega+≥0 andLambda≥0, qY≤s∞−mu<−.5. Only that criterion fails with the same cut240 and the total-mass floor. No negative real symbol, negative W or impossibility of another primal pair or certificate has been proved.
 
-The linear and quadratic cross terms of the new column C5 and the polar boundary coincide with the exact formulas of Paper47: R_ij has the full Gram/qY with negative sign and the mixed boundary has positive sign. The valuesc−1/2 even,c+1/2 odd and c0 primitive are correct. These formulas are antecedents, not a new lower construction.
+The linear and quadratic cross terms of the new column C5 and the polar boundary coincide with the exact formulas of Paper46: R_ij has the full Gram/qY with negative sign and the mixed boundary has positive sign. The valuesc−1/2 even,c+1/2 odd and c0 primitive are correct. These formulas are antecedents, not a new lower construction.
 
 ## 2. ARCHIVED documentary frontier: status correction
 
@@ -23,7 +23,7 @@ The summary JSON files were overwritten by attempts with other mu; for example `
 
 ForT1.098 the30 build logs,30 PKL parts and the assembled `G_T1098.pkl` were located. The targeted search found no final certification log/JSON nor a theorem claim atT1.098. A Gram build and a positive symbol scan do not by themselves constitute the matrix/tail certificate. Hence the largest documentary PROVED endpoint of this pipeline located here is207/200, not1.098.
 
-This review is DOCUMENTARY: the construction and the long certification026 were not reproduced now. The results are labelled PROVED/computer-assisted in the archived source; their current independent reproduction has not been done in this round. The scope published within Paper47, the archived local certifications and the new advances on powers are distinct layers and must not be confused when describing the frontier.
+This review is DOCUMENTARY: the construction and the long certification026 were not reproduced now. The results are labelled PROVED/computer-assisted in the archived source; their current independent reproduction has not been done in this round. The scope published within Paper46, the archived local certifications and the new advances on powers are distinct layers and must not be confused when describing the frontier.
 
 ## 3. Transfer conditions L55-B
 
@@ -34,7 +34,7 @@ A feasible vector of the LP or a primitive test gives an upper, not that lower. 
 No antecedent was found that discards every particular construction of an explicit pair. Nor was that pair or a new floor obtained here. The check of cut240 is not recorded as a global no-go, and the archived frontier026 is not counted as a new result045.
 
 
-Additional precision on the documentary frontier: the current introduction of Paper47 records Mori's result up toT=(1/2)log15 as CITED, with reproduced computational checker and archived spot checks, but without a new review of its analytic lemmas. It also cites Liu up to17/16. Hence207/200 is the largest PROVED endpoint located in the LOCAL026 pipeline inspected here, not a claim that it is the largest known cited window. None of those long verifications was reproduced now in045.
+Additional precision on the documentary frontier: the current introduction of Paper46 records Mori's result up toT=(1/2)log15 as CITED, with reproduced computational checker and archived spot checks, but without a new review of its analytic lemmas. It also cites Liu up to17/16. Hence207/200 is the largest PROVED endpoint located in the LOCAL026 pipeline inspected here, not a claim that it is the largest known cited window. None of those long verifications was reproduced now in045.
 
 ## 4. Concrete compact repair — APPROVED
 
@@ -44,7 +44,7 @@ Ifη=µ−(q_T+epsilon)dτ is compact and even, F=(D²−1/4)φ satisfies exactl
 
 The script certifies q_T(0)<−15/2. Forepsilon≤15/2, rigidity would force a negative density in a neighbourhood of0, impossible forµ≥0. This discards the COMPACT repair ansatz with exactly fixed tail, not the compressed form nor every L55-B pair. No artificial restriction of finite global mass is used.
 
-In§5, for a continuous tempered even correctionr, localisation gives(D²−1/4)²k0 in the band. The even solutions arealpha cosh(t/2)+beta t sinh(t/2). If moreover the exterior remainder is a finite signed even measure, the formulas coincide with the certificate(D) of Paper47 and its lower orientation. This identification is explicitly limited to that subcase; it does not cover all singular measures or distributions nor prove a converse between primitive lower and existence of a pair.
+In§5, for a continuous tempered even correctionr, localisation gives(D²−1/4)²k0 in the band. The even solutions arealpha cosh(t/2)+beta t sinh(t/2). If moreover the exterior remainder is a finite signed even measure, the formulas coincide with the certificate(D) of Paper46 and its lower orientation. This identification is explicitly limited to that subcase; it does not cover all singular measures or distributions nor prove a converse between primitive lower and existence of a pair.
 
 The update to contact4 has coefficientΛ4=log2 and is global in frequency. It cannot be done keeping the old tail fixed and a compact modification. If an extended representation left mismatch4, the lossTVlog2 would only be a conservative floor; the previous identity does not guarantee the extension. There is no automatic continuation nor new coverage.
 

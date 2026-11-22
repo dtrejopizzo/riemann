@@ -45,7 +45,7 @@ Label each step; cite Paper 44 line by line; nothing may depend on `K = Q`.
    non-multiplicativity of `r_Q(n)` for `h > 1`). For `Ξ_a`: the law holds (Λ_a is a sum of two
    multiplicative-type weights) but bidegrees become `(n^{½+a}, n^{−½+a})`-type — record the exact
    failure of the *symmetry* `bideg(Frob_n^†) = swap(bideg Frob_n)` (A3).
-2. Intersection form on `Div_□`: restrict `I_∞` (Paper 46) to the classes of `Div_□` realized in `D^W`
+2. Intersection form on `Div_□`: restrict `I_∞` (Paper 47) to the classes of `Div_□` realized in `D^W`
    (Paper 44's Gram forms Thm 8bis.1, the diagonal divergence `Δ·Δ = −∞` and its regularization in the
    Tate-residue normalization Thm 8bis.4a). Compute the full intersection matrix on
    `{F_1, F_2, Δ, Frob_n}` in the normalization of `K = ½(F_1 + F_2)`-type identification (check: is `K`

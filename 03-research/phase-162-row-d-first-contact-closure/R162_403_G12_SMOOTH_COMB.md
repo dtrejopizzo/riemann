@@ -25,7 +25,7 @@ Status: **NO-GO (PROVED), with three PROVED STEPS.** Gate 1 is not closed.
   coefficient ζ_P(−2j) or ζ_P'(−2j). Even taken separately, each of these channels has a P → ∞
   coefficient that is o(e^{−jθ(P)}). So none of them is comparable with c_{N,L}, which is fixed.
 
-Notation follows Paper 47 §sec:firstcontact and R162_401. Write μ_F(a) = ∫e^{at}F and
+Notation follows Paper 46 §sec:firstcontact and R162_401. Write μ_F(a) = ∫e^{at}F and
 K_F(a) = ∫e^{−at}F, so K_F(−a) = μ_F(a). Also a_j = 2j+½, s_j = 2j+1, γ_j = 2(−1)^j(2π)^{2j}/(2j)!,
 and χ(s) = π^{s−½}Γ((1−s)/2)/Γ(s/2). Pairings are the real pairing ⟨h,g⟩ = ∫hg. 𝒮 = 𝒮(ℝ) is the
 Schwartz core.

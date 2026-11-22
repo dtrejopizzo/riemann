@@ -21,7 +21,7 @@ The following are equivalent:
 (A) W[h_(N,k)]>=0 for all N>=1,k>=0.
 (B) W[f]>=0 for every F(s)=P(s)/(s+u)^M, M>=1, P real, degree P<M.
 
-B implies A immediately. The proof that A implies B occupies §§3–5. By CONFLUENT_BRIDGE014, A suffices for the sign of all tests of the declared carrier and, through the already proved bridge, the target of Paper47. A is not presupposed: it remains OPEN.
+B implies A immediately. The proof that A implies B occupies §§3–5. By CONFLUENT_BRIDGE014, A suffices for the sign of all tests of the declared carrier and, through the already proved bridge, the target of Paper46. A is not presupposed: it remains OPEN.
 
 Condition A uses only a monomial numerator and TWO indices. It has not been reduced to the single chain k0, nor to fixed N, nor to the eventually positive endpoints of015.
 

@@ -152,7 +152,7 @@ Class 𝒦_b: K(F) ⪯ κ_T‖F‖² I with κ_T fixed. It includes the two natu
 - that of `R170_866` tensorized, K = diag(1/k)‖F‖²: Q(F) = (Σ_{k<N} log²k/k)‖F‖².
 
 (PROVED) In 𝒦_b, (𝔉) over all weights implies a_T(F) ≥ |η(F)|²/(4κ_T) for ‖F‖ = 1, and therefore every
-unit near-minimizer u (a_T(u) ≤ λ_A + ε) satisfies |η(u)|² ≤ 4κ_T(λ_A + ε). With P47 cor:margin1
+unit near-minimizer u (a_T(u) ≤ λ_A + ε) satisfies |η(u)|² ≤ 4κ_T(λ_A + ε). With P46 cor:margin1
 (CITED: λ_A(T) ≤ 4·10⁹ T e^{−15.449T} for T ≥ 1): |η(u)| ≤ 4·10^{4.8} T e^{−7.72T}, and by Lemma 2(b)
 |b_T(u)| ≤ 2(Q_T λ_A)^{1/2} with Q_T polynomial in N.
 (CONDITIONAL) If b_T(u_T) does not decay faster than a power of N on the near-minimizers, no

@@ -1,7 +1,7 @@
 # L2_BUILD_001 — Explicit modulus at contact entry
 
-Scope: tool toward (L2) of Paper 47 §open. Pen and paper only; no numerics.
-Conventions of Paper 47: a_T(F) = (1/2π)∫σ_T|F̂|², σ_T = m − Σ_{n∈N_T} v_n cos(τ log n),
+Scope: tool toward (L2) of Paper 46 §open. Pen and paper only; no numerics.
+Conventions of Paper 46: a_T(F) = (1/2π)∫σ_T|F̂|², σ_T = m − Σ_{n∈N_T} v_n cos(τ log n),
 v_n = 2Λ(n)/√n, ‖F‖² = (1/2π)∫|F̂|², 𝓕(u) = ∫F(t)F̄(t−u)dt, A_T = Σ_{N_T} v_n,
 C_0 = m(0), m increasing (lem:mbounds(i)), lower bound lem:mbounds(ii).
 Corpus check: lem:contA gives continuity of λ_A with a non-explicit modulus η(r);

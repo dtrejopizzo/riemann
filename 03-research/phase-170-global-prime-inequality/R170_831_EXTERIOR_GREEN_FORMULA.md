@@ -33,12 +33,12 @@ does not define a pairing of that restricted vector with a tail on
 
 This note does not re-attribute novelty to the following results.
 
-1. Paper 47, §"The archimedean multiplier as a Lévy exponent", proves
+1. Paper 46, §"The archimedean multiplier as a Lévy exponent", proves
    \[
    m(\tau)=C_0+\int_0^\infty(1-\cos \tau u)K(u)\,du,
    \quad K(u)=2\sum_{j\ge0}e^{-(2j+1/2)u},                    \tag{1.1}
    \]
-   and Paper 47 §"Compressed collars" / R161_070--071 / R170_702 prove
+   and Paper 46 §"Compressed collars" / R161_070--071 / R170_702 prove
    \(R_LB_N=D_{N,L}R_L-\mathcal E_{N,L}\) and the exact balance
    \(Q_{N,L}=-2\langle R_LF,D_{N,L}R_LF\rangle\) on the radical.
 2. P121_EXACT_TATE_COLLAR_LOCALIZATION and
@@ -84,7 +84,7 @@ Let \(a>0\),
  L_M=\sum_{2\le d\le M}\ell_d\tau_{\log d},                 \tag{2.1}
 \]
 
-with the convention of Paper 47, \((\tau_bz)(t)=z(t+b)\).
+with the convention of Paper 46, \((\tau_bz)(t)=z(t+b)\).
 
 ### Lemma 2.1 (right exterior Green)
 

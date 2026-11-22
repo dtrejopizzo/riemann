@@ -37,7 +37,7 @@ Notation follows R162_404/405: 𝔞_T = 𝔪_T − ⟨(B_T + B_T^*)·,·⟩, κ(
 a_j = 2j + ½, s_j = 2j + 1, ℓ_d = Λ(d)d^{−1/2}, μ_F(a) = ∫e^{at}F, K_F(a) = ∫e^{−at}F, and
 μ_F = εK_F for JF = εF. N = ker H_{T_*}, T' = T_* + δ, C_± are the right and left collars, and E is
 zero extension. V_c is the right shift, τ_c the left shift, and X is multiplication by t.
-(R_LF)_m = b_m e^{−a_m(T+δ_0)}K_F(a_m) (Paper 47, eq:Gammaenergy normalisation, b_m ≠ 0), 1 ≤ m ≤ L.
+(R_LF)_m = b_m e^{−a_m(T+δ_0)}K_F(a_m) (Paper 46, eq:Gammaenergy normalisation, b_m ≠ 0), 1 ≤ m ≤ L.
 
 ## 0. Corpus check
 
@@ -53,7 +53,7 @@ zero extension. V_c is the right shift, τ_c the left shift, and X is multiplica
   gives the explicit formula for its ξ, which R162_405 §1 had only in unexpanded form.
 - **P124_004 §5** (birth terms carry no divided rate). Consistent with §4.3 below: the threshold atom
   of regime II reads an edge germ of F, and has no δ-rate independent of the collar profile of F_δ.
-- **Paper 47 eq:collar** (RB_N = D_NR − ℰ_N). This is the full-exterior form of the pairing in
+- **Paper 46 eq:collar** (RB_N = D_NR − ℰ_N). This is the full-exterior form of the pairing in
   Step 3.
 - R160 survey (NG-F1: smoothness, not multiplicativity, controls the localized sign) is consistent
   with Step 2: the Chebyshev content at the threshold is a single coefficient identity.
@@ -168,7 +168,7 @@ only by pairing the comb with e^{−a_mt} over the whole exterior:
     ∫_{T_*}^∞ e^{−a_mt}(LF)(t)dt = Σ_d Λ(d)d^{−s_m}K_F(a_m) − Σ_d Λ(d)d^{−s_m}K_F^{[−T_*, T_*−log d]}(a_m),  (4.2)
 
 with Σ_dΛ(d)d^{−s_m} = −ζ'/ζ(s_m). By Chebyshev (ζ·(−ζ'/ζ) = −ζ'), this is −ζ'(s_m)/ζ(s_m). (4.2) is
-Paper 47 eq:collar (d_m = d_{m,∞}, second term = ℰ). The test e^{−a_m t}1_{(T_*,∞)} is not supported
+Paper 46 eq:collar (d_m = d_{m,∞}, second term = ℰ). The test e^{−a_m t}1_{(T_*,∞)} is not supported
 in any collar C_δ, and it is not in 𝒫_{T'} for any finite T'.
 
 *Proof.* Substitute u = t − log d (Fubini; absolute convergence for a_m ≥ 5/2). ∎
@@ -283,7 +283,7 @@ Requirements, from the falsifiers:
   κ/κ' ↛ 0 (F1). It must fail for a = Λ + η_0 whenever η_0 meets (1, e^{2T'}), in particular at a
   composite threshold n_0 with η_0(n_0) ≠ 0 (§6.2(a), regime I′). It must also fail for DH. By
   §6.2(b), (LB) cannot come from any Dirichlet-algebra identity. It must use f ≡ 1 (the Euler product)
-  quantitatively, for example as a local dual certificate (Paper 47 Theorem C / D1 type) on windows
+  quantitatively, for example as a local dual certificate (Paper 46 Theorem C / D1 type) on windows
   [T_*, T_* + δ] with deficit o(κ'(δ)).
 - The sharpest threshold version is in regime II (e^{2T_*} = p^k). There the edge germ enters ξ both
   through the Hilbert singularity of γ_G and through the new atom εℓ_{p^k}ϱG (Remark 2(ii)). The
@@ -296,7 +296,7 @@ Requirements, from the falsifiers:
   **exhausted**. Left minimality equals H ≥ 0, right minimality equals non-extendability, and the
   Chebyshev threshold identity is an automorphism of 𝒟_{T'} that gives no new relation.
 - Next step: attack (LB) of Conjecture 7.1 as a **local certificate problem to the right of T_*.** The
-  question is whether the flat-top / dual-certificate machinery of Paper 47 (Theorems C, D1, Z) can
+  question is whether the flat-top / dual-certificate machinery of Paper 46 (Theorems C, D1, Z) can
   give λ_A(T) ≥ −κ(T − T_*) with κ = o(δ) or o(δ/log(1/δ)), which matches the §4.4 heuristic of
   R162_405. Separately, quantify (NE) in regime II.
 

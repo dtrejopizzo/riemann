@@ -1,7 +1,7 @@
 # R162_1201 — The Sonin range question as operator theory — **NO-GO (PROVED)**, four exact structures
 
 Note. Inputs: README (F1–F4, rounds 1–11), R162_590, R162_1101 (Thm 5.1
-Riesz collapse, Thm 2.1), R161_011 §4 ((4.2)), R162_402 (Thm 1.3, Lemma 1.2), R162_801 (L2), Paper 47 eq:symbol,
+Riesz collapse, Thm 2.1), R161_011 §4 ((4.2)), R162_402 (Thm 1.3, Lemma 1.2), R162_801 (L2), Paper 46 eq:symbol,
 eq:form, lem:firstcontact, eq:Gammaenergy, subsec:collars.
 
 **Question.** H = H_{T_*} = Π A_T Π on P_T (Π = projection onto the primitive space), N = ker H finite-dimensional,
@@ -22,7 +22,7 @@ Gate 1 OPEN. No label moves.
 ## 0. Corpus check
 
 Grep "secular", "Jordan", "Stieltjes", "Müntz", "exterior field", "e^{a_m t}", "d_{m,N}" in phases 150–162: the
-exterior Hankel form is Paper 47 eq:Gammaenergy (its L²-norm on (T+δ,∞)); d_{m,N} and D_N are Paper 47
+exterior Hankel form is Paper 46 eq:Gammaenergy (its L²-norm on (T+δ,∞)); d_{m,N} and D_N are Paper 46
 subsec:collars (collar balance); the FP value μ_m^reg is R162_402 Lemma 1.2; Müntz faithfulness is the proof below
 eq:Gammaenergy (all m). New here: the lattice-by-lattice system with the secular term (Thm 2.1), its completeness
 (Thm 2.2), the Gamma resummation of the Euler channel (Thm 3.1), the divergent-harmonic sharpening (Thm 4.1), the

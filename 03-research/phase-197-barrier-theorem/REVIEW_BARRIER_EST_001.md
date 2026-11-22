@@ -1,13 +1,13 @@
 # REVIEW_BARRIER_EST_001 — review of BARRIER_EST_001_ESTIMATE_CLASS_NO_GO.md
 
-Phase 197. Review checked against Paper 47 main.tex (def:comb l.7225, subsec:shape-est / lem:shape-est l.8648ff,
+Phase 197. Review checked against Paper 46 main.tex (def:comb l.7225, subsec:shape-est / lem:shape-est l.8648ff,
 cor:margin1 l.3516, prop:env l.3013, prop:wit-sens l.7087) and AUDIT_PHASE193_CERTAINTY (CIRC table, rows 1a).
  No sign is produced by the memo or by this review.
 
 ## Verdict summary
 | item | verdict |
 |---|---|
-| (a) class 𝓔 | CORRECT but NARROW: near-tautological, and it **does not contain Paper 47's own estimate notion** (memo §3 last note is wrong) |
+| (a) class 𝓔 | CORRECT but NARROW: near-tautological, and it **does not contain Paper 46's own estimate notion** (memo §3 last note is wrong) |
 | (b) Lemma 3 | PROVED (signs, admissibility, normalisation all correct) |
 | (c) Thm 4 / Cor 5 | PROVED (absolute form); 16.449 relative constant ARGUED (memo's "A_T ≥ …" is an elided step) |
 | (d) 𝓔^ℕ, Prop 6 | qualitative PROVED; the stated bound has a **normalisation error** (relative vs absolute ℓ¹ slack); quantitative κ̂ OPEN, hard |
@@ -23,7 +23,7 @@ cor:margin1 l.3516, prop:env l.3013, prop:wit-sens l.7087) and AUDIT_PHASE193_CE
    alone: it always also uses an exact support/integrality axiom (supp ν ⊆ log ℕ, or merely ν((0,log 2)) = 0, Λ(n) ≥ 0 on
    integers, Euler product). Any single such axiom violates (E2) and **kills the u→0⁺ falsifier** (no mass below log 2).
    So 𝓔 misses exactly the hybrid class "estimate + exact support", which is where real proofs live. This is the precise gap.
-3. **Paper 47's own notion is integer-supported.** In subsec:shape-est, 𝓕^{(a)}_T(F) = Σ_{n∈𝒩_T} v_n(a) Re c_F(log n) − 2∫…,
+3. **Paper 46's own notion is integer-supported.** In subsec:shape-est, 𝓕^{(a)}_T(F) = Σ_{n∈𝒩_T} v_n(a) Re c_F(log n) − 2∫…,
    and λ_A(T;a) is the bottom for a weight vector a on 𝒩_T (§subsec:finite). The comb a there is *not* a def:comb measure.
    Hence memo §3's note ("instance (a) falls under the PROVED Thm 4, not §3") is **false against the paper's definitions**:
    lem:shape-est(iv) in the paper's sense falls under 𝓔^ℕ. Memo §4's "(iv) PROVED for 𝓔" must be restated as "PROVED for the
@@ -75,7 +75,7 @@ support axiom. Integer-indexed seeds need 𝓔^ℕ (κ̂ OPEN).
 Audit row (B′) should read: "(iv) PROVED for measure combs (𝓔, BARRIER_EST_001 Thm 4); for the paper's integer-weight
 estimates qualitative only, unsigned κ̂ replaces κ_T ≠ 0, quantitative OPEN; reading for named estimates ARGUED".
 
-## Required corrections to the memo before any Paper 47 integration
+## Required corrections to the memo before any Paper 46 integration
 1. Delete/rewrite §3 last note and §4 first bullet (paper's estimate notion is integer-supported).
 2. Fix Prop 6 normalisation (relative slack, or factor A_T).
 3. Replace "A_T ≥ …" by a cited explicit bound or keep ARGUED.

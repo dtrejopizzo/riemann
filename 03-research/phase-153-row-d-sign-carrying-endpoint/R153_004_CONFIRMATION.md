@@ -3,7 +3,7 @@
 * Mandate: decide whether the round-2 interval
 certificate is a **proof** that `⟨A_T^{(a)}F,F⟩ < 0` for the explicit `F` at `T = log 2`, `a = 0.45` (and `0.30`),
 on `P_T^{(a)}`. Everything below was rederived or rerun by the auditor. Sources of truth read: Paper 42
-`main.tex:4072–4230`; Paper 46 `main.md:3141–3180` (Proposition 12.6, (S1)–(S2)); phase 114
+`main.tex:4072–4230`; Paper 47 `main.md:3141–3180` (Proposition 12.6, (S1)–(S2)); phase 114
 `114_d_76_GAMMA_TAIL_SINGLE_ROBIN_DOMINATION.md`, `114_d_77_SEMILOCAL_GUARD_BAND_TRACE_AUDIT.md`;
 phase 118 `W4_CERTIFIED_RANGE.md` §§2(e), 197–208.*
 

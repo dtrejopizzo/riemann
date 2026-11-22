@@ -1,7 +1,7 @@
 # R186.031 — Theorem T₁: positivity on 𝒫_T for T ∈ [½log2, T₁] by the semilocal mechanism (norm route)
 
 Front: reserve (b) of R186_029, promoted by R186_107 §Front 2.
-Frame: S = {∞,2}, level λ = 1, T ∈ [½log2, ½log3) (contacts N_T = {2}, so E_S = 𝔞_T on 𝒫_T; Paper 47 eq:form,
+Frame: S = {∞,2}, level λ = 1, T ∈ [½log2, ½log3) (contacts N_T = {2}, so E_S = 𝔞_T on 𝒫_T; Paper 46 eq:form,
 note N4). Starting identity (D3 at λ = 1, R186_017/099 PROVED; (84)_S, R186_014 PROVED given CC Thm 4.7 CITED):
  𝔞_T(h) = Son_S(h) − C_S(h), Son_S(h) = ‖Π_S ϑ(g_h)‖²_HS ≥ 0, C_S(h) = ∫_ℝ c_h(a) ε_S(e^{|a|}) da, c_h(a) = ∫h(y)h(y+a)dy.
 Standalone script: `r031_t1_norms.py` (Galerkin from r183_030 with embedded ε grids; reproduces the tables of §5).
@@ -107,7 +107,7 @@ analytic source for λ_min(Son_S)). Kept as tools: Lemma N, Lemma ½ (optimal), 
 4. §5: λ_max(C_S) near ½log2 is of the order of the grid error (R186_101 MAJOR-1): only "sign undecidable" is claimed.
 5. No new sign claim.
 
-## For Paper 47 (not integrated; decision taken)
+## For Paper 46 (not integrated; decision taken)
 
 As an observation after prop:negtrace: "the semilocal decomposition does not improve the direct bound
 λ_A ≥ λ_A^∞ − v₂/2 (identity ΔSon − ΔC = −v₂c_h(log2)); |c_h(a)| ≤ ½‖h‖² for a ∈ (T,2T) is optimal on 𝒫_T." Nothing

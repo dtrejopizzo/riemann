@@ -1,9 +1,9 @@
 # ROUND_001_B — The exterior form: is it a fused object, and does it carry a sign?
 
-Object: Paper 47 §sec:ext (main.tex 9856–10677): summation map E, aliasing tail Ψ_f, gauge 𝒢_T, half-line
+Object: Paper 46 §sec:ext (main.tex 9856–10677): summation map E, aliasing tail Ψ_f, gauge 𝒢_T, half-line
 identity (thm:ext-half), Problem prob:ext-L, prop:ext-consol, prop:ext-univ, thm:ext-margin, prop:ext-latred,
 rem:ext-latno, §ext-constraints. Starting point: DOSSIER_001 §6(d), §6(g), §7.1.
-Notation as in Paper 47 §sec:ext: λ = e^T, N = λ², 𝓕f(ξ) = ∫f(x)e^{−2πixξ}dx, v_n = 2Λ(n)n^{−1/2}, 𝒲 the complete
+Notation as in Paper 46 §sec:ext: λ = e^T, N = λ², 𝓕f(ξ) = ∫f(x)e^{−2πixξ}dx, v_n = 2Λ(n)n^{−1/2}, 𝒲 the complete
 form on the line with the full comb, Mellin–Laplace transform F̃(s) = ∫F(x)e^{(s−½)x}dx, Mf(s) = ∫_0^∞ f(u)u^{s−1}du.
 The target throughout is (★) λ_A(T) ≥ 0 (and λ^W_T ≥ 0) as a statement about one quadratic form; no equivalence of it
 with any other statement is used.
@@ -201,7 +201,7 @@ Proposition 1.3 is 𝔔[ϱ] + (1−c′)𝒫_Λ[Ef]. So cor:ext-cfals(ii) exhibi
 ### 1.7 Verdict on DOSSIER §6(d)
 - Comb-genericity of the half-line identity: FALSE as claimed in §ext-constraints item 2. PROVED (Theorem 1.1 shows the
   exact inputs; Propositions 1.3–1.5 the failure). Already recorded in the corpus (C_001, R-Q6, PIMU).
-  Correction for Paper 47 when it is next edited: item 2 should read "…hold for the comb Λ only; for cΛ, a_P and
+  Correction for Paper 46 when it is next edited: item 2 should read "…hold for the comb Λ only; for cΛ, a_P and
   Beurling systems the window form in exterior coordinates acquires the window term 𝒫_{Λ−w}[Ef] − 𝒫_{Λ−w}[Ψ_f], and
   for cΛ no summation map is radical (Prop. 1.4)". (No edit made: phase rule.)
 - Clause (5) of prop:spec. In Mellin coordinates, for g in the core with admissible representative f and φ₀ fixed as in

@@ -627,7 +627,7 @@ of where the premise lives.
    and the uniformity of §2 is asserted on the first reading only.
 4. **The falsifier test is vacuous here, not passed.**  §7 excludes Davenport–Heilbronn by the
    **signedness** of its weights; `Ξ_a(s) = ξ(s+a)ξ(s−a)` has **nonnegative** weights
-   `Λ(n)(n^a+n^{−a})` and off-line zeros unconditionally (Paper 46 Thm 12.4), and round 3 checked that
+   `Λ(n)(n^a+n^{−a})` and off-line zeros unconditionally (Paper 47 Thm 12.4), and round 3 checked that
    G1, G2 and R3 point 4 all transfer to it (point 4 with the source-core threshold moved from `a > ¼` to
    `a > ¼ + a/2`).  What `Ξ_a` fails is **G4**: its polar set `\{−a,a,1−a,1+a\}` has four points, so the
    divergence is not rank one and the rank-one shorting does not remove it — while §2 does use

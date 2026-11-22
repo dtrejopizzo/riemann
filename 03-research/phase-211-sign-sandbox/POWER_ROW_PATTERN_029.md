@@ -126,7 +126,7 @@ This is new real coverage of W on an infinite set of orders and rates. It is not
 
 The condition u²>=256N does NOT cover all orders at fixed u: there it only guarantees N<=u²/256. In particular it does not close the sufficient table of u31.5. The moment E tau^(−2) used in ARCH-GENERAL diverges at k0; that limits this proof, it does not refute the sign of the edge. k0 is treated in parallel by a specific real bound and a stronger wedge u>=64sqrtN, with the polar kept, in POWER_BOUNDARY_WEDGE_029.md. Its result is combined only after its own proof and review; it is not presupposed from REGION.
 
-No new windowT nor the global sign of Paper47 is claimed. The advance is the explicit quadratic scale, keeping the gamma form and the full comb.
+No new windowT nor the global sign of Paper46 is claimed. The advance is the explicit quadratic scale, keeping the gamma form and the full comb.
 
 Reproduction:
 

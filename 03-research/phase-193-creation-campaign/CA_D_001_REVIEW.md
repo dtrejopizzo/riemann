@@ -1,5 +1,5 @@
 # CA_D_001 — Review
-Checked vs P47 prop:shape-phase (σ_T = 2Θ′, Z_T real), def. of P_T (F̂(±i/2) = 0), eq:symbol; EI_003; CA_B_001/002 reviews. Pen and paper, line by line.
+Checked vs P46 prop:shape-phase (σ_T = 2Θ′, Z_T real), def. of P_T (F̂(±i/2) = 0), eq:symbol; EI_003; CA_B_001/002 reviews. Pen and paper, line by line.
 
 ## Verdict
 **Theorem 1, Theorem 1′, Corollary 1.1: CONFIRMED PROVED (re-derived below). Theorem 1″: PROVED under its listed hypotheses. As a sign step for row D: EXCLUDED (O10, O12 survive by Theorem 1″; (R)(10),(11)) — the memo says so itself. Not REF-D (a different form). This is the first PROVED, zero-free, Euler×FE×pole-joint positivity of the campaign: ENDORSED as a tool and index entry.** Two minor FIXes, one consequence for front B.

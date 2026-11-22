@@ -1,6 +1,6 @@
 # Contraction in rectangles of verified height via explicit Taylor weights
 
-Let G=3·10¹² be the verified height used by datum Z2 of paper 47. For each ε>0 with ε<1/2 there is a single construction of weights (independent of ε) with polylogarithmic band such that
+Let G=3·10¹² be the verified height used by datum Z2 of paper 46. For each ε>0 with ε<1/2 there is a single construction of weights (independent of ε) with polylogarithmic band such that
 
     sup_(1/2+ε≤Re s≤1, |Im s|≤G−2) |H_X(s)| ≪_ε (log X)^(−c_ε),    c_ε>0.
 

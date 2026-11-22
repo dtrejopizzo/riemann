@@ -8,10 +8,10 @@ Row D is treated as an independent target. The aim of the phase was to complete 
 through residue O1 of `CELL_001` §8: construct a Hermitian kernel K_T(t,t′), genuinely of two
 variables, with explicit domain and regularisation, whose positivity mechanism couples to the
 conductor-1 functional equation and to the full arithmetic, and then link it to the window form Q_T
-of Paper 47 by an identity or a domination. Non-locality alone does not count as progress; the
+of Paper 46 by an identity or a domination. Non-locality alone does not count as progress; the
 operator must be shown not to collapse into ⟨M_f, J⟩ or to be the disguised node.
 
-Mandatory gates, in order: (0) corpus check before building; (1) the exact SOS barrier (P47
+Mandatory gates, in order: (0) corpus check before building; (1) the exact SOS barrier (P46
 thm:sos); (2) the two-variable barrier (P36-4 kernel vs the relaxed set W₂ of the BR tree);
 (3) positivity proved without using the sign of Q_T, and specificity under deletion of a prime;
 (4) link with Q_T, with every term and sign accounted for.

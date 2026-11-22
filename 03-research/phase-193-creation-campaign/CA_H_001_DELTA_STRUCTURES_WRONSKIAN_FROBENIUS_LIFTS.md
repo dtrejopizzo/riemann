@@ -33,7 +33,7 @@ Contrast (function field): deg(f′) ≤ deg f − 1. Over ℤ the archimedean a
 **1.4 Carries (seed H3 folded here; PROVED).** The defect of additivity of δ_p is exactly the carry polynomial C_p of the Witt vector
 addition law in the first ghost component (Buium Ch. 2, CITED). The window form is carry-blind in the following precise sense: the
 form object is the pair (Γ-factor, comb (Λ(n))_{n<e^{2T}}), and Λ(n) is a function of the exponent vector of n (monoid data, G1) times
-log of the norm; no quantity C_p(a,b) for a pair of integers enters the definition (P47 def:W, eq:form). Carries enter only if a
+log of the norm; no quantity C_p(a,b) for a pair of integers enters the definition (P46 def:W, eq:form). Carries enter only if a
 construction introduces sums a + b of indices, which happens in the window form only through the archimedean proximity kn ≈ m (CA_H_002).
 
 ## 2. The arithmetic Wronskian and the Mason–Stothers template

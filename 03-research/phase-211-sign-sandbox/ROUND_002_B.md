@@ -1,13 +1,13 @@
 # ROUND_002_B — The O(1) term Q₁ of the exterior form on the bulk prolate sector, as a matrix in the comb
 
-Object: the exterior form 𝔔 of Paper 47 §sec:ext (def:ext, thm:ext-half, prop:ext-univ, lem:ext-cell, thm:ext-multi,
+Object: the exterior form 𝔔 of Paper 46 §sec:ext (def:ext, thm:ext-half, prop:ext-univ, lem:ext-cell, thm:ext-multi,
 lem:ext-envelope, thm:ext-layer), restricted to the prolate sector span{ψ_4, ψ_8, …, ψ_{4K}} of K3_GAMMA_001, with the comb
 replaced by an arbitrary weight w ≥ 0. Starting point: ROUND_001_B, Proposition 2.4 and "Next concrete step".
 Notation as in ROUND_001_B: λ = e^T, N = λ², c = 2πN; universal frame ϱ on (1,∞), u(x) = e^{x/2}ϱ(e^x),
 u_n(y) = u(y + log n)1_{y>0}, Ψ̌_ϱ = Σ_{n≥1} n^{−1/2}u_n; H(t) = Σ_{k≤t}1/k. For a comb weight w on n ≥ 2 put
-W := w∗1 (so W(1) = 0, W = log for w = Λ) and H₁^w(t) := Σ_{k≤t} W(k)/k (so H₁^Λ = H₁ of Paper 47).
+W := w∗1 (so W(1) = 0, W = log for w = Λ) and H₁^w(t) := Σ_{k≤t} W(k)/k (so H₁^Λ = H₁ of Paper 46).
 𝔔^w[ϱ] := 𝒲^w[Ψ̌_ϱ] is the complete form on the line with comb 2w(q)q^{−1/2} at ±log q, archimedean part and pole unchanged
-(the convention of Paper 47 for 𝔔^{c′} and of K3_GAMMA_001 §2.3). The target is (★) as a statement about one quadratic form;
+(the convention of Paper 46 for 𝔔^{c′} and of K3_GAMMA_001 §2.3). The target is (★) as a statement about one quadratic form;
 no equivalence of it with any other statement is used.
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -43,7 +43,7 @@ Result: NO-GO with class (see the last section).
 
 Searched: ROUTES-TRIED-INDEX/README.md (phase 199 proof-L-sharp lines 448–535, PROOF_L_SHARP_E_001, PROOF_L_SHARP_Y_001,
 K3_GAMMA_001, META_200_BARRIER_001, phase 211 entries), the master grid (keywords Q₁, monotone, Toeplitz, harmonic cut),
-K3_GAMMA_001, ROUND_001_B, Paper 47 §sec:ext.
+K3_GAMMA_001, ROUND_001_B, Paper 46 §sec:ext.
 
 - PROOF_L_SHARP_E_001 (Thm E.1/E.2) wrote 𝒲_ext as a pair sum over (m,n) with weights log m + log n and the harmonic cut; it
   closed "positivity class by class" (classes indefinite). This memo uses the same pair expansion for a general comb, but asks

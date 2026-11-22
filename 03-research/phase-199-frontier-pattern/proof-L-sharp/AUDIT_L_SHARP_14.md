@@ -38,7 +38,7 @@ DOP853 to t = 60 with analytic tail; all checked quantities are scale-invariant,
     "uniform" means a uniform *bound*, not an asymptotic (1+o(1)). Statement "η = O((log c + k)/c)" is correct as written. OK.
 15. **Phase (d)** not used for (iii); (iv) remains unproved. Agreed.
 
-## Resulting label for Paper 47 thm:ext-layer(iii)
+## Resulting label for Paper 46 thm:ext-layer(iii)
 **PROVED under explicit hypotheses** (ϑ_k ≤ c²/4, c ≥ 200, with the bound |η| ≤ (21.4 log c + 1.54ϑ_k/c + 523)/(c(1−|e₁|))),
 with errata: κ = 1.159 (constant 35 unchanged); remove "meaningful at c = 200"; state that the bound is non-vacuous only for
 c ≳ 820 (N ≳ 130), and that N = 15 lies outside. "(1+o(1)) for fixed k, N→∞" is PROVED. Any numerical use of (iii) at N ≤ 130 stays NUMÉRICO.

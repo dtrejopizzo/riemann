@@ -2,11 +2,11 @@
 
 *Phase 155, round 2. Executes `R155_013 §8(1)` ("Add the comb conditions to the
 LP … the successor of (P3)") under Corollary D.2. Inherits `R155_013` (Theorem D, Cor. D.2),
-`R155_011`/`R155_012` (class, scripts, corrected Bernstein pad), Paper 47 §5 (`lem:bern`),
+`R155_011`/`R155_012` (class, scripts, corrected Bernstein pad), Paper 46 §5 (`lem:bern`),
 §7 (Thm Z (7.2), `lem:smooth`).*
 
 **No sign is claimed for `ζ` at any `T`. The endpoint of record is unchanged:
-`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` (Paper 47 Thm C). Every number below is `DIAGNOSTIC`
+`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` (Paper 46 Thm C). Every number below is `DIAGNOSTIC`
 (double precision, no interval arithmetic); scripts in `scripts/reverse/comb/`.**
 
 ---
@@ -42,7 +42,7 @@ LP … the successor of (P3)") under Corollary D.2. Inherits `R155_013` (Theorem
 | query | where it occurs | what it is | relation to comb-vanishing |
 |---|---|---|---|
 | `prime-free window` | `phase-115/115_10_LITERATURE_STATE_OF_THE_WINDOW.md`, `phase-115/scripts/115_08_prime_free_window_crosscheck.py`, `phase-118/PHASE_118_CLOSURE.md`, `THE_BACKWARD_MAP.md` | Connes–Consani's regime `supp(g*g^∨) ⊂ (½,2)`, i.e. `T < ½log2`: **no prime power lies inside the support at all**, so the prime term `K(f,f)` is *identically zero* and the explicit formula reduces to `Σ|ĝ(γ)|² = −G_∞`. Verified end-to-end in `115_08`. | **Complementary, not the same.** The prime-free window kills the comb by *shrinking the support below `log 2`*; there is then no arithmetic content and no endpoint past `log 2` (the phase-115/118 no-go). Comb-vanishing **keeps** every prime power inside `[−2T,2T]` (that is where `A_T` and the whole value live) and only forces `w` to vanish at the prime powers **outside** the window. It is the prime-free condition applied to the *complement* of the flat top, not to the whole support. |
-| `Yoshida` | Paper 47 `main.tex:137,241,244,276,2020`; `phase-154/R154_013:10,20`; `phase-155/R155_001:46`; `phase-114/114_d_58…` | Yoshida 1992: strict positivity of the Hermitian form at autocorrelation support `log 2`, plus a qualitative small-window constant (Lemma 2) and a high-Fourier-complement constant (Lemma 3). `R154_013` records that the 1992 volume is **not** in `00-references` and the statements come from secondary reports. | Yoshida's `a₀` is again a *support-shrinking* statement (positivity for all sufficiently small windows), the archetype of the prime-free mechanism. Comb-vanishing is a **support-shaping** statement at fixed, large window: it does not shrink `2T` and does not make the form positive — §3 shows it makes the LP value strictly worse. Nothing in Yoshida bears on the tail: his lemmas are about the window, Theorem D/Cor. D.2 about `τ → ∞`. |
+| `Yoshida` | Paper 46 `main.tex:137,241,244,276,2020`; `phase-154/R154_013:10,20`; `phase-155/R155_001:46`; `phase-114/114_d_58…` | Yoshida 1992: strict positivity of the Hermitian form at autocorrelation support `log 2`, plus a qualitative small-window constant (Lemma 2) and a high-Fourier-complement constant (Lemma 3). `R154_013` records that the 1992 volume is **not** in `00-references` and the statements come from secondary reports. | Yoshida's `a₀` is again a *support-shrinking* statement (positivity for all sufficiently small windows), the archetype of the prime-free mechanism. Comb-vanishing is a **support-shaping** statement at fixed, large window: it does not shrink `2T` and does not make the form positive — §3 shows it makes the LP value strictly worse. Nothing in Yoshida bears on the tail: his lemmas are about the window, Theorem D/Cor. D.2 about `τ → ∞`. |
 | `w(log n)=0`, `comb vanishing`, `comb-vanishing` | **only** `R155_013 §3` (Cor. D.2) and `R155_013 §8(1)` | the corollary this note executes | **No prior LP in the corpus imposes it.** `R155_005`'s `r2_d_subcomb.py` (phase-155 round 2) restricts a *sub-comb* of the lattice mass but never zeroes the weight at prime powers. |
 
 **Conclusion of the corpus check.** The idea is new inside the corpus and is *not* the classical
@@ -261,7 +261,7 @@ Three comparisons on the *same* class and the *same* interval, `T = ½log3`:
 | The comb system is feasible for every `(T,U,M)` tried (residual `0`) | `DIAGNOSTIC` (least squares in double precision) |
 | All LP values, certified values, `D(w)`, `τ_stop`, `L_w(200)`, prime-side values of §3 | `DIAGNOSTIC` (double precision; `D` from a `2·10⁻⁵` quadrature; the Bernstein pad is the honest `B₂δ²/8` but `B₂` itself is a double-precision envelope) |
 | **A certificate on `ℝ` at any `T`** | **NOT OBTAINED.** Every window negative by `1.2·10⁻²…8.9·10⁻²`, confirmed on the prime side. |
-| Any statement about `λ^W`, `λ^P`, an endpoint, or the sign of `ζ` at any `T` | **none made**; endpoint of record unchanged (`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`, Paper 47 Thm C) |
+| Any statement about `λ^W`, `λ^P`, an endpoint, or the sign of `ζ` at any `T` | **none made**; endpoint of record unchanged (`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`, Paper 46 Thm C) |
 
 **What *is* new and survives.** This is the **first run in the track that is a statement about all
 of `ℝ`**: for these four explicit weights, `f_w ≥ L_w > 0` on `[200, ∞)` by Theorem D (proved), and
@@ -294,4 +294,4 @@ finite lattice.
 
 *Scripts, commands, runtimes and JSON: `scripts/reverse/comb/` (`comblib.py`, `count.py`, `lp.py`,
 `count.json`, `lp_*.json`, `README.md`). Total compute `≈ 6.5` min, one process at a time.
-Paper 47 not touched.*
+Paper 46 not touched.*

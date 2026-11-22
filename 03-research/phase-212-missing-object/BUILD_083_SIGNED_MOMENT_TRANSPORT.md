@@ -265,7 +265,7 @@ The uniform bound |R_J(F)|≤π||F||² exists by (17), but not a bound c_J||F||�
 
 ## Exact gluing at one boundary, without truncation cost
 
-Status: PROVED as an auxiliary decomposition; (23)-(29), factors, domains and passage to the limit checked independently. Antecedents: (15)-(21), the positive decomposition of the kernel K of P47 and 212-78. It is not presented as a new sign source nor as a reflection proof for the arithmetic form. The additional operation consists of keeping the square of moment difference at one boundary and absorbing exactly its two diagonal terms into reflected energies. Unlike (21), it leaves no truncation penalty. The complete regional residue is written, without assuming it positive.
+Status: PROVED as an auxiliary decomposition; (23)-(29), factors, domains and passage to the limit checked independently. Antecedents: (15)-(21), the positive decomposition of the kernel K of P46 and 212-78. It is not presented as a new sign source nor as a reflection proof for the arithmetic form. The additional operation consists of keeping the square of moment difference at one boundary and absorbing exactly its two diagonal terms into reflected energies. Unlike (21), it leaves no truncation penalty. The complete regional residue is written, without assuming it positive.
 
 Fix b∈(−T,T) and define on x>0, with extension by zero,
 
@@ -519,7 +519,7 @@ The saved energy is still 5.29432592315062e−12, not recertified. The repair re
 
 ## Positivity of the infinite regional complement
 
-Status: PROVED as a regional bound and control of the infinite complement; analytic proof, interval constant and passage to both parities checked and reproduced independently. Computational dependency of the constant at T=4/5: mpmath.iv. Antecedents: (27), (35)-(37), finite reduction L2 already existing in P47. No new global equivalence is claimed, nor that the remaining finite block is positive. An explicit lower bound for the infinite complement of THIS regional form is provided here, instead of inferring its sign from finite matrices.
+Status: PROVED as a regional bound and control of the infinite complement; analytic proof, interval constant and passage to both parities checked and reproduced independently. Computational dependency of the constant at T=4/5: mpmath.iv. Antecedents: (27), (35)-(37), finite reduction L2 already existing in P46. No new global equivalence is claimed, nor that the remaining finite block is positive. An explicit lower bound for the infinite complement of THIS regional form is provided here, instead of inferring its sign from finite matrices.
 
 Work with f supported in (0,T), with N(f)<∞. No moment restrictions are needed for the following bound. Define
 
@@ -1265,7 +1265,7 @@ certify_uniform_subspace_bound.py was also reproduced independently: PASS_UNIFOR
 
 The even run finished assembling its 95 sources and continues integrating the full block; it has not yet produced an LDL95 result. After checking resource availability, the odd 95 run was started in parallel with --parity odd and reduced CPU priority via nice. It uses distinct files and the already frozen odd corrector; it neither modifies nor restarts the even run. Neither of the two full blocks is declared certified while their results do not exist and are not verified.
 
-### Correspondence with the current definitions of Paper 47
+### Correspondence with the current definitions of Paper 46
 
 eq:symbol, eq:form, the definition of lamA and item (o) of thm:parityschur in the current main.tex file were cross-checked, without modifying it. The contact coefficient is v_n=2Λ(n)/sqrt(n), the two constraints are ∫F exp(±t/2)=0 and the norm of λ_A is the L² norm used here. The embeddings with factor 1/sqrt2 preserve that norm.
 
@@ -1864,7 +1864,7 @@ Operational consequence: a design that aims to cover the non-strict goal via (13
 
 ## Strict monotonicity of the ground value of the full form
 
-Status: PROVED, argument and gate checked independently. Antecedents: P47 lem:compact proves compactness of the resolvent and existence of a minimizer for the FULL form on P_T; lem:strict of the paper refers to the archimedean ground value. Here compactness is combined with interior translations that preserve both moments. It is an auxiliary lemma, not an arithmetic sign mechanism nor a priority claim.
+Status: PROVED, argument and gate checked independently. Antecedents: P46 lem:compact proves compactness of the resolvent and existence of a minimizer for the FULL form on P_T; lem:strict of the paper refers to the archimedean ground value. Here compactness is combined with interior translations that preserve both moments. It is an auxiliary lemma, not an arithmetic sign mechanism nor a priority claim.
 
 For 0<T_1<T_2 one has
 

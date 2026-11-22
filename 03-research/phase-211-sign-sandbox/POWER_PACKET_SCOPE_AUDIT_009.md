@@ -4,7 +4,7 @@ Status: PROVED concentration, identities and bridge audit; OPEN finite arithmeti
 
 ## 1. Concrete antecedents, with their scope
 
-Read ROUTES-TRIED-INDEX/06 (R2 and R5), Paper47 lem:wit-conc, prop:wit-Egamma, prop:Egamma-exact and rem:critical; phase188/L2_BUILD_008_GROUND_STATE_AND_T0.md, L2_BUILD_009_ARITHMETIC_INPUT_FOR_T0.md, L2_BUILD_010_REGULARIZED_CENTRE_VALUE.md and N_BUILD_013_E_GAMMA_C_COLLAPSES.md. Only their formulations of form and fluctuation are considered; arguments of another nature are not used to dismiss routes.
+Read ROUTES-TRIED-INDEX/06 (R2 and R5), Paper46 lem:wit-conc, prop:wit-Egamma, prop:Egamma-exact and rem:critical; phase188/L2_BUILD_008_GROUND_STATE_AND_T0.md, L2_BUILD_009_ARITHMETIC_INPUT_FOR_T0.md, L2_BUILD_010_REGULARIZED_CENTRE_VALUE.md and N_BUILD_013_E_GAMMA_C_COLLAPSES.md. Only their formulations of form and fluctuation are considered; arguments of another nature are not used to dismiss routes.
 
 R2 works with a compact function clamped by window, ground/near-ground of an archimedean form. R5 works with compact packets concentrating at one frequency. The present family f_n=(D²-1/4)y^(n-1)e^(-uy), u31.5 fixed, is not identical to either of them for finite n: it has an exponential half-line, rational poles and autocorrelation exponential times polynomial. However its central limit and the fluctuation threshold are of the same type E0 already recorded; no new asymptotic slack appears.
 

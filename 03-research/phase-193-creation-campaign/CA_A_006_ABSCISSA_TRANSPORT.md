@@ -27,7 +27,7 @@ and its derivative:
 So Y-integration acts on the archimedean and polar parts (log Y moment, oscillatory multiplier) and leaves the arithmetic
 abscissa unchanged. To produce weights 2Λ(n)/√n, μ̂ would have to contain ζ data on the critical line. A μ built that way
 makes "μ ≥ 0" a positive-definiteness statement about a function of ζ on the line, i.e. an exact restatement of window
-positivity (Paper 47: positivity at every window ⟺ positive definiteness of one explicit function). *Proof.* Lemma 1, read
+positivity (Paper 46: positivity at every window ⟺ positive definiteness of one explicit function). *Proof.* Lemma 1, read
 coefficientwise; the last sentence is the definition of μ̂ plus the cited equivalence. ∎
 **Remark 3 (what the abscissa-1 form really is, PROVED).** cos(2τ log n)=cos(τ log n²) and 4Λ(n)/n=4Λ(√N)/√N at N=n².
 So in the τ variable, M_Y is a Weil-type form with the window normalization 1/√N, but for the Dirichlet series ζ(2s),
@@ -54,14 +54,14 @@ Record note: (M) propagation (L2_027) is unchanged in general. This memo closes 
 - Theorem 2 covers positive measures in Y. Signed measures would lose positivity, and the result would be an estimate (B′).
 - Weight-k Eisenstein series or other truncation operators change only the archimedean factors, and the arithmetic part is
   still φ. The same conclusion holds (ARGUED).
-- Remark 3 is a neat restatement but not a barrier theorem in Paper 47 terms. It is labelled PROVED as an identity only.
+- Remark 3 is a neat restatement but not a barrier theorem in Paper 46 terms. It is labelled PROVED as an identity only.
 - No sign contact. No negative value for ζ.
 
 ## 6. Seed from a different family (proposed, not pre-screened)
 All of CA_A_001–006 fail for one reason: the positivity comes from a norm or a pointwise sign, so it is blind to the comb
 and to h*. A different family should take positivity from the *variational* structure in weight space and use the
 openness lemma directly:
-**Homotopy / no-crossing in weight space.** Take a path a_c from a comb known positive at every window (Paper 47: smooth
+**Homotopy / no-crossing in weight space.** Take a path a_c from a comb known positive at every window (Paper 46: smooth
 and atomic positive combs exist) to Λ. Track λ_A(T;a_c). A sign change requires a crossing c* where the minimizer h*_{c*}
 satisfies ∂_c λ = Σ ∂_c v_n·c_{h*}(log n) = 0 together with λ=0. The ζ-specific input would be a property of Λ that makes
 crossings impossible along a path chosen with Euler × FE (e.g. a_c=Λ restricted to p≤P_c, with the FE restored by a

@@ -4,9 +4,9 @@ Pen and paper. Proposal from N_BUILD_007: order ν ≼ ν′ iff ⟨ν′ − ν
 property of ρ = M^{−1}*B (M^{−1} = δ₀ − e^{−u/2}du, N_BUILD_007 §0) iterated in Z^{−1} = Σ(−ρ)^{*j}*M^{−1}.
 
 ## Corpus check
-Paper 47: thm:posext (exterior measures, inf-of-symbol bound), lem:half (|c_F(a)| ≤ ½ for a > T, optimal on P_T),
+Paper 46: thm:posext (exterior measures, inf-of-symbol bound), lem:half (|c_F(a)| ≤ ½ for a > T, optimal on P_T),
 rem:coer-nogo(a) (coupling of adjacent blocks has norm exactly π, Hilbert inequality; operator-norm route excluded),
-thm:margin (λ_A → 0⁺ at most like the explicit B(T,k)). Grid W-lin ("linear bounds in a fixed frame", Paper 47
+thm:margin (λ_A → 0⁺ at most like the explicit B(T,k)). Grid W-lin ("linear bounds in a fixed frame", Paper 46
 §subsec:bar-lin). These exclude KLMN-type relative bounds |comb| ≤ θ·(arch) + C with θ < 1 as proofs of the sign.
 The question set by the coordinator: does applying the relative bound to the Möbius resolvent ρ instead of the comb, and
 iterating, escape that class? Answer below: no.
@@ -55,6 +55,6 @@ has a certified positive value (Theorem C), to see whether an Euler-factor SOS e
 computation gives bottom ≤ (1−θ)λ^♯ − θκ − C < 0. Correct; T^♯ finite by N_BUILD_001(E)(iii).
 2. §2(a) is a non-implication (no theorem that iterates fail), stated as such; §2(b) is the real NO-GO, via §1 and
 N_BUILD_001(F). Correct.
-3. §4: SOS certificates of this shape are the dual-certificate theory of Paper 47 (thm:Z, flat-top weights) in other
+3. §4: SOS certificates of this shape are the dual-certificate theory of Paper 46 (thm:Z, flat-top weights) in other
 clothing; the novelty must be the Euler-factor choice of g_i. Not yet shown non-trivial. Labelled OPEN.
 No sign contact; no negative value.

@@ -116,7 +116,7 @@ this phase.
 
 ## `[phase 134]` scope note on this phase's numerics
 
-Recorded from Paper 46 §9.3(2) (`04-papers/46-intersection-frame-defect/archive/main.md`) and the
+Recorded from Paper 47 §9.3(2) (`04-papers/47-intersection-frame-defect/archive/main.md`) and the
 independent re-runs in `03-research/phase-134-row-d-opening/R134_002_AUDIT_ROUND1.md`
 §4.  It retracts nothing; it fixes how this phase's scan numbers may be read.
 

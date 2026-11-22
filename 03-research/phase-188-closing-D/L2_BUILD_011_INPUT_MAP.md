@@ -1,12 +1,12 @@
 # L2_BUILD_011 — The input map: which properties of Λ can carry the sign
 
-WP_T(a): λ_A(T; a) ≥ 0 for the window form built with weights a in place of Λ (Paper 47 §subsec:finite).
+WP_T(a): λ_A(T; a) ≥ 0 for the window form built with weights a in place of Λ (Paper 46 §subsec:finite).
 A property P is KILLED if some weight sequence (or L-type object) keeps P and fails WP_T at some window T
 (so no argument that uses only P proves WP_T there — transfer reading, R186_114 §1.2). SURVIVES = no falsifier
 keeping P is known. UNKNOWN = not settled. Falsifiers refute proof schemes, never statements about ζ.
 
 ## Corpus check
-Paper 47 thm:finmod, cor:void, rem:twohalves; crossword CROSSWORD-TO-D §3.1 table I3 (property →
+Paper 46 thm:finmod, cor:void, rem:twohalves; crossword CROSSWORD-TO-D §3.1 table I3 (property →
 falsifier), I4 (Thm O), I5 (W-identification), I6 (W-sieve), I7 (inertia), §3.2 exigencias (α)–(θ);
 R186_114 (falsifier audit: M_m PROVED as form object; f_t primitive witness CONDITIONAL on (Z-strip); DH, BFdisc,
 Λ̃, b_θ, ℕ∪√2ℕ, R = L(u,χ) PROVED/CITED); R186_005 (TB3-neg, degree-2 Selberg); R185_005/005B (BR).
@@ -76,8 +76,8 @@ Minimal combination: (Euler product over ℕ) ∧ (FE with Γ(s/2), conductor 1)
 must come from the interaction of the two, never from either alone.
 
 ## Erratum (independent review of SHAPE_THEOREM)
-- Row 13: "f_t primitive witness CONDITIONAL (R186_114 §2.4)" is superseded. Paper 47 prop:ftprim constructs the primitive witness
-  directly (comb-level, no (Z-strip)); independently re-derived and CONFIRMED in 04-papers/47-row-d-dual-certificates/SECONDARY_ITEMS.md
+- Row 13: "f_t primitive witness CONDITIONAL (R186_114 §2.4)" is superseded. Paper 46 prop:ftprim constructs the primitive witness
+  directly (comb-level, no (Z-strip)); independently re-derived and CONFIRMED in 04-papers/46-row-d-dual-certificates/SECONDARY_ITEMS.md
   (review item 4). Row 13 reads: KILLED (M_m PROVED; f_t PROVED).
 - §2(a): rows 13 and 21 keep the functional equation (M_m = ξ·polynomial, f_t self-dual); what they break is the Euler product over ℕ
   (M_m: polynomial factor whose logarithmic derivative is not a Dirichlet series over ℕ; f_t: frequencies m/√M ∉ ℕ). They belong to the

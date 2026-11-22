@@ -2,12 +2,12 @@
 
 *Phase 155, round 3c. Executes the the round-3c order. Inherits `R155_023` (amended)
 and its audit `R155_025`, `scripts/r3a/` (Galerkin assembly of `A_∞` on `P_T` and of the prime form
-`Π_T`), and Paper 47 §2 (`thm:A`, `thm:S`, `lem:K`), §4 (`lem:mbounds`), §5 (`lem:bern`, the
-enclosure machinery of `thm:C`), §8. **Paper 47 is not touched; `scripts/r3a`, `scripts/r3b` and
+`Π_T`), and Paper 46 §2 (`thm:A`, `thm:S`, `lem:K`), §4 (`lem:mbounds`), §5 (`lem:bern`, the
+enclosure machinery of `thm:C`), §8. **Paper 46 is not touched; `scripts/r3a`, `scripts/r3b` and
 `R155_024` are not touched.** New scripts: `scripts/r3c/`.*
 
 **No sign for `ζ` is claimed at any `T`. Endpoint of record unchanged: `λ_min(A_{½log3}) ≥
-8.8577·10⁻⁵` (Paper 47 Thm C). Galerkin values are upper bounds on infima and are `DIAGNOSTIC`;
+8.8577·10⁻⁵` (Paper 46 Thm C). Galerkin values are upper bounds on infima and are `DIAGNOSTIC`;
 the one rigorous statement of this note is §4's enclosure, which is about **one explicit direction**,
 not about the form.**
 
@@ -75,7 +75,7 @@ Nothing in the corpus states the reduction of §2 **at this pivot**, and nothing
 ### Setting and hypotheses
 
 `P_T = {F ∈ L²(−T,T) : A(F) = B(F) = 0}`, `A(F) = ∫Fe^{t/2}`, `B(F) = ∫Fe^{−t/2}`. On `P_T` the pole
-term vanishes identically, so (Paper 47 `thm:A`)
+term vanishes identically, so (Paper 46 `thm:A`)
 
  `A_∞[F] = (1/2π)∫ m(τ)|F̂(τ)|²dτ = C₀‖F‖² + ∫₀^∞(‖F‖² − c_F(u))K(u)du`, `Π_T[F] = −Σ_{n<e^{2T}} v_n c_F(log n)`,
  `W_T = A_∞ + Π_T` on `P_T`.
@@ -210,7 +210,7 @@ a *budget* `EPS = 1e−9` instead of directed rounding, and it recomputed the co
 How `a` was obtained (a Galerkin eigenvector) is irrelevant to the statement: `a` is *given data*,
 read as an exact decimal, and what is proved is a property of the resulting `F*`.
 
-**Identity used** (Paper 47 `thm:A` + `thm:S`(iii)), exact for any `F ∈ L²(−T,T)`:
+**Identity used** (Paper 46 `thm:A` + `thm:S`(iii)), exact for any `F ∈ L²(−T,T)`:
 
  `W_T[F] = 2A(F)B(F) + C₀c(0) + ∫₀^{2T}(c(0) − c(u))K(u)du + c(0)·∫_{2T}^∞K − Σ_{n∈N_T} v_n c(log n)`,
 
@@ -362,7 +362,7 @@ check that the reduction was implemented as proved.
 |---|---|
 | Prop. 3c.1 (Schur reduction (★), (i)–(iii)), incl. the caveat correcting the order's "⟺" | `PROVED` (algebraic; no boundedness needed) |
 | Cor. 3c.2 (operator/congruence form, `L W L^* = w₁₁ ⊕ S`) | `PROVED` under `F* ∈ D(W)` |
-| `A_∞` closed and `≥ C₀` on `P_T`; `A_∞` unbounded above | `PROVED` (Paper 47 `thm:A`, `lem:mbounds`) |
+| `A_∞` closed and `≥ C₀` on `P_T`; `A_∞` unbounded above | `PROVED` (Paper 46 `thm:A`, `lem:mbounds`) |
 | `‖Π_T‖ ≤ A_T = 2.24883` at `log 2` | `PROVED` |
 | `‖Π_T‖ ≤ 0.9` | `DIAGNOSTIC` (Galerkin, `R155_023 §3`) |
 | `n₋(A_∞\|P_T) = 1` on `(T*_{∞,P}, 0.80]` — hypothesis (H1) | `HYPOTHESIS` / `DIAGNOSTIC`; only `n₋ ≥ 1` is `PROVED` (`R155_023` Prop 3(i)) |
@@ -380,7 +380,7 @@ check that the reduction was implemented as proved.
 
 ---
 
-## §7 Proposal for Paper 47 (not applied; Paper 47 untouched)
+## §7 Proposal for Paper 46 (not applied; Paper 46 untouched)
 
 1. **§8, new subsection "The reduction at the ground state".** Proposition 3c.1 + Corollary 3c.2
  verbatim: two short proofs, no new machinery, and they make precise what "one negative direction"
@@ -404,4 +404,4 @@ check that the reduction was implemented as proved.
 
 *Deliverables: this file; `scripts/r3c/` (`README.md`, five scripts — `r3c_04_enclosure_iv.py` is the
 support of Theorem 3c.3 — `r3c_01.json`, `r3c_02.json`, `r3c_03.json`, `r3c_04.json`,
-`r3c_04_enclosure_iv.json`). `scripts/r3a`, `scripts/r3b`, `R155_024` and Paper 47 untouched.*
+`r3c_04_enclosure_iv.json`). `scripts/r3a`, `scripts/r3b`, `R155_024` and Paper 46 untouched.*

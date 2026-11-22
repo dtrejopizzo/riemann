@@ -4,7 +4,7 @@ Appendix D.1 and bridge C.1 of
 [Freedman, 2606.29555v1](https://arxiv.org/abs/2606.29555v1) were
 checked against lemmas 6.28/8.1/8.4 of [Three
 Gates](https://arxiv.org/abs/2609.20367v1) and the rank/polar-capacity
-conditions of Paper 47. The external certificates were not run, nor
+conditions of Paper 46. The external certificates were not run, nor
 was the whole operator chain validated.
 
 Freedman explicitly separates a Mellin prefix from the Volterra tail.
@@ -92,13 +92,13 @@ arithmetic identity forcing η=0 would indeed eliminate that cost, but
 we have not proved that the residual of the Weil operator satisfies
 it.
 
-## Scope for Paper 47
+## Scope for Paper 46
 
 (E) and (F) are elementary Schur formulations, not new RH theorems.
 They serve as an exact validation interface for the candidate
 response: the next substantive work is to construct X₀ and prove (P)
 using the integers, or to annihilate the residual moment that appears
 in (F). Importing a positive repair or a contraction in another metric
-does not substitute for that proof. Paper 47 already contains rank
+does not substitute for that proof. Paper 46 already contains rank
 conditions compatible with this requirement; these formulas make
 explicit the cost of an approximation.

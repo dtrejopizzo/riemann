@@ -114,13 +114,13 @@ The derivation of (2) uses F(−x)=F(x). For non-even F, the change of variable 
 
 ## 5. Cross-check of gamma and comb: the map does not give equality with Q_T
 
-On the even polar-free carrier of Paper47, the sought form is the archimedean form minus the comb:
+On the even polar-free carrier of Paper46, the sought form is the archimedean form minus the comb:
 
 `Q_T(F)= (1/(2π))∫ m(t)|F̂(t)|²dt`
 
 `         −Σ_(n<exp(2T)) (2Λ(n)/√n) c_F(log n)`.
 
-Here `m(t)=Re ψ(1/4+it/2)−logπ~log|t|−log(2π)` by the asymptotics of the digamma; the exact representation and the domain are in Paper47 eq:Aform and thm:A. Only that definition is cited, not a new claim about its sign.
+Here `m(t)=Re ψ(1/4+it/2)−logπ~log|t|−log(2π)` by the asymptotics of the digamma; the exact representation and the domain are in Paper46 eq:Aform and thm:A. Only that definition is cited, not a new claim about its sign.
 
 The comb in a fixed window is a bounded operator: its form in absolute value is ≤`(Σv_n)||F||²`. The gamma term has logarithmic frequency growth and is unbounded on the L² ball of smooth tests of the polar-free carrier. In contrast, 𝔈_(T,1/4) is a bounded smoothing form with C∞ kernel.
 
@@ -168,4 +168,4 @@ No NO-GO is declared for a domination `Q_T≥𝔈`, for non-smoothing maps, for 
 
 A single map was computed from the continuous tests to the positive kernel −R, with controlled domain and series and without choosing coefficients from Q_T. Its FE shows exactly the cosh moment of the even carrier. Its effective form is smooth and fails as an identity of the node by the explicit cross-check of gamma and comb.
 
-**Outcome:** candidate (1) computed, equality with Q_T refuted for that candidate; domination with positive remainder OPEN. Paper47 was not modified and goal D was not closed.
+**Outcome:** candidate (1) computed, equality with Q_T refuted for that candidate; domination with positive remainder OPEN. Paper46 was not modified and goal D was not closed.

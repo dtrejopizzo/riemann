@@ -2,7 +2,7 @@
 
 Fix u=63/2 and call W_(N,k) the form of the atom of 205. The following statements are equivalent:
 
-* All nontrivial zeros lie on the critical line (equivalently, the global sign of paper 47).
+* All nontrivial zeros lie on the critical line (equivalently, the global sign of paper 46).
 * For each r=p/2^j>0, with p a positive integer and j≥0, W_(N,floor(rN))≥0 for all N large enough, with a threshold that may depend on r.
 
 In particular, for the implication toward the global sign there is no need to prove uniformity as k/N grows. The obligation remains to prove a statement for ALL dyadic slopes, without a fixed ceiling. The condition can be weakened to proving eventual nonnegativity on the multiples of the pair (2^j,p) for each such pair.

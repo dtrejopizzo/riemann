@@ -7,7 +7,7 @@ Paper-47 O-labels.
 ## Seed-by-seed
 | seed | verdict | audit |
 |---|---|---|
-| C1 weighted HM split c_p𝔞_∞ − 𝔮_p ⪰ 0 | DISCARD (retry + REF-D) | **Discard correct, reason partly wrong.** The pieces are explicit (𝔞_∞, 𝔮_p known), so the CA_B_008 REF-D tautology does not apply. The right kills: termwise/per-place bounds (P47 cor:directbound, lem:shape-misc), (R)(5),(8), and the O-screen the memo gives (each 𝔮_p must be ≤ c_p𝔞_∞ on the whole negative cone of 𝔞_∞ — contradicts cor:Qp indefiniteness on contact subspaces, ARGUED) |
+| C1 weighted HM split c_p𝔞_∞ − 𝔮_p ⪰ 0 | DISCARD (retry + REF-D) | **Discard correct, reason partly wrong.** The pieces are explicit (𝔞_∞, 𝔮_p known), so the CA_B_008 REF-D tautology does not apply. The right kills: termwise/per-place bounds (P46 cor:directbound, lem:shape-misc), (R)(5),(8), and the O-screen the memo gives (each 𝔮_p must be ≤ c_p𝔞_∞ on the whole negative cone of 𝔞_∞ — contradicts cor:Qp indefiniteness on contact subspaces, ARGUED) |
 | C2 Lévy–Khintchine / jump forms | DISCARD; identity kept | CONFIRMED. Identity ‖F‖² − Re c_F(a) = ½‖F − τ_aF‖² ✓ (F extended by 0); (B″), O7/O11/O15, (R)(7) ✓ |
 | C3 product formula | SURVIVES → CA_C_001 | correct to develop |
 | C4 Tate residues / global zeta integral | DISCARD (REF-D) | CONFIRMED (Connes/R158 restatement) |

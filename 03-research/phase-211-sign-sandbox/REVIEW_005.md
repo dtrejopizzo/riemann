@@ -1,6 +1,6 @@
-# Review 005: rounds 005_D, 006_B, 006_C, 007_B, 007_C, 007_D, 008_D against Paper 47 and STATEMENT_001
+# Review 005: rounds 005_D, 006_B, 006_C, 007_B, 007_C, 007_D, 008_D against Paper 46 and STATEMENT_001
 
-Scope. ROUND_005_D, ROUND_006_B, ROUND_006_C, ROUND_007_B, ROUND_007_C, ROUND_007_D, ROUND_008_D, checked against Paper 47 (04-papers/47-row-d-dual-certificates/main.tex:
+Scope. ROUND_005_D, ROUND_006_B, ROUND_006_C, ROUND_007_B, ROUND_007_C, ROUND_007_D, ROUND_008_D, checked against Paper 46 (04-papers/46-row-d-dual-certificates/main.tex:
 lem:K, thm:A, prop:nodes, lem:parity, prop:archneg, thm:parityschur, prop:polarcap, prop:sharp, lem:polarelim, lem:monoT) and STATEMENT_001. No equivalence of the
 window statement (★) with any other statement is invoked. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO /
 NUMERICAL. Verdicts on PROVED claims: CONFIRMED (key step named) / REFUTED / DOWNGRADE. "L.n" = line n of the memo under review.
@@ -258,7 +258,7 @@ immediate. Register as NO-GO (ARGUED): sub-part arguments on the response cubic 
 **Proposition 4.1, λ_W^{par} ≤ λ_A^{par} ≤ λ_{W,2}^{par} (L.142–148).** CONFIRMED. Key steps: W_T = 𝔞_T on 𝒬^{par}_T because
 ℓ_par = 0 there (thm:parityschur(o)), so the infimum over 𝒬 dominates the infimum over 𝒟; every two-dimensional S ⊂ 𝒟 meets
 ker ℓ, so sup_S W_T/‖·‖² ≥ λ_A^{par} and min–max gives the upper half. The global λ_W ≤ λ_A follows by taking minima over
-the parities and is already in Paper 47 (main.tex L.132, L.4330).
+the parities and is already in Paper 46 (main.tex L.132, L.4330).
 
 **Floor transfer, Corollary 4.3 and §1(a) (L.40–52, L.171–174).** CONFIRMED as a transfer of CITED inputs. Key steps:
 λ_A(T) ≥ λ_W(T) ≥ λ_W(½log15) ≥ 2^{−2904} for T ≤ ½log15, using that λ_W is nonincreasing (lem:monoT, main.tex L.534–546,
@@ -268,7 +268,7 @@ which covers λ_W explicitly); the normalisation of the cited form is the paper'
 λ_A > 0 there". The transfer is a re-statement, not new. (2) The ½log15 floor inherits the status of its source: the
 computational certificate was reproduced (AUDIT_ZENODO_FRONTIER §B1-run), but the analytic lemmas imported from the
 log 10 / log 12 papers were not audited (same file, B1(a) proof chain and "Not done"); the label is CITED with that
-caveat, and the ½log12 floor is CITED, not audited. (3) The proposed correction of Paper 47's open-problem sentence
+caveat, and the ½log12 floor is CITED, not audited. (3) The proposed correction of Paper 46's open-problem sentence
 (main.tex L.10771–10772, "beyond ½log5 no lower bound better than the trivial … is known") is legitimate in substance: a
 cited complete-form certificate does give λ_A floors up to ½log15. The paper's own text already records the inequality
 λ_W ≤ λ_A next to the citation (L.3589); the open-problem item should be reconciled with it.

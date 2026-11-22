@@ -27,7 +27,7 @@ The bilinear form has archimedean term
  Arch(f,g)=C0 integral fg + integral_0^infinito Karch(h)[integral fg-C_fg(h)]dh,
  Karch(h)=2exp(-h/2)/(1-exp(-2h)),
 
-comb -sum_(n>=2) v_n C_fg(log n), v_n=2Lambda(n)/sqrt(n), and polar A(f)B(g)+A(g)B(f). The Karch formula comes from P47main.tex lines396–418, Levy density lemma. It is smooth on any compact separated from h=0. The normalisation and its identification with K(a,b) for exponentials are fixed in001/002.
+comb -sum_(n>=2) v_n C_fg(log n), v_n=2Lambda(n)/sqrt(n), and polar A(f)B(g)+A(g)B(f). The Karch formula comes from P46main.tex lines396–418, Levy density lemma. It is smooth on any compact separated from h=0. The normalisation and its identification with K(a,b) for exponentials are fixed in001/002.
 
 On any fixed compact interval I, for each s>0 there exists C_(I,s) such that
 

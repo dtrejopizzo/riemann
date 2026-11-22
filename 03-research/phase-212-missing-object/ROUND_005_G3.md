@@ -57,7 +57,7 @@ P_T. The following statements are equivalent:
 (a) there exist (Ω, ℙ) and a linear map X with E X_F = ℓ(F) and a_T(F) = Var X_F + ρ(F) on P_T, ρ ≥ 0;
 (b) there exist ℋ and V with a_T = ‖VF‖² + ρ on P_T, i.e. (G).
 Moreover, if the identity holds on all of L²(I_T), then E|X_F|² − |ℓ(F)|² = a_T^{ext}(F) + ρ(F) defines an
-extension with n₋ ≤ 1. That is the polar accounting of P47 thm:parityschur, which the inertia count R4-f does not
+extension with n₋ ≤ 1. That is the polar accounting of P46 thm:parityschur, which the inertia count R4-f does not
 separate from c = 1.
 *Proof.* (a)⇒(b): on P_T one has ℓ = 0, hence Var X_F = E|X_F|² = ‖X_F‖²_{L²(ℙ)}. (b)⇒(a): take the
 centred Gaussian process with covariance ⟨VF, VG⟩ and add ℓ(F) to it as a constant. As for n₋ ≤ 1:

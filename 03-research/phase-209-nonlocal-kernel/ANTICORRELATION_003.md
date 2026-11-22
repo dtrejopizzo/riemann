@@ -130,7 +130,7 @@ radius s-λ_min(V_y)<s. Thus
     V_y^{-1}=s^{-1}Σ_{k≥0}(B/s)^k,
 
 with strict positivity of every entry. For m=1 the conclusion is obvious.
-V_y and its inverse are not identified with the P47 node.
+V_y and its inverse are not identified with the P46 node.
 
 ## 4. Sign between complete prime factors
 

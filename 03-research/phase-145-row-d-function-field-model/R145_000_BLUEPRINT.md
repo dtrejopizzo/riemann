@@ -2,7 +2,7 @@
 
 `R144_005`, `ROW-D-SYNTHESIS-PHASES-135-144.md` (§3 β, with the predicted answer and the acceptance test),
 `R142_001` §§D.31–D.32 (frame defect theorem, Lemma D.31.4, Restatement D.32.1: Hartshorne V.1.6/V.1.8/V.1.9),
-`R143_001` §D.34 (trace cone, 12.3-B4), Paper 46 §§11–12, Paper 45 §§9–11, Paper 44 (Frob_n, Sh_Z), Paper 43
+`R143_001` §D.34 (trace cone, 12.3-B4), Paper 47 §§11–12, Paper 45 §§9–11, Paper 44 (Frob_n, Sh_Z), Paper 43
 (carrier, rulings). Corpus check: `CORPUS_CHECK_R145.md` (read first; reuse; do not reopen).*
 
 Standing rules as before; here the falsifier protocol is inverted: the model is a **solved case** (Weil's
@@ -25,7 +25,7 @@ the same names, the frame's objects:
    (degree map to `Z` instead of `R`): the radial variable is **discrete**, `t ∈ (log q)Z`. `D^W_C` :=
    real functions on `Z` with decay `q^{−(1+ε)|n|}` (state the exact class). `Φ_E(s) := Σ_n E(n) q^{(s−½)n}`,
    a Laurent series in `T = q^{−s}` — **periodic in `Im s`** with period `2π/log q`. Record every place where
-   discreteness/periodicity changes a statement of Paper 46 §11.
+   discreteness/periodicity changes a statement of Paper 47 §11.
 2. **Explicit formula and the form.** Weil's explicit formula for `C` (finite sum over zeros `ρ` mod the
    period); `I_∞^C(E,F) := Φ_E(0)Φ_F(1)+Φ_E(1)Φ_F(0) − Σ_ρ Φ_E(ρ)Φ_F(1−ρ)` over the `2g` zeros. Check: is it
    the intersection form on `C×C` restricted to the classes `E ↦ (divisor built from E)`? Make the dictionary
@@ -56,7 +56,7 @@ the same names, the frame's objects:
 From D.41.5–6, state in one labelled paragraph: the arithmetic frame's "effective" = pointwise nonnegativity
 corresponds in the model to [X]; the model's effective cone (sections) corresponds to [Y]; the arithmetic
 analogue of [Y] would be [Z] — an object on `C_S` / `D^W` defined without zeros — and it does / does not
-exist in rows A–C (check Paper 43's presented complexes, `Sh_Z`, `H⁰_Z` of Paper 46 §13, CC's `H⁰(D) = Q ∩ 𝒪(D)`).
+exist in rows A–C (check Paper 43's presented complexes, `Sh_Z`, `H⁰_Z` of Paper 47 §13, CC's `H⁰(D) = Q ∩ 𝒪(D)`).
 State exactly which axiom (A1–A9) or which structural feature (discrete vs continuous radial variable;
 periodicity; finiteness of the zero set; positivity of point counts; the Frobenius correspondence as a
 genuine morphism) makes [Z] available in the model and unavailable arithmetically. If [Z] is identifiable,

@@ -13,7 +13,7 @@ Route D3 of R160_010 / R160_020 Option 4 (never written before; R162_590 §2 ite
 
 No sign mechanism is claimed.
 
-Notation is Paper 47 §parityschur and R162_504:
+Notation is Paper 46 §parityschur and R162_504:
 - A_T^par is the operator of a_T on the whole parity sector L²_par(I_T).
 - φ_ev = cosh(t/2), φ_odd = sinh(t/2), ℓ_par = ⟨·,φ_par⟩, ε_ev = +1, ε_odd = −1.
 - Q^par = ker ℓ_par, and λ_par(T) = λ_min(A_T|P_T^par).

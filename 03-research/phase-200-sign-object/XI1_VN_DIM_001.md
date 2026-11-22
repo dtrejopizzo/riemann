@@ -85,7 +85,7 @@ DEAD family of the index (l. 250). The spec defines Ξ1 with L(G) precisely to g
 - **Quantity.** τ(P_g E_T P_g) is understood as the module trace Tr_𝓗(P_g E_T P_g). It is the only sense in
   which "τ(PEP)" is defined for P in the commutant.
 - **Conjectured relation (spec, OPEN).** 𝔞_T(g) = ‖g‖² τ(P_g E_T P_g) − ε_T(g), with
-  ε_T(g) ≤ C μ^{−A} dist²(g, 𝒢̄_T), where 𝔞_T is the form from P47 def:W / eq:nuw (feasible dual (ν_w, 2, 0)).
+  ε_T(g) ≤ C μ^{−A} dist²(g, 𝒢̄_T), where 𝔞_T is the form from P46 def:W / eq:nuw (feasible dual (ν_w, 2, 0)).
 
 ---
 
@@ -114,7 +114,7 @@ the spec's bound. There 𝔞_T(g) = c_T ‖g‖²:
 - If c_T > 0, this contradicts the fact that 𝔞_T has a radical: Thm V1.3 / INV_V_001; the radical exists and
   𝔞_T ≡ 0 there (TEST_CG_001 "𝔔 ≡ 0 on the radical").
 - If c_T = 0, then 𝔞_T = −ε_T ≤ 0 everywhere on P_T, which contradicts the certified positive values (Thm A of
-  P47, Mori's ½log15).
+  P46, Mori's ½log15).
 
 So **there is no E_T in L(G) satisfying the identity**, however it is constructed. The reason is structural: a
 cyclic projector in the commutant only remembers the norm of the generating vector.

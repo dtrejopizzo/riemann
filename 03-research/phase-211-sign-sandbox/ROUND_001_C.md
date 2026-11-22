@@ -1,8 +1,8 @@
 # Round 001 C — The exact Nyquist reduction with η ↓ 0: dimension, gauge, shift, and the block at ½ log 5
 
-Object: the two-sector Nyquist reduction of Paper 47 (§sec:nyq, P47:6049–6439: thm:nyq, prop:nyq-LK,
+Object: the two-sector Nyquist reduction of Paper 46 (§sec:nyq, P46:6049–6439: thm:nyq, prop:nyq-LK,
 thm:nyq-sectors, thm:nyq-schur, rem:nyq-schur-num, prop:nyq-nopoint) and the band of the symbol
-(prop:band, P47:2864–2982). Target (★): λ_A(T) ≥ 0 for every T. Notation as in DOSSIER_001 §1 and P47 §sec:nyq:
+(prop:band, P46:2864–2982). Target (★): λ_A(T) ≥ 0 for every T. Notation as in DOSSIER_001 §1 and P46 §sec:nyq:
 ω_k = πk/2T, s_T = m + r_T − Σ_{n∈N_T} v_n cos(· log n) (truncated symbol), r_T(τ) = ∫_{2T}^∞ cos(τu)K(u)du,
 c_T = s_T(0), ε_T := ∫_{2T}^∞ K, so |r_T| ≤ ε_T.
 
@@ -42,7 +42,7 @@ t−u+4Tj ∈ (−2T,2T). For F supported in I_T and 0 ≤ u ≤ 2T, the part of
 (−2T, −3T+u) ⊂ (−2T,−T], disjoint from I_T, so ⟨F, τ_u F⟩ = c_F(u). Parseval in {ε^α_k} gives
 (1/4T)Σ_k |F̂(ω_k+α)|² e^{−i(ω_k+α)u} = c_F(u) for 0 ≤ u ≤ 2T, and by conjugation for |u| ≤ 2T. At u = 2T the twisted
 translate does not meet I_T, which gives the alternating identity after multiplying by the unimodular e^{i(ω_0+α)2T}.
-From here the proof of thm:nyq (P47:6097–6122) applies verbatim (atoms at ±log n, then ν_ε = ½K(|u|)1_{ε<|u|<2T}du and
+From here the proof of thm:nyq (P46:6097–6122) applies verbatim (atoms at ±log n, then ν_ε = ½K(|u|)1_{ε<|u|<2T}du and
 monotone convergence; the identity uses only the cosine sampling formula on |u| ≤ 2T). ∎
 
 **Lemma 2 (two shifted sectors and the gauge). [PROVED]** Put e^α_j = (2T)^{−1/2}e^{−i(ω_{2j}+α)t},
@@ -70,7 +70,7 @@ dim N′ ≤ |𝒩|, and λ_A(T) ≥ 0 ⟺ S ⪰ 0, λ_A(T) > 0 ⟺ S ≻ 0. The
 (iii) (Dimension lower bound.) |𝒩| ≥ n_−(a_T on L²(I_T)), the number of negative directions of a_T on all of L²(I_T).
 Proof. s_k → +∞ along the shifted mesh by prop:nyq-LK(iii) (the lower bound there holds for every real τ), so 𝒩 is
 finite and η_0 > 0. For η ≤ η_0 the set {k : s_k < η} equals 𝒩. (i) and (ii) are the proof of thm:nyq-schur(i)–(ii)
-(P47:6385–6405) with e_j, e'_l replaced by e^α_j, e'^α_l and s_T(ω_k) by s_k; that proof uses only Lemma 2, Parseval, the
+(P46:6385–6405) with e_j, e'_l replaced by e^α_j, e'^α_l and s_T(ω_k) by s_k; that proof uses only Lemma 2, Parseval, the
 growth of s_k, Lemma lem:compact, and that e^α_j, e'^α_l, e^{±t/2}1_{I_T} lie in 𝒟_T (their transforms are O(1/|τ|)
 on the mesh). (iii) A negative subspace of a_T meets 𝒩_η^⊥ only in 0 by (i), so its dimension is at most codim 𝒩_η^⊥
 = dim 𝒩_η ≤ |𝒩|. ∎
@@ -215,7 +215,7 @@ dimension count carries no sign information. Any future sign step on S must fail
 depend only on the block samples (Proposition 4) nor only on the size of the block.
 
 ---------------------------------------------------------------------------------------------------
-## 6. What is new relative to P47 §sec:nyq and P48 "Nyquist, two sectors — REF"
+## 6. What is new relative to P46 §sec:nyq and P48 "Nyquist, two sectors — REF"
 
 1. Theorem 1 with η ↓ 0: the exact reduction lives on the nonpositive samples only, and the "some/every η" equivalence.
 2. Lemmas 1–2: the whole reduction holds on every shifted mesh and modulo the alternating gauge; the dimension is

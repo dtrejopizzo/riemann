@@ -1,7 +1,7 @@
 # EI_001 — The exterior field of the window minimizer: an exact three-term identity, and what it does to C*_A
 
 Construction round (phase 192). Pen and paper; no numerics.
-P47 = 04-papers/47-row-d-dual-certificates/main.tex. SPEC_A = phase-191/SPEC_A_EXACT_INDUCTION.md.
+P46 = 04-papers/46-row-d-dual-certificates/main.tex. SPEC_A = phase-191/SPEC_A_EXACT_INDUCTION.md.
 **No sign is certified here; no negative value of 𝔞_T for ζ is found or claimed.**
 
 ## 0. Corpus check — why this is not a retry
@@ -13,7 +13,7 @@ prime pairing of the *clamped ground mode* as (¼−∂²)² acting on dψ̃ wit
 the Fourier-side identity Ê = (σ_T − λ)ĥ* − Tate with its pole structure. Not a retry: the object is the one SPEC_A §5 named as the only line
 where an input could enter ("the evaluation of the exterior field g*_j = 𝒯_jh*_j on the collars"), and it had not been evaluated.
 
-## 1. Setting (P47)
+## 1. Setting (P46)
 I_T = (−T,T), X := e^{2T}, v_n = 2Λ(n)n^{−½}, 𝒩_T = {n ≥ 2 : n < X}; m(τ) = Re ψ(¼+iτ/2) − log π = C₀ + ∫₀^∞(1−cos τu)K(u)du with
 K(u) = 2e^{−u/2} + K₁(u), K₁(u) := 2Σ_{k≥1}e^{−(2k+½)u} (lem:K); σ_T(τ) = m(τ) − Σ_{n∈𝒩_T}v_n cos(τ log n); 𝔞_T(F) = (1/2π)∫σ_T|F̂|², F̂(τ) = ∫F(t)e^{itτ}dt;
 A(F) = ∫Fe^{t/2}, B(F) = ∫Fe^{−t/2}, P_T = {A = B = 0}; 𝒟_T the form domain; h* a real unit minimizer of 𝔞_T on P_T ∩ 𝒟_T (exists, lem:compact);

@@ -18,7 +18,7 @@ We do not fix a parity. The operator \(J\) leaves \(Z\) invariant, but the
 conjugated operators \(U_\rho=D_\rho^*\mathscr F D_\rho\) that appear in
 the multiscale identity will not be used as though they preserved each
 parity sector. We choose a basis \(F_1,\ldots,F_d\) of all of \(Z\) and, as
-Paper 47 allows, a single \(L\) such that
+Paper 46 allows, a single \(L\) such that
 
 \[
  R_L|_Z:Z\longrightarrow\mathbb C^L
@@ -182,7 +182,7 @@ Since \(H_T\) commutes with \(J\), the abstract decomposition
 \]
 
 does hold. One can evaluate (5) on a vector \(F\in Z_+\) or \(F\in Z_-\),
-and the Tate identities Paper 47 proves for that parity can be used
+and the Tate identities Paper 46 proves for that parity can be used
 there. What does not follow is that each operator in (10), in particular
 \(U_\rho\), leaves those subspaces invariant, or that \(K\) is
 block-diagonal with respect to (14). That is why the following criterion
@@ -338,7 +338,7 @@ part of the collar that has fixed external data; the part with
 
 There are two positivity results available, but they belong to different
 identities. In the multiscale interface (8), the interior energy
-satisfies \(E\succeq0\). In the compressed identity of Paper 47, the
+satisfies \(E\succeq0\). In the compressed identity of Paper 46, the
 Gamma--Euler contraction satisfies
 
 \[
@@ -420,11 +420,11 @@ mathematically decisive step is to estimate the full PC matrix
 \(\widehat Q=\widehat K\) — preferably via an identity that also inserts
 (27) into the same functional — and check whether it satisfies (29) with
 the necessary positive margin relative to \(B\). The certified range of
-Paper 47 is not extended, nor is D or RH proved.
+Paper 46 is not extended, nor is D or RH proved.
 
 Finally, this reduction does not yet use the dynamical minimality of the
 first contact, that is, the loss of nonnegativity over every larger
 window. The same matrices can be formed for any null mode of a window
 with \(H_T\ge0\). Hence they constitute a finite audit of the radical, but
-do not yet satisfy Paper 47's requirement of distinguishing the first
+do not yet satisfy Paper 46's requirement of distinguishing the first
 contact from a formal spectral zero or from a positive eigenvector.

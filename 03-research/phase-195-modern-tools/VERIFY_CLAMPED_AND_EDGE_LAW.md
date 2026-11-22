@@ -1,9 +1,9 @@
 # VERIFY — «clamped ends» vs «moment conditions» for P_T, and the edge law U3
 
- Verifier memo on INV_U_001 §1 and U3. Sources: Paper 47 main.tex l.112–130
+ Verifier memo on INV_U_001 §1 and U3. Sources: Paper 46 main.tex l.112–130
 (def. of 𝔞_T, 𝒟_T, A, B, P_T, W_T, Φ_F), thm:Aform/eq:Kprim + rem:Kprim (l.400–440). No paper edited.
 
-## 1. Paper 47's definitions (verbatim content)
+## 1. Paper 46's definitions (verbatim content)
 - 𝒟_T = {F ∈ L²(I_T): ∫log(2+|τ|)|F̂|² < ∞}; A(F)=∫F e^{t/2}, B(F)=∫F e^{−t/2}; **P_T = {F ∈ L²(I_T): A(F)=B(F)=0}**.
 - Φ_F(s)=∫F e^{(s−½)t}dt, so Φ_F(1)=A, Φ_F(0)=B; F̂(τ)=∫F e^{−iτt} gives F̂(i/2)=A, F̂(−i/2)=B.
 - c_F = F*F̃ (autocorrelation, written Φ in eq:Kprim); its transform |F̂|² extends to F̂(τ)·conj F̂(conj τ), so F ∈ P_T ⇒
@@ -31,11 +31,11 @@ The statement «P_T = clamped ends» is **wrong only if read on F (or h*)**. In 
 | phase-190 EXP_004_OMEGA0.md l.1,3; scripts/omega0.py | P_T = (¼ − ∂²)H²₀(I_T), clamped ground mode G₀ | **correct** (G variable) |
 | phase-116 row_d_gamma_fourier_tate_v89–v93_audit.tex | «clamped potentials φ», F = Lφ | **correct** (potential variable) |
 | R186_025 Lema 1.4 | H²₀ Poincaré for h with h″ ∈ L² | correct, a statement about the potential, not about P_T∩𝒟_T elements |
-| Paper 47 l.429–430 | order ≥2 vanishing of ĉ_F at ±i/2 | correct (frequency side) |
+| Paper 46 l.429–430 | order ≥2 vanishing of ĉ_F at ±i/2 | correct (frequency side) |
 | INV_U_001 §1 | «no clamping» | correct for F; add that clamping holds for G |
 | R186_048 §4 (l.184–190), SPEC_A §1 (l.43) | h* ~ (T−|t|)^a, a≈0.15–0.25 (fitted); not a clamping claim | not the wrong description; see §4 |
 | R186_019 / R186_100, other «sujet*» hits | unrelated | — |
-No file in 03-research/, 05-meta-and-planning/ or Paper 47 attributes clamped ends to F or h*. The wrong reading lived only in
+No file in 03-research/, 05-meta-and-planning/ or Paper 46 attributes clamped ends to F or h*. The wrong reading lived only in
 working notes. **No result depended on it.** (R186_048's argument against the fold uses measured h*(±T), not clamping.)
 
 ## 4. U3 (edge law h* ~ a_±(log κ/δ)^{−1/2})

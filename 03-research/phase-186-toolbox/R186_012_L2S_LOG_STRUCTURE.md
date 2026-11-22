@@ -58,7 +58,7 @@ With frequencies 2^{k₁}3^{k₂}, ridges appear at ratios r = 2^{i₁}3^{i₂},
 - Numerics: scratchpad `l2s.py` (truncated double sum K = 45, Gauss–Legendre 4000 nodes; this measures d₀ only, not the full series). Slopes per decade /ln10: j=1: 0.1276, 0.1281, 0.1265; j=2: 0.2713, 0.2717, 0.2685; j=3: 0.4475, 0.4483, 0.4429; predicted 0.1275, 0.2705, 0.4463. ρ = 1+δ: d₀/δ = 1.280, 1.670, 2.100 (δ = 10⁻³,10⁻⁴,10⁻⁵): increment 0.39, 0.43 per decade ≈ b·ln10 = 0.415.
 - Nothing about the sign of E_S, nor about (TC_S), nor equivalences with RH.
 
-## For Paper 47
+## For Paper 46
 
 - Proposition (structure of the semilocal density, S = {∞,2}): ε_S = d₀ + (continuous), d₀ with log⁺ singularities at 2^j and coefficient β_j = 2^{j/2}(1−2^{−j})λ²/(2log2). One-page proof (Lem + diagonals + Neumann/HS).
 - Corollary: ε_S ∈ L^p_loc, R′_S Hilbert–Schmidt; the decomposition E_S = Son_S − HS holds for every T. Honest label: PROVED for S = {∞,2}; ARGUED for {∞,2,3}; OPEN for S(T).
@@ -68,4 +68,4 @@ With frequencies 2^{k₁}3^{k₂}, ridges appear at ratios r = 2^{i₁}3^{i₂},
 
 * L2_S PROVED for d_S (density of the Halmos series (84)_S): d_S ∈ L^p_loc ∀p<∞, singularities β_j log⁺ at 2^j, ∉ L^∞_loc. β_j and b recomputed. As a statement about the kernel of R′_S: CONDITIONAL on (84)_S/Δ (trace/series exchange CC (85)–(90)_S, trace-ability of PX, XP, PXP against ϑ(f)).
 * Rename: what is proved is (E′_loc)/L1′, not the microlocal (M) of R183_029 (which is no longer needed). MINOR: lemma sup_u‖G₀(u,·)‖ as y→0; constant of the lacunary lemma; d_S a.e. by Fubini.
-* Paper 47: admissible as a Proposition about d_S; "R′_S HS ∀T" only CONDITIONAL.
+* Paper 46: admissible as a Proposition about d_S; "R′_S HS ∀T" only CONDITIONAL.

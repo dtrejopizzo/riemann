@@ -15,7 +15,7 @@ a hand computation (§3). The variant that uses `P_T` through Lagrange terms fai
 ## 0. Filter
 
 **(1) Closest antecedent.** `ROUND_007_A.md` §1 Lemma 1.1 (ground-state identity per contact,
-`φ > 0`) and §2 Theorem 2.1 (class 𝒢: contacts bounded by potentials `V_p ≥ 0`; NO-GO relative to P47 cor:Tarch,
+`φ > 0`) and §2 Theorem 2.1 (class 𝒢: contacts bounded by potentials `V_p ≥ 0`; NO-GO relative to P46 cor:Tarch,
 `RULES_AVOID` Q1). The memo itself leaves open (§2, «What 𝒢 does not cover») the case of sign-changing `V_p`.
 Also `phase-211-sign-sandbox/ROUND_005_D.md` Thm. 2.1 (global ground state `h_T`), `INV_N_001` §1 (`φ ≡ 1`),
 `ROUND_017_A.md` / `RULES_AVOID` AA (wall of the per-prime split, `T_DIR ≈ 0.697`), `ROUND_006` §§7–10.
@@ -80,7 +80,7 @@ written as in (1.1), with any `φ_p` (of any sign, `≠ 0` a.e.), `θ_p ≥ 0` a
 terms are `≥ 0`. *Proof:* (1.1) holds on all of `L²(I)`, and would give `a_T(1) ≥ 0`, contradicting Lemma 3.1. □
 
 The same proof works for every representation «sum of squares plus potential `≥ 0`» valid on `L²(I)` without using
-`P_T`. It is elementary, does not use P47 cor:Tarch and covers the sign-changing gap of `ROUND_007_A` §2 in the part where
+`P_T`. It is elementary, does not use P46 cor:Tarch and covers the sign-changing gap of `ROUND_007_A` §2 in the part where
 the square is kept. It does not cover bounds `Π_p ⪯ M_{V_p}` holding **only** on `P_T`. It does not depend on the weight:
 it holds equally with `c = 2`, without a prime power or with a Beurling-type weight. It is a class closure, not a
 falsifier of a named step.
@@ -118,7 +118,7 @@ for orientation. Script: `scratchpad/r18.py` and `r18s.py`, temporary.
   non-Perron ingredient that uses `P_T`: a restricted Poincaré- or Wirtinger-type inequality,
   `¼∬K(ΔF)² + ∫W F² ≥ μ_T ‖F‖² − (terms vanishing on P_T)` with explicit `μ_T`, which the manifest part
   cannot supply (§3). An honest candidate would be that inequality with an explicit constant for the kernel `K` in
-  the window, used per prime. Its relation with the P47 certificate (thm:index, cor:Tarch) is direct: P47
+  the window, used per prime. Its relation with the P46 certificate (thm:index, cor:Tarch) is direct: P46
   obtains it by intervals. Doing it by hand was not attempted in this round.
 - Controls (informative): Corollary 3.2 is blind to the weight (it holds equally at `c = 2`, with 3 deleted or with 2
   deleted), as befits a class NO-GO. The numerical part of §4 was not repeated with controls.

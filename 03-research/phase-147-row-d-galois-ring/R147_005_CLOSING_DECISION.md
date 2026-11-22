@@ -33,7 +33,7 @@ the decision.
 3. **The `G`-invariant sector is the trivial slot** (Theorem D.55.9′, restated per `R147_004b` C1: the
    `χ = 1` slot of `𝓒` is exactly `𝓔^∞` because `f_1 = Σ_g f(·,g) ≥ 0`). `PROVED`. Consequently, at
    every zero of `ζ_F` the support-function constant is `s(γ,θ)`, unchanged, for every abelian `L/F`, every
-   tower and every `m`. The frame defect theorem (Paper 46 Thm 19.23) for `ξ` stands verbatim.
+   tower and every `m`. The frame defect theorem (Paper 47 Thm 19.23) for `ξ` stands verbatim.
 
 **Reading of record.** The `+` exists, is built, and lives entirely in the non-trivial isotypic sectors,
 i.e. at the zeros of the `L(s,χ)`, `χ ≠ 1`. The zeros of `ζ` live in the `G`-invariant sector, where the
@@ -44,14 +44,14 @@ by Theorem D.55.9′ alone.**
 ## 2. What was refuted, withdrawn or corrected (record)
 * Blueprint expectation "the character table enters the intersection numbers" — REFUTED on `D^W`
   (collapse), CONFIRMED on `𝒟_L` (packet grading). Both stand, on different carriers.
-* Round-1 "discovery" `K ∈ 𝓔` — already Paper 46 Def–Thm 11.7(i); withdrawn as a result.
+* Round-1 "discovery" `K ∈ 𝓔` — already Paper 47 Def–Thm 11.7(i); withdrawn as a result.
 * "Effective class with zeros right of 1 via Epstein" — replaced by the trivial witness
   `E = 3e^{−t²} + e^{−(t−log 2)²}` (`Φ_E` vanishes on `Re s = ½ + log 3/log 2`); the Epstein grid is
   illustration only; O-47.2 closed (R139_004 H4).
 * "Kills the horn *enlarge the effective cone*" — non sequitur, withdrawn (the horn is about the support
   function).
 * "First support function in row D to reach 1" (`S(γ,π/2,m) = 1` for `4 | m`) — withdrawn: `s(γ,0) = 1`
-  always (Paper 46 (19.2)); the statement says only that the `μ_m`-orbit of `π/2` meets `πZ`, the
+  always (Paper 47 (19.2)); the statement says only that the `μ_m`-orbit of `π/2` meets `πZ`, the
   direction the defect theorem never uses. FATAL flag raised and cleared on this ground.
 * "The defect theorem may choose `θ`" — withdrawn; no `L(s,χ)` analogue of Def 19.19–Thm 19.23 exists
   (O-47.7).
@@ -94,4 +94,4 @@ statement and complete proof in `R147_003b` §R3.3; `deg K_L = 1` restricted to 
 proved/certified by route). This decision is unconditional. No label in the corpus changes. Row D: **no label, no sign**.
 Recommendation: pause construction here; the next phase, if any, should attack O-47.7 (a defect
 theorem for `L(s,χ)` in a `θ`-family) only if a `ζ_L`-frame theorem is judged worth having, or
-close row D at the map and record Phases 134–147 in Paper 46 Part IV.
+close row D at the map and record Phases 134–147 in Paper 47 Part IV.

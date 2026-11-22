@@ -1,8 +1,8 @@
 # LINK_014 — Removing the rank one does not repair map 011
 
-2026-10-19. **PROVED, favourable review in AUDIT_014.md and its addendum**, with the same CITED input from Paper47 used and verified in LINK013. No new numerical computations.
+2026-10-19. **PROVED, favourable review in AUDIT_014.md and its addendum**, with the same CITED input from Paper46 used and verified in LINK013. No new numerical computations.
 
-**Result:** the Gaussian energy Π, by itself, is still too large on the explicit family F_T of Paper47 to admit a domination `Q_T≥c·Π(a(F))` with c>0 independent of T. Hence removing only the term κvv* from the kernel −R while keeping the same coefficient map a_d(F) does not work either.
+**Result:** the Gaussian energy Π, by itself, is still too large on the explicit family F_T of Paper46 to admit a domination `Q_T≥c·Π(a(F))` with c>0 independent of T. Hence removing only the term κvv* from the kernel −R while keeping the same coefficient map a_d(F) does not work either.
 
 This result is not inferred from the NO-GO of the full norm in LINK013: the Π component is computed again on the same tests and shown not to vanish. D and other maps remain open.
 
@@ -72,7 +72,7 @@ To link the pointwise and Hilbert identities, partial sums can be taken: they co
 
 ## 3. The same family F_T and its computed local limit
 
-Use exactly the family of LINK013/Paper47 for T≥1 (in particular k≥8):
+Use exactly the family of LINK013/Paper46 for T≥1 (in particular k≥8):
 
 `k=ceil(21T/e)`, `a=21/e`,
 
@@ -136,7 +136,7 @@ The term κvv* was not used in any bound of this section.
 
 ## 5. Cross-check with Q and exclusion of all constant scales
 
-**CITED, verified in LINK013 against the proof of Paper47.** For these same F_T,
+**CITED, verified in LINK013 against the proof of Paper46.** For these same F_T,
 
 `|Q_T(F_T)|/||F_T||²≤4·10⁹ T exp(−15.449T)`.
 

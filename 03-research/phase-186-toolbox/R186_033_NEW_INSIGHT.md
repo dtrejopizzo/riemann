@@ -4,7 +4,7 @@ Goal of the memo: propose objects that are **not** linear reductions in a fixed 
 under Lemma R (R155_010: no flat top has ŵ ≥ 0) nor under BR (R185_005: schemes in 𝔐 with L/D/C/Q statements
 over Λ), and develop the first lemma of one of them. Standalone script: `r033_pnt_window_identity.py`.
 
-Notation (Paper 47): 𝔞_T(F) = C₀‖F‖² + ∫₀^∞ K(u)(Φ(0) − Φ(u))du − Σ_{n∈N_T} v_nΦ(log n), Φ = 𝒞_F autocorrelation,
+Notation (Paper 46): 𝔞_T(F) = C₀‖F‖² + ∫₀^∞ K(u)(Φ(0) − Φ(u))du − Σ_{n∈N_T} v_nΦ(log n), Φ = 𝒞_F autocorrelation,
 K(u) = 2e^{−u/2}/(1 − e^{−2u}) = 2Σ_{k≥0}e^{−(2k+½)u}, C₀ = ψ(¼) − log π = −5.37218, v_n = 2Λ(n)/√n,
 𝒫_T = {A(F) = B(F) = 0}, λ_A(T) = inf 𝔞_T over the sphere of 𝒫_T.
 
@@ -17,7 +17,7 @@ loss (ARGUED with a number). **No contact with the sign in this memo.**
 ## 0. What the map says and what is respected
 
 - Walls read: grid §3 (W1–W12, W11′, W-Sonin, W-factor, W-dither, W-lin), log 13–27; BR (R185_005 §1–2);
- CROSSWORD-TO-D; phase 186 rounds 1–15 (README), R186_029/030/031/107; Paper 47 def:W, def:PD,
+ CROSSWORD-TO-D; phase 186 rounds 1–15 (README), R186_029/030/031/107; Paper 46 def:W, def:PD,
  thm:A, lem:K, thm:S, thm:Z, thm:margin, thm:log5W, thm:parityschur, prop:polarcap.
 - What already exists and is **not** repeated: Metzler/Perron of −𝔞_T (R160_C7 Rem. 3.3), Doob transform of the
  ground state (phase 61 OPEN-PROBLEMS §Step 2.3, phase 114 d_118), Kreĭn flow / canonical system in T
@@ -187,7 +187,7 @@ e^{4T}, 𝒜_T. Time ≈ 5 min. The table-§3 values with inf_{𝒫_T} and E_exp
 - NO-GO: convexity of log λ_A (falsified numerically in T, e^{2T}, e^{4T}); scalar/operator Jensen bounds
  from Lemma 2 (O(1) loss against super-exponential margin).
 - NUMERICAL: breakdown of §3; the near-cancellation at h* is Lev_{K₁} vs 1.372, with d(x − ψ) at 6% and decreasing.
-- **No contact with the sign.** Nothing here decides any new window nor touches Paper 47, grid or crossword.
+- **No contact with the sign.** Nothing here decides any new window nor touches Paper 46, grid or crossword.
 - Proposal for the next round (if wanted): study (★₃₃) as an inequality between two
  functionals with different minimizers: a lower bound of E_ψ on the cone where (C₀+4)Φ(0) + Lev_{K₁}(Φ) < 0
  (negative archimedean direction, low dimension up to ½log5 by R186_028 Thm 1.4), which is where the arithmetic

@@ -1,10 +1,10 @@
 # N_BUILD_013 — (E_γ, C): the packet limit is exactly critical, and the constant buys nothing
 
-Pen and paper. F_T = F_T^γ the spectral-derivative family (Paper 47 §17), normalized ‖F_T‖ = 1; 𝓕_T Chebyshev fluctuation
+Pen and paper. F_T = F_T^γ the spectral-derivative family (Paper 46 §17), normalized ‖F_T‖ = 1; 𝓕_T Chebyshev fluctuation
 (N_BUILD_001); target of N_BUILD_012 §5: (E_γ, C) limsup_T [𝓕_T(F_T) − 𝔞^♯(F_T)] ≤ C·g_κ(γ) (κ > κ*).
 
 ## Corpus check
-Paper 47 prop:wit-Egamma, lem:wit-conc, rem:wit-cheb, prop:wit-coh(ii) (quartet vs degenerate limit), cor:void; R186_051 item 4
+Paper 46 prop:wit-Egamma, lem:wit-conc, rem:wit-cheb, prop:wit-coh(ii) (quartet vs degenerate limit), cor:void; R186_051 item 4
 ("(E_γ) for one γ ⇔ absence of quartets at all heights", zero side, Prop 3.3); R186_050 §4.3; L2_BUILD_010 (the centre γ = 0 is
 exactly critical: C₀ = m(0) = −2ζ′/ζ(½), G2_B1_R1 Lemma 2). grep "Riesz|Abel|summab|boundary value|exactly critical|ξ′/ξ": the
 centre-value identity exists (γ = 0); the identity at every γ and its consequence for constant-weakened (E_γ) are not in the record.

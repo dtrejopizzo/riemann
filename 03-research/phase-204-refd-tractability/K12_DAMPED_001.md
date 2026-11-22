@@ -12,7 +12,7 @@ grep in `05-meta-and-planning/ROUTES-TRIED-INDEX/` and `03-research/` for «Ω_{
 - 06_ **R3** (Ω_{t₀}) OPEN, with dead sub-routes N_012 (decomposition, NO-GO), N_013 (packets, CONDITIONAL collapse),
   N_014 (two-copy families, ARGUED; Thm A "Ξ unbounded ⇒ t_∞ = 0"), N_015 (Thm L, NO-GO of Λ ≥ 0).
 - 04_ l.178 (N_012: "weaker but not separable"), 06_ **R5** (E_γ), TRACT_E_PHASES_001 §3.2 (K12, Lemma E.2), README l.599.
-- AUDIT_203_001: line cΛ, λ_A(0·Λ) = λ_{∞,P}(T) < 0 for T ≥ 0.60 (P47 cor:Tarch), slope −0.063 at c = 1 at ½log15,
+- AUDIT_203_001: line cΛ, λ_A(0·Λ) = λ_{∞,P}(T) < 0 for T ≥ 0.60 (P46 cor:Tarch), slope −0.063 at c = 1 at ½log15,
   (1+ε)Λ < 0 for ε > 8·10⁻⁶⁹; Danskin only gives upper bounds.
 - "Lemma E.2" does not appear attacked in any memo; "damped comb" only in TRACT_E. **New reason, written out** (required
   against cΛ): the object of K12 is NOT cΛ (see §1); the family λ_t = (1−t)ρ_κ + tΛ starts at an *interior* point of Pos
@@ -140,7 +140,7 @@ implication; K12 is a "weaker than D" residue whose packet-level content is (E_�
 ## 6. Task 6: NUMERICAL test at Mori μ = 15 (T = ½log15), only recorded data
 
 Data: λ_A(Λ) ≤ 4.98·10⁻⁷⁰ on g*, λ_A(Λ) ≥ 0 certified (Mori, CITED); Σ v_n c_{g*}(log n) = ΣΛ(n)s_n ≈ 0.063
-(AUDIT_203 §2); λ_{∞,P}(T) ≥ C₀ = −5.372 (decreasing to C₀, P47).
+(AUDIT_203 §2); λ_{∞,P}(T) ≥ C₀ = −5.372 (decreasing to C₀, P46).
 (a) Chord cΛ (the one in the brief; NOT K12). Danskin (upper) and chord (lower):
 | t | upper λ_A(Λ)+(1−t)0.063 | lower (1−t)C₀ + t·0 |
 |---|---|---|

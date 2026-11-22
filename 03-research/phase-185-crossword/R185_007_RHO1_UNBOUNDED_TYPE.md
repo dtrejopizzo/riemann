@@ -2,7 +2,7 @@
 
 Phase 185 (crossword). Pure mathematics, no numerics. RH is never asserted.
 Inputs: R185_003 (Lemma 2∞, Thm 1–2, Prop 3, §3), R185_092 (m3), R185_004 (§2, Def 5), R185_005 (BR), R166_802 (Thm 1–3),
-R164_000 (TC, Rem 4.8a), R164_601 (Thm 3.1–3.3, W2/M), R164_190, Paper 47 (Theorem Z, thm:finZ), R163_101.
+R164_000 (TC, Rem 4.8a), R164_601 (Thm 3.1–3.3, W2/M), R164_190, Paper 46 (Theorem Z, thm:finZ), R163_101.
 
 ## State
 
@@ -148,9 +148,9 @@ The case δ′ → 0 of the second class is RH.
 
 ## For the audit
 
-1. **Lemma 1, Paley–Wiener constant.** The decay of G² in the band |Im t| ≤ ½+ε uses F ∈ C_c^∞ (Paper 47's witness).
+1. **Lemma 1, Paley–Wiener constant.** The decay of G² in the band |Im t| ≤ ½+ε uses F ∈ C_c^∞ (Paper 46's witness).
    If the witness is only finite-type with G ∈ L², replace with Barner's h ≪ (1+|t|)^{−1} and symmetric convergence.
-2. **Normalization.** (1.1∞) must be checked against def:W/eq:nuw of Paper 47 (editor's rule), especially the factor
+2. **Normalization.** (1.1∞) must be checked against def:W/eq:nuw of Paper 46 (editor's rule), especially the factor
    2Re and the n^{+} term for Ψ̌ not supported in [−2T_c−Δ, 2T_c+Δ].
 3. **Uniform ε in mixtures.** Without it, R185_003's Prop 3 may leave the Weil class; that does not break the
    classification (it falls into the second class) but it does break factorization through a single test.
@@ -159,7 +159,7 @@ The case δ′ → 0 of the second class is RH.
 5. **(TC) type Q.** "not D" is ARGUED, not PROVED. If required, downgrade to "Q or D, not L, not C".
 6. Neither RH nor Θ < 1 is asserted.
 
-## For Paper 47/48
+## For Paper 46/48
 
 - Add to the residual remark after the circularity theorem: "Finiteness of type is not used; the conclusion holds
   for every K ≥ 0 with e^{(½+ε)|x|}Ǩ ∈ L¹ ∩ BV (Weil–Barner class). Below the boundary ε = 0, convergence of the

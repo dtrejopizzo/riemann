@@ -9,7 +9,7 @@
   state; signing it is the primitive gap in localized form — rejected absent a new Euler-specific
   cut identity".
 - phase-116 CANDIDATE_LOG_SCHUR_THEOREM l.97 mentions IMS/commutator localization as an option.
-- Paper 47 rem:coer-nogo (sharp blocks, Hilbert constant).
+- Paper 46 rem:coer-nogo (sharp blocks, Hilbert constant).
 Verdict: §1 (identity) is a REPEAT of 106.47 in substance; §2 (primes are pure coupling below log 2),
 §3 (two-sided O(1) criticality) and §4 (explicit Tate-free NO-GO threshold T_loc via 1_{I_T}) are not
 found in the corpus in this form. The route as a whole is a repeat of P121's rejected option; it is
@@ -17,7 +17,7 @@ kept only as a record of these three sharpened facts.
 
 Idea: replace sharp Tate blocks (whose coupling has Hilbert norm π/2, rem:coer-nogo) by a smooth
 partition and an exact localization identity. Corpus: no prior use for 𝔞_T of an IMS-type identity
-(grep "IMS", "partition of unity", "localization formula" in phases 160–188 and Paper 47).
+(grep "IMS", "partition of unity", "localization formula" in phases 160–188 and Paper 46).
 
 ## 0. The Lévy form (from lem:K)
 By eq:m, m(τ) = C_0 + ∫_0^∞(1 − cos τu)K(u)du with K > 0, K(u) = u^{-1} + O(1) (u↓0),

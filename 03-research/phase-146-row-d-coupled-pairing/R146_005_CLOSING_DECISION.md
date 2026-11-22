@@ -7,7 +7,7 @@ definitions; the Toeplitz threshold `2/(√p+1)` as the spectral minimum of the 
 ## 1. Results of record
 | item | statement | label |
 |---|---|---|
-| D.45.1–2 | a finite symmetric form on `Z⟨Frob_n⟩` extending Paper 44's off-diagonal Gram exists for every finite diagonal choice; it is **not a count**: degenerate (`L(6,10) = 0`) and indefinite (`Q(5Frob_6 − 4Frob_10) = −10`); it equals Paper 46's `2ab − W` with the zero sum deleted, hence **zero-blind and `Ξ_a`-uniform** | PROVED |
+| D.45.1–2 | a finite symmetric form on `Z⟨Frob_n⟩` extending Paper 44's off-diagonal Gram exists for every finite diagonal choice; it is **not a count**: degenerate (`L(6,10) = 0`) and indefinite (`Q(5Frob_6 − 4Frob_10) = −10`); it equals Paper 47's `2ab − W` with the zero sum deleted, hence **zero-blind and `Ξ_a`-uniform** | PROVED |
 | D.45.4–5 | model: `[Γ_{φ+ψ}] = [Γ_φ]+[Γ_ψ] − F_2 + 2⟨φ,ψ⟩F_1`; `Γ_{1+π}` effective with a negative coefficient in the Frobenius basis; the arithmetic sum classes pass the cosh test structurally (correction in the ruling plane) — a non-detecting test by construction | PROVED / CLASSICAL |
 | **D.47.2** | **the Frobenius diagonal, from Paper 44 Thm 8bis.1b: archimedean part `n`-independent (cancels exactly in differences); `𝔡(m) − 𝔡(n)` supported on `P(m) △ P(n)`; `P(m) = P(n) ⟹ δ_m = δ_n` exactly at every `(ε, N)`, both conventions** — the first computed (not chosen) diagonal datum in row D; new in the corpus | PROVED (one-line UFD gap C-D) |
 | D.47.4 | single-prime tower Gram `G^{(p)} = c_p(log p)[T(ρ) + (τ_p − 1)I]`, `ρ = p^{−½}`, `c_p = V_N` cancels in `τ_p`; PSD ⟺ `τ_p ≥ 2/(√p+1)`; off-diagonal un-normalizes to `p^{min}·log p` ↔ model `q^{min}N_{|a−b|}` | PROVED **on the domain where (8bis.2a)'s archimedean indicator vanishes** (C-B; this restriction) |
@@ -43,6 +43,6 @@ inside the frame is either a restatement of RH or `Ξ_a`-uniform. The next genui
 non-magnitude, non-`Γ` datum with Euler-product content — the "phase" of the unimodular roots — and no such
 object exists in the corpus or in the literature the corpus has read. Options: (i) build the
 phase-datum object (Doc 131's `α` promoted to a class on the square, with its `Ξ_a` version `α_± = p^{±a}`
-falsifying); (ii) pause row D at the map and write Paper 46 Part III as the record of the reduction and the
+falsifying); (ii) pause row D at the map and write Paper 47 Part III as the record of the reduction and the
 obstructions (a mathematical contribution in itself: T1, T2, the frame defect theorem, the trace-cone
 restatement, the computed diagonal); (iii) both, in that order.

@@ -108,7 +108,7 @@ The difference between denominator and numerator is j−1>=0; for d>=2 the first
       =sum_(m=1)^d [v_Nm−v_N,m+1]T_m,                   (ABEL)
     v_Nm−v_N,m+1>=0.
 
-Hence proving T_m>=0 for ALL m would imply the sign of the WHOLE gamma row k0. It is a SUFFICIENT criterion for that row, NOT for all k nor for the complete Paper47. ERLANG-FAIL does not refute it: jE_j can be negative and be compensated in T_m.
+Hence proving T_m>=0 for ALL m would imply the sign of the WHOLE gamma row k0. It is a SUFFICIENT criterion for that row, NOT for all k nor for the complete Paper46. ERLANG-FAIL does not refute it: jE_j can be negative and be compensated in T_m.
 
 The profile of T_m before applying L is explicit:
 

@@ -1,6 +1,6 @@
 # Strict positivity of the full form up to T=129/50
 
-For 0<T≤129/50, W_T(f)≥exp(−20000000001)||f||₂² on the whole domain of paper 47. The data Z1–Z3 of 175 are used, including the verified height G=3·10¹². The new stretch with respect to 179 is (2.5,2.58].
+For 0<T≤129/50, W_T(f)≥exp(−20000000001)||f||₂² on the whole domain of paper 46. The data Z1–Z3 of 175 are used, including the verified height G=3·10¹². The new stretch with respect to 179 is (2.5,2.58].
 
 **Norm via two applications of the comb.** Let s=14, U=log s, x=exp t, w(t)=(1+x)/√x and C the comb compressed to [−U,U]. With L(y)=Σ_{q≤y}Λ(q)/q and ψ(y)=Σ_{q≤y}Λ(q), the first application gives √x Cw=F(x)=xL(sx)+ψ(sx)+L(s/x)+xψ(s/x). In the second one obtains
 

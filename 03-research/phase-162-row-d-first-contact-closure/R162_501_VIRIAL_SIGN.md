@@ -13,7 +13,7 @@ is real, with ‖G‖ = 1.
 - z_c(τ) := Σ_{n<X} Λ(n) n^{−1/2−iτ}, and z := 2 Re z_c = Σ v_n cos(τ log n) (the comb symbol).
 - s = m − z, with m(τ) = Re ψ(¼+iτ/2) − log π.
 - Kernel equation in full-line form: (M − Z)G = r_G + h_G, where r_G ∈ span{e^{±t/2}}·1_I (Tate vector)
-  and h_G := 1_{ℝ∖I}(M−Z)G (exterior leakage). Paper 47 eq:localweak gives exactly this.
+  and h_G := 1_{ℝ∖I}(M−Z)G (exterior leakage). Paper 46 eq:localweak gives exactly this.
 - (REG) as in R162_407 §3. We assume it throughout, as Thm 3.2 there does.
 
 ## 0. Corpus check
@@ -25,7 +25,7 @@ is real, with ‖G‖ = 1.
 - R162_401 ([X,S_N] = −K_N, log channel) is the closest earlier item: it used the log weight as a
   commutator. It did not use Selberg's identity Λlog + Λ*Λ = μ*log², which converts the log weight
   into a *square of the comb*. The kernel equation can then absorb that square. I found no corpus
-  entry using μ*log² (grep over phases 150–162 and Paper 47: none).
+  entry using μ*log² (grep over phases 150–162 and Paper 46: none).
 - R160 NG-F1 (smoothness, not multiplicativity, decides localized signs) is confirmed again in §3.
 
 ## 1. The virial as a symbol derivative (PROVED)

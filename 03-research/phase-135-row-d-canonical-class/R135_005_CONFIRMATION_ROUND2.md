@@ -1,6 +1,6 @@
-# R135.005 — Confirmation of round 2 (phase 135), Paper 46 Part II §§11–16
+# R135.005 — Confirmation of round 2 (phase 135), Paper 47 Part II §§11–16
 
-Object: `04-papers/46-intersection-frame-defect/archive/main.md` lines 1856–3748 (Part II after the
+Object: `04-papers/47-intersection-frame-defect/archive/main.md` lines 1856–3748 (Part II after the
 round-2 repairs of `R135_004`), the two `[phase 135]` remarks in
 `04-papers/45-row-c-explicit-formula/main.md` (Remark 12.4a, line ~1923) and
 `04-papers/43-row-a-torsion-theory/main.md` (Remark 14.1a, line ~5125), against

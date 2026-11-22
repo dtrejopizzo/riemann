@@ -421,4 +421,4 @@ distant. V3 remains an auxiliary tool for V1 (sign rank bounds r_+ from below).
 The classic CITED references (Yannakakis 1991; Fiorini et al. 2012; Gouveia–Parrilo–Thomas 2013; Cohen–Rothblum
 1993; Vavasis 2009; Moreira 2017; Bergelson–Moreira 2017; Forster 2002; Barthe 1998; ABBN 2004; Royen 2014; Ozawa
 2016; Fröhlich–Israel–Lieb–Simon 1978; Newman 1976) are from bibliographic memory and were not re-checked in this
-session. They must be verified before use in Paper 47.
+session. They must be verified before use in Paper 46.

@@ -2,12 +2,12 @@
 
 Design round, no construction. no
 equivalence between row D and any other statement is used, invoked or mentioned.
-NO-GO / NUMÉRICO. P47 = 04-papers/47-row-d-dual-certificates/main.tex; 188/ = phase-188-closing-D; 190/ = phase-190-near-coincidence-experiment;
+NO-GO / NUMÉRICO. P46 = 04-papers/46-row-d-dual-certificates/main.tex; 188/ = phase-188-closing-D; 190/ = phase-190-near-coincidence-experiment;
 SHAPE = 190/memos/SHAPE_THEOREM.md (operations O1–O15, clauses A1–A17, B1–B8, admissible region §3(e)); crossword = CROSSWORD-TO-D §3.2–3.3
 ((α)–(θ), (ι)–(μ)); index = ROUTES-TRIED-INDEX (README, 04_ Part I, 06_ R1/R5/R9/R10).
 
 Corpus check: SHAPE §1–§5; crossword §3.1–3.3; index README, 04_ Part I-a/b/c, 06_ (R1, R2, R5, R7, R9, R10, "(E_θ) one-frequency
-BV (968)"); P47 sec:combs (lem:polarelim, prop:sharp, prop:Egamma-exact, prop:boundary, rem:critical, thm:kappa, thm:ceiling, lem:reson, prop:nearfree,
+BV (968)"); P46 sec:combs (lem:polarelim, prop:sharp, prop:Egamma-exact, prop:boundary, rem:critical, thm:kappa, thm:ceiling, lem:reson, prop:nearfree,
 rem:boxes, thm:band, thm:poisson, thm:oneprofile, prop:AM), sec:open (N), (S), prop:wit-coh, prop:wit-cheb, rem:wit-cheb, prop:wit-sens, thm:margin,
 cor:margin1; 188/N_BUILD_013, N_BUILD_021, L2_BUILD_019, L2_BUILD_020, L2_BUILD_030; 190/EXP_002 §3, EXP_003 §2–§4 (Fact N2, identity C3), EXP_005 §5–§6.
 **No sign is certified here; nothing below moves λ_A(T) for ζ.**
@@ -21,7 +21,7 @@ formalizations, and each one fails a clause of the brief: (i) at one fixed frequ
 prop:Egamma-exact, which has **no power-saving slack** (B2b: the packet limit equals m^♯(γ); the constant-weakened version collapses to it,
 188/N_BUILD_013) and, by Hardy–Riesz (CITED), is a **half-plane summability statement** about −2ζ′/ζ − 2/(s−1), hence violates (λ) (it must hold on
 all of Γ_S(F)) and (κ) in content; (ii) pointwise in ω on the Nyquist mesh with no correlation to P_T it is **false for ζ** (the symbol σ_T is negative on
-U_T ≠ ∅, P47 subsec:band, thm:nolocal); (iii) correlated with the admissible samples |F̂(ω_k)|² on the whole mesh it is (N), an **exact restatement of
+U_T ≠ ∅, P46 subsec:band, thm:nolocal); (iii) correlated with the admissible samples |F̂(ω_k)|² on the whole mesh it is (N), an **exact restatement of
 row D** (B8). The only object the direction genuinely produces is the fixed-family statement T*₃(η) of §1.3 (problem (S) on the phase-190 family
 s_w = m^{−½}w(m/M)), for which the comb collapses exactly through Λ∗1 = log and the sign becomes a lattice (Poisson-on-ℤ) statement; it is admissible
 as a *target* but it is REF-D whenever the family contains the A_M-minimizer (NUMÉRICO: it does, 190/EXP_005 §5), and it is not a "theorem between
@@ -32,19 +32,19 @@ Vinogradov–Korobov and Bombieri–Vinogradov": no twisted prime sum survives i
 
 ## 1. The statement T* — three nested forms
 
-### 1.0 Objects (P47 notation)
+### 1.0 Objects (P46 notation)
 X := e^{2T}; 𝒩_T = {n ≥ 2 : n < X}; v_n = 2Λ(n)n^{−½}; m(τ) = Re ψ(¼+iτ/2) − log π; m^♯ = m + (¼+τ²)^{−1};
 𝔞_T(F) = (1/2π)∫[m − Σ_{𝒩_T} v_n cos(τ log n)]|F̂|²; P_T = {A(F) = B(F) = 0}; 𝔞^♯(F) = (1/2π)∫m^♯|F̂|²;
 𝓕_T(F) = Σ_{𝒩_T} v_n Re c_F(log n) − 2∫_0^{2T}Re c_F(u)e^{u/2}du = 2∫_{[1,X)}y^{−½}c_F(log y) d(ψ(y)−y) (prop:wit-cheb).
 Twisted sharp-cutoff fluctuation at frequency ω:
-  E_X(ω) := Σ_{n<X} v_n cos(ω log n) − Re[2(X^{½+iω} − 1)/(½+iω)]  (= −4T·𝒞_T(ω), P47 prop:wit-coh).
-Nyquist mesh ω_k = πk/(2T). Row D in mesh form (prop:wit-coh(i) + lem:polarelim), PROVED in P47:
+  E_X(ω) := Σ_{n<X} v_n cos(ω log n) − Re[2(X^{½+iω} − 1)/(½+iω)]  (= −4T·𝒞_T(ω), P46 prop:wit-coh).
+Nyquist mesh ω_k = πk/(2T). Row D in mesh form (prop:wit-coh(i) + lem:polarelim), PROVED in P46:
   (N)  ∀T ∀F ∈ P_T:  (1/4T) Σ_k |F̂(ω_k)|² E_X(ω_k) ≤ 𝔟_T(F)  (= 𝔞^♯(F) on P_T).
 Required strength: exponent ½ at resolution X, i.e. E_X(ω) = O(1)-size oscillation per unit log-interval with the sign fixed
 against the archimedean level after correlation; margin: λ_A(T) ≤ 4·10⁹Te^{−15.449T} (cor:margin1), limsup λ_A ≤ 0 (thm:margin).
 
 ### 1.1 T*₁ — one selected frequency γ (packet form)
-**Statement.** Fix γ ∈ ℝ. With F_T = F_T^γ the spectral-derivative packets (P47 §wit), 
+**Statement.** Fix γ ∈ ℝ. With F_T = F_T^γ the spectral-derivative packets (P46 §wit), 
   T*₁(γ):  limsup_{T→∞} 𝓕_T(F_T)/‖F_T‖² ≤ m^♯(γ).
 This is (E_γ) in exact form (prop:Egamma-exact, PROVED equivalent to prop:wit-Egamma's (E_γ)). Its prime-side reading (rem:critical, N_BUILD_013 §1):
 𝓕_T(F_T)/‖F_T‖² is a Riesz-type mean of Re Σ 2Λ(n)n^{−½−iγ} minus its polar part, and m^♯(γ) = Re[−2ζ′/ζ − 2/(s−1)](½+iγ) is the boundary value
@@ -61,7 +61,7 @@ are not reused.
 
 ### 1.2 T*₂ — selected frequencies at integer resolution: the mesh
 **Pointwise form (false).** ∀T ∀k: E_X(ω_k) ≤ 4T·m^♯(ω_k) + (aliasing) would be pointwise positivity of the polar-free symbol; it **fails for ζ**:
-U_T ≠ ∅ (P47 subsec:band), κ = 1 < κ⋆ (thm:kappa(iv): g₁(0) = C₀+4 < 0), and thm:nolocal (W-loc). So no signed individual bound at a selected
+U_T ≠ ∅ (P46 subsec:band), κ = 1 < κ⋆ (thm:kappa(iv): g₁(0) = C₀+4 < 0), and thm:nolocal (W-loc). So no signed individual bound at a selected
 mesh frequency, without correlation to P_T, is true. PROVED in the record.
 **Correlated form.** Any signed bound of the shape E_X(ω_k) ≤ 4T·β_T(ω_k) with Σ_k|F̂(ω_k)|²β_T(ω_k) ≤ 𝔟_T(F) ∀F ∈ P_T is exactly (N): the family
 of admissible sample sequences (|F̂(ω_k)|²)_k, F ∈ P_T, is what defines the sign (SHAPE Cor. (c): first variation = −c_{h*}(log n), R186_051 Thm 4.1).
@@ -74,7 +74,7 @@ spectral measures coincide with (N) or are critical; non-convergent families are
 ### 1.3 T*₃(η) — selected vector at integer resolution M ≍ e^{2T}: problem (S) on the smooth-cutoff family
 This is the formalization that the brief allows ("the explicit family s_w = m^{−½}w(m/M) from phase 190") and the only one in this direction that is
 not already T*₁ or T*₂ by inspection.
-**Setting** (P47 subsec:oneprofile, prop:AM; 190/EXP_005 §5). Profile F₀ with |b| > ½ and **2T₀ < ½log 2** (so that lags |d| ≤ 2T₀ carry no contact and
+**Setting** (P46 subsec:oneprofile, prop:AM; 190/EXP_005 §5). Profile F₀ with |b| > ½ and **2T₀ < ½log 2** (so that lags |d| ≤ 2T₀ carry no contact and
 the main term of every Ξ(d), |d| > 2T₀, is removed exactly, lem:transl(iii)); c₀ = c_{F₀}; A_M = [B(log m − log k)]_{m,k≤M}; row D ⟺ A_M ⪰ 0 ∀M
 (prop:AM(i), PROVED). Family: for η ∈ (0,1) let
   𝒲_η := { w ∈ C^∞[0,∞) : supp w ⊂ [0,1], w constant on [0,η], ‖w^{(j)}‖_∞ ≤ C_j η^{−j} (C_j independent of M) },
@@ -127,7 +127,7 @@ direction cannot deliver "the missing estimate" as a theorem weaker than the tar
 ### 2.1 Existing inputs, each with its exact reach (all CITED unless marked)
 | input | reach for T*₁ | reach for T*₂ = (N) | reach for T*₃(η) |
 |---|---|---|---|
-| Explicit formula (P47 lem:roughEF; thm:Z) | identity: 𝓕_T(F_T) = zero sum; sign in Σ_ρ (A17, zero-side) | identity only; = certificate content (B8) | identity Q_M(w) = Σ_ρ Φ(ρ)Φ(1−ρ)-type; no sign |
+| Explicit formula (P46 lem:roughEF; thm:Z) | identity: 𝓕_T(F_T) = zero sum; sign in Σ_ρ (A17, zero-side) | identity only; = certificate content (B8) | identity Q_M(w) = Σ_ρ Φ(ρ)Φ(1−ρ)-type; no sign |
 | Tate / polar elimination (lem:polarelim, lem:transl(iii), double zero of ĉ₀ at ±i/2) PROVED | removes polar part exactly; threshold m^♯ | 𝔟_T = 𝔞^♯ on P_T | main term of every Ξ(log a/b) and the first-order term of Σ_N D_w E^w_M vanish exactly; what is left is a Poisson-dual (lattice) sum |
 | Λ∗1 = log (Euler product over ℕ) PROVED | nothing (single frequency) | nothing beyond identities (W7) | the collapse D_w(N) = 2c log N − small-divisor defects: the comb disappears except at n < e^{2T₀}/η (§1.3) |
 | Euler–Maclaurin / Poisson summation on ℤ (standard) | — | — | E^w_M(N) = N^{½}Φ_w(N/M) + Σ_{ℓ≠0} f̂_N(ℓ), Φ_w(x) = ∫e^{v/2}c₀(v)[w(xe^v) − w(x)]dv; the main-term bookkeeping of Q_M(w) (not written out; ARGUED) |
@@ -266,7 +266,7 @@ the quantifier over 𝒲_η. No candidate mechanism for Line 4 is proposed here.
 1. T*₁ = (E_γ) exact: prop:Egamma-exact PROVED; the collapse (E_γ,C) ⟺ (E_γ) is CONDITIONAL (N_013), stated so; "half-plane statement" is the
    record's own reading (N_013 §2, Hardy–Riesz CITED) and is used only to classify T*₁, never to say anything about row D's relation to any
    external statement. ✓
-2. "Pointwise mesh form false": subsec:band (U_T ≠ ∅) and thm:kappa(iv) are PROVED in P47; thm:nolocal is the class statement. ✓
+2. "Pointwise mesh form false": subsec:band (U_T ≠ ∅) and thm:kappa(iv) are PROVED in P46; thm:nolocal is the class statement. ✓
 3. The lattice identity of §1.3: regrouping N = kn in prop:AM(ii)–(iii) with s_k = k^{−½}w(k/M); the N-range N < Me^{2T₀} follows from supp c₀ ⊂
    (−2T₀, 2T₀) and m ≤ M; D_w(1) = 0. The collapse for w ≡ c on [0,η] is Σ_{n|N}Λ(n) = log N split by whether N/(nM) ≤ η. The Farey form uses only
    gcd regrouping and Ξ(−d) = 0 for d > 0 (needs log 2 > 2T₀: declared 2T₀ < ½log2). PROVED, elementary. ✓

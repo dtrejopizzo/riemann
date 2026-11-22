@@ -4,7 +4,7 @@ Everything in this phase refers to the objects below and to nothing else. No equ
 other statement is used, named or invoked. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN /
 NO-GO / NUMERICAL.
 
-## 1. The window form (Paper 47, §1.1)
+## 1. The window form (Paper 46, §1.1)
 
 For T > 0, I_T = (−T, T). For F ∈ L²(I_T) (extended by zero) write F̂(τ) = ∫ F(t) e^{iτt} dt and
 c_F(u) = ∫ F(t) conj F(t−u) dt (autocorrelation, continuous, supported in [−2T, 2T], ĉ_F = |F̂|²).
@@ -19,13 +19,13 @@ Target (★): λ_A(T) ≥ 0 for every T > 0.
 Known: PROVED (certified) for T ≤ ½ log 5; CITED for T ≤ ½ log 15 (Mori) and T ≤ 17/16 (Liu, preprint);
 OPEN beyond. T ↦ λ_A(T) is continuous and non-increasing (PROVED).
 
-Lévy form (PROVED, Paper 47 Lemma lem:K, Theorem thm:A):
+Lévy form (PROVED, Paper 46 Lemma lem:K, Theorem thm:A):
 
     K(u) = 1/(2 sinh(u/2)) + 1/(2 cosh(u/2)) = 2 Σ_{j≥0} e^{−(2j+½)u}   (u > 0),
     m(τ) = C_0 + ∫_0^∞ (1 − cos τu) K(u) du,   C_0 = ψ(1/4) − log π = −5.3721834…,
     a_T(F) = C_0 ‖F‖² + ∫_0^∞ (c_F(0) − Re c_F(u)) K(u) du − Σ_{log n < 2T} v_n Re c_F(log n).
 
-## 2. One explicit function of one real variable (PROVED, Paper 47 Theorem thm:oneprofile)
+## 2. One explicit function of one real variable (PROVED, Paper 46 Theorem thm:oneprofile)
 
 Fix a > 0 and b with |b| > ½, and 2T_0 < log 2 throughout. Put g = e^{bt} 1_{[0,a]}, c_g = g ∗ g̃, G_0 = c_g ∗ c_g, T_0 = 2a,
 F_0 = (¼ − ∂²) G_0 normalised to ‖F_0‖ = 1 (so c_0(0) = 1). Then F_0 ∈ P_{T_0}, F̂_0(τ) = (τ² + ¼)|ĝ(τ)|⁴ > 0, and with c_0 = c_{F_0}
@@ -37,7 +37,7 @@ Taking 2T_0 < log 2, (★) holds iff the integer-lattice matrices 𝔸_M = [B(lo
 are positive semidefinite for every M (Proposition prop:AM), and
 𝔸_M = Arch_M − Div_M − Near_M (exact Dirichlet coincidences k·n = m separated from the near ones).
 
-## 3. The same function written as a smoothed Chebyshev fluctuation (CITED: Paper 47 lem:transl(iv) and thm:band; constants re-checked)
+## 3. The same function written as a smoothed Chebyshev fluctuation (CITED: Paper 46 lem:transl(iv) and thm:band; constants re-checked)
 
 For d > 2T_0 the archimedean term is an exact finite exponential sum: since c_0(d) = c_0(d+u) = 0,
 
@@ -54,7 +54,7 @@ So, for x beyond the first window, B(log x) is minus the smoothed, normalised fl
 Chebyshev function at scale x, with a smoothing φ of two vanishing moments, up to an explicit
 O(x^{−5/2}) tail. For d ≤ 2T_0 the formula of §2 holds with its archimedean part.
 
-Consequence (PROVED, Bochner; this is the 2×2 band of Paper 47 thm:band): (★) implies |B(d)| ≤ B(0)
+Consequence (PROVED, Bochner; this is the 2×2 band of Paper 46 thm:band): (★) implies |B(d)| ≤ B(0)
 = a_{T_0}(F_0) for all d, i.e. |Σ_n Λ(n) φ(n/x)| ≤ a_{T_0}(F_0) √x + O(x^{−2}) for x > e^{2T_0}. This
 is a two-sided bound without sign; it is necessary, not sufficient. The full statement (★) is the
 positive definiteness of B, i.e. the positivity of all Toeplitz minors [B(d_i − d_j)], of which the
@@ -65,7 +65,7 @@ NUMERICAL (validation only, a = 0.15, b = 1, 2400001 nodes on |τ| ≤ 600, Λ u
 B(0) = +0.01492, and |B(d)| ≤ 0.0122 for 0 < d ≤ 13; the archimedean part is below 10⁻⁶ for d ≥ 1.5.
 Consistent with (★); proves nothing.
 
-## 4. What the proof must do (Paper 47 Problem prob:region and Proposition prop:spec)
+## 4. What the proof must do (Paper 46 Problem prob:region and Proposition prop:spec)
 
 The sign step must (i) use the exact values Λ(n), n < e^{2T}, not a class closed under modification
 (deleting the primes below P, or scaling Λ ↦ cΛ, c ≠ 1, falsifies (★) at explicit windows);

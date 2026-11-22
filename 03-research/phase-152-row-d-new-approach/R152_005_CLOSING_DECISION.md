@@ -43,5 +43,5 @@ Phase 152 round 0 **CLOSED**: no route to the sign found; no impossibility prove
 results of record; (P152.1)–(P152.3) recorded as open. The two mechanisms are the first non-positivity
 candidates in the corpus that survive an audit pass as *open problems of the right shape* rather than as
 restatements — but with no method attached. **Recommendation:** run one bounded round only on the cheap test of
-(P152.2) (Beurling blindness), and record (P152.1) in Paper 46 §28.3 as an open item; do not open a construction
-phase on either without a method. Paper 46 §28.4: no new reopening clause. Paper 44: one remark (Dictionary B.1).
+(P152.2) (Beurling blindness), and record (P152.1) in Paper 47 §28.3 as an open item; do not open a construction
+phase on either without a method. Paper 47 §28.4: no new reopening clause. Paper 44: one remark (Dictionary B.1).

@@ -8,7 +8,7 @@ no new sign route, no reopening of closed routes.
 
 Directed reading of the routes index (families, residues and
 205–207/ZCERT entries); NODE_001 and README 206; CLASS_001 and AUDIT_207_001;
-P47 eq:Aform, rem:zcert, prop:H, cor:H1minus; master map and crossword.
+P46 eq:Aform, rem:zcert, prop:H, cor:H1minus; master map and crossword.
 The summaries and repair records of P43–45 were consulted for context;
 this note is not a full audit of their proofs.
 Independent review of the scopes. No new numerics and no new
@@ -37,7 +37,7 @@ The discrete sum with Λ(n)-1 does not replace Stieltjes without a correction.
    is a compression. Its positivity does not control the complement or the
    coupling. RFIN_TRACT_001 leaves P1.c′ OPEN. "Every F of the domain" cannot be
    replaced by that block without an additional theorem.
-2. **All windows.** P47 rem:zcert certifies the effectively computed points of
+2. **All windows.** P46 rem:zcert certifies the effectively computed points of
    {0.75,0.76,…,4.24} and 4.245, with cited inputs.
    It does not certify the interval T≤4.25. The continuum between points remains OPEN;
    at 4.25 the certificate fails, without refuting the sign.

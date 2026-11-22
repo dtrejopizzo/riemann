@@ -38,14 +38,14 @@
 
 ## 3. Decision
 
-* Phase 150 **CLOSED**. Paper 46 §18: add T5 (short), add the polar/entire classification as a remark to §18.1
+* Phase 150 **CLOSED**. Paper 47 §18: add T5 (short), add the polar/entire classification as a remark to §18.1
   with the label CLASSICAL, add T3 only as "Remark (conditional on H-DMV)" until O-150.1 is read.
 * Plan §9.4 (i) is done and returned less than hoped: one trivial theorem (T5), one classical
   classification, one conditional meta-theorem. **The three method theorems do not move the sign.** They sharpen
   the description of the wall: *the sign is a statement about partial sums of a polar-at-zeros sequence in the
   smooth regime, where no orthogonality-based family method extracts and no known cancellation mechanism acts.*
 * Recommendation (unchanged from plan §9.4): close row D **in the map** with T1, T2, T5 and the
-  classification of Thm 4.12/4.13 as the exact statement of the wall, and write Paper 46 Part IV (phases
+  classification of Thm 4.12/4.13 as the exact statement of the wall, and write Paper 47 Part IV (phases
   134–150); or open MW-5 (Connes–Consani square, Forma B) only with a concrete idea for the smooth/punctual part
   of the square. Extending the `log 2` certificate to `½ log 5` remains available as a computer-assisted theorem
   that measures, not moves, the wall.

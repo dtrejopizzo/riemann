@@ -1,7 +1,7 @@
 # L2_BUILD_024 — Sufficiency via multi-copy spans: one explicit profile and one positive-definite function
 
 ## Corpus check
-Paper 47 §subsec:KEP (Kreĭn extension problem; "the datum is positive definite on the window" ⟺ restriction of the explicit-formula datum
+Paper 46 §subsec:KEP (Kreĭn extension problem; "the datum is positive definite on the window" ⟺ restriction of the explicit-formula datum
 g to (−2T,2T) extends to a positive definite tempered distribution, Schwartz–Bochner), lem:polar, Thm Z; N_BUILD_014 §3 (multi-copy →
 packets); L2_BUILD_023 (Lemma L, Theorem T; under referee review, not edited); R162_2601 (translates of a fixed test, polynomial bound).
 New: the reduction to translates of ONE fixed explicit profile with positive Fourier transform (Theorem S), and the sharpness check of T.

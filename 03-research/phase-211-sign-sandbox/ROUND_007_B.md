@@ -28,7 +28,7 @@ Phase 192 EI_001 (outer field split: boundary polar moment − Chebyshev fluctua
 = Lemma S, excluded by the review). grep "EI_001", "sign budget", "fluctuation functional", "(N)", "twisted Chebyshev":
 only the rows above and R186-E_γ (04_PHASES line 145).
 
-Paper 47 (CITED below, checked against the tex): lem:polarelim (2∫_0^{2T}Re c_F e^{u/2} = −𝔢(F), 𝔢(F) =
+Paper 46 (CITED below, checked against the tex): lem:polarelim (2∫_0^{2T}Re c_F e^{u/2} = −𝔢(F), 𝔢(F) =
 (1/2π)∫|F̂|²/(¼+τ²) = ‖G′‖² + ¼‖G‖² for F = (¼ − ∂²)G, 0 ≤ 𝔢 ≤ 4‖F‖²); prop:sharp (m^♯ = m + 1/(¼+τ²) =
 Re ψ(5/4 + iτ/2) − log π, increasing in |τ|, m^♯(0) = C_0 + 4; 𝔞_T = 𝔞^♯ − 𝓕_T on P_T; λ^♯(T) nonincreasing,
 ≥ C_0 + 4, → C_0 + 4); thm:nyq-cone (P_T = (¼ − ∂²)H²_0(I_T)); prop:arch (λ_inf,P(T) ↓ C_0); cor:margin1
@@ -107,7 +107,7 @@ content is that the pin, not the Lévy energy κ, is what keeps λ^♯(T) above 
 **Proposition 1.4.** For F ∈ P_T,
     ℛ(F) = Σ_{n∈N_T} v_n Re c_F(log n) − 2∫_0^{2T}e^{u/2}Re c_F(u)du = Π(F) + 𝔢(F),
     𝔢(F) = (1/2π)∫_ℝ |F̂(τ)|²/(¼ + τ²) dτ = ∫_{I_T}(|G′|² + ¼|G|²)dt  for F = (¼ − ∂²)G, G ∈ H²_0(I_T),
-so that 0 ≤ 𝔢(F) ≤ 4‖F‖² and ℛ = 𝓕_T of Paper 47 (lem:polarelim, thm:nyq-cone; the time-domain form is
+so that 0 ≤ 𝔢(F) ≤ 4‖F‖² and ℛ = 𝓕_T of Paper 46 (lem:polarelim, thm:nyq-cone; the time-domain form is
 ROUND_006_A Theorem 4). On the mesh, R̂_q = C_q + 𝒮_q with
     𝒮_q = −2∫_0^{2T}e^{u/2}cos(ω_q u)du = (1 − (−1)^q e^T)/(¼ + ω_q²)   [PROVED, direct integration with e^{2iTω_q} = (−1)^q],
 negative on every even mode and positive on every odd mode, while the form ½Σ_q 𝒮_q|x_q(F)|² = 𝔢(F) ≥ 0 on P_T:
@@ -332,7 +332,7 @@ statement, Π ≤ Arch on E_T, is (★)_T itself on E_T and fails for every fals
 
 ### 4.2 What the budget is
 
-PROVED: σ_T‖F‖² + κ(F) = 𝔞^♯(F), the polar-free form of Paper 47 prop:sharp; ℛ = 𝓕_T = Π + 𝔢 with 𝔢 the H^{−1}-type
+PROVED: σ_T‖F‖² + κ(F) = 𝔞^♯(F), the polar-free form of Paper 46 prop:sharp; ℛ = 𝓕_T = Π + 𝔢 with 𝔢 the H^{−1}-type
 energy of lem:polarelim; the window constant σ_T is m^♯(0) plus the window tail of K_1 (Lemma 1.1). So the "sign
 budget" is the polar-free form of residue R1 at the window, and (SL′_T) is R1 restricted to E_T. Its reading in
 ROUND_005_C §4.5 ("the kernel carries the sign at ½log5 + ε, the fluctuation at T = 1") is a bookkeeping statement
@@ -393,7 +393,7 @@ formula for λ_A in T (grep "Hadamard", "d/dT": zero-geometry rows only).
 ## Result
 
 PROVED piece (structure) and NO-GO (two classes). PROVED: the budget σ_T‖F‖² + κ(F) is the polar-free form 𝔞^♯ of
-Paper 47 (prop:sharp) and ℛ = 𝓕_T = Π + 𝔢 (lem:polarelim), with σ_T = C_0 + 4 + ∫_{2T}^∞K_1 = 4 − γ − π/2 − log(8π) +
+Paper 46 (prop:sharp) and ℛ = 𝓕_T = Π + 𝔢 (lem:polarelim), with σ_T = C_0 + 4 + ∫_{2T}^∞K_1 = 4 − γ − π/2 − log(8π) +
 window tail, decreasing, positive for T < 0.052; the nodal lemma and the Tate pin |F̂(τ)|² ≤ d_T(τ)‖F‖² with
 d_T(0) = T⁵/360 + O(T⁷); the sign lemma in four equivalent forms, the last being Π ≤ Arch on E_T; the T-independence
 of all pieces on the nested family and the continuity of their values on the minimiser under simplicity; the

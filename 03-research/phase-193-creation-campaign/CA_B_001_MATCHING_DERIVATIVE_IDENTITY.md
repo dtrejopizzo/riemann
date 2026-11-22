@@ -4,7 +4,7 @@
 **No negative value of the window form for ζ is produced or claimed.**
 
 ## 0. Corpus / index check
-- P47 prop:boundary (m = −2Re ζ'/ζ(½+iτ)), rem:fe (D_σ = 2Re ξ'/ξ(σ+iτ), D_{1−σ} = −D_σ, D_{1/2} = 0; symmetrizations of D_σ vanish), (R)(9).
+- P46 prop:boundary (m = −2Re ζ'/ζ(½+iτ)), rem:fe (D_σ = 2Re ξ'/ξ(σ+iτ), D_{1−σ} = −D_σ, D_{1/2} = 0; symmetrizations of D_σ vanish), (R)(9).
 - EI_002 Thm 1 (PROVED): Q_M(w) = (1/π)∫F̂₀²|ζ_w(½+iτ;M)|² Re R_{X'}(½+iτ)dτ; EI_002 review: the family test is NOT ≈ cζ at bounded height (polar term M^{½−iτ}W(½−iτ) of size M^{½}).
 - EI_003 Thm 1: R_X(½+iτ) = Θ_X' + iZ_T'/Z_T, Z_{<X}(s) = exp Σ_{n<X}Λ(n)n^{−s}/log n.
 - Index: NT_011 (pointwise curvature of log|ξ| = zero geometry), MW-7, P33-10 (Jensen δ = off-line energy). Not tried before in this exact form (σ-derivative of a test-weighted mean square with the test = the symbol's own primitive); closest: rem:fe.

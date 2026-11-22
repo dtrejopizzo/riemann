@@ -14,7 +14,7 @@ the vector disappears entirely. The continuous alternative has a nontrivial exte
 intersection (Sonine spaces). None of these variants forces the
 coherent defect of R161 to vanish.
 
-This result rules out the concrete idea; it does not affect R161.035 nor Paper 47.
+This result rules out the concrete idea; it does not affect R161.035 nor Paper 46.
 
 ## 1. Typing test
 

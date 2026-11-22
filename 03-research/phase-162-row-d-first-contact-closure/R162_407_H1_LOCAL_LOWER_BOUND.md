@@ -16,7 +16,7 @@ Status: **(c) OBSTRUCTED for the dual/dilation machinery, with a proved rate lad
 
 GATE 1: OPEN. Row D: OPEN.
 
-Notation is that of Paper 47 and R162_404–406:
+Notation is that of Paper 46 and R162_404–406:
 - s_T(τ) = m(τ) − Σ_{n<e^{2T}} v_n cos(τ log n), with v_n = 2Λ(n)n^{−1/2};
 - a_T(F) = (1/2π)∫s_T|F̂|²;
 - c_F(u) = (1/2π)∫|F̂|²cos(τu), the autocorrelation;
@@ -28,7 +28,7 @@ Notation is that of Paper 47 and R162_404–406:
 
 ## 0. Corpus check
 
-- **lem:contA** (Paper 47) is the unconditional continuity of λ_A through dilation plus a Tate-moment correction. Its proof gives only a modulus η(r) → 0 with no rate. Theorem 2.1 below makes that modulus explicit (1/log). It is the same argument with the split frequency optimised.
+- **lem:contA** (Paper 46) is the unconditional continuity of λ_A through dilation plus a Tate-moment correction. Its proof gives only a modulus η(r) → 0 with no rate. Theorem 2.1 below makes that modulus explicit (1/log). It is the same argument with the split frequency optimised.
 - **lem:contT, step (ii)** already has the bound S_T(δ^{1/2} + 2‖F‖_Q²/log(2+δ^{−1/2})). That is the 1/log rate in embryo. So Thm 2.1 is not new in mechanism, only in constant and in its use at T_*.
 - **thm:D1 / thm:O.** Strong duality gives finitely atomic ε-certificates. Non-attainment rules out an exact certificate at T_*. So any certificate transfer starts from value −ε, which is why ε appears in κ.
 - **cor:margin1.** λ ≤ 4·10⁹ T e^{−15.449T} before T_*. The total drop Δ of λ_A across a chamber is at most this, which enters the constant of Prop 4.1.

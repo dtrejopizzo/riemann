@@ -1,6 +1,6 @@
 # R183.022 — Partial Sonin multiplier: Toeplitz / Wiener–Hopf analysis of Q_H
 
-Phase 183. Sources: R183_015–020, Paper 47 (thm:P),
+Phase 183. Sources: R183_015–020, Paper 46 (thm:P),
 R155_031 (TK ceiling), master grid R162_2300 (log row 13: non-compact truncated
 Wiener–Hopf). No web. Neither RH nor the closure of D is claimed.
 
@@ -10,7 +10,7 @@ Toeplitz ceiling TK from phase 155 (R155_031 W8: `Ceil(M,T)=sup_β inf λ_min(C_
 a ceiling depending only on order M). "Landau" appears as Landau–Pringsheim and
 localized Landau (R166_802), not as a Landau–Widom count. "Multiplier" does not
 appear. The symbol-in-frequency angle for (L-Son) is new. The two corpus facts
-used are: Paper 47 thm:P (Ky Fan ceiling for Q_T B_s Q_T) and thm:finZ
+used are: Paper 46 thm:P (Ky Fan ceiling for Q_T B_s Q_T) and thm:finZ
 (no finite zero set carries a certificate).
 
 Notation: I_T=(−T,T), F=ĥ ∈ PW_T, D=−i d/dt, P_T is the restriction to I_T,
@@ -67,9 +67,9 @@ at scale 1/T**. The pointwise sign of σ_H is not invariant, by (c).
 
     n₋(P_T σ(D) P_T) ≤ N(T,s_0,M/ε) := #{k : λ_k(S_c) > ε/(M+ε)},   c=Ts_0,
 
-where S_c = Q_T B_{s_0} Q_T is Paper 47 thm:P's time–band concentration
+where S_c = Q_T B_{s_0} Q_T is Paper 46 thm:P's time–band concentration
 operator. By Landau–Widom (CITED, PROLATE-REFERENCES no. 3),
-N = 2Ts_0/π + (1/π²) log(Ts_0) log((M+ε)/ε)·(1+o(1)). Paper 47 thm:P also
+N = 2Ts_0/π + (1/π²) log(Ts_0) log((M+ε)/ε)·(1+o(1)). Paper 46 thm:P also
 gives the non-asymptotic bound N ≤ #{k: Λ_k(c) > ε/(M+ε)}.
 
 *Proof.* Pointwise σ ≥ ε − (M+ε)1_{|s|<s_0}. Hence
@@ -193,7 +193,7 @@ that, for every primitive h∈C_c^∞(I_T),
 with R183_017's threshold. It decomposes into two pieces:
 (a) **low piece** = E_S restricted to a finite-dimensional space
 ≈4Te^{2T}(1+δ) (low prolates). It is a finite matrix inequality of the
-certificate/TK-ceiling type from Paper 47. thm:finZ forbids certifying it
+certificate/TK-ceiling type from Paper 46. thm:finZ forbids certifying it
 with a finite number of zeros: all primes p<e^{2T} must be used
 (R162_2602 Thm 4(b)). OPEN.
 (b) **high piece** = Beurling–Landau sampling of the zero set with

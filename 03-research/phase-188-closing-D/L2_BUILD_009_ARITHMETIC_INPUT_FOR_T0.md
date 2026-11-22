@@ -1,7 +1,7 @@
 # L2_BUILD_009 — Arithmetic input for 𝒯₀: what actual Λ can and cannot give
 
 ## Corpus check
-Paper 47 thm:finZ (no finite zero set carries a flat-top certificate), cor:void (classes C_PNT(ε),
+Paper 46 thm:finZ (no finite zero set carries a flat-top certificate), cor:void (classes C_PNT(ε),
 C_zeros, C_BT decide no window T > 0.75), prop:wit-sens, rem:wit-cheb; MEMORY "zero-side reverse
 engineering always negative"; R186_033 (PNT-window identity); N_BUILD_001 (F) (no F-uniform bound).
 Nothing tests a single fixed clamped mode with a fourth-order smoothed Chebyshev functional.

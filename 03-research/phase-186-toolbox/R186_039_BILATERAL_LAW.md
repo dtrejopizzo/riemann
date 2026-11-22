@@ -1,7 +1,7 @@
 # R186_039 — Bilateral asymptotic law of λ_A(T): Zhu's Conjecture 12.1 in bundle form, the reduction to the Shannon block, and what decides the Landau–Widom main term
 
-Phase 186, round 18. Sources: R186_110 §4 (new box), R186_034 (D_B, Thm 2.1–2.2, Thm 3.1 = W-det, §3.3 bound n₋ by eigenvalues of Neg_T, §2.3 four β ≈ 1), R186_023/103, R186_024/104, R186_025 (Thm B), R186_028, R186_036/110 (f_t, M_m, Thm M), Paper 47 (eq:symbol, eq:form, lem:monoT, thm:margin, cor:margin1, prop:band, prop:align, prop:negtrace, thm:log5A/W), Paper 48 thm:M, R163_801 Thm 5 (M_m), R163_901 Thm F (f_t), Zhu arXiv:2608.24827 v2 (local text: §1.3, §9 eq. (15), §12, Conj. 12.1, Rem. 12.2, Table 3, §13, §14.2, §16 open problems (i),(iii)), Landau–Widom 1980 (CITED), Slepian 1965 / Fuchs 1964 / Widom 1964 (CITED), Bonami–Jaming–Karoui 2021 (CITED).
-Script: `r039_bilateral_law.py` (standalone; imports `r034_det.py`; `python3 r039_bilateral_law.py [M=40]`, 2 s). Decides: (a) which number counts the nearly-balanced directions of the bundle (Neg,Pos)|𝒫_T; (b) that none of the candidate laws fits −log λ_A on [0.36, ½log5] (pre-asymptotic regime). Controls: λ_A(½log3) = 9.486·10⁻⁴ (Paper 47 9.45·10⁻⁴), λ_A(½log5) = 3.858·10⁻¹² (R186_034 identical; thm:log5A ≥ 2.5·10⁻¹²), 1−β_max(½log5) = 1.72·10⁻¹¹ (R186_034).
+Phase 186, round 18. Sources: R186_110 §4 (new box), R186_034 (D_B, Thm 2.1–2.2, Thm 3.1 = W-det, §3.3 bound n₋ by eigenvalues of Neg_T, §2.3 four β ≈ 1), R186_023/103, R186_024/104, R186_025 (Thm B), R186_028, R186_036/110 (f_t, M_m, Thm M), Paper 46 (eq:symbol, eq:form, lem:monoT, thm:margin, cor:margin1, prop:band, prop:align, prop:negtrace, thm:log5A/W), Paper 48 thm:M, R163_801 Thm 5 (M_m), R163_901 Thm F (f_t), Zhu arXiv:2608.24827 v2 (local text: §1.3, §9 eq. (15), §12, Conj. 12.1, Rem. 12.2, Table 3, §13, §14.2, §16 open problems (i),(iii)), Landau–Widom 1980 (CITED), Slepian 1965 / Fuchs 1964 / Widom 1964 (CITED), Bonami–Jaming–Karoui 2021 (CITED).
+Script: `r039_bilateral_law.py` (standalone; imports `r034_det.py`; `python3 r039_bilateral_law.py [M=40]`, 2 s). Decides: (a) which number counts the nearly-balanced directions of the bundle (Neg,Pos)|𝒫_T; (b) that none of the candidate laws fits −log λ_A on [0.36, ½log5] (pre-asymptotic regime). Controls: λ_A(½log3) = 9.486·10⁻⁴ (Paper 46 9.45·10⁻⁴), λ_A(½log5) = 3.858·10⁻¹² (R186_034 identical; thm:log5A ≥ 2.5·10⁻¹²), 1−β_max(½log5) = 1.72·10⁻¹¹ (R186_034).
 
 ## 0. Verdict
 
@@ -11,7 +11,7 @@ Script: `r039_bilateral_law.py` (standalone; imports `r034_det.py`; `python3 r03
 4. **f_t and M_m (§3):** f_t has the same λ_A as ζ up to T₁ and afterward λ_A^{f_t}(T) = λ_A^ζ(T) + O_t(added comb): the sign is decided by the perturbation, not by the law; M_m has λ_A^{M} ≤ λ_A^ζ + inf Q_m/‖F‖², with Q_m ≍ −e^{2δT} from its first contact onward (ARGUED). ζ's bilateral law is distinguished from both in the **sign of the main term beyond every T**, not in the rate: that is why no proof by windows reaches it (R186_036 Thm 3) and a proof needs global input (all Λ(n), or the zero side).
 5. **First lemma to prove (§4): Lemma 2.1 (tail) already PROVED mod CITED; the next one is Lemma H (head)**: stated in §4 with a computable falsifier (near-kernel count at T = 1 with multiple precision).
 
-**Contact with the sign: none.** All computed values have λ_A > 0, β_max < 1, n₋(𝔞_T|𝒫_T) = 0 in the seven windows, consistent with Paper 47 thm:log5A. No claim about T > ½log5 is more than ARGUED/NUMERICAL.
+**Contact with the sign: none.** All computed values have λ_A > 0, β_max < 1, n₋(𝔞_T|𝒫_T) = 0 in the seven windows, consistent with Paper 46 thm:log5A. No claim about T > ½log5 is more than ARGUED/NUMERICAL.
 
 ## 1. Zhu's Conjecture 12.1 and the target statement
 

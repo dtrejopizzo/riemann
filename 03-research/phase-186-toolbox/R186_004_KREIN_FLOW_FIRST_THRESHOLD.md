@@ -76,7 +76,7 @@ This is CONDITIONAL on writing out the chain: no cited reference covers it as su
 ## 2. The invariant Q(T)
 
 **Proposition 2.1 (monotonicity; PROVED).** If T < T′, then 𝒫_T ⊂ 𝒫_{T′} (by extension by zero) and
-W_{T′}|_{𝒫_T} = W_T (Corollary 1.2). Hence λ(T′) ≤ λ(T). The continuity of λ is lem:contA of Paper 47 (PROVED).
+W_{T′}|_{𝒫_T} = W_T (Corollary 1.2). Hence λ(T′) ≤ λ(T). The continuity of λ is lem:contA of Paper 46 (PROVED).
 
 Consequently, the only Q that satisfies (a)–(d) with exact sign is λ(T), or its matrix version: the
 inertia of the compression to 𝒫_T, which is constant while λ > 0. For (b): Q is monotone, but **in the wrong
@@ -156,7 +156,7 @@ remains OPEN.
 ## Audit notes
 
 - Lemma 1.1 and Corollary 1.2 rest on the symbol identity of R185_006 §1, which must be checked against the
- definition of W in Paper 47 (def:W, eq:nuw), including the C₀ constant and pole terms. It was taken as PROVED here.
+ definition of W in Paper 46 (def:W, eq:nuw), including the C₀ constant and pole terms. It was taken as PROVED here.
 - "𝒥_n = id" is a statement about the form. If TB-1a was thinking of the monodromy of a **positive** canonical
  system, that system only exists while the complete form (without Tate) is positive. Its T* may be < ½log3, and
  the sector M without Tate is already negative at ½log3. Check with G2_B5_R1 which form it used ("the complete
@@ -166,7 +166,7 @@ remains OPEN.
 - The reduction to "≤ 4 edge modes" is heuristic in the count. The kernel of A_∞ is singular on the diagonal, and
  the cross blocks between adjacent intervals are not trace class. They may not be effectively finite rank.
 
-## For Paper 47
+## For Paper 46
 
 - Add, alongside the symbol identity (if R185_006 is integrated), the observation of Corollary 1.2: there is a
  single symbol θ_∞ and W_T is its truncation. The prime thresholds are edge atoms, not jumps. λ(T) is

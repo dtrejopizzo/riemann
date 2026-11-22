@@ -19,7 +19,7 @@ length `N`?
 | | over `F_q` | over `Z`, additive pencil |
 |---|---|---|
 | (i) Rankin positivity | ✔ | ✔ (but on the **multiplicative** square) |
-| (ii) Landau | ✔ | ✔ (Paper 46 Thm 17.14) — but **useless on the additive square** (top pole at `s=2`) |
+| (ii) Landau | ✔ | ✔ (Paper 47 Thm 17.14) — but **useless on the additive square** (top pole at `s=2`) |
 | (iii) a-priori poles by invariant theory | ✔ (Deligne/Katz–Sarnak) | ✖ — **(P149)**; only the large sieve, only `k=1` |
 | (iv) extraction | ✔ | ✔ — **D.59, PROVED here** |
 | (v) Künneth | ✔ | ✔ (Fujii / Languasco–Zaccagnini / Brüdern–Kaczorowski–Perelli) |
@@ -71,7 +71,7 @@ On the additive square the pairing is `κ(d) = Σ_{q|d}μ²(q)/φ(q) = d/φ(d)` 
 the BDH main term is exactly `x·Q·κ(0)`; Landau's lemma sees only the a-priori top pole at `s=2`;
 and twisting destroys the positivity, because `R(n) ≥ 0` comes from `Λ ≥ 0`, not from a square.
 On the multiplicative square `|ψ(x,χ)|² ≥ 0` for every `χ`, so Rankin positivity is twist-stable and
-Landau works (Paper 46 Thm 17.14) — but there is no a-priori computation of the poles.
+Landau works (Paper 47 Thm 17.14) — but there is no a-priori computation of the poles.
 
 > **Rankin/Landau lives on the multiplicative square; invariant theory lives on the additive square;
 > nothing known transports between them. Over `F_q` they are the same square, because

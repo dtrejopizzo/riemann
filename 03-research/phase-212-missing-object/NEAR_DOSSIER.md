@@ -1,7 +1,7 @@
 # Dossier on the near-coincidence term (Near_M)
 
 Gathers in one place what the corpus knows and what it attempted on the term
-`Near_M(m,k) = ½ Σ_{n≥2, kn≠m} v_n c_0(log(kn/m))` of `𝔸_M = Arch_M − Div_M − Near_M` (Paper 47, prop:AM).
+`Near_M(m,k) = ½ Σ_{n≥2, kn≠m} v_n c_0(log(kn/m))` of `𝔸_M = Arch_M − Div_M − Near_M` (Paper 46, prop:AM).
 It is a reading compilation: it contains no new results and the labels are those of each source.
 
 Limits: several memos were read only in the passages naming the term (phases 199, 200 and part of 211);
@@ -17,12 +17,12 @@ Contents: Part A, exact facts. Part B, attempts of phases 191–204. Part C, att
 
 ## Dossier: the term Near_M of 𝔸_M
 
-P47 = `04-papers/47-row-d-dual-certificates/main.tex`. Memo paths relative to `03-research/`.
+P46 = `04-papers/46-row-d-dual-certificates/main.tex`. Memo paths relative to `03-research/`.
 Where a source reasons from the zeros side it is marked [H].
 
 ## 1. Exact definitions
 
-- **Profile** (P47 §subsec:oneprofile, l.7759–7771): a>0, |b|>½, g(t)=e^{bt}1_{[0,a]}(t), c_g=g*g̃, G₀:=c_g*c_g, T₀:=2a,
+- **Profile** (P46 §subsec:oneprofile, l.7759–7771): a>0, |b|>½, g(t)=e^{bt}1_{[0,a]}(t), c_g=g*g̃, G₀:=c_g*c_g, T₀:=2a,
   F₀:=(¼−∂²)G₀ ∈ 𝒫_{T₀}; F̂₀(τ)=(τ²+¼)|ĝ(τ)|⁴>0; **c₀ := c_{F₀}** (autocorrelation), ĉ₀=F̂₀². Support of c₀: [−2T₀,2T₀].
   Double zero of ĉ₀ at ±i/2 ⇒ ∫c₀e^{±u/2}=0 and ∫u c₀e^{u/2}=0 (lem:transl(iii); NT_004 Thm 4.2; EI_002 Thm 3(i)).
 - **Phase-shift function** 𝖡(d)=𝔞(F₀,V_dF₀)=(1/2π)∫m F̂₀² cos(τd)dτ − ½Σ_{n≥2}v_n[c₀(log n−d)+c₀(log n+d)] (l.7769).
@@ -39,9 +39,9 @@ Where a source reasons from the zeros side it is marked [H].
 ## 2. Facts about Near
 
 **Structure**
-1. Decomposition and Toeplitz-in-log form: Div+Near is the sample at {log m − log k} of the one-variable function ½Ξ_{F₀}; Near = that sample minus the exact coincidences n=m/k. PROVED (P47 prop:AM(iii), l.7818–7826; (S) l.10712–10717).
+1. Decomposition and Toeplitz-in-log form: Div+Near is the sample at {log m − log k} of the one-variable function ½Ξ_{F₀}; Near = that sample minus the exact coincidences n=m/k. PROVED (P46 prop:AM(iii), l.7818–7826; (S) l.10712–10717).
 2. Support: for m>k, only n with |log(kn/m)|<2T₀, n≠m/k contribute; the term c₀(log n + log(m/k)) vanishes because log n ≥ log 2 > 2T₀. PROVED (prop:AM, proof of (iii), l.7834–7836).
-3. Inevitability: with F₀ fixed, there are near-coincidences for every large M (gaps of log m ~1/m < 2T₀). PROVED/asserted (P47 l.7842–7843; L2_BUILD_028 §2(b)).
+3. Inevitability: with F₀ fixed, there are near-coincidences for every large M (gaps of log m ~1/m < 2T₀). PROVED/asserted (P46 l.7842–7843; L2_BUILD_028 §2(b)).
 4. Form by additive shift h=m−kn: sᵀW₁Vs=Σ_hΣ_{m−kn=h}s_ms_kv_nc₀(−log(1−h/m)); h=0 ↔ Div, h≠0 ↔ Near; |h|≤(e^{2T₀}−1)m. PROVED (L2_BUILD_030 §1(c)). Note: the sentence "bounded number of h ∈[−c,c]" holds only in the regime 2T₀=c/M, not with fixed T₀ (see §4).
 5. Near has no sign of its own: it is the finite-resolution remainder of the product |P_s|²·V(τ); W₁=[c₀(log m/k)]⪰0, V triangular, W₁V without sign. PROVED (L2_BUILD_030 §2).
 6. Arithmetic side: for fixed (m,k), Near is a smoothed count of primes in a multiplicative interval of fixed relative width e^{±2T₀} (not additively short), minus n=m/k. PROVED (N_BUILD_021 Prop 1).
@@ -50,13 +50,13 @@ Where a source reasons from the zeros side it is marked [H].
 9. Height metric: near-coincidence = r=m/k close to n with large height, defect h−ℓ=2 log den; the "damping by denominator" equals 1 on Div and suppresses Near. PROVED (phase-189 NT_001 Prop 2.1 and reading, l.45–59). Count: #{a≠nb: |log(a/nb)|≤2T₀} ≤ 2nb(e^{2T₀}−1) (NT_001_004_REVIEW l.32, CONFIRMED; requires T₀≤T_abs).
 
 **Where it is invisible and where it is seen**
-10. prop:nearfree (P47 l.7642–7669): on resonators F_b of width ε_M=1/(8KM(2+log M)) and T≥½log M+ε_M, 𝔞_T(F_b) ≥ c₀‖F_b‖² (here c₀ is a constant, not the autocorrelation). PROVED. There are no near-coincidences there: the comb is only 𝔻 (divisibility), Schur bound ≤ (log M+E)‖F_b‖² via Σ_{d|m}Λ(d)=log m; the archimedean part gives log(1/ε). Note: it uses a profile of width ~1/M, not a fixed F₀.
+10. prop:nearfree (P46 l.7642–7669): on resonators F_b of width ε_M=1/(8KM(2+log M)) and T≥½log M+ε_M, 𝔞_T(F_b) ≥ c₀‖F_b‖² (here c₀ is a constant, not the autocorrelation). PROVED. There are no near-coincidences there: the comb is only 𝔻 (divisibility), Schur bound ≤ (log M+E)‖F_b‖² via Σ_{d|m}Λ(d)=log m; the archimedean part gives log(1/ε). Note: it uses a profile of width ~1/M, not a fixed F₀.
 11. rem:boxes (l.7660–7669): in multiplicative boxes 𝔻 is a Kronecker sum of single-prime Toeplitz matrices, symbol 2log p·Re x/(1−x), range [−2log p/(√p+1), 2log p/(√p−1)]. PROVED. "Tests without visible near-coincidences carry no information on the sign beyond that": barrier.
 12. Near-free multiplicative sets (2T₀<e^{−2L}/2): Near=0, 𝔸|_S = a₀I − ⊕D_i + E; ζ passes trivially because the separation buys energy ≈2L. PROVED (§1–2), a₀≈log(1/T₀) ARGUED (L2_BUILD_029 §§1–3). Verdict: the sign must involve Near.
 13. Test m^{−½} with non-overlapping resolution (ε=θ/M): Near=0, Q(M)=(γ+C_χ+log(1/θ))log M+o(log M). Mertens CITED, archimedean asymptotics ARGUED (L2_BUILD_028 §3).
-14. Vectors that see Near: positivity must be decided on them (P47 l.7842–7844; rem:bar-arith l.8532–8536: not excluded "𝖡 PD on vectors that see Near_M"). OPEN.
-15. Twisted vectors s_m=χ(m)u_m: Div → convolution by χ(n)v_n, Arch remains that of ζ, Near carries phases χ(m)χ̄(k) with m≠kn (not χ(n)): hybrid, not the form of L(s,χ). PROVED (N_BUILD_021 Prop 3; P47 l.8394–8398). Statistics of progressions enter only via Near correlated with residue classes.
-16. Progression classes (SW, BV, BDH, Brun–Titchmarsh) as class properties: closed under finite deletion/amplification ⇒ they do not prove (N_BUILD_021 Thm 2, PROVED; P47 prop:prog).
+14. Vectors that see Near: positivity must be decided on them (P46 l.7842–7844; rem:bar-arith l.8532–8536: not excluded "𝖡 PD on vectors that see Near_M"). OPEN.
+15. Twisted vectors s_m=χ(m)u_m: Div → convolution by χ(n)v_n, Arch remains that of ζ, Near carries phases χ(m)χ̄(k) with m≠kn (not χ(n)): hybrid, not the form of L(s,χ). PROVED (N_BUILD_021 Prop 3; P46 l.8394–8398). Statistics of progressions enter only via Near correlated with residue classes.
+16. Progression classes (SW, BV, BDH, Brun–Titchmarsh) as class properties: closed under finite deletion/amplification ⇒ they do not prove (N_BUILD_021 Thm 2, PROVED; P46 prop:prog).
 17. Restricted subspaces (R_Q rough, B_Q residue balance): equivalent to the full target, not weaker (L2_BUILD_031 Thm E, PROVED). The suppression of components p^b≤Q of §3–§4 is CORRECTED as invalid (notice at the start of the memo: counterexample M=Q=2, s=(1,1)).
 
 **Exact identities that touch it / that do not reach it**
@@ -65,7 +65,7 @@ Where a source reasons from the zeros side it is marked [H].
 20. Central collapse (NT_004 Thm 4.1, PROVED/CONFIRMED): on Euler tests s_a=χ(a)a^{−½}, the sum in b is complete (b≤j/2<N) and the form is exact with near-coincidences preserved: comb = 2Re ΣΣ χ(a)χ̄(j)(aj)^{−½}g_χ(j)c₀(log a−log j), g_χ=(Λχ)*1. Multiplicative near-coincidences → additive (j=bn≈a); Prop 4.4: correlations χ(a)χ̄(a+h)g_χ(a+h), |h|≤2.5T₀a (identity PROVED, reading ARGUED; requires T₀≤T_abs).
 21. χ=1: comb part (Div+Near) bounded O(1) uniformly in N (Tate double zero + Euler–Maclaurin). PROVED (NT_004 Thm 4.2). 𝔞(G_N^1)=c_A N+O(√N), c_A>0 "PROVED up to routine bookkeeping" (Thm 4.3; Titchmarsh 4.11 CITED). NO-GO 4.5 as a sign carrier.
 22. Lattice balance identity (C3): for s=m^{−½}, sᵀ(Div+Near)s = 2Σ_N N^{−½} log N·E_M(N), E_M(N)=Σ_{m≤M}m^{−½}c₀(log(N/m)). PROVED (elementary, class W7: linear use of Λ*1=log, without sign); checked to 12 digits (1.985815103517, M=800). Decay of E_M(N): ARGUED (Euler–Maclaurin). (phase-190 EXP_003 §4, EXP_005 C3.)
-23. Family s_w=m^{−½}w(m/M) (P47 prop:shape-family, l.9008–9045, (i)–(iii) PROVED, growth of ζ CITED): collapse sᵀ𝔸s = sᵀArch s − Σ_{N<Me^{2T₀}}N^{−½}D_w(N)E_w(N); the comb enters only via Σ_{d|N}Λ(d)=log N and Λ(d), d<e^{2T₀}/η. (iv): Ψ_w is the continuous analogue of atom n of Div+Near; it vanishes to second order, ∫Ψ_w=0. EI_002 Thm 3(iii): "Div ≈ −Near" PROVED as an identity; remaining: boundary term (scale M), small-divisor defects and dual terms.
+23. Family s_w=m^{−½}w(m/M) (P46 prop:shape-family, l.9008–9045, (i)–(iii) PROVED, growth of ζ CITED): collapse sᵀ𝔸s = sᵀArch s − Σ_{N<Me^{2T₀}}N^{−½}D_w(N)E_w(N); the comb enters only via Σ_{d|N}Λ(d)=log N and Λ(d), d<e^{2T₀}/η. (iv): Ψ_w is the continuous analogue of atom n of Div+Near; it vanishes to second order, ∫Ψ_w=0. EI_002 Thm 3(iii): "Div ≈ −Near" PROVED as an identity; remaining: boundary term (scale M), small-divisor defects and dual terms.
 24. Variant EI_003 Thm 2 "no identity makes the symbol nonlinear in Λ": REJECTED by the review as a tautology (σ_T is affine in Λ by definition) (PHASE_192_REVIEW_SUMMARY l.17, 33; EI_003_REVIEW l.6, 16).
 
 **Controls** (phase-190, NUMERICAL, double precision, T₀∈{0.05,0.15,0.3}, b=1)
@@ -85,7 +85,7 @@ Where a source reasons from the zeros side it is marked [H].
 36. Conclusion of the source: no structural fact on the primes side about Near holds for Λ and fails for all the controls (EXP_005 §0; README phase-190).
 
 ## 3. Explicit open questions
-- (S): Arch_M − Div_M − Near_M ⪰ 0 ∀M (P47 l.10707–10717). OPEN.
+- (S): Arch_M − Div_M − Near_M ⪰ 0 ∀M (P46 l.10707–10717). OPEN.
 - Joint control of Near with Arch on vectors that see near-coincidences (rem:bar-arith l.8532–8536; EXP_005 §4 note R9). OPEN.
 - C1 criticality law λ_min=M^{−3+o(1)}; C2 law of the minimizer (NUMERICAL; route only [H]). (EXP_005 §2.)
 - Boundary term of Q_M(w) at N≈M: size of the PNT error or of the margin M^{−3}? Next step proposed, not done (EXP_005 §6; EI_002 Thm 3(iii)(a) "not estimated here").
@@ -94,8 +94,8 @@ Where a source reasons from the zeros side it is marked [H].
 - "Balance kills exactly the components q=p^b" beyond first order: ARGUED, and later corrected as invalid (L2_BUILD_031).
 
 ## 4. Tensions / contradictions between sources
-- L2_BUILD_030 §1(c) "Near is a sum over a bounded number of h∈[−c,c]" assumes 2T₀=c/M; with fixed T₀ (P47 prop:AM) |h|≲2T₀m, unbounded. Not a logical error, but the regime differs from the paper.
-- prop:nearfree (P47) treats resonators of width ~1/M, not the fixed profile F₀ of prop:AM; P47 l.7842 cites it as "tests in which Near is invisible".
+- L2_BUILD_030 §1(c) "Near is a sum over a bounded number of h∈[−c,c]" assumes 2T₀=c/M; with fixed T₀ (P46 prop:AM) |h|≲2T₀m, unbounded. Not a logical error, but the regime differs from the paper.
+- prop:nearfree (P46) treats resonators of width ~1/M, not the fixed profile F₀ of prop:AM; P46 l.7842 cites it as "tests in which Near is invisible".
 - N_BUILD_022 §2 D_sym ≠ Div_M (factor 2) — corrected within the memo.
 - L2_BUILD_031 §3–§4 (suppression of components p^b≤Q) invalidated by a later notice; Thm E intact.
 - EI_003 Thm 2 / README phase-192 ("PROVED impossible") vs review (rejected as tautology).
@@ -108,7 +108,7 @@ Where a source reasons from the zeros side it is marked [H].
 
 ## Inventory of attempts on Near_M (phases 191–204)
 
-Object: 𝔸_M = Arch_M − Div_M − Near_M (P47 prop:AM), Near_M(m,k) = ½ Σ_{n≥2, kn≠m} v_n c₀(log(kn/m)).
+Object: 𝔸_M = Arch_M − Div_M − Near_M (P46 prop:AM), Near_M(m,k) = ½ Σ_{n≥2, kn≠m} v_n c₀(log(kn/m)).
 Labels copied from the source or from its audit. "[H]" indicates that the source reasons from the zeros side or uses an equivalence; that reasoning is not used here.
 Scope: the passages of each memo containing Near or near-coincidence were read (grep and context), plus the syntheses and audits. Not all memos of 199/proof-L-sharp and of 200 that only mention Near in passing were read in full. Index: ROUTES-MASTER-INDEX.md l.102, 135, 207–213, 272–310, 4397, 5770–5775, 5833, 5875, 5916, 5922, 7027, 7086, 7162, 8825–8836, 9016–9019, 9093–9119, 9255, 9278.
 
@@ -195,7 +195,7 @@ Genuinely distinct: about 4. Reasons 1, 2 and 5 are the same obstruction: a line
 ## (b) Operations the sources point out as not executed
 
 - **Bulk/edge split of Q_M(w)** (SPEC_B l.160–161: "EXP_005 §6 names the bulk/edge split … has not been done"). The Euler–Maclaurin/Poisson bookkeeping of the main term is not written either (SPEC_B table: "not written out; ARGUED").
-- **Proof of 𝓕_T ≤ 𝔞^♯ with the vector and the archimedean form together on vectors that see Near_M** (P47 rem:bar-arith; index B.3 #38, "terrain declared not excluded").
+- **Proof of 𝓕_T ≤ 𝔞^♯ with the vector and the archimedean form together on vectors that see Near_M** (P46 rem:bar-arith; index B.3 #38, "terrain declared not excluded").
 - **Hadamard/Schur positivity coupling distinct primes with m ≈ kn; non-Gram positive block with its own source** (index B.3 #30, no written object).
 - **Joint restriction between primes (requires a new identity)** and **Hecke-type algebra with archimedean multipliers** (index B.2 #28, "no candidate").
 - **Term of degree ≥ 2 in the weight vanishing at Λ; W supported on m ≈ kn; closure of {𝔸_M} under Schur with transformed weight** (index B.2 #27).
@@ -206,7 +206,7 @@ Genuinely distinct: about 4. Reasons 1, 2 and 5 are the same obstruction: a line
 
 ## (c) Partial positive results on Near
 
-- **prop:nearfree / rem:boxes (P47, PROVED; index l.135):** positivity with margin c₀ for every b in the resonator profile ε ≍ 1/M. There the near-coincidences are invisible and Near does not contribute.
+- **prop:nearfree / rem:boxes (P46, PROVED; index l.135):** positivity with margin c₀ for every b in the resonator profile ε ≍ 1/M. There the near-coincidences are invisible and Near does not contribute.
 - **CA_C_002 (d):** on tests without visible near-coincidences the Hasse defect vanishes and positivity holds with margin.
 - **Small windows:** with 2T₀ < log 2 and T₀ ≤ 0.3, D is already Theorem A (TRACT_D: "l.55/135 … already Theorem A"). On prime sites Div ≡ 0, but the result does not sign Near by itself.
 - **Scale:** the mass of the Kronecker line beyond frequency M is ≍ M⁻³ (H-T, PROVED), equal to the order of λ_min (NUMERICAL).
@@ -225,7 +225,7 @@ Reading, no construction. Convention: labels copied from the source. "[H]" marks
 reason via zeros / functional equation ξ / forbidden equivalences; they are recorded only as what the source says.
 "Read" = memo opened; "via index" = only the row of the master index (the primary source was not opened).
 
-Object: 𝔸_M = Arch_M − Div_M − Near_M (P47 prop:AM), Near_M(m,k) = ½Σ_{n≥2, kn≠m} v_n c_0(log(kn/m)),
+Object: 𝔸_M = Arch_M − Div_M − Near_M (P46 prop:AM), Near_M(m,k) = ½Σ_{n≥2, kn≠m} v_n c_0(log(kn/m)),
 v_n = 2Λ(n)/√n; (Div+Near)_{mk} = ½Ξ_{F_0}(log(m/k)), Ξ_{F_0}(d) = Σ_n v_n c_0(log n − d) (211 DOSSIER_001 §1.4).
 Problem (S) / R9 of the index: Arch_M − Div_M − Near_M ⪰ 0 ∀M, status **OPEN** (index l.12940–12960, l.4397).
 
@@ -343,7 +343,7 @@ Near appears here only inside "all the contacts" (bounds of QUADRATIC_EXPLICIT01
 
 | system | name in the source | formula / passage (when the source gives it) |
 |---|---|---|
-| integers (P47 prop:AM) | Near_M | Near_M(m,k) = ½Σ_{n≥2, kn≠m} v_n c₀(log(kn/m)); Div_M + Near_M = ½[Ξ_{F₀}(log(m/k))] (DOSSIER §1.4; N_021 Prop 1: Near = sᵀ[Ξ − 1_{k\|m}v_{m/k}c₀(0)]s) |
+| integers (P46 prop:AM) | Near_M | Near_M(m,k) = ½Σ_{n≥2, kn≠m} v_n c₀(log(kn/m)); Div_M + Near_M = ½[Ξ_{F₀}(log(m/k))] (DOSSIER §1.4; N_021 Prop 1: Near = sᵀ[Ξ − 1_{k\|m}v_{m/k}c₀(0)]s) |
 | integers, additive shift | slices h ≠ 0 | sᵀW₁Vs = Σ_h Σ_{m−kn=h} s_ms_kv_nc₀(−log(1 − h/m)); h = 0 ↔ Div, h ≠ 0 ↔ Near; \|h\| ≲ 2T₀m (L2_030 §1(c)) |
 | spectral / Dirichlet | finite-resolution remainder of \|P_s\|²V | sᵀ𝔸s = (1/2π)∫F̂₀²\|P_s\|²[m(τ) − Re V(τ)]dτ; Div = Bohr-diagonal part, Near = near-diagonal (L2_030 §§1(b), 2) |
 | Ramanujan | fluctuation q=1 + components c_{p^b}(j) | Q = m^♯ − ⟨Chebyshev q=1⟩ − Σ_{p^b}⟨c_{p^b}⟩ (L2_030 §3; suppression of 031 §3 corrected) |

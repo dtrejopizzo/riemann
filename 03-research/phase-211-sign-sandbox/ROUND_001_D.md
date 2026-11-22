@@ -7,7 +7,7 @@ d = 0, by a determinacy argument (Carleman).
 
 ## Corpus check
 Moment rigidity appears in Paper 22 for a different measure; moment barriers for the window form in
-Paper 47 (W-mom); the Kreĭn extension form thm:KEP1–3. No entry treats the germ of B at d = 0.
+Paper 46 (W-mom); the Kreĭn extension form thm:KEP1–3. No entry treats the germ of B at d = 0.
 
 ## Proposition 1 (PROVED). The germ of B at 0 does not see the comb.
 For |d| < log 2 − 2T_0 the comb part of B(d), namely −½Σ_n v_n[c_0(log n − d) + c_0(log n + d)],
@@ -16,10 +16,10 @@ interval B(d) = (1/2π)∫ m F̂_0² cos(τd) dτ, the same function for Λ, for
 In particular every moment of μ that exists (for the standard profile, orders ≤ 2 only, since
 F̂_0² ≍ τ^{−4}) is comb-free. ∎
 
-## Proposition 2 (PROVED, given the CITED falsifiers of Paper 47). No criterion that uses only the
+## Proposition 2 (PROVED, given the CITED falsifiers of Paper 46). No criterion that uses only the
 germ of B at 0, or only moments of μ, can decide the sign.
 The germ is identical for Λ, cΛ and a_P (Proposition 1), while (★) holds for Λ on the certified range
-and fails for a_P with P > e^{2T} at T ≥ 0.60 and for cΛ, c ≠ 1, at explicit windows (Paper 47
+and fails for a_P with P > e^{2T} at T ≥ 0.60 and for cΛ, c ≠ 1, at explicit windows (Paper 46
 prop:shape-eulerdel, lem:shape-scale). A criterion depending on the germ alone would give the same
 verdict for all three. ∎
 

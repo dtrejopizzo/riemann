@@ -1,6 +1,6 @@
 # Re-audit of phases 161-210 (window positivity, standalone problem)
 
-Scope read: Paper 47 main.tex lines 90-160 (definitions of a_T, lambda_A, W_T) and
+Scope read: Paper 46 main.tex lines 90-160 (definitions of a_T, lambda_A, W_T) and
 10650-10800 (open problems (L2)/(N)/(S)/(R)); 05-meta-and-planning/ROUTES-TRIED-INDEX/README.md;
 06_OPEN_RESIDUES_DEAD_SUBROUTES.md (full, 229 lines); phase READMEs/WORK_STATE/REVIEW_STATE for
 phase-202 (exterior plank), phase-205 (composing object), phase-209 (nonlocal kernel,
@@ -43,7 +43,7 @@ direct re-reading of the three phases the task calls out specifically (202, 205,
   labeled gap, not a mislabel.
 - **Phases 195-201**: modern tools / global object / barrier theorem / parity split / frontier pattern
   / sign object / untried families — feed into phase 204's tractability review and into the
-  specification of the "admissible region" (R) of Paper 47. No hidden partial proof found.
+  specification of the "admissible region" (R) of Paper 46. No hidden partial proof found.
 
 ## Detailed audit: phase 202, exterior plank (★★)
 
@@ -84,7 +84,7 @@ by the phase's own audit — a good example of disciplined labeling, not a misla
 
 One real byproduct: **Lemma RF.1, labeled PROVED-elementary (to be written up)** — a genuine lower
 bound n₊(Φ_N) ≥ 1.95T − 2 on the number of directions in which the compressed Chebyshev remainder must
-be positive. This is a small proved fact sitting unintegrated (not in Paper 47, not cross-referenced
+be positive. This is a small proved fact sitting unintegrated (not in Paper 46, not cross-referenced
 elsewhere); it is a legitimate, currently-true partial statement, but it is explicitly scoped as giving
 "no sign" — so it is not an unrecognized route to λ_A ≥ 0, just an uncatalogued auxiliary lemma. Worth
 flagging as a minor index gap: it is not yet in 06_OPEN_RESIDUES (the phase-205 index entry at the
@@ -117,7 +117,7 @@ Chain of auxiliary results inside 209 (all PROVED/CITED but all explicitly scope
   frequency (LINK_011), an explicit falsifier of that exact-scale domination via an Arb-certified
   numerical test (LINK_012: Q<0.002351 vs E>0.26134, i.e. a NUMERIC falsifier of one specific proposed
   inequality, not of the problem), a proof that **no** fixed constant c>0 independent of T repairs the
-  domination (LINK_013, using the CITED rate from Paper 47's thm:margin proof), a proof that dropping
+  domination (LINK_013, using the CITED rate from Paper 46's thm:margin proof), a proof that dropping
   the rank-one term (κvv*) and reweighting positively still fails uniform domination for the same
   coefficients (LINK_014), resolution of a closability question with an explicit vertical vector
   (LINK_015), and finally a proof that the map U_T has dense range on the whole polar-free carrier for
@@ -130,7 +130,7 @@ Chain of auxiliary results inside 209 (all PROVED/CITED but all explicitly scope
   barrera universal, no cierre D."
 - One housekeeping finding worth noting precisely: the 209 log records a **correction to
   06_OPEN_RESIDUES' own [margin] annotation** — three references had wrongly attributed a *double*-
-  exponential ceiling to λ_A, when Paper 47's cor:margin1 only proves a *single*-exponential ceiling for
+  exponential ceiling to λ_A, when Paper 46's cor:margin1 only proves a *single*-exponential ceiling for
   λ_A (the double-exponential figure, unverified, is cited only for λ_W, and λ_W ≤ λ_A has the wrong
   direction to transfer it). This was fixed in the index (visible already in the version of
   06_OPEN_RESIDUES I read: the [margin] bullet and the R6 entry both now state this correctly). This
@@ -162,7 +162,7 @@ proved elsewhere without being connected.)
 2. One housekeeping item that functioned as a near-hit of the "mislabel" type rather than the
    "unrecognized progress" type: the λ_A/λ_W double-exponential ceiling confusion in 06_OPEN_RESIDUES,
    caught and fixed during phase 209 (see above) — not a live issue now, but worth knowing it
-   existed, since it is exactly the kind of silent mislabel that could propagate into Paper 47 if a
+   existed, since it is exactly the kind of silent mislabel that could propagate into Paper 46 if a
    future round re-derives it from an un-audited citation.
 
 ## Stopped-not-dead

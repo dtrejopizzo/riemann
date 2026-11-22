@@ -9,7 +9,7 @@ c*_T a maximiser. J F(t) = F(−t). Labels: PROVED / CITED / CONDITIONAL / ARGUE
 - Growing near-kernel of the window form (many eigenvalues in [0, δ], multiplicity growing with the window): recorded as a
   NO-GO quantifier (ROUTES-TRIED-INDEX 05b, L106; AUDIT_ZENODO_FRONTIER B3; the prolate mechanism L06/L39). It is used here
   only as a reading of the numerics, not as a route. Nothing below tries to bound the cluster from below.
-- Parity sectors, nodal structure, zero extension: CITED from Paper 47 (prop:nodes, lem:parity, lem:zeroext).
+- Parity sectors, nodal structure, zero extension: CITED from Paper 46 (prop:nodes, lem:parity, lem:zeroext).
 - New here, not in the index or the grid (grep: "pin", "Π-Gram", "indefinite on the near-kernel", "rigidity"): (i) the
   parity assignment of the pair; (ii) the Weyl pin lemma (§3, Lemma 3), which turns "Π indefinite on a near-null pair" into
   a quantitative tangency |c*_T − 1| ≤ gap/|μ|; (iii) the rigidity lemma (Lemma 4), which explains every falsifier failure
@@ -20,7 +20,7 @@ c*_T a maximiser. J F(t) = F(−t). Labels: PROVED / CITED / CONDITIONAL / ARGUE
 
 Method as in ROUND_002_E §3 (Dirichlet sines, N = 40 and 80, Arch by quadrature on |τ| ≤ 6000, Π exact in t-space), with
 one change: P_T is imposed sector by sector. φ_k(−t) = (−1)^{k+1}φ_k(t), so odd k span the even functions and even k the odd
-ones; on even F the constraint is ∫F cosh(t/2) = 0, on odd F it is ∫F sinh(t/2) = 0 (Paper 47, parity paragraph). The cross
+ones; on even F the constraint is ∫F cosh(t/2) = 0, on odd F it is ∫F sinh(t/2) = 0 (Paper 46, parity paragraph). The cross
 blocks of Arch and Π between parities vanish to 10⁻¹⁴, as Proposition 1 requires.
 Comb correction: the comb generator used in ROUND_002_E lists n ≤ 5 only; for T > ½ log 7 ≈ 0.973 it omits n = 7. All
 values below use the exact Λ(n) for every log n < 2T. Values at T ≤ 0.9 of ROUND_002_E are unaffected.
@@ -99,14 +99,14 @@ upper bound Θ(w') ≤ max_c λ_min((Arch − cΠ_{w'})|S_T) (Lemma 4(ii)) is al
 
 ## 3. Pure mathematics
 
-Proposition 1 (PROVED; extends Paper 47 lem:parity from Arch to a_T). P_T = P_T^ev ⊕ P_T^odd, orthogonally for the L²
+Proposition 1 (PROVED; extends Paper 46 lem:parity from Arch to a_T). P_T = P_T^ev ⊕ P_T^odd, orthogonally for the L²
 norm, Arch and Π. Hence λ_A(T) = min(λ^a_ev(T), λ^a_odd(T)), with λ^a_par the bottom of a_T on the unit sphere of P_T^par,
 and for every c, Φ_T(c) = min(Φ_ev(c), Φ_odd(c)).
 Proof. P_T is J-invariant and splits (lem:parity). Π(F) = (1/2π)∫ σ(τ)|F̂|² dτ with σ(τ) = Σ v_n cos(τ log n) even (since
 ĉ_F = |F̂|² and c_F is the inverse transform). For F = F_e + F_o, F̂_e is even and F̂_o odd, so the cross term
 (1/2π)∫ σ · 2Re(F̂_e conj F̂_o) has odd integrand and vanishes; the same for m. ∎
 
-Proposition 2 (PROVED, granted the CITED Kato–Danskin formula). a_T on P_T has compact resolvent (Arch has, Paper 47
+Proposition 2 (PROVED, granted the CITED Kato–Danskin formula). a_T on P_T has compact resolvent (Arch has, Paper 46
 prop:nodes(i); Π is bounded, |Π(F)| ≤ Σ v_n ‖F‖²). Let E_T = E_ev ⊕ E_odd be the bottom eigenspace. Then
   (i) the one-sided derivatives of the concave function Φ_T at c = 1 are Φ'_±(1) = −max/−min of Π on the unit sphere of
       E_T (CITED: Kato, analytic perturbation of an isolated eigenvalue of finite multiplicity; Danskin);
@@ -146,10 +146,10 @@ admissible set of δ shrinks; for the even pair alone the admissible set for Θ 
 spanned by M_ev and Δ meets the 2 × 2 positive cone for an open set of Δ), which is why η = +0.1 survives at ½log5; with
 k = 9 at T = 1 every tested δ is excluded (§2.6).
 
-What can be said about simplicity of the bottom (OPEN). Perron–Frobenius (Paper 47 prop:nodes(i)) gives a simple bottom
+What can be said about simplicity of the bottom (OPEN). Perron–Frobenius (Paper 46 prop:nodes(i)) gives a simple bottom
 for Arch on L²(I_T) only; on P_T the bottom changes sign (prop:nodes(ii)), and Π destroys positivity preservation, so no
 Perron–Frobenius argument is available for a_T on P_T or on a sector. Whether λ^a_ev(T) ≠ λ^a_odd(T) for all T, and whether
-each sector bottom is simple, is OPEN. Nothing in Paper 47 forces or forbids it; the numerics say the bottom is even and
+each sector bottom is simple, is OPEN. Nothing in Paper 46 forces or forbids it; the numerics say the bottom is even and
 simple with a sector ratio of 10–250.
 
 ## 4. Statements

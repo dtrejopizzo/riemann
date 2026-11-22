@@ -43,7 +43,7 @@ windows of relative width T₀, has non-negligible weight. ARGUED (the weight de
 ## 3. Integrality is invisible to the target (M3, M8) — main result
 **Theorem 3.1 (real-sited independence; PROVED).** Let X = {x₁ < x₂ < …} ⊂ (1,∞) be any discrete set (not necessarily integers) with
 x_{k+1}/x_k → 1. Then (eq:target) ⟺ [𝖡(log x − log x′)]_{x,x′∈F} ⪰ 0 for every finite F ⊂ X.
-*Proof.* Verbatim CA_K_002 Thm 3.2 / P47 prop:AM(i): (⇒) is thm:oneprofile restricted to the points log x; (⇐) choose x_j ∈ X with
+*Proof.* Verbatim CA_K_002 Thm 3.2 / P46 prop:AM(i): (⇒) is thm:oneprofile restricted to the points log x; (⇐) choose x_j ∈ X with
 |log x_j − C − d_j| < ε (possible for C large since log X has gaps → 0), use continuity of 𝖡 and thm:oneprofile. Integrality is never used. ∎
 
 **Corollary 3.2 (integrality, parity, residues and k-tuple structure of p − np′ are information-free; PROVED).** Let θ: primes → (0,1) be
@@ -93,7 +93,7 @@ L-function (O10, O12 survive). The reversal is FE-generic and is not a ζ-specif
 sites (s_j = K^{−½} at p_j ≈ e^{C+jδ}, L = Kδ) give Q(s) → Σ_{|r|<K}(1 − |r|/K)𝖡(rδ); in the Riemann-sum regime the archimedean part tends to
 δ^{−1}∫α = δ^{−1}C₀ĉ₀(0) < 0, so the premise forces limsup_L ∫_0^L (1 − D/L)Ξ(D)dD ≤ C₀ĉ₀(0): **on average over log-distance, the
 near-coincidences p ≈ np′ must contribute exactly the regularized centre value Σv_n "=" C₀**, Cesàro-summed. This is a one-sided smoothing
-statement on Ξ (P47 Thm Z class): REF-D. Not computed (not strictly necessary).
+statement on Ξ (P46 Thm Z class): REF-D. Not computed (not strictly necessary).
 
 ## 5. Screens
 | item | REF-D | (B″) | O7/O10/O11/O12 | (R) | PR | sign content |

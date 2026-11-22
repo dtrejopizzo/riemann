@@ -1,7 +1,7 @@
 # R155.006 — Audit of R155.005 (reverse-engineering `w_T` from the zeros)
 
 *Phase 155. Target: `R155_005_REVERSE_ENGINEERING_FROM_ZEROS.md`
-and `scripts/reverse/`. Context read: Paper 47 §7 (Def. 7.1, Thm. Z, Thm. Zexh, Cor. RH, Cor. zeros,
+and `scripts/reverse/`. Context read: Paper 46 §7 (Def. 7.1, Thm. Z, Thm. Zexh, Cor. RH, Cor. zeros,
 Rem. RHcert), §5/§6 (grid-inflation warning, two-prime windows), `R155_000`.*
 **Global verdict: ACCEPT WITH REPAIRS.** The identity check and the qualitative negative reading
 survive. Three of the quantitative conclusions (§0.3, §0.4/§5, §2.2) are wrong or mis-diagnosed;
@@ -63,7 +63,7 @@ every reproduction is below. All numbers here are `DIAGNOSTIC`.
  estimate `6e−8·‖x‖₁` at `‖x‖₁ = 16.2` to a factor 3 — fine. §2.1 line 100 quotes `1.4·10⁻⁷` as
  "the measured residual", which is in fact the **`L=2000` wild weight's** residual, not the C²
  generic one (`3.7e−9`); misleading cross-reference, repair.
-* **Verdict: this is the one thing here worth promoting to a lemma in Paper 47** (see §11(a)).
+* **Verdict: this is the one thing here worth promoting to a lemma in Paper 46** (see §11(a)).
 
 ## 3. "The `+1.39e−6` is refuted by the prime side (`min f^prime = −8.69e−5`)" — **REJECT: the diagnosis is wrong, the conclusion is right for a different reason**
 
@@ -116,7 +116,7 @@ min over the LP grid, recomputed: -1.6755768414e-04 at tau = 5.82 (= the LP valu
 This is textbook grid exploitation: the optimiser puts a spike **between two adjacent grid points**,
 both of which it holds exactly at `c`. It is admissible for a band-limited `f` of type `U = 14`
 (Bernstein allows `½U²‖f‖_∞δ²` of dip over `δ = 0.01`), so it is not a bug — it is the §5 warning of
-Paper 47 realised at the finest grid the phase has used. Note the factor is **not** `2.0` once the
+Paper 46 realised at the finest grid the phase has used. Note the factor is **not** `2.0` once the
 endpoint is included (`−9.79e−3` at `τ = 16.745`, a factor `58`).
 
 ## 5. The `c(T)` table and the LP — **ACCEPT the LP, REJECT "`c(T)`" as a class quantity**
@@ -129,7 +129,7 @@ endpoint is included (`−9.79e−3` at `τ = 16.745`, a factor `58`).
 * **But `L` is not a norm on `w`.** `L = Σ|y| + Σ|x|` mixes `ψ`'s (`‖ψ_s‖_1 ≈ 3/s ≈ 1.2`) with
  splines (`∫|β| = h = 2T/M`), so `L` is a *basis- and `M`-dependent* coefficient budget, not a mass.
  Consequence: comparing `c(T)` "at `L = 100`" across windows compares different admissible sets
- (`h` runs `0.137 → 0.200`), and comparing `L` to Paper 47 §5's `‖ν‖_TV = 90.75` (§4.3) is
+ (`h` runs `0.137 → 0.200`), and comparing `L` to Paper 46 §5's `‖ν‖_TV = 90.75` (§4.3) is
  apples-to-oranges. §4.3's "the analogy is close" is not supported; downgrade to a remark.
 * **`M` is not converged, and `R155_005`'s own data show it.** At `T = 0.58`, `M = 8 → 16` moves
  `c(L=100)` from `−2.351e−2` to `−5.475e−3`, a factor `4.3`. Any statement of the form "`c(T)` is
@@ -170,7 +170,7 @@ robust; the conclusion "no law for `w_T`" is false as written.
 
 ## 7. Difficulty index — **ACCEPT (arithmetic), REJECT the gloss**
 
-Checked: `A_T = Σ_{n<e^{2T}}v_n` gives `0.98026` (`n=2`), `2.24883` (`n=2,3`; matches Paper 47 §6.1
+Checked: `A_T = Σ_{n<e^{2T}}v_n` gives `0.98026` (`n=2`), `2.24883` (`n=2,3`; matches Paper 46 §6.1
 `A = 2.24883`), `2.94199` (`n=2,3,4`); `τ_env = 2πe^{A_T} = 16.7456, 59.536, 119.09` ✓;
 `2πe^{2T} = 18.850, 20.041, 21.706, 23.053, 25.133, 28.161, 31.116` ✓; ratios
 `0.888, 2.971, 2.743, 2.583, 2.369, 4.229, 3.827` ✓ — §0.5, §4.2 and §6.2 ("`0.89`", "`2.4–4.2`") are
@@ -178,7 +178,7 @@ arithmetically right, and the prime-power bookkeeping (`4 ∈ N_T` for `T > log 
 The **gloss** is not: "`½log3` … the only window that works … the zeros alone bring `c` to within
 `10⁻⁶` of zero" rests on `c(½log3) = −5.4e−7`, which §3–§4 show is a grid artefact (honest values
 `−3.3e−4` at `L=20`, `−3.95e−3` at `L=2000`). Worse, both are **below the certified
-`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`** of Paper 47 Thm. C: the reverse-engineered class is *worse* than
+`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`** of Paper 46 Thm. C: the reverse-engineered class is *worse* than
 the certificate the corpus already owns at that window. Keep the ratio as a bookkeeping index; drop
 "works".
 
@@ -234,7 +234,7 @@ it. Correct.
 
 ## 11. Disposition
 
-**(a) Worth adding to Paper 47 (one lemma, plus one corollary `R155_005` did not propose).**
+**(a) Worth adding to Paper 46 (one lemma, plus one corollary `R155_005` did not propose).**
 1. *Smoothness/far-zero lemma, refining Cor. 7.4.* Let `w ∈ W_cl`, supported in `|u| ≤ U`, with
  `w^{(k)}` continuous and `w^{(k+1)}` of bounded variation (`k ≥ 0`). Then
  `|ŵ(t)| ≤ V(w^{(k+1)})|t|^{−k−2}`, Theorem Z(ii) holds for `w` (absolute convergence), and, under
@@ -245,7 +245,7 @@ it. Correct.
  State the jump case (`k = −1`) separately as conditionally convergent.
 2. *Grid lemma (new, and the phase needs it more than (1)).* `f_w` is band-limited of exponential
  type `U`; Bernstein gives `min_R f_w ≥ min_{δ-grid} f_w − ½U²‖f_w‖_∞δ²` (and a Markov-type
- refinement near a grid minimum). This turns Paper 47 §5's grid-inflation *warning* into a
+ refinement near a grid minimum). This turns Paper 46 §5's grid-inflation *warning* into a
  theorem, gives the LP an a posteriori certificate, and is exactly what the `τ = 13.25` and
  `τ = 16.745` failures above measure. Cheap and unconditional.
 
@@ -267,7 +267,7 @@ grid value is optimistic by a factor of order 2" — unbounded, measured `58×` 
 
 ## 12. The two proposed next steps
 
-**(i) Far-zero lemma — DO IT.** Elementary, unconditional, and it repairs a real gap in Paper 47 §7
+**(i) Far-zero lemma — DO IT.** Elementary, unconditional, and it repairs a real gap in Paper 46 §7
 (Thm. Z(ii) is stated only for `C_c^∞`). Half a page. Pair it with the Bernstein grid lemma above,
 which is the more valuable of the two and costs the same.
 

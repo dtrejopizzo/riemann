@@ -7,7 +7,7 @@ u_n = log n, N_T = {n ≥ 2 : u_n < 2T}, v_n = 2Λ(n)n^{−1/2}, X = e^{2T},
   A_T := Σ_{n∈N_T} v_n = M_T(0),   V(s) := Σ_{u_n ≤ s, n∈N_T} v_n  (0 ≤ s ≤ 2T),
   π_+(H) := sup{Π_T(F) : F ∈ H, ‖F‖ = 1},  π_−(H) := −inf{…},  for H = L²(I_T) or P_T.
 
-a_T = Arch_T − Π_T on P_T, and Arch_T(F) = (1/2π)∫ m |F̂|² on P_T (Paper 47 prop:nodes, CITED).
+a_T = Arch_T − Π_T on P_T, and Arch_T(F) = (1/2π)∫ m |F̂|² on P_T (Paper 46 prop:nodes, CITED).
 Everything below is a statement about the size of Π_T. It is comb-generic and carries no sign (§5).
 
 ## 0. Corpus check
@@ -18,11 +18,11 @@ Everything below is a statement about the size of Π_T. It is comb-generic and c
   Gram symbols). No entry bounds λ_max(Π_T) beyond A_T for large T. The modulation + Riemann–Lebesgue device used in
   Theorem 1 is recorded (COSH_DEFECT_001 "modulation PROVED", LEMMA_13_1_CUMULANT_001): it is used here as a tool,
   not as a route; no index item is retried.
-- Paper 47 prop:coer-prime (CITED): (i) ‖Π_T‖ ≤ A_T; (ii) the truncated-shift (path-graph) bound
+- Paper 46 prop:coer-prime (CITED): (i) ‖Π_T‖ ≤ A_T; (ii) the truncated-shift (path-graph) bound
   ‖Π_T‖ ≤ Σ v_n cos(π/(⌈2T/u_n⌉+1)), stated for T ≤ ½log5. Theorem 2 below is a different inequality (one
   Cauchy–Schwarz on the common window instead of one path graph per shift); it is never weaker than the large-T
   reading of (ii) in its second form and is smaller than (ii) at every tested T > ½log 3 (Table 2).
-- Paper 47 thm:arena / cor:arena (CITED): lower count N*(T) ≥ ⌊Tτ_*/π − ½⌋, τ_* = m^{−1}(A_T), any threshold
+- Paper 46 thm:arena / cor:arena (CITED): lower count N*(T) ≥ ⌊Tτ_*/π − ½⌋, τ_* = m^{−1}(A_T), any threshold
   admissible in the proof. STATEMENT_001 §3: ∫_ℝ e^{u/2}c_F(u)du = A(F)B(F) = 0 on P_T (the cosh half of
   Theorem 4 below); the sinh half (Theorem 4) is not in the corpus (grep "sinh(|", "e^{|x−y|/2}": no hit).
 - The "Gram/Toeplitz bound on the shifted copies" proposed by ROUND_005_E: ‖F − tΣ_n w_n S_{u_n}F‖² ≥ 0 gives
@@ -207,7 +207,7 @@ PROVED piece (size of the comb; comb-generic, no sign), plus one NO-GO with clas
 - Theorem 3 / Cor 3.1: λ_max(Π_T) ≥ N_T/(sinh T + T) (exact arithmetic expression) = e^T(1+o(1)); liminf ratio ≥ ¼.
 - Theorem 4: on P_T the density part of the comb is a nonpositive form, −∫(u′² + u²/4).
 - Lemma 5.1, Theorem 5: m_δ(T) ≤ 12.92·T·exp(δ + ½(A_T+V(T)))·(δ + ½(A_T+V(T)) + 6.373) = exp(2e^T(1+o(1))),
-  versus Paper 47's arena count exp(4e^T(1+o(1))).
+  versus Paper 46's arena count exp(4e^T(1+o(1))).
 - Theorem 6 (NO-GO, class: Weyl caps from pointwise comparisons a_T ≥ Arch_T − θ): no such cap is below
   2T·exp(e^T(1+o(1))).
 

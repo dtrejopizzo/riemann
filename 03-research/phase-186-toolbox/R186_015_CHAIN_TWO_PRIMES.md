@@ -86,7 +86,7 @@ What this means for the inertia (next memo). For fixed S, −C_{ε_S}|𝒫_T is 
 7. §5 S(T): the prediction is ARGUED; it uses Poisson over all integers without controlling the interaction with the smoothness cutoff Ψ(X,e^{2T}) for X > e^{2T} nor the boundary lines. Nothing in §5 is used as a theorem.
 8. No claim about the sign of E_S; no equivalence with RH.
 
-## For Paper 47
+## For Paper 46
 
 - Theorem (semilocal chain, finite S): U_S, C_S, Cpt, NHS, Sp (A_S ∈ S_p ⟺ p > 2), T1–T4, Δ, C′_S additive, (84)_S. One page: "same argument with symbol M_S = m_∞∏ρ_p" + the additivity lemma Y(φ₁+φ₂).
 - Proposition (L2_S, r primes): log^r singularities at S-units q = a/b with cutoff 1/b; ε_S ∈ L^p_loc; R′_S HS for fixed S. Correct R186.012 §5 (ARGUED → PROVED, with log^r).

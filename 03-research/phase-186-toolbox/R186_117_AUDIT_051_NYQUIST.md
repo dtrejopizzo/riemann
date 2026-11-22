@@ -3,19 +3,19 @@
 Phase 186. Object: R186_051 §4, Theorem 4.1 (a)–(d), Cor. 4.2 insofar as it depends on it,
 §6(E), §7.3. Own code: `r117_nyquist_check.py` (not importing anything from r043/r051: own sieve, own Legendre basis, exact F̂
 via spherical Bessel F̂(τ) = Σ_j h_j 2T i^j j_j(τT), c_F by exact Gauss–Legendre, L_T(ω) = Cin(2Tω) + ∫(1−cos)K_reg; ≈ 1 min).
-Paper 47, grid and crossword are not touched.
+Paper 46, grid and crossword are not touched.
 
 ## 0. Verdict
 
 **ACCEPT WITH CORRECTIONS (MAJOR-1, MINOR-1..4). No FATAL.** Theorem 4.1 is correct as stated, **because
-its s_T is not the symbol σ_T of Paper 47 eq:symbol but the symbol with the Lévy measure truncated to [0, 2T]**:
+its s_T is not the symbol σ_T of Paper 46 eq:symbol but the symbol with the Lévy measure truncated to [0, 2T]**:
 s_T = σ_T + ∫_{2T}^∞ cos(τu)K(u)du. With s_T the four identities (a)–(d) are exact (Poisson/Shannon on c_F, support
 [−2T, 2T]); with σ_T (i.e. with m(ω_k) on the grid) the Nyquist sum is **not** the form: the alias term is
  Alias_T(F) := 𝔞_T(F) − (1/4T)Σ_k|F̂(ω_k)|²σ_T(ω_k) = Σ_{j≥1}∫_{−2T}^{2T} c_F(v)K(4Tj − v)dv
  = Σ_{j≥1}Σ_{m≥0} 2e^{−(2m+½)4Tj}·Φ_F(2m+1)·Φ_F(−2m), Φ_F(s) := ∫F(t)e^{(s−½)t}dt,
 whose first term (m = 0, j = 1) is 2e^{−2T}A(F)B(F) and **vanishes exactly on 𝒫_T**; the next one, 2e^{−10T}Φ_F(5/2)Φ_F(−5/2),
 does not vanish and equals +3.7·10⁻⁴ (½log3), +1.2·10⁻⁴ (log 2), +4.7·10⁻⁵ (½log5) at h*: **48% of λ_A at ½log3, 1.3·10³ λ_A at log 2,
-10⁷ λ_A at ½log5**. With the symbol of Paper 47 on the grid, h*'s "Nyquist sum" at log 2 is −1.32·10⁻⁴ < 0 with λ_A = +1.04·10⁻⁷:
+10⁷ λ_A at ½log5**. With the symbol of Paper 46 on the grid, h*'s "Nyquist sum" at log 2 is −1.32·10⁻⁴ < 0 with λ_A = +1.04·10⁻⁷:
 a false witness. It is the term that any "algebra of D_T" built on samples of m must treat separately; with s_T it is
 absorbed exactly and there is nothing to treat. The memo does it right (it uses s_T), but the goal and the reading "the form sees the symbol
 on the grid" must say **s_T, not σ_T** (MAJOR-1: the memo writes "s_T = symbol with the truncated Lévy measure" only in §0.5 and
@@ -23,7 +23,7 @@ in the parenthetical of (d); in Cor. 4.2, §4 "What is missing" and §8 it uses 
 
 ## 1. Own derivation (PROVED; fixes the memo's proof at one point)
 
-Paper 47 conventions: F̂(τ) = ∫F e^{iτt}, c_F(u) = ∫F(t)F̄(t−u)dt, ĉ_F = |F̂|², supp c_F ⊂ [−2T, 2T], c_F(±2T) = 0, c_F continuous.
+Paper 46 conventions: F̂(τ) = ∫F e^{iτt}, c_F(u) = ∫F(t)F̄(t−u)dt, ĉ_F = |F̂|², supp c_F ⊂ [−2T, 2T], c_F(±2T) = 0, c_F continuous.
 Let ν be a finite **even** measure with supp ν ⊂ [−2T, 2T] and no atoms at ±2T. Then φ := c_F * ν is continuous, supp φ ⊂ [−4T, 4T],
 φ(±4T) = 0, and φ̂ = |F̂|²·ν̂ with ν̂ real. Poisson with step Δ = π/2T (period 2π/Δ = 4T on the u side): if Σ_k|φ̂(kΔ)| < ∞,
  Σ_{k∈ℤ} φ̂(kΔ) = (2π/Δ)Σ_{j∈ℤ} φ(4Tj) = 4T·φ(0) = 4T∫c_F dν (the j ≠ 0 terms fall outside the support or on the boundary where φ = 0).
@@ -48,7 +48,7 @@ So (1/4T)Σ_k|F̂(ω_k)|² ν̂(ω_k) = ∫c_F dν. [Base identity]
 
 Own λ_A: 9.4858·10⁻⁴, 1.0421·10⁻⁷, 3.887·10⁻¹² (memo: 9.486·10⁻⁴, 1.042·10⁻⁷, 3.84·10⁻¹²; ok). Errors |truncated sum − exact|:
 
-| window | vector | (a) comb, K=2e4 / 2e5 | (b) norm, 2e5 | (c) E_ψ, 2e5 | (d) with s_T, 2e5 | σ_T alias (Paper 47) | 2e^{−10T}Φ(5/2)Φ(−5/2) |
+| window | vector | (a) comb, K=2e4 / 2e5 | (b) norm, 2e5 | (c) E_ψ, 2e5 | (d) with s_T, 2e5 | σ_T alias (Paper 46) | 2e^{−10T}Φ(5/2)Φ(−5/2) |
 |---|---|---|---|---|---|---|---|
 | ½log3 | h* | 1.3e−12 / 3e−15 | 2.6e−9 | 1.4e−13 | 3.2e−8 | **+4.54e−4** (λ_A = 9.49e−4) | +3.68e−4 |
 | ½log3 | random 1–3 | 6e−8…2e−9 / 3e−12…2e−11 | 1.3e−5…2.8e−5 | 3e−9…2e−8 | 1.6e−4…2.0e−3 | −8.7e−7, +7.5e−5, +3.0e−5 | −5.6e−7, +5.8e−5, +2.3e−5 |
@@ -72,7 +72,7 @@ negligible against λ_A. (iv) Reproduced: s_T < 0 at 3, 6, 7, 15 grid points (k 
 s_T(ω_k) = log k + O(1), so Σ_k|F̂(ω_k)|²log(2 + k) < ∞ is needed. The memo asks for "F̂ ∈ C¹, f′ ∈ L¹" (F̂ is entire, so the
 first is vacuous) and leaves it as sufficient. The correct and stronger statement: for G entire of exponential type τ the local Plancherel–Pólya
 inequality |G(x)|² ≤ C_τ∫_{x−1}^{x+1}|G|² holds (subharmonicity of |G|² + type bound; standard CITED). With G = F̂ (type T):
-Σ_k|F̂(ω_k)|²log(2 + |ω_k|) ≤ C∫|F̂(τ)|²log(3 + |τ|)dτ, finite **exactly on the domain of the form** of Paper 47 eq:form.
+Σ_k|F̂(ω_k)|²log(2 + |ω_k|) ≤ C∫|F̂(τ)|²log(3 + |τ|)dτ, finite **exactly on the domain of the form** of Paper 46 eq:form.
 So the sum (d) converges absolutely for every F in the form's domain, and (a)–(c) for every F ∈ L²(I_T) (bounded kernels,
 Σ|F̂(ω_k)|² = 4T‖F‖²). Numerical: Σ_k|F̂(ω_k)|²|s_T(ω_k)| stabilizes (h*: 0.612781/0.612782/0.612783 at K = 2e3/2e4/2e5; random vectors:
 tail Σ_{k>10⁵}|F̂|²log k ≈ 10⁻⁴…2·10⁻³, convergent). Tail of an F with a jump: ≍ (F(T)² + F(−T)²)(2T/π)²·log K/K. For F ∉ domain
@@ -81,15 +81,15 @@ of the form (c_F(0) − c_F(u) not integrable against K) both sides are +∞ and
 ## 4. Novelty (point 4)
 
 Grep "Nyquist|Shannon|sampling|muestreo|Poisson|Bernstein grid|Plancherel–Pólya" (03-research, 04-papers, 05-meta):
-- Paper 47 thm:A already says the form is C₀‖F‖² + Lev(c_F) − Σv_n c_F(log n) and (l. 150) that "all T-dependence of the
+- Paper 46 thm:A already says the form is C₀‖F‖² + Lev(c_F) − Σv_n c_F(log n) and (l. 150) that "all T-dependence of the
  archimedean part is the elementary tail" ∫_{2T}^∞K: **the truncation of m that makes Theorem 4.1 exact is already in the paper**.
- Paper 47 uses Poisson (thm:Z, l. 2096, 2256–2260, thm:PCfinite) on the zero side and on the entire comb side, not on c_F over the grid π/2T.
+ Paper 46 uses Poisson (thm:Z, l. 2096, 2256–2260, thm:PCfinite) on the zero side and on the entire comb side, not on c_F over the grid π/2T.
 - R186_113 §5(iii) (audit of R186_041) already noted: "Shannon/Boas sampling formulas, Plancherel–Pólya: exact identities with
  nodes of density ≥ T/π and positive weights for PW_T, but with Lebesgue measure, not with (σ_T − λ)dτ". That observation is
  **incorrect in one detail that Theorem 4.1 corrects**: with the weight s_T (not σ_T) the sampling formula **is** exact, because the
  truncated Lévy measure + comb + δ₀ is supported on [−2T, 2T]. That is the only new contribution: a one-line statement
  (base identity of §1 applied to thm:A), not a tool.
-- R155 "Bernstein grid lemma" (Paper 47 lem:bern) is a different thing: a bound on the minimum of a band-limited function by its minimum on a
+- R155 "Bernstein grid lemma" (Paper 46 lem:bern) is a different thing: a bound on the minimum of a band-limited function by its minimum on a
  grid; it is not an identity. R186_026 (piecewise Tate Gram) does not use sampling. Phase-33 (completeness of exponentials) and phase-78
  mention Shannon only as the Shannon number. **Nothing in the corpus states (d) with s_T**: new as a statement, classical as content
  (Whittaker–Kotelnikov–Shannon for |F̂|² ∈ PW_{2T}, or Poisson for c_F * ν with supp ⊂ (−4T, 4T)).
@@ -102,7 +102,7 @@ Grep "Nyquist|Shannon|sampling|muestreo|Poisson|Bernstein grid|Plancherel–Pól
 
 **FATAL** — none.
 **MAJOR**
-- M1. Identification of the symbol. s_T ≠ σ_T (Paper 47 eq:symbol); the difference ∫_{2T}^∞cos(τu)K(u)du produces on the grid the alias of §0,
+- M1. Identification of the symbol. s_T ≠ σ_T (Paper 46 eq:symbol); the difference ∫_{2T}^∞cos(τu)K(u)du produces on the grid the alias of §0,
  which on 𝒫_T equals Σ_{j≥1}Σ_{m≥1}2e^{−(2m+½)4Tj}Φ_F(2m+1)Φ_F(−2m) (the m = 0 term vanishes because A(F)B(F) = 0) and is ≥ 0.48λ_A at ½log3,
  10³λ_A at log 2, 10⁷λ_A at ½log5 (h*). Every sentence in §0.5, Cor. 4.2, §4 "What is missing", target Theorem 5.2 and §8 that says "symbol"
  must say "truncated symbol s_T"; in particular 5.2 "equivalently Σ_kΦ̂(kπ/2T)s_T(kπ/2T) ≥ 0" is correct only with s_T and
@@ -116,7 +116,7 @@ Grep "Nyquist|Shannon|sampling|muestreo|Poisson|Bernstein grid|Plancherel–Pól
  Rewrite §7.3 accordingly. The tail of L_T in `part_EF` ("log ω + c_as" fitted at k ∈ [381, 400]) can be given exactly:
  L_T(ω_k) = γ + log(2Tω_k) − Ci(2Tω_k) + ∫₀^{2T}K_reg − [(−1)^kK_reg′(2T) − K_reg′(0)]/ω_k² + O(ω_k⁻⁴).
 - m3. "New in the corpus as a tool (grep: Shannon only as the Shannon number)": the memo's grep missed R186_113 §5(iii)
- and Paper 47 l. 150/thm:A; correct label: **PROVED, a Shannon reformulation of thm:A; new as a statement, not as a tool**.
+ and Paper 46 l. 150/thm:A; correct label: **PROVED, a Shannon reformulation of thm:A; new as a statement, not as a tool**.
 - m4. §4's *Reading* ("the form does not see σ_T on any continuum", "exact energy version on windows of width π/T"): withdraw or
  rewrite as "equivalent discrete representation"; there is no new information in the samples (§4 of this review).
 
@@ -126,7 +126,7 @@ Grep "Nyquist|Shannon|sampling|muestreo|Poisson|Bernstein grid|Plancherel–Pól
 |---|---|
 | Theorem 4.1 (a),(b),(c) | PROVED (classical: Shannon/Poisson on c_F; band-limited kernels) |
 | Theorem 4.1 (d) with s_T (truncated Lévy) | PROVED with the repaired proof of §1; valid in [0, ∞] ∀F ∈ L²(I_T), absolutely convergent on the domain of the form |
-| Theorem 4.1 (d) with σ_T of Paper 47 | **FALSE**: alias Σ_{j≥1}∫c_F(v)K(4Tj − v)dv, on 𝒫_T = Σ_{j,m≥1}2e^{−(2m+½)4Tj}Φ_F(2m+1)Φ_F(−2m); h*: +4.5e−4 / +1.3e−4 / +4.9e−5 |
+| Theorem 4.1 (d) with σ_T of Paper 46 | **FALSE**: alias Σ_{j≥1}∫c_F(v)K(4Tj − v)dv, on 𝒫_T = Σ_{j,m≥1}2e^{−(2m+½)4Tj}Φ_F(2m+1)Φ_F(−2m); h*: +4.5e−4 / +1.3e−4 / +4.9e−5 |
 | "10⁻⁸ in 12 tests" | NUMERICAL, only (a); (d) 3–4 digits only on h* |
 | Novelty | new statement in the corpus; content = thm:A + Shannon; corrects the note from R186_113 §5(iii) |
 | Row D | unchanged (OPEN); no grid cell changes |

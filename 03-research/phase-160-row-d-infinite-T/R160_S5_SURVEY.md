@@ -31,7 +31,7 @@ Paths are relative to `03-research/` unless they start with `04-`, `05-` or `00-
 | `…/R157_001_DMV_IMPORT.md` | O-150.1: DMV imported from five open secondary sources; phase-150 misquotation found (integer law is `N(x) = ρx + O(x^θ)`, not `O(x e^{−c√log x})`); (H-DMV′) → CITED (secondary source); Lemma 2.1 (continuation to `Re s > θ`) PROVED |
 | `…/R157_002_MECHANISM_SEARCH.md` | 61-row table of candidate mechanisms (after audit: EXCL 39, EQUIV 20, SURV 1 = (P152.2), NOT EXCLUDED 1 = MW-5 cluster); observations O1–O4; one-round Lemma P157.S1 |
 | `…/R157_003_AUDIT_DMV.md` | PASS with amendments A1–A8; `η ≡ (1−θ)/2`; independent second model (Zhang, Math. Ann. 337 (2007), zbMATH abstract) + Révész Thm 5; T3 stays a Remark |
-| `…/R157_004_AUDIT_SEARCH.md` | 31 amendments; O3 PROVED as an upper bound (Lemma D = P47 `lem:degen` PROVED); O4 = RESTATEMENT (Lemmas C, E PROVED); row 37 (Deninger) un-excluded; rows 56–60 added |
+| `…/R157_004_AUDIT_SEARCH.md` | 31 amendments; O3 PROVED as an upper bound (Lemma D = P46 `lem:degen` PROVED); O4 = RESTATEMENT (Lemmas C, E PROVED); row 37 (Deninger) un-excluded; rows 56–60 added |
 | `…/R157_005_BERKOVICH_TEST.md` | Lemma P157.S1 run on (P152.2), the difference kernel on `A^{1,an}_Z`: Lemma 2.1 (group law relative to `M(Z)`), Lemma 3.1–3.3, Theorem 4.1 (decomposition in class 𝔄) |
 | `…/R157_006_AUDIT_BERKOVICH.md` | (P152.2) CLOSED as a RESTATEMENT; class 𝔄 → 𝔄⁺ (Lemmas B.1–B.3); NG-E1 PROVED in strong form; D.195 (3.5) ≡ `RD_T` re-audited |
 | `…/R157_007_CLOSING_DECISION.md` | Labels of record; "no survivor with an object; MW-5 cluster not excluded, with no object" |
@@ -41,7 +41,7 @@ Paths are relative to `03-research/` unless they start with `04-`, `05-` or `00-
 | file | one line |
 |---|---|
 | `phase-158-row-d-mw5-object/R158_000_BLUEPRINT.md` | Option (B′): build an MW-5 object testable by F1–F5 |
-| `…/R158_001_SPEC_SHEET.md` | W-1…W-6 (Weil over `F_q` in P47 language); constraints C1–C27; Lemma T; positive list P1–P7, negative list N1–N11; object test OT-1…OT-12; 18 frameworks run through it (none passes) |
+| `…/R158_001_SPEC_SHEET.md` | W-1…W-6 (Weil over `F_q` in P46 language); constraints C1–C27; Lemma T; positive list P1–P7, negative list N1–N11; object test OT-1…OT-12; 18 frameworks run through it (none passes) |
 | `…/R158_002_ADELE_CLASS_FOLIATION.md` | `X = A_Q/Q^×` as a Deninger-type object: Lemmas A, D, E, U, Construction C, Props B, H; Theorem 158.2-G: every positivity structure on `X` is a restatement, compression, false or void |
 | `…/R158_003_AUDIT_SPEC.md` | Sheet accepted with A1–A20; Lemma T CLASSICAL; Connes' adèle-class entry moved from OT-5′ to OT-2 (global trace formula ⟺ RH); OT status table (Rem 3.0); reopening rule Rem 3.3 |
 | `…/R158_004_AUDIT_ADELE.md` | Verdict holds with A1–A25; Fact 4.6a.7 false as stated (CCM's form is `B_{ξ′}`, odd multiplier); new `S₃` falsifier; corpus-check failure recorded (Lemma U, Construction C not novel) |
@@ -92,14 +92,14 @@ Read this pass at abstract / main-theorem level (pdftotext of the local copies);
 
 | file | content usable by a memo | label / caution |
 |---|---|---|
-| `00-references/2006.13771v1.pdf` (Connes–Consani, *Weil positivity and trace formula, the archimedean place*, 2020) | Thm 6.11: for `g ∈ C_c^∞` supported in `[2^{−1/2}, 2^{1/2}]` with `ĝ(−i/2) = 0`, `W_∞(g∗g*) ≥ Tr(ϑ(g) S ϑ(g)*) − c|ĝ(0)|²`, best constant `13 < c < 17`; hence `W_∞(f) ≥ 0` for positive-definite `f` supported in `[½, 2]` with the moment conditions. Root of positivity: compression of the scaling action to the Sonin space. Archimedean place only | CITED. In P47 terms this is archimedean positivity at `T ≤ ½log 2`. P47 `prop:archneg` (complete archimedean form negative from `T = 0.4608`) and `cor:Tarch` (`0.58 ≤ T*_{∞,P} ≤ 0.60`) cap every archimedean-only positivity; R157_002 row 34 EXCL as a uniformity mechanism |
+| `00-references/2006.13771v1.pdf` (Connes–Consani, *Weil positivity and trace formula, the archimedean place*, 2020) | Thm 6.11: for `g ∈ C_c^∞` supported in `[2^{−1/2}, 2^{1/2}]` with `ĝ(−i/2) = 0`, `W_∞(g∗g*) ≥ Tr(ϑ(g) S ϑ(g)*) − c|ĝ(0)|²`, best constant `13 < c < 17`; hence `W_∞(f) ≥ 0` for positive-definite `f` supported in `[½, 2]` with the moment conditions. Root of positivity: compression of the scaling action to the Sonin space. Archimedean place only | CITED. In P46 terms this is archimedean positivity at `T ≤ ½log 2`. P46 `prop:archneg` (complete archimedean form negative from `T = 0.4608`) and `cor:Tarch` (`0.58 ≤ T*_{∞,P} ≤ 0.60`) cap every archimedean-only positivity; R157_002 row 34 EXCL as a uniformity mechanism |
 | `00-references/connes-moscovici-2022-…pdf` (PNAS 119 (2022)) and `draft4.pdf` (the longer arXiv 2112.05500 version) | Unique self-adjoint extension `W_sa` of the prolate operator `W_λ = −∂(λ²−x²)∂ + (2πλ)²x²` on `L²(R)`, commuting with Fourier; discrete spectrum unbounded both ways; eigenvectors of negative eigenvalues lie in the Sonin space; the **semiclassical** count of negative eigenvalues reproduces the **UV (asymptotic) behaviour** of the squares of the zeros (λ = 1, √2); isospectral Dirac family | CITED. The match is asymptotic (Riemann–von Mangoldt density), not the zeros. Self-adjointness gives reality of the spectrum of `W_sa`, which is not ζ's zero set. R157_002 rows 34, 60 |
-| `00-references/2310.18423v2.pdf` and `Zeta-zeros-and-prolateproofs-final-2024.pdf` (Connes–Consani–Moscovici, *Zeta zeros and prolate wave operators: semilocal adelic operators*, published 2024) | Semilocal prolate operator; Thm 1 (= Props 4.1–4.2): `F_μ w_S(η_S(f))(s) = ∏_{p∈S∖∞} L_p(½ − is)·(F_μ w_∞ f)(s)` (exact semilocal factorisation); stability of the semilocal Sonin space when `S` grows; relation to Hilbert spaces of entire functions; metaplectic picture | CITED. Finite `S` only. P47 `thm:SC`, `prop:finsupp` (PROVED) exclude deriving the sign from finite `S`, including infinite-support finite-mass `S` (R157_004 A11). G2_B8_R5 (unaudited) shows Euler-factor-local certification fails from `T ≈ 0.59` |
+| `00-references/2310.18423v2.pdf` and `Zeta-zeros-and-prolateproofs-final-2024.pdf` (Connes–Consani–Moscovici, *Zeta zeros and prolate wave operators: semilocal adelic operators*, published 2024) | Semilocal prolate operator; Thm 1 (= Props 4.1–4.2): `F_μ w_S(η_S(f))(s) = ∏_{p∈S∖∞} L_p(½ − is)·(F_μ w_∞ f)(s)` (exact semilocal factorisation); stability of the semilocal Sonin space when `S` grows; relation to Hilbert spaces of entire functions; metaplectic picture | CITED. Finite `S` only. P46 `thm:SC`, `prop:finsupp` (PROVED) exclude deriving the sign from finite `S`, including infinite-support finite-mass `S` (R157_004 A11). G2_B8_R5 (unaudited) shows Euler-factor-local certification fails from `T ≈ 0.59` |
 | `00-references/2301.00421v3.pdf` (Suzuki, *On the Hilbert space derived from the Weil distribution*) | Under RH the Hilbert space of the Weil form on `C_c^∞(−a, a)` is isomorphic to a de Branges space; RH-equivalences as series of equalities | CITED; EQUIV (R157_002 rows 38, 39; read in R154_031 §3) |
-| `00-references/2307.06748v1.pdf` (Connes–Consani, *On the metaphysics of F₁*) | `Z` as `𝕊[X]` over the sphere spectrum with `1+1 = X+X²`; Riemann–Roch for `Spec Z̄` (integer dimensions, **logarithmic** growth) | CITED. P46 Thm 19.25 / Cor 19.25b kill every `h⁰`/RR-growth reading (R157_002 row 35); growth is logarithmic (MAP_5; P46 X17) |
+| `00-references/2307.06748v1.pdf` (Connes–Consani, *On the metaphysics of F₁*) | `Z` as `𝕊[X]` over the sphere spectrum with `1+1 = X+X²`; Riemann–Roch for `Spec Z̄` (integer dimensions, **logarithmic** growth) | CITED. P47 Thm 19.25 / Cor 19.25b kill every `h⁰`/RR-growth reading (R157_002 row 35); growth is logarithmic (MAP_5; P47 X17) |
 | `00-references/1001.0448v3.pdf` (Yoshitomi, *Generators of modules in tropical geometry*) | Tropical modules, generators, tropical RR background | CITED; not attached to ζ (same class as the tropical Hodge-index row of R158_001 §4: OT-2 fails) |
 | `00-references/arXiv-2511.11199v1/RH.tex` (*The Riemann Hypothesis emerges in dynamical quantum phase transitions*) | Physics: zeros ↔ DQPTs of two quantum systems; five-qubit experiment; quantum-simulation proposal for **numerical verification** | Not usable for a proof: a realisation/numerics; at best a Hilbert–Pólya-type restatement (R157_002 row 32) |
-| `00-references/beurling-dmv/` (5 arXiv texts + zbMATH record; primary DMV Math. Ann. 334 (2006) not held) | (H-DMV′): a discrete Beurling system with `N = ρx + O(x^θ)`, `θ < 1`, zeros `β_n → 1` | CITED (secondary source) only (R157_001 §3, R157_003); feeds T3 = P46 Rem 27.16 (METHOD-CONSTRAINT modulo that import) |
+| `00-references/beurling-dmv/` (5 arXiv texts + zbMATH record; primary DMV Math. Ann. 334 (2006) not held) | (H-DMV′): a discrete Beurling system with `N = ρx + O(x^θ)`, `θ < 1`, zeros `β_n → 1` | CITED (secondary source) only (R157_001 §3, R157_003); feeds T3 = P47 Rem 27.16 (METHOD-CONSTRAINT modulo that import) |
 | `00-references/PROLATE-REFERENCES.md` | Slepian–Pollak, Landau–Pollak, Landau–Widom (asymptotic only), Bonami–Karoui (non-asymptotic decay), Osipov–Rokhlin–Xiao, Israel | bibliography only, CITED-NOT-VERIFIED; G2_B6_R3 §5 places Theorem M as a Slepian–Landau–Widom "plunge" statement |
 | subfolders `papers-nuevos/{A,B,C,D,…}`, `papers-ref-2`, `papers-ref-phase-60` | described in `00-references/README.md`: CC arithmetic/scaling site, RR strategy, ζ-cycles (A); Deninger (B); foliations, Connes 1999 spectral interpretation (C); arithmetic Hodge index for adelic line bundles (D); CCM prolate programme; Connes "letter to Riemann" | not re-read here; R158_001 §4 and R158_002 §1 read the relevant ones (Deninger math/0204110, Leichtnam 1307.3851, Meyer math/0412277, CCM math/0703392, Connes math/9811068) |
 
@@ -115,12 +115,12 @@ Each line: the idea, the theorem or counterexample that kills it, the file. "Wal
    §1.3): by `lem:monoT`, `∀T λ^W_T ≥ 0` *is* Weil positivity on `C_c^∞(R)`. A uniformity mechanism is a proof of Weil's
    criterion, no more and no less. The per-window language supplies filters, not an object.
 2. **Estimate-type inputs per window** (PNT error terms, zero-free regions, zero density, Levinson–Conrey outputs, sieve
-   bounds, bilinear estimates as outputs, dlVP/Rankin amplification): P47 `cor:void`, `thm:finmod` (PROVED) and O3
+   bounds, bilinear estimates as outputs, dlVP/Rankin amplification): P46 `cor:void`, `thm:finmod` (PROVED) and O3
    (`rem:resweights`; PROVED as an upper bound, vacuous for `T ≤ 1.51`, needs the OPEN non-degeneracy) — R157_002 rows 20,
-   21, 30. Globally they must prove `ψ(x) − x ≪ x^{½+ε}` = W4 (P46 Thm 27.10).
+   21, 30. Globally they must prove `ψ(x) − x ≪ x^{½+ε}` = W4 (P47 Thm 27.10).
 3. **Quasi-RH outputs** (zero-free strips, `β < ¼` resonance gaps, `Λ_dBN ≤ t`, `κ < ∞`, density-one): O2 as a
    derivation schema (R157_004 A8) with P45 Thm 10.4.
-4. **The 61 table rows** (`R157_002` §2). EXCL rows (with killing statement): D-HS, D-θ (P46 Thm 19.25, Cor 19.25b);
+4. **The 61 table rows** (`R157_002` §2). EXCL rows (with killing statement): D-HS, D-θ (P47 Thm 19.25, Cor 19.25b);
    Pontryagin `κ < ∞` (Paper 11, O2); Paper 36 ARP-P / Li–Keiper / Bombieri–Lagarias / sliding windows (`cor:Li`,
    `lem:Rrig`); sixteen positivity-transfer attacks (Paper 37, `lem:Rrig`, `thm:SC`); CCM/Suzuki cofinal finite operators
    (P41 P1–P3, `thm:O`); nodal criterion P8 (`thm:arena`); prolate concentration floor and CC/CCM archimedean positivity
@@ -128,11 +128,11 @@ Each line: the idea, the theorem or counterexample that kills it, the file. "Wal
    `thm:Np`, `thm:arena`, `thm:finZ`, `thm:margin`); exact finite dual certificate (`thm:O`, `lem:Onat`); rate lemmas
    (`thm:Vp`, `prop:env`); upward induction (`cor:mono`, `lem:monoT`); sub-comb / finite `S` / semilocal (`thm:SC`,
    `prop:finsupp`, infinite-support case PROVED by R157_004 A11); local–global (`thm:SC`/`prop:finsupp`, NG-E1); Deligne
-   route (P46 T5 Thm 27.3, T6); Laumon over Z (rationality wall, `thm:finZ`); frame enlargements (P46 Thm 22.17, Lemma
+   route (P47 T5 Thm 27.3, T6); Laumon over Z (rationality wall, `thm:finZ`); frame enlargements (P47 Thm 22.17, Lemma
    24.1, Thms 24.10, 25.6–25.7, 26.13, 26.17); Mayer/Lewis–Zagier/FUP (R152 Props A.2, A.4); Berkovich tree potential
    theory (R152 Prop B.3); `×p` rigidity / Kronecker discrepancy (`cor:void` on `C_supp`); o-minimality (arg., scoped);
    Stepanov/Baker (`C_BT`, rationality); Bost–Connes KMS (real axis); GUE/Katz–Sarnak; Selberg-trace analogues;
-   Weil–Deligne transported (P46 Thm 21.15, T5/T6, `thm:finZ`); probabilistic models; extremal functions / LP / SDP
+   Weil–Deligne transported (P47 Thm 21.15, T5/T6, `thm:finZ`); probabilistic models; extremal functions / LP / SDP
    (`lem:Rrig`); SOS with arithmetic squares (P41 P1, `thm:O`); Voronin, Fourier interpolation, sum–product, prismatic,
    functoriality, quantum chaos (closure plan §10.2); Weng / Lagarias–Suzuki; Selberg `μ∗log² ≥ 0`; ζ-cycles/Sonin per `L`.
    EQUIV rows: KEP (`thm:KEP3`(b)), Connes scaling on Pontryagin space, P6 band, first crossing (O4), Weil/Bombieri,
@@ -143,11 +143,11 @@ Each line: the idea, the theorem or counterexample that kills it, the file. "Wal
    impossibility): the additive law of `A^{1,an}_Z` is relative to `M(Z)` (R157_005 Lemma 2.1, PROVED), so difference
    kernels see only same-fibre pairs; the only cross-place coupling is the product formula along integer sections, which
    reproduces the Weil local decomposition `W = Σ_v Q_v` with indefinite summands (Lemma 3.2–3.3); every energy in 𝔄⁺
-   that reproduces `W` is the explicit formula, D.195 (3.5) ≡ `RD_T`, a finite-prime form, or P47's dual (D) (Theorem
+   that reproduces `W` is the explicit formula, D.195 (3.5) ≡ `RD_T`, a finite-prime form, or P46's dual (D) (Theorem
    4.1 in 𝔄⁺ with Lemmas B.1–B.3). Exhaustion of 𝔄⁺ over the literature: CITED/HEURISTIC (Chinburg–Rumely unread).
 6. **"Determinate Kreĭn datum at a first crossing"** (O4's clause): FAILS as stated (R157_004 A6): at `T_c` every KEP
    solution, *if any*, is atomic on `F̂*^{−1}(0) ∩ R`; solvability and uniqueness are unproved.
-7. **T1 read as an exclusion** (old F4, rows 12, 37, 45, 48): a misreading, CORRECTED (R157_004 A9; P46 Rem 18.1a). A
+7. **T1 read as an exclusion** (old F4, rows 12, 37, 45, 48): a misreading, CORRECTED (R157_004 A9; P47 Rem 18.1a). A
    field-uniform argument is admissible and must prove GRH for all `K`.
 
 ### 2.2 From phase 158 (R158_001–R158_005)
@@ -161,14 +161,14 @@ Each line: the idea, the theorem or counterexample that kills it, the file. "Wal
    Deninger–Singhof with OT-12); OT-2 (7: Connes' adèle class space — global trace formula ⟺ RH, CC archimedean, Leichtnam
    `p`-adic, AKL, Kopei, Arakelov, tropical); OT-3 (Deninger elliptic example: metric built from Hasse `|ξ|² = q`); OT-5′
    (Morishita). The only *derived* positivities (Deninger–Singhof, Faltings–Hriljac, tropical) live where ζ cannot
-   (compact manifold: `α = 0`, no fixed points, Deninger Cor 3.5 Rem 2–3; no square over `Spec Z`, P46 Thm 22.17; not ζ).
+   (compact manifold: `α = 0`, no fixed points, Deninger Cor 3.5 Rem 2–3; no square over `Spec Z`, P47 Thm 22.17; not ζ).
 10. **The adèle class space `X = A_Q/Q^×` as the MW-5 object** — CLOSED as RESTATEMENT on `X` (R158_002 Theorem 158.2-G,
     audited R158_004): Connes' Hilbert realisation fails OT-2; Meyer–CCM's nuclear `H¹` passes OT-2 and then OT-5′ *is*
     Weil's criterion. Components: Lemma A (no leafwise `H¹` on `C_Q`, PROVED); Lemma E (every compatible hermitian form
     definite ⟹ RH ∧ simple zeros; classical); E-i (canonical residue polarization `B_1` indefinite, unconditionally, PROVED);
     E-ii (`B_{Φ₀}`, `Φ₀ = (s−½)ξ′`, semidefinite ⟺ RH); Prop H (a definite multiplier has infinite exponential type, PROVED
     and new); Lemma U (Deninger unitarity ⟺ RH ∧ SZ; CLASSICAL, Serre + Connes 1999 Jordan remark); Prop B (CCM Prop 7.2
-    over Q = E1 test by test, Castelnuovo form; P46 (18.2) is weaker per test); Construction C (flow-commuting `⋆`
+    over Q = E1 test by test, Castelnuovo form; P47 (18.2) is weaker per test); Construction C (flow-commuting `⋆`
     exists but is defined from the spectrum: OT-3 fails).
 11. **Unitarity routes over non-abelian fields.** `S₃`-field falsifier (R158_004 A20; upgraded by R158_006 Cor F,
     unaudited): `ζ_K = ζ L(χ_{−3}) L(ρ)²` has infinitely many zeros of order `≥ 2`, and on Meyer's `H¹_{K,1}` they are
@@ -308,7 +308,7 @@ uniqueness clause, Fact 4.6a.7 as stated, "OT-5′ is the only failure" (struck,
 | memo (R160_000) | walls in my scope that the angle must be shown to avoid |
 |---|---|
 | B1 Connes (prolate, Sonin, semilocal) | R157_002 rows 18, 34, 60; `prop:archneg`, `cor:Tarch` (archimedean positivity on `P_T` ends in `[0.58, 0.60]`); `thm:SC`, `prop:finsupp`; G2_B8_R5 (local certification fails from ≈0.59, unaudited); R158_002 (Connes' global trace formula ⟺ RH; OT-2) |
-| B2 Consani (RR over 𝕊, ζ-cycles) | P46 Thm 19.25, Cor 19.25b (any `h⁰` on `D^W`, `𝒟_c`, `𝒟_p`); R157_002 rows 1, 2, 35; G1_B1_R1 Thm C (bounded-density classes = Radon measures), Thm E (sum-graph axiom = RH); C25 ((P145′)(4a)–(4c) is RH-strength) |
+| B2 Consani (RR over 𝕊, ζ-cycles) | P47 Thm 19.25, Cor 19.25b (any `h⁰` on `D^W`, `𝒟_c`, `𝒟_p`); R157_002 rows 1, 2, 35; G1_B1_R1 Thm C (bounded-density classes = Radon measures), Thm E (sum-graph axiom = RH); C25 ((P145′)(4a)–(4c) is RH-strength) |
 | B3 Jaffe (OS reflection positivity) | NG-E5 (OS reconstruction retracted; R157_002 row 32); Lemma T; G1_B10_R3–R5 (covariance/Bochner = Weil; Koopman power law; phase–power law) |
 | B4 Haagerup/Popa (natural cone, entangled state) | G1_B10_R5 Thm P, Cors Z, E, Thm F′ (standard form, natural cone `P^♮`); G1_B2_R5 Thms R, U (III₁ core flow carries no arithmetic); G1_B6_R4/R5 (canonical functionals: installation); Lemma U / `S₃` falsifier (unitarity routes) |
 | B5 Scholze (analytic stacks) | G1_B3_R3 Thm W (integer-weight wall), Thm F (FF product Euler-factorizable); G1_B3_R2 Thm I (compactness) |
@@ -317,7 +317,7 @@ uniqueness clause, Fact 4.6a.7 as stated, "OT-5′ is the only failure" (struck,
 | B17 Lichtenbaum/Morin (Weil-étale) | G1_B3_R2 Prop WA and G1_B3_R3 Cor W2 (Weil–Arakelov cohomology sees ζ only at integers) |
 | B18 Morishita/Mazur (arithmetic topology) | C7 (Morishita bridge kills the transverse `p`-adic direction; NG-107); R158_001 §4 Morishita row (OT-5′: no form) |
 | B19 Huh (Lorentzian / combinatorial Hodge) | R158_001 §4 tropical row (positive self-intersection is a hypothesis; not attached to ζ); G1_B1_R1 Thm A, G1_B1_R2 Thm H′, Prop M (idempotent / hyperring `+` loses the cross term) |
-| B8 Deligne/Katz (tensor power, towers) | P46 T5 (Thm 27.3), T6; R157_002 rows 22, 47; C26; T1 read correctly (field-uniform is admissible, must prove GRH ∀K) |
+| B8 Deligne/Katz (tensor power, towers) | P47 T5 (Thm 27.3), T6; R157_002 rows 22, 47; C26; T1 read correctly (field-uniform is admissible, must prove GRH ∀K) |
 | B9 Sarnak (Lax–Phillips) | R157_002 rows 25, 58 (`β = ¼` *is* RH, R152 Prop A.2); O2 below RH strength |
 | B10 Iwaniec (Maass–Selberg) | R157_002 row 46 (Maass–Selberg reaches only the absolute-convergence region, R152 Prop A.1); G2_B10 (mollifier = window widening; Thm H) |
 | B11 Tao (dBN heat flow) | R157_002 row 41 (P13 N5: the flow is arithmetic-blind); graded converse (target EQUIV); Thm M |
@@ -325,8 +325,8 @@ uniqueness clause, Fact 4.6a.7 as stated, "OT-5′ is the only failure" (struck,
 | B13 Maynard (large sieve, MV) | `cor:void` (`C_BT`), O3, R157_002 rows 20, 30; G2_B3_R5 (separated squares) |
 | B14 Ono (Jensen polynomials) | R157_002 row 40 (P15 `thm:hr`: no uniform gap; finite order quasi-RH by O2) |
 | B15 Green (ultralimits at `T = ∞`) | `thm:margin`, Thm M (the limit form is degenerate: `λ → 0`), `cor:margin2`(iii); G2_B9_R2 Thm R / R3 Thm R′ (rigidity at `T = ∞`) |
-| B16 Villani (entropy/transport) | P47 `thm:A`/`thm:S` (the form is already a Lévy energy: `C_0‖F‖² + Lev(c_F) − Σ v_n c_F(log n)`); G2_B8_R4 Prop M |
-| B20 Connes (semilocal → global) | `thm:SC`, `prop:finsupp`, R157_002 row 18, G2_B8_R5; NG-E1 strong form (P46 Prop 28.4 / P47 `cor:Qp`) |
+| B16 Villani (entropy/transport) | P46 `thm:A`/`thm:S` (the form is already a Lévy energy: `C_0‖F‖² + Lev(c_F) − Σ v_n c_F(log n)`); G2_B8_R4 Prop M |
+| B20 Connes (semilocal → global) | `thm:SC`, `prop:finsupp`, R157_002 row 18, G2_B8_R5; NG-E1 strong form (P47 Prop 28.4 / P46 `cor:Qp`) |
 
 ---
 
@@ -344,8 +344,8 @@ uniqueness clause, Fact 4.6a.7 as stated, "OT-5′ is the only failure" (struck,
 | O4 | RH ⟺ `λ^W_T ≠ 0 ∀T`; if RH fails `{T : λ^W_T = 0}` is a nonempty compact interval | PROVED as equivalence; RESTATEMENT of Bombieri Thms 1, 3, 5 + P45 Thm 10.4 | [compl] | R157_004 §1.2, §5(ii) |
 | row 18 infinite-support finite-`S` | `limsup λ ≤ C₀ − A_S < 0` for infinite-support finite-mass sub-combs | PROVED | [prim] | R157_004 A11 |
 | (H-DMV′) | DMV/Zhang systems | CITED (secondary source) | — | R157_001 §3; R157_003 |
-| T3 | P46 Rem 27.16 | METHOD-CONSTRAINT modulo (H-DMV′); stays a Remark | — | R157_007 §1 |
-| NG-E1 strong form | `Q_p(F_φ) = −v_p‖φ‖²`; each local form is negative definite on an infinite-dimensional subspace of `P_T` for `T > ½log p` | PROVED | [prim] | R157_006 (Lemma 3.3); P46 Prop 28.4; P47 `cor:Qp` |
+| T3 | P47 Rem 27.16 | METHOD-CONSTRAINT modulo (H-DMV′); stays a Remark | — | R157_007 §1 |
+| NG-E1 strong form | `Q_p(F_φ) = −v_p‖φ‖²`; each local form is negative definite on an infinite-dimensional subspace of `P_T` for `T > ½log p` | PROVED | [prim] | R157_006 (Lemma 3.3); P47 Prop 28.4; P46 `cor:Qp` |
 | R157_005 Lemma 2.1, Thm 4.1 (in 𝔄⁺) | Berkovich group law relative to `M(Z)`; every energy in 𝔄⁺ reproducing `W` is a restatement | PROVED within 𝔄⁺ (exhaustion CITED/HEURISTIC) | both | R157_005, R157_006 |
 | Lemma T, Cor T′ | (D1)–(D3) satisfiable ⟺ RH; under them `W_T(F) = ‖F(U)|_{H¹}‖²_{HS}` | PROVED, CLASSICAL | [compl]; [prim] by restriction | R158_001 §3.1 |
 | C1–C27, OT-1…OT-12 | constraints and object test, each tagged (Rem 3.0) | ANALYSIS (audited) | stated per item | R158_001 §2–§3 |
@@ -383,19 +383,19 @@ statement and (where marked) the proof.
 | **G2_B8_R5 Thm L″** (`½log3 ≤ T_loc ≤ 0.5925`) | "PROVED (machine-verified, not interval-certified)" | **Must be recorded as uncertified numerics** (rule (a)). The lower bound is PROVED from Paper 42 (certified). The upper bound rests on a double-precision grid (8000 cells, stated fp allowance `10⁻⁹`, margin `1.66·10⁻³`, stable under refinement) — an interval re-run of the finite list of closed-form autocorrelations would certify it cheaply. Until then: "`T_loc ≤ 0.5925`, uncertified; `T_loc ≤ 1.50` modulo the closed-form 30-digit check of R4 Thm L′ (also not interval arithmetic)". Cor 4.2 ("positivity on `[0.5925, log 2]` is necessarily cross-prime") inherits the uncertified status. Open P159.B8.5 (`T_loc < T*_{∞,P}`?) stands |
 | G2_B8_R1 Thm S (Satake-torus void), Lemma H | PROVED | A `cor:void`-type statement for a rotated-phase class that keeps `|α_p| = 1`; rests on `cor:Tarch` (certified). Plausible; signed weights are allowed by `prop:finite`(iii) |
 | G2_B8_R2 Thm R (coupling ray), Cor R′ (`ζ^k`), Prop K (conductor) | PROVED | Thm R follows from concavity of `V_T` (`lem:degen`) plus `V_T(0) < 0` for `T ≥ 0.60`: **correct**. Caution on Cor R′: the failing form is the *ζ-normalised* test (one `Γ_R`, comb `kΛ`), not `ζ^k`'s own Weil form (which is `k·W_T`). So it is C11 (`thm:finmod`(iii): the archimedean term must be matched), not a new falsifier of derivations that use `ζ^k`'s own FE |
-| G2_B8_R3 Thm L, Remark B, Thm NM; G2_B8_R4 Thm L′, Prop M | PROVED | Remark B is elementary and correct (P47 `thm:S`). Thm L (29-term sum) and L′ (closed forms at 18 points + 8-term sum, 30 digits) are finite numerical checks, **not interval-certified**; superseded by R5 anyway |
+| G2_B8_R3 Thm L, Remark B, Thm NM; G2_B8_R4 Thm L′, Prop M | PROVED | Remark B is elementary and correct (P46 `thm:S`). Thm L (29-term sum) and L′ (closed forms at 18 points + 8-term sum, 30 digits) are finite numerical checks, **not interval-certified**; superseded by R5 anyway |
 | **G2_B10_R5 Thm Γ_f** (any `f` of order 1, zeros in a strip, `N_f ≪ T log T`: `λ^f_T ≥ −Ce^{κT}` ⟹ `|Re ρ − ½| ≤ κ/2`) | PROVED, both forms | Sound in outline: tests `F ± τ_uF` live in the window `T + u/2`, so the hypothesis bounds the shift function `β_F(u) = Σ_ρ Φ_F(ρ)Φ_F(1−ρ)cosh((ρ−½)u)` two-sidedly by `C′e^{κu/2}`; absolute convergence of the zero sum and meromorphy of its Laplace transform then kill every term with `|Re ρ − ½| > κ/2` for generic `F`. Note the definition `W^f` is the **zero side**, so for ζ it is `eq:W` only through the explicit formula |
 | **G2_B10_R5 Thm H** (DH and Epstein defeat "proportion ⟹ sign") | PROVED from CITED | Logic correct given the inputs, but the inputs are weak-cited: Selberg's DH positive proportion via a **secondary** source (Dousselin 2311.10285), Rezvyakova 2411.18492 **abstract only**, Bombieri–Hejhal conditional. The memo flags this itself (§ "CITED inputs"). Label should be "PROVED modulo CITED (secondary / abstract-level)" |
 | G2_B10_R5 Prop J (Levinson–Jensen in `H²` form) | PROVED | Jensen's inequality on `dμ = dt/(2π(¼+t²))`; standard; converse OPEN |
 | G2_B10_R1 Thm N; R2 Thm H (harmonic rigidity), Thm N±; R3 Thm M1, Prop M2, Thm M3, Thm B; R4 Thms Γ, Q, L(θ), R_s, Prop S | PROVED | Thm N: `exp(D)`, `D ∈ A_½`, is invertible in `H^∞`, so invariant-subspace closures coincide — correct. Thm H: a linear zero functional `Σ_ρ H(ρ−½)` has, as a function of the position, a kernel that is (the real part of) a holomorphic function, even under the symmetry `ρ ↦ 1 − ρ̄`; an even harmonic function vanishing on the line vanishes identically — correct. Thm M1 (translates by `log n`, `n ≤ N`, of `C_c^∞(I_T)` span `C_c^∞` of an interval of length `2T + log N`): correct (consecutive steps `log((n+1)/n) < 2T`). Thm Q (`B_∞(T₀)` ⟺ RH with two-term mollifiers `1 + n^{½−s}`): the discretisation of the shift variable to `u = log n` needs an explicit argument (sign changes of the dominant almost-periodic part along `log n`); **check this step**. Prop S (`E_A = E_sub ∧ Γ`) is a correct factorisation; EQUIV as a target |
 | G2_B2_R5 Lemma L, Thm I, Thm U₂, Thm M | PROVED (U₂ under (BD₂)) | Lemma L is Weil's formula regrouped by quadruples (signature `(2,2)` per off-line quadruple): correct. Thm I is Bombieri 2000's index theorem in window form, **conditional on finitely many off-line zeros**, CITED; the independent proof is plausible. Thm M (`𝒩_T < ∞ ⟺ D₂ < ∞`) is a Carleson-measure equivalence: plausible |
-| G2_B3_R5 Lemma A, Thm S, Cor S1, Cor S2 | PROVED | Criterion `c_*(T) ≤ λ^{∞,P}(T)` follows directly from Lemma A (the two blocks exchange one scalar). **Cor S1's threshold is conservative:** since `λ^{∞,P}(T) ≥ 0` is necessary, P47 `cor:Tarch` (certified, `T*_{∞,P} ≤ 0.60`) already excludes separated squares for `T ≥ 0.60` [prim], and `prop:archneg` for `T > 0.4608` [compl]; the memo cites only the `T_0(0) = 0.74921` bound and calls the lower thresholds DIAGNOSTIC. The auditor should restate Cor S1 with the certified thresholds |
+| G2_B3_R5 Lemma A, Thm S, Cor S1, Cor S2 | PROVED | Criterion `c_*(T) ≤ λ^{∞,P}(T)` follows directly from Lemma A (the two blocks exchange one scalar). **Cor S1's threshold is conservative:** since `λ^{∞,P}(T) ≥ 0` is necessary, P46 `cor:Tarch` (certified, `T*_{∞,P} ≤ 0.60`) already excludes separated squares for `T ≥ 0.60` [prim], and `prop:archneg` for `T > 0.4608` [compl]; the memo cites only the `T_0(0) = 0.74921` bound and calls the lower thresholds DIAGNOSTIC. The auditor should restate Cor S1 with the certified thresholds |
 | G2_B4_R3 Thm R′, Cor R′2, Prop Q1; R4 Lemmas E1–E3, Thm R′_prim, Cor R′+; R5 Thm PT, Cor RC, Thm RN, Cors E1, E2, D, N | PROVED (RC, N under RH) | Thm PT is claimed with "no input on ζ"; Thm RN is unconditional by a case split (RH branch via RC, ¬RH branch via Weil + `lem:monoT`) but `T*` is non-effective. Plausible; the scale-free branch is `cor:RH` (EQUIV). Open: `C^∞`-flat joins with `a_T/T` unbounded; Q-R(1) (compact families) |
 | **G2_B5_R5 Thm Q♯** (Θ attained ⟹ `−λ^A_T ≥ ce^{2(Θ−½)T}` for **every** `T ≥ T₁`) | PROVED, both forms | Proof read (§2). Two-bump test `g(·∓y/2)`, zero-side expansion `V(y) = Σ a_ρ e^{(ρ−½)y}`; the top-modulus part is a nonzero real **mean-zero** Bohr a.p. function (mean zero because no zero on `Re s = Θ` is real: ζ has no real zeros in `(0,1)`), hence negative on a relatively dense set; choosing `y` in that set within bounded distance of `2T` gives every large `T`. The remainder is `o(e^{β*y})` by dominated convergence. **Looks correct.** Non-attained case OPEN |
 | G2_B5_R3 Lemma G (inverse rigidity), problem `H∞` ⟺ RH | PROVED | Plausible (Kreĭn inverse problem, segment-by-segment bijection) |
 | G2_B6_R5 Lemma S closed, **Thm X** (Λ extreme point of the ∀T-positive fibre), Prop C, Thm F, Cors F1, F2 | PROVED | Thm X's proof read: ∀T positivity of `Λ ± b` ⟹ RH (robust converse (N)), then `D_b` atomic on `Z_on`, then Theorem P ⟹ `b = 0`. **Correct given Thm P**, whose Lemma S is now closed by reading BRS §4.2–4.3 (to be audited against arXiv 2005.02996v3). Cor F2 uses Beurling–Malliavin (CITED) |
 | G2_B7_R5 Lemma C, **Thm M** (`|b_n| ≤ 2d⁺(b)√n`), Cors M0, M1, Prop S′ | PROVED unconditional | Lemma C is exact arithmetic: the Cesàro mean of `e^{ijω_m log n}`, `ω_m = 2π/log m`, is 1 iff `log n/log m ∈ Z` — **correct**. Thm M plausible. Prime-side only (the point on which P2 excluded R4). Rigidity, not a mechanism; the positive-density multi-generator case is OPEN |
-| G2_B9_R5 Thm S (shifted-contour resummation), Thm L, Cor L1 | S PROVED; L conditional | Thm S is the standard contour shift in P47's normalisation (residue at `s = 1` = polar term). Cor L1 uses the Littlewood three-circle bound (CITED, Titchmarsh §14.2 adapted). Plausible |
+| G2_B9_R5 Thm S (shifted-contour resummation), Thm L, Cor L1 | S PROVED; L conditional | Thm S is the standard contour shift in P46's normalisation (residue at `s = 1` = polar term). Cor L1 uses the Littlewood three-circle bound (CITED, Titchmarsh §14.2 adapted). Plausible |
 | G2_B1_R3 Thm G, Prop Z, Prop E; G2_B2_R3 Thm NB, Lemma H; G2_B3_R3 Thm K, Thm S, Cor S1; G2_B6_R3 Prop D, Lemma E, Prop T′, Cor M4; G2_B7_R3 Thms L, T | PROVED / EQUIV | All are closures or restatements; Thm K is immediate (`∪_T P_T` = all compactly supported primitive tests). G2_B6_R3 flags a **web hit "Certified Weil positivity beyond the unit window" (alphaxiv 2609.\*) not read** — a possible update to premise 1 (`T ≤ 0.8` [compl]); someone must read it before any endpoint is stated |
 | G1_B7_R4 Thms A, B, Props G, L; G1_B7_R5 Thms A″, Γ₀, Γ, Prop Σ_ζ, Cor M′ | PROVED | Thm B checked: on `2^Z`, positivity of `cδ_0 − log 2 Σ_{k≠0}2^{−|k|/2}δ_{2^k}` at `θ = 0` needs `c ≥ 2 log 2·(1/√2)/(1 − 1/√2) = 2(√2+1)log 2` — correct; it is the `S = {2}` mass of `thm:SC`'s remark (`2log2/(√2−1) ≈ 3.35`). Genus law plausible; its weakest step is hypothesis (H_M) (completions that are functions away from the identity) |
 | G1_B10_R4 Thm K, Thm S; G1_B10_R5 Thm P, Cors Z, E, Thm F′ | PROVED | Thm K checked: if `U_tf = e^{iλt}f`, then `|f|` is invariant and `f^n|f|^{1−n}` is an `L²` eigenfunction for `nλ` — correct on any σ-finite space; the exclusion needs Li–Radziwiłł (non-vanishing on vertical progressions, CITED). Thm P is the standard-form generalisation. Residual: higher bounded-field sectors (`k ≥ 2`) OPEN |
@@ -437,13 +437,13 @@ the integral lower bound and a conformal Frobenius (FH-1–FH-3). The one scope 
 R157_005/R157_006's re-audit of phase-114 D.195 (3.5) as ≡ `RD_T` (with two convention fixes: sign `B_P = A_P I − 𝓔_P` is
 minus the Weil form; window statement only after compression to `L²(I_T)`). No label of rows A–C changed in scope.
 
-**Row D.** No label; closed in the map with the reopening rule P46 §28.4 (six clauses). Phases 157–159 changed nothing in
+**Row D.** No label; closed in the map with the reopening rule P47 §28.4 (six clauses). Phases 157–159 changed nothing in
 the sign table (`ROW-D-REDUCED-STATEMENT.md` §3):
 
 | form | windows proved for ζ | source |
 |---|---|---|
 | [prim] | `T ≤ log 2` | Paper 42 (certified) |
-| [prim] | `T = ½log3`: `λ_min ≥ 8.8577·10⁻⁵` | P47 `thm:C` |
+| [prim] | `T = ½log3`: `λ_min ≥ 8.8577·10⁻⁵` | P46 `thm:C` |
 | [compl] | `T ≤ ½log 2` | Yoshida 1992, Bombieri 2000 |
 | [compl] (hence [prim]) | `(½log 2, 0.8]` | Zhu 2026 Thm 1.2, CITED, not re-verified |
 | either | `T > 0.8` | **nothing** |
@@ -456,7 +456,7 @@ What the scope added to the picture of row D:
   every-large-`T` version when `Θ` is attained (G2_B5_R5 Thm Q♯, unaudited), two-sided law under (BD) (G2_B2_R4 Thm U).
 * **Where the proved positivity lives**: on `(0.5925, log 2]` [prim] it is necessarily cross-prime — no Euler-factor-local
   certificate exists (G2_B8_R5, upper threshold uncertified); separated squares fail from `0.60` [prim] / `0.4608` [compl]
-  (G2_B3_R5 with P47's certified thresholds, my restatement).
+  (G2_B3_R5 with P46's certified thresholds, my restatement).
 * **Rigidity**: the ∀T-positive fibre over Λ is `{Λ}` or `∅` in every summable direction (G2_B9_R3 Thm R′, Thm N); Λ is an
   extreme point (G2_B6_R5 Thm X, unaudited).
 * **The object side**: the whole content of MW-5 is OT-5′ (R158_005); an OT-5′ object would have to be infinitely entangled
@@ -469,7 +469,7 @@ What the scope added to the picture of row D:
 Each item says what exists, why it stopped, and what would be new. None carries a sign.
 
 1. **Row 37 / MW-5 was closed in R157_002 by a misreading of T1, then reopened** (R157_004 A9). The corrected reading
-   (P46 Rem 18.1a) *admits* field-uniform programmes. Deninger-type and Connes–Consani square programmes are therefore
+   (P47 Rem 18.1a) *admits* field-uniform programmes. Deninger-type and Connes–Consani square programmes are therefore
    admissible in principle, held to "GRH for all K". What remains against them is not T1 but Lemma T (a postulated form is
    RH), OT-2 (Connes' global trace formula ⟺ RH), N-b (the `S₃` falsifier kills *unitary* routes over non-abelian fields;
    the semidefinite P-HI/Rosati route tolerates Jordan tails, R158_002 §5 A24).
@@ -528,7 +528,7 @@ Each item says what exists, why it stopped, and what would be new. None carries 
 
 ## §6 Definitions a memo needs verbatim (file and line)
 
-### 6.1 Paper 47 (`04-papers/47-row-d-dual-certificates/main.tex`)
+### 6.1 Paper 46 (`04-papers/46-row-d-dual-certificates/main.tex`)
 
 **Symbol, form, complete form, `P_T`** (l.114–138):
 ```latex
@@ -619,7 +619,7 @@ l.1025, `cor:RH` l.1328, `lem:Rrig` l.1374, `thm:KEP3` l.1753, `cor:Tarch` l.263
 l.3012, `lem:cpos` l.3419, `cor:Qp` l.3431, `thm:finmod` l.3452, `rem:resweights` l.3484, `lem:degen` l.3522,
 `prop:finsupp` l.3543, `thm:parityschur` l.3814, `cor:convfail` l.3996.
 
-### 6.2 Paper 46 (`04-papers/46-intersection-frame-defect/archive/main.md`)
+### 6.2 Paper 47 (`04-papers/47-intersection-frame-defect/archive/main.md`)
 
 **T1** (l.4836–4849): "**Theorem 18.1 (T1, field uniformity; `METHOD-CONSTRAINT`).** Let `𝔓` be any list of properties of a
 completed zeta function that holds for `ξ` and holds for `ξ_K` for every number field `K`. Then no derivation of the
@@ -658,7 +658,7 @@ F1 uses exact values of `Λ(n)` (or of the zeros), not only class properties —
 F2 is uniform in `T` with no margin (`thm:margin`, `cor:margin2`) and no upward induction (`cor:mono`, W15).
 F3 does not rest on a finite truncation (`thm:arena`, `thm:finZ`), a termwise sign (`lem:Rrig`, `thm:SC`), or an identity (`thm:O`).
 F4 is not a Beurling-class argument (T3, now METHOD-CONSTRAINT modulo the CITED (secondary source) import (H-DMV′)) and invokes A3 and one of A7/A8/A9 (T2, Epstein). [amended per R157_004: T1 excludes only derivations from properties shared by all ξ_K that stop short of GRH for all K.]
-F5 is not an `h⁰` construction in the intersection frame (P46 Thm 19.25, now on the small domain), and not a Deligne extraction (T5, T6).
+F5 is not an `h⁰` construction in the intersection frame (P47 Thm 19.25, now on the small domain), and not a Deligne extraction (T5, T6).
 ```
 Amended Lemma P157.S1 clause (b′) (`R157_002` l.626–629): "if the positivity of `𝓔` is *inferred* from positivity of the
 `𝓔_v`, or of `𝓔_∞ + Σ_{v∈S}𝓔_v` for a finite `S`, it is excluded by `prop:finsupp`/`thm:SC` (PROVED)".
@@ -676,13 +676,13 @@ Then (D1)–(D3) are satisfiable if and only if RH holds [(⇒) for every realis
 "**OT-5′ Prior positivity** | Is the positive form (P-HS or P-HI) defined from geometry of `𝒪` alone, and is its
 compatibility with the flow (conformality `e^t`, or Hodge index on the primitive part) **proved** without eigenvalue data?
 Would `𝒪` still exist, with the form still defined, if a zero were off the line (NC4 of Doc 119/130)? | a proof valid
-'whatever the position of the zeros'". Also OT-2 (l.303): a **proved** Lefschetz formula equal to P47 `eq:W`/`thm:Z(i)` for
+'whatever the position of the zeros'". Also OT-2 (l.303): a **proved** Lefschetz formula equal to P46 `eq:W`/`thm:Z(i)` for
 all `h ∈ C_c^∞(R)`, with `m(τ)`, `v_n = 2Λ(n)/√n` and the polar pair; OT-4 (l.305): rerun the definition with
 `Λ + εδ_{n₀}`, `Λ·1_{n≥N}`, `ζ·E`, a DMV/Zhang system, `Ξ_Q` — each must break a named axiom or a named line of the
 positivity proof. Passing OT-1…OT-12 does not reopen row D; §28.4 clauses (2), (3) are separate (Rem 3.3, l.348–355).
 
 **N-a, N-b, N-c** (`R158_005_CLOSING_DECISION.md` l.22–25): "N-a: definiteness for a reason that precedes the
-spectrum. The object must deliver the count, never the positivity (P46 §21.7). N-b: for the definite/unitary route only, a
+spectrum. The object must deliver the count, never the positivity (P47 §21.7). N-b: for the definite/unitary route only, a
 non-cyclic `H¹` (HEURISTIC: a correspondence algebra with `+`). N-c: for the Riemann–Roch route, a two-variable effective
 cone strictly larger than `𝓔` that carries information outside the frame's invariants. Its constructive clause is
 RH-strength."

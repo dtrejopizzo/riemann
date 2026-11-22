@@ -1,6 +1,6 @@
 # AUDIT_196 — INV_V_001 + INV_V_002 (phase 196)
 
-Review. Checked against Paper 47 `main.tex`: eq:symbol (`c_F(u)=∫F(t)\bar F(t−u)`,
+Review. Checked against Paper 46 `main.tex`: eq:symbol (`c_F(u)=∫F(t)\bar F(t−u)`,
 `𝒩_T={n≥2: log n<2T}`, `v_n=2Λ(n)/√n`), eq:form, `𝒫_T={A=B=0}`, def:PD (certificates = symbol inequalities
 `s_T+ν̂+β·ĝ ≥ c`, `supp ν ⊆ {|u|≥2T}`), thm:Z, prop:spec; and against the index (G5H-122, N_018, INV_I_001 I2/I4 = R163_1001,
 INV_H_001).
@@ -15,7 +15,7 @@ positivity information (B(L²) is also non-factorised). Weight: nil.
 cos and Re are even/real). NUMÉRICO: `R_n(0)` vs `2c_F(log n)` agree to 1e−13 (n=2,3, T=0.6). PROVED.
 
 ## (c) V1.3 Schur factorisation
-(a) PROVED (checked: `(δ_nf)^(ξ)=|ξ|^{−1/2}G(log n−log|ξ|)`, `j=0` killed by `f̂(0)=2A(F)=0`). (b) With P47's Fourier
+(a) PROVED (checked: `(δ_nf)^(ξ)=|ξ|^{−1/2}G(log n−log|ξ|)`, `j=0` killed by `f̂(0)=2A(F)=0`). (b) With P46's Fourier
 convention the kernel is `ζ(1−i(s−s′))` (conjugate; harmless). The `ε↓0` limit is a boundary value
 `1/(ε+iu) → πδ(u) − i p.v.(1/u)`; PD of the Schur product holds for `ε>0` and passes to the limit as a distribution. But
 `‖f‖²_Ш = Σ|f̂(j)|² ≥ 0` is trivial, and *any* measure `Σ_j w(j)δ_{log j}` with completely multiplicative `w` has an Euler

@@ -106,4 +106,4 @@ ALL contacts have been included, not a truncation of the comb.
 
 The executed verifier gives PASS for the interval pivots, polar norm, 196 panels, transport margin, exact trace and comb cost. It reuses only the explicit rational module of constants, which also accompanies the previous certificates.
 
-Seven poles remain a finite class. No sign in all orders nor closure of Paper47 is claimed. The large-order Tate test and the twelve-dimensional arithmetic block keep their different problem: they are not resolved by extrapolating AP7.
+Seven poles remain a finite class. No sign in all orders nor closure of Paper46 is claimed. The large-order Tate test and the twelve-dimensional arithmetic block keep their different problem: they are not resolved by extrapolating AP7.

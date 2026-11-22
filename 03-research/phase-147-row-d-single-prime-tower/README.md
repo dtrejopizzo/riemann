@@ -14,7 +14,7 @@ this check was carried out in the folder.
 - Transfer of this single/two-prime purity mechanism to ζ's destructive regime: **NO-GO** (Doc 135 §7.2, imported into phase 137 §3.4) — ζ's Euler weight sits in the opposite (destructive) regime from the constructive objects the theorem covers.
 - Semilocal `W_S` positivity beyond `S={∞}`: **OPEN/NO-GO** per phase 137 D.12 — adding prime blocks only subtracts; the pure finite block is proved to carry no positivity to donate at any finite chart (Thm 8bis.4a).
 - Pure-magnitude single-prime Gram forms (no phase/unimodularity datum) as sign-deciders: **PROVED-IMPOSSIBLE** (phase-60 "phase not magnitude" theorem; P122.028 Gate S).
-- Identified as genuinely new and not previously computed: diagonal differences `δ_m − δ_n`; a profile-independent finite part of the regularized diagonal; a single-prime-tower object carrying an explicit phase datum coupled to Δ^rad; and an explicit link between Paper 46's open item (21) and Paper 44 Thm 8bis.2.
+- Identified as genuinely new and not previously computed: diagonal differences `δ_m − δ_n`; a profile-independent finite part of the regularized diagonal; a single-prime-tower object carrying an explicit phase datum coupled to Δ^rad; and an explicit link between Paper 47's open item (21) and Paper 44 Thm 8bis.2.
 
 ## Documents
 

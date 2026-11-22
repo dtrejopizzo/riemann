@@ -27,7 +27,7 @@ residue 1, Γ_ℝ with conductor 1) — not Λ ≥ 0, which the collapse has con
   identity V^*Ш = 2log|x|·Ш, linear, Hamburger class), l.396 (INV_H_001: additive identities of Λ used linearly:
   NO-GO class 𝓒_H), l.450–452 (MECH_001, memo B, memo A), phase 197 BARRIER_EST Thm 4, PRINCIPIO RECTOR (semiring).
 - **Sources read:** memo A (Thm 1.1, Prop 2.1, §3.2–3.4, §5, §6), memo B (Lemma 1.1, Lemma 3.1, Lemma 3.2,
-  Prop 3.3, Lemma 4.1, Thm 4.2), AUDIT_199 (L′♯ definition), Paper 47 thm:A and the killing-form remark after it
+  Prop 3.3, Lemma 4.1, Thm 4.2), AUDIT_199 (L′♯ definition), Paper 46 thm:A and the killing-form remark after it
   (Dirichlet form with killing κ(x) = ∫_{|y|>T}K(|x−y|)dy), prop:archneg, Guo §4 as cited in memo A.
 - **Why not a retry.** (a) INV_C_001 grouped *pairs of integers in the window* by ratio to build h⁰; here the
   pairs are the integers *beyond* the window that produce the aliasing tail, the weights are the Weil kernel
@@ -44,7 +44,7 @@ residue 1, Γ_ℝ with conductor 1) — not Λ ≥ 0, which the collapse has con
 Memo A's display of 𝒲_ext writes the Lévy energy as ½∫∫_{y,y'<−a}|Ψ(y)−Ψ(y')|²ν(y−y')dydy' (both variables on
 the half line). The object actually used in Theorem 1.1 is ∫Ψ̄WΨ with W the full-line distribution, whose
 Lévy part is ½∫∫_{ℝ²}|Ψ(y)−Ψ(y')|²ν(y−y')dydy' for Ψ extended by zero (Plancherel on the symbol
-Θ_∞(τ) = b_∞ + 2∫_0^∞(1−cos τu)ν(u)du; Paper 47 thm:A and the "Dirichlet form with killing" remark). The strips
+Θ_∞(τ) = b_∞ + 2∫_0^∞(1−cos τu)ν(u)du; Paper 46 thm:A and the "Dirichlet form with killing" remark). The strips
 {y < −a < y'} contribute the **killing term** ∫_{y<−a}|Ψ(y)|²κ_a(y)dy, κ_a(y) := ∫_{−a}^∞ν(y−y')dy' = ∫_{|y+a|}^∞ν(t)dt
 (≈ ½log(1/|y+a|) near the boundary, integrable against |Ψ|² since Ψ is bounded there). **Correction (PROVED):**
  𝒲_ext[Ψ] = b_∞‖Ψ‖² + ½∫∫_{(−∞,−a)²}|Ψ(y)−Ψ(y')|²ν + ∫_{−∞}^{−a}|Ψ|²κ_a − 2Σ_q c_q∫Ψ(y)Ψ(y−log q)dy + 2A(Ψ)B(Ψ).
@@ -229,7 +229,7 @@ else is left to use.
   are O(λ^{−1}) relative and cannot alone carry a bound at scale μ^{−A} (ARGUED: they are of size ‖r‖²/λ at the
   edge, which is the right scale for A ≥ 1, but no sign).
 - **Edge-localised data:** if supp r ⊂ (λ, 2λ] then Zr = r̃, Z_log r = 0 and 𝒲_ext[Zr] = 𝒜_a[r̃] + 2AB, the
-  complete archimedean form on an interval of length log 2 (half-length 0.347 < 0.4608 of prop:archneg). Paper 47
+  complete archimedean form on an interval of length log 2 (half-length 0.347 < 0.4608 of prop:archneg). Paper 46
   proves only the upper bound there (negative from 0.4608, on the odd vector); no positivity below is recorded, and
   true aliasing tails are never compactly supported (Paley–Wiener). Not usable; recorded to avoid a retry.
 
@@ -237,7 +237,7 @@ else is left to use.
 - **PROVED:** §1 correction (killing term), Thm E.1, Thm E.1′, Thm E.2 (incl. the consistency check of the two
   bookkeepings), Cor E.3, Rem 3.1, Rem 3.2, Lemma E.4 (classical), Thm E.5, the "arbitrary r" remark of §5, the
   table of §6 and its conclusion (Λ-E).
-- **CITED:** Guo Lemma 4.3 (r = O(ξ^{−2})), Paper 47 thm:A and the killing-form remark, prop:archneg, memo A
+- **CITED:** Guo Lemma 4.3 (r = O(ξ^{−2})), Paper 46 thm:A and the killing-form remark, prop:archneg, memo A
   Thm 1.1/Prop 2.1/Thm 3.1, memo B Lemma 3.1, Guinand–Weil.
 - **ARGUED:** size of the sawtooth parts (§7).
 - **NO-GO:** sum of squares over ratio classes; Schur/Bochner on the coprime comb; edge-localised model.

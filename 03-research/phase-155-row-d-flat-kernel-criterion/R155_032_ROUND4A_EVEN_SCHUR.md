@@ -5,9 +5,9 @@
 *Phase 155, round 4a. Executes order (a) of `R155_029 §3`. Inherits `R155_026`
 (amended) + `R155_028` + `R155_023` (amended), `scripts/r3a/arch_core.py` and the interval
 machinery of `scripts/r3c/r3c_04_enclosure_iv.py`. New scripts: `scripts/r4a/`.
-**Paper 47 is not touched; no file in `scripts/r3a`, `scripts/r3b`, `scripts/r3c` is modified.**
+**Paper 46 is not touched; no file in `scripts/r3a`, `scripts/r3b`, `scripts/r3c` is modified.**
 No sign for `ζ` is claimed at any `T`. Endpoint of record unchanged:
-`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` (Paper 47 Thm C).*
+`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` (Paper 46 Thm C).*
 
 ---
 
@@ -182,7 +182,7 @@ the exact polynomial autocorrelation. This is what makes `k(k+1)/2` enclosures a
 ### Proposition 4a.2 (polarisation enclosure). `PROVED`.
 If `W[e_i±e_j] ∈ [p^-,p^+]`, `[m^-,m^+]`, then `W(e_i,e_j) ∈ [(p^- − m^+)/4, (p^+ − m^-)/4]`, and the
 interval matrix `𝑴 = (M_ij)` so obtained contains the true matrix of `W_T` on
-`span{e₁,…,e_{2k−1}}`. *Proof.* Bilinearity of `W_T` (Paper 47 `thm:A`, `thm:S`(iii): every term is a
+`span{e₁,…,e_{2k−1}}`. *Proof.* Bilinearity of `W_T` (Paper 46 `thm:A`, `thm:S`(iii): every term is a
 bilinear functional of `(F,G)` through the symmetric cross-correlation) plus interval inclusion
 monotonicity. ∎
 
@@ -338,7 +338,7 @@ statement, and it is not a decay statement. `CONDITIONAL` (the interior analytic
 
 ---
 
-## §7 Proposal for Paper 47 (not applied; Paper 47 untouched)
+## §7 Proposal for Paper 46 (not applied; Paper 46 untouched)
 
 1. **§8, after the `thm:w11` remark: a short subsection "Positivity on explicit subspaces".**
  Theorem 4a.B with its scope paragraph, and Theorem 4a.A written out as the `2 × 2` determinant
@@ -357,7 +357,7 @@ statement, and it is not a decay statement. `CONDITIONAL` (the interior analytic
  replacement for any "finite rank" intuition, and it is what rules out the truncation strategies
  §5 discusses.
 4. **A cautionary sentence, §8 or the concluding section:** the Galerkin bottom at `log 2` is carried
- by the top mode of the truncation and falls by an order between `N = 18` and `N = 36`; Paper 47
+ by the top mode of the truncation and falls by an order between `N = 18` and `N = 36`; Paper 46
  should not cite any numerical value of `inf W_{log2}|P_{log2}`.
 
 ---
@@ -366,4 +366,4 @@ statement, and it is not a decay statement. `CONDITIONAL` (the interior analytic
 `r4a_02_nested_enclosure.py`, `r4a_01.json`, `r4a_02_log2.json`, `r4a_02_0.62.json`,
 `r4a_02_0.65.json` — the archived Legendre coefficient vectors of every eigenvector used are in
 `r4a_01.json`, key `even_coef`). `scripts/r3a`, `scripts/r3b`, `scripts/r3c`, `R155_024`, `R155_026`
-and Paper 47 untouched.*
+and Paper 46 untouched.*

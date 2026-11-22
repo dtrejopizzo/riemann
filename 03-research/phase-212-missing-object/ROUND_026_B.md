@@ -1,7 +1,7 @@
 # Round 026 B — (PBP_T) as an exact extremal problem; Kreĭn and density argument; four-point gate
 
-Object: the form `a^w_T` on `P_T` (Paper 47, `04-papers/47-row-d-dual-certificates/main.tex`). No long
-derivations. Opened: R160_M2_R1 complete; G2_B9_R3 §3; P47 `eq:m`, `eq:Aform`, `eq:Kprim`, `prop:finite`, `lem:degen`,
+Object: the form `a^w_T` on `P_T` (Paper 46, `04-papers/46-row-d-dual-certificates/main.tex`). No long
+derivations. Opened: R160_M2_R1 complete; G2_B9_R3 §3; P46 `eq:m`, `eq:Aform`, `eq:Kprim`, `prop:finite`, `lem:degen`,
 `rem:resweights`; R155_033 §0, §2.1–2.3; index, entry 212-25; ROUND_025_A (grep). Not opened: R155_023/024/027
 (thresholds and Theorem N′, only via their summary in the README of phase 155), R155_049, ROUND_025_B, G2_B6_R2.
 
@@ -70,7 +70,7 @@ null contribution along this route (ARGUED, not quantified with mixtures). Quant
   and the tail of `K` alone does not suffice (factors 2.3–2.6). It is the dual version of the ceiling of (2).
 - R155_033 §0, Thm AL (only `(D_∞)`; corrected by R155_049 to `Θ(1/M)` in the full program): the wall is the boundary
   of the window, not the lattice. Coincides with the diagnosis of §2.
-- P47 `lem:degen`, `rem:resweights`: define concave `μ_T` and the degenerate case; `prop:finite`(ii)–(iii): `𝒱_T`
+- P46 `lem:degen`, `rem:resweights`: define concave `μ_T` and the degenerate case; `prop:finite`(ii)–(iii): `𝒱_T`
   closed convex, `0 ∉ 𝒱_T` for `T ≥ 0.60`.
 - G2_B9_R3 §3 (Thm N, R′): rigidity only for `w − v ∈ 𝒯_meas`; for non-tempered weights, gap recorded in 212-25.
 - Grep "Kreĭn inequality / 1 − Re": there is no use of (K1)–(K2) on `Z^prim_T` in the corpus (the matches in 211

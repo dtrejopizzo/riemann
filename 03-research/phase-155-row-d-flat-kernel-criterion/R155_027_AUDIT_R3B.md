@@ -129,7 +129,7 @@ and §2.1 spells out "any range, any number of atoms, any signs, any `β`, any t
 
 ## §4 Paper-ready
 
-1. **Theorem N′ + Table 2.2 → Paper 47 §8, beside `thm:N`.** Ready after N-2, N-4, N-7 (three
+1. **Theorem N′ + Table 2.2 → Paper 46 §8, beside `thm:N`.** Ready after N-2, N-4, N-7 (three
  sentences) and a decision on N-3 (state the node gap, or close it). Half a page as proposed.
 2. **Tolerance form of the β-box → §8, `thm:N` paragraph.** Ready; it is the repair `R155_007` R-2
  asked for and the margin is `2.5·10⁵`.

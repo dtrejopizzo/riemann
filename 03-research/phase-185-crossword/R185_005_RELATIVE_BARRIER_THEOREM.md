@@ -32,7 +32,7 @@ Labels: PROVED, PROVED-CITED, CITED, CONDITIONAL[on X], OPEN, ARGUED, E1.
 - Witness F of type T_c, G = F̂ real, real-rooted, G ≢ 0; hypothetical quadruple at t_q; parameters π = (t_q, G).
 - **Admissible tests 𝒦 of bounded type:** K continuous, K ≥ 0 on ℝ, of type ≤ Δ_max, with Weil admissibility of
   Ψ = G²K (R166_802 §1; R185_091 m4). 𝒦 is a convex cone.
-- Exact identity (1.1): Z_K(Σ) = 𝔄_K − Tail_K(λ), linear in K (checked against eq:nuw of Paper 47: R185_091 m5).
+- Exact identity (1.1): Z_K(Σ) = 𝔄_K − Tail_K(λ), linear in K (checked against eq:nuw of Paper 46: R185_091 m5).
   Z_K = Q_K + R_K + O_K, O_K ≥ 0 (real zeros).
 - **Remainder models** R (other quadruples):
   - (M1) test-by-test bounds R_K ≥ −S_K; witness set O_U, U_K := 𝔄_K − Q^{hyp}_K + S_K.
@@ -242,7 +242,7 @@ BR (Relative barrier theorem)  — PROVED relative to 𝔐, modulo the ▲ leave
 
 **(i) It is a barrier RELATIVE to 𝔐, not an impossibility theorem.** The theorem classifies the form of every
 exclusion obtainable with 𝔐's inputs. It does not say RH is unprovable, nor that D is unreachable. Mandatory
-vocabulary: "relative to 𝔐 (Def §1.2)" and never "absolute barrier" (R185_004, For Paper 47/48).
+vocabulary: "relative to 𝔐 (Def §1.2)" and never "absolute barrier" (R185_004, For Paper 46/48).
 
 **(ii) What lies outside 𝔐 is the positive program.**
 - **Unbounded type / (TC).** Phase 164: (★_cell) ⟹ (TC). (TC) on the witness is RH (R164 README, Rem 4.8a); (TC)
@@ -262,17 +262,17 @@ vocabulary: "relative to 𝔐 (Def §1.2)" and never "absolute barrier" (R185_00
 - **The frontier (iii-c)**, θ ≤ ⅓: no longer a leaf of the barrier, but a class problem. It is pure Beurling,
   publishable, and cannot close D (CROSSWORD §5, item 9).
 
-**(iii) Publishable units and destination.** Rule applied: Paper 47 = theorems about the paper's own objects
+**(iii) Publishable units and destination.** Rule applied: Paper 46 = theorems about the paper's own objects
 (witness, W_T, certificates, tails Tail_K); Paper 48 = the map.
 
 | unit | state | destination | reason |
 |---|---|---|---|
-| R185_001 Lemmas 2–4 (orthant, half-space, moment cone) | PROVED, ready | **Paper 47** | about Tail_K and the witness |
-| R185_001 Thm 5(a), Thm 6 | PROVED, ready | **Paper 47** | reduction and transfer of the witness |
-| R185_001 Thm 5(b), Cor 7 | PROVED after correction (cl W₂; "excludes W") | **Paper 47** | same, in model (M2) |
-| R185_003 Thm 1 (M1); Thm 2 (W₂ only); Prop 3 (Radon only) | PROVED (R185_092) | **Paper 47** | extends Thm 5 to arbitrary 𝔉 |
-| R185_002 Thm F core (exclusion ⟺ ∃K: E_K > U_K) | PROVED | **Paper 47 §7** (alongside thm:finZ) | remark on the witness |
-| R185_002 Thm C(i)(ii)(iii) | PROVED | **Paper 47**, remark next to the W-sieve lemma | blindness of the W-sieve |
+| R185_001 Lemmas 2–4 (orthant, half-space, moment cone) | PROVED, ready | **Paper 46** | about Tail_K and the witness |
+| R185_001 Thm 5(a), Thm 6 | PROVED, ready | **Paper 46** | reduction and transfer of the witness |
+| R185_001 Thm 5(b), Cor 7 | PROVED after correction (cl W₂; "excludes W") | **Paper 46** | same, in model (M2) |
+| R185_003 Thm 1 (M1); Thm 2 (W₂ only); Prop 3 (Radon only) | PROVED (R185_092) | **Paper 46** | extends Thm 5 to arbitrary 𝔉 |
+| R185_002 Thm F core (exclusion ⟺ ∃K: E_K > U_K) | PROVED | **Paper 46 §7** (alongside thm:finZ) | remark on the witness |
+| R185_002 Thm C(i)(ii)(iii) | PROVED | **Paper 46**, remark next to the W-sieve lemma | blindness of the W-sieve |
 | R185_004 Lemma 3 + Obs 4 | PROVED | **Paper 48** §sec:walls (W-identification) | wall map |
 | R185_004 Thm U3 + corrected Def 5 | core PROVED; (i) "⟹E1" ARGUED; (iii) by circularity; (iii-c) OPEN (class) | **Paper 48** (`thm:deletion-or-identification`) | classification of methods |
 | Theorem BR (this memo) | PROVED relative to 𝔐, with the ▲ leaves | **Paper 48** (final section), or Paper 49 if split off | a statement about the map |

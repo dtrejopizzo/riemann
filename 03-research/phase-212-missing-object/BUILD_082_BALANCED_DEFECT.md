@@ -89,6 +89,6 @@ For F such that v(F)=0, the compensation disappears. Any proof based on (4) must
 
 The general bound is ||VF||≤||AF||/sqrt(1+2s); for AF=λF+r, it is ≤(|λ|||F||+||r||)/sqrt(1+2s). Damping of all tests with small Rayleigh quotient is not deduced without controlling their operator residual.
 
-Verified conceptual antecedent: P47 subsec:wh-det/thm:wh-pencil. Its trace-class conclusion is not imported: P≥(1−C0)I in infinite dimension is not trace class. The operator-order equivalence written here does not require that property.
+Verified conceptual antecedent: P46 subsec:wh-det/thm:wh-pencil. Its trace-class conclusion is not imported: P≥(1−C0)I in infinite dimension is not trace class. The operator-order equivalence written here does not require that property.
 
 The formula for the restricted Green function (3) was also confirmed as exact elimination of the two constraints. Exhibiting its positive rank-two term does not prove the pending domination in (4).

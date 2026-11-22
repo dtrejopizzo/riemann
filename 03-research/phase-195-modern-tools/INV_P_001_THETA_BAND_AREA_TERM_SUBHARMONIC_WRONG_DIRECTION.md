@@ -67,7 +67,7 @@ Conclusion: the four free positivities point the same way as MW-4, now for a zer
 subharmonic weight, the Green/Riesz structure always gives d_S ≤ (harmonic majorant).
 
 **Subclass check (ARGUED).** For T ≤ ½log2, S_N=∅ and the only source is s=1, which P_T kills. L3 then reads 𝔞_T = (1/2π)[4∬d_∞|Φ′|² − B₂],
-with d_∞ → −∞ at s=1 and d_∞ ≈ (σ−½)log(|τ|/2π) at large |τ|. Positivity on this range is known (arch region, Paper 47) but does
+with d_∞ → −∞ at s=1 and d_∞ ≈ (σ−½)log(|τ|/2π) at large |τ|. Positivity on this range is known (arch region, Paper 46) but does
 **not** come from d_∞ ≥ 0, which fails. This confirms that even the trivial range gets its sign from cancellation in the area term,
 not pointwise. No new subclass result is proved.
 

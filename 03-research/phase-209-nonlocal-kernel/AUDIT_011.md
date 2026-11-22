@@ -1,11 +1,11 @@
 # AUDIT_011 — Continuous Mellin–Gauss map and cross-check with the paper's form
 
-2026-10-19. Independent check. Read LINK_011, P47 eq:form, eq:Aform, eq:W, lem:combsine and the precision added to the criterion of CONSTRUCTOR006.
+2026-10-19. Independent check. Read LINK_011, P46 eq:form, eq:Aform, eq:W, lem:combsine and the precision added to the criterion of CONSTRUCTOR006.
 **Verdict: PROVED convergence, domain, even FE and smoothing character of the map; PROVED that its norm does not coincide with Q_T. Domination with positive remainder OPEN. Full target D active.**
 
 ## 1. Exact form that the link must represent or dominate
 
-For each T, P47 fixes the domain
+For each T, P46 fixes the domain
 
     D_T={F∈L²(−T,T): ∫log(2+|t|)|Fhat(t)|²dt<∞},
     P_T={A(F)=B(F)=0}.
@@ -48,7 +48,7 @@ Therefore the cancellation must be carried out IN EACH COEFFICIENT before summin
 
 ## 4. Comparison with gamma and comb
 
-The symbol of P47 satisfies
+The symbol of P46 satisfies
 
     m(t)=Re ψ(1/4+it/2)−logπ
          =log|t|−log(2π)+O(|t|^(−2)).

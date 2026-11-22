@@ -10,7 +10,7 @@ incompatibilities are proved: common residual, test slot, and
 minimality. The next minimal datum is necessarily a form between two
 windows; it is constructed at the end as a finite PC--collar pairing.
 
-Paper 47 is not modified, nor is D proved.
+Paper 46 is not modified, nor is D proved.
 
 ## 0. Verdict
 
@@ -61,7 +61,7 @@ linear test \(T_L\),
  \tag{0.4}
 \]
 
-To try to see the moments of Paper 47 one must take
+To try to see the moments of Paper 46 one must take
 
 \[
  T_L=S_L:=R_L^*R_L+JR_L^*R_LJ.                     \tag{0.5}
@@ -193,7 +193,7 @@ precisely that defect. It is also verified that invariance under the
 Volterra operator is equivalent to triviality of the radical. Neither of
 these two facts will be used as though it were a new law.
 
-### 1.3. Paper 47
+### 1.3. Paper 46
 
 The following are used literally:
 
@@ -218,7 +218,7 @@ and
  \succeq(1-q_0)R_L^*R_L.                             \tag{1.4}
 \]
 
-Paper 47 further notes that the square of (1.1) is invariant under
+Paper 46 further notes that the square of (1.1) is invariant under
 reversal of the Weil sign and that the collar balance contains no new
 sign. The Vanishing Problem expressly requires arithmetic, orientation,
 and minimality in the decisive step.
@@ -547,7 +547,7 @@ Here are the two orientations of \(H_{M,N}\), the polar correction
 contained in (4.1), \(E_N\), and, after compression, the collars of
 (2.6)--(2.8). This is the complete Euler reading of the mixed form.
 
-The detector of Paper 47 instead comes from
+The detector of Paper 46 instead comes from
 
 \[
  R_LB_N=D_{N,L}R_L-\mathcal E_{N,L}.                 \tag{4.4}

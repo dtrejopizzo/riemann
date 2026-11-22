@@ -1,6 +1,6 @@
 # Strict positivity up to T=68/25
 
-For 0<T≤68/25 and every f in the domain of paper 47, W_T(f)≥exp(−22000000001)||f||₂². The height of verified zeros is still G=3·10¹². The stretch (2.68,2.72] is added.
+For 0<T≤68/25 and every f in the domain of paper 46, W_T(f)≥exp(−22000000001)||f||₂². The height of verified zeros is still G=3·10¹². The stretch (2.68,2.72] is added.
 
 **Inner filter with transition band.** Fix H=G/2, b=29, v=τ/H and
 

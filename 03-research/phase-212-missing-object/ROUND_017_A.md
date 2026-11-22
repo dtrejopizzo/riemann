@@ -9,7 +9,7 @@ floor `≈ 10⁻⁹`); not part of the corpus.
 ## 0. Four-point filter
 
 1. **Antecedents read in primary sources.** Phase 153 `README.md`, `R153_000_BLUEPRINT.md` §§1–2, `R153_001_ROUND1.md`
-   §1.2, `R153_005_CLOSING_DECISION.md`; Paper 47 `main.tex` thm:A (l. 444), cor:mono, `subsec:schur` (prop:schur,
+   §1.2, `R153_005_CLOSING_DECISION.md`; Paper 46 `main.tex` thm:A (l. 444), cor:mono, `subsec:schur` (prop:schur,
    thm:w11), thm:index (l. 2518), thm:log5A (l. 4680); Paper 42 `main.tex` thm:certifiedendpoints (l. 4164);
    `G2_B8_R5.md` (phase 159) summary and Theorem D; in phase 212: `ROUND_006` §§4–10, `ROUND_007_A` §§1–4,
    `ROUND_013_A`, `ROUND_015_B` §4, `ROUND_015_D`, `RULES_AVOID.md` O, Q, Y, Z.
@@ -39,7 +39,7 @@ floor `≈ 10⁻⁹`); not part of the corpus.
   thm:certifiedendpoints**: a certificate in interval arithmetic (Arb, mesh of dimension 760, directed Feshbach,
   margins `6.5·10⁻⁴` even and `1.2·10⁻⁴` odd at `½log 3`). Its blueprint (`R153_000` l. 6, 19) says so: «archimedean
   domination (Yoshida Lemma 2 quantified)».
-- **Paper 47 thm:A** («the form as a Lévy energy»): `a_T(F) = C₀‖F‖² + Lev(c_F) − Σ v_n c_F(log n)`. It is the formula of
+- **Paper 46 thm:A** («the form as a Lévy energy»): `a_T(F) = C₀‖F‖² + Lev(c_F) − Σ v_n c_F(log n)`. It is the formula of
   the form, not an inequality. Positivity up to `½log 5` is thm:log5A, also by certificate (ball
   arithmetic, prop:lowercert). At `log 2`, thm:w11 gives only the value in one direction (the easy half of prop:schur).
 
@@ -166,7 +166,7 @@ this tool: it is OPEN and, by §3, of no interest as a law. It was not run with 
 
 | # | Statement | Label |
 |---|---|---|
-| 1 | Phase 153 Thm. A = conjugation for `Ξ_a`; P47 thm:A = Lévy formula; `log 2` = certificate window (P42) | PROVED (reading) |
+| 1 | Phase 153 Thm. A = conjugation for `Ξ_a`; P46 thm:A = Lévy formula; `log 2` = certificate window (P42) | PROVED (reading) |
 | 2 | No proof by mechanism beyond `T*` in the corpus; `T_DIR ≥ log 2` not proved | PROVED (reading) / NUMERICAL |
 | 3 | Dual characterization of `T_DIR` (exit from the diagonal pair) | PROVED in Galerkin, ARGUED in the continuum |
 | 4 | The non-diagonal pair is born at second order (`diag Z = 0` kills the first order) | PROVED (computation) |

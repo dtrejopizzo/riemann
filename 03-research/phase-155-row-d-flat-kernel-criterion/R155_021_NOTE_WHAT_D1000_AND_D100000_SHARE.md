@@ -2,7 +2,7 @@
 
 the question: build D for Z_100000 as for Z_1000 and compare; then "generalise D to all Z".
 
-D for Z_N is μ_N = Σ_{j≤N} δ_{±γ_j} (Paper 47 prop:finuniv). Comparing lists says nothing; comparing their Fourier
+D for Z_N is μ_N = Σ_{j≤N} δ_{±γ_j} (Paper 46 prop:finuniv). Comparing lists says nothing; comparing their Fourier
 transforms g_N(u) = Σ_{j≤N} cos(γ_j u) w(γ_j/Γ_N) (Gaussian cutoff) does. Script `scripts/reverse/dinf/spikes.py` (5 s).
 
 **Observation.** g_N has spikes exactly at u = log n for prime powers n, of area −v_n/4 = −Λ(n)/(2√n):
@@ -21,7 +21,7 @@ explicit formula Σ_ρ ĥ(γ_ρ) = 2∫h cosh(u/2) − Σ_n v_n h(log n) + (1/2�
  is, by the explicit formula, the prime comb −Σ_n v_n δ_{±log n} plus the smooth Γ/cosh part. So "D for all Z"
  IS the prime side: it is determined by the primes alone, with no reference to zeros. This is row C.
 2. RH ⟺ that tempered distribution is the Fourier transform of a POSITIVE measure (Bochner/Weil). For finite Z the
- positivity is automatic (prop:finuniv); for ζ it is the whole content. That is row D = Problem B of Paper 47.
+ positivity is automatic (prop:finuniv); for ζ it is the whole content. That is row D = Problem B of Paper 46.
 3. The spike pattern does not discriminate RH: a zero ½+δ+iγ contributes cos(γu)cosh(δu) instead of cos(γu); at
  u ≤ 4 the change is < e^{4δ} − 1, invisible at this precision. What would discriminate is a negative part of
  the spectral measure, which no finite real list can exhibit (thm:finZ, prop:finuniv).

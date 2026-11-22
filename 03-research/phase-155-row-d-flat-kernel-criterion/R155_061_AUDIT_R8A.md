@@ -3,7 +3,7 @@
 *Phase 155. Object: `R155_052_ROUND8A_INDEX_MULTIBAND.md` (474 lines) and
 `scripts/r8a/` (`r8a_lib.py`, `r8a_01_upper.py`, `r8a_02_lower.py`, `r8a_03_recheck_lower.py`, `README.md`, all
 JSON), with the inherited `scripts/r4a/r4a_lib.py`. Reference texts read (the paper's **own** definitions, rule
-`feedback-check-against-paper-definitions`): Paper 47 `main.tex:114–150` (`eq:symbol`, `eq:form`, Tate moments,
+`feedback-check-against-paper-definitions`): Paper 46 `main.tex:114–150` (`eq:symbol`, `eq:form`, Tate moments,
 `\PT`, `eq:W`), `:336–420` (`lem:K`, `thm:S`, `thm:A`), `:1139–1150` (`def:W`, `eq:nuw`), `:2326–2460` (`\Ainf`,
 `\laminfP`, `prop:arch`, `prop:nodes` incl. the Dirichlet-form identity, the DIAGNOSTIC `0.5958`), `:2471–2625`
 (`prop:NC`, `thm:P`, `cor:P1`, `cor:P3`, `rem:P4`, `thm:J`, the `T₂ ≤ 0.9989426` remark); `R155_023:23–24,195,365`,
@@ -26,7 +26,7 @@ three wording/arithmetic fixes (A4–A6). No FAIL.
 
 ## Per-claim findings
 
-### (i) Definitions against Paper 47 — PASS
+### (i) Definitions against Paper 46 — PASS
 
 * `m(τ) = Re ψ(¼+iτ/2) − log π` (`eq:symbol`), `C₀ = ψ(¼) − log π` (`lem:K`); `ψ(¼) = −γ − π/2 − 3log 2`, so
  `C₀ = −γ − 3log2 − π/2 − log π = −5.3721834…` as in the memo and in `r8a_lib.C0_interval`.
@@ -40,7 +40,7 @@ three wording/arithmetic fixes (A4–A6). No FAIL.
 * `thm:P`: `S_c = Q_TB_sQ_T`, `c = Ts`, `⟨S_ce_j,e_j⟩ = (2/π)(2j+1)∫_0^c j_j²`, `tr S_c = 2c/π`,
  `Λ_k(c) = Σ_{j≥k}⟨S_ce_j,e_j⟩`. The script's `Rdiag_all[j] = (2/π)(2j+1)I_0^{(jj)}(c_*)` and
  `LamK = 2c_*/π − Σ_{j<K}R_j` (both parities) are exactly this. PASS.
-* Real vs complex. Paper 47 writes `\Ainf` with `2A(F)B(F)` (no conjugate), i.e. on real `F`, while `L²(I_T)` in
+* Real vs complex. Paper 46 writes `\Ainf` with `2A(F)B(F)` (no conjugate), i.e. on real `F`, while `L²(I_T)` in
  §1 is complex. No discrepancy: `m` is even and real, so for `F = u + iv` one has `Γ[F] = Γ[u] + Γ[v]` (the cross term
  `(1/π)∫m Im(û\bar v̂)` has an odd integrand), and `A, B` are real functionals; the complex negative index and bottom
  equal the real ones. (Recorded as a one-line remark under Lemma 4.1, A6.)
@@ -254,7 +254,7 @@ out-of-range `r8a_02 0.90` is correctly unused). Threshold points undecided and 
 
 `0.58 ≤ T*_{∞,P} ≤ 0.60`; `λ^P_∞` strictly decreasing, `> 0` on `(0,T*)`, `< 0` on `(T*,∞)`; `λ^P_∞(½log3) > 0`.
 Consistency: `R155_023:23–24,195` (amended per `R155_025`) records the Galerkin value `0.5958` (`[0.595781, 0.595859]`)
-as an **upper bound** `T*_{∞,P} ≤ 0.5958`, DIAGNOSTIC; Paper 47 `main.tex:2438–2441` the same. `0.5958 ∈ [0.58, 0.60]`
+as an **upper bound** `T*_{∞,P} ≤ 0.5958`, DIAGNOSTIC; Paper 46 `main.tex:2438–2441` the same. `0.5958 ∈ [0.58, 0.60]`
 ✓; the certified upper bound `0.60` is *weaker* than the DIAGNOSTIC `0.5958`, which is expected (the lower-bound
 certificate at `0.60` has `Γ[F] ≈ −0.0070`, consistent with a crossing just below `0.60`). `prop:arch(iv)`
 (`≤ 0.74921`) improved ✓. The lower bound `0.58` promotes the DIAGNOSTIC "`0.58 < T*_{∞,P}`" of `R155_023 §7.3` /
@@ -266,7 +266,7 @@ certificate at `0.60` has `Γ[F] ≈ −0.0070`, consistent with a crossing just
 `(H1)` is `R155_039:245`: `n₋(\Ainf|P_T) = 1` on `(T*_{∞,P}, T₂]`. It holds for every `T₂ < T*_odd`, in particular
 `T₂ = log 2`, and fails for every `T₂ > T*_odd`; `T₂ = T*_odd` is undecided. The sentence "every admissible `T₂`
 satisfies `log 2 ≤ sup T₂ = T*_odd ≤ 0.81`" conflates `T₂` with its supremum; reworded. Replaces `T₂ ≤ 0.9989426`
-(Paper 47 remark after `thm:J`) by `sup T₂ = T*_odd ≤ 0.81` ✓.
+(Paper 46 remark after `thm:J`) by `sup T₂ = T*_odd ≤ 0.81` ✓.
 
 ### (xvi) §5.4 table — PASS (arithmetic checked against the paper)
 
@@ -289,7 +289,7 @@ the 87–106 s archive figures were contention, as the memo says.
 
 | statement (`R155_052`) | verdict | label after audit |
 |---|---|---|
-| Notation vs Paper 47 (`m`, `C₀`, `K`, `A`, `B`, `P_T`, `\Ainf`, `\laminfP`, `Γ_T`, `S_c`, `Λ_k`) | PASS | — |
+| Notation vs Paper 46 (`m`, `C₀`, `K`, `A`, `B`, `P_T`, `\Ainf`, `\laminfP`, `Γ_T`, `S_c`, `Λ_k`) | PASS | — |
 | Lemma 2.1 (bordered inertia) | PASS | PROVED |
 | Lemma 2.2 (multi-band minorant, `0 ≤ M ≤ WS_{c_*}`) | **AMEND** (A3 tolerance argument; A5 edge count) | PROVED |
 | Lemma 2.3 (`m''` summand dominates; endpoint sup covers the band) | PASS | PROVED |
@@ -327,10 +327,10 @@ the 87–106 s archive figures were contention, as the memo says.
 * **A5** (§2.2, §3.2): 8 geometric edges `9, …, τ_N`; `c_* ≈ 16`; panels in `s ∈ [10⁻⁶,2]`.
 * **A6** (§4.1, §5.3): real/complex remark; the `sup T₂` sentence reworded.
 
-`scripts/r8a/README.md` gets a short "audit re-runs" section (new files only). Paper 47 and the phase README are not
+`scripts/r8a/README.md` gets a short "audit re-runs" section (new files only). Paper 46 and the phase README are not
 touched.
 
-## What is cleared for Paper 47 (§9.2 `subsec:negindex`, with two items for §9.1 `subsec:arch`)
+## What is cleared for Paper 46 (§9.2 `subsec:negindex`, with two items for §9.1 `subsec:arch`)
 
 Cleared, with the proposed LaTeX labels:
 
@@ -362,4 +362,4 @@ not needed). When inserting, check every sentence against `\PT`, `\Ainf`, `\lami
 (rule); the row-D label and the endpoint of record (`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`) are unchanged,
 and nothing here is a statement about `W_T` or the zeros of `ζ`.
 
-[note per TEX_HOSTILE_REVIEW_R4 item 4] The remark above that "on all of `L²` the argument would stop at `c_0 = β/2`" is wrong, and the clause "`c_0 = A(F*) = 0` … correct and essential" is not essential: `c_k = 0` for all `k ≥ 1` already gives `∫(uf(u))u^j du = 0` for all `j ≥ 0`, hence `uf = 0` by Weierstrass, so strictness holds also for `λ_∞` and for the bottom of `Γ_T` on `L²(I_T)`; the editor's omission of the remark from Paper 47 was right (applied in `lem:strict` per R4-12).
+[note per TEX_HOSTILE_REVIEW_R4 item 4] The remark above that "on all of `L²` the argument would stop at `c_0 = β/2`" is wrong, and the clause "`c_0 = A(F*) = 0` … correct and essential" is not essential: `c_k = 0` for all `k ≥ 1` already gives `∫(uf(u))u^j du = 0` for all `j ≥ 0`, hence `uf = 0` by Weierstrass, so strictness holds also for `λ_∞` and for the bottom of `Γ_T` on `L²(I_T)`; the editor's omission of the remark from Paper 46 was right (applied in `lem:strict` per R4-12).

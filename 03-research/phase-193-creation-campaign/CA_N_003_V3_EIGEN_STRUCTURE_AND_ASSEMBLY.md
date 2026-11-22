@@ -66,6 +66,6 @@ series). **(B″)**: yes for all built objects. **REF-D**: the site LP and the g
   component is ℝ_{>0}). ✓ Either way no self-dual lattice.
 - Thm 4 uses only the existence of infinitely many zeros, never their location. ✓ (R)(4) concerns inputs to a sign step; here the input
   is used for an impossibility. ✓
-- Theorem 5 is only as strong as the Epstein falsifier; primitive-bottom negativity is ARGUED in P47. Stated with that label. ✓
+- Theorem 5 is only as strong as the Epstein falsifier; primitive-bottom negativity is ARGUED in P46. Stated with that label. ✓
 - Premise respected: no statement links row D to any other problem; impossibilities are in declared classes (𝒰_T, moderate-growth
   automorphic generators, self-dual lattices, attained exact window certificates).

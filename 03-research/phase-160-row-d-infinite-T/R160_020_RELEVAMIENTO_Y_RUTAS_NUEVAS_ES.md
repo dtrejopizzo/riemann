@@ -46,7 +46,7 @@ on the primitive/radial part and that the comparison with the analytic form be a
 composition, dagger, trace and explicit formula, but do not deliver a section, `h⁰`, effective cone or Hodge–Rosati
 theorem that produces an inequality.
 
-### Strong geometric D / reopening of Paper 46
+### Strong geometric D / reopening of Paper 47
 
 The reopening rule requires a single object in the adelic square that simultaneously satisfies:
 
@@ -136,7 +136,7 @@ create no Hodge index, and contribute no inequality. D remains exactly equivalen
 - Clause, trace-positive cone, fixed index, function-field model, coupled pairing, Galois ring.
 - Mixed effectivity, additive pencil, method theorems and the bridge.
 
-Result: Paper 46 organizes the no-gos. RR/`h⁰`, Deligne extraction, nonnegative family, finite-S,
+Result: Paper 47 organizes the no-gos. RR/`h⁰`, Deligne extraction, nonnegative family, finite-S,
 local factorization, tropical effectivity and the Künneth product all fail. The conceptual closure of the map is not a proof
 of the sign.
 
@@ -146,7 +146,7 @@ of the sign.
 - Flat kernel criterion, zero truncation, archimedean index, Schur/parity and polar capacity.
 - Rigorous certificates in small windows and Galerkin diagnostic audits.
 
-Result: Paper 47 turns each window into a decidable finite problem, but it proves there is no dual reached,
+Result: Paper 46 turns each window into a decidable finite problem, but it proves there is no dual reached,
 no uniform finite truncation, no ascending induction in `T`, and the margin tends to zero.
 
 ### Arc X — phases 157–160: exhaustive search for a mechanism or object

@@ -7,7 +7,7 @@ equivalence with any other statement is invoked or used.
 
 **Read.** Phase 200 README; SPEC_SIGN_OBJECT_002; AUDIT_200_SPEC_002 (P9′, P10); Q2_LADDER_001 (Lemma R, R-Q2,
 Theorem Q2.1, rough 0/1 comb, "bridge between windows" residual); K1_OSG_001 (R-K1); K3_GAMMA_001 (K3.1); LEDGER_L5_META §2
-(negative space, areas 1–11); LEDGER_L1 (S1–S7); phase 199: AUDIT_CONSTRAINTS_001, MORI15_EXTREMAL_001; Paper 47:
+(negative space, areas 1–11); LEDGER_L1 (S1–S7); phase 199: AUDIT_CONSTRAINTS_001, MORI15_EXTREMAL_001; Paper 46:
 def:ext, rem:ext-killing, prop:ext-gauge, lem:ext-ellbound, lem:monoT ("Lemma M" of monotonicity in T), definitions of
 𝔞_T, P_T, λ_A. ROUTES-TRIED index: full README "Phase 200"; 06_OPEN_RESIDUES (L2_016 "Frobenius doubling induction in T",
 W-loc); 03_PHASES (P37-2 "inertia readers (winding)", P49-2 Maslov); AUDIT_PHASE193 row 82 (Bohr–Jessen).
@@ -47,7 +47,7 @@ with T_h = T. **The whole "ladder", every sub-comb p | N and every difference of
 
 **Corollary A.2 (P9′ = prop:ext-gauge; PROVED).** With 𝔑_μ^{sum} := exterior summation radical,
  𝒬_μ^{sum} := L²(λ,∞)/𝒢̄_T (coordinates r, via Ψ̌ = Zr),  ‖[r]‖²_𝒬 := dist²(r, 𝒢̄_T),
-and for g in the core, **‖[r_f]‖²_𝒬 = ℓ(g)/2** (prop:ext-gauge, CITED from Paper 47 itself). The "new" quotient structure of
+and for g in the core, **‖[r_f]‖²_𝒬 = ℓ(g)/2** (prop:ext-gauge, CITED from Paper 46 itself). The "new" quotient structure of
 P9′ is exactly the escape quotient the paper already has. The natural norm of 𝒬_μ **is the escape**, and K3.1 describes it at the
 extremal: ℓ(f*) ≈ d₄‖f*‖²/(1 + r²), with r = ψ₄(0)/ψ₀(0) = 0.6073 at μ = 15 (coincidence 0.7306 = 0.7306, NUMERICAL).
 

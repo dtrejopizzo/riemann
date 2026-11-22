@@ -2,7 +2,7 @@
 
 * Pure mathematics, no numerics. No file outside this one was edited. No label of record moves.*
 *Inputs: R165_000 §2.3; R163_401 §1, §2.2–2.4, §3, §4.6–4.7, Lemma 4.10; R163_501 Thm B, Thm R; R162_407 §3 (REG, virial);
-R164_501 Thm SA / Cor SA.1; Paper 47 `lem:monoT`, `lem:contT`, `lem:firstcontact`.*
+R164_501 Thm SA / Cor SA.1; Paper 46 `lem:monoT`, `lem:contT`, `lem:firstcontact`.*
 
 Labels: **PROVED** (full proof here), **PROVED-CITED** (record reference, not re-audited), **ARGUED** (argument given, the
 unproved step named), **OPEN**. **Code E1**: the statement uses only (1.1), the kernel equation and W ≥ 0. So it holds verbatim

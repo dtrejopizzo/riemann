@@ -50,7 +50,7 @@ does not invoke or reason from any equivalence involving row D. Verdicts: CONFIR
     |γ| ≲ C/T₀ and 0 < |β−½| ≲ |F̂₀(γ)|/√(ζ(2)a₀) that is not compensated by nearby on-line zeros.
     The partial-fraction formula is an identity, so this is not avoidable bookkeeping. Every true upper bound on ℓ″ at this scale *is* such an
     exclusion. Mean values (Thm 9.1) cannot see it, because a single off-line pair changes ∫_I|ℓ| by O(δ·log(1/δ)) only.
-    Therefore pointwise (𝒱) cannot follow "from identities and mean values alone". It lies in the zero-configuration class of Paper 47 cor:void
+    Therefore pointwise (𝒱) cannot follow "from identities and mean values alone". It lies in the zero-configuration class of Paper 46 cor:void
     (𝒞_zeros, i.e. statements decided by the zero configuration), or in its exact analogue for the curve symbol.
     NT_009 §3's "OPEN, exactly where positivity at σ = 1 would have to be decided" should be rewritten as **OPEN; reformulated as a
     local zero-exclusion statement in 𝒞_zeros. The identity/mean-value class is NO-GO by the Hadamard computation above.**

@@ -9,7 +9,7 @@ Euler product, so Λ*1=log can enter only through the unproved (PC)→scattering
 already the terminal gate.
 
 Sources: R161_017 (defect identity (2.3), interior value (4.3)), R161_019 (pole lattice, moment
-completeness Thm 3.1), R161_025 (residue (0.1), faithful energy Thm 3.1), Paper 47 §sec:firstcontact,
+completeness Thm 3.1), R161_025 (residue (0.1), faithful energy Thm 3.1), Paper 46 §sec:firstcontact,
 phase 121 (README l.59; OPTION_MATRIX rows "Tate-port opposite parity", "equality-state annular
 transport").
 
@@ -68,7 +68,7 @@ other words, (H-int) has a nonzero solution.
    λ^{DH}(T_0)<0 for some finite T_0.
 3. λ^{DH}(T)→+∞ as T→0. On I_T the comb is empty for 2T<log 2. The multiplier behaves like
    log(2+|τ|), and its compression to I_T has bottom ≥ log(1/T)−O(1).
-4. The proof of Paper 47 lem:contT uses only the archimedean and comb bounds of lem:mbounds, and
+4. The proof of Paper 46 lem:contT uses only the archimedean and comb bounds of lem:mbounds, and
    these hold for any finite coefficient list. It therefore gives continuity. Monotonicity also
    holds, by zero-extension.
 5. Compact resolvent holds as in thm:O.
@@ -103,7 +103,7 @@ L(σ)→1 has one. ∎
 
 Hence, in the task's hint, the ζ in "G_+ + χG_− = ζ[…]" is multiplicative only as the functional
 equation's L(s), and this holds for DH and Epstein just as for ζ. The Euler product does not act
-through that factor. The only place in the B2 chain where Λ*1=log is used is Paper 47
+through that factor. The only place in the B2 chain where Λ*1=log is used is Paper 46
 thm:PCfinite (hyperbola cancellation at k≤N). That feeds the unproved (PC)→scattering passage.
 
 ## 4. Falsifier tests

@@ -27,7 +27,7 @@ The fixed Laguerre12 block of POWER_ARITHMETIC_BLOCK_007 keeps its separate proo
 - Three-power case: resolved on the WHOLE proposed range a_i>=32, including unequal triples.
 - Bridge in form norm: proved, including PW_N and any compact test via finite Möbius and strong approximation (POWER_BRIDGE_002).
 - Extension to arbitrary orders of a dense family: not proved. Fixed-size certificates do not meet this requirement.
-- Closure of the sign of Paper47: not obtained. The goal is not complete and papers are not edited.
+- Closure of the sign of Paper46: not obtained. The goal is not complete and papers are not edited.
 
 The Tate chain009 has the exact identity W[f_n]=992^(2−n)Δ²q_n and monotonicity of the archimedean part; its arithmetic convexity remains open. Its limit is the already recorded critical centre E0, not a new asymptotic slack. Moreover the individual family is not dense: proving only its diagonals does not replace the sign of all combinations.
 

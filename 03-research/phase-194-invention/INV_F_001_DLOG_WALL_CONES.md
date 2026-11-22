@@ -2,7 +2,7 @@
 
 Track F. Positivity is assumed true; the work is to find the tool. Labels:
 PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / REF-D. Pure mathematics, no numerics.
-Notation as in Paper 47 (eq:symbol, eq:form): 𝔞_T(F) = (2π)^{−1}∫ σ_T |F̂|², σ_T = m − P_T, P_T(τ) = Σ_{n∈N_T} v_n cos(τ log n),
+Notation as in Paper 46 (eq:symbol, eq:form): 𝔞_T(F) = (2π)^{−1}∫ σ_T |F̂|², σ_T = m − P_T, P_T(τ) = Σ_{n∈N_T} v_n cos(τ log n),
 v_n = 2Λ(n)n^{−½}, F ∈ 𝒫_T; c_F = F∗F̃ the autocorrelation (the task's "F = g∗g̃").
 
 ## 0. Corpus / index check (mandatory)
@@ -13,7 +13,7 @@ Searched ROUTES-TRIED-INDEX (README, 01–06, 05b, audits), grid, crossword, pha
 - Laguerre–Pólya / PF / Schoenberg: README line 32 (heat flow / dBN / LP / Jensen: N5, circular), L23, L48, L75, L76, AUDIT_A §1
   (Michalowski: PF₅ fails for the dBN kernel).
 - ∂log appearances: INV_C_001 Identity 5, INV_D_001 G2, INV_E_001 Thm E2 (class 𝓒_0, hypertranscendence).
-- Scaling: Paper 47 lem:shape-scale (O_4 lists "an Euler product ζ^c" as O_4-preserved).
+- Scaling: Paper 46 lem:shape-scale (O_4 lists "an Euler product ζ^c" as O_4-preserved).
 **New reason for this memo (not a retry).** None of the entries above asks the *structural* question: for which cones K does
 f ∈ K ⇒ −f′/f ∈ (some cone), and is every such cone automatically O_4-closed? The LP/Pick/Kreĭn entries are used here only as
 classified items (§2), not re-attacked. The new object is the ∂log-transfer map on cones itself (Theorems F1–F3).
@@ -75,7 +75,7 @@ on the line Im z = η > ½ is a pointwise-positive shifted symbol σ^{(η)}(τ) 
 |−ζ′/ζ(σ+it)| ≤ −ζ′/ζ(σ) plus archimedean growth plus the pole; nothing beyond (a) survives subtraction of the pole.
 
 ## 4. The NO-GO (Theorem F2) and its exact hypothesis
-**Theorem F2 (∂log-cone NO-GO; PROVED, using lem:shape-scale of Paper 47).** Let 𝒦 be any family of statements about the arithmetic factor
+**Theorem F2 (∂log-cone NO-GO; PROVED, using lem:shape-scale of Paper 46).** Let 𝒦 be any family of statements about the arithmetic factor
 of the form "log ζ ∈ K" or "−ζ′/ζ ∈ K′" on Re s > 1, with each K, K′ a cone (closed under multiplication by c > 0; convexity not
 needed), true for ζ — in particular C2, C5, C10, the Bochner/ID statements in t, and any ∂log image of an ID cone. Let 𝒜 be the deduction
 class whose arithmetic premises are 𝒦 together with comb-generic identities (thm:shape(B″)) and the archimedean data. Then 𝒜 is closed

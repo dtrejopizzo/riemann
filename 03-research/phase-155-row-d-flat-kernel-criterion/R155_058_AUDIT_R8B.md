@@ -1,7 +1,7 @@
 # R155_058 — Audit of R155_053 (round 8B, P6 alignment)
 
-**Object.** `R155_053_ROUND8B_P6_ALIGNMENT.md` (426 lines), checked against Paper 47
-(`04-papers/47-row-d-dual-certificates/main.tex`) and Paper 46 (`04-papers/46-intersection-frame-defect/archive/main.md`)
+**Object.** `R155_053_ROUND8B_P6_ALIGNMENT.md` (426 lines), checked against Paper 46
+(`04-papers/46-row-d-dual-certificates/main.tex`) and Paper 47 (`04-papers/47-intersection-frame-defect/archive/main.md`)
 at the lines the memo cites, plus the phase-155 record. One check script (`scratchpad/chk.py`, 2 s,
 mpmath digamma + numpy grid, not committed) was used only to reproduce the memo's constants.
 Rule applied (memory `feedback-check-against-paper-definitions`): every integration is checked against
@@ -139,7 +139,7 @@ the `k₀` term go in opposite directions); write "`τ_env(w) ≥ τ₁(A_T + �
  This is the sharpest form of "X_T is `λ^W_T > 0`", and it is exactly what Prop 4.1 uses.
 - **Per-window converse `λ^A_T ≥ 0 ⟹ λ^W_T ≥ 0` (or `⟹ λ^P_T ≥ 0`): OPEN — CONFIRMED.** Grep of
  `main.tex` and phase 154–155 for any implication from `λ^A` to `λ^W`/`λ^P` returns only the memo itself.
- Paper 47 proves `λ^W ≤ λ^P ≤ λ^A` (`prop:weak`) and nothing in the other direction at fixed `T`; the only
+ Paper 46 proves `λ^W ≤ λ^P ≤ λ^A` (`prop:weak`) and nothing in the other direction at fixed `T`; the only
  route from `D_T` to `λ^W_T > 0` is through `∀T` (Paper 45 Thm 10.4 ⟹ RH ⟹ `cor:RH` proof). The memo's
  OPEN label is correct and should stay.
 - (c) **PASS with AMEND (quantifier).** `cor:RH` (line 1167) is `T ≥ ½ log 2` throughout (its proof via
@@ -154,12 +154,12 @@ to "the inequality `X_T(w)` at such `τ`" without the regularity qualifier. Add 
 PASS (`thm:Zexh`; `prop:env`(ii) + `lem:mbounds`(iii) Kronecker, lines 671–676).
 
 ### Thm 3.2 (`H_θ ⟺ β_max ≤ θ`; logical form of the negative) — memo 228–254
-- (i) **PASS.** Paper 46 Thm 27.10 (`46/main.md:11476–11499`) is stated for `θ ∈ [½,1)` and proved by the
+- (i) **PASS.** Paper 47 Thm 27.10 (`46/main.md:11476–11499`) is stated for `θ ∈ [½,1)` and proved by the
  Mellin/uniqueness argument (not Landau's theorem); Cor 27.10a (11501–11508) gives the `β_max` form.
  The memo's `θ ∈ (½,1)` plus "`H_½ ⟺ RH`" is covered.
 - (ii),(iii) **PASS** (pure translation through (i) and Thm 3.1(c)).
 - (iv) **PASS.** The memo correctly refuses to state "PNT does not imply RH" as a fact about ζ and casts
- the negative as a class/derivation statement in the sense of Paper 46 Thm 18.1 / Rem 18.1a
+ the negative as a class/derivation statement in the sense of Paper 47 Thm 18.1 / Rem 18.1a
  (`46/main.md:4785–4820`: "a derivation from `𝔓` … is a derivation for every structure satisfying `𝔓`").
  I found no sentence in §§3–4 that slides into the factual reading (memo item 8): checked lines 228–354.
 - (v) **PASS.** "`ψ(x) − x ≠ O(x^θ)` for every `θ < β₀`" follows from Thm 27.10 (⇒) contrapositive
@@ -181,7 +181,7 @@ With Lemma 3.1b above, "X_T strictly solvable ⟺ 𝔈_T < 0" upgrades to "X_T s
  signs, Lemma 4.2b). Worse, the phase-155 record says the clause is **false** on most of that range:
  `T*_{∞,P} ≤ 0.5958` (Galerkin *upper* bound on the threshold, i.e. the Galerkin infimum of `A_∞|_{P_T}` is
  negative for `T > 0.5958`; `R155_023:23–24`, `R155_029:11`, DIAGNOSTIC in floating point; the remark at
- `main.tex:2312–2316` explicitly says strict positivity at `½ log 2` is *not* re-proved in Paper 47). So for
+ `main.tex:2312–2316` explicitly says strict positivity at `½ log 2` is *not* re-proved in Paper 46). So for
  `T ∈ (0.5958, log 2]` the deleted comb `a` fails `D_T(a)` by the record, and for `T ∈ [½ log 2, 0.5958]` the
  sign is not on record either way.
  **Fix:** "(i) `D_T(a)` holds for `T < ½ log 2` (`prop:arch`(iii)) and **fails for every**
@@ -189,7 +189,7 @@ With Lemma 3.1b above, "X_T strictly solvable ⟺ 𝔈_T < 0" upgrades to "X_T s
  `λ^P_∞(T)`, not decided here (DIAGNOSTIC: negative for `T > 0.5958`, `R155_023`)." The failure interval,
  `N ≥ 5 ⟹ ½ log N ≥ 0.8047 > 0.74921`, is correct and is all that Cor 4.4 and Prop 1.3(b) use.
 - **(ii) Amplification / Lemma 4.2b — PASS.** Checked: `J = (−T, −T+ℓ)`, `J+u₀`, `J+2u₀` pairwise disjoint
- iff `ℓ ≤ u₀`; `J ∪ (J+u₀) ⊂ I_T` iff `ℓ ≤ 2T − u₀`; with Paper 47's `c_F(u) = ∫F(t)\overline{F(t−u)}dt`
+ iff `ℓ ≤ u₀`; `J ∪ (J+u₀) ⊂ I_T` iff `ℓ ≤ 2T − u₀`; with Paper 46's `c_F(u) = ∫F(t)\overline{F(t−u)}dt`
  (line 116) and `F_φ = φ + φ(·−u₀)`, `c_{F_φ}(u₀) = ⟨φ + φ_{u₀}, φ_{u₀} + φ_{2u₀}⟩ = ‖φ‖²` (three cross terms
  vanish). `φ ↦ F_φ` injective, so `V` is infinite-dimensional; `P_T ∩ V` has codimension `≤ 2` in `V`, hence
  contains a nonzero `F_φ`; `F_φ` smooth so `Lev < ∞`; `𝔞^{(a)}(F) = 𝔞^Λ(F) − (2c/√n₀) c_F(log n₀)` and
@@ -216,7 +216,7 @@ continuity of `m` at `0`. `limsup λ^A_T(a) ≤ C₀ − A_S < 0`. Consistent wi
 The HEURISTIC reading (for ζ, `σ_T(s/T) ↛ σ_T(0)` because new atoms `log n ~ 2T` enter) is correctly labelled.
 
 ### Cor 4.4 (classical prime-side results void per window) — memo 322–341
-**PASS as METHOD-CONSTRAINT** (the label the memo gives, matching Paper 46 Thm 18.1's label at
+**PASS as METHOD-CONSTRAINT** (the label the memo gives, matching Paper 47 Thm 18.1's label at
 `46/main.md:4785, 4805`). Closure properties check: `C_PNT(θ)` and `C_zeros` closed under both operations
 (by Thm 4.2(iii)); `C_BT = {0 ≤ a ≤ Λ}` closed under deletion only — correct. Window ranges: deletion needs
 `N ≥ e^{2T}`, i.e. `N ≥ 5` for `T ≥ 0.74921` (`e^{1.498} = 4.47`) — correct; amplification `n₀ = 2` for any
@@ -232,7 +232,7 @@ equivalent but the Thm 18.1 form avoids the word "sound".
 
 ### Prop 4.6 (irreducibility) — memo 343–354
 **PASS as method constraint; AMEND label of one sentence.** (a) and (b) are consequences of Cor 4.4 and
-Paper 46 T1/T2 respectively. The sentence "the minimal hypothesis with both properties is … `D_T` itself"
+Paper 47 T1/T2 respectively. The sentence "the minimal hypothesis with both properties is … `D_T` itself"
 is interpretive, not a theorem (no minimality is proved); label it HEURISTIC alongside the last sentence,
 or delete it. Per-window derivations of record (Paper 42, Zhu `cor:KEP08`, `thm:C`) — correct list.
 
@@ -241,9 +241,9 @@ All numbers in the memo that I could recompute agree to the printed digits (see 
 the only labelled-PROVED numbers are (a) roots of monotone explicit equations and (b) two evaluations
 of a proved inequality; both are honestly described in memo item 4.
 
-### `X_T` name clash — **CONFIRMED, AMEND.** Paper 46 uses `X_T` for the Tate collar operator
-(`46/main.md:673–677`, `790–796`, bordered form `[[L_T, X_T],[X_T^*, 𝔅_T]]`). Since Paper 47 §9 will be read
-next to Paper 46 Part III/IV, rename now (suggest `𝖠_T(w)`, "alignment inequality", or `Al_T(w)`).
+### `X_T` name clash — **CONFIRMED, AMEND.** Paper 47 uses `X_T` for the Tate collar operator
+(`46/main.md:673–677`, `790–796`, bordered form `[[L_T, X_T],[X_T^*, 𝔅_T]]`). Since Paper 46 §9 will be read
+next to Paper 47 Part III/IV, rename now (suggest `𝖠_T(w)`, "alignment inequality", or `Al_T(w)`).
 
 ---
 
@@ -274,10 +274,10 @@ With these, the closing sentence of the memo is correct as mathematics: the equi
 `∀T D_T ⟹ RH ⟹ ∀T λ^W_T > 0 ⟹ ∀T ∃w X_T(w) ⟹ ∀T D_T` is on record (`main.tex:137–142, 1167–1182,
 1137–1141, 1091–1095`), the per-window quantity is `𝔈_T = −λ^W_T`, the per-window converse
 `λ^A_T ≥ 0 ⟹ λ^W_T ≥ 0` is genuinely not on record, and the "void per window" is a method constraint of the
-Paper 46 Thm 18.1 type, not a statement about ζ. No sign for ζ beyond `log 2` is claimed anywhere in the
+Paper 47 Thm 18.1 type, not a statement about ζ. No sign for ζ beyond `log 2` is claimed anywhere in the
 memo (checked). Row-D label unchanged.
 
-## What may enter Paper 47 §9 (after the fixes)
+## What may enter Paper 46 §9 (after the fixes)
 
 - **§9.x "Row D at a window is a finite condition."** Prop 1.1 (with `v ≥ 0` in (iii)), Cor 1.2, Prop 1.3.
  PROVED.
@@ -290,7 +290,7 @@ memo (checked). Row-D label unchanged.
 - **§9.x "The alignment inequality and its exact strength."** Lemma 3.0 (with the definite `τ_env(w)`),
  Thm 3.1(a),(c), the new Lemma 3.1b (complete-form non-attainment) and the per-window equivalence
  `∃w X_T(w) ⟺ λ^W_T > 0`, Prop 4.1 (`𝔈_T`, `RH ⟺ lim λ^W_T ≥ 0`). The OPEN per-window converse should be
- stated as OPEN in the text. Thm 3.2 as a remark citing Paper 46 Thm 27.10/Cor 27.10a.
+ stated as OPEN in the text. Thm 3.2 as a remark citing Paper 47 Thm 27.10/Cor 27.10a.
 - **§9.x "Finite modifications" (METHOD-CONSTRAINT).** Thm 4.2 (fixed (i)), Lemma 4.2b, Prop 4.3, Cor 4.4,
  Rem 4.5 (citation), Prop 4.6(a),(b).
 - **Not for the paper:** the HEURISTIC readings (Zhu's law limit, mode count `≈ 20`, "the new atoms are what

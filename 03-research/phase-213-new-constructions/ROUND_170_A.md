@@ -1,6 +1,6 @@
-# Minimal negative mass of a truncated certificate of paper 47
+# Minimal negative mass of a truncated certificate of paper 46
 
-Fix a window T>0 and a finite, symmetric, nonempty list Z of real ordinates, with their multiplicities. In the notation of finDet and finZ of paper 47 let g_Z(u)=Σ_{γ∈Z}cos(γu). For a smooth real even profile, equal to one on [−2T,2T] and supported in [−L,L], let ν be the measure with transform w g_Z, normalized by ν(ℝ)=|Z|. Its negative mass is ν⁻(ℝ). For L sufficiently large,
+Fix a window T>0 and a finite, symmetric, nonempty list Z of real ordinates, with their multiplicities. In the notation of finDet and finZ of paper 46 let g_Z(u)=Σ_{γ∈Z}cos(γu). For a smooth real even profile, equal to one on [−2T,2T] and supported in [−L,L], let ν be the measure with transform w g_Z, normalized by ν(ℝ)=|Z|. Its negative mass is ν⁻(ℝ). For L sufficiently large,
 
     c(Z,T)/L² ≤ inf_w ν⁻(ℝ) ≤ C(Z,T)/L².
 
@@ -16,4 +16,4 @@ This gives the bound for each admissible extension.
     w(u)=b(u/L)+χ(u)(1−b(u/L)).
 For L larger than the support radius of χ, w satisfies all the conditions. The first term multiplied by g_Z has nonnegative density. On the fixed support, the correction e_L=χ(1−b(·/L)) and its first two derivatives are O_T(L^(−2)) by Taylor and parity. By the direct L¹ bound at low frequencies and two integrations by parts at high ones, the L¹ norm of its Fourier density is O_T(L^(−2)). Multiplying by g_Z only sums translations, at cost ≤|Z|. This bounds the negative mass of the total measure.
 
-**Cross-check and scope.** The main antecedent is finDet/finZ in paper 47 and its development in R155_040/041/043; the probe G2_B6 already showed that a finite list does not certify the sign. The lower bound uses the same annihilating polynomial and adds a comparison with Q_n at the scale where the transform has vanished. The upper bound builds profiles of matching order. The lower constant depends on the separation of all the nodes and is not uniform when zeros are added. A rate for the finite obstacle is obtained; the sign of the tail of the real spectrum and of the full form remains unjustified.
+**Cross-check and scope.** The main antecedent is finDet/finZ in paper 46 and its development in R155_040/041/043; the probe G2_B6 already showed that a finite list does not certify the sign. The lower bound uses the same annihilating polynomial and adds a comparison with Q_n at the scale where the transform has vanished. The upper bound builds profiles of matching order. The lower constant depends on the separation of all the nodes and is not uniform when zeros are added. A rate for the finite obstacle is obtained; the sign of the tail of the real spectrum and of the full form remains unjustified.

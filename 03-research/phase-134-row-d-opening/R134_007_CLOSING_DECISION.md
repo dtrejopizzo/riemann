@@ -14,12 +14,12 @@
 
 ## 2. Decision
 
-    ROW D: NO LABEL. The opening campaign is closed; Paper 46 stands as
+    ROW D: NO LABEL. The opening campaign is closed; Paper 47 stands as
            row D's opening state, fit per R134.005 after the bounded erratum.
 
 Recorded:
 
-1. **What Paper 46 proves.** Lemma 3.1 (`Π` is a bijection onto the primitive
+1. **What Paper 47 proves.** Lemma 3.1 (`Π` is a bijection onto the primitive
    class; the two Tate conditions are exactly compact support of `e^{−|t|/2}∗F`);
    Thm 3.6 (`Λ(g) = 𝔏(g⋆g^†)`, `𝔏 = −Π²(W_fin+ω_∞)`, with `Π²ϖ = 0`); Thm 3.7
    (`RESTATEMENT`: RH ⟺ row D's target ⟺ `𝔏` positive-definite ⟺ Fourier
@@ -56,7 +56,7 @@ Recorded:
    `‖π(g)Ω‖²`, constructed **without** using RH — equivalently a Riemann–Roch
    identity with a duality that moves the primitive sector off itself ((R5))
    and a vanishing theorem. Rows A–C supply the equality; nothing in the
-   repository supplies the norm, and Paper 46 proves which shapes it cannot
+   repository supplies the norm, and Paper 47 proves which shapes it cannot
    have.
 
 ## 3. Next

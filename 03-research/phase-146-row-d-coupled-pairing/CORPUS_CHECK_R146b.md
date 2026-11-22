@@ -25,7 +25,7 @@ commutative ring under **addition**, i.e. no `Z[Frob]` or `Z[π]`-module structu
   model-uniform, (ii) grows quadratically, and (iii) reads unimodularity. No object in the corpus does
   all three."* An additive `Z[Frob]`-degree form is exactly a candidate for "coupling K to the
   Frobenius lattice" that has never been tried in this additive form.
-* Paper 46's Restatement 12.4a (cited in `CORPUS_CHECK_R146.md` §6) records the identity
+* Paper 47's Restatement 12.4a (cited in `CORPUS_CHECK_R146.md` §6) records the identity
   `Frob_n ⋆ Frob_n^† = Δ^{(n)}` — the multiplicative self-pairing — but never combines two different
   `n` **additively** before pairing (i.e. never forms `(m·Δ + n·Frob_k)` and pairs it with itself).
 
@@ -102,7 +102,7 @@ single most robust recurring finding, and directly the obstruction phase 146 mus
 * `03-research/phase-139-row-d-two-falsifiers/R139_001_ROUND1.md:1044` (table row W4c) states
   the comparison explicitly: `Δ·Δ = 2−2g` (finite genus, the elliptic/function-field case) **vs.**
   `Δ·Δ = −∞` (Spec Z) — classified **PRESENT** "as a recorded degeneration, not as an analogue," citing
-  Paper 46 §13.3 "the three genera, recorded and not reconciled" (`04-papers/46-intersection-frame-defect/archive/main.md:3561`
+  Paper 47 §13.3 "the three genera, recorded and not reconciled" (`04-papers/47-intersection-frame-defect/archive/main.md:3561`
   region — three different growth regimes for the diagonal self-intersection, never reconciled into one
   finite invariant).
 * Attempts to assign the divergence a **finite regularized value** exist and are recorded as the
@@ -237,7 +237,7 @@ coupling, not additive) and Restatement 12.4a's stated absence of a model-free d
   `CORPUS_CHECK_R146.md` §6): "the sign is the interaction term between the polar/archimedean block and
   the Frobenius lattice, and it is a **phase-coherence phenomenon of unimodular local roots**" — i.e. the
   corpus's standing hypothesis locates the sign in a *phase/coupling* structure, not explicitly in
-  additive vs. multiplicative algebra on `Frob`. Paper 46 Restatement 12.4a is cited alongside as: "no
+  additive vs. multiplicative algebra on `Frob`. Paper 47 Restatement 12.4a is cited alongside as: "no
   model-free derivation; the datum is `Frob_n ⋆ Frob_n^† = Δ^{(n)}`" — a purely multiplicative identity,
   offered as the *only* model-free datum in hand, which is indirect evidence *for* (not against) the idea
   that the multiplicative semigroup alone is insufficient and something more (additive combination) is

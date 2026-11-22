@@ -1,7 +1,7 @@
 # R162_2101 — Why the exact weight at 2 is (nearly) a Type I degeneracy
 
 Pure mathematics (§1–§3) plus labelled float checks (§4, **UNCERTIFIED**).
-Inputs: R162_2001, R162_1601/1803, R162_1701 Prop 5, R162_902, R162_1401 Thm 3, Paper 47 eq:form/eq:W/eq:symbol,
+Inputs: R162_2001, R162_1601/1803, R162_1701 Prop 5, R162_902, R162_1401 Thm 3, Paper 46 eq:form/eq:W/eq:symbol,
 R160_M4_R1 Thm B (Pólya-kernel truncation, 106.09).
 Scripts (new, `scripts/c3/`): `t2101_single_atom.py`, `t2101_sc.py`, `t2101_W.py`, `t2101_W2.py`, `t2101_polya.py`.
 

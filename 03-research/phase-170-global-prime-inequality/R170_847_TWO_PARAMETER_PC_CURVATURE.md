@@ -212,7 +212,7 @@ The factor `r/q` is not optional. It gives exactly
  \tag{4.5}
 \]
 
-**Proof.** The proof of Paper 47 Theorem `PCfinite` uses only (4.2),
+**Proof.** The proof of Paper 46 Theorem `PCfinite` uses only (4.2),
 (4.4), `JL(r)=L(r)^*J`, commutation of the translation sums, and the
 definition of `H`. All of these hold for `(r,q)` separately. Repeating
 those steps gives (4.5). QED.

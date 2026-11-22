@@ -1,10 +1,10 @@
 # R186_045 — Synthesis after round 20: what global object in T, computable from σ = (m, Λ|𝒩_T) and not from h*, can carry the sign?
 
 Phase 186, decision round (not a construction round). Labels
-PROVED / CITED / CONDITIONAL / OPEN / NO-GO / NUMERICAL (+ ARGUED). Paper 47, the grid and the crossword are not touched.
+PROVED / CITED / CONDITIONAL / OPEN / NO-GO / NUMERICAL (+ ARGUED). Paper 46, the grid and the crossword are not touched.
 Read: README rounds 14–20; R186_042/043/044, audits 114/115; R186_004 (Kreĭn flow), R186_028, R186_034 (Thm 3.1,
 W-det), R186_036 (Lemma 2, Theorem 3), R186_032 (Ω); grid log 25–34 and §3; R185_005B; phase-187 PATTERN_REPORT and
-CONSTRAINTS (1.11–1.12, 2.1–2.5, 3.1); R183_031 (Thm 1 and prolate NO-GO); R183_016; R183_018 Thm 5.1; R185_001; Paper 47
+CONSTRAINTS (1.11–1.12, 2.1–2.5, 3.1); R183_031 (Thm 1 and prolate NO-GO); R183_016; R183_018 Thm 5.1; R185_001; Paper 46
 lem:roughEF, prop:negtrace, lem:monoT, lem:contA. Script: `r045_moments.py` (self-contained on top of `r034_det.py`; 1 min).
 
 ## 0. Verdict in five lines

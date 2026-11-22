@@ -32,7 +32,7 @@ numerics is only cited from CALIB_R1_001, CALIB_R2_001 and LEMMA_E_EPSTEIN_001, 
 ## 0. Readings and corpus check
 
 I read CALIB_R1_001, CALIB_R2_001 together with P6_interior.json, BUILD_R2_001 (Lemma M), CPOS_CLASS_001 (thm:noimport, h1–h6),
-MAP_200_001 (§4: S1–S8), LEMMA_E_EPSTEIN_001, LEMMA_13_1_CUMULANT_001 and P47 thm:ext-half / rem:ext-killing / prop:ext-gauge
+MAP_200_001 (§4: S1–S8), LEMMA_E_EPSTEIN_001, LEMMA_13_1_CUMULANT_001 and P46 thm:ext-half / rem:ext-killing / prop:ext-gauge
 (main.tex l. 9692–9735). From the rest (META_200 Φ200, AUDIT_DCONS Thm 3′, MORI15_EXTREMAL, PATTERN/MECH, AUDIT_CONSTRAINTS) I used
 the index entries.
 
@@ -155,7 +155,7 @@ Here the new datum is Danskin's gradient itself, s(Λ), measured in CALIB_R2. It
 
 **Corollary 2.4 (NUMERICAL + Prop. 2.1).** At μ = 15, ∇λ_A = −s, with s_2 = 2·2^{−½}·0.0638 = 0.0903, s_3 = 5.7e−4, s_4 = 1.6e−6, …
 Then λ_A(Λ + εδ_2) = λ_A(Λ) − 0.0903ε + O(ε²). That is, removing mass from prime 2 (ε < 0) **raises** the floor at first order.
-It is the a_P mechanism in reverse: P47 cor:Tarch says that removing *all* primes < P lowers the floor in [0.60, ½log P]. What
+It is the a_P mechanism in reverse: P46 cor:Tarch says that removing *all* primes < P lowers the floor in [0.60, ½log P]. What
 §1.2(c) says does not contradict that: it is local at g* and first order.
 
 ## 3. Object I — the cone of Euler defects over the common near-kernel
@@ -241,7 +241,7 @@ involving a single new prime. This is the semiring principle: the contact m ≈ 
 ### 4.3 New reason written out (against the index)
 
 - **Truncated / partial comb:** 0 records.
-- **Monotonicity in T (P47 lem:monoT).** It does not coincide. Shrinking T changes the test. Here the test is fixed (g* of the
+- **Monotonicity in T (P46 lem:monoT).** It does not coincide. Shrinking T changes the test. Here the test is fixed (g* of the
   full window) and the contacts are truncated.
 - **Theorem X ("every first-order discriminant is a functional of h*").** III is a functional of h* = g*, and I accept that. The
   difference is that it does not seek a first-order discriminant, but a **chain of signs of residues** at scales separated by

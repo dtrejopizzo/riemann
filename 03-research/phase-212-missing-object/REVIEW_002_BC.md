@@ -84,7 +84,7 @@ claim**. There are at least three families that see the window and are not the m
   empty class of candidates); words of truncated translations QV_aQ (211/ROUND_005_A Lemma 3.2,
   Prop. 3.3); compressed J_T and paths B_T^{−1/2}J_TB_T^{−1/2} (R170_301 §§2–5);
 - rank-one functionals: ⟨F,c⟩, ⟨F,s⟩ (R170_301 (3)–(4)), A(F), B(F);
-- sampling: the Nyquist mesh (P47 thm:nyq, listed in `README.md` §3).
+- sampling: the Nyquist mesh (P46 thm:nyq, listed in `README.md` §3).
 
 For the first one can say what (B) gives. **Lemma B-1 (PROVED).** Let Q = 1_{I_T}, R = 1 − Q,
 U_i the translation by log i and ℓ_i = x_i Q U_i with x_i ∈ ℂ. Then

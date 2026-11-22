@@ -94,7 +94,7 @@ for `a=0.35`, `\lambda_{\min}(\mathcal W)` is still positive
 `T_{\mathcal W}<T_q\approx1.742`.  This is case 2, "shielding", observed
 directly.
 
-**[phase 134 — resolution note of record, from Paper 46 §9.3(3)
+**[phase 134 — resolution note of record, from Paper 47 §9.3(3)
 and `R134_002` §6(3), each an independent re-run.  Section 3 already declares
 "one resolution only, no convergence study", so this note is **within** the
 declared scope and does not contradict it; it records what that disclaimer
@@ -134,7 +134,7 @@ exists; `J(F_*) != 0` there, so **Gate R fails**; case 2 of P124.013
 Theorem 3.1 is realized; and the `zeta` scan exhibits no first contact.  The
 last of these is, by the same remark, **incapable by construction** of
 supporting any conclusion about `zeta` — as it should be, and as Section 3's
-own scope sentence intends.  Paper 46 Theorem 7.1 supplies the structural
+own scope sentence intends.  Paper 47 Theorem 7.1 supplies the structural
 reason behind the separation: `Xi_a`'s local contacts are not shell volumes,
 so its would-be Frobenius is not a partial isometry (Paper 44 Theorem 3ter.6).
 

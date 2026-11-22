@@ -11,7 +11,7 @@ Lemma 6.10, Theorem 6.11, Remark 6.12). Corpus consulted: R183.001,
 `phase-162-row-d-first-contact-closure/grid/R162_2300_MASTER_GRID.md`
 (row 25: Riesz → Sonin, E1); `phase-161-.../R161_014_SONIN_GAMMA_COERCIVITY.md`
 (Sonin–Gamma coercivity on a product port; a different object, not
-duplicated); Paper 47 (`thm:Z`, `thm:Zexh`, `prop:TK`, `thm:index`).
+duplicated); Paper 46 (`thm:Z`, `thm:Zexh`, `prop:TK`, `thm:index`).
 
 **Main finding (not a new mechanism).** R183.017's alignment is
 *exactly* Connes–Consani's proof: their Lemma 6.9 is R183.017's lemma
@@ -40,7 +40,7 @@ coordinate x=log u set η(x)=g(e^x), so that ĝ(z)=∫η(x)e^{-izx}dx and
 η is R183.015's test h (φ=ĝ on the real line). g's support in
 [2^{-1/2},2^{1/2}] ⟺ supp η ⊂ [−T,T] with **T=½log 2**: this is the
 prime-free window of R183.015 (k log p ≥ 2T for every p) and coincides
-with Paper 47's window T=½log2.
+with Paper 46's window T=½log2.
 
 CC only impose ĝ(−i/2)=0 (l.115, Theorem 6.11). With that condition
 k(u)=u^{1/2}∫_0^u v^{-1/2}g(v)d^*v has compact support in the same
@@ -206,7 +206,7 @@ Landau–Widom the number of eigenvalues >1 of the compression grows
 linearly in |I| (CONDITIONAL: the extension of (104) to |I|>log2 without
 changing the kernel is not in CC). Under that extension, mechanism (i) is
 unavoidable for large T. The crossing T_2 with λ_2(T_2)=1 is OPEN (not
-computed; no numerics by rule). Comparison: Paper 47 `thm:index` shows
+computed; no numerics by rule). Comparison: Paper 46 `thm:index` shows
 that the full archimedean form A_∞ on P_T has n_−=0 up to T≈0.58 and
 n_−=1 up to T≥log2: CC's negative direction belongs to the **remainder**
 relative to Sonin, not to W_∞ (which is positive with no correction at
@@ -276,7 +276,7 @@ that construction: if the new remainder R^{new}_{S,T} is bounded on L²
 with a single negative eigenvalue, Theorem 3.1/3.3 apply verbatim, and
 the condition is (3.4) with its constants.
 
-## 5. Crossing with Paper 47: certificate or outside the class?
+## 5. Crossing with Paper 46: certificate or outside the class?
 
 ### Proposition 5.1 (PROVED)
 
@@ -296,11 +296,11 @@ a|F̂(0)|² amounts to adding to the zero side a term c_a·ŵ(τ−0), i.e. a
 fictitious multiplicity (proportional to a) at γ=0: this is exactly the
 certificate for the zero measure augmented by an atom at γ=0, i.e.
 CC's "ζ(z)(z−½)^{17}" (Cor. 2, l.128–135; CITED, not a new observation).
-In Paper 47's formulation it is the class of `thm:Zexh`(ii) with a third
+In Paper 46's formulation it is the class of `thm:Zexh`(ii) with a third
 multiplier β_2 on the function ĝ_c=k̂_c (besides β_0,β_1
 on ĝ_0,ĝ_1). The claim that the dual of that enlarged problem
 coincides with the primal (analogous to `thm:Zexh`) is CONDITIONAL: it
-has not been verified that Paper 47's proof passes with the third
+has not been verified that Paper 46's proof passes with the third
 restriction.
 
 ### Answer to question 5
@@ -322,7 +322,7 @@ restriction.
   and is not known to be implied by RH (by CC Cor. 2 it is equivalent to
   the zeros dominating the Sonin trace). Verdict: a genuinely stronger
   sufficient condition than D; not a weaker one.
-* `thm:index`: CC's n_−≤1 (for Id−K_I) and Paper 47's n_−∈{0,1,2}
+* `thm:index`: CC's n_−≤1 (for Id−K_I) and Paper 46's n_−∈{0,1,2}
   (for A_∞ on P_T) are different objects; at T=½log2 the former equals 1
   and the latter 0. There is no contradiction nor transfer.
 
@@ -370,7 +370,7 @@ By Cor. 3.2, the last condition is positivity with a gap on ker ℓ.
    |I|>log2 the unbounded archimedean term exactly compensated the
    Π_p, the NO-GO would reduce to "CC's decomposition does not extend
    without changing S"; check against Theorem 3.6's form.
-3. Cor. 5.2: the identification with Paper 47's class with β∈R³ and
+3. Cor. 5.2: the identification with Paper 46's class with β∈R³ and
    the extension of the TK ceiling are sketched, not proved; the
    equivalence "Weil on ker ℓ ∀T ⟺ RH" is cited from CC and the classical
    argument, not re-proved here.

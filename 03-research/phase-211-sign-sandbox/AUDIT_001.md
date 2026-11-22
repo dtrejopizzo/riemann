@@ -1,4 +1,4 @@
-# Re-audit of 03-research phases 0–99 against window positivity (Paper 47)
+# Re-audit of 03-research phases 0–99 against window positivity (Paper 46)
 
 Target recalled: $m(\tau)=\Re\psi(\tfrac14+\tfrac{i\tau}2)-\log\pi$, $s_T=m-\sum_{\log n<2T}v_n\cos(\tau\log n)$,
 $\mathfrak a_T(F)=\frac1{2\pi}\int s_T|\hat F|^2$ on $\mathcal P_T$ (Tate-moment-free $F\in L^2(-T,T)$); target
@@ -9,14 +9,14 @@ A–G covering phases 0–99).
 
 ## Zeroth-order finding, true of the whole range 0–99
 
-Every phase in this range (on disk: 0, 3, 4, 5, 32–99; 6–31 only as index summaries) predates Paper 47's
+Every phase in this range (on disk: 0, 3, 4, 5, 32–99; 6–31 only as index summaries) predates Paper 46's
 reduction entirely. Their basic object is never the explicit prime-only kernel $s_T(\tau)$ on a finite window;
 it is always one of: a Kreĭn-space/Hilbert–Pólya realization $(\mathcal K,Q)$ carrying the *zero set* $\Gamma$
 of $\zeta$ as data (phases 4, 5, 34, 53, 60, 61, 64, 65...), a CCM/prolate spectral triple indexed by zeros
 $\gamma_n$ (phases 0, 5, 32, 59, 60, 71), a Weil–Toeplitz algebra of windows whose symbol is defined by
 "visibility of off-line quadruples $(\delta_j,\gamma_j)$" (phase 45, Doc 134), or a Fredholm/adjugate pencil
 built from a *conjectural* off-line zero (phases 72–99, the long E7x/P7x–P99 Feshbach/Cauchy-projection/
-adjugate chain). None of these objects is the finite vector $(\Lambda(n))_{n<e^{2T}}$ that Paper 47 shows
+adjugate chain). None of these objects is the finite vector $(\Lambda(n))_{n<e^{2T}}$ that Paper 46 shows
 carries the whole problem (Prop. "finite", `main.tex` line ~140). Reading any of their stated theorems into a
 statement about $\lambda_A(T)$ requires passing through exactly the equivalence the project rules bar (zero-set
 object $\leftrightarrow$ prime-only quadratic form), so nothing here converts into reduced forms (L2)/(N)/(S)
@@ -38,7 +38,7 @@ or zero-free) and finds none that survive close reading.
   (`proofs/Day22-coercivity.md`): "does $\mathfrak t_+=\sum_\gamma|F(\gamma)|^2\ge c\rho\|F\|^2$ follow from
   $D^-=\infty$, or is a gap condition needed?" They use "Nyquist" in the Beurling–Landau sampling sense (a gap
   in the *zero sequence* $\Gamma$ larger than $\pi/d$ kills the lower frame bound), which is a different
-  Nyquist mesh from Paper 47's $\pi k/2T$ (samples of $\hat F$ indexed by $k$, fixed by the window $T$, not by
+  Nyquist mesh from Paper 46's $\pi k/2T$ (samples of $\hat F$ indexed by $k$, fixed by the window $T$, not by
   zero spacing). The depth-split idea ("coercivity only needed near off-line zeros") is a genuine technical
   tool but is stated and provable only relative to a hypothetical off-line zero — i.e. it is RH-shaped by
   construction, not translatable to the prime-only form without the barred equivalence. P8-ThmC (phase-4)
@@ -46,9 +46,9 @@ or zero-free) and finds none that survive close reading.
   external lever, already correctly labelled. No hit, no mislabel found on inspection.
 - **Phase 5** (`phase-5-structural`): per-prime anatomy $R_p\approx a_pW(\log p)$ (P5-2); de Branges comparison
   B3.2 (folds into ES-16, CIRCULAR/FALSIFIED by Conrey–Li). The per-prime anatomy is closer in spirit to
-  Paper 47's comb $v_n\cos(\tau\log n)$ (it is literally indexed by primes), but the file frames positivity
+  Paper 46's comb $v_n\cos(\tau\log n)$ (it is literally indexed by primes), but the file frames positivity
   structurally in $\{R_p\}$ bounded by a Bessel inequality $\le 1$ that is stated as the wall, not removed by
-  anything in Paper 47 (Paper 47's own barriers W-lin/W-det are a modern, sharper version of the same
+  anything in Paper 46 (Paper 46's own barriers W-lin/W-det are a modern, sharper version of the same
   obstruction). Re-read with today's finite reduction in mind: $R_p$ is a per-prime decomposition of the
   *continuous* Weil form (all $\tau$, implicitly $T=\infty$), not a per-window object, so it does not shortcut
   (L2)/(N)/(S). No hit.
@@ -87,7 +87,7 @@ Theorem 1.3 of that document (strict vs weak essential positivity, "a certificat
 nothing") is a real dichotomy theorem, but it is a dichotomy about an operator family parametrized by a
 conjectural zero configuration; it does not supply, and the document does not claim to supply, a bound on
 $s_T$. No hit. P36-4's "two-variable Weil form" / INV_J_001 wall = pair correlation (Hardy–Littlewood, parity
-obstruction) is the same parity-obstruction family Paper 47 encounters independently in problem (N) (the
+obstruction) is the same parity-obstruction family Paper 46 encounters independently in problem (N) (the
 requirement "exponent $\frac12$ cancellation, with sign" is exactly what a parity-type sieve bound
 cannot deliver) — already closed there under a different name; no new angle found; not proposed as a route
 (ES-4/NG-A4/P36-4 already cover "parity problem" as a named wall in the index, so this is not new).
@@ -135,14 +135,14 @@ index verdicts).
 ## Corpus-level tools worth naming (not hits, but closest adjacent objects)
 
 1. Phase-4 Day21/Day22 coercivity and the "depth split" (coercivity needed only where off-line zeros sit) is
-   the clearest precursor in spirit to Paper 47's Schur-complement reduction (L2) — both say "the problem
+   the clearest precursor in spirit to Paper 46's Schur-complement reduction (L2) — both say "the problem
    localizes to a finite/near piece and is harmless elsewhere" — but phase 4's localization is in the zero
-   variable $\gamma$, Paper 47's is in the contact variable $n<e^{2T}$; the translation between them is exactly
+   variable $\gamma$, Paper 46's is in the contact variable $n<e^{2T}$; the translation between them is exactly
    the barred equivalence, so this is noted only as a structural analogy, not a route.
 2. Phase-45 Doc 134's corona/essential-spectrum symbol calculus is the closest precursor to treating a family
    of windows as a single operator-valued object with a computable "symbol"; again built from zero visibility,
    not from $\Lambda(n)$.
-3. The parity obstruction (P36-4, NG-A4, ES-4 family) recurs in both the old corpus and Paper 47's problem (N)
+3. The parity obstruction (P36-4, NG-A4, ES-4 family) recurs in both the old corpus and Paper 46's problem (N)
    ("mean-square/large-sieve bounds do not suffice... a parity-type cancellation is needed with sign"); this is
    consistency between the old and new material, not a new finding, and is not proposed as a route since it is
    already closed under both names in the index.
@@ -151,7 +151,7 @@ index verdicts).
 
 (Honest: empty.) No phase in 0–99 supplies a result that, read against today's finite reduction, proves or
 nearly proves $\lambda_A(T)\ge0$ beyond $\tfrac12\log5$, and no dropped tool was found whose stated obstacle is
-actually removed by Paper 47's finite reduction, Nyquist sampling identity, or exact Schur coupling. The
+actually removed by Paper 46's finite reduction, Nyquist sampling identity, or exact Schur coupling. The
 entire range is pre-reduction and zero-set-indexed; its results do not have prime-only content that survives
 translation.
 

@@ -3,7 +3,7 @@
 Object: Q_M(s) = s^⊤𝔸_M s for the profile F_0 of STATEMENT_001 §2 (2T_0 < log 2), N = N(M) = ⌈M e^{2T_0}⌉,
 s_N(τ) = m(τ) − Σ_{2≤n<N} v_n cos(τ log n), and
 
-    Q_M(s) = (1/2π) ∫ F̂_0(τ)² |P_s(τ)|² s_N(τ) dτ,    P_s(τ) = Σ_{m≤M} s_m m^{iτ}     (Paper 47 prop:AM(ii), CITED).
+    Q_M(s) = (1/2π) ∫ F̂_0(τ)² |P_s(τ)|² s_N(τ) dτ,    P_s(τ) = Σ_{m≤M} s_m m^{iτ}     (Paper 46 prop:AM(ii), CITED).
 
 Family studied: s_w(m) = m^{−1/2} w(m/M), w ∈ C^∞[0,∞), w ≡ 1 on [0, e^{−L}], w ≡ 0 on [1,∞), L > 0 fixed.
 

@@ -1,4 +1,4 @@
-# R154.031 — Literature reading for Paper 47 (primary sources, read in full)
+# R154.031 — Literature reading for Paper 46 (primary sources, read in full)
 
 * Task: (P154.9) read the five items flagged as "must obtain / must read before any
 priority claim" in R154.013, and replace the secondary-source entries there by quoted primary text.*

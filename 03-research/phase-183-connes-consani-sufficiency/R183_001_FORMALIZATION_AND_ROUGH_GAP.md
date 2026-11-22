@@ -140,7 +140,7 @@ Let \(\mathcal P_T\subset L^2(I_T)\) be the subspace defined by
 \]
 
 The semilocal form, with the principal-value normalizations fixed by
-Poisson, is identified via the trace formula with Paper 47's Weil form
+Poisson, is identified via the trace formula with Paper 46's Weil form
 \(\mathfrak a_T\). Hence the verifiable version of
 Conjecture 4.1 is
 

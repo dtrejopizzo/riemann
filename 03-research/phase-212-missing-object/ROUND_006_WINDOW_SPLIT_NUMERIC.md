@@ -334,7 +334,7 @@ distinguishes `c = 1` with that precision. Resolution `N = 30`; no convergence c
 
 - Section 10.3 contributes nothing new: the narrow two-sided window in `c`, the ladder of tiny
   eigenvalues, concavity in `c` and the derivative `−Π(F*)` are in phase 211 (`ROUND_003_A.md`,
-  `ROUND_002_D.md`, `ROUND_002_E.md`, `ROUND_021_A.md`) and in Paper 47. The width of the window in `c` is
+  `ROUND_002_D.md`, `ROUND_002_E.md`, `ROUND_021_A.md`) and in Paper 46. The width of the window in `c` is
   the margin up to constants.
 - There is no exact contact on both sides: `Π(F*) > 0`, hence the maximum in `c` is attained at `c* < 1`
   strictly and 1 is interior to the positivity interval.

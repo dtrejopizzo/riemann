@@ -125,7 +125,7 @@ $$
 $$
 It is derived by integrating $-\zeta'/\zeta(s+w)\,(x^{2w}-x^w)/(w^2\log x)$ and shifting past every pole. That is, it *is* the explicit formula with the test kernel $(x^{2w}-x^w)/(w^2\log x)$.
 Inserting it into $\mathcal S_\gamma$ returns, term for term, the zero-side identity (1.1) of R163_401 for the test $G$.
-- **Circularity (PROVED).** The map prime side → zero side is an identity (Paper 47 Thm Z). The sign of the "local formula" is $\sum_\rho\mathrm{Re}\,\widehat G(t_\rho)^2$, which is decided by the off-line zeros in the light cone (R163_402 Cor 2). So the local formula restates $P_{\rm loc}$ and does not prove it.
+- **Circularity (PROVED).** The map prime side → zero side is an identity (Paper 46 Thm Z). The sign of the "local formula" is $\sum_\rho\mathrm{Re}\,\widehat G(t_\rho)^2$, which is decided by the off-line zeros in the light cone (R163_402 Cor 2). So the local formula restates $P_{\rm loc}$ and does not prove it.
 - **The zero sum does not localise.** An off-line zero $\beta=\frac12+\delta$ near $\gamma$ enters with weight $x^{\delta}/(\delta^2\log x)$, which grows as $x\to\infty$; the zero sum is not uniformly bounded.
 - **DH-blind (PROVED).** The derivation uses only the meromorphy of $L'/L$ and the functional equation, so it holds verbatim for $L_{\rm DH}$ with $\Lambda_x$ replaced by the coefficients of $-L'_{\rm DH}/L_{\rm DH}$.
 

@@ -62,7 +62,7 @@ of the wrong divisor. Repair the sentence; the verdict is unchanged.
 **Consequence for labelling.** Since `Q` is `a`-blind to first order (§3 below) and at `a = 0` refutes a
 double on-line zero, `T*(a,γ_0)` is **not** a detection threshold for off-lineness. It must be relabelled.
 Required: rename `T*(a,γ_0)` to `T_conc(γ_0;a)` (a *Weil-mass concentration threshold*) everywhere in
-`R153_007` and in whatever reaches Paper 46, and drop the phrase "detection law" for `ζ` in favour of
+`R153_007` and in whatever reaches Paper 47, and drop the phrase "detection law" for `ζ` in favour of
 "single-ordinate concentration criterion". The construction says this in §5 in prose; the naming must follow.
 
 ---
@@ -372,7 +372,7 @@ parity blocks with `O(1)` slopes, its position is `log 3 + 1.3·10⁻⁵`, it dr
 zero. The one durable, forward-looking item in either track is Track 2's parity redirection: positivity at
 `log 2` is held by the even block and is lost first in the odd block, so `(P153.3)` should be attacked block
 by block. Against that, Track 2 re-imported a comparison between an `L²` Rayleigh quotient and a Feshbach
-capacity margin that the previous round had explicitly removed, which must not reach Paper 46. Row D's label
+capacity margin that the previous round had explicitly removed, which must not reach Paper 47. Row D's label
 is unchanged, and nothing in round 3 moves the sign for `ζ` by a single window.
 
 *Audit scripts of record: `scripts/round3/audit_r3_fatal_independent.py` (own assembly, §4 table),

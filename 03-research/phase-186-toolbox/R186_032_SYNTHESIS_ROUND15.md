@@ -1,10 +1,10 @@
 # R186_032 — Synthesis of round 15: what remains attackable after wall W-lin?
 
-Phase 186, decision round (not a construction round). Paper 47, grid and crossword are not touched.
+Phase 186, decision round (not a construction round). Paper 46, grid and crossword are not touched.
 
 Read: README rounds 14–15; R186_029/107/030/031; grid entries 25–27 and §3 (walls); phase 186 crossword addendum
 (§1–§3); R185_005 (BR, §1.3 O1–O5); R164 README ((TC)); R163_401 §4.8 and status table; R166_501 Cor A.2 ((G),(N));
-R166_190 rounds 9–12 ((N′)); R155_010 (Theorem N) and R155_049 (AL′); Paper 47 def:PD, def:W/eq:nuw, thm:Z, lem:Rrig,
+R166_190 rounds 9–12 ((N′)); R155_010 (Theorem N) and R155_049 (AL′); Paper 46 def:PD, def:W/eq:nuw, thm:Z, lem:Rrig,
 cor:nontermwise, thm:O, thm:C, thm:N, thm:AL, rem:comblp; R186_025 (Thm A/B), R186_026 (Gram, Thm 4.1),
 R186_028 (Thm 1.2), R186_012/015 (ε_S).
 
@@ -147,7 +147,7 @@ elementary quadrature. Immediate consequence (one line with eq:nuw): **Lemma D (
 (ν_w, 2, 0) with w ∈ 𝒲_cl and T > ½log2 has w(log n) > 0 at some prime power n > e^{2T}, or w < −K/(4cosh(u/2)−K) on
 a set of positive measure outside the window. Expected labels: both PROVED. Falsifier of Lemma B(T): a T > ½log2
 where the LP with ν ≥ 0 (r030_class_B.py) gives value ≥ 0. What it contributes: closes R30.1, turns the "exact
-obstruction" of R186_030 into a theorem for every T, and leaves (A) closed in Paper 47 as a declared class. **No
+obstruction" of R186_030 into a theorem for every T, and leaves (A) closed in Paper 46 as a declared class. **No
 contact with the sign; no new window is promised.**
 
 **Reserve front:** NoCert_k(½log3) for k ≤ 3 by weak duality with tests Φ having prescribed zeros at the positions

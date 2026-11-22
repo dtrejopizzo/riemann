@@ -8,7 +8,7 @@ The (S1)–(S4) template of O1_COMPOSITION_001 is attacked with the target's ide
 object h_par = 𝔄⁻¹χ/q (prop:WT), where Euler has already entered nonlinearly (q(a) = ⟨(𝔄_a)⁻¹χ,χ⟩ is rational in the
 weights a).
 
-1. **Starting correction (PROVED, from P47).** In prop:WT, 𝔄 = archimedean + comb, **without** a polar term. The full
+1. **Starting correction (PROVED, from P46).** In prop:WT, 𝔄 = archimedean + comb, **without** a polar term. The full
    form is W^par = 𝔄 + 2ε χχᵀ. The pole enters only through χ.
 2. **Lemma C1 (PROVED).** Everything the FE leaves in the window form (the Γ_ℝ factor of conductor 1, χ = e^{t/2}±e^{−t/2}
    with equal residues at s = 1 and s = 0, parity) is **independent of the weights a**. The only nontrivial symmetry of
@@ -55,7 +55,7 @@ it stands closed as a retry without a new reason. What changes here is that Hamb
 conjunction whose sign step is an E-inequality (Q-P2.2) on the gauge quotient. BARRIER_D1 used it as the sign step of a
 single channel. If (C★) collapses to BARRIER_D1, that is recorded as such (see §5.3).
 
-Definitions checked against P47 (main.tex): prop:WT (l.4371), thm:parityschur (l.4176), prop:polarcap (l.4316),
+Definitions checked against P46 (main.tex): prop:WT (l.4371), thm:parityschur (l.4176), prop:polarcap (l.4316),
 rem:polarcapdiag (l.11251), prop:shape-eulerdel (l.8545), lem:shape-quartet (l.8560), thm:ext-half (l.9792),
 rem:ext-killing (l.9814), prop:ext-gauge (after rem:ext-killing).
 
@@ -63,7 +63,7 @@ rem:ext-killing (l.9814), prop:ext-gauge (after rem:ext-killing).
 
 ## 1. The exact object and a correction to the target
 
-**Notation (P47, prop:WT).** Fix T and the parity. χ_ev = cosh(t/2)1_{I_T} and χ_odd = sinh(t/2)1_{I_T} (P47's
+**Notation (P46, prop:WT).** Fix T and the parity. χ_ev = cosh(t/2)1_{I_T} and χ_odd = sinh(t/2)1_{I_T} (P46's
 normalization, l.4371 and POLAR_CAP §1). Also ℓ_par = ⟨·,χ_par⟩, ε_ev = +1, ε_odd = −1. 𝔄 := 𝔞_T|𝒟^par_T is the form
 **archimedean plus comb, without the Tate condition and without a polar term**. The full form is
 
@@ -97,7 +97,7 @@ that would prove that sign:
 ## 2. What does the FE leave in the window form? (answer to (2))
 
 **Lemma C1 (the FE's footprint in the forms model; PROVED).** Consider the family of window forms
-𝔉 := {W^{a} = A_∞ − C_a + 2ε χχᵀ : a real weights}, which is the model in which P47 defines 𝔞_T^a and where a_P, cΛ,
+𝔉 := {W^{a} = A_∞ − C_a + 2ε χχᵀ : a real weights}, which is the model in which P46 defines 𝔞_T^a and where a_P, cΛ,
 a_θ, Beurling and the "deleted primes" live. Then:
 (i) A_∞, χ_ev, χ_odd and the decomposition by parity are the same for every a.
 (ii) The involution P: F ↦ F(−·) commutes with A_∞ and with C_a for every real a. Hence P is a symmetry of every W^a
@@ -106,7 +106,7 @@ and the sector decomposition (ev/odd) holds across the whole family.
 with C_a" is linear in a. If imposed for every a in a set generating the finitely supported sequences over
 log ℕ ∩ (0,2T), then U commutes with every truncated symmetrized elementary translate τ_{log n} + τ_{−log n}.
 
-*Proof.* (i) This is the definition of 𝔞_T^a in P47: the archimedean part and the polar term are fixed and only the
+*Proof.* (i) This is the definition of 𝔞_T^a in P46: the archimedean part and the polar term are fixed and only the
 comb weights change (forms section, Def. def:shape-class; prop:shape-eulerdel uses it this way with a_P). (ii) The
 archimedean kernel is even (depends on |t−s|, in Theorem A's form). For real weights, C_a is a sum of symmetrized
 translates, τ_{log n} + τ_{−log n}, compressed to I_T, and P swaps them. (iii) This is linearity of a ↦ C_a. ∎
@@ -146,7 +146,7 @@ Then A does not prove its conclusion for any T ∈ J ∩ [0.60, ½log P] for any
 *Proof.* By prop:shape-eulerdel (PROVED), a_P = Λ·1{p ≥ P} has generating series ζ(s)Π_{p<P}(1−p^{−s}), which is a
 Euler product over ℕ with coefficients 1{(n, Π_{p<P}p) = 1}: completely multiplicative, integer, in [0,1]. So a_P
 satisfies (a). Its form belongs to 𝔉 with the same A_∞, χ and P, so it satisfies (b) by Lemma C1(i)–(ii). If U depends
-only on A_∞ and χ, U is the same for a_P. Moreover a_P fails WP_T, and hence fails W_T ⪰ 0 (W_T ⪰ 0 ⟹ WP_T, P47), on
+only on A_∞ and χ, U is the same for a_P. Moreover a_P fails WP_T, and hence fails W_T ⪰ 0 (W_T ⪰ 0 ⟹ WP_T, P46), on
 T ∈ [0.60, ½log P]. By lem:transfer with q₀ = q_ζ and q₁ = W^{a_P}, no deduction of that form is valid in that range.
 By Def O1.2, s(A) effectively reduces to {E}, because F-of-shape is constant on the class and enters as a prior
 identity fixing A_∞ and χ. Prop. O1.C's abstract falsifier coincides here with a concrete one. ∎
@@ -266,7 +266,7 @@ together with E. It is not proved and has three concrete collapse risks (1, 3 an
 
 ## 6. Test at Mori/½log3: what each inequality predicts
 
-Data (NUMERICAL, P47 prop:WT and rem:polarcapdiag; at T = ½log3, not ½log15):
+Data (NUMERICAL, P46 prop:WT and rem:polarcapdiag; at T = ½log3, not ½log15):
 q_ev + ½ ≈ −2·10⁻⁸ with n₋(𝔄_ev) = 1; q_odd ≈ ½ − 2.5·10⁻⁴ with 𝔄_odd ≻ 0. With deleted primes: q_ev ≈ −0.408 and
 q_odd ≈ −0.056 with n₋(𝔄_odd) = 1.
 

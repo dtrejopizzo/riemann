@@ -1,10 +1,10 @@
 # CA_H_002 — The semiring invariant that separates ℕ from the falsifiers (Erdős rigidity), and the exact +/· anatomy of the window matrix (Kronecker line minus Haar) (seeds H5, H6; front E input)
 
 Phase 193. Pen and paper; no numerics. no equivalence with any statement about
-another object is used. P47 = Paper 47.
+another object is used. P46 = Paper 46.
 **No sign contact. No negative value for ζ.**
 
-## 1. Setting (checked against P47 subsec:oneprofile, prop:AM, thm:band; CA_E_001 §0)
+## 1. Setting (checked against P46 subsec:oneprofile, prop:AM, thm:band; CA_E_001 §0)
 Profile F₀ ∈ 𝒫_{T₀}, 2T₀ < log 2, ‖F₀‖ = 1, c₀ = c_{F₀}, ĉ₀ = F̂₀² > 0, supp c₀ ⊂ (−2T₀, 2T₀), c₀(0) = 1, c₀ even.
 For a real comb a on ℕ_{≥2} put v^a_n = 2a(n)n^{−½} (v = v^Λ). For finitely supported real s on ℕ: P_s(τ) = Σ s_m m^{iτ},
 Arch(s) = (1/2π)∫m F̂₀²|P_s|², Div_a(s) = Σ_{kn=m, n≥2} s_ms_kv^a_n, Near_a(s) = Σ_{m≠kn} s_ms_kv^a_nc₀(log(kn/m)),
@@ -22,7 +22,7 @@ characterization of the archimedean norm.
 **Definition.** A comb a has the **successor property** (S⁺) if a is supported on prime powers of ℕ and f_a(n+1) − f_a(n) → 0.
 
 **Theorem 2.2 (the separating invariant; PROVED from Thm 2.1).** (i) A comb has (S⁺) iff a = cΛ for some c ∈ ℝ.
-(ii) Λ has (S⁺). The following falsifiers of P47 def:shape-ops fail (S⁺): O1, O2, O3, O5, O6 (all as combs on ℕ), O8 (frequencies not in
+(ii) Λ has (S⁺). The following falsifiers of P46 def:shape-ops fail (S⁺): O1, O2, O3, O5, O6 (all as combs on ℕ), O8 (frequencies not in
 log ℕ), O10 (Epstein x²+5y², and every class-number > 1 Epstein), O11 (any Beurling system ≠ ℕ), O12 (every ζ_K, K ≠ ℚ), O15.
 (iii) (S⁺) does not separate ζ from O4 (cΛ), O7 (quartets), O9 (ξR), O14 (symbol truncation).
 *Proof.* (i) If a lives on prime powers, f_a is additive: a prime-power divisor of mn (coprime) divides exactly one of m, n. Theorem 2.1

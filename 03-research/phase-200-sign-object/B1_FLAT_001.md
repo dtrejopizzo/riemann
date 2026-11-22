@@ -3,7 +3,7 @@
 Pure mathematics, no numerical computation.
 OPEN / NO-GO. **No sign is proved. L′♯ OPEN. Row D OPEN.**
 
-**Read.** C1_DUPLICATION_001 §1 (B.1.a–c, B.1♭, obstruction in L²); Paper 47 def:ext, lem:ext-mob, prop:ext-gauge,
+**Read.** C1_DUPLICATION_001 §1 (B.1.a–c, B.1♭, obstruction in L²); Paper 46 def:ext, lem:ext-mob, prop:ext-gauge,
 lem:ext-ellbound, prop:ext-univ, thm:ext-margin; K3_GAMMA_001 §2 (K3.1); index README (C1_DUPLICATION_001 entry, line
 520). Index search for "B.1♭", "pile-up/stacking", "bounded Z": only the C1 entry appears (B.1♭ OPEN) and the
 observation from DD_001 ("bounded Z only with weight ξ^s"). **The route does not appear as previously attempted.**

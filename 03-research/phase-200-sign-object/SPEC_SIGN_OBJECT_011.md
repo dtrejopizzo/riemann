@@ -30,7 +30,7 @@ Descartes (R162_1501, DEAD), Pólya frequency (DEAD, fails PF₂) and Kreĭn (RE
 
 **First exact lemma proposed:** CS-0, the second-order differential commutant of W_T on [−T,T] (bispectral
 rigidity). If it is trivial, the Courant–Sturm route is closed as NO-GO PROVED. High risk, low cost. Nothing goes
-to P47.
+to P46.
 
 ## 1. Corpus check (mandatory grep, with line number)
 
@@ -342,7 +342,7 @@ Consistent with S5: the family dies *before* reaching the point where the sign w
 - Genuine escape from Theorem 3′: asymptotic nodal laws. Recorded, but linear (dim 1) against S3.
 - Mori μ = 15: f* has a (nearly double) zero at 0 and ≤ 4 zeros. Vacuous test (no gap). Lemma E: the chain does
   not speak (degree-56 polynomial witness, no gap).
-- Nothing goes to P47 this round. If CS-0 is proved, it may enter as a class observation in P47's barrier
+- Nothing goes to P46 this round. If CS-0 is proved, it may enter as a class observation in P46's barrier
   section (a tool, not a closure).
 - **For the index** (record in ROUTES-TRIED-INDEX/README.md, phase 200 section): "SPEC_SIGN_OBJECT_011
   (round 23): nodal/oscillation counts as h⁰ — class NO-GO (N1 comb-generic via Eremenko–Novikov; N2 no gap via

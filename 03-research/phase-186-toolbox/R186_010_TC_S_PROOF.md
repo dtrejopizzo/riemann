@@ -68,7 +68,7 @@ Remark on H_g. R186.009 §4 expanded UPU^* = Σu_nū_mP_{a−nc}T_{(n−m)c} and
 6. §5(ii): CC's Lemma D.1 is stated on L²(Ĉ) with the half-line [0,∞); translation to cutoff b is unitary conjugation.
 7. No claim is made about the sign, nor about (CV_S), nor about (M).
 
-## For Paper 47
+## For Paper 46
 
 Replace, in the remark proposed by R186.009, "the finiteness of Son_S and the boundedness of ε'_S remain open (TC_S), (CV_S)" with: "Son_S(g) is finite and ϑ(f)Q₁Q₂Q₁ is trace class for f ∈ C_c^∞: after the inversion, Q₁Q₂ is half-line·M(D)·half-line with M = m_∞e^{iφ_S}, and ĝm_∞e^{iφ_S} ∈ 𝒮 (lemma: CC Prop. 1.5(iv) plus e^{iφ_S} ∈ C_b^∞). Formula (84)_S holds modulo the convergence (CV_S) of ε'_S, which remains open." Labels: TC_S PROVED; (84)_S CONDITIONAL on CV_S; boundedness OPEN. No equivalence with RH.
 

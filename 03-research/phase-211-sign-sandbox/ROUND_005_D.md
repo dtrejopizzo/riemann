@@ -16,16 +16,16 @@ points only.
 Throughout, μ_0 < μ_1 ≤ μ_2 ≤ … are the eigenvalues of a_T on all of L²(I_T) (no Tate constraint), e_k the
 eigenfunctions, h_T := e_0 the ground state, and, sector by sector, μ_k^{par}, e_k^{par}, τ_k^{par} := ⟨e_k^{par}, χ_par⟩
 (the Tate moment of the k-th eigenfunction); λ_A^{par} is the bottom of a_T on P_T^{par}, λ_{A,2}^{par} the second
-constrained eigenvalue, so that λ_A = min(λ_A^{ev}, λ_A^{odd}) (Paper 47 lem:parity, CITED).
+constrained eigenvalue, so that λ_A = min(λ_A^{ev}, λ_A^{odd}) (Paper 46 lem:parity, CITED).
 
 ---------------------------------------------------------------------------------------------------------------------
 ## 0. Corpus check
 
 Index and grid hits for the keywords of this object (ROUTES-TRIED-INDEX/*.md, grid R162_2300_MASTER_GRID.md):
 
-- **Identity and Markov structure.** Paper 47 prop:nyq-LK (ρ_T = K1_{(0,2T)}du + Σ v_nδ_{log n} positive measure, s_T = c_T + ψ_T);
-  Paper 47 prop:nodes(i) (the comb-free part C_0‖F‖² + Lev(c_F) is a regular pure-jump Dirichlet form with killing κ on
-  L²(I_T), Beurling–Deny, positivity improving, simple positive ground state); Paper 47 remark "a ceiling for curvature
+- **Identity and Markov structure.** Paper 46 prop:nyq-LK (ρ_T = K1_{(0,2T)}du + Σ v_nδ_{log n} positive measure, s_T = c_T + ψ_T);
+  Paper 46 prop:nodes(i) (the comb-free part C_0‖F‖² + Lev(c_F) is a regular pure-jump Dirichlet form with killing κ on
+  L²(I_T), Beurling–Deny, positivity improving, simple positive ground state); Paper 46 remark "a ceiling for curvature
   methods" (𝔞_T = 𝓔_T + ∫W_T F², 𝓔_T censored jump form with kernel K plus ½Σv_nδ_{±log n}, W_T killing potential);
   CA_I_001 Thm 1 (phase 193: the full form with the comb is Markov on L²(I_T), positivity improving, λ_0 simple, h_0 > 0,
   λ_0 < λ_A ≤ λ_2; PROVED); P60-1 (Perron–Frobenius simplicity, "gives simplicity, not sign"); CA_R1_001 (Markov criterion
@@ -43,7 +43,7 @@ Index and grid hits for the keywords of this object (ROUTES-TRIED-INDEX/*.md, gr
   positive comb mass) and proves nothing; Prop 1.1 (Krein–Rutman does not reach the constrained problem; the
   Weinstein–Aronszajn count is the polar-capacity restatement 𝔊_T, REF-D); Prop 5 (rearrangement and polarisation
   inadmissible).
-- **Where the constrained statement lands.** Polar capacity 𝔊_T: Paper 47 prop:polarcap, thm:parityschur; phase 156
+- **Where the constrained statement lands.** Polar capacity 𝔊_T: Paper 46 prop:polarcap, thm:parityschur; phase 156
   ("converse = 2×2 polar-capacity condition"); phase 199 PROOF_L_SHARP_OO_001 ("Tate triple = polar capacity"); H1_TRACT_001
   and H1PLUS_001 (H1⁺ := n₋(𝔄_ev(T)) ≤ 1 and 𝔄_odd ≻ 0: necessary, "H1⁺ as an independent route NO-GO (REF-D by P4)").
 - Absent as words in index and grid: "Dirichlet form", "supersolution", "Allegretto", "Frank–Lenz–Wingert",
@@ -51,7 +51,7 @@ Index and grid hits for the keywords of this object (ROUTES-TRIED-INDEX/*.md, gr
 
 What is new in this memo, and why it is not a retry.
 (a) The ground-state representation is taken with respect to the ground state h_T of the FULL window form (comb atoms
-    included), on the window, with the two Tate constraints carried through the transform exactly. Paper 47 prop:nodes
+    included), on the window, with the two Tate constraints carried through the transform exactly. Paper 46 prop:nodes
     treats the comb-free part; Paper 41 thm:doob conjugates by a fixed function K on the whole line (the comb and the
     constraints are not transformed); INV_N_001 decouples the jump part from the potential and bounds a sum of separate
     infima. Here h_T solves the eigen-equation of the whole form, so the "input that couples E_T and W_T" demanded by
@@ -75,11 +75,11 @@ What is new in this memo, and why it is not a retry.
 
     a_T(F) = (C_0 − A_T)‖F‖² + 𝔈_μ(F),      𝔈_μ(F) ≥ 0.
 
-*Proof.* By STATEMENT_001 §1 (Paper 47 thm:A, CITED), a_T(F) = C_0‖F‖² + ∫_0^∞(c_F(0) − Re c_F(u))K(u)du − Σ_{N_T} v_n Re c_F(u_n).
+*Proof.* By STATEMENT_001 §1 (Paper 46 thm:A, CITED), a_T(F) = C_0‖F‖² + ∫_0^∞(c_F(0) − Re c_F(u))K(u)du − Σ_{N_T} v_n Re c_F(u_n).
 Write −v_n Re c_F(u_n) = v_n(c_F(0) − Re c_F(u_n)) − v_n c_F(0) and use c_F(0) = ‖F‖². Non-negativity: for u > 0,
 c_F(0) − Re c_F(u) = ½∫_ℝ |F̃(t) − F̃(t−u)|²dt ≥ 0 (F̃ the zero extension), and μ_T ≥ 0. ∎
 
-In jump-kernel form (PROVED, same computation as Paper 47 prop:nodes(i)): with the symmetric kernel
+In jump-kernel form (PROVED, same computation as Paper 46 prop:nodes(i)): with the symmetric kernel
 J(x) := ½K(|x|) on ℝ∖{0} and the symmetric atoms ¼v_n(δ_{u_n} + δ_{−u_n}), i.e. the measure J(dx) := ½μ̄_T(dx), μ̄_T the
 even extension of μ_T,
 
@@ -90,9 +90,9 @@ even extension of μ_T,
 (Here ∬J(x−y)|F(x)−F(y)|² with an atom at u_n means ½v_n∫|F(x) − F(x−u_n)|²dx over the pairs inside the window; the comb
 atoms contribute to κ a step function increasing towards the edges, with jumps ½v_n at |x| = T − u_n.) Both terms are
 non-negative; the archimedean killing is logarithmically divergent at the edges,
-∫_{T−x}^∞K(u)du = log coth((T−x)/4) + 2arctan e^{−(T−x)} = log(4/(T−x)) + π/2 + o(1) as x ↑ T (Paper 47 thm:S(iii), CITED).
+∫_{T−x}^∞K(u)du = log coth((T−x)/4) + 2arctan e^{−(T−x)} = log(4/(T−x)) + π/2 + o(1) as x ↑ T (Paper 46 thm:S(iii), CITED).
 
-**Proposition 1.2 (CITED: CA_I_001 Thm 1, Paper 47 prop:nodes(i); PROVED for the parts marked).**
+**Proposition 1.2 (CITED: CA_I_001 Thm 1, Paper 46 prop:nodes(i); PROVED for the parts marked).**
 (i) F ↦ 𝔈_μ(F) is a regular Dirichlet form on L²(I_T) of pure-jump type (jump kernel J ≥ 0, killing κ ≥ 0, no diffusion
     part, no δ-kernel since ∫_0^{2T}K = +∞); its form domain is {F : ∫ m(τ)|F̂|² < ∞} (the comb part is bounded by A_T‖F‖²).
 (ii) (Beurling–Deny) e^{−t𝔈_μ} is positivity preserving; since K > 0 on (0,∞) and I_T is connected it is irreducible, hence
@@ -108,8 +108,8 @@ non-negative; the archimedean killing is logarithmically divergent at the edges,
     of §4.1 in which K and the atoms v_nδ_{u_n} enter the same non-local operator; the overlap of h_T with the comb-free
     ground state is 0.984–0.989 at the four windows (NUMERICAL, §5).
 
-The comparison asked for: Paper 47 states (i)–(iv) for the comb-free form only (prop:nodes(i), "the archimedean part
-alone"); with the comb, (i)–(iv) are CA_I_001 Thm 1 (phase 193), which Paper 47 uses only in the remark on the curvature
+The comparison asked for: Paper 46 states (i)–(iv) for the comb-free form only (prop:nodes(i), "the archimedean part
+alone"); with the comb, (i)–(iv) are CA_I_001 Thm 1 (phase 193), which Paper 46 uses only in the remark on the curvature
 ceiling. Nothing in (i)–(vii) distinguishes Λ from any positive comb (CA_I_001 Thm 2).
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -152,7 +152,7 @@ and (★) at T is equivalent to the weighted Poincaré inequality with the exact
 
     Q_h(φ) ≥ (A_T − C_0 − λ_0)·‖φ‖²_{h²} = |μ_0|·‖φ‖²_{h²}     for all φ ⊥_{h²} {ψ_+, ψ_−}      (2.1)
 
-(if μ_0 ≥ 0 there is nothing to prove; μ_0 < 0 for every T ≥ 0.4608 by Paper 47 prop:archneg, since a_T ≤ 𝔄_∞ on the odd
+(if μ_0 ≥ 0 there is nothing to prove; μ_0 < 0 for every T ≥ 0.4608 by Paper 46 prop:archneg, since a_T ≤ 𝔄_∞ on the odd
 function used there — CITED; at the four windows μ_0 ∈ [−4.29, −2.82], NUMERICAL).
 
 *Proof.* ⟨hφ, e^{±t/2}⟩ = ∫φ e^{±t/2}h = ⟨φ, ψ_±⟩_{h²}; (2.1) is Theorem 2.1 rearranged. ∎
@@ -208,7 +208,7 @@ Q_h(φ_1) ≥ |μ_0|(‖φ_1‖² + ⟨φ_1,ψ⟩²/τ_0²). The gap gives Q_h(�
 Cauchy–Schwarz in 1^⊥ (‖ψ‖²_{h²} = ‖χ‖²); so it suffices that g_1 ≥ |μ_0|(1 + (‖χ‖² − τ_0²)/τ_0²) = |μ_0|‖χ‖²/τ_0². ∎
 
 Remark 3.4 (identification with the record). W(0) = ⟨χ_par, a_T^{−1}χ_par⟩ is the diagonal entry of the polar capacity 𝔊_T in
-the parity basis (Paper 47 prop:polarcap / thm:parityschur; phase 156; CA_I_001 Prop 1.1 "Weinstein–Aronszajn = polar
+the parity basis (Paper 46 prop:polarcap / thm:parityschur; phase 156; CA_I_001 Prop 1.1 "Weinstein–Aronszajn = polar
 capacity"); Theorem 3.1 is therefore a restatement of a recorded reformulation, not a new route. The condition "n₋ ≤ 1 in
 the even sector" is H1⁺ and "n₋ = 0 in the odd sector" is 𝔄_odd ⪰ 0 (H1_TRACT_001), both recorded as necessary. What
 (3.1)–(3.2) add is the exact size of the step from the necessary condition μ_1 ≥ 0 to (★): the non-negative number
@@ -250,7 +250,7 @@ u-integrand equals (1 − cosh(u/2))K(u) for u < T − |t| (integrable at 0) and
 
 so ω_+ − σ_T ≥ 0 is a sum of edge terms, logarithmically divergent at both edges, and of comb steps.
 
-*Proof.* For real F ∈ L²(I_T) in the form domain and G = χ_+, the polarised Lévy form (Paper 47 thm:A, CITED) is
+*Proof.* For real F ∈ L²(I_T) in the form domain and G = χ_+, the polarised Lévy form (Paper 46 thm:A, CITED) is
 a_T(F,G) = C_0⟨F,G⟩ + ∫_0^∞[⟨F,G⟩ − ½⟨F,(τ_u + τ_{−u})G⟩]K(u)du − Σv_n ½⟨F,(τ_{u_n}+τ_{−u_n})G⟩, τ_u the translation of the zero
 extension. Since τ_uχ_+ = e^{−u/2}e^{t/2}1_{[−T+u, T+u]}, one has ⟨F, τ_uχ_+⟩ = e^{−u/2}[A(F) − ∫_{−T}^{−T+u}Fe^{t/2}] for 0 < u < 2T
 and = 0 for u ≥ 2T, and ⟨F, τ_{−u}χ_+⟩ = e^{u/2}[A(F) − ∫_{T−u}^{T}Fe^{t/2}]. The bracket in the u-integral is thus
@@ -352,11 +352,11 @@ Reading of the tables.
     constraint, and that eigenvalue sits at 0⁺.
 (2) For every falsifier the inequality fails at the first step: μ_1^{ev} < 0 (n₋(a_T|even) = 2), by 0.3 % to 23 % of |μ_0|.
 (3) The clause W_ev(0) ≤ 0 of Theorem 3.1(iii) is comb-generic on the tested set: it holds for all eight combs with
-    values in [−0.67, −0.43]. For the exact comb W_ev(0) = −0.50000 and W_odd(0) = +0.50000 at all five windows; in Paper 47's
+    values in [−0.67, −0.43]. For the exact comb W_ev(0) = −0.50000 and W_odd(0) = +0.50000 at all five windows; in Paper 46's
     notation this is 𝔞_T(h_ev) = 1/W_ev(0) = −2.0000 and 𝔞_T(h_odd) = +2.0000, i.e. 𝔤_ev = 𝔞_T(h_ev) + 2 ≈ 0 and
     𝔤_odd = 𝔞_T(h_odd) − 2 ≈ 0: the polar capacity 𝔊_T of prop:polarcap vanishes to 5 digits at every window, the complete
     form of thm:parityschur is at its degenerate point in both sectors (λ_W ≈ 0), and the "converse pair"
-    𝔞_T(h_odd) ≥ 2, 𝔞_T(h_ev) ≥ −2 of Paper 47 holds with equality. The deviation 𝔊_T from 0 is of the order of λ_A
+    𝔞_T(h_odd) ≥ 2, 𝔞_T(h_ev) ≥ −2 of Paper 46 holds with equality. The deviation 𝔊_T from 0 is of the order of λ_A
     (CONDITIONAL on the Galerkin precision; the record expected 𝔊_T ≻ 0 beyond ½log5 with ε tiny, index line "polar
     capacity > ½log5", and the present values are consistent with that ε being ≤ 10⁻⁵).
 (4) The two-level sufficient condition (3.3) fails for the exact comb by 0.2–0.5 % (cos² − |μ_0|/g_1 = −0.0049, −0.0052,
@@ -382,7 +382,7 @@ Reading of the tables.
   (and +561, −1049 at log 2 for 0.9Λ, where an odd eigenvalue crosses 0). Only the exact comb sits at (−½, +½), and an
   atom whose overlap window 2T − u_n is short (3 at T = log 2: 0.29) is felt only at 10⁻⁵ ("no 3": −0.49999 at log 2,
   −0.4992 at ½log5, −0.460 at 0.9, −0.602 at 1.0): the exactness is per atom and weighted by the overlap length.
-- Identification. In Paper 47 thm:parityschur / prop:polarcap, 𝔞_T(h_par) = 1/W_par(0) with h_par the 𝔞_T-orthogonal complement
+- Identification. In Paper 46 thm:parityschur / prop:polarcap, 𝔞_T(h_par) = 1/W_par(0) with h_par the 𝔞_T-orthogonal complement
   of P_T^{par} normalised to ℓ_par = 1, and 𝔊_T = S^{Sch}_T + D_pol, D_pol = diag(2, −2). The values above say
 
       S^{Sch}_T = diag(𝔞_T(h_ev), 𝔞_T(h_odd)) = diag(−2, +2) + O(10⁻⁵) = −D_pol,     i.e.  𝔊_T = 0 to 5–6 digits on [0.60, 1.00]:
@@ -391,7 +391,7 @@ Reading of the tables.
   W_T = a_T + 2AB is at its degenerate point in both sectors (λ_W ≈ 0; under the hypotheses of (a4) of thm:parityschur, λ_A^{par} > 0, 𝔤_par > 0, 2λ_W < λ_A^{par}, one has
   𝔤_par/‖h_par‖² ≤ 2λ_W),
   and the "converse pair" 𝔞_T(h_odd) ≥ 2, 𝔞_T(h_ev) ≥ −2 holds with equality. This is the complete-form face of the same
-  tangency the record describes for the primitive form (c*_T = 1, Θ_T = λ_A); it is consistent with Paper 47
+  tangency the record describes for the primitive form (c*_T = 1, Θ_T = λ_A); it is consistent with Paper 46
   §subsec:mult (optimal multipliers tending to the polar value) and with the index line "polar capacity > ½log5 … ε
   tiny". It is reported here because the value is exact to the digits available at every window, which the record
   does not state. No sandbox mechanism for S^{Sch}_T = −D_pol is known; a proof of it would be a proof that λ_W = 0, which

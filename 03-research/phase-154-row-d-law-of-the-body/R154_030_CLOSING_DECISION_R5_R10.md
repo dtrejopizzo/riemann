@@ -33,6 +33,6 @@ The uniform route (all `T`) is closed by the doubly exponential growth of `τ₁
 ## 4. Decision
 Rounds 5–10 closed. Phase 154's deliverables of record: R154_012 (as amended), R154_021, R154_023, this document. Row D: the dual theory
 (Theorems A, O, D1, E), the first certificate with a prime (Theorem C), the tail theory (F1, T, Hybrid), and the negative rate theorem (V′)
-are the phase's contribution. The global sign is unchanged. Decisions pending: (a) write-up (Paper 47) after reading Zhu, Groskin, Suzuki,
+are the phase's contribution. The global sign is unchanged. Decisions pending: (a) write-up (Paper 46) after reading Zhu, Groskin, Suzuki,
 Bombieri 2000, Yoshida 1992; (b) whether to fund the `N ≥ 6` computation off-machine; (c) whether to open a pure-math phase on
 class-dependent value bounds.

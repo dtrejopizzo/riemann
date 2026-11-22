@@ -162,7 +162,7 @@ constitute a second cutoff connection.
 ## 3. Domain and uniformity
 
 The finiteness of \(L_M\) makes all the products of (0.3)--(0.7) well
-defined on the core used in Paper 47. The naive limit
+defined on the core used in Paper 46. The naive limit
 \(M\to\infty\) is not claimed here: \(C_Nf\) has an exponential tail and
 terms such as \(LC_Nf\) may contain the divergent series
 \(\sum_r\Lambda(r)/r\) and \(\sum_r\Lambda(r)\log r/r\).

@@ -1,6 +1,6 @@
 # R162_790 — Audit, round 6 (R162_501, R162_502, R162_504)
 
-Referee pass, line by line. Checked against Paper 47 main.tex: eq:symbol and eq:form
+Referee pass, line by line. Checked against Paper 46 main.tex: eq:symbol and eq:form
 (s_T = m − Σ_{n∈N_T} v_n cos(τ log n), v_n = 2Λ(n)/√n, N_T = {log n < 2T}, 𝔞_T = (1/2π)∫s_T|F̂|²,
 F̂(τ) = ∫F e^{iτt}, c_F(u) = ∫F(t)F̄(t−u)), the operator A_T (archimedean multiplier minus
 Σ w_n(S_{log n}+S_{−log n}), w_n = v_n/2, compressed to I_T), P_T = ker A ∩ ker B, eq:W, def:W/eq:nuw
@@ -41,7 +41,7 @@ No item is WRONG. No sign is claimed anywhere and none follows; the NO-GO verdic
 - F3 line: W_{Λ+η} = W + η log + 2Λ*η + η*η ≥ 0 for η ≥ 0. Checked.
 
 ### Lemma 1.1 / 1.2 — CORRECT WITH FIXES
-- With Paper 47's conventions, (1/2π)∫cos(τu)|Ĝ|² = c_G(u) for real G, hence c_G'(u) = −(1/2π)∫τ sin(τu)|Ĝ|²,
+- With Paper 46's conventions, (1/2π)∫cos(τu)|Ĝ|² = c_G(u) for real G, hence c_G'(u) = −(1/2π)∫τ sin(τu)|Ĝ|²,
   z' = −Σ v_n log n sin(τ log n), and the comb term of R162_407 (3.1) equals −(1/2π)∫τ z'|Ĝ|². Matches (3.1).
 - Lemma 1.2: τ d/dτ = y d/dy, and d/dy[−(k+¼)/((k+¼)²+y²)] = 2y(k+¼)/((k+¼)²+y²)². Series correct; positivity,
   boundedness and the limit 1 (Riemann sum of ∫_0^∞2y²x/(x²+y²)²dx = 1) correct.
@@ -87,7 +87,7 @@ Fixes:
   M_T(1) and M_T(μ) are automatically finite sums (n < X). Correct.
 - (b) (Xτ_c − τ_cX)F(t) = tF(t+c) − (t+c)F(t+c) = −cτ_cF. Correct.
 - (c) M_T(1)M_T(μ) = M_T(δ_1) = P = Id_{L²(I)}, and likewise in the other order. Correct.
-- (d) is the definition. With c_F(u) = ∫F(t)F(t+u), which equals Paper 47's c_F for real F (it is even). Correct.
+- (d) is the definition. With c_F(u) = ∫F(t)F(t+u), which equals Paper 46's c_F for real F (it is even). Correct.
 
 ### B2 — CORRECT WITH FIXES
 - (B2.1): M_T(Λ)Z = M_T(Λ*1) = M_T(log) = −[X,Z], so M_T(Λ) = −(XZ−ZX)Z^{−1} = ZXZ^{−1} − X. Correct.
@@ -112,7 +112,7 @@ Fixes:
 - **Fix H5.** Prop B3 asserts that Λχ₂ (with ζ's archimedean data) and a Beurling DMV system with ζ's m both have
   primitive first contacts. That is not proved in the file. For the Beurling system with m fixed it needs (i) that
   off-line zeros force λ_A(T) < 0 for some T in this mixed model (no explicit formula links m to the Beurling zeros),
-  and (ii) continuity of λ_A (Paper 47 lem:contA transfers, since it uses only the finite comb). State (i) as a
+  and (ii) continuity of λ_A (Paper 46 lem:contA transfers, since it uses only the finite comb). State (i) as a
   hypothesis or give a direct negative test. Without it, Prop B3 is conditional.
 - **Fix H6 (stronger, simpler).** Row (iii): every 0 ≠ F ∈ P_T changes sign, because A(F) = ∫F e^{t/2} = 0 with
   e^{t/2} > 0. So the restriction to "ε = −1 kernels" is unnecessary.
@@ -135,7 +135,7 @@ Fixes:
   Re ψ(a+iy) − ψ(a) = ∫_0^∞ e^{−ax}(1−cos xy)/(1−e^{−x})dx. With a = ¼, y = τ/2, x = 2u (dx = 2du):
   m(τ) − m(0) = ∫_0^∞ 2e^{−u/2}(1−cos τu)/(1−e^{−2u})du = ∫_ℝ(1−cos τu)k(u)du, k(u) = e^{−|u|/2}/(1−e^{−2|u|}) > 0.
   **Checked.** k ~ 1/(2|u|) at 0 (non-integrable, which is fine against 1−cos), and k ~ e^{−|u|/2} at ∞.
-  m(0) = ψ(¼) − log π ≈ −5.372, consistent with Paper 47 (line ≈2067).
+  m(0) = ψ(¼) − log π ≈ −5.372, consistent with Paper 46 (line ≈2067).
 - (ii) Beurling–Deny. (1/2π)∫(m−m(0))|F̂|² = ∫k(u)(‖F‖² − c_F(u))du = ½∬_{ℝ²}(F(t)−F(s))²k(t−s). This includes the
   killing part t ∈ I, s ∉ I. Checked.
 - (iii) Checked. The defect is in fact ≥ 4∬F_+(t)F_−(s)k(t−s) (the file writes 2, which is weaker but true). The

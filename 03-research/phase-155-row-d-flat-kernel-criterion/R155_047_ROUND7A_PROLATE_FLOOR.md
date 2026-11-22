@@ -2,11 +2,11 @@
 
 *Phase 155, round 7a. Executes `R155_046 §4(a)`. Inherits `R155_033` (Prop NC, amended),
 `R155_039` (Theorem J, the "Jensen gives ceilings only" remark, amended), `R155_044` (Theorem N4,
-arena, amended), `R155_023` (amended; `τ₀ = 6.28983599`, `C₀ = −5.3721834`), Paper 47 §2 (`thm:S`,
-`lem:mbounds`), §3, §8 (`prop:NC`, `thm:J`). Paper 47 is **not** touched. Scripts: `scripts/r7a/`.*
+arena, amended), `R155_023` (amended; `τ₀ = 6.28983599`, `C₀ = −5.3721834`), Paper 46 §2 (`thm:S`,
+`lem:mbounds`), §3, §8 (`prop:NC`, `thm:J`). Paper 46 is **not** touched. Scripts: `scripts/r7a/`.*
 
 **No sign for `ζ` is claimed at any `T`. Endpoint of record unchanged (`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`,
-Paper 47 Thm C). No value of `inf W` at `log 2` is asserted.**
+Paper 46 Thm C). No value of `inf W` at `log 2` is asserted.**
 
 **[amended per R155_048]** audit accepted with one numerical erratum and three
 scope caveats; repairs applied in place at §0.2 (Erratum 1), §0.3 (two-value relaxation scope), §4
@@ -32,7 +32,7 @@ otherwise stand.
  | `0.80` | `3` | **`7`** | `8` | `54` | `6` | `1` |
 
  **[amended per R155_048, Erratum 1]** the `0.80` diagnostic prolate count is `6`, not `5`
- (`4, 5, 6` at the optimal `τ₁`, not `4, 5, 5`); `04-papers/47-row-d-dual-certificates/main.tex:3157`
+ (`4, 5, 6` at the optimal `τ₁`, not `4, 5, 5`); `04-papers/46-row-d-dual-certificates/main.tex:3157`
  carries the same erratum and should be re-checked if that line is touched.
 
  A factor `≈ 7–8` gain over Prop NC, and within one of the `DIAGNOSTIC` count that `R155_033 §3.4`
@@ -235,7 +235,7 @@ Row-D label unchanged. Endpoint unchanged. No sign for `ζ` beyond `log 2`.
 
 ---
 
-## §6 Paper 47 proposal (not executed)
+## §6 Paper 46 proposal (not executed)
 
 `subsec:arch` gains, after `prop:NC`: **Theorem P** with its four-line proof, **Corollary P1**
 (quadrature-free), **Corollary P2** (floor), **Corollary P3** with the table of §3.3, and

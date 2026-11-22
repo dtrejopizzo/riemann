@@ -167,7 +167,7 @@ by 5 and 14 (pairs and triples for all a > 1).
 west tunnel (fluctuation Σ Λ(n)φ(n/x)); meeting point: an object with exact Λ, coupled to the functional equation by a route
 different from the factor ζ(½+iτ), nonlinear, that decides at near-coincidences. Threads stopped without NO-GO: nonlocal kernel
 (209), «layer edges κ_{T+log n}» (202), finite-window Carathéodory–Fejér route N (160), Lemma RF.1 (205).
-Tools never aimed at P47: Toeplitz/corona symbol (Paper 26), coercivity of adjacent windows (38),
+Tools never aimed at P46: Toeplitz/corona symbol (Paper 26), coercivity of adjacent windows (38),
 exact transport defect (39), Carleman determinacy (22), finite-to-total uniformity (15), PNT
 truncation (7). Candidates C1–C5.
 
@@ -179,7 +179,7 @@ for p = 2** (x = log2/√2, z = log2/2); there is no favourable cancellation of 
 form (d → ∞). Remainder: control the collective norm of the near-contact matrix against the archimedean energy.
 
 **31. REVIEW_001.md** — Review of STATEMENT_001 and DOSSIER_001. Confirmations and corrections: §3 of STATEMENT is
-P47 lem:transl(iv) + thm:band (not new; needs 2T₀ < log 2); the 2×2 band is necessary, without sign. Errors of P47
+P46 lem:transl(iv) + thm:band (not new; needs 2T₀ < log 2); the 2×2 band is necessary, without sign. Errors of P46
 pointed out: «λ_A ≤ λ_S» false if Ke_S ≠ 0, lower bound λ_S/(1+‖K‖)² ≤ λ_A false if K ≠ 0 (valid only with λ_S ≥ 0);
 normalization of F₀ (c₀(0) = ‖F₀‖²); «exactly one negative eigenvalue for every window» false (n₋ = 0 for small
 T; correct «≤ 1» or «= 1 for T ≥ 0.12»). Half-line identity: non-genericity in the comb ARGUED. Arithmetic
@@ -245,7 +245,7 @@ intertwining fails (PROVED); «no rule holds» ARGUED. (HR) OPEN.
 **39. REVIEW_009.md** — Review of 010_A, 011_A, 011_C, 012_A, 012_B, 013_A. CONFIRMED: cos² certificate
 (Thm 2.2 of 012_A, first failed cell [2.660; 2.661]); Prop 3.3 of 010_A (NO-GO 𝒦_S). REFUTED: open range of
 (HR)(a) «2T ≲ log τ < log Ω_B» (it is 2T ≲ log τ < Σ₀ + O(1)); reading Ω_* ≍ e^{λ+O(1)} (it is e^{𝒜_T+λ+O(1)}). Thm 3.1 of 011_A
-superseded by the trivial bound P ≤ Σ₀. Identity (2.2) of 013_A = explicit formula (CITED, P47 thm:Z); its remainder R_w lives
+superseded by the trivial bound P ≤ Σ₀. Identity (2.2) of 013_A = explicit formula (CITED, P46 thm:Z); its remainder R_w lives
 outside the sandbox. NO-GO record (10 items, §8): 𝒦_S PROVED; lem:ext-hf empty at polynomial index PROVED;
 large values + Kovrijkine collapses to a pointwise bound; moment class ARGUED; trivial bound with fixed profile PROVED;
 short packets with crossings in absolute value ARGUED; mean value + Sobolev/Gallagher (closed quadratic family);
@@ -253,7 +253,7 @@ three-block Schur LM/H± NUMERICAL; smallness of the H₊–H₋ coupling by cla
 (Vaughan/process B) ARGUED.
 
 **40. REVIEW_010.md** — Review of rounds 014_A–024_A (18 memos). Definitional point: 𝒲 must include the polar
-term 2A(Ψ)B(Ψ) (14A/15A without it are false in general); ℓ_g of the rounds = ½ℓ of P47. CONFIRMED: certificates
+term 2A(Ψ)B(Ψ) (14A/15A without it are false in general); ℓ_g of the rounds = ½ℓ of P46. CONFIRMED: certificates
 17C Thm 3.1 (μ₀ ∈ [0.06961173221 ± 4.38·10⁻¹²]) and 18A Thm 3.4 (T = 0.8) reproduced; 19B Thm 2.1 (𝒜𝒫 − c𝒞 unbounded
 below for c ≠ 1) PROVED; 19A Prop 1.1 PROVED; 20A Thm 1.3; 21A, 22A, 23A, 24A identities. REFUTED: written proof
 of «ℕ the unique additively closed ℕ^{1+t}» (statement true, proof corrected); constant 5.72 of 16A.
@@ -484,7 +484,7 @@ D1. Threads stopped without NO-GO (29): nonlocal kernel of phase 209 (missing op
 «layer edges κ_{T+log n}» of phase 202 (later declared empty for the defined archimedean residue, 32;
 layered comb pairs are not covered); finite-window Carathéodory–Fejér route N (phase 160); Lemma RF.1
 (phase 205).
-D2. Tools never aimed at the finite objects of P47 (29): Toeplitz/corona symbol, coercivity of adjacent
+D2. Tools never aimed at the finite objects of P46 (29): Toeplitz/corona symbol, coercivity of adjacent
 windows, exact transport defect between successive quotients, Carleman determinacy, finite-to-total
 uniformity, truncation bound with PNT only.
 D3. Candidates C1–C5 of the README (29): exact identity for ∫|P_s|²F̂₀²m non-generic in the comb; the two-moment

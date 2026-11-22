@@ -4,7 +4,7 @@ Objective: "let's try 100 non-contiguous windows, extract the pattern and extrap
 all the constraints into account." This folder is the **DATA** part; the pattern is extracted separately. Global label
 for everything here: **NUMERICAL**.
 
-## What is computed (definitions = r034_det.py / r040_head_mp.py from phase-186-toolbox; Paper 47 eq:symbol, eq:form, thm:A, prop:negtrace)
+## What is computed (definitions = r034_det.py / r040_head_mp.py from phase-186-toolbox; Paper 46 eq:symbol, eq:form, thm:A, prop:negtrace)
 
 - Symbol: σ_T(τ) = m(τ) − Σ_{n∈S(T)} v_n cos(τ log n), m(τ) = Re ψ(¼ + iτ/2) − log π, v_n = 2 log p/√n,
   S(T) = {n = p^k : log n < 2T} (strict inequality: at T = ½log p the prime p is **not** present; the pair T ± 0.01 captures the jump).

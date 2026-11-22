@@ -78,7 +78,7 @@ Substituting gives exactly D4 and cancels m0. The formulas for mk derived from t
 
 The local search for a specific confluent Laguerre test at rate 31.5 and dimension twelve found no exact antecedent. There are earlier uses of Laguerre with different objects: phase-104/104_46_FIXED_LAGUERRE_MARKOV_EXTREMAL_GATE uses L_(n-1)^(1)(s log d) as a transport vector by divisors; phase-168/R168_203_LOCAL_LAGUERRE studies a differential inequality for entire functions. Neither is the present universal exterior block.
 
-The general need for a prime contribution when the number of negative archimedean directions grows already has antecedents: the negative counts of Paper 47 and the fact that the polar term has finite rank prevent expecting archimedean+polar positivity on all growing subspaces. Therefore any novelty of a dimension-twelve test must be declared as an explicit rational vector in THIS space, with certified AP deficit and comb repair; not as a first discovery that arithmetic is needed. The concrete certificate is awaited before recording its sign.
+The general need for a prime contribution when the number of negative archimedean directions grows already has antecedents: the negative counts of Paper 46 and the fact that the polar term has finite rank prevent expecting archimedean+polar positivity on all growing subspaces. Therefore any novelty of a dimension-twelve test must be declared as an explicit rational vector in THIS space, with certified AP deficit and comb repair; not as a first discovery that arithmetic is needed. The concrete certificate is awaited before recording its sign.
 
 ## 8. Exact local SOS certificate received and reviewed
 

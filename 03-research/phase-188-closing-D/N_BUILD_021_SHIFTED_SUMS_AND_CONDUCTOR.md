@@ -7,7 +7,7 @@ D ⟺ A_M ⪰ 0 ∀M; A_M = Arch_M − Div_M − Near_M (028 §2).
 phase 167 (R167_102 Thm B "sieve blindness": Λ ≥ 0 + prime-power support + any family of upper bounds Σ Λφ ≤ U_φ — Brun–Titchmarsh, Selberg,
 large sieve, Bombieri–Vinogradov-type upper bounds — gives no square-root saving; Theorem S of R167_103: sieves valid for Beurling systems),
 R163_602 (twisted prime sums; Bombieri–Hejhal falsifier F2 for linear combinations of L-functions; sieve majorants only for w ≥ 0), R170_811,
-Paper 47 cor:void + thm:finmod, N_BUILD_003 (W-tail), N_BUILD_014/015 (Ξ), L2_BUILD_011 rows 15, 18 (character sums KILLED; Dirichlet L, Euler + FE
+Paper 46 cor:void + thm:finmod, N_BUILD_003 (W-tail), N_BUILD_014/015 (Ξ), L2_BUILD_011 rows 15, 18 (character sums KILLED; Dirichlet L, Euler + FE
 at q > 1: UNKNOWN), L2_028 §2(c) (characters do not diagonalize Arch). New: Prop 1 (Near = Ξ-kernel), Theorem 2 (progression classes closed
 under finite modification), Prop 3 (χ-twisted vectors give hybrid, not L(s,χ), forms), the verdict on row 18.
 

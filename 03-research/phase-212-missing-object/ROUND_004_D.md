@@ -1,7 +1,7 @@
 # Round 4, zone D — Factorization of 𝔸_M with support on the near-coincidences m ≈ kn (selection memo)
 
 Target (★): λ_A(T) ≥ 0 for all T, definitions from `../phase-211-sign-sandbox/STATEMENT_001.md`. Reduction used
-(PROVED, P47 prop:AM, thm:oneprofile): fixed profile F_0 ∈ P_{T_0}, 2T_0 < log 2; (★) is equivalent to
+(PROVED, P46 prop:AM, thm:oneprofile): fixed profile F_0 ∈ P_{T_0}, 2T_0 < log 2; (★) is equivalent to
 𝔸_M = [𝖡(log m − log k)]_{m,k≤M} ⪰ 0 for all M, with 𝔸_M = Arch_M − Div_M − Near_M. Notation: β(d) archimedean part
 of 𝖡, c_0 = c_{F_0} (supp ⊂ [−2T_0, 2T_0], c_0(0) = 1), v_n = 2Λ(n)n^{−1/2}, θ_0 := 2T_0.
 Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
@@ -10,7 +10,7 @@ Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 
 ### What was searched, what was opened, what was not
 
-Grep (case-insensitive) in `03-research/` (all phases), P47, P48 and `05-meta-and-planning/` (index,
+Grep (case-insensitive) in `03-research/` (all phases), P46, P48 and `05-meta-and-planning/` (index,
 crossword) for: near-divisib, casi-divisib, almost divisor, interval order, orden de intervalo, semiorder, Farey,
 continued fraction, fracción continua, Green matri(x), matriz de Green, semisepar, totally positive, totalmente
 positiv, Pólya frequency, sign-regular, complemento de Schur, closed under elimination, transitive. Results:
@@ -20,7 +20,7 @@ matches; "interval order": 1 (phase 73, E73_115, not pertinent by title, not ope
 200, 201) plus the AUDIT_A index (A14a-1: PF₅ of the de Bruijn–Newman kernel, NO-GO CITED; A14a-2: PF₄ OPEN), L23,
 L48, L49; "Green": phases 116, 170, 194, 205, 206.
 
-Opened as primary sources: P47 prop:AM with proof, thm:oneprofile with proof, prop:nearfree with proof,
+Opened as primary sources: P46 prop:AM with proof, thm:oneprofile with proof, prop:nearfree with proof,
 rem:boxes, rem:bar-arith; `ROUND_003_7` (in full), `REVIEW_003`, `RULES_AVOID` §§B, E, F, J; `OBJECT_SPEC`;
 `BRIEF_CONSTRUCTOR`; STATEMENT_001; phase 194 `INV_C_001` §§0–1 (fibration by ratios r = a/b, Lemmas 1–3);
 phase 205 `SKELETON_001` (lines of §5 "Pole Green identity" and its search table: "semiseparable: 0");
@@ -104,14 +104,14 @@ carries a sign. No candidate ready for construction.
 
 Let a be a real weight ≥ 0 on {n ≥ 2} (Λ, cΛ, a_P), v_n^a = 2a(n)n^{−1/2}. For m > k ≥ 1, r := m/k.
 
-(a) **Div** (PROVED, P47 prop:AM(iii)): (Div)_{mk} = ½ v^a_{r} if r ∈ ℕ, and 0 otherwise. Potential support: k | m with
+(a) **Div** (PROVED, P46 prop:AM(iii)): (Div)_{mk} = ½ v^a_{r} if r ∈ ℕ, and 0 otherwise. Potential support: k | m with
 a(m/k) ≠ 0 (for Λ: m/k a prime power). Zero diagonal.
 
 (b) **Near** (PROVED, ibid.): (Near)_{mk} = ½ Σ_{n ≥ 2, n ≠ r} v^a_n c_0(log(kn/m)), and the term n contributes only if
 |log n − log r| < θ_0. Potential support: there exists n ≥ 2, n ≠ r, a(n) ≠ 0, with n ∈ (r e^{−θ_0}, r e^{θ_0}). Since n ≥ 2,
 this requires r > 2e^{−θ_0} > 1. Zero diagonal; moreover Near_{mk} = Near_{km}.
 
-(c) **Arch** (PROVED from STATEMENT_001 §3 and P47 lem:transl(iv)): for d := log r > θ_0,
+(c) **Arch** (PROVED from STATEMENT_001 §3 and P46 lem:transl(iv)): for d := log r > θ_0,
 Arch_{mk} = β(d) = −Σ_{j≥1} γ_j e^{−(2j+½)d}, γ_j = ∫e^{(2j+½)u}c_0(u)du. Since F_0 is even and real (g ∗ g̃ and G_0 are
 even), γ_j = (∫F_0(t)e^{(2j+½)t}dt)² ≥ 0, and ∫F_0 e^{st} = F̂_0(−is) = (¼ − s²)ĝ(is)²ĝ(−is)² with
 ĝ(±is) = (e^{(b∓s)a} − 1)/(b ∓ s), real and nonzero if b ≠ ±s. Thus, for b ∉ {±(2j+½)}, γ_j > 0 for all j ≥ 1, and
@@ -156,7 +156,7 @@ The semiorder S, restricted to {log m : m ≤ M}, is indeed an interval order an
 via chains (μ_S(x, y) = Σ_{chains} (−1)^{length}), but it contains no datum of Λ. A "Möbius inversion in
 the semigroup of intervals" (the one that turns sums over (r e^{−θ_0}, r e^{θ_0}) into point values) is
 deconvolution by c_0, which is exactly passing from Near to the point measure Σ v_n δ_{log n}: it returns the comb, not
-a pivot. ARGUED (it is the definition of Near as a convolution, P47 prop:AM(iii)).
+a pivot. ARGUED (it is the definition of Near as a convolution, P46 prop:AM(iii)).
 
 ### Lemma C (𝖡 is not in the classes closed under elimination)
 
@@ -165,8 +165,8 @@ Hypotheses: 4T_0 < log 2 (i.e. θ_0 < log 2 − θ_0), b ∉ {±(2j+½) : j ≥ 
 (a) 𝖡(d) < 0 for d ∈ (θ_0, log 2 − θ_0). PROVED: there |log n ± d| ≥ log 2 − d > θ_0 for all n ≥ 2, hence the comb part
 vanishes and 𝖡(d) = β(d) = −Σ_{j≥1}γ_j e^{−(2j+½)d} < 0 by Lemma A(c).
 
-(b) 𝖡(0) = a_{T_0}(F_0) (P47 thm:band, STATEMENT_001 §3). It is > 0 in the certified windows T_0 ≤ ½ log 5
-(PROVED in P47; here T_0 < (log 2)/4 is inside). If 𝖡(0) = 0 with 𝖡(d) < 0 at another point, 𝔸_M would no longer be ⪰ 0
+(b) 𝖡(0) = a_{T_0}(F_0) (P46 thm:band, STATEMENT_001 §3). It is > 0 in the certified windows T_0 ≤ ½ log 5
+(PROVED in P46; here T_0 < (log 2)/4 is inside). If 𝖡(0) = 0 with 𝖡(d) < 0 at another point, 𝔸_M would no longer be ⪰ 0
 for the pair {log 1, log m} with log m ≈ d — this does not happen by what is certified; 𝖡(0) ≥ 0 and (a) suffice.
 
 (c) 𝖡 restricted to (0, ∞) is not the Laplace transform ∫e^{−td}dν(t) of any signed measure ν for which

@@ -29,7 +29,7 @@ reduced leading coefficient a* of ξ at the quartet, which enters as log log, i.
 
 F ∈ L²(−T,T), F̂(z) = ∫F(t)e^{izt}dt, F̂^#(z) = conj F̂(z̄). For F ∈ 𝒟_T (Lemma 3.0 domain),
 
-  W_T(F) = Σ_ρ (F̂F̂^#)(t_ρ),  t_ρ = γ − iδ for ρ = ½+δ+iγ,        (1.1, PROVED-CITED: Paper 47 lem:roughEF + R163_401 Lemma 3.0)
+  W_T(F) = Σ_ρ (F̂F̂^#)(t_ρ),  t_ρ = γ − iδ for ρ = ½+δ+iγ,        (1.1, PROVED-CITED: Paper 46 lem:roughEF + R163_401 Lemma 3.0)
 
 with multiplicity, absolutely convergent. If F is real and even, F̂ is even and real on ℝ, F̂^# = F̂, and the summand is
 F̂(t_ρ)². W_T(F) does not depend on T as long as supp F ⊂ [−T,T]; hence λ^W_T is nonincreasing (also R163_401 2.2).

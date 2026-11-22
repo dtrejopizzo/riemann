@@ -1,6 +1,6 @@
 # AUDIT_200_SPEC_002: audit of SPEC_SIGN_OBJECT_002 (phase 200, round 2)
 
-Checked against Paper 47
+Checked against Paper 46
 (thm:ext-half l.9647, rem:ext-killing l.9669, prop:ext-gauge l.9680, prop:ext-grouped l.10325) and the index (INV_H_001, INV_J_001,
 V2, phase 193 (S⁺)). Control script: python/sympy with exact fractions (NUMERICAL, reproducible in 20 lines).
 
@@ -33,7 +33,7 @@ factor |D_μ|²; it adds no new information about the sign.
 
 **Novelty.** thm:ext-half already gives 𝒲[Ψ̌] = (1/2π)∫m|𝓕Ψ̌|² − (comb) + 2AB. The only new thing is the factorization 𝓕Ψ̌_c = ĝ·D_μ(½+it).
 Verdict: **PROVED (given Guo, CITED), with the regularity hypothesis made explicit; corollary of thm:ext-half + analytic
-continuation, not an independent theorem.** Record as a lemma in P47 §22, not as a round result.
+continuation, not an independent theorem.** Record as a lemma in P46 §22, not as a round result.
 
 **T.2:** I agree: only formal (Σc_N²/N = ∞ verified: S_1(1) > 0 is exactly the coefficient of the pole of ζ in T.3 at n = 1).
 
@@ -48,7 +48,7 @@ continuation, not an independent theorem.** Record as a lemma in P47 §22, not a
   mass only at the ordinates" presupposes there are no zeros with β > ½: if there were, −ζ′/ζ has poles in Re s > ½ and there is no
   boundary value of a function holomorphic in the half-plane; the mass is not "at ordinates" but spread as Poisson kernels of symmetric
   pairs (which cancel in Re, but not as a δ). That reading is **CONDITIONAL**. The conclusion is indeed unconditional, via the
-  correct route: rem:ext-killing(iii), W_T = Σ_ρ Φ_Ψ̌(ρ)Φ_Ψ̌(1−ρ) (PROVED in P47).
+  correct route: rem:ext-killing(iii), W_T = Σ_ρ Φ_Ψ̌(ρ)Φ_Ψ̌(1−ρ) (PROVED in P46).
 - There is no residual continuous archimedean part: correct, m is absorbed by F4.
 - Verdict: **NO-GO of (ii) valid (PROVED via rem:ext-killing(iii)); the formulation "mass only at zeros" must be rewritten without
   boundary value.** Additional correction: since D_μ(ρ) = D_μ(1−ρ) = −1, the zero-side form of the outer object is *identical* to that of g; the

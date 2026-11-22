@@ -16,7 +16,7 @@ these are products of ratios ξ(z_j(λ))/ξ(z_j(λ)+1), together with L-function
   (i) Re (ξ′/ξ)(z(t)) = 0;
   (ii) (d/dt) arg ξ(z(t)) = π Σ_{γ real ordinate} δ(t + θ − γ), counting multiplicity.
 *Proof.*
-(i) This is P47 rem:fe. The FE and reality give (ξ′/ξ)(1−s) = −(ξ′/ξ)(s), and on Re s = ½ we have 1 − s = s̄, so
+(i) This is P46 rem:fe. The FE and reality give (ξ′/ξ)(1−s) = −(ξ′/ξ)(s), and on Re s = ½ we have 1 − s = s̄, so
 (ξ′/ξ)(s̄) = conj (ξ′/ξ)(s) = −(ξ′/ξ)(s). So the real part vanishes off zeros. Distributionally, Hadamard gives
 Re ξ′/ξ(½+iu) = Σ_ρ Re 1/(½+iu−ρ). Each pair ρ, 1−ρ̄ = 1−β+iγ contributes
   Re[1/(½−β+i(u−γ)) + 1/(β−½+i(u−γ))] = 0,
@@ -27,7 +27,7 @@ Off-line zeros: Ξ has no real zero there, so they add nothing to the argument o
 
 **Corollary 2.** In (TF⁺), any term in which a factor ξ(z_j(λ)) with Re z_j = ½ on the unitary axis enters through
 tr(M^{−1}M′) contributes either 0 (by (i)) or π Σ_γ ĥ(γ − θ) (by (ii)). The latter is a sum over ordinates of zeros: (R)(4),
-C_zeros, P47 cor:void.
+C_zeros, P46 cor:void.
 **Corollary 3.** The remaining ζ-factors on the unitary axis sit at abscissae Re z_j ∉ {½}:
 - For rank one (Γ congruence in SL₂(ℤ)), the scattering determinant is a product of Λ(2s−1,χ)/Λ(2s,χ) (Huxley, CITED). On Re s = ½
   these sit at abscissae 0 and 1.

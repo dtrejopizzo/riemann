@@ -1,7 +1,7 @@
 # R169_101 — Eratosthenes induction: W_T ≥ 0 ⇒ W_{T+Δ} ≥ 0 for Δ ≤ T?
 
 Memo. No numerics. Labels: PROVED / PROVED-CITED / ARGUED / OPEN.
-Inputs: R169_000 v2, R169_091, R169_190, R163_702 §3, R163_401 §1–2, R165_202 §1, Paper 47, Paper 48 `thm:M`.
+Inputs: R169_000 v2, R169_091, R169_190, R163_702 §3, R163_401 §1–2, R165_202 §1, Paper 46, Paper 48 `thm:M`.
 Notation (R163_401 §1): v_n = 2Λ(n)/√n, σ_T = m − Σ_{log n<2T} v_n cos(τ log n), c_F(u)=∫F(t)F̄(t−u)dt,
 W_T = 𝔞_T + 2Re(AB̄) on 𝒟_T ⊂ L²(I_T). X = e^{2T}, X' = e^{2T'}, T' = T+Δ, 0 < Δ ≤ T (so X' ≤ X²), z := √X' ≤ X.
 
@@ -39,7 +39,7 @@ the **activated part** 𝒩_{T,T'}(F) := Σ_{X≤n<X'} v_n Re c_F(log n). By Lem
 
 Write W_{T'} = [[W_T, C],[C*, D]] on H₀ ⊕ H₁, C = W_∞^{old}(·,·)|_{H₀×H₁} − 𝒩(·,·)|_{H₀×H₁}, D = W_∞^{old}|_{H₁} − 𝒩|_{H₁}.
 
-**Theorem 2 (Schur form of the step). PROVED** (standard; closed semibounded forms, Paper 47 thm:O gives compact resolvent
+**Theorem 2 (Schur form of the step). PROVED** (standard; closed semibounded forms, Paper 46 thm:O gives compact resolvent
 so λ_T is an eigenvalue with eigenvector F_T). Assume λ_T > 0. Then W_{T'} ≥ 0 ⟺ D − C*W_T^{−1}C ≥ 0 as a form on H₁.
 In particular, a **necessary** condition is, for every G ∈ H₁ ∩ 𝒟,
 $$
@@ -84,7 +84,7 @@ reconstruct the archimedean-like density; 𝒩^{Leg} is of main-term size, not a
 "smooth part absorbable into m(τ) + small Legendre remainder" is false. The smooth part of the true density
 (2 log x/√x)(1/log x) = 2/√x is, in τ, the Fourier transform of 2e^{u/2}·1_{[log X, log X')}, a low-frequency bump of
 height ≍ √X'·(window) which is the truncated pole term; it is not of the form m(τ) ~ log|τ| (which comes from Γ, not
-from primes). ARGUED (the pole term is what the polar part 2Re(AB̄) balances, Paper 47; not re-derived here).
+from primes). ARGUED (the pole term is what the polar part 2Re(AB̄) balances, Paper 46; not re-derived here).
 
 **Proposition 4″ (Fourier side). PROVED** (formal identity; ARGUED for the contour bookkeeping).
 Σ_{(n,P(z))=1} n^{−s} = ζ(s)E_z(s), E_z(s) := ∏_{p<z}(1−p^{−s}), entire. On [X, X') the rough integers are exactly the
@@ -157,7 +157,7 @@ counterexample exists, the Eratosthenes link (relaxed) cannot carry the step. Ei
 T = ½log2 (X = 2). Δ ≤ T allows T' ≤ log 2 (X' = 4); the activated set is {2, 3}, z = 2, P(2) = 1: the sieve is empty
 and Eratosthenes says only "2, 3 are prime". Step from ½log2 to ½log5 needs X' = 5 > X² = 4: **not one step**; two steps
 ½log2 → log2 → ½log5 (second with X = 4, z = √5, P = 2: n = 4 = 2² (k≥2), n = 5 coprime to 2 ⇒ prime). In each step
-the required statement is the Schur condition of Theorem 2 on explicit data — exactly the content of the Paper 47
+the required statement is the Schur condition of Theorem 2 on explicit data — exactly the content of the Paper 46
 certificate at the target window, with no inequality supplied by the method. So the method **reproduces** λ > 0 up to
 ½log5 only by re-running the certificate; it gives no proof shortcut. PROVED (bookkeeping) / ARGUED (no shortcut).
 

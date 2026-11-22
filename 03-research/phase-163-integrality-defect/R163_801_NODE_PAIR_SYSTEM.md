@@ -3,7 +3,7 @@
 *Pure mathematics, no numerics, no , no commits. Only this file was written; no label of record moves.
 Inputs: R163_603 (L3.1, L3.2, T5.1, T5.2, R5.3, box (A-loc)), R163_790 (F10: L3.2 holds for any two distinct nodes,
 4-point quartet sum; F12: T5.2 restricted to zero statistics), R163_401 (§1.1 conventions, (1.1), 2.4(iii)–(iii′), 3.4, 4.4–4.7),
-Paper 47 `eq:symbol`, `eq:form`, `eq:W`.*
+Paper 46 `eq:symbol`, `eq:form`, `eq:W`.*
 
 **Notation (R163_401 §1.1).** $T=T_c$, $F\in E_c$ the real, parity-definite, real-rooted witness, $G$ the real-on-$\mathbb R$
 normalisation of $\widehat F$ (so that $\widehat\Phi\widehat\Psi^\#$-products of node tests are $G^2/((z-a)(z-b))$, R163_401 4.4),

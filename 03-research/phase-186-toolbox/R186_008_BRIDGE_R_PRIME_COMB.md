@@ -89,7 +89,7 @@ Missing: (i) that the shells are nearly orthogonal (the E⁻¹ interleavings and
 6. §4 "what is NOT proved": the claim about Π_S is explicitly open; do not cite it as PROVED.
 7. No equivalence with RH; the identities are local at 2 and do not fix the signs of the window form.
 
-## For Paper 47
+## For Paper 46
 
 - Insertable as a lemma (PROVED): "semilocal scattering phase": F_S = F_∞ e^{iφ_S(D)}, φ_S' = −Σ_{p∈S}Σ_k v_{p^k}cos(kt log p); and the exact trace identity Tr ϑ(h)(P̂^S − P̂_∞) = Σ_{p∈S}Σ_k log p·p^{−k/2}(h(p^k)+h(p^{−k})), with the proof of §4 (only Birman–Solomyak as CITED). Natural location: alongside the discussion of the prime terms of the symbol θ (R183.018).
 - Do not insert §5 (ARGUED) nor the interpretation of the corrections of R183.025/029 without the pending verification.
@@ -97,7 +97,7 @@ Missing: (i) that the shells are nearly orthogonal (the E⁻¹ interleavings and
 
 ## Note (R186_094)
 
-* C and C′ correct, exact, with no remainder, λ-independent (verified numerically). MAJOR-1: C′ proves the LINEAR part (1−P̂); (Δ) on Π_S remains CONDITIONAL on (M)/OPEN; correct the table. MAJOR-2: C is a one-line computation; C′ = Fourier dual of R183_015 + classical phase trace formula; withdraw "with no o(1), unlike Connes". MINOR: the multiplier of 007 §1 is (1−2^{−s})/(1−2^{−(1−s)}); cite Simon Trace Ideals Thm 4.5; hypothesis "h(e^y) Schwartz"; C″ for several primes still to be written. Paper 47: C and C′ admissible as lemmas with these corrections; do not insert §5.
+* C and C′ correct, exact, with no remainder, λ-independent (verified numerically). MAJOR-1: C′ proves the LINEAR part (1−P̂); (Δ) on Π_S remains CONDITIONAL on (M)/OPEN; correct the table. MAJOR-2: C is a one-line computation; C′ = Fourier dual of R183_015 + classical phase trace formula; withdraw "with no o(1), unlike Connes". MINOR: the multiplier of 007 §1 is (1−2^{−s})/(1−2^{−(1−s)}); cite Simon Trace Ideals Thm 4.5; hypothesis "h(e^y) Schwartz"; C″ for several primes still to be written. Paper 46: C and C′ admissible as lemmas with these corrections; do not insert §5.
 
 ## Note (R186_020)
 

@@ -1,8 +1,8 @@
 # R156_002 — Report, 156d-R1: the truncation lemma for the Gaussian witness
 
 Task: `R156_000` round 1, row 2; residual **R1** of `R155_057` (l.59–67, 261–266),
-left by `R155_054` §1.1 (l.50–56). Pure mathematics; the only numerics are trivial arithmetic on constants P46 has already
-certified. Every statement labelled. Paper 46 = `04-papers/46-intersection-frame-defect/archive/main.md` (P46). Nothing in P46 or any
+left by `R155_054` §1.1 (l.50–56). Pure mathematics; the only numerics are trivial arithmetic on constants P47 has already
+certified. Every statement labelled. Paper 47 = `04-papers/47-intersection-frame-defect/archive/main.md` (P47). Nothing in P47 or any
 README is edited.
 
 **Verdict.** Residual R1 is **closed**. Theorem 19.25 holds with `h⁰` defined only on `𝒟_c := C_c^∞(R) ⊕ RK`, and also
@@ -16,19 +16,19 @@ act there. The correct small domain is a linear one, and it must contain classes
 **[amended per R156_003, A2: "must contain classes of degree `≥ 326`" is not proved. What is proved is: (i) no
 unconditional non-existence theorem is possible on the bare set `𝒢_min` unless RH is false (Prop 7.1); (ii) the kill of
 Theorem 6.1 uses the pair `\{E_w, K−E_w\}`, whose degrees are `d > d_0^{(R)}` and `1−d`. No lower bound on the degree of an
-arbitrary witness is proved; it is governed by the unknown `s_*` of P46 §19.9 and by witnesses of other shapes.]**
+arbitrary witness is proved; it is governed by the unknown `s_*` of P47 §19.9 and by witnesses of other shapes.]**
 
 ## 0. Corpus check
 
-* `grep -n -i "truncat"` over phases 142–155 and P46: nothing truncates `F_0`. The hits are about truncating zero sums or
+* `grep -n -i "truncat"` over phases 142–155 and P47: nothing truncates `F_0`. The hits are about truncating zero sums or
   scan windows (`R143_002:193,314`, `R143_000:38`). The only statements of the residual are `R155_054:50-56` and
-  `R155_057:59-67`, and both are sketches labelled `OPEN`. P46 has a compactly supported witness only for `Ξ_a`
+  `R155_057:59-67`, and both are sketches labelled `OPEN`. P47 has a compactly supported witness only for `Ξ_a`
   (Theorem 19.15).
-* Paper 47 `lem:roughEF` (`04-papers/47-row-d-dual-certificates/main.tex:690`) goes the **other** way: it mollifies a
+* Paper 46 `lem:roughEF` (`04-papers/46-row-d-dual-certificates/main.tex:690`) goes the **other** way: it mollifies a
   rough test **into** `C_c^∞` so that Paper 45 Thm 9.4 applies. It is not needed here. Every functional below is already
   defined, with its explicit formula, on all of `D^W`: Theorem 11.3 for the explicit formula, Theorem 11.5 for the
   comparison identity (11.6), and Theorem 11.14 for `w_F` and `C_F`. `F_0` and its truncation both lie in `D^W`. **No
-  approximation of the explicit formula is needed, and no topology on `D^W` either** (P46 §19.9 correctly notes that §11
+  approximation of the explicit formula is needed, and no topology on `D^W` either** (P47 §19.9 correctly notes that §11
   has none). All that is needed is the explicit seminorm bound of Lemma 3.1, which follows from Theorem 11.14 and (11.2).
 
 ## 1. The small domains and the restricted clauses
@@ -52,7 +52,7 @@ with the clauses restricted to `𝒟`; in particular on `𝒢_min`, on `𝒟_p` 
 strongest case, and the others follow from it by restriction. The draft had the "a fortiori" backwards.]**
 
 *Proof.* (i) `K − (G + cK) = −G + (1−c)K`. Since `nF, K − nF ∈ 𝒢_min`, the span contains `P_c^∞` and `K`, and it lies
-inside `𝒟_p`. (ii) Theorem 12.3's proof (P46:2744–2797) evaluates `h⁰` only at `nF` and `K − nF`, with `(c)` used at
+inside `𝒟_p`. (ii) Theorem 12.3's proof (P47:2744–2797) evaluates `h⁰` only at `nF` and `K − nF`, with `(c)` used at
 `E = nF`. The ample class `H' = F + 2mK` of Step 1 enters only through `I_∞(·,H')`, never through `h⁰`. (iii) Let
 `N = G + cK ∈ 𝓝_∞` with `G ∈ C_c^∞`. By (11.14), `Φ_N(ρ) = Φ_G(ρ) + cξ(ρ) = Φ_G(ρ) = 0` at every zero. The proof of
 Theorem 11.12 (zero counting, (X13), (X18)) gives `G = 0`. Then `Φ_N(0) = c/2 = 0`. ∎
@@ -64,7 +64,7 @@ satisfy is strict and open. Contrast the curve model in Remark 8.3.
 
 ## 2. What the proof of Theorem 19.25 actually uses of `F_0`
 
-I read the proofs of Theorems 19.21, 19.23 and 19.25 and Corollary 19.24 (P46 §19.6–19.7) line by line. The class `F_0`
+I read the proofs of Theorems 19.21, 19.23 and 19.25 and Corollary 19.24 (P47 §19.6–19.7) line by line. The class `F_0`
 enters **only** through four properties:
 
 * (U1) `F ∈ D^W`, real. This makes `E = tF + dK ∈ D^W` and makes (11.6), Theorem 11.13 and Theorem 11.14 available.
@@ -92,16 +92,16 @@ Theorem 11.13(ii),(iv), `\deg E' = d` and `I_∞(E',F) = I_∞(E,F) = −tW_F`. 
 `tW_F ≤ C_F d`, i.e. `t²W_F ≤ C_F²d²/W_F = s_F²d²/2`, which contradicts the lower bound in (2.1). For `N·E` the factor
 `N` cancels, as in Corollary 19.24. ∎
 
-With `F = F_0`, Lemma 19.20(v),(vi) and Proposition 19.18 give `s_{F_0} ≤ s_1(1 + 10^{−89})`. That is P46's case.
-**[amended per R156_003, A4: Proposition 2.1 stated with the exact ratio `s_F` is the correct form. P46 Theorem 19.23
-states its window with `s_1` in place of `s_{F_0}` (P46:6297), and its proof reaches only
+With `F = F_0`, Lemma 19.20(v),(vi) and Proposition 19.18 give `s_{F_0} ≤ s_1(1 + 10^{−89})`. That is P47's case.
+**[amended per R156_003, A4: Proposition 2.1 stated with the exact ratio `s_F` is the correct form. P47 Theorem 19.23
+states its window with `s_1` in place of `s_{F_0}` (P47:6297), and its proof reaches only
 `t²W_{F_0} ≤ s_1²d²/2·(1+10^{−89})`. So the admissible `t` with `t²W_{F_0} ∈ (s_1²d²/2,\ s_1²d²/2·(1+10^{−89})]` are not
 covered, and the threshold `d_0 = (1−s_1²)^{−1}` is a sliver too low. This is harmless for Theorem 19.25, which needs one `t`
-(the certified instance sits far from that edge). It is an editor item for P46, and P46 is not edited here.]**
+(the certified instance sits far from that edge). It is an editor item for P47, and P47 is not edited here.]**
 
 *Side remark (not load-bearing).* Lemma 19.20(v) states `W(F_0) = −I_∞(F_0,F_0) + 2η²`. Its own proof line,
 `I_∞ = 2Φ(0)Φ(1) − W = −2η² − W`, gives `W(F_0) = −I_∞(F_0,F_0) − 2η²`. The sign of the `2η²` term is a typo of size
-`< 10^{−780}` and changes nothing. It is flagged for the editor, not corrected here (no P46 edits).
+`< 10^{−780}` and changes nothing. It is flagged for the editor, not corrected here (no P47 edits).
 
 ## 3. The two estimates
 
@@ -135,12 +135,12 @@ The zero multiset is invariant under `ρ ↦ 1 − \barρ` (E2 plus reality). Fo
 Averaging over the involution gives `Σ_ρ(1+γ²)^{−1} ≤ 2·0.0230957 < 0.04620`. Every zero has `|γ| ≥ γ_1 > 14` (X19). So
 `|ρ−½|^{−2} ≤ γ^{−2} ≤ (1 + 14^{−2})(1+γ²)^{−1}`, and `S_2 ≤ 1.0052·0.04620 < 0.0465`. ∎
 
-*Second route, needing no new import.* Use the count P46 itself uses in Lemma 19.20(iv): `≤ \log T` ordinates in
+*Second route, needing no new import.* Use the count P47 itself uses in Lemma 19.20(iv): `≤ \log T` ordinates in
 `[T,T+1]`, `T ≥ 21`, and only `ρ_1, \barρ_1` below `21` (X19). This gives
 `S_2 ≤ 2/γ_1² + 2∫_{20}^∞ t^{−2}\log t\,dt = 0.0101 + (1+\log 20)/10 < 0.41`.
-**[amended per R156_003, A10: this route inherits P46's count `≤ \log T` per unit interval for `T ≥ 21`
+**[amended per R156_003, A10: this route inherits P47's count `≤ \log T` per unit interval for `T ≥ 21`
 (Lemma 19.20(iv), `certify_leakage.py:8–10`). Trudgian-type bounds for `S(T)` do not give that count for
-`21 ≤ T ≲ 2×10^4`; there it needs the verified zero list. So "no new import" is accurate only relative to P46's own
+`21 ≤ T ≲ 2×10^4`; there it needs the verified zero list. So "no new import" is accurate only relative to P47's own
 unaudited input. The route is not used; Lemma 3.2 rests on the Davenport route.]** **Only `S_2 ≤ 1` is used below.** Even
 without any explicit constant, (E3d) alone gives `S_2 < ∞` and everything goes through with a larger `R_0`.
 
@@ -200,11 +200,11 @@ second slot, this is at most `C_{D_R}(2N(F_0) + N(D_R))`. Next,
 
 **Certified instance, carried over (trivial arithmetic).** Take `χ = 0` and `d = 400`. The window (2.1) for `t²W_{F_R}` is
 `(\bar s²·80000,\ 79800) ⊇ (79754.43,\ 79800)`, which is nonempty. Take `t²W_{F_R} = 79780`, i.e.
-`t := (79780/W_{F_R})^{1/2}`. Then `\deg E = 400`, `I_∞(E,E) = 220`, `R(E) = 10`, all exactly as in P46:6412–6422. The
+`t := (79780/W_{F_R})^{1/2}`. Then `\deg E = 400`, `I_∞(E,E) = 220`, `R(E) = 10`, all exactly as in P47:6412–6422. The
 value of `t` differs from `53.11911…` only in the fifth significant digit, because `W_{F_R}` is known only to `10^{−4}`.
 It is defined implicitly, and nothing needs it numerically.
 **[amended per R156_003, A7: the relative error in `W_{F_R}` is `≤ 3.3×10^{−6}`, so `|Δt| ≤ 1.7×10^{−6}·t < 10^{−4}`. The
-change is at the sixth significant digit or later, not the fifth. P46's certified instance is at P46:6308–6320, not
+change is at the sixth significant digit or later, not the fifth. P47's certified instance is at P47:6308–6320, not
 6412–6422.]**
 
 ## 5. The primitive version (the span of `𝒢_min`)
@@ -250,7 +250,7 @@ Proposition 2.1 gives `R(E_w) > 0`.
 `N` cancels (Proposition 2.1, last sentence). The required `F` exists by Lemma 4.1 or Lemma 5.1. ∎
 **[amended per R156_003, A9: the **existence** of a suitable `R` needs only `S_2 < ∞`, which is (E3d) with
 `|ρ−½| ≥ |γ_ρ|`, because `C_{D_R} ≤ N(D_R) + S_2N(D_R'') → 0`. So Theorem 6.1 is `PROVED` given (X19), (E2), (E3d),
-exactly P46's inputs for Theorem 19.25. The Davenport import of Lemma 3.2 enters only the **explicit** `R_0` and the
+exactly P47's inputs for Theorem 19.25. The Davenport import of Lemma 3.2 enters only the **explicit** `R_0` and the
 explicit constants of Lemmas 4.1 and 5.1.]**
 
 **Consequence of record.** *Residual R1 of `R155_057` is closed: Theorem 19.25 holds with `h⁰` defined only on
@@ -262,7 +262,7 @@ through `s_1`, `L`" (l.56) is true only in the weak sense that Lemma 19.20(v),(v
 re-certified. `PROVED`.
 
 **Corollary 6.2 (the same over number fields and for Theorem 19.28; `PROVED` modulo the per-field (X19)-analogue, as
-P46 Theorem 19.28).** §§2–6 use only (U1)–(U4), Lemma 3.1 (whose proof transports with `\deg_K`, the weight
+P47 Theorem 19.28).** §§2–6 use only (U1)–(U4), Lemma 3.1 (whose proof transports with `\deg_K`, the weight
 `2\cosh(u/2)` in the normalisation of Theorem 19.28, and `S_2^{(K)} < ∞`, which follows from the zero count for `ξ_K`),
 and the Gaussian tails. So the truncation works for `ξ_K` whenever Theorem 19.28 does. The explicit `R_0` depends on
 `S_2^{(K)}` and on the per-field margin `1 − s_1^{(K)}`. That dependence is logarithmic in `S_2^{(K)}`; it is **not**
@@ -272,12 +272,12 @@ That happens for some number fields (Armitage, *Invent. Math.* 15 (1972), 199–
 `|ρ−½|^{−2} = ∞`. Repair: at a zero with `ρ = ½` use `|Φ_F(1−ρ)| = |Φ_F(½)| ≤ N(F)` in place of (11.2). This gives
 Lemma 3.1(ii) in the form `C_F ≤ (1 + m_{1/2})N(F) + S_2^{′}N(F'')`, where `m_{1/2}` is the multiplicity of `½` and
 `S_2^{′} := Σ_{ρ≠½}|ρ−½|^{−2} < ∞`. The rest of §§2–6 is unchanged. For `ξ` itself, `ξ(½) ≠ 0` and every zero has
-`|γ| > 14` (X19), so nothing changes. Note also that `\deg_K F = Φ_F(0) + Φ_F(1)` (P46:5343), so its weight is again the
+`|γ| > 14` (X19), so nothing changes. Note also that `\deg_K F = Φ_F(0) + Φ_F(1)` (P47:5343), so its weight is again the
 even function `2\cosh(u/2)` and an even cutoff keeps `\deg_K F_R = 0` exactly.]**
 
 ## 7. Side finding: the bare set `𝒢_min` is too small, and this is why the domain must be linear
 
-**Proposition 7.1 (`PROVED`; a sharpening of P46 §19.9's first paragraph).** For `h⁰` defined only on the set `𝒢_min`,
+**Proposition 7.1 (`PROVED`; a sharpening of P47 §19.9's first paragraph).** For `h⁰` defined only on the set `𝒢_min`,
 with clauses (a),(b′),(c) restricted to it, the hypothesis of Theorem 12.3 is **satisfiable if and only if RH holds**.
 The frame defect theorem therefore does not act on `𝒢_min`. It needs a domain containing classes of degree
 `> d_0 ≈ 325` (Theorem 6.1: `E_w` and `K − E_w`).
@@ -295,39 +295,39 @@ So "the minimal domain `𝒢_min`" of `R155_054:50` / `R155_057:52` must be read
 domain containing the high-degree pair `\{E_w, K − E_w\}`. On `𝒢_min` itself, Theorem 12.3 is RH restated, and no `h⁰`
 can be "killed" there without deciding RH. This does not favour D-HS: D-HS needs the growth `h⁰(mK) ≳ m²/4` (its test T2),
 so its domain contains `mK` for large `m` and is in any case larger than `𝒢_min`. **This is the degree gap of Horn A**
-(P46 §19.9: the load-bearing degrees are `0` and `1`, while the witnesses live at `d ≥ d_*`), seen from the domain side.
+(P47 §19.9: the load-bearing degrees are `0` and `1`, while the witnesses live at `d ≥ d_*`), seen from the domain side.
 `DIAGNOSTIC`.
 
 ## 8. Remarks on the other residuals
 
-**Remark 8.1 (R2 = Horn B, P46 §19.9, Theorem 19.30, B4; remark only).** Theorem 19.30's proof uses (U1)–(U4) with `C`
+**Remark 8.1 (R2 = Horn B, P47 §19.9, Theorem 19.30, B4; remark only).** Theorem 19.30's proof uses (U1)–(U4) with `C`
 replaced by `C'`. So on `𝒟_c` its conclusion holds with `F_R` in place of `F_0`: a cone `𝓔'` satisfying
 (T1_cone),(T2_cone) can support the small-domain transfer only if `C'_{F_R} ≥ \sqrt{W_{F_R}/2} ≥ G(1 − 3.3×10^{−6})`
 (`PROVED`, same proof). Truncation neither closes nor reopens R2. The bridge `C'_{F_0} ↔ C'_{F_R}` needs `C'_{D_R}` small,
 and for a general cone `𝓔'` the quantity `C'_{D_R}` is not controlled by `C_{D_R}`: (T2_cone) gives finiteness, not size.
-The B4 row ("the whole witness family lies in B4", P46 §19.9 table) was computed for `F_0`. For `F_R` the traces
+The B4 row ("the whole witness family lies in B4", P47 §19.9 table) was computed for `F_0`. For `F_R` the traces
 `t_n(F_R)` would have to be recomputed. That is `OPEN`, and it does not matter: B4 **passes** Theorem 19.30, so no
 refutation is at stake, and the status "`(b′)_{B4}` ⟺ RH" (`R155_057:263-266`) does not depend on which witness is used.
 
-**Remark 8.2 (Horn A's primitivity caveat; `PROVED` existence, `DIAGNOSTIC` consequence).** P46 §19.9 records that in
+**Remark 8.2 (Horn A's primitivity caveat; `PROVED` existence, `DIAGNOSTIC` consequence).** P47 §19.9 records that in
 Horn A "`F_0` is not primitive, so the gate must be taken by primitive test classes". Lemma 5.1 supplies a primitive,
 compactly supported, odd test class `F_R^♭` with `s_{F_R^♭} ≤ s_1 + 8×10^{−6}`. The primitivity caveat is thereby
 discharged at no cost in the constant. Horn A's binding obstacle (the sufficiency half of the moment problem) is untouched.
 **[amended per R156_003, A8: primitivity alone needs no truncation. `F_0 − ηB` with `B` as in §5 already lies in
 `P^W`, and its `s` is `≤ s_1 + O(10^{−389})`. What Lemma 5.1 adds is **compact support together with** primitivity. The
-caveat of P46 §19.9 is about which classes the gate may test. Supplying a primitive witness meets that requirement as an
+caveat of P47 §19.9 is about which classes the gate may test. Supplying a primitive witness meets that requirement as an
 existence statement. It does not touch the gated-candidate argument itself.]**
 
-**Remark 8.3 (the curve, Theorem 21.15: no R1 there; `PROVED` from P46 Theorem 21.8).** In the model,
+**Remark 8.3 (the curve, Theorem 21.15: no R1 there; `PROVED` from P47 Theorem 21.8).** In the model,
 `D^W_C/𝓝^C_∞` is `(2+2g)`-dimensional, and the evaluation map is onto already from the `δ_m` (Theorem 21.8's proof,
-P46:8554–8556: "the same independence makes the evaluation map onto"). So every class, including the witness of
+P47:8554–8556: "the same independence makes the evaluation map onto"). So every class, including the witness of
 Theorem 21.14, has a **finitely supported** representative modulo `𝓝^C_∞`, and (b′) is read modulo `𝓝^C_∞`. The
 small-domain question is empty on the curve. Arithmetically `𝓝_∞ ∩ 𝒟_c = 0` (Lemma 1.2(iii)), so the replacement must be
 analytic, as in §4, and not modulo the radical.
 
 **Remark 8.4 (the constant `s_*` is a `C_c^∞` constant; `PROVED`).** For every real `F ∈ D^W` with `\deg F = 0` and
 `W_F > 0` there are real `F_k ∈ C_c^∞`, `\deg F_k = 0`, with `s_{F_k} → s_F`. If `F ∈ P^W`, the `F_k` can be taken in
-`P_c^∞`. Hence the infimum `s_*` of P46 §19.9 may be taken over `C_c^∞` (resp. `P_c^∞`) without change.
+`P_c^∞`. Hence the infimum `s_*` of P47 §19.9 may be taken over `C_c^∞` (resp. `P_c^∞`) without change.
 *Proof.* First truncate: `F_R := Fϑ_R`. It is `C²` with compact support, and by (11.1) for `j ≤ 2` together with
 `|ϑ_R^{(j)}| ≤ A`, both `N(F − F_R)` and `N((F − F_R)'')` tend to `0`. Next mollify with an even `φ_δ`: on the fixed
 compact support `N ≤ 2\cosh(R+1)\|·\|_{L¹}`, and `(F_R ⋆ φ_δ)'' = F_R'' ⋆ φ_δ → F_R''` in `L¹`. Then correct, with `B_1, B_2 ∈ C_c^∞` fixed and having
@@ -342,10 +342,10 @@ coefficients are bounded by `N` of the error, by Lemma 3.1(iv). By Lemma 3.1(i)�
 | # | statement | label |
 |---|---|---|
 | 1.2 | `𝒟_c, 𝒟_p` `σ_K`-stable; `𝒟_p = \mathrm{span}\,𝒢_min`; Thm 12.3 runs on them; `𝓝_∞ ∩ 𝒟_c = 0` | PROVED |
-| §2 | the proof of Thm 19.25 uses of `F_0` only (U1)–(U4); the only exact identity is `\deg F = 0` | PROVED (by inspection of P46 §19.6–19.7) |
+| §2 | the proof of Thm 19.25 uses of `F_0` only (U1)–(U4); the only exact identity is `\deg F = 0` | PROVED (by inspection of P47 §19.6–19.7) |
 | 2.1 | abstract witness: (U1)–(U4) ⟹ `E = tF + dK` is in `S_χ` and has no nonnegative representative (stable form too) | PROVED |
 | 3.1 | `C_F ≤ N(F) + S_2N(F'')`; `|I_∞(E,F)| ≤ C_F N(E)` for all `E`; `C` subadditive | PROVED |
-| 3.2 | `S_2 ≤ 0.0465` (Davenport import), or `< 0.41` (P46's own count) | PROVED given import |
+| 3.2 | `S_2 ≤ 0.0465` (Davenport import), or `< 0.41` (P47's own count) | PROVED given import |
 | 4.1 | truncation: `F_R ∈ C_c^∞` odd, `\deg F_R = 0` exactly, `C_{D_R} ≤ 10^{−6}` for `R ≥ 6\sqrt{40+2\log A}`, `s_{F_R} < 0.998464`, `d_0 < 325.78` | PROVED given (X19) |
 | 5.1 | primitive version `F_R^♭ ∈ P_c^∞`, `s ≤ 0.998469`, `d_0 < 326.9` | PROVED given (X19) |
 | 6.1 | Thm 19.25 (and stable form) on `C_c^∞ ⊕ RK` and on `P_c^∞ ⊕ RK`; localised to the pair `\{E_w, K−E_w\}` | PROVED given (X19), (E2), (E3d) [amended per R156_003, A9: explicit constants additionally use Lemma 3.2] |
@@ -361,27 +361,27 @@ coefficients are bounded by `N` of the error, by Lemma 3.1(iv). By Lemma 3.1(i)�
 
 ## For the auditor
 
-1. **[amended per R156_003, A5: the proofs are at P46:6209–6351 (Lemma 19.20 at 6209, Thm 19.21 at 6252, Thm 19.23 at
+1. **[amended per R156_003, A5: the proofs are at P47:6209–6351 (Lemma 19.20 at 6209, Thm 19.21 at 6252, Thm 19.23 at
    6292, Cor 19.24 at 6320, Thm 19.25 at 6332–6351); 6356–6455 is Remarks 19.26–19.27, Thm 19.28, §19.8.]**
-   **(U1)–(U4) are exhaustive.** Check P46:6356–6455 for any use of `F_0` other than `\deg F_0 = 0`, `W_{F_0} > 0` and
+   **(U1)–(U4) are exhaustive.** Check P47:6356–6455 for any use of `F_0` other than `\deg F_0 = 0`, `W_{F_0} > 0` and
    the ratio `C_{F_0}/\sqrt{W_{F_0}/2}`. In particular, check that Theorem 19.23's use of `W_{F_0} = 2G²(1±10^{−90})` is
    only through `s_F`.
 2. **Lemma 3.1(iii) for non-effective `E`.** It rests on Theorem 11.14(i) (absolute convergence of `∫E w_F` for
    every `E ∈ D^W`) and on `C_F` being the **exact** supremum. Lemma 19.20(vi) bounds the exact constant, not only
    (11.17). Confirm this.
-3. **(11.2) at `s = 1 − ρ`.** P46 states (11.2) "uniformly in closed substrips". I use only the pointwise inequality
+3. **(11.2) at `s = 1 − ρ`.** P47 states (11.2) "uniformly in closed substrips". I use only the pointwise inequality
    `|Φ_g(s)| ≤ |s−½|^{−2}∫|g''|e^{(σ−½)t}`, which is the two integrations by parts, valid at every `s` in the strip
    where `g ∈ D^W`.
 4. **`S_2`.** Lemma 3.2 imports the Davenport identity `Σ\mathrm{Re}(1/ρ) = 1 + γ_E/2 − ½\log4π`, a new classical import
-   not in P46's list. The alternative route uses P46's own count `≤ \log T` per unit interval for `T ≥ 21`. I doubt that
+   not in P47's list. The alternative route uses P47's own count `≤ \log T` per unit interval for `T ≥ 21`. I doubt that
    count is provable from Trudgian-type explicit bounds for moderate `T` (for `T ≲ 5000` it needs the zero list).
-   That is P46's input for Lemma 19.20(iv), not mine; it is flagged, not used. Only `S_2 ≤ 1` is load-bearing.
+   That is P47's input for Lemma 19.20(iv), not mine; it is flagged, not used. Only `S_2 ≤ 1` is load-bearing.
 5. **The cutoff constant `A`.** `R_0` is explicit **given** `ϑ`. I did not certify `\|ϑ'\|_∞, \|ϑ''\|_∞` for a named
    cutoff. For the standard `f/(f+f)` step with `f = e^{−1/x}`, `|ϑ'| = 2` at the midpoint, and I expect `A ≤ 10³`,
    i.e. `R ≥ 45`. That is not load-bearing.
 6. **Proposition 7.1** says the audit's phrase "minimal domain `𝒢_min`" is literally too small: there, Thm 12.3's
    hypothesis is RH itself. Decide whether R1 should be recorded as closed "on `C_c^∞ ⊕ RK` and on `\mathrm{span}\,𝒢_min`"
-   (my wording), and whether 7.1 is new or already implicit in P46 §19.9's first paragraph. My view is that it is
+   (my wording), and whether 7.1 is new or already implicit in P47 §19.9's first paragraph. My view is that it is
    implicit there, and I label it a sharpening.
 7. **(b′)_𝒟 reading.** Representatives are taken in `D^W`. If they must lie in `𝒟`, the hypothesis is stronger and
    Theorem 6.1 still applies. Check that no reading makes it **weaker**, e.g. equivalence modulo a smaller radical

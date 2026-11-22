@@ -1,7 +1,7 @@
 # L2_BUILD_006 — The prime-free inequality (L2-H₀): what δ₀ is, and the signed prime bound
 
 ## Corpus check
-- Paper 47: thm:coer-A / thm:coer-B (archimedean coercivity on V_k, block-Tate), cor:coer-L1,
+- Paper 46: thm:coer-A / thm:coer-B (archimedean coercivity on V_k, block-Tate), cor:coer-L1,
   prop:arch, cor:Tarch (0.58 ≤ T*_{∞,P} ≤ 0.60), prop:archneg (T*_∞ ≤ 0.4608), thm:N / Theorem N′
   (lattice certificates, M ≤ 24 impossible at 0.68 and log 2), prop:wit-coh, prop:wit-sens,
   rem:wit-cheb, §open (N).
@@ -17,12 +17,12 @@ By 004 (1.1), Σ_j 𝔞_∞(χ_jF) − 𝒞_arch(F) = 𝔞_∞(F). Hence the bes
   δ₀*(T) = λ_{∞,P}(T) := inf{𝔞_∞(F): F ∈ P_T ∩ D_T, ‖F‖ = 1},
 independently of the partition. ∎
 
-## 2. Sign and scaling of δ₀* (CITED from Paper 47, with the pen-and-paper part marked)
+## 2. Sign and scaling of δ₀* (CITED from Paper 46, with the pen-and-paper part marked)
 (i) λ_{∞,P} is nonincreasing in T (prop:arch(i), PROVED there: nested feasible sets).
 (ii) λ_{∞,P}(T) > 0 for T < 0.58 and < 0 for T ≥ 0.60 (cor:Tarch; CITED, includes interval arithmetic).
 (iii) λ_{∞,P}(T) ↓ C_0 = −5.3721… as T → ∞ (prop:arch(ii), PROVED there).
 (iv) Pen-and-paper upper bound for (L2)-range windows (PROVED here): for T > ½log5,
-  λ_{∞,P}(T) ≤ C_0 + φ((3π/2T)²) (prop:arch(ii), PROVED in Paper 47 without computation), negative for
+  λ_{∞,P}(T) ≤ C_0 + φ((3π/2T)²) (prop:arch(ii), PROVED in Paper 46 without computation), negative for
   T > 0.74921; ½log5 = 0.8047 > 0.74921. So on the whole (L2) range δ₀*(T) < 0, by a computation-free
   argument, and δ₀*(T) ∈ [C_0, C_0 + φ((3π/2T)²)], i.e. δ₀* = C_0 + O(T^{−2}·log-type) → C_0.
 (v) thm:coer-B does NOT give (L2-H₀): it gives coercivity of 𝔞_∞ only on V_k (block-Tate, codim 2k),
@@ -41,7 +41,7 @@ The right side is negative on the archimedean-negative cone 𝒩_T := {F: 𝔞_�
     while (N_loc) needs δ₀*(T) < 0 on 𝒩_T. So the bound must be correlated with F (PROVED).
 (b) On 𝒩_T it is a ONE-SIDED, SIGNED statement: the prime comb must be anti-correlated with the
     autocorrelation of F: Σ v_n Re𝓕(log n) ≤ −|𝔞_∞(F)|.
-(c) Comparison with Paper 47 §open (N): there, via prop:wit-coh, a witness is F with
+(c) Comparison with Paper 46 §open (N): there, via prop:wit-coh, a witness is F with
     Σ_k|F̂(ω_k)|²𝒞_T(ω_k) < −𝔟_T(F), ω_k = πk/2T; (N) asks for a signed pointwise bound on the
     coherence 𝒞_T at Nyquist points correlated with the samples |F̂(ω_k)|². (N_loc) is the same
     inequality before sampling: Σ v_n Re𝓕(log n) = (1/2π)∫Σ v_n cos(τ log n)|F̂|²dτ, and sampling at the
@@ -55,10 +55,10 @@ The right side is negative on the archimedean-negative cone 𝒩_T := {F: 𝔞_�
     by rem:wit-cheb exponent-½ cancellation with sign is needed.
 
 ## 4. Review
-- §1 exact. §2(iv): uses Paper 47's proof of cor:mono with the comb deleted (pen and paper:
+- §1 exact. §2(iv): uses Paper 46's proof of cor:mono with the comb deleted (pen and paper:
   φ is an explicit Lévy-type bound on λ_3 of 𝔞_∞'s Lévy part); I checked that prop:arch(ii) is
   stated as PROVED without the appendix. OK. Note φ((3π/2T)²) is not evaluated here; the claim
-  T₀(0) = 0.74921 is Paper 47's (root of an explicit equation; its evaluation is numerical in the
+  T₀(0) = 0.74921 is Paper 46's (root of an explicit equation; its evaluation is numerical in the
   paper) — so (iv) is CITED, not pen-and-paper. Corrected label: (iv) CITED.
 - §2 NO-GO is real but KNOWN (phase 155 "primes become necessary"). Not new.
 - §3 is an exact reformulation; (a) is new in this exact form but elementary; (c) is a correct

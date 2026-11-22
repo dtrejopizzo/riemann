@@ -2,7 +2,7 @@
 
 Every statement is D-only
 (𝔞_T ≥ 0 on P_T, λ_A(T) ≥ 0, W_T ⪰ 0).
-**Sources read:** FINAL_204_001 (table of 43), AUDIT_204_CLOSURES_001 (Lemma WT, PC-2), Paper 47 (lem:monoT l.502,
+**Sources read:** FINAL_204_001 (table of 43), AUDIT_204_CLOSURES_001 (Lemma WT, PC-2), Paper 46 (lem:monoT l.502,
 prop:polarcap l.4316, prop:WT l.4358, rem:polarcapdiag), MAP_200_001 §2 (W2 / Cor 2′). **Corpus check:** the question
 «hypothesis consumed → PROVED weakening» does not appear in ROUTES-TRIED-INDEX nor in FINAL_204 §6 (which only
 records TRAT). New explicit reason versus the recorded attempts: no reformulation is retried as a route to D; the
@@ -29,9 +29,9 @@ at ½log15.
 | Id | Statement | Label |
 |---|---|---|
 | D0 | λ^W(T) > 0 (hence W_T ≻ 0, λ_A(T) > 0) for T ≤ T₀ = ½log15; λ^W(T₀) ≥ 2^{−2904} | CITED (Mori; verified phases 194–198) + lem:monoT |
-| D1 | lem:monoT: λ_A, λ_P, λ^W nonincreasing in T, even at contact thresholds | PROVED (P47 l.502) |
+| D1 | lem:monoT: λ_A, λ_P, λ^W nonincreasing in T, even at contact thresholds | PROVED (P46 l.502) |
 | D2 | lem:contT: λ^W continuous | PROVED |
-| D3 | prop:WT: inertia per sector via q_par, requiring only 0 ∉ spec(𝔄_par), q ≠ 0 | PROVED (P47 l.4358) |
+| D3 | prop:WT: inertia per sector via q_par, requiring only 0 ∉ spec(𝔄_par), q ≠ 0 | PROVED (P46 l.4358) |
 | D4 | PC-2: 𝔤_par(T) ≤ W_{T₁}(F)/ℓ(F)² for T ≥ T₁ if λ^par_A(T) > 0 | PROVED |
 | D5 | Lemma T3 (Haynsworth ×2) | PROVED |
 | D6 | n_−(𝔄_ev) = 1, q_ev + ½ ≈ −2·10⁻⁸; n_−(𝔄_odd) = 0, q_odd ≈ ½ − 2.5·10⁻⁴ (at ½log3) | NUMERICAL |
@@ -113,7 +113,7 @@ q_odd(T) = sup_{F ∈ 𝒟^odd_T, F≠0} ℓ_odd(F)² / 𝔞_T(F) and T ↦ q_od
 *Proof.* Cauchy–Schwarz in the inner product 𝔞_T (equality at F = 𝔄⁻¹χ). For T < T′ the zero extension E preserves
 parity, ℓ_odd (a T-independent formula), and 𝔞 (lem:monoT's proof). ∎
 
-*Novelty: none.* Since 𝔤_odd = 1/q_odd − 2 and x ↦ 1/(x+2) is decreasing, Lemma W1 ⟺ lem:gmono (P47 l.4760) in the
+*Novelty: none.* Since 𝔤_odd = 1/q_odd − 2 and x ↦ 1/(x+2) is decreasing, Lemma W1 ⟺ lem:gmono (P46 l.4760) in the
 odd sector. It is a **reformulation of lem:gmono in the variable q = 1/(𝔤+2)** (AUDIT_204_W1_001 §1(c)).
 
 **Corollary W1′ (PROVED given D0 + D3, proof redone).** For every T ≤ T₀: 𝔄_odd(T) ≻ 0 and q_odd(T) < ½;

@@ -13,10 +13,10 @@ Classes: **(a)** CLOSED–PROVED (explicit falsifier or proved class NO-GO; it i
 ARGUED (it is said what is missing) · **(c)** EXACT REFORMULATION (valid target; it is said of which statement) · **(d)**
 ONE LINE / examination insufficient to count as attempted · **(e)** OPEN residue.
 
-Abbreviations: O1–O15 = modifications of P47 (P47 numbering, ledger errata, round 3); (B″) = identity
+Abbreviations: O1–O15 = modifications of P46 (P46 numbering, ledger errata, round 3); (B″) = identity
 valid for every comb (lem:shape-ident, PROVED); (B′) = reading «no estimate carries the sign» (lem:shape-est (iv),
-ARGUED); CIRC = death clause that in P47 is ARGUED/CONDITIONAL/OPEN (O11, O12, primitive O10, (B′)(iv), O4^ε/O5,
-G1→(R)(10)); [crit] = precision screening M^{−3} (NUMERICAL); (S), (N) = reformulations of P47 §Open problems; «spectral
+ARGUED); CIRC = death clause that in P46 is ARGUED/CONDITIONAL/OPEN (O11, O12, primitive O10, (B′)(iv), O4^ε/O5,
+G1→(R)(10)); [crit] = precision screening M^{−3} (NUMERICAL); (S), (N) = reformulations of P46 §Open problems; «spectral
 side» = clause (R)(4). «Ín.» = verdict of the index (README or ledger); «Prim.» = what the primary memo
 and its review maintain.
 

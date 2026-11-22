@@ -22,4 +22,4 @@ POWER_CONFLUENT_THIRTEEN_AUDIT_052 approves the proof. The script tools/power_co
 
 The parallel search for a weighted norm uniform in j for all Q^jV_n produced no new bound: monomial bounds do not automatically control the mixed Gram, and the trace ofV_n does not carry over to the orbit without proof. No general impossibility is declared.
 
-Thirteen arbitrary poles, general orders and the global sign remain open. There is no new window T of Paper47; papers untouched and goal active.
+Thirteen arbitrary poles, general orders and the global sign remain open. There is no new window T of Paper46; papers untouched and goal active.

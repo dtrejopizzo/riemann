@@ -5,16 +5,16 @@ scripts and certified outputs in `scripts/r8a/` (`README.md`, `r8a_lib.py`, `r8a
 `r8a_02_lower.py`, the JSON files). the write-up was cut off before completion; this memo checks
 every step against the scripts, fixes one sign and records two further issues (§2.4, §2.3, §3.3), and adds the
 structural lemmas (§4) that turn the finitely many certified windows into statements on intervals of `T`.
-Inherits Paper 47 `thm:S`, `thm:A`, `prop:arch`, `prop:nodes`, `prop:NC`, `thm:P`, `cor:P1`, `cor:P3`, `rem:P4`,
+Inherits Paper 46 `thm:S`, `thm:A`, `prop:arch`, `prop:nodes`, `prop:NC`, `thm:P`, `cor:P1`, `cor:P3`, `rem:P4`,
 `thm:J`, `thm:w11` (proof step (c)); `R155_039` (`(H1)`, Theorem J), `R155_047`/`R155_048` (Theorem P, Remark P4
-scoped to the two-value relaxation). **Paper 47 and the phase README are not touched.***
+scoped to the two-value relaxation). **Paper 46 and the phase README are not touched.***
 
 **Status.** Labels PROVED / PROVED (machine-verified) / DIAGNOSTIC / HEURISTIC / OPEN. Every
 statement is about the **archimedean form `A_∞` alone** (prime comb deleted). **No sign for `ζ` is claimed at
 any `T`; no statement about the zeros of `ζ` is made.** Endpoint of record unchanged
-(`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`, Paper 47 Thm C). No value of `inf W` at `log 2` is asserted.
+(`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`, Paper 46 Thm C). No value of `inf W` at `log 2` is asserted.
 
-**Notation (Paper 47 §1, §8, kept exactly).** `I_T = (−T,T)`, `F̂(τ) = ∫F e^{iτt}dt`, `m(τ) = Re ψ(¼+iτ/2) − log π`,
+**Notation (Paper 46 §1, §8, kept exactly).** `I_T = (−T,T)`, `F̂(τ) = ∫F e^{iτt}dt`, `m(τ) = Re ψ(¼+iτ/2) − log π`,
 `C₀ = m(0) = ψ(¼) − log π = −γ − 3log2 − π/2 − log π = −5.3721834…`, `τ₀ = 6.28983599` the zero of `m`,
 `K(u) = 2Σ_{k≥0}e^{−(2k+½)u}` (`lem:K`), `A(F) = ∫F e^{t/2}`, `B(F) = ∫F e^{−t/2}`, `P_T = {A = B = 0}`,
 `Γ_T(F) = (1/2π)∫m|F̂|² = C₀‖F‖² + Lev(c_F)` (`prop:nodes`), `A_∞ = 2AB + Γ_T`, so `A_∞ = Γ_T` on `P_T`;
@@ -32,7 +32,7 @@ default) and **`c_N = m_lo(τ_N)`** (the value of the minorant beyond the last b
 
 1. **(H1) is PROVED at `log 2`: `n₋(A_∞|P_{log2}) = 1` exactly** (Theorem 5.1(iv)): one certified negative
  direction in the even sector, and a certified *absence* of negative directions in the odd sector and of a
- second one in the even sector. The two-value relaxation of Paper 47 floors at `5` there (`rem:P4`, `R155_048`
+ second one in the even sector. The two-value relaxation of Paper 46 floors at `5` there (`rem:P4`, `R155_048`
  Caveat 1); the multi-band relaxation, with 28 bands, returns the exact count.
 2. **The whole picture on `(0, 0.90]` is exact up to two thresholds** (Theorem 5.1(iii)):
  `n₋(A_∞|P_T) = 0` for `T < T*_ev`, `= 1` for `T*_ev < T < T*_odd`, `= 2` for `T*_odd < T ≤ 0.90`, with
@@ -41,7 +41,7 @@ default) and **`c_N = m_lo(τ_N)`** (the value of the minorant beyond the last b
  Euler–Lagrange/real-analyticity argument that ends in Weierstrass).
 3. **A certified two-sided enclosure of the archimedean threshold: `0.58 ≤ T*_{∞,P} ≤ 0.60`** (Corollary 5.2).
  This is the certified lower bound that round-4 order (d) asked for (`R155_029 §(d)`, `R155_031 §2.C`), to 1.5
- digits rather than 3. It contains the DIAGNOSTIC Galerkin value `0.5958` of Paper 47. As a by-product,
+ digits rather than 3. It contains the DIAGNOSTIC Galerkin value `0.5958` of Paper 46. As a by-product,
  **`A_∞ > 0` on `P_{½log3}` is now PROVED** (it was DIAGNOSTIC, `λ^P_∞ ≈ +0.083`).
 4. **(H1) cannot extend past `T*_odd ≤ 0.81`** (Corollary 5.3): `n₋ = 2` at `0.81, 0.82, 0.90`. This replaces
  the bound `T₂ ≤ 2π/τ₀ = 0.9989426` of `R155_039` by `T₂ ≤ 0.81`. Theorem J gives only `n₋ ≥ 1` at those windows.
@@ -66,9 +66,9 @@ default) and **`c_N = m_lo(τ_N)`** (the value of the minorant beyond the last b
 
 ## §1 Corpus check and inputs
 
-`grep -rn "multi-band\|multiband"` (phases 153–155, Paper 47, `05-meta`): only `rem:P4`, `R155_047/048/051/056/060`
+`grep -rn "multi-band\|multiband"` (phases 153–155, Paper 46, `05-meta`): only `rem:P4`, `R155_047/048/051/056/060`
 and the phase README, all naming the multi-band relaxation as *untested*. `grep "strictly decreas"` over phase 15x
-and Paper 47: strict monotonicity of `λ^P_∞` in `T` appears nowhere (`prop:arch(i)` has "nonincreasing" only;
+and Paper 46: strict monotonicity of `λ^P_∞` in `T` appears nowhere (`prop:arch(i)` has "nonincreasing" only;
 `R153_005` has a strictly decreasing *falsifier* threshold `T*(a)`, a different object). No prior certified lower
 bound on `T*_{∞,P}` (`R155_031:117`: "needs a Temple/Kato instrument"). `(H1)`: `R155_029 §1`, `R155_031:106`,
 `R155_039` (`HYPOTHESIS`, `T₂ ≤ 0.9989426`), `R155_043:22`.
@@ -262,7 +262,7 @@ margin `μ`, and re-imposes `T < 0.88137`. Result (`r8a_03_recheck.json`): certi
 in `P_T`; conversely even/odd elements of the two sectors are in `P_T` (§2.1). `m` is even, so
 `Γ(F_e, F_o) = (1/2π)∫mF̂_e\bar{F̂_o} = 0` (the integrand is odd). Negative indices add over orthogonal sums. ∎
 
-*[amended per R155_061, A6] Real vs complex. Paper 47 writes `\Ainf` with `2A(F)B(F)`, i.e. on real `F`, while its
+*[amended per R155_061, A6] Real vs complex. Paper 46 writes `\Ainf` with `2A(F)B(F)`, i.e. on real `F`, while its
 `L²(I_T)` is complex. The counts and bottoms are the same either way: for `F = u + iv`, `Γ[F] = Γ[u] + Γ[v]` (`m` even
 and real, so the cross term has an odd integrand) and `A`, `B` are real functionals.*
 
@@ -339,7 +339,7 @@ The threshold points themselves (`n_par(T*_par) ∈ {0,1}`) are not decided and 
 ### 5.2 Corollary (the archimedean threshold, certified). PROVED (machine-verified)
 
 **`0.58 ≤ T*_{∞,P} ≤ 0.60`**, and `λ^P_∞` is strictly decreasing, positive on `(0, T*_{∞,P})`, negative on
-`(T*_{∞,P}, ∞)`. In particular **`A_∞ > 0` on `P_{½log3}`** (Paper 47 §8 states this as DIAGNOSTIC,
+`(T*_{∞,P}, ∞)`. In particular **`A_∞ > 0` on `P_{½log3}`** (Paper 46 §8 states this as DIAGNOSTIC,
 `λ^P_∞ ≈ +0.083`; the sign is now proved, the value remains DIAGNOSTIC), and `A_∞` is indefinite on `P_{log2}` with
 exactly one negative direction. This improves `prop:arch(iv)` (`T*_{∞,P} ≤ 0.74921`) and brackets its DIAGNOSTIC
 `0.5958`. The lower half is a certified lower bound on an infimum — the direction a Galerkin value cannot give —
@@ -492,7 +492,7 @@ computation was made.
 above concerns the archimedean form with the primes deleted; no sign for `ζ` beyond `T ≤ log 2`, no statement about
 zeros.
 
-## §10 Paper 47 proposal (not executed; to be decided after audit)
+## §10 Paper 46 proposal (not executed; to be decided after audit)
 
 (1) `prop:arch`: add Lemma 4.3 (strictness; half a page) and Corollary 5.2 (`0.58 ≤ T*_{∞,P} ≤ 0.60`), and turn the
 DIAGNOSTIC "archimedean form positive on `P_T` at `½log3`" into a proved sign. (2) After `prop:NC`: replace "the

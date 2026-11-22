@@ -3,13 +3,13 @@
 Route D5 of R160_010 (never written before; R162_590 §2 item 3).
 **Status: PARTIAL.** Structural theorems PROVED (Thms 1–4). The sign mechanism is **NO-GO** (§5): the
 second-eigenvalue target is RH restated (E1), the rank-2 Tate correction is exactly the polar term of
-Paper 47 (restatement of thm:parityschur / prop:polarcap in resolvent language), and the only step that
+Paper 46 (restatement of thm:parityschur / prop:polarcap in resolvent language), and the only step that
 uses the Euler product is Λ ≥ 0, which is DH-failing but blind to finite modifications a ≥ 0 (F3).
 No sign is claimed.
 
-Notation (Paper 47): a_T = eq:form, operator A_T on L²(I_T), P_T = ker A ∩ ker B,
+Notation (Paper 46): a_T = eq:form, operator A_T on L²(I_T), P_T = ker A ∩ ker B,
 φ_ev = cosh(t/2)1_{I_T}, φ_odd = sinh(t/2)1_{I_T}, ℓ_par = ⟨·,φ_par⟩, W_T = a_T + 2AB.
-μ_1 ≤ μ_2 ≤ … eigenvalues of A_T on L²(I_T) (compact resolvent, Paper 47 thm:parityschur proof);
+μ_1 ≤ μ_2 ≤ … eigenvalues of A_T on L²(I_T) (compact resolvent, Paper 46 thm:parityschur proof);
 μ_k^par the same on the parity sector.
 
 ## 1. Corpus check
@@ -49,7 +49,7 @@ has a parity eigenvector, and a positive function is even. ∎
 of −f′/f are real but sign-changing (no Euler product; zeros in Re s > 1 make the coefficients not even
 those of a convergent Λ-type series), so the comb is not positivity preserving and Theorem 1 fails there.
 For Λχ₂ likewise (χ₂ changes sign). **F3 line:** step (iii) holds verbatim for every a ≥ 0, in
-particular for the deletion and amplification models of Paper 47 thm:finmod, which have genuine first
+particular for the deletion and amplification models of Paper 46 thm:finmod, which have genuine first
 contacts. So Theorem 1 is orientation-sensitive (fails under Λ → −Λ, unlike the (PC) square of F2) but
 arithmetic-blind within a ≥ 0.
 

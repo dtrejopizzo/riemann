@@ -1,12 +1,12 @@
 # INV_O_001 — Modular/conformal bootstrap as a clause-5 object (track O)
 
-Notation: Paper 47 (04-papers/47-row-d-dual-certificates/main.tex): s_T, v_n, N_T, 𝔞_T (eq:form), P_T, W_T, def:W, ν_w, f_w,
+Notation: Paper 46 (04-papers/46-row-d-dual-certificates/main.tex): s_T, v_n, N_T, 𝔞_T (eq:form), P_T, W_T, def:W, ν_w, f_w,
 thm:Z, thm:D1, thm:O, def:shape-ops (O_1–O_15), thm:shape, cor:shape. Spec clauses (1)–(6): ROUTES-TRIED-INDEX/README.md.
 Pure math; no numerics.
 
 ## 0. Corpus / index check and new reason
 - Index hits: SURVEY_MODERN_UNTRIED B3 (this seed, score 3, "high REF-D risk"); README "Certificados duales, de red,
-  flat-top, SOS" (Paper 47 §3–6, thm:Z, thm:R) = class (D); thm:O magic functions (frentes L, N; CA_N_VIAZOVSKA); L55 Johns
+  flat-top, SOS" (Paper 46 §3–6, thm:Z, thm:R) = class (D); thm:O magic functions (frentes L, N; CA_N_VIAZOVSKA); L55 Johns
   LP (AUDIT_B); W3′ integer-frequency blindness (R163_1001); F-ζ_θ "only integer multiplicities separate" (R163_101);
   INV_A_001 Hamburger rigidity; INV_F_001 ∂log wall; INV_J_001 J4, INV_K_001 K1. "bootstrap" in the index = bootstrap in T
   (G3E-159, G8E-159, W2) — a different object.

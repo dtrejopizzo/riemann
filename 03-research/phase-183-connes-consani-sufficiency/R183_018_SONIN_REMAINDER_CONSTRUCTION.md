@@ -79,7 +79,7 @@ on [2^{-1/2},2^{1/2}] corresponds to T=½log 2. Also ĝ(0)=∫h, and
 * Grid R162_2300, row 2A: "115_13–16, phase derivative of the semilocal
   Sonin trace: favorable sign, no exact identity." **§3 supplies
   the exact identity.** Row 8D: closed by R162_2602.
-* Paper 47 thm:P (Ky Fan ceiling) bounds the n₋ of the **total** Weil form
+* Paper 46 thm:P (Ky Fan ceiling) bounds the n₋ of the **total** Weil form
   on mode arenas. It does not contradict §5: there n₋ is finite because the
   unbounded Sonin part is included. Here it is subtracted.
 

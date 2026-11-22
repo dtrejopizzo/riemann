@@ -55,7 +55,7 @@ data, Thm D.24.11) and **(c) implies RH** (Thm D.24.5(i)).
 | **D.24.11–12** | any `h⁰` reading the pairings against `r(Div_□)` factors through `M`, hence is refuted too; an admissible `h⁰` must read `Z(E)` **through the arithmetic side** | **PROVED**, new in round 2 |
 | D.24.9 | (b′) is exactly a **moment problem** on `\{e^{(s−½)t}\}_{s∈\{0,1\}∪Z(ξ)}` with a nonnegativity constraint; necessary condition `|Φ_E(ρ)| ≤ b^{1−β}a^{β}` | **PROVED**; the moment cone `𝔐` is **OPEN** (O-15) |
 | D.24.10 | D-HS (phase 136 S4): isometric Frobenius transport forces `h⁰ = ψ(ab)` — refuted | **PROVED** |
-| (AT-1),(AT-2),(AT-3) | (AT-1) passes on the non-multiplicativity of `r_Q`; its second half is **weakened** (H7: no `Ξ_Q`-primitive witness — O-17). (AT-2) passes, and more strongly (the primitive bridge exists: Paper 46 Lemma 12.4A). (AT-3) passes. Clause (N) is **moot** for `h⁰_□` | **PROVED** / **WEAKENED** as marked |
+| (AT-1),(AT-2),(AT-3) | (AT-1) passes on the non-multiplicativity of `r_Q`; its second half is **weakened** (H7: no `Ξ_Q`-primitive witness — O-17). (AT-2) passes, and more strongly (the primitive bridge exists: Paper 47 Lemma 12.4A). (AT-3) passes. Clause (N) is **moot** for `h⁰_□` | **PROVED** / **WEAKENED** as marked |
 | row D label | **no change**: no sign, no `h⁰` | — |
 
 ## Open items (after round 2)

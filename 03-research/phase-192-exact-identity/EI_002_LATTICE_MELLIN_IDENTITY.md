@@ -1,7 +1,7 @@
 # EI_002 — The phase-190 family s_w = m^{−½}w(m/M): exact spectral form with the Euler tail, exact Mellin/ℤ-Poisson expansion of the test, self-duality of near-coincidences, and why no square emerges
 
 Construction round (phase 192), starting point (ii) of the mandate. Pen and paper; no numerics. no equivalence with
-any other statement is used. P47 = Paper 47; SPEC_B = phase-191/SPEC_B.
+any other statement is used. P46 = Paper 46; SPEC_B = phase-191/SPEC_B.
 **No sign certified; no negative value of 𝔞_T for ζ.**
 
 ## 0. Corpus check — why not a retry
@@ -15,7 +15,7 @@ test's spectral density |P_{s_w}|² through the exact Mellin identity (Theorem 2
 (Theorem 3), or the self-duality of near-coincidences in ℤ² (Theorem 4). The question the mandate asks — exact ℤ²-Poisson + FE, does a
 square emerge — is answered (Theorem 5: no, by a PROVED obstruction).
 
-## 1. Setting (P47 subsec:oneprofile, prop:AM; SPEC_B §1.3)
+## 1. Setting (P46 subsec:oneprofile, prop:AM; SPEC_B §1.3)
 Profile F₀ ∈ P_{T₀}, |b| > ½, 2T₀ < ½log2; c₀ = c_{F₀}, ĉ₀ = F̂₀² > 0. M ≥ 2, X' := Me^{2T₀}. w ∈ 𝒲_η (C_c^∞[0,1), w ≡ c on [0,η]);
 s_w := (m^{−½}w(m/M))_{m≤M}; G_M := Σ_{m≤M}s_mV_{log m}F₀ ∈ P_T for T ≥ T₀ + log M (lem:transl(i)); Q_M(w) := s_wᵀA_Ms_w = 𝔞_T(G_M).
 Smoothed partial sum ζ_w(s;M) := Σ_{m≤M}m^{−s}w(m/M) (entire in s); P_{s_w}(τ) = ζ_w(½−iτ;M), |P_{s_w}|² = |ζ_w(½+iτ;M)|².
@@ -75,7 +75,7 @@ Insert (3.1) into Theorem 1: Q_M(w) = c²I_{ζζ} + I_{pp} + 2cI_{ζp} + I_ρ, w
   ℓ_X(n) := Σ_{d|n, d≥X}Λ(d) ≥ 0  (uses Λ∗1 = log, i.e. the Euler product over ℕ: −ζ' = ζ·(−ζ'/ζ)),
   I_{pp} = (M/π)∫F̂₀²|W(½−iτ)|²Re R_{X'}dτ,  I_{ζp} = (1/π)∫F̂₀²Re[ζ(½−iτ)M^{½−iτ}W(½−iτ)]Re R_{X'}dτ,  I_ρ = the terms containing ρ_M.
 (a) Each piece is the pairing of a nonnegative density (F̂₀²|ζ|², MF̂₀²|W|², …) or of a signed cross density with Re R_{X'}(½+iτ) = ½σ_{T'}(τ), and σ_{T'}
-    is negative on the nonempty set U_{T'} (P47 subsec:band; thm:kappa(iv): κ = 1 < κ⋆). So no piece is termwise nonnegative, and no
+    is negative on the nonempty set U_{T'} (P46 subsec:band; thm:kappa(iv): κ = 1 < κ⋆). So no piece is termwise nonnegative, and no
     choice of w changes the symbol. PROVED.
 (b) A representation Q_M(w) = Σ_i(squares) + (free p.d. part) valid for all w, M is a certificate of class (D) (def:PD, thm:sos, thm:D1):
     its content is λ_P itself — REF-D, excluded by the mandate. A representation through |ζ(½+iγ)|² = 0 at the zeros is lem:roughEF/thm:Z —
@@ -105,7 +105,7 @@ Insert (3.1) into Theorem 1: Q_M(w) = c²I_{ζζ} + I_{pp} + 2cI_{ζp} + I_ρ, w
    ("vanishes to second order, ARGUED") is now PROVED in the bulk and corrected at the edge (it does not vanish atom by atom there; it
    vanishes after the sum over atoms with the PNT density, leaving the fluctuation (a)). ✓
 4. Theorem 3(ii): the width bound on Ŵ_v is integration by parts k times in y (w smooth): ✓. Self-duality is an exact structural statement.
-5. Theorem 5(a): U_{T'} ≠ ∅ is PROVED in P47 (subsec:band; thm:kappa(iv): the polar-free main-term symbol has g₁(0) = C₀ + 4 < 0). ✓ (b) is the record. (d): the exponent 1/6 is the convexity bound; with any
+5. Theorem 5(a): U_{T'} ≠ ∅ is PROVED in P46 (subsec:band; thm:kappa(iv): the polar-free main-term symbol has g₁(0) = C₀ + 4 < 0). ✓ (b) is the record. (d): the exponent 1/6 is the convexity bound; with any
    subconvexity bound θ the condition becomes A < 3 − 2θ, still < 3. ✓
 6. Non-linearity in Λ: present in the *test* (|ζ|² = |exp(Σ_nΛ(n)n^{−s}/log n)|² formally; concretely through the coefficients 1 of ζ_w,
    which encode Λ∗1 = log) and absent in the symbol (Re R_X is linear in Λ). Recorded in §7.

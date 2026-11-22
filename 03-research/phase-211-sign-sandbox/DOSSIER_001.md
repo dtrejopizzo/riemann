@@ -1,6 +1,6 @@
 # Reverse-engineering dossier of the window-positivity sign (Papers 43–48)
 
-Source files (read-only): `04-papers/47-row-d-dual-certificates/main.tex` (cited as P47:line),
+Source files (read-only): `04-papers/46-row-d-dual-certificates/main.tex` (cited as P46:line),
 `04-papers/48-row-d-route-map/main.tex` (P48:line), READMEs/section lists of Papers 43–46.
 Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL. Every new idea in this file is OPEN.
 Convention: window positivity is treated as a standalone statement about an explicit quadratic form. Zeros of
@@ -9,67 +9,67 @@ zeta appear only where a paper's *tool* is an explicit-formula identity; no equi
 ---------------------------------------------------------------------------------------------------------------------
 ## 1. The exact open statement (self-contained definitions)
 
-### 1.1 Basic objects (P47:105–150, 393–470, 370–392)
+### 1.1 Basic objects (P46:105–150, 393–470, 370–392)
 - T>0, I_T=(-T,T). For F in L^2(I_T) (extended by 0): \hat F(τ)=∫F(t)e^{iτt}dt; autocorrelation
   c_F(u)=∫F(t)\overline{F(t-u)}dt (supported in [-2T,2T], \hat c_F=|\hat F|^2).
-- Archimedean symbol m(τ)=Re ψ(1/4+iτ/2) − log π. Lévy form (Lemma lem:K, P47:395):
+- Archimedean symbol m(τ)=Re ψ(1/4+iτ/2) − log π. Lévy form (Lemma lem:K, P46:395):
   m(τ)=C_0+∫_0^∞(1−cos τu)K(u)du, C_0=ψ(1/4)−log π=−5.3721834…,
   K(u)=1/(2 sinh(u/2))+1/(2 cosh(u/2))=2Σ_{k≥0}e^{−(2k+1/2)u} (positive, completely monotone, K=u^{-1}+O(1) at 0).
-  m−C_0=φ(τ^2), φ(x)=Σ_{k≥0} x/(a_k(x+4a_k^2)), a_k=k+1/4, complete Bernstein (thm:S, P47:421). m increasing in |τ|,
+  m−C_0=φ(τ^2), φ(x)=Σ_{k≥0} x/(a_k(x+4a_k^2)), a_k=k+1/4, complete Bernstein (thm:S, P46:421). m increasing in |τ|,
   unique positive zero t_0=6.2898… (numerical), m(τ)=log(|τ|/2π)+O(1/|τ|).
 - Contacts N_T={n≥2: log n<2T}; weights v_n=2Λ(n)/√n; A_T:=Σ_{n∈N_T}v_n.
 - Window symbol σ_T(τ)=m(τ)−Σ_{n∈N_T}v_n cos(τ log n).
 - Form a_T(F)=(1/2π)∫σ_T|\hat F|^2dτ = C_0‖F‖^2+Lev(c_F)−Σ_{n∈N_T}v_n Re c_F(log n),
-  Lev(Φ)=∫_0^∞(Φ(0)−ReΦ(u))K(u)du (thm:A, P47:444, eq:Aform). Domain D_T={∫log(2+|τ|)|\hat F|^2<∞}.
+  Lev(Φ)=∫_0^∞(Φ(0)−ReΦ(u))K(u)du (thm:A, P46:444, eq:Aform). Domain D_T={∫log(2+|τ|)|\hat F|^2<∞}.
 - Tate moments A(F)=∫F e^{t/2}, B(F)=∫F e^{−t/2}; primitive subspace P_T={A=B=0}.
 - Complete form W_T(F)=a_T(F)+2Re(A(F)\overline{B(F)}).
 - λ_A(T)=inf{a_T(F): F∈P_T∩D_T, ‖F‖=1};  λ^W_T=inf{W_T(F): F∈D_T, ‖F‖=1}; λ^W_T ≤ λ_P(T) ≤ λ_A(T).
-- **Target (eq:target, P47:136):** λ_A(T) ≥ 0 for every T>0 (and the complete version λ^W_T ≥ 0).
-- Status: PROVED λ_A ≥ 2.5·10^{-12}, λ^W ≥ 10^{-18} on (0,½log5] (thm:log5A/log5W, P47:4680–4710, ball arithmetic);
+- **Target (eq:target, P46:136):** λ_A(T) ≥ 0 for every T>0 (and the complete version λ^W_T ≥ 0).
+- Status: PROVED λ_A ≥ 2.5·10^{-12}, λ^W ≥ 10^{-18} on (0,½log5] (thm:log5A/log5W, P46:4680–4710, ball arithmetic);
   CITED: Zhu T≤0.8, Liu T≤17/16 (unrefereed), Mori T≤½log15=1.35402 (unrefereed, computational part reproduced).
   OPEN beyond ½log15.
-- Structural facts (PROVED): T↦λ_A nonincreasing (lem:monoT, P47:534) and continuous (lem:contA, P47:621); target ⇔
-  lim_{T→∞}λ_A ≥ 0 ⇔ λ_A ≥ −ε(T) with ε→0 ⇔ λ_A(½log n_k)≥0 along one sequence (thm:wit-Tc(iv), P47:995).
+- Structural facts (PROVED): T↦λ_A nonincreasing (lem:monoT, P46:534) and continuous (lem:contA, P46:621); target ⇔
+  lim_{T→∞}λ_A ≥ 0 ⇔ λ_A ≥ −ε(T) with ε→0 ⇔ λ_A(½log n_k)≥0 along one sequence (thm:wit-Tc(iv), P46:995).
   Dichotomy (thm:wit-Tc(v)): either 0 ≤ λ_A ≤ 4·10^9 T e^{−15.449T} for all T≥1, or λ_A ≤ −c<0 eventually.
-  At each T the problem depends only on (Λ(n))_{n<e^{2T}} (prop:finite, P47:3156); the feasible set of weight vectors is
+  At each T the problem depends only on (Λ(n))_{n<e^{2T}} (prop:finite, P46:3156); the feasible set of weight vectors is
   closed convex (ibid. (ii)).
 
-### 1.2 Reduced form (L2): the finite Schur matrix (P47 §coer, 4876–5339)
+### 1.2 Reduced form (L2): the finite Schur matrix (P46 §coer, 4876–5339)
 - Blocks: k≥1, r=T/k, B_j=(−T+2(j−1)r, −T+2jr). e_j^±=e^{±t/2}1_{B_j}.
   V_k={F∈L^2(I_T): ∫_{B_j}F e^{t/2}=∫_{B_j}F e^{−t/2}=0 ∀j}; E_k=P_T⊖V_k = span{e_j^±}∩P_T, dim E_k=2k−2 (lem:coer-decomp).
-- Coercivity (thm:coer-B, P47:5104; PROVED): for r≤1, m_T(F) ≥ (log(1/r) − C_B(r))‖F‖^2 on V_k, C_B(r)→1.6399 as r→0.
-  c(T,k):=inf{a_T(F): F∈V_k∩D_T, ‖F‖=1} ≥ log(k/T) − C_B(T/k) − ‖Π_T‖ (cor:coer-L1, P47:5197), ‖Π_T‖ ≤ A_T
+- Coercivity (thm:coer-B, P46:5104; PROVED): for r≤1, m_T(F) ≥ (log(1/r) − C_B(r))‖F‖^2 on V_k, C_B(r)→1.6399 as r→0.
+  c(T,k):=inf{a_T(F): F∈V_k∩D_T, ‖F‖=1} ≥ log(k/T) − C_B(T/k) − ‖Π_T‖ (cor:coer-L1, P46:5197), ‖Π_T‖ ≤ A_T
   (prop:coer-prime); hence c(T,k)>0 for k ≥ k_0(T) (admissible k > T e^{A_T+C_B}, doubly exponential in T; k=25 at ½log5).
-- Schur complement (thm:coer-schur, P47:5239): for c(T,k)>0, K:E_k→V_k defined by a_T(Ke,v)=a_T(e,v) ∀v∈V;
+- Schur complement (thm:coer-schur, P46:5239): for c(T,k)>0, K:E_k→V_k defined by a_T(Ke,v)=a_T(e,v) ∀v∈V;
   s_{T,k}(e)=a_T(e)−a_T(Ke)=a_T(e)−sup_{u∈V}[2Re a_T(e,u)−a_T(u)]; S_{T,k}= matrix of s_{T,k} in an orthonormal basis of E_k
   ((2k−2)×(2k−2) real symmetric).
 - **(L2) [OPEN]: for every T>½log5 (now: >½log15 granting Mori), S_{T,k(T)} ⪰ 0.** ⇔ λ_A(T)≥0 (PROVED, thm:coer-schur(iii)).
-  Note: entries are not closed form (a sup over V); Galerkin gives upper bounds only (rem:coer-honest, P47:5298).
+  Note: entries are not closed form (a sup over V); Galerkin gives upper bounds only (rem:coer-honest, P46:5298).
 
-### 1.3 Reduced form (N): signed twisted Chebyshev bound at Nyquist points (P47 §nyq 6049–6439, §wit 7164–7308)
-- ω_k=πk/(2T). Truncated symbol s_T(τ)=C_0+∫_{2T}^∞K+∫_0^{2T}(1−cos τu)K(u)du−Σ_{N_T}v_n cos(τ log n) (eq:nyq-sT, P47:6060).
+### 1.3 Reduced form (N): signed twisted Chebyshev bound at Nyquist points (P46 §nyq 6049–6439, §wit 7164–7308)
+- ω_k=πk/(2T). Truncated symbol s_T(τ)=C_0+∫_{2T}^∞K+∫_0^{2T}(1−cos τu)K(u)du−Σ_{N_T}v_n cos(τ log n) (eq:nyq-sT, P46:6060).
 - Nyquist identity (thm:nyq, PROVED): a_T(F)=(1/4T)Σ_k|\hat F(ω_k)|^2 s_T(ω_k), exact (with σ_T there is an aliasing term,
   prop:nyq-alias).
 - Coherence: ϱ_T=Σ_{N_T}v_nδ_{log n}−2e^{u/2}1_{(0,2T)}du; C_T(ω)=−(1/4T)∫cos(ωu)dϱ_T(u)
   =(1/4T)[Re(2(e^{(1/2+iω)2T}−1)/(1/2+iω)) − Σ_{N_T}v_n cos(ω log n)].
   b_T(F)=C_0‖F‖^2+Lev(c_F)−2∫_0^{2T}Re c_F(u)e^{u/2}du, so a_T=b_T−∫Re c_F dϱ_T.
-- prop:wit-coh (P47:7224, PROVED): ∫Re c_F dϱ_T = −Σ_k|\hat F(ω_k)|^2 C_T(ω_k); F∈P_T is a witness (a_T(F)<0) iff
+- prop:wit-coh (P46:7224, PROVED): ∫Re c_F dϱ_T = −Σ_k|\hat F(ω_k)|^2 C_T(ω_k); F∈P_T is a witness (a_T(F)<0) iff
   Σ_k|\hat F(ω_k)|^2 C_T(ω_k) < −b_T(F).
-- Equivalent polar-free form (prop:sharp, P47:7361, PROVED): m^♯(τ)=m(τ)+1/(1/4+τ^2)=Re ψ(5/4+iτ/2)−log π
+- Equivalent polar-free form (prop:sharp, P46:7361, PROVED): m^♯(τ)=m(τ)+1/(1/4+τ^2)=Re ψ(5/4+iτ/2)−log π
   (=C_0+4+Σ_{k≥1}τ^2/(a_k(τ^2+4a_k^2)); m^♯(0)=C_0+4=−1.3721834…), a^♯(F)=(1/2π)∫m^♯|\hat F|^2,
   F_T(F)=Σ_{N_T}v_n Re c_F(log n) − 2∫_0^{2T}Re c_F(u)e^{u/2}du = 2∫_{[1,e^{2T})}y^{−1/2}c_F(log y)d(ψ(y)−y) (prop:wit-cheb).
   On P_T: a_T = a^♯ − F_T. **(N) [OPEN]: F_T(F) ≤ a^♯(F) for all F∈P_T∩D_T, all T.** λ^♯(T)=bottom of a^♯ on P_T ↓ C_0+4<0.
 - Primal cone (thm:nyq-cone, PROVED): P_T=(1/4−∂^2)H^2_0(I_T), \hat F=(τ^2+1/4)\hat G; the sample cone
   K_T={(|\hat F(ω_k)|^2)_k} = samples of entire f≥0 of type ≤2T, integrable, vanishing to order ≥2 at ±i/2; Σ(−1)^k a_k=0.
 
-### 1.4 Reduced form (S): near-coincidence matrices / one profile (P47 §combs 7759–7847)
-- Profile (P47:7760–7770): a>0, |b|>1/2, g(t)=e^{bt}1_{[0,a]}, c_g=g*\tilde g, G_0=c_g*c_g, T_0=2a, F_0=(1/4−∂^2)G_0 ∈ P_{T_0};
+### 1.4 Reduced form (S): near-coincidence matrices / one profile (P46 §combs 7759–7847)
+- Profile (P46:7760–7770): a>0, |b|>1/2, g(t)=e^{bt}1_{[0,a]}, c_g=g*\tilde g, G_0=c_g*c_g, T_0=2a, F_0=(1/4−∂^2)G_0 ∈ P_{T_0};
   \hat F_0(τ)=(τ^2+1/4)|\hat g(τ)|^4>0 on R, \hat g(z)=(e^{(b+iz)a}−1)/(b+iz). c_0:=c_{F_0}, \hat c_0=\hat F_0^2.
   (Normalise ‖F_0‖=1; see §6(b).)
-- **One explicit function of one real variable (thm:oneprofile, P47:7773, PROVED):**
+- **One explicit function of one real variable (thm:oneprofile, P46:7773, PROVED):**
   B(d)=a(F_0,V_dF_0)=(1/2π)∫m(τ)\hat F_0(τ)^2 cos(τd)dτ − ½Σ_{n≥2}v_n[c_0(log n−d)+c_0(log n+d)]
   (finite sum for each d). **Target ⇔ B is a positive definite function on R.**
-- Integer-lattice matrices (prop:AM, P47:7811, PROVED; needs 2T_0<log2): A_M=[B(log m−log k)]_{m,k≤M};
+- Integer-lattice matrices (prop:AM, P46:7811, PROVED; needs 2T_0<log2): A_M=[B(log m−log k)]_{m,k≤M};
   target ⇔ A_M ⪰ 0 ∀M; s^T A_M s=(1/2π)∫\hat F_0^2|Σ_{m≤M}s_m m^{iτ}|^2[m(τ)−Σ_{2≤n<Me^{2T_0}}v_n cos(τ log n)]dτ;
   A_M=Arch_M−Div_M−Near_M, Arch_M(m,k)=(1/2π)∫m\hat F_0^2 cos(τ log(m/k)); Div_M=½(V_M+V_M^T), (V_M)_{mk}=v_{m/k} if k|m,k<m;
   Near_M(m,k)=½Σ_{n≥2, kn≠m}v_n c_0(log(kn/m)) (m>k): integers n≠m/k in (m/k·e^{−2T_0}, m/k·e^{2T_0});
@@ -77,24 +77,24 @@ zeta appear only where a paper's *tool* is an explicit-formula identity; no equi
 - **(S) [OPEN]: Arch_M − Div_M − Near_M ⪰ 0 for every M.**
 
 ### 1.5 Further exact restatements (all OPEN, all ⇔ target or its complete version)
-- (L) leakage coercivity (prob:ext-L, P47:9972): find κ>0, A_0≥0 with W_T(g) ≥ κ N^{−A_0} ℓ(g), N=e^{2T}≥5, g in the core
+- (L) leakage coercivity (prob:ext-L, P46:9972): find κ>0, A_0≥0 with W_T(g) ≥ κ N^{−A_0} ℓ(g), N=e^{2T}≥5, g in the core
   (definitions §5.3 below). Implies λ^W_T ≥ (κ/4)N^{−A_0−1}(1−χ_0(2πN))>0 ∀T (thm:ext-margin, PROVED conditional).
 - Node (P48 prob:node, P48:361): for T>½log15 and every real even F with ℓ_T(F)=∫F cosh(x/2)=0:
   Q_T(F)=(m_T+e_T)(F)+Φ_T(F) ≥ 0, e_T(F)=(1/2π)∫|\hat F|^2/(1/4+τ^2), Φ_T(F)=−∫_{[1^-,e^{2T}]}2t^{−1/2}c_F(log t)d(ψ(t)−t)
   (even-sector statement only; LMI/spectrahedron in (v_n)).
-- Even inertia (prop:H, P47:6561): W^{ev}_T ⪰ 0 ∀T ⇔ n_−(A_ev(T)) ≤ 1 ∀T, A_ev = a_T on even D_T without Tate constraint.
-- Gamma-moment annihilation (prob:annihilate, P47:6887) ⇔ target (prop:annihilate-equiv).
-- Kreĭn indeterminacy at every window; flat-top certificate at every window (thm:KEPdich, thm:Zexh; lem:shape-restate P47:8910).
-- Two-sector exact Schur form S_η (thm:nyq-schur(ii), P47:6367) — see §6(h): it is an exact finite reduction not listed in §open.
+- Even inertia (prop:H, P46:6561): W^{ev}_T ⪰ 0 ∀T ⇔ n_−(A_ev(T)) ≤ 1 ∀T, A_ev = a_T on even D_T without Tate constraint.
+- Gamma-moment annihilation (prob:annihilate, P46:6887) ⇔ target (prop:annihilate-equiv).
+- Kreĭn indeterminacy at every window; flat-top certificate at every window (thm:KEPdich, thm:Zexh; lem:shape-restate P46:8910).
+- Two-sector exact Schur form S_η (thm:nyq-schur(ii), P46:6367) — see §6(h): it is an exact finite reduction not listed in §open.
 
 ---------------------------------------------------------------------------------------------------------------------
 ## 2. PROVED tools (name — statement — label — lines)
 
 Duality / certificates
-- thm:D1 (P47:716) strong duality, finitely atomic dual sequences: λ_P = sup over (ν even finite measure on |u|≥2T, β∈R^2)
+- thm:D1 (P46:716) strong duality, finitely atomic dual sequences: λ_P = sup over (ν even finite measure on |u|≥2T, β∈R^2)
   of inf_τ[σ_T+\hat ν+β_0\hat g_0+β_1\hat g_1], g_0=cosh(u/2)1_{|u|<2T}, g_1=u sinh(u/2)1_{|u|<2T}. PROVED.
-- thm:O (P47:775) dual never attained; thm:E (1088) exponential columns exhaust; prop:P (869) β=(2,0) unique for complete form.
-- thm:C (P47:1146) explicit 437-atom certificate: λ_A(½log3) ≥ 8.8577·10^{-5}. PROVED (computer-assisted).
+- thm:O (P46:775) dual never attained; thm:E (1088) exponential columns exhaust; prop:P (869) β=(2,0) unique for complete form.
+- thm:C (P46:1146) explicit 437-atom certificate: λ_A(½log3) ≥ 8.8577·10^{-5}. PROVED (computer-assisted).
 - thm:Z/thm:Zexh (1240,1302): certificate for flat-top weight w (w≡1 on [−2T,2T]) is the explicit formula on tests
   w(u)cos(τu); sup_w inf f_w = λ^W_T. PROVED (uses explicit formula as a tool).
 - lem:Rrig, cor:nontermwise (1335,1358): no flat-top kernel is positive. thm:finZ (1488): no finite symmetric set of
@@ -157,34 +157,34 @@ Reformulation tools
 Upper bounds on the margin
 - thm:margin, cor:margin1 (3530–3561): λ^W ≤ λ_P ≤ λ_A ≤ 4·10^9 T e^{−15.449T} for T≥1 (zero-side test family; PROVED).
 
-Rows A–C and Paper 46 (READMEs; no sign claimed anywhere)
+Rows A–C and Paper 47 (READMEs; no sign claimed anywhere)
 - P43 (row A): semilocal idele carrier, canonical trace Σ_v W_v, symbol bounded above with Tate poles ±½, Tate boundary
   sequence (B_T,β_T), Riemann–Roch biextension, signature infinite of both signs. Tool value for the sign: none direct
   (the trace form restricted to a window *is* a_T; the signature result says the global form has no finite-index
   positivity to transfer).
 - P44 (row B): Frobenius family with diagonal contact Λ(n)n^{−1/2}; Möbius cofiber; Gram forms; thm:qfinpositive (44:3132ff):
   finite-place form positive at τ=0 with ω_fin(0)=Σ_{p∈S}2log p·p^{−1/2}/(1−p^{−1/2}) — the same local Euler-factor bound
-  used in P47 rem:boxes for Div_M on multiplicative boxes. Tool value: local (one-prime Toeplitz) bounds only.
+  used in P46 rem:boxes for Div_M on multiplicative boxes. Tool value: local (one-prime Toeplitz) bounds only.
 - P45 (row C): explicit formula in the trace normalisation without crossing zeros (Thm B); comparison
   I_∞(Γ_F,Γ_F)=β_T(M,M)−Σ_ρΦ_F(ρ)Φ_F(1−ρ) (Thm C); polar term from residues of the Euler-product symbol (Thm E);
-  a zero-side detection lemma (Thm F). These are the identities P47 uses in thm:Z, lem:roughEF, prop:H.
-- P46: Pólya class K, affine duality, Hodge-index transfer CONDITIONAL on an h^0 with three clauses; frame defect theorem:
+  a zero-side detection lemma (Thm F). These are the identities P46 uses in thm:Z, lem:roughEF, prop:H.
+- P47: Pólya class K, affine duality, Hodge-index transfer CONDITIONAL on an h^0 with three clauses; frame defect theorem:
   no such h^0 (cosh inequality constant 0.99846…<1); defect also on an elliptic curve over F_2. Barrier, not a tool.
   The six-clause adelic object (§28.4 of the research notes) remains unbuilt (P48:407).
 
 ---------------------------------------------------------------------------------------------------------------------
 ## 3. Barrier / NO-GO theorems: exact class excluded and what is NOT excluded
 
-Mechanism of all of them: lem:transfer (P47:7856): if ζ's form and a form with negative bottom share property P, no deduction
-"P ⇒ bottom ≥ 0" is valid. A conjunction P_1∧…∧P_k is excluded only by one falsifier having all P_i (rem:conjunctions, P47:~9475).
+Mechanism of all of them: lem:transfer (P46:7856): if ζ's form and a form with negative bottom share property P, no deduction
+"P ⇒ bottom ≥ 0" is valid. A conjunction P_1∧…∧P_k is excluded only by one falsifier having all P_i (rem:conjunctions, P46:~9475).
 
 | barrier (label, lines) | class excluded | falsifier | NOT excluded (paper's own words where available) |
 |---|---|---|---|
 | thm:finmod, cor:void (3228, 3336) PROVED | any property preserved by finite deletion Λ1_{n≥N} or one-term amplification: PNT with error terms, zero-free regions, zero densities, sieve upper bounds; T>0.75 | deletion; Λ+c1_{n=2} | arguments using exact values at every window |
-| lem:shape-scale O_4 (8640) PROVED (c large/small); CONDITIONAL on κ_T≠0 for c→1 | properties of ζ^c, cone conditions on log ζ or −ζ'/ζ, support, relative sizes | cΛ | non-homogeneous use (first non-homogeneous exact relation: Selberg ΛL+Λ*Λ=μ*L^2, rem:spec-scope P47:9853) |
+| lem:shape-scale O_4 (8640) PROVED (c large/small); CONDITIONAL on κ_T≠0 for c→1 | properties of ζ^c, cone conditions on log ζ or −ζ'/ζ, support, relative sizes | cΛ | non-homogeneous use (first non-homogeneous exact relation: Selberg ΛL+Λ*Λ=μ*L^2, rem:spec-scope P46:9853) |
 | prop:shape-eulerdel O_6 (8665) PROVED | Euler product + zeros + pole + integer coefficients without the functional equation; T∈[0.60,½log P] | a_P=Λ1{p≥P} (for P>e^{2T} its comb on the window is EMPTY) | use of (F) jointly with (E) |
 | lem:shape-epstein O_10 (8736) CITED for complete form | (F)+(I)+nonnegative coefficients without Euler product | Epstein x^2+5y^2, T≥1.59 | (E) used at the sign step |
-| rem:FDH (P47:~8540) PROVED (ball arithmetic) | (F)+Γ-factor+bounded real Dirichlet coefficients without multiplicativity, T≥9/5 | Davenport–Heilbronn mod 5 | multiplicativity used |
+| rem:FDH (P46:~8540) PROVED (ball arithmetic) | (F)+Γ-factor+bounded real Dirichlet coefficients without multiplicativity, T≥9/5 | Davenport–Heilbronn mod 5 | multiplicativity used |
 | O_7 quartets, O_8 self-dual f_t (8680–8692) PROVED | zero-set statements; finite windows of the prime side; f_t keeps Λ(n), n<λ_1, and (F) | ξ_{z,k}, f_t | property not shared by zero-side models; integrality (f_t breaks (I)) |
 | O_11 Beurling (8769) ARGUED | (E) as comb identity Λ*1=log without integers | Beurling systems | integrality of Z |
 | prop:summable, cor:wtail (8347–8380) PROVED | summable combs, exact small values + sieve upper bounds, Euler products over finite S | Λ1_{n<n0}, a_S | — |
@@ -194,14 +194,14 @@ Mechanism of all of them: lem:transfer (P47:7856): if ζ's form and a form with 
 | prop:cone (8491) PROVED | monotone Möbius-resolvent iterations | atom at log2 vs density | — |
 | prop:nearfree + rem:boxes (7642, ~7700) PROVED | tests that do not see near-coincidences m≈kn | positive anyway | vectors that see Near_M |
 | thm:Vp, prop:env (2986, 3058) PROVED | pointwise envelopes; threshold 2πe^{A_T} | — | — |
-| lem:half, cor:directbound, thm:posext, prop:primeblind (7875–7974) PROVED | norm bounds of the prime form in a fixed frame; complete certificates with positive exterior measure; termwise bounds | — | **signed exterior measures; primitive certificates with ν≥0 and free β** (rem:bar-lin P47:7988) |
-| thm:famblind, thm:famFE (8023, 8113) PROVED | properties of T↦λ on a bounded range of windows | amplification, f_t | **two-sided laws λ_A=L(T)(1+o(1)) on unbounded ranges** (rem:bar-fam P47:8129) |
+| lem:half, cor:directbound, thm:posext, prop:primeblind (7875–7974) PROVED | norm bounds of the prime form in a fixed frame; complete certificates with positive exterior measure; termwise bounds | — | **signed exterior measures; primitive certificates with ν≥0 and free β** (rem:bar-lin P46:7988) |
+| thm:famblind, thm:famFE (8023, 8113) PROVED | properties of T↦λ on a bounded range of windows | amplification, f_t | **two-sided laws λ_A=L(T)(1+o(1)) on unbounded ranges** (rem:bar-fam P46:8129) |
 | cor:pattern (8215) PROVED | finite lists of window observables | quartet models | — |
-| thm:nolocal (8255) PROVED | criteria depending on σ_T only near its negative set | σ^{(η)}=min(σ_T,η) | **criteria using the positive part on all of R jointly with the negative set; exact Schur reductions** (rem:bar-loc P47:8328) |
+| thm:nolocal (8255) PROVED | criteria depending on σ_T only near its negative set | σ^{(η)}=min(σ_T,η) | **criteria using the positive part on all of R jointly with the negative set; exact Schur reductions** (rem:bar-loc P46:8328) |
 | thm:X (8281) PROVED | pointwise new-contact conditions | — | integrated conditions |
-| thm:inertia-nogo (3439) PROVED | positive part + bounded-convolution remainder (Sonin/Connes–Consani) for T>½log2 | n_−=∞ | quantitative use of the compact term (P47:3745) |
+| thm:inertia-nogo (3439) PROVED | positive part + bounded-convolution remainder (Sonin/Connes–Consani) for T>½log2 | n_−=∞ | quantitative use of the compact term (P46:3745) |
 | lem:wh-T, thm:wh-detinherit (5799, 5865) PROVED | determinant/moment/trace criteria of the pencil | margin inheritance | — |
-| thm:geo-tv (9254) PROVED | premises robust in total variation radius r>λ_A | atom near 0 | classes with an exact support axiom (supp⊂log N) (P47:9266) |
+| thm:geo-tv (9254) PROVED | premises robust in total variation radius r>λ_A | atom near 0 | classes with an exact support axiom (supp⊂log N) (P46:9266) |
 | thm:geo-parity (9425) PROVED | distributional (Bohr-distribution) defects on σ_P-closed classes, at odd prime-power levels | σ_Q sign flips | non-distributional functionals; coupling R to ζ itself |
 | thm:noimport (9460) (i)-(ii) PROVED, (iii) if κ_T≠0, (iv) ARGUED | positivity imported via a construction uniform in the degree-one weight data | DH, Epstein | constructions using exact multiplicativity at the sign step |
 | thm:spec-noatom (9515) PROVED | exact identity a_T = pair count measure on log Q_{>0} | — | limit identities |
@@ -212,7 +212,7 @@ Mechanism of all of them: lem:transfer (P47:7856): if ζ's form and a form with 
 ---------------------------------------------------------------------------------------------------------------------
 ## 4. The shape of the solution (Problem (R) + prop:spec, read constructively)
 
-### 4.1 The eleven clauses of Problem (R) (prob:region, P47:10720–10736), verbatim content
+### 4.1 The eleven clauses of Problem (R) (prob:region, P46:10720–10736), verbatim content
 (1) exact Λ(n), n<e^{2T}, at every T, not class membership closed under any O_i; (2) Euler product over N and
 functional equation with Γ(s/2) at conductor 1 jointly; (3) non-linear in Λ (not a certificate/lattice/flat-top/operator
 identity+C–S), squares only with a free PD part; (4) not reducible to zero-free regions/densities/finitely many zeros,
@@ -224,14 +224,14 @@ negative set (correlation inside P_T at all frequencies up to e^{2T}); (9) not a
 A1–A6 (A2^+), field-uniform only if it names the separator from ξ_K; (11) ζ-specific at the sign step: not an inequality on
 prime sums with a remainder, not an identity valid for every weight vector.
 
-### 4.2 The six clauses of prop:spec (P47:9794–9846)
+### 4.2 The six clauses of prop:spec (P46:9794–9846)
 (1) not linear, not comb-generic (PROVED; exclusion of PD/hyperbola/Dirichlet-algebra class CONDITIONAL on an itemised
 Beurling check); (2) not a cone condition on log ζ (PROVED); (3) not coefficientwise integrality (PROVED); (4) not sparse-stable
 (PROVED); **(5) couples (Λ(n))_{n<N} with the functional equation by a route other than the factor ζ(½+iτ) (OPEN)**;
 (6) crosses the logarithmic derivative without losing positivity (ARGUED; only infinitely-divisible cones cross).
 
 ### 4.3 What clause (5) means, exactly
-- The "factor ζ(½+iτ) route": thm:spec-gauge/spec-carrier (P47:9538–9567, PROVED) show that for every comb b (Λ, a_P, the
+- The "factor ζ(½+iτ) route": thm:spec-gauge/spec-carrier (P46:9538–9567, PROVED) show that for every comb b (Λ, a_P, the
   zero comb on the window, …) the window form equals (1/2π)∫|\hat F|^2[m−2Re(ζ(½+iτ)Q(½+iτ))] with Q a Dirichlet polynomial
   fixed on d<N by μ*b. So writing the comb through ζ on the critical line (where the functional equation acts, |χ|=1)
   "uses" the functional equation, but identically for combs that fail positivity: for P>N, a_P is the empty comb on the
@@ -249,7 +249,7 @@ Beurling check); (2) not a cone condition on log ζ (PROVED); (3) not coefficien
     dual certificates (thm:strip-T4) — PROVED in declared class;
   * contractive gauges (thm:strip-T3), Hermite–Biehler (prop:strip-R4) — PROVED;
   * Hamburger rigidity — identification, not an inequality (prop:spec(5) text; P48 thm:Rid: every global separator identifies);
-  * symmetrization of D_σ=2Re ξ'/ξ(σ+iτ) — antisymmetric, D_{1−σ}=−D_σ (rem:fe, P47:~8515) PROVED;
+  * symmetrization of D_σ=2Re ξ'/ξ(σ+iτ) — antisymmetric, D_{1−σ}=−D_σ (rem:fe, P46:~8515) PROVED;
   * curvature/Poincaré ceilings, real stability (remarks after strip-S2) — NUMERICAL/PROVED respectively;
   * exterior "symbol calculus": on-line symbol of the full form vanishes off the zeros (thm:ext-line; §ext-constraints 3);
   * P48 Table compose (P48:~840): FE as symmetry of the polar vector (chains), Euler defect with a seminorm
@@ -265,43 +265,43 @@ Beurling check); (2) not a cone condition on log ζ (PROVED); (3) not coefficien
   quartet models, f_t, Poisson combs, Beurling systems. Its slack must be ≤ the margin (≤4·10^9Te^{−15.449T}), so in
   practice the sign step must be an *exact* identity/inequality (no remainder) at the decisive line.
 - Where in the reduced forms the sign is located (paper's own pointers): (S) the near-coincidence part Near_M on vectors
-  seeing m≈kn (rem:bar-arith P47:8534); (L) the non-integer Möbius-lattice classes a≥2 and their coupling to φ_0
-  (rem:ext-latno P47:10642); the node of P48 (even sector, c^⊥); the Schur coupling ρ_T<1 (thm:wh-schur).
+  seeing m≈kn (rem:bar-arith P46:8534); (L) the non-integer Möbius-lattice classes a≥2 and their coupling to φ_0
+  (rem:ext-latno P46:10642); the node of P48 (even sector, c^⊥); the Schur coupling ρ_T<1 (thm:wh-schur).
 - Output: a lower bound for a_T on P_T (or W_T) valid for every T, with no T-uniform slack.
 
 ---------------------------------------------------------------------------------------------------------------------
 ## 5. Where the authors themselves point to live, unexcluded directions (quotes)
 
-1. P47:10690–10692 (L2): "they do not exclude an argument outside those classes. A first test case is the window
+1. P46:10690–10692 (L2): "they do not exclude an argument outside those classes. A first test case is the window
    T=½log5+ε at which the contact 5 enters."
-2. P47:10699–10701 (N): "what is needed is cancellation of exponent ½ in the twisted sum, with sign, at about e^{2T}
+2. P46:10699–10701 (N): "what is needed is cancellation of exponent ½ in the twisted sum, with sign, at about e^{2T}
    frequencies. A first case is the inequality (E_γ) … for one fixed γ, which is necessary".
-3. P47:10715–10717 (S): "What remains is a statement about Near_M, … coming from integers that are close to m/k but not
+3. P46:10715–10717 (S): "What remains is a statement about Near_M, … coming from integers that are close to m/k but not
    equal to it, tested jointly with Arch_M on vectors that see these near-coincidences."
-4. P47:10738–10744: "Objects that this paper does not exclude and that lie in the region: two-sided laws λ_A=L(T)(1+o(1)) on
+4. P46:10738–10744: "Objects that this paper does not exclude and that lie in the region: two-sided laws λ_A=L(T)(1+o(1)) on
    unbounded ranges; signed exterior measures and primitive certificates with ν≥0 and free β; arithmetic squares on
    (½log2,½log3); the exact Schur reductions …, which carry the whole margin; the problems (L2), (N) and (S)".
-5. P47:8534–8536 (rem:bar-arith): "They do not exclude an exact inequality F_T ≤ a^♯ on P_T proved from the vector
+5. P46:8534–8536 (rem:bar-arith): "They do not exclude an exact inequality F_T ≤ a^♯ on P_T proved from the vector
    (Λ(n))_{n<e^{2T}} jointly with the archimedean form, for instance the positive definiteness of B … on test vectors that see
    Near_M."
-6. P47:9853 (rem:spec-scope): "The open clause (5) is the one not covered by any falsifier of this paper." Also: "The first
+6. P46:9853 (rem:spec-scope): "The open clause (5) is the one not covered by any falsifier of this paper." Also: "The first
    exact relation in (1,Λ) that is not homogeneous is of degree two (Selberg's ΛL+Λ*Λ=μ*L^2)."
-7. P47:10641–10643 (rem:ext-latno): "the sign has to come from the non-integer classes a≥2 and their coupling to φ_0, through
+7. P46:10641–10643 (rem:ext-latno): "the sign has to come from the non-integer classes a≥2 and their coupling to φ_0, through
    the shape of σ_g. Whether v^TGv ≥ 2κN^{−A_0}dist^2 holds is open."
-8. P47 rem:conjunctions (≈9472–9488): "The conjunction of (E) and (F) … has ζ as its only model up to a constant
+8. P46 rem:conjunctions (≈9472–9488): "The conjunction of (E) and (F) … has ζ as its only model up to a constant
    (Hamburger), so no falsifier exists for it … the sign-carrying inequality … uses at least two inputs with no certified
    falsifier in common … a genuine conjunction requires a non-linear sign step or an input entering as an inequality."
-9. P47 thm:noimport (9460–9470): "the sign … must be derived from a construction that uses the exact multiplicativity of Λ
+9. P46 thm:noimport (9460–9470): "the sign … must be derived from a construction that uses the exact multiplicativity of Λ
    itself"; P48:437–438: "it leaves constructions that use the exact multiplicativity of Λ at the sign step."
-10. P47 rem:bar-lin (7988–7997): not excluded: "signed exterior measures, which is where the certificate of Theorem C lives,
+10. P46 rem:bar-lin (7988–7997): not excluded: "signed exterior measures, which is where the certificate of Theorem C lives,
     nor primitive certificates with ν≥0 and free β".
-11. P47 rem:bar-fam (8129–8137): "two-sided asymptotic laws … are neither shared by f_t … nor by the falsifiers …
+11. P46 rem:bar-fam (8129–8137): "two-sided asymptotic laws … are neither shared by f_t … nor by the falsifiers …
     This class is open."
-12. P47 rem:bar-loc (8328–8339): not excluded: "criteria that use the positive part of σ_T on all of R together with the
+12. P46 rem:bar-loc (8328–8339): not excluded: "criteria that use the positive part of σ_T on all of R together with the
     negative set, such as the exact reductions …; these carry the whole margin".
-13. P47 §inertia-excl (3745–3747): the inertia exclusion "does not cover arguments that use quantitative properties of the
+13. P46 §inertia-excl (3745–3747): the inertia exclusion "does not cover arguments that use quantitative properties of the
     compact term, such as a T-uniform bound on ‖C_ε‖ or a sign."
-14. P47 §open secondary list (10746–10786): Gamma-moment annihilation; class-dependent value bounds (deficit D(T,d,U));
+14. P46 §open secondary list (10746–10786): Gamma-moment annihilation; class-dependent value bounds (deficit D(T,d,U));
     certified G_T≻0 beyond ½log5; certified lower bound for S_{T,k}; asymptotic law with sign; multiplier convergence
     β→(2,0); atomic Beurling combs in C^+; arithmetic squares on (½log2,½log3).
 15. P48:328–330: at the node the a_P falsifier makes every premise inherited by all Euler products with a pole fail for
@@ -319,7 +319,7 @@ Beurling check); (2) not a cone condition on log ζ (PROVED); (3) not coefficien
 ---------------------------------------------------------------------------------------------------------------------
 ## 6. Internal inconsistencies, mislabelled steps, overlooked consequences
 
-(a) **thm:coer-schur, eq:coer-sandwich (P47:5255–5278) and lem:wh-schurabs(ii) lower bound (P47:5684–5695) are wrong when
+(a) **thm:coer-schur, eq:coer-sandwich (P46:5255–5278) and lem:wh-schurabs(ii) lower bound (P46:5684–5695) are wrong when
 λ_S<0.** [PROVED here, elementary]
   Claim in paper: min{c,λ_S}/(1+‖K‖)^2 ≤ λ_A ≤ min{c,λ_S}. Proof text (5275–5278): "taking v=−Ke gives a_T(F)=s(e) with
   ‖F‖^2≥‖e‖^2, so λ_A≤λ_S" and "if λ_S≤0 the lower bound is implied by λ_A≤λ_S".
@@ -331,18 +331,18 @@ Beurling check); (2) not a cone condition on log ζ (PROVED); (3) not coefficien
   which use only the λ_S≥0 regime; but the displayed inequality is stated as PROVED for all cases. Fix: state the sandwich
   for λ_S ≥ 0 and add λ_S ≤ λ_A ≤ λ_S/(1+‖Ke_S‖^2) for λ_S<0. (lem:wh-schurabs already states "λ_q≤λ_S if λ_S≥0" correctly.)
 
-(b) **Normalisation gap in subsec:oneprofile / prop:AM.** F_0 is defined (P47:7760–7767) without ‖F_0‖=1, but
-  prop:AM(iii) proof uses "the term n=m/k has c_0(0)=1" (P47:7835) and thm:band takes F_0 "as in lem:transl" (unit norm).
+(b) **Normalisation gap in subsec:oneprofile / prop:AM.** F_0 is defined (P46:7760–7767) without ‖F_0‖=1, but
+  prop:AM(iii) proof uses "the term n=m/k has c_0(0)=1" (P46:7835) and thm:band takes F_0 "as in lem:transl" (unit norm).
   As written, Div_M=½(V+V^T) is off by the factor ‖F_0‖^2. Trivial fix: normalise F_0. [PROVED observation]
 
-(c) **"Exactly one negative eigenvalue for every window" is false for small T.** prop:H final sentence (P47:~6569) and
+(c) **"Exactly one negative eigenvalue for every window" is false for small T.** prop:H final sentence (P46:~6569) and
   P48 thm:eveninertia(ii),(iii) (P48:205–207) state n_−(A_ev(T))=1 for every T. For small T, A_ev>0 (|\hat F|^2 has mass ≲
-  2TR/π below R, and m(R)>0 large), so n_−=0; the correct statements are "≤1 for all T" (P47 prop:H first sentence, correct)
+  2TR/π below R, and m(R)>0 large), so n_−=0; the correct statements are "≤1 for all T" (P46 prop:H first sentence, correct)
   or "=1 for all T≥0.12" (with cor:H1minus). P48 (ii) also drops the alternative (n_−=0, q>−½) of prop:WT. Minor. [PROVED]
 
-(d) **§ext-constraints item 2 (P47:10654–10657) over-claims comb-genericity.** It lists the half-line identity among
+(d) **§ext-constraints item 2 (P46:10654–10657) over-claims comb-genericity.** It lists the half-line identity among
   identities that "hold for the comb cΛ, for prime deletions and for Beurling systems with their own summation map".
-  But thm:ext-half rests on Guo's radical lemma (Poisson summation over Z with the exact comb), and P47:10146 itself says
+  But thm:ext-half rests on Guo's radical lemma (Poisson summation over Z with the exact comb), and P46:10146 itself says
   "The identity is exact only for the weight 1 on the comb: replacing Λ by cΛ adds 2(1−c)…"; rem:ext-killing(ii) says the
   comb enters only through Λ*1=log with coefficients a_n≡1 on N. For cΛ the matching summation map would need
   coefficients d_c(n) (series ζ^c), for which no radical/Poisson identity is available. So the exterior form is an object
@@ -355,7 +355,7 @@ Beurling check); (2) not a cone condition on log ζ (PROVED); (3) not coefficien
   On that range N_T={2}. thm:sos needs Σ_i|D_i|^2=μ_0−v_2cos(τlog2) and m_T ≥ μ_0 on P_T. Necessity gives μ_0 ≥ v_2;
   sufficiency: μ_0−v_2cos(τ log2)=|x_1+x_2 2^{iτ}|^2 with x_1^2+x_2^2=μ_0, 2x_1x_2=−v_2, solvable iff μ_0≥v_2 (Fejér–Riesz,
   degree one). Hence an arithmetic square decomposition exists at T∈(½log2,½log3) **iff λ^{∞,P}_min(T) ≥ v_2=√2 log2=0.98026**.
-  λ^{∞,P}_min is strictly decreasing (lem:strict); rem:directbound (P47:~7911, NUMERICAL) gives λ^{∞,P}_min ≈ 0.49 at T≈0.367,
+  λ^{∞,P}_min is strictly decreasing (lem:strict); rem:directbound (P46:~7911, NUMERICAL) gives λ^{∞,P}_min ≈ 0.49 at T≈0.367,
   so the threshold T_sos (if >½log2 at all) is a single certified eigenvalue computation at T just above ½log2=0.3466.
   Either way the question is far below the certified range and carries no new sign; it should be closed rather than
   listed as open.
@@ -365,7 +365,7 @@ Beurling check); (2) not a cone condition on log ζ (PROVED); (3) not coefficien
   prop:H becomes: the even complete form stays nonnegative at every window iff the pole-free even form never acquires a
   second negative direction; a failure has a first "birth window" T_2 with a nonzero kernel vector of A_ev orthogonal (in
   A_ev) to the χ_ev-direction. This is a first-contact statement for the even complete form parallel to lem:firstcontact;
-  not stated in P47 (rem:completecontact only treats λ^W). Restatement, no sign.
+  not stated in P46 (rem:completecontact only treats λ^W). Restatement, no sign.
 
 (g) **Content of (L) at a fixed window; consequence for minimizers.** [PROVED here]
   At a fixed T with λ^W_T>0, lem:ext-ellbound (ℓ ≤ C_1N^2‖g‖^2) gives W_T ≥ (λ^W_T/(C_1N^2))ℓ, so (ext-L) holds at each fixed
@@ -377,7 +377,7 @@ Beurling check); (2) not a cone condition on log ζ (PROVED); (3) not coefficien
   small — consistent with, and far below, the upper bound.
 
 (h) **A smaller exact finite reduction than (L2) is already proved but not listed in §open.** [PROVED in paper; reading new]
-  thm:nyq-schur(ii) (P47:6367–6380) holds for *every* η>0: λ_A≥0 ⇔ S_η⪰0 on N'_η, dim ≤ d_η=#{k even: s_T(ω_k)<η}+#{k odd:
+  thm:nyq-schur(ii) (P46:6367–6380) holds for *every* η>0: λ_A≥0 ⇔ S_η⪰0 on N'_η, dim ≤ d_η=#{k even: s_T(ω_k)<η}+#{k odd:
   s_T(ω_k)<η}. Letting η↓0 the dimension is the number of Nyquist samples (in the two sectors) at which the truncated symbol
   s_T is negative, which is ≤ (4T/π)·τ_last+1 with τ_last ≤ τ^lo (prop:band), versus 2k−2 with k > T e^{A_T+C_B} for (L2).
   The numerically large d_η of rem:nyq-schur-num (45–59 at ½log5) comes from the larger η needed by the *inversion-free*
@@ -385,8 +385,8 @@ Beurling check); (2) not a cone condition on log ζ (PROVED); (3) not coefficien
   sign question becomes "S_η⪰0" on a space whose dimension is governed by the negative set of s_T on the mesh. Whether
   the Nyquist negative set grows like O(T) or like e^{A_T} is OPEN (NUMERICAL check cheap). Worth adding as (L2').
 
-(i) Minor label/consistency notes. cor:shape(c) (P47:~9190) and P48:405 say "a relative change of 10^{-5} flips the sign at
-  log2", rem:wit-sens (P47:~7300) says ~10^{-6} (λ_A/κ ≈ 9.8·10^{-8}/0.09 ≈ 1.1·10^{-6}); both are NUMERICAL and consistent
+(i) Minor label/consistency notes. cor:shape(c) (P46:~9190) and P48:405 say "a relative change of 10^{-5} flips the sign at
+  log2", rem:wit-sens (P46:~7300) says ~10^{-6} (λ_A/κ ≈ 9.8·10^{-8}/0.09 ≈ 1.1·10^{-6}); both are NUMERICAL and consistent
   (10^{-5} > threshold) but the statements differ. The (½log2,½log3) clause of Problem (R)'s "not excluded" list becomes
   vacuous after (e) if λ^{∞,P}_min(½log2^+) < v_2.
 
@@ -484,7 +484,7 @@ Kreĭn–Langer / de Branges–Rovnyak with κ=1) would need the inertia n_−(A
   argument, no estimate with slack and no bounded functional can carry the sign.
 - The only places the authors locate the sign: Near_M on vectors seeing near-coincidences; the non-integer Möbius-lattice
   classes of the exterior form; the even-sector node orthogonal to χ_ev; the Schur coupling ρ_T.
-- Corrections to make in P47 (no effect on the target): eq:coer-sandwich and lem:wh-schurabs(ii) for λ_S<0 (§6(a));
+- Corrections to make in P46 (no effect on the target): eq:coer-sandwich and lem:wh-schurabs(ii) for λ_S<0 (§6(a));
   normalisation of F_0 (§6(b)); "exactly one negative eigenvalue for every T" → "≤1" or "T≥0.12" (§6(c), also P48);
   §ext-constraints item 2 comb-genericity of the half-line identity (§6(d)); secondary problem 8 reducible to one eigenvalue
   (§6(e)); add the exact two-sector reduction S_η (η↓0) as a fourth reduced form (§6(h)).

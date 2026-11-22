@@ -60,7 +60,7 @@ Pen and paper. Labels: CONFIRMED / FIX / DOWNGRADE / NO-GO.
   - The converse carries the extra hypothesis of σ-analyticity of the continuous versions, and an exceptional set.
   - Correct form: (b) on (1+ϑ, 3/2] ⟸ zero-free half-plane (PROVED). (b) + σ-analyticity ⟹ zero-free half-plane off the exceptional set
     (ARGUED).
-  - The NO-GO "(b) has no zero-free mechanism" is therefore NO-GO (ARGUED). It is consistent with Paper 47 cor:void (𝒞_zeros class).
+  - The NO-GO "(b) has no zero-free mechanism" is therefore NO-GO (ARGUED). It is consistent with Paper 46 cor:void (𝒞_zeros class).
 
 ## NT_SYNTHESIS
 - **Item 8:** fine. Mark NT_012 as refereed (Thm 12.1 CONFIRMED; Prop 12.2 ARGUED).

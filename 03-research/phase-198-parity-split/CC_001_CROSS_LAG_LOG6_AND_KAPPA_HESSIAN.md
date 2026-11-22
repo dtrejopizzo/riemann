@@ -10,12 +10,12 @@ phase 193 (frustrated cycle (m,2m)), INV_I I2/I4, R186_005 TB3-neg, N_018 (Bochn
 crossword . Concavity of λ in a scalar multiplier is BB_001 §2 (not reclaimed).
 **New reason:** none of these takes the *per-prime* multi-parameter family a_κ and asks for the **second-order mixed
 derivative ∂²λ/∂κ_2∂κ_3** (the only place where two different κ_p can multiply inside λ itself) or tests c_{h*}(log 6)
-in the window where lag 6 is active and Λ is positive (Liu, CITED in P47) while a_2 is certified negative.
+in the window where lag 6 is active and Λ is positive (Liu, CITED in P46) while a_2 is certified negative.
 BB5 asked exactly this; CC answers it.
 
 ## 1. Exact window form (PROVED, elementary)
 For T ≤ 17/16, e^{2T} < 8.38, so the prime powers in the window are 2,3,4,5,7 (and 8 iff T > ½log8 ≈ 1.0397). With
-a_κ(p^k) = κ_p log p (P47 eq:Aform, v_n = 2a(n)/√n):
+a_κ(p^k) = κ_p log p (P46 eq:Aform, v_n = 2a(n)/√n):
   a_T(F;κ) = Arch_T(F) − κ_2 L_2(F) − κ_3 L_3(F) − κ_5 L_5(F) − κ_7 L_7(F),
   L_2 = 2log2[2^{-1/2}c_F(log2) + 2^{-1}c_F(log4) + 2^{-3/2}c_F(log8)·1_{T>½log8}],  L_p = 2log p·p^{-1/2}c_F(log p) (p=3,5,7).
 **(CC1) The lag log 6 does not occur:** a(6)=0, so a_T is affine in κ with coefficients functionals of c_F at

@@ -33,7 +33,7 @@ submissions on "Weil positivity" were screened by title, not one by one.
    - Mori reports covering ½log15 ≈ 1.354 (Zenodo 23281235), with margin 2^{−2904}.
    - Senke reports covering 77/64 (22871383).
    - Liu's latest figure is 17/16.
-   - Paper 47 has ½log5 certified.
+   - Paper 46 has ½log5 certified.
 
    Mori also gives an upper bound λ_min ≲ μ^{9/2}log μ·e^{−4πμ} (23175060). If confirmed, it is consistent with
    BARRIER_EST_001. Guo Chen (23297284) proves there are ≥ m eigenvalues within e^{−πλ²} of zero. These are resolution
@@ -135,7 +135,7 @@ exactly where the cited positivities are lost (MW-4, FP).
 3. **C1, only after a corpus check against L81, phase 183, INV_L_001 and CCM.** The new reason (Chen's explicit residue as
    gluing term) must be written down, and the Beurling falsifier must first be run on the residue.
 4. **C4 as a recorded NO-GO.** An afternoon's work; the value is in documenting the weight gap.
-5. **Mori, Senke and Chen:** await the verification report before citing them in Paper 47 or using the scale e^{−4πμ} as a
+5. **Mori, Senke and Chen:** await the verification report before citing them in Paper 46 or using the scale e^{−4πμ} as a
    constraint.
 
 **Conclusion.** The survey did not find the object, nor a combination that assembles it. It leaves two contributions:

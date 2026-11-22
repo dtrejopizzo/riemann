@@ -1,6 +1,6 @@
 # AUDIT_194 — Review of INV_A_001, INV_B_001, INV_B_002 (phase 194)
  Pen and paper.
-Checked against P47 def:PD (l.622), def:W + eq:nuw (l.1179–1190), thm:Z (l.1194), thm:shape (l.8853), and the ROUTES-TRIED-INDEX.
+Checked against P46 def:PD (l.622), def:W + eq:nuw (l.1179–1190), thm:Z (l.1194), thm:shape (l.8853), and the ROUTES-TRIED-INDEX.
 **No admissible sign step found in any of the three memos.**
 
 ## A. INV_A_001 (arithmetic Lévy structure)

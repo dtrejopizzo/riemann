@@ -401,7 +401,7 @@ correlation is wrong-signed / invisible to off-line zeros).
 >    side does have an a priori polar divisor, but it is dominated by the trivial pole at `s = 2`
 >    (Thm D.61.8: exponents **add**, `Re(ρ+ρ') ≤ 2`, so Landau detects only `s = 2` and returns
 >    nothing about `β`), whereas the multiplicative pairing `ρ ↔ 1−\barρ` makes exponents
->    **subtract** and puts the top pole at the *critical* value — which is precisely why Paper 46
+>    **subtract** and puts the top pole at the *critical* value — which is precisely why Paper 47
 >    Thm 17.14 works there.
 >
 > **Statement of the wall.** *The moment-level transport between the two squares is classical

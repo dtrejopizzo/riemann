@@ -10,7 +10,7 @@ support and spectrum), Olevskii–Ulanovskii (Fourier quasicrystals with unit ma
 exponential polynomials), Kurasov–Sarnak (arXiv:2004.05678, real stable polynomials).
 
 **Verdict: NO-GO (reduction).** The rigidity theorem requested is equivalent, window by window, to W_T ≻ 0 on the
-radical at T = T_*. Taken over all T it is Theorem Z of Paper 47 (RH ⟺ one-sided smoothing for every T). No
+radical at T = T_*. Taken over all T it is Theorem Z of Paper 46 (RH ⟺ one-sided smoothing for every T). No
 quasicrystal theorem applies, because each of them assumes the reality of the zero support. Section 2 gives
 three exact facts (P1–P3, PROVED) that locate the obstruction.
 

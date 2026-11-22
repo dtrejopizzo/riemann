@@ -23,7 +23,7 @@ only reindexes the same window coefficients by residue classes. The grand sieve 
 while the Weil form is linear in them. Used against the form, the grand sieve only gives an upper bound of the prime
 term (class C_BT), which is moreover blind to the coefficients. We work out the case q = 5 exactly (Prop. 18.2,
 PROVED). The main member is ζ(1−5^{−s}), whose difference from ζ is 𝔠_5, undefined (Lemma B.2); its negativity is
-OPEN. For q = ∏_{p<P}p (6, 30), the main member is exactly the a_P of Paper 47, with a lower form than ζ's and
+OPEN. For q = ∏_{p<P}p (6, 30), the main member is exactly the a_P of Paper 46, with a lower form than ζ's and
 certified negative (cor:Tarch). For T < ½log 11, the family sum contains no arithmetic coefficient. On the Mori
 frontier only the atom n = 11 appears. The sign of 𝔞^ζ remains a non-convex combination of forms with uncontrolled
 sign. This is Cor. O.1 in the harmless direction. V4 falls by Φ.12 and by front A. V5 is gauge (R-Q2). V6 is REF-D

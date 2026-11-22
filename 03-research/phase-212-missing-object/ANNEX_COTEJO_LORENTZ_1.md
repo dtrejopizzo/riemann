@@ -37,8 +37,8 @@ in `phase-211/ROUND_005_D.md`, `phase-207/CLASS_001.md`, `phase-206/AUDIT_206_00
 `phase-212/ROUND_004_D.md`, `phase-162/R162_1602`, `phase-200/SPEC_SIGN_OBJECT_008.md`; and the rows of the
 index cited below.
 
-**Not opened as primary sources (seen only via the index row or the grep line):** Paper 46
-(`main.tex`, §§11–12, 17, 22–26), Paper 47 (thm:P / cor:P3 and thm:parityschur only via ROUND_004_E),
+**Not opened as primary sources (seen only via the index row or the grep line):** Paper 47
+(`main.tex`, §§11–12, 17, 22–26), Paper 46 (thm:P / cor:P3 and thm:parityschur only via ROUND_004_E),
 Paper 43 Thm 14.1, phase 15 (M1–M10), phase 41 doc 125, phases 40, 42, 43, 107 (107_241), 113, 122, 137,
 139–142, 155 (R155_054), 159 (G1_B1_R3/R4), 184 (R184_011), the sources in `00-references/` (Tropical
 Hodge theory, Cartwright, Hodge index of Yuan–Zhang) and phases 4, 10, 28, 33, 54, 103, 106 where the
@@ -52,7 +52,7 @@ It is exactly the reversed Cauchy–Schwarz against the timelike vector. The ver
 F, G in a convex cone» was refuted (D.15.2(e)). D.15.2b: the effective cone is the wrong cone; the
 Khovanskii–Teissier form on that cone is not available; D.17.3 falls into the no-go of the Chebyshev remainder
 (114_d_185). Record label: PROVED (criterion) / RESTATEMENT; index: G6 «retry, no sign»,
-P46 §17 DEAD. Where it stopped: the criterion contributes no sign; proving it on the detecting cone requires the
+P47 §17 DEAD. Where it stopped: the criterion contributes no sign; proving it on the detecting cone requires the
 sign itself.
 
 **A2. Polar completion of the square and residue (HR-T) (R160_C7_R1, §§0, 5–6).** Builds an algebra
@@ -106,13 +106,13 @@ restricted form (definite target), not to the form on the whole space of the sec
 
 **A7. Non-AHK Hodge–Riemann/Lorentz (phase-193 CA_F_000_SEEDS F5; CA_F_SYNTHESIS).** Lemma F5
 (Haynsworth, PROVED): positivity on the primitives ⟺ k ≤ 2 negatives and a 2×2 Schur condition
-(= P47 thm:parityschur). Discarded as «retry» with the argument «Theorem P: n₋ on the whole space > 2
+(= P46 thm:parityschur). Discarded as «retry» with the argument «Theorem P: n₋ on the whole space > 2
 at large T, the signature hypothesis is false». **That argument is mis-cited:** AUDIT_PHASE193 row 35
 marks it «Theorem P mis-cited; FIX», and ROUND_004_E Prop. 1 and table §1 show that the growing
 counts are of 𝔪_T (without comb), whereas for a_T, if λ_A(T) > 0, n₋(a_T|L²(I_T)) ≤ 2. The
 discard of F5 therefore stands only as «reformulation without mechanism».
 
-**A8. Hodge index transfer conditional on h⁰ (R135_007 Thm 12.3; P46 §§11–12; phases
+**A8. Hodge index transfer conditional on h⁰ (R135_007 Thm 12.3; P47 §§11–12; phases
 137–142, 155).** Canonical class K, duality σ_K, transfer theorem PROVED conditional on an
 h⁰ ≥ 0 with (a), (b′) and the Riemann–Roch inequality (c). h⁰_Z on translations of prime
 powers satisfies (a), (b′) and fails (c) (growth (log m)^{3/2} versus ¼m², D.11.3); tensorial h⁰ (140)
@@ -148,7 +148,7 @@ intrinsic Lorentz/Pontryagin signature; a naive Klein–Gordon modification of t
 modular resonances remains definite. Phase 11: the hyperbolicity/total positivity route «is a positivity».
 No object.
 
-**A14. Inertia and Pontryagin format (ROUND_004_E; P47 thm:parityschur, prop:polarcap,
+**A14. Inertia and Pontryagin format (ROUND_004_E; P46 thm:parityschur, prop:polarcap,
 subsec:inertia-excl; phase 197 BARRIER_W).** Index counting; constancy in c near 1. Already covered
 by the task.
 
@@ -163,7 +163,7 @@ by the task.
 | A5 AHK/square (phase 41) | (b) transfer |
 | A6 stability/Gårding/MSS (195) | (c) applied to the wrong target (definite form); NO-GO on that formulation |
 | A7 F5 non-AHK (193) | (a) reformulation (discarded with an erroneous citation) |
-| A8 h⁰ transfer (135–142, P46) | (b) transfer |
+| A8 h⁰ transfer (135–142, P47) | (b) transfer |
 | A9 Arakelov | (b) transfer |
 | A10 mixed volume (200) | (b) transfer from convex bodies/BKK, REF-D |
 | A11 mixed discriminant (211) | (a) necessary condition |
@@ -220,7 +220,7 @@ In the opened files and in the grep matches the following was not found:
 6. Alexandrov–Fenchel/mixed discriminants with nonpositive diagonal or with «virtual bodies»; only the
    discard by diagonal of R160_C7_R1 §6.2(c) and the necessary condition of 211 ROUND_004_A.
 
-A search without matches does not prove that nothing was attempted: Paper 46,
+A search without matches does not prove that nothing was attempted: Paper 47,
 phases 15, 40–43, 107, 113, 122, 137–142, 155, 159, 184 and the sources in `00-references/` remain unopened as primary sources. Moreover, a
 signature mechanism on the whole space of the sector remains subject to what is PROVED in ROUND_004_E Lemma 2
 (every bound on the negative index is a positivity in finite codimension) and to the falsifier test

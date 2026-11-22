@@ -1,6 +1,6 @@
 # Strict positivity up to 131/50 with a Chebyshev filter
 
-For every function in the domain of paper 47 and 0<T≤131/50, W_T(f)≥exp(−20000000001)||f||₂². The same verification height G=3·10¹² of 175–189 is used. The additional stretch is (2.58,2.62].
+For every function in the domain of paper 46 and 0<T≤131/50, W_T(f)≥exp(−20000000001)||f||₂². The same verification height G=3·10¹² of 175–189 is used. The additional stretch is (2.58,2.62].
 
 **Choice of the filter.** Let u(τ)=1−sinc(τ/H)^(2k), a=kR²/(3H²), d=m/2 and D_d the Chebyshev polynomial of the first kind. Take
 

@@ -20,4 +20,4 @@ The full arithmetic sum has modulus<2norm², ARCH>4norm² and the polar has modu
 
 ## What remains open
 
-The segment j<J(n) is not proved, its positivity is not deduced by descent nor by mixture, and no uniform quadratic cone is claimed.059 only gives a quadratic necessary condition for this class of estimates. No windowT of Paper47 is added. The result053 for thirteen arbitrary poles remains valid separately. Global closure still requires controlling the signed arithmetic interior.
+The segment j<J(n) is not proved, its positivity is not deduced by descent nor by mixture, and no uniform quadratic cone is claimed.059 only gives a quadratic necessary condition for this class of estimates. No windowT of Paper46 is added. The result053 for thirteen arbitrary poles remains valid separately. Global closure still requires controlling the signed arithmetic interior.

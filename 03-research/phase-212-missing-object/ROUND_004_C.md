@@ -1,16 +1,16 @@
 # Round 4, zone 3: the remainder R(F) of the truncated Möbius test (selection memo)
 
 Selection memo, not a construction memo. Target (★): λ_A(T) ≥ 0 for all T, with the definitions of
-`../phase-211-sign-sandbox/STATEMENT_001.md`. Notation from P47 §sec:firstcontact
-(`04-papers/47-row-d-dual-certificates/main.tex`, l. 6625–6700): V_{−log n}F(t) = F(t + log n), S_N, S′_N,
+`../phase-211-sign-sandbox/STATEMENT_001.md`. Notation from P46 §sec:firstcontact
+(`04-papers/46-row-d-dual-certificates/main.tex`, l. 6625–6700): V_{−log n}F(t) = F(t + log n), S_N, S′_N,
 L_M = Σ_{d≤M}Λ(d)d^{−1/2}V_{−log d}, A_M = 𝓜 − L_M − L_M*, 𝓜 = m(D). Object examined: the remainder R(F) of
 `ROUND_003_6.md` (4.2). Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 
 ## Cross-check
 
-Searches (grep over all of `03-research/`, P47, P48, the routes index, grid, crossword): "c_N(k)",
+Searches (grep over all of `03-research/`, P46, P48, the routes index, grid, crossword): "c_N(k)",
 "truncated Möbius", "Möbius truncad", "M_N S_N / M_NS_N", "mollifi", "Levinson", "Barban", "Vehov",
-"Selberg mollifier". Read as primary sources: P47 l. 6625–6700 (operators, thm:PCfinite) and l. 6760–6790
+"Selberg mollifier". Read as primary sources: P46 l. 6625–6700 (operators, thm:PCfinite) and l. 6760–6790
 (subsec:collars), cor:shape (l. 9167–9190); `ROUND_003_6.md` in full; `R170_853` §§0–2, `R170_878` §§0–2,
 `R170_879` §§0–2, `R170_880` §§0–2, `R170_881` §§0–2, `R170_882` §§0–2, `R170_883` §§0–2, `R170_896` §§0–3;
 `phase-200-sign-object/A_MU_FACTORIZATION_001.md` (d)–(e) and table; `phase-200-sign-object/Z_CARRIER_001.md`
@@ -41,7 +41,7 @@ adds up to a certificate of the form without the inverse (Lemma 4). Moreover R �
 **(3) Does it avoid the antecedent's difficulty?** No. The difficulty of A_MU (d) is that the Möbius
 multiplier does not depend on the weight; that of this zone is the same, plus one more: (4.2) does not use at all Σ_{d|n}Λ(d) =
 log n, only μ ∗ 1 = δ on the integer comb (Lemma 1). The identity holds word for word for every weight,
-hence it is of the type of P47 lem:shape-ident.
+hence it is of the type of P46 lem:shape-ident.
 
 **(4) Connection with global positivity.** a_T = (a_T + R) − R on P_T (Lemma 1). If R ≤ 0 and a_T + R ≥ 0
 on P_T, then (★). But the first is false (Lemma 5) and, in the translation-invariant class, the
@@ -53,10 +53,10 @@ from the remainder, which is a form with explicit symbol of the same type as a_T
 on needles (Lemma 5), R^{(c)} = c·R + O(ε⁵): every sign detected by needles is the same for all c > 0.
 
 **Verdict of the cross-check: essentially a repetition** (A_MU (d); the linear use of Möbius is a certificate,
-P47 cor:shape (a)), plus three short lemmas that close the zone in the translation-invariant class. They
+P46 cor:shape (a)), plus three short lemmas that close the zone in the translation-invariant class. They
 are written below because they are complete.
 
-## 1. Verification of (4.2) against P47
+## 1. Verification of (4.2) against P46
 
 **Lemma 1 (PROVED).** Let F be smooth with support in I_T, M ≥ N ≥ e^{2T}, M_N = Σ_{n≤N}μ(n)n^{−1/2}V_{−log n}.
 Then M_NS_N = I + U_N, U_N = Σ_{N<k≤N²}c_N(k)k^{−1/2}V_{−log k}, c_N(k) = Σ_{d|k, k/N≤d≤N}μ(d), and
@@ -67,7 +67,7 @@ Then M_NS_N = I + U_N, U_N = Σ_{N<k≤N²}c_N(k)k^{−1/2}V_{−log k}, c_N(k) 
 
 *Proof.* Translations, 𝓜 = m(D) and L_M, L_M* are Fourier multipliers: they commute. The coefficient
 of k^{−1/2}V_{−log k} in M_NS_N is Σ_{dm=k, d≤N, m≤N}μ(d): it equals Σ_{d|k}μ(d) = [k = 1] if k ≤ N and 0 if
-k > N². a_T(F) = Re⟨A_MF, F⟩ by P47 subsec:collars (the d with log d ≥ 2T translate the support out of
+k > N². a_T(F) = Re⟨A_MF, F⟩ by P46 subsec:collars (the d with log d ≥ 2T translate the support out of
 I_T). For k > N: ⟨L_MV_{−log k}F, F⟩ = 0 (disjoint supports, shift log(kd) > 2T);
 ⟨L_M*V_{−log k}F, F⟩ = Σ_{d≤M}Λ(d)d^{−1/2}⟨V_{log d−log k}F, F⟩ and ⟨V_aF, F⟩ = conj c_F(a). ∎
 
@@ -123,7 +123,7 @@ The window enters only through the support of F. Every operator in (4.2) is a Fo
 compression Q_T, nor M_t, nor finite rank. For such operators ⟨XF, YF⟩ = (1/2π)∫conj(Ŷ)X̂|F̂|²,
 a linear functional of c_F, and the symbol is determined modulo functions whose spectrum does not touch (−2T, 2T)
 (plus forms vanishing on P_T). That is exactly the degree of freedom of the measure
-certificates of P47. The restriction to the window introduces nothing the symbol does not see.
+certificates of P46. The restriction to the window introduces nothing the symbol does not see.
 
 **Lemma 4 (NO-GO with class 𝒯_inv, PROVED).** Class 𝒯_inv: identities on P_T ∩ C_c^∞(I_T) of the form
 a_T = Q_1 − Q_2, with Q_1 = Re⟨P_bA_MF, F⟩ and Q_2 = R_b for any translation-invariant approximate inverse
@@ -132,7 +132,7 @@ b independent of the weight or not), and sign statements for each Q_i proved by 
 Q_i = (1/2π)∫σ_i|F̂|² + τ_i(F) with σ_i ≥ 0 almost everywhere and τ_i ≡ 0 on P_T (the window is used only
 to change σ_i within its class modulo the annihilator). Then:
 (a) Q_1 ≥ 0 and −Q_2 ≥ 0 manifest give a_T = (1/2π)∫(σ_1 + σ_2)|F̂|² + τ_1 + τ_2: a certificate of class (D)
-    of P47 for a_T, in which b does not appear. The same certificate is obtained with b = δ_1.
+    of P46 for a_T, in which b does not appear. The same certificate is obtained with b = δ_1.
 (b) In particular, the pair "a_T + R manifestly ≥ 0 and R manifestly ≤ 0" is impossible
     pointwise (σ_i ≡ literal symbols): adding, s_M ≥ 0 almost everywhere, false because
     s_M(0) = m(0) − 2Σ_{d≤M}Λ(d)d^{−1/2} < 0 for M ≥ N ≥ e^{2T} ≥ 2 (m(0) = C_0 < 0).
@@ -141,7 +141,7 @@ to change σ_i within its class modulo the annihilator). Then:
 but their sum is a symbol of a_T modulo the annihilator. (b) It is (a) with τ_i = 0 and without annihilator.
 (c) ‖V_TF‖² = (1/2π)∫|v̂|²|F̂|²; ρ_T = a_T − ‖V_TF‖² has symbol s_T − |v̂|². ∎
 
-What Lemma 4 does not say: it does not prove that certificates of a_T do not exist (that is the content of λ^prim, P47
+What Lemma 4 does not say: it does not prove that certificates of a_T do not exist (that is the content of λ^prim, P46
 cor:shape (a)); it says that the approximate inverse adds nothing to that route, already recorded.
 
 **Lemma 5 (R ≤ 0 is false on P_T, PROVED).** For M ≥ N² and N ≥ 4 there exists F ∈ P_T ∩ C_c^∞(I_T) with R(F) > 0.
@@ -177,12 +177,12 @@ d < P disappear from R_1 and the others stay the same: the remainder changes its
 
 ## Result
 
-NO-GO with class 𝒯_inv (Lemma 4) plus repetition (A_MU_FACTORIZATION_001 (d); P47 cor:shape (a)). No new
+NO-GO with class 𝒯_inv (Lemma 4) plus repetition (A_MU_FACTORIZATION_001 (d); P46 cor:shape (a)). No new
 mechanism; no candidate ready for construction. Global sign OPEN.
 
 ## What was proved
 
-1. Lemma 1: (4.2) correct against P47 (sign, range (N, N²], support); R depends on M unless M ≥ N²e^{2T};
+1. Lemma 1: (4.2) correct against P46 (sign, range (N, N²], support); R depends on M unless M ≥ N²e^{2T};
    c_N at prime powers and the diagonal −κ_N of R_1.
 2. Lemma 2: R_0 = −Σ_{j≥1}(M_NS_N(2j+1) − 1)Re[𝔸_j conj 𝔹_j]; the order ½ vanishes by Tate.
 3. Lemma 3: symbol identity a_T + R_b = (1/2π)∫Re P̂_b s_M|F̂|² for every invariant inverse.

@@ -170,7 +170,7 @@ inversion of the ambient measure.
 
 No trace, carrier map U_T, or equality with Q_T has been constructed. The
 next requirement remains a concrete map and a termwise identity with the
-archimedean, comb, and pole of Paper47. The completion of D is still the
+archimedean, comb, and pole of Paper46. The completion of D is still the
 active objective, not the completion of this auxiliary note.
 
 Final review AUDIT_008: all stated lemmas approved with elementary proofs.

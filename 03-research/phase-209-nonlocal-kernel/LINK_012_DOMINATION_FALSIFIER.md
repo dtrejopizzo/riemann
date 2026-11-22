@@ -4,7 +4,7 @@
 
 ## 0. Corpus and class being tested
 
-Consulted: the project rules, the ROUTES-TRIED-INDEX index (LINK011 entries and their limits, residues 06), master grid, crossword, LINK011/AUDIT011 and the definitions of Paper47 eq:Aform and thm:A. The equality Q_T=||UF||² was already refuted and **is not retried**.
+Consulted: the project rules, the ROUTES-TRIED-INDEX index (LINK011 entries and their limits, residues 06), master grid, crossword, LINK011/AUDIT011 and the definitions of Paper46 eq:Aform and thm:A. The equality Q_T=||UF||² was already refuted and **is not retried**.
 
 **New written reason:** the Mellin–Gauss map 011 and its scale are kept exactly, and the domination that had remained open is now tested. The question changes to the sign of the remainder `Q_T−||UF||²`. The proof starts from a falsifier; it does not attribute to the remainder the sign of a high-frequency approximation.
 
@@ -28,7 +28,7 @@ The polar integral of cos(ωx) is `2ω cosh(T/2)/(ω²+1/4)`; that of cos(3ωx) 
 
 `∫_(−T)^T F(x)cosh(x/2)dx=0`.
 
-F is even and belongs to H¹_0([−T,T]); in particular it has finite gamma energy and lies in the form carrier used for the Dirichlet modes of Paper47.
+F is even and belongs to H¹_0([−T,T]); in particular it has finite gamma energy and lies in the form carrier used for the Dirichlet modes of Paper46.
 
 ## 2. Lower bound for the U energy using an already proved term
 
@@ -70,7 +70,7 @@ The code evaluates this formula with balls and obtains `ε_M<2.370·10^(−39)`.
 
 ## 3. Upper bound for Q_T without zeros nor uncontrolled numerical subtraction
 
-The definition of Paper47 is evaluated directly:
+The definition of Paper46 is evaluated directly:
 
 `Q_T(F)=gamma(F)−Σ_(n<exp(2T)) [2Λ(n)/√n]c_F(log n)`.
 
@@ -187,7 +187,7 @@ All summands of the Lévy term are non-negative. The inequality
 
 Comparison of the decreasing series with its integral justifies the last
 bracket. `LINK012_data/check_laplace.py` evaluates J=200 with Arb 128-bit balls;
-the comb is obtained directly from G11,G33,G13 of P47 lem:combsine,
+the comb is obtained directly from G11,G33,G13 of P46 lem:combsine,
 with coefficients (r,−1)/sqrt(1+r²). The independent output is in
 `LINK012_data/check_laplace.json` and gives
 

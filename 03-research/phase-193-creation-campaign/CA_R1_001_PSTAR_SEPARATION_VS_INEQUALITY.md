@@ -1,7 +1,7 @@
 # CA_R1_001 — Re-examination of 𝖯⋆ (CA_I_001 Cor 6): O14 settled; can the separation become an inequality?
 
 Phase 193, re-examination round 1. Pen and paper, **no numerics**.
-CONDITIONAL / ARGUED / OPEN / NO-GO / REF-D. **No sign contact. No negative value for ζ.** Checked against P47 eq:form, thm:nolocal,
+CONDITIONAL / ARGUED / OPEN / NO-GO / REF-D. **No sign contact. No negative value for ζ.** Checked against P46 eq:form, thm:nolocal,
 def:shape-ops, lem:shape-scale, prop:wit-sens, thm:wit-Tc; CA_I_001 (0.1), Thm 1–3, Rem 3.3; CA_H_002 Thm 2.2.
 
 ## 0. Jump-measure form of Beurling–Deny (PROVED; extends CA_I_001 Lemma 3.1)
@@ -17,7 +17,7 @@ density point u₀ of {dJ < 0}, and for a negative atom at log n the same pair a
 g_T := (η − σ_T)_+ ≥ 0 is continuous with compact support and min(σ_T,η) = η − g_T. The form is q_T(F) = η‖F‖² − ∫∫F(t)F(s)ǧ_T(t−s),
 ǧ_T(u) = (1/2π)∫g_T(τ)cos(τu)dτ (entire in u). Bounded form, so Beurling–Deny ⟺ **ǧ_T(u) ≥ 0 for all |u| < 2T.**
 **Prop 1.2 (Markov at small windows; PROVED).** For 2T < log 2 (empty comb) g_T = (η − m)_+ is nonincreasing in |τ| (m increasing in |τ|,
-P47 §bar-loc); with τ_η := sup{τ : m(τ) < η}, integration by parts gives ǧ_T(u) = (1/πu)∫_0^{τ_η} m′(τ) sin(τu) dτ > 0 for 0 < u ≤ π/τ_η.
+P46 §bar-loc); with τ_η := sup{τ : m(τ) < η}, integration by parts gives ǧ_T(u) = (1/πu)∫_0^{τ_η} m′(τ) sin(τu) dτ > 0 for 0 < u ≤ π/τ_η.
 Hence q_T is Markov at every T ≤ min(½log 2, π/(2τ_η)). For larger T the sign of ǧ_T on (0,2T) is **OPEN** (genuinely a computation).
 **Prop 1.3 (O14 is excluded from 𝖯⋆ independently of Markov; PROVED).** (a) Every form object satisfying the 𝖯⋆ clause "ξ̃ with Γ_ℝ"
 has an unbounded window form on L²(I_T) (the term ∫ν∫(F(t)−F(t+u))² with ν ~ κ/2u is infinite on L² ∖ 𝒟_T; comb atoms and loc.
@@ -29,10 +29,10 @@ declared single modification O1–O15** (O13 is not a form modification). Cor 6 
 
 ## 2. Task 2 — separation vs inequality
 **Theorem 2.1 (Markov carries no upper bound on the comb; PROVED).** By §0 every consequence of "Markov ∀T" survives J ↦ J + μ, μ ≥ 0.
-For every T > ½log 2 there is F₊ ∈ 𝒫_T (P47 lem:shape-scale proof, CA_I_001 Thm 2) with 𝔞^{(a)}_T(F₊) = 𝔞^{(Λ)}_T(F₊) − c v₂‖φ‖² for
+For every T > ½log 2 there is F₊ ∈ 𝒫_T (P46 lem:shape-scale proof, CA_I_001 Thm 2) with 𝔞^{(a)}_T(F₊) = 𝔞^{(Λ)}_T(F₊) − c v₂‖φ‖² for
 a = Λ + c1_{n=2} (O2) and for a = (1+c)Λ (O4, using supp c_{F₊} ∩ log ℕ = {log 2}). Both keep Markov ∀T; both have λ_A(T) → −∞.
 Every lower bound on λ_A needs an upper bound on J; Markov supplies only J ≥ 0. ∎
-**Theorem 2.2 (every proper sub-conjunction of 𝖯⋆ has a falsifier; PROVED, citing P47/CA_I_001).** Drop the residue: cΛ, c large
+**Theorem 2.2 (every proper sub-conjunction of 𝖯⋆ has a falsifier; PROVED, citing P46/CA_I_001).** Drop the residue: cΛ, c large
 (Markov ∀T, (S⁺), Γ_ℝ kept; Thm 2.1) and c small at T ≥ 0.60 (lem:shape-scale). Drop (S⁺): O2 (residue, Markov kept). Drop Markov: O7
 quartets (comb Λ, (S⁺), residue, FE, Γ_ℝ, entire kept; lem:shape-quartet). Drop entireness: Remark 3.3 twist ((S⁺), residue, Markov ∀T, FE
 kept; K = −2k cosh δu ≤ 0 ≤ ν, λ_A → −∞). Hence any proof of "𝖯⋆ ⇒ λ_A ≥ −ε(T)" uses all four clauses.
@@ -60,7 +60,7 @@ New: jump-measure criterion (§0), Thm 2.1, Thm 2.2 (each clause necessary), D_�
 
 ## 4. Self-review
 1. §0 assumes the form without the polar term (CA_I_001 §8.1 caveat); unchanged. 2. Prop 1.3(b) uses only g(0), no numerics; C₀ < 0 and v₂ > 0.
-3. Thm 2.1 for (1+c)Λ: c_{F₊} sees only log 2 since |K| < log(3/2) — P47 proof verbatim. 4. "Within rational twists" in Thm 2.3: outside
+3. Thm 2.1 for (1+c)Λ: c_{F₊} sees only log 2 since |K| < log(3/2) — P46 proof verbatim. 4. "Within rational twists" in Thm 2.3: outside
 that class (general a.c. K from other objects) the K ≡ 0 step is Thm 3's exponential-polynomial argument only; for non-rational objects
 (S⁺) already excludes O8/O10–O12. 5. D_∃c might equal D (if κ_T ≠ 0 somewhere); labelled "weaker than or equal". 6. No value of λ_A computed;
 no negative value for ζ asserted.

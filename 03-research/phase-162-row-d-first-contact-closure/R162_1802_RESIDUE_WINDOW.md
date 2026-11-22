@@ -1,10 +1,10 @@
 # R162_1802 — The residue window as an object: extremal and dual forms, the one-pole hyperplane, a residue-free criterion, falsifiers
 
 Pure mathematics, no numerics run.
-Inputs: R162_1701 Thm 7, R162_902 (Thm 2.1, §3), R162_703, R162_590, Paper 47 (eq:W, line 126 primitive Weil criterion,
+Inputs: R162_1701 Thm 7, R162_902 (Thm 2.1, §3), R162_703, R162_590, Paper 46 (eq:W, line 126 primitive Weil criterion,
 thm:parityschur (o),(a3), lem:monoT), R160_M4_R1 Thm B(i).
 
-Conventions: W_T = 𝔞_T + 2AB (Paper 47 eq:W), with A(F) = Φ_F(1) = ∫F e^{t/2} and B(F) = Φ_F(0) = ∫F e^{−t/2}.
+Conventions: W_T = 𝔞_T + 2AB (Paper 46 eq:W), with A(F) = Φ_F(1) = ∫F e^{t/2} and B(F) = Φ_F(0) = ∫F e^{−t/2}.
 For F = F_e + F_o, A = ℓ_ev(F_e) + ℓ_odd(F_o) and B = ℓ_ev(F_e) − ℓ_odd(F_o).
 W^κ := 𝔞_T + 2κAB, where κ is the residue and the prime weights are held fixed.
 𝔞̃_par(T) := inf{𝔞_T(F) : F ∈ D_T^par, ℓ_par(F) = 1} ∈ [−∞, ∞). On {λ_A > 0} this is 𝔞_par (703/1701).
@@ -45,7 +45,7 @@ No sign is claimed. No label moves. Gate 1 stays OPEN.
 - (v) Dual (certificate) forms, by the exact S-lemma for a single linear constraint:
   - κ₊(T) = ½ sup{t : 𝔞_T^odd − t·ℓ_odd⊗ℓ_odd ⪰ 0};
   - κ₋(T) = ½ inf{s : 𝔞_T^ev + s·ℓ_ev⊗ℓ_ev ⪰ 0}.
-  Window *membership* κ₋ ≤ 1 ≤ κ₊ is certified by a PSD decomposition. These are the Paper 47 flat-top / PD
+  Window *membership* κ₋ ≤ 1 ≤ κ₊ is certified by a PSD decomposition. These are the Paper 46 flat-top / PD
   certificates with the pole weight 2 read as a variable.
 - (vi) Resolvent form. When λ_par > 0 and A^par is invertible: κ₊ = 1/(2f_odd(0;T)) and κ₋ = −1/(2f_ev(0;T)).
   Here f_par(0) = ⟨(A^par)⁻¹φ_par, φ_par⟩ is the Schur formula for the minimum under one linear constraint.
@@ -75,7 +75,7 @@ and the right-hand side is **the same for every κ**. On {B = 0} the pole term 2
 **Reading.**
 - The window is nonempty, i.e. *some* residue is compatible with the prime data up to e^{2T}, exactly when the Weil form
   is nonnegative on tests whose Mellin transform vanishes at s = 0 (one pole only).
-- The reflection R, F(t) ↦ F(−t), swaps A and B (Paper 47 l.2613). So {Φ_H(1) = 0} gives the same number.
+- The reflection R, F(t) ↦ F(−t), swaps A and B (Paper 46 l.2613). So {Φ_H(1) = 0} gives the same number.
 - This yields a per-scale hierarchy. With E_prim(T) := [λ_A(T) ≥ 0], E_half(T) := [𝔞_T ≥ 0 on {B = 0}] and
   E_full(T) := [W_T ≥ 0]:
 
@@ -94,7 +94,7 @@ range (equivalently, E_half(T) for all T).
 
 *Proof.*
 - ⇒: under RH, 1 ∈ K(T).
-- ⇐, first route: E_half(T) ⇒ E_prim(T) for all T, and that is RH by the primitive Weil criterion (Paper 47 l.126).
+- ⇐, first route: E_half(T) ⇒ E_prim(T) for all T, and that is RH by the primitive Weil criterion (Paper 46 l.126).
 - ⇐, second route, which shows where the residue comes from:
   - The windows are nonempty and nested (Prop 1.1(i)). So L₋ := sup κ₋ ≤ inf κ₊ =: L₊.
   - 902 Thm 2.1 says lim g̃_par ≤ 0 unconditionally. By Prop 1.1(iii) this gives L₊ ≤ 1 ≤ L₋.

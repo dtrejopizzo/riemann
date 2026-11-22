@@ -19,7 +19,7 @@ N = e^{2T}. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMER
   `ROUND_008_A.md` l. 26 and `ROUND_008_D.md` l. 18 cite «POLAR_CAP_001 (bordered Schur complement
   that inverts a_T|P_T itself — consumes λ_A > 0)»; there is no file with that name in the folder of
   211 (search by name without result), so it is known only through those two citations.
-  P47 l. 4340–4350 (bordered Schur complement of a_T on P_T, polar term) and l. 5299
+  P46 l. 4340–4350 (bordered Schur complement of a_T on P_T, polar term) and l. 5299
   (thm:coer-schur): read only at the cited lines.
 - The other textual hits («boundary coordinates» in P121, P3 of phase 120, phases 57,
   72, 77, 78, 114/116) use «boundary» in another sense (Hadamard coordinates, Weyl boundary,

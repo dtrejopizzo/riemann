@@ -22,13 +22,13 @@ every finite-section bottom along the flow (Thm 1.3); the invariant σ*(a) of a 
 falsifiers (Thm 1.5); the first-contact derivative lemma (Lemma 1.7). The flow is a *deformation of the target*, not a
 certificate, so G2_B8_R3 Remark B does not apply to it as stated (see §5).
 
-## 0. Standing data (from the record, checked against Paper 47 §2–3 and L2_BUILD_024/025)
+## 0. Standing data (from the record, checked against Paper 46 §2–3 and L2_BUILD_024/025)
 - F₀: the explicit primitive profile of L2_BUILD_024 §2 / 025 §1: g = e^{bt}1_{[0,a]}, |b| > ½, G₀ = g*g̃*g*g̃ centred,
   F₀ = (¼ − ∂²)G₀ ∈ P_{T₀}, 2T₀ = 4a < log 2, normalized ‖F₀‖₂ = 1. c₀ := c_{F₀} (autocorrelation), supp c₀ ⊂ [−2T₀, 2T₀],
   c₀(0) = 1, ĉ₀ = F̂₀² > 0, with double zeros at ±i/2 (Tate).
 - B(d) := 𝔞(F₀, τ_dF₀) = A(d) − ½Σ_{n≥2} v_n[c₀(d − log n) + c₀(d + log n)], v_n = 2Λ(n)n^{−½}, A(d) := 𝔞_∞(F₀, τ_dF₀)
   (archimedean bilinear form of eq:Aform). B is real, even, continuous (024 §1, CONFIRMED).
-- a₀ := B(0) = A(0) = 𝔞_∞(F₀) (no n ≥ 2 has log n ≤ 2T₀). a₀ > 0 (prime-free window, Paper 47; also Lemma 2.6 of NT_002).
+- a₀ := B(0) = A(0) = 𝔞_∞(F₀) (no n ≥ 2 has log n ≤ 2T₀). a₀ > 0 (prime-free window, Paper 46; also Lemma 2.6 of NT_002).
 - Theorem S (L2_024 + 025, CONFIRMED with FIXes): D ⟺ B is positive definite on ℝ.
 - For a general real comb a = (a(n))_{n≥2} (falsifiers), B_a, K^{(a)} etc. are defined by the same formula with
   v_n replaced by 2a(n)n^{−½}.
@@ -72,7 +72,7 @@ For every finite X and σ ≤ σ′: λ_X(σ) ≤ λ_X(σ′). Hence λ_inf is n
 *Proof.* (⟹) Thm 1.1 + 1.2. (⟸) For finite X, [K_σ(x/y)] → [K(x/y)] entrywise as σ ↓ 0; the PSD cone is closed. Thm 1.1. ∎
 So the target is the *bottom end* of a monotone one-parameter family of strictly weaker positivity statements D(σ).
 
-**Thm 1.5 (the flow separates the falsifiers; PROVED, with Paper 47 thm:finmod/cor:void CITED).**
+**Thm 1.5 (the flow separates the falsifiers; PROVED, with Paper 46 thm:finmod/cor:void CITED).**
 (i) For every comb a for which D fails, σ*(a) > 0.
 (ii) Amplification at 2: a_c := Λ + c·1_{n=2} (c > 0). Then a₀ is unchanged and σ*(a_c) ≥ log₂((c/√2 − |B(log 2)|)/a₀) → ∞.
 (iii) Every D(σ) with σ > 0 is strictly weaker than D on the space of combs: there are combs (finite modifications of Λ) with

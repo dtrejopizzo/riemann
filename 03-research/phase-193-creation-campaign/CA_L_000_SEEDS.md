@@ -8,9 +8,9 @@ grep "Cohn–Elkies / Viazovska / magic function / Radchenko" over 03-research, 
 "structurally analogous, different problem"; Fourier-optimisation literature assumes the zeros' location), R157_002 item 50 (Beurling–Selberg /
 CE majorants: EXCL by lem:Rrig, cor:nontermwise — termwise-signed), R164_401 (sinc-annihilation = CE device on the theta measure, used to build
 FE solutions, no sign), phase-35 doc 101 / index P35-4 (RV interpolation: NO-GO, "refutation weight-independent; needs μ(ℝ)=∞"; modularity of θ
-*is* the FE). Index L30 (crystalline measures), L53 (Chirre–Gonçalves–de Laat, absorbed into P47), L54 (Delsarte/Turán on LCA groups, NOT IN
+*is* the FE). Index L30 (crystalline measures), L53 (Chirre–Gonçalves–de Laat, absorbed into P46), L54 (Delsarte/Turán on LCA groups, NOT IN
 CORPUS), L60 (positive crystalline measures, NOT IN CORPUS). **Nothing in the corpus addresses (i) the attainment/slackness structure that
-makes Viazovska's method work, nor (ii) a discrete-primal (site) version of the P47 dual.** Those are the two developments below.
+makes Viazovska's method work, nor (ii) a discrete-primal (site) version of the P46 dual.** Those are the two developments below.
 
 ## 1. What makes the sphere-packing method work (three structural inputs)
 (V1) **Discrete primal.** The CE LP's primal optimum is a lattice (Dirac comb); complementary slackness forces f to vanish on a *discrete,
@@ -20,7 +20,7 @@ then give a bound with no estimate.
 (V3) **Fourier eigen-decomposition by modular forms.** f = f₊ + f₋ (±1 eigenfunctions), each a Laplace transform ∫ φ(iy)e^{iπ|x|²z}dy of a
 (quasi)modular form; the double zeros at √(2n) come from sin²(π|x|²/2), the sign from positivity of explicit modular forms on iℝ₊.
 Row D transfer table:
-| input | sphere packing | row D window LP (P47 §3–6) |
+| input | sphere packing | row D window LP (P46 §3–6) |
 |---|---|---|
 | primal | lattice (discrete) | |F̂_⋆|² dτ (absolutely continuous, full support) |
 | Poisson | positive both sides | explicit formula: prime side −v_n (negative), archimedean side indefinite (K-A), zero side = the object |

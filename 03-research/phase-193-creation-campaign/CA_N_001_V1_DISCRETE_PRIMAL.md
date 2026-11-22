@@ -1,6 +1,6 @@
 # CA_N_001 — (V1) A discrete primal with exactly attained optimum: what can be built, and the exact obstruction (front N, phase 193)
 
- Pen and paper, no numerics. **No negative value for ζ.** Notation: P47 def:PD (primal (P), dual (D)), 𝖡 and
+ Pen and paper, no numerics. **No negative value for ζ.** Notation: P46 def:PD (primal (P), dual (D)), 𝖡 and
 M_X of CA_L_002 / thm:oneprofile, prop:AM. In Viazovska's proof (V1) means: the primal (packing) optimum is a discrete object (E8), and the
 dual certificate is exact, with slackness on a discrete set known in advance (|x| = √(2n)).
 
@@ -15,7 +15,7 @@ atomic, any closed restriction). If sup over 𝒩 of the dual value is attained 
 feasible μ are Fejér–Riesz test kernels of order M) and its dual is attained; by thm:R its ceiling is ≤ λ_P + O(1/log M) (cor:Rrate) and by
 Prop 1.2 every attained lattice value is < λ_P. So mesh discretization buys attainment at the price of a strictly positive deficit, and a
 sign proof by attained lattice certificates needs λ_P(T) > 0 strictly and M = M(T) with deficit < λ_P(T) — unbounded in T as soon as
-inf_T λ_P(T) = 0 (the [crit] scale of P47; ARGUED). Attainment and exactness cannot coexist on the window LP at any T; attainment with
+inf_T λ_P(T) = 0 (the [crit] scale of P46; ARGUED). Attainment and exactness cannot coexist on the window LP at any T; attainment with
 the sign can coexist with all T only through an unbounded family M(T).
 
 ## 2. The site LP: (V1) built (PROVED, CA_L_002 + this section)
@@ -52,4 +52,4 @@ zero-side (Prop 2.2). Every built form is comb- and FE-generic (CA_L_002 Prop 3.
   2ε-periodic up to a character; the statement "periodic" is right with period 2ε in the s = +1 case. Corrected in reading: "periodic".
 - Prop 2.2 uses the explicit formula identity, not any positivity of the zero side; the zero-sum identity is only used to *locate* the
   object (zero side) and to declare it inadmissible. No zero location is assumed. ✓
-- Prop 1.3 "unbounded M(T)" is ARGUED (depends on λ_P → 0 along T, which P47 records only as an order-of-magnitude upper bound). ✓ labelled.
+- Prop 1.3 "unbounded M(T)" is ARGUED (depends on λ_P → 0 along T, which P46 records only as an order-of-magnitude upper bound). ✓ labelled.

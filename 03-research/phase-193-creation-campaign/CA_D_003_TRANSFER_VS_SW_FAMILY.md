@@ -1,7 +1,7 @@
 # CA_D_003 — Does Hardy-amplitude transfer (CA_D_001) explain positivity on the s_w family? And a pre-screen of the amplitude-one residual
 
 Pen and paper. **No sign contact. No negative value for ζ.** Inputs: CA_C_005 (+review: criticality is established for the *span*, not
-the smooth family), CA_C_006, EI_002 Thm 1, P47 prop:shape-family, CA_D_001–002.
+the smooth family), CA_C_006, EI_002 Thm 1, P46 prop:shape-family, CA_D_001–002.
 
 ## 1. Answer: NO. Theorem 1/1′ does not apply to the s_w family, for three exact reasons (PROVED)
 The family is G_M = F₀ * Σ_m m^{−½}w(m/M)δ_{log m} ∈ P_T, with T = T₀ + ½log M and X′ = Me^{2T₀}. Its form is
@@ -35,7 +35,7 @@ positivity. Transfer supplies the archimedean–ζ piece with a large, non-criti
 |---|---|---|
 | (i) any statement localized at the ordinates γ (values F̂(γ), residues of Z_T′/Z_T) | it is a function of the zero set: (R)(4), C_zeros; M_m quartets separate it | **DEAD** |
 | (ii-a) positivity of 𝔞_T restricted to tests spectrally supported on I_T | P_T has no such tests (exponential type, Nyquist width π/(8T) < π/T); a soft localization is "local on the negative set": (R)(5), W-loc (thm:nolocal) | **DEAD** |
-| (ii-b) the centre packet γ = 0 | (E_γ) at γ = 0 is exactly critical (L2_010; P47 prop:Egamma-exact) | retry → **DEAD** |
+| (ii-b) the centre packet γ = 0 | (E_γ) at γ = 0 is exactly critical (L2_010; P46 prop:Egamma-exact) | retry → **DEAD** |
 | (ii-c) correlated: ∫_{Z_T²<1}Θ′Φ ≥ −∫_{Z_T²≥1}Θ′Φ, splitting by the transfer multiplier | the split by Z_T² is not a P_T operation (CA_D_002 §2.4); as a statement it is 𝔞_T(F) ≥ 0 itself: REF-D | **REF-D** |
 | (ii-d) amplitude-one comparison through the unimodular factor e^{−iΘ} = Z_X/Z_T (a spectral first moment of F*ε, ε = FT⁻¹(e^{−iΘ})) | ε is two-sided; first-moment positivity of F*ε is D1 of CA_D_000 (a coordinate, (B″), linear in Θ) | **coordinate** |
 No candidate survives the (R)(4)/(R)(5) pre-screen. The residual identified in CA_D_002 is therefore not a new open route. It locates

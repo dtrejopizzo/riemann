@@ -122,7 +122,7 @@ Z_Q = (w/h)ζ_K·(1 + E_C) and 1 + E_C has constant term h, set 1 + E_C = h·(1 
   Λ_Q(n) = Λ_K(n) + Λ_def^{C}(n),   Λ_def^{C}(n) = log n · Σ_{k ≥ 1} ((−1)^{k+1}/k) Ẽ_C^{*k}(n),
 where * is Dirichlet convolution; the sum over k is finite for each n (Ẽ^{*k}(n) = 0 if 2^k > n). Consequently, for
 every admissible g and every T,
-  𝔞_T^{Q}(g) = 𝔞_T^{K}(g) + 𝔇_g^{C},   𝔇_g^{C} = −Σ_n Λ_def^{C}(n) n^{−½} c_g(log n)·(normalization of P47 eq:Aform),
+  𝔞_T^{Q}(g) = 𝔞_T^{K}(g) + 𝔇_g^{C},   𝔇_g^{C} = −Σ_n Λ_def^{C}(n) n^{−½} c_g(log n)·(normalization of P46 eq:Aform),
 with **the same** archimedean and polar terms on both sides (same Γ, same pole at s=1; the factor w/h and h cancel
 because −Z′/Z is scale-invariant: Lemma H below).
 
@@ -174,7 +174,7 @@ in log Z.
 ring of formal Dirichlet series, i.e. ℓ_r(n) = Σ_k ((−1)^{k+1}/k)(r − δ₁)^{*k}(n): a polynomial in
 {r(d) : d | n, d > 1} of degree ≤ Ω(n). Then
   𝔞_T^{r}(g) = A_T(g) + P_T(g) − Σ_n w_g(n) Σ_k ((−1)^{k+1}/k) (r − δ₁)^{*k}(n),
-with w_g(n) = 2 log n · n^{−½} c_g(log n) (P47 convention) and A_T, P_T the archimedean and polar terms. The k = 1 term is linear in r,
+with w_g(n) = 2 log n · n^{−½} c_g(log n) (P46 convention) and A_T, P_T the archimedean and polar terms. The k = 1 term is linear in r,
 the k = 2 term is the **multiplicative Hankel quadratic form** −½ Σ_{m,n>1} r(m)r(n) w_g(mn), and so on.
 
 *Comment.* This is the only "quadratic form in θ" that exists: the order-2 term of an infinite polynomial expansion. It is literally
@@ -321,13 +321,13 @@ the *way* the collapse occurs (which polynomial identity produces it), not in a 
 - **R11.1 (OPEN, new).** The polynomial identity realizing the H.3 collapse is a family of relations among the
   terms (r−δ₁)^{*k}(n), k ≥ 2, n not a prime power. In the Euler case they sum to zero; for Epstein h ≥ 2 they do not. Question: is the
   collapse, restricted to n with two prime factors m ≈ kn of the window (near-coincidences, problem (S)), an
-  identity of the form "square = square" (e.g. r(p)r(q) = r(pq)) usable as a **restriction** in P47's dual LP
+  identity of the form "square = square" (e.g. r(p)r(q) = r(pq)) usable as a **restriction** in P46's dual LP
   (a cut valid only for Euler combs)? This would be a use of discontinuous (M), compatible with C-θ and C-τ, that
-  acts on the certificate and not on the form. Risk: P47's LP is already linear in Λ and the cut may be empty there;
+  acts on the certificate and not on the form. Risk: P46's LP is already linear in Λ and the cut may be empty there;
   one must check the index to see whether "multiplicative cuts in the LP" is already there (it does not appear under that name in the grep).
 - **R11.2 (OPEN).** The lattice origin (constant term of θ) as an object: the exact difference ζ vs a_P is C.1(ii).
   Is there a form of the archimedean/polar term of 𝔞_T that "is" the constant term of θ and whose interaction with the
-  deleted primes is what causes a_P to fail? This connects with the pole (P47) and not with the comb. High risk of REF-D
+  deleted primes is what causes a_P to fail? This connects with the pole (P46) and not with the comb. High risk of REF-D
   (the pole is already in the form).
 
 ---
@@ -352,7 +352,7 @@ term κ₁ b^{*2} of COSH_DEFECT (κ₁ = ½). For h = 3 (D = −23, Ĉl ≅ ℤ
 real for real s). Goal: have the 𝔇 term for h=2,3 in a single formula; without claiming sign.
 
 *Lemma 12.2 (R11.1, OPEN).* Formulate the H.3 collapse relations of order 2 as linear restrictions on the
-dual LP variables of P47 in the coordinates c_N, N ∈ [μ, 2μ) (SPEC_001: c_N = −μ(N), PROVED) and decide whether any is
+dual LP variables of P46 in the coordinates c_N, N ∈ [μ, 2μ) (SPEC_001: c_N = −μ(N), PROVED) and decide whether any is
 non-trivial in that window. If all are trivial (implied by linearity in Λ), record NO-GO.
 
 **Risk.** High. This round's candidate is a correct and new classifier as a formalization, but Lemma H and

@@ -26,7 +26,7 @@ more distant antecedents:
   CW D-16. All record Herglotz-type positivity as a reformulation of the target; none
   states a rigidity of comparators.
 - Paper 20 thm:boundary: unconditional boundary identity (re-proved in §0 for M, in two lines).
-- P47 thm:noimport / IDX CPOS_CLASS_001: "imported positivity" for constructions uniform in the
+- P46 thm:noimport / IDX CPOS_CLASS_001: "imported positivity" for constructions uniform in the
   comb; different hypothesis class (uniformity in the datum), does not use the boundary measure.
 - Search for "medida de borde", "boundary measure", Herglotz, Carathéodory, Pick, Nevanlinna in the
   index, the grid, the crossword, P48 and phase 211: no statement of the general lemma. A search

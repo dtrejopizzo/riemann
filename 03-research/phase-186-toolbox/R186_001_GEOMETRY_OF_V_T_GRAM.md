@@ -1,6 +1,6 @@
 # R186.001 — Geometry of 𝒱_T and the Gram-of-translates tool (form E4 of row D)
 
-Sources: Paper 47 (prop:finite, prop:uniform, prop:band, prop:align, lem:cpos,
+Sources: Paper 46 (prop:finite, prop:uniform, prop:band, prop:align, lem:cpos,
 cor:Qp, eq:Aform), ROW-D-REDUCED-STATEMENT §1 (E4), R184_007 (Theorem W), R185_005
 (relative barrier), R185_006 (symbol identity, gap ≈ 9.7·10⁻⁴ at T = ½log3).
 No new computation except as indicated; the cited numbers are from R185_006 (NUMERICAL).
@@ -26,7 +26,7 @@ structure of ℕ in the ratios m/n, but all of that information is already in th
 
 ## 1. Exact definition and duality
 
-Paper 47 notation: I_T = (−T,T), 𝒫_T ⊂ L²(I_T) the subspace of primitives (A(F) = B(F) = 0,
+Paper 46 notation: I_T = (−T,T), 𝒫_T ⊂ L²(I_T) the subspace of primitives (A(F) = B(F) = 0,
 Tate constraints, functionals bounded on L²(I_T): integrals against e^{±u/2}), 𝒩_T = {2 ≤ n < e^{2T}},
 N_T = |𝒩_T|, c_F(u) = ∫F(x)F(x−u)dx (F extended by 0), and for F real unitary in the form domain
 (eq:Aform)
@@ -155,7 +155,7 @@ its dual, with the alignment arcs of prop:align as the region where σ < 0 must 
  exclude arguments that use the support, and it says nothing about E4 itself.
 - No new numbers; 9.7·10⁻⁴ and −6.352 are from R185_006.
 
-## For Paper 47
+## For Paper 46
 
 Add after prop:finite a remark "geometry of 𝒱_T": bounded (Prop. 3bis), conv via densities
 (Prop. 2), compressions do not commute (Prop. 3), and a corollary NG: "Bochner positivity of the

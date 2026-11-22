@@ -4,7 +4,7 @@
 my own `R147_004_AUDIT_R2.md`. `scripts/graded_support.py` **re-run with `--fast`**, full output
 compared line by line against the round-3 tables; docstring re-read after the claimed fix.
 Re-checked in the corpus: `R139_001` §D.20.2 (H1–H3 as used), `R147_001` D.51.3 and its
-`\deg K_{Q_𝔄} = ½`, Paper 46 (19.2)/Prop. 19.18/Def. 19.19/Thm 19.23, Paper 46 Thm 11.8(v).*
+`\deg K_{Q_𝔄} = ½`, Paper 47 (19.2)/Prop. 19.18/Def. 19.19/Thm 19.23, Paper 47 Thm 11.8(v).*
 
 **Method.** Every repair was re-derived from scratch rather than read: symmetry and reality of the packet
 form were recomputed from (H2)/(H3) by substitution; `χ(στ^{-1})` was recomputed from bilinearity alone;
@@ -206,7 +206,7 @@ the withdrawn D.55.1/D.55.5(e). Additionally the stated reason is a non sequitur
 
 ### MAJOR C2 — `\deg K_L = 1` "valid over any base `F`" contradicts round 1's `\deg K_{Q_𝔄} = ½`
 **Location:** **D.55.3′(ii)**; the parenthetical "(H4 with H5(c), valid over any base `F`)".
-**Defect.** Paper 46 Thm 11.8(v) (`\deg K = 1`) is a statement about `ξ`. Take `F = K = Q(\sqrt{−3})`,
+**Defect.** Paper 47 Thm 11.8(v) (`\deg K = 1`) is a statement about `ξ`. Take `F = K = Q(\sqrt{−3})`,
 `h = 1`: then `H = K`, `G = 1`, `\widehat G = \{1\}`, `𝒟_H = D^W`, `t = \mathrm{id}`, and D.55.10′(i)
 gives `K_{Q_0} = K_1 = K_{ξ_K}`. Round 1 **D.51.3 (`PROVED`)** gives `\deg K_{Q_𝔄} = ½` for every `𝔄`
 (`R147_001:291`, `:713`, matching phase 139 D.19.2(vi)). So `\deg K_{ξ_K} = ½ ≠ 1`, and the

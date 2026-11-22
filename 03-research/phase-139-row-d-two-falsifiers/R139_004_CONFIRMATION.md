@@ -20,12 +20,12 @@ function (AT-2) and the unsatisfiability argument need it to contain. No FATAL. 
 | # | Sev. | Status | Verification |
 |---|---|---|---|
 | **H1** | MAJOR | **CLOSED** | (0.1) at `R139_001:24` now reads `Σ_{p∈P}Φ_F(p)Φ_G(1−p) − Σ_ρ…`, weight one, with the bracket correctly explaining that `Z(p)` enters only through `Φ_{K_Z}(1−p)`. `B_pol^{(Z)}` matches. I re-checked the four downstream constants against the new convention: D.19.2(vi) (`¼\deg F`, `⅛`), D.19.3(v) (`2z²AB`, `z²(A+B)`, `2z²`), D.20.1(iv) (`(r/2)\deg_KF`, `r²/2`) and the reduction "Hodge at even `F` ⟺ `Ŵ ≤ 0`" — all consistent now, none changed. |
-| **H2** | MAJOR | **CLOSED (withdrawn correctly)** | Remark D.19.3b (`:343`) is rewritten as "`Ξ_Q` lies outside Proposition 12.6's class", lists exactly the four failed hypotheses, and quotes the paper's own `main.md:3083` note. §7's P46-5 (`:1254`) is downgraded to **EDITORIAL** with the withdrawn text quoted and the sentence "**That is a misreading and it must not reach Paper 46's Part III**" in place. The README row is corrected. The surviving editorial suggestion (two symbols; note that (12.4) is consumed only by Thm 11.14 → Thm 12.3) is accurate and is the right residue to carry to Part III. |
+| **H2** | MAJOR | **CLOSED (withdrawn correctly)** | Remark D.19.3b (`:343`) is rewritten as "`Ξ_Q` lies outside Proposition 12.6's class", lists exactly the four failed hypotheses, and quotes the paper's own `main.md:3083` note. §7's P47-5 (`:1254`) is downgraded to **EDITORIAL** with the withdrawn text quoted and the sentence "**That is a misreading and it must not reach Paper 47's Part III**" in place. The README row is corrected. The surviving editorial suggestion (two symbols; note that (12.4) is consumed only by Thm 11.14 → Thm 12.3) is accurate and is the right residue to carry to Part III. |
 | **H3** | MAJOR | **CLOSED**, one cosmetic residue (H18) | New Definition D.19.3a′ (`:269`). I checked the expansion: `1/(1+W) = Σ_{k≥0}(−1)^kW^k` gives `−W'/(1+W) = Σ_{k≥1}(−1)^kW^{k−1}W'` — index correct; absolute convergence for `σ` large is correct; `σ_a ≥ σ_1` is correct; and the admission "**no theorem places `σ_a` at `σ_1`** for a series without an Euler product" is exactly the point. Theorem D.19.3's hypothesis is now `α > max\{θ_Z, σ_a−½\}` with `c ∈ (σ_a, ½+α)`; `D^W(α)` still contains `K_Q` and `C_c^∞`. |
 | **H4** | MAJOR | **CLOSED** | Standing restriction at `:239`. I verified both halves. *Applicability of DH to the principal form:* for the principal class `𝔄_0`, `\overlineχ(𝔄_0) = 1`, so `Z_{Q_0} = \frac1hΣ_χL(s,χ)` is a combination of `h ≥ 2` **distinct** Euler products with all coefficients equal and non-zero — the non-degeneracy Davenport–Heilbronn require; the theorem applies. *Compatibility with D.19.4a:* `x²+ky²` **is** the principal (reduced, `a=1`) form of discriminant `−4k`, and `r_{Q_k}(1) = 1`, so `n_0 = 1` as the restriction demands. The two are compatible and the restriction costs nothing that the round uses. The generalized-Dirichlet-series diagnosis for `n_0 ≥ 2` is correct and is properly parked as O-10. |
 | **H5** | MAJOR | **CLOSED**, two residues (H19, H20) | (a) Labels now read `PROVED` abelian / `PROVED-CONDITIONAL` on Artin holomorphy, with the correct reason (a pole of one factor would cancel a zero of another). (b) Conjugate packets: I re-derived Lemma D.20.2a₀ for `χ ≠ \barχ` — `Λ_{[χ]}(1−s) = W(\barχ)^{−1}Λ(s,χ̄)·W(χ)^{−1}Λ(s,χ)` and `W(χ)W(\barχ) = 1` (itself forced by applying the Artin equation twice) — **correct**. (c) The conductor–discriminant factorization `Λ_L = Λ_K∏Λ(s,χ)^{χ(1)}` is exact and the spurious `r_L/r_K`, `u(s)` are gone; with weight-one polar blocks `I_∞^{(L)} = I_∞^{(K)} + Σχ(1)Ŵ^{(Λ_{[χ]})}` is right. |
 | **H6** | MAJOR | **CLOSED** | I recomputed clause (c) at `E = mK_K`: `½m²·(r²/2) − ½m·(r²/2) + χ_K = \tfrac{r²}4m² − \tfrac{r²}4m + χ_K`. The displayed line at `:1150` matches, `K_K − mK_K = (1−m)K_K` is right, and the `K = Q` check (`r = 1 ⟹ ¼m²`) now closes against `NOTE_OFF_THE_PAGE_CANDIDATES.md:5-8`. |
-| **H7** | MAJOR | **PARTIALLY CLOSED → see H17** | The restatement over a class `𝒵` and the promotion of the naming clause **(N)** are the right repair in shape, and the further defect this round found (the naive "for every `Z ∈ 𝒵`" version is unsatisfiable) is **real**: I checked Paper 46 Theorem 12.4 (`main.md:2945`) and it does say "there **is no** `h⁰_a : D^W → R_{≥0}` satisfying (a), (b′) and (c)". The split — rule defined on `𝒵`, clauses demanded only at `ξ_K` — is correct and well-posed. But the membership condition chosen for `𝒵` is wrong (H17), which breaks both that argument and (AT-2). |
+| **H7** | MAJOR | **PARTIALLY CLOSED → see H17** | The restatement over a class `𝒵` and the promotion of the naming clause **(N)** are the right repair in shape, and the further defect this round found (the naive "for every `Z ∈ 𝒵`" version is unsatisfiable) is **real**: I checked Paper 47 Theorem 12.4 (`main.md:2945`) and it does say "there **is no** `h⁰_a : D^W → R_{≥0}` satisfying (a), (b′) and (c)". The split — rule defined on `𝒵`, clauses demanded only at `ξ_K` — is correct and well-posed. But the membership condition chosen for `𝒵` is wrong (H17), which breaks both that argument and (AT-2). |
 | **H8** | MAJOR | **CLOSED (new proof verified)** | See §2. |
 | **H9** | MINOR | **CLOSED** | The "in particular" clause is deleted at `:532`; D.19.6(ii) now says "fails **in its absolute form**", and the bracket records that A8's failure rests on (i) alone. Correct. |
 | **H10** | MINOR | **CLOSED** | `:153` now `O(e^{5t/2}e^{−ce^tm_Q})`. Correct (`y_v² ≍ e^{2t}` times `e^{t/2}`). |
@@ -113,7 +113,7 @@ Theorem D.19.7a, `𝒵` contains `ξ`, every `ξ_K`, **every `Ξ_a` with `0 < a 
 falsifier (`p−½ ∈ \{±(½±a)\}` is not of constant modulus). So `Ξ_a ∉ 𝒵`, and the parenthetical
 contradicts the table three sections earlier.
 **Consequences.** (i) The unsatisfiability argument of the "Why the requirement is split" paragraph —
-whose whole force is "`Ξ_a ∈ 𝒵`, and Paper 46 Theorem 12.4 forbids `h⁰_{Ξ_a}`" — does not go through
+whose whole force is "`Ξ_a ∈ 𝒵`, and Paper 47 Theorem 12.4 forbids `h⁰_{Ξ_a}`" — does not go through
 as stated; with `𝒵` as defined, the naive "(a),(b′),(c) for every `Z ∈ 𝒵`" is **not** shown vacuous,
 and the split this round introduced would be unmotivated. (ii) **(AT-2) again denotes nothing**: "the
 rule, evaluated at `Z = Ξ_a`" presupposes `Ξ_a ∈ 𝒵`. This is the exact defect H7 was raised to
@@ -129,7 +129,7 @@ Once H17 is repaired, **`(P139)` is well-posed and non-vacuous**, and I judge it
 to hand to phase 140:
 * **Well-posed.** The rule is asked to be *defined* on `𝒵` and to satisfy (a),(b′),(c) only at
   `Z = ξ_K`; by Theorem 12.3 (available for every `K` by D.20.1(vi)) that is exactly GRH for `ζ_K`.
-  The split is forced, not cosmetic: Paper 46 Theorem 12.4 makes the unsplit version unsatisfiable,
+  The split is forced, not cosmetic: Paper 47 Theorem 12.4 makes the unsplit version unsatisfiable,
   and I verified that theorem's statement directly.
 * **Non-vacuous.** Nothing in the round shows `(P139)` unsatisfiable: the obstruction theorems
   (D.19.5, Thm 12.4) bite at `Ξ_Q` and `Ξ_a`, where the clauses are **not** demanded.
@@ -173,16 +173,16 @@ All four verified in §1. The two things I re-derived rather than read: the weig
 | **D.19** | **CONFIRMED.** D.19.2, D.19.4a/4b/4a′, D.19.5, D.19.5b, D.19.6(i)/(iii), D.19.7a, D.19.7c, T2, D.19.7d all stand; the Prop-12.6 erratum is properly withdrawn; the principal-form restriction is honest and costs nothing the round uses. Residue: H18. |
 | **D.20** | **CONFIRMED.** D.20.1(iii) is now a real proof and a good one (H8). D.20.2 is correctly split into an unconditional abelian case and an Artin-conditional general case, over self-dual packets. Residues: H19, H20, H21. |
 | **D.21** | **CONFIRMED PENDING H17.** The ledger and its citations are unchanged and were verified in round 1; `(P139)` has the right growth constant and the right split, but its domain `𝒵` must be corrected before (AT-2) means anything. |
-| **Labels** | **ACCEPT.** Two downward relabels (P46-5 → EDITORIAL; D.20.2 → abelian `PROVED` / general `PROVED-CONDITIONAL`) and one scope restriction (principal `Q`); nothing relabelled upward; `METHOD-CONSTRAINT` on T2 unchanged and right. |
+| **Labels** | **ACCEPT.** Two downward relabels (P47-5 → EDITORIAL; D.20.2 → abelian `PROVED` / general `PROVED-CONDITIONAL`) and one scope restriction (principal `Q`); nothing relabelled upward; `METHOD-CONSTRAINT` on T2 unchanged and right. |
 | **RH-free definitions** | **ACCEPT.** No object is named by a zero location; `K_K` is now built from `ξ_K` by a transform, which is data, not a zero set. |
-| **FATAL screen** | **CLEAN.** Re-run after the repairs. The two statements whose meaning moved — `(P139)` (a construction problem) and Theorem D.20.2 (weaker, conditional) — cannot combine with Paper 46 Theorem 3.7 to give RH or `¬RH`. |
+| **FATAL screen** | **CLEAN.** Re-run after the repairs. The two statements whose meaning moved — `(P139)` (a construction problem) and Theorem D.20.2 (weaker, conditional) — cannot combine with Paper 47 Theorem 3.7 to give RH or `¬RH`. |
 | **README** | **REPAIR**: row 40 carries H17. Otherwise accurate, including the new D.20.1(iii) and D.20.2 rows. |
 
 ## 8. Overall
 
 **CONFIRMED — one MAJOR residue (H17, one line) and four MINOR.** Row D: **no label change**; nothing
 in this phase asserts a sign for `ξ`. Round 2 did what a repair round should: it retracted the one
-claim that was wrong about someone else's text (P46-5), restricted the scope where the mathematics
+claim that was wrong about someone else's text (P47-5), restricted the scope where the mathematics
 demanded it (principal `Q`), replaced a sketch with a proof (`K_K` by contour shift), made a
 conditional statement conditional (D.20.2), and — the one place it overreached — introduced H17 by
 choosing the wrong axiom subset for `𝒵`. Repair H17, H18–H21, and phase 139 can close with `(P139)`

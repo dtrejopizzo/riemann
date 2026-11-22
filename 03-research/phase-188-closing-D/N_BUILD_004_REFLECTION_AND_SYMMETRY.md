@@ -1,7 +1,7 @@
 # N_BUILD_004 — Route (b): the reflection u ↦ 2T − u, from scratch; route (c): Selberg's symmetry formula
 
 ## Corpus check
-- Paper 47 thm:nyq-sectors (ii): Δ_T(F) = ∫K(u)Re c_F(2T−u) + Σ v_n Re c_F(2T−log n); s^per = 𝔞_T − Δ_T, s^anti = 𝔞_T + Δ_T.
+- Paper 46 thm:nyq-sectors (ii): Δ_T(F) = ∫K(u)Re c_F(2T−u) + Σ v_n Re c_F(2T−log n); s^per = 𝔞_T − Δ_T, s^anti = 𝔞_T + Δ_T.
 - R186_052 §5.2 "99.4 % antiperiodic" — **RETRACTED** (R186_118 MAJOR-3: basis artefact; every F has 100 % energy in each
   sector). Not used.
 - Selberg symmetry: phase-104 104_13, phase-103 103_63, phase-5 M5, phase-159 G2_B3_R3 (A1 closure / M5 gates; none on the

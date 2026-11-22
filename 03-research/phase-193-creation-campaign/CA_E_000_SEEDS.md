@@ -3,8 +3,8 @@
 Phase 193. Pen and paper; **no numerics were run**.
 **No certified negative value for ζ anywhere on this front.**
 
-Read before seeding: CAMPAIGN_LEDGER (O-label erratum: Paper 47 numbering used here), CA_A/B/D_SYNTHESIS, CA_C_004, CA_C_007
-(+ reviews, CA_SYNTHESES_REVIEW), P47 §20 (def:shape-ops, lem:shape-est, lem:shape-ident, thm:shape, cor:shape),
+Read before seeding: CAMPAIGN_LEDGER (O-label erratum: Paper 46 numbering used here), CA_A/B/D_SYNTHESIS, CA_C_004, CA_C_007
+(+ reviews, CA_SYNTHESES_REVIEW), P46 §20 (def:shape-ops, lem:shape-est, lem:shape-ident, thm:shape, cor:shape),
 prob:region (R)(1)–(11), thm:oneprofile, prop:AM; ROUTES-TRIED-INDEX README (all sections), 02 (R9-04), 03 (NG-67, P45-1, P51-1/2,
 P53-1, KREIN rows), 04 (G4H-159 G1, G8H-R160_S5 #16/#20 Thm U, G4C-R177 Petz, G6C-R178 CAR/Robertson, G6B-R180 Kadison, G4C-R181,
 G4B-R182, G2A-R183_008), 06. Corpus grep (03-research, 01-context) for: KMS, Bost–Connes, Tomita, Araki, Connes cocycle, flow of
@@ -16,7 +16,7 @@ arithmetic), G1_B10_R5 (standard form / natural cone), R177 (Petz), R178 (CAR cu
 R160_M8 Prop E (Schur products of certificates), NT_00x (Kakutani in the height flow).
 Excluded by the coordinator: free probability (CA_C_006), CQG prime current (NG-67), OS / reflection positivity (CA_A_007).
 
-Screen key. Idx = retry of an indexed route. (R)k = clause k of prob:region. (P)k = CA_B conditions. O-labels are Paper 47's.
+Screen key. Idx = retry of an indexed route. (R)k = clause k of prob:region. (P)k = CA_B conditions. O-labels are Paper 46's.
 B′ = estimate with a remainder; B″ = identity valid for every comb; FE-gen = holds for every FE series (Epstein x²+5y² included);
 REF-D = exact restatement of the target; [crit] = can it resolve a bottom at relative precision M^{−3}? "✗" = fails there.
 

@@ -1,12 +1,12 @@
 # Round 027 A: is the weight vector of the comb the global maximiser of μ_T?
 
 ## Hypothesis
-μ_T(v) = bottom of a_T^{(v)} = Arch − Σ_n v_n Π_n on P_T, for v ∈ ℝ^{N_T}. Paper 47 (lem:degen) shows
+μ_T(v) = bottom of a_T^{(v)} = Arch − Σ_n v_n Π_n on P_T, for v ∈ ℝ^{N_T}. Paper 46 (lem:degen) shows
 that μ_T is concave and that μ_T(v_T(Λ)) = λ_A(T). The hypothesis is (A) v_T(Λ) = argmax μ_T, plus (B)
 some explicit v̂ has μ_T(v̂) ≥ 0. Together they would give λ_A = max μ_T ≥ μ_T(v̂) ≥ 0.
 
 ## Corpus check
-lem:degen and rem:resweights (Paper 47, ~3260–3320) bound μ_T from above by a tangent plane at v_T(Λ)
+lem:degen and rem:resweights (Paper 46, ~3260–3320) bound μ_T from above by a tangent plane at v_T(Λ)
 and leave open whether the degenerate case (all c_{F*}(log n) = 0) occurs. ROUND_002_D/E studied only
 the ray cΛ, where c* = 1 holds as a kink. The new step here is to maximise over the full weight space.
 This route is not in the index.

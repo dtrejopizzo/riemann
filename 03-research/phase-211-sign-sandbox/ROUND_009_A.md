@@ -1,7 +1,7 @@
 # Round 009 A — The tapered prolate leakage bound: proof of Lemma 3.4 of ROUND_008_E (in a mollified form)
 
 Target (★): λ_A(T) ≥ 0 for every T (STATEMENT_001). This memo proves an UPPER bound only; no sign is claimed anywhere.
-Notation of ROUND_008_E and Paper 47 §sec:ext: λ = e^T, N = λ², c = 2πN, ℱf(ξ) = ∫f(x)e^{−2πixξ}dx; P_T, a_T, W_T, λ_A,
+Notation of ROUND_008_E and Paper 46 §sec:ext: λ = e^T, N = λ², c = 2πN, ℱf(ξ) = ∫f(x)e^{−2πixξ}dx; P_T, a_T, W_T, λ_A,
 λ_W, E (summation map), 𝒞_T, 𝒜⁺_T, L₁, L₂ as in ROUND_008_E §3. Prolates: for a parameter c > 0, φ_k = φ_k(·; c) is the
 k-th prolate spheroidal wave function, real, of parity (−1)^k, normalised by ∫_{−1}^{1}φ_k² = 1, with
     ∫_{−1}^{1} φ_k(t) e^{−icxt} dt = α_k φ_k(x)   (x ∈ ℝ),    |α_k|² = 2πχ_k/c,                                   (0.1)
@@ -13,7 +13,7 @@ PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 ## 0. Corpus check
 
 Searched: ROUND_008_E (Lemma 3.4, Cor. 3.5 and the "Argument and what is missing" paragraph), ROUTES-TRIED-INDEX README
-row P211-8E and table rows C21, 05b row L106 (prolate clusters), Paper 47 §sec:ext (def:ext, lem:ext-mob, thm:ext-half,
+row P211-8E and table rows C21, 05b row L106 (prolate clusters), Paper 46 §sec:ext (def:ext, lem:ext-mob, thm:ext-half,
 prop:ext-consol(b), the closing list "Scale"), cor:margin1, lem:contA; tools/prolate_*.py.
 What is on record. Lemma 3.4 was ARGUED with a taper η_λ of width 1/λ and left open: uniform edge bounds for φ_j^{(i)} on
 [1 − 1/N, 1], the out-of-band tail of the tapered product, the denominator near u = 0. Nothing in the index proves a

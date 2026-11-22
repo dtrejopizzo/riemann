@@ -27,7 +27,7 @@ Input: R183.015, 017–020. Neither RH nor the closure of D is claimed.
   P_C := T_{I_T}((m_S − C)_+) ≥ 0. The remainder R'_C = T_{I_T}(min(m_S,C))
   is bounded on L²(I_T), equal to C·Id − (trace class ≥ 0), and has
   finite n₋. It is **positive** on the family of pairs (limit C > 0).
-  Moreover: E_S ≥ γ on K ⟺ ∀γ'<γ ∃C: R'_C ≥ γ' on K. By Paper 47 Thm C
+  Moreover: E_S ≥ γ on K ⟺ ∀γ'<γ ∃C: R'_C ≥ γ' on K. By Paper 46 Thm C
   (½log3), this gives n₋(R'_C|primitives) = 0 for some C in the first new
   window, but only **starting from** already-proved positivity. It is not
   a new proof.
@@ -82,7 +82,7 @@ semilocal case.
   It shares its E1 status.
 * R161_014 Thm 2.1: Sonin–Gamma coercivity for product ports.
   It is a different object and is not used.
-* Paper 47 Thm C: λ_min(A_{½log3}|P_T) ≥ 8.8577·10⁻⁵, machine-verified.
+* Paper 46 Thm C: λ_min(A_{½log3}|P_T) ≥ 8.8577·10⁻⁵, machine-verified.
   `CITED`. For the full form on (½log2, 0.8], Zhu 2026 Thm 1.2:
   `CITED`, not re-verified (PATH-TO-D l.52).
 
@@ -312,7 +312,7 @@ was made by hand. That cut adds no content. **E1.**
 ### 4.4 First new window (PROVED from CITED; no new content)
 
 Let S = {∞,2}. For T ∈ (½log 2, ½log 3] the only prime with log p < 2T
-is p = 2. Paper 47 Thm C gives λ_min(A_{½log3}|P_T) ≥ 8.8577·10⁻⁵
+is p = 2. Paper 46 Thm C gives λ_min(A_{½log3}|P_T) ≥ 8.8577·10⁻⁵
 (`CITED`, machine-certified). By extension by zero (R162_2602 Thm 6(a))
 the same bound holds for every T ≤ ½log 3. By Thm 4.3(ii), for each such
 T there is C(T) with
@@ -371,7 +371,7 @@ Thm 3.4 CCM semilocal Sonin: n₋(R') = ∞ for T>½log2, S∋2                 
 P_C = T((m_S−C)_+): absorbs primes, R'_C bounded, finite n₋                 PROVED
 R'_C on the pair family → C > 0 (does not die)                              PROVED
 Thm 4.3: E_S ≥ γ on K ⟺ (∀γ'<γ ∃C) R'_C ≥ γ'                                PROVED, E1 (R162_2602 Thm 3 type)
-S={∞,2}, T ≤ ½log3: n₋(R'_C|P_T)=0 for some C                               PROVED from Paper 47 Thm C (CITED); not new
+S={∞,2}, T ≤ ½log3: n₋(R'_C|P_T)=0 for some C                               PROVED from Paper 46 Thm C (CITED); not new
 Explicit lemma (L-C) without Weil positivity                                 OPEN (for every T ⟺ D)
 RH / row D                                                                   OPEN
 ```
@@ -383,10 +383,10 @@ RH / row D                                                                   OPE
    Δ^{1/2} and the unitarity of CCM's U_S. If there were a shift
    s ↦ s ± i/2, μ_P would no longer be the density compared with m_S. This
    must be checked against CCM (essl0)–(ms0) and R183.018 §1.
-2. **§4.4.** It assumes that Paper 47's A_T is R183.015's E_S restricted
+2. **§4.4.** It assumes that Paper 46's A_T is R183.015's E_S restricted
    to P_T up to a positive factor, and that the polar terms vanish on
    primitives. A normalization discrepancy only changes the constant
-   γ, not the sign, but it must be checked against Paper 47's def:W (rule).
+   γ, not the sign, but it must be checked against Paper 46's def:W (rule).
    The monotonicity in T via extension by zero is R162_2602 Thm 6(a).
 3. **Thm 3.4 depends on (CF-S), which is unproved.** The direct proof
    with K_∞(·,s) gives error O(1), of the same order as the prime

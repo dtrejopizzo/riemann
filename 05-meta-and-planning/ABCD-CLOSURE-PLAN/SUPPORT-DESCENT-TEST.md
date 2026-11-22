@@ -42,7 +42,7 @@ Then for every `T'<T_*` and every `G\in\mathcal P_{T'}`,
 \]
 
 where `E` is extension by zero. The equality is the extension
-compatibility from Paper 47, `lem:monoT`; the inequality uses `H_{T_*}\ge0`.
+compatibility from Paper 46, `lem:monoT`; the inequality uses `H_{T_*}\ge0`.
 
 Consequently, at a first contact the statement
 
@@ -60,7 +60,7 @@ a weaker problem.
 ### Global equivalence
 
 Choose, at each first contact, an `L<\infty` for which `R_L` is injective
-on `\ker H_{T_*}`; Paper 47 proves that such an `L` exists. Then the following are
+on `\ker H_{T_*}`; Paper 46 proves that such an `L` exists. Then the following are
 equivalent:
 
 1. the primitive form is nonnegative for every window;
@@ -184,7 +184,7 @@ K_F(2m+\tfrac12)=0\quad(m\ge1).
 \]
 
 By the faithfulness of the Gamma moments, (4) implies `F=0`. In the language of
-Paper 47, it would suffice to prove that the corrected product
+Paper 46, it would suffice to prove that the corrected product
 `\zeta(s)W^0_\varepsilon(s)` is holomorphic at the positive odd integers:
 its residue there is
 

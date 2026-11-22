@@ -6,7 +6,7 @@ Phase 189, construction step 3. Notation of NT_001–002. Labels as there.
 ## Corpus check
 grep "Kakutani" (phase 159 G1_* memos: Kakutani dichotomy for *Gaussian/product measures on zero configurations* — different
 object), "Steinhaus" (D.187 Bohr–Rankin moments; R170_802 selection transfer; R160_D2_R2 — moments of Λ-chaos, no Weil-kernel
-positivity), "multiplicative chaos" (grid rows: listed as REF only), "tolerance / amplification" (Paper 47 thm:finmod, cor:void;
+positivity), "multiplicative chaos" (grid rows: listed as REF only), "tolerance / amplification" (Paper 46 thm:finmod, cor:void;
 N_021 Thm 2; R160_C5_R1 Thm 3.3 — class closure under finite modification), "centre exactly critical" (L2_010, N_013).
 **New:** the regime lines of the height flow (Props 3.1–3.3), the Steinhaus formulation of D(σ) for σ > 1 (Thm 3.4), the
 amplification-tolerance invariant and its positivity for σ > 1 (Thm 3.5), the value-sensitivity statement below the Kakutani

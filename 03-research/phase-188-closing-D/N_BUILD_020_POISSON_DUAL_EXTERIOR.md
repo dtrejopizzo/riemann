@@ -1,9 +1,9 @@
 # N_BUILD_020 — Exterior certificates at Poisson-dual (integer-log) positions: they are the prime part of the flat-top class of thm:Z; far-exterior certificates are negative (W-tail); the free-coefficient ceiling is a constrained window form
 
-Pen and paper. Dual class of Paper 47 def:PD: certificate (ν, β) with supp ν ⊂ {|u| ≥ 2T}, f = σ_T + ν̂ + β·ĝ ≥ c.
+Pen and paper. Dual class of Paper 46 def:PD: certificate (ν, β) with supp ν ⊂ {|u| ≥ 2T}, f = σ_T + ν̂ + β·ĝ ≥ c.
 
 ## Corpus check
-Paper 47 thm:Z (flat-top weights w ∈ 𝒲_T: f_w = RHS of the Weil explicit formula for h_τ = w(u)cos τu, i.e. the exterior variable is the
+Paper 46 thm:Z (flat-top weights w ∈ 𝒲_T: f_w = RHS of the Weil explicit formula for h_τ = w(u)cos τu, i.e. the exterior variable is the
 comb TAIL −Σ_{n ≥ N} v_n w(log n)δ_{±log n} plus archimedean/polar exterior pieces), thm:finZ (no finite zero set carries a flat-top
 certificate), prop:TK, thm:R (lattice ceilings → λ_P), thm:D1 (finitely atomic exterior sequences, lossless). N_BUILD_009 (Φ, Poisson side):
 at s = ½ the integer comb is FE-self-dual, so "Poisson-dual positions" in log scale are again {log k}. New here: §1 identification,

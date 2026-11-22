@@ -17,17 +17,17 @@ the phase may be closed over them.**
 
 | finding | site checked | status |
 |---|---|---|
-| **M1** | `R144_001` D.37.3(iii),(iv) (ll. 191–219) | **DISCHARGED.** "entire" and "discrete exceptional set" are gone; `Ψ` is now asserted **continuous on `R`** with the real-`T` bound `|\cosh((½−ρ)T)| ≤ e^{θ|T|}` and `Σ|d_ρ| < ∞`, giving uniform convergence on compacta of `R` — which is exactly what the hypotheses support, and no more. The Laplace argument is retained on `[0,∞)` and still yields `Ψ ≢ 0`; the conclusion is now `\{Ψ ≠ 0\}` open and non-empty, minus a countable set. (iv) is an **existence** statement and says so in italics. Propagation verified at `§0` item 2, D.38 opening, D.39 ¶1, P46-45, `§Label` row, README bullet. The bracketed note states both halves of the error (the real-vs-complex `T` bound *and* the independent quantifier non-sequitur) accurately. |
+| **M1** | `R144_001` D.37.3(iii),(iv) (ll. 191–219) | **DISCHARGED.** "entire" and "discrete exceptional set" are gone; `Ψ` is now asserted **continuous on `R`** with the real-`T` bound `|\cosh((½−ρ)T)| ≤ e^{θ|T|}` and `Σ|d_ρ| < ∞`, giving uniform convergence on compacta of `R` — which is exactly what the hypotheses support, and no more. The Laplace argument is retained on `[0,∞)` and still yields `Ψ ≢ 0`; the conclusion is now `\{Ψ ≠ 0\}` open and non-empty, minus a countable set. (iv) is an **existence** statement and says so in italics. Propagation verified at `§0` item 2, D.38 opening, D.39 ¶1, P47-45, `§Label` row, README bullet. The bracketed note states both halves of the error (the real-vs-complex `T` bound *and* the independent quantifier non-sequitur) accurately. |
 | **M2 / m9** | D.38.1 (l. 300) + `§Label` | **DISCHARGED.** Label is now `INVENTORY`, clauses (i)–(iv) `PROVED` unconditional; "say **exactly**" and "one gets nothing more" are withdrawn in the bracketed note and absent from the statement. |
-| **M3** | new Cor. D.38.5c (ll. 519–538), D.39(b), open list, P46-49, README | **DISCHARGED, and the proof is correct.** Re-derived independently: `Φ_K(ρ) = ξ(ρ) = 0` ⟹ `Φ_{E_t}(ρ) = tΦ_F(ρ)` ⟹ `W(E_t) = t²W_F = −t²q → −∞`, with `a = b = ½`, `\deg = 1` frozen and `R(E_t) = ½t²q > 0`; converse `Ψ ≡ 0` under RH. **O-30 ⟺ RH.** The open-list row is moved to CLOSED-negatively, D.39(b) is rewritten as a withdrawal, and O-30 is removed from the phase-145 recommendations. |
-| **m1** | P46-43 | DISCHARGED — four sources now named, `R143_004` l. 237 included. |
-| **m2** | P46-43 | DISCHARGED, and well done: it is now headed **PARTIAL RETRACTION**, retracting the polar-arity clause only and printing the surviving half (`|n^{½−(ρ±a)}| = n^{∓a}` unbounded + `W_a` indefinite) as the actual separator. |
+| **M3** | new Cor. D.38.5c (ll. 519–538), D.39(b), open list, P47-49, README | **DISCHARGED, and the proof is correct.** Re-derived independently: `Φ_K(ρ) = ξ(ρ) = 0` ⟹ `Φ_{E_t}(ρ) = tΦ_F(ρ)` ⟹ `W(E_t) = t²W_F = −t²q → −∞`, with `a = b = ½`, `\deg = 1` frozen and `R(E_t) = ½t²q > 0`; converse `Ψ ≡ 0` under RH. **O-30 ⟺ RH.** The open-list row is moved to CLOSED-negatively, D.39(b) is rewritten as a withdrawal, and O-30 is removed from the phase-145 recommendations. |
+| **m1** | P47-43 | DISCHARGED — four sources now named, `R143_004` l. 237 included. |
+| **m2** | P47-43 | DISCHARGED, and well done: it is now headed **PARTIAL RETRACTION**, retracting the polar-arity clause only and printing the surviving half (`|n^{½−(ρ±a)}| = n^{∓a}` unbounded + `W_a` indefinite) as the actual separator. |
 | **m3** | D.37.2(ii) (ll. 70–80) | DISCHARGED — singleton `C_½` added, with the correct note that (i) is unaffected. |
 | **m4** | D.37.1 preamble (ll. 124–132) | DISCHARGED — Prop. 12.4B's hypothesis is now checked, and the argument given (`Re(ρ−a) = Re(ρ+a)` impossible for `a ≠ 0`, so at most one member of each pair is on the line) is **valid and unconditional**. |
 | **m5** | README run-block | DISCHARGED — the two-fold normalisation `Φ_{g_a}(1±a) = 1` is printed, the floor and AM–GM values are explicitly declared **not** `a`-invariants, and `α, β, \deg_aK_a` are correctly kept as invariants. |
 | **m6** | D.38.2a (l. 374) | DISCHARGED — the evenness clause is added and the correct observation made (nothing uses evenness of `F` or `E`, only of `g`). |
 | **m7** | D.38.5 (l. 483) | DISCHARGED — `C^{S_0}_F` widened to any real `F ∈ D^W`; (i) retains `\deg F = 0` where it is needed. |
-| **m8** | P46-48, `§Label` D.38.4 row, README file table | DISCHARGED — the RH-conditionality of `64 = 64d²` is now printed in all three places. |
+| **m8** | P47-48, `§Label` D.38.4 row, README file table | DISCHARGED — the RH-conditionality of `64 = 64d²` is now printed in all three places. |
 | **audit item 7** | Scope caveat after D.37.4 (l. 271) | DISCHARGED — (i)–(iii) are located as the separating step *of D.34.10's proof*; "and nowhere else" is not attached; cross-referenced from D.40.4. |
 
 **Script re-run by me:** `--fast` → `RESULT: PASS`, exit `0`, 0.11 s; `--a 0.1`, `--a 0.45` → `PASS`.
@@ -43,7 +43,7 @@ No script change was needed and none was made; all quoted numbers still reproduc
   `Σ|Φ_{E_t}(ρ)|² = t²Σ|Φ_F(ρ)|² → ∞` (finite and non-zero since `q > 0` ⟹ `F ∉ 𝓝_∞`),
   `|I_∞(E_t,F)|/\deg E_t = |t|q`. **All correct.** (See residue r3 on the `t_m` row.)
 * **D.40.2, table 2 (six weakenings).** Each row traced to the statement it cites — D.38.3(i),
-  P46-49/O-29, D.38.4(iii), D.38.5(i), D.38.5a, D.38.5c — and each of those was verified in
+  P47-49/O-29, D.38.4(iii), D.38.5(i), D.38.5a, D.38.5c — and each of those was verified in
   `R144_002`. **All six hold.**
 * **Lemma D.40.2.** The statement ("the ray exists iff RH is false") is **true**; `¬RH ⟹ ∃F` is
   Paper 45 Thm 10.4, and `∃F ⟹ ¬RH` because under RH `1−ρ = \barρ` gives

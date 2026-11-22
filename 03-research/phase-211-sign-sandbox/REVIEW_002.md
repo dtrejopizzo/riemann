@@ -1,7 +1,7 @@
 # Review 002: the four round-1 memos (A, B, C, D), line by line
 
 Scope. Every claim labelled PROVED in ROUND_001_A.md, ROUND_001_B.md, ROUND_001_C.md and ROUND_001_D.md has been
-checked against the definitions of STATEMENT_001.md and against Paper 47 (04-papers/47-row-d-dual-certificates/main.tex:
+checked against the definitions of STATEMENT_001.md and against Paper 46 (04-papers/46-row-d-dual-certificates/main.tex:
 thm:oneprofile 7773, prop:AM 7811, def:ext 9867, thm:ext-half 9913, lem:ext-cell 10270, thm:ext-cell, cor:ext-cellpos
 10357, cor:ext-cfals 10365, thm:ext-lattice 10568, prop:nyq-LK 6182, thm:nyq-schur 6367). Verdicts: CONFIRMED (proof
 checked, the key step named), REFUTED (counter-argument given), DOWNGRADE (to ARGUED or CONDITIONAL, with what is
@@ -319,7 +319,7 @@ sufficient condition never applies. Convergence of the Carleman series does not 
 the strip |Im z| < |b|, with |b| > ½. For another profile the equivalence "(★) ⟺ B positive definite" is not available
 from the paper, so "for any admissible profile" needs the class of admissible profiles to be defined.
 What survives, and is the real content: **NO-GO (PROVED, given the falsifiers of STATEMENT §4(i), which are CITED from
-Paper 47).** The germ of B at 0, hence every moment of μ, is the same for Λ, cΛ and a_P (Proposition 1, corrected
+Paper 46).** The germ of B at 0, hence every moment of μ, is the same for Λ, cΛ and a_P (Proposition 1, corrected
 proof). The proof of thm:oneprofile is comb-generic (Step 3 needs only Σw(n)n^{−½−β} < ∞), so B^c is positive definite
 iff (★) holds for cΛ, which fails for c ≠ 1. Therefore no criterion that uses only the moments of μ (equivalently, the
 germ of B at d = 0) can decide positive definiteness of B. This one-line argument replaces Proposition 2 and gives the

@@ -17,7 +17,7 @@ Gate 1 OPEN. No label moves.
 
 ## 0. Corpus check
 
-grep "Douglas|secular|ZXZ|Mertens|Chebyshev identity|log⌊|Tate ray|ray" in phase 162, R160_S1–S5, Paper 47: Douglas
+grep "Douglas|secular|ZXZ|Mertens|Chebyshev identity|log⌊|Tate ray|ray" in phase 162, R160_S1–S5, Paper 46: Douglas
 form only in R162_1301 Thm 3; secular term only R162_1201 (2.1); conjugation R162_502 B2 / R162_903 Thm 3.2; Mertens
 appears only as an estimate in collar asymptotics (subsec:collars). Not found: the action of 𝒜_T on e_m (Lemma 1), the
 Tate-only cancellation (Thm 3), the ray reduction (Thm 4).

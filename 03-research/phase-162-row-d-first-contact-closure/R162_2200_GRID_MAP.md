@@ -39,12 +39,12 @@ States: ■ PAINTED (dead) · ◧ PARTIAL (open residue) · □ EMPTY (never att
 | row \ col | A | B | C | D | E | F | G | H |
 |---|---|---|---|---|---|---|---|---|
 | 1 identity/functional equation | ■ arcs I-II / phase 120; Li/Keiper, Nyman–Beurling, KEP, κ=0;  | ■ 305; 402; 204 | ■ 1003 | ■ 1301 | ■ 1802; 902 | □  | □  | ■ 1002; 1203; R160_C8 |
-| 2 positivity/support | ■ arcs I,VIII; phase 155 prop:archneg; 1603 | ■ 101; 103; 405 | ■ R161_027-029 | ■ 504; 702; 1601 | ■ 802; 1402 | □  | ■ Paper 46 T5 (phases 141-149); phase 150 T3 | ■ Paper 46 (tropical/Künneth) |
-| 3 quantitative estimate | ■ arcs I,X; phase 151 dlVP; phase 154 Paper 47 | ■ 001/190; 407 rate | ◧ R160_M7; 502 Part B | ■ 1402 Thm 5; 1502 | ■ 159 G2 | □  | ■ 1004 | ■ phase 152 |
+| 2 positivity/support | ■ arcs I,VIII; phase 155 prop:archneg; 1603 | ■ 101; 103; 405 | ■ R161_027-029 | ■ 504; 702; 1601 | ■ 802; 1402 | □  | ■ Paper 47 T5 (phases 141-149); phase 150 T3 | ■ Paper 47 (tropical/Künneth) |
+| 3 quantitative estimate | ■ arcs I,X; phase 151 dlVP; phase 154 Paper 46 | ■ 001/190; 407 rate | ◧ R160_M7; 502 Part B | ■ 1402 Thm 5; 1502 | ■ 159 G2 | □  | ■ 1004 | ■ phase 152 |
 | 4 multiplicativity/Euler product | ■ R161_001-004; 203; phase 153 Thm A | ■ 201/202; 301; 503 | ■ R160_M8; 502 B2; 207 | ■ R152_002; 159 G1 K3 | □  | □  | ■ 1102; arcs III,VIII; 144-149 | ■ 159 G1; 1302 |
 | 5 integrality of ℤ | ■ 1902; 801 | ■ 701; 1101 | ◧ 903 | □  | ◧ 1802 O1802.3; 1902 | □  | □  | ◧ 1001; R160_M12 |
 | 6 exact values of Λ | ◧ R160_D4 Thm 5.1; D4 Cor 5.2; 406 | ■ 1401; 1502; 403 | ◧ 501; 901 | ■ 702 residue; 1603 | ■ 802 | □  | □  | □  |
-| 7 zero side/explicit formula | ■ Paper 47 Thm Z / finZ; phase 155 r5 | ■ 1501 | □  | ◧ 2101; 2190 | ■ 1802 Thm R; 902 | ■ 803 | ■ phase 149 | ■ arcs III-V,X; 158 |
+| 7 zero side/explicit formula | ■ Paper 46 Thm Z / finZ; phase 155 r5 | ■ 1501 | □  | ◧ 2101; 2190 | ■ 1802 Thm R; 902 | ■ 803 | ■ phase 149 | ■ arcs III-V,X; 158 |
 | 8 no arithmetic | ■ arc II; phase 120-121 | ■ 408; P124_004-010; R161_016 | ■ 1202 | ■ 1602; 1701; 1801 | ■ arcs I,IV; 159 G2 | □  | □  | ◧ 159 G1; R160_C1; R160_C3/D2 |
 Count: **41 PAINTED, 8 PARTIAL, 15 EMPTY** (64 cells).
 
@@ -116,16 +116,16 @@ Count: **41 PAINTED, 8 PARTIAL, 15 EMPTY** (64 cells).
 - *Residue:* full monotonicity/Bernstein property of λ_A(T) or of its transform as a global object
 
 **2G** (positivity/support (Λ≥0, supp prime powers) × families of L-functions/fields) — PAINTED
-- Paper 46 T5 (phases 141-149): NO-GO [T5] nonnegative family
+- Paper 47 T5 (phases 141-149): NO-GO [T5] nonnegative family
 - phase 150 T3: CONDITIONAL [Beurling] Beurling gate
 
 **2H** (positivity/support (Λ≥0, supp prime powers) × geometric/dynamical objects) — PAINTED
-- Paper 46 (tropical/Künneth): NO-GO [T5, polar/entire] mixed effectivity
+- Paper 47 (tropical/Künneth): NO-GO [T5, polar/entire] mixed effectivity
 
 **3A** (quantitative estimate × quadratic form of a window) — PAINTED
 - arcs I,X: NO-GO [M,Φ] density, PNT, zero-free zones, sieves
 - phase 151 dlVP: NO-GO [M] capped by archimedean density
-- phase 154 Paper 47: NO-GO [finZ,M] no dual reached nor finite truncation
+- phase 154 Paper 46: NO-GO [finZ,M] no dual reached nor finite truncation
 - phase 155 TK/N/AL′: NO-GO [TK ceiling] lattice loses Θ(1/M)
 - R162_303/703: CERTIFIED [M (no mechanism)] λ_A,λ_W>0 on (0,½log5]
 
@@ -251,7 +251,7 @@ Count: **41 PAINTED, 8 PARTIAL, 15 EMPTY** (64 cells).
 **6H** (exact values of Λ (Λ*1=log, Selberg, Chebyshev) × geometric/dynamical objects) — EMPTY
 
 **7A** (zero side/explicit formula × quadratic form of a window) — PAINTED
-- Paper 47 Thm Z / finZ: EQUIV [E1] certificate = explicit formula
+- Paper 46 Thm Z / finZ: EQUIV [E1] certificate = explicit formula
 - phase 155 r5: EQUIV [E1] Kreĭn indeterminacy
 
 **7B** (zero side/explicit formula × first-contact kernel vector (linear in F)) — PAINTED

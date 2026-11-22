@@ -1,7 +1,7 @@
 # Row D — the reduced statement
 
 Status: **synthesis of record after phases 134–156. No new theorem, no label change.** Every line cites a labelled
-statement of Paper 46 (`04-papers/46-intersection-frame-defect/archive/main.md`), Paper 47 (`04-papers/47-row-d-dual-certificates/main.tex`,
+statement of Paper 47 (`04-papers/47-intersection-frame-defect/archive/main.md`), Paper 46 (`04-papers/46-row-d-dual-certificates/main.tex`,
 84 pp.) or a phase file. Row D has no label. No sign is proved for ζ at any window beyond those listed in §3.
 
 ---
@@ -17,29 +17,29 @@ to D by a theorem of the programme; the arrows are between D and the form, never
 
 | # | form | source of the equivalence with D |
 |---|---|---|
-| D-1 | `∀T: λ^W_T ≥ 0` (complete Weil form `eq:W` on `L²(I_T)`) | definition of D; P47 §1 |
+| D-1 | `∀T: λ^W_T ≥ 0` (complete Weil form `eq:W` on `L²(I_T)`) | definition of D; P46 §1 |
 | D-2 | `∀T: λ^A_T = λ_min(A_T\|P_T) ≥ 0` (primitive form) | P45 Thm 10.4, Bombieri 2000 Thm 1 (CITED; global in `T`, not effective in `T`: the per-window converse fails, §2) |
-| D-3 | `∀T:` there is a flat-top certificate, i.e. a one-sided smoothing of the zero measure | P47 `thm:Z` (proof repaired in R4-2) |
-| D-4 | `∀T: v_T = (2Λ(n)/√n)_{n<e^{2T}} ∈ 𝒱_T`, a closed convex set defined by Γ-data alone | P47 `prop:finite`, `prop:uniform` (8b) |
-| D-5 | `lim_{T→∞} λ^A(T) ≥ 0` | P47 `cor:margin2` (8d) |
-| D-6 | the Hodge-index inequality on the adelic square | P46 §5 |
+| D-3 | `∀T:` there is a flat-top certificate, i.e. a one-sided smoothing of the zero measure | P46 `thm:Z` (proof repaired in R4-2) |
+| D-4 | `∀T: v_T = (2Λ(n)/√n)_{n<e^{2T}} ∈ 𝒱_T`, a closed convex set defined by Γ-data alone | P46 `prop:finite`, `prop:uniform` (8b) |
+| D-5 | `lim_{T→∞} λ^A(T) ≥ 0` | P46 `cor:margin2` (8d) |
+| D-6 | the Hodge-index inequality on the adelic square | P47 §5 |
 
 The only zero-side statements that enter are those of the **witness**: a quartet of zeros off the line produces a
-negative direction at some window (P47 `lem:roughEF`, `prop:witness`, `lem:contA`), so that D ⟺ "there is no
+negative direction at some window (P46 `lem:roughEF`, `prop:witness`, `lem:contA`), so that D ⟺ "there is no
 first-contact witness" (internal reformulation, CITED). Nothing else is assumed about the zeros, and D is compared with
 no statement outside this list.
 
 **The content that remains** (D-4, 8b Prop 1.3): at a fixed window, row D is a finite, decidable condition on finitely
 many `Λ(n)` together with the Γ-factor. The entire difficulty is **uniformity in `T`**. By `thm:Z`, that uniformity
-is the existence of a one-sided smoothing of the zero measure for every `T`; its prime-side form (P46 W4, CITED) is the
+is the existence of a one-sided smoothing of the zero measure for every `T`; its prime-side form (P47 W4, CITED) is the
 bound `ψ(x) − x ≪ x^{½+ε}`.
 
 ## §2 What is proved at a single window (structure)
 
-* **High frequencies are done** for every window: above `2πe^{A_T}`, `m(τ)` beats the comb (P47 Lemma 4.1, `prop:env`).
+* **High frequencies are done** for every window: above `2πe^{A_T}`, `m(τ)` beats the comb (P46 Lemma 4.1, `prop:env`).
   The sign is decided in the band `[2πe^{2T}, 2πe^{A_T}]`, on the alignment arcs of the prime phases (`prop:band`,
   `prop:align`).
-* **The archimedean part** (primes removed, P47 §9):
+* **The archimedean part** (primes removed, P46 §9):
   * `n₋(A_∞|P_T)` is exactly `0 / 1 / 2` below `T*_ev`, on `(T*_ev, T*_odd)`, and on `(T*_odd, 0.90]` (`thm:index`).
   * `T*_∞ ≤ 0.4608 < 0.58 ≤ T*_{∞,P} ≤ 0.60` (`prop:archneg`, `cor:Tarch`).
   * (H1) holds at `log 2` (`cor:H1`).
@@ -58,7 +58,7 @@ bound `ψ(x) − x ≪ x^{½+ε}`.
 | form | windows | source |
 |---|---|---|
 | primitive `λ^A ≥ 0` | `T ≤ log 2` | Paper 42 (certified) |
-| primitive | `T = ½log3`: `λ_min ≥ 8.8577·10⁻⁵` (endpoint of record) | P47 `thm:C` |
+| primitive | `T = ½log3`: `λ_min ≥ 8.8577·10⁻⁵` (endpoint of record) | P46 `thm:C` |
 | complete `λ^W ≥ 0` | `T ≤ ½log2` | Yoshida 1992, Bombieri 2000 |
 | complete (hence primitive) | `(½log2, 0.8]` | Zhu 2026 Thm 1.2 — **cited, not re-verified** |
 | either | `T > 0.8` | **nothing** |
@@ -79,10 +79,10 @@ Rule of record (R156_004 A14): "`T ≤ log 2`" holds only for the primitive form
 4. **No finite truncation decides the even Schur complement** (`thm:arena`). Finite-rank compressions and a monotone
    spectral flow are closed (N5, D.53).
 5. **Frame.**
-   * The frame-defect theorem (P46 Thm 19.25) now holds on `C_c^∞ ⊕ ℝK` too (Cor 19.25b, R156_002/003).
+   * The frame-defect theorem (P47 Thm 19.25) now holds on `C_c^∞ ⊕ ℝK` too (Cor 19.25b, R156_002/003).
    * On the bare set `𝒢_min`, the hypothesis of Thm 12.3 is satisfiable ⟺ D (Rem 19.25c; a reformulation of D, REF-D, not an independent route).
    * D-HS is killed (R155_054); no arithmetic-geometry candidate remains.
-   * T1, T2, T5 and the polar/entire classification stand (P46 §28.2).
+   * T1, T2, T5 and the polar/entire classification stand (P47 §28.2).
 6. **Methods:** duality without attainment (`thm:O`), log exchange (`thm:Vp`), Toeplitz ceilings for lattice classes
    (`thm:N`, `thm:Np`), and no upward induction in `T` (`cor:mono`, `lem:monoT`).
 
@@ -96,8 +96,8 @@ Rule of record (R156_004 A14): "`T ≤ log 2`" holds only for the primitive form
 | Horn B (R2), the B4 traces at `F_R` | frame residual, OPEN |
 | O-150.1 (H-DMV) | **blocked: needs the Diamond–Montgomery–Vorhauer 2006 PDF from the author** |
 | optimised lattice class `Θ(1/M)`; fixed-M lossiness of Thm R | OPEN, optional |
-| P46 Lemma 19.20(iv) zero count for `21 ≤ T ≲ 2·10⁴` (E3 of R156_003) | citation gap, flagged |
-| P46 Cor 6.2 per field (`ξ_K(½) = 0` case) | repaired in the memo, not integrated |
+| P47 Lemma 19.20(iv) zero count for `21 ≤ T ≲ 2·10⁴` (E3 of R156_003) | citation gap, flagged |
+| P47 Cor 6.2 per field (`ξ_K(½) = 0` case) | repaired in the memo, not integrated |
 
 ## §6 Decision for decision
 

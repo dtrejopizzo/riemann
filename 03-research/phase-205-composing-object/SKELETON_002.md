@@ -5,7 +5,7 @@ Applies the coordinator's five instructions and the facts fixed in REVIEW_STATE.
 
 ## Summary (≤250 words)
 
-1. **I adopt (R1)**, which is a REWRITE of P47 lem:polarelim extended to all of L²(I_T):
+1. **I adopt (R1)**, which is a REWRITE of P46 lem:polarelim extended to all of L²(I_T):
    M(F) = 𝔢(F) − 2(⟨F,ch⟩² − ⟨F,sh⟩²), with 𝔢 = (1/2π)∫|F̂|²/(¼+τ²).
    Corrected typos: β_{½log15} = 1.903696 and t₀′ = 6.12587 (zero of m^♯ = m + 1/(¼+τ²), NUMERICAL).
    The E_G/β_T variant is withdrawn because it is not canonical (R2).
@@ -28,7 +28,7 @@ Applies the coordinator's five instructions and the facts fixed in REVIEW_STATE.
 
 ## 0. Index and corpus
 
-In addition to SKELETON_001 §0, I ran grep on `ROUTES-TRIED-INDEX/README.md` and on P47 for "polarelim," "Poisson,"
+In addition to SKELETON_001 §0, I ran grep on `ROUTES-TRIED-INDEX/README.md` and on P46 for "polarelim," "Poisson,"
 "main term," "R_Λ," "𝓕_T," "prop:sharp" (review blacklist). (R1) and Φ_E appear there: B_001 Lemma 3.1
 (index l.451), V_001 Thm V.2.1, E_001 E.4, MORI15_EXTREMAL, N_BUILD_001. **I claim no novelty for (R1).**
 The block partition E_N ⊕ E_N^⊥ (P1.c) does not appear as such. Its sign content (block inertia) does appear at
@@ -38,7 +38,7 @@ l.536 (SPEC_004 N3). So I use it only as a reduction tool, and the decision in �
 
 ## 1. Corrections (instruction 1)
 
-**(R1) (REWRITE, PROVED; P47 lem:polarelim outside P_T).** For every F ∈ L²(I_T):
+**(R1) (REWRITE, PROVED; P46 lem:polarelim outside P_T).** For every F ∈ L²(I_T):
   M(F) := −∫∫F(x)F(y)e^{|x−y|/2}dxdy = 𝔢(F) − 2(⟨F,ch⟩² − ⟨F,sh⟩²),
 with ch = cosh(x/2)1_{I_T}, sh = sinh(x/2)1_{I_T} and 𝔢(F) = (1/2π)∫|F̂|²/(¼+τ²) = ‖G′‖² + ¼‖G‖²
 (G = e^{−|·|/2}∗F/1, the potential on the line).
@@ -60,7 +60,7 @@ comb has to cover ≈ 1.95T directions instead of ≈ 2.0T.
 
 **c_k (PROVED).** ⟨χ_ev, e_k⟩ = 2ω_k cosh(T/2)/(√T(¼+ω_k²)) for odd k. ‖χ_ev‖² = T + sinh T.
 
-**P2a (PROVED, technical lemma).** Closed formulas for G_kl(u) (SKELETON_001 §3). Before entering P47, pending an
+**P2a (PROVED, technical lemma).** Closed formulas for G_kl(u) (SKELETON_001 §3). Before entering P46, pending an
 independent quadrature (REVIEW_STATE).
 
 ---

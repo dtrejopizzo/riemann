@@ -6,7 +6,7 @@
   + margin); §6 admissible class: (D1) non-pinning FE-defect atoms inside H_T, (D2) signed stability inequality
   λ_A(T;a) ≥ −C_T Δ_T(a) (quantitative signed Hamburger). Status: memo, no audit. Row D OPEN.
 - `REVIEW_BARRIER_EST_001.md`: review. Lemma 3/Thm 4 PROVED but 𝓔 is near-tautological and excludes any exact
-  support axiom; Paper 47's estimate notion is integer-indexed (𝓔^ℕ), so lem:shape-est(iv) stays ARGUED quantitatively;
+  support axiom; Paper 46's estimate notion is integer-indexed (𝓔^ℕ), so lem:shape-est(iv) stays ARGUED quantitatively;
   Prop 6 normalisation fixed (relative slack); κ̂ ≥ m_T−λ_A−η; CIRC upgrades only #15, #16 (#25 conditional); #2, #14, #23, #26 need 𝓔^ℕ.
 - `AUDIT_197_HOSTILE.md`: Lemma 2(a) false as stated (prefix/support atoms); Ξ_Q kills ARGUED (O10 primitive); Thm 3 ARGUED/CONDITIONAL, "at least one"; Prop 4: 0 ≡ a_P on the window, minimality false; Thm 5 = supporting half-space of convex K_T (PROVED), localisation CONDITIONAL on w_T≠0; D1.a false; D2 OPEN, ill-posed, near-retry INV_P/INV_Q. Row D OPEN.
 - `BARRIER_D1_001_QUANTITATIVE_HAMBURGER_TANGENT_NO_GO.md`: door D1. Tangent of conductor-1 FE locus at ζ = {0} (Hamburger linear, CITED→PROVED); exact Bohr FE defect on Euler deformations Δ=½(∏(1+(α_p−1)²/(p−α_p²))−1) (PROVED, place-wise by Kronecker); NO-GO for analytic/symmetric FE-defect premises (w-blind at leading order ⇒ REF-D⁺). Memo, no audit.
@@ -14,7 +14,7 @@
   ∏(1−p^{−s})^{−θ_p}), defect Δ_T = |log ξ_a(s)/ξ_a(1−s)| on σ=¾. Thm 1 (PROVED): for every Δ with Δ(Λ)=0, λ_A ≥ −CΔ ⟺
   WP_T(Λ) ∧ sign-free rigidity of Δ. Thm 2 (PROVED): continuation from a positive reference comb transfers only
   λ_A(a_0) − d_v(a_0,Λ); barrier bites only at Λ. Thm 3: (I_T) PROVED on 𝓔𝓟_Q for T≤½log5; tails OPEN (sign-free). NO-GO 𝒦_D2.
-- `AUDIT_197_2.md`: audit of D1/D2. Factor-2 normalisation (P47 v_n=2a(n)/√n) in BARRIER_001/D1/D2; D1 Thm 2 PROVED + NUMERICAL ✓; Thm 4 'symmetric' wrong, continuity suffices, relabel REF-D⁺ reduction (CONDITIONAL w_T≠0); D2 PROVED, Thm 2(ii) sharpness witness wrong (use max[φ−d_v]); Lipschitz = prop:wit-sens. R1 collapses (continuous ⇒ REF-D⁺, discontinuous ⇒ cone/certificate); R2 = AUDIT_193 #101 restatement. Row D OPEN.
+- `AUDIT_197_2.md`: audit of D1/D2. Factor-2 normalisation (P46 v_n=2a(n)/√n) in BARRIER_001/D1/D2; D1 Thm 2 PROVED + NUMERICAL ✓; Thm 4 'symmetric' wrong, continuity suffices, relabel REF-D⁺ reduction (CONDITIONAL w_T≠0); D2 PROVED, Thm 2(ii) sharpness witness wrong (use max[φ−d_v]); Lipschitz = prop:wit-sens. R1 collapses (continuous ⇒ REF-D⁺, discontinuous ⇒ cone/certificate); R2 = AUDIT_193 #101 restatement. Row D OPEN.
 - `BARRIER_W_001_NONCROSSING_INDEX_SIGNATURE_CODIMENSION_NO_GO.md`: track W (non-crossing). W1 PROVED: n₋(𝔞_T|P_T) nondecreasing in T,
   all crossings downward (spectral flow = n₋), so "index constant" ⟺ WP_T; W1′ positivity on (0,½log5+ε), ε non-explicit. W2 PROVED:
   residual R2 of D2 ⟺ μ_T(Λ)≥0 (concavity; one downward crossing at most). W3: vNW gives only 1-dim kernels, no extra constraint.

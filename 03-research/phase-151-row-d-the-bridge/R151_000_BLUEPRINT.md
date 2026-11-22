@@ -3,7 +3,7 @@
 that the bridge making global positivity exist should be found or shown impossible by theorem. Circuit: construction
 → audit → repairs → closing decision. Rules as in phases 149–150. No sign is claimed.*
 
-Read first: `04-papers/46-intersection-frame-defect/archive/main.md` §§26–28 (esp. Thm 27.3 (T5), Thms 27.10–27.11, §28.2, §28.4
+Read first: `04-papers/47-intersection-frame-defect/archive/main.md` §§26–28 (esp. Thm 27.3 (T5), Thms 27.10–27.11, §28.2, §28.4
 six clauses); `03-research/phase-36-ABC-forms/106-amplifier-functor-systematic-search.md` §1.1, Thm 1.4, Prop. 3.9
 (sterility lemma), §5 (Lema Faltante 5.3, Forma B, Problema 5.4); `03-research/phase-149-row-d-additive-pencil/
 R149_005_CLOSING_DECISION.md`; `05-meta-and-planning/ABCD-CLOSURE-PLAN/ROW-D-CLOSURE-PLAN.md` §9.
@@ -64,7 +64,7 @@ one operator (Connes' realization, MW-5); (β) positivity of a form on the squar
 controlled by an index theorem (Hodge index; the corpus's rows A–D frame: closed negative in Parts I–IV);
 (γ) counting/integrality positivity (degree of an isogeny; number of points): requires a ring of correspondences
 (Thm 22.17: none). Write §2 as a **classification of positivity mechanisms** (additive-family / spectral /
-index / counting), prove that (β) and (γ) are closed by the theorems already in Paper 46 (cite numbers), and
+index / counting), prove that (β) and (γ) are closed by the theorems already in Paper 47 (cite numbers), and
 state (α) as the single open shape, with the corpus's record of it (MW-5, CAND-1, phases 6–8, 29–76, 106) in one
 paragraph. Corpus check by grep for each mechanism name.
 
@@ -73,5 +73,5 @@ paragraph. Corpus check by grep for each mechanism name.
 `R151_001_ROUND1.md`: §0 summary; §1 corpus check (grep commands + results); §2 T6 with full proofs
 (Pringsheim–Landau for Laplace transforms with exact statement and reference; Landau's oscillation theorem for
 the rightmost zero, exact form); §3 corollaries; §4 the classification of positivity mechanisms and the single
-surviving shape; §5 gates; §6 labels; §7 open list; §8 ≤ 1 page of proposed text for Paper 46 §28 (a "§28.6 The
+surviving shape; §5 gates; §6 labels; §7 open list; §8 ≤ 1 page of proposed text for Paper 47 §28 (a "§28.6 The
 bridge theorem" addendum). FATAL rule in force. No sign claimed. English.

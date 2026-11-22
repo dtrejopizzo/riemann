@@ -1,13 +1,13 @@
 # R186_041 — Degree-0 functionals in F: the nodal measure of the minimizer and Λ beyond the window
 
 Phase 186, round 19.
-CONDITIONAL / OPEN / NO-GO / NUMERICAL (+ ARGUED when the proof is not written out). Paper 47, grid and
+CONDITIONAL / OPEN / NO-GO / NUMERICAL (+ ARGUED when the proof is not written out). Paper 46, grid and
 crossword are not touched. Standalone script: `r041_node_measure.py` (imports r034_det.py; ≈ 6 min).
 
 Read: README 186 rounds 14–18; R186_111 §1.4 (degree 0 omitted from the trilemma); R186_032 §4 (Ω: S1–S6); R186_038 (Lemma 0,
 α.1, γ.1); R186_036 Lemma 2 and Theorem 3; R186_040 §1.2 (centroids 7→14, alternating parity, vanishing at zeros ≤ T*);
 R186_022/103/034 (peak of ĥ*, zeros of σ); R165_202 1.1–1.10, 2.1, 3.1 (nodes, Gauss quadrature, Cauchy
-identity); R165_201 Thm 2–3; R166_501 (G),(N); R185_005 §1.3 (O1/O2); Paper 47 eq:symbol, eq:form, eq:Aform, eq:Kprim,
+identity); R165_201 Thm 2–3; R166_501 (G),(N); R185_005 §1.3 (O1/O2); Paper 46 eq:symbol, eq:form, eq:Aform, eq:Kprim,
 def:PD, def:W/eq:nuw, thm:Z, lem:monoT, lem:roughEF, prop:band, prop:align, prop:negtrace.
 
 ## 0. One-line verdict
@@ -50,7 +50,7 @@ modulo span{cosh(u/2), u sinh(u/2)} (the exact annihilator, §1.1) and **μ_X is
 (value λ_A, strong duality attained in measures). (d) For 0 < |u| < 2T, as distributions over the space of
 autocorrelations of V_X:
  μ̌_X(u) = Σ_x w_x cos(xu) = −½K(|u|) − Σ_{n∈𝒩_T}(v_n/2)(δ_{log n} + δ_{−log n}) + a cosh(u/2) + b u sinh(u/2),
-with K the Lévy kernel of Paper 47 (K(u) = 1/(2 sinh(u/2)) + 1/(2 cosh(u/2))).
+with K the Lévy kernel of Paper 46 (K(u) = 1/(2 sinh(u/2)) + 1/(2 cosh(u/2))).
 *Proof of (d).* For F, F′ ∈ V_X, polarizing (b): ∫(F∗F̃′)[σ_T^∨ − λδ₀ − μ̌_X] = 0, with σ_T^∨ = C₀δ₀ − ½K(|u|) −
 Σ(v_n/2)δ_{±log n} (eq:Aform). The annihilator of {F∗F̃′ : F, F′ ∈ 𝒫_T} on (−2T,2T) is that of the d's with Toeplitz
 operator T_d(𝒫_T) ⊂ 𝒫_T^⊥ = span{e^{±t/2}}: finite rank ⟹ d is an exponential polynomial, and the rank condition
@@ -79,7 +79,7 @@ low-frequency subspace. What follows is stated on V_X (where the object is exact
 | log 2 | 1.00e-7 | 14.135, 21.022, 25.012 (T* = 25.1) | 1.0000, 1.0001, 1.0003 | 4.52 / 4.53 | −2.08 / −2.10 / +1.16 | −2.55 / −2.60 / +1.61 | — |
 | ½log5 | 3.2e-12 | 14.135, 21.022, 25.011, 30.425, 32.935, 37.587 (T* = 31.4) | 1, 1, 1, 1, 1, 1.0004 | 3.71 / 3.90 | −2.08 / −2.09 / +1.17 | −2.55 / −2.61 / +1.61 | −0.34 / −0.44 / +1.87 |
 ("model" = −½K − atoms smoothed with a Gaussian ε = 0.06 + adjusted Tate term; a = 2.00, 1.99, 2.02 across the three
-windows: **the coefficient of cosh(u/2) is 2 = β₀ of Paper 47's certificate**, consistent with def:PD.) Orthogonality
+windows: **the coefficient of cosh(u/2) is 2 = β₀ of Paper 46's certificate**, consistent with def:PD.) Orthogonality
 (a): 10⁻⁷, 10⁻⁸, 10⁻¹². No non-real zeros of G on [0.3,118]×[−1.5,1.5] (argument principle): real-rootedness
 confirmed across the three windows.
 

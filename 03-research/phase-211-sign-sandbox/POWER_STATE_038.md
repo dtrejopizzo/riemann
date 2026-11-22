@@ -23,7 +23,7 @@ one proves for the REAL grouped kernel
 
     (4/5)U_Q/m < K_(N,Q)(m) < (6/5)U_Q/m.
 
-The translated profile is on its positive physical side, and each error is less than1/100. The certified logarithmic length goes from order N^(1/4) in037 to order sqrtN. These are validity windows of an auxiliary kernel: they are not windows T of Paper47. It is not claimed that the new interval contains m1 nor that its sign controls the outer sum with Möbius coefficients.
+The translated profile is on its positive physical side, and each error is less than1/100. The certified logarithmic length goes from order N^(1/4) in037 to order sqrtN. These are validity windows of an auxiliary kernel: they are not windows T of Paper46. It is not claimed that the new interval contains m1 nor that its sign controls the outer sum with Möbius coefficients.
 
 ## Evidence and pending obligation
 

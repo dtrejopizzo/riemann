@@ -8,7 +8,7 @@ Let γ(s) = π^{−s/2}Γ(s/2), X ≥ 2 and, for any real comb a, Z_{<X,a}(s) :=
   σ_a(τ) = ½ ∂_σ log|γ(s)Z_{<X,a}(s)|² |_{s=½+iτ}.                                                        (1.1)
 For a = Λ also σ_Λ(τ) = Re R_X(½+iτ) = −½∂_σ log|ζ/Z_{<X}|² (off the zero ordinates).
 Proof. ∂_σ log|γ|² = Re ψ(s/2) − log π = m at σ=½; ∂_σ log|Z_{<X,a}|² = −2Re P_{a,X}. For ζ: log|ζ/Z_{<X}| = log|γζ| − log|γZ_{<X}| and
-∂_σ log|γζ|(½+iτ) = 0 by FE + reality (P47 rem:fe, D_{1/2} = 0). ∎
+∂_σ log|γζ|(½+iτ) = 0 by FE + reality (P46 rem:fe, D_{1/2} = 0). ∎
 **Reading.** On the critical line the symbol is the σ-log-derivative of an entire, zero-free function built from Γ and the finite comb;
 ζ enters only through ∂_σ log|ξ₀| = 0, i.e. the FE, which Epstein/DH also have (O10). Any "same ζ on both sides" coupling evaluated at σ = ½
 is therefore vacuous on the symbol side; it must live at σ ≠ ½ or in the test.

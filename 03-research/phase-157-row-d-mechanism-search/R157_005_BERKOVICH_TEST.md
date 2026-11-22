@@ -6,7 +6,7 @@ stated each time: **primitive** = `λ^A_T = λ_min(A_T|P_T)`, **complete** = `λ
 
 Sources read for this memo: `R157_000` (filters F1–F5); `R157_002` §1.2 (O1–O4), row 26a/26b, §5 (Lemma P157.S1);
 `R152_001` §3 (B.0–B.4); `R152_002` §4.2–4.3 (the auditor's formulation of (P152.2) and gates g1–g3); `R152_005`;
-Paper 47 `main.tex` `def:W`/`eq:nuw`, `thm:Z`/`eq:fw`, `thm:SC`, `cor:SC1`, `thm:finmod`, `cor:void`; Paper 46
+Paper 46 `main.tex` `def:W`/`eq:nuw`, `thm:Z`/`eq:fw`, `thm:SC`, `cor:SC1`, `thm:finmod`, `cor:void`; Paper 47
 `main.md` Lemma 12.4A, Thm 12.4, Restatement 12.4a/12.4a′, §27.4 (H-DMV, BE1–BE8, Remark 27.16), import (X31);
 phase 114 `114_d_195_CONTACT_GNS_POISSON_CP_AND_TATE_JET_DEFECT.md` §3; `MAP_1_WALLS_AND_MASTER_DOCS.md` l.48 (NG-E1).
 
@@ -20,9 +20,9 @@ Clause (a) excludes independently every branch whose weights are attached by han
 **[amended per R157_006, B1]** This memo was written against the *unamended* Lemma P157.S1. Under R157_004 (A19–A22)
 clause (b) is not an exclusion criterion, because `W = Σ_v Q_v` already. The verdict is therefore: **(P152.2) CLOSED,
 no survivor, category EQUIV (restatement), not EXCL-by-(b).** Every realization in the enlarged class 𝔄⁺ (R157_006
-§2.3) that reproduces `W` is the explicit formula on the skeleta, D.195 (3.5) (≡ `RD_T`), a finite-prime form, or P47's
+§2.3) that reproduces `W` is the explicit formula on the skeleta, D.195 (3.5) (≡ `RD_T`), a finite-prime form, or P46's
 dual problem (D) on the norm line. The positivity *mechanisms* are excluded by (b′) (local/finite-`S` inference), by
-the (a) schema (`cor:void` + `thm:finmod`(ii), derivations) and by the (c) schema (P46 Prop 12.4B + Hardy,
+the (a) schema (`cor:void` + `thm:finmod`(ii), derivations) and by the (c) schema (P47 Prop 12.4B + Hardy,
 derivations). (d) is not reached. In the table below, read "(c) … ⇒ excluded" as "model-uniform derivations
 excluded", and read "Lemma 4.8" as FRL **Prop 4.5, eq. (23)**.
 
@@ -30,7 +30,7 @@ excluded", and read "Lemma 4.8" as FRL **Prop 4.5, eq. (23)**.
 |---|---|---|
 | (a) definability for Beurling systems and for `ζ·E` | **Split.** Poineau's space needs the Banach ring `(Z,|·|_∞)`, so it does *not* exist for a Beurling system. But every construction that reaches `W` factors through data that do exist there (Lemma 5.1). **Yes** in factored form for weights-by-hand constructions ⇒ excluded (`thm:finmod`, `cor:void`; T3 modulo (H-DMV)). **No** for purely geometric constructions. Those go to (b) and (c). | PROVED (factorization); the split is exhaustive only within class 𝔄 |
 | (b) locality: `𝓔 = Σ_v 𝓔_v` | **Yes, within class 𝔄** (Theorem 4.1). The additive group law of `A^{1,an}_Z` is *relative* to `M(Z)` (Lemma 2.1), so difference kernels see only same-fibre pairs. Across fibres, the only canonical data are (i) the base `M(Z)`, a tree, which gives Prop B.3's meet regime, and (ii) global sections with the product formula. (ii) is **the** cross-place coupling. It produces exactly the prime comb's cross terms (Lemma 3.2), and it produces them as the Weil local decomposition `Σ_v Q_v` on the common norm line, which is (b). | PROVED within 𝔄; "𝔄 exhausts the cited literature" is a survey claim, CITED/HEURISTIC |
-| (c) `Ξ_a`: defined and `⪰ 0`? | **Defined: yes.** The `Ξ_a` weights are evaluations at the points `ε = ½ ± a` of the same branches of `M(Z)` (Lemma 6.1). **`⪰ 0`: yes for every structurally positive 𝓔 ∈ 𝔄** (FRL Prop 2.6/Lemma 4.8 local energies, tree kernels). That branch would prove a false statement for `Ξ_a` (P46 Thm 12.4) ⇒ excluded. The non-structural branch carries no sign and is (b). | defined: PROVED; `⪰0` for the structural branch: PROVED; the transfer of a *derivation*: RESTATEMENT (schema, as P46 Restatement 12.4a) |
+| (c) `Ξ_a`: defined and `⪰ 0`? | **Defined: yes.** The `Ξ_a` weights are evaluations at the points `ε = ½ ± a` of the same branches of `M(Z)` (Lemma 6.1). **`⪰ 0`: yes for every structurally positive 𝓔 ∈ 𝔄** (FRL Prop 2.6/Lemma 4.8 local energies, tree kernels). That branch would prove a false statement for `Ξ_a` (P47 Thm 12.4) ⇒ excluded. The non-structural branch carries no sign and is (b). | defined: PROVED; `⪰0` for the structural branch: PROVED; the transfer of a *derivation*: RESTATEMENT (schema, as P47 Restatement 12.4a) |
 | global constraint from the product formula: can it create `thm:SC`'s collective positivity? | **No.** On test-function measures it acts only as (i) the identification of all local value lines with one norm line, which is already built into `W = Σ_v Q_v`, (ii) the divisor-sum identity `log = 1∗Λ` on integer sections (Lemma 3.1), and (iii) a degree-zero condition whose Weil counterpart is primitivity `P_T`. `P_T` does not depend on which primes are present, and `thm:SC` is already stated on `P_T`. | PROVED for (iii); (i), (ii) are RESTATEMENTS (identities) |
 
 **Survival test (the lemma's last clause).** One can name the step where the global structure couples the
@@ -166,7 +166,7 @@ different places. (2) **The scaling flow** `x ↦ x^ε` along a branch (Poineau'
 Also, `M(Z)` is a tree as a set, but its topology at the root is strictly coarser than the tree topology (Poineau
 0809.2880). R157_006 §2.3 enlarges 𝔄 to 𝔄⁺ and closes the new branches. Flow kernels are branch-local (Lemma B.1).
 Finitely many global functions distinguish only finitely many primes on the skeleton (Lemma B.2 → (b′), `thm:SC`).
-Norm-line kernels `H(ℓ(x) − ℓ(y))` are P47's dual problem (D) (Lemma B.3, RESTATEMENT), and the (a) schema applies to
+Norm-line kernels `H(ℓ(x) − ℓ(y))` are P46's dual problem (D) (Lemma B.3, RESTATEMENT), and the (a) schema applies to
 them.
 
 ---
@@ -207,7 +207,7 @@ is evaluated at all of them. **That is exactly what creates the cross terms** `f
 `W(f∗f̃)`. The coupling exists, it is canonical, and it matches the comb.
 
 **Lemma 3.3 (what the coupling produces: the Weil local decomposition, with indefinite summands; PROVED).** With
-`g = f∗f̃` and the normalization of P47 `eq:fw`, `W(g) = Q_∞(f) + Σ_p Q_p(f)`. Here
+`g = f∗f̃` and the normalization of P46 `eq:fw`, `W(g) = Q_∞(f) + Σ_p Q_p(f)`. Here
 `Q_p(f) = (2π)^{-1} ∫ |f̂(τ)|² σ_p(τ) dτ`, with
 `σ_p(τ) = −Σ_{k≥1} v_{p^k} cos(kτ log p)` and `v_{p^k} = 2 log p · p^{−k/2}`. Q_∞ collects the archimedean term,
 the constant and the pole terms. Each `Q_p` is a difference-kernel form in the common variable `u ∈ R`. For every
@@ -217,8 +217,8 @@ dimension** (in both the complete and the primitive form).
 
 *Proof.* The decomposition is `eq:fw` regrouped by the prime of `n = p^k`, which is Weil's local decomposition.
 As a quadratic form, `Q_p(F) = −Σ_{k: k log p < 2T} v_{p^k} c_F(k log p)` with `c_F` the autocorrelation (the
-convention of P47 `thm:finmod`(ii), where the comb enters as `−(2c/√n_0) c_F(log n_0)`). Put `u_0 = log p < 2T`.
-Following the construction in the proof of P47 `lem:cpos`, choose `0 < ℓ < min(u_0, 2T − u_0)` and
+convention of P46 `thm:finmod`(ii), where the comb enters as `−(2c/√n_0) c_F(log n_0)`). Put `u_0 = log p < 2T`.
+Following the construction in the proof of P46 `lem:cpos`, choose `0 < ℓ < min(u_0, 2T − u_0)` and
 `J = (−T, −T + ℓ)`, so that `J, J + u_0, J + 2u_0, J + 3u_0` are pairwise disjoint and `J ∪ (J + u_0) ⊂ I_T`. For
 real `φ_1, …, φ_m ∈ C_c^∞(J)` with pairwise disjoint supports, put `F_j = φ_j + φ_j(· − u_0)`. Then
 `c_{F_i,F_j}(u_0) = ⟨φ_i,φ_j⟩ = δ_{ij}‖φ_j‖²` and `c_{F_i,F_j}(k u_0) = 0` for `k ≥ 2`, by disjointness. So
@@ -229,7 +229,7 @@ of `C_c^∞(I_T)`. Intersecting with `P_T` costs codimension `≤ 2`, so the sam
 *(This is NG-E1, the computed indefiniteness of the per-place forms, now proved for every `p` and every
 `T > ½ log p` by `lem:cpos`'s device. `Q_p` also has positive directions: use `F_j^- = φ_j − φ_j(· − u_0)`.)*
 
-**[amended per R157_006, B5]** Signs and truncation verified against P47 `eq:A`/`thm:finmod`(ii): PASS. Two
+**[amended per R157_006, B5]** Signs and truncation verified against P46 `eq:A`/`thm:finmod`(ii): PASS. Two
 simplifications. (i) `J + 3u_0` is superfluous, since `ℓ < u_0` already makes all translates `J + ku_0` pairwise
 disjoint. (ii) Disjoint supports are unnecessary: `Q_p(F_φ) = −v_p‖φ‖²` for **every** `φ ∈ C_c^∞(J)`, so `Q_p` is
 negative definite on the infinite-dimensional subspace `{F_φ}`, and on its intersection with `P_T` (codimension `≤ 2`).
@@ -288,7 +288,7 @@ hand, and then (a) applies to it.
   the `∼ 4e^T` of `cor:SC1` window by window. **Excluded** as a mechanism (termwise sign, F3 via `lem:Rrig`/
   `thm:SC`). What survives is the restatement D.195 (3.5).
   **[amended per R157_006, B7]** (b′) excludes the *inference* "`𝓔_v ⪰ 0 ∀v ⟹ W ⪰ 0`". The construction itself
-  reduces to a RESTATEMENT of `RD_T`, not to an impossibility. D.195 (3.5) was re-audited against P47 (R157_006 §7):
+  reduces to a RESTATEMENT of `RD_T`, not to an impossibility. D.195 (3.5) was re-audited against P46 (R157_006 §7):
   D.195's `B_P` is **minus** the Weil form, and (3.5) is a window statement after compression to `L²(I_T)` (primes
   with `log p ≥ 2T` cancel exactly). With `P ⊇ {p < e^{2T}}`, (3.5) on `P_T` is `RD_T`: PASS. The scale match is an
   identity, not a heuristic: `A_P + C_0 = Σ_{p∈P,k≥1} v_{p^k}` (the untruncated comb mass over `P`), and
@@ -317,7 +317,7 @@ formula has no content beyond (i). Its collective character is exhausted by the 
 
 **[amended per R157_006, B8]** (iii): `P_T = {A = B = 0}` is cut out by the **polar** data (the pole of ζ), not by
 "archimedean data alone". What matters is that it is independent of the prime weights, and that holds. For `Ξ_a` the
-constraint has four conditions (P46 Lemma 12.4A). The PROVED part is: restriction to `P_T` does not by itself yield
+constraint has four conditions (P47 Lemma 12.4A). The PROVED part is: restriction to `P_T` does not by itself yield
 positivity (`thm:SC` is stated on `P_T`). The last paragraph ("on `f` the product formula has no content beyond
 (i)") is HEURISTIC.
 
@@ -384,15 +384,15 @@ distinguish them.
 * *Structurally positive branch* (every fibrewise energy FRL-positive on mass zero, `h` of negative type). Then
   `𝓔_{Ξ_a} ⪰ 0` by the same local positivity theorems. If the identity `𝓔 = W` were derived from the explicit
   formula and the geometry, the derivation would read verbatim for `Ξ_a` (its explicit formula is the sum of the
-  two shifted ones) and give `W_{Ξ_a} ⪰ 0` on the `Ξ_a`-primitive class. By P46 Prop 12.4B that puts all zeros of
-  `Ξ_a` on `Re s = ½`, contradicting Hardy (P46 Thm 12.4). **Excluded.** Label: `𝓔_{Ξ_a} ⪰ 0` PROVED for this
-  branch. The derivation transfer is RESTATEMENT (schema), exactly in the sense of P46 Restatement 12.4a/12.4a′.
+  two shifted ones) and give `W_{Ξ_a} ⪰ 0` on the `Ξ_a`-primitive class. By P47 Prop 12.4B that puts all zeros of
+  `Ξ_a` on `Re s = ½`, contradicting Hardy (P47 Thm 12.4). **Excluded.** Label: `𝓔_{Ξ_a} ⪰ 0` PROVED for this
+  branch. The derivation transfer is RESTATEMENT (schema), exactly in the sense of P47 Restatement 12.4a/12.4a′.
   It excludes derivations, not functions. A function `𝓔` that equals `W_ζ` by an argument inspecting `ζ` beyond
   the space is not excluded by (c), but then its positivity is not structural, and it falls under §4.2 case 1.
   **[amended per R157_006, B10] FAIL (doubt 5).** Such an `𝓔` is termwise positive by hypothesis. What is
   non-uniform is the *identity* `𝓔 = W_ζ`. It falls under **§4.2 case 2** and is **not excluded**: with the identity
   it would prove `RD_T`, i.e. close D.195 (3.5). Filing it under case 1 would dispose of a function by
-  reclassification, which is what P46 Remark 12.4a′ forbids. Also: the contradiction is with **P46 Prop 12.4B +
+  reclassification, which is what P47 Remark 12.4a′ forbids. Also: the contradiction is with **P47 Prop 12.4B +
   Hardy (X16)**, not Thm 12.4 (R157_004 A21). The transferred positivity must hold on a class containing the
   `Ξ_a`-primitive tests (four conditions, Lemma 12.4A). An unconditional `𝓔_{Ξ_a} ⪰ 0` shows only that the identity
   fails for `Ξ_a`.
@@ -447,17 +447,17 @@ not of the form (4.1). One reading round, no construction.
    `A^{1,an}_Z` near the root fibre (where all branches accumulate) in a way not factoring through `h(s,s′)`.
    I argue it must factor through the base, since the root fibre is itself over one base point, but this is not
    a theorem.
-2. **Lemma 3.3's proof.** It reuses the disjoint-support device from the *proof* of P47 `lem:cpos`, with a
-   fourth disjoint translate `J + 3u_0` added so that all `k ≥ 2` contacts vanish. Check it against P47's
+2. **Lemma 3.3's proof.** It reuses the disjoint-support device from the *proof* of P46 `lem:cpos`, with a
+   fourth disjoint translate `J + 3u_0` added so that all `k ≥ 2` contacts vanish. Check it against P46's
    comb-sign convention (as in `thm:finmod`(ii)) and against the truncation `k log p < 2T`.
 3. **§4.2 case 2 is a reduction, not an impossibility.** Termwise-positive energies plus a redistribution are
    excluded as a *mechanism* only in the sense that the sign moves into D.195 (3.5), which is recorded as
-   equivalent to row D. I have not re-audited D.195's equivalence claim, and D.195 predates Paper 47's
+   equivalent to row D. I have not re-audited D.195's equivalence claim, and D.195 predates Paper 46's
    definitions. The identification `A_P ↔ 4e^T` is heuristic (scale only).
 4. **(a) "factored" definability.** Lemma 5.1 assumes the atoms are placed via `ℓ_v`. A construction placing mass
    elsewhere and recovering `W` by a non-local identity is covered by (b), not by (a). The auditor should check
    that the case split in §5 is exhaustive.
-5. **(c) is a schema.** As P46 Restatement 12.4a′ insists, it excludes derivations, not functions. I have tried to
+5. **(c) is a schema.** As P47 Restatement 12.4a′ insists, it excludes derivations, not functions. I have tried to
    state it that way. The auditor should check that I have not used it to exclude a *function*.
 6. **Fibre description of `A^{1,an}_Z`.** Taken from the standard account and `R152_002`, not from a re-reading
    of Astérisque 334. Lemma 2.1 uses only the definition of `A^{2,an}_Z` as seminorms on `Z[T_1,T_2]`, which is safe.

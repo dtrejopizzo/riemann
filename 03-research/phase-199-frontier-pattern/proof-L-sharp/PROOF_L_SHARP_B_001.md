@@ -8,7 +8,7 @@ PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMÉRICO.
 
 Notation (Mori VII §3, VIII §2). L = T, I = [−L,L], μ = e^{2L}, H = L²(I). Ff(t) = ∫f e^{itx}. c_f(a) := Re(f⋆f̃)(a) =
 Re∫f(x)\overline{f(x−a)}dx (even in a, c_f(0) = ‖f‖², c_f = 0 for |a| ≥ 2L). a(t) = Re ψ(¼+it/2) − log π.
-Q = W_T is the complete form (Paper 47 def. of W_T = 𝔞_T + 2Re(A B̄); Mori's (1.1)):
+Q = W_T is the complete form (Paper 46 def. of W_T = 𝔞_T + 2Re(A B̄); Mori's (1.1)):
 Q(f) = 2|⟨f,cosh(x/2)⟩|² − 2|⟨f,sinh(x/2)⟩|² + (1/2π)∫a(t)|Ff|²dt − ⟨f,C_p f⟩,
 C_p = Σ_{n<μ}Λ(n)n^{−1/2}(S_{log n}+S_{−log n}), ⟨f,C_p f⟩ = Σ_{n<μ}2Λ(n)n^{−1/2}c_f(log n), A_T = Σ_{n<μ}2Λ(n)n^{−1/2}.
 Mori's parameters: s ≥ ‖C_p‖ (Schur), m>0, γ = s+m, M = γI − C_p; Ω with C = log(Ω/2π) − 1/Ω − γ > 0; c = ΩL;
@@ -20,7 +20,7 @@ C≈0.128, N=832; μ=15: s=66/16, m=½, γ=37/8, Ω=736, c≈996.6, C≈0.137, N
 - **Index read:** README families l.50 (coercivity/Schur: walls W-lin … W-mom), l.52 (Euler/Möbius algebra: N_018), l.104
   (certified Schur induction with underived tail constant: dead), MECH_001/AUDIT_12 entry (l.450), BARRIER_EST_001
   (phase 197, Thm 4), AUDIT_ZENODO_FRONTIER, PATTERN_001.
-- **Paper 47 read:** def:W, prop:env (i)–(iii), prop:archneg, cor:margin1, rem:moriceiling.
+- **Paper 46 read:** def:W, prop:env (i)–(iii), prop:archneg, cor:margin1, rem:moriceiling.
 - **Mori read:** VII §1.2, §3.1–3.3, (3.1)–(3.4), Prop 3.1, Lemma 3.2, §4–§5; VIII §1–§2 (parameters); VI (1.1), Lemma 3.3.
 - **Why this is not a retry.** MECH_001 did the scaling of S0–S7 and *named* the uniform target; it did not open S7. This
   memo opens S7: it identifies the exact quadratic form that the finite matrix tests (§1), its block structure (§2), the
@@ -80,7 +80,7 @@ modes, which is why N ≳ 2ΩL/π (MECH Prop 1.1(v)).
 
 **Three corrections to the brief's expected picture (PROVED).**
 1. *The archimedean block is not positive definite, uniformly or otherwise.* The full archimedean complete form
-   (pole + full a) is negative on L²(I) for every T ≥ 0.4608 (Paper 47 prop:archneg, CITED), and A_b alone has
+   (pole + full a) is negative on L²(I) for every T ≥ 0.4608 (Paper 46 prop:archneg, CITED), and A_b alone has
    symbol −5.37 at t = 0. The only uniformly nonnegative pieces are the compensators γ(I−B), U, Cδ, which live outside
    the band, where Q is positive anyway (a(t) ≥ γ+C there).
 2. *The prime block is of the same size as the pole block,* √μ, and on low frequencies the two are both of size
@@ -148,7 +148,7 @@ least its own value at x = μ).**
 
 | μ | required precision ≈ λ^W (certified/NUMÉRICO) | slack floor 2r_E ≥ 2·10^{−10}μ | ratio |
 |---|---|---|---|
-| 5 | ~10^{−17} (λ^W ≥ 10^{−18} certified, Paper 47) | ≥ 10^{−9} | ≥ 10^{8} |
+| 5 | ~10^{−17} (λ^W ≥ 10^{−18} certified, Paper 46) | ≥ 10^{−9} | ≥ 10^{8} |
 | 10 | 8.4·10^{−44} (Mori VI, certified finite margin) | ≥ 2·10^{−9} | ≥ 10^{34} |
 | 15 | 2.4·10^{−70} (Mori VIII) | ≥ 3·10^{−9} | ≥ 10^{61} |
 | 100 | ~10^{−529} (PATTERN model) | ≥ 2·10^{−8} | ≥ 10^{520} |
@@ -245,7 +245,7 @@ One must prove λ_min(T_N) ≥ 0 where λ_min(T_N) ≈ κμ^{9/2}e^{−4πμ}. T
 - PROVED: Lemma 1.1, Cor 1.2, the §2 table and its three corrections, Lemma 3.1 (classical), Lemma 3.2, Prop 3.3,
   Prop 3.4 (as an identity), Lemma 4.1 (barrier for W and for (B_μ); discharges AUDIT_199 item (i)), Thm 4.2 (given
   the CITED ceiling for μ ≥ 50 and the certified margins for μ ≤ 15), the slope check.
-- CITED: Mori VII (3.1)–(3.4), Prop 3.1, Lemma 3.2, Theorem N; Mori VIII parameters; Paper 47 prop:env, prop:archneg,
+- CITED: Mori VII (3.1)–(3.4), Prop 3.1, Lemma 3.2, Theorem N; Mori VIII parameters; Paper 46 prop:env, prop:archneg,
   rem:moriceiling (PLAUSIBLE-UNVERIFIED there, zero data); Guinand–Weil; Landau–Widom; Platt–Trudgian height.
 - ARGUED: the floor r_E ≥ 10^{−10}μ for explicit PNT bounds (reading of the literature); L_x ↔ L′♯ comparison.
 - NUMÉRICO: PATTERN model value at μ = 100; "~10^{−17}" at μ = 5.

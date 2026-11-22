@@ -1,7 +1,7 @@
 # CA_N_002 — (V2) Positive Poisson combs on both sides: three constructions and a unimodular-transfer impossibility theorem (front N, phase 193)
 
  Pen and paper; the only numbers are closed-form constants (C₀ = ψ(¼) − log π = −γ − π/2 − 3log2 − log π
-≈ −5.3721, v₂ + v₃ = 2.24883 = P47 \Aconst), evaluated by hand to 4 digits; no computation of ζ. **No negative value for ζ.**
+≈ −5.3721, v₂ + v₃ = 2.24883 = P46 \Aconst), evaluated by hand to 4 digits; no computation of ζ. **No negative value for ζ.**
 Conventions of CA_D_001: F̂(τ) = ∫F e^{iτx}dx, ǧ(τ) = ∫g e^{−iτu}du; 𝔞_T(F) = (1/2π)∫σ_T|F̂|² = (1/π)∫Θ′|F̂|², Θ′ = σ_T/2.
 
 ## 1. The comb–comb Fourier pair has a forced sign (PROVED)
@@ -52,12 +52,12 @@ with I_F inner.
 J_{F₂} coprime. From I₁/J₁ = I₂/J₂ and coprimality, J₁ | I₁, so Q_ε := I₁/(e^{−iετ}J₁) satisfies W = c e^{−iTτ}Q_ε/b with e^{−iετ}Q_ε inner
 for every ε > 0; letting ε → 0 (bounded by 1 in ℂ_−, pointwise limit) Q := Q₀ is inner. Hence
   φ′ = −d(arg W)/dτ = T + μ_Q − 1/(τ² + ¼) ≥ T − 1/(τ² + ¼)   (μ_Q ≥ 0).
-(e) At τ = 0: σ_T(0)/2 = φ′(0) ≥ T − 4. Contradiction when σ_T(0) < 2T − 8. Value: m(0) = C₀ (P47 l.170), σ_T(0) = C₀ − A_T. ∎
+(e) At τ = 0: σ_T(0)/2 = φ′(0) ≥ T − 4. Contradiction when σ_T(0) < 2T − 8. Value: m(0) = C₀ (P46 l.170), σ_T(0) = C₀ − A_T. ∎
 **Reading.** CA_D_001 obtains one-sidedness by multiplying by Z_X, which is analytic in ℂ_− with the pole cancelled by Tate; at amplitude 0
 the only candidate multiplier is e^{−iΘ} = Z_X/Z_T (unique by (a)), and Theorem N2 shows it is never "analytic enough": its phase velocity
 would have to exceed T − 1/(τ² + ¼), while the window symbol at the centre is ≤ C₀ − A_T. **The impossibility sits at the centre, where the comb
 is coherent** — the same place where CA_D_001 §4 found the Hardy weight doubly-exponentially small.
-For T < ½log 3 the theorem says nothing (for T < ½log2 the bound is compatible); not decided there (OPEN, irrelevant to the sign since P47
+For T < ½log 3 the theorem says nothing (for T < ½log2 the bound is compatible); not decided there (OPEN, irrelevant to the sign since P46
 proves the sign at small T).
 
 ## 5. Verdict (V2)

@@ -1,12 +1,12 @@
 # Round 23, memo D — an exact identity for the per-atom cancellation for general vectors?
 
-Selection gate. No new derivations or computations. Object: 𝔸_M = Arch_M − Div_M − Near_M (P47 prop:AM).
+Selection gate. No new derivations or computations. Object: 𝔸_M = Arch_M − Div_M − Near_M (P46 prop:AM).
 
 ## 0. What is proved and what is numerical (reading of the sources)
 - **Identity (PROVED, elementary, class W7).** For exact s = m^{−½}:
   sᵀ(Div+Near)s = 2Σ_N N^{−½} log N · E_M(N), E_M(N) = Σ_{m≤M} m^{−½} c₀(log(N/m))
   (phase 190 EXP_003 §4; checked to 12 digits, M = 800). It uses Λ∗1 = log once, linearly.
-- **Family s_w = m^{−½}w(m/M)** (P47 prop:shape-family, l.≈9008–9045, (i)–(iii) PROVED): collapse
+- **Family s_w = m^{−½}w(m/M)** (P46 prop:shape-family, l.≈9008–9045, (i)–(iii) PROVED): collapse
   sᵀ𝔸s = sᵀArch s − Σ_{N<Me^{2T₀}} N^{−½} D_w(N) E_w(N); (iv) Ψ_w, continuous analogue of the atom n, with ∫Ψ_w = 0.
   EI_002 Thm 3(iii) (phase 192): «Div ≈ −Near» as an identity, with remainders: boundary at scale M (not estimated),
   small-divisor defects and dual Poisson terms (Thm 3(ii)).

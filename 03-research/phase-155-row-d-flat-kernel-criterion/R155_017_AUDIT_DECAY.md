@@ -2,7 +2,7 @@
 
 *Phase 155. Targets: `R155_013_DECAY_TAIL_LEMMA.md`,
 `R155_011_D_FOR_1000_ZEROS.md` [amended], `scripts/reverse/d1000/{amend,dense,p3}.py` + JSON.
-Reference: Paper 47 `main.tex` §4 (`lem:mbounds` 622-640, `lem:F1` 647, `lem:gbounds` 443-451,
+Reference: Paper 46 `main.tex` §4 (`lem:mbounds` 622-640, `lem:F1` 647, `lem:gbounds` 443-451,
 `lem:T` 686-700), §7 (Thm Z, 1036-1062), §8 (`prop:env` 985-999).
 All reruns single-process, < 60 s.*
 
@@ -56,7 +56,7 @@ The §6 verdict must be made explicitly conditional on the unrun comb-free exper
  `τ_stop = min{τ : L_w ≥ 0}` is well defined and `f_w ≥ 0` on `[τ_stop,∞)` ✓.
 - **Structural remark (not a defect).** Theorem D is `lem:T` (`main.tex:686-700`) with the trivial
  atom term `2Σ|a_j|` split into `E_at` (atoms) + `Dτ^{-2}` (a.c.). The novelty is genuine — `lem:T`
- has no a.c. non-exponential column — but Paper 47 should present it as an extension of `lem:T`,
+ has no a.c. non-exponential column — but Paper 46 should present it as an extension of `lem:T`,
  not only as an analogue of `lem:F1`; `cor:T2`'s "atoms cost exponentially" is precisely `E_at`.
 
 ## §3 The atoms. CONFIRMED, including the §5 dispute (a).
@@ -95,7 +95,7 @@ of a quantity used as an upper bound. Declare it, or extend the grid. Same remar
  `τ_stop ≤ max{2πe^{A_T+1}, (D₀/(log(τ/2π)−A_T))^{1/2}}` (`R155_013:174`) has `τ` free on the right:
  it is not a bound as written. The intended and correct statement is:
  *for `τ ≥ 2πe^{A_T+1}` one has `log(τ/2π)−A_T ≥ 1`, hence `τ_stop ≤ max{2πe^{A_T+1}, √D₀ + 2}`*, which
- gives `τ_stop = O(D^{1/2})` ✓. Fix before Paper 47.
+ gives `τ_stop = O(D^{1/2})` ✓. Fix before Paper 46.
 - The condition-count `373, 388, 427, 491` is not reproducible from the file: `U_spl` is quoted only
  as `≈ 7.74…8.09`. My count of prime powers in `(2T, U]` at `U = 7.74, 7.80, 7.90, 8.09` is
  `374, 394, 425, 495`. Publish `U_spl` to six digits or state the counts as approximate.
@@ -150,7 +150,7 @@ enclosure of `f_prime`. The amended `R155_011` is honest: every strike is marked
 Theorem-N category errors are struck, the `λ^P−λ^W` reading is demoted, and the `+1.3703e−3` claim is
 replaced by `+1.3486e−3` with the correct pad.
 
-## §9 Readiness for Paper 47
+## §9 Readiness for Paper 46
 
 **Theorem D: READY** for §4 beside `lem:T`/`lem:F1`, subject to (a) restating it as the a.c. extension
 of `lem:T`, (b) keeping the hypothesis `w ∈ C²(ℝ)` explicit (the `C²` match across `±2T` is an

@@ -97,4 +97,4 @@ Each correction has fourteen poles and zero numerator; its ZERO14 margin exceeds
 
 ## 5. Scope
 
-The fixed V13 of052 is extended to ALL thirteen real poles≥31.5 via a full arithmetic gain of fourteen poles with zero numerator. The moment bound and monotonicity replace all certificates j≥96, and the earlier segment was exhaustive and fixed analytically. Neither arbitrary dimension nor fourteen poles with general numerator is claimed, and no new T window of Paper47 is deduced here. The next case needs new verified hypotheses; the margins are not extrapolated by dimension. Papers untouched.
+The fixed V13 of052 is extended to ALL thirteen real poles≥31.5 via a full arithmetic gain of fourteen poles with zero numerator. The moment bound and monotonicity replace all certificates j≥96, and the earlier segment was exhaustive and fixed analytically. Neither arbitrary dimension nor fourteen poles with general numerator is claimed, and no new T window of Paper46 is deduced here. The next case needs new verified hypotheses; the margins are not extrapolated by dimension. Papers untouched.

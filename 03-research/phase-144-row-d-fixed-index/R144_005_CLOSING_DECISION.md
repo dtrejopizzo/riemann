@@ -6,7 +6,7 @@ R144_002 (audit: accept with repairs; programme-level assessment), R144_003 (led
 ## 1. Results of record
 | item | statement | label |
 |---|---|---|
-| D.37.2 | for any symmetric polar set `P = 1 − P`, the polar part `Σ_p C_p n^{½−p}` has a uniform AM–GM floor, attained at `n = 1` for pair-symmetric coefficients. **The "two vs four exponents" A3-line is REFUTED** (retracted at four corpus sites, P46-43 partial: the true separator is `|n^{½−(ρ±a)}| = n^{∓a}` unbounded + `W_a` indefinite) | PROVED |
+| D.37.2 | for any symmetric polar set `P = 1 − P`, the polar part `Σ_p C_p n^{½−p}` has a uniform AM–GM floor, attained at `n = 1` for pair-symmetric coefficients. **The "two vs four exponents" A3-line is REFUTED** (retracted at four corpus sites, P47-43 partial: the true separator is `|n^{½−(ρ±a)}| = n^{∓a}` unbounded + `W_a` indefinite) | PROVED |
 | D.37.3 | for `Ξ_a`, `m_*(g_a) < ∞` always and `m_* = 1` on a non-empty open set of test classes (existence; the "discrete exceptional set" claim withdrawn, M1) | PROVED |
 | **D.38.3** | **`(P_m) ⟺ RH` for every fixed `m ≥ 1`** — the clause does not decompose by index (one-index construction `E_t = tF + K`, `F` from Paper 45 Thm 10.4 moved off `{t_m = 0}`) | PROVED |
 | D.38.3a | **RH ⟺ `I_∞(E, g_λ) ≥ 0` on `S_0`** — the final form of the trace-cone route | PROVED + RESTATEMENT |

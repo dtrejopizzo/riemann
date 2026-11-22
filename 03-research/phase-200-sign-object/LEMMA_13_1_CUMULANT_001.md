@@ -46,7 +46,7 @@ Z = Z_{Q₁} = (w/h)Σ_χ L_χ with L_χ = L(s,χ), all with factor Γ_ℝ(s)Γ_
 0 and 1, and the other L_χ are entire. ℓ_χ = log L_χ, ℓ̄ = h⁻¹Σℓ_χ, y_χ = ℓ_χ − ℓ̄, 𝒦 = log E_χ e^{y_χ}. By Lemma 12.1
 (PROVED), Λ_Z = Λ̄ + Λ_def with Λ_def(n) = log n·[n^{−s}]𝒦.
 
-Template (P47 eq:Aform, Lemma E §1.3): for F ∈ P_T = {F ∈ L²(I_T) : ∫F e^{±t/2} = 0}, c = c_F (autocorrelation,
+Template (P46 eq:Aform, Lemma E §1.3): for F ∈ P_T = {F ∈ L²(I_T) : ∫F e^{±t/2} = 0}, c = c_F (autocorrelation,
 supported on [−2T, 2T], c(0) = ‖F‖²),
   𝔞^L(F) = C₀‖F‖² + ∫₀^{2T}(c(0)−c(u))du/sinh(u/2) + 2c(0)log coth(T/2) − Σ_{log n<2T} 2Λ_L(n)n^{−½}c(log n).
 C₀ and the Lévy kernel depend only on (Γ, conductor) and are identical for Z and for each L_χ. Therefore (PROVED)

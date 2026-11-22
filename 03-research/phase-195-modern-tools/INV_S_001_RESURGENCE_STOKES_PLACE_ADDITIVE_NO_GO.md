@@ -1,12 +1,12 @@
 # INV_S_001 — Resurgence / exact WKB / Stokes constants for the window form (track S, survey B5)
 
 Phase 195.
-Objects as in Paper 47: s_T = m − Σ_{n∈N_T} v_n cos(τ log n), m(τ)=Re ψ(¼+iτ/2) − log π, v_n=2Λ(n)/√n,
+Objects as in Paper 46: s_T = m − Σ_{n∈N_T} v_n cos(τ log n), m(τ)=Re ψ(¼+iτ/2) − log π, v_n=2Λ(n)/√n,
 𝔞_T(F)=(1/2π)∫ s_T|F̂|² on P_T (A=B=0), λ_A = inf over P_T, thm:margin (λ_A ≤ 4·10⁹ T e^{−15.449T}, 15.449 < 42/e).
 
 ## 0. Corpus check / routes-tried index
 - ROUTES-TRIED-INDEX: no WKB / resurgence / Stokes entry (grep "wkb|resurg|stokes|instanton|tunnel": only survey B5). Grid and crossword: no hit.
-  The nearest indexed items are L41 (spheroidal asymptotics, prolate piece only), thm:margin and prop:env (Paper 47), and INV_Q/INV_R (phase 195:
+  The nearest indexed items are L41 (spheroidal asymptotics, prolate piece only), thm:margin and prop:env (Paper 46), and INV_Q/INV_R (phase 195:
   exact identities go through ρ_S=∏γ_v and are place-additive).
 - New reason (why this is not a rerun): the object is the singularity/Stokes data of the transseries of λ_A in ħ=1/T, and the possibility that a Stokes
   constant is sign-definite by Stokes-graph topology or median-resummation reality. This is a different method class (non-perturbative, nonlinear in the
@@ -14,7 +14,7 @@ Objects as in Paper 47: s_T = m − Σ_{n∈N_T} v_n cos(τ log n), m(τ)=Re ψ(
 
 ## 1. The two-atom window has no semiclassical parameter (PROVED, elementary)
 On T∈(½log3, ½log5)=(0.5493, 0.8047), N_T={2,3,4}. Note that 4 is a contact (v_4=log 2), so the "two-atom" model has two primes and three contacts.
-Here ħ=1/T∈(1.24, 1.82), so there is no asymptotic regime and no transseries in 1/T is defined on the window. λ_A>0 there (CITED, Paper 47:
+Here ħ=1/T∈(1.24, 1.82), so there is no asymptotic regime and no transseries in 1/T is defined on the window. λ_A>0 there (CITED, Paper 46:
 ½log5 certificates and the nonincreasing property). The only regime where exact WKB could apply is T→∞. By lem:spec-collapse the contact set then grows
 at every T=½log n, so λ_A is defined piece by piece on infinitely many windows and has no global transseries in T.
 The semiclassical question therefore splits into two well-posed models, treated in §3 and §4.

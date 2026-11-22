@@ -36,7 +36,7 @@ w_A(n)=−ε Σ_{m≥1} K_m(F)² n^(−2m−1)
                                       (log n>4T).  (4)
 ```
 
-The series is absolutely convergent: `|K_m(F)|²≤2T e^(2a_mT)||F||²`, while `e^(2T−v)<1`. If `F≠0`, some `K_m(F)≠0` by the Müntz completeness used in `R162_1201`/paper 47. In (4) every summand has the same sign; hence `c_A(v)≠0` for **every** `v>4T` and `w_A(n)≠0` for every sufficiently large integer. Also `w_A(n)=O_{F,T}(n^(−3))`.
+The series is absolutely convergent: `|K_m(F)|²≤2T e^(2a_mT)||F||²`, while `e^(2T−v)<1`. If `F≠0`, some `K_m(F)≠0` by the Müntz completeness used in `R162_1201`/paper 46. In (4) every summand has the same sign; hence `c_A(v)≠0` for **every** `v>4T` and `w_A(n)≠0` for every sufficiently large integer. Also `w_A(n)=O_{F,T}(n^(−3))`.
 
 The Möbius inversion of §3 even preserves this sign at **every high mode**. If `k>e^(4T)`, then `kj>e^(4T)` for every `j≥1`; inserting (4) into (5) and using the absolutely convergent series `Σ_{j≥1}μ(j)j^(−s)=1/ζ(s)` (`s>1`) gives
 

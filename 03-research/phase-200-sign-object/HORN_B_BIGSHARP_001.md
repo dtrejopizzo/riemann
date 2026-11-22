@@ -1,13 +1,13 @@
 # HORN_B_BIGSHARP_001 — Round 21: binary decision on Horn B and (Big♯)/MW-5
 
-phase 200. Sources: P46 `main.md` §19.9 (Horn A, Horn B, Thm 19.30,
+phase 200. Sources: P47 `main.md` §19.9 (Horn A, Horn B, Thm 19.30,
 table B1–B5), Thm 19.25 / Cor 19.25b, Restatement 19.29, §20, §28.4; `HORN_A_001.md` (Theorem HA);
 `SPEC_SIGN_OBJECT_010.md` §2.3 (Big♯); phase 158 (README, R158_001/005); ROUTES-TRIED-INDEX index.
 
 
 ## Summary (≤250 words)
 
-**Horn B: NO-GO PROVED (reformulation).** Horn B (P46 §19.9) replaces the cone of non-negative classes in (b′)
+**Horn B: NO-GO PROVED (reformulation).** Horn B (P47 §19.9) replaces the cone of non-negative classes in (b′)
 with a cone 𝓔′ with the two properties used by the proof of Thm 12.3: (T1_cone) deg > 0 on 𝓔′∖{0} (mod 𝓝_∞) and
 (T2_cone) C′_X < ∞ for every X. The method of Theorem HA goes through unchanged: with E_n = 2K + nG and I_∞(G,G) = c > 0,
 (c) (or (c′) with any finite Δ) forces h⁰(E_n) > 0, (b′) with 𝓔′ gives E′ ∈ 𝓔′ of degree 2 with I_∞(E′,G) = nc, and
@@ -39,14 +39,14 @@ minimal S1–S6 SPECIFICATION is left for phase 201.
 | phase 158 | README | "MW-5 NOT EXCLUDED, unbuilt; its instance in the adèle class space is a restatement"; "the entire content of MW-5 is OT-5′" |
 
 **New reason to touch Horn B.** The class argument `E_n = 2K + nG` from Theorem HA (round
-20b) was never applied to it. P46's table B1–B5 only tests candidates against the Thm 19.30 threshold (`C′_{F_0} ≥ G`). It does not ask whether
+20b) was never applied to it. P47's table B1–B5 only tests candidates against the Thm 19.30 threshold (`C′_{F_0} ≥ G`). It does not ask whether
 the hypothesis itself is weaker than the target. **New reason to touch (Big♯).** We do not retry constructing an
 object (that is W10). We only decide whether the *statement* (Big♯) is a tool or a reformulation, and fix its
 specification against the constraints of phase 200, which phase 158 did not have (C-MvN, C-RR, C-pol, C-τ, Φ200).
 
 ## 1. Horn B
 
-### 1.1 Exact statement (P46 §19.9)
+### 1.1 Exact statement (P47 §19.9)
 
 Horn B: "enlarge the class of representatives." A cone `𝓔′` of classes of `D^W` is fixed, playing the role of
 "non-negative" in (b′):
@@ -60,7 +60,7 @@ with the two properties used by the proof of Thm 12.3:
 
 together with (a) and (c), or (c′) with defect `Δ` (Horn A+B combined). Thm 19.30 (PROVED given (X19)) shows that the
 hypothesis is only satisfiable if `C′_{F_0} ≥ G`. The table's only survivor is B4 (non-negative Frobenius
-traces), and P46 leaves Horn B OPEN as "a single inequality."
+traces), and P47 leaves Horn B OPEN as "a single inequality."
 
 ### 1.2 Theorem HB
 
@@ -109,13 +109,13 @@ dichotomy as Horn A. **Horn B: NO-GO PROVED as a route (reformulation of the tar
 ### 1.4 B4 in particular
 
 B4 (`t_n(E′) ≥ 0 ∀n`) passes Thm 19.30, but that test only looks at `F_0`. For B4 to enter Theorem HB one needs
-(T2_cone) for every X, and P46 does not prove it: it states "the available trace inequality gives only t_n(E′) ≥ −ARCH(E′)."
+(T2_cone) for every X, and P47 does not prove it: it states "the available trace inequality gives only t_n(E′) ≥ −ARCH(E′)."
 There are two cases.
 
 - **(T2) holds for B4.** Then Theorem HB applies and Horn B with B4 ⇒ (W⁰). Reformulation.
 - **(T2) fails for B4.** Then B4 does not serve Thm 12.3 (Step 1), and is not a tool.
 
-In no case does B4 give something weaker than (W⁰). P46's observation that "B4 survives because the trace
+In no case does B4 give something weaker than (W⁰). P47's observation that "B4 survives because the trace
 bound reproduces the non-sharp constant √(ab) of the gate" is thereby explained: B4 survives the pointwise test on
 `F_0` because the test is pointwise. The family `E_n = 2K + nG` is not pointwise: it sweeps the
 direction `G` with fixed degree 2.
@@ -134,7 +134,7 @@ tautologically, just as in HORN_A_001 §4.
 
 ## 2. (Big♯)/MW-5
 
-### 2.1 Exact statement (SPEC_010 §2.3; P46 Restatement 19.29; phase 158)
+### 2.1 Exact statement (SPEC_010 §2.3; P47 Restatement 19.29; phase 158)
 
 **(Big♯).** Construct `𝔇 ⊋ D^W`, an immersion `ι : D^W ↪ 𝔇` preserving `I_∞` and deg, and a global-sections
 functor `Γ(𝔇, ·)` valued in ℤ-modules (or Hermitian lattices), `h⁰ := rank Γ` (or an
@@ -249,7 +249,7 @@ phase 201 is: where is (i) proved without writing `χ := R`?
 
 | object | verdict | label |
 |---|---|---|
-| Horn B (P46 §19.9), any cone with (T1),(T2), any finite Δ | ⇒ (W⁰) (Theorem HB). Horn B ∈ {(W⁰), (W⁰) ∧ (Eff_𝓔′)} | **NO-GO PROVED (reformulation)** |
+| Horn B (P47 §19.9), any cone with (T1),(T2), any finite Δ | ⇒ (W⁰) (Theorem HB). Horn B ∈ {(W⁰), (W⁰) ∧ (Eff_𝓔′)} | **NO-GO PROVED (reformulation)** |
 | B4 (non-negative traces) | reformulation or non-tool, depending on (T2) | NO-GO PROVED (dichotomy) |
 | (Eff_𝓔′) | sufficiency of the moment problem for 𝓔′ | OPEN / REF-D (P33-6) |
 | (Big♯) as a transfer hypothesis | ⇒ (W⁰) in two lines (Corollary HB′) | **NO-GO PROVED (reformulation)** |

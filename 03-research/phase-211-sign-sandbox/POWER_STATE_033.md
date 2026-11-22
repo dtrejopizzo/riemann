@@ -18,7 +18,7 @@ POWER_COEFFICIENT_BALANCE_033 represents the gamma autocorrelation exactly as a 
 
 The premise that each component has a positive functional is false: for the single cutoff22 one proves −.01<L[S22]<−.006. Its Fourier transform takes a negative value, so S22 is NOT an admissible autocorrelation; it is not a counterexample to W. The loss of that individual component in the real mixture is bounded by .22/(N−1), without thereby controlling all the others.
 
-A second Abel grouping gives nonnegative coefficients for T_m=sum_(j=1)^m jL[S_j]. Proving ALL T_m>=0 would suffice for row k0, but remains OPEN. It would not by itself close all k nor Paper47. The generating identity is kept as a description of the requirement, not as a sign proof.
+A second Abel grouping gives nonnegative coefficients for T_m=sum_(j=1)^m jL[S_j]. Proving ALL T_m>=0 would suffice for row k0, but remains OPEN. It would not by itself close all k nor Paper46. The generating identity is kept as a description of the requirement, not as a sign proof.
 
 ## Evidence and scope
 

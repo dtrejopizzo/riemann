@@ -38,4 +38,4 @@ Identify the smallest index `m` at which `(b′)_{B4_a}` fails for `Ξ_a` (Remar
 `ξ`-inequality `t_m(E) ≥ 0` for `R(E) > 0, deg E > 0`, and decide whether it is unconditional for `ξ`
 while false for `Ξ_a` — at fixed `n`, `ξ`'s two polar exponents give the floor `2√(abΦ_g(0)Φ_g(1))`.
 Secondary: O-29 (sparse cone `{t_{2^k} ≥ 0}`), O-26; Horn A gated on O-19′/O-18′. Rejected: uniformity
-of `N` on slices; attacking O-24 whole. Paper-facing P46-34…P46-42 (P46-41 corrected).
+of `N` on slices; attacking O-24 whole. Paper-facing P47-34…P47-42 (P47-41 corrected).

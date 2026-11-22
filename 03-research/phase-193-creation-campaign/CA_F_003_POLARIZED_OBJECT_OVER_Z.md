@@ -16,7 +16,7 @@ treats the structural reading of CA_F_SYNTHESIS (question (2)).
 | 2403.09266 quadratic RR; 2510.08033 arithmetic Riemann–Hurwitz | — | no square of Spec ℤ | R184_009 (W10) |
 **Answer to (3), CITED from the corpus audits:** in the 2024–2026 literature recorded in the corpus, no object over ℤ carries an
 intersection pairing on a primitive class of a square of Spec ℤ̄, let alone one not equal to the window form. The gap is the absence
-of the object (MW-5 / OT-5′ OPEN; W10 NO-GO for declared carriers, P46 Thm 19.25).
+of the object (MW-5 / OT-5′ OPEN; W10 NO-GO for declared carriers, P47 Thm 19.25).
 Caveat: the CC listing in R186_027 stops at 2609.00299. Papers after were not checked.
 
 ## 2. What such an object would have to give (PROVED, under explicit axioms)
@@ -37,7 +37,7 @@ proved**. In function fields, (H) comes from geometry that does not use the trac
 (b) an h⁰ with quadratic growth and a vanishing/duality theorem;
 (c) the trace property (L) for the Frobenius/scaling correspondences.
 The known objects have (c) on the curve (CC trace formula) but not (a), and (b) only with logarithmic growth (2205.01391). This is
-exactly MW-5. It is a missing construction, not a proof of impossibility. P46 Thm 19.25 (W10) proves only that every *declared*
+exactly MW-5. It is a missing construction, not a proof of impossibility. P47 Thm 19.25 (W10) proves only that every *declared*
 carrier class postulates the positivity.
 
 ## 3. Structural reading, question (2)

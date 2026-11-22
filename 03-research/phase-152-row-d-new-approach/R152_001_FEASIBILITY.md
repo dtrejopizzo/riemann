@@ -331,7 +331,7 @@ gates fail simultaneously**, for the single reason that the tree sees only locat
 
 * **Frobenius.** Poineau's `Z`-analytic spaces are built from `M(Z)` and its affine lines; R152_001 knows of
   **no** Frobenius endomorphism on them, and none can come from the ring: `Hom(Spec Z, Spec Z) = {id}`, which
-  is exactly **Theorem 22.17** of Paper 46 (`Spec Z` is terminal, so there is no ring of Frobenius
+  is exactly **Theorem 22.17** of Paper 47 (`Spec Z` is terminal, so there is no ring of Frobenius
   correspondences). The branch parameter `ε` is a **flow**, not an endomorphism of the base; naming it
   "Frobenius" is the same move as the scaling flow of the corpus (rows A–C), with the same content.
 * **Comparison with `F₁`/`λ`-rings.** Connes–Consani's arithmetic site and Borger's `Λ`-ring/Witt structure do
@@ -385,7 +385,7 @@ another language: the transfer would have to carry the Frobenius, which does not
 **4.3 Transcendence / auxiliary functions; Bombieri–Stepanov.** **Verified as the blueprint asks.**
 Stepanov's method constructs an auxiliary function vanishing to high order at the rational points of a curve,
 i.e. it is the `X × X` diagonal argument in function-theoretic form; Bombieri's version proves the RH for
-curves over `F_q` without cohomology. Corpus: phase-38 doc 116 is an explicit audit of the method, and Paper 46
+curves over `F_q` without cohomology. Corpus: phase-38 doc 116 is an explicit audit of the method, and Paper 47
 **Theorem 22.17** closes its transcription: there is no ring of correspondences on `Spec Z` (`Spec Z` is
 terminal), so there is no square on which to place the auxiliary function and no degree/index inequality to
 extract. The blueprint's expectation is confirmed: Thm 22.17 closes it. The transcendence toolkit proper
@@ -424,7 +424,7 @@ been removed.
 | Dictionary B.1 | `RESTATEMENT` |
 | Proposition B.2 (tree energy is `f`-independent; diverges as `Σ(log p)³/p`) | `PROVED` |
 | **Proposition B.3** (meet vs difference) | `PROVED`; the one genuinely new piece for mechanism B |
-| "no Frobenius on Poineau's spaces", "no published pairing on `M(Z)×M(Z)`" | `NOT KNOWN TO US`, not asserted as literature facts; the ring-level statement is Thm 22.17, `IMPORTED` from Paper 46 |
+| "no Frobenius on Poineau's spaces", "no published pairing on `M(Z)×M(Z)`" | `NOT KNOWN TO US`, not asserted as literature facts; the ring-level statement is Thm 22.17, `IMPORTED` from Paper 47 |
 | §4 reserve paragraphs | `CERTIFIED` survey + corpus cross-reference |
 | FATAL rule | **not triggered**: no zero-free region, moment bound or cancellation is claimed anywhere above |
 
@@ -432,7 +432,7 @@ been removed.
 
 ## §7 What goes where
 
-**To Paper 46 §28.4 (the reopening clauses), as two sentences of record — not as new clauses.** The six clauses
+**To Paper 47 §28.4 (the reopening clauses), as two sentences of record — not as new clauses.** The six clauses
 are unchanged. Add, in the paragraph that records routes measured rather than moved:
 
 > Two further mechanisms were examined and closed in phase 152. (a) The Eisenstein resonances of the modular

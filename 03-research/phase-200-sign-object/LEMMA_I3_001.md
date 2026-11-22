@@ -43,7 +43,7 @@ transfers all the sign to A_⊥⊥(1) = (★★). That is REF-D in block form.
 
 ## 0. Conventions
 
-T = ½log μ, λ = √μ. Definitions are those of Paper 47 def:ext / prop:ext-gauge / eq:W, in the form used in P2 §1.
+T = ½log μ, λ = √μ. Definitions are those of Paper 46 def:ext / prop:ext-gauge / eq:W, in the form used in P2 §1.
 - Complete form on the line: 𝒲_a[Ψ] = (1/2π)∫m|Ψ̂|² − Σ_n v_n^{(a)} c_Ψ(log n) + 2A(Ψ)B(Ψ), with v_n = 2Λ(n)/√n.
 - Pencil in c: A(c) := P − cQ, with P = arch + pol (the (1/2π)∫m|·|² part plus the polar term 2AB) and Q = comb_Λ
   (Σ v_n c(log n), symmetrized bilinear form).

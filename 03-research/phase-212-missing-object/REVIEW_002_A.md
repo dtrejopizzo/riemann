@@ -1,7 +1,7 @@
 # REVIEW_002_A — Critical review of ROUND_002_A (exterior tail of the hyperbola as a sum of squares)
 
 Scope: line-by-line reading of the memo; independent derivation of identity (1), of the Lemma and of
-Observation (2) against P47 §sec:firstcontact (`04-papers/47-row-d-dual-certificates/main.tex`,
+Observation (2) against P46 §sec:firstcontact (`04-papers/46-row-d-dual-certificates/main.tex`,
 l. 6625–6946: operators on the line, thm:PCfinite, eq:Gammaenergy, eq:collar, eq:Qbalance,
 eq:Qrecombine, eq:Qspectral, prop:GEgap, eq:equivgate, rem:returnremarks); opening of the
 cited antecedents (`R170_816`, `819`–`821`, `835`, `837`, `841`, `870`; `R161_030`–`039`, `071`,
@@ -37,7 +37,7 @@ zero at k ≤ N. Evaluating the Dirichlet series of the coefficients at s = s_m 
     Σ_{N<k≤MN} h(k) k^{−s_m} = (Σ_{d≤M} Λ(d) d^{−s_m})(Σ_{n≤N} n^{−s_m}) − Σ_{n≤N} (log n) n^{−s_m}
                              = d_{m,M} Z_N(s_m) − Z_N^{log}(s_m),
 
-with d_{m,M} that of P47 (l. 6765). Multiplying by b_m²|μ_m^+(F)|² = |(𝒪_LF)_m|² and summing over m ≤ L
+with d_{m,M} that of P46 (l. 6765). Multiplying by b_m²|μ_m^+(F)|² = |(𝒪_LF)_m|² and summing over m ≤ L
 gives (1). Correct, PROVED. The diagonal matrix D_{M,L}Z_{N,L} − Z^{log}_{N,L} is non-negative entry
 by entry (it is Σ_{k>N} h(k)k^{−s_m}). The comparison with c_{N,L} = Σ_n Λ(n)‖ℓ_n‖² of eq:Qbalance is
 correct: same ℓ_n, different weight.
@@ -60,13 +60,13 @@ correct: same ℓ_n, different weight.
 
 ### 2.1 Conventions checked
 
-P47 l. 6649–6661: V_{−log k}F(t) = F(t + log k), H_{M,N} = Σ h(k)k^{−1/2}V_{−log k}; phases 161 and 170
+P46 l. 6649–6661: V_{−log k}F(t) = F(t + log k), H_{M,N} = Σ h(k)k^{−1/2}V_{−log k}; phases 161 and 170
 write τ_aF(t) = F(t + a) (`R161_031` §1). With F(t) = e^{t/2}f(e^t), 𝓕F(t) = e^{t/2}f̂(e^t) and
 (k^{−1/2}τ_{log k}𝓕F)(t) = e^{t/2}f̂(ke^t). The adjoint of τ_{log k} is F ↦ F(· − log k), so that
 
     (H^w)* e_m^±(t) = e^{t/2} g(e^t),   g(x) = x^{∓a_m−1/2} Σ_k w(k) k^{−1/2±a_m} 1_{(ke^{−T}, ke^{T})}(x),
 
-as in the memo. 𝓕* = 𝓕 (P47 l. 6640) gives ⟨H^w𝓕F, e_m^±⟩ = ⟨F, φ_m^±⟩ with φ_m^± = 1_{I_T}𝓕(H^w)*e_m^±
+as in the memo. 𝓕* = 𝓕 (P46 l. 6640) gives ⟨H^w𝓕F, e_m^±⟩ = ⟨F, φ_m^±⟩ with φ_m^± = 1_{I_T}𝓕(H^w)*e_m^±
 = e^{t/2}ĝ(e^t) on I_T, ĝ(ξ) = 2∫_0^∞ g(x)cos(2πxξ)dx. Correct.
 
 ### 2.2 Step (i)
@@ -157,7 +157,7 @@ with Σ an invertible Hermitian test on finitely many moments of real exponentia
 Σ_k h(k)|ℓ_k|² with ℓ_k factoring through α_{L′}) and w any nonzero weight of finite support. No
 member of 𝒞_fin exists. The NO-GO is exact, not quantitative: the Gamma exponentials are
 complete in L²(I_T) and remain so after removing finitely many (CITED: Müntz's theorem on an interval
-[a,b] with a > 0; it is the density argument of P47 after eq:Gammaenergy), so that each φ_m^± is
+[a,b] with a > 0; it is the density argument of P46 after eq:Gammaenergy), so that each φ_m^± is
 approximated in norm by combinations of e_j^±, j ≤ L′, with error as small as desired as
 L′ grows. The Lemma excludes equality, which is what zero slack demands, and nothing more.
 
@@ -222,7 +222,7 @@ Citations opened and checked:
   STATEMENT_001; the memo rightly does not use it. The memo's Lemma is a different statement, with
   its own proof inside the sandbox.
 - `R170_841` §4.2, `R170_870` §8: agree.
-- P47 eq:Qbalance, eq:Qrecombine, eq:Qspectral, eq:equivgate, rem:returnremarks: agree
+- P46 eq:Qbalance, eq:Qrecombine, eq:Qspectral, eq:equivgate, rem:returnremarks: agree
   literally with what is cited. `R161_072` §2 (arbitrary non-negative weights), `R161_081`: agree.
 
 On R161_030–039, two corrections.
@@ -243,7 +243,7 @@ On R161_030–039, two corrections.
    missing is that each summand be a square, and that is what the Lemma denies in 𝒞_fin. The sentence "the
    recorded obstacle (coherence in k …) depends on neither of the two things" mixes two
    obstacles. The antecedent that does record the real difficulty is `R170_816` §4 (pairing of
-   two distinct vectors with positive coefficient) and P47 eq:Qspectral. The repetition verdict
+   two distinct vectors with positive coefficient) and P46 eq:Qspectral. The repetition verdict
    holds by these, not by R161_033. The LEDGER note ("literal conversion not attempted in
    any memo") remains true; the Lemma is the first proved statement about it.
 
@@ -336,7 +336,7 @@ indication consistent with restriction R1 of REVIEW_001_ABD; it is not a proved 
 > L = ∞; the sum of the tail with the E_N and Tate blocks; ℓ_k or tests outside finitely many
 > exponentials (with a rank-one test adapted to the operator the tail is a square, generic
 > and unrelated to a_T); proper domains of P_T; nonlinear operations in F. Antecedents:
-> `R170_816` §4, P47 eq:Qbalance–eq:Qspectral, `R161_033`. Global sign OPEN.
+> `R170_816` §4, P46 eq:Qbalance–eq:Qspectral, `R161_033`. Global sign OPEN.
 
 ## 8. What was checked and what was not
 

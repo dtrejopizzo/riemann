@@ -29,7 +29,7 @@ The two eight-component moment norms satisfy4AA BB<(3/2)^2, justifying p3/2. The
 
 The weighted trace with alpha3/5 is covered by POWER_COMMON_TRANSFER_010§6; sigma189/10<min v_j. Its exact binomial sum satisfies4T8<25000². With beta97/5, the tail keeps the fractional factor2^-2/5<19/25: raising to the fifth power is exactly equivalent to25^5<4*19^5. The decreasing bound of(logx)x^-beta from2 and beta-1>18 give the rational majorant of the script<29/1000.
 
-Hence the FULL form satisfies W>.001||f||² for any real numerator of degree<8 and any set of eight rates>=31.5, allowing multiplicities, arbitrary separation and rates without upper bound. The comb is the full infinite one, without favourable sign hypotheses on its individual matrices. No higher-dimensional result nor closure of Paper47 is inferred.
+Hence the FULL form satisfies W>.001||f||² for any real numerator of degree<8 and any set of eight rates>=31.5, allowing multiplicities, arbitrary separation and rates without upper bound. The comb is the full infinite one, without favourable sign hypotheses on its individual matrices. No higher-dimensional result nor closure of Paper46 is inferred.
 
 ## 4. Scope of the advance relative to the previous limit
 

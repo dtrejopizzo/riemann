@@ -22,4 +22,4 @@ The uniform weighted trace010 is B_T14=947334302964<973312². The total exponent
 
 Finally, the FULLTEL corrections for thirteen poles belong precisely to that class of fourteen poles. The identity simultaneously preserves norm, polar and all contacts with nonnegative coefficients. The base052 has margin1/4000 and each correction a larger margin1/1000; subtracting1/4000 times the norm identity proves the declared margin without deterioration under rate movements. Coincidences and multiplicities require neither limits nor division by pole differences.
 
-Neither arbitrary dimension nor general fourteen poles is proved, and the result by itself does not certify a new time window of Paper47.
+Neither arbitrary dimension nor general fourteen poles is proved, and the result by itself does not certify a new time window of Paper46.

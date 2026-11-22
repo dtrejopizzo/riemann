@@ -4,7 +4,7 @@ Pen and paper. Notation of N_BUILD_011–013. Premise respected: the summability
 statement about packet limits and is NOT used below as a criterion for any route.
 
 ## Corpus check
-Paper 47 lem:wit-freeze, thm:wit-Tc(i),(v) (extension by zero; dichotomy λ_A ≥ 0 ∀T or ≤ −c eventually), prop:wit-cheb; L2_BUILD_008
+Paper 46 lem:wit-freeze, thm:wit-Tc(i),(v) (extension by zero; dichotomy λ_A ≥ 0 ∀T or ≤ −c eventually), prop:wit-cheb; L2_BUILD_008
 (clamped modes); R160_D4 Thm 5.1 (translations are window shifts); R186_046 Theorem X (new primes cancel σ on U at resolution π/T).
 grep "two copies|translate|disjoint supports|cross term at lag d|local fluctuation|Ξ(d)": Theorem X uses averaged packets; no memo
 computes the window form of two disjoint copies of a fixed primitive profile and its cross term. New: §1–§4.

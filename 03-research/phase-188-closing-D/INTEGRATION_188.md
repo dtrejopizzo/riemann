@@ -1,6 +1,6 @@
-# INTEGRATION_188 — Phase-188 results integrated into Paper 47
+# INTEGRATION_188 — Phase-188 results integrated into Paper 46
 
-Target: `04-papers/47-row-d-dual-certificates/main.tex`. Backup: `main_pre_phase188.tex`.
+Target: `04-papers/46-row-d-dual-certificates/main.tex`. Backup: `main_pre_phase188.tex`.
 Compiled with pdflatex (3 passes): 0 errors, 0 undefined references, 0 multiply defined labels, 0 overfull boxes.
 Pages 133 → 146 (+13).
 

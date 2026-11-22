@@ -1,9 +1,9 @@
 # R186_030 — Structural dual certificate with β₀ = 2: classification and obstruction
 
-Phase 186, round 15 (front 1 of R186_107 §3). Paper 47, grid and crossword are not touched. Standalone script:
+Phase 186, round 15 (front 1 of R186_107 §3). Paper 46, grid and crossword are not touched. Standalone script:
 `r030_class_B.py` (NUMERICAL, only to decide §3).
 
-Prior check (cited in the text): Paper 47 def:W (l.1107), eq:nuw, thm:Z (l.1122), lem:Rrig + cor:nontermwise
+Prior check (cited in the text): Paper 46 def:W (l.1107), eq:nuw, thm:Z (l.1122), lem:Rrig + cor:nontermwise
 (l.1249–1283, "Lemma R"), thm:C (l.917), lem:mbounds (l.689), lem:K/eq:m (l.267–273), thm:SC (l.2040), thm:AL (l.2201),
 cor:mono (l.361), thm:log5W (l.4162), app:li; R155_010 (closure of the reverse track; Theorem SC, Theorem N);
 R185_006 (symbol identity θ = m − v₂cos at ½log3; NO-GO of Archimedean-then-norm); R186_001 (Thm NG: Gram matrix of
@@ -20,7 +20,7 @@ positive-measure form (class B, Thm 3: PROVED at ½log3 and ½log5 with value �
 OPEN only in its mixed form (signed measure), which is exactly the numerical certificate of thm:C.** No contact
 with the sign.**
 
-## 1. What "by identity" means (Paper 47 language)
+## 1. What "by identity" means (Paper 46 language)
 
 Fix T and w ∈ 𝒲_cl. By thm:Z(i),
 
@@ -77,7 +77,7 @@ mechanism beyond (Z): the only "Euler product with a sign" is Poisson positivity
 | ½log5 = 0.804719 | {2,3,4} | 2.941974 | 7.155418 | 1.158739 |
 
 So **every** certification of value c ≥ 0 needs net mass ν_w(ℝ) ≥ Δ(T) > 0 outside the window. Check against thm:C:
-ν̂(0) = 1.7337 = Δ(½log3) + 6·10⁻⁵ — Paper 47's numerical certificate is *tight at τ = 0* (as well as at 17.645 and
+ν̂(0) = 1.7337 = Δ(½log3) + 6·10⁻⁵ — Paper 46's numerical certificate is *tight at τ = 0* (as well as at 17.645 and
 37.8): f(0) ≈ c. The deficit −C₀ = 5.372 (the same number as thm:SC) is what the SOS identity must produce, and the
 two pieces with their own sign identity only partly do so: m = C₀ + (continuous squares) contributes −5.372 at
 τ=0; the comb contributes −𝖠_T; the polar term 2ĝ₀(0) = 8 sinh T; the remainder is ν_w.

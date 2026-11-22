@@ -1,6 +1,6 @@
 # R186_053 — The two-sector symbol: it does not exist as a pointwise object; what does exist is the two-sector Schur reduction with automatic coercivity
 
-Phase 186, round 26. Paper 47, grid and crossword are not touched. Script: `r053_sector.py` (`python3 r053_sector.py [ABCD]`, ≈ 10 min; imports `r052_nyquist.py`). Read in full and re-derived:
+Phase 186, round 26. Paper 46, grid and crossword are not touched. Script: `r053_sector.py` (`python3 r053_sector.py [ABCD]`, ≈ 10 min; imports `r052_nyquist.py`). Read in full and re-derived:
 R186_052 (Thm 1.2, 2.1–2.4, 2.6, §5.2, §8), `r052_nyquist.py`, R186_117 §0–3; walls: R186_044 (Thm 2, (L-W)), R186_045 (table §4,
 W-loc), R186_115 §4, R186_051 (Prop. 2.2, 4.5), grid log 25–40.
 
@@ -25,7 +25,7 @@ W-loc), R186_115 §4, R186_051 (Prop. 2.2, 4.5), grid log 25–40.
  complement grows**, Jb = 50 → 800 (monotone decreasing, PROVED that S^low(∞) ≤ S^low(Jb); differences 4·10⁻¹⁰ → 2·10⁻¹⁰ at log 2) and
  negative for M₁ (−1.67·10⁻⁶, as it should be). **But the needed threshold η grows with T** (0.3 / 0.6 / 1.5): the loss S^exact − S^low is the
  energy of 𝔞h* outside N_η, fixed in η, against λ_A doubly exponential: the dimension d_η(T) of the certificate grows at least like
- λ_A^{−1/p}. This is the form of W-det in this basis. Certified windows: only those already certified in Paper 47.
+ λ_A^{−1/p}. This is the form of W-det in this basis. Certified windows: only those already certified in Paper 46.
 4. **Side finding to audit (NUMERICAL, §3.4):** the Fourier–Nyquist Galerkin with Tate gives upper bounds **below** the
  corpus reference values: λ_A(log 2) ≤ 9.83·10⁻⁸ (Jb = 800; reference r043/r117: 1.042·10⁻⁷) and λ_A(½log5) ≤ 3.09·10⁻¹²
  (reference 3.84·10⁻¹²; at the double-precision floor). Both are Galerkin upper bounds; either the Legendre basis was not
@@ -157,7 +157,7 @@ are the ones above. No sign changes; the constant of the phase-187 law changes i
 
 - **What is new as a statement.** Lemma 1.1 (iv) (the sectors are s(D) and M s(D + π/2T) M*), Lemma 1.2 (kernels of the sectors, verified
  to 10⁻¹²), Prop. 1.3 (no pointwise symbol exists), Theorem 2.1 (automatic coercivity with constant c_η = ½(s₊^e + s₊^o)), Thm 2.2, Cor. 2.3
- (certificate S_η^low from the sequences), Lemmas 2.4–2.5. Prior grep in phase-186 and Paper 47: "automatic coercivity|s₊^e|two
+ (certificate S_η^low from the sequences), Lemmas 2.4–2.5. Prior grep in phase-186 and Paper 46: "automatic coercivity|s₊^e|two
  sectors|two-sector|N_η" do not appear; the closest Schur reduction is R186_044 Thm 2 (prolates, (L-W) OPEN) and R186_025 Thm B
  (high-pass coercivity with a Poincaré constant). Here coercivity is free from the two-basis structure.
 - **What is refuted.** Question 1 (pointwise 2×2 matrix symbol in θ): NO-GO PROVED (Prop. 1.3) + NUMERICAL (1.4).

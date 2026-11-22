@@ -6,7 +6,7 @@ Pen and paper. For a positive measure λ on (0,∞) (the "comb", window weight m
 ## Corpus check
 L2_BUILD_011 rows 1–23 and row 6 (cΛ fails for c large and small), L2_BUILD_014/015 (Euler–Poisson cube; λ concave in the weight
 vector w; no prime–prime terms; (Q) ill-posed), cor:void/thm:finmod, R167_103 Theorem S (Beurling/DMV falsifiers of SIEVE proofs),
-R164_201 (Beurling below a third), Paper 47 thm:posext. grep "positive for all T|existence of a positive comb|Beurling.*positive|
+R164_201 (Beurling below a third), Paper 46 thm:posext. grep "positive for all T|existence of a positive comb|Beurling.*positive|
 continuous Beurling|ψ_B = κx|uniformly positive": nobody constructs a comb with b_T ≥ 0 for every T; Beurling systems appear
 only as falsifiers. New: Theorem 1, Corollary 2, Proposition 3, the segment of §4.
 
@@ -26,7 +26,7 @@ and **ρ_κ ∈ Pos ⟺ g_κ ≥ 0 on ℝ ⟺ κ ≥ κ* := sup_{τ: m(τ)<0} (�
 m(0) = C₀ < 0, m → ∞: {m < 0} = (−τ₀, τ₀) bounded, lem:mbounds) and κ* ≥ |C₀|/4 = 1.343… (value at τ = 0) and
 κ* ≤ |C₀|(¼ + τ₀²).
 *Proof.* Identity: N_BUILD_001 (A) with the factor κ. (⇐) the integrand is ≥ 0. (⇒) if g_κ(γ) < 0 for some γ > 0, the spectral-
-derivative family F_T^γ ∈ P_T (Paper 47 §17) and lem:wit-conc with p = g_κ (continuous, |g_κ| ≤ C(1+log(1+|τ|))) give
+derivative family F_T^γ ∈ P_T (Paper 46 §17) and lem:wit-conc with p = g_κ (continuous, |g_κ| ≤ C(1+log(1+|τ|))) give
 𝔞_T(F_T^γ)/‖F_T^γ‖² → g_κ(γ) < 0; for γ = 0 use the dilated family of §1(iii) (concentration at 0). ∎
 For κ > κ*, η_κ := inf g_κ > 0 (g_κ ≥ (κ−κ*)/(¼+τ₀²) on {m<0}, ≥ κ/(¼+τ²) + m on {m ≥ 0}, and → ∞): **b_T(ρ_κ) ≥ η_κ > 0 uniformly
 in T.** Note Λ's main term is ρ_1 and 1 < 1.343 ≤ κ*: the main term of Λ alone is NOT in Pos; its fluctuation must supply the
@@ -76,7 +76,7 @@ compact neighbourhood is positive and g_κ → ∞ at infinity; so inf > 0. Corr
 3. Corollary 2: "valid Beurling system" for a continuous ψ_B is CITED (Beurling generalized primes allow continuous
 distributions, e.g. Diamond–Zhang monograph); the window form only uses the measure, so the conclusion b_T > 0 is PROVED regardless.
 4. §4 lower bound used crude inequalities; stated as such; t* > 0 holds.
-5. Does Corollary 2 conflict with anything? Paper 47 statements are about Λ and its modifications; positivity of an overdense
+5. Does Corollary 2 conflict with anything? Paper 46 statements are about Λ and its modifications; positivity of an overdense
 smooth system is new and harmless. It shows the "sign" is easy with κ > κ*: the content of D is that κ = 1 plus the fluctuation of
 ℤ-primes suffices. This is a genuinely new quantitative fact: the arithmetic fluctuation must supply exactly the deficit
 between the main-term coefficient 1 and κ*(≥ 1.343) — measured by the symbol κ*/(¼+τ²) − 1/(¼+τ²).

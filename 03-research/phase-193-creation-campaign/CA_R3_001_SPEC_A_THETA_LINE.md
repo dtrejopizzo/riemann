@@ -1,13 +1,13 @@
 # CA_R3_001 — SPEC_A, clause (θ): where log ℕ enters the exact Schur step (phase 193, round R3)
 
-Specification round, pen and paper, no numerics, no proof of the step. Row D (λ_A(T) ≥ 0 on P_T ∀T, P47 eq:target).
+Specification round, pen and paper, no numerics, no proof of the step. Row D (λ_A(T) ≥ 0 on P_T ∀T, P46 eq:target).
 Inputs: SPEC_A (phase 191) §2–§3, Lemma S; CA_R2_002; EI_001 (2.1) (SPEC_A §2(d) correction: polar partner = opposite-collar Tate
-moment p); P47 thm:shape, cor:shape, prob:region, lem:wh-schurabs, cor:margin1; index README PRINCIPIO RECTOR + front M correction.
+moment p); P46 thm:shape, cor:shape, prob:region, lem:wh-schurabs, cor:margin1; index README PRINCIPIO RECTOR + front M correction.
 **No negative value of 𝔞_T for ζ is produced or claimed.**
 
-**Numbering erratum (SPEC_A §4 table).** SPEC_A uses O6 = Beurling, O7 = a_P. P47 (lines 8331–8345): O6 = a_P, O7 = quartets,
+**Numbering erratum (SPEC_A §4 table).** SPEC_A uses O6 = Beurling, O7 = a_P. P46 (lines 8331–8345): O6 = a_P, O7 = quartets,
 O8 = f_t, O9 = rational twist, O10 = Epstein, O11 = Beurling, O12 = field change, O13 = bounded range, O14 = truncation,
-O15 = Poisson. This memo uses P47 numbering.
+O15 = Poisson. This memo uses P46 numbering.
 
 ## 1. The exact step quantity in Chebyshev coordinates (PROVED, identity)
 Notation of SPEC_A: window T_{j+1}, frozen window I_{T_j}, collars L_j, R_j of width ε_j = ½log(n_{j+1}/n_j); comb n ≤ n_j;
@@ -76,7 +76,7 @@ By Lemma S(i) L*_j(θ) for all j is row D with explicit margins (B8: REF-D, a va
 | O8 f_t | escaped (ARGUED) | non-Euler coefficients beyond λ₁: (Ch) fails there |
 | O9 rational twist | survives the ℤ-part (comb unchanged) | as O7; (ii) |
 | O10 Epstein | escaped (ARGUED) | no divisor identity; the sawtooth half alone is FE-class generic (CA_C_007), the Möbius half is not |
-| O11 Beurling | escaped (ARGUED, P47 falsifier ARGUED) | non-lattice positions: no sawtooth; Lemma C alone survives |
+| O11 Beurling | escaped (ARGUED, P46 falsifier ARGUED) | non-lattice positions: no sawtooth; Lemma C alone survives |
 | O12 field change | escaped / not uniform | ideal norms repeat; (Ch) over ℕ fails; spec is ζ-specific |
 | O13 bounded range | escaped | ∀j |
 | O14 truncation | escaped | whole form |

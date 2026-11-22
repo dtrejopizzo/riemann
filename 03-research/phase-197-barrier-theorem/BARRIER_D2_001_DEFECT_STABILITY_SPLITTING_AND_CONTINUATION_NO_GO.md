@@ -5,7 +5,7 @@ positivity of 𝔞_T on P_T is assumed true; this memo closes a *method class* (
 
 ## 0. Corpus / index check and new reason
 - Read: BARRIER_001 (Thm 3, Thm 5, §6 D2), BARRIER_EST_001 (Thm 4), INV_P_001 (P1 Mellin defect, P2 band), INV_L_001 (L1–L3),
-  Paper 47 def:W/eq:nuw, lem:degen, lem:contA, prop:shape-eulerdel, thm:log5A, cor:Tarch, cor:margin1.
+  Paper 46 def:W/eq:nuw, lem:degen, lem:contA, prop:shape-eulerdel, thm:log5A, cor:Tarch, cor:margin1.
 - Index hits: **06_ R4 (Ω_Φ) "functional inequality controlling the window negativity by the Poisson–Euler residual"**, dead
   sub-route "perturbative or Lipschitz 𝒦_T linearized at Λ is tautological (N_010 §3)"; 02_ MONO (stability/monotonicity of LWF);
   AUDIT_193 #28/#101 (amplitude homotopy W(α); spectral-flow/no-crossing = positivity); INV_P (P2 band defect not entering sign).
@@ -15,7 +15,7 @@ positivity of 𝔞_T on P_T is assumed true; this memo closes a *method class* (
   in comb space). The result below covers every Δ_T and every path, so it is a strict generalisation, not a retry.
 
 ## 1. The family 𝓔𝓟 and the defect Δ_T (definitions)
-Window: N=⌈e^{2T}⌉, v_n(a)=a(n)/√n, 𝔞_T^{(a)}, λ_A(T;a) as in BARRIER_001 §1 (Paper 47 def:W, eq:nuw); window collapse:
+Window: N=⌈e^{2T}⌉, v_n(a)=a(n)/√n, 𝔞_T^{(a)}, λ_A(T;a) as in BARRIER_001 §1 (Paper 46 def:W, eq:nuw); window collapse:
 λ_A(T;a) depends only on π_N a.
 - **𝓔𝓟 (Euler-product combs).** For θ=(θ_p)_p real with Σ_p |θ_p−1| p^{−1/4} < ∞, let a_θ(p^k)=θ_p log p, a_θ=0 off prime
   powers; ζ_{a_θ}(s)=∏_p(1−p^{−s})^{−θ_p} (Beurling-type real-exponent Euler product over ℕ). Contains Λ (θ≡1), a_P (θ_p=0 for

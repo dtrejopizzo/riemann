@@ -7,7 +7,7 @@ information/Petz.** The exact normalization `Lambda*1=log` produces a channel
 conditioned on the product `n=dk`. Every information loss of that channel
 decomposes along the divisor fibers of `n`. On a fiber of cardinality one, the loss,
 its Hessian, and the recovery defect are identically zero. The fibers of the
-primes `2` and `3` have cardinality one, while Paper 47's physical form
+primes `2` and `3` have cardinality one, while Paper 46's physical form
 has nonzero atoms at `log 2` and `log 3`. Hence no Petz Hessian of this class
 can equal `Q_(N,L)`, even before dealing with Gamma or the poles.
 

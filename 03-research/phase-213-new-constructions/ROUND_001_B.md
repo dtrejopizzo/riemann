@@ -8,11 +8,11 @@ The master index, Parts VI (registro20_02, phase138) and VII.C, lists D.15.3(★
 as «PRIME ≤ ARCH + ½deg²» under PROVED. That synthesis is checked against
 `../phase-138-row-d-detecting-cones/R138_001_ROUND1.md`, §0 and D.15.3(i),(ii),(v).
 No construction is opened: reading the source suffices to decide that there is
-no global inequality already available to transfer to Paper47.
+no global inequality already available to transfer to Paper46.
 
 ## Exact scope
 
-The source works with F in D^W (Paper46, Definition11.1). It defines
+The source works with F in D^W (Paper47, Definition11.1). It defines
 
     deg⁺F = ∫F(t)e^(t/2)dt,
     deg⁻F = ∫F(t)e^(−t/2)dt,

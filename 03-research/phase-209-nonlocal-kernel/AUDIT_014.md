@@ -1,6 +1,6 @@
 # AUDIT_014 — Gaussian component after removing the rank one
 
-2026-10-19. Independent check. **PROVED, with declared CITED input from Paper47.**
+2026-10-19. Independent check. **PROVED, with declared CITED input from Paper46.**
 
 Review of `LINK_014_REMOVING_RANK_ONE.md`. Consulted: the project rules, routes index, grid and crossword. The difference with respect to 013 is substantive: its lower bound depended on κvv*; here a smaller subform, Π, is studied via an independent argument. An obstruction for a smaller form is not deduced from the obstruction for a larger one.
 
@@ -22,7 +22,7 @@ Fixing T≥1 when presenting the family guarantees k≥8, sufficient derivatives
 
 ## 3. Cross-check with the declared form
 
-The CITED bound refers to these concrete F_T, as verified in 013 against the proof in Paper47; a bound for a test is not extracted from the spectral infimum. With ||F_T||²=O(T^(3/2)), one gets |Q_T|=O(T^(5/2)e^(−15.449T)). Dividing by E_Π≥c₀T gives the quotient O(T^(3/2)e^(−15.449T)) and excludes every fixed positive constant for Π and for S−κvv*.
+The CITED bound refers to these concrete F_T, as verified in 013 against the proof in Paper46; a bound for a test is not extracted from the spectral infimum. With ||F_T||²=O(T^(3/2)), one gets |Q_T|=O(T^(5/2)e^(−15.449T)). Dividing by E_Π≥c₀T gives the quotient O(T^(3/2)e^(−15.449T)) and excludes every fixed positive constant for Π and for S−κvv*.
 
 Smooth approximation in H¹ preserves the polar condition and the strict inequality: Q is continuous in H¹ and the reduced energies are continuous in L² of each window by 011 and domination by S. The necessity for a possible scale c(T) is only an upper bound; neither existence nor impossibility of such a scale is claimed.
 

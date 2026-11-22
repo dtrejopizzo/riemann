@@ -1,6 +1,6 @@
 # State 049 — R12 resolved for one pole movement
 
-The obligation R12 of PRIME_TRANSFER014 §5 is PROVED in its precise class. The global objective of Paper47 remains OPEN; there is no new window T. Papers untouched.
+The obligation R12 of PRIME_TRANSFER014 §5 is PROVED in its precise class. The global objective of Paper46 remains OPEN; there is no new window T. Papers untouched.
 
 ## Uniform result, not just an endpoint
 

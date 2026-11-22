@@ -6,7 +6,7 @@ X = e^{2T}, A_T = Σ_{N_T} v_n, M_T(τ) = Σ_{N_T} v_n cos(τu_n), m(τ) = Re ψ
 
   s_T(τ) := m(τ) − M_T(τ),   q_T(F) := (1/2π) ∫ s_T |F̂|² dτ   (F ∈ L²(I_T) in the form domain).
 
-On P_T the pole term vanishes and a_T = q_T|_{P_T} (Paper 47 prop:nodes, CITED). For δ ∈ ℝ,
+On P_T the pole term vanishes and a_T = q_T|_{P_T} (Paper 46 prop:nodes, CITED). For δ ∈ ℝ,
 m_δ^{L²}(T) and m_δ(T) count the eigenvalues below δ of q_T on L²(I_T) and on P_T (compact resolvent, CITED).
 Since P_T has codimension 2, min–max gives λ_k(q_T|P_T) ≥ λ_k(q_T), hence m_δ(T) ≤ m_δ^{L²}(T).
 Everything below is a size statement; it is comb-generic in the sense of §5 and carries no sign.
@@ -19,7 +19,7 @@ Everything below is a size statement; it is comb-generic in the sense of §5 and
     Landau–Widom *asymptotic* to predict the *value* of λ_A. Here Landau's trace/min–max device is used only as an
     *upper count* of eigenvalues below a level (no value of λ_A, no asymptotic main term). Different object (a count),
     different claim (an inequality); the recorded failure (wrong prediction of β_max) does not arise.
-  * thm:X (P47; "PROVED mod LW, averaged") and W-loc (σ^(η) = min(σ_T, η) has the same negative set but negative
+  * thm:X (P46; "PROVED mod LW, averaged") and W-loc (σ^(η) = min(σ_T, η) has the same negative set but negative
     form): both concern sign. Theorem A below is consistent with W-loc: it counts, it does not sign.
   * Slepian entries (G3A-153, R160_S4: decay/uncertainty on wells, refuted as sign tools): not used; Theorem A needs
     only the exact trace of a time–frequency limiting operator.
@@ -27,10 +27,10 @@ Everything below is a size statement; it is comb-generic in the sense of §5 and
     to produce a sign. Theorem B below is an effective large-values bound for M_T on [0, Ω] (Montgomery–Vaughan mean
     value + sub-Gaussian torus moments); it decides no sign, uses no zero, and is not in the index (grep "Hilbert
     inequality", "Montgomery–Vaughan": no hit).
-- Paper 47 prop:NC / cor:P3 (CITED): the same min–max + trace device for the archimedean form alone with a two-value
+- Paper 46 prop:NC / cor:P3 (CITED): the same min–max + trace device for the archimedean form alone with a two-value
   minorant of m. Theorem A is its extension to the joint symbol with the layer-cake minorant (δ + η − s_T)_+; at
   δ = 0 and M_T ≡ 0 it reduces to prop:NC with a different constant.
-- Paper 47 prop:band (CITED): {s_T < 0} is a finite union of bounded intervals inside [0, τ^lo], τ^lo > 2πe^{A_T};
+- Paper 46 prop:band (CITED): {s_T < 0} is a finite union of bounded intervals inside [0, τ^lo], τ^lo > 2πe^{A_T};
   prop:negtrace(i): tr Q_T σ_−(D) Q_T = (2T/2π)∫σ_−. Theorem A is the counting companion of prop:negtrace(i).
 - ROUND_006_A Theorem 5 (cap exp(2e^T(1+o(1)))) and §7 (the target lemma and the heuristic exp(O(T²))). ROUND_002_A
   Prop. M (sample identity; deep samples force near-integer coincidences): consistent with Lemma B.0 below, not used.
@@ -76,7 +76,7 @@ only as good as the measure of the sublevel set; §3 bounds that measure.
 
 Evaluation (NUMERICAL, grid of 4·10⁶ points on [0, 2πe^{A_T+3}], η ∈ {0.05,…,2}): at δ = 0 the bound of Theorem A
 (first form, best η = 1) is 13.98, 35.0, 174.5 at T = log 2, 0.9, 1.2; |{s_T < 0}| = 23.3, 48.6, 174.2. Against the
-certified n_−(a_T|P_T) = 1, 2 at log 2, 0.9 (Paper 47 thm:index): the device loses the factor expected from a
+certified n_−(a_T|P_T) = 1, 2 at log 2, 0.9 (Paper 46 thm:index): the device loses the factor expected from a
 Markov/trace count; it is not a sharp count, it is an explicit one.
 
 ## 3. Theorem B: a uniform large-values bound for the comb (PROVED, explicit)
@@ -141,7 +141,7 @@ Comparison.
 - ROUND_006_A Theorem 5: m_δ ≤ exp(2e^T(1 + O(e^{−T/2}))). Corollary D reaches the same leading exponent 2e^T by an
   independent route (symbol sublevel + effective large values, no overlap bound), and is weaker in the second term
   by the factor exp(2e^T(log T + 0.39)/T). Neither is single exponential.
-- Paper 47 cor:arena: lower count exp(4e^T(1+o(1))) for modes below A_T (a different level); Corollary A.2 is that
+- Paper 46 cor:arena: lower count exp(4e^T(1+o(1))) for modes below A_T (a different level); Corollary A.2 is that
   scale; Corollary D halves the exponent.
 - Heuristic exp(O(T²)) of ROUND_006_A §7: it uses the Gaussian tail e^{−L²/(2S_T)} of Remark B.1 at L ≈ log τ up to
   L ≈ A_T, which requires moments of order k ≈ L²/S_T ≈ e^{2T}/(4T²) at heights τ ≈ e^L; Theorem B then has error

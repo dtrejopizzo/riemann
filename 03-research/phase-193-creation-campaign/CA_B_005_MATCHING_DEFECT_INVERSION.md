@@ -3,7 +3,7 @@
  Pen and paper. **No negative value for ζ produced or claimed.**
 
 ## 0. Corpus check
-CA_B_003 (Theorem 1: Δ_a ≡ 0 ⟺ FE; Cor via Hamburger, CONDITIONAL); P47 prop:finite(iv) (the window matrix is affine in the weights),
+CA_B_003 (Theorem 1: Δ_a ≡ 0 ⟺ FE; Cor via Hamburger, CONDITIONAL); P46 prop:finite(iv) (the window matrix is affine in the weights),
 (R)(6) (sensitivity at scale λ_A/κ_T), lem:shape-margin; index W3′, N_009/010, G4F-R162_2801 (quantitative Hamburger rigidity, DEAD).
 
 ## 1. The statement one would want
@@ -13,8 +13,8 @@ coordinator's question is whether a quantitative (Inv) — "defect ≥ δ ⇒ bo
 argument (bottom ≥ −f(dist(a,{Δ=0})) and equality structure at Δ = 0).
 
 ## 2. Proposition 2 (positivity is open, matching is thin; PROVED at certified windows)
-Fix T with λ_A(T) > 0 (PROVED in P47 for T ≤ ½log5 by the certificates). The bottom b_T(a) is the least eigenvalue of a finite matrix affine
-in (a(n))_{n<e^{2T}} (prop:finite(iv)), hence |b_T(a) − b_T(Λ)| ≤ κ_T‖a − Λ‖_{ℓ^∞} with κ_T the norm of the linear part (P47 notation).
+Fix T with λ_A(T) > 0 (PROVED in P46 for T ≤ ½log5 by the certificates). The bottom b_T(a) is the least eigenvalue of a finite matrix affine
+in (a(n))_{n<e^{2T}} (prop:finite(iv)), hence |b_T(a) − b_T(Λ)| ≤ κ_T‖a − Λ‖_{ℓ^∞} with κ_T the norm of the linear part (P46 notation).
 So every comb with ‖a − Λ‖ < λ_A(T)/κ_T has b_T(a) > 0. Among them are a = Λ + cδ₂, 0 < c < λ_A/κ_T, for which
 Φ_a = γζ·exp(c2^{−s}/log 2) and Δ_a(τ) = −2c·2^{−½}cos(τ log 2) ≢ 0. Hence (Inv) is **false** at every window with λ_A > 0, and no
 quantitative form f(δ) with f(δ) > 0 for δ > 0 holds in the ℓ^∞-small regime. ∎

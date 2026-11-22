@@ -3,7 +3,7 @@
 Status: **NO-GO (PROVED)**. No sign is claimed. Pure mathematics; no numerics.
 
 Corpus check (done first). grep "tensor power", "Deligne" in 03-research: phase 149 (additive pencil, Deligne
-ingredients (i)–(v), missing (iii) = a-priori poles of the family, (P149)); Paper 46 T5 (Thm 27.3–27.4, no
+ingredients (i)–(v), missing (iii) = a-priori poles of the family, (P149)); Paper 47 T5 (Thm 27.3–27.4, no
 single-fibre extraction); R151_005 T6; R157_002 row 22 (Deligne route over Z: EXCL); R160_S5 B8; R162_903 Thm 5.1
 (tensor lift). None of these treats the **d→∞ limit of the first-contact vector itself** (q(F^{⊗d}) = q(F)^d
 with d-th roots), nor Kazhdan/de Finetti/CLT on N^{⊗d}. This file closes that gap negatively.
@@ -72,7 +72,7 @@ bounded by dim H^*(Sym^d) · q^{dw/2} with polynomial dim H^*, from cohomology (
 (a) Sym^d of the trivial GL_1 datum is trivial; the Satake parameters of ζ at p equal 1, so Ramanujan is empty and
 RH is not a Ramanujan statement for GL_1; (b) the tensor object ζ^d (or ⊗ in d variables) has no a priori bound
 beyond d·(base) (Prop 1.1, Thm 2.1(iii)); (c) the a-priori count of the tensor family is exactly ingredient (iii)
-of phase 149, missing ((P149)), and single-fibre extraction is excluded by Paper 46 T5 (Thm 27.3).
+of phase 149, missing ((P149)), and single-fibre extraction is excluded by Paper 47 T5 (Thm 27.3).
 
 ## 4. Falsifiers
 

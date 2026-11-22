@@ -1,6 +1,6 @@
 # Two distant jump tubes prevent a uniform floor for free remainders
 
-Antecedents 213-10-A, BUILD084 and P47 lem:transl. The local proof requires a floor for any remainder of the domain supported in the tubes. That condition is checked for the full family of profiles, admitting only two of the physical tubes. The prior cross-check distinguished this test from the problem of the remainders actually produced by translations of the same profile.
+Antecedents 213-10-A, BUILD084 and P46 lem:transl. The local proof requires a floor for any remainder of the domain supported in the tubes. That condition is checked for the full family of profiles, admitting only two of the physical tubes. The prior cross-check distinguished this test from the problem of the remainders actually produced by translations of the same profile.
 
 Fix any δ>0 and take φ real, smooth, nonnegative and nonzero, with compact support in (0,δ). For large integer k, g_k=φ+V_(log k)φ is supported in two tubes of length δ starting at 0 and log k, jump positions of F_k for k≥4. Its squared norm is 2||φ||². The archimedean energy is uniformly bounded above: the transform is the product of that of φ by a factor bounded by 2, and ∫|m||φ̂|² is finite.
 

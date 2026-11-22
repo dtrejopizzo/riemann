@@ -3,11 +3,11 @@
 Pen and paper; no numerics.
 **No negative value of the window form for ζ is produced or claimed in this round.**
 
-Read before seeding: CA_A_SYNTHESIS, CA_B_SYNTHESIS ((P1)–(P6)), CAMPAIGN_LEDGER (O-labels per P47 l. 8331–8345), P47 §20
+Read before seeding: CA_A_SYNTHESIS, CA_B_SYNTHESIS ((P1)–(P6)), CAMPAIGN_LEDGER (O-labels per P46 l. 8331–8345), P46 §20
 (thm:shape, lem:shape-ident, prop:shape-phase, prob:region (1)–(11)), ROUTES-TRIED-INDEX README + 06_, EI_003 (+ review).
 There are no CA_C_* files in the folder at the time of writing, so there is nothing to avoid duplicating.
 
-## Common frame (EI_003 Thm 1 = P47 prop:shape-phase, PROVED)
+## Common frame (EI_003 Thm 1 = P46 prop:shape-phase, PROVED)
 X = e^{2T}; Z_X = ζ/Z_{<X} = 1 + Σ_{n≥X} z_X(n)n^{−s}; Θ = Θ_X; Z_T = e^{iΘ}Z_X(½+iτ) real; 𝔞_T(F) = (1/π)∫Θ′|F̂|²dτ on P_T.
 Convention used in all CA_D memos: F̂(τ) = ∫F(x)e^{iτx}dx; for a tempered g on ℝ_u, G(τ) = ∫g(u)e^{−iτu}du, so ∫|G|²dτ = 2π∫|g|²du.
 
@@ -23,7 +23,7 @@ Legend: ✓ passes, ✗ fails, — not applicable. "Index" = grep of ROUTES-TRIE
 | D4 | **Kramers–Kronig / Dirichlet-to-Neumann** between log\|Z_X\| and arg Z_X on the line. | EI_003 §4; CA_B_002 (Riesz); CA_B_004 Prop 1 (Cauchy–Riemann for γZ_{<X}) | for Z_X: (4) ✗ (holomorphy of log Z_X in Re s>½). For γZ_{<X}: an identity, (3) ✗ | (P4) ✗ / (P5) ✗ | B″ | **DISCARD.** |
 | D5 | **Riemann–Siegel chirp + comb as frequency modulation** (lead (b)): θ′ = ½m is the carrier; the comb is an FM perturbation with Jacobi–Anger sidebands. | R163_603 DEAD (RS/AFE is FE-only data, shared by f_χ) | (3) ✗ (mean frequency is linear in the phase, by D1) | (P2) ✗ | f_χ (O-type F3) | **DISCARD.** |
 | D6 | **Scattering causality (Wigner bound)** for S_X = e^{2iΘ} = Z_X(1−s)/Z_X(s): time delay ≥ −radius for causal S. | phase 161 product-Hardy / typed scattering (PARTIAL, REF-D); phase 118 W3 DEAD | causality of S_X ⟺ no poles of S_X in the physical sheet ⟺ no zeros of Z_X in Re s>½: (4) ✗ | (P4) ✗ | — | **DISCARD.** |
-| D7 | **de Branges / Kreĭn phase function** with phase Θ. | ES-16 CIRCULAR/FALSIFIED; P47 Kreĭn indeterminacy (phase 155 r5) | a phase function of a Hermite–Biehler E needs Θ′>0 pointwise, which fails (σ_T(0)=C₀−A<0, thm:nolocal). A positive extension of Θ′ is a certificate (thm:Z). | (P1) ✗ | class (D) | **DISCARD.** |
+| D7 | **de Branges / Kreĭn phase function** with phase Θ. | ES-16 CIRCULAR/FALSIFIED; P46 Kreĭn indeterminacy (phase 155 r5) | a phase function of a Hermite–Biehler E needs Θ′>0 pointwise, which fails (σ_T(0)=C₀−A<0, thm:nolocal). A positive extension of Θ′ is a certificate (thm:Z). | (P1) ✗ | class (D) | **DISCARD.** |
 | D8 | **Amplitude-exponent homotopy** α ↦ W(α) = ∫Θ′\|F̂\|²\|Z_X\|^{2α}. W(0) is D; W(k) ≥ 0 for k ∈ ℕ_{≥1} (by D2 with k-th order Tate). | no hit | at non-integer α, Z_X^α is single-valued in Re s>½ only without zeros there: (4) ✗. Integers do not control α=0: no Carlson-type rigidity, since W is a signed integral. | (P4) ✗ off ℕ | — | **DISCARD as a route.** The integer statement is included in CA_D_001 (Thm 1′). |
 | D9 | **Closure of the transferred cone.** If the spectral densities \|F̂_j Z_X\|², F_j ∈ P_T, were L¹((1+\|Θ′\|)dτ)-dense among the \|F̂\|², F ∈ P_T, D would follow from D2. | no hit; it is a question about D2 | it would be a valid deduction (it uses D2 jointly with an approximation); whether it is (11)-specific depends on the approximation | — | — | **SURVIVES PRE-SCREEN as a question.** Developed in CA_D_002. Answer: NO-GO, PROVED. |
 

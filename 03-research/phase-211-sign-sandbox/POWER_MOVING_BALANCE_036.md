@@ -190,7 +190,7 @@ ARCH remains uniformly bounded: the time profiles of the mixture lie between e^(
 
 This is an obstruction to the separated procedure indicated in§1, not to the complete average t_m. A cancellation INSIDE t_m before averaging could recover a different window; that is not refuted. If prime and polar are separated, their real compensation must be preserved in the energy band m~N/32, with the magnitudes quantified here. The previous identity018 cancelling the main term is not sold as a new solution: it leaves a signed arithmetic residue that still has to be bounded.
 
-Neither negative nor positive W for all N, a new data region nor closure of Paper47 is claimed. No campaign of indices is continued. The useful result is to localize quantitatively where the probabilistic discard fails and where the cancellation must be preserved.
+Neither negative nor positive W for all N, a new data region nor closure of Paper46 is claimed. No campaign of indices is continued. The useful result is to localize quantitatively where the probabilistic discard fails and where the cancellation must be preserved.
 
 ## 9. Verification
 

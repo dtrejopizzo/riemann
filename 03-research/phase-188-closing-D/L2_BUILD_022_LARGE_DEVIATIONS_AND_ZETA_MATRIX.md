@@ -4,7 +4,7 @@ Setting of 021 §1 (Poisson comb, intensity ρ(u) = κe^u/u on (log 2, ∞), wei
 For F ∈ P_T put f_F(u) := w(u)Re c_F(u). Random form: 𝔞^ν(F) = 𝔞_∞(F) − Σ_j f_F(u_j). 021 is not edited (under review).
 
 ## Corpus check
-021 (Campbell mean/variance, CLT at φ₀), 009/010 (Z_T(φ₀) identity, centre criticality), Paper 47 Thm Z / lem:roughEF (explicit formula
+021 (Campbell mean/variance, CLT at φ₀), 009/010 (Z_T(φ₀) identity, centre criticality), Paper 46 Thm Z / lem:roughEF (explicit formula
 as identity), thm:finZ, R186_114 Lemma A (Tate correction of size e^{−T′}). grep "Laplace functional / Chernoff / exponential moment of the
 Weil form / independent lag windows": none. New: §1–§4.
 
@@ -35,7 +35,7 @@ rate exp(−cT) for κ = 1 and for every κ > κ* alike (density changes the mea
 The GOE-type rate exp(−cd²) ≍ exp(−cT²) of 021 §3 is NOT obtained; it remains ARGUED only.
 
 ## 4. ζ's clamped-span matrix in the same coordinates (identity; sizes CITED/ARGUED)
-For F, G in the clamped span H ⊂ P_T, the explicit formula as an IDENTITY (Paper 47 Thm Z / lem:roughEF, CITED; polar terms vanish on P_T):
+For F, G in the clamped span H ⊂ P_T, the explicit formula as an IDENTITY (Paper 46 Thm Z / lem:roughEF, CITED; polar terms vanish on P_T):
   𝔞_ζ(F, G) = Σ_ρ F̂(γ_ρ)·conj(Ĝ(conj γ_ρ)),  γ_ρ := −i(ρ − ½).
 Mean in the Poisson coordinates: 𝔼𝔞^ν(F, G) = (1/2π)∫ m^♯ F̂ conj Ĝ dτ (κ = 1), entries O(1). So ζ's "fluctuation matrix" is
   X_ζ := 𝔞_ζ − 𝔼𝔞^ν = Z − M₀,  Z_{FG} = Σ_ρ F̂(γ_ρ)conj Ĝ(conj γ_ρ),  M₀ = m^♯-form.

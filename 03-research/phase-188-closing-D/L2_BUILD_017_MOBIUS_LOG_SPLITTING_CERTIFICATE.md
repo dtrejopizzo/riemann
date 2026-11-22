@@ -2,7 +2,7 @@
 
 ## Corpus check
 Conjugated dilation: L2_BUILD_016, lem:contA. Operator form 𝔞_T(F) = 𝔞_∞(F) − 2Re⟨U_μF, U_logF⟩: N_BUILD_002 §1 / N_BUILD_005 §1
-(identity Λ = μ*log in shift operators). Paper 47 §3 (primal/dual, measure certificates, non-attainment), §Z (flat-top
+(identity Λ = μ*log in shift operators). Paper 46 §3 (primal/dual, measure certificates, non-attainment), §Z (flat-top
 certificates = explicit formula), W-lin (fixed-frame linear certificates, R186_026/031), thm:posext / lem:half. grep
 "splitting certificate / W^{-1} / AM-GM operator / factorization certificate / U_μ": only G1_B3_R1 (unrelated U_μ dilation
 group). No memo uses an operator-valued certificate on the Möbius side. §2–§4 are new.

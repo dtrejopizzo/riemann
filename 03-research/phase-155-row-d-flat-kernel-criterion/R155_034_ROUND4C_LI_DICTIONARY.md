@@ -1,8 +1,8 @@
 # R155_034 — round 4c: the Li/Keiper and Báez-Duarte criteria as dual certificates
 
 **Order** `R155_031` §3.2(v) and §4**P4** (rank 4) ·
-**Scope** Papers 36 and 47 in one language, through Theorem Z (`thm:Z`, Paper 47 §7).
-**Files touched** this file, `scripts/r4c/`, the phase README, `PLAN.md`. Paper 47, `scripts/r4a`,
+**Scope** Papers 36 and 47 in one language, through Theorem Z (`thm:Z`, Paper 46 §7).
+**Files touched** this file, `scripts/r4c/`, the phase README, `PLAN.md`. Paper 46, `scripts/r4a`,
 `scripts/r4b` untouched.
 
 ---
@@ -28,7 +28,7 @@ flat-top coordinates are **balanced**. Concretely:
  *[amended per R155_035]* Unconditionally (L4a), the `{2,3}` truncated comb
  `λ_n^{(S)}` is eventually positive — an explicit arithmetic fact with no zero-sum content. Under
  RH, sourced to Bombieri–Lagarias/Coffey (L4b), `λ_n^{(S)}` differs from the full `λ_n` by
- `o(n log n)`, the exact opposite of Theorem SC. The collectivity of positivity — Paper 47's
+ `o(n log n)`, the exact opposite of Theorem SC. The collectivity of positivity — Paper 46's
  sharpest structural fact — is **invisible** in the Li coordinates. This is, in one sentence, why
  Paper 36's fifteen-step chain *terminates* at `λ_n ≥ 0` instead of penetrating it.
 4. **Báez-Duarte / Nyman–Beurling: no theorem, only a dictionary, and a sign obstruction** (§3). The
@@ -47,11 +47,11 @@ culminations of the corpus.
 
 | source | what it proved | used here |
 |---|---|---|
-| Paper 36 `36-obstruction-ledger/main.tex` | the fifteen-step Pick/Nevanlinna chain; `Ω₇` = ARP-P reduces to `δ_N ≥ 0 ∀N ⟺ λ_n ≥ 0 ∀n` (Li–Keiper), the **sole open central input**; `thm:explicit-channel` = the same Weil functional Paper 47 uses; `ng:envelope`: the scale-uniform bound `|λ_n^{prime}| ≤ c√n log n` is **RH-strength**, and the former stationary-phase reduction is **withdrawn**; the umbrella wall — an off-line `ρ` injects `r^n`, `r = \|1−1/ρ\| > 1`, that overtakes only *eventually*, so **no finite `n` closes it**; `ng:partition` (the archimedean term is not a per-prime density) | §2, §4 |
+| Paper 36 `36-obstruction-ledger/main.tex` | the fifteen-step Pick/Nevanlinna chain; `Ω₇` = ARP-P reduces to `δ_N ≥ 0 ∀N ⟺ λ_n ≥ 0 ∀n` (Li–Keiper), the **sole open central input**; `thm:explicit-channel` = the same Weil functional Paper 46 uses; `ng:envelope`: the scale-uniform bound `|λ_n^{prime}| ≤ c√n log n` is **RH-strength**, and the former stationary-phase reduction is **withdrawn**; the umbrella wall — an off-line `ρ` injects `r^n`, `r = \|1−1/ρ\| > 1`, that overtakes only *eventually*, so **no finite `n` closes it**; `ng:partition` (the archimedean term is not a per-prime density) | §2, §4 |
 | Paper 38 `38-li-fir-stability/main.tex` | `λ_n` as the sampled output of a Cayley plant; `limsup\|λ_n\|^{1/n} ≤ 1 ⟺ RH`; under RH `λ_n = O(n log n)`; off-line zeros force `\|λ_n\| ≥ cR^n` on a syndetic set; FIR/moving-window criteria that do **not** need every sample to be positive | §2.4 |
-| Paper 47 §3 `def:PD`, `thm:D1` | (P)/(D), strong duality, **finite** atomic certificates | §2.5 |
-| Paper 47 §7 `thm:Z`, `thm:Zexh`, `cor:RH`, `cor:zeros`, `lem:Rrig`, `cor:nontermwise`, `thm:finZ` | every certificate is an explicit-formula evaluation `f_w = Σ_ρ ŵ(τ−γ_ρ)`; flat-top class `𝒲_T` (`w ≡ 1` on `[−2T,2T]`, `\|w\| ≤ Ce^{−(½+δ)\|u\|}`); **no flat-top `w` has `ŵ ≥ 0`**; no finite zero set carries a certificate | §2.3, §2.6 |
-| Paper 47 §8 `thm:SC`, `cor:SC1` | sub-comb negativity: any comb of mass `A < −C₀ = 5.3721834` is negative for `T ≥ T₀(A)`; positivity is **collective** | §4.4 |
+| Paper 46 §3 `def:PD`, `thm:D1` | (P)/(D), strong duality, **finite** atomic certificates | §2.5 |
+| Paper 46 §7 `thm:Z`, `thm:Zexh`, `cor:RH`, `cor:zeros`, `lem:Rrig`, `cor:nontermwise`, `thm:finZ` | every certificate is an explicit-formula evaluation `f_w = Σ_ρ ŵ(τ−γ_ρ)`; flat-top class `𝒲_T` (`w ≡ 1` on `[−2T,2T]`, `\|w\| ≤ Ce^{−(½+δ)\|u\|}`); **no flat-top `w` has `ŵ ≥ 0`**; no finite zero set carries a certificate | §2.3, §2.6 |
+| Paper 46 §8 `thm:SC`, `cor:SC1` | sub-comb negativity: any comb of mass `A < −C₀ = 5.3721834` is negative for `T ≥ T₀(A)`; positivity is **collective** | §4.4 |
 | Phases 147–155 | **zero** Li–Keiper work; **zero** Báez-Duarte hits anywhere in the row-D arc (`R155_031` §3.2(v)) | — |
 | Phase 33 `phase-33-dbn/82-variational-reformulation-and-the-connection.md` and neighbours | the corpus's only Nyman–Beurling material: variational density, exponential completeness, the central measure `dν` | §3 |
 | Phase 104 `104_02_LAGARIAS_TRANSLATION.md`, `104_85_NONLOCAL_PRIME_HURWITZ_NYMAN_GATE.md` | Nyman-type gates, all closed negative | §3 |
@@ -118,7 +118,7 @@ bookkeeping).
 ### 2.2 The arithmetic side, and why it is `m^{−1}` and not `m^{−1/2}` — `FORMAL`, not `PROVED`
 *[amended per R155_035]*
 
-Apply the Weil functional of Paper 47 `thm:Z`(i) to the even test `w_n` of L1(4). The prime term of
+Apply the Weil functional of Paper 46 `thm:Z`(i) to the even test `w_n` of L1(4). The prime term of
 that functional is `−Σ_{m≥2} v_m w_n(log m)` with the paper's normalisation `v_m = 2Λ(m)/√m`. Since
 `w_n(log m) = P_n(log m)·m^{−1/2}`, the two square roots cancel to give, formally,
 
@@ -142,11 +142,11 @@ same way — is `CITED`, not used.
 
 ### 2.3 Theorem L2: the two families are disjoint
 
-**Theorem L2.** For every `n ≥ 1` and every `T > 0`, `w_n ∉ 𝒲_T` (Paper 47 `def:W`). Consequently no
+**Theorem L2.** For every `n ≥ 1` and every `T > 0`, `w_n ∉ 𝒲_T` (Paper 46 `def:W`). Consequently no
 Li coefficient is a flat-top dual certificate, and no flat-top certificate value equals any `λ_n`.
 
 *Proof.* Three independent obstructions, any one sufficient.
-(a) **Sign.** By L1(3), `ŵ_n = Φ_n ≥ 0` on `ℝ`. `lem:Rrig` / `cor:nontermwise` (Paper 47) say that an
+(a) **Sign.** By L1(3), `ŵ_n = Φ_n ≥ 0` on `ℝ`. `lem:Rrig` / `cor:nontermwise` (Paper 46) say that an
 even continuous `w ∈ L¹` with `w ≡ 1` on any interval `[−2T,2T]` cannot have `ŵ ≥ 0`. So `w_n` is not
 flat-top on any window.
 (b) **Decay.** `def:W` requires `|w(u)| ≤ Ce^{−(½+δ)|u|}` with `δ > 0`. By L1(4) the decay of `w_n` is
@@ -155,7 +155,7 @@ poles of `Φ_n` sit **on** the boundary `|Im γ| = ½` of the Weil admissibility
 (c) **Flatness.** `w_n` is real-analytic on `(0,∞)` and non-constant, so it is not identically `1` on
 any interval. ∎
 
-**Remark (the structural reading).** (a) is the sharp one. Paper 47 `cor:nontermwise` proves that a
+**Remark (the structural reading).** (a) is the sharp one. Paper 46 `cor:nontermwise` proves that a
 flat-top certificate is *always* a statement of **cancellation across the zeros**, never termwise
 positivity — "the whole family of strategies *choose `w` with `ŵ ≥ 0`* is empty". Theorem L1(3) says
 the Li family is **precisely** that empty strategy, realised outside `𝒲_T`: `λ_n ≥ 0` under RH is
@@ -206,7 +206,7 @@ negative samples inside a moving window.
 a finite symmetric `Z ⊂ ℝ\{0}`, `Σ_{γ∈Z} Φ_n(γ) ≥ 0` is true for trivial reasons (L1(3)). The
 truncation obstruction is a property of sign-changing kernels only. This is a second, independent
 confirmation that the Li criterion has no finitary content — and it explains the otherwise puzzling
-coexistence of Paper 47 `cor:zeros` ("not verifiable on any finite list of zeros") with the
+coexistence of Paper 46 `cor:zeros` ("not verifiable on any finite list of zeros") with the
 century of successful finite-`n` Li computations (Keiper, Maślanka, Coffey, up to `n ∼ 10⁵`): those
 computations verify a termwise-nonnegative sum.
 
@@ -224,18 +224,18 @@ large pairing against `1`. Producing a dual object for Báez-Duarte *certifies a
 i.e. it certifies **against** RH; RH is certified on the **primal** side, by exhibiting coefficients
 `c`, and only in the limit `N → ∞`.
 
-**Proposition (the sign obstruction).** The Báez-Duarte dual and the Paper 47 dual point in opposite
+**Proposition (the sign obstruction).** The Báez-Duarte dual and the Paper 46 dual point in opposite
 directions:
 
-| | Báez-Duarte | Paper 47 |
+| | Báez-Duarte | Paper 46 |
 |---|---|---|
 | RH is certified by | the **primal**, asymptotically in `N` (an upper bound `d_N ≤ ε_N → 0`) | the **dual**, at each `T` (a lower bound `f_w ≥ 0`) |
 | the dual object certifies | `d_N ≥ c > 0`, i.e. a **refutation** | `λ^W(T) ≥ c > 0`, i.e. a **confirmation** |
 | finite data | `d_N` for one `N` is a computable upper bound but never `0`; non-attainment is the known obstruction (Báez-Duarte's `d_N ≫ 1/√log N` conjecturally) | `thm:D1`: a **finite** certificate proves `λ^W(T) > 0` exactly |
 
-There is a structural echo here of Paper 47 `subsec:conc`/`thm:E` **non-attainment** (the primal
+There is a structural echo here of Paper 46 `subsec:conc`/`thm:E` **non-attainment** (the primal
 optimum in (P) is not attained), which is the same phenomenon: an infimum approached but not reached.
-That echo is real and is worth one sentence in Paper 47; it is **not** a theorem relating `d_N` to
+That echo is real and is worth one sentence in Paper 46; it is **not** a theorem relating `d_N` to
 `λ^W(T)`.
 
 **Is there a clean connection through Theorem Z?** *No.* The Mellin transform sends
@@ -275,7 +275,7 @@ Theorem Z; see the caveat in L3).
 By L1(3), `Φ_n(γ) ≈ 1` on average for `|γ| ≲ n` (where `nθ(γ) ≈ n/γ` oscillates) and
 `Φ_n(γ) ≈ n²/2γ²` for `|γ| ≫ n`. So `λ_n` is, to leading order, the **zero count up to height `≍ n`**,
 weighted by `1`; and the zero density is `(1/2π)log(γ/2π)`, which is precisely the archimedean
-multiplier `m(τ) ≈ log τ` of Paper 47 §2. `λ_n ∼ (n/2)log n` and `m(τ) ∼ log τ` are the **same**
+multiplier `m(τ) ≈ log τ` of Paper 46 §2. `λ_n ∼ (n/2)log n` and `m(τ) ∼ log τ` are the **same**
 `d/dτ` of `log Γ` — the Riemann–von Mangoldt density — read in two coordinate systems. `PROVED`
 structurally; the constants are the classical Bombieri–Lagarias/Coffey asymptotic
 `λ_n = (n/2)(log n + γ_E − 1 − log 2π) + O(√n log n)` under RH.
@@ -350,9 +350,9 @@ prime-side table.
 `λ_n` (§4.4's closed-form `{2,3}` prime side, bounded and small relative to the archimedean main term
 `(n/2)log n`) is a lower-order correction to a growing archimedean main term. This is an assertion
 about the finite data, not about the strength of the Li–Keiper criterion — `{λ_n ≥ 0 ∀n}` is
-equivalent to RH in full, so it is not logically "weaker" evidence. Paper 47's window certificates
+equivalent to RH in full, so it is not logically "weaker" evidence. Paper 46's window certificates
 test the opposite regime, where the comb and the archimedean budget are the same size. The corpus
-should not treat the two bodies of numerical evidence as commensurable, and Paper 47's claim that
+should not treat the two bodies of numerical evidence as commensurable, and Paper 46's claim that
 positivity is *collective* is unaffected by any amount of Li data.
 
 ### 4.5 What imports, after all
@@ -372,7 +372,7 @@ objects is stated in Li/Cayley coordinates. The one genuine import is negative a
 
 | **Theorem L1** (`λ_n = Σ_ρ Φ_n(γ_ρ)`, pairing `ρ↔1−ρ` unconditional; `Φ_n` rational, poles of order `n` at `±i/2`; `Φ_n = ŵ_n`, `w_n = −½e^{−\|u\|/2}L_n'(\|u\|)`, `P_n=−½L_n'`; `Φ_n ≥ 0` on `ℝ`) | **`PROVED`** |
 | §2.2 prime side of `λ_n` `= −2Σ_m Λ(m)P_n(log m)/m` | **`FORMAL`** (was `PROVED` — error; series diverges); sharp form of L2(b): `ŵ_n(±i/2)=∞` and prime sum diverges, so `w_n` is not an admissible explicit-formula test and `λ_n` is only the zero-sum half of a Weil-form value |
-| **Theorem L2** (`w_n ∉ 𝒲_T` for all `n,T`; three independent reasons) | **`PROVED`** (uses Paper 47 `lem:Rrig`, `def:W`) |
+| **Theorem L2** (`w_n ∉ 𝒲_T` for all `n,T`; three independent reasons) | **`PROVED`** (uses Paper 46 `lem:Rrig`, `def:W`) |
 | **Proposition L3** (no `T(N)` derivable through Theorem Z, either direction) | **`PROVED` as scoped**; full logical independence **not claimed**; asymmetries (i),(ii) are **`REMARK`**, not proof |
 | §2.6 (`thm:finZ` has no Li analogue) | **`PROVED`** |
 | §4.1, §4.2 (no transfer of certificates in either direction) | **`PROVED` as scoped** |
@@ -387,7 +387,7 @@ objects is stated in Li/Cayley coordinates. The one genuine import is negative a
 
 ---
 
-## §6 Proposal for Paper 47
+## §6 Proposal for Paper 46
 
 One new subsection, `\subsection{Why the Li--Keiper criterion is not a flat-top certificate}`, placed
 at the **end of §7** (after `thm:finZ`, before §8), roughly 1 page:

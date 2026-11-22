@@ -1,6 +1,6 @@
 # State 048 — New explicit region of powers and one transport endpoint
 
-The global objective remains OPEN. This round does add an explicit region of positivity of the full form, but not a new window of Paper47. Papers untouched.
+The global objective remains OPEN. This round does add an explicit region of positivity of the full form, but not a new window of Paper46. Papers untouched.
 
 ## Full form in a subquadratic region
 

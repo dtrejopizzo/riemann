@@ -1,7 +1,7 @@
 # INV_D_001: the archimedean kernel as the character of the even Weil representation (phase 194, track D)
 
-Pen and paper, no numerics. Checked against P47 lem:K (l.349), eq:m, def:W + eq:nuw (l.1179), thm:Z, thm:shape (l.8853), prob:region (l.8984).
-Notation as in P47: K(u) = 1/(2 sinh(u/2)) + 1/(2 cosh(u/2)) = 2 Σ_{k≥0} e^{−(2k+½)u}; m(τ) = C_0 + ∫_0^∞(1−cos τu)K(u)du;
+Pen and paper, no numerics. Checked against P46 lem:K (l.349), eq:m, def:W + eq:nuw (l.1179), thm:Z, thm:shape (l.8853), prob:region (l.8984).
+Notation as in P46: K(u) = 1/(2 sinh(u/2)) + 1/(2 cosh(u/2)) = 2 Σ_{k≥0} e^{−(2k+½)u}; m(τ) = C_0 + ∫_0^∞(1−cos τu)K(u)du;
 on 𝒫_T, 𝔞_T(g) = ∫|ĝ|² m dτ/2π − Σ_{n<e^{2T}} v_n F(log n), F = g∗g̃, v_n = 2Λ(n)n^{−½} (the polar term is zero on 𝒫_T).
 
 ## Step 1. Candidate objects and the index check
@@ -13,7 +13,7 @@ Track brief: an object whose construction has the Γ_ℝ singularity at 0 built 
 | D1 | Lévy/Dirichlet form E_μ with μ = K du + comb jumps, killed on I_T: 𝔞_T = E_{μ_T} − κ_T‖g‖², κ_T = Σ_{N_T}v_n − C_0; Green function of the killed process ≥ 0 | G2A-106_17 ("nonneg jump form minus κ_N", F3 one-atom), G2D Beurling–Deny (DEAD), P60-1, CA_I_001 Markov (λ₀<λ_A≤λ₂; O2 preserves Markov) | DISCARDED |
 | D2 | Logarithmic Laplacian (Chen–Weth) Dirichlet spectral theory on I_T | R155_001 §2.3, 114_d_174, R162_501 (regularity, virial) and D1 | DISCARDED |
 | D3 | Birman–Schwinger / resolvent Neumann series (chains of dilations log n₁+…+log n_k) | R186-D_B (W-det), G2D-106_58…, G8D-R155_043 (CLR) | DISCARDED |
-| D4 | Krein resolvent formula for the codimension-2 constraint 𝒫_T (Vakhitov–Kolokolov count) | polar capacity 𝔊_T (P47, phase 156), CA_A boundary triples = 𝔊_T | DISCARDED |
+| D4 | Krein resolvent formula for the codimension-2 constraint 𝒫_T (Vakhitov–Kolokolov count) | polar capacity 𝔊_T (P46, phase 156), CA_A boundary triples = 𝔊_T | DISCARDED |
 | D5 | Tate–Beckner X + 𝔉X𝔉 = M with Poisson/Müntz and Λ∗1 = log (P^{−1}[log x, P] = −ΣΛ(n)D_n) | R160_C8_R1 (RESTATEMENT), R161_001/002 (sign-blind square), G1C-161 | DISCARDED |
 | D6 | Connes distributional trace of the scaling flow (weight 1/\|1−u\|) / ray-slope distribution on ℝ_+² | L05, R158 (restatement) | DISCARDED (but see D8: the identity part coincides) |
 | D7 | Heat trace / Mittag-Leffler of ψ (trivial zeros as resonances); heat trace of A_T | R164_502b (W12), thm:Z | DISCARDED |

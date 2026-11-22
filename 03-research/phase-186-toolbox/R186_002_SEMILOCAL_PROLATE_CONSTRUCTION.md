@@ -5,7 +5,7 @@ Local sources:
 * [CM] Connes–Moscovici, PNAS 119 (2022) e2123174119, 7 pp.
 * [CCM] Connes–Consani–Moscovici, arXiv 2310.18423v2 (`mainc2m24fine.tex`; line numbers cited).
 * [CC] Connes–Consani, arXiv 2006.13771 (`phase-137/cc_2006.13771_text.txt`).
-* Corpus: R183.021 Thm 3.1, R183.031 Thm 1, R185.008 Lemma 1.1(b), Paper 47 thm:Z.
+* Corpus: R183.021 Thm 3.1, R183.031 Thm 1, R185.008 Lemma 1.1(b), Paper 46 thm:Z.
 
 The conjectures of this document are stated as constructive spectral claims about the
 window form. They are not classified by equivalences.

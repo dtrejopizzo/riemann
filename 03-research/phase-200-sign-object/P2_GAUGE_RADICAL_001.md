@@ -26,7 +26,7 @@ for the "gauge–radical angle" version of E1.
 
 ## 1. Object and discretization
 
-**Definitions (Paper 47 def:ext, thm:ext-half, prop:ext-gauge, eq:symbol, eq:W).** T = ½log μ, λ = √μ.
+**Definitions (Paper 46 def:ext, thm:ext-half, prop:ext-gauge, eq:symbol, eq:W).** T = ½log μ, λ = √μ.
 - Gauge 𝒢_T: φ even, C², supported on [−1/λ,1/λ], with φ(0) = ∫φ = 0.
 - Tail Φ_φ(x) = e^{x/2}Σ_{n≥1}φ(ne^x), supported on x ≤ −T.
 - Complete form on the line: 𝒲_a[Ψ] = (1/2π)∫m|Ψ̂|² − Σ_{n≥2} 2a(n)n^{−1/2}c_Ψ(log n) + 2A(Ψ)B(Ψ), where

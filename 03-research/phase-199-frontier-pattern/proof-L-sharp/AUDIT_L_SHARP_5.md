@@ -2,7 +2,7 @@
 
 Phase 199. Pen-and-paper audit; no numerics re-run (scripts read, not executed).
 OPEN / NO-GO / NUMÉRICO. Sources checked: AUDIT_L_SHARP_4 §6–§8, A_001 Thm 1.1 / Prop 2.1 / Rem 2.2, P_001 (P.1), S_001,
-Paper 47 thm:A (Lévy representation, K(u)), Guo Lemma 4.4 (as quoted and read in A_001).
+Paper 46 thm:A (Lévy representation, K(u)), Guo Lemma 4.4 (as quoted and read in A_001).
 
 ## 1. T Lemma 1.1 (intertwining) — PROVED, constants confirmed
 Poisson for even f, u = e^x: f(0) + 2Σ_{n≥1}f(nu) = u^{−1}(f̂(0) + 2Σ_{n≥1}f̂(n/u)). Multiply by u^{1/2}/2:
@@ -14,7 +14,7 @@ PROVED, attribution CITED-classical; not new.
 
 ## 2. Sector formula (T Thm 3.1, Cor 3.2)
 **Re-derivation.** With the sign convention of A_001 §1 (pole +, primes −, archimedean off-diagonal −, consistent with
-Paper 47 thm:A, where the form is C₀‖F‖² + Lév(𝒞) − Σv_n𝒞(log n), i.e. the Lévy kernel enters with −Re Φ(u)K(u)):
+Paper 46 thm:A, where the form is C₀‖F‖² + Lév(𝒞) − Σv_n𝒞(log n), i.e. the Lévy kernel enters with −Re Φ(u)K(u)):
 - Lemma 1.1 on f ∈ 𝒮, f̂ = εf: Φ_f(−x) = εΦ_f(x); so Φ_f = Ψ + εRΨ, Ψ = Φ_f|_{(0,∞)}. ✓ (no support claim; Φ_f is not
   supported on a half-line, its negative half is the mirror.)
 - Cross form 𝒲(Ψ,RΨ) for disjoint supports: Lévy −∫∫Ψ(x)Ψ(x′)ν(x+x′) ✓; primes: (RΨ)(x−log q) = Ψ(log q − x), the other
@@ -22,7 +22,7 @@ Paper 47 thm:A, where the form is C₀‖F‖² + Lév(𝒞) − Σv_n𝒞(log n
   So 𝒲(Ψ,RΨ) = −𝒲_refl[Ψ], and radical ⇒ 𝒲_{(0,∞)}[Ψ] = −ε𝒲(Ψ,RΨ) = ε𝒲_refl[Ψ]. ✓
 - ν(t) = e^{−t/2}/(1−e^{−2t}) = Σ_{j≥0}e^{−(2j+½)t}: geometric series, each term completely monotone, so ν is CM ✓ (it is the
   Γ_ℝ off-diagonal kernel: e^{−|u|/2}/(1−e^{−2|u|}), the standard Weil archimedean kernel; matches the "Σ_j e^{−(2j+½)|u|}"
-  structure of K in Paper 47 up to the 1/u-type diagonal part, which does not enter a cross term of disjoint supports).
+  structure of K in Paper 46 up to the 1/u-type diagonal part, which does not enter a cross term of disjoint supports).
 - Tonelli (positive kernel, |Ψ|) gives ∫∫ΨΨν(x+x′) = Σ_{j≥0}L_j², L_0 = ∫Ψe^{−x/2} = B ✓; −B² cancels the j = 0 square
   exactly ✓. Σ_jL_j² < ∞ since L_j = O(1/j) for bounded Ψ near 0.
 - 𝒫 sign/normalisation: c_q = Λ(q)q^{−1/2} as in A_001 §1 ✓; 𝒫 enters 𝒲_refl with +, the self-convolution

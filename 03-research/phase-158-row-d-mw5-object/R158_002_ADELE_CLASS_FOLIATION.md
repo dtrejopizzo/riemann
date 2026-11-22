@@ -3,7 +3,7 @@
 Pure mathematics, no computation, no sign claim. Row D has no label and this file does not change
 that. Labels: `CITED` (read in source this review, with the place), `CITED (corpus)` (a corpus file quoting the
 source), `PROVED` (proved here, elementary unless stated), `RESTATEMENT`, `ANALYSIS` (argued, not a theorem), `OPEN`.
-The form is always stated: **complete** = `W_T ≥ 0` on `L²(I_T)` (P47 `eq:W`, E1); **primitive** = `𝔞_T ≥ 0` on
+The form is always stated: **complete** = `W_T ≥ 0` on `L²(I_T)` (P46 `eq:W`, E1); **primitive** = `𝔞_T ≥ 0` on
 `P_T` (E2).
 
 ---
@@ -71,10 +71,10 @@ exactly Weil's criterion. Seven statements make this precise:
   a non-abelian Galois field, "strictly stronger" becomes "false" (§4.7, A20).]**
 * **Proposition B** (`CITED` + dictionary). Hodge index on the square `X × X` (CCM Prop. 7.2) and Rosati positivity
   (CCM Cor. 6.3) are Weil's criterion. For Ẑ^×-invariant tests supported in `e^{I_T}` they give the complete form
-  `W_T`. Restricted to degree = codegree = 0 they give the primitive form. ~~They are P46 (18.2), i.e. E6.~~
+  `W_T`. Restricted to degree = codegree = 0 they give the primitive form. ~~They are P47 (18.2), i.e. E6.~~
   **[amended per R158_004: A7 — over `Q`, CCM (7.6) is `W_T(F) ≥ 0` test by test, i.e. E1, because
   `Δ•Δ = −log|a| = log D = 0`. It is Castelnuovo's form, Hodge index against the two fibre classes (degree and
-  codegree). It is **not** P46 (18.2), which is Hodge index against `K` and reads `W(F) ≥ −½(Φ_F(0)−Φ_F(1))²` test by
+  codegree). It is **not** P47 (18.2), which is Hodge index against `K` and reads `W(F) ≥ −½(Φ_F(0)−Φ_F(1))²` test by
   test, weaker per test. The two agree only globally (both ⟺ RH).]**
 
 **Verdict: (ii). On `X`, every positivity structure on the list of §4 is one of four things:**
@@ -113,8 +113,8 @@ Connes trace formula. Findings used below:
 | `phase-145…/CORPUS_CHECK_R145.md` l.15–40, 135–161 | the `F_q` controls; do not reuse Deninger's metric as an independent input | §5 |
 | `phase-157…/R157_002` rows 9, 18, 32, 34, 35, 37, 60; `R157_004` rows 35–37, M5, M6 | compressions and semilocal EXCL (F3); Hilbert–Pólya (Connes adèle class) EQUIV; the MW-5 cluster NOT EXCLUDED | §4 table |
 | `phase-158…/R158_001` (parallel) Lemma T, OT-1…OT-12, §5.1 | asks R158_002 to run OT-1, OT-2, OT-3, OT-5′, OT-12 on `X`; audit point (i): algebraic vs geometric multiplicity | Lemma U answers (i); §0 runs the OT list |
-| P46 §§11–12, 18, 19.7–19.9, 20.8, 21.7 | the frame `D^W, K, deg, 𝓝_∞, I_∞`; T1, T2 (A1–A9); frame defect Thm 19.25 and Cor 19.25b; the ray, Thm 20.37; Thm 20.38 (W1) "`W` is a norm iff RH"; §21.7 "the frame has `⋆` and no `+`", "must deliver the count, never the positivity" | §§3–5 |
-| P47 `eq:W`, `thm:Z`, `thm:finZ`; P47 remark at l.2505 on CC 2021 | forms E1/E2, certificates, finite zero sets carry no certificate | Proposition B, Proposition H |
+| P47 §§11–12, 18, 19.7–19.9, 20.8, 21.7 | the frame `D^W, K, deg, 𝓝_∞, I_∞`; T1, T2 (A1–A9); frame defect Thm 19.25 and Cor 19.25b; the ray, Thm 20.37; Thm 20.38 (W1) "`W` is a norm iff RH"; §21.7 "the frame has `⋆` and no `+`", "must deliver the count, never the positivity" | §§3–5 |
+| P46 `eq:W`, `thm:Z`, `thm:finZ`; P46 remark at l.2505 on CC 2021 | forms E1/E2, certificates, finite zero sets carry no certificate | Proposition B, Proposition H |
 | **[added per R158_004: A8 — missed by the corpus check]** `phase-106…/106_157_CCM_GLOBAL_ROSATI_PSEUDO_POLARIZATION.md` §§3–7, `106_156` | the CCM hermitian trace form `𝔥([f],[g]) = τ(f*g^♯)` on the cokernel, its radical, the complex structure `J = i`, `Θ^†+Θ = I` (18); "an indefinite Hermitian form also satisfies (8), (13), (17), (18)"; the positivity gate (21) | Construction C (precedent), Fact 4.6a, Lemma E (the CCM form is `B_{ξ′}`), Lemma U |
 | **[A8]** `phase-114…/114_d_37_POLARIZED_MEYER_COKERNEL_THEOREM.md` Thm 2.1, §4 | on Meyer's quotient: a compatible positive polarization ⇒ `t^{−1/2}λ_t` unitary ⇒ RH (Serre) | Lemma U, (a)⇒RH |
 | **[A8]** `phase-114…/114_d_39_…MEYER_FOURIER_J_NOGO.md` §§3–6 | Meyer's `A = 𝓕J` has multiplier `γ(s)` and does **not** descend to `𝓗_-/Z𝓗_∩`; `(Jf)^(s) = f̂(1−s)` | Lemma D (the realiser of `σ` is `J`, not `J𝓕`) |
@@ -279,9 +279,9 @@ square "is still open … an appropriate definition of the sheaf cohomology `H¹
 
 ## §3 The positivity question made precise (deliverable 2)
 
-**3.1 Weil's template** (`CITED`: CCM §2.3; P46 Restatement 19.29). Over `F_q`, Castelnuovo–Severi (Hodge index on
+**3.1 Weil's template** (`CITED`: CCM §2.3; P47 Restatement 19.29). Over `F_q`, Castelnuovo–Severi (Hodge index on
 `NS(C×C)`) gives `Tr(Z⋆Z′) > 0` on correspondences. By the Lefschetz formula, that inequality is RH for `C`. The
-positivity is a theorem about **all** divisors of the surface, including sums and fibres (P46 §21.7).
+positivity is a theorem about **all** divisors of the surface, including sums and fibres (P47 §21.7).
 
 **3.2 On `X`: the inner product, the involution, and the equivalence** (`CITED`, CCM math/0703392).
 * **Trace pairing** (Remark 4.18): `⟨f₁, f₂⟩_{H¹} := Tr(ϑ_m(f₁ ⋆ f₂)|H¹(A_K/K^×, C_K))` descends to `H¹ ⊗ H¹`,
@@ -299,24 +299,24 @@ positivity is a theorem about **all** divisors of the surface, including sums an
 **Proposition B (the positivity on `X` reduces to Weil positivity; `CITED` + dictionary, `RESTATEMENT`).** Restrict
 CCM Cor. 6.3 to `Ẑ^×`-invariant `f = g ⋆ g^♯` with `g ∈ C_c^∞(R_+^*)` and `supp g ⊂ e^{I_T}`, an interval of
 log-length `2T`, so that `f` is supported on `|log| ≤ 2T`. Put `F(t) := e^{t/2}g(e^t)` up to the `Δ^{1/2}`
-normalisation of CCM (6.7)–(6.10) **[A12(1): no extra normalisation; the map is exactly `F(t) = e^{t/2}g(e^t)`]**. Then `⟨g, g^♯⟩_{H¹} = Σ_ρ Φ_F(ρ)Φ_F(1−ρ) = W_T(F)`, the **complete** form P47
-`eq:W`. The term `2d d′ = 2f̂(0)f̂(1)` of (7.6) is P47's `2Re(A(F)\overline{B(F)})`, and the `•_trans` term is the
-archimedean-plus-prime part `𝔞_T` **[A12(2): with sign, `−𝔞_T`]**. Restricting to `d(Z) = d′(Z) = 0` (P47's `A(F) = B(F) = 0`) gives the
+normalisation of CCM (6.7)–(6.10) **[A12(1): no extra normalisation; the map is exactly `F(t) = e^{t/2}g(e^t)`]**. Then `⟨g, g^♯⟩_{H¹} = Σ_ρ Φ_F(ρ)Φ_F(1−ρ) = W_T(F)`, the **complete** form P46
+`eq:W`. The term `2d d′ = 2f̂(0)f̂(1)` of (7.6) is P46's `2Re(A(F)\overline{B(F)})`, and the `•_trans` term is the
+archimedean-plus-prime part `𝔞_T` **[A12(2): with sign, `−𝔞_T`]**. Restricting to `d(Z) = d′(Z) = 0` (P46's `A(F) = B(F) = 0`) gives the
 **primitive** form on `P_T`. Hence:
 * Cor. 6.3 for `ζ` ⟺ E1;
-* ~~Prop. 7.2 is the Hodge-index form of E1, i.e. P46 (18.2) at `H = 2K` (`I_∞(F,F) ≤ ½(deg F)²`), which is E6;~~
-  **[amended per R158_004: A12(4)]** Prop. 7.2 over `Q` is E1 test by test, in Castelnuovo form. P46 (18.2) is its
+* ~~Prop. 7.2 is the Hodge-index form of E1, i.e. P47 (18.2) at `H = 2K` (`I_∞(F,F) ≤ ½(deg F)²`), which is E6;~~
+  **[amended per R158_004: A12(4)]** Prop. 7.2 over `Q` is E1 test by test, in Castelnuovo form. P47 (18.2) is its
   weaker `K`-Hodge-index form. They are equivalent globally only;
 * restricted to degree 0 it is E2, and E1 ⟺ E2 only globally (P45 Thm 10.4; the reduced statement §2,
   `cor:convfail`).
 
 *Status.* The equivalences are CCM's and Weil's. The identification of normalisations (`Δ^{±1/2}`, `♯` versus `*`,
-`ϑ_m = |γ|^{1/2}W`, CCM (4.41)) is `ANALYSIS`, to be checked against P47 `eq:W` per the process rule; see doubt 1. The
+`ϑ_m = |γ|^{1/2}W`, CCM (4.41)) is `ANALYSIS`, to be checked against P46 `eq:W` per the process rule; see doubt 1. The
 structural content does not depend on it: the square's inner product is the trace pairing on correspondences, and its
 positivity is Weil's criterion. **It is a restatement.**
 
-**[amended per R158_004: A12 — the normalisation check, done against CCM (4.40), (6.9), (6.3), (7.6)–(7.8), P47
-`eq:W` l.134 and `lem:roughEF`, and P46 (11.6) l.2136 and (18.2) l.4826. Status: `PROVED` (the computation below); the
+**[amended per R158_004: A12 — the normalisation check, done against CCM (4.40), (6.9), (6.3), (7.6)–(7.8), P46
+`eq:W` l.134 and `lem:roughEF`, and P47 (11.6) l.2136 and (18.2) l.4826. Status: `PROVED` (the computation below); the
 equivalences with RH are `CITED`.]**
 1. **The map is exact.** CCM's trace is `Tr(ϑ_m(f)|H¹) = Σ_ρ f̂(ρ)`, with zeros at `ρ` and the shift already absorbed
    (4.45). Also `(g^♯)^(s) = \overline{ĝ(1−\bar s)}`. With `F(t) := e^{t/2}g(e^t)` exactly, `ĝ(s) = Φ_F(s)`, so
@@ -326,19 +326,19 @@ equivalences with RH are `CITED`.]**
 2. **Degree, codegree and the transverse term.** `d = ĝ(1) = A(F)` and `d′ = ĝ(0) = B(F)`. CCM (7.8) writes
    `2f̂(0)f̂(1)`; for complex `f` this is `2Re(A\bar B)`. The transverse term is the local part, so
    `Z•_trans Z = 2Re(A\bar B) − W_T = −𝔞_T`. ~~(`•_trans` "is" `𝔞_T`)~~ The sign was wrong: it is `−𝔞_T`.
-3. **The constants.** Over `Q`, `log|a| = −log D = 0`, so the `Δ•Δ` term of (6.3)/(7.6) **vanishes**. P47's
+3. **The constants.** Over `Q`, `log|a| = −log D = 0`, so the `Δ•Δ` term of (6.3)/(7.6) **vanishes**. P46's
    `C₀ = ψ(¼) − log π` is not a `Δ•Δ` term. It sits inside the archimedean principal value `∫′_{(R^*,e_R)}` (the
-   additive-character normalisation). It is also unrelated to P46 §21.7's divergent `Δ·Δ = 2−2g`, which concerns
+   additive-character normalisation). It is also unrelated to P47 §21.7's divergent `Δ·Δ = 2−2g`, which concerns
    `I_A(Frob_n, Frob_n)`.
 4. **Prop 7.2 over `Q` is E1 test by test.** Hence (7.6) ⟺ `W_T(F) ≥ 0` for each `F`. That is Castelnuovo's form:
-   Hodge index against the pair of fibre classes, `D² ≤ 2dd′`. P46 (18.2) is Hodge index against `K`. With
+   Hodge index against the pair of fibre classes, `D² ≤ 2dd′`. P47 (18.2) is Hodge index against `K`. With
    `I_∞(F,K) = ½(Φ_F(0)+Φ_F(1))` and `I_∞(K,K) = ½`, it reads `W(F) ≥ −½(Φ_F(0)−Φ_F(1))²` test by test. That is strictly
-   weaker per test, and it coincides with (7.6) on even `F`. "Prop 7.2 = P46 (18.2) = E6" is **withdrawn**. Correct
+   weaker per test, and it coincides with (7.6) on even `F`. "Prop 7.2 = P47 (18.2) = E6" is **withdrawn**. Correct
    reading: Prop 7.2 is E1 in Castelnuovo form. (18.2) is its `K`-Hodge-index weakening. The two are equivalent only
    globally.
 5. **Cor 6.3 is a statement about all Grössencharaktere.** Its restriction to `Ẑ^×`-invariant `f` is Weil's criterion
-   for `ζ` alone (Weil; P45 Thm 10.4; P47 §1). That restriction is not a CCM statement. Tests: `C_c^∞(R_+^*)` is dense
-   in the form domain of `W_T` on `L²(I_T)`, and real `F` follows P47's convention.
+   for `ζ` alone (Weil; P45 Thm 10.4; P46 §1). That restriction is not a CCM statement. Tests: `C_c^∞(R_+^*)` is dense
+   in the form domain of `W_T` on `L²(I_T)`, and real `F` follows P46's convention.
 
 **3.3 What Connes and Connes–Consani actually prove positive** (`CITED`).
 * **Connes 1999, proof of Thm 5, (23)–(25).** `E(B_{Λ,0}) ⊂ S_Λ`, so `Q′_{Λ,0} ≤ S_Λ`, so
@@ -349,7 +349,7 @@ equivalences with RH are `CITED`.]**
   compressed onto the orthogonal complement of the range of the cutoff projections". `Tr(ϑ(f)S) ≥ 0` "by
   construction", and `W_∞ − Tr(ϑ(·)S)` is controlled by prolate functions "when the support … is contained in the
   interval (1/2, 2)". That is autocorrelation support `log 2`, i.e. the **complete** form at `T ≤ ½log2` (Yoshida's
-  window; P47 l.160).
+  window; P46 l.160).
 
 In both cases the positive object is proved and trivially positive, and the whole content sits in the error term,
 uniformly in the cutoff. This matches the reduced statement §1: the content is uniformity. The corpus closes these
@@ -368,7 +368,7 @@ row 32 EQUIV).
 as a finite cutoff with an identity-type transfer (R157 rows 9, 18, 34, 60).
 
 **4.3 Rosati involution `♯` and the trace pairing.** They exist (CCM (6.9), (4.47)). Positivity ⟺ RH (CCM Cor. 6.3).
-This is P46 Thm 20.38 (W1), "`W` is a norm iff RH", in adelic dress. **`RESTATEMENT`**.
+This is P47 Thm 20.38 (W1), "`W` is a norm iff RH", in adelic dress. **`RESTATEMENT`**.
 
 **4.4 Positive cone of correspondences / effective cone / Riemann–Roch on the square.**
 * **The cone `{f ⋆ f^♯}`.** It is the Rosati cone, so this is 4.3 again.
@@ -377,7 +377,7 @@ This is P46 Thm 20.38 (W1), "`W` is a norm iff RH", in adelic dress. **`RESTATEM
   more difficult question of identifying the correct analog of the principal divisors", §1).
 * **CC's five steps** (1805.10501 l.891ff.): complex lift, intersection theory, Hirzebruch–Riemann–Roch on `Γ²` with
   topological term `½s(f,f)`, an existence result for `H⁰(±D̃(f))`, tropical descent to effectivity. This is exactly
-  the scheme of P46 Thm 12.3: step 3 is clause (c), steps 4–5 are clause (b′).
+  the scheme of P47 Thm 12.3: step 3 is clause (c), steps 4–5 are clause (b′).
 
 *F5 reading.*
 * **Covered.** Thm 19.25 and Cor 19.25b kill it whenever "effective" means `𝓝_∞`-equivalent to a nonnegative class
@@ -385,9 +385,9 @@ This is P46 Thm 20.38 (W1), "`W` is a norm iff RH", in adelic dress. **`RESTATEM
   covers: "Requiring … only strengthens the hypothesis". The trace-positive enlargements are refuted by the single ray
   of Thm 20.37.
 * **Not covered.** Thm 19.25 does not cover an effective cone on a genuine two-variable carrier that is **strictly
-  larger** than the frame's `𝓔`, containing `+` classes (R158_001 P7/OT-9; P46 §21.7). That residual is **`OPEN`,
+  larger** than the frame's `𝓔`, containing `+` classes (R158_001 P7/OT-9; P47 §21.7). That residual is **`OPEN`,
   unbuilt**. CC: "`H¹` … still open".
-* **What any such cone must evade** (`PROVED` in P46). It must change the value of a clause along the ray `E_t`, on
+* **What any such cone must evade** (`PROVED` in P47). It must change the value of a clause along the ray `E_t`, on
   which all frame invariants are frozen (Thm 20.37). So it must read zero data: (W1) or (W2) of Thm 20.38. **[amended per R158_004: A24 — "read" should be "carry information outside the frame's invariants". Reading (W1)/(W2) fails OT-3; proving them is the open problem.]**
 
 **4.5 Transverse measure and the conformal factor; transverse Kähler form.** The transverse measure exists and is
@@ -425,7 +425,7 @@ proved for this `J`. The intrinsic involution of `X` is
 structure of `X` makes a `⋆` out of it.
 
 **Construction C (a flow-commuting Hodge `⋆` exists unconditionally; `PROVED`).**
-* **Splitting.** `ξ` has no real zeros (`ξ(σ) > 0` on `R`: P46 A9 for `ξ`, classical). So
+* **Splitting.** `ξ` has no real zeros (`ξ(σ) > 0` on `R`: P47 A9 for `ξ`, classical). So
   `H¹_alg = H^{1,0} ⊕ H^{0,1}`, where `H^{1,0}` is the span of the generalized eigenvectors with `Im ρ > 0` and
   `H^{0,1} = conj(H^{1,0})`, with `conj: h(s) ↦ \overline{h(\bar s)}`.
 * **The `⋆`.** Set `⋆ := −i` on `H^{1,0}` and `+i` on `H^{0,1}`. Then `⋆` commutes with `Θ` and with `conj`, and
@@ -509,7 +509,7 @@ Then `B_1` is the Grothendieck–Serre residue duality of `𝒪/(ξ)`, the one g
 indefinite on `H^{1,0}`.
 *Proof.*
 * `γ₁ = 14.1347…` and `γ₂ = 21.0220…` are simple on-line zeros with no ordinate between them (Platt–Trudgian; the
-  input (X19) of P46 and its extension to `γ₂`).
+  input (X19) of P47 and its extension to `γ₂`).
 * So `Ξ′(γ₁)` and `Ξ′(γ₂)` have opposite signs.
 * By the computation above, `iB_1` restricted to `span(e_{ρ₁}, e_{ρ₂})` is `diag(−Ξ′(γ₁), −Ξ′(γ₂))`. ∎
 
@@ -519,7 +519,7 @@ indefinite on `H^{1,0}`.
   least two positive ones (Riemann–von Mangoldt, or Hardy). Between consecutive ones `Ξ` keeps its sign, so `Ξ′` takes
   opposite signs at them. That is a contradiction. The numerical proof above is kept but is not needed (working rule
   ).
-* **The citation was defective.** P46 (X19) certifies `γ₁` and the absence of zeros with `|Im ρ| ≤ 21`. It does not
+* **The citation was defective.** P47 (X19) certifies `γ₁` and the absence of zeros with `|Im ρ| ≤ 21`. It does not
   certify `γ₂ = 21.022…`, which would have needed a new import (Platt–Trudgian 2021 as a verified list).
 * **Canonicity (doubt 3).** The conclusion holds for every `Φ` positive on the critical line, e.g. `e^{g}` with `g`
   even and real: changing the generator of `(ξ)` by such a unit does not matter. But `B_1` is not the canonical
@@ -536,7 +536,7 @@ It is even and real.
   explicit formula, `B_{Φ₀}(a,b)` is the geometric side (`Σ_p W_p + W_∞`) of the test `(s−½)a(s)b(1−s)`. So it passes
   OT-3.
 * **Restatement.** Its positivity is Weil's criterion applied through `|Θ − ½|`:
-  `S_{Φ₀}(h,h) = Σ_ρ |Im ρ| Φ_g(ρ)Φ_g(1−ρ)` for on-line data. Positivity for all `h` ⟺ RH (P46 Thm 20.38 (W1)). This
+  `S_{Φ₀}(h,h) = Σ_ρ |Im ρ| Φ_g(ρ)Φ_g(1−ρ)` for on-line data. Positivity for all `h` ⟺ RH (P47 Thm 20.38 (W1)). This
   holds **globally only**: `|Θ−½|` destroys window support, just as E1 ⟺ E2 holds only globally.
 
 **[amended per R158_004: A19]**
@@ -562,7 +562,7 @@ not a finite product of local factors and Γ-data.
   which contradicts `n(r) ≫ r log r`.
 * Paley–Wiener: compact support gives finite type. ∎
 
-This is the Hodge-side analogue of P47 `thm:finZ` ("row D is intrinsically infinite"). A polarization of `X`'s `H¹`
+This is the Hodge-side analogue of P46 `thm:finZ` ("row D is intrinsically infinite"). A polarization of `X`'s `H¹`
 must carry the ordering of **all** the zeros, which is the X-form of Doc 130's "the Kähler structure is the inertia".
 
 **[amended per R158_004: A21]**
@@ -575,7 +575,7 @@ must carry the ordering of **all** the zeros, which is the X-form of Doc 130's "
   critical line up to height `T`. This includes finite products of Euler polynomials `1 − c p^{−s}`
   (`T log p/2π + O(1)` zeros each) times `1/Γ(as+b)` with `a, b` real (no zeros on the line off `s = ½`) times
   `e^{polynomial}`. Complex shifts of `Γ` are not treated.
-* **"Finite-window datum"** means the *multiplier*. It is not a P47 window test. P47's `W_T` is CCM's form (infinite-type
+* **"Finite-window datum"** means the *multiplier*. It is not a P46 window test. P46's `W_T` is CCM's form (infinite-type
   multiplier `ξ′`) evaluated on tests supported in `I_T`, so there is no conflict. The analogy with `thm:finZ` is
   `ANALYSIS`.
 
@@ -624,7 +624,7 @@ characteristic `p` has not been re-verified here; see doubt 5.
   field, so the multiplicity is right. Cyclicity needs the Laplace/ideal description of the sector as
   `C[u^{±1}]/(P(u))`, which has not been verified in a source.
 * **A stronger falsifier over a number field (`PROVED` classically on the zeta side).** Let `K/Q` be Galois with group
-  `S₃`, e.g. the splitting field of `x³ − 2`. Then `ζ_K = ζ·L(s, sgn)·L(s, ρ)²`, with `ρ` two-dimensional (P46 (X25a)).
+  `S₃`, e.g. the splitting field of `x³ − 2`. Then `ζ_K = ζ·L(s, sgn)·L(s, ρ)²`, with `ρ` two-dimensional (P47 (X25a)).
   `L(s,ρ)` is the Hecke `L`-function of a cubic character of `Q(√−3)`: entire, with infinitely many zeros. Every one of
   them is a zero of `ζ_K` of order `≥ 2`.
 * **What it implies (`PROVED` modulo `ANALYSIS`).** On the trivial-character sector of `X_K`, CCM Thm 4.16 gives
@@ -665,7 +665,7 @@ the filter).
 | **[A23]** ζ-cycles and prolate operators (CC 2106.01715; CCM 2310.18423, semilocal) | yes, CITED (abstract; local PDF) | self-adjointness per `L` or per `S` | — | — | ✗ (finite `L` or `S`) | — | — | — | EXCL per `L` (R157_002 row 60, R157_004 M5); the limit is row 32, EQUIV |
 | **[A23]** critical Plancherel Hilbert completion of `H¹` | the completion is **zero** (114 D.191) | — | — | — | — | — | — | — | — | PROVED void |
 
-**T1 (P46 §18.1).** Everything here is uniform in the global field (Connes 1999 and CCM work for every `K`, and the
+**T1 (P47 §18.1).** Everything here is uniform in the global field (Connes 1999 and CCM work for every `K`, and the
 Grössencharakter sectors come along). A positivity proof on `X` would prove GRH for all Hecke L-functions. T1
 *prescribes* this; it does not exclude it (R157_004 A9).
 
@@ -692,7 +692,7 @@ passes vacuously (R158_001 OT-5 row).
 * (d) Any definite polarization forces RH ∧ SZ and an interlacing multiplier of infinite type (Lemma E, Prop H). **[A24: the RH ∧ SZ part holds for every compatible hermitian form, including CCM's (A17), and is classical; the infinite type is new here and `PROVED`.]**
 * (e) Unitarity à la Deninger Thm 2.1 ⟺ RH ∧ SZ (Lemma U). **[A24: `CLASSICAL` content (A6). Over an `S₃` field it is impossible, modulo cyclicity (A20).]**
 * (f) Compressions are positive and do not transfer (Connes Thm 5 proof; CC 2021).
-* (g) ~~Rosati and Hodge index on `X × X` are E1/E6, and E2 in degree 0 (Prop B).~~ **[A24/A12]** Rosati (Cor 6.3, restricted to the trivial sector) and CCM Prop 7.2 over `Q` are both E1, test by test. P46 (18.2) is the weaker `K`-Hodge-index form, equivalent only globally. Degree 0 gives E2 (Prop B).
+* (g) ~~Rosati and Hodge index on `X × X` are E1/E6, and E2 in degree 0 (Prop B).~~ **[A24/A12]** Rosati (Cor 6.3, restricted to the trivial sector) and CCM Prop 7.2 over `Q` are both E1, test by test. P47 (18.2) is the weaker `K`-Hodge-index form, equivalent only globally. Degree 0 gives E2 (Prop B).
 
 So `X` is a complete Deninger-type frame in which OT-5′ **is** Weil's criterion. The positivity question on `X` is
 the positivity question of row D, restated. **No one-round test lemma of type (i) is offered.** Every candidate on
@@ -701,20 +701,20 @@ the positivity question of row D, restated. **No one-round test lemma of type (i
 **What a different object would have to add** (each item is forced by a lemma above):
 * **N-a (a prior reason for definiteness).** A duality `B` whose `⋆`-polarization is definite for a reason stated
   before the spectrum: an L² norm of leafwise harmonic forms (Deninger–Singhof, math/0204111, `CITED (corpus)` Doc
-  130 §1), or a **count** (P46 §21.7: `deg α = #ker α`). By Lemma A this needs leaves of real dimension ≥ 2 carrying
+  130 §1), or a **count** (P47 §21.7: `deg α = #ker α`). By Lemma A this needs leaves of real dimension ≥ 2 carrying
   the zeros **[A24: `HEURISTIC` — this holds only for the harmonic-norm option; the count option needs no leaves]**. `X` has profinite transversals, and its zeros live in a relative group on `X ∖ C_Q`. By Lemma E the
   object must supply sign coherence of the multiplier without knowing the zeros. By Prop H its datum must be of
   infinite type, i.e. global.
 * **N-b (a non-cyclic `H¹`).** `X`'s `H¹` is cyclic over the commutative algebra `S(C_K)` in each sector, so
   multiplicity appears as Jordan length (Fact 2.4a). The Deninger reading therefore proves SZ as well (Lemma U), and
   per the function-field remark it is false where RH is known. The right object needs a correspondence algebra with
-  `+` (P46 §21.7: "the frame has `⋆` and no `+`"), so that semisimplicity and multiplicity are geometric. **[A24]** Scope:
+  `+` (P47 §21.7: "the frame has `⋆` and no `+`"), so that semisimplicity and multiplicity are geometric. **[A24]** Scope:
   N-b binds only a P-HS / (D3) route (definite form, unitarity). The P-HI / Rosati route asks for **semidefiniteness**,
   which tolerates Jordan tails (they are null; E-ii, CCM). The evidence is the `S₃`-field falsifier (A20). The function-
   field remark is secondary. The link "non-cyclic ⟸ `+`" is `HEURISTIC`: §21.7's `+` concerns the effective cone, not
   module cyclicity. N-b is not on R158_001's OT list. It is proposed as an OT-1 clause for the P-HS route.
 * **N-c (a larger effective cone).** An effective cone on a two-variable carrier strictly larger than `𝓔`, with
-  classes whose clause value changes along the ray of P46 Thm 20.37 (R158_001 P7/OT-9). This is the residual of the
+  classes whose clause value changes along the ray of P47 Thm 20.37 (R158_001 P7/OT-9). This is the residual of the
   CC Riemann–Roch strategy. `OPEN`. **[A24]** Per R158_003 A12/A15, the constructive clause ((P145′)(4a)–(4c)) is
   RH-strength. Only the filter part (a two-variable carrier, a cone `⊋ 𝓔`, outside Thm 19.25/Cor 19.25b/Thm 21.15) is not.
   In §4.4, "must read zero data: (W1) or (W2)" should read: it must carry information outside the frame's invariants
@@ -741,9 +741,9 @@ No row-D label change, no sign claim.
 proof); 5 → A20; 6 → A14, A15; 7 → A9; 8 → confirmed, A10; 9 → A23; 10 → confirmed.
 
 1. **Normalisations.** Meyer's `λ` vs `λ^{−1}` and the sign of `D_-` (his footnote); CCM's `ϑ_m = |γ|^{1/2}W` (4.41)
-   and `Δ^{±1/2}`, `♯` vs `*`; the map `g ↦ F` in Prop B. Check Prop B against P47 `eq:W` and P46 (11.6), (18.2),
+   and `Δ^{±1/2}`, `♯` vs `*`; the map `g ↦ F` in Prop B. Check Prop B against P46 `eq:W` and P47 (11.6), (18.2),
    per the process rule. Do the identifications E1 ↔ Cor 6.3 and E6 ↔ Prop 7.2 hold with the stated constants,
-   including CCM's `−log|a|f(1)` term versus P47's `m(τ)` constant `C₀`?
+   including CCM's `−log|a|f(1)` term versus P46's `m(τ)` constant `C₀`?
 2. **`H¹_alg` vs `H¹`.** Lemmas E and U and Construction C are proved on the algebraic span of generalized
    eigenvectors. The Riesz `⋆` on the topological `H¹` (a Riesz projection for a non-normal generator) and the
    equality `H¹_red = H¹` (spectral synthesis for `I`) are **not** claimed. Could a positive form on a topological
@@ -805,7 +805,7 @@ Open literature, read this review unless marked:
   Sci. Math. 131 (2007), arXiv math/0603576 (abstract, via search).
 * F. Kopei, *A remark on a relation between foliations and number theory*, arXiv math/0605184 (abstract, via search).
 * Deninger–Singhof math/0204111 and Deninger math/0204194: `CITED (corpus)` via Doc 130.
-* Platt–Trudgian (Bull. LMS 53, 2021), for the simplicity of `γ₁, γ₂`: via P46 (X19). **[A18: X19 covers `γ₁` only; the import is no longer needed]**
+* Platt–Trudgian (Bull. LMS 53, 2021), for the simplicity of `γ₁, γ₂`: via P47 (X19). **[A18: X19 covers `γ₁` only; the import is no longer needed]**
 * **[added per R158_004: A25]** E. Leichtnam, arXiv 1307.3851, §2 eq. (6) (Serre's argument), axioms 5]–6], Comment 6
   (read by R158_004). R. Meyer, *On a representation of the idele class group related to primes and zeros of
   L-functions*, Duke Math. J. 127 (2005) (CCM [32]; not re-read). Corpus: 106.156/157, 107.204, 114 D.37/D.39/D.191,

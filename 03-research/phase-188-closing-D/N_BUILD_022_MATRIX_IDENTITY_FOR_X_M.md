@@ -20,8 +20,8 @@ So **ZΔ = [L, Z], i.e. Δ = Z⁻¹LZ − L**, exactly, for every M (the index s
 ## 2. Spectral consequence (PROVED, new in this form)
 Δ + L = Z⁻¹LZ is similar to L: its eigenvalues are exactly log 1, log 2, …, log M (each once). In particular tr Δ = 0 and
 det(Δ + L − λ) = Π_{m≤M}(log m − λ). Write D_sym := ½(Δ + Δᵀ). For real s,
-⟨s, D_sym s⟩ = ⟨s, Z⁻¹LZ s⟩ − ⟨s, L s⟩. **Normalization correction (phase211, root/casos, 2026-11-05):** D_sym is NOT the Div_M of Paper47. There v_n=2Λ(n)/sqrt(n), V_M=2Δ and Div_M=½(V_M+V_Mᵀ)=Δ+Δᵀ=2D_sym. Thus the divisor quadratic form in Paper47 is twice the displayed identity. At M=2 its off-diagonal entry is log(2)/sqrt(2), whereas D_sym has log(2)/(2sqrt(2)). The one-sided commutator identity and its spectral consequence are unchanged; no paper is edited. No sign follows: the numerical range of the non-normal Z⁻¹LZ is not confined to
-[0, log M] (Z is far from unitary: ‖Z‖ ≍ Σ n^{−½}-type growth), consistent with L2_029 (the Paper47 Div symbol ranges over Σ_p[−2log p/(√p+1), 2log p/(√p−1)]; for D_sym divide these endpoints by2).
+⟨s, D_sym s⟩ = ⟨s, Z⁻¹LZ s⟩ − ⟨s, L s⟩. **Normalization correction (phase211, root/casos, 2026-11-05):** D_sym is NOT the Div_M of Paper46. There v_n=2Λ(n)/sqrt(n), V_M=2Δ and Div_M=½(V_M+V_Mᵀ)=Δ+Δᵀ=2D_sym. Thus the divisor quadratic form in Paper46 is twice the displayed identity. At M=2 its off-diagonal entry is log(2)/sqrt(2), whereas D_sym has log(2)/(2sqrt(2)). The one-sided commutator identity and its spectral consequence are unchanged; no paper is edited. No sign follows: the numerical range of the non-normal Z⁻¹LZ is not confined to
+[0, log M] (Z is far from unitary: ‖Z‖ ≍ Σ n^{−½}-type growth), consistent with L2_029 (the Paper46 Div symbol ranges over Σ_p[−2log p/(√p+1), 2log p/(√p−1)]; for D_sym divide these endpoints by2).
 
 ## 3. Sampling defect: corrected scope (PROVED identities; sign OPEN)
 
@@ -44,7 +44,7 @@ Indeed, put N=ceil(exp(R)M), choose q=lcm(1,…,N), and set J e_m=e_(qm). Entry2
 
 The intermediate indices of this product must be retained; compression of a product is not generally the product of the compressions. The index also gives the sufficient squarefree choice q=Π_(p≤N/2)p for N≥4, and q=1 for N≤3.
 
-Thus the former universal NO-GO is withdrawn: failure of the original sampled product is not an impossibility of exact representation after enlargement. These identities do not prove positivity of K or of the complete form, and do not provide the missing comparison with its archimedean part. The oriented K is not by itself the full matrix of Paper47; both orientations and their normalization are retained in212-93.
+Thus the former universal NO-GO is withdrawn: failure of the original sampled product is not an impossibility of exact representation after enlargement. These identities do not prove positivity of K or of the complete form, and do not provide the missing comparison with its archimedean part. The oriented K is not by itself the full matrix of Paper46; both orientations and their normalization are retained in212-93.
 
 ## 4. Bohr-diagonal symbol on multiplicatively structured vectors (PROVED)
 For s_m = m^{−iθ}a_m: sᴴX_M s = (1/2π)∫ Ξ̂(φ)|Σ_m a_m m^{i(φ−θ)}|²dφ with Ξ̂ = F̂₀²·(comb symbol), i.e. the pairing of σ_∞F̂₀² with a Dirichlet

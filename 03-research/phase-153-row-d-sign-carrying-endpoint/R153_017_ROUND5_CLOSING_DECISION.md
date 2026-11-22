@@ -15,7 +15,7 @@ outside this phase.*
 | **hand proof** | closes at **neither** endpoint: budget `2Tτ_*/π = 3.68` (`½log3`), `20.4` (`log 2`) — vacuous; `(τ²+¼)²` amplifies the far wells by `10⁶`. Not a constants problem. | `REFUTED` (as a route) |
 | no soft minorant proof | Krein/autocorrelation LP reformulation; Bochner forces any pointwise minorant to be `≥ 0`, so no proof using only `|F̂|² ≥ 0` exists | `PROVED` (elementary), consistent with corpus ES-14 |
 | `R(T) = 2Tτ_0(T)/π` | `σ_T(π/2T) < 0` at both endpoints; `R` crosses 1 at `T_c = 0.6898`, 0.5% below `log 2`, where `c(T)` peaks (R153_014) | `DIAGNOSTIC-NUMERIC`, filed (P153.15) |
-| T5 (`Ξ_a`) | separation is **depth**, not width nor moment geometry: `σ^{(a)}(0)/σ(0) = 6.54` (`a=.45`), `2.62`, `2.05`, from weights `n^a+n^{-a}`; `Ξ_{0.45}` has *more* origin suppression yet is negative | `DIAGNOSTIC-NUMERIC`; correction for Paper 46 §28.3 |
+| T5 (`Ξ_a`) | separation is **depth**, not width nor moment geometry: `σ^{(a)}(0)/σ(0) = 6.54` (`a=.45`), `2.62`, `2.05`, from weights `n^a+n^{-a}`; `Ξ_{0.45}` has *more* origin suppression yet is negative | `DIAGNOSTIC-NUMERIC`; correction for Paper 47 §28.3 |
 
 FATAL rule clean; no sign claimed for ζ beyond `log 2`.
 
@@ -30,4 +30,4 @@ explain "critical at `log 2`" as "`w_3` at the edge of its band"; its uniform ve
 
 ## 3. Decision
 Round 5 closed, negative. Phase 153 closed; row D unchanged. Open added: (P153.14) stepwise Krein band at `N = 3, 4, 5` (measurement only,
-open call); (P153.15) `R(T_c) = 1` coincidence with the `c(T)` peak; Paper 46 §28.3 to receive the depth correction of T5.
+open call); (P153.15) `R(T_c) = 1` coincidence with the `c(T)` peak; Paper 47 §28.3 to receive the depth correction of T5.

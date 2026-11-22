@@ -21,8 +21,8 @@ contains the minimizer, SPEC_B §1.4(i)). **η ≥ 0.7 is a margin regime, incre
 critical, and alternatives (A)/(B) must be posed differently: why is the family critical at η ≈ 0.4 and not at η > 2/3?
 
 ## 1. (A): the criticality is a zero-side phenomenon (identity PROVED; explanation ARGUED)
-For s in the family, F_s = Σ s_m V_{log m}F₀ ∈ P_{T'} (P47 lem:transl(i)), and F̂_s = F̂₀·ζ_{w,M}(½ + i·). The Weil explicit formula on
-P_{T'} (polar terms vanish; P47 thm:Z) gives the exact zero-side form Q_M(w) = Σ_ρ F̂₀(t_ρ)²ζ_{w,M}(ρ)ζ_{w,M}(1−ρ̄)‾ with ρ = ½ + it_ρ, and
+For s in the family, F_s = Σ s_m V_{log m}F₀ ∈ P_{T'} (P46 lem:transl(i)), and F̂_s = F̂₀·ζ_{w,M}(½ + i·). The Weil explicit formula on
+P_{T'} (polar terms vanish; P46 thm:Z) gives the exact zero-side form Q_M(w) = Σ_ρ F̂₀(t_ρ)²ζ_{w,M}(ρ)ζ_{w,M}(1−ρ̄)‾ with ρ = ½ + it_ρ, and
 ζ(ρ) = 0 gives ζ_{w,M}(ρ) = M^{1−ρ}𝒲(1−ρ) + r_M(ρ) (EI_002 Mellin split). A value ≍ M^{−3}·‖F‖² requires near-annihilation at every
 ordinate where F̂₀(t)² is not negligible, i.e. 𝒲(½ − it_ρ) ≈ −M^{ρ−1}r_M(ρ) at ≍ many zeros. That needs a cutoff with free shape over a long
 log-range. On 𝒲_η the shape is free only on [η, 1], of log-length log(1/η) (0.92 at η = 0.4; ≤ 0.41 at η > 2/3). **So criticality is
@@ -35,13 +35,13 @@ can live.
 Write s = c·u + t, with u := (m^{−½}1_{m≤ηM}) and t supported on (ηM, M].
 **Lemma 1 (tail is a small window).** The tail block A_t := A_M|_{(ηM,M]} is the window form on the span of translates V_{log j}F₀,
 j ∈ (ηM, M]. These functions lie in P_{T_eff}, T_eff := T₀ + ½log(1/η), after centring (lem:transl(i)). If η > e^{2T₀}/3 then
-2T_eff < log 3, so the only contact is n = 2, and WP_{T_eff} holds (P47: WP_T for T ≤ ½log 5, cor:beyond5/Thm C). Hence A_t ⪰ λ_A(T_eff)·G_t
+2T_eff < log 3, so the only contact is n = 2, and WP_{T_eff} holds (P46: WP_T for T ≤ ½log 5, cor:beyond5/Thm C). Hence A_t ⪰ λ_A(T_eff)·G_t
 with λ_A(T_eff) > 0.
 **Lemma 2 (only Λ(2) and log N).** Every entry of the family form (Q(u), b := A_M u restricted to the tail, A_t) involves the comb only
 through the following, so the whole object is explicit in Γ_ℝ, ℤ-lattice sums and log 2:
 - Σ_{d|N}Λ(d) = log N (the product formula, CA_C_001 Lemma 1), for every N ≤ ηM and on the tail range with all divisors d ≥ 2 allowed;
 - Λ(2), through the divisor defect n < N/(ηM) < e^{2T₀}/η < 3, and through the tail contacts.
-*Proof.* As in P47 prop:shape-family(i), regrouping N = nm; in b, N ranges over (ηM, Me^{2T₀}) and the excluded divisors satisfy
+*Proof.* As in P46 prop:shape-family(i), regrouping N = nm; in b, N ranges over (ηM, Me^{2T₀}) and the excluded divisors satisfy
 n < N/(ηM) < e^{2T₀}/η. ∎
 **Proposition 3.** On the family, positivity ⟺ the scalar Schur complement s_M := Q(u) − bᵀA_t^{−1}b ≥ 0 (A_t ≻ 0 by Lemma 1).
 *Proof.* Minimize over t for fixed c. ∎
@@ -81,7 +81,7 @@ On ℤ, with modified combs (ν_M at η = 0.7 / 0.9, M = 400):
 - **Self-review:**
   1. The ridge-insensitivity and the agreement of the full-space values with EXP_002/003 support the Gram numerics. The jitter tail block is
      ill-conditioned (ℓ²-min 1e−10), so the Beurling s_M via A_t^{−1} is less reliable than the ν_M column, but both are negative.
-  2. Lemma 1 uses WP_{T_eff} from P47 at T_eff = 0.353 (PROVED range).
+  2. Lemma 1 uses WP_{T_eff} from P46 at T_eff = 0.353 (PROVED range).
   3. No negative value for ζ; no sign contact with D.
 
 ## 5. FE-class falsifier test (after CA_D_001/003): the family positivity is FE-generic, not ζ-specific (NUMÉRICO)

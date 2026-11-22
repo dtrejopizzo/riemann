@@ -34,7 +34,7 @@ c. `phase-70-lee-yang-dbn/E70_10` (Dirichlet square (I−V)*(I−V) = I − T_Λ
    V*V is exactly Σ_{p≠q} V_p*V_q; Selberg rewrites V², not V*V; «the cancellation would have to come
    from a second sector with sign». **This is the literal antecedent of the candidate**: the «square
    in the lattice of prime bases» is the cross sum Σ_{p≠q}, and what it produces is already written.
-d. `phase-204-refd-tractability/P1_BBSTAR_001`: Theorem P1.A (PROVED there: P47 thm:sos holds for
+d. `phase-204-refd-tractability/P1_BBSTAR_001`: Theorem P1.A (PROVED there: P46 thm:sos holds for
    Dirichlet polynomials with arbitrary real frequencies, including dilations with weights Λ,
    Λ₂, μ, log; there is no convolutive B for T ≥ ½log3), Lemma 2.7 (every decomposition 𝒲 = α𝒞*𝒞 + R
    forces in R atoms −αℓ_pℓ_q/√(pq) at ±log(p/q)) and §2.8 («Selberg enters in 𝒞², not in 𝒞*𝒞»).

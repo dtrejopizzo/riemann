@@ -14,8 +14,8 @@ R154_011 confirmation (PROOF ACCEPTED) · **R154_012 closing decision (labels of
 scripts/round4/certificate/CERT_log3_M24.json.
 
 **, after closure (R154_030):** R154_031 literature reading of the five primary texts (Zhu, Groskin, Suzuki ×3, Bombieri 2000,
-Yoshida 1992; priority verdict: never claim "first positivity beyond log 2", Zhu certifies support 1.6 by Galerkin). **Paper 47**
-written in LaTeX from this phase: `04-papers/47-row-d-dual-certificates/main.tex` (with the new §7 Theorem Z: the dual certificate is the
+Yoshida 1992; priority verdict: never claim "first positivity beyond log 2", Zhu certifies support 1.6 by Galerkin). **Paper 46**
+written in LaTeX from this phase: `04-papers/46-row-d-dual-certificates/main.tex` (with the new §7 Theorem Z: the dual certificate is the
 explicit formula on `w(u)cos(τu)`, value = flat-top smoothing of the zero measure; RH ⟺ one-sided smoothing for every window).
 Off-machine computation package for the two-prime window: `scripts/offmachine/` (E1 M-sweep, E2 hybrid N=6 with IPM + control check,
 E3 certify). Successor phase: `phase-155-row-d-flat-kernel-criterion` (Problem A, class-dependent value bounds).

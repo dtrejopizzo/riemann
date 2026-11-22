@@ -110,7 +110,7 @@ roots that S needs.
 
 ## Standing methodological note (`[phase 134]`)
 
-Recorded from Paper 46 §9.3 (`04-papers/46-intersection-frame-defect/archive/main.md`) and from
+Recorded from Paper 47 §9.3 (`04-papers/47-intersection-frame-defect/archive/main.md`) and from
 the independent re-runs in `R134_002_AUDIT_ROUND1.md` §§4, 6.  It does not
 retract any result of this phase; it fixes how this phase's numbers may be
 read.
@@ -138,7 +138,7 @@ read.
    finite `T_*`; the *value* `lambda_min Sigma(T)` is not a congruence
    invariant and must not be quoted across bases or papers.  Carry (3.2),
    `Sigma(T) >= 0`.  See the `[phase 134]` note there.
-5. **Paper 46 Theorem 7.1** supplies the structural reason for the
+5. **Paper 47 Theorem 7.1** supplies the structural reason for the
    `zeta`/`Xi_a` separation this phase observed: `Xi_a`'s local contacts are
    not the shell volumes `vol(p^k Z_p^x) = log p`, so its would-be Frobenius
    satisfies `F_n * F_n^dagger = (n^a + n^-a) Delta^(n)` and is **not** a

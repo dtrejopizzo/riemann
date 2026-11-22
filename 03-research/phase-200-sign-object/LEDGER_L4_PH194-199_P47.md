@@ -1,9 +1,9 @@
-# LEDGER L4 — insight ledger on the sign, phases 194–199 + Paper 47
+# LEDGER L4 — insight ledger on the sign, phases 194–199 + Paper 46
 
 Scope: phases 194 (invention), 195 (modern tools), 196 (global object), 197 (barrier), 198 (parity split), 199 (frontier
 pattern + `proof-L-sharp/`, A–OO, AUDIT_L_SHARP_1–17, AUDIT_CONSTRAINTS_001, BRIDGE_001, SYNTHESIS_MECHANISM_001,
-MORI15_EXTREMAL_001, TEST_*), and Paper 47 (`sec:spec`, `subsec:strip`, `subsec:shape-geom`, `sec:ext`, `subsec:ext-pos`,
-`subsec:ext-constraints`). Labels are the audited ones (the audit wins over the original memo). Abbreviations: PL# = `03-research/phase-199-frontier-pattern/proof-L-sharp/`; P47 = Paper 47.
+MORI15_EXTREMAL_001, TEST_*), and Paper 46 (`sec:spec`, `subsec:strip`, `subsec:shape-geom`, `sec:ext`, `subsec:ext-pos`,
+`subsec:ext-constraints`). Labels are the audited ones (the audit wins over the original memo). Abbreviations: PL# = `03-research/phase-199-frontier-pattern/proof-L-sharp/`; P46 = Paper 46.
 
 ## 1. Positive structural facts about the sign
 
@@ -11,21 +11,21 @@ MORI15_EXTREMAL_001, TEST_*), and Paper 47 (`sec:spec`, `subsec:strip`, `subsec:
 
 | # | fact | label | provenance |
 |---|---|---|---|
-| I1 | **Half-line identity.** W_T(g) = 𝒲_ext[Ψ_f] = −𝒲(g,Ψ_f), g = Ef\|_I, Ψ_f the aliasing tail of Ef below the window; with the killing term when written on the half line. The window form *is* the complete Weil form of what the summation map pushes outside the window. | PROVED given Guo 4.2–4.5 | PL# A Thm 1.1, E Thm E.1, AUDIT_1; P47 thm:ext-half |
-| I2 | **Möbius bijection.** E: L²[1/λ,λ] → L²(I), E⁻¹g = Σ μ(m)(mu)^{−½} g(log mu), norms ≤ 2√μ; gauge (−1/λ,1/λ) = radical; ℓ = dist²(r, 𝒢̄). | PROVED | MECH_001 Prop 3.1; P47 lem:ext-mob, prop:ext-gauge |
-| I3 | **Universal form.** 𝒲_ext[Zr] = λ⁻¹𝔔[ρ]: one μ-free form 𝔔 on L²(1,∞); all μ-dependence is in the data class PW_μ mod the fixed radical. | PROVED | F Prop F.0; P47 prop:ext-univ |
-| I4 | **Critical-line form.** 𝔔 = (1/2π)∫[Θ_∞\|F\|² − 2Re F̄F_log] + 2AB, F built from partial sums ζ_X(1−s), Θ_∞ = −2Re ζ′/ζ on Re s = ½ (Im ζ′/ζ never enters). | PROVED | F Thm F.1; P47 thm:ext-line |
+| I1 | **Half-line identity.** W_T(g) = 𝒲_ext[Ψ_f] = −𝒲(g,Ψ_f), g = Ef\|_I, Ψ_f the aliasing tail of Ef below the window; with the killing term when written on the half line. The window form *is* the complete Weil form of what the summation map pushes outside the window. | PROVED given Guo 4.2–4.5 | PL# A Thm 1.1, E Thm E.1, AUDIT_1; P46 thm:ext-half |
+| I2 | **Möbius bijection.** E: L²[1/λ,λ] → L²(I), E⁻¹g = Σ μ(m)(mu)^{−½} g(log mu), norms ≤ 2√μ; gauge (−1/λ,1/λ) = radical; ℓ = dist²(r, 𝒢̄). | PROVED | MECH_001 Prop 3.1; P46 lem:ext-mob, prop:ext-gauge |
+| I3 | **Universal form.** 𝒲_ext[Zr] = λ⁻¹𝔔[ρ]: one μ-free form 𝔔 on L²(1,∞); all μ-dependence is in the data class PW_μ mod the fixed radical. | PROVED | F Prop F.0; P46 prop:ext-univ |
+| I4 | **Critical-line form.** 𝔔 = (1/2π)∫[Θ_∞\|F\|² − 2Re F̄F_log] + 2AB, F built from partial sums ζ_X(1−s), Θ_∞ = −2Re ζ′/ζ on Re s = ½ (Im ζ′/ζ never enters). | PROVED | F Thm F.1; P46 thm:ext-line |
 | I5 | **Comb collapse.** On Z-images the prime comb is the log-weighted summation map (Λ∗1 = log): 𝒲_ext is Λ-free; W_T(Ef) = 𝒜_a[Zr] + 2AB − 2⟨Zr, Z_log r⟩. Pole cancels the Chebyshev main term exactly (residue 1). | PROVED | E Thm E.2, Lemma E.4; B L3.1 |
-| I6 | **Mirror theorem.** Q(G,G) = −𝔔_line[c] + 2𝔅 − R(1)G_h(0) + c₀ρ₀² − 2ρ₀ρ₁ (Poisson self-duality of ℤ + Re M′/M = Θ_∞). The "defect half" is exterior positivity of the dual data, not a reduction. | PROVED on C_c^∞(1,∞); CONDITIONAL on PW tails | AUDIT_4 §6; P47 thm:ext-mirror |
-| I7 | **Reflection / P.1–P.2.** 𝔔 = −Q(G,G) + 2Q(F,G) + 2AB, Q(F₀,F₀) = 0 (Euler–Maclaurin smooth part is a null vector of the line form); pole's F₀-piece = s = 0 residue of the coupling. | PROVED | P_001, AUDIT_3; P47 prop:ext-residue |
+| I6 | **Mirror theorem.** Q(G,G) = −𝔔_line[c] + 2𝔅 − R(1)G_h(0) + c₀ρ₀² − 2ρ₀ρ₁ (Poisson self-duality of ℤ + Re M′/M = Θ_∞). The "defect half" is exterior positivity of the dual data, not a reduction. | PROVED on C_c^∞(1,∞); CONDITIONAL on PW tails | AUDIT_4 §6; P46 thm:ext-mirror |
+| I7 | **Reflection / P.1–P.2.** 𝔔 = −Q(G,G) + 2Q(F,G) + 2AB, Q(F₀,F₀) = 0 (Euler–Maclaurin smooth part is a null vector of the line form); pole's F₀-piece = s = 0 residue of the coupling. | PROVED | P_001, AUDIT_3; P46 prop:ext-residue |
 | I8 | **Remainder pairing (V).** 𝒲_refl[u] = ∫e^{−t/2}(u∗u) dR_Λ, R_Λ(t) = ψ(e^t) − e^t + ½log(1−e^{−2t}); W_T(g) = ∫e^{−t/2}(ǧ∗Ψ̌) dR_Λ; the PNT main term of the prime self-convolution is exactly A². | PROVED (REF-D) | V_001 §2.1 |
-| I9 | **Möbius-lattice form (Thm D).** f = Σ_{m<μ} μ(m)H(mu) + φ₀ with one function H = h·1_{[1/λ,λ)}; ratio-grouped Ψ̌ with coefficients C_{b/a} = μ(a)M̃_a(μ/a)/a depending only on the denominator; line m in dilate 1 ≡ line nm in dilate n ⇒ exact resonance with sign μ(n). | PROVED | AA_001, AUDIT_13; EXTERIOR_DATUM_001 Lemma E.1; P47 thm:ext-lattice |
+| I9 | **Möbius-lattice form (Thm D).** f = Σ_{m<μ} μ(m)H(mu) + φ₀ with one function H = h·1_{[1/λ,λ)}; ratio-grouped Ψ̌ with coefficients C_{b/a} = μ(a)M̃_a(μ/a)/a depending only on the denominator; line m in dilate 1 ≡ line nm in dilate n ⇒ exact resonance with sign μ(n). | PROVED | AA_001, AUDIT_13; EXTERIOR_DATUM_001 Lemma E.1; P46 thm:ext-lattice |
 | I10 | **FF.1 comb of translates.** Ψ̌(x) = Σ_{N≥μ} c_N N^{−½} g(x − log N) + gauge mirror (+ polar ≡ 0 by GG), c_N = Σ_{m\|N, m<μ} μ(m) = Möbius truncation tail, c_N = 0 for 2 ≤ N < μ. Edge jet Ψ̌^{(k)}(a+) = [1 + (−1)^k c_μ μ^{−½}] g^{(k)}(a). | PROVED | FF_001, AUDIT_16 |
 | I11 | **Mellin of the translate comb.** Σ c_N N^{−s} = ζ(s)M_μ(s) − 1 (mollifier defect); W_T(g) = 𝒲[D_μ g]; linear identity W_T(g) = −Σ c_N N^{−½} F_g(log N) (X-limit, boundary R_X → 0 OPEN). Gram of (g,Ψ̌) = W_T(g)·[[1,−1],[−1,1]]. | PROVED (GG.1 limit CONDITIONAL) | GG_001, II_001, AUDIT_16 |
 | I12 | **Lossless loop.** Each prime channel strictly positive-real (Re ≥ 1/(1+p^{−σ})); the full-line closed loop plant × ∏(1−p^{−s})^{−1} is lossless (∂_σ\|Γ_ℝζ\|² = 0 on the line). | channel PR PROVED; loop CONDITIONAL | MM_001, AUDIT_17 |
-| I13 | Strip identities: Green–FE-defect (L3), sourceless energy identity with ρ_S = ξ_S/ξ_S^# (R1, NUMÉRICO 1e−13), gauged identity (T1, entire gauge T1′), exact band formula (Q2), place-splitting (S1). | PROVED | phases 194–195; P47 subsec:strip |
+| I13 | Strip identities: Green–FE-defect (L3), sourceless energy identity with ρ_S = ξ_S/ξ_S^# (R1, NUMÉRICO 1e−13), gauged identity (T1, entire gauge T1′), exact band formula (Q2), place-splitting (S1). | PROVED | phases 194–195; P46 subsec:strip |
 | I14 | Exact split 𝔞_T = A_∞ + ½𝔄ff − ½Re⟨Vf,f⟩_Ш (affine near-coincidence form; non-diagonal); Hecke–Chebyshev transfer V*Ш = 2log\|x\|·Ш. Holds for every lattice αℤ (V2.2(c) FALSE). | PROVED | INV_V_002, AUDIT_196 |
-| I15 | Divisor-gauge symbol s_φ = m − 2Re[ζ(½+iτ)Q_φ]; ζ(½+iτ) is a universal carrier common to every window comb incl. a_P. | PROVED (K2 only ARGUED) | INV_H/K, REVIEW_K2; P47 thm:spec-carrier |
+| I15 | Divisor-gauge symbol s_φ = m − 2Re[ζ(½+iτ)Q_φ]; ζ(½+iτ) is a universal carrier common to every window comb incl. a_P. | PROVED (K2 only ARGUED) | INV_H/K, REVIEW_K2; P46 thm:spec-carrier |
 
 ### 1b. The extremal anatomy at μ = 15 (Mori's certified bottom; all NUMÉRICO unless stated)
 - Galerkin bottoms 4.7634661356·10⁻⁷⁰ (even; certified 2.40·10⁻⁷⁰) and 6.109·10⁻⁶⁶ (odd). Even g* = super-Gaussian bump
@@ -53,16 +53,16 @@ MORI15_EXTREMAL_001, TEST_*), and Paper 47 (`sec:spec`, `subsec:strip`, `subsec:
   F(N) = H_N log N − 2H₁(N) ∈ [0, γlog N + 1]. (BRIDGE_001, AUDIT_8.)
 - **Theorem B** (single-cell chirps, PROVED after constant repairs): 𝔔[ρ] = ∫w|a|² + O(ν₀⁻¹) on supp ⊂ [N+δ, N+1−δ];
   comb = −2H₁(N)‖ρ‖² exactly; 𝔔 > 0 for ν₀ ≳ polylog N; cΛ with c > 1 negative as N → ∞ (proved window falsifier).
-  P47 thm:ext-cell, cor:ext-cellpos, cor:ext-cfals.
+  P46 thm:ext-cell, cor:ext-cellpos, cor:ext-cfals.
 - **Theorem B′** (multi-cell Langer chirps, PROVED as asymptotics): 𝔔 ≥ (log 2μ − O(c^{−½}log c))‖a‖²; relative phase of
-  dilates (1,n) concave with unique stationary point s_n = √(1+n⁻²); vacuous at μ = 15 by ≈13×, μ ≳ 10³. P47 thm:ext-multi.
+  dilates (1,n) concave with unique stationary point s_n = √(1+n⁻²); vacuous at μ = 15 by ≈13×, μ ≳ 10³. P46 thm:ext-multi.
 - **Theorem C** (caustic layer, PROVED given envelope; envelope CC_001 PROVED): layer diagonal (1−χ_k)[(2/3)log 4N − 0.107689](1+η),
   closed form ∫₁²𝔴_μ = (2/3)log 4μ − Cl₂(2π/3)/(2π); turning point regular-singular (Bessel J₀); amplitude product n-free;
-  explicit |η| non-vacuous only for N ≳ 130–820. P47 thm:ext-layer (iv) open.
+  explicit |η| non-vacuous only for N ≳ 130–820. P46 thm:ext-layer (iv) open.
 - **Prop JJ.3** (PROVED, elementary): branch-averaged (1,n) block |B_n|² ≤ θ_n²A_nC_n, θ_n² < 1/(nH_n) ≤ 1/3; gap ≥ 0.42 log 2μ
   uniformly. Operator version JJ.4 CONDITIONAL on Fresnel-scale transfer.
 - Others: Prop H.1 base case L′♯ on 5 ≤ μ ≤ 15 with A = 2, κ = 2^{−2905}/C₀ (PROVED, Mori CITED); comb-generic L′♯ with A = 2
-  above frequency Ω_* = e^{𝒜_T+λ+O(1)} (A_001, P47 lem:ext-hf); D_odd on T ≤ ½log5 (AA_001); (I_T) on 𝓔𝓟_Q for T ≤ ½log5 (D2);
+  above frequency Ω_* = e^{𝒜_T+λ+O(1)} (A_001, P46 lem:ext-hf); D_odd on T ≤ ½log5 (AA_001); (I_T) on 𝓔𝓟_Q for T ≤ ½log5 (D2);
   W1: n₋(𝔞_T\|P_T) non-decreasing, all crossings downward (PROVED).
 
 ### 1d. Lemma M and the falsifier battery
@@ -73,7 +73,7 @@ MORI15_EXTREMAL_001, TEST_*), and Paper 47 (`sec:spec`, `subsec:strip`, `subsec:
   Plus the standing set cΛ (c ≠ 1), a_P, Beurling, F-DH. Quantitative signature: Λ sits at +κ(1−λ₄) with κ ≈ 4.1–5.4, each
   falsifier at −Θ(1) (NUMÉRICO). Single deletions λ_A(T; Λ−q) ≈ −0.08…−0.71 on [log2, ½log11).
 
-### 1e. The six-clause specification (P47 prop:spec)
+### 1e. The six-clause specification (P46 prop:spec)
 (1) not linear / not comb-generic — PROVED (PD/hyperbola/Dirichlet-algebra exclusion CONDITIONAL); (2) not a cone condition
 on log ζ (O_4-closed) — PROVED; (3) not coefficientwise integrality (𝒞_{01}, 𝒞_ℤ, 𝒞_1 = {Λ}) — PROVED; (4) not sparse-stable
 (a_P via O_6) — PROVED; (5) couples (Λ(n))_{n<N} with the FE by a route other than ζ(½+iτ) — OPEN, no object known (strip

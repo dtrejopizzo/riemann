@@ -4,7 +4,7 @@ Status: partial results PROVED with independent review; global sign OPEN. Goal a
 
 ## What is now needed to close the sign
 
-POWER_SCALAR_BRIDGE_017 shows that it suffices to prove W[h_(N,k)]>=0 for ALL integers N>=1,k>=0, with H_(N,k)=s^k/(s+u)^(N+k) and a fixed rate u=63/2. This scalar table controls all cross terms of the full blocks: the density of any numerator is a base weight times a polynomial R(q)>=0 on[0,1]. R+epsilon has an exact Bernstein expansion of high degree with positive coefficients. The rational identity of densities keeps the polar on evaluating x=-1/4, in addition to each contact and its full sum. Letting epsilon go to0 proves sufficiency. The strong bridge014 then connects to the data of Paper47.
+POWER_SCALAR_BRIDGE_017 shows that it suffices to prove W[h_(N,k)]>=0 for ALL integers N>=1,k>=0, with H_(N,k)=s^k/(s+u)^(N+k) and a fixed rate u=63/2. This scalar table controls all cross terms of the full blocks: the density of any numerator is a base weight times a polynomial R(q)>=0 on[0,1]. R+epsilon has an exact Bernstein expansion of high degree with positive coefficients. The rational identity of densities keeps the polar on evaluating x=-1/4, in addition to each contact and its full sum. Letting epsilon go to0 proves sufficiency. The strong bridge014 then connects to the data of Paper46.
 
 Positivity of a linear envelope is not inferred from a union of tests. The representation is conic in densities and includes all cross terms. The degree elevation is elementary and effective; the degree may grow as epsilon decreases. Proof reviewed independently twice.
 

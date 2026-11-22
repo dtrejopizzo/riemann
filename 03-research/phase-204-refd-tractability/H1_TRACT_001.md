@@ -4,7 +4,7 @@ OPEN / NO-GO / NUMERICAL. Single file written by this review.
 
 ## Summary (≤250 words)
 
-Convention (P47 prop:WT, l.4358): 𝔄 = 𝔞_T|𝒟^par_T = archimedean 𝔪_T + comb Π_T = −Σ v_n c_F(log n), WITHOUT the polar
+Convention (P46 prop:WT, l.4358): 𝔄 = 𝔞_T|𝒟^par_T = archimedean 𝔪_T + comb Π_T = −Σ v_n c_F(log n), WITHOUT the polar
 term; W^par = 𝔄 + 2ε_par χχᵀ with ε_ev = +1, ε_odd = −1.
 
 (A) H1⁺. D_ev ⇒ WP^ev ⇒ H1⁺ (PROVED, Cauchy). H1⁺ implies nothing about the sign by itself; with H1⁻ it fixes n₋ = 1
@@ -36,14 +36,14 @@ grep in `05-meta-and-planning/ROUTES-TRIED-INDEX/` (line counts): «inertia» 15
   (ii) turns the "transfer" into a PF-class NO-GO with a falsifier; (iii) corrects B's relation to W^odd.
 - **BARRIER_W_001** (phase 197, W1): n₋ non-decreasing, single-sign crossings; 𝒦_W NO-GO. **AUDIT_CONSTRAINTS_001**
   (phase 199): Theorem X, 𝒦_H, restriction 11 (every first-order discriminant is a functional of h*, not of σ).
-- **cor:convfail** (P47 l.4816): (i) deletion Λ1_{n≥5}: WP holds, W fails; (ii) a contact a_θ at ½log3.
+- **cor:convfail** (P46 l.4816): (i) deletion Λ1_{n≥5}: WP holds, W fails; (ii) a contact a_θ at ½log3.
 - **WEAKEN_001 K11/K34**: K11 already weakened (D3); K34 = (N)/(N_loc), "equivalent to the datum."
 New reason, written out, for touching P60-1/PF: PF is not retried as a sign route; it is used as a declared method
 class to prove that it does NOT reach H1⁺ nor B (a new NO-GO, with a falsifier), something no entry registers for λ₂.
 
 ## 1. Exact statements and direction relative to D
 
-Notation: 𝔄_par(T) operator of the closed form 𝔞_T|𝒟^par_T (P47 prop:WT); q_par = ⟨𝔄⁻¹χ_par, χ_par⟩;
+Notation: 𝔄_par(T) operator of the closed form 𝔞_T|𝒟^par_T (P46 prop:WT); q_par = ⟨𝔄⁻¹χ_par, χ_par⟩;
 W^par = 𝔄_par + 2ε_par χ_parχ_parᵀ (ε_ev = +1, ε_odd = −1; direct reading of the proof of prop:WT: 𝔤 = 1/q + 2ε).
 
 **(A) H1⁺:** n₋(𝔄_ev(T)) ≤ 1 for all T > 0.
@@ -68,7 +68,7 @@ W^par = 𝔄_par + 2ε_par χ_parχ_parᵀ (ε_ev = +1, ε_odd = −1; direct re
   of WT_HALVES). B and W^odd ⪰ 0 are NOT incomparable: B is the inertia half of the odd half, exactly as H1⁺ is in the
   even case.
 - By monotonicity in T (WT_HALVES §3.1, PROVED): B ⟺ 𝔞 > 0 on all of 𝒟^odd of compact support (no kernel at each T).
-- Data: B holds for T ≤ ½log5 (prop:wh-index(ii) via thm:log5W, PROVED in P47) and, via D0 (Mori, ½log15, CITED +
+- Data: B holds for T ≤ ½log5 (prop:wh-index(ii) via thm:log5W, PROVED in P46) and, via D0 (Mori, ½log15, CITED +
   lem:monoT) and the implication above, for T ≤ ½log15 (CONDITIONAL on non-degeneracy; the inclusion is new here only
   as a reading: D0 ⇒ W^odd ⪰ 0 ⇒ 𝔄_odd ⪰ 0).
 
@@ -139,7 +139,7 @@ without exact Λ? Evidence against:
   the set {θ : H1⁺ holds at T} is at most a window around θ = 1 that depends on T. ARGUED.
 - Deletions: a_P at ½log3 satisfies H1⁺ (n₋ = 1, NUMERICAL); odd deletion at ½log3 fails B (q_odd ≈ −0.056 ⇒
   n₋(𝔄_odd) = 1, NUMERICAL); cor:convfail(i) a = Λ1_{n≥5} has a negative odd vector of W_T on [0.4608, log 2] (PROVED
-  in P47), but since W^odd = 𝔄_odd − 2χχᵀ, that does not decide 𝔄_odd: there is no PROVED falsifier of B among the
+  in P46), but since W^odd = 𝔄_odd − 2χχᵀ, that does not decide 𝔄_odd: there is no PROVED falsifier of B among the
   deletion models, only the NUMERICAL one at ½log3 plus the PROVED ones of Corollary A∞.
 Honest reading: "H1⁺ holds for the known battery" is true only on small windows (½log3); at large T there is no
 n₋(𝔄_ev) data for any modified comb. The objective's claim "H1⁺ holds for a_P ⇒ comb-generic" does not hold up: a

@@ -1,6 +1,6 @@
 # Round 2, candidate A — The exterior tail of the hyperbola as a sum of squares: selection memo
 
-Notation of `../phase-211-sign-sandbox/STATEMENT_001.md` and of P47 §sec:firstcontact (thm:PCfinite,
+Notation of `../phase-211-sign-sandbox/STATEMENT_001.md` and of P46 §sec:firstcontact (thm:PCfinite,
 eq:Gammaenergy, eq:collar, eq:Qbalance, prop:GEgap). Fix T > 0, integers M ≥ N ≥ e^{2T}, L ≥ 1, and
 
     a_m = 2m + ½,  s_m = a_m + ½ = 2m + 1,  b_m = √a_m e^{−a_m(T+δ)},
@@ -29,11 +29,11 @@ b. **Direct sum in k already attempted.** `phase-161-row-d-sum-product-square/R1
    oriented divisor variance with squares indexed by the fibres k = de and weights Λ(d);
    `R161_033` withdraws the realization: (PC) sums in k coherently, and passing to the direct sum
    Σ_k ‖·‖² erases the Gram terms between distinct k; `R161_037`–`039`: the missing saturation
-   is the final statement, with a matrix countermodel to its being automatic. P47 rem:returnremarks
+   is the final statement, with a matrix countermodel to its being automatic. P46 rem:returnremarks
    records the same («the variance of a sum labelled by divisor paths is not the norm of
    the coherent sum in k»).
 c. **Squares with non-negative arithmetic weights on exterior functionals already written.**
-   P47 eq:Qbalance: c_{N,L}(F) = Σ_{m≤L} d_{m,N} |(𝒪_LF)_m|², d_{m,N} = Σ_{n≤N} Λ(n) n^{−s_m};
+   P46 eq:Qbalance: c_{N,L}(F) = Σ_{m≤L} d_{m,N} |(𝒪_LF)_m|², d_{m,N} = Σ_{n≤N} Λ(n) n^{−s_m};
    eq:Qspectral: Q_{N,L} is negative on every eigenvector with λ ≥ 0 and admits no representation as a sum
    of squares on P_T; eq:equivgate: the return inequality is the conclusion. `R161_071`–`072`,
    `R161_081`: the balance recomposes the equation and holds for arbitrary non-negative weights.
@@ -62,7 +62,7 @@ at s = s_m)
     Σ_{N<k≤MN} h(k) ‖ℓ_k(F)‖² = ⟨𝒪_LF, ( D_{M,L} Z_{N,L} − Z^{log}_{N,L} ) 𝒪_LF⟩,           (1)
     Z_{N,L} = diag(Σ_{n≤N} n^{−s_m}),   Z^{log}_{N,L} = diag(Σ_{n≤N} (log n) n^{−s_m}).
 
-It is the family of squares of c_{N,L} of P47 eq:Qbalance (the same ℓ_n, weight Λ(n) instead of h(k)).
+It is the family of squares of c_{N,L} of P46 eq:Qbalance (the same ℓ_n, weight Λ(n) instead of h(k)).
 It is not C: the difference C − (diagonal form) is a cross term, and the following Lemma proves it is
 indefinite on P_T for any choice of diagonal coefficients.
 
@@ -123,7 +123,7 @@ It does not avoid it.
   recombining except to cancel the block k ≤ N, which is the linear use already recorded (RULES_AVOID I2).
 - **Parity (R170_870).** The three conversions are quadratic and even, so the parity
   objection does not reach them directly; but what remains unsigned is the cross term between α and the
-  part of β that does not factor through α, whose sign on the radical is what R170_837 Thm. 5.1 and P47
+  part of β that does not factor through α, whose sign on the radical is what R170_837 Thm. 5.1 and P46
   eq:equivgate identify with the conclusion. No operation that orients it is available; the
   candidate does not evade R170_870, it merely does not get as far as it.
 - **Requested operation non-linear in F.** None was found. The operations that depend on F
@@ -151,7 +151,7 @@ There is no sign step to submit to the battery; what happens with the written id
 - The Lemma and (2) hold for every non-negative weight: they survive the whole battery. By rule 6 that
   disqualifies them as a mechanism; they are obstruction and reformulation.
 
-The cross-check identifies repetition (R161_030–039; P47 eq:Qbalance–eq:equivgate; R170_816, 835, 837) and
+The cross-check identifies repetition (R161_030–039; P46 eq:Qbalance–eq:equivgate; R170_816, 835, 837) and
 there is no sign mechanism to write. The memo ends here.
 
 ## Result
@@ -164,7 +164,7 @@ those moments makes it semidefinite.
 ## What was proved
 
 - Identity (1) (PROVED): the only sum Σ_{k>N} h(k)‖ℓ_k‖² with explicit ℓ_k is diagonal in 𝒪_LF and
-  coincides with the family c_{N,L} of P47.
+  coincides with the family c_{N,L} of P46.
 - Lemma (PROVED): indefiniteness of C − ⟨α, Bα⟩ on P_T for every B, L finite, w ≥ 0.
 - Remark (2) (PROVED): with L = ∞, C is an explicit form in the Gamma moments, alternating in j,
   with the arithmetic in Θ_j = Σ_{k>N} h(k)k^{2j}. Exact reformulation; carries no sign.

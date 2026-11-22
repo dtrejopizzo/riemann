@@ -44,8 +44,8 @@ c_{g₀}(u) = ½cos(τ₀u)∫β(x/T)β((x+u)/T)dx + ½∫β(x/T)β((x+u)/T)cos(
 ‖g₀‖²(1 + O((τ₀T)^{−M}))ρ(u/T)cos(τ₀u), since ‖g₀‖² = ½T∫β² + O((τ₀T)^{−M}) (same oscillatory integral); the second is
 O_M((τ₀T)^{−M})T by M integrations by parts in x. Sum over n with weights v_n. (b) ĝ₀ = ½(β̂_T(τ − τ₀) + β̂_T(τ + τ₀)),
 β̂_T(ξ) = Tβ̂(Tξ) is Schwartz at scale 1/T; m is even, |m(τ)| ≤ log(2+|τ|) + C_∞ and |m′(τ)| ≤ C/|τ| for |τ| ≥ 1
-(lem:mbounds, CITED from Paper 47); split at |τ − τ₀| = τ₀/2. (c) A, B are pairings with e^{±x/2}-type profiles
-(Paper 47 eq:W); integrate by parts M times against cos(τ₀x). ∎
+(lem:mbounds, CITED from Paper 46); split at |τ − τ₀| = τ₀/2. (c) A, B are pairings with e^{±x/2}-type profiles
+(Paper 46 eq:W); integrate by parts M times against cos(τ₀x). ∎
 
 **Proposition 1.2 (necessity; PROVED).** Suppose that for some Ω_lo, κ ≥ 0 and every g ∈ P_T with
 ∫_{|τ|<Ω_lo}|ĝ|² ≤ η∫|ĝ|² one has W_T(g) ≥ κ‖g‖² (any coercive form of (HR)(a), with the leakage replaced by ‖g‖²

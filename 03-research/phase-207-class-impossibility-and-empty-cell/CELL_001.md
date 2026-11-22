@@ -28,7 +28,7 @@ precise reason why.
 I did the mandatory grep in `ROUTES-TRIED-INDEX/` and in phases 204–207:
 - **Helson / H² / multiplicative Hilbert / Bohr.** L87 (Perfekt, 05b l.39): "the only positivity at weight 1/√(mn); Λ enters
   only through ∂log ⇒ INV_F_001 predicts comb-genericity". AUDIT_2026-10-15_PHASE193 l.76: C_006 E4 Helson H²(𝔻^∞) =
-  **RD + CIRC** (RD: it is the target reformulated via torus/line, CA_C_002 Prop 2; CIRC: the clause that kills it is ARGUED in P47).
+  **RD + CIRC** (RD: it is the target reformulated via torus/line, CA_C_002 Prop 2; CIRC: the clause that kills it is ARGUED in P46).
   Bohr has 18 files (Bohr lift, infinite torus) and all point to the same family. RIGID_001 §2.12 and §4 (Helson⊗Estermann
   gluing) gives NO-GO ARGUED: "F only rewrites".
 - **Fejér–Riesz / Perfekt.** L87. It is a boundary positivity (critical line bounded by the imaginary axis) and has no P2 (FE).
@@ -145,7 +145,7 @@ D_a^♯(−2+it) is bounded. Then D_a(3+it) = O(|t|^{−5/2}) → 0. But a nonze
 in t and does not tend to 0 unless it is identically 0 (its mean square is Σ|a_n|²n^{−6} > 0). ∎
 
 **Consequence.** 𝔇_w(a) > 0 for every nonzero finite a. The "positive by FE" form ⟨D, JD⟩|_{V₊} is empty on finite objects.
-This is the spectral version of Thm finZ of P47 §7 (row D is intrinsically infinite): **the FE only has infinite
+This is the spectral version of Thm finZ of P46 §7 (row D is intrinsically infinite): **the FE only has infinite
 eigenvectors.** Euler enters only through the entire series (ζ ∈ V₊ in a regularized sense), not through
 truncations.
 

@@ -7,11 +7,11 @@ Conventions are those of CA_D_000. For F ∈ L²(ℝ), F̂(τ) = ∫F(x)e^{iτx}
 extension is standard and is labelled ARGUED where it is used.
 
 ## 0. Corpus check
-- EI_003 Thm 1 = P47 prop:shape-phase (PROVED): Z_T = e^{iΘ}Z_X(½+iτ) is real, and σ_T = 2Θ′.
+- EI_003 Thm 1 = P46 prop:shape-phase (PROVED): Z_T = e^{iΘ}Z_X(½+iτ) is real, and σ_T = 2Θ′.
 - CA_B_001: J(σ) with the frozen weight ω = F̂₀²|Z_{<X}(½+iτ)|². There the sign of J′(½) is ARGUED to be zero geometry. The weight here
   is |F̂|² alone, the test is primitive, and the sign is PROVED by a support argument. Different object.
 - R164_102 (W-Landau): positivity of the coefficients z_X is not used below; only their support is used.
-- EI_002 / P47 prop:shape-family: ζ_w's polar term. The pole of Z_X is handled here by the Tate condition, not by smoothing.
+- EI_002 / P46 prop:shape-family: ζ_w's polar term. The pole of Z_X is handled here by the Tate condition, not by smoothing.
 - Grep for Mandel, analytic signal, first spectral moment, time delay in 03-research: no hit (R186_114 mentions Kahane–Mandelbrojt, which
   is unrelated). Not a retry.
 
@@ -95,7 +95,7 @@ Z_{X,L} = e^{−iΘ_{X,L}}·(real), which is the FE on the line. ∎
 **Consequences for the campaign (PROVED from Theorem 1″ and thm:shape).**
 (a) Theorem 1″ applies to Davenport–Heilbronn-type and Epstein-type series (O10), to ζ_K (O12) and to any FE-quartet model with a
 Dirichlet expansion (O7, ARGUED: it depends on the model of lem:shape-quartet having a Dirichlet series with the stated growth). These
-include objects with negative primitive bottoms at some windows (P47 falsifier list). So **the weighted positivity holds where D fails**.
+include objects with negative primitive bottoms at some windows (P46 falsifier list). So **the weighted positivity holds where D fails**.
 By thm:shape(C), Theorem 1 is not, and cannot be made, the sign step of row D. It is a tool; its YES column is (R)(2), (3) and (4).
 (b) The positivity of z_X(n) is never used. Only the gap {1 < n < X} ∩ supp z_X = ∅ is used. Lead (a) of the brief ("nonnegative
 coefficients beyond the window") therefore contributes nothing beyond the gap, and the gap holds for every comb.
@@ -131,7 +131,7 @@ positivity is therefore produced by suppressing the amplitude exactly where the 
    intersection {T} is null. ✓
 5. *Convergence of ∫u|R|².* It is finite iff ǧ ∈ H^{½}. Here ǧ ∈ H¹, since F̂ is Schwartz and |Z_X|, |Z_X′| ≪ τ^{½+ε}. ✓
 6. *Is Theorem 1 trivial?* It is a support plus Plancherel argument (an analytic-signal argument). The non-trivial inputs are (i) the
-   Euler gap of Z_X, (ii) the FE identification arg Z_X = −Θ (P47 prop:shape-phase), and (iii) the cancellation of the pole by the
+   Euler gap of Z_X, (ii) the FE identification arg Z_X = −Θ (P46 prop:shape-phase), and (iii) the cancellation of the pole by the
    Tate condition at exactly the abscissa ½. Each of the three is necessary: without (i) the window part is not isolated, without (ii)
    the phase is not the window symbol, and without (iii) μ_− lands in [−T,T]. It is not in the corpus. It contradicts nothing:
    Corollary 1.1(i) is a lower bound for a mean value, and 𝔞^{Z} is not 𝔞.

@@ -1,6 +1,6 @@
 # Round 19 B — The tail reduction (i)+(ii): density of the E-image, and why the comb-robust margin is a representative effect
 
-Target (★): λ_A(T) ≥ 0 for every T. Notation of ROUND_018_B and Paper 47 §sec:ext: λ = e^T, N = λ², admissible f (even,
+Target (★): λ_A(T) ≥ 0 for every T. Notation of ROUND_018_B and Paper 46 §sec:ext: λ = e^T, N = λ², admissible f (even,
 supp ⊂ [−λ, λ], C², f(0) = ℱf(0) = f(λ) = 0), E the summation map, Φ_f(x) = e^{x/2}Σ_n f(ne^x), Ψ_f = Φ_f 1_{(−∞,−T)}, gauge
 𝒢_T = {φ admissible, supp φ ⊂ [−1/λ, 1/λ]}, 𝒲̂ = 𝒜_∞ − 𝒞 + 𝒯 the complete form on the line (comb over all prime powers),
 𝒲̂^c = 𝒜_∞ − c𝒞 + 𝒯, 𝒜𝒫 := 𝒜_∞ + 𝒯 (archimedean-plus-polar form), m(τ) = Re ψ(¼ + iτ/2) − log π.
@@ -12,7 +12,7 @@ tested tails (E-images of prolate spans, prolate representatives) 𝒲̂^c ≥ 0
 
 ## 0. Corpus check
 Read: ROUND_001_B (Thm 1.1 radical lemma, Cor 1.2, Prop 1.3 defect, Prop 1.5 fibre dependence ARGUED), ROUND_015_A Thm 3.1,
-ROUND_016_B Lemma 2.1, ROUND_017_A, ROUND_018_B; Paper 47 lem:ext-mob, prop:ext-gauge, prob:ext-L, prop:ext-consol
+ROUND_016_B Lemma 2.1, ROUND_017_A, ROUND_018_B; Paper 46 lem:ext-mob, prop:ext-gauge, prob:ext-L, prop:ext-consol
 (eq:ext-starstar), form-core statement (main.tex 1832); phase 199 proof-L-sharp: E_001 Thm E.2, X_001 Thm B, C_001,
 S_001, MM_001 ("lossless loop; passivity margin = W_T itself"); index rows P211-15A/15B/16B/17A/18B.
 What is already in the corpus. (a) Surjectivity of E from admissible data onto the core is lem:ext-mob (Möbius bijection
@@ -30,13 +30,13 @@ it inside MM_001's circle, and the memo says so.
 
 **Proposition 1.1 (E(admissible) contains the core of P_T).** For every G ∈ C_c^∞(I_T) ∩ P_T there is an admissible f
 with Ef = G; the set of such f is f_0 + 𝒢_T.
-*Proof.* lem:ext-mob of Paper 47 (CITED); self-contained version: put g(u) = u^{−1/2}G(log u) on (1/λ, λ), and
+*Proof.* lem:ext-mob of Paper 46 (CITED); self-contained version: put g(u) = u^{−1/2}G(log u) on (1/λ, λ), and
 f(u) = Σ_{d < λ/u} μ(d) g(du) for u ∈ [1/λ, λ] (finite sum, C^∞, vanishing near λ because supp G is compact in I_T). For
 u ∈ (1/λ, λ), Σ_n f(nu) = Σ_k g(ku)Σ_{d|k}μ(d) = g(u), and only arguments ≥ 1/λ occur, so Ef = G whatever f is on (0, 1/λ).
 Choose f on [0, 1/λ] in C^∞, glued C^∞ at 1/λ, vanishing near 0, with ∫f = 0 (one bump); even extension. Two such f differ
 by an even C² function supported in [−1/λ, 1/λ] with value 0 at 0 and integral 0, i.e. by 𝒢_T. ∎
 
-**Corollary 1.2 ((ii) on the class is (★); PROVED).** C_c^∞(I_T) is a form core of a_T (Paper 47 main.tex 1832, CITED); since
+**Corollary 1.2 ((ii) on the class is (★); PROVED).** C_c^∞(I_T) is a form core of a_T (Paper 46 main.tex 1832, CITED); since
 A, B are continuous on the form domain and nonzero on C_c^∞(I_T), C_c^∞(I_T) ∩ P_T is a core of a_T|_{P_T} (correct a core
 sequence by fixed C_c^∞ functions dual to A, B). a_T is continuous in the form norm. Hence
   (★) at T ⟺ 𝒲̂[Ψ_f] ≥ 0 for every admissible f with Ef ∈ P_T ∩ C_c^∞(I_T).

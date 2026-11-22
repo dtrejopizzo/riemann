@@ -24,7 +24,7 @@ No identity, detector, finite-window computation or RH-equivalent reformulation 
 4. A separated arithmetic/archimedean square is excluded beyond the recorded threshold (`G2_B3_R5`).
 5. A finite number of exact values or instances of `Lambda*1=log` cannot decide the uniform problem.
 6. The additive square by itself is zero-blind: its exponents add and its top pole is the known pole at `2`
-   (Paper 46, Thms 26.15–26.17).
+   (Paper 47, Thms 26.15–26.17).
 
 ## 2. Required novelty test
 

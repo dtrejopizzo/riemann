@@ -2,7 +2,7 @@
 
 **Leak lemma, not a sign lemma. L′♯ OPEN.
 Row D OPEN.** Read: PI4_JUMPS_001 (§1.3, §2, R-Π4, Π.5 proposed), PI_MU_001 (Π.0, Π.0′, Π.1), AUDIT_200_PIMU_001,
-B1_FLAT_001, K3_GAMMA_001, Paper 47 prop:ext-gauge, lem:ext-mob, lem:ext-ellbound.
+B1_FLAT_001, K3_GAMMA_001, Paper 46 prop:ext-gauge, lem:ext-mob, lem:ext-ellbound.
 
 **Index check.** Grep in ROUTES-TRIED-INDEX for "Tate", "f♯(0)", "Slepian", "prolate", "coerciv", "MORI15". Hits:
 MORI15 (ℓ* ∈ [4.4,8.5]e−70), PI_MU (Π.0 with χ_0(2π)), PI4 (Tate mode, R-Π4). No entry bounds f♯(0) by ℓ nor

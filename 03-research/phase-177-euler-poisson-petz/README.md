@@ -9,7 +9,7 @@ for row D, including its nonzero atoms at log 2 and log 3.
 
 - The canonical arithmetic channel built from Λ(d)/log n (the only conditional law the identity Σ_{d|n}Λ(d) = log n defines without extra data) decomposes information loss along the divisor fibers of n — **PROVED**.
 - On divisor fibers of cardinality one (in particular the primes 2 and 3), the information loss, its Hessian, and the recovery defect are identically zero — **PROVED**.
-- Since Paper 47's physical form has nonzero atoms exactly at log 2 and log 3, no Petz Hessian in this canonical class can equal Q_{N,L}, even before incorporating the Gamma factor or the poles — **PROVED NO-GO** (Corollary 3.1).
+- Since Paper 46's physical form has nonzero atoms exactly at log 2 and log 3, no Petz Hessian in this canonical class can equal Q_{N,L}, even before incorporating the Gamma factor or the poles — **PROVED NO-GO** (Corollary 3.1).
 - Two natural repairs (allowing coherences between different n-blocks; adding an independent Gamma–prime tensor factor) are shown to each either abandon the canonical conditional-probability input or simply re-encode the already-open mixed-operator law of phases 161–170, rather than resolve it.
 - Conclusion: the Petz construction, as formulated, cannot reach the physical operator or use first-contact minimality — **NO-GO**.
 

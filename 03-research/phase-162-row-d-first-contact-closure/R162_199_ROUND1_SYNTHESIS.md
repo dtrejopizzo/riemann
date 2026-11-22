@@ -2,7 +2,7 @@
 
 ## Gate 0 — CLOSED
 R162_001: T ↦ λ_A(T) is continuous (dilation + rank-two Tate correction). check R162_190:
-CORRECT WITH FIXES, fixes applied. Integrated into Paper 47 as lem:contA; lem:firstcontact is now
+CORRECT WITH FIXES, fixes applied. Integrated into Paper 46 as lem:contA; lem:firstcontact is now
 unconditional (rem:contA removed).
 
 ## Gate 1 — OPEN; three NO-GOs

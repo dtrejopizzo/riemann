@@ -12,7 +12,7 @@ do both.
 Memos: CLASS_*.md (lead 1), CELL_*.md (lead 2), AUDIT_207_*.md.
 
 ## AUDIT_207_001 verdict
-- Lead 1: Theorem A = P47 thm:geo-tv + cor:margin1 (CITED, tautological dichotomy; (H_ev) PROVED; (H_N) OPEN, min–max gives
+- Lead 1: Theorem A = P46 thm:geo-tv + cor:margin1 (CITED, tautological dichotomy; (H_ev) PROVED; (H_N) OPEN, min–max gives
   μ_N ≥ μ_∞). Theorem B = C2 at the node (PROVED, not new). Lemma 5: signature (1,1) in the even sector. (O1-iii) determinants/
   moments = W-det/W-mom (retry forbidden). Structural corrections: quartets and f_t do not falsify the node; with 𝔪 fixed the
   F coordinate has no falsifier ⇒ Φ200′ at the node = "E with 𝔪 fixed".

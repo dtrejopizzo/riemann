@@ -68,7 +68,7 @@ direct check `C5` passes far below every version of the bound.
 
 **`M_+ ≤ 17` (`CONFIRMED` with a caveat — `N7`).** The structure is right: `ΠK` is even and `≤ 0` off
 `(−u_0,u_0)` by Lemma 2.1, so `\sup ΠK = \max_{[0,u_0]}ΠK`, and grid-max plus `Lh/2` bounds the sup on
-the **whole** interval, not only at grid points. Run: `max on grid = 16.953849` (reproducing Paper 46
+the **whole** interval, not only at grid points. Run: `max on grid = 16.953849` (reproducing Paper 47
 §13.2), `L = 101.5`, margin `0.0254` (`--fast`) / `0.01015` (full run, `h = 2·10^{−4}` — the report's
 figure). `16.953849 + 0.0254 = 16.979 ≤ 17` ✓.
 
@@ -100,7 +100,7 @@ The negative result is sound and honestly labelled. I checked the two loads:
 * The bootstrap: at `σ = 1+η` the Euler product removes the zero-free region but **Stirling still gives
   `e^{π|τ|/4}`**, so the `e^{πT/2}` factor survives; with `T ≳ Q` forced by the Montgomery–Vaughan
   diagonal, the `X²` coefficient is `≫ 1` and the inequality does not close. Verified.
-The declaration of **(X19)** with its two costs (Paper 46 §1.13 row, §15 import tag) is present in
+The declaration of **(X19)** with its two costs (Paper 47 §1.13 row, §15 import tag) is present in
 `R137_003` §2.4, in draft §0.2 and in draft §17.4's import line. The observation that §1.13 *already*
 carries the qualitative `ζ(s) ≠ 0` for `\mathrm{Re}\,s ≥ 1` is correct and useful. `FIXED`.
 
@@ -127,7 +127,7 @@ What is **not** established is that this is R3's real gap — see `N1`.
   was false and (v) recording that `Q(m) < ∞` and `h⁰_Z(mK) < ∞` are unproved (new open item (23c)).
   I re-verified (iii): with `Q = ε_0m\sqrt{\log m}`, `π_*(Q)(\log m+Q) ≍ Q²/\log Q ≍ ε_0²m²`, so
   `Cε_0² < ¼` gives the conclusion, and the second term `Q\log m/\log Q ≍ ε_0m\sqrt{\log m} = o(m²)`.
-  Correct. The relation to Paper 46's `ρ_Q` is supplied ((2.2), `ρ_Q ≤ Ce^{CQ}/\minΛ(q)`) — this is the
+  Correct. The relation to Paper 47's `ρ_Q` is supplied ((2.2), `ρ_Q ≤ Ce^{CQ}/\minΛ(q)`) — this is the
   part H4(3) asked for and it is delivered. See `N4` for a side-effect.
 * **H10.** The three corrections are right and the fourth item is a genuine addition I checked myself:
   for real **even** `F`, `Φ_F(1−s) = ∫F(t)e^{(1/2−s)t}dt = ∫F(−t)e^{(s−1/2)t}dt = Φ_F(s)`, so
@@ -241,11 +241,11 @@ The ratio is `A/B = \tfrac{2π}{3}n²e^{2t}`, so the threshold is `3/(2πn²)`, 
 the run prints, `0.2422553269`; the report says `0.2422553…`. The docstring figure is wrong in the fifth
 decimal. Nothing depends on it.
 
-### N4 (`MINOR`) — a correction to Paper 46 §14.5 item (23) is made in passing and not recorded
+### N4 (`MINOR`) — a correction to Paper 47 §14.5 item (23) is made in passing and not recorded
 
 `R137_003` §2.6 argues that a uniform `ρ_Q` alone does **not** give `h⁰_Z(mK) = o(m²)` (it leaves
 `h⁰ ≤ π_*(Q)\log(2mρ+1)`, which still needs the rank bounded), and concludes "**item (23) needs both**".
-I checked this and it is right. But Paper 46 §14.5 item (23) states the `ρ_Q` reformulation as an
+I checked this and it is right. But Paper 47 §14.5 item (23) states the `ρ_Q` reformulation as an
 **equivalence** ("— equivalently whether `ρ_Q` … can be controlled uniformly in the rank"), so this is a
 correction to the paper, asserted in one clause of a paragraph about something else, and it appears in no
 paper-facing list. Given that H6 was a finding about claiming a correction that was not one, the symmetric

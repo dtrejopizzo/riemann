@@ -1,6 +1,6 @@
 # AUDIT_200_CERTDH_001: Audit of CERT_DH_001 (phase 200, round 17C)
 
-**Audit.** Object audited: CERT_DH_001.md, CERT_DH_001_data/ and the text of P47 rem:FDH (l. 8334). Row D /
+**Audit.** Object audited: CERT_DH_001.md, CERT_DH_001_data/ and the text of P46 rem:FDH (l. 8334). Row D /
 L′♯ is treated as an independent goal; F_DH is used only as a falsifier of positivity of the window form.
 
 ## Summary (≤200 words)
@@ -16,7 +16,7 @@ with ‖F‖² = 0.460238064960785 and 35 contacts (n ≤ 36). The computation t
 - the Lévy kernel K_{3/4} (checked against a quadrature at t = 7);
 - b₂ = κ log 2.
 
-All the ingredients are correct and match P47 lem:K / eq:m / eq:Aform after substituting (q, δ) = (5, 1). The script's
+All the ingredients are correct and match P46 lem:K / eq:m / eq:Aform after substituting (q, δ) = (5, 1). The script's
 bounds hold: F lies exactly in P_T, because λ₁ is solved for in balls and the evaluation is monotone by inclusion. The
 upper Γ bound is valid in the range where it is used, and the comb is a finite sum. The control with ζ in the same mold
 (T = ½log5, 1, 1.8) gives no negative eigenvalue, and the χ₋₄ one stays in the noise.
@@ -45,8 +45,8 @@ My checks are in `CERT_DH_001_data/audit_independent.py` and `audit_independent_
   85.699348485377592171929…i, with |F(ρ)| = 4·10⁻³⁶. ✓ (NUMERICAL)
   - **Citation.** Davenport–Heilbronn 1936 proves there are infinitely many zeros in Re s > 1, but **does not** contain this ρ. This
     critical-strip zero is the one published by Spira (1994) and recomputed by Balanzario–Sánchez-Ortiz (2007).
-  - The memo says "CITED, Spira 1994", which is correct. P47 rem:FDH attributes the zero to \cite{DavenportHeilbronn1936}, which
-    **is incorrect** (correction C1). Spira is not in P47's bibliography.
+  - The memo says "CITED, Spira 1994", which is correct. P46 rem:FDH attributes the zero to \cite{DavenportHeilbronn1936}, which
+    **is incorrect** (correction C1). Spira is not in P46's bibliography.
   - For the certificate it suffices to say "located numerically; existence of off-line zeros CITED [DH1936]".
 - **b_n.** The script's recursion is b_n = a_n log n − Σ_{d|n, 1<d<n} a_d b_{n/d}. It comes from F·(−F′/F) = −F′, i.e.
   Σ_{d|n} a_d b_{n/d} = a_n log n, with a₁ = 1 and b₁ = 0. ✓
@@ -54,9 +54,9 @@ My checks are in `CERT_DH_001_data/audit_independent.py` and `audit_independent_
   - b_n = 0 if 5 | n, because a_{5k} = 0 and every divisor d > 1 of n with d ∤ 5 leaves n/d a multiple of 5. Checked
     by induction.
 
-## 2. Window form (verified against P47)
+## 2. Window form (verified against P46)
 
-**ζ convention in P47.**
+**ζ convention in P46.**
 - eq:symbol/eq:m: m(τ) = Re ψ(¼ + iτ/2) − log π. It is 2·Re of the logarithmic derivative of π^{−s/2}Γ(s/2) at ½ + iτ, because
   2·(−½ log π + ½ψ(s/2)).
 - lem:K: C₀ = ψ(¼) − log π and K(u) = 2Σ_k e^{−(2k+½)u}.
@@ -78,7 +78,7 @@ My checks are in `CERT_DH_001_data/audit_independent.py` and `audit_independent_
   (C₀, K, v) substituted.
 
 **P_T.**
-- P47 l. 121: P_T = {A(F) = B(F) = 0}, with A(F) = ∫F e^{t/2} and B(F) = ∫F e^{−t/2}. With no pole, these conditions are
+- P46 l. 121: P_T = {A(F) = B(F) = 0}, with A(F) = ∫F e^{t/2} and B(F) = ∫F e^{−t/2}. With no pole, these conditions are
   not necessary, but they are kept by convention (DH_TRANSFER §1.3/𝔗₁). Since restricting can only raise the infimum, the
   certificate on P_T is stronger than one without conditions. ✓
 - **Odd sector.** A = ∫F cosh + ∫F sinh and B = ∫F cosh − ∫F sinh. If F is odd, ∫F cosh(t/2) = 0, so A = −B and
@@ -162,11 +162,11 @@ comb Λ(n), with N = 60:
 | 1.8 | +7.8·10⁻¹⁴ | +7.0·10⁻¹⁴ |
 
 - There is no negative eigenvalue. At ½log5 the result is positive above the noise, consistent with the ½log5
-  certificates of P47 and with Mori's range (½log15).
+  certificates of P46 and with Mori's range (½log15).
 - For T ≥ 1 the degree-60 Galerkin stays in the noise, as expected.
 - The mold does not manufacture negativity for ζ. ✓
 
-## 5. P47 rem:FDH text (l. 8334): corrections
+## 5. P46 rem:FDH text (l. 8334): corrections
 
 Every numerical claim is backed by the files: 7000 bits, −2.3799·10⁻⁷, −0.75194, 10⁻¹³, the numerical threshold
 in [1.6, 1.8] and the Ziad citation. "Proved" is honest for the negativity at T ≥ 9/5, once these corrections are applied:
@@ -196,7 +196,7 @@ in [1.6, 1.8] and the Ziad citation. "Proved" is honest for the negativity at T 
 **Entry for the ROUTES-TRIED index:**
 > AUDIT_200_CERTDH_001 (phase 200): CERT_DH_001 audited and re-run (identical, [−7.05197470947908e−9 ± 4e−25]).
 > DH falsifier PROVED: 𝔞^{DH}_T is not ≥ 0 on P_T for T ≥ 9/5. Any method using only FE + Γ + bounded real
-> Dirichlet series (𝔗₁) is excluded on those windows. Text corrections in P47 rem:FDH: the zero citation
+> Dirichlet series (𝔗₁) is excluded on those windows. Text corrections in P46 rem:FDH: the zero citation
 > (Spira, not DH1936), lem:monoT for DH, ξ≈84.5 is from T=2, "beyond" → "T ≥ 9/5". Lower T_DH: OPEN.
 
 Audit files: `CERT_DH_001_data/audit_rerun_T9_5_odd.txt`, `audit_independent.py`/`_out.txt`,

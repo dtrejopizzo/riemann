@@ -1,25 +1,25 @@
 # CA_L_001 — The literal "magic function for row D": attainment, slackness, Poisson signs, modular-data genericity (seeds L1, L2, L3, L4, L7, L9)
 
-Phase 193. Pen and paper; **no numerics**. Notation of Paper 47 (P47): window I_T, symbol σ_T, primal value λ_P (≥ λ_A
-notation as in P47 rem:D1complete), K_P the annihilator class, flat-top class 𝒲 (def:W), ν_w (eq:nuw), f_w = σ_T + ν̂_w + 2ĝ₀.
-Verified against P47 def:W (l.1179), eq:nuw (l.1183), thm:Z (l.1194), thm:O (l.729), rem:OvsB, def:shape-ops (l.8330).
+Phase 193. Pen and paper; **no numerics**. Notation of Paper 46 (P46): window I_T, symbol σ_T, primal value λ_P (≥ λ_A
+notation as in P46 rem:D1complete), K_P the annihilator class, flat-top class 𝒲 (def:W), ν_w (eq:nuw), f_w = σ_T + ν̂_w + 2ĝ₀.
+Verified against P46 def:W (l.1179), eq:nuw (l.1183), thm:Z (l.1194), thm:O (l.729), rem:OvsB, def:shape-ops (l.8330).
 **No sign contact. No negative value for ζ.**
 
 ## 1. Exact attainment is forbidden: the slackness set is ℝ
 In Viazovska/CE the method is an *exact* dual optimum: the magic function g satisfies the sign conditions and the complementary-slackness
 vanishing on the support of the primal optimum (the lattice shells), so the bound is attained.
 
-**Theorem 1.1 (no exact magic certificate; PROVED from P47 thm:O).** For every T > 0, every finite even signed measure ν on {|u| ≥ 2T} and every
+**Theorem 1.1 (no exact magic certificate; PROVED from P46 thm:O).** For every T > 0, every finite even signed measure ν on {|u| ≥ 2T} and every
 finite family of K_P-annihilators with coefficients β, the dual objective inf_τ[σ_T + ν̂ + Σβ_jĥ_j] is **strictly** below λ_P. In LP language:
 the primal optimum μ_⋆ = |F̂_⋆|²dτ/2π has support ℝ (F̂_⋆ entire of exponential type, zeros discrete), so the slackness condition
-"certificate − λ_P vanishes on supp μ_⋆" is the identity ϱ ≡ 0, which P47 thm:O shows to be inconsistent (K(u) ~ 1/u and the window atoms
+"certificate − λ_P vanishes on supp μ_⋆" is the identity ϱ ≡ 0, which P46 thm:O shows to be inconsistent (K(u) ~ 1/u and the window atoms
 cannot be matched by a bounded continuous function on 0 < |u| < 2T).
 *Proof.* This is thm:O; the LP reading is its proof's first step (∫ϱ|F̂_⋆|² = 0, ϱ ≥ 0 ⇒ ϱ = 0 off a discrete set). ∎
 
 **Remark 1.1′ (ARGUED).** The same contradiction holds for any tempered ν supported in {|u| ≥ 2T} whose transform is continuous and of
 polynomial growth (the proof only restricts to 0 < |u| < 2T, where ν = 0). So passing to distributional "magic" objects does not help.
 
-**Corollary 1.2 (what a magic function would have to be).** Every admissible object is an ε-certificate family (P47 thm:D1), whose total variation
+**Corollary 1.2 (what a magic function would have to be).** Every admissible object is an ε-certificate family (P46 thm:D1), whose total variation
 diverges (rem:OvsB). A "magic function for row D" is therefore not an object but a *sequence* whose value approaches λ_P; by class (D) /
 Problem (R) l.9006 it is admissible only as the final object of a computation that already carries the margin. **(V1) fails structurally:**
 the primal of the window LP is continuous, not discrete. ∎
@@ -30,10 +30,10 @@ construction would "read off explicit modular forms" is, for flat-top certificat
 ŵ. In the sphere-packing case the corresponding sum Σ_{Λ*} f̂ runs over a *known* positive set (V2); here it runs over the object.
 So the "explicit modular form" whose positivity would be read is ŵ on the set {τ − γ}: the reading presupposes the set. ∎
 **Reading.** A magic certificate built only from modular/archimedean data (i.e. independent of the γ's) cannot be flat-top and exact; it must
-leave the flat-top class (exterior signed ν with free β, P47 rem:bar-lin, which this paper does not exclude) — but then Thm 1.1 still applies.
+leave the flat-top class (exterior signed ν with free β, P46 rem:bar-lin, which this paper does not exclude) — but then Thm 1.1 still applies.
 
 ## 3. The Poisson signs: CE gives the wrong direction
-Explicit formula (P47 proof of thm:Z): Σ_ρ ĥ(γ_ρ) = 2∫h cosh(u/2)du − Σ_{n≥2} v_n h(log n) + (1/2π)∫m ĥ.
+Explicit formula (P46 proof of thm:Z): Σ_ρ ĥ(γ_ρ) = 2∫h cosh(u/2)du − Σ_{n≥2} v_n h(log n) + (1/2π)∫m ĥ.
 **Proposition 3.1 (PROVED).** (a) If ĥ ≥ 0 and h ≥ 0 on {log n}, then Σ_ρ ĥ(γ) ≤ polar + archimedean: an *upper* bound on the zero side (the
 CE/Odlyzko direction, the one used in discriminant and packing bounds). (b) The window form evaluates h = s ∗ s̃ (s ∈ L²(I_T)), for which ĥ = |ŝ|² ≥ 0
 but h(log n), n ∈ N_T, has no sign. A CE-type lower bound needs h ≤ 0 on N_T; it therefore yields Weil-positivity only on the cone
@@ -51,7 +51,7 @@ using the individual Fourier coefficients of the theta series.
 Q₁ = x² + 5y², Q₂ = 2x² + 2xy + 3y² (the two classes of discriminant −20). ζ_{Q₁}, ζ_{Q₂} and ζ_{ℚ(√−5)} share 𝔇 (gamma factor (2π)^{−s}Γ(s),
 conductor 20, root number +1, a simple pole with the same residue — the residue of an Epstein zeta depends only on the discriminant;
 θ_{Q_i} ∈ M₁(Γ₀(20), χ_{−20}), θ_{Q₁} − θ_{Q₂} a cusp form; CITED: Hecke, Siegel). A modular-data construction certifying the window form of
-ζ_K for all T certifies that of ζ_{Q₁}, whose full form is negative (P47 O10, Remark twohalves; corpus Epstein falsifier). Contradiction; so no
+ζ_K for all T certifies that of ζ_{Q₁}, whose full form is negative (P46 O10, Remark twohalves; corpus Epstein falsifier). Contradiction; so no
 modular-data construction certifies ζ_K, and any successful construction must use the coefficients (the Euler/Hecke data) at the sign step.
 *Proof.* 𝔐 sees identical inputs for ζ_K and ζ_{Q₁}; a dual point is a certificate for a form only through that form's symbol, but 𝔐's output is
 claimed valid for every function with data 𝔇; a certificate for a negative form does not exist (weak duality). ∎
@@ -72,9 +72,9 @@ the explicit formula, i.e. thm:Z — the zero side. This is the precise sense in
 P35-4: interpolation needs μ(ℝ) = ∞ on {γ}).
 
 ## 6. Self-review
-- Thm 1.1 is P47 thm:O; the only new content is the LP reading (slackness set = ℝ) and the comparison (V1). Correct, not new mathematics.
+- Thm 1.1 is P46 thm:O; the only new content is the LP reading (slackness set = ℝ) and the comparison (V1). Correct, not new mathematics.
 - Prop 3.1(b) does not prove that C₋ misses negative directions; it records that the CE inequality is one-sided and covers only C₋. Fine.
-- Thm 4.2 depends on the Epstein falsifier as recorded in P47 O10; I did not re-derive the negative value. Label: PROVED conditional on corpus fact (CITED).
+- Thm 4.2 depends on the Epstein falsifier as recorded in P46 O10; I did not re-derive the negative value. Label: PROVED conditional on corpus fact (CITED).
 - Hamburger caveat is genuine: Thm 4.2 does **not** exclude a level-1 construction by itself; the exclusion at level 1 goes through Thm 1.1 + class (D).
 - §5 example: φ(u) = e^{−πe^{2u}} → 1 as u → −∞ while φ(0) = e^{−π} < 1, violating |φ(u)| ≤ φ(0); correct.
 **Verdicts:** L1 NO-GO (PROVED); L2 NO-GO for modular-data class (PROVED, level 20) / reduced to comb constructions (level 1); L3, L4, L7, L9 DISCARD.

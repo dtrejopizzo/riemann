@@ -15,7 +15,7 @@ The `non-compact correction` exit does not produce a sign either: the example `C
 
 ## 2. Corpus check and written reason
 
-Sources consulted: the project rules; README of the routes index (families and entries CELL_001, P1_BBSTAR, SPEC_005); file 06 (residues R7 and table W₂); CELL_001 §§1,4,6,8; AUDIT_207_001 §§B.7–B.10; P1_BBSTAR_001 §§1–4; SPEC_SIGN_OBJECT_005 §§3–5; R185_005B §§1–3; Paper 47 `thm:sos`, `def:PD`; master grid (Sonin/compacts and BB*); crossword (Sonin, BR and W₂).
+Sources consulted: the project rules; README of the routes index (families and entries CELL_001, P1_BBSTAR, SPEC_005); file 06 (residues R7 and table W₂); CELL_001 §§1,4,6,8; AUDIT_207_001 §§B.7–B.10; P1_BBSTAR_001 §§1–4; SPEC_SIGN_OBJECT_005 §§3–5; R185_005B §§1–3; Paper 46 `thm:sos`, `def:PD`; master grid (Sonin/compacts and BB*); crossword (Sonin, BR and W₂).
 
 Additional targeted search in index/grid/crossword: `compact`, `essential/esencial`, `Hilbert–Schmidt`, corrections of J and density of Dirichlet polynomials. The corpus already contains compact Sonin remainders and barriers to the attempt to bound them. **Sonin is not retried nor is any of those remainders bounded.** Nor is a new BB* built.
 

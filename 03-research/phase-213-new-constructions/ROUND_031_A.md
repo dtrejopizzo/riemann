@@ -1,6 +1,6 @@
 # Polynomial threshold for a counterexample on cells
 
-Cross-check. 010 proves descent with profile-dependent error. P47 prop:nearfree already compresses the comb onto divisorial contacts and estimates by Schur with weights j⁻¹ᐟ². Here that control is applied to the jump of two consecutive replicas of any test on N cells, in order to choose a pair of replicas and a threshold uniform in the size N.
+Cross-check. 010 proves descent with profile-dependent error. P46 prop:nearfree already compresses the comb onto divisorial contacts and estimates by Schur with weights j⁻¹ᐟ². Here that control is applied to the jump of two consecutive replicas of any test on N cells, in order to choose a pair of replicas and a threshold uniform in the size N.
 
 For H=N+1, define B=2 log H, R=2π exp(4) H², Q=⌈max(2H, HR(B+2−m(0)))⌉, d=log(1+1/Q), p=exp(−d/2). If r is the Rayleigh quotient of a nonzero primitive test F on the cells 1,...,N and
 
@@ -12,7 +12,7 @@ then U(f_Q+f_{Q+1}) has strictly negative energy, with f_q(x)=q⁻¹ᐟ²f(x/q).
 
 **Contacts.** A shift log n only connects two pulses if nj=l exactly: with 1≤l≤H every integer distinct from l is at logarithmic distance at least log(1+1/H) from l. For normalized pulses the compressed comb equals Λ(n)/√n at the two symmetric positions of the pair j,nj. The Schur weight j⁻¹ᐟ² gives in row j a weighted sum ≤Σ_{n≤H/j}Λ(n)/n+Σ_{n|j}Λ(n). The second is log j. For x≥1, with h=⌊x⌋, use ⌊h/n⌋≥h/(2n) when n≤h and Σ_{n≤h}Λ(n)⌊h/n⌋=log(h!) to bound the first by 2log x. Hence the norm is ≤B on these pulses.
 
-**Floor and competitor.** By P47 lem:mbounds, m≥B+2 for |t|≥R and m≥m(0) for all t. The support of g has measure ≤Hd. The Fourier mass in [−R,R] with measure dt/(2π) is ≤RHd||g||²/π by Cauchy–Schwarz. With the choice of Q one gets (B+2−m(0))RHd/π≤1. The archimedean part dominates (B+1)||g||² and the full primitive form satisfies a(g)≥||g||². For the real crossing between F and V_dF, polarization gives the identity
+**Floor and competitor.** By P46 lem:mbounds, m≥B+2 for |t|≥R and m≥m(0) for all t. The support of g has measure ≤Hd. The Fourier mass in [−R,R] with measure dt/(2π) is ≤RHd||g||²/π by Cauchy–Schwarz. With the choice of Q one gets (B+2−m(0))RHd/π≤1. The archimedean part dominates (B+1)||g||² and the full primitive form satisfies a(g)≥||g||². For the real crossing between F and V_dF, polarization gives the identity
 
     p a(F+V_dF)=(1+p)²a(F)−a(g).
 
@@ -20,7 +20,7 @@ The right-hand side is strictly negative if r<(1−p²)/(N(1+p)²)=τ_N. Transla
 
 ## Threshold strengthened with the actual positions of the jumps
 
-Adaptation of P47 prop:nearfree to the rectangular exponential pulses of 031. In the previous formulas Q can be replaced by ⌈e¹³ H log(2H)⌉ and the threshold by
+Adaptation of P46 prop:nearfree to the rectangular exponential pulses of 031. In the previous formulas Q can be replaced by ⌈e¹³ H log(2H)⌉ and the threshold by
 
     τ'_N = (1+log log(2H)) tanh(d/4)/N,     d=log(1+1/Q).
 
@@ -28,9 +28,9 @@ This gives order (log log N)/(N² log N) as N grows. The same explicit falsifica
 
 For the comb bound, ψ(x)=Σ_{n≤x}Λ(n)≤4(log 2)x for x≥1: each prime power in (h,2h] contributes its weight to log binom(2h,h), and summing over powers of two and rounding x up to the next power gives the bound. For h=⌊x⌋ the factorial identity implies h Σ_{n≤h}Λ(n)/n ≤ log(h!)+ψ(h). With the previous Schur weights this gives norm ≤log H+4log 2.
 
-For a single pulse φ of length d normalized in L², ||φ||₁²≤d. P47 lem:mbounds gives m(t)≥log|t|−7 (use m(0)>−6 on |t|<1). When integrating log|dt| on its negative part, the estimate |φ̂|²≤d costs at most (1/π)∫₀¹−log u du=1/π. The archimedean diagonal is at least log(1/d)−7−1/π. For two pulses at distance u=|log(j/k)|≥|j−k|/H≥2d, the separated formula of P47 prop:nearfree and K(v)≤2/v give crossing of modulus ≤2d/u: the autocorrelation has L¹ norm ≤d and the kernel is evaluated at distance ≥u/2. (The bound for K follows from sinh(v/2)≥v/2 and cosh(v/2)≥v/2.) The off-diagonal archimedean row sums stay ≤4dH(1+log H)≤8e⁻¹³. This controls the block for arbitrary coefficients of the disjoint pulses. The arithmetic contacts remain exactly the divisorial ones.
+For a single pulse φ of length d normalized in L², ||φ||₁²≤d. P46 lem:mbounds gives m(t)≥log|t|−7 (use m(0)>−6 on |t|<1). When integrating log|dt| on its negative part, the estimate |φ̂|²≤d costs at most (1/π)∫₀¹−log u du=1/π. The archimedean diagonal is at least log(1/d)−7−1/π. For two pulses at distance u=|log(j/k)|≥|j−k|/H≥2d, the separated formula of P46 prop:nearfree and K(v)≤2/v give crossing of modulus ≤2d/u: the autocorrelation has L¹ norm ≤d and the kernel is evaluated at distance ≥u/2. (The bound for K follows from sinh(v/2)≥v/2 and cosh(v/2)≥v/2.) The off-diagonal archimedean row sums stay ≤4dH(1+log H)≤8e⁻¹³. This controls the block for arbitrary coefficients of the disjoint pulses. The arithmetic contacts remain exactly the divisorial ones.
 
-Since log(1/d)≥13+log H+log log(2H), subtracting the previous bounds leaves a(g)≥(1+log log(2H))||g||² for H≥2. The polarization identity of 031 concludes. The improvement uses the geometric separation of the pulses and the sharp divisorial bound already present for other resonators in P47. The constants were chosen for simplicity. PROVED after independent mathematical audit.
+Since log(1/d)≥13+log H+log log(2H), subtracting the previous bounds leaves a(g)≥(1+log log(2H))||g||² for H≥2. The polarization identity of 031 concludes. The improvement uses the geometric separation of the pulses and the sharp divisorial bound already present for other resonators in P46. The constants were chosen for simplicity. PROVED after independent mathematical audit.
 
 ## Threshold of order N⁻² with a second difference
 

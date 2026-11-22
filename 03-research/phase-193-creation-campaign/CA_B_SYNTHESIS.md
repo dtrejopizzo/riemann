@@ -21,7 +21,7 @@
 3. **Riesz decomposition** of −∂_σ log|ζ/Z_{<X}| in ½ < σ < 2 (CA_B_002 (2.1)): zeros with β > ½ contribute ≥ 0, the pole ≤ 0.
    Standard potential theory CITED.
 4. **Lemma B**: the bottom is concave and Lipschitz in the weights, so positivity holds on a ball of radius λ_A/L_T, or λ_A in TV/ℓ¹. A
-   corollary of prop:wit-sens. Correction recorded: P47's κ_T is directional, not a Lipschitz constant.
+   corollary of prop:wit-sens. Correction recorded: P46's κ_T is directional, not a Lipschitz constant.
 5. **O7/O8 action** (CA_B_007 Prop 1): in measure-comb space both keep the archimedean part and move the point ν_ζ inside the fixed convex
    set 𝒱_T^{meas}. O7 adds −kβ_z (PROVED); O8 adds atoms off log ℕ (ARGUED).
 6. **Convex decomposition** of ν_ζ: its existence restates the target; with ρ_κ it needs t' > 1 on N_012's segment; class (D) otherwise.

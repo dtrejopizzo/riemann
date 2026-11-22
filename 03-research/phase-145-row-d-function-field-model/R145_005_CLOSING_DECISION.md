@@ -24,7 +24,7 @@ frame's Gram is the case `α = π^a` (`N_m = deg(1−π^m)`). **The frame keeps 
 of the norm form `deg(m+nπ) = m² + amn + qn²` on `Z[π]` — a **count** (`#ker`), not a sheaf — which is the
 classical proof of RH for elliptic curves and the only route that sidesteps the sections-functor no-go
 (113_11) rather than fighting it. Named obstruction to transport: `Δ·Δ = 2−2g → −∞` (Paper 44 Rem 8bis.1c,
-Paper 46 Prop 14.2): the arithmetic curve has infinite genus.
+Paper 47 Prop 14.2): the arithmetic curve has infinite genus.
 
 ## 3. Decision
 Phase 145 closed; acceptance test met; no label change. Phase 146 (α, redefined): **the degree form on

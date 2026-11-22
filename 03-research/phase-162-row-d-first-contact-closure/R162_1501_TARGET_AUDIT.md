@@ -2,7 +2,7 @@
 
 Strategist audit. Pure mathematics, with two UNCERTIFIED float checks (§4), used as guidance only.
 Inputs: README, R162_590, R162_1402 (Thm 3, §7), R162_504 (Thms 1–3), R162_703, R155_044–046 (nodal round),
-Paper 47 §sec:firstcontact (lem:firstcontact, eq:Gammaenergy, eq:Qspectral, prop:GEgap, eq:equivgate, prob:annihilate).
+Paper 46 §sec:firstcontact (lem:firstcontact, eq:Gammaenergy, eq:Qspectral, prop:GEgap, eq:equivgate, prob:annihilate).
 
 **Verdict.**
 - R_LF = 0 is **not an intermediate target**. On the radical it is F = 0 written in Müntz coordinates (§1).
@@ -19,7 +19,7 @@ No sign is claimed. No label moves.
 
 ## 1. (a) How Gate 1 was derived, and what it is equivalent to
 
-Derivation (Paper 47 §sec:firstcontact):
+Derivation (Paper 46 §sec:firstcontact):
 1. lem:firstcontact: if λ_A < 0 somewhere, then T_* = inf{λ_A < 0} ≥ log 2. By lem:contA, 0 is an eigenvalue of H_{T_*}
    with a parity eigenvector F ∈ P_{T_*}.
 2. eq:Gammaenergy: R: F ↦ (b_m K_F(a_m))_m is **faithful**. Substitute x = e^{−2t}; the powers x·p(x) are dense on

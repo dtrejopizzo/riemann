@@ -8,7 +8,7 @@ verification.
 
 Inequality (4) of R170_809 is valid under the definitions given there.
 It does not prove W≥0 for every T. The attempt does not complete the
-global goal. Paper 47 is not modified to claim a nonexistent closure.
+global goal. Paper 46 is not modified to claim a nonexistent closure.
 
 The following points were checked:
 
@@ -40,7 +40,7 @@ non-exact bound B≥gI with g=1 gives
 
 This shows that a valid positive gap of the complement is not enough to
 certify the sign at the contact. This example does not belong to the
-Paper 47 prime data and does not refute them; it refutes the purely
+Paper 46 prime data and does not refute them; it refutes the purely
 operator-theoretic inference that the reserve and its coercivity alone
 force the sign.
 
@@ -60,7 +60,7 @@ identity of the square with its remainder gave errors smaller than
 obtaining 0 and −1/2.
 
 These are algebraic diagnostics; they do not certify the continuous
-complement nor extend the certified interval of Paper 47.
+complement nor extend the certified interval of Paper 46.
 
 ## Contrast with the corpus map
 
@@ -83,4 +83,4 @@ However:
 **Final result of this round:** an inequality with retained reserve was
 constructed and checked. The global sign inequality was not
 constructed, nor was a new arithmetic law implying it. The closure of
-Paper 47 remains open.
+Paper 46 remains open.

@@ -1,7 +1,7 @@
 # Round 1 B — Candidate K2: Schur pivots along a multiplicative nesting of the integers (selection memo)
 
-Target (★): λ_A(T) ≥ 0 for every T, in the reduced form "𝖡 positive definite on ℝ" (P47 thm:oneprofile) or
-"𝔸_M ⪰ 0 for every M" (P47 prop:AM). Notation of `../phase-211-sign-sandbox/STATEMENT_001.md` §2: fixed profile F_0,
+Target (★): λ_A(T) ≥ 0 for every T, in the reduced form "𝖡 positive definite on ℝ" (P46 thm:oneprofile) or
+"𝔸_M ⪰ 0 for every M" (P46 prop:AM). Notation of `../phase-211-sign-sandbox/STATEMENT_001.md` §2: fixed profile F_0,
 c_0 = c_{F_0}, support of c_0 in [−2T_0, 2T_0], 2T_0 < log 2, β := 𝖡(0) = 𝔞(F_0).
 For finite S ⊂ ℕ, 𝔸_S := [𝖡(log m − log k)]_{m,k∈S}; e_d := translate of F_0 by d, so that
 s^⊤𝔸_S s = 𝔞(Σ_{k∈S} s_k e_{log k}). For n ∉ S,
@@ -17,8 +17,8 @@ Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 - 211/LEDGER C6 and STATE_001 point 4 (lines 213–214): "transport M → M+1; first lemma: exact formula for
   𝔸_{M+1} ⪰ 0 given 𝔸_M ≻ 0 as a scalar Schur complement in the new row". NOT STARTED. It is candidate K2 in the
   natural order of the integers; K2 only changes the order of adjunction.
-- P47 subsec:KEP (thm:KEP1, KEP2, KEPdich) and GRID §6 item 27 "KEP: Nevanlinna parametrization of 𝔖(T)" (cell 7F,
-  OPEN-RESIDUE, "never written"; P47 itself notes that the parametrization presupposes a known solution). It is the same
+- P46 subsec:KEP (thm:KEP1, KEP2, KEPdich) and GRID §6 item 27 "KEP: Nevanlinna parametrization of 𝔖(T)" (cell 7F,
+  OPEN-RESIDUE, "never written"; P46 itself notes that the parametrization presupposes a known solution). It is the same
   extension problem with nesting by window length.
 - 211/LEDGER C7 (route N of phase 160, R160_X_C1 §0.1; phase 35 doc. 99): rigidity mechanism on approximants whose
   recorded objection is that the content passes to the limit.
@@ -33,7 +33,7 @@ Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
   collapsed by Λ∗1 = log as derivative of a norm.
 - Phase 204, L2_INTERLACE_001 (IDX README l. 594): interlacing for S_{T,k} NO-GO because k → k+1 does not nest and there is no
   rank-one border.
-- W-det (P47 thm:wh-detinherit): every determinant that decides inherits the margin.
+- W-det (P46 thm:wh-detinherit): every determinant that decides inherits the margin.
 - 211/POWER_FIXED_BLOCK_ASSEMBLY_OBSTRUCTION: excludes sums of PSD blocks of bounded support; explicitly leaves out
   Schur complements and blocks of growing size.
 - Memory of rejected selections (the project rules), "Transport by shift and congruence": a non-diagonal
@@ -60,7 +60,7 @@ set 𝒮 with log 𝒮 − log 𝒮 dense, "all pivots > 0" implies (★), and (
 coefficients 1 (Lemma 4). By OBJECT_SPEC §4, a candidate that cannot write (2) and (5) is not ready.
 
 **Verdict of the cross-check: no new mechanism.** The candidate coincides with C6 (different order) and with the matrix
-reading of the extension problem of P47 subsec:KEP; the rest of this memo is not a construction but the record
+reading of the extension problem of P46 subsec:KEP; the rest of this memo is not a construction but the record
 of the precise structural reasons, so that the question is not relaunched.
 
 ## 1. Pivot = value of the form at the innovation; reformulation (PROVED)
@@ -74,8 +74,8 @@ union 𝒮, S_{j+1} = S_j ∪ {n_{j+1}}.
 
 *Proof.* (a) By induction, det 𝔸_{S_{j+1}} = det 𝔸_{S_j}·π(S_j; n_{j+1}) > 0 (𝔸_{S_1} = (β) and β = π(∅; n_1) > 0),
 hence all leading principal minors are positive and 𝔸_{S_j} ≻ 0 (Sylvester's criterion). Every finite
-subset of 𝒮 lies in some S_j, so 𝔸_S ⪰ 0 for every finite S ⊂ 𝒮. For 𝒮 = ℕ this is (★) by P47 prop:AM(i);
-for 𝒮 = {p^x q^y}, by Prop. 2. (b) e_{log n} − Σ s_k e_{log k} ∈ P_T (P47 lem:transl(i)) and
+subset of 𝒮 lies in some S_j, so 𝔸_S ⪰ 0 for every finite S ⊂ 𝒮. For 𝒮 = ℕ this is (★) by P46 prop:AM(i);
+for 𝒮 = {p^x q^y}, by Prop. 2. (b) e_{log n} − Σ s_k e_{log k} ∈ P_T (P46 lem:transl(i)) and
 𝔞 ≥ 0 on P_T. (c) s ↦ 𝔞(e_{log n} − Σ s_k e_{log k}) = β − 2b^⊤s + s^⊤𝔸_S s is a strictly convex quadratic
 polynomial; its minimum is β − b^⊤𝔸_S^{−1}b at s*. The additivity of inertia is the Haynsworth formula for the block
 (𝔸_S, b; b^⊤, β). ∎
@@ -223,7 +223,7 @@ quantity that tends to zero); it is a design restriction that the candidate does
 ## 6. Where Near is invisible: Kronecker sum, not product (PROVED)
 
 In multiplicative boxes without visible near-coincidences the comb part is a Kronecker sum of local Toeplitz
-matrices (P47 rem:boxes, L2_029 §2). The Cholesky factorization respects tensor products, not sums:
+matrices (P46 rem:boxes, L2_029 §2). The Cholesky factorization respects tensor products, not sums:
 
 **Proposition 8.** Let A = A_1 ⊗ I + I ⊗ A_2 with A_2 = (A_2′, b; b^⊤, α) symmetric of order K + 1. The Schur
 complement of the last layer (index K + 1 of the second factor) is σ(A_1), with σ(x) := α + x − b^⊤(A_2′ + x)^{−1}b
@@ -262,7 +262,7 @@ Answers.
 - **C7 / "dies in the limit".** Route N applied rigidity to a state in a finite window. K2 does not use rigidity;
   its analogue of the objection is Prop. 7: the pivots have no uniform margin and the limit pivot is zero for every
   comb. The objection is not answered, it is localized.
-- **P47 subsec:KEP and GRID 7F.** The matrix version of the parametrization is: given 𝔸_S ≻ 0, the admissible rows b
+- **P46 subsec:KEP and GRID 7F.** The matrix version of the parametrization is: given 𝔸_S ≻ 0, the admissible rows b
   form the ellipsoid b^⊤𝔸_S^{−1}b ≤ β and the Schur parameter is 𝔸_S^{−1/2}b/√β. It presupposes 𝔸_S ≻ 0 and its inverse,
   just as the continuous parametrization presupposes a solution. Replacing window length by multiplicative order
   does not alter that dependence (Prop. 3: it is the same realization triangulated in another order). Residue 7F stays as

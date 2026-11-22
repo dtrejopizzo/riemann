@@ -1,6 +1,6 @@
 # Uniform error when replacing only the prime tail by continuous density
 
-**Antecedents.** P47 prop:sharp and its Chebyshev quadrature separate the continuous density; 213-013/020/021 extract constants by means of moments. Here the error in the jump norm of 031 is estimated simultaneously for all sizes. Let f be constant on the physical cells 1,...,N, extended by zero, H=N+1, and J=Σ_{j=1}^H j|b_j|² with b_j=f(j)−f(j−1) (right-continuous representative). For L≥2 replace, only for n>L, the measure with masses Λ(n)/n by dt/t on (L,∞), in the comb expression 2 Re ∫ conj(f(y)) Σ_{n≥2} f(y/n)Λ(n)/n dy. Denote by a_L the resulting pole-free form, keeping the archimedean side. If ∫f=0, there exists an absolute constant C such that
+**Antecedents.** P46 prop:sharp and its Chebyshev quadrature separate the continuous density; 213-013/020/021 extract constants by means of moments. Here the error in the jump norm of 031 is estimated simultaneously for all sizes. Let f be constant on the physical cells 1,...,N, extended by zero, H=N+1, and J=Σ_{j=1}^H j|b_j|² with b_j=f(j)−f(j−1) (right-continuous representative). For L≥2 replace, only for n>L, the measure with masses Λ(n)/n by dt/t on (L,∞), in the comb expression 2 Re ∫ conj(f(y)) Σ_{n≥2} f(y/n)Λ(n)/n dy. Denote by a_L the resulting pole-free form, keeping the archimedean side. If ∫f=0, there exists an absolute constant C such that
 
     |a(Uf)−a_L(Uf)| ≤ C (1+log L)^(−1/2) N J.
 
@@ -24,11 +24,11 @@ By 031, o(N) on a cofinal subsequence would indeed suffice. The current estimate
 
 ## There are arbitrarily large cuts whose hybrid form is negative
 
-Applying P47 prop:sharp to the hybrid comb, its global symbol on the primitive subspace is
+Applying P46 prop:sharp to the hybrid comb, its global symbol on the primitive subspace is
 
     h_L(t)=m^sharp(t)−2 Σ_{n≤L} Λ(n)cos(t log n)/√n + 2∫₁ᴸ cos(t log x)dx/√x.
 
-Indeed the discrepancy relative to the full density only has support on the prefix. The form is the integral of this symbol against |F̂|²/(2π). If h_L(0)<0, the primitive packets of P47 thm:kappa centred at zero frequency give a negative test as their window grows (L fixed). For L=2 one obtains b−√2 log 2+4(√2−1)<0, b=m^sharp(0)=m(0)+4. The obstacle persists for arbitrarily large cuts, as follows.
+Indeed the discrepancy relative to the full density only has support on the prefix. The form is the integral of this symbol against |F̂|²/(2π). If h_L(0)<0, the primitive packets of P46 thm:kappa centred at zero frequency give a negative test as their window grows (L fixed). For L=2 one obtains b−√2 log 2+4(√2−1)<0, b=m^sharp(0)=m(0)+4. The obstacle persists for arbitrarily large cuts, as follows.
 
 Let h(L)=h_L(0)=b+4(√L−1)−2Σ_{n≤L}Λ(n)/√n, also defined for 1≤L<2 by the same formula. The Laplace transform of h(exp x) on x≥0 equals
 

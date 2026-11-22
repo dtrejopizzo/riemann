@@ -219,7 +219,7 @@ in the range carried it out.
 ### 19. ROUND_007_B.md — the sign budget disassembled
 - Object: a_T = σ_T‖F‖² + κ(F) − ℛ(F) on P_T; ℛ = Π + 𝔢; (SL′_T) on E_T.
 - Lemma 1.1 (σ_T = C_0 + 4 + ∫_{2T}^∞K_1, C_0 + 4 = 4 − γ − π/2 − log(8π); decreasing, convex, σ_T < 0 ⟺ T > T_0 = 0.052): PROVED (T_0 a NUMERICAL root). Correction: write −σ_T, not |σ_T|.
-- Prop 1.2 (σ_T‖F‖² + κ(F) = 𝔞^♯(F), pole-free form of P47, independent of T, ≥ Arch): PROVED.
+- Prop 1.2 (σ_T‖F‖² + κ(F) = 𝔞^♯(F), pole-free form of P46, independent of T, ≥ Arch): PROVED.
 - Lemma 1.3 (every real F ∈ P_T changes sign ≥ 2 times; Tate anchoring |F̂(τ)|² ≤ d_T(τ)‖F‖², d_T(0) = T⁵/360 + O(T⁷); counting bounds): PROVED.
 - Prop 1.4 (ℛ = Π + 𝔢; 𝒮_q = (1 − (−1)^q e^T)/(¼+ω_q²)): PROVED/CITED. Cor 1.5 (four equivalent forms of the sign lemma, the last Π ≤ Arch on E_T; form in G ∈ H²_0): PROVED.
 - Lemma 2.1 (a single form on the nested family P_T): PROVED. Lemma 2.2 (continuity of the pieces on the minimizer): PROVED under simplicity (a hypothesis invisible at any attainable precision).

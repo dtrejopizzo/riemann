@@ -10,7 +10,7 @@ The transformation z=exp(2ix), y=sin x and the centring exp(−11ix) are exact, 
 
 The two integrations by parts were reviewed: the symmetric polynomial operator has eigenvalues n(n+2a+1), and the boundary terms of both formulas vanish under a>0. Hence 2ar<=1+2sqrt(rD). The normalised coefficients decrease in j; the sector of degree10 is dominated by that of degree11. For every j>=14 one gets27r<=1+2sqrt(429r). The check16129/400>0 places its positive root below49/20. Hence E(tau^−2)<1/405 uniformly, without an asymptotic dimension hypothesis.
 
-The global digamma lower bound used exists with explicit proof in Paper47, main.tex:505, lem:mbounds(ii): integration by parts of the kernel g with g'>0 and total variation1/2. Jensen and Cauchy have the correct orientation and give ARCH>859/800. Contact2 costs less than one norm² and the effective polar048 costs at most3(9/62)^j. This exceeds1/2500 for the whole tail j>=14.
+The global digamma lower bound used exists with explicit proof in Paper46, main.tex:505, lem:mbounds(ii): integration by parts of the kernel g with g'>0 and total variation1/2. Jensen and Cauchy have the correct orientation and give ARCH>859/800. Contact2 costs less than one norm² and the effective polar048 costs at most3(9/62)^j. This exceeds1/2500 for the whole tail j>=14.
 
 ## Finite certificate
 

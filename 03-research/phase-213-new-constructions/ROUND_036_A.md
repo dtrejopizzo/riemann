@@ -2,7 +2,7 @@
 
 If Γ>0, the Mellin transform U(s)=∫₀¹ u(x)x^(s−1)dx of any extremizer of 034 has, in Re s>1/2, exactly one zero: s=1, of order one. This is the transform of the profile; the conclusion does not concern the zeros of ζ.
 
-**Cross-check.** P47, proof of thm:nyq-cone, already reflects a zero to preserve the autocorrelation. The compactification of 033 uses the special factor s/(s−1). The reason for using the operation here is that the arithmetic energy and the norm that normalizes its defect are measured on two different lines. Preservation on one produces a strict improvement on the other.
+**Cross-check.** P46, proof of thm:nyq-cone, already reflects a zero to preserve the autocorrelation. The compactification of 033 uses the special factor s/(s−1). The reason for using the operation here is that the arithmetic energy and the norm that normalizes its defect are measured on two different lines. Preservation on one produces a strict improvement on the other.
 
 **Admissible reflection.** Let g(t) be the derivative of u(exp(−t)) for t≥0, extended by zero to the rest of the line. Its squared L² norm equals I(u). Since u(1)=0, the primitive of g from zero is u(exp(−t)) and grows at most like √t ||g||₂. By integration by parts its Laplace transform satisfies G(s)=sU(s) in Re s>0. Let z be a zero of U with b=Re z>1/2. Define on the line
 

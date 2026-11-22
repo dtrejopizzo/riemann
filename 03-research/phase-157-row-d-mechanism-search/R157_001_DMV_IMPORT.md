@@ -1,7 +1,7 @@
 # R157_001 — O-150.1, importing (H-DMV) from the open secondary literature
 
 * Task: blueprint `R157_000` round 1, row 1. Pure mathematics; no numerics; **no sign is
-claimed anywhere in this document**; row D keeps no label. Paper 46 is not edited; replacement wording is in §5.*
+claimed anywhere in this document**; row D keeps no label. Paper 47 is not edited; replacement wording is in §5.*
 
 **Primary source still not read.** H. G. Diamond, H. L. Montgomery, U. M. A. Vorhauer, *Beurling primes with large
 oscillation*, Math. Ann. **334** (2006) 1–36, doi:10.1007/s00208-005-0638-2. Springer redirects to an
@@ -129,7 +129,7 @@ DMV's own paper uses exactly the ζ_C written in S3 or an earlier version (S3 l.
 
 Fix `θ ∈ (1/2,1)` and let `𝒫` be the system of Theorem DMV. BE1–BE8 are verbatim from R150_001 l.195–212. Their
 region is `Re s > 1 − η(|t|)`, and I take **`η ≡ 1 − θ`** (a constant), which is allowed. **[amended per R157_003, A5:
-take `η ≡ (1−θ)/2`. BE3's region is then `Re s > (1+θ)/2`, where Lemma 2.1 gives `≪_θ |t|` uniformly, as P46's (H-DMV)
+take `η ≡ (1−θ)/2`. BE3's region is then `Re s > (1+θ)/2`, where Lemma 2.1 gives `≪_θ |t|` uniformly, as P47's (H-DMV)
 wording "polynomial growth … in that region" requires. Read `η ≡ (1−θ)/2` wherever `η ≡ 1−θ` appears below.]**
 
 ### 2.1 Two elementary lemmas
@@ -233,31 +233,31 @@ It does **not** become `IMPORTED` or `PROVED`, because the primary text is unrea
 
 | item | old label | new label |
 |---|---|---|
-| (H-DMV) (R150_003 §2.1; P46 §27.4) | `HYPOTHESIS` | **`CITED (secondary source)`**, via (H-DMV′) + Prop. 3.1 (`PROVED`) |
-| T3 = R150_003 Thm 2.8′ = P46 Remark 27.16 | `META-THEOREM / METHOD-CONSTRAINT, conditional on (H-DMV)` | **`METHOD-CONSTRAINT (meta-theorem); PROVED modulo one CITED (secondary source) import, (H-DMV′)`** [amended per R157_003, A8: content = RESTATEMENT of DMV/Zhang + axiom list (R150_002 l.64–69, R150_003 l.671); stays a Remark in P46 (R150_005 l.43)] |
+| (H-DMV) (R150_003 §2.1; P47 §27.4) | `HYPOTHESIS` | **`CITED (secondary source)`**, via (H-DMV′) + Prop. 3.1 (`PROVED`) |
+| T3 = R150_003 Thm 2.8′ = P47 Remark 27.16 | `META-THEOREM / METHOD-CONSTRAINT, conditional on (H-DMV)` | **`METHOD-CONSTRAINT (meta-theorem); PROVED modulo one CITED (secondary source) import, (H-DMV′)`** [amended per R157_003, A8: content = RESTATEMENT of DMV/Zhang + axiom list (R150_002 l.64–69, R150_003 l.671); stays a Remark in P47 (R150_005 l.43)] |
 | Cor. 2.9′ | `PROVED` from 2.8′, conditional on (H-DMV) | **`PROVED` from T3; inherits the `CITED (secondary source)` import (H-DMV′)** |
-| P46 Prop. 27.17 item 3 | conditional on (H-DMV) | **`PROVED` modulo `CITED (secondary source)` (H-DMV′)** |
-| O-150.1 / P46 open item (41) | `OPEN`, blocking | **`CLOSED at the secondary-source level`**; residual non-blocking item: primary read [amended per R157_003, A8: "discharged at the `CITED (secondary source)` level; no longer blocking; residual `OPEN`: primary read". O-150.1 as written asks for the primary read, so "CLOSED" overstates] |
+| P47 Prop. 27.17 item 3 | conditional on (H-DMV) | **`PROVED` modulo `CITED (secondary source)` (H-DMV′)** |
+| O-150.1 / P47 open item (41) | `OPEN`, blocking | **`CLOSED at the secondary-source level`**; residual non-blocking item: primary read [amended per R157_003, A8: "discharged at the `CITED (secondary source)` level; no longer blocking; residual `OPEN`: primary read". O-150.1 as written asks for the primary read, so "CLOSED" overstates] |
 | Observation 2.7, Prop. 2.6, 2.6′ | unchanged | unchanged |
 
 **[amended per R157_003, A8: not cleared. T3 stays a Remark until the primary text is read (R150_005 l.43).]**
-**Recommendation on the form of T3 in Paper 46.** Remark 27.16 can be promoted to a **theorem
+**Recommendation on the form of T3 in Paper 47.** Remark 27.16 can be promoted to a **theorem
 modulo a cited import**, in the same way the paper treats other imports. If the convention adopted requires a
 primary-read source before promotion, it stays a Remark with the new label. The fact that it now rests on a quoted
 statement rather than a belief does not depend on that choice.
 
 **Correction for the record** (`PROVED`, bookkeeping). R150_001 l.~175 [amended per R157_003, A1: l.167–171] "(DMV-a)" misquotes DMV's integer error term
-as `O(x·exp(−c(log x)^{1/2}))`. The correct term is `O(x^θ)`, `θ ∈ (1/2,1)`. The withdrawn row of P46's §27.4 table
+as `O(x·exp(−c(log x)^{1/2}))`. The correct term is `O(x^θ)`, `θ ∈ (1/2,1)`. The withdrawn row of P47's §27.4 table
 ("the inference … is false — the Mellin integral diverges for every σ < 1") remains **correct as a statement about
 the misquoted hypothesis** and should gain the clause "that hypothesis misquoted DMV; with the correct `O(x^θ)` the
 continuation to `Re s > θ` holds".
 
-### 5. Replacement wording for Paper 46 (not applied)
+### 5. Replacement wording for Paper 47 (not applied)
 
 **[amended per R157_003, A8: the texts of this section are superseded by R157_003 §5. The (41) text below attributes the
 full theorem to all five sources, which S4 and S5 do not state, and it uses `η ≡ 1−θ`.]**
 
-Paper 46 locations: the brief's line numbers (~11652–11735, 11897) are out of date. In the current `main.md`, the
+Paper 47 locations: the brief's line numbers (~11652–11735, 11897) are out of date. In the current `main.md`, the
 Hypothesis is at **l.11842–11861**, Remark 27.16 at **l.11863–11881**, the withdrawn-table row at **l.11925**, the
 §-summary at **l.12016–12017**, and open item (41) at **l.12087–12090**.
 

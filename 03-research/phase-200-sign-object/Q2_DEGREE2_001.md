@@ -101,7 +101,7 @@ There are three cases:
 - **τ with Q_τ proportional to an integral form:** 𝔐_τ ⊂ ℕ (after rescaling). It is a comb on log ℕ, integral.
 - **Generic τ** (1, 2x, |τ|² linearly independent over ℚ): 𝒱_τ is not discrete on an arithmetic scale. 𝔐_τ is an
   infinite-rank Beurling semigroup with frequencies log μ. **This is a Beurling deformation of the comb that
-  preserves the FE, the pole and the Γ factor.** The corpus's Beurling falsifier (ARGUED in P47) had never been
+  preserves the FE, the pole and the Γ factor.** The corpus's Beurling falsifier (ARGUED in P46) had never been
   built with an FE. E(τ,·) is one.
 - **τ = iy with y² ∈ ℚ, y² = a/q:** values in (1/q)ℕ, and the comb moves with y.
 
@@ -148,7 +148,7 @@ With that, −Z_τ′/Z_τ is continuous in τ uniformly on Re s = σ₁ and bou
 proof. Frequency collisions μ₁(τ) → μ₂(τ) sum up by themselves. ∎
 
 **Corollary.** S_T := {τ ∈ ℍ : 𝔞_T^{(τ)}(F) ≥ 0 ∀F ∈ core} is an intersection of closed sets, hence **closed**
-(PROVED). S_T decreases in T (P47 lem:monoT) and S_∞ := ∩_T S_T is closed. The function
+(PROVED). S_T decreases in T (P46 lem:monoT) and S_∞ := ∩_T S_T is closed. The function
 T*(τ) := sup{T : τ ∈ S_T} ∈ (0,∞] is **upper semicontinuous** (PROVED: {T* ≥ T} = S_T is closed).
 
 ## 3. The cusp
@@ -174,7 +174,7 @@ This is the window form of "ζ(2s) on the squares," the object of Front A, with 
 - A(F) ≥ 0, because |c(u)| ≤ c(0);
 - |c| ≤ ‖F‖²;
 - Σ_{n≤e^T} Λ(n)/n ≤ T + O(1) (Mertens; explicit Rosser–Schoenfeld constant CITED, to be fixed);
-- the polar term is bounded by O(1)‖F‖² on P_T (P47).
+- the polar term is bounded by O(1)‖F‖² on P_T (P46).
 
 With that:
 
@@ -192,7 +192,7 @@ NO-GO (PROVED by L2).** It reduces to ζ(2s)-on-squares, which is exactly what t
 ### 3.3 Real zeros near the cusp (CITED)
 - **Bateman–Grosswald** (Acta Arith. 9, 1964): Z_τ has a real zero in (½,1) if y > 7.0556
   (= 4πe^{−γ}; BIBLIO_CHECK_001 corrects 7.0236)… The data are cited from memory. **The exact statement and the
-  constant must be verified** before integrating into P47.
+  constant must be verified** before integrating into P46.
 - **Lagarias–Suzuki** (J. Number Theory 118, 2006): the constant term a_y(s) = ζ*(2s)y^s + ζ*(2s−1)y^{1−s} has
   all its zeros on the line for 1 ≤ y ≤ y* = 4πe^{−γ} ≈ 7.0556, and exactly two real zeros off it for y > y*.
 - **Ki** (2006): analogous results on zeros of Epstein approximations.
@@ -298,7 +298,7 @@ u.s.c. with isolated infinite spikes: it is a "needle function."
   - generic τ (ARGUED: zeros off the line by DH/transcendence on a dense set);
   - τ = i√5 (PROVED, certified).
 
-  This closes the gap "the Beurling falsifier (ARGUED in P47) has no FE" in the record.
+  This closes the gap "the Beurling falsifier (ARGUED in P46) has no FE" in the record.
 
 ## 7. Alternatives in degree 2 (point 2 of the question)
 
@@ -332,7 +332,7 @@ u.s.c. with isolated infinite spikes: it is a "needle function."
 - (iv) if τ_D ∈ S_∞, then T*(τ) → ∞ as τ → τ_D (ARGUED).
 
 **First exact lemma: L2**, with the explicit constant c₁. This requires Rosser–Schoenfeld for Σ Λ(n)/n and the
-bound on Pol_T on P_T from P47.
+bound on Pol_T on P_T from P46.
 
 **Proposed test (NUMERICAL, only if deemed strictly necessary).** Take T*(τ) on the line τ = it, t ∈ [1, √5]. It
 passes through τ = i (ζ·L(χ₋₄)), τ = i√2 (h = 1, ζ·L(χ₋₈)), τ = i√3 (order −12, h = 1) and τ = i√5
@@ -348,7 +348,7 @@ passes through τ = i (ζ·L(χ₋₄)), τ = i√2 (h = 1, ζ·L(χ₋₈)), τ
 - (d) Discrete Maass / ζ(s±ir) orbit: NO-GO as a deformation.
 - (e) Citation of Bateman–Grosswald and the algebraic irrational case of DH/Cassels: to verify.
 
-## References (CITED; those marked † are cited from memory and must be verified before entering P47)
+## References (CITED; those marked † are cited from memory and must be verified before entering P46)
 - P. Epstein, Math. Ann. 56 (1903).
 - S. Chowla, A. Selberg, PNAS 35 (1949); J. reine angew. Math. 227 (1967).
 - H. Davenport, H. Heilbronn, J. London Math. Soc. 11 (1936) 181–185, 307–312.

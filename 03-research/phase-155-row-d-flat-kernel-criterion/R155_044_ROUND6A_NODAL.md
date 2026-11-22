@@ -2,12 +2,12 @@
 
 *Phase 155, round 6a. Executes order (a) of `R155_043 §4`. Inherits `R155_039`
 (amended; Lemma N, Prop G), `R155_032` (amended; the `8×8` even `π_ij` table at `log 2`),
-`R155_023` (amended; `A_∞|P_T` eigenstructure, `τ₀ = 6.28983599`), Paper 47 §2 (`lem:K`,
-`thm:S`, `lem:mbounds`) and §8 (`prop:schur`, `thm:nest`, `prop:shifts`). **Paper 47,
+`R155_023` (amended; `A_∞|P_T` eigenstructure, `τ₀ = 6.28983599`), Paper 46 §2 (`lem:K`,
+`thm:S`, `lem:mbounds`) and §8 (`prop:schur`, `thm:nest`, `prop:shifts`). **Paper 46,
 `R155_039` and `R155_040` are not touched.** New scripts: `scripts/r6a/` (≈ 2.5 min total).*
 
 **No sign for `ζ` is claimed at any `T`. Endpoint of record unchanged: `λ_min(A_{½log3}) ≥
-8.8577·10⁻⁵` (Paper 47 Thm C). No value of `inf W` at `log 2` is asserted.**
+8.8577·10⁻⁵` (Paper 46 Thm C). No value of `inf W` at `log 2` is asserted.**
 
 ---
 
@@ -279,7 +279,7 @@ Row-D label unchanged. Endpoint of record unchanged. No sign for `ζ` beyond `lo
 
 ---
 
-## §7 Proposal for Paper 47 (to accept or refuse; Paper 47 untouched here)
+## §7 Proposal for Paper 46 (to accept or refuse; Paper 46 untouched here)
 
 1. **`prop:arch` gains Proposition N2** (three lines): the Tate constraints form a Chebyshev
  system, so no element of `P_T` is of one sign. It costs nothing and removes the reader's

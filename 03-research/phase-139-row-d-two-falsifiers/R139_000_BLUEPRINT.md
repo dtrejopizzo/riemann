@@ -8,13 +8,13 @@ mandatory in the report).*
 Standing rules: pure mathematics; every arrow labelled (PROVED / PROVED-IN-REPOSITORY / CLASSICAL /
 RESTATEMENT / IMPORTED / CANDIDATE / HEURISTIC / REFUTED / NOT-APPLICABLE / OPEN); nothing defined
 through zero locations (`ξ`, `ξ_K`, `Λ_Q` admissible as data); numerics only to certify a constant with
-a stated margin; FATAL rule (a statement that with Paper 46 Thm 3.7 proves RH or ¬RH: flag, do not fix).
+a stated margin; FATAL rule (a statement that with Paper 47 Thm 3.7 proves RH or ¬RH: flag, do not fix).
 Three falsifier tests from now on: `Ξ_a` (non-equimodular polar block), Epstein `Z_Q` (no Euler
 product), and the `ζ_K` non-distinction test (any argument that distinguishes `Q` from a number field
 `K` must name the distinguishing property; otherwise it is suspect).
 
 ## Setting (RESTATEMENT of record)
-Paper 46 §§11–12 (Weil class `D^W`, `I_∞`, canonical class `K`, `Φ_K = ξ`, Theorem 12.3 transfer, §12.5
+Paper 47 §§11–12 (Weil class `D^W`, `I_∞`, canonical class `K`, `Φ_K = ξ`, Theorem 12.3 transfer, §12.5
 admissible `Z` with polar set `P` and canonical class `K_Z`, Prop. 12.6); phase 138 `R138_001` D.15
 (splitting `D^W = Λ ⊥ P^W`, Lorentzian criterion, Theorem D.15.4b equimodularity: the translation cone
 `Λ_Z^+` satisfies Hodge index iff `|p−½|` is constant on `P`), D.17 (detecting cones `E`, `C_c^∞`;
@@ -34,10 +34,10 @@ Landau criterion); `R138_005` (answer to Q; the open quadrant is clause (iii) on
 2. **The canonical class.** `K_Q(t)` := the theta-type kernel with `Φ_{K_Q} = Λ_Q` (Mellin/Laplace
    inversion of `Λ_Q` along `Re s = ½`; the analogue of the Pólya kernel through
    `θ_Q(x) = Σ_{(m,n)} e^{−πQ(m,n)x/…}`). Prove: `K_Q ∈ D^W`-type class (decay), `K_Q > 0` (from the theta
-   series, as for `K`: Paper 46 §11.7), `deg K_Q = Λ_Q(0)+Λ_Q(1)` (compute the residues), polar set
+   series, as for `K`: Paper 47 §11.7), `deg K_Q = Λ_Q(0)+Λ_Q(1)` (compute the residues), polar set
    `P = {0,1}` — **equimodular**. Note the residue at `s = 1` of `Z_Q` is `π/√D` (independent of the
    class!), so `Λ_Q` residues are explicit.
-3. **The Weil class and the form.** Define `I_∞^{(Q)}(F,G)` by Paper 46's recipe with zero sum over
+3. **The Weil class and the form.** Define `I_∞^{(Q)}(F,G)` by Paper 47's recipe with zero sum over
    `Z(Λ_Q)` and polar block from `P` (Prop. 12.6 hypotheses: check which hold — in particular the
    admissibility clause requiring `Λ_Q > 0` on `R`, which follows from `K_Q > 0`; and the explicit
    formula for `Z_Q`, which is the sum of the Hecke explicit formulas — RESTATEMENT). Prove the

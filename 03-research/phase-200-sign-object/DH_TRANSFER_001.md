@@ -33,7 +33,7 @@ has no DH row. The existence of a witness is CITED/ARGUED (§1.4).
 
 ## 0. Corpus and index check
 
-- Checked: ROUTES-TRIED-INDEX (families C1 "linear in Λ / comb-generic", in LEDGER_L5_META), P47 rem:twohalves
+- Checked: ROUTES-TRIED-INDEX (families C1 "linear in Λ / comb-generic", in LEDGER_L5_META), P46 rem:twohalves
   (l.3330), rem:FDH (l.8334), thm:ext-half, rem:ext-killing, lem:K/eq:m, MECH_001 (F-DH, K_{3/4}, conductor 5),
   GUO_QUANT_001 (Prop. 1.3: Φ_f^{DH} ∈ rad 𝒲_{DH}, PROVED), AUDIT_200_SPEC_002 (unconditional F4) and
   A_MU_FACTORIZATION_001 (§1(a): Fejér–Riesz NO-GO by F4 + P4).
@@ -43,7 +43,7 @@ has no DH row. The existence of a witness is CITED/ARGUED (§1.4).
 - **Record correction, for the editor.** The brief states that DH has negative witnesses certified in
   phase-198 CERT_FALSIFIERS. That is not the case. CERT_FALSIFIERS_001 certifies rows Y1, AA (zero comb, a_P, cΛ) and row 11
   of Epstein x²+5y². **There is no DH row.** Across the whole corpus, F-DH appears as "CITED Ziad, UNVERIFIED / PLAUSIBLE"
-  (P47 rem:FDH; PROOF_L_SHARP_A/C/E/F/H; MECH_001 l.160). CERT_FALSIFIERS's "zero comb" is the comb a = 0 in
+  (P46 rem:FDH; PROOF_L_SHARP_A/C/E/F/H; MECH_001 l.160). CERT_FALSIFIERS's "zero comb" is the comb a = 0 in
   the odd sector, which is not DH.
 
 ## 1. Data on F_DH and parametric window form
@@ -84,7 +84,7 @@ There is no multiplicativity axiom, nor one on the support of −L′/L on prime
 
 Models: ζ is a model with θ = (1, 0, 1) and r = 1. F_DH is a model with θ = (1, 1, 5) and r = 0.
 
-### 1.3 Parametric window form (verified against P47 lem:K, eq:m, def:W and eq:Aform)
+### 1.3 Parametric window form (verified against P46 lem:K, eq:m, def:W and eq:Aform)
 
 For a model L, write −L′/L(s) = Σ_{n≥2} b_n n^{−s} for large Re s. This exists because a₁ = 1, and the b_n are
 real. Define:
@@ -99,7 +99,7 @@ For δ = 0 and q = 1 this reproduces exactly eq:m (C₀ = ψ(¼) − log π) and
 
 The form 𝔞_T^{(L)}(F) is the "Method" formula of CERT_FALSIFIERS, with (C₀, K, v) replaced by
 (C₀^{(L)}, K_δ, v^{(L)}), plus the polar term r·(A,B) of eq:Aform. This term vanishes on P_T, and for r = 0 it does not
-exist. P_T is defined the same way as in P47 l.121 (A = B = 0) for every model. For DH it is a codimension-2
+exist. P_T is defined the same way as in P46 l.121 (A = B = 0) for every model. For DH it is a codimension-2
 restriction with no polar content.
 
 ### 1.4 Status of the DH falsifier (honest)

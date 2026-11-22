@@ -58,7 +58,7 @@ vanishes for every weight (generic). None of (i)–(iii) provides a non-generic 
 ## (4) Connection with 𝔸_M ⪰ 0 and controls
 
 Necessary identity (not available): a_T(F) = Φ_T(F) − (sum of leakage squares of C_T, C_T^{(N)})
-with Φ_T ≥ 0 by an oriented sign of the compressed jump; via Paper 47 prop:AM it would give 𝔸_M ⪰ 0 for M ≥ e^{2T}.
+with Φ_T ≥ 0 by an oriented sign of the compressed jump; via Paper 46 prop:AM it would give 𝔸_M ⪰ 0 for M ≥ e^{2T}.
 Controls: with the observation of (2) the compressed jump is p^{−1/2}·w(p)·(fixed operator) for
 any weight w; hence (a) substituted weight 2Λ, (b) deleted power and (c) Beurling pass through the
 same step without breaking: **no named step fails** under the three controls (F1 not met). That is

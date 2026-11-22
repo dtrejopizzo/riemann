@@ -11,14 +11,14 @@ explicit polynomial bump (computed by hand, §1.1). RH is not claimed, nor the c
 | Thm 1′ | Version with off-line neighbors: if the zeros at distance ≤ X from γ have β' ≤ a₁ < a, the same result with a replaced by a−a₁ in the logarithmic term | PROVED |
 | Cor 2 | Contrapositive: certified positivity on window T₁ excludes isolated maximal quartets with a ≥ max{1/(T₁−1), log(C_ψL(γ))/(2T₁)} | PROVED |
 | Cor 2 at T₁ ≤ ½log5 | **Gives no new information whatsoever** (vacuous: requires T₁ > 2) | PROVED (trivial) |
-| Corpus comparison | Qualitative version = R162_2501 Prop 1 (non-explicit constant C(γ_j)) and P47 cor:margin2(iii) / P45 Thm 10.4 (existence of T₀). New here: the constants and the dependence on γ | — |
+| Corpus comparison | Qualitative version = R162_2501 Prop 1 (non-explicit constant C(γ_j)) and P46 cor:margin2(iii) / P45 Thm 10.4 (existence of T₀). New here: the constants and the dependence on γ | — |
 | (P153.5) | Answered in the form of an upper bound: the law for an isolated quartet is (1/2a)·log(C log γ), not 0.624+0.027 log(1/a) | PROVED as an upper bound on T*; optimality OPEN |
 | Row D | Does not move: it is the E1 direction (¬RH ⟹ ¬positivity), quantified | unchanged |
 
 ## 0. Corpus check
 
 Read: R153_005 (Thm A, law T*(a) of Ξ_a, item P153.5), R184_004 Lemma 1 (signature (2,2), q = 4Re A(F_e)² − 4Re A(F_o)²),
-R162_2501 §2 Prop 1–2, R162_2602 §0–3 (count N(T), two-bump packets of R162_2501a), P47 cor:margin2, thm:KEP3,
+R162_2501 §2 Prop 1–2, R162_2602 §0–3 (count N(T), two-bump packets of R162_2501a), P46 cor:margin2, thm:KEP3,
 remark after thm:KEP3 (l.1760), phase-138 README (D.17: RH ⟺ W(h_T) ≥ 0 ∀T, Landau). **Finding:** the mechanism (Gabor
 packet at the endpoints of I_T, phase chosen so that arg A = π/2, quartet ≍ −e^{2β*T}) is already in R162_2501 Prop 1
 (upper bound λ_A ≤ −c e^{2β*T} + C, with c, C, T₁ "configuration-dependent," no values). The DH gate of
@@ -61,7 +61,7 @@ X³ ≥ 270 (M2/M0)² (L(γ) + 2log(X+3)) (for the bump of 1.1: X ≈ 60·L(γ)^
 
     T*(a,γ) := max{ 1 + 1/a ,  (1/(2a)) · log( C_ψ · L(γ) ) },   C_ψ := 67K/M0²   (≈ 1.56·10⁵ for 1.1).
 
-Consequently (monotonicity, P47 lem:monoT) λ_min(W_T|P_T) < 0 for every T ≥ T*(a,γ).
+Consequently (monotonicity, P46 lem:monoT) λ_min(W_T|P_T) < 0 for every T ≥ T*(a,γ).
 
 *Proof.* Let z=a+iγ, A := Φ_F(½+z). Since F is even, Φ_F(½−z)=A, and by Lemma 1 of R184_004 the quartet contributes q = 4Re(A²)
 = 4[(Re A)² − (Im A)²]. With cosh(zt) = cosh(at)cos(γt) + i sinh(at)sin(γt) and A = 2∫F_+cosh(zt):
@@ -120,18 +120,18 @@ R162_2501 Prop 1).
 **Cor 2 (PROVED).** If λ_min(W_{T₁}|P_{T₁}) ≥ 0, then ζ has no (Max–Iso, X) quartet at height γ ≥ 100 with
 a ≥ a₁(T₁,γ) := max{ 1/(T₁−1), log(C_ψL(γ))/(2T₁) }.
 
-* **Certified windows from the corpus (T₁ ≤ ½log5 ≈ 0.805, P47; 0.8, Zhu):** the condition 1/(T₁−1) requires T₁>1, and even
-  ignoring that clause log(C_ψL)/(2T₁) ≥ 12/1.6 > ½ ≥ a. **New zero information: none.** (Consistent with P47
+* **Certified windows from the corpus (T₁ ≤ ½log5 ≈ 0.805, P46; 0.8, Zhu):** the condition 1/(T₁−1) requires T₁>1, and even
+  ignoring that clause log(C_ψL)/(2T₁) ≥ 12/1.6 > ½ ≥ a. **New zero information: none.** (Consistent with P46
   §subsec:where: at T ≤ 1 the certificate sees the region |τ| ≲ 2πe^{2T}, below the first zero.)
 * **When it would surpass the classical region** (which excludes a > ½ − c/log γ): one would need a₁ < ½ − c/log γ, i.e.
   T₁ ≳ log(C_ψ L(γ)) ≈ 12 + log log γ, plus the Max–Iso hypotheses. But at that scale Cor 2 is not a zero-free
   region: it only excludes a quartet that *attains* Θ and is isolated; it says nothing if Θ is not attained or if several
   zeros with β ≈ Θ cluster at distance < X (the phases cannot be aligned). De la Vallée Poussin type: **no**.
-* Any certificate at T₁ ≥ 13 is itself inaccessible: by P47 cor:margin2(i), λ_W ≤ 4·10⁹Te^{−15.449T}, a margin
+* Any certificate at T₁ ≥ 13 is itself inaccessible: by P46 cor:margin2(i), λ_W ≤ 4·10⁹Te^{−15.449T}, a margin
   ≲ 10^{−77} at T=13 (and doubly exponential in the refined version). Cor 2 quantifies what was already known:
   positivity on small windows buys no zeros.
 
-**Relation to P45 Thm 10.4 / P47 cor:margin2(iii) / R162_2501 Prop 1.** All three give ¬RH ⟹ ∃T₀ with λ < 0 (R162_2501 with
+**Relation to P45 Thm 10.4 / P46 cor:margin2(iii) / R162_2501 Prop 1.** All three give ¬RH ⟹ ∃T₀ with λ < 0 (R162_2501 with
 rate e^{2β*T}); none gives T₀. Thm 1 is their effective form under (Max–Iso): explicit T₀ ≤ T*(a,γ). It is an improvement
 of constants, not of mechanism.
 

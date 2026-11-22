@@ -6,7 +6,7 @@ to classify a method (as the coordinator asked); no statement about their locati
 is invoked.
 
 ## Corpus check
-grep "Hadamard" + "log|ζ|", "Davenport–Heilbronn"/"DH" falsifier (Paper 47, G2_B3_R1, R160 gates: DH as a method falsifier for FE-only
+grep "Hadamard" + "log|ζ|", "Davenport–Heilbronn"/"DH" falsifier (Paper 46, G2_B3_R1, R160 gates: DH as a method falsifier for FE-only
 arguments), "moment" + "L¹-stable", phase-138 CORPUS_CHECK (Pólya/Jensen-type criteria as restatements). The FE-only falsifier idea is
 classical/corpus (DH); **new here:** the explicit local model ζ̃ = ζ·R with exact FE, identical line identity, moments within O(δ), and
 ℓ̃″ forced up by 1.5/δ²; the exact sign split of ℓ″ (Prop 11.1) at the profile scale; the NO-GO Thm 11.2 for pointwise (𝒱).

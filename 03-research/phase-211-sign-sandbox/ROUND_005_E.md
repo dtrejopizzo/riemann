@@ -2,7 +2,7 @@
 
 Object. On P_T (two Tate conditions), with Arch_T := P·Arch·P and Π_T := P·Π·P (STATEMENT_001, ROUND_005_B §1), put
 
-  A_T = Σ_{n∈N_T} v_n                                 (the bound ‖Π_T‖ ≤ A_T, Paper 47 prop:coer-prime),
+  A_T = Σ_{n∈N_T} v_n                                 (the bound ‖Π_T‖ ≤ A_T, Paper 46 prop:coer-prime),
   Band(t) = span of the eigenvectors of Arch_T with eigenvalue ≤ t,
   K′_j(t) = span{Π_T^i e : e ∈ Band(t), 0 ≤ i < j},
 
@@ -18,9 +18,9 @@ parities), U_δ = spectral subspace of a_T for eigenvalues < δ (the near-null c
   be orthogonal to part of U_δ), and not the symbol. The recorded failure of 5B (principal cosines 0 with U_δ) is a
   failure of the starting block; this memo changes exactly the starting block. The symbol obstruction of R164_502c
   concerns positivity of σ_T, not used here.
-- Paper 47 thm:arena / cor:arena (CITED): even modes with archimedean eigenvalue ≤ A_T compete; their number is
+- Paper 46 thm:arena / cor:arena (CITED): even modes with archimedean eigenvalue ≤ A_T compete; their number is
   ≥ exp(4e^T(1+o(1))). Theorem (b) of §3 below is the Weyl-type upper count that matches this band.
-- Grid R162_2300: "Krylov" only phase-164 symbol item; "arena" only thm:arena tools (P47). No cluster-count entry.
+- Grid R162_2300: "Krylov" only phase-164 symbol item; "arena" only thm:arena tools (P46). No cluster-count entry.
 
 Numerical set-up (NUMERICAL throughout §1–2, §4): same as ROUND_005_B (N = 80 sines, 78-dimensional Galerkin P_T,
 saved Arch matrices; Π exact by Gauss–Legendre; block Krylov with re-orthogonalisation, tolerance 10⁻¹⁰). Capture of
@@ -34,7 +34,7 @@ it is 14 (N = 40) vs 16 (N = 80), so the T = 1.2 count is not converged in N.
 
 ## 1. The arena band and its Krylov spaces (NUMERICAL)
 
-Table 1.1. Sizes. N*(T) is the arena count of Paper 47 cor:arena (≥ exp(4e^T(1+o(1))), doubly exponential); the
+Table 1.1. Sizes. N*(T) is the arena count of Paper 46 cor:arena (≥ exp(4e^T(1+o(1))), doubly exponential); the
 Galerkin space has only 78 dimensions, so dim Band(A_T) is capped at 78.
 
 | T | A_T | e^{A_T} | dim Band(A_T) (of 78) | λ_max(Π_T) | dim Band(λ_max Π_T) | d_T = #neg Arch | m_{10⁻³} | m_{10⁻⁶} |
@@ -139,7 +139,7 @@ asymptotically (which would restore the doubly exponential count) is OPEN.
 
 ## 3. What can be proved about the cluster size
 
-Let α_1 ≤ α_2 ≤ … be the eigenvalues of Arch_T on P_T (discrete: compact resolvent, CITED Paper 47 prop:nodes),
+Let α_1 ≤ α_2 ≤ … be the eigenvalues of Arch_T on P_T (discrete: compact resolvent, CITED Paper 46 prop:nodes),
 λ_1 ≤ λ_2 ≤ … those of a_T on P_T, m_δ(T) = #{k : λ_k < δ}, N_Arch(s) = #{k : α_k < s}, and
 π_+ = λ_max(Π_T) = sup_{F∈P_T, ‖F‖=1} ⟨F, ΠF⟩, π_− = −inf_{F∈P_T, ‖F‖=1} ⟨F, ΠF⟩.
 

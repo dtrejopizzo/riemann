@@ -4,7 +4,7 @@ Notation (019): S(τ) = Σ_{n<N} v_n e^{iτ log n}, v_n = 2Λ(n)n^{−½}, N = e
 (Mertens-type, CITED). Fejér W_Ω, Ŵ_Ω(x) = Ω sinc²(Ωx/2) ≥ 0, Ŵ_Ω(x) ≤ min(Ω, 4/(Ωx²)).
 
 ## Corpus check
-L2_BUILD_019 §3 (resonance identity), R160_M12 (×2 orbits), phase 167 (sieve/large sieve), Paper 47 rem:wit-cheb, prop:wit-sens.
+L2_BUILD_019 §3 (resonance identity), R160_M12 (×2 orbits), phase 167 (sieve/large sieve), Paper 46 rem:wit-cheb, prop:wit-sens.
 grep "resonator / resonance method / Soundararajan / Aistleitner / Montgomery Ω-result / exact triples": no use in the corpus.
 Classical inputs CITED: linear independence of {log p} over ℚ; resonance method (Soundararajan 2008; Aistleitner 2016).
 

@@ -40,7 +40,7 @@ region nor a universal barrier.
    of the parameter into a supposedly necessary hypothesis of the method.
 4. Validate the full high comparison, contours, normaliser,
    uniformities and order of parameters before applying continuation.
-5. Independent review of any new bound. Do not integrate into paper47 nor
+5. Independent review of any new bound. Do not integrate into paper46 nor
    claim a sign of D as an automatic consequence of the new goal.
 
 Status: **ACTIVE / OPEN**. No 4/5 proof is available yet.

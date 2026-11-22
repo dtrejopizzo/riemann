@@ -13,15 +13,15 @@ grep over `05-meta-and-planning/ROUTES-TRIED-INDEX/` («polar cap», «polar cap
 - AUDIT_CONSTRAINTS_001 restriction **11** (SOFT): no flow/continuation in T without a virial-type bound (H).
 - L2_INTERLACE_001: Lemma T3 (PROVED) In(W_T) = In(𝔞_T|𝒱_k) + In(S_{T,k}) + In(𝔊_T); R6 ≠ (L2); R6 relies on λ_A > 0.
 
-Definition sources (Paper 47 main.tex): thm:parityschur (l.4176), prop:polarcap (l.4316), lem:gmono (l.4715),
+Definition sources (Paper 46 main.tex): thm:parityschur (l.4176), prop:polarcap (l.4316), lem:gmono (l.4715),
 prop:onewindow, cor:convfail (l.4771), rem:polarcapdiag (l.11151), lem:monoT (l.502), eq:target (l.135), lem:polar (l.1742).
 
 New reason relative to P156: TRACT_001 §R6 proposes treating g_± dynamically (Hadamard in T + non-crossing), not as a
 condition on a single window. That difference is what is examined here; if it falls, it falls for a new reason that is recorded.
 
-## 1. Exact definition of 𝔊_T (from P47)
+## 1. Exact definition of 𝔊_T (from P46)
 
-P47 notation: χ_ev = cosh(t/2)·1_{I_T}, χ_odd = sinh(t/2)·1_{I_T}, ℓ_par(F) = ⟨F, χ_par⟩, ε_ev = +1, ε_odd = −1,
+P46 notation: χ_ev = cosh(t/2)·1_{I_T}, χ_odd = sinh(t/2)·1_{I_T}, ℓ_par(F) = ⟨F, χ_par⟩, ε_ev = +1, ε_odd = −1,
 𝒬^par_T = ker ℓ_par ∩ 𝒟^par_T (the primitive part of the sector), and
 
   W_T(F) = [𝔞_T(F_e) + 2 ℓ_ev(F_e)²] + [𝔞_T(F_o) − 2 ℓ_odd(F_o)²]       (thm:parityschur(o), PROVED).
@@ -54,7 +54,7 @@ n with log n ≥ 2T do not see F (𝒞_F(log n) = 0). Hence W_{T'}|_{𝒟_T} = W
 explicitly**: all of 𝔤_par's T-dependence is that of the domain. In particular the «directions e^{±t/2}» do not
 change on old functions and the contacts produce no jumps: they enter with zero weight on the old domain.
 
-**2.2 Monotonicity (PROVED, P47 lem:gmono).** If λ^par_A(S) > 0 for S = T, T', then 𝔤_par(T') ≤ 𝔤_par(T).
+**2.2 Monotonicity (PROVED, P46 lem:gmono).** If λ^par_A(S) > 0 for S = T, T', then 𝔤_par(T') ≤ 𝔤_par(T).
 This is Hadamard's domain principle in its integral form: a minimization problem with a fixed linear constraint over
 nested domains.
 
@@ -70,7 +70,7 @@ for T outside the (at most countable) set where the minimizer degenerates,
 
 where 𝔅_T[h] is the first-order gain from admitting support in the layers [T, T+dT] and [−T−dT, −T], i.e. a
 quadratic form in the boundary trace (weighted according to the order of the symbol) of the residue r = 𝒲h − 𝔤_par χ_par
-evaluated just outside I_T. For local operators of order 2 it is −|∂_n u|²; for P47's symbol (log order)
+evaluated just outside I_T. For local operators of order 2 it is −|∂_n u|²; for P46's symbol (log order)
 the exact trace requires a boundary regularity analysis that has not been carried out in the corpus; that is why it is ARGUED
 and not PROVED. The sign part (d𝔤/dT ≤ 0) is indeed PROVED (2.2).
 
@@ -90,13 +90,13 @@ gives for free is that 𝔤_par decreases, which is the wrong direction for a «
 **3.1 Is the sign always known? No.** The goal's hypothesis (known inertia of the full form, «exactly one
 negative eigenvalue from the pole») conflates two objects. lem:polar: the polar term 2Re(A B̄) has exactly one
 negative square (in coordinates (α, β) it is 2αβ, D_pol ≅ [[0,1],[1,0]]). But that is the floor D_pol, not the full
-form W_T. The full form has n_−(W_T) = n_−(𝔞|𝒬^ev) + n_−(𝔞|𝒬^odd) + #{par: 𝔤_par < 0} (a2), and P47
+form W_T. The full form has n_−(W_T) = n_−(𝔞|𝒬^ev) + n_−(𝔞|𝒬^odd) + #{par: 𝔤_par < 0} (a2), and P46
 takes as its goal the «full version» λ^W_T ≥ 0 ∀T (eq:target, l.135–137): **the inertia of W_T is not a theorem**
-beyond the certified windows. I found no claim «(10,0,1)» about W_T in P47; the inertia
+beyond the certified windows. I found no claim «(10,0,1)» about W_T in P46; the inertia
 (·,0,1) appearing in Mori memos is that of a Galerkin block, not of W_T, and I do not use it.
 
 What is indeed proved:
-- 𝔊_T ≻ 0 for 0 < T ≤ T_5 = ½log5 (thm:log5W + thm:parityschur(c); P47, PROVED with computer verifications),
+- 𝔊_T ≻ 0 for 0 < T ≤ T_5 = ½log5 (thm:log5W + thm:parityschur(c); P46, PROVED with computer verifications),
   and on [T_5, T_5+ε] with ε useless (R186-polarcap5). With Mori (CITED) up to ½log15.
 - 𝔤_par **can** be negative with λ_A > 0 for modified weights: cor:convfail (PROVED with computer) gives
   𝔤_odd < 0 with λ_A(T;a) > 0 for a = Λ·1_{n≥5}, T ∈ [0.4608, 0.58], and for a_θ with θ ≤ 0.8148 at T = ½log3.
@@ -105,7 +105,7 @@ What is indeed proved:
 Hence «does not cross» is **not tautological** (there are crossings in the class closed under deletion/lowering of a
 term) nor false (it is true in the certified windows). TRACT_001 was not wrong that it is nontrivial.
 
-**3.2 But it is not independent either (PROVED, combining results from P47).**
+**3.2 But it is not independent either (PROVED, combining results from P46).**
 
 > **Proposition PC-1.** Suppose λ_A(T) > 0 for all T > 0. Then the following are equivalent:
 > (i) 𝔤_ev(T) ≥ 0 and 𝔤_odd(T) ≥ 0 for all T (R6, «does not cross»);
@@ -134,7 +134,7 @@ Consequences:
 
 ## 4. Is there any statement of its own left about the polar block?
 
-**4.1 Relation to the Tate mode (PROVED, already in P47).** ℓ_ev(F) = (A+B)/2, ℓ_odd(F) = (A−B)/2 with A = Φ_F(1),
+**4.1 Relation to the Tate mode (PROVED, already in P46).** ℓ_ev(F) = (A+B)/2, ℓ_odd(F) = (A−B)/2 with A = Φ_F(1),
 B = Φ_F(0); prop:polarcap: E_T(β, α) = inf{W_T(F): Φ_F(0)=β, Φ_F(1)=α} = (α,β)𝔊^{AB}_T(α,β)ᵀ. 𝔊_T **is** the minimum
 energy of prescribing the Tate mode at the poles s ∈ {0,1}. If «f♯(0)» from PI4/PI5 is Φ_F at the pole, the requested
 relation is prop:polarcap's identity and there is nothing new (CONDITIONAL on that notation identification, which I did
@@ -176,7 +176,7 @@ consequence: **the even channel does not admit the positive capacity formula; th
 
 | question | answer | label |
 |---|---|---|
-| 1. Does 𝔊_T invert 𝔞_T|𝒫_T? | Yes: bordered Schur over 𝒬^par; definition needs 0 ∉ spec, its uses need λ_A > 0 | PROVED (P47) |
+| 1. Does 𝔊_T invert 𝔞_T|𝒫_T? | Yes: bordered Schur over 𝒬^par; definition needs 0 ∉ spec, its uses need λ_A > 0 | PROVED (P46) |
 | 2. T6.1 | d𝔤/dT ≤ 0 PROVED; differential formula = boundary trace of h_par's residue, a functional of the resolvent | PROVED / ARGUED; as a route NO-GO (𝒦_H) |
 | 3. T6.2 | Not tautological (cor:convfail: crossings with λ_A > 0 for modified weights), not false (≻ 0 up to ½log5); but ⟺ full version of eq:target and implies it (PC-1) | OPEN; route NO-GO / TRANSFER |
 | 4. Statements of its own | PC-1 (equivalence and monotone limit), PC-2 (uniform ceiling; 𝔤_ev ≲ 9·10⁻⁸ ∀T ≥ ½log3), 4.3 (even channel = cancellation, not capacity) | PROVED / NUMERICAL |

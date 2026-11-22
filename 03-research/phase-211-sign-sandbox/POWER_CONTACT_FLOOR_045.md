@@ -4,9 +4,9 @@ Status: **PROVED within the specific declared scope**, independent review approv
 
 ## 1. Reading and exact scope
 
-Consulted the ROUTES-TRIED-INDEX index, the master grid and CROSSWORD-TO-D; read Paper47 sec:log5/app:encllog5, ROUND_007_B and ROUND_008_A/C. The proof in Paper47 up to T5=log5/2 is a matrix-and-tail certificate, not an elementary sign mechanism that fails mathematically when5 enters. Paper47 cor:beyond5 even proves positivity on some later interval by continuity.
+Consulted the ROUTES-TRIED-INDEX index, the master grid and CROSSWORD-TO-D; read Paper46 sec:log5/app:encllog5, ROUND_007_B and ROUND_008_A/C. The proof in Paper46 up to T5=log5/2 is a matrix-and-tail certificate, not an elementary sign mechanism that fails mathematically when5 enters. Paper46 cor:beyond5 even proves positivity on some later interval by continuity.
 
-Origin of the data: Paper47/main.tex lines11233ff fix tau_N=240, k1=280,k2=330 and140 coordinates per parity. Its lowercert at11160 requires
+Origin of the data: Paper46/main.tex lines11233ff fix tau_N=240, k1=280,k2=330 and140 coordinates per parity. Its lowercert at11160 requires
 
     s_infty<=m(tau_N)−A_T,
     q_Y=s_infty−mu−omega_+ Lambda_(k1)(T tau_N)>0,
@@ -69,7 +69,7 @@ The remaining lower matrix contains
     R_(i,xi)=<e_i,chi>+<A_i+v5D_i,P_Ychi>/q_Y,
     R_(xi,xi)=c−||P_Ychi||²/q_Y.
 
-For the complete form c=−1/2 in even parity and c=+1/2 in odd; for the primitive one c=0. After the Haynsworth step of Paper47 the finite Schur complement whose sign must be proved remains, with these complete columns. The linear crossings, the quadratic one and the polar edge have been written: dominating only the diagonal contact matrix or suppressing D_i does not control them.
+For the complete form c=−1/2 in even parity and c=+1/2 in odd; for the primitive one c=0. After the Haynsworth step of Paper46 the finite Schur complement whose sign must be proved remains, with these complete columns. The linear crossings, the quadratic one and the polar edge have been written: dominating only the diagonal contact matrix or suppressing D_i does not control them.
 
 These formulas reuse lowercert; they are not a new reduction. They serve as a minimal obligation for evaluating a positive pair L55-B: it must offer a real lower bound of the WHOLE form with error/slack covering those columns and the tail, or a stronger inequality that legitimately avoids them. A pair with an artificially finite-mass measure is not imposed here; the infinite tail must be treatable in the authentic class.
 

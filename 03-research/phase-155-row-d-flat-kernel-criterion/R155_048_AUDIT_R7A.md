@@ -48,7 +48,7 @@ Runtime **6.4 s + 2 s**, not the `~50 s + ~5 s` of `scripts/r7a/README.md:5–6`
 
 **ERRATUM 1 (numerical, must fix).** `R155_047:27` — the `0.80` row of the §0.2 table gives
 "diagnostic prolate count **5**"; the true value at the optimal `τ₁ = 6.3576` is **6** (§2 table, l.94,
-and the rerun agree). The same `4,5,5` triple is carried in `04-papers/47-row-d-dual-certificates/main.tex:3157`
+and the rerun agree). The same `4,5,5` triple is carried in `04-papers/46-row-d-dual-certificates/main.tex:3157`
 and should be re-checked (`4,5,6` at the optimal `τ₁`) if that line is touched.
 
 **Minor (scripts).** `r7a_02_closedform.py:15` overflows for `τ₁` large (`c ≳ 100`, `c^{159}`), so those
@@ -108,10 +108,10 @@ the modest claim is the right one. **No priority claim to police.**
 All eight label rows of `R155_047 §5` are sustained as written, with two amendments: (i) the
 "route cannot return `< 5`" row should read "…for the **two-value** relaxation" (Caveat 1); (ii) Remark
 PA's no-`d` clause is `HEURISTIC` (Caveat 2). Row-D label unchanged ✓; endpoint
-`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` untouched ✓; no sign for `ζ` claimed ✓; Paper 47 not modified ✓
+`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` untouched ✓; no sign for `ζ` claimed ✓; Paper 46 not modified ✓
 (`git status`: only `scripts/r7a/` and the two new md files are new/untracked).
 
-**Paper 47 proposal (§6): READY after the two wording fixes + Erratum 1.** Replacing `prop:NC`'s
+**Paper 46 proposal (§6): READY after the two wording fixes + Erratum 1.** Replacing `prop:NC`'s
 `n₋ ≤ 68.51·T` (main.tex:2991) by `5/6/7` is a genuine and citable improvement; `main.tex:3157`'s
 "prolate counts `4,5,5`" must become `4,5,6`, and `prop:NC`'s statement must carry the `inf_{τ₁}`
 explicitly (it already does at `R155_033:277` for the trace form). Cite the quadrature-free `5/7/8`

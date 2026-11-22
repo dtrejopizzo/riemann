@@ -63,11 +63,11 @@ Corollary C) are the PROVED inputs.
 
 ---
 
-## 1. Notation (verified against LEMMA_AINF_001 §2 and P47)
+## 1. Notation (verified against LEMMA_AINF_001 §2 and P46)
 
 - I_T = (−T,T). For real F, c_F(u) = ∫F(x+u)F(x)dx, supported on [−2T,2T].
 - 𝔪_T(F) = (1/2π)∫ m|F̂|² = C₀‖F‖² + Lev(c_F), where m(τ) = Re ψ(¼+iτ/2) − log π, C₀ = −5.37218…,
-  K(u) = 2e^{3u/2}/(e^{2u}−1) and t₀ = 6.28984… (P47 lem:K, thm:S; LEMMA_AINF §2).
+  K(u) = 2e^{3u/2}/(e^{2u}−1) and t₀ = 6.28984… (P46 lem:K, thm:S; LEMMA_AINF §2).
 - Π_T(F) = −Σ_{n ≤ X} v_n Re c_F(log n), with v_n = 2Λ(n)/√n and X := e^{2T}. 𝔄 := 𝔪_T + Π_T is the prop:WT form
   (no pole). W^ev = 𝔄 + 2ℓ², with ℓ(F) := ⟨F,χ_ev⟩ and χ_ev = cosh(x/2)1_{I_T}.
 - Even positivity ⟺ n₋(𝔄_ev) = 1 ∧ q_ev < −½ (prop:WT, WT_HALVES).
@@ -279,7 +279,7 @@ All are read off the decomposition 𝔄_ev^a = 𝔪^a + r_a(E_G − β_T ℓ²) 
 | ζ | m, t₀ = 6.29 | r = 1: E_G − β_Tℓ² | E = ψ − t | (target) |
 | Epstein x²+5y² (Lemma E) | m^Q: C₀^Q = −4.607, Lévy 1/sinh(u/2), Γ_ℝ(s)Γ_ℝ(s+1), conductor 20 | r_Q ≠ 1 (residue of Z_Q) | E_Q = ψ_Q − r_Q t with Λ_Q < 0 at n = 36, 54, 84… | 𝔪^Q and Φ^Q change at once. The hyperbolic pair (H1PLUS) appears as a negative direction of 𝔅^Q outside ker ℓ. Frequency: OPEN, to the calibrator |
 | DH | degree 1, conductor 5 | r = 0: **no polar term**, M ≡ 0, β ≡ 0 | Φ = the whole series, b_n with sign | no exceptional direction; n₋(𝔄^DH_ev) = 0 or hyperbolic pair. Consistent with H1PLUS (DH: 0) |
-| a_P | m (unchanged) | r = Π_{p∈P}(1−1/p), polar weight changes | E_P(t) = E(t) − Σ_{p∈P}log p·⌊log t/log p⌋ + (1−r)t | **explicit matrix**: Φ^{a_P} − Φ^ζ = Σ_{p∈P,k: p^k≤X} 2log p·p^{−k/2}G^s(k log p), plus the polar change. Breaks n₋ ≤ 1 on T ∈ [0.60, ½log P] (P47). Calibratable with P2a |
+| a_P | m (unchanged) | r = Π_{p∈P}(1−1/p), polar weight changes | E_P(t) = E(t) − Σ_{p∈P}log p·⌊log t/log p⌋ + (1−r)t | **explicit matrix**: Φ^{a_P} − Φ^ζ = Σ_{p∈P,k: p^k≤X} 2log p·p^{−k/2}G^s(k log p), plus the polar change. Breaks n₋ ≤ 1 on T ∈ [0.60, ½log P] (P46). Calibratable with P2a |
 | cΛ | m | r = c: c(E_G − β_Tℓ²) | E_c = c·E | c > 1: more polar mass and more Green. c < 1: less. That it fails for c ≠ 1 is read off the margin of 𝔪 + cE_G + cΦ_E (ARGUED, as in l.462) |
 | Beurling | no Γ_ℝ: **no m, t₀, δ_N or E_N** | r depends on the system | E_B | the skeleton is undefined. P1 has no Dirichlet space: F absent |
 | quartets | m (FE preserved) | — | arithmetic side with an a.c. part | not a series over ℕ: G^s(log n) is integrated against a continuous measure. E absent |
@@ -348,7 +348,7 @@ In that case the skeleton remains a **PROVED tool** (P2a, P3, §5.3, the P4 tabl
 **Construction order.**
 1. **P5 first** (calibrator): it is cheap and explicit, and decides K6. It also fixes the normalization of (6.1),
    comparing 𝔄_3 computed via P2a with Z_T − 2ℓ² from H1PLUS.
-2. **P3 and P3-odd**, for integration into P47 after prop:WT. It is the "except for one" turned into an identity,
+2. **P3 and P3-odd**, for integration into P46 after prop:WT. It is the "except for one" turned into an identity,
    with text for the editor.
 3. **P1.c** (upper bound of A∞): without it, the reduction to a finite matrix is only necessity.
 4. **L205.★**, only with a proposal that passes K1–K5 in writing and that states how it differs from h*, from tests

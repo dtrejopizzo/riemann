@@ -16,7 +16,7 @@ Status: **NO-GO (PROVED), with one PROVED STEP.** Gate 1 is not closed.
   ζ'(s_m)K_F(a_m) (the product d_m·ζ(s_m)) appears only in X-commutators of PC and cancels there too
   (§5). Combined with eq:Qbalance, nothing is left that could force R_LF = 0 (§6).
 
-Notation: Paper 47 §sec:firstcontact. Write μ_F(a) := ∫ e^{at}F(t)dt, so μ_F(a) = εK_F(a) when
+Notation: Paper 46 §sec:firstcontact. Write μ_F(a) := ∫ e^{at}F(t)dt, so μ_F(a) = εK_F(a) when
 JF = εF. Also e_a(t) := e^{at}, a_j = 2j+½, s_j = 2j+1, σ_k(N) := Σ_{n≤N} n^k, and
 σ'_k(N) := Σ_{n≤N}(log n) n^k. Real pairing ⟨h,g⟩ = ∫hg.
 

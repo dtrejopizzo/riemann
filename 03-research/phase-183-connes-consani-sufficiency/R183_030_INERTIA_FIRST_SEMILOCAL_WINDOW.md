@@ -2,7 +2,7 @@
 
 Sources: R183_019 §1 (dictionary h = ½ξ − ξ′), R183_023 (B_2, Thm 3.1),
 R183_026 (§2–§4), R183_027 (low-band falsifier), CC 2006.13771 (102)–(104), Lemma 6.9–6.10,
-Thm 6.11, Rem 6.12. Paper 47: thm:log5A, thm:log5W, lem:monoT.
+Thm 6.11, Rem 6.12. Paper 46: thm:log5A, thm:log5W, lem:monoT.
 Scripts (NUMERICAL, outside the repo): `scratchpad/r183_030_inertia.py` and `scratchpad/r183_030_scan.py`
 (session scratchpad d9ffd571…).
 
@@ -12,8 +12,8 @@ Scripts (NUMERICAL, outside the repo): `scratchpad/r183_030_inertia.py` and `scr
    window ½log2 < T < ½log3: there, 3 (T > 0.549) and 4 (T > log2 = 0.693) have already entered. Hence
    three forms are computed: S = {∞} (archimedean), S = {∞,2} fixed, and S = S(T) = {∞} ∪ {p^k < e^{2T}}.
 2. **With S = S(T), n₋ = 0 on primitives for every T computed** (0.35–0.90). For
-   T ≤ ½log5 this is a theorem (CITED, Paper 47 thm:log5A). From it comes the gap in the ξ metric:
-   c_T ≥ λ_A/4 ≥ 6·10⁻¹³ (PROVED given Paper 47, §3). Alignment is automatic: a_min = 0. But
+   T ≤ ½log5 this is a theorem (CITED, Paper 46 thm:log5A). From it comes the gap in the ξ metric:
+   c_T ≥ λ_A/4 ≥ 6·10⁻¹³ (PROVED given Paper 46, §3). Alignment is automatic: a_min = 0. But
    the gap falls off superexponentially (table §2.3). At T ≈ 0.9 it is already in double-precision
    noise.
 3. **With S = {∞,2} fixed**, positivity survives beyond ½log3 up to **T ≈ 0.5668** and breaks
@@ -27,7 +27,7 @@ Scripts (NUMERICAL, outside the repo): `scratchpad/r183_030_inertia.py` and `scr
    to ½log5 = 0.80472 has no explanation).
 5. **K_{S,T} has no meaningful "#λ>1" count**: with the archimedean Sonin fixed, it is +∞ (§1.3).
    The well-defined quantity is n₋ of the full form, which, under RH, equals 0 for every T. Thus, "N_T with
-   zero directions" for every T is exactly RH (Paper 47). The index gives a reformulation, not a
+   zero directions" for every T is exactly RH (Paper 46). The index gives a reformulation, not a
    mechanism. Neither RH nor the closure of D is claimed.
 
 ## 1. Exact definitions
@@ -42,7 +42,7 @@ with ĥ(s) = ∫h e^{isx}. The semilocal form is
     m(s) = Re ψ(¼+is/2) − log π,   c_h(a) = ∫h(x)h(x+a)dx.
 
 On primitives (ĥ(±i/2) = 0) the polar terms vanish. With S = S(T) one has W_S = W_T,
-Paper 47's Weil form.
+Paper 46's Weil form.
 
 **Lemma 1.1 (PROVED).** c_h(a) = ¼c_ξ(a) + c_{ξ′}(a) = [(¼ − ∂_a²)c_ξ](a).
 *Proof.* The cross term is −½[∫ξ(x)ξ′(x+a) + ∫ξ′(x)ξ(x+a)]. Integrating by parts with compact
@@ -145,7 +145,7 @@ they decrease by a factor ≈2, i.e. only the order of magnitude is stabilized. 
 precision does not resolve the sign: the rows at 0.9 and 1.0 prove nothing.
 
 Cross-check. λ_h(0.80, S(T)) ≈ 6.6·10⁻¹² (upper bound) versus the certified lower bound
-λ_A ≥ 2.5·10⁻¹² at ½log5 from Paper 47. They are compatible and of the same order.
+λ_A ≥ 2.5·10⁻¹² at ½log5 from Paper 46. They are compatible and of the same order.
 
 ### 2.4 Thresholds by bisection (M = 28, NUMERICAL)
 
@@ -160,13 +160,13 @@ T₁ and T₂ reproduce R183_026's 0.5963 and 0.8033 with a different basis. In 
 threshold is the same with or without ker ℓ: the negative direction created by prime 2 is **not**
 aligned with ℓ.
 
-## 3. The gap in the window (PROVED given Paper 47)
+## 3. The gap in the window (PROVED given Paper 46)
 
 **Proposition 3.1.** For 0 < T ≤ ½log5 and S = S(T), on primitives one has
 
     W_T(h) ≥ λ_A ‖h‖²_{L²} ≥ (λ_A/4)‖ξ‖²_{L²},   λ_A ≥ 2.5·10⁻¹².
 
-*Proof.* The first inequality is Paper 47's thm:log5A with lem:monoT (CITED, verified in
+*Proof.* The first inequality is Paper 46's thm:log5A with lem:monoT (CITED, verified in
 ball arithmetic). For the second, by Plancherel ‖h‖² = (1/2π)∫(¼+s²)|ξ̂|² ≥ ¼‖ξ‖². ∎
 
 Consequences:
@@ -179,7 +179,7 @@ Consequences:
 In the genuine first window (T < ½log3, S = {∞,2}) the numerical values are much
 larger: c_ξ ≈ 4.2 and λ_ξ ≈ 0.062 at ½log3 − 0.01.
 
-Caveat. It must be checked that Paper 47's P_T (two moments ĥ(±i/2) = 0, L²(I_T)) matches
+Caveat. It must be checked that Paper 46's P_T (two moments ĥ(±i/2) = 0, L²(I_T)) matches
 our C. See review point 1.
 
 ## 4. The inductive step and T_max
@@ -236,7 +236,7 @@ is "zero directions" of the full form, which is D.
 ```text
 Def. K_{S,T}; c_h=(¼−∂²)c_ξ; n₋(W_S−Son)=+∞ for T>½log2                PROVED
 Lemma 2.1 interlacing (monotonicity, bound, convergence with density)   PROVED (density CITED)
-n₋(W_{S(T)}|C)=0 and ξ gap ≥ 6.25e-13 for T ≤ ½log5                     PROVED given Paper 47 (CITED)
+n₋(W_{S(T)}|C)=0 and ξ gap ≥ 6.25e-13 for T ≤ ½log5                     PROVED given Paper 46 (CITED)
 Table §2.3, thresholds §2.4 (0.5967, 0.8039, 0.5668; kerℓ=T₂)           NUMERICAL (double precision)
 Superexponentially small gap in T                                       NUMERICAL
 Prop 4.1 upper bound N(η,T)                                              PROVED given R183_023
@@ -247,7 +247,7 @@ N_T with zero directions ∀T                                              ⟺ R
 
 ## Review points
 
-1. **The space C versus Paper 47's P_T.** Prop 3.1 imports λ_A exactly as Paper 47 defines it
+1. **The space C versus Paper 46's P_T.** Prop 3.1 imports λ_A exactly as Paper 46 defines it
    (§1, def. of P_T). It must be confirmed that they are the same two moment conditions, the same
    normalization of W_T, and the same L²(I_T). If not, Prop 3.1 remains CONDITIONAL.
 2. **κ = 2ε′(1⁺).** R183_019 §1.3 gives a different normalization. The count does not depend on κ, but

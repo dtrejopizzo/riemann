@@ -9,7 +9,7 @@ Scripts were kept in a scratch directory and are not in the repo: `cosv.py` (ope
 A different discretization reproduces the R162_2001 Type I point and the s₂ = 1 near-alignment. On the row s₂ = 1 the
 margin collapse is real and does not come from the discretization or the constraint.
 
-## 1. Form audit (t2001_typeI_search.py and t1601_nodal_rerun against Paper 47 eq:symbol/eq:form/eq:W)
+## 1. Form audit (t2001_typeI_search.py and t1601_nodal_rerun against Paper 46 eq:symbol/eq:form/eq:W)
 
 - Comb weights: w_n = 2Λ(n)/√n = v_n of eq:symbol. The symbol is m − Σ v_n cos(τ log n), and the comb enters as −s_n·v_n.
   The gate log n < 2T matches N_T. This is correct.

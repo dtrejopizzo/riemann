@@ -1,7 +1,7 @@
 # Round 010 A — The high-range estimate (HR) with the gauge quotient: the consistent admissible quotient, the scale of the comb-generic tools, and where the plunge sits
 
 Target (★): λ_A(T) ≥ 0 for every T (STATEMENT_001). Object: a_T = W_T on P_T, λ_A(T) its infimum on unit vectors. Notation
-of ROUND_009_B and Paper 47 §sec:ext: λ = e^T, N = λ², c = 2πN, E the summation map, ψ_k the even prolates of [−λ, λ] at
+of ROUND_009_B and Paper 46 §sec:ext: λ = e^T, N = λ², c = 2πN, E the summation map, ψ_k the even prolates of [−λ, λ] at
 c = 2πN (normalised in L²), χ_k their concentrations, d_k = 1 − χ_k, admissible f as in def:ext (even, supported in
 [−λ, λ], f(0) = ℱf(0) = f(λ) = 0), gauge 𝒢_T (even φ supported in [−1/λ, 1/λ], φ(0) = ℱφ(0) = 0), ℓ(g) the gauge-minimised
 leakage. LM := prolate indices k ≤ 4N, HI := 4N < k ≤ K (K up to 3·4N). Labels: PROVED / CITED / CONDITIONAL / ARGUED /
@@ -11,7 +11,7 @@ OPEN / NO-GO / NUMERICAL.
 
 Searched: ROUTES-TRIED-INDEX README rows P211-2B, P211-8E, P211-9A, P211-9B and the phase-211 ledger rows C21–C23; phase
 199 memos on prob:ext-L (V_001 V.1.3–V.1.4: no ℱ-sector splitting of ℓ; T_001, U_001); ROUND_008_E §2 (constraint count),
-ROUND_009_A (mollified block V_d), ROUND_009_B §2.2–2.6 ((2.1), (HR)); Paper 47 def:ext, lem:ext-mob, prop:ext-gauge,
+ROUND_009_A (mollified block V_d), ROUND_009_B §2.2–2.6 ((2.1), (HR)); Paper 46 def:ext, lem:ext-mob, prop:ext-gauge,
 lem:ext-ellbound, prob:ext-L, prop:ext-consol(b), lem:ext-hf and the remark after it ("the complement of that subspace has
 dimension of order TΩ_*, superpolynomial in N, and contains the whole prolate range k ≲ 4N").
 What differs here. (i) The quotient is computed on the admissible subspace with the full image (both parities, no

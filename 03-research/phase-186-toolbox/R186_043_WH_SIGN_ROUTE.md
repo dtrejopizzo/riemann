@@ -1,6 +1,6 @@
 # R186_043 — Sign route in the truncated Wiener–Hopf operator: the extreme eigenvalue of W_T(σ₊ − σ₋/β) at the inertia crossing, minimal model, interference, and transfer to σ_T
 
-Phase 186, round 20. Sources: R186_042 (Thm 2.1–2.2, Cor. 2.4, §3.2 sub-Shannon sea, §3.3 models, §5.2), R186_034 (Thm 2.1–2.2), R186_040 (head), Paper 47 (eq:symbol, eq:form, lem:roughEF, prop:negtrace, prop:NC), phase-187 (`r187_mm.py`, `DATA_MM_FALSIFIER.csv`). Not repeated: determinants (R186_034), LW plateau (R186_039/042), prolate leakage via zeros (R186_040), inertia count (R184_004), norm bounds (R186_031), linear reductions (W-lin).
+Phase 186, round 20. Sources: R186_042 (Thm 2.1–2.2, Cor. 2.4, §3.2 sub-Shannon sea, §3.3 models, §5.2), R186_034 (Thm 2.1–2.2), R186_040 (head), Paper 46 (eq:symbol, eq:form, lem:roughEF, prop:negtrace, prop:NC), phase-187 (`r187_mm.py`, `DATA_MM_FALSIFIER.csv`). Not repeated: determinants (R186_034), LW plateau (R186_039/042), prolate leakage via zeros (R186_040), inertia count (R184_004), norm bounds (R186_031), linear reductions (W-lin).
 Script: `r043_wh.py` (**standalone**: does not import r034/r042/r187; `python3 r043_wh.py` ≈ 20 s, `fast` ≈ 8 s). Full output in the session's scratchpad; every figure below comes from it.
 Additional order (re-verify everything used): fulfilled in §1.
 

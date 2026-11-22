@@ -11,7 +11,7 @@ a factor > 2. **K3 as a route to L′♯: NO-GO.** K3.1 survives as a Λ-free to
 ## 0. Corpus and index
 
 - SPEC_SIGN_OBJECT_001 §C (K3), BRIDGE_001 §2 (P0c), §9 (gap (15, μ₀)), AUDIT_CONSTRAINTS_001 (rows 19, 26, pairwise
-  exclusion), MORI15_EXTREMAL_001 §4 (coefficients, leakage, κ_emp), Paper 47 thm:ext-cell, cor:ext-cellpos, cor:ext-cfals,
+  exclusion), MORI15_EXTREMAL_001 §4 (coefficients, leakage, κ_emp), Paper 46 thm:ext-cell, cor:ext-cellpos, cor:ext-cfals,
   thm:ext-multi, thm:ext-layer and the following paragraph ("the layer does not distinguish c′v_n from v_n at leading order").
 - ROUTES-TRIED index, l.278 (front I, phase 193–194): "Γ-convergence, concentration-compactness, rearrangements: dead."
   The spec gives leakage renormalization and the self-dual sector ψ_{4j} as the new reason. §2.4 of this memo shows this

@@ -19,7 +19,7 @@ defined. The symbol
 \]
 
 does not appear defined before equation R170_844 (0.7). The finite PC
-identity of Paper 47 is
+identity of Paper 46 is
 
 \[
  Y_{M,N}:=S_NA_M\mathscr F
@@ -151,7 +151,7 @@ There is no longer gauge freedom nor a functional unknown.
 ## 3. Corpus filter: results that must be incorporated
 
 The transversal search across phases 121, 124, 161--166, 170 and
-Paper 47 fixes the following requirements.
+Paper 46 fixes the following requirements.
 
 1. **R161_009:** the polar Hardy residues are the cross Tate collars.
    They serve to evaluate (2.5), but the cross Gram is not the

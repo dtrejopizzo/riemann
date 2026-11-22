@@ -4,7 +4,7 @@ Status: documentary correction, independently verified. It is not a new proof of
 
 ## Cross-check
 
-The antecedent is `../phase-211-sign-sandbox/DOSSIER_001.md` §6(c), summarized in Parts VI, VII.A and VII.C of the master index. The primary source is Paper 47, `prop:H`, together with `cor:H1minus`. The summary of positive results in VII.C omitted that the upper inertia bound was one side of an equivalence, not an available unconditional theorem.
+The antecedent is `../phase-211-sign-sandbox/DOSSIER_001.md` §6(c), summarized in Parts VI, VII.A and VII.C of the master index. The primary source is Paper 46, `prop:H`, together with `cor:H1minus`. The summary of positive results in VII.C omitted that the upper inertia bound was one side of an equivalence, not an available unconditional theorem.
 
 No inertia route is reopened and no other criterion is built. A premise is corrected that could produce circular reasoning when trying to prove the global sign. The difference concerns the logical scope of the recorded tool, not notation or mathematical method.
 

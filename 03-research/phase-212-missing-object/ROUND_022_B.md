@@ -2,18 +2,18 @@
 
 Assigned standpoint: soft goal, a_T(F) ≥ −ε(T)·N(F) with ε(T) → 0 and N a fixed norm, independent of T,
 as strong as desired. Anticipated conclusion: the reformulation is **exactly** the goal for *every*
-finite N on a form core. The cause is freezing (P47 lem:wit-freeze): for fixed F, a_T(F) does not
+finite N on a form core. The cause is freezing (P46 lem:wit-freeze): for fixed F, a_T(F) does not
 depend on T, so there is no quantity that can tend to 0. There is no gap in the lemma and no hidden
 condition on the strength of N. It is case (a) of the assignment, in a stronger form than anticipated, and the filter
 detects repetition.
 
 ## Four-point filter (cross-check first)
 
-1. **Closest antecedent (read in primary sources).** P47 `thm:wit-Tc`(i),(iv) (main.tex l.6995–7027):
-   extension by zero preserves a_T, and λ_A ≥ −ε(T) with ε → 0 is equivalent to the goal. P47 `lem:wit-freeze`
+1. **Closest antecedent (read in primary sources).** P46 `thm:wit-Tc`(i),(iv) (main.tex l.6995–7027):
+   extension by zero preserves a_T, and λ_A ≥ −ε(T) with ε → 0 is equivalent to the goal. P46 `lem:wit-freeze`
    (l.7029–7043): for a frozen F, a_T, c_F, the comb term and membership in P_T do not depend on T.
-   P47 `thm:wit-asym` (l.7045–7060) and the comment following it: «any limit law … says nothing about frozen
-   witnesses beyond what the corresponding statement at the window T_0 says». P47 prop. «no asymptotic slack»
+   P46 `thm:wit-asym` (l.7045–7060) and the comment following it: «any limit law … says nothing about frozen
+   witnesses beyond what the corresponding statement at the window T_0 says». P46 prop. «no asymptotic slack»
    (e) (l.8848–8851). Master index: l.109 (`λ_A ≥ −ε(T)` already suffices, R6), l.3953 and l.11663 (lem:wit-freeze,
    NO-GO: «frozen tests see nothing new as T grows»), l.4394 and l.12909 (R6, lower half of the
    bilateral law, OPEN). RULES_AVOID §F: the lower half is the goal plus a margin (211/ROUND_007_D Lemma 4.6,
@@ -45,11 +45,11 @@ continuous; it suffices that it be finite and depend only on F, not on the windo
 *Proof.* (i)⇒(ii): given F ∈ 𝒞 ∩ P_{T_0}, one has ιF ∈ 𝒞 ∩ P_T for all T ≥ T_0, with a(ιF) = a(F) and
 N(ιF) = N(F) (they are the same object). Then a(F) ≥ −ε(T)N(F) for all large T, and since N(F) < ∞, letting
 T → ∞ gives a(F) ≥ 0.
-(ii)⇒(iii): a_{T_0} is a closed form bounded below (P47 lem:compact), so it is continuous in
+(ii)⇒(iii): a_{T_0} is a closed form bounded below (P46 lem:compact), so it is continuous in
 the form norm, and density carries a ≥ 0 to P_{T_0} ∩ 𝒟_{T_0}.
 (iii)⇒(i): take ε ≡ 0. ∎
 
-**Density (PROVED).** For 𝒞 = C_c^∞ ∩ 𝒫 the hypothesis holds. C_c^∞(I_T) is a form core (P47,
+**Density (PROVED).** For 𝒞 = C_c^∞ ∩ 𝒫 the hypothesis holds. C_c^∞(I_T) is a form core (P46,
 proof at l.1832–1837, by dilation and mollification). To preserve the two constraints, fix
 φ_±, χ ∈ C_c^∞(I_T) dual to the functionals A, B (they are L²-continuous and linearly independent) and
 correct the approximation with a combination of φ_±; the corrections tend to 0. Hence N(F) can be
@@ -83,7 +83,7 @@ goal. There is no gap (b) and nothing real (c).
 
 **The decisive question: does the classical error of the prime number theorem give an ε(T) → 0 for some N?**
 (ARGUED, with a PROVED core.) For F ∈ C_c^∞ ∩ P_{T_0}, the term Σ_n v_n c_F(log n) is a
-*finite* sum (n < e^{2T_0}). The explicit formula writes a(F) as the sum over zeros Σ_ρ Φ_F(ρ)Φ_F(1−ρ) (P47,
+*finite* sum (n < e^{2T_0}). The explicit formula writes a(F) as the sum over zeros Σ_ρ Φ_F(ρ)Φ_F(1−ρ) (P46,
 reading after def:wit-model; we use it only here, as context). P_T removes exactly the polar terms
 (A = B = 0). If ψ(x) is replaced by x + E(x), with |E(x)| ≪ x·exp(−c√log x), one gets
 a(F) = [main term + archimedean] − ∫ c_F(u) e^{−u/2} dE(e^u), with remainder bounded by
@@ -97,7 +97,7 @@ isolated: frozen F of unit scale are already bulk.
 
 ## §3 Question 2: cross-check of antecedents
 
-- P47 thm:wit-Tc(iv), lem:wit-freeze, thm:wit-asym, prop. (e) «no asymptotic slack». They already contain Lemma 1
+- P46 thm:wit-Tc(iv), lem:wit-freeze, thm:wit-asym, prop. (e) «no asymptotic slack». They already contain Lemma 1
   with N = ‖F‖² and with the observation about frozen tests; the step to general N is immediate and is not
   written.
 - 211/ROUND_007_D Lemma 4.6 and LEDGER C20. The lower half of the bilateral law is equivalent to (N1′)
@@ -114,13 +114,13 @@ isolated: frozen F of unit scale are already bulk.
 Lemma 1 is a tautology and holds also for the controls: for 2Λ, for deletion of a prime
 power and for a Beurling-type weight. What fails for each is hypothesis (i), at the step (i)⇒(ii):
 
-- **2Λ.** There is an F_⋆ ∈ C_c^∞ ∩ P_{T_0} with a^{2Λ}(F_⋆) < 0 (P47 thm:shape(A), O_4 with c = 1). Once
+- **2Λ.** There is an F_⋆ ∈ C_c^∞ ∩ P_{T_0} with a^{2Λ}(F_⋆) < 0 (P46 thm:shape(A), O_4 with c = 1). Once
   frozen, a^{2Λ}(ιF_⋆) = a^{2Λ}(F_⋆) < 0 for all T, so no ε(T)N(F_⋆) → 0 bounds it: the remainder
   stays fixed at a negative value and does not decay.
 - **Deletion of n_0.** a^{del}(F) = a(F) + v_{n_0}c_F(log n_0). If one takes F with support < ½log n_0 next to a
   negative witness, or an F_⋆ with c_{F_⋆}(log n_0) of suitable sign (O_5, CONDITIONAL), the difference is
   constant in T and the same step fails.
-- **Beurling.** Likewise, with the P47 witness in the named window.
+- **Beurling.** Likewise, with the P46 witness in the named window.
 
 Reading: the true weight must give a(F) ≥ 0 *exactly* at each frozen F. The parameter T contributes
 no information. «Smoothness in T» is not a resource: what the weight must provide is the

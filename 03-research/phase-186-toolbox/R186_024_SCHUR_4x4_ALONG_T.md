@@ -1,7 +1,7 @@
 # R186_024 — The edge-mode secular problem along T: is the 𝒱 ⊕ E reduction stable?
 
-Phase 186. Sources: R186_019 (Thm 3.1, exact Schur at ½log3), R186_100 (editor's note), R186_023 (growing rank), R155_026 (Schur reduction at log 2), Paper 47 (eq:form, thm:A, lem:K, thm:S(iii), thm:margin, lem:contA).
-Script: `r024_schur.py` (standalone). Form computed **in x-space** with Paper 47's Lévy formula from thm:A: 𝔞_T(F) = C₀‖F‖² + ∫₀^∞(‖F‖² − 𝒞F(u))K(u)du − Σ_{n∈𝒩_T} v_n 𝒞F(log n), K(u) = 2e^{−u/2}/(1−e^{−2u}), tail ∫_{2T}^∞K in closed form (thm:S iii). No oscillatory integrands; piecewise Gauss quadrature (exact on polynomials); orthonormal Legendre basis per block (allows jumps). Reproduces R186_019 at ½log3 to 4 digits (λ_W 9.45e-4, c 0.5735, λ_S 1.174e-3, min G_EE 0.1142). Double precision verified against mpmath (25 digits) at 0.78 and ½log5 with the same N: agreement to 0.06%. All figures are NUMERICAL except where marked PROVED.
+Phase 186. Sources: R186_019 (Thm 3.1, exact Schur at ½log3), R186_100 (editor's note), R186_023 (growing rank), R155_026 (Schur reduction at log 2), Paper 46 (eq:form, thm:A, lem:K, thm:S(iii), thm:margin, lem:contA).
+Script: `r024_schur.py` (standalone). Form computed **in x-space** with Paper 46's Lévy formula from thm:A: 𝔞_T(F) = C₀‖F‖² + ∫₀^∞(‖F‖² − 𝒞F(u))K(u)du − Σ_{n∈𝒩_T} v_n 𝒞F(log n), K(u) = 2e^{−u/2}/(1−e^{−2u}), tail ∫_{2T}^∞K in closed form (thm:S iii). No oscillatory integrands; piecewise Gauss quadrature (exact on polynomials); orthonormal Legendre basis per block (allows jumps). Reproduces R186_019 at ½log3 to 4 digits (λ_W 9.45e-4, c 0.5735, λ_S 1.174e-3, min G_EE 0.1142). Double precision verified against mpmath (25 digits) at 0.78 and ½log5 with the same N: agreement to 0.06%. All figures are NUMERICAL except where marked PROVED.
 
 ## Status
 
@@ -93,7 +93,7 @@ Readings: (i) λ_S ≈ λ_W always (ratio 1.15–2.9), the secular carries the d
 
  min 𝔞_T|𝒱_k ≥ c_∞(T/k) − ‖𝒦₁‖_{𝒱_k} − 𝒜_T/2,
 
-where (a) c_∞(τ) = λ_min(𝔞_∞|𝒫_τ) [PROVED to be the sectoral minimum, §1.3; its value is NUMERICAL: ≈ log(1/τ) − 0.5 for τ ≤ 0.09; an explicit lower bound is OPEN, but it is a problem about **a short prime-free window**: 𝔞_∞ ≥ C₀ + (Lévy) with Lévy ≥ ∫(1−cos τu)K over the Fourier mass of 𝒫_τ at |s| ≳ 1/τ, i.e. of the type lem:mbounds in Paper 47 / Bombieri 2000 Thm 3]; (b) ‖𝒦₁‖_{𝒱_k} = norm of the quadratic form −Σ_{B≠B′}∫∫F_B F_{B′}K₁(|x−y|) on 𝒱_k [PROVED that the kernel is K₁ = K − 2e^{−u/2}; NUMERICAL ‖𝒦₁‖ ≈ 0.74; bound ≤ 0.8 OPEN]; (c) ‖P|𝒱_k‖ ≤ Σ_{n∈𝒩_T} v_n/2 = 𝒜_T/2 [PROVED: |𝒞F(log n)| ≤ ‖F‖² by Cauchy–Schwarz]. With k = 13 the right-hand side is ≥ 0.056 across the whole grid (NUMERICAL); with k ≍ T/τ₀ and c_∞(τ₀) > 0.75 + 𝒜_T/2 the bound is positive in any range where 𝒜_T/2 ≤ c_∞(τ₀) − 0.75; since 𝒜_T grows (≈ 2e^{T}) and c_∞(τ) ≈ log(1/τ), this requires τ₀ ≈ e^{−𝒜_T/2}: k grows **exponentially** in T. Only in the declared range is it a reasonable finite target (k ≤ 17).
+where (a) c_∞(τ) = λ_min(𝔞_∞|𝒫_τ) [PROVED to be the sectoral minimum, §1.3; its value is NUMERICAL: ≈ log(1/τ) − 0.5 for τ ≤ 0.09; an explicit lower bound is OPEN, but it is a problem about **a short prime-free window**: 𝔞_∞ ≥ C₀ + (Lévy) with Lévy ≥ ∫(1−cos τu)K over the Fourier mass of 𝒫_τ at |s| ≳ 1/τ, i.e. of the type lem:mbounds in Paper 46 / Bombieri 2000 Thm 3]; (b) ‖𝒦₁‖_{𝒱_k} = norm of the quadratic form −Σ_{B≠B′}∫∫F_B F_{B′}K₁(|x−y|) on 𝒱_k [PROVED that the kernel is K₁ = K − 2e^{−u/2}; NUMERICAL ‖𝒦₁‖ ≈ 0.74; bound ≤ 0.8 OPEN]; (c) ‖P|𝒱_k‖ ≤ Σ_{n∈𝒩_T} v_n/2 = 𝒜_T/2 [PROVED: |𝒞F(log n)| ≤ ‖F‖² by Cauchy–Schwarz]. With k = 13 the right-hand side is ≥ 0.056 across the whole grid (NUMERICAL); with k ≍ T/τ₀ and c_∞(τ₀) > 0.75 + 𝒜_T/2 the bound is positive in any range where 𝒜_T/2 ≤ c_∞(τ₀) − 0.75; since 𝒜_T grows (≈ 2e^{T}) and c_∞(τ) ≈ log(1/τ), this requires τ₀ ≈ e^{−𝒜_T/2}: k grows **exponentially** in T. Only in the declared range is it a reasonable finite target (k ≤ 17).
 
 **Proposed proof of (L1) via the archimedean route (what remains to be done):**
 1. c_∞(τ) ≥ log(1/τ) − C₁ for τ ≤ 0.1, with explicit C₁ (≈ 0.5 per §2.2). Tools: lem:mbounds (m(s) ≥ log(|s|/2π) − C), an uncertainty bound on 𝒫_τ (a function ⊥ e^{±x/2} on an interval of length 2τ has Fourier mass ≥ ½ at |s| ≥ c/τ: a Nazarov/Turán-type inequality, or directly from the second moment), and 𝔞_∞ ≥ C₀ + ∫(1−cos τ u)K. OPEN but standard.
@@ -107,8 +107,8 @@ If 1–2 are proved, (L1) becomes PROVED on [½log2, ½log5] with k = 13, and th
 - **R186_019 / R186_100:** Thm 3.1 still holds (PROVED as algebra) and extends to any partition and any T (§1.2); its CONDITIONAL (L1) does not hold with a uniform margin for the orbit blocks (c → 0.013 as T → ℓ), but does hold with k ≍ T/τ₀ equal blocks. The "couplings necessary for positivity" point of R186_019 §3 is sharpened: what is necessary is the coupling **through E** (h* ∈ E); on 𝒱 the couplings only cost ‖𝒦₁‖ ≈ 0.74 and nothing more.
 - **R186_023:** the growing-rank law reappears here as k ≍ T/τ₀ (dim E = O(T) in a bounded range, exponential in T in general): compatible, and it gives an **explicit, non-spectral** basis (e^{±x/2}1_B) for the fragile direction, which the archimedean-mode basis of R186_023 did not provide.
 - **R155_026 (Schur at log 2):** same structure "huge Schur correction, 1% cancellation"; there the basis was spectral and of dimension ≤ 47 on a window ≥ log 2 (outside the range here).
-- **Paper 47 thm:margin:** λ_W ≤ 𝓑(T,k) → 0 forces that, with E fixed, c or λ_S decay; §2 shows that **both** decay with E fixed and that only λ_S decays with k ≍ T. lem:contA (continuity of λ_A in T) is consistent with the tables (λ_W continuous across T = ℓ where the orbit partition changes: 1.35e-7 → 5.9e-8). thm:A/lem:K/thm:S(iii) are exactly what the script implements; no new definitions.
-- **Zhu 2026 (0.8) / Paper 47 §log5:** no new sign claim is made; the λ_W values in the table are Galerkin upper bounds, not certificates.
+- **Paper 46 thm:margin:** λ_W ≤ 𝓑(T,k) → 0 forces that, with E fixed, c or λ_S decay; §2 shows that **both** decay with E fixed and that only λ_S decays with k ≍ T. lem:contA (continuity of λ_A in T) is consistent with the tables (λ_W continuous across T = ℓ where the orbit partition changes: 1.35e-7 → 5.9e-8). thm:A/lem:K/thm:S(iii) are exactly what the script implements; no new definitions.
+- **Zhu 2026 (0.8) / Paper 46 §log5:** no new sign claim is made; the λ_W values in the table are Galerkin upper bounds, not certificates.
 
 ## Audit notes
 
@@ -120,7 +120,7 @@ If 1–2 are proved, (L1) becomes PROVED on [½log2, ½log5] with k = 13, and th
 - k=3 equal blocks for T ≥ 0.72 with N = 12 does not converge (λ_W = 1.1e-10 versus 3.2e-12): marked n.c. and not used.
 - No equivalence between row D and other statements is used; positivity is assumed true and its proof is sought.
 
-## For Paper 47
+## For Paper 46
 
 - Can be integrated as a structural observation (NUMERICAL + two PROVED lemmas) alongside thm:C/lem:contA: (i) §1.3 (sectors with Tate = primitive background of a single window, by translation invariance); (ii) §1.4 (the per-block Tate conditions cancel the 2e^{−u/2} term of the Lévy kernel; the residual coupling has kernel K₁ ≤ 1/u); (iii) the near-kernel of W_T is, to 99%, a combination of e^{±x/2}1_B (k = 5…13 blocks). First verify against eq:form, thm:A and lem:K (what is implemented is exactly that).
 - Do not integrate "uniform 4×4 reduction": NO-GO (c → 0.013). Do not integrate any sign claim.

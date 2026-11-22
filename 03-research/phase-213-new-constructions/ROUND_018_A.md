@@ -1,6 +1,6 @@
 # Recovery of the full energy by two remote correctors
 
-**Cross-check.** 012-B evaluates the return of a tail to a head of zero inverse moment. P47 lem:polarelim and rem:polarelim-full make the polar terms explicit. The cross-check with P45, P47, R160 and the moment correctors of 211/212 distinguished the scope of a test-by-test approximation. The operation is to compensate both moments at opposite ends and retain the crossing of the correctors with each other. The global sufficiency of the primitive sector was already established in the corpus.
+**Cross-check.** 012-B evaluates the return of a tail to a head of zero inverse moment. P46 lem:polarelim and rem:polarelim-full make the polar terms explicit. The cross-check with P45, P46, R160 and the moment correctors of 211/212 distinguished the scope of a test-by-test approximation. The operation is to compensate both moments at opposite ends and retain the crossing of the correctors with each other. The global sufficiency of the primitive sector was already established in the corpus.
 
 **Statement.** Let F be a smooth compactly supported complex test in the logarithmic variable t. Write A(F)=∫exp(t/2)F(t)dt, B(F)=∫exp(−t/2)F(t)dt, and a for the pole-free energy with all contacts visible in the support. There are smooth compactly supported tests F_s with moments A=B=0 such that ||F_s−F||₂→0 and
 

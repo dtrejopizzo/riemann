@@ -6,8 +6,8 @@ statement, «(★)» is written here and it is not used.
 
 Source: the 128 `.md` files of `03-research/phase-193-creation-campaign/`, read in full (memos, seed
 tables, reviews, syntheses, ledger, index, README). Abbreviations as in `ANNEX_PHASE_193_LABELS.md` («LABELS»):
-O1–O15 P47 numbering (ledger errata); (B″) identity valid for every comb; (B′) estimate with remainder;
-REF-D exact reformulation; CIRC death clause that in P47 is ARGUED/OPEN. Labels: PROVED / CITED / CONDITIONAL /
+O1–O15 P46 numbering (ledger errata); (B″) identity valid for every comb; (B′) estimate with remainder;
+REF-D exact reformulation; CIRC death clause that in P46 is ARGUED/OPEN. Labels: PROVED / CITED / CONDITIONAL /
 OPEN / NO-GO / NUMERICAL / ARGUED.
 
 Basis of the discard: **(i)** explicit falsifier (it is named and it is said whether its failure is PROVED, CITED, NUMERICAL or
@@ -15,7 +15,7 @@ ARGUED); **(ii)** proved class NO-GO; **(iii)** argument only; **(iv)** reductio
 **(v)** nothing (not examined). Class: (a)–(e) as in LABELS.
 
 Numbering note: the reviews of CA_A_001–004 and CA_B_001–005 use the numbering of the brief («O7 Beurling», «O8
-quartets», «O11 Epstein»); here it is always translated to P47 (O11 Beurling, O7 quartets, O10 Epstein).
+quartets», «O11 Epstein»); here it is always translated to P46 (O11 Beurling, O7 quartets, O10 Epstein).
 
 ---
 
@@ -26,7 +26,7 @@ quartets», «O11 Epstein»); here it is always translated to P47 (O11 Beurling,
 | file | mechanism | primary verdict (with labels) | basis | class |
 |---|---|---|---|---|
 | CA_A_000_INDEX | index of front A | summarizes A001–A008; no own content | — | — |
-| CA_A_001 | norm positivity (Maass–Selberg, Petersson, RS with weights E(·,w)>0) on PSL₂(ℤ)\ℍ | Lemma 1 PROVED; Lemma 2 (no positive invariant form on Re s=¼) PROVED; Cor 3 (class «norm in spectral variable»: comb Λ(n)/n at abscissa 1) PROVED; extension to «all Eisenstein positivity» WITHDRAWN (addendum) | (ii) for the norm class; moreover O10/O12 survive (failure of O10/O12: CITED in P47) | (a) norm class |
+| CA_A_001 | norm positivity (Maass–Selberg, Petersson, RS with weights E(·,w)>0) on PSL₂(ℤ)\ℍ | Lemma 1 PROVED; Lemma 2 (no positive invariant form on Re s=¼) PROVED; Cor 3 (class «norm in spectral variable»: comb Λ(n)/n at abscissa 1) PROVED; extension to «all Eisenstein positivity» WITHDRAWN (addendum) | (ii) for the norm class; moreover O10/O12 survive (failure of O10/O12: CITED in P46) | (a) norm class |
 | CA_A_001_REVIEW | — | confirms Lemma 2 (FIX: irreducibility unnecessary), Cor 3 (FIX of the comb sign); rejects «line doubling» as a general barrier: Mellin in y and RS in w reach ζ(½+iτ) on the unitary axis | = memo | (a) norm class |
 | CA_A_002 | transfer operator / period functions | Prop 1 PROVED (identity Σ(m+n)^{−2s}); NO-GO ARGUED overall; formula for ψ_s CITED-UNVERIFIED; «does not preserve cones on Re s=¼» ARGUED | (ii)-trivial: the object does not contain Λ ⇒ O1–O7, O15 leave it invariant (pattern lem:shape-ident); Λ only via det (zero side); O12 survives (CITED in sketch) | (a) object as formulated (see disagreement D3) |
 | CA_A_002_REVIEW | — | EXCLUDED by (R)(1),(3),(4) and absence of Λ; withdraws «line doubling» as a reason | = memo | (a) |
@@ -52,7 +52,7 @@ quartets», «O11 Epstein»); here it is always translated to P47 (O11 Beurling,
 | CA_B_001_REVIEW | — | EXCLUDED (O10, O12; (R)(4),(9)); REF-D | = memo | (c) |
 | CA_B_002 | Riesz/Jensen of −∂_σ log|ζ/Z_{<X}| in the strip | (2.1) PROVED modulo CITED potential; zero-free reading = identity for every comb | (ii) via (B″) in the zero-free reading; (R)(4) in the other | (a) |
 | CA_B_002_REVIEW | — | EXCLUDED; adds local (R)(5) | = memo | (a) |
-| CA_B_003 | self-pairing Δ_a ≡ 0 | Thm 1 (Δ_a≡0 ⟺ functional equation) PROVED; uniqueness a=Λ CONDITIONAL (cited uniqueness theorem), case ε=−1 OPEN; sign step by penalization ARGUED false | (i) falsifier O7 (quartets keep the comb; failure PROVED in P47 lem:shape-quartet) | (a) O7 for the property alone |
+| CA_B_003 | self-pairing Δ_a ≡ 0 | Thm 1 (Δ_a≡0 ⟺ functional equation) PROVED; uniqueness a=Λ CONDITIONAL (cited uniqueness theorem), case ε=−1 OPEN; sign step by penalization ARGUED false | (i) falsifier O7 (quartets keep the comb; failure PROVED in P46 lem:shape-quartet) | (a) O7 for the property alone |
 | CA_B_003_REVIEW | — | confirms; FIX on DH; exclusion by O7 | = memo | (a) |
 | CA_B_004 | symbol on the line without ζ; transport J(σ), Green identity | Prop 1 PROVED (rewriting); (3.1) PROVED on [½,1) and (1,2]; convexity chain (3.3) FALSE by J(1)=∞ (PROVED); (W_σ) for g_X: OPEN, generically false ARGUED | (ii) (B″) for the identity; NO-GO PROVED for convexity across σ=1 | (a); residue (W_σ) on [½,1) unrecorded (see §3) |
 | CA_B_004_REVIEW | — | major FIX (pole); NO-GO convexity PROVED | = memo | (a) |
@@ -82,9 +82,9 @@ quartets», «O11 Epstein»); here it is always translated to P47 (O11 Beurling,
 | CA_C_004_REVIEW | — | confirms; D2 O7 witness ARGUED | = | — |
 | CA_C_005 | numerical μ_M(η) | NUMERICAL all positive; conclusion «critical» WITHDRAWN (wrong ℓ² norm) | — | — |
 | CA_C_005_REVIEW | — | direction error (lower bound) | = | — |
-| CA_C_006_SEEDS_BATCH3 | E1–E6 | E1 semialgebraic set ⇒ Pila–Wilkie empty ARGUED; E2 commuting not free PROVED elementary, asymptotic ARGUED; E3 O11/O15; E4 = torus/line + (B′); E5 SOS class (D); E6 discarded as a route, kept as a classification | E1 (iii); E2 (ii) exact/(iii) asymptotic; E3 (i) CITED/ARGUED in P47; E4 (iv); E5 (iv); E6 → developed in C_007 | (b), (a)/(b), (a), (c), (c), see C_007 |
+| CA_C_006_SEEDS_BATCH3 | E1–E6 | E1 semialgebraic set ⇒ Pila–Wilkie empty ARGUED; E2 commuting not free PROVED elementary, asymptotic ARGUED; E3 O11/O15; E4 = torus/line + (B′); E5 SOS class (D); E6 discarded as a route, kept as a classification | E1 (iii); E2 (ii) exact/(iii) asymptotic; E3 (i) CITED/ARGUED in P46; E4 (iv); E5 (iv); E6 → developed in C_007 | (b), (a)/(b), (a), (c), (c), see C_007 |
 | CA_C_006_REVIEW | — | confirms; FIX premise [crit] | = | — |
-| CA_C_007 | η family: Gram norm, reduction to a scalar, falsifier test | critical premise retracted; Lemmas 1–2, Prop 3 (s_M Schur scalar) PROVED; zero-side identity PROVED, mechanism ARGUED; positivity of the family FE-generic (x²+5y² positive on the family, complete form negative: NUMERICAL) | (i) falsifier x²+5y² for the «ζ-specific» property, failure NUMERICAL (and CITED in P47 for the complete form) | (b) |
+| CA_C_007 | η family: Gram norm, reduction to a scalar, falsifier test | critical premise retracted; Lemmas 1–2, Prop 3 (s_M Schur scalar) PROVED; zero-side identity PROVED, mechanism ARGUED; positivity of the family FE-generic (x²+5y² positive on the family, complete form negative: NUMERICAL) | (i) falsifier x²+5y² for the «ζ-specific» property, failure NUMERICAL (and CITED in P46 for the complete form) | (b) |
 | CA_C_007_REVIEW | — | confirms; exclusion by thm:shape(C) with label NUMERICAL | = | (b) |
 
 ### Front D
@@ -93,7 +93,7 @@ quartets», «O11 Epstein»); here it is always translated to P47 (O11 Beurling,
 |---|---|---|---|---|
 | CA_D_000_SEEDS | D1–D9 | D1 coordinate (B″); D2 → tool; D3 retry (falsifier ζ·E, PROVED in corpus); D4 (R)(4)/(B″); D5 retry (f_χ); D6 ⟺ half-plane without zeros of Z_X; D7 σ_T(0)<0 + certificate; D8 one line (corrected in CA_R2_001); D9 → D_002 | D1 (iv); D3 (i) PROVED; D5 (i) corpus; D6 (iv); D7 (i) σ_T(0)<0 PROVED | (c),(a),(a),(c),(a) |
 | CA_D_000_REVIEW | — | confirms; O7 for D2 pre-warned | = | — |
-| CA_D_001 | Hardy amplitude transfer | Thm 1, 1′, Cor 1.1, central cell bound PROVED; Thm 1″ (FE class) PROVED; excluded as a sign step because it holds in O10/O12 | (i) O10/O12: the theorem holds on objects whose form is negative (failure CITED in P47; NUMERICAL in CA_C_007) | (a) as sign step; living tool |
+| CA_D_001 | Hardy amplitude transfer | Thm 1, 1′, Cor 1.1, central cell bound PROVED; Thm 1″ (FE class) PROVED; excluded as a sign step because it holds in O10/O12 | (i) O10/O12: the theorem holds on objects whose form is negative (failure CITED in P46; NUMERICAL in CA_C_007) | (a) as sign step; living tool |
 | CA_D_001_REVIEW | — | rederived; bounds the scope of CA_B_001 §4 | = | — |
 | CA_D_002 | closure of the transferred cone | Thm 2, 2′, Cor 2.1 PROVED (Thm 2 uses classical CITED results only inside the NO-GO; Thm 2′ without zeros); classification of amplitudes §3.6 OPEN | (ii) | (a) |
 | CA_D_002_REVIEW | — | confirms | = | (a) |
@@ -115,7 +115,7 @@ quartets», «O11 Epstein»); here it is always translated to P47 (O11 Beurling,
 
 | file | mechanism | primary verdict | basis | class |
 |---|---|---|---|---|
-| CA_F_000_SEEDS | F1–F15 | F1 Lemma F1 PROVED (spectral); F2 Lemma F2 formal; F3 → F_001; F4 signature; F5 Lemma F5 with FIX, signature hypothesis ARGUED; F6 retry R164_502 + (B′)/(B″) (later covered by F_003 Prop 2); F7 → F_002; F8 certificate; F9/F13/F15 → F_003; F11 O2/O6; F12 spectral; F14 σ_T(0)<0 | F1/F2/F4/F12 (iv); F5 (iii); F6 (iv) via F_003 Prop 2; F8 (iv); F11 (i) O2/O6 PROVED in P47; F14 (i) | (c),(c),(c),(b),(c),(c),(a),(c),(a) |
+| CA_F_000_SEEDS | F1–F15 | F1 Lemma F1 PROVED (spectral); F2 Lemma F2 formal; F3 → F_001; F4 signature; F5 Lemma F5 with FIX, signature hypothesis ARGUED; F6 retry R164_502 + (B′)/(B″) (later covered by F_003 Prop 2); F7 → F_002; F8 certificate; F9/F13/F15 → F_003; F11 O2/O6; F12 spectral; F14 σ_T(0)<0 | F1/F2/F4/F12 (iv); F5 (iii); F6 (iv) via F_003 Prop 2; F8 (iv); F11 (i) O2/O6 PROVED in P46; F14 (i) | (c),(c),(c),(b),(c),(c),(a),(c),(a) |
 | CA_F_000_REVIEW | — | confirms; FIX F5 | = | — |
 | CA_F_001 | condensed/liquid MW-3 | Lemmas 1–2 (condensed or liquid reformulation = same statement, for every Hausdorff topology with density) PROVED; Prop 3 (bare local positivity false at every p) PROVED; Prop 4 (assigned = convex division) REF-D | (iv) + (i) test F₊ of prop:cone(ii), PROVED | (a)/(c) — also covers C5L (see D5) |
 | CA_F_002 | exact trace formulas, horocycles, Heegner | Lemma 1 PROVED (FIX multiplicity, parity); Cor 2–3 PROVED; NO-GO class TF⁺ PROVED; Arthur (G,M) ARGUED | (ii) | (a) — covers exact F7 |
@@ -128,7 +128,7 @@ quartets», «O11 Epstein»); here it is always translated to P47 (O11 Beurling,
 | file | mechanism | primary verdict | basis | class |
 |---|---|---|---|---|
 | CA_G_000_SEEDS | G1–G12 + facts G0 (squares = Gram) and G1 (monoid) | G1 REF-D; G2 both summands indefinite; G4 G0(c); G5 O10 by lattice characters; G6 retry; G7 PF₅ fails CITED, PF₄ OPEN; G8 = thm:D1; G9 = Wiener–Hopf; G10 G1+G0; G11 retry; G12 G1 / O7 | G1 (iv); G2 (ii) natural partition; G5 (iii); G7 (i) CITED order ≥5; G12 (iii)/(i) | as in LABELS |
-| CA_G_001 | monoid lemma; SUSY; Elias–Williamson-type ladder | Lemma G1 PROVED (isomorphism); exclusion via (R)(10) (review), not by thm:shape(A) because O11 ARGUED, O12 OPEN in P47; §2 REF-D; §3 REF-D/retry | G1 (iii)-clause (R)(10); §2–§3 (iv) | (b) monoid; (c) |
+| CA_G_001 | monoid lemma; SUSY; Elias–Williamson-type ladder | Lemma G1 PROVED (isomorphism); exclusion via (R)(10) (review), not by thm:shape(A) because O11 ARGUED, O12 OPEN in P46; §2 REF-D; §3 REF-D/retry | G1 (iii)-clause (R)(10); §2–§3 (iv) | (b) monoid; (c) |
 | CA_G_000_REVIEW | — | confirms; FIX scope of G1 | = | — |
 | CA_G_SYNTHESIS | closure G | — | — | — |
 
@@ -151,7 +151,7 @@ quartets», «O11 Epstein»); here it is always translated to P47 (O11 Beurling,
 | CA_I_000_SEEDS | I1–I10; fact I0 | I6 automatic (exponential type); the rest → memos | I6 (ii) | (a) |
 | CA_I_J_000_REVIEW | — | confirms I_000 and J_000; recomputes J0/J0′ | = | — |
 | CA_I_001 | Markov / Krein–Rutman / maximum; rigidity «Markov ∀T»; 𝖯⋆ | Thm 1 PROVED; Prop 1.1–1.2 PROVED; Thm 2 (class 𝒦_M closed under O2, λ_A→−∞) PROVED; Thm 3 PROVED (formula for general rational E ARGUED); Lemma 4 (≥2 sign changes) PROVED; Prop 5 PROVED; Cor 6 separation, REF-D as a route | I1 (i) falsifier Λ+c1_{n₀}, failure PROVED (three-bump construction); I1⋆ (iv) | (a); (c) |
-| CA_I_002 | virial, boundary layer, frequency, Γ-convergence, concentration–compactness | Prop 1.1 (B″) PROVED; Prop 1.2: V3 falsified by DH with transversality ARGUED, V3 is REF-D; Props 2.1–2.3 PROVED (one-sided boundary information, Lemma S(iv)); §3 uses an internal CITED upper bound (also concludes with cor:margin1 of P47); §4 absolute o(1) (ARGUED vs margin); §5 I(α)=αL linear PROVED | I4 (ii) identities + (iv) V3; I9 (iv); I5 (ii); I7 (iii); I8 (ii) | I4 (a)/(c); I9 (c); I5 (a); I7 (b); I8 (a) |
+| CA_I_002 | virial, boundary layer, frequency, Γ-convergence, concentration–compactness | Prop 1.1 (B″) PROVED; Prop 1.2: V3 falsified by DH with transversality ARGUED, V3 is REF-D; Props 2.1–2.3 PROVED (one-sided boundary information, Lemma S(iv)); §3 uses an internal CITED upper bound (also concludes with cor:margin1 of P46); §4 absolute o(1) (ARGUED vs margin); §5 I(α)=αL linear PROVED | I4 (ii) identities + (iv) V3; I9 (iv); I5 (ii); I7 (iii); I8 (ii) | I4 (a)/(c); I9 (c); I5 (a); I7 (b); I8 (a) |
 | CA_I_001_002_REVIEW | — | confirms; Thm 3 highlighted new fact | = | — |
 | CA_I_SYNTHESIS | closure I | O14 open (closed later in CA_R1_001) | — | — |
 
@@ -244,7 +244,7 @@ quartets», «O11 Epstein»); here it is always translated to P47 (O11 Beurling,
 | D12 | H3 (carries / Witt) | (b) «missing proved statement of blindness» | (a) (definitional) / (c) by its only channel (Near = H6) | the memo states the blindness and labels it PROVED: the form object = (Γ factor, comb), no C_p(a,b) enters; index sums only enter through Near | CA_H_001 §1.4: «Carries (seed H3 folded here; PROVED) … no quantity C_p(a,b) for a pair of integers enters the definition» |
 | D13 | I9 (boundary layer) | (b) «missing proof of DH transversality» | (c) | DH transversality belongs to I4 (V3), not to I9; I9 rests on Props 2.1–2.3 PROVED: boundary information only bounds from above (Lemma S(iv)) and is class-generic (dies at O7) | CA_I_002 §2 Prop 2.2 «bounds the Schur margin from above … a lower bound on λ_A needs 𝔰_j ⪰ 0, the target (REF-D)»; §7.1 «Prop 1.2(V3) DH falsification relies on a transversal DH crossing: ARGUED» |
 | D14 | I8 (concentration–compactness) | (b) «write up as a lemma» | (a) | the proof (I(α)=αL linear ⇒ no strict subadditivity) is written and labelled PROVED | CA_I_002 §5 «(PROVED inadequacy)» |
-| D15 | I5 (Almgren frequency) | (a) «Prop 2.2 PROVED» | (a), but for another reason | Prop 2.2 belongs to I9; I5 rests on §3: bounded frequency ⇒ polynomial decay, incompatible with the exponential upper bound of P47 (cor:margin1); the internal superexponential citation is not needed | CA_I_001_002_REVIEW: «with only P47 cor:margin1 the frequency is still ≥ 15.449T-scale, conclusion (R)(6) unchanged» |
+| D15 | I5 (Almgren frequency) | (a) «Prop 2.2 PROVED» | (a), but for another reason | Prop 2.2 belongs to I9; I5 rests on §3: bounded frequency ⇒ polynomial decay, incompatible with the exponential upper bound of P46 (cor:margin1); the internal superexponential citation is not needed | CA_I_001_002_REVIEW: «with only P46 cor:margin1 the frequency is still ≥ 15.449T-scale, conclusion (R)(6) unchanged» |
 | D16 | J11 (Holley) | (a) «equality class J2» | (b) | Prop 2.4, which treats it, is labelled ARGUED | CA_J_002 Prop 2.4 «(ARGUED)»; synthesis: «linear in Λ and local (Prop 2.4, ARGUED)» |
 | D17 | K7 (signed Laplacian / Cheeger) | (b) «loss ARG/NUM» | (a) | Thm 4.2 PROVED (1−O(1/M) is required); Cor 4.3 PROVED with CITED Cheeger constants (≤½); there is no NUMERICAL | CA_K_001_002_REVIEW: «Cheeger constants CITED, structural gap PROVED» |
 | D18 | M7 (Vinogradov arcs) | (b) «missing proof of negligible weight away from θ≈0» | (a) in the decisive class (same as M5) | §1.4 is ARGUED, but the final verdict rests on Thm 3.1/Cor 3.2/Prop 3.3 (PROVED): site arithmetic carries no information and bounded shifts weigh zero | CA_M_001 §6: «M5/M7: DISCARD (resolution; PROVED in decisive class)» |
@@ -291,7 +291,7 @@ reason or of recommendation (D15, D21).
    4·10⁹Te^{−15.449T} (J10, K13, I7).
 10. **Group depending on the falsifier O11/O12 (G1m, H10, G5, G12-monoid; also part of E1).** A single lemma
     would close several rows: **a Beurling (O11) or ζ_K (O12) falsifier with PROVED negative bottom**. Today O11 is
-    ARGUED and O12 OPEN in P47.
+    ARGUED and O12 OPEN in P46.
 11. **Group depending on the falsifier O10 in the primitive form (D2 as sign step, L2, N3 Thm 5, M6, C7/C8).** A
     single lemma would reinforce them all: **negative primitive bottom PROVED for x²+5y²** (today CITED for the complete form, ARGUED
     for the primitive; NUMERICAL in CA_C_007 for the complete form).
@@ -360,5 +360,5 @@ Prop 3.3; CA_N_001 Lemma 1.1, Prop 2.1; CA_N_003 Thms 3–4; CA_R1_001 Thms 2.1�
 - Read in full: **128** (all memos CA_*_001 onwards, their reviews, the seed tables CA_*_000 and batches
   CA_C_004/006, syntheses, CA_SYNTHESES_REVIEW, CAMPAIGN_LEDGER, CA_A_000_INDEX, README).
 - Not read: none. No illegible file.
-- Nothing outside the folder was read except ANNEX_PHASE_193_LABELS.md; the references of the memos to P47 and to the routes
-  index were taken as cited by the memos and their reviews, without verifying them against P47.
+- Nothing outside the folder was read except ANNEX_PHASE_193_LABELS.md; the references of the memos to P46 and to the routes
+  index were taken as cited by the memos and their reviews, without verifying them against P46.

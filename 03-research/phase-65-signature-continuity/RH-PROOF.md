@@ -37,7 +37,7 @@
 >
 > *Falsifier.* §7 excludes Davenport–Heilbronn by the **signedness** of its weights. That does not exclude
 > `Ξ_a(s) = ξ(s+a)ξ(s−a)`, whose weights `Λ(n)(n^a+n^{−a})` are nonnegative and whose zeros are off the
-> critical line unconditionally (Paper 46 Thm 12.4); G1, G2 and R3 point 4 all transfer to it (point 4 with
+> critical line unconditionally (Paper 47 Thm 12.4); G1, G2 and R3 point 4 all transfer to it (point 4 with
 > the core threshold moved from `a > ¼` to `a > ¼ + a/2`). What `Ξ_a` fails is **G4**: its polar set has
 > **four** points, so the divergence is not rank one and the rank-one shorting `Q_P = I − |ĥ_P⟩⟨ĥ_P|` does
 > not remove it, while §2 does use rank-one-ness ("the excluded `H–H` element"). **That is not a defence

@@ -2,7 +2,7 @@
 
 Object: λ_A(T) = inf{a_T(F) : F ∈ P_T, ‖F‖ = 1} (STATEMENT_001 §1). Target (★): λ_A(T) ≥ 0 for every T. Labels:
 PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL. No equivalence of (★) with any other statement is
-used, named or invoked. Inputs: Paper 47 lem:monoT (monotonicity across contacts), lem:contA (continuity), lem:firstcontact
+used, named or invoked. Inputs: Paper 46 lem:monoT (monotonicity across contacts), lem:contA (continuity), lem:firstcontact
 (first-contact reduction and the weak equation eq:localweak with a Tate multiplier), lem:compact (compact resolvent);
 ROUND_007_B §2, ROUND_007_D (rate-2 law, λ_A^ev = μ₁ to five digits); tools/galerkin_mp.py.
 
@@ -50,7 +50,7 @@ F ∈ E_T there is a unique ρ_F in the Tate space 𝒯_T = span{e^{t/2}, e^{−
   a_T(F, X) = λ_A(T)⟨F, X⟩ + ⟨ρ_F, X⟩  for every X in the form domain of L²(I_T)            (1.1)
 (PROVED: for X ∈ P_T this is the Euler–Lagrange equation; for X ∈ 𝒯_T, which lies in the form domain since an exponential
 with two jumps is in H^s for s < ½, define ρ_F by Riesz on the two-dimensional space 𝒯_T: ⟨ρ_F, X⟩ := a_T(F, X), using
-F ⊥ 𝒯_T; this is eq:localweak of Paper 47.) ρ_F is linear in F.
+F ⊥ 𝒯_T; this is eq:localweak of Paper 46.) ρ_F is linear in F.
 Tate first moments: A₁(F) = ∫ F(t)(t/2)e^{t/2}dt, B₁(F) = −∫ F(t)(t/2)e^{−t/2}dt. Dual Tate basis p_A, p_B ∈ 𝒯_T:
 A(p_A) = B(p_B) = 1, A(p_B) = B(p_A) = 0. Contacts: N_T = {n ≥ 2 : Λ(n) ≠ 0, log n < 2T}.
 Virial (archimedean): 𝒱_∞(F) = (1/2π)∫ τ m′(τ)|F̂(τ)|² dτ.
@@ -263,7 +263,7 @@ Proof. Theorem 1(c) for a simple bottom (E_T one-dimensional, (U) reduces to con
 proof of (c) use), Proposition 3 and Corollary 3.1. ∎
 
 What follows, and what does not. (i) Under (EB_C) with any continuous C, (★) holds on [T₀, ∞) from any certified base T₀
-(Prop. 4; base ½log5, P47 thm:log5A; floors to ½log15 transferred in ROUND_007_D Cor. 4.3). (ii) Under (VE_C) alone, (★) follows
+(Prop. 4; base ½log5, P46 thm:log5A; floors to ½log15 transferred in ROUND_007_D Cor. 4.3). (ii) Under (VE_C) alone, (★) follows
 only with absolute continuity of λ_A (R186_111 §3.1) — Proposition 4 does not apply to the virial direction, because (2.1) is an
 upper bound on λ_A(T+h), not a lower one. So the right inequality to aim at is the edge one, (EB_C), not the virial one: the
 edge budget majorises the decrement, the virial minorises it. (iii) Neither inequality is proved, and §5(d) gives their size.

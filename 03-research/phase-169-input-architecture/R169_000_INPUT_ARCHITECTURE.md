@@ -136,7 +136,7 @@ file reference.
 **Reading of the lead (ARGUED, to be audited).** With (1) and (2), for each scale X the quantity 𝒮(γ), γ ∈ Γ_S(F), is a
 **function of the window alone**: Λ on [X, Y] is Eratosthenes of the primes < X, and G, w, Γ_S(F) are functions of the window.
 So, at a fixed scale X, 𝓘 is an inequality about a finite, explicit Dirichlet polynomial on a compact set of heights:
-**verifiable by certified computation**, like the certificates of Paper 47 up to ½log5. The infinite content of 𝓘 lies solely
+**verifiable by certified computation**, like the certificates of Paper 46 up to ½log5. The infinite content of 𝓘 lies solely
 in the quantifier over X (all scales up to e^{2T_max}), which is the **master quantifier W2 / Theorem M** of the grid.
 Conclusion: the interior of the architecture, once corrected, coincides with the per-window certificate program; the "new"
 input reduces to a law guaranteeing, uniformly in X, the outcome of a finite per-window computation — exactly the form of

@@ -73,5 +73,5 @@ The piece improves the architecture: any future joint cancellation can be
 audited as an inequality between Hermitian matrices in the metric \(B\),
 preserving correlations. Constructing at least one of the two inequalities
 above by means of the arithmetic of the integers, and connecting the
-other to minimality, remains to be done. The range of Paper 47 is not
+other to minimality, remains to be done. The range of Paper 46 is not
 extended, nor is D proved.

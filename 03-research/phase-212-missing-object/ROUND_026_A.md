@@ -3,7 +3,7 @@
 Global label: **NUMERICAL** (Galerkin in double-precision floating point, without intervals, not certified).
 
 ## 0. What was opened
-- Paper 47 `main.tex`: eq:form, eq:W and λ_A (l.115–135), lem:K and eq:m (l.395–410, C_0 = ψ(1/4) − log π, K(u) = 2e^{3u/2}/(e^{2u}−1)),
+- Paper 46 `main.tex`: eq:form, eq:W and λ_A (l.115–135), lem:K and eq:m (l.395–410, C_0 = ψ(1/4) − log π, K(u) = 2e^{3u/2}/(e^{2u}−1)),
   thm:S(iii) (tail ∫_{2T}^∞ K), thm:A / eq:Aform (l.444–455), def:PD, def:W/eq:nuw (l.668, 1225), prop:finite (l.3156),
   published numerical values (l.169–170, 2521–2551, 11050–11062).
 - R160_M2_R1 §§3–4 (Thm 4.1–4.3: V*_T = max_v V_T(v), v ∈ ℝ^{N_T} with free sign), §7 (PBP_T), H1 (l.378).

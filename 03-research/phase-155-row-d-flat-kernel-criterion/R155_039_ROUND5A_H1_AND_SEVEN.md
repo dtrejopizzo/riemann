@@ -8,12 +8,12 @@ plausibly +∞ (Galerkin values are lower bounds growing with N).*
 
 *Phase 155, round 5a. Executes the round-5 orders (i) and (ii) of `R155_038 §3`.
 Inherits `R155_033` (Prop NC and its overcount mechanism), `R155_032` (Thm 4a.1, Prop 4a.4, the
-`π_ij` table), `R155_023` (`τ₀ = 6.28983599`, `m(τ) = C₀ + ∫₀^∞(1−cos τu)K(u)du`), Paper 47 §2
-(`lem:K`, `thm:S`, `lem:mbounds`) and §8 (`prop:arch`, `prop:schur`). Paper 47, `R155_033`
+`π_ij` table), `R155_023` (`τ₀ = 6.28983599`, `m(τ) = C₀ + ∫₀^∞(1−cos τu)K(u)du`), Paper 46 §2
+(`lem:K`, `thm:S`, `lem:mbounds`) and §8 (`prop:arch`, `prop:schur`). Paper 46, `R155_033`
 and `R155_034` are **not** touched. Scripts: `scripts/r5a/` (`r5a_01`…`r5a_04`, ≈ 6.7 min total).*
 
 **No sign for `ζ` is claimed at any `T`. Endpoint of record unchanged: `λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`
-(Paper 47 Thm C). No value of `inf W` at `log 2` is asserted (the `R155_038` withdrawal stands).**
+(Paper 46 Thm C). No value of `inf W` at `log 2` is asserted (the `R155_038` withdrawal stands).**
 
 ---
 
@@ -251,7 +251,7 @@ atom as inert, `−0.0022`): the inertness there is the same phenomenon at a dif
 
 ---
 
-## §5 Proposal for Paper 47 (to accept or refuse; Paper 47 untouched here)
+## §5 Proposal for Paper 46 (to accept or refuse; Paper 46 untouched here)
 
 1. **`subsec:arch` gains Theorem J** (four lines of proof) and the corollary `n₋(T) = (2τ₀/π)T +
  O(log T)` proved on both sides. This is the cheapest new theorem of the round and it removes a

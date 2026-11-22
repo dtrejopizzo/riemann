@@ -361,7 +361,7 @@ A2. Simply exponential laws cT^a e^{−bT} for λ_A (007D) — NO-GO NUMERICAL. 
 A3. Lower half of the two-sided law λ_A ≥ L(T)(1 − o(1)): equivalent to (N1′) μ₁ ≥ L with margin exp(−4πe^{2T}); it is not
     weaker than (★); transfer from λ_W only gives floors 10⁵–10⁷ weaker (007D). Reopening: a positive floor for μ₁ with
     sensitivity to relative perturbations of size L(T). [INACCURATE] RULES_AVOID §F: «Two-sided laws λ_A = L(T)(1+o(1))
-    on unbounded ranges (P47 rem:bar-fam)» appears as non-excluded ground, without warning that its lower half is (★) plus
+    on unbounded ranges (P46 rem:bar-fam)» appears as non-excluded ground, without warning that its lower half is (★) plus
     a margin (007D Lemma 4.6/Cor 4.7; 008E Conj 4.1).
 A4. «λ_A ≥ λ_W − capacity» as a transfer tool — REFUTED (007D Prop 4.2, 2×2 model). [ABSENT]
 A5. Sign capture on the family of comb responses E_T alone (Rayleigh on E_T) — PIVOT/NO-GO NUMERICAL (007E): fails

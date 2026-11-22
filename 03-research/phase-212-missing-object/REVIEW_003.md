@@ -9,12 +9,12 @@ there is no candidate ready for construction. Global sign OPEN. No result of thi
 | Zone | Memo | Verdict | Checked | Correction or reservation |
 |---|---|---|---|---|
 | 1 families by window | 003_1 | ACCEPTED: no new mechanism | Lemma E (bound N_T and construction g_λ; N_T(g_λ)² = O(λ^{−2j−1} log λ)); Lemma F (translation to (−T, T − log I), zero leakage, a_T = a_{T′} by the support of c_G); Lemma S | Lemma F is a necessary condition, not an impossibility. Phases 60, 72, 114, 121, 124, 155, 159, 161, 199, 200 not opened in the primary sources |
-| 2 functionals with Λ | 003_2 | ACCEPTED WITH CORRECTIONS | Lemma 1 (unitriangular change); Lemma 2 (tautological); Lemma 3 (ρ^{(c)} = Arch − ‖V_0F‖² − c²‖V_1F‖²; citation P47 cor:Tarch confirmed) | "With rational dependence the same holds in the localization" is ARGUED. Lemma 3 requires the pairing (E) for all F and coefficients independent of the weight |
+| 2 functionals with Λ | 003_2 | ACCEPTED WITH CORRECTIONS | Lemma 1 (unitriangular change); Lemma 2 (tautological); Lemma 3 (ρ^{(c)} = Arch − ‖V_0F‖² − c²‖V_1F‖²; citation P46 cor:Tarch confirmed) | "With rational dependence the same holds in the localization" is ARGUED. Lemma 3 requires the pairing (E) for all F and coefficients independent of the weight |
 | 3 per-prime operators with J | 003_3 | ACCEPTED: no new mechanism | P0 (J exchanges A and B; even symbol); P1, P2; Q_ε = ε⟨X²F, F⟩ for JF = εF | The reading of the parity of R170_870 versus that of J is ARGUED. R161_030–031, 033, 036–039 not opened in the primary sources |
 | 4 null anchor with boundary | 003_4 | ACCEPTED | Lemma 1 (semidefinite Cauchy–Schwarz), Prop. 2, Lemma 3 (distance to a subspace) | In Lemma 4 only the leading coefficient is PROVED; the non-vanishing of the slope is ARGUED (the memo says so) |
 | 5 virial pair | 003_5 | ACCEPTED | Lemma 1; Lemma 2 (two bumps at distance log 2 + εθ: 𝒱 = −v_2 log 2 · c_φ′(−θ)/ε + O(1), a_T = O(log(1/ε))); Lemma 3 (values of a_P·log + a_P∗a_P at p^k and p^iq^j). Citations R162_501 Thm. 2.2, Prop. 3.1 and 106_124 §1 confirmed | Lemma 2 only uses v_2 ≠ 0: a format obstruction, generic in the comb. Section 2 is ARGUED |
-| 6 joint conversion | 003_6 | ACCEPTED WITH RESERVATION | M_NS_N = I + U_N; H^{cΛ} = cH + (c − 1)S′_N; Lemma 3 (subtraction of (4.4) at c = 0 and c = 1) | (4.3) depends on the exact form of P47 thm:PCfinite, not re-derived here: PROVED relative to that theorem, on the smooth kernel. Corollary 2 is homogeneity in c: correct and elementary. "No written quantity distinguishes c > 1" is ARGUED |
-| 7 formulation (S) | 003_7 | ACCEPTED WITH RESERVATION | Lemma 1 steps 1–4 (rank one on quadruples of primes; passage to the continuum; 𝖡² constant; divergent fourth moment); Lemma 2; Corollary 3 | Lemma 1 uses the formula for F̂_0 and the form 𝔸_M = [𝖡(log m − log k)] of P47 thm:oneprofile, cited and not re-derived. Not effective. Generic in the comb. CA_K_001, CA_K_002 not opened here |
+| 6 joint conversion | 003_6 | ACCEPTED WITH RESERVATION | M_NS_N = I + U_N; H^{cΛ} = cH + (c − 1)S′_N; Lemma 3 (subtraction of (4.4) at c = 0 and c = 1) | (4.3) depends on the exact form of P46 thm:PCfinite, not re-derived here: PROVED relative to that theorem, on the smooth kernel. Corollary 2 is homogeneity in c: correct and elementary. "No written quantity distinguishes c > 1" is ARGUED |
+| 7 formulation (S) | 003_7 | ACCEPTED WITH RESERVATION | Lemma 1 steps 1–4 (rank one on quadruples of primes; passage to the continuum; 𝖡² constant; divergent fourth moment); Lemma 2; Corollary 3 | Lemma 1 uses the formula for F̂_0 and the form 𝔸_M = [𝖡(log m − log k)] of P46 thm:oneprofile, cited and not re-derived. Not effective. Generic in the comb. CA_K_001, CA_K_002 not opened here |
 | 8 object quadratic in the weight | 003_8 | ACCEPTED: repetition | Antecedent confirmed in the primary source: `phase-70-lee-yang-dbn/E70_12` (δV + V² = Z⁻¹δ²Z, "entirely Euler-side") and E70_10 (graded option). Lemmas 1 and 2 | None |
 | 9 non-local metric | 003_9 | ACCEPTED WITH RESERVATION | Lemma 2(a): u/(λ+u²) + v/(λ+v²) = (u+v)(λ+uv)/((λ+u²)(λ+v²)), sum of two rank-one terms ≥ 0 for λ ≥ 0 | (b)–(d) relative to `ROUND_001_L.md` and to Stieltjes inversion (CITED). GS §§17–19 and LINK_014 not reread in the primary sources by the memo |
 
@@ -39,12 +39,12 @@ R3-d (PROVED, `ROUND_003_5.md` Lemma 2). For T > ½ log 2 there is no a_T = κ�
 with κ ≠ 0 and ρ_T ≥ −C‖·‖². Generic in the comb. Does not exclude generators other than pure dilation
 nor the pair VIR–LB/VIR–DET on the radical.
 
-R3-e (PROVED relative to P47 thm:PCfinite, `ROUND_003_6.md` Lemma 1, Cor. 2, Lemma 3). Identity on all of
+R3-e (PROVED relative to P46 thm:PCfinite, `ROUND_003_6.md` Lemma 1, Cor. 2, Lemma 3). Identity on all of
 P_T with a truncated Möbius test: a_T = f_0 − f_1 − R_0 + R_1. Under cΛ each exterior block is
 proportional to c; every sign statement about a separate exterior block holds for all c > 0 or for
 none. The interior cancellation is reabsorbed: g = b_T − f_1 + R_1. Not examined: the sign of the remainder R(F).
 
-R3-f (PROVED relative to P47 thm:oneprofile, not effective, `ROUND_003_7.md` Lemma 1). For M ≥ M_0 there is no
+R3-f (PROVED relative to P46 thm:oneprofile, not effective, `ROUND_003_7.md` Lemma 1). For M ≥ M_0 there is no
 𝔸_M = WᵀDW with W supported on divisibility and D real diagonal. Generic in the comb. Does not exclude W with
 support on the pairs m ≈ kn nor identities with remainder.
 

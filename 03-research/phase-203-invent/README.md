@@ -48,6 +48,6 @@ lower bound certifying λ_A(T) > 0 at the window T = ½log15.
 
 ## Relation to other phases
 Builds on and cites CALIB_R1/R2, MORI15_EXTREMAL, LEMMA_13.1, CPOS_CLASS,
-and P47's thm:ext-half / cor:Tarch; the surviving Object III (hierarchical
+and P46's thm:ext-half / cor:Tarch; the surviving Object III (hierarchical
 contact book) is handed off with concrete finite computations (P203.1–3)
 requested of a later calibration phase.

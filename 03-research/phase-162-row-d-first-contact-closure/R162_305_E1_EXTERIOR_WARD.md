@@ -17,7 +17,7 @@ So the Ward slot never produces a quadratic form that could be compared with the
 contributes exactly 0 net, for every F in P_T, whatever the sign of H_T on F. Route (ii) of R162_302
 is closed completely. The suspected tautology is confirmed, and its mechanism is identified in §4.
 
-Notation: Paper 47 §sec:firstcontact. We write T = T_*. The direction η is real and finitely
+Notation: Paper 46 §sec:firstcontact. We write T = T_*. The direction η is real and finitely
 supported, with supp η ⊂ [e^{2T}, M]. Put a_u = Λ + uη and
 L^η := Σ_d η(d) d^{-1/2} τ_{log d}, so that L_M^{(u)} = L_M + uL^η. Throughout, M ≥ N ≥ max supp η.
 

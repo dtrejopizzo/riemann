@@ -85,7 +85,7 @@ debit. Theorem 8.5 depends on this identification to claim that no
 reserve is used twice. This review does not declare that transport
 proved or refuted.
 
-## Insight worth carrying over to Paper 47
+## Insight worth carrying over to Paper 46
 
 Work in the exact harmonic extension and carry source and metric
 together. For a positive block B and a source g, a proposed response

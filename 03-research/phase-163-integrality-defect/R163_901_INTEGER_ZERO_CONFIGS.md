@@ -132,7 +132,7 @@ $B_t=B_0-t\,c(m_1)\log\lambda_1\,\lambda_1^{-1/2}k_0(0)$ with $B_0$ independent 
 $Q(\eta)=2\eta B_t$ and $B_t\ne0$ for $|t|$ large, so $Q$ takes negative values. If $A>0$,
 $\min_\eta Q=A-B_t^2/A<0$ once $|B_t|>A$, which holds for $|t|$ large. On the zero side, $Q=\sum_\rho\widehat\phi(t_\rho)\overline{\widehat\phi(\bar t_\rho)}$, which is $\ge0$ if all $t_\rho\in\mathbb R$.
 So some $t_\rho\notin\mathbb R$. The test has support in $|u|\le a+2\varepsilon$; by translation invariance of $|\widehat F|$ on $\mathbb R$, of $A\bar B$ and of $c_F$
-(R163_501 §3.3) it lies in $L^2(I_T)$, $T=\frac a2+\varepsilon$. Since $W^{f_t}_T=W^\zeta_T>0$ on $(0,\frac12\log5]$ (Paper 47 certificate; $N_0\ge5$ may be assumed), $T_c(f_t)$ is well
+(R163_501 §3.3) it lies in $L^2(I_T)$, $T=\frac a2+\varepsilon$. Since $W^{f_t}_T=W^\zeta_T>0$ on $(0,\frac12\log5]$ (Paper 46 certificate; $N_0\ge5$ may be assumed), $T_c(f_t)$ is well
 defined and finite. ∎
 
 *Remark (sign of the atoms is not a separator at contact level).* Below $e^{2T_c}\le\lambda_1e^{2\varepsilon}<2\lambda_1$ the only non-ζ atom is $\lambda_1$, and item 4 works

@@ -92,4 +92,4 @@ remains to determine whether that decay survives in the product coupled
 with \(U_\rho\), and even if it did survive, turning compactness into a
 sign would require another arithmetic input.
 
-The certified interval of Paper 47 is not extended, nor is D proved.
+The certified interval of Paper 46 is not extended, nor is D proved.

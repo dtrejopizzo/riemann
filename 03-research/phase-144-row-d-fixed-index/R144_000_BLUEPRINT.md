@@ -3,7 +3,7 @@
 set; transfer 12.3-B4 unconditional; `(b′)_{B4}` true under RH; index-local RH content; `Ξ_a` fails at a
 fixed finite index; auditor's target), `R143_001` §D.34 (Definitions of `B4^{g,0}`, `t_n`, Thms D.34.5,
 D.34.8, D.34.9′, D.34.10, D.34.16, Remark D.34.16c), `R141_001` §D.26 (traces; polar term of
-`I_∞(E, τ_{log n}g)`), `R142_001` §D.31 (Lemma D.31.4 cosh bound; witness family), Paper 46 §§11–12.*
+`I_∞(E, τ_{log n}g)`), `R142_001` §D.31 (Lemma D.31.4 cosh bound; witness family), Paper 47 §§11–12.*
 
 Standing rules as before. FATAL rule: a proof that `t_m(E) ≥ 0` for all `E ∈ S_0` and **all** `m` would,
 with Thm D.34.8, prove RH — so a proof at a fixed `m` must be checked against `Ξ_a` at the index where

@@ -11,20 +11,20 @@ that plane the complete form is the diagonal matrix `G_T = diag(g_+, g_-)`, and
 scalar inequalities, and the degenerate case adds a range condition. In matrix form `G_T = S_T + J`: here
 `J = diag(2,−2)` is the polar block, with the signature `(1,1)` of `lem:polar`, and `S_T` is the Schur complement of
 `𝔞_T` over `P_T`. **The converse is not a structural consequence of the window hypotheses.** It fails in two model
-families that share every hypothesis of the form and also the zeros and the pole of ζ (P47 `thm:finmod`). [amended per R156_004, A7: the models are comb-level. For them `W_T(a) := 𝔞^{(v(a))}_T + 2Re(AB̄)` is not the zero sum of `ζ_a`, which equals that of ζ, and `ζ_a` has no functional equation. The failures are class statements, as in `cor:void`, not statements about zeros.] The first
+families that share every hypothesis of the form and also the zeros and the pole of ζ (P46 `thm:finmod`). [amended per R156_004, A7: the models are comb-level. For them `W_T(a) := 𝔞^{(v(a))}_T + 2Re(AB̄)` is not the zero sum of `ζ_a`, which equals that of ζ, and `ζ_a` has no functional equation. The failures are class statements, as in `cor:void`, not statements about zeros.] The first
 is the prime-free/deletion model on `(0.4608, 0.58]`. The second is the one-contact family with weight `θ·v_2` at
 `T = ½log 3`, where it fails for every `θ < 0.8148`. Both failures are PROVED by explicit elementary witnesses, with
-the primitive side imported from P47 `thm:index`/`cor:Tarch` and `thm:C`. For ζ itself the converse is *true* at
+the primitive side imported from P46 `thm:index`/`cor:Tarch` and `thm:C`. For ζ itself the converse is *true* at
 every `T ≤ 0.8`, and trivially so: the conclusion is Zhu's cited certificate. Nowhere is it decided by the identity
 alone. After R156 the per-window content of row D is `RD_T` plus the sign of the two polar-capacity constants `g_±(T)`.
 
-Rules followed. Statements use P47's own definitions, quoted below. There is no sign for ζ beyond `T ≤ log 2`
-except the cited Zhu range already used by P47 `cor:KEP08`. Zeros appear only through labelled imports. The scripts
+Rules followed. Statements use P46's own definitions, quoted below. There is no sign for ζ beyond `T ≤ log 2`
+except the cited Zhu range already used by P46 `cor:KEP08`. Zeros appear only through labelled imports. The scripts
 are in `scripts/r156/` (README there), each < 60 s, run one at a time. No paper or README was edited.
 
 ---
 
-## 0. The paper's definitions (verbatim sources, `04-papers/47-row-d-dual-certificates/main.tex`)
+## 0. The paper's definitions (verbatim sources, `04-papers/46-row-d-dual-certificates/main.tex`)
 
 * `eq:symbol`, `eq:form` (l.119–128): `σ_T = m − Σ_{n∈N_T} v_n cos(τ log n)`, `𝔞_T(F) = (2π)^{-1}∫σ_T|F̂|²`, on the form
   domain `D_T = {F ∈ L²(I_T): ∫log(2+|τ|)|F̂|² < ∞}`; `A_T` is the operator of `𝔞_T`.
@@ -59,7 +59,7 @@ and `P^{par} = P_T^{par} ∩ D_T = ker(ℓ_par|D^{par})`. By `lem:parity` and th
 `A(F_e)B(F_o) + B(F_e)A(F_o) = c(F_e)(−s(F_o)) + c(F_e)s(F_o) = 0`. ∎
 
 This is the rank-one parity channel decomposition of D.50 §1 (`R_2 = |u_e⟩⟨u_e| − |u_o⟩⟨u_o|`, `u = √2 φ`), written with
-P47's normalisation.
+P46's normalisation.
 
 **Theorem 1.1 (parity Schur–Haynsworth identity; PROVED).** Fix `T` and `par`.
 
@@ -105,7 +105,7 @@ with `𝔞_T(F_0, G) = α(F_0) ℓ_par(G)` for all `G ∈ D^{par}`. This is `thm
 isomorphism `Q → Q*`. This is Kato VI §2, first representation theorem, together with the bounded inverse of `L` on
 its spectral gap. [amended per R156_004, A1: self-contained version of this step. `𝔞_T = Γ_T + Π_T` with `Π_T`
 bounded (`‖Π_T‖ ≤ 𝐀`), so `𝔞_T` is closed, bounded below by `−M`, with the form domain of `Γ_T`, which embeds
-compactly in `L²(I_T)` (proof of P47 `prop:nodes`(i)). `Q` is closed in the form norm (`ℓ` is `L²`-continuous) and
+compactly in `L²(I_T)` (proof of P46 `prop:nodes`(i)). `Q` is closed in the form norm (`ℓ` is `L²`-continuous) and
 dense in the `L²`-closed subspace `H_Q := ker ℓ ∩ L²_{par}` (if `x ∈ H_Q`, `d_n ∈ D^{par}`, `d_n → x`, and `e ∈ D^{par}`
 has `ℓ(e) = 1`, then `d_n − ℓ(d_n)e ∈ Q → x`), so `𝔞|Q` is a closed semibounded form in `H_Q` with compact resolvent.
 Its spectrum is discrete and its negative spectral subspace `Q_-` is finite-dimensional. If `0 ∉ spec`, then on the
@@ -175,12 +175,12 @@ whenever `n_-(𝔞_T) = 1`, `𝔞_T` is nondegenerate and `𝔞_T|P_T > 0`: DIAG
 `g_+ < 0`. The script value is `κ_+ = g_+ − 2` with `g_+ = +8.7·10^{-8}`]. **For ζ, `S_T ≈ −J`.**
 The primitive Schur complement nearly cancels the polar block, and `G_T = S_T + J` is tiny: DIAGNOSTIC
 `g_+ ≈ 8.6·10^{-8}`, `g_- ≈ 1.35·10^{-3}` at `½log 3` (§7). This is quantified by Thm 1.1(a5). Wherever
-`λ^W ≪ λ^A`, the even entry is `g_+ ≍ λ^W_{ev}‖h_+‖²`, within a factor 2. Combined with P47 `cor:margin1`,
-`λ^W ≤ 4·10^9 T e^{−15.449T}` for `T ≥ 1` (PROVED, P47). *If* in addition `λ^A` is not also that small, then
+`λ^W ≪ λ^A`, the even entry is `g_+ ≍ λ^W_{ev}‖h_+‖²`, within a factor 2. Combined with P46 `cor:margin1`,
+`λ^W ≤ 4·10^9 T e^{−15.449T}` for `T ≥ 1` (PROVED, P46). *If* in addition `λ^A` is not also that small, then
 `g_+(T)/‖h_+‖² ≤ 2λ^W_T → 0`. That last step is HEURISTIC, since no lower bound on `λ^A` is known. [amended per
 R156_004, A4: `cor:margin1` bounds `λ^A` by the same `4·10^9 T e^{−15.449T}`, so the premise `2λ^W < λ^A` is itself
 undecided at every `T ≥ 1`. The sandwich also needs `g_+ > 0` (A2).] Under Zhu's
-conjectural law `−log λ^W ≍ e^{2T}` (P47 `rem:margin`), the converse is a doubly-exponentially thin 2×2 inequality
+conjectural law `−log λ^W ≍ e^{2T}` (P46 `rem:margin`), the converse is a doubly-exponentially thin 2×2 inequality
 (HEURISTIC).
 
 **Remark 2.2 (zero side; labelled import).** By `lem:roughEF`, `g_par = W_T(h_par) = Σ_ρ Φ_h(ρ)Φ_h(1−ρ)` whenever the zero
@@ -203,7 +203,7 @@ All values below are exact closed forms. The only estimate is `K(u) = 1/(2sinh(u
 `𝒜_∞(F_T) ≤ U(T) := (2T³/3)(C_0 + log coth(T/2) + π − 2arctan e^T) + 2T³(3T+7)/9 − 2s(F_T)²`.
 `U(½log 3) = −0.0200526…`; the exact value, by quadrature, is `−0.0268769`, matching the Galerkin cross-check to 14
 digits. `U(0.461) = −3.6·10^{-5}` and `U(0.47) = −1.40·10^{-3}`. Hence `\laminf(T) < 0` for every `T ≥ 0.461`, by
-monotonicity (`prop:arch`(i)). In particular **`T^*_∞ ≤ 0.461` (PROVED)**, where P47 records only the DIAGNOSTIC
+monotonicity (`prop:arch`(i)). In particular **`T^*_∞ ≤ 0.461` (PROVED)**, where P46 records only the DIAGNOSTIC
 `T^*_∞ ≤ 0.3716`. Scripts: `r156_odd_witness.py`, `r156_witness_threshold.py`. [amended per R156_004, A5: (1) wording.
 This is the first *proved* upper bound on `T^*_∞` below the `0.60` that follows from `T^*_∞ ≤ T^*_{∞,P} ≤ 0.60`
 (`prop:arch`(iv), `cor:Tarch`). It is numerically *weaker* than the DIAGNOSTIC Galerkin bound `0.3716`, and it
@@ -224,7 +224,7 @@ So **the per-window converse fails for `a` on `[0.461, 0.58]`**. It fails alread
 `[0.461, log 2]`, since `λ_odd(T) > 0` for `T ≤ log 2` (`thm:index`(i)) while `W^{odd}(F_T) < 0`. At `½log 3` the
 DIAGNOSTIC Galerkin gives `G_T = diag(−0.451, −20.08)` and `n_-(W_∞) = 2`, so both channels fail.
 
-[amended per R156_004, A7/A8. (i) *Definition.* P47 defines `RD_T(a)` (l.3207 ff.) but no complete form for a
+[amended per R156_004, A7/A8. (i) *Definition.* P46 defines `RD_T(a)` (l.3207 ff.) but no complete form for a
 general comb. Here `W_T(a) := 𝔞^{(v(a))}_T + 2Re(AB̄)` and `λ^W_T(a)` is its bottom on `L²(I_T)`. (ii) *Validity on
 the range.* For `T ∈ [0.461, 0.58]`, `N_T ⊂ {2,3}` (`e^{1.16} = 3.19`) and `a = 0` on `N_T`. Indeed the comb of `a` is
 empty for every `T < ½log 5 = 0.8047`. So `RD_T(a)` is *literally* `thm:finmod`(i), `λ^A_T(a) = \laminfP(T) > 0`, and
@@ -234,7 +234,7 @@ zeros of `ζ_a` is the zero sum of ζ, i.e. `W_T(Λ)`, and `W_T(a) = W_T(Λ) + �
 difference is the `E'/E` term. Together with the missing functional equation (`thm:finmod`(iii)), this means
 `λ^W_T(a) < 0` says nothing about zeros. The counter-model refutes the *comb-level implication*
 `RD_T(a) ⟹ λ^W_T(a) ≥ 0` for nonnegative combs, as `cor:void` refutes comb-level derivations of `RD_T`. (iv) *Novelty.*
-For the empty comb the failure is exactly `T^*_∞ < T^*_{∞,P}`. P47 already shows this DIAGNOSTICALLY
+For the empty comb the failure is exactly `T^*_∞ < T^*_{∞,P}`. P46 already shows this DIAGNOSTICALLY
 (`0.3716` vs `0.5958`, after `cor:Tarch`). What is new is the proof (Thm 3.1 with `cor:Tarch`). (v) *The odd-sector
 sentence* is sector-wise. On `(T^*_{∞,P}, log 2]` the full converse is vacuous for `a`, because `RD_T(a)` fails, and
 only the odd-sector implication `λ_odd > 0 ⟹ W^{odd} ≥ 0` is refuted there.]
@@ -254,7 +254,7 @@ its comb on `N_T` is `θv_2`.
     exact rationals, outward rounding, `T = iv.log(3)/2`): `Π(F) ∈ 0.00753283781432786…`,
     `−U_0/Π ∈ 0.814803741561464…`, and `U_0 + 0.8148·Π ∈ −2.8185·10^{-8}` (negative; the margin at the stated threshold
     is `2.8·10^{-8}`, not `6·10^{-3}`); for `F = t`: `−U_0/Π ∈ 0.474113847…`. `W_θ(F) = 𝒜_∞(F) + θΠ(F)` with
-    `Π(F) = −v_2 c_F(log 2)` is P47's `W_T = \Ainf + Π_T` with comb `θv_2` (`log 2 < 2T`, so `c_F(log 2)` is the polynomial
+    `Π(F) = −v_2 c_F(log 2)` is P46's `W_T = \Ainf + Π_T` with comb `θv_2` (`log 2 < 2T`, so `c_F(log 2)` is the polynomial
     branch). The claim holds as stated for every `θ ≤ 0.8148`. `W_T(a_θ)` is a comb-level form (see the note after
     Cor 3.2).]
 (iii) `θ ↦ λ^W_T(a_θ)` is concave and, by Zhu (cited, as in `cor:KEP08`), positive at `θ = 1`. So the failure set in
@@ -262,7 +262,7 @@ its comb on `N_T` is `θv_2`.
     fails just above `θ = 1` (`g_+(1.001) ≈ −4.9·10^{-5}`). The complete form at `½log 3` survives only in a
     `θ`-window of width about `10^{-4}` around the true `Λ(2)`. The primitive form survives on `[0, ≈1.0065]`.
 
-**Corollary 3.4 (method constraint for the converse; PROVED, in the sense of P46 Thm 18.1 / P47 `cor:void`).** Let `𝒞` be a
+**Corollary 3.4 (method constraint for the converse; PROVED, in the sense of P47 Thm 18.1 / P46 `cor:void`).** Let `𝒞` be a
 class of nonnegative arithmetic functions containing `Λ` and closed under deletion of finitely many terms. Examples are
 `𝒞_zeros`, `𝒞_PNT(ε)` and `𝒞_BT`, per `cor:void`, and `𝒞_BT` and `𝒞_zeros` also contain every `a_θ`. Then no derivation of
 "`RD_T ⟹ λ^W_T ≥ 0`" whose only prime input is `𝒞`-membership exists at any `T ∈ [0.461, 0.58]`. At `T = ½log 3`, a
@@ -281,13 +281,13 @@ derivations and classes, not about ζ (see the note after Cor 3.2).]
 
 **The archimedean analogue (blueprint item, decided).** For `v = 0` the converse holds on `(0, T^*_∞)`, where both sides
 are positive, and holds vacuously for `T > T^*_{∞,P}`. It fails on `[0.461, T^*_{∞,P})`, which contains `[0.461, 0.58]`
-(PROVED). With strict decrease of `\laminf`, noted but not used in P47 after `lem:strict`, it fails on all of
-`(T^*_∞, T^*_{∞,P})`. [amended per R156_004, A10: P47 states the strict decrease of `\laminf` in the unnumbered
+(PROVED). With strict decrease of `\laminf`, noted but not used in P46 after `lem:strict`, it fails on all of
+`(T^*_∞, T^*_{∞,P})`. [amended per R156_004, A10: P46 states the strict decrease of `\laminf` in the unnumbered
 paragraph after `lem:strict`, with its argument: the same Euler–Lagrange/moment argument, tested against `G_0` with
 vanishing Tate moments, so the pole term drops out. The `R155_061` closing note confirms that the argument goes
 through on all of `L²`. Label: PROVED, resting on that unnumbered paragraph. It needs a numbered statement before
 it is cited from a paper.] DIAGNOSTIC: that is `(≈0.372, ≈0.596)`, and the odd channel fails first, at `≈0.372`; the even
-channel fails at `≈0.44`. Reading: for the primitive form the primes are a cost up to `≈0.58` (P47 after `cor:Tarch`).
+channel fails at `≈0.44`. Reading: for the primitive form the primes are a cost up to `≈0.58` (P46 after `cor:Tarch`).
 For the complete form they are a *necessity* from `≤ 0.461` (PROVED), `≈0.372` DIAGNOSTIC. The first contact enters
 at `½log 2 = 0.3466`, just before (DIAGNOSTIC, HEURISTIC reading).
 
@@ -315,14 +315,14 @@ at `½log 2 = 0.3466`, just before (DIAGNOSTIC, HEURISTIC reading).
     functionals `A, B, A', B'`, i.e. exactly on the directions `G_T` measures. [amended per R156_004, A11b: this is
     not "exactly". `G_T` sees only the directions of `A` and `B`. The `β_1` term also involves `A', B'`, which `G_T`
     does not measure.] DIAGNOSTIC: `g_+ ≈ 8.6·10^{-8}` is four
-    orders below `λ^A ≈ 9.5·10^{-4}`. This is the quantitative content of P47's remark after `cor:KEP08` (defect
+    orders below `λ^A ≈ 9.5·10^{-4}`. This is the quantitative content of P46's remark after `cor:KEP08` (defect
     `5.9·10^{-3}` versus margin `8.86·10^{-5}`). The complete form at `½log 3` rests on Zhu.
 
 ---
 
 ## 5. Consequences for the reduction chain (blueprint item 4)
 
-P47 §9.1 (l.2950–2957):
+P46 §9.1 (l.2950–2957):
 `RH ⟺ ∀T λ^W ≥ 0 ⟺ ∀T λ^P ≥ 0 ⟺ ∀T ∃ finite certificate ⟺ ∀T ∃ w_T flat-top`.
 After R156 the per-window status of each link is:
 
@@ -334,7 +334,7 @@ After R156 the per-window status of each link is:
    [∃ `w ∈ 𝒲`: `Al_T(w)`] ⟺ `λ^W_T > 0` ⟺ [`λ^A_T > 0` ∧ `G_T ≻ 0`] ⟹ [`KEP(T)` indeterminate] ⟹ `λ^W_T ≥ 0`
    ⟺ [`RD_T` ∧ range ∧ `G_T ⪰ 0`].]
 2. **`λ^W_T ≥ 0 ⟺ RD_T ∧ [range condition where λ^A_par = 0] ∧ G_T ⪰ 0`** — PROVED, per window. This refines the open
-   "`RD_T ⟹ λ^W_T ≥ 0`" (P47 l.3549–3552, `R155_053` §(v), `R155_060` row 14) to a single explicit obstruction: the
+   "`RD_T ⟹ λ^W_T ≥ 0`" (P46 l.3549–3552, `R155_053` §(v), `R155_060` row 14) to a single explicit obstruction: the
    2×2 polar-capacity matrix. The converse is **equivalent** to `RD_T ⟹ G_T ⪰ 0 (+ range)`.
 3. The primitive-certificate link (`λ^P > 0 ⟹` finite certificate `⟹ λ^A > 0`, `thm:D1`) is per window and
    unchanged. `λ^P ≥ 0 ⟸ λ^W ≥ 0` per window. Whether `RD_T ⟹ λ^P_T ≥ 0` remains OPEN. Side DIAGNOSTIC:
@@ -356,9 +356,9 @@ After R156 the per-window status of each link is:
 
 ## 6. Corpus check (novelty)
 
-Grep of `03-research/` and P47 for `per-window converse`, `κ_±`, channel constants, `0.3716`, and deletion
+Grep of `03-research/` and P46 for `per-window converse`, `κ_±`, channel constants, `0.3716`, and deletion
 counter-models of the complete form. Hits: `R155_053/058/060`, `README` of phase 155 and `R156_000`, all saying OPEN.
-`0.3716` appears only in P47 as a DIAGNOSTIC Galerkin bound. The linear algebra is on record: D.47 Thm 2.1 (Haynsworth),
+`0.3716` appears only in P46 as a DIAGNOSTIC Galerkin bound. The linear algebra is on record: D.47 Thm 2.1 (Haynsworth),
 D.50 §1–2 (rank-one parity channels, secular functions) and P124_011 §4 (range condition). **New here:**
 * the complement taken over `P_T`, so that only `𝔞_T|P_T` has to be invertible, and the resulting exact per-window
   equivalences of Thm 1.1(c);
@@ -383,9 +383,9 @@ version is the one that applies.
 | θ-family at ½log3 | see `r156_theta_family.py` | +2.6e-6 (θ=.9999), −4.9e-5 (θ=1.001) | −3.1e-4 (θ=.9999) | — |
 
 The inertia identity `n_-(W) = n_-(𝔞|P) + n_-(G)` was checked on Galerkin matrices at 6 cases, including the
-indefinite-nondegenerate `T = 0.7` and `0.9` (prime-free), with `2 = 1+1` and `3 = 2+1`. The P47 value
+indefinite-nondegenerate `T = 0.7` and `0.9` (prime-free), with `2 = 1+1` and `3 = 2+1`. The P46 value
 `\laminfP(½log3) ≈ +0.083` is reproduced. At `log 2` and above the ζ values are `< 10^{-7}` and not stable, as in
-P47 `rem:galerkin`, and are not quoted. [amended per R156_004, A16: (i) On finite Galerkin matrices the inertia
+P46 `rem:galerkin`, and are not quoted. [amended per R156_004, A16: (i) On finite Galerkin matrices the inertia
 identity is Haynsworth's theorem, so it holds exactly. The 6-case check tests the code, not the theorem. (ii) Galerkin
 `κ_±`, hence `g_±`, are *upper* bounds on the true constants. A negative Galerkin `g` is evidence of a true negative
 (up to float64 and quadrature error). A positive one, e.g. `g_+ ≈ 8.6·10^{-8}` for ζ, is no evidence that the true
@@ -411,7 +411,7 @@ identity is Haynsworth's theorem, so it holds exactly. The 6-case check tests th
 | T3.3 | one-contact family at `½log3`: converse fails for `θ < 0.8148`; failure set `[0,θ_*)`, `θ_* < 1` | PROVED (imports `thm:C`, `cor:Tarch`, Zhu for `θ_*<1`; quintic interval-verified, `audit_r156_theta_quintic.py`; comb-level form) [amended per R156_004, A6/A7] |
 | T3.3 | `θ_* ≈ 0.99991`; complete-form window of width about `10^{-4}` | DIAGNOSTIC |
 | C3.4 | no derivation of the converse from deletion-closed class membership at `T ∈ [0.461, 0.58]`; at `½log3` for classes containing some `a_θ`, `θ < 0.8148` | PROVED (method constraint) [amended per R156_004, A9] |
-| §3 | archimedean converse fails exactly on `(T^*_∞, T^*_{∞,P})` | PROVED on `[0.461, 0.58]`; rest uses strict decrease of `\laminf` (P47 unproved remark) |
+| §3 | archimedean converse fails exactly on `(T^*_∞, T^*_{∞,P})` | PROVED on `[0.461, 0.58]`; rest uses strict decrease of `\laminf` (P46 unproved remark) |
 | P4.1 | `g_±(T) > 0` for ζ, `T ≤ 0.8` | PROVED resting on Zhu (cited) |
 | §5.1 | chain certificate ⟺ `λ^W>0` ⟺ `λ^A>0 ∧ G_T ≻ 0` ⟹ KEP indeterminate ⟹ `λ^W ≥ 0` | PROVED as corrected; the original "⟺ KEP indeterminate" FAILS as stated [amended per R156_004, A12] |
 | §5.3 | `RD_T ⟹ λ^P_T ≥ 0` per window | OPEN |
@@ -429,17 +429,17 @@ identity is Haynsworth's theorem, so it holds exactly. The 6-case check tests th
    form norm, since `c` and `s` are `L²`-continuous. Check also that density is not needed.
 2. **Sign bookkeeping.** For odd `F`, `A = s`, `B = −s`, so `2AB = −2s²`. The `t`-witness value depends on this. It was
    cross-checked against the independent Galerkin code (`−0.02687686527705946` both ways), and the Galerkin code
-   reproduces P47's `+0.083`.
+   reproduces P46's `+0.083`.
 3. **Witness rigour.** The bounds are exact symbolic expressions evaluated at 30 digits, with margins `≥ 3.6·10^{-5}`
    (at `0.461`) and `6·10^{-3}` (quintic). This is not interval arithmetic. Also check `K ≤ 1/u + 1/2` and the direction
    of the inequality: `g ≥ 0`, so an upper bound on `K` gives an upper bound on `𝔈`.
-4. **Legitimacy of the models.** `Λ1_{n≥5}` and `a_θ` share every hypothesis of P47's form-level setting and the zeros
+4. **Legitimacy of the models.** `Λ1_{n≥5}` and `a_θ` share every hypothesis of P46's form-level setting and the zeros
    and pole of ζ, but *not* the functional equation (`thm:finmod`(iii)). The counter-mechanism is therefore a class
    statement (Cor 3.4), not a statement about ζ. For ζ the converse is true at `T ≤ 0.8` (Zhu). A model with the
-   functional equation (Epstein/Dedekind, P47 `rem:twohalves`) was not attempted.
-5. **Imports.** `thm:index`/`cor:Tarch` (machine-verified, P47 archive), `thm:C` (machine-verified), Zhu Thm 1.2 (cited,
+   functional equation (Epstein/Dedekind, P46 `rem:twohalves`) was not attempted.
+5. **Imports.** `thm:index`/`cor:Tarch` (machine-verified, P46 archive), `thm:C` (machine-verified), Zhu Thm 1.2 (cited,
    not re-verified), Paper 42 `cor:certifiedinitialinterval`.
-6. **Citation imprecisions noticed (not edited).** (a) P47 `prop:arch`(iii) (l.2376–2377) cites
+6. **Citation imprecisions noticed (not edited).** (a) P46 `prop:arch`(iii) (l.2376–2377) cites
    `[Paper42, Yoshida, Bombieri]` for positivity of **`W_T`** for `T ≤ log 2`. But Paper 42
    `cor:certifiedinitialinterval` (42/main.tex l.4354–4360) is a statement about the **primitive** operator on `P_T`.
    Yoshida/Bombieri cover autocorrelation support `log 2`, i.e. `T ≤ ½log 2`, which is all `prop:arch`(iii) needs, since
@@ -447,11 +447,11 @@ identity is Haynsworth's theorem, so it holds exactly. The 6-case check tests th
    complete form on `(½log 2, 0.8]` rests on Zhu. [amended per R156_004, A14: (a) CONFIRMED. P42
    `thm:certifiedendpoints`/`cor:certifiedinitialinterval` (42/main.tex l.4164–4172, 4355–4360) assert strict
    positivity on `P_T` of the operator with the *complete prime comb* ("complete" in P42 means all contacts, not
-   the complete form `W_T`), so they are primitive statements. The same slip occurs at P47 l.308 ("Positivity at
-   `T ≤ log 2` is known [Paper42, Yoshida, Bombieri]"), in `R155_031` l.51 and in `R155_023` l.87, 328. P47 l.148–150
+   the complete form `W_T`), so they are primitive statements. The same slip occurs at P46 l.308 ("Positivity at
+   `T ≤ log 2` is known [Paper42, Yoshida, Bombieri]"), in `R155_031` l.51 and in `R155_023` l.87, 328. P46 l.148–150
    (intro) is correct as worded. (b) The quoted blueprint phrase was **not found verbatim** in `R156_000` or in the
    plan file. Remove the attribution, or give its location. Ruling: `R156_004` §"Citation ruling".]
-   [amended per R156_004, A15, notation for integration: P47 already uses `G_T(t) = g(t/T)` and `F_T` in
+   [amended per R156_004, A15, notation for integration: P46 already uses `G_T(t) = g(t/T)` and `F_T` in
    `prop:finsupp`, `S_{T,τ_1}`/`S_c` for time–band limiting, `Γ_T` for the pole-free archimedean form and `κ(x)` for
    the killing density. For the paper, rename `G_T → 𝔊_T` (or `G^{\mathrm{pol}}_T`), `S_T → S^{\mathrm{Sch}}_T`,
    `F_T → F^{\mathrm{odd}}_T`.]

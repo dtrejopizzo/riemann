@@ -40,5 +40,5 @@ categorification in which every local form is a Gram matrix of light leaves with
 light-leaves basis would be a basis of P_T in which 𝔞_T is block-triangular with known diagonal signs — that is an LDLᵀ (Cholesky)
 certificate, class (D) as final object (G0). The genuinely non-tautological ingredient of EW is the deformation to a limit where HR is
 known (ρ → ∞ along the ample cone, where the form becomes a direct sum of rank-one pieces). Window analogue: T ↓ ½log2 (no primes,
-P47 positive endpoint) — CA_A_008 again.
+P46 positive endpoint) — CA_A_008 again.
 **Verdict.** G3 = REF-D/retry (CA_A_008, L2_002, Theorem X). PROVED pieces: the identity in (b) and the reduction (a). No sign.

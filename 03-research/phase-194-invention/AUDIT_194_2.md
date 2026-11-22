@@ -1,13 +1,13 @@
 # AUDIT_194_2 — review of tracks D–J (phase 194)
 
-Checked against Paper 47 (main.tex): eq:m, def:W/eq:nuw, lem:wit-conc (l.6980), thm:kappa (l.7256), prop:prog (l.8170),
+Checked against Paper 46 (main.tex): eq:m, def:W/eq:nuw, lem:wit-conc (l.6980), thm:kappa (l.7256), prop:prog (l.8170),
 def:shape-ops (l.8328), lem:shape-scale (l.8389: proved for c large ⇒ T>½log2 and c small ⇒ T≥0.60; O_4^ε CONDITIONAL on κ_T≠0),
 prop:shape-eulerdel (l.8414: a_P fails WP_T on [0.60,½log P]), cor:Tarch (l.2516: 0.58≤T*≤0.60), thm:shape (l.8853).
 
 ## Verdicts per claim
 | Memo / claim | Track label | Audit | Reason |
 |---|---|---|---|
-| D Thm 3 (𝔞_T as renormalised ω_+ character minus comb) | PROVED | **PROVED (bookkeeping)**, minor fix | Integrand (F(0)−F(u))·½K(|u|) from ‖Φ_g‖²=2F(0), Θ_+=K/2: correct = eq:m + Plancherel. For complex g the prime sum needs Re⟨ω_+(a_{log n})Φ_g,Φ_g⟩ (P47 uses Re c_F); add Re. Content = Connes local trace formula relabelled (CITED); no sign. Comb-generic (B″). |
+| D Thm 3 (𝔞_T as renormalised ω_+ character minus comb) | PROVED | **PROVED (bookkeeping)**, minor fix | Integrand (F(0)−F(u))·½K(|u|) from ‖Φ_g‖²=2F(0), Θ_+=K/2: correct = eq:m + Plancherel. For complex g the prime sum needs Re⟨ω_+(a_{log n})Φ_g,Φ_g⟩ (P46 uses Re c_F); add Re. Content = Connes local trace formula relabelled (CITED); no sign. Comb-generic (B″). |
 | D Props 1,2,4; free HS positivity | PROVED/CITED | confirmed; REF-D for sign | Correctly self-labelled. |
 | E Lemma E1 | PROVED | identity PROVED; **title overclaim** | σ^{*−1}*Lσ = Λ+Λ·id checked. "The only exact Λ-extraction is a log-derivative" is not proved by the lemma: uniqueness is the content of E2. Retitle. |
 | E Thm E2 (hypertranscendence) | PROVED in 𝓒_0 | **downgrade to ARGUED for the family as stated** | Hölder–Hilbert–Ostrowski gives −ζ′/ζ ∉ ℂ(s)(ζ) (CITED, correct). But the Kronecker–Hurwitz/ES data are intrinsically ζ(s)ζ(s−1); "freezing the shifted factor as coefficient" leaves ℂ(s)-coefficients, and hypertranscendence over ℂ(s) says nothing over ℂ(s,ζ(s−1)). The PROVED part covers a subclass that does not contain the family's data; the NO-GO for the actual family is the ARGUED shifted case (difference-differential independence, citation unchecked). |

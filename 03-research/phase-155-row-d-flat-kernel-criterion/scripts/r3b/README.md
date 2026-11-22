@@ -2,7 +2,7 @@
 
 Phase 155, round 3B (`03-research/phase-155-row-d-flat-kernel-criterion/R155_024_ROUND3B_TWOPRIME_ENCLOSURES.md`).
 Orders: `R155_010 §5` and `R155_018 §4(iii),(iv)`.  Windows `T = 0.68` and `T = log 2`
-(contact set `{2,3}`, `A_T = 2.24882634`).  **Nothing here touches Paper 47 or `scripts/r3a`.**
+(contact set `{2,3}`, `A_T = 2.24882634`).  **Nothing here touches Paper 46 or `scripts/r3a`.**
 
 | file | what it is |
 |---|---|

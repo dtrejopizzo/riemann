@@ -47,7 +47,7 @@ No entry proves or refutes the **rule**. BARRIER_SOUND §Gap 2 proposes precisel
 New reason against the index: this memo deals with the logical status of the rule (what lem:transfer can exclude), not a new
 object. It does not retry any construction.
 
-Definitions verified against P47: lem:transfer (l.7734), cor:shape (l.9048), thm:noimport (l.9341), prop:WT (l.4358).
+Definitions verified against P46: lem:transfer (l.7734), cor:shape (l.9048), thm:noimport (l.9341), prop:WT (l.4358).
 
 ---
 
@@ -55,14 +55,14 @@ Definitions verified against P47: lem:transfer (l.7734), cor:shape (l.9048), thm
 
 **Def. O1.1.** A *channel* is a premise P about weight data a (the sequence that replaces Λ in the form 𝔞_T^a) that holds
 for a = Λ. Its *set of falsifiers* is 𝔉(P) := {a in the certified catalog : P(a) and bottom(𝔞_T^a|P_T) < 0 for some T}.
-The certified catalog of P47 / phase 200 is: DH (F_DH, rem:FDH), Epstein Q = x²+5y² (Lemma E, lem:shape-epstein), a_P and the
+The certified catalog of P46 / phase 200 is: DH (F_DH, rem:FDH), Epstein Q = x²+5y² (Lemma E, lem:shape-epstein), a_P and the
 modifications of (A) (lem:shape-del…scale), Beurling and the quartet models (lem:shape-quartet). The *theory* of P is
 𝔗(P) := {a : P(a)}.
 
 An *argument* A with premises 𝒫 = P₁ ∧ … ∧ P_k is a deduction «∀a: 𝒫(a) ⇒ bottom(𝔞_T^a|P_T) ≥ c(T)». It is valid as a
 deduction in 𝔛 = 𝔗(𝒫) = ∩𝔗(P_i).
 
-lem:transfer (P47 l.7734) says: if q₀ = q_ζ and some q₁ ∈ 𝔛 have 𝖯 and bottom(q₁) < 0, no deduction
+lem:transfer (P46 l.7734) says: if q₀ = q_ζ and some q₁ ∈ 𝔛 have 𝖯 and bottom(q₁) < 0, no deduction
 «𝖯 ⇒ bottom ≥ 0» is valid in 𝔛.
 
 ## 2. Composition theorem: exact status
@@ -75,7 +75,7 @@ lem:transfer (P47 l.7734) says: if q₀ = q_ζ and some q₁ ∈ 𝔛 have 𝖯 
 (b) If for each i there exists F_i ∈ 𝒞 with ¬P_i(F_i), and 𝒞 ⊂ {F_1,…,F_k} ∪ {a : ∃ i, ¬P_i(a)}, then ∩𝔉(P_i) = ∅ and no
 instance of lem:transfer with falsifiers from 𝒞 excludes A.
 (c) For any finite or countable catalog 𝒞 of weights distinct from Λ there exists a finite conjunction of channels true
-for ζ that excludes all of 𝒞. In the case of the P47 catalog, the minimal conjunction has two channels: E = «Euler product over ℕ with
+for ζ that excludes all of 𝒞. In the case of the P46 catalog, the minimal conjunction has two channels: E = «Euler product over ℕ with
 completely multiplicative coefficients of modulus ≤ 1» and F = «FE of degree 1, conductor 1, Γ_ℝ(s), simple pole at 1».
 
 *Proof.* (a) One direction is lem:transfer with q₁ = 𝔞^F for F ∈ ∩𝔉(P_i). For the other: if ∩𝔉 = ∅, no q₁ in the catalog
@@ -84,7 +84,7 @@ satisfies 𝖯 = 𝒫 with negative bottom, so the hypothesis of lem:transfer do
 concrete case: DH has no Euler product (violates E). Epstein has degree 2 due to the factor Γ_ℝ(s)Γ_ℝ(s+1) and conductor 20, and also has no
 Euler product because h(−20) = 2 (violates E and F). a_P, the modifications of (A) and Beurling have no FE of conductor 1 (violate F; if
 Beurling is taken with a hypothetical FE, the classification of §2.2 covers it). The quartet models **preserve** the FE and break E as a Dirichlet series over ℕ: their arithmetic side has an absolutely
-continuous part (P47 lem:shape-quartet, prop:shape-inputs(iv)). Hence they violate E. a_P preserves the comb over ℕ
+continuous part (P46 lem:shape-quartet, prop:shape-inputs(iv)). Hence they violate E. a_P preserves the comb over ℕ
 and breaks F (prop:shape-inputs(i)). [Corrected after INTEGRATION_O1_001: the previous version said the quartets violate F.] ∎
 
 ### 2.2 Unique model and the refutation
@@ -245,7 +245,7 @@ Prop. O1.C, Lemma O1.E) is PROVED. The inventory in §3 is ARGUED as a whole. Th
 > falsifier, and E (over ℕ) and F are mandatory, each for a different falsifier (quartets and a_P). The registered conjunctions chain (Prop. O1.C) and do not compose.
 > Φ200: PROVED piecewise (Φ200′); the class version is withdrawn.
 
-**Text for P47 sec:spec, after thm:noimport (new remark; thm:noimport does not change, because its (iv) already says «uses a premise
+**Text for P46 sec:spec, after thm:noimport (new remark; thm:noimport does not change, because its (iv) already says «uses a premise
 outside 𝔗₁», compatible with O1.D):**
 > \begin{remark}[conjunctions] Lemma~\ref{lem:transfer} excludes a deduction from $P_1\wedge\dots\wedge P_k$ only when one
 > falsifier satisfies every $P_i$. The barriers of this paper therefore exclude every proof whose sign-carrying inequality
@@ -256,7 +256,7 @@ outside 𝔗₁», compatible with O1.D):**
 > $\mathbb N$, to be among the inputs of that inequality. A use of one input only through an identity preceding the inequality does not count
 > (it is excluded by an abstract falsifier on the intermediate object).
 > \end{remark}
-(The remark cites only Hamburger, because KP has no bibitem in P47. Before integrating, the editor has to verify it against lem:shape-quartet and cor:shape(b) of P47 itself.)
+(The remark cites only Hamburger, because KP has no bibitem in P46. Before integrating, the editor has to verify it against lem:shape-quartet and cor:shape(b) of P46 itself.)
 
 **Entry for ROUTES-TRIED-INDEX (for the editor to add):**
 > - **O1_COMPOSITION_001 (phase 204p, O1): branch composition rule of Φ200 REFUTED as a barrier (PROVED; KP CITED).**

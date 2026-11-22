@@ -11,7 +11,7 @@ cross-correlations c_ij(u) by Gauss–Legendre exact for polynomials; 𝔞_∞ b
 c_ij(0)·∫_{2T}^∞K (thm:S(iii)), 200 Gauss nodes on [0, 2T] (integrand smooth after cancellation of the 1/u singularity); Gram cutoff
 10⁻¹³ (polynomial basis is ill-conditioned). Convergence: N = 14 vs 20 agree on μ₀ to 1.4·10⁻⁴ and on S_T(Λ) to 2.3·10⁻⁴ (absolute).
 The full-form Galerkin bottom on the same space (last column of the log) is an upper bound for λ_A(T) and is NOT resolved below ≈ 10⁻⁴
-(it reads −1.4·10⁻⁵ at T = 0.70, a basis artefact; the certified value there is positive, Paper 47 thm:log5A / Zhu to 0.8); it is quoted
+(it reads −1.4·10⁻⁵ at T = 0.70, a basis artefact; the certified value there is positive, Paper 46 thm:log5A / Zhu to 0.8); it is quoted
 only as a consistency check at T ≤ 0.6 (2.3·10⁻¹ at 0.40, 1.2·10⁻² at 0.50, 5.3·10⁻⁵ at 0.60). The (Ω₀) margins are 10²–10³ above this noise.
 
 ## Results (N = 20; S/margin = S_T(a) / 𝔞_T(φ₀))
@@ -34,7 +34,7 @@ only as a consistency check at T ≤ 0.6 (2.3·10⁻¹ at 0.40, 1.2·10⁻² at 
 | 1.10 | −0.637 | −0.657/+0.020 | −0.164/**−0.473** | +0.419/**−1.056** | −0.682/+0.045 | −0.908/+0.270 | −0.662/+0.025 | −0.652/+0.015 | −2.178/+1.541 | −0.592/**−0.046** | −0.962/+0.325 |
 
 ## Reading
-* μ₀(T) crosses zero between T = 0.55 and 0.60 (consistent with Paper 47 thm:index/cor:Tarch: archimedean bottom positive on (0, 0.58], negative
+* μ₀(T) crosses zero between T = 0.55 and 0.60 (consistent with Paper 46 thm:index/cor:Tarch: archimedean bottom positive on (0, 0.58], negative
   from 0.60). From T = 0.55 on, S_T(Λ) < 0: (Ω₀) HOLDS for Λ on [0.55, 1.10] (NUMÉRICO), with margin 𝔞_T(φ₀) ∈ [0.016, 0.091], minimum 0.016 at
   T = 0.90 and no monotone trend (0.079, 0.042, 0.033, 0.028, 0.046, 0.038, 0.016, 0.017, 0.030, 0.026, 0.020): the single-vector test is
   comfortably positive, 10²–10³ above its numerical noise, in sharp contrast with λ_A(T) itself (10⁻⁸ at log 2).

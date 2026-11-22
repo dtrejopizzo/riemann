@@ -1,13 +1,13 @@
 # AUDIT_013 — Universal scales of the Mellin–Gauss map011
 
-2026-10-19. Independent check. Read LINK_013_NO_FIXED_SCALE and cross-checked P47 lem:testfam, thm:margin WITH ITS PROOF and cor:margin1.
+2026-10-19. Independent check. Read LINK_013_NO_FIXED_SCALE and cross-checked P46 lem:testfam, thm:margin WITH ITS PROOF and cor:margin1.
 **Verdict: PROVED the exclusion of every universal scale c>0 for U011, with the CITED input of the paper's bound on that explicit family. No exclusion of c(T), other maps or D.**
 
 ## 1. Corpus and change of class
 
 Consulted: index/grid/crossword, margin families and entries011–012. The new reason is valid: 012 treated one scale in one window; 013 evaluates the SAME map on the concrete tests responsible for the margin as T→∞. There is no attempt to repeat the discarded equality nor is a small infimum turned into information about an arbitrary vector. The computation of M(F_T) is indispensable and has been carried out.
 
-The CITED bound of P47 uses its certified data Z1/Z2 and the explicit formula. Here it only falsifies a domination of the auxiliary; it is not a source of positive sign for D nor is any external equivalence introduced.
+The CITED bound of P46 uses its certified data Z1/Z2 and the explicit formula. Here it only falsifies a domination of the auxiliary; it is not a source of positive sign for D nor is any external equivalence introduced.
 
 ## 2. Profile h and improper Riemann sums
 
@@ -35,7 +35,7 @@ G_T/T is a probability and its mass on |x|≤R is O_R(T^(−1/2)). Although G_T 
 
 ## 4. Response of the map and domain
 
-P(D) coincides term by term with the polynomial of P47. The term −γ₁²G_T/4 gives the positive main part of M; the two derivatives contribute o(T). Thus
+P(D) coincides term by term with the polynomial of P46. The term −γ₁²G_T/4 gives the positive main part of M; the two derivatives contribute o(T). Thus
 
     M(F_T)/T→γ₁²κ/8,
     liminf ||U_TF_T||²/T²≥γ₁⁴κ³/64>0.
@@ -46,7 +46,7 @@ To invoke the properties of the test it suffices to fix T≥1: k=ceil(21T/e)≥8
 
 Parity and cancellation of both exponential moments come from the polynomial P(±1/2)=0 and from the vanishing derivatives at the boundary. Hence Q_T=a_T on these tests with no omitted polar term.
 
-## 5. Bound for the ACTUAL family of P47
+## 5. Bound for the ACTUAL family of P46
 
 Step 6 of the proof of thm:margin bounds the ABSOLUTE SUM of zero contributions for the F of lem:testfam. Hence it also bounds |a_T(F)|, not only an infimum. Step 7 divides by the lower bound of ||F||². Cor:margin1 optimises precisely k=ceil(21T/e). Therefore it is valid to carry over from that proof, as CITED input,
 

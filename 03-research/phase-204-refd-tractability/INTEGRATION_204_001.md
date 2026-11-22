@@ -1,6 +1,6 @@
-# INTEGRATION_204_001 — Integration into Paper 47 of the phase-204 inputs
+# INTEGRATION_204_001 — Integration into Paper 46 of the phase-204 inputs
 
-Phase 204. Backup: `04-papers/47-row-d-dual-certificates/main_pre_204.tex`.
+Phase 204. Backup: `04-papers/46-row-d-dual-certificates/main_pre_204.tex`.
 Compilation: `pdflatex` ×2, 0 errors, 0 undefined references, **189 pages**.
 
 ## Summary (≤200 words)
@@ -11,10 +11,10 @@ S_{T,k} nonsingular). P1.A → paragraph after the proof of thm:sos, presented a
 → sentence in rem:polarcapdiag (PROVED; 9·10⁻⁸ NUMERICAL). Lemma WT → `prop:WT` after prop:polarcap, **PROVED also in
 infinite dimension**: a direct proof was found (decomposition 𝒟^par = 𝒬^par ⊕ ℝh_par + (a2)) that only uses
 0 ∉ spec(𝔄_par) and q ≠ 0, and which moreover proves 0 ∉ spec(𝔞|𝒬^par); Haynsworth remains as a finite-dimensional
-remark. Finding: the formula 𝔞_T(h_par)=1/q was already in P47 (prop:wh-polarres, with stronger hypotheses); prop:WT
+remark. Finding: the formula 𝔞_T(h_par)=1/q was already in P46 (prop:wh-polarres, with stronger hypotheses); prop:WT
 cites it and weakens it. Nothing was left out.
 
-## Verification (P47 conventions)
+## Verification (P46 conventions)
 - 𝔄 = full form 𝔞_T (archimedean + comb) on 𝒟^par_T without the Tate condition; χ_par, ℓ_par, ε_ev=+1, ε_odd=−1,
   𝒬^par = ker ℓ_par (l.≈4160). W_T|𝒟^par = 𝔄 + 2ε ℓ² (thm:parityschur(o)).
 - **WT**: g=𝔄⁻¹χ; 𝔞(g,·)=ℓ; kernel of 𝔞|𝒬 is {αg: αq=0}=0; h=g/q; n_−(𝔄)=n_−(𝔞|𝒬)+[q<0], n_−(W)=n_−(𝔞|𝒬)+[𝔤<0],

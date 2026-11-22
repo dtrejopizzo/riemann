@@ -2,8 +2,8 @@
 
 Status: PROVED; check R162_190: CORRECT WITH FIXES (fixes applied below).
 
-Notation of Paper 47: a_T is the truncated Weil form (eq:form), D_T its form domain, P_T the primitive
-subspace (A(F)=B(F)=0), λ_A(T)=inf{a_T(F): F∈P_T∩D_T, ‖F‖=1}. Paper 47 proves monotonicity
+Notation of Paper 46: a_T is the truncated Weil form (eq:form), D_T its form domain, P_T the primitive
+subspace (A(F)=B(F)=0), λ_A(T)=inf{a_T(F): F∈P_T∩D_T, ‖F‖=1}. Paper 46 proves monotonicity
 (lem:monoT) and continuity of the complete bottom λ_W (lem:contT), and explicitly does not claim
 continuity of λ_A because the dilation U_r does not preserve P_T. This note supplies it.
 
@@ -62,7 +62,7 @@ If RH fails, then by Paper 45 Thm 11.3 there is T_0 with λ_A(T_0)<0; λ_A≥0 o
 T_* := sup{T: λ_A(T)≥0} ∈ [log 2, T_0) satisfies λ_A(T_*)=0 by continuity and monotonicity, the
 bottom is attained (compact resolvent, proof of thm:O), and the kernel of H_{T_*} is nonzero,
 finite-dimensional and J-invariant, so it contains a parity vector. Thus the continuity hypothesis
-of Paper 47 lem:firstcontact can be removed.
+of Paper 46 lem:firstcontact can be removed.
 
 (Minimality: for T<T_*, λ_A(T)≥0; by strict monotonicity arguments not needed here. Note λ_A(T)>0 for
 T<T_* is NOT claimed; λ_A might vanish on an interval ending at T_*. The first-contact window used

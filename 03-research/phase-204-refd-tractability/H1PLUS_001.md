@@ -4,7 +4,7 @@ OPEN / NO-GO / NUMERICAL. Single file written.
 
 ## Summary (≤250 words)
 
-On Paper 47's own definitions (eq:W, lem:roughEF, prop:WT), for F real even on 𝒟_T:
+On Paper 46's own definitions (eq:W, lem:roughEF, prop:WT), for F real even on 𝒟_T:
 **𝔄_ev(F) = Z_T(F) − 2⟨F,χ_ev⟩²**, Z_T(F) := Σ_ρ Φ_F(ρ)² = W^ev_T(F) (PROVED, it is lem:roughEF read on the even sector).
 The truncated comb leaves no "tail": c_F(log n) = 0 for n ≥ e^{2T} (support), so "window comb" = "full comb", and no
 boundary term appears: the killing κ of rem:ext-killing(i)/thm:A is an internal rewriting of the archimedean term, not an
@@ -38,7 +38,7 @@ grep in `05-meta-and-planning/ROUTES-TRIED-INDEX/README.md` and in phase 204:
 
 ## 1. Exact structure of 𝔄_ev on the window
 
-### 1.1 Definitions (P47, verified against the text)
+### 1.1 Definitions (P46, verified against the text)
 - eq:Aform / l.118–135: 𝔞_T(F) = (1/2π)∫ m|F̂|² − Σ_{n∈N_T} v_n c_F(log n), c_F(u) = ∫F(t)F(t+u)dt (autocorrelation
   form), 𝒟_T = {F ∈ L²(I_T): ∫log(2+|τ|)|F̂|² < ∞}.
 - eq:W: W_T(F) = 𝔞_T(F) + 2Re(A(F)\overline{B(F)}), A(F) = ∫F e^{t/2}, B(F) = ∫F e^{−t/2}.

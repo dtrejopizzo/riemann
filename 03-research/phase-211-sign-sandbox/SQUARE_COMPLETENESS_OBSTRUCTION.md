@@ -60,7 +60,7 @@ This is the endpoint whose quotient with respect to zeta appears in R163_102. It
 
 Moreover F_square has a simple pole at s=1 with residue 2/3, NOT residue 1. It is not claimed that it possesses the functional equation of the original member. The obstruction must not be used for classes that impose those additional hypotheses without checking whether they contain the example.
 
-The tested form is EXACTLY the primitive fixed-archimedean-background form of ROUND_007_C/Paper47, with contact weights
+The tested form is EXACTLY the primitive fixed-archimedean-background form of ROUND_007_C/Paper46, with contact weights
 
     v_n=2ell(n)/sqrt(n).
 

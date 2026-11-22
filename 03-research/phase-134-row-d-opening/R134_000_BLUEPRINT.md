@@ -6,7 +6,7 @@ accepted (phase 133); rows A, B, C carry `WEIL-STRENGTH-COMPLETE` on the
 declared carrier; row D opens with the boxed target of the three papers.
 Protocol: construction → audit + review audit → repair rounds →
 review decision by grep-verified record. **No label for row D is expected from
-this campaign.** Its deliverable is Paper 46 (skeleton and first theorems),
+this campaign.** Its deliverable is Paper 47 (skeleton and first theorems),
 with every statement labelled, and a record of what is refuted.
 
 ## 0. The target, and what is already known about its shape
@@ -129,7 +129,7 @@ illustrate and falsify; they prove nothing.
 
 ## 4. Deliverables
 
-`04-papers/46-intersection-frame-defect/archive/main.md` (Paper 46 skeleton: §0 target and
+`04-papers/47-intersection-frame-defect/archive/main.md` (Paper 47 skeleton: §0 target and
 negatives; §1 conventions imported by number from Papers 43–45; §2 contract
 D-H / D-E from PLAN §8 and P122_D_SPECIFICATION with acceptance test §6; §3
 D.1; §4 D.2; §5 D.3; §6 D.4; §7 D.5; §8 external inputs; §9 what is open, in

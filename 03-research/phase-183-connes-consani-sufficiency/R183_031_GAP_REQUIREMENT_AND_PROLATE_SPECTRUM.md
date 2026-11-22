@@ -1,7 +1,7 @@
 # R183.031 — Gap requirement and prolate spectrum: theorem, source, and NO-GO
 
 Input: R183.021, 022, 024, 026, 027, 028. Sources: Connes–Moscovici,
-PNAS 119 (2022) e2123174119 (local PDF, 7 pp.); CCM 2310.18423v2 (local tex); Paper 47
+PNAS 119 (2022) e2123174119 (local PDF, 7 pp.); CCM 2310.18423v2 (local tex); Paper 46
 (thm:Z, thm:finZ). Numerics: a single sanity check (scratchpad, §3.3). Neither RH nor the
 closure of D is claimed.
 
@@ -28,7 +28,7 @@ closure of D is claimed.
   Bonami–Karoui-type estimate is modulation-invariant, because it depends only on
   |I|·|J|. Hence it cannot distinguish the gap (−γ₁, γ₁) from a band of equal length containing
   zeros. The only source datum distinguishing bands is the prime part of m_{S(T)}. Its smoothing at
-  window resolution is, by the explicit formula (Paper 47 thm:Z), exactly the sum over
+  window resolution is, by the explicit formula (Paper 46 thm:Z), exactly the sum over
   zeros. Proving the gap property for an admissible P_T is equivalent to proving one-sided
   inequalities for Σ_γ ŵ(τ−γ). That is Theorem Z's certificate, which is ⟺ RH.
   **The gap property is not separable from D.**
@@ -210,7 +210,7 @@ Slepian, and Bonami–Karoui count eigenvalues of time–frequency concentration
 * The only source ingredient breaking modulation invariance is the prime part Σ_p σ_p(s log p) of
   m_S.
 
-**Proposition 3.1 (NO-GO, PROVED given Paper 47's thm:Z [CITED]).** Let P_T ≥ 0 be a multiplier
+**Proposition 3.1 (NO-GO, PROVED given Paper 46's thm:Z [CITED]).** Let P_T ≥ 0 be a multiplier
 built from source data. Suppose its positivity is proved from the source and that
 Theorem 1's gap property is deduced from a bound on the density of the form
 
@@ -226,7 +226,7 @@ Conversely, no bound on ρ_T not going through m_S's prime part distinguishes K 
 
 **Conclusion of §3.2.** Proving the gap property for an admissible P_T, from source data,
 is proving one-sided inequalities on the smoothed sum over zeros. This is **localizing
-zeros** in Paper 47's sense. **NO-GO** for the prolate route as an independent mechanism.
+zeros** in Paper 46's sense. **NO-GO** for the prolate route as an independent mechanism.
 
 ### 3.3 P_C = T_{I_T}((m_S − C)_+) and lemma (L-C)
 
@@ -252,7 +252,7 @@ zeros** in Paper 47's sense. **NO-GO** for the prolate route as an independent m
   * (⇒) C_T is free as a function of T, so (L-C) only requires T_{I_T}(min(m_S, C_T))
     ≥ −(bounded) on ker ℓ. By Thm 4.3 this is equivalent to E_S ≥ γ on K, i.e. to D_T.
   * Theorem 1 adds that fixed C is impossible, CONDITIONAL (MV_J).
-* **Relation to Paper 47.**
+* **Relation to Paper 46.**
   * The TK ceiling and thm:finZ say the same thing on the zero side: no finite set of
     zeros carries a flat certificate.
   * Here: no density with fixed Landau mass outside the zeros is admissible.

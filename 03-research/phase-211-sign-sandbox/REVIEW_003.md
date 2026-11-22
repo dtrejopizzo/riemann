@@ -1,6 +1,6 @@
 # Review 003 — ROUND_002_D, ROUND_002_E, ROUND_002_A, ROUND_002_B, ROUND_003_B
 
-Reference objects: STATEMENT_001.md and Paper 47 (04-papers/47-row-d-dual-certificates/main.tex). The statement (★) is
+Reference objects: STATEMENT_001.md and Paper 46 (04-papers/46-row-d-dual-certificates/main.tex). The statement (★) is
 treated only through the definitions of STATEMENT_001 and its internal rewritings (§5 there); no equivalence with any other
 statement is used. Verdicts: CONFIRMED (key step named) / REFUTED / DOWNGRADE. Line numbers refer to the memo under review.
 
@@ -20,14 +20,14 @@ should cite this as the real-case alternative, but nothing is lost.
 in I_T; A(G(· − log 2)) = √2·A(G), B(G(· − log 2)) = B(G)/√2; c_{F_θ}(log 2) = e^{iθ}‖G‖² with the convention
 c_F(u) = ∫F(t) conj F(t − u) dt (the memo's "e^{∓iθ}" hedge at l.156 is harmless: only cos θ enters).
 (iii) Finiteness, concavity, attainment, max_c Φ_T = Θ_T. CONFIRMED. Key steps: Φ_T ≥ λ_arch − |c|π_T needs λ_arch(T) > −∞,
-true since m is bounded below (Paper 47 lem:mbounds); Φ_T → −∞ at ±∞ from (ii); a finite concave function on ℝ tending to
+true since m is bounded below (Paper 46 lem:mbounds); Φ_T → −∞ at ±∞ from (ii); a finite concave function on ℝ tending to
 −∞ at both ends attains its maximum. The separation argument (l.164–168) is correct: β = 0 forces αp ≥ γ ≥ 0 on W_T,
 contradicting (ii); β > 0 gives Φ_T(−α/β) ≥ θ. Θ_T < ∞ is correctly obtained from convexity (segment meets p = 0).
 (iv) J_T closed bounded interval; non-empty iff Θ_T ≥ 0. CONFIRMED (superlevel set of a continuous concave function tending to
 −∞; non-emptiness uses that the max is attained, so Θ_T = 0 gives J_T = {c*_T} ≠ ∅).
 (v) Scaling identities and the empty comb. CONFIRMED (immediate).
 
-Corollary 2. CONFIRMED, with the input λ_arch(T) < 0 for T ≥ 0.60 CITED from Paper 47 (not re-proved in the memo; label
+Corollary 2. CONFIRMED, with the input λ_arch(T) < 0 for T ≥ 0.60 CITED from Paper 46 (not re-proved in the memo; label
 should read PROVED given the CITED input). "Θ_T = λ_A(T) iff 1 is a maximiser" is correct.
 Corollary 3(a),(b). CONFIRMED (key step: inf(X − Y) ≥ inf X − sup|Y|). The remark that π_T grows makes (b) useless as a route
 is accurate.
@@ -126,10 +126,10 @@ Section 1 corrections (l.25–37) are NUMERICAL and not re-checked here.
 
 ## 4. ROUND_002_B — Lemma 1.1, Proposition 1.2, Theorems 2.1, 2.2, Proposition 2.3, Theorem 3.1
 
-Conventions against Paper 47. def:ext (main.tex l.9867–9902) defines 𝒲[Ψ] = (1/2π)∫m|Ψ̂|² − Σ_{n≥2} v_n c_Ψ(log n)
+Conventions against Paper 46. def:ext (main.tex l.9867–9902) defines 𝒲[Ψ] = (1/2π)∫m|Ψ̂|² − Σ_{n≥2} v_n c_Ψ(log n)
 + 2A(Ψ)B(Ψ), v_n = 2Λ(n)/√n, over all n. The memo's 𝒫_w = Σ_q 2w(q)q^{−1/2}⟨Ψ̌, Ψ̌(· + log q)⟩ (l.69) equals Σ_q v^w_q c_Ψ̌(log q)
 by translation invariance, so it matches def:ext. The phrase "comb 2w(q)q^{−1/2} at ±log q" (l.9) is ambiguous: with weight
-2w(q)q^{−1/2} at both ±log q the comb would be doubled; Paper 47 lem:ext-cell(ii) (l.10276) writes w(q)q^{−1/2}(δ_{log q} +
+2w(q)q^{−1/2} at both ±log q the comb would be doubled; Paper 46 lem:ext-cell(ii) (l.10276) writes w(q)q^{−1/2}(δ_{log q} +
 δ_{−log q}). The formula actually used (l.69) is the correct one; fix the wording at l.9. Consistency check: on a single cell
 [J, J+1] the memo's 𝒟_w gives 2‖ϱ‖²Σ_{n≤J}W(n)/n, exactly lem:ext-cell(ii).
 
@@ -154,7 +154,7 @@ Proposition 2.3. ARGUED as labelled (remainder in thm:ext-layer(iv) open; thm:ex
 memo says, cf. main.tex l.10411–10446 which requires a fixed cut X and amplitudes vanishing at integers).
 §2.4 and "𝐓₀ ⪰ I". The matrix statement 𝐓₀ − I = Toeplitz[(2/π)(H∘sec − 1)] ⪰ 0 is CONFIRMED ((2/π)∫_0^{π/2}cos 4dθ dθ = δ_{d0},
 H ≥ 1). Its identification as the leading form log N·𝐓₀ of 𝒩^w is ARGUED (depends on the operator form of lem:ext-osc for
-truncated dilates). The "Correction to K3" is therefore ARGUED, not PROVED; consistent with Paper 47 thm:ext-multi, which
+truncated dilates). The "Correction to K3" is therefore ARGUED, not PROVED; consistent with Paper 46 thm:ext-multi, which
 gives only the lower bound log 2N.
 Theorem 3.1. (a) CONFIRMED but it is a decomposition, not a monotonicity statement. (b) The monotonicity of Q₁ in w: DOWNGRADE
 to CONDITIONAL on Theorem 2.2, Proposition 2.3 and the §2.4 expansion (all ARGUED); the memo conditions only on 2.3 (l.183,

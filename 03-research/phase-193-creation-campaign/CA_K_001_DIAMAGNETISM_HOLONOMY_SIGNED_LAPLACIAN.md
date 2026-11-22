@@ -31,7 +31,7 @@ gives α = μ̂ with μ ≥ 0 finite, and uniqueness of Fourier–Stieltjes tran
 ĉ₀(0) = F̂₀(0)² = (¼|ĝ(0)|⁴)² > 0), contradiction. So there are d₁, …, d_K and real s with Σs_js_kα(d_j − d_k) < 0; the approximation
 m_j = ⌊e^{C+d_j}⌋ of the proof of prop:AM(i) and continuity of α give a negative value of Arch_M for M ≥ max m_j. (b) Diagonal of Div and
 Near vanish (prop:AM(iii)); (Div_M)_{21} = v₂/2 > 0. (c) Rayleigh: λ_min(𝔸_M) ≤ s₀^T𝔸_Ms₀ = λ_min(Arch_M) − Comb_M(s₀); λ_min(𝔸_M) ≥ 0 by premise. ∎
-(c) is the integer-picture form of P47 l. 196 ("beyond the threshold the primes supply positivity"). It is a necessary property and a
+(c) is the integer-picture form of P46 l. 196 ("beyond the threshold the primes supply positivity"). It is a necessary property and a
 falsifier test; under the premise it holds. Not computed (not strictly necessary).
 
 ## 2. Diamagnetism in the t-picture (K8, K9)
@@ -53,7 +53,7 @@ Beurling–Deny, Perron–Frobenius) is a lower bound by λ₀(T;Λ) < 0 for T l
 λ_A(T;a) ≥ λ_A(T;Λ) (|a| ≤ Λ) holds; the primes *raise* the constrained bottom.
 *Proof.* (i) First inequality: CA_I_001 Prop 1.2(a) (0 ≤ Λ). For F_T(t) = φ(t/T), φ ∈ C_c^∞(−1,1) real nonzero, |F̂_T|²/‖F_T‖² concentrates at
 τ = 0 at scale 1/T and m is continuous with m(0) = C₀, so arch_T(F_T)/‖F_T‖² → C₀. (ii) λ_A(T;0) = λ^{∞,P}_min(T) < 0 for T > T*_{∞,P}, and
-T*_{∞,P} ≤ 0.60 (P47 cor:Tarch and l. 2425–2426, PROVED there); λ_A(T;Λ) > 0 for T ≤ 0.8 (Zhu, CITED via P47 l. 143). ∎
+T*_{∞,P} ≤ 0.60 (P46 cor:Tarch and l. 2425–2426, PROVED there); λ_A(T;Λ) > 0 for T ≤ 0.8 (Zhu, CITED via P46 l. 143). ∎
 *Reading (key question of the front).* "Is the archimedean Markov part the |couplings| version, so that diamagnetism gives
 λ_min(frustrated) ≥ λ_min(|couplings|)?" Answer: the direction of the diamagnetic inequality is correct (frustrated ≥ unfrustrated), but
 (1) in the t-picture the unfrustrated member is ζ itself, whose unconstrained bottom is negative, and the sign lives in the constraint
@@ -118,7 +118,7 @@ parity of the cycle length, not on the +/· structure. The +/· cycle is visible
 | item | REF-D | (B″) | O7 / O10 / O11 / O12 | [crit] | (R) | PR | sign content |
 |---|---|---|---|---|---|---|---|
 | Thm 1.2 | — | comb-generic (any 𝖡 > 0 near 0) | survive | void (rate −M) | (R)(3) | additive block only | NO-GO |
-| Prop 1.3 | (c) necessary property | (a) Γ-only (FE-gen) | (a) survives all | — | — | arch only | primes must pay (P47 l.196) |
+| Prop 1.3 | (c) necessary property | (a) Γ-only (FE-gen) | (a) survives all | — | — | arch only | primes must pay (P46 l.196) |
 | Thm 2.1 | — | holds with any comb in the role of Λ | survive | — | (R)(3) | twist of comb (·) × Lévy (+) side by side | wrong direction |
 | Thm 2.2 | — | uses Zhu/cor:Tarch at T = 0.7 | — | — | — | — | reversal PROVED: constrained problem anti-diamagnetic |
 | Prop 3.1–3.3 | — | yes (any continuous 𝖡) | survive | — | (R)(5) pattern | conjunction | NO-GO for switching-class criteria |
@@ -134,7 +134,7 @@ except Thm 2.2(ii) holds verbatim for Epstein/ζ_K forms (they change 𝖡 but n
    it removes Arch_M as a reference operator.
 3. *Thm 2.1 vs CA_I_001 Prop 1.2(a).* Prop 1.2(a) compares nonnegative combs (monotone); Thm 2.1 compares signed and complex twists
    with |a| ≤ Λ (diamagnetic). The extension is elementary; its use is Thm 2.2: the order reverses on 𝒫_T, so no diamagnetic route.
-4. *Thm 2.2(ii) uses certified values.* P47 cor:Tarch (PROVED in P47, interval arithmetic) and Zhu (CITED). No zero data.
+4. *Thm 2.2(ii) uses certified values.* P46 cor:Tarch (PROVED in P46, interval arithmetic) and Zhu (CITED). No zero data.
 5. *Prop 3.1 needs 𝖡 ≠ 0 on the closing edges.* Edges with 𝖡 = 0 are absent; the spanning-tree argument is unaffected.
 6. *Cor 4.3 constants.* The NO-GO uses only "lower bound ≤ ½ when ι ≤ 1"; exact constants in Atay–Liu / BSS are CITED, not re-derived.
    The structural statement (needed 1 − O(1/M) vs any bound with a fixed loss) is PROVED by Thm 4.2.

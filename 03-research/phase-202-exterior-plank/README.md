@@ -1,7 +1,7 @@
 # Phase 202 — The exterior table (★★): direct attempt
 
 ## Objective
-The only path not excluded by thm:noimport (P47 sec:spec) and Φ200: a DIRECT, analytic proof, specific to Λ, of the
+The only path not excluded by thm:noimport (P46 sec:spec) and Φ200: a DIRECT, analytic proof, specific to Λ, of the
 missing table from the phase 199 bridge — the exterior form over [prolate tail + rough correction, as ONE SINGLE object]
 dominates κμ^{−A}·leak, with the exact comb values (not norms). It is NON-uniform construction in the comb (h1 of
 CPOS_CLASS_001): the only infinite non-uniformity on record.

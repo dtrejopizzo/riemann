@@ -111,7 +111,7 @@ CERT_DH) and is not recomputed here.
 
 | X | T | #R_T | rank (min–max) | certified r₊ | I_T | sign of 𝔞_T^X in the window (battery) |
 |---|---|---|---|---|---|---|
-| Λ | ½log5 = 0.805 | 4 | 0–4 | = rank | 0 | ≥ 0 (certified ½log5, P47) |
+| Λ | ½log5 = 0.805 | 4 | 0–4 | = rank | 0 | ≥ 0 (certified ½log5, P46) |
 | Λ | 1.0 | 8 | 0–8 | = rank | 0 | ≥ 0 |
 | Λ | ½log15 = 1.354 | 22 | 0–22 | = rank | 0 | ≥ 0 (Mori μ = 15) |
 | Λ | 1.6 | 45 | 0–43 | = rank | 0 | (control) |

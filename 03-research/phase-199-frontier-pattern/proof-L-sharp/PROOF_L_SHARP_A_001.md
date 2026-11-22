@@ -19,7 +19,7 @@ decisive step is isolated and is OPEN; §6 shows that every step proved here is 
   residual identity, "falls on L81 unless the gluing term gives the source"), l.450 (MECH_001 + AUDIT_12), l.451
   (PROOF_L_SHARP_B_001), phase 197 BARRIER_EST_001, 06_ [opcalc]. Semiring principle (05 §"El signo tiene que venir
   del semianillo").
-- **Sources read:** MECH_001 §3 (Prop 3.1), AUDIT_199 (gauge falsifier, L′♯), Paper 47 eq:symbol/eq:form/eq:W,
+- **Sources read:** MECH_001 §3 (Prop 3.1), AUDIT_199 (gauge falsifier, L′♯), Paper 46 eq:symbol/eq:form/eq:W,
   lem:K, thm:A, lem:roughEF, def:W, subsec:finite; Guo (Zenodo 23297284) §2 (Lemmas 2.1–2.6, Cor 2.7), §3 (P1–P5),
   §4 (Lemmas 4.1–4.4, Thm 4.5, Rem 4.6), §6 (Lemmas 6.1–6.2, Rem 6.3), §10; Mori VII Theorem N, Rem 2.3; Mori VIII §2.
 - **Why not a retry.** C1 (l.447) proposed Guo's identity as a *gluing* source and was ranked low because it
@@ -37,12 +37,12 @@ f(0) = f̂(0) = 0 (Guo's class G_λ), f̂(ξ) = ∫f e^{−2πixξ}. r_f := f̂�
 leak(f) = ‖r_f‖² = 2∫_λ^∞|f̂|². Summation map (multiplicative) (Ef)(u) = u^{1/2}Σ_{n≥1} f(nu), u > 0, and in the
 log variable Φ_f(x) := (Ef)(e^x) = e^{x/2}Σ_n f(ne^x), x ∈ ℝ. Then Φ_f = 0 on [a,∞) (ne^x ≥ λ), Φ_f|_I = g is the
 window vector of MECH_001 §3 (Guo's U E_λ f), and Φ_f|_{(−∞,−a)} =: Ψ_f is the **exterior (aliasing) tail**. W_T is
-Paper 47's complete form; Guo's Q_{Wλ}[v] = ∫Θ_λ|Fṽ|² + ⟨v,Πv⟩ is W_T (⟨v,Πv⟩ = 2Re(AB̄), checked from Guo (2.4)
+Paper 46's complete form; Guo's Q_{Wλ}[v] = ∫Θ_λ|Fṽ|² + ⟨v,Πv⟩ is W_T (⟨v,Πv⟩ = 2Re(AB̄), checked from Guo (2.4)
 with A = ∫ve^{x/2}, B = ∫ve^{−x/2}; AUDIT_ZENODO §0, CITED). Ã is the associated operator (Guo Lemma 2.3).
 
 The full Weil distribution on functions Φ on ℝ (Guo (4.7)):
  WΦ(x) = b_∞Φ(x) + ∫_0^∞(2Φ(x)−Φ(x−t)−Φ(x+t))ν(t)dt − Σ_{q≥2}c_q(Φ(x−log q)+Φ(x+log q)) + ∫2cosh((x−y)/2)Φ(y)dy,
-with ν(t) = e^{−|t|/2}/(1−e^{−2|t|}) (Paper 47's K(|t|)/2), c_q = Λ(q)q^{−1/2}. For two functions Φ₁, Φ₂ with
+with ν(t) = e^{−|t|/2}/(1−e^{−2|t|}) (Paper 46's K(|t|)/2), c_q = Λ(q)q^{−1/2}. For two functions Φ₁, Φ₂ with
 disjoint supports J₁, J₂ and such that the integrals below converge absolutely, put
  𝒲(Φ₁,Φ₂) := ∫Φ̄₁ WΦ₂ = −∫∫Φ̄₁(x)Φ₂(y)ν(x−y)dxdy − Σ_q c_q∫Φ̄₁(x)(Φ₂(x−log q)+Φ₂(x+log q))dx + ∫∫Φ̄₁(x)2cosh((x−y)/2)Φ₂(y)dxdy
 (the b_∞ term and the 2Φ(x) term drop by disjointness). This expression is symmetric in (Φ₁,Φ₂) for real functions
@@ -50,7 +50,7 @@ disjoint supports J₁, J₂ and such that the integrals below converge absolute
 |Ψ(y)| ≤ Ce^{3y/2} put
  𝒲_ext[Ψ] := b_∞‖Ψ‖² + ½∫∫_{y,y'<−a}|Ψ(y)−Ψ(y')|²ν(y−y')dydy' − 2Re Σ_q c_q∫Ψ̄(y)Ψ(y−log q)dy + 2Re(A(Ψ)\overline{B(Ψ)}),
 A(Ψ) = ∫Ψe^{y/2}, B(Ψ) = ∫Ψe^{−y/2}: this is the complete Weil form of the half-line function Ψ (same expression
-as Paper 47 thm:A with the Lévy energy written as a double integral; absolute convergence: ν(y−y') ≤ 2/|y−y'| and
+as Paper 46 thm:A with the Lévy energy written as a double integral; absolute convergence: ν(y−y') ≤ 2/|y−y'| and
 Ψ Lipschitz give the Lévy term, Σ_q c_q q^{−3/2} < ∞ and |Ψ(y−log q)| ≤ Ce^{3y/2}q^{−3/2} give the prime term,
 e^{∓y/2}e^{3y/2} integrable at −∞ gives the pole term).
 
@@ -151,7 +151,7 @@ towards the lower bound.
 
 ## 4. What can be proved: the comb-generic tail
 
-Let 𝒜_T = S_λ = 2Σ_{q<μ}Λ(q)q^{−1/2} (Paper 47's total comb mass), C_∞ the constant of Guo Lemma 2.1
+Let 𝒜_T = S_λ = 2Σ_{q<μ}Λ(q)q^{−1/2} (Paper 46's total comb mass), C_∞ the constant of Guo Lemma 2.1
 (|Θ_∞(t) − log(2+|t|)| ≤ C_∞), K := C_∞ + 𝒜_T, and Ω_* := e^{K+λ+1} − 2. For g ∈ L²(I) let P_< g̃ be the part of
 the Fourier transform Fg̃ on |t| < Ω_* (Plancherel, F unitary).
 
@@ -222,7 +222,7 @@ distinguishes ζ from DH at this level), or the positivity Λ ≥ 0 on prime pow
 - **PROVED:** Thm 1.1 (half-line identity, incl. convergence), Prop 2.1 (gauge = radical, ℓ = dist²), Thm 3.1
   (reformulation (L_ext)), §3.2 (Mellin structure, truncation), Rem 3.3 (symbol identity), Lemma 4.1, Lemma 4.2,
   Cor 4.3 (L′♯ on 𝒯_* with A = 2), the table of §6.
-- **CITED:** Guo Lemmas 2.1–2.6, 4.2–4.4, Thm 4.5, Thm 1.6, (3.5), (P3); Paper 47 def of W_T; Mori Thm N (not
+- **CITED:** Guo Lemmas 2.1–2.6, 4.2–4.4, Thm 4.5, Thm 1.6, (3.5), (P3); Paper 46 def of W_T; Mori Thm N (not
   needed here).
 - **ARGUED:** dimension N_* of the finite block; prolate index K_* ≈ (2/π)Ω_*.
 - **NO-GO (class):** Bochner/C–S bounds of 𝒲_ext (TV-robust); Möbius inversion alone (N_018).

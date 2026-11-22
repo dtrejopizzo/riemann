@@ -68,7 +68,7 @@ fall into TRANSFER; none yields YES, because the missing hypothesis is the posit
 | 3 NG-A5 | TRANSFER K3 | Correct; the recorded reason ("finite stretch does not control ∀f") is a judgment, not a NO-GO. | TRANSFER ✓ |
 | 5 NG-B6 Turán | double TRANSFER/NO | See §0. | TRANSFER (K3) |
 | 6 CIR-5 | TRANSFER K7 | Correct for CIR-5; CIR-8 is FALSIFIED but it is "chaotic depth F3", with no D-only form → does not count as a NO for D. | TRANSFER ✓ |
-| 7 NG-D3 | TRANSFER + "NO as method" | **Debatable (a).** "Euler converges absolutely only for Re s > 1" is not an impossibility theorem: in the window the prime part is finite (p ≤ e^T) and needs no convergence. The relevant closure is W-lin (NO-GO for linear certificates, P47 rem:bar-lin), which is a different class. Mixing the two overstates the case. | TRANSFER (the "method NO" only holds within W-lin) |
+| 7 NG-D3 | TRANSFER + "NO as method" | **Debatable (a).** "Euler converges absolutely only for Re s > 1" is not an impossibility theorem: in the window the prime part is finite (p ≤ e^T) and needs no convergence. The relevant closure is W-lin (NO-GO for linear certificates, P46 rem:bar-lin), which is a different class. Mixing the two overstates the case. | TRANSFER (the "method NO" only holds within W-lin) |
 | 8 ES-13 | TRANSFER K4 | Correct; also README l.521(a): Fejér–Riesz over 𝒬_μ NO-GO (symbol null by FE). F does not cite it: that NO-GO is about a different object (𝒬_μ), it does not close K4 on W_T. | TRANSFER ✓ (cite l.521) |
 | 9 ES-16 | TRANSFER + NO | Conrey–Li falsifies *concrete dB certificates*, not the Herglotz class. | TRANSFER ✓ |
 | 11 ES-19 | TRANSFER | duplicate of #9. | TRANSFER ✓ |

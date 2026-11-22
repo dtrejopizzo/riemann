@@ -9,7 +9,7 @@ Data in `CALIB_001_data/`:
 ## 0. Conventions and precision
 - **Basis.** s_k(x) = sin(πk(x+T)/2T), with k = 1…N, normalized by √T. The even sector is odd k and the odd sector, even k.
 - **Sizes.** N(T) = ⌈2Tt₀/π⌉ − 1, with t₀ = 6.28983598883690. N(T), 2N and 4N were used.
-- **Archimedean (P47 eq:Aform, Lévy form).** 𝔪 = (C₀ + κ_T)·c(0) + ∫₀^{2T}(c(0) − c(u))K(u)du.
+- **Archimedean (P46 eq:Aform, Lévy form).** 𝔪 = (C₀ + κ_T)·c(0) + ∫₀^{2T}(c(0) − c(u))K(u)du.
   - ζ: C₀ = ψ(¼) − log π.
   - Epstein: its own Γ_ℝ(s)Γ_ℝ(s+1), conductor 20 and K = 1/sinh(u/2).
   - a_P (P = {2}): the archimedean of ζ.

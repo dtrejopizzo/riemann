@@ -1,6 +1,6 @@
 # AUDIT_195_3 — audit of INV_S_001 and INV_T_001 (phase 195)
 
-Checked against Paper 47 main.tex: def:PD (l.622), prop:weak, thm:D1, def:W (l.1179), thm:Z (l.1194), thm:A (l.398), thm:margin + cor:margin1 (l.3485–3534), prop:env, sec:spec / lem:spec-collapse (l.8941–8954), Introduction l.142–166 (thm:log5A); INV_R_001 (R1) and AUDIT_195_2.
+Checked against Paper 46 main.tex: def:PD (l.622), prop:weak, thm:D1, def:W (l.1179), thm:Z (l.1194), thm:A (l.398), thm:margin + cor:margin1 (l.3485–3534), prop:env, sec:spec / lem:spec-collapse (l.8941–8954), Introduction l.142–166 (thm:log5A); INV_R_001 (R1) and AUDIT_195_2.
 
 ## (a) T1 gauged identity — VERIFIED; "exactly (ν,β) of def:PD" — CORRECTED
 - Green: Δ|f|²=4|f′|² for holomorphic f, outward normals, decay in τ ⇒ ∫_{½}∂_σ|f|² = ∫_{σ_1}∂_σ|f|² − 4𝓓(f). Subtracting for f=I_2Φ, I_1Φ and using |I_1|=|q|=1 on the line gives (T1) with the stated constants. PROVED (holomorphy of q is not even needed for the identity itself).

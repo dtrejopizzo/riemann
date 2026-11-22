@@ -1,7 +1,7 @@
 # INV_A_001 — The arithmetic Lévy structure: one object, atoms + Γ_ℝ density, coupled by reflection
 
 Track A, phase 194. Labels: DEFINITION / PROVED / CITED / CONJECTURE / HEURISTIC / OPEN.
-Pen and paper. **No negative value for ζ found or certified.** Notation of CA_I_001 §0 and P47 (μ_T = c_Tδ₀ + K du − Σ v_nδ_{log n},
+Pen and paper. **No negative value for ζ found or certified.** Notation of CA_I_001 §0 and P46 (μ_T = c_Tδ₀ + K du − Σ v_nδ_{log n},
 v_n = 2Λ(n)n^{−½}, 𝒫_T = {∫F e^{±t/2} = 0}).
 
 ## 0. The observation that makes the two data one
@@ -99,7 +99,7 @@ principle for the harmonic H on the half-strip ½ < σ < 1 restricted to |F̂|²
 but the boundary σ = ½ carries the singular part, whose sign is the question). Gap G3: the window localisation (supp F ⊂ [−T,T])
 is not preserved by the Poisson family in τ; the damped forms live on all of L² — need the restriction to 𝒫_T to commute with
 subordination (OPEN; plausible via the semigroup property P_ε P_η = P_{ε+η} only on the spectral side).
-Retry flag: Step 3 is the Lévy rewriting of P47 Theorem Z ("one-sided smoothing"); the new elements are Thm 2 (rigidity) and the
+Retry flag: Step 3 is the Lévy rewriting of P46 Theorem Z ("one-sided smoothing"); the new elements are Thm 2 (rigidity) and the
 subordination/parity reading Prop 4.2–4.3.
 
 ## 6. Status

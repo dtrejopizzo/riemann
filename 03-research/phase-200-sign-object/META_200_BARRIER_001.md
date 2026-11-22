@@ -28,7 +28,7 @@ dies.
 
 ### 1.1 Setting
 
-Fix μ ≥ 5, T = log μ (Paper 47's exterior convention), λ the window parameter. 𝒟 = exterior domain; r ↦ 𝒲[r] the
+Fix μ ≥ 5, T = log μ (Paper 46's exterior convention), λ the window parameter. 𝒟 = exterior domain; r ↦ 𝒲[r] the
 form (★★) (eq:ext-starstar), ℓ(r) the leak. By A.1 (PROVED given Guo L4.4; AUDIT_200_SPEC_003) the exterior-summation
 radical is the gauge 𝒢_T, and 𝒬_μ := L²(λ,∞)/𝒢̄_T with norm ℓ/2. L′♯ (in its exterior form, prob:ext-L) is: 𝒲 ≥ −C μ^{−A}
 dist² …; for this memo the qualitative form suffices: "𝒲 descends to 𝒬_μ and is ≥ 0 there at the leak scale".
@@ -97,7 +97,7 @@ can choose f♯ as a canonical representative and apply the prime-side formula: 
 𝓛_lin (phase 197). Then exactly one of the following holds:
 1. **comb-generic**: 𝒮 contains a falsifier f ∈ {a_P, cΛ (c≠1), 𝒫 Beurling, DH} with 𝒲_f < 0 at some r with ℓ(r)
    at leak scale; 𝔐 does not decide;
-2. **dual certificate**: Φ ∈ 𝓛_lin, and then its value is bounded by λ_P (thm:D1) — it gives nothing beyond Paper 47;
+2. **dual certificate**: Φ ∈ 𝓛_lin, and then its value is bounded by λ_P (thm:D1) — it gives nothing beyond Paper 46;
 3. **REF-D**: Φ's statement restricted to Λ is "𝒲 ≥ 0 on 𝒬_μ (at leak scale)", i.e. L′♯ itself.
 
 *Proof.* By the channel lemmas, each channel is either (a) constant on quotient fibers and common to every comb
@@ -189,7 +189,7 @@ with θ₀ > 0 independent of μ?**
 - Datum: K3.1 exact at μ=15; β_μ ≤ C/log μ in general (B1_FLAT).
 - If **yes**: on the smooth sector the leak transports via ι without loss; combined with K3.1 and the bridge ι (which
   preserves 𝒲), it gives induction in μ restricted to the sector where the extremal lives; the residual stays in the
-  oscillating sector, which is where E1 must act. A comb-free tool, publishable in Paper 47.
+  oscillating sector, which is where E1 must act. A comb-free tool, publishable in Paper 46.
 - If **no**: induction in μ dies even on the smooth sector (NO-GO PROVED); the base case μ ≤ 15 (Mori) stops being
   propagable by any leak-transport argument and must be recorded in the index.
 
@@ -251,7 +251,7 @@ Final labels: M200 PROVED (subclass) / ARGUED (complete class). L′♯ OPEN. Ro
 
 ## Addendum round 15: Φ200, Φ.12, Φ.14, C-𝔖 (editor, round 16)
 
-Source: SPEC_SIGN_OBJECT_006 §B–§D. Checks made against P47 (l.112 v_n = 2Λ(n)/√n; l.121 P_T = {A = B = 0};
+Source: SPEC_SIGN_OBJECT_006 §B–§D. Checks made against P46 (l.112 v_n = 2Λ(n)/√n; l.121 P_T = {A = B = 0};
 lem:K/eq:m; thm:A eq:Aform; def:W/eq:nuw; lem:shape-epstein).
 
 ### A1. Theorem Φ200 (statement)
@@ -265,7 +265,7 @@ data (C-data). Labels by piece: Φ.1, Φ.5, Φ.6, Φ.7, Φ.8, Φ.10 PROVED; Φ.2
 
 ### A2. Φ.12 transfer additivity — verified, PROVED
 Statement: for L = L₁L₂ (in particular ζ·L′ with L′ entire) and F ∈ P_T, 𝔞_T^{L₁L₂}(F) = 𝔞_T^{L₁}(F) + 𝔞_T^{L₂}(F).
-Verification against P47:
+Verification against P46:
 1. *Archimedean.* eq:m: m(τ) = Re ψ(¼ + iτ/2) − log π = 2Re(Γ_ℝ′/Γ_ℝ)(½+iτ), i.e. m is the real part of the
    logarithmic derivative of the Γ factor with a ×2 normalization. For Γ_L = ∏Γ_ℝ(s+μ_j) the logarithmic derivative is
    the sum, so m^L = Σ_j m_{μ_j}. By thm:A, C₀ and the kernel K are linear in m (C₀ = m(0), K the Lévy measure of
@@ -280,12 +280,12 @@ Verification against P47:
    and it is null. L′ entire ⇒ total order = that of ζ. P_T is the same for every factor (moment conditions e^{±t/2},
    only T).
 5. *Multiplicative constants* (e.g. the ½ or w of the completion) do not touch the logarithmic derivative.
-Subtlety recorded: P47 defines the window form of a general L only descriptively (in lem:shape-epstein); Φ.12 uses
+Subtlety recorded: P46 defines the window form of a general L only descriptively (in lem:shape-epstein); Φ.12 uses
 that definition, now made explicit in rem:shape-additive. No other normalization or sign subtleties.
 **Correct consequence (one direction):** for D ∈ 𝒟₁ (h(D) = 1), 𝔞^ζ ≥ 0 ∧ 𝔞^{L(χ_D)} ≥ 0 on P_T ⟹ 𝔞^{ζ_K} ≥ 0. The
 converse does NOT follow (𝔞^{L(χ_D)} has no controlled sign). Corollary Φ.12′ (no degree change by product with ζ
 gives information about the sign of 𝔞^ζ): ARGUED, as in SPEC_006.
-**Integration:** P47 rem:shape-additive (after lem:shape-epstein), backup main_pre_phi12.tex, pdflatex 0 errors, 187 pp.
+**Integration:** P46 rem:shape-additive (after lem:shape-epstein), backup main_pre_phi12.tex, pdflatex 0 errors, 187 pp.
 
 ### A3. Φ.13 Łoś dichotomy — ARGUED (Łoś CITED)
 (a) ∗𝒲 ≥ 0 ⟺ 𝒲_μ ≥ 0 for 𝒰-almost every μ (branch 2). (b) Normalization by the leak ⇒ K3's Γ-limit (branch 1).

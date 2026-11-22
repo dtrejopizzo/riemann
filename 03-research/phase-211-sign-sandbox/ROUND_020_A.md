@@ -11,7 +11,7 @@ neighbourhood of 1; better, from a canonical (Λ-free) section on which it holds
 ## 0. Corpus check
 Read: ROUND_019_B (Prop 1.1, Cor 1.2, Thm 2.1, Cor 2.2–2.3, the OPEN (ii_s)), ROUND_018_B (Lemma 1.1, c-scan on prolate
 representatives), ROUND_001_B (Thm 1.1 radical lemma, Prop 1.4–1.5), ROUND_016_B (ℓ_g), phase 199 proof-L-sharp MM_001
-("lossless loop; passivity margin = W_T itself"), Paper 47 prop:ext-gauge, prob:ext-L, prop:ext-consol; index rows
+("lossless loop; passivity margin = W_T itself"), Paper 46 prop:ext-gauge, prob:ext-L, prop:ext-consol; index rows
 P211-18B, P211-19B. What differs from the indexed attempts: 19B closed comb-robust inequalities on the WHOLE class of
 admissible tails; it left open the gauge-fixed version (ii_s). This memo (a) settles the existential version ("some
 representative") completely, by a pure-math argument, and (b) measures the Λ-free sections that (ii_s) could use. No

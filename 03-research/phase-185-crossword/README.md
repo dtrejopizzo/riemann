@@ -1,7 +1,7 @@
 # Phase 185 — Filling in the crossword
 
 Goal: starting from CROSSWORD-TO-D (05-meta), advance square by
-square with real gains, documenting every step worth entering into Paper 47.
+square with real gains, documenting every step worth entering into Paper 46.
 Starting square: **O166.802.1** (circularity of R166_802 only PROVED for a test and
 power families; ARGUED for multiscale non-linear B). Two sides: barrier (extend
 the circularity: new theorems) and positive (a B outside the proved classes).
@@ -13,7 +13,7 @@ the circularity: new theorems) and positive (a B outside the proved classes).
 | R184_094 | audit of R184_016: A1 local E1 (sandwich); "single square" only on route A |
 | R185_001 | finite-dimensional circularity PROVED (Lemmas 2–4, Thm 5 M1/M2, Thm 6); residues ρ1 (non-power infinite families), ρ2 (non-convex with zero integrality), ρ3 (uniformity of K*) |
 | R185_002 | integrality probe NO-GO; Thm C (convexity/solidity ⟹ blind to W-sieve) and Thm F (closure under deletion ⟹ does not exclude) PROVED; Conj G: what remains must be non-convex, non-counting, sensitive to deletion, zero-free |
-| Paper 47 | DRAFT_SECTION_INERTIA_BARRIERS + CHECK_TABLE (in progress) |
+| Paper 46 | DRAFT_SECTION_INERTIA_BARRIERS + CHECK_TABLE (in progress) |
 
 ## Round 2
 
@@ -27,10 +27,10 @@ Status: D OPEN. The gains are barrier theorems; none gives a sign.
 
 ## Round 2 results
 
-* R185_091: audit of 001/002. FATAL: Thm D (002) false → ARGUED. MAJOR: Thm 5(b) closure; Cor 7 "excludes W"; Prop A; "Thm F ⇒ E1". Ready for Paper 47: Lemmas 2–4, Thm 5(a), Thm 6, Thm C(i)(ii), core of Thm F.
+* R185_091: audit of 001/002. FATAL: Thm D (002) false → ARGUED. MAJOR: Thm 5(b) closure; Cor 7 "excludes W"; Prop A; "Thm F ⇒ E1". Ready for Paper 46: Lemmas 2–4, Thm 5(a), Thm 6, Thm C(i)(ii), core of Thm F.
 * R185_003: (ρ1) CLOSED on the bounded-type cone (M1 any 𝔉; M2 with 𝓡 compact or product topology). Residues (ρ1′) 𝓡 non-compact, (ρ1″) unbounded type = the terrain of (TC).
 * R185_004: U3 PROVED relative to 𝔐_Λ. Obs 4: on 𝒟, a ζ-type EF with conductor 1 identifies ζ alone (Thm R). Trichotomy (i) deletion ⟹ E1, (ii) completeness ⟹ identification, (iii) counting: (iii-a) CONDITIONAL (splice window), (iii-c) OPEN = boundary θ≤⅓ (positive ⟹ stronger than RH).
-* Paper 47: DRAFT_SECTION_INERTIA_BARRIERS.tex (4 pp., compiles) + CHECK_TABLE.md. Entering: thm:inertia-split, -B2, -nogo (generalized to bounded kernel), -finite, -quartet, -rank. Flagged: detection law. Held back: metric ξ, conditionals, semilocal objects, A1. Conflict: "Q ⟺ RH" of R184_015 vs cor:margin2(iii) → only under Max–Iso.
+* Paper 46: DRAFT_SECTION_INERTIA_BARRIERS.tex (4 pp., compiles) + CHECK_TABLE.md. Entering: thm:inertia-split, -B2, -nogo (generalized to bounded kernel), -finite, -quartet, -rank. Flagged: detection law. Held back: metric ξ, conditionals, semilocal objects, A1. Conflict: "Q ⟺ RH" of R184_015 vs cor:margin2(iii) → only under Max–Iso.
 
 ## Round 3
 

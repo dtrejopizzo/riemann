@@ -3,8 +3,8 @@
 Cross-check prior to any construction. Nothing new is derived or computed; what the corpus already
 contains is located and reported with its label. Notation of `ROUND_006_WINDOW_SPLIT_NUMERIC.md`: a_T = Arch − Π,
 Π(F) = Σ v_n c_F(log n), a_T^{(c)} = Arch − cΠ, Φ_T(c) = ground value of a_T^{(c)} on the unit sphere of P_T.
-Paths relative to the repository root; "211/" = `03-research/phase-211-sign-sandbox/`, "P47" =
-`04-papers/47-row-d-dual-certificates/main.tex`, "P48" = `04-papers/48-row-d-route-map/main.tex`, "IDX" =
+Paths relative to the repository root; "211/" = `03-research/phase-211-sign-sandbox/`, "P46" =
+`04-papers/46-row-d-dual-certificates/main.tex`, "P48" = `04-papers/48-row-d-route-map/main.tex`, "IDX" =
 `05-meta-and-planning/ROUTES-TRIED-INDEX/`.
 
 **Pivot cross-checked.** Take as object the near-null directions of a_T on P_T (the cluster of tiny
@@ -20,7 +20,7 @@ Scope of the reading. Read as primary sources (the memo, not the summary): `211/
 `211/ROUND_002_D.md` §§6–7; `211/ROUND_002_E.md` (Lemmas 1–3, Cor. 4, correction, §4, next step);
 `211/ROUND_004_A.md` §§4–5; `211/ROUND_007_B.md` §§4.3–4.5; `211/ROUND_021_A.md` §§3.3–3.4 and result;
 passages of `211/ROUND_005_C.md` §5, `ROUND_009_B.md` §3, `ROUND_015_B.md` §4, `ROUND_017_A.md`,
-`ROUND_027_A.md`; `211/LEDGER.md` in full; P47 lem:contA, cor:Tarch, lem:degen, prop:wit-sens, rem:wit-sens,
+`ROUND_027_A.md`; `211/LEDGER.md` in full; P46 lem:contA, cor:Tarch, lem:degen, prop:wit-sens, rem:wit-sens,
 lem:shape-scale, thm:X, rem:X, lem:flowdet, rem:bar-loc, rem:bar-fam; P48 req:spec (R10) and the
 sensitivity paragraph; `phase-192-exact-identity/PHASE_192_REVIEW_SUMMARY.md`; `phase-162-…/R162_2902_P2_DEGEN.md`
 §§2–3; headers and verdicts of `R162_2101`, `R162_504`, `R186_018`, `R186_023`, `R186_025`, `R186_048`,
@@ -37,15 +37,15 @@ c, J_T, Danskin, concavity, sensitivity), not exhaustive. A search without match
 
 | What | Where | Statement | Label |
 |---|---|---|---|
-| Continuity of the ground value | P47 lem:contA (l.621) | T ↦ λ_A(T) is continuous on (0,∞); the proof uses only the total absolute mass of the weights | PROVED |
+| Continuity of the ground value | P46 lem:contA (l.621) | T ↦ λ_A(T) is continuous on (0,∞); the proof uses only the total absolute mass of the weights | PROVED |
 | Empty entry instant | `phase-186-toolbox/R186_048_COMPONENT_BIRTH.md` Lemma 2.2, 2.4 | 𝔞_{T_n⁺} ≡ 𝔞_{T_n⁻}; the new contact is visible only through collars of width 2ε, \|c_F(log n)\| ≤ boundary mass | PROVED |
-| Parity | P47 (paragraph after prop:finite); `211/ROUND_003_A.md` Prop. 1 | a_T commutes with J on P_T; λ_A = min of the even and odd ground values; Φ_T = min of the per-sector Φ | PROVED |
+| Parity | P46 (paragraph after prop:finite); `211/ROUND_003_A.md` Prop. 1 | a_T commutes with J on P_T; λ_A = min of the even and odd ground values; Φ_T = min of the per-sector Φ | PROVED |
 | Simplicity of the ground value | `211/ROUND_003_A.md` end of §3; `211/ROUND_027_A.md` §1 | there is no Perron–Frobenius for a_T on P_T (every F ∈ P_T changes sign; Π breaks positivity preservation). Simplicity OPEN; ground state even and simple with sector ratio 10–250 (0.6 ≤ T ≤ 1) and gap 200–2000 (T = 0.8, 1.0, 1.2) | OPEN / NUMERICAL |
 | Perron–Frobenius on L²(I_T) | `phase-162-…/R162_504_SECOND_EIGENVALUE.md` Thms. 1–3, §5 | simple and even ground state of the form without restriction to P_T; parity ladder; the sign mechanism with Λ∗1 = log: NO-GO | PROVED (structure) / NO-GO |
-| Nodes | `phase-155-…/R155_044_ROUND6A_NODAL.md` Prop. N1–N2; P47 prop:nodes | every nonzero F ∈ P_T has ≥ 2 sign changes; the k-th even eigenvector of Arch\|P_T has k nodes (k ≤ 8, NUMERICAL); the PF₂ kernel route closed for K | PROVED / NUMERICAL |
+| Nodes | `phase-155-…/R155_044_ROUND6A_NODAL.md` Prop. N1–N2; P46 prop:nodes | every nonzero F ∈ P_T has ≥ 2 sign changes; the k-th even eigenvector of Arch\|P_T has k nodes (k ≤ 8, NUMERICAL); the PF₂ kernel route closed for K | PROVED / NUMERICAL |
 | Superexponential ladder | `211/ROUND_003_A.md` §2.1, §2.3; `211/ROUND_007_B.md` §4.3 | the four lowest eigenvalues (two per sector) decrease monotonically and superexponentially; λ_ev,2 = 2.2·10⁻¹ (0.6), **1.7·10⁻³ (0.7)**, 6.4·10⁻⁷ (0.8), 1.9·10⁻¹¹ (0.9); at ½log5+ε the ladder is 3·10⁻¹², 6·10⁻¹⁰, 3·10⁻⁷, 3·10⁻⁵, 2·10⁻³ | NUMERICAL |
 | Size of the cluster | `211/ROUND_005_E.md` Thm. 3.1; `ROUND_006_A.md`; `ROUND_006_C.md` Thms. A–B | two-sided Weyl count PROVED; m_δ(T) ≤ exp(2e^T(1+o(1))) PROVED (generic on the comb); observed cluster ≈ 0.15e^{4T} (2, 4, 4, 6, 9, 16) NUMERICAL | PROVED / NUMERICAL |
-| Upper bound on the margin | P47 thm:margin, cor:margin1; RULES_AVOID B2 | λ_A(T) ≤ 4·10⁹Te^{−15.449T} for T ≥ 1; limsup λ_A ≤ 0. (The paper's proof uses data from the other side; here only the bound on the form is cited.) | PROVED |
+| Upper bound on the margin | P46 thm:margin, cor:margin1; RULES_AVOID B2 | λ_A(T) ≤ 4·10⁹Te^{−15.449T} for T ≥ 1; limsup λ_A ≤ 0. (The paper's proof uses data from the other side; here only the bound on the form is cited.) | PROVED |
 | Two-sided law | `211/ROUND_007_D.md` Lemma 4.6; LEDGER 211 C20 | the lower half of a law λ_A = L(T)(1+o(1)) is the target plus a margin; simple exponential law NO-GO | PROVED / NO-GO |
 
 The value "1.7·10⁻³" that `ROUND_006` §10.3 gives as the third eigenvalue at T = 0.70 is λ_ev,2(0.7), already tabulated
@@ -59,7 +59,7 @@ in `211/ROUND_003_A.md` §2.3.
   of dimension ≥ 2 with one direction in P_T. Lemma 3: at a primitive contact the minimizer satisfies Wx = κφ̂ and
   \|κ\| = ‖Wx‖. The hypothesis of a local identity between the atom at log 2 and the archimedean or polar term:
   **NO-GO**. (The memo uses an external framing in §2; here only its content about the form.)
-- P47 thm:ext-half (l.9913; PROVED given four citations): half-line identity, a_T(Ef) = exterior form of the
+- P46 thm:ext-half (l.9913; PROVED given four citations): half-line identity, a_T(Ef) = exterior form of the
   out-of-band datum. It is the exact relation between the archimedean part and the comb on the images E: it holds only
   with Λ∗1 = log and Poisson. `211/ROUND_001_B.md`: there is no common radical vector of 𝒲 and 𝒲^c for c ≠ 1 (PROVED);
   the "fusion" reading NO-GO.
@@ -82,10 +82,10 @@ in `211/ROUND_003_A.md` §2.3.
 
 ### 1.3 Walls that fall on functionals of the minimizer
 
-- P47 thm:X (l.8281; PROVED) and rem:X: what positivity on a larger window imposes on the new contacts
+- P46 thm:X (l.8281; PROVED) and rem:X: what positivity on a larger window imposes on the new contacts
   is an inequality averaged over U_{T₀} at resolution π/T, never pointwise; a necessary condition, and
   the quartet model satisfies it with negative ground value (NUMERICAL).
-- P47 lem:flowdet and rem:bar-loc: the coefficient of any log det flow near a small ground value is
+- P46 lem:flowdet and rem:bar-loc: the coefficient of any log det flow near a small ground value is
   dominated by ⟨A′h*, h*⟩/λ_A, a functional of the minimizer; the difference with the quartet model is an
   inequality between two functionals of h*.
 - P48 req:spec (R10) (l.552): the object cannot be a functional of the minimizer alone; every first-order
@@ -115,9 +115,9 @@ in `211/ROUND_003_A.md` §2.3.
 
 ### 2.1 Archimedean threshold
 
-- P47 cor:Tarch (l.2562; PROVED, with interval verification): 0.58 ≤ T*_{∞,P} ≤ 0.60; the ground value of Arch
+- P46 cor:Tarch (l.2562; PROVED, with interval verification): 0.58 ≤ T*_{∞,P} ≤ 0.60; the ground value of Arch
   on P_T is strictly decreasing, positive before and negative after, and < 0 for all T ≥ 0.60.
-  P47 thm:index: n₋(Arch\|P_T) = 0, 1, 2 on (0, T*_ev), (T*_ev, T*_odd), (T*_odd, 0.90], with
+  P46 thm:index: n₋(Arch\|P_T) = 0, 1, 2 on (0, T*_ev), (T*_ev, T*_odd), (T*_odd, 0.90], with
   log 2 ≤ T*_odd ≤ 0.81 (PROVED, computer-assisted).
 - `05-meta-and-planning/ABCD-CLOSURE-PLAN/PATH-TO-D.md` l.71, 136;
   `phase-155-…/R155_031_CORPUS_SYNTHESIS_PATH_TO_D.md` l.158, 352; `R155_029` l.27: T*_{∞,P} ≤ 0.5958; "below
@@ -127,12 +127,12 @@ in `211/ROUND_003_A.md` §2.3.
 
 ### 2.2 Concavity, derivative at c = 1, dual representation
 
-- P47 lem:degen (l.3294; PROVED): μ_T(v) concave and finite on ℝ^{𝒩_T};
+- P46 lem:degen (l.3294; PROVED): μ_T(v) concave and finite on ℝ^{𝒩_T};
   μ_T(v) ≤ μ_T(v⁰) − Σ(v_n − v⁰_n)c_{F*}(log n). It is not known whether the degenerate case (c_{F*} = 0 at all
   contacts) occurs.
-- P47 prop:wit-sens (l.7283; PROVED) and rem:wit-sens: λ_A(T; (1+ε)v) ≤ λ_A − εκ_T, κ_T = Σ v_n c_h(log n) = Π
+- P46 prop:wit-sens (l.7283; PROVED) and rem:wit-sens: λ_A(T; (1+ε)v) ≤ λ_A − εκ_T, κ_T = Σ v_n c_h(log n) = Π
   on the minimizer; if κ_T > 0, (1+ε)Λ violates positivity for ε > λ_A/κ_T. NUMERICAL: κ_{log 2} ≈ 0.09,
-  a uniform relative change of ~10⁻⁶ destroys positivity at T = log 2. P47 lem:shape-scale (l.8641):
+  a uniform relative change of ~10⁻⁶ destroys positivity at T = log 2. P46 lem:shape-scale (l.8641):
   cΛ fails for large c at every T > ½log2 and for small c at every T ≥ 0.60 (PROVED); the version with
   c ∈ (1−ε, 1+ε) is CONDITIONAL on κ_T ≠ 0, "it is not known".
 - P48 l.404–407: "concavity only gives upper bounds; lower bounds only come from chords, that is from
@@ -198,7 +198,7 @@ those two rows, but the phenomenon, its mechanism (Lemma 4 of 003_A, Lemma 3.3 o
 recorded at T = log 2, ½log5, 0.8, 0.9, 1.0, 1.2 and ½log15. The new values are compatible with them
 (at T = 0.70 the ground value at c = 0.999 is larger than at c = 1, as c* < 1 requires; the width ~10⁻³ matches the
 1.7·10⁻³ observed at log 2). The sentence "every exact certificate at T ≥ 0.70 distinguishes c = 1 with that
-precision" is P47 rem:wit-sens and `211/ROUND_004_A` Prop. B.
+precision" is P46 rem:wit-sens and `211/ROUND_004_A` Prop. B.
 
 ---
 
@@ -214,11 +214,11 @@ precision" is P47 rem:wit-sens and `211/ROUND_004_A` Prop. B.
 | Krylov and words from Λ-free seeds | `211/ROUND_005_A/B/E`, `ROUND_006_B` | word algebra, Widom-type square | NO-GO: homogeneous families invariant under cΛ; they do not capture the Π-indefinite near-kernel below the dimension of the cluster; Lanczos blind to the cluster |
 | Coupling vector of the survivor; rungs | `211/ROUND_017_A`, `ROUND_018_B` | Schur form split into arch/comb/Tate; second-level radical identity | PIVOT / NO-GO: arch and comb parts cancel with shares ±10²…10³⁸; 2×2 positivity of rungs generic in c |
 | Even Schur reduction at log 2 | `phase-155-…/R155_032`, `R155_039`; PATH-TO-D (iii); `R162_2902` Thm. P2 | Prop 3c.1, Thm. 3c.3; W_{log 2} ≻ 0 on seven even modes (certificate) | structural identity PROVED only for the prime part (chains of ≤ 4 vertices, closed spectrum, 0.9009276…), **blind to Λ**; "there is no identity for the full S_even beyond the archimedean spectrum" |
-| Nodal explanation of the cancellation | `R155_044`; `R162_2902` §2 | cancellation between n = 2 and n = 3 = interference in the chain P₄ | tool; the arena requires ≥ 12 modes (P47 thm:arena); no fixed truncation decides |
-| Finite reduction (L1)/(L2) | `phase-186-toolbox/R186_025` Thms. A, B, Cor.; P47 thm:coer-schur | λ_A > 0 ⟺ S_{T,k} ≻ 0, dimension 2k−2 | (L1) PROVED; (L2) OPEN: "it is positivity rewritten in an explicit basis", inherits the decay of the margin; interlacing/first crossing NO-GO (phase 204, by index) |
-| Theorem P, negative indices | P47 thm:index, thm:parityschur, prop:polarcap, subsec:inertia-excl | n₋ ≤ 5/7/8; polar capacity | PROVED tool without sign; the inertia count does not distinguish c = 1 (RULES_AVOID L6) |
-| Flat-top dual certificates | phase 154; P47 thm:Z, thm:C; RULES_AVOID C3 | certificates up to ½log5 (own) and ½log15 (CITED) | the dual class is the target itself; per-window format (W-fam) |
-| Per-window converse | phase 156; P47 prop:onewindow, cor:convfail | 2×2 polar-capacity condition | FALSIFIED in comb models (IDX 04 l.204) |
+| Nodal explanation of the cancellation | `R155_044`; `R162_2902` §2 | cancellation between n = 2 and n = 3 = interference in the chain P₄ | tool; the arena requires ≥ 12 modes (P46 thm:arena); no fixed truncation decides |
+| Finite reduction (L1)/(L2) | `phase-186-toolbox/R186_025` Thms. A, B, Cor.; P46 thm:coer-schur | λ_A > 0 ⟺ S_{T,k} ≻ 0, dimension 2k−2 | (L1) PROVED; (L2) OPEN: "it is positivity rewritten in an explicit basis", inherits the decay of the margin; interlacing/first crossing NO-GO (phase 204, by index) |
+| Theorem P, negative indices | P46 thm:index, thm:parityschur, prop:polarcap, subsec:inertia-excl | n₋ ≤ 5/7/8; polar capacity | PROVED tool without sign; the inertia count does not distinguish c = 1 (RULES_AVOID L6) |
+| Flat-top dual certificates | phase 154; P46 thm:Z, thm:C; RULES_AVOID C3 | certificates up to ½log5 (own) and ½log15 (CITED) | the dual class is the target itself; per-window format (W-fam) |
+| Per-window converse | phase 156; P46 prop:onewindow, cor:convfail | 2×2 polar-capacity condition | FALSIFIED in comb models (IDX 04 l.204) |
 | Tail theorem | phase 164 (IDX 04 l.904–909; by index) | reduction to a tail condition | PARTIAL; the condition remains a reformulation (IDX 04 l.1029). The memos use an external framing; not developed |
 | Exterior table | phase 202 (IDX README l.579–583; by index) | form by classes q = b/a and layers; Lemma M | phase closed: X1 = partition of the inequality; "𝔅_n is never multiplicative" |
 | Component object | phase 205 (IDX README l.626–632; by index) | comb matrix in Dirichlet sines; Green function of the pole | skeleton without a sign node; the finite reformulation "n₋(𝔄_N) = 1" NO-GO as a route |
@@ -260,7 +260,7 @@ precision" is P47 rem:wit-sens and `211/ROUND_004_A` Prop. B.
 pivot. Pieces already written that exhaust its statement:
 
 1. The exact relation between Arch and the contacts on the near-null subspace is Arch\|_S = Π\|_S + a_T\|_S
-   (003_A §2.1), and its origin is the half-line identity with the radical (P47 thm:ext-half; `R162_2101` §2;
+   (003_A §2.1), and its origin is the half-line identity with the radical (P46 thm:ext-half; `R162_2101` §2;
    021_A Prop. 3.2). That identity characterizes c = 1 and, once used, leaves no signed remainder.
 2. Why the ground value becomes negative on both sides of c = 1: Lemma 4 of 003_A (near-kernel with Π
    indefinite) and Lemma 3.3 of 021_A; two-threshold law of 015_B/017_A.
@@ -276,7 +276,7 @@ in its interior if λ_A > 0, with c₊ − 1 ≈ λ_A/Π(F*) and 1 − c₋ of t
 
 Consistency note (ARGUED; not written in the corpus, not verified by a second reader and not used
 as a finding). With a_T\|_S between 0 and ε, Π\|_S lies between Arch\|_S − ε and Arch\|_S, so that the negative
-directions of Π on the near-kernel are bounded by the negative index of Arch on P_T (P47 thm:index:
+directions of Π on the near-kernel are bounded by the negative index of Arch on P_T (P46 thm:index:
 0, 1, 2). This fits the inertia table of 003_A §2.6 and the fact that the pin is even from T ≈ 0.61, just
 after T*_ev ∈ [0.58, 0.60]. If correct, two-sidedness is a consequence of the archimedean index, which is
 free of Λ, plus near-nullity: generic, without mechanism.
@@ -300,7 +300,7 @@ A search without matches does not prove conceptual novelty; here, moreover, the 
 closed entry (an identity on the near-null subspace depending on Λ, with its own formula):
 
 1. *Closest antecedent.* `211/ROUND_003_A.md` §4 and Lemma 4; `211/ROUND_005_C.md` §5 ((SL_T)); `211/ROUND_021_A.md`
-   Prop. 3.2 and Lemma 3.3; P47 thm:ext-half; phase 192.
+   Prop. 3.2 and Lemma 3.3; P46 thm:ext-half; phase 192.
 2. *New object or statement.* It would have to write S_T without solving the problem (not "the lowest
    eigenvectors"): an explicit family with growing dim S_T (cluster ≈ 0.15e^{4T}), which is neither E(prolates of the
    self-dual class) nor the family of responses E_T nor a Λ-free plane, together with V_T on it. Today there

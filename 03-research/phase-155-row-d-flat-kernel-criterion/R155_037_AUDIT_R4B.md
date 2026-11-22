@@ -1,7 +1,7 @@
 # R155.037 — Audit of R155_033 (round 4b) and `scripts/r4b/`
 
 *Target: `R155_033_ROUND4B_PROBLEM_A_ARCH.md`, `scripts/r4b/`.
-References: Paper 47 `main.tex` (§3 `thm:D1` l.473, `thm:O` l.537, `rem:OvsB` l.567;
+References: Paper 46 `main.tex` (§3 `thm:D1` l.473, `thm:O` l.537, `rem:OvsB` l.567;
 §4 `lem:mbounds` l.630, `lem:F1` l.732; §7 `thm:Z` l.1131; §8 `prob:A` l.1761, `prop:TK` l.1779,
 `prop:arch` l.2125, `lem:R1` l.2279, `thm:R` l.2298, `cor:R3` l.2330), `R155_023` (amended),
 `R155_004 §6`. Both scripts rerun in full; nothing in `04-papers` or `scripts/` modified.*
@@ -22,7 +22,7 @@ References: Paper 47 `main.tex` (§3 `thm:D1` l.473, `thm:O` l.537, `rem:OvsB` l
 
 ## §1 Theorem AL (`R155_033:118–145`)
 
-**(a) Feasibility — no defect; the objection is void.** Paper 47's `(D)` (`main.tex:425–433`) carries
+**(a) Feasibility — no defect; the objection is void.** Paper 46's `(D)` (`main.tex:425–433`) carries
 **no moment equalities on `ν`**: the only constraints are `ν` finite, even, `supp ν ⊆ {|u| ≥ 2T}`,
 `β ∈ ℝ²` free, and the pointwise inequality. The Tate/`ĝ_j` pairings are constraints on the **primal**
 `μ`, not on the dual (`prop:weak` proof, `main.tex:445–452`). Hence sampling has nothing to preserve:
@@ -142,7 +142,7 @@ an independent Nyström run reproduces the counts `4/5/5`.
 The `§3.3` structural diagnosis (logarithmic growth of `m` caps `θ`, so a two-level majorisation cannot
 reach `1`) is correct and is the honest content of the round. `(H1)` stays `HYPOTHESIS`. ✓
 
-## §7 Labels, "STRUCTURAL NEGATIVE", Paper 47 proposals
+## §7 Labels, "STRUCTURAL NEGATIVE", Paper 46 proposals
 
 * **"Problem A is hard because of the primes — REFUTED" (`§4:321`): half fair.** `thm:O` at `v = 0` is
  genuine and `rem:OvsB` is consistent with it (it names both the `1/u` singularity and the prime atoms
@@ -151,13 +151,13 @@ reach `1`) is correct and is the honest content of the round. `(H1)` stays `HYPO
  rates. Restate as: *"the primes are not necessary for the obstruction: non-attainment and the edge
  singularity survive at `v = 0`"* — that is `PROVED`. Drop `REFUTED`.
 * **ERROR (`§4:311`).** *"Dictionary (2.1) — `PROVED` (`thm:Z` at `v = 0`)"* misattributes: (2.1)
- deletes the primes **and** the polar term, whereas Paper 47's flat-top dual point is `(ν_w, β = (2,0))`
+ deletes the primes **and** the polar term, whereas Paper 46's flat-top dual point is `(ν_w, β = (2,0))`
  with `+2∫w cosh(u/2)cos(τu)du` inside `f_w` (`main.tex:1128`, `eq:fw`). The algebra of (2.1) is
  correct, but it is **not** `thm:Z` and carries **no** explicit-formula / zero-sum reading.
 * `τ = 0` cap (`§2.2`): verified independently — `∫_{2T}^∞K = 2.364155` (`½log3`), `2.025908` (`log2`);
  required `5.4547`/`5.2179`; factors `2.307`, `2.576`. The document's *"≥ 2.6"* rounds a lower bound
  **up**; write `≥ 2.5`.
-* **Paper 47 proposals.** `§5.1` acceptable **only** with the two-sided smooth-contact hypothesis of
+* **Paper 46 proposals.** `§5.1` acceptable **only** with the two-sided smooth-contact hypothesis of
  §1(b) written in and the `§0.1(β)` overreach removed. `§5.2` only as a `DIAGNOSTIC` paragraph with
  "`M^{−2}` is out" softened per §5. `§5.3` acceptable after the `37/47/54` fix and the Prop 3(ii)
  attribution fix.

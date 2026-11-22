@@ -55,7 +55,7 @@ structure of ℝ_x can only enter through three routes:
 
 - (α) **The Tate–Beckner relation X + 𝓕X𝓕 = M**, which is the integrated version of the canonical
   commutation relation. It produces Arch and nothing of the comb. It is blind to the three checks (PROVED: it contains no weights).
-  By Paper 47 cor:Tarch (CITED), every piece of this channel that bounds the contacts from above dies before
+  By Paper 46 cor:Tarch (CITED), every piece of this channel that bounds the contacts from above dies before
   T ≈ 0.60.
 - (β) **Poisson on ℤ for the integer comb without weights.** It is identical under cΛ and under the deletion of a prime
   power (PROVED trivial: the lattice ℤ and the family {log n} do not change, only the weights). It only detects Beurling
@@ -97,7 +97,7 @@ breakdown is not in the remainder. **Repetition:** R161_002, K2, J8.
 ### (b) Dominating the Sonin remainders with a second-order differential operator commuting with the cutoff and the transform
 
 1. *Antecedent:* R186_003 and R186_006 (W_λ, semilocal NO-GO); ANNEX_SONIN_READING §§1, 5 (the remainders K_s, C_p
-   and κ_S, n₋(R) = ∞); Paper 47, Thm. P (phase 155: negative directions in ≤ 8 prolate modes).
+   and κ_S, n₋(R) = ∞); Paper 46, Thm. P (phase 155: negative directions in ≤ 8 prolate modes).
 2. *New:* the inequality −⟨g,K_s g⟩ − ⟨g,C_p g⟩ ≥ −Φ(W_λ) and Son + 2ε′𝔅 ≥ Φ(W_λ) on P_T, with explicit Φ.
 3. *Why it would avoid the difficulty:* it does not.
    - The only known W commutes with P_λ and with 𝓕_∞, not with F_S (R186_006 row 4, PROVED). For the full

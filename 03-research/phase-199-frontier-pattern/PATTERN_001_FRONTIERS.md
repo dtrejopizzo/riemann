@@ -20,7 +20,7 @@ arithmetic only).
 
 | frontier | μ | contacts | next contact | quantity certified | finite margin | Galerkin N | precision | status |
 |---|---|---|---|---|---|---|---|---|
-| Paper 47 | 5 | 2,3,4 | 5 | λ_A ≥ 2.5e−12, λ^W ≥ 1e−18 | λ_A ≈ 3.10e−12 (primitive form) | k = 25 | double/interval | PROVED |
+| Paper 46 | 5 | 2,3,4 | 5 | λ_A ≥ 2.5e−12, λ^W ≥ 1e−18 | λ_A ≈ 3.10e−12 (primitive form) | k = 25 | double/interval | PROVED |
 | Liu Thm B | 8.37 (T = 17/16) | 2,3,4,5,7,8 | 9 | λ^W ≥ 2^{−49162} | not reported (224×224 integer Gram) | 224 | exact integer | CITED |
 | Mori VI | 10 | …,9 | 11 | λ^W ≥ 2^{−49162} | not in hand | N = 640 | ? | CITED (not audited) |
 | Mori VII | 12 | …,11 | 13 | λ^W ≥ 2^{−1518} | not in hand | N = 832 | ? | CITED (not audited) |
@@ -33,10 +33,10 @@ framework, not a margin. The coincidence is worth flagging but is not an error.)
 a contact-free interval (n_k, n_{k+1}]:
 - ½log5 lies at the right endpoint μ = 5 exactly. Since 5 enters only for μ > 5, this is the optimal endpoint.
 - 8.37 lies in (8, 9], 10 in (9, 11], 12 in (11, 13], and 15 in (13, 16].
-- Only Paper 47 sits on the endpoint itself. Liu, Mori VI and Mori VII stop short of it, at 9, 11 and 13 respectively.
+- Only Paper 46 sits on the endpoint itself. Liu, Mori VI and Mori VII stop short of it, at 9, 11 and 13 respectively.
 
 **Structural reason (PROVED, elementary).** Inside a contact-free interval the comb is fixed. By Lemma M
-(AUDIT_198; P47 lem:monoT), λ is nonincreasing in T. A certificate at the right endpoint μ = n_{k+1} therefore covers
+(AUDIT_198; P46 lem:monoT), λ is nonincreasing in T. A certificate at the right endpoint μ = n_{k+1} therefore covers
 the whole interval, and the matrix family (the shifts) does not change inside it. The cost driver is μ itself (the archimedean
 bandwidth c = 2πμ), not the comb. Two consequences follow:
 - Certificates are naturally piecewise between contacts.
@@ -67,7 +67,7 @@ Data:
   - 4π = 12.566.
 
   So **c ≈ 4π is confirmed**: the decay is exp(−4πμ) up to polynomial factors.
-- **The Paper 47 point at μ = 5 is not comparable.** It is the primitive form λ_A, which is about 10⁶ × the Fuchs value.
+- **The Paper 46 point at μ = 5 is not comparable.** It is the primitive form λ_A, which is about 10⁶ × the Fuchs value.
   The prolate model applies to λ^W, the complete form.
 
 **New observation (NUMÉRICO, a reading of Mori's table): contact sawtooth.** In every case κ is high at μ = p, where the contact

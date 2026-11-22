@@ -1,14 +1,14 @@
 # R186_036 — Candidate tool Ω: the family {𝔞_T}_T as a degree-0 object (transport between nested windows)
 
-Phase 186, round 17. Paper 47, grid and crossword are not touched. No numerics (nothing decided; no script r036).
+Phase 186, round 17. Paper 46, grid and crossword are not touched. No numerics (nothing decided; no script r036).
 
 Read: R186_032 §4 (Ω: S1–S6), README 186 rounds 14–16 (W-lin, W-det), grid §3 (walls), §4 (falsifiers M_m, f_t,
 P_{a,c}), log 27–28; R185_005 §1.3 (O1–O5); R163_401 §4.8 ((★_cell) ARGUED, Rem 4.8a); R164 README ((TC), L1/L2, Thm R);
 R166_190 §0 (dichotomy), R166_501 Cor A.2 ((G),(N)); R169_000 §1–3 (A1–A7); R165_202 (1.1–1.5); R157_004 Lemma C;
-R155_053 Prop 4.1, R155_055 §(ii); R160_M4_R1 (S, U-2); Paper 47 thm:A/eq:Aform, cor:mono, lem:monoT, lem:contA, def:PD,
+R155_053 Prop 4.1, R155_055 §(ii); R160_M4_R1 (S, U-2); Paper 46 thm:A/eq:Aform, cor:mono, lem:monoT, lem:contA, def:PD,
 prop:weak, rem:Kprim, rem:Cheb; R186_033/109 (PNT-window identity).
 
-Notation (Paper 47): I_T = [−T,T]; c_F autocorrelation (supp ⊂ [−2T,2T]); 𝒩_T = {n ≥ 2: log n < 2T}; v_n = 2Λ(n)/√n;
+Notation (Paper 46): I_T = [−T,T]; c_F autocorrelation (supp ⊂ [−2T,2T]); 𝒩_T = {n ≥ 2: log n < 2T}; v_n = 2Λ(n)/√n;
 𝔞_T(F) = C₀‖F‖² + Lev(c_F) − Σ_{n∈𝒩_T} v_n c_F(log n) (eq:Aform), Lev(Φ) = ∫₀^∞(Φ(0) − Φ(u))K(u)du, K ≥ 0 independent of T;
 𝒫_T = {A(F) = B(F) = 0}; λ_A(T) = λ_min(𝔞_T|𝒫_T); h*_T a unit minimizer.
 

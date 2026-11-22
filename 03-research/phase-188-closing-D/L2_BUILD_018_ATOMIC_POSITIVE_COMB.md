@@ -59,7 +59,7 @@ realizes such a comb is OPEN (Möbius inversion ψ ↦ Π may produce negative a
 m ≥ total comb mass. ℤ's comb at window T has spacing ≈ 2Te^{−2T}·… (consecutive log p), so its "aliasing" (Kronecker-type
 coherence) frequencies start near e^{2T}, where m ≈ 2T while the comb mass is A_T ≈ 4e^{T}: quadrature cannot be the mechanism.
 (c) Hence for ζ the sign cannot come from (★) pointwise; it must come from P_T-correlation (the negative set U_T of the symbol is
-non-empty for ζ, Paper 47 §subsec:band), i.e. exactly the anti-alignment on 𝒩_T identified in 017. The difference between ν of
+non-empty for ζ, Paper 46 §subsec:band), i.e. exactly the anti-alignment on 𝒩_T identified in 017. The difference between ν of
 Theorem B and Λ is: κ > κ* and super-fine lattice positions (pointwise symbol positivity) versus κ = 1 and integer positions
 (symbol negative on U_T, positivity only after the P_T-constraint) — this is the arithmetic content of D in this frame.
 

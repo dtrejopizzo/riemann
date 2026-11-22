@@ -1,12 +1,12 @@
 # Audit: phases 100–160 re-read against today's finite reduction (L2)/(N)/(S)
 
-Target recalled: window positivity on $\mathcal D_T$ (Paper 47 eq:symbol/eq:form/eq:W, lines 105–150); open
+Target recalled: window positivity on $\mathcal D_T$ (Paper 46 eq:symbol/eq:form/eq:W, lines 105–150); open
 reduced forms (L2) $S_{T,k(T)}\succeq0$, (N) signed Nyquist Chebyshev coherence, (S) near-coincidence Toeplitz
 matrix (lines 10677–10790). No RH-equivalence used anywhere below; phases are read strictly as statements about
 the quadratic form $\mathfrak a_T$/$W_T$.
 
 ## Method
-Read Paper 47 abstract/intro/open-problems (lines 90–160, 10660–10800) and
+Read Paper 46 abstract/intro/open-problems (lines 90–160, 10660–10800) and
 `05-meta-and-planning/ROUTES-TRIED-INDEX/04_PHASES_100-189.md` Part I (walls W1–W12, falsifiers, phases 185–189
 and key 100–161 entries) before opening any phase folder, per the routes-tried rule. Then read phase 153, 155,
 156, 160 primary memos (README/closure files already summarized in MEMORY.md) and the phase-160 construction/panel
@@ -47,7 +47,7 @@ count $k(T)$.
   **class impossibility** for lattice certificates, not for the Schur-complement object $S_{T,k}$ of (L2). (L2)
   is not a lattice certificate — thm:coer-schur produces $S_{T,k}$ from piecewise Tate exponentials on
   $\mathcal V_k$, a different (larger, non-lattice) test space. So thm:N/N′ does not bound or refute (L2); it was
-  correctly scoped by Paper 47 as a separate problem (Problem~\ref{prob:A}), and the routes index correctly
+  correctly scoped by Paper 46 as a separate problem (Problem~\ref{prob:A}), and the routes index correctly
   labels it "NO-GO (class impossibility)" rather than mislabeling it as bearing on (L2). No hit.
 - Theorem AL (retracted) → AL′ (Θ(1/M)): same scoping — about lattice certificates, not $S_{T,k}$.
 - round 5: "RH ⟺ Kreĭn indeterminacy" language appears in MEMORY.md's historical summary of phase 155 but is a
@@ -56,7 +56,7 @@ count $k(T)$.
 - Archimedean thresholds ($T^*_{\infty,P}\in[0.58,0.60]$, necessity at $\approx0.596$): these are bounds on the
   archimedean part $\lambda_{\infty,P}(T)$ alone (coercivity of Theorem thm:coer-B), i.e. exactly the ingredient
   that fixes $k_0(T)$ in (L2)'s statement ("$k(T)\ge k_0(T)$ ... archimedean form is coercive on $\mathcal V_k$").
-  This is a genuine *tool* still load-bearing for (L2) (it is cited in Paper 47's own statement of (L2)), but it
+  This is a genuine *tool* still load-bearing for (L2) (it is cited in Paper 46's own statement of (L2)), but it
   is already correctly folded into the current open-problem statement — not an unrecognised result, just the
   known input.
 
@@ -71,7 +71,7 @@ This is a negative result about the converse direction, not about (L2)/(N)/(S) d
 Per the index (W10 MW-5/OT-5′: "every carrier postulates positivity; frame defect holds even over F_q" — NO-GO)
 and R157/158/159 entries scattered through Part I-c (R158_001, R159 not separately tabled but feeding directly
 into the phase-160 brief, which is the authoritative digest). Nothing here anticipates the Schur-complement
-object of thm:coer-schur (that theorem postdates phase 160, cited in Paper 47 §on coer-Schur, built after R186 in
+object of thm:coer-schur (that theorem postdates phase 160, cited in Paper 46 §on coer-Schur, built after R186 in
 phase 162+); phases 157–159 could not have recognised (L2) in its current form since the finite reduction did not
 exist yet. No hit.
 
@@ -124,8 +124,8 @@ state) that reached a verdict section but was the last file before the stop. So:
   that is honestly marked as reducing to the target itself rather than proving anything toward it.
 - **M4** (de Branges/Sarnak, polar capacity across $T$): structural identity for the Schur complement
   $\mathfrak G_T = S^{Sch}_T+J$ — this is the complete-form sibling object to (L2)'s $S_{T,k}$, built independently
-  in the M4 memo before Paper 47's thm:coer-schur existed. **Worth flagging**: M4's $\mathfrak G_T$ identity and
-  the later thm:coer-B/thm:coer-schur machinery (cited in Paper 47 (L2)) look like independent constructions of
+  in the M4 memo before Paper 46's thm:coer-schur existed. **Worth flagging**: M4's $\mathfrak G_T$ identity and
+  the later thm:coer-B/thm:coer-schur machinery (cited in Paper 46 (L2)) look like independent constructions of
   structurally the same Schur-complement object; no memo in phase 160 or later cross-references M4 against
   thm:coer-schur. This is not a proof gap closed, but it is a candidate for a genuine *tool* re-use that was not
   cross-checked — listed below as a Hit (weak).
@@ -143,7 +143,7 @@ state) that reached a verdict section but was the last file before the stop. So:
 
 ## Hits (ranked)
 
-1. **(weak) M4's $\mathfrak G_T=S^{Sch}_T+J$ identity vs. Paper 47's thm:coer-B/thm:coer-schur $S_{T,k}$.** Both
+1. **(weak) M4's $\mathfrak G_T=S^{Sch}_T+J$ identity vs. Paper 46's thm:coer-B/thm:coer-schur $S_{T,k}$.** Both
    are Schur-complement constructions on the same window object, built in different campaigns (phase 160 round 1
    vs. the machinery cited in the (L2) open problem), and no document cross-checks whether M4's structural
    identity for $\mathfrak G_T$ (complete form) gives any extra leverage on bounding the *least eigenvalue* of

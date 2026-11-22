@@ -3,7 +3,7 @@
 * REVERSE-ENGINEERING track of phase 155. request: "ya sabiendo cómo
 son las rows A/B/C y cómo debería ser D, busquemos 100 casos donde ya sabemos que RH se cumple, y
 veamos cuál es el patrón que tienen, porque ese patrón lo podemos extrapolar sí o sí."*
-*Faithful form: the known truth is Odlyzko's table of zeros; by Theorem Z (Paper 47 §7) the certificate
+*Faithful form: the known truth is Odlyzko's table of zeros; by Theorem Z (Paper 46 §7) the certificate
 at window `T` is the flat-top weight `w_T` with `f_w(τ) = Σ_ρ ŵ(τ−γ_ρ) =` prime/Γ side. Map ~100
 windows across all prime-entry regimes and extract the pattern.*
 *Inherits `R155_005` and every repair required by its audit `R155_006` (ACCEPT WITH REPAIRS).*
@@ -204,7 +204,7 @@ below/above):
 of `4` on (`τ_env > 60`), i.e. at 79 of the 103 windows; see §5.3 for what the cap costs.
 **Every value is negative, at every window, at both budgets, before and after certification.** This
 class is far weaker than the corpus's certified endpoint `λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`
-(Paper 47 Thm. C), which is the honest comparison and the reason nothing here touches the label.
+(Paper 46 Thm. C), which is the honest comparison and the reason nothing here touches the label.
 
 ## §4 The law inside each regime
 
@@ -301,7 +301,7 @@ established as the complete explanation of `R155_005`'s step.
 
 `domain_probe.py` re-evaluates the certified `L = 20` weight of the first window of each regime on the
 multiplier-free interval `[0, τ_env]` instead of `[0,60]` — **not** its "true" verification interval
-[amended per R155_010: the word "true" is DELETED — R155_009 flags it as false. Paper 47
+[amended per R155_010: the word "true" is DELETED — R155_009 flags it as false. Paper 46
 Prop. env's actual threshold is `2πe^{A+‖ν‖_TV+o(1)}`; for these weights `‖ν_w‖_TV ≈ 48.7`, so the
 threshold is `≈ 2.4·10²²`, not `16.7…502`. `τ_env = 2πe^{A_T}` used here is only the multiplier-free
 part]:
@@ -360,13 +360,13 @@ excluded at `T = ½\log n`), constant on each interval between consecutive point
 with **`A_{T^+}−A_T = v_n` at `T = ½log n`** [amended per R155_010: corrects
 `A_T − A_{T^-} = v_n`, which is false under the strict-inequality convention actually used
 (`A_T − A_{T^-} = 0` there) — R155_009 §2]. Consequently the **multiplier-free** part of the envelope
-threshold of Paper 47 Prop. env, `τ_env(T) := 2πe^{A_T}` [amended per R155_010: Prop. env's
+threshold of Paper 46 Prop. env, `τ_env(T) := 2πe^{A_T}` [amended per R155_010: Prop. env's
 full threshold is `2πe^{A+‖ν‖_TV+o(1)}`; `τ_env` here names its multiplier-free part only], satisfies
 `τ_env((½log n)^+)/τ_env((½log n)^-) = e^{v_n} = e^{2Λ(n)/√n}` exactly [amended per
 R155_010: corrects the direction of the ratio to match the right-hand limit], and is constant between
 entries. *Proof:* immediate from the definition of `A_T` and `N_T = {n : \log n < 2T}`. ∎
 
-**Proposition D (closed form for the difficulty index).** With `τ_res(T) = 2πe^{2T}` (Paper 47 §8.2),
+**Proposition D (closed form for the difficulty index).** With `τ_res(T) = 2πe^{2T}` (Paper 46 §8.2),
 `D(T) := τ_env(T)/τ_res(T) = e^{A_T − 2T}`. Hence `D` decays like `e^{−2(T−T_n)}` inside each regime and
 is multiplied by exactly `e^{v_n}` at each entry, and `D(T) → ∞` doubly exponentially since
 `A_T = (4+o(1))e^T`. *Proof:* substitute. ∎
@@ -400,7 +400,7 @@ value jumps `3.2×`), not a conclusion; it is NOT asserted as established.
 Hence `λ^W(T) := \sup_{w∈W_T}\inf_ℝ f_w` is non-increasing in `T`. *Proof:* a supremum over a smaller
 set. ∎
 So the class-optimal value can only fall; there is no upward induction in `T` at the level of the
-class, which is the dual form of Paper 47 §8.3(4). (Our measured `c_fine` is not monotone inside a
+class, which is the dual form of Paper 46 §8.3(4). (Our measured `c_fine` is not monotone inside a
 regime because the *sub*-class of §2.1 is **not** nested — its lattice `u_j = 2T + jh` moves with `T`.
 The non-monotonicity in §4(D) is therefore a class artefact and carries no information.)
 
@@ -442,7 +442,7 @@ critical line. (ii) `W_Z(h) = \int \hat h \,dD_Z` by definition, so `D_Z` is a r
 is dual-feasible with value `0`. (iii) It is minimal: any positive measure `μ` with
 `\int\hat h\,dμ = W_Z(h)` for all `h` has `\hat\mu = \hat D_Z` as tempered distributions, hence
 `μ = D_Z`. ∎ `PROVED` (trivial). This is the finite-dimensional shadow of the Kreĭn/Suzuki screw-function
-representation cited in Paper 47's related-work section: in a finite universe the representing measure
+representation cited in Paper 46's related-work section: in a finite universe the representing measure
 *is* the spectrum, there is nothing to construct, and positivity is a tautology. **The toy universe has
 no content: for any finite set of real points RH is true by fiat, so no `D` needs to be found.**
 
@@ -465,7 +465,7 @@ many zeros the sum `Σ_{j\le N}\hat w(τ−γ_j)` is a finite sum of a function 
 and `→ 0` at infinity, so it is negative for `τ` far from all `γ_j`: **a finite zero universe admits no
 flat-top certificate whatsoever.** Positivity of `f_w` is possible only because the zero density
 `\sim(2π)^{-1}\log(t/2π)` is infinite in the mass sense — the `m(τ) = \log(τ/2π)+O(τ^{-1})` growth of
-Paper 47's `σ_T`. This is why rows A/B/C (Weil positivity on the *complete* spectrum) and row D (a
+Paper 46's `σ_T`. This is why rows A/B/C (Weil positivity on the *complete* spectrum) and row D (a
 certificate at a single window) cannot be reduced to finite verification.
 
 ### (3) The toy prime side carries no information about ζ
@@ -502,7 +502,7 @@ other side.
 
 Reading (`DIAGNOSTIC` for the numbers, but the shape of the conclusion is forced by Lemma S):
 **ten zeros leave a deficit of `4.0·10⁻⁴`, which is `4.5×` the corpus's best certified value at this
-window (`λ_min(A_{½log3}) \ge 8.8577·10⁻⁵`, Paper 47 Thm. C).** A hundred zeros bring the deficit to
+window (`λ_min(A_{½log3}) \ge 8.8577·10⁻⁵`, Paper 46 Thm. C).** A hundred zeros bring the deficit to
 `6.0·10⁻⁶`, a thousand to the `1.2·10⁻⁷` floor of the double-precision evaluation. So the answer to
 "what would `D` have to be on ten zeros" is: *nothing at all, because on ten zeros the problem is
 empty (§7bis 1–2); and if one asks instead how much of the real `f_w` the first ten zeros account for,
@@ -519,22 +519,22 @@ irrelevant to this window, which is the same fact as §2.3 (`Γ = 800` suffices)
 | the 103-window table, all values `c_LP`, `c_fine`, `c_cert`, all profile statistics, all fits, the extrapolation test, the domain probe, the cancellation budget | `DIAGNOSTIC` — the LP is trained on a table of zeros (circular as a tool, `phase-4-handoff/proofs/00-PROOF-LOG.md:168`, `phase-136/MAP_1:141` ES-2); double precision; finite grids; `τ` capped at `60` at 82 of 103 windows [amended per
 R155_010: corrects `79` — R155_009]; no interval arithmetic |
 | the numerical verification of Theorem Z across eight regimes (§2.4) | `DIAGNOSTIC` verification of a `PROVED` statement; value is as a regression test |
-| row D label | **unchanged.** No sign is claimed for any `T > log 2`. Endpoint of record unchanged: `λ_min(A_{½log3}) \ge 8.8577·10⁻⁵` (Paper 47 Thm. C) |
+| row D label | **unchanged.** No sign is claimed for any `T > log 2`. Endpoint of record unchanged: `λ_min(A_{½log3}) \ge 8.8577·10⁻⁵` (Paper 46 Thm. C) |
 | `R155_005` §0.4 / §4.1 ("`c(T)` is a step function of `N_T`", "four orders across the entry of 3") | **superseded** by §5 and Prop. C. The step was a moving-domain artefact |
 | `R155_005` §4.4 (contacts at the Nyquist comb `2π/U`) | **not reproduced** in this class (§7.2) |
 | `R155_005` §5 ("no law for `w_T` in `T`") | **superseded**: the profile law is universal across all eight regimes (§4(A)), and extrapolation across an entry works (§6). The audit's in-regime rerun is confirmed and extended |
 
 ## §9 Proposed pure-math statements
 
-1. **The regime dichotomy (Props. E + D + C), for Paper 47 §8.2.** *At `T = ½log n` the certificate
+1. **The regime dichotomy (Props. E + D + C), for Paper 46 §8.2.** *At `T = ½log n` the certificate
  problem's data — the archimedean term, the prime comb coefficients, the class `W_T` — varies
  continuously; the only discontinuity is the verification threshold, which is multiplied by exactly
  `e^{2Λ(n)/√n}`, and the difficulty index has the closed form `D(T) = e^{A_T−2T}`.* Half a page, no
- zeros, and it replaces `R155_005`'s empirical index and Paper 47 §8.2's qualitative "three scales".
+ zeros, and it replaces `R155_005`'s empirical index and Paper 46 §8.2's qualitative "three scales".
  It also says precisely which entries are expensive: `e^{v_p}` for a prime is `\gg` that for a prime
  power, so the hard steps are `3, 5, 7, 11, …` (factors `3.6, 4.2, 4.4, 4.2`) and `4, 8, 9` are cheap
  (`2.0, 1.6, 2.1`).
-2. **Lemma R (rigidity), for Paper 47 §7, next to Cor. 7.4.** *No non-trivial flat-top weight has
+2. **Lemma R (rigidity), for Paper 46 §7, next to Cor. 7.4.** *No non-trivial flat-top weight has
  `\hat w \ge 0`; hence `f_w \ge 0` is never a termwise statement and is impossible over any finite set
  of zeros.* This is the sharpest one-line answer to "what must `D` look like": whatever it is, it is
  not a positive kernel, and it cannot be certified on a finite spectrum. It also disposes, in three
@@ -542,7 +542,7 @@ R155_010: corrects `79` — R155_009]; no interval arithmetic |
 3. **Proposition M as the direction of induction.** `λ^W(T)` is non-increasing because `W_{T'} ⊆ W_T`;
  therefore the only induction available in `T` runs *downward*, and any programme that hopes to climb
  from `½log3` to `\log 2` to `½log5` must gain from the arithmetic, never from the class. Worth one
- sentence in Paper 47 §8.3(4), which currently states the same thing without the inclusion.
+ sentence in Paper 46 §8.3(4), which currently states the same thing without the inclusion.
 4. **The bounded-profile conjecture, sharpened (Problem A).** At `L = 20` the optimiser returned
  `0 \le w \le 1` at 102 of 103 windows *without being asked*. Conjecture: `\sup\{\inf f_w : w ∈ W_T,\,
  0 \le w \le 1\}` is attained, its optimal profile is `T`-independent in `v = u − 2T` up to

@@ -1,7 +1,7 @@
 # R186_028 — Index one: n₋(𝔞_T | L²(I_T)) = 1, the polar bookkeeping and the −1 eigenvalue
 
-Phase 186, round 14. Sources: R186_026 (NUMERICAL finding n₋ = 1, Lemma 2.4, eigenvalue −1 OPEN); Paper 47 (eq:W, thm:A/eq:Aform, lem:K, prop:P, lem:polar, thm:parityschur, prop:polarcap, prop:arch, prop:archneg, thm:index, cor:KEP08, thm:log5W, thm:margin); R183_026 (n₋ ≈ 4T−2 on primitives); R155_047 (Thm P, n₋ ≤ 5/7/8); R185_008 §4 (W11). Parallel audit: R186_106 (robustness of n₋ = 1; here it is assumed and its reason is sought).
-Script: `r028_index.py` (standalone; orthonormal Legendre Galerkin on I_T, dim 60, entirely in x-space; `python3 r028_index.py [N]` and `python3 r028_index.py extra`). Controls: 𝔞_T(e^{t/2}1_I) = −5.592275 at ½log5 (R186_026 closed form: −5.592), λ_A(½log3) = 9.46·10⁻⁴ (Paper 47: 9.45·10⁻⁴), stable at N = 30/45/60/80.
+Phase 186, round 14. Sources: R186_026 (NUMERICAL finding n₋ = 1, Lemma 2.4, eigenvalue −1 OPEN); Paper 46 (eq:W, thm:A/eq:Aform, lem:K, prop:P, lem:polar, thm:parityschur, prop:polarcap, prop:arch, prop:archneg, thm:index, cor:KEP08, thm:log5W, thm:margin); R183_026 (n₋ ≈ 4T−2 on primitives); R155_047 (Thm P, n₋ ≤ 5/7/8); R185_008 §4 (W11). Parallel audit: R186_106 (robustness of n₋ = 1; here it is assumed and its reason is sought).
+Script: `r028_index.py` (standalone; orthonormal Legendre Galerkin on I_T, dim 60, entirely in x-space; `python3 r028_index.py [N]` and `python3 r028_index.py extra`). Controls: 𝔞_T(e^{t/2}1_I) = −5.592275 at ½log5 (R186_026 closed form: −5.592), λ_A(½log3) = 9.46·10⁻⁴ (Paper 46: 9.45·10⁻⁴), stable at N = 30/45/60/80.
 
 ## 0. Verdict
 
@@ -11,11 +11,11 @@ Script: `r028_index.py` (standalone; orthonormal Legendre Galerkin on I_T, dim 6
 4. **Scalar criterion** (§3): for T ≥ 0.12 and 𝔞_T|𝒬 non-degenerate, D(T) ⟺ n₋(𝔞_T|L²) = 1 ∧ σ_ev < 0, σ_ev := ℓ_evᵀ𝔞_T⁻¹ℓ_ev (equivalent to det S_k < 0 from R186_026 L2.4). Under W_T ≥ 0 it reduces to 𝔤_ev < 2, always true with "margin" ≈ 2 that is not coercivity: all the content is in the hypothesis n₋ = 1 (= D ∧ 𝔤_odd ≥ −2), and the T-dependence runs through 𝔞_T⁻¹, whose minimum positive eigenvalue is ≈ λ_A. **NO-GO as a route**; the theorems are kept.
 5. **Tension with R183_026 resolved** (§4): n₋(Γ|L²) = n₋(Γ|𝒫_T) + [Γ(h_ev) < 0] + [Γ(h_odd) < 0]; the "−2" of R183_026 are the two polar directions. The primes "remove" negative directions of Γ only in the sense that (i) 𝔞_T|𝒫_T ≥ 0 (that is D) and (ii) 𝔞_T(h_odd) > 0 (full odd positivity; nodal mechanism: Lemma 4.2). NUMERICAL byproduct for W11: A_∞ = Γ + pole dies at T ≈ 0.37 (odd sector), not at 0.4608 (prop:archneg is a bound).
 
-**Sign contact: none.** Nothing here certifies λ_min(W|𝒫_T) < 0: λ_A > 0 in both sectors at every computed T (table §1.5), consistent with Paper 47.
+**Sign contact: none.** Nothing here certifies λ_min(W|𝒫_T) < 0: λ_A > 0 in both sectors at every computed T (table §1.5), consistent with Paper 46.
 
 ## 1. Parity, pole and inertia
 
-Notation (Paper 47 §thm:parityschur): 𝒟_T^{par} even/odd sectors of the form domain; ℓ_ev, ℓ_odd as above; 𝒬_par = ker ℓ_par ∩ 𝒟_T^{par}, so that 𝒫_T ∩ 𝒟_T = 𝒬_ev ⊕ 𝒬_odd; ε_ev = +1, ε_odd = −1; h_par the 𝔞_T-orthogonal vector to 𝒬_par with ℓ_par(h_par) = 1 (exists if 𝔞_T|𝒬_par is non-degenerate); 𝔤_par := W_T(h_par) = 𝔞_T(h_par) + 2ε_par (polar capacity, prop:polarcap). Γ := 𝔞_T with no primes.
+Notation (Paper 46 §thm:parityschur): 𝒟_T^{par} even/odd sectors of the form domain; ℓ_ev, ℓ_odd as above; 𝒬_par = ker ℓ_par ∩ 𝒟_T^{par}, so that 𝒫_T ∩ 𝒟_T = 𝒬_ev ⊕ 𝒬_odd; ε_ev = +1, ε_odd = −1; h_par the 𝔞_T-orthogonal vector to 𝒬_par with ℓ_par(h_par) = 1 (exists if 𝔞_T|𝒬_par is non-degenerate); 𝔤_par := W_T(h_par) = 𝔞_T(h_par) + 2ε_par (polar capacity, prop:polarcap). Γ := 𝔞_T with no primes.
 
 **Lemma 1.1 (PROVED; eq:W, prop:P, thm:parityschur(o)).** For real F in 𝒟_T, 𝔞_T(F) = W_T(F) − 2ℓ_ev(F)² + 2ℓ_odd(F)², and the sum over sectors is orthogonal for L², 𝔞_T and W_T. In particular ℓ_ev and ℓ_odd are the only Tate functionals that matter: A = ℓ_ev + ℓ_odd, B = ℓ_ev − ℓ_odd, 2AB = 2ℓ_ev² − 2ℓ_odd² (lem:polar: signature (1,1)).
 
@@ -44,7 +44,7 @@ Remark: for T < ½log2 there are no primes and n₋(𝔞_T|L²) = n₋(Γ|L²) =
 | 0.75 | 2,3,4 | 2,1 | 1,0 | 1,0 | 0,0 | 7.5e-10 | 9.4e-8 | 7.8e-14 |
 | ½log5 | 2,3,4 | 2,1 | 1,1 | 1,0 | 0,0 | 3.4e-12 | 6.4e-10 | 7.4e-14 |
 
-(λ_W and λ_A(ev) at ½log5 are at the double-precision floor; Paper 47 certifies λ_A ≥ 2.5·10⁻¹², λ_W ≥ 10⁻¹⁸.) The identity of Theorem 1.2 is checked row by row: e.g. ½log5, Γ: (1+1) + [Γ(h_ev) = −1.25 < 0] + [Γ(h_odd) = +303 > 0] = 3; 𝔞_T: 0 + [−2.000 < 0] + 0 + [+2.000 > 0] = 1.
+(λ_W and λ_A(ev) at ½log5 are at the double-precision floor; Paper 46 certifies λ_A ≥ 2.5·10⁻¹², λ_W ≥ 10⁻¹⁸.) The identity of Theorem 1.2 is checked row by row: e.g. ½log5, Γ: (1+1) + [Γ(h_ev) = −1.25 < 0] + [Γ(h_odd) = +303 > 0] = 3; 𝔞_T: 0 + [−2.000 < 0] + 0 + [+2.000 > 0] = 1.
 
 ## 2. The −1 eigenvalue and the negative direction
 
@@ -70,11 +70,11 @@ NUMERICAL (script §2–3): 2/(𝔤_ev − 2) reproduces the negative eigenvalue
 
 **Lemma 4.2 (odd nodal mechanism; PROVED).** If F is odd and F ≥ 0 on (0,T), then 𝒞_F(u) ≤ 0 for u ≥ T; hence −v_n𝒞_F(log n) ≥ 0 for every n ≥ e^T: primes with log n ≥ T only add positivity in those odd directions. *Proof:* for u ≥ T, t ∈ (−T+u, T) ⊂ (0,T) and t − u ∈ (−T, 0). ∎ NUMERICAL: Γ(sinh 1_I)/‖·‖² < 0 from T = 0.5 on (−0.57 at 0.8) while 𝔞_T(sinh 1_I)/‖·‖² > 0 at every T (+0.28…+0.43). This is point (ii) of Verdict 5: full odd positivity is "primes against Γ" in the nodal directions, while (i) is D.
 
-**4.3 Byproduct for W11 (NUMERICAL).** Polar capacities of Γ: 𝔤^Γ_odd = +16.4 (0.34), +5.0 (0.36), −3.0 (0.38); 𝔤^Γ_ev = +2.9·10⁻³ (0.34), +1.1·10⁻³ (0.40), −1.9·10⁻³ (0.42). So A_∞ = Γ + pole (Paper 47's λ_inf) becomes indefinite at T ≈ 0.37 through the odd sector and at ≈ 0.41 through the even one; n₋(A_∞|L²) = 0, 0, 1, 1, 2 at 0.34, 0.36, 0.38, 0.40, 0.42. This is consistent with prop:arch(iii) (≥ 0 for T < ½log2) and with prop:archneg (< 0 from 0.4608, which is a bound from the test F = t, not the threshold). Proposal for the grid: "A_∞ indefinite from ≈ 0.37 (NUMERICAL); PROVED from 0.4608".
+**4.3 Byproduct for W11 (NUMERICAL).** Polar capacities of Γ: 𝔤^Γ_odd = +16.4 (0.34), +5.0 (0.36), −3.0 (0.38); 𝔤^Γ_ev = +2.9·10⁻³ (0.34), +1.1·10⁻³ (0.40), −1.9·10⁻³ (0.42). So A_∞ = Γ + pole (Paper 46's λ_inf) becomes indefinite at T ≈ 0.37 through the odd sector and at ≈ 0.41 through the even one; n₋(A_∞|L²) = 0, 0, 1, 1, 2 at 0.34, 0.36, 0.38, 0.40, 0.42. This is consistent with prop:arch(iii) (≥ 0 for T < ½log2) and with prop:archneg (< 0 from 0.4608, which is a bound from the test F = t, not the threshold). Proposal for the grid: "A_∞ indefinite from ≈ 0.37 (NUMERICAL); PROVED from 0.4608".
 
 ## 5. Audit notes (R186_106)
 
-- Theorems 1.2, 2.1 and Lemma 4.2 are algebra over results from Paper 47 (thm:parityschur(a1), prop:polarcap, lem:polar); Theorem 1.4 uses λ_W ≥ 0 CITED/certified up to ½log5 and the 1-D sign of Γ(cosh 1_I), NUMERICAL (closable in closed form with R186_026 (1.3)–(1.5), one block).
+- Theorems 1.2, 2.1 and Lemma 4.2 are algebra over results from Paper 46 (thm:parityschur(a1), prop:polarcap, lem:polar); Theorem 1.4 uses λ_W ≥ 0 CITED/certified up to ½log5 and the 1-D sign of Γ(cosh 1_I), NUMERICAL (closable in closed form with R186_026 (1.3)–(1.5), one block).
 - What R186_026 called OPEN (the −1) is 2/(𝔤_ev − 2) with 𝔤_ev ≍ λ_W‖h_ev‖²; there is no new identity to falsify. The "inertia reduction by the primes" is not a mechanism: it is D plus full odd positivity.
 - Nothing here certifies λ_min(W|𝒫_T) < 0 or gives information about T > ½log5 beyond the exact equivalence of Corollary 1.3(iii).
-- For Paper 47: can be integrated as an observation after prop:polarcap (spec S = {2/(𝔤_ev−2), 2/(𝔤_odd+2)}; n₋(𝔞_T|L²) = 1 on the certified range; the 0.37 cutoff of λ_inf as NUMERICAL). Do not touch thm:margin or the grid from here.
+- For Paper 46: can be integrated as an observation after prop:polarcap (spec S = {2/(𝔤_ev−2), 2/(𝔤_odd+2)}; n₋(𝔞_T|L²) = 1 on the certified range; the 0.37 cutoff of λ_inf as NUMERICAL). Do not touch thm:margin or the grid from here.

@@ -85,7 +85,7 @@ assembled into a global pairing).**
     **cannot** carry `κ`"* (the off-line count) — a proved type-mismatch obstruction, generalizable: any
     literally positive-definite kernel built on this data cannot equal an indefinite form with the sign
     information RH needs.
-  - `03-research/phase-136-row-d-map/MAP_4_PHASES_111_135_AND_PAPERS.md:26`: Paper 46 §6's `h⁰` candidates
+  - `03-research/phase-136-row-d-map/MAP_4_PHASES_111_135_AND_PAPERS.md:26`: Paper 47 §6's `h⁰` candidates
     include `h⁰_spec`, and Remark 6.9's `h(g) = ‖π(g)Ω‖²` (a literal Bochner/GNS construction) is flagged
     *"the right type/wrong construction — never built from correspondence theory rather than from the
     conclusion."*
@@ -204,7 +204,7 @@ object attempted since (137, 138, 141) either stalled unsigned or was redirected
 * The meta-theorem itself, `03-research/phase-136-row-d-map/PHASE_136_MAP_SYNTHESIS_AND_PLAN.md:53`
   (quoted in full): *"**The sign is the interaction term between the polar/archimedean block and the
   Frobenius lattice, and it is a phase-coherence phenomenon of unimodular local roots.**"* Three
-  independent formulations are noted as coinciding: phase 60's "phase not magnitude" theorem, Paper 46's
+  independent formulations are noted as coinciding: phase 60's "phase not magnitude" theorem, Paper 47's
   Restatement 12.4a ("no model-free derivation; the datum is `Frob_n ⋆ Frob_n^† = Δ^{(n)}`" — the exact
   identity phase 146 is asked to use), and Connes–Consani's `Δ`-into-`Σ` mechanism. The consequence stated
   there: *"its definition must **couple** `K` to the Frobenius lattice through an object that (i) is not

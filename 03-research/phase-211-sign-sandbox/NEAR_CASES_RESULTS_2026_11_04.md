@@ -1,6 +1,6 @@
 # Elementary cases, 2026-11-04
 
-Status: auxiliary result proved and algebraic counterexamples to possible lemmas; **no proof of the global sign**. Local sources read: Paper 47, especially `reson`, `nearfree`, `transl`, and the README/map of Paper 48; the map and meta notes rule out presenting another positive reformulation as a new route.
+Status: auxiliary result proved and algebraic counterexamples to possible lemmas; **no proof of the global sign**. Local sources read: Paper 46, especially `reson`, `nearfree`, `transl`, and the README/map of Paper 48; the map and meta notes rule out presenting another positive reformulation as a new route.
 
 ## 1. Provable improvement of nearfree: removing log log M
 
@@ -27,7 +27,7 @@ For the centres xm=log m−(1/2)log M, |xm−xk|≥|m−k|/M. If ε=1/(KM), K≥
 
     a(Fb)/||Fb||² ≥ log K−C'χ−E−2ζ(5)Cχ/K⁵.
 
-In particular there exists K0(χ) giving margin ≥1 for every M and every vector b with ε=1/(KM). This improves the ε=1/[8KM(2+log M)] of Paper 47. No novelty is claimed relative to the full corpus: this argument did not appear in the sections reviewed.
+In particular there exists K0(χ) giving margin ≥1 for every M and every vector b with ε=1/(KM). This improves the ε=1/[8KM(2+log M)] of Paper 46. No novelty is claimed relative to the full corpus: this argument did not appear in the sections reviewed.
 
 Limit: large K still prevents the near-coincidences. The improvement removes a technical loss, without reaching the missing carrier of the sign.
 

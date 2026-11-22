@@ -1,7 +1,7 @@
-# Review 007: round 009_A (mollified prolate leakage bound) against ROUND_008_E, REVIEW_006, Paper 47 §sec:ext and prolate theory
+# Review 007: round 009_A (mollified prolate leakage bound) against ROUND_008_E, REVIEW_006, Paper 46 §sec:ext and prolate theory
 
 Scope. ROUND_009_A read in full, checked line by line against ROUND_008_E (Theorem 3.1, Corollary 3.2, Proposition 3.3),
-REVIEW_006 §1, Paper 47 §sec:ext (def:ext, lem:ext-mob, thm:ext-half) and the classical prolate facts (Slepian–Pollak
+REVIEW_006 §1, Paper 46 §sec:ext (def:ext, lem:ext-mob, thm:ext-half) and the classical prolate facts (Slepian–Pollak
 1961; Landau 1993). Verdicts: CONFIRMED / REFUTED / DOWNGRADE, with the label each claim keeps. The memo claims an upper
 bound only; no sign statement is made and none is reviewed. No equivalence of (★) with another statement is used here.
 
@@ -139,7 +139,7 @@ Transfer. Proposition 3.3 of ROUND_008_E (CONFIRMED in REVIEW_006) needs only: V
 and V ∩ {f|_{[1/λ,λ]} = 0} = {0}. All three hold for V_5 (resp. V_3) by §1(i), (iii). The four functionals f(0), ℱf(0),
 A(Ef), B(Ef) are linear and finite on V_5 (A, B by (3.0) of ROUND_008_E, continuous in f|_{[1/λ,λ]}), so a nonzero common
 kernel element f exists; it is even, supported in [−λ, λ], C², with f(0) = ℱf(0) = f(λ) = 0, i.e. admissible in the
-sense of def:ext (Paper 47 l. 9867ff.), and f′(λ) = 0, i.e. in 𝒜⁺_T. Hence thm:ext-half is used inside its hypotheses, and
+sense of def:ext (Paper 46 l. 9867ff.), and f′(λ) = 0, i.e. in 𝒜⁺_T. Hence thm:ext-half is used inside its hypotheses, and
 Corollary 3.2 applies (f|_{[1/λ,λ]} ≠ 0 by injectivity). The mollification changes nothing in the count: it is applied
 before the constraints are imposed, it keeps the space linear of dimension d, and it is what makes the elements C² with
 vanishing edge data (the raw prolate span is not in 𝒞_T). The quotient of the kernel element is bounded by the maximum
@@ -148,7 +148,7 @@ over V_5, which Lemma 3.4′ bounds. So the 4-constraint count transfers. CONFIR
 Theorem 3.1 inputs on V_d. r = O(ξ^{−2}) (f ∈ C², f, f′ vanish at ±λ), ξr ∈ L² and ξ²r′ ∈ L² ((xf)″ ∈ L² needs f′(λ) = 0,
 which holds) — CONFIRMED; this is the point REVIEW_006 identified as the reason for 𝒜⁺_T.
 
-λ_W. With Paper 47's definition of λ_W as an infimum over 𝒟_T (REVIEW_006), Ef ∈ 𝒟_T suffices; two constraints on V_3.
+λ_W. With Paper 46's definition of λ_W as an infimum over 𝒟_T (REVIEW_006), Ef ∈ 𝒟_T suffices; two constraints on V_3.
 CONFIRMED.
 
 Statement. λ_A(T) ≤ 4KC_5N⁹(1 − χ_8(2πN)), λ_W(T) ≤ 4KC_3N⁹(1 − χ_4(2πN)) for N ≥ N₀, and with a finite non-explicit

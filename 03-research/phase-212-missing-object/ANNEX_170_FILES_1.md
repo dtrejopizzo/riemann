@@ -12,7 +12,7 @@ against the terrain not excluded by round 1 of phase 212:
 Common notation of phase 170: W_T(F) = (1/2π)∫m|F̂|² + 2Re(A(F)B̄(F)) − Σ_{2≤n<e^{2T}} (2Λ(n)/√n) Re c_F(log n),
 m(τ) = Re ψ(1/4+iτ/2) − log π, A(F)=∫F e^{t/2}, B(F)=∫F e^{−t/2}; c(t)=cosh(t/2), s(t)=sinh(t/2);
 m₀ = m(0) = −γ_E − π/2 − 3log2 − logπ < 0; k(u) = e^{−u/2}/(1−e^{−2u}). Several memos use the
-Poisson–Chebyshev (PC) operator of P47: S_N A_M 𝓕 = {X,E_N} − L_M*E_N − JH_{M,N} − H_{M,N}𝓕, with
+Poisson–Chebyshev (PC) operator of P46: S_N A_M 𝓕 = {X,E_N} − L_M*E_N − JH_{M,N} − H_{M,N}𝓕, with
 H_{M,N} = Σ_{k>N} h_{M,N}(k) k^{−1/2} τ_{log k}, h_{M,N}(k) = Σ_{dm=k, d≤M, m≤N} Λ(d) ≥ 0.
 
 General remark: the memos are written in English; several use an external equivalence (R163_401
@@ -38,7 +38,7 @@ There are no `.py` scripts in the folder: the `verify_*.py` cited by the memos (
 
 ### R170_000 — Global target and effective dependencies
 - **Object.** Self-contained statement of W_T(F) ≥ 0 on 𝒟_T = {F ∈ L²(−T,T): ∫log(2+|τ|)|F̂|² < ∞}; outside
-  𝒟_T the archimedean term equals +∞. Lists dependencies: certified range T ≤ ½log5 (P47 thm:log5W,
+  𝒟_T the archimedean term equals +∞. Lists dependencies: certified range T ≤ ½log5 (P46 thm:log5W,
   imported); "first contact" T_c as contact with zero, not a strict counterexample; Theorem M (P48
   thm:M(b)) as an asymptotic upper bound on normalized infima, not as an equivalence; "twisted"
   reduction (R167_101 Thm B) conditional on (Dom_θ), small regime and (WS*).
@@ -135,12 +135,12 @@ There are no `.py` scripts in the folder: the `verify_*.py` cited by the memos (
   margin are NUMERICAL and circular by its own declaration.
 - **Stops.** Class NO-GO: positive nonlocal compensation consumes margin I−K, does not create it; existence of Z
   ⇔ K ≤ I. Falsifier a₂ = 100 from R170_301.
-- **Corrected by.** R170_701/702: the Möbius detector is replaced by the faithful Gamma detector of P47.
+- **Corrected by.** R170_701/702: the Möbius detector is replaced by the faithful Gamma detector of P46.
 - **T1–T4.** No (the M_d come from T3 via R170_401, but there is no quadratic bound).
 
-### R170_701 — Paper 47 comparison
-- **Object.** Table of precedents in P47 for 301–601; list of missing pieces (faithful Gamma detector, exterior
-  collars, complete polar terms, oriented integer identity, minimality). Errors in the text of P47:
+### R170_701 — Paper 46 comparison
+- **Object.** Table of precedents in P46 for 301–601; list of missing pieces (faithful Gamma detector, exterior
+  collars, complete polar terms, oriented integer identity, minimality). Errors in the text of P46:
   "(P) has no minimizer" contradicts the proof of O; "m ≥ 0" false (m(0) < 0); update to lem:contA; existential
   extension beyond ½log5 already derivable from thm:log5W + lem:contT.
 - **Labels.** Structural comparison, no theorem label. Sustained: yes as an audit.
@@ -148,7 +148,7 @@ There are no `.py` scripts in the folder: the `verify_*.py` cited by the memos (
 - **T1–T4.** Mentions T4 (PC section with Λ∗1 = log and orientations) as pending; does not walk it.
 
 ### R170_702 — Gamma detector and complete collars
-- **Object.** Detector (𝓡F)_m = b_m∫e^{−a_m t}F, a_m = 2m+1/2, b_m = √a_m e^{−a_m(T+δ)}; HS and injective (P47);
+- **Object.** Detector (𝓡F)_m = b_m∫e^{−a_m t}F, a_m = 2m+1/2, b_m = √a_m e^{−a_m(T+δ)}; HS and injective (P46);
   exact HS tail h_L. O_Γ = Σ_j Y*R^j 𝓡*𝓡 R^jY > 0 strictly. Complete collar identity:
   𝓡U_N = D_N𝓡 − 𝓔_N; for an eigenvector of definite parity, Q^W_{N,L}(F) = −2Σ_{m≤L}(d_{m,N}+λ)|(𝓡_LF)_m|².
 - **Labels.** "Consequences proved". Sustained: yes.
@@ -160,7 +160,7 @@ There are no `.py` scripts in the folder: the `verify_*.py` cited by the memos (
 ### R170_703 — Explicit extension past log5
 - **Object.** With T₀ = ½log5, L = 10^{24}, ε = (T₀/4)e^{−L}: W_T(F) ≥ ½·10^{−18}‖F‖² for 0 < T ≤ T₀+ε.
   Explicit constants: sup|τm'(τ)| < 10, prime weights < 200, control Q(F) ≤ W_{T₀}(F) + 20; dilation U_r unitary.
-- **Labels.** "Theorem derived from the P47 certificate" = CONDITIONAL on the imported certificate (not rerun);
+- **Labels.** "Theorem derived from the P46 certificate" = CONDITIONAL on the imported certificate (not rerun);
   the analytic deduction is complete. Sustained: yes, with that dependence.
 - **Stops.** Width e^{−10^{24}}: not useful; iterating continuity does not exclude summable widths.
 - **Note.** Notation conflict: here L = 10^{24}, in the rest of the phase L = 2T or number of moments.
@@ -254,7 +254,7 @@ There are no `.py` scripts in the folder: the `verify_*.py` cited by the memos (
 - **Object.** Oriented divisor–collar incidence flux: 𝔉^ε = Re⟨{X,E_N}F − L_M*E_NF − JH_{M,N}F − H_{M,N}𝓕F,
   χ_εS_LF⟩ − Re⟨S_N r_F, 𝓕(χ_εS_LF)⟩ (1); N = ⌈e^{2T}⌉, M = N². FIDC conjecture: (FIDC+) 𝔉 ≥ (1−q₀)‖R_LF‖²,
   q₀ = log2/4 + 1/16, and (FIDC−) 𝔉 ≤ 0 at primitive first contact; together they would give R_LF = 0 ⇒ F = 0.
-  Reserve (6) R_L*(I−D_{N,L})R_L ≥ (1−q₀)R_L*R_L (cited from P47). Mechanism §5: saturated zone k ≤ N cancelled by
+  Reserve (6) R_L*(I−D_{N,L})R_L ≥ (1−q₀)R_L*R_L (cited from P46). Mechanism §5: saturated zone k ≤ N cancelled by
   Σ_{d|k}Λ(d) = log k; boundary k > N with weights Λ(d) ≥ 0.
 - **Labels.** Declared a proposal / CONJECTURE (in the sense of OPEN). Uses an external equivalence (§3,
   steps 3–4). Sustained: the proposal has definition errors (see 812).
@@ -327,7 +327,7 @@ There are no `.py` scripts in the folder: the `verify_*.py` cited by the memos (
 - **Object.** Map: direct route (exact debit A*B^{−1}A) and flux route (two gaps: reserve ≤ Φ, Φ ≤ −E_ρ).
   Table of pieces and priorities 1–4 (exterior–interior compatibility; joint Poisson–Tate/tail comparison;
   transport; uniformity). Criterion for a discriminating piece (breaks falsifiers).
-- **Labels.** Synthesis; no theorem. Uses an external equivalence (P47 + P45 Theorem F in the diagram).
+- **Labels.** Synthesis; no theorem. Uses an external equivalence (P46 + P45 Theorem F in the diagram).
 - **T1–T4.** Touches T4 as a target (priority 2), does not walk it.
 
 ### R170_819 — Exterior–interior connection
@@ -380,7 +380,7 @@ There are no `.py` scripts in the folder: the `verify_*.py` cited by the memos (
 5. Local-phase rigidity theorem (v = e^{iφ}e^{iθt}) and compensation PRP = PVQH_Q^{−1}QVP — R170_501 §§3,5.
 6. Minimum-cost theorem for the Stein equation Z = G + ΣR^jSR^j — R170_601 §2.
 7. Exact HS tail of the Gamma detector and complete collar identity Q^W = −2Σ(d_{m,N}+λ)|(𝓡_LF)_m|² — R170_702.
-8. Explicit extension to T₀ + (T₀/4)e^{−10^{24}} (conditional on the P47 certificate) and constants sup|τm'| < 10 —
+8. Explicit extension to T₀ + (T₀/4)e^{−10^{24}} (conditional on the P46 certificate) and constants sup|τm'| < 10 —
    R170_703.
 9. Entropy bound E_ν Re S ≤ √(VH) — R170_802.
 10. Response identities (E), (F) with residue — R170_803 §§3–4.
@@ -463,9 +463,9 @@ There are no `.py` scripts in the folder: the `verify_*.py` cited by the memos (
    multiplication is preserved).
 4. R170_819 §1 states the weak equation only for primitive tests; R170_822 corrects that e_F annihilates every admissible test
    supported in the window.
-5. R170_701 points out errors in the text of P47 (minimizer of (P); "m ≥ 0"; reference to lem:contA; existential extension
+5. R170_701 points out errors in the text of P46 (minimizer of (P); "m ≥ 0"; reference to lem:contA; existential extension
    past ½log5).
-6. R170_812 §5 warns that the reference "(11.3)" of P47 is ambiguous (equation label).
+6. R170_812 §5 warns that the reference "(11.3)" of P46 is ambiguous (equation label).
 7. Kernel conventions: k (R170_301, 806) vs K = 2k (R170_807, 808); consistent once made explicit (checked).
 8. Notation: L = 10^{24} in R170_703 versus L = 2T (806–809) and L = number of moments (702, 811–816).
 9. R170_819 has a displaced prose fragment ("where the defect is…") after (9c').

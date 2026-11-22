@@ -4,11 +4,11 @@ The global sign remains OPEN. The round adds no window nor region of positivity 
 
 ## Important correction of the state
 
-The range included in Paper47 must not be confused with everything previously certified in the sandbox. Paper47 contains the proof up to T=log(5)/2. ROUND_026_A, Theorem26A.2, records a computer-assisted certification of lambda_A(T)>=2e-26 for ALL normalised primitive tests and ALL 0<T<=207/200=1.035. The latter does exceed log(5)/2, but it is an earlier result, not progress of the recent power rounds.
+The range included in Paper46 must not be confused with everything previously certified in the sandbox. Paper46 contains the proof up to T=log(5)/2. ROUND_026_A, Theorem26A.2, records a computer-assisted certification of lambda_A(T)>=2e-26 for ALL normalised primitive tests and ALL 0<T<=207/200=1.035. The latter does exceed log(5)/2, but it is an earlier result, not progress of the recent power rounds.
 
 The archived logs of both parities at T=1.035, mu=2e-26 were read twice independently; both record certified:true. The large computation was not reproduced now. POWER_PRIMAL_AUDIT_045 specifies sources, the JSON summaries overwritten by other attempts and the distinction between build and certificate. For T=1.098 matrices and builds were located, but not a final certificate: that endpoint is not promoted to a proved result.
 
-## What fails when reusing the certificate of Paper47
+## What fails when reusing the certificate of Paper46
 
 POWER_CONTACT_FLOOR_045 proves, with independent review and a reproduced rational verifier, that when contact 5 enters the raw floor m(240)-A_T is less than -1/2. Hence it is of no use to keep simultaneously the cutoff240 and that total-mass floor to obtain a nonnegative lower bound via lowercert. It is not negativity of the form nor impossibility of other certificates. ROUND_026_A already avoids that restriction using bounds of the real symbol and another cutoff.
 

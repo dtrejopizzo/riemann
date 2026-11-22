@@ -6,7 +6,7 @@ reusing the mesh-free spectral assembly of `scripts/audit/aud_spectral.py` verba
 
 ## 0. Corpus check (run before building)
 
-`grep -rIn "needle" 03-research 04-papers` → only phase 153 (`R153_001/002/003/005/006`) and Paper 46's
+`grep -rIn "needle" 03-research 04-papers` → only phase 153 (`R153_001/002/003/005/006`) and Paper 47's
 Part III review (unrelated sense); `grep -rIn "unique contact\|contact uniqueness\|b = log 3"` → only
 `R153_001:193,291,307`, `R153_005:21,51,34`, `R153_006`, and `scripts/r153_q2b_shift_scan.py:20` (a print label).
 **No prior file states, proves or disproves anything about the position of the maximum of `b ↦ λ_min(b)`.**

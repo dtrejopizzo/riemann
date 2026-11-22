@@ -2,7 +2,7 @@
 
 Phase 199,
 Checked against E_001 (Thm E.1/E.2, Cor E.3), J_001 (Prop J.1), F_001 (Prop F.0, F.5),
-AUDIT_L_SHARP_7 (constraint 19), Paper 47 eq:Aform. Scratch checks (sympy/numpy, not stored) are NUMÉRICO and only check
+AUDIT_L_SHARP_7 (constraint 19), Paper 46 eq:Aform. Scratch checks (sympy/numpy, not stored) are NUMÉRICO and only check
 the algebra.
 
 **Verdict in one line.** Theorem B (single-cell form) **stands as PROVED** after two constant repairs: K₂ is undercounted, and
@@ -43,7 +43,7 @@ polylog-tail path. Constraint 20 is added. Row D OPEN.
 - ⟨Ψ̌, S_{−log q}Ψ̌⟩ = Σ_{lq≤N}(lq·l)^{−½}‖u‖² = q^{−½}H(N/q)‖u‖² ✓.
 - Weight c_q = w(q)q^{−½} gives −2Σ_q w(q)q^{−1}H(N/q)‖u‖² = −2‖u‖²Σ_{n≤N}(w∗1)(n)/n ✓ (Dirichlet hyperbola).
 - For w = Λ, Λ∗1 = log gives −2H₁(N)‖ρ‖² ✓.
-- The factor 2 matches Paper 47's comb (both signs ±log q) and PRECHECK's zero test ✓.
+- The factor 2 matches Paper 46's comb (both signs ±log q) and PRECHECK's zero test ✓.
 - **Phase-independent, exactly as stated.** This is precisely why single-cell data carry no cross-class information
   (constraint 20).
 

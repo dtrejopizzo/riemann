@@ -18,7 +18,7 @@ infinite tail. No sign is obtained.
 
 ## 1. Exact multiplier--reflection
 
-We use exactly the conventions of Paper 47:
+We use exactly the conventions of Paper 46:
 
 \[
  (\tau_bf)(t)=f(t+b),\qquad
@@ -70,7 +70,7 @@ stationary equation is \(m=a\), not \(m=-a\).
 
 ## 2. Exact localization of the stationary region
 
-Paper 47 proves, via the series
+Paper 46 proves, via the series
 
 \[
  m(x)=m(0)+\sum_{n\ge0}
@@ -137,7 +137,7 @@ Define
  C_m:=\sup_{x\in\mathbb R}|xm'(x)|<\infty.                       \tag{11}
 \]
 
-The explicit lower bound of Paper 47 proves, for \(x\ge B_a\),
+The explicit lower bound of Paper 46 proves, for \(x\ge B_a\),
 
 \[
  m(x)\ge \log\frac{x}{2\pi}-\frac1x-\frac1{2x^2}>a+1.          \tag{12}
@@ -201,7 +201,7 @@ local Hilbert--Schmidt. Here there is no such obstruction for fixed
 Let \(P_T\) be multiplication by the indicator of \((-T,T)\). The
 operator \(q(D)J\) has a kernel of the form \(\kappa(t+s)\), where
 \(\widehat\kappa=q\).
-With the Fourier normalization of Paper 47,
+With the Fourier normalization of Paper 46,
 
 \[
  \|\kappa\|_2^2=\frac1{2\pi}\|q\|_2^2.

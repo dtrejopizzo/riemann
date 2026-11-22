@@ -1,6 +1,6 @@
-# Review 006: rounds 008_E and 008_C against Paper 47 and standard prolate theory
+# Review 006: rounds 008_E and 008_C against Paper 46 and standard prolate theory
 
-Scope. ROUND_008_E and ROUND_008_C, checked against Paper 47 (04-papers/47-row-d-dual-certificates/main.tex: eq:symbol, eq:W,
+Scope. ROUND_008_E and ROUND_008_C, checked against Paper 46 (04-papers/46-row-d-dual-certificates/main.tex: eq:symbol, eq:W,
 the definitions of λ_A and λ_W on 𝒟_T, def:ext, lem:ext-mob, thm:ext-half, prop:ext-gauge, prob:ext-L, prop:ext-consol,
 thm:ext-margin, lem:ext-hf, lem:monoT, lem:contA, lem:compact) and against the standard theory of the prolate spheroidal
 functions (Slepian–Pollak, Landau–Widom, Fuchs). No equivalence of the window statement (★) with any other statement is
@@ -50,11 +50,11 @@ condition, and it is correctly built into 𝒜⁺_T).
 
 **Corollary 3.2 (L.195–200).** CONFIRMED. Key step: ‖E^{−1}‖ ≤ 2√N (lem:ext-mob) and λ^{−2}·4N = 4. Ef lies in 𝒟_T (it is
 bounded and piecewise C¹; a jump at −T has finite log energy), and A(Ef) = B(Ef) = 0 puts it in P_T ∩ 𝒟_T, which is the
-set over which Paper 47 takes λ_A.
+set over which Paper 46 takes λ_A.
 
 **Proposition 3.3 (L.202–216), index count.** CONFIRMED as stated. (i) Four linear functionals f(0), ℱf(0), A(Ef), B(Ef)
 on a space of dimension ≥ 5 have a nonzero common kernel; (ii) two functionals on dimension ≥ 3. Correction to (ii): the
-memo defines λ_W over a "core" and then repairs to the form-domain closure (L.209–211); Paper 47 defines λ_W directly as
+memo defines λ_W over a "core" and then repairs to the form-domain closure (L.209–211); Paper 46 defines λ_W directly as
 the infimum over 𝒟_T (eq:W and the display after it), so Ef ∈ 𝒟_T suffices and the repair is unnecessary; with the
 memo's own definition the repair is supplied by the density statement inside thm:ext-margin. On the question asked:
 the count is right as an upper-bound count. For even f there are exactly four constraints for λ_A (two admissibility, two
@@ -105,7 +105,7 @@ Proposition 3.3 apply thm:ext-half only to f ∈ 𝒜⁺_T ⊂ admissible. Ef it
 not admissible, but only in NUMERICAL statements, and the memo itself notes that thm:ext-half does not apply there.
 
 Summary for 008_E. CONFIRMED: §1.1 normalisation, Theorem 3.1 (given thm:ext-half / Guo2026), Corollary 3.2, Proposition
-3.3 (as an upper-bound count; (ii) simplified by Paper 47's definition of λ_W), Proposition 4.2, Lemma 4.3, identity
+3.3 (as an upper-bound count; (ii) simplified by Paper 46's definition of λ_W), Proposition 4.2, Lemma 4.3, identity
 (5.1) (tautological), Proposition 5.1 inequalities. DOWNGRADE: last clause of Proposition 5.1 to c > 1 (c < 1 NUMERICAL);
 parity statement of §2.2(ii)/(iii) to ARGUED + NUMERICAL. REFUTED: none.
 

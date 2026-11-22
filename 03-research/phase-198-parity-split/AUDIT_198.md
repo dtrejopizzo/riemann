@@ -1,7 +1,7 @@
 # AUDIT_198 — audit of phase 198 (AA, CERT, BB, CC) and phase 197 tracks Y, Z
 
 Every check below was made against
-Paper 47 (`04-papers/47-row-d-dual-certificates/main.tex`): eq:Aform (l.402), C_0 = ψ(¼) − log π = −γ − π/2 − 3log2 − logπ,
+Paper 46 (`04-papers/46-row-d-dual-certificates/main.tex`): eq:Aform (l.402), C_0 = ψ(¼) − log π = −γ − π/2 − 3log2 − logπ,
 K = ½/sinh(u/2) + ½/cosh(u/2), thm:S(iii), v_n = 2a(n)/√n, lem:degen (l.3249), lem:transfer (l.7647), thm:log5A,
 the Liu citation (complete form, T ≤ 1 and T ≤ 17/16, preprint, CITED), subsec:shape-geom and sec:spec. Row D: **OPEN**.
 
@@ -65,7 +65,7 @@ Checked item by item:
 - §2 "Beurling/Ξ_Q/O_6+ expected to transfer": ARGUED, not a result. Keep it OPEN.
 
 ## (c) BB_001
-- Identity 1 and the concavity of λ(c): correct. Concavity is **CITED (P47 lem:degen restricted to the line cΛ)**, not
+- Identity 1 and the concavity of λ(c): correct. Concavity is **CITED (P46 lem:degen restricted to the line cΛ)**, not
   new. The positivity set {c: λ(c) > 0} at T = 1 excludes c = 0, 2, 1.15 (PROVED via CERT; odd witnesses suffice
   because λ_A ≤ μ_odd). Excluding 0.85 is NUMÉRICO. That the set contains c = 1 at T = 1 is CITED (Liu, T ≤ 1).
 - **Identity 2: coefficient error.** ‖C_a h*‖² = ½Σ_{m,n} v_m v_n [c(log m/n) + c(log mn)] is correct (the four
@@ -108,7 +108,7 @@ against 24–32 in Z. Z itself shows that the bottom keeps falling with M down t
   genuine falsifiers (NUMÉRICO; a_2 and a_3 match the certified values). The H_23 signs at those combs (gap O(0.1))
   are plausibly resolved but unconverged in M; NUMÉRICO. Reading (d) "position-fragile" is NUMÉRICO and valid.
 - BB §2 does not depend on unresolved numerics. Y §2 already declared T ≥ 0.9 undecided, which is correct.
-- Y §1 quotes "λ_A ≤ 3.1e−12 past ½log5 (P47 App. num)". P47 l.164 and l.10145 give λ_A(½log5) ≈ 3.10e−12 (NUMÉRICO). By
+- Y §1 quotes "λ_A ≤ 3.1e−12 past ½log5 (P46 App. num)". P46 l.164 and l.10145 give λ_A(½log5) ≈ 3.10e−12 (NUMÉRICO). By
   Lemma M this is an upper bound for every T ≥ ½log5. Correct as a NUMÉRICO bound.
 
 ## BARRIER_Y_001

@@ -4,7 +4,7 @@ Rules: pure mathematics; numerics only for identity checks; corpus check before 
 relabel to gain labels; no sign is claimed anywhere in this phase. Read first:
 `05-meta-and-planning/ABCD-CLOSURE-PLAN/ROW-D-CLOSURE-PLAN.md` §§3, 8, 9;
 `03-research/phase-149-row-d-additive-pencil/R149_001_ROUND1.md` §3 (D.60) and `R149_002_AUDIT.md`;
-`04-papers/46-intersection-frame-defect/archive/main.md` §18 (T1, T2); `NO-GO-LIST.md` NG-B1, MW-2; `03-research/phase-119-*/README.md`
+`04-papers/47-intersection-frame-defect/archive/main.md` §18 (T1, T2); `NO-GO-LIST.md` NG-B1, MW-2; `03-research/phase-119-*/README.md`
 (the Davenport–Heilbronn gate).*
 
 ## 0. Purpose
@@ -36,7 +36,7 @@ sums, the multiplicative-additive interplay `n ↦ n+1`.
 **Tasks.** (1) State DMV's theorem exactly (Diamond, Montgomery, Vorhauer, *Beurling primes with large oscillation*,
 Math. Ann. 334 (2006)); state also Zhang's and Hilberdink–Lapidus's Beurling results if they sharpen the class.
 Label IMPORTED; anything not read in the source is CERTIFIED. (2) Prove T3 as a **meta-theorem with a precise
-axiom list** (as T2 was proved in Paper 46 §18.2: an axiom list A1–A9 and a falsifier satisfying all but the
+axiom list** (as T2 was proved in Paper 47 §18.2: an axiom list A1–A9 and a falsifier satisfying all but the
 Euler-product axioms). Here the falsifier class is `{ζ_𝒫}`. Name the axioms that `ζ_𝒫` satisfies (BE1–BEk) and
 prove that every classical unconditional zero-free-region proof for `ζ` (de la Vallée Poussin; Landau; the
 trigonometric-polynomial method in general) uses only BE1–BEk. (3) Show which unconditional theorems about `ζ`
@@ -127,5 +127,5 @@ zero-free region, a moment bound, or a cancellation not in the literature, stop 
 `R150_001_ROUND1.md`: §0 executive summary; §1 corpus check per theorem (grep-verified, commands listed);
 §2 T3 with DMV import, axiom list, falsifier triangle, independence proof; §3 T4 with the class `𝒞`, sharp
 boundary per mechanism, corollaries, falsifier; §4 T5 with proof, three instances, equivalence at `k = 1, 2`;
-§5 gates; §6 labels table; §7 open list; §8 what this changes in Paper 46 §18 (proposed text for T3–T5, ≤ 1 page).
+§5 gates; §6 labels table; §7 open list; §8 what this changes in Paper 47 §18 (proposed text for T3–T5, ≤ 1 page).
 Length: whatever the proofs need, no padding. English.

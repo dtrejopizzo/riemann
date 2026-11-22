@@ -1,7 +1,7 @@
 # R170_838 — Audit of the two-window PC--collar datum
 
 Audit of R170_837, in particular §§7--8.
-R170_837 and Paper 47 are not modified.
+R170_837 and Paper 46 are not modified.
 
 ## 0. Verdict
 
@@ -86,7 +86,7 @@ transport of the sign to R_LF                               NO-GO FOR THESE DATA
 
 ### 1.1. Fourier, reflection, and shifts
 
-The conventions of Paper 47 are
+The conventions of Paper 46 are
 
 \[
  \tau_a f(t)=f(t+a),\qquad V_af(t)=f(t-a)=\tau_{-a}f(t),
@@ -532,7 +532,7 @@ the vector \(R_LF\in\mathbb C^L\).
 
 The parameter \(L\) does not even appear in definition (0.1). It enters
 only when decomposing \(\xi_F^\delta\) as in (6.1). Hence (8.3) is not
-yet a bridge to the detector of Paper 47.
+yet a bridge to the detector of Paper 46.
 
 ## 7. Comparison with the corpus
 

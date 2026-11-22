@@ -2,7 +2,7 @@
 
 ## Corpus check
 028 (A_M ⟺ D; Arch − Div − Near), 023 Lemma C (archimedean cross terms O(e^{−5d/2})), phase-146 R146_003 §D.47 (single-prime tower: PSD iff τ_p ≥
-2/(√p+1) — the MINIMUM of the local symbol), R184_004 (inertia of B_p blocks), Paper 47 finmod(ii). New: the restriction to Near-free sets, its exact
+2/(√p+1) — the MINIMUM of the local symbol), R184_004 (inertia of B_p blocks), Paper 46 finmod(ii). New: the restriction to Near-free sets, its exact
 Kronecker-sum structure, the explicit eigenvalue bound, and the separation–resolution trade-off that makes it trivial.
 
 ## 1. Near-free supports (PROVED)

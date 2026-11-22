@@ -2,7 +2,7 @@
 
 ## Corpus check
 N_BUILD_007 (cone 𝒦_T^* dual to primitive autocorrelations; δ₀, δ₀ ± δ_a, e^{−u/2}du ∈ 𝒦_T^*; δ_a ∉ ±𝒦_T^*; convolution
-by δ_a does not preserve 𝒦_T^*; resolvent order-indefinite), R186_052 (𝒦^{(0)*} via Kreĭn, conditional), Paper 47
+by δ_a does not preserve 𝒦_T^*; resolvent order-indefinite), R186_052 (𝒦^{(0)*} via Kreĭn, conditional), Paper 46
 rem:nyq-dual, 011 row 8 (a_P), 012. No memo on exp(ν) for ν ≥ 0 on prime powers paired with c_F.
 
 ## 0. Convention reconciliation with the (N) track (PROVED both)

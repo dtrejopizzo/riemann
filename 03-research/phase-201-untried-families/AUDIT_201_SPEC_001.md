@@ -100,7 +100,7 @@ otherwise (FAMILIES_B did, when it spoke of "slack"). The relation to Zenodo 232
 **Can r_+ say anything about emptiness?** No (PROVED, trivial). Slack and extension complexity are defined for
 non-empty pairs. An empty polytope has complexity 0 and no slack. Whether the certificate LP is feasible is a
 question of **emptiness**, and r_+ measures the **size** of a representation of a set already assumed non-empty.
-Even if M were the slack of the Paper 47 certificate polytope, r_+ would measure "how complicated the certificate
+Even if M were the slack of the Paper 46 certificate polytope, r_+ would measure "how complicated the certificate
 is," not "whether it exists." So the only way r_+ touches positivity is T201-a, and §4 shows that this inequality is
 branch 2.
 
@@ -165,7 +165,7 @@ create excess.
 
 ## 6. Citations
 
-Verified from the auditor's memory (no web search was done in this pass; they remain CITED-pending for P47):
+Verified from the auditor's memory (no web search was done in this pass; they remain CITED-pending for P46):
 - **Yannakakis 1991** (JCSS 43:441–466): xc(P) = r_+(slack). ✓ What the spec attributes is correct.
 - **Cohen–Rothblum 1993** (LAA 190:149–168): r_+ = rank if rank ≤ 2 ✓, and examples with r_+ > rank ✓. **The**
   claim "r_+ = 3 and r_+ = 4 occur on open sets of the rank-3 4×4 matrices" is **not** due to them. That belongs to

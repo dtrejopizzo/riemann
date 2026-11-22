@@ -33,7 +33,7 @@ rounds, to prove or refute its sufficiency.
   the semilocal identity to hold unconditionally, decomposing
   Son_S - Son_∞ into an exact prime term plus controlled remainders
   (**PROVED**); a gap theorem shows no negative direction exists for
-  S = S(T) up to T = ½log5, citing Paper 47 (**PROVED**); numerically
+  S = S(T) up to T = ½log5, citing Paper 46 (**PROVED**); numerically
   (not certified) the gap appears to persist up to T ≈ 0.80-0.90 with
   super-exponential decay; a "gap requirement" theorem shows that any
   bounded-inertia positive-multiplier decomposition valid for all T must
@@ -69,7 +69,7 @@ rounds, to prove or refute its sufficiency.
   semilocal window, reviews, and the final synthesis.
 
 ## Relation to other phases
-Cites and is checked against Paper 47's thm:log5A and the TK ceiling
+Cites and is checked against Paper 46's thm:log5A and the TK ceiling
 identified in phase 155; the super-exponential gap behavior found here is
 read as the Sonin-side manifestation of that same ceiling. No sign result
 is produced beyond the certified window; the route is left open with a

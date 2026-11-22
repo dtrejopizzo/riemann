@@ -5,7 +5,7 @@ Pen and paper; **no numerics run**.
 **No sign contact. No certified negative value for ζ.**
 
 Read before seeding: CA_H_SYNTHESIS, CA_H_002 (H0, Thm 2.2 (S⁺), Thm 3.1/3.2 anatomy, Cor 2.3 "purity"), CA_E_001 (Thm 1
-separability, Lemma 1 Kronecker line), CA_F_003 (G-F), CA_G_SYNTHESIS (G0, G1), CAMPAIGN_LEDGER, P47 def:shape-ops (O1–O15),
+separability, Lemma 1 Kronecker line), CA_F_003 (G-F), CA_G_SYNTHESIS (G0, G1), CAMPAIGN_LEDGER, P46 def:shape-ops (O1–O15),
 def:quartetmodel / prop:quartetmodel / lem:shape-quartet, prob:region (R)(1)–(11), lem:monoT, prop:archneg, thm:famblind, lem:flowdet;
 ROUTES-TRIED-INDEX README (PRINCIPIO RECTOR) + 04_ (W-fam, W-pat, W-loc, flowdet, F-DH) + 06_.
 
@@ -22,18 +22,18 @@ continuation: R186_025/027 (coercivity lemmas), no Carleman estimate on h*. Γ-c
 "polarization"). Maximum principle: R160_M4_R1, R160_X_C1, R163_501 (witness audit) — local uses only.
 
 ## Screen key
-As CA_H_000. (R)k = clause k of prob:region. (P1)–(P6) = CA_B_SYNTHESIS residual spec. O-labels = P47 def:shape-ops. B′/B″ =
+As CA_H_000. (R)k = clause k of prob:region. (P1)–(P6) = CA_B_SYNTHESIS residual spec. O-labels = P46 def:shape-ops. B′/B″ =
 thm:shape (estimate with remainder / identity valid for every weight vector). FE-gen = survives Epstein x²+5y² (CA_C_007, H0(b) ARGUED).
 G0 = squares are Gram factorizations; G1 = monoid-functorial positivity survives O11/O12. H-anat = CA_H_002 Thm 3.2 (every term is
 additive weight × monoid coefficient, linear in Λ; non-linearity only via minimizer or a new input). REF-D = restatement of the target.
 [crit] = must resolve at relative precision M^{−3} (EXP_005 C1, NUMÉRICO). PR = PRINCIPIO RECTOR (+/· use). "dies" = first killing clause.
 
 ## Common fact I0 (PROVED; the shape of the qualitative channel)
-Let 𝔞_T be the window form on L²(I_T) (P47 eq:form), 𝒫_T = {∫Fe^{±t/2} = 0}, h*_T a unit minimizer, λ_A = 𝔞_T(h*_T). The
+Let 𝔞_T be the window form on L²(I_T) (P46 eq:form), 𝒫_T = {∫Fe^{±t/2} = 0}, h*_T a unit minimizer, λ_A = 𝔞_T(h*_T). The
 Euler–Lagrange equation is (A_T − λ_A)h* = β₀e^{t/2} + β₁e^{−t/2} in 𝒟_T*, A_T the operator of 𝔞_T. Every qualitative property of h* is
 either (a) a property of the triple (A_T, span{e^{±t/2}}, λ_A) valid for the whole class of symbol forms σ ↦ ∫σ|F̂|² with the same
 structural axioms (evenness, Paley–Wiener support, compact resolvent) — then it is class-generic and dies at O7 (quartet forms are
-symbol forms with all those axioms, P47 prop:quartetmodel(iii)); or (b) it uses a property of the specific kernel of A_T. In case (b),
+symbol forms with all those axioms, P46 prop:quartetmodel(iii)); or (b) it uses a property of the specific kernel of A_T. In case (b),
 by H-anat, the kernel is (additive-only Lévy/archimedean part) + (monoid-only atoms v_nδ_{log n}); a qualitative property then is a
 property of one of the two summands, of their conjunction, or a non-linear functional of h* (REF-D, SPEC_A Lemma S).
 *Proof.* The EL equation is the Lagrange condition for a quadratic form on a codimension-2 subspace; the kernel decomposition is

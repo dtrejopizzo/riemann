@@ -60,11 +60,11 @@ the detecting-cone frame, the one-parameter Landau criterion, the hyperbolic-pla
 explicit `K_odd`, the equimodularity criterion with its `ζ_K` ceiling, the refutation of "translation is
 the operation".
 
-## 3. Paper-facing corrections (to enter in Paper 46 at the next Part III pass)
+## 3. Paper-facing corrections (to enter in Paper 47 at the next Part III pass)
 
-P46-1 fix the `M(F)` convention (§12.1/§12.5 vs §14.1 transposed); P46-2 add the effective-class
-falsifier witness (Thm D.15.4) as Remark 12.3c; P46-3 exhibit `K_odd` and the splitting `D^W = Λ ⊥ P^W`;
-P46-4 "RH ⟺ Hodge index on the ample cone (absorbing at `K`)" from Thm 11.14(iii), with the caveat that
+P47-1 fix the `M(F)` convention (§12.1/§12.5 vs §14.1 transposed); P47-2 add the effective-class
+falsifier witness (Thm D.15.4) as Remark 12.3c; P47-3 exhibit `K_odd` and the splitting `D^W = Λ ⊥ P^W`;
+P47-4 "RH ⟺ Hodge index on the ample cone (absorbing at `K`)" from Thm 11.14(iii), with the caveat that
 the ample cone is defined through `I_∞` (fails clause (ii) of Q). Paper 45: no corrections.
 
 ## 4. Decision and recommendation for phase 139

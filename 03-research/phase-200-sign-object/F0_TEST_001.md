@@ -12,7 +12,7 @@ prediction (dominance of ⟨h₁,h₂⟩) is **false**: ⟨h₁,h₂⟩ = −1.3
 - Conventions from MORI15_EXTREMAL_001: λ = √15, T = ½log15, Legendre basis of 832 even modes, Möbius inverse f₁ on
   [1/λ, λ] and minimum-leakage gauge M = 28 with φ(0) = 0 and ∫f = 0. Also: 81 prolate functions with c = 30π, 𝓕f(ξ) = ∫f e^{−2πixξ},
   ρ(ω) = r*(λω).
-- Paper 47 §22 (def:ext, thm:ext-half, rem:ext-killing, prop:ext-gauge), with 𝒜[Ψ] = b_∞c(0) + 2∫₀^∞(c(0) − c(v))ν(v)dv,
+- Paper 46 §22 (def:ext, thm:ext-half, rem:ext-killing, prop:ext-gauge), with 𝒜[Ψ] = b_∞c(0) + 2∫₀^∞(c(0) − c(v))ν(v)dv,
   b_∞ = ψ(¼) − logπ and ν = e^{−v/2}/(1 − e^{−2v}).
 - Not a retry: it is the execution of the test requested in A_MU_FACTORIZATION_001 §3/§7, which was not run there.
 

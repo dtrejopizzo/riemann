@@ -23,7 +23,7 @@ blocks of the multiscale interface.
 
 ## Phase and sign check
 
-With the conventions of Paper 47,
+With the conventions of Paper 46,
 
 \[
  U_\rho=u_\infty(D/\rho)J,
@@ -43,7 +43,7 @@ So the phase derivative is
  \xi[m(s\xi)-a].
 \]
 
-The Bernstein series of Paper 47 shows that \(m\) is even and strictly
+The Bernstein series of Paper 46 shows that \(m\) is even and strictly
 increasing on the positive half-axis. The stationary point \(m(s\xi)=a\)
 is confined to a finite band. For sufficiently large frequencies,
 \(|m(s\xi)-a|\ge1\), and integration by parts gives decay
@@ -92,4 +92,4 @@ piece would have to exploit the matrix of this operator over the
 first-contact radical together with the Tate, Gamma, and alignment
 blocks, or produce a joint cancellation before using norms.
 
-The certified range of Paper 47 is not extended, nor is D proved.
+The certified range of Paper 46 is not extended, nor is D proved.

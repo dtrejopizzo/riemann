@@ -1,6 +1,6 @@
 # A single POWER diagonal with variable rate: exact detection interval
 
-Use only F(s)=s^N/(s+u)^(2N), N≥1. For u>1/2 put b_N(u)=(4u²)^N W(f). The global sign of paper 47 is equivalent to either of these obligations: for each rational rate u>1/2, (i) limsup_N |b_N(u)|^(1/N)≤1, or (ii) W(f)≥0 for all N large enough (threshold depending on u). The first condition admits subexponential bounds, even without determining the sign of each moment. The rate must vary: sufficiency of the diagonal at fixed rate is not claimed.
+Use only F(s)=s^N/(s+u)^(2N), N≥1. For u>1/2 put b_N(u)=(4u²)^N W(f). The global sign of paper 46 is equivalent to either of these obligations: for each rational rate u>1/2, (i) limsup_N |b_N(u)|^(1/N)≤1, or (ii) W(f)≥0 for all N large enough (threshold depending on u). The first condition admits subexponential bounds, even without determining the sign of each moment. The rate must vary: sufficiency of the diagonal at fixed rate is not claimed.
 
 **Exact geometry.** For z=ρ−1/2=δ+iγ define h_u(z)=−4u²z²/(u²−z²)². The identity 201 gives b_N=Σ_ρ h_u(z)^N, and
 

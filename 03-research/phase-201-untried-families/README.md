@@ -31,7 +31,7 @@ corpus (routes index, now ROUTES-MASTER-INDEX.md; ~1,700 routes) nor in the lite
   is not launched (same theorem). New filters S7, S8. Next: inventory C with S7/S8 from the start.
 - Inventory C (S7/S8, 14 families): 0 viable; lemmas L-loc, C-pos, S-0/S-1/S-2, P-fin. Pattern: intrinsic
   positivity with the Λ channel in the hypothesis = branch 2 (ARGUED).
-- CPOS_CLASS_001: class Theorem C-pos ((i),(ii),(γ) PROVED; (α) PROVED if κ_T≠0; (β) ARGUED) → P47 thm:noimport.
+- CPOS_CLASS_001: class Theorem C-pos ((i),(ii),(γ) PROVED; (α) PROVED if κ_T≠0; (β) ARGUED) → P46 thm:noimport.
   **Phase 201 closed by theorem**: no imported positivity with a uniform construction on the comb can give the sign.
   Main output (h1): non-uniform construction = exterior = table (★★) of phase 199. Decision pending.
 </content>

@@ -29,7 +29,7 @@ That number is not a coercivity margin of Q_T.
 The applicable lesson is to keep the compensation before estimating the
 pieces. To use it in 017, valid arithmetic estimates of the
 remainder allowing a similar balance are missing. The technique does not create those bounds.
-No sign of the auxiliary family is imported into the form of paper47.
+No sign of the auxiliary family is imported into the form of paper46.
 
 ## 2. Exact bound of a hyperbolic moment
 
@@ -135,4 +135,4 @@ Precise insight: polar elimination reduces profiles close to it,
 but does not provide a uniform attenuation in frequency. The computation
 makes visible which part could not be paid by an argument based only
 on geometric closeness to cosh(x/2). It does not exclude additional arithmetic
-controls. The counterterm 017 was not proved and paper47 was not integrated.
+controls. The counterterm 017 was not proved and paper46 was not integrated.

@@ -1,7 +1,7 @@
 # L2_BUILD_016 — Transport in T by Frobenius dilation n ↦ n^k: exact decomposition and why the induction fails
 
 ## Corpus check
-Paper 47 lem:contA (dilations U_r with r → 1, continuity only), lem:monoT / prop:arch(i) (monotonicity in T by inclusion),
+Paper 46 lem:contA (dilations U_r with r → 1, continuity only), lem:monoT / prop:arch(i) (monotonicity in T by inclusion),
 thm:wit-Tc and first-contact (witness/absorption theory), Lemma flowdet (W-det), thm:famblind (W-fam). grep "n ↦ n^k /
 doubling / renormaliz / dilat kT / U_k" across the corpus: only unrelated uses (R184_010 random U_k, R154 Chebyshev U_k,
 R160 survey). Paper 44 (row B) Frobenius family is about the arithmetic family, not a window map. Not a repeat: no memo

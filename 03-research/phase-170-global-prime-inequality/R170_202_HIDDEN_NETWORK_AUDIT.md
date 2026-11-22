@@ -59,7 +59,7 @@ $$W_{1/2}(f,g)=\iint f(t)g(s)h(|t-s|)\,dt\,ds>0,$$
 $$W_{1/2}(|f-g|)-W_{1/2}(f-g)=4W_{1/2}(f,g)>0.\tag{5}$$
 
 This contradicts (1), not the positivity of W. In fact T=1/2 lies within
-the certified range of Paper 47. A positive form need not be a network
+the certified range of Paper 46. A positive form need not be a network
 energy with positive conductances.
 
 **Conclusion.** No scalar network of this class, even with hidden

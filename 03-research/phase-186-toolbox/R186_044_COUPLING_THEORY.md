@@ -1,6 +1,6 @@
 # R186_044 — Coupling theory: the #comp rank condition (C_T) as an exact Schur theorem, the quartet as a rank-(2,2) form, and the blind regime δ_A < δ < δ_V
 
-Phase 186, round 20. Sources: R186_043 (Lemmas M0/M1, span condition, M₁), R186_115 (audit of 043: three corrections adopted here, §1.4), R186_042 (Thm 2.1, sub-Shannon sea), R186_114 (M₁ PROVED as object; limit δ → 0 = ζ with triple zero), R186_040 (head), R186_025 (Thm B), Paper 47 (def:PD, thm:W, prop:negtrace, lem:roughEF). Mid-round redirection (blind regime): §4.
+Phase 186, round 20. Sources: R186_043 (Lemmas M0/M1, span condition, M₁), R186_115 (audit of 043: three corrections adopted here, §1.4), R186_042 (Thm 2.1, sub-Shannon sea), R186_114 (M₁ PROVED as object; limit δ → 0 = ζ with triple zero), R186_040 (head), R186_025 (Thm B), Paper 46 (def:PD, thm:W, prop:negtrace, lem:roughEF). Mid-round redirection (blind regime): §4.
 Script: `r044_coupling.py` (**self-contained**; copies and re-verifies the constructions of r043; `python3 r044_coupling.py` ≈ 1 min; full output in the session scratchpad). Double precision: λ_A is noise below 10⁻¹³ (T ≥ 0.9); H_T and S_V are not.
 
 ## 0. Verdict

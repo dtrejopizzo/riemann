@@ -26,7 +26,7 @@ Script: `TEST_MOBIUS_SAWTOOTH_001.py` (mpmath + sympy, runs in under 1 s).
 - **Only absolute value in hand:** λ(20) = 1.09899e−96. Mori's raw runs (`outputs/numerics-V/runs`) are not in the scratchpad copy, and `code.zip` is corrupt.
 - **Other sources do not fit:**
   - Mori VI, VII and VIII give certified Schur margins (2.40e−70 / 3.95e−66 at μ = 15), which are a different quantity.
-  - Paper 47 (μ = 5) gives the primitive form λ_A, which is not comparable.
+  - Paper 46 (μ = 5) gives the primitive form λ_A, which is not comparable.
 - **Reconstruction check:** λ = κ·(1 − λ₄) was rebuilt using Fuchs × Mori's smooth correction factor 0.89 → 0.94. At μ = 20 it gives 1.103e−96, against the actual 1.099e−96.
 
 ## 2. Increments (task 2)

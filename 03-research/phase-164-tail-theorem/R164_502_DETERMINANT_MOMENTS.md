@@ -2,7 +2,7 @@
 
 *Phase 164, round 3. Memo, pure mathematics, no numerics. Labels: PROVED / PROVED-CITED / ARGUED / OPEN.*
 *Read first: R164_190 (whole), R164_101 (Thm E1, Prop D, Prop EB), R164_401 (Thm R), R163_401 §1, §2, §4.6, §4.11(c) (Thm F),
-R163_802 (Selberg fixed point), Paper 47 `eq:symbol`, `eq:form`, `def:W`, `thm:Z`, `thm:O`, and the compact-resolvent paragraph before `lem:contA`.*
+R163_802 (Selberg fixed point), Paper 46 `eq:symbol`, `eq:form`, `def:W`, `thm:Z`, `thm:O`, and the compact-resolvent paragraph before `lem:contA`.*
 
 ## 0. Corpus check (rules: check the corpus first, master grid first)
 
@@ -40,7 +40,7 @@ As in R163_401 §1.1. On L²(ℝ) let 𝔐 be the Fourier multiplier by m, and S
 
   A_T = P(𝔐 − Σ_{n∈𝒩_T} w_n(S_{log n} + S_{−log n}))P,  w_n = Λ(n)/√n,
 
-which is the Paper 42/47 operator. It is self-adjoint and bounded below, with compact resolvent (Paper 47, paragraph before `lem:contA`, via Bombieri 2000 Thm 3). Write M_T := P𝔐P and Π_T := A_T − M_T (the prime part).
+which is the Paper 42/47 operator. It is self-adjoint and bounded below, with compact resolvent (Paper 46, paragraph before `lem:contA`, via Bombieri 2000 Thm 3). Write M_T := P𝔐P and Π_T := A_T − M_T (the prime part).
 
 ## 2. Szegő–Widom on σ_T: L0, L1, L2
 

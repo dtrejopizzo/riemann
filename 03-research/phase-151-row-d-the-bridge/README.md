@@ -4,7 +4,7 @@
 
 Answer: no — for every family whose fibres enter as nonnegative summands, the a priori moment exponent needed
 for extraction is the zero bound itself, at every `k` (T6, largely a restatement of Thm 26.4 + Cor 27.10a of
-Paper 46; new: Lemma 2.4, the ascent `σ_{2k} ≥ 2kσ_2`). The audit's structural correction is the finding of
+Paper 47; new: Lemma 2.4, the ascent `σ_{2k} ≥ 2kσ_2`). The audit's structural correction is the finding of
 record: the axis is **summand vs numerator** — Deligne works because the fibre zeros enter the family trace
 formula with the numerator (odd-cohomology) sign; over `Z` the only numerator-sign mechanism is de la Vallée
 Poussin, capped at depth `1/log γ` by the archimedean density (Doc 111 §3.2; quantified in `R151_005` §2.2).

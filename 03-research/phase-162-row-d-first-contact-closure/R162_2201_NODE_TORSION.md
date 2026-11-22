@@ -20,7 +20,7 @@ Cell 8B (node tests are linear in F) × 5C (torsion atoms, a functional beyond l
 Prop H. Walls this memo must name: W4 (F2) and W5 (F1) for 8B; W1 (E1) for the Kreĭn reading of Thm G.
 Grep over phases 155–162 for "node test", "Gauss-node", "node measure", "θ′", "Z′/Z", "Hardy Z" with "torsion" or "Φ_Λ":
 no file pairs the node data of R160_X_C1 with Φ_Λ. The Kreĭn/determinacy reading of the node measure is on record:
-P47 def:KEP / thm:KEP3 and phase 155 round 5 ("RH ⟺ Kreĭn indeterminacy"). §3 uses that record and does not redo it.
+P46 def:KEP / thm:KEP3 and phase 155 round 5 ("RH ⟺ Kreĭn indeterminacy"). §3 uses that record and does not redo it.
 
 ## 1. Failing lines, stated first (mandatory)
 
@@ -92,7 +92,7 @@ input is the finite list (x, q_x) (Riesz-type collapse, R162_1101 Thm 5.1).
 **Proposition N2 (the node measure as the canonical non-band-limited object; PARTIAL = E1).** Assume OS-3 (the node
 span is dense in 𝒟_{T_c} in the form norm). Then μ_F is a positive measure whose pairing with |Ĝ|² equals ζ's window
 symbol (σ_{T_c}/2π)dτ + polar for all Ĝ ∈ PW_{T_c}. At λ = 0 it is the **unique** positive such extension (the
-determinate case of P47 def:KEP, thm:KEP3). Its Fourier transform off [−2T_c, 2T_c] is the non-band-limited part.
+determinate case of P46 def:KEP, thm:KEP3). Its Fourier transform off [−2T_c, 2T_c] is the non-band-limited part.
 Comparing it on the log lattice {log n : n > X} with ζ's zero side Σ_ρ δ_{γ_ρ} (lem:roughEF) means comparing the
 unique positive extension with ζ's (non-positive, under ¬RH) zero distribution. That comparison is the Kreĭn-indeterminacy
 form of RH (phase 155 round 5). Note that μ̌_F(log n) for n > X is *not* forced to equal −Λ(n)/√n. μ_F is determined by

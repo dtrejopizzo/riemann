@@ -1,7 +1,7 @@
 # R170_703 — Explicit extension after prime 5 enters
 
 Theorem derived analytically from the `thm:log5W`
-certificate of Paper 47; that certificate is not re-run here.
+certificate of Paper 46; that certificate is not re-run here.
 
 ## Result
 
@@ -75,7 +75,7 @@ We take `s=e^{-L}/4`. Then `δ≤e^{-L}` and, writing
  \qquad\beta\le800/L.
 \]
 Also `α≤253e^{-L/2}≤506/L`, by `e^{L/2}≥L/2`.
-With `g=10^{-18}`, the Paper 47 certificate gives
+With `g=10^{-18}`, the Paper 46 certificate gives
 \[
  W_{rT_0}(U_rF)\ge g-\frac{16506+800g}{L}>g/2.
 \]

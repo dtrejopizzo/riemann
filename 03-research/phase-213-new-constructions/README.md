@@ -4,13 +4,13 @@ Working memos in this folder are written in Spanish.
 
 ## Aim
 
-Prove positivity of the full form of Paper 47 on its whole admissible carrier. This phase continues that
+Prove positivity of the full form of Paper 46 on its whole admissible carrier. This phase continues that
 goal; it does not restart earlier attempts, nor does it turn the partial results of phases 211 and 212
 into a global proof. The sign is treated as a problem about the explicit form, without reasoning from
 equivalences with other targets (sandbox). Elementary mathematics is preferred; small computations are
 used only for concrete checks, and a sample never proves all orders.
 
-Definitions: `../phase-211-sign-sandbox/STATEMENT_001.md` and Paper 47. The specification and
+Definitions: `../phase-211-sign-sandbox/STATEMENT_001.md` and Paper 46. The specification and
 restrictions of `../phase-212-missing-object/OBJECT_SPEC.md` and `../phase-212-missing-object/RULES_AVOID.md`
 remain references, with the scopes and corrections recorded in the current master index. No paper is
 modified without the global proof.
@@ -224,7 +224,7 @@ Outputs validate specific points of the corresponding memo; they are not proofs 
 - `ROUND_167_A.md` — Critical precision of the weights on the actual primes
 - `ROUND_168_A.md` — How much exactness of the divisor identity the energy criterion requires
 - `ROUND_169_A.md` — A sparse defect invisible on the real axis and in any finite list of moments at one
-- `ROUND_170_A.md` — Minimal negative mass of a truncated certificate of paper 47
+- `ROUND_170_A.md` — Minimal negative mass of a truncated certificate of paper 46
 - `ROUND_171_A.md` — Radius of the certificate and displacement of a finite list
 - `ROUND_172_A.md` — A signed extension for all zeros with summable weighted cost
 - `ROUND_173_A.md` — Transferring the verified tail to a bound in L² norm

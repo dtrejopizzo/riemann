@@ -181,10 +181,10 @@ global sign remains OPEN; no new arithmetic positivity law has been proved.
 
 Reproduce: `python3 verify_nonlocal_storage.py --output nonlocal_storage_diagnostics.json`.
 
-## Comparison with Paper 47 and Gamma incorporation
+## Comparison with Paper 46 and Gamma incorporation
 
 [R170_701](R170_701_PAPER47_COMPARISON.md) separates phase 170's
-contributions from results already present in Paper 47 and documents text
+contributions from results already present in Paper 46 and documents text
 corrections.
 [R170_702](R170_702_GAMMA_DETECTOR_AND_COMPLETE_COLLARS.md) incorporates the
 Gamma detector faithful to the storage, computes its exact tail, and extends
@@ -199,7 +199,7 @@ than 5e-17 in the matrix balance and 6e-18 in the integrated collars.
 ## Explicit extension and flow trial
 
 [R170_703](R170_703_EXPLICIT_EXTENSION_PAST_LOG5.md) proves, from
-Paper 47's certificate, that `W_T≥(10^-18/2)||F||²` up to
+Paper 46's certificate, that `W_T≥(10^-18/2)||F||²` up to
 `T=(log5/2)(1+exp(-10^24)/4)`. All constants are explicit;
 the width is extremely small and no practical improvement is claimed.
 
@@ -228,7 +228,7 @@ new positivity result for the program.
 Reproduce the diagnostics of the last bound:
 `python3 verify_common_complement.py`.
 These are floating-point Galerkin checks, not continuous certificates.
-The transport to Paper 47's arithmetic operator and the global sign law
+The transport to Paper 46's arithmetic operator and the global sign law
 remain pending. The full reading of the 27 manuscripts is not complete.
 
 ## Transport built and verified
@@ -263,7 +263,7 @@ a usage limit before delivering results; both documents were produced by
 this audit and do not carry that independent review.
 
 Reproduce: `python3 verify_retained_reserve.py`.
-The global problem and the closure of Paper 47 remain open.
+The global problem and the closure of Paper 46 remain open.
 
 ## FIDC proposal and audit
 

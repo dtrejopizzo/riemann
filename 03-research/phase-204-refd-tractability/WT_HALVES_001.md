@@ -1,4 +1,4 @@
-# WT_HALVES_001 — The two halves of Lemma WT (prop:WT of Paper 47) as independent statements
+# WT_HALVES_001 — The two halves of Lemma WT (prop:WT of Paper 46) as independent statements
 
 Phase 204n · pure mathematics; numerics only on already-existing data (NUMERICAL).
 
@@ -52,7 +52,7 @@ grep in `05-meta-and-planning/ROUTES-TRIED-INDEX/` for "prop:WT," "Lemma WT," "n
 New reason to enter: the WT halves were never classified by tractability (AUDIT_204_CLOSURES §3 only integrated it).
 I am not retrying any indexed route: everything below is a classification of the two halves plus two identities.
 
-## 1. Exact setup (PROVED, reading of P47)
+## 1. Exact setup (PROVED, reading of P46)
 
 Fixing parity, ε_ev = +1, ε_odd = −1, ℓ_par = ⟨·, χ_par⟩ with χ_par ≥ 0 (even: χ_ev ∝ cosh(x/2) on I_T).
 By thm:parityschur(o):
@@ -159,7 +159,7 @@ of W; same argument.) Consequences:
 **Proposition H1⁻ (CONDITIONAL on a one-dimensional evaluation).** If 𝔪_{T₀}(χ_ev) < 0 for some T₀, then
 n₋(𝔄_ev(T)) ≥ 1 for every T ≥ T₀.
 Proof. prop:wh-index(iii): 𝔞_T(χ_ev) = 𝔪_T(χ_ev) + Π_T(χ_ev) with Π_T(χ_ev) = −Σ v_n c_{χ_ev}(log n) ≤ 0 because
-χ_ev ≥ 0 ⇒ c_{χ_ev} ≥ 0 (PROVED in P47). Hence 𝔞_{T₀}(χ_ev) < 0, n₋(𝔄_ev(T₀)) ≥ 1, and §3.1 propagates to T ≥ T₀. ∎
+χ_ev ≥ 0 ⇒ c_{χ_ev} ≥ 0 (PROVED in P46). Hence 𝔞_{T₀}(χ_ev) < 0, n₋(𝔄_ev(T₀)) ≥ 1, and §3.1 propagates to T ≥ T₀. ∎
 Status of the input: 𝔪_T(χ_ev) is an explicit function of T (C₀, K, autocorrelation of cosh(x/2)·1_{I_T}), WITHOUT
 the comb and WITHOUT zeros; rem:wh-index gives it as negative for T ≥ 0.12, NUMERICAL and uncertified. Certifying it
 at a single T₀ (e.g. T₀ = 0.12 or ½log3) by interval arithmetic is a standard 1-D quadrature: a task for the

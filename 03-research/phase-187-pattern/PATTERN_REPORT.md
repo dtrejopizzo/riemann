@@ -192,4 +192,4 @@ Reading:
    against the CONDITIONAL formula of R186_036 Lemma 2 at 4 of 5 boundaries).
 3. **What it does not imply:** anything about the sign for all T: the law is "leading term + O(1) relative error" (W-det),
    f_t shares it by construction, and M_1 shares it up to its contact (class blindness); label for all of this NUMERICAL/
-   CONJECTURE; **no contact with the sign: row D OPEN.** No grid symbol changes; neither Paper 47 nor the crossword has been touched.
+   CONJECTURE; **no contact with the sign: row D OPEN.** No grid symbol changes; neither Paper 46 nor the crossword has been touched.

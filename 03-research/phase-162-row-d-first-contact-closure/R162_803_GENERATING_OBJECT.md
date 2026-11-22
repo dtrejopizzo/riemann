@@ -13,7 +13,7 @@ No sign is claimed. Row D keeps no label.
 - **G2_B7_R3 Theorem L/T (phase 159)**: Laplace transform in T of a *fixed-profile scalar certificate value*;
   poles of ζ′/ζ(½+s±iτ), growth exponent 2(Θ−½); EQUIV. This memo is the *operator-valued* version and must not
   re-derive Theorem T; it cites it.
-- Paper 47 lem:monoT (zero-extension invariance), lem:mbounds (λ ≥ C_0 − A_{2T}).
+- Paper 46 lem:monoT (zero-extension invariance), lem:mbounds (λ ≥ C_0 − A_{2T}).
 New here: the Schur-product form of the window average, its exact factorisation, the identification of its diagonal
 with Re ξ′/ξ, and the invisibility of first contact (§§2–4).
 
@@ -118,7 +118,7 @@ sense that every step holds for λ > 0 eigenvectors as well.
 
 1. Theorem G (PROVED, s > ½; continuation below): the T-Laplace average of the windowed Weil forms is the Schur
    product W∘E_s, and in frequency it factorises as (Poisson in τ−τ′) × (2Re ξ′/ξ at ½+s+i·mean frequency).
-   A clean record lemma linking Paper 47's windows to Lagarias's function; new to the corpus.
+   A clean record lemma linking Paper 46's windows to Lagarias's function; new to the corpus.
 2. Theorem H: "all windows at once" = Lagarias's Herglotz criterion; the regular domain s > Θ−½ = von Koch
    (G2_B7_R3 Thm T). Both classical; EQUIV.
 3. Prop 4: the generating object erases the first-contact datum; any Gate-1 use must break positivity of the

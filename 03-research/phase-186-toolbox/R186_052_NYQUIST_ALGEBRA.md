@@ -1,7 +1,7 @@
 # R186_052 — The Nyquist algebra of D_T: circle 𝕋_{4T}, two spin structures, unified measure μ_T, the two cones, and the test with M₁
 
-Phase 186, round 25. Paper 47, grid and crossword are not touched. Standalone script: `r052_nyquist.py` (`python3 r052_nyquist.py [ABCDE]`, ≈ 6 min; does not import r043/r051). Read: R186_051 §4,
-R186_117 (correction: the identity is exact only with the truncated Lévy measure), Paper 47 eq:symbol, eq:form, eq:W, thm:A, def:PD,
+Phase 186, round 25. Paper 46, grid and crossword are not touched. Standalone script: `r052_nyquist.py` (`python3 r052_nyquist.py [ABCDE]`, ≈ 6 min; does not import r043/r051). Read: R186_051 §4,
+R186_117 (correction: the identity is exact only with the truncated Lévy measure), Paper 46 eq:symbol, eq:form, eq:W, thm:A, def:PD,
 def:W, thm:Z, lem:mbounds, lem:gbounds.
 
 ## 0. Verdict
@@ -14,7 +14,7 @@ def:W, thm:Z, lem:mbounds, lem:gbounds.
  (h_m = 2(−1)^m/(π(2m+1))) (Theorem 2.3). Verified: identity to 10⁻¹⁵ (§8 B), entrywise Fourier Galerkin matrix to 3·10⁻⁶ (§8 C).
 2. **Unified measure.** The sampled symbol is the cosine transform on the grid πk/2T of a SINGLE signed measure on [0, 2T],
  μ_T = c_T δ₀ + K(u)du − Σ_{n∈𝒩_T} v_n δ_{log n} (δ₀ renormalized against 1 − cos; §1): s_k = c_T + ∫₀^{2T}(1 − cos ω_k u)K(u)du − Σ v_n cos(ω_k log n).
- With σ_T of Paper 47 (full m) there is aliasing ∫c_F K^per (§1, verified to 10⁻¹⁵ with the closed form of R186_117).
+ With σ_T of Paper 46 (full m) there is aliasing ∫c_F K^per (§1, verified to 10⁻¹⁵ with the closed form of R186_117).
 3. **The two cones.** 𝒦_T = Nyquist samples of {f ≥ 0 ∈ PW_{2T} ∩ L¹ with a double zero at ±i/2} (Akhiezer; Theorem 3.1); Tate is the
  weight (τ² + ¼)² (Cor. 3.2). 𝒦_T^{(0)*} = samples of the sinc-smoothed positive measures (Theorem 3.3, "window Bochner" = Kreĭn).
  **D_T ⟺ (s_k)_k ∈ 𝒦_T^*** (Theorem 3.4, discrete thm:Z, PROVED as a reformulation) ⟺ ∃ μ ≥ 0, β: (ω_k² + ¼)²... (primitive form: Cor. 3.5).
@@ -38,8 +38,8 @@ def:W, thm:Z, lem:mbounds, lem:gbounds.
 
 ## 1. The Nyquist identity, exact (PROVED; R186_051 Thm 4.1 with the correction of R186_117)
 
-Paper 47 conventions: F̂(τ) = ∫F e^{iτt}, c_F(u) = ∫F(t)F̄(t−u)dt, ĉ_F = |F̂|², supp c_F ⊂ [−2T, 2T], c_F(±2T) = 0; ω_k := kπ/2T;
-N := e^{2T}; 𝒩_T = {n ≥ 2 : log n < 2T}; v_n = 2Λ(n)/√n; 𝒜_T = Σ v_n; K(u) = 1/(2 sinh(u/2)) + 1/(2 cosh(u/2)) (Paper 47 lem:K).
+Paper 46 conventions: F̂(τ) = ∫F e^{iτt}, c_F(u) = ∫F(t)F̄(t−u)dt, ĉ_F = |F̂|², supp c_F ⊂ [−2T, 2T], c_F(±2T) = 0; ω_k := kπ/2T;
+N := e^{2T}; 𝒩_T = {n ≥ 2 : log n < 2T}; v_n = 2Λ(n)/√n; 𝒜_T = Σ v_n; K(u) = 1/(2 sinh(u/2)) + 1/(2 cosh(u/2)) (Paper 46 lem:K).
 
 **Def. 1.1 (unified window measure).** μ_T := c_T δ₀ + K(u)du|_{(0,2T)} − Σ_{n∈𝒩_T} v_n δ_{log n}, with c_T := C₀ + ∫_{2T}^∞K − 𝒜_T,
 and renormalized cosine transform ŝ_T(τ) := c_T + ∫₀^{2T}(1 − cos τu)K(u)du + Σ v_n(1 − cos τ log n) = C₀ + ∫_{2T}^∞K + L_T(τ) − P_T(τ) =: s_T(τ),
@@ -54,7 +54,7 @@ for K ~ 1/u). W_T = 𝔞_T + 2Re(AB̄) and 2Re AB̄ = 2∫_{−2T}^{2T}Re c_F(u)
 **Aliasing of m (PROVED, R186_117 §0; re-verified §8 B).** (1/4T)Σ_k|F̂(ω_k)|² m(ω_k) = (1/2π)∫m|F̂|² − ∫_{−2T}^{2T}Re c_F(v)K^per(v)dv,
 K^per(v) := Σ_{j≥1}K(4Tj − v). Hence the identity with the full m is FALSE; with s_T it is exact. On the grid,
 r_T(ω_k) := s_T(ω_k) − σ_T(ω_k) = (−1)^k 2Σ_{j≥0} e^{−(4j+1)T}(2j+½)/((2j+½)² + ω_k²).
-**Lemma 1.3 (pole + tail merge; PROVED, elementary).** ĝ₀(ω_k) = (−1)^k sinh T/(¼ + ω_k²) (Paper 47 lem:gbounds on the grid: sin 2Tω_k = 0),
+**Lemma 1.3 (pole + tail merge; PROVED, elementary).** ĝ₀(ω_k) = (−1)^k sinh T/(¼ + ω_k²) (Paper 46 lem:gbounds on the grid: sin 2Tω_k = 0),
 and 2ĝ₀(ω_k) + [j = 0 term of r_T] = (−1)^k e^T/(¼ + ω_k²). Hence
  w_k = m(ω_k) − P_T(ω_k) + (−1)^k [ e^T/(¼ + ω_k²) + 2Σ_{j≥1}e^{−(4j+1)T}(2j+½)/((2j+½)² + ω_k²) ].
 Verified to 10⁻¹⁷ (§8 A). The pole and the Lévy tail enter **only** through the alternating (−1)^k·(positive decreasing) component.
@@ -110,7 +110,7 @@ Verified to 10⁻¹⁵ (§8 B) and on the witness of M₁ (§8 E).
 **2.5 Identification (CITED).** By Paley–Wiener, PW_T = K_Θ with Θ = e^{2iTz}, the model space of the half-plane; the form (1/2π)∫s_T|F̂|² is the
 quadratic form of the truncated Toeplitz operator A_{s_T} = P_{K_Θ} s_T P_{K_Θ} (Sarason, *Algebraic properties of truncated Toeplitz
 operators*, 2007). The symbol of a TTO is unique modulo ΘH² + conj(ΘH²), which in u is "Fourier support in |u| ≥ 2T": **the family of
-certificates {f_w : w ∈ 𝒲} of Paper 47 def:W is exactly Sarason's symbol class for the operator A_T**, and thm:Z says that class
+certificates {f_w : w ∈ 𝒲} of Paper 46 def:W is exactly Sarason's symbol class for the operator A_T**, and thm:Z says that class
 contains Σ_ρ ŵ(τ − γ_ρ). On the grid, the symbol class collapses to the sequence (s_k) modulo the annihilator (2.6). On whether a TTO ≥ 0
 has a symbol ≥ 0: the answer is Kreĭn's extension theorem (yes, as a measure: Theorem 3.3), not a new algebraic property.
 
@@ -130,7 +130,7 @@ entire of type T; G ∈ L² ⟹ G = F̂, F ∈ L²(I_T) (Paley–Wiener). The ze
 (z + i/2)/(z − i/2) (unimodular on ℝ, type 0) moves a zero from −i/2 to i/2 without changing |G| on ℝ, so from a double zero of f at i/2 (and at
 −i/2) one obtains G with G(i/2) = G(−i/2) = 0. ∎
 **Cor. 3.2 (Tate = weight; PROVED).** 𝒦_T = {((ω_k² + ¼)² b_k)_k : b = samples of f₀ ≥ 0 ∈ PW_{2T} with (1 + τ²)²f₀ ∈ L¹} (G = (z² + ¼)G₀; in t:
-F = (¼ − ∂²)F₀, F₀ ∈ H²₀(I_T), which is the parametrization of R186_051 Def. 1.6 / Paper 47). Hence D_T ⟺ ((ω_k² + ¼)² s_k)_k ∈ 𝒦_T^{(0)*},
+F = (¼ − ∂²)F₀, F₀ ∈ H²₀(I_T), which is the parametrization of R186_051 Def. 1.6 / Paper 46). Hence D_T ⟺ ((ω_k² + ¼)² s_k)_k ∈ 𝒦_T^{(0)*},
 𝒦_T^{(0)} := samples of {f ≥ 0 ∈ PW_{2T} ∩ L¹} (Tate-free cone, with the corresponding weight).
 **Theorem 3.3 (window Bochner; PROVED modulo Riesz extension, CITED).** For σ = (σ_k) of logarithmic growth (paired
 with the f's of the form domain): σ ∈ 𝒦_T^{(0)*} ⟺ ∃ a positive measure μ on ℝ (with ∫log(2+|τ|)dμ(τ)/(1+τ²)-type growth) such that
@@ -139,7 +139,7 @@ with the f's of the form domain): σ ∈ 𝒦_T^{(0)*} ⟺ ∃ a positive measur
 of PW_{2T} ∩ L¹ (with weight), which contains a strictly positive element (sinc² + sinc²(· − ½)); M. Riesz extension to a positive
 functional over C₀ with weight = positive measure μ; Shannon back gives σ_k = (B_Tμ)(ω_k). In u: B_T cuts μ̂ to (−2T, 2T): this is Kreĭn (1940). ∎
 **Theorem 3.4 (discrete thm:Z; PROVED as a reformulation).** D_T ⟺ (s_k)_k ∈ 𝒦_T^* ⟺ ∃ μ ≥ 0, β ∈ ℝ²: s_k + β₀ĝ₀(ω_k) + β₁ĝ₁(ω_k) = (B_Tμ)(ω_k) ∀k
-(modulo closure of the cone, as in Paper 47 prop:weak/prop:P). If (ν, β) is a certificate of Paper 47 def:PD with f = s_T + ν̂ + β·ĝ ≥ 0, then
+(modulo closure of the cone, as in Paper 46 prop:weak/prop:P). If (ν, β) is a certificate of Paper 46 def:PD with f = s_T + ν̂ + β·ĝ ≥ 0, then
 μ = f dτ works: (B_T f)(ω_k) = s_k + β·ĝ(ω_k) because B_T ν̂ = 0 (supp ν ⊂ {|u| ≥ 2T}, no atoms at ±2T) and B_T σ_T = s_T (Def. 1.1). And for every
 w ∈ 𝒲: w_k = (B_T f_w)(ω_k) = Σ_ρ (B_Tŵ)(ω_k − γ_ρ) = **4T Σ_ρ sinc(2T(ω_k − γ_ρ)/π)** (CONDITIONAL in the explicit formula for the sharp
 cutoff 1_{[−2T,2T]}cos(τu) with symmetric summation, classical; if e^{2T} = n ∈ ℕ is a prime power, add ½v_n(−1)^k for the ½ convention at the
@@ -173,7 +173,7 @@ hyperplane Σx = 0 and has ≤ 1 negative eigenvalue (numerical n = 80: 79 posit
 (iii) s_k = c_T + ∫(1 − cos πkθ) d(κ_T + ν_T)(θ): **Lévy–Khintchine exponent on ℤ of the POSITIVE measure κ_T + ν_T, plus the constant
 c_T = C₀ + ∫_{2T}^∞K − 𝒜_T < 0**. Hence D_T ⟺ for every a ∈ 𝒦_T: Σ_k a_k ψ_T(k) ≥ −c_T Σ_k a_k, ψ_T(k) := ∫(1 − cos πkθ)d(κ_T + ν_T) ≥ 0,
 i.e. 4T∫(c_F(0) − Re c_F(2Tθ))d(κ_T + ν_T)(θ) ≥ 4T(𝒜_T − C₀ − ∫_{2T}^∞K)‖F‖²: the "Lévy energy" of the test against primes + archimedean
-must exceed a fixed multiple of its mass. This is Paper 47 thm:A/eq:Aform on the circle: **it adds no information**, but it shows that the writing
+must exceed a fixed multiple of its mass. This is Paper 46 thm:A/eq:Aform on the circle: **it adds no information**, but it shows that the writing
 "measure of m minus measure of primes" is incorrect as far as signs go: in Lévy form both measures are positive and the negative
 sign lies entirely in the constant c_T (the mass 𝒜_T of the comb, PNT in the window: 𝒜_T ≈ 2(e^T − 1) against 2∫cosh = 4 sinh T of the pole).
 **4.3 Hardy.** S_T(ω) := Σ v_n n^{iω} is the transform of a measure supported on (0, 2T) ⊂ (0, ∞): on the grid, (S_T(ω_k))_k has its entire
@@ -184,7 +184,7 @@ which only sees the even part (Re c_F).
 characterizes the circulant cone {Toeplitz ≥ 0} = {spectral measure ≥ 0 on the full circle}, which is exactly the positivity on 𝕋_{4T}
 of §2.1 (false, §3.3). Positivity against 𝒦_T (half-circle) is not a Bochner-type statement but a Kreĭn-type one (Theorem 3.3). There is no
 theorem on almost periodic functions that could replace Kreĭn; the almost periodicity of p_k with irrational frequencies {θ_n} only says that
-Toeplitz[p] is a sum of rank-2 projectors (one per contact), which we already knew (R186_035 cone, Paper 47 eq:Kprim).
+Toeplitz[p] is a sum of rank-2 projectors (one per contact), which we already knew (R186_035 cone, Paper 46 eq:Kprim).
 
 ## 5. Decisive test with M₁ (NUMERICAL + PROVED where indicated)
 
@@ -231,7 +231,7 @@ the singular weight K(2T − v) at the edge where c_F → 0.)
  as a statement: Theorems 2.1–2.4 (two spin structures, ℓ² model ½(D_e + HᵀD_oH), aliasing identity Δ_F), 3.1–3.3 (primal cone
  via Akhiezer with Tate = double zeros / weight (τ² + ¼)²; dual cone = sinc-smoothing of positive measures), Lemma 1.3 (pole + tail merge),
  2.6 (annihilator), discrete thm:Z with its verification modulo (−1)^k. Prior grep: "spin|antiperiodic|half-shift|medio paso|Akhiezer|
- truncated Toeplitz|Sarason" do not appear in phase-186 nor in Paper 47 (Akhiezer appears in Paper 47 only as Kreĭn–Akhiezer of the moment problem).
+ truncated Toeplitz|Sarason" do not appear in phase-186 nor in Paper 46 (Akhiezer appears in Paper 46 only as Kreĭn–Akhiezer of the moment problem).
 - **Falsifiers.** (F1) If for some F ∈ L²(I_T) with |F̂|² ~ k⁻⁸ the sum (1/4T)Σ s_k|F̂(ω_k)|² differed from 𝔞_T(F) by more than the tail,
  Theorem 1.2 would be false: 6 tests to 10⁻¹⁵ (§8 B). (F2) If |M_Fourier − ½(D_e + HᵀD_oH)| did not decay as log L/L, 2.3 would be false: 3.5·10⁻⁶
  at L = 4·10⁵. (F3) If w_k − 4TΣsinc were not c(−1)^k to tail precision, 3.4 would be false: it holds to 4 digits in 4 windows. (F4) If S1(β)
@@ -264,7 +264,7 @@ E. M₁: Q on the grid; Toeplitz₈₀ of p (λ_min −10⁻¹³), −L (79 eige
 |---|---|
 | Theorem 1.2 (Nyquist with μ_T / s_T), aliasing of m, Lemma 1.3 | PROVED (R186_117 + elementary) |
 | Theorem 2.1 (compression of 𝕋_{4T}), 2.2 (two spin structures), 2.3 (ℓ² model), 2.4 (aliasing Δ_F), 2.6 (annihilator) | PROVED; verified to 10⁻¹⁵ / 3·10⁻⁶ |
-| 2.5 (Sarason's TTO; certificates of Paper 47 = symbol class) | CITED (identification) |
+| 2.5 (Sarason's TTO; certificates of Paper 46 = symbol class) | CITED (identification) |
 | Theorem 3.1, Cor. 3.2 (primal cone; Tate = double zeros / weight (τ²+¼)²) | PROVED (Akhiezer CITED) |
 | Theorem 3.3 (window Bochner), 3.4 (discrete thm:Z), Cor. 3.5 | PROVED as a reformulation (Riesz/Kreĭn CITED); zero formula CONDITIONAL (symmetric summation), NUMERICAL modulo (−1)^k |
 | §3.3 circulant cone fails in every window, even with β and modulo (−1)^k | NUMERICAL |

@@ -1,7 +1,7 @@
 # R162_1601 — Nodal rerun after the tail-sign fix, and the deletion test of R-C
 
 Numerical check. **Everything here is UNCERTIFIED float.** It is guidance only, not proof.
-Inputs: R162_1501 §4, R162_1590 (the bug `G=G+abs(sign)*tail`, now `sign*tail`), Paper 47 cor:convfail(i).
+Inputs: R162_1501 §4, R162_1590 (the bug `G=G+abs(sign)*tail`, now `sign*tail`), Paper 46 cor:convfail(i).
 Script: `scripts/c3/t1601_nodal_rerun.py <zeta|del> <K list> <T list>`. It uses the same Galerkin setup as t1501:
 Legendre basis, t-grid on [0,3000] plus the analytic tail, S counted on a 4001-point grid with |f| below 10⁻⁶·max
 ignored, and K_F(a) = co·vec(a). The fixed t1501 scripts give the same numbers at K = 34.
@@ -59,7 +59,7 @@ For T < ½log5 no contact is active, so the form is purely archimedean.
 | 0.65 | −8.86e-2 | 2 | .431 2.00 6.85 21.7 | .284 | .142 | −2.05, −0.56 | 2.12e-1 (3) |
 
 - K = 34 and K = 46 agree to all digits shown. Contact T_c = 0.595820 (K=34) and 0.595817 (K=46). This is consistent
-  with Paper 47's 0.58–0.60 window and the ≈0.596 threshold.
+  with Paper 46's 0.58–0.60 window and the ≈0.596 threshold.
 - The contact vector is even, with S = 2 and K_F(a₁..a₄) all of one sign (positive).
 - **It is not Type I.** r = 0.278 and ⟨F,ψ⟩ = 0.141 stay O(1) while λ → 0, so r/λ → ∞. F is orthogonal to u₂
   (abs⟨F,u₂⟩ = 0). A has two negative eigenvalues. The contact is a genuinely Tate-constrained vector, of Type II

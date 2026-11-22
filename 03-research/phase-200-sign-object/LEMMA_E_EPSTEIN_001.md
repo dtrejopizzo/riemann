@@ -4,11 +4,11 @@ Phase 200, round 7. Data and scripts: `LEMMA_E_EPSTEIN_001_data/`.
 
 ## Summary (≤250 words)
 
-We define the Epstein window form 𝔞_T^Q (Q = x²+5y², disc. −20, h = 2) with the same template as P47 eq:Aform:
+We define the Epstein window form 𝔞_T^Q (Q = x²+5y², disc. −20, h = 2) with the same template as P46 eq:Aform:
 Λ_Q(s) = ½·20^{s/2}Γ_ℝ(s)Γ_ℝ(s+1)Z_Q(s), so the constant is C₀^Q = log20 − 2γ − 6log2 − 2logπ = −4.6070, the Lévy
 kernel is 1/sinh(u/2), the polar term and P_T are the same as for ζ, and the comb is v_n^Q = 2Λ_Q(n)/√n (PROVED, standard
 derivation from the verified FE). **Lemma E (PROVED, interval arithmetic):** there exists an explicit polynomial G of degree
-56 with F = G(t/T) ∈ P_T, T = 159/100, and 𝔞_T^Q(F)/‖F‖² ∈ [−0.0599398587, −0.0599398456]; by P47 lem:monoT, the bottom
+56 with F = G(t/T) ∈ P_T, T = 159/100, and 𝔞_T^Q(F)/‖F‖² ∈ [−0.0599398587, −0.0599398456]; by P46 lem:monoT, the bottom
 is negative for all T ≥ 1.59. Estimated true threshold (Galerkin, NUMERICAL) ≈ 1.575–1.58. In the certified window all
 contact Λ_Q(n) are ≥ 0: **the first negative Λ_Q (n = 36) does not intervene**. Exact decomposition (PROVED):
 Z_Q/2 = ½(ζ_K + L_ψ) = √(ζ_K L_ψ)·cosh y, y = ½log(L_ψ/ζ_K), hence Λ_Q = ½(Λ_K + Λ_ψ) + Λ_cosh, with Λ_cosh even in y
@@ -26,10 +26,10 @@ Grep on `05-meta-and-planning/ROUTES-TRIED-INDEX/` ("Epstein", "Davenport", "Hei
   κ ≈ 0.28408, zero ρ ≈ 0.80852 + 85.6993i. **It is not Epstein**: it is a linear form of L(s,χ) mod 5, conductor 5, Γ
   factor Γ_ℝ(s+1) (degree 1). Epstein x²+5y² has degree 2 (Γ(s)), conductor 20, and a pole. These are two distinct
   falsifiers.
-- **O10 / P47 lem:shape-epstein** (P47 l. 8525): "cited for the complete form, argued for the primitive bottom … A witness on the
+- **O10 / P46 lem:shape-epstein** (P46 l. 8525): "cited for the complete form, argued for the primitive bottom … A witness on the
   primitive subspace P_T … has not been written". This memo writes that witness. The lemma also says that Ξ_Q "shares with ξ
   the functional equation with Γ(s/2)": **this is inaccurate** (binary Epstein carries Γ(s) = Γ_ℝ(s)Γ_ℝ(s+1)·2^{s−1}π^{s} and
-  conductor 20). Note for the P47 editor; it does not change O10's conclusion.
+  conductor 20). Note for the P46 editor; it does not change O10's conclusion.
 - **CA_C_007 §5** (phase 193): *complete* Epstein form negative on the Dirichlet basis (−4.5/−8.8/−12.4 at M = 200/400/800),
   NUMERICAL, without a P_T window or a certificate. **CA_L_001 Thm 4.2**: NO-GO from modular data at level 20 relying on O10 "as
   recorded" (without re-deriving the negative value) — Lemma E supplies the certified value that was missing.
@@ -65,7 +65,7 @@ Each Λ_Q(n) is Σ_p q_p log p with q_p ∈ ℚ, stored exactly (`lambdaQ_exact.
 Λ_Q(126) = −8log2 − 16log3 − 8log7 = −38.69 (`coeffs_out*.txt`). Moreover Λ_Q is supported outside prime powers
 (6, 14, 21, 46, 69, …): there is no Euler product.
 
-### 1.3 The form 𝔞_T^Q (PROVED from the FE; same template as P47 eq:Aform)
+### 1.3 The form 𝔞_T^Q (PROVED from the FE; same template as P46 eq:Aform)
 Weil's explicit formula for Λ_Q (CITED: Weil 1952, the version for any L with FE, finitely many poles and a
 log-derivable Dirichlet series; the Euler product does not enter the derivation, only the sign of the coefficients) is
 obtained exactly as for ζ, replacing d/ds logΓ_ℝ(s) by d/ds log[20^{s/2}Γ_ℝ(s)Γ_ℝ(s+1)]. On the line, doubled and
@@ -74,7 +74,7 @@ symmetrized:
   m_Q(τ) = log20 + [Re ψ(¼+iτ/2) − logπ] + [Re ψ(¾+iτ/2) − logπ] = 2Re ψ(½+iτ) + 2log(√20/2π).
 
 The Lévy representation Re ψ(a+iτ/2) = ψ(a) + ∫₀^∞(1−cos τu)·2e^{−2au}/(1−e^{−2u})du with a = ¼, ¾ sums the kernels
-K_{1/4} + K_{3/4} = 2(e^{−u/2}+e^{−3u/2})/(1−e^{−2u}) = **1/sinh(u/2)** (= K + (½/sinh − ½/cosh) in P47 notation). Thus,
+K_{1/4} + K_{3/4} = 2(e^{−u/2}+e^{−3u/2})/(1−e^{−2u}) = **1/sinh(u/2)** (= K + (½/sinh − ½/cosh) in P46 notation). Thus,
 for F ∈ L²(I_T), c = c_F:
 
   **𝔞_T^Q(F) = C₀^Q‖F‖² + ∫₀^{2T}(c(0)−c(u))du/sinh(u/2) + c(0)·2log coth(T/2) − Σ_{log n<2T} (2Λ_Q(n)/√n) c(log n),**
@@ -87,7 +87,7 @@ the primitive subspace is the same P_T = {F ∈ L²(I_T): ∫F e^{±t/2} = 0} an
 conductor enters as +log20·‖F‖² (diagonal, favorable sign — consistent with GUO_QUANT §2.2). Compared with ζ: C₀ = −5.3722 → C₀^Q = −4.6070,
 K → 1/sinh(u/2) (more Lévy mass: degree 2).
 
-P47 lem:monoT (monotonicity in T) is proved by extending F by zero; it does not use the comb, it holds for 𝔞^Q (PROVED, same proof).
+P46 lem:monoT (monotonicity in T) is proved by extending F by zero; it does not use the comb, it holds for 𝔞^Q (PROVED, same proof).
 
 ## 2. Lemma E
 
@@ -207,7 +207,7 @@ not see y; this matches piece (i) ARGUED of M200 and supplies it with a certifie
 
 ## 5. Labels
 
-- **PROVED:** form 𝔞_T^Q (from the CITED FE; P47 template); Lemma E (T = 1.59, 1.6, 1.9 certified); monotonicity for
+- **PROVED:** form 𝔞_T^Q (from the CITED FE; P46 template); Lemma E (T = 1.59, 1.6, 1.9 certified); monotonicity for
   T ≥ 1.59; decomposition Λ_Q = ½(Λ_K+Λ_ψ) + Λ_cosh and exact verification n ≤ 200; values 𝔞^K, 𝔞^ψ, deficit on the witness;
   "all contacts of the certified window have Λ_Q ≥ 0".
 - **CITED:** Epstein's FE and pole (Epstein 1903), Z_Q = ζ_K + L_ψ (Dirichlet/Hecke, genus theory), Weil's explicit
@@ -235,10 +235,10 @@ Add to CERT_FALSIFIERS_001 (row 11):
 | Epstein x²+5y² (Γ(s), cond. 20, comb Λ_Q) | 1.59 | Λ_Q | full, deg ≤ 56 | [−0.0599398587, −0.0599398456] |
 
 with the caveat that this falsifier also changes the archimedean part (C₀^Q, 1/sinh): it falsifies every inequality that is
-valid for "any L with FE, pole and Dirichlet coefficients ≥ 0" (P47 axioms A1–A6 except Euler) and, via §4.1, every
+valid for "any L with FE, pole and Dirichlet coefficients ≥ 0" (P46 axioms A1–A6 except Euler) and, via §4.1, every
 inequality stable under averaging of Euler products with equal Γ factor.
 
-**Note for P47 (editor):** lem:shape-epstein can be upgraded to "proved for the primitive bottom" citing this certificate,
+**Note for P46 (editor):** lem:shape-epstein can be upgraded to "proved for the primitive bottom" citing this certificate,
 and should correct "functional equation with Γ(s/2)" → "with Γ(s) and conductor |D|".
 
 Scripts: `epstein_coeffs.py`, `cert_epstein.py` (scan/cert; variables COMB, DPS, IVDPS, DENBITS), `eval_combs_on_E.py`,

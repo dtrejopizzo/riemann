@@ -1,6 +1,6 @@
 # Eventual sign of the signed mean of primorials at fourth powers
 
-For integer M and X=M⁴, set A(M)=M⁻¹Σ_{M<m≤2M}(θ(m⁴)−m⁴). The global sign of P47 is equivalent to A(M)≤0 for all M large enough. Under the sign one even obtains
+For integer M and X=M⁴, set A(M)=M⁻¹Σ_{M<m≤2M}(θ(m⁴)−m⁴). The global sign of P46 is equivalent to A(M)≤0 for all M large enough. Under the sign one even obtains
 
     | A(M)/M² + 7/3 | ≤ (9/4)(2+γ_E−log(4π)) + o(1).
 

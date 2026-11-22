@@ -18,4 +18,4 @@ The required representing pair was not constructed and no new lower bound was ob
 
 POWER_REDUCTION_AUDIT_044 approves the reflection check and reviews the scope of the orientation. Exact reflection verifier reproduced twice: PASS; full arithmetic kept. The explorations043 are already recorded without promoting identities as new theorems.
 
-The sufficient target remains the bridge017 for the whole table, or a direct proof on the carrier of Paper47. No new W coverage nor window T. The earlier positive regions remain and the global sign remains unresolved.
+The sufficient target remains the bridge017 for the whole table, or a direct proof on the carrier of Paper46. No new W coverage nor window T. The earlier positive regions remain and the global sign remains unresolved.

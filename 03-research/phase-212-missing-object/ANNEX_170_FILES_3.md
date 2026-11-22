@@ -143,7 +143,7 @@ is not defined until a carrier is chosen. (1.4)–(3.2) remain valid.
 
 ### R170_846 — Audit of the Ward–PC carrier and transversal corpus filter
 
-**Object.** Finite PC of Paper 47: Y = S_N A_M 𝓕 = {X,E_N} − L_M*E_N − JH_{M,N} − H_{M,N}𝓕 = Z
+**Object.** Finite PC of Paper 46: Y = S_N A_M 𝓕 = {X,E_N} − L_M*E_N − JH_{M,N} − H_{M,N}𝓕 = Z
 (equality, not a distinguished operator). Minimal Hermitian carrier 𝒲^ren = ½(S_N^ren A_M𝓕 + 𝓕A_M(S_N^ren)*);
 scalar defect Δ^Tate = ω^ε − ρ_F with ω^ε = ⟨𝒲F, b_ε⟩/‖b_ε‖².
 

@@ -64,7 +64,7 @@ but that case falls into RULES_AVOID L2/L4 (truncated Möbius, split of the symb
 **Answer to the question of the brief.** The Selberg square is nonlinear in the sieve weights, not in `Λ`.
 The nonlinearity required by OBJECT_SPEC is in the exact values of `Λ`. What the square contributes about primes is a
 Λ-free upper bound of the type `Σ_{p≤x} 1 ≤ (2+o(1))x/log x`, and that bound holds for `cΛ` with `c ≤ 2` and for Beurling.
-It belongs to the class `C_BT` of Paper 47 (cor:void, thm:finmod), which is closed by deletion (N_BUILD_003, cross-check).
+It belongs to the class `C_BT` of Paper 46 (cor:void, thm:finmod), which is closed by deletion (N_BUILD_003, cross-check).
 I say nothing about parity: I have no proved statement of that kind within this class, and I do not use one.
 
 ## 2. Search for a different nearby idea

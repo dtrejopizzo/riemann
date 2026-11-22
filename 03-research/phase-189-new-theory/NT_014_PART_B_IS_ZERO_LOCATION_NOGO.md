@@ -5,7 +5,7 @@ Phase 189, step 14. Notation of NT_005–013. or stated. Zeros appear only to
 classify part (b).
 
 ## Corpus check
-Paper 47 cor:void / C_zeros class; NT_013 Prop 13.3 and §3; classical Landau/Ingham equivalence "ψ(x) − x ≪ x^{θ+ε} ⟺ no zeros in Re s > θ"
+Paper 46 cor:void / C_zeros class; NT_013 Prop 13.3 and §3; classical Landau/Ingham equivalence "ψ(x) − x ≪ x^{θ+ε} ⟺ no zeros in Re s > θ"
 (CITED; corpus mentions under "zero-free region" in phase 167/168 memos). New: the two directions for the height-flow symbol (Thm 14.1, Prop 14.2).
 
 ## 1. Forward (PROVED; explicit formula CITED)

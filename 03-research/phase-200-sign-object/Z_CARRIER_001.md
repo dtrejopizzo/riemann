@@ -1,6 +1,6 @@
 # Z_CARRIER_001: Z as an operator on 𝒦₁ (phase 200, round 6)
 
-ARGUED / OPEN / NO-GO / REF-D / NUMERICAL. Definitions verified against Paper 47 §22: def:ext (l.9601–9630: Z, Z_log,
+ARGUED / OPEN / NO-GO / REF-D / NUMERICAL. Definitions verified against Paper 46 §22: def:ext (l.9601–9630: Z, Z_log,
 gauge 𝒢_T, ℓ), thm:ext-half (l.9647), prop:ext-consol / eq:ext-starstar (l.9715–9730). Starting point: AUDIT_200_PIMU_001
 §8 (the exact Λ lives in (a) Z = Poisson over ℤ with a_n ≡ 1, or (b) Guo L4.4 quantitative; every proposal names (a) or (b)
 and the falsifier that separates them).
@@ -212,7 +212,7 @@ in the cutoff) evaluated along the multiplicative orbit N ↦ kN.
 
  Σ_{k≥1} 𝔅_k[g] + (mirror, polar) ≥ κμ^{−A} dist²(r_g, 𝒢̄_T), (3.2)
 
-and the chain (3.2) ⇒ eq:ext-starstar ⇒ L′♯ is exactly prop:ext-consol (PROVED, Paper 47). (3.2) is not new as an
+and the chain (3.2) ⇒ eq:ext-starstar ⇒ L′♯ is exactly prop:ext-consol (PROVED, Paper 46). (3.2) is not new as an
 inequality: it is (★★) rewritten in the basis of translates (REF-D as a statement). What the candidate adds is
 **where the bound is sought**: in the multiplicative autocorrelation of c_N, not in the symbol.
 

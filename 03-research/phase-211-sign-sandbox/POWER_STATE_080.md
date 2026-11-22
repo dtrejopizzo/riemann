@@ -1,6 +1,6 @@
 # POWER_STATE_080 — Three arbitrary admissible powers
 
-Status: **PROVED**, certificate FULL PASS and mathematical/code audit approved. Independent reproduction 92790 exit0/FULL PASS 4096 and matching hash. Global objective of Paper 47 **OPEN**; papers untouched.
+Status: **PROVED**, certificate FULL PASS and mathematical/code audit approved. Independent reproduction 92790 exit0/FULL PASS 4096 and matching hash. Global objective of Paper 46 **OPEN**; papers untouched.
 
 ## Complete result and sources
 

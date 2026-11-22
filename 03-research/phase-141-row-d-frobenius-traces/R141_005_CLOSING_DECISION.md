@@ -42,4 +42,4 @@ Phase 141 closed; no label change for row D. Phase 142 targets (b′)⁺_st at `
 auditor fixed: (Q-A) consistency with all known necessary conditions, starting with (C4.1) — cheap and
 refutation-capable; then (Q-B) the sufficiency side of the exponential moment problem. FATAL rule from
 line one: the clause implies RH and is false for `Ξ_a` while the entire frame holds there.
-Paper-facing: P46-18…P46-25 (P46-25 = §D.30 entire).
+Paper-facing: P47-18…P47-25 (P47-25 = §D.30 entire).

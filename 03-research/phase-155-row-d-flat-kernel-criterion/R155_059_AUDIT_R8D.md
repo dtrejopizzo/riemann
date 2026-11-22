@@ -2,14 +2,14 @@
 
 *Phase 155. Object: `R155_055_ROUND8D_MARGIN_DECAY.md` (333 lines) and
 `scripts/r8d/r8d_margin_bound.py`. Reference texts read: Paper 45 `main.md:872–1100` (imports (E1)–(E5), Lemmas
-9.1–9.3, Thm 9.4) and `:1631–1770` (Thm 10.4); Paper 47 `main.tex:114–150` (definitions, `eq:W`, `λ^A`, `λ^W`),
+9.1–9.3, Thm 9.4) and `:1631–1770` (Thm 10.4); Paper 46 `main.tex:114–150` (definitions, `eq:W`, `λ^A`, `λ^W`),
 `:379–447` (`thm:A`, `eq:Aform`, `rem:Kprim`, `cor:mono`), `:450–458` (`def:PD`), `:655–660` (`lem:mbounds`),
-`:1081–1110` (`def:W`, `thm:Z`); Paper 46 `main.md:3972` ((X19) row); `R155_053:261,370`. Script run once
+`:1081–1110` (`def:W`, `thm:Z`); Paper 47 `main.md:3972` ((X19) row); `R155_053:261,370`. Script run once
 (12.8 s, see (x)). Independent recomputations in a scratch script (not committed).*
 
 **Verdict in one line.** Theorem 1 and Corollaries 1–2 are **correct as mathematics**; the proof is a routine
 zero-sum estimate on an explicit test function, and every step checks. Three AMENDs are required before the result
-enters Paper 47, one of them a genuine citation error (the "(X-N)" constants are Backlund 1918, valid for `t ≥ 200`,
+enters Paper 46, one of them a genuine citation error (the "(X-N)" constants are Backlund 1918, valid for `t ≥ 200`,
 not Rosser 1941), none of them affecting the truth of any PROVED statement. One DIAGNOSTIC row (`T = 2`) is at the
 double-precision roundoff floor and must be flagged. No FAIL.
 
@@ -19,7 +19,7 @@ double-precision roundoff floor and must be flagged. No FAIL.
 
 ### (i) `F ∈ P_T` — PASS
 
-Paper 47 `main.tex:128–130`: `P_T = {F ∈ L²(I_T): A(F) = B(F) = 0}`, `A = ∫F e^{t/2}`, `B = ∫F e^{−t/2}`. The memo's
+Paper 46 `main.tex:128–130`: `P_T = {F ∈ L²(I_T): A(F) = B(F) = 0}`, `A = ∫F e^{t/2}`, `B = ∫F e^{−t/2}`. The memo's
 Lemma 3(iii) (`R155_055:96–99`) gives `∫F e^{ct} = P(c)∫G e^{ct}` with `P(c) = (c² − ¼)(c² + γ₁²)`, so `P(±½) = 0`
 kills both moments. Checked: two integrations by parts give `∫G″e^{ct} = c²∫Ge^{ct}` (no sign issue), so
 `F = P(D)G = G⁗ + (γ₁² − ¼)G″ − (γ₁²/4)G` and `F̂(τ) = P(iτ)Ĝ(τ) = (τ²+¼)(τ²−γ₁²)Ĝ(τ)` — matches `:100`. The operator
@@ -28,14 +28,14 @@ kills both moments. Checked: two integrations by parts give `∫G″e^{ct} = c²
 degree-`(k−1)` spline, `C^{k−2}`, vanishing to order `k−1` at `±1`; for `k = 5`, `G ∈ C³`, `G^{(j)}(±T) = 0` for `j ≤ 3`,
 `G⁗ ∈ L^∞` piecewise constant — the four integrations by parts are legitimate (`G‴` absolutely continuous). `F` lies
 in the form domain of `𝔞_T` (`47/main.tex:124`: `∫log(2+|τ|)|F̂|² < ∞`) since `|F̂|² = O(τ^{8−2k}) = O(τ^{−2})` for
-`k ≥ 5`. Also `λ^A` in Paper 47 is exactly "the bottom of `𝔞_T` on the unit sphere of `P_T`" (`main.tex:142`), and
+`k ≥ 5`. Also `λ^A` in Paper 46 is exactly "the bottom of `𝔞_T` on the unit sphere of `P_T`" (`main.tex:142`), and
 `λ^W ≤ λ^P ≤ λ^A` is `thm:A` last line + `rem:Kprim` (`main.tex:404, 419`) — the memo's chain at `:13` is licensed.
 
 ### (ii) The factor `(D² + γ₁²)` kills both `ρ₁` and `ρ̄₁` — PASS
 
 `Φ_F(s) = P(s−½)Φ_G(s)`; at `s = ρ₁ = ½ + iγ₁`, `c = iγ₁`, `c² + γ₁² = 0`; at `1 − ρ₁ = ρ̄₁ = ½ − iγ₁`, `c = −iγ₁`, same.
 Both factors of `Φ_F(ρ₁)Φ_F(1−ρ₁)` vanish; the term is `0` regardless of multiplicity (simplicity of `ρ₁` from (X19)
-is not even needed here — only that no *other* zero has `|γ| ≤ 21`, which is the (X19) clause quoted at Paper 46
+is not even needed here — only that no *other* zero has `|γ| ≤ 21`, which is the (X19) clause quoted at Paper 47
 `main.md:3972`). On the line, `Φ_F(½+iγ)Φ_F(½−iγ) = |F̂(γ)|²` by Paper 45 Lemma 9.1 (`main.md:934–937`). PASS.
 
 ### (iii) Lower bound `‖F‖² ≥ (γ₁⁴/64)·T·(½ − ε_k(Y))` — PASS (derivation verified)
@@ -86,12 +86,12 @@ Extension by zero from `I_T` to `I_{T′}`: `A, B` unchanged (integrals of the s
 `c_F` unchanged with support `[−2T, 2T]`; the new contacts `n ∈ N_{T′}∖N_T` have `log n ≥ 2T`, so `c_F(log n) = 0`,
 and `(1/2π)∫cos(τ log n)|F̂|² = c_F(log n)` (Plancherel, `47/main.tex:395`). Hence `𝔞_{T′}(F) = 𝔞_T(F)` and
 `P_T ↪ P_{T′}` isometrically: `λ^A(T′) ≤ λ^A(T)`. Same for `λ^W` (`W = 𝔞 + 2Re AB̄`) and for `λ^P` (`𝒦_prim` grows,
-`Lév` is `T`-free, comb unchanged). Paper 47 `cor:mono` (`main.tex:422–424`) states monotonicity of `λ^P` **"with the
+`Lév` is `T`-free, comb unchanged). Paper 46 `cor:mono` (`main.tex:422–424`) states monotonicity of `λ^P` **"with the
 contact set held fixed"**; Lemma 1 removes that clause. Correctly attributed at `:53–54`. PASS.
 
 ### (vii) Corollary 2(iii), `RH ⟺ L^A ≥ 0` — PASS with one AMEND (rough-test positivity)
 
-* (⇒) Under RH `W_T ≥ 0` on `L²(I_T)`: Paper 47 states Weil's criterion in this form (`main.tex:138–141`), but the
+* (⇒) Under RH `W_T ≥ 0` on `L²(I_T)`: Paper 46 states Weil's criterion in this form (`main.tex:138–141`), but the
  classical criterion is for smooth compactly supported tests. For `F` in the form domain the extension is the
  mollification of the memo's own Lemma 2 (dominated convergence in the archimedean term, finitely many comb terms,
  `A, B` continuous). **AMEND (vii-a):** add one sentence in Cor 2(iii)'s proof: "for `F` in the form domain,
@@ -156,15 +156,15 @@ of record; it is new to the corpus.
 
 ### (X19) — PASS with a bookkeeping note
 
-Paper 46's (X19) (`main.md:3972`) imports: `ρ₁` simple on the line, `γ₁ = 14.1347…`, no other zero with `|Im ρ| ≤ 21`,
+Paper 47's (X19) (`main.md:3972`) imports: `ρ₁` simple on the line, `γ₁ = 14.1347…`, no other zero with `|Im ρ| ≤ 21`,
 citing Platt–Trudgian 2021. The memo additionally uses "every zero with `|Im ρ| ≤ 3·10¹²` is on the line"
-(`:30–32`) — that is what Platt–Trudgian prove, but it is **not the clause Paper 46 imported**. Record it as
+(`:30–32`) — that is what Platt–Trudgian prove, but it is **not the clause Paper 47 imported**. Record it as
 (X19′), same source, so the ledger is exact.
 
 ### Lemma 2 (mollification of Thm 9.4) — PASS
 
 Thm 9.4 (`45/main.md:1000–1008`) is for real `F ∈ C_c^∞`, `supp ⊆ [−T,T]`, zero sum in symmetric order, finite prime
-sum over `n < e^{2T}`, polar term `2Φ_F(0)Φ_F(1)`, archimedean `(1/2π)∫|F̂|²m` — matches the memo's (EF) and Paper 47
+sum over `n < e^{2T}`, polar term `2Φ_F(0)Φ_F(1)`, archimedean `(1/2π)∫|F̂|²m` — matches the memo's (EF) and Paper 46
 `eq:W` (`A = Φ_F(1)`, `B = Φ_F(0)`, `2Re AB̄ = 2Φ_F(0)Φ_F(1)` for real `F`). Proof of Lemma 2 (`:64–73`): `F_ε ∈ C_c^∞`,
 window `T+ε`; `|Φ_{η_ε}(s)| ≤ e^{ε|Re s−½|} ≤ e^{ε/2}` in the strip ✓; dominated convergence on the zero side by the
 hypothesis (b) (each term `≤ e^{ε}|Φ_F(ρ)Φ_F(1−ρ)|`) ✓ and no circularity — (b) is verified in step (6) of Theorem 1
@@ -177,7 +177,7 @@ from the decay bounds alone; archimedean side: `|η̂_ε| ≤ 1`, `|m(τ)| ≤ |
 
 Steps (1)–(7) (`:124–136`) verified individually above. The statement "`limsup λ^A ≤ 0`" follows from Cor 1.
 Labels are right: PROVED under (X19), (X-N), (EF), (SUF). `R155_055`'s self-assessment "trivial half of Zhu" (`:171`)
-is accurate and should be kept when the result enters Paper 47.
+is accurate and should be kept when the result enters Paper 46.
 
 ---
 
@@ -205,12 +205,12 @@ Paper 45 Thms 9.4 and 10.4. No claim is false; four AMENDs (X-N citation; `0.015
 Weil positivity sentence) and one DIAGNOSTIC flag (`T = 2` row). Row-D label unchanged; endpoint of record
 unchanged; no sign for `ζ` at any window — the memo says so itself (`:320–322`) and the audit concurs.
 
-## What may enter Paper 47, and where
+## What may enter Paper 46, and where
 
 1. **Lemma 1** as a remark after `cor:mono` (`main.tex:422–447`), stating that the clause "with the contact set held
  fixed" can be dropped, with the four-line proof. Also fixes the logical gap that `cor:mono` as written does not
  give monotonicity across contact thresholds.
-2. **Lemma 2** as a lemma in §1 or §9 (Paper 47 already invokes Thm 9.4 for `L²(I_T)` at `main.tex:134–137` without
+2. **Lemma 2** as a lemma in §1 or §9 (Paper 46 already invokes Thm 9.4 for `L²(I_T)` at `main.tex:134–137` without
  proof of the rough case; Lemma 2 is that proof). This is the most useful piece for the paper's own rigour.
 3. **Theorem 1 + Corollary 1 + Corollary 2(i)–(iii)** as a new subsection of §9 ("The margin decays"), replacing the
  HEURISTIC clause of `R155_053` Prop. 4.1 and placed next to the Landau–Widom remark at `main.tex:1768`; with the

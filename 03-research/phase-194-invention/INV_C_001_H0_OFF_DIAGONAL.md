@@ -1,6 +1,6 @@
 # INV_C_001 — h⁰ off the multiplicative diagonal: exact object, exact identity, decisive test (phase 194, track C)
  Pen and paper, no numerics. No negative value for ζ.
-Definitions checked against P47: def:PD (l.622), def:W + eq:nuw (l.1179–1190), thm:Z (l.1194). 𝒫_T = {F even, supp ⊂ [−2T,2T], F̂(±i/2) = 0}.
+Definitions checked against P46: def:PD (l.622), def:W + eq:nuw (l.1179–1190), thm:Z (l.1194). 𝒫_T = {F even, supp ⊂ [−2T,2T], F̂(±i/2) = 0}.
 Window form (linear in F = g∗g̃): W(F) = F̂(i/2)+F̂(−i/2) − Σ_{n≥2} v_n F(log n) + A_ℝ(F), v_n = 2Λ(n)n^{−1/2}, A_ℝ = C₀δ₀ + p.v. part with
 density −K(|u|) (K the Γ_ℝ kernel of eq:nuw, K(u) ~ 1/(2u²)·… singular at 0).
 

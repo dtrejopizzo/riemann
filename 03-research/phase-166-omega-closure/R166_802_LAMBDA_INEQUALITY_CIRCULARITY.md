@@ -132,7 +132,7 @@ Labels:
 - **Falsifiers.** f_t shares 𝔄_K and the window, so Thm 1 applies to it verbatim. M_m = ξ·∏R_j has no Λ, and its Tail is β_q-modified (non-atomic). (S1)–(S3) fail for it as statements about integers, consistent with Thm A(b).
 - **Identification.** The Λ ≥ 0 cone together with FE gives only ζ (Thm R). Prop 4.1 is consistent with this.
 - **Von Koch check.** C1 is forced by von Koch: an upper bound can imply RH. Thm 3(b) is the correct form.
-- **Finite sums.** A finite Tail_K (fixed Δ) is one number. Thm finZ (Paper 47 §7: no finite zero set carries a certificate) is consistent with item 2, since no single K excludes the witness without a zero-side input.
+- **Finite sums.** A finite Tail_K (fixed Δ) is one number. Thm finZ (Paper 46 §7: no finite zero set carries a certificate) is consistent with item 2, since no single K excludes the witness without a zero-side input.
 
 ## 8. Ledger
 

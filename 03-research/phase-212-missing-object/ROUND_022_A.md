@@ -1,8 +1,8 @@
 # Round 22, memo A — «Undoing the sum»: a single object?, and the Möbius congruence on 𝔸_M
 
-Notation of P47 and of round 7. `S_N = Σ_{n≤N} n^{−1/2}τ_{log n}`, `S_ζ = S_∞` (R160_D4_R2 §3),
-`Φ_G` Mellin transform in the convention of P46 (`Φ_{G⋆H} = Φ_GΦ_H`), `𝒩` the radical of P46 thm:radical,
-`𝒲` the full form on the line (P47, definition preceding lem:ext-mob). Lattice: P47 prop:AM (main.tex l.7811),
+Notation of P46 and of round 7. `S_N = Σ_{n≤N} n^{−1/2}τ_{log n}`, `S_ζ = S_∞` (R160_D4_R2 §3),
+`Φ_G` Mellin transform in the convention of P47 (`Φ_{G⋆H} = Φ_GΦ_H`), `𝒩` the radical of P47 thm:radical,
+`𝒲` the full form on the line (P46, definition preceding lem:ext-mob). Lattice: P46 prop:AM (main.tex l.7811),
 `𝔸_M = Arch_M − Div_M − Near_M`, `Div_M = Δ + Δᵀ`, `Δ_{mk} = 1_{k|m}Λ(m/k)(m/k)^{−1/2}` (normalization correction
 recorded in N_BUILD_022 §2).
 
@@ -11,8 +11,8 @@ recorded in N_BUILD_022 §2).
 1. **Closest antecedents (read in primary sources).**
    Part 1: `phase-160-row-d-infinite-T/R160_D4_R2.md` Theorem 4.3 (the image `S_ζh` of tests with `Φ_h(1) = 0` lies in the
    kernel of `𝒲`; the Poisson term `Φ_h(1)e^{−t/2}` decides admissibility) and Theorem 5.1 (a line that enters
-   through a Dirichlet convolution identity on tests is not the one carrying the sign); P46 thm:radical
-   (`𝒩 = {Φ_N(0) = Φ_N(1) = 0, Φ_N(ρ) = 0}`, ideal for `⋆`); P47 lem:ext-mob, thm:ext-half, rem:ext-killing,
+   through a Dirichlet convolution identity on tests is not the one carrying the sign); P47 thm:radical
+   (`𝒩 = {Φ_N(0) = Φ_N(1) = 0, Φ_N(ρ) = 0}`, ideal for `⋆`); P46 lem:ext-mob, thm:ext-half, rem:ext-killing,
    prop:ext-gauge (l.9899–9960; Guo Lemma 4.4); `phase-161-row-d-sum-product-square/R161_001` Theorems 2.1, 3.1 (PC), 4.1;
    `R160_M4_R1` Theorem A, C; `ROUND_020_B` §4.2; `ROUND_021_A` §3(c).
    Part 2: `phase-188-closing-D/N_BUILD_022` §§1–3 (matrix `Z`, `ZΔ = [L, Z]`, NO-GO for Near);
@@ -34,21 +34,21 @@ recorded in N_BUILD_022 §2).
 **Observation 1.1 (PROVED, direct computation).** With `g_0(t) := (2π²e^{9t/2} − 3πe^{5t/2}) e^{−πe^{2t}}`,
 `n^{−1/2}g_0(t + log n) = (2π²n⁴e^{9t/2} − 3πn²e^{5t/2})e^{−πn²e^{2t}}`, hence `K_Pó = S_ζ g_0` (Riemann–Pólya series) and,
 since `S_ζ` commutes with translations and derivatives, `M = (−∂² + ¼)K_Pó = S_ζ g`, `g := (−∂² + ¼)g_0`; `M∗φ = S_ζ(g∗φ)`.
-`Φ_{g_0}(s) = ½s(s−1)π^{−s/2}Γ(s/2)` (convention of P46 Def–Thm 11.7, ARGUED in the normalization of constants).
-Thus the family of R160_M4_R1 / ROUND_021_A is an image of `S_ζ`. The gauge is an image of the same sum: P47 l.9877,
+`Φ_{g_0}(s) = ½s(s−1)π^{−s/2}Γ(s/2)` (convention of P47 Def–Thm 11.7, ARGUED in the normalization of constants).
+Thus the family of R160_M4_R1 / ROUND_021_A is an image of `S_ζ`. The gauge is an image of the same sum: P46 l.9877,
 `Φ_φ` with Mellin `ζ(s)𝓜φ(s)`, `Φ_φ(x) = e^{−x/2}Σ_{k≥1}𝓕φ(ke^{−x})`.
 
 **Lemma (U) (CONDITIONAL only in the verification of domains; content CITED).** Let `h` with `S_ζh ∈ D_W` and
 `Φ_h` holomorphic in a strip containing `0 ≤ Re s ≤ 1`, with `ζ(s)Φ_h(s)` vanishing at `s = 0` and `s = 1`. Then
 `S_ζh ∈ 𝒩` and `𝒲(S_ζh, G) = 0` for every `G ∈ D_W`.
 *Proof.* For `Re s > 1`, `Φ_{S_ζh} = Σ_m m^{−s}Φ_h = ζΦ_h` (R160_D4_R2 Lemma 3.1(a)); continuation; it vanishes at each
-`ρ` and at `0, 1` by hypothesis; P46 thm:radical. ∎ Cases: `h = g∗φ` (family of `M`), `h = φ ∈ 𝒢_T` on the multiplicative side
+`ρ` and at `0, 1` by hypothesis; P47 thm:radical. ∎ Cases: `h = g∗φ` (family of `M`), `h = φ ∈ 𝒢_T` on the multiplicative side
 (Guo Lemma 4.4 / prop:ext-gauge), `h = c_F` with `F ∈ P_T` (R160_D4_R2 Thm. 4.3(c), identity (C′′)).
 
 **What distinguishes the input classes (PROVED except where indicated).** Radicality does NOT distinguish: the same lemma
 (explicit formula on a Mellin divisible by ζ) serves for all. Hence the claim of ROUND_020_B §4.2
 «the radical of `M` uses the functional equation and that of the gauge does not» is inaccurate as a statement about radicality: in
-both cases the proof is P46 thm:radical, whose geometric side already contains Euler, FE and Γ. What is correct
+both cases the proof is P47 thm:radical, whose geometric side already contains Euler, FE and Γ. What is correct
 is `M ∉ 𝒢_T` (support). What distinguishes the inputs is **where `S_ζh` lives relative to the window**:
 - compactly supported `h` (gauge; R160_D4_R2 Thm. 4.3(a)): `S_ζh` vanishes exactly on one side and on the other is
   `Φ_h(1)e^{−t/2} + O(e^{Nt})` by Poisson: the Poisson defect is the polar term.
@@ -61,7 +61,7 @@ is `M ∉ 𝒢_T` (support). What distinguishes the inputs is **where `S_ζh` li
 
 **Is it already written as a single statement?** Almost: R160_D4_R2 Thm. 4.3 is (U) for `h ∈ C_c^∞` with the explicit Poisson
 defect, and its Thm. 5.1 closes the class «Dirichlet convolution identity on tests» as carrier
-of the sign. P46 thm:radical (ideal) gives the case `M∗φ`. The only thing not written is to combine `K_Pó = S_ζg_0` with that theorem; it is
+of the sign. P47 thm:radical (ideal) gives the case `M∗φ`. The only thing not written is to combine `K_Pó = S_ζg_0` with that theorem; it is
 one line, not a new result. Answer to the hypothesis under test: **(a), (b), (c) are one object in the sense of
 (U) (CITED); (d) OPEN.** The form on the image is «boundary terms» by (U) + truncation, and those boundaries are
 exactly Poisson defect + hyperbola tail; none carries a sign by R160_D4_R2 Thm. 5.1.
@@ -103,7 +103,7 @@ sign: by Sylvester the congruence is an isomorphism of forms.
   divisibility order (R162_903 Thm. 4.1–4.2, §8; R162_1003 Cor. 4.3; N_BUILD_022 §§1–3). The proposed «difference» (exact sum
   on the lattice, not a weight or approximate inverse) lies literally inside that class: `Z` is the matrix of the
   exact sum.
-- **Part 1: the unified statement is CITED** (R160_D4_R2 Thm. 4.3 + P46 thm:radical + Obs. 1.1), with a correction to
+- **Part 1: the unified statement is CITED** (R160_D4_R2 Thm. 4.3 + P47 thm:radical + Obs. 1.1), with a correction to
   ROUND_020_B §4.2: Gaussian self-duality enters in the localization, not in the radicality. (d) OPEN.
 - Intermediates: Lemma 2.1 (closed form, Λ-free and entrywise ≥ 0, of `ZᵀDivZ`) is a rewriting of
   N_BUILD_022 §1; it is not new in content.

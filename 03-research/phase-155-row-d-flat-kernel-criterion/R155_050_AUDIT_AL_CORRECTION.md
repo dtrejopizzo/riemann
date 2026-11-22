@@ -1,11 +1,11 @@
 # R155.050 — Audit of R155.049 (the AL correction)
 
 *Phase 155. Target: `R155_049_AL_CORRECTION.md`, `scripts/r49/r49_01_edge.py`.
-Against Paper 47 `main.tex` `def:PD`(450–458), `prop:weak`(460–474), `eq:nuw`(1147–1151),
+Against Paper 46 `main.tex` `def:PD`(450–458), `prop:weak`(460–474), `eq:nuw`(1147–1151),
 `thm:Dtail`(1764–1791), `thm:AL`(2930), `prop:TK`, `lem:gbounds`(476–).*
 
 **Verdict: the retraction is JUSTIFIED and Theorem AL′ is CORRECT, with four defects — one of them
-a conflation that must be removed before the text enters Paper 47.** No sign for `ζ`. Endpoint of
+a conflation that must be removed before the text enters Paper 46.** No sign for `ζ`. Endpoint of
 record unchanged.
 
 ---
@@ -25,7 +25,7 @@ defects; `TEX_HOSTILE_REVIEW_R2` finding 1 sustained. **RETRACTED** is right.
 * **Signed `ν` is allowed.** `def:PD` (`main.tex:455`) reads "`ν` a finite even **signed** Borel
  measure". So no positivity of `G` is needed and **`0 ≤ w ≤ 1` must NOT be assumed** — which is
  essential, since comb-vanishing weights have sign changes (`R155_016`, `‖w‖_∞ ≤ 3`) and `G` is
- genuinely signed. `ν_w` itself is signed in Paper 47 (the prime atoms of `eq:nuw` carry both
+ genuinely signed. `ν_w` itself is signed in Paper 46 (the prime atoms of `eq:nuw` carry both
  signs). The the audit's worry is answered; `R155_049`'s proof correctly never uses `G ≥ 0`. The
  replacement LaTeX should nevertheless **say** "signed" once, as it currently leaves the reader to
  check `def:PD`.
@@ -107,7 +107,7 @@ occurs only at `:2930`, in `cor:ALdef` and at `:3156`.
 
 ---
 
-## §2 Statement ready for Paper 47 (hypotheses fixed)
+## §2 Statement ready for Paper 46 (hypotheses fixed)
 
 > **Theorem (lattice sampling of a flat-top certificate).** Let `r ≥ 2` and let `w ∈ 𝒲_T` be even
 > with `w^{(r−1)}` locally absolutely continuous, `w^{(r)} ∈ BV ∩ L¹`, `supp w ⊆ [−U,U]` with

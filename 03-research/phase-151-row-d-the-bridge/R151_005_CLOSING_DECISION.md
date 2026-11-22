@@ -18,7 +18,7 @@ are accepted as written; the labels below are the labels of record.*
 | Cor 3.2 ("new: `H(k,c)` ⟹ `β_max ≤ ½ + c/k` without (26.9a)") | **WITHDRAWN as new**: it is Thm 26.4's display at fixed `k` fed into Cor 27.10a, with a strictly stronger hypothesis (all `w_θ`) | `R151_002` §4 |
 | §4 classification (additive-family / spectral / index / counting) | (β),(γ) closed **on the declared carrier and named enlargements**, not as shapes; exhaustiveness CERTIFIED only; **the partition is not one**: `⟨Hf,f⟩ = Σλ_j|⟨f,e_j⟩|²` is itself a nonnegative additive sum — **the real axis is summand vs numerator** (new open item O-151.4) | `R151_002` §5 |
 | Blueprint correction (Landau-oscillation route gives only `(2k+1)β_max − 1`) | PROVED, useful (closes a route) | `R151_001` |
-| §8 proposed Paper 46 text | **HELD** (prints withdrawn novelty claims) | |
+| §8 proposed Paper 47 text | **HELD** (prints withdrawn novelty claims) | |
 | FATAL | not triggered | |
 
 **Row D: no label, no sign.**
@@ -47,7 +47,7 @@ are accepted as written; the labels below are the labels of record.*
 
 ## 3. Decision
 
-Phase 151 **CLOSED**. Paper 46: add only Lemma 2.4 (as a lemma to §27) and the blueprint correction (as a
+Phase 151 **CLOSED**. Paper 47: add only Lemma 2.4 (as a lemma to §27) and the blueprint correction (as a
 remark), and correct the `E(s)` pole at l.≈10914; do not add T6 as a theorem (it is Thm 26.4 + Cor 27.10a in
 different words); add O-151.4 to §28.3. Open: **O-151.4** (summand vs numerator as the correct axis of the
 classification of positivity mechanisms), O-151.1 (θ-family dependence).

@@ -52,7 +52,7 @@ I grepped `05-meta-and-planning/ROUTES-TRIED-INDEX/` (README, 01–06, audits, S
 
 ## 1. Exact statement of the node
 
-### 1.1 Data from P47 (verified against the text)
+### 1.1 Data from P46 (verified against the text)
 - **Window form** (eq:Aform):
   𝔞_T(F) = 𝔪_T(F) − Σ_{n∈N_T} v_n c_F(log n),  with v_n = 2Λ(n)n^{−½}, c_F(u) = ∫F(t)F(t+u)dt, N_T = {n : log n < 2T}.
   By support, c_F(log n) = 0 if n ≥ e^{2T} (H1PLUS §1.2).
@@ -270,7 +270,7 @@ Data: T = ½log5 = 0.804719, ω₁ = 1.95199, ω₃ = 5.85597 < t₀ = 6.2898. C
 **Lemma N.5 (NUMERICAL; provable via interval arithmetic, not done).** At T = ½log5, for F ∈ span{e₁, e₃} with ⟨F, c⟩ = 0:
   Σ_{n∈{2,3,4}}2Λ(n)n^{−½}(−c_F(log n)) = 0.243969‖F‖² > 0.242117‖F‖² = −(𝔪+𝔢)(F) + 0.052988‖F‖².
 Equivalently, the node (N) holds with margin 0.001852‖F‖² (0.76% of the left-hand side).
-- Alternative route to PROVED: the P47 certificates at ½log5 (CITED) give W^ev ≽ 0 in the window. By RFIN_TRACT 1.1(b), that implies Z_N ≽ 0 on all of E_N^ev and hence the node on this block.
+- Alternative route to PROVED: the P46 certificates at ½log5 (CITED) give W^ev ≽ 0 in the window. By RFIN_TRACT 1.1(b), that implies Z_N ≽ 0 on all of E_N^ev and hence the node on this block.
 - That route is CONDITIONAL on the certificate covering the whole even sector and not only λ_A in its class of tests. Not verified against the text in this memo.
 
 ### 4.3 What arithmetic identity makes that direction positive? (honest answer)
@@ -317,5 +317,5 @@ Equivalently, the node (N) holds with margin 0.001852‖F‖² (0.76% of the lef
 ## 6. What was not proved (explicit)
 - The node for general T: OPEN.
 - N.4 as a classification theorem: ARGUED.
-- Lemma N.5: NUMERICAL, not certified by intervals. The CITED route depends on the P47 certificate covering the whole even sector, which is not verified.
+- Lemma N.5: NUMERICAL, not certified by intervals. The CITED route depends on the P46 certificate covering the whole even sector, which is not verified.
 - Quartets, Epstein and DH in the 2×2: not computed.

@@ -19,15 +19,15 @@ under every falsifier.
 
 ## What is established and fixes the design
 
-1. **Zero slack.** λ_A(T) ≤ 4·10⁹ T e^{−15.449T} for T ≥ 1 (P47 cor:margin1); the window of positive
+1. **Zero slack.** λ_A(T) ≤ 4·10⁹ T e^{−15.449T} for T ≥ 1 (P46 cor:margin1); the window of positive
    weights closes on c = 1 from both sides (211 LEDGER C43). The sign step cannot be an estimate with
-   remainder (P47 thm:shape (B′)); it must be an exact identity "form = manifestly non-negative expression".
-2. **Not generic.** An identity valid for every weight vector carries no sign (P47 lem:shape-ident). The
+   remainder (P46 thm:shape (B′)); it must be an exact identity "form = manifestly non-negative expression".
+2. **Not generic.** An identity valid for every weight vector carries no sign (P46 lem:shape-ident). The
    sign-step identity must fail for cΛ (c ≠ 1), a_P, finite deletion and amplification, and the models of
    the battery (`RULES_AVOID.md` §E).
 3. **Conjunction without a common falsifier.** Euler product over ℕ (E), functional equation with
    Γ(s/2) at conductor 1 (F) and integrality (I) used together have no common falsifier
-   (P47 rem:conjunctions). What was never built is a **non-linear** sign step in which all three enter
+   (P46 rem:conjunctions). What was never built is a **non-linear** sign step in which all three enter
    together. The elementary exact separator is Σ_{d|n} a(d) = log n (P48, scope note after req:spec): it
    identifies Λ, but turning identification into a quadratic bound is OPEN.
 4. **The sign lives in the cross terms.** Every line of phase 211 stopped at a joint remainder without
@@ -35,13 +35,13 @@ under every falsifier.
 5. **Grid row 6 used only linearly.** The exact values of Λ (Λ ∗ 1 = log as an identity) never entered a
    sign step non-linearly (P48 §Coordinates).
 
-Available PROVED pieces (not re-derived here): exact reductions (L2) P47 thm:coer-schur, (S) P47 prop:AM,
-one profile P47 thm:oneprofile, Nyquist mesh P47 thm:nyq, power ladder 211 POWER_BRIDGE_002 §6, thermal
+Available PROVED pieces (not re-derived here): exact reductions (L2) P46 thm:coer-schur, (S) P46 prop:AM,
+one profile P46 thm:oneprofile, Nyquist mesh P46 thm:nyq, power ladder 211 POWER_BRIDGE_002 §6, thermal
 polynomial kernel 211 GRAM_SLICES §§19.8, 19.10, integer blocks ⟺ real nodes 211 GRAM_SLICES §18; partial
 positivities (prop:nearfree; resonant sum of squares with uniform margin, 211 GRAM_SLICES §17; reciprocal
 endpoint C_0 of all orders; all-order Gram of the hyperbolic model, 211 HYPERBOLIC §§4–5; certified plane
 {E₁,E₂}, 211 GRAM_SLICES §19.9; certified range T ≤ ½log5); identities with the three inputs (finite
-Poisson–Chebyshev identity P47 thm:PCfinite and contraction prop:GEgap; theta operator realisation 211
+Poisson–Chebyshev identity P46 thm:PCfinite and contraction prop:GEgap; theta operator realisation 211
 HYPERBOLIC §12.6, without metric).
 
 ## Status
@@ -178,7 +178,7 @@ validation tools for specific memos; a numerical output is not a proof.
 - `ROUND_024_B.md` — Round 24, memo B — Near-null block of 211 = near-radical family `{Π_T(M∗φ)}`?
 - `ROUND_024_C.md` — ROUND 024 C — The three cheap checks left by the row D triage
 - `ROUND_024_D.md` — ROUND_024_D — Gate: object of degree ≥ 2 with the Möbius of the system μ_a and the boundary leak
-- `ROUND_025_A.md` — ROUND_025_A — Cross-check of antecedents: "existence + rigidity" scheme (WF)/(R)/(E) against Paper 47 and phases 153–160, 197
+- `ROUND_025_A.md` — ROUND_025_A — Cross-check of antecedents: "existence + rigidity" scheme (WF)/(R)/(E) against Paper 46 and phases 153–160, 197
 - `ROUND_025_B.md` — Round 25, memo B — Logical attack on the "existence + rigidity" scheme (R)/(E)/(WF)
 - `ROUND_026_A.md` — ROUND_026_A — Computation of the concave value V*_T against λ_A(T)
 - `ROUND_026_B.md` — Round 026 B — (PBP_T) as an exact extremal problem; Kreĭn and density argument; four-point gate

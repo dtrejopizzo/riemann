@@ -2,7 +2,7 @@
 
 ## Corpus check
 016 (dilations U_k: Tate points move, line moves), 017 §1 (e^{βu} on lags is not an autocorrelation), 026 (σ-family, limit lemma, density margin
-O(σ−½)), N_BUILD_001 (A) (polar elimination on P_T), Paper 47 lem:polar (2cosh((s−t)/2) has signature (1,1): the reason a codim-2 Tate class exists).
+O(σ−½)), N_BUILD_001 (A) (polar elimination on P_T), Paper 46 lem:polar (2cosh((s−t)/2) has signature (1,1): the reason a codim-2 Tate class exists).
 Krein's factorization theorem for nonnegative entire functions of exponential type (CITED: Akhiezer, Lectures on Approximation Theory; Krein 1944).
 New: §1–§3.
 

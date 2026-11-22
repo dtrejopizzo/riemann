@@ -7,8 +7,8 @@ where it says "unreviewed"; REVIEW_010 governs). Labels: PROVED / CITED / CONDIT
 NO-GO / NUMERICAL. The target is treated as a statement about one quadratic form; no equivalence of it with any
 statement outside STATEMENT_001 is used.
 
-Notation (STATEMENT_001, Paper 47): a_T = Arch − Π on P_T (Tate moments A = B = 0), λ_A(T) = inf a_T on the unit
-sphere of P_T, N = e^{2T}, λ = e^T, v_n = 2Λ(n)/√n, m(τ) = Re ψ(¼ + iτ/2) − log π. Exterior coordinates (P47 §sec:ext):
+Notation (STATEMENT_001, Paper 46): a_T = Arch − Π on P_T (Tate moments A = B = 0), λ_A(T) = inf a_T on the unit
+sphere of P_T, N = e^{2T}, λ = e^T, v_n = 2Λ(n)/√n, m(τ) = Re ψ(¼ + iτ/2) − log π. Exterior coordinates (P46 §sec:ext):
 Ef = Φ_f − Ψ_f, tail form 𝒲̂ = 𝒜_∞ + 𝒯 − 𝒞 on Poisson tails Ψ ∈ V_T with archimedean part 𝒜_∞, Tate part 𝒯,
 comb part 𝒞; 𝒜𝒫 := 𝒜_∞ + 𝒯; R_T the gauge radicals; ℓ_g the gauge-quotient leakage.
 
@@ -22,7 +22,7 @@ REVIEW_005); OPEN beyond.
 | # | Reformulation | Label | File |
 |---|---|---|---|
 | R1 | Comb-response object E_T = N′ ⊕ P_𝒞Π(𝒩_η + 𝒯): negative Nyquist block plus comb responses, identified with the Λ-twisted Dirichlet polynomials on the mesh (Prop 2, 2′); Tate gauge; exact reduction of (★) to E_T with archimedean-only block coupling (Thm 2) | PROVED (REVIEW_005; mesh-square identity is a truncated convolution for N ≥ e^{2T}) | ROUND_005_C |
-| R2 | Sign budget a_T = σ_T‖F‖² + κ(F) − ℛ(F) on P_T, σ_T = C₀ + 4 + Σ_j 2e^{−(4j+1)T}/(2j+½); σ_T‖F‖² + κ = 𝔞^♯ (P47 prop:sharp), ℛ = Π + 𝔢 (lem:polarelim); σ_T > 0 only for T < 0.0520; sign lemma ⟺ Π ≤ Arch on E_T | PROVED (|σ_T| → −σ_T correction, REVIEW_004) | ROUND_005_C, ROUND_007_B |
+| R2 | Sign budget a_T = σ_T‖F‖² + κ(F) − ℛ(F) on P_T, σ_T = C₀ + 4 + Σ_j 2e^{−(4j+1)T}/(2j+½); σ_T‖F‖² + κ = 𝔞^♯ (P46 prop:sharp), ℛ = Π + 𝔢 (lem:polarelim); σ_T > 0 only for T < 0.0520; sign lemma ⟺ Π ≤ Arch on E_T | PROVED (|σ_T| → −σ_T correction, REVIEW_004) | ROUND_005_C, ROUND_007_B |
 | R3 | (L2′) extended to the two-parameter (shift, gauge) family: (★) ⟺ S ⪰ 0 on the non-positive Nyquist block N′, complement coercive | PROVED (STATE_001 P15; gauge extension ROUND_005_C Lemma 1, CONDITIONAL until the gauge is chosen off a countable set, REVIEW_004) | ROUND_001_C, ROUND_005_C |
 | R4 | Band reduction (packet form): (HR)(a) on the high block ⟹ pointwise P^ρ_T(τ₀) ≤ m(τ₀) − κ + o(1) for all profiles; all-profile form ⟺ λ_max(A_τ) ≤ m(τ) − κ; band-restricted packet identity Q_T(β cos τx) = ½‖β‖²[μ_η + D + X − R] with A_τ^{(η)} the compression to K = ⌊2Tητ/π⌋ envelope modes | necessity PROVED, equivalence not proved (REVIEW_009); band identity PROVED (unreviewed) | ROUND_011_A, ROUND_012_A, ROUND_016_A |
 | R5 | Closed matrix-free form 2T𝔈 = CS − ESCE + ESHE + HS + Dd of A_τ^{(η)}: the comb acts on the band only through two Dirichlet-polynomial vectors s_k, d_k at frequencies τ ± a_k | PROVED (unreviewed) | ROUND_017_B Prop 1.1 |
@@ -46,7 +46,7 @@ REVIEW_005); OPEN beyond.
 | Q1 | Certified falsifiers (arb ball arithmetic): a_3 and the Beurling system 3 → 3.2 give λ < 0 at ½log5 + 10⁻⁴ (hence all larger T); 1.1Λ gives λ < 0 at T = 1; witnesses in tools/falsifier_cert.py | ROUND_007_C | PROVED (REVIEW_005); makes the identity-mechanism NO-GO of ROUND_005_C fully PROVED |
 | Q2 | Explicit doubly-exponential upper bound λ_A(T) ≤ 3.2·10²³ N^{33/2} e^{−2πN}, N = e^{2T}, N ≥ 1.6·10⁶ (finite constant below) | ROUND_009_A (l. 244) | PROVED given thm:ext-half (REVIEW_007) |
 | Q3 | First-cell certificate: (1/2π)∫m|F̂|² ≥ 0.069611‖F‖² on ∫F e^{−y/2} = 0, length log 2, T-free; four transported constraints μ₄(0.8) ≥ 0.52763, μ₄(1.0) ≥ 0.54941 | ROUND_017_C | PROVED, arb-certified (REVIEW_010; cert_f0.py re-run reproduces the ball); κ_T ≥ (λ/2)μ₄ in ℓ_g CONDITIONAL; weight-blind |
-| Q4 | Three-cell certificate: complete form ≥ 0.70·ℓ_g on transported constraints at T = 0.8, 1.0; transfer Lemma 1.1 (δ* = 0.075); piecewise compression with exact 𝔇₃ | ROUND_018_A Thm 3.4 | PROVED, arb (REVIEW_010; cert3.py re-run at T = 0.8 reproduces); ℓ_g is half of Paper 47's ℓ; a coercivity piece: survives a_3 (certified ≥ 0.60·ℓ_g) and every change beyond m = 2 for systems whose integers agree with ℕ below N (ROUND_019_A §5, corrected) |
+| Q4 | Three-cell certificate: complete form ≥ 0.70·ℓ_g on transported constraints at T = 0.8, 1.0; transfer Lemma 1.1 (δ* = 0.075); piecewise compression with exact 𝔇₃ | ROUND_018_A Thm 3.4 | PROVED, arb (REVIEW_010; cert3.py re-run at T = 0.8 reproduces); ℓ_g is half of Paper 46's ℓ; a coercivity piece: survives a_3 (certified ≥ 0.60·ℓ_g) and every change beyond m = 2 for systems whose integers agree with ℕ below N (ROUND_019_A §5, corrected) |
 | Q5 | Selection rule (R9) | ROUND_009_B | PROVED with REVIEW_008 parity correction; Λ-free, not a sign step |
 | Q6 | Sandwich λ_W ≤ λ_A ≤ λ_{W,2}; lower half ⟺ (N1′) μ₁ ≥ L + Tate bound | ROUND_007_D | PROVED (REVIEW_005); floor transfer to ½log15 is a restatement of CITED input |
 | Q7 | −log λ_A(T) ≤ 4πe^{2T} − 9T + O(1) under the κ-band hypothesis; no law −log λ_A = c₁e^{2T} + O(T) with c₁ > 4π on an unbounded range | ROUND_007_D Prop 4.4 | CONDITIONAL (REVIEW_005) |
@@ -63,7 +63,7 @@ REVIEW_005); OPEN beyond.
 | Q18 | Fibre lemmas and representative margins: every fibre meets {𝒞 = 0}; best-representative c-margin is ℝ or ∅ by the sign of 𝒲̂; S-lemma multiplier forced to 1 | ROUND_020_A Lemmas 1.1–1.2, Thm 1.3, Thm 1.5 | PROVED (REVIEW_010; Thm 1.5 on finite-dimensional sections, ARGUED in general) |
 | Q19 | Structure of the Krylov/word families: every homogeneous word family is cΛ-invariant as a set; Lanczos blind to the cluster at rate O(λ₂ − λ₁) | ROUND_005_A, ROUND_006_B | PROVED (sign claim of 005_A Prop 3.4 ARGUED; halo kernel −½K) |
 | Q20 | Exact ledger of the survivor, rung tail Grams (Lemmas 1.1–1.2) | ROUND_018_B | PROVED for f(λ) = 0 data; survivor (f(λ) ≠ 0) ARGUED via mollified limit (REVIEW_010) |
-| Q21 | Exact transfer M ⪰ 0 on 𝒜 ⟺ 𝒢 ⪰ 0 on S𝒜 (tail form defined on S{f(λ) = 0}); Toeplitz/banded sweep lemma | ROUND_014_A Thm 1.1, Thm 3.1 | PROVED (REVIEW_010) with 𝒢 built from the complete form of Paper 47 def:ext (polar term 2AB) |
+| Q21 | Exact transfer M ⪰ 0 on 𝒜 ⟺ 𝒢 ⪰ 0 on S𝒜 (tail form defined on S{f(λ) = 0}); Toeplitz/banded sweep lemma | ROUND_014_A Thm 1.1, Thm 3.1 | PROVED (REVIEW_010) with 𝒢 built from the complete form of Paper 46 def:ext (polar term 2AB) |
 | Q22 | Mollified entrywise tail Gram, SMS − 𝒢^ρ rank ≤ 8; comb on Poisson tails = 2⟨𝒯_log u, 𝒯u⟩; exact chirp ledger; Montgomery–Vaughan control of non-resonant chirp pairs in the dilation model | ROUND_015_A Lemma 1.0, Prop 1.1, Thm 3.1, Cor 3.2, Thm 3.3 | PROVED (REVIEW_010; complete-form reading; Cor 3.2 needs absolute convergence of the archimedean double series; Cor 3.4 = one model value) |
 | Q23 | Exact packet identity Q_T(β cos τx) = ½[m‖β‖² − ⟨A_τβ, β⟩ + D + X − R]; leakage of V_η; band-restricted reduction (HB_η) | ROUND_016_A Thm 1.1, Lemma 1.2, Props 1.4–1.5, Thm 1.6 | PROVED (REVIEW_010; X-constant 5.72 → 5.73 for τ ≥ 10; P_T transfer ARGUED) |
 | Q24 | Dilation form F_N = N^{−1/2}τ_{log N}F₁; first Poisson cell is comb-free | ROUND_016_B Lemmas 2.1–2.2 | PROVED (REVIEW_010) |
@@ -112,7 +112,7 @@ TOOL_001 §2–3, ROUND_007_D §1, ROUND_016_A):
 | T | λ_A (Galerkin) | N, digits | precision note |
 |---|---|---|---|
 | ½log3 | 1.008·10⁻³ | 80, 40 | above certified lower bound 8.86·10⁻⁵ |
-| log 2 | 1.1137·10⁻⁷ | 80, 40 | reproduces P47 App. C |
+| log 2 | 1.1137·10⁻⁷ | 80, 40 | reproduces P46 App. C |
 | ½log5 + 10⁻³ | 3.088·10⁻¹² | 80, 40 | — |
 | 0.9 | 6.03·10⁻¹⁷ | 80, 40 | earlier double value 4.5·10⁻¹⁵ was round-off |
 | 1.0 | 1.74·10⁻²³ | 120, 40 | ≈ 10 % between N = 90 and 120 |
@@ -189,7 +189,7 @@ Results of ROUND_017_B and ROUND_019_A, present in the folder, are included abov
 T = 3.25, three- and four-cell falsifier thresholds).
 
 ---------------------------------------------------------------------------------------------------------------------
-## 6. Corrections to Paper 47 (to be applied only when the paper is closed)
+## 6. Corrections to Paper 46 (to be applied only when the paper is closed)
 
 Items 1–7 of STATE_001 §4 stand. Added in rounds 5–20:
 8. Open-problem sentence (main.tex L.10771–10772, "beyond ½log5 no lower bound better than the trivial … is known"):
@@ -197,14 +197,14 @@ Items 1–7 of STATE_001 §4 stand. Added in rounds 5–20:
    floors up to ½log15 (CITED; analytic lemmas of the source not audited) (REVIEW_005).
 9. cor:margin1 (λ_A ≤ 4·10⁹ T e^{−15.449T}): add the doubly-exponential bound λ_A ≤ 3.2·10²³ N^{33/2}e^{−2πN} (Q2), given
    thm:ext-half, as an improvement in rate (REVIEW_007); cor:margin1 has no content for T ≤ 1.4 (TOOL_001).
-10. lem:mbounds(i), (iii): cite these from P47 rather than re-deriving them in the packet memos; for signed profiles ρ
+10. lem:mbounds(i), (iii): cite these from P46 rather than re-deriving them in the packet memos; for signed profiles ρ
    the lower bound on Σ^ρ_T must use Σ^{|ρ|} (REVIEW_009).
 11. Remark after prob:ext-L: (HR)(a) is prob:ext-L restricted to the high block; the reduction to a pointwise packet
    bound is necessary only (REVIEW_009 Prop 1.2 downgrade). Under the half-line identity, (ii) with κ = 0 on admissible
    tails is (★) itself (ROUND_019_B; unreviewed); state that prob:ext-L is the strictly stronger margin version.
 12. thm:ext-half / §ext-constraints: record that for every c ≠ 1 the form 𝒲̂^c is unbounded below on every gauge fibre
    (Q17, unreviewed), which upgrades item 4 of STATE_001 §4 from ARGUED to PROVED once reviewed.
-13. σ_T sign (P47 prop:sharp bookkeeping): σ_T < 0 only for T > 0.0520 (REVIEW_004).
+13. σ_T sign (P46 prop:sharp bookkeeping): σ_T < 0 only for T > 0.0520 (REVIEW_004).
 
 ---------------------------------------------------------------------------------------------------------------------
 ## 7. Verdict

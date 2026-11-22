@@ -3,7 +3,7 @@
 *Cell: 8B/6C boundary (object = the zero set X of F̂ of the witness, column B; arithmetic = exact values of Λ through
 Z, row 6). Nearest record routes: R160_X_C1 Thm G (8B, "Blaschke-rigid witness", grid §7 rank 4), R162_1502 Prop 3,
 R162_903 Thm 3.2, R162_1001 Thm 3.1. Walls named in advance: W3 (F3 class-blindness) and W1 (E1, Herglotz/de Branges).
-Conventions: P47 `eq:symbol` (σ_T = m − Σ_{n∈N_T} v_n cos(τ log n), v_n = 2Λ(n)n^{−1/2}), R160_X_C1 §1, §5
+Conventions: P46 `eq:symbol` (σ_T = m − Σ_{n∈N_T} v_n cos(τ log n), v_n = 2Λ(n)n^{−1/2}), R160_X_C1 §1, §5
 (μ = σ_{T_c}dτ/2π + δ_{−i/2} + δ_{i/2}, Ĥ_x = F̂/(z−x)), R162_1502 (Z = M(1), a′ = exp_*(a/log)). [compl] unless
 stated. Pure mathematics, no numerics. No sign for ζ is claimed. No label moves. Gate 1 stays OPEN.*
 

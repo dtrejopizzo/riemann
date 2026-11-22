@@ -6,7 +6,7 @@ obtained, and the Three Gates induction is not accepted.
 
 ## Audited identity
 
-In Paper 47 notation, K(v)=2 exp(−v/2)/(1−exp(−2v)).
+In Paper 46 notation, K(v)=2 exp(−v/2)/(1−exp(−2v)).
 For L=2T, U F(x)=√L F(L(x−1/2)), we set
 
     q_L(v)=L K(Lv)−1/v,       q_L(0)=L/2,
@@ -27,7 +27,7 @@ The archimedean term is exactly b−a_L I−H_L. We checked:
    their norms.
 
 The identity uses exclusively the kernel formula already present in
-Paper 47. The validity of this transport does not depend on the global
+Paper 46. The validity of this transport does not depend on the global
 closure claimed by the Three Gates manuscript.
 
 ## Independent diagnostic via autocorrelation

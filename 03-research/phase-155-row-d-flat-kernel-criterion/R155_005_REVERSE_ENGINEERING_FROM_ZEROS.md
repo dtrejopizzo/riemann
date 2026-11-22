@@ -3,7 +3,7 @@
 * REVERSE-ENGINEERING track of phase 155. the idea: "we know the zeros up
 to height 3·10¹² are on the line; use that known truth as training data: reverse-engineer what the
 closing object `D` must look like for the first windows and find the pattern."*
-*Inherits Paper 47 §7 (Theorem Z, Cor. 7.4 flat-kernel criterion), §5 (the 437-atom certificate at
+*Inherits Paper 46 §7 (Theorem Z, Cor. 7.4 flat-kernel criterion), §5 (the 437-atom certificate at
 `½log3`), §8.2 (the three scales), and `R155_003` (Theorem TK).*
 *Scripts and data: `scripts/reverse/` (README with exact commands and runtimes).*
 **Every number in this file is `DIAGNOSTIC`. Nothing here is a statement about RH, and nothing here
@@ -26,7 +26,7 @@ claims a sign for any `T > log 2`.**
  genuine sign disagreement (R155_006 §3 traces `max|f_zero−f_prime|` to GL order directly). The value
  dies instead **on the grid itself**: a fine-grid scan finds `f(16.745) = −1.72`, far below the
  coarse grid point `f(16.74) = +1.39·10⁻⁶` that the LP reports as active — the "positive value" is a
- grid artefact of the same kind Paper 47 §5/§6 already warn about, not a prime-side refutation. Even
+ grid artefact of the same kind Paper 46 §5/§6 already warn about, not a prime-side refutation. Even
  the tame weight's grid value `−1.68·10⁻⁴` is worth `−9.79·10⁻³` on the fine grid (factor `58`). This
  is Theorem O (non-attainment) made visible in the *weight*, not just in the measure. Note also that
  `L` (the mass budget) is **basis-dependent**, not an intrinsic scale of `w`, and the archived negative
@@ -62,7 +62,7 @@ claims a sign for any `T > log 2`.**
 | `Platt` | `phase-118/PROOF_ARCHITECTURE.md:155`, `scripts/W5_partB_bound.py` (`H_VERIFIED = 3.0000175e12`), `phase-104/104_00`, `104_03:214`, `104_66:69` | the verified-RH height is already in the corpus, and `104_03:214` already records the correct caveat ("Platt–Trudgian permite afirmar que los ceros hasta `H` yacen sobre la recta; no hace …"). |
 | `known zeros` / `ceros conocidos` | `phase-71/E71_4:71`, `E71_5:9–13`, `phase-4/00-PROOF-LOG.md:168` (Theorem C NO-GO: "Zero-side `K` presupposes the unknown zeros (circular as tool)"), `phase-136/MAP_1:141` (ES-2) | **the corpus already contains the no-go this track must respect**: a zero-side object used as a *tool* is circular. Our LP is therefore explicitly labelled a *diagnostic training experiment*, never a proof step. |
 | `smoothed counting` | none | — |
-| `flat-top` | only phase 154/155 and Paper 47 | this track is new. |
+| `flat-top` | only phase 154/155 and Paper 46 | this track is new. |
 
 Conclusion of the corpus check: the *idea* (use the verified zeros) appears twice as a caveat and once
 as an identity check; the *experiment* (optimise a flat-top weight against a zero table and read the
@@ -115,7 +115,7 @@ the B-spline versions by 200-node Gauss–Legendre on each compact support.
 C² matching above, `ŵ(t) = O(t⁻⁴)` and the measured residual between `Γ = 6000` and
 `Γ = 74920.8` is `1.4·10⁻⁷` (§3). **The class of weights for which the experiment is even
 arithmetically possible is therefore the C¹-or-smoother flat-tops**; this is a constraint on
-Problem B that Paper 47 §7 does not state.
+Problem B that Paper 46 §7 does not state.
 
 The LP is: maximise `c` subject to `f^known_w(τ_i) = Σ_{|γ|≤6000} ŵ(τ_i−γ) ≥ c` on
 `τ_i ∈ [0, τ_max]` with step `0.02`, `τ_max = min(2πe^{A_T}, 200)`, plus `Σ_i y_i = 1` and the mass
@@ -124,7 +124,7 @@ seconds. **The primes appear nowhere in it.**
 
 ### 2.2 A negative control first: exponential columns fail
 
-With the exponential-column class of Paper 47 Thm. E (`w = Σ x_k e^{−s_k(|u|−2T)}`, `s_k` log-spaced,
+With the exponential-column class of Paper 46 Thm. E (`w = Σ x_k e^{−s_k(|u|−2T)}`, `s_k` log-spaced,
 `K = 48…80`), which is the class the *exhaustion* theorem uses, the LP saturates below zero at every
 window: at `½log3`, `c = −1.16·10⁻², −4.9·10⁻³, −1.10·10⁻³, −7.8·10⁻⁴, −1.6·10⁻⁴` for
 `Σ|x| ≤ 20, 100, 400, 2000, 20000` (`s_min = 0.55`), and `Σ|x| = L` is always binding. The reason is
@@ -163,7 +163,7 @@ At `½log3`, the profile `w(2T+v)` sampled at `v = 0, 0.5, 1, …` :
 | `2000` | `262` | `1.000 −3.858 −41.05 −94.65 −261.9 −20.86 −1.823 −4.213 17.50` | shape destroyed |
 
 Sign pattern of `x`: `8` sign changes among `~30` significant nodes at `L = 5`, `27` at `L = 2000`
-(Paper 47 §5 reports alternation at `70 %` of consecutive lattice sites at its own optimum — the same
+(Paper 46 §5 reports alternation at `70 %` of consecutive lattice sites at its own optimum — the same
 phenomenon at the same place on the mass axis). No node spacing related to `log 2` or `log 3` is visible at any `L` (inspection of `x` in
 `win_*.json`; no quantitative test of arithmetic structure was run, so this is an observation, not a
 measurement). **`mass = ∫_{2T}^∞ w` is `+2.0` at
@@ -209,7 +209,7 @@ Three things are visible and all three are negative results, honestly reported.
  task's question "is `max|difference| < c(T)`?" is **no**, at every window we computed.
 3. **The `τ`-grid is itself a lie at this accuracy.** The `L=20` weight has LP value `−1.676·10⁻⁴` on
  the grid of step `0.02` and true minimum `−3.317·10⁻⁴` — a factor `2.0` — attained at
- `τ = 13.25`, which is not a grid point. This reproduces exactly the warning of Paper 47 §5
+ `τ = 13.25`, which is not a grid point. This reproduces exactly the warning of Paper 46 §5
  ("a coarse-grid value `+1.7·10⁻⁴` was worth `−2.1·10⁻²` in truth") and means every `c(T)` in §2.3
  is an **upper** bound on the honest value of its own weight, by a factor of order `2` for tame
  weights and unboundedly for wild ones.
@@ -259,7 +259,7 @@ R155_006 §6 shows an in-regime fit (`{0.58,0.62,0.65}` → `log2`) succeeds to 
 residual and `4 %` predicted-profile error; what fails is only the *value*, by conditioning, not
 the profile law].
 
-### 4.2 The three scales of Paper 47 §8.2, tested
+### 4.2 The three scales of Paper 46 §8.2, tested
 
 *Resolution `2πe^{2T}`.* At `½log3`, `τ_env = 16.75 < 2πe^{2T} = 18.85`: the whole verification
 interval lies **below** the resolution scale, so `f_w ≥ c` there is a statement about the first two
@@ -281,7 +281,7 @@ Zhu's law is possible at these windows**; recorded as such, not as evidence eith
 
 ### 4.3 The mass
 
-`‖ν_{w_T}‖` is not directly comparable to Paper 47 §5's `‖ν‖_TV = 90.75` (that is an atomic measure
+`‖ν_{w_T}‖` is not directly comparable to Paper 46 §5's `‖ν‖_TV = 90.75` (that is an atomic measure
 on a lattice; ours is absolutely continuous plus the prime atoms of `(7.1)`), but the LP's own budget
 `L = Σ|y| + Σ|x|` is the analogue, and the analogy is close: the `½log3` weight needs `L ≈ 10²` to
 reach `c ≈ 0` and `L ≈ 2·10³` to (spuriously) cross it, against `90.75` for the certified 437-atom
@@ -304,7 +304,7 @@ prime near-alignment; they are at the class's own resolution limit.**
 
 At `T ≥ 0.62` the comb breaks into clusters of `3–8` contacts separated by gaps
 (`0.62`: `2.5, 2.8 | 5.3, 5.7 | 11.0–12.2 | 15.9–19.2 | 22.3–24.0 | 27.2–28.5 | …`), with intra-cluster
-spacing `0.35–0.45` and no recognisable period between clusters (gaps `6.4, 4.9, 7.9, 9.3`). Paper 47
+spacing `0.35–0.45` and no recognisable period between clusters (gaps `6.4, 4.9, 7.9, 9.3`). Paper 46
 §5's contact comb is "a band inside `[0,13]` plus one phase per tail row"; ours is the same band
 structure, seen in a different class and without the tail rows.
 
@@ -365,20 +365,20 @@ Every statement in §§2–5 is `DIAGNOSTIC`. Three independent reasons, each su
  here is interval-certified.
 
 No statement about a sign for any `T > log 2` is made. The endpoint of record is unchanged:
-`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` (Paper 47 Thm. C).
+`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` (Paper 46 Thm. C).
 
 ### 6.2 What it teaches
 
 | finding | label | where it bites |
 |---|---|---|
-| **Theorem Z verified numerically** (`2.4·10⁻⁸` on a hand-made C¹ weight [amended per R155_010: not C² — R155_006 §1]; `3.1·10⁻⁷` on an optimised one) | `DIAGNOSTIC` (verification of a `PROVED` statement) | Paper 47 §7 had no numerical check; it now has one, and `scripts/reverse/t_sanity.py` is a five-second regression test for every future change to the conventions. |
+| **Theorem Z verified numerically** (`2.4·10⁻⁸` on a hand-made C¹ weight [amended per R155_010: not C² — R155_006 §1]; `3.1·10⁻⁷` on an optimised one) | `DIAGNOSTIC` (verification of a `PROVED` statement) | Paper 46 §7 had no numerical check; it now has one, and `scripts/reverse/t_sanity.py` is a five-second regression test for every future change to the conventions. |
 | **The edge must be smooth for the criterion to be usable with a finite zero table**: `ŵ = O(t⁻¹)` (jump), `O(t⁻²)` (kink), `O(t⁻⁴)` (C²); far-zero residual `≍ Γ⁻¹logΓ`, `Γ⁻²logΓ`, `Γ⁻³logΓ` | `DIAGNOSTIC` bound, elementary to make `PROVED` | a refinement of Cor. 7.4: the `w_T` whose existence is RH may be sought in `W_T ∩ C^2`, and the search *must* be, if the zeros are to be consulted at all. |
-| **Problem B's weight has no arithmetic structure at bounded mass** — a monotone shoulder `≈ e^{−1.2v}`, no `log p` spacing | `DIAGNOSTIC` | Paper 47 Rem. 7.6 guesses "the canonical scale `s = ½`" or "weights adapted to the primes outside the window"; at `L ≤ 20` the optimiser picks `ψ_{2.5}`, i.e. a scale `2.5`, not `½`, and ignores the primes. Neither guess is supported. |
+| **Problem B's weight has no arithmetic structure at bounded mass** — a monotone shoulder `≈ e^{−1.2v}`, no `log p` spacing | `DIAGNOSTIC` | Paper 46 Rem. 7.6 guesses "the canonical scale `s = ½`" or "weights adapted to the primes outside the window"; at `L ≤ 20` the optimiser picks `ψ_{2.5}`, i.e. a scale `2.5`, not `½`, and ignores the primes. Neither guess is supported. |
 | **The shape degenerates as the value approaches the class optimum** (`‖w‖_∞: 1 → 262` while `c` moves by `1.7·10⁻⁴`) | `DIAGNOSTIC` | Theorem O (non-attainment) now has a visible form in the *weight*, not only in the measure. Any ansatz for `w_T` with `‖w‖_∞` bounded is therefore bounded away from `λ^W`, which is a testable prediction for Problem A. |
-| **`c(T)` is a step function of `N_T`** (four orders across the entry of `3`; factor `1.3` inside `N_T = {2,3}`); the **profile** (not the value) obeys an affine-in-`T` law inside one regime [amended per R155_010: added per R155_006 §6 — in-regime fits do work] | `DIAGNOSTIC` | confirms Paper 47 §8.3(4) ("not an induction upward in `T`") from the dual side: the value cannot be extrapolated across a prime entry, and even in-regime the value's conditioning defeats extrapolation despite the profile law holding. |
+| **`c(T)` is a step function of `N_T`** (four orders across the entry of `3`; factor `1.3` inside `N_T = {2,3}`); the **profile** (not the value) obeys an affine-in-`T` law inside one regime [amended per R155_010: added per R155_006 §6 — in-regime fits do work] | `DIAGNOSTIC` | confirms Paper 46 §8.3(4) ("not an induction upward in `T`") from the dual side: the value cannot be extrapolated across a prime entry, and even in-regime the value's conditioning defeats extrapolation despite the profile law holding. |
 | **`τ_env/2πe^{2T}` is the difficulty index**: `0.89` at `½log3`, `2.4–4.2` afterwards [amended per R155_010: the quasi-positive reading "(the only window that works)" is DELETED — R155_006 §9] | `DIAGNOSTIC` | sharpens §8.2: the window is easy exactly while the whole verification interval lies below the resolution scale, i.e. while the certificate is a statement about finitely many *individual* zeros. `½log3` is the last such window; `0.58` is the first that is not. This is a cleaner statement of the wall than "two primes in the window". |
-| **The contacts are at `2π/U`, the class's Nyquist comb**, not at zero gaps or prime alignments | `DIAGNOSTIC` | tempers Paper 47 §8.2's alignment reading: at the values of `c` we can reach, complementary slackness is dominated by the class's resolution, and the arithmetic structure the paper predicts would only become visible much closer to `λ^W`. |
-| **`∫_{2T}^∞ w_T` locks at `+5.0…+5.2` for every `T ≥ 0.58`** | `DIAGNOSTIC`, unexplained | a candidate invariant; worth one pure-math look (it is `ν̂_w(0)`-adjacent, and Paper 47 §5 records `ν̂(0) = 1.7337` for the certified certificate). |
+| **The contacts are at `2π/U`, the class's Nyquist comb**, not at zero gaps or prime alignments | `DIAGNOSTIC` | tempers Paper 46 §8.2's alignment reading: at the values of `c` we can reach, complementary slackness is dominated by the class's resolution, and the arithmetic structure the paper predicts would only become visible much closer to `λ^W`. |
+| **`∫_{2T}^∞ w_T` locks at `+5.0…+5.2` for every `T ≥ 0.58`** | `DIAGNOSTIC`, unexplained | a candidate invariant; worth one pure-math look (it is `ν̂_w(0)`-adjacent, and Paper 46 §5 records `ν̂(0) = 1.7337` for the certified certificate). |
 | exponential columns (Thm. E's exhausting class) fail at every `L` and every window | `DIAGNOSTIC`, class statement | exhaustion is not constructive: the class that exhausts in the limit is the worst class to search in. Practical guidance for any future `w`-side computation. |
 
 ### 6.3 What should be done next with this, if anything

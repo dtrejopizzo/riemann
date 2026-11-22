@@ -43,7 +43,7 @@ of a_T is ⟨F, ΠF⟩ with
 
   Π = Σ_{n∈N_T} v_n · ½(S_{u_n} + S_{u_n}^*),                                                         (1.1)
 
-since ⟨F, S_uF⟩ = ∫_{−T}^{T−u} F(x)F(x+u)dx = c_F(u) for real F (lem:combsine, CITED Paper 47).
+since ⟨F, S_uF⟩ = ∫_{−T}^{T−u} F(x)F(x+u)dx = c_F(u) for real F (lem:combsine, CITED Paper 46).
 
 Proposition 1.1 (degree-2 entries; PROVED). For e, e′ ∈ L²(I_T),
 
@@ -73,7 +73,7 @@ In the sine basis each term of (1.2) is elementary: for an interval [α, β] and
 lem:combsine; no new constants enter.
 
 Proposition 1.2 (polynomial structure of K_j; PROVED). Let (P Arch P)|_{P_T} have negative spectral subspace Neg_T, of
-finite dimension d_T (compact resolvent of Arch on the window: CITED Paper 47 prop:nodes; Neg_T does not depend on v).
+finite dimension d_T (compact resolvent of Arch on the window: CITED Paper 46 prop:nodes; Neg_T does not depend on v).
 Then K_j is spanned by the d_T·j vectors (PΠP)^i e_r (e_r a basis of Neg_T, i < j), and the coefficient
 ⟨e_k, (PΠP)^i e_r⟩ is a homogeneous polynomial of degree i in (v_n)_{n∈N_T}:
 
@@ -95,7 +95,7 @@ numerical question of §2–4.
 
 ## 2. The negative cone and the Krylov spaces (NUMERICAL)
 
-Table 2.1. d_T = dim Neg_T on P_T (N = 80) against lem:archcount (CITED Paper 47: n_−(Arch) ≥ ⌈2Tt_0/π⌉ − 1 on the full
+Table 2.1. d_T = dim Neg_T on P_T (N = 80) against lem:archcount (CITED Paper 46: n_−(Arch) ≥ ⌈2Tt_0/π⌉ − 1 on the full
 window; imposing the two Tate conditions can remove at most 2).
 
 | T | lem:archcount (full) | its P_T consequence (≥) | d_T observed | negative Arch eigenvalues on P_T |

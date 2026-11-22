@@ -1,7 +1,7 @@
 # L2_BUILD_015 — Prime interactions in the cube: no structural sign; (Q) is ill-posed; reconciliation with Φ
 
 ## Corpus check
-Paper 47 prop:wit-sens (Rayleigh sensitivity, κ_T), finmod(ii); N_BUILD_005 §2 (partial Euler products a_S fail for large
+Paper 46 prop:wit-sens (Rayleigh sensitivity, κ_T), finmod(ii); N_BUILD_005 §2 (partial Euler products a_S fail for large
 T), N_BUILD_007/008 (cone order NO-GOs), N_BUILD_009 (Poisson–Euler map Φ, unique nonnegative fixed point Λ);
 L2_BUILD_014 (cube). grep "interaction / cross term p^a q^b / Hessian in the weights / second-order perturbation /
 mixed difference": R186_008 Thm C ("Λ by logarithmic derivative; additive in S") states additivity of the phase in S;

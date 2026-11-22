@@ -32,7 +32,7 @@ Abbreviations: "killer" is the file that kills the route and the wall or falsifi
 
 | cell | before | proposal | OPEN/PARTIAL routes from the JSON and who kills them | surviving residual or route |
 |---|---|---|---|---|
-| 1A | ◩ | ◩ | B3-KREIN, 34/91 (E1); P47 thm:parityschur (M, W2); 120 C.1 global square (E1) | λ_W>0 beyond ½log5 (certificate, clashes with M); C_B → O2601.1 |
+| 1A | ◩ | ◩ | B3-KREIN, 34/91 (E1); P46 thm:parityschur (M, W2); 120 C.1 global square (E1) | λ_W>0 beyond ½log5 (certificate, clashes with M); C_B → O2601.1 |
 | 1B | ◩ | ◩ | R161_011–019 (E1), R161_018 (F4) | (4.2) global Sonin range, E1. R183_018/019 reinforce: entire Sonin NO-GO for T>½log2 |
 | 1C | ◩ | ◩ | R161_020–021 PARTIAL | scalar X_T not realized (not formulated) |
 | 1D | ◩ | ◩ | — | boundary triple (4,4), O2702.1 Burnol (RH-neutral; R184_009 confirms it: tool, not input) |
@@ -41,11 +41,11 @@ Abbreviations: "killer" is the file that kills the route and the wall or falsifi
 | 1H | ◧ | ◧ | P122_D_SPECIFICATION / Q27 E_(∞,T) **dead**: R168_202 Thm 2.2–2.3 (with (E1)+(E3) the class is {ζ}, W-identification; its comparison positivity is q_T, a restatement); 115_16 semilocal Sonin trace identity **done and NO-GO**: R183_018 §3 (exact identity) + Thm 5.1, R183_019 Thm 4.1 (n₋=∞); R135_007, D.13, phase-64 (E1) | **alive:** P152.1 Dolgopyat–Mayer via Lewis–Zagier; P25 V.2 Pontryagin completion (bridge κ(Q)=ind₋H_C) |
 | 2A | ◩ | **■** | phase-5/B2 semilocal CC and 115_13–16 (semilocal Sonin trace-phase derivative): **dead** by R183_018 Thm 5.1 + R183_019 Thm 4.1 (entire Sonin n₋=∞ for T>½log2), R183_027 ((L-Son) with uniform η is false: refuted unconditionally, because (L-Son)⟹RH and RH⟹¬(L-Son)), R183_033 §4 ("zero directions ∀T" ⟺ D, E1; one direction aligned ∀T does not exist, R183_030 §7) and R184_015 Cor 3 (W11′: every decomposition Pos_S+Δ with ‖Δ‖≤e^{o(T)} is either blind to M_m or E1). P35 L1 (E1). The missing exact identity already exists (R183_018 §3, R183_029) and has no sign (W12) | none with a sign. (M)/(M_w) (R184_003 Lemma B.1) gives only a compact remainder, no sign: it passes to §5 as a tool. λ₁(ker ℓ)=λ₂(prim): explained by parity (R184_003 Thm A.1) |
 | 2C | ◩ | ◩ | thm:doob (E1); R161_026–028 (F3) | sharp Poincaré (E1) |
-| 2E | ◧ | ◧ | prop:polarcap OPEN and R160_M4_R1 **dead**: R184_012 (Lemmas 1–2; E1 ∀T); Pick/Schur (E1) | **alive (weak):** P47 effective window shift RD_{T′} ⟹ λ^W_T≥0 (no killer; at comb level requires T′≥T*; suspected W7). *Candidate for ◩.* |
+| 2E | ◧ | ◧ | prop:polarcap OPEN and R160_M4_R1 **dead**: R184_012 (Lemmas 1–2; E1 ∀T); Pick/Schur (E1) | **alive (weak):** P46 effective window shift RD_{T′} ⟹ λ^W_T≥0 (no killer; at comb level requires T′≥T*; suspected W7). *Candidate for ◩.* |
 | 2F | ◩ | ◩ | — | Bernstein monotonicity of λ_A(T) (not formulated) |
-| 2G | ◧ | **◩** | T3 Beurling (PARTIAL, F3:Beurling, conditional on H-DMV, CITED in 157); P46 §28.4: every candidate built is **NO-GO** against the six clauses (R174_FINAL l.80; R175_FINAL §4: "the six clauses stay NO-GO for the triple"; R173_FINAL NO-GO) | six-clause object with no live candidate (W10) |
+| 2G | ◧ | **◩** | T3 Beurling (PARTIAL, F3:Beurling, conditional on H-DMV, CITED in 157); P47 §28.4: every candidate built is **NO-GO** against the six clauses (R174_FINAL l.80; R175_FINAL §4: "the six clauses stay NO-GO for the triple"; R173_FINAL NO-GO) | six-clause object with no live candidate (W10) |
 | 2H | ◧ | ◧ | Berkovich P152.2 (E1) | **alive:** Arakelov 𝒳 (15/M10), Cartwright's tropical Hodge index (136 S5), interlaced OS model (S1 I1), Chinburg–Rumely energies outside 𝔄⁺. All of them are objects under W10 |
-| 3A | ◧ | ◧ | 114/D.172 and D.198–227 (M); R154_030 (numerical: not a route); F48 (hyp:pw false); unread web hit (not verifiable without web; R184_009 finds no input in the local literature); (WS*): sieves dead (R167_102 Thm B′, W-sieve), uniform form ⟺ zero-free (R167_101 Thm C), one scale = explicit formula (Thm E) | **alive:** exact stopping point of R167_102: large-values bound for Type II products of length X at a single height (R168_001 row 10: "the only sub-RH form of (WS*)"); P47 Problem A; I6 (36/108); O166.802.1 (meta) |
+| 3A | ◧ | ◧ | 114/D.172 and D.198–227 (M); R154_030 (numerical: not a route); F48 (hyp:pw false); unread web hit (not verifiable without web; R184_009 finds no input in the local literature); (WS*): sieves dead (R167_102 Thm B′, W-sieve), uniform form ⟺ zero-free (R167_101 Thm C), one scale = explicit formula (Thm E) | **alive:** exact stopping point of R167_102: large-values bound for Type II products of length X at a single height (R168_001 row 10: "the only sub-RH form of (WS*)"); P46 Problem A; I6 (36/108); O166.802.1 (meta) |
 | 3C | ◩ | ◩ | 34/93 (ND3), M7 (E1), 502 B | Option 3 of R160_020 (E1 by M7) |
 | 3D | ◧ | ◧ | R161_073–074 **dead**: R184_012 (numerical certificate, E1; not a mechanism); LP-134 (F3 Hadamard); Tower 2 (E1) | **alive:** GAP-196.A (DH near-doubles under mean spacing); 22/03 GMC rigidity (conditional) |
 | 3E | ◧ | ◧ | G2_B9/B2_R5 (needs BD) | **alive:** GAP-157.A, Kronecker flow discrepancy in non-local form (R168_001 row 2: "the non-local form remains OPEN"); Tower 1 (A ⟹ Lindelöf) |
@@ -57,7 +57,7 @@ Abbreviations: "killer" is the file that kills the route and the wall or falsifi
 | 4E | ◧ | ◧ | P30 L8 (C_B → R184_004); 37/110 and 80–90 (E1); O8 Tate 2×2 closed | **alive:** R153_005 Thm A, cross-term as a uniform-in-T sign mechanism (P153.2, never attacked; R184_006 and R184_007 close P153.5 and P153.4, not P153.2); LP-112 sequential rigidity; phase-90 PROJECTIVE-KATO-EULER |
 | 4F | ◧ | ◧ | everything from parts 10–18 (KZ E1, positive tail Thm A, Thm R, rough zeta E1) | **alive:** GAP-157.A condition C1 of Doc 159. Global generating object and O2802.1 not formulated / E1 expected |
 | 4H | ◧ | ◧ | I11 **no statement** (R184_012); motivic Rosati (infinite genus); finite colligation (passivity) | **alive:** walls A/B of phase-27-adelic-rigidity; amplifying functor ⊠ (36/106+38/117); colimit L1 of P44 Thm 8bis.4a |
-| 5A | ◩ | ◩ | P47 thm:N… (class M≤2) | Problem A |
+| 5A | ◩ | ◩ | P46 thm:N… (class M≤2) | Problem A |
 | 5C | ◩ | ◩ | R162_903 | O2201.1 (zero side) |
 | 5D | ◩ | ◩ | — | Smith form of the contact Gram (not formulated) |
 | 5E | ◧ | ◧ | R162_1902 (linear only; F2, E1) | **alive:** O1802.3, width ≥0 from **non-linear** integrality in c, tracked in T. O2802.1 (E1 expected) |
@@ -68,14 +68,14 @@ Abbreviations: "killer" is the file that kills the route and the wall or falsifi
 | 6B | ◧ | ◧ | prob:annihilate = Gate 1 (registered E1 killer); self-similarity (2202b) | **alive (weak):** identity level Λ=μ*log with entropic ×p (R157_002); the threat is W-sieve Thm D (R167_102), ARGUED only. O2202.1 is a tool with no sign. *Candidate for ◩ if Thm D is proved.* |
 | 6C | ◩ | **■** | R162_901 (F2, E1, F3, M); bilinear FI/HB (superseded by R162_502 B); lem:degen / variational characterization (done by R162_2902b except at log 2, which lives in 6A); OS-2 closed (R166_202); R166_502 repeated | none. **O202.1** (T_e=T_o with no sign) closes as a statement with no route (R166_202 Thm 3, parity identity; R168_001 row 13) |
 | 6E | ◧ | ◧ | P153.14 (E1) | **alive:** G2_B6_R5 Prop C, RH-free pointed cone under rigid perturbations (untouched; R184_011 treats G2_B7, not B6) |
-| 6F | ◧ | ◧ | LP-152 **dead** (R160_M5_R1 Cor 2.4, F3: DH, Epstein, Ξ_a; R184_011); G2_B7_R5 multigenerator **NO-GO as a route** (R184_011 Prop 3.1/Thm 3.2/3.3: → (Q*) under RH, false in the Type I curve); 104 and D.260–262 (E1); P47 Problem B: 6A's twin entry already carries E1 | **alive (weak):** P47 prop:M, weight family of the canonical column s=½ outside the window. (Q*) is noted as a rigidity residual, with no effect on D |
+| 6F | ◧ | ◧ | LP-152 **dead** (R160_M5_R1 Cor 2.4, F3: DH, Epstein, Ξ_a; R184_011); G2_B7_R5 multigenerator **NO-GO as a route** (R184_011 Prop 3.1/Thm 3.2/3.3: → (Q*) under RH, false in the Type I curve); 104 and D.260–262 (E1); P46 Problem B: 6A's twin entry already carries E1 | **alive (weak):** P46 prop:M, weight family of the canonical column s=½ outside the window. (Q*) is noted as a rigidity residual, with no effect on D |
 | 6G | ◧ | ◧ | separator 119 (F3: DH) | **alive (weak):** O-D4.3, transposition of (C′) to ζ_K (routine; likely W7+T1, no proof) |
 | 6H | ◧ | ◧ | P40 (E1); Borger/Witt Λ-Rosati ("wrong space"; R175 NO-GO for Witt carriers) | **alive:** hyperbolic ruled pairing of Mertens (P43 Thm 10.8b); loaded Tate boundary 106.203–205 |
 | 7A | ◧ | **◩** | D.16-γ done (R165_201/202); Hyp (H) "uniform local scarcity of deep zeros off the line" and Doc 153 (quartet tests): both feed the ¬RH ⟹ detection direction, which is E1 and already quantified (R184_006 Thm 1/1′; R184_092: Max–Iso is coherent only under ¬RH); 0A2, 143, 120 C.1, P124_013 (E1); P122_020 (F3: Ξ_a); R163_701 (W2/M) | ω(E) at contact = Rem 4.8a = (★_cell) at the witness (forces RH; jet k=−1, W-jet) |
 | 7B | ◧ | **◩** | R163_401 PARTIAL: its gap is (★_cell) ⟺ RH at the witness, i.e. E1 by definition (R168_001 row 19: (★_cell)/(TC)/(WS*), with the routes of 163–167 all DEAD); CCM CAND-1 (E1); P121 F2 (E1, F2); G2_B6_R4 BRS is a tool audit | (★_cell)/(TC) at the witness; O166.501.1 (meta, R168_001 row 8). R184_015 Thm 2: the only source↔form bridge is the explicit formula (W11′) |
 | 7D | ◧ | ◧ | Diana C_B → R184_004; Cayley from 69 **no statement** (R184_012); Carleman (E1); P23 (only one inclusion); R162_2190 (numerical) | **alive:** O167.101.2, small-y regime: a finer on-line count than S(t)=O(log t) (class c, sub-RH; R168_103 sharpens it, OPEN); O167.101.1/O701.1 (Dom_θ); O701.2–3; O102.1–2; O2401.1 |
 | 7E | ◧ | ◧ | P19 Hyp D (C_B → R184_004); R165_202 (E1) | **alive:** 77–80 (pencil compatibility, class ℓ², simplicity, assembly); R157_004 O4 Kreĭn data at the first crossing; O2501.2 (e<1 ⟹ Θ<1 without finiteness) |
-| 7F | ◧ | **◩** | KEP: the twin entry P47 KEP carries E1 (parametrizing 𝔖(T) ∀T = Thm Z, certificate = explicit formula); P33 (E1 at the value −π/8; the A finiteness belongs to the C_B → R184_004/R162_2501 cluster); 38/118 (Carleman, E1); Li Ω₇ (E1) | O164.601.1 = (★_cell) weighted by K (R168_001 row 18: forces RH at the witness); O2601.1 via the C_B cluster |
+| 7F | ◧ | **◩** | KEP: the twin entry P46 KEP carries E1 (parametrizing 𝔖(T) ∀T = Thm Z, certificate = explicit formula); P33 (E1 at the value −π/8; the A finiteness belongs to the C_B → R184_004/R162_2501 cluster); 38/118 (Carleman, E1); Li Ω₇ (E1) | O164.601.1 = (★_cell) weighted by K (R168_001 row 18: forces RH at the witness); O2601.1 via the C_B cluster |
 | 7H | ◧ | **◩** | Ansatz A χ(D)=D²/2 (E1 killer in the JSON); density of H¹_alg in Meyer H¹ **done** (R160_C3 Thm B; R168_001 row 5: "nothing open with content"); R158_006 and C3/D2 (E1) | Ansatz A (carrier implying RH; W10) |
 | 8A | ◧ | ◧ | unaudited Thms of 159 (audits, not routes) | **alive:** GAP-198.1, non-factorizable inter-currency combinations outside 𝔄; 0A2 Part II, uncontaminated Galerkin |
 | 8B | ◩ | ◩ | M11/M12, P121 (F3) | O2201.1; M11 slot unwritten |
@@ -107,7 +107,7 @@ All of them have a statement and none is marked E1 or is blind to the class acco
 15. **6A** lem:degen at log 2; O-D4.2.
 16. **6B** identity level Λ=μ*log (entropic ×p) †W-sieve Thm D (ARGUED).
 17. **6E** G2_B6_R5 Prop C.
-18. **6F** P47 prop:M (column s=½) †.
+18. **6F** P46 prop:M (column s=½) †.
 19. **6G** O-D4.3 ((C′) at ζ_K) †W7/T1.
 20. **6H** Mertens 10.8b; loaded Tate 106.203–205.
 21. **7D** O167.101.2 (small-y regime, sub-RH); Dom_θ/O701.x; O102.x; O2401.1.

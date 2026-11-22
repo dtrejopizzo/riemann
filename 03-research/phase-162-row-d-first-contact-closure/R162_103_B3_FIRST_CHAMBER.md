@@ -7,7 +7,7 @@ proved dichotomy theorem. No chamber exclusion is proved. Row D: OPEN.**
 
 The question was whether (a) the Sonin range-intersection lemma, (b) the finite 2,3,4 collar
 equations with the Gamma/Tate matrix, and (c) the proved index information of the archimedean form
-(Paper 47 thm:index, cor:Tarch, cor:H1) together force R_L F = 0 for a first-contact vector in the
+(Paper 46 thm:index, cor:Tarch, cor:H1) together force R_L F = 0 for a first-contact vector in the
 chamber, i.e. exclude first contact in (0.8, ½log5). Answer: (b) and (c), and the proved part of
 (a) (Sonin–Gamma coercivity, R161_014 Thm 2.1), are satisfied verbatim by a one-parameter family of
 finite-modification models that do have first-contact vectors in the chamber (or a plateau of
@@ -15,7 +15,7 @@ kernel vectors across it). The index information (c) is exactly what makes these
 only ingredient that separates ζ from the models is the typed Sonin identity (a) itself. That
 identity is global (open boundary passage, R161_011 §6), and the chamber does not localize it.
 
-Notation is that of Paper 47 §1 and §sec:firstcontact: Γ_T = archimedean form (A_∞ on P_T),
+Notation is that of Paper 46 §1 and §sec:firstcontact: Γ_T = archimedean form (A_∞ on P_T),
 Π_T(F) = Σ_{n∈N_T} w_n · 2Re⟨V_{log n}F, F⟩ (the compressed prime comb, w_n = Λ(n)/√n), so
 a_T = Γ_T − Π_T on P_T. P_T^par is the parity-par part of P_T. ½log5 = 0.80472, so the chamber
 C := (0.8, ½log5) has length < 0.0048.
@@ -60,7 +60,7 @@ For κ ≥ 0 and a parity par ∈ {ev, odd} put
   a_T^κ := Γ_T − κ Π_T  on P_T^par,   g_par(κ, T) := inf{a_T^κ(F) : F ∈ P_T^par ∩ D_T, ‖F‖ = 1}.
 
 κ = 1 is ζ. For κ ≠ 1 the weights are a_κ = κΛ on {2,3,4}, and they are the Λ-weights for n ≥ 5
-(inactive at T < ½log5). This is a finite modification in the sense of Paper 47 thm:finmod, and by
+(inactive at T < ½log5). This is a finite modification in the sense of Paper 46 thm:finmod, and by
 Lemma 1.1(iii) it violates Λ∗1 = log at k = 2,3,4. The associated
 ζ_κ = ζ · exp((κ−1)(2^{−s} + 3^{−s} + ½·4^{−s})) has exactly the zeros and the pole of ζ
 (thm:finmod(iii)). So the critical-jet detector G_+(iγ) = −ζ′(ρ)K_F(iγ) of R161_007 sees the same
@@ -94,7 +94,7 @@ and 1.486, which are ≥ 4ε away from log2, log3 and log4 for small ε. Within 
 difference is exactly log2. Hence Π_T(F_0) = 2·2w_2‖φ‖² > 0. The Tate moments of F_0 are
 O(ε²‖φ‖_{L¹}) = O(ε^{5/2}‖φ‖) because the first two moments of φ vanish. The parity-preserving
 correction of R162_001 Step 3 changes Π_T by O(ε^{5/2})‖φ‖², which leaves Π_T > 0 for small ε. The
-second claim follows from a^κ(F) = Γ_T(F) − κΠ_T(F). (For the even sector this is also Paper 47
+second claim follows from a^κ(F) = Γ_T(F) − κΠ_T(F). (For the even sector this is also Paper 46
 Lemma cpos / thm:finmod(ii).) ∎
 
 **Lemma 2.3 (the index anchors κ = 0).** For T ∈ C: g_ev(0, T) = λ_ev(T) < 0 (thm:index(ii),
@@ -149,7 +149,7 @@ concavity put g(κ_+, s) = 0, and Lemma 2.2 guarantees κ_+ < ∞. If T*_odd < �
 
 1. minimality from above and below and λ = 0 (Theorem 3.1(A)), so it passes the falsifier F1 test;
 2. the index facts (c) (Lemma 2.3), which do not involve w;
-3. the collar identity RB_N = D_N R − E_N (Paper 47 eq:collar, with d_m → κ_0 d_m on n ≤ 4), the
+3. the collar identity RB_N = D_N R − E_N (Paper 46 eq:collar, with d_m → κ_0 d_m on n ≤ 4), the
    balance eq:Qbalance, eq:Qspectral and the equivalences eq:equivgate. Each proof uses only
    local finiteness, parity and the weak equation, never the values of the weights;
 4. the finite germ (R161_012 (3.2)) and the inner/outer transmission (R161_013 (2.2)–(2.4), (4.2)),
@@ -158,7 +158,7 @@ concavity put g(κ_+, s) = 0, and Lemma 2.2 guarantees κ_+ < ∞. If T*_odd < �
 5. Sonin–Gamma coercivity (R161_014 Thm 2.1), a statement about every g ∈ Dom(Q) ∩ Son_T^σ;
 6. the invertible Gamma/Tate crossed matrix of the primitive condition, which is arithmetic-free.
 
-Yet F_0 ≠ 0. The map R is faithful (Paper 47, after eq:Gammaenergy, weight-free), so R_L F_0 ≠ 0 for
+Yet F_0 ≠ 0. The map R is faithful (Paper 46, after eq:Gammaenergy, weight-free), so R_L F_0 ≠ 0 for
 every L that is injective on the model radical. Therefore no argument that uses only items 1–6,
 plus positivity and minimality, proves R_L F = 0 in the chamber. In case (B) the same holds with
 item 1 weakened to "H ≥ 0 below and at the window", which is all that R162_001 supplies for ζ.
@@ -190,7 +190,7 @@ at any T_* ∈ C", with T_* = sup{T : λ_A(T) ≥ 0} as in R162_001, is equivale
 (0, ½log5). This is the primitive-form positivity on windows up to ½log5 = 0.8047, only 0.0047
 beyond Zhu's range. It is a consequence of RH, not equivalent to it.
 
-*Proof.* Paper 47 gives λ_A ≥ λ_W ≥ 0 for T ≤ 0.8 (Zhu), monotonicity (lem:monoT) and continuity
+*Proof.* Paper 46 gives λ_A ≥ λ_W ≥ 0 for T ≤ 0.8 (Zhu), monotonicity (lem:monoT) and continuity
 (R162_001). ∎
 
 By Theorem 3.1 and Lemma 1.1, any proof of Proposition 5.1's right side must separate κ = 1 from

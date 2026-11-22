@@ -23,7 +23,7 @@ OpenAI Prop3.1 controls a second moment of twisted Möbius sums.
 Prop5.2 and Lem5.3 complete cubic indices, apply a quadratic sieve and
 transfer estimates by Möbius inversion and iteration. The bounds
 are upper bounds, averaged over families, with dependence on derivatives
-of the tests. They are not a lower bound for the form of paper47.
+of the tests. They are not a lower bound for the form of paper46.
 
 Kintali Lem3–4 and §3.3 control a probe via theta reflection and balanced
 energy. Lem7 compares probe and signal with saving 1/4800 in the regime
@@ -61,7 +61,7 @@ It is an insufficiency of this direct application, NOT a NO-GO for other links.
 
 A potentially reusable toolbox for transfer of cancellation;
 no control of the counterterm 017 was identified. These external
-results are not integrated as proved theorems in paper47. D is not closed,
+results are not integrated as proved theorems in paper46. D is not closed,
 no construction 018 is created and no general impossibility is claimed.
 
 

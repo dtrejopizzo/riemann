@@ -74,7 +74,7 @@ Answers to the questions of the task.
 
 ## §0 Setting
 
-Notation of R163_401 §1. For $F\in L^2(I_T)$ (complex), $\widehat F(z)=\int Fe^{izt}dt$, and by (1.1) (PROVED-CITED, Paper 47
+Notation of R163_401 §1. For $F\in L^2(I_T)$ (complex), $\widehat F(z)=\int Fe^{izt}dt$, and by (1.1) (PROVED-CITED, Paper 46
 `lem:roughEF` + R163_401 Lemma 3.0, complex case by polarisation)
 $$
 W_T(F)=\sum_\rho\widehat F(t_\rho)\,\overline{\widehat F(\bar t_\rho)},\qquad t_\rho=\gamma_\rho-i\delta_\rho . \tag{0.1}
@@ -302,7 +302,7 @@ grows like $\log\gamma$ with height, which is why the positive direction must go
 
 | step | label |
 |---|---|
-| (0.1) complete-form zero identity, complex tests | PROVED-CITED (Paper 47 `lem:roughEF`, R163_401 Lemma 3.0; record) |
+| (0.1) complete-form zero identity, complex tests | PROVED-CITED (Paper 46 `lem:roughEF`, R163_401 Lemma 3.0; record) |
 | (N) counting; (V) verification | PROVED-CITED, FROM MEMORY (flagged) |
 | (0.2) Gevrey bump | PROVED-CITED (Hörmander Thm 1.3.5; standard) |
 | L1, L3 | PROVED (R163_701) |

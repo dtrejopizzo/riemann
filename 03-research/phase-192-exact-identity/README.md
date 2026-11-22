@@ -5,7 +5,7 @@ A_M-minimizer family s_w = m^{−½}w(m/M)) in which (Λ(n))_{n<e^{2T}} enters n
 mechanism, the margin comes out of the identity, and which is none of the MUST-NOT objects (estimate with remainder, O1–O15-invariant class
 argument, symbol-statistic functional, shift-multiplier calculus, certificate, zero information, σ-transport, perturbative induction, REF-D
 restatement). Pen and paper only; no numerics.
-Mandatory reading done: P47 §20 (thm:shape, cor:shape, prob:region), routes index (now ROUTES-MASTER-INDEX.md; phases 190/191), 06_, SPEC_A, SPEC_B, EXP_005,
+Mandatory reading done: P46 §20 (thm:shape, cor:shape, prob:region), routes index (now ROUTES-MASTER-INDEX.md; phases 190/191), 06_, SPEC_A, SPEC_B, EXP_005,
 and the phase-188 memos L2_012, L2_014, L2_030, N_009, N_020, N_022, L2_008, R163_1001.
 
 **Headline.** Three exact-identity objects were built, each PROVED as an identity, each with a self-review and a clause table.

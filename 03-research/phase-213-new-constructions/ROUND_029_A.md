@@ -1,12 +1,12 @@
 # The plateau line as a global criterion
 
-**Cross-check.** P45 thm:sufficiency and P47 thm:parityschur distinguish global parity from that of a fixed window. P47 thm:oneprofile fixes a profile and requires all translation matrices. Here the profile varies, but a single plateau is evaluated per pair of data and the signed exponential defect of 027 may be discarded. The additional step relative to 027 is to build a violation of the line from any negative direction using the remote crossing of 028. It is not claimed that the line inequality is proved.
+**Cross-check.** P45 thm:sufficiency and P46 thm:parityschur distinguish global parity from that of a fixed window. P46 thm:oneprofile fixes a profile and requires all translation matrices. Here the profile varies, but a single plateau is evaluated per pair of data and the signed exponential defect of 027 may be discarded. The additional step relative to 027 is to build a violation of the line from any negative direction using the remote crossing of 028. It is not claimed that the line inequality is proved.
 
-Fix any width threshold R≥0 and any ratio L≥1, finite. Take all real even smooth compactly supported primitive profiles F of mass M=∫F≠0 and all D>max(R,L·diam supp F). Write H_D=1_[−D/2,D/2]*F, b=m^sharp(0), C_F as in 027 and Φ(H_D) for the arithmetic fluctuation of P47 prop:sharp. The global sign is equivalent to
+Fix any width threshold R≥0 and any ratio L≥1, finite. Take all real even smooth compactly supported primitive profiles F of mass M=∫F≠0 and all D>max(R,L·diam supp F). Write H_D=1_[−D/2,D/2]*F, b=m^sharp(0), C_F as in 027 and Φ(H_D) for the arithmetic fluctuation of P46 prop:sharp. The global sign is equivalent to
 
     Φ(H_D) ≤ b M² D + C_F     for all such pairs (F,D).
 
-By homogeneity one can fix M=1. F is not prescribed to be positive. Each H_D is even and primitive, with a central plateau of height M. On a common window P47 gives a(H_D)=a^sharp(H_D)−Φ(H_D). The translation that centres the box does not change these forms. By 027 the difference between the line and a^sharp is
+By homogeneity one can fix M=1. F is not prescribed to be positive. Each H_D is even and primitive, with a central plateau of height M. On a common window P46 gives a(H_D)=a^sharp(H_D)−Φ(H_D). The translation that centres the box does not change these forms. By 027 the difference between the line and a^sharp is
 
     S_D(F)=Σ_{k≥1} exp(−2a_kD) |∫F(t)exp(2a_kt)dt|²/(2a_k²),   a_k=k+1/4.
 

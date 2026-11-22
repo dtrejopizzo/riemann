@@ -5,7 +5,7 @@ OPEN / NO-GO / NUMERICAL. **No sign is proved. L′♯ OPEN. Row D OPEN.**
 
 **Read.** SPEC_SIGN_OBJECT_003 (complete), SPEC_002, AUDIT_200_SPEC_002 (P9′, P10), Q2_LADDER_001 (Lemma R, Theorem Q2.1
 "PROVED, given Guo L4.4"), K3_GAMMA_001; phase 199: AUDIT_CONSTRAINTS_001 (row 11, row 17), PROOF_L_SHARP_H_001 (class 𝒦_H,
-§5–§6), MORI15_EXTREMAL_001; Paper 47: def:ext, lem:ext-mob, rem:ext-killing, prop:ext-gauge, lem:ext-ellbound,
+§5–§6), MORI15_EXTREMAL_001; Paper 46: def:ext, lem:ext-mob, rem:ext-killing, prop:ext-gauge, lem:ext-ellbound,
 prob:ext-L, prop:ext-consol (eq:ext-starstar), lem:monoT, lem:contT, subsec:ext-pos. Index: README (phase 200 /
 SPEC_003 entry), 04_PHASES l.163 (L2_016), l.401 (G8F-157 lem:monoT: REF-D), l.412 (G3E-159 bootstrap in T: DEAD), l.431
 (G8E-159 "flow on orbit is identity"), 06_OPEN_RESIDUES l.37 (W-loc), l.50 (L2_016).
@@ -23,7 +23,7 @@ sums because G has compact support. There is no convergence issue.
 
 **(c) and the label.** (b) is exactly the closing statement of lem:ext-mob ("two admissible representatives of g differ by an
 element of 𝒢_T"), with the hypothesis f|_{[1/λ,λ]} replaced by "Φ_G = 0 on (−T,∞)." (a) is Q2's Lemma R specialized. (c)
-is prop:ext-gauge. **Nothing in A.1 is new relative to Paper 47; it is a correct reorganization.**
+is prop:ext-gauge. **Nothing in A.1 is new relative to Paper 46; it is a correct reorganization.**
 - The part "Φ_φ belongs to the radical of 𝒲" is not proved in A.1: it comes from Guo L4.4 via prop:ext-gauge. The correct
   label is the one Q2 itself uses: **PROVED, given Guo L4.4 (CITED).**
 - (c) only identifies summation images of G with compact, C² support. The closure in r-coordinates is 𝒢̄_T by
@@ -195,7 +195,7 @@ Own ranking: B.1 > C1(ii), only as a control statement > C3′ > C2 = C3.
 **I reject all three candidates as a "sign object."** What needs to change:
 
 1. **Acknowledge the state.** 𝒬_μ with 𝒲 and norm ℓ is prob:ext-L in the form of prop:ext-consol (eq:ext-starstar), letter
-   for letter. P9′ + P10 led the spec to re-derive Paper 47's setup. The "sign object" no longer has room to be a space or
+   for letter. P9′ + P10 led the spec to re-derive Paper 46's setup. The "sign object" no longer has room to be a space or
    a quotient: both are already given.
 2. **What remains for it to be (concretely).** A **factorization operator** A_μ: ℐ_μ → ℋ, with ℋ a Hilbert space, built using
    (ℕ,+,·) at m ≈ kn (the semiring principle), and an exact identity

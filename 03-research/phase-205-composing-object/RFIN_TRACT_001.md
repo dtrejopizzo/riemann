@@ -100,7 +100,7 @@ need not be ker ℓ.
   - As long as that range of T holds, Epstein is a model of the finite statement in which D fails.
 - **(β) Against** (ARGUED).
   - Fix a hyperbolic pair ρ = β + iγ, with β > ½ and γ > t₀. Its contribution to the form in window T, read via
-    lem:roughEF as a P47 tool, is an indefinite rank-2 term. Its negative part has size ≍ e^{(2β−1)T}·|F̂(γ + i(β−½))|².
+    lem:roughEF as a P46 tool, is an indefinite rank-2 term. Its negative part has size ≍ e^{(2β−1)T}·|F̂(γ + i(β−½))|².
   - For F ∈ E_N^ev, the sines s_k are **not band-limited**: |ŝ_k(γ)| ≍ T^{½}·ω_k/(γ² − ω_k²) ≍ T^{½}/γ², with only
     polynomial decay.
   - So, on E_N, the negative part of the pair is ≳ e^{(2β−1)T}·T/γ⁴. That is exponential in T, whereas the
@@ -268,7 +268,7 @@ is not a functional of the compressed target form, does not appear. **It does no
 A proof of "n₋(𝔄_N(T)) = 1 ∀T" would give, for each T, the positivity of Z on the realizing hyperplane of E_N^ev.
 Together with P1.c′ it would give D^ev (Haynsworth, CITED, plus prop:WT).
 Without P1.c′ it remains a low-frequency certificate: "every negative archimedean direction with ω ≤ t₀ is covered
-by the comb in each window." This is the clean statement of what the comb does in the low block. Useful for P47 as
+by the comb in each window." This is the clean statement of what the comb does in the low block. Useful for P46 as
 a remark, not as a proof step.
 
 ### 4.2 First finite lemma (constructible, zero-free)

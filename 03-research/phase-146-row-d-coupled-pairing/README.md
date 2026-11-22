@@ -38,7 +38,7 @@ and change no verdict: **A3 does not enter here either.** The model's tower kern
 where the arithmetic one *decays* (`(log p)p^{−k/2}`), and the missing block is named: the pure Frobenius
 family carries no archimedean part (Cor 8bis.1d), while the model's `κ` is the whole kernel.
 
-**Honest diagonal.** The form built here is Paper 46's `2ab − W` with the **zero sum deleted**; it is
+**Honest diagonal.** The form built here is Paper 47's `2ab − W` with the **zero sum deleted**; it is
 zero-blind by construction, and every statement of §§D.44–D.47 is `Ξ_a`-uniform. Phase 146's deliverable is
 a negative that does **not** separate `ξ` from the falsifier.
 

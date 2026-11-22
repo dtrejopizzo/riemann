@@ -4,7 +4,7 @@ In the normalization of 033, if Γ>0 there exists an extremizer u with I(u)=1, a
 
     liminf_{r↑1} (1−r)⁻¹∫ᵣ¹ x|u′(x)|² dx ≥ 1.
 
-The constant is independent of the size of the defect. It is a conditional result on the optimal profile. Antecedents: variational monotonicity in BUILD083 and boundary arguments of 212-36; P47 mentions virial bounds. Here the exact scaling law in the degenerate norm of 033 is used.
+The constant is independent of the size of the defect. It is a conditional result on the optimal profile. Antecedents: variational monotonicity in BUILD083 and boundary arguments of 212-36; P46 mentions virial bounds. Here the exact scaling law in the degenerate norm of 033 is used.
 
 **Compactness.** Represent B∞ by a self-adjoint operator A on the energy space X₀ of 033. For fixed L the Galerkin proof of 033 bounds uniformly on the ball the quadratic difference between B_L and its finite compression by 6c_L/M. For self-adjoint operators that bound controls the norm of the difference operator. Hence each B_L represents a compact operator. The cut-difference estimate of 032, transferred to X₀ in 033, gives norm convergence to A. If Γ>0, −Γ is a minimal eigenvalue and is attained by a unit vector.
 
@@ -38,7 +38,7 @@ Hence |ℓ_h(u)|²→I(u) for every vector of the eigenspace by homogeneity, wit
 
 The result uses the structure of compression and compactness; by itself it admits a simple negative minimum. PROVED (conditional implication), independent audit.
 
-Scope control: the model form −||u||₂² on X₀ is compact in I by 033, satisfies the same scaling and has strictly positive defect. The slope law and simplicity also hold for it. Hence a sign argument needs an additional property specific to the arithmetic form. The simple archimedean background of P47 corresponds to another operator.
+Scope control: the model form −||u||₂² on X₀ is compact in I by 033, satisfies the same scaling and has strictly positive defect. The slope law and simplicity also hold for it. Hence a sign argument needs an additional property specific to the arithmetic form. The simple archimedean background of P46 corresponds to another operator.
 
 ## What the arithmetic contacts detect in a possible extremizer
 
@@ -52,4 +52,4 @@ Indeed, its logarithmic symbol is q(t)=2Σa_n cos(t log n)/√n. If Cu=0, test t
 
 Indeed the isolated simple minimum admits a twice differentiable branch for bounded perturbations. Differentiating the eigen-equation with the derivative of the vector in u⊥ one obtains u′=−(A−λ)⁻¹Cu on that subspace when λ′=0. Differentiating λ′ gives the formula. The reduced inverse is positive and Cu≠0. Hence in every finite family of weights the Hessian is negative definite on the kernel of the first variation. That kernel need not have codimension exactly one.
 
-P47 rem:resweights and lem:degen already study sensitivity to weights; here flat directions up to second order are excluded on the carrier of 033. Only injectivity is unconditional. The curvature computation already presupposes a negative minimum and does not decide the sign for the fixed von Mangoldt weights. PROVED after independent audit.
+P46 rem:resweights and lem:degen already study sensitivity to weights; here flat directions up to second order are excluded on the carrier of 033. Only injectivity is unconditional. The curvature computation already presupposes a negative minimum and does not decide the sign for the fixed von Mangoldt weights. PROVED after independent audit.

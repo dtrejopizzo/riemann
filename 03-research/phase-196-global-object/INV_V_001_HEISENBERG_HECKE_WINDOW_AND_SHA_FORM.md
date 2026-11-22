@@ -1,7 +1,7 @@
 # INV_V_001 — The Heisenberg–Hecke window algebra and the Ш-form (phase 196)
 
 Memo (invent first, audit later).
-CONDITIONAL / ARGUED / OPEN / NO-GO / NUMÉRICO. Notation of Paper 47 (§1): `F ∈ L²(I_T)`, `F̂(τ)=∫F e^{iτt}`,
+CONDITIONAL / ARGUED / OPEN / NO-GO / NUMÉRICO. Notation of Paper 46 (§1): `F ∈ L²(I_T)`, `F̂(τ)=∫F e^{iτt}`,
 `𝒞F` autocorrelation, `v_n = 2Λ(n)/√n`, `N = e^{2T}`, `A(F)=∫F e^{t/2}`, `B(F)=∫F e^{−t/2}`, `𝒫_T = {A=B=0}`,
 `𝔞_T(F) = (1/2π)∫ s_T |F̂|²`, `s_T = m − Σ_{n∈𝒩_T} v_n cos(τ log n)`.
 
@@ -35,7 +35,7 @@ Then `‖f‖²_{L²(ℝ)} = 2‖F‖²`.
 
 **FE-dual of F.** `G` defined by `f̂(ξ) = |ξ|^{−1/2} G(−log|ξ|)`; equivalently `Ĝ(t) = γ(½+it) F̂(t)` with Tate's archimedean
 ratio `γ(s) = π^{1/2−s} Γ(s/2)/Γ((1−s)/2)`, `|γ(½+it)| = 1` (CITED: Tate's local functional equation; sign convention of
-`t` as in P47 §1, up to `t ↦ −t`). `G` is not window-supported.
+`t` as in P46 §1, up to `t ↦ −t`). `G` is not window-supported.
 
 ## 2. Results
 

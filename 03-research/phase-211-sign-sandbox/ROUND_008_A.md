@@ -8,7 +8,7 @@ OPEN / NO-GO / NUMERICAL. No equivalence of (★) with any other statement is us
 ## 0. Notation
 
 H = P_T (or one parity sector of it; both forms preserve parity). Arch = the archimedean form on H, realised as a
-self-adjoint operator bounded below with compact resolvent (CITED, Paper 47 prop:nodes), eigenpairs (α_l, u_l),
+self-adjoint operator bounded below with compact resolvent (CITED, Paper 46 prop:nodes), eigenpairs (α_l, u_l),
 α_1 ≤ α_2 ≤ …. Π = Π_T = Σ_{n∈N_T} v_n S_{x_n} compressed to H, bounded self-adjoint, π_+ = λ_max(Π), π_− =
 −λ_min(Π), both ≤ A_T (ROUND_005_E Lemma 3.0) and ≤ ½(A_T + V(T)) (ROUND_006_A Theorem 2). a_T = Arch − Π,
 λ_A(T) = inf of a_T on the unit sphere of the form domain 𝒟.
@@ -29,7 +29,7 @@ c ∈ C ∩ 𝒟: **in this splitting Arch is block-diagonal and the two blocks 
   4×4 Schur: W-det, W-mom, R186_024), AUDIT_204_CLOSURES (thm:coer-schur: blocks, S continuous in T, no
   interlacing at contacts), literature L69/L70/L104 (block-Schur finite/infinite splits with certified tails at
   fixed windows), and P211-6B (word families, NO-GO, whose §5(iii) is the origin of this memo).
-- Paper 47 §sec:coer (lines 4876–5339), read. Its reduction thm:coer-schur splits P_T = 𝒱_k ⊕ E_k with E_k the
+- Paper 46 §sec:coer (lines 4876–5339), read. Its reduction thm:coer-schur splits P_T = 𝒱_k ⊕ E_k with E_k the
   piecewise Tate exponentials on k blocks; coercivity of a_T on 𝒱_k comes from a high-pass bound on Arch
   (thm:coer-B) minus the norm ‖Π_T‖ (cor:coer-L1), so k_0(T) is governed by log(k/T) > C_B + ‖Π_T‖, i.e. dim E_k
   doubly exponential in T (rem:coer-size); Arch is NOT block-diagonal in that split, and the coupling operator
@@ -66,7 +66,7 @@ stated norm and has range in its domain ⊂ C ∩ 𝒟. (ii) Since Arch(b, c) = 
 using C(c_*, c) = ⟨y, c⟩ for c ∈ C ∩ 𝒟). Both claims follow, the infimum being attained only at c = c_* by (i).
 (iii) If S_T ⪰ 0 then a_T(b + c) ≥ C[c − c_*] ≥ 0. If ⟨S_T b, b⟩ < 0 for some b then F = b + c_* has a_T(F) < 0. For
 the bounds: F = b + c, ‖F‖² = ‖b‖² + ‖c‖², and ‖b‖² + ‖c‖² ≤ (1 + κ)²(‖b‖² + ‖c − c_*‖²) (triangle inequality, as in
-Paper 47 thm:coer-schur); a_T(F) ≥ λ_min(S_T)‖b‖² + (t_c − π_+)‖c − c_*‖² gives the lower bound when λ_min(S_T) ≥ 0
+Paper 46 thm:coer-schur); a_T(F) ≥ λ_min(S_T)‖b‖² + (t_c − π_+)‖c − c_*‖² gives the lower bound when λ_min(S_T) ≥ 0
 (the case λ_min(S_T) < 0 is the upper bound). Upper: test F = b + c_* with b the bottom eigenvector:
 a_T(F) = λ_min(S_T)‖b‖², ‖F‖² = ‖b‖² + ‖c_*‖² ∈ [‖b‖², (1 + κ²)‖b‖²]. ∎
 

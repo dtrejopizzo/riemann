@@ -20,7 +20,7 @@ Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
   reason is the falsifier test, not the arena count. The arena theorem is used in §5 only to quantify it.
 - ROUND_003_A Lemma 4 (rigidity) is the dual statement for Λ-dependent near-kernels; Proposition B below is its
   counterpart for Λ-independent planes.
-- Lemma N of Paper 47 (prime atoms as one-sided overlaps) is CITED as the form of Lemma A.
+- Lemma N of Paper 46 (prime atoms as one-sided overlaps) is CITED as the form of Lemma A.
 
 ## 2. Validation numerics (NUMERICAL)
 
@@ -74,7 +74,7 @@ The matrices R_n(E_2) (N = 40; upper triangle r_11, r_12, r_22):
 | 1.2 | 1.1·10⁻⁵ | 7.3·10⁻⁸ | 5.5·10⁻¹¹ |
 
 The smallest eigenvalue falls with k toward λ_A(T) (≈ 10⁻⁷, 3·10⁻¹², ≲ 10⁻¹⁴ … at the five windows); the second principal
-cosine with the a_T pin pair rises to 0.998–0.9999 at k = 6. These are the necessary conditions that Paper 47 has
+cosine with the a_T pin pair rises to 0.998–0.9999 at k = 6. These are the necessary conditions that Paper 46 has
 certified on its own archimedean modes at log 2; here they are seen to hold (NUMERICAL) at all five windows.
 
 2.3 Falsifiers on E_k: smallest eigenvalue of diag(α) − Π_w|_{E_k} for the modified comb w (N = 80; "+" = condition
@@ -132,7 +132,7 @@ V_j = e_j(· − x)1_{(x−T,T)}. By evenness of e_j and t ↦ x − t, the Gram
 Cauchy–Schwarz. (ii) For x ≥ T the interval (x − T, T) = (T − h, T) lies at the edge. For e ∈ H¹_0 with e(T) = 0,
 |e(t)|² ≤ (T − t)‖e′‖², integrate over (T − h, T): ≤ h²‖e′‖²/2; and λ_max(G) ≤ tr G. (iii) Differentiate under the integral; the boundary terms
 vanish because e_i(±T) = 0. ∎
-CITED form: Paper 47 Lemma N writes each prime atom as such a one-sided overlap; Lemma A is that statement on a k-frame.
+CITED form: Paper 46 Lemma N writes each prime atom as such a one-sided overlap; Lemma A is that statement on a k-frame.
 What is NOT proved: any sign pattern of R_n(E)_{11} in n. The table of §2.1 shows r_11(2) < 0 at every window but
 r_11(n) of both signs for n ≥ 3, varying with T; the sign of p_11 is a cancellation among atoms (NUMERICAL).
 
@@ -165,20 +165,20 @@ falsifiers. This does not touch T-dependent families with dim E → ∞, treated
 
 (a) The plane condition never implies (★) by itself. With E ⊂ P_T and E^⊥ its complement in P_T, a_T ⪰ 0 on P_T iff
 C := a_T|_{E^⊥} ≻ 0 and a_T|_E − B C^{-1} Bᵀ ⪰ 0 (Schur complement; B the coupling block) — PROVED (standard, with C
-having compact resolvent; CITED Paper 47 prop:nodes for Arch). So a route through E_T needs two further statements: a
+having compact resolvent; CITED Paper 46 prop:nodes for Arch). So a route through E_T needs two further statements: a
 positivity of a_T on E_T^⊥ and a bound on the coupling B C^{-1}Bᵀ by ε_{E_T}.
 
-(b) The arena theorem forbids the first for any fixed dim E. Paper 47 thm:arena (CITED): the (k+1)-st even archimedean
+(b) The arena theorem forbids the first for any fixed dim E. Paper 46 thm:arena (CITED): the (k+1)-st even archimedean
 eigenvalue is ≤ m((2k + 3)π/2T) = log k + O(1), while ‖Π‖ is of order Σ_n v_n ≍ e^T. On E_k^⊥ the restriction of Arch
 still has eigenvalues α_{k+1}, α_{k+2}, … ≤ log(k + j) + O(1) with no prime-independent reason for a_T to be positive
 there unless α_{k+1} exceeds the size of Π on E_k^⊥. Thus "Arch dominates Π on E_k^⊥" (the only Λ-free way to prove C ≻ 0)
-needs k ≥ N*(T), the arena count, which Paper 47 shows grows doubly exponentially in T (N* ≥ 12 at log 2). ARGUED as the
+needs k ≥ N*(T), the arena count, which Paper 46 shows grows doubly exponentially in T (N* ≥ 12 at log 2). ARGUED as the
 quantitative reading; PROVED in the weak form "for k fixed and T large, Arch|_{E_k^⊥} has an eigenvalue ≤ log(k+1) + O(1)
 < ‖Π|_{E_k^⊥}‖" only if the latter norm is shown to grow, which is OPEN here (we have not proved a lower bound on Π
 restricted to E_k^⊥).
 
 (c) The second requirement is at margin precision. Under (★), λ_min(a_T|_{E_T}) ≥ λ_A(T), and the coupling bound must
-leave at least λ_A(T) ≤ 4·10⁹Te^{−15.449T} (Paper 47, CITED). The numerics show ε_{E_k} − λ_A ranges from 10⁻³ (k = 2) to
+leave at least λ_A(T) ≤ 4·10⁹Te^{−15.449T} (Paper 46, CITED). The numerics show ε_{E_k} − λ_A ranges from 10⁻³ (k = 2) to
 5·10⁻¹¹ (k = 6, T = 1.2): the plane's slack is spent almost entirely by the coupling to E^⊥, and to close the Schur
 complement one must estimate BC^{-1}Bᵀ to that precision. Equivalently, E_T must contain the a_T ground state up to an
 energy-norm error whose square is ≲ margin. A Λ-independent family can do this only if the ground state is determined to

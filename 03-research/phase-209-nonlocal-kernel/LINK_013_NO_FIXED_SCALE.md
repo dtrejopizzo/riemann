@@ -1,6 +1,6 @@
 # LINK_013 — No fixed positive scale repairs map 011 in all windows
 
-2026-10-19. **PROVED, favourable review in AUDIT_013.md**, using as CITED input the bound for the explicit family of Paper47 lem:testfam and the proof of thm:margin/cor:margin1. No new numerical computation.
+2026-10-19. **PROVED, favourable review in AUDIT_013.md**, using as CITED input the bound for the explicit family of Paper46 lem:testfam and the proof of thm:margin/cor:margin1. No new numerical computation.
 
 **Statement:** for each constant c>0 there exist arbitrarily large windows —in fact all sufficiently large ones— and even polar-free tests F_T such that
 
@@ -10,7 +10,7 @@ U_T is exactly the Mellin–Gauss map of LINK011, without changing its normalisa
 
 ## 0. Corpus and difference from 012
 
-Consulted: the project rules, the ROUTES-TRIED-INDEX index (LINK011/012, margin and family 42/e, residues 06), master grid and crossword. Direct verification in Paper47: lem:testfam, thm:margin **and its proof**, cor:margin1. A small infimum is not confused with a test that does not annihilate U.
+Consulted: the project rules, the ROUTES-TRIED-INDEX index (LINK011/012, margin and family 42/e, residues 06), master grid and crossword. Direct verification in Paper46: lem:testfam, thm:margin **and its proof**, cor:margin1. A small infimum is not confused with a test that does not annihilate U.
 
 **New written reason:** LINK012 only falsified scale 1 at T=4/5. Here T→∞ is used and the response of the **same** U is computed on the explicit family of the paper that has small Q quotient. The new fact to be proved is that U does not share its vanishing: its rank-one component grows linearly in T. Only then is the bound of the paper applied.
 
@@ -76,7 +76,7 @@ For the even profile `h_ev(x)=[h(x)+h(−x)]/2` one concludes
 
 ## 3. The precise family of the paper, not an abstract minimiser
 
-From now on work with T≥1, so that k≥8. Let γ₁ be the first ordinate used in Paper47 lem:testfam and fix
+From now on work with T≥1, so that k≥8. Let γ₁ be the first ordinate used in Paper46 lem:testfam and fix
 
 `k=k(T)=ceil(21T/e)`,
 
@@ -152,7 +152,7 @@ This is the step that does not follow from a small margin: the response of the m
 
 ## 6. Bound on Q for THIS family and comparison
 
-**CITED and verified against the proof of Paper47.** The proof of thm:margin takes precisely F_T from lem:testfam; its step (6) bounds `𝔞_T(F_T)` by a sum of absolute values, and its step (7) divides by a lower bound for `||F_T||²`. The optimisation k=ceil(21T/e) of cor:margin1 gives, for T≥1,
+**CITED and verified against the proof of Paper46.** The proof of thm:margin takes precisely F_T from lem:testfam; its step (6) bounds `𝔞_T(F_T)` by a sum of absolute values, and its step (7) divides by a lower bound for `||F_T||²`. The optimisation k=ceil(21T/e) of cor:margin1 gives, for T≥1,
 
 `|Q_T(F_T)|/||F_T||²≤4·10⁹ T exp(−15.449T)`.            (7)
 

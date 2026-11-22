@@ -1,6 +1,6 @@
-# R134.005 — audit of record, round 2 (Paper 46, row D opening)
+# R134.005 — audit of record, round 2 (Paper 47, row D opening)
 
-Target: `04-papers/46-intersection-frame-defect/archive/main.md` (1641 lines)
+Target: `04-papers/47-intersection-frame-defect/archive/main.md` (1641 lines)
 and `README.md`, against `R134_002_AUDIT_ROUND1.md` (M1–M7, m1–m9, n1–n3),
 `R134_003_AUDIT_ROUND1.md` (LF1–LF3), `R134_004_ROUND2.md`, the
 four `[phase 134]` notes in phase 124 and the one in phase 118, and both
@@ -11,7 +11,7 @@ LF1–LF3 has been carried out — but the repair of `(M1)` overshot and
 introduced the worst defect the campaign has produced: `Proposition 3.6a(iii)`
 ("`Π²W_{fin} ∉ S'(R)`", labelled `PROVED`) is not proved, and **it is false if
 RH is true**.  Worse, combined with the paper's own Theorem 3.6 and
-Theorem 3.7 it yields a proof of ¬RH inside Paper 46.  This is `FATAL` for
+Theorem 3.7 it yields a proof of ¬RH inside Paper 47.  This is `FATAL` for
 that one proposition and for the `PROVED` label on it; it costs nothing else —
 Theorem 3.7 is *unaffected*, because the `D'` form of Bochner–Schwartz needs
 no temperedness hypothesis at all, which is exactly why (M1)'s repair (i)+(ii)
@@ -19,7 +19,7 @@ was the right repair and (iii) was an unnecessary extra. One further `MAJOR`:
 Definition 6.8's rebuilt requirement list is inconsistent unless the duality
 `F ↦ F^∨` moves the primitive sector off itself, and no clause says so.
 Everything else in round 2 is accepted.  Both scripts reproduce every printed
-number.  Recommendation: the paper is **fit to stand as Paper 46's opening
+number.  Recommendation: the paper is **fit to stand as Paper 47's opening
 state after one bounded erratum** (delete 3.6a(iii), repair (X11), §9.1(13),
 §10's grade row and the README sentence); no label; D.3 retired as a programme
 item.**
@@ -96,7 +96,7 @@ after finite part, `K(t) ∼ e^{−t/2}` at `∞`), so `Π²ω_∞ ∈ S'`.  The
 `𝔏 = −Π²W_{fin} − Π²ω_∞` is tempered **iff** `Π²W_{fin}` is.  By 3.6a(iii),
 `𝔏 ∉ S'`.  By Theorem 3.7 (c) ⟹ (d), `𝔏` positive-definite on `D(R)` would
 force `𝔏` tempered.  Hence `𝔏` is not positive-definite, hence ¬(b),
-hence ¬(a): **¬RH, proved in §3 of Paper 46.**  The paper half-sees this and
+hence ¬(a): **¬RH, proved in §3 of Paper 47.**  The paper half-sees this and
 writes the opposite: §9.1(13) says "whether `𝔏` itself (as opposed to its
 finite half `Π²W_{fin}`) fails to be tempered is not decided here".  Given
 3.6a(iii) it *is* decided, immediately.  §9.1(13) and Prop 3.6a(iii) cannot
@@ -340,7 +340,7 @@ Checked line by line.  **Consistent, with three exceptions, all from (F1) and
 
 ## 7. Recommendation to the review
 
-**The paper is fit to stand as Paper 46's opening state, after one bounded
+**The paper is fit to stand as Paper 47's opening state, after one bounded
 erratum — and not before.**  The erratum is five edits:
 
 1. **Cut Proposition 3.6a to (i) and (ii)**, and replace (iii) with the

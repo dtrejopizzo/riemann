@@ -110,7 +110,7 @@ This is the freshest and most decisive material in the corpus — it is the dire
   few effective classes (radial, pointwise ...)"*; *"D.32.2 diagnosis: moment cone vs positive cone; 'the
   frame keeps the intersection theory and discards the linear systems'."*
 
-* `04-papers/46-intersection-frame-defect/archive/main.md:2695` (§D.32): same sentence, paper-facing.
+* `04-papers/47-intersection-frame-defect/archive/main.md:2695` (§D.32): same sentence, paper-facing.
 
 * `03-research/phase-113-the-trace-on-schwartz-data/113_11_THE_SECTION_FUNCTOR_AND_WHY_IT_CANNOT_LIVE_IN_D.md`
   — title alone states the negative result for the *arithmetic* sections functor (read in full below,
@@ -306,7 +306,7 @@ into a pairing.
 | # | Topic | Status | Key file(s) | Recommendation |
 |---|---|---|---|---|
 | 1 | Objects over F_q / function field | TRIED–PARTIAL | phase-63 R3-VERDICT, phase-125 A125.009, phase-119 weil_case.py, phase-122 P122.007/PLAN/D_SPEC | Reuse Frobenius/polarization (63), dictionary template + gap (125), Weil-number generator (119); build the rest fresh per R145_000 |
-| 2 | Effective cone vs sections/linear systems on C×C | TRIED–PROVED (arithmetic side) | R144_004, ROW-D-SYNTHESIS §1–3, R142_003/002, Paper 46 §D.32, phase-113 doc 11 | Import `s₁=0.99846<1` and the diagnosis verbatim; build only the F_q-side `s_C` computation |
+| 2 | Effective cone vs sections/linear systems on C×C | TRIED–PROVED (arithmetic side) | R144_004, ROW-D-SYNTHESIS §1–3, R142_003/002, Paper 47 §D.32, phase-113 doc 11 | Import `s₁=0.99846<1` and the diagnosis verbatim; build only the F_q-side `s_C` computation |
 | 3 | Tropical/toy sign-definite Hodge index (Doc 125) | TRIED–NO-GO (obstruction named; exact "Doc 125" not located, nearest analogues are Deninger toy model and phase-63 F_q control) | phase-43 doc 130 (Deninger/Hasse-circularity), phase-63 E99_RESULTS (finite-genus mismatch) | Do not transport either; phase 145's comparison is a different kind of move (cone comparison, not structure transport) |
 | 4 | Paper 42; phase-33 docs 74/80; phase-107 doc 241; phase-39 docs 119-120 | Mixed: Paper 42 = background obstruction only; docs 74/80/241/119 not found under those numbers; phase-39 doc 120 found and relevant | P122_007 (Paper 42 quote), phase-39 `120-source-inventory-of-the-connes-consani-moscovici.md` | Reuse doc 120 as CC source index; docs 74/80/241/119 likely renumbered/absent — flag for follow-up, treat as NEW if pursued |
 | 5 | Connes–Consani RR for Spec Z̄ (2205.01391) and function-field dictionary | TRIED–PARTIAL | MAP_5_LITERATURE_VS_CORPUS.md:12, 114_d3_02_R16 (dim_S formulas), phase-113 doc 11 (sections-functor no-go), LEAD_NOTE_OFF_THE_PAGE (open dim_S candidate) | Reuse: CC has no Hodge-index statement of its own (confirmed gap); arithmetic sections-functor no-go already proved; dim_S candidate still open — build only the F_q h⁰_C computation |

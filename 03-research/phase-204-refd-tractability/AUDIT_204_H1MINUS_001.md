@@ -1,7 +1,7 @@
 # AUDIT_204_H1MINUS_001 —
 
 Phase 204. Sources: CALIB_R4_001.md and `CALIB_001_data/WT_H1.py`,
-`WT_H1_interval.json` (phase 202); P47 lem:K/eq:m (l.363), thm:S(iii), thm:A/eq:Aform (l.412), lem:monoT, prop:WT (l.4358).
+`WT_H1_interval.json` (phase 202); P46 lem:K/eq:m (l.363), thm:S(iii), thm:A/eq:Aform (l.412), lem:monoT, prop:WT (l.4358).
 
 ## Verdict: **H1⁻ PROVED** for ζ: n₋(𝔄_ev(T)) ≥ 1 for all T ≥ 0.12 (certified by intervals at T₀ = 0.12).
 
@@ -18,7 +18,7 @@ n = 2 term when T > ½log2 (applies at T = 0.5 and ½log3; n = 3 does not enter 
 At T₀ = 0.12 there is no comb.
 
 ## (3) Implementation, the [0, 10⁻¹²] piece and the tail — CORRECT
-- **Constants against P47.** C₀ = ψ(¼) − log π = −γ − π/2 − 3log2 − log π ✓ (script). K = 1/(2sinh(u/2)) + 1/(2cosh(u/2)) ✓
+- **Constants against P46.** C₀ = ψ(¼) − log π = −γ − π/2 − 3log2 − log π ✓ (script). K = 1/(2sinh(u/2)) + 1/(2cosh(u/2)) ✓
   (lem:K).
 - **Tail.** Lév(c) = ∫_0^{2T}(c₀ − c)K + c₀∫_{2T}^∞K; thm:S(iii) gives ∫_{2T}^∞K = log coth(T/2) + π − 2arctan e^T, and the
   script uses log coth(T/2) + 2arctan e^{−T}, identical (arctan x + arctan(1/x) = π/2). Convergence: K = O(e^{−u/2}); the
@@ -47,7 +47,7 @@ condition. The values T₀ = 0.5 and ½log3 are redundant (implied by 0.12) but 
 (computer-assisted, intervals).
 Note: the numbers from CALIB_R4 §1 (q_ev + ½, M = 30 inertias) remain NUMERICAL and are not part of H1⁻.
 
-## Text for P47 (corollary of prop:WT)
+## Text for P46 (corollary of prop:WT)
 > **Corollary.** For $\zeta$ and every $T\ge0.12$, $n_-(\mathfrak A_{\mathrm{ev}})\ge1$: interval arithmetic gives $\mathfrak a_{0.12}(\chi_{\mathrm{ev}})/\|\chi_{\mathrm{ev}}\|^2\in[-0.047\pm3.5\cdot10^{-4}]$ via (eq:Aform), $c_\chi(u)=\sinh(T-\frac u2)+(T-\frac u2)\cosh\frac u2$ and Theorem S(iii), and extension by zero (Lemma monoT) carries this negative vector to every larger window. Hence, under the hypotheses of Proposition WT, the even sector has positive bottom if and only if $n_-(\mathfrak A_{\mathrm{ev}})=1$ and $q_{\mathrm{ev}}<-\frac12$.
 
 ## Index entry

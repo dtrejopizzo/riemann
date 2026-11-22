@@ -6,7 +6,7 @@ bottom, `W_*` the global form, `Π_T(M∗φ)` the near-radical family of `ROUND_
 ## Four-point filter (cross-check first)
 
 1. **Antecedents, read in primary sources.**
-   - P47 §`sec:firstcontact`: `lem:firstcontact` (l.6591), weak equation `eq:localweak` (l.≈6620),
+   - P46 §`sec:firstcontact`: `lem:firstcontact` (l.6591), weak equation `eq:localweak` (l.≈6620),
      `prob:annihilate` (l.6887), `prop:annihilate-equiv` (l.6914: the problem IS the goal).
    - `phase-197-*/BARRIER_W_001.md` Theorems W1, W2, W3; in particular **W3(b)**: «to bring a zero crossing to
      codimension ≥ 2 one needs an extra condition `L(h)=0` on every kernel vector, independent of the
@@ -33,10 +33,10 @@ bottom, `W_*` the global form, `Π_T(M∗φ)` the near-radical family of `ROUND_
 
 | Property | Status | Source |
 |---|---|---|
-| Existence of `T_*>½log5` and `F_*≠0` in `ker H_{T_*}`, `H_{T_*} ≥ 0` | PROVED (conditional on the goal failing) | P47 `lem:firstcontact`, `lem:contA`, `lem:monoT` |
+| Existence of `T_*>½log5` and `F_*≠0` in `ker H_{T_*}`, `H_{T_*} ≥ 0` | PROVED (conditional on the goal failing) | P46 `lem:firstcontact`, `lem:contA`, `lem:monoT` |
 | Definite parity `JF_* = ±F_*` | PROVED | same |
 | Convex envelope of the support of length exactly `2T_*` | PROVED (blind to the weight: `c_F` and the constraints are translation covariant; if it fitted in a shorter interval, translated it would give `λ_A(T)≤0` with `T<T_*`) | R162_502 A5 |
-| Euler–Lagrange equation: `a_{T_*}(F_*,G) = ⟨r,G⟩` ∀G in the domain, `r = α e^{t/2}+β e^{−t/2}` unique (the two Lagrange multipliers) | PROVED | P47 `eq:localweak` |
+| Euler–Lagrange equation: `a_{T_*}(F_*,G) = ⟨r,G⟩` ∀G in the domain, `r = α e^{t/2}+β e^{−t/2}` unique (the two Lagrange multipliers) | PROVED | P46 `eq:localweak` |
 | Whole-line form: `(L+R_T)u = f_T`, `L = log⟨D⟩`, `u = E_TF_*` | PROVED | P124_008 (1.1)–(1.2) |
 | Regularity: `E_TF_* ∈ H^s`, `0≤s<½`; no gain to `H^{1/2}` from the equation alone (mapping countermodel) | PROVED / NO-GO | P121, P124_008 |
 | Boundary at `±T_*`: a nonzero jump in `H^{1/2}` is forbidden by Lions–Magenes; assuming `H^{1/2}` kills the Tate coefficient (circular) | PROVED (conditional, circular) | P122.019/029, P124_008 §4 |
@@ -114,5 +114,5 @@ W3(b) (BARRIER_W_001), closed. (ii) repeats P124_004 §§5–6 / P124_011 §6; t
 blind, the missing part is quantitative minimality, false in the controls. No new intermediate result:
 the layer-mass decay is a direct consequence of P124_008 and is not recorded as new.
 I find no defensible different idea within this standpoint: every contradiction from `F_*` goes through
-`prop:annihilate-equiv`, and the proved properties of `F_*` (table §1) are, except for the identities of P47
+`prop:annihilate-equiv`, and the proved properties of `F_*` (table §1) are, except for the identities of P46
 §`sec:firstcontact`, valid on all of 𝒮. **Next operation: none in this standpoint.**

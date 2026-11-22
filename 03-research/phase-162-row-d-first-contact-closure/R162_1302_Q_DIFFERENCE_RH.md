@@ -2,7 +2,7 @@
 
 Round 13. Pure mathematics, no numerics. Inputs: README (F1–F4, rounds 1–12), R162_590,
 R162_1201 (Lemma 1.1, Thm 1.2, Thm 2.2, Prop 4.2, Thm 5.1), R162_903 (BCH log Z), R162_1001 (torsion cocycle),
-R162_1004 (tensor lift), Paper 47 eq:symbol, lem:firstcontact.
+R162_1004 (tensor lift), Paper 46 eq:symbol, lem:firstcontact.
 
 **Question.** Prop 4.2 of R162_1201 recast HF = 0 (F ∈ N = ker H_{T_*}, H ≥ 0, λ = 0) as a q-difference
 Riemann–Hilbert (RH) problem on the cut Γ = [e^{−2T}, e^{2T}]. Write that problem down exactly, and ask whether the
@@ -136,7 +136,7 @@ This is the only Liouville mechanism in which the arithmetic of the dilation gro
 per independent generator** (a consistent system).
 
 **Thm 4.2 (NO-GO).** (a) (Full line, no cut.) The solutions of L_Λ-type equations are not rigid: for the full-line
-operator A_ℝ = c_0 − 𝒦 − C (symbol s_T(τ) = m(τ) − 2Σ_{N_T} w_n cos(τ log n), Paper 47 eq:symbol) and any zero τ_0
+operator A_ℝ = c_0 − 𝒦 − C (symbol s_T(τ) = m(τ) − 2Σ_{N_T} w_n cos(τ log n), Paper 46 eq:symbol) and any zero τ_0
 of s_T, q^{1/4 − iτ_0/2} (i.e. e^{iτ_0 t}) solves the homogeneous equation; s_T is a real-analytic almost-periodic
 function minus a log-growing digamma term, and each of its (complex) zeros gives a solution. So a single additive equation has an infinite-dimensional
 non-rational solution space; Thm 4.1 needs separate relations σ_{p²}h = c_p h, which would force every z_p = p^{2s}

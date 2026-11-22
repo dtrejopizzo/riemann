@@ -91,7 +91,7 @@ which `H_T` acts. For `F` primitive in the core of the four operators,
 
 On the form domain, (2.1) defines `omega_EM` as a functional on the
 dual; the range statement is then interpreted via the form
-operator. No operator regularity not already proved in Paper 47 is assumed.
+operator. No operator regularity not already proved in Paper 46 is assumed.
 
 The disintegration of R170_885 makes `omega_EM` fully arithmetic:
 `dot e_EM` contains simultaneously

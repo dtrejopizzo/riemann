@@ -28,7 +28,7 @@ but it is not new: it is prob:ext-L/eq:ext-starstar. Do not request calibration 
 ## 0. Corpus check
 
 Read: COMPOSE_EF_001 (complete, §§1–8), O1_COMPOSITION_001 (Def. O1.2, Prop. O1.C, Lemma O1.E and the table §3),
-BARRIER_D1_001 (Prop 1, Thm 2, Cor 3, Thm 4, §5, §7), GUO_QUANT_001 (Prop 1.3 and §1.3), and in Paper 47 thm:ext-half,
+BARRIER_D1_001 (Prop 1, Thm 2, Cor 3, Thm 4, §5, §7), GUO_QUANT_001 (Prop 1.3 and §1.3), and in Paper 46 thm:ext-half,
 rem:ext-killing, prop:ext-gauge, lem:ext-ellbound, prob:ext-L and prop:ext-consol. Index: AUDIT_200_SPEC_003 (R-Q6: the
 descent of 𝒲 to the gauge quotient already uses exact Λ; (𝒬_μ, 𝒲, ℓ) = prob:ext-L) and AUDIT_204_CLOSURES_001 (PC-2:
 𝔤_ev ≲ 9·10⁻⁸ is a Galerkin quotient). This audit builds nothing new. It classifies.

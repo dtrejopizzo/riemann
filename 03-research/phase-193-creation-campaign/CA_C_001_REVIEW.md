@@ -1,5 +1,5 @@
 # CA_C_001 — Review
-Checked vs P47 prop:shape-inputs (E), lem:cpos, lem:shape-amp, prop:shape-eulerdel, lem:shape-quartet, prop:shape-family, rem:shape-ident.
+Checked vs P46 prop:shape-inputs (E), lem:cpos, lem:shape-amp, prop:shape-eulerdel, lem:shape-quartet, prop:shape-family, rem:shape-ident.
 
 ## Verdict
 **NO-GO for the declared product-formula classes CONFIRMED (Theorem 1, Corollary 1 PROVED; two cells CONDITIONAL as labelled). Exact PF on the window = singleton (REF-D as a class) CONFIRMED. (Fam_η): OPEN necessary sub-statement — NOT an admissible candidate (does not imply the target without (Span_η)).**

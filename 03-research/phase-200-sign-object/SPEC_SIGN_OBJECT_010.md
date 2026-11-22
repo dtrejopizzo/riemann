@@ -14,8 +14,8 @@ Néron–Tate heights, which measure the arithmetic of the curve (L(Jac,s) at s=
 Hodge index in any substitute: arithmetic site/scaling site, Deninger, 𝔽₁ (Deitmar, Durov, Haran, Kurokawa) nor
 Weil-étale. All of them have analogies and, at most, toy signatures (P41-1).
 
-**Phase 135 (B).** The Hodge-index transfer (P46 Thm 12.3) is no longer "conditional on h⁰": it is **unusable**.
-The frame-defect theorem P46 Thm 19.25 (PROVED) shows that no h⁰: D^W → ℝ_{≥0} satisfies (a), (b′) and (c), for
+**Phase 135 (B).** The Hodge-index transfer (P47 Thm 12.3) is no longer "conditional on h⁰": it is **unusable**.
+The frame-defect theorem P47 Thm 19.25 (PROVED) shows that no h⁰: D^W → ℝ_{≥0} satisfies (a), (b′) and (c), for
 any χ, real or integer values. Thm 21.15 proves it also on the curve over 𝔽_q, where the sign is a theorem. The
 defect lies in the frame (D^W carries the intersection of C×C and discards its linear systems, Restatement 19.29),
 not in the object. So the compatibility of specification v6 with an object "of Hodge type" **is not a new reason**:
@@ -25,7 +25,7 @@ Thm 19.25 is uniform in the nature of h⁰ (discontinuous, integer, sensitive to
 - H1, "arithmetic window RR" (h⁰_θ of van der Geer–Schoof): NO-GO. Prop 20.1 (PROVED): the difference
   h⁰ − h⁰(dual) is deg, linear and combless (C-pol). The candidate falls literally under D-θ (R157_002 l.219).
 - H2, h⁰ of the square over 𝔽₁ with the monoid of pairs: retry of INV_C_001 (README l.390). NO-GO.
-- H3, Horn A of P46 §19.9 (defect Δ in (c′)): the only unclosed residue of the frame. OPEN, with high risk of
+- H3, Horn A of P47 §19.9 (defect Δ in (c′)): the only unclosed residue of the frame. OPEN, with high risk of
   REF-D from the sufficiency half of the moment problem (P33-6).
 
 **Recommendation (D).** Do not reopen phase 135. If this line is pursued, the only legitimate statement is Lemma
@@ -69,7 +69,7 @@ entries, with their line number.
 | surface of pairs 𝒮, Hodge/CS | INV_B_001 | README:388 | RETRY of R135_007, ES-21, P33-6, P40-3 |
 | Jacobi theta with T_{p²} | G2G-R173_FINAL | 04_PHASES:986 | NO-GO (three families) |
 | Kurokawa ζ⊗ζ, E101_083 | SPEC_009 X4 | README:554 | NO-GO |
-| van der Geer–Schoof / Bost (D-θ) | — in the index | R157_002 l.138, l.219–222; R160_S5 l.123, l.315; R160_001_BRIEF l.404 (S-11) | **EXCL**: "D-θ falls under [P46 Thm 19.25] verbatim: F5" |
+| van der Geer–Schoof / Bost (D-θ) | — in the index | R157_002 l.138, l.219–222; R160_S5 l.123, l.315; R160_001_BRIEF l.404 (S-11) | **EXCL**: "D-θ falls under [P47 Thm 19.25] verbatim: F5" |
 
 Terms without index entries: "Lichtenbaum", "Durov", "Néron", "van der Geer", "Schoof". The last two appear in the
 corpus: phase 114 (`114_a_02_AN_ARITHMETIC_SURFACE_OVER_SPEC_Z_WITH_QUADRATIC_H0.md`, h⁰_θ over
@@ -77,7 +77,7 @@ P¹_ℤ with toric metric, "a4-WEAK"; `114_d3_02` Thm 2.1, van der Geer–Schoof
 (`NOTE_OFF_THE_PAGE_CANDIDATES.md` §2, "Candidate D-θ"); phase 157 (R157_002, cited above).
 
 **Check conclusion.** The main candidate proposed by the objective, "arithmetic window Riemann–Roch" with h⁰_θ,
-**is already in** the corpus as D-θ and is excluded by P46 Thm 19.25. Any version presented here needs a new
+**is already in** the corpus as D-θ and is excluded by P47 Thm 19.25. Any version presented here needs a new
 reason written out (§3).
 
 ---
@@ -124,7 +124,7 @@ of the fiber.
 
 ### 2.1 What h⁰ is and why phase 135 stayed "conditional"
 
-Phase 135 (R135_007, §5; P46 Part II §§11–16):
+Phase 135 (R135_007, §5; P47 Part II §§11–16):
 - Weil class D^W, canonical class K with Φ_K = ξ (Pólya kernel), affine duality σ_K: E ↦ K − E and extended
   form I_∞;
 - **Theorem 12.3** (conditionally PROVED): if there exists h⁰: D^W → ℝ_{≥0} with (a) h⁰ ≥ 0, (b′) h⁰(E) > 0 ⇒ E
@@ -139,15 +139,15 @@ Phase 135 (R135_007, §5; P46 Part II §§11–16):
 
 - **Phases 139–143** (04_PHASES:208): D.24.7, clause (b′) fails for h⁰ by bidegree (the "pair-indexed" h⁰ that
   R135_007 §4 recommended); D.34.5, no primitive class has all Frobenius traces ≥ 0; the trace-positive cone
-  (Horn B, P46 §20) is decided NO by T1/T2; Ξ_a transports literally.
-- **P46 Thm 19.6 (PROVED):** h⁰_RR⁺ satisfies (a) and (c) **unconditionally, for every χ**, with growth ¼m².
+  (Horn B, P47 §20) is decided NO by T1/T2; Ξ_a transports literally.
+- **P47 Thm 19.6 (PROVED):** h⁰_RR⁺ satisfies (a) and (c) **unconditionally, for every χ**, with growth ¼m².
   Clauses (a) and (c) come for free. All the weight is on (b′).
-- **P46 Thm 19.25 (PROVED given (X19), first zero verified): frame defect.** No h⁰: D^W → ℝ_{≥0} satisfies
+- **P47 Thm 19.25 (PROVED given (X19), first zero verified): frame defect.** No h⁰: D^W → ℝ_{≥0} satisfies
   (a), (b′) and (c), for any χ. Mechanism: for E′ ≥ 0, |Re(e^{iθ}Φ_{E′}(ρ₁))| ≤ ½s₁ deg E′ with
   s₁ = 0.99846… < 1; the certified class E = 53.11911·e^{−u²/18} sin(γ₁u) + 400K has R(E) = 10 > 0 and
   |Im Φ_E(ρ₁)| = 199.7248 > 199.6920. **Thm 12.3 keeps its label and loses its use.** Cor 19.25b extends the
   result to C_c^∞ ⊕ ℝK and P_c^∞ ⊕ ℝK.
-- **P46 Thm 21.15 (PROVED): the same defect holds on the curve over 𝔽_q**, where the sign is a theorem. The
+- **P47 Thm 21.15 (PROVED): the same defect holds on the curve over 𝔽_q**, where the sign is a theorem. The
   diagnosis (Restatement 19.29): the frame D^W carries the **intersection theory** of C×C and discards its
   **linear systems**, i.e., bigness (ii), "D² > 0, D·H > 0 ⇒ nD effective".
 - **Phase 145** (function-field model, computed Frobenius diagonal): confirms that on C×C positivity comes from
@@ -215,7 +215,7 @@ combless.
 *Proof.* It is Poisson for the lattice ℤ^r ⊂ (ℝ^r, ‖·‖_g) and its dual: Σ_{v∈ℤ^r} e^{−π‖v‖²} = covol^{−1}
 Σ_{w∈ℤ^{r∨}} e^{−π‖w‖^{*2}}. Take log. ∎
 
-**Corollary 20.2 (PROVED given P47).** If 𝔞_T(g) = h⁰(L̄_g) − h⁰(L̄_g^∨) for a family of lattices over
+**Corollary 20.2 (PROVED given P46).** If 𝔞_T(g) = h⁰(L̄_g) − h⁰(L̄_g^∨) for a family of lattices over
 ℤ, then 𝔞_T(g) = −log covol_g. That is a functional of the volume (polar/Tate) term, and in P_T it is null or
 constant by C-pol (Theorem O3, SPEC_006 l.74 and l.165). It contradicts Lemma 13.1 and Lemma B.2: the form has
 comb parts that are undefined in P_T. **NO-GO.**
@@ -227,7 +227,7 @@ channel of INV_C_001.
 
 **Variant 20.3: h⁰ alone, without a difference.** 𝔞_T(g) = h⁰_θ(Λ_g) for a lattice Λ_g. This would give trivial
 positivity (θ ≥ 1 ⇒ h⁰ ≥ 0), but:
-1. It falls literally under P46 Thm 19.25. Property (b′), "h⁰ > 0 ⇒ effective", is exactly what the theorem
+1. It falls literally under P47 Thm 19.25. Property (b′), "h⁰ > 0 ⇒ effective", is exactly what the theorem
    denies, and h⁰_θ > 0 always (θ > 1), so (b′) would require everything to be effective. R157_002 l.219–222
    already recorded this: "Integrality is never used, so D-θ falls under it verbatim".
 2. By C-hom (Lemma H), 𝔞_T is 0-homogeneous in theta's coefficients. An identity 𝔞_T = log θ_Λ fixes the
@@ -269,7 +269,7 @@ Also C-MvN, C-emb and Φ200 (branches: 1 comb-generic, 2 REF-D/certified, 3 func
   - C-τ: would pass, but there is no need to get there.
   - C-E′: over O_K it sees Cl(K), but as a volume term.
   - Φ200: branch 5 (equality between data: Poisson is the FE) and branch 2.
-- **Falsifiers.** For the difference: the a_P witness (P47 prop:shape-eulerdel) and Epstein (Lemma E)
+- **Falsifiers.** For the difference: the a_P witness (P46 prop:shape-eulerdel) and Epstein (Lemma E)
   have the same FE and the same Γ, hence the same deg, and different forms. For h⁰ alone: Thm 19.25 with the
   certified class E.
 - **Index check.** D-θ: R157_002 l.138, l.219; S-11: R160_001_BRIEF l.404; W10: 04:27.
@@ -307,9 +307,9 @@ Also C-MvN, C-emb and Φ200 (branches: 1 comb-generic, 2 REF-D/certified, 3 func
 - **Risk.** Very high. It is the shape of L80, which the index already blocks.
 - **Status.** NO-GO by index. Only reopens with an explicit B.
 
-### H3 — Horn A of P46 §19.9: transfer with defect Δ in (c′), primitive gates
+### H3 — Horn A of P47 §19.9: transfer with defect Δ in (c′), primitive gates
 
-- **Definition (P46 §19.9).** The proof of Thm 12.3 uses (c) only at degree 0 and (b′) only at degrees 0 and 1.
+- **Definition (P47 §19.9).** The proof of Thm 12.3 uses (c) only at degree 0 and (b′) only at degrees 0 and 1.
   So (c′) suffices: h⁰(E) + h⁰(K−E) ≥ R(E) − Δ(deg E), with Δ(0) = Δ(1) = 0, symmetric under d ↦ 1−d. The
   maximum defect is Δ(d) = max(0, d²(1−s_*²)/4 − d/4). The "gated" candidate (h⁰ turned off except in classes
   meeting necessary conditions) satisfies (c′) only by assuming the conclusion. What blocks it is the
@@ -318,7 +318,7 @@ Also C-MvN, C-emb and Φ200 (branches: 1 comb-generic, 2 REF-D/certified, 3 func
 - **Why it is the only residue of the Hodge-transfer frame.** Thm 19.25 kills (c) at every degree, but the
   defect lives at high degrees (the witnesses of Thm 19.23 are at d_* ≫ 1), and the transfer only uses degrees
   0 and 1. Horn A is not in the index, either as NO-GO or as closed OPEN. I searched "Horn A" and "(c′)" over
-  the whole ROUTES-TRIED-INDEX and there are no entries. It appears in P46 as OPEN.
+  the whole ROUTES-TRIED-INDEX and there are no entries. It appears in P47 as OPEN.
 - **New reason relative to phase 135.** Phase 135 sought h⁰ with full (c). Horn A changes the **hypothesis**
   to (c′) with a defect, which Thm 19.25 does not forbid because its certified class has deg = 400 ≫ 1. Phase
   200 adds the vocabulary P_T and C-pol: gating by primitive classes can be phrased as "a gate in P_T", which
@@ -353,7 +353,7 @@ Also C-MvN, C-emb and Φ200 (branches: 1 comb-generic, 2 REF-D/certified, 3 func
   > maximum Δ of §19.9, **without** assuming 𝔞_T ≥ 0 on 𝒢_prim, and that fails for the Epstein family of
   > Lemma E.
 
-  By Remark 19.25c(i) of P46, on the bare set 𝒢_min the hypothesis of Thm 12.3 is equivalent to the
+  By Remark 19.25c(i) of P47, on the bare set 𝒢_min the hypothesis of Thm 12.3 is equivalent to the
   conclusion. So Lemma 20.4 must use the **linear extension** P_c^∞ ⊕ ℝK nontrivially, and Cor 19.25b acts on
   that extension through the pair {E_w, K−E_w}. Lemma 20.4 only survives if Δ ≠ 0 absorbs that pair. First
   subquestion decidable by proof: what degree does the pair {E_w, K−E_w} of Cor 19.25b have? If it is 0 or 1
@@ -377,7 +377,7 @@ Also C-MvN, C-emb and Φ200 (branches: 1 comb-generic, 2 REF-D/certified, 3 func
    Thm 19.25 and Thm 21.15 are uniform in h⁰ and hold where the sign is true. The defect is in the frame D^W,
    not in the object.
 2. If a round is devoted to this line, let it be **only the first subquestion of H3**: the degree of the pair
-   {E_w, K−E_w} of Cor 19.25b, decided by proof from P46 §19. It is cheap and binary. If the degree is
+   {E_w, K−E_w} of Cor 19.25b, decided by proof from P47 §19. It is cheap and binary. If the degree is
    ≤ 1, Horn A becomes NO-GO PROVED and the Hodge-transfer line closes entirely.
 3. The object LEDGER_L5 §4 calls for, a "square of Spec ℤ" with intrinsic positivity, has a precise shape:
    **(Big♯)** of §2.3, linear systems over a strict extension of D^W with sections that are not tests. It is
@@ -394,12 +394,12 @@ Also C-MvN, C-emb and Φ200 (branches: 1 comb-generic, 2 REF-D/certified, 3 func
 Inventory: Faltings–Hriljac CITED, but controls Néron–Tate (L of the curve); no substitute for the square
 (arithmetic site/scaling site, BC/adeles, Deninger, 𝔽₁/Haran/Kurokawa, Weil-étale) has a PROVED Hodge index for
 ζ.
-Phase 135: Thm 12.3 is unusable by P46 Thm 19.25 and Thm 21.15 (frame defect uniform in h⁰, valid over 𝔽_q).
+Phase 135: Thm 12.3 is unusable by P47 Thm 19.25 and Thm 21.15 (frame defect uniform in h⁰, valid over 𝔽_q).
 Compatibility of specification v6 ≠ new reason.
 Prop 20.1 PROVED (C-RR): h⁰_θ(L̄) − h⁰(ω̄⊗L̄^∨) = deg = −log covol for every metric; Cor 20.2: the
 difference is polar, null in P_T (C-pol). The window RR is D-θ (R157_002 l.219).
 H2 = L80 (B not constructed). 𝔽₁-pairs = INV_C_001.
-H3 (P46 §19.9 Horn A, (c′) with defect, primitive gate in P_T): OPEN; first subquestion = degree of the pair
+H3 (P47 §19.9 Horn A, (c′) with defect, primitive gate in P_T): OPEN; first subquestion = degree of the pair
 {E_w, K−E_w} of Cor 19.25b (if ≤ 1, NO-GO).
 Do not retry theta-type/van der Geer–Schoof h⁰, auxiliary Faltings–Hriljac, nor Hodge-transfer without changing
 the frame D^W (Big♯ = MW-5)."

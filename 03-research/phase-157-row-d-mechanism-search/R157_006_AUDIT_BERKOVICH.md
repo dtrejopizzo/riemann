@@ -6,7 +6,7 @@ Papers and READMEs were not edited. Amendments are applied in place in R157_005,
 "[amended per R157_006, Bk]".
 
 Criteria. R157_005 was written (08:12) against the **unamended** Lemma P157.S1. The parallel audit R157_004 §3
-(final 08:17) amended it: (a) → a statement about derivations (A19), (b) → (b′) (A20), (c) → P46 Prop 12.4B + Hardy
+(final 08:17) amended it: (a) → a statement about derivations (A19), (b) → (b′) (A20), (c) → P47 Prop 12.4B + Hardy
 (X16) as a schema (A21), and a new (d) (A22), with the Pass clause requiring A3 and one of A7/A8/A9. This audit grades
 R157_005 against the **amended** lemma, as specified.
 
@@ -27,9 +27,9 @@ arXiv PDFs, read as text in the scratchpad and not stored in the repository (cop
 | Favre–Rivera-Letelier, arXiv math/0407471 | eqs. (1)–(4), Defs 1.1–1.2, §2.4 eq. (7), Prop. 2.6 eq. (9), Lemma 4.4 eq. (22), Prop. 4.5 eq. (23), Lemma 4.8 | citation check |
 | Gubler–Rabinoff, arXiv 2506.13548 (abstract) | fixed non-archimedean field; not over Z | ruled out of scope |
 
-Corpus files opened: Paper 47 `main.tex` l.115–160 (`eq:W`, `P_T`), l.495–520 (`def:PD`), l.1160–1215 (`def:W`,
+Corpus files opened: Paper 46 `main.tex` l.115–160 (`eq:W`, `P_T`), l.495–520 (`def:PD`), l.1160–1215 (`def:W`,
 `eq:nuw`, `thm:Z`, `eq:fw`), l.2098–2140 (`thm:SC`, `cor:SC1`), l.3300–3420 (`lem:cpos`, `thm:finmod`,
-`prop:finsupp`, `cor:void`). Paper 46 `main.md` l.2899–3070 (Prop 12.4B, Thm 12.4, Restatement 12.4a, Remark 12.4a′).
+`prop:finsupp`, `cor:void`). Paper 47 `main.md` l.2899–3070 (Prop 12.4B, Thm 12.4, Restatement 12.4a, Remark 12.4a′).
 `114_d_195_CONTACT_GNS_POISSON_CP_AND_TATE_JET_DEFECT.md` (whole). `MAP_1_WALLS_AND_MASTER_DOCS.md:48`.
 `R152_001` l.16, 266, 303, 407. `R157_002` §5 (amended). `R157_004` §3.
 
@@ -43,7 +43,7 @@ Corpus files opened: Paper 47 `main.tex` l.115–160 (`eq:W`, `P_T`), l.495–52
 | FRL **Lemma 4.8**, non-archimedean positivity | Lemma 4.8 is the **regularization** lemma (`ρ_ε → ρ`; `[F]_ε` has continuous potential). Positivity is **Prop. 4.5**, eq. (23): `(ρ,ρ) = ∫_{H_p} f_ρ² dλ ≥ 0`, `= 0 ⟺ ρ = 0`. The non-archimedean kernel is the Hsia kernel `log sup{S,S′}` (Lemma 4.4, eq. (22)), not `log|x−y|` of a difference | AMEND (B2): replace "Lemma 4.8" by "Prop. 4.5, eq. (23)" everywhere (§0 table row (c), §2.1, §4.2, §6, source list) |
 | Poineau Dyn-I, "continuity of the fibrewise family" | Thm A; also Prop. C (global continuous potential `λ_φ` with `Δ(λ_φ|X_y) = χ_y − μ_{φ_y}`) and Cor. D (`y ↦ ⟨μ_{φ_y},μ_{ψ_y}⟩` continuous, the FRL pairing **fibre by fibre**) | PASS, strengthened (§2) |
 | `cor:SC1` "∼ 4e^T" | the corollary gives the ten-prime bound. `𝒜_T ∼ 4e^T` is in the text right after it (main.tex l.2135–2137) | AMEND (B13): "the text after `cor:SC1`" |
-| P46 Prop 12.4B, Thm 12.4, Restatement 12.4a/12.4a′ | l.2899, 3006, 3020, 3058 | PASS as locations. The use is graded in §6 |
+| P47 Prop 12.4B, Thm 12.4, Restatement 12.4a/12.4a′ | l.2899, 3006, 3020, 3058 | PASS as locations. The use is graded in §6 |
 | NG-E1 = MAP_1 l.48 | MAP_1:48: "computed: G_p(0)>0, G_p(π/log p)<0 for p = 2,3,5,7, indefinite" | PASS |
 | "Paper 44 … next to Dictionary B.1" | Dictionary B.1 is `R152_001:266`, a phase-152 **proposal** for Paper 44. It is **not** in Paper 44 (grep 0; R157_004 §3 confirms) | AMEND (B11) |
 
@@ -76,7 +76,7 @@ Corpus files opened: Paper 47 `main.tex` l.115–160 (`eq:W`, `P_T`), l.495–52
   Faltings–Hriljac): `(ĉ_1(L)²|X) = −2ĥ_NT([L]) + Σ_v D(f_v)`, with `D(f_v)` local Dirichlet energies (each `≤ 0`)
   and `ĥ_NT` the Néron–Tate height of the Jacobian class. **For genus 0 the global term is 0** (CL's own
   parenthesis), so on `P^1`/`A^1` the energy is a sum of local terms. The global term exists only on curves of
-  genus `≥ 1`. That is outside (P152.2), and it is the Hodge-index shape the corpus treated already (P46 Part II,
+  genus `≥ 1`. That is outside (P152.2), and it is the Hodge-index shape the corpus treated already (P47 Part II,
   the Hodge-index transfer theorem of phase 135).
 * **FRL math/0407471.** As R157_005 says, after the citation repairs of §1.
 
@@ -128,20 +128,20 @@ weights: the (a) branch) or through atoms at sections (the `𝓖` term of Thm 4.
 is the product-formula kernel). Finitely many distinguished primes cannot carry the sign (`thm:SC`,
 `prop:finsupp`: this is (b′)).
 
-**Lemma B.3 (norm-line kernels are Paper 47's dual problem; RESTATEMENT, one direction PROVED).** Take
+**Lemma B.3 (norm-line kernels are Paper 46's dual problem; RESTATEMENT, one direction PROVED).** Take
 `G = H(ℓ(x) − ℓ(y))` and `μ_f` with `ℓ_*μ_f = ν_f`, so that `𝓣(f) = ∬ H(u−u′) dν_f(u) dν̄_f(u′)`. Take `ν_f = f du`
 (the only linear choice that does not reintroduce weights by hand). If `𝓣(f) = W_T(f)` on `C_c^∞(I_T)`, then `H`
 agrees with the Weil kernel on `|u| < 2T` and is arbitrary on `|u| ≥ 2T`. So `𝓣 ⪰ 0` "by construction" means that
-`H` is positive definite, i.e. `Ĥ ≥ 0`, and such an `H` is a certificate of value `≥ 0` in the sense of P47
-`def:PD` (with the polar term as in `thm:Z`, `β = (2,0)`). ⟸: weak duality (`prop:weak`), PROVED. ⟹: P47's strong
-duality, CITED from P47, with non-attainment allowed, so only in `ε`-form. **This is P47's dual problem (D) written
+`H` is positive definite, i.e. `Ĥ ≥ 0`, and such an `H` is a certificate of value `≥ 0` in the sense of P46
+`def:PD` (with the polar term as in `thm:Z`, `β = (2,0)`). ⟸: weak duality (`prop:weak`), PROVED. ⟹: P46's strong
+duality, CITED from P46, with non-attainment allowed, so only in `ε`-form. **This is P46's dual problem (D) written
 on `A^{1,an}_Z`. It is not a new object.** The kernel reads only the line `R` with its atoms and weights, so the (a)
 schema applies to every derivation of `Ĥ ≥ 0` (`cor:void`, `thm:finmod`(ii)): R157_005's Lemma 5.1 proof covers it
 word for word.
 
 **Verdict on doubt 1: FAIL (Lemma 2.2 and "𝔄 exhausts the canonical data") → AMEND.** With 𝔄⁺ the conclusion of
 R157_005 stands: every cross-fibre coupling is branch-local (flow), finite-prime (global functions on the skeleton),
-the product formula at sections, or a kernel on the norm line, and the last is P47 (D). The literature survey is
+the product formula at sections, or a kernel on the norm line, and the last is P46 (D). The literature survey is
 confirmed for the five sources read, with the residual Chinburg–Rumely flagged.
 
 ## 3. Doubt 6 and Lemma 2.1 — the fibre product: **AMEND (the needed content is correct)**
@@ -177,7 +177,7 @@ at the trivial norm). Doubt 6: PASS after (B3).
 
 ## 4. Doubt 2 — Lemma 3.3: **PASS (with a simplification)**
 
-Checked against P47 conventions. `eq:A`: `𝔞_T(F) = C_0‖F‖² + ∫(‖F‖² − c_F(u))K du − Σ_{n∈N_T} v_n c_F(log n)`,
+Checked against P46 conventions. `eq:A`: `𝔞_T(F) = C_0‖F‖² + ∫(‖F‖² − c_F(u))K du − Σ_{n∈N_T} v_n c_F(log n)`,
 `v_n = 2Λ(n)/√n`. So the prime-`p` part is `Q_p(F) = −Σ_{k: k log p < 2T} v_{p^k} c_F(k log p)`. This is the same
 sign as `thm:finmod`(ii)'s `−(2c/√n_0)c_F(log n_0)`, with `v_{p^k} = 2 log p·p^{−k/2}` and the symbol
 `σ_p = −Σ_k v_{p^k} cos(kτ log p)`. The truncation is automatic: `c_F(u) = 0` for `|u| ≥ 2T` when `supp F ⊂ I_T`.
@@ -240,7 +240,7 @@ reproduces `W` without an independent positivity input. That is a RESTATEMENT, n
   positivity does not give the sign". As a construction it reduces to a **RESTATEMENT of `RD_T`**, not to an
   impossibility. (B7)
 * **The new 𝔄⁺ branches** (§2.3): flow kernels are per-branch (case 1 or 2 again); finite global functions are
-  finite-`S` (b′, `thm:SC`); norm-line kernels are P47 (D), a RESTATEMENT, whose "positive by construction" variant
+  finite-`S` (b′, `thm:SC`); norm-line kernels are P46 (D), a RESTATEMENT, whose "positive by construction" variant
   falls to the (a) schema.
 
 ### 6.2 (a) amended (derivations): **PASS after rewording**
@@ -268,7 +268,7 @@ restatement. **Exhaustive after (B9), with the escape named and closed by Thm 4.
   and the geometry, the derivation would read verbatim for `Ξ_a` …". This excludes derivations and matches
   Restatement 12.4a and A21. Two repairs. (1) The contradiction is with **Prop 12.4B** (negativity on a
   `Ξ_a`-primitive test) together with Hardy (X16), not with Thm 12.4, which is about `h⁰_a` in the intersection frame
-  (A21). (2) `Ξ_a`-primitivity is **four** conditions (P46 Lemma 12.4A, rank-4 `Π_P`), not `P_T`. The transferred
+  (A21). (2) `Ξ_a`-primitivity is **four** conditions (P47 Lemma 12.4A, rank-4 `Π_P`), not `P_T`. The transferred
   positivity must hold on a class containing the `Ξ_a`-primitive tests. It does whenever it holds on a
   mass-zero/degree-zero class cut by the polar data of `Ξ_a`, but this must be said. (B10)
 * "`𝓔_{Ξ_a} ⪰ 0` PROVED for this branch". The function statement is true, but by A21 it shows only that **the
@@ -296,9 +296,9 @@ That is a standard, not an exclusion. For Epstein (`Ξ_Q`, T2) the question is w
 A2⁺ and `𝔇`. **No positivity derivation is proposed**, so (d) has nothing to act on. The Pass clause (A3 plus one of
 A7/A8/A9 invoked) is not met, trivially, because no derivation exists.
 
-## 7. Doubt 3 — D.195 (3.5) against Paper 47 definitions: **PASS as a restatement, with two conventions fixed**
+## 7. Doubt 3 — D.195 (3.5) against Paper 46 definitions: **PASS as a restatement, with two conventions fixed**
 
-Re-derivation. P47: the operator of `𝔞_T` is `G_Γ − m_0 − Σ_{n∈N_T} w_n(S_{log n} + S_{−log n})`,
+Re-derivation. P46: the operator of `𝔞_T` is `G_Γ − m_0 − Σ_{n∈N_T} w_n(S_{log n} + S_{−log n})`,
 `w_n = Λ(n)/√n`, with `m_0 = −C_0 = log π − ψ(¼) > 0`, and `G_Γ − m_0` has multiplier `m(τ) = C_0 + Lev`. D.195
 (2.3): `log p·(A_p^*A_p − I) = log p Σ_{k≠0} p^{−|k|/2} S_{k log p}`, i.e. the full `p`-part `Σ_k w_{p^k}(S + S^{−1})`.
 With (3.1), `A_p^*A_p − I = (c_p − 1)I − c_p(I − M_p)`, the Weil operator is
@@ -308,14 +308,14 @@ With (3.1), `A_p^*A_p − I = (c_p − 1)I − c_p(I − M_p)`, the Weil operato
 with `𝓔_P = L_∞ + Σ_p log p·c_p(I − M_p)` and `A_P = m_0 + Σ_p log p(c_p − 1)`. So:
 
 1. **Sign convention.** D.195's `B_P = A_P I − 𝓔_P` is **minus** the Weil form, and (3.5) `𝓔_P ≥ A_P` on
-   `ker M_+ ∩ ker M_−` says `𝔞_T ≥ 0` on the primitive space. Consistent. (`M_±` are the two Tate moments, P47's
+   `ker M_+ ∩ ker M_−` says `𝔞_T ≥ 0` on the primitive space. Consistent. (`M_±` are the two Tate moments, P46's
    `A, B`.)
 2. **Window convention.** (3.5) is a window statement only after compression to `L²(I_T)`. D.195 §3 says so ("primes
    whose displacement exceeds the window cancel internally between the two terms of (3.1)"). Indeed, for
    `log p ≥ 2T`, `P_T[(c_p − 1) − c_p(I − P_TM_pP_T)]P_T = P_T(c_pM_p − I)P_T = 0` on `L²(I_T)`. With
-   `P ⊇ {p < e^{2T}}`, the compressed (3.5) on `P_T` **is** `RD_T` (`λ^A_T ≥ 0`), and "∀T" is RH by P47 l.141–144.
+   `P ⊇ {p < e^{2T}}`, the compressed (3.5) on `P_T` **is** `RD_T` (`λ^A_T ≥ 0`), and "∀T" is RH by P46 l.141–144.
    D.195 §5 records that the compression breaks the Markov/CP structure. That does not affect the identity. So
-   "(3.5) equivalent to row D" is **correct as a restatement** under P47's definitions (primitive form).
+   "(3.5) equivalent to row D" is **correct as a restatement** under P46's definitions (primitive form).
 
 **The scale match (R157_005's doubt 3, "heuristic").** It can be sharpened to an identity:
 
@@ -350,7 +350,7 @@ has four conditions (Lemma 12.4A). (B8)
 
 With these, Theorem 4.1 is PROVED within 𝔄⁺. Its content is: **every energy in 𝔄⁺ that reproduces `W` is the
 explicit formula (case 1), a termwise-positive energy minus the load `A_P` (case 2, = D.195 (3.5) = `RD_T`), a
-finite-prime form (`thm:SC`), or a norm-line kernel (P47 (D)).** That is a classification by restatement.
+finite-prime form (`thm:SC`), or a norm-line kernel (P46 (D)).** That is a classification by restatement.
 
 ## 10. Verdict table
 
@@ -383,7 +383,7 @@ finite-prime form (`thm:SC`), or a norm-line kernel (P47 (D)).** That is a class
 P157.S1:
 
 * no realization in 𝔄⁺ supplies an independent positivity input. Every realization that reproduces `W` is the
-  explicit formula on the skeleta, D.195 (3.5) (≡ `RD_T`, re-audited against P47), a finite-prime form, or P47's dual
+  explicit formula on the skeleta, D.195 (3.5) (≡ `RD_T`, re-audited against P46), a finite-prime form, or P46's dual
   problem (D) on the norm line (Theorem 4.1 amended, Lemmas B.1–B.3);
 * the positivity **mechanisms** it could offer are each excluded: local or finite-`S` inference by (b′)
   (`thm:SC`, `prop:finsupp`, with Lemma 3.3 now PROVED as corroboration); "positive by construction" with
@@ -405,20 +405,20 @@ cluster (#37) remains "not excluded, no object" per R157_004.
 
 | item | cleared? | where | condition |
 |---|---|---|---|
-| Lemma 2.1 (amended B3) | **yes** | Paper 46 Part IV, one remark in the (P152.2) closing paragraph (why Prop B.3's conclusion extends from `M(Z)` to `A^{1,an}_Z`) | state the categorical fibre product, and that `x − y` is a map on `A^{2,an}_Z` |
+| Lemma 2.1 (amended B3) | **yes** | Paper 47 Part IV, one remark in the (P152.2) closing paragraph (why Prop B.3's conclusion extends from `M(Z)` to `A^{1,an}_Z`) | state the categorical fibre product, and that `x − y` is a map on `A^{2,an}_Z` |
 | Lemma 3.1(iii) | **conditional** | Paper 44, but only **together with** Dictionary B.1 (R152_001:266), which is itself not in Paper 44 | decide on Dictionary B.1 first. Label: classical (`Λ = μ∗log` split by primes), RESTATEMENT, no novelty |
-| Lemma 3.3 (stronger form) | **yes** (not proposed in R157_005) | Paper 47 as a one-line corollary of `lem:cpos`, or P46 as the proved form of NG-E1 | P47 is in R2 revision: to be decided. Label PROVED |
-| Theorem 4.1 (amended B6, with Lemmas B.1–B.3) | **yes, as a restatement** | Paper 46 Part IV, the (P152.2) paragraph | label "PROVED within 𝔄⁺; exhaustion of the literature CITED (five sources read; Chinburg–Rumely unread)"; must not be phrased as an impossibility theorem |
-| Lemma 6.1 | **yes** | Paper 46, next to Thm 12.4 / Prop 12.4B, as a dictionary remark | label: identity PROVED, reading RESTATEMENT |
-| D.195 (3.5) ≡ `RD_T` (re-audit, §7) | **yes, as a record note** | Paper 46 (where phase-114 material is cited), with the two conventions of §7 | — |
-| Lemma B.3 (norm-line kernels = P47 (D)) | optional | Paper 47 remark after `thm:Z` | to be decided; P47 under revision |
+| Lemma 3.3 (stronger form) | **yes** (not proposed in R157_005) | Paper 46 as a one-line corollary of `lem:cpos`, or P47 as the proved form of NG-E1 | P46 is in R2 revision: to be decided. Label PROVED |
+| Theorem 4.1 (amended B6, with Lemmas B.1–B.3) | **yes, as a restatement** | Paper 47 Part IV, the (P152.2) paragraph | label "PROVED within 𝔄⁺; exhaustion of the literature CITED (five sources read; Chinburg–Rumely unread)"; must not be phrased as an impossibility theorem |
+| Lemma 6.1 | **yes** | Paper 47, next to Thm 12.4 / Prop 12.4B, as a dictionary remark | label: identity PROVED, reading RESTATEMENT |
+| D.195 (3.5) ≡ `RD_T` (re-audit, §7) | **yes, as a record note** | Paper 47 (where phase-114 material is cited), with the two conventions of §7 | — |
+| Lemma B.3 (norm-line kernels = P46 (D)) | optional | Paper 46 remark after `thm:Z` | to be decided; P46 under revision |
 
 ## 13. Closing paragraph
 
 The test of the Berkovich line over Z (R157_005) holds up in substance, but its headline was wrong. The energy does
 split into per-place pieces. Weil's own formula also splits that way, so splitting by itself proves nothing, and
 the parallel audit had already ruled so. What the round actually shows is that every energy one can build on this
-space either rewrites the explicit formula, or rewrites Paper 47's dual problem, or moves the whole question into a
+space either rewrites the explicit formula, or rewrites Paper 46's dual problem, or moves the whole question into a
 capacity inequality that is exactly row D at each window. None of these supplies a sign from outside. The positivity
 arguments one might try on top of them (place by place, from a few primes, from weights put in by hand, or by a
 construction that works equally for the falsifier `Ξ_a`) are each ruled out by theorems already proved.
@@ -426,7 +426,7 @@ I read the recent global Berkovich papers (Morrow; Poineau; Lemanissier–Poinea
 build measures fibre by fibre and never couple places in an energy, so the survey claim holds for them.
 There is one gap in the list (R157_005) of how two different places can be related: through global polynomial
 functions, including the logarithm of the norm, which is what puts all primes on one line. Closing it leads back to
-Paper 47's dual problem. The candidate is closed, as a restatement rather than an exclusion. One per-prime lemma
+Paper 46's dual problem. The candidate is closed, as a restatement rather than an exclusion. One per-prime lemma
 comes out stronger than stated: each prime's local piece of the Weil form is negative on an infinite-dimensional
 space of admissible tests, at every window. That turns an old computed no-go into a theorem. No sign is claimed or
 suggested for ζ at any window, in either form.

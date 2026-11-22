@@ -10,7 +10,7 @@ cited below were re-derived; the rest keep the label of the memo.
   changes sign between orbits the potential is still `≥ 0`. PROVED.
 - Theorem 2.1, re-derived: if each contact is bounded by a potential `V_p ≥ 0`, the remainder is
   `Arch − ∫ΣV_pF² ⪯ Arch`, which has negative bottom on `P_T` for `T` above the archimedean threshold
-  (Paper 47 cor:Tarch, CITED; threshold in `[0.58, 0.60]`). The class dies before `0.60`, with any number
+  (Paper 46 cor:Tarch, CITED; threshold in `[0.58, 0.60]`). The class dies before `0.60`, with any number
   of primes, any `φ_p`, `θ_p(t,s)` and `W_p(t)`. PROVED relative to the citation. Independent of the weight.
 - Consequence: the hypothesis "pairing versus chain" does not explain the threshold `0.695–0.70` of class
   DIR, which does not belong to this class (its pieces keep the contact together with kernel energy).

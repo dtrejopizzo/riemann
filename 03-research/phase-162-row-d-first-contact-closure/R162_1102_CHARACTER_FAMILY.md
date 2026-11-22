@@ -21,7 +21,7 @@ standard (GRH for all K), OPEN, and it is already on record. No label moves; Gat
   hull. This memo does not redo those results. What is new here: the **signed sum identity** (Theorem O), which
   shows that the averaging cancels ζ exactly rather than just failing to reach it; the class-function version
   (Theorem O′); the large-sieve/Parseval audit (§3); the character decomposition of Φ_Λ (§4); and the DH audit (§5).
-- **P46 T1 / R157_004 #37 / R158_001 C15:** a field-uniform proof is admissible, and it proves GRH for every K
+- **P47 T1 / R157_004 #37 / R158_001 C15:** a field-uniform proof is admissible, and it proves GRH for every K
   (here K = ℚ(μ_q)). R155_053: the sieve upper-bound class C_BT = {0 ≤ a ≤ Λ} is closed and gives no sign.
 - A grep of phases 150–162 for "orthogonality", "large sieve", "Gauss sum", "cyclotomic" found no signed-sum
   identity of the type in Theorem O.

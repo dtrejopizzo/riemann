@@ -1,8 +1,8 @@
 # Round 3, option 6 — Joint conversion of the finite Poisson–Chebyshev identity without recombining (selection memo)
 
 Selection memo, not a construction memo. Goal (★): λ_A(T) ≥ 0 for every T, with the definitions of
-`../phase-211-sign-sandbox/STATEMENT_001.md`; N ≥ e^{2T}, M ≥ N. Notation of P47 §sec:firstcontact
-(`04-papers/47-row-d-dual-certificates/main.tex`: S_N, S′_N, L_M, A_M = 𝓜 − L_M − L_M*, E_N = S_N𝓕 − JS_N,
+`../phase-211-sign-sandbox/STATEMENT_001.md`; N ≥ e^{2T}, M ≥ N. Notation of P46 §sec:firstcontact
+(`04-papers/46-row-d-dual-certificates/main.tex`: S_N, S′_N, L_M, A_M = 𝓜 − L_M − L_M*, E_N = S_N𝓕 − JS_N,
 H_{M,N} = L_MS_N − S′_N, thm:PCfinite). Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO /
 NUMERICAL.
 
@@ -17,8 +17,8 @@ Searches done (grep by keyword and synonyms, then primary reading of what was fo
 phases 161, 162, 170, 182, 211, 212, the grid and the index (hits only in unrelated uses: envelopes
 of symbols and of certificates in 211 and 162, none on the parameters (M, N, L, δ) of thm:PCfinite);
 «(c − 1) / c > 1» in phase 170 (no hits); «Möbius inverse / causal Möbius / M_N S_N» in
-161, 162, 170, 182, 211 and P47 (hits in R170_853–858, 860, 878, 883 and R161_066). Read in
-primary: P47 l. 6625–6946 (thm:PCfinite, eq:Gammaenergy, eq:collar, eq:Qbalance, eq:Qrecombine,
+161, 162, 170, 182, 211 and P46 (hits in R170_853–858, 860, 878, 883 and R161_066). Read in
+primary: P46 l. 6625–6946 (thm:PCfinite, eq:Gammaenergy, eq:collar, eq:Qbalance, eq:Qrecombine,
 eq:Qspectral, prop:GEgap, eq:equivgate, prob:annihilate, rem:returnremarks); `R170_816` §§1–2;
 `R170_819`, `820`, `821`, `835`, `838`, `856`, `900` in their setup and verdict; `R170_837` §§5–6
 in full; `R170_840` §§0–2; `R170_878` §0; `R161_033` §§5–8; `ROUND_002_A`, `REVIEW_002_A`, `LEDGER`.
@@ -94,7 +94,7 @@ input to an inequality requires an operation non-affine in the weight, which thi
 
 We work on the dense subspace of P_T of smooth functions supported in I_T = [−T, T]; the
 extension to all of P_T is the usual one of the form domain (CONDITIONAL on the continuity of each
-block in the graph norm, which is not verified here). Conventions of P47: V_{−log n}F(t) = F(t + log n),
+block in the graph norm, which is not verified here). Conventions of P46: V_{−log n}F(t) = F(t + log n),
 𝓕* = 𝓕^{−1} = 𝓕.
 
 **Step 1 (PROVED).** For F supported in I_T and M ≥ N ≥ e^{2T},
@@ -102,7 +102,7 @@ block in the graph norm, which is not verified here). Conventions of P47: V_{−
     a_T(F) = Re⟨A_MF, F⟩.                                                      (4.1)
 
 The terms of L_M with log d ≥ 2T translate the support outside I_T and do not pair; the remaining ones are
-those of B_N + B_N* (P47 §subsec:collars).
+those of B_N + B_N* (P46 §subsec:collars).
 
 **Step 2: the truncated Möbius test (PROVED).** Let M_N = Σ_{n≤N} μ(n)n^{−1/2}V_{−log n}. The translates
 commute with each other, with 𝓜 and with L_M, L_M*. One has

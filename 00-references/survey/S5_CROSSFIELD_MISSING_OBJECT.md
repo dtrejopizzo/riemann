@@ -143,7 +143,7 @@ mirrors.
 | Ihara/graph additions (towers of Ramanujan graphs, reciprocity 1905.03417; isogeny graphs; non-backtracking Ramanujan) | PROVED | — | IRRELEVANT (b1) |
 | "Equivalence between ζ zero distribution and a competing two-…" Phys. Lett. A 2026; "Counting fluctuations of Lee–Yang zeros … prime-logarithmic fields" (Zenodo) | CLAIMED / model | — | IRRELEVANT (physics model or claim) |
 | arXiv 2609.04908 "Finite Hilbert–Pólya matrices from Weil's explicit formula"; 2610.08965 (83.9% distinct zeros) | numeric / PROVED | — | KNOWN (L52 family / frente D); 2610.08965 belongs with L52 |
-| About 120 Zenodo/SSRN "Weil positivity" deposits (certified windows, even-dominance, positive-part operators, "arithmetic bosonization") | CLAIMED, unrefereed | — | not reviewed one by one. Same certificate families as Zhu/Paper 47 |
+| About 120 Zenodo/SSRN "Weil positivity" deposits (certified windows, even-dominance, positive-part operators, "arithmetic bosonization") | CLAIMED, unrefereed | — | not reviewed one by one. Same certificate families as Zhu/Paper 46 |
 
 ## A.3 Knauf test (literature level)
 Papers checked: Knauf CMP 153 (1993); J. Stat. Phys. 73 (1993); J. Math. Phys. 35 (1994); Contucci–Knauf Forum Math. 9 (1997); Knauf

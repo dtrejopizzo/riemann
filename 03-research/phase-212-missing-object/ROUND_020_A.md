@@ -2,18 +2,18 @@
 
 ## 0. Four-point filter
 
-1. **Closest antecedent (read in primary sources).** Paper 47 (`04-papers/47-row-d-dual-certificates/main.tex`):
+1. **Closest antecedent (read in primary sources).** Paper 46 (`04-papers/46-row-d-dual-certificates/main.tex`):
    thm:index (l. 2518, exact index on (0, 0.90]), subsec:negindex (l. 2630): prop:NC (l. 2638), cor:P3,
    rem:P4, thm:J (l. 2694), **cor:nasym (l. 2722)**, cor:H1; Paper 48 thm:archcount (l. 182);
    master index, Part VII §1.2 («archimedean negative count n_−(m_T) ≥ N(T) ≈ 4T», PROVED) and entry
-   «Archimedean negative index, P47 thm:index/P/J/arena» (PARTIAL, tool PROVED).
+   «Archimedean negative index, P46 thm:index/P/J/arena» (PARTIAL, tool PROVED).
 2. **New object.** None. The assigned question is **solved in the corpus**; see §1.
 3. **Why it avoids the difficulty of the antecedent.** Not applicable: it is a repetition. It stops here, without new derivations.
 4. **Connection with global positivity.** This was step P1 of a decomposition (necessary localization),
    not a sign result; no weight enters and the three controls do not apply. The known result
    **refutes P1 as it was drawn** («the sign lives in ≤ 2 directions»).
 
-## 1. What is already proved (CITED, Paper 47)
+## 1. What is already proved (CITED, Paper 46)
 
 Notation: m(τ) = Re ψ(¼ + iτ/2) − log π, m(0) = C_0 < 0, m even, increasing on [0,∞), m − C_0 = φ(τ²) with φ
 complete Bernstein; τ_0 = 6.28983599… is the only positive zero of m (the negative band of the symbol is |τ| < τ_0).
@@ -53,6 +53,6 @@ proved values 0, 1, {1,2}, 2 are compatible (the prediction is asymptotic; the �
 
 ## 3. What an independent check must rederive
 
-Only the reading: that thm:J, prop:NC and cor:nasym of Paper 47 say what is cited, with the same form Arch = 𝔞_∞ on
+Only the reading: that thm:J, prop:NC and cor:nasym of Paper 46 say what is cited, with the same form Arch = 𝔞_∞ on
 P_T (without pole) and the same τ_0. This note proves nothing new. Entry for the index (to be made when
-the index is maintained): «P1 ≤ 2 directions: false for T > 2π/τ_0 by P47 thm:J/cor:nasym — repetition, no object».
+the index is maintained): «P1 ≤ 2 directions: false for T > 2π/τ_0 by P46 thm:J/cor:nasym — repetition, no object».

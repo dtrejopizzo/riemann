@@ -2,12 +2,12 @@
 
  Pen and paper. **No negative value for ζ produced or claimed; no sign contact.**
 
-## 1. What the quartet and self-dual modifications do (checked against P47's own statements)
-**Labels.** In P47 the quartets are **O7** (lem:shape-quartet, def:quartetmodel, prop:quartetmodel). **O8** is the self-dual deformation
+## 1. What the quartet and self-dual modifications do (checked against P46's own statements)
+**Labels.** In P46 the quartets are **O7** (lem:shape-quartet, def:quartetmodel, prop:quartetmodel). **O8** is the self-dual deformation
 f_t = ζ + tg (lem:shape-ft). "O8 quartets" in the round-3 brief is O7. I record both.
-Measure-comb setting (P47 uses it in thm:atomic): a comb is a real measure ν on (0,2T). Its window form is
+Measure-comb setting (P46 uses it in thm:atomic): a comb is a real measure ν on (0,2T). Its window form is
 𝔞^ν_T(F) = C_0 + Lev(c_F) − ⟨ν, c_F⟩, and 𝒱_T^{meas} := {ν : inf_F 𝔞^ν_T(F) ≥ 0}. ζ corresponds to ν_ζ := Σ_n v_n δ_{log n}.
-**Proposition 1 (PROVED, from P47).**
+**Proposition 1 (PROVED, from P46).**
 (a) O7: by prop:quartetmodel(ii), 𝔞^{z,k}_T(F) = C_0 + Lev(c_F) − Σ v_n c_F(log n) + k∫c_Fβ_z. The archimedean part is unchanged
     (same m, no polar term on P_T), and the arithmetic side becomes ν_ζ − kβ_z with β_z absolutely continuous (lem:shape-quartet).
     So **O7 does not move the set 𝒱_T^{meas}; it moves the point** ν_ζ ↦ ν_ζ − kβ_z, off the atomic coordinates.
@@ -47,7 +47,7 @@ moves ν^{(2)} by −kβ_z/(1−θ), which may realign the minimizers; that is t
 
 ## 4. Self-review
 - Prop 1: the archimedean factor is kept by O7 (prop:quartetmodel(ii): "archimedean term m, no polar term") ✓ and by O8 (lem:shape-ft) ✓.
-  Treating the O8 arithmetic side as a measure on (0,2T) uses the explicit formula for f_t, whose atoms P47 describes as "frequencies m/√M".
+  Treating the O8 arithmetic side as a measure on (0,2T) uses the explicit formula for f_t, whose atoms P46 describes as "frequencies m/√M".
   Their exact weights are not reproduced here: ARGUED for O8, PROVED for O7.
 - §2 ceiling row: thm:ceiling is a statement for combs positive at every T. A T-dependent decomposition escapes it at a fixed T. Then
   uniformity in T is again the issue (prop:summable row). ✓ stated.

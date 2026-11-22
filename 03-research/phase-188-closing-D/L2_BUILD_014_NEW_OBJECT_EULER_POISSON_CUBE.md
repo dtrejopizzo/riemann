@@ -4,7 +4,7 @@ Order: invent, define, axiomatize, prove basic properties, then test against the
 
 ## Corpus check
 grep "cube / [0,1]^ / prime weights t_p / interaction / Möbius transform over subsets / Boolean lattice / concave in
-the weights / deformation of Euler factors": Paper 47 prop:wit-sens (sensitivity to weights), finmod (deletion,
+the weights / deformation of Euler factors": Paper 46 prop:wit-sens (sensitivity to weights), finmod (deletion,
 amplification: single directions), N_BUILD_005 §2 (partial Euler products, powers Z^α), R160_M12 (×2 orbits), R184_004
 (inertia of B_p blocks). Nobody defines the joint multi-parameter deformation of all local Euler factors with the
 Poisson (coefficient-1) locus as a distinguished subvariety, nor its interaction expansion. Not a repeat; but it

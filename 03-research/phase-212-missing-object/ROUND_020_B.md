@@ -1,34 +1,34 @@
 # Round 20, memo B — The radical identity of `M` as a single linear relation between the symbol and the weights
 
-Structural and modest note. It is not a sign attempt. Notation of P47 and of round 7:
+Structural and modest note. It is not a sign attempt. Notation of P46 and of round 7:
 `a_T(F) = Arch(F) − Σ_n v_n c_F(log n)`, `v_n = 2Λ(n)/√n`, `c_F(u) = ∫F(t)F(t−u)dt`, `P_T = {∫F e^{±t/2} = 0}`.
 `W_*`, `D^W`, `K_Pó`, `M = −K_Pó″ + ¼K_Pó`, `X_T` as in `phase-160-row-d-infinite-T/R160_M4_R1.md` and `ROUND_019_A.md` §2.
 
 ## Four-point filter
 
 1. **Closest antecedent.** `R160_M4_R1.md` (Theorem A, Lemma 2(a): `W_*(K_Pó,·) = 0`, l.18–37, l.74, l.88–89);
-   P46 §11 (Thm 11.3, Def–Thm 11.7, Thm 11.11: radical of `I_∞`); P47 `def`/`lem:ext-mob`/`thm:ext-half`/
-   `prop:ext-gauge` (main.tex l.9880–9975: the gauge `𝒢_T` is radical for `𝒲`); P47 `thm:inertia-split` (l.3614–3640);
+   P47 §11 (Thm 11.3, Def–Thm 11.7, Thm 11.11: radical of `I_∞`); P46 `def`/`lem:ext-mob`/`thm:ext-half`/
+   `prop:ext-gauge` (main.tex l.9880–9975: the gauge `𝒢_T` is radical for `𝒲`); P46 `thm:inertia-split` (l.3614–3640);
    `phase-200-sign-object/LEMMA_I3_001.md` (I.3-a: `A_RR(c) = (1−c)C`); `ROUND_019_A.md` §3, (3.1);
    master index l.3537 (canonical class K, radical `𝓝_∞`) and l.5551 (G7D-R162_2101: «near-kernel = truncated
    radical (Pólya)»).
 2. **What is new.** No construction. Only: (a) the scalar identity `Arch_*(M) = Σ_n v_n c_M(log n)` written
    explicitly with its sign table; (b) the observation of which arithmetic identities enter it,
-   compared with the Guo/P47 gauge.
+   compared with the Guo/P46 gauge.
 3. **Why it does not repeat.** It does not claim to pass the filter as a construction; it is a precise pointer.
 4. **Connection with global positivity.** None directly (see §4).
 
 ## §1 The identity
 
-**Statement (CITED: R160_M4_R1 Lemma 2(a); P46 Thm 11.3, 11.11).** For `M` in `D^W`, with `A(M) = B(M) = 0`
+**Statement (CITED: R160_M4_R1 Lemma 2(a); P47 Thm 11.3, 11.11).** For `M` in `D^W`, with `A(M) = B(M) = 0`
 (moments `∫M e^{±t/2}`, which vanish because `Φ_M(0) = Φ_M(1) = 0`):
 
     (R)   Arch_*(M) := (1/2π)∫ m(τ)|M̂(τ)|² dτ  =  Σ_{n≥2} v_n c_M(log n),
 
-`m(τ) = Re ψ(¼ + iτ/2) − log π` (P47 eq:symbol). It is the diagonal case of `W_*(M,G) = 0 ∀G`.
+`m(τ) = Re ψ(¼ + iτ/2) − log π` (P46 eq:symbol). It is the diagonal case of `W_*(M,G) = 0 ∀G`.
 
 **Classical reading (PROVED as a reading; unconditional).** `(R)` is Weil's explicit formula
-(P46 Thm 11.3) evaluated at the autocorrelation test `M ⋆ M`, whose Mellin transform is
+(P47 Thm 11.3) evaluated at the autocorrelation test `M ⋆ M`, whose Mellin transform is
 `Φ_M(s)Φ_M(1−s)` with `Φ_M(s) = s(1−s)ξ(s)`. `M` is the image of the Pólya kernel under the operator
 `−∂² + ¼` (which in Mellin multiplies by `s(1−s)` and kills the pole and the term at `0, 1`), and `K_Pó` is the
 test whose transform is the completed function itself (`Φ_{K_Pó} = ξ`, Def–Thm 11.7). The spectral side
@@ -86,11 +86,11 @@ the profile of the kernel `c_M`, not by the arithmetic.
 
 ## §4 What this gives; what is known
 
-1. **Already known (CITED).** `M` (and `K_Pó`, `K_Pó′`) in the radical of the full form: P46 Thm 11.11,
+1. **Already known (CITED).** `M` (and `K_Pó`, `K_Pó′`) in the radical of the full form: P47 Thm 11.11,
    R160_M4_R1 Theorem A/Lemma 2(a), index l.3537, l.5551. The `(1−c)` scaling of the radical block:
    LEMMA_I3_001 I.3-a. The conclusion «the closeness to zero of `X_T` is a property of the radical, not of the sign»:
    ROUND_019_A §3.
-2. **`X_T` and the gauge `𝒢_T`.** `M` is **not** an element of `𝒢_T` (P47 l.9881): `𝒢_T` are functions
+2. **`X_T` and the gauge `𝒢_T`.** `M` is **not** an element of `𝒢_T` (P46 l.9881): `𝒢_T` are functions
    supported in `[−1/λ, 1/λ]` on the multiplicative side whose transport `Φ_φ` (Mellin `ζ(s)𝓜φ(s)`)
    vanishes outside `(−∞, −T]`; their membership in the radical (Guo Lemma 4.4) uses **only** `Λ∗1 = log`
    (rem:ext-killing (ii)) and the pole, **not** the functional equation. `M` instead is divisible by `ξ`
@@ -104,7 +104,7 @@ the profile of the kernel `c_M`, not by the arithmetic.
    has them in a radical without FE. This is a pointer, not an object: the identity is **scalar in one direction**.
 4. **Decomposition `a_T(F) = (≥ 0) + (radical)` via the image of `M`?** No. The radical functions
    supported in the window are only near-null (the bound B(i) is positive only as an upper bound; an exact
-   radical in `P_T` would give exact `a_T = 0`, excluded by P47 `cor:void`/`thm:finmod`, CITED). The «image of `M`
+   radical in `P_T` would give exact `a_T = 0`, excluded by P46 `cor:void`/`thm:finmod`, CITED). The «image of `M`
    restricted to the window» is, by translations and cutoffs, a family of near-radical vectors of
    effective dimension `O(T)` (106_09 Thms 2–3: near-radical matrices of cutoffs of `K, K′, K″`), not dense
    in `P_T`; the complement is all of `P_T` except those directions, and on it the form is what must be signed.
@@ -112,7 +112,7 @@ the profile of the kernel `c_M`, not by the arithmetic.
    `thm:parityschur`: already done, without sign. I propose no construction: it does not pass the filter.
 
 **Verdict.** Everything is already in the corpus except the table of `c_M` and the inventory «Euler + FE + Γ on a vector of
-`P_T`, versus only `Λ∗1` in `𝒢_T`». Output: pointer (R160 Thm. A, P46 Thm 11.11, P47 prop:ext-gauge,
+`P_T`, versus only `Λ∗1` in `𝒢_T`». Output: pointer (R160 Thm. A, P47 Thm 11.11, P46 prop:ext-gauge,
 LEMMA_I3_001 I.3-a, ROUND_019_A §3). No new route; nothing to add to the index except this cross-check note.
 
 **For independent checking.** Rederive: (a) `A(M) = B(M) = 0` from `Φ_M(0) = Φ_M(1) = 0`; (b) that `(R)` is the

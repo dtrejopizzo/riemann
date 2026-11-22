@@ -2,7 +2,7 @@
 
 Track J.
 
-Notation of Paper 47 (04-papers/47-row-d-dual-certificates/main.tex): v_n = 2Λ(n)n^{−1/2}, N_T = {n ≥ 2: log n < 2T},
+Notation of Paper 46 (04-papers/46-row-d-dual-certificates/main.tex): v_n = 2Λ(n)n^{−1/2}, N_T = {n ≥ 2: log n < 2T},
 c_F autocorrelation, 𝔞_T(F) = C_0‖F‖² + Lev(c_F) − Σ_{n∈N_T} v_n Re c_F(log n) =: Arch_T(F) − Π_T(F) (main.tex l.403),
 modifications O_1–O_15 (def:shape-ops), thm:shape, lem:shape-scale, lem:shape-tail (O_3), prop:shape-eulerdel (O_6).
 
@@ -13,7 +13,7 @@ modifications O_1–O_15 (def:shape-ops), thm:shape, lem:shape-scale, lem:shape-
   precision comparison (Selberg factor 8).
 - NG-B8 (Montgomery pair correlation as detector: zero side, on-line spacings), NG-A3 (MV cross-covariance ≈ 0), L24/L63
   (pair-correlation heuristics/proportions), L52 (Lamzouri: Hilbert inequality + pair correlation, proportion only).
-- P47: lem:shape-tail (O_3) already excludes "exact small values + every upper-bound sieve inequality"; lem:shape-del (O_1)
+- P46: lem:shape-tail (O_3) already excludes "exact small values + every upper-bound sieve inequality"; lem:shape-del (O_1)
   excludes C_PNT, C_BT; prop:prog excludes BV/BDH/SW. P149 additive pencil (Vaughan singular series) DEAD (T5).
 - INV_H_001 row A7 (running in parallel): ARGUED that HL correlations enter only through a square or an asymptotic. Not duplicated:
   below is the exact lift and a PROVED exclusion of the whole additive-correlation class, including the unproved HL conjecture.
@@ -66,7 +66,7 @@ the change in Σ_{n≤X}a(n)a(n+h) is ≤ 2π(P)log₂X·log P·log X = o(X^θ).
 product over ℕ with the zeros of ζ, so the exclusion holds even if 𝖯 also contains every zero-side statement (Montgomery pair
 correlation, GUE). PROVED.
 Complements: explicit upper-bound inequalities (MV, Selberg, Brun–Titchmarsh) are down-closed ⇒ lem:shape-tail (O_3) /
-O_4 small c (PROVED, already in P47). Explicit lower bounds alone are up-closed ⇒ O_4 large c, T > ½log2 (PROVED).
+O_4 small c (PROVED, already in P46). Explicit lower bounds alone are up-closed ⇒ O_4 large c, T > ½log2 (PROVED).
 Two-sided explicit bands: O_4^ε (CONDITIONAL on κ_T ≠ 0) and B′ (relative precision needed ≤ 4·10⁹Te^{−15.449T}; sieve
 precision is O(1), Doc 108 §5) — ARGUED excluded.
 

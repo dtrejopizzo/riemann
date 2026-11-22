@@ -43,7 +43,7 @@ equivalence, which is not used here.
 
 | # | line / phase | original statement (summarized) | D-only statement | K | TRAT and who decides it | reason for the original dismissal |
 |---|---|---|---|---|---|---|
-| 1 | l.31 MW-6 (NO-GO-LIST:234) | uniform spectral gap sup_X \|λ_min(Q_X)−λ_min(Q_∞)\|→0 | λ_min(W_T) ≥ 0 uniformly over prime truncations X: lim_X λ_min(W_{T,X}) = λ_min(W_T) and ≥ 0 | K8 (uniformity) / K5 | TRANSFER: convergence in X is PROVED (lem:contA, P47); the ≥ 0 limit is D_T | judgment («restates target») |
+| 1 | l.31 MW-6 (NO-GO-LIST:234) | uniform spectral gap sup_X \|λ_min(Q_X)−λ_min(Q_∞)\|→0 | λ_min(W_T) ≥ 0 uniformly over prime truncations X: lim_X λ_min(W_{T,X}) = λ_min(W_T) and ≥ 0 | K8 (uniformity) / K5 | TRANSFER: convergence in X is PROVED (lem:contA, P46); the ≥ 0 limit is D_T | judgment («restates target») |
 | 2 | l.33 NG-A1 | ω-class cross sum B(N) ≤ N^ε | no D-only form (Lindelöf-type bound for Dirichlet sums; not a sign of W_T) | — | excluded | judgment |
 | 3 | l.37 NG-A5/CIR-6/ES-6 | Li/Jensen/GORZ/Báez-Duarte/finite Weil as progress | W(f) ≥ 0 for a finite family of tests (λ_n, n ≤ N; d_N, N ≤ N₀) | K3 (Li/finite order) | TRANSFER: each finite order holds; uniformity is D (AUDIT_E row K3) | judgment + method NO-GO (finite range does not control ∀f) |
 | 4 | l.44 NG-B4/CIR-3 | Beurling–Nyman distance as a lower bound on depths b_j | no D-only form **in this wording** (b_j = zero depth). The D-only form of NB is built in §2 | — (see §2: K9) | excluded here; §2 | judgment |
@@ -128,7 +128,7 @@ the methodological rule: the classical form **is not D-only** and is not used.
 The target's hint is correct in its geometric half: W_T is an indefinite inner product and its positivity is an
 **angle** statement. Concretely (everything in L²(ℝ) with the measure of the archimedean part of the carrier):
 
-- Write W_T = A_T − P_T with A_T > 0 (archimedean, PROVED in P47 by the positivity of the Γ kernel) and P_T compact
+- Write W_T = A_T − P_T with A_T > 0 (archimedean, PROVED in P46 by the positivity of the Γ kernel) and P_T compact
   (primes + poles, finite in the window). D_T ⟺ ‖A_T^{−½} P_T A_T^{−½}‖_+ ≤ 1 (contraction; K5).
 - The Connes–Sonin realization (phase 183, K9): there exists a subspace 𝒮 (Sonin: functions with support and
   Fourier-support outside the window, in the carrier's normalization) and PW_T such that the non-archimedean part of

@@ -35,5 +35,5 @@ class-dependent LOWER bound (Problem A) on the archimedean form, (iii) bound the
 (a) Prolate concentration floor: literature (Landau–Pollak–Slepian, Bonami–Karoui explicit bounds — import into 00-references),
  then the theorem for the archimedean symbol via the concave φ: a floor needs a spread bound of |F̂|² beyond τ₀ for
  F ∈ P_T, i.e. an uncertainty inequality on the window with the Tate constraints. Pure math.
-(b) Consolidation: Paper 47 now 51+ pp.; a TeX review R2 of the whole paper before any further additions.
+(b) Consolidation: Paper 46 now 51+ pp.; a TeX review R2 of the whole paper before any further additions.
 Scripts of rounds 3–6 live at repo-root `scripts/r3a..r6a`.

@@ -1,7 +1,7 @@
 # Specification of the object to build (round 5 onward)
 
 Target (★): λ_A(T) ≥ 0 for every T (STATEMENT_001.md). What the record proves about any sign-carrying
-object (STATE_001.md §5–6, ROUND_004_A Prop. B, Paper 47 thm:shape / prop:spec / arena theorem):
+object (STATE_001.md §5–6, ROUND_004_A Prop. B, Paper 46 thm:shape / prop:spec / arena theorem):
 
 R1. A family of subspaces E_T ⊂ P_T (or of finite matrices) with dim E_T → ∞ as T grows; no fixed
     finite Λ-free subspace can carry the sign (ROUND_004_A Prop. B: a condition with margin ε > 0 on

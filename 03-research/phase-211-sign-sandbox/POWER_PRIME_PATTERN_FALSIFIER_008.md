@@ -4,7 +4,7 @@ Status: PROVED (explicit vector, zero polar, archimedean deficit and harmful sig
 
 ## 1. Antecedents and declared difference
 
-Read POWER_POLYNOMIAL_003, POWER_ARITHMETIC_WITNESS_006, POWER_POLE_MOVEMENT_004 and Paper47, theorem of sub-comb negativity (§Partial prime combs); searches for Laguerre, Levinson, finite differences and Toeplitz prime in index, grid and crossword. The necessity of the arithmetic and the failure of monotonicity when adding contacts are already recorded. No new global NO-GO is proposed. The exact difference is a closed test in the SAME fixed confluent family used by the certificates: in 006 all contacts help and 2 repairs; here ALL contacts up to 1024 harm a direction with polar exactly zero and negative archimedean part. No matrix search or numerical campaign is done.
+Read POWER_POLYNOMIAL_003, POWER_ARITHMETIC_WITNESS_006, POWER_POLE_MOVEMENT_004 and Paper46, theorem of sub-comb negativity (§Partial prime combs); searches for Laguerre, Levinson, finite differences and Toeplitz prime in index, grid and crossword. The necessity of the arithmetic and the failure of monotonicity when adding contacts are already recorded. No new global NO-GO is proposed. The exact difference is a closed test in the SAME fixed confluent family used by the certificates: in 006 all contacts help and 2 repairs; here ALL contacts up to 1024 harm a direction with polar exactly zero and negative archimedean part. No matrix search or numerical campaign is done.
 
 ## 2. Explicit rational vector in the confluent space
 

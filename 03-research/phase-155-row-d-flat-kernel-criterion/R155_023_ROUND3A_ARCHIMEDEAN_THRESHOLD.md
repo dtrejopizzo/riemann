@@ -1,11 +1,11 @@
 # R155.023 — round 3a: the archimedean threshold and the necessity of the primes
 
-*Phase 155, round 3a. Executes the the round-3a order. Inherits Paper 47 §2
+*Phase 155, round 3a. Executes the the round-3a order. Inherits Paper 46 §2
 (`lem:K`, `thm:S`, `thm:A`, `cor:mono`), §4 (`lem:mbounds`), §8 (`thm:SC`, table `T₀(A)`), and
-`R155_022` (the decomposition `W = pole + gamma + prime`). Paper 47 is **not** touched.*
+`R155_022` (the decomposition `W = pole + gamma + prime`). Paper 46 is **not** touched.*
 
 **No sign for `ζ` is claimed at any `T`. Endpoint of record unchanged:
-`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` (Paper 47 Thm C). All numbers are `DIAGNOSTIC`
+`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` (Paper 46 Thm C). All numbers are `DIAGNOSTIC`
 (double precision, Galerkin, no interval arithmetic). Scripts: `scripts/r3a/`.**
 
 *[amended per R155_025] Eight repairs (E1–E8) applied throughout per the audit
@@ -19,7 +19,7 @@ subspace `P_T` (E6); the Lévy cross-check numbers, the stability claim, the `T 
 
 1. **There are two archimedean thresholds, not one, and the order's guess is inverted at one of them.**
  On all of `L²(−T,T)` (pole term present) `T*_∞ = 0.3716` (bisected, `[0.371602, 0.371641]`).
- On the primitive subspace `P_T` (pole term killed — the space on which Paper 47's `λ^P` and
+ On the primitive subspace `P_T` (pole term killed — the space on which Paper 46's `λ^P` and
  Theorem C live) `T*_{∞,P} = 0.5958` (`[0.595781, 0.595859]`). *[amended per R155_025,
  E3] Both are Galerkin values, hence upper bounds: `T*_∞,true ≤ 0.3716`, `T*_{∞,P},true ≤ 0.5958`.*
 2. `T*_∞ = 0.3716` sits **just above** `½log 2 = 0.34657` — the archimedean form survives the end of the
@@ -45,11 +45,11 @@ subspace `P_T` (E6); the Lévy cross-check numbers, the stability claim, the `T 
 
 | query | hits | what is already there | what is new here |
 |---|---|---|---|
-| `archimedean` | 1189 files | the multiplier `m(τ)`, its Lévy form (Paper 47 §2), the high-`τ` envelope regime (`lem:mbounds`, `prop:env`) | nobody has ever computed the **bottom of the archimedean block alone** as a function of `T` |
+| `archimedean` | 1189 files | the multiplier `m(τ)`, its Lévy form (Paper 46 §2), the high-`τ` envelope regime (`lem:mbounds`, `prop:env`) | nobody has ever computed the **bottom of the archimedean block alone** as a function of `T` |
 | `prime-free window` / `Connes–Consani` | 156 files (`phase-115/115_10`, `phase-115/scripts/115_08`, `phase-118/PHASE_118_CLOSURE`, `THE_BACKWARD_MAP`) | the regime `2T < log 2`: `N_T = ∅`, the prime term vanishes identically, positivity is unconditional | that regime ends at `½log2` but the **archimedean positivity** survives to `0.3716`; the `0.025` gap is measured here for the first time |
-| `Yoshida` | Paper 47 `:137,241,244,276`; `phase-154/R154_013`; `phase-155/R155_001`; `phase-114/114_d_58` | Yoshida 1992: strict positivity at autocorrelation support `log 2`; Lemma 2 a small-window constant. `R154_013`: the 1992 volume is **not** in `00-references`, statements are from secondary reports | the citation is used here only for `≥ 0`; the strictness is recorded as `CONDITIONAL` |
+| `Yoshida` | Paper 46 `:137,241,244,276`; `phase-154/R154_013`; `phase-155/R155_001`; `phase-114/114_d_58` | Yoshida 1992: strict positivity at autocorrelation support `log 2`; Lemma 2 a small-window constant. `R154_013`: the 1992 volume is **not** in `00-references`, statements are from secondary reports | the citation is used here only for `≥ 0`; the strictness is recorded as `CONDITIONAL` |
 | `lambda_min` / `λ_min` | 124 files | `λ^P`, `λ^W`, `λ_min(A_T\|P_T)`, Galerkin values | the archimedean analogues `λ^∞_min`, `λ^{∞,P}_min` are new names for new objects |
-| `pole term` | 72 files | `2Re(A B̄)`, the polar multiplier `β₀ = 2` (Paper 47 `prop:P`), `R155_022 §4` (pole ≈ −gamma to a few %) | the pole term is here shown to be **the whole difference between the two thresholds**: `0.3716` vs `0.5958` |
+| `pole term` | 72 files | `2Re(A B̄)`, the polar multiplier `β₀ = 2` (Paper 46 `prop:P`), `R155_022 §4` (pole ≈ −gamma to a few %) | the pole term is here shown to be **the whole difference between the two thresholds**: `0.3716` vs `0.5958` |
 | `rank two` / codim 2 | 56 files | `P_T` is codimension 2; `cor:mono` uses `λ₃` for that reason | reused verbatim |
 | `local positivity` | 24 files | rows A–C vocabulary | not relevant |
 | `primitive`, `P_T` | 1388 / 313 files | `K^prim`, `λ^P ≤ λ_min(A_T\|P_T)` | the archimedean restriction of the same subspace |
@@ -61,12 +61,12 @@ orders are those of the message and of `R155_018 §4`, which are executed here.
 
 ## §2 Theorem and proofs
 
-Notation as in Paper 47 §2: `K(u) = 1/(2 sinh(u/2)) + 1/(2 cosh(u/2))`, `C₀ = ψ(¼) − log π = −5.3721834`,
+Notation as in Paper 46 §2: `K(u) = 1/(2 sinh(u/2)) + 1/(2 cosh(u/2))`, `C₀ = ψ(¼) − log π = −5.3721834`,
 `Lev(Φ) = ∫₀^∞ (Φ(0) − Re Φ(u)) K(u) du`, `φ` the complete Bernstein function of `thm:S`,
 `c_F` the autocorrelation, `A(F) = ∫F e^{t/2}`, `B(F) = ∫F e^{−t/2}`, `P_T = {A = B = 0}`.
 
 **Definition.** `A_∞(F) = 2 A(F)B(F) + (1/2π)∫ m(τ)|F̂(τ)|²dτ = 2A(F)B(F) + C₀‖F‖² + Lev(c_F)`
-(the second equality is Paper 47 `thm:A` with `N_T = ∅`). Put
+(the second equality is Paper 46 `thm:A` with `N_T = ∅`). Put
 
  `λ^∞_min(T) = inf{ A_∞(F) : ‖F‖ = 1, supp F ⊂ (−T,T) }`,
  `λ^{∞,P}_min(T) = inf{ A_∞(F) : ‖F‖ = 1, F ∈ P_T } = inf{ C₀ + Lev(c_F) : ‖F‖=1, F ∈ P_T }`.
@@ -77,14 +77,14 @@ Notation as in Paper 47 §2: `K(u) = 1/(2 sinh(u/2)) + 1/(2 cosh(u/2))`, `C₀ =
 *Proof.* `A_∞` does not depend on `T`: the Lévy density `K`, the constant `C₀` and the two Tate
 moments are `T`-free. The feasible sets `{‖F‖=1, supp F ⊂ (−T,T)}` and its primitive subset increase
 with `T` (extension by zero), and the constraint `A(F)=B(F)=0` is `T`-free. An infimum over a growing
-set is non-increasing. ∎ (This is Paper 47 `cor:mono` with the comb removed; the comb is what makes
+set is non-increasing. ∎ (This is Paper 46 `cor:mono` with the comb removed; the comb is what makes
 the cited statement say "with the contact set held fixed".)
 
 **(b) Positivity below the prime-free threshold.** For `2T < log 2`, `λ^∞_min(T) ≥ 0`. `PROVED` (by
 citation). Strict positivity: `CONDITIONAL`.
 *Proof.* For `2T < log 2` the contact set `N_T = {n ≥ 2 : log n < 2T}` is empty, so the prime term of
 `W_T` is identically zero and `W_T = A_∞` as quadratic forms on `L²(−T,T)`. Positivity of `W_T` for
-`T ≤ log 2` is known (Paper 47 `:137,276`, citing `Paper42`, `Yoshida1992`, `Bombieri2000`; the [amended per R156_004 A14: `T ≤ log 2` holds for the primitive form only; complete form `T ≤ ½log2` classical, `≤ 0.8` Zhu, cited]
+`T ≤ log 2` is known (Paper 46 `:137,276`, citing `Paper42`, `Yoshida1992`, `Bombieri2000`; the [amended per R156_004 A14: `T ≤ log 2` holds for the primitive form only; complete form `T ≤ ½log2` classical, `≤ 0.8` Zhu, cited]
 prime-free case is also verified end to end in `phase-115/scripts/115_08_prime_free_window_crosscheck.py`
 and `phase-118/PHASE_118_CLOSURE`). Hence `λ^∞_min(T) = λ^W_min(T) ≥ 0`. ∎
 *On strictness.* The corpus's own record (`R154_013`) is that Yoshida 1992 is not held in
@@ -99,13 +99,13 @@ positive only for `T ≲ 0.031`. Numerically (§3) `λ^∞_min(½log2) = +1.33·
 so both are `< 0` for `T ≥ T₀(0) = 0.74921`, and `λ^{∞,P}_min(T) → C₀ = −5.3721834` as `T → ∞`. `PROVED`.
 *Proof.* The first inequality is inclusion of feasible sets (`P_T ⊂ L²(−T,T)`): an infimum over a
 smaller set is larger. **This corrects the direction stated in the order.** For the second, read the
-proof of Paper 47 `cor:mono`. It has exactly two steps: (i) the bottom of the Lévy energy `Lev(c_F)`
+proof of Paper 46 `cor:mono`. It has exactly two steps: (i) the bottom of the Lévy energy `Lev(c_F)`
 on `P_T` is at most `φ((3π/2T)²)`, because `Lev` is the Dirichlet form of the subordinate Brownian
 motion of `thm:S` killed on leaving `I_T`, whose eigenvalues obey `λ_n ≤ φ((nπ/2T)²)` (Song–Vondraček),
 and `P_T` has codimension 2, so the bottom on `P_T` is at most `λ₃`; (ii) the comb contributes at most
 `A_T‖F‖²`. Step (i) never mentions the primes, and step (ii) is vacuous when there are none. Moreover
 the pole term is *identically zero on* `P_T`, which is precisely why `cor:mono` is a statement about
-`P_T` and applies here with `A = 0`. This is Paper 47 `thm:SC` with `N = ∅`, `A = 0`, whose table gives
+`P_T` and applies here with `A = 0`. This is Paper 46 `thm:SC` with `N = ∅`, `A = 0`, whose table gives
 `T₀(0) = 0.74921` (verified: `φ(x_0) = −C₀ = 5.3721834` at `x_0 = (3π/2T₀)²`, `T₀ = 3π/(2√x_0)`; our
 independent evaluation of `φ` gives `φ((3π/2·0.74921)²) = 5.37218`). For the limit: `Lev ≥ 0` and the
 pole term vanishes on `P_T`, so `λ^{∞,P}_min ≥ C₀`; and `φ((3π/2T)²) ↓ 0` since `φ(0⁺) = 0`. ∎
@@ -151,7 +151,7 @@ computed windows, omitting `T = 0.45` and `T = 0.60`; both are restored here]*
 reproducing the known theorem, and
 `λ_min(A_T|P_T)(log2) = +9.9416·10⁻⁷` (`r3a_02`'s restriction path; `r3a_04` gives `9.96·10⁻⁷` by a
 different restriction path — *[amended per R155_025, E8]* the two agree only to `1.5·10⁻³`
-relative, which is the real accuracy of the restricted eigenvalue), of the order Paper 47 §2 quotes
+relative, which is the real accuracy of the restricted eigenvalue), of the order Paper 46 §2 quotes
 ("the truth is `λ ≈ 10⁻⁷`"). *[amended per R155_036] This is an unstabilised
 Rayleigh–Ritz upper bound: round 4a found `9.94e−7` at `N = 18` vs `3.38e−5` at `N = 36` (a factor
 `34` at fixed subspace dimension), with the bottom itself falling `9.94e−7 → 1.05e−7` from `N = 18`
@@ -239,7 +239,7 @@ bound `HEURISTIC` — *[amended per R155_025, E5] previously mislabelled `PROVED
 (asymptotics standard)` throughout*; counts `DIAGNOSTIC`.
 Let `τ₀` be the unique positive root of `m(τ) = 0`. Then **`τ₀ = 6.28983599`** (`r3a_03`, Brent to
 `10⁻¹²`; note `τ₀ − 2π = 6.6·10⁻³`, a coincidence, not an identity). Since `m` is increasing on
-`[0,∞)` with `m(0) = C₀ < 0` (Paper 47 `lem:mbounds`(i)), `m < 0` exactly on `|τ| < τ₀`.
+`[0,∞)` with `m(0) = C₀ < 0` (Paper 46 `lem:mbounds`(i)), `m < 0` exactly on `|τ| < τ₀`.
 Let `n₋(T)` be the number of negative eigenvalues of `A_∞|P_T`. Then
  **(i)** `n₋(T) ≥ 1` for every `T > T*_{∞,P}` (definition of the threshold), and
  **(ii)** `n₋(T) = (2τ₀/π)·T + O(log T) = 4.0040·T + O(log T)` as `T → ∞`.
@@ -273,7 +273,7 @@ archimedean block is *actively* negative. This is the quantitative form of "the 
 
 ## §5 Corollary for the construction of `D`
 
-In the dual language of Paper 47 §3/§7 a certificate is `(ν, β)` with `σ_T + ν̂ + β₀ĝ₀ + β₁ĝ₁ ≥ c`,
+In the dual language of Paper 46 §3/§7 a certificate is `(ν, β)` with `σ_T + ν̂ + β₀ĝ₀ + β₁ĝ₁ ≥ c`,
 `ν` supported outside `[−2T,2T]`. §3–§4 say the following about what such a `(ν, β)` must do.
 
 1. **The two régimes of the certificate are separated by `T*_{∞,P} = 0.5958`, not by a prime entry.**
@@ -291,7 +291,7 @@ In the dual language of Paper 47 §3/§7 a certificate is `(ν, β)` with `σ_T 
  positivity along at least one direction on which `m` is negative, i.e. it must use the primes
  (`PROVED`, Corollary 2 + Proposition 3). *[amended per R155_025, E7 — withdrawn]* The
  claim that, since `ν` lives outside the window, "the only way it reaches the inside primes is
- through `ν̂`'s oscillation at frequencies `≲ τ₀`" does **not** follow from Paper 47 §7:
+ through `ν̂`'s oscillation at frequencies `≲ τ₀`" does **not** follow from Paper 46 §7:
  `main.tex:1052,1070` show the inside and outside prime terms combining into a single
  `−Σ_{n≥2} v_n w(log n) cos(τ log n)` valid at *all* `τ`, not only `|τ| < τ₀` — the restriction to
  `|τ| < τ₀` is where positivity is *needed*, not where the outside atoms *act*. So the remainder of
@@ -314,7 +314,7 @@ In the dual language of Paper 47 §3/§7 a certificate is `(ν, β)` with `σ_T 
 4. **What a construction of `D` may not assume.** (`HEURISTIC` — *[amended per R155_025,
  E5/§7] a methodological warning, not a theorem; previously unlabelled.*) Nothing that treats the
  archimedean block as a positive reservoir to be spent survives past `T = 0.5958`. Together with
- Paper 47 `thm:SC` (positivity is collective in the comb) this pins the shape of any closing
+ Paper 46 `thm:SC` (positivity is collective in the comb) this pins the shape of any closing
  argument: the comb must be complete *and* the archimedean block must be treated as indefinite from
  `0.5958` on.
 
@@ -327,7 +327,7 @@ In the dual language of Paper 47 §3/§7 a certificate is `(ν, β)` with `σ_T 
 | Thm 1(a) monotonicity of `λ^∞_min`, `λ^{∞,P}_min` | `PROVED` |
 | Thm 1(b) `λ^∞_min ≥ 0` for `2T < log 2` | `PROVED` (by citation: Paper 42 / Yoshida / Bombieri; prime-free verification `phase-115/115_08`) |
 | Thm 1(b) strict `> 0` | `CONDITIONAL` (Yoshida Lemma 2, volume not in `00-references`); self-contained bound only for `T ≲ 0.031`; numerically `+1.33·10⁻³` at `½log2` `DIAGNOSTIC` |
-| Thm 1(c) `λ^∞_min ≤ λ^{∞,P}_min ≤ C₀ + φ((3π/2T)²)`, `< 0` for `T ≥ 0.74921`, `→ C₀` | `PROVED` (Paper 47 `cor:mono` / `thm:SC` at `A = 0`, proof re-read and shown to apply) |
+| Thm 1(c) `λ^∞_min ≤ λ^{∞,P}_min ≤ C₀ + φ((3π/2T)²)`, `< 0` for `T ≥ 0.74921`, `→ C₀` | `PROVED` (Paper 46 `cor:mono` / `thm:SC` at `A = 0`, proof re-read and shown to apply) |
 | the order's `λ^{∞,P}_min ≤ λ^∞_min` | **`REFUTED`** (inclusion goes the other way; verified at 23 windows) |
 | Thm 1(d) existence of `T*_∞`, `T*_{∞,P}` in `[½log2, 0.74921]` | `PROVED` |
 | `T*_∞ = 0.3716`, `T*_{∞,P} = 0.5958` | `DIAGNOSTIC` (Galerkin `N = 18`, double precision, no enclosure) — *[amended per R155_025, E3]* **upper bounds** on the true thresholds, i.e. `T*_∞,true ≤ 0.3716`, `T*_{∞,P},true ≤ 0.5958` |
@@ -347,15 +347,15 @@ certificate; §3 is a Galerkin computation and gives *upper* bounds on `λ_min`,
 
 ---
 
-## §7 What this changes in Paper 47 §8
+## §7 What this changes in Paper 46 §8
 
-Paper 47 is not edited. For the record, three things §8 could absorb later:
+Paper 46 is not edited. For the record, three things §8 could absorb later:
 
 1. **`thm:SC` has a sharper companion at `A = 0`.** `thm:SC` gives `T₀(0) = 0.74921` as the window past
  which the *prime-free* form is negative on `P_T`. The true crossing is `T*_{∞,P} = 0.5958`, so the
  Song–Vondraček step loses `0.15` in `T` (`20 %`); and on all of `L²(−T,T)` the crossing is at
  `0.3716`. §8's reading "positivity is collective in the comb" gains a companion: *the archimedean
- block is indefinite from `0.5958` on, and every window Paper 47 cares about except `½log3` is past
+ block is indefinite from `0.5958` on, and every window Paper 46 cares about except `½log3` is past
  its own archimedean threshold* (`0.58` is below, `0.62`, `0.68`, `log2`, `0.75`, `0.80` are above).
 2. **§8's "where the work is" acquires a number.** The deficit `η_P(T)` — `0` at `½log3`, `0` at `0.58`,
  `0.154` at `log2` — is the amount of positivity a certificate must *create* rather than *preserve*.
@@ -363,6 +363,6 @@ Paper 47 is not edited. For the record, three things §8 could absorb later:
  the success at `½log3` is on the preserving side. This is a cleaner explanation of the `½log3`/`0.58`
  gap than the `τ_env/2πe^{2T}` index of `R155_005` (`0.89` vs `2.4`), and it is `T`-monotone.
 3. **`subsec:twoprime` should record that `0.58 < T*_{∞,P}`.** The best certified value at `0.58` is
- `−3.18·10⁻³` against a Galerkin upper bound `2.16·10⁻⁴` (Paper 47) — our independent Galerkin gives
+ `−3.18·10⁻³` against a Galerkin upper bound `2.16·10⁻⁴` (Paper 46) — our independent Galerkin gives
  `+2.1552·10⁻⁴`, agreeing to three digits, and shows that `0.58` is still archimedean-positive
  (`+0.0274`), i.e. the `0.58` window is *not* yet the hard regime. The hard regime starts at `0.5958`.

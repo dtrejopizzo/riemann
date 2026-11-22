@@ -3,7 +3,7 @@
 * Objects: the repair
 ledger `R141_003_ROUND2.md`, the repaired `R141_001_ROUND1.md` (1504 lines, round-2
 notes in place), the new **§D.30** (lines 906–1309), and `README.md`. Every claim of §D.30 was
-re-derived from Paper 46's normalization before being accepted; the witnesses of D.30.7 and D.30.13
+re-derived from Paper 47's normalization before being accepted; the witnesses of D.30.7 and D.30.13
 were recomputed from `M(τ_cK) = ½(e^{c/2},e^{−c/2})` (Thm 11.8(iii)); the convexity of `S_0` was
 re-proved from scratch, and R141_003's proof of it does not survive.*
 
@@ -37,7 +37,7 @@ MAJOR completion of the diagnosis (which changes what phase 142 must do).**
 |---|---|
 | **D.26** | **CONFIRMED.** H7/H8/H10/H11/H14 repairs in place; labels now match what is proved. |
 | **D.27** | **CONFIRMED.** H1/H2/H5/H13 repairs in place; D.27.4 relabelled `RESTATEMENT` with the trace-free two-line proof printed; the FATAL screen now says only what is true. |
-| **D.28** | **CONFIRMED.** H4 repaired exactly as prescribed (order-2 `Π`; Paper 46 Lemma 3.1 for compact support), H9 repaired. O-17 stands `PROVED modulo the 106_11 import`. |
+| **D.28** | **CONFIRMED.** H4 repaired exactly as prescribed (order-2 `Π`; Paper 47 Lemma 3.1 for compact support), H9 repaired. O-17 stands `PROVED modulo the 106_11 import`. |
 | **D.29** | **CONFIRMED** (rewritten; the round-1 recommendation withdrawn). |
 | **D.30** | **CONFIRMED with corrections C4, C5, C6** (and C1–C3, C7–C10). |
 | README / `§ Label` | **CONFIRMED**, subject to C5/C6/C9. |
@@ -51,10 +51,10 @@ MAJOR completion of the diagnosis (which changes what phase 142 must do).**
 | H1 | CLOSED — withdrawn | **CONFIRMED.** Head matter (ll. 19–35) withdraws both halves, names the two reasons (the unearned quantifier in case (A); provability vs truth), and the new FATAL box at D.27.6 (l. 651) says only *"nothing with a sign is proved"* and *"for `C` in case (A) the status of (c) is not decided"*. (Q1) is now explicitly `not decided` in the `§ Label` table. Correct. |
 | H2 | CLOSED — reframed | **CONFIRMED.** D.27.5 is re-presented as *"(c) alone implies RH in case (B)"*, i.e. a **weakening of Theorem 12.3's hypotheses**; the `h⁰_{\deg}` example showing case (B) does **not** imply (b′) is added; "closed negatively" is gone. |
 | H3 | CLOSED — restricted to the schema | **CONFIRMED** at all four sites (D.26.11 box l. 372; (AT-1)(ii) l. 745; (AT-2); D.29). D.28.2's wording kept verbatim, as certified. See **C8** for a residual cross-section tension. |
-| H4 | CLOSED — repaired | **CONFIRMED** verbatim (ll. 832–845): order-2 `Π`, single Green kernel, `Π²` for the double convolution, and Paper 46 **Lemma 3.1** cited for compact support. The `D ↦ D+4` consistency check is stated. |
+| H4 | CLOSED — repaired | **CONFIRMED** verbatim (ll. 832–845): order-2 `Π`, single Green kernel, `Π²` for the double convolution, and Paper 47 **Lemma 3.1** cited for compact support. The `D ↦ D+4` consistency check is stated. |
 | H5 | CLOSED — `RESTATEMENT` | **CONFIRMED** (l. 495): the trace-free two-line proof is printed as the version of record; the D.24.7 comparison deleted; the "classical sanity check" reading stated, and §D.30's candidate satisfies it by construction. |
 | H6 | CLOSED — §D.30 | **CONFIRMED and exceeded**: the ledger built the candidate out, decided the gate constant (D.30.7 — **new, not in the audit**), added the direct proof of ⟹ RH and the stable weakening. See §2. |
-| H7 | CLOSED | **CONFIRMED.** D.26.9(iv) → `RESTATEMENT` with the graph observation; (v) → `PROVED ⊆ / OPEN ⊇`; "explicit" withdrawn; "all the linear conditions" withdrawn; README and P46-19 aligned. |
+| H7 | CLOSED | **CONFIRMED.** D.26.9(iv) → `RESTATEMENT` with the graph observation; (v) → `PROVED ⊆ / OPEN ⊇`; "explicit" withdrawn; "all the linear conditions" withdrawn; README and P47-19 aligned. |
 | H8 | CLOSED | **CONFIRMED** (ll. 145–160): multiset convention, hypothesis class (`θ < ∞` + rapid decay, `A = A_0(𝒦)`), half-plane `\mathrm{Re}\,w > 1+θ`. |
 | H9 | CLOSED | **CONFIRMED**: "four interpolation conditions" replaced by one complex condition; the modulus-domination sentence for the wrong-sign tail added at *Tail domination*. |
 | H10 | CLOSED | **CONFIRMED**: `𝓝_∞ ⊕ Λ_ξ` deleted; only Thm 11.10(c) used. |
@@ -186,7 +186,7 @@ correct proof.
   `\deg_a K_a = 2I^{(a)}(K_a,K_a)` — the same identity as for `ξ`; R141_003 leaves it unsimplified,
   which is harmless. The contradiction is Proof 2 transported, and the one substantive transport is
   Theorem 11.14 via §12.5(c). **Confirmed**, subject to **C7**. The independent confirmation through
-  Paper 46 Theorem 12.4 is a genuine second route and agrees.
+  Paper 47 Theorem 12.4 is a genuine second route and agrees.
 * **`Ξ_Q`: `C_F = ∞` — verified.** The polar weight is `Σ_{p∈\{0,1\}}Ξ_Q(p)e^{(p−½)u} = ¼·2\cosh(u/2)
   ≍ e^{|u|/2}`, while a Davenport–Heilbronn zero with `β > 1` contributes `e^{(β−½)|u|}` with
   `β − ½ > ½`. The ratio is unbounded, so `C_F = ∞` for any `F` with `Φ_F(1−ρ) ≠ 0` at such a `ρ`.
@@ -206,7 +206,7 @@ correct proof.
 ### 2.7 Corpus check (coordinator item 7) — **re-run independently and confirmed**
 
 `grep -rIn "h⁰_{RR}\|h0_RR\|h⁰_RR\|RR-defined\|Riemann–Roch-defined\|Riemann-Roch-defined"` over
-`--include=*.md --include=*.tex --include=*.py`, excluding phase-141: **zero hits**. Paper 46 §13
+`--include=*.md --include=*.tex --include=*.py`, excluding phase-141: **zero hits**. Paper 47 §13
 contains the `H⁰`-**set** candidate (Def. 13.1, Thm 13.2, Restatement 13.3) and the lattice count
 (Def. 13.4, certified by `scripts/h0_candidate.py`); `R140` has the tensor square. **None is `\max` of
 clause (c)'s own right-hand side, and no Riemann–Roch-defined `h⁰` exists in the corpus.** The two new

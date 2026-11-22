@@ -1,7 +1,7 @@
 # Round 031 B — Primitivity as a quantitative bound and generation of the negative block by translations in log ℕ
 
 Object: `a^w_T(F) = Arch(F) − Σ_{n≥2} w_n c_F(log n)` on `P_T = {F ∈ L²(−T,T) : ∫F e^{±t/2} = 0}`
-(P47 `eq:form`, `thm:A`, `rem:Kprim`; Galerkin matrices of `free_weight_scripts/forms.py`, audited against
+(P46 `eq:form`, `thm:A`, `rem:Kprim`; Galerkin matrices of `free_weight_scripts/forms.py`, audited against
 the paper). (PBP_T): `Tr(ρ·Arch) ≥ 0` for every state `ρ` on `P_T` with `Tr(ρ C_n) = 0`, `2 ≤ n < e^{2T}`,
 where `C_n` is the form `F ↦ c_F(log n)`. Script: `free_weight_scripts/block_span_031B.py`.
 
@@ -47,7 +47,7 @@ Primitivity is worth, as an index bound, at most **two directions** (one even, o
 directions in `|τ| ≤ τ* = 6.2898` is the Shannon number `(2T)(2τ*)/2π = 2Tτ*/π ≈ 4.00·T`; since
 `m(τ) < 0` only there, `n_−(Arch|L²) ≈ 4T + O(log T)` and `λ_1, λ_3 → m(0) = −5.372` as `T → ∞`
 (the first prolates concentrate their mass in `|τ| ≪ 1`). Thus:
-- `T ≲ 0.6`: the two conditions are the whole low block; primitivity closes it (P47 `thm:index`:
+- `T ≲ 0.6`: the two conditions are the whole low block; primitivity closes it (P46 `thm:index`:
   `λ^P > 0` for `T ≤ 0.58`). It is the only regime where it decides the sign.
 - Large `T`: it removes 2 of `≈ 4T` directions and the minimum eigenvalue on `P_T` tends to `m(0)`: the
   gain in the lower bound of `∫m dμ` is `o(1)`. There is no bound on "low-frequency mass" better than

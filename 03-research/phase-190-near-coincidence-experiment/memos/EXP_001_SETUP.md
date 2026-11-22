@@ -11,7 +11,7 @@ exact matrix identities from 1*Λ = log (N_022), 2×2 sections (L2_023), progres
 (L2_031), Near as a separate signed operator (L2_030), Gram of translates (R186_001), resonators (L2_020). What is new here is a
 **discovery computation** of the matrices themselves (approved numerics, justified because no structure of Near is known).
 
-## 1. Object (Paper 47, sec:combs; checked against the paper's definitions)
+## 1. Object (Paper 46, sec:combs; checked against the paper's definitions)
 Profile: g(t) = e^{bt}1_{[0,a]}(t), |b| > ½, c_g = g*g̃, G₀ = c_g*c_g, T₀ = 2a, F₀ = (¼ − ∂²)G₀, normalised ‖F₀‖ = 1
 (so c₀(0) = 1 as in prop:AM(iii)). F̂₀(τ) = N(τ²+¼)|ĝ(τ)|⁴, ĝ(z) = (e^{(b+iz)a} − 1)/(b+iz), ĉ₀ = F̂₀².
   B(d) = Arch(d) − X(d),  Arch(d) = (1/2π)∫ m(τ)F̂₀(τ)² cos(τd) dτ,  X(d) = ½Σ_n v_n[c₀(log n − d) + c₀(log n + d)],
@@ -21,7 +21,7 @@ Near(m,k) = ½Σ_{n≥2, kn≠m} v_n c₀(log(kn/m)) (0 < |log(kn/m)| < 2T₀). 
 For a general comb ν = Σ w_x δ_x the same code uses atoms (x, w) and a lattice of points x_m; "Div" is the set of exact coincidences
 x = x_m − x_k (tolerance 10⁻⁹) and "Near" the rest. For the quartet model the Toeplitz kernel
 Q(d) = Σ_{z∈{±δ±iγ}} e^{zd} F̂₀(−iz)² (= ∫c₀(v)·4cosh(δ(v+d))cos(γ(v+d))dv, checked numerically at d = 0 to 1.5·10⁻¹⁵) is ADDED to B
-(Paper 47 def:wit-model: 𝔞^q = 𝔞 + 𝔮, and 𝔮(F) = ∫c_F(u)4cosh(δu)cos(γu)du).
+(Paper 46 def:wit-model: 𝔞^q = 𝔞 + 𝔮, and 𝔮(F) = ∫c_F(u)4cosh(δu)cos(γu)du).
 
 ## 2. Numerics and precision (NUMÉRICO)
 * Kernels Arch(d), c₀(d) by the trapezoidal rule on τ ∈ [0, 10⁵], step h = 0.05 (2²¹ points), evaluated on a d-grid of spacing

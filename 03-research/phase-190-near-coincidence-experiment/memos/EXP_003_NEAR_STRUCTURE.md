@@ -65,7 +65,7 @@ Contribution of each atom n to Near(v) and to Div(v) on the minimizer (near_trip
 | δ_n := Near_n + Div_n | +0.169 | +0.120 | +0.027 | +0.003 | 0.000 | +0.001 | +0.001 | 0.000 | 0.000 |
 Σ_n δ_n = 0.322 = Arch(v) − λ. So **on the minimizer every atom n ≥ 5 cancels its own divisor part to 3 decimals, and the whole comb
 balance against the archimedean energy is carried by the near-coincidence defects at n = 2, 3, 4** (the contact set of the certified windows,
-Paper 47 thm:log5A). Mechanism (PROVED-elementary, not ζ-specific): for a smooth vector s_m = S(m), Σ_m s_m c₀(log(kn/m)) is a Riemann sum of
+Paper 46 thm:log5A). Mechanism (PROVED-elementary, not ζ-specific): for a smooth vector s_m = S(m), Σ_m s_m c₀(log(kn/m)) is a Riemann sum of
 ∫S(y)c₀(log(kn/y))dy = (kn)^{½}·∫S(kn e^{−u})e^{−u}c₀(u)du, which vanishes exactly for S(y) = y^{−½} by the Tate condition ∫c₀(u)e^{u/2}du = 0
 (lem:transl(iii)); the Riemann-sum error is the discretisation defect, large only when the lattice spacing 1/(kn) is not small against the
 profile width 2T₀, i.e. for kn ≲ 1/(2T₀) ≈ 2–4. On the exact vector s = m^{−½} this is an identity (scripts/identity_check.py, M = 800):

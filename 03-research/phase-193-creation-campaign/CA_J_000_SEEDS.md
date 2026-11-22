@@ -16,13 +16,13 @@ Neighbouring records that ARE in the corpus and that this front must not retry:
 - phase 78 E78_1: numerical frustration (no ±1 gauge) of a different matrix B_L. Not a proof; not 𝔸_M.
 - Lee–Yang (L32), Bost–Connes/KMS, prime gas as product state (CA_E_001 Thm 2), multiplicative chaos (L77): dead, not reopened.
 
-## 1. Setting (as CA_E_001 §0, CA_H_002 §1; checked against P47 eq:symbol, eq:m, lem K, prop:AM)
+## 1. Setting (as CA_E_001 §0, CA_H_002 §1; checked against P46 eq:symbol, eq:m, lem K, prop:AM)
 F₀ ∈ 𝒫_{T₀}, ‖F₀‖ = 1, 2T₀ < log 2, c₀ = c_{F₀} (even, |c₀| ≤ c₀(0) = 1, supp ⊂ [−2T₀, 2T₀]), ĉ₀ = F̂₀² > 0.
 𝖡(d) = α(d) − ½Σ_{n≥2} v_n[c₀(log n − d) + c₀(log n + d)], α(d) = (1/2π)∫ m ĉ₀ cos(τd)dτ, v_n = 2Λ(n)n^{−½}.
 φ(q) = 𝖡(log q) on G; 𝔸_M = [𝖡(log m − log k)]_{m,k≤M}; (eq:target) ⟺ 𝔸_M ⪰ 0 ∀M ⟺ φ PD on G (CA_E_001 Lemma 0).
 ν := Bochner measure of 𝖡 on ℝ when 𝖡 is PD; μ_φ = ι_*ν (CA_E_001 Lemma 1).
 
-**Lemma J0 (off-centre archimedean term; PROVED from P47 eq:m).** For |d| ≥ 2T₀,
+**Lemma J0 (off-centre archimedean term; PROVED from P46 eq:m).** For |d| ≥ 2T₀,
   α(d) = −½∫_0^∞ K(u)[c₀(d − u) + c₀(d + u)]du,  hence  |α(d)| ≤ 2T₀·K(|d| − 2T₀)   (|d| > 2T₀),
 with K(u) = 2e^{3u/2}/(e^{2u} − 1) (positive, decreasing).
 *Proof.* m = C₀ + ∫_0^∞(1 − cos τu)K(u)du. (1/2π)∫ĉ₀ cos τd = c₀(d) = 0 for |d| ≥ 2T₀, and (1/2π)∫ĉ₀ cos τu cos τd dτ =

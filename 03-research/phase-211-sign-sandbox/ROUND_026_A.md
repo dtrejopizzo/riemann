@@ -1,19 +1,19 @@
 # Round 26 A — Computer-assisted lower certificate for λ_A beyond ½log5
 
-Target: a certified lower bound λ_A(T) ≥ μ > 0 at windows T > ½log5, by the lower certificate of Paper 47
+Target: a certified lower bound λ_A(T) ≥ μ > 0 at windows T > ½log5, by the lower certificate of Paper 46
 prop:lowercert (frequency-truncated symbol, Legendre block, Haynsworth inertia, interval Cholesky), first at T = 1.0,
 then as far as the method reaches. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
-Notation of STATEMENT_001 and Paper 47 §sec:log5, app. subsec:encllog5: s_T(τ) = m(τ) − Σ_{n∈𝒩_T} v_n cos(τ log n),
+Notation of STATEMENT_001 and Paper 46 §sec:log5, app. subsec:encllog5: s_T(τ) = m(τ) − Σ_{n∈𝒩_T} v_n cos(τ log n),
 𝒜 = Σ_{n∈𝒩_T} v_n, e_l the normalised Legendre basis of L²(I_T), j_l spherical Bessel functions, S_c the
 time–frequency concentration operator with c = Tτ_N, Λ_k(c) = tr(P_k^⊥S_cP_k^⊥).
 
 ## 0. Corpus check
-Read: Paper 47 §sec:log5 (thm:log5A, thm:log5W, rem:log5scope, prop:onewindow, cor:beyond5) and app. subsec:encllog5
+Read: Paper 46 §sec:log5 (thm:log5A, thm:log5W, rem:log5scope, prop:onewindow, cor:beyond5) and app. subsec:encllog5
 (prop:lowercert and its computation); ROUTES-TRIED-INDEX rows on certificates (P155 certificates at log 2, ½log3,
 ½log5; Mori ½log15 CITED; Liu 17/16 CITED as preprint); STATE_002 §1 R1, R15 (E_T and the Neumann/Schur form),
 ROUND_017_C, ROUND_018_A (arb compression with Hilbert–Schmidt tail).
 What differs. Nothing indexed is retried as a sign mechanism: this round is a certificate at a single window, in the
-class already used by Paper 47 at ½log5. The differences are computational and are what make T = 1.0 reachable:
+class already used by Paper 46 at ½log5. The differences are computational and are what make T = 1.0 reachable:
 (i) the floor s_∞ is not taken as m(τ_N) − 𝒜 but certified as a lower bound of s_T on [τ_N, τ_B] by an interval scan,
 with m(τ_B) − 𝒜 ≥ s_∞ beyond (m increasing); (ii) quadrature panels of length 8 away from τ = 0, with the Bernstein
 ellipse sized by the distance to the poles of ψ(¼ ± iτ/2), which lie on the imaginary axis (≈ 12 nodes per unit
@@ -27,20 +27,20 @@ remainder, whose Legendre columns decay super-exponentially past degree ≈ c, w
 
 ## 1. The certificate (statement and proof skeleton)
 
-### 1.1 Lower form (PROVED, Paper 47 prop:lowercert with a certified floor)
+### 1.1 Lower form (PROVED, Paper 46 prop:lowercert with a certified floor)
 Fix T, τ_N > 0 and s_∞ > 0. Suppose (F1) s_T(τ) ≥ s_∞ for |τ| ≥ τ_N. Put g = (s_∞ − s_T)1_{|τ|<τ_N},
 𝒢 = Q_T g(D) Q_T. Then a_T(F) ≥ s_∞‖F‖² − ⟨𝒢F,F⟩, and 0 ≤ 𝒢_± ≤ ω_± S_c with c = Tτ_N,
 ω_+ = s_∞ − C_0 + 𝒜, ω_− = m(τ_N) + 𝒜 − s_∞. The rest of prop:lowercert is unchanged, with one change in (a):
 on Y = span{e_l : l ≥ k_1} (parity fixed), ‖P_Y𝒢_+P_Y‖ ≤ ω_+ tr(P_Y S_c P_Y), and the trace is
     tr(P_Y S_c P_Y) = Σ_{k_1 ≤ l < K_2, l ≡ par} (2T/π)(2l+1)∫_0^{τ_N} j_l(τT)² dτ + (tail over l ≥ K_2) ≤ (that sum) + Λ*_{K_2}(c),
 each diagonal entry being a quadrature with its own ellipse remainder. Proof: ⟨S_c e_l, e_l⟩ = (1/2π)∫_{|τ|<τ_N}|ê_l|² and
-|ê_l(τ)|² = 2T(2l+1) j_l(τT)²; the tail is cor:P1 of Paper 47. ∎
+|ê_l(τ)|² = 2T(2l+1) j_l(τT)²; the tail is cor:P1 of Paper 46. ∎
 (F1) is certified as follows: m is increasing on [0,∞) (lem:mbounds(i)) and the comb is ≥ −𝒜, so s_T ≥ m(τ_B) − 𝒜 on
 |τ| ≥ τ_B; on [τ_N, τ_B] the interval extension of s_T on 512 boxes per unit length is checked to exceed s_∞.
 
 ### 1.2 Quadrature (PROVED bound)
 G_{il} = (2T/π)√((2i+1)(2l+1))(−1)^{(l−i)/2}∫_0^{τ_N} g j_i(τT) j_l(τT)dτ (i ≡ l mod 2). Panels: [0,20] in 40 panels of
-length ½ with 46 Gauss nodes and ρ = 3.2 (as in Paper 47); [20, τ_N] in panels of length 8 with 92 nodes and ρ = 2
+length ½ with 46 Gauss nodes and ρ = 3.2 (as in Paper 46); [20, τ_N] in panels of length 8 with 92 nodes and ρ = 2
 (ellipse semi-axes a = 5, b = 3). On a panel centred at c_0 ≥ 24 the ellipse stays at real part ≥ c_0 − 5 ≥ 19, so with
 w = ¼ ± iτ/2 one has |Im w| ≥ 9.5 and ψ(w) = ψ(w + 10) − Σ_{k<10}(w + k)^{−1} with |w + k| ≥ max(Re(w + k), |Im w|) and
 Binet's bound for Re(w + 10) ≥ 8.75; |cos(τ log n)| ≤ cosh(b log n), |j_l(z)| ≤ e^{|Im z|}. Remainder (ATAP Thm 19.3):
@@ -55,11 +55,11 @@ x̃^l/(2l+1)!! < 2^{−330} the value is replaced by the ball [0 ± 2^{−320}],
 right side decreases for l > x/2 (the bound at the cut is checked in balls).
 
 ### 1.4 Positive definiteness (PROVED criterion)
-After the Householder congruence and the 2×2 Haynsworth step of Paper 47 (unchanged), the Schur complement S (ball
+After the Householder congruence and the 2×2 Haynsworth step of Paper 46 (unchanged), the Schur complement S (ball
 matrix, dimension dim E − 1) is certified positive definite as follows: an approximate Cholesky factor of its
 midpoint is computed recursively (block 2×2, approximate solves), X ≈ L^{−1} is kept as an exact lower-triangular matrix
 with non-zero diagonal, and M = XSXᵀ is formed in ball arithmetic. If every Gershgorin disc of M lies in (0,∞), then M,
-hence S, is positive definite (X invertible). This replaces the interval Cholesky of Paper 47, whose ball radii grow
+hence S, is positive definite (X invertible). This replaces the interval Cholesky of Paper 46, whose ball radii grow
 exponentially at dimension ~10³ (observed: radius 10⁻⁴¹ → 0.47 after 27 elimination steps in a 39×39 leaf).
 
 ### 1.5 Validation at ½log5 (NUMERICAL reproduction of a PROVED result)
@@ -89,7 +89,7 @@ combine.py, cert.py G_T1.pkl <par> 2550 <mu>.
 
 Relation to the cited range. T = 1 lies inside the cited ranges (Liu, T ≤ 17/16, preprint; Mori, T ≤ ½log15, unrefereed),
 so Theorem 26A.1 is not beyond the cited frontier; it is an independent certificate with the constant 10⁻²³ against
-Liu's 2^{−151} ≈ 3.5·10⁻⁴⁶ at T = 1, and it extends the in-paper certified range of Paper 47 from ½log5 to 1.
+Liu's 2^{−151} ≈ 3.5·10⁻⁴⁶ at T = 1, and it extends the in-paper certified range of Paper 46 from ½log5 to 1.
 
 ## 3. Reach of the method: why ½log15 + 0.01 is out of range here
 
@@ -114,7 +114,7 @@ balls.
 | 1.5 | + 17, 19 | 13.02 | ≥ 3.8·10⁵ (scan range) | ≥ 3.9·10⁵ | ≥ 3.7·10⁵ |
 
 The growth is that of 2πe^{𝒜(T)} damped by the rarity of simultaneous alignment of the phases τ log p (Kronecker), i.e.
-doubly exponential in T, as rem:log5scope and prop:env of Paper 47 predict.
+doubly exponential in T, as rem:log5scope and prop:env of Paper 46 predict.
 
 ### 3.3 Consequence (NO-GO for this machine, not in principle; NUMERICAL sizes)
 At T_* = ½log15 + 0.01 the certificate needs dim E ≥ 1.1·10⁵ (≥ 5.5·10⁴ per parity, Legendre ≈ 1.6× more), i.e. a dense

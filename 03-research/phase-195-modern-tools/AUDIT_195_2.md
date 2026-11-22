@@ -1,6 +1,6 @@
 # AUDIT_195_2: audit of INV_Q_001 and INV_R_001 (phase 195)
 
-Audit. Checked against Paper 47 (eq:symbol/eq:form, λ_A, 𝒫_T),
+Audit. Checked against Paper 46 (eq:symbol/eq:form, λ_A, 𝒫_T),
 INV_L_001 L1/L3 and AUDIT_195 (P2 holds only on ½<σ<1). Script: AUDIT_195_2_r1_check.py.
 
 ## (a) R1 (log-free Green identity): VERIFIED, plus NUMÉRICO

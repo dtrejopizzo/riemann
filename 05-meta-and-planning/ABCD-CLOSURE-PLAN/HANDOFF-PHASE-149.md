@@ -2,7 +2,7 @@
 
 ## Record status
 * Rows A, B, C: WEIL-STRENGTH-COMPLETE (Papers 43–45, LaTeX). Row D: no label, no sign.
-* Paper 46: Parts I–III closed (§§1–23 + §19bis; adversarial review R1/R2 ACCEPT). Part IV (phases 145–149) pending decision.
+* Paper 47: Parts I–III closed (§§1–23 + §19bis; adversarial review R1/R2 ACCEPT). Part IV (phases 145–149) pending decision.
 * Phases 145–148 closed negatively, by theorem. Record reading: the wall is ONE object — a `Spec Z` with
   closed points over each `F_q` — characterized from three sides: no ring of correspondences (146–148),
   no a priori poles of the tensor square (phase 36 docs 106/107 + R147/R148), no finite base field (`F₁`).
@@ -50,8 +50,8 @@ Deligne does not use a surface nor a sign: (i) even tensor powers give traces �
 
 ## Open decisions
 * If D.60 shows that W-H refutes the D.59 hypothesis: continue with another family (phase 150) or close D in the
-  map and write Part IV of Paper 46 (phases 134–149)?
-* LaTeX conversion of Part III of Paper 46 (pending).
+  map and write Part IV of Paper 47 (phases 134–149)?
+* LaTeX conversion of Part III of Paper 47 (pending).
 
 ## Standing rules
 Pure mathematics, numerical only if strictly necessary; construction + adversarial audit; check the corpus
@@ -95,10 +95,10 @@ object, not go around it.
 ## Update (afternoon) — phase 150 closed
 * Full circuit (`R150_000`–`R150_005`). Result: T5 proved (trivial), T4 → polar/entire classification
   (classical), T3 conditional (read DMV 2006: O-150.1). Does not move the sign; sharpens the wall.
-* **Decision pending**: close D in the map + Part IV of Paper 46, or open MW-5 with a concrete idea.
-* Minor pending items: `R149_003`–`R149_005`; Paper 46 §18 with T5 and the classification; commit/push.
+* **Decision pending**: close D in the map + Part IV of Paper 47, or open MW-5 with a concrete idea.
+* Minor pending items: `R149_003`–`R149_005`; Paper 47 §18 with T5 and the classification; commit/push.
 
 ## Closure — row D closed in the map
-* Phases 149 (`R149_003`, `R149_005`) and 150 closed. Paper 46 Part IV §§24–28 + `PART_IV_NOTES.md` +
+* Phases 149 (`R149_003`, `R149_005`) and 150 closed. Paper 47 Part IV §§24–28 + `PART_IV_NOTES.md` +
   `PART_IV_ADVERSARIAL_REVIEW_R1/R2.md` (ACCEPT). Wall fixed in §28.2; reopening in §28.4.
-* Remaining: LaTeX of Parts III–IV of Paper 46; O-150.1; commit and push (not done).
+* Remaining: LaTeX of Parts III–IV of Paper 47; O-150.1; commit and push (not done).

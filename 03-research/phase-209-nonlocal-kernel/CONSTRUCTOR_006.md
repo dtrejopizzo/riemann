@@ -153,7 +153,7 @@ The pending identity is not "some root of Q_T exists": it must use (2) and (3) t
 
 ## Precision of scope of the link criterion — 2026-10-19
 
-The later review of the link (round011, direct cross-check with P47) corrects
+The later review of the link (round011, direct cross-check with P46) corrects
 the reading of §5: the three correspondences listed there are a possible
 scheme for computing a candidate, NOT necessary conditions of every
 proof. A TOTAL identity, or a domination of forms,
@@ -165,5 +165,5 @@ remainders and domains justified, suffices. It is not required that G produce se
 the comb, v separately the polar part, nor Π separately gamma. There may be
 cancellations between pieces. The step from the core uses continuity in the
 norm of the target form; L² density is not enough. For complete D the
-sectors and polar terms must be treated according to P47. This precision
+sectors and polar terms must be treated according to P46. This precision
 does not yet supply the required domination or map.

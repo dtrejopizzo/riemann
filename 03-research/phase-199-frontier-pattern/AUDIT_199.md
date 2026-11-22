@@ -5,7 +5,7 @@ Sources checked:
 - Mori VII (log 12, zenodo 23265728, scratchpad `zen/moriVII.txt`): §1.2, §3 (3.1)–(3.4), Prop 3.1, Lemma 3.2, Remark 2.3, §7.
 - Mori VI (log 10, `zen/moriVI.txt`): Lemma 3.2 (L < 7/6) and §7.
 - AUDIT_ZENODO_FRONTIER §0, B1, B8.
-- Paper 47: def:W, prop:env, rem:moriceiling, subsec:shape-geom (thm:geo-tv).
+- Paper 46: def:W, prop:env, rem:moriceiling, subsec:shape-geom (thm:geo-tv).
 - BARRIER_EST_001 Thm 4.
 - ROUTES-TRIED-INDEX README (lines 50, 52, 447–450).
 

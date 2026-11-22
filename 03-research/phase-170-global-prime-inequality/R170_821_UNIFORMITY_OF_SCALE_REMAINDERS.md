@@ -41,7 +41,7 @@ translation is a unimodular multiplication in Fourier.
 
 ## 2. The exact obstruction from translations
 
-Let \(\tau_a f(t)=f(t+a)\), with the Paper 47 convention. For any
+Let \(\tau_a f(t)=f(t+a)\), with the Paper 46 convention. For any
 \(a,b\in\mathbb R\),
 
 \[
@@ -119,7 +119,7 @@ The symbol
 
 is \(C^1\), even, and satisfies
 \(m(x)=\log(|x|/(2\pi))+O(|x|^{-1})\) as \(|x|\to\infty\).
-The Bernstein series representation of Paper 47, or the derivation of
+The Bernstein series representation of Paper 46, or the derivation of
 the digamma series, further shows that \(xm'(x)\) is continuous and
 bounded (it tends to \(1\) at both infinities and to \(0\) at the
 origin). Let

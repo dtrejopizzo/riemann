@@ -1,7 +1,7 @@
-# Review 009: rounds 010_A, 011_A, 011_C, 012_A, 012_B, 013_A against Paper 47 §sec:ext and prolate theory
+# Review 009: rounds 010_A, 011_A, 011_C, 012_A, 012_B, 013_A against Paper 46 §sec:ext and prolate theory
 
-Scope. ROUND_010_A, ROUND_011_A, ROUND_011_C, ROUND_012_A, ROUND_012_B, ROUND_013_A, checked against Paper 47
-(04-papers/47-row-d-dual-certificates/main.tex: eq:symbol and eq:W at L.110–124, lem:mbounds L.505–515, def:W/thm:Z
+Scope. ROUND_010_A, ROUND_011_A, ROUND_011_C, ROUND_012_A, ROUND_012_B, ROUND_013_A, checked against Paper 46
+(04-papers/46-row-d-dual-certificates/main.tex: eq:symbol and eq:W at L.110–124, lem:mbounds L.505–515, def:W/thm:Z
 L.1225–1260, §sec:ext L.9856–10045: def:ext, lem:ext-mob, thm:ext-half, prop:ext-gauge, lem:ext-ellbound, prob:ext-L,
 prop:ext-consol, lem:ext-hf) and against the classical prolate theory (Slepian–Pollak; double orthogonality; the
 whole-line finite Fourier eigen-equation). Verdict per PROVED claim: CONFIRMED / REFUTED / DOWNGRADE. Line numbers are
@@ -9,9 +9,9 @@ memo line numbers. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO 
 
 ## 1. ROUND_010_A
 
-**Identity (3.1) (L.136–141).** CONFIRMED. It is eq:form + eq:W of Paper 47 for real g: the comb term
+**Identity (3.1) (L.136–141).** CONFIRMED. It is eq:form + eq:W of Paper 46 for real g: the comb term
 (1/2π)∫Σv_n cos(τ log n)|ĝ|² equals Σv_n c_g(log n), the contact set n < N is NT of eq:symbol, and 2Re(AB̄) = 2AB for real
-g. Notational defect: the memo writes P_T for the trigonometric polynomial while Paper 47 writes \PT for the primitive
+g. Notational defect: the memo writes P_T for the trigonometric polynomial while Paper 46 writes \PT for the primitive
 subspace; both appear in the same sentences (e.g. L.174–179). Rename the polynomial in any integration.
 
 **§1 consistent quotient, D_g = D − DJH⁻¹JᵀD (L.24–35).** CONFIRMED as bookkeeping. leak(f) = Σd_k⟨f, ψ_k⟩² for f supported
@@ -79,7 +79,7 @@ reduces to a pointwise statement is ARGUED, correctly.
 on its extension to the weights ρ(k log p/T) (the extension only lowers block masses; accepted). Bernstein step, superlevel
 interval of length s/(TΣ₀), choice k = ⌊log Ω/(2T)⌋ with N^k ≤ Ω, and the asymptotic (3.2) all recomputed
 (4kS₂/(es²) = 64T/(eϑ²L)). DOWNGRADE of its value: the theorem is superseded by the trivial bound. Since 0 ≤ ρ ≤ 1 and
-v_n ≥ 0, P^ρ_T ≤ Σ₀ everywhere (Paper 47 lem:mbounds(iii)), hence P^ρ_T < ϑm on every τ with m(τ) > Σ₀/ϑ, i.e. above
+v_n ≥ 0, P^ρ_T ≤ Σ₀ everywhere (Paper 46 lem:mbounds(iii)), hence P^ρ_T < ϑm on every τ with m(τ) > Σ₀/ϑ, i.e. above
 log Ω_triv = Σ₀/ϑ + log 2π + o(1) ≈ 4λ/ϑ, while log Ω_B ≈ (64/(eϑ²))TN. Theorem B therefore certifies nothing that the
 triangle inequality does not certify at a doubly-exponentially lower height.
 
@@ -102,7 +102,7 @@ m ≈ 4T at Ω = N²; the "genuine O(1) competition" reading (L.132–135) is AR
 ## 3. ROUND_011_C
 
 **Lemma 1.1 (L.18–24).** CONFIRMED. (i) d/dτ Reψ(¼ + iτ/2) = Σ(k + ¼)(τ/2)/|k + ¼ + iτ/2|⁴ is correct; this is
-lem:mbounds(i) of Paper 47 and should be CITED from there. (ii) is lem:mbounds(iii) with weights 0 ≤ ρ ≤ 1. (iii)
+lem:mbounds(i) of Paper 46 and should be CITED from there. (ii) is lem:mbounds(iii) with weights 0 ≤ ρ ≤ 1. (iii)
 m(τ) = log(τ/2π) + O(τ⁻¹) by lem:mbounds(ii) (the memo's O(τ⁻²) is also true asymptotically, Stirling); log 2π < 2 gives
 log τ*_κ ≤ Σ₀ + κ + 2. The table of §1 and Tables 2.1, 3.1 are NUMERICAL (spot-check: m(Ω_lo) at T = 0.8 equals
 log(1.1N) = 1.695 to the printed digits). Reading (L.25–28): the second sentence is wrong, see Corollary 3.2 above.
@@ -196,8 +196,8 @@ uniform near the ends of the support x_j ∈ (e^{−2T}/m, N/m) where w varies a
 n^{s−1} = conj n^{−s} on the line are all correct, so P^ρ_T = 𝒜_w + R_w exactly. But R_w is, by the residue theorem, the
 sum of the residues of (ζ′/ζ)(1 − s − u)w̃(u) in the strip between the two lines, i.e. the contribution of the nontrivial
 zeros of ζ plus the polar term. (2.2) is therefore the Weil explicit formula for the even test function ρ(|x|/T)cos(τx),
-already in Paper 47 as thm:Z (eq:fw, eq:Z, L.1240–1260) for compactly supported weights. Labels: identity CITED (Weil;
-Paper 47 thm:Z), not new. The memo's statements that "the sandbox does not evaluate" R_w and that R_w is a
+already in Paper 46 as thm:Z (eq:fw, eq:Z, L.1240–1260) for compactly supported weights. Labels: identity CITED (Weil;
+Paper 46 thm:Z), not new. The memo's statements that "the sandbox does not evaluate" R_w and that R_w is a
 "strip-crossing defect" are correct but hide what R_w is; the reformulation of (U) at L.60–61 is a restatement of (U) as
 a statement about the zero side of the explicit formula on cells of width 1/T. It is a restatement, as the memo says, and
 must be recorded as such.
@@ -228,7 +228,7 @@ ARGUED class closure.
 | 011_A | Thm 3.1, Cor 3.2 | CONFIRMED (CONDITIONAL on ROUND_006_C Thm B); superseded by the trivial bound P ≤ Σ₀ |
 | 011_A | "OPEN on 2T ≲ log τ < log Ω_B" | REFUTED as a range description: open range is 2T ≲ log τ < Σ₀ + O(1) |
 | 011_A | Prop 4.1 | CONFIRMED with ρ(1) → min_{[0,1]}ρ |
-| 011_C | Lemma 1.1 | CONFIRMED (= lem:mbounds(i),(iii) of Paper 47; cite); reading L.27 REFUTED |
+| 011_C | Lemma 1.1 | CONFIRMED (= lem:mbounds(i),(iii) of Paper 46; cite); reading L.27 REFUTED |
 | 012_A | Lemmas 1.1, 1.2; Thm 2.1 | CONFIRMED (slack 0.0694) |
 | 012_A | Thm 2.2 | CONFIRMED, re-run reproduces all slacks; first failing cell [2.660, 2.661] |
 | 012_A | Prop 3.1 | CONFIRMED as identity; "needed" reading DOWNGRADE to "necessary up to o(1), τ ≥ 2Ω_lo" |
@@ -239,7 +239,7 @@ ARGUED class closure.
 | 012_B | Cor 1.3 | CONFIRMED as identity; interpretation ARGUED |
 | 012_B | Prop 1.4 | DOWNGRADE to ARGUED |
 | 013_A | Lemma 1.1 | DOWNGRADE to CITED (standard B-process; error term quoted) |
-| 013_A | Prop 2.1 / (2.2) | CONFIRMED; it is the explicit formula (Paper 47 thm:Z): label CITED, R_w = zero side + polar term |
+| 013_A | Prop 2.1 / (2.2) | CONFIRMED; it is the explicit formula (Paper 46 thm:Z): label CITED, R_w = zero side + polar term |
 | 013_A | Lemma 2.2 | CONFIRMED (add the residue of χ′/χ at s + u = 1, negligible) |
 | 013_A | Prop 3.1 (NO-GO 𝒱) | DOWNGRADE to ARGUED class closure |
 
@@ -270,6 +270,6 @@ Nothing in these six memos is a sign step, and none is offered as one.
   Prop 1.2 nothing yet gives sufficiency.
 - The S𝒢S picture of 012_B is a heuristic organising principle on per-class admissible spans, not an exact
   class-blind factorisation; the "next step" of 012_B (banded sweep in b = Sa) must first define 𝒢 on a common domain.
-- 013_A's identity is the explicit formula already in Paper 47; the one-profile margin is a statement about its zero
+- 013_A's identity is the explicit formula already in Paper 46; the one-profile margin is a statement about its zero
   side on cells of width 1/T. Recording that is a restatement of (U), not a reduction.
 - Row D OPEN.

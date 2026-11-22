@@ -1,6 +1,6 @@
 # phase 155 — REVERSE-ENGINEERING track: scripts
 
-Reverse-engineer the closing object `w_T` of Paper 47 §7 (Theorem Z) from the
+Reverse-engineer the closing object `w_T` of Paper 46 §7 (Theorem Z) from the
 *known* zeros of ζ, treating them as training data. Everything here is
 **DIAGNOSTIC** (double precision, finite grids, truncated zero lists).
 No statement about RH or about a sign for `T > log 2` is made or implied.

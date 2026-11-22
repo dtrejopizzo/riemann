@@ -50,10 +50,10 @@ cancel to four digits. Positivity is never visible term by term on the prime sid
 FLUCTUATIONS of the primes about their mean, dominated by the Gamma kernel, form a positive-definite measure
 (Weil's criterion; PROVED as a reformulation).
 (c) Two regimes (PROVED / OPEN): for |τ| ≳ 2πe^{A_T} the archimedean m(τ) ≥ log(τ/2π) − 1/τ − 1/2τ² beats the
-bounded comb (|comb| ≤ A_T): positivity there is a theorem for every window (Paper 47 Lemma 4.1, Prop env). For
+bounded comb (|comb| ≤ A_T): positivity there is a theorem for every window (Paper 46 Lemma 4.1, Prop env). For
 low frequencies it is a finite problem per window: certified for 2T ≤ log 3 (Theorem C, margin 8.86e−5), open beyond.
 (d) What a proof of D must produce: a manifestly positive form of the prime side (sum of squares / Cholesky /
-dual certificate), which is what Paper 47's certificates are. The zero side gives it for free (|F̂(γ)|²); the prime
+dual certificate), which is what Paper 46's certificates are. The zero side gives it for free (|F̂(γ)|²); the prime
 side has to earn it, and the cancellation in the table is the measure of how much.
 
 ## 5. The 12-digit prime

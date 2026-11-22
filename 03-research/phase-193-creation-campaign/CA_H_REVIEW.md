@@ -1,5 +1,5 @@
 # CA_H — Self-review of front H (memos 000, 001, 002)
-Checked against P47 def:shape-ops, lem:shape-quartet, prop:shape-inputs, prop:AM, thm:oneprofile, rem:boxes, thm:ceiling; CA_E_001; SPEC_B; EI_002.
+Checked against P46 def:shape-ops, lem:shape-quartet, prop:shape-inputs, prop:AM, thm:oneprofile, rem:boxes, thm:ceiling; CA_E_001; SPEC_B; EI_002.
 To be re-checked against CAMPAIGN_LEDGER.
 
 | claim | check | label |

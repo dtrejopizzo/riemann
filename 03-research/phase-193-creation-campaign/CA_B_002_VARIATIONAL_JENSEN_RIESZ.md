@@ -3,7 +3,7 @@
  Pen and paper. **No negative value for ζ produced or claimed.**
 
 ## 0. Corpus / index check
-P47 prop:AM (window quotient), rem:fe, prop:shape-twist (O9: pointwise curvature of log|ξ|); NT_011 + review (ζ̃ = ζ·R model:
+P46 prop:AM (window quotient), rem:fe, prop:shape-twist (O9: pointwise curvature of log|ξ|); NT_011 + review (ζ̃ = ζ·R model:
 pointwise statements on log|ξ| are zero geometry); MW-7 (Hadamard barrier), P33-10 (Jensen excess = off-line energy), NG-A5.
 Not tried in this form (Riesz decomposition of the symbol's primitive in a strip, averaged against the test measure μ_s).
 

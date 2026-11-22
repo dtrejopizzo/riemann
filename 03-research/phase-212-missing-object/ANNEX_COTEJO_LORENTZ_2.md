@@ -13,7 +13,7 @@ grid) for: Lee–Yang, Lieb–Sokal, Newman, GKS, FKG, Griffiths, ferromagnet, s
 preserv, hyperbolic polynomial, Gårding, Borcea, Laguerre–Pólya, multiplier sequence, Pólya frequency, PF_,
 PF₂, PF∞, total(ly) positiv, variation diminish, Schoenberg, Karlin, log-concav, Prékopa, Brascamp, de Bruijn,
 heat flow, infinitely divisible, Lévy–Khintchine, Hermite–Biehler, Jensen polynomial, interlac, Turán.
-Result: 661 .md/.tex files with at least one match. Concentration: phase 102 (39), Paper 47 (37,
+Result: 661 .md/.tex files with at least one match. Concentration: phase 102 (39), Paper 46 (37,
 almost all in `main_pre_*` copies), 159 (33), 60 (24), 193 (19), 186 (19), 162 (18), 160 (18), 106 (18), 116 (17),
 103 (16), 114 (15), 211 (14), 212 (14), Paper 48 (12), index (10), phase 33 (10). Warning: the pattern
 "rding" of Gårding matches "regarding"; the matches of phases 114/116 for that term are
@@ -26,7 +26,7 @@ REVIEW_004, ROUND_004_E, ROUND_003_8 of this folder; `phase-211/STATEMENT_001.md
 `phase-194-invention/INV_F_001`, `INV_A_001`, `INV_I_001`, `AUDIT_194.md`; `phase-65-signature-continuity/README.md`,
 `M3`, `D7`, `D10`; `phase-137/R137_005_ROUND3.md` §1; `phase-159/G2_B8_R1.md`, `G2_B8_R5.md` (and R3/R4 by grep);
 `phase-104/104_21`, `104_83` §2; `phase-60-discriminant/H1_PROOF.md`; `phase-155/R155_046` (table N3);
-`phase-211/POWER_FOUR_TURAN_084.md`; `04-papers/47-row-d-dual-certificates/main.tex` (rem:PF2, prop:spec (6),
+`phase-211/POWER_FOUR_TURAN_084.md`; `04-papers/46-row-d-dual-certificates/main.tex` (rem:PF2, prop:spec (6),
 inertia and interlacing passages); `phase-195/INV_M_001`; `phase-193/CA_J_002`; `phase-201/FAMILIES_A_001`,
 `FAMILIES_B_001` (by sections); `phase-200/SPEC_SIGN_OBJECT_011` (by sections);
 `phase-116/previous-phase-114/114_d_99`; `phase-162/R162_1602`; `phase-197/BARRIER_W_001`;
@@ -54,7 +54,7 @@ Column "acts on": the object to which the closure rule or property is applied.
 | 6 | grid G1F (103_15–42) | log-concavity of the theta measure | DEAD [F3] | a measure (theta) | generic positive kernels with zeros off the axis: the property does not separate |
 | 7 | `phase-102/120` | total positivity / PF / log-concavity of the Li sequence | audit, no closure | coefficients of the transformed logarithmic derivative | uses an external equivalence; remains a reformulation |
 | 8 | `104_21` | compound Poisson arithmetic law on exponents; tests PF₂, TP, complete monotonicity | NO-GO (PROVED with rational minor) | a product probability measure over primes (independence = closure under product) | the kernel on the exponent lattice fails PF₂ by a two-prime minor; the completed cocycle fails complete monotonicity |
-| 9 | `104_83` §2; AUDIT_A A14a-1/2; P47 rem:PF2 | Pólya order of the kernel Φ; PF₂ of K(\|·\|) | A14a-1 NO-GO (CITED, PF₅ fails); A14a-2 OPEN (PF₄); rem:PF2 PROVED | de Bruijn–Newman kernel Φ; archimedean kernel K of the form | Φ is not PF∞ (Schoenberg); K is completely monotone ⟹ log-convex ⟹ not PF₂; P47 leaves OPEN whether the transition density of the semigroup C₀ + Lév is PF₂ |
+| 9 | `104_83` §2; AUDIT_A A14a-1/2; P46 rem:PF2 | Pólya order of the kernel Φ; PF₂ of K(\|·\|) | A14a-1 NO-GO (CITED, PF₅ fails); A14a-2 OPEN (PF₄); rem:PF2 PROVED | de Bruijn–Newman kernel Φ; archimedean kernel K of the form | Φ is not PF∞ (Schoenberg); K is completely monotone ⟹ log-convex ⟹ not PF₂; P46 leaves OPEN whether the transition density of the semigroup C₀ + Lév is PF₂ |
 | 10 | `R155_046` N3 | nodal method / Karlin | PROVED (half of the kernel); semigroup t ≥ 1 HEURISTIC | kernel K and associated semigroup | K not PF₂; oscillation route closed for the kernel |
 | 11 | `R162_1602` K1–K3 | resolvent and short-time semigroup of A_T; nonlocal Courant identity | NO-GO PROVED (K2 PARTIAL) | operator of the form a_T (resolvent) | no resolvent or short-time semigroup is TP₂; the obstacle is the jump structure, not the comb; Λ∗1 = log does not restore TP₂ |
 | 12 | `114_d_99` | matrix Picone; total positivity of the jumps | audit, NO-GO of hypothesis | jump kernels of the form (translation by a prime, Gamma density) | negative 2×2 minor in the translation by a prime; Gamma density log-convex; the rank-two majorant is equivalent to primitive positivity (circular) |
@@ -70,7 +70,7 @@ Column "acts on": the object to which the closure rule or property is applied.
 | 22 | `phase-194/INV_I_001` | intersection of the orbits cΛ with integrality of coefficients | PROVED | coefficients b_n of f_a | {c : cΛ ∈ integer coefficients} = ℕ; {c : cΛ ∈ {0,1}} = {1} |
 | 23 | `phase-60/H1_PROOF` | Perron–Frobenius for the localized form A_λ | PROVED at operator level (except for a finite-rank loose end); index P60-1 PARTIAL | **the form A_λ** (−V improves positivity because Λ ≥ 0) | gives simplicity and parity of the ground state, not sign; the mechanism is Λ(n) ≥ 0, preserved by cΛ (ARGUED here) |
 | 24 | `phase-65` D0–D12, M3, D6, D7, D10; `R137_005` §1 | index-graded determinant, topology τ_κ, cone of index ≤ κ closed under Schur limits (shorting); κ(A_P) = 0 for finite P | DEAD at D8.5; R137_005: chain REFUTED (bifurcation: the bound and the identification live on different objects) | **signature of kernels of canonical systems** associated with the comb truncated at P, induction on P | uses an external equivalence (continuity of signature ⟺ the target, in its own terms); the index-0 closure is PROVED but the convergence of the renormalization is the wall; κ(A_P) = 0 comes from Λ ≥ 0, which cΛ preserves (ARGUED here); Davenport–Heilbronn falls by signed weights (D10) |
-| 25 | P47 thm:parityschur, prop:polarcap, inertia passages; `ROUND_004_E` (R4-f) | n₋(W_T) = n₋(a_T\|P_T) + n₋(𝔊_T); polar block with signature (1,1); inertia arithmetic, Haynsworth, interlacing | PROVED; class NO-GO (R4-f) | **signature of the form a_T and of its polar border** | indices constant for \|c − 1\| < λ_A(T)/Σ\|v_n\|: a count does not distinguish c = 1; P47 shows that inertia arithmetic holds verbatim for forms with added quartets |
+| 25 | P46 thm:parityschur, prop:polarcap, inertia passages; `ROUND_004_E` (R4-f) | n₋(W_T) = n₋(a_T\|P_T) + n₋(𝔊_T); polar block with signature (1,1); inertia arithmetic, Haynsworth, interlacing | PROVED; class NO-GO (R4-f) | **signature of the form a_T and of its polar border** | indices constant for \|c − 1\| < λ_A(T)/Σ\|v_n\|: a count does not distinguish c = 1; P46 shows that inertia arithmetic holds verbatim for forms with added quartets |
 | 26 | `phase-197/BARRIER_W_001` W1–W3 | monotonicity of n₋ in T (extension by zero), homotopy of combs, spectral flow, codimension | PROVED (W3 ARGUED at the level of forms) | **signature of a_T, induction on the window** and on the comb | every invariant of class 𝒮 (extension by zero, concavity, continuity, parity, compact resolvent) holds for a_P, truncations, O_4 = cΛ, O_6 and Beurling; the only datum that reads Λ is the Hellmann–Feynman pairing with the minimizer |
 | 27 | `R165_201` (via grid G7A) | critical interlacing ⟹ quartet outside the cone | DEAD, refuted | zeros of model functions | uses an external equivalence; refuted by a sin–cos counterexample |
 | 28 | `R168_203` | local Laguerre inequality | OPEN, NEGATIVE answer | the completed entire function near a quartet | uses an external equivalence; logically independent conditions |
@@ -91,11 +91,11 @@ Yes, several, and all of them stopped:
   interference between primes.
 - Real stability / Gårding / interlacing on the multiaffine per-prime symbol of 𝔸: INV_M_001, false.
 - Ferromagnetic correlations on 𝔸_M: CA_J_002, frustration.
-- Total positivity / Karlin on the kernel of the form, its resolvent or 𝖡: P47 rem:PF2, R155_046, R162_1602,
-  114_d_99, ROUND_004_D. Fails already at order two. Remains OPEN in P47 only whether the transition density of the
+- Total positivity / Karlin on the kernel of the form, its resolvent or 𝖡: P46 rem:PF2, R155_046, R162_1602,
+  114_d_99, ROUND_004_D. Fails already at order two. Remains OPEN in P46 only whether the transition density of the
   semigroup C₀ + Lév is PF₂.
 - Perron–Frobenius on the form: H1_PROOF, gives simplicity and parity, not sign.
-- Inertia arithmetic: P47 thm:parityschur, ROUND_004_E. It is constant near c = 1.
+- Inertia arithmetic: P46 thm:parityschur, ROUND_004_E. It is constant near c = 1.
 
 **Does any of them break for c = 2 because of the fixed archimedean factor?** None was found. No source in this
 part treats c = 2 as a falsifier of a closure mechanism. c = 2 appears only in INV_I_001 (the
@@ -103,7 +103,7 @@ integrality of coefficients admits exactly c ∈ ℕ, so a mechanism that uses o
 integrality survives c = 2) and as a NUMERICAL control in REVIEW_001_ABD and ROUND_003_2. In the sources, the
 mechanisms that read the comb do so through Λ ≥ 0 (phase 65, H1_PROOF, G2_B8) or through closed classes that
 contain cΛ (BARRIER_W_001, INV_M_001 §6, R4-f). That the archimedean factor stays fixed while the comb
-scales appears as a fact in INV_F_001 F2 and in P47 lem:shape-scale, but never as the line where a
+scales appears as a fact in INV_F_001 F2 and in P46 lem:shape-scale, but never as the line where a
 closure mechanism breaks.
 
 ## 4. Scope of the ∂log wall (INV_F_001; OBJECT_SPEC O10)
@@ -135,7 +135,7 @@ all such premises hold for ζ^c, whose comb is cΛ.
   with the orbit is ℕ, not ℝ₊). It is not a conic premise, but it does not separate c = 2.
 - Lee–Yang spin measures (Newman, Lieb–Sokal) defined from the form and not from log ζ. They are not
   reached by F2, but in the corpus they appear only as a citation (201 F3) or dead by frustration (CA_J_002).
-- The conclusion "every positivity that crosses ∂log is ID or Pick" is labelled ARGUED in P47 prop:spec (6)
+- The conclusion "every positivity that crosses ∂log is ID or Pick" is labelled ARGUED in P46 prop:spec (6)
   beyond the classified list. The list is PROVED in INV_F_001.
 
 Reading (ARGUED): the wall blocks the closure mechanisms that operate on the series or its logarithm. It does not
@@ -158,7 +158,7 @@ inertia near c = 1.
 6. Prékopa–Leindler or Brascamp–Lieb applied to the form. There are only mentions in lists (201, annex 193).
 7. Gårding hyperbolic polynomials in the parameter T or in the weight for det of window matrices. Gårding
    appears only as a PSD reformulation in INV_M_001 §3.
-8. Total positivity of the transition density of the semigroup C₀ + Lév. It is OPEN and declared so in P47
+8. Total positivity of the transition density of the semigroup C₀ + Lév. It is OPEN and declared so in P46
    rem:PF2; no attempt was found.
 9. PF₄ and PF₃ of the kernel Φ: OPEN (A14a-2), no attempt in the corpus.
 10. GKS/FKG-type correlations closed under product of per-prime measures, applied to a measure constructed

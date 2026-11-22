@@ -1,6 +1,6 @@
 # POWER_STATE_089 — Global R4 transport and real Turán
 
-Status: **PROVED**, run 40406 exit0/FULL PASS 1024 origin + 8192 remainder and math/code audit approved. Independent reproduction 87911 exit0/FULL PASS 1024+8192 and matching hash. Paper 47 global OPEN; papers untouched.
+Status: **PROVED**, run 40406 exit0/FULL PASS 1024 origin + 8192 remainder and math/code audit approved. Independent reproduction 87911 exit0/FULL PASS 1024+8192 and matching hash. Paper 46 global OPEN; papers untouched.
 
 ## Structural results
 

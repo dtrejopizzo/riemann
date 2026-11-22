@@ -1,7 +1,7 @@
 # R170_841 — VIR--LB: derivative of the finite hyperbola, first-order no-go and oriented residue
 
 Continuation of R162_407--408, R162_501 and
-R170_840. Paper 47 is not modified.
+R170_840. Paper 46 is not modified.
 
 ## 0. Verdict
 

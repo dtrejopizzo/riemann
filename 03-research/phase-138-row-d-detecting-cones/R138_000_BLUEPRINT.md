@@ -11,10 +11,10 @@ Standing rules: pure mathematics; numerics only to certify a constant, with a st
 every arrow labelled (PROVED / PROVED-IN-REPOSITORY / CLASSICAL / RESTATEMENT / IMPORTED / CANDIDATE /
 HEURISTIC / REFUTED / NOT-APPLICABLE / OPEN); nothing defined through the location of zeros, `ξ` admissible
 as data; every theorem run against the falsifier `Ξ_a(s) = ξ(s+a)ξ(s−a)` (and, where rank-one polar
-divergence is used, note the `ζ_K` gap recorded in R137_007 §2.2); a statement that with Paper 46 Thm 3.7
+divergence is used, note the `ζ_K` gap recorded in R137_007 §2.2); a statement that with Paper 47 Thm 3.7
 would prove RH or ¬RH is FATAL — flag, do not fix. Round structure as in phases 131–137.
 
-## 0. Setting (Paper 45 §§9–11, Paper 46 §§11–12; RESTATEMENT of record)
+## 0. Setting (Paper 45 §§9–11, Paper 47 §§11–12; RESTATEMENT of record)
 
 Weil class `D^W` (real `C²` functions with decay `e^{−(1+ε)|t|}`); `Φ_F(s) = ∫F(t)e^{(s−½)t}dt`;
 `I_∞(F,G) = Φ_F(0)Φ_G(1)+Φ_F(1)Φ_G(0) − Σ_ρ Φ_F(ρ)Φ_G(1−ρ)` (polarization Lemma 11.4a);
@@ -135,7 +135,7 @@ to a "paper-facing list" in the round-1 report.
 ## Explicit warnings
 
 * The Lorentzian criterion (D.15.2) is a statement about quadratic forms; do not let the topology be vague
-  — the interior of `E` must be shown nonempty in the topology in which `I_∞` is continuous (Paper 46
+  — the interior of `E` must be shown nonempty in the topology in which `I_∞` is continuous (Paper 47
   Thm 11.14 gives `|I_∞(E,F)| ≤ C_F deg E`; use it).
 * Do not "prove" `W(h) ≥ 0` on any cone by an argument whose error term is the PNT remainder; identify it
   and stop. That is the honest outcome of D.17.3(b), not a failure.

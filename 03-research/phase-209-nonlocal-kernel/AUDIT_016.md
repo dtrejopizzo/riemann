@@ -73,7 +73,7 @@ produce equality, domination or sign of Q_T. Row D does not change status.
 
 The corrections of [margin] and R6 in
 `05-meta-and-planning/ROUTES-TRIED-INDEX/06_OPEN_RESIDUES_DEAD_SUBROUTES.md`
-agree with P47 cor:margin1 and rem:moriceiling: the proved ceiling for λ_A
+agree with P46 cor:margin1 and rem:moriceiling: the proved ceiling for λ_A
 is `4·10^9 T exp(−15.449T)`, T≥1. Mori's doubly exponential ceiling
 is recorded as cited and unverified, and corresponds to λ_W. The relation
 λ_W≤λ_A does not transfer it to λ_A. From

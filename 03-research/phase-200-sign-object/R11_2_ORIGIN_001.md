@@ -11,11 +11,11 @@ not on the **residue**. Hence the premise "the residue of L_P is Π(1−1/p) ≠
 at the level of the form: a_P has a simple pole and ψ_{a_P}(X) ~ X (the finite deletion does not change the density). (2) **Lemma O2
 (PROVED, Poisson):** the form of the falsifier a_P is exactly W_ζ + Σ_{p<P} L_p, with L_p(g) = Σ_j Ĝ_p(2πj/log p) −
 (log p)g(0), Ĝ_p = ĝ ∗ (Cauchy kernel of width ½) ≥ 0: the deletion is "smoothed lattice sampling minus mass",
-not a change of the polar term. (3) **Theorem O3 (NO-GO PROVED, given P47 prop:shape-eulerdel and Lemma E):** the two
+not a change of the polar term. (3) **Theorem O3 (NO-GO PROVED, given P46 prop:shape-eulerdel and Lemma E):** the two
 relevant falsifiers (a_P for T∈[0.60, ½log P]; Epstein x²+5y² for T ≥ 1.59) fail **in P_T**, where A = B = 0.
 The polar term — and with it the lattice origin / Tate mode / residue — is identically zero on the witnesses;
 no polar×multiplicativity coupling can be what fails. The only place where the pole couples to the comb is
-the 2×2 polar capacity 𝔊_T (P47 thm:parityschur), which comes after λ_A. (4) The Selberg identity (order 2,
+the 2×2 polar capacity 𝔊_T (P46 thm:parityschur), which comes after λ_A. (4) The Selberg identity (order 2,
 elementary) is C-data and comb-generic (satisfied by a_P, Epstein, Beurling-DMV): NO-GO, duplicate of AUDIT_B 7.7 / TB-3.
 New restriction **C-pol**. R11.2 is closed; next lemma: none in this channel.
 
@@ -34,7 +34,7 @@ grep in `05-meta-and-planning/ROUTES-TRIED-INDEX/` and in `03-research/phase-200
 | R11_1_CUTS_001 §7 | C-data | Applies to the Selberg identity (§4). |
 | AUDIT_B l.60, l.96 ("Selberg identity is blind", Beurling DMV); 06_OPEN_RESIDUES R7 (TB-3: "generalized Selberg holds ∀b, Λ∗Λ ≥ 0 trivial") | Selberg identity | §4 is a duplicate: not retried as a route; only recorded that the "order-2 residue-comb relation" variant falls the same way. |
 | INV_V_002, GUO_QUANT §2 | cΛ: 𝒲_c = (1−c)·arch | §2.3. |
-| P47 prop:shape-eulerdel (l.8455–8465) | a_P fails WP_T ∀T∈[0.60,½log P]; breaks only the FE | Key fact of §3. |
+| P46 prop:shape-eulerdel (l.8455–8465) | a_P fails WP_T ∀T∈[0.60,½log P]; breaks only the FE | Key fact of §3. |
 | LEMMA_E_EPSTEIN_001 | Epstein negative **in P_T** for T ≥ 1.59 (PROVED, intervals) | Key fact of §3. |
 
 New reason stated (index rule): no previous entry asked whether the falsifiers' witnesses have a nonzero polar
@@ -44,8 +44,8 @@ component. That question decides R11.2 without constructing any object.
 
 ### 1.1 Notation
 
-Complete form W_T(F) = 𝔞_T(F) + 2Re(A(F)·conj B(F)) on L²(−T,T) (P47 l.73, l.345), with
-A(F) = ∫F(t)e^{t/2}dt, B(F) = ∫F(t)e^{−t/2}dt; 𝔞_T = m_T + Π_T, where Π_T(F) = −Σ_n v_n·c_F(log n) (with P47's
+Complete form W_T(F) = 𝔞_T(F) + 2Re(A(F)·conj B(F)) on L²(−T,T) (P46 l.73, l.345), with
+A(F) = ∫F(t)e^{t/2}dt, B(F) = ∫F(t)e^{−t/2}dt; 𝔞_T = m_T + Π_T, where Π_T(F) = −Σ_n v_n·c_F(log n) (with P46's
 normalization eq:Aform; v_n = 2Λ(n)/√n), c_F = F∗F̃ autocorrelation, supported on [−2T,2T]. Primitive subspace
 P_T = {F : A(F) = B(F) = 0} (moment conditions).
 
@@ -67,20 +67,20 @@ indefinite finite-rank piece that separates W_T from 𝔞_T. LEMMA_I3 verifies i
 (2,0,7), i.e. it removes exactly one negative square from arch (consistent with the (1,1) signature of the polar term plus a cross term).
 On P_T the polar term is 0 by definition: P_T **is** "nulling the polar/Tate mode".
 
-### 1.4 Where the pole couples with the comb (what is already PROVED in P47)
+### 1.4 Where the pole couples with the comb (what is already PROVED in P46)
 
 Decomposing L²(−T,T) = P_T ⊕ E, E = span of the Riesz representatives of A, B, the form W_T has block
 [[𝔞_T|P, X],[X*, 𝔞_T|E + polar]], X = cross block of 𝔞_T (containing m_T and the comb Π_T). By Schur complement
-(P47 thm:parityschur, prop:polarcap): λ_W > 0 ⟺ λ_A > 0 and 𝔊_T ≻ 0, with 𝔊_T = (𝔞_T|E + polar) − X*(𝔞_T|P)^{−1}X, a
+(P46 thm:parityschur, prop:polarcap): λ_W > 0 ⟺ λ_A > 0 and 𝔊_T ≻ 0, with 𝔊_T = (𝔞_T|E + polar) − X*(𝔞_T|P)^{−1}X, a
 2×2 matrix diagonal by parity. **This is the exact polar×comb coupling:** the comb enters 𝔊_T only through the
 primitive resolvent (𝔞_T|P)^{−1} evaluated in the e^{±t/2} directions. That is: the coupling exists, it is an explicit
-2×2 object, and it is conditioned on λ_A > 0. It is not new (P47).
+2×2 object, and it is conditioned on λ_A > 0. It is not new (P46).
 
 ## 2. The form of the falsifier a_P, exactly
 
 ### 2.1 Lemma O2 (deletion = smoothed lattice sampling; PROVED)
 
-Let g = c_F be even and L_p(g) := log p·Σ_{k≠0} p^{−|k|/2}g(k log p). The window form of the falsifier a_P (P47, with arch and
+Let g = c_F be even and L_p(g) := log p·Σ_{k≠0} p^{−|k|/2}g(k log p). The window form of the falsifier a_P (P46, with arch and
 polar term of ζ and comb a_P = Λ·1{p ≥ P}) is
   W_T^{a_P}(F) = W_T(F) + Σ_{p<P} L_p(c_F).
 With G_p(x) = g(x)e^{−|x|/2}, Poisson on the lattice (log p)ℤ gives
@@ -95,7 +95,7 @@ shifts the spectrum by −log p and compensates it with a positive sampling on t
 
 ### 2.2 Is W^{a_P} the Weil form of some distribution with an FE?
 
-ζ_{a_P} has no FE of Γ type (P47 l.8465). The symmetrized function E(s) = ξ(s)Π_{p<P}(1−p^{−s})(1−p^{s−1}) is indeed
+ζ_{a_P} has no FE of Γ type (P46 l.8465). The symmetrized function E(s) = ξ(s)Π_{p<P}(1−p^{−s})(1−p^{s−1}) is indeed
 symmetric under s ↔ 1−s and has zeros on Re s = 0 and Re s = 1, but (1−p^{s−1}) is not a Dirichlet series for Re s > 1, so
 its "comb" is not a_P. Answer (ARGUED, by Lemma O2): W^{a_P} is the Weil distribution of ζ plus, per prime,
 the measure Σ_j δ_{2πj/log p} convolved with P_{1/2} minus a (log p)δ-mass; it is not the zero distribution of any
@@ -108,7 +108,7 @@ polar term of different functions" is correct as a **broken FE**, not as a diffe
 | Object | pole order (form) | comb density | FE with the Γ used | Euler | witness in P_T |
 |---|---|---|---|---|---|
 | ζ | 1 | 1 | yes | yes | — (positive, PROVED up to ½log15 Mori) |
-| a_P | 1 | 1 | **no** | yes | yes (P47, T∈[0.60,½log P]) |
+| a_P | 1 | 1 | **no** | yes | yes (P46, T∈[0.60,½log P]) |
 | Epstein x²+5y² | 1 | 1 | yes (degree 2) | no | yes (Lemma E, T ≥ 1.59) |
 | cΛ, c≠1 | 1 (Γ of ζ) | c | no | no (c∉ℕ) | cΛ: 𝒲_c=(1−c)·arch (INV_V_002) |
 | DH mod 5 | 0 | 0 | yes (conductor 5) | no | complete form |
@@ -124,7 +124,7 @@ a quantity inside the form; by C-hom (Lemma H) and C-data it cannot enter 𝔞_T
 term (residue, Tate mode, Poisson constant term/lattice origin), or through its coupling with the comb via
 A, B. Then no element of 𝒦_pol separates ζ from a_P or from Epstein.
 
-**Proof.** (i) a_P: by P47 prop:shape-eulerdel, WP_T(a_P) is λ_inf^P(T) ≥ 0 on P_T, false for T ∈ [0.60, ½log P];
+**Proof.** (i) a_P: by P46 prop:shape-eulerdel, WP_T(a_P) is λ_inf^P(T) ≥ 0 on P_T, false for T ∈ [0.60, ½log P];
 the witness F lives in P_T, so A(F) = B(F) = 0 and the polar term and block E of §1.4 do not intervene. Moreover, for
 e^{2T} ≤ P the comb of a_P is empty in N_T: the form is just m_T and the failure is that of arch without primes. (ii) Epstein: by
 Lemma E, there exists F = G(t/T) ∈ P_T with 𝔞_T^Q(F)/‖F‖² < −0.0599 at T = 1.59, and the polar term of Epstein is that of ζ
@@ -141,7 +141,7 @@ lost in ϑ_P is its Poisson shadow, not an independent factor.
 
 **Corollary O3″ (reinforced C-Guo).** C-Guo said: the pole alone does not separate because Epstein has it too. O3 says more: neither
 the pole nor any coupling of the pole with multiplicativity separates, because the witnesses have zero polar moment.
-The coupling 𝔊_T of §1.4 only matters once λ_A > 0 has been won, and it is the second condition of P47's Schur, not the
+The coupling 𝔊_T of §1.4 only matters once λ_A > 0 has been won, and it is the second condition of P46's Schur, not the
 separator.
 
 ## 4. Order-2 candidate: the Selberg identity
@@ -170,7 +170,7 @@ Montgomery's variance, Hardy–Littlewood for Λ(n)Λ(N−n): zero side / additi
 | pole order = density (Chebyshev) | no | yes (a_P, Epstein, Beurling) | yes | — | no | NO-GO (only cΛ, already closed) |
 | constant term of ϑ / origin | no | — | — | yes (Lemma H) | no | NO-GO by O3 (witnesses in P_T) |
 | Tate mode | no | yes (Lemma 2.1 GUO) | — | — | no | NO-GO (duplicate GUO) |
-| 𝔊_T polar×comb coupling | no | — | — | — | no | PROVED exists (P47), does not separate (O3) |
+| 𝔊_T polar×comb coupling | no | — | — | — | no | PROVED exists (P46), does not separate (O3) |
 | "same Selberg function" | high risk | no | yes if imposed | yes | no | global, not quantitative in the form: OPEN as classifier, NO-GO as motor |
 | Selberg identity | no | yes | yes | — | no | NO-GO (duplicate) |
 | fine ψ−X (next order) | yes | — | — | — | yes | discarded |
@@ -192,7 +192,7 @@ decomposition Λ_Q = ½(Λ_K+Λ_ψ)+Λ_cosh localizes the defect in Λ_cosh (C-E
 - Correction: ψ_{a_P}(X) ~ X (not Π(1−1/p)X): PROVED.
 - Lemma O2 (deletion = Cauchy sampling on (2π/log p)ℤ − (log p)‖F‖²): PROVED.
 - §2.2 (W^{a_P} is not the Weil form of a function in the Selberg class): ARGUED.
-- Theorem O3 (polar term/origin/Tate and its coupling invisible in the witnesses): NO-GO PROVED (given P47 prop:shape-eulerdel
+- Theorem O3 (polar term/origin/Tate and its coupling invisible in the witnesses): NO-GO PROVED (given P46 prop:shape-eulerdel
   and Lemma E, both PROVED).
 - Selberg identity as separator: NO-GO (C-data PROVED; comb-generic PROVED for a_P, CITED Beurling, ARGUED Epstein).
 
@@ -204,13 +204,13 @@ live in P_T. Before proposing a "polar" object, check that it acts nontrivially 
 **Entry for the index (README, phase 200 section):**
 - **R11_2_ORIGIN_001 (round 13): R11.2 closed, NO-GO PROVED (Theorem O3).** The polar term 2Re(AB̄) counts pole order, not
   residue (O1); ψ_{a_P}~X; the form of a_P = W_ζ + Σ_{p<P}[Cauchy sampling on (2π/log p)ℤ − (log p)‖F‖²] (O2). The witnesses
-  of a_P (P47 shape-eulerdel) and Epstein (Lemma E) are in P_T ⇒ pole/residue/Tate/origin/𝔊_T invisible; the "lost origin"
+  of a_P (P46 shape-eulerdel) and Epstein (Lemma E) are in P_T ⇒ pole/residue/Tate/origin/𝔊_T invisible; the "lost origin"
   of ϑ_P is the Poisson shadow of the deleted primes. Selberg identity: C-data + comb-generic (dup. TB-3/AUDIT_B 7.7).
   Restriction **C-pol**.
 
 **Next lemma.** None in the polar channel. What remains alive after O3 is strictly primitive: the separator must
 act on P_T and, for a_P, must already show up when the comb in N_T is empty or nearly empty — i.e. it is a lower bound of the
-comb mass of the small primes against m_T in P_T (the terrain of λ_A, Thm A/thm:Tarch of P47), and for Epstein it must
+comb mass of the small primes against m_T in P_T (the terrain of λ_A, Thm A/thm:Tarch of P46), and for Epstein it must
 control Λ_cosh (C-E). Proposal (OPEN, not constructed): formulate the separator as a functional of P_T that uses the
 offset of Lemma O2 in reverse — the Cauchy sampling on (2π/log p)ℤ of the primes that *are present* — and check it
 against C-hom/C-data before building.

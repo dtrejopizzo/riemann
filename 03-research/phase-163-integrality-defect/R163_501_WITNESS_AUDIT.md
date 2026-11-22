@@ -1,7 +1,7 @@
 # R163_501 — Audit and repair of the real-rooted first-contact witness
 
 *Audit of R160_X_C1 Theorems B, R, FC (and G, which R163_401 §2.4(iii) uses), line by line against
-Paper 47 `main.tex`: `eq:symbol`, `eq:form`, `eq:W`, `\PT`, `lem:monoT`, `lem:contT`, `lem:roughEF`, `lem:contA`,
+Paper 46 `main.tex`: `eq:symbol`, `eq:form`, `eq:W`, `\PT`, `lem:monoT`, `lem:contT`, `lem:roughEF`, `lem:contA`,
 `lem:firstcontact`, proof of `thm:O` (compactness). Pure mathematics, no numerics. No . No file other than
 this one was written. No label of record moves except as recommended in §6.*
 
@@ -18,14 +18,14 @@ this one was written. No label of record moves except as recommended in §6.*
 | FC0(ii) (existence of `T_c`, `λ^W_{T_c}=0` attained, `W_{T_c} ≥ 0`, `dim E_c<∞`) | **PROVED** | — |
 | FC(i) at `T_c` (full support, type, density) | **PROVED** | "half-line" → "half-plane" unless real-rooted |
 | FC(ii) at `T_c` (real-rooted witness in each nonzero parity part) | **PROVED** | second sentence ("one parity ⇒ all of `E_c` real-rooted") PROVED AFTER REPAIR via R(d) repaired |
-| FC(iii) at the primitive contact `T_*` | **real-rootedness PROVED; full-support claim UNPROVED as stated (fails if `λ^A` vanishes on an interval `[T_1,T_*]`, which is not excluded; repaired at `T_♭`; corrected per R163_590 D10)** | `T_* = inf{λ^A<0}` (Paper 47 `lem:firstcontact`) only gives `λ^A ≥ 0` below `T_*`. Replacement: work at `T_♭ := sup{T: λ^A_T>0}` (§3.4) |
+| FC(iii) at the primitive contact `T_*` | **real-rootedness PROVED; full-support claim UNPROVED as stated (fails if `λ^A` vanishes on an interval `[T_1,T_*]`, which is not excluded; repaired at `T_♭`; corrected per R163_590 D10)** | `T_* = inf{λ^A<0}` (Paper 46 `lem:firstcontact`) only gives `λ^A ≥ 0` below `T_*`. Replacement: work at `T_♭ := sup{T: λ^A_T>0}` (§3.4) |
 | Thm G (a)–(e) | **PROVED** with weights `w_x = d_x/|F̂'(x)|²` | R163_401 §2.4(iii) writes `F̂'(x)²`: **wrong for odd `F`** (negative). Must use `|F̂'(x)|²` (§4) |
 | R163_401 Prop 4.0 (⇒) | **PROVED** (modulo the cited record inputs listed in §5) | relabel from "PROVED-CITED, unaudited" to PROVED; it uses only FC0(ii) + R(c) at `T_c` |
 
 **Bottom line.** The existence of a nonzero real, parity-definite, real-rooted `F ∈ ker W_{T_c}` with
 `W_{T_c} ≥ 0`, `conv supp F = [−T_c,T_c]`, under ¬RH, is **fully proved**. Inputs from outside this audit:
 Weil/P45 Thm 11.3 (¬RH ⇒ some `λ^W_T<0`), `lem:monoT`, `lem:contT`, compactness of sublevel sets (`thm:O` proof),
-and strict positivity on some initial range (`λ^W ≥ 10^{-18}` on `(0,½log5]`, Paper 47 §`sec:log5`; or
+and strict positivity on some initial range (`λ^W ≥ 10^{-18}` on `(0,½log5]`, Paper 46 §`sec:log5`; or
 `λ^W>0` on `T≤0.005`, R157_004 Lemma E). Strictness is needed for the full-support claim FC(i), not for existence.
 
 ---
@@ -125,7 +125,7 @@ Wording: for a non-real-rooted element the density statement is per right/left h
 half-line. (ii) R(c) per parity; the second sentence by R(d′). ✓
 
 ### 3.4 FC(iii) at the primitive contact — PARTLY FALSE; replacement
-With Paper 47's `T_*=inf\{λ^A<0\}` (`lem:firstcontact`) one only knows `λ^A_T ≥ 0` for `T<T_*`. If `λ^A` vanishes
+With Paper 46's `T_*=inf\{λ^A<0\}` (`lem:firstcontact`) one only knows `λ^A_T ≥ 0` for `T<T_*`. If `λ^A` vanishes
 on an interval `[T_1,T_*]`, a kernel vector at `T_1`, zero-extended, lies in `ker H_{T_*}` with support
 `[−T_1,T_1]`: the full-support claim fails for that element. It is not excluded by anything in the record.
 - **True at `T_*`:** each nonzero parity part of `ker H_{T_*}` contains a primitively real-rooted element; one parity
@@ -149,7 +149,7 @@ same correction is needed in §2.4(iii) itself, not only §4.4). (e) polar part
 Prop 4.0 (⇒) needs exactly: under ¬RH there is `T_c>½log5` and a nonzero real, parity-definite, real-rooted
 `F∈𝒟_{T_c}` with `W_{T_c}≥0` on `𝒟_{T_c}` and `W_{T_c}(F)=0`. This is FC0(ii) + R(c) at `T_c`, both PROVED above.
 Additionally available: `conv supp F=[−T_c,T_c]`, zero density `T_c/π` (FC(i)), Gauss nodes with
-`w_x=d_x/|F̂'(x)|²` (G). Cited inputs not re-audited here: P45 Thm 11.3, the Paper 47 `½log5` certificate,
+`w_x=d_x/|F̂'(x)|²` (G). Cited inputs not re-audited here: P45 Thm 11.3, the Paper 46 `½log5` certificate,
 Cartwright–Levinson, Paley–Wiener–Titchmarsh, Levinson/Conrey simple-zero proportion. `lem:monoT`, `lem:contT`, the
 compactness in `thm:O` were read and checked.
 

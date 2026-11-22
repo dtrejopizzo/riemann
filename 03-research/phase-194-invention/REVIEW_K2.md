@@ -8,10 +8,10 @@ used or mentioned. No numerics.
 Q_φ is simultaneously aligned. K2 therefore stays at the level of INV_H_001 H1(iii) (ARGUED); the "upgrade ARGUED→PROVED" is withdrawn.
 
 ## 1. Conventions (checked)
-- Paper 47 eq:symbol: s_T = m − Σ v_n cos(τ log n), v_n = 2Λ(n)n^{−1/2}, m = Re ψ(¼+iτ/2) − log π. INV_H_001 H1:
+- Paper 46 eq:symbol: s_T = m − Σ v_n cos(τ log n), v_n = 2Λ(n)n^{−1/2}, m = Re ψ(¼+iτ/2) − log π. INV_H_001 H1:
   Q_φ = −Σ φ(d)μ(d)(log d)d^{−s}, a_φ = coefficients of ζQ_φ, a_φ = Λ on n < N; s_φ = m − 2Re[ζQ_φ(½+iτ)]. Signs agree. OK.
 - Class 𝓖_ac: Σ|φ(d)|(log d)d^{−1/2} < ∞ is exactly absolute convergence of Q_φ on σ ≥ ½ (coefficient φμ log). OK.
-- s_φ ≥ −C ⇔ Re(ζQ)(½+it) ≤ ½(m(t)+C). Comparison correct. Fix F1: Paper 47 (l. 462) gives m = log(τ/2π) + O(1/τ),
+- s_φ ≥ −C ⇔ Re(ζQ)(½+it) ≤ ½(m(t)+C). Comparison correct. Fix F1: Paper 46 (l. 462) gives m = log(τ/2π) + O(1/τ),
   not O(1/τ²); harmless.
 
 ## 2. Phragmén–Lindelöf (correct)

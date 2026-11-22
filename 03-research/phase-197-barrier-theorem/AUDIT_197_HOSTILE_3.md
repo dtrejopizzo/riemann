@@ -1,13 +1,13 @@
 # AUDIT_197_HOSTILE_3 — audit of BARRIER_X_001 (track X)
 
- Checked against P47 main.tex
+ Checked against P46 main.tex
 (l.3093 v_n=2a(n)/√n; lem:degen l.3249; def:PD l.622; definite-parity kernel l.4367; thm:log5A l.4627), BARRIER_001 Thm 3,
 AUDIT_197_HOSTILE(_2), INV_I_001, L54/L55-A, VERIFY_CLAMPED_AND_EDGE_LAW (U3).
 
 ## (a) X0 — exact Bohr defect: CONFIRMED (PROVED + NUMÉRICO)
 |Im R|² = (2|R|² − R² − R̄²)/4, M R² = 1 (constant term), M|R|² = ∏_p Σ_k r_{p,k}² p^{-k} (Parseval + Kronecker) ⇒ Δ = ½(∏−1). ✓
 NUMÉRICO (2·10⁶ random t ∈ [0,10⁷]): R = 1−2^{-s}: 0.24985 vs ¼; R = (1−2^{-s})(1+3^{-2s}): 0.33305 vs 1/3. ✓
-Normalisation w_T(n)=2c_{F⋆}(log n)/√n and the lem:degen inequality as stated match P47 (lem:degen is in v; v=2a/√n). ✓
+Normalisation w_T(n)=2c_{F⋆}(log n)/√n and the lem:degen inequality as stated match P46 (lem:degen is in v; v=2a/√n). ✓
 
 ## (b) X1 — lattice dichotomy: CONFIRMED with one precision
 (a) pinning for ε<1/(2N): ✓ (d(p^k)≠0 needs some r_{p,j}≠0, j≤k, cost ≥ 1/(2p^j) > 1/(2N)).
@@ -40,7 +40,7 @@ conclusion is valid **near Λ in the ε<1/(2√N) regime**, and on real Euler fa
   cone generator — so O_6 is "excluded" only in the weak sense. Beurling/Ξ_Q/Epstein outside 𝓘: ARGUED (keep).
 
 ## (e) X4 — parity sign at top lags: PROVED (lemma), use CONDITIONAL
-The proof is correct; a definite-parity minimizer always exists (J commutes; eigenspace J-invariant, P47 l.328/l.4367), so the
+The proof is correct; a definite-parity minimizer always exists (J commutes; eigenspace J-invariant, P46 l.328/l.4367), so the
 only hypothesis is "no zero of F⋆ in (T−δ,T)". U3 (ARGUED; Hopf lower bound a_±≠0 NOT available, only |h*| ≲ (log1/δ)^{−1/2})
 neither supplies nor refutes it. Quantitatively c_{F⋆}(u) = O(δ'·sup_{edge}|F⋆|²) for u=2T−δ', so the odd-sector falsifier
 2|c|k log p/√q > λ_A is unattainable unless λ_A ≈ 0 — X4 cannot by itself produce a falsifier or a sign. ✓ labels.

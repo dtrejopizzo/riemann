@@ -7,11 +7,11 @@ not of the target.
 
 ## 0. Corpus / index check
 - Source: SURVEY_MODERN_UNTRIED §B4 (proof mining / reverse mathematics, "6 as meta, 0 as sign").
-  Not in the index as a tried route. New reason vs. the registered material: Paper 47 lem:shape-est(iii) and
+  Not in the index as a tried route. New reason vs. the registered material: Paper 46 lem:shape-est(iii) and
   prop:wit-sens perturb by **scaling** (1+δ)Λ or by the integer weights, so they need κ_T ≠ 0 (CONDITIONAL). Here the
   perturbation is an **added atom at a point u ∈ (0,2T) of our choosing**, inside the comb class of def:comb (positive
   Borel measures). The first-order effect is Re c_F(u) → ‖F‖² = 1 as u → 0⁺, so no nonvanishing hypothesis is needed.
-- Paper 47 objects used with their own definitions: def:comb (𝔞^ν_T(F) = m_T(F) − ∫_{(0,2T)} Re c_F dν, bottom b_T(ν)),
+- Paper 46 objects used with their own definitions: def:comb (𝔞^ν_T(F) = m_T(F) − ∫_{(0,2T)} Re c_F dν, bottom b_T(ν)),
   subsec:shape-est (estimate (E_T,R_T), 𝓕^{(a)}_T, μ_T, "decides by the estimate"), def:shape-class, cor:margin1.
 - Proof mining (Kohlenbach's monotone functional interpretation) turns out **not needed**: the metatheorem used is
   the elementary soundness + constants lemma, valid for any classical theory (RCA₀ … ZFC). No reverse-mathematics
@@ -79,7 +79,7 @@ identically on P_T (polynomial in t along F+tG), but the shift-by-log 2 form has
 2T > log 2 while P_T has finite codimension, so its restriction is nonzero. ∎
 **OPEN / CONDITIONAL:** a lower bound κ̂_T ≥ k₀(T) (numerically κ_{log 2} ≈ 0.09, rem:wit-sens, not certified). With
 such a bound Theorem 4 holds for 𝓔^ℕ with r ≤ λ_A/k₀. Without it the 𝓔^ℕ statement is qualitative.
-Note: Paper 47's own estimate notion (subsec:shape-est) takes the comb in def:comb (measures), so instance (a) falls
+Note: Paper 46's own estimate notion (subsec:shape-est) takes the comb in def:comb (measures), so instance (a) falls
 under the PROVED Theorem 4, not under §3.
 
 ## 4. Effect on lem:shape-est and thm:shape (B′)
@@ -89,7 +89,7 @@ under the PROVED Theorem 4, not under §3.
   (PNT with Vinogradov–Korobov remainder, sieve, large sieve, BV) *are* used with slack ≥ e^{−cT}, c < 15.449. This is
   a reading of how they are proved (they hold for classes of sequences open in TV/Kolmogorov distance at scale
   ≥ the stated remainder) — ARGUED per estimate, PROVED for any estimate whose stated proof is uniform over a TV-ball.
-- Proposed text for Paper 47: add "Theorem (estimate class; proved)" after lem:shape-est with Def. 1, Lemma 3, Thm 4;
+- Proposed text for Paper 46: add "Theorem (estimate class; proved)" after lem:shape-est with Def. 1, Lemma 3, Thm 4;
   relabel (B′) "proved for 𝓔; the reading for named classical estimates argued". Editor must verify against def:comb
   and subsec:shape-est (rule ). Not integrated by this memo.
 

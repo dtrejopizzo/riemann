@@ -12,7 +12,7 @@ refers to that algebra. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / N
 Searches done (case-insensitive grep, followed by primary reading of what was found):
 "Selberg sieve / criba de Selberg / Barban / Vehov / GPY / Λ_R / mollif / Levinson / signed weights /
 pesos con signo / truncated Möbius / Möbius truncado / M_N S_N / discrete derivative" across all of
-`03-research/`, P47, P48, the index, the grid and the crossword; "Möbius / M_N / truncat" in phases 106,
+`03-research/`, P46, P48, the index, the grid and the crossword; "Möbius / M_N / truncat" in phases 106,
 121, 122, 124 and in R162_405–408, R162_206, R162_401.
 
 Read as primary sources: R161_000–004 in full; `ROUND_003_6.md` in full; R170_853 §0, R170_878 §0 (with its

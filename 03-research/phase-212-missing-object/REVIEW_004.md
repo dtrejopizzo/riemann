@@ -12,7 +12,7 @@ Global sign OPEN. No result of this round carries a sign.
 | B quadratic divisor defect that adds | 004_B | ACCEPTED WITH RESERVATION | Lemma 1: minimizing in ℓ the form a_T − ⟨ℓ, η⟩ + ⟨ℓ, Kℓ⟩ gives η ∈ ran K and a_T ≥ ¼⟨η, K⁺η⟩ | The change of variables ⟨e, γ⟩ = ⟨ℓ, U^{−T}γ⟩ and the case Q(u) = 0 of Lemma 2(c) were not redone here. The violations with natural kernels are NUMERICAL with values taken from 211 ROUND_017_A; the large-T case is CONDITIONAL |
 | C truncated Möbius remainder | 004_C | ACCEPTED WITH RESERVATION | Lemma 3 (multipliers); Lemma 4; Lemma 5: φ = (¼ − ∂²)ψ_ε ∈ P_T, ‖φ‖² ≍ h²ε^{−3}, moments O(hε), and c_N(p^j) = −1 when p^{j−1} ≤ N < p^j, whence the diagonal constant κ_N > 0 | Lemma 2 (closed form of R_0) was not redone. The indefiniteness of R is NUMERICAL (T = 1, T = 1.5) |
 | D near-divisibility in (S) | 004_D | ACCEPTED WITH CORRECTIONS | Lemma A; Lemma B (1 ⊲ 2 ⊲ 6 and not 1 ⊲ 6 if 2T_0 < log(7/6)); Lemma C(a)–(c) (analyticity against the term v_2 at d = log 2) | In Lemma C(d), the passage from the continuous kernel to its sampling at logarithms of integers to exclude semiseparable matrices is ARGUED. N_BUILD_022, L2_BUILD_031, CA_K_001/002 and phase 202 were not opened in the primary sources by the memo |
-| E indefinite forms and inertia | 004_E | ACCEPTED WITH RESERVATION | Lemmas 2, 3 and 5 (constancy of indices for \|c − 1\| < λ_A(T)/Σ\|v_n\|); citations P47 thm:parityschur, prop:polarcap, subsec:inertia-excl confirmed | Prop. 1(c) is PROVED in finite dimension and ARGUED for unbounded forms. Phases 155 (round 5) and 156, R161_023, 061–063 and R170_854 were not opened in the primary sources by the memo |
+| E indefinite forms and inertia | 004_E | ACCEPTED WITH RESERVATION | Lemmas 2, 3 and 5 (constancy of indices for \|c − 1\| < λ_A(T)/Σ\|v_n\|); citations P46 thm:parityschur, prop:polarcap, subsec:inertia-excl confirmed | Prop. 1(c) is PROVED in finite dimension and ARGUED for unbounded forms. Phases 155 (round 5) and 156, R161_023, 061–063 and R170_854 were not opened in the primary sources by the memo |
 
 ## Results recorded (all without sign)
 
@@ -49,7 +49,7 @@ Schur complement with an explicit transformed weight.
 R4-f (PROVED, `ROUND_004_E.md` Lemmas 2, 3, 5, 6). An upper bound on the negative index is a positivity
 on a subspace of finite codimension. In every window with λ_A(T) > 0 the inertia indices are
 constant for c in a neighbourhood of 1: an inertia count does not distinguish c = 1. The Pontryagin format
-is already in P47 thm:parityschur and prop:polarcap. The counts increasing in T come from the archimedean form
+is already in P46 thm:parityschur and prop:polarcap. The counts increasing in T come from the archimedean form
 without comb.
 
 ## What the round leaves unexcluded, and without a written object

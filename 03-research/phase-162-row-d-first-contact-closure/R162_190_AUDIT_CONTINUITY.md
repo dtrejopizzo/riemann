@@ -1,6 +1,6 @@
 # R162_190 — Check of R162_001 (continuity of λ_A)
 
-Referee: verification pass. Sources checked: R162_001; Paper 47 main.tex eq:form,
+Referee: verification pass. Sources checked: R162_001; Paper 46 main.tex eq:form,
 eq:Aform, lem:mbounds, lem:monoT, lem:contT, thm:O, lem:firstcontact, rem:contA.
 
 ## Verdict: CORRECT WITH FIXES

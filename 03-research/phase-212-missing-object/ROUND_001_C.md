@@ -301,7 +301,7 @@ T Lg T^{−1} + log t into terms that pair with Λ(m) m^{−1/2} D_{m²} for eac
 mechanism.** OPEN.
 
 (ii) **Formulation (S).** Theorem R depends on the holomorphy of z ↦ P_z and does not transfer to the
-matrix 𝔸_M = [B(log m − log k)] of P47 prop:AM. There only the following elementary restriction holds.
+matrix 𝔸_M = [B(log m − log k)] of P46 prop:AM. There only the following elementary restriction holds.
 
 **Remark 5. PROVED.** If a functional ℓ(x) = Σ_m w_m x_m on finite vectors satisfies
 |ℓ(x)|² ≤ M·x*𝔸x (every size), then |w_m − w_k|² ≤ 2M[B(0) − B(log(m/k))]. Since B is even and C²
@@ -373,4 +373,4 @@ Remark 5.
 **Not verified.** The facts (M1)–(M5) are taken from the corpus as PROVED and were not re-derived
 (in particular the continuity bound (M2) of GRAM §18.2 and the holomorphy (M3)). No
 computation was done. Remark 5 uses the formula for B of STATEMENT_001 §2 and the decay F̂₀ = O(τ^{−2}) read
-from F̂₀ = (τ² + ¼)|ĝ|⁴; it was not cross-checked against the text of Paper 47. The analogous form of (M2) for the battery models without Euler product was not checked.
+from F̂₀ = (τ² + ¼)|ĝ|⁴; it was not cross-checked against the text of Paper 46. The analogous form of (M2) for the battery models without Euler product was not checked.

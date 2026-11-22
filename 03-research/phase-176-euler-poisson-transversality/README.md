@@ -10,7 +10,7 @@ to vanish, which would supply the missing sign/vanishing law.
 - The proposed reduction mod N is not a canonical morphism compatible simultaneously with the multiplicative cutoff, divisibility, the log k shifts, and additive Fourier structure — **PROVED** (Result 1) for the proposed construction; no claim about every conceivable discretization.
 - At the most favorable concrete test case N = 4, the exact vector forced by Λ⋆1 = log is nonzero under the DFT, so the proposed intersection does not vanish; removing the two directions the model calls "polar" makes the vector disappear entirely.
 - The continuous analogue (Sonine spaces) has a nontrivial exterior intersection; forcing the physical membership condition is shown to be equivalent to (not independent evidence for) the sought vanishing — **PROVED** (Result 4), i.e. circular as a route to a new law.
-- Overall verdict: **NO-GO** for the two-projection formulation; it does not affect the standing result R161.035 or Paper 47. Investing further rounds in this exact route is advised against.
+- Overall verdict: **NO-GO** for the two-projection formulation; it does not affect the standing result R161.035 or Paper 46. Investing further rounds in this exact route is advised against.
 
 ## Documents
 

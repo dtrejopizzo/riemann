@@ -120,7 +120,7 @@ If (G) were proved, (4) would give
     0 ≤ (1−q₀)||R_LF||² ≤ Φ(F) ≤ −E_ρ(F) ≤ 0.
 
 Hence R_LF=0 and, by injectivity on the radical, F=0: a contradiction.
-The Paper 47 first contact and Theorem F of Paper 45 would then give
+The Paper 46 first contact and Theorem F of Paper 45 would then give
 the global closure via the primitive route. This is a conditional
 implication; no part of this note proves (i) or (ii).
 

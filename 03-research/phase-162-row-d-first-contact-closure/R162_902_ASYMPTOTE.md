@@ -1,6 +1,6 @@
 # R162_902 — The terminal value of the resolvent flow (Conjecture 6.1 of R162_802)
 
-Pure mathematics, no numerics. Notation: Paper 47 (eq:form, eq:W, thm:parityschur,
+Pure mathematics, no numerics. Notation: Paper 46 (eq:form, eq:W, thm:parityschur,
 prop:polarcap, thm:KEP3), R162_504 (f_par, μ_k, ψ_T), R162_703 (g_par, h_par), R162_802 (the flow).
 
 **Status.**
@@ -159,7 +159,7 @@ Each candidate is listed with the line where it fails.
 4. **Two-sided pinning under RD_T.**
    - R160_M4 B2(2) gives g ≥ −C e^{cT} e^{−π e^{2T}} ‖h_par‖² when λ_par > 0.
    - So f → ∓½ follows from [RD_T for all large T and ‖h_T‖² = o(e^{π e^{2T}})]. But "RD_T for all T"
-     is already RH (Paper 47, primitive Weil criterion). E1.
+     is already RH (Paper 46, primitive Weil criterion). E1.
 
 **Falsifier lines.**
 - **Deletion a = Λ1_{n≥5}.**

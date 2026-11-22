@@ -1,7 +1,7 @@
 # L2_BUILD_025 — Lemma I in full (Theorem S closed); honest positioning; an explicit Euler × FE spectral density on Re s > 1
 
 ## Corpus check
-L2_BUILD_024 (Theorem S, Lemma I ARGUED), L2_BUILD_010 (2Re(−ζ′/ζ)(½+iτ) = m − 2ΣRe 1/(s−ρ)), L2_BUILD_016 (copies on Re s = k/2), Paper 47
+L2_BUILD_024 (Theorem S, Lemma I ARGUED), L2_BUILD_010 (2Re(−ζ′/ζ)(½+iτ) = m − 2ΣRe 1/(s−ρ)), L2_BUILD_016 (copies on Re s = k/2), Paper 46
 §subsec:KEP, Thm Z, lem:roughEF; L2_BUILD_011 (input map). grep "Re ξ′/ξ / Hadamard positivity / σ-family / homotopy of symbols /
 Lagarias": phase-160 survey mentions Herglotz of ξ′/ξ as a REF-D structure (crossword I1 list); no memo builds the explicit positive
 density D_σ for σ > 1 paired with a primitive profile. New: §1 (full proof), §3.
@@ -36,7 +36,7 @@ Note: the condition b > ½ is exactly what makes the prime sum converge in Step 
   ONE translation orbit {τ_dF₀}: by Bochner, positivity on finite combinations of translates of one profile already implies positivity on the
   whole primitive class. This is a known-in-spirit mechanism (a cyclic vector for the translation group under the positive form, with F̂₀ > 0
   making the orbit "total").
-- Paper 47 KEP: per-window positive definiteness of the explicit-formula datum g on (−2T, 2T). Theorem S: one window-free function of one
+- Paper 46 KEP: per-window positive definiteness of the explicit-formula datum g on (−2T, 2T). Theorem S: one window-free function of one
   variable, B_{F₀}, no T. **Genuinely new is only "one fixed explicit profile, no T"**; the content is a reformulation, not a sign.
 
 ## 3. The constructive question: an explicit positive spectral density from Euler × FE (PROVED on Re s > 1; OPEN at ½)

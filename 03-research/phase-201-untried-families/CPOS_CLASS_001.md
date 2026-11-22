@@ -142,7 +142,7 @@ or a non-uniform bridge — and (ARGUED) that step is, at best, a reformulation 
 uses the exact multiplicativity of Λ (a_n ≡ 1, Euler, conductor 1) **inside the construction**. Overall label:
 (i), (ii), (γ) PROVED; (α) PROVED under κ_T ≠ 0, CONDITIONAL without it; (β) ARGUED; trichotomy as a class ARGUED.
 
-Verification against P47: (i) is a literal instance of lem:transfer (𝔛 = window forms on P_T, closed semi-bounded;
+Verification against P46: (i) is a literal instance of lem:transfer (𝔛 = window forms on P_T, closed semi-bounded;
 q₁ with negative background explicitly given by rem:FDH / lem:shape-epstein). (ii)+(iii) is thm:shape(C) specialized
 to the class "imported positivity": a deduction whose set of properties is invariant under O₁₀ (removal of Euler,
 lem:shape-epstein) or under the DH substitution cannot prove eq:target. (α2) is thm:shape(A′)/(B′) with O₄^ε
@@ -241,7 +241,7 @@ T=9/5, Epstein T≥1.59); (α) affine PROVED under κ_T ≠ 0 (Φ.14, C-E′); (
 ARGUED. Closes phase 201 as a strategy (not by inventory). Escapable only via (h1)–(h6); registered exit:
 exterior/(★★) of AUDIT_L_SHARP_16 §6."
 
-## 7. Text for Paper 47, sec:spec
+## 7. Text for Paper 46, sec:spec
 
 > **Theorem (no imported positivity).** Let $(g,a)\mapsto O_{g,a}$ be a construction defined by one formula for every
 > weight datum $a$ of the degree-one theory $\mathfrak T_1$ (functional equation, $\Gamma$-factor, bounded real coefficients,
@@ -256,7 +256,7 @@ exterior/(★★) of AUDIT_L_SHARP_16 §6."
 
 (Verified: lem:transfer requires q₀, q₁ in the same class with the property, and q₁'s negative background — given by
 rem:FDH and lem:shape-epstein, both "proved"; thm:shape(A′) labels O₄^ε conditional on κ_T ≠ 0, matches (iii). \lamA
-and eq:target are existing macros/labels in P47. Not integrated: the editor decides.)
+and eq:target are existing macros/labels in P46. Not integrated: the editor decides.)
 
 Final labels: C-pos class theorem (i),(ii),(γ) PROVED; (α) PROVED under κ_T ≠ 0 / CONDITIONAL; (β) and trichotomy
 ARGUED; "exterior = only infinite non-uniformity" ARGUED; (★★) OPEN. L′♯ OPEN. Row D OPEN.

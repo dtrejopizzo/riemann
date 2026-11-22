@@ -6,7 +6,7 @@ Positivity of 𝔞_T on P_T is assumed true; this theorem is a
 
 ## 0. Corpus check
 
-Inputs unified (all read): Paper 47 `def:PD`, `prop:weak`, `thm:D1`, `thm:Z`, `cor:Tarch`, `lem:degen`, `thm:shape` (A/A′/B/B′/B″),
+Inputs unified (all read): Paper 46 `def:PD`, `prop:weak`, `thm:D1`, `thm:Z`, `cor:Tarch`, `lem:degen`, `thm:shape` (A/A′/B/B′/B″),
 `lem:shape-scale`, `lem:shape-lin`, `lem:shape-ident`, `lem:shape-est`, `prop:shape-eulerdel`, `prop:shape-inputs`,
 `thm:spec-gauge`, `thm:spec-carrier`, `thm:strip-T1`, `thm:strip-T4`, `prop:spec` (1)–(6); N_018 (identities + Bochner/CS);
 phase 194 (C Thm 4, E2, F1/F2, G1, H window collapse/H1, I1/I2/I4, J3, K1/K2, L1/L3), phase 195 (M1/M2, N, O1/O2, Q2/Q3, R1/R4,
@@ -22,7 +22,7 @@ class (R162_2601c). The complement in §6 is on the comb side, window-truncated 
 Fix T>0, N=N_T=⌈e^{2T}⌉. A *comb* is a ∈ ℝ^{ℕ≥2}; its window part is π_N a=(a(n))_{n<N}. For a comb, put
 v_n(a)=a(n)/√n and
   𝔞_T^{(a)}(F) = m_T(F) − Σ_{n<N} v_n(a) Re c_F(log n),   λ_A(T;a)=inf{𝔞_T^{(a)}(F): F∈P_T, ‖F‖=1},
-with m_T the archimedean+polar part and c_F the autocorrelation, exactly as in Paper 47 (def:W, eq:nuw). WP_T(a) means λ_A(T;a)≥0.
+with m_T the archimedean+polar part and c_F the autocorrelation, exactly as in Paper 46 (def:W, eq:nuw). WP_T(a) means λ_A(T;a)≥0.
 Λ is the von Mangoldt comb; the target is WP_T(Λ) for every T.
 
 **Definition 1 (method).** A method at window T is a pair 𝔐=(S,Ψ):
@@ -45,7 +45,7 @@ T>½log2; c small, T≥0.60), for 0 at T≥0.60 (cor:Tarch); CITED for Ξ_Q for 
 
 ## 2. The atom catalogue and its invariance (Lemma 2)
 
-Every premise used in phases 0–196 and in Paper 47 (index families) is one of the atom types below. Column "kept by" lists a
+Every premise used in phases 0–196 and in Paper 46 (index families) is one of the atom types below. Column "kept by" lists a
 falsifier satisfying the atom.
 
 | atom type | example | kept by | label |
@@ -91,7 +91,7 @@ weak duality and sup=λ_P by thm:D1: (ii). Otherwise Ψ is uniform, Ψ≡c, and 
 Or (c): π_N S={π_NΛ}, so by window collapse inf_S λ_A=λ_A(T;Λ) and "c≥0" is the statement WP_T(Λ): (iii). ∎
 
 Remark (T<0.60). On (½log2,0.60) the falsifier is cΛ (c large) for A2/A3-type classes (PROVED, lem:shape-scale); a_P and 0 do
-not fail there. The theorem is stated for T≥0.60, which is where row D is open beyond the Paper 47 certificates.
+not fail there. The theorem is stated for T≥0.60, which is where row D is open beyond the Paper 46 certificates.
 
 Remark (estimates). Ψ of the form main term − remainder is either uniform (covered) or, if its main term is exact, in 𝓛_lin; a
 remainder with slack is bounded by the margin (B′, lem:shape-est(i)–(iii)): no separate outcome.
@@ -162,5 +162,5 @@ quantitative, signed Hamburger theorem in the direction of the minimizer's autoc
 ## 7. Labels summary
 Definitions 1, catalogue: definitions. Lemma 2: PROVED except A2∧loose-FE (ARGUED), A8 (CONDITIONAL), A9 (CITED).
 Theorem 3: PROVED for T≥0.60 under Lemma 2's labels. Prop 4: PROVED/CITED/CONDITIONAL per item. Theorem 5: PROVED
-(numerical constant from lem:shape-margin as labelled in Paper 47). (D1),(D2): OPEN; exhaustiveness of the catalogue 𝒜
+(numerical constant from lem:shape-margin as labelled in Paper 46). (D1),(D2): OPEN; exhaustiveness of the catalogue 𝒜
 over all past premises: ARGUED (by index families). Row D: OPEN. No sign obtained.

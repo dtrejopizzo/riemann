@@ -34,7 +34,7 @@ AND "Riemann zeta", all:semilocal AND "trace formula". Texts checked:
 
 ## 4. Actions
 
-* Add citations to 2008.10974 and 2403.01247 in R186_002, 007, 008, 009, 010 and in the Paper 47 draft (the phase 186 files do not cite 2008.10974: a bibliographic gap).
+* Add citations to 2008.10974 and 2403.01247 in R186_002, 007, 008, 009, 010 and in the Paper 46 draft (the phase 186 files do not cite 2008.10974: a bibliographic gap).
 * Relabel Thm C as "CITED (CC 2008.10974, ρ_p) + verification"; keep items §2.1–2.5 as new.
 
 Status: check done against public arXiv; no access to journals.

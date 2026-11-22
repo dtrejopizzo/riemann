@@ -4,7 +4,7 @@ Status: audit of scope and concrete requirements; it closes no route for being a
 
 ## 1. What the registered operator calculus really says
 
-Read Paper47 prop:opcalc (lines8419 onwards), lem:shape-lin, phase188/N_BUILD_018_LINEAR_CENTRE_REDUCES_TO_OMEGA_MU.md, the index and the filter memos004–013. The operator proposition shows that convolution identities are linear identities in the autocorrelation; by themselves they do not supply a new sign. It expressly covers convolution operators. It does not classify or exclude every inequality that preserves a spectral measure restricted to rational numerators, the positive frequency terms or an exact coupling with the polar.
+Read Paper46 prop:opcalc (lines8419 onwards), lem:shape-lin, phase188/N_BUILD_018_LINEAR_CENTRE_REDUCES_TO_OMEGA_MU.md, the index and the filter memos004–013. The operator proposition shows that convolution identities are linear identities in the autocorrelation; by themselves they do not supply a new sign. It expressly covers convolution operators. It does not classify or exclude every inequality that preserves a spectral measure restricted to rational numerators, the positive frequency terms or an exact coupling with the polar.
 
 The rational filters present are causal convolutions of delta and integrable exponential kernels. Their transport identity does belong to the language of opcalc. What is new must lie in the inequality proved AFTERWARDS: asserting the identity again, applying Cauchy--Schwarz without a demonstrated gain, or rewriting the comb with Euler does not provide that step. The finite closures from four to seven already show by construction why that scope observation must not be turned into an absolute NO-GO.
 

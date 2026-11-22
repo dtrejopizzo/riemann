@@ -67,7 +67,7 @@ M(σ) for σ ≠ 0 needs ζ ≠ 0 off the line (forbidden); only the pointwise f
 ## 4. R.3 — no pointwise / monotonicity sign (NO-GO, PROVED)
 Pointwise, |ζ|²∂_u|h|² = |F|²[Θ_∞ − 2Re(F_log/F)]. Take ρ ≠ 0 supported in (1,X₀], X₀ ≤ 2: F_log ≡ 0, F = R, integrand
 Θ_∞|R|², negative on |τ| < τ₀ = 6.2898 (Θ_∞(0) = −5.37) wherever R ≠ 0 — while 𝔔 ≥ 0 there (F Prop F.5; CITED Zhu Thm
-1.2 / Paper 47 thm:log5W). So any argument "∂_u|h|² ≥ 0 pointwise (or on a τ-set of full measure)" is impossible, even on
+1.2 / Paper 46 thm:log5W). So any argument "∂_u|h|² ≥ 0 pointwise (or on a τ-set of full measure)" is impossible, even on
 the data where positivity holds; the pole term 2AB and the τ-integration are indispensable. **NO-GO for the class
 𝒦_R^{pt} = {pointwise u-monotonicity of |Φ/ζ| on the line, with or without the |ζ|² weight}.**
 Deep subclass (supp ρ ⊂ (X₀,∞)): R.2 gives N′(0) = −Π ≈ −2Dρ₀² and 2AB ≈ +2Dρ₀² (F Prop F.4); the leading terms cancel and
@@ -93,7 +93,7 @@ beyond the AFE point. Restatement of (★★_P)/(★★_Q), OPEN.
 
 ## 6. Labels
 PROVED: R.0 (premise false; F_log = ∂_sF + F_L), R.1 and R.1′ (w-derivative identity, one-line Q(F₀,F₀) = 0), R.2 (moment
-form, interchange justified), R.3 NO-GO 𝒦_R^{pt}, cΛ/Beurling bookkeeping. CITED: Zhu Thm 1.2 / Paper 47 thm:log5W
+form, interchange justified), R.3 NO-GO 𝒦_R^{pt}, cΛ/Beurling bookkeeping. CITED: Zhu Thm 1.2 / Paper 46 thm:log5W
 (shallow positivity), J Thm J.3. ARGUED: §5 stationary-phase weights 2log k − log(τ/2π). OPEN: (★★_R) = L′♯.
 **Do not retry:** σ-derivative identities in the Mellin variable for 𝔔 (wrong derivative, R.0); pointwise monotonicity of
 |Φ/ζ| or |F/ζ| on the line (R.3); "M(σ) = ∫|ζ|²|Φ/ζ|²(½+σ)" (needs off-line zero information). No sign claimed. Row D OPEN.

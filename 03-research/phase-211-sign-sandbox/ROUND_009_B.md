@@ -1,7 +1,7 @@
 # Round 009 B — The Fourier-class selection rule on the exterior test space, and the lower half in the self-dual sector
 
 Target (★): λ_A(T) ≥ 0 for every T (STATEMENT_001). Object: a_T = W_T on P_T = {F ∈ L²(I_T) : A(F) = B(F) = 0},
-λ_A(T) = inf a_T on unit vectors of P_T. Notation of ROUND_008_E and Paper 47 §sec:ext: λ = e^T, N = λ², c = 2πN,
+λ_A(T) = inf a_T on unit vectors of P_T. Notation of ROUND_008_E and Paper 46 §sec:ext: λ = e^T, N = λ², c = 2πN,
 ℱf(ξ) = ∫f(x)e^{−2πixξ}dx, E the summation map Ef(x) = e^{x/2}Σ_{n≥1}f(ne^x) on I_T, Π_T the orthogonal projector of
 L²(I_T) onto P_T, R the reflection RF(x) = F(−x), P_± = (I ± R)/2 the parity projectors. ψ_k = k-th prolate of [−λ, λ] at
 c = 2πN, restricted to [−λ, λ] and normalised in L²; χ_k = χ_k(c) its concentration, d_k := 1 − χ_k. For even k,
@@ -15,7 +15,7 @@ even k occur. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUM
 Searched: ROUTES-TRIED-INDEX README rows P211-2B, P211-3A, P211-4A, P211-7D, P211-8E, 05b row L106; phase 199
 proof-L-sharp memos T_001, U_001, V_001 (Strategy V, Fourier-sector reduction of L′♯), S_001, MORI15_EXTREMAL_001,
 AUDIT_L_SHARP_5; ROUND_001_B (Thm 1.1, Cor 1.2, Prop 1.3), ROUND_008_E (§2.2(ii)–(iii), Lemma 4.3, Prop 5.1), REVIEW_006
-§1 remark (a), ROUND_009_A (mollified prolates); Paper 47 prop:ext-consol(b), prob:ext-L, thm:ext-half.
+§1 remark (a), ROUND_009_A (mollified prolates); Paper 46 prop:ext-consol(b), prob:ext-L, thm:ext-half.
 
 What is on record about the selection rule.
 - V_001, V.1.4 (PROVED there): for admissible f, Φ_{ℱf} = Φ_f∘R on the full line, so the standard ℱ is the

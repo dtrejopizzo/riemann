@@ -1,6 +1,6 @@
 # A signed extension for all zeros with summable weighted cost
 
-Let ρ=β+iγ be a nontrivial zero and δρ=|β−1/2|. Always sum with multiplicity. On the window (−2T,2T) the spectral datum of KEP(T) of paper 47 is, in distributions and with its spectral normalization, the sum of exp(iγu)cosh(δρ u). This uses the symmetry with respect to the critical line, without assuming RH. For any k>1 and L sufficiently large there is a real symmetric measure ν_L with transform supported in [−L,L], which coincides exactly with that local datum and satisfies
+Let ρ=β+iγ be a nontrivial zero and δρ=|β−1/2|. Always sum with multiplicity. On the window (−2T,2T) the spectral datum of KEP(T) of paper 46 is, in distributions and with its spectral normalization, the sum of exp(iγu)cosh(δρ u). This uses the symmetry with respect to the critical line, without assuming RH. For any k>1 and L sufficiently large there is a real symmetric measure ν_L with transform supported in [−L,L], which coincides exactly with that local datum and satisfies
 
     ∫ (1+|τ|)^(−k) dν_L⁻(τ)
        ≤ C(T,k) Σρ [L^(−2)+δρ²](1+|γ|)^(−k).
@@ -17,4 +17,4 @@ The first term has nonnegative spectral density, translated to γ. On the fixed 
     W_T(f) ≥ −C(T,k) sup_τ [(1+|τ|)^k |f̂(τ)|²] · Σρ δρ² (1+|γ|)^(−k).
 Thus a concrete negative direction would impose a quantitative minimum on that sum of displacements. The inequality does not give positivity: neither is the sum known to vanish nor has a uniform positive margin been obtained to absorb it. It is not legitimate to let k→∞ keeping the norm of the tests fixed.
 
-**Cross-check.** Tail bounds by smoothing and quartet controls have antecedents in paper 47 and R7-01. The contribution with respect to 170–171 is passing to a signed extension of the complete real datum with summable corrections, each charged to its own δρ². The total unweighted negative mass of 171 has no proved finite majorant here. The remaining problem is to produce a positive extension or to absorb the correction in the original form.
+**Cross-check.** Tail bounds by smoothing and quartet controls have antecedents in paper 46 and R7-01. The contribution with respect to 170–171 is passing to a signed extension of the complete real datum with summable corrections, each charged to its own δρ². The total unweighted negative mass of 171 has no proved finite majorant here. The remaining problem is to produce a positive extension or to absorb the correction in the original form.

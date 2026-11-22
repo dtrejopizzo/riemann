@@ -335,7 +335,7 @@ determine the linear pairing of (6.2). (7.2) is not used in (5.3).
 4. **R162_407.** Virial differentiability is conditional on (REG).
    Without it there is no proved \(C^1\) family, and §2 must be read as
    a conditional reduction, not as an unconditional theorem about
-   Paper 47.
+   Paper 46.
 5. **R162_702.** There the spectral background is monotone but the
    angles and cross correlations are unsigned. Term (6.2) is precisely
    a cross correlation of that type.

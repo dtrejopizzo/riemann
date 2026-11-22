@@ -4,7 +4,7 @@ Status: PROVED; independent review APPROVED in POWER_PRIMAL_AUDIT_045.md§4. Bou
 
 ## 1. Antecedents and precise change of hypothesis
 
-Consulted ROUTES-TRIED-INDEX/README.md§L55, AUDIT_B.md§1 (especially lines32–41 and L55-B), grid R162_2300_MASTER_GRID, CROSSWORD-TO-D and the primal/dual definitions of Paper47§3. L55-B remains recorded as an open candidate: no later construction was found. Review044 already distinguished a feasible test that gives an upper from a REPRESENTING pair that can give a lower.
+Consulted ROUTES-TRIED-INDEX/README.md§L55, AUDIT_B.md§1 (especially lines32–41 and L55-B), grid R162_2300_MASTER_GRID, CROSSWORD-TO-D and the primal/dual definitions of Paper46§3. L55-B remains recorded as an open candidate: no later construction was found. Review044 already distinguished a feasible test that gives an upper from a REPRESENTING pair that can give a lower.
 
 No finite total mass is imposed on the spectral measure: that restriction does not belong to L55-B and is inadequate for a symbol of logarithmic growth. Here the measure is locally finite and has a tail of that scale. The new and specific hypothesis tested is that its whole CORRECTION be compact in frequency, keeping exactly the real tail of the symbol. The obstruction uses uniqueness of moments of a compact measure and the identity for ALL tests, not W4 nor a modification of the comb.
 
@@ -38,7 +38,7 @@ Possible masses of nu in|u|>=2T do not contribute, since c_F is0 there. All inte
     a_T(F)+epsilon||F||²=int Phi_F dmu>=0,
     lambda_A(T)>=−epsilon.                             (LOWER)
 
-mu here is NOT the feasible probability of programme(P) of Paper47: that one produces an upper of lambda_P. PAIR is a representing identity for ALL tests and is therefore a potential lower datum.
+mu here is NOT the feasible probability of programme(P) of Paper46: that one produces an upper of lambda_P. PAIR is a representing identity for ALL tests and is therefore a potential lower datum.
 
 ## 3. Fixed-tail ansatz and compact rigidity lemma
 
@@ -105,7 +105,7 @@ Define g0=cosh(u/2)1_(|u|<2T), g1=u sinh(u/2)1_(|u|<2T). If the exterior remaind
     r=alpha g0hat+beta g1hat+nu_exthat,
     mu>=0 ⇒ q_T+nu_exthat+alpha g0hat+beta g1hat>=−epsilon.
 
-This is EXACTLY a certificate of value−epsilon of programme(D) of Paper47, with its exterior measure and its two Tate multipliers. Thus the non-compact repair of THIS subcase is not a new primal tool: its verification brings back the known dual margin.
+This is EXACTLY a certificate of value−epsilon of programme(D) of Paper46, with its exterior measure and its two Tate multipliers. Thus the non-compact repair of THIS subcase is not a new primal tool: its verification brings back the known dual margin.
 
 That identification is not extended to all singular positive spectral measures nor to all exterior distributions. L55-B keeps a more general constructive possibility, but this attempt provides no independent pair of that class.
 

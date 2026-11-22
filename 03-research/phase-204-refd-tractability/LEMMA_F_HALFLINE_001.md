@@ -123,7 +123,7 @@ dimension K. Since K is arbitrary, F″(0) has infinite negative index on C_c^�
 *Proof.* That of F⁻ applied to each k. The cross terms vanish by disjoint supports. ∎
 
 **Corollary F⁻.2 (minimal-leak representatives and the Paley–Wiener class; ARGUED).**
-(a) **Minimal leak.** Paper 47's §22 / MORI15 minimal-leak gauge projects onto the complement of a finite-dimensional
+(a) **Minimal leak.** Paper 46's §22 / MORI15 minimal-leak gauge projects onto the complement of a finite-dimensional
 gauge space (M = 28 modes at μ = 15). A negative subspace of dimension ≥ 29 intersects that complement. Hence there
 exists r that is its own minimal-leak representative and has F″(0) < 0.
 (b) **Paley–Wiener class.** The restrictions to (λ, ∞) of 𝓕f, with f ∈ L²[−λ, λ], are dense in L²(λ, ∞) with

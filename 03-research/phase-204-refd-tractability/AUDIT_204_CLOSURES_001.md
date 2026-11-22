@@ -3,7 +3,7 @@
 Phase 204.
 ARGUED / OPEN / NO-GO / NUMERICAL. Write only this file.
 
-Sources verified by hand: L2_INTERLACE_001, P1_BBSTAR_001, POLAR_CAP_001, LEMMA_F_HALFLINE_001, P2_SCHUR_001; Paper 47
+Sources verified by hand: L2_INTERLACE_001, P1_BBSTAR_001, POLAR_CAP_001, LEMMA_F_HALFLINE_001, P2_SCHUR_001; Paper 46
 main.tex: thm:coer-schur (l.5207, definition of S_{T,k}), thm:parityschur (l.4176), prop:polarcap (l.4316), lem:gmono (l.4715),
 prop:onewindow, rem:polarcapdiag (l.11151), def:W/eq:nuw (l.1193), prop:opcalc and thm:sos (l.8236–8270), def:ext, thm:ext-half
 (l.9692), rem:ext-killing, prop:ext-gauge (l.9725); R186_025 (Theorems A/B), Q2_LADDER_001 §1 (Lemma R).
@@ -30,7 +30,7 @@ None of the five closures is WRONG at its core; two are PARTIAL and there is one
    at the pole zero. Outside the class: g with that moment ≠ 0 (polar coupling of rank ≤ 1, ARGUED reducible to 𝔊_T) and
    infinite P (Q-P2.2).
 
-Integrable into P47: Lemma T3 (remark), extension of thm:sos (one sentence), Lemma 2.7 (remark), PC-2 (sentence in
+Integrable into P46: Lemma T3 (remark), extension of thm:sos (one sentence), Lemma 2.7 (remark), PC-2 (sentence in
 rem:polarcapdiag), Lemma WT (new, proposition). F⁻ and P2-S.3 not.
 
 ---
@@ -39,7 +39,7 @@ rem:polarcapdiag), Lemma WT (new, proposition). F⁻ and P2-S.3 not.
 
 ### 1(a) Correctness of the proof
 
-**Definition verified.** P47 thm:coer-schur: 𝒱 = 𝒱_k ∩ 𝒟_T (Tate per block, k equal blocks), E_k (2k−2 dimensions, piecewise
+**Definition verified.** P46 thm:coer-schur: 𝒱 = 𝒱_k ∩ 𝒟_T (Tate per block, k equal blocks), E_k (2k−2 dimensions, piecewise
 Tate exponentials e^{±t/2}1_{B_j}), 𝔰_{T,k}(e) = 𝔞_T(e) − 𝔞_T(𝖪e), S_{T,k} its matrix. Requires c(T,k) > 0 (cor:coer-L1). The
 memo §1 agrees word for word. Hence (a) "k = blocks, not contacts" is correct: TRACT_001 R13(d) was wrong.
 
@@ -55,7 +55,7 @@ INV_U_001 U5b, which is indeed intrinsic); it is not a statement the NO-GO rests
 of 𝔞_T|𝒫_T via v = −𝖪e) is correct by eq:coer-schur. The codimension argument (W3) applies literally in finite dimension.
 Correct.
 
-**Erratum (minor, does not change the verdict).** §4.5 writes v_7 = Λ(7)/√7 = 0.7355; in P47 (def:ext, thm:sos)
+**Erratum (minor, does not change the verdict).** §4.5 writes v_7 = Λ(7)/√7 = 0.7355; in P46 (def:ext, thm:sos)
 v_n = 2Λ(n)/√n, so v_7 = 1.471 and the jump of Lemma J is 2v_7F(T)² ≈ 2.94·F(T)², not 1.47. The memo's header
 ("v_n = Λ(n)/√n·(…)") inherits the ambiguity. Correct it.
 
@@ -96,7 +96,7 @@ that of λ_A. The class is well delimited.
 
 ### 2(a) Correctness of the proof
 
-**thm:sos (P47 l.8256) verified.** The proof uses only: (i) Σ|D_i|² ≥ 0 pointwise ⇒ μ_0 ≥ sup S_T = 𝒜_T (lem:mbounds(iii));
+**thm:sos (P46 l.8256) verified.** The proof uses only: (i) Σ|D_i|² ≥ 0 pointwise ⇒ μ_0 ≥ sup S_T = 𝒜_T (lem:mbounds(iii));
 (ii) 𝔪_T − μ_0 ≥ 0 on 𝒫_T ⇒ λ_{∞,P} ≥ μ_0; (iii) 𝒜_T ≥ v_2 = 0.9802 > 0.311 ≥ λ_{∞,P}(T) for T ≥ ½log3. The frequencies of
 D_i do not come into play. Audit remark: even in the original thm:sos, |D_i|² with D_i in n^{iτ} already has atoms at
 log(m/n) ∈ log ℚ, which must cancel within the sum; so the "extension to log ℚ" is literal and the extension to arbitrary ℝ
@@ -240,7 +240,7 @@ so it **is not admissible**. Moreover the condition g(T) = 0 and the gauge are u
 
 ### 4(c) PROVED sub-results
 
-- Theorem F⁻ and Prop 5.1/5.2 are correct and independent, but the objects (Z^{(ε)}, Lemma F from A_MU) are not in P47; P47
+- Theorem F⁻ and Prop 5.1/5.2 are correct and independent, but the objects (Z^{(ε)}, Lemma F from A_MU) are not in P46; P46
   only has Z_log in thm:ext-half. **Do not integrate** unless A_MU is integrated (f); at most a footnote after thm:ext-half
   ("ε ↦ ‖Z^{(ε)}r‖² is not convex in general; counterexample with compact support"), noting that the counterexample is not
   admissible.
@@ -258,7 +258,7 @@ with convex F on [0,ε], uniform ε). Does not return to YES; moves from NO-GO t
 
 **Lemma R (Q2_LADDER §1) verified.** Hypothesis: g in the core (real, C², vanishes to second order at ±T), and the Tate
 moment corresponding to the pole, 𝓕F(0) = 2∫g(s)e^{−s/2}ds = 0 (the memo calls it A(g); the proof uses the integral with
-e^{−s/2}, which in P47's convention is B; there is a letter inconsistency between statement and proof in Q2_LADDER — the
+e^{−s/2}, which in P46's convention is B; there is a letter inconsistency between statement and proof in Q2_LADDER — the
 content is "the moment that kills ζ's pole" and nothing changes). With F(t) = t^{−½}g(−log t), ζP(∂)g = Φ_{F_P}(−y) and F_P
 satisfies the hypotheses of Guo L4.4 (the same ones prop:ext-gauge uses for the gauge). Guo L4.4 gives radicality of the
 **complete Weil distribution** 𝒲 from def:ext: archimedean term + full comb + 2AB. **It does include the archimedean part**:
@@ -314,7 +314,7 @@ No closure is WRONG. No route returns to YES.
    (NUMERICAL).
 5. **Lemma WT** (this audit): 𝔞_T(h_par) = 1/q_par with only invertibility of 𝔄_par on the whole sector; inertia of W per
    sector via (n_−(𝔄_par), sign of q_par ∓ ½) — Proposition after prop:polarcap (write the infinite-dimensional case).
-6. **Theorem F⁻** (outside P47; index input): ε ↦ ‖Z^{(ε)}r‖² is not convex on C_c^∞; log-convex on the cones K_r ≥ 0, ρ ≥ 0.
+6. **Theorem F⁻** (outside P46; index input): ε ↦ ‖Z^{(ε)}r‖² is not convex on C_c^∞; log-convex on the cones K_r ≥ 0, ρ ≥ 0.
 7. **Lemma P2-S.1 / P2-S.3** (methodological input; P2-S.1 depends on Lemma R from Q2_LADDER).
 8. **Lemma J** (derivative jump −2v_nF(−T_n)F(T_n) in basis E): correct, basis-dependent; index only.
 
@@ -326,5 +326,5 @@ No closure is WRONG. No route returns to YES.
   negative square of 𝔞_T + capacity with q_ev < −½); POLAR_CAP's reopening clause tightened to "no resolvent of 𝔞_T in the
   window." LEMMA_F PARTIAL: F⁻ exact but not admissible (compact support vs PW restriction); in the admissible class
   NO-GO = NUMERICAL+ARGUED; **OPEN: gauge-existential Lemma F** (a convexifying representative per class mod 𝒢̄_T). Errata:
-  v_7 (L2_INTERLACE §4.5, ×2), "empty class" in P1 (there is a spectral B, not tautological). Integrable into P47: Lemma T3,
+  v_7 (L2_INTERLACE §4.5, ×2), "empty class" in P1 (there is a spectral B, not tautological). Integrable into P46: Lemma T3,
   P1.A (sentence), Lemma 2.7, PC-2, Lemma WT.

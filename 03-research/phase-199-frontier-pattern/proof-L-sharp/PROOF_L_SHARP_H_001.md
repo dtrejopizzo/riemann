@@ -30,7 +30,7 @@ the minimiser); its identities are recorded as objects. No sign is claimed. Row 
   (R186-S2seeds: Fold/Grönwall NO-GO, "vacuous/closed/pole-dominated"), l.401 (G8F-157 lem:monoT: REF-D), l.412
   (G3E-159: bootstrap in T, DEAD), l.431 (G8E-159 bootstrap: flow on orbit is identity), l.635 (G7E-R160 flow-monotone
   functional: every monotone functional is generic/archimedean/explicit-formula), l.975 (R170_888 Hellmann–Feynman in
-  Z_N: tool PROVED, no sign), l.1033 (P46 D.1–D.3: monotonicity in T fails for the state reformulation); README
+  Z_N: tool PROVED, no sign), l.1033 (P47 D.1–D.3: monotonicity in T fails for the state reformulation); README
   l.423 (BARRIER_D2_001: continuation in comb space transfers only λ_A(a₀) − d_v; segments give only upper bounds),
   l.450–455 (MECH_001, PROOF_L_SHARP_A–E, AUDIT_L_SHARP_1); SURVEY l.116 (flows in T closed, monotonicity = SPEC_A).
 - **Corpus read.** R186_038 §2 and Lemma α.3 (Grönwall on the minimiser ⟺ virial bound 𝒱_T(h*) ≤ Tc(T)λ_A(T),
@@ -38,7 +38,7 @@ the minimiser); its identities are recorded as objects. No sign is claimed. Row 
   derivada"); R186_045 Lemma 1.1 (log det flow, Hellmann–Feynman); INV_U_001 (U0 entry invisibility PROVED, U2 modulus
   1/log(1/η) PROVED, U3 edge law ARGUED, U4 onset η/log(1/η) ARGUED, U5b C¹ across crossings ARGUED, §3 drift formula
   dλ/dT = −𝒱/T, "a quantity λ·w(T) nondecreasing between crossings is a restatement"); SIGN-REAUDIT I16 (no Grönwall
-  by dilation at fixed F: PROVED negative); Paper 47 lem:monoT, lem:contT, lem:flowdet, rem:bar-loc, rem:moriceiling;
+  by dilation at fixed F: PROVED negative); Paper 46 lem:monoT, lem:contT, lem:flowdet, rem:bar-loc, rem:moriceiling;
   memo A (Thm 1.1, Prop 2.1, Thm 3.1, §3.4, Lemma 4.2), memo D (Thm 2.1), memo E (Thm E.2, Lemma E.4),
   AUDIT_L_SHARP_1 §3 (Slepian identity, ε′(1⁺) = −cΣ(d/dc)log(1−λ_n)), §6.3 ((★★) and the constraint list);
   PATTERN_001 (κ-band, sawtooth), MECH_001 Prop 3.2; AUDIT_ZENODO_FRONTIER B1 (Mori ½log15, CITED, L104).
@@ -74,7 +74,7 @@ a functional of φ̂ on [c/2π, ∞) (edge included); the tail G_φ|_{(−∞,�
 (memo A Rem (ii)); and the right edge satisfies G_φ(0⁻) = φ(1) = 0, G_φ′(0⁻) = φ′(1).
 
 **1.3 The window form is translation invariant.** W_T(g) = (1/2π)∫Θ|ĝ|² + 2Re(A(g)B̄(g)) − Σ_{n<μ}v_n c_g(log n) on
-L²(I) (Paper 47 def:W, Mori's Q). Under g ↦ g(·+T): the archimedean term and the autocorrelations are invariant;
+L²(I) (Paper 46 def:W, Mori's Q). Under g ↦ g(·+T): the archimedean term and the autocorrelations are invariant;
 A ↦ e^{T/2}A, B ↦ e^{−T/2}B, so AB̄ is invariant. Hence, writing J_T := (−2T, 0),
   **W_T(Ef) = 𝒲[G_φ·1_{J_T}] =: N(T;φ),**
 where 𝒲 is the full-line Weil form of memo A §1 (the comb may be taken complete: c_{G1_J}(log q) = 0 for log q ≥ 2T).
@@ -170,7 +170,7 @@ calculus sees the sign of N, and none sees the sign of N′ either.)
 **4.1 Set-up.** Let φ*_c be a minimiser of Q_c(φ)/‖G_φ1_{J_T}‖² (existence: the pencil is bounded below on the
 unit sphere of the window norm and Q_c is weakly lsc on the finite block of memo A §4.4 plus the coercive tail
 of Cor 4.3; CONDITIONAL on that compactness argument, not written here). Where Δ is differentiable and the
-minimiser is simple, Hellmann–Feynman (lem:flowdet, Paper 47; R186_045 Lemma 1.1) gives
+minimiser is simple, Hellmann–Feynman (lem:flowdet, Paper 46; R186_045 Lemma 1.1) gives
   Δ′(c) = [∂_cQ_c(φ*) − Δ(c)·∂_c‖G_{φ*}1_{J_T}‖²]/‖G_{φ*}1_{J_T}‖²,  ∂_c‖G1_{J_T}‖² = (dT/dc)·2G(−2T)² ≥ 0.
 Unconditionally (Danskin), D⁺Δ(c) ≤ that expression evaluated at any minimiser at c: the **easy** direction gives
 upper bounds on Δ, in line with lem:monoT and BARRIER_D2 Thm 2 ("segments give only upper bounds"). The Grönwall
@@ -289,7 +289,7 @@ the explicit crossing requirement (H_q). None is a sign source.
   H.4 (derivative identity, C¹ across crossings for fixed data), Cor H.4′, Lemma H.5 (classical), Rem H.6
   (identity), (H-ODE), Theorem H.5(i) (modulo 4.1), the correction in H.5(ii) that (H) is sufficient and not
   equivalent, §4.3(a)–(c) as stated, the table of §5.
-- **CITED:** Mori ½log15 (L104), Guo Lemmas 4.3–4.4, Slepian's identity, Paper 47 lem:monoT, lem:contT,
+- **CITED:** Mori ½log15 (L104), Guo Lemmas 4.3–4.4, Slepian's identity, Paper 46 lem:monoT, lem:contT,
   lem:flowdet, memo A Thm 1.1 / Lemma 4.2 / Prop 2.1, memo E Thm E.2 / Lemma E.4, INV_U U0/U2, CERT_FALSIFIERS_001.
 - **CONDITIONAL:** existence/simplicity/continuity of the pencil minimiser (4.1); Hellmann–Feynman for Δ.
 - **ARGUED:** ρ_L = 2 − (k+½)/c at the bottom (gauge mixing uncontrolled); the edge germ at the minimiser (U4);

@@ -52,4 +52,4 @@ It does not advance the sign for `ζ` at any `T > log 2`; it does not prove anyt
 
 ## 6. Decision
 
-Phase 153 **closed**. Row D acquires its first sign-carrying theorem (D.12-α `PROVED`, conditional on Paper 42) and one new exact identity (Theorem A). Row D's label is unchanged: no sign for `ζ` beyond `log 2`. Paper 46 must receive Theorem A, Lemmas C1/C3, the certificate, D.12-α's resolution and the open items (P153.1)–(P153.5) in §28.3; the six-clause reopening criterion of §28.4 is not invoked (the theorem is about the endpoint, not about all `T`).
+Phase 153 **closed**. Row D acquires its first sign-carrying theorem (D.12-α `PROVED`, conditional on Paper 42) and one new exact identity (Theorem A). Row D's label is unchanged: no sign for `ζ` beyond `log 2`. Paper 47 must receive Theorem A, Lemmas C1/C3, the certificate, D.12-α's resolution and the open items (P153.1)–(P153.5) in §28.3; the six-clause reopening criterion of §28.4 is not invoked (the theorem is about the endpoint, not about all `T`).

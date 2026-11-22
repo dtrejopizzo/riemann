@@ -9,7 +9,7 @@ exact arithmetic (NUMERICAL).
 - Q2_LADDER_001 (Lemma R, Lemma and Theorem Q2.1, rough comb) and K3_GAMMA_001 (K3.1).
 - Phase 199: MORI15_EXTREMAL_001 §4, PATTERN_001 §2 (Mori V κ table), AUDIT_CONSTRAINTS_001 (restrictions 1, 2, 11
   and 17), PROOF_L_SHARP_H_001 (§4, §5, class 𝒦_H).
-- Paper 47: def:ext, lem:ext-mob, prop:ext-gauge, lem:ext-ellbound, prob:ext-L, prop:ext-univ, lem:monoT.
+- Paper 46: def:ext, lem:ext-mob, prop:ext-gauge, lem:ext-ellbound, prob:ext-L, prop:ext-univ, lem:monoT.
 - Index: README (PATTERN_001, MECH_001, DD_001), 06_OPEN_RESIDUES (L2_016 at line 50, W-loc at line 37).
 
 **Conventions.**

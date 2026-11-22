@@ -75,7 +75,7 @@ zero-side reading, or because it is an exact restatement of row D (REF-D).
   Hardy-amplitude transfer route.
 
 ## Relation to other phases
-Reuses and cites proved tools and exclusion patterns from Paper 47
+Reuses and cites proved tools and exclusion patterns from Paper 46
 (sec:coer, prop:wit-sens, thm:margin, lem:transfer O1–O15) and from the
 routes-tried index; the Hardy-amplitude transfer theorem (front D) and the
 separation set 𝖯⋆ (Round R) are flagged as tools usable elsewhere. The

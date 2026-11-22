@@ -4,7 +4,7 @@ Note. Pure mathematics, no numerics, no parallel passes. Cell **8D** (no arithme
 The nearest routes are the two live residues of 8D in R162_2300 §2: 115_15 (CC count #{λ_j(K_I)>1}) and
 PATH-TO-D §3 (ii).
 Inputs: R162_2300 §0, §3, §7 (S1–S12); 115_15; PATH-TO-D (ii); R162_1201 §1–2; R162_1301 §1 (L1–L4); R162_504 Thms 1–2;
-R162_902; R162_2501a/b; R157_002 §4–5 (Pontryagin κ, Paper 11, C_B); Paper 47 eq:form, thm:parityschur, prop:polarcap,
+R162_902; R162_2501a/b; R157_002 §4–5 (Pontryagin κ, Paper 11, C_B); Paper 46 eq:form, thm:parityschur, prop:polarcap,
 lem:contA, thm:finmod.
 
 **Labels.**
@@ -38,7 +38,7 @@ Any construction in 8D must, before a proof is written, do the following.
 ## 2. PATH-TO-D (ii): the carrier operator
 
 Notation: I = I_T = [−T,T]. ℓ_±(F) = ∫F e^{±t/2} (so A = ℓ_+, B = ℓ_−, and ℓ_ev, ℓ_odd are their half-sum and half-difference). P_T = ker ℓ_+ ∩ ker ℓ_−.
-a_T is Paper 47 eq:form, and λ_A(T) = inf a_T on the unit sphere of P_T.
+a_T is Paper 46 eq:form, and λ_A(T) = inf a_T on the unit sphere of P_T.
 
 **Theorem 1 (the carrier).** Let 𝒟 be the space of F ∈ L²(ℝ) with compact support in the form domain. Define on 𝒟 the full-line Weil form
  s(F) := m-part − Σ_{n≥2} (Λ(n)/√n)·2c_F(log n),  c_F(x) = ∫F(t)F(t−x)dt,
@@ -47,7 +47,7 @@ i.e. the convolution form with distributional symbol σ = m(τ) − Σ_n 2Λ(n)n
 (b) (explicit formula) s(F) = S_0(F) − 2ℓ_+(F)ℓ_−(F), with S_0(F) := Σ_ρ F̂(γ_ρ)F̂(−γ_ρ) (symmetric summation, ρ = ½+iγ_ρ).
 (c) S_0 ≥ 0 on 𝒟 ⟺ RH (Weil). ℓ_± are not L²(ℝ)-bounded, so the rank-2 term exists only on compactly supported (or e^{|t|/2}-weighted) carriers.
 
-*Proof.* (a) Paper 47 eq:form is the restriction of this form (the comb terms with log n > 2T vanish by support). (b) is Weil's explicit formula applied to g = F * F̃, ĝ(z) = F̂(z)F̂(−z), with ĝ(±i/2) = ℓ_+ℓ_−. This is the identity W_T = a_T + 2AB of thm:parityschur(o). (c) is Weil's criterion. ∎
+*Proof.* (a) Paper 46 eq:form is the restriction of this form (the comb terms with log n > 2T vanish by support). (b) is Weil's explicit formula applied to g = F * F̃, ĝ(z) = F̂(z)F̂(−z), with ĝ(±i/2) = ℓ_+ℓ_−. This is the identity W_T = a_T + 2AB of thm:parityschur(o). (c) is Weil's criterion. ∎
 
 So the self-adjoint carrier asked for in (ii) exists, is explicit, and is unique up to the choice of how the full line is regularised. The question is only whether some *positive* S is available.
 

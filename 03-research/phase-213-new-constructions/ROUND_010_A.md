@@ -1,6 +1,6 @@
 # Combinations of nearby translations of a step profile
 
-Antecedents: BUILD084(1)–(2) signs lines of physical step profiles, P47 lem:transl gives the crossing matrix, and lem:mbounds and lem:compact provide growth of the symbol and boundedness of the comb on a fixed window. The operation here uses that all translations coincide up to a scalar outside tubes around the jumps. This allows handling cancellations of coefficients of arbitrary size. Targeted independent cross-check, with no claim of priority.
+Antecedents: BUILD084(1)–(2) signs lines of physical step profiles, P46 lem:transl gives the crossing matrix, and lem:mbounds and lem:compact provide growth of the symbol and boundedness of the comb on a fixed window. The operation here uses that all translations coincide up to a scalar outside tubes around the jumps. This allows handling cancellations of coefficients of arbitrary size. Targeted independent cross-check, with no claim of priority.
 
 **Statement.** Let F(t)=exp(t/2)f(exp t), where f is a step function with finitely many jumps and compact support inside (0,∞). If the physical pole-free energy a(F) is strictly positive, there exists δ(F)>0 such that a is strictly positive on every nonzero vector of the span of V_d F, 0≤d≤δ(F). If F satisfies the primitive moments, the whole space satisfies them. Complex coefficients and any finite number of translations are allowed.
 
@@ -16,7 +16,7 @@ Let U be the union of the intervals [s,s+δ] where s runs over the logarithmic p
 
     a(Y) ≥ a(F)|c|²−2||1_U h|| |c| ||g||+||g||².
 
-The right-hand side is a positive definite form in (|c|,||g||). This proves the statement. Translations preserve the vanishing of both moments by P47 lem:transl.
+The right-hand side is a positive definite form in (|c|,||g||). This proves the statement. Translations preserve the vanishing of both moments by P46 lem:transl.
 
 **Scope.** BUILD084 allows applying the result to each f_k of that family, with k arbitrarily large. One obtains a radius that may depend on k. The proof uses the positive energy of the initial profile and the boundedness of the visible comb. Comparing translations with arbitrary separations and proving the sign of the full window remain pending. Status PROVED after independent mathematical review.
 
@@ -32,9 +32,9 @@ Let F be a real step profile in the physical variable as before, and a_c=A−cΠ
 
     A(Y_d)/Π(Y_d) = c* − J d log(1/d)/(4Π(F)) + O_F(d).
 
-The cross-check distinguishes this quotient from the minimal threshold over all profiles or windows of P47. The qualitative conclusion at c* also follows from the tubes of 010 and polarization; the leading term measures the descent.
+The cross-check distinguishes this quotient from the minimal threshold over all profiles or windows of P46. The qualitative conclusion at c* also follows from the tubes of 010 and polarization; the leading term measures the descent.
 
-Indeed, let H=V_dF−F. Separation of the jumps implies ||H||²=dJ+O_F(d²): on each interval [s,s+d) the difference is the jump with changed sign plus O_F(d); outside them the difference is O_F(d) on a support of bounded length. By bounded variation, |Ĥ(τ)|≤C_F min(d,1/(1+|τ|)) for 0<d<1/2, using the translation factor and the Fourier bound of F. P47 lem:mbounds gives m(τ)=log(2+|τ|)+O(1). By Plancherel,
+Indeed, let H=V_dF−F. Separation of the jumps implies ||H||²=dJ+O_F(d²): on each interval [s,s+d) the difference is the jump with changed sign plus O_F(d); outside them the difference is O_F(d) on a support of bounded length. By bounded variation, |Ĥ(τ)|≤C_F min(d,1/(1+|τ|)) for 0<d<1/2, using the translation factor and the Fourier bound of F. P46 lem:mbounds gives m(τ)=log(2+|τ|)+O(1). By Plancherel,
 
     A(H)=log(1/d)||H||²+O_F(d).
 

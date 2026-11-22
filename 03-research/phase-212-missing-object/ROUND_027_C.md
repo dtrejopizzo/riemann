@@ -1,6 +1,6 @@
 # Round 27, memo C — Structure of the damped form `a^{(ω)}_T`
 
-Notation of P47 (eq:symbol, eq:form, eq:W, eq:Aform, lem:K, lem:polar): `c_F(u) = ∫F(t)F̄(t−u)dt`, `m`, `s_T`,
+Notation of P46 (eq:symbol, eq:form, eq:W, eq:Aform, lem:K, lem:polar): `c_F(u) = ∫F(t)F̄(t−u)dt`, `m`, `s_T`,
 `v_n = 2Λ(n)/√n`, `N_T = {n ≥ 2 : log n < 2T}`, `A(F) = ∫Fe^{t/2}`, `B(F) = ∫Fe^{−t/2}`, `W_T = a_T + 2Re(AB̄)`,
 `K(u) = 2e^{3u/2}/(e^{2u}−1)`. Damped form: `a^{(ω)}_T(F) = Arch(F) − Σ_{N_T} v_n cos(ω log n) c_F(log n)` on `P_T ∩ D_T`.
 General test weight: `a^w_T`. Antecedents cross-checked: 212-26-A (the optimum with `w ≥ 0` looks like damped `v`),

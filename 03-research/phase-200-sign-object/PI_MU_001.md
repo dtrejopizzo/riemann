@@ -5,7 +5,7 @@ OPEN / NO-GO / REF-D / NUMERICAL. **No sign is proved. L′♯ OPEN. Row D OPEN.
 
 **Read.** AUDIT_200_AMU_001 (complete); A_MU_FACTORIZATION_001; AUDIT_200_SPEC_002/003; Q2_LADDER_001 (Lemma R,
 rough 0/1 comb); SPEC_002 (SQ.0, T.1, T.3); SPEC_003 (A.1); B1_FLAT_001 (ring identity, stacking falsifier);
-Paper 47 §22 (def:ext l.9601, lem:ext-mob l.9633, thm:ext-half l.9647, rem:ext-killing, prop:ext-gauge l.9680,
+Paper 46 §22 (def:ext l.9601, lem:ext-mob l.9633, thm:ext-half l.9647, rem:ext-killing, prop:ext-gauge l.9680,
 prop:ext-consol (b) l.9729, prop:ext-univ l.9735); phase 199: AUDIT_CONSTRAINTS_001 (rows 3, 9, 11, 17, 19),
 MORI15_EXTREMAL_001.
 
@@ -24,7 +24,7 @@ Grep in `05-meta-and-planning/ROUTES-TRIED-INDEX/README.md` for "Ramanujan", "c_
 | l.518–520 (SPEC_003, AUDIT_SPEC_003, C1) | 𝒬_μ = L²/𝒢̄_T, norm ℓ/2; R-Q6; B.1♭ | starting point; B.1♭ FALSE (B1_FLAT) is used in §3.2 |
 | l.467 (MORI15) | g*, f* minimal gauge in prolate basis, ℓ* ∈ [4.4,8.5]e−70, edge value | §4 |
 | l.479 (TEST_KINKS_001) | jumps of E⁻¹p at λ/m with weights μ(m) | §5: the jump comb of §2.4 is different (inner edge 1/λ, weights n^{−½}, no Möbius); new reason written there |
-| Paper 47 prop:ext-consol (b) | ℓ as a prolate form with infimum over the gauge coefficients | §2.3 is its closed form; not new |
+| Paper 46 prop:ext-consol (b) | ℓ as a prolate form with infimum over the gauge coefficients | §2.3 is its closed form; not new |
 
 No entry describes 𝒢̄_T by its annihilator, nor proves that the gauge image is closed, nor identifies the
 Ramanujan relations/Lemma R as an identity on 𝒬_μ. **New reason compared with INV_H (l.396):** INV_H uses the

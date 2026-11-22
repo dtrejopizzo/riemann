@@ -1,6 +1,6 @@
 # The barycentre stays on the positive side up to 10^20
 
-With Z1–Z3 of P47, C(x)>0 for every real 3≤x≤10^20. Moreover C(x)>0.035√x for 10^7≤x≤10^20. The upper endpoint is a limit of this estimate of the barycentre and not a support radius of the Weil form.
+With Z1–Z3 of P46, C(x)>0 for every real 3≤x≤10^20. Moreover C(x)>0.035√x for 10^7≤x≤10^20. The upper endpoint is a limit of this estimate of the barycentre and not a support radius of the Weil form.
 
 **Exact separation.** Let k(v)=(1−v)(3v−1) for 0≤v≤1 and zero for v>1. Set J_d(y)=ΣΛ(n)k((n/y)^d). Then C(x)=J_1(x)−J_2(√x)−R(x), where R contains only powers of odd exponent ≥3, with weight log p. Indeed J_2 eliminates exactly once every even exponent. Since k≤1/3,
 

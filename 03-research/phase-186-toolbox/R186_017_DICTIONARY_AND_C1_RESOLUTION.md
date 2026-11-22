@@ -60,7 +60,7 @@ Remark: at h*, ∫c_{h*}ε_∞^{(½)} = −0.1280 and ∫c_{h*}ε_∞^{(1)} = �
 4. λ = 1 semilocal not computed (L1): |λ₁(A_S)| → ~1 makes ε_S^{(1)} ill-conditioned; λ = ½ is the numerically reliable level and D3 legitimizes it.
 5. No sign claim about E_S; "absorption" at h* is the identity.
 
-## For Paper 47
+## For Paper 46
 
 Proposition (level dictionary): Tr ϑ(f)Π_{S(λ,λ)} = W_∞(f) + 2log(1/λ)f(1) + ∫f(ρ⁻¹)ε_λ(ρ)d*ρ, and semilocally with −comb₂ and ε_S^{(λ)}. Resolves N1: absolute (84)_S holds at every λ with this term. Withdraw the chain "E_S = Son_S − ∫c_hε_S" for λ ≠ 1 and the C1 conclusion of R186.016.
 

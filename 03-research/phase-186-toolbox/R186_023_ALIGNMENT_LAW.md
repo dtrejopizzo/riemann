@@ -61,6 +61,6 @@ These are not the same mechanism and they do not contradict each other. prop:ban
 - Parity: measured as ⟨h(x),h(−x)⟩/‖h‖²; +1.00 always. The mode switches of R183_030/032 refer to other forms (pairs, ker ℓ), not to E_S on 𝒫_T.
 - No equivalence between row D and other statements is used.
 
-## For Paper 47
+## For Paper 46
 - Add an observation (NUMERICAL) after prop:negtrace: the minimizer of the window form is even, with its spectral peak in the **low** negative component of σ, not in the prop:align arcs; and the near-cancellation requires a growing number of archimedean modes (table §2). This reinforces "the band does not decide".
 - Do not include any "single-mode alignment law" or sign prediction beyond 0.8.

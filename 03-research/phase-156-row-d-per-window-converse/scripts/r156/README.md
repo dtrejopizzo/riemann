@@ -16,8 +16,8 @@ all other terms are exact closed forms evaluated at 30 digits.
 | `r156_witness_threshold.py` | the same bound U(T) as a function of T; root 0.46075 | PROVED-grade bound |
 | `r156_theta_witness.py` | odd quintic witness: W_theta < 0 at (1/2)log 3 for every theta < 0.8148 | PROVED-grade bound |
 
-Validation: `r156_green_matrix.py 0.5493061443 20 --noprimes` reproduces the P47 Galerkin value
-lambda^{inf,P}(1/2 log 3) ~ +0.083 (P47 after cor:Tarch), and with primes lambda_min(A_T|P_T) ~ 9.5e-4 (P47: 9.89e-4 upper bound at 120 modes).
+Validation: `r156_green_matrix.py 0.5493061443 20 --noprimes` reproduces the P46 Galerkin value
+lambda^{inf,P}(1/2 log 3) ~ +0.083 (P46 after cor:Tarch), and with primes lambda_min(A_T|P_T) ~ 9.5e-4 (P46: 9.89e-4 upper bound at 120 modes).
 
 ## Audit re-verification (R156_004, independent audit of R156_001)
 

@@ -14,7 +14,7 @@ Pure mathematics, no numerics. No paper or grid was edited.
 
 ## 1. Literal statements
 
-**prop:polarcap** (P47 `main.tex:3753`). Under WP_T and the rank condition of thm:parityschur(b) in
+**prop:polarcap** (P46 `main.tex:3753`). Under WP_T and the rank condition of thm:parityschur(b) in
 sectors with primitive background 0, with S^Sch_T = diag(𝔞_T(h_ev), 𝔞_T(h_odd)) and J = diag(2,−2):
 𝔊_T = S^Sch_T + J; for E_T(β,α) := inf{W_T(F): F ∈ 𝒟_T real, Φ_F(0)=β, Φ_F(1)=α} one has
 E_T(β,α) = (α,β) 𝔊^{AB}_T (α,β)ᵀ with 𝔊^{AB}_T = ¼[[g_ev+g_odd, g_ev−g_odd],[g_ev−g_odd, g_ev+g_odd]], infimum attained;
@@ -48,13 +48,13 @@ M_0 ≤ M ≤ M_0+α⁻¹E*E; sufficient certificate for contact exclusion: I−
 
 ## 3. What was chosen: structure of the polar capacity in T
 
-Notation from P47 §parityschur and R160_M4 L1: 𝔤̃_par(T) := inf{W_T(F) : F ∈ 𝒟^par_T, ℓ_par(F)=1} ∈ [−∞,∞),
+Notation from P46 §parityschur and R160_M4 L1: 𝔤̃_par(T) := inf{W_T(F) : F ∈ 𝒟^par_T, ℓ_par(F)=1} ∈ [−∞,∞),
 and Ẽ_T(β,α) := inf{W_T(F): F ∈ 𝒟_T real, B(F)=β, A(F)=α} (without the WP/rank hypothesis).
 
 **Lemma 1 (Loewner monotonicity). PROVED.** For T<T′ and every (β,α), Ẽ_{T′}(β,α) ≤ Ẽ_T(β,α). In particular,
 where the hypotheses of prop:polarcap hold at T and T′, 𝔊^{AB}_{T′} ⪯ 𝔊^{AB}_T and 𝔊_{T′} ⪯ 𝔊_T.
 
-*Proof.* Extend F ∈ 𝒟_T by zero to I_{T′}: by the proof of lem:monoT (P47 l.384) the norm, A(F), B(F),
+*Proof.* Extend F ∈ 𝒟_T by zero to I_{T′}: by the proof of lem:monoT (P46 l.384) the norm, A(F), B(F),
 the autocorrelation and 𝔞 do not change (the new contacts have log n ≥ 2T, where the autocorrelation
 vanishes), so W_{T′}(F)=W_T(F) and the constraints are preserved. The feasible set grows; the infimum decreases.
 Under the hypotheses, Ẽ = E is the quadratic form of 𝔊^{AB}, and a pointwise inequality of quadratic
@@ -72,16 +72,16 @@ left-continuous on (0,∞) (as a function to [−∞,∞)).
 
 *Proof.* By Lemma 1, lim_{T′↑T} 𝔤̃_par(T′) = inf over 𝒰 := ∪_{T′<T} 𝒟^par_{T′} ∩ {ℓ_par=1} ≥ 𝔤̃_par(T).
 For the other inequality it suffices that 𝒰 be dense in {F∈𝒟^par_T: ℓ_par(F)=1} in the form norm, since W_T
-is continuous in that norm (closed form bounded below, thm:A of P47; the polar term 2ε ℓ² is
+is continuous in that norm (closed form bounded below, thm:A of P46; the polar term 2ε ℓ² is
 continuous in L²). Given F, let F_s(t)=F(t/s), s<1: support in I_{sT}, same parity.
 (D) The dilation s ↦ F_s is continuous at s=1 in the form norm: the Lévy part is ∫(1+φ(τ²))|F̂|² with φ
-of logarithmic growth (Theorem S of P47), and |F̂_s|² = s²|F̂(sτ)|²; by dominated convergence
+of logarithmic growth (Theorem S of P46), and |F̂_s|² = s²|F̂(sτ)|²; by dominated convergence
 (φ(τ²/s²) ≤ φ(τ²)+C for s∈[½,1], Bernstein subadditivity) F_s→F; the contact
 terms v_n·(autocorrelation)(log n), log n<2T, are continuous in L². Hence ℓ_par(F_s)→1 and F_s/ℓ_par(F_s) ∈ 𝒰
 converges to F. ∎
 
 The same holds for Ẽ_T(β,α) for each (β,α). Right continuity is **not** asserted: at T=½log n
-a contact enters and P47 only has it for λ^W via Bombieri Thm 5 (l.398); for 𝔤̃_par it remains OPEN (not
+a contact enters and P46 only has it for λ^W via Bombieri Thm 5 (l.398); for 𝔤̃_par it remains OPEN (not
 investigated; does not affect sign).
 
 ## 4. Battery of falsifiers (logic)

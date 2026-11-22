@@ -1,6 +1,6 @@
 # POWER_STATE_085 — Four arbitrary admissible powers
 
-Status: **PROVED**, run 61911 exit0/FULL PASS 16384 panels for NR and NS; mathematical and code audit approved. Independent reproduction 29132 exit0/FULL PASS of both numerators on the 16384 panels, with matching hash. Paper 47 global **OPEN**; papers untouched.
+Status: **PROVED**, run 61911 exit0/FULL PASS 16384 panels for NR and NS; mathematical and code audit approved. Independent reproduction 29132 exit0/FULL PASS of both numerators on the 16384 panels, with matching hash. Paper 46 global **OPEN**; papers untouched.
 
 ## Complete result
 

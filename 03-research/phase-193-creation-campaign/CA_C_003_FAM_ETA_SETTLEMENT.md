@@ -30,7 +30,7 @@ survive (Λ(2), Λ(3), Λ(4)).** These are the "defects at 2, 3, 4" of EXP_003 �
 
 ## 3. The hand proof of T*₃(η), η > 2/3: where it stops (exact obstruction)
 Write Q_M(w) = 𝒜_M(w) − Σ_N N^{−½}D_w(N)E^w_M(N) with D_w(N) = 2c log N − 2 log 2·[2|N]·(c − w(N/2M))·1{N/(2M) > η}.
-(a) **Bulk vanishing (PROVED, from P47 prop:shape-family(iv) and the two Tate conditions).** For N ≤ ηMe^{−2T₀}, w ≡ c on the support of
+(a) **Bulk vanishing (PROVED, from P46 prop:shape-family(iv) and the two Tate conditions).** For N ≤ ηMe^{−2T₀}, w ≡ c on the support of
 c₀(log(m/N)), so E^w_M(N) = c Σ_m m^{−½}c₀(log(m/N)). Its Euler–Maclaurin main term N^{½}c∫e^{v/2}c₀(v)dv vanishes, and so does the
 first-order term (∫v e^{v/2}c₀ = 0, the double zero of ĉ₀ at −i/2). What is left is the ℤ-Poisson dual sum Σ_{ℓ≠0}, of size
 O_A(N^{½}(N·(1−e^{−2T₀}))^{−A}) for the smooth F₀ (rapid decay). So the bulk N-sum of 2c log N·N^{−½}E is O(1) and explicit.

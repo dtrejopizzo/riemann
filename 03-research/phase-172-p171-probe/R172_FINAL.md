@@ -71,20 +71,20 @@ formula for its generalized integers.
 
 | Link | Class | Label | Exact reason and source |
 |---|:---:|---|---|
-| E1: \(\forall T,\lambda_T^W\ge0\) as the Weil criterion | **[F]** | **PROVED** (diagnosis) | The full form of P47 uses \(m_\zeta\), the poles \(0,1\), and the explicit formula centered at \(1/2\). Substituting only \(P\)'s comb defines a different form, but not \(\zeta_P\)'s Weil criterion. ROW-D-REDUCED §1 E1; P47 `eq:W`. |
-| E2: primitive form as a variational form | **[V]** | **PROVED** | The compression by the two Tate moments and the variational minimum are defined for any locally finite comb once the archimedean term is fixed. P47 §1. |
+| E1: \(\forall T,\lambda_T^W\ge0\) as the Weil criterion | **[F]** | **PROVED** (diagnosis) | The full form of P46 uses \(m_\zeta\), the poles \(0,1\), and the explicit formula centered at \(1/2\). Substituting only \(P\)'s comb defines a different form, but not \(\zeta_P\)'s Weil criterion. ROW-D-REDUCED §1 E1; P46 `eq:W`. |
+| E2: primitive form as a variational form | **[V]** | **PROVED** | The compression by the two Tate moments and the variational minimum are defined for any locally finite comb once the archimedean term is fixed. P46 §1. |
 | E2: global equivalence with the system's RH | **[F]** | **PROVED** (diagnosis) | The Bombieri--Weil equivalence uses the explicit formula and symmetry about \(1/2\). ROW-D-REDUCED §1 E2. |
-| E3 and Theorem Z: certificate \(\leftrightarrow\) smoothing of the zeros | **[F]** | **PROVED** | Identifying the certificate with the zero measure is \(\zeta\)'s explicit formula. \(P\) lacks that FE/completion. P47 `thm:Z`, `cor:RH`. |
-| E4: finite weight vector in the convex set \(\mathcal V_T\) | **[V]** | **PROVED** | Local finiteness leaves only finitely many atoms below \(e^{2T}\); the convex reduction is finite and uses no zeros. P47 `prop:finite`, `prop:uniform`. |
-| E5: \(\lim_{T\to\infty}\lambda_T^A\ge0\leftrightarrow\mathrm{RH}\) | **[F]** | **PROVED** (diagnosis) | The formal limit can be written, but identifying it with RH again uses Weil/FE. ROW-D-REDUCED §1 E5; P47 `cor:margin2`. |
-| E6: adelic Hodge-index as a criterion | **[F]** | **PROVED** (diagnosis) | There is no adelic square for \(P\); any analogous detector is equivalent to its own RH. P46 Cor. 17.11 and Thm. 17.21; ROW-D-REDUCED §1 E6. |
-| Parity and Schur form | **[V]** | **PROVED** | It is algebra of a closed even form plus two functionals and a rank-two perturbation. P47 `thm:parityschur`. |
-| \(2\times2\) polar capacity | **[V]** | **PROVED** | The identity \(\mathfrak G_T=S_T^{Sch}+J\) is functional-analytic. P47 `prop:polarcap`. It does not identify \(\zeta_P\)'s poles. |
-| Abstract skeleton of KEP1(i--ii), KEP2, and KEP3(a) | **[V]** | **PROVED** | Fourier--Bochner, duality, and extension hold for abstract data \(g\). P47's specialization uses \(g_\zeta\); identifying a natural \(g_P\) belongs to the following [F] row. P47 `thm:KEP1`--`thm:KEP3`. |
-| KEP1(iii), KEP3(b): atomic solution = zeros and equivalence with RH | **[F]** | **PROVED** | The identification uses Theorem Z and \(\zeta\)'s explicit formula. P47 `thm:KEP1(iii)`, `thm:KEP3(b)`. |
+| E3 and Theorem Z: certificate \(\leftrightarrow\) smoothing of the zeros | **[F]** | **PROVED** | Identifying the certificate with the zero measure is \(\zeta\)'s explicit formula. \(P\) lacks that FE/completion. P46 `thm:Z`, `cor:RH`. |
+| E4: finite weight vector in the convex set \(\mathcal V_T\) | **[V]** | **PROVED** | Local finiteness leaves only finitely many atoms below \(e^{2T}\); the convex reduction is finite and uses no zeros. P46 `prop:finite`, `prop:uniform`. |
+| E5: \(\lim_{T\to\infty}\lambda_T^A\ge0\leftrightarrow\mathrm{RH}\) | **[F]** | **PROVED** (diagnosis) | The formal limit can be written, but identifying it with RH again uses Weil/FE. ROW-D-REDUCED §1 E5; P46 `cor:margin2`. |
+| E6: adelic Hodge-index as a criterion | **[F]** | **PROVED** (diagnosis) | There is no adelic square for \(P\); any analogous detector is equivalent to its own RH. P47 Cor. 17.11 and Thm. 17.21; ROW-D-REDUCED §1 E6. |
+| Parity and Schur form | **[V]** | **PROVED** | It is algebra of a closed even form plus two functionals and a rank-two perturbation. P46 `thm:parityschur`. |
+| \(2\times2\) polar capacity | **[V]** | **PROVED** | The identity \(\mathfrak G_T=S_T^{Sch}+J\) is functional-analytic. P46 `prop:polarcap`. It does not identify \(\zeta_P\)'s poles. |
+| Abstract skeleton of KEP1(i--ii), KEP2, and KEP3(a) | **[V]** | **PROVED** | Fourier--Bochner, duality, and extension hold for abstract data \(g\). P46's specialization uses \(g_\zeta\); identifying a natural \(g_P\) belongs to the following [F] row. P46 `thm:KEP1`--`thm:KEP3`. |
+| KEP1(iii), KEP3(b): atomic solution = zeros and equivalence with RH | **[F]** | **PROVED** | The identification uses Theorem Z and \(\zeta\)'s explicit formula. P46 `thm:KEP1(iii)`, `thm:KEP3(b)`. |
 | Abstract Theorem M: doubly exponential collapse | **[V]** | **PROVED** | It is a density/Nyquist phenomenon for completed multisets with the required symmetry. R162_2401b; Paper 48 `thm:M`. |
 | Theorem M applied verbatim to \(P\) | **[F]** | **PROVED** (diagnosis) | \(P\)'s known zeros do not form the real multiset symmetric about \(1/2\). Recentering at \(11/16\) changes the polar term, Gamma, and the form. |
-| Abstract `finZ` | **[V]** | **PROVED** | It is a harmonic theorem for every finite real symmetric multiset and a flat-top weight. P47 `thm:finZ`. It does not claim that \(P\)'s ordinates produce such a multiset. |
+| Abstract `finZ` | **[V]** | **PROVED** | It is a harmonic theorem for every finite real symmetric multiset and a flat-top weight. P46 `thm:finZ`. It does not claim that \(P\)'s ordinates produce such a multiset. |
 | Theorem R / identification R164 | **[V]** | **PROVED** | The conditional theorem holds: positivity outside \(\mathbb N\), the gap, FE, Gamma, and exact poles force \(f=\zeta\). R164_401 Theorem R; R164_190. \(P\) falls outside due to its hypotheses. |
 | Cellular decomposition and \((\star_{\rm cell})\) | **[F]** | **PROVED** as a transport failure; **OPEN** as a sign for \(\zeta\) | The \(P_j,N_j\) use quartets about \(1/2\). In \(\zeta\)'s witness, \((\star_{\rm cell})\) is equivalent to RH. R163_401 §4.7--4.8 and Rem. 4.8a. |
 | Tail condition (TC) | **[F]** | **PROVED** (diagnosis) | It is the tail of \(-\zeta'/\zeta\) recomposed with residues, Gamma, and the cutoff \(e^{2T_c}\). It does not exist verbatim for (1.1). R164_000 §§0--1. |
@@ -172,14 +172,14 @@ Audit of the three requested criteria:
    satisfied.
 2. (R172-cand) is not literally RH: it asks for a sign before
    recombining. This condition is indeed satisfied.
-3. Paper 47 proves \(W_T\ge0\) after recombining for
+3. Paper 46 proves \(W_T\ge0\) after recombining for
    \(T\le\frac12\log5\); it does not prove the separate sign of (5.1). Hence
    there is not yet a proved case of (R172-cand).
 
 **Phase verdict: PARTIAL.** The formal stopping condition "full table
 with no `[?]`" was reached. The scientific success criterion of the goal was not:
 a statement that is simultaneously false for both probes and has a
-non-vacuous proved case is still missing. Presenting Paper 47's recombined
+non-vacuous proved case is still missing. Presenting Paper 46's recombined
 positivity as a case of (R172-cand) would be incorrect.
 
 ## 6. NO-GO for simultaneously repairing the three criteria

@@ -5,7 +5,7 @@ Status: initial review in §§1–7; final review of the construction and of the
 
 ## 1. Corpus consulted and initial decision
 
-Read: the project rules, README209, CONTROL_001, README208; README index (families and entries 204–207), 06_OPEN_RESIDUES (W₂ and BR leaves), targeted searches in the master grid and crossword; CELL_001 §8–10 and AUDIT_207_001 §B; P1_BBSTAR_001; SPEC_SIGN_OBJECT_005; R185_005B §1–3; BARRIER_X_001 §3 and correction AUDIT_197_HOSTILE_3 §c; Paper 47 main.tex def:PD, thm:sos and rem:sosatoms.
+Read: the project rules, README209, CONTROL_001, README208; README index (families and entries 204–207), 06_OPEN_RESIDUES (W₂ and BR leaves), targeted searches in the master grid and crossword; CELL_001 §8–10 and AUDIT_207_001 §B; P1_BBSTAR_001; SPEC_SIGN_OBJECT_005; R185_005B §1–3; BARRIER_X_001 §3 and correction AUDIT_197_HOSTILE_3 §c; Paper 46 main.tex def:PD, thm:sos and rem:sosatoms.
 
 **ARGUED: specification admissible as an examination of the already open O1.** The new written reason is concrete: effective kernel not reducible to a multiplier plus functional reflection, without collapse to a weight of the product mn. It is not equivalent to having a candidate or a new lemma. The README gates avoid repeating Gonek, Gram and factorisation of the target form.
 

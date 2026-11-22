@@ -36,4 +36,4 @@ Relative to041, the precision scale of the tail after globally cancelling the pr
 
 POWER_RENORMALIZED_AUDIT_042 approves the whole proof. Normalisations, boundaries, constants and the passage to absolute scale were reviewed; the exact verifier was reproduced twice: PASS. No new W cases nor prime campaigns were evaluated.
 
-No new positive W coverage, arbitrary combination nor window T of Paper47. Rows1..17, all k>=0 at u31.5, and the earlier regions are kept. The global objective requires deciding the interior balance and then covering the sufficient table/carrier; it remains OPEN.
+No new positive W coverage, arbitrary combination nor window T of Paper46. Rows1..17, all k>=0 at u31.5, and the earlier regions are kept. The global objective requires deciding the interior balance and then covering the sufficient table/carrier; it remains OPEN.

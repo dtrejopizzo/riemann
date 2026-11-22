@@ -12,7 +12,7 @@ The node's sign step (phase 206) is, for each fixed T, a finite-dimensional stat
 - **Corollary: quartets do not falsify the node.** They have the same comb, hence the same node.
 - **The only class hypothesis with content is (K1)**, in quantitative form: margin η and Lipschitz constant L uniform in T in the multiplier norm.
 
-**Theorem A (PROVED; the P47 inputs are CITED).** At the node over the full sector, no Ψ ∈ 𝒦_marg proves the node for all T. Reason: the ball of radius η/L around Λ should fit in G_T, and the inscribed radius of G_T in Λ is ≤ μ(T) ≤ 4·10⁹Te^{−15.449T}. The version with N ≈ 4T is CONDITIONAL on μ_N(T) → 0 (NUMERICAL).
+**Theorem A (PROVED; the P46 inputs are CITED).** At the node over the full sector, no Ψ ∈ 𝒦_marg proves the node for all T. Reason: the ball of radius η/L around Λ should fit in G_T, and the inscribed radius of G_T in Λ is ≤ μ(T) ≤ 4·10⁹Te^{−15.449T}. The version with N ≈ 4T is CONDITIONAL on μ_N(T) → 0 (NUMERICAL).
 
 **Theorem B (PROVED).** If the premise of Ψ is inherited by every Euler datum over ℕ with a pole and shape FE, Ψ does not prove the node for any T > π/2. The falsifier is a_P with P > e^{2T}, which leaves the window empty; the node is false by lem:archcount, without PRED-aP.
 
@@ -25,7 +25,7 @@ The node's sign step (phase 206) is, for each fixed T, a finite-dimensional stat
 ## 0. Corpus check
 
 I also read the following files:
-- P47: thm:noimport, rem:conjunctions, lem:transfer, thm:sos, prop:shape-eulerdel, lem:shape-quartet, prop:shape-inputs, lem:degen, lem:archcount and the margin bound (l. 3576).
+- P46: thm:noimport, rem:conjunctions, lem:transfer, thm:sos, prop:shape-eulerdel, lem:shape-quartet, prop:shape-inputs, lem:degen, lem:archcount and the margin bound (l. 3576).
 - META_200_BARRIER_001 §A1–A5 (Φ200, Φ.14).
 - COMPOSE_EF_001 §3 (Theorem C2).
 - TOOLS_204U_001 (B_P).
@@ -138,7 +138,7 @@ A falsifier of the node at T is an x ∈ ℝ^{N_T} \ G_T^V. For a datum a to be 
 ## 3. Theorem A: the continuity branch (𝒦_marg)
 
 ### Theorem A
-(a) **(PROVED, given lem:degen and the margin bound from P47 l. 3576, whose inputs are CITED.)** Let V = V_∞ and let Ψ ∈ 𝒦_marg with radius r = η/L > 0 independent of T. If Ψ is valid (Val) for all T ≥ T₀, then
+(a) **(PROVED, given lem:degen and the margin bound from P46 l. 3576, whose inputs are CITED.)** Let V = V_∞ and let Ψ ∈ 𝒦_marg with radius r = η/L > 0 independent of T. If Ψ is valid (Val) for all T ≥ T₀, then
   r ≤ μ_∞(T)  ∀T ≥ T₀.
 This is impossible given the bound μ_∞(T) ≤ 4·10⁹ T e^{−15.449T}, examined below. More precisely, Ψ ceases to be valid as soon as T satisfies 4·10⁹Te^{−15.449T} < r.
 
@@ -148,7 +148,7 @@ This is impossible given the bound μ_∞(T) ≤ 4·10⁹ T e^{−15.449T}, exam
 
 *Proof of (a).* By (K1′), every a with ‖a − Λ‖_mult,T < r satisfies the premise. By (Val), it then satisfies 𝒩_T(a). Take a^{(s)} := Λ + s·δ₁ with s := r′/2 and r′ < r, i.e., add s to a_1. By §1.3, 𝔄^{a^{(s)}} = 𝔄^Λ − r′‖·‖², and ‖a^{(s)} − Λ‖_mult = r′ < r. Therefore 𝔄^Λ − r′ ⪰ 0 on V, i.e. μ^V(T) ≥ r′. Letting r′ → r gives μ^V(T) ≥ r.
 
-The upper bound for μ_∞: in the even sector, V_∞ = P_T^ev ⊂ P_T. But the infimum over the even sector can be *larger* than λ_A, whose minimizer might be odd. **Caution:** P47 l. 3576 bounds λ_A = min(μ_ev, μ_odd). That is why the PROVED statement is for the **two-sector node** (V = P_T ∩ 𝒟_T, which is lem:degen as is), with μ = λ_A ≤ 4·10⁹Te^{−15.449T} for T ≥ 1. For the even sector alone, (a) is CONDITIONAL on the witness of the P47 bound being even. I record this as (H_ev). The P47 construction (l. 3576–3591) uses a test I did not verify sector by sector: OPEN-check, mechanical. ∎
+The upper bound for μ_∞: in the even sector, V_∞ = P_T^ev ⊂ P_T. But the infimum over the even sector can be *larger* than λ_A, whose minimizer might be odd. **Caution:** P46 l. 3576 bounds λ_A = min(μ_ev, μ_odd). That is why the PROVED statement is for the **two-sector node** (V = P_T ∩ 𝒟_T, which is lem:degen as is), with μ = λ_A ≤ 4·10⁹Te^{−15.449T} for T ≥ 1. For the even sector alone, (a) is CONDITIONAL on the witness of the P46 bound being even. I record this as (H_ev). The P46 construction (l. 3576–3591) uses a test I did not verify sector by sector: OPEN-check, mechanical. ∎
 
 *Proof of (c).* 𝔄^a − 𝔄^Λ is a multiplier of norm ‖a − Λ‖_mult. ∎
 
@@ -195,7 +195,7 @@ Then the premise holds on the closure of 𝔉. In particular, if Λ is a limit o
 | Mechanism (index) | 𝒦 branch | Why | Label |
 |---|---|---|---|
 | Linear in Λ (Theorem X, thm:noimport (iii), linear Hamburger) | 𝒦_marg ∪ Φ.14 | Ψ affine in v: uniform L. If the margin is uniform, Theorem A. If not, thm:noimport (iii): margin ≤ C·λ_A. Both cases are restatements. | PROVED (two sectors) |
-| SOS / flat-top explicit formula (thm:sos) | empty | The decomposition does not exist for T ≥ ½log3. Stronger than 𝒦: no Ψ exists. | PROVED (P47) |
+| SOS / flat-top explicit formula (thm:sos) | empty | The decomposition does not exist for T ≥ ½log3. Stronger than 𝒦: no Ψ exists. | PROVED (P46) |
 | Size bounds \|Φ\| ≤ 𝔪 + 𝔢 | 𝒦_marg | Every size bound "‖Φ^a‖ ≤ κ(𝔪+𝔢)" with κ < 1 is an open condition: (K1′) with r ≥ (1−κ)·inf\|𝔪+𝔢\|. Also false pointwise (SKELETON_002). | PROVED / NUMERICAL |
 | Analytic defect of the FE (BARRIER_D1 Thm 4) | 𝒦_marg | AUDIT_9: "continuity suffices". The (one-sided) residue R1 already closed: continuous ⇒ 𝒦_marg; discontinuous ⇒ cone/certificate (outside, §6). | PROVED (Thm 4) + Theorem A |
 | Selberg / Dirichlet series identities (NODE_001 Prop N.2, TB-3) | 𝒦_inh | Hold for every Dirichlet series ⇒ hold on a_P (P > e^{2T}) ⇒ Theorem B. | PROVED |
@@ -259,7 +259,7 @@ Theorem A + Theorem B kill, each in a single clause, the following routes:
 3. **Specification for lead 2:** (O1-iii) ∧ (O2). A single line that filters candidates before building.
 
 ### 7.4 What remains OPEN or CONDITIONAL
-- (H_ev): that the P47 margin bound has an even witness. A mechanical check.
+- (H_ev): that the P46 margin bound has an even witness. A mechanical check.
 - (H_N): μ_N(T) → 0 with N ≈ 4T. NUMERICAL evidence in favor.
 - Φ.14-transversality for arithmetic perturbations (a_1 = 0).
 - PROVED falsifier with fixed P (B_P) for large T: NUMERICAL.
@@ -272,7 +272,7 @@ Theorem A + Theorem B kill, each in a single clause, the following routes:
 - **CLASS_001 (phase 207, lead 1):** class impossibility theorem for the node's sign step 𝒩_T. New reason: the object is the node (a finite LMI in v_n, n < e^{2T}), not λ_A/W; it quantifies over every Ψ.
   - **Lemma 1 (PROVED):** G_T is a spectrahedron; μ is concave and 1-Lipschitz in multiplier norm.
   - **Cor 2–3 (PROVED):** (K3) and (K2) ("weight n^{−½}", "FE only as symmetry") are empty for the node. Quartets and f_t **do not** falsify the node (same comb). Corrects property (ii) of README 206.
-  - **Theorem A (PROVED in two sectors with the a_1 perturbation, P47 inputs CITED; CONDITIONAL (H_ev), (H_N) for the even sector and for N ≈ 4T):** no Ψ with uniform margin η and Lipschitz constant L is valid for T with 4·10⁹Te^{−15.449T} < η/L. Dichotomy: 𝒦_marg has a valid step ⟺ inf_T μ > 0.
+  - **Theorem A (PROVED in two sectors with the a_1 perturbation, P46 inputs CITED; CONDITIONAL (H_ev), (H_N) for the even sector and for N ≈ 4T):** no Ψ with uniform margin η and Lipschitz constant L is valid for T with 4·10⁹Te^{−15.449T} < η/L. Dichotomy: 𝒦_marg has a valid step ⟺ inf_T μ > 0.
   - **Theorem B (PROVED):** every premise inherited by Euler products with a pole fails on a_P with P > e^{2T} (null comb; lem:archcount with t₁ = 3), for all T > π/2. It is C2 at the node, without PRED-aP.
   - **Lemma 5 (PROVED):** a zero with β = 0 contributes signature (2,2), not a sign. PRED-aP with fixed P remains NUMERICAL (its negativity comes from the bands of B_P, not from those zeros).
   - **B′ (closure): ARGUED, no branch of its own.**

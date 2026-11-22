@@ -1,6 +1,6 @@
 # R170_812 — Audit of the FIDC proposal
 
-Direct review of R170_811 and of the Paper 47
+Direct review of R170_811 and of the Paper 46
 formulas, section "A sum--product identity". The entire proof of
 Theorem F of Paper 45 is not re-audited here.
 
@@ -54,7 +54,7 @@ either sign.
 
 ## 2. The regularization does not do what was expected
 
-In Paper 47, R_L has domain L²(I_T). Its adjoint and S_L take values in
+In Paper 46, R_L has domain L²(I_T). Its adjoint and S_L take values in
 that same space. After extension by zero, g=S_LF is supported on I_T.
 If χ_ε=1 on I_T, then χ_ε g=g exactly for every ε. There is no
 approximation to a new boundary, nor are jumps smoothed.
@@ -110,7 +110,7 @@ of PC.
 
 ## 5. Primitive bridge: an existing dependency, not another new lemma
 
-Paper 47, lemma `lem:firstcontact`, already uses the continuity of the
+Paper 46, lemma `lem:firstcontact`, already uses the continuity of the
 primitive bound and refers to Paper 45 for the equivalence with RH. In
 the current Paper 45 file, the relevant result is located at
 `thm:sufficiency` (Theorem F) and `rem:sufficiency`: a zero off the line
@@ -121,7 +121,7 @@ contact would suffice for RH and then for full positivity. It is not
 necessary for every complete null vector to be primitive. The warning
 about that vector remains correct for a DIRECT argument with the polar
 Schur complement, but it is not an additional gap in the global
-primitive route. The "11.3" numbered reference from Paper 47 must be
+primitive route. The "11.3" numbered reference from Paper 46 must be
 checked against the version: in the current TeX, (11.3) also appears as
 an equation label.
 
@@ -140,4 +140,4 @@ even under parity, and to check the correctness of the adjoint.
 The audit is focused and analytic. No supposed contact tests on
 approximate eigenvectors were run: a small λ in Galerkin does not
 certify a real contact nor refute a law restricted to contacts. Nor was
-a full audit of Paper 45 or all of Paper 47 performed.
+a full audit of Paper 45 or all of Paper 46 performed.

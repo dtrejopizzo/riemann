@@ -10,12 +10,12 @@ Bound from above `μ(|τ| < 6.29)` (or `∫m dμ` from below) for `μ = Σ|F̂_i
 
 ## 1. What was opened
 
-- Paper 47 (`04-papers/47-row-d-dual-certificates/main.tex`): thm:A and its proof (l.444–477), rem:Kprim (l.479),
+- Paper 46 (`04-papers/46-row-d-dual-certificates/main.tex`): thm:A and its proof (l.444–477), rem:Kprim (l.479),
   prop:arch (l.2323–2350), thm:index and its proof (l.2518–2560), prop:NC, cor:P3, rem:P4, thm:J and the observation
   that follows (l.2638–2780), thm:nyq-cone with proof and rem:nyq-dual (l.6320–6360). By grep: lem:polarelim,
   prop:sharp (l.7330–7361), prop:haynsworth (l.10992), lem:KyFan (l.10802).
 - Phase 155: R155_033 (§§ "τ = 0 cap", §3 index, l.110, 272–363), R155_047 (Thm P, Cor P3, Remark PA/P4).
-  R155_052 header only. R155_023/024/027/048–051: NOT opened (covered by P47 thm:index/cor:P3, which integrates them).
+  R155_052 header only. R155_023/024/027/048–051: NOT opened (covered by P46 thm:index/cor:P3, which integrates them).
 - Phase 160: R160_M2_R1 (table of results, §§ definitions, Thm 4.1, Thm 4.2); R160_PC_R1 by grep (l.129, 271).
   R160_D4_R2 and R160_M4_R1: grep only ("primitiv/P_T" appear, no Paley–Wiener); not read in full.
 - Phase 186: R186_052 §3 (Thm 3.1 primal cone, Cor 3.2, Thm 3.3, Thm 3.4). Phase 195: VERIFY_CLAMPED_AND_EDGE_LAW (statement).
@@ -31,7 +31,7 @@ Bound from above `μ(|τ| < 6.29)` (or `∫m dμ` from below) for `μ = Σ|F̂_i
 
 ## 2. Real antecedents
 
-**A1. P47 thm:nyq-cone (l.6320; PROVED, Akhiezer CITED) = R186_052 Thm 3.1 + Cor 3.2.** The cone of densities
+**A1. P46 thm:nyq-cone (l.6320; PROVED, Akhiezer CITED) = R186_052 Thm 3.1 + Cor 3.2.** The cone of densities
 `{|F̂|²: F ∈ P_T}` is exactly `{f ≥ 0 on ℝ, entire of type ≤ 2T, L¹, zeros of order ≥ 2 at ±i/2}`, and
 `P_T = (¼ − ∂²)H²_0(I_T)`, `F̂ = (τ² + ¼)Ĝ`. Tool: Akhiezer + Paley–Wiener + Blaschke factor
 `(z − i/2)/(z + i/2)`. It is the exact characterization of (i)+(ii); it gives no mass bounds. Class (β): same tool,
@@ -44,31 +44,31 @@ than "double zeros". The claim of ROUND_030_B §3 ("primitivity is not a bounded
 for `K^prim`, but in the double-zero version primitivity is a **weight**: `μ = (τ²+¼)² ν`, `ν` the density of
 `G ∈ H²_0(I_T)` (R186_052 Cor 3.2: "Tate = weight").
 
-**A2. P47 prop:arch(ii) (l.2323; PROVED).** `λ_inf,P(T) ≤ C_0 + φ((3π/2T)²)` and `λ_inf,P(T) ↓ C_0` as `T → ∞`.
+**A2. P46 prop:arch(ii) (l.2323; PROVED).** `λ_inf,P(T) ≤ C_0 + φ((3π/2T)²)` and `λ_inf,P(T) ↓ C_0` as `T → ∞`.
 That is: **(i)+(ii) without (iii) do not bound the low mass uniformly in T**; there are primitive states with
 `∫m dμ → C_0 = −5.372`. Class (α) for the part (i)+(ii): negative result PROVED. Proof: Dirichlet modes +
 concavity of φ (cor:mono); the restriction to `P_T` costs at most two modes (`λ_3`).
 
-**A3. P47 thm:index (l.2518; PROVED with certified intervals).** Exact value of the problem (i)+(ii) on small
+**A3. P46 thm:index (l.2518; PROVED with certified intervals).** Exact value of the problem (i)+(ii) on small
 windows: `n_-(A_∞|P_T) = 0` for `T < T*_ev`, `0.58 ≤ T*_ev ≤ 0.60`, `T*_odd ∈ [log 2, 0.81]`, index ≤ 2 on `(0, 0.90]`.
 Tool: multiband minorant of `m` (28 bands), finite Legendre section by parity, tail via the trace
 (lem:KyFan), Haynsworth certificates (prop:haynsworth) and explicit negative planes (prop:negplane). The two
 constraints `e^{±t/2}` are imposed in the finite section; an inequality for entire functions with prescribed zeros is
 **not** used. Class (α) as regards the result (i)+(ii); (β)/(γ) in the tool.
 
-**A4. P47 prop:NC, cor:P3, rem:P4; R155_047 Thm P (PROVED).** Prolate concentration `S_{T,τ_1}` + two-valued
+**A4. P46 prop:NC, cor:P3, rem:P4; R155_047 Thm P (PROVED).** Prolate concentration `S_{T,τ_1}` + two-valued
 minorant: `n_- ≤ 5/7/8` at `½log3, log2, 0.80`. R155_047 l.155: "the two Tate constraints only remove
 directions … and are not used". rem:P4: the floor 5 is due to the two-valued minorant and to `codim P_T = 2`, not to prolate
 theory. Class (β): (i) without (ii). Route "two-valued prolate" CLOSED (index l.3688, 3717, 5150).
 
-**A5. P47 observation after thm:J (l.2770–2776).** States that a lower bound of the archimedean form requires "an
+**A5. P46 observation after thm:J (l.2770–2776).** States that a lower bound of the archimedean form requires "an
 explicit non-asymptotic estimate of prolate concentration" and that concavity (Jensen) only gives upper bounds.
 It is the same question (i), without (ii) or (iii); declared, not resolved. Class (β).
 
 **A6. R155_033 "τ = 0 cap" (l.110, 350; PROVED).** Bound on dual certificates `f_w(0)`; another object (weights `w`), (β/γ).
 R155_033 l.332: "the two primitivity constraints subtract at most 2" from the index (PROVED): (ii) is codimension 2.
 
-**A7. ROUND_007_B (211) §1.3 / P47 lem:polarelim, prop:sharp (PROVED/CITED).** In the potential `G ∈ H²_0`:
+**A7. ROUND_007_B (211) §1.3 / P46 lem:polarelim, prop:sharp (PROVED/CITED).** In the potential `G ∈ H²_0`:
 `Arch = 𝔞^♯ − 𝔢`, `m^♯ = m + 1/(¼+τ²)`, `m^♯(0) = C_0 + 4`, `𝔢 = ∫|F̂|²/(¼+τ²) ≤ 4‖F‖²`. Uses (ii) as a weight
 `(τ²+¼)`, with the true weight of the complete form; the residue (N) remained OPEN. Class (β): same tool
 (Tate weight), another object (with fixed `v_n`, without `Φ(log n) = 0`).
@@ -118,4 +118,4 @@ Results that any construction MUST respect:
 4. cor:P3/rem:P4: the two-valued minorant does not go below 5 at `log 2`; use multiband minorants.
 5. ROUND_030_B §2.3: one generator is optimal at `−1.4979`; the improvement must come from interacting generators.
 6. R160_PC_R1: the useful threshold for `Z^prim_T` is `exp(−(2π−η)e^{2T})`; R160_M2_R1 T6: `Z^prim_T ≤ λ^A_T`.
-7. P47 (observation after thm:J): Jensen/concavity only gives upper bounds; non-asymptotic concentration is needed.
+7. P46 (observation after thm:J): Jensen/concavity only gives upper bounds; non-asymptotic concentration is needed.

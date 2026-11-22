@@ -15,7 +15,7 @@ Take τ smooth nondecreasing, zero up to 1, one from 5/4 on, and h(t)=τ(t)−τ
     
     (log 2)2^(−s) − [(2^(1−s)−1)/(1−s)]∫ τ'(u)u^(1−s)du.
 
-In 1/2<Re s<1, |Im s|≥10 the second term has modulus ≤(√2+1)√(5/4)/10 < (log 2)/2, a lower bound for the modulus of the first. The verified data cited in paper 47 already exclude zeros off the line below that height. Hence every possible relevant pole survives. Under the sign the necessity of the ceiling for the fixed block is immediate from |U(x)|≪√x. This explains why the partition equivalence of 075 by itself did not constitute an arithmetic simplification.
+In 1/2<Re s<1, |Im s|≥10 the second term has modulus ≤(√2+1)√(5/4)/10 < (log 2)/2, a lower bound for the modulus of the first. The verified data cited in paper 46 already exclude zeros off the line below that height. Hence every possible relevant pole survives. Under the sign the necessity of the ceiling for the fixed block is immediate from |U(x)|≪√x. This explains why the partition equivalence of 075 by itself did not constitute an arithmetic simplification.
 
 **Detection for arbitrarily large P.** Suppose such a ρ exists. Let H(z)=∫h(u)u^z du/u. In Re z>1−Re ρ, by absolute convergence and integration in P,
      

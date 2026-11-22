@@ -2,7 +2,7 @@
 
 *Referee report. Pure reading, plus one scalar root-finding check that confirms counterexample D1 (the
 analytic argument is given below and does not depend on it). No , no commits. Only this file was written.
-Compared against R163_401_v1, R163_490, R163_501, R163_502 and R163_402, against Paper 47 (`main.tex`: `eq:symbol`,
+Compared against R163_401_v1, R163_490, R163_501, R163_502 and R163_402, against Paper 46 (`main.tex`: `eq:symbol`,
 `eq:form`, `eq:W`, `lem:roughEF`, `thm:log5W`, `thm:log5A`, `lem:monoT`, `lem:contT`, `lem:contA`,
 `lem:firstcontact`, `thm:KEP2`, `thm:KEP3`, `thm:finmod`), against Paper 45 (`main.tex`, theorem counter per section:
 Thm 8.4 = `thm:EF`, Thm 11.3 = `thm:sufficiency`, 10.4 = `rem:collapses`), and against Paper 48 (`thm:M`,
@@ -31,7 +31,7 @@ Once the exact fixes below are applied, the only unproved step of the chain is t
 |---|---|
 | Thm 1.3 | `lem:roughEF` needs real $F$, (a) the form domain and (b) $\sum\lvert\Phi_F(\rho)\Phi_F(1-\rho)\rvert<\infty$. (b) follows from Lemma 3.0 applied to $f(z)$ and $f(-z)$, plus Cauchy–Schwarz. Polarisation to complex $F$ is correct: the cross term $\sum_\rho[\widehat F_2(t)\widehat F_1(-t)-\widehat F_1(t)\widehat F_2(-t)]$ is odd under $\rho\mapsto1-\rho$ and absolutely convergent, so it vanishes. |
 | 2.1 | Matches `thm:log5W` ($10^{-18}$, even part; $10^{-16}$, odd part) and `thm:log5A` ($2.5\cdot10^{-12}$). Both are certified computations (record). |
-| 2.2 | `lem:monoT` and `lem:contT` read and correct. Attainment holds by compactness in the proof of `thm:O`; Bombieri Thms 3 and 5 are cited in the same way in Paper 47, l. 224–225. |
+| 2.2 | `lem:monoT` and `lem:contT` read and correct. Attainment holds by compactness in the proof of `thm:O`; Bombieri Thms 3 and 5 are cited in the same way in Paper 46, l. 224–225. |
 | 2.3 | $T_c>\tfrac12\log5$; $\lambda^{\rm W}_{T_c}=0$, attained; $E_c$ finite-dimensional. $T_*\ge T_c$ holds because $\lambda^{\rm W}\le\lambda^{\rm A}$. All correct. |
 | 2.4(i)–(iii) | Agree with R163_501 (Thm B, R(a)–(c),(e), R(d′), FC0(ii), FC(i)–(ii), G), with $w_x=d_x/\lvert\widehat F'\rvert^2$. Q0 (R163_502) re-checked: $W$ is $\mathcal D$-bounded, the seminorm is Cauchy, point evaluations are continuous, and the limit is in $\ell^2$. Adding $\mathbb CF$ is harmless, since $W(F,\cdot)=0$ and $\widehat F|_X=0$. But see D5. |
 | Lemma 3.0 | Subharmonic mean on $D(t_\rho,1)$, $\lvert y\rvert\le3/2$ there, $K\ll(1+u^2)^{-1}$, Titchmarsh 9.6(A). Correct; see D11(a). |
@@ -101,7 +101,7 @@ $\mathcal D_T$** (Definition 1.1 uses the form domain, not $C_c^\infty$) needs (
 **Fix.**
 
 > "PROVED-CITED. (⇒ D implies RH): $C_c^\infty(I_T)\subset\mathcal D_T$, then Paper 45 Thm 11.3 with Thm 8.4.
-> (⇐): under RH, Thm 1.3 (Paper 47 `lem:roughEF`, Lemma 3.0) gives $W_T(F)=\sum_\gamma\lvert\widehat F(\gamma)\rvert^2\ge0$
+> (⇐): under RH, Thm 1.3 (Paper 46 `lem:roughEF`, Lemma 3.0) gives $W_T(F)=\sum_\gamma\lvert\widehat F(\gamma)\rvert^2\ge0$
 > on $\mathcal D_T$. See also Bombieri 2000, Thm 1."
 
 Because (⇐) uses Thm 1.3, move Thm 1.2 after Thm 1.3, or add a forward reference.
@@ -113,7 +113,7 @@ In Paper 45, 10.4 is `rem:collapses`. Replace it with "P45 Thm 11.3".
 
 - "By Selberg's uniqueness (R162_2301 Lemma S…)" is unnecessary. Uniqueness of $a$ with $a*1=\log$ on $n<e^{2T}$ is
   Möbius inversion, as R163_490 §1 already noted.
-- "(Paper 47, `thm:finmod`, record)" is a **wrong reference**. `thm:finmod` concerns deletion and amplification
+- "(Paper 46, `thm:finmod`, record)" is a **wrong reference**. `thm:finmod` concerns deletion and amplification
   thresholds, not the statement that data agreeing below $e^{2T}$ give the same $W_T$.
 
 **Fix.** Replace the paragraph with:
@@ -124,11 +124,11 @@ In Paper 45, 10.4 is `rem:collapses`. Replace it with "P45 Thm 11.3".
 
 ### D4 (miscitation, inside a conditional remark). §4.5
 
-"This is the determinate Kreĭn extension at $\lambda=0$ (Paper 47, `thm:KEP3`)." `thm:KEP3` states:
+"This is the determinate Kreĭn extension at $\lambda=0$ (Paper 46, `thm:KEP3`)." `thm:KEP3` states:
 - (a) $\lambda^{\rm W}>0\Rightarrow$ indeterminate $\Rightarrow\lambda^{\rm W}\ge0$, "except on $\{\lambda^{\rm W}=0\}$";
 - (b) RH ⟺ indeterminacy for all $T$.
 
-It asserts nothing about determinacy at $\lambda=0$. The only determinacy theorem in Paper 47 is `thm:finDet` (finite
+It asserts nothing about determinacy at $\lambda=0$. The only determinacy theorem in Paper 46 is `thm:finDet` (finite
 zero sets).
 
 **Fix.**
@@ -237,7 +237,7 @@ is PROVED, or PROVED-CITED with an exact and correct reference, except $(\star_{
 them carries the chain.
 
 The record inputs used without re-audit are:
-- the Paper 47 certificate at $\tfrac12\log5$;
+- the Paper 46 certificate at $\tfrac12\log5$;
 - R162_2202 (node identity; unused);
 - R162_1701 (unused);
 - Paper 48 `thm:M`(b);

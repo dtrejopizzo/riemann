@@ -16,13 +16,13 @@ L²(ℝ), and the **prime operator** is
 
     Π := Q σ_v Q = Σ_{n∈N_T} v_n S_{x_n}     on L²(I),     ⟨F, ΠF⟩ = Σ v_n Re c_F(log n)
 
-(Paper 47 prop:shifts, CITED; the sign convention is that of ROUND_003_A: a_T = Arch − Π). 𝔪 is the
+(Paper 46 prop:shifts, CITED; the sign convention is that of ROUND_003_A: a_T = Arch − Π). 𝔪 is the
 multiplier by m(τ) on L²(ℝ); Arch(F) = ⟨F, 𝔪F⟩ on the form domain 𝒟_T = {F ∈ L²(I): ∫log(2+|τ|)|F̂|² < ∞}.
-Lévy form (CITED, Paper 47 lem:K, thm:A): Arch(F) = C_0‖F‖² + ¼∫∫_{ℝ²}|F(t) − F(s)|² K(|t−s|) dt ds, K(u) =
+Lévy form (CITED, Paper 46 lem:K, thm:A): Arch(F) = C_0‖F‖² + ¼∫∫_{ℝ²}|F(t) − F(s)|² K(|t−s|) dt ds, K(u) =
 2Σ_{j≥0}e^{−(2j+½)u}, and 𝒟_T is exactly the set of F ∈ L²(I) with finite double integral (m − C_0 ≍
-log(2+|τ|), Paper 47 lem:mbounds). χ_± = e^{±t/2}1_I, Γ = orthogonal projection of L²(I) onto span{χ_+, χ_−},
+log(2+|τ|), Paper 46 lem:mbounds). χ_± = e^{±t/2}1_I, Γ = orthogonal projection of L²(I) onto span{χ_+, χ_−},
 P = 1 − Γ (projection onto P_T). M is the self-adjoint operator of the closed form Arch|_{P_T ∩ 𝒟_T} (compact
-resolvent, Paper 47 prop:nodes, CITED), Π_P := PΠP|_{P_T} (bounded, ‖Π_P‖ ≤ 𝒜), A := M − Π_P the operator of
+resolvent, Paper 46 prop:nodes, CITED), Π_P := PΠP|_{P_T} (bounded, ‖Π_P‖ ≤ 𝒜), A := M − Π_P the operator of
 a_T on P_T. Parity: J F(t) = F(−t) commutes with Q, c_x, 𝔪, Γ, hence with Π, Π_P, M, A (ROUND_003_A Prop. 1).
 
 ## 1. Corpus check
@@ -36,7 +36,7 @@ a_T on P_T. Parity: J F(t) = F(−t) commutes with Q, c_x, 𝔪, Γ, hence with 
   archimedean negative cone; the Widom-type identity is used below for Π (its square), as a computation, not as a
   route. (ii) ROUND_004_A Prop. B (Λ-free finite planes, NO-GO) — the present family is Λ-dependent from j = 2 on;
   its behaviour under cΛ is analysed in §3.4 and is different from Prop. B in one respect (the subspace is
-  scale-invariant) and identical in another (pencil). (iii) Paper 47 lem:archcount / lem:combsine / thm:arena
+  scale-invariant) and identical in another (pencil). (iii) Paper 46 lem:archcount / lem:combsine / thm:arena
   (CITED as inputs). (iv) N_018 (identities + Bochner/Cauchy–Schwarz are comb-generic): every sign-definite piece
   found at degree 2 below is of this type and is labelled as such; no claim of a sign is made from it.
 - Nothing in the index builds the Krylov family of Π_P from the archimedean negative subspace, writes the window
@@ -53,15 +53,15 @@ resolvent, semibounded). M-invariant by construction. Parity-split: 𝒩_T = �
 NUMERICAL evaluation of a proved inequality's hypothesis; any t_1 with m(t_1) ≤ 0 serves), N_T := ⌈2Tt_1/π⌉ − 1,
 Σ_T := span{e_k : k ≤ N_T} ∩ P_T, dim Σ_T ≥ N_T − 2.
 
-Lemma 2.1 (PROVED; Paper 47 lem:archcount restricted to P_T). Arch ≤ −B(t_1² − (πN_T/2T)²)‖F‖² on Σ_T with
+Lemma 2.1 (PROVED; Paper 46 lem:archcount restricted to P_T). Arch ≤ −B(t_1² − (πN_T/2T)²)‖F‖² on Σ_T with
 B = φ′(t_1²) > 0, hence Σ_T ⊂ (a negative subspace of M) and n_T ≥ dim Σ_T ≥ ⌈2Tt_1/π⌉ − 3.
-Proof. m(τ) = C_0 + φ(τ²) with φ concave (Paper 47 thm:S), so m(τ) ≤ m(t_1) + B(τ² − t_1²) ≤ B(τ² − t_1²).
+Proof. m(τ) = C_0 + φ(τ²) with φ concave (Paper 46 thm:S), so m(τ) ≤ m(t_1) + B(τ² − t_1²) ≤ B(τ² − t_1²).
 Integrate against |F̂|² and use (1/2π)∫τ²|F̂|² = ‖F′‖² ≤ (πN_T/2T)²‖F‖² on the sine span; the two Tate conditions
 cut codimension ≤ 2. Min–max gives n_−(M) ≥ dim Σ_T. ∎
 Remark. At the windows used for validation (T ≤ 1.2) the explicit count gives nothing (N_T − 2 ≤ 0) while the
 Galerkin negative count of M on P_T^ev is 1 (T = log 2, ½log5, 0.9, 1.0) and 2 (T = 1.2), with 0 on P_T^odd up
 to T = 1.0 (NUMERICAL, §6). The spectral version (N1) is therefore the one with content at small T; (N2) is the
-certified large-T floor, n_T ≳ 6T/π (or ≈ 4T with t_0 = 6.2898…, Paper 47).
+certified large-T floor, n_T ≳ 6T/π (or ≈ 4T with t_0 = 6.2898…, Paper 46).
 
 ### 2.2 The Krylov family
 
@@ -182,7 +182,7 @@ concave.
 Proof. (i) is Prop. 3.1. (ii) span{(cΠ_P)^i e} = span{Π_P^i e}. (iii) is Weyl's inequality on the fixed subspace;
 concavity: minimum of affine functions. ∎
 Reading. Scale-sensitivity is **not** in the subspace but in the pencil, exactly as for the whole of P_T (c ↦
-λ_A(T; cΛ) is concave, Paper 47 lem:degen, CITED). The family does not escape ROUND_004_A Prop. B for the falsifier
+λ_A(T; cΛ) is concave, Paper 46 lem:degen, CITED). The family does not escape ROUND_004_A Prop. B for the falsifier
 cΛ at a fixed window — nothing can, since λ_A(T; ·) is continuous in c at fixed T; the cΛ test is a test on the
 family over all T (§7).
 
@@ -266,7 +266,7 @@ a_T is nearly inside K_1 — which it is not (§6: the principal cosine between 
 T ≤ 1.0). NUMERICALLY λ_min(D − Π_ee) ≈ 2–5·10^{−2} and λ_max(G) ≈ 1–8·10^{−2}, so the penalty has norm of order 1 on
 the responses: on K_1^⊥, (SC_1) asks a_T to beat a rank-n_T form of order one supported on explicit Λ-dependent vectors.
 (c) No Λ-free coercivity exists on K_1^⊥: M ⪰ 0 there but its bottom α_+ is small (α_+ = 0.10–0.47 at the tested windows,
-and ≤ log k + O(1) along the even tower, Paper 47 thm:arena, CITED) while ‖Π_P|_{K_1^⊥}‖ is of order 𝒜 ≍ e^T. So "Arch
+and ≤ log k + O(1) along the even tower, Paper 46 thm:arena, CITED) while ‖Π_P|_{K_1^⊥}‖ is of order 𝒜 ≍ e^T. So "Arch
 dominates the comb on the complement" fails for every j with dim K_j fixed, by the arena count (ARGUED as the
 quantitative reading, as in ROUND_004_A §5(b)). Coercivity on K_j^⊥ is therefore not a tool that the family supplies; it
 is the statement (★) on the complement with a finite-rank handicap. The reduction is exact and the handicap is explicit,
@@ -282,7 +282,7 @@ explicit kernel K; both are PROVED formulas, neither is small.
 
 (SL_1): Σ_{n∈N_T} v_n R_n(𝒩_T) ⪯ D, with R_n(𝒩_T)_{αβ} = ½⟨e_α, (QV_{x_n}Q + QV_{−x_n}Q) e_β⟩ (ROUND_004_A notation).
 Linear in v. Content: on the negative archimedean modes the comb must be at least as negative as the archimedean form
-(|α_α| ≥ 0.15–0.73 at the tested windows). This is the statement of Paper 47 lem:archcount/lem:combsine written on the
+(|α_α| ≥ 0.15–0.73 at the tested windows). This is the statement of Paper 46 lem:archcount/lem:combsine written on the
 spectral cone instead of the Dirichlet sines (CITED/PROVED), and ROUND_004_A (C_k) with E = 𝒩_T; by ROUND_004_A Prop. B
 it cannot be a sign step (Λ-free subspace, positive margin). NUMERICALLY (§6) it holds with margin 1.7–4.9·10^{−2}
 at the five windows, fails for deletions of 2 (at every window), for η = −0.1, −0.5, for the Beurling shift at T ≥ ½log5

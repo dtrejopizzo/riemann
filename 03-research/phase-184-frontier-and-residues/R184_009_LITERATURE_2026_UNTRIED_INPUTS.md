@@ -6,7 +6,7 @@ Does not duplicate R168_001, R160_S1/S5, R166_400–405, R169_000, R170_801–80
 
 ## State
 
-**No entry survives.** All 27 works in the 2026 review folder are already cited in the corpus (R170_804 §5, plus R170_801/802/803 and Paper 47 for Suzuki, Groskin, Zhu and Freedman). What this document adds is the wall proof, which R170_804 did not do. I left three entries as NEW: (a) zero-forcing by large values from Granville–Soundararajan, in the Dong–Wang–Wang–Zhang version, (b) the rank–trace inequality with Sylvester inertia on a finite compression of the Weil form (Alpöge–Furman), as mechanism rather than citation, and (c) the joint degree–derivative hyperbolicity window of Holland and the cubic Toeplitz-minor tail of Michalowski. All three fail S4 or S11. The closest ones are (a) and (b) (§3).
+**No entry survives.** All 27 works in the 2026 review folder are already cited in the corpus (R170_804 §5, plus R170_801/802/803 and Paper 46 for Suzuki, Groskin, Zhu and Freedman). What this document adds is the wall proof, which R170_804 did not do. I left three entries as NEW: (a) zero-forcing by large values from Granville–Soundararajan, in the Dong–Wang–Wang–Zhang version, (b) the rank–trace inequality with Sylvester inertia on a finite compression of the Weil form (Alpöge–Furman), as mechanism rather than citation, and (c) the joint degree–derivative hyperbolicity window of Holland and the cubic Toeplitz-minor tail of Michalowski. All three fail S4 or S11. The closest ones are (a) and (b) (§3).
 
 ## 1. Inventory (CITED = statement taken from the work; "corpus" = file that already uses the entry)
 
@@ -17,7 +17,7 @@ Does not duplicate R168_001, R160_S1/S5, R166_400–405, R169_000, R170_801–80
 | 2606.09096 Suzuki v3 | Weil / screw function | Weil quadratic form via the screw function and nonlocal operators; conjectured spectral positivity | YES: R154_013, R157_002, R170_804 (31 files) |
 | 2606.24924 Covei | Riccati–Γ, conditional criteria | bilateral vertical concavity of Ξ′/Ξ does not prove RH; conditional finite spectral average | YES: R170_804; E1 (conditional criterion) |
 | 2606.29555 Freedman | Weyl-positive phase kernel, Volterra | finite-kernel reductions with boundary repair | YES: R170_803/804 (the repair transfers: J*KJ+(RJ)*D(RJ)≥0) |
-| 2607.02828 Groskin | finite Guinand–Weil | finite dictionary and order of the archimedean tail | YES: Paper 47, R154_012 |
+| 2607.02828 Groskin | finite Guinand–Weil | finite dictionary and order of the archimedean tail | YES: Paper 46, R154_012 |
 | 2607.04632 Turnage-Butterbaugh | zero density (Guth–Maynard) | exposition | YES: R170_804 |
 | 2607.05560 Fragkos–Krause–Miheisi–Sun | Carleson along primes | maximal/variational operator | YES: R170_804 §4 (additive phase, ℓ^p) |
 | 2607.15311 Croot–Mao–Pohoata–Yip | quadratic inverse large sieve | sharp inverse theorem | YES: R170_804; W-sieve |
@@ -27,7 +27,7 @@ Does not duplicate R168_001, R160_S1/S5, R166_400–405, R169_000, R170_801–80
 | 2608.13637 Alpöge–Furman | Weil / rank–trace / inertia | ≥ 2/3 of zeros simple and on the line; rank–trace on a finite compression of the Hermitian Weil form + Sylvester | citation YES (P122_003, R170_804); the mechanism is treated in §2(b) |
 | 2608.14777 Maynard–Pandey–Radziwiłł | primes, additive phase | Σ Λ(n)e(nα) ≪ N^{o(1)}(N/B^{1/2}+N^{19/24}) | YES: R170_804; W-sieve / b_θ (upper bound that b_θ also satisfies) |
 | 2608.14852 Tang | twisted second moment | reciprocity | YES: R170_804; W2 |
-| 2608.24827 Zhu v2 | Weil positivity on compact windows | finite reduction, certified bounds, Landau–Widom decay | YES: Paper 47, R160_001 (45 files) |
+| 2608.24827 Zhu v2 | Weil positivity on compact windows | finite reduction, certified bounds, Landau–Widom decay | YES: Paper 46, R160_001 (45 files) |
 | 2608.26814 Tardy | two-point correlations | logarithmic density | YES: R170_804 |
 | 2608.31060 Dong–Wang–Wang–Zhang | large values ⇒ zeros | \|S(x,t)\|=x/N ⇒ ≥ L/360 zeros in a disk at 1+iφ, \|φ−t\|≪N | citation YES (R170_804, one line); the forcing mechanism (Granville–Soundararajan) does not appear in the corpus → §2(a) |
 | 2609.00537 Dhiman–Kadiri–Quesada-Herrera | explicit exponential sums | constants of the approximate functional equation | YES: R170_804; W2/M (margin) |

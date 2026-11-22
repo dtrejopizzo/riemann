@@ -1,6 +1,6 @@
-# Review 008: round 009_B (Fourier-class selection rule, self-dual lower half) against Paper 47 §sec:ext, ROUND_008_E, ROUND_009_A, REVIEW_006/007 and V.1.4
+# Review 008: round 009_B (Fourier-class selection rule, self-dual lower half) against Paper 46 §sec:ext, ROUND_008_E, ROUND_009_A, REVIEW_006/007 and V.1.4
 
-Scope. ROUND_009_B read in full and checked against Paper 47 §sec:ext (def:ext, lem:ext-mob, thm:ext-half, the gauge 𝒢_T,
+Scope. ROUND_009_B read in full and checked against Paper 46 §sec:ext (def:ext, lem:ext-mob, thm:ext-half, the gauge 𝒢_T,
 prop:ext-gauge, prob:ext-L, prop:ext-consol), the definition of P_T (Tate moments A(F) = ∫Fe^{t/2}, B(F) = ∫Fe^{−t/2}),
 ROUND_008_E, ROUND_009_A, REVIEW_006/007, and V.1.4 of phase 199. Verdicts: CONFIRMED / REFUTED / DOWNGRADE, with the label
 each claim keeps. Numerical tables were not rerun; they keep the label NUMERICAL. No equivalence of (★) with another

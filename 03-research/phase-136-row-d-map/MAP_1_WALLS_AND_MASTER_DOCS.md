@@ -250,7 +250,7 @@ NG-C1, MW-2, MW-3, MW-5, NG-107, NG-109, NG-110, NG-113-O1/O2/O3, NG-113-d3, NG-
 NG-117, NG-63, doc-131/132/160/161/162/163/156/M6/107_166/114_a_36/38 (all of
 `AUDIT_A_CATEGORY_CHANGES.md`'s table), ES-20 (Hodge/Lefschetz), ES-27. This is the
 largest and most systematically audited cluster, and is the direct locus of row D /
-paper 46's problem. Repeated finding: any candidate object that is provably RH-free
+paper 47's problem. Repeated finding: any candidate object that is provably RH-free
 (topological, continuous, C-linear) is blind to the sign; the step that imposes
 discreteness/orientation/Fredholmicity is exactly where ζ (or an equivalent RH-strength
 statement) re-enters — with genuine counterexamples where the failure is pure

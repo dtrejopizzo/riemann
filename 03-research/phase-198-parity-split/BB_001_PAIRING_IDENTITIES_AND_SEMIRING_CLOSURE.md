@@ -14,7 +14,7 @@ Row D remains OPEN.
   (minimizer-level, not test-family or coefficient-level), and the closure question is tested against the
   **certified** falsifiers of CERT_FALSIFIERS_001. Where a step coincides with an indexed route it is flagged.
 
-## 1. Set-up (P47 eq:Aform)
+## 1. Set-up (P46 eq:Aform)
 a_T(F) = Arch_T(F) − Σ_{n<e^{2T}} v_n c_F(log n), v_n = 2a(n)/√n, on P_T = {F ∈ L²[−T,T]: ∫F e^{±t/2} = 0}.
 Write a_T(F) = ⟨A F,F⟩ − ⟨C_a F,F⟩ with (C_a F)(t) = ½Σ v_n [F(t−log n)+F(t+log n)] (on ℝ), so
 ⟨C_a F,F⟩_{L²(ℝ)} = Σ v_n c_F(log n). h* = normalized minimizer, λ_A = a_T(h*). R F(t)=F(−t) commutes with A, C_a, and

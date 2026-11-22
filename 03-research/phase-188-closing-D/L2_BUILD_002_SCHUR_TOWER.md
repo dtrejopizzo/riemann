@@ -1,10 +1,10 @@
 # L2_BUILD_002 — Variational form and refinement tower of S_{T,k}
 
-Setting: thm:coer-schur, def:coer-V, lem:coer-decomp of Paper 47. Fix T and k with c := c(T,k) > 0.
+Setting: thm:coer-schur, def:coer-V, lem:coer-decomp of Paper 46. Fix T and k with c := c(T,k) > 0.
 V := V_k ∩ D_T. Corpus check: rem:coer-honest gives the sup-formula for 𝔞_T(Ke); "some
 (equivalently every) k ≥ k_0" is stated in §open; no nested/quotient (Crabtree–Haynsworth) form of
 S_{T,k} across k was found (grep crabtree / quotient formula / Schur tower in phase-16x–18x and
-Paper 47).
+Paper 46).
 
 ## 1. Minimum principle (PROVED)
 

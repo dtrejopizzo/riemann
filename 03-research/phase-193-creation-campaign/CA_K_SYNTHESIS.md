@@ -18,14 +18,14 @@ interpolation mechanism that is ζ-specific?* **No, within the declared classes 
    the only symmetry group (Ĝ-twists) is a gauge and gives upper bounds (Prop 2.1); Gaussian representations are G0. Both solvable endpoints
    (archimedean; Euler-decoupled/Haar) are indefinite (CA_K_001 Prop 1.3(a); CA_K_002 Cor 3.3(ii)).
 4. ζ-specificity: none of the mechanisms separates ζ from a_P, Beurling, quartets or Epstein — each statement holds with any comb / any
-   continuous 𝖡 in place of ζ's (B″-type), except the reversal Thm 2.2(ii), which is a certified ζ fact (Zhu, P47 cor:Tarch) and is an obstruction.
+   continuous 𝖡 in place of ζ's (B″-type), except the reversal Thm 2.2(ii), which is a certified ζ fact (Zhu, P46 cor:Tarch) and is an obstruction.
 
 ## Verdicts
 | seed | verdict | killing clause |
 |---|---|---|
 | K1 Guerra interpolation | NO-GO (PROVED) | 002 Thm 1.2 (concavity ⇒ sign = minimizer statement); endpoints indefinite |
 | K2 Talagrand/GG/ultrametricity | DISCARD | 002 Prop 2.1: no disorder; twists are gauges |
-| K3 ASS cavity | DISCARD (retry) | Schur reductions (P47), CA_E_001 Thm 1 induction |
+| K3 ASS cavity | DISCARD (retry) | Schur reductions (P46), CA_E_001 Thm 1 induction |
 | K4 Grothendieck/GW/2/π | DISCARD | bottom = exact SDP; dual = class (D)/G0 |
 | K5 Lasserre/SOS | DISCARD | thm:sos; CA_E_001 Cor 1.2 |
 | K6 balance/holonomy/elliptope | NO-GO as sign step (PROVED) | 001 Props 3.1–3.4 |

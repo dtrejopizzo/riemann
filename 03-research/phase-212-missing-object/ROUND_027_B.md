@@ -5,9 +5,9 @@ of the round's statement. Nothing was computed. No paper nor the index was edite
 
 Opened at the primary source: master index (Part V 212-25, 212-26-A/B, 212-cotejo-114, 212-cotejo-margen; rows of
 W-lin, cor:void, thm:finmod, BARRIER_Y_001, Cesàro, Fejér); R160_M2_R1 (§§2–7 complete where relevant);
-P47 main.tex thm:Z (l.1240–1290), lem:degen (l.3294–3310), prop a_θ (l.4805–4860); OBJECT_SPEC O2, O4;
+P46 main.tex thm:Z (l.1240–1290), lem:degen (l.3294–3310), prop a_θ (l.4805–4860); OBJECT_SPEC O2, O4;
 RULES_AVOID B5, W1; ROUND_005_G3 Lemma 2; DOSSIER_001 (211) l.50–99; R186_051 §0; BARRIER_Y_001 §§0–2;
-phase-62 README. Not opened: memos of phases 153–156 beyond what P47 cites; R160_D4_R2 (no
+phase-62 README. Not opened: memos of phases 153–156 beyond what P46 cites; R160_D4_R2 (no
 matches); phases 60–61; 183–185; Lemma T / W-mom only via their index rows.
 
 ## 1. Antecedents, one by one
@@ -21,12 +21,12 @@ concludes: "relocates the sign … without weakening it". Same in index 212-25 (
 the compacts K_T = 𝒱_T, Tychonoff. **It applies in full: (ii) is REPETITION.** The only difference is that
 here the selection is explicit (w^{(ω_T)}), not taken from an optimizer.
 
-**A2. Formula (iii) = P47 lem:degen + R160_M2_R1 Lemma 3.1 (Danskin–Kato) and Cor 3.3.** lem:degen (PROVED):
+**A2. Formula (iii) = P46 lem:degen + R160_M2_R1 Lemma 3.1 (Danskin–Kato) and Cor 3.3.** lem:degen (PROVED):
 μ_T(w) ≤ λ_A − Σ (w_n − v_n) c_{F⋆}(log n), μ_T concave. With w = w^{(ω)}:
 μ_T(w^{(ω)}) ≤ λ_A + Σ v_n(1 − cos(ω log n)) c_{F⋆}(log n) = λ_A + (ω²/2)Q(F⋆) + O(ω⁴).
 Lemma 3.1 gives the exact directional derivative V′(v; d) = −max_{F∈M_T(v)} ⟨d, κ_T(F)⟩ (PROVED, with a
-second-order formula with spectral gap g). Answer to (c): P47 does not give dλ/dT, but **the derivative with respect to the
-weight exists and is proved** (R160 Lemma 3.1; P47 lem:degen as a one-sided bound); Q is the case
+second-order formula with spectral gap g). Answer to (c): P46 does not give dλ/dT, but **the derivative with respect to the
+weight exists and is proved** (R160 Lemma 3.1; P46 lem:degen as a one-sided bound); Q is the case
 d = −(v_n(log n)²/2)ω². Note: the index (l.30802) records for phase 153 a "rate formula dλ/dT
 PROVED" and Hellmann–Feynman in a parameter b (l.19087); not cross-checked against the round's claim.
 **REPETITION** (as a formula); the numerical observation Q(F⋆) > 0 is new data.
@@ -36,7 +36,7 @@ is stable and "looks like damped v" (w_n/v_n ≈ 0.87 … 0.22 at n = 2 … 11, 
 simple exponential. The current finding is an explicit version of that observation: same order of margin,
 same simple decay. **PARTIALLY IN CORPUS** (prior numerical observation, without explicit family or ω²).
 
-**A4. Modulation on the dual side: P47 thm:Z (i).** f_w(τ) contains −Σ v_n w(log n) cos(τ log n): it is the
+**A4. Modulation on the dual side: P46 thm:Z (i).** f_w(τ) contains −Σ v_n w(log n) cos(τ log n): it is the
 explicit formula evaluated at the modulated test w(u)cos(τu). The algebraic mechanism of (i) (cos(ω log n)c_F =
 Re c_{Fe^{iωt}}, shift of the spectral parameter, "family ζ(s+iω)") is the same; there it is used in a
 linear certificate (flat-top, w = 1 on the window) and read on the zero side [H], which does not
@@ -45,7 +45,7 @@ corpus; its use as a primal weight is not.** DOSSIER_001 (211) l.50–54 and R18
 linear functional (coherence/symbol at frequency ω), not as a multiplier of the weight. ROUND_005_G3 Lemma 2:
 tests F_ω = g cos(ωt) at ω → ∞ to show indefiniteness of Π_T; another regime (large ω), does not apply.
 
-**A5. a_θ (P47 l.4805–4860).** Lowers a single weight (n = 2) and proves λ_A(T; a_θ) > 0 ∀θ ∈ [0,1] at T = ½log3
+**A5. a_θ (P46 l.4805–4860).** Lowers a single weight (n = 2) and proves λ_A(T; a_θ) > 0 ∀θ ∈ [0,1] at T = ½log3
 while λ^W fails; observation "classes closed under lowering weights". Antecedent of "lowering the comb helps",
 in a fixed window and one atom. It does not cover the family or the closure.
 
@@ -100,7 +100,7 @@ is the same remainder.
 **PARTIALLY IN CORPUS** (reduction and formula: repetition; explicit family and numbers: new).
 
 Repetition: (ii) closure via closed K_T and tower (R160_M2_R1 Thm 5.3(a), Prop 6.1; 212-25); (iii) derivative
-with respect to the weight (P47 lem:degen; R160 Lemma 3.1, Cor 3.3); (i) modulation cos(τ log n) = modulated test (P47
+with respect to the weight (P46 lem:degen; R160 Lemma 3.1, Cor 3.3); (i) modulation cos(τ log n) = modulated test (P46
 thm:Z(i)); "optimal weight ≈ damped v" (212-26-A).
 
 New relative to the corpus (with no priority claim outside it):
@@ -109,7 +109,7 @@ New relative to the corpus (with no priority claim outside it):
 2. NUMERICAL: positive margin ∝ k² with simple exponential decay up to T = 2; linear damping
    v_n(1 − log n/2T) gives negatives (not in the corpus).
 3. The reading of (i) on the primal side: poles shifted to ½ ± iω plus archimedean correction
-   ∫[m(τ) − ½m(τ−ω) − ½m(τ+ω)]|F̂|² (ARGUED: it is elementary; not cross-checked against P47 eq:m term by term).
+   ∫[m(τ) − ½m(τ−ω) − ½m(τ+ω)]|F̂|² (ARGUED: it is elementary; not cross-checked against P46 eq:m term by term).
    This correction is ≍ −½ω²m″ and could be the source of the ω² term; not checked.
 
 What is missing so that it is not a relocation of the sign: a reason why a^{(ω_T)}_T ≥ 0 ∀T that fails for

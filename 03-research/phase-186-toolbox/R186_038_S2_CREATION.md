@@ -1,6 +1,6 @@
 # R186_038 — The S2 box: three seeds, a truncation lemma, and the edge fold as an object
 
-Phase 186, round 18. No numerics (no number decides anything here; there is no script r038). Paper 47, grid and
+Phase 186, round 18. No numerics (no number decides anything here; there is no script r038). Paper 46, grid and
 crossword are not touched.
 
 Read: R186_032 §4 (Ω: S1–S6); R186_036 (Lemma 1, Lemma 2, Theorem 3, Cor 3.2); R186_035 Lemma 3.1 (E_ψ = −2∫R₁φ′);
@@ -8,9 +8,9 @@ R186_022/023/103 (peak of ĥ*, phases cos(s log p), 3.7/T law of h_a, one FALSIF
 real-rootedness, nodes); R162_407 (REG, Prop 4.3); R163_401 §4.8 ((★_cell), Rem 4.8a); R164 README ((TC), Thm R); R166_501
 Cor A.2 ((G),(N)); R166_802 Thm 1–4, Prop 2.1; R166_801 (nodal identity of the fourth moment, Prop 3.1); R185_005 §1 (𝔐, atoms
 L/D/C/Q); SIGN-REAUDIT §3 and I16 of the crossword (no Grönwall by dilation); R186_004 §Prop 2.1; grid §4 (M_m, f_t,
-DMV, P_{a,c}); Paper 47 thm:A/eq:Aform, lem:K, lem:monoT, lem:mbounds, lem:contA, thm:Z.
+DMV, P_{a,c}); Paper 46 thm:A/eq:Aform, lem:K, lem:monoT, lem:mbounds, lem:contA, thm:Z.
 
-Notation (Paper 47): I_T = [−T,T]; c_F(u) = ∫F(t)F(t+u)dt (F real), supp c_F ⊂ [−2T,2T]; 𝒩_T = {n: log n < 2T};
+Notation (Paper 46): I_T = [−T,T]; c_F(u) = ∫F(t)F(t+u)dt (F real), supp c_F ⊂ [−2T,2T]; 𝒩_T = {n: log n < 2T};
 v_n = 2Λ(n)/√n; 𝔞_T(F) = C₀‖F‖² + Lev(c_F) − Σ_{𝒩_T} v_n c_F(log n); 𝒫_T = {A(F) = B(F) = 0}; λ_A(T) = min 𝔞_T|𝒫_T;
 h*_T unit minimizer; T_n := ½log n (entry instant of n); G = F̂ = ĥ*; 𝒱_T the virial of R165_202 1.4.
 

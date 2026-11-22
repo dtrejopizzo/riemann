@@ -5,7 +5,7 @@
 proof-grade witnesses; every number below is labelled. No statement about the zeros of ζ is asserted as a
 fact; no sign for ζ is claimed beyond `T ≤ log 2`.
 
-**Notation** (Paper 47 §1, `main.tex:114–137`). `I_T = (−T,T)`, `F̂(τ) = ∫F e^{iτt}`, `c_F` the autocorrelation,
+**Notation** (Paper 46 §1, `main.tex:114–137`). `I_T = (−T,T)`, `F̂(τ) = ∫F e^{iτt}`, `c_F` the autocorrelation,
 `m(τ) = Re ψ(¼+iτ/2) − log π = C₀ + ∫₀^∞(1−cos τu)K(u)du` (`eq:m`, line 330), `C₀ = −5.3721834`,
 `v_n = 2Λ(n)/√n`, `N_T = {n ≥ 2 : log n < 2T}`, `A_T = Σ_{N_T} v_n`, `σ_T = m − Σ_{N_T} v_n cos(τ log n)`,
 `𝔞_T(F) = (2π)^{−1}∫σ_T|F̂|²`, `P_T = {A(F)=B(F)=0}`, `W_T = 𝔞_T + 2Re(A B̄)`. Values:
@@ -15,7 +15,7 @@ primitive value of `def:PD` (`main.tex:450`); `λ^W_T` the bottom of `W_T` on `L
 function `a` we write `D_T(a)`, `σ_T^{(a)}`, `𝔞_T^{(a)}` for the same objects with `v_n = 2a(n)/√n`
 ("any nonnegative weights may be used", `main.tex:447`).
 
-**Naming.** The alignment inequality is written `𝖠_T(w)` throughout (renamed from `X_T` per R155_058, because Paper 46
+**Naming.** The alignment inequality is written `𝖠_T(w)` throughout (renamed from `X_T` per R155_058, because Paper 47
 uses `X_T` for the Tate collar, `46/main.md:673–677, 790–796`).
 
 **Corpus check (task item 5).** `grep -rn "alignment\|Kronecker\|X_T\|uniformity" 03-research/phase-15-arithmetic-hodge-index* 04-papers/47* 04-papers/46*`:
@@ -247,18 +247,18 @@ density the explicit formula assigns to them there (`main.tex:2739–2745`, and 
 
 **Theorem 3.2 (the expected negative, stated as what is provable).** Let `θ ∈ (½,1)` and
 `H_θ :⟺ ψ(x) − x ≪_ε x^{θ+ε}` for all `ε > 0`.
-(i) `PROVED` (Paper 46 Thm 27.10, `46/main.md:11476–11499`, `CLASSICAL`): `H_θ ⟺ β_max ≤ θ`, where `β_max = sup Re ρ`;
+(i) `PROVED` (Paper 47 Thm 27.10, `46/main.md:11476–11499`, `CLASSICAL`): `H_θ ⟺ β_max ≤ θ`, where `β_max = sup Re ρ`;
 in particular `H_{½} ⟺ RH`.
 (ii) `PROVED` (Thm 3.1(c) + (i)): `[∀T ∃w 𝖠_T(w)] ⟺ RH ⟺ H_{½}`.
 (iii) `PROVED` (translation): the implication `H_θ ⟹ ∀T ∃w 𝖠_T(w)` is **equivalent** to the zero-repulsion statement
-`β_max ≤ θ ⟹ β_max = ½`. This is not a theorem of record for any `θ < 1`, and by Paper 46 §27.2 it is a statement
+`β_max ≤ θ ⟹ β_max = ½`. This is not a theorem of record for any `θ < 1`, and by Paper 47 §27.2 it is a statement
 of the polar class: a partial-sum bound for `Λ` is exactly as strong as the corresponding zero bound, never
 stronger (Cor. 27.10a, `46/main.md:11501–11508`).
 (iv) **Logical form of the negative.** "`H_θ` does not imply `∀T 𝖠_T`" cannot be a theorem *about ζ*: if RH is true,
 every true statement implies it. What is provable is the class statement of Theorem 4.2 below: within the class
 of nonnegative combs with the *same* `H_θ` (same exponent, same zeros of the associated Dirichlet series, same
 pole), `D_T` fails at explicit `T`; hence no derivation of `D_T` from `H_θ` alone (nor from any zero-free region,
-zero-density estimate or partial-sum bound) is sound — in the sense of Paper 46 Thm 18.1 / Rem. 18.1a
+zero-density estimate or partial-sum bound) is sound — in the sense of Paper 47 Thm 18.1 / Rem. 18.1a
 (`46/main.md:4785–4820`), a derivation from a class-property is a derivation for every member of the class.
 (v) `PROVED` (the converse direction; which theorem does what). Suppose ζ has a zero `ρ₀` with `β₀ = Re ρ₀ > ½`. Then:
  * `ψ(x) − x ≠ O(x^θ)` for every `θ < β₀` — Thm 27.10, direction (⇒), contrapositive (the stronger `Ω_±(x^{β₀−ε})`
@@ -342,7 +342,7 @@ arithmetic functions containing `Λ`. If `𝒞` is closed under deletion of fini
  zero-free region and zero-density statement), are closed under both operations;
  `C_BT = {a : 0 ≤ a ≤ Λ}` (every upper-bound sieve statement: Brun–Titchmarsh, large sieve, `a(n) ≤ log n`) is closed
  under deletion.
-Consequently, in the form of Paper 46 Thm 18.1(ii): a derivation of `D_T` whose only prime input is `𝒞`-membership is a
+Consequently, in the form of Paper 47 Thm 18.1(ii): a derivation of `D_T` whose only prime input is `𝒞`-membership is a
 derivation of `D_T(a)` for every `a ∈ 𝒞`, hence proves a false statement for the member of Thm 4.2 — **so no such derivation
 exists, at any window `T ≥ 0.74921` (and, for `C_PNT`, `C_zeros`, at any `T > ½ log 2`)** — a fortiori none yields `D_T`
 for some `T` beyond `log 2`. The dichotomy asked for in the task is: either `𝒞 ⊆ 𝒞_D := {a : ∀T D_T(a)}` (then
@@ -350,7 +350,7 @@ for some `T` beyond `log 2`. The dichotomy asked for in the task is: either `�
 every class defined by an asymptotic, a zero statement or an upper-bound sieve statement is of the second kind.
 *Proof.* Thm 4.2 and Prop. 1.3. ∎
 
-**Remark 4.5 (the complementary class; cited, not redone).** Paper 46 T2 (§18.2, `46/main.md:4822–4916`; X21 at
+**Remark 4.5 (the complementary class; cited, not redone).** Paper 47 T2 (§18.2, `46/main.md:4822–4916`; X21 at
 `3975`) exhibits `Ξ_Q` (Epstein, `h(−D) > 1`): entire of order `1`, real, `Ξ_Q(s) = Ξ_Q(1−s)`, polar set `{0,1}`, coefficients
 `r_Q(n) ≥ 0`, and zeros in `Re s > 1` (Davenport–Heilbronn), so its Weil form is negative on some window. Together with
 T1 (Thm 18.1: functional equation and pole are shared by every `ξ_K`), this is the FE-side half of the void:
@@ -363,9 +363,9 @@ modification of the comb (Cor. 4.4) — hence pins the actual values `Λ(n)`, `n
 asymptotics — and (b) is *not* shared by every `ξ_K` and not implied by FE + pole + reality + `r ≥ 0` (T1, T2). [`HEURISTIC`, interpretive, no minimality proved: the
 minimal hypothesis with both properties is the joint statement "these values of `Λ(n)`, paired with `m` on `P_T`",
 which is `D_T` itself.] Per window, the only derivations of record are computations with the actual vector
-(Paper 42 at `T ≤ log 2`; Zhu at support `1.6`, `cor:KEP08`; `thm:C` at `½ log 3` in Paper 47). ∎
+(Paper 42 at `T ≤ log 2`; Zhu at support `1.6`, `cor:KEP08`; `thm:C` at `½ log 3` in Paper 46). ∎
 `HEURISTIC` corollary: a proof of `∀T D_T` cannot proceed by "prime input + archimedean input" separately; it must be
-a statement about the sequence `(Λ(n))` *as paired with `Γ`* that is uniform in `T` — which is what §28.2 of Paper 46
+a statement about the sequence `(Λ(n))` *as paired with `Γ`* that is uniform in `T` — which is what §28.2 of Paper 47
 states qualitatively and what this memo makes exact.
 
 ---
@@ -390,7 +390,7 @@ states qualitatively and what this memo makes exact.
 | Prop 4.1 (`𝔈_T = −λ^W_T`; RH `⟺ lim λ^W_T ≥ 0`) | PROVED; `λ^W ↓ 0` HEURISTIC |
 | Thm 4.2 (deletion: positive for `T < ½log2`, fails on `[0.74921, ½log N]`; amplification; Lemma 4.2b) | PROVED; sign on `[½log2, 0.74921)` not decided |
 | Prop 4.3 (finitely supported combs fail for large `T`; `limsup λ^A ≤ C₀ − A_S`) | PROVED |
-| Cor 4.4 (classical prime-side results void per window) | PROVED (method-constraint form, as Paper 46 Thm 18.1) |
+| Cor 4.4 (classical prime-side results void per window) | PROVED (method-constraint form, as Paper 47 Thm 18.1) |
 | Prop 4.6 (irreducibility of the coupling) | (a),(b) PROVED as method constraint; "minimal hypothesis" sentence and last sentence HEURISTIC |
 
 No sign for ζ beyond `log 2`. No value of `inf W` at `log 2`. Row-D label unchanged.
@@ -435,7 +435,7 @@ literally `f_w ≥ 0`, it implies `D_T`, it is implied by `λ^W_T > 0`, and its 
 fixed window the whole statement concerns the finitely many numbers `Λ(n)`, `n < e^{2T}`, paired with the
 Γ-function (Prop 1.1), so no asymptotic, zero-theoretic or sieve-theoretic property of the primes can be
 load-bearing there — such properties are shared by combs for which `D_T` fails (Thm 4.2, Cor 4.4) — and the
-functional-equation side alone cannot be load-bearing either (Paper 46 T1/T2). What P6 has produced is
+functional-equation side alone cannot be load-bearing either (Paper 47 T1/T2). What P6 has produced is
 positive knowledge of a different kind: the exact per-window quantity is `𝔈_T = −λ^W_T`, RH is
 `lim_{T→∞} λ^W_T ≥ 0` (Prop 4.1); the negative set of the symbol is a finite union of intervals located, beyond
 `τ ≈ 23`, at Diophantine near-coincidences `2^l ≈ 3^k` (`(5,8)` and `(12,19)` carry the last sign changes in
@@ -469,18 +469,18 @@ Every change made in place; no new claims.
 7. **Rem 3.1a(iii)**: "for `w ∈ 𝒲_T^{reg}`" added (`thm:Z`(ii) is stated for regular `w`).
 8. **Witness labels**: "PROVED modulo double-precision evaluation" in Table 2.2a paragraph and §5 table.
 9. **Prop 4.6**: the "minimal hypothesis is `D_T` itself" sentence labelled HEURISTIC (no minimality is proved).
-10. **Rename**: `X_T` → `𝖠_T(w)` throughout (Paper 46 uses `X_T` for the Tate collar); header paragraph rewritten; the
+10. **Rename**: `X_T` → `𝖠_T(w)` throughout (Paper 47 uses `X_T` for the Tate collar); header paragraph rewritten; the
  corpus-grep line keeps the literal string `X_T` because that is what was grepped.
-11. Editorial (from the audit): Cor 4.4 rephrased in the Paper 46 Thm 18.1(ii) form ("proves a false statement for the member
+11. Editorial (from the audit): Cor 4.4 rephrased in the Paper 47 Thm 18.1(ii) form ("proves a false statement for the member
  of Thm 4.2 — so no such derivation exists") instead of "is not sound".
 Unchanged: all numerics (reproduced by the audit to the printed digits), Props 1.3, 2.1, 2.2, 4.3, Thm 3.2, Rem 4.5. Row-D
 label unchanged; no sign for ζ beyond `log 2`; no value of `inf W` at `log 2`.
 
 ---
-**[Erratum, found by the Paper 47 integrating editor after audit `R155_058`]** Prop 2.3(v), negative
+**[Erratum, found by the Paper 46 integrating editor after audit `R155_058`]** Prop 2.3(v), negative
 replacement: the audited symbol `σ − c·1_{off band}` with `c > sup σ₊/(1−λ₀)` is void, because `σ ≍ log τ` makes
-`sup σ₊ = ∞`; the claim that both replaced symbols are bounded is false. Repaired (as in Paper 47 §10.5) by the
+`sup σ₊ = ∞`; the claim that both replaced symbols are bounded is false. Repaired (as in Paper 46 §10.5) by the
 audit's alternative symbol `σ·1_band − c·1_off`, `c > max_band σ₊/(1−λ₀)`, with `λ₀(S_{T,τ_last}) < 1` proved in
 place (entire-function argument). Conclusion of Prop 2.3(v) unchanged. Also: statements "for `T ≥ T₀(0) = 0.74921`"
-hold for `T > T₀(0)` (at `T₀(0)` the `thm:SC` bound is `0`); the same endpoint slip is in Paper 47 `thm:SC`,
+hold for `T > T₀(0)` (at `T₀(0)` the `thm:SC` bound is `0`); the same endpoint slip is in Paper 46 `thm:SC`,
 `prop:arch`(ii) — referred to review R4.

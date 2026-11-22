@@ -2,7 +2,7 @@
 
 repairs in `R146_001_ROUND1.md`, the rewritten `README.md`, and `scripts/tower_gram.py`.
 Checked against: Paper 44 §8bis (Thm 8bis.1 + §12 K1, Thm 8bis.1b, Cor 8bis.1b′, Rem 8bis.1c,
-Cor 8bis.1d, Thm 8bis.1e, Thm 8bis.2, (8bis.0)), `R145_001` §§D.41–D.42, Paper 46 §§11/14,
+Cor 8bis.1d, Thm 8bis.1e, Thm 8bis.2, (8bis.0)), `R145_001` §§D.41–D.42, Paper 47 §§11/14,
 and — read in full, and the decisive document of this round — `03-research/phase-147-row-d-single-prime-tower/CORPUS_CHECK_R147.md`.
 Method unchanged: every claim assumed false; every number recomputed independently of the scripts.*
 
@@ -281,7 +281,7 @@ checked at the corners" as mandatory from here on.
 **The honest state after phases 145–146 is a double negative, and it is worth more than the positive
 framings that preceded it.** Phase 145 named the missing ingredient (the frame has `⋆` and no `+`; the
 missing effective classes are graphs of sums). Phase 146 built the `+` formally and found that *nothing
-arrives with it*: the resulting form is `Φ(0)Φ(1) − ½x^{\mathsf T}Lx`, which is Paper 46's `2ab − W` with the
+arrives with it*: the resulting form is `Φ(0)Φ(1) − ½x^{\mathsf T}Lx`, which is Paper 47's `2ab − W` with the
 zero sum deleted, hence zero-blind by construction and `Ξ_a`-uniform in every one of its statements,
 including the tower. Round 1's diagnosis — *the sign lives in the diagonal counterterm of an additive
 structure `Spec Z` lacks* — is now known to be wrong in its stated mechanism (the counterterm is not
@@ -319,6 +319,6 @@ printed in the blueprint the way Prop. D.42.5 is printed now.
 
 A fourth option deserves stating plainly: **phase 146's deliverable may be terminal for this line.** Two
 phases have now converged on "the finite half is signless and everything built from it is `Ξ_a`-uniform".
-That is a publishable negative (`P46-40′` plus the `δ_m−δ_n` theorem), and one should weigh closing
+That is a publishable negative (`P47-40′` plus the `δ_m−δ_n` theorem), and one should weigh closing
 row D's additive/tower thread on it rather than opening a phase 147 whose admissible surface is, by the
 corpus's own accounting, three narrow threads and one already-refuted one.

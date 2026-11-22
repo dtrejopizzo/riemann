@@ -100,7 +100,7 @@ The data are as printed. Two readings must be separated:
 `R155_026:176` already observed that these values "lose an order between `N=18` and `N=36`"; round 4a
 converts that observation into a withdrawal. **Theorem C is untouched** (certified lower bound).
 
-## §5 Readiness for Paper 47 (§7 proposals)
+## §5 Readiness for Paper 46 (§7 proposals)
 
 1. **Thms 4a.A/4a.B → `§8` new subsection: READY**, subject to §3.1 (`det`) and to publishing the
  `M=16000` run under a filename that cannot be overwritten. Permissible wording:
@@ -125,5 +125,5 @@ converts that observation into a withdrawal. **Theorem C is untouched** (certifi
 ## §6 Readiness
 
 `R155_032` is **accepted** after the four fixes of §3 (1–4) and the script fix (§3.6). No sign for
-`ζ`; endpoint of record unchanged (`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`, Paper 47 Thm C, confirmed
+`ζ`; endpoint of record unchanged (`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`, Paper 46 Thm C, confirmed
 unaffected). The round's real deliverable is not `k=7`; it is the withdrawal of §4 plus Thm 4a.1.

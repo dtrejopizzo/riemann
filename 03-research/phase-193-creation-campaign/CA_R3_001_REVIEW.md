@@ -1,5 +1,5 @@
 # CA_R3_001 (SPEC_A θ-line, L*_j(θ)) — Review, maximum scepticism
-Checked vs SPEC_A Lemma S, EI_001 (2.1), CA_R2_002, P47 thm:shape, cor:shape(a), lem:shape-quartet, prop:quartetmodel(ii), def:shape-class, CA_C_001 Lemma 2, CA_I_001 Thm 3, CA_R1_001 Thm 2.3.
+Checked vs SPEC_A Lemma S, EI_001 (2.1), CA_R2_002, P46 thm:shape, cor:shape(a), lem:shape-quartet, prop:quartetmodel(ii), def:shape-class, CA_C_001 Lemma 2, CA_I_001 Thm 3, CA_R1_001 Thm 2.3.
 
 ## Verdict
 **Identities CONFIRMED (Prop Θ, Lemma C, (Ch)). The label "ADMISSIBLE as a specification" is NOT endorsed. Correct label: REF-D (valid objective, OPEN), with a clause table that overstates.** The θ-clause is "met" only in the sense that the statement is the exact Schur step of the target written in Chebyshev coordinates; it adds no property that a deduction class could carry.

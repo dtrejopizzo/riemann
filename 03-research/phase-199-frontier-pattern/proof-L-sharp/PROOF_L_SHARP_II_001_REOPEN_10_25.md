@@ -6,7 +6,7 @@ Notation as in FF_001, GG_001, A_001, E_001 and AA_001: μ ≥ 5, a = ½log μ, 
 g(±a) = 0, A = ∫g e^{x/2} = B, c_N = Σ_{m|N,m<μ}μ(m), M := M_μ(1) = Σ_{m<μ}μ(m)/m, D_μ = ζM_μ − 1, W = Guo's full-line
 operator, 𝒲(Φ₁,Φ₂) = ∫Φ₁WΦ₂ (convolution kernel ν, primes ±log q, pole 2cosh((x−y)/2)), F_g(s) = 𝒲(g,τ_s g).
 **𝒲_ext means the full-line form of the zero-extended exterior function, killing term included (E_001 §1 correction of
-A_001's displayed formula; Paper 47 rem:ext-killing).** This is used in every step below.
+A_001's displayed formula; Paper 46 rem:ext-killing).** This is used in every step below.
 
 ## 0. Corpus / index check and the new reason (index rule)
 Read: AUDIT_CONSTRAINTS_001 §1–§3 (10 and 25 SOFT, written reasons), AUDIT_L_SHARP_16 §6, FF_001, GG_001, P_001
@@ -24,7 +24,7 @@ Full-line (GG.1): Φ̌ = g + Ψ, Ψ := Ψ_c + Γ on (a,∞), Ψ_c := Σ_{N≥μ}
 So Ψ = Ψ̌ (zero-extended) and the split is a support split at x = a.
 **Translation invariance.** ν, the prime terms and the pole kernel 2cosh((x−y)/2) are all convolution kernels, so
 𝒲(τ_sΦ₁,τ_sΦ₂) = 𝒲(Φ₁,Φ₂) for every s (in particular 2A(τ_sg)B(τ_sg) = 2e^{s/2}A·e^{−s/2}B = 2AB). Hence
-𝒲[g] = W_T(g) (Paper 47 complete form = full-line form of the zero-extended window vector) and 𝒲[τ_{log N}g] = W_T(g).
+𝒲[g] = W_T(g) (Paper 46 complete form = full-line form of the zero-extended window vector) and 𝒲[τ_{log N}g] = W_T(g).
 **Blocks.** Pair WΦ̌ = 0 with g and with Ψ (absolute convergence as in A_001 Thm 1.1(d), with the killing term, E_001 §1):
  0 = 𝒲(g,Φ̌) = W_T(g) + 𝒲(g,Ψ),  0 = 𝒲(Ψ,Φ̌) = 𝒲(g,Ψ) + 𝒲[Ψ].
 **Proposition II.1 (PROVED).** The 𝒲-Gram of (g, Ψ̌) is W_T(g)·[[1,−1],[−1,1]]: rank ≤ 1, kernel (1,1).

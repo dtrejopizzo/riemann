@@ -125,7 +125,7 @@ is not blocked by `113_11` Theorem 3.3 (no `h^0` inside `D`) and Conclusion 4.1 
 rank-one and signatureless). A mechanism that is a *count* rather than a *dimension* sidesteps both
 no-gos instead of fighting them. (iii) The obstruction is correctly named and it is already on the
 corpus's books in two independent places: `Δ·Δ = N_0 = 2−2g → −∞` is exactly Paper 44 Remark 8bis.1c
-(`I_A(\mathrm{Frob}_n,\mathrm{Frob}_n)` **does not exist**) and Paper 46 Prop. 14.2
+(`I_A(\mathrm{Frob}_n,\mathrm{Frob}_n)` **does not exist**) and Paper 47 Prop. 14.2
 (`τ_{\log n}(ΠK) ∈ 𝓝_∞`). The model supplies the missing interpretation of that divergence: it is the
 genus, and nothing else.
 

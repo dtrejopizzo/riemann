@@ -3,7 +3,7 @@
 *Phase 155, round 2. Target: `R155_016_COMB_VANISHING_LP.md`,
 `scripts/reverse/comb/{comblib,count,lp}.py`, `count.json`, `lp_*.json`. Rerun: `count.py` only
 (1.1 s); the LPs were **not** rerun, their JSONs were re-read and post-processed.
-No sign is claimed. Endpoint of record unchanged (`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`, Paper 47 Thm C).*
+No sign is claimed. Endpoint of record unchanged (`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`, Paper 46 Thm C).*
 
 ## §0 Verdict
 

@@ -4,7 +4,7 @@ Arithmetic on published data is marked NUMERICAL; no new computation was run.
 NO-GO / REF-D / NUMERICAL. **No sign is proved. L′♯ OPEN. Row D OPEN.**
 
 **Read.** PI_MU_001 (complete); B1_FLAT_001; AUDIT_200_AMU_001; index l.479 (TEST_KINKS_001), l.487 (FF_001),
-l.495 (HH_001); PROOF_L_SHARP_FF_001_EDGE_RECOMBINATION §3 (FF.2); MORI15_EXTREMAL_001 §2 and §4; Paper 47: eq:symbol,
+l.495 (HH_001); PROOF_L_SHARP_FF_001_EDGE_RECOMBINATION §3 (FF.2); MORI15_EXTREMAL_001 §2 and §4; Paper 46: eq:symbol,
 eq:W, lem:roughEF (l.866), def:ext, lem:ext-mob, thm:ext-half, rem:ext-killing, prop:ext-gauge, prop:ext-consol,
 prop:ext-univ (l.9601–9745).
 

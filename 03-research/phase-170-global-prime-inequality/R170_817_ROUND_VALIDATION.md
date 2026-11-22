@@ -68,5 +68,5 @@ either.
 The repaired constructions of R170_813–814 remain well defined. The
 exterior–interior comparison and the domination by the Gamma reserve
 remain conjectural obligations. This round does not provide a uniform
-arithmetic law nor extend the certified range of Paper 47. Validation
+arithmetic law nor extend the certified range of Paper 46. Validation
 does not turn two failed attempts into a proof.

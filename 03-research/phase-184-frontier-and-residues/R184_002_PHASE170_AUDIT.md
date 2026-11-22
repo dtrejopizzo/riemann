@@ -83,7 +83,7 @@ Type observations:
    𝒱_{Λ,T}(F) ≤ 0 ∀F ∈ ker H_{T_c}, which likewise uses
    nothing outside contact.
 2. **Quantification over an empty set under RH.** For T ≤ ½log5 the
-   set of admissible F is empty (λ_T ≥ 10⁻¹⁸, P47 thm:log5W). Under RH
+   set of admissible F is empty (λ_T ≥ 10⁻¹⁸, P46 thm:log5W). Under RH
    (with λ_T > 0 strict) it is empty for every T. Hence RH ⟹ (R170-RES) trivially;
    the useful direction is (R170-RES) + [identification (887/892) + sign] ⟹
    absence of contact ⟹ RH. That combination is "contact is

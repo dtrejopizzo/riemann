@@ -1,7 +1,7 @@
 # `scripts/r3a/` — archimedean threshold (phase 155, round 3a, `R155_023`)
 
 Galerkin computation of the bottom of the **archimedean block** `A_inf = pole + gamma` of the Weil
-form on `L^2(-T,T)`, in an orthonormal Legendre basis. Paper 47 normalisation. Single process,
+form on `L^2(-T,T)`, in an orthonormal Legendre basis. Paper 46 normalisation. Single process,
 double precision, no interval arithmetic: everything produced here is `DIAGNOSTIC`.
 
 | file | what it does | runtime |

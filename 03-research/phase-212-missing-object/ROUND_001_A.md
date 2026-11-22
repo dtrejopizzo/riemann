@@ -15,7 +15,7 @@ memo builds no object. Recorded, with proof, are the three algebraic pieces that
 why the degree-two relation does not produce an oriented square (§3); two of them do not appear literally
 in the sources cross-checked and they are not sign results.
 
-Notation (P47 sec:firstcontact). X = multiplication by t; V_a translation; J reflection;
+Notation (P46 sec:firstcontact). X = multiplication by t; V_a translation; J reflection;
 𝓜 = m(D); 𝓕 = u_∞(D)J, with 𝓕² = 1, 𝓕* = 𝓕, JX = −XJ, X + 𝓕X𝓕 = 𝓜. For α: ℕ → ℂ,
 Φ(α) = Σ_n α(n) n^{−1/2} V_{−log n}; S = Φ(1), L = Φ(Λ), S′ = Φ(log), S″ = Φ(log²), L′ = Φ(Λ·log),
 with subscripts N, M for the truncations n ≤ N, d ≤ M. Φ(α)Φ(β) = Φ(α∗β) (untruncated) and
@@ -26,7 +26,7 @@ with subscripts N, M for the truncations n ≤ N, d ≤ M. Φ(α)Φ(β) = Φ(α�
 
 ## 0. Sources cross-checked
 
-P47: thm:PCfinite, rem:Sren, prop:GEgap, prob:annihilate, prop:annihilate-equiv, rem:returnremarks,
+P46: thm:PCfinite, rem:Sren, prop:GEgap, prob:annihilate, prop:annihilate-equiv, rem:returnremarks,
 prop:opcalc, thm:sos and its extension to real frequencies, rem:sosatoms, prop:cone, lem:shape-ident,
 thm:noimport, rem:conjunctions, rem:spec-scope, def:ext (summation map). P48: scope note after
 req:spec, codes F1–F3, row "Selberg difference channel". Phase 211: LEDGER C33, C33b, C47;
@@ -45,7 +45,7 @@ G6A-R163_802, G4A-R164_502, G6C-R166_103A; 06 (TB-3, R186_005). Grid §§ of wit
 
 **(1) Closest antecedent.** There are three, and together they cover the whole question.
 
-- Joint use, of degree one, of the three inputs: P47 thm:PCfinite,
+- Joint use, of degree one, of the three inputs: P46 thm:PCfinite,
   S_N A_M 𝓕 = {X, E_N} − L_M* E_N − J H_{M,N} − H_{M,N} 𝓕, with E_N the Poisson defect and H_{M,N} the
   incomplete divisor hyperbola; its square is invariant under A ↦ −A (code F2), and the oriented form
   that would be needed is prob:annihilate, which prop:annihilate-equiv identifies with (★). The same
@@ -257,15 +257,15 @@ logarithmic-derivative type supported on prime powers, so (c) does not arise wit
 a Beurling system satisfies (c) in its own semigroup and loses (b); b_θ breaks (c). For the quartet models
 and f_t, which preserve Λ(n) in the window and the functional equation, the three relations
 (a), (b), (c) still hold in the window and do not separate them: consistent with no consequence
-of them carrying a sign (Lemma A) and with P47 cor:shape (a). This last sentence is ARGUED: it was not verified
-against the definitions of those models in P47 beyond what `RULES_AVOID.md` §E summarizes.
+of them carrying a sign (Lemma A) and with P46 cor:shape (a). This last sentence is ARGUED: it was not verified
+against the definitions of those models in P46 beyond what `RULES_AVOID.md` §E summarizes.
 
 ---
 
 ## Result
 
 **No new mechanism.** K1, as posed (exact separator + Poisson with b ≡ 1 + archimedean
-factor, with non-linearity supplied by the degree-two relation), repeats: P47 thm:PCfinite /
+factor, with non-linearity supplied by the degree-two relation), repeats: P46 thm:PCfinite /
 prob:annihilate in the class with X, J, 𝓕; P1_BBSTAR_001 §2.8, thm:sos and N019 in the class of
 multipliers; NODE_001 Prop N.2 and TB3-neg as regards genericity. (ℋ_T, V_T, ρ_T) is not written. It is
 not a NO-GO of the conjunction (E)∧(F)∧(I) with a non-linear step, which still has no common falsifier

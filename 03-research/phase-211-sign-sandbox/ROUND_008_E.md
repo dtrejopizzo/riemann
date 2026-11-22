@@ -2,13 +2,13 @@
 
 Target (★): λ_A(T) ≥ 0 for every T (STATEMENT_001). Object: λ_A(T) = inf{a_T(F) : F ∈ P_T, ‖F‖ = 1}, with
 P_T = {F ∈ L²(I_T) : A(F) = B(F) = 0}, A(F) = ⟨F, e^{t/2}⟩, B(F) = ⟨F, e^{−t/2}⟩, and a_T = W_T on P_T. Notation of
-Paper 47 §sec:ext: λ = e^T, N = λ² = e^{2T}, c = 2πN (time·band of [−λ, λ] × [−λ, λ] in the convention
+Paper 46 §sec:ext: λ = e^T, N = λ² = e^{2T}, c = 2πN (time·band of [−λ, λ] × [−λ, λ] in the convention
 ℱf(ξ) = ∫f(x)e^{−2πixξ}dx), χ_k(c) the prolate concentrations, ψ_k the prolate functions of [−λ, λ], E the summation
 map Ef(x) = e^{x/2}Σ_{n≥1} f(ne^x) on I_T. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 
 ## 0. Corpus check
 
-Searched: Paper 47 §sec:ext (def:ext, lem:ext-mob, thm:ext-half, prop:ext-gauge, lem:ext-ellbound, prob:ext-L,
+Searched: Paper 46 §sec:ext (def:ext, lem:ext-mob, thm:ext-half, prop:ext-gauge, lem:ext-ellbound, prob:ext-L,
 prop:ext-consol, prop:ext-univ, thm:ext-margin, prop:ext-base, lem:ext-hf, the closing list "Scale"); phase 199
 (PATTERN_001_FRONTIERS §2–3, MECH_001_MORI_STRUCTURE_ALL_T, AUDIT_199 (a)–(f), proof-L-sharp/TEST_CG_001); ROUTES-TRIED
 -INDEX README rows P211-B, P211-2B, P211-7D, 05b row L106 (prolate clusters), AUDIT_ZENODO_FRONTIER B3; ROUND_001_B
@@ -25,7 +25,7 @@ What is known about the margin law (before this memo).
 - For λ_A: ROUND_007_D fitted −ln λ_A = c₁e^{2T} + c₂T + c₃ with c₁ → 4π from above (NUMERICAL, W-pat class); it noted
   that the prefactor μ^{−c₂/2} ≈ μ^{10} differs from μ^{9/2}, without explanation. Lemma 4.6 / Cor. 4.7 (PROVED) reduce
   the lower half to μ₁(T) ≥ L(T).
-- P211-2B: no sign statement on the prolate sector at orders log N and 1 (do not retry). P47 "Scale": the upper side
+- P211-2B: no sign statement on the prolate sector at orders log N and 1 (do not retry). P46 "Scale": the upper side
   is linear in the leakage on prolate blocks (Guo Thm 1.6, CLAIMED); a lower bound must be quadratic against the
   distance to the gauge.
 
@@ -320,7 +320,7 @@ Falsifier test (BRIEF rule 4) for the pieces of this memo.
   is no Poisson formula, so Theorem 3.1 has no analogue; (d) finite modification: 𝒫_{Λ−w} is a finite comb, O(1) on the
   block. The upper half is Λ-specific, as it must be (the falsifiers have negative bottoms, so any small positive upper
   bound would be true for them, but the doubly exponential smallness of the block value is not).
-- Proposition 4.2 inherits prob:ext-L, which is recorded as having to fail for cΛ, c > 1 (P47 closing list
+- Proposition 4.2 inherits prob:ext-L, which is recorded as having to fail for cΛ, c > 1 (P46 closing list
   "Ingredients"); Lemma 4.3 and its application are Λ-free and carry no sign (the conditioning κ_C(T) involves Λ only
   through E, which is Λ-free; A, B are archimedean). No sign step is claimed in this memo.
 

@@ -1,6 +1,6 @@
 # L2_BUILD_023 — Review (pen and paper)
 
-Checked against Paper 47: A(F)=∫F e^{t/2}, B(F)=∫F e^{−t/2} (l.117), P_T, lem:K (K(u)=2Σ_{k≥0}e^{−(2k+½)u}), eq:Aform / l.4454
+Checked against Paper 46: A(F)=∫F e^{t/2}, B(F)=∫F e^{−t/2} (l.117), P_T, lem:K (K(u)=2Σ_{k≥0}e^{−(2k+½)u}), eq:Aform / l.4454
 (𝔈 = ∫_0^{2T}(c(0)−c(u))K + c(0)∫_{2T}^∞K, comb over log n ≤ 2T), l.4089 (∫c_F e^{u/2} = A·B), and N_BUILD_014 §1–§3.
 Premise respected: no use of any equivalence involving row D.
 

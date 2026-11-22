@@ -8,14 +8,14 @@ Idea submitted to the gate: a linear map Φ = Φ_{T→T′}: P_{T′} → P_T, d
   (E) a_{T′}(F) = κ·a_T(ΦF) + R(F),   R ≥ 0 manifest, κ > 0,
 
 or the inequality version a_{T′} ≥ κ a_T∘Φ, so that positivity climbs from window to window starting from the proved
-region (T < ½log 2, where there are no contacts and a_T = Arch_T ≥ 0 up to T ≈ 0.60, Paper 47 cor:Tarch).
+region (T < ½log 2, where there are no contacts and a_T = Arch_T ≥ 0 up to T ≈ 0.60, Paper 46 cor:Tarch).
 
 ## 1. Four-point filter
 
 **(1) Closest antecedents, read in primary sources.**
 - `phase-186-toolbox/R186_029_SYNTHESIS_ROUND14.md`, Lemma H and list (α)–(δ) of what escapes: congruence,
   Schur, finite rank and relative quotient inherit the margin; only (β) «exact decomposition with zero
-  remainder» escapes, which uniformly in T collapses into thm:Z of Paper 47. Also W11′ (R184_015): every decomposition
+  remainder» escapes, which uniformly in T collapses into thm:Z of Paper 46. Also W11′ (R184_015): every decomposition
   W_T = Pos + Δ_T has positivity itself as its lower half.
 - `phase-160-row-d-infinite-T/R160_D4_R2.md`, Thm 3.4 and Thm 5.1: the Chebyshev completion
   comb(S_X F) = ℒ_X(F) − ℛ_X(F) and the closure «positivity through any convolution identity on
@@ -55,7 +55,7 @@ Assume a_T ≥ 0 (inductive hypothesis). Then:
 (i) R ≤ a_{T′} as forms on P_{T′}; in particular inf_{‖F‖=1} R(F) ≤ λ(T′).
 (ii) R ≥ 0 on P_{T′} implies a_{T′} ≥ 0; if F*_{T′} is a unit minimizer, R(F*) ≤ λ(T′) and
 κ a_T(ΦF*) ≤ λ(T′).
-(iii) If R ≥ 0 and ‖ΦF‖ ≥ s‖F‖ on P_{T′}, then λ(T′) ≥ κ s² λ(T); since λ(T′) ≤ exp(−e^{(2−ε)T′}) (Paper 47
+(iii) If R ≥ 0 and ‖ΦF‖ ≥ s‖F‖ on P_{T′}, then λ(T′) ≥ κ s² λ(T); since λ(T′) ≤ exp(−e^{(2−ε)T′}) (Paper 46
 thm:margin, CITED), κ s² ≤ λ(T′)/λ(T): either Φ is almost non-injective exactly in the direction of the minimizer,
 or R is a form whose bottom is ≤ λ(T′).
 *Proof.* (i) κ a_T(ΦF) ≥ 0. (ii) a_{T′} = R + κ a_T∘Φ ≥ R, and a_{T′}(F*) = λ(T′) with both summands ≥ 0.
@@ -64,7 +64,7 @@ or R is a form whose bottom is ≤ λ(T′).
 Reading. «R ≥ 0» is a sign statement in the window T′ stronger than the target (R ≤ a_{T′}) with a bottom of
 size at most λ(T′). There are two ways to certify it: (a) by another transition (infinite regress, same
 obligation) or (b) as a manifest sum of squares with zero remainder in the window T′, which is type (β) of
-R186_029 = dual certificate of Paper 47 def:PD in that window; uniformly in T, thm:Z. The transition only splits the
+R186_029 = dual certificate of Paper 46 def:PD in that window; uniformly in T, thm:Z. The transition only splits the
 form into two pieces, one of them positive by hypothesis: it is W11′ with Pos := κ a_T∘Φ. Repetition. History
 dependence (Φ built with all previous primes, à la Λ∗1 = log) does not change (i)–(iii): they hold for
 any Φ.

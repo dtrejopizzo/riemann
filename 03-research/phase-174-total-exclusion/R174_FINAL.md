@@ -78,4 +78,4 @@ The available exhaustivity keeps the label `ANALYSIS`, not `PROVED`
 three renormalized crossed forms examined in \((\alpha)\) were
 rejected by the filters, with no universal exclusion theorem. This agrees
 with the residue of [R173_FINAL](../phase-173-object-01/R173_FINAL.md)
-and with the six clauses of [Paper 46 §28.4](../../04-papers/46-intersection-frame-defect/archive/main.md#284-the-decision).
+and with the six clauses of [Paper 47 §28.4](../../04-papers/47-intersection-frame-defect/archive/main.md#284-the-decision).

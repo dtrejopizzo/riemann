@@ -59,7 +59,7 @@ positive interval enclosure at every argmin. Archive the JSON next to `round5/ce
   shape within the contact set `{2,3}` (R154_015 §6; note R154_017 refuted the cheap lattice
   rescaling — re-solve each step with warm start instead).
 * `c(M)` saturates below `0` up to `M = 128`: a theorem-shaped negative — the lattice class at these
-  resolutions does not reach the two-prime window; feeds Problem A of Paper 47 §8 (phase 155).
+  resolutions does not reach the two-prime window; feeds Problem A of Paper 46 §8 (phase 155).
 
 Nothing in this package touches the FATAL rule: `T = 0.58 < log 2` is Paper-42-certified; the run
 produces an independent dual certificate or fails to.

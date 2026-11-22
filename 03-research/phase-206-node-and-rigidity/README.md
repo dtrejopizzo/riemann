@@ -6,8 +6,8 @@
 version of that rigidity produces a sign.
 
 ## Mechanism skeleton (even sector) — status
-1. **Reduction (PROVED, P47 prop:H + cor:H1minus).** W^ev_T ⪰ 0 ∀T ⟺ n₋(𝔄_ev(T)) = 1 ∀T (𝔄_ev = archimedean + comb, without pole).
-2. **Finite coordinates (PROVED, P47 lem:combsine; RFIN_TRACT_001 RF.1).** On E_N^ev = span{sin(πk(x+T)/2T), k odd ≤ N}, N ≈ 4T:
+1. **Reduction (PROVED, P46 prop:H + cor:H1minus).** W^ev_T ⪰ 0 ∀T ⟺ n₋(𝔄_ev(T)) = 1 ∀T (𝔄_ev = archimedean + comb, without pole).
+2. **Finite coordinates (PROVED, P46 lem:combsine; RFIN_TRACT_001 RF.1).** On E_N^ev = span{sin(πk(x+T)/2T), k odd ≤ N}, N ≈ 4T:
    𝔄_N = (𝔪 + 𝔢)_N − 2ccᵀ + Φ_N,
    𝔪 = gamma factor of conductor 1 (symbol m), 𝔢 = pole kernel (symbol 1/(¼+τ²)), c = coefficients of the polar
    direction χ_ev (c_k = 2ω_k cosh(T/2)/(√T(¼+ω_k²))), Φ_N = compressed fluctuation form −𝓕_T: Σ_{n≤e^{2T}} (Λ(n) − 1)·(2/√n)·𝓕_F(log n)
@@ -47,5 +47,5 @@ Memos: NODE_*.md (track A), RIGID_*.md (track B), AUDIT_206_*.md (audit).
 - Track B (RIGID_001): 12 objects, none evades the index; Lemma N: quadratic rigidity = ‖generic norm‖² + identity F.
 
 ## Status after AUDIT_206_001
-- Node PROVED for T ≤ ½log5 (corollary of P47 thm:log5W); OPEN in general. The 2×2 margin at ½log5 is a truncation artifact
+- Node PROVED for T ≤ ½log5 (corollary of P46 thm:log5W); OPEN in general. The 2×2 margin at ½log5 is a truncation artifact
   (with 3 modes: 1e−6–1e−7). Resonance of 2: coincidence. N5-uniform withdrawn. No sign step in either track A or B.

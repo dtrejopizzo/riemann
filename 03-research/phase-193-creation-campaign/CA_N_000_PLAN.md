@@ -7,7 +7,7 @@ constants (ψ(¼), log π, log 2, log 3), stated as such. **No negative value fo
 CA_L_000/001/002 + CA_L_SYNTHESIS (V1–V3 diagnosis; window-LP slackness set = ℝ; prime-site torus LP with attained dual, slackness on
 Z_s, exact for |X| ≤ 5); CA_K_002 (site independence K-S); CA_M_001 (real-sited independence; m + 2Re ζ′/ζ(½+i·) = 0);
 CA_D_001/002 (Hardy-amplitude transfer at amplitude k ≥ 1, PROVED, FE-generic; closure to k = 0 NO-GO); CA_E_001 (Bochner measure on the
-Kronecker line); P47 def:PD, prop:weak (Boas–Kac), thm:D1, thm:O, thm:Z, lem:R1, thm:R, thm:oneprofile, prop:AM, prob:region (= Problem
+Kronecker line); P46 def:PD, prop:weak (Boas–Kac), thm:D1, thm:O, thm:Z, lem:R1, thm:R, thm:oneprofile, prop:AM, prob:region (= Problem
 (R), clauses (1)–(11)), O-list def (O10 = Epstein, lem:shape-epstein: CITED complete form / ARGUED primitive); index README PRINCIPIO
 RECTOR as corrected by front M (the only +/· content is the comb on log ℕ: positions + weights).
 Corpus: Connes–Consani archimedean-place positivity and prolate/Sonin objects are in MAP_5 / R137_001 / phase 183 (semilocal Sonin chain

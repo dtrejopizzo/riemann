@@ -3,14 +3,14 @@
 Phase 193, round 6. Seed C3 of CA_C_000. Pen and paper.
 **No sign contact. No certified negative value for ζ.** All falsifiers below are *other* combs.
 
-## 0. Notation (Paper 47)
+## 0. Notation (Paper 46)
 X = e^{2T}, N_T = {2 ≤ n < X}. A comb is a real a: ℕ_{≥2} → ℝ, v_n(a) = 2a(n)n^{−1/2},
 𝔞^{(a)}_T(F) = 𝔞_∞(F) − Σ_{n∈N_T} v_n(a) Re c_F(log n) on P_T (𝔞_∞ = Γ_ℝ term with polar part; c_F the autocorrelation).
 λ(T;a) = bottom of 𝔞^{(a)}_T on P_T; WP_T(a) means λ(T;a) ≥ 0. Divisor sum D_a(n) := Σ_{d|n, d≥2} a(d).
 
 ## 1. The product formula is the window form of (E)
 **Lemma 1 (PROVED).** For n ∈ ℕ, D_Λ(n) = Σ_p v_p(n) log p = log|n|_∞ = −Σ_p log|n|_p. So the product formula for the
-integers n < X is the identity D_a(n) = log n on N_T, which is condition (E) of P47 prop:shape-inputs on the window.
+integers n < X is the identity D_a(n) = log n on N_T, which is condition (E) of P46 prop:shape-inputs on the window.
 *Proof.* Λ(p^k) = log p and Λ = 0 elsewhere; v_p(n) counts the prime powers p^k | n, k ≥ 1. ∎
 
 **Lemma 2 (PROVED; exact coupling is a singleton).** If D_a(n) = log n for every n ∈ N_T, then a = Λ on N_T.
@@ -26,7 +26,7 @@ composites with ≥ 2 distinct prime factors; written C_T). For R_loc, R_cmp ∈
   𝒦(R_loc, R_cmp) = { a : D_a(n) R_loc log n for prime powers n ∈ N_T,  D_a(m) R_cmp log m for m ∈ C_T },
 optionally intersected with {a ≥ 0}.
 
-**Lemma 3 (contact of a chosen sign; PROVED from P47 lem:cpos).** Let n₀ ∈ N_T and ε ∈ {±1}. There is a real F ∈ P_T with
+**Lemma 3 (contact of a chosen sign; PROVED from P46 lem:cpos).** Let n₀ ∈ N_T and ε ∈ {±1}. There is a real F ∈ P_T with
 ε c_F(log n₀) > 0 and c_F(log n) = 0 for every n ∈ N_T∖{n₀}. Consequently λ(T; a + cε·1_{n=n₀}) → −∞ as c → +∞, for every comb a.
 *Proof.* In the proof of lem:cpos take u₀ = log n₀ and ℓ < min(u₀, 2T − u₀, min_{n≠n₀, n∈N_T}|log n − log n₀|). Then
 c_{F^±} is supported in {|u| < ℓ} ∪ {|u ∓ u₀| < ℓ}, which contains no other log n, n ∈ N_T, and c_{F^±}(u₀) = ±‖φ‖². Then
@@ -53,16 +53,16 @@ multiples are composites in C_T (6 divides no prime power), so the local relatio
 (sign of c chosen to respect R_cmp ∈ {≤, ≥, ∅}). (ii) n₀ = p₀ of Lemma 4: its only multiple in N_T is p₀ itself, a prime power, so only
 the local relation at p₀ moves; the sign of c is chosen to respect R_loc. In both cases Lemma 3 gives λ(T; Λ + c1_{n₀}) < 0 for |c|
 large with the right sign. (iii) a_P with P > X: D_{a_P}(n) = log(P-rough part of n) = 0 ≤ log n on N_T, and WP_T(a_P) fails for
-T ∈ [0.60, ½ log P] (P47 prop:shape-eulerdel). (iv) The cell (≤, ≥): Λ − c1_{p₀} lowers only the local relation at p₀ and leaves the
-composites unchanged, so it lies in the class; Lemma 3 applies. (v) (≥, ≥): O2 at n₀ = 2 (P47 lem:shape-amp). ∎
+T ∈ [0.60, ½ log P] (P46 prop:shape-eulerdel). (iv) The cell (≤, ≥): Λ − c1_{p₀} lowers only the local relation at p₀ and leaves the
+composites unchanged, so it lies in the class; Lemma 3 applies. (v) (≥, ≥): O2 at n₀ = 2 (P46 lem:shape-amp). ∎
 
 **With a ≥ 0 imposed.** Every falsifier with c > 0 survives. The cells that used c < 0 change:
 - (=, ≤) with a ≥ 0: D_a(m) = log m + Σ_{d|m, d∈C_T} a(d) ≤ log m forces a = 0 on C_T: **singleton** (REF-D).
 - (≤, ·) with a ≥ 0 and the local relation strict at a prime power: the perturbation Λ − c1_{p₀} is admissible only for c ≤ log p₀,
   so Lemma 3 does not apply. Here the falsifier is a_P when R_cmp ∈ {≤, ∅} (PROVED), and **CONDITIONAL** (on κ_T ≠ 0 or on
-  c_{F⋆}(log p₀) ≠ 0, P47 lem:shape-weight, lem:shape-scale) when R_cmp ∈ {=, ≥}.
+  c_{F⋆}(log p₀) ≠ 0, P46 lem:shape-weight, lem:shape-scale) when R_cmp ∈ {=, ≥}.
 - Tolerance classes |D_a(n) − log n| ≤ ε_n: if some ε_{n₀} > 0 is unbounded in the deduction, Lemma 3 gives a falsifier; for bounded
-  tolerances the falsifier (1+δ)Λ or Λ ± ε1_{n₀} is CONDITIONAL exactly as in P47 lem:shape-est(iii).
+  tolerances the falsifier (1+δ)Λ or Λ ± ε1_{n₀} is CONDITIONAL exactly as in P46 lem:shape-est(iii).
 
 **Corollary 1 (PROVED, with the two conditional cells).** A product-formula ("Hasse") condition on the window — any combination of local
 (prime-power) and global (composite) divisor relations — is either the comb Λ itself on N_T or admits a comb with negative bottom at T.
@@ -89,7 +89,7 @@ on prime powers); quartets add an absolutely continuous term outside every local
 terms, with nothing else.** That statement determines the form; it is the target's object, not a mechanism.
 
 ## 4. The only exact non-tautological use of the product formula, and a trade-off (new reading; OPEN statements)
-P47 prop:shape-family(i) uses the product formula exactly on the test family s_w = (m^{−1/2}w(m/M))_{m≤M} (w ≡ c on [0, η], 2T₀ < log 2):
+P46 prop:shape-family(i) uses the product formula exactly on the test family s_w = (m^{−1/2}w(m/M))_{m≤M} (w ≡ c on [0, η], 2T₀ < log 2):
   s_w^⊤𝔸_M s_w = s_w^⊤Arch_M s_w − Σ_{2≤N<Me^{2T₀}} N^{−1/2} D_w(N)E_w(N),
   D_w(N) = 2c log N − Σ_{d|N, 2≤d<N/(ηM)} 2Λ(d)(c − w(N/(dM))),  d < e^{2T₀}/η < 2/η.
 **Observation 1 (PROVED, a specialization).** If η > 2/3, only d = 2 can occur, so on this family the form depends on the primes only
@@ -103,9 +103,9 @@ This is a local–global statement in the precise sense: the "local" data Λ(d),
 identity Σ_{d|N}Λ(d) = log N on the test family.
 
 **Two statements left OPEN (not attempted here):**
-- (Fam_η) for some η > 2/3 and all M, w: s_w^⊤𝔸_M s_w ≥ 0. It follows from the target (P47 rem:shape-ident) and, by Observation 1, it is
+- (Fam_η) for some η > 2/3 and all M, w: s_w^⊤𝔸_M s_w ≥ 0. It follows from the target (P46 rem:shape-ident) and, by Observation 1, it is
   an explicit inequality in Γ_ℝ, log N and log 2 only. A proof is a necessary sub-statement, not the target.
-- (Span_η) the bottom of 𝔸_M is attained (to relative precision of the margin) on the span of Observation 2. P47 records that minimizers
+- (Span_η) the bottom of 𝔸_M is attained (to relative precision of the margin) on the span of Observation 2. P46 records that minimizers
   lie in the closed span of the family numerically when η may vary; Observation 2 shows that this is a strong rigidity statement when η is
   fixed (> 2/3): a minimizer would have to be proportional to m^{−1/2} on [1, ηM]. Nothing suggests this; I expect (Span_η) to be false
   for fixed η, which would make (Fam_η) strictly weaker than the target. Label: expectation, not a statement.

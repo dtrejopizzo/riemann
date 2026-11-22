@@ -84,7 +84,7 @@ and sufficient for ε_S ∈ L²_loc the quadratic version with cancellation. Wit
 - The expression for κ_S in §5 is a definition by difference; its content is "density of Tr ϑ(f)(PX+XP−PXP) minus diagonal variation." It has not been proved to be a function.
 - Nothing numerical: the relevant tail is n ≫ 40.
 
-## For Paper 47
+## For Paper 46
 
 Add as a remark (not a main theorem): "F_S = EF_∞E⁻¹ is a self-adjoint unitary involution that reverses scale; consequently the derivation of CC Thm 4.7 carries over word for word to the semilocal case and gives E_S = Son_S − ∫c_h ε'_S with the prime term absorbed exactly; the finiteness of Son_S and the boundedness of ε'_S remain open (TC_S), (CV_S)". Labels: L0, H, G, D PROVED; (84)_S CONDITIONAL; boundedness OPEN. Do not use any equivalence with RH.
 

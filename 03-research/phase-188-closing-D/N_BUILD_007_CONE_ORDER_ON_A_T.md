@@ -16,8 +16,8 @@ That is what this memo tests.
 
 ## Corpus check
 grep "dual cone|cono dual|Kreĭn|Akhiezer|Blaschke|Hardy gauge|order|monotone|preserv|Volterra" in phases 161, 170, 186,
-188, Paper 47 §15, grid. Found: R186_052 Thm 3.3–3.5 (𝒦_T^{(0)*} = sinc-smoothings of positive measures, Kreĭn; conditional
-modulo (−1)^k, R186_118 MAJOR-1), Paper 47 rem:nyq-dual (dual-cone description "neither proved nor used"); R161_015
+188, Paper 46 §15, grid. Found: R186_052 Thm 3.3–3.5 (𝒦_T^{(0)*} = sinc-smoothings of positive measures, Kreĭn; conditional
+modulo (−1)^k, R186_118 MAJOR-1), Paper 46 rem:nyq-dual (dual-cone description "neither proved nor used"); R161_015
 (canonical Hardy gauge, norm slope); phase-170 W12 (EM port identities). Nobody tested whether convolution in the causal
 algebra preserves 𝒦_T^*. New: §1–§3.
 

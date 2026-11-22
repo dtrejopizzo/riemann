@@ -99,7 +99,7 @@ carries no information.
 
 ## 4. Theorem V — radicality preservation is Gate 1
 
-Let 𝓡 = ker H_T at first contact, H_T = P_T A_loc P_T. As in P47, H_T is the Γ multiplier plus a compact operator, so
+Let 𝓡 = ker H_T at first contact, H_T = P_T A_loc P_T. As in P46, H_T is the Γ multiplier plus a compact operator, so
 𝓡 is finite-dimensional. Let (Vf)(t) = e^{−t/2}∫_{−T}^t e^{y/2}f(y)dy on L²[−T,T]. This is the canonical preimage
 of the anchor: v = A_loc(Vf) + (exterior).
 
@@ -132,7 +132,7 @@ c_f = Σ_ρ F(ρ)e^{−ρT}/ρ + (Tate), which is a zero-side scalar. Forcing c_
 ## 6. Status and residual
 
 - PROVED: Theorem N, Lemma V1, Theorem V, Prop. O. Cited classical inputs: the explicit formula for C_c^∞ tests, the
-  zero-free region, and finite-dimensionality of 𝓡 (P47).
+  zero-free region, and finite-dimensionality of 𝓡 (P46).
 - Cell 5F: ◧ → **◩**. Killers: F1 (value), E1 (radicality = Gate 1), S2/S7 failure.
 - **Residual O2302.1** (formulated, not attacked): the finite-N remainder Σ_ρ K(ρ)E_N(1−ρ) ~ Σ_ρ K(ρ)N^{ρ−1}(…).
   It is the only nonzero content of the construction. Paired quadratically, it is a Li/Keiper-type zero sum, so E1 is

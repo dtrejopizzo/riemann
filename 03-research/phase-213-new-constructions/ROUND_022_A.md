@@ -1,6 +1,6 @@
 # Variance of the arithmetic crossing that the global sign would tolerate
 
-Prior independent cross-check with 213-019/020/021, P47 (band, oneprofile, AM), L2_BUILD_019, R186_005 and P2_SCHUR_001. Selecting a test vector by projection is classical. The specific application measures simultaneously the residues of all cells after removing two moments. The cross-check did not locate this condition in those antecedents.
+Prior independent cross-check with 213-019/020/021, P46 (band, oneprofile, AM), L2_BUILD_019, R186_005 and P2_SCHUR_001. Selecting a test vector by projection is classical. The specific application measures simultaneously the residues of all cells after removing two moments. The cross-check did not locate this condition in those antecedents.
 
 Fix C>1. For large integer K use the full cells with indices J=[K,floor(CK))∩ℤ. We use exactly M, A, h and q of BUILD084 (3)-(4). Let p=(log(3/2),−log 2) on cells 1,2 and d=log(4/3). For j∈J write
 
@@ -36,7 +36,7 @@ The head energy is approximately 0.167101. In the last three bands the tail redu
 
 ### Minimum with the head p fixed
 
-Prior cross-check. BUILD084 (16)–(18), 212-59/75, 212 ROUND_001_B, P47 prop:schur and the Schur entry in P48 already contain the elimination. It is used only to decide whether the choice of tail hid a negative energy in the four examples.
+Prior cross-check. BUILD084 (16)–(18), 212-59/75, 212 ROUND_001_B, P46 prop:schur and the Schur entry in P48 already contain the elimination. It is used only to decide whether the choice of tail hid a negative energy in the four examples.
 
 For Z with orthonormal columns spanning ker H, write x=b+Zu, B=ZᵀAZ and g=Zᵀ(Ab+r−s), where A is the tail block. If B is positive definite the minimum is attained at u=−B⁻¹g. Z was built by SVD, the smallest eigenvalue of B was checked and the system was solved by Cholesky. The largest Euclidean stationarity residue was 2.1×10⁻¹⁵. Diagnosis in double precision.
 

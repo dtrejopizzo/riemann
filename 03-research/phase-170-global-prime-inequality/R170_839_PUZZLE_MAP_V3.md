@@ -7,19 +7,19 @@ R170_833, R170_836, and R170_838. It does not prove D.
 
 1. **Certified base.** Complete positivity for
    \(T\le\frac12\log5\), with a quantifiable local extension from the
-   certified gap. Record: Paper 47 and R170_703.
+   certified gap. Record: Paper 46 and R170_703.
 2. **Reduction to first contact.** If D fails, there is a first window
-   and a finite radical with a parity extremal vector. Record: Paper 47
+   and a finite radical with a parity extremal vector. Record: Paper 46
    and phases 163--166.
 3. **Faithful Gamma detector.** For some finite \(L\), \(R_L\) is
    injective on the radical. Proving \(R_LF=0\) excludes the contact.
-   Record: Paper 47 and R170_702.
+   Record: Paper 46 and R170_702.
 4. **Complete energy.** The archimedean, prime, and polar parts are
    transported within a single form, without losing their cross terms.
    Record: R170_805--810.
 5. **Oriented finite PC.** Both orientations, the hyperbola, the
    collars, and the polar continuum are preserved before taking limits.
-   Record: Paper 47, phase 161, and R170_819--826.
+   Record: Paper 46, phase 161, and R170_819--826.
 6. **Exact entry of the integers.** In the finite PC carrier,
    \(\sum_{d\mid k}\Lambda(d)=\log k\) eliminates, coefficient by
    coefficient, the interior defect \(\delta_\Lambda(k)\). Record:
@@ -27,7 +27,7 @@ R170_833, R170_836, and R170_838. It does not prove D.
 7. **Gamma--Euler reserve.** The matrix
    \(D_\Delta=R_L^*(I-D)R_L\) satisfies
    \(D_\Delta\succeq(1-q_0)B\succ0\) on the detected radical. Record:
-   Paper 47 and R170_829--830.
+   Paper 46 and R170_829--830.
 8. **Matrix compression of the flux.** We have \(Q=P+E\), with
    \(E\succeq0\), and a finite spectral criterion on the radical.
    Record: R170_827--828.

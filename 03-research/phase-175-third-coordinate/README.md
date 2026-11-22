@@ -19,8 +19,8 @@ map identifying Q with ζ's explicit formula.
 
 ## Documents
 
-- `R175_FINAL.md` — literature audit against the OT-1…OT-12 gates, three rounds of construction attempts (A: dynamics/renormalization, B: Witt/bivariate, C: recodings), and the final H1–H5 gate table against Paper 46 §28.4's six clauses.
+- `R175_FINAL.md` — literature audit against the OT-1…OT-12 gates, three rounds of construction attempts (A: dynamics/renormalization, B: Witt/bivariate, C: recodings), and the final H1–H5 gate table against Paper 47 §28.4's six clauses.
 
 ## Relation to other phases
 
-Follows directly from phase 174's unresolved classification; cites phase 159 (G1_B5_R3) and phase 160 (R160_C4_R1) for related Witt/Coulomb-correction attempts, and Paper 46 §28.4 for the six clauses any successful construction must satisfy.
+Follows directly from phase 174's unresolved classification; cites phase 159 (G1_B5_R3) and phase 160 (R160_C4_R1) for related Witt/Coulomb-correction attempts, and Paper 47 §28.4 for the six clauses any successful construction must satisfy.

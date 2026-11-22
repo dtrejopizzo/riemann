@@ -1,7 +1,7 @@
 # N_BUILD_010 — Linearizing Φ at Λ: amplification falsifier, locality, and whether 𝒦_T can be quantitative
 
 ## Corpus check
-Paper 47 thm:finmod(ii) (c_*(T,2)), prop:wit-sens (Lipschitz |Δλ_A| ≤ Σ|Δv_n|), cor:margin1; R164_102 Prop I (Hamburger);
+Paper 46 thm:finmod(ii) (c_*(T,2)), prop:wit-sens (Lipschitz |Δλ_A| ≤ Σ|Δv_n|), cor:margin1; R164_102 Prop I (Hamburger);
 R162_903 (nonlinear uses of Λ*1 = log collapse); N_BUILD_009. grep "linearization|DΦ|fixed point|Lipschitz in the weights|
 residual": no prior linearization of a Poisson–Euler map. Review points (1)–(3) of the coordinator answered in §4.
 
@@ -45,7 +45,7 @@ at Λ. So 𝒦_T can be made quantitative only perturbatively, and then it is em
 ## 5. Next construction (global, not perturbative)
 A homotopy/continuation argument in 𝔐⁺: a path λ_t (t ∈ [0,1]) from a comb λ_0 with WP_T(λ_0) true and computable by hand
 (e.g. λ_0 = 0 for T ≤ 0.58 where λ_{∞,P} > 0 — CITED) to λ_1 = Λ, with a monotone quantity controlling the window bottom along
-the path by the residual r(λ_t) → 0. By W-fam/Lemma flowdet (Paper 47 §barriers) any flow coefficient near a crossing is a
+the path by the residual r(λ_t) → 0. By W-fam/Lemma flowdet (Paper 46 §barriers) any flow coefficient near a crossing is a
 functional of the minimizer; the path must be chosen so that the crossing is excluded by the residual, not by the flow. First
 pen-and-paper test: λ_t = tΛ (Z^{t}, fails (P) for t ≠ 1): compute r(tΛ) and compare with the known failure of WP_T(tΛ) for
 t > 1 + λ_A/κ_T (prop:wit-sens) — does ‖r(tΛ)‖ grow like |t − 1| uniformly in T?

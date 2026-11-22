@@ -4,7 +4,7 @@ Pen and paper. Target: (N^♯_fin) of N_BUILD_002, i.e. Σ_n v_n c_φ(log n) + �
 (A_∞+R)|_{P_T}.
 
 ## Corpus check
-- Paper 47 cor:void + thm:finmod: the class C_BT = {0 ≤ a ≤ Λ} (all upper-bound sieve inequalities) is closed under
+- Paper 46 cor:void + thm:finmod: the class C_BT = {0 ≤ a ≤ Λ} (all upper-bound sieve inequalities) is closed under
   deletion; the failing member deletes **all** of Λ below N ≥ e^{2T} (empty comb). thm:finmod(ii): amplification of one
   term. prop:wit-sens: relative change ε ~ λ_A/κ_T of all weights breaks positivity.
 - phase-167 (R167_101–103, R167_291): witness-weighted sieve (WS*) — a sum TWISTED at the quartet frequency γ_q, one

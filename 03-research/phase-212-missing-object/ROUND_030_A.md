@@ -1,7 +1,7 @@
 # Round 030-A — Rigidity of the weight without temperedness: the gap on Z, formulated and attacked
 
 Object: `a^w_T(F) = Arch(F) − Σ_{n≥2} w_n c_F(log n)` on `P_T`; `v_n = 2Λ(n)/√n`; `d = w − v`;
-`D(τ) = 2Σ d_n cos(τ log n)`; `Ω(τ) = C_0 + ∫_0^∞(1 − cos τu)K(u)du = Re ψ(¼ + iτ/2) − log π` (P47 lem:K, eq:Aform),
+`D(τ) = 2Σ d_n cos(τ log n)`; `Ω(τ) = C_0 + ∫_0^∞(1 − cos τu)K(u)du = Re ψ(¼ + iτ/2) − log π` (P46 lem:K, eq:Aform),
 so that `Arch(F) = (2π)^{-1}∫Ω|F̂|²` for compactly supported `F ∈ L²`. `Z` = real zeros of `Φ_M(½+iτ)`, a given discrete
 set. Quasi-radical family `X = Π_T(M∗φ)` of ROUND_021_A (1.1)–(1.3), ROUND_024_A §2.
 
@@ -68,7 +68,7 @@ one uses `|τ| > τ_0`, where `Ω > 0`. The counterexample of 025_B §1 is **wit
   `a^v_T(X) = (2π)^{-1}⟨G, |X̂|²⟩ + O(η)`, and by (2.1) that is exact in the window. The hypothesis gives
   `⟨G − P, |X̂|²⟩ + ⟨N, |X̂|²⟩ ≥ −η`. Varying `X̂(γ)` and `X̂′(γ)` with the rest near-null:
   **`P ≤ G` as forms of order ≤ 1 at each `γ`** (ARGUED: requires tests interpolating jets on `Z` with norm
-  controlled on `P_T`; see the interpolator of P47 thm:nyq). It is an **upper** bound on `P`. It does not give `P = 0`.
+  controlled on `P_T`; see the interpolator of P46 thm:nyq). It is an **upper** bound on `P`. It does not give `P = 0`.
 - Tests not of the form `S_ζ h` but near-null: if `a^v_T(X) → 0`, then `⟨G, |X̂|²⟩ → 0`. Every near-null test
   has `X̂` small on `Z` in the sense of `G`. **Blindness on `Z` is intrinsic to near-nullity**, not to the family
   (ARGUED from `a^v = ⟨G, |·̂|²⟩` in a window).

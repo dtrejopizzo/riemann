@@ -3,7 +3,7 @@
 unsatisfiable for `ξ`; diagnosis; horns A/B; order (0) O-19, (1) Horn B/B4, (2) Horn A), `R142_001`
 §§D.31–D.32 (Lemma D.31.4, `s(γ,θ)`, D.31.10 witness family `E_{t,d}`, Thm D.32.4, candidates B1–B5),
 `R142_004` (J1–J10, especially J3: the witness family lies in B4; J2: B4 ⊇ 𝓝_∞, `𝓔 ⊂ B4` unproved),
-`R141_001` §D.26 (traces `t_n(E) = I_∞(E, τ_{log n}g)`, moment cone), Paper 46 §§11–12 (Thm 11.13, 11.14,
+`R141_001` §D.26 (traces `t_n(E) = I_∞(E, τ_{log n}g)`, moment cone), Paper 47 §§11–12 (Thm 11.13, 11.14,
 12.3 and its proof), Paper 44 (Frobenius Gram form (A), Thm 8bis.4a).*
 
 Standing rules as before (labels; zero-free definitions — `ξ` as data, traces defined by the arithmetic
@@ -35,14 +35,14 @@ margin). Consequences: the strongest admissible Horn-A defect; the size of `𝔐
    mod T}` (Weyl equidistribution of `log n`? — `log n` is NOT equidistributed mod 1; use instead that
    `n^{−iγ}` for `n` ranging over integers realizes all values of the character on a dense set by
    Kronecker/Dirichlet for finitely many `γ`'s, then truncation of the tail with the `ℓ¹` control of
-   Paper 46 (11.2)) — build the argument or find the obstruction; (ii) unconditionally, the frequencies
+   Paper 47 (11.2)) — build the argument or find the obstruction; (ii) unconditionally, the frequencies
    `½−ρ` may have real parts; then `n^{½−ρ}` has growth and the sign question changes — record what is
    provable without RH and what is not (FATAL rule: if the answer "no such `F`" is proved unconditionally
    *and* it makes a transfer theorem run, stop and flag). Outcome: YES (Horn B dies at (T1); give `F`) /
    NO (theorem; label; state exactly what was used) / OPEN (the exact missing estimate).
 3. **(T2) for B4**: the bounded-density constant `C'_X := sup_{E' ∈ B4, deg E' > 0} |I_∞(E',X)|/deg E'` —
    finite for every `X`? With constants `≍ γ_j²` as the auditor guesses? Prove or bound.
-4. **The transfer theorem 12.3-B4.** Re-run Paper 46 Thm 12.3's proof with "effective" replaced by "in B4
+4. **The transfer theorem 12.3-B4.** Re-run Paper 47 Thm 12.3's proof with "effective" replaced by "in B4
    with `deg > 0`" (and (b′)_{B4}: `h⁰(E) > 0 ⟹ E ∈ B4 + 𝓝_∞`, `deg E > 0`): which steps survive (the
    degree argument uses Thm 11.13: `deg E' > 0` for nonzero `E' ≥ 0` — for B4 this must be replaced by
    the definition or by (T1)); which need (T2); state the theorem with its exact hypotheses and label. Then

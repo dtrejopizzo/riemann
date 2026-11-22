@@ -10,7 +10,7 @@ Inputs: R155_039/042 (Birman–Schwinger, Theorem J, Lemma N, Prop G), R155_040/
 | Thm 2: KEP(T) solvable ⟹ λ^W_T ≥ 0 (C_c^∞ form core) | PROVED |
 | Thm 3 (dichotomy): λ^W_T > 0 ⟹ indeterminate ⟹ λ^W_T ≥ 0; **RH ⟺ KEP(T) indeterminate ∀T** | PROVED |
 | Unconditional: λ^W_T > 0 for T ≤ 0.8 by Zhu (complete form) ⟹ KEP(T) indeterminate for all T ≤ 0.8 | PROVED given Zhu (cited, not re-verified) |
-| Theorem C does NOT give a complete-form certificate (β ≠ (2,0); defect 5.9e−3 ≫ c); it certifies the primitive form | PROVED (correction of a loose reading; Paper 47's claims were already correct) |
+| Theorem C does NOT give a complete-form certificate (β ≠ (2,0); defect 5.9e−3 ≫ c); it certifies the primitive form | PROVED (correction of a loose reading; Paper 46's claims were already correct) |
 | Thm 4: for finite symmetric Z, μ_Z is the unique finite positive symmetric solution (no decay/product hypothesis); thm:finZ follows | PROVED (strengthens thm:finZ) |
 | Remark 2.5 of R155_014 ("Kreĭn indeterminacy for ζ") | RH-EQUIVALENT (not an obstruction to remove); P5 CLOSED as a route |
 | Birman–Schwinger for (H1) | CLOSED NEGATIVE (M₊ gapless; tr M₋ = 4.495774·T; CLR unavailable in d = 1) |
@@ -31,7 +31,7 @@ Row-D label unchanged. Endpoint of record unchanged. No sign for ζ beyond log 2
  their logarithms fall on opposite sides of a node fixed by the archimedean ground state. The "why" of the cancellation is
  nodal geometry, not arithmetic. Whether the same holds for the full even Schur complement (infinitely many modes) is OPEN.
 3. (H1) is bounded on both sides but not decided; exactly one negative direction is DIAGNOSTIC and can hold at most up to 0.999.
-4. Correction of a loose reading in the record (not in Paper 47): only the primitive form is certified at ½log3 by Theorem C;
+4. Correction of a loose reading in the record (not in Paper 46): only the primitive form is certified at ½log3 by Theorem C;
  the complete form there is positive by Zhu.
 
 ## 3. State of the path (R155_031) after rounds 4–5

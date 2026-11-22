@@ -19,9 +19,9 @@ Internal reformulations in use (all internal moves, STATEMENT_001 §5):
 
 | Form | Statement | Label | Where |
 |---|---|---|---|
-| (L2) | S_{T,k} ⪰ 0, finite Schur matrix of dimension 2k−2 | PROVED equivalence | P47 §coer; DOSSIER §1.2 |
-| (S) | 𝔸_M = Arch_M − Div_M − Near_M ⪰ 0 for all M (2T_0 < log 2, ‖F_0‖ = 1) | PROVED equivalence | P47 prop:AM; STATEMENT §2 |
-| (B) | B(d) = ⟨F_0, a V_d F_0⟩ positive definite on ℝ; for d > 2T_0, B(log x) = −x^{−1/2}ΣΛ(n)φ(n/x) − Σ_{j≥1}γ_j x^{−(2j+½)}, ∫φ = ∫φ/y = 0 | PROVED equivalence (P47 thm:oneprofile); the Chebyshev form is CITED from P47 lem:transl(iv), thm:band (REVIEW_001 1.3(ii)) | STATEMENT §2–3 |
+| (L2) | S_{T,k} ⪰ 0, finite Schur matrix of dimension 2k−2 | PROVED equivalence | P46 §coer; DOSSIER §1.2 |
+| (S) | 𝔸_M = Arch_M − Div_M − Near_M ⪰ 0 for all M (2T_0 < log 2, ‖F_0‖ = 1) | PROVED equivalence | P46 prop:AM; STATEMENT §2 |
+| (B) | B(d) = ⟨F_0, a V_d F_0⟩ positive definite on ℝ; for d > 2T_0, B(log x) = −x^{−1/2}ΣΛ(n)φ(n/x) − Σ_{j≥1}γ_j x^{−(2j+½)}, ∫φ = ∫φ/y = 0 | PROVED equivalence (P46 thm:oneprofile); the Chebyshev form is CITED from P46 lem:transl(iv), thm:band (REVIEW_001 1.3(ii)) | STATEMENT §2–3 |
 | Band | (★) ⟹ \|B(d)\| ≤ B(0) for d > 2T_0: a necessary 2×2 condition without sign | PROVED (Bochner) | STATEMENT §3; REVIEW_001 |
 | (L2′) | For every shift α, gauge c and η ∈ (0, η_0]: λ_A(T) ≥ 0 ⟺ S ⪰ 0 on N′ = pr_T span{shifted Nyquist modes with s^{α,c}_k ≤ 0}; complement coercive with c_* = ½(s^e_+ + s^o_+); dim N′ ≤ \|𝒩\|, and \|𝒩\| ≥ n_−(a_T on L²(I_T)) | PROVED (REVIEW_002 §3: CONFIRMED) | ROUND_001_C Thm 1 |
 | (L2′) at ½log5 + ε | 𝒩 = {0, ±3, ±5, ±9, ±14, ±23}, \|𝒩\| = 11 at gauge c ≈ 1.22 | NUMERICAL (structure PROVED, membership NUMERICAL until certified; REVIEW_002 §3) | ROUND_001_C §4; ROUND_002_A §1 |
@@ -51,7 +51,7 @@ proved bound); ROUND_001_C supplies the exact η ↓ 0 reduction and the numeric
 | P9 | Prop 1.4: no common radical vector for 𝒲 and 𝒲^c, c ≠ 1 | ROUND_001_B | CONFIRMED |
 | P10 | Prop 1.5: reduction of c-exterior gauge dependence | ROUND_001_B | CONFIRMED (last step ARGUED) |
 | — | §1.6(i) defect indefinite; §0 item 3 defect formula | ROUND_001_B | ARGUED; REFUTED as written |
-| P11 | Lemma 1.6: cell positivity for every w ≤ Λ (comb monotonicity) | ROUND_001_B | CONFIRMED (= P47 cor:ext-cfals(i) extended) |
+| P11 | Lemma 1.6: cell positivity for every w ≤ Λ (comb monotonicity) | ROUND_001_B | CONFIRMED (= P46 cor:ext-cfals(i) extended) |
 | P12 | Lemma 2.1 (edge continuity, Ψ̌(0⁺) = 0 on the core); Prop 2.2 (edge terms archimedean-only) | ROUND_001_B | CONFIRMED (Prop 2.2 for the archimedean part only) |
 | — | Prop 2.3 (φ₀ coupling is a forced scalar) | ROUND_001_B | DOWNGRADED to ARGUED (g-dependent jets give a second coupling) |
 | P13 | Prop 2.4: near-minimiser concentration under (ext-L) | ROUND_001_B | CONDITIONAL (as labelled) |
@@ -66,11 +66,11 @@ proved bound); ROUND_001_C supplies the exact η ↓ 0 reduction and the numeric
 | P22 | Lemma 1.1, Prop 1.2: comb part of 𝔔^w exactly linear in W = w∗1; coherent part 2∫H₁^w\|ϱ\|² ⪰ 0, incoherent Σ W(n)ℬ_n | ROUND_002_B | PROVED (wording fix: the comb is w(q)q^{−1/2}(δ_{log q}+δ_{−log q}), not doubled) |
 | P23 | Thm 2.1: coherent comb matrix on the prolate sector PSD and monotone, every N, K; 𝐓₀ ⪰ I; Thm 3.1(c) | ROUND_002_B | PROVED; Thm 2.2 and Prop 2.3 ARGUED (§4(ii) validation is poor, not "good for low orders"); §2.4 expansion ARGUED; Thm 3.1(b) DOWNGRADED to CONDITIONAL on Thm 2.2 + Prop 2.3 + §2.4 (not only on Prop 2.3 as the memo stated) |
 | P24 | Thm 1 (i)–(v): joint range of (Π, Arch) convex; Π indefinite; max_c Φ_T(c) = Θ_T; J_T closed bounded interval; scaling identities; Θ_T = λ_arch(T) for the empty comb | ROUND_002_D | PROVED (complex space, Toeplitz–Hausdorff; Brickman covers the real-F alternative) |
-| P25 | Cor 2 (Θ_T < 0 for the empty comb, T ≥ 0.60, with λ_arch(T) < 0 CITED from Paper 47); Cor 3 (λ_A ≥ Θ_T − \|1 − c*_T\|π_T) | ROUND_002_D | PROVED; "Π(F*) = 0 iff c* = 1" (l.189–193) DOWNGRADED to CONDITIONAL on the bottom being an isolated eigenvalue of finite multiplicity (Danskin), superseded by P27 |
+| P25 | Cor 2 (Θ_T < 0 for the empty comb, T ≥ 0.60, with λ_arch(T) < 0 CITED from Paper 46); Cor 3 (λ_A ≥ Θ_T − \|1 − c*_T\|π_T) | ROUND_002_D | PROVED; "Π(F*) = 0 iff c* = 1" (l.189–193) DOWNGRADED to CONDITIONAL on the bottom being an isolated eigenvalue of finite multiplicity (Danskin), superseded by P27 |
 | P26 | Lemma 1 (every w ≠ 0 gives indefinite Π_w); Lemma 2 (𝒦_T compact convex); Lemma 3 / Cor 4 first part (Θ_T(w′) ≥ Θ_T(w) − \|c*\|‖w − w′‖_1) | ROUND_002_E | PROVED; Cor 4's clause "λ_A(T) = Θ_T(Λ) = 0" is DOWNGRADED to CONDITIONAL on (★) itself, not PROVED |
 | P27 | c*_T = 1 ⟺ 0 ∈ range of Π on the bottom eigenspace (Kato–Danskin, CITED for the isolated-eigenvalue case) | ROUND_002_E | CONDITIONAL on the isolated-eigenvalue property (not proved in the memo); the Galerkin method's "rigorous up to rounding" claim is DOWNGRADED to NUMERICAL (non-certified upper bounds; needs a certified maximisation or a primal Π-null witness; Tate constraints hold to quadrature precision, not exactly) |
 | P28 | Prop 1 (Schur decomposition ⟺ 𝔸_M ⪰ 0, restatement); Lemma 2 (\|𝔸 − ℝ\|_{mk} ≤ βe^{−tδ}); Thm 3 (division prescription NO-GO); Thm 4 (Div/Near prescription NO-GO); Prop 5 (dual suppression restatement) | ROUND_003_B | PROVED, with Thm 4's "Near^{comb}_M ≠ 0 as soon as M ≥ 4" corrected to "for some M" (the memo's specific (4,1) entry is not shown non-zero, but density of lags plus continuity of a non-zero c_0 forces some M) |
-| P32 | Prop 1 (a_T commutes with parity on P_T; λ_A(T) = min of sector bottoms; Φ_T = min of sector Φ's) | ROUND_003_A | PROVED (unreviewed); extends Paper 47 lem:parity from Arch to a_T |
+| P32 | Prop 1 (a_T commutes with parity on P_T; λ_A(T) = min of sector bottoms; Φ_T = min of sector Φ's) | ROUND_003_A | PROVED (unreviewed); extends Paper 46 lem:parity from Arch to a_T |
 | P33 | Prop 2 (exact tangency c*_T = 1 ⟺ 0 ∈ conv(Π on the two sector bottom spaces); explicit three-case criterion with simple sector bottoms) | ROUND_003_A | PROVED (unreviewed), granted the CITED Kato–Danskin formula for an isolated eigenvalue of finite multiplicity |
 | P34 | Lemma 3 (Weyl pin: an orthonormal pair in P_T with Π indefinite forces λ_A(T) ≤ Θ_T ≤ Λ_2 and \|1 − c*_T\| ≤ (Λ_2 − λ_A)/min\|μ_±\|) | ROUND_003_A | PROVED (unreviewed) |
 | P35 | Lemma 4 (rigidity: a near-kernel S of a_T bounds λ_A and Θ of every modified comb by ε minus an explicit eigenvalue of Π_δ on S) | ROUND_003_A | PROVED (unreviewed); explains the falsifier failures of λ_A and the observed failures of Θ |
@@ -102,23 +102,23 @@ vector; they separate nothing about Λ by themselves.
 | Candidate I as universal step, ROUND_002_E | (I.a) Θ_T ≥ 0 is not a sign step at windows with Θ_T(Λ) > 0 (survives small finite modifications, Cor 4) | NUMERICAL: at T = 0.9 every tested modification has Θ_T < 0 (margins 0.02–0.42); at T = log 2 all survive except η < 0 | Unreviewed; result labelled PIVOT, not NO-GO |
 
 ---------------------------------------------------------------------------------------------------------------------
-## 4. Corrections to Paper 47 (to be applied only when the paper is closed)
+## 4. Corrections to Paper 46 (to be applied only when the paper is closed)
 
 Confirmed by REVIEW_001 (DOSSIER §6):
-1. eq:coer-sandwich and lem:wh-schurabs(ii) (P47:5255–5278, 5684–5703): for λ_S < 0 the correct bounds are
+1. eq:coer-sandwich and lem:wh-schurabs(ii) (P46:5255–5278, 5684–5703): for λ_S < 0 the correct bounds are
    λ_S ≤ λ_A ≤ λ_S/(1+‖Ke_S‖²). The printed upper bound λ_A ≤ λ_S fails when Ke_S ≠ 0; the printed lower bound fails
-   whenever K ≠ 0 (even if Ke_S = 0). Add the qualifier λ_S ≥ 0 at P47:5303 (rem:coer-honest(2)) and P47:10687–10688 ((L2)).
+   whenever K ≠ 0 (even if Ke_S = 0). Add the qualifier λ_S ≥ 0 at P46:5303 (rem:coer-honest(2)) and P46:10687–10688 ((L2)).
    The sign equivalences (thm:coer-schur(iii)) are unaffected.
-2. Normalisation of F_0 (P47:7762–7769, 7835): impose ‖F_0‖ = 1 or write c_0(0) = ‖F_0‖² in Div_M.
-3. prop:H final sentence (P47:6567–6569) and P48 thm:eveninertia(iii) (P48:207): "exactly one negative eigenvalue for
+2. Normalisation of F_0 (P46:7762–7769, 7835): impose ‖F_0‖ = 1 or write c_0(0) = ‖F_0‖² in Div_M.
+3. prop:H final sentence (P46:6567–6569) and P48 thm:eveninertia(iii) (P48:207): "exactly one negative eigenvalue for
    every window" is false for small T; correct to "≤ 1 for all T" or "= 1 for T ≥ 0.12". P48 (ii) must restore the
    alternative "n_− = 0 and q > −½" and the range T ≥ 0.12.
-4. §ext-constraints item 2 (P47:10654–10657): the half-line identity is not shown to hold for cΛ, a_P or Beurling systems;
+4. §ext-constraints item 2 (P46:10654–10657): the half-line identity is not shown to hold for cΛ, a_P or Beurling systems;
    restrict to the algebraic identities. Proposed wording (ROUND_001_B §1.7): "…hold for the comb Λ only; for cΛ, a_P and
    Beurling systems the window form in exterior coordinates acquires 𝒫_{Λ−w}[Ef] − 𝒫_{Λ−w}[Ψ_f], and for cΛ no summation
    map is radical (Prop. 1.4)". The stronger "the exterior form is not comb-generic" is ARGUED. The dossier's citation of
-   P47:10146 for this point is a mis-citation.
-5. rem:directbound (P47:7909–7914) does not give λ^{∞,P}_min ≈ 0.49 at T ≈ 0.367; it says the bound is positive where
+   P46:10146 for this point is a mis-citation.
+5. rem:directbound (P46:7909–7914) does not give λ^{∞,P}_min ≈ 0.49 at T ≈ 0.367; it says the bound is positive where
    λ^{∞,P}_min > 0.49. Problem (R)'s (½log2, ½log3) clause reduces to λ^{∞,P}_min(½log2⁺) ≥ v_2 (OPEN, NUMERICAL).
 6. thm:nyq-schur(ii): for η below the least positive sample the block counts samples with s_T(ω_k) ≤ 0 (not < 0);
    dim N′_η ≤ d_η.
@@ -129,16 +129,16 @@ no PROVED step relies on an unproved claim beyond (a) (items 2–3 are inside PR
 prediction must be stated for near-minimisers of W_T, T ≥ 1, g in the core.
 
 Found in later memos:
-9. Sign of the comb as a Dirichlet series (ROUND_001_A (0.2)): −Σ v_n cos(τ log n) truncates +2Re ζ′/ζ. P47:7408 already
+9. Sign of the comb as a Dirichlet series (ROUND_001_A (0.2)): −Σ v_n cos(τ log n) truncates +2Re ζ′/ζ. P46:7408 already
    writes m = −2Re ζ′/ζ, which agrees; the reversal concerns the formulation used inside the phase, and no paper edit is
-   implied unless a P47 passage with the opposite sign is found (to be checked at closure).
+   implied unless a P46 passage with the opposite sign is found (to be checked at closure).
 10. σ₂ range in the half-line identity (ROUND_001_B Thm 1.1; REVIEW_002 §2): for G with G̃ = O(1/|t|) the contour must
    have σ₂ ∈ (−½, 0), not (−1, 0).
-11. K3 leading term (ROUND_002_B §2.4; concerns K3_GAMMA_001 and any P47 passage quoting it): the leading form on the
+11. K3 leading term (ROUND_002_B §2.4; concerns K3_GAMMA_001 and any P46 passage quoting it): the leading form on the
    prolate sector is log N·𝐓₀ with 𝐓₀ = Toeplitz[H∘sec] ⪰ I, not log 2N·‖b‖²; ‖b‖² is the layer part only (valid lower
    bound, not leading term). PROVED in the coherent form; the full expansion is ARGUED.
 12. ROUND_001_C §4's reading that deep near-coincidences sit as small positive samples is false (ROUND_002_A §1); the
-   8.8·10⁻⁵ sample is k = ±18 at the gauge-interval end (internal correction, not in P47).
+   8.8·10⁻⁵ sample is k = ±18 at the gauge-interval end (internal correction, not in P46).
 
 ---------------------------------------------------------------------------------------------------------------------
 ## 5. The tunnel
@@ -159,7 +159,7 @@ What it cannot do: every piece above is comb-generic (it holds for cΛ, a_P, Beu
   edge term 𝒳_M (Λ-specific, P4); Λ∗1 = log in the cell weights.
 - Every sign-definite comb pairing found is monotone in the comb (Lemma 1.6, Thm 2.1/3.1), hence blind below Λ.
 - The only non-monotone comb content of the exterior form is 𝒪_w = Σ W(n)ℬ_n, of order 1 only at low Mellin frequency.
-- No object with sign at scale √x for the smoothed fluctuation; mean-square/absolute bounds are excluded by P47 barriers.
+- No object with sign at scale √x for the smoothed fluctuation; mean-square/absolute bounds are excluded by P46 barriers.
 
 ### 5.3 The meeting condition
 A proof must contain an object that (i) uses the exact Λ(n), (ii) couples them with the functional equation other than
@@ -228,7 +228,7 @@ of the target and is not ranked here.
 Nothing in this phase changes the state of (★). The PROVED range is unchanged: certified for T ≤ ½log5, CITED to ½log15
 (Mori) and 17/16 (Liu), OPEN beyond. The phase produced exact reformulations ((L2′); the Candidate-I split Θ_T ≥ 0 ∧ 1 ∈ J_T;
 the convex body 𝒦_T), an explicit coercivity floor for the complement of (L2′), a zero-free proof of the half-line
-identity, a list of corrections to Paper 47, and NO-GO results now narrowed by review to: floor-only Schur inequalities
+identity, a list of corrections to Paper 46, and NO-GO results now narrowed by review to: floor-only Schur inequalities
 (NUMERICAL), the comb-monotone exterior sector (ARGUED, asymptotic only), and the two concrete Schur-coupling
 prescriptions of ROUND_003_B (PROVED, scope narrowed from the originally claimed class) — all comb-generic or
 restatements; no sign step was claimed and none survived the falsifier test. The single Λ-specific structure observed,

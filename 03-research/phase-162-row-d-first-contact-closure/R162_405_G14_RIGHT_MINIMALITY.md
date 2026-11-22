@@ -70,7 +70,7 @@ identically on any interval (T_*, T_* + δ).
 
 *Proof.* It equals −e^{−t/2}g(e^{−2t}), where g(z) = Σ_j μ_F(a_j)z^j. The series g is analytic on
 |z| < e^{2T_*}, because |μ_F(a_j)| ≤ e^{a_jT_*}‖F‖_{L¹}. Suppose it vanished on an interval. Then
-g ≡ 0 on the disc of convergence, so every μ_F(a_j) = 0. By faithfulness of R (Paper 47),
+g ≡ 0 on the disc of convergence, so every μ_F(a_j) = 0. By faithfulness of R (Paper 46),
 F = 0. ∎
 
 ## 2. The exact collar identity (PROVED STEP 1)

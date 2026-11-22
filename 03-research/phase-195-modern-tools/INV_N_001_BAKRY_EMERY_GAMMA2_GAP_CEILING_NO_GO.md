@@ -1,7 +1,7 @@
 # INV_N_001 — Bakry–Émery Γ₂ / CD(K,N) for the censored jump semigroup of 𝔞_T: exact calculus and a gap-ceiling NO-GO
 
 Phase 195.
-Survey candidate B2 (SURVEY_MODERN_UNTRIED). **No sign. No negative value for ζ.** Checked against P47 eq:symbol, eq:form,
+Survey candidate B2 (SURVEY_MODERN_UNTRIED). **No sign. No negative value for ζ.** Checked against P46 eq:symbol, eq:form,
 𝒫_T (Tate moments A, B), and CA_I_001 §0 (Lévy–Khintchine form, CITED from phase 60).
 
 ## 0. Corpus / index check and new reason
@@ -52,7 +52,7 @@ At T = ½log3:
   g_T ≤ E_T(t)/‖t‖² = 2.10838 (one test, f(t) = t, mean zero; Rayleigh–Ritz on Legendre P₁…P₆ gives g_T ≤ 1.94138),
   **⇒ g_T + ess inf W_T ≤ −0.426 < 0.**
 So no Bakry–Émery / curvature–dimension argument (any K, any N, Tate constraints included) certifies λ_A(½log3) ≥ 0, a window where
-positivity is PROVED (P47 Theorem C). **NO-GO** for the class 𝒦_BE = {deductions that use the censored Markov part only through a
+positivity is PROVED (P46 Theorem C). **NO-GO** for the class 𝒦_BE = {deductions that use the censored Markov part only through a
 curvature / Poincaré constant, plus W_T and Tate data}. Constants: mpmath quadrature at 30 digits (INV_N_001_be_check.py); the margin 0.43
 is large relative to quadrature error; rigorous interval re-check OPEN (routine).
 

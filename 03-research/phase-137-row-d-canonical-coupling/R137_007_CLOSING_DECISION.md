@@ -14,7 +14,7 @@ for `x ≥ 5.1` and of the cubic `8x³−56x²+82x−18` at `5.0`/`5.1`; reading
 | D.12 — semilocal positivity | blueprint sign corrected (`W_S` was minus the Weil quantity); for `S={∞}` the `S`-dependence is vacuous inside the CC window; first unpaid term at `2T = log 2` is `2(log 2)2^{−1/2}(F⋆F^∨)(log 2)`; Doc-135 purity route NOT APPLICABLE | `PROVED` (scope), `OPEN` D.12-α, β, γ |
 | D.13 — dictionary with CC | one exact identity (`Q = Π`); CC's vanishing condition on `f = F⋆F^∨` is `Φ_F(0)Φ_F(1) = 0`, weaker than primitivity, equal to it on even `F`; the rest analogy | `PROVED` (exact rows), `ANALOGY` (others) |
 | D.14 — conditional | **not opened**; gate re-worded to `h⁰_Z(mK) = Ω(m^{2−ε})`, preceded by (23c) finiteness | — |
-| Part III of Paper 46 | **not appended** (draft R137_001b kept as draft) | — |
+| Part III of Paper 47 | **not appended** (draft R137_001b kept as draft) | — |
 
 ## 2. What the phase established that was not known before
 
@@ -36,9 +36,9 @@ for `x ≥ 5.1` and of the cubic `8x³−56x²+82x−18` at `5.0`/`5.1`; reading
    quantitative: feasible corrections would have to live at prime powers `≳ m√log m`.
 4. **The method for an upper bound is forced onto `Re s = 1`** (degree ceiling `Φ_E(σ) ≤ m` holds only on
    `[0,1]`, where `ξ` may vanish), so any quantitative bound imports a zero-free region. Recorded as (X19).
-5. **Paper 46 corrections**: §14.5 item (23) "equivalently" is wrong (uniform `ρ_Q` alone does not suffice;
+5. **Paper 47 corrections**: §14.5 item (23) "equivalently" is wrong (uniform `ρ_Q` alone does not suffice;
    `Q(m) = o(m√log m)` alone does); Remark 13.6a's heuristic is a theorem in both directions. To be entered
-   in Paper 46 with the next Part III pass.
+   in Paper 47 with the next Part III pass.
 
 ## 3. Decision
 

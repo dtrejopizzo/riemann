@@ -43,7 +43,7 @@ CC work in H = L²(ℝ)_ev with ⟨η|ξ⟩ = ∫_0^∞ η̄ξ (CC (16)), scalin
 f ∈ C_c^∞(ℝ*_+); the Schwartz kernel of ϑ(f) is k_f(x,y) = f(x/y)(xy)^{−1/2} (PROVED: substitute y = x/ρ). Convolution
 f*g, involution f*(u) = \overline{f(u^{−1})}; the Weil distribution W_∞ of CC (53) has Fourier transform 2θ′(t) =
 Re ψ(¼+it/2) − log π (CC (163)), i.e. **W_∞(g*g*) = (1/2π)∫a(t)|ĝ(t)|²dt is exactly the archimedean block of the
-complete form W_T** (Paper 47 def:W; B_001 §1: Q = pole + (1/2π)∫a|Ff|² − ⟨f,C_pf⟩). In the log variable x = log ρ
+complete form W_T** (Paper 46 def:W; B_001 §1: Q = pole + (1/2π)∫a|Ff|² − ⟨f,C_pf⟩). In the log variable x = log ρ
 a test g ∈ C_c^∞(ℝ*_+) is a window vector g(x) ∈ C_c^∞(I), f = g*g* is the autocorrelation c_g(a) (Mori), f(1) = ‖g‖²,
 and ∫f(ρ^{−1})ε(ρ)d*ρ = ∫c_g(a)ε(e^{|a|})da =: C_ε(g) (R186 notation) for even ε.
 

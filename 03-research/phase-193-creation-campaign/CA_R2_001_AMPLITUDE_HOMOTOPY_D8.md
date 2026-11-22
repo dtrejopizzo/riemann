@@ -29,7 +29,7 @@ for the support mechanism) requires log Z_X holomorphic on Re s > ½, i.e. zero 
 ## 2. Structure: W_F is a Laplace transform of a signed measure (PROVED)
 Let ν_F be the push-forward of the signed measure Θ′|F̂|²dτ under ℓ(τ) := log|Z_T(τ)| ∈ [−∞,∞). Then
   W_F(α) = ∫ e^{2αℓ} dν_F(ℓ),    W_F(0) = ν_F(ℝ) = π𝔞_T(F) (up to the fixed constant).
-Facts: (a) ν_F is signed (Θ′ changes sign; σ_T(0) < 0 is PROVED in P47). (b) For fixed F the integer points available are finite:
+Facts: (a) ν_F is signed (Θ′ changes sign; σ_T(0) < 0 is PROVED in P46). (b) For fixed F the integer points available are finite:
 **if F ∈ P_T^{(k)} for every k, then F = 0** (F̂ entire, nonzero ⇒ zero at i/2 of finite order). So a fixed test has PROVED nodes
 W_F(k) ≥ 0 only for 1 ≤ k ≤ K(F) < ∞ (Thm 1′), K(F) = Tate order of F.
 

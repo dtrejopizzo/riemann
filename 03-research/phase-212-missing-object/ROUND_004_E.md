@@ -1,7 +1,7 @@
 # ROUND_004_E — Selection: indefinite forms (Kreĭn/Pontryagin) with a non-radical neutral vector
 
 Selection memo, not a construction memo. Notation from `../phase-211-sign-sandbox/STATEMENT_001.md` and from
-P47 §sec:complete; N = e^{2T}. 𝔪_T(F) = (1/2π)∫m|F̂|² (archimedean form, comb deleted; in P47 𝒜_∞ on
+P46 §sec:complete; N = e^{2T}. 𝔪_T(F) = (1/2π)∫m|F̂|² (archimedean form, comb deleted; in P46 𝒜_∞ on
 P_T), Π_T(F) = −Σ_{n<N} v_n Re c_F(log n), a_T = 𝔪_T + Π_T, W_T = a_T + 2Re(A B̄) (complete form with
 polar term). For a weight a one writes a_T^{(a)}; for cΛ, a_T^{(c)} = 𝔪_T + cΠ_T. n_-(q|V) is the
 largest dimension of a subspace of V ∩ 𝒟_T on which q < 0. Labels: PROVED / CITED / CONDITIONAL /
@@ -13,12 +13,12 @@ ARGUED / OPEN / NO-GO / NUMERICAL.
 
 - Read in full: `BRIEF_CONSTRUCTOR.md`, `README.md`, `RULES_AVOID.md`, `OBJECT_SPEC.md`, `LEDGER.md`,
   `REVIEW_003.md`, `ROUND_003_4.md`, `STATEMENT_001.md`.
-- P47 as primary source: §sec:complete in full (lem:Onat, thm:Al, thm:parityschur, prop:polarcap and the paragraph
+- P46 as primary source: §sec:complete in full (lem:Onat, thm:Al, thm:parityschur, prop:polarcap and the paragraph
   that follows); thm:index, cor:Tarch, prop:NC, cor:P3, thm:J, cor:nasym, cor:H1 and remarks
   (l. 2420–2780); §sec:inertia (thm:inertia-finite, thm:inertia-quartet, thm:inertia-rank,
   §subsec:inertia-excl "Inertia alone (conditional)"); lem:polar; statement of thm:coer-schur;
   statement of cor:convfail.
-- grep in `03-research/` (all phases), P47, P48 and `05-meta-and-planning/` for "Pontryagin",
+- grep in `03-research/` (all phases), P46, P48 and `05-meta-and-planning/` for "Pontryagin",
   "Krein–Langer", "generalized Nevanlinna", "N_κ", "Π_κ", "Kreĭn signature", "firma de Kreĭn",
   "negative squares", "n_-", "inertia", "polar capacity". Opened (header and central section):
   `phase-197-barrier-theorem/BARRIER_W_001_…NO_GO.md` §§0–4; `phase-16-surf-witness-variety/
@@ -28,7 +28,7 @@ ARGUED / OPEN / NO-GO / NUMERICAL.
   squares is indefinite", (3.4)) and via `ANNEX_170_FILES_3.md` (entries 854, 861, 862); R161_032 only
   by grep ((4.2) at l. 114, "OPEN / TERMINAL" at l. 146); R161_023, 061–063 only via
   `ANNEX_161_FILES_3.md` and `RULES_AVOID.md` §K4. R170_866–870 only via `ROUND_003_4.md` and §I1–I3.
-- Not opened: the memos of phase 156 (per-window converse; their content is in P47 thm:parityschur and
+- Not opened: the memos of phase 156 (per-window converse; their content is in P46 thm:parityschur and
   prop:polarcap, which I did read); round 5 of phase 155 ("Kreĭn indeterminacy"); the memos of phases
   15/16 other than 07; `POLAR_CAP_001` (cited in 211 ROUND_008_A l. 26 as "bordered Schur
   complement that inverts a_T|P_T itself — consumes λ_A > 0"; there is no file with that name); the ledger
@@ -36,11 +36,11 @@ ARGUED / OPEN / NO-GO / NUMERICAL.
 
 ### (1) Closest antecedent
 
-- **P47 thm:parityschur (a1)–(a2), (c) and prop:polarcap.** It is exactly the Pontryagin format of the
+- **P46 thm:parityschur (a1)–(a2), (c) and prop:polarcap.** It is exactly the Pontryagin format of the
   task, already written and PROVED: n_-(W_T) = n_-(a_T|P_T) + n_-(𝔊_T), 𝔊_T = S^Sch_T + diag(2, −2), with
   S^Sch_T the compression of a_T to the a_T-orthogonal of P_T (Schur complement on P_T), and the
   "polar capacity" reading E_T(β, α). The following paragraph reduces the per-window converse to two signs.
-- **P47 §subsec:inertia-excl, "Inertia alone (conditional)".** Conditional exclusion of the class
+- **P46 §subsec:inertia-excl, "Inertia alone (conditional)".** Conditional exclusion of the class
   "decomposition a_T = 𝔪_T − C_ε + Π_T + properties stable under finite rank + inertia arithmetic
   (Sylvester, Haynsworth, interlacing, lem:monoT)", via thm:inertia-rank.
 - **Phase 197, BARRIER_W_001 Thms. W1–W3** (PROVED in the memo): the index n_-(a_T|P_T) is monotone in T,
@@ -71,7 +71,7 @@ sign, which close the zone as the task formulates it:
   value.
 
 I do not write ℋ_T, V_T nor ρ_T: the Kreĭn format, in all its readings examined, reduces to
-thm:parityschur/prop:polarcap (already in P47), to thm:coer-schur (L2), or to (G) with another embedding.
+thm:parityschur/prop:polarcap (already in P46), to thm:coer-schur (L2), or to (G) with another embedding.
 
 ### (3) Does it avoid the antecedent's difficulty?
 
@@ -105,12 +105,12 @@ T → ∞ of the jump points c_±(T), and those points are value information (§
 
 | Form | Space | n_- | Source |
 |---|---|---|---|
-| 𝔪_T (no comb) | L²(I_T) | ≥ ⌈2Tτ_0/π⌉ − 1; ≤ 5, 7, 8 at ½log3, log 2, 0.80; ~ 4.0042 T | P47 thm:J, cor:P3, cor:nasym (CITED) |
-| 𝔪_T | P_T | ≥ ⌈2Tτ_0/π⌉ − 3; = 0, 1, 2 up to 0.90; ~ 4.0042 T | P47 thm:J, thm:index, cor:nasym (CITED; thm:index with interval verification) |
-| a_T (with comb) | L²(I_T) | finite for each T | P47 thm:inertia-finite with η = 1, k = 0 (CITED) |
+| 𝔪_T (no comb) | L²(I_T) | ≥ ⌈2Tτ_0/π⌉ − 1; ≤ 5, 7, 8 at ½log3, log 2, 0.80; ~ 4.0042 T | P46 thm:J, cor:P3, cor:nasym (CITED) |
+| 𝔪_T | P_T | ≥ ⌈2Tτ_0/π⌉ − 3; = 0, 1, 2 up to 0.90; ~ 4.0042 T | P46 thm:J, thm:index, cor:nasym (CITED; thm:index with interval verification) |
+| a_T (with comb) | L²(I_T) | finite for each T | P46 thm:inertia-finite with η = 1, k = 0 (CITED) |
 | a_T | P_T | the target is that it equals 0 | — |
-| W_T | L²(I_T) | n_-(a_T|P_T) + n_-(𝔊_T) | P47 thm:parityschur (c) (CITED) |
-| 2Re(AB̄) | L²(I_T) | exactly 1 (signature (1,1)) | P47 lem:polar (CITED) |
+| W_T | L²(I_T) | n_-(a_T|P_T) + n_-(𝔊_T) | P46 thm:parityschur (c) (CITED) |
+| 2Re(AB̄) | L²(I_T) | exactly 1 (signature (1,1)) | P46 lem:polar (CITED) |
 
 The apparent tension is due to the form with which one counts. "Theorem P, n_- ≤ 5/7/8" (cor:P3) and the
 linear growth in T (cor:nasym) refer to 𝔪_T, the archimedean form with the comb deleted. That is
@@ -122,7 +122,7 @@ count. On the contrary, under the target the count is bounded by 2 (Prop. 1(b)).
 
 **Proposition 1 (inertia with Tate border).** Fix T. Let q = a_T (or W_T) on its domain 𝒟_T.
 
-(a) (CITED, P47 thm:parityschur (a2), (c).) If 0 is not in the spectrum of the operator of a_T|P_T,
+(a) (CITED, P46 thm:parityschur (a2), (c).) If 0 is not in the spectrum of the operator of a_T|P_T,
 n_-(W_T) = n_-(a_T|P_T) + n_-(𝔊_T).
 
 (b) (PROVED.) With the same hypothesis and S^Sch_T = diag(a_T(h_ev), a_T(h_odd)),
@@ -136,7 +136,7 @@ n_-(a_T|P_T) = n_-(Q) − n_-(Γ_T). Thus, a_T|P_T > 0 ⟺ n_-(Γ_T) = n_-(Q), w
 *Proof.* (b) It is the proof of thm:parityschur (a1)–(a2) with ε_par = 0. That proof only uses the
 structure of a closed form bounded below with compact resolvent, parity and the functional
 ℓ_par. In each sector, 𝒟^par_T = 𝒬^par ⊕ ℝh_par, a_T-orthogonally, and
-a_T(G + xh_par) = a_T(G) + a_T(h_par)x². One sums over the two sectors (P47 thm:parityschur (o), which holds
+a_T(G + xh_par) = a_T(G) + a_T(h_par)x². One sums over the two sectors (P46 thm:parityschur (o), which holds
 for a_T without polar term). (c) Bordered matrix M = [[Q, X], [X*, 0]], X = [χ_1, χ_2] of rank 2. By
 Haynsworth with respect to Q: In(M) = In(Q) + In(−X*Q^{-1}X) = In(Q) + In(−Γ_T). With respect to the
 subspace ker X* = P_T: In(M) = In(Q|P_T) + (2, 2, 0) (a full-rank border r adds r squares of
@@ -173,7 +173,7 @@ finite-codimension positivities of a_T that the corpus has written are:
 - thm:coer-schur: coercivity on 𝒱_k, of codimension 2k − 2.
 
 Transporting them to P_T by Haynsworth leaves exactly a finite Schur complement: it is (L2),
-thm:coer-schur (iii). P47 §subsec:inertia-excl already says so for the first one ("the finite structure of
+thm:coer-schur (iii). P46 §subsec:inertia-excl already says so for the first one ("the finite structure of
 Theorem coer-schur with a larger dimension").
 
 **Lemma 3 (a neutral vector inside a nonnegative subspace is radical there).** Let 𝔊 be Hermitian
@@ -221,7 +221,7 @@ V_T := Σ_{n<N} |v_n|. Then:
 parities, n_-(a_T^{(c)}|L²) and n_-(S^Sch_T(c)) are constant in a neighbourhood of c = 1. If 𝔤_par ≠ 0 at
 c = 1, the same holds for n_-(W_T^{(c)}) and n_-(𝔊_T(c)).
 
-*Proof.* (a) |Π_T(F)| ≤ V_T‖F‖², because |c_F(log n)| ≤ ‖F‖² (P47, proof of thm:parityschur,
+*Proof.* (a) |Π_T(F)| ≤ V_T‖F‖², because |c_F(log n)| ≤ ‖F‖² (P46, proof of thm:parityschur,
 "Solvability"). Then a_T^{(c)} = a_T + (c − 1)Π_T ≥ (λ_A(T) − |c − 1|V_T)‖·‖² on P_T. (b) On the
 interval of (a), part (a3) of thm:parityschur (with ε = 0 for a_T, which is the same proof) gives
 a_T^{(c)}(h_par(c)) = min{a_T^{(c)}(F) : F ∈ 𝒟^par_T, ℓ_par(F) = 1}. It is an infimum of affine functions
@@ -242,7 +242,7 @@ interval. If Γ(c) depends continuously on c, the sign of Γ(1) is decided by th
 relative to c_±(T), i.e., by the sign of λ_A(T; 1).
 
 *Proof.* λ_A(T; c) is an infimum of affine functions in c: it is concave and continuous (Lemma 5(a) gives
-the modulus), so {≥ 0} is a closed interval. n_- = 0 ⟺ λ_A ≥ 0 (P47 lem:parity, compactness
+the modulus), so {≥ 0} is a closed interval. n_- = 0 ⟺ λ_A ≥ 0 (P46 lem:parity, compactness
 of the resolvent). At c_+(T), the left-hand side passes from 0 to ≥ 1 (λ_A(T; ·) is concave and not identically
 zero, hence changes sign at the endpoint, unless it vanishes on a whole interval; that case is excluded
 by the nonzero slope of `ROUND_003_4.md` Lemma 4, ARGUED there). With κ constant, n_-(Γ(c)) jumps.
@@ -303,7 +303,7 @@ form degenerate at c = 1. That is an exact identity at the true weight, of the t
 ## Result
 
 No new mechanism, plus a NO-GO with class (𝓘, inertia with neutral vectors), PROVED in its
-central parts (Lemmas 2–6, Prop. 1(b)). The Pontryagin format of the task is already in P47
+central parts (Lemmas 2–6, Prop. 1(b)). The Pontryagin format of the task is already in P46
 (thm:parityschur, prop:polarcap) with W_T, and here it is repeated with a_T. The tension "κ(T) > 2" is due to counting
 with 𝔪_T: under the target, n_-(a_T|L²) ≤ 2 for all T. The candidate does not pass the gate: it does not write (2)
 and its point (5) is answered negatively (Lemma 5).
@@ -321,7 +321,7 @@ and its point (5) is answered negatively (Lemma 5).
 - Lemma 5: constancy of all indices of the format for |c − 1| < λ_A(T)/V_T. PROVED.
 - Lemma 6: the jumps are at ∂J(T); with κ constant, Γ(c) is singular there. PROVED, except for the case of
   zero slope, which is ARGUED.
-- Table of §1 (which form has which index): CITED from P47, checked in the primary source.
+- Table of §1 (which form has which index): CITED from P46, checked in the primary source.
 
 ## What failed and why
 
@@ -346,6 +346,6 @@ Prop. 1(c).
 Suggested annotation for the index and the grid (not made from here): "P212-4E: indefinite forms with
 non-radical neutral vector / Pontryagin count — NO-GO with class PROVED (upper bound on index =
 positivity in finite codimension; neutral in nonnegative subspace = radical; indices constant in c
-near 1 per window; jumps at ∂J(T)). The Pontryagin format = P47 thm:parityschur/prop:polarcap
+near 1 per window; jumps at ∂J(T)). The Pontryagin format = P46 thm:parityschur/prop:polarcap
 with a_T; under the target n_-(a_T|L²) ≤ 2. Does not exclude: argument-principle count of a window function
 without the spectrum of a_T; (G) with indefinite Green form and exact cancellation".

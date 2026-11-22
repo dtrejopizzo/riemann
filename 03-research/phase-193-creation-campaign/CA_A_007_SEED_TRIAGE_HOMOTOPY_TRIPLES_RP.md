@@ -18,9 +18,9 @@ Verdict: no new content. The property "a no-crossing barrier along a positive-co
 Set-up: S := the restriction of the window operator to P_T, which has deficiency 2 inside the operator of W_T on L²(I_T),
 with defect directions e^{±t/2}|_{I_T} (the Tate moments A, B). A boundary triple for S* has a 2×2 Weyl function
 M(λ)=[⟨(W_T−λ)^{−1}u_i,u_j⟩] (Nevanlinna; Derkach–Malamud, CITED), with u_± the Riesz representers of A and B.
-**Prop 1 (PROVED, standard Kreĭn resolvent formula + Paper 47 thm:parityschur).** For λ below the bottom of W_T, the Kreĭn
+**Prop 1 (PROVED, standard Kreĭn resolvent formula + Paper 46 thm:parityschur).** For λ below the bottom of W_T, the Kreĭn
 formula gives λ_A>λ ⟺ M(λ) is of a fixed sign on the 2-dim defect. At λ=0 this is the parity Schur/polar-capacity
-statement 𝔊_T of Paper 47 (thm:parityschur, prop:polarcap: λ_W>0 ⟺ λ_A>0 and 𝔊_T≻0).
+statement 𝔊_T of Paper 46 (thm:parityschur, prop:polarcap: λ_W>0 ⟺ λ_A>0 and 𝔊_T≻0).
 So a boundary triple is a coordinate system for the exact Schur reduction already in the admissible list ("exact Schur
 reductions … carry the whole margin"). It adds no ζ-specific property, and the Weyl function exists for every comb
 (lem:shape-ident pattern). Status: covered as coordinates (B″). It is not an object of (R) by itself.
@@ -49,7 +49,7 @@ Check: RP with respect to the FE reflection x↦1/x on the multiplicative side i
 void; NG-D4: commutes, does not anticommute). Covered.
 
 ## 4. Other §G items, one-line pre-screen
-- **t-concavity of log|ξ(½+it)| (NG-D2):** a pointwise curvature statement on the line. Paper 47 Prop. shape-twist /
+- **t-concavity of log|ξ(½+it)| (NG-D2):** a pointwise curvature statement on the line. Paper 46 Prop. shape-twist /
   clause (4): such statements are excluded unless holomorphy and order-one growth are used jointly, or the Euler product on
   the line, and O9 (rational twist) preserves the FE. ARGUED excluded as a stand-alone; not developed.
 - **Rigged-space eigenvectors x^{b+iγ} (NG-C3):** these live on the zero side (eigenvectors indexed by γ), so clause (4)

@@ -14,8 +14,8 @@ q_p(F) = ∫W_pF² + ¼∬θ_p(t,s)K(|t−s|)(F(t)−F(s))² − Π_p(F), θ_p �
   gap bounds with intrinsic loss). LEDGER 211 C17.
 - `phase-195-modern-tools/INV_N_001_BAKRY_EMERY_GAMMA2_GAP_CEILING_NO_GO.md` §1: −v c_F(u) = ½v∫(F − F_u)² − v‖F‖²,
   i.e. the case φ ≡ 1 of the identity of §1 of this memo.
-- P47 cor:Tarch (cited in `ANNEX_COTEJO_NULLDIR.md` §2.1; PROVED with intervals): 0.58 ≤ T*_{∞,P} ≤ 0.60, the bottom of
-  Arch on P_T is < 0 for all T ≥ 0.60. P47 thm:index: n₋(Arch|P_T) = 0, 1, 2 on (0,T*_ev), (T*_ev,T*_odd),
+- P46 cor:Tarch (cited in `ANNEX_COTEJO_NULLDIR.md` §2.1; PROVED with intervals): 0.58 ≤ T*_{∞,P} ≤ 0.60, the bottom of
+  Arch on P_T is < 0 for all T ≥ 0.60. P46 thm:index: n₋(Arch|P_T) = 0, 1, 2 on (0,T*_ev), (T*_ev,T*_odd),
   (T*_odd, 0.90], log 2 ≤ T*_odd ≤ 0.81. `R155_029` l.27: «above T*_{∞,P} the primes are necessary».
 - `phase-159-row-d-two-front-construction/G2_B8_R5.md` Def. 1 and Theorem D step 4 (via `REVIEW_006` A1; all-or-nothing
   complementary slackness).
@@ -57,7 +57,7 @@ of the working hypothesis; for T > u_p there are chains t − u, t, t + u and V(
 regimes; the matching/chain distinction does not change the type of bound** (in both cases it is the Schur inequality
 Π_p ≤ ∫V_pF², exact at F ∝ φ along the chains).
 
-## 2. NO-GO of the class 𝒢 (PROVED relative to P47 cor:Tarch, CITED)
+## 2. NO-GO of the class 𝒢 (PROVED relative to P46 cor:Tarch, CITED)
 
 **Class 𝒢.** Certificates of a_T ⪰ 0 on P_T of the form: for each prime p, a bound Π_p(F) ≤ ∫V_pF² on P_T
 with V_p ≥ 0 a.e. (in particular the one of Lemma 1.1 discarding the square, with arbitrary, positional φ_p, with chains
@@ -129,7 +129,7 @@ zone (−T + log 2, T − log 2): the projection of cos(2πt/log 2) onto P_T is 
 with the observed overlap 0.91–0.93. This is consistent with (K2) (2 yields the kernel in the log 2 band) but
 **does not explain the threshold**: the central zone has length 2(T − log 2), which is 0.013 at T = 0.70, and the n = 4 term
 switches on at the same T = log 2 (S_2² ≠ 0 ⟺ 2T > log 4), whereas deleting it does not change the failure (`ROUND_006` §7.3).
-Concrete open question: whether the DIR threshold coincides with T*_odd (P47 thm:index, log 2 ≤ T*_odd ≤ 0.81, second
+Concrete open question: whether the DIR threshold coincides with T*_odd (P46 thm:index, log 2 ≤ T*_odd ≤ 0.81, second
 negative direction of Arch); ℓ is even, so the coincidence, if it exists, is not direct. OPEN.
 
 ## 5. Answer to (iv)
@@ -150,7 +150,7 @@ the Tate restriction and the exact values v_2, v_3, satisfying (K1)–(K2) and (
 |---|---|---|
 | 1 | Lemma 1.1, per-prime ground-state identity, with truncation | PROVED |
 | 2 | The gauge of the matching regime and the chain ground state are the same Schur bound | PROVED (by 1) |
-| 3 | P47 cor:Tarch: bottom of Arch on P_T < 0 for T > T*_{∞,P}, T*_{∞,P} ∈ [0.58, 0.60] | CITED |
+| 3 | P46 cor:Tarch: bottom of Arch on P_T < 0 for T > T*_{∞,P}, T*_{∞,P} ∈ [0.58, 0.60] | CITED |
 | 4 | Theorem 2.1: the class 𝒢 (contacts bounded by potentials ≥ 0, positional φ_p, chains, θ_p(t,s), W_p(t), any number of primes) does not certify for T > T*_{∞,P} | PROVED relative to 3 |
 | 5 | Corollary 2.2: the working hypothesis does not explain the threshold 0.695–0.70 | PROVED relative to 3 |
 | 6 | Coverage of the previous NO-GOs (𝒦_gap, INV_N_001) of the per-prime variant: not literal | ARGUED (reading) |

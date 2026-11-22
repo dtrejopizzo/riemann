@@ -3,7 +3,7 @@
 phase 204f. Pure mathematics, no numerics.
 Row D / L′♯: independent goal.
 Inputs read: BARRIER_SOUND_001 §1 (row P1) and §3 (Gap 1, Lemma P1.1); SPEC_SIGN_OBJECT_009 (Lemma 19.1, Prop 19.2,
-table X1–X5); Paper 47: thm:shape (l. 8922), thm:sos (l. 8255), lem:shape-lin (l. 8660), prop:opcalc (l. 8237),
+table X1–X5); Paper 46: thm:shape (l. 8922), thm:sos (l. 8255), lem:shape-lin (l. 8660), prop:opcalc (l. 8237),
 prop:primeblind (l. 7792), def:W/eq:nuw (l. 1193), def:PD (l. 636), thm:D1 (l. 684), rem:shape-additive (l. 8554).
 
 ## Summary (≤300 words)
@@ -100,7 +100,7 @@ Weil-curves form. That direction gives 𝒲 ≤ 𝒞^*𝒞, which is an **upper*
 
 ## 2. Class K1/K2: extension of thm:sos and atoms lemma
 
-### 2.1 Notation (verified against Paper 47)
+### 2.1 Notation (verified against Paper 46)
 
 In the convention of eq:fw/thm:Z and rem:shape-additive, for F ∈ P_T:
 
@@ -315,7 +315,7 @@ Expected label: NUMERICAL. It changes no verdict.
 | Lemma 2.7 (log(p/q) atoms of 𝒞^*𝒞) | PROVED |
 | Identity §2.8 (S²/4 = (Im ĉ)² + comb of Λ₂ − Λ·log; σ = \|1 − ĉ\|² + remainder) | PROVED |
 | Euler-genericity of the Selberg algebra (O₁) | PROVED (thm:shape(A), prop:shape-eulerdel) |
-| Prop 3.1 (term-by-term polarization) | PROVED mod. prop:primeblind (PROVED in P47) |
+| Prop 3.1 (term-by-term polarization) | PROVED mod. prop:primeblind (PROVED in P46) |
 | Lemma P1.1, partition (a)–(d) | PROVED |
 | §5: Hodge in Weil via RR, not BB*; cohomological BB* = spectral side | CITED (Weil) + ARGUED (reading) |
 | K3 structural residue, non-term-by-term | OPEN, no candidate |

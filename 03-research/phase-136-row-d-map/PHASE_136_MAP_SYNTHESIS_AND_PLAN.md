@@ -7,7 +7,7 @@ Connes–Consani 2006.13771 read from source. All sector reports were produced w
 
 ## 0. Thermometer
 
-Row D is about 20% built as a *frame* and 0–5% as *difficulty*. The frame (Paper 46):
+Row D is about 20% built as a *frame* and 0–5% as *difficulty*. The frame (Paper 47):
 target proved equivalent to RH; Weil completion; canonical class `K`; radical; affine
 duality; transfer theorem "`h⁰` with (a),(b′),(c) ⇒ RH"; falsifier theorem for `Ξ_a`.
 The difficulty is one object: a dimension of sections `h⁰` on the square
@@ -30,7 +30,7 @@ Clusters, by mechanism, and the single reason each cluster dies:
 | B. Finite-window / compression positivity | CCM ground state, GLT symbols, Galerkin, Toeplitz, quaternionic HR on `V₊`, finite Euler colligations `K_P ⪰ 0` | positivity is *free* at finite rank and *gapless* as rank grows (`e^{−cL}` cascade); "a spectral gap needs finitely many eigenvalues; ζ has infinite genus" (phase 63 E99). Galerkin values are variational upper bounds (phase 134) |
 | C. Geometric/cohomological realizations | Deninger foliations, Kähler–Riemann polarization, Morishita space, KK canonical metric, homotopy inertia, quantum import, functor constructions | the object (Frobenius on a Weil cohomology of `Spec Z`) is not realized; every realized witness either has no complex structure or uses the Hasse analogue (`|ξ|²=q`) as input, i.e. RH (phase 43 Doc 130) |
 | D. Magnitude / density / averaging methods | large sieve, pair correlation, zero-density, mollifier floors, Cesàro-in-λ, Farmer floor | **theorem of method obstruction** (phase 60): any bound using only `\|Λ(n)\|` cannot decide the sign, because Davenport–Heilbronn has the same magnitudes and the opposite sign; the sign lives in the *phase coherence* of `cos(t log n)`; off-line zeros give secular growth `λ^{2β−1}` no average removes |
-| E. Direct constructions of a nonnegative invariant | Paper 46 §6 negatives; convex-set dimension; one-parameter lattice `Λ_W`; tropical toy square | model-free definitions transfer to `Ξ_a` (Restatement 12.4a); the one lattice tried has logarithmic growth (Thm 13.6); the tropical toy reproduces Hodge index on a finite sublattice but dimensions become real on continuous correspondences (phase 40–41) |
+| E. Direct constructions of a nonnegative invariant | Paper 47 §6 negatives; convex-set dimension; one-parameter lattice `Λ_W`; tropical toy square | model-free definitions transfer to `Ξ_a` (Restatement 12.4a); the one lattice tried has logarithmic growth (Thm 13.6); the tropical toy reproduces Hodge index on a finite sublattice but dimensions become real on continuous correspondences (phase 40–41) |
 
 **What is genuinely proved positive, unconditionally** (the "unpainted-but-lit" squares):
 1. Archimedean-only Weil positivity for `supp ⊂ [2^{−1/2}, 2^{1/2}]` (Connes–Consani; phase 118 `T ≤ log 2`; phase 5 Thm 6.11 citation).
@@ -40,7 +40,7 @@ Clusters, by mechanism, and the single reason each cluster dies:
 5. `Γ₂ ≥ 0` curvature of the prime Dirichlet form, marginal (`ψ(0)=0`), no gap (phase 64).
 6. Tropical toy `C_p × C_p`: exact Hodge index `(1,2)` on `⟨f₁,f₂,Δ⟩` (phase 41 Doc 125).
 7. Möbius connection identity `V_Λ = Z^{−1}δZ` (non-circular construction of the prime current), with the dissipativity inequality open (phase 70).
-8. Paper 46 Part II: transfer theorem, canonical class, radical, `Ξ_a` inconsistency.
+8. Paper 47 Part II: transfer theorem, canonical class, radical, `Ξ_a` inconsistency.
 
 ## 2. What the map proves (a meta-theorem, stated once)
 
@@ -53,10 +53,10 @@ archimedean/polar block *plus* infinitely many primes — is RH. Therefore:
 > Frobenius lattice, and it is a phase-coherence phenomenon of unimodular local roots.**
 
 Three independent formulations of the same fact exist in the corpus and were never
-put side by side: phase 60's "phase not magnitude" obstruction theorem; Paper 46's
+put side by side: phase 60's "phase not magnitude" obstruction theorem; Paper 47's
 Restatement 12.4a ("no model-free derivation; the datum is `Frob_n ⋆ Frob_n^† = Δ^{(n)}`");
 Connes–Consani's "the obstruction lives in the small square `∆`, moved into `Σ` to use its
-infinite reservoir of positivity" (2006.13771, §1–2, §4). In Paper 46's language the three
+infinite reservoir of positivity" (2006.13771, §1–2, §4). In Paper 47's language the three
 coincide: `∆` is the polar packet `K`, `Σ` is the Frobenius lattice inside the radical, and
 the trace-remainder `δ(ρ)` of CC (8) is the 2×2 Tate block `Σ(T)` of P124.013.
 
@@ -68,7 +68,7 @@ lattice through an object that (i) is not model-uniform, (ii) grows quadraticall
 
 | item | verdict | action |
 |---|---|---|
-| MW-5 / R16 "no quadratic Riemann–Roch over `Spec Z`" | over-generalized: answered only for CC's *curve* object; the square was never tested; Paper 46 Thm 12.3 needs only `h⁰ ≥ 0`, not integrality | **reopened** (this campaign) |
+| MW-5 / R16 "no quadratic Riemann–Roch over `Spec Z`" | over-generalized: answered only for CC's *curve* object; the square was never tested; Paper 47 Thm 12.3 needs only `h⁰ ≥ 0`, not integrality | **reopened** (this campaign) |
 | P122.007 "arithmetic Hodge index not applicable" | correct as an *import* ban; never asked whether the Hilbert–Samuel **mechanism** (fibre rank × archimedean size) can be rebuilt on the `S`-square | reopened as D-HS (LEAD_NOTE §1) |
 | Phase 65 `RH-PROOF.md` (Vitali/Montel strip-crossing capstone, self-styled "complete, RH-free chain") | **never audited**; uses the same strip-crossing extension that the same phase's D8.5b-i refutes for a parallel object; MAP_3 flags it as the strongest circularity concern in the corpus | **mandatory audit** (a purported proof cannot sit unaudited in the repository) |
 | GAP-135.B (semilocal object with `a ≥ 0` and polar block, "next document") | never written | reopened (S2 below) |
@@ -118,7 +118,7 @@ surfaces" in Cartwright's sense; if so, a *chart-level* Hodge index exists — t
 with Paper 43 Thm 14.1 (no Hodge-index shape at charts for the *numerical* form). Medium.
 
 **S6 — The factorization `𝒯 = A^*A` / Wiener–Hopf `D_Euler` / the norm `(H,π,Ω)`**: three
-names for the same off-the-page object (phase 4 RH-ENDGAME, phase 70 E70.9, Paper 46
+names for the same off-the-page object (phase 4 RH-ENDGAME, phase 70 E70.9, Paper 47
 Thm 3.7). Never engaged. It is the target, not a route; recorded so it is not re-derived.
 
 **S7 — Deninger without Hasse** (ENUNCIADO-MÍNIMO-130), Witt-profinite polarization,
@@ -131,9 +131,9 @@ proved obstruction to every magnitude-only method. Further analytic squares cann
 the sign. The geometric page has one unrealized object (MW-5), named identically by
 Connes, Deninger and this corpus; it is off the page and no ingredient for it exists.
 The **arithmetic-counting page** — Riemann–Roch with a dimension of sections on the
-*square* — is nearly blank: CC's curve theorem (2022), Paper 46 §13's one lattice, and
+*square* — is nearly blank: CC's curve theorem (2022), Paper 47 §13's one lattice, and
 the phase-41 toy. All its ingredients exist (CC's `H⁰` via additive adeles; row B's
-Frobenius correspondences and integral shadow; Paper 46's `K`, radical and transfer
+Frobenius correspondences and integral shadow; Paper 47's `K`, radical and transfer
 theorem; CC's own "divisor of the Frobenius correspondence" dictionary). Nobody has
 defined `H⁰` of a divisor on `Spec Z̄ × Spec Z̄`.
 
@@ -159,7 +159,7 @@ Round 2 (audit), round 3 (repairs), round 4 (confirmation), decision.
 Round 5+ (only if D.11 gives super-logarithmic growth or D.12 gives a positive scope
 beyond `log 2`): D.14 (S4) definability T1 and growth T2.
 
-Deliverable: Paper 46 Part III (§§17–20) or a new Paper 47 if S4 is definable; phase
+Deliverable: Paper 47 Part III (§§17–20) or a new Paper 46 if S4 is definable; phase
 README; PLAN paragraph; memory. Honest expected outcome: theorems that locate the
 sign's cost quantitatively (S1, S2), a dictionary that makes CC's mechanism usable in the
 corpus's normalization (S3), and a decision on S4's definability. Not a sign.

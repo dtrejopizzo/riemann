@@ -2,7 +2,7 @@
 
 Started .
 Pen and paper only. Neutral names: "two-metric group", "height flow", "denominator damping", "centre collapse".
-Paper 47 and the master grid are NOT edited by this phase (phase 188 is integrated separately).
+Paper 46 and the master grid are NOT edited by this phase (phase 188 is integrated separately).
 
 ## The object
 D ⟺ the Weil kernel K(r) = B_{F₀}(log r) is positive definite on the discrete group G = ℚ_{>0} (phase 188: A_M ⪰ 0 ∀M).

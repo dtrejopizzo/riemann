@@ -4,7 +4,7 @@ Pen and paper, plus the numerical checks that were strictly necessary to decide 
 (§5: the constants of J Thm J.3 and the on-line symbol identity of F Thm F.1, mpmath 30 digits, NUMÉRICO).
 
 Sources checked against the memos: AUDIT_L_SHARP_1 §1–§6 ((★★), constraints 1–7); memos A (Thm 1.1, Prop 2.1, §3.2,
-Rem 3.3, Lemma 4.2), C (Prop 1.2, Prop 4.2), E (E.1, E.1′, E.2, Cor E.3, Lemma E.4, E.5, §7); Paper 47 (eq:symbol,
+Rem 3.3, Lemma 4.2), C (Prop 1.2, Prop 4.2), E (E.1, E.1′, E.2, Cor E.3, Lemma E.4, E.5, §7); Paper 46 (eq:symbol,
 eq:form, eq:W, lem:K, def:W, lem:monoT, prop:archneg, sec:cert, and the two places where Zhu Thm 1.2 is cited for the
 complete form at T ≤ 0.8, lines 143 and 1109); Mori L104 (index 05b l.56; AUDIT_ZENODO_FRONTIER B1:
 computational part reproduced, label CITED); CERT_FALSIFIERS_001; Titchmarsh §3.5 (Euler–Maclaurin for ζ_X).
@@ -119,11 +119,11 @@ E's classes are the Fourier-dual bookkeeping of the sawtooth): ARGUED.** The clo
 decided in the Euler–Maclaurin transition region (few dilates), not class by class", is therefore half right (not class
 by class) and half wrong (not the transition region, on the only data where anyone has computed it).
 **3.6 Prop F.5 (shallow data = window form).** supp ρ ⊂ (1,X₀] ⇒ supp Ψ̌_ρ ⊂ (0,log X₀] ✓; on a compactly supported
-function the full-line Weil form equals Paper 47's complete window form of its centred translate (Θ_∞ translation
+function the full-line Weil form equals Paper 46's complete window form of its centred translate (Θ_∞ translation
 invariant; A ↦ e^{∓T/2}A, B ↦ e^{±T/2}B, AB̄ invariant; autocorrelations invariant; pairs with log q ≥ log X₀ = 2T₀ do
 not pair) ✓, with half-length T₀ = ½log X₀ and contacts log n < 2T₀ ✓. X₀ ≤ e^{1.6} = 4.953 ⟺ T₀ ≤ 0.8 ✓. Positivity:
-Paper 47 l.143/1109 cite Zhu Thm 1.2 for the complete form at T ≤ 0.8 (CITED; also thm:log5W for T ≤ ½log5 = 0.8047,
-unconditional in Paper 47). **Identification depth = half-window: the log-depth log X₀ is the *full* window length
+Paper 46 l.143/1109 cite Zhu Thm 1.2 for the complete form at T ≤ 0.8 (CITED; also thm:log5W for T ≤ ½log5 = 0.8047,
+unconditional in Paper 46). **Identification depth = half-window: the log-depth log X₀ is the *full* window length
 2T₀; F's sentence "the depth of the data on the exterior carrier is the window half-length" is off by the factor 2
 (its "depth ≤ 4.95" in X is right).** As F says, such ρ are not in PW_μ; this is E §7's "edge-localised data" remark
 extended from X₀ = 2 to X₀ = e^{1.6}. **Label: reduction PROVED; positivity CITED; wording corrected.**
@@ -233,7 +233,7 @@ is the one that needs PNT. Both give the same number: consistent.
 **5.4 Cor J.4.** (a) PROVED/CITED: Φ_{Ψ_0}(s) = B(e^{(s−1)c} − e^{(s−1)a})/(s−1) ✓, product expands to e^{−a}/(ρ(1−ρ)) +
 three terms bounded by e^{−a} and → 0 (Re ρ < 1) ✓; Σ_ρ1/(ρ(1−ρ)) = 2Σ_ρ1/ρ = 2(1 + γ/2 − ½log 4π) = 2 + γ − log 4π ✓;
 ξ′/ξ(1) = 1 − ½log π + ½ψ(½) + γ ✓ (ψ(½) = −γ − 2log 2 gives 1 + γ/2 − ½log 4π ✓). The explicit formula for the rough
-test Ψ_0 (jumps at a and c) is Paper 47 lem:roughEF, fine. **(b) PROVED:** c₀ = ψ(3/2) − log π = −1.108 < 0 (NUMÉRICO)
+test Ψ_0 (jumps at a and c) is Paper 46 lem:roughEF, fine. **(b) PROVED:** c₀ = ψ(3/2) − log π = −1.108 < 0 (NUMÉRICO)
 — the archimedean form with the pole, i.e. ã, is negative on the deep mode, and 2γ = 1.154 restores +0.046: a 4 %
 margin. The "NO-GO for archimedean dominates primes" is the quantitative form of A §5's NO-GO ✓. **(c) OVERSTATED in
 its O(1):** for the full Ψ̌ the prime part is D·B_φ²e^D + O(e^D) (J's own parenthesis), so form_c = [0.046 − 2(c−1)(D +

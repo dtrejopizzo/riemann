@@ -53,7 +53,7 @@ The piece to build is a per-window substitute for L5+L6: an inequality W_{T_*}[�
 equality case at F forces K_F(a_m) = 0.
 
 **Proposition 1 (per-window transport is linear and sign-neutral; PROVED).** Fix q prime and a coefficient
-sequence c. Let W_T[c] be the window Hermitian form built from c exactly as W_T[Λ] is built from Λ (Paper 47
+sequence c. Let W_T[c] be the window Hermitian form built from c exactly as W_T[Λ] is built from Λ (Paper 46
 def:W, with c in place of Λ). The map c ↦ W_T[c] is real-linear. For (n,q) = 1,
 e(an/q) = φ(q)^{−1} Σ_χ τ(χ̄) χ(an). Hence W_T[Λ e(a·/q)] = Σ_χ φ(q)^{−1}τ(χ̄)χ(a) W_T[Λχ] + W_T[Λ·1_{q|n}e(a·/q)].
 The matrix (τ(χ̄)χ(a))_{a,χ} is invertible, since |τ| = √q and the characters are orthogonal. So the additive-twist
@@ -78,7 +78,7 @@ K_F(a_m). ∎
 their sum = Nc ⟹ each term = c") needs two things: a spectral multiset of *finite, known* cardinality N, and a
 per-element sharp bound. Over ℚ, per window, neither is available. Proof:
 (i) Cardinality. The only ℚ-substitute for N = −χ_c is the regularised zero count. By thm:finZ / cor:infinite
-(Paper 47 §7), no finite zero multiset carries a flat-top certificate at any window. So a finite-N saturation
+(Paper 46 §7), no finite zero multiset carries a flat-top certificate at any window. So a finite-N saturation
 identity equivalent to the window certificate does not exist.
 (ii) Sharp bound. With the functional-equation symmetry ρ ↔ 1−ρ̄, the per-element bound "β ≤ ½" alone is already RH.
 L5 therefore adds nothing beyond L4-sharp. In Laumon, L4-sharp comes from L3 + L6 on a family with finite
@@ -87,7 +87,7 @@ multiplicative family returns the question in stronger form (Prop 1).
 (iii) The ε-data cannot replace (i)–(ii). By L2 over ℚ their invariant content is the single scalar C₀ (C8 Thm 2), and
 Prop 2 shows this scalar never meets K_F(a_m).
 What the Laumon architecture needs, a finite cohomology with det = ε and constructible specialisation, is exactly the
-rationality/cohomology wall (ROW-D-CLOSURE-PLAN 3.4, P46 §28.4 clause "no ring of correspondences on Spec ℤ").
+rationality/cohomology wall (ROW-D-CLOSURE-PLAN 3.4, P47 §28.4 clause "no ring of correspondences on Spec ℤ").
 Stop, as prescribed. ∎
 
 Net value of the dictionary (this is the relocation §8.2 predicted): the Gamma lattice a_m is the ℚ-image of the

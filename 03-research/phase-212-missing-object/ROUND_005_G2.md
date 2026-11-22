@@ -29,7 +29,7 @@ of coefficients. Matches for cocycle in phases 78, 122, 129, 136, 170 (Tate), 18
 LEDGER, REVIEW_003, REVIEW_004, RULES_AVOID in full, ANNEX_COTEJO_LORENTZ_1 and _2, STATEMENT_001,
 R160_C7_R1 §§5–6, ROUND_003_8 in full); `phase-159/G2_B8_R1.md` §§1–2 (Theorems B, S, Cor. S′);
 `G2_B8_R5.md` §§0–2 (definitions, Theorem D); `phase-194/INV_F_001_DLOG_WALL_CONES.md` in full;
-`phase-122/P122_018_GLOBAL_GAMMA_EULER_COCYCLE_PARITY_NO_GO.md` §§1–4; P47 `lem:shape-scale` and its
+`phase-122/P122_018_GLOBAL_GAMMA_EULER_COCYCLE_PARITY_NO_GO.md` §§1–4; P46 `lem:shape-scale` and its
 proof, `cor:Tarch`; `ROUND_004_E.md` table of indices (lines for 𝔪_T).
 
 **Not opened as primary sources.** `INV_I_001` (only via ANNEX_COTEJO_LORENTZ_2 row 22); `BARRIER_W_001`
@@ -43,7 +43,7 @@ proof, `cor:Tarch`; `ROUND_004_E.md` table of indices (lines for 𝔪_T).
 - `INV_F_001` F0–F2 and §4: ∂log sends products to sums; every conic premise on log ζ is blind to cΛ;
   declared residue: a curved constraint coupling log ζ with exp(log ζ) (integrality or functional
   equation), OPEN.
-- P47 `lem:shape-scale`: the vector F_+ = φ + φ(· − log 2) makes 𝔪_T(F_+) − c v_2‖φ‖² → −∞.
+- P46 `lem:shape-scale`: the vector F_+ = φ + φ(· − log 2) makes 𝔪_T(F_+) − c v_2‖φ‖² → −∞.
 - `P122_018` §§1–4: scattering phases b_∞(τ) and c_p(τ) (exactly Γ_ℝ(1−s)/Γ_ℝ(s) and
   Z_p(1−s)/Z_p(s) normalized on the line), completed finite product Θ_T = b_∞ ∏ c_p^{−1}; no
   symmetric global cocycle couples Γ and Euler; the nonzero coupling is causal and is the
@@ -105,7 +105,7 @@ of E70_12 and of INV_F_001 Lemma F0.
 
 ## 3. Mechanism: which closed classes exist
 
-**Lemma 2 (NO-GO with class; PROVED relative to the construction of P47 lem:shape-scale).** Declared
+**Lemma 2 (NO-GO with class; PROVED relative to the construction of P46 lem:shape-scale).** Declared
 class: (𝒦, ⊛) a semigroup, Φ: 𝒦 → forms on L²(I_T) additive (Φ(x ⊛ y) = Φ(x) + Φ(y)),
 x_∞, x_2 ∈ 𝒦 with Φ(x_∞) = 𝔪_T and Φ(x_2) = Π_{T,2}, and a closure theorem "x ∈ 𝒦 ⟹ n₋(Φ(x)|P_T) ≤ κ"
 for some fixed κ ≥ 0 (κ = 0 is positivity). Then for every T > ½ log 2 the class does not exist.
@@ -125,8 +125,8 @@ generic in the comb (like R3-d). It covers in particular "closure under product 
 with any index bound. Its content is the homogeneity of INV_F_001 F2 written as a semigroup.
 
 **Answer to (a) of the task.** 𝒪_∞ cannot be in a class of bounded sign for large T: n₋(𝔪_T|P_T)
-≥ ⌈2Tτ_0/π⌉ − 3 (P47 thm:J, thm:index, cited in `ROUND_004_E.md`, table; CITED) and 𝔪_T is negative on
-some vector of P_T for T ≥ 0.60 (P47 cor:Tarch, CITED). Thus a class 𝒦 defined by signature of Φ
+≥ ⌈2Tτ_0/π⌉ − 3 (P46 thm:J, thm:index, cited in `ROUND_004_E.md`, table; CITED) and 𝔪_T is negative on
+some vector of P_T for T ≥ 0.60 (P46 cor:Tarch, CITED). Thus a class 𝒦 defined by signature of Φ
 does not contain 𝒪_∞ except for κ growing with T. **(b)**: Π_{T,p} is indefinite on L²(I_T) (its
 symbol changes sign); it is in a class of bounded index only if κ ≥ n₋(Π_{T,p}), which is not
 finite in general (ARGUED: high-frequency wave packets where the symbol −Σ_k v_{p^k}

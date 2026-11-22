@@ -31,9 +31,9 @@ build any new object on closed routes: it decides whether site (β) of Z_CARRIER
 
 ## 1. What L4.4 exactly is, and what fails for each falsifier
 
-### 1.1 Proof of "Φ_f ∈ rad 𝒲" from the explicit formula (PROVED, classical; reconstruction of the usage in Paper 47)
+### 1.1 Proof of "Φ_f ∈ rad 𝒲" from the explicit formula (PROVED, classical; reconstruction of the usage in Paper 46)
 
-Conventions from Paper 47 §22: f even in C², compact support in [−λ, λ] (λ = e^T), admissible: f(0) = 0, ∫f = 0.
+Conventions from Paper 46 §22: f even in C², compact support in [−λ, λ] (λ = e^T), admissible: f(0) = 0, ∫f = 0.
 Summation (a_n ≡ 1): (E_1 f)(u) = Σ_{n≥1} f(nu). Mellin: f̃(s) = ∫_0^∞ f(u)u^{s−1}du (holomorphic for Re s > 0, and by the
 Taylor expansion at 0 it continues to Re s > −2 except for a simple pole at s = 0 with residue f(0)).
 
@@ -44,20 +44,20 @@ Taylor expansion at 0 it continues to Re s > −2 except for a simple pole at s 
 1, and f̃(1) = ∫_0^∞ f = ½∫_ℝ f = 0, so the pole cancels; f̃ has a simple pole at 0 with residue f(0) = 0, so it
 disappears too (even though ζ(0) = −½ ≠ 0). Decay: f ∈ C² compact ⇒ |f̃(σ+it)| ≪ |t|^{−2}, and ζ grows polynomially. ∎
 
-**Proposition 1.2 (L4.4 in the form used).** For every test Φ (Mellin transform of a function in Paper 47's class),
+**Proposition 1.2 (L4.4 in the form used).** For every test Φ (Mellin transform of a function in Paper 46's class),
 𝒲(Φ_f, Φ) = 0, where 𝒲 is the complete Weil distribution (archimedean − primes + poles).
 
 *Proof.* Explicit formula (Weil; CITED) applied to the pair (Φ_f, Φ): archimedean − Σ Λ(n)n^{−½}(…) + [Φ_f(1)Φ(0) +
 Φ_f(0)Φ(1)] = Σ_ρ Φ_f(ρ)Φ(1−ρ). Right-hand side: Φ_f(ρ) = ζ(ρ)f̃(ρ) = 0 for every nontrivial zero (Lemma 1.1, f̃ is
 holomorphic at ρ). Polar terms: Φ_f(1) = Res_{s=1}ζ·f̃(1)… more precisely Φ_f(1) = lim (ζ f̃)(s) = f̃′(1)·1 + 0 is finite, and
-the polar term of 𝒲 is the **evaluation of the pole of −ζ′/ζ**, which with Paper 47's normalization is written as the
+the polar term of 𝒲 is the **evaluation of the pole of −ζ′/ζ**, which with Paper 46's normalization is written as the
 pairing against Φ_f at 0 and 1; both values come from the same entire continuation and the explicit formula for Φ_f
 accounts for it as a sum over the divisor of ζ (zeros − pole) of Φ_f(·)Φ(1−·). In the divisor of ζ·f̃ the zeros of ζ lie
 inside the divisor of Φ_f, and the pole of ζ and that of f̃ cancel; so the sum over the divisor of ζ is zero. Equivalent
 and shorter: 𝒲(Φ_f, Φ) = (1/2πi)∮ (ζ′/ζ)(s) Φ_f(s) Φ(1−s) ds (contour surrounding the strip, plus the archimedean part moved by the
 functional equation), and (ζ′/ζ)Φ_f = ζ′f̃ is **holomorphic** on the closed strip except where f̃ might have poles (none, since f(0)=0) and at s = 1
 (where ζ′ has a double pole but f̃ has a simple zero: what remains is a simple pole with residue −f̃′(1)… which is exactly the one that
-compensates the polar term of 𝒲). Absolute convergence: decay of f̃ (CITED Guo; Paper 47 thm:ext-half). ∎
+compensates the polar term of 𝒲). Absolute convergence: decay of f̃ (CITED Guo; Paper 46 thm:ext-half). ∎
 
 The structural form, which is what matters: **rad 𝒲 ⊇ {L·h : h holomorphic, admissible} with L the function whose logarithmic
 derivative defines the comb**. The identity Λ∗1 = log (rem:ext-killing(ii)) is exactly the statement that
@@ -209,7 +209,7 @@ confirms MORI15's warning ("do not build on it"), now with the exact number.
   ⟨L⟩); §1.3(a) a_P ∈ rad 𝒲_{L_P} and ∈ rad 𝒲_ζ, with one fewer condition; §1.3(b) 𝒲_c(Φ_f,Φ) = (1−c)·arch(Φ_f,Φ); §1.3(d) DH
   ∈ rad 𝒲_{DH}; κ table; conductor term = (log N)‖g‖² ≥ 0; Lemma 2.1 (S(𝒵) > 0 for every divisor in the strip).
 - CITED: Weil's explicit formula; Hadamard (2+γ−log4π); Davenport–Heilbronn (Epstein h > 1 with zeros off the line);
-  Guo L4.4 via Paper 47 thm:ext-half, prop:ext-gauge (Guo's paper is not in the repository).
+  Guo L4.4 via Paper 46 thm:ext-half, prop:ext-gauge (Guo's paper is not in the repository).
 - CONDITIONAL: (c) Beurling — radical only under continuation of ζ_𝒫 to the strip.
 - NO-GO: site (β) as a separator (comb-generic identity); (i) κ count (Epstein falsifier); (ii) conductor 1 (wrong
   sign); (iii) Tate part as the dominant term (positive for every divisor).

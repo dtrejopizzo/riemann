@@ -5,7 +5,7 @@ Versioned sources and local texts in
 [the registry](../../00-references/arxiv-math-nt-2026-review/README.md).
 This document distinguishes reading statements, reconstructing steps,
 and full validation. **There is no complete audit of the 27 works.**
-Nor was a proof of global positivity of Paper 47 obtained.
+Nor was a proof of global positivity of Paper 46 obtained.
 
 ## 1. Dubon: quantifying the cost of selecting the witness
 
@@ -59,7 +59,7 @@ mathematical material from the model, not a validation of its
 arithmetic induction.
 
 What remains missing is identifying the transported form of the
-Paper 47 operator with that model, including the primes and the polar
+Paper 46 operator with that model, including the primes and the polar
 term. The audit neither proves nor refutes the identification of
 lemma 8.4 of Three Gates.
 
@@ -108,8 +108,8 @@ every proof. Links and versions are in the bibliographic registry.
 | Work | Depth of this review | Consequence for D |
 |---|---|---|
 | Suzuki 2606.09096v3 | Introduction and representation theorems | Operator associated with the Weil form; constructing its extension does not prove its positivity. |
-| Groskin 2607.02828v3 | Statements and test transport | Tail control for compressions; does not replace the infinite complement. Already cited by Paper 47. |
-| Zhu 2608.24827v2 | Comparison with its earlier incorporation | Already cited by Paper 47; a new audit of v2 was not completed. |
+| Groskin 2607.02828v3 | Statements and test transport | Tail control for compressions; does not replace the infinite complement. Already cited by Paper 46. |
+| Zhu 2608.24827v2 | Comparison with its earlier incorporation | Already cited by Paper 46; a new audit of v2 was not completed. |
 | Maynard–Pandey–Radziwiłł 2608.14777 | Main theorem and proof architecture | Excluding critical configurations is a structural idea; the additive bound does not prove the Mellin sign. |
 | Dong–Wang–Wang–Zhang 2608.31060 | Theorems 1.1–1.2 | Near-maximal values of unweighted sums force zeros; that threshold still needs to be derived from our failure. |
 | Ramaré 2609.25879 and 2609.25885 | Hypotheses and main results | Regularity near sieve saturation and residual restrictions; it was not proved that our witness satisfies those hypotheses. |
@@ -147,5 +147,5 @@ R170_805 may supply a lower bound for the budget **if the transport is
 proved**. The arithmetic construction must control the residual in
 that same metric and with its cross terms. None of the works reviewed
 yet supplies that inequality for our witness. A reusable lemma and
-more precise transfer conditions were obtained; Paper 47 was not
+more precise transfer conditions were obtained; Paper 46 was not
 closed, nor was the full reading of all 27 manuscripts completed.

@@ -6,8 +6,8 @@ family `{Π_T(M∗φ)}` of ROUND_021_A/022_A? Labels: PROVED / CITED / ARGUED / 
 ## 0. Cross-check
 - Opened: `ROUND_021_A.md` (in full), `ROUND_022_A.md` §§Part 1–3, `ANNEX_COTEJO_NULLDIR.md` §1.2 and §5;
   211 `ROUND_008_E.md` §§0–2.2, `ROUND_009_B.md` §0, §§2.4–2.6, `ROUND_005_C.md` §1 (Def. 1), `ROUND_017_A.md` (headings
-  only); P47 `def:ext` (l.9867), `thm:ext-half` (l.9913), `prop:ext-gauge` (l.9946); index 212-22-A.
-- Not opened: P2_SCHUR_001 (only via citation in 021_A), 211 ROUND_005_B, ROUND_007_B, ROUND_009_A, R160_D4_R2, P46.
+  only); P46 `def:ext` (l.9867), `thm:ext-half` (l.9913), `prop:ext-gauge` (l.9946); index 212-22-A.
+- Not opened: P2_SCHUR_001 (only via citation in 021_A), 211 ROUND_005_B, ROUND_007_B, ROUND_009_A, R160_D4_R2, P47.
 - Grep («Π_T(M», «prolat», «casi nul», «near-null», «E_T» in 211/212): no memo writes down the identification. The
   ANNEX_COTEJO_NULLDIR §5(c) separates «E(prolates)», «family of responses E_T» and S_T without relating them to M∗φ.
   Hence it does not stop at the cross-check. No sign mechanism is proposed; it is an identification question.
@@ -18,7 +18,7 @@ family `{Π_T(M∗φ)}` of ROUND_021_A/022_A? Labels: PROVED / CITED / ARGUED / 
 `M∗φ = S_ζ(g∗φ)` with `S_ζh(t) = Σ_{n≥1} n^{−1/2}h(t+log n)`, `g = (−∂²+¼)g_0`, `g_0(t)=(2π²e^{9t/2}−3πe^{5t/2})e^{−πe^{2t}}`.
 Identity (1.1): `a_T(Π_Tφ) = 𝔡_T(φ)` doubly-exponentially small (PROVED in 021_A).
 
-**211, low block (ROUND_008_E §2.2; ROUND_009_B §2.5; P47 def:ext).** `λ=e^T`, `N=e^{2T}`, `c=2πN`, `ψ_k` prolates of
+**211, low block (ROUND_008_E §2.2; ROUND_009_B §2.5; P46 def:ext).** `λ=e^T`, `N=e^{2T}`, `c=2πN`, `ψ_k` prolates of
 `[−λ,λ]`, `d_k = 1−χ_k(c)`, `Ef(x) = e^{x/2}Σ_n f(ne^x)` on `I_T`. Block: `Π_T E·span{ψ_0,ψ_4,ψ_8,…}` (class `+1` in the
 even sector; in the odd one, class swapped, floor `d_10`). Law: `λ_j^{ev} ≈ κ_j d_{4j+8}`, `κ_j∈[0.85,2]`, for `4j+8 ≲ 4N`
 (NUMERICAL); the minimizer is at angle `10⁻⁴` from `Π_T E span{ψ_0,…,ψ_8}` (NUMERICAL).
@@ -36,7 +36,7 @@ With `f_0 := ι^{−1}g_0`, `f_0(u) = (2π²u⁴ − 3πu²)e^{−πu²}` (even,
 `f_φ(u) := ∫ f_g(ue^{−s}) e^{−s/2}φ(s)ds` (multiplicative convolution, `f_g := ι^{−1}g`). Thus:
 - 211 (both blocks) `= Π_T S_ζ ι(f)`, `f` even with support in `[−λ,λ]` (prolates);
 - 212 `≈ Π_T S_ζ ι(f_φ)` (with the cutoff `χ`), `f_φ` Gaussian dilations at scales `e^{s}`, `|s| ≤ T−δ`;
-- gauge `= S_ζ ι(φ)`, `φ ∈ 𝒢_T`, identically zero on `I_T` (P47 prop:ext-gauge: `Φ_φ` supported in `(−∞,−T]`).
+- gauge `= S_ζ ι(φ)`, `φ ∈ 𝒢_T`, identically zero on `I_T` (P46 prop:ext-gauge: `Φ_φ` supported in `(−∞,−T]`).
 All three are images of the same operator `S_ζ`; they differ in the input class. This is (U) of 022_A with `h = ιf`.
 
 ## 3. Approximate inclusion 212 ⊂ low block of 211 (ARGUED; constants not written)

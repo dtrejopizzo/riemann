@@ -7,16 +7,16 @@ every phase; the labelled-theorem memos listed in the text), `04-papers/31-*` �
 labelled theorems of 41, 42; `main.md` of 43, 44, 45, read along the verdict ledgers, the definitions and every
 theorem cited below), `NO-GO-LIST.md` §VIII, the phase-136 maps `MAP_3_PHASES_061_110.md` and
 `MAP_4_PHASES_111_135_AND_PAPERS.md` (used as an index and then checked against the memos),
-`05-meta-and-planning/ABCD-CLOSURE-PLAN/ROW-D-REDUCED-STATEMENT.md` §§1–4 and Paper 47
+`05-meta-and-planning/ABCD-CLOSURE-PLAN/ROW-D-REDUCED-STATEMENT.md` §§1–4 and Paper 46
 (`def:W`, `def:PD`, `eq:W`, `eq:nuw`, `P_T`) for cross-checking definitions.
 
 **Conventions of this survey.**
   NUMERIC-UNCERTIFIED (float computation only) / CERTIFIED (interval arithmetic).
-* Forms. `[prim]` = the primitive form `A_T|P_T` (Paper 47 `eq:form` on `P_T`); `[compl]` = the complete Weil
-  form `W_T` on `L²(I_T)` (Paper 47 `eq:W`); `[full-a]` = the truncated form `𝔞_T` on all of `L²(I_T)` with no
+* Forms. `[prim]` = the primitive form `A_T|P_T` (Paper 46 `eq:form` on `P_T`); `[compl]` = the complete Weil
+  form `W_T` on `L²(I_T)` (Paper 46 `eq:W`); `[full-a]` = the truncated form `𝔞_T` on all of `L²(I_T)` with no
   polar term (this is what phase 115 calls `A_T` on the full space); `[struct]` = no sign statement.
 * The corpus uses three sign conventions for the same object (Paper 45 §1.4, Lemma 1.3). Throughout:
-  `I_∂ ≤ 0` on primitive radial classes (rows A–C) ⟺ `𝔞_T ≥ 0` on `P_T` (Paper 47) ⟺ `B_nuc ≤ 0` on `𝒯⁰`
+  `I_∂ ≤ 0` on primitive radial classes (rows A–C) ⟺ `𝔞_T ≥ 0` on `P_T` (Paper 46) ⟺ `B_nuc ≤ 0` on `𝒯⁰`
   (Paper 42). See the dictionary D1 in §6.
 
 ---
@@ -397,14 +397,14 @@ principal new mathematical contribution of phases 130–132"); C.7 PROVED, no si
 1. **The chain above the sign is complete** (panel 3 §5, step 8): row-D target ⟹ RH, PROVED, with the explicit
    formula in the repository. Hypotheses that travel with it and may not be dropped: colimit quantifier (C1),
    `c = 0`, primitivity, radiality (Paper 45 §14.4).
-2. **The target is EQUIV to RH**, so rows A–C do not weaken the problem. In Paper 47's language (dictionary D1,
+2. **The target is EQUIV to RH**, so rows A–C do not weaken the problem. In Paper 46's language (dictionary D1,
    §6): row-D target ⟺ `∀T: λ^A_T ≥ 0` [prim] (E2 of ROW-D-REDUCED-STATEMENT §1).
 3. **The object whose sign is at issue is named**: the Gram form of `Frob ⋆ Δ^rad`, i.e. the full kernel
    `W_fin + ω_∞`, not the Frobenius Gram form (Paper 44 Thm 8bis.1e; Paper 45 §14.4 item 3).
 4. **Useful structure delivered**: a carrier with composition and dagger; a trace whose symbol is (by definition)
    the prime-power-plus-Γ side; `𝓝 = 0`; a hyperbolic Tate boundary with the polar packet as its form; the
    primitivizer `Π = −∂_t² + ¼`; unimodularity `Frob_n ⋆ Frob_n^† = Δ^{(n)}` (the datum that fails for `Ξ_a`, which
-   gives `(n^a + n^{−a})Δ^{(n)}`; Paper 46 Rem 12.4b, outside my scope, builds on it); the integral shadow `Sh_Z`.
+   gives `(n^a + n^{−a})Δ^{(n)}`; Paper 47 Rem 12.4b, outside my scope, builds on it); the integral shadow `Sh_Z`.
 
 ### 4.6 What rows A–C do NOT imply for row D (each is a theorem or an explicit disclaimer)
 1. No sign anywhere; nothing about the zeros of ζ (Paper 43 banner, Paper 44 §8bis, Paper 45 §0.2).
@@ -481,7 +481,7 @@ Each item states the wall it must still pass (from §2). None is known to avoid 
    depth is diagnostic only (E101.037). Relevant to B11, B14 (uniformity in degree ↔ uniformity in `T`).
 7. **Centered prime–Γ square** (106_17): the actual prime-power-and-Γ multiplier equals a nonnegative full-line
    translation-jump form minus `κ_N = 4λ + o(λ)`, unique minimum at `t = 0`; in the even sector the pole is a
-   positive rank-one term. Paper 47's Lévy representation is its later form. Killed as a closure by the one-atom
+   positive rank-one term. Paper 46's Lévy representation is its later form. Killed as a closure by the one-atom
    Picone falsifier (106_19); usable only with literal prime locations (P3).
 8. **Connes–Consani archimedean Sonin trace** (115_15, 115_16, 115_17 Prop 4): the exact nonnegative split T16 bounds
    `E` from below (wrong side for row d); CC's Prop 5.5 is proved only for `|I| ≤ log 2`; the eigenvalue count
@@ -498,7 +498,7 @@ Each item states the wall it must still pass (from §2). None is known to avoid 
 11. **Closed for a reason later removed.** 110 closed ξ-divisibility on compact support; 111/113 moved to Schwartz
     data, where the class is nonempty and the pairing converges — and then hit O1–O3 instead. 109 closed coefficient
     pairings; its corrected target (continuation-side, non-symmetrized, zero-free definition) was realized by 113's
-    `𝔰`, which is exactly the Weil form (Hodge index ⟺ RH). Paper 46 later used the non-compactly-supported Pólya
+    `𝔰`, which is exactly the Weil form (Hodge index ⟺ RH). Paper 47 later used the non-compactly-supported Pólya
     kernel `K` (`Φ_K = ξ`), consistent with 110. Lesson: removing the compact-support obstruction relocates the
     difficulty to the absence of a lattice (O1) and of a spectral gap (O3).
 12. **Corrected-mass charged Tate boundary** (106.203/106.204 used `log p/p^k` instead of `log p/p^{k/2}`; the
@@ -511,7 +511,7 @@ Each item states the wall it must still pass (from §2). None is known to avoid 
     P122.021 — never built. Must introduce input independent of `log p, p^{−1/2}, N, Γ` (P122_028 §6).
 15. **The certified table beyond 0.8** (L13): `½log5 ≈ 0.805` and `½log6 ≈ 0.896` lie beyond every recorded sign;
     D.222's exact-Green calculation reached within 0.09 of budget at `½log6` (NUMERIC-UNCERTIFIED). Completing it
-    would extend `[prim]` by one window; it cannot prove RH (no upward induction in `T`, Paper 47 `cor:mono`).
+    would extend `[prim]` by one window; it cannot prove RH (no upward induction in `T`, Paper 46 `cor:mono`).
     Numerics only if judged strictly necessary.
 16. **Paper 44 `(H_L)` and the colimit Thm 8bis.4a** (L1, L2): both are genuine open statements about the ζ Weil form
     on moving windows; Lemma 8bis.6b already shows single-frequency nonnegative-amplitude tests cannot witness a
@@ -582,7 +582,7 @@ Each item states the wall it must still pass (from §2). None is known to avoid 
 > "(H_L) there is a primitive `g_* ∈ C_c^∞([L/2,L];C)` — i.e. `ĝ_*(0) = ĝ_*(1) = 0` — with `Q(g_*) < 0` and
 > `R(L) := (L e^{−L/4}‖g_*‖_∞‖g_*‖_{C^1} + L e^{−L/2}‖g_*‖_{C^1}²)/|Q(g_*)|`." (8bis.14d)
 
-**D-Paper 47 forms (`04-papers/47-row-d-dual-certificates/main.tex`).**
+**D-Paper 47 forms (`04-papers/46-row-d-dual-certificates/main.tex`).**
 * l. 119–122 (`eq:symbol`): `m(τ) = Re ψ(¼ + iτ/2) − log π`, `S_T(τ) = m(τ) − Σ_{n∈N_T} v_n cos(τ log n)`,
   `v_n = 2Λ(n)/√n`, `N_T = {n ≥ 2 : log n < 2T}`.
 * l. 125–127 (`eq:form`): `𝔞_T(F) = (1/2π)∫_R S_T(τ)|F̂(τ)|² dτ`, `F̂(τ) = ∫F(t)e^{iτt}dt`, `F ∈ L²(I_T)`,
@@ -596,16 +596,16 @@ Each item states the wall it must still pass (from §2). None is known to avoid 
   `|w(u)| ≤ Ce^{−(½+δ)|u|}` outside; `dν_w = [½(1−w)K(|u|) + 2w cosh(u/2)]1_{|u|≥2T}du −
   Σ_{n∉N_T}(v_n/2)w(log n)(δ_{log n} + δ_{−log n})`.
 
-**D1 — dictionary between rows A–C and Paper 47 (surveyor's check; elementary; to be re-verified by P5).**
+**D1 — dictionary between rows A–C and Paper 46 (surveyor's check; elementary; to be re-verified by P5).**
 For real `F ∈ C_c^∞(I_T)`, `c = 0`, colimit: the displayed formula in the proof of Paper 45 Thm 9.6
 (`T_∞(Γ_h) = Σ_{n≥2}Λ(n)n^{−1/2}[h(log n)+h(−log n)] + (1/2π)∫|F̂|²[log π − Re ψ(¼+iτ/2)]dτ`, `h = F⋆F^†`) and
-Paper 47 `eq:form`/`eq:A` (`h(u) = C_F(u)`, `Σ_n v_n C_F(log n)`) give
+Paper 46 `eq:form`/`eq:A` (`h(u) = C_F(u)`, `Σ_n v_n C_F(log n)`) give
 **`I_∞(Γ_F,Γ_F) = −𝔞_T(F)` for every real `F` (primitive or not)**, and, since `A(F) = Φ_F(1)`, `B(F) = Φ_F(0)`,
 `β_T(M,M) = 2A(F)B(F)`, (9.9) reads `I_∞ = 2AB − W_T(F) = −𝔞_T(F)`. Hence row-D target ⟺ `𝔞_T ≥ 0` on real
 `P_T ∩ C_c^∞(I_T)` for all `T`. Complex `F`: `𝔞_T(F) = 𝔞_T(Re F) + 𝔞_T(Im F)` (real even symbol; the argument of
 Paper 44 (8bis.8c)), and `A, B` are real-linear with real kernels, so the complex and real statements agree; the
 passage from `C_c^∞` to the form domain of `P_T` needs density in the form norm (standard; not checked here).
-Fourier conventions differ (`e^{−iτt}` in Paper 45, `e^{iτt}` in Paper 47); harmless because every symbol is even
+Fourier conventions differ (`e^{−iτt}` in Paper 45, `e^{iτt}` in Paper 46); harmless because every symbol is even
 (Paper 45 Remark 1.2). On the principal component, row A's symbol in the colimit is `T̂ = −S_∞` (untruncated).
 
 **D-positive lift (phase 120, `P3_COMMON_FAILURE_ARCHITECTURE.md` l. 32–47).**

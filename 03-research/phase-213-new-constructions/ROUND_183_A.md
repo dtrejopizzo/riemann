@@ -14,4 +14,4 @@ For every test φ bounded by one, ∫|f_T|²Pφ−∫|f_T|²φ=o(1) uniformly. I
 
 081 and 177 exhibit the weight w that asymptotically attains the norm. Here the conclusion concerns the macroscopic density of *all* saturators, even complex ones and without regularity. Closeness in norm to w is not deduced, nor are fine phase oscillations excluded. The condition on saturators does not decide the sign when κ<1 either.
 
-**Independent check.** Concentration, invariance and limit law were cross-checked. The lemma half of paper 47 already estimates a correlation by the norms at two ends. Here the joint norm of 081 is additionally needed, and then the limit rows to determine the distribution within each end. PNT on macroscopic intervals gives weak convergence of depths.
+**Independent check.** Concentration, invariance and limit law were cross-checked. The lemma half of paper 46 already estimates a correlation by the norms at two ends. Here the joint norm of 081 is additionally needed, and then the limit rows to determine the distribution within each end. PNT on macroscopic intervals gives weak convergence of depths.

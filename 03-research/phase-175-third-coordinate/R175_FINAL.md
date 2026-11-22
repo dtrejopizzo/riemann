@@ -63,7 +63,7 @@ even though the density is positive on `(0,1]`. Thus, an inference from pre-reno
 
 ## 2. Round B: Witt, squares, and bivariate theory
 
-**B1 — NO-GO.** The assumption that the necklace carries a contact length and the assumption that the Euler differential produces the gamma factor are withdrawn. The formal-line identities do not satisfy clause 2 of [P46 §28.4](../../04-papers/46-intersection-frame-defect/archive/main.md).
+**B1 — NO-GO.** The assumption that the necklace carries a contact length and the assumption that the Euler differential produces the gamma factor are withdrawn. The formal-line identities do not satisfy clause 2 of [P47 §28.4](../../04-papers/47-intersection-frame-defect/archive/main.md).
 
 **B2 — NO-GO.** `W^*(Spec Z)=Spec Λ` and the argument via truncated products are withdrawn: Adams operations do not preserve `Z[e₁,…,e_N]`. The notation supplies no arithmetic square.
 
@@ -91,6 +91,6 @@ even though the density is positive on `(0,1]`. Thus, an inference from pre-reno
 | H4: exact transfer to `W` | **NO-GO** | There is no `Q` and `J` with `Q(JF)=W(F)`, including Gamma and poles. |
 | H5: falsifiers | **NO-GO** | Simultaneous separation of `P_171`, Davenport–Heilbronn, `Ξ_a`, and `Ξ_Q` was not proved. These are pending proofs, not invented failures. `P_171` already has integer multiplicities: [R171_FINAL](../phase-171-discrete-beurling-frontier/R171_FINAL.md). |
 
-P46 §28.4's six clauses remain **NO-GO** for the triple: square and positivity after twists; locally fixed polar divisor; holomorphic zeros to its left; phase reading; simultaneous use of sum and product; and uniformity across fields. The existence of a family of carriers does not prove clause 6, and the formal lines do not prove clause 2. Nor is that absence turned into a universal falsifier.
+P47 §28.4's six clauses remain **NO-GO** for the triple: square and positivity after twists; locally fixed polar divisor; holomorphic zeros to its left; phase reading; simultaneous use of sum and product; and uniformity across fields. The existence of a family of carriers does not prove clause 6, and the formal lines do not prove clause 2. Nor is that absence turned into a universal falsifier.
 
 **Closure: NO-GO.** R175 delimits the missing object and corrects strong attributions. It does not prove that object is impossible, does not classify every carrier, and does not prove RH.

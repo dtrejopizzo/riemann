@@ -5,7 +5,7 @@ Everything in this memo is NUMERICAL except where indicated. Scripts and outputs
 
 ## 1. Audit of the original implementation (forms.py)
 
-Checked against Paper 47 (eq:symbol, eq:form, lem:K, thm:S(iii), thm:A eq:Aform):
+Checked against Paper 46 (eq:symbol, eq:form, lem:K, thm:S(iii), thm:A eq:Aform):
 - `K(u) = 2e^{-u/2}/(1−e^{-2u}) = 2e^{3u/2}/(e^{2u}−1)`: correct. `C_0 = ψ(1/4) − log π`: correct.
 - Lévy on `[0,2T]` plus tail `c_F(0)∫_{2T}^∞K = log coth(T/2) + π − 2 arctan e^T`: matches thm:S(iii).
 - `c_F(u) = ∫F(t)F(t+u)dt` symmetrized; contacts `log n < 2T`; `v_n = 2Λ(n)/√n`: correct.
@@ -19,7 +19,7 @@ I found no error that would manufacture the effect.
 Neumann cosine basis `cos(kπ(t+T)/2T)` (non-polynomial), autocorrelations and Tate moments in
 closed form, tanh-sinh quadrature in `u`, Richardson extrapolation (convergence `O(N^{-2})`).
 
-| T | N=40 | 80 | 160 | 320 | Richardson | Paper 47 |
+| T | N=40 | 80 | 160 | 320 | Richardson | Paper 46 |
 |---|---|---|---|---|---|---|
 | ½log3 | 1.0028e-3 | 9.5688e-4 | 9.4769e-4 | 9.4557e-4 | 9.449e-4 | 9.448e-4 |
 | log 2 | 1.497e-7 | 1.096e-7 | 1.006e-7 | 9.878e-8 | 9.82e-8 | 9.83e-8 |

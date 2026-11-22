@@ -232,16 +232,16 @@ implies Gate R, and (3.2) refers only to the explicitly known data
 `\rho_{\pm,T}` (P124.005 (2.2)--(3.3)), the Gram matrix (2.3) and the
 resolvent of the strictly positive operator `L_T`.
 
-**[phase 134 — note of record, from Paper 46 Finding 4.8 and
+**[phase 134 — note of record, from Paper 47 Finding 4.8 and
 `R134_002` (M5).  It does not alter Corollary 3.3, and it corrects a
-round-1 claim of Paper 46 that did.]**
+round-1 claim of Paper 47 that did.]**
 
 1. *The criterion is invariant.*  `\liminf_{T\uparrow T_*}\lambda_{\min}\Sigma(T)
    > -\infty` at a **finite** `T_*` is unchanged by a change of basis of the
    border: a rebasing acts by `\Sigma \mapsto C(T)^{\mathsf T}\Sigma C(T)` with
    `C` continuous and nonsingular, and on a compact neighbourhood of a finite
    `T_*` the quantities `\|C\|` and `\|C^{-1}\|` are bounded, so boundedness
-   below of `\lambda_{\min}` transfers.  Paper 46 round 1 claimed this
+   below of `\lambda_{\min}` transfers.  Paper 47 round 1 claimed this
    criterion is "basis-dependent as stated"; **that claim is withdrawn**.
 2. *The number is not invariant, and must not be quoted across bases or
    papers.*  In the named border basis `(\phi_+,\phi_-)` and in the

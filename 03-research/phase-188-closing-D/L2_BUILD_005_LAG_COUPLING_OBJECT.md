@@ -2,7 +2,7 @@
 
 ## Corpus check
 Same search as 004 plus "lag", "Toeplitz form", "positive measure", "truncated Toeplitz",
-"cross term". Found: Paper 47 sec:wh (truncated Wiener–Hopf R_T f(D) R_T), thm:X (averaged
+"cross term". Found: Paper 46 sec:wh (truncated Wiener–Hopf R_T f(D) R_T), thm:X (averaged
 inequality on U_{T0}), P121 OPTION_MATRIX (signing the IMS cross term = "primitive gap in localized
 form", rejected without a new Euler-specific cut identity), R186_001 (Gram of translates in {log n},
 NO-GO for Gram alone). Verdict: the reformulation below IS the P121 cross-term problem; new here

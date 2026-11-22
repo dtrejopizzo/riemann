@@ -131,7 +131,7 @@ reduction of the dimension at this window.
 ### 2.2 The sign budget on P_T
 
 **Proposition 3 (sign budget; mesh form of the Chebyshev split). [PROVED; the time-domain split is the window form
-of the three-term identity of phase 192 EI_001 / P47 prop:wit-cheb and is labelled accordingly]**
+of the three-term identity of phase 192 EI_001 / P46 prop:wit-cheb and is labelled accordingly]**
 Let K_1(u) := K(u) − 2e^{−u/2} = 2Σ_{j≥1}e^{−(2j+½)u} ≥ 0, R(u) := Σ_{log n ≤ u} v_n − 4(e^{u/2} − 1) (so
 dR = Σ_n v_n δ_{log n} − 2e^{u/2}du on [0, 2T)), and
 

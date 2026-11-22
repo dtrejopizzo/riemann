@@ -4,7 +4,7 @@
 **Seed screens CONFIRMED (G1–G12; none wrongly kept/discarded). G0 PROVED (linear algebra). Lemma G1 PROVED as a monoid isomorphism — FIX on what it excludes. CA_G_001 §2 CONFIRMED (standard), §3 CONFIRMED as REF-D/retry. Front stop ENDORSED.**
 
 ## 1. Lemma G1 — scope FIX
-Free commutative monoids on countably many generators are isomorphic ✓ (ℕ^×, free Beurling g-integers, ideal monoid of K). Consequence as stated ("survives O11 and O12 ⇒ excluded") over-reaches the labels: in Paper 47 the O11 falsifier is ARGUED and the O12 falsifier is OPEN (thm:shape(A′)). So monoid-functorial constructions are excluded by **(R)(10)** (they cannot name the property separating ζ from ξ_K) and by (B″)-type genericity, **not** by thm:shape(A). With that relabel the YES→NO move "an algebra/category built from the multiplicative monoid ℕ carries the sign → NO" is ENDORSED (PROVED as a (R)(10) exclusion).
+Free commutative monoids on countably many generators are isomorphic ✓ (ℕ^×, free Beurling g-integers, ideal monoid of K). Consequence as stated ("survives O11 and O12 ⇒ excluded") over-reaches the labels: in Paper 46 the O11 falsifier is ARGUED and the O12 falsifier is OPEN (thm:shape(A′)). So monoid-functorial constructions are excluded by **(R)(10)** (they cannot name the property separating ζ from ξ_K) and by (B″)-type genericity, **not** by thm:shape(A). With that relabel the YES→NO move "an algebra/category built from the multiplicative monoid ℕ carries the sign → NO" is ENDORSED (PROVED as a (R)(10) exclusion).
 
 ## 2. CA_G_001
 - §2 SUSY: Riccati/ground-state factorization ⟺ positivity ✓ (CITED Sturm); for the Toeplitz form G0(a) ✓ — REF-D.

@@ -155,7 +155,7 @@ CORR, which is independent of GAUSS, provides the summable majorant that was mis
 
 The series of ALL is absolutely convergent and uniformly bounded in mu_N. It is not claimed that its sign is favourable, nor is it replaced by zero by means of an unproved oscillation. Control of its magnitude suffices, because ARCH grows logarithmically.
 
-More precisely, E tau^-2=(N−1/2)/[u²(k−1/2)]=O(1/N). The elementary bounds already proved in Paper47, lem:mbounds, give |m(tau)−log(|tau|/(2pi))|<=1/|tau|+1/(2tau²) for tau different from0. By Cauchy--Schwarz and the beta formula, its expectation is O(N^-1/2), since E tau^-2=O(1/N). This and the formula for Elog give
+More precisely, E tau^-2=(N−1/2)/[u²(k−1/2)]=O(1/N). The elementary bounds already proved in Paper46, lem:mbounds, give |m(tau)−log(|tau|/(2pi))|<=1/|tau|+1/(2tau²) for tau different from0. By Cauchy--Schwarz and the beta formula, its expectation is O(N^-1/2), since E tau^-2=O(1/N). This and the formula for Elog give
 
     W[f]/||f||²=(1/2)logN+log[u sqrt(c)/(2pi)]
       −2Σ(q>=2)Lambda(q)q^-1/2

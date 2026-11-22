@@ -1,7 +1,7 @@
 # R155_041 — Audit of R155_040 (round 5b, Kreĭn extension)
 
-Target: `R155_040_ROUND5B_KREIN.md`. Sources checked line by line: Paper 47
-`04-papers/47-row-d-dual-certificates/main.tex` §1 (l. 118–150, 180–215, 265–290), §2 (l. 294 `eq:g`),
+Target: `R155_040_ROUND5B_KREIN.md`. Sources checked line by line: Paper 46
+`04-papers/46-row-d-dual-certificates/main.tex` §1 (l. 118–150, 180–215, 265–290), §2 (l. 294 `eq:g`),
 §3 (l. 430–470 `def:PD`, `prop:weak`, `prop:P` l. 604 ff.), §5 (l. 880–900 `thm:C`), §5.x (l. 985–1005
 `subsec:compare`), §7 (l. 1120 `def:W`, l. 1135 `thm:Z`, l. 1176 `thm:Zexh`, l. 1206 `cor:RH`,
 l. 1224 `cor:zeros`, l. 1350 `thm:finZ`, l. 1453 `prop:finuniv`, l. 1538 `rem:RHcert`, l. 1554
@@ -54,7 +54,7 @@ indeed **false as stated** — `thm:C`'s `β=(2.00256\ldots,-0.00965\ldots)\ne(2
 defect `|β_0-2|\hat g_0(0)=5.9\cdot10^{-3}\gg c=8.86\cdot10^{-5}` is not absorbable. The conclusion
 "therefore nothing unconditional" is what fails (E1).
 
-## §3 Paper 47: does it over-claim? (item 7(b))
+## §3 Paper 46: does it over-claim? (item 7(b))
 
 Grep of `\lamW`, "complete Weil form", "Weil form" over `main.tex`: **no over-claim found.** The
 abstract quotes `λ_min\ge8.8577\cdot10^{-5}` for `A_T` "with the two Tate moments killed" (primitive);
@@ -72,7 +72,7 @@ not a new range" — add "of the **primitive** form", since Zhu's is the complet
  `R155_014` Rem. 2.5 is correct and is the file's real contribution.
 - §4(iii) extremal extensions: `HEURISTIC`. Row-D label: **unchanged**, no sign.
 
-## §5 Readiness of the Paper 47 proposals
+## §5 Readiness of the Paper 46 proposals
 
 (1) §7.x with Def. 2.1 + Lemma 2.2 + Thms 1–3: **ready after M1 and E1**; it is a reformulation, and
 must be presented as such. (2) Thm 4 **should** replace `thm:finZ`'s proof (prove Thm 4, derive

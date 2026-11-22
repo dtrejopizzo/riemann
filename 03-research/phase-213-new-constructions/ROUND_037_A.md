@@ -32,7 +32,7 @@ On the lattice γ_k=2πk/D, k an integer, the Mellin numerator is 1−exp(−(s+
 
     R_{γ_k}F_D = T_k F = ∫₀ᴰ exp((−a+iγ_k)t) S_{exp(−t)}F dt.
 
-Each profile is smooth and its two moments vanish by integrating those of the dilations. Its physical support lies within [δ exp(−D),b]. Every contact with n≥exp(D)/δ disappears, with the same cut for each k. On that lattice the full form coincides with the primitive energy of P47 on a common logarithmic window. The necessary half-width is at most (D+log(b/δ))/2 after centring. There is no universal bound for D here.
+Each profile is smooth and its two moments vanish by integrating those of the dilations. Its physical support lies within [δ exp(−D),b]. Every contact with n≥exp(D)/δ disappears, with the same cut for each k. On that lattice the full form coincides with the primitive energy of P46 on a common logarithmic window. The necessary half-width is at most (D+log(b/δ))/2 after centring. There is no universal bound for D here.
 
 **Check by summation.** For any F in X₀, Parseval on [0,D] with values in the energy space gives
 
@@ -40,4 +40,4 @@ Each profile is smooth and its two moments vanish by integrating those of the di
 
 Indeed T_kF are the unnormalized Fourier coefficients of exp(−at)S_exp(−t)F; apply polarized Parseval with the bounded operator A. The series converges absolutely by |B∞(v)|≤||A|| I(v) and Parseval for I. Finally B∞(S_exp(−t)F)=exp(−t)B∞(F). The identity sums the individual signs; it does not ensure the sign of each term.
 
-Antecedents: SELECTION_027, P47 rem:Sren and POWER_DESCENT_016 already contain the delay that truncates an exponential average. Here a single small perturbation of F preserves the margin and simultaneously truncates the whole lattice. Negativity of these individual profiles does not imply negativity of their span nor give an unconditional negative test. Proof audited.
+Antecedents: SELECTION_027, P46 rem:Sren and POWER_DESCENT_016 already contain the delay that truncates an exponential average. Here a single small perturbation of F preserves the margin and simultaneously truncates the whole lattice. Negativity of these individual profiles does not imply negativity of their span nor give an unconditional negative test. Proof audited.

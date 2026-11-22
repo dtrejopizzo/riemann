@@ -9,7 +9,7 @@ The audit separates three statements.
 2. The conservative rectangular coligation of the prime channels was
    already built in D.244--D.247.
 3. A local orthogonal realization on the fibers \(dm=k\) cannot be glued
-   to Paper 47's primitive space. The remaining coherent channel has infinite
+   to Paper 46's primitive space. The remaining coherent channel has infinite
    rank, while Tate removes only two modes. This is `PROVED` below.
 
 The piece still alive is a **nonlocal** common factor of the joint
@@ -68,7 +68,7 @@ Suppose a local construction requires
 for every \(F\in\mathcal P_T\). If the left-hand side is
 \(m_S(\tau)\widehat{J_TF}(\tau)\), then (1.3) forces \(F=0\).
 
-Hence the local condition does not describe Paper 47's primitive space;
+Hence the local condition does not describe Paper 46's primitive space;
 it collapses it. The identity \(\Lambda*1=\log\) fixes the sum of coefficients
 on each arithmetic fiber, but it does not turn two global moments into
 the pointwise condition (1.3).
@@ -135,7 +135,7 @@ square root of the left-hand side, or via
 
 If `NGF` is proved uniformly in \(N,T,\varepsilon\), the monotone limit
 \(\varepsilon\downarrow0\) gives the range condition and the Douglas
-inequality with constant one. The chain D.170--D.190 and Paper 47 turn that into
+inequality with constant one. The chain D.170--D.190 and Paper 46 turn that into
 the vanishing at first contact.
 
 ## 4. External priority audit

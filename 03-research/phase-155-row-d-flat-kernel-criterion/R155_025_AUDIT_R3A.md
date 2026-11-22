@@ -119,7 +119,7 @@ matrix = `max|P_T(F)|` at `‖F‖ = 1`. ✓
 
 **Error 6 (notation).** `P_T` denotes both the primitive subspace and the prime quadratic form
 throughout §2–§3; `‖P_T‖` and `F ∈ P_T` sit in the same sentence at `:120` and in the same table
-header at `:177`. Rename the form (e.g. `Π_T`) before any of this reaches Paper 47 §8.
+header at `:177`. Rename the form (e.g. `Π_T`) before any of this reaches Paper 46 §8.
 
 ## §7 §5 (the corollary for `D`)
 - §5.1: `β = (2,0)` being the unique polar choice is `prop:P` ✓; that the optimum sits `1.3·10⁻³`
@@ -129,7 +129,7 @@ header at `:177`. Rename the form (e.g. `Π_T`) before any of this reaches Paper
 - §5.2 **Error 7 (`:243–249`).** What Corollary 2 + Prop 3(i) prove is only: past `T*_{∞,P}` any proof
  must show `P_T(F) ≥ −A_∞(F)` on a nonempty negative cone. The further claim that "`ν` reaches the
  inside comb *only* through `ν̂`'s oscillation at frequencies `≲ τ₀`" does **not** follow from
- Paper 47 §7: `main.tex:1052, 1070` show the inside and outside prime terms combining into a single
+ Paper 46 §7: `main.tex:1052, 1070` show the inside and outside prime terms combining into a single
  `−Σ_{n≥2} v_n w(log n) cos(τ log n)` valid at **all** `τ`; the restriction to `|τ| < τ₀` is where
  positivity is *needed*, not where the outside atoms *act*. The stated "sign pattern in phase with
  the inside comb on `|τ| < τ₀`" is a plausible reading, not a necessary condition.
@@ -170,7 +170,7 @@ space — the closest prior art to this round's main finding, and a corroboratio
 be claiming. Add it. No other omission found: `grep` for `lambda^inf`, `archimedean threshold`,
 `T\*_` returns nothing outside phase 155.
 
-## §11 What is paper-ready for Paper 47 §8
+## §11 What is paper-ready for Paper 46 §8
 
 **Ready, as a proposition with `DIAGNOSTIC` values.**
 > *Proposition (archimedean thresholds).* Let `A_∞` be the prime-free Weil form. Then `λ^∞_min` and

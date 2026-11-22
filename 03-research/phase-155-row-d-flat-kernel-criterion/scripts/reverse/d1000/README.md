@@ -45,7 +45,7 @@ see `runall.sh`; runtimes and outputs (`d_*.json`, `chk_*.json`, `insight.json`)
 the scripts, and the console log is `runall.log`.
 
 ## certification used for the reported minima
-`f_w` is band-limited of type `U = sup supp w`, so (Paper 47 `lem:bern`, in the sharper
+`f_w` is band-limited of type `U = sup supp w`, so (Paper 46 `lem:bern`, in the sharper
 `‖f″‖_∞δ²/8` form of its own proof) `min_ℝ f ≥ min_grid f − ‖f″‖_∞ δ²/8`, and
 `‖f″‖_∞ ≤ 4∫u²|w(u)||Z(u)|du =: B₂` is computed from the same quadrature with a rigorous running-max
 envelope for `|Z|`. **This certifies the minimum over the LP's τ-interval only**, never over `ℝ`.

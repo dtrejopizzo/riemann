@@ -72,7 +72,7 @@ written ("not evidence of the same kind") it is interpretive; label the sentence
 The Hilbert-space dual `d_N=sup{⟨1,φ⟩:‖φ‖≤1, φ⊥V_N}` is correct, the direction of the two duals is
 correctly opposed, and `HEURISTIC` is the right label. No change.
 
-## 8. Readiness for Paper 47 (§6 of R155_034)
+## 8. Readiness for Paper 46 (§6 of R155_034)
 - **Items 1–2 (L1+L2 after `cor:nontermwise`): READY after the §2 fix.** Include the closed form
 `w_n=−½e^{−|u|/2}L_n'(|u|)` and state L2(b) in its sharp form (`ŵ_n(±i/2)=∞`, prime sum divergent ⟹
 `w_n` is not an admissible explicit-formula test). Do **not** carry §2.2's convergence sentence in.

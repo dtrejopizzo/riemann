@@ -27,7 +27,7 @@ the certificate is archimedean domination (Yoshida Lemma 2 quantified) and the h
 - Margin decomposition, near-null `v1` (even, boundary-concentrated), failed `½ log 5` extension (two cross terms
   never computed): `03-research/phase-118-the-exact-threshold-inequality/W4_CERTIFIED_RANGE.md` §§2–5.
 - Phase 119 README: `A_T ≥ 0 ∀T ⟺ RH` (Weil/Yoshida/Bombieri); no extra arithmetic input claimed.
-- `Ξ_a` falsifier and its four substitutions (Prop. 12.6 of Paper 46 `04-papers/46-intersection-frame-defect/archive/main.md`; grep
+- `Ξ_a` falsifier and its four substitutions (Prop. 12.6 of Paper 47 `04-papers/47-intersection-frame-defect/archive/main.md`; grep
   `Ξ_a`, `Proposition 12.6`): coefficients `Λ(n)(n^a+n^{-a})`, doubled archimedean block, four polar points
   `0,1,±a`-shifted; zeros at `Re s = ½ ± a`. Also Epstein `Ξ_Q` (T2, phase 150 R150_003) and Beurling (T3).
 - Phase 137: `R137_001_ROUND1.md` §3 (D.12: first unpaid term at `2T = log 2` is

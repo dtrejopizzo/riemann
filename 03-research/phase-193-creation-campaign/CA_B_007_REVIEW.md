@@ -2,14 +2,14 @@
 8331–8345 (O-list), lem:shape-quartet (l. 8429), lem:shape-ft (l. 8435), prop:quartetmodel (l. 7964), prop:finite(ii), thm:ceiling, prop:summable, cor:shape(a), lem:compact.
 
 ## Verdict
-**Label correction CONFIRMED (P47: O7 = quartets, O8 = f_t). Prop 1 CONFIRMED (O7 PROVED from lem:shape-quartet verbatim; O8 ARGUED). Convex decomposition EXCLUDED (REF-D / class (D)), reductions checked. §3 concavity gap Γ: Prop 2 CONFIRMED; Γ as sign source = OPEN, pre-flagged REF-D — NOT an admissible candidate yet.**
+**Label correction CONFIRMED (P46: O7 = quartets, O8 = f_t). Prop 1 CONFIRMED (O7 PROVED from lem:shape-quartet verbatim; O8 ARGUED). Convex decomposition EXCLUDED (REF-D / class (D)), reductions checked. §3 concavity gap Γ: Prop 2 CONFIRMED; Γ as sign source = OPEN, pre-flagged REF-D — NOT an admissible candidate yet.**
 
 ## 1. Claims
 | claim | check | label |
 |---|---|---|
 | Prop 1(a) O7 moves the point ν_ζ ↦ ν_ζ − kβ_z, set fixed | lem:shape-quartet: "keep the comb exactly…arithmetic side differs only by the a.c. part −kβ_z" ✓ | CONFIRMED PROVED |
 | Prop 1(b) O8 point move along atoms off log ℕ | lem:shape-ft: frequencies m/√M not integers ✓; weights not reproduced | ARGUED (as labelled) |
-| TV-ball of radius λ_A | |c_F| ≤ 1 ✓; = P47 l. 8348 in measure form | CONFIRMED (not new) |
+| TV-ball of radius λ_A | |c_F| ≤ 1 ✓; = P46 l. 8348 in measure form | CONFIRMED (not new) |
 | N_012 row: two-point decomposition forces t′ = 1/(1−θ) > 1 | ν₂ = ρ + (ν_ζ−ρ)/(1−θ) ✓ | CONFIRMED |
 | ceiling row: Σθ_i r_i = 1, r_i ≤ 1 ⇒ r_i = 1 | ✓ (for nonnegative atomic pieces on log ℕ positive at all T) | CONFIRMED |
 | class (D) row: concavity chain is linear in ν | ✓ cor:shape(a) | CONFIRMED |

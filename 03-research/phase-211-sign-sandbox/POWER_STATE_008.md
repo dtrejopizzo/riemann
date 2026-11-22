@@ -17,7 +17,7 @@ Accumulated valid results: all triples a_i>=32 with margin1/20 (004); confluence
 
 1. Four arbitrary exponents>=32: only an earlier high range and a confluent/local neighbourhood exist; uniformity not proved.
 2. All orders on a dense family: open. The bridge is proved, but the margins of finite blocks do not prove uniformity nor passage to the limit without the sign of all of them.
-3. Closure of the sign of Paper47: not obtained. Do not edit papers nor declare the goal complete.
+3. Closure of the sign of Paper46: not obtained. Do not edit papers nor declare the goal complete.
 
 ## Next useful problem
 

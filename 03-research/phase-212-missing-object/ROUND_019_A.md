@@ -1,7 +1,7 @@
 # Round 19, memo A — Scale control: is the margin `e^{−2πe^{2T}}` the lattice tail beyond `N = e^{2T}`?
 
 Control note, deliberately modest. It is not a sign proof and is not presented as one. Notation of
-P47 and of round 7: `a_T(F) = Arch(F) − Σ_n v_n c_F(log n)`, `v_n = 2Λ(n)/√n`, `c_F(u) = ∫F(t)F(t−u)dt`,
+P46 and of round 7: `a_T(F) = Arch(F) − Σ_n v_n c_F(log n)`, `v_n = 2Λ(n)/√n`, `c_F(u) = ∫F(t)F(t−u)dt`,
 `P_T = {∫F e^{±t/2} = 0}`, `N := e^{2T}`. `W_*` = form of the explicit formula in the Weil class
 `D^W` (prime sum over all `n`), as in `phase-160-row-d-infinite-T/R160_M4_R1.md`.
 

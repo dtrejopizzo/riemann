@@ -1,9 +1,9 @@
 # R162_303 — C3: certified positivity of the primitive form at T = ½log5
 
 Status: **CERTIFIED (machine-verified, ball arithmetic)**, pending audit.
-Scripts and certificate data: `scripts/c3/`. Paper 47 and all other files are untouched.
+Scripts and certificate data: `scripts/c3/`. Paper 46 and all other files are untouched.
 
-Notation is Paper 47's: a_T is the truncated Weil form (eq:form), P_T = {A = B = 0} is the primitive
+Notation is Paper 46's: a_T is the truncated Weil form (eq:form), P_T = {A = B = 0} is the primitive
 subspace, λ_A(T) is the bottom of a_T on the unit sphere of P_T, and e_l(t) = √((2l+1)/2T) P_l(t/T).
 Also s_T(τ) = m(τ) − Σ_{n∈N_T} v_n cos(τ log n), m(τ) = Re ψ(¼+iτ/2) − log π, v_n = 2Λ(n)/√n.
 At T₀ = ½log5 the contact set is N_T = {2,3,4}, with Σv_n = A_T = 2.94186….
@@ -29,7 +29,7 @@ consistent with the doubly exponential decay −log λ ≍ e^{2T}: the even bott
 
 **Validation.** The same code at T = ½log3 (N_T = {2}, even sector, τ_N = 40) certifies
 λ_even ≥ 6.3·10⁻⁴ and fails at 6.5·10⁻⁴. A float Galerkin computation of the same lower form gives
-6.39·10⁻⁴. Both are consistent with Paper 47 thm:C (λ_A ≥ λ^P ≥ 8.86·10⁻⁵).
+6.39·10⁻⁴. Both are consistent with Paper 46 thm:C (λ_A ≥ λ^P ≥ 8.86·10⁻⁵).
 
 ## 1. The lower form (frequency truncation, primes included)
 
@@ -149,7 +149,7 @@ bound is within a small factor of the true bottom, which is of order 10⁻¹².
 
 ## 5. What the proof uses (audit checklist)
 
-- From Paper 47: lem:mbounds(i) (m increasing, m(0) = C₀), thm:P (trace identity and Ky Fan tail),
+- From Paper 46: lem:mbounds(i) (m increasing, m(0) = C₀), thm:P (trace identity and Ky Fan tail),
   cor:P1, lem:border, lem:monoT, and the parity splitting of P_T.
 - Adapted in §3: prop:haynsworth for an indefinite G (the proof is given in §3).
 - External: Trefethen's Gauss-quadrature bound; DLMF 10.54.2 and ∫_{−1}^{1}P_l(u)e^{xu}du = 2i_l(x);

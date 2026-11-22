@@ -51,7 +51,7 @@ class lemmas.
 | (P1) Non-affine dependence on the weight that degenerates at c = 1 (A1) | determinant, partition function, index, dimension, jumping cohomology | Indices and dimensions: constant near c = 1 in a fixed window (R4-f). Determinant / partition: L1 |
 | (P2) Positivity without margin (λ_A ≤ 4·10⁹Te^{−15.449T}) | identity "= Σ squares"; inequality with an equality case; integer quantity | Integer quantity: R4-f. Identity: it is (G) itself |
 | (P3) Uses the two moment conditions essentially (A3) | object whose gradient at the base point is the Tate vector | L3: in the Lorentzian format this is forced, not a choice |
-| (P4) Window in c closing on 1 from both sides | concave function of c with maximum at c = 1 (λ_A(T;c) is an infimum of affine functions) | Any mechanism whose hypothesis holds on a set of c independent of T fails (P47 thm:shape, cor:void) |
+| (P4) Window in c closing on 1 from both sides | concave function of c with maximum at c = 1 (λ_A(T;c) is an infimum of affine functions) | Any mechanism whose hypothesis holds on a set of c independent of T fails (P46 thm:shape, cor:void) |
 | (P5) Euler product and fixed archimedean factor; c = 2 must break through the archimedean factor (A5) | closure under product (log-concavity, Lorentzianity, stability) | L2: closure by product is a local distribution; with free distribution it is the target, with covariant distribution it falls into Theorem S |
 | (P6) c = 1 unique: lattice ℤ self-dual by Poisson | Poisson / theta identity | D6, D14, D15 of `RULES_AVOID.md` (theta, completion of squares, local metrics) |
 
@@ -215,4 +215,4 @@ If one wants to continue along this class: write an r_p with its own formula dep
 sure on the torus and not translation-invariant, and verify r_p ⪰ Π_p for p = 2, 3 at T = 0.5925 on the
 test pair of G2_B8_R5 §4 (where every LK distribution fails). Without that formula, the class remains closed as stated
 above. Not cross-checked in primary sources: phases 15, 40–43, 120 (collision matroid, cited by the annex), 137–142,
-Paper 46, and `00-references/`.
+Paper 47, and `00-references/`.

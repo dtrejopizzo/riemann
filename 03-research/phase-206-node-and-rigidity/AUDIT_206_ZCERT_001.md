@@ -1,7 +1,7 @@
 # AUDIT_206_ZCERT_001 — Review of ZCERT_001 (zero-side certificate of the node)
 
 Phase 206. Material: ZCERT_001.md and ZCERT_001_data/ (zcert.py, tstar.py, finegrid.py,
-post.py, run.log, json), H1PLUS_001 (1.4), P47 main.tex (eq:Aform, lem:archcount, lem:combsine, cor:margin1,
+post.py, run.log, json), H1PLUS_001 (1.4), P46 main.tex (eq:Aform, lem:archcount, lem:combsine, cor:margin1,
 cor:H1minus, rem:chiev-sine, rem:finitesign, bibitems), CALIB_R4_001, AUDIT_ZENODO_FRONTIER.
 Own recomputation: `AUDIT_206_ZCERT_001_data/audit_repro.py` (+ `audit_repro.log`).
 
@@ -38,7 +38,7 @@ counted again: correct, on the line 1−ρ = ρ̄). The numerical calibration is
 F ⊥ c, K = 2000 gives 0.0018523932 versus 0.0018523954 from the prime side (AUDIT_206_001). The difference 2.2·10⁻⁹
 is positive in the right direction (truncating at K only lowers) and of the order of the tail Σ_{γ>γ_K}Φ² ~ ω²/(Tγ_K³)·log γ_K.
 A missing factor of 2 or 1/2π would give O(1) error. **PROVED-consistent / NUMERICAL for the constant**, more than enough:
-the constant is that of P47 for 𝔄 (=𝔞_T of eq:Aform) on c^⊥, which is what the node needs. Editorial pending: P47
+the constant is that of P46 for 𝔄 (=𝔞_T of eq:Aform) on c^⊥, which is what the node needs. Editorial pending: P46
 does not define "W^ev_T" under that name in def:W; the remark should talk about 𝔄_ev and Z_T, not W (see §8).
 
 **On c^⊥.** c_k = ⟨χ_ev, e_k⟩ (rem:chiev-sine) and, for even F, ⟨F,χ_ev⟩ = ∫F cosh(x/2) = Φ_F(1) = Φ_F(0). Therefore
@@ -97,7 +97,7 @@ line. Correct. Factor (H²/(H²−¼−ω_max²))²: bound of (γ²−¼−ω²)
 
 - **Zeros.** `acb.zeta_zeros` (Arb; Johansson) returns isolated, certified balls for the first K zeros; the
   imaginary parts used are balls. That they are on the line is certified by the routine itself (Turing's method) and also by
-  Platt–Trudgian. **CITED** (Johansson 2017 IEEE TC; bibitem Johansson2017 already exists in P47, l. 11448).
+  Platt–Trudgian. **CITED** (Johansson 2017 IEEE TC; bibitem Johansson2017 already exists in P46, l. 11448).
 - **Matrix.** `build` assembles M_on in arb_mat (balls). Rigorous.
 - **Trick L·ccᵀ.** If M + L ccᵀ − εI ≻ 0, for x ⊥ c: xᵀMx − ε‖x‖² = xᵀ(M + Lccᵀ − εI)x > 0. Correct (for every L > 0).
   Since c is in balls, ⊥ is with respect to the true c, contained in the ball: a successful Cholesky holds for every
@@ -196,7 +196,7 @@ value ≥ λ^W. The slope 22→28 of log μ_N is larger than 15.449: cor:margin1
 own footnote admits. NUMERICAL for the functional form (−10.7T − 5.9T log T is a 6-point fit; do not extrapolate).
 For (H_N): it only says that μ_N of the canonical block does not admit e^{−cT} with c ≤ 25 on [2,8] — evidence, not proof.
 
-## 7. rem:zcert against P47
+## 7. rem:zcert against P46
 
 - eq:Aform: 𝔞_T is the full form (archimedean + Lévy − comb); 𝔄_ev its even restriction: correct to use 𝔄.
 - lem:archcount: N(T) = ⌈2Tt₀/π⌉ − 1 with t₀ = 6.2898…; ZCERT uses 6.289836: consistent. lem:archcount declares t₀
@@ -266,7 +266,7 @@ mechanism.
 ```
 (Bibitem to add: `\bibitem{Trudgian2014} T.~S.~Trudgian, \emph{An improved upper bound for the argument of the
 Riemann zeta-function on the critical line II}, J.~Number Theory \textbf{134} (2014), 280--292.` The editor must
-verify the "certified bottom" citation against item L104/Mori already CITED in P47 and the normalization of λ^W in def:W.)
+verify the "certified bottom" citation against item L104/Mori already CITED in P46 and the normalization of λ^W in def:W.)
 
 ## 9. Audit reproducibility
 

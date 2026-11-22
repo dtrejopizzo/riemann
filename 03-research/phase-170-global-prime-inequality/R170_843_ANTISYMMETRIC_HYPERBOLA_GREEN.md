@@ -1,7 +1,7 @@
 # R170_843 — Antisymmetric Green of the hyperbola: Laplace sign, support collision and minimal Hankel lift
 
 Continuation of R161_057--065, R170_840 and
-R170_841. Paper 47 is not modified.
+R170_841. Paper 46 is not modified.
 
 **Domain correction (R170_844).** The energy and the collar of
 \(\mathcal A^{\rm raw}\) of §§5--6 are valid. However, the

@@ -1,6 +1,6 @@
 # AUDIT_195 — audit of INV_L_001 (phase 194) and INV_M/N/O/P_001 (phase 195)
 
-Audit. Checked against Paper 47 main.tex: eq:symbol/eq:form
+Audit. Checked against Paper 46 main.tex: eq:symbol/eq:form
 (s_T = m − Σ_{N_T} v_n cos, v_n = 2Λ(n)/√n), eq:W, eq:m (C_0 = −5.3721834), λ_A/λ_W (l.129), thm:band (l.7489), thm:C/sec:cert, thm:O, eq:nuw.
 
 ## (a) INV_L_001 — L3 Green identity: VERIFIED, one correction
@@ -36,7 +36,7 @@ Audit. Checked against Paper 47 main.tex: eq:symbol/eq:form
 
 ## (d) INV_M_001 — CONFIRMED
 - M0: the thm:band subspace span{V_{∓D/2}F₀} lies in 𝒫_T, so λ_A(T) > 0 gives a PD 2×2. Zhu certifies the complete form (λ_W ≤ λ_A, so it
-  transfers); a cleaner citation is P47's own certified λ_A ≥ 2.5e−12 on T ≤ ½log5. Face {1,3} at T = log 2 needs T₀ ≤ 0.144.
+  transfers); a cleaner citation is P46's own certified λ_A ≥ 2.5e−12 on T ≤ ½log5. Face {1,3} at T = log 2 needs T₀ ≤ 0.144.
 - M1/M2 correct (Brändén 2007 Rayleigh criterion for multi-affine; specialisation at real 0 preserves stability). NO-GO is narrow:
   a PD Gram symbol is never real stable. Labels OK.
 

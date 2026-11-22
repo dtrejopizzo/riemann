@@ -1,7 +1,7 @@
 # Phase 211 — The sign of the window form, in isolation
 
 Target: (★) λ_A(T) ≥ 0 for every T > 0 ([STATEMENT_001.md](STATEMENT_001.md)). The sign of the
-Paper 47 window form is treated as a statement about one explicit quadratic form (s_T, a_T, P_T, λ_A)
+Paper 46 window form is treated as a statement about one explicit quadratic form (s_T, a_T, P_T, λ_A)
 and nothing else; no equivalence with any other statement is used, named or reasoned from, at any
 step. Pure mathematics; computations only to validate single concrete points. No paper is edited
 until the sign is proved.

@@ -1,7 +1,7 @@
 # Round 21, memo A — The near-radical family `{Π_T(M∗φ)}`: count and structural statement
 
 Note of computation and structure. It is not a sign attempt. Notation of round 7:
-`a_T(F) = Arch(F) − Σ_n v_n c_F(log n)` on `P_T = {∫F e^{±t/2} = 0}`; `W_*` the global form (P46 §11);
+`a_T(F) = Arch(F) − Σ_n v_n c_F(log n)` on `P_T = {∫F e^{±t/2} = 0}`; `W_*` the global form (P47 §11);
 `K_Pó` the Pólya kernel, `M = −K_Pó″ + ¼K_Pó`, `Φ_M(s) = s(1−s)ξ(s)`; `X_T` as in `R160_M4_R1.md` and `ROUND_019_A.md`.
 
 ## Four-point filter (cross-check first)
@@ -19,7 +19,7 @@ Note of computation and structure. It is not a sign attempt. Notation of round 7
    - `phase-211-sign-sandbox/ROUND_006_A.md` Theorem 5 and `ROUND_006_C.md` (P211-6C): UPPER bound
      `m_δ(T) ≤ exp(2e^T(1+o(1)))`; `ROUND_005_B.md` (P211-5B): numerical cluster sizes `2,4,6,9,16,26`;
      `ROUND_005_E.md` l.242: no archimedean lower bound of the cluster; P211-8E, P211-9B, P211-17A.
-   - P47 `cor:nasym` (`n_−(Arch|P_T) ≈ 4.004·T`), `thm:coer-schur`, `rem:coer-size` (dimension `2k−2` doubly
+   - P46 `cor:nasym` (`n_−(Arch|P_T) ≈ 4.004·T`), `thm:coer-schur`, `rem:coer-size` (dimension `2k−2` doubly
      exponential); phase 212: `ROUND_019_A`, `ROUND_020_A`, `ROUND_020_B`, `ANNEX_MARGIN_CONFLICT`.
 2. **What is new.** Only (a) the family written with general convolution `φ` (the corpus uses polynomials in `∂`
    and translations, which are the case `φ` = finite combination of `δ^{(j)}_b`); (b) a Weyl LOWER bound for
@@ -41,7 +41,7 @@ with `u_±` fixed in `C_c^∞(I)` dual to the moments `A, B` (`A(u_+)=1, B(u_+)=
 `Φ_{F_φ}(0) = Φ_{F_φ}(1) = 0`, `A(F_φ) = B(F_φ) = 0`, hence `A(χF_φ) = −A(R_φ)`, and `Π_T(φ) ∈ P_T`.
 
 **Exact identity.** Since `F_φ` is in the radical of `W_*` (its transform is `Φ_M·φ̂`, divisible by `ξ`;
-P46 Thm 11.11, R160 Lemma 2(a)) and `a_T = W_*` on functions supported in `I` (P47):
+P47 Thm 11.11, R160 Lemma 2(a)) and `a_T = W_*` on functions supported in `I` (P46):
 
     a_T(Π_T φ) = W_*(R_φ + A(R_φ)u_+ + B(R_φ)u_−) =: 𝔡_T(φ).                  (1.1)
 
@@ -80,7 +80,7 @@ The height `4e^{2T}` coincides with that of R160 Theorem D (reading). Order of m
 at `T = 1, 1.2, 1.4`, comparable with the sizes of `P211-5B` (NUMERICAL there, not rederived).
 
 **Comparisons.**
-(a) `n_−(Arch|P_T) ≈ 4.004 T` (P47 `cor:nasym`, CITED): the near-radical cluster, `≍ e^{2T}`, is much
+(a) `n_−(Arch|P_T) ≈ 4.004 T` (P46 `cor:nasym`, CITED): the near-radical cluster, `≍ e^{2T}`, is much
 larger; it is not the archimedean negative space (consistent with P211-7B: «block = resonances of the comb»).
 (b) `S_{T,k}`: size `2k−2 ≥ exp(c e^T)` (`rem:coer-size`, CITED), and `c(T,k) > 0` on the complement
 `𝒱_k ∩ 𝒟_T` forces the whole cluster `≍ e^{2T}` (eigenvalues `≤ ε < c`) to lie, up to an angle

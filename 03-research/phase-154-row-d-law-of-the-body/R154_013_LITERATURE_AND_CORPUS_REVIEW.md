@@ -61,5 +61,5 @@ statement of the finite-support dual equivalence itself.
 
 **Actions before publication:** obtain Bombieri 2000 and Yoshida 1992; read Suzuki
 arXiv:2206.03682 / 2301.00421 for any Lévy–Khintchine statement of the screw kernel; read Zhu
-arXiv:2608.24827 and Groskin arXiv:2607.02828 in full and cite them in Paper 46/47; verify or drop
+arXiv:2608.24827 and Groskin arXiv:2607.02828 in full and cite them in Paper 47/47; verify or drop
 the unverified "`log 2 ≤ L < log 3` via `−W₂`" attribution to Connes–Consani.

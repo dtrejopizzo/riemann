@@ -17,7 +17,7 @@ its reflection preserves the even weight. A_MF∈L² is not required.
 
 We fix δ=1 so as not to leave another quantifier implicit. For T>0,
 N=ceil(exp(2T)), M=N² and a finite number L of moments, we take R_L and
-S_L exactly as in Paper 47, with their outputs extended by zero. For a
+S_L exactly as in Paper 46, with their outputs extended by zero. For a
 primitive contact vector F, let r be its Tate vector and set
 
     g=S_LF,             h=S_N U g,
@@ -57,7 +57,7 @@ Compared with the initial proposal,
 Term (D) has no known sign and must be subtracted, not discarded.
 
 For smooth F with compact interior support, there is also an ordinary
-exterior formula. With K from Paper 47 and t outside I_T,
+exterior formula. With K from Paper 46 and t outside I_T,
 
     (A_MF)(t)=−(1/2)∫_{I_T} K(|t−s|)F(s)ds
              −Σ_{2≤d≤M} Λ(d)/√d [F(t+log d)+F(t−log d)].
@@ -89,7 +89,7 @@ allow those signs. Their choice produces a specific proposal that must
 be justified or abandoned, not a theorem about the primes.
 
 If both obligations were proved with the same quantifiers, R_LF=0; the
-injectivity on the radical would exclude F≠0. The Paper 47 primitive
+injectivity on the radical would exclude F≠0. The Paper 46 primitive
 first contact and Theorem F of Paper 45 would give the global
 conditional closure. This dependency does not need to assume that a
 complete contact is primitive. Neither obligation has been proved.

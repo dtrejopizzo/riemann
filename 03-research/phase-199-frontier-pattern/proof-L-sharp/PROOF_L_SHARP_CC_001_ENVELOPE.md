@@ -1,7 +1,7 @@
 # PROOF_L_SHARP_CC_001 — the uniform prolate envelope on t > 1 and the caustic-layer diagonal (thm:ext-layer(iii))
 
 Phase 199, Pen and paper only (no numerics; constants are hand-derived and NOT numerically audited).
-Notation of Paper 47 §22.4: c = 2πN, ψ = ψ_k real, ‖ψ‖_{L²(ℝ)} = 1, concentration χ_k (so ∫_1^∞ψ² = ½(1−χ_k)),
+Notation of Paper 46 §22.4: c = 2πN, ψ = ψ_k real, ‖ψ‖_{L²(ℝ)} = 1, concentration χ_k (so ∫_1^∞ψ² = ½(1−χ_k)),
 differential eigenvalue ϑ = ϑ_k; ODE ((t²−1)ψ′)′ + (c²t² − ϑ)ψ = 0 on t > 1 (ψ is entire; Slepian duality makes the exterior
 datum a constant multiple of ψ|_{(1,∞)}: CITED, Slepian–Pollak 1961, used as in the paper).
 
@@ -91,7 +91,7 @@ bound is meaningful but crude there; the constants are not optimised — e.g. K 
 **Leading-order mass law (PROVED).** ψ²dt = (C_c²/2)(1 + O(ν))dθ + (oscillating part, Lemma CC.3) + (error ≤ σ e^{σ}), i.e. the
 one-sided exterior mass is distributed as (1−χ_k)/π·dθ up to the explicit errors above.
 
-## 7. What changes in Paper 47 (do not edit; note only)
+## 7. What changes in Paper 46 (do not edit; note only)
 - thm:ext-layer(iii): label "(layer diagonal)" under "Assume the uniform Bessel–Langer expansion" can become **proved**, with the
   hypothesis replaced by (H_ν): ϑ_k ≤ c²/4, c ≥ 200, and "(1+o(1))" by "(1+η), |η| ≤ (21.4 log c + 1.54ϑ_k/c + 523)/(c(1−|e₁|))".
   The theorem title "conditional on the uniform prolate envelope" should drop "conditional" for (i)–(iii); (iv) stays not proved

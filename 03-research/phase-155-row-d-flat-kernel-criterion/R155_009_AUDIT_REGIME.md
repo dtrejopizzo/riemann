@@ -1,7 +1,7 @@
 # R155.009 — Audit of R155.008 (the regime law over 103 windows)
 
 *Phase 155. Target: `R155_008_REGIME_LAW_100_WINDOWS.md`,
-`scripts/reverse/regime_table.csv`, `scripts/reverse/regime/`. Read first: Paper 47 §2, §5, §7
+`scripts/reverse/regime_table.csv`, `scripts/reverse/regime/`. Read first: Paper 46 §2, §5, §7
 (Thm. Z, Cor. 7.4, Rem. 7.6), §8 (Prop. env, the three scales, Prop. TK), `R155_005`, `R155_006`.
 The 496 s 103-window run was **not** rerun (the load constraint); everything below is either a
 rerun of a ≤ 60 s script, a recomputation from the archived JSON/CSV, or a proof check.*
@@ -25,7 +25,7 @@ show a factor **3.17**. And the whole sweep runs in a class that is **56× weake
 | **E** entry law | `PROVED` | **ACCEPT the content, REPAIR the statement** (one-sided limits wrong; `τ_env` is the *multiplier-free* threshold only) |
 | **D** `D(T)=e^{A_T−2T}` | `PROVED` | **ACCEPT** (trivial substitution; reproduced to `1.7e−13` over 103 rows) |
 | **C** continuity | `PROVED` | **ACCEPT the proposition, REJECT the corollary and the "artefact" reading**; "real analytic off `{½log n}`" is **false** |
-| **M** `W_{T'}⊆W_T ⇒ λ^W ↓` | `PROVED` | **ACCEPT**, but it is Paper 47 Cor. `mono` with a one-line reason added, not a new result |
+| **M** `W_{T'}⊆W_T ⇒ λ^W ↓` | `PROVED` | **ACCEPT**, but it is Paper 46 Cor. `mono` with a one-line reason added, not a new result |
 | **Lemma R** rigidity | `PROVED` | **ACCEPT** modulo citing the inversion lemma; **REJECT consequence (b)** ("no finite zero universe admits a flat-top certificate") — the proof step is a non sequitur |
 | §2.4 cross-check (Thm. Z, 8 regimes) | `DIAGNOSTIC` | **ACCEPT**, reproduced from `crosscheck_regime.json` / `analysis2.log` |
 | §2.4 `1.6e−4` prime-cut artefact | `DIAGNOSTIC` | **ACCEPT**, reproduced in `analysis_primecut_eU.log`; a real and useful trap |
@@ -48,7 +48,7 @@ show a factor **3.17**. And the whole sweep runs in a class that is **56× weake
  `A_{T^+} − A_T = v_n`. Identically, `τ_env(½log n)/τ_env((½log n)^-) = e^{v_n}` (`:335`) must read
  `τ_env((½log n)^+)/τ_env((½log n)^-)`. Either fix the limits or define `N_T` with `≤` (then "left-
  continuous" must become "right-continuous"). One-word repair, but the statement as printed is wrong.
-* `τ_env := 2πe^{A_T}` is Paper 47 Prop. env's **multiplier-free** part only; the proposition's
+* `τ_env := 2πe^{A_T}` is Paper 46 Prop. env's **multiplier-free** part only; the proposition's
  threshold is `2πe^{A+‖ν‖_TV+o(1)}` (`main.tex:939`). Prop. E is therefore a statement about
  `2πe^{A_T}`, which for any actual `w`-certificate is *not* the verification threshold (see §3 below).
  Say so, or the proposition reads as a claim about certificates that it does not support.
@@ -81,11 +81,11 @@ repairs:
  does not test** — see §3.
 
 **(M) `:359–366`. ACCEPT.** Inclusion direction right: `w ≡ 1` on `[−2T',2T']` ⟹ `w ≡ 1` on
-`[−2T,2T]`, and Paper 47's decay hypothesis (`main.tex:983–986`) is imposed on `|u| ≥ 2T` with
+`[−2T,2T]`, and Paper 46's decay hypothesis (`main.tex:983–986`) is imposed on `|u| ≥ 2T` with
 `C, δ` existentially quantified, so enlarging `C` on the compact `[2T,2T']` gives `W_{T'} ⊆ W_T` ✓.
 `λ^W(T) = sup_{W_T} inf f_w` ⟹ non-increasing ✓ (`f_w` does not depend on `T`). The remark that the
 §2.1 sub-class is *not* nested (moving knots) is correct and is the right explanation of the in-regime
-wobble. Note this is Paper 47 Cor. `mono`/§8.3(4) (`main.tex:384, 1197`) restated on the dual side.
+wobble. Note this is Paper 46 Cor. `mono`/§8.3(4) (`main.tex:384, 1197`) restated on the dual side.
 
 **Lemma R `:409–422`. ACCEPT with one citation, REJECT consequence (b) `:423–430`.**
 * The proof is correct: positive definiteness from Bochner, the `3×3` Gram inequality
@@ -208,12 +208,12 @@ measured at a value floor set by `(h, J, U, L)`, not by the window. The file hal
 problem in §0.2–§0.4 and §9.1. The class choice is defensible (comparability across `T` was the
 `R155_006 §5` repair) but the price must be stated in §0.
 
-**(b) Why the zero-side LP is worse than the prime-side certificate (`λ_min ≥ 8.8577e−5`, Paper 47
+**(b) Why the zero-side LP is worse than the prime-side certificate (`λ_min ≥ 8.8577e−5`, Paper 46
 Thm. C).** The file only says "far weaker" (`:203`). The mechanism is available and should be named:
-Paper 47 Prop. TK (`main.tex:1237`) shows that lattice classes of step `d = 2T/M` are ceiling-limited,
+Paper 46 Prop. TK (`main.tex:1237`) shows that lattice classes of step `d = 2T/M` are ceiling-limited,
 with `Ceil(8) = −5.4·10⁻³ < 0` at `½log3` — "no lattice certificate of step `≥ 2T/8` can prove
 positivity at `½log3`". Here `h = 0.25` against `2T/8 = 0.1373`, i.e. an effective `M = 2T/h ≈ 4.4`,
-**coarser than the class Paper 47 already proves cannot certify**, and the measured `−1.8·10⁻²` sits
+**coarser than the class Paper 46 already proves cannot certify**, and the measured `−1.8·10⁻²` sits
 squarely in that regime (`λ_min(C_8) = −1.33·10⁻²`). Prop. TK does not literally apply (the spline/`ψ`
 class is a density, not an atomic lattice measure), so this is a reading, not a theorem — but it is
 the explanation of the floor and it makes the whole sweep's negativity unsurprising. A file whose
@@ -267,13 +267,13 @@ the safe claim and "the Nyquist reading does not survive" is one step further th
 Labelling: `DIAGNOSTIC` on every zero-derived number, in the file, in both READMEs and in every script
 docstring; circularity no-go cited (`phase-4-handoff/proofs/00-PROOF-LOG.md:168`, `phase-136 MAP_1:141`);
 no sign claim for `T > log 2`; endpoint of record unchanged (`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`);
-Paper 47 Thm. C used as the honest comparison. **ACCEPT, no label change.**
+Paper 46 Thm. C used as the honest comparison. **ACCEPT, no label change.**
 
 ---
 
 ## 7. The five §9 proposals
 
-1. **Regime dichotomy (E+D+C) for Paper 47 §8.2 — NEEDS REPAIR, then include.** Fix the one-sided
+1. **Regime dichotomy (E+D+C) for Paper 46 §8.2 — NEEDS REPAIR, then include.** Fix the one-sided
  limits of Prop. E; say `2πe^{A_T}` is the multiplier-free threshold (Prop. env's threshold for a
  flat-top certificate carries `‖ν_w‖_TV`, `≈ 48.7` for the weights measured here); delete "real
  analytic"; restate Prop. C's corollary as "the value of a `T`-independent shape family at a fixed
@@ -288,13 +288,13 @@ Paper 47 Thm. C used as the honest comparison. **ACCEPT, no label change.**
  Consequence (b) must not be printed as proved; at most as (b′) for compactly supported `w`, or as
  an open question.
 3. **Prop. M in §8.3(4) — include as one sentence, not as a proposition.** True, but it is Cor. `mono`
- with the class inclusion made explicit; Paper 47 already states the monotonicity. The valuable
+ with the class inclusion made explicit; Paper 46 already states the monotonicity. The valuable
  half is the remark that the *sub*-classes used by optimisers are not nested, so their measured
  non-monotonicity carries no information.
 4. **Sharpened bounded-profile conjecture (Problem A) — NEEDS REPAIR before it is stated.** The
  supporting numbers must be corrected: `0 ≤ w ≤ 1` "at 102 of 103 windows" is `‖w‖_∞ ≤ 1 + 10⁻²`
  at 102, `≤ 1 + 10⁻⁶` at 98; the profile universality is `0.133`, not `0.0785`; and the evidence
- comes from a class below Paper 47's own Prop. TK ceiling. As a *conjecture* with `R155_006 §12(ii)`'s
+ comes from a class below Paper 46's own Prop. TK ceiling. As a *conjecture* with `R155_006 §12(ii)`'s
  caveat (`0 ≤ w ≤ 1` **plus** a decay modulus) it is worth a line in Problem A; it is, as the file
  itself says, evidence for another upper bound, i.e. another negative.
 5. **Verification-budget lemma — DO NOT INCLUDE as stated.** The inequality
@@ -316,7 +316,7 @@ Paper 47 Thm. C used as the honest comparison. **ACCEPT, no label change.**
 * Prop. E, with one-sided limits fixed and `τ_env` named as the multiplier-free threshold.
 * Prop. C, as "continuity in `T` of the objective of a `T`-independent shape family at a fixed domain";
  without the corollary's extension to `W_T` / `λ^W`, and without "real analytic".
-* Prop. M, as a one-sentence strengthening of Paper 47 Cor. `mono`.
+* Prop. M, as a one-sentence strengthening of Paper 46 Cor. `mono`.
 * **Lemma R** + consequence (a). The one genuinely new and paper-ready statement of the file.
 
 **Survives as `DIAGNOSTIC`:** the 103-window table and `c_cert` (all negative, margin ≥ `2.8·10⁻²`);
@@ -344,8 +344,8 @@ as a property of `(h, J, U, L)`.
  limits under `reglib.py:141`'s strict `<`.
 
 **Must be added before any of this is quoted again:** (i) the class of `R155_008` is `56×` weaker at
-`½log3` than `R155_005`'s and coarser than Paper 47 Prop. TK's `M = 8` ceiling class; (ii) every
+`½log3` than `R155_005`'s and coarser than Paper 46 Prop. TK's `M = 8` ceiling class; (ii) every
 continuity/extrapolation reading is conditional on the frozen `τ ≤ 60` domain.
 
-*Row D label: unchanged. Endpoint of record: `λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` (Paper 47 Thm. C).
+*Row D label: unchanged. Endpoint of record: `λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` (Paper 46 Thm. C).
 No sign claimed for any `T > log 2`. Nothing in `R155_008` or in this audit is a statement about zeros.*

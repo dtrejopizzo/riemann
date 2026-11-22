@@ -1,7 +1,7 @@
 # R185.006 — Analytic positivity in the first window with a prime (½log2 < T ≤ ½log3)
 
 Sources: R183_018, R183_019 §1, R183_023, R183_026, R183_030 (+ editor's note),
-R184_003, CC 2006.13771 §6, Paper 47 (def:W, 𝒫_T, eq:nuw, thm:C, thm:log5A).
+R184_003, CC 2006.13771 §6, Paper 46 (def:W, 𝒫_T, eq:nuw, thm:C, thm:log5A).
 Scripts (NUMERICAL, outside the repo, scratchpad d9ffd571…): `r185_006.py`, `r185_006b.py`, `r185_006c.py`
 (reuse `r183_030_inertia.py`: base ξ = (1−u²)²P_j(u), h = ½ξ − ξ′, Rayleigh–Ritz in double precision).
 
@@ -46,7 +46,7 @@ RH is not asserted, nor row D's closure.
 
 ## 1. Symbol identity (PROVED)
 
-By def:W / eq:nuw of Paper 47 (in R183_030 §1.1's normalization), over h ∈ 𝒫_T the polar
+By def:W / eq:nuw of Paper 46 (in R183_030 §1.1's normalization), over h ∈ 𝒫_T the polar
 terms vanish and
 
     W_T(h) = (1/2π)∫|ĥ|² m ds − 2 Σ_{log n < 2T} Λ(n) n^{−1/2} c_h(log n).
@@ -123,7 +123,7 @@ reduction requires δ ≳ 1.5.)
 secular matrix of 3.1(c) with δ = 2 and N = 45 is positive definite (a dimension-≤ 47 check
 with the explicit tail), then W_T ≥ 0 on 𝒫_T, with gap ≥ that of this matrix. Numerically the gap
 is ≈ 7.7·10⁻⁴ in L² at T = ½log3 (NUMERICAL, consistent with thm:C's 8.86·10⁻⁵ in
-Paper 47's normalization, which is not the same; the value is not being compared).
+Paper 46's normalization, which is not the same; the value is not being compared).
 
 **What is missing for PROVED.** (i) Computing the μ_k and the secular matrix with balls/intervals: this
 requires certified quadrature of ǧ_δ and of its products with e^{∓x/2}. (ii) Giving a non-
@@ -164,7 +164,7 @@ Complete analytic proof of W_T ≥ 0 at ½log3                                  
 ## For the audit
 
 1. **Normalization.** The §1 identity uses R183_030 §1.1's normalization (factor 2Λ(n)n^{−1/2}).
-   It must be cross-checked against def:W/eq:nuw of Paper 47, word for word (editor's rule). If Paper 47
+   It must be cross-checked against def:W/eq:nuw of Paper 46, word for word (editor's rule). If Paper 46
    has Λ(n)n^{−1/2} without the 2, the cosine's coefficient becomes log2/√2 and all tables change.
    R183_030's was calibrated against λ_A of thm:log5A (compatible order of magnitude), but that is not
    a verification.
@@ -181,7 +181,7 @@ Complete analytic proof of W_T ≥ 0 at ½log3                                  
 5. **Prolate N.** "N ≈ 43–45" uses the Landau–Widom asymptotic. For PROVED it must be replaced by
    an explicit bound on λ_k(c).
 
-## For Paper 47
+## For Paper 46
 
 * **Do not** replace thm:C with an analytic argument: there is none.
 * A remark can be added after thm:C: "in the first window W_T is the truncated

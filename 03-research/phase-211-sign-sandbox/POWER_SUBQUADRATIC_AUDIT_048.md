@@ -6,4 +6,4 @@ STRIP, PRIME, ARCH and POL of POWER_QUADRATIC_017 were checked directly. They ar
 
 With L=log N>=10^6, N>=2log L guarantees the hypothesis 4N. One obtains C(c)<=1+4sqrt L, ARCH>(L/2)-(log log L)/2-5, cost of the COMPLETE comb <14+56sqrt L and polar cost <1. Then W/norm²>L/2-(113/2)sqrt L-20. For y=sqrt L>=1000, y²/10-(113/2)y-20>0. The declared margin W>(2/5)log N·norm² is verified for ALL k>=2N²/log log N. No order-by-order computations or truncated contacts are required.
 
-The scope is well delimited: the lower band remains open; the uniform lower bound over the whole complement required in 046 is not proved, nor is the energy remainder 036 eliminated, nor is a new window of Paper 47 certified. The Gaussian limit of 017 was not imported.
+The scope is well delimited: the lower band remains open; the uniform lower bound over the whole complement required in 046 is not proved, nor is the energy remainder 036 eliminated, nor is a new window of Paper 46 certified. The Gaussian limit of 017 was not imported.

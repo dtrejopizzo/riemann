@@ -1,13 +1,13 @@
 # LEDGER L3 — insight on the sign, phases 163–193 (phase 200, stage 1)
 
 Analyst L3. Sources: ROUTES-TRIED-INDEX (04_PHASES_100-189 Part I-c; README §§190–193, audit and re-examinations),
-AUDIT_PHASE193_CERTAINTY, phase-189 README/NT_SYNTHESIS, phase-193 CAMPAIGN_LEDGER and CA_*_SYNTHESIS, Paper 47
+AUDIT_PHASE193_CERTAINTY, phase-189 README/NT_SYNTHESIS, phase-193 CAMPAIGN_LEDGER and CA_*_SYNTHESIS, Paper 46
 (thm:shape §20, thm:X).
 NO-GO / NUMERICAL / REF-D (exact reformulation of D: valid target, not closure).
 
 ## 1. Positive structural facts about the sign
 
-**F1. Shape theorem (P47 thm:shape, closure).** PROVED except where noted.
+**F1. Shape theorem (P46 thm:shape, closure).** PROVED except where noted.
 - (A) Every deduction class closed under O1–O4(∀c), O6–O8, O13–O15 (within the lemmas' ranges) contains no valid proof.
 - (A′) O4^ε, O5 CONDITIONAL (κ_T≠0, c_{F*}(log n₀)≠0); O10 CITED (full form)/ARGUED (primitive background); O11 ARGUED; O12 falsifier OPEN.
 - (B) Every valid proof: margin ≤ 4·10⁹·T·e^{−15.449T} for T≥1 (simple exponential; the scale exp(−e^{2T}) is only NUMERICAL/Zhu,
@@ -20,7 +20,7 @@ NO-GO / NUMERICAL / REF-D (exact reformulation of D: valid target, not closure).
   the sign step must be ζ-specific by construction.
 Positive reading: the sign is an **exact fact, joint Euler+FE, of exponential precision, not arithmetic-quadratic**.
 
-**F2. Theorem X (P47 thm:X; R186_045–047).** Identity (i) PROVED; (ii) if λ_A(T)≥0, the new primes between T₀ and T must
+**F2. Theorem X (P46 thm:X; R186_045–047).** Identity (i) PROVED; (ii) if λ_A(T)≥0, the new primes between T₀ and T must
 **cancel σ_{T₀} on its negative set U_{T₀} at resolution π/T** (averaged; PROVED mod Landau–Widom); (iii) on E_η(U₀)∩P_T
 (codim ≤2) the leak is ≤ η; (iv) the pointwise form is false. Converse NO-GO (M₁ satisfies X and is negative). Insight: the sign is a
 **compensation mechanism of future primes over the present negative region**, not a property of an isolated window.

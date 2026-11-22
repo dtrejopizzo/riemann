@@ -13,7 +13,7 @@ follows R162_590 §2 item 1 (R160_020 Option 3; S4 §5.15).
 
 Gate 1 is not closed.
 
-Conventions: Paper 47 def:PD, def:W, eq:nuw. v_n = 2Λ(n)/√n. c_F(u) = ∫F(t)F(t+u)dt on I_T = [−T,T]. The
+Conventions: Paper 46 def:PD, def:W, eq:nuw. v_n = 2Λ(n)/√n. c_F(u) = ∫F(t)F(t+u)dt on I_T = [−T,T]. The
 prime side of 𝔞_T is −Σ_{n≤X} v_n c_F(log n), with X = e^{2T}. H_T is the operator of 𝔞_T on P_T, and T_0
 is the first window with λ_A(T_0) = 0. The first contact is F ∈ N = ker H_{T_0}, JF = εF.
 

@@ -1,10 +1,10 @@
 # R142.004 — Confirmation, phase 142: repairs verified, §D.32 audited
 
 `R142_001_ROUND1.md`, the rewritten `README.md`, and `R142_003_ROUND2.md` (§1 ledger and
-**§D.32**, which phase 143 is to be built on). Sources re-read for this round: Paper 46 §§11.1–11.5,
+**§D.32**, which phase 143 is to be built on). Sources re-read for this round: Paper 47 §§11.1–11.5,
 §12.2–12.5, §13 (Thms 13.2, 13.5, 13.6, Def. 13.4, and §9.2's own ledger row for §13); `R141_001`
 §D.26 (Def. D.26.2, Lemma D.26.3 (D.26.1)/(D.26.2), D.26.10(v)) and §D.30 (Thm D.30.5 with proof,
-D.30.10 Proof 2); Paper 45 Thm 10.4 as quoted at Paper 46 (1.10). Numerics recomputed at `mp.dps = 30`.*
+D.30.10 Proof 2); Paper 45 Thm 10.4 as quoted at Paper 47 (1.10). Numerics recomputed at `mp.dps = 30`.*
 
 ---
 
@@ -45,7 +45,7 @@ D.30.10 Proof 2); Paper 45 Thm 10.4 as quoted at Paper 46 (1.10). Numerics recom
 
 Checked entry by entry against the sources.
 
-* **Paper 45 Theorem 10.4 — UNAFFECTED, confirmed.** As quoted at Paper 46 (1.10) it reads
+* **Paper 45 Theorem 10.4 — UNAFFECTED, confirmed.** As quoted at Paper 47 (1.10) it reads
   "`I_∞(F,F) ≤ 0` for every primitive `F ∈ C_c^∞` ⟹ RH"; it mentions no `h⁰`, no effectivity and no
   clause. D.31.12 removes a *supplier* of its hypothesis, not the theorem. Correctly placed in (B).
 * **D.30.5 ((a),(c) for `h⁰_{RR}^{+}`) — still meaningful, confirmed, and it is the sharpest thing in
@@ -56,13 +56,13 @@ Checked entry by entry against the sources.
   D.31.14(iv)). Its placement is right; the *reason* it gives ("(a) and (c) are free, only
   (b′) failed") should carry this caveat, since the freeness of (c) is a property of the **degree**
   gate specifically. **MINOR, recorded as J5 below.**
-* **Paper 46 §13 — "route vs theorem" is stated correctly, and it matches the paper's own ledger.**
-  Paper 46 §9.2 already records Def. 13.4's `h⁰_{\mathbb Z}` as "`REFUTED` as a route on every finite
+* **Paper 47 §13 — "route vs theorem" is stated correctly, and it matches the paper's own ledger.**
+  Paper 47 §9.2 already records Def. 13.4's `h⁰_{\mathbb Z}` as "`REFUTED` as a route on every finite
   truncation (Thm 13.6(ii)) and off `\{\deg>0\}` (Rem 13.5c); `PROVED` as structure (Thms 13.2, 13.5,
   Lemmas 13.5a, 13.5b); `OPEN` on the full lattice (item (23))". §D.32.1(A)'s row ("the *route*
   sentences are withdrawn; Thms 13.2, 13.5, 13.6 keep their labels as statements about their own
   objects") is a faithful restatement. **What the row should add, and does not:** D.31.12 now closes
-  open items (22) and (23) of Paper 46 §14.5 **negatively as routes** — no functional of `H⁰` alone,
+  open items (22) and (23) of Paper 47 §14.5 **negatively as routes** — no functional of `H⁰` alone,
   on the full lattice or otherwise, can satisfy (a),(b′),(c), because *nothing* can. That is a strict
   gain in bookkeeping which §D.32.1 leaves on the table. **MINOR (J6).**
 * All other rows of (A) and (B) check out: D.30.9–D.30.12 vacuously true and their targeting sentences
@@ -76,7 +76,7 @@ Checked entry by entry against the sources.
 * **Hartshorne numbering — VERIFIED, all three.** GTM 52, Ch. V: **Theorem 1.6** is Riemann–Roch for
   surfaces (`ℓ(D) − s(D) + ℓ(K−D) = ½D.(D−K) + 1 + p_a`); **Lemma 1.8** is "`H` ample, `D.H > 0`,
   `D² > 0` ⟹ `nD` effective for `n ≫ 0`" (the lemma used in the proof of the Hodge index theorem);
-  **Theorem 1.9** is the Hodge Index Theorem, which is the number Paper 46 Remark 12.3a already pins.
+  **Theorem 1.9** is the Hodge Index Theorem, which is the number Paper 47 Remark 12.3a already pins.
   Its bracketed "numbers to be re-verified in Part III" can be **discharged**: I verify them
   here. Lazarsfeld, *Positivity I*, Ergebnisse 48, §2.2 is indeed "Big line bundles and divisors" —
   the right pointer for the `big` formulation.
@@ -98,7 +98,7 @@ Checked entry by entry against the sources.
 
 ### Item (3) — HORN A
 
-**The degree audit, done line by line as instructed.** Paper 46 Theorem 12.3's proof:
+**The degree audit, done line by line as instructed.** Paper 47 Theorem 12.3's proof:
 
 | step | class the clause is applied to | its degree | which clause |
 |---|---|---|---|
@@ -333,7 +333,7 @@ third time.
 | **J3** | **MAJOR (favourable, new)** | The D.31.10 witness — indeed the whole `E_{t,d}` family — **lies in B4**, with `t_n(E) ≥ (d−2tG)\sqrt{Φ_g(0)Φ_g(1)} > 0` uniformly in the Baire-chosen `g`, because `2tG < d` is the old `\sqrt{ab}` bound. Hence `C'_{F_0}(B4) ≥ G` and **B4 passes the D.32.4 test, with equality (which suffices)**. The coordinator's premise is reversed | no |
 | **J4** | ASSESSMENT | B4 will be decided by **(T1)**, not (T2): (T2) plausibly holds pointwise with constants `≍ γ_j²`; (T1) reduces to "does `t_n(F) ≥ 0 ∀n` force `F ∈ 𝓝_∞` for primitive `F`?" | no |
 | **J5** | MINOR | §D.32.1(B)'s reason for D.30.5 ("(a),(c) are free") must carry the caveat that (c)'s freeness is a property of the **degree** gate (`\deg E + \deg(K−E) = 1 > 0`, "the two gates cannot both be off"), which the (★)-gate destroys; and (A3)/(A4) are ranked the wrong way round | no |
-| **J6** | MINOR | §D.32.1 does not record the gain: D.31.12 closes Paper 46 §14.5 items (22),(23) **negatively as routes** | no |
+| **J6** | MINOR | §D.32.1 does not record the gain: D.31.12 closes Paper 47 §14.5 items (22),(23) **negatively as routes** | no |
 | **J7** | MINOR | "deficit **exactly** `s(γ,θ)`" conflates the exactness of the constant in Lemma D.31.4 (proved) with exactness of the total deficit (that is `s_*`, O-19, open) | no |
 | **J8** | MINOR | D.32.3(ii)'s "strongest `Δ`" is backwards — the display is the **minimum** admissible defect | no |
 | **J9** | MINOR (addition) | D.32.3(iv) treats only `\deg E > 1`; the other bands close once one states the corollary **`S_0 ∩ \{\deg ≤ d_*\} ⊆ S_0^{(★)}` under RH**, which also localises O-18′ above `d_*`. Also "under RH it satisfies (a)" — (a) is unconditional | no |

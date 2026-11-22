@@ -84,7 +84,7 @@ The factors τ and the powers n^α cancel exactly. This is a computed link with 
 
 ## 4. Explicit positive source and recovery of the comb
 
-Fix a window T and put `v_n=2Λ(n)/√n`, n<exp(2T), as in Paper47. For `f=𝒞_αF`, define the finite positive energy
+Fix a window T and put `v_n=2Λ(n)/√n`, n<exp(2T), as in Paper46. For `f=𝒞_αF`, define the finite positive energy
 
 `E_prime^virt(f)=(1/2)Σ_n v_n||(I−G_n)f||²_virt`.
 
@@ -110,7 +110,7 @@ By (3),
 
 `=Levy(c_F)`.
 
-Its domain is exactly the gamma energy domain of Paper47. The infinity of the integral on tests outside that domain is not ignored.
+Its domain is exactly the gamma energy domain of Paper46. The infinity of the integral on tests outside that domain is not ignored.
 
 The sign-independent virtual source is therefore
 
@@ -152,4 +152,4 @@ An explicit virtual source was constructed and computed, positive as a differenc
 
 **Outcome of the test: non-functional source for D.** The change of metric removes an auxiliary adjoint defect but not the cancellation required by Q_T; the exact residue remains the negative potential (6). Impossibility of other counterterms, realisations or sources is not proved; no general NO-GO against every virtualisation is claimed.
 
-Paper47 was not modified, no new phase was opened and this diagnostic is not counted as positive progress on D. The full goal remains OPEN. The investigation was resumed; the recorded status remains `blocked`.
+Paper46 was not modified, no new phase was opened and this diagnostic is not counted as positive progress on D. The full goal remains OPEN. The investigation was resumed; the recorded status remains `blocked`.

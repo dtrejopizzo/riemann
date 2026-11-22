@@ -3,12 +3,12 @@
 * Cell 8F/4E/7E (master grid ranking #1). Nearest routes: 37/112 Thm 2.3 (LP-112 ⟹ m∈{0,∞}), 37/113
 (LP-113, "SIN PRECEDENTE"), 38/115 (audit: survives with corrections; non-equivalence to RH NOT-REFUTED, not proved),
 38/116 (Stepanov Thm 5.2 survives), 34/94 §11 (C_B, Lemma 11.4 Blaschke form), P19 Hyp D + def:wall (RSRP),
-P30 (L8 + LP-112), P33 (A ⟹ LH; anti-recurrence Prop.: conditionally on A, LP-112 ⟺ RH), P47 thm:finZ, thm:margin,
+P30 (L8 + LP-112), P33 (A ⟹ LH; anti-recurrence Prop.: conditionally on A, LP-112 ⟺ RH), P46 thm:finZ, thm:margin,
 lem:contA, R162_2202 Thm NI, R162_2301 Thm Q, R162_2401b. Walls named in advance: W2 (Theorem M), W3 (class
 blindness), W1/E1. Pure mathematics, no numerics. No label moves. Gate 1 stays OPEN.*
 
 Conventions (as in R162_2401). I_T = [−T,T]; Φ_F(s) := ∫F(t)e^{(s−½)t}dt; for real F in the form domain of
-𝔞_T on the primitive space P_T (orthogonal complement of e^{±t/2}), 𝔞_T(F) = Σ_ρ Φ_F(ρ)Φ_F(1−ρ) (P47 lem:roughEF;
+𝔞_T on the primitive space P_T (orthogonal complement of e^{±t/2}), 𝔞_T(F) = Σ_ρ Φ_F(ρ)Φ_F(1−ρ) (P46 lem:roughEF;
 polar term vanishes on P_T); λ_A(T) = min spec H_T. Hypothesis H(m): exactly m ≥ 1 off-line quartets
 {½±β_j±iγ_j}, 0<β_j<½, counted with multiplicity; β* := max β_j.
 

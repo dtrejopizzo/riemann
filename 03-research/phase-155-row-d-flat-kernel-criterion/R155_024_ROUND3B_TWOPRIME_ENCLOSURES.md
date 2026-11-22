@@ -4,7 +4,7 @@
 Rules obeyed: pure mathematics; the only computations are scalar quadratures and `M×M` Hermitian
 eigenvalues; every run a single process with `OMP_NUM_THREADS=1` and `< 60 s` (runtimes archived in the
 JSONs). **FATAL rule in force:** nothing below is a statement about the zeros of `ζ`, and no sign is
-claimed for any `T > log 2`. Paper 47, `scripts/r3a` and all earlier phase files are untouched; the new
+claimed for any `T > log 2`. Paper 46, `scripts/r3a` and all earlier phase files are untouched; the new
 code is `scripts/r3b/`.*
 
 ---
@@ -39,7 +39,7 @@ code is `scripts/r3b/`.*
  ```
  R(ε,η;T) = 2π\exp\big(1 + C₀ + G(ε)/η\big)
  ```
- makes `μ(|τ| ≥ R) ≤ η` for **every** (P)-feasible `μ` of value `≤ λ^P + ε`, and Paper 47
+ makes `μ(|τ| ≥ R) ≤ η` for **every** (P)-feasible `μ` of value `≤ λ^P + ε`, and Paper 46
  Theorem V′(iii) says the shape `e^{B/η}` cannot be improved. `PROVED`.
 5. **A by-product worth recording: the quadrature had to change, and the change is reusable.** The
  composite-Simpson enclosure of `R155_004 §2.3` would need `~10⁵` interval nodes here. Composite
@@ -55,7 +55,7 @@ code is `scripts/r3b/`.*
 
 | idea used below | grep hits (file:line) | pre-existing? | status here |
 |---|---|---|---|
-| Theorem TK at a single `(τ₀,φ)`; `c ≤ a + b·β` | `R155_001 §4.3`; `04-papers/47-row-d-dual-certificates/main.tex:1237` (`prop:TK`); `R155_004 §2.2` | yes | reused verbatim; only the window `T` and the contact set change |
+| Theorem TK at a single `(τ₀,φ)`; `c ≤ a + b·β` | `R155_001 §4.3`; `04-papers/46-row-d-dual-certificates/main.tex:1237` (`prop:TK`); `R155_004 §2.2` | yes | reused verbatim; only the window `T` and the contact set change |
 | interval enclosure of a `β`-uniform ceiling | `R155_004 §2` (`Ceil(8,½log3) ≤ −5.6974·10⁻³`), `scripts/r2_a_enclosure.py` | yes, at **one** window and one `M` | §2 is the same argument at `T = 0.68, log2` and 23 values of `M`; the quadrature is new (§2.3) |
 | Lemma 2.2 (convex midpoint bracket of the `ψ`-tail), `C₀` Gauss digamma, `∫φ = P‖q‖²`, Bernstein bounds | `R155_004 §2.3`, audited `R155_007 §1.2` | yes | reused verbatim, extended from order `4` to order `2p` |
 | Gauss–Legendre panels in this programme | `R153_007:137`, `R153_019:99`, `R155_002:7` (the audit's independent check), `phase-113/113_09:286` | the *rule* yes, never inside an **interval** enclosure | the rigorous panel remainder `H^{2p+1}(p!)⁴/((2p+1)((2p)!)³)\sup|f^{(2p)}|` with the corpus's own derivative bounds is new here |
@@ -86,7 +86,7 @@ Corollaries Aᴾ–Cᴾ (§3), and the Gauss–Legendre interval scheme (§2.3) 
 > ```
 > inf_{τ∈ℝ} [ σ_T(τ) + ν̂(τ) + β₀ĝ₀(τ) + β₁ĝ₁(τ) ] < 0.
 > ```
-> Consequently **no dual certificate of Paper 47 Def. 3.1 supported on a lattice of step `2T/M` with
+> Consequently **no dual certificate of Paper 46 Def. 3.1 supported on a lattice of step `2T/M` with
 > `M ≤ 24` has non-negative value**, and none proves `λ^P(0.68) > 0` or `λ^P(\log2) > 0` — for any `β`,
 > any range, any atom count, and any tail lemma (`lem:F1`, `lem:T`, `lem:hybrid`), since all of those
 > only *verify* the pointwise inequality that Theorem N′ refutes.
@@ -313,7 +313,7 @@ alone is one command. **[amended per R155_027]** The same mechanism affects `M =
 `R155_001 §2–3` proves the bounded-set reduction through the **minimiser `F⋆` of `𝔞_T` on `P_T`**, i.e.
 through the single measure `μ⋆ = |\hat F⋆|²dτ/2π`, and the amendment of `R155_001 §2` states in terms
 that "every occurrence of `λ` and of `λ^{prim}` in §2–§3 means `λ^A`". Problem A, however, is about
-`λ^P`, the value of the programme (P) of Paper 47 Def. 3.1 — and (P) has **no minimiser**: Theorem O
+`λ^P`, the value of the programme (P) of Paper 46 Def. 3.1 — and (P) has **no minimiser**: Theorem O
 forbids attainment, and `main.tex:562` says so explicitly. So the `λ^A` proof does not transpose by
 renaming: there is no `μ⋆` to integrate against. The statement has to be made **uniform over the
 near-optimal feasible set**, and that is what changes the character of the result — the radius `R`
@@ -323,7 +323,7 @@ Throughout: `T > 0` fixed, `C₀ = ψ(¼) − \logπ = −5.3721834192256654…`
 `B := A_T − C₀ > 0`, `σ_T = m − Σ_n v_n\cos(τ\log n)`, `λ^P` the value of (P), and
 `\mathcal F_ε := {μ` feasible for (P) with `∫σ_T dμ ≤ λ^P + ε}`, non-empty for every `ε > 0` by
 definition of the infimum. At the two-prime windows `A_T = 2.248826344663675` and `B = 7.62100976388934`
-(Paper 47's `7.621`).
+(Paper 46's `7.621`).
 
 ### 3.1 The uniform tail bound
 
@@ -332,11 +332,11 @@ definition of the infimum. At the two-prime windows `A_T = 2.248826344663675` an
 > ∫(m − C₀)\,dμ ≤ G(ε) := λ^P + ε + B, μ(\{|τ| ≥ R\}) ≤ \frac{G(ε)}{m(R) − C₀}.
 > ```
 
-*Proof.* `m − C₀ ≥ 0` (`m` even, increasing on `[0,∞)`, `m(0) = C₀`: Paper 47 Lemma `lem:mbounds`(i)),
+*Proof.* `m − C₀ ≥ 0` (`m` even, increasing on `[0,∞)`, `m(0) = C₀`: Paper 46 Lemma `lem:mbounds`(i)),
 and `∫σ_T dμ = ∫m\,dμ − ∫Σv_n\cos(τ\log n)dμ ≥ ∫m\,dμ − A_T` by `lem:mbounds`(iii). Hence
 `∫(m−C₀)dμ ≤ ∫σ_Tdμ + A_T − C₀ ≤ λ^P + ε + B`. Chebyshev on `{|τ| ≥ R}`, where `m − C₀ ≥ m(R) − C₀`. ∎
 
-This is Paper 47 Theorem V′(i) read as a tail bound; the point is that the right-hand side involves **no
+This is Paper 46 Theorem V′(i) read as a tail bound; the point is that the right-hand side involves **no
 datum of `μ`**, so it is uniform on `\mathcal F_ε`.
 
 > **Corollary P2 (the explicit radius; `PROVED`).** For `ε > 0` and `η ∈ (0,1)` put
@@ -363,7 +363,7 @@ six figures:
 
 ### 3.2 The radius is optimal in form
 
-> **Remark P3 (`PROVED`, from Paper 47 Thm V′(ii)).[amended per R155_027, N-6 — the
+> **Remark P3 (`PROVED`, from Paper 46 Thm V′(ii)).[amended per R155_027, N-6 — the
 > previous boxed claim overstated what the proof delivers and misattributed the construction to
 > V′(iii); corrected form below.]** No radius with `\log R'(ε,η) = o(1/η)` can work; the exponential
 > dependence on `1/η` is forced, and the constant in the exponent is open between `ε` and `G(ε)`.
@@ -452,9 +452,9 @@ loss `Wη/(1−η)`. It is uniform over the class in the only variables a class 
 > `CONDITIONAL` on the withdrawn tail law and the measured `p = 1.25` remains `DIAGNOSTIC`), and it is
 > certainly not sharp — but it is unconditional except for `K(ε,δ,T)`.
 
-### 3.5 Check against Paper 47's `prop:env` scales
+### 3.5 Check against Paper 46's `prop:env` scales
 
-Paper 47 Prop. 6.4(iii) records the verification thresholds `2πe^{A_T} = 59.5` (multiplier-free) at
+Paper 46 Prop. 6.4(iii) records the verification thresholds `2πe^{A_T} = 59.5` (multiplier-free) at
 `T = \log2` — the same `A_T` serves `T = 0.68` — and `2πe^{A_T+‖ν‖_{TV}} ≈ 10⁴⁰` for the certificate of
 §5. The reduction radius of Corollary P2 sits **between** them: `R(0.5,0.5) = 8.98·10⁵`,
 `R(0.25,0.25) = 3.74·10¹²`, `R(0.1,0.1) = 2.70·10³²`. The two families are not the same object — `prop:env`
@@ -465,7 +465,7 @@ comb-vanishing runs of `R155_016`, versus `B/η = 15.2` at `η = 0.5`). Consiste
 
 ### 3.6 What this does **not** do
 
-It does not bound `λ^A − λ^P` (Paper 47 declines to, `main.tex:376`), it gives no lower bound on `c` for
+It does not bound `λ^A − λ^P` (Paper 46 declines to, `main.tex:376`), it gives no lower bound on `c` for
 any class, and it therefore does **not** solve Problem A: §3 is still the converse half. What it removes
 is the last place where the round-1 material spoke about `λ^A` while Problem A speaks about `λ^P`.
 
@@ -482,7 +482,7 @@ is the last place where the round-1 material spoke about `λ^A` while Problem A 
 | the Gauss–Legendre panel scheme with the classical remainder and the corpus's Bernstein/Leibniz derivative bounds extended to order `2p`; the `Σw_i = 2` / `\|P_p(x_i)\|` guard | **PROVED** (the remainder formula is classical; the derivative bounds are `R155_004 §2.3(iii)`) |
 | Theorem-B constants at `0.68` and `\log2` (`r₀`, `V⋆`, `B`) | **PROVED (machine-verified at 30 digits, not interval-enclosed)**, as at `½log3`; §2.4 gives the **tolerance** (`B ≤ 1.0·10¹¹` suffices at `M=24, T=0.68` [amended per R155_027: stale digit `9.7·10¹⁰` corrected to agree with §0.3 and Table 2.2]), which is what `R155_007 R-2` asked for |
 | **Proposition P1**, **Corollary P2** (the explicit `R(ε,η;T)`), **Theorem 3.3ᴾ**, **Corollary Aᴾ** | **PROVED**, fully explicit |
-| **Remark P3** (the exponential in `1/η` is forced) | **PROVED**, from Paper 47 `thm:Vp`(ii) [amended per R155_027: corrected from `(iii)`; the boxed `o(e^{cB/η})` overclaim replaced by the proved form, see §3.2] |
+| **Remark P3** (the exponential in `1/η` is forced) | **PROVED**, from Paper 46 `thm:Vp`(ii) [amended per R155_027: corrected from `(iii)`; the boxed `o(e^{cB/η})` overclaim replaced by the proved form, see §3.2] |
 | **Corollary Bᴾ**, **Corollary Cᴾ(b)** (rate `O(K(\log M)^{−δ})`) | **PROVED**, with `K = K(ε,δ,T)` **not explicit** and, by P3, not uniformisable |
 | **Corollary Cᴾ(a)** (unconditional: `Ceil(M,T;β) ≤ λ^P + ε + O(1)`) | **PROVED**; it is the honest unconditional content of Theorem R |
 | the double-precision `Ceil(M,T)` column of §2, the argmax `β`, `τ₀` | **DIAGNOSTIC** (they are only the provenance of the test pair, and the proof does not use them) |
@@ -491,13 +491,13 @@ is the last place where the round-1 material spoke about `λ^A` while Problem A 
 
 **FATAL-rule compliance.** No statement above concerns the zeros of `ζ`. No sign is claimed for any
 `T > \log2`; both windows are `≤ \log2`. The endpoint of record is unchanged
-(`λ_{\min}(A_{½\log3}) ≥ 8.8577·10⁻⁵`, Paper 47 Thm C). No LP and no branch-and-bound were run. Every
+(`λ_{\min}(A_{½\log3}) ≥ 8.8577·10⁻⁵`, Paper 46 Thm C). No LP and no branch-and-bound were run. Every
 statement of §2 is an **upper** bound on what a class can achieve, i.e. a negative result; none of them
 says anything about whether `λ^P(0.68)` or `λ^P(\log2)` is positive.
 
 ---
 
-## §5. Changes proposed to Paper 47 (not applied — the orders forbid touching the paper)
+## §5. Changes proposed to Paper 46 (not applied — the orders forbid touching the paper)
 
 1. **§8, after Theorem N.** Add **Theorem N′** as a second display with the table of §2.2: the same
  statement at the two-prime windows, `M ≤ 24` **including `M = 9`** [amended per R155_027:
@@ -525,7 +525,7 @@ says anything about whether `λ^P(0.68)` or `λ^P(\log2)` is positive.
  already carries the correct label; Theorem 3.3ᴾ and Cor. Aᴾ `PROVED`; Cor. Bᴾ/Cᴾ(b) `PROVED with a
  non-explicit constant`.
 6. **Methods appendix (if one is ever written).** The Gauss–Legendre interval scheme of §2.3, including
- the `Σ w_i = 2` guard and the reason it is needed (the failure recorded in §0.5). Paper 47 currently
+ the `Σ w_i = 2` guard and the reason it is needed (the failure recorded in §0.5). Paper 46 currently
  documents only the Simpson enclosure of Theorem C.
 
 ---

@@ -23,7 +23,7 @@ Reference plans (outside this directory):
 | D.19.2 | the Epstein canonical class `K_Q(t) = ¼e^{t/2}Σ'_v(y_v²−2y_v)e^{−y_v}`, `y_v = (2π/√D)e^tQ(v)`: even, super-exponential decay, `Φ_{K_Q} = Ξ_Q := ½s(s−1)Λ_Q`, polar set `{0,1}` **equimodular**, `deg K_Q = ½` | `PROVED` |
 | D.19.2 | `K_Q > 0` (blueprint's expectation) | **`REFUTED`** |
 | D.19.3 | the Weil class, `I_∞^{(Q)}`, the splitting `D^W = Λ_Q ⊥ P^W_Q`, the Lorentzian normalization | `PROVED` |
-| D.19.3b | `Ξ_Q` lies **outside** Paper 46 Prop. 12.6's class (it fails four of its hypotheses), so Thm 11.14, the ample cone and Thm 12.3 are not available for it; D.19.3(ii) is a new proposition with its own hypotheses | `PROVED`; the round-1 erratum claim against Prop. 12.6 is **withdrawn** (P46-5 → `EDITORIAL`) |
+| D.19.3b | `Ξ_Q` lies **outside** Paper 47 Prop. 12.6's class (it fails four of its hypotheses), so Thm 11.14, the ample cone and Thm 12.3 are not available for it; D.19.3(ii) is a new proposition with its own hypotheses | `PROVED`; the round-1 erratum claim against Prop. 12.6 is **withdrawn** (P47-5 → `EDITORIAL`) |
 | D.19.4a | `Λ_{x²+ky²}` **has** real zeros in `(0,1)` for `k` large | `PROVED` |
 | D.19.4b | all real zeros lie in `(0,1)`, so `θ_R < ½` | `PROVED` |
 | D.19.5 | **Hodge index fails for `Ξ_Q`** for principal `Q` with `h(−D) > 1`, with an effective, even, smooth, compactly supported witness (Landau criterion + Davenport–Heilbronn) | `PROVED` |
@@ -57,6 +57,6 @@ in `(0,1)` — is settled by proof in both directions (Theorem D.19.4a, Lemma D.
 ## Label
 
 **Row D: no label change.** FATAL screen clean (§6 of `R139_001`), re-run after the round-2 repairs
-(`R139_003` §5). Two items were relabelled **downward** in round 2 (P46-5 `MAJOR erratum → EDITORIAL`;
+(`R139_003` §5). Two items were relabelled **downward** in round 2 (P47-5 `MAJOR erratum → EDITORIAL`;
 Theorem D.20.2 `PROVED → PROVED` abelian / `PROVED-CONDITIONAL` general) and one restricted in scope
 (D.19.3–D.19.6 to principal `Q`). Nothing was relabelled upward.

@@ -39,7 +39,7 @@ flowchart TD
   F -.-> H
   G -. "together with the other bound" .-> X
   H -. "together with the other bound" .-> X
-  X -->|"reduction of Paper 47 and Theorem F of Paper 45"| D
+  X -->|"reduction of Paper 46 and Theorem F of Paper 45"| D
 ```
 
 The dashed arrows are not theorems. In particular, the diagram does not
@@ -51,12 +51,12 @@ without separately resolving every certificate of the direct route.
 
 | Piece | What it provides | What it does NOT provide | Record |
 |---|---|---|---|
-| Small-window certificate | A positive starting point and control of the complement | Positivity at every scale | Paper 47; local extension conditional on the certificate in R170_703 |
+| Small-window certificate | A positive starting point and control of the complement | Positivity at every scale | Paper 46; local extension conditional on the certificate in R170_703 |
 | Exact archimedean transport | W=b−K_L, with scale, primes, and polar term preserved | K_L≤b | R170_806–808 |
 | Capacity with common complement | Explicit reserve for means and fluctuations | Permission to discard the entire remaining reserve | R170_805,808 |
 | Harmonic extension | Exact debit A*B⁻¹A and full coupling | A favorable bound of that debit | R170_809–810 |
-| Divisor identity and PC | Exact interior cancellation and explicit tail | Sign of an oscillating correlation | Paper 47; R170_816 |
-| Faithful Gamma detector | Vanishing of enough moments implies F=0 on the radical | Vanishing of those moments | Paper 47; R170_702 |
+| Divisor identity and PC | Exact interior cancellation and explicit tail | Sign of an oscillating correlation | Paper 46; R170_816 |
+| Faithful Gamma detector | Vanishing of enough moments implies F=0 on the radical | Vanishing of those moments | Paper 46; R170_702 |
 | Corrected flux Φ | Finite number on Q_log and Tate port with S_N* | Sign of Φ | R170_812–813 |
 | Primitive contraction G_ρ | Preserves both moments; E_ρ≥0 at the contact | Φ≤−E_ρ | R170_814–815 |
 | Witness geometry and prime sums | Additional interface for an arithmetic contradiction | One-sided upper bound, nor resolution of its auxiliary hypotheses | R163–169; v2 corrections of R169_000 |

@@ -100,9 +100,9 @@ lemmas that prove it.
 
 The chain is the following.
 
-1. λ_A(T) > 0 for small T. CITED: certificates of Paper 47.
-2. T ↦ λ_A(T) is continuous (P47 lem:contA) and decreasing; H_T has compact resolvent, so λ_A is attained
-   (P47, paragraph before lem:contA). CITED.
+1. λ_A(T) > 0 for small T. CITED: certificates of Paper 46.
+2. T ↦ λ_A(T) is continuous (P46 lem:contA) and decreasing; H_T has compact resolvent, so λ_A is attained
+   (P46, paragraph before lem:contA). CITED.
 3. If a_T takes a negative value for some T, there exist T* and F* ≠ 0 with H_{T*}F* = 0. PROVED from 1 and 2.
 4. The reflection t ↦ −t preserves W, K and P_T, so ker H_{T*} decomposes by parity and one can take F* with
    parity ε. PROVED. Simplicity is not needed.
@@ -255,7 +255,7 @@ controls the first collar.
 3. Lemma A: vanishing leakage implies F = 0, for every weight of the current, without σ: PROVED (uses the CITED ζ'(−2m) ≠ 0,
    Lusin–Privalov and R161_019 Thm. 3.1).
 4. L^sc is positive definite on P_T for Λ, 2Λ and deletion: PROVED (corollary of 3).
-5. First-contact chain, links 1–2: CITED (P47 lem:contA, compact resolvent, certificates).
+5. First-contact chain, links 1–2: CITED (P46 lem:contA, compact resolvent, certificates).
    Links 3–4 and 6: PROVED. Link 5 (L161.4): OPEN, and equivalent to the goal: PROVED, by 3.
 6. Neither σ nor the compression (3.5) of R161_020 is needed: PROVED (by 3; already implicit in R161_024 §2).
 7. Prop. B (version on all of P_T ⇔ ker H_T = {0}; general solution H^{−1}Ł): PROVED.

@@ -16,7 +16,7 @@ I record it as a restatement, not as progress (risk: PROOF_L_SHARP_S_001 §(i) p
 
 ## 1. Exact statement of the table (task 1)
 
-### 1.1 Objects (all from P47 sec:ext)
+### 1.1 Objects (all from P46 sec:ext)
 - T > 0, λ = e^T, N = λ² (at Mori's extremal, N = μ = 15, T = ½log15).
 - f admissible at T (def:ext): even, supp ⊂ [−λ,λ], C², f(0) = 𝓕f(0) = f(λ) = 0. g = Ef ∈ core.
 - r = r_f := 𝓕f|_{(λ,∞)} (out-of-band data; f of Paley–Wiener type λ ⇒ r is the out-of-band tail, nonzero).
@@ -36,14 +36,14 @@ For every N ≥ 5 and every r = 𝓕f|_{(λ,∞)}, f admissible:
   𝒲_ext[r] := 𝒜[Ψ̌] + 2A(Ψ̌)B(Ψ̌) − 2⟨Ψ̌, (Z_log r)(e^·)⟩_{L²(T,∞)}  ≥  2κ N^{−A₀} dist²(r, 𝒢̄_T).      (★★)
 
 with 𝒲_ext[r] = 𝒲[Ψ̌] = W_T(Ef) (thm:ext-half). Equivalent to eq:ext-L (prop:ext-consol, PROVED). Implication
-(★★) ⇒ λ^W_T > 0 ∀T with explicit margin: PROVED (P47 sec:ext). In lattice coordinates (prop:ext-latred, PROVED):
+(★★) ⇒ λ^W_T > 0 ∀T with explicit margin: PROVED (P46 sec:ext). In lattice coordinates (prop:ext-latred, PROVED):
 𝒲_ext[r] = vᵀGv, v = (μ(m))_m ⊕ 1.
 
 ### 1.3 What is PROVED and what is the single OPEN item
 | piece | content | label |
 |---|---|---|
 | half-line identity (thm:ext-half) | W_T(Ef) = 𝒲[Ψ̌]; the comb appears only via Λ∗1 = log | PROVED (given Guo L4.2–4.5) |
-| B.0 / B / B′ | structural bounds of the exterior form (P47 §22) | PROVED |
+| B.0 / B / B′ | structural bounds of the exterior form (P46 §22) | PROVED |
 | Theorem C (+ CC_001) | prolate tail m = 1: phase (1,2)/X₁₁ = +0.033, controlled | PROVED asymptotically; NUMERICAL below N ≈ 130 (restr. 26) |
 | lem:ext-envelope | uniform prolate envelope | PROVED |
 | Möbius lattice (thm:ext-lattice, prop:ext-grouped, prop:ext-latred) | r as a lattice; coefficients c_q, d_q; 𝒲 = vᵀGv | PROVED |

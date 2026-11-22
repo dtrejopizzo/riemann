@@ -2,7 +2,7 @@
 
 The main result is W_T(f)≥exp(−6000000001)||f||₂² for 0<T≤6/5. The construction is first proved at 26/25; the last section verifies the parameters for 6/5. The two instances gather 22 scalar checks with Arb.
 
-With the unconditional data Z1–Z3 of paper 47, for every admissible test supported in [−26/25,26/25] one has
+With the unconditional data Z1–Z3 of paper 46, for every admissible test supported in [−26/25,26/25] one has
 
     W_T(f) ≥ exp(−700000001) ||f||₂².
 
@@ -28,7 +28,7 @@ by monotonicity of the majorant and substitution of G/2. There φ<1/2 and the re
 
 **Arithmetic reproduction.** Run `python3 verify_175.py` from this folder with python-flint. Eleven scalar checks with Arb balls at 160 bits pass. The script verifies constants and margins; the justification of the functional inequalities is in the preceding proof. The cutoffs w (arithmetic, radius 2.12) and χ (spectral, radius 6.5) are distinct.
 
-**Comparison of windows.** In paper 47 thm:log5A and thm:log5W are relevant. In phase 211, ROUND_026_A, theorem 26A.2, certifies λ_A up to 207/200 on the primitive subspace. Here λ_W>0 is obtained at 26/25 for the full form of (W), which also implies λ_A>0. The contact (log 8)/2 is crossed and the comb considered includes 8=2³.
+**Comparison of windows.** In paper 46 thm:log5A and thm:log5W are relevant. In phase 211, ROUND_026_A, theorem 26A.2, certifies λ_A up to 207/200 on the primitive subspace. Here λ_W>0 is obtained at 26/25 for the full form of (W), which also implies λ_A>0. The contact (log 8)/2 is crossed and the comb considered includes 8=2³.
 
 **Actual frontier of the corpus and extension to T=6/5.** Index line l.10974 records the complete reproduction of rStation45 in both parities up to (log 11)/2≈1.1989476364. Hence the first computation at T=1.04 is an alternative proof with explicit margin. The following change of parameters DOES go beyond that frontier:
 

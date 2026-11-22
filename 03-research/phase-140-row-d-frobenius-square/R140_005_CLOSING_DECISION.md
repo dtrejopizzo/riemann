@@ -33,11 +33,11 @@ any finite chart (and its colimit version is OPEN, R3).
 ## 3. Residues carried
 R2: distinguish Paper 44's `Q_fin` (form on radial profiles) from the discrete Gram matrix of
 `{Frob_n^{sm}}` (no diagonal) in the (A) row — one sentence, to be entered with Part III.
-R8: O-17 (primitive bridge for `Ξ_Q`) — template Paper 46 Prop. 12.4B with `P = {0,1}`, non-real DH zero.
+R8: O-17 (primitive bridge for `Ξ_Q`) — template Paper 47 Prop. 12.4B with `P = {0,1}`, non-real DH zero.
 R11: O-14′ ill-posed as written — fixed in the phase-141 blueprint (below).
 Count correction: R140_002 has 15 findings (1 FATAL + 8 MAJOR + 6 MINOR).
 
 ## 4. Decision
 Phase 140 closed; no label change for row D. Phase 141 opens on O-14′ first (well-posed per R11), then
 O-17, with O-15 (the moment cone) as a tool, not a sign-carrier (it is model-uniform, T2).
-Paper-facing list carried: P44-4, P44-5, P46-10…P46-13, P46-15, P44/46-16 (P46-14 withdrawn).
+Paper-facing list carried: P44-4, P44-5, P47-10…P47-13, P47-15, P44/46-16 (P47-14 withdrawn).

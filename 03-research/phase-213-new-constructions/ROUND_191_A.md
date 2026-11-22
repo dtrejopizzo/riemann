@@ -1,6 +1,6 @@
 # Positivity of the full form up to T=67/25
 
-With the same verified height G=3·10¹², for 0<T≤67/25 one has W_T(f)≥exp(−20000000001)||f||₂² on the full domain of paper 47. The stretch (2.62,2.68] is gained.
+With the same verified height G=3·10¹², for 0<T≤67/25 one has W_T(f)≥exp(−20000000001)||f||₂² on the full domain of paper 46. The stretch (2.62,2.68] is gained.
 
 **Schur majorant on the continuous window.** Take U=137/50 and divide [−U,U] into 2048 cells of length h=2U/2048. A symmetric positive weight w_i, constant on each cell, with zero extension, is sought. For q a prime power and j=floor(log(q)/h), any interior point of cell i translated by +log q falls in one of the cells i+j and i+j+1, or outside. Its contribution is majorized by (Λ(q)/√q)max(w_{i+j},w_{i+j+1}); for invalid indices the weight is zero. By reflection the majorant for negative jumps is obtained. The endpoint conventions are irrelevant for the operator on L². Thus all functions of the window are kept, even though the auxiliary weight is a step function.
 

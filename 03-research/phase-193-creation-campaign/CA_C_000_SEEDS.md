@@ -3,17 +3,17 @@
 Phase 193, round 6. Pen and paper; no numerics.
 **No certified negative value for ζ anywhere on this front.**
 
-Read before seeding: CA_A_SYNTHESIS, CA_B_SYNTHESIS ((P1)–(P6)), CAMPAIGN_LEDGER (erratum: Paper 47 O-labels), P47 §20
+Read before seeding: CA_A_SYNTHESIS, CA_B_SYNTHESIS ((P1)–(P6)), CAMPAIGN_LEDGER (erratum: Paper 46 O-labels), P46 §20
 (def:shape-ops, lem:transfer, prop:shape-inputs, lem:shape-est, lem:shape-ident, thm:shape, cor:shape, prob:region),
-P47 prop:nearfree, rem:boxes, prop:AM, prop:shape-family, cor:Qp, lem:cpos; ROUTES-TRIED-INDEX README, 03 (MW-3, NG-C1, NG-C2),
+P46 prop:nearfree, rem:boxes, prop:AM, prop:shape-family, cor:Qp, lem:cpos; ROUTES-TRIED-INDEX README, 03 (MW-3, NG-C1, NG-C2),
 04 (P122_009-010 product formula; Bohr-torus rows NT_003/005, G2_B7, F41; condensed polarizations G1_B3; adelic Maslov;
 p-adic Sonin; G_p indefinite), 06 (R8 §28.4, MW-3 row).
 
-Screen key. Idx = corpus/index retry? (R)k = clause k of prob:region. (P)k = CA_B conditions. O-labels are Paper 47's
+Screen key. Idx = corpus/index retry? (R)k = clause k of prob:region. (P)k = CA_B conditions. O-labels are Paper 46's
 (O2 amplification, O6 a_P, O7 quartets, O8 f_t, O10 Epstein/DH, O11 Beurling, O12 ζ_K, O15 Poisson). B′ = estimate with a
 remainder; B″ = identity valid for every comb; REF-D = restatement of the target. "✗" = seed fails the screen there.
 
-## Common fact used by several screens (PROVED, P47 cor:Qp + def. of 𝔞_T)
+## Common fact used by several screens (PROVED, P46 cor:Qp + def. of 𝔞_T)
 On P_T the window form splits over places with no remainder:
   𝔞_T(F) = 𝔞_∞(F) − Σ_{p<e^{2T}} 𝔮_{p,T}(F),  𝔮_{p,T}(F) = Σ_{k: k log p<2T} v_{p^k} Re c_F(k log p),
 where 𝔞_∞ is the Γ_ℝ (conductor 1) term with its polar part, and each 𝔮_{p,T} is the Euler-factor log-derivative of L_p tested on F.
@@ -29,7 +29,7 @@ has to say what couples the summands, because the summands themselves carry no s
 
 | screen | result |
 |---|---|
-| Idx | ✗ retry: convex decomposition (CA_B_007, EXCLUDED: REF-D / class (D)); termwise bounds (P47 cor:directbound, lem:shape-misc) |
+| Idx | ✗ retry: convex decomposition (CA_B_007, EXCLUDED: REF-D / class (D)); termwise bounds (P46 cor:directbound, lem:shape-misc) |
 | (R)(5),(8) | ✗ each piece is decided by a bounded functional of one local symbol; no correlation across places |
 | O-screens | for T ≥ 0.60, 𝔞_∞ has a negative direction F₀; then each piece needs 𝔮_{p,T}(F₀) ≤ c_p𝔞_∞(F₀) < 0 for **every** p with c_p > 0, and every local form must be negative on the whole negative cone of 𝔞_∞. cor:Qp makes each 𝔮_p indefinite on any infinite-dimensional subspace built from a contact, so this is a strong extra condition, unproved and implausible |
 | (P1) | ✗ the split is a lower bound on 𝔞^{ν_ζ} through its own pieces (CA_B_008 §2) |
@@ -59,7 +59,7 @@ beyond λ₁ (O8), Beurling (O11) and Poisson (O15).
 
 | screen | result |
 |---|---|
-| Idx | P122_009-010 "flat product formula has no curvature" (geometric use, DEAD). The **divisor-class** use (one-sided, tolerance, local-only) is not in the index. Partial: P47 prop:shape-family uses PF exactly on the integer family |
+| Idx | P122_009-010 "flat product formula has no curvature" (geometric use, DEAD). The **divisor-class** use (one-sided, tolerance, local-only) is not in the index. Partial: P46 prop:shape-family uses PF exactly on the integer family |
 | (R)(1),(2),(10) | exact PF_T + Γ_ℝ pins the form (Möbius inversion), so it passes (1), (2), (10) |
 | O2, O6 | one-sided relaxations: ✗ (to be proved in CA_C_001) |
 | O4ε, O5 | tolerance relaxations: ✗ conditional on κ_T ≠ 0 (lem:shape-est(iii)) |

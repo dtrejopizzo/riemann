@@ -11,7 +11,7 @@ NUMÉRICO at μ = 15, a narrow class, or a CONDITIONAL/CITED input), 8 are MISLA
 open questions, or empty). No constraint excludes an exact-identity proof in the exterior variable as such. No sign claimed.
 
 ## 0. Two upstream dependencies
-- **rem:moriceiling** (Paper 47, CITED, PLAUSIBLE-UNVERIFIED, uses zero data; AUDIT_199 (e)). It enters only the *size*
+- **rem:moriceiling** (Paper 46, CITED, PLAUSIBLE-UNVERIFIED, uses zero data; AUDIT_199 (e)). It enters only the *size*
   κ₊μ^{9/2}e^{−4πμ} of the TV slack in constraint 1. The qualitative barrier r ≤ λ_A (BARRIER_EST Thm 4) is PROVED without
   it. No other constraint depends on it. The base case μ ≤ 15 (H Prop H.1) depends on Mori Theorem O (CITED), not on the ceiling.
 - **O_4^ε** (cΛ with |c−1| < ε; CONDITIONAL on κ_T ≠ 0, AUDIT_197_HOSTILE). Constraints 2 and 5 exclude "comb-generic"

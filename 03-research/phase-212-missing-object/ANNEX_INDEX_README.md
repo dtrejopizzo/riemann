@@ -170,7 +170,7 @@ Complete reading of `05-meta-and-planning/ROUTES-TRIED-INDEX/README.md` from lin
 - V1_1_NONNEG_001 (l.574). Lemma V1.1′. NO-GO PROVED (I_T ≡ 0 for blocks ≤3 columns). OPEN not attempted: ≥4 shifts; columns indexed only by m.
 - V2_RECURRENCE_001 (l.575). Recurrence {x+y,xy}. NO-GO PROVED (Thm V2-0, C-emb). Infinite extensions NO-GO ARGUED; B-V3 dies ARGUED. New filters S7, S8.
 - FAMILIES_C_001 (l.576). Inventory S7/S8 (14 families). 0 viable. L-loc PROVED; C-pos PROVED (identity); S-0, S-2, P-fin PROVED; S-1 CITED.
-- CPOS_CLASS_001 (l.577). Imported-positivity theorem (C-pos). (i),(ii) PROVED; (β) ARGUED. Phase 201 closes by theorem. Escapes (h1)–(h6); exterior = only recorded infinite non-uniformity (ARGUED). thm:noimport in P47. L′♯ OPEN, (★★) OPEN.
+- CPOS_CLASS_001 (l.577). Imported-positivity theorem (C-pos). (i),(ii) PROVED; (β) ARGUED. Phase 201 closes by theorem. Escapes (h1)–(h6); exterior = only recorded infinite non-uniformity (ARGUED). thm:noimport in P46. L′♯ OPEN, (★★) OPEN.
 - BUILD_R1_001 (l.580). (★★) by classes q=b/a. Exact form PROVED; Lemma X1 OPEN; X1.0 PROVED but NO-GO as sign; X1.1 PROVED (resonances of sign μ(n) must cancel). Class collapses by Poisson: do not retry.
 - AUDIT_202_R1_001 (l.581). X1 = partition of (★★) (REF-D). The harmful sign μ(n) comes from the archimedean part. X1.2 = channel D_μ≈1/ζ prospective NO-GO (ARGUED). Survival condition: inequality with (H-b)∧(H-d) inside the statement without going through D_N.
 - BUILD_R2_001 (l.582). PHASE 202 DEAD (criterion a). Lemma M PROVED (𝔅_n never multiplicative; "signed Euler" = D_N/1/ζ = C6). Do not retry: "𝔅_n almost multiplicative", Möbius sums of archimedean pairs, X1/X1.2. (★★) OPEN.
@@ -194,21 +194,21 @@ Complete reading of `05-meta-and-planning/ROUTES-TRIED-INDEX/README.md` from lin
 - P4_SIGNPATTERN_001 (l.604). Sign pattern of c_{g*}. NO-GO (ARGUED; lemmas PROVED). LP with ĉ≥0 = def:PD (Boas–Kac). Do not retry: "positivity on c_g≥0" or "signs of c_{g*} at contacts".
 - AUDIT_204_CLOSURES_001 (l.605). No erroneous closure. Lemma WT PROVED (inertia criterion by sector without λ_A). Existential-gauge Lemma F reopened OPEN (low priority).
 - TRACT_F_PHASES000_001 (l.606). Phases 0–99: 0 YES / 13 TRANSFER / 5 NO. Nyman–Beurling D-only form = K9 TRANSFER.
-- INTEGRATION_204_001 (l.607). Integration into P47 of Lemma T3, P1.A, Lemma 2.7, PC-2, prop:WT (PROVED, infinite dimension).
+- INTEGRATION_204_001 (l.607). Integration into P46 of Lemma T3, P1.A, Lemma 2.7, PC-2, prop:WT (PROVED, infinite dimension).
 - G16_GATE_001 (l.608). Existential-gauge Lemma F. PROVED-trivial-EMPTY; version with control NO-GO as input. Do not retry Lemma F in any variant over representatives.
 - AUDIT_204_TRACT_F_001 (l.609). 0 YES / 20 TRANSFER / 3 NO; Báez-Duarte sibling target; cyclicity of the Bohr lift missing.
 - FINAL_204_001 (l.610). 43 reformulations: 0 YES / 22 TRANSFER / 21 NO. 10 PROVED. 5 OPEN: O1 (superseded: barrier refuted, joint sign inequality OPEN), O2 Lemma F with control, O3 Q-P2.2, O4 (L2), O5 Bohr cyclicity. Rule: "REF-D is not closure".
 - WEAKEN_001 (l.611). Weakening consumed hypotheses (4: H-PD, H-inv, H-unif, H-tail). Lemma W0, W1 PROVED; odd-channel amplification (later withdrawn). (L-a), (L-b), (L-c) open.
 - O1_COMPOSITION_001 (l.612). Branch composition rule of Φ200. REFUTED as a barrier (Theorem O1.A, O1.D PROVED). Φ200′ PROVED piecewise: the sign step uses ≥2 channels without a common falsifier. Def O1.2 (chaining vs composing). Constructive specification (S1)–(S4) OPEN.
 - WT_HALVES_001 (l.613). Halves of prop:WT. No amplification; Prop S PROVED (sign of q_ev+½ opposite to λ^W). (iii) NO-GO. H1 PROVED; H1⁻ closable; H1⁺ OPEN; 𝔄_odd≻0 OPEN. Lemma WT-R PROVED (finite) / ARGUED (infinite).
-- INTEGRATION_O1_001 (l.614). rem:conjunctions in P47. Correction: both channels mandatory by distinct falsifiers (a_P for F, quartets for E).
+- INTEGRATION_O1_001 (l.614). rem:conjunctions in P46. Correction: both channels mandatory by distinct falsifiers (a_P for F, quartets for E).
 - AUDIT_204_W1_001 (l.615). Lemma W1 = lem:gmono; NO AMPLIFICATION. (L-b) NO-GO (TRANSFER). (L-a) OPEN reoriented. Do not retry q_odd channel without a lower bound independent of ½−q_odd at ½log15.
 - CALIB_R4_001 (l.616). H1⁻ certified (arb); NUMERICAL q's; Epstein fails both halves. Not done: blocks >30.
 - COMPOSE_EF_001 (l.617). "FE as a symmetry of h_par". NO-GO PROVED (Theorem C2: a_P common falsifier ⇒ chains). Lemma C1 PROVED. (C★) Hamburger with defect OPEN (later NO-GO).
-- AUDIT_204_H1MINUS_001 (l.618). H1⁻ PROVED (intervals): n₋(𝔄_ev(T)) ≥1 ∀T≥0.12; cor:H1minus in P47.
+- AUDIT_204_H1MINUS_001 (l.618). H1⁻ PROVED (intervals): n₋(𝔄_ev(T)) ≥1 ∀T≥0.12; cor:H1minus in P46.
 - H1_TRACT_001 (l.619). H1⁺ and 𝔄_odd≻0 → TRANSFER, OPEN. Lemma A∞ PROVED (archimedean n₋ →∞). PF/Markov class NO-GO PROVED. 𝔄_odd≻0: PROVED T≤½log5; CONDITIONAL D0 up to ½log15; OPEN afterwards.
 - AUDIT_204_CSTAR_001 (l.620). (C★). NO-GO — CHAINS (PROVED). Do not retry "F as a Poisson derivative in Λ". Real composition would use 𝔇_F at a≠Λ in a nonlinear step: no object exists.
-- LEMMA_AINF_001 (l.621). Theorem A∞ PROVED with constants (n₋(𝔪_T) ≥ ≈4.0042T). Cor C PROVED (necessity: the sign is a cancellation of ≍4T directions). lem:archcount in P47. Upper bound OPEN.
+- LEMMA_AINF_001 (l.621). Theorem A∞ PROVED with constants (n₋(𝔪_T) ≥ ≈4.0042T). Cor C PROVED (necessity: the sign is a cancellation of ≍4T directions). lem:archcount in P46. Upper bound OPEN.
 - H1PLUS_001 (l.622). H1⁺ as an independent route. NO-GO (REF-D by P4). Identity 𝔄_ev = Z_T − 2⟨F,χ⟩² PROVED; inertia count PROVED. Prop H (⇐ PROVED; ⇒ ARGUED). Closable OPEN: Lemma LCB, PRED-aP.
 - Phase 205 mandate (l.625). Object composing E and F; starting point explicit Toeplitz−Hankel matrix C_N. Directive, not result.
 - SKELETON_001 (l.626). Skeleton without composed sign step; P2a, P3 (Green of the pole), c_k PROVED; pointwise criterion m−σ_T≥0 NO-GO PROVED. L205.★ OPEN (later withdrawn).
@@ -262,7 +262,7 @@ Complete reading of `05-meta-and-planning/ROUTES-TRIED-INDEX/README.md` from lin
 - LINK010 — compression D_n=PU(log n)J with U unitary C0: requires infinite spectral moment s — PROVED (class of compressions with that regularity) — general compression OPEN, Q_T link OPEN; do not reopen normalized compression 009 — — L.809–819.
 - LINK011 — map UF=Σa_d(F)(X_d−1/d) at α¼, compact, smooth — PROVED construction; equality Q_T=‖UF‖² FALSE for this map (high-frequency tests) — domination Q_T≥‖UF‖² remained OPEN — precision 006: an identity/TOTAL domination on a dense core suffices — L.822–834.
 - LINK012 — certified falsifier (Arb128) of Q_T≥‖UF‖² with T=4/5, ω=5π/8: Q<0.002351, ‖UF‖²>0.2613 — PROVED (falsifier) — only the EXACT scale of U011; does not exclude rescalings, other maps, O1 — — L.837–851.
-- LINK013 — every fixed constant c>0 with Q_T≥cE_T fails for large windows (family lem:testfam; |Q|/E=O(√T e^{−15.449T})) — PROVED (input CITED P47 thm:margin) — eventual c(T) ≤C√Te^{−15.449T}, existence not proved; does not exclude other maps — — L.854–869.
+- LINK013 — every fixed constant c>0 with Q_T≥cE_T fails for large windows (family lem:testfam; |Q|/E=O(√T e^{−15.449T})) — PROVED (input CITED P46 thm:margin) — eventual c(T) ≤C√Te^{−15.449T}, existence not proved; does not exclude other maps — — L.854–869.
 - LINK014 — every fixed nonnegative combination AκG+Bκvv*+CΠ with the same a_d has |Q|/E→0 — PROVED — does not exclude other maps, signed cancellations, T-dependent factors — — L.872–887.
 - CONSTRUCTOR015 — separate domain H=L²(P_s)⊕V; T not closable; PSD cone of the real span of the 3 forms = {a,b,c≥0}; closes globally PSD signed combinations with map 011 — PROVED — does not classify forms positive only on the image nor other maps — — L.890–905.
 - LINK016 — even polar-free image of U_T dense in H (α¼, ∀T) ⇒ PSD on the image = global PSD; closes continuous signed combinations of the span with map 011 — PROVED — not finite blocks E_N, discontinuous forms, other maps/T-dependent coefficients — — L.908–922.
@@ -947,13 +947,13 @@ Format: id — object/mechanism — label — failure or remainder without sign 
 - Prop 2.1 (θ family by constant ζ; degree 2), Lemma I.1 (inertia by Haynsworth) (l.535).
 - Exact pencil A(c) with affine Schur; In(C_RR)=(2,0,dim𝒢−2) (l.537).
 - Lemma 12.1 (cumulants, principal class) (l.542); Lemma 13.1 (nonzero finite comb indefinite on P_T) (l.543).
-- Φ.12 additivity 𝔞^{ζL}=𝔞^ζ+𝔞^L on P_T (l.544, 547; in P47).
+- Φ.12 additivity 𝔞^{ζL}=𝔞^ζ+𝔞^L on P_T (l.544, 547; in P46).
 - Prop 20.1 (arithmetic RR without comb) (l.554). Theorems HA, HB (l.555–556).
 - CERT_DH: DH negative ∀T≥9/5 (arb) (l.560, 565).
 - Lemma B.2: single-prime comb indefinite for T>½log p (l.550–551).
 - Diagonal invariance lemma r₊ (l.572).
 - Danskin: gradient ∂λ_A/∂a(n) (truncated μ=15; CONDITIONAL on P_T) (l.587–588).
-- Lemma T3 (inertia by tower), P1.A, Lemma 2.7, PC-2, prop:WT (infinite dimension) — in P47 (l.605, 607).
+- Lemma T3 (inertia by tower), P1.A, Lemma 2.7, PC-2, prop:WT (infinite dimension) — in P46 (l.605, 607).
 - Lemma W0 (l.611); Lemma W1 = lem:gmono (l.615); Prop S (l.613); Lemma WT-R (finite dim) (l.613).
 - H1⁻: n₋(𝔄_ev(T))≥1 ∀T≥0.12 (intervals; cor:H1minus) (l.618).
 - Theorem A∞ with constants, n₋(𝔪_T) ≥ ⌈2Tt₀/π⌉−1; Cor C necessity; lem:archcount (l.621); upper bound O(log²T) (l.630); with t₀′ (l.628).
@@ -1034,7 +1034,7 @@ Format: id — object/mechanism — label — failure or remainder without sign 
 
 - RULES_AVOID B3: «There are 43 distinct recorded reformulations (IDX README, phase 204)». Index l.610 confirms 43 with verdict 0 YES / 22 TRANSFER / 21 NO; RULES_AVOID does not record that the 22 TRANSFER consume only 4 hypotheses (H-PD, H-inv, H-unif, H-tail) (l.611), nor the rule «TRAT column mandatory; REF-D is not closure» (l.610).
 - HARD constraints not mentioned: C-Guo (l.528), C-E/C-E′ (l.532, 534; only implicit via Epstein in E), C-θ (l.533), C-hom (l.539), C-data (l.540), C-pol (l.541), C-MvN (l.548), C-emb (l.550), C-RR (l.554), R-MOM (l.564), C-τ (l.536–538), C-𝔖 (l.544). RULES_AVOID B1–B10 does not list them.
-- RULES_AVOID F: «Conjunction (E)∧(F)∧(I) with nonlinear sign step (P47 rem:conjunctions)». Index l.612/614 specifies: both channels mandatory by distinct falsifiers (a_P for F, quartets for E); Def O1.2 «chaining» vs «composing»; and l.617/620 close FE as trace/symmetry and (C★). The rule is missing: a channel that enters only through a prior linear identity chains.
+- RULES_AVOID F: «Conjunction (E)∧(F)∧(I) with nonlinear sign step (P46 rem:conjunctions)». Index l.612/614 specifies: both channels mandatory by distinct falsifiers (a_P for F, quartets for E); Def O1.2 «chaining» vs «composing»; and l.617/620 close FE as trace/symmetry and (C★). The rule is missing: a channel that enters only through a prior linear identity chains.
 - RULES_AVOID C: «coercivity, Schur, inertia …». Does not explicitly mention P2-S.3 (requirement of a useful Schur, l.600) as a reopening condition.
 - Not mentioned: filters S7/S8 (l.575) and Thm 3′ (analytic/semialgebraic invariants in finitely many linear functionals are locally constant, l.558, 573); one-line test C-MvN (l.548).
 - Not mentioned: «Do not retry Lemma F in any variant over representatives» (l.599, 608); «q_odd channel» (l.615); «verify greater height» of ZCERT (l.683); finite reformulation n₋(𝔄_N)=1 without a bound on Φ_N (l.632); interlacing for (L2) (l.594); Danskin/concavity appears in B10 (correct).

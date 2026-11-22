@@ -1,5 +1,5 @@
 # CA_B_004 — Review
-Checked vs P47 prop:boundary, rem:fe, prop:finite(iv), lem:shape-ident; CA_B_001 review.
+Checked vs P46 prop:boundary, rem:fe, prop:finite(iv), lem:shape-ident; CA_B_001 review.
 
 ## Verdict
 **EXCLUDED (B″: identity comb-generic, O1–O7 survive — memo agrees). Prop 1 CONFIRMED (restatement). One MAJOR FIX: the pole of g_X at s=1 makes J(σ) infinite at σ=1, so "J ∈ C^∞(½,2)" and the convexity chain (3.3) on [½,2] are false as written.**

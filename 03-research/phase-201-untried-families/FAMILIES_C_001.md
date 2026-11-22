@@ -1,7 +1,7 @@
 # FAMILIES_C_001 — Inventory C (phase 201): infinite-dimensional nonlinear invariants of the test, with S7 and S8 by construction
 
 CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL. This memo retries nothing from the ROUTES-TRIED index without
-a written reason. P47 notation (def:W/def:PD/eq:nuw), as in SPEC_201 §C.1: g = f∗f̃ ∈ P_T, f ∈ C_c^∞[−T,T],
+a written reason. P46 notation (def:W/def:PD/eq:nuw), as in SPEC_201 §C.1: g = f∗f̃ ∈ P_T, f ∈ C_c^∞[−T,T],
 v_n^X = 2X(n)/√n, 𝒲_T^X = truncation to L²(I_T) of the single symbol
 θ_T^X(s) = m(s) − Σ_{n ≤ N_T} v_n^X cos(s log n) (R186_004, PROVED), 𝔞_T^X(f) = ⟨f, 𝒲_T^X f⟩.
 Falsifiers: Epstein 11, DH 12, a_P, cΛ, Beurling.
@@ -94,7 +94,7 @@ strongest form: the window enters, but the log n shifts do not.
 **Lemma C-pos (PROVED in the identity version; ARGUED in the inequality version).**
 - (i) Let Ψ(f, X) ≥ 0 for every test f and every comb X of the battery, via an intrinsic positivity theorem
   (whose hypothesis does not depend on X). Then there is no identity 𝔞_T^X(f) = Ψ(f, X) valid for all X in
-  the battery. *Proof:* 𝔞_T^{Ep}(f) < 0 for some (T, f) (Epstein 11 battery, CITED in P47/AUDIT_200_EPSTEIN).
+  the battery. *Proof:* 𝔞_T^{Ep}(f) < 0 for some (T, f) (Epstein 11 battery, CITED in P46/AUDIT_200_EPSTEIN).
   ∎
 - (ii) In the inequality version, "𝔞_T^X ≥ Ψ − E(X)", the Λ channel enters through the error E. E is either
   linear in the comb (branch 1) or an operator positivity on the window (branch 2).
@@ -219,7 +219,7 @@ into branch 1.
     cannot contain 𝔞^X for the whole battery. Dies.
 
   **Falsifier that kills the identity.** Epstein 11 (or DH 12), in the (W+) version. Take (T, f) with
-  𝔞^{Ep}_T(f) < 0 (P47 battery). I1 gives (1/π)∫ϱ^{Ep} < 4Σκ^{Ep}, so H_F^{Ep} has a bound state. Consistent,
+  𝔞^{Ep}_T(f) < 0 (P46 battery). I1 gives (1/π)∫ϱ^{Ep} < 4Σκ^{Ep}, so H_F^{Ep} has a bound state. Consistent,
   nothing is contradicted. But for Λ at T > T_known there is no structural reason why Σκ^Λ = 0: the class of
   V_F^X does not distinguish Λ from Epstein in any property used by I1. The falsifier lies **inside** the
   admissible class of potentials of I1. That is the exact diagnosis: the reflection term is positive for
@@ -336,7 +336,7 @@ into branch 1.
     quantiles: nonlinear ✓, but its second variation is Ḣ^{-1}(ρ₀), local in the primitive, and L-loc kills
     it.
   - With a non-local cost c(x,y) containing the atoms, Monge–Ampère is lost and Kantorovich remains: an LP,
-    which is P47's LP/dual certificate family, branch 2.
+    which is P46's LP/dual certificate family, branch 2.
 - (f) **VIRGIN-DEAD** (L-loc PROVED; Kantorovich = LP NOT VIRGIN).
 
 ### C9. Renormalization fixed points

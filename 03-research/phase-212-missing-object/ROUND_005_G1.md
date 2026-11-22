@@ -31,7 +31,7 @@ sign source in the four families of hyperbolicity certificates that I know
 4. **Identity with global positivity:** Lemma 1 (exact equivalence of the target in a sector with
    "n₊(H_{e,κ}) ≤ 1") plus the hyperbolic eigenvalue identity (Lemma 2).
 
-Not opened as primary sources: Paper 46; Paper 47 thm:parityschur and prop:polarcap (only via `REVIEW_004`);
+Not opened as primary sources: Paper 47; Paper 46 thm:parityschur and prop:polarcap (only via `REVIEW_004`);
 `ROUND_004_B.md` (only via `REVIEW_004`); phase 120 and 114_d_244 (only via `ANNEX_COTEJO_LORENTZ_1.md`);
 `SURVEY_MODERN_UNTRIED.md` B1 and `FAMILIES_A_001` A4 (grep lines only). Grep for "Renegar",
 "hyperbolic polynomial", "hiperbólico respecto", "triple correlation", "trilineal": only the files already

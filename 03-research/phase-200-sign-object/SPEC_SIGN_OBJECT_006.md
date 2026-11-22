@@ -113,7 +113,7 @@ inputs are:
 - **I5** polar moments (A, B), residue, Tate mode, Poisson constant term;
 - **I6** theta and its coefficients r, in any normalization (θ, θ − 1, Jacobi, log θ, r(1)=1);
 - **I7** L-function averages with the same Γ (class characters, cosh, cumulants, theta pencil);
-- **I8** cuts and relations in P47's dual LP/SDP (def:PD, thm:Z);
+- **I8** cuts and relations in P46's dual LP/SDP (def:PD, thm:Z);
 - **I9** derivatives or families in the parameters c (comb), ε (n^ε), θ (Euler interpolation), t (cosh), τ (lattice Z_τ), T;
 - **I10** Möbius, Poisson, Ramanujan, Selberg identities, Λ∗1 = log, Λ∗Λ, Hecke–Chebyshev.
 
@@ -470,7 +470,7 @@ the defect is indefinite" (exact consequence of A.5 + 13.1).
    (G0, REF-D); (ii) compare line by line with Bost–Connes (R9-04, G4H-159, G8H-R160 #20) and with the ax+b case of G5H-122.
 3. **Step Ξ2 (short)**: Lemma Ξ2.1 (ν vs ℓ on the core). If negative, write up Φ.13 as PROVED.
 4. **Barrier editor**: incorporate Φ.12 (transfer additivity) and Φ.14 (transversality) into META_200 as
-   PROVED pieces, and C-𝔖 into table A. Verify Φ.12 against the definition of 𝔞_T in P47 (def:W, eq:nuw, conductor
+   PROVED pieces, and C-𝔖 into table A. Verify Φ.12 against the definition of 𝔞_T in P46 (def:W, eq:nuw, conductor
    term), per the rule of checking against the paper's definitions.
 5. (Optional) Literature reader: type of L(ℚ ⋊ ℚ^×_{>0}) and Murray–von Neumann dimensions of lattice
    modules (Connes–Marcolli). Strictly for Lemma Ξ1.1.

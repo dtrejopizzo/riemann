@@ -73,7 +73,7 @@ arithmetic input.
 q_{a,w}(ξ) = ∫ η(s) e^{i[θ(sξ) − asξ]} ds, θ' = m (5)–(6). Phase derivative ξ[m(sξ) − a].
 
 **Claims.**
-- m even, strictly increasing on [0,∞) (Bernstein series of P47), m(0) = −5.372…; stationary
+- m even, strictly increasing on [0,∞) (Bernstein series of P46), m(0) = −5.372…; stationary
   point confined to ρ_0 r_a ≤ |ξ| ≤ r_a, r_a = m^{-1}(a) (9). Sustained.
 - For the opposite orientation (m + a), roots only if 0 < a ≤ −m(0), i.e. k ≤ 215 for a = log k
   (10). Sustained.

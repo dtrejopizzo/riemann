@@ -79,7 +79,7 @@ the whole family of falsifiers. The sign remains entirely in `Son_S ≥ C_{ε_S}
   - S = {∞}: one negative direction from T ≈ 0.596 and two from 0.80 (R183_026 §3, R183_033 §2; NUMERICAL not certified).
   - S = {∞,2}: breaks at T ≈ 0.567 (R183_033 §2, NUMERICAL).
 - **S = S(T):** coincides with a_T.
-  - For `T ≤ ½log5`, `PROVED` given Paper 47 (R183_030 Prop 3.1; `CITED`), with a gap ≥ 6.25e-13‖ξ‖².
+  - For `T ≤ ½log5`, `PROVED` given Paper 46 (R183_030 Prop 3.1; `CITED`), with a gap ≥ 6.25e-13‖ξ‖².
   - Beyond, OPEN.
   - Up to 0.80, `n₋ = 0` is NUMERICAL, with a gap that falls superexponentially.
 
@@ -91,7 +91,7 @@ the whole family of falsifiers. The sign remains entirely in `Son_S ≥ C_{ε_S}
 ## 3. (Q3) Coincidence in the finite window
 
 **Yes, it is stated and used.**
-- R183_030 §1.1: «With S = S(T) one has W_S = W_T, Paper 47's Weil form», with `S(T) = {∞} ∪ {p^k < e^{2T}}`. Label
+- R183_030 §1.1: «With S = S(T) one has W_S = W_T, Paper 46's Weil form», with `S(T) = {∞} ∪ {p^k < e^{2T}}`. Label
   PROVED, bookkeeping.
 - R183_018 Prop 3.1 requires `S ⊇ {∞} ∪ {p < e^{2T}}` precisely for that reason.
 - R183_018 §6, caveat (ii), and R162_2602 Thm 4(b): every proof must use that S contains **all** `p < e^{2T}`.

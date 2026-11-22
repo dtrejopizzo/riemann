@@ -20,7 +20,7 @@ Re 1/(½−ρ) + Re 1/(½−ρ′) = [(½−β) + (β−½)]/((½−β)² + γ²
 
 ## 2. What it gives for 𝒯₀ (PROVED)
 For h_T as in 009 (ĥ_T = (τ²+¼)²|Ĝ₀|² ≥ 0, double zeros at ±i/2, concentrated at |τ| ≲ 1/T), the explicit
-formula (CITED, Paper 45 Thm 8.4 / Paper 47 Thm Z) in the polar-annihilated form gives
+formula (CITED, Paper 45 Thm 8.4 / Paper 46 Thm Z) in the polar-annihilated form gives
   Σ 2Λ(n)n^{−1/2}h_T(log n) = (1/2π)∫ ĥ_T(τ) m(τ) dτ − Z_T,   Z_T := Σ_ρ ĥ_T(γ_ρ)  (γ_ρ = −i(ρ−½)),
 i.e. 𝔞_T(φ₀) = Z_T (the polar terms vanish because ĥ_T(±i/2) = 0). The "regularized centre value" enters
 only through (1/2π)∫ĥ_T m = μ₀(T)‖φ₀‖² (the archimedean term itself). Therefore:

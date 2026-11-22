@@ -3,7 +3,7 @@
 Global label: **NUMERICAL**. Nothing that follows is a theorem.
 
 ## 1. Object and method
-- a^{X,w}_T(F) = C_0‖F‖² + ∫_0^∞(c_F(0)−c_F(u))K(u)du − Σ_j w_j c_F(x_j) on P_T (Paper 47, eq:Aform),
+- a^{X,w}_T(F) = C_0‖F‖² + ∫_0^∞(c_F(0)−c_F(u))K(u)du − Σ_j w_j c_F(x_j) on P_T (Paper 46, eq:Aform),
   with the audited Legendre Galerkin (`free_weight_scripts/forms.py`, unchanged; P_T via SVD).
 - V*(X,T) = max_w λ_min (free w); V*⁺ = same with w ≥ 0. Baseline: λ_min(Arch|P_T) (w = 0).
 - Maximization: λ_min is concave in w; the soft minimum −β⁻¹log Σ e^{−βλ_k} is maximized with L-BFGS(-B)

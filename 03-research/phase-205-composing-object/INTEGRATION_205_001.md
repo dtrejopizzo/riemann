@@ -1,6 +1,6 @@
-# INTEGRATION_205_001 — Paper 47 editor, phase 205
+# INTEGRATION_205_001 — Paper 46 editor, phase 205
 
- Backup: `04-papers/47-row-d-dual-certificates/main_pre_205.tex`.
+ Backup: `04-papers/46-row-d-dual-certificates/main_pre_205.tex`.
 Compilation: pdflatex ×2, 0 errors, 0 undefined references, 190 → 191 pages.
 Check script: `INTEGRATION_205_001_check.py` (mpmath, 30 digits).
 

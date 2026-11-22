@@ -1,7 +1,7 @@
 # R186_040 — The head block of the bundle (Neg_T, Pos_T)|𝒫_T: what its directions are, what decides 1 − β_j, and the falsifier at T = 0.9, 1.0 in multiple precision
 
 Phase 186, round 19. Redirection received mid-round (audit R186_112): verify the vanishing at zeros, decide whether the "leakage" has a part that does not go through the zeros, run the falsifier at T = 1 with mpmath, honest label.
-Sources: R186_039 (Lemma 2.1, Lemma H, §2.4), R186_112 (MAJOR-1/2/3), R186_034 (Thm 2.1–2.2), R186_024/104 (E_k, piecewise Tate), Paper 47 (prop:band, prop:negtrace, lem:roughEF, lem:mbounds, thm:Z), Zhu 2608.24827v2 local text (§9 l. 984–1010: T* = 2πe^{2L} is the height where the zero density (1/2π)log(t/2π) equals the Jensen budget L/π; N(T*) = count of zeros of ζ up to T*; §14.2 "low-zero sampling operator").
+Sources: R186_039 (Lemma 2.1, Lemma H, §2.4), R186_112 (MAJOR-1/2/3), R186_034 (Thm 2.1–2.2), R186_024/104 (E_k, piecewise Tate), Paper 46 (prop:band, prop:negtrace, lem:roughEF, lem:mbounds, thm:Z), Zhu 2608.24827v2 local text (§9 l. 984–1010: T* = 2πe^{2L} is the height where the zero density (1/2π)log(t/2π) equals the Jensen budget L/π; N(T*) = count of zeros of ζ up to T*; §14.2 "low-zero sampling operator").
 Scripts (standalone, in the folder): `r040_head.py [M=40] [M_big=60] [*.npz]` (double precision: bundle, head, decompositions, prolates, piecewise Tate, vanishing at zeros; 30 s + ~1 min per window for the vanishing) and `r040_head_mp.py T M dps [out.npz]` (mpmath, dps 40; T = 1, M = 70: ~25 min). Zeros: `zeros150.npy` (first 150 γ, mpmath zetazero, dps 20; CITED real). Output of the mp runs copied into `r040_mp_outputs.txt`.
 
 ## 0. Verdict

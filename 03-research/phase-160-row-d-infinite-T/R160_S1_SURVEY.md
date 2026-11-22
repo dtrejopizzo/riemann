@@ -8,8 +8,8 @@ theorem, used as stated; HEURISTIC = argued or measured, not proved (all numeric
 explicitly said to be interval-certified — none in this scope is); OPEN; EQUIV = proved equivalent to RH (or to a
 named statement); REFUTED = the corpus itself kills it.
 
-**Form tags** (rule (d)). [prim] = statement about `A_T|P_T` (Paper 47 `eq:form`, `P_T`); [compl] = statement about
-`W_T` on `L^2(I_T)` (Paper 47 `eq:W`). Almost nothing in phases 0–40 is written in these window forms; the older
+**Form tags** (rule (d)). [prim] = statement about `A_T|P_T` (Paper 46 `eq:form`, `P_T`); [compl] = statement about
+`W_T` on `L^2(I_T)` (Paper 46 `eq:W`). Almost nothing in phases 0–40 is written in these window forms; the older
 objects are height-localized Gram matrices, Paley–Wiener realizations, CCM traces, etc. Those are tagged
 [other: …] with the object named, and §0.2 gives the dictionary to the window forms.
 
@@ -39,10 +39,10 @@ uncertified)**, whatever the environment says:
 * Paper 13 `t_c/s^2≈−0.02`; Paper 11 Observations `obs:c1`, `obs:c2`; phase 18 "Case A"; phase 10 frame-gap
   stability tables.
 
-### 0.2 Dictionary old objects ↔ Paper 47 window forms (checked against `def:W`, `eq:W`, `eq:form`, `P_T`)
-* The old "band `d`" (test functions `g=f⋆\tilde f` supported in `[−2d,2d]`, prime cut `n\le e^{2d}`) is Paper 47's
+### 0.2 Dictionary old objects ↔ Paper 46 window forms (checked against `def:W`, `eq:W`, `eq:form`, `P_T`)
+* The old "band `d`" (test functions `g=f⋆\tilde f` supported in `[−2d,2d]`, prime cut `n\le e^{2d}`) is Paper 46's
   window `T=d`: `N_T=\{\log n<2T\}` (`main.tex:119–124`). The old spectral function `f` / `F` (P7, P8, P12) is
-  Paper 47's `\widehat F`. The old archimedean density `Ω(r)=\mathrm{Re}\,ψ(\frac14+\frac{ir}2)−\log π` is `m(τ)`;
+  Paper 46's `\widehat F`. The old archimedean density `Ω(r)=\mathrm{Re}\,ψ(\frac14+\frac{ir}2)−\log π` is `m(τ)`;
   the old comb `F(r)=2\sum Λ(n)n^{-1/2}\cos(r\log n)` is `\sum v_n\cos(τ\log n)`, `v_n=2Λ(n)/\sqrt n`. ✔
 * Old polar term "`h(i/2)+h(−i/2)`" = `2\mathrm{Re}(A(F)\overline{B(F)})` of `eq:W` (with `\widehat F(i/2)=B(F)`,
   `\widehat F(−i/2)=A(F)`). It equals `2|f(i/2)|^2\ge0` **only for real even `F`**. Paper 12 (`main.tex:118–126`)
@@ -54,7 +54,7 @@ uncertified)**, whatever the environment says:
 * Paper 08 / B2-THEOREM's `\mathfrak t(F)=\mathfrak a+\mathfrak q−\mathfrak p` on `PW_d` is `W_T` (`T=d`) [compl],
   evaluated through its zero side. At fixed `T`, `λ^W_T>−∞` in the `L^2` norm is elementary (finite comb, `eq:A`);
   Paper 08 Theorem A's content is the realization in the zero-sampling norm `\mathfrak t_+`, not a bound on `λ^W_T`.
-* The old "primitive part `Π^⊥`" (phase 15 M1–M3) = tests killing the two pole classes = Paper 47's `P_T`
+* The old "primitive part `Π^⊥`" (phase 15 M1–M3) = tests killing the two pole classes = Paper 46's `P_T`
   (`A(F)=B(F)=0`); the old "ample cone `2(\int f e^{−u/2})^2`" (phase 15 M2) is the polar term for real even `F`. ✔
 
 ### 0.3 Index conventions and paper numbers
@@ -414,7 +414,7 @@ Rows (a)–(d) are named only from phase 107 on; phases 0–40 contain their pre
 Each is a potential ingredient, tagged with the memo(s) it concerns. None is a proof step as it stands.
 
 * **I1 — OS positivity, archimedean half now available [B3, B4].** Phase 6 closed OS because (i) the per-prime form is
-  indefinite and (ii) the two-point function is oscillatory. Paper 47 later proved (CITED, `thm:S`, `eq:A`,
+  indefinite and (ii) the two-point function is oscillatory. Paper 46 later proved (CITED, `thm:S`, `eq:A`,
   `main.tex:160–167`) that `m(τ)=C_0+\int_0^∞(1−\cos τu)K(u)du` with `K` completely monotone: the archimedean part is
   a Lévy energy of a subordinated Brownian motion — an OS-decaying, reflection-positive structure. What remains
   closed is only the product-over-primes version (item 1 of §2). A non-product (entangled) Euclidean model whose OS
@@ -433,7 +433,7 @@ Each is a potential ingredient, tagged with the memo(s) it concerns. None is a p
   crossing without the zero; CF steps give zero flow; the limit is MW-6.
 * **I4 — Finiteness axiom L6 / R-FIN [B2, B5, B6, B17].** `110` Prop. 4.5–Cor. 4.6 and `119` R-FIN: inertia is
   autonomous exactly when it factors through an a-priori finite-dimensional object with arithmetic traces (Newton).
-  Tension a memo must resolve: Paper 47 `thm:finZ` (CITED; no finite zero set carries a flat-top certificate;
+  Tension a memo must resolve: Paper 46 `thm:finZ` (CITED; no finite zero set carries a flat-top certificate;
   row D is intrinsically infinite). R-FIN asks for finiteness of the *impure* part only, which `thm:finZ` does not
   exclude.
 * **I5 — HR stability at the degenerate limit [B14, B15, B19].** Paper 15 `thm:hr`: uniform positivity of a tower ⟺
@@ -452,7 +452,7 @@ Each is a potential ingredient, tagged with the memo(s) it concerns. None is a p
   superadditive `⊠` and (b) a sublinear bound. Doc 110 Obs. 5.3 names the missing piece (R-FIN). Any
   tensor-power/field-tower memo must supply (b) from outside the Weil form (C3 in `106:177–185`).
 * **I9 — The phase-6-osterwalder-schrader-reflection pointwise reduction, repaired [B11, B16, B20].** NG-E6 killed "envelope ≥ comb pointwise"
-  because the comb is distributional. Paper 47 `thm:Z` (CITED, `main.tex:1219–1252`) is the rigorous smoothed version:
+  because the comb is distributional. Paper 46 `thm:Z` (CITED, `main.tex:1219–1252`) is the rigorous smoothed version:
   with `w\in\mathcal W_T`, `f_w=σ_T+\widehat{ν_w}+2\widehat g_0` equals `\sum_ρ\widehat w(τ−γ_ρ)` and `W_T\ge\inf f_w`;
   RH ⟺ one-sided smoothing for all `T`. The objection of phase 6 is removed; the sign content is unchanged (it is
   the zero measure again).
@@ -477,7 +477,7 @@ Each is a potential ingredient, tagged with the memo(s) it concerns. None is a p
 * **I15 — Fourier anticommutation [B1].** The identity `Q(f,g)+Q(\hat f,\hat g)=0` (NG-D4) was stated and left open;
   it is the one place in scope where Fourier self-duality (Sonin/prolate territory) is posed as a sign mechanism.
 * **I16 — Weight monotonicity [B12].** `λ_{min}` is concave and non-increasing in each prime weight (`10/main.tex:289`);
-  Paper 47 notes any nonnegative weights may be used in (P)/(D) (`main.tex:550`). Comparison principles between
+  Paper 46 notes any nonnegative weights may be used in (P)/(D) (`main.tex:550`). Comparison principles between
   weight vectors are therefore free; none gives the sign for `v_n=2Λ(n)/\sqrt n` by itself (the heavier corner is
   harder).
 * **I17 — Mechanism-correct upper-bound chain [B11, B13].** Phase 12: `S(t)` log-correlated, derandomized as a prime
@@ -495,7 +495,7 @@ Each is a potential ingredient, tagged with the memo(s) it concerns. None is a p
 ## §6 Definitions a memo needs, verbatim (file:line)
 
 **D1. Symbol, contacts, truncated form, Tate moments, primitive subspace, complete form, bottoms** —
-`04-papers/47-row-d-dual-certificates/main.tex:115–147`:
+`04-papers/46-row-d-dual-certificates/main.tex:115–147`:
 > Throughout, $T>0$, $\IT=(-T,T)$, and for $F\in L^2(\IT)$ (extended by zero) we write
 > $\Fh(\tau)=\int F(t)e^{i\tau t}\,dt$ and $\cF(u)=\int F(t)\overline{F(t-u)}\,dt$ for the autocorrelation […]
 > $m(\tau)=\Rel\psi\!\left(\tfrac14+\tfrac{i\tau}{2}\right)-\log\pi,\qquad

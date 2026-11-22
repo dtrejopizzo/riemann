@@ -4,7 +4,7 @@ Status: the specific results reviewed below are PROVED; sign of the WHOLE scalar
 
 ## 1. Corpus and relative novelty
 
-Reviewed index/grid/crossword and the E0/E_gamma antecedents: Paper47 lem:wit-conc, prop:Egamma-exact and rem:critical; phase188/L2_BUILD_008_GROUND_STATE_AND_T0, L2_BUILD_009_ARITHMETIC_INPUT_FOR_T0 and N_BUILD_013_E_GAMMA_C_COLLAPSES. The Tate chain of 008/009 concentrates at frequency 0 and recovers that same threshold C0+4; it did not provide new slack. The current row N1 moves to increasing frequencies as k grows, and the cone k~cN² has centre u sqrt(cN) and finite width. Its uniform control of the WHOLE arithmetic sum via a density shift, not separate time norms, changes an essential point of the previous argument.
+Reviewed index/grid/crossword and the E0/E_gamma antecedents: Paper46 lem:wit-conc, prop:Egamma-exact and rem:critical; phase188/L2_BUILD_008_GROUND_STATE_AND_T0, L2_BUILD_009_ARITHMETIC_INPUT_FOR_T0 and N_BUILD_013_E_GAMMA_C_COLLAPSES. The Tate chain of 008/009 concentrates at frequency 0 and recovers that same threshold C0+4; it did not provide new slack. The current row N1 moves to increasing frequencies as k grows, and the cone k~cN² has centre u sqrt(cN) and finite width. Its uniform control of the WHOLE arithmetic sum via a density shift, not separate time norms, changes an essential point of the previous argument.
 
 The Bernstein instruments have concrete local antecedents in phase114/114_d_180_BERNSTEIN_DIRECTED_ENDPOINT_GATE§1 and phase72/E72_259_RATIONAL_BERNSTEIN_LM8_CERTIFICATE. Degree elevation and positive coefficients are not new. The bridge from rational densities to monomial atoms with explicit preservation of the polar term was not found in those antecedents. The novelty is limited to that exact application, not to a general principle of positive polynomials.
 
@@ -56,11 +56,11 @@ The independent Gamma representation X,Y is correct. On the event of quotients i
 
 To pass the approximation to the complete series, CORR independent of GAUSS and the summable Gaussian majorant are used. Separating finitely many contacts and two uniformly summable tails justifies ALL even when mu_N oscillates. The modulated series is not declared to vanish.
 
-The stronger precision initially mentioned for the symbol is not necessary. It was replaced by the bound already proved in Paper47, lem:mbounds: |m-log(|tau|/(2pi))|<=1/|tau|+1/(2tau²). Since E tau^-2=O1/N, its expectation is O(N^-1/2), sufficient for PROFILE. The sign and factor 2 of the arithmetic contribution in PROFILE agree with W=ARCH+POLAR+Comb.
+The stronger precision initially mentioned for the symbol is not necessary. It was replaced by the bound already proved in Paper46, lem:mbounds: |m-log(|tau|/(2pi))|<=1/|tau|+1/(2tau²). Since E tau^-2=O1/N, its expectation is O(N^-1/2), sufficient for PROFILE. The sign and factor 2 of the arithmetic contribution in PROFILE agree with W=ARCH+POLAR+Comb.
 
 ## 8. Approved final scope
 
-The COMPLETE scalar table would be sufficient by the new Bernstein bridge. Its row N1 and an eventual quadratic region have been proved, not the WHOLE table. In particular none of these results certifies an additional window of Paper47 beyond the range already declared: to transfer them to all tests, that sufficient condition must be completed. No sign proof for all numerators in the quadratic cone is claimed, nor an extension of T from these particular families.
+The COMPLETE scalar table would be sufficient by the new Bernstein bridge. Its row N1 and an eventual quadratic region have been proved, not the WHOLE table. In particular none of these results certifies an additional window of Paper46 beyond the range already declared: to transfer them to all tests, that sufficient condition must be completed. No sign proof for all numerators in the quadratic cone is claimed, nor an extension of T from these particular families.
 
 ## 9. SEPARATE audited extension: explicit cone from N2
 
@@ -70,4 +70,4 @@ The threshold 32N/k produces exp(64/125)<=125/61. The normalizing beta ratio is 
 
 The infinite tail of contacts is <1/1000 using Lambda<=q and the sum q^-14. For ARCH, k/N>=10000N implies sqrt(k/N)>100; pi<4 and e<3 give u*100/8>3^5>exp5, so the global lower bound of 017 produces ARCH>.99. The polar term 400^-k is <.001 on the whole domain. The final subtraction >.988>.98 is correct.
 
-W>(49/50)||f||² is approved for ALL N>=2, k>=10000N², u31.5, P1. It is an explicit scalar region and not a theorem for all numerators of each block. Nor does it decide the remaining part of the scalar table or, by itself, a new window T of Paper47. This extension neither replaces nor modifies the hypotheses of the main theorem of §§5–7.
+W>(49/50)||f||² is approved for ALL N>=2, k>=10000N², u31.5, P1. It is an explicit scalar region and not a theorem for all numerators of each block. Nor does it decide the remaining part of the scalar table or, by itself, a new window T of Paper46. This extension neither replaces nor modifies the hypotheses of the main theorem of §§5–7.

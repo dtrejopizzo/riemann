@@ -7,7 +7,7 @@ time of writing; nothing used from (N).
 ## Corpus check
 grep "one-step", "coercivity transfer", "renormaliz", "multiscale", "Haynsworth", "quotient formula"
 over 03-research (all phases), 04-papers, 05-meta: phase-118 SPEC / phase-78/88 use "one-step" in
-unrelated senses (LP steps, parity-scale split); Paper 47 uses Haynsworth for parity Schur
+unrelated senses (LP steps, parity-scale split); Paper 46 uses Haynsworth for parity Schur
 (thm:parityschur) only. No multiscale Tate-block tower or Φ-transfer was found. Not a repeat; but
 §3 shows it is a restatement.
 

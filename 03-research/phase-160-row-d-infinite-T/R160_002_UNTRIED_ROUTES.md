@@ -39,7 +39,7 @@ unchanged: at least 4 of 5 panelists judge the memo COMPLETE.
 | M4 | de Branges / Sarnak | polar capacity `𝔊_T` across `T`; a structural identity for `S_even`; the Kreĭn–Nevanlinna parametrisation of `𝔖(T)` as a structure across `T` | 6.2.6, 6.2.7 | U-2, U-4, S-16 |
 | M5 | Montgomery | the Gaussian prime correlation `S_T(τ)` (Doc 152): exact Λ, uniform in `T`; LP-152 at one frequency | 6.2.8 | I-1, U-7 |
 | M6 | Maynard | self-scale evaluation (Doc 153 Prop 153.6); prime side at super-logarithmic adapted support (Rigidity 153.M′) | 6.2.9 | U-12, I-14 |
-| M7 | Iwaniec / Friedlander | bilinear cancellation at fixed frequency (Friedlander–Iwaniec, Heath-Brown identity) against `W_T` (P46 Rem 27.15 item 42) | 6.2.10 | I-1, U-8 |
+| M7 | Iwaniec / Friedlander | bilinear cancellation at fixed frequency (Friedlander–Iwaniec, Heath-Brown identity) against `W_T` (P47 Rem 27.15 item 42) | 6.2.10 | I-1, U-8 |
 | M8 | Tao | the two-variable Weil form `𝒲_2` (prime×prime `Λ⋆Λ` with a *plus* sign) as a Schur/Hadamard positivity object; Lemma 5.2 | 6.2.11 | L-1, L-3, S-6 |
 | M9 | Deligne / Katz | amplification with a *sublinear* bound supplied from outside the Weil form; field-uniform towers held to GRH ∀K | 6.2.12 | S-12, I-5, I-9 |
 | M10 | Bakry / Ledoux | Doob variance / CD(0,∞): RH as one sharp Poincaré inequality, in the signed, nonlocal corridor of Paper 41 | 6.2.13 | I-1, S-13 |

@@ -157,7 +157,7 @@ seen only beyond the Landau ceiling (R163_402 §2, HEURISTIC; Thm 4 exact in the
    $T_1\approx22.6-C-\varepsilon$. It does not touch Thm B, which holds for every finite $H$. So numerics cannot close any
    window beyond the certified range in the exact sense; they only shrink the error $E_H$ in Thm A (polynomially in
    $\Delta$). PROVED.
-3. **Monotone/induction in $T$.** $\lambda^{\rm A}_T$ is non-increasing in $T$ (nested $\mathcal P_T$; Paper 47, record), and
+3. **Monotone/induction in $T$.** $\lambda^{\rm A}_T$ is non-increasing in $T$ (nested $\mathcal P_T$; Paper 46, record), and
    Cor 2 runs downward ($D_{T+\varepsilon}\Rightarrow P_{\rm loc}\Rightarrow D_T$). An upward step "$D_T\Rightarrow D_{T+\varepsilon}$" or
    "$D_T\Rightarrow P_{\rm loc}(\cdot,T+2\varepsilon)$" valid for every $T$ would prove D from $D_{\frac12\log5}$; any such step using
    only the multiplier structure, (1.1), $\mathrm V(H)$-type data and zero counting also applies to $M_m$ (ζ plus an off-line

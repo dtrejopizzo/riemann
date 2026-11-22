@@ -34,7 +34,7 @@ proposed mixed term 2|g|²cos(2φ+2ψ)/r² is therefore exactly 2|Q|²cos2E: the
 (This is R166_101 Thm 2.1 at the level of phases.)
 
 **Theorem 1.2 (tautology). PROVED, E1.** For any F ∈ D_T and x ∈ X, H_x ∈ D_T, and W(H_x) is computed two ways: by the
-prime-side form (eq:form; Paper 47) and by (1.1) (zero side). Both equal W(H_x) for every F. 2.4(iv) is the prime-side
+prime-side form (eq:form; Paper 46) and by (1.1) (zero side). Both equal W(H_x) for every F. 2.4(iv) is the prime-side
 evaluation of W(H_x,·) paired with F (R162_2202), hence also an identity valid for ζ. So "S′(x₀) = d_{x₀}(window)" holds
 for all real-rooted F at all T and constrains nothing; F_1(X,Γ) = d_{x₀}(window) is not an equation on X. The only
 witness-specific node data are S(x) = 0 ∀x ∈ X (W(F,H_x) = 0, the kernel equation) and W ≥ 0. For M_m the same holds
@@ -56,7 +56,7 @@ cos(2E−ψ) = cos2E cosψ + sin2E sinψ: the sine channel at node level is exac
 B(T) = λ_T‖F_T‖² = W_T(F_T) = Σ_on |G_T(γ)|² + 2Σ_q Re G_T(t_q)² (+polar), continuous, B(T_c) = 0 (R165_202).
 
 **Theorem 2.1. PROVED.** Im G_T(t_q)² does not occur in B(T) (W depends on Ĝ Ĝ^# at t_ρ, and quartet pairing gives
-4Re g², Lemma 3.1(c)). dλ_T/dT (Hellmann–Feynman, Paper 47 lem:monoT) is a boundary/kernel expression with no Im g² term
+4Re g², Lemma 3.1(c)). dλ_T/dT (Hellmann–Feynman, Paper 46 lem:monoT) is a boundary/kernel expression with no Im g² term
 either. Any statement "sin2Θ_T has a fixed sign for T < T_c" leaves cos2Θ_T free: for Θ ∈ (0,π/2), sin2Θ > 0 and cos2Θ
 takes both signs. So no implication sine-sign ⟹ cosine-sign at T_c exists without an extra relation, and the only
 available relations are 1.2–1.4 (E1). ∎

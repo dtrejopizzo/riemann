@@ -1,10 +1,10 @@
 # CA_L_002 — Restoring the discrete primal: the prime-site LP, torus (Bohr) certificates, attainment and slackness on the zero locus of P_s (seeds L5, L6, L8)
 
-Phase 193. Pen and paper; **no numerics**. Notation of CA_K_000 l.26–28 (from P47 prop:AM, thm:oneprofile):
+Phase 193. Pen and paper; **no numerics**. Notation of CA_K_000 l.26–28 (from P46 prop:AM, thm:oneprofile):
 𝖡(d) = α(d) − ½Σ_{n≥2}v_n[c₀(log n − d) + c₀(log n + d)], even and continuous on ℝ; target (eq:target) ⟺ 𝖡 PD on ℝ; CA_K_002 Thm 3.2 / Cor 3.3
 (site independence): (eq:target) ⟺ M_X := [𝖡(x − y)]_{x,y∈X} ⪰ 0 for every finite X ⊂ L := {log p : p prime}. **No sign contact. No negative value for ζ.**
 
-Motivation (CA_L_001): Viazovska's method needs (V1) a discrete primal with attainment and slackness on a known discrete set. The P47 window LP
+Motivation (CA_L_001): Viazovska's method needs (V1) a discrete primal with attainment and slackness on a known discrete set. The P46 window LP
 has a continuous primal (Thm 1.1 there). K-S makes the prime-site matrices decisive; their primal is discrete. We build the CE-type dual for
 it and ask what survives of (V1)–(V3).
 
@@ -23,7 +23,7 @@ the set of edge-moment vectors of positive symmetric measures on 𝕋^X. So toru
 PD functions ψ on ℝ with ψ = 𝖡 on the finite set (X − X)∖{0} and ψ(0) ≤ 𝖡(0) — the CE/RV interpolation shape (values prescribed on a discrete set).
 *Proof.* t ↦ (e^{itx})_x has dense image in 𝕋^X (Kronecker; ℚ-independence) and is equidistributed for Haar (Weyl); pushforwards of measures on ℝ
 are weak-* dense in the positive measures on 𝕋^X (approximate η by atomic measures, each atom by an orbit point). ∎
-Difference with P47's dual: there ψ must equal the window symbol on all of [−2T, 2T] and the free part lives on |u| ≥ 2T; here ψ is free
+Difference with P46's dual: there ψ must equal the window symbol on all of [−2T, 2T] and the free part lives on |u| ≥ 2T; here ψ is free
 everywhere except on the finite set X − X. This is the restoration of (V1): **discrete primal, attained dual.**
 
 ## 2. Slackness: the magic vanishing condition
@@ -63,13 +63,13 @@ modular form) would have to have value ≥ 0 for all X; the only canonical one a
 iff 𝖡 is PD — the target. Haar (η = 𝖡(0)·m) has zero edge moments (fails unless 𝖡 vanishes on edges); the Kronecker line ν₀ is CA_H_002.
 **Remark 3.3 ([crit], ARGUED).** Realising η on ℝ (Prop 1.3) needs Kronecker approximations of η's support points; quantitative Kronecker for
 log p, p ≤ e^{2T}, uses linear forms in logarithms (Baker), with times exponential in n. A certificate must also resolve λ_min(M_X), which is of
-size λ_A (tiny, P47 [crit]). Neither obstructs the restatement; both obstruct an explicit construction.
+size λ_A (tiny, P46 [crit]). Neither obstructs the restatement; both obstruct an explicit construction.
 **Modular construction of η?** Modular/Eisenstein objects produce measures on ℝ (Laplace/Mellin transforms in y), i.e. points of the Kronecker
 line closure; an exact η on Z_s ⊂ 𝕋^X is generically not on the line (Z_s ∩ line = zeros of ŝ, a discrete set of t). By Prop 1.3 line measures
 only approximate; exactness (V3) fails for the same reason as CA_L_001 Thm 1.1, now one level up: exact = on the torus, constructive = on the line.
 
 ## 4. Self-review
-- Thm 2.3 ⇒ direction uses thm:oneprofile (target ⟺ 𝖡 PD on ℝ) as recorded in CA_K_000 l.28; I did not re-verify it in P47 this round. If only
+- Thm 2.3 ⇒ direction uses thm:oneprofile (target ⟺ 𝖡 PD on ℝ) as recorded in CA_K_000 l.28; I did not re-verify it in P46 this round. If only
   the window-restricted statement holds, replace Bochner by Krein's extension theorem (continuous PD on (−2a, 2a) extends; CITED Krein 1940): same conclusion.
 - Thm 2.2(a): the rank bound for extreme points of the elliptope is standard; the use requires 𝖡(0) − λ_min > 0, true unless M_X = λI (then trivial).
 - Cor 2.4: conic duality on the compact torus; strong duality by the Slater point A = 0 and compactness. Fine.

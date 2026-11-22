@@ -1,13 +1,13 @@
 # ROUND 024 C — The three cheap checks left by the row D triage
 
 Question: run the three checks that `TRIAGE_D_1…5` and the entry `212-triage-D` (Part V of the index) left
-as "decide something": (a) `n_− ≤ 2` of D.53 (6.7) against Thm P and P47 thm:J / cor:nasym; (b) `n_odd(0.80)`; (c) Fejér
+as "decide something": (a) `n_− ≤ 2` of D.53 (6.7) against Thm P and P46 thm:J / cor:nasym; (b) `n_odd(0.80)`; (c) Fejér
 means of CA_E_001 Cor 1.1. No paper and not the index is touched.
 
 ## 0. Files opened
 
 Opened: `TRIAGE_D_1.md` (item 38, §3), `TRIAGE_D_3.md` (item 111, §3), `TRIAGE_D_4.md` (item 150, §3);
-`phase-114-closing-the-four-rows/114_d_53_…GATE.md` §§1–7; P47 `main.tex` §"Bounds on the negative index"
+`phase-114-closing-the-four-rows/114_d_53_…GATE.md` §§1–7; P46 `main.tex` §"Bounds on the negative index"
 (thm:index l.2518, cor:P3 l.2662, thm:J l.2694, cor:nasym l.2722; parity l.2420–2434);
 `phase-155…/R155_052_ROUND8A_INDEX_MULTIBAND.md` (summary and Thm 5.x), scripts `scripts/r8a/r8a_01_upper.py`, `r8a_lib.py`
 and the archived JSON `r8a_01_0p80_par1_K30_K244_c24.json`; `phase-193…/CA_E_001_COMMUTATIVE_COLLAPSE.md` §§0–4,
@@ -18,12 +18,12 @@ construction in this memo), P48.
 ## (a) D.53 (6.7) against Thm P, thm:J, cor:nasym
 
 **What each statement says (read against the definitions).**
-- P47 thm:index (PROVED, certified): for the **archimedean form alone** `A_∞ = 𝔪_T` on `P_T`,
+- P46 thm:index (PROVED, certified): for the **archimedean form alone** `A_∞ = 𝔪_T` on `P_T`,
   `n_ev, n_odd ≤ 1` on `(0, 0.90]`; `n_−(A_∞|P_T) = 0/1/2` according to `T` relative to `T*_ev ∈ [0.58,0.60]`,
   `T*_odd ∈ [log 2, 0.81]`.
-- P47 cor:P3 ("Thm P"; PROVED): **same form** `A_∞|P_T` and also `𝔪_T` on `L²(I_T)`:
+- P46 cor:P3 ("Thm P"; PROVED): **same form** `A_∞|P_T` and also `𝔪_T` on `L²(I_T)`:
   `n_− ≤ 5` at `T=½log3`, `≤ 7` at `log 2`, `≤ 8` at `0.80` (prolate bound, weaker than thm:index in that range).
-- P47 thm:J (PROVED): lower bound `n_−(A_∞|P_T) ≥ ⌈2Tτ_0/π⌉ − 3`, vacuous up to `T ≈ 0.75` and `≥ 3` from
+- P46 thm:J (PROVED): lower bound `n_−(A_∞|P_T) ≥ ⌈2Tτ_0/π⌉ − 3`, vacuous up to `T ≈ 0.75` and `≥ 3` from
   `2Tτ_0/π > 5`, i.e. `T > 1.249`. cor:nasym (PROVED): `n_−(A_∞|P_T) ~ 4.004·T`, `T → ∞`.
 - D.53 (6.1)–(6.7): `A_T = K_{g,T}` on `H_T^0` (mass zero) where, by (1.1)–(1.2), `K_g` is the **complete** kernel
   (Gamma plus all the prime-power hinges `a = k log p ≤ 2T`), in the pullback by derivatives:
@@ -49,14 +49,14 @@ convention of D.52, not opened).
    becomes CLOSED" is resolved negatively: **it is not the same operator** (Arch alone vs complete kernel). Item 38 stays REF.
 2. Index, entry 212-triage-D, bullet "Computations that decide something": remove "cross-check first with Theorem P, “count
    5 at log 2”"; replace with "Thm P / thm:J / cor:nasym are about Arch and do not decide (6.7)".
-3. Index l.5150 ("DEAD [count 5 at log 2]") and l.3688 ("n₋ ≤ 5/6/7 (5/7/8 series)"): according to P47 cor:P3 the bound is
+3. Index l.5150 ("DEAD [count 5 at log 2]") and l.3688 ("n₋ ≤ 5/6/7 (5/7/8 series)"): according to P46 cor:P3 the bound is
    `5` at `½log3`, `7` at `log 2`, `8` at `0.80`. "5 at log 2" and "5/6/7" are transcription discrepancies.
 
 ## (b) `n_odd(0.80)`
 
-**What it decides.** By strict monotonicity of `λ_odd` (P47 thm:index / R155_052 Lemma 4.3) and `T*_odd ∈ [log 2, 0.81]`:
+**What it decides.** By strict monotonicity of `λ_odd` (P46 thm:index / R155_052 Lemma 4.3) and `T*_odd ∈ [log 2, 0.81]`:
 `n_odd(0.80) = 0` ⟺ `T*_odd > 0.80` ⟺ (H1) holds at `0.80`. It is a datum of the archimedean side; it does not decide the sign of `a_T`.
-Prior state: P47 thm:index fixes only `n_odd(0.80) ≤ 1` (l.2532, 2552); R155_052 point 5: OPEN, second eigenvalue
+Prior state: P46 thm:index fixes only `n_odd(0.80) ≤ 1` (l.2532, 2552); R155_052 point 5: OPEN, second eigenvalue
 of the certifying matrix `−0.0047` (default `τ_N`), `−0.0019` (`τ_N = 30`); heuristic extrapolation `τ_N ≈ 60`.
 
 **Execution.** Recorded script `r8a_01_upper.py` unmodified, copied to
@@ -69,7 +69,7 @@ a temporary directory
 | 56, 76, 60 | — | library failure ("series did not converge; enlarge KM") | — |
 Output: `r8a_run/r8a_01_0p80_par1_K44_K260_c40.json` and the `.log` files in the same folder.
 
-**Result.** `n_odd(0.80) ≤ 1` re-certified (**PROVED**, already in P47); `n_odd(0.80) = 0` remains **OPEN**.
+**Result.** `n_odd(0.80) ≤ 1` re-certified (**PROVED**, already in P46); `n_odd(0.80) = 0` remains **OPEN**.
 The series `−0.0047 → −0.0019 → −0.0003` as `τ_N` grows is compatible with the residue being fixed by the constant minorant
 beyond `τ_N` and with certifying `0` at somewhat larger `τ_N` (**NUMERICAL**, diagnostic). Going further requires enlarging `KM`
 in `r8a_lib.moments`, i.e. modifying the recorded script; this was not done.

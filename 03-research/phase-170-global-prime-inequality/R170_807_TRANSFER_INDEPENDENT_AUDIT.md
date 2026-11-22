@@ -9,7 +9,7 @@ certificates of *The Three Gates*. It is not a proof of RH.
 The capacity bound of R170_805 and the exact transport of R170_806 are
 correct, with the normalizations made precise below. The new result
 that is established is an identity of forms: the archimedean block of
-Paper 47 contains, with coefficient one, the form `b` of R170_805, and
+Paper 46 contains, with coefficient one, the form `b` of R170_805, and
 the rest is a scalar shift plus an explicit bounded integral operator.
 The primes and the polar term transport exactly within the same
 equality.
@@ -104,7 +104,7 @@ The three published values were reproduced:
     0.8916274345214998.
 
 These are floating-point consistency checks, not interval certificates
-nor approximations of the Paper 47 margin.
+nor approximations of the Paper 46 margin.
 
 ## 3. Independent derivation of the transport
 
@@ -112,7 +112,7 @@ Let `L=2T` and
 
     f(x)=sqrt(L) F(L(x−1/2)).
 
-This transformation is unitary. With the Paper 47 density
+This transformation is unitary. With the Paper 46 density
 
     K(v)=1/(2sinh(v/2))+1/(2cosh(v/2))
 
@@ -237,7 +237,7 @@ Not proved:
 1. a sign bound for the residual `K_L` in the metric of `b`;
 2. a Schur estimate that preserves `R_S` and is uniform in `L`;
 3. the arithmetic annihilation at the first contact;
-4. the global inequality of Paper 47 or RH.
+4. the global inequality of Paper 46 or RH.
 
 The next bottleneck is now well localized: the positive reserve `R_S`
 must be assigned to the joint residual, in the exact inverse metric of

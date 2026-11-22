@@ -235,4 +235,4 @@ Combining ARCH, COMB and POLAR in the SAME norm proves W[F]>(4−2−1)||F||²=|
 
 The huge cutoff 054 is replaced by an explicit cone of growth n³ log³n, valid for ALL numerators of dimension n. The contour bound is uniform and was obtained keeping the amplitude without phase and the exact product of the density; 016 is not evaded by assuming a uniform weighted causal norm.
 
-The interior j<J(n) remains undecided. No global positivity is derived from the recurrences 016/036, no uniform quadratic cone for all P is claimed and no time window T of Paper 47 is extended. There were no numerical campaigns nor parameter selection by floating-point eigenvalues. Papers untouched.
+The interior j<J(n) remains undecided. No global positivity is derived from the recurrences 016/036, no uniform quadratic cone for all P is claimed and no time window T of Paper 46 is extended. There were no numerical campaigns nor parameter selection by floating-point eigenvalues. Papers untouched.

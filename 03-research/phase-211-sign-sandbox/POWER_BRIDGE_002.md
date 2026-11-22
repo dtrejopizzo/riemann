@@ -4,7 +4,7 @@ Status: PROVED, independently reviewed in POWER_AUDIT_002.md and POWER_PACKET_SC
 
 ## Antecedents and difference
 
-Read the project rules, POWER_CONE_001, the powers proposal, the README index (exterior/Pick family and P211 record), grid parts 3/5, crossword (exterior and gauge entries), and the ext/univ definitions of Paper 47. The concrete novelty with respect to the proposal is to settle its density requirement in the form norm via a weighted fractional Sobolev space, without assuming sufficient L² density. No new Pick principle is proposed and no identity is retried as a sign proof.
+Read the project rules, POWER_CONE_001, the powers proposal, the README index (exterior/Pick family and P211 record), grid parts 3/5, crossword (exterior and gauge entries), and the ext/univ definitions of Paper 46. The concrete novelty with respect to the proposal is to settle its density requirement in the form norm via a weighted fractional Sobolev space, without assuming sufficient L² density. No new Pick principle is proposed and no identity is retried as a sign proof.
 
 ## 1. Bridge space
 
@@ -35,7 +35,7 @@ by Cauchy–Schwarz after shifting. The comb sum converges and is bounded by 2Σ
 
     |Q(rho,sigma)| ≤ C ||rho||B ||sigma||B.                    (B2)
 
-This norm separately controls all the terms of Paper 47; it depends neither on cancellations nor on an assumed sign.
+This norm separately controls all the terms of Paper 46; it depends neither on cancellations nor on an assumed sign.
 
 ## 2. Every PW_N datum belongs to B
 

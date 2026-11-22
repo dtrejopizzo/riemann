@@ -30,7 +30,7 @@ ARGUED (grid of step 0.01, no rigorous Lipschitz bound; see §5).
 - **Normalization verified** against AUDIT_206_001: at T = ½log5, block {1,3}, F ⊥ c, 600 zeros give
   0.0018523604 (AUDIT: 0.00185236). With K = 2000: 0.0018523932 (AUDIT, from the prime side: 0.0018523954). That is,
   Z_T = 2Σ_{γ>0}Φ_F(γ)², with the factor 2 for ρ, ρ̄; it matches lem:roughEF / eq:W read in the even sector.
-- P47 lem:combsine (basis e_k = T^{−1/2}sin(ω_k(x+T)), ω_k = πk/2T), rem:chiev-sine (c_k), lem:archcount (N(T)),
+- P46 lem:combsine (basis e_k = T^{−1/2}sin(ω_k(x+T)), ω_k = πk/2T), rem:chiev-sine (c_k), lem:archcount (N(T)),
   cor:margin1 (4·10⁹Te^{−15.449T}, upper bound of λ_A over all of 𝒟), AUDIT_207 (H_N) OPEN.
 - ROUTES-TRIED-INDEX: "numerical certificate via verified zeros" appears as a REF-D/CALIB-type reformulation
   (CALIB_R4/R5 from the prime side; thm:log5W at ½log5 with balls). There is no record of a closed bound τ(T) for the
@@ -208,7 +208,7 @@ citations) and not CONDITIONAL. The only non-rigorous piece of the "∀T ≤ T*"
 > at the jump N = 17. μ_N(T) superexponential (slope 22→28), no floor in blocks 2N/4N. No mechanism; do not retry
 > "extending T* with more verified height" (T* ~ log H/25).
 
-## 8. Remark proposed for P47 (rem:zcert, after rem:finitesign)
+## 8. Remark proposed for P46 (rem:zcert, after rem:finitesign)
 
 Only with PROVED/CITED content; the continuum in T is deliberately omitted.
 

@@ -1,11 +1,11 @@
 # Phase 188 — Closing D: the (L2) and (N) tracks, combs and one profile
 
-Two pen-and-paper tracks toward the open items (L2) and (N) of Paper 47. The phase proves the polar
+Two pen-and-paper tracks toward the open items (L2) and (N) of Paper 46. The phase proves the polar
 elimination lemma and the polar-free form (lem:polarelim, prop:sharp), the exact (E_γ) threshold
 (prop:Egamma-exact), positive combs and the atomic positive comb (thm:kappa, thm:atomic), the integer
 density ceiling (thm:ceiling), lag-localized primitive tests (lem:transl, thm:band), the random-comb
 bound (thm:poisson), the one-profile criterion (thm:oneprofile) and the absence of an arithmetic square
-decomposition for T ≥ ½log3 (thm:sos). These are integrated into Paper 47 (see `INTEGRATION_188.md`);
+decomposition for T ≥ ½log3 (thm:sos). These are integrated into Paper 46 (see `INTEGRATION_188.md`);
 the sign itself is not obtained and row D remains OPEN. The synthesis is `SYNTHESIS_188.md`.
 
 
@@ -157,7 +157,7 @@ residue ≤ 1 < κ* — positivity on log ℕ is never density-driven; ζ sits a
 log ℕ — no contradiction; integer test-function structure is destructive for density. No sign contact.
 | N_BUILD_016 | anti-alignment: (b) −∂_s log U_s is the commuting multiplier −(ζ′/ζ)_N — no monotonicity/convexity in s (two-bump tests) NO-GO; (a) **exact Gram identity: comb = −‖F‖²∂_s log‖U_sF‖² (ℤ-additive centre, Λ-blind) + 2Re⟨a⊥,c⊥⟩ (Möbius⊥ × log⊥ interaction)** using μ*1 = δ; Cauchy–Schwarz loses ≍T (ARGUED); target = anti-alignment of a⊥, c⊥ | PROVED / NO-GO / OPEN |
 | N_BUILD_017 | centre 𝒞(F) = ‖F‖²(4T − ⟨1/(¼+τ²)⟩_{|F̂|²/(¼+τ²)}) + O(Te^{−T}) — **positive, size 4T (wrong sign)**: the main term N^{1−s}/(1−s) of ζ_N survives in the quadratic Gram norm though Tate kills it in the comb; interaction must be ≈ −4T; no slack (NO-GO); repair by subtracting the main multiplier makes (G1) inexact (smoothed Mertens) | PROVED (uniformity ARGUED) / NO-GO |
-| L2_BUILD_021 review | §4 Prop 4 CONFIRMED (cond. on Q′): same form as P47 𝔞_T on P_T; log ℕ support built into Thm D, load-bearing via resolution (gap 1/M ⇒ arch gain log M ≈ density gain); κ>1 combs (ρ_κ, 018 lattice h≪e^{−e^T}) escape, no contradiction; "only via P_T-correlation" → HEURISTIC; Thm D, N_011, 018 all correct | PROVED / HEURISTIC |
+| L2_BUILD_021 review | §4 Prop 4 CONFIRMED (cond. on Q′): same form as P46 𝔞_T on P_T; log ℕ support built into Thm D, load-bearing via resolution (gap 1/M ⇒ arch gain log M ≈ density gain); κ>1 combs (ρ_κ, 018 lattice h≪e^{−e^T}) escape, no contradiction; "only via P_T-correlation" → HEURISTIC; Thm D, N_011, 018 all correct | PROVED / HEURISTIC |
 
 ### (L2) — 022: large deviations; ζ's clamped-span matrix
 L2_BUILD_022: exact exponential moments via the Poisson Laplace functional (PROVED); NO-GO: single-functional Chernoff + nets give only
@@ -173,7 +173,7 @@ L2_BUILD_023: Lemma L — translates of F₀ = (¼−∂²)G₀ are primitive, c
 cross term O(e^{−5d/2}) (k = 0 term cancels), polar kernel cross term 0. Theorem T — two-sided (Ξ): target ⇒ |Ξ_{F₀}(d)| ≤ 2a₀ + O(e^{−5d/2})
 at every scale (sharpens N_014 Cor A′). Theorem P — random Poisson combs (any κ): P(λ_A(T) ≥ 0) ≤ exp(−T log T/(4T₀)(1+o(1))),
 rate → 1/(2 log 2) (PROVED, Esseen CITED). No sign contact.
-| N_BUILD_019 | SOS vs dual class: SOS with free p.d. part = Paper 47 dual class (D) (Prop 1, PROVED; lossless by thm:D1, no new content); **pure-arithmetic SOS (atoms only from squares of Dirichlet polynomials) is EMPTY for every T ≥ ½log3** (needs m ≥ A_T and λ_{∞,P} ≥ m; by hand λ_{∞,P}(½log3) ≤ 0.33 < 0.980 ≤ A_T) — divisor-lattice SOS DEAD | PROVED / NO-GO |
+| N_BUILD_019 | SOS vs dual class: SOS with free p.d. part = Paper 46 dual class (D) (Prop 1, PROVED; lossless by thm:D1, no new content); **pure-arithmetic SOS (atoms only from squares of Dirichlet polynomials) is EMPTY for every T ≥ ½log3** (needs m ≥ A_T and λ_{∞,P} ≥ m; by hand λ_{∞,P}(½log3) ≤ 0.33 < 0.980 ≤ A_T) — divisor-lattice SOS DEAD | PROVED / NO-GO |
 | L2_BUILD_023_REVIEW | Review of 023: L, C, T, P CONFIRMED; FIX Lemma C denominator (1−e^{−2(d−2T₀)}); T novelty DOWNGRADE (implicit in N_014 §3); P FIX: rate exp(−cT log T) for every c>0 (T₀↓0), 1/(2log2) is the worst constant | CONFIRMED / FIX |
 
 ### (L2) — 024: single-profile Bochner reformulation

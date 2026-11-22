@@ -1,5 +1,5 @@
 # AUDIT_200_EPSTEIN_001 — Audit of LEMMA_E_EPSTEIN_001 (phase 200, round 7). Object audited:
-`LEMMA_E_EPSTEIN_001.md`, `LEMMA_E_EPSTEIN_001_data/`, the `phase-198-parity-split/cert_falsifiers.py` pipeline, P47 lem:monoT
+`LEMMA_E_EPSTEIN_001.md`, `LEMMA_E_EPSTEIN_001_data/`, the `phase-198-parity-split/cert_falsifiers.py` pipeline, P46 lem:monoT
 (l. 502) and lem:shape-epstein (l. 8525–8545).
 
 ## Summary (≤200 words)
@@ -8,7 +8,7 @@
 1/sinh(u/2), the tail 2·log coth(T/2), the polar term and P_T; I checked r_Q = 1∗χ₋₂₀ + χ₋₄∗χ₅ (n ≤ 200), the exact Λ_Q
 (Λ_Q(2)=Λ_Q(3)=Λ_Q(7)=0, Λ_Q(36) = −4log6, negatives n ≤ 200 = {36,54,84,126,189,196}), Z_Q(0) = −1, the FE and the residue π/√5.
 I re-ran the T = 8/5 certificate (degree 48, 2^240): [−0.0619395254, −0.0619395173], identical to the memo's. lem:monoT does
-not use the sign of the comb. Necessary corrections (none affects Lemma E): (a) P47 attributes the values +5.049/+1.785/−3.479
+not use the sign of the comb. Necessary corrections (none affects Lemma E): (a) P46 attributes the values +5.049/+1.785/−3.479
 to the T = 1.59 witness, but they belong to the T = 8/5 witness; (b) the phrase "any inequality surviving the average of two
 Euler products is falsified" is an overclaim: it must be reformulated as C-E′ (below); (c) the series Λ_Q (and Λ_cosh) does
 **not** converge for Re s > 1 (Z_Q has zeros with Re s > 1): the identity is formal / on Re s > σ₀; (d) notation collision Λ_Q
@@ -21,8 +21,8 @@ Then ½·20^{s/2}Γ_ℝ(s)Γ_ℝ(s+1) = (√20/2π)^sΓ(s): matches the classica
 positive-definite binary form of discriminant D = −20. **Correct.** Numerically: |Λ(0.3+7.1i) − Λ(0.7−7.1i)| ≈ 7·10⁻²⁰
 at 15 digits (the memo gives 10⁻³⁵ at higher precision). The factor ½ is irrelevant for the log-derivative.
 
-**C₀^Q.** With P47's convention (2·Re of the archimedean log-derivative at ½+iτ; for ζ this gives ψ(¼) − logπ = −5.3722, which is
-P47's C₀): 2·[½log20 + (−½logπ + ½ψ(s/2)) + (−½logπ + ½ψ((s+1)/2))] at s = ½ gives
+**C₀^Q.** With P46's convention (2·Re of the archimedean log-derivative at ½+iτ; for ζ this gives ψ(¼) − logπ = −5.3722, which is
+P46's C₀): 2·[½log20 + (−½logπ + ½ψ(s/2)) + (−½logπ + ½ψ((s+1)/2))] at s = ½ gives
 log20 + ψ(¼) + ψ(¾) − 2logπ, and ψ(¼) + ψ(¾) = (−γ−π/2−3log2) + (−γ+π/2−3log2) = −2γ − 6log2. Evaluated: −4.60704191130755
 by both expressions. **PROVED.** The conductor enters as +log20·‖F‖² = 2·log(√20)‖F‖²; the memo's form "2log(√20/2π)"
 includes the −2logπ and is the same thing (no coefficient ambiguity).
@@ -55,7 +55,7 @@ log-derivative of Z_Q/2, which is that of Z_Q. Residue of Z_Q at 1 = L(1,χ₋�
 Λ_Q(6) = 2log2+2log3, Λ_Q(9) = 6log3, Λ_Q(14) = 2log14, Λ_Q(21) = 4log21, Λ_Q(36) = −4log6, Λ_Q(126) = −8log2−16log3−8log7.
 Negatives n ≤ 200: {36, 54, 84, 126, 189, 196} — matches the memo. **PROVED.**
 
-**Notation (correction).** The memo and P47 use Λ_Q both for the completion Λ_Q(s) and for the coefficients Λ_Q(n). P47
+**Notation (correction).** The memo and P46 use Λ_Q both for the completion Λ_Q(s) and for the coefficients Λ_Q(n). P46
 also calls something Ξ_Q that is never defined in the lemma. Rename: completion 𝚲_Q or ξ_Q; coefficients Λ_Q(n).
 
 ## 3. Certificate
@@ -87,7 +87,7 @@ Rigor of the code:
 
 ## 4. Lemma M / lem:monoT
 
-The proof (P47 l. 506–514) extends F by zero: the norm, the Tate moments and c_F do not change; the new contacts have
+The proof (P46 l. 506–514) extends F by zero: the norm, the Tate moments and c_F do not change; the new contacts have
 c_F(log n) = 0; the archimedean part is ∫₀^{2T}(c(0)−c)K + c(0)∫_{2T}^∞K, invariant when passing to T′ because c ≡ 0 on
 [2T,2T′]. It never uses Λ(n) ≥ 0 or Euler; only the structure "constant + Lévy with a positive kernel integrable at ∞ + comb
 evaluated at log n". With K = 1/sinh(u/2) it is identical. **PROVED for 𝔞^Q, ∀T ≥ 1.59.**
@@ -113,7 +113,7 @@ polar term: in §3 of the memo the table adds the "pole 2AB" term also in the L_
 in its own right; at g* it is not in P_T. Label that table NUMERICAL; correct the column or note it).
 
 **Witness discrepancy:** the values +5.049/+1.785/−3.479 come from the **T = 8/5** witness, not T = 159/100. The memo says so
-(§4.1.3), but the memo's summary and P47 lem:shape-epstein ("on the witness", immediately after the T = 159/100 witness) do not.
+(§4.1.3), but the memo's summary and P46 lem:shape-epstein ("on the witness", immediately after the T = 159/100 witness) do not.
 
 ## 6. Constraint C-E
 
@@ -133,7 +133,7 @@ a **single** Euler product (Λ_cosh ≡ 0), or an equivalent condition for the g
 Sign note: the memo says the defect "enters with a fixed sign"; only order 2 has a fixed sign (≥ 0); order 4 is ≤ 0
 (n = 36,…). In the window T ≤ 1.79 only order 2 acts, which is why the statement holds there.
 
-## 7. P47 lem:shape-epstein (l. 8525–8545)
+## 7. P46 lem:shape-epstein (l. 8525–8545)
 
 - Completion, Γ factor, conductor 20: backed up ✓ (corrects the old "Γ(s/2)").
 - "Ξ_Q": not defined — use the completion's name.
@@ -162,9 +162,9 @@ Sign note: the memo says the defect "enters with a fixed sign"; only order 2 has
 | Values 𝔞^K, 𝔞^ψ, defect | PROVED, but at the T = 8/5 witness |
 | C-E | reformulate as C-E′ |
 | Table §3 (Mori) L_ψ column with pole | NUMERICAL, correct/annotate |
-| P47 lem:shape-epstein | proved, with 4 text corrections |
+| P46 lem:shape-epstein | proved, with 4 text corrections |
 
-Mandatory corrections: (1) P47: attribute the decomposition values to the T = 8/5 witness; (2) P47 and memo: replace the
-averaging phrase with C-E′; (3) P47: define/rename Ξ_Q and separate completion/comb notation; (4) memo §1.3/§4.1: explicit
+Mandatory corrections: (1) P46: attribute the decomposition values to the T = 8/5 witness; (2) P46 and memo: replace the
+averaging phrase with C-E′; (3) P46: define/rename Ξ_Q and separate completion/comb notation; (4) memo §1.3/§4.1: explicit
 formula with c > σ₀ and convergence of Λ_Q, Λ_cosh only for Re s > σ₀ (formal identity); (5) memo: "fixed sign" only at order 2.
 None of these affects the result: **Lemma E remains PROVED.** Nothing here gives a sign for ζ; L′♯ and row D remain OPEN.

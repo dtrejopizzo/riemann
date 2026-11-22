@@ -3,7 +3,7 @@
 in-place repairs in `R143_001_ROUND1.md` (now 1141 lines) and `README.md`, checked against
 `R143_002_AUDIT.md` finding by finding. Method unchanged: nothing accepted on the ledger's
 word — every repair re-derived at the statement it touches; every new constant recomputed with mpmath
-at `mp.dps = 30–40`. Sources re-opened for this round: Paper 46 Definition–Theorem 11.7(i) (`K > 0`,
+at `mp.dps = 30–40`. Sources re-opened for this round: Paper 47 Definition–Theorem 11.7(i) (`K > 0`,
 now elementary and printed as such), Theorem 11.8(i),(iii), Theorem 11.13(i), Prop. 12.4B;
 `R141_001` Lemma D.26.1, Lemma D.26.3, Theorem D.26.5, Lemma D.26.6; `R142_001` D.31.7, D.31.10;
 `R142_004` J3. No R143_003 file edited.*
@@ -23,10 +23,10 @@ round. No FATAL. Row D label: unchanged, correctly.**
 | **H1** | Lemma D.34.6a + re-proved D.34.7 give `C'_X = +∞` | **PARTLY — see H12** | The width-parametrised family is **correct** and the diagnosis was accepted exactly. I re-derived every clause of Lemma D.34.6a (below) and the trace verification of D.34.7 at `n = 1` and `n ≥ 2`, which are now right and no longer rest on an exact cancellation of digits. **But the final step — `I_∞(E,X) = −2\mathrm{Re}(Φ_E(ρ_1)Φ_X(1−ρ_1)) + O(1)` — is false as printed**: `I_∞(E_0,X) = t\,b_J(Φ_X(1)−Φ_X(0)) + εI_∞(K,X)` and `t → ∞`. See H12; the theorem is nevertheless true, by a two-line case split I give there. |
 | **H2(i)** | cone defined for every admissible `g`; `∃g` in D.34.10, D.34.12, O-24 | **YES** | Definition D.34.1's Convention, Theorem D.34.5 ("for any admissible `g`"), Theorem D.34.8 ("the choice of an admissible `g`"), Corollary D.34.12 (`∃ admissible g ∃h⁰`, with the `⟸`/`⟹` asymmetry spelled out), O-24 ("is there an admissible `g` such that…"). Exactly the repair asked for, and no statement now hides a side condition in a definition. **Accepted.** |
 | **H2(ii)** | count was three; now two, because `(G⁺)` is unconditional | **YES, and better than asked** | The boxed "RH-uses, counted" paragraph states the history honestly ("the count of three was correct against round 1"), and Lemma D.34.9′ removes the third rather than merely quantifying it. O-24 now names the two steps and says two, not three. **Accepted.** |
-| **H3** | D.34.14(ii) → `CLAIM`, O-28 opened | **YES** | Label table, P46-40 and the open list all carry it; (i) is kept `PROVED` and restated as "the mechanism's only zero-location input", which is the correct and useful half. O-28 is stated as a realisation/interpolation problem for a general admissible `Z`, which is the right generality. **Accepted.** |
-| **H4** | "strictly stronger" deleted everywhere | **YES — grep-verified** | Grep leaves four occurrences of the phrase in `R143_001`/`R143_003` and **every one of them is a retraction or a prohibition** (the round-2 header note; D.34.8's remark "Round 1 called it … That is false"; D.35(v) "*not* 'strictly stronger', since the two clauses are incomparable"; P46-37 "Must not be described as…"), and none in the README. No assertion of the claim survives; the replacement wording ("beside Theorem 12.3, incomparable clause, fewer and cheaper cone inputs, not refuted by D.31.10") is accurate. The auditor's verification that dropping `E' ≢ 0` is harmless is recorded at Definition D.34.8a, correctly attributed. **Accepted.** |
-| **H5** | label split into a proved bracket and a certified value | **YES** | Theorem D.33.4 now prints `PROVED: s_* = m(γ_1) ∈ [0.99845824…, 0.99846016…]` with attainment at `ρ_1`, and `CERTIFIED: m(γ_1) = s_1` (the `θ`-argmin). Both endpoints recomputed here: `L(γ_1) = 0.998458240354706579`, `s(γ_1,π/2) = 0.998460162718809109`. The §Label row matches. (The README's headline bullet and P46-34 still print the unsplit form — H14(c).) **Accepted.** |
-| **H6** | generic-`c_k` sentence withdrawn; `{2^k}` recorded; restated as (α)+(β); O-29 | **YES** | Remark D.34.15(ii) now retracts the false sentence explicitly, prints the `{2^k}` generating function correctly, and restates the role of A8 as (α) a multiplicative semigroup with a continuable generating function plus (β) `ξ`'s two **real** polar exponents. O-29 asks the right follow-up. (P46-41's table row was not updated — H14(b).) **Accepted.** |
+| **H3** | D.34.14(ii) → `CLAIM`, O-28 opened | **YES** | Label table, P47-40 and the open list all carry it; (i) is kept `PROVED` and restated as "the mechanism's only zero-location input", which is the correct and useful half. O-28 is stated as a realisation/interpolation problem for a general admissible `Z`, which is the right generality. **Accepted.** |
+| **H4** | "strictly stronger" deleted everywhere | **YES — grep-verified** | Grep leaves four occurrences of the phrase in `R143_001`/`R143_003` and **every one of them is a retraction or a prohibition** (the round-2 header note; D.34.8's remark "Round 1 called it … That is false"; D.35(v) "*not* 'strictly stronger', since the two clauses are incomparable"; P47-37 "Must not be described as…"), and none in the README. No assertion of the claim survives; the replacement wording ("beside Theorem 12.3, incomparable clause, fewer and cheaper cone inputs, not refuted by D.31.10") is accurate. The auditor's verification that dropping `E' ≢ 0` is harmless is recorded at Definition D.34.8a, correctly attributed. **Accepted.** |
+| **H5** | label split into a proved bracket and a certified value | **YES** | Theorem D.33.4 now prints `PROVED: s_* = m(γ_1) ∈ [0.99845824…, 0.99846016…]` with attainment at `ρ_1`, and `CERTIFIED: m(γ_1) = s_1` (the `θ`-argmin). Both endpoints recomputed here: `L(γ_1) = 0.998458240354706579`, `s(γ_1,π/2) = 0.998460162718809109`. The §Label row matches. (The README's headline bullet and P47-34 still print the unsplit form — H14(c).) **Accepted.** |
+| **H6** | generic-`c_k` sentence withdrawn; `{2^k}` recorded; restated as (α)+(β); O-29 | **YES** | Remark D.34.15(ii) now retracts the false sentence explicitly, prints the `{2^k}` generating function correctly, and restates the role of A8 as (α) a multiplicative semigroup with a continuable generating function plus (β) `ξ`'s two **real** polar exponents. O-29 asks the right follow-up. (P47-41's table row was not updated — H14(b).) **Accepted.** |
 | **H7** | round 1's Lemma D.34.9 demoted to Remark D.34.9a `SKETCH`, moot | **YES** | And the demotion is honest about both defects (RH-conditionality; the perturbation must be confined to the two bumps). Used nowhere. **Accepted.** |
 | **H8(a)** | half-circle argument replaced | **YES** | "Every closed arc of length `π` contains a point at which `|\mathrm{Re}(e^{iψ}w)| = |w|`" — correct (the two such points are antipodal). **Accepted.** |
 | **H8(b)** | factor-2 margins, coincidence removed | **PARTLY — H14(a)** | At `n = 1` there is now a genuine factor-`2` margin (`t_1(E) ≥ p_0ε/2`). At `n ≥ 2` the bracket `½p_0tb_J − 2rG_σ|Φ_g(ρ_1)| − 2rκΛ_σG_σ` is **exactly `0`** by the definition of `t` — the cancellation is still exact, by construction. That is mathematically fine (`t_n ≥ 0` is all `B4` requires) but the round-2 note claims "every inequality has a factor-`2` margin and the two cancellations are not exact", which is not what the proof does. Wording only. |
@@ -88,7 +88,7 @@ Re-derived in full:
 * **Is `(G⁺)`-absolute what D.34.10 consumes?** Yes: under RH `W^{\mathrm{abs}}(g) = Σ|Φ_g(ρ)|² = W(g)`,
   and unconditionally the absolute form is the stronger one. Definition D.34.8b says exactly this. ✓
 * **Admissibility of `g_λ`, and the compact-support question — the coordinator's main worry.**
-  `K` is real, even, `K > 0` (Paper 46 Thm 11.7(i), and since phase-135 round 2 that positivity is
+  `K` is real, even, `K > 0` (Paper 47 Thm 11.7(i), and since phase-135 round 2 that positivity is
   **elementary and printed**: each term of (11.7) is `2πn²e^{5u/2}e^{−πn²e^{2u}}(2πn²e^{2u}−3)` with
   `2πn²e^{2u} ≥ 2π > 3` for `u ≥ 0`, plus evenness — so no import is being leaned on), `K ∈ D^W`
   (super-exponential decay). So `g_λ ≥ 0`, even, real, `≢ 0`, in `D^W`. The Baire condition is
@@ -165,9 +165,9 @@ Theorem D.34.8 is correct (a larger cone makes `(b′)` easier) and is a legitim
 * **H14 (MINOR, four wording/bookkeeping items).**
   (a) the H8(b) note claims factor-`2` margins "at every step"; the `n ≥ 2` bracket is still exactly
   `0` by construction (harmless, since `t_n ≥ 0` suffices);
-  (b) paper-facing row **P46-41** still prints round 1's retracted formulation ("A8 enters through the
+  (b) paper-facing row **P47-41** still prints round 1's retracted formulation ("A8 enters through the
   index set `n ∈ N`") although Remark D.34.15 and the §Label row are correctly restated;
-  (c) **P46-34** and the README headline bullet still print `s_* = s_1` without H5's proved/certified
+  (c) **P47-34** and the README headline bullet still print `s_* = s_1` without H5's proved/certified
   split;
   (d) "three orders of magnitude worse" in Example D.34.16b should be "nearly six" (`5.81`).
 

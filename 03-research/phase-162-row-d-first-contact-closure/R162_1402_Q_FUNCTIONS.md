@@ -2,7 +2,7 @@
 
 Note. Pure mathematics, plus one uncertified float computation used as guidance only (§7).
 Inputs: README (F1–F4), R162_590, R162_1301 (Thm 3), R162_1201 (Thm 1.2, Thm 3.1, Prop 4.2, Thm 4.1), R162_802 (Thm 2.1,
-§3), R162_402 (Thm 1.3), R162_303, R162_001 / Paper 47 lem:contA, lem:monoT.
+§3), R162_402 (Thm 1.3), R162_303, R162_001 / Paper 46 lem:contA, lem:monoT.
 
 **Labels.**
 - Thm 1 (variational form. The functional x_m is fixed in T, and Q_m(0;T) is nondecreasing and left-continuous at T_*.
@@ -20,7 +20,7 @@ Gate 1 OPEN. No label moves.
 
 ## 0. Corpus check
 
-I grepped "Q-function", "q_m(0", "Douglas", "monoton", "collar" in phases 160–162 and Paper 47.
+I grepped "Q-function", "q_m(0", "Douglas", "monoton", "collar" in phases 160–162 and Paper 46.
 - Q-function / Douglas form: this appears only in R162_1301 Thm 3 and R162_1401 (at fixed T_*).
 - The T-evolution of a resolvent quantity f_par(0;T) = ⟨A_T^{-1}φ,φ⟩ is R162_802, with φ the Tate vector.
 - Kreĭn/de Branges T-flows are in phase 64 and thm:KEP3 (E1).

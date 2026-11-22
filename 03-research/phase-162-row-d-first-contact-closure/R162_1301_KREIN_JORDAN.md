@@ -1,7 +1,7 @@
 # R162_1301 — Kreĭn/Jordan chains at the bottom via complete monotonicity of κ — **NO-GO (PROVED)**, with two exact structures
 
 Note. Inputs: README (F1–F4, rounds 1–12), R162_590, R162_1201 (§§1–6,
-residual), R154_004 (Thm S1, Cor S2), Paper 47 lem:K / thm:S, thm:KEP3, R155_040, R155_046, R160_S3/S4 surveys.
+residual), R154_004 (Thm S1, Cor S2), Paper 46 lem:K / thm:S, thm:KEP3, R155_040, R155_046, R160_S3/S4 surveys.
 
 **Labels.**
 - Thm 1 (Bernstein/string decomposition of M_I; exterior far field = negative exterior string energy) PROVED. **New form.**
@@ -14,9 +14,9 @@ Gate 1 OPEN. No label moves.
 ## 0. Corpus check (done before building)
 
 grep "completely monotone|Bernstein|Kreĭn|Krein|Pontryagin|isotropic|Jordan chain|string|Stieltjes" in phases 15, 150–162,
-Paper 47, R160_S1–S5:
+Paper 46, R160_S1–S5:
 - CM of κ and complete-Bernstein φ: **known** — R154_004 Thm S1/Cor S2 (ν(u) = Σ_k e^{−(2k+½)|u|}, pure-jump subordinate
-  BM), Paper 47 lem:K/thm:S (m(τ) = C₀ + ∫(1−cos τu)K). Subordination bound S3 is an *upper* bound on λ_min.
+  BM), Paper 46 lem:K/thm:S (m(τ) = C₀ + ∫(1−cos τu)K). Subordination bound S3 is an *upper* bound on λ_min.
 - CM ⟹ log-convex ⟹ not PF₂ (Karlin/nodal route): **closed**, R155_046 (R160_S4 item 45).
 - Kreĭn *extension problem* / indeterminacy: thm:KEP3 = RH, R155_040 (R160_S4 item 48): restatement.
 - Kreĭn *space* / Pontryagin index κ = number of off-line zeros: phase 15/16, Papers 08/11, G1_P3_R4 (K5 = restatement):
@@ -39,7 +39,7 @@ Hence a Λ-specific inequality must read something of the comb beyond positivity
 ## 2. Bernstein/string decomposition (Thm 1)
 
 Bernstein: κ(u) = ∫ e^{−a|u|} dσ(a), σ = Σ_{k≥0} δ_{a_k}, a_k = 2k+½. Each e^{−a|u|} has Fourier transform 2a/(a²+τ²),
-and ∫_ℝ(1−cos τu)e^{−a|u|}du = 2τ²/(a(a²+τ²)) ≥ 0. So (normalisation of Paper 47 lem:K; this is R154_004 S1 with x=τ²)
+and ∫_ℝ(1−cos τu)e^{−a|u|}du = 2τ²/(a(a²+τ²)) ≥ 0. So (normalisation of Paper 46 lem:K; this is R154_004 S1 with x=τ²)
 
   m(τ) = C₀ + Σ_{k≥0} 2τ²/(a_k(a_k²+τ²)),   i.e. M = C₀ + Σ_k (2/a_k − P_{a_k}),  P_a = conv. by e^{−a|·|}.   (2.1)
 

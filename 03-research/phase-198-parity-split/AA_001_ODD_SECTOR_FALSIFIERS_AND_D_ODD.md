@@ -43,7 +43,7 @@ Conclusions.
 - Hence thm:shape(A) clauses for O_1 (p=2,3), O_2/O_4 (c-scaling, both sides of 1), and the zero comb hold verbatim
   for D_odd at T ≥ 1 (transfer argument of lem:transfer is sector-agnostic: a deduction class closed under O_j proves
   μ_odd(O(q_0)) ≥ 0, contradicted by the odd-sector negative values above). Windows shift upward relative to the
-  even sector; the lemma windows in Paper 47 must be re-read with the odd thresholds (NUMÉRICO list above).
+  even sector; the lemma windows in Paper 46 must be re-read with the odd thresholds (NUMÉRICO list above).
   Beurling, Ξ_Q, O_6–O_15: not computed here (OPEN); by the same mechanism (they break the Λ near-kernel at the
   first-contact scale while the odd margin is itself first-contact scale, 1e-9 at T=1) they are expected to transfer.
 - Margin: μ_odd(Λ) decays at the same exponential rate as μ_even (Z_001), so thm:shape(B)/(B′) precision
@@ -51,7 +51,7 @@ Conclusions.
   restricting to odd F.
 
 ## 3. Direct attack on D_odd
-(a) Range (PROVED, trivially inherited): μ_odd ≥ λ_A > 0 on every window where Paper 47 proves λ_A > 0
+(a) Range (PROVED, trivially inherited): μ_odd ≥ λ_A > 0 on every window where Paper 46 proves λ_A > 0
     (thm:log5A, T ≤ ½log5). No proof beyond ½log5 obtained.
 (b) NO-GO (NUMÉRICO falsifier, sharp form): "odd F̂ kills the low-frequency region, so m(τ) dominates" — the
     archimedean part alone is odd-negative at T ≈ ½log5 (−0.0026) and −0.22 at T = 1. Any proof of D_odd beyond ≈ ½log5

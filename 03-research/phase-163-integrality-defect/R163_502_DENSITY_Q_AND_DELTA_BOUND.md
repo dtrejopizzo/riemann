@@ -69,7 +69,7 @@ and both sums converge absolutely.
 - Point evaluation on $\mathbb R$ is $\mathcal D$-continuous, since $PW_T$ has a reproducing kernel. So
   $\widehat G_n(x)\to\widehat G(x)$ for every $x$, and $a_x=\sqrt{w_x}\widehat G(x)$.
 - Hence $W(G)=\lim W(G_n)=\|a\|^2=\sum w_x|\widehat G(x)|^2$. Polarise.
-- The zero side is (1.1) (Paper 47 `lem:roughEF` with Lemma 3.0), polarised. ∎
+- The zero side is (1.1) (Paper 46 `lem:roughEF` with Lemma 3.0), polarised. ∎
 
 **Replacement texts.**
 - **2.4(iii):** "on $\overline N^{\mathcal D}$, $W=\sum w_x|\widehat G(x)|^2$ (R163_502 Q0, PROVED). Whether

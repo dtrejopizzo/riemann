@@ -48,7 +48,7 @@ consequence, the check (iv)-Beurling can only fail if the step also uses the add
 integer comes after which, or the relation of log n with log(n−1). ∎
 
 **Lemma B (the entry instant is empty; CITED).** If the chain is indexed by the window growing through
-T_n, the contact n contributes 0 to all orders at the crossing (Paper 47 lem:contA; 211 ROUND_008_C Prop. 2.3;
+T_n, the contact n contributes 0 to all orders at the crossing (Paper 46 lem:contA; 211 ROUND_008_C Prop. 2.3;
 ROUND_005_G4 Lemma 1). Between crossings the comb is frozen. Every stage datum updated «at the entry
 of n» is therefore updated with an increment that does not depend on v_n at the crossing. Its dependence on v_n can only
 appear along [T_n, T_{n+1}), i.e. through transport. By BARRIER_W_001 §6, the derivative on that

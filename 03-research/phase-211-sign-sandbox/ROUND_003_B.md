@@ -2,7 +2,7 @@
 
 Objects: B, 𝔸_M = [B(log m − log k)]_{m,k≤M}, Arch/Div/Near as in STATEMENT_001 §2 (profile a = T_0/2, b = 1, 2T_0 < log 2).
 δ(m,k) = log(lcm/gcd) = Σ_p |v_p(m) − v_p(k)| log p, ρ(m,k) = |log m − log k|, 𝕂_t = [e^{−tδ}] = [(gcd²/(mk))^t].
-Write β := B(0) = 𝔸_{mm} > 0 (B(0) = a_{T_0}(F_0) ≥ λ_A(T_0) > 0 on the certified range; CITED, Paper 47).
+Write β := B(0) = 𝔸_{mm} > 0 (B(0) = a_{T_0}(F_0) ≥ λ_A(T_0) > 0 on the certified range; CITED, Paper 46).
 
 ## 1. Corpus check
 

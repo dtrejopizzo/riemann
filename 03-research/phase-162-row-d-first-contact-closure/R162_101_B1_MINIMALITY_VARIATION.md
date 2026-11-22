@@ -7,11 +7,11 @@ R_L F = 0.
 Corpus checked before building: P124_001 (joint variation at fixed window: tautological, returns the
 radical equation), **P124_004 (window variation via dilation U_T + Tate correction: one-sided crossing
 quotient (1.1), no sign; Euler shift quotients not differentiable on the log-Sobolev form domain;
-birth terms o(1) with no rate)**, R161_081 (2.1) = Paper 47 eq:Qspectral, R161_099 §2 (square of (PC)
+birth terms o(1) with no rate)**, R161_081 (2.1) = Paper 46 eq:Qspectral, R161_099 §2 (square of (PC)
 is A_M → −A_M invariant). The present note does not repeat P124_004's differentiation; it replaces it
 by exact (derivative-free) identities, which make the negative verdict sharper and regularity-independent.
 
-Notation (Paper 47): a_T form (eq:form / eq:Aform), P_T primitive subspace, H_T ≥ 0 its operator on
+Notation (Paper 46): a_T form (eq:form / eq:Aform), P_T primitive subspace, H_T ≥ 0 its operator on
 P_T at the first-contact window T_*, N_T = ker H_T, F ∈ N_{T_*}, JF = εF, r the Tate vector of
 eq:localweak. By R162_001, λ_A is continuous and T_* := inf{T : λ_A(T) < 0} has λ_A(T_*) = 0.
 
@@ -73,7 +73,7 @@ For s > 0, a transported, Tate-corrected vector F_s ∈ P_{T_*e^s} gives
 These are **both upper bounds** on λ_A(T_*e^s); they are compatible for every value and every sign of
 the outward virial quotient a(F_s)/s. A contradiction would require a *lower* bound on λ_A(T) for
 T > T_*, and minimality supplies none (lower bounds come only from certificates, i.e. from the
-Theorem C / D1 side of Paper 47, not from T_*).
+Theorem C / D1 side of Paper 46, not from T_*).
 
 The only qualitative content of (R) that can be extracted rigorously is:
 
@@ -96,7 +96,7 @@ back to eq:Qbalance. No sign is gained in the limit.
 
 Every identity produced in §§2–3 is either (a) the radical equation a(F, Φ) = 0 on P_{T_*} (inward),
 or (b) an upper bound on λ_A to the right (outward). Inserting (a) with the admissible test
-Φ = Π S_L F is exactly the derivation of eq:Qbalance (Paper 47 §subsec:collars), whose content is the
+Φ = Π S_L F is exactly the derivation of eq:Qbalance (Paper 46 §subsec:collars), whose content is the
 gate equivalence eq:equivgate (R_L F = 0 ⟺ Q_{N,L}(F) ≥ 0) and not a proof of it. Inserting (b) gives
 nothing, being one-sided in the wrong direction. Hence the combination does not force R_L F = 0.
 

@@ -6,7 +6,7 @@ Memos: CA_L_000 (10 seeds, pre-screen, corpus check), CA_L_001 (literal magic ce
 ## Answer
 *Can one build, for each T, an exact dual (or primal) certificate for the window form from modular/Eisenstein objects, with vanishing on log n
 and the Tate points, so that ℤ, FE and Euler enter jointly?* **No, within the declared classes:**
-1. **Window LP (P47):** exact certificates do not exist (thm:O, read as LP slackness: the primal optimum |F̂⋆|²dτ has full support, so the magic
+1. **Window LP (P46):** exact certificates do not exist (thm:O, read as LP slackness: the primal optimum |F̂⋆|²dτ has full support, so the magic
    vanishing set is ℝ) — CA_L_001 Thm 1.1. Flat-top certificates read the zero side (thm:Z): the "explicit modular form" whose sign would be
    read is ŵ on {τ − γ}. Viazovska's three inputs fail: (V1) discrete primal, (V2) positive Poisson sides (prime comb enters with −v_n; CE gives
    upper bounds on the zero side, Prop 3.1), (V3) Fourier eigen-structure (only τ ↦ −τ; Mellin does not map additive PD to multiplicative PD, §5).

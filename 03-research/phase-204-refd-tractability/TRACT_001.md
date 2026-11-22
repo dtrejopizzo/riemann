@@ -61,7 +61,7 @@ are verifiable using information *different* from the sign value being sought. I
 
 ## 1. Minimal notation (D-only)
 
-- 𝔞_T = Weil form of window T on the declared carrier (Paper 47, def:W / eq:nuw); P_T the admissible core; λ_A(T)
+- 𝔞_T = Weil form of window T on the declared carrier (Paper 46, def:W / eq:nuw); P_T the admissible core; λ_A(T)
   its normalized infimum. **D in T:** 𝔞_T ≥ 0 on P_T. **D:** D in T for every T.
 - 𝒢̄_T: additive gauge (subspace that the radical of the full form contains, Guo L4.4 CITED). ℓ(g): gauge-minimized
   leak. N = N(T) the contact level.
@@ -116,7 +116,7 @@ it).
 OPEN (R155_031 P5 marks half of ζ as HEURISTIC; the citation of R155_014 Rem 2.5 unverified).
 (c) Strictly stronger than D (adds indeterminacy). (d) General theorems: Kreĭn (1940) extension of
 PD functions on an interval; indeterminacy criterion via de Branges spaces / logarithmic integral (Kreĭn,
-Akhiezer); finZ (Paper 47 §7) is the degenerate determined case. **But Kreĭn theory presupposes the PD of the data
+Akhiezer); finZ (Paper 46 §7) is the degenerate determined case. **But Kreĭn theory presupposes the PD of the data
 on the interval**; indeterminacy is a property *within* the PD cone. Missing hypothesis: the PD of g_T, which is D
 in T. → **pure transfer** with respect to sign; the new part (indeterminacy) IS tractable with Kreĭn once PD is
 given, but contributes no sign.

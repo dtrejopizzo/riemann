@@ -23,4 +23,4 @@ The initial exploration FULL_TRANSFER_PLAN050, which proposed keeping contact3, 
 
 POWER_FULL_TWELVE_050 contains the proof; POWER_FULL_TWELVE_AUDIT_050 approves it. The script tools/power_full_twelve_050_verify.py reproduces thirteen rational 12-dim LDL and checks the constants of the analytic tail, the trace and ALL remaining contacts. PASS obtained three times independently. Rates were not tested on a mesh and indices were not chosen by sweep.
 
-Arbitrary orders, thirteen poles without numerator restriction and the global closure of Paper47 remain open. There is no new window T: this is an extension of rational families. The subquadratic region048 and the documentary window frontier045 remain. Papers untouched; goal active.
+Arbitrary orders, thirteen poles without numerator restriction and the global closure of Paper46 remain open. There is no new window T: this is an extension of rational families. The subquadratic region048 and the documentary window frontier045 remain. Papers untouched; goal active.

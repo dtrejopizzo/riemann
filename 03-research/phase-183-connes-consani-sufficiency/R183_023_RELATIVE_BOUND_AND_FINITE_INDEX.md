@@ -29,7 +29,7 @@
   η_1(T)<1 essentially amounts to *coercive* positivity of E_S in the
   window (§5, PROVED in both directions except alignment): Lemma (L-Son)
   is a **reformulation** of semilocal row D, not a weakening.
-* **Relation to Paper 47.** Theorem 3.1 is Paper 47's "finite section +
+* **Relation to Paper 46.** Theorem 3.1 is Paper 46's "finite section +
   Schur complement with a tail controlled by thm:P" mechanism (l.2503),
   now applied with the primes included and a fraction η of Son retained.
   Novelty: only the resolution of the tension and the exp(Θ(1/η))
@@ -55,7 +55,7 @@ Neither RH nor the closure of D is claimed.
   "Ky Fan", "inertia" found no results in the current grid. MAP_1 NG-E4
   (pointwise routes for relatively bounded forms: PROVED-IMPOSSIBLE)
   refers to interpolation/Gram, not to this spectral argument.
-* Paper 47: thm:P (Ky Fan ceiling, l.2672), cor:P3 (n₋ ≤ 5/7/8), rem:P4,
+* Paper 46: thm:P (Ky Fan ceiling, l.2672), cor:P3 (n₋ ≤ 5/7/8), rem:P4,
   the Schur reduction (l.2500–2505), thm:index.
 
 ## 2. Normalizations and the exact prime term in the window S={∞,2}
@@ -126,7 +126,7 @@ Lemma 3.0(ii). □
 
 **Corollary 3.0' (relative bound 0) — PROVED.** For every δ>0,
 |B(h)| ≤ δ·Son(h) + ‖B‖·⟨h,S_{c}h⟩ + δ(κ_T+|m(0)|)‖h‖², where
-S_c=Q_T 1_{|s|<s_δ} Q_T is Paper 47 thm:P's time–band operator with
+S_c=Q_T 1_{|s|<s_δ} Q_T is Paper 46 thm:P's time–band operator with
 c=T s_δ and m(s_δ)=‖B‖/δ. (Outside |s|<s_δ, ‖B‖ ≤ δm; inside, one pays
 ⟨S_c h,h⟩.) S_c is compact of trace 2c/π: the "constant" is compact, not
 merely bounded. This holds in both variables (the forms do not depend on
@@ -163,7 +163,7 @@ the closure in the Son+‖·‖² norm), and the negative part lives (in the
 Schur sense) on V_N=span{ψ_k}_{k<N}: see §5. Bounds on N:
 
 * trace (PROVED): N ≤ (L/γ)·2Ts_*/π;
-* Ky Fan (Paper 47 thm:P, PROVED): N ≤ min{k : Λ_k(Ts_*) ≤ γ/L};
+* Ky Fan (Paper 46 thm:P, PROVED): N ≤ min{k : Λ_k(Ts_*) ≤ γ/L};
 * Landau–Widom (CITED): N = (2/π)Ts_* + O(log(Ts_*)·log(L/γ)).
 
 With Lemma 3.0(ii), s_* = 2π e^{2A/η}(1+o(1)) as η→0, so
@@ -258,7 +258,7 @@ complement): E_S ≥ 0 on C_c^∞(I_T) ⟺ the N×N matrix
     M_N(T,S) := E_S|_V − E_S(V,V^⊥)(E_S|_{V^⊥})^{−1}E_S(V^⊥,V)
 
 is ≥0. Same statement restricted to primitives/ker ℓ. **Restatement:** it
-is Paper 47's "finite section + Schur complement over the tail" (l.2503,
+is Paper 46's "finite section + Schur complement over the tail" (l.2503,
 there for A_∞ with no prime comb, with the tail controlled by thm:P's
 trace), now with primes included and the tail made coercive by ηSon. The
 dimension N (exponential in 1/η) is much larger than cor:P3's 5/7/8 or
@@ -286,7 +286,7 @@ c₀/log(C/(2T−log2))). The honest formulation:
     D in the window ⟸ positivity of an N(η,T)×N(η,T) matrix (Prop. 5.1),
     with V_N = explicit prolates of I_T at bandwidth s_*(η),
 
-which is Paper 47's finite-mode arena — a reformulation, not a new
+which is Paper 46's finite-mode arena — a reformulation, not a new
 mechanism.
 
 ## 6. What is new and what is not
@@ -298,7 +298,7 @@ mechanism.
   N(η) ≤ exp(O(1/η)); (iii) Theorem 4.1: n₋→∞ as η→0 and η_1(T)>0 with
   bound (4.1); (iv) exact spectrum {0,±log2/√2} of the prime term in
   window {∞,2} (2.2) and kernel (2.3).
-* Reformulation: Prop. 5.1 (Schur, Paper 47 l.2503) and Prop. 5.2
+* Reformulation: Prop. 5.1 (Schur, Paper 46 l.2503) and Prop. 5.2
   (L-Son ⟺ coercive positivity).
 
 ## Status
@@ -314,7 +314,7 @@ Thm 4.1: n₋→∞ as η→0, T>½log2                                         
 rate n₋ = exp(Θ(1/η))                                                    CONDITIONAL (sketch)
 η_1(T) ≥ c₀/log(C/(2T−log2)) >0;  η_1=0 for T≤½log2                     PROVED / CITED (CC)
 n₋(η,T) at fixed η as T→∞                                                OPEN
-Prop. 5.1 reduction to N×N matrix (Schur)                                 PROVED (reformulation of Paper 47)
+Prop. 5.1 reduction to N×N matrix (Schur)                                 PROVED (reformulation of Paper 46)
 Prop. 5.2 (L-Son, η<1) ⟺ coercive positivity on ker ℓ                     PROVED (reformulation)
 η_1(T)<1 for some T>½log2 / E_S≥0 / row D                                 OPEN
 ```

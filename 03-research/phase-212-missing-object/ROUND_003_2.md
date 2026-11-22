@@ -17,7 +17,7 @@ cuadrada, spectral factorization, B*B, V*V, ratio comb, Schur complement. There 
 phases; the densest are 114, 116, 72, 162, 186, 155, 211, 204, 200. Primaries opened: phase 200
 `A_MU_FACTORIZATION_001.md` §1(a)–(e) and its table; phase 186 `R186_043_WH_SIGN_ROUTE.md` §§0, 2–3; 211
 `ROUND_005_A.md` Prop. 3.3 and §5.3; 211 `LEDGER.md` C33b, C43; phase 170 `R170_861` §§0–7 (headings and
-status); P47 lem:shape-scale and cor:Tarch. The «LDL/pivot» hits of phase 211 (POWER_*_007, 050,
+status); P46 lem:shape-scale and cor:Tarch. The «LDL/pivot» hits of phase 211 (POWER_*_007, 050,
 052, 053, AUDIT_002/005) are rational certificates of fixed blocks (W-fam, `RULES_AVOID.md` D12), not
 factorizations of the complete form. I did not open in primary the hits of phases 72, 114 and 116 for
 «square root»: by their titles and by `REVIEW_002_BC.md` B.1(6) (phase 116) they are Feshbach operators or orthonormalized
@@ -51,7 +51,7 @@ prove them in full below (§1). In summary:
 - **Lemma 2 (PROVED).** The canonical factorizations (square root of the form, Cholesky/LDL in any
   order, Wiener–Hopf or outer factorization of the symbol) exist with zero remainder if and only if the form
   is ≥ 0 on the corresponding domain: writing them already requires the sign. Circularity proved in that class.
-- **Lemma 3 (NO-GO with class, PROVED using P47 cor:Tarch).** The natural candidate of the task, V_T affine in
+- **Lemma 3 (NO-GO with class, PROVED using P46 cor:Tarch).** The natural candidate of the task, V_T affine in
   the weights, V_T(a) = V_0 + V_1(a) with V_0 and the coefficients of V_1 independent of the weight, and with the cross
   term of the square reproducing the comb (2Re⟨V_0F, V_1(Λ)F⟩ = −Comb_Λ(F)), never has remainder ≥ 0 on
   P_T for T ≥ 0.60.
@@ -77,7 +77,7 @@ useful identity (Lemma 3). I have no identity for the non-excluded classes.
 ### (5) Line that breaks for cΛ and a_P
 
 - Canonical class (Lemma 2): the line that fails is «pivot d_k ≥ 0» (or «a_T^{1/2} exists»): for small c
-  (P47 lem:shape-scale, PROVED for T ≥ 0.60) and for a_P where λ_A(T; a_P) < 0. But it is the conclusion itself,
+  (P46 lem:shape-scale, PROVED for T ≥ 0.60) and for a_P where λ_A(T; a_P) < 0. But it is the conclusion itself,
   not an intermediate step: the breaking is circular.
 - Matched affine class (Lemma 3): there is no line to point to, because the identity already fails for Λ.
 - Lemma 1: every identity at one point «breaks» at another point generically; that is why O4, read only
@@ -119,7 +119,7 @@ minors has an LDL* factorization with D ≥ 0 if and only if 𝔸 ⪰ 0, and d_k
 any elimination order (permutation). (c) If V commutes with translations (multiplier h), then
 ‖VF‖² = (1/2π)∫|h|²|F̂|² and ρ = a_T − ‖V·‖² has symbol s_T − |h|² ≤ s_T (`REVIEW_002_BC.md` Lemma B-2).
 
-*Proof.* (a) ⇐: a_T is a closed semibounded form (P47 lem:contA and the Lévy form of
+*Proof.* (a) ⇐: a_T is a closed semibounded form (P46 lem:contA and the Lévy form of
 STATEMENT §1); if it is ≥ 0 on P_T its associated operator A ≥ 0 has a root A^{1/2} and a_T(F) = ‖A^{1/2}F‖²,
 ρ = 0. ⇒: ‖VF‖² + ρ(F) ≥ 0. (b) Gaussian elimination without pivoting: d_k is the Schur complement of the leading
 block, equal to the quotient of determinants; 𝔸 = LDL* with L unitriangular is a congruence, and by Sylvester
@@ -134,7 +134,7 @@ the line (Wiener–Hopf, Szegő, outer function) ρ = 0 would require s_T = |h|�
 also phase 200 §1(a). ARGUED that the «per-window» variant (truncated Wiener–Hopf) is case (a) with A the
 truncated Toeplitz operator (R186_043 §2 treats it as a reformulation of the extreme eigenvalue).
 
-### Lemma 3 (NO-GO for affine V with matched cross term; PROVED, with P47 cor:Tarch)
+### Lemma 3 (NO-GO for affine V with matched cross term; PROVED, with P46 cor:Tarch)
 
 Class 𝒱_aff. For each T: V_0 : P_T ∩ 𝒟_T → ℋ_T linear and V_1(a) = Σ_{n<N} a(n) W_n with W_n linear, all
 independent of the weight; V_T(a) = V_0 + V_1(a). Matching condition:
@@ -148,7 +148,7 @@ in |c|.
 *Proof.* Expanding the square,
 ‖V_T(cΛ)F‖² = ‖V_0F‖² + 2c Re⟨V_0F, V_1(Λ)F⟩ + c²‖V_1(Λ)F‖² = ‖V_0F‖² − c Comb_Λ(F) + c²‖V_1(Λ)F‖² by (E)
 (homogeneous of degree one in the weight, hence valid at cΛ if it is at Λ). Since a_T^{(cΛ)} = Arch − c Comb_Λ,
-ρ_T^{(c)}(F) = Arch(F) − ‖V_0F‖² − c²‖V_1(Λ)F‖². In particular ρ_T = ρ_T^{(1)} ≤ Arch on P_T. By P47
+ρ_T^{(c)}(F) = Arch(F) − ‖V_0F‖² − c²‖V_1(Λ)F‖². In particular ρ_T = ρ_T^{(1)} ≤ Arch on P_T. By P46
 cor:Tarch (PROVED there, with verification in interval arithmetic), inf{Arch(F) : F ∈ P_T, ‖F‖ = 1} < 0
 for T ≥ 0.60; at such an F, ρ_T(F) < 0. ∎
 
@@ -157,7 +157,7 @@ Consequences.
   quotients − leakage of 211/ROUND_005_A Prop. 3.3 when V_1 is the compressed comb), can only be absorbed by ρ_T,
   and it enters with minus sign. Rewriting it with Σ_{d|k}Λ(d) = log k (Lemma 1) changes its presentation, not its value.
 - Even for T < 0.60, ρ_T ≥ 0 would imply a_T^{(cΛ)} ≥ ‖V_T(cΛ)·‖² ≥ 0 for every |c| ≤ 1: the identity could
-  not break at c < 1, against requirement O4 (and against P47 lem:shape-scale for small c, T ≥ 0.60).
+  not break at c < 1, against requirement O4 (and against P46 lem:shape-scale for small c, T ≥ 0.60).
 - It covers the candidate of the task «first-order archimedean operator − comb of dilations Λ(n)/√n
   compressed to the window» as soon as its cross term is the comb, and it covers completing the square
   V = K − ½K⁻¹Π′ with fixed K > 0 (there ρ = Arch − K² − ¼Π′K⁻²Π′, and K² + ¼Π′K⁻²Π′ ⪰ ±Π′, so that
@@ -188,7 +188,7 @@ formally empty (Lemma 1); the canonical factorizations are circular (Lemma 2; re
   variables). Every absorption of Λ∗Λ «through log k» is formal.
 - Lemma 2: root, LDL in any order and symbol factorization exist with remainder ≥ 0 iff the form is ≥ 0.
 - Lemma 3: for V_T = V_0 + V_1(Λ) with fixed coefficients and cross term equal to the comb, ρ_T = Arch − ‖V_0F‖² −
-  ‖V_1F‖² ≤ Arch, negative on P_T for T ≥ 0.60 (P47 cor:Tarch); and ρ^{(c)} is even and non-increasing in |c|.
+  ‖V_1F‖² ≤ Arch, negative on P_T for T ≥ 0.60 (P46 cor:Tarch); and ρ^{(c)} is even and non-increasing in |c|.
 
 ## What failed and why
 

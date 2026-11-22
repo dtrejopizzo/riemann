@@ -6,9 +6,9 @@ COUNT; obstruction `Δ·Δ = 2−2g → −∞`; Prop. D.42.5 bigness ⟺ RH), `
 `CORPUS_CHECK_R146.md` (admissibility checklist for any new pairing; P122.028: nothing expressible in
 `log p, p^{−½}, N, Γ` alone), `CORPUS_CHECK_R146b.md` (the additive ring structure on Frobenius classes, the
 count interpretation of degrees, and the additive-vs-multiplicative locus of the sign are NEW in the corpus;
-`Δ·Δ = −∞` is old — Paper 44 Thm 8bis.2, Rem 8bis.1c; Paper 46 Prop 14.2), Paper 44 (Frob_n, `⋆`, `†`,
+`Δ·Δ = −∞` is old — Paper 44 Thm 8bis.2, Rem 8bis.1c; Paper 47 Prop 14.2), Paper 44 (Frob_n, `⋆`, `†`,
 Thm 3ter.4, Thm 3ter.10 Gram `Λ(n)n^{−½}`, Thm 8bis.1 as corrected §12, 8bis.4a, `Sh_Z(Frob_n) = [L_S →n→ L_S]`,
-`deg_det = log n`), Paper 46 §§11–12, the phase-145 model (`R145_001` §D.41 dictionary and Gram).*
+`deg_det = log n`), Paper 47 §§11–12, the phase-145 model (`R145_001` §D.41 dictionary and Gram).*
 
 Standing rules as before. **Two binding warnings (R145_004):**
 (W-a) *Deliver the count, never the positivity.* "The degree form on `Z[Frob]` is positive semidefinite" is
@@ -44,7 +44,7 @@ diagonal `2−2g` finite, and the ring `Z[π]` with `deg(m+nπ) = m² + amn + qn
 3. Two degrees of `Frob_n`: `deg_det Sh_Z(Frob_n) = log n` (finite, `H⁰/H²`-type, the bidegree datum) vs
    `⟨Frob_n, Frob_n⟩ = −∞` (the `H¹`-type self-intersection). In the model `Γ_π² = q(2−2g) = (deg π)·χ(C)`.
    State the arithmetic identity `⟨Frob_n,Frob_n⟩ = (log n or n)·(2−2g)` with `2−2g = −∞` and make precise
-   that the infinite genus is the infinite dimension of `H¹` (the zero set). RESTATEMENT; cite Paper 46
+   that the infinite genus is the infinite dimension of `H¹` (the zero set). RESTATEMENT; cite Paper 47
    Prop 14.2.
 
 ## D.45 — Q1: does the additive module `M := Z⟨Frob_n⟩` admit a finite, symmetric degree form?

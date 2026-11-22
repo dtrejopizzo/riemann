@@ -2,14 +2,14 @@
 
 No audit yet. We assume
 positivity of 𝔞_T on P_T. Labels used: PROVED / NUMÉRICO / OPEN / NO-GO.
-Normalisation (P47 l.3093): v_n = 2a(n)/√n. Write w_T(n) = 2c_{F⋆}(log n)/√n and g(q) := w_T(q)·log q = 2c_{F⋆}(log q)log q/√q.
-lem:degen (P47 l.3249) gives μ_T(a) ≤ λ_A(T) − ⟨a−Λ, w_T⟩. Scripts: `scripts/y001_farkas_signs.py` (Galerkin),
+Normalisation (P46 l.3093): v_n = 2a(n)/√n. Write w_T(n) = 2c_{F⋆}(log n)/√n and g(q) := w_T(q)·log q = 2c_{F⋆}(log q)log q/√q.
+lem:degen (P46 l.3249) gives μ_T(a) ≤ λ_A(T) − ⟨a−Λ, w_T⟩. Scripts: `scripts/y001_farkas_signs.py` (Galerkin),
 `scripts/y001_mp_check.py` (independent check at 30 digits).
 
 ## 0. Corpus check and the new reason
 Read: BARRIER_X_001 (X1, X3, X4), AUDIT_197_HOSTILE_3 (residue (ii); the X3(a) counterexample R_2 = 1−x^k+x^{k+1}),
 and the index entries W-fam, Theorem X (R186_046), W-cont (R186_048), W-tail / N_003, cor:void, thm:finmod, F-deletion, F-delT,
-SPEC_A, INV_U_001 U3, X4. I also used the Galerkin construction of phase-186 `r046_X.form_x` (P47 eq:Aform).
+SPEC_A, INV_U_001 U3, X4. I also used the Galerkin construction of phase-186 `r046_X.form_x` (P46 eq:Aform).
 **New reason.** Residue (ii) of AUDIT_197_HOSTILE_3 is not in the index. It asks about the sign of c_{F⋆}(log q) on the top
 layer 𝒬, and how that sign interacts with the finite decision family of X3(d). cor:void and thm:finmod handle deletion
 classes at large T, or tail deletions Λ1_{n≥N}. Here the deletions are the class's own admitted moves: single top-layer prime
@@ -32,7 +32,7 @@ In the coordinates δ'(q) = d(q)/log q:
   (F2) log(p^i)c(log p^i)/p^{i/2} ≥ log(p^{i'})c(log p^{i'})/p^{i'/2} for each admitted pair of levels of the same p.
   (F2) is non-empty only when p < √N has two levels in 𝒬. The first instance is p = 2 with {4, 8} at T ∈ (½log8, log4].
 - **Inhomogeneous form.** This is what S_ε ⊆ H_T actually needs: g(q) ≥ −λ_A(T) on generators, and g(q) − g(q') ≥ −λ_A on pairs.
-  Since λ_A ≤ 3.1·10⁻¹² past ½log5 (P47 App. num), it is (F1)–(F2) up to 10⁻¹².
+  Since λ_A ≤ 3.1·10⁻¹² past ½log5 (P46 App. num), it is (F1)–(F2) up to 10⁻¹².
 This matches the X3(b) divisor-cone dual restricted to 𝒬. The audit's correction is built in: (F2) is exactly the face that
 the counterexample R_2 = 1−x^k+x^{k+1} creates.
 
@@ -40,7 +40,7 @@ the counterexample R_2 = 1−x^k+x^{k+1} creates.
 **Analytic (PROVED, from X4).** If F⋆ is even and has no zero in (T−δ, T), then (F1) holds for q ∈ (Ne^{−δ}, N). Nothing
 analytic reaches the bulk of 𝒬. Theorem X / W-lin say every first-order quantity is a functional of h*, and that applies here.
 
-**NUMÉRICO (Legendre Galerkin, M = 40/56/72/80, P47 eq:Aform):**
+**NUMÉRICO (Legendre Galerkin, M = 40/56/72/80, P46 eq:Aform):**
 
 | T | 𝒬 | sector of F⋆ | c_{F⋆}(log q), q ∈ 𝒬 | (F1) |
 |---|---|---|---|---|
@@ -72,7 +72,7 @@ bottom, so a negative value means WP_T(Λ_Q) fails:
 All multi-deletions Λ_Q and the two-level path −e_4+e_8 are also negative (−0.1 to −0.84; see the script output).
 Sanity check: at ½log3, deleting 2 gives +0.0825, which is the empty comb.
 **Independent check:** I took an explicit polynomial F ∈ P_T, re-imposed the Tate moments exactly in mpmath, and evaluated
-P47 eq:Aform directly at 30 digits. The Rayleigh quotients are −0.232424618789 (T = 0.75, q = 3) and −0.385182962856
+P46 eq:Aform directly at 30 digits. The Rayleigh quotients are −0.232424618789 (T = 0.75, q = 3) and −0.385182962856
 (T = ½log5+0.01, q = 3), −0.0401656414828 (T = 1, q = 7), −0.0179270129691 (T = log3, q = 8; M=14 test vectors). All four agree with Galerkin to 10⁻¹¹. A certificate in ball arithmetic of one test function per
 window (margin ≥ 0.017 with M=14 vectors) is routine but has not been done. **Label NUMÉRICO.**
 

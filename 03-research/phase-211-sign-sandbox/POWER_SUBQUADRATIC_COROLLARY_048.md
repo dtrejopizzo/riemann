@@ -76,4 +76,4 @@ since y²/10>=100y. Therefore the last lower bound is strictly greater than (2/5
 
 This extraction does not prove the uniform -o(1) hypothesis over the WHOLE pending band of 046. What remains is k<2N²/log log N and N not covered by other results.
 
-Nor is RECURRENCE_BOUNDARY036 cancelled. Its conclusion refers to the energy of the fixed cone k'>=10000N'²; enlarging the sign region here does not automatically convert the complement of a diagonal frontier into vanishing energy. No estimate of that new complement has been proved, nor is it eliminated by a mass count. The complete table and the global sign remain **OPEN**; there is no new certified window T of Paper 47.
+Nor is RECURRENCE_BOUNDARY036 cancelled. Its conclusion refers to the energy of the fixed cone k'>=10000N'²; enlarging the sign region here does not automatically convert the complement of a diagonal frontier into vanishing energy. No estimate of that new complement has been proved, nor is it eliminated by a mass count. The complete table and the global sign remain **OPEN**; there is no new certified window T of Paper 46.

@@ -65,7 +65,7 @@ There is no object. I tried three invariants; all three fall into antecedents:
 
 ## 2. Three lemmas on the seed (without sign)
 
-**Lemma 1 (neutrality of the crossing; PROVED relative to continuity in T, CITED P47 lem:contA, BARRIER_W_001
+**Lemma 1 (neutrality of the crossing; PROVED relative to continuity in T, CITED P46 lem:contA, BARRIER_W_001
 (S3)).** Let I_T be any invariant such that "I_T is positive" ⟺ λ_A(T; v) ≥ 0, for all T and all v in
 a class containing v^{(n,x)} for x in an interval. Then the positivity of I_{T_n+} is the same
 for all those x; in particular no rule Φ_n can preserve positivity "only when" x is the

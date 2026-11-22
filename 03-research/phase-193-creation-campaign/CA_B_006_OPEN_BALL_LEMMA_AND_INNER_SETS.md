@@ -2,13 +2,13 @@
 
  Pen and paper. **No negative value for ζ produced or claimed; no sign contact.**
 
-## 0. Correction to CA_B_005 (definitions checked against P47)
-P47's κ_T (line ~7089) is a *directional* quantity: κ_T = Σ_{n∈N_T} v_n c_h(log n) at the minimizer h, with v_n = 2Λ(n)/√n, and
+## 0. Correction to CA_B_005 (definitions checked against P46)
+P46's κ_T (line ~7089) is a *directional* quantity: κ_T = Σ_{n∈N_T} v_n c_h(log n) at the minimizer h, with v_n = 2Λ(n)/√n, and
 λ_A(T;(1+ε)v) ≤ λ_A − εκ_T. It is NOT an ℓ^∞-Lipschitz constant. CA_B_005 Prop 2 used it as one; the correct constant is L_T below.
 Prop 2's conclusion survives with κ_T replaced by L_T (radius λ_A/L_T), and its example becomes v_2 ↦ v_2 + δ with 0 < δ < λ_A/L_T.
 
 ## 1. Lemma B (open ball; PROVED)
-Setting (P47 prop:finite): v ∈ ℝ^{N_T}, |N_T| = ⌈e^{2T}⌉ − 2; for a real unit vector F ∈ P_T in the form domain,
+Setting (P46 prop:finite): v ∈ ℝ^{N_T}, |N_T| = ⌈e^{2T}⌉ − 2; for a real unit vector F ∈ P_T in the form domain,
 𝔞_T^{(v)}(F) = C_0 + Lev(c_F) − Σ_{n∈N_T} v_n c_F(log n), c_F = F∗F̃; λ(v) := inf_F 𝔞_T^{(v)}(F); 𝒱_T = {v : λ(v) ≥ 0}; v^Λ := (2Λ(n)/√n).
 Put L_T := sup_F Σ_{n∈N_T}|c_F(log n)|. Then:
 (i) L_T ≤ |N_T| < e^{2T} (since |c_F| ≤ ‖F‖₂² = 1).
@@ -24,7 +24,7 @@ proof of λ(v^Λ) ≥ 0, but no more than one of λ(v^Λ) ≥ 0 itself. The "(iv
 a sufficient condition P must be supplemented by an argument whose validity does not depend on the exactness of P — for if it did, the same
 argument with P replaced by "v ∈ B_T" would have to fail, although the conclusion is true there. ∎
 **Label.** (i)–(iii) PROVED. (iv) as stated (empty interior; "not necessary") PROVED; the methodological reading ("an exact identity cannot
-carry the sign alone") is ARGUED — it is the same content as (R)(6) + (R)(11) and P47 W-sens (l. 7105: "continuous in the weights, must be
+carry the sign alone") is ARGUED — it is the same content as (R)(6) + (R)(11) and P46 W-sens (l. 7105: "continuous in the weights, must be
 sharp at the scale of λ_A/κ_T").
 **Scale.** Under the premise λ_A(T) > 0 ∀T and lem:shape-margin (margin ≤ 4·10⁹Te^{−15.449T} at T ≥ 1), radius
 λ_A/L_T ≤ 4·10⁹Te^{−17.449T}: doubly small (exponentially in T, against e^{2T} coordinates).
@@ -36,9 +36,9 @@ the target; the first is needed for P not to be a point property (Lemma B(iv)). 
     By prop:finite(ii) it is the intersection of half-spaces with normals (c_F(log n))_n over all unit F. The normals have ℓ¹-norm up to
     L_T ~ e^{2T}, and infinitely many are needed. Openness at r_T fixes only a *local* Lipschitz scale L_T/λ_A ≥ e^{17T}/(4·10⁹T). This is
     unbounded in T and it lives on e^{2T} coordinates. "Bounded functional" in (R)(5) (a fixed functional, or a class closed under
-    perturbations of size ≍ λ_A in a T-uniform norm, P47 l. 8348) is a different notion.
+    perturbations of size ≍ λ_A in a T-uniform norm, P46 l. 8348) is a different notion.
 (b) **What openness + far failure do force (PROVED).** Write P = {F_T ≥ 0} with F_T continuous. Then F_T(v^Λ) > 0 and F_T < 0 at falsifiers.
-    The falsifiers are a_P, Beurling, Poisson, quartets, and v^Λ+ δe_2 for δ > λ_A/κ_T-scale (P47 l. 7092). So the relative sensitivity
+    The falsifiers are a_P, Beurling, Poisson, quartets, and v^Λ+ δe_2 for δ > λ_A/κ_T-scale (P46 l. 7092). So the relative sensitivity
     |∇F_T|/F_T(v^Λ) must reach ≳ 1/dist(v^Λ, ∂𝒱_T) in the direction of the nearest falsifier, i.e. ≥ L_T/λ_A in some direction.
     This is (R)(6) restated. It forbids nothing beyond (R)(6).
 (c) **The non-trivial content (ARGUED).** An inner set must be *defined* without knowing λ_A(T). Otherwise it is "v ∈ B(v^Λ, λ_A/L_T)",
@@ -70,11 +70,11 @@ It is the dual of the certificate (lattice/flat-top) approach, and must be pre-s
 
 ## 5. Self-review
 - Lemma B(ii): the infimum over F runs over an infinite family; each member is L_T-Lipschitz, so the infimum is too (possibly −∞ — excluded
-  since λ(v^Λ) is finite by P47). ✓ Concavity ✓. The bound L_T ≤ |N_T| is crude; it does not matter for the logic.
+  since λ(v^Λ) is finite by P46). ✓ Concavity ✓. The bound L_T ≤ |N_T| is crude; it does not matter for the logic.
 - B(iv) is close to a tautology. Its value is the screen: every "point property" candidate (CA_B_001/003/005, Hamburger rows, N_009) is
   thereby reclassified as bookkeeping. This is consistent with (R)(11); it is not a new exclusion. ✓
 - §2(a) uses a reading of "bounded functional" in (R)(5). If the paper means something else, §2(a) must be rechecked against its definition
-  (P47 rem around l. 8348). Flagged.
+  (P46 rem around l. 8348). Flagged.
 - §3 (R)(4) claim: the Poisson representation of a holomorphic function of finite order in a strip needs Phragmén–Lindelöf growth control
   (CITED). With the pole factor (s−1) the representation is of (s−1)g_X. ✓
 - §4: convex decomposition with Euler-product combs is close to prop:summable (excluded as a class!). It must be pre-screened against that
@@ -89,7 +89,7 @@ O8 keeps the comb vector exactly and changes the form side, i.e. the zero side o
     read the form at the sign step: the minimizer / the near-coincidence correlation, through the window tests, not through zeros.
 (c) This rules out §4's convex decomposition *as stated* when the v^{(i)} are certified by comb-only arguments (archimedean dominance,
     prop:summable). Those certificates do read the form (C_0, Lev), but only through its archimedean part, which O8 can leave fixed? —
-    **OPEN**: whether the quartet-coupled form changes C_0 + Lev or only the zero side must be checked against lem for O8 in P47 before §4
+    **OPEN**: whether the quartet-coupled form changes C_0 + Lev or only the zero side must be checked against lem for O8 in P46 before §4
     is developed. If O8 leaves C_0 + Lev unchanged, then 𝒱_T (defined via C_0 + Lev − Σ v c_F) does not move, and O8 does not act on
     WP_T at all. In that case O8 is a falsifier only for statements made beyond the window form. Flagged as the first check of the next round.
 (d) (W_X) under O8: J_X uses ζ (test) and Z_{<X} (comb). Under O8 ζ is replaced by the quartet-modified function, so the test changes, the
@@ -97,7 +97,7 @@ O8 keeps the comb vector exactly and changes the form side, i.e. the zero side o
     hypothesis is a point property).
 
 ## 7. Post-review reframing (accepted)
-- Lemma B(ii) is a corollary of P47 prop:wit-sens (the bottom is ℓ¹-Lipschitz in the weights with constant 1, which is sharper than my
+- Lemma B(ii) is a corollary of P46 prop:wit-sens (the bottom is ℓ¹-Lipschitz in the weights with constant 1, which is sharper than my
   ℓ^∞ form with L_T). It is not a new clause.
 - Lemma B(iv)'s methodological reading is **withdrawn**. A valid deduction P ⇒ (λ ≥ 0) need not cover combs where P fails, so openness
   does not exclude thin exact properties. Only the "not necessary" statement (empty interior) stands, and it carries no exclusion. The

@@ -2,7 +2,7 @@
 
 Pure mathematics, no numerics run. Target: (O1802.3), i.e. Δ(T) = κ₊ − κ₋ ≥ 0 for all T.
 Inputs: R162_1802 (Thm H, Thm R, §6), R162_801 (L2, L3, L5), R162_701 (Lemma 2.2), R162_1001 Thm 3.1 (with the
-R162_1190 fixes), R162_1502 Lemma 1, R162_590, Paper 47 eq:W.
+R162_1190 fixes), R162_1502 Lemma 1, R162_590, Paper 46 eq:W.
 
 **Status: NO-GO (PROVED) for the B₂ / sawtooth positivity route, with one correction to the task premise.**
 - §1 Restatement of the hyperplane. **PROVED.** The *pair test* c_H has Mellin transform vanishing at **both**

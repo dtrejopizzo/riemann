@@ -84,7 +84,7 @@ With f = g*g^*: Son_S(g) = W_S(f) + ∫f(ρ⁻¹)ε_S(ρ)d*ρ, ε_S = d_S. Conse
 6. CV_S is not used, nor pointwise convergence of series (84)_S, nor the edge-mass bound: the series converges absolutely against every test (it is the trace of an S₁ operator in an orthonormal basis), and the density is d_S by R186.012 R1.
 7. No equivalence with RH is claimed, nor anything about the sign of E_S.
 
-## For Paper 47
+## For Paper 46
 
 Proposition (semilocal Sonin formula, S = {∞,2}). For f ∈ C_c^∞(ℝ*₊), ϑ(f)Π_S is trace class and Tr ϑ(f)Π_S = W_∞(f) − Σ_{k≥1}log2·2^{−k/2}(f(2^k)+f(2^{−k})) + ∫f(ρ⁻¹)ε_S(ρ)d*ρ, with ε_S(ρ) = Σ_nλ_n(1−λ_n²)^{−1/2}⟨ξ_n|ϑ(ρ⁻¹)ζ_n⟩ (ρ ≥ 1, symmetric), a series absolutely convergent against every test, of density ε_S ∈ L^p_loc ∀p < ∞. One-page proof: §1 (T1), §2–3 (T3: compression of ϑ(f)X), §5 (per-n identity with [F,ϑ(f)] = 0), §6. Labels: Δ PROVED; (84)_S PROVED given CC Thm 4.7 (CITED); R′_S HS ∀T PROVED. No equivalence with RH.
 
@@ -92,7 +92,7 @@ Proposition (semilocal Sonin formula, S = {∞,2}). For f ∈ C_c^∞(ℝ*₊), 
 
 * Δ (relative) PROVED ∀λ with no CV_S. (84)_S absolute and "R′_S HS ∀T" PROVED given CC Thm 4.7 at level λ=½ (CITED, range of λ not checked; write out the dictionary L²(ℝ)^ev ↔ L²(ℝ₊,du): √2, kernel 2cos2πux, convention ϑ, f(ρ) vs f(ρ⁻¹)). −C_{κ_S} HS ∀T unconditional. T1–T4, §5, Δ, sign of comb₂ verified. MINOR: d_S(ρ) := d_S(ρ⁻¹) for ρ<1; distributional identification R1; remove the remark about c; Dixmier–Malliavin CITED.
 
-## Note (Paper 47 CHECK_TABLE II)
+## Note (Paper 46 CHECK_TABLE II)
 
 * N1: CC Thm 4.7 is for S(1,1) = λ=1, not λ=½; the absolute form of (84)_S and its corollary hold only at λ=1; for λ≠1, CONDITIONAL. N3: "−C_{ε_S} compact ⇒ n₋<∞" does not follow; only n₋(𝔞_T − Son_S + δ‖·‖²) < ∞ ∀δ>0. N4: E_S = 𝔞_T only if T<½log3.
 

@@ -11,8 +11,8 @@ Screen key as in CA_C_000.
 linear relations among the samples.
 | screen | result |
 |---|---|
-| Idx | ✗ the correlated form is (N) = T*₂ of SPEC_B, an exact restatement (P47 §open (N); L2_BUILD_006) |
-| pointwise form | ✗ fails at ω₀ = 0 at every window (σ_T(0) = C₀ − 𝖠 < 0; P47 rem:shape-est(b)) |
+| Idx | ✗ the correlated form is (N) = T*₂ of SPEC_B, an exact restatement (P46 §open (N); L2_BUILD_006) |
+| pointwise form | ✗ fails at ω₀ = 0 at every window (σ_T(0) = C₀ − 𝖠 < 0; P46 rem:shape-est(b)) |
 | (P3) | reads the form through its samples ✓, but only as (N) |
 **DISCARD** (REF-D).
 
@@ -25,7 +25,7 @@ of class number > 1 (L-value combinations), and for f_t; it reads the whole func
 | Idx | not in the index as a coupling (new) |
 | O7 | ✗ **falsifier survives**: the quartet factor is a real rational function of s whose coefficients are polynomials in the
 quartet's parameters (centre, height, displacement). If those parameters satisfy rational relations (e.g. δ, γ₀² ∈ ℚ in the
-P47 prop:shape-twist form), its values at s = 2k are rational, so rationality up to π^{2k} is preserved. P47 lem:shape-quartet gives a
+P46 prop:shape-twist form), its values at s = 2k are rational, so rationality up to π^{2k} is preserved. P46 lem:shape-quartet gives a
 witness for k large, and the witness construction does not depend on the arithmetic of the parameters (ARGUED; the quartet definition
 allows a dense set of parameters) |
 | (R)(5) | ✗ a countable family of values at σ ≥ 2 is a set of bounded functionals of the object, not of the window form |
@@ -58,7 +58,7 @@ L-function. With μ = 0 (Ferrero–Washington), λ_p ≥ 0 is the "positivity" a
 **Seed.** |χ(½ + iτ)| = 1 with ζ(s) = χ(s)ζ(1 − s). The archimedean phase ϑ against the local phases arg L_p(½ + iτ) gives the window phase Θ_T.
 | screen | result |
 |---|---|
-| Idx | ✗ P47 prop:shape-phase (Θ_T, Z_T), comb-generic (lem:shape-ident); CA_B_004 Prop 1 (on-line symbol) |
+| Idx | ✗ P46 prop:shape-phase (Θ_T, Z_T), comb-generic (lem:shape-ident); CA_B_004 Prop 1 (on-line symbol) |
 | B″ | ✗ |
 **DISCARD** (retry).
 
@@ -69,7 +69,7 @@ L-function. With μ = 0 (Ferrero–Washington), λ_p ≥ 0 is the "positivity" a
 |---|---|
 | (P3) | ✓ reads the minimizer, not the comb |
 | (P1) / REF-D | ✗ summing gives 𝔞_T(h*) ≥ 0 = λ_A ≥ 0 at the minimizer, i.e. the target. A local law at h* only is a split of the target's own value (CA_B_008 §2) |
-| (R)(5),(6) | ✗ a law on the numbers 𝔮_p(h*) is a bounded functional of the minimizer's local energies. The sign is decided at scale λ_A/κ_T, below every local energy (P47 cor:shape(c)) |
+| (R)(5),(6) | ✗ a law on the numbers 𝔮_p(h*) is a bounded functional of the minimizer's local energies. The sign is decided at scale λ_A/κ_T, below every local energy (P46 cor:shape(c)) |
 | Idx | Theorem X (R186 rounds: new primes must cancel σ on U at resolution π/T) is the h*-local form of this |
 **DISCARD** (REF-D, retry of Theorem X).
 

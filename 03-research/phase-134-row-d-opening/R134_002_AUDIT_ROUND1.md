@@ -1,6 +1,6 @@
-# R134.002 — Audit of record, round 1 (Paper 46, row D opening)
+# R134.002 — Audit of record, round 1 (Paper 47, row D opening)
 
-Target: `04-papers/46-intersection-frame-defect/archive/main.md` (1310 lines),
+Target: `04-papers/47-intersection-frame-defect/archive/main.md` (1310 lines),
 against `R134_000_BLUEPRINT.md`, `R134_001_ROUND1.md`, Papers
 43–45 by number, `P124.013`, `P124.014`, and both scripts re-run.
 
@@ -17,7 +17,7 @@ inequality runs the wrong way.  Grades: D.1 `RESTATEMENT` (+ two small genuine
 `PROVED` lemmas), D.2 `PROVED` (structural) `+ COMPUTATIONAL`, D.3
 `COMPUTATIONAL` with one real theorem (5.8), D.4 `PROVED` negatives with a
 defective synthesis, D.5 `PROVED`.  Of the three findings against the corpus:
-finding 2 **confirmed and strengthened** (it also governs Paper 46's own §4
+finding 2 **confirmed and strengthened** (it also governs Paper 47's own §4
 numerics), finding 3 **confirmed by independent re-run**, finding 1
 **overstated and partially refuted**.**
 
@@ -80,7 +80,7 @@ nothing at `Δ = 0` once `2ε < \log 2`").
 hypothesis `ε < ε_0(A,S)` **in its own statement** (main.md l. 3503 ff.,
 "[REBUILT … findings `m1` and `M4`: the two hypotheses this statement inherits
 are now carried explicitly.  (a) *Width* …]"), not only in the concentrated
-reading; Paper 46 re-reads Paper 44 against its own hypothesis-carrying rule.
+reading; Paper 47 re-reads Paper 44 against its own hypothesis-carrying rule.
 (b) Theorem 8bis.1e also assumes `0 ∉ supp(h_m⋆h_n^†)`, because its proof goes
 through Theorem 3bis.7, which assumes it.  At `ε = 2.0, 1.0, 0.5` every pair
 `m,n ≤ 30` has `|Δ_{mn}| ≤ \log 15 < 2ε` or close to it, so `0 ∈ supp` for
@@ -167,7 +167,7 @@ decreasing at every step, and `λ_{\min}(L_T) = 2.95, 2.79, 1.72, 1.29, 1.02`
 scalar inequalities are not being tested by these numbers.  *Repair:* add the
 scope sentence of §9.3(2) to §4.3 and §4.4 explicitly.
 
-**(M7) Paper 46 diagnoses the `B_T` collision and then perpetuates it.**
+**(M7) Paper 47 diagnoses the `B_T` collision and then perpetuates it.**
 (1.8) defines `B_T = C⊕C`, the ruling plane; Theorem 4.1 and Theorem 4.2 then
 use `B_T` for the Tate **block** of `𝒲` — the very conflation §4.2 exists to
 refute.  *Repair:* rename the block (e.g. `𝔅_T`) throughout §4 and say so in
@@ -298,10 +298,10 @@ matrix is `[[8T\sinh T, 4T²+4\sinh²T],[·,·]]` ✓ and
 `\det = 64T²\sinh²T − 16(T²+\sinh²T)² = −16(T²−\sinh²T)²< 0` ✓.  This matches
 P124.013 (2.3) verbatim (`⟨𝒜φ_σ,φ_τ⟩ + Φ_{φ_σ}(0)Φ_{φ_τ}(1) +
 Φ_{φ_σ}(1)Φ_{φ_τ}(0)`) and `p124_lab.assemble`'s `Polar`, which I read.
-**The naming question is settled in Paper 46's favour**: Paper 45 Theorem 8.1's
+**The naming question is settled in Paper 47's favour**: Paper 45 Theorem 8.1's
 `B_T` is the ruling plane `C⊕C` and is hyperbolic; P124.013's `B_T` is the
 Tate block of `𝒲` and is a different object; the blueprint conflated them.
-Subject to (M7), Paper 46's §4.2 is correct and is the right correction of
+Subject to (M7), Paper 47's §4.2 is correct and is the right correction of
 record.
 
 **Theorem 4.3 (the swap law).  PROVED, not numerical.**  The proof is a
@@ -470,7 +470,7 @@ must not be quoted.
    My own sweep at `T = 0.72` (§4) shows monotone decrease at every step, in
    agreement with the paper's `T = 1.7` table.  **Extension the paper does not
    make: the same holds for `Σ(T)`, because `Σ_T(z)` is itself an infimum over
-   `P_T`** — so every `Σ(T) > 0` in phases 118/124 *and in Paper 46 §4* is
+   `P_T`** — so every `Σ(T) > 0` in phases 118/124 *and in Paper 47 §4* is
    uninformative, while every negative eigenvalue remains a certificate.  The
    scope carve-out for P123.036's interval-arithmetic endpoint certificate is
    correct and should be retained.  **Answer to press point P4: yes, this
@@ -527,7 +527,7 @@ it.
   none of them is, or is presented as, evidence about the target.  §10 says
   `None.`  **Conclusion: the paper does not violate the no-sign rule.**  The
   only latent risk is (n1), closed by adding (M6) to §4.
-* **Consistency with the boxed target.**  Paper 46 §0.1 reproduces Paper 45
+* **Consistency with the boxed target.**  Paper 47 §0.1 reproduces Paper 45
   §14.4's box character for character, including the standing negatives and the
   `(H_L)` conditionality of 8bis.7; and §5.5/§9.1(1) respect §14.4's four
   "facts row D may not ignore", in particular that the target is a colimit
@@ -537,7 +537,7 @@ it.
 
 ## 8. Recommendation to the review
 
-Accept Paper 46 as a skeleton **after** the repairs (M1), (M2), (M3), (M4),
+Accept Paper 47 as a skeleton **after** the repairs (M1), (M2), (M3), (M4),
 (M5), (M6), (M7) and the minors; none of them costs a result, and (M1) and
 (M2) each *improve* the statement they repair.  Regrade D.1 to `RESTATEMENT`
 per the construction's own press point.  Record finding 2 as a standing

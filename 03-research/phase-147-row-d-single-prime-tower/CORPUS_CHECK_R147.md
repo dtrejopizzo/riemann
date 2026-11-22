@@ -176,9 +176,9 @@ never a finite value.
 
 ---
 
-## 4. Paper 46 open item (21) — the archimedean slot
+## 4. Paper 47 open item (21) — the archimedean slot
 
-File: `04-papers/46-intersection-frame-defect/archive/main.md:3809-3816` (§14.5, item 21; discussion at `:2612-2622`,
+File: `04-papers/47-intersection-frame-defect/archive/main.md:3809-3816` (§14.5, item 21; discussion at `:2612-2622`,
 Remark 11.14a′).
 
 Exact statement (quoted): the **kernel representation of `ω_∞` on `D^W`** — whether
@@ -281,7 +281,7 @@ reproduces an already-closed question.**
 | 1d | Gram restricted to single prime `{Frob_{p^k}}_k` inside Paper 44 | not separately isolated in Paper 44 | precedent is Doc 131 instead (§2) |
 | 2 | Single-prime tower positivity, `Ξ_a`-sensitivity | `TRIED–PROVED` (Thm 6.7, iff classification) + `TRIED–NO-GO` (transfer to ζ's destructive regime) | `03-research/phase-44-new-mathematics/131-algebra-of-arithmetic-correspondences-the-category.md:789-831`; two/n-prime extension `03-research/phase-45-fredholm/135-two-prime-theorem-positivity-for-pure.md:346-461,690-712` |
 | 3 | Finite renormalization of the diagonal | `TRIED–NO-GO` (no canonical finite value exists; only divergence, both conventions) | `main.md:3514-3798` (Cor 8bis.1b′, Thm 8bis.2, Cor/Rem 8bis.2a/b) |
-| 4 | Paper 46 open item (21), archimedean kernel slot | `OPEN`, unused, link to diagonal inferred not stated | `04-papers/46-intersection-frame-defect/archive/main.md:2612-2622,3809-3816` |
+| 4 | Paper 47 open item (21), archimedean kernel slot | `OPEN`, unused, link to diagonal inferred not stated | `04-papers/47-intersection-frame-defect/archive/main.md:2612-2622,3809-3816` |
 | 5 | Phase 137 D.12 semilocal `W_S` | `TRIED–PARTIAL/NO-GO` beyond `S={∞}`; imports Thm 8bis.4a as the operative obstruction | `03-research/phase-137-row-d-canonical-coupling/R137_001_ROUND1.md:360-475`; `R137_007_CLOSING_DECISION.md:15` |
 | 6 | Phase-60 / P122.028 admissibility vs pure-magnitude single-prime forms | `TRIED–NO-GO` (both proved, both apply directly) | `03-research/phase-136-row-d-map/PHASE_136_MAP_SYNTHESIS_AND_PLAN.md:22,57`; `P122_028_TWO_PRIME_FINITE_GREEN_COMPLEX.md:168-186` |
 
@@ -305,7 +305,7 @@ reproduces an already-closed question.**
    Gram sub-block of the Frobenius family and explicitly coupled to `ω_∞` via `Δ^rad`**) has not been
    built; phase 137's `W_S` couples primes+archimedean but never via `Δ^rad`, and never with the
    `Ξ_a`-sensitive per-prime weight of Doc 131 Thm 6.7.
-4. **Extending Paper 46's open item (21)** (kernel representation of `ω_∞` on unbounded-support
+4. **Extending Paper 47's open item (21)** (kernel representation of `ω_∞` on unbounded-support
    `D^W`) using the single-prime-tower/`Frob⋆Δ^rad` machinery, and explicitly linking it to Paper 44
    Thm 8bis.2's archimedean divergence mechanism — this connection is not drawn anywhere in the
    corpus.

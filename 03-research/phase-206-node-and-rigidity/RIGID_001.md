@@ -313,7 +313,7 @@ structural reason for the empty cell.
   preserves the Hecke cone and is antipodal at odd levels, so any linear consequence in Λ
   on p^{2j+1} is symmetric. Residue: the even levels p^{2j}, which are already OPEN in X_001 and are not reopened here.
 - Lemma K: the exact Kuznetsov normalization (factors of 2, cosh) does not change the abscissa. The citation must be
-  verified before integrating it into Paper 47.
+  verified before integrating it into Paper 46.
 - Lemma V: for ζ² the "form" xy is indefinite and the kernels are K_0/Y_0, not J_0. The positivity argument (d ≥ 0,
   |g|² ≥ 0) is the same; the difference in kernels is harmless.
 - §4: "F only rewrites" is the core of the argument and is ARGUED, not PROVED as a class theorem. A class proof

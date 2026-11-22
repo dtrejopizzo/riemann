@@ -1,7 +1,7 @@
 # N_BUILD_001 — Polar-free form of (N) on P_T, the exact form of (E_γ), mesh Tate constraints, alignment with L2_BUILD_006
 
 Track (N), pen and paper only (no computation). positivity assumed
-true; labels PROVED / CITED / CONDITIONAL / OPEN / NO-GO. Notation of Paper 47 (main.tex): ω_k = πk/2T, a_k = |F̂(ω_k)|²,
+true; labels PROVED / CITED / CONDITIONAL / OPEN / NO-GO. Notation of Paper 46 (main.tex): ω_k = πk/2T, a_k = |F̂(ω_k)|²,
 w = c_F, v_n = 2Λ(n)/√n, K (lem:K), m = Re ψ(¼+iτ/2) − log π, P_T = {A = B = 0}, F = (¼−∂²)G with G ∈ H²_0(I_T)
 (thm:nyq-cone), 𝓕_T(F) = 2∫_{[1,e^{2T})} y^{-1/2} w(log y) d(ψ(y) − y) (prop:wit-cheb).
 
@@ -11,7 +11,7 @@ grep (03-research 1–188, 04-papers, 05-meta, MAP_D.md, master grid): "polar pa
 - **R186_033 Lemma 1 (PROVED there)**: PNT-window identity 𝔞_T(F) = (C₀+4)Φ(0) + 2∫x^{-1/2}Φ(log x)d(x−ψ) + Lev_{K₁}(Φ),
   K₁ = K − 2e^{−u/2}. **phase-114 114_d_133**: digamma shift ¼ → 5/4. **R160_PD_R1 Thm E(iii)**: Stieltjes form with kernel
   ω = ½c − c′. So items (A), (B) below are **corpus-known**; they are restated only to fix notation for (C)–(F).
-- Paper 47 rem:wit-cheb states (E_γ) only up to a slack ±4 (sandwich m(γ)−4 / m(γ)+4). No memo found giving the exact
+- Paper 46 rem:wit-cheb states (E_γ) only up to a slack ±4 (sandwich m(γ)−4 / m(γ)+4). No memo found giving the exact
   form (C). No memo found writing the Tate conditions as explicit alternating mesh identities (D) (R186_052 Cor 3.2 gives
   the weight (τ²+¼)², not the mesh identities). L2_BUILD_006 §2 uses the slack δ₀* = λ_{∞,P} → C₀; the polar-free slack (E)
   is not there.

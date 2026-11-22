@@ -2,8 +2,8 @@
 
 Phase 186, decision round (not a construction round).
 Read: README (rounds 1–14), R186_103–106, R186_028, R186_027, R186_021/102, master grid (log 13–26, §3, §4, §6, §7),
-crossword (phase 186 addendum, §4.1), R185_005 (§1.3, §2.1, §3), DRAFT_SECTION_COERCIVITY_REDUCTION, Paper 47 prop:P,
-note to Connes (08-sent, §6). Paper 47, grid and crossword are not touched.
+crossword (phase 186 addendum, §4.1), R185_005 (§1.3, §2.1, §3), DRAFT_SECTION_COERCIVITY_REDUCTION, Paper 46 prop:P,
+note to Connes (08-sent, §6). Paper 46, grid and crossword are not touched.
 
 ---
 
@@ -43,7 +43,7 @@ sign.
  F_S, Π_S, ε_S, the gap 1 − ‖A_S‖². Their theorems inherit nothing; what inherits is the final step
  "Son_{S(T)} ≥ C in 𝒫_T".
  (β) **exact decompositions with zero remainder** (infinite sum of squares with no negative term). For a single
- window this is a dual certificate (Paper 47 def:W/def:PD); uniform in T it collapses into thm:Z (the certificate is
+ window this is a dual certificate (Paper 46 def:W/def:PD); uniform in T it collapses into thm:Z (the certificate is
  the explicit formula on flat-top tests). The semilocal chain is of the "positive − compact" type, not zero remainder.
  (γ) **statements nonlinear in F** (S2 of grid §7): structure of the minimizer h*_T, nodes, real-rooted witness. This
  is the (★_cell)/(TC) branch, outside 𝔐 (R185_005 O1), with the requirements (i)–(iii) of R166_190 and wall W-jet.
@@ -56,14 +56,14 @@ sign.
 Format: statement · does it inherit? · cost · corpus closure check.
 
 **(a) W_T ≥ c on the WHOLE of L²(I_T) with β₀ = 2 exact.**
-Statement: there exists a certificate (ν, 2, 0) with value c > 0 for T ∈ (½log2, ½log5] (prop:P of Paper 47: it is
+Statement: there exists a certificate (ν, 2, 0) with value c > 0 for T ∈ (½log2, ½log5] (prop:P of Paper 46: it is
 the only normalization that bounds W_T on the whole of L²). **Inherits, and worse:** by (★) of R186_106 and
 prop:polarcap, W_T ≥ 0 on L²(I_T) ⟺ D(T) ∧ 𝔤_ev(T) ≥ 0 ∧ 𝔤_odd(T) ≥ 0 (PROVED, two lines: W_e = 𝔞_e + u_eu_eᵀ,
 W_o = 𝔞_o − u_ou_oᵀ), and 𝔤_ev ≍ λ_W‖h_ev‖² with λ_W ≪ λ_A (5.5e-8 vs 9.5e-4 at ½log3; 1e-12 vs 1.3e-7 at 0.69;
 NUMERICAL R186_106 §2.2(d)). It is D plus two scalar inequalities of even smaller margin; as an intermediate goal it
 is **harder, not easier**. Cost of stating it: zero (already done). Check: not closed; T ≤ ½log2 PROVED-CITED (CC Thm
-6.11); for T > ½log2 Paper 47 only has thm:C with β₀ = 2.0026 (𝒫_T) and thm:log5A (𝒫_T). As a problem with no Tate
-restriction it is the Kreĭn extension problem of Paper 47 §KEP: it is not a new object. **Verdict: NO as a front;
+6.11); for T > ½log2 Paper 46 only has thm:C with β₀ = 2.0026 (𝒫_T) and thm:log5A (𝒫_T). As a problem with no Tate
+restriction it is the Kreĭn extension problem of Paper 46 §KEP: it is not a new object. **Verdict: NO as a front;
 record the equivalence.**
 
 **(b) OPEN inequality of R186_021: sup_{𝒫_T}[(ΔC − ΔSon)/E_∞] < 1, T ∈ [½log2, ½log3].**

@@ -3,7 +3,7 @@
 **Status:** proposal. Neither RH nor (★_cell) is asserted. This phase attacks the single point
 remaining to close D: R163_401 §4.8, the compensation inequality (★_cell) at the first-contact witness.
 
-Sources read for this proposal: Paper 47 (prob:annihilate, eq:Qspectral), Paper 48 (Problem 6, thm:BFdisc,
+Sources read for this proposal: Paper 46 (prob:annihilate, eq:Qspectral), Paper 48 (Problem 6, thm:BFdisc,
 walls W1–W12), R163_401 v6 (§4.8, Rem 4.8a, §4.11), R163_801 (Thm 3, Cor 3.1), R163_901/991 (Thm F, family f_t),
 R163_1001 (Thm O, f_χ, W3′), R163_602 (F2 Bombieri–Hejhal), R163_603 (L2.1 Riemann–Siegel), grid §6–7
 (specification S1–S12), phase 150 (T1/T2/T5, Parseval sterility lemma).

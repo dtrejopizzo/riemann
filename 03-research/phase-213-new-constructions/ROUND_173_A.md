@@ -4,7 +4,7 @@ For fixed T and positive integer A there is C(T,A), independent of the height G,
 
     W_T(f) ≥ −C(T,A) G^(−A) ||f||₂².
 
-It holds for the whole form by closure from the smooth core of paper 47. Compared with 172 the derivative norm of f is removed. The idea is to combine two exact extensions on a slightly larger window. One controls the low frequencies via the verified zeros and the other has positive density at high frequencies via the archimedean term.
+It holds for the whole form by closure from the smooth core of paper 46. Compared with 172 the derivative norm of f is removed. The idea is to combine two exact extensions on a slightly larger window. One controls the low frequencies via the verified zeros and the other has positive density at high frequencies via the archimedean term.
 
 **Two extensions.** Take the enlarged interval |u|<2T+1. On it use the atomic variant of 172, μ=Σδ_γ+C(τ)dτ, where for each n
     |C(τ)|≤C(T,n) Σ_{|γ|>G} (1+|τ−γ|)^(−n).

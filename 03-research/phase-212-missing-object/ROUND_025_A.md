@@ -1,9 +1,9 @@
-# ROUND_025_A — Cross-check of antecedents: "existence + rigidity" scheme (WF)/(R)/(E) against Paper 47 and phases 153–160, 197
+# ROUND_025_A — Cross-check of antecedents: "existence + rigidity" scheme (WF)/(R)/(E) against Paper 46 and phases 153–160, 197
 
 Labels: PROVED / CITED / CONDITIONAL / OPEN / NO-GO. Review of novelty and logic; nothing new is derived.
 
 ## 0. What was opened
-- Paper 47 (`04-papers/47-row-d-dual-certificates/main.tex`): def:PD (l.668), def:W and thm:Z (l.1224–1300),
+- Paper 46 (`04-papers/46-row-d-dual-certificates/main.tex`): def:PD (l.668), def:W and thm:Z (l.1224–1300),
   prop:finite (l.3156–3180), rem:regimes, lem:cpos, thm:finmod (l.3228–3258), rem:resweights (l.3260–3292),
   lem:degen (l.3294–3313), prop:finsupp (l.3316–3334), cor:void (l.3336–3362), rem:twohalves (l.3364–3378).
 - `phase-155-.../R155_053_ROUND8B_P6_ALIGNMENT.md` §1 (Prop 1.1, 1.3); README row R155_053.

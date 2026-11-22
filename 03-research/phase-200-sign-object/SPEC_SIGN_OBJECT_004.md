@@ -143,7 +143,7 @@ What survives of N3 is the only non-trivial family passing through ζ with fixed
 homotopy in combs (𝒦_W), but it is decomposed by the radical, which is the only place where M200 locates exact Λ.
 
 ### 3.1 Definition
-Fix T and the block B_M = span{g_1,…,g_M} ⊂ carrier (P_T, or its exterior version L²(λ,∞) with gauge radical 𝒢_T, Paper 47 /
+Fix T and the block B_M = span{g_1,…,g_M} ⊂ carrier (P_T, or its exterior version L²(λ,∞) with gauge radical 𝒢_T, Paper 46 /
 SPEC_003 A.1). Let A_M(c) = A_M^{arch+pole} − c·C_M, with C_M the Gram matrix of the comb Λ. Let R_M := B_M ∩ 𝒢̄_T be the visible gauge
 radical in the block. By Guo L4.4 (CITED), A_M(1)|_{R_M} = 0 and A_M(1)(R_M, B_M) = 0. Definition:
 

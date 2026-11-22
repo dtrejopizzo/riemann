@@ -1,8 +1,8 @@
 # Round 3, option 7 — The formulation (S): divisor incidence on 𝔸_M (selection memo)
 
 Goal (★): λ_A(T) ≥ 0 for every T, with the definitions of `../phase-211-sign-sandbox/STATEMENT_001.md`.
-Reduction used (PROVED, P47 prop:AM): with a fixed profile F_0 ∈ P_{T_0}, 2T_0 < log 2, (★) is equivalent to
-𝔸_M = [𝖡(log m − log k)]_{m,k≤M} = Arch_M − Div_M − Near_M ⪰ 0 for every M. Notation of P47 §subsec:oneprofile:
+Reduction used (PROVED, P46 prop:AM): with a fixed profile F_0 ∈ P_{T_0}, 2T_0 < log 2, (★) is equivalent to
+𝔸_M = [𝖡(log m − log k)]_{m,k≤M} = Arch_M − Div_M − Near_M ⪰ 0 for every M. Notation of P46 §subsec:oneprofile:
 β(d) := (1/2π)∫ m F̂_0² cos(τd) dτ (archimedean part of 𝖡), v_n = 2Λ(n)n^{−1/2}, c_0 = c_{F_0}, sop c_0 ⊂ [−2T_0, 2T_0].
 Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 
@@ -13,7 +13,7 @@ Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 Grep in `03-research/` (all phases), `04-papers/47` and `48`, grid, crossword, index (README and 06) and annexes of
 phase 212 for: Arch_M, Div_M, Near_M, 𝔸_M, mathbb A_M, prop:AM, «Arch_M − Div_M», GCD/mcd, Smith, meet matrix,
 incidencia, Möbius, LDL, Cholesky, Schur, «rango uno», coprimo, «site independence». Opened in primary:
-P47 prop:AM with proof, thm:oneprofile, prop:nearfree, rem:boxes, rem:bar-arith, problem (S) of §sec:open;
+P46 prop:AM with proof, thm:oneprofile, prop:nearfree, rem:boxes, rem:bar-arith, problem (S) of §sec:open;
 phase 188 `N_BUILD_022` (complete), `L2_BUILD_031` (complete), `L2_BUILD_028` §§1–4; phase 193
 `CA_K_001` §1 (Lemma 1.1, Thm. 1.2, Prop. 1.3), `CA_K_002` §3 (Thm. 3.2) and `CA_K_001_002_REVIEW`; phase 200
 `A_MU_FACTORIZATION_001` §§0–1(b); 211 `ROUND_003_B` (headings and §§2–5), 211 LEDGER C7, C9, C43; index 06 §R9;
@@ -42,9 +42,9 @@ inertia, C8). What is new in this memo is Lemma 1: the failure of (4.1) passes f
 
 (iii) **Where the functional equation enters (S).** Only in two places: the symbol m(τ) = Re ψ(¼ + iτ/2) − log π
 of Arch_M (factor Γ(s/2)π^{−s/2}, conductor 1) and the Tate conditions F̂_0(±i/2) = 0, which annihilate exactly the
-main term of Ξ_{F_0} (P47 thm:band, lem:transl(iii)). The entries of Div_M and Near_M do not contain it; in
+main term of Ξ_{F_0} (P46 thm:band, lem:transl(iii)). The entries of Div_M and Near_M do not contain it; in
 (S) the functional equation enters additively, in the archimedean term, and no antecedent read writes an
-exact identity linking entries of Near_M with entries of Arch_M (the Poisson identities of P47
+exact identity linking entries of Near_M with entries of Arch_M (the Poisson identities of P46
 thm:PCfinite, already examined in K1, are generic in the comb). ARGUED.
 
 (iv) See §(5) below.
@@ -90,7 +90,7 @@ reduction except a rank one and a diagonal.
 - Lemma 1: it does not break for any comb: it is a format impossibility. That is why it is not a mechanism.
 - Corollary 3: the line «ρ = Arch_M − V_0ᵀV_0 − V_1ᵀV_1 ⪰ 0» already fails for Λ; for cΛ the remainder is
   ρ^{(c)} = ρ^{(0)} − c²V_1ᵀV_1, even and non-increasing in |c|, without breaking at c < 1.
-- Locality remark (PROVED, from P47 prop:AM(ii)): the entries of 𝔸_M depend on the weight only through
+- Locality remark (PROVED, from P46 prop:AM(ii)): the entries of 𝔸_M depend on the weight only through
   a(n), n < M e^{2T_0}. Hence, for a falsifier that keeps a(n) = Λ(n) for n < X (for example the
   deformation f_t with X = λ₁), every identity on the family {𝔸_M} can only break at M ≥ X e^{−2T_0}: the
   line that breaks has to be used for every large M (O5). For a_P
@@ -107,7 +107,7 @@ divisor incidence) and Corollary 3. No candidate ready for construction.
 
 ### Lemma 1 (there is no factorization in the divisibility order; PROVED)
 
-*Statement.* Let F_0 be the profile of P47 §subsec:oneprofile with 2T_0 < log 2 and let a be any real weight with comb
+*Statement.* Let F_0 be the profile of P46 §subsec:oneprofile with 2T_0 < log 2 and let a be any real weight with comb
 supported in {log n : n ≥ 2} (in particular Λ, cΛ, a_P, erasures, amplifications). Let 𝖡_a be the corresponding one-profile
 function and 𝔸_M = [𝖡_a(log m − log k)]. There exists M_0 such that, for M ≥ M_0, there are no real D = diag(D_1, …, D_M)
 and real M×M W with W_{dk} = 0 unless d | k, such that 𝔸_M = WᵀDW.
@@ -121,7 +121,7 @@ distinct primes p, p′, q, q′ ≤ M:
 Step 2 (passage to the continuum). The entries of 𝔸_M do not depend on M; if the factorization existed for infinitely many M,
 (1.1) would hold for every quadruple of distinct primes. Given pairwise distinct reals x, x′, y, y′ and C > 0, by the
 prime number theorem (CITED: p_{n+1}/p_n → 1) there are distinct primes with |log p − C − x| < ε, etc., for large
-C; the differences of logarithms tend to x − y, etc. Since 𝖡_a is continuous (P47 thm:oneprofile, statement),
+C; the differences of logarithms tend to x − y, etc. Since 𝖡_a is continuous (P46 thm:oneprofile, statement),
 (1.1) holds for all pairwise distinct real quadruples, and by continuity for all. Taking y′ = x, x′ = y:
 𝖡_a(x − y)𝖡_a(y − x) = 𝖡_a(0)², and by parity 𝖡_a(d)² = 𝖡_a(0)² for every d. A continuous function of constant
 modulus on ℝ is constant (if the modulus is 0 it is identically 0; if not, it does not vanish and does not change sign). Hence
@@ -129,7 +129,7 @@ modulus on ℝ is constant (if the modulus is 0 it is identically 0; if not, it 
 
 Step 3 (𝖡_a is not constant). For |d| < δ := log 2 − 2T_0 > 0 and n ≥ 2, |log n ± d| > 2T_0, so the comb part
 of 𝖡_a(d) is zero and 𝖡_a(d) = β(d) = ∫ w(τ) cos(τd) dτ, w := m F̂_0²/2π. Write w = w⁺ − w⁻. The set {m < 0}
-is bounded because m(τ) ≥ log(|τ|/2π) − 4 (P47 lem:mbounds(ii)); hence w⁻ has compact support and β_− := ∫w⁻cos(τ·)
+is bounded because m(τ) ≥ log(|τ|/2π) − 4 (P46 lem:mbounds(ii)); hence w⁻ has compact support and β_− := ∫w⁻cos(τ·)
 is C^∞. If β were constant on (−δ, δ), β_+ = β + β_− would be C^∞ in a neighbourhood of 0, and β_+ is the transform of the
 finite positive measure w⁺dτ. By the classical moment lemma (CITED: if the Fourier transform of a finite positive
 measure has a derivative of order 2k at 0, the moment of order 2k is finite), ∫ w⁺ τ⁴ dτ < ∞. But

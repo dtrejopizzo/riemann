@@ -1,6 +1,6 @@
 # AUDIT_197_HOSTILE — audit of BARRIER_001 (phase 197)
 
-Checked against Paper 47 main.tex (lem:degen l.3252, lem:shape-scale, prop:shape-eulerdel,
+Checked against Paper 46 main.tex (lem:degen l.3252, lem:shape-scale, prop:shape-eulerdel,
 lem:shape-epstein (O10), lem:shape-margin, lem:shape-lin, prop:shape-inputs, thm:D1, §spec, minimizer existence l.555) and the index
 (README l.404–405 INV_P/INV_Q, l.421 BARRIER_001; AUDIT_PHASE193_CERTAINTY rows O10/O11). no
 equivalence with anything else is used.
@@ -52,7 +52,7 @@ only in one direction — the memo should say "are not known to fail", not "do n
 - a_P item: PROVED. Ξ_Q item: CITED complete form / ARGUED primitive. "Minimal forcing set" claim: ARGUED only.
 
 ## (e) Theorem 5 — inequality PROVED; consequences OVERSTATED
-- Existence of F⋆: λ_A = min spec H_T is attained (Paper 47 l.555, compact resolvent); a real minimizer exists (real part or
+- Existence of F⋆: λ_A = min spec H_T is attained (Paper 46 l.555, compact resolvent); a real minimizer exists (real part or
   imaginary part of a minimizer is one, the form being real). PROVED. Uniqueness: NOT known; H_T depends on the choice — state
   π_N S ⊆ ∩_{F⋆} H_T(F⋆).
 - Direction: lem:degen gives μ_T(v) ≤ μ_T(v⁰) − Σ(v_n−v⁰_n)c_{F⋆}(log n); with v_n=a(n)/√n this is λ_A(T;a) ≤ λ_A(T;Λ) − ⟨a−Λ,w_T⟩.

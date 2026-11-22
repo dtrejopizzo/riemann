@@ -1,12 +1,12 @@
 # R152.000 — Blueprint: phase 152, round 0 — feasibility of two never-analyzed non-positivity mechanisms
 
-positivity, Deligne families are exhausted (Paper 46 Parts I–IV; phases 150–151). Every idea is checked against
+positivity, Deligne families are exhausted (Paper 47 Parts I–IV; phases 150–151). Every idea is checked against
 the corpus before anything is built. This round is FEASIBILITY: its output is, for each mechanism, either a
 precisely formulated statement (P152.A / P152.B) whose truth would yield a zero-free strip or RH and which is NOT
 a restatement, or a theorem/argument of death with the exact obstruction. No sign is claimed.*
 
 Read first: `05-meta-and-planning/ABCD-CLOSURE-PLAN/ROW-D-CLOSURE-PLAN.md` §§8–10;
-`03-research/phase-151-row-d-the-bridge/R151_005_CLOSING_DECISION.md` §2; `04-papers/46-intersection-frame-defect/archive/main.md`
+`03-research/phase-151-row-d-the-bridge/R151_005_CLOSING_DECISION.md` §2; `04-papers/47-intersection-frame-defect/archive/main.md`
 §28.2–§28.4 (the wall and the six reopening clauses); `03-research/phase-37-physics/111-target-l8-is-an-unconditional-bound.md`
 §3.2; `NO-GO-LIST.md` MW-1..MW-5, NG-E1 (per-place indefiniteness), NG-C1/MW-3 (Hasse–Minkowski).
 
@@ -90,5 +90,5 @@ Thm 22.17 closes it — verify).
 
 `R152_001_FEASIBILITY.md`: §0 verdicts (A, B: DEAD / (P152.x) formulated); §1 corpus check (grep commands and
 results for every name above); §2 mechanism A (facts, Q1–Q4, kill criterion applied); §3 mechanism B (facts,
-Q5–Q7, kill criterion applied); §4 reserve; §5 gates; §6 labels; §7 what, if anything, goes to Paper 46 §28.4
+Q5–Q7, kill criterion applied); §4 reserve; §5 gates; §6 labels; §7 what, if anything, goes to Paper 47 §28.4
 (reopening clauses) or Paper 44 (dictionary). FATAL rule in force. English, pure mathematics.

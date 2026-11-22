@@ -2,7 +2,7 @@
 
 Phase 197. Memo (pure mathematics, no numerics), not yet reviewed.
 positivity of 𝔞_T on P_T is assumed true. This memo closes a *method class*, not the target.
-Notation of Paper 47: 𝔞_T^{(v)} (eq:Aform), P_T={A=B=0}, λ_A(T)=μ_T(v_T(Λ)) (lem:degen),
+Notation of Paper 46: 𝔞_T^{(v)} (eq:Aform), P_T={A=B=0}, λ_A(T)=μ_T(v_T(Λ)) (lem:degen),
 n₋(T):=n₋(𝔞_T|P_T) (number of negative eigenvalues of the closed lower-bounded form with compact resolvent, as in thm:index).
 
 ## 0. Corpus / index check and written new reason
@@ -57,7 +57,7 @@ re-routing inside K_T iff Λ∈K_T. So R2 is REF-D on every path class; residual
 (a) In a real-symmetric 1-parameter family, a simple eigenvalue reaching 0 is a codimension-1 event (one real equation μ_1=0);
 von Neumann–Wigner (codim 2 for real symmetric) concerns *coincidence of two eigenvalues*, not a zero crossing. So vNW forbids
 only multi-dimensional kernels (codim 3 for dim 2): it predicts that a first failure, if any, has a 1-dim kernel of definite
-parity — exactly Paper 47's statement (abstract; primitive null vector of definite parity), no exclusion.
+parity — exactly Paper 46's statement (abstract; primitive null vector of definite parity), no exclusion.
 (b) To push a zero crossing to codim ≥2 one needs an extra real condition L(h)=0 on every kernel vector, independent of the
 Euler–Lagrange equation. Candidates checked: Tate moments (already in P_T); dual-certificate complementary slackness
 (∫f_w|ĥ|²=0 with f_w≥0 and ĥ entire forces f_w≡0, impossible ⇒ no attained certificate at a crossing; this constrains certificates,
@@ -67,7 +67,7 @@ not h, and holds for every comb in 𝒮); lem:degen (c_h(log n)=0 ∀n) — not 
 and by W1 a touching at T_* is tangential/one-sided (λ_A nonincreasing), i.e. exactly the non-transversal case genericity ignores.
 
 ## 5. Determinants and Sturm (located, not re-run)
-- A fixed-sign Fredholm/Birman–Schwinger quantity vanishing exactly at a crossing: W-det (P47 thm:wh-det) — every sign-deciding
+- A fixed-sign Fredholm/Birman–Schwinger quantity vanishing exactly at a crossing: W-det (P46 thm:wh-det) — every sign-deciding
   determinant factors as λ_A·R; lem:flowdet — the flow coefficient is ⟨A′h*,h*⟩/λ_A. The finite version (det S_{T,k}) is residue
   (L2), OPEN. No new reason, not re-run.
 - Sturm/nodal count of the minimizer: P_T imposes no clamping (INV_U_001 §1); the operator is nonlocal (Lévy kernel ~1/(2|u|)),
@@ -103,7 +103,7 @@ vNW codimension / determinant-zero non-crossing arguments on 𝒮). Residual R2 
 Row D: OPEN; no sign obtained.
 
 ## 9. Response to AUDIT_197_2 (received during writing)
-- *Weights.* Paper 47 uses v_n = 2a(n)/√n (main.tex l.3093). All statements above are in v-coordinates, so the factor 2 only rescales
+- *Weights.* Paper 46 uses v_n = 2a(n)/√n (main.tex l.3093). All statements above are in v-coordinates, so the factor 2 only rescales
   the comb-space Lipschitz constant (d_v := Σ|v_n(a)−v_n(b)| = 2Σ|a(n)−b(n)|/√n); W1–W3 and §6 are unchanged.
 - *"R2 is a restatement of #101."* Agreed, and W2 is the proof of that restatement on (H2) (concavity gives exactly one downward
   crossing iff μ_T(Λ)<0). Recorded as closure of R2, not as a new route.

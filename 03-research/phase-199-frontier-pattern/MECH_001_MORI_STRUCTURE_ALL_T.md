@@ -10,7 +10,7 @@ L = T, c = 2πμ (prolate bandwidth·time), I = [−T,T], and W_T is the complet
   specification, phases 194–198, BARRIER_EST_001, PATTERN_001. Also 05b L104–L108, L81 and 06 (Möbius transport N_006,
   L2_017). AUDIT_ZENODO_FRONTIER, PATTERN_001.
 - **Sources, read.** Mori VIII (log 15, 23281236). Mori VII (log 12 + Theorem N, 23265728), downloaded to the
-  scratchpad `zen/moriVII.txt`. Mori VI (log 10, 23238480), `zen/moriVI.txt`. Guo (23297284), §1. Paper 47 lem:monoT,
+  scratchpad `zen/moriVII.txt`. Mori VI (log 10, 23238480), `zen/moriVI.txt`. Guo (23297284), §1. Paper 46 lem:monoT,
   prop:env, rem:moriceiling.
 - **Why this is not a retry.**
   - §1–§2 are a scaling analysis, not a construction.

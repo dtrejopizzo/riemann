@@ -2,8 +2,8 @@
 
 Notation of the common statement: `a^w_T(F) = Arch(F) − Σ_{n≥2} w_n c_F(log n)` on `P_T`, `v_n = 2Λ(n)/√n`, `d = w − v`,
 `D(τ) = Σ d_n (n^{iτ} + n^{−iτ})`. Sources opened: ROUND_021_A §1 (family `Π_T(M∗φ)`, identity (1.1), bounds
-(1.2)–(1.3)), ROUND_022_A filter, ROUND_024_A §2 (profile of `M`, boundary layer), P47 `thm:coer-schur` (l.≈5239),
-`rem:coer-size`, `thm:index` (l.2527–2532). Not opened: ROUND_019_A complete, P46 thm:radical (only via citations of 021_A).
+(1.2)–(1.3)), ROUND_022_A filter, ROUND_024_A §2 (profile of `M`, boundary layer), P46 `thm:coer-schur` (l.≈5239),
+`rem:coer-size`, `thm:index` (l.2527–2532). Not opened: ROUND_019_A complete, P47 thm:radical (only via citations of 021_A).
 Index: grep only (l.486 "multigenerator rigidity", l.1861 "unique weight δ_{N=1}", l.558–559 deletions/Beurling);
 those memos were not opened: the novelty cross-check is not part of this memo.
 
@@ -53,7 +53,7 @@ even characters of conductor `q` add `(log q)c_F(0)`, which is not in the form. 
 `h < min(log 2, min_{m≠n}|log m − log n|)/2 ≍ 1/n`. Correct with fixed `u_±` to enter `P_T`; the correction is `O(‖f‖_{L¹}) = O(h^{1/2}‖f‖)`.
 Then `c_F(log m) ≈ 0` for `m ≠ n` and `c_F(log n) = ±‖f‖²`, and `Arch(F) ≤ (log(1/h)+C)‖F‖²`.
 Therefore `|w_n| ≤ C(log n + 1)`. Moreover `K_T` is closed (intersection of half-spaces) and convex.
-**Restriction:** extension by zero preserves `∫F e^{±t/2}`, `c_F` and `Arch` (local, P47: `a_T = W_*` on functions
+**Restriction:** extension by zero preserves `∫F e^{±t/2}`, `c_F` and `Arch` (local, P46: `a_T = W_*` on functions
 supported in `I`). Thus `a^{w}_{T'}(F) = a^{w|_{n<e^{2T}}}_T(F)` for `F ∈ P_T`, and the restriction maps `K_{T'}` into `K_T`. CORRECT.
 **Inverse limit:** a sequence `T_k ↑ ∞` suffices, because every window is contained in one of them. An inverse limit of
 nonempty compacts is nonempty (Tychonoff). It gives `w` with `a^w_T ≥ 0` for EVERY `T`. CORRECT.
@@ -71,7 +71,7 @@ Separation in finite dimension: there exists `(1, −w) ∈ C_T*` ⟺ `C_T* ⊄ 
 but the trace may blow up: mass on the `n_−` negative directions compensated by positive mass. Moreover
 `ρ ↦ c_ρ(log n)` is not weak-* continuous, because translation is not compact. Slater is not needed on the dual side
 (finite dimension); the difficulty is in the closure of the primal. CORRECTABLE: state with sequences or with `cl C_T`.
-**"v is the unique multiplier":** FALSE at fixed `T`. For `T ∈ (½log3, T*_ev)`, `T*_ev ∈ (0.58, 0.60)`, P47 thm:index gives
+**"v is the unique multiplier":** FALSE at fixed `T`. For `T ∈ (½log3, T*_ev)`, `T*_ev ∈ (0.58, 0.60)`, P46 thm:index gives
 `n_−(Arch|P_T) = 0`, hence `0 ∈ K_T`; and `v ∈ K_T` (Theorem A up to `log 2`). Uniqueness would only hold in the limit and
 depends on (R).
 
@@ -79,7 +79,7 @@ depends on (R).
 
 - `T < ½log 2`: no `n` enters. `K_T = {∅}` is nonempty ⟺ `Arch ≥ 0` on `P_T` ⟺ the target in that window: they coincide.
 - `n = 2` enters at `T = ½log 2 ≈ 0.347`; `n = 3`, at `½log 3 ≈ 0.549`. For `T < T*_ev` one has `0 ∈ K_T`: `K_T ≠ ∅` is
-  **trivial**, while `a^v_T ≥ 0` in that window is real content (P47 Theorem A). Therefore, at fixed `T`,
+  **trivial**, while `a^v_T ≥ 0` in that window is real content (P46 Theorem A). Therefore, at fixed `T`,
   `K_T ≠ ∅` is strictly weaker.
 - `T > T*_ev`: `0 ∉ K_T`, and `K_T ≠ ∅` is no longer trivial. I know no certificate of `K_T ≠ ∅` other than exhibiting `v`.
 - ∀T: `[K_T ≠ ∅ ∀T] ⟸ target` always. `⟹` is CONDITIONAL on full (R), which today is OPEN (§1). The

@@ -12,7 +12,7 @@ The separated archimedean block has entries O(1/(RK)) by BUILD084 (3), given tha
 
 ## Consequence on all scales of a tail
 
-Additional independent cross-check with P47 lem:ext-hf (window-dependent threshold), 212-83 and the triple selection after BUILD084. Let N_k=3·2^k for k a nonnegative integer. Partition [N_k,2N_k) into disjoint consecutive triples. For k≥k₀ and every finite combination w of the previous primitive packets, we write w_k for the part in that band. There exist absolute constants and k₀ sufficiently large such that
+Additional independent cross-check with P46 lem:ext-hf (window-dependent threshold), 212-83 and the triple selection after BUILD084. Let N_k=3·2^k for k a nonnegative integer. Partition [N_k,2N_k) into disjoint consecutive triples. For k≥k₀ and every finite combination w of the previous primitive packets, we write w_k for the part in that band. There exist absolute constants and k₀ sufficiently large such that
 
     a(Uw) ≥ (1/2) Σ_{k≥k₀} log(N_k) ||w_k||².
 

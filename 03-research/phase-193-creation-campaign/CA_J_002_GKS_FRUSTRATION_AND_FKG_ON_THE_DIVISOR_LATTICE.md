@@ -11,7 +11,7 @@ Model: sites m ∈ {1, …, M}; the window matrix 𝔸_M enters either
 GKS I/II (Griffiths 1967; Kelly–Sherman 1968; CITED) need ferromagnetic couplings J_{mk} ≥ 0 after a ±1 gauge ε (spin flip
 x_m ↦ ε_mx_m). Ginibre, GHS, Lebowitz, FK random-cluster (J3, J9) need the same.
 
-**Lemma 1.1 (additive block; PROVED).** 𝖡(0) > 0 (CA_E_001 Fact 0, CITED via P47/Zhu) and 𝖡 is continuous, so there is δ > 0 with
+**Lemma 1.1 (additive block; PROVED).** 𝖡(0) > 0 (CA_E_001 Fact 0, CITED via P46/Zhu) and 𝖡 is continuous, so there is δ > 0 with
 𝖡(d) > 0 for |d| < δ. Hence for m ≥ m₀ := ⌈2/δ⌉ every entry 𝔸_{m,m+h} with 0 ≤ h ≤ 2 is positive, and more generally 𝔸_{m,k} > 0
 whenever |log(m/k)| < δ.
 
@@ -19,7 +19,7 @@ whenever |log(m/k)| < δ.
 (a) If 2T₀ ≤ 0.1 then 𝔸_{m,2m} = 𝖡(log 2) < −0.27 for every m (Lemma J0′).
 (b) Under the premise (φ PD), 𝖡 takes negative values on a nonempty open set, hence 𝔸_{m,k} < 0 for some pair with m, k ≥ m₀ (any m₀).
 *Proof of (b).* The mean lim_{D→∞}(1/2D)∫_{−D}^{D}𝖡 = ν({0}) (Wiener, CITED). By the explicit
-formula (P47 thm:Z, CITED) ν is carried by zero ordinates with weights m_γĉ₀(γ), and 0 is not an ordinate (ζ(½) ≠ 0, CITED), so the mean is 0.
+formula (P46 thm:Z, CITED) ν is carried by zero ordinates with weights m_γĉ₀(γ), and 0 is not an ordinate (ζ(½) ≠ 0, CITED), so the mean is 0.
 𝖡 ≢ 0 (𝖡(0) > 0) and continuous, so 𝖡 < 0 on an open set U. log G is dense in ℝ and log(Lm/Lk) = log(m/k), so U ∩ log G contains a
 ratio m/k with m, k ≥ m₀. ∎
 

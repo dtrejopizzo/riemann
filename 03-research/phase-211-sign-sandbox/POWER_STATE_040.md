@@ -16,7 +16,7 @@ It is further proved, for the same N, a whole tail:
     h_N(exp(t))>0 and K_N(exp(t))>0
     for ALL t>=(N−1)/992+5.
 
-The certified start is at CONSTANT distance from the centre; it improves the O(sqrtN) shift of039, though with the declared range N>=2^80. It does not identify the exact transition nor prove uniqueness of a transition. The kernel coordinate t=logx is not the window T of Paper47.
+The certified start is at CONSTANT distance from the centre; it improves the O(sqrtN) shift of039, though with the declared range N>=2^80. It does not identify the exact transition nor prove uniqueness of a transition. The kernel coordinate t=logx is not the window T of Paper46.
 
 ## Insight and error control
 

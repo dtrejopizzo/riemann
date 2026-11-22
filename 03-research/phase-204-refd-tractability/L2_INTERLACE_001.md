@@ -1,6 +1,6 @@
 # L2_INTERLACE_001 — (L2) by interlacing / first crossing: T13.1 and T13.2 are NO-GO within already registered classes; the premise "k jumps at contacts" is false
 
-Phase 204. Paper 47 notation (eq:Aform, 𝒫_T, λ_A, 𝒞F, v_n = Λ(n)/√n·(…)).
+Phase 204. Paper 46 notation (eq:Aform, 𝒫_T, λ_A, 𝒞F, v_n = Λ(n)/√n·(…)).
 Writes only this file; the index lines are in §8 for the integrator to copy.
 
 ## 0. Corpus and index check (rule) and new reason, written out
@@ -22,7 +22,7 @@ Writes only this file; the index lines are in §8 for the integrator to copy.
 - **INV_U_001** (`03-research/phase-195-modern-tools/INV_U_001_CONTACT_CROSSING_EDGE_LAW_LOG_ONSET_C1_NO_GO.md`):
   boundary law at the contact: U0 (no jump in λ), U5b (no jump in λ′), non-analytic germ −v_n a_+a_−·2η/log(κ/2η); class
   𝒦_cross NO-GO (ARGUED).
-- Phase 156 (memory; P47 thm:parityschur, prop:polarcap): In(W_T) = In(𝔞_T|𝒫_T) + In(𝔊_T), 𝔊_T = S^{Sch}_T + D_pol, 2×2.
+- Phase 156 (memory; P46 thm:parityschur, prop:polarcap): In(W_T) = In(𝔞_T|𝒫_T) + In(𝔊_T), 𝔊_T = S^{Sch}_T + D_pol, 2×2.
 - R186_025 / R186_104 / R186_105: definition of S_{T,k} and audit judgment "(L2) = W ≥ 0 rewritten in a basis of
   piecewise Tate exponentials; NO-GO as a proof route" (R186_104 row 6, MAJOR).
 - grep "interlacing", "interlacing", "Cauchy", "rank-one edge", "rank-one": only TRACT_001 §6.1 (the proposal itself)

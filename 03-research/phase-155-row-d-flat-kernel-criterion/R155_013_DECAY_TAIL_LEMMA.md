@@ -5,8 +5,8 @@ decay-based tail lemma for flat-top weights … a bound `|ν̂_w(τ)| ≤ D(w)τ
 integration by parts, no zeros — would close the tail at `τ ≍ D^{1/2}`, i.e. at `O(10²)` rather than
 `10^{25}`, for **every** flat-top class."*
 
-*Written for Paper 47 §7 (beside `lem:smooth`) but **not** inserted into the paper. Inherits
-Paper 47 §4 (`lem:mbounds`, `lem:F1`, `prop:T0`, `lem:T`), §5 (`lem:gbounds`), §7 (Thm Z (7.2),
+*Written for Paper 46 §7 (beside `lem:smooth`) but **not** inserted into the paper. Inherits
+Paper 46 §4 (`lem:mbounds`, `lem:F1`, `prop:T0`, `lem:T`), §5 (`lem:gbounds`), §7 (Thm Z (7.2),
 `lem:Rrig`, `lem:smooth`, `cor:nontermwise`), §8 (`prop:env`).*
 
 **Every constant below is proved; every *number* is `DIAGNOSTIC` (double precision, no interval
@@ -76,7 +76,7 @@ coefficient: `2·ĝ₀` contributes `+4cosh T sin(2Tτ)/τ`. The two cancel iden
 at once if one refuses to split the integral: `Φ_w = 2Ŵ` with `W(u) = w(|u|)cosh(u/2)`, and `W` is a
 *globally* `C²`, even, compactly supported function — no edge at all. **This is why the lemma is a
 statement about `ν̂_w + 2ĝ₀`, i.e. about `f_w − σ_T − (β₀−2)ĝ₀ − β₁ĝ₁`, and not about `ν̂_w`.**
-(The canonical `β₀ = 2` of Paper 47 §3 is exactly the value that makes the flat-top edge smooth;
+(The canonical `β₀ = 2` of Paper 46 §3 is exactly the value that makes the flat-top edge smooth;
 `R155_011`'s "the multipliers are decisive" has this as its structural counterpart.)
 
 ---

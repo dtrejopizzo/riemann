@@ -7,7 +7,7 @@ connections.
 
 ## 1. The picture we want to complete
 
-If a primitive first contact exists, Paper 47 reduces the closure to
+If a primitive first contact exists, Paper 46 reduces the closure to
 proving the vanishing of a finite, faithful family of Gamma moments,
 
 \[
@@ -46,13 +46,13 @@ arrows are open obligations.
 
 | Piece | Proved content | Main record |
 |---|---|---|
-| Certified base | Positivity up to \(\tfrac12\log5\) and a quantitative local extension conditional on the certified gap | Paper 47; R170_703 |
+| Certified base | Positivity up to \(\tfrac12\log5\) and a quantitative local extension conditional on the certified gap | Paper 46; R170_703 |
 | Single energy | Exact transport of the archimedean, primes, and polar parts, without separating their interaction | R170_805–810 |
-| Contact geometry | Finite radical, extremal witness, and faithful Gamma detector | Paper 47; R163–166; R170_702 |
-| Arithmetic identity | Finite PC and the channel \(\Lambda*1=\log\), with explicit collars | Paper 47; phases 121 and 162; R170_816,820 |
+| Contact geometry | Finite radical, extremal witness, and faithful Gamma detector | Paper 46; R163–166; R170_702 |
+| Arithmetic identity | Finite PC and the channel \(\Lambda*1=\log\), with explicit collars | Paper 46; phases 121 and 162; R170_816,820 |
 | Multiscale transport | Full conjugation, regularizing average, and compact collar | R170_819–826 |
 | Matrix reduction | \(Q=P+E\), \(E\succeq0\), faithful Gram \(B\succ0\), and finite spectral criterion | R170_827–828 |
-| Gamma–Euler reserve | \(D_\Delta\succeq(1-q_0)B\succ0\) | Paper 47; R170_829–830 |
+| Gamma–Euler reserve | \(D_\Delta\succeq(1-q_0)B\succ0\) | Paper 46; R170_829–830 |
 | Interface equation | An exterior lift would have to satisfy \(\operatorname{Herm}(\Lambda Y_L)=D_\Delta\) | R170_829–830 |
 
 These pieces determine the outline and turn the gap into a concrete
@@ -71,7 +71,7 @@ equation. They still do not force its solvability nor its sign.
 | Repeating the exterior Gamma kernel formula | R162_404_G13_COMPRESSED_KERNEL §4–5 | The exterior identity is a consequence of the weak equation and loses the Tate jets at contact |
 | Using a universal Euler/Hankel lift | R162_301_C1_NONCOMMUTATIVE_EULER_LIFT | The anomaly is indefinite and does not distinguish \(\Lambda\) |
 | Combining sum and product without a new orientation | R162_503_SUM_PRODUCT_AT_CONTACT | It transports to falsifiers; the sign remains open |
-| Winning via a small exponential tail | Paper 47, remark on exterior tails; phase 155 | Smallness or decay does not imply exact vanishing |
+| Winning via a small exponential tail | Paper 46, remark on exterior tails; phase 155 | Smallness or decay does not imply exact vanishing |
 
 Hence, a new "Green formula" only counts as progress if it adds a pairing
 that the previous formulas do not contain, and if that pairing changes

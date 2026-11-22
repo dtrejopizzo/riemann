@@ -37,7 +37,7 @@ positivity of overlaps) has no input. **NO-GO (PROVED for twist averaging; REF-D
 unconstrained bottoms lie above ζ's (diamagnetic), and the Fejér points of CA_E_001 Cor 1.1. Neither gives a lower bound for ζ.
 
 **K3 (cavity).** Additive cavity M → M + 1: 𝔸_{M+1} ⪰ 0 ⟺ 𝔸_M ⪰ 0 and the Schur complement 𝖡(0) − b^T𝔸_M^+b ≥ 0 (b in range), b = (𝖡(log((M+1)/k)))_k:
-P47 thm:coer-schur/thm:wh-schur class, REF-D. Multiplicative cavity S → S ∪ {p}: the induction of CA_E_001 Thm 1 (PD of the fibre functions g_b):
+P46 thm:coer-schur/thm:wh-schur class, REF-D. Multiplicative cavity S → S ∪ {p}: the induction of CA_E_001 Thm 1 (PD of the fibre functions g_b):
 retry. DISCARD.
 
 ## 3. Heat flow on the solenoid; site independence (K10)
@@ -80,13 +80,13 @@ are exact restatements (lem:shape-restate class): REF-D, not sign steps. Cor 3.3
 
 ## 5. Self-review
 1. *Is Theorem 3.2 new?* As stated (arbitrary asymptotically dense site sets, prime sites) it has 0 corpus hits (grep "prime-sited / prime sites /
-   primes suffice"); its proof is P47 prop:AM(i) verbatim. Value: it shows Div can be removed from the decisive class, and it
+   primes suffice"); its proof is P46 prop:AM(i) verbatim. Value: it shows Div can be removed from the decisive class, and it
    kills the Haar endpoint (Cor 3.3(ii)). It does not move any clause of (R).
-2. *Does Cor 3.3(iii) contradict P47 prop:nearfree (tests on which Near is invisible are positive)?* No: prop:nearfree concerns tests with no
+2. *Does Cor 3.3(iii) contradict P46 prop:nearfree (tests on which Near is invisible are positive)?* No: prop:nearfree concerns tests with no
    near-coincidences; prime-sited tests reaching Arch < 0 need widely spread points, which create near-coincidences p ≈ np′ for large C.
    Under the premise Near is then negative enough; nothing is claimed beyond the premise.
 3. *Concavity of the Gibbs free energy.* log tr e^{A} is convex on Hermitian matrices (standard; CITED); only the direction is used.
-4. *Guerra with the zeros as disorder?* Using the explicit formula to write 𝖡 as a zero sum is (R)(4); excluded by the declared frame and P47.
+4. *Guerra with the zeros as disorder?* Using the explicit formula to write 𝖡 as a zero sum is (R)(4); excluded by the declared frame and P46.
 5. *Numerics.* None run. Cor 3.3(iii) and Prop 1.3(c) of CA_K_001 are falsifier tests that could be computed; under the premise they hold,
    and they are not strictly necessary.
 6. *Equivalences.* Theorem 3.2 is an internal restatement of (eq:target);

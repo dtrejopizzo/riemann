@@ -21,7 +21,7 @@ There are only exact integer checks and a pointwise evaluation of Mori's μ = 15
 - PROOF_L_SHARP_FF_001 (FF.1), GG_001 (GG.0, GG.1, §2, §4) and MORI15_EXTREMAL_001 together with its data
   p0_eig.json.
 - AUDIT_L_SHARP_16 §6: resonances (1, n) = −0.48/−0.30/−0.20 W*.
-- Paper 47: def:ext, thm:ext-half, rem:ext-killing, prop:ext-gauge.
+- Paper 46: def:ext, thm:ext-half, rem:ext-killing, prop:ext-gauge.
 - ROUTES-TRIED index, "Phase 200" section, and the entries E_001, F_001, J_001, INV_H_001 and INV_J.
 
 **Clash with the index (declared).** The index entry for **AUDIT_200_SPEC_002** (audit of this same round,

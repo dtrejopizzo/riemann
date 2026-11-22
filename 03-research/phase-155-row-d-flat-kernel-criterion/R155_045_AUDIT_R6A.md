@@ -114,7 +114,7 @@ explicit prolate concentration floor (`R155_039 §2.4`) as the live problem is c
 one nodal pair, not exactly one, so the base case `k=1` of *exactness* is **not** proved. Write
 "lower bound of the base case `PROVED`".
 
-## §8 Readiness of the Paper 47 proposals
+## §8 Readiness of the Paper 46 proposals
 
 | proposal | verdict |
 |---|---|

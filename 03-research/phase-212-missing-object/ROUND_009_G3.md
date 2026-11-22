@@ -51,7 +51,7 @@ List extracted from the PROVED NO-GOs; each line cites what forces it.
 P1. **Not affine in the weight**, nor affine with paired cross term (R3-b); and not polynomial in such a way that the
     difference with cΛ is only a combination of atoms Σ_{d|n}a(d) − log n without a signed remainder (R3-i).
 P2. **The contacts are a source, not a cost, in the negative directions of Arch**: no piece that bounds
-    contacts from above works beyond T ≈ 0.60 (R7-a; Paper 47 cor:Tarch, CITED).
+    contacts from above works beyond T ≈ 0.60 (R7-a; Paper 46 cor:Tarch, CITED).
 P3. **History-dependent step**: a stage predicate with uniform step in a convex cone is a
     local split (R7-b); the incoming weight has no influence at the crossing (R5-d).
 P4. **Uses the integer semigroup law** τ_{log k}τ_{log l} = τ_{log kl} coupled to the compression P_T: the
@@ -66,7 +66,7 @@ P7. **Not a Gram realization at a base point** (log-concavity, variance, Hessian
 P8. **Not local per place**: the Euler product sums forms (R5-c); Theorem D of phase 159 (G2_B8_R5):
     the optimal split is complementary slackness of obstructing states, circular as a prior rule (J3).
 P9. **Sees the arithmetic side with exact values and the atomic structure**, not only the mass of the comb
-    (𝒦_S, W-pat; P47 rem:bar-pat) and does not factor through a fixed Λ-free object (phase 170, «factor-through»:
+    (𝒦_S, W-pat; P46 rem:bar-pat) and does not factor through a fixed Λ-free object (phase 170, «factor-through»:
     every linear row annihilating ℝ(Λ,1) factors through 𝒟_N, I1).
 P10. **Two channels credited by distinct falsifiers**: a_P breaks the functional equation, quartets
      the Euler product (G1); and the remainder (not the identity) ceases to be ≥ 0 at c = 2, under deletion and

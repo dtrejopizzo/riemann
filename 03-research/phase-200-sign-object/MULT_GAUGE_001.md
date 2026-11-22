@@ -120,7 +120,7 @@ every γ is real, not an intermediate lemma. For an object to contribute somethi
 the test's class modulo the radical (P9′/P10, l.516), as MOMENTS §9 already said.
 
 **4.2 DH / Epstein.** For DH, Epstein and L with off-line zeros, σ is no longer a measure on ℝ. It is the functional
-h ↦ Σ_ρ m_ρ h(γ_ρ) with γ_ρ ∈ ℂ, and the form (Paper 47's rem:ext-killing(iii)) is Σ_ρ Φ(ρ)Φ(1−ρ), not Σ|ĝ(γ)|².
+h ↦ Σ_ρ m_ρ h(γ_ρ) with γ_ρ ∈ ℂ, and the form (Paper 46's rem:ext-killing(iii)) is Σ_ρ Φ(ρ)Φ(1−ρ), not Σ|ĝ(γ)|².
 The multiplicative gauge only makes sense for η that analytically continue to the strip: η^{an}(s) = E(s)E^*(1−s),
 with E^*(s) := conj E(s̄), which on the line is |E(½+it)|². The condition is η^{an}(ρ) = 1 at every zero ρ of F_DH or
 Z_Q, including those off the line. In the product, η^{an}(ρ) = E(ρ)·conj E(1−ρ̄). Hence **1−ρ̄ does enter**, which is

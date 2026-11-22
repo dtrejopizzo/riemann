@@ -1,13 +1,13 @@
 # R157_003 — Audit of R157_001 (O-150.1: importing (H-DMV) from the open secondary literature)
 
-Object: `R157_001_DMV_IMPORT.md`. Pure mathematics; no numerics. `P46` =
-`04-papers/46-intersection-frame-defect/archive/main.md`; `S1…S5` as in R157_001 §1.1 (`00-references/beurling-dmv/*.txt`). I opened every
+Object: `R157_001_DMV_IMPORT.md`. Pure mathematics; no numerics. `P47` =
+`04-papers/47-intersection-frame-defect/archive/main.md`; `S1…S5` as in R157_001 §1.1 (`00-references/beurling-dmv/*.txt`). I opened every
 quotation at the line stated. Web use: WebSearch; the zbMATH Open API (open access); arXiv PDFs 2110.11463, 2209.01689,
 2202.01837 (Révész; read in the scratchpad, not stored). Springer pages redirect to an authentication page, and I did not
 follow them. One new reference file was saved so that the new quotation can be checked by file and line:
 `00-references/beurling-dmv/zbMATH-records.txt` (the zbMATH Open records of DMV 2006 and Zhang 2007; the
 folder README was **not** edited, and a row for this file should be added). Amendments are applied in place in
-R157_001, each marked "[amended per R157_003, Ak]". Nothing in P46 or any README was edited.
+R157_001, each marked "[amended per R157_003, Ak]". Nothing in P47 or any README was edited.
 
 Verdict scale: PASS (correct and correctly cited), AMEND (the conclusion stands, but the statement or proof needs the listed
 repair), FAIL (false, or unproved as labelled).
@@ -39,7 +39,7 @@ repair), FAIL (false, or unproved as labelled).
 | S5 l.125–140 (Euler/exp identity) | :124–140 | yes |
 | S5 l.164 (discretisation lemma) | :164–170 | yes |
 | R150_001 l.~175 "(DMV-a)" | R150_001:167–171 | **line wrong**: (DMV-a) is at l.167–171. L.173–177 is (DMV-b), which puts the `x e^{−c√log x}` term on the **prime** side, where it belongs (A1) |
-| P46 locations l.11842–11861, 11863–11881, 11925, 12016–12017, 12087–12090 | P46 at those lines | yes, all five |
+| P47 locations l.11842–11861, 11863–11881, 11925, 12016–12017, 12087–12090 | P47 at those lines | yes, all five |
 
 ## 1. Doubts from R157_001, resolved
 
@@ -133,7 +133,7 @@ use `|s| ≤ 2 + |t|` and `|s|/|s−1| ≤ 3/2`. On `σ ≥ 2`, use `|ζ(s)| ≤
 `|ζ(σ+it)| ≪_ε |t|` holds uniformly.
 
 **Choice of `η`. — AMEND (A5).** With `η ≡ 1−θ`, BE3's region is `Re s > θ`. Lemma 2.1 gives `≪ |t|` only on
-`σ ≥ θ+ε`, which suffices for R150_001's BE7 ("uniformly for `σ ≥ 1 − η/2`"). But P46's (H-DMV) (l.11846–11847) says
+`σ ≥ θ+ε`, which suffices for R150_001's BE7 ("uniformly for `σ ≥ 1 − η/2`"). But P47's (H-DMV) (l.11846–11847) says
 "polynomial growth … **in that region**", and on all of `Re s > θ` the constant blows up as `σ → θ`. Take
 **`η ≡ (1−θ)/2`**. BE3's region is then `Re s > (1+θ)/2`, where Lemma 2.1 gives `≪_θ |t|` uniformly (with
 `ε = (1−θ)/2`). The zeros with `β_n → 1` eventually lie in it. Both readings of BE7 are then met.
@@ -170,10 +170,10 @@ use of Lemma 2.2 is needed, because `β_n → 1` is **part of** (H-DMV′) and i
 | Lemma 2.1 | `PROVED` | `PROVED` (A3) |
 | Lemma 2.2 | `PROVED` | **`PROVED` only if `a/log 2 < 1−θ` or `|γ_n| → ∞`; not used** (A4) |
 | Prop 3.1 | `PROVED` | `PROVED` (A5) |
-| T3 = R150_003 Thm 2.8′ = P46 Rem 27.16 | `METHOD-CONSTRAINT (meta-theorem); PROVED modulo one CITED import` | **`METHOD-CONSTRAINT` (meta-theorem), PROVED modulo the `CITED (secondary source)` import (H-DMV′); content = RESTATEMENT of DMV/Zhang + axiom list** (R150_002 §1.2 l.64–69; R150_003 l.671). **Stays a Remark in P46** (R150_005 l.43: "add T3 only as 'Remark …' until O-150.1 is read"; R150_002 l.448). The recommendation to promote it to a theorem is **not cleared** (A8) |
+| T3 = R150_003 Thm 2.8′ = P47 Rem 27.16 | `METHOD-CONSTRAINT (meta-theorem); PROVED modulo one CITED import` | **`METHOD-CONSTRAINT` (meta-theorem), PROVED modulo the `CITED (secondary source)` import (H-DMV′); content = RESTATEMENT of DMV/Zhang + axiom list** (R150_002 §1.2 l.64–69; R150_003 l.671). **Stays a Remark in P47** (R150_005 l.43: "add T3 only as 'Remark …' until O-150.1 is read"; R150_002 l.448). The recommendation to promote it to a theorem is **not cleared** (A8) |
 | Cor 2.9′ | `PROVED` from T3, inherits import | **CONFIRMED** |
-| P46 Prop 27.17 item 3 | `PROVED` mod `CITED` (H-DMV′) | **CONFIRMED** |
-| O-150.1 / P46 item (41) | `CLOSED at the secondary-source level` | **AMEND**: "**discharged at the `CITED (secondary source)` level; no longer blocking; residual OPEN: read DMV 2006 (and Zhang 2007) in the primary text.**" O-150.1 as written (R150_003 l.711–712, "Record their main theorem verbatim") asks for the primary read, which has not been done, so "CLOSED" overstates (A8) |
+| P47 Prop 27.17 item 3 | `PROVED` mod `CITED` (H-DMV′) | **CONFIRMED** |
+| O-150.1 / P47 item (41) | `CLOSED at the secondary-source level` | **AMEND**: "**discharged at the `CITED (secondary source)` level; no longer blocking; residual OPEN: read DMV 2006 (and Zhang 2007) in the primary text.**" O-150.1 as written (R150_003 l.711–712, "Record their main theorem verbatim") asks for the primary read, which has not been done, so "CLOSED" overstates (A8) |
 | Misquotation record | `PROVED` (bookkeeping) | **CONFIRMED**, line R150_001:167–168 (A1) |
 
 ## 4. Amendments applied in R157_001
@@ -192,9 +192,9 @@ use of Lemma 2.2 is needed, because `β_n → 1` is **part of** (H-DMV′) and i
   level, residual OPEN", not "CLOSED". §5's texts are superseded by R157_003 §5, which fixes over-attribution, `η` and
   sources.
 
-## 5. Replacement texts cleared for Paper 46 (not applied)
+## 5. Replacement texts cleared for Paper 47 (not applied)
 
-**(a) Hypothesis (H-DMV), P46 l.11847 from "**Label:" through l.11854 "**blocking**.", replace by:**
+**(a) Hypothesis (H-DMV), P47 l.11847 from "**Label:" through l.11854 "**blocking**.", replace by:**
 
 > **Label: `CITED (secondary source)`** (phase 157). It follows from the reduced statement
 > **(H-DMV′)**: *there are `θ < 1` and a discrete Beurling system `𝒫` with `N_𝒫(x) = ρx + O(x^θ)`, `ρ > 0`, whose zeta
@@ -259,5 +259,5 @@ theorem; the word "CLOSED" for (41); and Lemma 2.2 as a proof of the zero clause
 **stands**. It is now supported by two author-independent chains, and the zero clause by three routes, none of which needs
 Lemma 2.2. The misquotation finding is **confirmed**. One proof fails as written (Lemma 2.2, bounded-height gap), but it is
 not load-bearing after A4. There are two label overstatements: promotion of T3, and "CLOSED" for O-150.1 (A8). There is
-one uniformity slip (Lemma 2.1 at large `σ`, A3), one choice of `η` that fails P46's reading of BE7 (A5), and one source
+one uniformity slip (Lemma 2.1 at large `σ`, A3), one choice of `η` that fails P47's reading of BE7 (A5), and one source
 over-read ("`Z` analytic", A2). **Row D: no label. No sign is claimed. Nothing moves any row's status.**

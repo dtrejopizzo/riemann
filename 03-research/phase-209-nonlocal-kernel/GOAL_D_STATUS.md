@@ -61,7 +61,7 @@ Main pending items:
    similarity of notation. The gamma block of the node is NOT paid by 005.
 3. Domain/tails of any infinite sum; all windows, all modes.
 4. Even/odd sectors and passage from the node to the whole of D according to the current theorems.
-5. Full independent review and cross-check against the definitions of P47 before integrating.
+5. Full independent review and cross-check against the definitions of P46 before integrating.
 
 The residue is not closed by cataloguing a route nor by declaring the bridge
 impossible in general. Goal D active, OPEN, without a complete proof.
@@ -114,7 +114,7 @@ observables: infinite spectral moment s. AUDIT_010 approved it.
 Neither a map to Q nor progress on the sign of Q is justified.
 The next construction must specify the test map and its domain;
 an abstract compression without a gamma/comb/polar correspondence is not enough.
-There is no closure of D, no P47 integration and no change of cells/counts.
+There is no closure of D, no P46 integration and no change of cells/counts.
 
 
 ## Continuation 011 — computation of the map and direct cross-check
@@ -133,7 +133,7 @@ as an exact identity of the carrier. A domination with this map is not
 refuted, but it would require controlling a remainder that keeps gamma and comb;
 its mere definition is not counted as progress on the sign. Any new map
 needs a written reason against the index. Full goal active, D OPEN;
-no P47 integration nor change of cells/counts.
+no P46 integration nor change of cells/counts.
 
 
 ## Continuation 012 — sign of the remainder checked: candidate falsified
@@ -151,7 +151,7 @@ normalisation, since it is false. Smaller scales and different maps have not bee
 but reducing the scale arbitrarily does not prove a positive
 remainder. The refuted domination is not relabelled as OPEN.
 The sign problem of Q remains unsolved. Full goal active;
-no closure of D by these results, no P47 integration nor change of cells.
+no closure of D by these results, no P46 integration nor change of cells.
 
 
 ## Continuation 013 — no repair by a universal constant
@@ -159,7 +159,7 @@ no closure of D by these results, no P47 integration nor change of cells.
 The pass 012 was progress: a certified and audited falsifier changed the
 status of the domination at scale 1. In 013 the class that 012 did not
 settle was examined: EVERY constant c>0 independent of T for the same U011.
-LINK013 computes M(F_T)/T→γ1²κ/8 on the exact tests of P47 lem:testfam;
+LINK013 computes M(F_T)/T→γ1²κ/8 on the exact tests of P46 lem:testfam;
 the CITED bound of the PROOF of thm:margin gives |Q(F_T)|/E(F_T)→0 with rate
 O(√T exp(−15.449T)). No fixed c>0 repairs the global domination. AUDIT_013
 approved the proof with its explicit CITED input. Any T-dependent scale would have to decay
@@ -170,7 +170,7 @@ a smaller constant: the whole class is refuted. Another
 map/identity or a new proved premise is needed. The auxiliary positivity and
 its FE do not transfer to Q. There is still no source of sign for Q, and
 no global requirement of D has been satisfied by these no-gos local to the map.
-Full goal active; no P47 integration nor change of cells/counts.
+Full goal active; no P46 integration nor change of cells/counts.
 
 
 ## Continuation 014 — the failure is not only the rank one
@@ -181,14 +181,14 @@ after removing κvv*. LINK014 proves directly EΠ(F_T)≳T by Tonelli,
 local spline limit and Fatou, and E_G(F_T)≳T² by covariance projection and
 even Riemann sum. Together with 013, every fixed non-negative nonzero combination of
 the three pieces, using the SAME a_d 011, fails in uniform Q-domination.
-The ceiling of Q keeps the CITED source of P47; no new sign of D nor numerics.
+The ceiling of Q keeps the CITED source of P46; no new sign of D nor numerics.
 AUDIT_014 and its addendum approved Π, the Gs extension and the corollary.
 
 Next action: do not reiterate the map 011 removing positive pieces or
 reweighting them with fixed non-negative constants. That whole family
 is discarded. An identity with signed cancellations
 or another map has not been excluded, but no such construction exists here. The link with Q and the
-full goal D remain OPEN/active. No P47 integration nor historical
+full goal D remain OPEN/active. No P46 integration nor historical
 changes of cells/counts.
 
 
@@ -209,7 +209,7 @@ for the SAME a_d 011. Positivity only on the image and other maps are not classi
 The auxiliary completion allows varying both factors independently;
 there is no new identity with Q here, nor identification of the constant
 arithmetic vector with the polar cosh. Another link requires its own construction and proof.
-Full goal D active/OPEN, no P47/cells/counts integration.
+Full goal D active/OPEN, no P46/cells/counts integration.
 
 
 ## Continuation audit after 015 — no new link
@@ -222,7 +222,7 @@ correct, but no current hypothesis of the link requires that commutation;
 it is not recorded as a new NO-GO, phase or progress on D.
 
 An obsolete reference in archive 06 of residues was corrected: its line
-[margin] attributed to λ_A a double-exponential ceiling. P47 cor:margin1 proves
+[margin] attributed to λ_A a double-exponential ceiling. P46 cor:margin1 proves
 the simple-exponential ceiling; rem:moriceiling only cites a double ceiling for
 λ_W as unverified. The inequality λ_W≤λ_A does not allow transferring that
 ceiling to λ_A. It is a correction of the record, not a new theorem nor a sign of D.
@@ -246,7 +246,7 @@ of the map 011 is no longer open either. For the span of the 3 pieces, that
 positivity already implies global PSD and non-negative coefficients 015; 014 discards any
 fixed nonzero combination for the SAME map. Do not infer it from positivity only on
 a fixed block E_N. Discontinuous H-forms, other maps and T-factors remain outside.
-No sign of Q nor proof of D; full goal active, no P47/cells integration.
+No sign of Q nor proof of D; full goal active, no P46/cells integration.
 
 Editorial correction 06 reviewed favourably: three [margin]/R6 references
 replace the erroneous ceiling for λ_A by the proved exponential one of cor:margin1,
@@ -305,7 +305,7 @@ literature nor an additional mathematical NO-GO.
 
 The sign of Q/node, its extension to all modes and
 windows, and the sectors/polar of complete D are not proved. The auxiliary theorems and their
-audits remain as they are. No other phase is opened, Paper47 is not
+audits remain as they are. No other phase is opened, Paper46 is not
 integrated, and the global requirements are not replaced by auxiliary successes.
 
 
@@ -337,7 +337,7 @@ phase199/proof-L-sharp/PROOF_L_SHARP_DD_001_SCHUR_PLANK.md
 its coupling; it does not resolve P1.c for the original N(T).
 By the no-retry rule, 018 is not created and it is not counted as progress.
 Neither the global control of the counterterm nor a new source was obtained.
-Paper47, the full goal and the recorded blocked status are not
+Paper46, the full goal and the recorded blocked status are not
 modified. This record is continuity of research, not a new
 NO-GO nor a claim of general impossibility.
 
@@ -354,7 +354,7 @@ after renaming ε. No new control of the coherent component was proved.
 Independent review favourable after making these quantifiers precise.
 QRH_EXPONENT_MAP updated: the proposed sufficient condition was
 also necessary in this family; it is not counted as an improvement of cancellation.
-No general NO-GO, no external equivalence D, no P47 integration; D OPEN.
+No general NO-GO, no external equivalence D, no P46 integration; D OPEN.
 Memo: 03-research/phase-209-nonlocal-kernel/QRH_REPLICA_COHERENCE.md.
 
 
@@ -385,7 +385,7 @@ The corrected real profile has a positive inflection at T−8log(128/63)+o1
 for a 3/8 b .5, and another symmetric one. Cosh itself is globally convex.
 Sept Lemma20.2 certifies 49/440640 in the compensated exponent, not a margin for D.
 The 7/8 strip does not identify the fluctuation with cosh 3x/8 nor give amplitude/sign.
-Without control of the counterterm 017, without a new critical estimate nor P47 integration.
+Without control of the counterterm 017, without a new critical estimate nor P46 integration.
 It is a geometric bound/diagnostic model, not positive progress on the sign of D.
 
 

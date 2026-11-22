@@ -1,7 +1,7 @@
 # R170_840 — Bilateral collar law: normal form, no-go, and minimal virial datum
 
 Continuation of R162_406--408 and R170_838--839.
-Paper 47 is not modified.
+Paper 46 is not modified.
 
 ## 0. Verdict
 
@@ -205,7 +205,7 @@ Here $n_0=e^{2T}$ and $\theta_T=1$ only when $n_0$ is a prime power. At
 an integer threshold that is not a prime power, the last summand is zero
 exactly by compressed Chebyshev.
 
-With the normalization of Paper 47 there exists the injective map
+With the normalization of Paper 46 there exists the injective map
 
 \[
  \ell_L(R_LF)(t)=\sum_{m\le L}e^{-a_mt}\mu_F(a_m).
@@ -578,7 +578,7 @@ identity, reduces to a combination of:
 3. the null monitor $\mathcal D_\Lambda^{\le N}=0$.
 
 Additional fixed-window identities, such as the balance
-\(0=2c_{N,L}+Q_{N,L}\) of Paper 47, remain separate: they recompose the
+\(0=2c_{N,L}+Q_{N,L}\) of Paper 46, remain separate: they recompose the
 weak equation and contain neither \(F_\delta\) nor the sign of
 \(\lambda_\delta\).
 
@@ -600,7 +600,7 @@ for $\Lambda$, (5.4) makes it zero. Recombining via (5.5) recovers the
 same PC identity, so that no other scalar appears. Finally, §3 proves
 that the second orientation equals the first in all local terms, and
 §§6.1--6.4 prove that no sign or domination of components follows from
-the normal form. The tests \(S_LF\) at fixed window give the Paper 47
+the normal form. The tests \(S_LF\) at fixed window give the Paper 46
 balance; its spectral identity also holds for positive eigenvectors and
 creates no coupling with \(F_\delta\). ∎
 
@@ -641,7 +641,7 @@ $\lambda(T)>0$, one has the covariant identity
 \]
 
 with the same normal forms (2.8) and (4.5). R162_408 proves the same
-Schur/Feshbach, now around $\lambda(T)$, and Paper 47 gives
+Schur/Feshbach, now around $\lambda(T)$, and Paper 46 gives
 $R_LF\ne0$. Therefore any argument using only the sign of the descent,
 bilaterality and the above operator identities would also falsely cancel
 a positive eigenvector. The no-go passes F1.
@@ -764,7 +764,7 @@ $R_LG=0$.
 \]
 
 Hence $\mathcal V_{\Lambda,T}(G)=0$. The second line of (8.3) and the
-uniform contraction of Paper 47,
+uniform contraction of Paper 46,
 
 \[
  I-D_{N,L}\succeq(1-q_0)I,

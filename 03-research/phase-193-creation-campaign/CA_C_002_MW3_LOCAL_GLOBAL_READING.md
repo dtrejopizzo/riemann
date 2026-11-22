@@ -26,16 +26,16 @@ coefficients (v_n = 2Λ(n)/√n, the integrals defining Arch) are not rational, 
 sign is an ∞-datum): NO-GO, PROVED.**
 
 ## 2. The window form is local on the prime side (Wall A is a zero-side statement) (PROVED)
-On P_T, 𝔞_T = 𝔞_∞ − Σ_{p<X} 𝔮_{p,T} exactly (CA_C_000, common fact); each 𝔮_{p,T} is indefinite on P_T (P47 cor:Qp) and 𝔞_∞ is indefinite
+On P_T, 𝔞_T = 𝔞_∞ − Σ_{p<X} 𝔮_{p,T} exactly (CA_C_000, common fact); each 𝔮_{p,T} is indefinite on P_T (P46 cor:Qp) and 𝔞_∞ is indefinite
 for T ≥ 0.60 (cor:Tarch). So the summands carry no sign, and the question is what couples them. The "places" here are not ℚ_p-forms; they
-are real forms indexed by p. The coupling is visible on the integer lattice of P47 §(one profile).
+are real forms indexed by p. The coupling is visible on the integer lattice of P46 §(one profile).
 
 ## 3. Torus against line: the exact local–global decomposition of Problem (S) (PROVED)
 Fix the profile F₀ (2T₀ < log 2, ‖F₀‖ = 1), M, and a finite set S of primes. Write e(m) ∈ ℕ^S for the exponent vector of an S-unit m,
 and for s supported on S-units ≤ M put P_s(θ) := Σ_m s_m e^{i⟨e(m), θ⟩}, a trigonometric polynomial on 𝕋^S. Let
 ι(τ) := (τ log p)_{p∈S} be the **Kronecker line** (the product formula: one archimedean variable τ drives every place, since
 log m = ⟨e(m), (log p)_p⟩), dμ_line := (2π)^{−1}F̂₀(τ)²dτ (a probability measure: ∫F̂₀²/2π = ‖F₀‖² = 1), and dθ the Haar probability
-on 𝕋^S. Local symbols: δ_p(θ) := 2 log p Re(x/(1−x)), x = p^{−1/2}e^{iθ} (P47 rem:boxes), so δ_p(θ) = Σ_{j≥1} v_{p^j} cos(jθ).
+on 𝕋^S. Local symbols: δ_p(θ) := 2 log p Re(x/(1−x)), x = p^{−1/2}e^{iθ} (P46 rem:boxes), so δ_p(θ) = Σ_{j≥1} v_{p^j} cos(jθ).
 
 **Proposition 2 (PROVED).** For real s supported on S-units ≤ M:
 (a) s^⊤Arch_M s = ∫_ℝ m(τ)|P_s(ι(τ))|² dμ_line(τ);
@@ -45,7 +45,7 @@ on 𝕋^S. Local symbols: δ_p(θ) := 2 log p Re(x/(1−x)), x = p^{−1/2}e^{i�
 (d) hence s^⊤Near_M s = (μ_line∘ι^{−1} − Haar)(Σ_p δ_p · |P_s|²), the **equidistribution defect of the weighted Kronecker line**
     against Haar measure, tested on the local symbols times |P_s|²; and
     s^⊤𝔸_M s = ∫ m |P_s∘ι|² dμ_line − ∫ (Σ_pδ_p)|P_s|² dθ − (μ_line∘ι^{−1} − Haar)((Σ_pδ_p)|P_s|²).
-*Proof.* (a) P47 prop:AM(iii): Arch_M(m,k) = (2π)^{−1}∫ m F̂₀² cos(τ log(m/k)), and P_s(ι(τ)) = Σ s_m m^{iτ}. (b) The Fourier coefficient of
+*Proof.* (a) P46 prop:AM(iii): Arch_M(m,k) = (2π)^{−1}∫ m F̂₀² cos(τ log(m/k)), and P_s(ι(τ)) = Σ s_m m^{iτ}. (b) The Fourier coefficient of
 δ_p at ±j is v_{p^j}/2; ∫_{𝕋^S} δ_p(θ_p) e^{i⟨e(m)−e(k), θ⟩}dθ = v_{p^j}/2 if e(m) − e(k) = ±j·e_p (j ≥ 1) and 0 otherwise, i.e. iff m/k or
 k/m is p^j; summing gives Σ_{k|m, k<m} v_{m/k}s_ms_k = s^⊤Div_Ms (½(V+V^⊤) with V_{mk} = v_{m/k}). (c) prop:AM(ii): the comb part of
 s^⊤𝔸_Ms is ∫ Σ_n v_n cos(τ log n)|P_s(ι τ)|² dμ_line, and Σ_{n S-unit prime power} v_n cos(τ log n) = Σ_p δ_p(τ log p); the identity
@@ -58,7 +58,7 @@ the near-coincidences. ∎
 - *Global coupling* = the Kronecker line ι: the product formula forces all local angles to be τ log p for one τ. The archimedean term
   lives **only** on the line (a). There is no Haar-side archimedean term.
 - *Hasse defect* = (d), Near_M: the deviation of the line from Haar at the resolution 2T₀, which is nonzero exactly at near-coincidences
-  m ≈ kn. On tests with no visible near-coincidence (resonators, P47 prop:nearfree) the defect vanishes and positivity holds with a margin:
+  m ≈ kn. On tests with no visible near-coincidence (resonators, P46 prop:nearfree) the defect vanishes and positivity holds with a margin:
   **this is the "local–global principle that holds"**, and it is already a theorem.
 So the only well-posed infinite-dimensional Hasse–Minkowski statement for this form is: *the archimedean line term dominates the local
 Haar term plus the equidistribution defect of the line*, uniformly in M. By prop:AM(i) and thm:oneprofile that statement is the target
@@ -86,7 +86,7 @@ found that survives O2, O6 and O7 simultaneously.
    information (liquid ℝ-vector spaces) is not covered. Label for that sub-claim: ARGUED.
 3. *Proposition 2(c) hypothesis.* For a box S not containing every prime involved in near-coincidences, extra line atoms appear. The
    statement as written is exact; the general case adds those atoms to (d). No gap.
-4. *Is §3 a retry?* The torus is a retry; the exact formula Near_M = (line − Haar)(Σδ_p|P_s|²) on boxes is not stated in P47 (rem:boxes
+4. *Is §3 a retry?* The torus is a retry; the exact formula Near_M = (line − Haar)(Σδ_p|P_s|²) on boxes is not stated in P46 (rem:boxes
    bounds Div on boxes; prop:AM defines Near). It is a coordinate (lem:shape-ident applies), not a mechanism.
 5. *Does anything here touch the sign?* No.
 

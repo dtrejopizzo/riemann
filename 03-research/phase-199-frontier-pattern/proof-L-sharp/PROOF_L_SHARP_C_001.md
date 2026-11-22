@@ -1,7 +1,7 @@
 # PROOF_L_SHARP_C_001 — Strategy C: the Mellin-multiplier viewpoint on L′♯
 
 Phase 199, prover memo (pen and paper; no numerics). Target: **Lemma L′♯** (AUDIT_199): ∃κ>0, A≥0:
-∀μ≥5, ∀g = Ef in the core, W_T(g) ≥ κμ^{−A}ℓ(g), ℓ(g) = inf{leak(f): Ef = g}. W_T is Paper 47's complete form
+∀μ≥5, ∀g = Ef in the core, W_T(g) ≥ κμ^{−A}ℓ(g), ℓ(g) = inf{leak(f): Ef = g}. W_T is Paper 46's complete form
 (eq:W, with the pole term 2Re(AB̄)). no equivalence of any
 kind is invoked;
 
@@ -23,7 +23,7 @@ barrier (Theorem 6.1). The inequality that remains is stated exactly (§6) and i
 - **Sources read.** MECH_001 §3–4, AUDIT_199 (gauge falsifier, L′♯, (d) F-DH), A_001 (Thm 1.1 half-line identity,
   Prop 2.1 gauge = radical, Thm 3.1 (L_ext), §3.2 Mellin truncation structure, Rem 3.3 on-line symbol, §6 Λ-table),
   B_001 (Lemma 4.1, Thm 4.2 barrier), D_001 (Sonin, not used), Guo §4 (Lemmas 4.2–4.4, Thm 4.5), §6 (Lemmas 6.1–6.2),
-  (5.6) and the remark after it, §10.1; Paper 47 eq:symbol, eq:form, eq:W, lem:roughEF.
+  (5.6) and the remark after it, §10.1; Paper 46 eq:symbol, eq:form, eq:W, lem:roughEF.
 - **Not duplicated.** A_001 already proved W_T(Ef) = 𝒲_ext[Ψ_f] (quadratic form of Guo's Thm 4.5) and
   H_Ψ(s) = Σ_n n^{s−1}R_{nλ}(s). This memo takes those as CITED and does what A did not: (1) states the Mellin
   identity for the *windowed* function and what windowing does to the zero sum (Prop 1.1–1.2); (2) writes the
@@ -38,7 +38,7 @@ barrier (Theorem 6.1). The inequality that remains is stated exactly (§6) and i
 **Notation.** λ = e^T, μ = λ², I = (−T,T). Admissible f: real, even, f ∈ C²(ℝ), supp f ⊂ [−λ,λ], f(0) = f̂(0) = 0
 (so f(λ) = f′(λ) = 0; the case f(λ) ≠ 0 is Guo's β-correction, A_001 Rem 1.1(iv), not needed here).
 f̃(s) := ∫_0^λ f(t)t^{s−1}dt (Mellin on the half-line). Φ_f(x) := e^{x/2}Σ_{n≥1}f(ne^x), x ∈ ℝ; g := Φ_f·1_I = Ef;
-ℓ := Φ_f·1_{(−∞,−T)} (exterior tail). For a function Ψ on ℝ, Φ_Ψ(s) := ∫Ψ(x)e^{(s−½)x}dx (Paper 47's Φ_F).
+ℓ := Φ_f·1_{(−∞,−T)} (exterior tail). For a function Ψ on ℝ, Φ_Ψ(s) := ∫Ψ(x)e^{(s−½)x}dx (Paper 46's Φ_F).
 r := f̂·1_{|ξ|>λ}, leak(f) = ‖r‖² = 2∫_λ^∞|f̂|². H(u) := Σ_{n≥1}f(nu) = u^{−1/2}Φ_f(log u), u > 0.
 
 **Proposition 1.1 (Mellin factorisation and the window split; PROVED).**
@@ -58,7 +58,7 @@ r := f̂·1_{|ξ|>λ}, leak(f) = ‖r‖² = 2∫_λ^∞|f̂|². H(u) := Σ_{n�
 (0,∞), hence entire; u = e^x converts to Φ_g, Φ_ℓ. (d) is (a). □
 
 **Proposition 1.2 (what the zero sum does under windowing; PROVED).** For admissible f, g = Ef is in the C² core
-and Paper 47 lem:roughEF applies:
+and Paper 46 lem:roughEF applies:
  W_T(g) = Σ_ρ Φ_g(ρ)Φ_g(1−ρ) = Σ_ρ Φ_ℓ(ρ)Φ_ℓ(1−ρ),  absolutely convergent,
 because Φ_g(ρ) = ζ(ρ)f̃(ρ) − Φ_ℓ(ρ) = −Φ_ℓ(ρ) for every nontrivial zero ρ (Prop 1.1(c); Φ_ℓ is holomorphic on
 Re s > −1 ⊃ the strip). *The zero sum of the windowed function does not vanish; it equals the zero sum of the
@@ -77,7 +77,7 @@ Mellin side.
 **Theorem 2.1 (contour form of the residual; PROVED).** Let f be admissible and ℓ its exterior tail. Then Φ_ℓ is
 holomorphic on Re s > −1, |Φ_ℓ(σ+it)| = O_σ(1/|t|) locally uniformly in σ, and for every σ ∈ (1,2)
  **W_T(Ef) = 𝒲_ext[ℓ] = (1/2π)∫_ℝ m(τ)|Φ_ℓ(½+iτ)|²dτ − (1/πi)∫_{Re s=σ}(−ζ′/ζ)(s) Φ_ℓ(s)Φ_ℓ(1−s) ds + 2Φ_ℓ(0)Φ_ℓ(1),**
-with m(τ) = Re ψ(¼+iτ/2) − log π (Paper 47 eq:symbol). The three terms converge absolutely.
+with m(τ) = Re ψ(¼+iτ/2) − log π (Paper 46 eq:symbol). The three terms converge absolutely.
 *Proof.* 𝒲_ext[ℓ] = (1/2π)∫m|ℓ̂|² − Σ_{q≥2}2c_q c_ℓ(log q) + 2A(ℓ)B(ℓ) with c_q = Λ(q)q^{−1/2}, c_ℓ(a) = ∫ℓ(y)ℓ(y−a)dy,
 A(ℓ) = Φ_ℓ(1), B(ℓ) = Φ_ℓ(0) (A_001 §1; all prime powers q occur because ℓ has unbounded support to the left;
 absolute convergence by |ℓ(y)| ≤ 2C_f e^{3y/2}). Holomorphy and the 1/|t| decay: ℓ e^{(σ−½)y} ∈ L¹∩L² for σ > −1,
@@ -213,7 +213,7 @@ multipliers. This memo does not supply that sign.
   Rem 2.1(i)–(iii), Thm 3.1 (no diagonal weight), Prop 4.1 (leak ≤ 18‖ℓ‖²_X/μ), Prop 4.2 (no converse), Cor 4.3
   ((R_X) ⟹ L′♯), Prop 5.1, Prop 5.2, Thm 6.1 (given the CITED ceiling).
 - **CITED:** Guo Lemmas 4.3–4.4, Thm 4.5, Lemmas 6.1–6.2, (5.6); A_001 Thm 1.1, Prop 2.1, Thm 3.1, Rem 3.3,
-  Lemma 4.1; B_001 Lemma 4.1, Thm 4.2; Paper 47 eq:W, lem:roughEF, rem:moriceiling; CERT_FALSIFIERS; AUDIT_199(d).
+  Lemma 4.1; B_001 Lemma 4.1, Thm 4.2; Paper 46 eq:W, lem:roughEF, rem:moriceiling; CERT_FALSIFIERS; AUDIT_199(d).
 - **ARGUED:** the density step in Prop 4.2's last sentence (the explicit example r_ε is PROVED).
 - **NO-GO (class, PROVED):** Strategy C as "bound the Mellin multipliers and compare with leak by Paley–Wiener":
   excluded by Thm 6.1. The brief's steps (ii) and (iii) are false as formulated (Prop 1.2, Thm 3.1).

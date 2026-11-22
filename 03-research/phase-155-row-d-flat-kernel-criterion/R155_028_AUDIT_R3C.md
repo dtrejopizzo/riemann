@@ -40,7 +40,7 @@ Rigorous in structure, *not* interval arithmetic. Step by step:
 
 Not errors: the "`⟺`" correction, the `n = 4` edge case, the `A_T = 2.24883` bound, the `(H1)` labelling, the `T = 0.58` caveat.
 
-## §4 Readiness for Paper 47
+## §4 Readiness for Paper 46
 
 - **Prop. 3c.1 + Cor. 3c.2 → §8: READY**, after (i) restricting the coercive clause to `⟹` (or adding "`β` bounded"), and (ii) a one-line attribution remark citing `114_d_56` (parity/Feshbach) and `P124_011`, so the paper does not claim a first.
 - **Theorem 3c.3 → §5/§8 remark: READY IN SUBSTANCE, NOT IN FORM.** Publish only after the `mpmath`/`arb` hardening of §2 and the load-the-archived-`a` fix. Exact permissible wording:

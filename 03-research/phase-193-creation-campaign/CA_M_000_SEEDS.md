@@ -3,12 +3,12 @@
 Phase 193. Pen and paper; **no numerics run**.
 **No sign contact. No certified negative value for ζ.**
 Read: CA_K_002 (Thm 3.2 site independence, Cor 3.3), CA_K_SYNTHESIS (K-D2 anti-diamagnetism), CA_I_001, CA_H_002 (§1 notation, §3.1
-pairing), CA_E_001, CA_J_002, CAMPAIGN_LEDGER; P47 subsec:oneprofile (def of 𝖡, thm:oneprofile, prop:AM), eq:m (C₀ = ψ(¼) − log π).
+pairing), CA_E_001, CA_J_002, CAMPAIGN_LEDGER; P46 subsec:oneprofile (def of 𝖡, thm:oneprofile, prop:AM), eq:m (C₀ = ψ(¼) − log π).
 Corpus check (grep): "prime-sited" only CA_K_*; "Chen" / "Hardy–Littlewood" never used on the window form (R168_102 is
 quantitative Kronecker, R162_501 is Chen–Weth PDE); "ζ′/ζ(½)" → phase-159 G2_B1_R1 Lemma 2 and phase-188 L2_BUILD_010 (centre criticality
 C₀ = −2ζ′/ζ(½), PROVED there). W-sieve = R167_102 / grid 3A, 6B; NG-A4 = parity problem (MAP_1).
 
-## Setting (checked against P47 prop:AM, def of 𝖡)
+## Setting (checked against P46 prop:AM, def of 𝖡)
 𝖡(d) = α(d) − ½Ξ(|d|), α(d) = (1/2π)∫m ĉ₀ cos(τd)dτ, Ξ(D) = Σ_{n≥2}v_n c₀(log n − D), v_n = 2Λ(n)n^{−½}, supp c₀ ⊂ (−2T₀,2T₀), 2T₀ < log 2,
 ĉ₀ = F̂₀² with F̂₀(±i/2) = 0 (Tate conditions). Prime-sited test: s supported on primes ≤ M (site 2 allowed or not, stated).
 Q(s) := Σ_{p,p′}s_ps_{p′}𝖡(log p − log p′) = Arch(s) − Near(s) (Div ≡ 0, CA_K_002 Cor 3.3(i)).

@@ -1,10 +1,10 @@
 # R186_049 — S2's second term (new negativity seen by the old prolates): exact formulation, numbers in three windows, M₁ test and verdict
 
-Phase 186, round 23. Paper 47,
+Phase 186, round 23. Paper 46,
 the grid and the crossword are not touched. Self-contained script: `r049_N2.py` (M = 48, 12 s; copies the definitions of eq:symbol/eq:form/prop:band/Tate as
 r046, does not import results). Read: README rounds 20–22; R186_046 (§1 Lemma 1.1, §3 Prop. 3.1, §5.3 two-term statement),
 R186_116 (§2: 046's c_W was an artifact; NO-GO of the converse via κ² ≫ c_E c_W), R186_048 (Lemma 3.1, fission/deformation/ex nihilo,
-Table 3.3), R186_044 Thm 2, R186_047 (L-W), R186_042 (sub-Shannon sea), Paper 47 lem:roughEF, prop:negtrace.
+Table 3.3), R186_044 Thm 2, R186_047 (L-W), R186_042 (sub-Shannon sea), Paper 46 lem:roughEF, prop:negtrace.
 
 ## 0. Verdict
 
@@ -43,7 +43,7 @@ Table 3.3), R186_044 Thm 2, R186_047 (L-W), R186_042 (sub-Shannon sea), Paper 47
 
 ## 1. Framework and own verifications
 
-Notation (Paper 47 eq:symbol/eq:form; copied in `r049_N2.py`): σ_T(τ) = m(τ) − Σ_{log n<2T} v_n cos(τ log n), v_n = 2Λ(n)/√n;
+Notation (Paper 46 eq:symbol/eq:form; copied in `r049_N2.py`): σ_T(τ) = m(τ) − Σ_{log n<2T} v_n cos(τ log n), v_n = 2Λ(n)/√n;
 𝔞_T(F) = (1/2π)∫σ_T|F̂|², F ∈ L²(I_T); 𝒫_T = {∫F e^{±t/2} = 0}; λ_A(T) = min 𝔞_T|𝒫_T, h*_T the minimizer. U₀ := {σ_{T₀} < 0}, U_T :=
 {σ_T < 0} (τ > 0, symmetric, finite unions, prop:band). R186_046 §1's boundary convention (at T = ½log p, p is not yet contact).
 - Neg^{new}_T := R σ_T⁻1_{U_T∖U₀}(D) R (negativity outside U₀: components disjoint from U₀ and pieces of old components
@@ -202,7 +202,7 @@ o(1)" **does not exist as an independent condition**: it is O(1) at finite T (do
 Slepian asymptotically without projection (Lemma 3.4), and on V₀^P it does not even decay because of Tate's polynomial tail (3.3(b)).
 What remains OPEN is what was already OPEN: no σ-computable quantity with its own margin decides β_new < 1 (W-loc, W-mom, Lemma T′).
 5.3 **What it does contribute.** (i) The old/new partition of the form (Prop. 2.1) as an exact reformulation, with the first term
-σ-computable with its own margin in the four windows: a candidate "Prop. (old/new split)" statement for Paper 47 **only** as
+σ-computable with its own margin in the four windows: a candidate "Prop. (old/new split)" statement for Paper 46 **only** as
 structure (equivalent to R186_042 Thm 2.1), never as a criterion. (ii) The "sup × leakage" bound (ν ≤ λ_max Π₀Σs_pS_pΠ₀) tight to a factor of
 1.3–1.8: useful for bounding Neg on prolate subspaces without solving the form (same family as R186_047 Lemma 2). (iii) The fact
 that Tate's projection makes the polar prolates' leakage polynomial (3.3(b)): relevant for any attempt at (L-W) ∀T

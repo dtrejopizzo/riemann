@@ -35,4 +35,4 @@ Elementary proofs of the Stirling and harmonic-number remainders are included. T
 
 POWER_ENERGY_AUDIT_041 approves BAND and the periodic expansion. Both were reviewed; the exact constant verifier of BAND was reproduced twice: PASS. The periodic expansion has an autonomous analytic proof. Papers unmodified.
 
-No new W row, arbitrary combination nor window T of Paper47. The positive coverage of W remains that of035 and earlier results. The progress of this round is an integrated and quantified signed benefit, whose compensation with the complement still has to be resolved.
+No new W row, arbitrary combination nor window T of Paper46. The positive coverage of W remains that of035 and earlier results. The progress of this round is an integrated and quantified signed benefit, whose compensation with the complement still has to be resolved.

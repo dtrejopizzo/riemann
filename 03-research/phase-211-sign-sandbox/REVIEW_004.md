@@ -1,7 +1,7 @@
 # Review 004 — independent check of ROUND_005_C, ROUND_005_A, ROUND_005_E, ROUND_006_A
 
-Reference objects: STATEMENT_001.md (window form a_T, P_T, Lévy form), OBJECT_SPEC_001.md (R1–R5), Paper 47
-(04-papers/47-row-d-dual-certificates/main.tex). No equivalence of (★) with any other statement is used.
+Reference objects: STATEMENT_001.md (window form a_T, P_T, Lévy form), OBJECT_SPEC_001.md (R1–R5), Paper 46
+(04-papers/46-row-d-dual-certificates/main.tex). No equivalence of (★) with any other statement is used.
 Verdicts: CONFIRMED (key step) / REFUTED / DOWNGRADE. Line numbers refer to the memo under review.
 
 ---------------------------------------------------------------------------------------------------
@@ -152,7 +152,7 @@ mechanism" overstates.
 ---------------------------------------------------------------------------------------------------
 ## 3. ROUND_005_E (the arena band; two-sided Weyl count)
 
-**Lemma 3.0 (l. 146–148). CONFIRMED** (|c_F(u)| ≤ ‖F‖², v_n > 0; it is Paper 47 prop:coer-prime(i)).
+**Lemma 3.0 (l. 146–148). CONFIRMED** (|c_F(u)| ≤ ‖F‖², v_n > 0; it is Paper 46 prop:coer-prime(i)).
 
 **Theorem 3.1 (l. 150–159). CONFIRMED.** Key step: Arch_T − π_+ ≤ a_T ≤ Arch_T + π_− as forms on P_T ∩ 𝒟_T, so
 Courant–Fischer gives λ_k ∈ [α_k − π_+, α_k + π_−] index by index; both counts follow. Valid verbatim on every Galerkin
@@ -202,7 +202,7 @@ DOWNGRADE that sentence to ARGUED.
 
 **Lemma 5.1 (l. 135–146). CONFIRMED.** On the span E, Arch(F) < s‖F‖²; with m ≥ C_0 on Ω = {m < s+1} and ≥ s+1 off Ω,
 q > 1/(s + 1 − C_0) (s ≥ −1 ensures s + 1 − C_0 > 0); min–max for the time–frequency limiting operator B gives
-dim E ≤ (s + 1 − C_0)tr B, tr B = 2T·2τ′/2π. Paper 47 lem:mbounds(ii) (main.tex l. 505–509) gives, for τ ≥ 2π,
+dim E ≤ (s + 1 − C_0)tr B, tr B = 2T·2τ′/2π. Paper 46 lem:mbounds(ii) (main.tex l. 505–509) gives, for τ ≥ 2π,
 m(τ) ≥ log(τ/2π) − 1/τ − 1/(2τ²) ≥ log(τ/2π) − 0.1718 (since lem:mbounds(i) makes m increasing, Ω is an interval),
 hence τ′ ≤ 2πe^{s+1.172}; 4e^{1.172} = 12.91. Constants CONFIRMED.
 
@@ -212,7 +212,7 @@ Chebyshev (Chebyshev gives only exp(O(e^T))). Change "(Chebyshev, CITED)" to "(P
 bound is unaffected.
 
 **Theorem 6 (l. 156–161). CONFIRMED (given PNT and the threshold-free form of thm:arena).** θ ≥ π_+ by the packets of
-Theorem 1 (with F_0 ∈ 𝒟_T). The lower count: Paper 47 thm:arena (main.tex l. 2786–2808) bounds λ^{ev}_{k+1} ≤
+Theorem 1 (with F_0 ∈ 𝒟_T). The lower count: Paper 46 thm:arena (main.tex l. 2786–2808) bounds λ^{ev}_{k+1} ≤
 m((2k+3)π/2T) and its proof uses no particular threshold, so N_Arch(s) ≥ #{k ≥ 0 : m((2k+3)π/2T) < s} ≈ Tm^{−1}(s)/π −
 3/2; the memo's "⌊Tm^{−1}(δ+θ)/π − ½⌋" is off by one in the additive constant (should be ⌈Tm^{−1}/π − 3/2⌉ with strict
 inequality handled), immaterial for the asymptotics 2T exp(e^T(1+o(1))).

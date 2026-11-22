@@ -1,7 +1,7 @@
 # Phase 212 — What is not done
 
 Consolidation of the routes index (now incorporated in full in Part IV of `05-meta-and-planning/ROUTES-MASTER-INDEX.md`; cited «IDX»), the master
-grid («GRID»), the crossword («CW»), Papers 47–48 («P47», «P48»), the memory of rejected
+grid («GRID»), the crossword («CW»), Papers 47–48 («P46», «P48»), the memory of rejected
 selections in the project rules and phase 211 («211/…»). It is a quick-reading guide and does not replace the
 sources: before proposing anything one searches them and the full-reading annexes (§H), which
 are the complete list; sections A–G are the summary. A closure is cited with its label
@@ -29,17 +29,17 @@ A7. **No «honest closure» is proposed**, nor a chapter of barriers as an endin
 
 ## B. Ten failure patterns (if the candidate falls into one, it stops before deriving)
 
-B1. **Identity valid for every comb.** It carries no sign (P47 lem:shape-ident, thm:shape (B″)).
+B1. **Identity valid for every comb.** It carries no sign (P46 lem:shape-ident, thm:shape (B″)).
     Examples: IDX README EI_001–003; Selberg-type identities NODE_001 Prop N.2; divisor gauge
-    P47 thm:spec-gauge; strip identities P47 §strip.
-B2. **Estimate with slack.** For T ≥ 1 the margin is ≤ 4·10⁹Te^{−15.449T} (and, CONDITIONAL on P47
+    P46 thm:spec-gauge; strip identities P46 §strip.
+B2. **Estimate with slack.** For T ≥ 1 the margin is ≤ 4·10⁹Te^{−15.449T} (and, CONDITIONAL on P46
     thm:ext-half and a cited bound, λ_A ≤ 3.2·10²³N^{33/2}e^{−2πN}, N = e^{2T}; 211/ROUND_009_A Cor 7.1).
-    P47 thm:shape(B′)/lem:shape-est proves precision restrictions for deciding the sign in a
+    P46 thm:shape(B′)/lem:shape-est proves precision restrictions for deciding the sign in a
     fixed window; the general exclusion of estimates with remainder is labelled ARGUED, not PROVED.
     The exclusions of BARRIER_EST_001 keep their class hypotheses. This includes the limitations
     recorded for absolute-value bounds on ψ(y) − y, large sieve and mean square
-    (P47 rem:wit-cheb). It does not apply to fixed blocks already signed with a certificate.
-    **Scope:** B2 does not by itself exclude the route of P47 thm:wit-Tc(iv): a uniform lower bound
+    (P46 rem:wit-cheb). It does not apply to fixed blocks already signed with a certificate.
+    **Scope:** B2 does not by itself exclude the route of P46 thm:wit-Tc(iv): a uniform lower bound
     λ_A(T_k) ≥ −ε_k, with T_k → ∞ and ε_k → 0, suffices even if ε_k exceeds the expected margin.
     Finding that bound remains OPEN. Also sufficient is an error that vanishes for each fixed test of
     a dense shape kernel, by freezing (ROUND_022_B, Lemma 1); it need not be made uniform
@@ -57,20 +57,20 @@ B4. **Positive model + transfer or comparison.** Excluded with proof, each one i
     generators, for every c and every a; real diagonal repair of the BPY comparison G1→G2 (any
     real diagonal factor, not only holomorphic); two transports from C_0 (pointwise multiplier,
     imaginary translations) and the quotient A/C_0; positivity imported from a uniform construction
-    on the comb (P47 thm:noimport; IDX CPOS_CLASS_001).
+    on the comb (P46 thm:noimport; IDX CPOS_CLASS_001).
     **Not excluded:** non-diagonal or triangular transfers (stopped at selection for lack of
     explicit coefficients, not for impossibility); geometric interpolation with a relative bound
     ∂_sK_{s,U} ≥ −C_U(s)K_{s,U}, C_U integrable, for each finite list U; other models and
     joint compensations; constructions that use the exact multiplicativity of Λ.
 B5. **Class closed by finite modification, deletion or rescaling.** cor:void, a_P, cΛ, W-tail:
     sieves, progressions, cones over log ζ, coefficient-by-coefficient integrality, sparse-stable
-    properties (P47 prop:spec (2)–(4)).
+    properties (P46 prop:spec (2)–(4)).
 B6. **Holds for a model with functional equation and without Euler product** (Davenport–Heilbronn,
     Epstein x²+5y², f_t) **or with Euler product and without functional equation** (a_P).
 B7. **Monoid only; blind to Beurling** (IDX phase 193 fronts G1, H; INV_K).
 B8. **Bounded functional of the weights, local criterion on the symbol, pattern of observables, law on a
     bounded range of windows, determinant or moment of the pencil** (W-lin, W-det, W-fam, W-pat, W-loc,
-    W-mom; P47 §barriers).
+    W-mom; P46 §barriers).
 B9. **The sign remains in a functional of the minimizer** (IDX SPEC_A, BARRIER_W; P48 req:spec R10).
 B10. **Wrong direction or only upper bounds** (W4). Concavity on the comb (Danskin) gives
      only upper bounds. Its dual representation Θ_T = max_c λ_A(T;cΛ) is PROVED
@@ -112,7 +112,7 @@ Carleman germ criteria, closures by cosh products, Laplace layer D_{2π}.
 ### C2. Only argued (the proof of the discard is missing; reopened with a written object)
 
 Lewis–Zagier · archimedean liquid input · KMS · Lorentzian Hodge–Riemann · VOA and Soergel in monoid
-form (they rest on conditional clauses of P47) · G1 monoid lemma / arithmetic derivative ·
+form (they rest on conditional clauses of P46) · G1 monoid lemma / arithmetic derivative ·
 Γ-convergence · Dobrushin/TAP · Cheeger · geometric Brascamp–Lieb · Vinogradov.
 
 ### C3. Exact reformulations (valid targets; the mechanism is missing, they are not closed)
@@ -131,7 +131,7 @@ memos; C7 and CE6 were developed and remain only argued, with a numerical falsif
 repulsion. Check in the index before using.
 
 Two missing lemmas would close many rows of C2 at once: a PROVED falsifier for
-Beurling systems or number fields (O11, O12 of P47 thm:shape), and a PROVED negative primitive background for
+Beurling systems or number fields (O11, O12 of P46 thm:shape), and a PROVED negative primitive background for
 the Epstein form x²+5y² (today cited for the full form and argued for the primitive one).
 
 ### C5. Open residues of phase 193
@@ -221,7 +221,7 @@ D18. The eight selections in the memory of the project rules: factorial squares 
      metrics; transport by shift and congruence; joint cancellation of Pfaffians by
      reciprocity. Each is reopened only with an explicit operation and the four points.
 
-## E. Falsifier battery (P47 thm:shape; P48 tab:cert, tab:models)
+## E. Falsifier battery (P46 thm:shape; P48 tab:cert, tab:models)
 
 Mandatory minimum: finite deletion Λ·1_{n≥N}; amplification Λ + c·1_{n=n₀}; cΛ with c on both sides
 of 1; a_P (prime powers p < P deleted: preserves the Euler product, breaks only the functional
@@ -229,26 +229,26 @@ equation); Davenport–Heilbronn; Epstein x²+5y²; quartet models ξ_{z,k} (the
 exactly and the functional equation); self-dual deformation f_t (preserves Λ(n), n < λ₁, and the functional
 equation; breaks Euler and integrality); discrete Beurling systems; b_θ = Λ·½(1+cos(γ log n+ϑ)).
 For each one the memo states **which exact line of the argument fails**. Quartets and f_t have the same
-node as Λ: a property of the comb alone does not separate them (P47 cor:shape (a)).
+node as Λ: a property of the comb alone does not separate them (P46 cor:shape (a)).
 
 ## F. What the papers declare not excluded (the ground of this phase)
 
-- Conjunction (E)∧(F)∧(I) with a nonlinear sign step (P47 rem:conjunctions).
-- Constructions that use the exact multiplicativity of Λ in the sign step (P47 thm:noimport).
+- Conjunction (E)∧(F)∧(I) with a nonlinear sign step (P46 rem:conjunctions).
+- Constructions that use the exact multiplicativity of Λ in the sign step (P46 thm:noimport).
 - Exact inequality 𝓕_T ≤ 𝔞^♯ on P_T proved with the vector and the archimedean form together, on
-  vectors that see Near_M (P47 rem:bar-arith).
-- Arguments with the atomic structure of the arithmetic side and the exact values (P47 rem:bar-pat);
-  classes that mix estimates with an exact support axiom on log ℕ (P47 thm:geo-tv).
+  vectors that see Near_M (P46 rem:bar-arith).
+- Arguments with the atomic structure of the arithmetic side and the exact values (P46 rem:bar-pat);
+  classes that mix estimates with an exact support axiom on log ℕ (P46 thm:geo-tv).
 - Use of the positive part of the symbol on all of ℝ together with the negative set; exact reductions
-  that carry the whole margin (P47 rem:bar-loc).
+  that carry the whole margin (P46 rem:bar-loc).
 - Signed exterior measures. (The arithmetic squares in (½log2, ½log3) are not ground of
   this phase: 211/DOSSIER_001 §6(e) reduces them to a single eigenvalue.)
-- Non-distributional functionals and functionals that couple with ζ itself (P47 thm:geo-parity).
-- Two-sided laws λ_A = L(T)(1+o(1)) on unbounded ranges (P47 rem:bar-fam): not excluded, but
+- Non-distributional functionals and functionals that couple with ζ itself (P46 thm:geo-parity).
+- Two-sided laws λ_A = L(T)(1+o(1)) on unbounded ranges (P46 rem:bar-fam): not excluded, but
   their lower half is the target plus a margin (211/ROUND_007_D Lemma 4.6), and the simple
   exponential law has a NO-GO (211/LEDGER C20). It is not easier ground than the target.
 - Pigeonholes without an object: O166.802.1 (nonlinear multiscale inequality, «partial completeness beyond
-  X»), O2601.1 (individual Euler property), clause (5) of P47 prop:spec.
+  X»), O2601.1 (individual Euler property), clause (5) of P46 prop:spec.
 
 ## G. Hard restrictions and explicit prohibitions from earlier phases
 
@@ -456,7 +456,7 @@ L4. Translation-invariant approximate inverses, truncated Möbius included: spli
     false (R4-d); phase 200 A_MU_FACTORIZATION_001 (d).
 L5. Pivots determined by the near-divisibility pattern; totally positive, Pólya, Green kernels
     or functions of the gcd for 𝔸_M (R4-e).
-L6. Inertia count, Kreĭn or Pontryagin signature: P47 thm:parityschur, prop:polarcap,
+L6. Inertia count, Kreĭn or Pontryagin signature: P46 thm:parityschur, prop:polarcap,
     subsec:inertia-excl; phase 197 BARRIER_W_001. It does not distinguish c = 1 (R4-f).
 
 ## M. Cross-check of signature and closure mechanisms (`ANNEX_COTEJO_LORENTZ_1.md`, `_2.md`)
@@ -478,7 +478,7 @@ M3. On 𝔸_M or 𝖡: real stability, Gårding, MSS (`INV_M_001`, false); GKS/F
 M4. The logarithmic-derivative wall (`INV_F_001` F2) reaches conic premises on the series or its
     logarithmic derivative; it does not formally reach signature properties of a_T nor integrality.
     That only the infinitely divisible classes and the Pick class cross is ARGUED outside the
-    classified list (P47 prop:spec (6)).
+    classified list (P46 prop:spec (6)).
 M5. Not found (does not prove novelty): object of degree ≥ 3 with Hessian a_T built with the comb and the
     window; closure under product of Euler factors applied to the signature with the archimedean factor
     fixed, and its check at c = 2; Lee–Yang measures or Newman/Lieb–Sokal closure built
@@ -525,7 +525,7 @@ N5. The form as a variance of a valuation model: it is (G); the laws of ζ^c are
   C16, C19, C21, C35, C43, C51. Antecedents: 211 `ROUND_003_A.md` (parity, tangency, rigidity; PROVED, without
   sign), `ROUND_002_D.md`, `ROUND_002_E.md`, `ROUND_004_A.md` Prop. B (finite `Λ`-free planes, NO-GO),
   `ROUND_021_A.md` Lemma 3.3 (width of the window in `c` = margin); phase 192 (three exact identities on
-  the minimizer, excluded); Paper 47 lem:contA, cor:Tarch, lem:degen, thm:X.
+  the minimizer, excluded); Paper 46 lem:contA, cor:Tarch, lem:degen, thm:X.
 - Reopening: a subspace `S_T` written without solving the problem and of growing dimension, with the
   identity on all of `P_T` and every `T` and the line that breaks for `cΛ`. Not executed: the conjectures
   (C1)–(C3) of `ROUND_003_A.md` as theorems (structural; they do not give the sign).
@@ -534,7 +534,7 @@ N5. The form as a variance of a valuation model: it is (G); the laws of ζ^c are
 
 - Q1. Bounding each contact by a potential `≥ 0` (local gauge, ground-state representation with
   position-dependent `φ_p`, chains of any length, with any kernel splitting): NO-GO with class,
-  PROVED relative to Paper 47 cor:Tarch; dies before `T = 0.60` (R7-a).
+  PROVED relative to Paper 46 cor:Tarch; dies before `T = 0.60` (R7-a).
 - Q2. Stage predicate «form + correction in a convex cone» with uniform step: equivalent to a local splitting
   by contacts, PROVED (R7-b). Reopening: history-dependent step with data given by its own formula.
 - Q3. Dilation with composition of contacts (exit A of R161_033): repetition of R161_034; the quotient
@@ -738,7 +738,7 @@ archimedean threshold. It was not obtained; there is no closed formula for `θ_p
   on `P_T` for `T = 0.62–0.68` is even, with pattern `+ − +` and nodes near `±0.2`, of the same sign in the two
   extreme zones of the contact of 3.
 - Not attempted: Poincaré/Wirtinger-type inequality on `P_T` for the kernel `K` with explicit constant
-  obtained by hand (Paper 47 has it only by certificate).
+  obtained by hand (Paper 46 has it only by certificate).
 
 ## AC. Round 19 of phase 212 (`ROUND_019_A.md`): scale reading of the margin
 

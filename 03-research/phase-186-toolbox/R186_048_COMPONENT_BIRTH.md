@@ -1,10 +1,10 @@
 # R186_048 — Birth of negative components and migration of the minimizer: exact geometry, invisibility at the instant of entry, cost of the new prime, and why the perturbative argument does not close
 
-Phase 186, round 22. Paper 47,
+Phase 186, round 22. Paper 46,
 the grid and the crossword are not touched. Self-contained script: `r048_birth.py` (M = 40/48, ≈ 30 s + 60 s for part E; `python3 r048_birth.py [fast|E]`).
 Read: R186_046 §0.3(iii), §3.2, §6 (70% in [4.24, 6.46]); R186_042 (sub-Shannon sea); R186_043 §3 (Lemma M0, M0-slope),
 §5–§7 (transfer, M₁); R186_044 Thm 2, Lemma P; R186_047 (L-W); R186_036 Lemma 2 (fold, CONDITIONAL (REG)); R165_202 1.4–1.5;
-R186_022 (peak of h*); Paper 47 eq:symbol/eq:form, prop:band, lem:contA, lem:monoT; grid log 25–36 (W-lin, W-det, W-fam, W-pat,
+R186_022 (peak of h*); Paper 46 eq:symbol/eq:form, prop:band, lem:contA, lem:monoT; grid log 25–36 (W-lin, W-det, W-fam, W-pat,
 W-loc, W-mom). Nothing already closed is repeated: there is no local criterion on σ here, nor a functional of the family; the object is the entry
 dynamics of each prime power and its exact cost.
 
@@ -47,7 +47,7 @@ dynamics of each prime power and its exact cost.
 
 ## 1. Framework and own verifications
 
-Notation (Paper 47): σ_T(τ) = m(τ) − Σ_{log n < 2T} v_n cos(τ log n), v_n = 2Λ(n)/√n; 𝔞_T(F) = (1/2π)∫σ_T|F̂|² = C₀‖F‖² + Lev(c_F)
+Notation (Paper 46): σ_T(τ) = m(τ) − Σ_{log n < 2T} v_n cos(τ log n), v_n = 2Λ(n)/√n; 𝔞_T(F) = (1/2π)∫σ_T|F̂|² = C₀‖F‖² + Lev(c_F)
 − Σ v_n c_F(log n) (eq:Aform), c_F(u) = ∫F(t)F(t−u)dt, supp c_F ⊂ [−2T, 2T]; 𝒫_T = {A(F) = B(F) = 0}; λ_A(T) = min 𝔞_T|𝒫_T; h*_T
 unit minimizer. Boundary convention (R186_046 §1): at T = T_n exactly, n is not yet contact; σ_{T_n⁻} := without n, σ_{T_n⁺} := with n.
 U_T := {σ_T < 0} ∩ [0, ∞) (finite union, prop:band). Neg(h*)|_J := (1/2π)∫_{±J} σ_T⁻|ĥ*|². "New" := a component of U_{T_n⁺}

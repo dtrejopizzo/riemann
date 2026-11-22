@@ -4,7 +4,7 @@
 collects the most recent results; the previous rounds remain as history.
 
 2026-10-18. Row D independent. Integration document, without modification
-of Paper 47. Final review favourable: AUDIT_001 §8.
+of Paper 46. Final review favourable: AUDIT_001 §8.
 
 ## What changed in the assignment
 
@@ -97,7 +97,7 @@ specificity required of the final mechanism was not proved.
 
 The first round left negative controls; the second leaves this sign
 lemma and an explicit object. The node and D remain OPEN. No
-closure was written in Paper 47 and no cells of the grid were repainted.
+closure was written in Paper 46 and no cells of the grid were repainted.
 
 Final review of the second round: AUDIT_003 and AUDIT_004 favourable; no
 pending objections. The positive milestone achieved is auxiliary and signed,
@@ -209,25 +209,25 @@ Qupper<.001647953. Data/code in LINK012_data. Polar-corrected H1 approximation
 extends the falsifier to the C_c∞ core. AUDIT_012 favourable, both scripts reproduced.
 Only the EXACT scale of U011: no exclusion of small rescalings,
 other maps/O1 nor D. This concrete domination is no longer an OPEN residue.
-No P47 integration nor change of cells/counts. Full goal D active.
+No P46 integration nor change of cells/counts. Full goal D active.
 
 
 ### Phase 209 — LINK013: every fixed scale of U011 fails for large windows (2026-10-19)
 
 New written difference from 012: it does not change U nor retry scale 1;
-it computes the response of the same map on the EXPLICIT family of P47
+it computes the response of the same map on the EXPLICIT family of P46
 lem:testfam as T→∞, and tests the previously open class of arbitrary constants.
 The profile M(F)=∫Fh satisfies h(−∞)=−κ, h(+∞)=0, by Riemann sum and positive
 Mellin transform of m=y^−1/2−τ. For G_T=ω_k(x/T), k=ceil21T/e, F_T=P(D)G_T,
 the mass of G_T/T escapes compact sets, the L1 derivatives are o(T), and
-M(F_T)/T→γ1²κ/8. Thus E_T≥κM²≥c0T². The proof of P47 thm:margin/cor:margin1
+M(F_T)/T→γ1²κ/8. Thus E_T≥κM²≥c0T². The proof of P46 thm:margin/cor:margin1
 (CITED, inputs Z1/Z2 and explicit formula only for this falsifier) gives
 |Q_T(F_T)|/||F_T||²≤4e9Texp(−15.449T) for THIS FAMILY, not by inferring
 a test from an infimum. Norm F² O(T^1.5) => |Q|/E=O(√Texp(−15.449T))→0.
 There is no fixed c>0 with Q_T≥cE_T in all windows. Any possible c(T)
 requires c(T)≤C√Texp(−15.449T); its existence is not proved.
 Analytic proof without new numerical computation; AUDIT_013 favourable, explicit CITED input.
-No exclusion of other maps, nor new sign of D. No P47/cells/counts integration.
+No exclusion of other maps, nor new sign of D. No P46/cells/counts integration.
 
 
 ### Phase 209 — LINK014: removing positive pieces does not repair U011 either (2026-10-19)
@@ -245,7 +245,7 @@ with the SAME a_d 011 has |Q|/E→0. No positive uniform constant of domination.
 No inferences from larger to smaller; new proof for both subforms.
 No new numerics. AUDIT_014 and addendum favourable for the whole class.
 Other maps, signed cancellations and T-dependent factors are not excluded.
-Full goal D active/OPEN; no P47/cells/counts integration.
+Full goal D active/OPEN; no P46/cells/counts integration.
 
 
 ### Phase 209 — CONSTRUCTOR015: split domain and exact PSD cone (2026-10-19)
@@ -263,7 +263,7 @@ With 014 it also closes globally PSD signed combinations of that span with the
 SAME map 011. It does not classify forms positive only on its image nor other maps.
 Ps is a product of valuations, NOT a zeta law on N. Not V=all Gaussian nor FE invariance.
 No new numerics nor new zero input. AUDIT_015 favourable to the three theorems.
-No sign of Q/D; full goal active, no P47/cells/counts integration.
+No sign of Q/D; full goal active, no P46/cells/counts integration.
 
 
 ### Phase 209 — LINK016: dense even polar-free image (2026-10-19)

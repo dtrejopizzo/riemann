@@ -8,7 +8,7 @@ NO-GO / NUMERICAL. **No sign is proved.**
 **Read.**
 - Phase 200: SPEC_001, AUDIT_200_SPEC_001, K1_OSG_001, K3_GAMMA_001, LEDGER_L1…L5 (seeds and negative space).
 - Phase 199: AUDIT_CONSTRAINTS_001, PROOF_L_SHARP_FF_001, PROOF_L_SHARP_GG_001, MORI15_EXTREMAL_001.
-- Paper 47: def:ext, thm:ext-half, rem:ext-killing, prop:ext-gauge, thm:ext-lattice, prop:ext-grouped.
+- Paper 46: def:ext, thm:ext-half, rem:ext-killing, prop:ext-gauge, thm:ext-lattice, prop:ext-grouped.
 - ROUTES-TRIED index (full README, "Phase 200" section).
 
 **Index entries touching this round.**

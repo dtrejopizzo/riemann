@@ -39,7 +39,7 @@ SHAPE theorem and the crossword before any attempt is made.
 
 ## Relation to other phases
 Builds directly on the SHAPE theorem and crossword (phase 190), on the
-λ_A(T) machinery and margin/ceiling theorems of Paper 47, and on the
+λ_A(T) machinery and margin/ceiling theorems of Paper 46, and on the
 routes-tried index; both specifications close as design dead ends except
 for the single open residual T*₃(η), handed off as a target for later
 phases (190/EXP_005's bulk/edge split is named as the unfinished next step).

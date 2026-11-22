@@ -5,7 +5,7 @@ G_κ(F) := (1/2π)∫g_κ|F̂|², 𝔞^♯ = G_1, 𝓕_T Chebyshev fluctuation (
  𝔞_t(F) := 𝔞_T^{(λ_t)}(F) = (1−t)G_κ(F) + t(𝔞^♯(F) − 𝓕_T(F)) = (1−t)G_κ(F) + t𝔞_T(F),   b_T(t) := bottom.
 
 ## Corpus check
-Paper 47 lem:monoT, thm:wit-Tc (i)–(v), lem:wit-freeze, lem:flowdet (Hellmann–Feynman), thm:mult (KKT/Tate multipliers);
+Paper 46 lem:monoT, thm:wit-Tc (i)–(v), lem:wit-freeze, lem:flowdet (Hellmann–Feynman), thm:mult (KKT/Tate multipliers);
 N_BUILD_006 Thm 1 (sawtooth O(1 + ‖F′‖²)); L2_BUILD_015 §2 (Hessian in weights). grep "first contact in t|homotopy in the comb|
 t*(T)|fraction of the fluctuation": none. New: §1–§4 (the family is new, N_BUILD_011).
 

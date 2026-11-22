@@ -65,7 +65,7 @@ write everything with the functional `deg` and never form `F + mA` as a class:
 **0.6 The `Ξ_a` falsifier theorem (D.8).** For `Ξ_a` all of D.6–D.8 transport with
 `K_a = (e^{at}K)⋆(e^{−at}K) > 0`, `Φ_{K_a} = ξ(s+a)ξ(s−a)`, four poles at
 `{−a, 1−a, a, 1+a}` — so the ruling plane is **four-dimensional** for `Ξ_a`
-(Paper 46 §7 / P124 lab already noted rank 4) and "primitive" means four conditions.
+(Paper 47 §7 / P124 lab already noted rank 4) and "primitive" means four conditions.
 The transfer theorem then says: (a)+(b′)+(c) ⇒ `Σ_ρ Φ(ρ)Φ(1−ρ) ≥ 0` on that
 sector ⇒ all zeros of `Ξ_a` on the line — false. So no `h^0` exists for `Ξ_a`. The
 report must state the rank-4 modification, not copy the rank-2 statement.
@@ -87,7 +87,7 @@ must be recorded, not explained away. (iii) D.9(i)'s convex set may not have
 only after `Πg ∈ P` is checked for `g ∈ D^W` (not only `C_c^∞`): `Φ_{Πg}(0) =
 0·Φ_g(0)` needs `Φ_g` finite at `0`, i.e. `g` in the strip class. OK.
 
-## 1. Re-derived and found correct (after reading Part II §§11–16 of Paper 46, before R135_001)
+## 1. Re-derived and found correct (after reading Part II §§11–16 of Paper 47, before R135_001)
 
 | statement | check |
 |---|---|

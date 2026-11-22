@@ -5,7 +5,7 @@ L²_odd(I_{T₀}), T₀ = ½log5 — and `scripts/c3/d3_cert_W.py` with its outp
 
 ## Verdict: **CERTIFIED** (with cosmetic remarks only; none affects the bound)
 
-## 1. Complete-form definition vs Paper 47
+## 1. Complete-form definition vs Paper 46
 
 - eq:W: W_T(F) = 𝔞_T(F) + 2 Re(A(F) B̄(F)). thm:parityschur(o): on real F this equals
   [𝔞_T(F_e) + 2ℓ_ev(F_e)²] + [𝔞_T(F_o) − 2ℓ_odd(F_o)²]. So W_par = 𝔞_T + 2ε_par ℓ_par², with

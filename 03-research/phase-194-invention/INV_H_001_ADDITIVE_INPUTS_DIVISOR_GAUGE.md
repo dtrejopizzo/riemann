@@ -1,14 +1,14 @@
 # INV_H_001 — Additive structure of ℕ in the window form: catalogue, divisor gauge, integer comb (track H)
 
 Track H.
- Notation of Paper 47
-(04-papers/47-row-d-dual-certificates/main.tex): m(τ)=Re ψ(¼+iτ/2)−log π (eq:m), v_n=2Λ(n)n^{−1/2}, 𝔞_T=m_T+Π_T on 𝒫_T,
+ Notation of Paper 46
+(04-papers/46-row-d-dual-certificates/main.tex): m(τ)=Re ψ(¼+iτ/2)−log π (eq:m), v_n=2Λ(n)n^{−1/2}, 𝔞_T=m_T+Π_T on 𝒫_T,
 N:=e^{2T}, combs and 𝔠⁺ (def:comb), ρ_κ, g_κ (thm:kappa), polar elimination (lem:polarelim), thm:shape, cor:shape.
 
 ## 0. Corpus / index check (done before building)
 - ROUTES-TRIED-INDEX: Ramanujan/additive characters appear only as L2_030 §3 (components c_{p^b}(j) of Near; listed as an
   *admissible* direction in 06_OPEN_RESIDUES R9) and L2_031 (residue-balanced subspaces ⟺ D, Thm E). Vaughan/Selberg/large sieve:
-  R167_103 Thm S (valid in every discrete Beurling system) and W-sieve NO-GO. Progressions: P47 prop:prog (BV/BDH/SW NO-GO).
+  R167_103 Thm S (valid in every discrete Beurling system) and W-sieve NO-GO. Progressions: P46 prop:prog (BV/BDH/SW NO-GO).
   Poisson on ℤ / Euler–Maclaurin: EI_002 (s_w family), CA_C_007, PRINCIPIO RECTOR ("only additive ⇒ FE-generic", ARGUED).
   Hardy–Littlewood/Kloosterman: P149 additive pencil (Vaughan singular series, DEAD, T5). Mollifiers: G3D-159 (DEAD, DH/Epstein).
   Integer density: thm:ceiling (r ≤ 1 necessary), thm:kappa (ρ_1 ∉ 𝔠⁺). G1 (INV_G_001): Dirichlet algebra is Beurling-generic.

@@ -16,11 +16,11 @@ material, inventory 134–149, analogies examined) and an adversarial audit revi
   **(P149) DOWNGRADE**: it is the Hardy–Littlewood `k`-tuple conjecture dressed as Deligne, not a
   new object. Minimal repairs listed in `R149_002` §5. Still missing: `R149_003` (repairs) and
   `R149_005` (decision), both short.
-* Paper 46: Parts I–III closed; Part IV (phases 145–149) pending the author's decision.
+* Paper 47: Parts I–III closed; Part IV (phases 145–149) pending the author's decision.
 
 ## 1. What already exists and is NOT reconstructed
 
-Verified inventory (independent review; detail in Paper 46 §23 and the `R1xx_005` files):
+Verified inventory (independent review; detail in Paper 47 §23 and the `R1xx_005` files):
 canonical class `K` and duality `σ_K` (PROVED, §11–12); transfer theorem 12.3 conditional on
 `h⁰` and its unconditional trace version 12.3-B4 (§20.17); method T1 (uniform in the field) and T2
 (must use the Euler product; fails for Epstein `Ξ_Q`) (§18); **frame defect theorem**
@@ -140,7 +140,7 @@ as it should). The non-magnitude part is the three-term equation. Corpus: `Lewis
 fails). Cheap. **Phase 152**, one round.
 
 **L4 — Beurling calibration (T3).** Not a route: it is the missing falsifier (3.2). It is
-incorporated as a mandatory gate from phase 150 onward and as a method theorem in Paper 46 §18.
+incorporated as a mandatory gate from phase 150 onward and as a method theorem in Paper 47 §18.
 
 **L5 — Honest closure of (P149).** Record that it is the `k`-tuple conjecture (auditor §4);
 O-149.5 is merged with O-148.2. Not pursued.
@@ -157,7 +157,7 @@ Shahidi); Rankin–Selberg toward Ramanujan (bounds local parameters `α_p`, not
 
 | phase | content | deliverables | gates |
 |---|---|---|---|
-| 149 (closure) | `R149_003` repairs (i)–(vi) of `R149_002` §5; `R149_004` confirmation; `R149_005` decision: D.61.8–9 finding; D.61.10 rewritten; (P149) = `k`-tuples | three short files; `PLAN.md`; Paper 46 Part IV if the author decides | FATAL |
+| 149 (closure) | `R149_003` repairs (i)–(vi) of `R149_002` §5; `R149_004` confirmation; `R149_005` decision: D.61.8–9 finding; D.61.10 rewritten; (P149) = `k`-tuples | three short files; `PLAN.md`; Paper 47 Part IV if the author decides | FATAL |
 | **150** | **T3 + Laumon**: (0) CORPUS_CHECK; (1) T3 with the DMV construction as a formal falsifier `ζ_P`; (2) a technical reading of Laumon 1987 §§ on the purity of `FT`, stationary phase, use of finiteness; Kedlaya 2006 in parallel; (3) a `F_q → Z` dictionary (table as in §3.5); (4) statement (P150): the `Z`-avatar of "purity of `FT` ⇐ Gauss sums", or an impossibility theorem with the exact point where finiteness is not replaceable | `R150_000…005` | `Ξ_a`, `Ξ_Q`, `ζ_K`, **Beurling** |
 | 151 | Dolgopyat / FUP: resonances of the modular surface; what substitutes for fractality; (P151) or death | `R151_000…005` | same |
 | 152 | Mayer / Lewis–Zagier: the three-term equation as transport; any non-magnitude inequality at `s = ρ/2`? | `R152_000…003` (one round) | same |
@@ -174,7 +174,7 @@ positivity, stable under twisting); (2) its polar divisor is determined by local
 holomorphic to the left of that pole (3.4); (4) it reads phase: it fails for `Ξ_a`; (5) it uses `+` and `×`:
 it fails for `Ξ_Q` and for every Beurling system; and (6) it is uniform in the field (T1).
 If phases 150–152 end with impossibility theorems, D is closed in the map with T1, T2, T3
-and the 3.4 reformulation as the exact statement of the wall, and Part IV of Paper 46 is written.
+and the 3.4 reformulation as the exact statement of the wall, and Part IV of Paper 47 is written.
 
 ## 7. Compressed catalog of dead routes (so as not to repeat them)
 
@@ -251,7 +251,7 @@ producing the sign; their value is sharpening the wall. The structurally correct
 3.4/Form B: making the zero block holomorphic to the left of the a priori pole, and phase 149 already
 showed (D.62.2) that in the additive sheaf this is of RH strength. The accumulated corpus evidence points to
 D closing **in the map**, with T1, T2, T3, and 3.4 as the exact statement of the wall, and Part IV of
-Paper 46. Revised circuit: **150 = T3 (one round) + round 0 of the Laumon dictionary; 151 =
+Paper 47. Revised circuit: **150 = T3 (one round) + round 0 of the Laumon dictionary; 151 =
 author's decision** between closing D in the map or spending exploratory rounds on L2/L3.
 
 ## 9. Third pass: "it cannot be impossible" — what can really be done
@@ -338,4 +338,4 @@ Cor A.5 (on the Mayer disk a Dolgopyat-type bound IS statable), "phase 16 alread
 Dolgopyat-type bound for the Mayer operator continued via the Lewis–Zagier three-term equation (correct logical
 form, no method; the archimedean gate fails as stated); **(P152.2)** a difference kernel over the
 Berkovich line `A^{1,an}_Z`, with a cheap decisive test for Beurling-blindness; (P152.3) hygiene.
-Recommendation: a single bounded round on the (P152.2) test; (P152.1) to §28.3 of Paper 46.
+Recommendation: a single bounded round on the (P152.2) test; (P152.1) to §28.3 of Paper 47.

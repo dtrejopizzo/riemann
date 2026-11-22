@@ -49,7 +49,7 @@ Necessary statement (OPEN): **(D) dictionary**: there exists a constant c_λ and
 3. The growth of n₋(−C_{ε_S}) with M may be resolution of the log singularity at a = log2 (400-node quadrature); it does not affect C1 (min(W+C) stable to 1e-3 between M = 16, 20, 24).
 4. Son_S(v) was not computed from the Halmos spectral data (s2.py) — that is the independent check that decides C1 vs. grid error; it remains pending.
 
-## For Paper 47
+## For Paper 46
 
 Nothing citable as progress. The only usable items: F1/F2 (structure of the symbol of the logarithmic part, dyadic oscillation with π/|s| decay) and the warning that the identity E_S = Son_S − ∫c_hε_S is not verifiable without the normalization dictionary. Do not mention "absorption" or "sign contact".
 

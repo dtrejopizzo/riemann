@@ -125,4 +125,4 @@ The compact certificate FULL PASS combined with OUTER-TURAN084 proves T_R,T_S>0 
 
 Positivity includes ARCH, polar and ALL arithmetic contacts by the exact kernel identity of CONE001. The diagonal congruence of the exterior map keeps the conclusion for any real combination of four powers with exponents>1.
 
-The result does NOT imply five generators, all orders, the complete linear envelope nor a new time window. No paper is modified. The global sign of Paper47 remains OPEN.
+The result does NOT imply five generators, all orders, the complete linear envelope nor a new time window. No paper is modified. The global sign of Paper46 remains OPEN.

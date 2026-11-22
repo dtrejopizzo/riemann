@@ -29,7 +29,7 @@ ladder on the self-dual prolate defects.
   log(λu/n), ARGUED); R.4 / S.3 (per-harmonic weights log(k/t), ARGUED); S.4 (harmonics not decoupled, NO-GO 𝒦_S^{harm});
   E.5 / constraint 7 (ratio classes indefinite); W_001 (caustic t* ≈ 4πμ − (2k+1)/2, ARGUED); G7A-R165_101 (Riemann–Pólya
   kernel truncated to the window, used there as a witness, a different use); BB_001 (Euler–Lagrange at the minimiser;
-  concavity in the comb weight); P46 class K (Pólya).
+  concavity in the comb weight); P47 class K (Pólya).
 - **Why the proposal is new.** It differs from each recorded route as follows.
   - (a) INV_S_001 applies WKB to the *window* symbol in the large parameter T, and asks for a sign from Stokes data. Here the
     large parameter is c = 2πμ. The object is the *exterior* form (Λ-free after E.2), evaluated on the out-of-band

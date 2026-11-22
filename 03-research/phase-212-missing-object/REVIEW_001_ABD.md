@@ -2,7 +2,7 @@
 
 Reference target (★): λ_A(T) ≥ 0 for every T > 0, with the definitions of
 `../phase-211-sign-sandbox/STATEMENT_001.md`. Each proof was redone and cross-checked against
-P47 (`04-papers/47-row-d-dual-certificates/main.tex`: sec:firstcontact, thm:PCfinite, prop:GEgap,
+P46 (`04-papers/46-row-d-dual-certificates/main.tex`: sec:firstcontact, thm:PCfinite, prop:GEgap,
 prob:annihilate, prop:annihilate-equiv, rem:returnremarks, prop:opcalc, thm:sos, rem:sosatoms,
 prop:nearfree, rem:boxes, thm:oneprofile, prop:AM, lem:shape-scale, thm:geo-split), against 211/LEDGER
 (C6, C7, C9, C33b, C49), against `phase-186-toolbox/R186_005` and `R186_092`, against the routes index and against
@@ -28,7 +28,7 @@ sentences that contradict it (pointed out below).
 
 ### 1.1 Verification of the statements
 
-**Relations against P47.** The definitions agree with P47 (l. 6627–6665): X, 𝓕 = u_∞(D)J,
+**Relations against P46.** The definitions agree with P46 (l. 6627–6665): X, 𝓕 = u_∞(D)J,
 𝓕* = 𝓕⁻¹ = 𝓕, JV_aJ = V_{−a}, X + 𝓕X𝓕 = 𝓜, S_N, S′_N, L_M, A_M, E_N = S_N𝓕 − JS_N,
 H_{M,N} = L_MS_N − S′_N. Relations (b) S𝓕 = JS and (c) [X,S] = −LS are E = 0 and H = 0. Correct.
 Relation (a) J𝓜J = 𝓜 is the parity of m. Correct.
@@ -54,7 +54,7 @@ algebraic statement. Defects:
   where H° vanishes: with S° = Φ_{≤N}(μ) and M ≥ N, H° has no coefficient at k ≤ N (because
   μ·log = −Λ∗μ) and outside, its coefficients −Σ_{dm=k, d≤M, m≤N}Λ(d)μ(m) have no sign (NUMERICAL, M = 9,
   N = 6: between −1.95 and +2.71). The correct statement is Lemma A′ of §1.3. It is a reformulation of
-  the observation of P47 after thm:PCfinite (invariance of the square under A_M ↦ −A_M; code F2); it does not
+  the observation of P46 after thm:PCfinite (invariance of the square under A_M ↦ −A_M; code F2); it does not
   go beyond it.
 - **E-A3 (false claim; §3, "Reading", and §4 first sentence).** "The orientation enters exclusively
   through the asymmetry of the defects" is false. The mirror image also does not share: Λ ≥ 0 coefficient
@@ -123,7 +123,7 @@ last item) stands only with the corrected formula.
   (★)." prob:annihilate asks for 𝒪_LF = 0 for first-contact vectors, with minimality of the
   window (i) as an ingredient; it mentions neither h_{M,N} ≥ 0 nor a diagonalization. The identity of §4
   is of another kind: it holds on all of P_T and does not use first contact. That both imply (★) does not make them
-  the same question. What P47 does record about diagonalization is in rem:returnremarks
+  the same question. What P46 does record about diagonalization is in rem:returnremarks
   (l. 6940–6943): the variance indexed by divisor paths is not the norm of the coherent sum
   in k, which contains cross Gram terms between distinct k; additive phases diagonalize in k
   but do not factor through de = k, and multiplicative characters factor but change the operator.
@@ -165,7 +165,7 @@ Routes index and grid, admissible wording:
 > polynomial consequence treating E_N, H_{M,N} as symbols fixes the sign (reformulation of F2);
 > degree-one squares in (L, L*) with atoms in log ℕ are constant for T > ½log3 (rem:sosatoms).
 > Not a NO-GO of the conjunction (E)∧(F)∧(I). Antecedents: R170_816, R170_819–823, R170_851,
-> P47 rem:returnremarks."
+> P46 rem:returnremarks."
 
 It may not be recorded: "no formal consequence of the three relations is oriented" without the
 scope clause (row K1 of the phase LEDGER says it this way and must be corrected); "the orientation
@@ -327,7 +327,7 @@ of (MS) (the second, by Cauchy–Schwarz in q_± ≤ 2a_T). PROVED as implicatio
 - **E-D1 (wrong label; "Status of case (iv)/(c)", "Conclusion of §3", §7 (P2), §8).** Case
   (iv) is labelled "CONDITIONAL NO-GO" and "not a reasonable target". In the generality of
   Theorem B (any closed convex K) it is false that it is a NO-GO: let T ≤ ½log5, where
-  λ_A(T) > 0 (PROVED, P47 thm:log5A and monotonicity), E = ∅ and K the closed ball of radius r around Λ.
+  λ_A(T) > 0 (PROVED, P46 thm:log5A and monotonicity), E = ∅ and K the closed ball of radius r around Λ.
   Then Π is bounded, Π ≠ {Λ}, and for r·Σ_{n<N}2n^{−1/2} ≤ λ_A(T) one has
   a_T^λ(F) ≥ (λ_A(T) − r Σ 2n^{−1/2})‖F‖² ≥ 0: (MS) is true. Case (iv) is "target with
   margin", whose truth depends on the size of the polytope relative to the margin; the correct label is
@@ -367,7 +367,7 @@ not total identification: OPEN", and correction M5.1 of R186_092 to item (ii). C
 and Observation 1 give a direct proof of what corrected TB3-neg(ii) asserts in the class
 of completeness atoms; it is consistent with R186_092.
 
-**Cross-check with P47.** thm:geo-split(i) says what the memo attributes to it (the sign in the class is the
+**Cross-check with P46.** thm:geo-split(i) says what the memo attributes to it (the sign in the class is the
 sign at Λ plus an unsigned rigidity), but with its own hypotheses (functional Δ, unit
 minimizer F_⋆); the sentence "by thm:geo-split its sign content is the sign at Λ" is a correct
 analogy, not an application: Theorem B(i) already says it by itself and the citation can be removed.
@@ -441,7 +441,7 @@ of E_∞ on the Schwartz kernel is correct (for F(t) = e^{t/2}f(e^t), SF − JS�
   a wish the ℓ_k must be fixed; the only thing thm:PCfinite offers is
   ⟨Y, V_{−log k}𝓕F⟩ with Y = (S_N⁻¹)*F, which is not a squared modulus.
 - S_N⁻¹ is formal: the symbol Σ_{n≤N}n^{−1/2−iτ} is not uniformly bounded from below and
-  P47 rem:Sren warns that S_N has no limit; the "solved" identity of A §1(4) is not defined
+  P46 rem:Sren warns that S_N has no limit; the "solved" identity of A §1(4) is not defined
   as an identity of forms on P_T ∩ 𝒟_T. The memo marks it "formal" and does not resolve it.
 - thm:PCfinite is an identity on the line; it does not contain the compression to the window. On the
   line, A_M has no sign (its symbol is negative on a nonempty set). The whole sign of a_T
@@ -460,11 +460,11 @@ Yes, in essence, and the memos do not cite it.
   law".
 - `R170_819`–`R170_823`, `R170_837`, `R170_843`, `R170_847`–`R170_856`: two-scale variants,
   curvature, exterior Wronskian, Möbius extraction, Selberg collision.
-- P47 rem:returnremarks: cross Gram terms between distinct k; additive phases versus
+- P46 rem:returnremarks: cross Gram terms between distinct k; additive phases versus
   multiplicative characters.
-- P47 eq:Qbalance, eq:Qrecombine, eq:Qspectral: there already exists an exact identity with non-negative
+- P46 eq:Qbalance, eq:Qrecombine, eq:Qspectral: there already exists an exact identity with non-negative
   arithmetic coefficients paired with squared moduli of exterior functionals,
-  c_{N,L}(F) = Σ_{m≤L} d_{m,N}|(𝒪_LF)_m|², d_{m,N} = Σ_{n≤N}Λ(n)n^{−(a_m+1/2)} > 0; and P47 proves that
+  c_{N,L}(F) = Σ_{m≤L} d_{m,N}|(𝒪_LF)_m|², d_{m,N} = Σ_{n≤N}Λ(n)n^{−(a_m+1/2)} > 0; and P46 proves that
   it is blind to the sign (holds for every eigenvector, with λ of either sign) and that Q_{N,L} admits no
   representation as a sum of squares on all of P_T.
 - Routes index: row G4A-R161_001-002 (catalogue 04, l. 759). **There are no rows for R170_811–R170_840**
@@ -495,7 +495,7 @@ that any version must satisfy; the first two are proved here.
 - **R2 (PROVED; already in R170_816 (2)).** For F, G ∈ L²(I_T) and M ≥ N ≥ e^{2T}, ⟨G, H_{M,N}F⟩ = 0. The
   functionals ℓ_k(F) cannot be functionals of the compression of H to the window; they depend on F
   through non-local vectors (𝓕F, (S_N⁻¹)*F, exterior tails). The natural link is the exterior
-  moments of P47 §collars, and there lies the warning of eq:Qspectral.
+  moments of P46 §collars, and there lies the warning of eq:Qspectral.
 - **R3 (CITED, R170_816 §4 and rem:returnremarks).** Positivity of the coefficients does not sign a
   pairing between two distinct vectors, and the sum in k is coherent (cross terms between distinct
   k). A diagonalization requires an operation that identifies the two vectors
@@ -504,7 +504,7 @@ that any version must satisfy; the first two are proved here.
 
 ### 4.4 Four-point filter applied to the residue
 
-(1) Closest antecedent: `R170_816` §§2–7; P47 thm:PCfinite, rem:returnremarks, eq:Qbalance.
+(1) Closest antecedent: `R170_816` §§2–7; P46 thm:PCfinite, rem:returnremarks, eq:Qbalance.
 (2) New object: none written; ℓ_k and V_T undefined. (3) Difference from the antecedent: global
 form on P_T instead of the first-contact radical, which avoids needing minimality of
 the window but does not avoid the recorded difficulty (pairing between two vectors, cross terms in k,
@@ -516,7 +516,7 @@ open cell with specification R1–R4, not a mechanism. Reopening it requires wri
 
 > "PC-diagonal residue: identity a_T = ‖V_TF‖² + Σ_{k>N}h_{M,N}(k)|ℓ_k(F)|² + polar terms. OPEN, no
 > object. Antecedents: R170_816 (exact exit, falsification of h ≥ 0 ⟹ pairing ≥ 0, channel d = 2),
-> R170_819–823, P47 rem:returnremarks and eq:Qspectral. Restrictions: it cannot be a specialization of
+> R170_819–823, P46 rem:returnremarks and eq:Qspectral. Restrictions: it cannot be a specialization of
 > an identity generic in the weight with interior and exterior coefficients treated alike
 > (falsifier cΛ, c large; PROVED); the ℓ_k are exterior functionals (H vanishes compressed to the
 > window; PROVED); an operation diagonalizing the cross terms in k is needed (not written). Do not reopen

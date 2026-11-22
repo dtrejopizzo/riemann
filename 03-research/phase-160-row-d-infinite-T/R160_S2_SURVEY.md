@@ -16,11 +16,11 @@ phases 72–79 were **sampled, not read exhaustively** — declared here as a co
 at title, abstract and main-theorem level (Papers 18, 26, 29 opened further).
 
 **Labels.** PROVED / CITED / HEURISTIC / OPEN / EQUIV (= proved equivalent to RH). Every positivity
-statement carries its form: **[prim]** = `A_T|P_T` (Paper 47 `eq:form` on `P_T`), **[compl]** = `W_T` on
-`L²(I_T)` (Paper 47 `eq:W`). Most objects in this scope pre-date Paper 47; where an object is neither, it is
+statement carries its form: **[prim]** = `A_T|P_T` (Paper 46 `eq:form` on `P_T`), **[compl]** = `W_T` on
+`L²(I_T)` (Paper 46 `eq:W`). Most objects in this scope pre-date Paper 46; where an object is neither, it is
 tagged **[other: …]** with its identification. Key identification used throughout: the CCM Weil matrix
 `A_λ` of phases 60–79 acts on functions on an interval of length `L = 2 log λ` with primes `n ≤ λ²` and the
-pole term included; in Paper 47 coordinates this is **[compl]** at `T = log λ` (contacts `log n < 2T`). The
+pole term included; in Paper 46 coordinates this is **[compl]** at `T = log λ` (contacts `log n < 2T`). The
 Spanish memos use their own tags ([TEOREMA], [DATO], [CONSTRUCCIÓN], [GAP], [DESEO], [PUENTE]); they are
 translated below, never upgraded.
 
@@ -270,7 +270,7 @@ Structural theorems (no sign; usable as tools or as walls):
 | Exact propagator identity `I_n(L)=[cos LJ]_{nn}−[cos LJ]_{n−1,n−1}` (archimedean Meixner–Pollaczek Jacobi `J`); fine oscillation law with gudermannian frequency `2arcsin(tanh L)` | PROVED | `phase-61-open-problems/OPEN-PROBLEMS.md` O6, O6-bis (Thm 9.5) |
 | Parity no-go: a scaling-compatible first-order operator has odd symbol ⟹ anticommutes with that `J`; `J`-linear ⟹ even ⟹ sees only `γ²` | PROVED (for the phase-63/64 `J`) | `phase-64-connes-route/README.md` Task D; `RESULTS.md` |
 | `L1 ⟺ RH` (Laplace-pole theorem, Paley–Wiener nonvanishing lemma unconditional) | EQUIV (two standard inputs flagged) | `phase-64-…/TASK-A-CLOSURE.md` |
-| `Γ₂(e^{iξθ},e^{−iηθ}) = B(ξ,η)² e^{i(ξ−η)θ}` for the prime jump generator, hence `CD(0,∞)` | PROVED — **but generic**: it holds for every nonnegative weight sequence (any translation-invariant jump generator), so it carries no ζ-specific content (class-level, cf. P47 `cor:void`); DH fails only because its weights are signed | `phase-64-…/CURVATURE-computation.md` Thm 1 |
+| `Γ₂(e^{iξθ},e^{−iηθ}) = B(ξ,η)² e^{i(ξ−η)θ}` for the prime jump generator, hence `CD(0,∞)` | PROVED — **but generic**: it holds for every nonnegative weight sequence (any translation-invariant jump generator), so it carries no ζ-specific content (class-level, cf. P46 `cor:void`); DH fails only because its weights are signed | `phase-64-…/CURVATURE-computation.md` Thm 1 |
 | Stage-1 finite model: Haynsworth `ν₋(G)=ν₋(Short_a G)` (positive-pole shorting preserves index); subtraction creates a spurious negative square (`G_R` counterexample); a negative pole line forces `ν₋≥1`; index-0 closed in `τ_κ` | PROVED | `phase-65-…/STAGE1-finite-dimensional-model.md`; `D6-POSITIVE-POLE-CLOSEDNESS.md` |
 | Maximal closure lemmas: HB closed under local-uniform structural convergence; positive pole shorting preserves index 0; leading-trace rank one ⇏ primitive boundedness; rank-one isolation on subcritical cores `a_φ>½` | PROVED | `phase-66-…/MAXIMAL-CLOSURE-omega7.md` §§1–4 |
 | Exact zero-free chain truncated shift semigroup → Möbius → von Mangoldt connection → prime CCM matrix → Γ–Euler commutator; `ker X=span{δ₀}` distributionally | PROVED | `phase-83-…/PHASE_83_CLOSURE.md` |
@@ -335,7 +335,7 @@ formula" ≈ row C, G2 ≈ row D:
 2. **The margin decays.** Phases 60–63 observed numerically that the positivity is gapless/marginal
    (`ε₀ = O(1/log λ)` proved by Rayleigh with `Ξ_T` — tribunal / REDUCCION §6 Prop 6.1; measured `≈10⁻²¹`;
    `V₊` cascade `e^{−cL}`; "gaplessness = infinite genus", phase 63 R6). This is the precursor of the later
-   proved margin theorems (P47 `thm:margin`; Theorem M of phase 159). Any G2 argument must work with zero
+   proved margin theorems (P46 `thm:margin`; Theorem M of phase 159). Any G2 argument must work with zero
    margin.
 3. **Where the sign lives, as located by S2.** (a) Collective, not local: finite `S` fails at large windows
    (F34), each finite set of primes is semi-globally pure (Prop 152.7), the pole's custody reaches the real
@@ -345,11 +345,11 @@ formula" ≈ row C, G2 ≈ row D:
    not (Paper 29 value/inertia; Doc 156: RH enters in Fredholmicity). (d) Quantifier inversion: every
    unconditional object is averaged/generic/interior, RH is individual/uniform/boundary (Paper 29
    `prin:master`); Doc 198's disjunction S1/S2/S3 makes this a theorem over class 𝔄.
-4. **Relation to Paper 47 objects.** CCM `A_λ` = **[compl]** `W_T` at `T=log λ`; the "primitive" objects of
+4. **Relation to Paper 46 objects.** CCM `A_λ` = **[compl]** `W_T` at `T=log λ`; the "primitive" objects of
    phases 64–66 (`P_prim` removing the pole line `H`) are rank-one-pole primitive analogues, **not** `P_T`
    (which removes two Tate moments `A(F),B(F)`); do not transfer statements between them without checking
-   Paper 47 `eq:W` and `P_T` (lines 131–136). `Ω(ξ)` of Doc 142 = `m(τ)` of Paper 47 `eq:symbol`
-   (`C₀=Ω(0)=ψ(¼)−log π`), consistent with P47 §9.
+   Paper 46 `eq:W` and `P_T` (lines 131–136). `Ω(ξ)` of Doc 142 = `m(τ)` of Paper 46 `eq:symbol`
+   (`C₀=Ω(0)=ψ(¼)−log π`), consistent with P46 §9.
 
 ---
 
@@ -366,7 +366,7 @@ formula" ≈ row C, G2 ≈ row D:
 3. **Doc 148's "arithmetic is an epiphenomenon"** for two-prime frames was inverted by Doc 151 Thm R.1: the
    frame constant is governed by `θ = min_m|log(q/p^m)|`, an arithmetic quantity; GAP-135.A reopened.
 4. **GAP-142.A / GAP-151.C** (archimedean negativity with the pole killed, window `< log 2`) were open in
-   phases 46–48; they are now answered for `P_T` by Paper 47 §9 (`thm:index`, `prop:archneg`:
+   phases 46–48; they are now answered for `P_T` by Paper 46 §9 (`thm:index`, `prop:archneg`:
    `T*_∞ ≤ 0.4608 < 0.58 ≤ T*_{∞,P} ≤ 0.60`). Doc 142's short-window Thm A was the precursor of the later
    semilocal positivity at `log 2` (phase 153, outside S2).
 5. **Doc 128's "non-circular" Deninger verdict** was revoked by Doc 130 (Hasse as input). What survives is
@@ -403,7 +403,7 @@ formula" ≈ row C, G2 ≈ row D:
    §0 criterion for G1 memos.
 7. **Correspondence category `𝒜rith`** (all arithmetic functions as objects, so every theorem is external to
    `ζ` by construction; Doc 131) with the orbit theorem and the almost-prime degree formula
-   `Σ_N g(N)Σ_{d|N}a(d)a(N/d)φ(d²/N)` (Thm 3.3; Paper 28's autonomous arithmetic side). Warning: P47
+   `Σ_N g(N)Σ_{d|N}a(d)a(N/d)φ(d²/N)` (Thm 3.3; Paper 28's autonomous arithmetic side). Warning: P46
    `cor:void` — class-level positivity over such a class decides nothing; the object must single out `Λ`.
 8. **Two-variable Weil functional on the thickened diagonal** `h(x₁,x₂)=g(x₁x₂)φ(x₁/x₂)` with (8,8)
    signature on the spectral side and autonomous almost-prime arithmetic side (Paper 28). Form B closed
@@ -419,7 +419,7 @@ formula" ≈ row C, G2 ≈ row D:
 
 ## §6 Definitions a memo needs verbatim
 
-**Paper 47** (`04-papers/47-row-d-dual-certificates/main.tex`):
+**Paper 46** (`04-papers/46-row-d-dual-certificates/main.tex`):
 
 * lines 119–124 (`eq:symbol`):
   ```
@@ -469,10 +469,10 @@ formula" ≈ row C, G2 ≈ row D:
   with `K(u)=½/sinh(u/2)+½/cosh(u/2)` and `C₀=ψ(¼)−log π` (lines 161–162; numerical value
   `C₀=−5.3721834…` line 369).
 
-**Paper 46** (`04-papers/46-intersection-frame-defect/archive/main.md`, lines 158–159): "`I_∞(Γ_F,Γ_F) = 2Φ_F(0)Φ_F(1) −
+**Paper 47** (`04-papers/47-intersection-frame-defect/archive/main.md`, lines 158–159): "`I_∞(Γ_F,Γ_F) = 2Φ_F(0)Φ_F(1) −
 Σ_ρΦ_F(ρ)Φ_F(1−ρ)` (9.9), and on the primitive radial sector `I_∞(Γ_F,Γ_F) = −Σ_ρΦ_F(ρ)Φ_F(1−ρ)` (9.10)."
 
-**From this scope** (quoted from the memos; memos must re-normalize to Paper 47 before use):
+**From this scope** (quoted from the memos; memos must re-normalize to Paper 46 before use):
 
 * **Gaussian prime correlation and impurity weight** (`phase-48-audit-and-purity/152-attack-purity-rigidity-the-two-purities-semi.md`,
   lines 182–188, Def 152.1):
@@ -486,13 +486,13 @@ formula" ≈ row C, G2 ≈ row D:
   `A_λ(f,f) = ∫ Ω̃(t)|f̂(t)|²dt − ∫ D_λ(t)|f̂(t)|²dt`, `Ω̃(t)=−log π+Re ψ_Γ(¼+it/2)`,
   `D_λ(t)=Σ_{n≤λ²}Λ(n)n^{−½}cos(t log n)`; identity `A_λ(f,f)=Σ_ρ f̂(γ_ρ)f̂(γ̄_ρ)‾` (Thm 1.3, pole and
   archimedean terms included — tribunal: "el término de polo 𝒫 es load-bearing"). Reduction (line 41,
-  Thm 5.1): `HR ⟺ ε_loc(λ) = o(λ^{−1/2})`. In Paper 47 terms: **[compl]**, `T=log λ`.
+  Thm 5.1): `HR ⟺ ε_loc(λ) = o(λ^{−1/2})`. In Paper 46 terms: **[compl]**, `T=log λ`.
 * **`Ω₇`** (`phase-67-quantum-q-index/PHASE67-quantum-q-index.md`, lines 65–73):
   `δ_N = λ_min(A_N^{−1/2}(A_N−P_λ)A_N^{−1/2}) = 1−λ_max(A_N^{−1/2}P_λA_N^{−1/2})`;
   `Ω₇: δ_N ≥ 0 ∀N ⟺ A_N ⪰ P_λ ∀N`, with `A_N` the archimedean Pick jet and `P_λ` the prime Pick jet at gauge
   `z₀=t₀−iy` (`phase-66-rank-one-escape/CANDIDATE-PROOF-omega7.md` line 30); `Ω₇ ⟺ RH` (EQUIV, Paper 36).
 * **Semilocal archimedean weight** (`phase-46-audit-and-attacks/142-attack-on-gap-135-b-the-semilocal.md`, lines 21–22):
-  `Ω(ξ)=Re ψ(¼+iξ/2)−log π`, `Ω(0)=ψ(¼)−log π=−γ−π/2−3log2−log π ≈ −5.3722 < 0` (= `C₀` of Paper 47);
+  `Ω(ξ)=Re ψ(¼+iξ/2)−log π`, `Ω(0)=ψ(¼)−log π=−γ−π/2−3log2−log π ≈ −5.3722 < 0` (= `C₀` of Paper 46);
   Thm B deficit (line 30): `lim_T Q_S(f_T)/‖f_T‖²_w = Ω(0) − Σ_{p∈S} 2log p/(√p−1)`.
 * **Defect** (`phase-44-new-mathematics/132-defect-theory-the-category-ol-of-defective.md`, line 60): for `(H,Q,P)` with Weil
   operator `C`, `δ(X) := neg.ind(Q_C|_P) ∈ ℕ∪{∞}`; reduced defect `δ̂ = δ/2` under functional symmetry (line 61).

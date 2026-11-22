@@ -7,7 +7,7 @@ test, or a proved statement of why the MW-5 cluster cannot be instantiated in a 
 
 MW-5 in the record: "no arithmetic site with `H¹`, Frobenius and a positive form" (ROW-D-CLOSURE-PLAN l.45);
 reopened in phase 136 (PHASE_136_MAP_SYNTHESIS_AND_PLAN l.72, l.132; MAP_5 l.34, 67); the `h⁰` readings were killed by the
-frame-defect theorem (P46 Thm 19.25, now on the small domain, Cor 19.25b) and D-HS (R155_054). What is left (R157_004 row 37,
+frame-defect theorem (P47 Thm 19.25, now on the small domain, Cor 19.25b) and D-HS (R155_054). What is left (R157_004 row 37,
 re-scoped): Deninger's foliated dynamical systems plus the residuals of the `h⁰` reading and the import reading.
 
 ## Round 1 (parallel)

@@ -97,9 +97,9 @@ The canonical square is Q = ‖S_N A_M 𝓕F‖².
 
 ## 4. Q25 exactly
 
-R157_002 #30 and §4 (amended by R157_004): "The identity-level use of Λ = μ*log (#30) … [is a] region not excluded by any proved statement, but [has] no object and no statement." Specifically, #30 is "the exact Vaughan/Heath-Brown identity for Λ = μ*log at a load-bearing step", which "is what P46 T2 already demands (invoke A7/A8) and has no formulation".
+R157_002 #30 and §4 (amended by R157_004): "The identity-level use of Λ = μ*log (#30) … [is a] region not excluded by any proved statement, but [has] no object and no statement." Specifically, #30 is "the exact Vaughan/Heath-Brown identity for Λ = μ*log at a load-bearing step", which "is what P47 T2 already demands (invoke A7/A8) and has no formulation".
 - Per window: EXCL by F1 (estimates fall under cor:void).
-- Globally: EQUIV (P46 Thm 27.10).
+- Globally: EQUIV (P47 Thm 27.10).
 - The positivity variant **#55 (Selberg Λ₂ = μ*log² ≥ 0, Möbius as positive adjoint) is EXCL [F3]** (Paper 37).
 - Grid neighbours: Q11 (Gamma–Selberg tail, *identifies*), Q14 (cross channel Λ(a)Λ(b), *class*), Q30 (W₂ with Λ*Λ block, formal only).
 

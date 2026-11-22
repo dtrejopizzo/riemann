@@ -167,11 +167,11 @@ Therefore W_T(g) = ℓ_T(c_g) with ℓ_T linear. Moreover:
   autocorrelations {c_g : supp g ⊂ [−T, T]} is the cone of measures μ ≥ 0 on the spectral side whose transform vanishes
   for |u| ≥ 2T.
 - Therefore inf{W_T(g) : ‖g‖ = 1} = inf{ℓ_T(c) : c positive definite, supp c ⊂ [−2T, 2T], c(0) = 1}. This is
-  **literally (P) of def:PD** from Paper 47, with μ the spectral measure of c, «μ̌(u) = 0 for |u| ≥ 2T», and the
+  **literally (P) of def:PD** from Paper 46, with μ the spectral measure of c, «μ̌(u) = 0 for |u| ≥ 2T», and the
   primitive restrictions ĝ₀, ĝ₁ if working in the primitive class. Its dual (D) is the certificate (ν, β).
 
 So «minimizing Σv_n c(log n) (+ arch + pole) subject to ĉ ≥ 0, supp c ⊂ [−2T, 2T]» is the Cohn–Elkies/Delsarte LP that
-the corpus already solved as **def:PD / Theorem Z** (row 76: Cohn–Elkies gives the upper direction; Paper 47: flat-top
+the corpus already solved as **def:PD / Theorem Z** (row 76: Cohn–Elkies gives the upper direction; Paper 46: flat-top
 certificates). **It is branch 2:** it reads λ_A exactly. Adding the extra restriction «c ≥ 0 on [0, 2T]» (class C⁺) does not change
 the infimum in the even sector (by 2.2), so the restricted LP has the same value as def:PD.
 

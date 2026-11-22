@@ -3,12 +3,12 @@
 Design round, not a construction round. Pen and paper; no numerics beyond cited record values; no proof attempts.
  no
 equivalence between row D and any other statement is used, invoked or mentioned.
-ARGUED / OPEN / NO-GO / NUMÉRICO. "P47" = 04-papers/47-row-d-dual-certificates/main.tex; "186/" = phase-186-toolbox;
+ARGUED / OPEN / NO-GO / NUMÉRICO. "P46" = 04-papers/46-row-d-dual-certificates/main.tex; "186/" = phase-186-toolbox;
 "188/" = phase-188-closing-D; "190/" = phase-190 memos; index = 05-meta-and-planning/ROUTES-TRIED-INDEX.
 
 Mandatory reading done: 190/SHAPE_THEOREM.md (with its §0 erratum and SHAPE_THEOREM_REVIEW.md);
 crossword §3.2–3.3 and addenda 186/188/189; index README (incl. "Correcciones ", phase 190), 06_ R1–R10 and "Other
-open items", 04_ Part I-a/b/c; P47 §sec:coer (lem:coer-decomp, thm:coer-A, thm:coer-B, cor:coer-L1, thm:coer-schur,
+open items", 04_ Part I-a/b/c; P46 §sec:coer (lem:coer-decomp, thm:coer-A, thm:coer-B, cor:coer-L1, thm:coer-schur,
 rem:coer-honest, rem:coer-nogo), prop:finite, rem:regimes, prop:decide, lem:contA, lem:monoT, thm:wit-Tc, lem:wit-freeze,
 thm:wit-asym, thm:margin/cor:margin1, lem:degen, prop:wit-sens, thm:X, lem:flowdet, thm:wh-schur/lem:wh-schurabs,
 thm:log5A, cor:void, rem:twohalves; 186/R186_048 (W-cont), R186_029 (Lemma H), R186_031 ((B_T) false); 188/L2_BUILD_001
@@ -25,7 +25,7 @@ specification uses ℤ-integrality — clause (θ) is not met as written. No sig
 
 ---
 
-## 1. Setting and notation (P47)
+## 1. Setting and notation (P46)
 
 - Contacts: n_1 = 2 < n_2 = 3 < n_3 = 4 < n_4 = 5 < n_5 = 7 < n_6 = 8 < n_7 = 9 < n_8 = 11 < … (the support of Λ);
   T_j := ½ log n_j; regimes R_j := (T_j, T_{j+1}]; gap ε_j := T_{j+1} − T_j = ½ log(n_{j+1}/n_j).

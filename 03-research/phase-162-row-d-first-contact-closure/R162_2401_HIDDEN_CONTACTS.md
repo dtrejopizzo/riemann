@@ -3,7 +3,7 @@
 * Cell 8B/6C boundary (object: the first-contact witness F and its node system, column B/C; arithmetic:
 exact values of Λ on [X^{1/2}, X) with X = e^{2T_c}, row 6). Nearest routes: R162_2202 (Thm NI, residual O2202.2),
 R162_2301 (Thm Q, residual "type > 2T_c"), R162_2290 (fixes F8–F12), R160_X_C1 (Thm R, FC, G), G2_B6_R2 (Thm M,
-Cor M1, Cor M2), P47 thm:margin. Walls named in advance: W12 (exact identity without sign), W3 (class blindness),
+Cor M1, Cor M2), P46 thm:margin. Walls named in advance: W12 (exact identity without sign), W3 (class blindness),
 W4 (F2), W2 (Theorem M). No numerics were run; the numbers quoted come from the record (2001/2190,
 R160_X_C1 §7, Zhu). No sign for ζ is claimed. No label moves. Gate 1 stays OPEN.*
 

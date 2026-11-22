@@ -65,7 +65,7 @@ tools/schur_coupling_split.py T Nb dps: arch/comb/Tate split, Schur shares by se
 tools/rung_gram_prep.py T nP [dps] (ROUND_018_B): even prolates ψ_0..ψ_{2nP−2}, exact constraint rows, survivor, admissible null space, Frobenius/scale → cache/rung_prep_*.pkl (nP = 11: 5–11 min; nP = 21 at dps 50: 10 min).
 tools/rung_gram_tail.py T nP h L: per-prolate Poisson tails on a uniform grid; 𝒜_∞ (Lévy, FFT), comb over prime powers, A, B, window masses → cache/rung_tail_*.npz (ODE cached in cache/rung_u_*.npy; first run 2–4 min parallel, then ≤ 4 min). Grid error: ρ 0.6 %, comb 3 % between h = 1e-4 and 5e-5.
 tools/rung_gram_schur.py npz lamA: exact ledger, Schur balance on the admissible E-images, rungs (parity tag by ψ_{4j+2} mass), and the c-scan of the tail form (log N → c log N) with det₂ zeros.
-tools/cert_window/ (ROUND_026_A): rigorous (Arb ball) lower certificate for λ_A(T) by Paper 47 prop:lowercert with a
+tools/cert_window/ (ROUND_026_A): rigorous (Arb ball) lower certificate for λ_A(T) by Paper 46 prop:lowercert with a
 certified floor. build_G.py T_expr tauN s_num s_den K2 [prec] [out] (T_expr ∈ {log5h, 1, 1.035, 1.098, 1.2,
 log15h+0.01}; env PART/NPART for parallel node ranges): interval scan s_T ≥ s_∞ on [τ_N, τ_B], Gauss–Legendre panels
 with Bernstein-ellipse remainders, spherical Bessel by ball recurrence at adaptive precision, Gram data of both parities

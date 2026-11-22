@@ -2,7 +2,7 @@
 
 Pure mathematics, no numerics run. The float data cited are R162_1601 (UNCERTIFIED).
 Inputs: R162_1501 §5 (R-C), R162_1601, R162_504 Thms 1–3, R162_703 Thm 4.2 with the R162_990 fixes, R162_902,
-Paper 47 thm:parityschur (o),(a3),(b),(c), lem:contA, lem:contT, lem:monoT, cor:convfail.
+Paper 46 thm:parityschur (o),(a3),(b),(c), lem:contA, lem:contT, lem:monoT, cor:convfail.
 
 **Status.**
 - §1 Theorem 1 (what "Type I" means across windows): **PROVED**, by assembling results from the corpus. The literal

@@ -5,7 +5,7 @@ numbers below are closed-form arithmetic (v_n, ε) and the cited certified value
 ARGUED / OPEN / NO-GO. **No negative value of 𝔞_T for ζ is produced or claimed.**
 
 ## 0. Which step this is (PROVED, bookkeeping)
-Contacts 2,3,4,5,7,… ; n_j = 5, n_{j+1} = 7. T_j = ½log5 = 0.8047 (λ_A ≥ 2.5·10⁻¹², thm:log5A, ball arithmetic, CITED from P47);
+Contacts 2,3,4,5,7,… ; n_j = 5, n_{j+1} = 7. T_j = ½log5 = 0.8047 (λ_A ≥ 2.5·10⁻¹², thm:log5A, ball arithmetic, CITED from P46);
 T_{j+1} = ½log7 = 0.9730. By SPEC_A §1.1 the atom whose row is new on R_j = (½log5, ½log7] is **5** (entered invisibly at T_j,
 R186_048 L3.1), not 7; 7 enters invisibly at the endpoint T_{j+1}. (CA_R3_001 §6 names "n_j = 7" as first test case: that is the
 step ½log7 → ½log8; the step asked here is the one before it.) Liu Thm B (CITED, 17/16) covers this step if accepted; the step

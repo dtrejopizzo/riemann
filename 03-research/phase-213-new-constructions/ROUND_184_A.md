@@ -18,4 +18,4 @@ The cost of truncating the translation, in averaged squared norm, is at most ||�
 
 The result requires a real frequency that may depend on D and on the profile. To exclude saturation along this route one would need a uniform separation from one able to beat C/D² at some D, including the exceptional frequencies. That separation is not proved here.
 
-**Independent audit.** The extraction by Plancherel, the coefficient of the deficit, the relative loss O(D⁻²) and the order of limits were verified. P47 prop:wit-coh already deduces weighted coherence from a negative datum. The additional statement here is the threshold close to one on a localized prime interval under critical saturation.
+**Independent audit.** The extraction by Plancherel, the coefficient of the deficit, the relative loss O(D⁻²) and the order of limits were verified. P46 prop:wit-coh already deduces weighted coherence from a negative datum. The additional statement here is the threshold close to one on a localized prime interval under critical saturation.

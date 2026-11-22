@@ -64,9 +64,9 @@ Entries touching this construction, with the new reason for each:
 **Siegel's lemma, Bombieri–Vaaler, Dyson's lemma and Kazarnovskiĭ's count have no entry.** They are the new content
 of this memo. Every result below is proposed for the index in §9.
 
-## 1. What needs to be extended: D^W and I_∞ (P46 §11, §12, §19)
+## 1. What needs to be extended: D^W and I_∞ (P47 §11, §12, §19)
 
-- **D^W (P46 Def 11.1).** Real functions g ∈ C²(ℝ) with g^{(j)}(t) = O(e^{−(1+ε)|t|}) for j = 0,1,2. It is a ⋆-algebra
+- **D^W (P47 Def 11.1).** Real functions g ∈ C²(ℝ) with g^{(j)}(t) = O(e^{−(1+ε)|t|}) for j = 0,1,2. It is a ⋆-algebra
   with involution g^∨(t) = g(−t) and translations τ_a (Lemma 11.2).
 - **Intersection form.** I_∞ (Def 11.4) is the polarization of ⟨X⋆X^∨, W_fin + ω_∞⟩: the prime term plus the
   archimedean term of the explicit formula evaluated on the autocorrelation. It has radical 𝓝_∞ (Thm 11.11).
@@ -101,12 +101,12 @@ sampling of g⊠g that is linear and supported on a countable set of points of (
    L_X = {log m : m ≤ X} ⊂ [0,T]. In the version with a sampling fiber, the set is countable and closed in [−T,T].
 2. Choose an open interval J ⊂ (0,T) disjoint from L_X. It exists, because L_X is finite.
 3. The subspace V_J = {g ∈ C_c^∞(J) : g ∈ P_T} has codimension ≤ 2 in C_c^∞(J). The two conditions of P_T are
-   linear (Φ_g(0) = Φ_g(1) = 0 in P46's normalization). Hence V_J is infinite-dimensional.
+   linear (Φ_g(0) = Φ_g(1) = 0 in P47's normalization). Hence V_J is infinite-dimensional.
 4. On V_J the left side is identically 0.
 5. I_∞ is not identically 0 on V_J. For g ∈ V_J with |J| < log 2, the prime term vanishes, because g⋆g^∨ is
    supported on (−|J|,|J|) and does not reach log 2. What remains is I_∞(g,g) = ⟨g⋆g^∨, ω_∞⟩, the archimedean form.
 6. The archimedean form is non-degenerate on C_c^∞ of any interval. Its kernel is K(u) plus a singular part at 0
-   (CITED: P46 Thm 11.3, local small-support positivity of Yoshida/Bombieri, which is L02 of the index). If it were ≡ 0 on
+   (CITED: P47 Thm 11.3, local small-support positivity of Yoshida/Bombieri, which is L02 of the index). If it were ≡ 0 on
    a codimension-≤2 subspace of C_c^∞(J), by polarization the kernel would have rank ≤ 2 on J×J. That is false: the
    kernel contains −(1/2π)log|u| plus a smooth function, which has infinite rank.
 7. Contradiction. ∎
@@ -215,8 +215,8 @@ Siegel's lemma / Bombieri–Vaaler is, in Arakelov language, the inequality h⁰
 −log covol. If the norm depends on E via weights e^{−E(log m)−E(log n)}, then log covol = Σ_{(m,n)}(E(log m)+E(log n))
 (diagonal determinant), which is **linear** in E. If the norm is the Gram matrix of the window form over the comb of 𝔇₁, the
 log det is Szegő–Widom: a linear term plus a quadratic term Σk|φ̂_k|² that is a **positive-definite** H^{1/2} norm.
-It has no informative sign and is already closed by W-det. This is exactly C-RR / P46 Prop 20.1. **NO-GO (CITED + PROVED
-via P46 Prop 20.1).**
+It has no informative sign and is already closed by W-det. This is exactly C-RR / P47 Prop 20.1. **NO-GO (CITED + PROVED
+via P47 Prop 20.1).**
 
 ## 4. S3: can Serre duality be Möbius?
 

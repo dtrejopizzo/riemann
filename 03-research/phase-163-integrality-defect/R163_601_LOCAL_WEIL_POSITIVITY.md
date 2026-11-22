@@ -157,7 +157,7 @@ happens to be divisible by $\widehat\psi(\cdot-\gamma)$, which (zeros of $\wideh
 non-generic. Individual instances are *proved*:
 
 **Proposition 5 (unconditional instances).**
-- (i) PROVED-CITED: $P_{\rm loc}(\gamma,T')$ holds for all $\gamma$ when $T'\le\frac12\log5$ (Paper 47 `thm:log5A`, certified; record),
+- (i) PROVED-CITED: $P_{\rm loc}(\gamma,T')$ holds for all $\gamma$ when $T'\le\frac12\log5$ (Paper 46 `thm:log5A`, certified; record),
   since $\mathrm{Loc}_{T'}\subset\mathcal P_{T'}$.
 - (ii) PROVED-CITED (R163_602 §2.1, re-checked): pointwise $\sigma_{T'}\ge m-V_{T'}$, $V_{T'}\le4.16e^{T'}$ (Rosser–Schoenfeld
   $\psi(x)<1.04x$, FROM MEMORY, + partial summation), and $m$ is even and increasing in $|\tau|$ with $m(0)=\psi(\frac14)-\log\pi=-\gamma_E-\frac\pi2-3\log2-\log\pi\approx-5.37$
@@ -290,7 +290,7 @@ sub/supra-Landau range and must use integrality and the Euler product (S4, T2); 
 | Cor 3 smoothed cell identity; $P_{\rm loc}\Rightarrow P_k\ge N_k$ (non-strict) | PROVED |
 | Rem 3a cross terms vanish exactly; sharp/node cells are not form values | PROVED |
 | Prop 4 margin inheritance | PROVED (Theorem M(b) record) |
-| Prop 5 (i) $T'\le\frac12\log5$; (ii) double-log range on concentrated cone | PROVED-CITED (Paper 47; R163_602 §2.1) |
+| Prop 5 (i) $T'\le\frac12\log5$; (ii) double-log range on concentrated cone | PROVED-CITED (Paper 46; R163_602 §2.1) |
 | §3(2c) regimes; MV range = sub-Landau; Landau ceiling = $\alpha=1$ | PROVED (bookkeeping); readings ARGUED |
 | 4.1 localised explicit formula; 4.2 $(\mathrm H_{\rm loc})\Leftrightarrow P_{\rm loc}$ | PROVED |
 | 4.3 literature comparison | ARGUED; citations FROM MEMORY |

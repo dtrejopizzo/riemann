@@ -1,10 +1,10 @@
 # Hyperbolic model: Gram of all orders through a positive Green function
 
-Status: **PROVED for the indicated model**, independent mathematical review (cases/new invariant). **OPEN** any transfer to the real Phi. No new positivity of W, admissible dimension or window T of Paper47. Papers untouched.
+Status: **PROVED for the indicated model**, independent mathematical review (cases/new invariant). **OPEN** any transfer to the real Phi. No new positivity of W, admissible dimension or window T of Paper46. Papers untouched.
 
 ## 1. Object and prior consultation
 
-For fixed a>0, let phi_a(t)=exp(-a cosh(2t)), Z_a(u)=integral_R exp(ut)phi_a(t)dt and M_a=Z_a'/Z_a. Here a is a parameter of the model, not an exponent of a test of Paper47. We prove that
+For fixed a>0, let phi_a(t)=exp(-a cosh(2t)), Z_a(u)=integral_R exp(ut)phi_a(t)dt and M_a=Z_a'/Z_a. Here a is a parameter of the model, not an exponent of a test of Paper46. We prove that
 
     [(M_a(u_i)+M_a(u_j))/(u_i+u_j)]_ij is PSD
 

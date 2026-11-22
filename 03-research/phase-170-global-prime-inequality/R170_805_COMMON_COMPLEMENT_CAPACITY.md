@@ -3,7 +3,7 @@
 Origin: theorem 6.52 and theorem 6.53 of
 [2609.20367v1](https://arxiv.org/abs/2609.20367v1). Here the proof is
 reconstructed directly, without using its RH induction or its
-certificates. The application to the Paper 47 arithmetic operator is
+certificates. The application to the Paper 46 arithmetic operator is
 kept separate.
 
 ## Form and statement
@@ -121,5 +121,5 @@ respectively.
 
 These numbers are floating-point diagnostics of finite compressions.
 They do not certify the continuous form: the continuous justification
-is the proof above. Nor are they margins of the Paper 47 arithmetic
+is the proof above. Nor are they margins of the Paper 46 arithmetic
 operator.

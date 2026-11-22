@@ -42,7 +42,7 @@ are real would be assuming the conclusion.
 
 ## 2. What is available and what needs correcting
 
-**Certified range.** Paper 47, `thm:log5W`, and R163_401 §2.1 record
+**Certified range.** Paper 46, `thm:log5W`, and R163_401 §2.1 record
 λᵂ_T ≥ 10⁻¹⁸ for 0 < T ≤ ½ log 5. This result is imported; the
 certified computation was not re-run in this phase.
 
@@ -78,7 +78,7 @@ R169_101 and R169_190 do not obtain the required sign from it.
 the space of tests remains infinite-dimensional. Finiteness of the
 arithmetic support does not automatically prove termination of an
 algorithm that decides all cases, especially when the infimum is zero.
-Paper 47, `prop:decide`, assumes T computable and λᴾ_T ≠ 0 and deals with
+Paper 46, `prop:decide`, assumes T computable and λᴾ_T ≠ 0 and deals with
 λᴾ, not with an unrestricted decider for λᵂ or λᴬ.
 
 ## 3. The twisted reduction is still conditional
@@ -121,6 +121,6 @@ Local references:
 - [R167_101](../phase-167-witness-weighted-sieve/R167_101_QUANTITATIVE_TARGET.md).
 - [R169_000 v2](../phase-169-input-architecture/R169_000_INPUT_ARCHITECTURE.md).
 - [R169_190](../phase-169-input-architecture/R169_190_AUDIT.md).
-- [Paper 47](../../04-papers/47-row-d-dual-certificates/main.tex).
+- [Paper 46](../../04-papers/46-row-d-dual-certificates/main.tex).
 - [Paper 48](../../04-papers/48-row-d-route-map/main.tex).
 </content>

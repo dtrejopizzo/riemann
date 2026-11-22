@@ -7,9 +7,9 @@ NUMERICAL. Everything new in this memo is **specification or proposal (OPEN)**: 
 
 Sources read in full: phase 200 README; LEDGER_L1…L5; AUDIT_CONSTRAINTS_001; AUDIT_L_SHARP_16 §6;
 MORI15_EXTREMAL_001; BRIDGE_001 (§§0–3); ROUTES-TRIED-INDEX/README (families, "Specification of the sign carrier",
-phases 190–199, l.203–212, l.465–510); Paper 47 `sec:ext` (prob:ext-L, prop:ext-consol, lem:ext-weight, lem:ext-cell).
+phases 190–199, l.203–212, l.465–510); Paper 46 `sec:ext` (prob:ext-L, prop:ext-consol, lem:ext-weight, lem:ext-cell).
 
-**Notation** (Paper 47 §22, BRIDGE §1). μ = e^{2T} ≥ 5, λ = √μ, f admissible (even, real, supp ⊂ [−λ,λ],
+**Notation** (Paper 46 §22, BRIDGE §1). μ = e^{2T} ≥ 5, λ = √μ, f admissible (even, real, supp ⊂ [−λ,λ],
 f(0) = f̂(0) = 0), g = Ef|_I, r = f̂|_{(λ,∞)}, Ψ̌ = (Zr)(e^·)1_{(T,∞)}, 𝒢̄ = gauge (radical), ℓ(g) = 2dist²(r,𝒢̄).
 (★★): 𝒜[Ψ̌] + 2A(Ψ̌)B(Ψ̌) − 2⟨Ψ̌, Z_log r⟩ ≥ 2κμ^{−A}dist²(r,𝒢̄), with 𝒜 = (1/2π)∫m|Ψ̌^|².
 FF.1 (PROVED): Ψ̌ = Σ_{N≥μ} c_N N^{−½} τ_{log N} g + gauge mirror, c_N = Σ_{m|N, m<μ} μ(m), c_N = 0 for 2 ≤ N < μ,
@@ -23,7 +23,7 @@ one line.)
 
 ### A.1 Cross table
 
-| Feature required of the sign object | L1 (RH2017–9, 0–99) | L2 (100–162) | L3 (163–193) | L4 (194–199, P47) | L5 (meta) | Verdict |
+| Feature required of the sign object | L1 (RH2017–9, 0–99) | L2 (100–162) | L3 (163–193) | L4 (194–199, P46) | L5 (meta) | Verdict |
 |---|---|---|---|---|---|---|
 | **Second order** (Hessian, not a first-order discriminant) | F4: λ_min ≈ cδ², low rank | P16: only radical equations | F3: every first-order discriminant is a functional of h* | I11: Gram (g,Ψ̌) = W_T·[[1,−1],[−1,1]] | C7 (identity + C–S, wrong direction) | **unanimous** |
 | **Not factorized** (not place by place, not a sum of local signs) | F1, F9, F13: G_p indefinite; NG-E1 cross-place never built | P13 (meta-136: polar/Frobenius) | F5 separable only in Euler vectors; F8 irrelevant sites | I12 channel by channel PR, lossless loop | C5 dead by theorem | **unanimous** |

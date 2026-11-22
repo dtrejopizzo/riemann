@@ -29,7 +29,7 @@ Status: **NO-GO (PROVED), with four PROVED STEPS.** Gate 1 is not closed.
   residues are tied to finite truncated collar data and not to the jets. No Vandermonde/Hankel system
   links (i) and (ii).
 
-Notation follows Paper 47 §sec:firstcontact, R162_401 and R162_403. I = I_T = (−T,T). P = P_T is
+Notation follows Paper 46 §sec:firstcontact, R162_401 and R162_403. I = I_T = (−T,T). P = P_T is
 restriction to I followed by extension by zero. Π is the projection of L²(I) onto 𝒫_T. τ_c F(t) =
 F(t+c) (left shift) and V_c F(t) = F(t−c) (right shift). μ_F(a) = ∫e^{at}F and K_F(a) = ∫e^{−at}F, so
 μ_F = εK_F when JF = εF. a_j = 2j+½, s_j = 2j+1. The real pairing is used throughout. The form is

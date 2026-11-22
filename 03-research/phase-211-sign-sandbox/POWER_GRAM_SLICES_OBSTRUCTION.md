@@ -2104,11 +2104,11 @@ contradicting any delta>0. This holds even for sigma<0, when the moment of the n
 
 ### 18.9. Equivalence of the target for all windows and exact primitive constraints
 
-**PROVED as scope, not as sign.** joint_sign_fresh_review, independent verification global_restart_checked; audit arithmetic_fresh_candidate PASS and second review PASS. Reread the project rules, the three indices, the definitions eq:form, eq:W and eq:target of [Paper47](../../04-papers/47-row-d-dual-certificates/main.tex), [BRIDGE002](POWER_BRIDGE_002.md), [CONFLUENT_BRIDGE014§3](POWER_CONFLUENT_BRIDGE_014.md) and the lemma ALREADY proved in [GLOBAL, Primitive comparisons](POWER_GLOBAL_ROUTE_REVIEW.md). The new scope is applying that lemma to D=M_Phi itself and verifying the step from the primitive windows to their causal mixtures; no new analytic principle nor a positivity proof is presented.
+**PROVED as scope, not as sign.** joint_sign_fresh_review, independent verification global_restart_checked; audit arithmetic_fresh_candidate PASS and second review PASS. Reread the project rules, the three indices, the definitions eq:form, eq:W and eq:target of [Paper46](../../04-papers/46-row-d-dual-certificates/main.tex), [BRIDGE002](POWER_BRIDGE_002.md), [CONFLUENT_BRIDGE014§3](POWER_CONFLUENT_BRIDGE_014.md) and the lemma ALREADY proved in [GLOBAL, Primitive comparisons](POWER_GLOBAL_ROUTE_REVIEW.md). The new scope is applying that lemma to D=M_Phi itself and verifying the step from the primitive windows to their causal mixtures; no new analytic principle nor a positivity proof is presented.
 
 The following global targets are equivalent:
 
-1. lambda_A(T)>=0 for ALL T>0, with the two Tate moments and the logarithmic domain declared in Paper47.
+1. lambda_A(T)>=0 for ALL T>0, with the two Tate moments and the logarithmic domain declared in Paper46.
 2. K_(M_Phi)(u,v)=[M_Phi(u)+M_Phi(v)]/(u+v) is PSD in all sizes.
 3. A is PSD on all real nodes.
 4. A(.5log k,.5log l) is PSD on all blocks of positive integers; equivalently, on all blocks of any fixed tail of these.
@@ -2122,7 +2122,7 @@ The equivalences 2–3 and 3–4 are §§2.1,18,18.7. The implication 2=>1 is th
 
 This is the causal physical function entering W, not an automatic identification with the exterior datum h=Zrho of another convention. Choose 1/2<eta<min_i u_i. Cutting f off smoothly only at infinity converges in H_eta of 014. The two moment errors tend to 0. Choose two fixed smooth bumps interior to the half-line, with invertible moment matrix exp(±r/2), and correct those errors via coefficients tending to 0. One obtains compact causal functions f_R, EXACTLY primitive and converging to f in H_eta.
 
-f_R(0)=0 is not required. The extension by zero of H¹ on the half-line belongs continuously to H^s(R) for 0<s<1/2, even with that jump, and hence to the logarithmic domain of Paper47. Translating each compact support inside some I_T preserves the two vanishing moments and W; on primitives W=a_T. Hypothesis 1 gives W[f_R]>=0. Continuity 014 allows passing to the limit: W[f]>=0.
+f_R(0)=0 is not required. The extension by zero of H¹ on the half-line belongs continuously to H^s(R) for 0<s<1/2, even with that jump, and hence to the logarithmic domain of Paper46. Translating each compact support inside some I_T preserves the two vanishing moments and W; on primitives W=a_T. Hypothesis 1 gives W[f_R]>=0. Continuity 014 allows passing to the limit: W[f]>=0.
 
 The identity CONE001 is W[f]=sum_ij d_i conjugado(d_j)K_(M_Phi)(u_i,u_j). Hence PSD of K has been proved on ALL blocks subject to those two constraints. M_Phi=Z'/Z is odd and real-analytic on all of R because Phi is even and Z is strictly positive on R. Applying the lemma of GLOBAL with c=1/2,D=M_Phi: congruence by u²-c², two anchors, analytic continuation and null rows at ±c turn that restricted positivity into full PSD. This proves 1=>2.
 
@@ -2400,7 +2400,7 @@ Since Q_log(P)>=0,
 
 THIS exact primitive vector is signed, with all arithmetic and theta contributions kept. The leading mode was only used as the reference term of a bound with full tail; it was not claimed to be a PSD approximant in all orders. The auxiliary rational checks of the coefficients and finite sums above were reproduced in the audit; no decimal quadrature enters the proof.
 
-The case corresponds to the first nonconstant orthogonal polynomial for w=(t-1)p. It does not prove that the result is preserved for higher degrees, arbitrary combinations of those polynomials, or their crossings. The computation (POLY-POS) also does not by itself prove a core property, a recurrence, a new K minor of fixed order, a W/T window nor the global sign of Paper47. The sufficient density property is verified independently in §19.8, without inheriting sign in higher degrees. No paper has been modified nor has an ideas or computation file been created.
+The case corresponds to the first nonconstant orthogonal polynomial for w=(t-1)p. It does not prove that the result is preserved for higher degrees, arbitrary combinations of those polynomials, or their crossings. The computation (POLY-POS) also does not by itself prove a core property, a recurrence, a new K minor of fixed order, a W/T window nor the global sign of Paper46. The sufficient density property is verified independently in §19.8, without inheriting sign in higher degrees. No paper has been modified nor has an ideas or computation file been created.
 
 
 ### 19.8. The polynomials times p are a sufficient core; all their primitive blocks are equivalent to the global target
@@ -2918,4 +2918,4 @@ Local uniform convergence to the right of log2, before the next jump log3, keeps
 
 have a common kernel of dimension at least 1. Choose nonzero b in it and set f(exp(2r))=sum_i b_i chi_i(r). The physical F(exp(2r))=Phi(r)sum_i b_i chi_i(r) has both Tate moments zero. The disjoint supports ensure F nonzero, and Phi g<0 on I gives V(f)<0 strictly. Its preimage P=T^(-1)F is smooth compact and satisfies P(1)=integralP=0 by §18.9; P'(1)=0 is not imposed. No radius, degree or other sign test is computed. By contrast, the boundary r towards 0 has g(r)=[Phi(0)/2]log(1/r)+O(1): the known favourable logarithmic killing of ROUND005D§1 does not control this interior interval.
 
-ONLY the requirement V(f)>=0 for all local bumps in this exact decomposition is refuted, EVEN restricting F to exact primitivity via the combination of three bumps. The difference term of (POT-V) keeps mixed sign and can compensate V<0: it is NOT proved that Q is negative, A negative, the full primitive form of Paper47 negative, nor a general NO-GO for paths, three points or joint treatments. Global remains OPEN; certificates §§19.7,19.9 intact. No new files, campaign, new W/T window or changes to papers.
+ONLY the requirement V(f)>=0 for all local bumps in this exact decomposition is refuted, EVEN restricting F to exact primitivity via the combination of three bumps. The difference term of (POT-V) keeps mixed sign and can compensate V<0: it is NOT proved that Q is negative, A negative, the full primitive form of Paper46 negative, nor a general NO-GO for paths, three points or joint treatments. Global remains OPEN; certificates §§19.7,19.9 intact. No new files, campaign, new W/T window or changes to papers.

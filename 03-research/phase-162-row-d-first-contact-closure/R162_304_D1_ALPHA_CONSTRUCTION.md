@@ -17,7 +17,7 @@ Status: **NO-GO for the α-route (PROVED).** Five results are proved below:
 Proposition 5.1 is therefore a reformulation of "no first-contact vector of parity ε", not a
 reduction. The next sub-lemma returns to C2.1 (§7).
 
-Notation as in R162_302 and Paper 47:
+Notation as in R162_302 and Paper 46:
 
 - P_T^ε is the set of vectors of P_T with JG = εG.
 - K = K_* = ker H_{T_*}, and K^ε = K ∩ P^ε, which is finite-dimensional.
@@ -46,7 +46,7 @@ Here:
 - κ̂_L(τ) = Σ_{m≤L} a_m e^{−2a_m(T+δ)} · 2[a_m sinh(2a_mT) cos 2Tτ + τ cosh(2a_mT) sin 2Tτ]/(a_m²+τ²)
   is the transform of κ_L·1_{[−2T,2T]}.
 
-A sufficient, certificate-type version is p̂ ≥ 0 pointwise on ℝ. This is problem (D) of Paper 47
+A sufficient, certificate-type version is p̂ ≥ 0 pointwise on ℝ. This is problem (D) of Paper 46
 with target εκ_L and an extra comb Σα_n cos(τ log n) *inside* the window.
 
 *Proof.* Pair (B) with c_G: ⟨c_G, δ_{log n}+δ_{−log n}⟩ = 2c_G(log n) and ⟨c_G, σ̌_T⟩ = a_T(G).

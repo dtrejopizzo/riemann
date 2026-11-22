@@ -36,7 +36,7 @@ ingredient of the split each falsifier removes.
   the window, exact identity without sign, DEAD), 05b l.39 (L87 Perfekt: multiplicative Hilbert matrix
   1/(√(mn)log(mn)) bounded, falsifier-first only).
 - **Sources read:** AUDIT_L_SHARP_1 (all of §1–6), memo E (E.1–E.5, §7), memo A (Thm 1.1, Prop 2.1, §3.2, Rem 3.3),
-  Paper 47 (sec:cert, the remark citing Zhu Thm 1.2 for T ≤ 0.8, prop:archneg).
+  Paper 46 (sec:cert, the remark citing Zhu Thm 1.2 for T ≤ 0.8, prop:archneg).
 - **Why not a retry.** (a) R170_885 and R162_1902 used Euler–Maclaurin / the sawtooth *on the window carrier*, as
   a linear functional in c or as a Fredholm-range condition; here the sawtooth is the Euler–Maclaurin remainder of
   the *partial sums ζ_X(1−s) inside the exterior quadratic form*, where (Thm F.2) its complement is a pointwise null
@@ -215,9 +215,9 @@ Fourier-dual bookkeeping of the same sawtooth; its "cross-class interference" is
 
 **Proposition F.5 (shallow data = window form; PROVED reduction, positivity CITED).** If ρ is supported in
 (1,X₀], then Ψ̌_ρ is supported in (0, log X₀] and 𝔔[ρ] = W_{T₀}(Ψ̌_ρ(·+½log X₀)) with T₀ = ½log X₀ (the complete
-window form of Paper 47 with comb q < μ₀ = X₀; the pairs with log q ≥ log X₀ do not pair within the support).
+window form of Paper 46 with comb q < μ₀ = X₀; the pairs with log q ≥ log X₀ do not pair within the support).
 Hence, for X₀ ≤ e^{1.6}: 𝔔[ρ] ≥ λ^W_{T₀}‖Ψ̌_ρ‖² ≥ 0 (Zhu, Thm 1.2, CITED: the complete form is positive for
-T ≤ 0.8; Paper 47 thm:log5A/W give T ≤ ½log 5 unconditionally). Such ρ are not in PW_μ; the statement is a
+T ≤ 0.8; Paper 46 thm:log5A/W give T ≤ ½log 5 unconditionally). Such ρ are not in PW_μ; the statement is a
 positivity of the exterior form on compactly supported data of depth ≤ 4.95, nothing more. It fixes the scale:
 *the depth of the data on the exterior carrier is the window half-length*, so the exterior carrier does not escape
 the window problem — what it adds is the Paley–Wiener constraint (Cor 3.2) and the quotient by the radical.
@@ -266,7 +266,7 @@ exterior form is therefore a property of the *triple* (F₀, F₁, F₂) coupled
 - **PROVED:** Prop F.0, Thm F.1, Thm F.2 (i)–(iv), Cor 3.2, Thm F.3, §4.2 bookkeeping, Prop F.4, the reduction in
   Prop F.5, the table of §7.
 - **CITED:** Euler–Maclaurin for ζ_X (Titchmarsh), Guo Lemma 4.3 (r = O(ξ^{−2})), memo A Thm 1.1/Prop 2.1, memo E
-  Cor E.3/E.2/E.5, Lemma E.4, Zhu Thm 1.2 (T ≤ 0.8), Paper 47 thm:log5A/W.
+  Cor E.3/E.2/E.5, Lemma E.4, Zhu Thm 1.2 (T ≤ 0.8), Paper 46 thm:log5A/W.
 - **ARGUED:** §4.3 (Hilbert inequalities cannot give the sign), §5 consequence (c), Rem 3.3 for Beurling/cΛ
   summatory remainders (standard, not re-proved).
 - **NO-GO (recorded):** Hilbert/Montgomery–Vaughan/Perfekt upper bounds as the decisive step; "(1,1) class bounded

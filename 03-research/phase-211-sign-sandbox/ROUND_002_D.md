@@ -6,7 +6,7 @@ a_T is finite), S_T := {F ∈ D_T : ‖F‖ = 1}, and the window form is split a
     Arch(F) = (1/2π) ∫ m(τ)|F̂(τ)|² dτ,     Π(F) = Σ_{log n < 2T} v_n Re c_F(log n).
 
 Both are Hermitian forms on D_T; Π is bounded (|c_F(u)| ≤ ‖F‖²), Arch ≥ λ_arch(T)‖F‖² with λ_arch(T) the bottom of the
-pure archimedean form on P_T (negative for T ≥ 0.60, Paper 47). For a real parameter c put
+pure archimedean form on P_T (negative for T ≥ 0.60, Paper 46). For a real parameter c put
 
     Φ_T(c) := inf_{F ∈ S_T} [Arch(F) − cΠ(F)],   so Φ_T(1) = λ_A(T) and Φ_T(c) = λ_A(T; cΛ).
 
@@ -26,7 +26,7 @@ piece that pins the scale (sees c, but not monotonically). The three candidates 
 ## 1. Corpus check
 
 Searched: ROUTES-TRIED-INDEX (README, 04_, 05_, 05b_, 06_, SURVEY_MODERN_UNTRIED, AUDIT_PHASE193), phase-211 files, the
-tractability review of phase 204 (G11), phase-200 ledger (S2), Paper 47, the corpus for "gcd", "numerical range",
+tractability review of phase 204 (G11), phase-200 ledger (S2), Paper 46, the corpus for "gcd", "numerical range",
 "Toeplitz–Hausdorff", "S-lemma", "joint range", "Schoenberg", "ℓ¹ metric", "Bohr", "log-gamma".
 
 - Concavity of Φ_T in c, monotonicity of Π, D_∃c: in the index (BB_001, CA_R1_001 line "D_∃c", G11: "concavity ⇒ upper
@@ -174,7 +174,7 @@ non-empty iff max Φ_T ≥ 0 iff Θ_T ≥ 0 by (iii). (★) at T is Φ_T(1) ≥ 
 immediate from Φ^{cΛ}(c') = inf[Arch − c'cΠ]. For the empty comb Π ≡ 0 and Θ_T = inf_{S_T} Arch = λ_arch(T). ∎
 
 Corollary 2 (PROVED). For T ≥ 0.60 and the empty comb, Θ_T < 0: the degree-0 half (I.a) fails for a_P with P > e^{2T}.
-For T ≤ ½ log 5, Θ_T ≥ λ_A(T) ≥ 0 (certified positivity, Paper 47). For every T, Θ_T ≥ λ_A(T), with equality iff c*_T = 1
+For T ≤ ½ log 5, Θ_T ≥ λ_A(T) ≥ 0 (certified positivity, Paper 46). For every T, Θ_T ≥ λ_A(T), with equality iff c*_T = 1
 can be chosen.
 
 Corollary 3 (PROVED, the sweet spot made exact). Let c*_T be a maximiser. Then
@@ -190,7 +190,7 @@ What Corollary 3 says about Π(F*) ≈ 0. If F* ∈ S_T is a minimiser at c = 1 
 the supergradient −Π(F*) has the sign of c*_T − 1 (CITED lem:degen for the supergradient): Π(F*) > 0 ⟹ c*_T < 1, and
 Π(F*) < 0 ⟹ c*_T > 1. Π(F*) = 0 iff (up to the choice of minimiser) c*_T = 1 and then λ_A(T) = Θ_T. So the question "is the
 true comb at the top of its scaling curve" is the question "does the minimiser of the window form see zero comb mass". PROVED
-under existence of a minimiser; existence is CITED for the form domain used in Paper 47 (compact resolvent part).
+under existence of a minimiser; existence is CITED for the form domain used in Paper 46 (compact resolvent part).
 
 ## 7. Falsifier test for the sign step of Candidate I
 

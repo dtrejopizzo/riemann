@@ -1,6 +1,6 @@
 # Strict positivity up to T=5/2 via a direct Fourier leakage bound
 
-For 0<T≤5/2 one has W_T(f)≥exp(−9000000001)||f||₂² on the full domain of paper 47. The height G=3·10¹² of Z2 is used. The step that changes the scale of the computation with respect to 178 is an explicit bound without high-degree interpolation.
+For 0<T≤5/2 one has W_T(f)≥exp(−9000000001)||f||₂² on the full domain of paper 46. The height G=3·10¹² of Z2 is used. The step that changes the scale of the computation with respect to 178 is an explicit bound without high-degree interpolation.
 
 **Leakage lemma.** For f supported in [−T,T] and F=f̂, the fraction of its energy in |τ|>Ω is at least
     η=[1+(1+TΩ)exp(2TΩ+2)]^(−1).

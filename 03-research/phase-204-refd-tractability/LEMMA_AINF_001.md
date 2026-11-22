@@ -5,7 +5,7 @@ Pure mathematics; numerics only as a check (NUMERICAL).
 
 ## 0. Summary
 
-**Theorem A∞ (PROVED).** Let 𝔪_T(F) = C₀‖F‖² + Lev(c_F) be the archimedean form of P47 eq:Aform with v ≡ 0
+**Theorem A∞ (PROVED).** Let 𝔪_T(F) = C₀‖F‖² + Lev(c_F) be the archimedean form of P46 eq:Aform with v ≡ 0
 (no comb, no polar term) on L²(I_T), I_T = (−T,T). For every t₁ ∈ (0, t₀] (t₀ = zero of m) and every
 integer N ≥ 1 with πN/(2T) < t₁,
 
@@ -36,16 +36,16 @@ does not reopen any route toward D; it quantifies a lemma already PROVED with a 
 concave Bernstein function + Dirichlet eigenfunctions) that replaces the ARGUED prolate argument with a proof with an
 exact constant. No closed route is being retried.
 
-## 2. Conventions (verified against P47)
+## 2. Conventions (verified against P46)
 
-- P47 l.106: I_T = (−T,T), F ∈ L²(I_T) extended by zero; c_F(u) = ∫F(x+u)\overline{F(x)}dx, support in [−2T,2T].
-- P47 lem:K, eq:m: K(u) = 2e^{3u/2}/(e^{2u}−1),
+- P46 l.106: I_T = (−T,T), F ∈ L²(I_T) extended by zero; c_F(u) = ∫F(x+u)\overline{F(x)}dx, support in [−2T,2T].
+- P46 lem:K, eq:m: K(u) = 2e^{3u/2}/(e^{2u}−1),
   m(τ) = Re ψ(¼ + iτ/2) − log π = C₀ + ∫_0^∞ (1 − cos τu) K(u) du, C₀ = ψ(¼) − log π = −5.3721834…
-- P47 thm:A, eq:Aform (proof): (1/2π)∫ m(τ)|F̂(τ)|² dτ = C₀‖F‖² + Lev(c_F), Lev(Φ) = ∫_0^∞ (Φ(0) − Re Φ(u))K(u)du,
+- P46 thm:A, eq:Aform (proof): (1/2π)∫ m(τ)|F̂(τ)|² dτ = C₀‖F‖² + Lev(c_F), Lev(Φ) = ∫_0^∞ (Φ(0) − Re Φ(u))K(u)du,
   with Plancherel ‖F̂‖² = 2π‖F‖² (convention F̂(τ) = ∫F(x)e^{−iτx}dx). Define
   **𝔪_T(F) := C₀‖F‖² + Lev(c_F) = (1/2π)∫ m|F̂|²**, i.e. 𝔞_T with v ≡ 0. It is finite exactly when
   ∫ log(2+|τ|)|F̂|² < ∞ (thm:A); its domain contains H¹₀(I_T).
-- P47 thm:S(i): m(τ) = C₀ + φ(τ²), φ(x) = Σ_{k≥0} x / (a_k(x + 4a_k²)), a_k = k + ¼, φ completely Bernstein.
+- P46 thm:S(i): m(τ) = C₀ + φ(τ²), φ(x) = Σ_{k≥0} x / (a_k(x + 4a_k²)), a_k = k + ¼, φ completely Bernstein.
 - Sectors: ev/odd = F(−x) = ±F(x); 𝔪_T commutes with reflection (m even), so n₋ adds up by sectors.
 - Constants from AUDIT_204_H1MINUS_001 (C₀, K, tail thm:S(iii)) match the ones used here.
 
@@ -131,7 +131,7 @@ terms of rank ≤ 2. Let R_N be the N×N matrix ⟨R e_k, e_l⟩ (compression to
 
 **Corollary C.** With t₁, B, δ_N as in Theorem A∞,
 (i) n₋(𝔄) ≥ #{j : μ_j(R_N) < δ_N} ≥ N − n₊(R_N) ≥ N − n₊(R);
-(ii) likewise by sectors with E_N^ev, E_N^odd (R commutes with reflection in every case of P47: v real, even/odd
+(ii) likewise by sectors with E_N^ev, E_N^odd (R commutes with reflection in every case of P46: v real, even/odd
 polar terms).
 *Proof.* Let V ⊂ E_N be the spectral subspace of R_N for eigenvalues < δ_N. For F ∈ V \ {0}:
 𝔄(F) = 𝔪_T(F) + R(F) ≤ −δ_N‖F‖² + R_N(F) < 0 by Theorem A∞(a). Apply (I4). The second inequality: the
@@ -176,7 +176,7 @@ Galerkin sees the direction N(T): consistent with the bound being optimal.
   Corollary C: n₋(𝔪_T + R) ≥ #{μ_j(R_N) < δ_N}; H1⁺ requires n₊ ≥ ⌈N/2⌉ − 1 on E^ev_N. Galerkin: n₋ = N(T) exact at 5 T.
   Upper bound OPEN. Not a route toward D: a tool.
 
-## 8. Text for P47 (English, ≤ 6 lines; after thm:A or in sec:spec)
+## 8. Text for P46 (English, ≤ 6 lines; after thm:A or in sec:spec)
 
 \begin{lemma}[archimedean negative count]\label{lem:archcount} Let $t_0$ be the zero of $m$ and $B=\varphi'(t_0^2)>0$. For $N\ge1$ with $\pi N<2Tt_0$, the form $\mathfrak m_T(F)=\frac1{2\pi}\int m|\widehat F|^2$ satisfies $\mathfrak m_T(F)\le-B\big(t_0^2-(\pi N/2T)^2\big)\|F\|^2$ on $\mathrm{span}\{\sin\frac{\pi k(x+T)}{2T}\}_{k\le N}$; hence $n_-(\mathfrak m_T)\ge\lceil 2Tt_0/\pi\rceil-1$, with $\lceil N/2\rceil$ even and $\lfloor N/2\rfloor$ odd directions.
 \end{lemma}

@@ -2,7 +2,7 @@
 
 Status: **PROVED STEP (exact reflected dictionary) + NO-GO (Hardy pole/zero mechanism).** Gate 1 OPEN.
 
-Sources used: Paper 47 §sec:firstcontact (eq:residue, eq:Gammaenergy, eq:smallgain); R161_017 (2.3), (4.1)–(4.3);
+Sources used: Paper 46 §sec:firstcontact (eq:residue, eq:Gammaenergy, eq:smallgain); R161_017 (2.3), (4.1)–(4.3);
 R161_008 Thm 3.1, (3.2); R162_102 Prop 1.1, 2.1; R162_305 §4.
 
 ## 0. Conventions

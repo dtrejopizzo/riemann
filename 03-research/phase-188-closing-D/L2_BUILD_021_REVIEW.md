@@ -4,8 +4,8 @@ Pen and paper. Sources checked: phase-159 G2_B1_R5 §3 (Theorem D, Cor D1, Lemma
 G2_P5_R5 (panel row: PROVED, conditional on record item Q′ of G2_B1_R4), N_BUILD_011 Thm 1 (+ review), L2_BUILD_018 Thm A/B (+ review).
 
 ## 1. Same form? YES
-G2_B1_R5 states that it works in P47 notation (main.tex l.114–146). A comb is a=(a_n)_{n≥2}, weight v_n=2a_n/√n at u=log n, and the form is
-P47 eq:form with the full m (C₀ = ψ(¼) − log π). Theorem D is stated for the **primitive** form 𝔞^{(a)}_T on P_T, i.e. P47's 𝔞_T on P_T. The
+G2_B1_R5 states that it works in P46 notation (main.tex l.114–146). A comb is a=(a_n)_{n≥2}, weight v_n=2a_n/√n at u=log n, and the form is
+P46 eq:form with the full m (C₀ = ψ(¼) − log π). Theorem D is stated for the **primitive** form 𝔞^{(a)}_T on P_T, i.e. P46's 𝔞_T on P_T. The
 statement "hence complete" applies only because the resonators lie in P_T. N_011 and 018 use 𝔞^ν_T = 𝔞_∞ − ∫Re c_F dν on P_T. Under
 ν = Σ_n (2a_n/√n)δ_{log n}, this is the same form with the same archimedean term. Normalisation: Λ ↦ density 2e^{u/2}du = ρ_1, so a residue r
 corresponds to Chebyshev density κ = r. There is no mismatch of form, window, archimedean term or normalisation.

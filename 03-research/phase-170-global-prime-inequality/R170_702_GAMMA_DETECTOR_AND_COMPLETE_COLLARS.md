@@ -1,6 +1,6 @@
 # R170_702 — Incorporating the Gamma detector and full balance
 
-Status: proved consequences of the Paper 47 and
+Status: proved consequences of the Paper 46 and
 R170_301/601 constructions; the arithmetic budget remains open.
 
 ## 1. Known detector and exact tail
@@ -11,7 +11,7 @@ For δ>0, `a_m=2m+1/2` and `b_m=√a_m exp(-a_m(T+δ))`, we define
  (\mathcal R F)_m=b_m\int_{-T}^T e^{-a_mt}F(t)\,dt,\quad m\ge1.
 \]
 
-Paper 47 proves it is Hilbert–Schmidt and injective: with `x=e^{-2t}`,
+Paper 46 proves it is Hilbert–Schmidt and injective: with `x=e^{-2t}`,
 the vanishing of the moments implies orthogonality to the monomials of
 positive degree on a compact interval not containing zero. Its linear
 span is dense. This property holds for every F, not only for primitive

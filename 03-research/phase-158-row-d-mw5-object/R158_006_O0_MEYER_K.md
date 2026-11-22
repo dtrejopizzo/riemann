@@ -24,7 +24,7 @@ Line numbers below refer to those sources: `math/0311468` (`Primes_Rep.tex`, Lat
 `00-references/papers-nuevos/C/arXiv-math0412277v3`.
 
 **1.1 Meyer, *On a representation of the idele class group related to primes and zeros of L-functions*, Duke Math. J.
-127 (2005) 519–595, arXiv math/0311468.** P46 (X33)(ii) lists this paper as "not read"; it has now been read.
+127 (2005) 519–595, arXiv math/0311468.** P47 (X33)(ii) lists this paper as "not read"; it has now been read.
 
 * (a) **Scope** (l.181): "Let `K` be an algebraic number field, that is, a finite algebraic extension of … `Q`". At
   l.293: "Although we state most results only for algebraic number fields, they also work with small modifications for
@@ -208,7 +208,7 @@ fixed field of `A₃`, and `K′` a cubic subfield. Then:
 
 *Proof.*
 * **(a).** Artin's formalism `ζ_K = ∏_π L(s,π)^{dim π}` over the irreducibles of `S₃`: `1`, `sgn` and `ρ`. The fixed
-  field of `ker sgn = A₃` is `F`, so `L(s,sgn) = L(s,χ_{−3})` (Neukirch VII §10; P46 (X25a)).
+  field of `ker sgn = A₃` is `F`, so `L(s,sgn) = L(s,χ_{−3})` (Neukirch VII §10; P47 (X25a)).
 * **(b).** `ρ = Ind_{A₃}^{S₃}ψ`. Invariance under induction gives `L(s,ρ) = L_F(s,ψ)`, and `ψ ≠ 1` makes it entire
   (Hecke). Also `Ind_{⟨τ⟩}^{S₃}1 = 1 ⊕ ρ` for a transposition `τ` gives `ζ_{K′} = ζ·L(s,ρ)`.
 * **(c).** Landau's Riemann–von Mangoldt formula for Dedekind zeta functions, `N_{K′}(T) = (3T/2π)log T + O(T)` and
@@ -275,7 +275,7 @@ about `H¹_{K,1}`.
 | Corollary F (`S₃` falsifier) | **PROVED**, content classical in substance (Meyer 2005 remark l.302–304; Connes 1999 l.949–952); no novelty claimed |
 | density of `⊕ span{v_k}` in `H¹_{K,1}` | OPEN (not needed) |
 
-For P46 §28.3b / Remark 28.6: the `ANALYSIS (cyclicity)` flag on the `S₃` remark can be removed. The citation becomes
+For P47 §28.3b / Remark 28.6: the `ANALYSIS (cyclicity)` flag on the `S₃` remark can be removed. The citation becomes
 Meyer Duke 2005 (Lemma "Lap_weighted_Sch", Lemma "Poisson_sumpm", Thm "difference_spectrum", intro l.298–304) together
 with this file's Lemma 1, Lemma 2 and Theorem J_K. (X33)(ii)'s "not read" should be updated. Both are open decisions; nothing was edited here.
 
@@ -300,7 +300,7 @@ with this file's Lemma 1, Lemma 2 and Theorem J_K. (X33)(ii)'s "not read" should
    for every real `c`, so the normalisation is irrelevant. Check that "compatible" in Deninger's Thm 2.1 is
    `Θ + Θ* = const` and not a weaker relation.
 8. **Scope.** Corollary F is about the full-multiplicity realisations (Meyer, CCM). It says nothing about `L²_δ` with
-   `δ ≤ 3`, or about quotients that kill `v₁` (§5.2). Any wording in P46 must keep this scope.
+   `δ ≤ 3`, or about quotients that kill `v₁` (§5.2). Any wording in P47 must keep this scope.
 9. **Novelty.** None. Meyer 2005 states the non-unitarity at multiple zeros as a remark. The `S₃` multiplicity is
    textbook. The only new text is the explicit chain over `K` (Lemmas 1–2) and the observation that `S₃` fields make
    the hypothesis "multiple zeros" unconditional.
@@ -310,7 +310,7 @@ with this file's Lemma 1, Lemma 2 and Theorem J_K. (X33)(ii)'s "not read" should
 Grep over `03-research/`, `04-papers/` and `05-meta-and-planning/` for "double zero", "multiple zero", "Jordan block",
 "non-semisimple", "Dedekind"+multiplicity, "S₃", and `0311468`.
 * The `S₃`/Jordan argument appears only in phase 158: R158_002 A20 and R158_004 rows 12–12′.
-* Meyer Duke appears only in P46 (X33)(ii) ("not read"), phase 39 `119-forced-axioms-backward-derivation.md` (bibliography) and
+* Meyer Duke appears only in P47 (X33)(ii) ("not read"), phase 39 `119-forced-axioms-backward-derivation.md` (bibliography) and
   `01-context/RH2025/task31,33` (bibliography).
 * Phase 58 `192-conj-179-6` §(iii) discusses Artin L-functions in a different context (off-line zeros, Euler rigidity).
 * No earlier phase proves or refutes Theorem J_K or Corollary F.

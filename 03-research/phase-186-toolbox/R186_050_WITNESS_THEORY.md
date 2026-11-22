@@ -1,6 +1,6 @@
 # R186_050 — Witness theory: characterization of 𝒲_T, absorption and the asymptotic route 
 
-NUMERICAL. Sources: Paper 47 (eq:Aform, eq:W, lem:mbounds, lem:monoT, lem:contA, lem:roughEF, thm:parityschur, thm:margin,
+NUMERICAL. Sources: Paper 46 (eq:Aform, eq:W, lem:mbounds, lem:monoT, lem:contA, lem:roughEF, thm:parityschur, thm:margin,
 thm:A), Paper 48 thm:M, R185_005B (BR), R186_024/026/028/036/039/040/044/047/048/049/112/114/115.
 
 **Contact with the sign: none.** Nothing that follows decides λ_A(T) < 0 nor λ_A(T) ≥ 0 for ζ in any window.
@@ -31,10 +31,10 @@ thm:A), Paper 48 thm:M, R185_005B (BR), R186_024/026/028/036/039/040/044/047/048
 
 ## 1. Framework
 
-Notation (Paper 47): I_T = [−T, T]; 𝔞_T(F) = C₀‖F‖² + Lev(c_F) − Σ_{n∈𝒩_T} v_n c_F(log n) (eq:Aform), 𝒩_T = {n < e^{2T}},
+Notation (Paper 46): I_T = [−T, T]; 𝔞_T(F) = C₀‖F‖² + Lev(c_F) − Σ_{n∈𝒩_T} v_n c_F(log n) (eq:Aform), 𝒩_T = {n < e^{2T}},
 v_n = 2Λ(n)/√n, Lev(Φ) = ∫₀^∞(Φ(0) − Re Φ(u))K(u)du ≥ 0, c_F(u) = ∫F(t)F(t+u)dt; equivalently 𝔞_T(F) = (2π)⁻¹∫m|F̂|² −
 Σ v_n c_F(log n) with m(τ) = C₀ + ∫(1 − cos τu)K, C₀ = ψ(¼) − log π = −5.3721. 𝒫_T = {A = B = 0}, A(F) = ∫Fe^{t/2},
-B(F) = ∫Fe^{−t/2}; λ_A(T) = min 𝔞_T over the unit sphere of 𝒫_T, attained (compact resolvent, Paper 47 §lem:contA);
+B(F) = ∫Fe^{−t/2}; λ_A(T) = min 𝔞_T over the unit sphere of 𝒫_T, attained (compact resolvent, Paper 46 §lem:contA);
 h*_T a minimizer. 𝔄_T := Σ_{n∈𝒩_T} v_n = sup_τ Σ v_n cos(τ log n) (lem:mbounds(iii)); M₀(T) := 𝔄_T − C₀.
 J F(t) = F(−t); A(JF) = B(F), so that 𝒫_T is J-stable and 𝔞_T is J-invariant (thm:parityschur(o)).
 
@@ -269,7 +269,7 @@ There is no intermediate regime: either λ_A ↓ 0 doubly exponentially, or λ_A
 1. lem:monoT reread: extension by zero preserves ‖·‖, A, B, c_F; c_F = 0 for |u| ≥ 2T; new contacts log n ≥ 2T. Lemma 1.3 ✓.
 2. lem:contA: continuity of λ_A on (0, ∞) ⇒ 𝒯 open; λ_A(T_c) = 0 by the intermediate value theorem at the boundary ✓.
 3. thm:margin: limsup λ_A ≤ 0 (no lower bound). Paper 48 thm:M(b): λ_A ≤ exp(−e^{(2−ε)T}) is an UPPER bound ✓ ((N8) corrects the target).
-4. C₀ = ψ(¼) − log π = (−γ_E − π/2 − 3log2) − log π = −4.2274 − 1.1447 = −5.3721 ✓ (matches Paper 47).
+4. C₀ = ψ(¼) − log π = (−γ_E − π/2 − 3log2) − log π = −4.2274 − 1.1447 = −5.3721 ✓ (matches Paper 46).
 5. 𝔄_T ≤ 4.16e^T: Σ_{n≤x}Λ(n)n^{−½} = ψ(x)x^{−½} + ½∫₁^x ψ(t)t^{−3/2}dt ≤ 1.03883(√x + √x), x = e^{2T}; v_n = 2Λ(n)/√n ✓.
 6. τ₀ ∈ (5, 7.5): lower bound of lem:mbounds(ii) at 7.5: 0.1770 − 0.1333 − 0.0089 > 0; upper bound at 5: −0.2285 + 0.2 + 0.0050 < 0 ✓.
 7. Lemma 3.1: Q = 4|Φ_c|² − 4|Φ_s|² re-derived from Σ_z e^{zu} = 4cos(γu)cosh(δu) (R186_114 §1.1) and Re[Φ(½+z)Φ(½−z)] = P₊P₋ + R₊R₋

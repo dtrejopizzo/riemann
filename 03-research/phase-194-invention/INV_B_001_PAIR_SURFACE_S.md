@@ -4,7 +4,7 @@ Mandate: invent first, audit later. Labels: DEFINITION / PROVED / CONJECTURE / H
 
 Notation. Window form: for F even, supported in [−2T,2T], F = g*g̃ with g supported in [−T,T],
   𝔞_T(g) = W(F) = F̂(i/2)+F̂(−i/2)  −  Σ_{n≥2} Λ(n) n^{−1/2} (F(log n)+F(−log n))  +  A_ℝ(F),
-A_ℝ(F) = archimedean term (Γ_ℝ log-derivative / Lévy-type principal value at 0). Target (row D on the declared carrier): W(g*g̃) ≥ 0 on the primitive classes (F̂(±i/2)=0 version and its polar-corrected version, as in Paper 47).
+A_ℝ(F) = archimedean term (Γ_ℝ log-derivative / Lévy-type principal value at 0). Target (row D on the declared carrier): W(g*g̃) ≥ 0 on the primitive classes (F̂(±i/2)=0 version and its polar-corrected version, as in Paper 46).
 
 ## 1. The object (DEFINITION)
 𝒮⁺ := (ℝ_{>0} × ℝ_{>0}) with points (x,y), measure dx dy/(xy)^{1/2}·(xy)^{-1/2}·xy = dx dy (half-density normalisation), and the integral sublattice 𝒮(ℤ) := ℕ×ℕ ⊂ 𝒮⁺.

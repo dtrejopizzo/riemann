@@ -1,6 +1,6 @@
 # N_BUILD_011 — Review (independent referee, pen and paper)
 
-Checked against Paper 47 main.tex (window form, P_T, prop:P, cor:Tarch l.2484, lem:wit-conc l.6937) and N_BUILD_001 (A),(B),(E).
+Checked against Paper 46 main.tex (window form, P_T, prop:P, cor:Tarch l.2484, lem:wit-conc l.6937) and N_BUILD_001 (A),(B),(E).
 
 ## Sign of the polar term (crux) — CONFIRMED
 Form 𝔞_T^{(λ)} = 𝔞_∞ − ∫Re c_F dλ (comb with minus sign). On P_T, N_BUILD_001 (A): ∫₀^{2T} c_F·2e^{u/2}du = −𝔭(F) ≤ 0.

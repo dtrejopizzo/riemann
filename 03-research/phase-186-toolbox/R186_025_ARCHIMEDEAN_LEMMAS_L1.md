@@ -1,6 +1,6 @@
 # R186_025 — Archimedean lemmas for (L1): low-pass leakage on 𝒱_k (PROVED), single window (PROVED), coupling = π (PROVED); the operator-norm route is NO-GO and is rewritten
 
-Phase 186. Sources: R186_024 (decomposition 𝒱_k ⊕ E_k, pieces (P1)/(P2)), R186_104 (audit: ‖𝒦₁‖ = π, prime bound 1.674), R186_019, R155_026, Paper 47 (thm:A eq:Aform, lem:K, thm:S(iii), lem:mbounds). Standalone scripts: `r025_p1_lowpass.py` (imports `r024_schur.py`), `r025_coupling_norm.py`.
+Phase 186. Sources: R186_024 (decomposition 𝒱_k ⊕ E_k, pieces (P1)/(P2)), R186_104 (audit: ‖𝒦₁‖ = π, prime bound 1.674), R186_019, R155_026, Paper 46 (thm:A eq:Aform, lem:K, thm:S(iii), lem:mbounds). Standalone scripts: `r025_p1_lowpass.py` (imports `r024_schur.py`), `r025_coupling_norm.py`.
 Notation: I_T = (−T,T), equal blocks B_1,…,B_k of half-length τ = T/k; 𝒱_k = ⊕_B {F_B ∈ L²(B): ∫_B F_B e^{±x/2} = 0}; 𝔞_∞(F) = C₀‖F‖² + ∫₀^∞(‖F‖² − 𝒞F(u))K(u)du = (1/2π)∫ m|F̂|², m(s) = Re ψ(¼+is/2) − log π, K = 2e^{−u/2}/(1−e^{−2u}), C₀ = ψ(¼) − log π = −5.3722 (lem:K, thm:A). c_∞(τ) = inf 𝔞_∞ over the single window 𝒫_τ. It is stated explicitly whenever something is NUMERICAL.
 
 ## 0. Verdict
@@ -89,7 +89,7 @@ Readings: (i) the bound is valid and loses ≈ 1.0 relative to the Galerkin valu
 - The Galerkin tables are upper bounds (infima over subspaces); the theorems are lower bounds; at every point the lower bound < Galerkin value, as it must be.
 - No equivalence between row D and other statements is used.
 
-## For Paper 47
+## For Paper 46
 
 - Can be integrated as archimedean lemmas (verify against thm:A, lem:K, lem:mbounds): Lemma 1.1, Theorem A (short window: λ_A(τ) ≥ log(1/τ) − 1.29, a complement to lem:contA/thm:margin at the T → 0 endpoint), Lemma 2.1 + Theorem B (coercivity of 𝒱_k). Do not integrate anything from R186_024 §3's split (L1) or "‖𝒦₁‖ ≈ 0.74"; if the coupling is mentioned, say "norm π, relative bound ≈ 0.22 NUMERICAL".
 - Labels: Lemmas 1.1–1.4, 2.1, Theorems A, B, Corollary (L1): PROVED (with 1.674 CITED from R186_104). §3.1 PROVED (CITED Carleman/Weyl), §3.2 PROVED elementary. θ_N: NUMERICAL. (L2): OPEN. Operator-norm route: NO-GO.

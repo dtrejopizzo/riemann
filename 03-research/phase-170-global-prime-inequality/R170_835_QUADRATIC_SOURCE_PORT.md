@@ -104,7 +104,7 @@ closed in the corpus.
   the positivity lock. In particular, the \(K_\delta\) suggested in
   R161_068 was never built: its global adjoints mixed carriers, and
   R161_070 replaced it with the correctly typed compressed collar.
-- Paper 47 proves finite PC, the collar
+- Paper 46 proves finite PC, the collar
   \(R_LB_N=D_{N,L}R_L-\mathcal E_{N,L}\), the strict positivity of
   \(D_\Delta\), and the balance on the radical.
 - R170_823–830 preserve PC, the two orientations, and the multiscale
@@ -119,7 +119,7 @@ decomposition of the source–column–detector residual.
 
 ## 2. The finite quadratic carrier where \(\Lambda*1=\log\) enters
 
-Keep \(M,N\) finite. Use the notation of Paper 47:
+Keep \(M,N\) finite. Use the notation of Paper 46:
 
 \[
 \begin{aligned}
@@ -216,7 +216,7 @@ Formulas (2.6)–(2.9) retain:
 
 They do not yet contain a signed metric on (2.9). Taking
 \(\|\mathcal I_{M,N}F\|^2\) loses the orientation of \(A_M\), exactly as
-in R161_002 and Paper 47.
+in R161_002 and Paper 46.
 
 ### 2.2. Defect under coefficient substitution
 
@@ -728,7 +728,7 @@ cannot satisfy (5.3).
 
 Nothing in §§2–5 yet uses that the window is the **first** contact. The
 same matrices can be evaluated on an eigenvector with positive
-eigenvalue. Paper 47 and R161_081 show there
+eigenvalue. Paper 46 and R161_081 show there
 
 \[
  Q_{N,L}(F)=-2\sum_{m\le L}(d_{m,N}+\lambda)|(R_LF)_m|^2<0.

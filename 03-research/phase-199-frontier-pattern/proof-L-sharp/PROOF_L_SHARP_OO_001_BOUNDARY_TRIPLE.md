@@ -1,11 +1,11 @@
 # PROOF_L_SHARP_OO_001: boundary triples, Kreĭn's formula and KVB for the window form
 
-Phase 199. Prover memo, pen and paper. No numerics. Target: L′♯ / λ_A(T) ≥ 0 (Paper 47 eq:target).
+Phase 199. Prover memo, pen and paper. No numerics. Target: L′♯ / λ_A(T) ≥ 0 (Paper 46 eq:target).
 
 **Outcome in one line.** No sign.
 - PROVED: there is an exact boundary triple whose Γ₀ is the pair of Tate functionals (A, B). It is the non-densely-defined
   kind (Hassi–de Snoo), with boundary space ℂ². Its Weyl function at 0 is −S^Sch_T, so the KVB/Kreĭn criterion is exactly
-  Paper 47 thm:parityschur + prop:polarcap (𝔊_T = D_pol − M(0)).
+  Paper 46 thm:parityschur + prop:polarcap (𝔊_T = D_pol − M(0)).
 - PROVED: at the window edge the Weil operator has order log, which is below the trace threshold s = ½. So there is no
   edge Green identity: the form-minimal and form-maximal realisations coincide.
 - The full-line cut gives an infinite-rank Dirichlet-to-Neumann Weyl function. On Z-lifts it returns W_T = 𝒲_ext[Ψ]
@@ -73,7 +73,7 @@ Put h = A_T^{-1}χ / Q(0).
 ## 2. KVB / index reading (CITED + PROVED reduction)
 **Finite-rank KVB.** If the Γ₀-extension is nonnegative and invertible (λ_A > 0), then A_T + EΘE* ≥ 0 if and only if
 Θ − M(0) ⪰ 0 (Kreĭn–Birman–Vishik for finite deficiency; Derkach–Malamud, CITED). With Θ = D_pol this is precisely
-thm:parityschur(c) "λ_W > 0 ⟺ λ_A > 0 and 𝔊_T ≻ 0". **Not new.** It is the boundary-triple name for Paper 47's polar
+thm:parityschur(c) "λ_W > 0 ⟺ λ_A > 0 and 𝔊_T ≻ 0". **Not new.** It is the boundary-triple name for Paper 46's polar
 capacity, consistent with README l.207.
 
 **Reverse direction (Vakhitov–Kolokolov / Maddocks constrained index, CITED: Maddocks 1985; Pelinovsky 2011).**
@@ -127,7 +127,7 @@ Thm 3.1, so this direction is REF-D. 𝒲_ext is indefinite (MM.3b), so KVB has 
 - **ARGUED:** §3b.
 - **NO-GO (retry in substance of R162_2702b / G8D-160 C2)** (class 𝒦𝒱ℬ: boundary-triple / Kreĭn-formula / KVB / constrained-index proofs of λ_A ≥ 0 over the Tate or
   edge boundary): the minimal-operator positivity hypothesis is λ_A ≥ 0 (Tate triple) or 𝒲_ext ≥ 0 on lifts (cut
-  triple), i.e. REF-D. The 2×2 condition is already Paper 47's polar capacity. The index version needs n₋(A_T), which is
+  triple), i.e. REF-D. The 2×2 condition is already Paper 46's polar capacity. The index version needs n₋(A_T), which is
   no easier.
 - The residue "produce the boundary energy directly" (MM_001) is **not** served by finite boundary data: the window edge
   of an order-log operator has no trace.

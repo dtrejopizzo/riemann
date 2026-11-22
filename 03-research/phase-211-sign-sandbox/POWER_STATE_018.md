@@ -4,7 +4,7 @@ Status: partial results PROVED, global sign OPEN. Goal active. Papers untouched.
 
 ## Sufficient target and proved region
 
-By POWER_SCALAR_BRIDGE_017 it suffices to prove the sign of the WHOLE table H_(N,k)=s^k/(s+u)^(N+k), N>=1,k>=0, at a fixed rate u=63/2. The positive representation of densities by Bernstein elevation keeps all cross terms and the polar; the strong bridge014 connects to the data of Paper47.
+By POWER_SCALAR_BRIDGE_017 it suffices to prove the sign of the WHOLE table H_(N,k)=s^k/(s+u)^(N+k), N>=1,k>=0, at a fixed rate u=63/2. The positive representation of densities by Bernstein elevation keeps all cross terms and the polar; the strong bridge014 connects to the data of Paper46.
 
 Proved regions: N1 for ALL k with margin4/3; N2 and N3 for ALL k with margin1/8; and ALL N>=2,k>=10000N² with margin49/50 at u31.5. Rows1,2,3 also hold for all u>=31.5. In addition the certificates of eight arbitrary poles and of the fixed confluent block of dimension12 remain valid.
 

@@ -4,7 +4,7 @@ Status: **PROVED by exact computation; literal audits approved.** No numerical d
 
 ## 1. Antecedent and corrected claim
 
-Read: the project rules, ROUTES-TRIED-INDEX/README.md and 06_OPEN_RESIDUES_DEAD_SUBROUTES.md (R9), grid R162_2300_MASTER_GRID, CROSSWORD-TO-D, P47 problem (S), P48 problem (S), L2_BUILD_030 and N_BUILD_022. The exact antecedent is
+Read: the project rules, ROUTES-TRIED-INDEX/README.md and 06_OPEN_RESIDUES_DEAD_SUBROUTES.md (R9), grid R162_2300_MASTER_GRID, CROSSWORD-TO-D, P46 problem (S), P48 problem (S), L2_BUILD_030 and N_BUILD_022. The exact antecedent is
 
  `03-research/phase-188-closing-D/L2_BUILD_031_RESIDUE_BALANCED_SUBSPACE.md`.
 

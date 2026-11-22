@@ -1,22 +1,22 @@
-# HORN_A_001 — Binary decision on Horn A (P46 §19.9), phase 200, round 20b
+# HORN_A_001 — Binary decision on Horn A (P47 §19.9), phase 200, round 20b
 
-Sources: P46 `main.md` §§11.4–11.5 (Thm 11.13, Thm 11.14), full §19 (Def 19.1,
+Sources: P47 `main.md` §§11.4–11.5 (Thm 11.13, Thm 11.14), full §19 (Def 19.1,
 Thm 19.2, Thm 19.21, Thm 19.23, Thm 19.25, Cor 19.25b, Rem 19.25c, §19.9); R142_004 l.141–147 (finding J1, origin of
-`η_F(a−b)`); P47 `main.tex` l.123 (`W_T = 𝔞_T + 2Re(A B̄)`); SPEC_SIGN_OBJECT_010 §H3; SPEC_006 (C-pol, Theorem O3);
+`η_F(a−b)`); P46 `main.tex` l.123 (`W_T = 𝔞_T + 2Re(A B̄)`); SPEC_SIGN_OBJECT_010 §H3; SPEC_006 (C-pol, Theorem O3);
 LEMMA_E_EPSTEIN_001.
 
 ## Summary (≤200 words)
 
 (1) The pair `{E_w, K−E_w}` of Cor 19.25b has degrees `(d, 1−d)` with `d > d_0^{(R)} ≈ 325` (Thm 19.23: `d > 324.96`;
 certified instance `d = 400`). Degree `> 1`: **Cor 19.25b does not kill Horn A**. The `Δ` of §19.9 absorbs exactly that
-pair (`R(E_w) < Δ(d)`). (2) The term `η_F(a−b)` is the polarization of the polar term `2Re(AB̄)` of P47 and vanishes
+pair (`R(E_w) < Δ(d)`). (2) The term `η_F(a−b)` is the polarization of the polar term `2Re(AB̄)` of P46 and vanishes
 when `F ∈ P_T`. But Thm 19.25 does **not** use it: its proof uses identity (19.3), without Cauchy–Schwarz and without primitivity.
 Moreover Cor 19.25b already holds in `𝒟_p = P_c^∞ ⊕ ℝK` with `F = F_R^♭` primitive. The term `η_F` appeared elsewhere: in the
 sufficiency step of the gated candidate (R142 J1). C-pol repairs that step, but does not touch the frame defect.
 (3) Theorem HA (PROVED): for every finite `Δ`, the Horn A hypothesis implies in two lines `I_∞(G,G) ≤ 0` for every
 real class `G` of degree 0, without using Thm 12.3. With the admissible `Δ_♮(d) = max(0,(d²−d)/4)`, the hypothesis
 **is equivalent** to that positivity, with `h⁰ ≡ 0`. **Horn A is a trivial reformulation of the objective** and contributes no
-tool. With P46's minimal `Δ` it is strictly stronger: objective + sufficiency (P33-6, REF-D). The
+tool. With P47's minimal `Δ` it is strictly stronger: objective + sufficiency (P33-6, REF-D). The
 falsifiers (Epstein, `a_P`, `Ξ_a`) fail Horn A, but only because they fail the objective. Label: **NO-GO as a
 route (trivial reformulation, PROVED)**. With this the Hodge-transfer line is closed.
 
@@ -26,9 +26,9 @@ route (trivial reformulation, PROVED)**. With this the Hodge-transfer line is cl
 R142_004 J1 (`η_F`). This memo does not retry anything indexed. It decides the first substep requested by SPEC_010 §D and, along the way,
 the complete logical status of Horn A.
 
-## 1. Exact statement of Horn A (P46 §19.9)
+## 1. Exact statement of Horn A (P47 §19.9)
 
-Notation from P46 §11 and §19: `D^W` is the Weil class, `I_∞` the form (11.6) and `M(E) = (a,b) = (Φ_E(1), Φ_E(0))`.
+Notation from P47 §11 and §19: `D^W` is the Weil class, `I_∞` the form (11.6) and `M(E) = (a,b) = (Φ_E(1), Φ_E(0))`.
 Also `deg E = a+b = I_∞(E,2K)`, `K` is the Pólya class (`Φ_K = ξ`, `deg K = 1`, `I_∞(K,K) = ½`), `𝓝_∞` is the
 radical and
 
@@ -42,7 +42,7 @@ replaced by (c′). It requires the existence of `h⁰ : D^W → ℝ_{≥0}` suc
 - (c′) `h⁰(E) + h⁰(K−E) ≥ R(E) − Δ(deg E)` for every `E ∈ D^W`.
 
 Per §19.9, the proof of Thm 12.3 continues to hold under (c′), because (c) is only used at `E = nF`, of degree 0, and there
-`Δ = 0`. The "maximum defect" of P46 is `Δ_P46(d) = max(0, d²(1−s_*²)/4 − d/4)`, with `s_* = inf_F C_F √(2/W_F)`.
+`Δ = 0`. The "maximum defect" of P47 is `Δ_P46(d) = max(0, d²(1−s_*²)/4 − d/4)`, with `s_* = inf_F C_F √(2/W_F)`.
 
 *Minor remark (PROVED).* `Δ_P46` is not symmetric under `d ↦ 1−d`: the difference is `(1−2d)(−s_*²)/4`. This does not matter,
 because (c′) at `E` and at `K−E` is the same inequality with defects `Δ(d)` and `Δ(1−d)`. The effective defect is then
@@ -58,21 +58,21 @@ because (c′) at `E` and at `K−E` is the same inequality with defects `Δ(d)`
 the sign of `I_∞` in degree 0 beforehand. Then Thm 12.3 (or Theorem HA(i) below) would give `I_∞(G,G) ≤ 0` in
 degree 0, which is Weil positivity `W ≥ 0` on the carrier.
 
-## 2. Is `η_F(a−b)` the polar term of P47? Does Thm 19.25 use it?
+## 2. Is `η_F(a−b)` the polar term of P46? Does Thm 19.25 use it?
 
 **2.1 Identification (PROVED).** Let `F` be real of degree 0. Then `Φ_F(0) = −Φ_F(1) =: η_F`. The polar
 package of (11.6) gives
 
   `Φ_E(0)Φ_F(1) + Φ_E(1)Φ_F(0) = −bη_F + aη_F = η_F(a−b)`.
 
-In P47 (l.123) the complete form is `W_T(F) = 𝔞_T(F) + 2Re(A(F) B̄(F))`, where `A` and `B` are the two polar
+In P46 (l.123) the complete form is `W_T(F) = 𝔞_T(F) + 2Re(A(F) B̄(F))`, where `A` and `B` are the two polar
 moments (the values of `Φ` at `1` and `0`, up to normalization). The diagonal term `2Φ_F(0)Φ_F(1)` of `I_∞(F,F)` corresponds
 to `2Re(AB̄)`. `η_F(a−b)` is its **polarization** off the diagonal, i.e. the associated bilinear form evaluated at
 `(E,F)`. If `F ∈ P_T`, then `η_F = 0` and the term vanishes for every `E`. **Yes: C-pol zeroes it out on P_T.**
 
 **2.2 Where `η_F(a−b)` lived (PROVED, by reading).** R142_004 J1 (l.141–147) locates it in Prop D.32.3(iv). That is
 the Cauchy–Schwarz bound `|I_∞(E,F)| ≤ √(W(E)W(F))` from the **sufficiency** argument for the gated candidate, and
-P46 §19.9 repeats it. The same record states: "§D.31 unaffected (it uses the identity (D.31.2), not Cauchy–Schwarz)."
+P47 §19.9 repeats it. The same record states: "§D.31 unaffected (it uses the identity (D.31.2), not Cauchy–Schwarz)."
 
 **2.3 The proof of Thm 19.25 does not use the pole (PROVED, by reading).** Step-by-step walkthrough:
 
@@ -80,7 +80,7 @@ P46 §19.9 repeats it. The same record states: "§D.31 unaffected (it uses the i
 - Step 2 uses the linearity of `deg` and Serre symmetry.
 - Step 3 uses Thm 19.23. This in turn uses the exact identity (19.3): `deg E_{t,d} = d`,
   `I_∞(E_{t,d},E_{t,d}) = d²/2 − t²W_F` and `I_∞(E_{t,d},F) = −tW_F`. It also uses the bound `|I_∞(E',F)| ≤ C_F deg E'`
-  from Thm 11.14(ii), which is the integral of `E' ≥ 0` against `w_F`. P46 states this explicitly after Thm 19.21: "No
+  from Thm 11.14(ii), which is the integral of `E' ≥ 0` against `w_F`. P47 states this explicitly after Thm 19.21: "No
   Cauchy–Schwarz, no RH and no primitivity enter: only `deg F = 0`."
 
 Moreover, Cor 19.25b establishes the defect on `𝒟_p = P_c^∞ ⊕ ℝK` with `F = F_R^♭ ∈ P_c^∞`, which is **primitive**:
@@ -160,18 +160,18 @@ information beyond the sign of `I_∞` on P_T.
 ## 5. Labels and index entry
 
 - Proposition 3.1 and Corollary 3.2 (degree of the pair `(d,1−d)`, `d > 325`; Δ absorbs the pair): **PROVED**.
-- §2: `η_F(a−b)` is the polarization of P47's polar term and vanishes on P_T: **PROVED**. Thm 19.25 and Cor 19.25b do not
+- §2: `η_F(a−b)` is the polarization of P46's polar term and vanishes on P_T: **PROVED**. Thm 19.25 and Cor 19.25b do not
   use the pole and hold on `P_T ⊕ ℝK`: **PROVED** (by reading of the proofs).
 - Theorem HA (Horn A ⇒ (W⁰) for every finite `Δ`; Horn A with `Δ_♮` ⟺ (W⁰)): **PROVED**.
 - **Horn A: NO-GO as a route (trivial reformulation of the objective, PROVED).** It cannot be weakened: with `Δ_P46` it only
   adds sufficiency (Eff_Δ), **OPEN/REF-D (P33-6)**.
 - **Hodge-transfer line complete** (phase 135, Thm 12.3, Horn A): **closed**. (c) is unsatisfiable (Thm 19.25), and
-  (c′) is the objective or the objective plus sufficiency. Horn B (enlarging the class of representatives) remains OPEN in P46
+  (c′) is the objective or the objective plus sufficiency. Horn B (enlarging the class of representatives) remains OPEN in P47
   §19.9. Not addressed here.
 
 **Entry for ROUTES-TRIED-INDEX:**
 
-> HORN_A_001 (phase 200, r20b): Horn A from P46 §19.9 ((c′) with defect Δ, gate on P_T). The pair `{E_w, K−E_w}` from
+> HORN_A_001 (phase 200, r20b): Horn A from P47 §19.9 ((c′) with defect Δ, gate on P_T). The pair `{E_w, K−E_w}` from
 > Cor 19.25b has degrees `(d, 1−d)` with `d > 325`, and Δ absorbs it, so there is no NO-GO by degree. But Theorem HA
 > (PROVED) shows that (c′) with any finite Δ implies `I_∞ ≤ 0` in degree 0 in two lines, and that with
 > `Δ_♮ = max(0,(d²−d)/4)` it is equivalent to that with `h⁰ ≡ 0`. Horn A is a trivial reformulation of the objective: NO-GO as a

@@ -13,7 +13,7 @@ These are the FULL arithmetic inverses, with all Möbius integers. It is not a c
 
     T_N=(N−1)/992+(1985·1000/992²)sqrt(N)+O(1)<(N−1)/330.
 
-It improves the earlier cutoff026 for the SAME K_N; h_N is treated explicitly separately. T_N is here the logarithm of an x coordinate of the kernel, NOT the window T of Paper47.
+It improves the earlier cutoff026 for the SAME K_N; h_N is treated explicitly separately. T_N is here the logarithm of an x coordinate of the kernel, NOT the window T of Paper46.
 
 ## Mechanism and quantitative control
 
@@ -27,6 +27,6 @@ Monotonicity of t_v covers a whole interval. From t_2 to infinity, a dilation bo
 
 POWER_SHOULDER_AUDIT_039 approves the full proof and constants. Fourier, normaliser, elementary moments, Fubini for the infinite product, physical translated argument and union of tails were checked in three independent reviews. Exact verifier reproduced twice: PASS. It evaluates no new W values nor lists of primes.
 
-The improvement relative to038 is control of the real infinite inverse in the declared region. It does not prove the sign of those kernels in the interior, nor compare their contribution with the adverse interior part and the archimedean term of W. The critical centre sigma=1 is not included either. No new row of W, arbitrary combination or window of Paper47 has been proved.
+The improvement relative to038 is control of the real infinite inverse in the declared region. It does not prove the sign of those kernels in the interior, nor compare their contribution with the adverse interior part and the archimedean term of W. The critical centre sigma=1 is not included either. No new row of W, arbitrary combination or window of Paper46 has been proved.
 
 The coverage035 is kept: atoms of rows1..17, any k>=0, at u31.5 with W>norm²/40, in addition to the earlier regions and the atom211,1. Global closure requires an additional signed interior balance. The goal is declared neither complete nor blocked.

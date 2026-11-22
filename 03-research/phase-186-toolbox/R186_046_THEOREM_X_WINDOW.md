@@ -1,8 +1,8 @@
 # R186_046 — Theorem X per window: constants, converse and arithmetic form
 
-Phase 186, round 21 (reserve from R186_045 §5). NO-GO / NUMERICAL. Paper 47, the grid and the crossword are not touched. Self-contained script: `r046_X.py` (M = 48, 7 s).
+Phase 186, round 21 (reserve from R186_045 §5). NO-GO / NUMERICAL. Paper 46, the grid and the crossword are not touched. Self-contained script: `r046_X.py` (M = 48, 7 s).
 Read: R186_045 §2 (Theorem X), §3.4 (Lemmas T/T′); R186_032 §4 (Ω, S2); R186_042 (sub-Shannon sea, Landau–Widom table);
-R186_043/044 (coupling, Schur ρ_T); R183_031 Thm 1; R166_501 (G),(N); Paper 47 prop:band, prop:negtrace, prop:align,
+R186_043/044 (coupling, Schur ρ_T); R183_031 Thm 1; R166_501 (G),(N); Paper 46 prop:band, prop:negtrace, prop:align,
 lem:roughEF; r034_det.py, r043_wh.py (constructions copied, not imported).
 
 ## 0. Verdict
@@ -31,7 +31,7 @@ lem:roughEF; r034_det.py, r043_wh.py (constructions copied, not imported).
 
 ## 1. Framework and basic identity
 
-Notation (Paper 47 eq:symbol/eq:form; r034): σ_T(τ) = m(τ) − Σ_{log n<2T} v_n cos(τ log n), v_n = 2Λ(n)/√n; I_T = [−T,T];
+Notation (Paper 46 eq:symbol/eq:form; r034): σ_T(τ) = m(τ) − Σ_{log n<2T} v_n cos(τ log n), v_n = 2Λ(n)/√n; I_T = [−T,T];
 𝒫_T = {F ∈ L²(I_T) : ∫F e^{±t/2} = 0}; 𝔞_T(F) = (1/2π)∫σ_T|F̂|²; λ_A(T) = inf_{𝒫_T,‖F‖=1} 𝔞_T(F). For T₀ < T:
  S_T(τ) := Σ_{2T₀ ≤ log n < 2T} v_n cos(τ log n), σ_T = σ_{T₀} − S_T, U₀ := {σ_{T₀} < 0} (symmetric, finite union of
  intervals J_i ∪ −J_i, prop:band), |U₀| := two-sided measure, N_Sh(U₀) := T|U₀|/π.
@@ -140,7 +140,7 @@ not contain the cancellation directions, which are combinations of prolate tails
 
 Cancellation "with exact sign and magnitude" occurs in ½log3's dominant component (center 8.74 ≈ 2π·2/log 2, where
 prop:align makes it nearly forced: at τ = 9.06, cos(τ log 3) = −0.86, cos(τ log 4) = +0.99 ⇒ S_T = −0.40) and fails for most
-of the others; the far components receive S_T of the opposite sign. Since λ_A(T) ≥ 0 holds (certified up to ½log5, Paper 47),
+of the others; the far components receive S_T of the opposite sign. Since λ_A(T) ≥ 0 holds (certified up to ½log5, Paper 46),
 positivity **is not** achieved by local cancellation of σ_{T₀} in U₀: it is achieved by the global balance of §3 (leakage,
 new components, coupling). Resolution dependence: with η = ½ the 1–5 inequalities (X_η) hold with margin
 0.0006–0.13 (table §3), and with η = 0.1 there is no inequality: **X becomes less informative the finer the resolution** in
@@ -154,7 +154,7 @@ phase alignment of individual primes (confirms R186_023/"single-mode alignment" 
 Σ_{2T₀<log n<2T} smoothed at scale π/T.
 
 **4.3 A statement about Λ? (PROVED as an identification; honest).** The prolate average of σ_T at resolution π/T is, by
-lem:roughEF (Paper 47, PROVED) applied to ψ ∈ 𝒫_T, 𝔞_T(ψ) = Σ_ρ Φ_ψ(ρ)Φ_ψ(1−ρ): the zero measure seen by |ψ̂|². So
+lem:roughEF (Paper 46, PROVED) applied to ψ ∈ 𝒫_T, 𝔞_T(ψ) = Σ_ρ Φ_ψ(ρ)Φ_ψ(1−ρ): the zero measure seen by |ψ̂|². So
 (X_η) in arithmetic form says: "the sum of new primes smoothed by |ψ̂_j|² over U₀ reproduces m − (smoothed zero
 measure)", and since U₀ at small T₀ lies in |τ| < γ₁ (up to tails), it is "the smoothed sum of primes = m in the gap (−γ₁, γ₁)
 at resolution π/T" — exactly (N′)/R183_031 Thm 1 (gap density → 0 at rate πN₀/T). **It is not a new statement about

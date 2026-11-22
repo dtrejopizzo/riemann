@@ -34,7 +34,7 @@ cone, with no contradiction with the negativity of 0.85Λ (distinct data classes
 - E_001 Thm E.1/E.2/Cor E.3;
 - J_001 Prop J.1;
 - AUDIT_L_SHARP_7 (constraint 19);
-- Paper 47 eq:Aform / thm:A (Lévy form; killing term in E §1).
+- Paper 46 eq:Aform / thm:A (Lévy form; killing term in E §1).
 
 **Why it is not a retry.**
 - This is the first theorem *requested* by BRIDGE_001 §8, not a new route.
@@ -44,7 +44,7 @@ cone, with no contradiction with the negativity of 0.85Λ (distinct data classes
     N, and the result is Λ-sensitive (Cor X.7).
 - The index records no exact evaluation of the comb on dilate-disjoint data, and no c-falsifier for 𝔔.
 
-## 1. Setting (definitions checked against F_001 Prop F.0, E_001 §1, Cor E.3, Paper 47 eq:Aform)
+## 1. Setting (definitions checked against F_001 Prop F.0, E_001 §1, Cor E.3, Paper 46 eq:Aform)
 - For ρ on (1,∞), set ρ̃(x) := e^{x/2}ρ(e^x).
 - Ψ̌_ρ(y) := e^{y/2}Σ_{n≥1}ρ(ne^y) for y > 0, and Ψ̌_ρ := 0 for y ≤ 0.
 - 𝔔[ρ] := 𝒲[Ψ̌_ρ] (F.0), with

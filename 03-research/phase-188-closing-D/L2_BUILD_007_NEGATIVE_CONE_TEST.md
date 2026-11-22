@@ -1,7 +1,7 @@
 # L2_BUILD_007 — The archimedean-negative cone: necessary signed tests
 
 ## Corpus check
-- Paper 47 thm:wh-schur / lem:wh-W: Schur reduction onto a prolate block built from the negative set
+- Paper 46 thm:wh-schur / lem:wh-W: Schur reduction onto a prolate block built from the negative set
   of σ_T. A Schur reduction onto the negative eigenspace of 𝔞_∞|P_T is a variant of it; not rebuilt.
 - thm:X (averaged inequalities imposed on new contacts).
 - phase-146 R146_003 §D.47 (single-prime tower, PSD iff τ_p ≥ 2/(√p+1)): the Euler-tower lower bound
@@ -11,7 +11,7 @@
 New here: the finite list of necessary signed tests indexed by the negative eigenvectors of
 𝔞_∞|P_T, and their relation to (N_loc) of 006.
 
-## 1. Finite negative index (PROVED, from Paper 47)
+## 1. Finite negative index (PROVED, from Paper 46)
 𝔞_∞ + (|C_0|+1)‖·‖² is a closed form on P_T ∩ D_T whose domain norm dominates N(F) (001 Lemma 2 with
 A_T = 0), and D_T ↪ L²(I_T) is compact (lem:compact). So 𝔞_∞|P_T has discrete spectrum
 μ_0(T) ≤ μ_1(T) ≤ … → ∞ with eigenvectors φ_j(T), and n_∞(T) := #{j: μ_j < 0} < ∞. By 006 §2

@@ -1,6 +1,6 @@
 # A fixed plateau profile would detect arbitrarily large widths
 
-The conclusion strengthens the order of quantifiers of 029. The new step combines 028 with the central scalar identity of P47 prop:boundary. For each real, even, primitive, smooth, compactly supported F of mass one, it suffices to prove the line inequality of 029 for all D sufficiently large **depending on F**. It even suffices to prove liminf_{D→∞}(line−Φ)≥0 for each F. Both conditions are necessary and sufficient for the global sign.
+The conclusion strengthens the order of quantifiers of 029. The new step combines 028 with the central scalar identity of P46 prop:boundary. For each real, even, primitive, smooth, compactly supported F of mass one, it suffices to prove the line inequality of 029 for all D sufficiently large **depending on F**. It even suffices to prove liminf_{D→∞}(line−Φ)≥0 for each F. Both conditions are necessary and sufficient for the global sign.
 
 **Central value.** Let C_F^×(D)=a(F,V_DF) for any real smooth primitive F, and L_F(z) its one-sided transform, initially for Re z>1/2. By 028 it continues along the real axis up to a neighbourhood of the origin. We show L_F(0)=0 for the true comb. The archimedean contribution to C_F^× is the inverse transform of m|F̂|², real, even and integrable in D by the separated kernel estimate of 028. By Fourier inversion its integral over the half-line equals m(0)M²/2, M=∫F.
 
@@ -9,7 +9,7 @@ For the comb part put l=log n and c=c_F even. The one-sided integral of c(l−D)
     exp(−zl)P(z) + ∫_{l}^∞ c(v)[exp(−z(v−l))−exp(z(v−l))]dv,
     P(z)=∫ c(v)exp(zv)dv.
 
-The second term is entire and vanishes for l larger than the support diameter of F. Moreover it is zero at z=0 even for the low contacts. With the sign and coefficient of 028, the comb contribution to L_F(0) is thus −S(1/2)M², where S is the real continuation of ΣΛ(n)n^(−s) built in 028. P47 prop:boundary at its central value gives 2S(1/2)=m(0). It is a scalar identity: for Z=η/(1−2^(1−s)), η(1/2)>0 by the pairs of 028; the symmetry s↦1−s of π^(−s/2)Γ(s/2)Z(s) gives zero derivative at 1/2 and, by logarithmic differentiation at that point, the indicated equality. No information about non-real points is required.
+The second term is entire and vanishes for l larger than the support diameter of F. Moreover it is zero at z=0 even for the low contacts. With the sign and coefficient of 028, the comb contribution to L_F(0) is thus −S(1/2)M², where S is the real continuation of ΣΛ(n)n^(−s) built in 028. P46 prop:boundary at its central value gives 2S(1/2)=m(0). It is a scalar identity: for Z=η/(1−2^(1−s)), η(1/2)>0 by the pairs of 028; the symmetry s↦1−s of π^(−s/2)Γ(s/2)Z(s) gives zero derivative at 1/2 and, by logarithmic differentiation at that point, the indicated equality. No information about non-real points is required.
 
 **Residue.** Let E_F(D)=a(1_[−D/2,D/2]*F). The triangular kernel identity in 027 gives transform 2L_F(z)/z² in Re z>1/2. It continues locally along the positive real axis and has at most a simple pole at 0, with residue r(F)=2L'_F(0). For F=F₀+εK with support in a fixed compact set and both profiles primitive, r(F) is a quadratic polynomial in real ε. This follows by polarization: the quadratic identities of the transforms in the convergence zone persist under continuation and extraction of residues.
 
@@ -23,7 +23,7 @@ For the fixed F above, S_D(F) of 029 tends to zero. Thus liminf(line−Φ)=limin
 
 ## Negative control with any finite number of exact central derivatives
 
-For each fixed integer m≥0 there exist nonnegative weights that differ from Λ on a finite set of prime powers, coincide with its continued series S and all its first m derivatives at 1/2, and give strictly negative energy to the certified test of BUILD084 (16)–(17). The modification depends on m. P47/P48 thm:finmod are direct antecedents; here a modification that exactly matches central derivatives must compensate the low changes before concluding. No additional Euler law tying together the weights of all powers of a prime is imposed.
+For each fixed integer m≥0 there exist nonnegative weights that differ from Λ on a finite set of prime powers, coincide with its continued series S and all its first m derivatives at 1/2, and give strictly negative energy to the certified test of BUILD084 (16)–(17). The modification depends on m. P46/P48 thm:finmod are direct antecedents; here a modification that exactly matches central derivatives must compensate the low changes before concluding. No additional Euler law tying together the weights of all powers of a prime is imposed.
 
 First add 0.1Λ(n) for 2≤n≤257; this reproduces all the contacts of the test of BUILD084 and its proved negative energy for 1.1Λ. For j=1,...,m+1 take only primes p in [exp(jR),exp(jR+1)], with R large. Let B_j=Σ_p (log p)/√p over block j. By PNT for primes, B_j→∞. For k=0,...,m let V_kj be the mean of (log p/R)^k over the block with weights (log p)/(√p B_j). Since j≤log p/R≤j+1/R, V converges to the Vandermonde matrix (j^k), invertible. Solve exactly over the reals
 
@@ -43,7 +43,7 @@ To verify it, differentiate at zero the entire term of each low contact of 030. 
 
     −2M² S'(1/2) + 4 Σ_n Λ(n)/√n ∫_{log n}^∞ (v−log n)c(v)dv.
 
-By support the sum is finite. It is exactly the contribution of the ramps of D.52 to the pairing 2∫cg, plus the central term written. For the archimedean side, the expansion of m in P47, thm:S(i), uses a=k+1/4 from k=0. The box computation of 027 applied to that symbol gives constant term
+By support the sum is finite. It is exactly the contribution of the ramps of D.52 to the pairing 2∫cg, plus the central term written. For the archimedean side, the expansion of m in P46, thm:S(i), uses a=k+1/4 from k=0. The box computation of 027 applied to that symbol gives constant term
 
     −m(0)∫|v|c(v)dv + (1/2)Σ_{k≥0}a⁻²∫ exp(−2a|v|)c(v)dv
 

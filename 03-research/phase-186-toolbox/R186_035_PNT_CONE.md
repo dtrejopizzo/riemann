@@ -1,8 +1,8 @@
 # R186_035 — The negative archimedean cone of the PNT-window identity: NO-GO of "(★₃₃) on the cone"
 
 Phase 186. Labels PROVED / CITED / CONDITIONAL / OPEN / NO-GO / NUMERICAL.
-Sources: R186_033 (Lemma 1; = Paper 47 rem:Cheb/eq:Cheb per R186_109, accepted), R186_109 (audit, in progress),
-R186_024 (piecewise Tate modes, K₁), R186_032 (Ω specification), Paper 47 thm:A, lem:K, def:PD,
+Sources: R186_033 (Lemma 1; = Paper 46 rem:Cheb/eq:Cheb per R186_109, accepted), R186_109 (audit, in progress),
+R186_024 (piecewise Tate modes, K₁), R186_032 (Ω specification), Paper 46 thm:A, lem:K, def:PD,
 thm:parityschur, lem:contA. Standalone script: `r035_cone.py` (Legendre Galerkin N = 60 in x-space, same
 discretization as r033/r024; ≈ 45 s). Every number is NUMERICAL unless otherwise marked.
 
@@ -20,7 +20,7 @@ R186_109 §3 with an independent computation. **(★₃₃)-on-the-cone: NO-GO a
 For F ∈ 𝒫_T, Φ = 𝒞_F, with K₁ = K − 2e^{−u/2} ≥ 0 (lem:K) and C₀ + 4 = −1.37218:
  𝔟₀(F) := (C₀+4)Φ(0) + Lev_{K₁}(Φ) (archimedean background without the k = 0 Lévy term),
  E_ψ(Φ) := 2∫₀^{2T}Φ(u)e^{u/2}du − Σ_{n<e^{2T}} v_nΦ(log n) = 2∫₁^{e^{2T}}x^{−1/2}Φ(log x) d(x − ψ(x)),
- 𝔞_T(F) = 𝔟₀(F) + E_ψ(Φ) (R186_033 Lemma 1 = Paper 47 eq:Cheb + lem:K; CITED).
+ 𝔞_T(F) = 𝔟₀(F) + E_ψ(Φ) (R186_033 Lemma 1 = Paper 46 eq:Cheb + lem:K; CITED).
 Cone: 𝒞_T := {F ∈ 𝒫_T : 𝔟₀(F) < 0}; (★₃₃) ⟺ 𝔞_T ≥ 0 ⟺ E_ψ ≥ −𝔟₀ on 𝒫_T. On 𝒫_T it also holds that
 𝔟₀ = Γ_T − E_exp with Γ_T the full archimedean form and E_exp = 2∫₀^{2T}Φe^{u/2} (PROVED: Lev_{2e^{−u/2}} =
 4Φ(0) − 2∫₀^∞Φe^{−u/2} and ∫₀^∞Φe^{−u/2} = −∫₀^{2T}Φe^{u/2} by ∫_ℝΦcosh(u/2) = 0).
@@ -146,7 +146,7 @@ a continuity inequality with O(1) constants does not cross a 10⁻⁸ margin.
 - **Falsified**: "O(1) margin on the cone" and "outside the cone it's trivial". Both false, with a number.
 - **No contact with the sign**: no negative value of 𝔞_T (the −3·10⁻⁹/−2·10⁻⁷ from the optimizer at ½log5 and T = 1
  are noise below the 10⁻⁸ floor of the O(1) form with N = 60; the upper bounds in the table are direct Rayleigh
- quotients, reliable). Paper 47, grid and crossword are not touched.
+ quotients, reliable). Paper 46, grid and crossword are not touched.
 - OPEN residue (does not deserve a round): if 𝔟₀(h*_T) changes sign (≈ T ≈ 1.1 by linear extrapolation), the
  minimizer enters 𝒞_T and the "archimedean vs arithmetic" hierarchy of R186_033 §3 reverses; deciding this requires
  precision beyond doubling (R186_023/103).

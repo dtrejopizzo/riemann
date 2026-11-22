@@ -35,7 +35,7 @@ only (<1 s); `r5a_01/02/03` exceed the 60 s rerun cap and were audited from thei
  is Prop NC's bound for `n₋(A_∞|P_T)` (`main.tex:2599–2610`, `R155_033:271`). Mixing spaces. Either
  `2 ≤ n₋(Γ_{log2}) ≤ 49` (adding the codim-2 slack) or, on `P_T`, `0 ≤ n₋(A_∞|P_{log2}) ≤ 47`.
 - **E4 (statement).** `R155_039:24` drops the ceiling: `≥ 2Tτ₀/π − 3` should be `≥ ⌈2Tτ₀/π⌉ − 3`.
-- **E5 (presentation, must not survive into Paper 47).** At the two windows of record Theorem J gives
+- **E5 (presentation, must not survive into Paper 46).** At the two windows of record Theorem J gives
  `n₋(A_∞|P_T) ≥ 0` — vacuous. `§0.2` and `§4` read as if a `P_T` bound had been obtained at `log 2`;
  the only non-vacuous `P_T` content there is asymptotic, plus the `T₂` consequence at `T > 0.9989`.
 - **E6 (label).** `R155_039:125,220` label **Theorem J′ `PROVED`**. It quantifies over an unformalised
@@ -49,7 +49,7 @@ only (<1 s); `r5a_01/02/03` exceed the 60 s rerun cap and were audited from thei
 - **E9 (minor).** Declared compute `4 min` (`:7`, `scripts/r5a/README.md`) vs the README's own per-script
  times `150+100+150+1 ≈ 6.7 min`. Declare `≈ 7 min`.
 
-## §3 Readiness for Paper 47
+## §3 Readiness for Paper 46
 
 1. **Theorem J — READY** after E4. Permissible wording: *"`n₋(Γ_T) ≥ ⌈2Tτ₀/π⌉ − 1` on `L²(−T,T)`, hence
  `n₋(A_∞|P_T) ≥ ⌈2Tτ₀/π⌉ − 3`; the latter is vacuous for `T ≤ 2π/τ₀`."* The last clause is mandatory.

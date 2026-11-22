@@ -5,7 +5,7 @@
 
 ## 1. Corpus and new class
 
-Consulted: index (including entry011 and P1/Gram), grid and crossword; cross-checked the definitions of P47 and audit011. The equality of the map was already refuted and is not retried. The new question is the TOTAL inequality Q_T≥||UF||² for that same U and scale, which remained open. The test and the certification answer exactly that question; no other auxiliary family is built nor are margins on zeros used.
+Consulted: index (including entry011 and P1/Gram), grid and crossword; cross-checked the definitions of P46 and audit011. The equality of the map was already refuted and is not retried. The new question is the TOTAL inequality Q_T≥||UF||² for that same U and scale, which remained open. The test and the certification answer exactly that question; no other auxiliary family is built nor are margins on zeros used.
 
 ## 2. Exact test, domain and polar
 
@@ -27,7 +27,7 @@ The truncated integral of M is of an ENTIRE function: finite sums of exponential
 
 ## 4. Main certificate of gamma and comb
 
-The entire Fourier transform with sinc is correct for the convention of P47. On the real axis f is even and real, hence fhat²=|fhat|² and the symmetric extension of digamma coincides with m. Its complex extension is meromorphic, not entire; the acb computation must keep the singularities, as the memo warns. The final result additionally has the independent verification of §5 without that quadrature.
+The entire Fourier transform with sinc is correct for the convention of P46. On the real axis f is even and real, hence fhat²=|fhat|² and the symmetric extension of digamma coincides with m. Its complex extension is meromorphic, not entire; the acb computation must keep the singularities, as the memo warns. The final result additionally has the independent verification of §5 without that quadrature.
 
 For t≥100>6ω, the rational formulas of each cosine give |fhat|≤(8/3)ω(r+3)/t². The bound m(t)≤2logt+10 is proved by splitting the Lévy energy into three intervals. I checked K≤1/u+1/2, the integrals 1/4+1/(12t) and 2logt+1−1/t and the tail ∫₁∞K<28/9. The negative C₀ is omitted only for an UPPER bound. Integrating the frequency majorant gives ε_Γ with its coefficients 2/3, 2/9, 10/3 correct.
 

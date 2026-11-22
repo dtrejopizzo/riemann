@@ -6,7 +6,7 @@ R185_005 §2.1 invokes an equivalence between row D and another statement. It is
 proved only from D (W_T ≥ 0 on 𝒫_T for every T of the declared carrier), its internal reformulations (CITED) and its
 falsifiers, with no equivalence between D and another statement invoked. Where a step cannot be rewritten this way, it
 is marked **RETIRED** and the conclusion that depended on it drops to **OPEN**. No new mathematics except the
-incorporation of R186_037 (ρ1′ → ρ1‴). Paper 47, the grid and the crossword are not touched. Row D: OPEN.
+incorporation of R186_037 (ρ1′ → ρ1‴). Paper 46, the grid and the crossword are not touched. Row D: OPEN.
 
 Sources read in full: R185_001, R185_003, R185_004, R185_005, R185_091, R185_092, R185_093, R186_037, R186_114 §3.2 and §5;
 R166_802 §0–§1 (framework).
@@ -57,9 +57,9 @@ witness, (Z-strip)/Cor F].
 ## 1. Framework and class 𝔐 (no content change relative to R185_005 §1; vocabulary only)
 
 - **Goal statement D:** W_T ≥ 0 on 𝒫_T for every T of the declared carrier (ROW-D-REDUCED-STATEMENT). Internal
-  reformulation CITED: D ⟺ "there is no first-contact witness" (R166_802 §1; Paper 47 lem:contA, prop:witness). A
+  reformulation CITED: D ⟺ "there is no first-contact witness" (R166_802 §1; Paper 46 lem:contA, prop:witness). A
   witness has type T_c, G = F̂ real-rooted, G ≢ 0, and parameters π = (t_q, G) with t_q = γ_q − iδ_q, 0 < δ_q < ½
-  (hypothetical quadruple; Paper 47 prop:witness, CITED). Nothing further is assumed about the zeros.
+  (hypothetical quadruple; Paper 46 prop:witness, CITED). Nothing further is assumed about the zeros.
 - Admissible tests 𝒦 (K continuous, K ≥ 0 on ℝ, type ≤ Δ_max, Ψ = G²K admissible for Weil); exact identity (1.1)
   Z_K(Σ) = 𝔄_K − Tail_K(λ), linear in K (checked against eq:nuw, R185_091 m5); Z_K = Q_K + R_K + O_K, O_K ≥ 0.
 - Models of the remainder: (M1) R_K ≥ −S_K test by test, witness set O_U, U_K := 𝔄_K − Q^{hyp}_K + S_K; (M2) R ∈ 𝓡
@@ -158,7 +158,7 @@ BR (D-only form)  — PROVED relative to 𝔐, modulo ▲
 │   ├─ N-b  Lemma 3(e)+Lemma 1 ⟹ 𝒞 ∩ {≡_X ζ} = {ζ}; "frame only" reading (§2(b))               PROVED
 │   └─ N-c  circularity = N0 + R166_802 Thm 1/3                                                PROVED (scope N0)
 │        class remark: (iii-a) sketch to verify; (iii-b) PROVED; (iii-c) OPEN                  outside the tree
-├─ N-D   "no witness ∀π" = D (Paper 47 lem:contA, prop:witness; R166_802 §1)                   CITED
+├─ N-D   "no witness ∀π" = D (Paper 46 lem:contA, prop:witness; R166_802 §1)                   CITED
 ├─ N-I   I1–I18 cited only through their shadow in (1)–(3); I1 is NOT used; I11 with f_t:      CONDITIONAL[(Z-strip)/Cor F]
 └─ ▲ N-EX  exhaustiveness of L, D, C, Q and I1–I18                                             ARGUED
 ```

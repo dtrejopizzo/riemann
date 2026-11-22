@@ -15,7 +15,7 @@ input. One by one, with audit, so none is lost; it is likely that some of them c
    path; label PROVED/CONDITIONAL/OPEN/NO-GO; declares the trait of Λ (lem:transfer: every proof must fail on
    DH T≥9/5 and Epstein T≥1.59).
 4. **Audit of each construction** before recording; index immediately; if PROVED, verification
-   against the definitions of Paper 47 and integration as an independent result (input).
+   against the definitions of Paper 46 and integration as an independent result (input).
 
 ## Rules
 never D⟺RH (reformulations written via RH are rewritten D-only); honest labels; a result
@@ -34,7 +34,7 @@ independent of D is valid even if it does not close D.
   P4 sign pattern, G16.0, WT halves, (C★), H1⁺. No amplification (Prop S; AUDIT_W1; CALIB_R4).
 - **Corrected map:** Φ200 is not a class barrier (O1 REFUTED); Φ200′: every proof uses ≥ 2 channels (E Dirichlet
   series over ℕ, F conductor 1) in the SAME sign step (composition, not chaining); no route in the corpus composed them.
-- **Closed without touching D (in P47):** H1⁻ (cor:H1minus), Theorem A∞ (lem:archcount), prop:WT, rem:conjunctions,
+- **Closed without touching D (in P46):** H1⁻ (cor:H1minus), Theorem A∞ (lem:archcount), prop:WT, rem:conjunctions,
   rem:inertiatower, rem:sosatoms, PC-2. New reading: the even sign is the exact cancellation by the comb of all but
   one of ≍ 4T negative archimedean directions (count, not bound); the inertia of 𝔄_ev = pole + hyperbolic pairs.
 - OPEN closable without D: Lemma LCB; PRED-aP; upper bound of A∞. No sign. L′♯ OPEN.

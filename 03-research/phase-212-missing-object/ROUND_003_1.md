@@ -5,7 +5,7 @@ Question: is there a per-window family, not yet explored, in which the incidence
 functionals that do not commute with translations, so that the leakage subtracted by truncation (`REVIEW_002_BC.md`,
 Lemma B-1) is compensated exactly by a boundary term with sign, specific to Λ? In particular, does the
 Nyquist mesh give a square in the sampled values F̂(ω_k)?
-Notation: Q = 1_{I_T}, R = 1 − Q, U_a the translation by a on ℝ, ω_k = πk/(2T) (P47 thm:nyq; the task writes
+Notation: Q = 1_{I_T}, R = 1 − Q, U_a the translation by a on ℝ, ω_k = πk/(2T) (P46 thm:nyq; the task writes
 πj/T, which is the even sublattice), s_k = s_T(ω_k) with the truncated symbol of thm:nyq, N = e^{2T}.
 Abbreviations: «GRAM», «GLOBAL» as in `ROUND_002_B.md`. Labels: PROVED / CITED / CONDITIONAL / ARGUED /
 OPEN / NO-GO / NUMERICAL.
@@ -20,7 +20,7 @@ dilation, Wiener–Hopf, Toeplitz–Hankel, Nyquist, malla de Nyquist, omega_k, 
 jet, collar, leakage, fuga, time-limited, band-limited, Paley–Wiener, de Branges, reproducing kernel; and, within
 the files with «Nyquist», for divisor / incidence / mcd / gcd / Λ∗1. The largest concentrations: Nyquist
 in 60, 155, 159, 186, 193, 211; collar in 101, 121, 124, 161, 162, 163, 170; prolate/leakage in 72, 106, 114,
-116, 186, 199, 200, 211; de Branges/Paley–Wiener in 159, 160, 60, 64. Opened in primary: P47 thm:nyq,
+116, 186, 199, 200, 211; de Branges/Paley–Wiener in 159, 160, 60, 64. Opened in primary: P46 thm:nyq,
 lem:nyq-sampling, prop:nyq-alias, prop:nyq-LK, prop:nearfree, rem:boxes, thm:coer-schur, eq:collar;
 R186_052 §§0–1, R186_053 §§0–1, R186_117/118 (verdicts); 204 `P1_BBSTAR_001.md` §3; 211 `ROUND_005_C.md`
 §§1, 5.2–5.3 and its entry in `ANNEX_211_FILES_6.md` (with those of ROUND_001_C, ROUND_002_A, ROUND_005_A,
@@ -36,15 +36,15 @@ grep listing): phases 60, 72, 114, 116 (except what `REVIEW_002_BC.md` cites), 1
 | 2 | Truncated translations grouped in a fixed basis | same memo, §3 («grouped Cholesky of A_MU (b) / C8: indexed, not retried»); `REVIEW_002_BC` Lemma B-1 | Q_B = class (i) − leakage | remainder not examined; ungrouped residue K3: «empty class of candidates», OPEN |
 | 3 | Words of truncated translations, Krylov of the comb | 211 ROUND_005_A Lemma 3.2, Prop. 3.3 (Π² = Qσ_v²Q − 𝔏*𝔏); ROUND_006_B Prop. 4.1–4.3 (halo/leakage, constant ½) | [Λ∗Λ indefinite] + [mean value ≥ 0] − [leakage] | class NO-GO for bounded j and v-homogeneous generators (cΛ acts only through the bundle) |
 | 4 | Compressed J_T, B_T^{−1/2}J_TB_T^{−1/2}, functionals ⟨F,c⟩, ⟨F,s⟩ | R170_301 §§2–5 (via `REVIEW_002_BC` B.1.5) | E_T = Γ_T + 2A_T I − J_T + 2\|c⟩⟨c\| | generic; falsifier a₂ = 100 |
-| 5 | Nyquist sampling: diagonal identity in the samples | P47 thm:nyq, prop:nyq-alias, prop:nyq-LK | a_T = (1/4T)Σ_k s_k\|F̂(ω_k)\|² | reformulation (N); 191 SPEC_B §1 classifies it REF-D |
+| 5 | Nyquist sampling: diagonal identity in the samples | P46 thm:nyq, prop:nyq-alias, prop:nyq-LK | a_T = (1/4T)Σ_k s_k\|F̂(ω_k)\|² | reformulation (N); 191 SPEC_B §1 classifies it REF-D |
 | 6 | Nyquist algebra: two spin structures, cones, Herglotz of the sampled comb | R186_052 Thm. 1.2, 2.1–2.4, 3.1–3.5, §4; R186_053 Thm. 2.1 | a_T = ½[s(D_per) + s(D_anti)]; circulant cone fails in every window | «contact with the sign: none»; Bochner–Herglotz on ℤ is positivity on the circle, not on the half-circle; M₁ |
 | 7 | Negative Nyquist block and Schur complement | 211 ROUND_001_C Thm. 1, Prop. 4; ROUND_002_A Thm. F, Prop. M, Cor. M1–M2 | (L2′); deep sample ⟹ near-coincidences n′^{q_n} ≈ n^{q_{n′}} | no criterion on the samples alone decides (Prop. 4); Schur only with floor NO-GO |
 | 8 | Responses of the comb on the mesh with Λ∗1 = log | 211 ROUND_005_C Prop. 2 (Πφ_q = φ_qψ_q, Dirichlet polynomials twisted by Λ on the mesh), §5.3 | Selberg identity in the cubic entries; bounds of local Euler factors | class NO-GO (§5.3(iv)): comb identities valid in every Beurling system or for a_P, applied on E_T |
-| 9 | Collar / boundary operator 𝓔_N | P47 eq:collar, thm:PCfinite, prop:GEgap; R170_840 Thm. 6.1, 862, 863, 870 (via `RULES_AVOID` §I) | 𝓞B_N = D_N𝓞 − 𝓔_N | two-sided collar law NO-GO by linear composition (840); parity wall (870); conversion of the tail into squares: `ROUND_002_A` + `REVIEW_002_A` |
+| 9 | Collar / boundary operator 𝓔_N | P46 eq:collar, thm:PCfinite, prop:GEgap; R170_840 Thm. 6.1, 862, 863, 870 (via `RULES_AVOID` §I) | 𝓞B_N = D_N𝓞 − 𝓔_N | two-sided collar law NO-GO by linear composition (840); parity wall (870); conversion of the tail into squares: `ROUND_002_A` + `REVIEW_002_A` |
 | 10 | Boundary and Tate jets | 121 atlas («two Tate jets»), R170_862–863, 211 LEDGER C21 (boundary budget (EB_C), OPEN) | Pontryagin inertia; boundary budget | without sign; (EB_C) OPEN |
-| 11 | Projection onto P_T, functionals A, B, piecewise Tate exponentials | P47 thm:coer-schur, prop:AM; 211 ROUND_005_C Lemma 1 (Tate gauge) | exact reduction to finite S_{T,k} | reformulation (L2) |
+| 11 | Projection onto P_T, functionals A, B, piecewise Tate exponentials | P46 thm:coer-schur, prop:AM; 211 ROUND_005_C Lemma 1 (Tate gauge) | exact reduction to finite S_{T,k} | reformulation (L2) |
 | 12 | Prolates / Slepian / Paley–Wiener / de Branges of the window | phases 72, 114, 155, 159, 186 (R186_044), 199, 200, 211 | prolate sector, reproducing kernels | `RULES_AVOID` C1: «Sonin, prolates, semilocal as a source of sign» closed |
-| 13 | Resonators (tests blind to near-coincidences) | P47 prop:nearfree, rem:boxes | a_T(F_b) ≥ c_0‖F_b‖²; Σ_{d\|m}Λ(d) = log m enters the Schur test | barrier: they give no information on the sign (rem:boxes) |
+| 13 | Resonators (tests blind to near-coincidences) | P46 prop:nearfree, rem:boxes | a_T(F_b) ≥ c_0‖F_b‖²; Σ_{d\|m}Λ(d) = log m enters the Schur test | barrier: they give no information on the sign (rem:boxes) |
 
 On the concrete question (incidence on the Nyquist mesh): **it is written** in 211 ROUND_005_C. Prop. 2
 identifies the responses of the comb on the mesh with Dirichlet polynomials twisted by Λ; §5.3(i) uses
@@ -57,8 +57,8 @@ evaluated at s_k = ½ + iω_k is thm:PCfinite (row K1) on the mesh.
 ### (1) Closest antecedent
 
 For the mesh: 211 `ROUND_005_C.md` Prop. 2 and §5.3 (read in primary), with R186_052 §4 (the sampled comb
-is of positive type, without sign) and P47 thm:nyq. For the grouped truncated translations: 204 `P1_BBSTAR_001.md`
-§3 and `REVIEW_002_BC.md` Lemma B-1. For the boundary: P47 eq:collar and R170_840 Thm. 6.1.
+is of positive type, without sign) and P46 thm:nyq. For the grouped truncated translations: 204 `P1_BBSTAR_001.md`
+§3 and `REVIEW_002_BC.md` Lemma B-1. For the boundary: P46 eq:collar and R170_840 Thm. 6.1.
 
 ### (2) Genuinely new object
 
@@ -98,7 +98,7 @@ complete; they are written because they delimit the terrain and require no addit
 In all that follows, (G) is a_T(F) = ‖V_TF‖² + ρ_T(F) on P_T ∩ 𝒟_T with ρ_T ≥ 0.
 
 **Control norm.** Let N_T(F)² := (1/2π)∫(1 + log(2 + |τ|))|F̂(τ)|² dτ. There exists C_T with
-|a_T(F)| ≤ C_T N_T(F)² on 𝒟_T. *Proof.* |m(τ)| ≤ C + log(2 + |τ|) (asymptotics of ψ; CITED, P47
+|a_T(F)| ≤ C_T N_T(F)² on 𝒟_T. *Proof.* |m(τ)| ≤ C + log(2 + |τ|) (asymptotics of ψ; CITED, P46
 lem:mbounds) and |Σ_{log n<2T} v_n cos(τ log n)| ≤ 𝒜_T = Σ v_n; hence |s_T(τ)| ≤ C_T(1 + log(2 + |τ|)). ∎
 
 **Lemma E (NO-GO with class, PROVED).** If (G) holds, then V_T is bounded from (P_T ∩ 𝒟_T, N_T) into ℋ_T. In
@@ -140,7 +140,7 @@ and c_G(±2T′) = 0. (d) |F̂| = |Ĝ|. Then a_{T′}(G) = a_T(F) = Q_B(F) + ρ_
 Reading. In the family of grouped truncated translations, the leakage acts only on the mass of F in the collar
 (T − log I, T). On the interior, (G) requires a positivity of the symbol form s_T − σ_B ≤ s_T in the
 window T′, that is (★) at T′ with margin (1/2π)∫σ_B|F̂|² ≥ 0 (cf. Lemma B-2). Since λ_A(T′) ≤ 4·10⁹T′e^{−15.449T′}
-for T′ ≥ 1 (P47 cor:margin1, CITED), the grouped squares must vanish almost exactly on the
+for T′ ≥ 1 (P46 cor:margin1, CITED), the grouped squares must vanish almost exactly on the
 almost-minimizers of all shorter windows. If in addition the x_i do not depend on T and (G) is required for
 every T (O5), that condition holds for every large T′. It is not an impossibility: it does not exclude σ_B small where
 |F̂*|² lives. Answer to the question of the task: a compensation «leakage = boundary term with sign» can only
@@ -177,7 +177,7 @@ modulo 4T; the points of (2T, T + a) pass to (−2T, a − 3T) and a − 3T < �
   nothing (consequence 1) and a non-diagonal one couples nodes only through the matrix without Λ or through an arithmetic of the
   index without comb.
 - **prop:nearfree.** The resonators have a_T ≥ c_0‖F‖² with Σ_{d|m}Λ(d) = log m used in a Schur test
-  (P47, proof of prop:nearfree; rem:boxes): linear and bounded use of the separator, without sign on the vectors
+  (P46, proof of prop:nearfree; rem:boxes): linear and bounded use of the separator, without sign on the vectors
   that see Near. A useful per-window family would have to live where prop:nearfree gives nothing:
   N_T-bounded vectors (Lemma E) with mass in the collar (Lemma F) that see near-coincidences. I have no such family.
 - **K1.** The reading on the mesh of the hyperbolic incidence is thm:PCfinite at s_k; its residue is that of K1 and

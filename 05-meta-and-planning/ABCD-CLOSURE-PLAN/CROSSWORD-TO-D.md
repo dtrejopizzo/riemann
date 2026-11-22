@@ -71,12 +71,12 @@ coincides with O166.501.1 and O184.015b.
 
 ### 1.1 The root statement
 
-**(D) Row D on the declared carrier** (Paper 47 §1; Paper 48 Def; R163_401_v9 Def 1.1):
+**(D) Row D on the declared carrier** (Paper 46 §1; Paper 48 Def; R163_401_v9 Def 1.1):
 
 > ∀T > 0: W_T(F) ≥ 0 for every F ∈ 𝒟_T (equivalently F ∈ C_c^∞(I_T)), and, in primitive form, ∀T > 0: 𝔞_T ≥ 0 on 𝒫_T.
 
 D is the target statement and is not compared with any external statement. The only zero statements that enter are
-those of the **witness**: a quartet off the line produces a negative direction in some window (Paper 47
+those of the **witness**: a quartet off the line produces a negative direction in some window (Paper 46
 `lem:roughEF`, `prop:witness`, `lem:contA`), so that D ⟺ "there is no first-contact witness" (internal
 reformulation, CITED). Nothing else is assumed about the zeros.
 
@@ -86,13 +86,13 @@ All are ⟺ D (REF-D). The table gives the form, the source, and the nature of t
 
 | # | form | source | nature |
 |---|---|---|---|
-| D-1 | ∀T λ^W_T ≥ 0 | Weil; P47 §1 | definition of D |
+| D-1 | ∀T λ^W_T ≥ 0 | Weil; P46 §1 | definition of D |
 | D-2 | ∀T λ^A_T ≥ 0 | P45 Thm 10.4; Bombieri 2000 (CITED) | global only: the per-window converse fails (`cor:convfail`) |
-| D-3 | ∀T there exists a flat-top certificate, i.e. Σ_ρ ŵ(τ−γ_ρ) admits a one-sided smoothing ≥ 0 | P47 `thm:Z` | PROVED |
-| D-4 | ∀T v_T = (2Λ(n)/√n)_{n<e^{2T}} ∈ 𝒱_T (closed convex set defined only by Γ) | P47 `prop:finite`, `prop:uniform` | PROVED; at fixed T it is a finite, decidable condition |
-| D-5 | lim_T λ^A_T ≥ 0 | P47 `cor:margin2` | PROVED |
-| D-6 | Hodge index on the adelic square | P46 §5 | PROVED |
-| D-7 | ∀T the Kreĭn extension problem is indeterminate | P47 Thm 8.5 | PROVED; unconditional for T ≤ 0.8 via Zhu (CITED) |
+| D-3 | ∀T there exists a flat-top certificate, i.e. Σ_ρ ŵ(τ−γ_ρ) admits a one-sided smoothing ≥ 0 | P46 `thm:Z` | PROVED |
+| D-4 | ∀T v_T = (2Λ(n)/√n)_{n<e^{2T}} ∈ 𝒱_T (closed convex set defined only by Γ) | P46 `prop:finite`, `prop:uniform` | PROVED; at fixed T it is a finite, decidable condition |
+| D-5 | lim_T λ^A_T ≥ 0 | P46 `cor:margin2` | PROVED |
+| D-6 | Hodge index on the adelic square | P47 §5 | PROVED |
+| D-7 | ∀T the Kreĭn extension problem is indeterminate | P46 Thm 8.5 | PROVED; unconditional for T ≤ 0.8 via Zhu (CITED) |
 | D-8 | CL (closure lemma) | R163_401 Prop 4.0 | PROVED ⟺ D |
 | D-9 | (★_cell): on the witness, P_j > N_j in every cell C_j containing an off-line ordinate | R163_401 §4.8, Rem 4.8a | ⟺ D on the witness, circularly (Σ_j(P_j − N_j) = 0); §5: (★_cell) ⟹ D is PROVED conditional on 4.8 |
 | D-10 | (TC), the tail theorem: C_{T_c}(x) − iG(x)²𝒯_X(x) has no poles with Im x ∈ (−½, 0) | R164_000; R163_801 Cor 3.1 | ⟺ no witness (Rem 4.8a) |
@@ -309,7 +309,7 @@ gap, a bootstrap, or a perturbation larger than exp(−e^{2T}) fails. Complement
 change of size ≤ 2·10⁹T e^{−14.449T} reverses the sign, so no estimate-type input acts in any window);
 the per-window ceiling T/log T; the master-quantifier lemma (averages over T imply nothing per window).
 
-**I3 — W3/F3, class blindness** (Paper 48 W3; P47 Thm 12.5). Every proof whose sign step uses only a ≥ 0, supp a ⊂
+**I3 — W3/F3, class blindness** (Paper 48 W3; P46 Thm 12.5). Every proof whose sign step uses only a ≥ 0, supp a ⊂
 {p^k}, the EF, or monotone laws on the weights also holds for deletion Λ1_{n≥5}, the κ-models/finmod, Davenport–Heilbronn,
 Epstein, and the two-atom Type I curve (s₂^c = 0.9997678; uncertified), and therefore proves something false. Exact list of
 falsifiers by property used (grid §4):
@@ -652,7 +652,7 @@ implies the other by a theorem of the corpus. It remains OPEN whether a T-unifor
 would in fact need an input of the O166.802.1 type (R186_104: "(L2) inherits thm:margin" is evidence,
 not proof). This question is not closed here.
 
-### 4. What goes into Paper 47
+### 4. What goes into Paper 46
 
 | item | label | destination |
 |---|---|---|
@@ -725,7 +725,7 @@ Source: `03-research/phase-188-closing-D/SYNTHESIS_188.md` (tracks (L2) and (N);
 -  INV_U_001 (contact crossing): 1/log modulus at the crossing PROVED; boundary law (log 1/δ)^{−1/2} and λ_A C¹ at crossings ARGUED; NO-GO 𝒦_cross (generic-comb local law). No sign.
 -  AUDIT_196 (V, phase 196): identities V1.1/V2.1 verified (NUMERICAL 1e−12); Ш-positivity = multiplicativity of 1/j (trivial), V1.4 subsumed; V2.2(c) false (every lattice αℤ); Chebyshev rigidity V2.4 PROVED in a narrow class; (G2) tautological, (G1) inside N_018 ∪ I4. No sign.
 -  AUDIT_197_HOSTILE (BARRIER_001): a uniform method decides T ⟺ π_N S ⊆ K_T={μ_T≥0}, convex (lem:degen); Thm 5 = its supporting half-space (PROVED). Lemma 2(a) false (prefix atoms), primitive Ξ_Q ARGUED, 0≡a_P in the window, D1.a false, D2 OPEN ill-posed (near-repeat of INV_P/INV_Q). No symbol in the grid changes. No sign. Row D: OPEN.
--  AUDIT_197_2 (D1/D2): exact Bohr defect formula PROVED (+NUMERICAL); Thm 4 of D1: continuity of the defect in Λ suffices ⇒ REF-D⁺ (not impossibility). D2: defect/continuation = WP_T(Λ) ∧ sign-free rigidity (PROVED). Residues: R1 closed (continuous ⇒ REF-D⁺, discontinuous ⇒ cone/certificate); R2 = non-crossing #101. Normalization P47 v_n=2a(n)/√n to be corrected in BARRIER_001/D1/D2. No symbol changes. Row D: OPEN.
+-  AUDIT_197_2 (D1/D2): exact Bohr defect formula PROVED (+NUMERICAL); Thm 4 of D1: continuity of the defect in Λ suffices ⇒ REF-D⁺ (not impossibility). D2: defect/continuation = WP_T(Λ) ∧ sign-free rigidity (PROVED). Residues: R1 closed (continuous ⇒ REF-D⁺, discontinuous ⇒ cone/certificate); R2 = non-crossing #101. Normalization P46 v_n=2a(n)/√n to be corrected in BARRIER_001/D1/D2. No symbol changes. Row D: OPEN.
 
 ### Addendum— AUDIT_197_HOSTILE_3 (track X)
 Kronecker parity (X2) holds for every functional of the stationary ratio process, but only on σ-closed classes (𝓘 is not:
@@ -754,7 +754,7 @@ are under-resolved by ≥ 15 orders and have been withdrawn. Open cell unchanged
 ### Addendum— AUDIT_L_SHARP_1 (phase 199, proof attempts A–E of L′♯)
 | cell | result | label |
 |---|---|---|
-| half-line identity (A Thm 1.1 / C Prop 1.2 / E Thm E.1) | a single identity in three forms; W_T(Ef) = 𝒲_ext[Zr] with a killing term ∫\|Ψ\|²κ_a (correction E, P47 "Dirichlet form with killing") | PROVED |
+| half-line identity (A Thm 1.1 / C Prop 1.2 / E Thm E.1) | a single identity in three forms; W_T(Ef) = 𝒲_ext[Zr] with a killing term ∫\|Ψ\|²κ_a (correction E, P46 "Dirichlet form with killing") | PROVED |
 | comb collapse (E Thm E.2) | only on the exterior carrier (full comb); Λ-free form; "Λ ≥ 0 consumed" withdrawn: it is c_N ≥ 0 in Z_logZ^{−1} = Σc_N S_{log N} | PROVED / RETRACTED |
 | inverted weights (D Prop 2.3) | ε′(1⁺) = −cΣ(d/dc)log(1−λ_n(c)) by Slepian; reproduces CC's 22.9965; ε_λ′ = O(μ^{3/2}), not e^{4πμ}; gap (G4) withdrawn | FALSE (size) / PROVED (identity) |
 | window barrier (B Thm 4.2, D Prop 3.1) | r ≤ λ^W − Cδ PROVED; scale e^{−4πμ} only with rem:moriceiling (μ ≥ 50); "every μ ≥ 5" withdrawn | PROVED / CONDITIONAL |
@@ -772,7 +772,7 @@ are under-resolved by ≥ 15 orders and have been withdrawn. Open cell unchanged
 | Euler–Maclaurin partition (F Thm F.2, Cor 3.2) | F₀ pointwise null vector of the line form Q, not of 𝔔: 2AB does not split and contains an F₀–F₀ term; the 2×2 block argument does not apply to 𝔔 (false premises); "sign in the coupling" = A §3.2 | PROVED (identity) / ARGUED (Cor 3.2) |
 | Hilbert-type kernel (F Thm F.3) | computation of the kernel max(nξ,mη)/\|n²ξ²−m²η²\| correct; the identity "regular part = −∫∫ρρ𝒦" diverges on every rational line: only a polarized reading (same as literal E.1′, J Rem 2.1) | PROVED / RETRACTED |
 | deep data (F Prop F.4, J Thm J.3) | both PROVED and consistent; J gives the exact value (2+γ−log4π)B_φ²e^D = 2(ξ′/ξ)(1)B_φ²e^D = 0.0462 (anatomy −5.372+2.264+2+1.154, NUMERICAL); F.4(b) "the O(1) is the sawtooth in the transition region" FALSE: F₂ negligible, bulk value = explicit formula at the pole | PROVED / FALSE |
-| shallow data (F Prop F.5) | depth X₀ ≤ e^{1.6} ⇒ window form T₀ = ½log X₀ ≤ 0.8 ≥ 0 (Zhu Thm 1.2 CITED via P47); log-depth = full window 2T₀ | PROVED / CITED |
+| shallow data (F Prop F.5) | depth X₀ ≤ e^{1.6} ⇒ window form T₀ = ½log X₀ ≤ 0.8 ≥ 0 (Zhu Thm 1.2 CITED via P46); log-depth = full window 2T₀ | PROVED / CITED |
 | Hilbert kernel in the integer index (J Thm J.2) | there is no antisymmetric kernel 1/(log m − log n): the prime part is log(mn) on the dilation Gram matrix, the archimedean part is (mn)^{−1/2}c_r̃(log n/m) with c_r̃ bounded, continuous, and positive definite, concentrated at 1/μ on PW data; class NO-GO only ARGUED (the Toeplitz-in-log object exists; it is excluded by A §5/N_018) | PROVED / ARGUED |
 | base case (H Prop H.1) | L′♯ for 5 ≤ μ ≤ 15 with A = 2, κ = 2^{−2905}/C₀ (Mori Thm O CITED, B1 reproduced) | PROVED (given CITED) |
 | flow in c (H Thm H.4, H.5) | dN/dT = −2G_φ(−2T)(W^−G_φ)(−2T): the flow only sees the band-edge alias; Grönwall closure ⟺ (H) ρ_N ≤ ρ_L + A/c at the minimizer (virial, relative precision 1/c, functional of h*); (H) ⇒ L′♯ mod 4.1; Cor H.4′ corrected sign −4c_qG_φ(−log q)φ′(1); 𝒦_H NO-GO | PROVED / CONDITIONAL / NO-GO (ARGUED) |
@@ -1034,25 +1034,25 @@ Qupper<.001647953. Datos/códigoenLINK012_data. AproximaciónH1polarcorregida
 extiende el falsificador a coreC_c∞. AUDIT_012 favorable, ambos scripts reproducidos.
 Sólo escala EXACTA deU011: ninguna exclusión de reescalares pequeñas,
 otros mapas/O1 niD. Esta dominación concreta ya no es un residuoOPEN.
-No integraciónP47 ni cambio de celdas/conteos. ObjetivoD íntegro active.
+No integraciónP46 ni cambio de celdas/conteos. ObjetivoD íntegro active.
 
 
 ### Fase209 — LINK013: toda escala fija deU011 falla para ventanas grandes (2026-10-19)
 
 Diferencia nueva escrita respecto012: no cambiaU ni reintenta escala1;
-calcula la respuesta del mismo mapa sobre la familia EXPLÍCITA de P47
+calcula la respuesta del mismo mapa sobre la familia EXPLÍCITA de P46
 lem:testfam aT→∞, y prueba la clase antesabierta de constantes arbitrarias.
 El perfilM(F)=∫Fh cumple h(−∞)=−κ,h(+∞)=0, por sumaRiemann y Mellin
 positiva de m=y^−1/2−τ. Para G_T=ω_k(x/T),k=ceil21T/e,F_T=P(D)G_T,
 masaG_T/Tescapa compactos, derivadasL1 son o(T), y
-M(F_T)/T→γ1²κ/8. AsíE_T≥κM²≥c0T². La prueba deP47thm:margin/cor:margin1
+M(F_T)/T→γ1²κ/8. AsíE_T≥κM²≥c0T². La prueba deP46thm:margin/cor:margin1
 (CITED, inputsZ1/Z2 y fórmulaexplícita sólo para este falsificador) da
 |Q_T(F_T)|/||F_T||²≤4e9Texp(−15.449T) paraESTAFAMILIA, no porinferir
 un test de un ínfimo. NormF²O(T^1.5) => |Q|/E=O(√Texp(−15.449T))→0.
 No existec>0 fijo conQ_T≥cE_Ten todasventanas. Cualquierc(T) eventual
 requiere c(T)≤C√Texp(−15.449T); su existencia no se demuestra.
 Pruebaanalítica sin nuevo cálculo numérico; AUDIT_013 favorable, inputCITED explícito.
-No exclusión de otrosmapas, ni signoD nuevo. No integraciónP47/celdas/conteos.
+No exclusión de otrosmapas, ni signoD nuevo. No integraciónP46/celdas/conteos.
 
 
 ### Fase209 — LINK014: quitar piezas positivas tampoco reparaU011 (2026-10-19)
@@ -1070,7 +1070,7 @@ con MISMOa_d011 tiene |Q|/E→0. No constantepositivauniforme de dominación.
 No inferencias de mayor a menor; nueva prueba para ambas subformas.
 Sin numerics nuevos. AUDIT_014 y addendum favorables para toda la clase.
 No se excluyen otros mapas, cancelacionesfirmadas ni factoresTdependientes.
-ObjetivoD íntegro active/OPEN; no integraciónP47/celdas/conteos.
+ObjetivoD íntegro active/OPEN; no integraciónP46/celdas/conteos.
 
 
 ### Fase209 — CONSTRUCTOR015: dominio separado y cono PSD exacto (2026-10-19)
@@ -1088,7 +1088,7 @@ Con014cierratambiéncombinacionesfirmadasPSDglobales deese span con
 MISMOmapa011. No clasifica formas positivas sóloensuimagen niotrosmapas.
 Psproducto devaluaciones, NOleyzetasobreN. NoV=todoGaussian niFEinvariancia.
 Sin numerics nuevos ni inputnuevo de ceros. AUDIT_015 favorable a los tres teoremas.
-No signoQ/D; objetivo íntegroactive, sin integraciónP47/celdas/conteos.
+No signoQ/D; objetivo íntegroactive, sin integraciónP46/celdas/conteos.
 
 
 ### Fase209 — LINK016: imagen par polar libre densa (2026-10-19)
@@ -1122,7 +1122,7 @@ La construcción funciona para cualquier perfil positivo, también borrado;
 el signo virtual no selecciona los primos completos ni la FE del paper.
 Diagnóstico: fuente no funcional para D; retorna a P1_BBSTAR/INV_N,
 NO se presenta esa descomposición conocida como nueva ruta o avanceD.
-Dominio de perfiles verificado para0<α<1. Sin numéricas ni modificaciónP47.
+Dominio de perfiles verificado para0<α<1. Sin numéricas ni modificaciónP46.
 No NO-GO contra otras virtualizaciones; D sigue OPEN. Memo:
 03-research/phase-209-nonlocal-kernel/VIRTUAL_SOURCE_017_METRIC_TEST.md.
 Auditoría independiente favorable en AUDIT_017.md; identidades y alcance verificados.
@@ -1141,7 +1141,7 @@ recupera11/12+5ϑ/12. Esa cota no alcanza1/2 ni ampliando sóloelrango.
 No se prueba imposibilidad de mejoras ni se interpolan tres fracciones.
 OPEN: mejor familia/estimación selectiva y enlace exacto con déficit017.
 La estimación crítica de réplicas escrita es un objetivo condicional,
-NO un resultado del paper o nuestro. No signoD ni integraciónP47.
+NO un resultado del paper o nuestro. No signoD ni integraciónP46.
 
 
 ### Fase209 — QRH_REPLICA_COHERENCE: estimación selectiva examinada (2026-10-19)
@@ -1156,7 +1156,7 @@ con renombreε. No se probó control nuevo del componente coherente.
 Revisión independiente favorable tras precisar estos cuantificadores.
 ActualizadoQRH_EXPONENT_MAP: la condición suficiente propuesta era
 también necesaria enesta familia; no se cuenta como mejora de cancelación.
-No NO-GO general, no equivalenciaexternaD, no integraciónP47; D OPEN.
+No NO-GO general, no equivalenciaexternaD, no integraciónP46; D OPEN.
 Memo:03-research/phase-209-nonlocal-kernel/QRH_REPLICA_COHERENCE.md.
 
 
@@ -1187,7 +1187,7 @@ Perfilrealcorregido tieneinflexión positivaenT−8log(128/63)+o1
 para a3/8b.5, yotra simétrica. Coshmismaesconvexa globalmente.
 SeptLemma20.2 certifica49/440640 enexponentecompensado, no margenD.
 Franja7/8noidentificafluctuaciónconcosh3x/8 ni daamplitud/signo.
-Sincontroldelcontratermino017, sinestimacióncríticanuevaniintegraciónP47.
+Sincontroldelcontratermino017, sinestimacióncríticanuevaniintegraciónP46.
 Es cota geométrica/modelodiagnóstico, no avancepositivo de signoD.
 
 
@@ -1255,7 +1255,7 @@ Estado vigente `POWER_STATE_006.md`. PROVED/revisado: confluencia4 a32, W>norm²
 
 ### 2026-11-04 — Potencias007–008: bloque aritmético y patrón contrario
 
-`POWER_STATE_008.md` es estado vigente. PROVED/revisado en `POWER_BLOCK_AUDIT_007`: W>norm²/10000 para TODO bloque Laguerre de dimensión 12 en tasa31.5, todos contactos/cruces (`POWER_ARITHMETIC_BLOCK_007`, verifier Fraction PASS independiente). ARCH+POLAR indefinida allí; contacto 2 repara matriz y cola norma<.0006. PROVED/revisado en `POWER_AUDIT_008`: f=(D²−.25)[y^(n−1)e^-31.5y], n=2^17, polar nulo, ARCH<−3.83norm², TODOS contactos primos <=1024 perjudican. No se afirma signo negativo de W: la cola está abierta. Refuta patrón universal de contactos bajos reparadores, no nuevo NO-GO global sobre peines finitos. Cuádruples arbitrarios, todos los órdenes y signo del Paper 47 OPEN; puente sí PROVED. Papers intactos.
+`POWER_STATE_008.md` es estado vigente. PROVED/revisado en `POWER_BLOCK_AUDIT_007`: W>norm²/10000 para TODO bloque Laguerre de dimensión 12 en tasa31.5, todos contactos/cruces (`POWER_ARITHMETIC_BLOCK_007`, verifier Fraction PASS independiente). ARCH+POLAR indefinida allí; contacto 2 repara matriz y cola norma<.0006. PROVED/revisado en `POWER_AUDIT_008`: f=(D²−.25)[y^(n−1)e^-31.5y], n=2^17, polar nulo, ARCH<−3.83norm², TODOS contactos primos <=1024 perjudican. No se afirma signo negativo de W: la cola está abierta. Refuta patrón universal de contactos bajos reparadores, no nuevo NO-GO global sobre peines finitos. Cuádruples arbitrarios, todos los órdenes y signo del Paper 46 OPEN; puente sí PROVED. Papers intactos.
 
 
 ### 2026-11-04 — Potencias009–012: hasta siete polos arbitrarios
@@ -1427,7 +1427,7 @@ Auditoría independiente021 completada: `POWER_CONTACT_BALANCE_AUDIT_021` aprueb
 
 ### 2026-11-05 — Potencias039: inversos completos positivos desde un corte cercano a la energía
 
-`POWER_STATE_039.md` vigente. `POWER_INFINITE_SHOULDER_039`: PROVED para TODOS N>=4e6,u31.5, h_N(x)>0 yK_N(x)>0 paraTODOx>=exp(T_N), T_N=2(N−1)v/(u²−v²),v=.5+1000/√N; T_N=(N−1)/992+O√N<(N−1)/330. Comparación con026 es del MISMO K; h se prueba también. Inclinación móvil, productoEuler INFINITO σ>1 firmado conservado enFourier, ψ<=2xelemental, normalizadoruniformec/v yperfiltrasladadopositivo. Cocientesfullh/H,K/G∈(.9Uσ,1.1Uσ) enintervalov; cola siguiente por m^-2. Diferencia vs038: noQfinito ni restocoprimoomitido, controla complemento completo enregióndeclarada. `POWER_SHOULDER_AUDIT_039` aprueba; root+dosrevisores, verifierPASS. T_N coordenadanúcleoNOventanaPaper47; interior/balanceWOPEN, sin nueva coberturaW/T, papers intactos.
+`POWER_STATE_039.md` vigente. `POWER_INFINITE_SHOULDER_039`: PROVED para TODOS N>=4e6,u31.5, h_N(x)>0 yK_N(x)>0 paraTODOx>=exp(T_N), T_N=2(N−1)v/(u²−v²),v=.5+1000/√N; T_N=(N−1)/992+O√N<(N−1)/330. Comparación con026 es del MISMO K; h se prueba también. Inclinación móvil, productoEuler INFINITO σ>1 firmado conservado enFourier, ψ<=2xelemental, normalizadoruniformec/v yperfiltrasladadopositivo. Cocientesfullh/H,K/G∈(.9Uσ,1.1Uσ) enintervalov; cola siguiente por m^-2. Diferencia vs038: noQfinito ni restocoprimoomitido, controla complemento completo enregióndeclarada. `POWER_SHOULDER_AUDIT_039` aprueba; root+dosrevisores, verifierPASS. T_N coordenadanúcleoNOventanaPaper46; interior/balanceWOPEN, sin nueva coberturaW/T, papers intactos.
 
 
 ### 2026-11-05 — Potencias040: patrón central real y corte a distancia constante
@@ -1466,7 +1466,7 @@ El pivote theta tampoco produjo una desigualdad nueva: 103_34 ya prueba logconca
 
 `POWER_STATE_045.md`: `POWER_PRIMAL_PAIR_045` PROVED, revisión independiente en `POWER_PRIMAL_AUDIT_045`: si un par representante conserva exactamente la cola real del símbolo y sólo cambia una medida espectral PAR compacta, la identidad en TODOS los tests primitivos fuerza que la corrección sea cero. Prueba por F=(D²-1/4)phi, polarización/localización y momentos compactos; paridad esencial. En T=3/5, q_T(0)<-15/2, así ese ansatz no admite slack<=15/2. No es negatividad de W ni NO-GO de L55-B general. El subcaso no compacto con resto temporal exterior medida finita firmada retorna al dual(D) existente; no se generaliza a medidas/distribuciones arbitrarias. Diferencia respecto044: hipótesis concreta de reparación compacta, no mero cambio de orientación ni imposición artificial de masa total finita. `POWER_CONTACT_FLOOR_045` comprueba que el piso CRUDO m(240)-A2345<-1/2 falla al entrar5; ROUND026A ya evita esa limitación, por lo que no es nueva vía ni imposibilidad de otros certificados. Ambos verificadores racionales PASS constructor/root/auditor.
 
-CORRECCIÓN DE ESTADO: Paper47 prueba hasta log5/2, pero el sandbox anterior `ROUND_026_A`, Theorem26A.2, registra PROVED/computer-assisted lambda_A(T)>=2e-26 para TODOS 0<T<=207/200=1.035. Root y auditor leyeron logs archivados de ambas paridades certified:true a mu2e-26; NO se reprodujo ahora la certificación larga. T1.098 sólo tiene builds/matriz localizados, sin certificado final hallado: no se promueve. La frontera local archivada, las cotas CITED y los resultados recientes de potencias son distintos. Ronda045 no añade cobertura W ni ventanaT; signo global OPEN y papers intactos.
+CORRECCIÓN DE ESTADO: Paper46 prueba hasta log5/2, pero el sandbox anterior `ROUND_026_A`, Theorem26A.2, registra PROVED/computer-assisted lambda_A(T)>=2e-26 para TODOS 0<T<=207/200=1.035. Root y auditor leyeron logs archivados de ambas paridades certified:true a mu2e-26; NO se reprodujo ahora la certificación larga. T1.098 sólo tiene builds/matriz localizados, sin certificado final hallado: no se promueve. La frontera local archivada, las cotas CITED y los resultados recientes de potencias son distintos. Ronda045 no añade cobertura W ni ventanaT; signo global OPEN y papers intactos.
 
 
 ### 2026-11-05 — Potencias046: exploración del interior deduplicada, sin nuevo signo
@@ -2182,7 +2182,7 @@ Fuente: [GRAM§18](../../03-research/phase-211-sign-sandbox/POWER_GRAM_SLICES_OB
 **Corolario§18.8, misma entrada (PROVED).** Root/joint_sign_fresh_review/global_restart_checked; auditoría arithmetic_fresh_candidate PASS y root PASS. Para CADA sigma real fijo, ell_sigma(c)=integral_0^infinito e^(sigma u)sum_k c_kPhi(.5logk+u)du no admite A_0[c]>=delta|ell_sigma(c)|² con delta>0 sobre todos los soportes finitos. El momento es continuo H_gamma, por CS con integral_1^infinito t^(sigma-1)e^-gamma t finita;§18 transfiere el supuesto minorante a nodos reales. En x=-R, Axx=2integral_R^infinito sPhi² y ell_sigma(F_x)~Z_sigma e^(sigma R), F_x(t)=Phi(x+.5logt), Z_sigma=integral sobre TODA R de e^(sigma s)Phi(s)>0. La supercola hace el cociente tender a0 para todo sigma real. Antecedentes BRIDGE002/106_31/ROUND005D/106_36 y GRAM8.4 tienen continuidad, otras formas o densidad alterada/momento cancelado; cotejo all3/corpus sin literal. Sólo momentos exponenciales reales individuales: no complejos/test espectral, no momentos firmados generales ni A negativo; global OPEN. Sin nueva ruta, archivos, cómputos, W/T o papers.
 
 
-**Alcance§18.9, misma entrada (PROVED, no signo).** Root/joint_sign_fresh_review/global_restart_checked; auditoría arithmetic_fresh_candidate PASS y root PASS; reglas del repositorio/all3 y definiciones primarias Paper47 cotejados. El objetivo lambda_A(T)>=0 para TODO T equivale a PSD completo K_(M_Phi), A real y todos los bloques enteros A, incluso cualquier cola fija. Recíproca nueva de alcance: cortar en infinito f(r)=sum d_i e^-u_i r, u_i>.5, con sum d/(u_i±.5)=0; dos bumps físicos fijos corrigen momentos con coeficientes→0 en H_eta014. No se exige f(0)=0: salto causal permitido en H^s,s<.5 y dominio log. Trasladar cada compacto a una ventana conserva Tate/W; hipótesis∀T firma K primitivo. El lema YA probado en GLOBAL Comparaciones primitivas con D=M_Phi impar real-analítica da K completo; suficiencia inversa BRIDGE002. En el grafo, ell_sigma(TP)=pi P(1)+pi(sigma/2-.25)integral t^(sigma/2+.25)P: Tate equivale a P(1)=0 e integralP=0, SIN P'(1)=0. No importar preimagen L2_BUILD008. Cada cola tiene rango2 de momentos: un bump P toca1, otro interior; dos vectores tail FIJOS con matriz invertible corrigen errores→0. Así18.7 conserva cualquier prefijo y A0→0 incluso para completaciones exactamente primitivas; sus no minorantes/SOSlocales sobreviven.18.8σ±.5 vacuo allí, otrosσsin inferir. NO equivalencia de mínimos a T fijo ni nuevo signo; global OPEN. Sin enunciados externos, archivos, cómputos, W/T o papers.
+**Alcance§18.9, misma entrada (PROVED, no signo).** Root/joint_sign_fresh_review/global_restart_checked; auditoría arithmetic_fresh_candidate PASS y root PASS; reglas del repositorio/all3 y definiciones primarias Paper46 cotejados. El objetivo lambda_A(T)>=0 para TODO T equivale a PSD completo K_(M_Phi), A real y todos los bloques enteros A, incluso cualquier cola fija. Recíproca nueva de alcance: cortar en infinito f(r)=sum d_i e^-u_i r, u_i>.5, con sum d/(u_i±.5)=0; dos bumps físicos fijos corrigen momentos con coeficientes→0 en H_eta014. No se exige f(0)=0: salto causal permitido en H^s,s<.5 y dominio log. Trasladar cada compacto a una ventana conserva Tate/W; hipótesis∀T firma K primitivo. El lema YA probado en GLOBAL Comparaciones primitivas con D=M_Phi impar real-analítica da K completo; suficiencia inversa BRIDGE002. En el grafo, ell_sigma(TP)=pi P(1)+pi(sigma/2-.25)integral t^(sigma/2+.25)P: Tate equivale a P(1)=0 e integralP=0, SIN P'(1)=0. No importar preimagen L2_BUILD008. Cada cola tiene rango2 de momentos: un bump P toca1, otro interior; dos vectores tail FIJOS con matriz invertible corrigen errores→0. Así18.7 conserva cualquier prefijo y A0→0 incluso para completaciones exactamente primitivas; sus no minorantes/SOSlocales sobreviven.18.8σ±.5 vacuo allí, otrosσsin inferir. NO equivalencia de mínimos a T fijo ni nuevo signo; global OPEN. Sin enunciados externos, archivos, cómputos, W/T o papers.
 
 
 ### Phase211 — Signo completo del primer polinomio primitivo en t=exp(2r) (2026-11-06)
@@ -2297,13 +2297,13 @@ GLOBAL registra la candidata T'=W_1^-2 T_1+W_2^-2 T_2 y simetrización recíproc
 **Ramificación: alcance del condicionamiento (2026-11-06).** GLOBAL conserva identidad exacta K=media de congruencias condicionales+C, con C igual al negativo de dos covarianzas normalizadas. Para la entrada real mu=B delta_(pi/3), C(u,u)=−Var(h)u²/2+O(u⁴), Var(h)>0 por continuidad y soporte pleno. Así C noPSD ya en el segundo paso real. Constructor independent_sign_reset, root y auditoría new_structural_sign PASS. Sólo falla pagar ESTA corrección como positiva; no K negativo ni exclusión de compensación conjunta. Sin cómputos ni avance de ventanaT.
 
 
-**Fuente externa de ventana log11 (CITED/UNVERIFIED, 2026-11-06).** GLOBAL registra rStation45v1 y cotejo de normalización root/new_structural_sign. La afirmación externa cubriría la restricción primitiva deP47 hasta log(11)/2 si se valida; construcción intervalar no reproducida, suplemento ya localizado por API pública; pasan comprobaciones cortas de hashes, matrices pequeñas y Green, sin regeneración400. No nueva frontera local certificada ni cierre global. Papers intactos.
+**Fuente externa de ventana log11 (CITED/UNVERIFIED, 2026-11-06).** GLOBAL registra rStation45v1 y cotejo de normalización root/new_structural_sign. La afirmación externa cubriría la restricción primitiva deP46 hasta log(11)/2 si se valida; construcción intervalar no reproducida, suplemento ya localizado por API pública; pasan comprobaciones cortas de hashes, matrices pequeñas y Green, sin regeneración400. No nueva frontera local certificada ni cierre global. Papers intactos.
 
 
 **2026-11-06 — rStation45/log11, actualización parcial auditada.** Sector PAR hasta T=log(11)/2: **PROVED con asistencia computacional, reproducción local de resultado externo**. Cadena completa regenerada (safe/graph/contract/family/checker); checker exit0, complemento393 con Hmin>0 y siete pivotes del núcleo>0. Root y new_structural_sign reprodujeron la eliminación intervalar del núcleo; auditor independiente confirmó seis fuentes idénticas al suplemento, metadatos, enlaces entre archivos y logs. Archivo final SHA25618a3a25b3bacb3e265bee09232bdd09b17ea88074c9619bf6d9be069c4654cb3; último pivote [5.173121145006658e-50 +/-3.29e-66], NO cota de gap espectral. Diferencia con pivotes históricos compatible con distinta congruencia/orden de eliminación; no se requiere identidad bit a bit. **Sector IMPAR todavía pendiente de reproducción; ventana de la forma COMPLETA local permanece1.035; signo global OPEN.** Resultado externo, no novedad propia. Evidencia y procedencia en POWER_GLOBAL_ROUTE_REVIEW.md, sección fuente externa log11, y /tmp/riemann-rstation45-audit/work. No se modifican papers.
 
 
-**2026-11-06 — log11 COMPLETO: reproducción local auditada.** Sustituye el estado parcial anterior: **PROVED con asistencia computacional, resultado EXTERNO reproducido** para la forma completa W_T en ambas paridades, 0<T<=log(11)/2 (aprox.1.1989476364). Fuente: https://rstation.ai/problems/riemann_hypothesis/papers/45 . Todas las etapas de regeneración terminaron exit0; root y new_structural_sign comprobaron logs, fuentes idénticas al suplemento, metadatos, vínculos de los archivos y reeliminación intervalar de ambos núcleos. Impar: complemento394 con Hmin=[0.0072415100579310717783150120757660513853081885959734786213576 +/-4.96e-62]>0, seis pivotes positivos, último revalidado [2.92609807122468755690e-45 +/-8.74e-66]. SHA final impar7211d28ec770386db511be3942e20ecd4056d2b5cc95501e7fd5a4802ae548ce. Archivo final par y su auditoría constan arriba. La auditoría analítica previa conserva el complemento infinito y coincide con la normalización P47; la restricción primitiva hereda positividad. La frontera local verificada de la forma completa se actualiza de1.035 a log(11)/2. NO se deduce un margen espectral de los pivotes. NO es resultado original nuestro ni prueba para todoT: signo global OPEN. Evidencia persistida en phase-211-sign-sandbox/tools/rstation45_reproduction/ (logs, fuentes, dos resultados finales, auditor pequeño y hashes); las matrices intermedias permanecen en /tmp/riemann-rstation45-audit/work. Papers intactos. No se lanza otra campaña de ventanas: falta una estimación estructural uniforme del bloque Schur completo, no sólo positividad de sus sumandos favorables.
+**2026-11-06 — log11 COMPLETO: reproducción local auditada.** Sustituye el estado parcial anterior: **PROVED con asistencia computacional, resultado EXTERNO reproducido** para la forma completa W_T en ambas paridades, 0<T<=log(11)/2 (aprox.1.1989476364). Fuente: https://rstation.ai/problems/riemann_hypothesis/papers/45 . Todas las etapas de regeneración terminaron exit0; root y new_structural_sign comprobaron logs, fuentes idénticas al suplemento, metadatos, vínculos de los archivos y reeliminación intervalar de ambos núcleos. Impar: complemento394 con Hmin=[0.0072415100579310717783150120757660513853081885959734786213576 +/-4.96e-62]>0, seis pivotes positivos, último revalidado [2.92609807122468755690e-45 +/-8.74e-66]. SHA final impar7211d28ec770386db511be3942e20ecd4056d2b5cc95501e7fd5a4802ae548ce. Archivo final par y su auditoría constan arriba. La auditoría analítica previa conserva el complemento infinito y coincide con la normalización P46; la restricción primitiva hereda positividad. La frontera local verificada de la forma completa se actualiza de1.035 a log(11)/2. NO se deduce un margen espectral de los pivotes. NO es resultado original nuestro ni prueba para todoT: signo global OPEN. Evidencia persistida en phase-211-sign-sandbox/tools/rstation45_reproduction/ (logs, fuentes, dos resultados finales, auditor pequeño y hashes); las matrices intermedias permanecen en /tmp/riemann-rstation45-audit/work. Papers intactos. No se lanza otra campaña de ventanas: falta una estimación estructural uniforme del bloque Schur completo, no sólo positividad de sus sumandos favorables.
 
 
 **2026-11-06 — Resta de cortes, auditoría sin signo nuevo.** GLOBAL, «Resta de dos cortes suaves»: w1−w2 elimina el sumando común y da continuo primitivo, pero abarca todo W compacto tras traslación; el principal conserva oneprofile y el resto cruzado carece de cota firmada nueva. Consecuencia de ROUND_001_A/REVIEW_002 y P211-A; revisión root/arithmetic_fresh_candidate/corpus_global_gap. No NO-GO general, nueva ventana ni cambios en papers. Global OPEN.

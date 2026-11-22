@@ -3,7 +3,7 @@
 **Status: PROVED (rigorous interval arithmetic, mpmath.iv, 60 digits, outward rounding).** Script
 `scripts/cert_falsifiers.py`, output `scripts/cert_falsifiers_out.txt`. Corpus check: index entries BARRIER_Y_001,
 AA_001 (README of ROUTES-TRIED-INDEX); no prior interval certificate for deletions or odd-sector falsifiers (the
-½log5 certificate of Paper 47 thm:log5A certifies a lower bound, not these witnesses). This memo builds no new route;
+½log5 certificate of Paper 46 thm:log5A certifies a lower bound, not these witnesses). This memo builds no new route;
 it upgrades labels of existing falsifiers.
 
 ## Statement
@@ -27,7 +27,7 @@ the form with the comb a is negative at that window (for the AA rows, also μ_od
 (Y1 row at log3 is at T = log3 exactly; n = 9 is not a contact since log 9 = 2T. The q=3, T=0.75 and
 ½log5+0.01 values agree to 10⁻⁸ with the independent 30-digit quadrature of `phase-197/scripts/y001_mp_check.py`.)
 
-## Method (checked against P47 eq:Aform, thm:S(iii), C₀ as in P47 §log5)
+## Method (checked against P46 eq:Aform, thm:S(iii), C₀ as in P46 §log5)
 𝔞_T(F) = C₀c(0) + ∫₀^{2T}(c(0)−c(u))K(u)du + c(0)∫_{2T}^∞K − Σ_{log n<2T} v_n c(log n), v_n = 2a(n)/√n,
 c(u)=∫F(t)F(t−u)dt, K(u)=½/sinh(u/2)+½/cosh(u/2)=2Σ_k e^{−(2k+½)u}, C₀=−γ−π/2−3log2−logπ.
 1. Test function: F(t)=G(t/T), G polynomial; G chosen as the (non-rigorous) Galerkin minimiser, coefficients

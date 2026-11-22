@@ -1,13 +1,13 @@
 # Phase 212 — Specification of the object to be built
 
-Merges P47 prob:region and prop:spec, P48 req:spec (R1–R12), GRID §7 (S1–S12), CW §3.2 ((α)–(μ)) and
+Merges P46 prob:region and prop:spec, P48 req:spec (R1–R12), GRID §7 (S1–S12), CW §3.2 ((α)–(μ)) and
 211/OBJECT_SPEC_001 (R1–R5), without repetition. Notation of `../phase-211-sign-sandbox/STATEMENT_001.md`;
 N = e^{2T}.
 
 ## 1. Shape of the object
 
 Scope: this specification defines the identity programme (G), not a proven necessity
-for every possible proof of global positivity. The asymptotic route of P47 thm:wit-Tc(iv) and
+for every possible proof of global positivity. The asymptotic route of P46 thm:wit-Tc(iv) and
 ROUND_022_B, Lemma 1, remains admissible with its full quantifiers; see RULES_AVOID B2.
 That already-recorded route is not presented as a new construction.
 
@@ -32,11 +32,11 @@ O2. **Exact dependence on Λ, with the nonlinearity in the coupling.** V_T uses 
     Σ_{d|n}Λ(d) = log n (`ROUND_001_D.md` Lemma A; the degree-two relation is the Leibniz rule
     on Λ∗1 = log, `ROUND_001_A.md` Lemma B). The nonlinearity that decides the sign must lie in
     how V_T acts on F (the square ‖V_T F‖²), not in products of weights. A linear use in which F
-    enters only through its autocorrelation is a certificate, whose content is λ^prim (P47 cor:shape (a)).
+    enters only through its autocorrelation is a certificate, whose content is λ^prim (P46 cor:shape (a)).
 O3. **The three inputs together in one line.** The Euler product over all primes, the
     functional equation with Γ(s/2) at conductor 1, and integrality (coefficients b ≡ 1 of the series
     over ℕ, or Σ_{d|n}Λ(d) = log n) enter the proof of (G) in one and the same step, not chained
-    (P48 req:spec R2–R3; P47 prop:shape-inputs).
+    (P48 req:spec R2–R3; P46 prop:shape-inputs).
 O4. **Breaking, not loss of margin.** For each falsifier of `RULES_AVOID.md` §E one points to the line
     of the proof of (G) that ceases to be true. In particular (G) is false for cΛ with c ≠ 1 however
     small |c − 1| is, and for a_P with P > N (which agrees with Λ in almost every class property).
@@ -48,22 +48,22 @@ O4. **Breaking, not loss of margin.** For each falsifier of `RULES_AVOID.md` §E
     Lemma T of `ROUND_013_C.md` only transfers the conclusion to a falsifier if the
     identification with the form and all the hypotheses giving the sign survive.
 O5. **Uniformity in T.** The construction is a single one, valid for all T; not a family of
-    certificates whose dimension or precision is recomputed per window (W-fam; P47 cor:shape (b)).
+    certificates whose dimension or precision is recomputed per window (W-fam; P46 cor:shape (b)).
 O6. **Sees the near-coincidences.** ‖V_T F‖² does not vanish identically on the vectors that see
-    m ≈ kn, m ≠ kn; that is where the sign lies (P47 prop:nearfree, rem:bar-arith).
-O7. **Uses the fluctuation, not the density** (P47 thm:ceiling, prob:region (7)); **uses the positive part
+    m ≈ kn, m ≠ kn; that is where the sign lies (P46 prop:nearfree, rem:bar-arith).
+O7. **Uses the fluctuation, not the density** (P46 thm:ceiling, prob:region (7)); **uses the positive part
     of the symbol on all of ℝ together with the negative set** (prob:region (8)).
 O8. **Is not** a functional of the minimizer, a bounded functional of the weights, a local criterion, a
     determinant or moment of the pencil, nor a pure arithmetic sum of squares for T ≥ ½log3
     (P48 req:spec R7, R9, R10).
 O9. **Couples Λ(n), n < N, with the functional equation by a route other than the common factor
-    ζ(½+iτ)** (P47 prop:spec (5), OPEN: no known object). The strip identities satisfy
+    ζ(½+iτ)** (P46 prop:spec (5), OPEN: no known object). The strip identities satisfy
     the letter of this clause but are generic in the comb: they do not suffice alone.
 O10. **Crosses the logarithmic derivative.** The positivities of the Dirichlet series that pass to its
      logarithmic derivative are only the infinitely divisible ones, a homogeneous cone that cΛ preserves
-     (P47 prop:spec (6)); the object must work on the Λ side or cross by a non-homogeneous mechanism.
+     (P46 prop:spec (6)); the object must work on the Λ side or cross by a non-homogeneous mechanism.
      The first exact non-homogeneous relation in (1, Λ) has degree two:
-     Λ·log + Λ∗Λ = μ∗log² (P47 rem:spec-scope).
+     Λ·log + Λ∗Λ = μ∗log² (P46 rem:spec-scope).
 
 ## 3. Two proved restrictions on (G) (round 1; `REVIEW_001_LC.md`)
 

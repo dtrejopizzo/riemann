@@ -1,7 +1,7 @@
 # R135.000 — Blueprint: row D, first construction campaign — the canonical class and the affine duality
 
 Predecessor: phase 134 (`R134_007`), which closed row D's opening with no label and
-named requirement (R5) of Paper 46 Definition 6.8 as the structural gap.
+named requirement (R5) of Paper 47 Definition 6.8 as the structural gap.
 
 ## 0. Rules (unchanged from phases 131–134, restated because this is the row where they bite)
 
@@ -14,19 +14,19 @@ named requirement (R5) of Paper 46 Definition 6.8 as the structural gap.
    The audit rules on every use.
 3. Every statement carries a label: `PROVED` / `PROVED-IN-REPOSITORY` /
    `CLASSICAL` / `IMPORTED` / `RESTATEMENT` / `CANDIDATE` / `REFUTED` / `OPEN`.
-4. Every theorem is run against the falsifier suite of Paper 46 §7 (`Ξ_a`,
+4. Every theorem is run against the falsifier suite of Paper 47 §7 (`Ξ_a`,
    Davenport–Heilbronn). A theorem that holds verbatim for `Ξ_a` cannot carry the
    sign; say so in the theorem's own remark.
 5. Prose reports of prose repairs are not evidence: grep before labels
    (auditor lesson `R131_017`).
-6. Conventions are Paper 46 (1.7)–(1.9): `Φ_g(s) = ∫ g(t) e^{(s−1/2)t} dt`;
+6. Conventions are Paper 47 (1.7)–(1.9): `Φ_g(s) = ∫ g(t) e^{(s−1/2)t} dt`;
    `I_∞(Γ_F,Γ_F) = 2Φ_F(0)Φ_F(1) − Σ_ρ Φ_F(ρ)Φ_F(1−ρ)`; rulings
    `M(Γ_F) = (Φ_F(1),Φ_F(0))`, `β_T = [[0,1],[1,0]]`; primitive = `Φ(0)=Φ(1)=0`;
    `Π = −∂_t² + ¼`, `Πe^{±t/2} = 0`, `Π(C_c^∞) = P` (Lemma 3.1).
 
 ## 1. The blueprint's finding that opens the campaign (to be verified, not assumed)
 
-Paper 46 Definition 6.8(R5) asks for a duality `F ↦ F^∨` that carries the primitive
+Paper 47 Definition 6.8(R5) asks for a duality `F ↦ F^∨` that carries the primitive
 sector off itself, and shows the only duality rows A–C construct — `†` — preserves
 it. **(R5) was posed for involutions compatible with `⋆`.** But Weil's duality
 `D ↦ K − D` is not an algebra map at all: it is an **affine involution of the
@@ -125,7 +125,7 @@ Expected consequences (each is a task, none is assumed):
  that (R5) is satisfied by `σ_K`, and that the duality was never the obstruction.
  Falsifier remark: the transfer theorem holds verbatim for `Ξ_a`; since `Ξ_a`
  has off-line zeros, **no `h^0` with (a),(b′),(c) exists for `Ξ_a`**. Whatever
- `h^0` is for `ζ`, its definition must use what `Ξ_a` lacks (Paper 46 §7: a
+ `h^0` is for `ζ`, its definition must use what `Ξ_a` lacks (Paper 47 §7: a
  Frobenius family in row B's sense; a Tate block) — the Euler product enters
  through `h^0`, and only there. Say this as a theorem: "for `Ξ_a`, (a)+(b′)+(c)
  are inconsistent" — `PROVED` (from the known off-line zeros of `Ξ_a`).
@@ -162,14 +162,14 @@ Expected consequences (each is a task, none is assumed):
      stated; **no reconciliation by fiat**.
 
 **D.10 — Connections to A and B (short, exact).** `PROVED-IN-REPOSITORY`.
- `K ≡ ½(e_+ + e_-)` in the ruling plane `B_T` of Paper 43 / Paper 46 (1.8);
+ `K ≡ ½(e_+ + e_-)` in the ruling plane `B_T` of Paper 43 / Paper 47 (1.8);
  `σ_K` on `B_T ⊕ P`; `Frob_n ⋆ K` and Paper 44 Thm 3ter.10; the extension `D^W`
  versus the colimit `T_∞` of Paper 43 (8A.7c) — which is the completion, and is it
  a `D_A`-module.
 
 ## 3. Deliverables
 
-* Paper 46: new Part II — §11 (D.6–D.7), §12 (D.8, superseding Def 6.8, with the
+* Paper 47: new Part II — §11 (D.6–D.7), §12 (D.8, superseding Def 6.8, with the
   supersession recorded in §6 and §9.1), §13 (D.9), §14 (D.10); §10 label line
   updated only if a label is earned (none for the sign is expected); ledger
   and withdrawal table extended; the boxed target unchanged.
@@ -181,7 +181,7 @@ Expected consequences (each is a task, none is assumed):
   `½ deg F` on test functions; `Frob_n ⋆ K`), `h0_candidate.py` (D.9(ii) tests).
   All must reproduce printed numbers with a `--check` flag.
 * README for the phase; `[phase 135]` notes where earlier statements are
-  superseded (Paper 46 Def 6.8; Paper 45 Thm 12.2 gets the second proof as a
+  superseded (Paper 47 Def 6.8; Paper 45 Thm 12.2 gets the second proof as a
   remark; Paper 43 Thm 14.1(d) gets the colimit remark).
 
 ## 4. What would count as progress, honestly

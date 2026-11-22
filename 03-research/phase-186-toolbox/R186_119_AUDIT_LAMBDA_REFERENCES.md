@@ -11,11 +11,11 @@ exactly the M = 40 value (reproduced here in 220-bit ball arithmetic: 1.04212784
 The phase-187 ball campaign is the same Legendre method with larger M (M = 140 at log 2: 9.8634·10⁻⁸; M = 72 at ½log3: 9.4615·10⁻⁴;
 M = 90 at ½log5: 3.176·10⁻¹²) and shows the monotone decrease in M; it does not "match Nyquist": both methods converge slowly from above
 toward the same limit, and at equal J or M the Fourier one lands lower. There is no bias in the Nyquist matrix: (b), (c), (d) ruled out
-(§2). No sign changes; Paper 47 is not touched (its lower bounds 8.8577·10⁻⁵ at ½log3 and 2.5·10⁻¹² at ½log5 stay below
+(§2). No sign changes; Paper 46 is not touched (its lower bounds 8.8577·10⁻⁵ at ½log3 and 2.5·10⁻¹² at ½log5 stay below
 all upper bounds: 9.456·10⁻⁴ and 3.09·10⁻¹²).
 
 ## 1. Methods (all in 220-bit arb balls except the third)
-1. **Legendre** (`leg_audit.py`, own; x-form of Paper 47 thm:A/eq:Aform as in r024/r034/r043/r187): orthonormal Legendre basis of degree
+1. **Legendre** (`leg_audit.py`, own; x-form of Paper 46 thm:A/eq:Aform as in r024/r034/r043/r187): orthonormal Legendre basis of degree
  < M on I_T, exact C(u) via Gauss M+2, Lévy in 16 panels × 72 Gauss nodes, closed-form tail ∫_{2T}^∞K, Tate via Gauss M+60, principal
  minors for every M. Certificate: arb Rayleigh quotient of the inverse-iteration vector (rigorous upper bound).
 2. **Fourier** (`fourier_audit.py`, own, assembled in closed form, no matrix quadrature): e_j = e^{ijπt/T}/√2T; the matrix only
@@ -67,7 +67,7 @@ are in §2.
 - (b) Bias of the Nyquist matrix: the Fourier matrix assembled in closed form (no symbol sampling, no L, no odd tail,
  no boundary convention for n = 4) matches r052's quadrature one to 10⁻¹⁴ and its λ_J match those of R186_053/R186_118;
  the odd tail equals +3·10⁻⁸ at ½log3 and +10⁻¹¹ at log 2 (alternating direction ≈ nullified by h*). The ½ convention for n = 4 (R186_118
- MAJOR-2) only affects the sampling of the symbol on the grid, not the form of Paper 47 (strict N_T: n = 4 excluded at log 2, included
+ MAJOR-2) only affects the sampling of the symbol on the grid, not the form of Paper 46 (strict N_T: n = 4 excluded at log 2, included
  at ½log5 with v₄ = 2 log 2/2), which is what both codes assemble.
 - (c) σ_T vs s_T: the x-form (eq:Aform) with Lévy truncated to [0, 2T] plus the tail ∫_{2T}^∞K is identical across the three methods; there is no aliasing.
 - (d) Tate: a_j = (−1)^j 2 sinh(T/2)/((½ + iω_j)√2T), b_j = conj(a_j); constraints Re a·x = Im a·x = 0 ⇔ A = B = 0 on the complex span;
@@ -77,7 +77,7 @@ are in §2.
 - The references 1.042·10⁻⁷ / 9.486·10⁻⁴ / 3.84·10⁻¹² are **Legendre M = 40 values, unconverged upper bounds** (6% / 0.4% /
  ≥ 20% above the limit). They must not be cited as "λ_A".
 - Cite: **λ_A(log 2) = 9.83·10⁻⁸** (3 digits), **λ_A(½log3) = 9.448·10⁻⁴** (4 digits), **λ_A(½log5) = 3.10·10⁻¹²** (3 digits); as rigorous
- upper bounds, the Fourier J = 640 values of §2. Always with method and J/M when a specific Galerkin value is cited. Paper 47's lower bounds (thm:C 8.8577·10⁻⁵; thm:log5A 2.5·10⁻¹²)
+ upper bounds, the Fourier J = 640 values of §2. Always with method and J/M when a specific Galerkin value is cited. Paper 46's lower bounds (thm:C 8.8577·10⁻⁵; thm:log5A 2.5·10⁻¹²)
  remain below all the upper bounds.
 - Memos citing the wrong value as λ_A (correct to "Legendre upper bound M = 40" or to the new value): R186_034 (table §, 9.486e-4),
  R186_040 (table, 1.042e-7), R186_043 (λ_A M = 40), R186_044 (§1.1, 1.3, table: 9.4858e-4, 1.0421e-7, 3.8409e-12), R186_045 (table
@@ -89,5 +89,5 @@ are in §2.
 
 ## 5. Falsifiers of this memo
 A Galerkin on any subspace of 𝒫_T with a value < 9.82·10⁻⁸ (log 2), < 9.447·10⁻⁴ (½log3) or < 3.09·10⁻¹² (½log5) would refute the
-extrapolation; a Legendre or Fourier value below Paper 47's lower bounds (8.8577·10⁻⁵, 2.5·10⁻¹²) would refute the paper
+extrapolation; a Legendre or Fourier value below Paper 46's lower bounds (8.8577·10⁻⁵, 2.5·10⁻¹²) would refute the paper
 (does not occur: margin ×10.7 and ×1.24).

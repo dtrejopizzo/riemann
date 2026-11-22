@@ -103,7 +103,7 @@ Note: c_δ ↓ 0 as δ ↓ 1, c_δ ↑ 1 as δ → ∞; the base theorem gives �
 - Lemma 2.0 constant 1.04: ψ(x) < 1.03883x (Rosser–Schoenfeld 1962, CITED). ✓
 - Prop 2.1: Bochner/Plancherel on a discrete abelian group, standard (Rudin, *Fourier analysis on groups*, CITED). ✓
 - Prop 2.3: the "Weil form" of an infinite-support test is DEFINED as the absolutely convergent series; its identification with
-  a window form of Paper 47 is only via truncation (finite sections) — correct use: D(σ) is about finite sections (Prop 2.1). ✓
+  a window form of Paper 46 is only via truncation (finite sections) — correct use: D(σ) is about finite sections (Prop 2.1). ✓
 - Thm 2.5 (Arch) paragraph: the bookkeeping for small-height rationals with ℓ ∈ (4T₀, 1/2) is sketched, not written to the last
   constant; the dependence is O(T₀)·O(1). **Label: PROVED with absolute constants left implicit (routine).** The Near count is
   exact and is the term that produces the 3/2 line. ✓

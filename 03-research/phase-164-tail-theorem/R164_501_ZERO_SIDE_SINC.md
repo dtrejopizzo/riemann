@@ -1,7 +1,7 @@
 # R164_501 — Transport of the sinc annihilation (Thm R, Lemma 2) to the zero side at the first-contact witness
 
 *Phase 164, round 3. Pure mathematics, no numerics, no commits. Only this file was written. No label of record changes.*
-*Read first: R164_190 (identification theorem), R164_401 (Thm R, Lemma 2), R163_401 (§1.1, §2.4, Lemma 3.1, §4.6–4.8, Rem 4.8a), R163_801 (Thm 1, Thm 3, Thm 5), Paper 47 `thm:Z`.*
+*Read first: R164_190 (identification theorem), R164_401 (Thm R, Lemma 2), R163_401 (§1.1, §2.4, Lemma 3.1, §4.6–4.8, Rem 4.8a), R163_801 (Thm 1, Thm 3, Thm 5), Paper 46 `thm:Z`.*
 *Corpus check.* Grepped phases 135, 151, 163, 164 for sinc / Pólya kernel / de Bruijn / Fejér–Riesz / annihilator. The positive-annihilator theorem SA below is not in the corpus. It is a Fejér–Riesz/Akhiezer argument and is probably folklore for Toeplitz forms, so it is labelled PROVED rather than claimed as new. The Pólya kernel is phase 135 (class 𝒦, falsifier Ξ_a). dlVP is phase 151 (capped by the archimedean density).
 
 ## 0. Status table

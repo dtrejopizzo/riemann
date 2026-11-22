@@ -3,8 +3,8 @@
 Phase 193. Pen and paper, no numerics.
 **No certified negative value for ζ. No sign contact.**
 Read before seeding: CA_G_SYNTHESIS + CA_G_000 (G0, G1), CAMPAIGN_LEDGER, CA_A/B/D/F_SYNTHESIS, CA_C_000 (screen key), CA_C_007
-(FE-class genericity), CA_E_001 (separability; Kronecker line), CA_F_003 (gap G-F), P47 §20 (def:shape-ops, lem:transfer,
-prop:shape-inputs, lem:shape-quartet, lem:shape-ident, cor:shape, prob:region (R)(1)–(11)), P47 prop:nearfree, rem:boxes,
+(FE-class genericity), CA_E_001 (separability; Kronecker line), CA_F_003 (gap G-F), P46 §20 (def:shape-ops, lem:transfer,
+prop:shape-inputs, lem:shape-quartet, lem:shape-ident, cor:shape, prob:region (R)(1)–(11)), P46 prop:nearfree, rem:boxes,
 thm:ceiling, rem:resolution, thm:band, thm:oneprofile, prop:AM, ROUTES-TRIED-INDEX README + 06_ (R9 table of dead sub-routes),
 phase 190 EXP_005, phase 191 SPEC_B §1.3/§4 (Lines 1–4), phase 192 README + EI_002, phase 159 G1_B9_R2 (Lemma 3, Remark 3.1).
 
@@ -19,13 +19,13 @@ m ≈ kn: phases 188–192 (L2_020/023/028–031, N_021/022, EXP_001–005, SPEC
 most-mined part of the corpus**; every seed below states which of those records it is not.
 
 ## Screen key
-As CA_C_000 / CA_G_000. Idx = retry of an indexed route. (R)k = clause k of prob:region. O-labels are Paper 47's (O2 = Λ+cδ_{n₀},
+As CA_C_000 / CA_G_000. Idx = retry of an indexed route. (R)k = clause k of prob:region. O-labels are Paper 46's (O2 = Λ+cδ_{n₀},
 O6 = a_P, O7 = quartets, O8 = f_t, O10 = Epstein/DH, O11 = Beurling, O12 = ζ_K, O15 = Poisson). B′ = estimate with remainder;
 B″ = identity valid for every comb. G0 = squares are Gram factorizations; G1 = monoid-functorial positivity survives O11/O12.
 FE-gen = survives the FE-class generic falsifier (Epstein x²+5y², CA_C_007). [crit] = must resolve the sign at relative precision
 M^{−3} on the family s_w (EXP_005 C1, NUMÉRICO). REF-D = restatement of the target.
 
-## Common fact H0 (PROVED, from the definitions of P47): the +/· genuineness test
+## Common fact H0 (PROVED, from the definitions of P46): the +/· genuineness test
 Call a property 𝖯 of the form object **monoid-only** if it is defined from (ℕ^×, N) alone (free monoid plus norm), **additive-only**
 if it is defined from the additive group ℤ ⊂ ℝ and the archimedean place alone (Poisson summation, Γ_ℝ, theta functions), and
 **+/·-genuine** otherwise.
@@ -39,9 +39,9 @@ Hence **a sign step drawn from the semiring must be +/·-genuine (fails for O10 
 because of (c).** By prop:shape-inputs the +/·-genuine content available is exactly (E) Euler product over ℕ [·], (I) integrality of the
 frequencies [the norm image is the additive monoid ℕ], and (F) FE at conductor 1 [Poisson on ℤ, +], used jointly.
 *Proof.* (a) is G1 (CA_G_000). (b): the Epstein ζ_Q, Q = x²+5y², satisfies Λ_Q(s) = Λ_Q(1−s) from Poisson summation on ℤ² (Hecke,
-CITED as in P47 lem:shape-epstein), has nonnegative coefficients on ℕ and a pole at 1; a property built only from ℤ-Poisson and Γ_ℝ is
+CITED as in P46 lem:shape-epstein), has nonnegative coefficients on ℕ and a pole at 1; a property built only from ℤ-Poisson and Γ_ℝ is
 built identically for it. (c) is lem:shape-quartet. ∎
-**Where the semiring sits in the target (PROVED, P47 prop:AM + CA_E_001 Lemma 0).** In the PD-on-G formulation (G = ℚ_{>0}^×), the
+**Where the semiring sits in the target (PROVED, P46 prop:AM + CA_E_001 Lemma 0).** In the PD-on-G formulation (G = ℚ_{>0}^×), the
 monoid part is the group G and the exact relations m = kn (Div); the additive part is the archimedean topology of G, i.e. the rationals
 q = a/b ≠ 1 with |log q| < 2T₀, which are exactly the **additive near-identities a = b + h, |h| < (e^{2T₀}−1)b** (Near). This is made
 an exact identity in CA_H_002 Theorem 3.1 (Near = Kronecker defect of the line measure against Haar measure).
@@ -55,7 +55,7 @@ an exact identity in CA_H_002 Theorem 3.1 (Near = Kronecker defect of the line m
 | H4 | sum-product as exact structure: near-coincidence graph, multiplicative/additive energies, multiplication-table (Ford), Erdős–Szemerédi/Solymosi | |A·A| vs |A+A| on supports of test vectors | yes | yes (as set statements) | new; neighbours R162_590 O-D4.1, L2_020 |
 | H5 | the semiring invariant ℤ has and every falsifier lacks: successor-continuity of the divisor sum (Erdős's characterization of log) | f(n+1)−f(n) → 0 (+) for additive f (·) | yes | yes | new |
 | H6 | Kronecker line ι(ℝ) ⊂ Ĝ on multiplicative test vectors (front E input): Near as line-minus-Haar defect | line = archimedean (+), Haar = monoid (·) | yes | yes | retry on boxes: CA_C_002 Prop 2(d); new: full-solenoid form + anatomy (CA_H_002 §3) |
-| H7 | integrality gap / Liouville / product formula: |a−b| ≥ 1, |log(a/b)| ≥ 1/max(a,b) | integer determinant of two lattice vectors | yes | yes | retry: P47 thm:ceiling + rem:resolution (density ceiling), phase 163/164 (integrality defect, Thm L), CA_C_001 (product formula) |
+| H7 | integrality gap / Liouville / product formula: |a−b| ≥ 1, |log(a/b)| ≥ 1/max(a,b) | integer determinant of two lattice vectors | yes | yes | retry: P46 thm:ceiling + rem:resolution (density ceiling), phase 163/164 (integrality defect, Thm L), CA_C_001 (product formula) |
 | H8 | polarized object over ℤ built from global Frobenius lifts (Λ-structure, Borger): the ℤ-analogue of Γ_Frob ⊂ C×C (coordinator's bridge to G-F) | Frobenius lifts at all p = δ-structures | yes | yes | partly MW-5/OT-5′, R175 (Borger coordinate), G4H-159; new: Raynaud obstruction + P¹ computation |
 | H9 | divisibility pattern of integers N ≍ M by small n (CRT, residues), SPEC_B Line 3 | n | N with N ≈ M | yes | yes | retry SPEC_B §4 Line 3, L2_030 §3 (c_{p^b}(j)), N_021 |
 | H10 | arithmetic derivative n′ (Barbeau), logarithmic derivative ld(n) = Σv_p(n)/p | Leibniz on ·; no rule for + | **no** (defined from the monoid with weights 1/p) | — | new |

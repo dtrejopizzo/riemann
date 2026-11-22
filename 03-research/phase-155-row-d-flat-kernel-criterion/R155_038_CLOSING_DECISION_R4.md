@@ -9,7 +9,7 @@ archimedean form; (H1)), R155_034/035 (Li dictionary), R155_030 (arXiv novelty c
 | W_{log2} positive definite on E_k = span{e₁,…,e_{2k−1}}, k ≤ 7, certified minima 3.42e−2 … 6.57e−6 (interval Cholesky); E₅ at 0.62, 0.65 | PROVED (machine-verified). Finite-dimensional subspaces only. |
 | Schur coupling b = P_V Π_T F* is purely prime; Π_T = −Σ v_n Re(R_T τ_{log n} R_T), not compact; |π_ij| ≤ A_T, row-ℓ² ≤ A_T² | PROVED |
 | π₁₃ = +0.187 − 0.141 (atoms 2 and 3 cancel 76 %); with atom 2 alone the 2-plane is indefinite | DIAGNOSTIC |
-| **Any numerical value of inf W at log 2 (e.g. "≈10⁻⁶", "≈10⁻⁷") — WITHDRAWN**: Rayleigh–Ritz upper bounds unstabilised in N (k=8: 9.94e−7 at N=18 vs 3.38e−5 at N=36; bottom falls with N). Caveat propagated to R155_023/026/029 and Paper 47. Theorem C's ½log3 lower bound unaffected. | WITHDRAWN |
+| **Any numerical value of inf W at log 2 (e.g. "≈10⁻⁶", "≈10⁻⁷") — WITHDRAWN**: Rayleigh–Ritz upper bounds unstabilised in N (k=8: 9.94e−7 at N=18 vs 3.38e−5 at N=36; bottom falls with N). Caveat propagated to R155_023/026/029 and Paper 46. Theorem C's ½log3 lower bound unaffected. | WITHDRAWN |
 | Theorem AL (lattice sampling of a flat-top certificate is (D)-feasible with loss O(M^{−r}); hypothesis: C^{r−1} contact at 2T⁺ and w → 1 at U⁻) | PROVED |
 | Cor AL′: at fixed w the lattice is not the deficit; the deficit is the continuous problem, non-attained (thm:O, v = 0 included): the primes are not necessary for the obstruction | PROVED (as restated) |
 | "D = O(M⁻²) refuted; D ≍ M⁻¹"; V_r ↑ ∞ | DIAGNOSTIC |

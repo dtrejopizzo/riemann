@@ -1,6 +1,6 @@
 # R186_037 — A leaf of BR: closure of ρ1′ (non-compact couplings and ba(𝔉) functionals) via compactness of normal families
 
-Phase 186, round 18. Pure mathematics, no numerics (no number decides anything here; no script r037). Paper 47,
+Phase 186, round 18. Pure mathematics, no numerics (no number decides anything here; no script r037). Paper 46,
 grid and crossword are not touched. **No contact with the sign.**
 
 Read: R185_005 (BR, §1–§2.3, leaves ▲), R185_001 §5 + R185_091 M1/M2, R185_003 (Lemmas 5–7, Thm 2, Prop 3, §3), R185_092 M2/M4/M5,
@@ -76,7 +76,7 @@ family is uniformly bounded on every strip |Im z| ≤ Y, hence normal (Montel); 
 |K_∞(z)| ≤ Ce^{Δ|Im z|}, hence of type ≤ Δ and bounded on ℝ, hence Ǩ_∞ ⊂ [−Δ,Δ] (PW–S), K_∞ ≥ 0 on ℝ (pointwise
 limit), K_∞ continuous: K_∞ ∈ 𝒦_C. Closed and normal ⟹ compact; metrizable by the exhaustion by compacta. ∎
 
-**Lemma B (continuity of the functionals). PROVED.** Let G = F̂ with F ∈ C_c^∞ (Paper 47 witness; for finite-type
+**Lemma B (continuity of the functionals). PROVED.** Let G = F̂ with F ∈ C_c^∞ (Paper 46 witness; for finite-type
 witnesses with G ∈ L² see the note in audit 1) and Σ a multiset of zeros with |Im t_ρ| ≤ ½ and N(T) ≪ T log T. On
 𝒦_C, the linear functionals K ↦ Tail_K(λ) (λ ≥ 0 fixed), Z_K(Σ), 𝔄_K, Q^{hyp}_K are τ_loc-continuous.
 *Proof.* Each is an absolutely convergent sum or integral of G(t)²K(t) against a fixed weight, with |K| ≤ Ce^{Δ/2}
@@ -205,7 +205,7 @@ sign, and the coupling of Example F (exponential) is not conic. It is not claime
 
 ## 7. Audit notes
 
-1. Lemma B assumes F ∈ C_c^∞ (Paper 47 witness). If the witness is only of finite type with G ∈ L², replace with
+1. Lemma B assumes F ∈ C_c^∞ (Paper 46 witness). If the witness is only of finite type with G ∈ L², replace with
  Barner's symmetric convergence with h ≪ (1+|t|)^{−1} (R185_007 note 1); the τ_loc continuity of Z still holds with
  the majorant |G(t_ρ)|²·Ce^{Δ/2} if Σ_ρ|G(t_ρ)|² < ∞, which is what Weil admissibility requires (R185_091 m4).
 2. In Theorem C, "K_μ ∈ 𝒦" uses μ ≥ 0; for signed μ, K_μ is of PW type ≤ Δ and the sign is forced by Prop 3(b) of
@@ -217,5 +217,5 @@ sign, and the coupling of Example F (exponential) is not conic. It is not claime
 5. Prop G: int(cl C) = int C for convex sets in ℝ^m and a supporting hyperplane at boundary points are standard
  (Rockafellar Thm 6.3, 11.6). The conclusion is non-strict; it is not claimed "false if the quartet is present" but
  "equality forced".
-6. Nothing here claims RH, nor positivity in any window, nor touches Paper 47, grid or crossword. No contact with
+6. Nothing here claims RH, nor positivity in any window, nor touches Paper 46, grid or crossword. No contact with
  the sign.

@@ -239,7 +239,7 @@ bridge:
 \]
 
 To also exhibit the scale-one Gamma--Euler collar, let \(Q^{(1)}\) be the
-matrix obtained by polarizing \(Q_{N,L}\) of Paper 47. The identity
+matrix obtained by polarizing \(Q_{N,L}\) of Paper 46. The identity
 \(2d(F)=2\|R_LF\|^2+Q_{N,L}(F)\) on the radical implies
 
 \[
@@ -319,7 +319,7 @@ does not by itself contribute an inequality for the exterior test (30).
 Extracting more would require a boundary- or window-variation formula
 identifying flux (5) with the one-sided derivative of the form at the
 first contact; such a formula is not proved in R170_823--828 nor in the
-collar identities of Paper 47.
+collar identities of Paper 46.
 
 ## 7. Result
 

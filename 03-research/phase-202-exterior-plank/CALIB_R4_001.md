@@ -1,4 +1,4 @@
-# CALIB_R4_001 — Calibrator, phase 204n: Lemma WT (prop:WT, P47 l.4358) by sectors (NUMERICAL + one interval result)
+# CALIB_R4_001 — Calibrator, phase 204n: Lemma WT (prop:WT, P46 l.4358) by sectors (NUMERICAL + one interval result)
 
 Data in `CALIB_001_data/`:
 - `WT_scan.json` (+ `.log`) and `WT_epstein_1.59.json`;
@@ -10,7 +10,7 @@ Data in `CALIB_001_data/`:
   - ζ: Γ_ℝ(s);
   - Epstein: Γ_ℝ(s)Γ_ℝ(s+1), conductor 20, K = 1/sinh(u/2);
   - DH: Γ_ℝ(s+1), conductor 5, K = 2Σe^{−(2k+3/2)u}.
-- **Polar direction and W per sector.** χ_ev = cosh(t/2)·1_{I_T} and χ_odd = sinh(t/2)·1_{I_T}, unnormalized, as in P47 subsec:conv. W^ev = 𝔄 + 2ε_ev χχᵀ. This is the prop:WT convention, so nothing had to be adjusted.
+- **Polar direction and W per sector.** χ_ev = cosh(t/2)·1_{I_T} and χ_odd = sinh(t/2)·1_{I_T}, unnormalized, as in P46 subsec:conv. W^ev = 𝔄 + 2ε_ev χχᵀ. This is the prop:WT convention, so nothing had to be adjusted.
 - **Quantities per sector.** q = ⟨χ, 𝔄⁻¹χ⟩. λ^W_ev is the minimum eigenvalue of W^ev in the L²-orthonormal Legendre basis.
 - **Blocks and precision.** Legendre of degree < M, with **M = 20 and M = 30** (10 and 15 modes per sector). mpmath at 40 digits, exact GL for the products and 80 nodes in u.
 - **DH case.** DH has no pole: W = 𝔄 and the WT Lemma is **vacuous**. The DH "q" values carry a fictitious polar projection and are only informative.

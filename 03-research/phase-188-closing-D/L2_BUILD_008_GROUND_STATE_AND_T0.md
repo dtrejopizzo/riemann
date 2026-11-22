@@ -6,11 +6,11 @@ m^♯ = m + 1/(¼+τ²), m^♯(0) = C₀+4, (C) exact (E_γ), (E) slack λ^♯(T
 ## Corpus check
 grep "H^2_0 / (¼−∂²) / ground state / Tate selects / x^{-1/2} extremal / E_0 / γ = 0":
 R186_026 (piecewise Tate Gram) and R166_301 (Toeplitz kernel) use the factorization F̂ = (τ²+¼)Ĝ;
-R186_052 gives the weight (τ²+¼)²; Paper 47 prop:wit-Egamma states (E_γ) for γ > 0 only;
+R186_052 gives the weight (τ²+¼)²; Paper 46 prop:wit-Egamma states (E_γ) for γ > 0 only;
 rem:coer-nogo gives the x^{-1/2} extremals for sharp blocks. No memo describes the ground state of
 𝔞_∞ or 𝔞^♯ on P_T, and none states 𝒯₀ or (E_0). §1 is corpus-known; §2–§5 are new in this form.
 
-## 1. Parametrization of P_T (PROVED; known: Paper 47 thm:nyq-cone, cf. N_BUILD_002 review)
+## 1. Parametrization of P_T (PROVED; known: Paper 46 thm:nyq-cone, cf. N_BUILD_002 review)
 P_T = {F = ¼G − G″ : G ∈ H²_0(I_T)}, ‖F‖² = (1/2π)∫(τ²+¼)²|Ĝ|².
 *Proof.* If G ∈ H²_0(I_T) (G, G′ vanish at ±T), then F = ¼G − G″ ∈ L²(I_T) and F̂ = (τ²+¼)Ĝ vanishes at τ = ±i/2,
 i.e. ∫F e^{±t/2} = 0. Conversely, for F ∈ P_T put G(t) := −∫_{−T}^{t} 2 sinh((t−s)/2) F(s) ds. Then G = 0 for t ≤ −T, and
@@ -56,7 +56,7 @@ computed here.)
 ## 5. Asymptotic test = (E_0) (PROVED reduction)
 Along the family φ₀(T) (low-frequency, §2b), 𝒯₀ for all large T is the γ = 0 member of (E_γ) in the exact
 form of N_BUILD_001 (C): limsup 𝓕_T(φ₀)/‖φ₀‖² ≤ m^♯(0) = C₀ + 4 < 0. (Proof: §3 and μ₀^♯ → m^♯(0).)
-Paper 47 states (E_γ) for γ > 0 only; (E_0) is the boundary case where the spectral-derivative family
+Paper 46 states (E_γ) for γ > 0 only; (E_0) is the boundary case where the spectral-derivative family
 degenerates to the clamped bending mode. It is a statement about the primes alone: the fourth-order
 smoothed fluctuation of ψ̃ against a clamped bump of length 2T must be ≤ (C₀+4)‖φ₀‖², strictly negative.
 

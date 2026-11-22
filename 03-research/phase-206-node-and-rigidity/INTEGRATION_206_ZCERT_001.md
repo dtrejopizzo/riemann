@@ -1,6 +1,6 @@
-# INTEGRATION_206_ZCERT_001 — integration of rem:zcert into Paper 47 (phase 206)
+# INTEGRATION_206_ZCERT_001 — integration of rem:zcert into Paper 46 (phase 206)
 
-Inputs: AUDIT_206_ZCERT_001.md (§8), ZCERT_001.md + data. Backup: `04-papers/47-row-d-dual-certificates/main_pre_zcert.tex`.
+Inputs: AUDIT_206_ZCERT_001.md (§8), ZCERT_001.md + data. Backup: `04-papers/46-row-d-dual-certificates/main_pre_zcert.tex`.
 
 ## 1. Verification against the paper's definitions
 
@@ -9,7 +9,7 @@ Inputs: AUDIT_206_ZCERT_001.md (§8), ZCERT_001.md + data. Backup: `04-papers/47
 - **lem:combsine / rem:chiev-sine.** e_k = (−1)^{(k−1)/2}T^{−1/2}cos ω_k x (k odd); ∫cos ωx cos zx = sin((ω−z)T)/(ω−z)+sin((ω+z)T)/(ω+z), with cos ωT=0 giving sinωT·cos zT·2ω/(ω²−z²) ⇒ Φ_k = T^{−1/2}cos(zT)·2ω_k/(ω_k²−z²). At ρ=1 (z=−i/2): 2ω_k cosh(T/2)/(√T(¼+ω_k²)) = c_k from rem:chiev-sine. ✓
 - **rem:finitesign.** N(T)=⌈2Tt₀/π⌉−1 and 𝔄_ev match its notation. c^⊥ has codim 1 in the block ⇒ n₋ ≤ 1 (not "=1").
 - **cor:margin1/eq:closedmargin.** At T=4: 4·10⁹·4·e^{−61.8} ≈ 2·10⁻¹⁷ ✓; correct comparison (both upper bounds of λ^W).
-- **Mori.** P47 cites \cite{Mori15} with λ^W ≥ 2^{−2904}; the 2.4·10⁻⁷⁰ is the even minimum of the reproduced Arb certificate (AUDIT_ZENODO_FRONTIER). Worded as "Arb certificate of Mori15 (stated bound 2^{−2904}) gives even minimum ≥ 2.4·10⁻⁷⁰", a lower bound, not "≈". "without floor / infimum 0" withdrawn.
+- **Mori.** P46 cites \cite{Mori15} with λ^W ≥ 2^{−2904}; the 2.4·10⁻⁷⁰ is the even minimum of the reproduced Arb certificate (AUDIT_ZENODO_FRONTIER). Worded as "Arb certificate of Mori15 (stated bound 2^{−2904}) gives even minimum ≥ 2.4·10⁻⁷⁰", a lower bound, not "≈". "without floor / infimum 0" withdrawn.
 - lem:archcount, cor:H1minus, prop:H: not used in the proof of the remark; no conflict (prop:H is not invoked).
 
 ## 2. Changes to main.tex

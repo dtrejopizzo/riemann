@@ -1,6 +1,6 @@
 # A single channel of possible negativity in a band of length proportional to K
 
-**Cross-check.** In 020-A the whole carrier is controlled for a band of length o(K). Here a fixed endpoint ratio C>1 is kept and one coordinate of the head is split off. The codimension-one arguments of P47 correspond to other operators. The specific step is a uniform comparison with W of the tail that keeps its internal contacts.
+**Cross-check.** In 020-A the whole carrier is controlled for a band of length o(K). Here a fixed endpoint ratio C>1 is kept and one coordinate of the head is split off. The codimension-one arguments of P46 correspond to other operators. The specific step is a uniform comparison with W of the tail that keeps its internal contacts.
 
 With the notation of 020-A, let f=zp+et and b a tail of the domain supported on [K,CK]. We impose the two moments of f+b. On the subspace z=0 one has, uniformly in b,
 

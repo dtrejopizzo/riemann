@@ -2,9 +2,9 @@
 
 Nothing in this phase uses or mentions any equivalence
 between row D and any other statement. Approved numerical DISCOVERY run (double precision, convergence-checked, NUMERICAL; not
-certified). No edits to Paper 47, the grid or the routes index; proposed index rows are in memos/EXP_005 §4.
+certified). No edits to Paper 46, the grid or the routes index; proposed index rows are in memos/EXP_005 §4.
 
-Object: Paper 47 sec:combs — profile F₀ of thm:oneprofile (g = e^{bt}1_{[0,a]}, |b| > ½, T₀ = 2a, F₀ = (¼−∂²)(g*g̃*g*g̃)), lag function
+Object: Paper 46 sec:combs — profile F₀ of thm:oneprofile (g = e^{bt}1_{[0,a]}, |b| > ½, T₀ = 2a, F₀ = (¼−∂²)(g*g̃*g*g̃)), lag function
 B(d) = Arch(d) − X(d), matrices A_M = [B(log m − log k)]_{m,k≤M} = Arch_M − Div_M − Near_M (prop:AM). Secondary object: (Ω₀), the clamped
 ground-mode test (index R2; L2_BUILD_008/009).
 

@@ -19,7 +19,7 @@ No new clause for the shape theorem from fronts A/B. Openness (CA_B_005/006) is 
 ## CA_E_SYNTHESIS, CA_F_SYNTHESIS, CA_G_SYNTHESIS (round 10)
 - **E:** faithful; three YES→NO moves ENDORSED (PROVED for the first two; the KMS one ARGUED/retry). "Fixed-window compression = closed Sonin/WH territory" accepted as ARGUED.
 - **F:** faithful; with the F_000 review FIX on Lemma F5 (Haynsworth statement; Theorem P mis-cited) and the F_001 upgrade (condensed MW-3 NO-GO PROVED for three declared classes). Gap G-F = MW-5 OPEN (object unbuilt), not NO-GO.
-- **G:** faithful; the monoid-lemma move is ENDORSED as an (R)(10) exclusion (O11 ARGUED, O12 OPEN in P47's labels), not as a thm:shape(A) exclusion.
+- **G:** faithful; the monoid-lemma move is ENDORSED as an (R)(10) exclusion (O11 ARGUED, O12 OPEN in P46's labels), not as a thm:shape(A) exclusion.
 No new structural clause from fronts E/F/G. Recurrent: spectral invariants = REF-D (CA_F_003 Prop 2), commutative collapse (CA_E_001), Gram factorization (G0), monoid functoriality ((R)(10)).
 
 ## CA_H_SYNTHESIS (round 11)

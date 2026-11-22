@@ -1,5 +1,5 @@
 # CA_A_001 — Review
-Checked against P47 prop:boundary, eq:symbol, thm:shape, lem:shape-ident, prob:region; index README, 06_.
+Checked against P46 prop:boundary, eq:symbol, thm:shape, lem:shape-ident, prob:region; index README, 06_.
 
 ## Verdict
 **EXCLUDED (O11, O12; (R)(1),(5),(8)) — memo's NO-GO for the norm class CONFIRMED (narrow scope). The "line-doubling" obstruction is NOT endorsed as a general NO-GO for PSL₂(ℤ) (§3).** Two FIXes.

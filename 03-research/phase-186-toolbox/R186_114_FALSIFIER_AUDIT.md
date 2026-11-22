@@ -2,14 +2,14 @@
 
 Phase 186, round 19. Audit. «also verify whether the falsifiers work
 well; I don't want us to miss the solution because we blindly trusted something; re-verify everything».
-Paper 47, grid and crossword are not touched. Minimal numerics (three control recomputations, session scratchpad).
+Paper 46, grid and crossword are not touched. Minimal numerics (three control recomputations, session scratchpad).
 
 Read line by line: grid §3–§4 and log 7–31; R163_801 §5–§7 (Thm 5, Prop 5.1); R162_2501 §1–§3 (model ξ_m, Prop 1, Thm 3);
 R163_901 (status table, Prop 1.1–1.2, Lem 2.1, Thm F items 1–4 with proof, Cor F, §3); R163_991 §0, §3.3–3.5; R186_036
 Theorem 3 + Cor 3.1–3.2; R186_110 §1.3; R186_111 §3.4; R186_039 §0–§1; R185_003 §0; R185_005 §1.3, §2.1, §3; R164_601 table
 of falsifiers and Thm 3.1; R166_501 Thm A; R166_801 Thm 7C; R186_034 Thm 3.1; R186_026 Thm 3.3; R186_028 §0; R163_603 T5.2;
 PATTERN_REPORT §3; CONSTRAINTS_FOR_PATTERN §3; `r187_mm.py` and `r187_campaign.py` (build_form, sigma, params, run_window);
-`DATA_MM_FALSIFIER.csv`, `DATA_100_WINDOWS.csv`; `r043_wh.py` (header and block (6)); Paper 47 lem:roughEF, eq:Aform,
+`DATA_MM_FALSIFIER.csv`, `DATA_100_WINDOWS.csv`; `r043_wh.py` (header and block (6)); Paper 46 lem:roughEF, eq:Aform,
 eq:Kprim, prop:weak; Paper 48 §falsifiers (l.436–447).
 
 ## 0. Verdict on one screen
@@ -32,7 +32,7 @@ none of this closes a route that was open.** Row D: OPEN, unchanged.
 
 ### 1.1 (a) Is the perturbed form that of a function in the declared class? Own derivation
 
-Paper 47 conventions: Φ_F(s) = ∫F(t)e^{(s−½)t}dt; c_F(u) = ∫F(t)F(t−u)dt (even for real F);
+Paper 46 conventions: Φ_F(s) = ∫F(t)e^{(s−½)t}dt; c_F(u) = ∫F(t)F(t−u)dt (even for real F);
 lem:roughEF: Σ_ρ Φ_F(ρ)Φ_F(1−ρ) = 2Φ_F(0)Φ_F(1) + 𝔞_T(F), and on 𝒫_T the polar term vanishes.
 
 *Quartet term.* For ρ = ½ + z, Φ_F(½+z)Φ_F(½−z) = ∫∫F(t)F(t′)e^{z(t−t′)}dt dt′ = ∫c_F(u)e^{zu}du.

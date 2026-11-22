@@ -4,19 +4,19 @@ Object: λ_A(T) = inf{a_T(F) : F ∈ P_T, ‖F‖ = 1} (STATEMENT_001). Target (
 what a law λ_A(T) = L(T)(1 + o(1)), L > 0 explicit, looks like on the resolved range, what its lower half
 λ_A(T) ≥ L(T)(1 − o(1)) would need from the structure found in rounds 5–6, and whether the law distinguishes the true
 comb from the falsifiers cΛ and a_3. Notation: λ_W(T) is the bottom of the complete form W_T on L²(I_T); λ_A^par,
-λ_W^par the parity bottoms; 𝔤_par, h_par the polar capacity and its vector (Paper 47 thm:parityschur).
+λ_W^par the parity bottoms; 𝔤_par, h_par the polar capacity and its vector (Paper 46 thm:parityschur).
 
 ## 0. Corpus check
 
 Searched: ROUTES-TRIED-INDEX (README, 04, 05b, 06) for "asymptotic law", "two-sided", "bilateral", "margin",
 "15.449", "bar-fam", "frontier", "PATTERN", "W-pat"; phase 187 (PATTERN_REPORT, DATA_100_WINDOWS.csv); phase 199
-(PATTERN_001_FRONTIERS, MECH_001_MORI_STRUCTURE_ALL_T); Paper 47 subsec:margin, rem:bar-fam, rem:moriceiling, the
+(PATTERN_001_FRONTIERS, MECH_001_MORI_STRUCTURE_ALL_T); Paper 46 subsec:margin, rem:bar-fam, rem:moriceiling, the
 open-problem list, thm:parityschur; ROUND_005_C/D/E, ROUND_006_A/B of this phase.
 
 Recorded and not retried:
 - R6 / R186-bilateral (06_OPEN_RESIDUES): lower half of the bilateral law, OPEN; dead sub-routes: Landau–Widom main term
-  (NO-GO), L_Sh, the phase-187 pattern fit −ln λ_A ≈ 13.0e^{2T} − 24.6T − 18.7 (W-pat, NUMERICAL; P47 cor:pattern: a
-  quartet model M₁ matches every observable and is negative), bounded-range families (W-fam, P47 thm:famblind).
+  (NO-GO), L_Sh, the phase-187 pattern fit −ln λ_A ≈ 13.0e^{2T} − 24.6T − 18.7 (W-pat, NUMERICAL; P46 cor:pattern: a
+  quartet model M₁ matches every observable and is negative), bounded-range families (W-fam, P46 thm:famblind).
 - Phase 187 already fitted ten law families to 46 windows T ≤ 1.075 in 128-bit arithmetic (PATTERN_REPORT §1).
   Those values are reused here as data; the fit is not redone as a route.
 - Phase 199 PATTERN_001 fitted λ_W (Mori's tables) to κμ^{9/2}e^{−4πμ}, μ = e^{2T}, with a contact sawtooth in κ.
@@ -37,18 +37,18 @@ No equivalence of (★) with another statement is used anywhere below.
 All values below are NUMERICAL unless marked. Galerkin values are upper bounds for the true infimum (up to the
 quadrature error of the archimedean entries), never inputs to a proof.
 
-(a) Certified lower bounds (PROVED in Paper 47, interval arithmetic; or CITED).
+(a) Certified lower bounds (PROVED in Paper 46, interval arithmetic; or CITED).
 | window | bound | source | label |
 |---|---|---|---|
-| T = ½log3 | λ_A ≥ λ_P ≥ 8.8577·10⁻⁵ | P47 thm:C | PROVED (computer-assisted) |
-| T ≤ ½log5 | λ_A ≥ 2.5·10⁻¹², λ_W ≥ 10⁻¹⁸ | P47 thm:log5A, thm:log5W | PROVED (computer-assisted) |
+| T = ½log3 | λ_A ≥ λ_P ≥ 8.8577·10⁻⁵ | P46 thm:C | PROVED (computer-assisted) |
+| T ≤ ½log5 | λ_A ≥ 2.5·10⁻¹², λ_W ≥ 10⁻¹⁸ | P46 thm:log5A, thm:log5W | PROVED (computer-assisted) |
 | T ≤ 17/16 | λ_W ≥ 2^{−49162} | Liu Thm B | CITED |
 | T ≤ ½log12 | λ_W ≥ 2^{−1518} ≈ 10^{−457.0} | Mori VII | CITED (not audited) |
 | T ≤ ½log15 | λ_W ≥ 2^{−2904} ≈ 10^{−874.2} | Mori VIII | CITED (computational part reproduced, AUDIT_ZENODO_FRONTIER) |
 The λ_W rows are on the same normalisation as here (W_T = 𝔞_T + 2Re AB̄ on L²(I_T), AUDIT_ZENODO_FRONTIER §0). By
-Proposition 4.1 below (λ_A ≥ λ_W, PROVED) and monotonicity in T (P47 lem:monoT), they are floors for λ_A:
+Proposition 4.1 below (λ_A ≥ λ_W, PROVED) and monotonicity in T (P46 lem:monoT), they are floors for λ_A:
 λ_A(T) ≥ 2^{−1518} for T ≤ ½log12 and λ_A(T) ≥ 2^{−2904} for T ≤ ½log15 (CITED inputs, PROVED transfer). This corrects
-the sentence of P47's open-problem list "beyond ½log5 no lower bound better than C₀ − A is known" to "no lower bound
+the sentence of P46's open-problem list "beyond ½log5 no lower bound better than C₀ − A is known" to "no lower bound
 proved within the paper": cited complete-form certificates give floors up to ½log15.
 
 (b) Converged values, 128-bit arithmetic, T ≤ 1.075 (phase 187 DATA_100_WINDOWS.csv, 46 windows, relative error
@@ -102,14 +102,14 @@ fix it to better than ≈ 3 %.
 (iii) Ratio to cor:margin1. The local slope dy/dT is 45 at ½log3, 106 at ½log5, 150 at ½log7, 190 at 1.06, 300 at
 1.25 and 376 at 1.375 (from the 1.35–1.4 pair), so the effective b/15.449 is 2.9, 6.9, 9.7, 12.3, 19.5, 24.3 and grows
 without bound in the doubly exponential model (b_eff = 2c₁e^{2T} + c₂). At T = 1.4, λ_A ≈ 10^{−68.7} against the proved
-ceiling 4·10⁹·1.4·e^{−21.6} ≈ 2.3·10⁰: cor:margin1 is uninformative on the whole resolved range, as P47 already says.
+ceiling 4·10⁹·1.4·e^{−21.6} ≈ 2.3·10⁰: cor:margin1 is uninformative on the whole resolved range, as P46 already says.
 The exponent 15.449 = 42/e is a property of the test family of lem:testfam (cutoff 21 just below γ₂, optimisation of
 k in (k/21T)^{2k}); it removes one point and decays only singly exponentially, so it cannot be the rate.
 (iv) Contacts. Over the contacts ½log3, log 2 (= ½log4), ½log5, ½log7, ½log8 the residuals of the double fit are
 +0.08, −0.03, +0.02, +0.03, −0.00 digits: no jump at the resolution 0.03 digit. Segment-by-segment fits of
 y = c₁e^{2T} + c₃ between consecutive contacts give c₁ = 9.17, 10.27, 10.93, 11.32, 11.19: a slowly increasing
 effective constant, without a discontinuity. Monotonicity forbids upward jumps in λ_A; a downward jump at a contact
-would be a kink (λ_A is continuous, P47 lem:contA). The data show no visible kink: the law is a law "across contacts",
+would be a kink (λ_A is continuous, P46 lem:contA). The data show no visible kink: the law is a law "across contacts",
 not piecewise between them. (By contrast the κ in Mori's λ_W table drops by 8–15 % at each contact, PATTERN_001; for
 λ_A the corresponding jump is below 0.03 digit ≈ 7 %, so the same effect is not excluded at that size.)
 
@@ -136,12 +136,12 @@ by factors 10⁴–10⁷ (μ₂/μ₁ = 2·10⁴, 2·10⁵, 7·10⁵, 4·10⁶).
 
 ## 4. Pure mathematics: λ_A against the complete form, and what a lower half needs
 
-Setting: fix T and a parity; write 𝒟 = 𝒟_T^par, ℓ = ℓ_par, ε = ε_par, 𝒬 = 𝒬_T^par = ker ℓ ∩ 𝒟 (P47 thm:parityschur).
+Setting: fix T and a parity; write 𝒟 = 𝒟_T^par, ℓ = ℓ_par, ε = ε_par, 𝒬 = 𝒬_T^par = ker ℓ ∩ 𝒟 (P46 thm:parityschur).
 On 𝒟, W_T = 𝔞_T + 2ε ℓ(·)² (thm:parityschur(o), CITED).
 
 **Proposition 4.1 (two-sided sandwich; PROVED).** For each parity,
     λ_W^par ≤ λ_A^par ≤ λ_{W,2}^par,
-where λ_{W,2}^par is the second min–max value of W_T on 𝒟. Consequently λ_W ≤ λ_A (this half is P47 thm:A with
+where λ_{W,2}^par is the second min–max value of W_T on 𝒟. Consequently λ_W ≤ λ_A (this half is P46 thm:A with
 rem:Kprim, CITED) and λ_A ≤ min_par λ_{W,2}^par.
 *Proof.* On 𝒬, ℓ = 0, so W_T = 𝔞_T there and λ_A^par = inf_{𝒬} W_T/‖·‖² ≥ inf_{𝒟} W_T/‖·‖² = λ_W^par. For the upper
 bound, let S ⊂ 𝒟 be any two-dimensional subspace; ℓ|_S has a nonzero kernel vector F ∈ S ∩ 𝒬, and
@@ -208,7 +208,7 @@ Sign budget (ROUND_005_C Prop. 3, PROVED): on the minimiser, ℛ(F*) = κ(F*) �
 statement that the fluctuation functional ℛ stays below κ − |σ_T| by at least L on every unit F ∈ P_T. The lower half is
 thus a quantitative version of (★) whose margin is L(T) ≈ exp(−13e^{2T}): it is (★) plus an explicit gap, and none of
 (N1)–(N3) is weaker than (★) at that scale. The exact Schur reductions (ROUND_005_C Theorem 2) carry the same margin
-(P47 lem:shape-est(ii)) and add nothing.
+(P46 lem:shape-est(ii)) and add nothing.
 
 **Corollary 4.7 (the lower half is a statement about one unconstrained eigenvalue; PROVED reduction).** In the even
 sector with n₋ = 1, τ₁ ≠ 0, ROUND_005_D Cor. 3.2 gives λ_A^ev = μ₁ − τ₁²/D(λ_A^ev), D(z) = τ₀²/(|μ₀| + z) −

@@ -1,7 +1,7 @@
 # INV_L_001 — Clause (5): the semilocal FE-defect, the Green identity and the local reflected poles (track L)
 
 Track L.
-Notation: Paper 47 (eq:symbol, eq:form, A(F)=Φ_F(1), B(F)=Φ_F(0), Φ_F(s)=∫F(t)e^{(s−½)t}dt, 𝒫_T, N=e^{2T}); O_6 = prop:shape-eulerdel
+Notation: Paper 46 (eq:symbol, eq:form, A(F)=Φ_F(1), B(F)=Φ_F(0), Φ_F(s)=∫F(t)e^{(s−½)t}dt, 𝒫_T, N=e^{2T}); O_6 = prop:shape-eulerdel
 (a_P); K1/J4 from INV_K_001/INV_J_001. Γ_R(s)=π^{−s/2}Γ(s/2). For a finite set S of primes: ζ_S=Π_{p∈S}(1−p^{−s})^{−1},
 ξ_S=Γ_R ζ_S, u_S=log|ξ_S|, and the **semilocal FE-defect** d_S(s):=u_S(s)−u_S(1−s̄).
 

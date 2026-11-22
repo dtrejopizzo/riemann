@@ -86,7 +86,7 @@ Applying (1.3) gives
 \]
 
 At first contact `PA_MF=r_F` for `M>=e^(2T)`, with the regularity and
-truncation convention of Paper 47. Thus the second term of (2.2) is
+truncation convention of Paper 46. Thus the second term of (2.2) is
 an explicit Tate port; the last two are the outer concomitants
 that could not be omitted in R161_057--065.
 

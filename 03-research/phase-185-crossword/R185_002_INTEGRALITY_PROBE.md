@@ -98,7 +98,7 @@ Non-closure under deletion forces coupling 1_P beyond X with data that deletion 
 4. **Conj G** is ARGUED: "completeness ⇒ 1*Λ = log" is a statement about known proofs, not a theorem.
 5. Nothing is asserted about RH. Every NO-GO is relative to the R166_802 witness restriction.
 
-## For Paper 47
+## For Paper 46
 
 - **Thm C** (convexity/solidity barrier ⇒ blindness to the W-sieve): PROVED. Can accompany the W-sieve lemma of R167_102/103 as a one-line remark.
 - **Thm F** (closure under deletion of primes): PROVED. Proposed as a remark in §7 (alongside Thm finZ): Eulerian integrality conditions do not exclude witnesses because the sub-Euler-products ∏_{p∈𝒫′} inherit the window.
@@ -109,4 +109,4 @@ Non-closure under deletion forces coupling 1_P beyond X with data that deletion 
 * FATAL: Thm D as stated is false (a counting bound on [X,Xe^Δ] does not give Tail_K ≥ (1−η′)𝒫_K because Ψ̌_K vanishes at the endpoint; "one scale ⟺ Θ≤½+δ′" is asymptotic). Moves to ARGUED.
 * Prop A/§0: the window term of 𝔄_K is not O(1) (PNT error at scale X); dyadic Chebyshev is empty if Δ<log 2. ARGUED.
 * Thm F: core PROVED (window and E_K are preserved; exclusion ⟺ ∃K: E_K>U_K); the step "⇒ E1 via Thm 2" is illegitimate (Λ_∅ does not satisfy (1.1)); the logic is proof transfer (W3). Thm C(i)(ii) PROVED; (iii) cite "0∈C ⇒ Tail=E_K". Prop E: Λ̃ separation legitimate; DH and L(u,χ) ARGUED.
-* Ready for Paper 47: Thm C(i)(ii), core of Thm F. Not: Thm D, Prop A, "Thm F ⇒ E1".
+* Ready for Paper 46: Thm C(i)(ii), core of Thm F. Not: Thm D, Prop A, "Thm F ⇒ E1".

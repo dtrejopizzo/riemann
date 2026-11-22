@@ -12,12 +12,12 @@ selection observation, not a sign one).
 
 | Piece | File / section | Type | Where it stops |
 |---|---|---|---|
-| `thm:log5A`, `thm:log5W` (positivity up to `½log 5`) | Paper 47 `main.tex` l. 4680–4710; appendix `subsec:encllog5` | **certificate** (ball arithmetic, `prop:lowercert`, `thm:parityschur`) | explains nothing; bound `2.5·10⁻¹²` |
-| `thm:C` (explicit certificate, `½log 3`) and Theorem C of phase 154 | Paper 47 `thm:C`; phase 154 | certificate; «primitive form only» (phase 155, round 5) | first contact |
+| `thm:log5A`, `thm:log5W` (positivity up to `½log 5`) | Paper 46 `main.tex` l. 4680–4710; appendix `subsec:encllog5` | **certificate** (ball arithmetic, `prop:lowercert`, `thm:parityschur`) | explains nothing; bound `2.5·10⁻¹²` |
+| `thm:C` (explicit certificate, `½log 3`) and Theorem C of phase 154 | Paper 46 `thm:C`; phase 154 | certificate; «primitive form only» (phase 155, round 5) | first contact |
 | Theorem A of phase 153 (`({∞,2,3}, log 2)`) | phase 153 | partial mechanism (Lévy energy, `thm:A`) | `T ≤ log 2`, without `n = 4` |
-| `prop:align` (alignment structure with 2 and 3 contacts; with 4: `g(x) = v_2 cos x + v_4 cos 2x`, root `y_0`) | Paper 47 `main_pre_cite46.tex` l. 2896 | **localization mechanism** of the set `{σ < 0}` (uses `log 4 = 2 log 2`) | localizes the negative part; gives no sign (`prop:negtrace`: «the band does not decide») |
+| `prop:align` (alignment structure with 2 and 3 contacts; with 4: `g(x) = v_2 cos x + v_4 cos 2x`, root `y_0`) | Paper 46 `main_pre_cite46.tex` l. 2896 | **localization mechanism** of the set `{σ < 0}` (uses `log 4 = 2 log 2`) | localizes the negative part; gives no sign (`prop:negtrace`: «the band does not decide») |
 | Nodal explanation of the 2/3 cancellation | phase 155 round 5 | structural reading | no inequality |
-| Schur reduction, `S_{T,k}` (`λ_A > 0 ⟺ S_{T,k} ≻ 0`) | Paper 47 l. 211; phase 186 R186_025/105 | exact reduction to finite dimension | the sign of `S_{T,k}` is a certificate |
+| Schur reduction, `S_{T,k}` (`λ_A > 0 ⟺ S_{T,k} ≻ 0`) | Paper 46 l. 211; phase 186 R186_025/105 | exact reduction to finite dimension | the sign of `S_{T,k}` is a certificate |
 | Per-prime split of round 6 (projected rank-one square `ℓ ≈ cos(2πt/log 2)`) | `ROUND_006_WINDOW_SPLIT_NUMERIC.md`; RULES_AVOID O1–O4 | NUMERICAL; dies at `T = 0.70` | generic in `c` up to 0.69 |
 | Band in `c`, concavity, strict `c* < 1`, derivative `−Π(F*)` | `ROUND_006…` §10.3–10.4; 211 `ROUND_003_A.md` Prop. 2; RULES_AVOID P1 | PROVED structural | no sign |
 | Weyl pin: `|1 − c*| ≤ (Λ_2 − λ_A)/min|μ_±|` | 211 `ROUND_003_A.md` Lemma 3 (instance at `½log 5 + 10⁻³`: `2·10⁻⁶`) | PROVED structural | inputs (P1)–(P2) as strong as the sign |

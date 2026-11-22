@@ -4,7 +4,7 @@ Task: `R155_056` row 8c; PATH-TO-D item P7
 (`05-meta-and-planning/ABCD-CLOSURE-PLAN/PATH-TO-D.md:324-333`).
 Pure mathematics, no compute, no sign. Every statement labelled.
 
-Paper 46 = `04-papers/46-intersection-frame-defect/archive/main.md` (P46). Paper 44 = `04-papers/44-row-b-arithmetic-family/main.md` (P44).
+Paper 47 = `04-papers/47-intersection-frame-defect/archive/main.md` (P47). Paper 44 = `04-papers/44-row-b-arithmetic-family/main.md` (P44).
 Lead note = `03-research/phase-136-row-d-map/NOTE_OFF_THE_PAGE_CANDIDATES.md` (LN).
 
 ## 0. Corpus check first (rule): D-HS is not "never killed"
@@ -18,8 +18,8 @@ LN §1 and the phase-136/137/140 blueprints, one **existing refutation**:
  Thm 3ter.6(iii)); a transport-invariant tensor-square `h⁰` factors through `ab`, hence through `M`; so
  Theorems D.24.5(i)/D.24.7 apply: **(b′) fails and (c) is RH**. Recorded in
  `03-research/phase-140-row-d-frobenius-square/README.md:58` ("D.24.10 … refuted, PROVED").
-* Transcribed into P46 as §19bis.3–19bis.4: Theorem 19bis.17 (P46:7068, (c) for a bidegree-function ⟹ RH),
- Theorem 19bis.19 (P46:7122, (b′) fails for every bidegree-function), Theorem 19bis.22 (P46:7185, pairing
+* Transcribed into P47 as §19bis.3–19bis.4: Theorem 19bis.17 (P47:7068, (c) for a bidegree-function ⟹ RH),
+ Theorem 19bis.19 (P47:7122, (b′) fails for every bidegree-function), Theorem 19bis.22 (P47:7185, pairing
  against the Pólya realization adds nothing).
 
 **Correction of record (DIAGNOSTIC).** PATH-TO-D P7 (`PATH-TO-D.md:328`) says D-HS is "the one
@@ -37,26 +37,26 @@ The verdict does not change.
 D-HS (LN §1, `LEAD_NOTE…:19-51`) proposes `h⁰(E) := \dim_S H⁰_X(E)` (or `\log\#`) for classes `E` "radial, i.e.
 supported on graphs `Γ_{Frob_n} = {(x,nx)}`, smeared by `h(\log n)`", and states its purpose as feeding Theorem 12.3:
 its own tests T3 = clause (b′) (`:44`), T4 = clause (c) on `mK` and `K−nF` (`:45`), T2 = the growth `h⁰(mK) ≳ m²/4`
-that (c) forces (LN §0, `:9-10`; P46 Theorem 13.6(i), P46:3505-3512). Clause (a) is the nonnegativity of a dimension.
+that (c) forces (LN §0, `:9-10`; P47 Theorem 13.6(i), P47:3505-3512). Clause (a) is the nonnegativity of a dimension.
 
-**Domain (PROVED, split).** The smeared radial classes are the objects of P46 §11: `D^W` (Definition 11.1) is the
+**Domain (PROVED, split).** The smeared radial classes are the objects of P47 §11: `D^W` (Definition 11.1) is the
 Weil completion of the radial sector, on which `τ_a` is the archimedean Frobenius action (Theorem 14.3(ii)) and the
-action of `Frob_n` on radial classes is `τ_{\log n}` (P46:3350-3351; the bidegree match is Theorem 11.8(iii),
-P46:2247-2250). Theorem 12.3 (P46:2744-2797) uses `h⁰` only at `E = nF` and `E = K−nF` (Steps 2–3), so:
+action of `Frob_n` on radial classes is `τ_{\log n}` (P47:3350-3351; the bidegree match is Theorem 11.8(iii),
+P47:2247-2250). Theorem 12.3 (P47:2744-2797) uses `h⁰` only at `E = nF` and `E = K−nF` (Steps 2–3), so:
  * *Larger domain irrelevant:* whatever `𝒢 ⊇ D^W` D-HS defines `H⁰_X` on, the transfer reads `h⁰|_{D^W}`, and
  Corollary 1 below applies to that restriction. `PROVED`.
  * *Minimal domain:* `𝒢_{min} := \{nF, K−nF : F ∈ C_c^∞ \text{ primitive}\} ⊂ C_c^∞ ⊕ RK`. An `h⁰` defined only on
  `C_c^∞ ⊕ RK` (which contains `K`) can run Theorem 12.3 but is **not literally** in the range of Theorem 19.25: the
- witness `E = tF_0 + dK`, `F_0(u) = e^{−u²/18}\sin(γ_1u)` (P46:6203), is not compactly supported, and P46 has a
- compactly supported witness only for `Ξ_a` (Theorem 19.15, P46:6134-6136). For this domain the kill is by
+ witness `E = tF_0 + dK`, `F_0(u) = e^{−u²/18}\sin(γ_1u)` (P47:6203), is not compactly supported, and P47 has a
+ compactly supported witness only for `Ξ_a` (Theorem 19.15, P47:6134-6136). For this domain the kill is by
  Lemma 3 (§2.3, `w ∈ \{1,t\}`, reading-dependent, no (X19)), or by a **truncation lemma** — `F_R := F_0χ_R`, smooth
  cutoff at `|u| ≤ R`; `C_F` of (11.17) is continuous in the `C²`-weighted norm of `D^W` by (11.2)+(E3d),
  `F_0 − F_R` and two derivatives are `O(e^{−R²/18}\mathrm{poly}(R))`, and the margin `G(1−s_1) = 5.79×10^{−3}`
- (P46:6288) is fixed, so some finite `R` gives `C_{F_R} < \sqrt{W_{F_R}/2}` and Theorem 19.23 runs on
+ (P47:6288) is fixed, so some finite `R` gives `C_{F_R} < \sqrt{W_{F_R}/2}` and Theorem 19.23 runs on
  `F_R ∈ C_c^∞`. Not written here (it re-enters the computer-assisted layer through `s_1`, `L`): **`OPEN`, residual R1**
- (a residual of P46 §19.6, not of D-HS).
+ (a residual of P47 §19.6, not of D-HS).
 
-**Clauses needed (PROVED).** All three: (a) trivially; (b′) because Theorem 12.3 Steps 2 and 4 use it (P46:2777-2797)
+**Clauses needed (PROVED).** All three: (a) trivially; (b′) because Theorem 12.3 Steps 2 and 4 use it (P47:2777-2797)
 and D-HS lists it as T3; (c) because Step 3 uses it and D-HS lists it as T4 and as the `m²/4` target. No weakening
 is proposed in LN §1.
 
@@ -66,18 +66,18 @@ is proposed in LN §1.
 `h⁰ : D^W → R_{≥0}`, in particular none of the form `\dim_S H⁰_X(·)` or `\log\#H⁰_X(·)` for any `S`-module `H⁰_X`
 whatsoever, satisfies (a), (b′), (c) of Theorem 12.3 for `ξ`, for any `χ ∈ R`.
 
-*Proof.* Theorem 19.25 (P46:6332-6351) quantifies over **every** function `D^W → R_{≥0}`; its proof uses nothing about
-how `h⁰` is defined. Step 1 (`h⁰ = 0` in degree `≤ 0`): (b′) + Theorem 11.13(i),(ii),(iv) (P46:2542-2552). Step 2
+*Proof.* Theorem 19.25 (P47:6332-6351) quantifies over **every** function `D^W → R_{≥0}`; its proof uses nothing about
+how `h⁰` is defined. Step 1 (`h⁰ = 0` in degree `≤ 0`): (b′) + Theorem 11.13(i),(ii),(iv) (P47:2542-2552). Step 2
 (`h⁰(E) ≥ R(E)` for `\deg E > 1`): Step 1 at `K−E`, `\deg K = 1` (Theorems 11.7, 11.8(v)), clause (c), Serre symmetry
-`R(K−E) = R(E)` (Theorem 19.2, P46:5930-5943). Step 3 (witness): `E = tF_0 + dK` of Theorem 19.23 (P46:6292-6300) has
+`R(K−E) = R(E)` (Theorem 19.2, P47:5930-5943). Step 3 (witness): `E = tF_0 + dK` of Theorem 19.23 (P47:6292-6300) has
 `\deg E = d > 1`, `R(E) > 0`, hence `h⁰(E) > 0`, hence by (b′) an `E' ≥ 0`, `E' ≢ 0`, `E − E' ∈ 𝓝_∞`, which
 Theorem 19.23 forbids via Lemma 19.17 (`|\mathrm{Re}\,e^{iθ}Φ_{E'}(ρ_1)| ≤ ½ s_1 \deg E'`, `s_1 < 1`). (Step 2 does
 not in fact need Serre symmetry: (c) at `E` with `h⁰(K−E) = 0` gives `h⁰(E) ≥ R(E)` directly.) By §1.1, D-HS needs
 exactly these clauses, on a domain containing `𝒢_{min}`; on `D^W` this is the kill, on `C_c^∞ ⊕ RK` see R1. ∎
 
-Theorem 21.15 (P46:8796-8811) gives the same on the function-field model, where RH is a theorem and the geometric
+Theorem 21.15 (P47:8796-8811) gives the same on the function-field model, where RH is a theorem and the geometric
 `h⁰_C` exists (Theorem 21.16): the defect is the cone `𝓔_C`, not the absence of a sections functor
-(Remark 21.16a, P46:8838-8850). D-HS is a proposal for a sections functor; Theorem 21.15 says a sections functor is
+(Remark 21.16a, P47:8838-8850). D-HS is a proposal for a sections functor; Theorem 21.15 says a sections functor is
 not what is missing.
 
 ### 1.3 The evasion clauses, each checked
@@ -91,41 +91,41 @@ D-HS could evade Corollary 1 only by changing an ingredient of Theorem 19.25's p
 (e.g. a CC-type Arakelov degree of the fibre divisor, cf. Finding 13.8 / R140 D.24.2 declining `\deg_{CC} = \deg`).
 Theorem 12.3 needs of a degree exactly three things: `\deg' > 0` on nonzero nonnegative classes (Step 4), `\deg'`
 constant on `𝓝_∞`-cosets (Steps 2, 4), and **`\deg'(nF) = 0` for primitive `F`, i.e. `\deg'` vanishes on the primitive
-space `P^W`** (Step 4, P46:2793-2797; Theorem 11.13(iii) for the frame's `\deg`). Without the third there is no Step 4
+space `P^W`** (Step 4, P47:2793-2797; Theorem 11.13(iii) for the frame's `\deg`). Without the third there is no Step 4
 and no RH to obtain, so a `\deg'` lacking it is not an evasion but an abandonment of the transfer. With it, `\deg'`
 factors through `D^W/P^W ≅ R²`: `\deg' = αa + βb`, `(a,b) = M(E)`, and positivity on the nonnegative cone (where
 `a,b > 0`, Lemma 19bis.18) forces `α,β ≥ 0`, not both `0`. Then `\deg' K = (α+β)/2 > 0` and
-`\deg' F_0 = (α−β)η` with `|η| < 10^{−390}` (Lemma 19.20(ii), P46:6206), so Step 2's requirement `\deg'(K−E) < 0` on
+`\deg' F_0 = (α−β)η` with `|η| < 10^{−390}` (Lemma 19.20(ii), P47:6206), so Step 2's requirement `\deg'(K−E) < 0` on
 the witness holds for `d ≥ 2` with no sign choice and no parity argument. Step 1 uses only the first two properties.
-Step 3's conclusion "no nonnegative `E'` with `E − E' ∈ 𝓝_∞`" (Theorem 19.23, P46:6294-6296) **does not mention the
+Step 3's conclusion "no nonnegative `E'` with `E − E' ∈ 𝓝_∞`" (Theorem 19.23, P47:6294-6296) **does not mention the
 degree at all** — `\deg` enters its proof as a tool, through Theorem 11.13(ii),(iv) and the two-sided bound
 `|I_∞(E,F)| ≤ C_F\deg E` of Theorem 11.14(ii). The functional `R` is defined from `I_∞` and `K`, not from `\deg`
 (Definition 19.1). Hence no change of degree function evades. `PROVED`.
 
 **(Ev-3) Different canonical class / different Serre symmetry.** Suppose D-HS runs Theorem 12.3 with some
 `K' ∈ D^W` in place of `K`. Serre symmetry `R'(K'−E) = R'(E)` is automatic for every `K'` (Theorem 19.2 uses only
-bilinearity, P46:5932-5934) and is in any case not needed (Corollary 1, parenthesis). `R'(E) − R(E) = −½\,I_∞(E, K'−K)`
+bilinearity, P47:5932-5934) and is in any case not needed (Corollary 1, parenthesis). `R'(E) − R(E) = −½\,I_∞(E, K'−K)`
 is **linear** in `E`, hence `O(d)` on the witness family `E = tF_0 + dK`, where `t = O(d)` from
-`t²W_{F_0} < d²/2 − d/2 + 2χ`. On that family `R(E) = ½(d²/2 − t²W_{F_0}) − d/4 + χ` (Theorem 19.21(i), P46:6262)
+`t²W_{F_0} < d²/2 − d/2 + 2χ`. On that family `R(E) = ½(d²/2 − t²W_{F_0}) − d/4 + χ` (Theorem 19.21(i), P47:6262)
 ranges over `(0, ¼d²(1−s_1²) − d/4 + χ)` as `t²W_{F_0}` runs over the window `(s_1²d²/2, d²/2 − d/2 + 2χ)`; **choose
 `t` at the bottom of the window**, `t²W_{F_0} = s_1²d²/2·(1+ε)`, so that `R(E) ≥ ¼d²(1−s_1²) − O(d)`. Then for
 `d ≥ \max(2, \deg K')`: Step 2 needs `\deg(K'−E) = \deg K' − d ≤ 0`, Step 3 needs `R'(E) ≥ R(E) − O(d) > 0`, both true
 for `d` large, with the **same** witness. No `K'` evades. `PROVED`.
 
-**(Ev-4) Different cone in (b′).** This is Horn B (P46 §19.9, P46:6463-6500). LN §1 T3 (LN:44) states (b′) with the
+**(Ev-4) Different cone in (b′).** This is Horn B (P47 §19.9, P47:6463-6500). LN §1 T3 (LN:44) states (b′) with the
 **nonnegative** cone; D-HS proposes no other cone, so Corollary 1 applies to D-HS as proposed. `PROVED` for the cone
-D-HS actually uses. If a sections-type cone `𝓔_{HS} := \{E : H⁰_X(E) ≠ 0\}` were substituted, Theorem 19.30 (P46:6465)
+D-HS actually uses. If a sections-type cone `𝓔_{HS} := \{E : H⁰_X(E) ≠ 0\}` were substituted, Theorem 19.30 (P47:6465)
 gives the necessary condition `C'_{F_0} ≥ G` under (T1_cone),(T2_cone):
- (i) If `𝓔_{HS} ⊆ \{E ≥ 0\} + 𝓝_∞`, then `C'_{F_0} ≤ C_{F_0} < G` and Theorem 19.30 refutes (B3 row, P46:6489). The
+ (i) If `𝓔_{HS} ⊆ \{E ≥ 0\} + 𝓝_∞`, then `C'_{F_0} ≤ C_{F_0} < G` and Theorem 19.30 refutes (B3 row, P47:6489). The
  inclusion is what a "divisor of a section" definition suggests — effective fibre divisors, averaged to the radial
  carrier by the positive operator `Frob_n ⋆ Δ^{rad} = Γ_n^{rad}` (P44 Prop 3ter.5, P44:1541-1551) — but the divisor
- of a section is only *linearly equivalent* to `D|_{y_0}` (cf. Theorem 21.16(b′), P46:8818-8820), and the assembly
+ of a section is only *linearly equivalent* to `D|_{y_0}` (cf. Theorem 21.16(b′), P47:8818-8820), and the assembly
  of fibrewise linear equivalence into `𝓝_∞`-equivalence on the square is not argued. `DIAGNOSTIC`.
- (ii) If `𝓔_{HS} = B4` (trace-nonnegative), P46 §20 applies: (T2_cone) fails for `B4^g` (Theorem 20.19, P46:7719) and
- `(b′)_{B4}` for the RR candidate on `B4^{g,0}` is equivalent to RH (Theorem 20.23, P46:7866). `PROVED` for B4 only.
- (iii) A cone with `C'_{F_0} ≥ G`, (T2_cone), and `≠ B4` is not treated by P46 or here.
-So Horn B stays exactly as P46 §19.9/§20 record it: B4 the one survivor of Theorem 19.30's test (P46:6491), the sign
-transported onto `(b′)_{B4}` (P46:7878-7880). **Horn B is a residual of the frame, open before and after this memo,
+ (ii) If `𝓔_{HS} = B4` (trace-nonnegative), P47 §20 applies: (T2_cone) fails for `B4^g` (Theorem 20.19, P47:7719) and
+ `(b′)_{B4}` for the RR candidate on `B4^{g,0}` is equivalent to RH (Theorem 20.23, P47:7866). `PROVED` for B4 only.
+ (iii) A cone with `C'_{F_0} ≥ G`, (T2_cone), and `≠ B4` is not treated by P47 or here.
+So Horn B stays exactly as P47 §19.9/§20 record it: B4 the one survivor of Theorem 19.30's test (P47:6491), the sign
+transported onto `(b′)_{B4}` (P47:7878-7880). **Horn B is a residual of the frame, open before and after this memo,
 and D-HS neither supplies nor closes it: residual R2.** It does not save D-HS, which proposes no cone.
 
 **(Ev-5) Different pairing `I'` in (c).** Then Theorem 12.3's conclusion is not `I_∞(F,F) ≤ 0` and Paper 45
@@ -135,7 +135,7 @@ Theorem 10.4 does not deliver RH: an abandonment of the target, not an evasion. 
 `𝓝' ⊆ \mathrm{rad}\,I_∞ = 𝓝_∞` (Theorem 11.11, (11.14)); so `𝓝' ⊋ 𝓝_∞` is impossible, and `𝓝' ⊊ 𝓝_∞` makes (b′)
 stronger, so Theorem 19.25 applies verbatim. `PROVED` (one line).
 
-**§28.4 check of the evasion clauses.** None of (Ev-1)–(Ev-6) is one of the six clauses of §28.4 (P46:11956-11973):
+**§28.4 check of the evasion clauses.** None of (Ev-1)–(Ev-6) is one of the six clauses of §28.4 (P47:11956-11973):
 they modify the *frame* (domain, degree, `K`, cone), whereas §28.4 asks for a *new object* (a square with a
 local-data polar divisor reading phase and both structures). §28.4 clause-by-clause for D-HS is in §4 below.
 
@@ -183,7 +183,7 @@ LN §1 expects `h⁰(mK) ~ (\#\text{fibres with } \deg E|_{y_0} > 0) × (\text{f
 factors are checked.
 
 **Fibre dimension (PROVED, conditional on the identification).** CC's `\dim_S H⁰(D) = ⌈(\deg D + \log 2)/\log 3⌉ − 1_L`
-on `\overline{\mathrm{Spec}\,Z}` (P46:3353-3360, arXiv:2205.01391v2) is **linear in `\deg D`** and a function of `\deg D`
+on `\overline{\mathrm{Spec}\,Z}` (P47:3353-3360, arXiv:2205.01391v2) is **linear in `\deg D`** and a function of `\deg D`
 alone. D-HS never says how the Haar-smeared measure `E|_1` is a CC Arakelov divisor (LN:20-24); the statement used is
 the conditional one: *whatever linear fibre degree D-HS assigns, if CC's count is a function of that degree alone, the
 fibre dimension at `E = mK` is `O(m)`*, since `\deg(mK|_1) = m\deg(K|_1)`. (With the weight `t` of §2.3,
@@ -200,16 +200,16 @@ Either way,
 
  h⁰_{HS}(mK) ≤ 2\dim_S H⁰(mK|_1) = O(m). (2.2)
 
-**T2 FAILS: linear, not quadratic.** This is the same number as P46 Theorem 13.6(ii) (`O_Q(\log m)` on every finite
-truncation of the one-parameter lattice, P46:3513-3520) and R140 D.24.2 (`λ_{CC} = 1/\log 3`): the radial carrier has
+**T2 FAILS: linear, not quadratic.** This is the same number as P47 Theorem 13.6(ii) (`O_Q(\log m)` on every finite
+truncation of the one-parameter lattice, P47:3513-3520) and R140 D.24.2 (`λ_{CC} = 1/\log 3`): the radial carrier has
 **one** modulus line, so a "fibration" over it has one parameter, and the two factors of the surface heuristic are the
 same factor. The reason, recorded as the note demands: **on the radial carrier the fibres are translates of one
 divisor (2.1); the Hilbert–Samuel mechanism needs `~n` independent fibres, and the carrier has one orbit.**
 
 **The tensor square gets `m²`, and dies (PROVED, corpus).** The corpus's way to two linear factors is the product of
-the two bidegree entries `M(E) = (a,b) = (Φ_E(1),Φ_E(0))` — the degrees along the two rulings (P46 §19bis.3,
-Definition 19bis.14). Their product gives `h⁰_□(mK) = ¼m²` on the nose (Theorem 19bis.15, P46:6980-6996) — and then
-(b′) fails (Theorem 19bis.19, P46:7122) and (c) is equivalent to RH (Theorem 19bis.17, P46:7068-7108). Prop D.24.10
+the two bidegree entries `M(E) = (a,b) = (Φ_E(1),Φ_E(0))` — the degrees along the two rulings (P47 §19bis.3,
+Definition 19bis.14). Their product gives `h⁰_□(mK) = ¼m²` on the nose (Theorem 19bis.15, P47:6980-6996) — and then
+(b′) fails (Theorem 19bis.19, P47:7122) and (c) is equivalent to RH (Theorem 19bis.17, P47:7068-7108). Prop D.24.10
 shows D-HS's isometric transport lands exactly here (`ab` is the transport invariant). So D-HS has two readings:
 the fibrewise-module reading (linear growth, T2 dead) and the tensor-square reading (quadratic growth, (b′) dead,
 (c) = RH). Neither is a route.
@@ -223,14 +223,14 @@ continuous linear functionals of `E`: `ℓ_1(E) := \deg(E|_1)` and `ℓ_2(E) := 
 `E_0` and `C_c^∞`) be not identically `0` and factor through `ℓ_1(E) = ∫E(t)t\,dt` and `ℓ_2(E) = ∫E(t)\,dt`. Then
 clause (b′) fails.
 
-*Proof.* Follow Theorem 19bis.19 (P46:7128-7149). Pick `E_0` with `h⁰(E_0) > 0`; if a bidegree entry of `E_0` is
+*Proof.* Follow Theorem 19bis.19 (P47:7128-7149). Pick `E_0` with `h⁰(E_0) > 0`; if a bidegree entry of `E_0` is
 negative, `E_0` itself is the witness (Lemma 19bis.18). Otherwise choose a real `F ∈ C_c^∞(R)` with
 `∫F = ∫Ft = Φ_F(0) = Φ_F(1) = 0` and `Φ_F(ρ_1) = ∫F(t)e^{iγ_1t}dt ≠ 0`. Such `F` exists: `1, t, e^{t/2}, e^{−t/2},
 \cos γ_1t, \sin γ_1t` are exponential polynomials with distinct exponents `0` (multiplicity 2), `±½`, `±iγ_1`, hence
 linearly independent on any interval `I`; by density of `C_c^∞(I)` in `L²(I)` the six functionals `F ↦ ∫Fφ_j` are
 linearly independent on `C_c^∞(I)`, so one of the last two is nonzero on the common kernel of the first four. Then
 `h⁰(E_0 + tF) = h⁰(E_0) > 0` for all `t`, `M(E_0 + tF) = M(E_0)`, and `|Φ_{E_0+tF}(ρ_1)| → ∞`, exceeding `\max(a,b)`;
-by Theorem 11.11 and Lemma 19bis.18 (P46:7112-7120) no nonnegative `E'` is `𝓝_∞`-equivalent to `E_0 + tF`. Since
+by Theorem 11.11 and Lemma 19bis.18 (P47:7112-7120) no nonnegative `E'` is `𝓝_∞`-equivalent to `E_0 + tF`. Since
 `E_0 + tF` lies in any domain containing `E_0` and `C_c^∞`, the argument also runs on `C_c^∞ ⊕ RK`. ∎
 
 *General form (restated per R155_057; not load-bearing).* For arbitrary continuous weights `w_1,…,w_k` the space
@@ -251,8 +251,8 @@ restricted to primitive `F` with `ℓ_i(F) = 0`, `I_∞(F,F) ≤ 0` on a finite-
 LN T5 demands: run the definition for `Ξ_a`; (c) **must** fail, traceably to the non-isometric transport
 (`(n^a + n^{−a})Δ^{(n)}`), while holding for `ξ`.
 
-**(PROVED) The demand cannot be met by any `h⁰`.** Theorem 12.4 (P46:3006-3017): no `h⁰_a` satisfies (a),(b′),(c)
-for `Ξ_a`. Theorem 19.25: none does for `ξ`. Remark 19.26 (P46:6353-6367), bullets 2–3: `Ξ_a` "satisfies the same
+**(PROVED) The demand cannot be met by any `h⁰`.** Theorem 12.4 (P47:3006-3017): no `h⁰_a` satisfies (a),(b′),(c)
+for `Ξ_a`. Theorem 19.25: none does for `ξ`. Remark 19.26 (P47:6353-6367), bullets 2–3: `Ξ_a` "satisfies the same
 obstruction … while (a) and (c) hold there too", and the falsifier "was all along detecting a defect of the frame …
 and not a separation between `ξ` and `Ξ_a`". So the pattern T5 asks for — the clause set holding for `ξ` and failing
 for `Ξ_a` — is empty for **every** definition. D-HS's "built-in falsifier" (unimodularity entering the definition,
@@ -264,7 +264,7 @@ module is rescaled or shrunk fibre by fibre. A rescaled `\dim_S` count is still 
 functionals of §2.3, so Lemma 3 (with the `Ξ_a`-frame's `ρ_1`, Theorem 12.4's objects) kills (b′) for `Ξ_a` too, by
 the same route as for `ξ`. The non-isometry changes constants, not the clause that fails. It is a **magnitude** datum
 (`λ_−λ_+`), and Theorem 19bis.22 / Corollary D.24.12 say magnitude data of this kind (`Z(r(D)) = 0`) are zero-blind;
-the **phase** datum of open item (36) (P46 §28.3) is not what D-HS reads.
+the **phase** datum of open item (36) (P47 §28.3) is not what D-HS reads.
 
 ## 4. Verdict, §28.4 check, and the state of the geometric arc
 
@@ -279,8 +279,8 @@ the **phase** datum of open item (36) (P46 §28.3) is not what D-HS reads.
  (Theorem 19bis.17).
 * T5 cannot be passed by any definition (Theorems 12.4 + 19.25, Remark 19.26).
 * Evasion clauses (Ev-1)–(Ev-6) checked (§1.3). Residuals: **R1** — the small domain `C_c^∞ ⊕ RK` is killed
- definition-free only after a one-paragraph truncation of `F_0` is written into P46 §19.6 (until then, by the
- reading-dependent Lemma 3); **R2** — the cone in (b′) is Horn B, where P46 records B4 as passing Theorem 19.30's test
+ definition-free only after a one-paragraph truncation of `F_0` is written into P47 §19.6 (until then, by the
+ reading-dependent Lemma 3); **R2** — the cone in (b′) is Horn B, where P47 records B4 as passing Theorem 19.30's test
  and `(b′)_{B4} ⟺ RH`; open before and after this memo, unchanged by it.
 
 **§28.4 six clauses, checked for D-HS (each `PROVED` as a reading of the definition in LN §1):**
@@ -298,8 +298,8 @@ Not a reopening. D-HS moves none of the walls of §28.2.
 
 **Plainly (DIAGNOSTIC).** After this memo, **no arithmetic-geometry candidate remains in the corpus.**
 PATH-TO-D row (vi) listed D-HS as the "one residue" of the geometric arc; it is closed, and one of its two readings
-was in fact already closed in phase 140. The residuals R1, R2 are the frame's own open items (P46 §19.6, §19.9/§20),
-not arithmetic-geometry candidates. What remains geometric in P46 §28.3 are *open items*, not candidates:
+was in fact already closed in phase 140. The residuals R1, R2 are the frame's own open items (P47 §19.6, §19.9/§20),
+not arithmetic-geometry candidates. What remains geometric in P47 §28.3 are *open items*, not candidates:
 (36) a class carrying a phase datum, (40) a sections functor with `m²`-growth on the graded carrier `𝒟_L`, (P145′) a
 mechanism with `𝔈 ≠ D^W`, O-148.2 a kernel class on the square. Each must pass the same gate D-HS just failed —
 Theorem 19.30 / Corollary 24.11 / Corollary 25.9 say the defect constant `s_* < 1` is unchanged by every enlargement
@@ -308,22 +308,22 @@ the single object of §28.4, which nothing in this memo supplies or suggests.
 
 ## Weakest points
 
-1. Corollary 1: verify that Theorem 12.3 evaluates `h⁰` only at `nF` and `K−nF` (P46:2777-2797), so a larger domain
+1. Corollary 1: verify that Theorem 12.3 evaluates `h⁰` only at `nF` and `K−nF` (P47:2777-2797), so a larger domain
  cannot matter; and that the small domain `C_c^∞ ⊕ RK` is covered only by Lemma 3 until the truncation lemma (R1)
  is written (§1.1).
-2. (Ev-2): check the three-property list against Theorem 12.3 Steps 2 and 4 (P46:2777-2797), the factorisation
- `\deg' = αa + βb` through `D^W/P^W`, and `|\deg' F_0| = |α−β||η|` with Lemma 19.20(ii) (P46:6206).
-3. (Ev-3): `R'(E) − R(E) = −½I_∞(E,K'−K)` linear; `t = O(d)` from `t²W_{F_0} < d²/2 − d/2 + 2χ` (P46:6294); `R(E)`
- from Theorem 19.21(i) (P46:6262); the choice of `t` at the bottom of the window.
+2. (Ev-2): check the three-property list against Theorem 12.3 Steps 2 and 4 (P47:2777-2797), the factorisation
+ `\deg' = αa + βb` through `D^W/P^W`, and `|\deg' F_0| = |α−β||η|` with Lemma 19.20(ii) (P47:6206).
+3. (Ev-3): `R'(E) − R(E) = −½I_∞(E,K'−K)` linear; `t = O(d)` from `t²W_{F_0} < d²/2 − d/2 + 2χ` (P47:6294); `R(E)`
+ from Theorem 19.21(i) (P47:6262); the choice of `t` at the bottom of the window.
 4. (Ev-4): confirm the labels — `PROVED` for the nonnegative cone; case (i) `DIAGNOSTIC`; case (ii) `PROVED` for B4
- only (Theorems 20.19, 20.23 at P46:7719, 7866 are about `B4^g`, `B4^{g,0}`); case (iii) untreated; R2 = Horn B.
+ only (Theorems 20.19, 20.23 at P47:7719, 7866 are about `B4^g`, `B4^{g,0}`); case (iii) untreated; R2 = Horn B.
 5. Lemma 2(ii): base `C_S ≅ R_{>0}×K^♮` (P44:1548-1549), `≤ 2` orbits, bound `h⁰ ≤ 2\dim_S H⁰(E|_1)`; T2's load-bearing
  fact is the `m`-independence of `\{y_0 : \deg(mK|_{y_0}) > 0\}`, not any degree-shift formula.
 6. Lemma 3, `w ∈ \{1,t\}`: linear independence of the six exponential polynomials and density of `C_c^∞(I)` in
  `L²(I)`. The general form is restated with the zero chosen off `V_C` and is not load-bearing.
 7. Correction of record (§0): only PATH-TO-D `:328` ("never killed") is inaccurate; `:189` is accurate. Prop D.24.10
  kills D-HS in the frame's reading (transport = `τ_{\log n}` on `D^W`) only.
-8. No numerics anywhere; the only constants quoted (`s_1`, `G`, `d_0`, `η`, the margin `5.79×10^{−3}`) are P46's,
+8. No numerics anywhere; the only constants quoted (`s_1`, `G`, `d_0`, `η`, the margin `5.79×10^{−3}`) are P47's,
  cited by line.
 
 ## Amended per R155_057 (audit)
@@ -336,9 +336,9 @@ required.
  (Audit §6.)
 2. **§1.1 domain claim split.** "The domain of D-HS is `D^W`" replaced by: larger domain irrelevant (`PROVED`);
  minimal domain `𝒢_{min} ⊂ C_c^∞ ⊕ RK` not literally in the range of Theorem 19.25 because the Gaussian witness `F_0`
- is not compactly supported. Truncation lemma sketched (margin `G(1−s_1) = 5.79×10^{−3}`, P46:6288) and labelled
+ is not compactly supported. Truncation lemma sketched (margin `G(1−s_1) = 5.79×10^{−3}`, P47:6288) and labelled
  `OPEN`, residual **R1**; the small-domain kill rests on Lemma 3 (`w ∈ \{1,t\}`). Citation for the `Frob_n` action
- corrected to P46:3350-3351 / Theorem 14.3(ii), with Theorem 11.8(iii) cited only for the bidegree match.
+ corrected to P47:3350-3351 / Theorem 14.3(ii), with Theorem 11.8(iii) cited only for the bidegree match.
  (Audit §0, §1, §2 Ev-1.)
 3. **Corollary 1.** Title restricted to `D^W`; noted that Step 2 does not need Serre symmetry; closing sentence now
  points to R1 for `C_c^∞ ⊕ RK`. (Audit §1.)
@@ -346,7 +346,7 @@ required.
  simplification `\deg' = αa + βb`, `\deg' K = (α+β)/2 > 0`, `|\deg' F_0| = |α−β||η|`, `|η| < 10^{−390}`
  (Lemma 19.20(ii)); parity/sign-of-`t` argument dropped as unnecessary; the two-sided bound Theorem 11.14(ii) named
  as the actual mechanism. (Audit §2 Ev-2.)
-5. **(Ev-3).** `R(E)` written out from Theorem 19.21(i) (P46:6262) with its range over the `t`-window; the choice of
+5. **(Ev-3).** `R(E)` written out from Theorem 19.21(i) (P47:6262) with its range over the `t`-window; the choice of
  `t` at the bottom of the window stated explicitly so that `R(E) ≥ ¼d²(1−s_1²) − O(d)`; `d ≥ \max(2,\deg K')`.
  (Audit §2 Ev-3.)
 6. **(Ev-4).** Relabelled: `PROVED` only for the nonnegative cone D-HS actually uses; case (i) `DIAGNOSTIC` with the

@@ -1,12 +1,12 @@
 # Round 17 C — First-cell coercivity of the archimedean form on a window of length log 2
 
 Target (★): λ_A(T) ≥ 0 for every T. Notation of ROUND_016_B (F₁, 𝔇, first Poisson cell, transported functionals) and of
-Paper 47 §sec:levy (K, m, C_0, lem:K, thm:S, thm:A) and §subsec:arch (𝒜_∞, prop:arch).
+Paper 46 §sec:levy (K, m, C_0, lem:K, thm:S, thm:A) and §subsec:arch (𝒜_∞, prop:arch).
 Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 
 ## 0. Corpus check
 Index row read: P211-16B (first-cell lemma, idealised cell values 0.549 / 0.075, "next: prove 𝒜_∞ ≥ μ on length-log 2
-windows under the transported constraints"); ledger C34. Paper 47: lem:K and eq:m (m(τ) = Re ψ(¼ + iτ/2) − log π =
+windows under the transported constraints"); ledger C34. Paper 46: lem:K and eq:m (m(τ) = Re ψ(¼ + iτ/2) − log π =
 C_0 + ∫(1 − cos τu)K(u)du), thm:S (m − C_0 = φ(τ²), φ complete Bernstein), thm:A (Lévy-energy form), prop:arch(iii)
 (the complete form 𝒜_∞ = 2AB + (1/2π)∫m|F̂|² is ≥ 0 for 2T < log 2, cited from the literature; strictness at the boundary not
 re-proved there).

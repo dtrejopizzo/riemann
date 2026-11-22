@@ -4,7 +4,7 @@ Pen and paper. Notation of N_BUILD_005/006/016/017. All shift operators below ar
 
 ## Corpus check
 N_BUILD_006 §2 (comb = 2⟨L_M, f^μ⟩ + 2⟨L_B, f^μ⟩, Möbius-transported test f^μ; (Ω_μ)), N_BUILD_016/017 (Gram split), L2_BUILD_017
-(operator form). Paper 47 thm:Z / R186_052 Thm 3.3 (dual cone via sinc-smoothed positive measures, Kreĭn; CONDITIONAL mod (−1)^k).
+(operator form). Paper 46 thm:Z / R186_052 Thm 3.3 (dual cone via sinc-smoothed positive measures, Kreĭn; CONDITIONAL mod (−1)^k).
 grep "bilinear split|operator calculus|Bochner.*multiplier|sum of squares.*Dirichlet|divisor lattice": none. New: Prop 1 (reduction),
 Theorem 2 (meta-theorem), §3 (the residual structure), §4 (the next object).
 
@@ -50,7 +50,7 @@ but (b) has the wrong sign for a Gram-type sum of a single square at small i; wi
 problem on the multiplicative lattice ℚ_{>0} ∩ [1/N, N]: realize the measure −Σ v_k(δ_{log k} + δ_{−log k}) + (archimedean part, which must
 supply all atoms' compensation through its own positive-definite square root) as Σ A_i^*A_i.
 Note μ*1 = δ gives the prototype: (Z^{−1})^*… with Z^{−1}*Z = δ₀ — the identity at the level of measures, not of squares.
-First test (pen and paper, next memo): T = ½log 3 (comb atoms at log 2, log 3 only; Paper 47 Theorem C certifies positivity there): decide
+First test (pen and paper, next memo): T = ½log 3 (comb atoms at log 2, log 3 only; Paper 46 Theorem C certifies positivity there): decide
 whether a certificate with finitely many arithmetic squares A_i supported on {1, 2, 3} plus continuous positive-definite part exists.
 
 ## Self-review

@@ -1,6 +1,6 @@
 # A one-sided arithmetic criterion at fourth powers
 
-Let S₂=Σ_{n≥2}Λ(n)/n²=−ζ′(2)/ζ(2). The global sign of P47 is equivalent to the existence of a finite constant C such that, for every integer j sufficiently large and x=j⁴,
+Let S₂=Σ_{n≥2}Λ(n)/n²=−ζ′(2)/ζ(2). The global sign of P46 is equivalent to the existence of a finite constant C such that, for every integer j sufficiently large and x=j⁴,
 
     Σ_{2≤n≤x} [1−(n/x)³] Λ(n)/n² ≤ S₂ − 3/(2x) + C/x^(3/2).
 
@@ -20,7 +20,7 @@ where H is the inverse transform of m♯(t)/(t²+9/4) and is bounded by absolute
 
     (9/4−∂ᵣ²) k = 2 cosh(r/2) − K(r)/2 − Σ_{n≥2} Λ(n)/√n · δ_{log n},
 
-with K(r)>0 the Lévy kernel of P47. This is obtained by multiplying the transform at the cut by 9/4+t² and passing locally to the limit: the symbol m contributes −K/2 away from the origin, the correction m♯−m contributes exp(−r/2), and the density of the continuous comb contributes exp(r/2). The prime atoms only decrease the right-hand side. Let r_j=4 log j. If k(r_j)≤M eventually, increase M until it is nonnegative. On a cell [l,h]=[r_j,r_{j+1}] the barrier
+with K(r)>0 the Lévy kernel of P46. This is obtained by multiplying the transform at the cut by 9/4+t² and passing locally to the limit: the symbol m contributes −K/2 away from the origin, the correction m♯−m contributes exp(−r/2), and the density of the continuous comb contributes exp(r/2). The prime atoms only decrease the right-hand side. Let r_j=4 log j. If k(r_j)≤M eventually, increase M until it is nonnegative. On a cell [l,h]=[r_j,r_{j+1}] the barrier
 
     V(r)=M+cosh(h/2)(r−l)(h−r)
 
@@ -30,7 +30,7 @@ dominates the endpoints and satisfies (9/4−∂²)V≥2cosh(r/2). By the weak m
 
 **Purely arithmetic interpolation.** The reduction of the half-line to fourth powers is also obtained without distributions. With y=x^(−3), the left-hand side of the inequality is P(y)=Σ(1−n³y)₊Λ(n)/n². It is convex, being a locally finite sum of positive parts of affine functions with nonnegative coefficients. Hence P lies below the chord between y_{j+1}=(j+1)^(−12) and y_j=j^(−12). The comparison term F(y)=S₂−(3/2)y^(1/3) has second derivative y^(−5/3)/3. On that cell its chord exceeds F by at most ||F″||∞(y_j−y_{j+1})²/8=O(j²⁰ j^(−26))=O(j^(−6)). The admissible errors at both endpoints are likewise O(j^(−6)), which is O(√y) uniformly on the cell. Thus P(y)≤F(y)+C√y at the samples implies the same inequality with another constant on the whole interval. This is the elementary step in which the sign of Λ is used.
 
-Targeted cross-check: the generator of POWER_CONE_001 and P47 prop:sharp are antecedents of the exponential kernel. The screw-function checkpoints of the index L72 use prime-power events and another function; their equivalence is not used. The formula for Q and the barrier argument received independent review.
+Targeted cross-check: the generator of POWER_CONE_001 and P46 prop:sharp are antecedents of the exponential kernel. The screw-function checkpoints of the index L72 use prime-power events and another function; their equivalence is not used. The formula for Q and the barrier argument received independent review.
 
 ## The same sum at powers of any fixed exponent
 
@@ -46,7 +46,7 @@ For 0≤h≤1, use |exp(wh)−1|≤C min(1,|w|h)≤C√(|w|h), since Re w≤1/2.
 
     |k(r+h)−k(r)| ≤ C exp(θr) √h.
 
-At r_j=m log j, the separations are O_m(exp(−r_j/m)). If the samples are bounded above, one gets on the whole half-line k(r)≤C_m exp(ηr) with η=max(0,θ−1/(2m)). If θ>0, then η<θ. Apply Landau to C_m exp(ηr)−k(r), increasing the constant on an initial piece. Its transform has no real singularities in (η,∞), since L is regular there and the point b is removable in the formula of 038. The abscissa of convergence is at most η. Consequently the transform of k is holomorphic in Re z>η, a contradiction with some pole w of L in that half-plane. Such a pole exists by the definition of supremum if η<θ, even when the supremum is not attained. Hence θ=0 and the sign holds by P47. The converse implication is inherited from 038. The physical formula of 039 turns the sample bounds into the announced finite inequality.
+At r_j=m log j, the separations are O_m(exp(−r_j/m)). If the samples are bounded above, one gets on the whole half-line k(r)≤C_m exp(ηr) with η=max(0,θ−1/(2m)). If θ>0, then η<θ. Apply Landau to C_m exp(ηr)−k(r), increasing the constant on an initial piece. Its transform has no real singularities in (η,∞), since L is regular there and the point b is removable in the formula of 038. The abscissa of convergence is at most η. Consequently the transform of k is holomorphic in Re z>η, a contradiction with some pole w of L in that half-plane. Such a pole exists by the definition of supremum if η<θ, even when the supremum is not attained. Hence θ=0 and the sign holds by P46. The converse implication is inherited from 038. The physical formula of 039 turns the sample bounds into the announced finite inequality.
 
 The same argument quantifies what would be lost on the mesh if the sign failed. Define E(x)=x^(3/2)[Σ_{n≤x}(1−(n/x)³)Λ(n)/n²−S₂+3/(2x)]. Then E(x)=3k(log x)+O(1) uniformly for x≥1 by the physical formula. For each fixed m,
 
@@ -76,11 +76,11 @@ Write E(x)=(3/2)√x−Q(x), k₀=k(0), S₂=−ζ′(2)/ζ(2) and c♯=1/2−γ
 
 In particular, using E(x)=x^(3/2)[Σ_{n≤x}(1−(n/x)³)Λ(n)/n²−S₂+3/(2x)], the comparison requires a finite sum and specified constants. A rigorous violation at a single x would certify a negative direction by 038. Conversely, proving this inequality for all sufficiently large x=j⁴ suffices by 039. Dropping R(x)>0 gives a weaker threshold that would also suffice to falsify the sign if exceeded. No certified violation has been observed here.
 
-**Evaluation of the archimedean term.** Let b=3/2 and a_k=k+1/4. In P47 prop:sharp separate partial fractions after dividing the symbol by t²+b². The inverse transform is
+**Evaluation of the archimedean term.** Let b=3/2 and a_k=k+1/4. In P46 prop:sharp separate partial fractions after dividing the symbol by t²+b². The inverse transform is
 
     H(r)=(c♯/3) exp(−br) + Σ_{k≥1} exp(−2a_k r)/(4a_k²−b²),       r>0.
 
-The coefficient of the first term comes from the even analytic extension of m♯ at ib: [ψ(2)+ψ(1/2)]/2−log π=c♯. The separation can be done in partial sums; the remaining coefficients are summable and the series of P47 divided by t²+b² converges in L¹ by monotonicity of its nonconstant summands and integrability of the limit. Since 4a_k²−b²=(2k−1)(2k+2), three times the series at r=log x sums to R(x) by the series of atanh and log(1−z²). Substituting into the physical formula of this round and using k(r)≤k₀ gives the threshold.
+The coefficient of the first term comes from the even analytic extension of m♯ at ib: [ψ(2)+ψ(1/2)]/2−log π=c♯. The separation can be done in partial sums; the remaining coefficients are summable and the series of P46 divided by t²+b² converges in L¹ by monotonicity of its nonconstant summands and integrability of the limit. Since 4a_k²−b²=(2k−1)(2k+2), three times the series at r=log x sums to R(x) by the series of atanh and log(1−z²). Substituting into the physical formula of this round and using k(r)≤k₀ gives the threshold.
 
 **Which part of the error comes from proper powers.** Denote by Q_p the same expression as Q restricting n to primes, with weights log p. For the squares, putting y=√x, the two pieces are y^(−3)Σ_{p≤y}p²log p and y³Σ_{p>y}log(p)/p⁴. By the prime number theorem θ(y)∼y and partial summation, each tends to 1/3. For exponents k≥3, the accumulated mass of the weights up to t is O(t^(1/3)): by Chebyshev, the term k=3 is O(t^(1/3)) and the remaining ones sum to O(t^(1/4)log t). By partial summation their two contributions to Q are O(x^(−1/6)). We conclude
 

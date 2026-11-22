@@ -3,7 +3,7 @@
 
 ## Corpus check
 N_BUILD_014 §1 (two-copy identity F₀ + τ_dF₀, PNT main term vanishes since Re(AB̄)(F₀) = 0, archimedean cross term O(e^{−d/2}),
-Theorem A / Cor A′ one-sided (Ξ)); Paper 47 thm:nyq-cone (F = (¼−∂²)G), lem:wit-freeze (extension by zero); R160_D4 Thm 5.1
+Theorem A / Cor A′ one-sided (Ξ)); Paper 46 thm:nyq-cone (F = (¼−∂²)G), lem:wit-freeze (extension by zero); R160_D4 Thm 5.1
 (translations); L2_BUILD_022 §3 (independence route, obstacle = Tate correction). New here: (L) the general lag-localization lemma with
 the observation that NO Tate correction is needed for translates; (C) the exact cancellation of the k = 0 archimedean term and of the
 whole polar kernel (cross terms O(e^{−5d/2}), not O(e^{−d/2})); (T) two-sided version of (Ξ); (P) rigorous rate for random combs.

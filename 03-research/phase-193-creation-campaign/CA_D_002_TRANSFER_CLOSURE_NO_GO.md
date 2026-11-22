@@ -9,7 +9,7 @@ CA_D_001 proves positivity of ∫Θ′W for every W in the cone
 where P_T^{(k)} denotes the real F ∈ C_c^∞(−T,T) with F̂^{(l)}(±i/2) = 0 for l < k. Row D asks for ∫Θ′Φ ≥ 0 for Φ = |F̂|², F ∈ P_T.
 If every such Φ were a limit of elements of 𝒲_{T,K}, in any topology in which ∫Θ′· is continuous, row D would follow from CA_D_001.
 Corpus check: this is a question about CA_D_001, which is new, so there is no prior entry. The general shape (a cone of proved weights
-approximating the constant weight) is close to the certificate/closure theme of P47 §3–6. It differs in that the cone here is a cone of
+approximating the constant weight) is close to the certificate/closure theme of P46 §3–6. It differs in that the cone here is a cone of
 amplitude-weighted tests, not of dual certificates.
 
 ## 1. Theorem 2 (closure obstruction; PROVED, with CITED inputs)

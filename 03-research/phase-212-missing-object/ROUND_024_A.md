@@ -1,12 +1,12 @@
 # Round 24, memo A — Leading term of the truncation defect: ROUND_019_A §§2–4 versus ROUND_021_A §3
 
-Control note. It is not a sign attempt. Notation of P47 and of round 7: `a_T(F) = Arch(F) − Σ v_n c_F(log n)`,
+Control note. It is not a sign attempt. Notation of P46 and of round 7: `a_T(F) = Arch(F) − Σ v_n c_F(log n)`,
 `v_n = 2Λ(n)/√n`, `P_T = {∫F e^{±t/2} = 0}`, `W_*` the global form, `M = (−∂² + ¼)K_Pó`, `K_Pó = S_ζ g_0`,
-`g_0(t) = (2π²e^{9t/2} − 3πe^{5t/2})e^{−πe^{2t}}`, `W_*(M∗φ, ·) ≡ 0` (CITED: R160_M4_R1 Lemma 2(a); P46 Thm 11.11).
+`g_0(t) = (2π²e^{9t/2} − 3πe^{5t/2})e^{−πe^{2t}}`, `W_*(M∗φ, ·) ≡ 0` (CITED: R160_M4_R1 Lemma 2(a); P47 Thm 11.11).
 
 **Files opened:** ROUND_019_A.md, ROUND_021_A.md (in full); ROUTES-MASTER-INDEX.md by grep (entries P211-17A,
 l.6457 and l.9833; record of ROUND_021_A, l.31200–31204); P2_SCHUR_001.md by grep (Lemmas P2-S.2, P2-S.3).
-**Not opened:** R160_M4_R1.md, 106_09, ROUND_017_A of 211, P47 main.tex, BRIEF_CONSTRUCTOR.md, RULES_AVOID.md
+**Not opened:** R160_M4_R1.md, 106_09, ROUND_017_A of 211, P46 main.tex, BRIEF_CONSTRUCTOR.md, RULES_AVOID.md
 (the task is a computation, not a construction). No computation run.
 
 ## §0 Cross-check

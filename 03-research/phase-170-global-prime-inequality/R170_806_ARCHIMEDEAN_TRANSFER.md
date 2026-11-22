@@ -4,7 +4,7 @@ Local construction for audit; does not prove RH.
 
 ## Result
 
-The archimedean block of Paper 47 does indeed contain exactly the form
+The archimedean block of Paper 46 does indeed contain exactly the form
 `b` of R170_805, with coefficient one. What remains is an explicit
 compact integral operator and a scalar shift. No kernel comparison with
 multiplicative loss is required. The primes and the polar term
@@ -87,7 +87,7 @@ translation on L²(0,1), (V_df)(x)=f(x−d), extended by zero. We define
     c_L(x)=sqrt(L) cosh(L(x−1/2)/2),
     s_L(x)=sqrt(L) sinh(L(x−1/2)/2).
 
-The form whose positivity Paper 47 seeks is exactly
+The form whose positivity Paper 46 seeks is exactly
 
     W_T[F]= b[f] − a_L||f||² − ⟨H_Lf,f⟩ − ⟨J_Lf,f⟩
             +2|⟨f,c_L⟩|²−2|⟨f,s_L⟩|².                 (2)
@@ -145,7 +145,7 @@ sign problem.
 
 The progress proved is (1)–(3), which transports the capacity lemma
 exactly to the real problem. Bound (4), an extremal annihilation, or
-the global closure of Paper 47 have not been proved. For a next Schur
+the global closure of Paper 46 have not been proved. For a next Schur
 step, these exact blocks must be preserved and the residual controlled
 in the inverse metric of the eliminated block, as explained in
 R170_803; capacity alone does not pay for that residual.

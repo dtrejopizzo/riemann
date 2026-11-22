@@ -84,8 +84,8 @@ Theorem 12.3, or prove the **obstruction theorem**: every construction meeting t
 `(P139)` and built from the structures of rows A–C is equivalent to GRH for Dedekind zetas. The second
 outcome is a theorem of record about the programme, not a failure.
 
-### Phase 143 — Paper 46 Part III and label
-Enter all corrections of record (P46-1…P46-4 and later), the method theorems T1, T2, the detecting-cone
+### Phase 143 — Paper 47 Part III and label
+Enter all corrections of record (P47-1…P47-4 and later), the method theorems T1, T2, the detecting-cone
 frame, and the outcome of 142. Label row D by the grep-verified record.
 
 ## 2. Rules for every phase
@@ -96,7 +96,7 @@ frame, and the outcome of 142. Label row D by the grep-verified record.
    the distinguishing property).
 4. Nothing defined through zero locations; `ξ`, `ξ_K`, `Λ_Q` admissible as data.
 5. Numerics only to certify a constant, with a stated robustness margin.
-6. A statement that with Paper 46 Thm 3.7 would prove RH or ¬RH is FATAL: flag, do not fix.
+6. A statement that with Paper 47 Thm 3.7 would prove RH or ¬RH is FATAL: flag, do not fix.
 7. Each phase ends with a closing decision, PLAN.md paragraph, memory update.
 
 ## 3. What would count as completing row D

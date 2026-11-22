@@ -6,7 +6,7 @@ Memo: `03-research/phase-155-row-d-flat-kernel-criterion/R155_052_ROUND8A_INDEX_
 |---|---|
 | `r8a_lib.py` | interval (mpmath `iv`, `dps = 40`) primitives: closed-form `C₀`; enclosure of `m(τ)` from the `Σ s/(a_k(a_k²+s))` series with an integral tail; `sup m''` on a band; exact rational `β_k` and the Bessel moments `I_p^{(ij)}(c) = ∫₀^c xᵖ j_i j_j dx`; `g_l = ⟨cosh(t/2) or sinh(t/2), e_l⟩`; interval Cholesky (`cholesky_pd`) and congruence. No quadrature, no special-function library call enters a certified number. |
 | `r8a_01_upper.py` | certified **upper** bound on `n₋(A_∞\|P_T^par)`: multi-band (piecewise-linear) minorant of `m`, bordered form, Haynsworth split at Legendre level `K`, multi-band Ky Fan ceiling `Λ_K(c_*)` for the tail, interval Cholesky certification. |
-| `r8a_02_lower.py` | certified **lower** bound `n₋(A_∞\|P_T^par) ≥ 1`: explicit 2-dimensional negative-definite subspace of the bordered form, entries enclosed with `scripts/r4a/r4a_lib.py` (Paper 47 `thm:w11` machinery) with the prime atoms switched off and the pole term unused. |
+| `r8a_02_lower.py` | certified **lower** bound `n₋(A_∞\|P_T^par) ≥ 1`: explicit 2-dimensional negative-definite subspace of the bordered form, entries enclosed with `scripts/r4a/r4a_lib.py` (Paper 46 `thm:w11` machinery) with the prime atoms switched off and the pole term unused. |
 | `r8a_03_recheck_lower.py` | independent re-check (0.1 s) of every `r8a_02` certificate from its archived JSON: rebuilds the 3×3 bordered matrix, inflates every entry by `±10⁻⁹` (covers double rounding of the stored ends and the float rounding of `F±h` in the polarisation, R155_052 Lemma 3.3), certifies by interval Cholesky, returns a certified margin, and re-imposes `T < 0.88137`. Output `r8a_03_recheck.json`. |
 | `r8a_01_<T>_par<p>.json` | outputs of the upper-bound runs. `result.certified_upper_bound_sector = r` means `n₋(A_∞\|P_T^par) ≤ r` is certified. |
 | `r8a_02_<T>_par<p>.json` | outputs of the lower-bound runs. `certified_lower_bound_sector = 1` means `n₋(A_∞\|P_T^par) ≥ 1` is certified. |
@@ -49,7 +49,7 @@ the split.
 
 `r8a_02` inherits from `r4a_lib` the affine sandwich of the kernel `K`, which needs
 `1/(2cosh(u/2))` concave on `u ∈ [0,2T]`, i.e. `T < arccosh√2 = 0.88137`
-(Paper 47 `thm:w11` proof (c)). **The run `r8a_02_0p90_par1.json` is outside that range
+(Paper 46 `thm:w11` proof (c)). **The run `r8a_02_0p90_par1.json` is outside that range
 and is therefore NOT certified** — it is recorded as diagnostic only. `r8a_01` does not
 use `r4a_lib` and has no such restriction (its only range condition is `T/2 < 1/2`,
 asserted in `g_coeffs`).

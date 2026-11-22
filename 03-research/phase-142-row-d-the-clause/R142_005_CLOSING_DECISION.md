@@ -3,12 +3,12 @@
 R142_002 (audit: D.31.12 STANDS; 0 FATAL), R142_003 (ledger), R142_004 (confirmation: all repairs in
 place; §D.32 audited, J1–J10). Independent checks: closed-form recomputation of the witness (`R(E) = 10.006`,
 `t|Φ_{F₀}(ρ₁)| = 199.7248 > 199.6920`, `W_F = 9π` exactly, rulings `200 ± 10⁻³⁹⁰`), `s₁ = 0.99846016…` at
-`u* = 0.11099`; Paper 46 record note entered at Theorem 12.3; ASCII map `ROW-D-MAP-b.md`.*
+`u* = 0.11099`; Paper 47 record note entered at Theorem 12.3; ASCII map `ROW-D-MAP-b.md`.*
 
 ## 1. Result of record
 
 **Theorem D.31.12 (given (X19): `ρ₁` simple and on the line).** No function `h⁰` on `D^W` satisfies
-(a), (b′), (c) of Paper 46 Theorem 12.3 for `ξ`, for any `χ`. Hence Theorem 12.3's hypothesis is
+(a), (b′), (c) of Paper 47 Theorem 12.3 for `ξ`, for any `χ`. Hence Theorem 12.3's hypothesis is
 unsatisfiable; the theorem keeps its label and loses its use. Same for every admissible `Z` with a simple
 isolated on-line zero (`ξ_K` verbatim). Mechanism: Lemma D.31.4 (cosh bound for effective classes,
 `s(γ,θ) < 1`) against `h⁰ ≥ R` on `deg > 1` forced by (b′) + Thm 11.13 + (c) + Serre symmetry; explicit
@@ -46,4 +46,4 @@ order (auditor's, adopted): **(0) settle O-19** — compute `s_* := inf_{γ,θ} 
 question *is there a primitive `F ∉ 𝓝_∞` with `t_n(F) ≥ 0` for all `n`?* (yes kills the horn; no is a
 theorem), then (T2) for B4 and a transfer theorem 12.3-B4; **(2) Horn A** carried as secondary with the
 primitive gate and O-18′ named as its blocker. Paper-facing: record note at Thm 12.3 entered; §D.31–D.32
-as Paper 46 Part III material (P46-26…); the (X19) import.
+as Paper 47 Part III material (P47-26…); the (X19) import.

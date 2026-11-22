@@ -1,6 +1,6 @@
-# R135.002 — Audit of round 1 (phase 135), Paper 46 Part II §§11–16
+# R135.002 — Audit of round 1 (phase 135), Paper 47 Part II §§11–16
 
-Object audited: `04-papers/46-intersection-frame-defect/archive/main.md`, lines 1856–3038 (Part II),
+Object audited: `04-papers/47-intersection-frame-defect/archive/main.md`, lines 1856–3038 (Part II),
 against Part I §§1–10, the blueprint `R135_000`, Paper 45 (Thm 9.4 / Cor 9.4a,
 Thm 10.4, Thm 12.2 / Rem 12.4), Paper 43 (Thm 9.14c, 14.1), Paper 44
 (Thm 3ter.6, 3ter.10, 8bis.2, 8bis.8, §6bis), and the `[phase 135]` insertions
@@ -199,7 +199,7 @@ Two problems.
    primitive tests through `F = ΠG` with `Π`'s symbol `s(1−s)` vanishing at the
    **two** points `{0,1}`. For `Ξ_a` primitivity is **four** conditions and
    `Π_P` is a fourth-order operator (Prop 12.6(S1)); Corollary 10.2, Lemma 10.3a
-   and Paper 46 Lemma 3.1 all have to be redone. Proposition 12.6 explicitly
+   and Paper 47 Lemma 3.1 all have to be redone. Proposition 12.6 explicitly
    covers "§§11–12", not Paper 45 §10, so this is not delegated anywhere.
 
 **Minimal repair.** Promote the parenthesis to a numbered lemma with a proof (or

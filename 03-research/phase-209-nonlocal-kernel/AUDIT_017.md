@@ -3,7 +3,7 @@
 2026-10-19. Independent check. **PASS / PROVED within the declared
 scope.** Reviewed `VIRTUAL_SOURCE_017_METRIC_TEST.md`, with 008, 011,
 NODE_001, the entries of the routes index, grid and current crossword.
-No additional route is built and Paper47 is not modified.
+No additional route is built and Paper46 is not modified.
 
 ## 1. Metric and domain
 
@@ -36,7 +36,7 @@ For the extension by zero of the window tests,
 `(1/2)||F−F(·+u)||²=||F||²−Re c_F(u)`.
 
 This verifies (4), including the cost A_T. The gamma energy uses the whole
-interval u∈(0,∞), with the same positive kernel K as NODE_001/P47.
+interval u∈(0,∞), with the same positive kernel K as NODE_001/P46.
 For u>2T the correlation is zero; its contribution is precisely the
 tail κ_T||F||² that appears when writing the formula only up to 2T.
 Thus no boundary or tail term is missing. The integral may be

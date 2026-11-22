@@ -16,7 +16,7 @@ Either one, completed, is a proof of RH. The panel treats it at that level of sc
 ## Premises of record (they bind every memo)
 1. Rows A, B, C are WEIL-STRENGTH-COMPLETE on the declared carrier. That is **not** a proof of RH: row D, the sign, is
    RH itself (ROW-D-REDUCED-STATEMENT §1). The proved sign for ζ is: primitive form `T ≤ log 2` (Paper 42), ½log3
-   endpoint (P47 thm:C); complete form `T ≤ ½log2` classical and `(½log2, 0.8]` (Zhu, CITED). **Nothing for T > 0.8.**
+   endpoint (P46 thm:C); complete form `T ≤ ½log2` classical and `(½log2, 0.8]` (Zhu, CITED). **Nothing for T > 0.8.**
 2. `thm:finZ`: no finite zero set carries a certificate. `cor:void`: class-level positivity is void. Theorem M
    (G2_B6_R2): `λ^A_T ≤ exp(−e^{(2−ε)T})`. The phase-159 walls (R159_099 §1.2, §2.2) exclude prime-local,
    tail-factorizable, algebraic, covariant, finite-trace conformal, ergodic conformal and canonical-crossed-product

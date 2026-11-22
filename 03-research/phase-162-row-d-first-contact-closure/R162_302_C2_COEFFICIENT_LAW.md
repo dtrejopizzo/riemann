@@ -8,7 +8,7 @@ two statements, (A) and (B). (A) is a coefficient-direction feasibility law and 
 where `Lambda` can enter. (B) is a purely archimedean "Gamma-moment dual certificate". Neither is
 proved. The next sub-lemma is stated in §7.
 
-Notation (Paper 47): `v_n = v_n(a) = 2a(n)/sqrt n` on `N_T = {2 <= n < e^{2T}}`. The form is
+Notation (Paper 46): `v_n = v_n(a) = 2a(n)/sqrt n` on `N_T = {2 <= n < e^{2T}}`. The form is
 `a^{(v)}_T(F) = C_0 + Lev(c_F) - sum_n v_n c_F(log n)` for real unit `F` in `P_T` (eq:Aform).
 `V_T(v)` is the primitive bottom (lem:degen), `v^0 = v_{T_*}(Lambda)`, `K_* = ker H_{T_*}`
 (finite-dimensional, J-invariant), and `c_F(s) = int F(t)F(t-s) dt`.
@@ -140,7 +140,7 @@ to (A) (Lemma 1.1).
 
 **Why (B) needs atoms.** With `α = 0`, (B) says `a_T >= (ε/|β|) ||R_L||^2` on the parity class of
 `P_T`. That spectral gap is false at a contact. So every certificate must use the prime positions
-`log n`, `n < e^{2T_*}`. Structurally, (B) is a dual-certificate problem of Paper 47 type, with
+`log n`, `n < e^{2T_*}`. Structurally, (B) is a dual-certificate problem of Paper 46 type, with
 target `κ_L` and flat-top replaced by cosh-moments.
 
 ## 6. Filter (F1–F4)

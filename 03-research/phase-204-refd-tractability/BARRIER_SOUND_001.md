@@ -8,7 +8,7 @@ rule l.141–142), DH_TRANSFER_001 (summary, 𝔗₁, S1–S4), CPOS_CLASS_001 (
 FAMILIES_C_001 (§1: L-loc, C-pos, S-0, S-1), AUDIT_200_DCONS_001 (Thm 3′), SPEC_SIGN_OBJECT_007 (C-emb, "honest
 answer to B"), AUDIT_200_Q2_001 (C-τ, L1, Prop 4.1), AUDIT_CONSTRAINTS_001 (the 28 restrictions, HARD/SOFT/MISLABELLED),
 phase-197 BARRIER_001 (Lemma 2, sub-case A2∧loose-FE), BARRIER_EST_001 + REVIEW_BARRIER_EST_001, AUDIT_203_001,
-phase-202 README (closure), Paper 47 thm:shape, thm:noimport, lem:spec-collapse (lem:transfer cited in both).
+phase-202 README (closure), Paper 46 thm:shape, thm:noimport, lem:spec-collapse (lem:transfer cited in both).
 I did not reread Z_CARRIER_001 or Q2_DEGREE2_001 in full: I use the labels META_200 and AUDIT_200_Q2 give them. I take
 Theorem X with the statement recorded in the index and in memory (phase 186: "new primes must cancel σ on U at
 resolution π/T; every first-order discriminant is a functional of h*"). I did not re-verify its proof.
@@ -61,7 +61,7 @@ were false and that no PROVED restriction excludes; (c) signs of falsity; (d) co
 | P16 | **Φ.3 (channel I3) ARGUED, Φ.9 except τ, C-𝔖 NO-GO ARGUED, Φ.12′ ARGUED** | Individual channel lemmas. | A class weight h(D) that is not discontinuous (e.g. a Siegel average over D with smooth weight); a reading of I3 that is not DH-transportable. | None. | Low-medium. |
 | P17 | **C-θ** (PROVED, only affine/Euler-segment families) | No sign information in affine families of the parameter θ. | Non-affine families in θ with an extremum at ζ (e.g. ζ^θ with θ ∉ {0,1}, degree deformations). Must be distinguished from Φ.12′ (ARGUED) and Φ.14. | None. | Low. |
 
-Pieces that **are no longer holes**: Φ.12 (PROVED, checked against P47), R-Z1 (PROVED as a premise restriction in 𝔗₁),
+Pieces that **are no longer holes**: Φ.12 (PROVED, checked against P46), R-Z1 (PROVED as a premise restriction in 𝔗₁),
 G1 (PROVED: the free monoid does not distinguish ζ from Beurling; it closes only what reads **only** (ℕ^×,·)), R-Q6,
 Lemma R (given Guo L4.4 CITED), C-emb (a)–(c), lem:spec-collapse, Danskin on the truncated class (PROVED; on P_T it is
 inequality (2.1), PROVED). The interaction (ℕ,+)×(ℕ^×,·) is **not** closed by G1. Within the window, lem:spec-collapse

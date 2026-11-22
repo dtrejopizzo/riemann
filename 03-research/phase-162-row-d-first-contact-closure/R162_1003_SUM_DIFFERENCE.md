@@ -30,7 +30,7 @@ Overall: **PARTIAL (object constructed) / NO-GO (as a closing mechanism)**. No s
 ## 1. Corpus check
 
 - Sum/difference split and the residual: R162_901 §3, §6. Selberg Λ·L + Λ*Λ = μ*L²: R162_501, R162_901.
-- Weil symbol = zero measure, Kreĭn indeterminacy: Paper 47 thm:KEP3, phase 155 r5 (E1).
+- Weil symbol = zero measure, Kreĭn indeterminacy: Paper 46 thm:KEP3, phase 155 r5 (E1).
 - GCD/Smith SOS Σ a_m ā_n log gcd(m,n) = Σ Λ(d)|Σ_{d|m} a_m|²: G2_B4_R3 §5 (excluded, Beurling-generic).
 - Nyman–Beurling / Vasyunin GCD Gram, Báez-Duarte Selberg-type coefficients μ(k)(1 − log k/log N):
   phase 33 Doc 82, R157_002 row 43 (EQUIV).
@@ -107,7 +107,7 @@ positive).
 Poisson kernel of sign sgn(½+η−β). ∎
 
 **Why this is E1 (L1003.a).** Theorem R is the explicit formula in symbol form: B − K has symbol "zero
-measure" (Paper 47 thm:KEP3, the Weil form W(g) = Σ_ρ ĝ(γ)·conj ĝ(γ̄)). The object in which "the
+measure" (Paper 46 thm:KEP3, the Weil form W(g) = Σ_ρ ĝ(γ)·conj ĝ(γ̄)). The object in which "the
 difference channel cancels exactly against the sum channel" is precisely Σ_ρ, and "manifest positivity" of
 it is RH. The residual of R162_901 §6 anticipated this ("a positivity statement for ζ'/ζ on a line, i.e.
 Weil again, unless it is exact and not positive"): Theorem S is the exact, not-positive version; Theorem R
@@ -139,7 +139,7 @@ sector,
 
 attained at F = u_T/f(T). Selberg's Λ²: min { Σ_n (Σ_{d|n} λ_d)² w(n) : λ_1 = 1 } = 1/G(R), attained at
 λ = (normalised) dual vector. The first contact λ_par = 0 is exactly 1/f crossing 0, i.e. the Selberg
-minimum ceasing to be positive (Paper 47 g_par = 1/f + 2ε_par for the complete form).
+minimum ceasing to be positive (Paper 46 g_par = 1/f + 2ε_par for the complete form).
 
 *Proof.* Lagrange multiplier for a positive form with one linear constraint; minimum = 1/⟨A^{-1}φ,φ⟩. ∎
 

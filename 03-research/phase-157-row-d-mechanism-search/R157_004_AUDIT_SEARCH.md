@@ -3,8 +3,8 @@
 Object: `R157_002_MECHANISM_SEARCH.md`, against the blueprint
 `R157_000_BLUEPRINT.md` (F1–F5) and R157_003 (T3 = `METHOD-CONSTRAINT` modulo the `CITED (secondary source)`
 import (H-DMV′)). Pure mathematics; the only computations are two scalar evaluations of closed-form bounds
-(§1.1, §1.2), done in the scratchpad, not archived. `P47` = `04-papers/47-row-d-dual-certificates/main.tex`,
-`P46` = `04-papers/46-intersection-frame-defect/archive/main.md`. I opened every label I cite at the line given. Amendments are applied
+(§1.1, §1.2), done in the scratchpad, not archived. `P46` = `04-papers/46-row-d-dual-certificates/main.tex`,
+`P47` = `04-papers/47-intersection-frame-defect/archive/main.md`. I opened every label I cite at the line given. Amendments are applied
 in place in R157_002, each marked "[amended per R157_004, Ak]". No paper, README or blueprint was edited.
 
 Verdict scale: PROVED (correct as labelled, possibly after a stated repair), AMEND (conclusion stands, statement or
@@ -14,10 +14,10 @@ basis needs the repair listed), FAIL (false or unproved as labelled).
 hypothesis cannot be proved here, but its failure has a clean characterisation (Lemma D). O4 is PROVED after I
 supply the continuity proof (Lemma C) and an elementary small-window bound (Lemma E). Its "determinate" clause
 FAILS as stated. Its content is Bombieri 2000 Thms 1, 3 and 5 plus P45 Thm 10.4, so it is a RESTATEMENT. In the
-table, row 37 (Deninger) is not excluded: the exclusion inverts P46 T1, and the blueprint's F4 shares that
+table, row 37 (Deninger) is not excluded: the exclusion inverts P47 T1, and the blueprint's F4 shares that
 misreading. Rows 35 and 36 exclude only their `h⁰` readings. That leaves a second non-excluded entry, the unbuilt
 "MW-5 cluster". Clause (b) of Lemma P157.S1 is not an exclusion criterion, and clauses (a) and (c) repeat the
-non-sequitur that P46 Restatement 12.4a corrected. Five candidates are missing. **Row D: no label. No sign.**
+non-sequitur that P47 Restatement 12.4a corrected. Five candidates are missing. **Row D: no label. No sign.**
 
 ---
 
@@ -25,7 +25,7 @@ non-sequitur that P46 Restatement 12.4a corrected. Five candidates are missing. 
 
 ### 1.1 O3 (margin resolution) — **PROVED after repairs A1–A4**
 
-**Derivation.** Checked against P47 eq:A (l.~170: `𝔞_T(F) = C₀‖F‖² + ∫(‖F‖² − c_F(u))K(u)du − Σ_{n∈N_T} v_n c_F(log n)`,
+**Derivation.** Checked against P46 eq:A (l.~170: `𝔞_T(F) = C₀‖F‖² + ∫(‖F‖² − c_F(u))K(u)du − Σ_{n∈N_T} v_n c_F(log n)`,
 `v_n = 2Λ(n)/√n`), §subsec:finite (l.3273–3292: `v_n(a) = 2a(n)/√n`, `𝔞^{(v)}_T`, `RD_T(a)`, `W_T(a)`), and the proof of
 `thm:finmod`(ii) (l.3368–3370: the same one-line computation with `F = F_+` of `lem:cpos` and
 `c_* = √n₀ max(𝔞_T(F),0)/(2c_F(log n₀))`). With `a = Λ + sε1_{n₀}`, `v_{n₀}(a) − v_{n₀}(Λ) = 2sε/√n₀`, so for the
@@ -40,7 +40,7 @@ comb, so `λ^W_T(a) ≤ λ^W_T − (2ε/√n₀)|c_{F^W}(log n₀)|`, where `F^W
 `λ^W_T ≤ λ^A_T` (`thm:margin`). PROVED.
 
 **Repairs.**
-* **A1 (notation).** `Φ* = Φ_{F*}` clashes with P47 l.136, where `Φ_F(s) = ∫F(t)e^{(s−½)t}dt` is the Mellin-type
+* **A1 (notation).** `Φ* = Φ_{F*}` clashes with P46 l.136, where `Φ_F(s) = ∫F(t)e^{(s−½)t}dt` is the Mellin-type
   transform. The quantity in the computation is the autocorrelation `c_{F*}(log n₀)`. "Φ*(log n₀)" read literally
   is a different number.
 * **A2 ("≍" → "≤").** `cor:margin1` gives an **upper** bound on `λ^A_T`, so O3 gives an upper bound on the threshold:
@@ -84,7 +84,7 @@ estimate … fails this" is replaced by "every input whose class is closed under
 
 ### 1.2 O4 (clopen reformulation) — **PROVED after Lemmas C and E; "determinate" clause FAIL; content = RESTATEMENT**
 
-**(⇒).** RH ⟹ `λ^W_T > 0` for every `T`: this is in P47 already, in the proof of `cor:RH` (l.1266–1279, the
+**(⇒).** RH ⟹ `λ^W_T > 0` for every `T`: this is in P46 already, in the proof of `cor:RH` (l.1266–1279, the
 Jensen/exponential-type argument) and restated in the proof of `thm:KEP3`(b) (l.1689–1691: "gives `λ^W > 0` — not
 merely `λ^W ≥ 0` — for every `T ≥ ½log2`"). It is also Bombieri 2000 Thm 1 (strict positivity; R154_031:314–315)
 with his Thm 3 (attainment). PROVED, not new.
@@ -121,9 +121,9 @@ needed.
 > *Independent citation:* Bombieri 2000 Thm 5 (R154_031:335–337, primary text read): the even and odd minima
 > `μ_±(M)` of the complete functional on `L²([M^{−1},M])` are continuous and decreasing. Since `W_T` splits into even
 > and odd parts (`Re(A B̄) = |A_e|² − |A_o|²`, and the symbol is even), `λ^W_T = min(μ_+, μ_−)` at `M = e^T`.
-> **Caution for Paper 47:** P47 itself says "no continuity in `T` is claimed" for the class value `= λ^W`
+> **Caution for Paper 46:** P46 itself says "no continuity in `T` is claimed" for the class value `= λ^W`
 > (l.3103), and "no continuity being asserted" for the archimedean thresholds (`prop:arch` proof, l.2409).
-> O4 therefore imports something that P47 deliberately does not assert. That is legitimate by Lemma C, but it
+> O4 therefore imports something that P46 deliberately does not assert. That is legitimate by Lemma C, but it
 > must be said.
 
 With Lemmas C and E, (⇐) is the IVT. Moreover, if RH fails then `Z_W = [T_c, T_c′]` is a **nonempty compact
@@ -134,8 +134,8 @@ interval**, possibly a point (`λ^W` is nonincreasing by `lem:monoT` and continu
 approximation in the proof of `thm:KEP2` (l.1663–1676), `F̂_k → F̂*` locally uniformly, and Fatou. So `ν` is purely
 atomic on the real zeros of `F̂*`, and no absolutely continuous solution exists. By `thm:Al`(b) (l.3606–3608) no
 `w ∈ 𝒲_T` satisfies `Al_T(w)` there. **Not proved:** (a) that `𝔖(T_c) ≠ ∅`, since `thm:KEP3`(a) is silent at
-`λ^W = 0` and P47 l.3915 says so explicitly ("Indeterminacy of KEP(T) is not known to be equivalent to either λ^W > 0 or λ^W ≥ 0"); (b) that `#𝔖(T_c) = 1`. The classical Kreĭn theorem
-(degenerate datum ⟹ unique extension) is for continuous positive-definite data, and P47 §subsec:KEP (l.1578–1582)
+`λ^W = 0` and P46 l.3915 says so explicitly ("Indeterminacy of KEP(T) is not known to be equivalent to either λ^W > 0 or λ^W ≥ 0"); (b) that `#𝔖(T_c) = 1`. The classical Kreĭn theorem
+(degenerate datum ⟹ unique extension) is for continuous positive-definite data, and P46 §subsec:KEP (l.1578–1582)
 imports nothing from it. `thm:finDet` is for **finite** zero sets, and the real zero set of `F̂*` is infinite. So
 the clause should read "every solution, if any, is atomic and carried by `F̂*^{−1}(0) ∩ ℝ`".
 
@@ -143,10 +143,10 @@ the clause should read "every solution, if any, is atomic and carried by `F̂*^{
 at fixed `T = ½log3`**, not in `T`. It shows that degeneracy is not excluded by comb-class structure. It is not an
 instance of a `T`-crossing. The conclusion stands; the wording is corrected.
 
-**Is O4 already in P47 or in the literature?** The strict half is in P47 (`cor:RH`, `thm:KEP3`(b)) and in Bombieri
+**Is O4 already in P46 or in the literature?** The strict half is in P46 (`cor:RH`, `thm:KEP3`(b)) and in Bombieri
 Thm 1. The continuity is Bombieri Thm 5. `thm:KEP3`(a) and `thm:Al`(c) already name `{T : λ^W = 0}` as the
 exceptional set. The reformulation "never exactly 0", equivalently "`W_T` has trivial radical at every `T`", is
-not stated in P47 (grep "clopen", "first crossing": 0). It is in the genus of Suzuki Thm 1.3/1.4 (R154_031:232–237,
+not stated in P46 (grep "clopen", "first crossing": 0). It is in the genus of Suzuki Thm 1.3/1.4 (R154_031:232–237,
 "nondegenerate on `L²(−a,a)`"). The conditional status of Suzuki's Thm 1.4 is not recorded in R154_031. By O4 it
 cannot be an unconditional statement at every `a` unless it proves RH, so it must be read in the primary text
 before any novelty sentence. **Label: O4 = RESTATEMENT (Bombieri 2000 Thms 1, 3, 5 + P45 Thm 10.4), with Lemmas C,
@@ -158,8 +158,8 @@ O1: PASS (RESTATEMENT). The Weil functional is translation-invariant on `f ⋆ f
 `F(· − c)`. So nestedness plus `lem:monoT` gives exactly Weil positivity on `C_c^∞`.
 
 O2: **AMEND (A8)**. "If `H` is consistent with one off-line zero then `H` does not imply …" is, read literally, false
-or empty. If RH is true, every true `H` implies it (P47 l.3416). The operative form is a schema in the sense of
-P46 Thm 18.1/Rem 18.1a: a derivation from `H` that is valid in a structure satisfying `H` with an off-line zero is
+or empty. If RH is true, every true `H` implies it (P46 l.3416). The operative form is a schema in the sense of
+P47 Thm 18.1/Rem 18.1a: a derivation from `H` that is valid in a structure satisfying `H` with an off-line zero is
 unsound. The use of O2 inside O4's (⇐) is the unconditional part (P45 Thm 10.4), and it is correct.
 
 ---
@@ -169,20 +169,20 @@ unsound. The use of O2 inside O4's (⇐) is the unconditional part (P45 Thm 10.4
 | # | row | cited basis, as found | exclusion valid? | verdict |
 |---|---|---|---|---|
 | 26b | P152.2 | R152_005:34–36; R152_002:196–235 (formulation, gates g1–g3; auditor's estimate "(g1) fails") | not excluded: Prop B.3 is scoped to trees (R152_005:21) | **SURV confirmed**; see §3 for the test |
-| 37 | Deninger | P46 Thm 18.1 (main.md:4787–4822); §18.1 title (l.4785) "**the proof must be uniform in the number field**"; l.5295; MAP_1:73 NG-62b = `EQUIVALENT-TO-RH` (a finite-window diagnostic) | **FAIL.** T1 is a method constraint with a disjunction: name a separating property **or** prove GRH for all `K`. A field-uniform programme is what T1 *prescribes*, not what it excludes (Rem 18.1a: "does not say that GRH is out of reach"). NG-62b concerns a finite-window model, not Deninger's (unbuilt) cohomology | **NOT EXCLUDED (unbuilt programme, MW-5 cluster)** (A9) |
-| 35 | F₁ / scaling site | P46 Thm 19.25 (main.md:6358–6361): no `h⁰ : D^W → ℝ_{≥0}` with (a), (b′), (c); MAP_1:59 MW-5 "genuinely UNBUILT (not proved impossible)" | valid for **`h⁰`/Riemann–Roch-growth readings** only. A Hodge-index theorem on a square not routed through an `h⁰` on `D^W` is outside Thm 19.25. "Category-independent" is true for functions on `D^W`, not for the programme | **AMEND**: EXCL for `h⁰` variants; residual → MW-5 cluster (A10) |
+| 37 | Deninger | P47 Thm 18.1 (main.md:4787–4822); §18.1 title (l.4785) "**the proof must be uniform in the number field**"; l.5295; MAP_1:73 NG-62b = `EQUIVALENT-TO-RH` (a finite-window diagnostic) | **FAIL.** T1 is a method constraint with a disjunction: name a separating property **or** prove GRH for all `K`. A field-uniform programme is what T1 *prescribes*, not what it excludes (Rem 18.1a: "does not say that GRH is out of reach"). NG-62b concerns a finite-window model, not Deninger's (unbuilt) cohomology | **NOT EXCLUDED (unbuilt programme, MW-5 cluster)** (A9) |
+| 35 | F₁ / scaling site | P47 Thm 19.25 (main.md:6358–6361): no `h⁰ : D^W → ℝ_{≥0}` with (a), (b′), (c); MAP_1:59 MW-5 "genuinely UNBUILT (not proved impossible)" | valid for **`h⁰`/Riemann–Roch-growth readings** only. A Hodge-index theorem on a square not routed through an `h⁰` on `D^W` is outside Thm 19.25. "Category-independent" is true for functions on `D^W`, not for the programme | **AMEND**: EXCL for `h⁰` variants; residual → MW-5 cluster (A10) |
 | 36 | Arakelov | P122_007:3–8 ("do not apply … cannot be imported"); phase-15-arithmetic-hodge-index M3-attempt6, M10 | valid for **importing** Faltings–Hriljac–Moriwaki / Yuan–Zhang (hypothesis mismatch: no surface over `Spec Z`); not for building the square | **AMEND**: EXCL (import); residual → MW-5 cluster (A10) |
-| 34 | CC prolate / archimedean | P47 `prop:archneg` (l.2573), `cor:Tarch` (l.2543), `thm:index`, `thm:J` | valid: the archimedean form is indefinite on `P_T` from `0.60` and complete-negative from `0.4608` (PROVED, interval-arithmetic / machine-verified). F4's "shared Γ-data" is not needed; F1 suffices | EXCL (as a uniformity mechanism) confirmed; F4 wording dropped |
-| 18 | CC semilocal / finite `S` | P47 `thm:SC` (l.2098), `prop:finsupp` (l.3374–3392) | valid. The "(arg.)" for infinite-support finite-mass `S` is a proof. `σ_T` now depends on `T`, but `|Σ_{n∈S∩N_T}v_n cos(s log n/T) − A_S| ≤ Σ_{n≤N}v_n|1 − cos(s log n/T)| + 2Σ_{n>N, n∈S}v_n → 0` pointwise with the bound `A_S`, and dominated convergence runs as in `prop:finsupp` | EXCL; **arg. → PROVED** (A11) |
+| 34 | CC prolate / archimedean | P46 `prop:archneg` (l.2573), `cor:Tarch` (l.2543), `thm:index`, `thm:J` | valid: the archimedean form is indefinite on `P_T` from `0.60` and complete-negative from `0.4608` (PROVED, interval-arithmetic / machine-verified). F4's "shared Γ-data" is not needed; F1 suffices | EXCL (as a uniformity mechanism) confirmed; F4 wording dropped |
+| 18 | CC semilocal / finite `S` | P46 `thm:SC` (l.2098), `prop:finsupp` (l.3374–3392) | valid. The "(arg.)" for infinite-support finite-mass `S` is a proof. `σ_T` now depends on `T`, but `|Σ_{n∈S∩N_T}v_n cos(s log n/T) − A_S| ≤ Σ_{n≤N}v_n|1 − cos(s log n/T)| + 2Σ_{n>N, n∈S}v_n → 0` pointwise with the bound `A_S`, and dominated convergence runs as in `prop:finsupp` | EXCL; **arg. → PROVED** (A11) |
 | 41 | dBN / Rodgers–Tao | Paper 13 `thm:nogo` (13/main.tex:150; N5 "arithmetic-blind", l.45–46) | valid as EQUIV plus F1 for the flow | EQUIV confirmed |
-| 7 | Li / Keiper | P47 `cor:Li` (l.4707–4730), `rem:LiSC` (l.4754) | valid. `rem:LiSC` carries computed values (DIAGNOSTIC-type) and says its reading is "an interpretation, not a theorem" | EQUIV confirmed; note `rem:LiSC` label |
+| 7 | Li / Keiper | P46 `cor:Li` (l.4707–4730), `rem:LiSC` (l.4754) | valid. `rem:LiSC` carries computed values (DIAGNOSTIC-type) and says its reading is "an interpretation, not a theorem" | EQUIV confirmed; note `rem:LiSC` label |
 | 43 | Nyman–Beurling / Báez-Duarte | MAP_1:36 NG-B4 (`EQUIVALENT-TO-RH / CIRCULAR`), :64 CIR-3; R155_038:22 (`HEURISTIC`, P4 closed) | valid as EQUIV. The "rhyme" with `thm:margin` is interpretation | EQUIV confirmed |
 | 38 | Suzuki | R154_031:232–240 (Thms 1.2–1.7 as read) | valid as EQUIV. **"Its proof of `⇐` is a partial-sum bound (W4)" is not in R154_031 or any file I found: UNVERIFIED** | EQUIV; A12 strikes the unverified sentence |
 | 32 | Hilbert–Pólya | MAP_1:52 NG-E5, :58 MW-4, :43 NG-C3; R151_005:19 | EQUIV verdict fine. **Basis wrong:** O-151.4 is an **OPEN** item (R151_005:19, 52), not a proved restatement, and T6 concerns moment families, not operators with spectrum `{γ}` | EQUIV; basis amended (A13) |
 | 40 | Jensen / Turán / GORZ | Paper 15 `thm:hr` (15/main.tex:203–213) | **overstated.** `thm:hr`(2) says `δ_∞ = 0 ⟹ inf_m δ_m = 0`: no uniform *gap*. It does not say "uniform positivity cannot come from a stability argument". It is `thm:margin` again. Finite order is excluded by O2 (unconditional, consistent with off-line zeros; arg.) | EQUIV/EXCL kept; wording amended (A14) |
 | 42 | Lee–Yang / Kurasov–Sarnak | E70_1_RESULTS:30–33 | valid | EQUIV confirmed |
 | 28 | model theory | argument in the memo | valid **scoped to o-minimal expansions of ℝ** (definable subsets of ℝ are finite unions of points and intervals; the primes are not). Λ is definable in `(ℤ,+,·)`, so "Λ enters only as parameters" holds only inside o-minimal structures. The ACFA sentence uses Thm 22.17, which R152_002 flagged as a category error when applied off schemes (R152_005:22) | EXCL (arg.), scope stated (A15) |
-| 27 | `×p` rigidity | P47 `cor:void` (l.3394–3412) with `C_supp` | valid, PROVED: `C_supp` contains Λ and is closed under amplification at `2` and under deletion | EXCL confirmed for positions-only inputs |
+| 27 | `×p` rigidity | P46 `cor:void` (l.3394–3412) with `C_supp` | valid, PROVED: `C_supp` contains Λ and is closed under amplification at `2` and under deletion | EXCL confirmed for positions-only inputs |
 | 46 | Selberg-trace analogues | R152_005:10 (Prop A.1 PROVED); closure plan:151–153; MAP_1:56 MW-2 | Prop A.1 valid for Maass–Selberg. **MW-2 is a pattern, "not itself a single closed theorem" (MAP_1:56)**; the Ramanujan-graph / 3/16 discard is a closure-plan judgement | EXCL for the listed instances, basis labelled (A16) |
 | 19 | local–global | MAP_1:41 NG-C1, **:48** NG-E1, **:57** MW-3 (memo says "l.41, 48, 59"; l.59 is MW-5) | NG-E1 is a *computed* refutation at `p ≤ 7` (DIAGNOSTIC-type); MW-3 is "absence of a known theorem" (MAP_1:57). The exclusion stands on `thm:SC`/`prop:finsupp` (PROVED), and only for arguments that infer the sign from local or finite-`S` positivity | EXCL, basis amended (A17) |
 
@@ -194,7 +194,7 @@ quasi-RH statement, which is a method constraint, not a theorem. **T3 wording:**
 "conditional on H-DMV"; replaced by "METHOD-CONSTRAINT modulo the CITED (secondary source) import (H-DMV′)"
 (R157_003 §3) (A18).
 
-**The blueprint's F4 itself** reads "names a property separating ξ from all ξ_K (P46 T1)". That inverts P46 §18.1
+**The blueprint's F4 itself** reads "names a property separating ξ from all ξ_K (P47 T1)". That inverts P47 §18.1
 ("the proof must be uniform in the number field") and Rem 18.1a. F4 should read "names, at a
 load-bearing step, a property not shared by every `ξ_K`, **or** proves GRH for every `K` (T1); invokes A3 and one of
 A7/A8/A9 (T2, `Ξ_a`)". Rows 12, 45 and 48 also cite T1 as if it excluded something. All three keep their verdicts
@@ -207,20 +207,20 @@ on independent PROVED grounds (F1; NG-B8/`cor:infinite`; F1).
 **Never run: confirmed.** `grep -rn -i 'poineau|beurling blind|P152|A^{1,an}|Berkovich line'` over
 `03-research/phase-15-arithmetic-hodge-index[3-6]*`, `04-papers/4[4-7]*/main.*` and `05-meta-and-planning/`: the only hits are
 R155_031:67 and PATH-TO-D:67 (a summary row of phase 152) and ROW-D-CLOSURE-PLAN:320–342 (the recommendation). No
-round ran the test. P46 does not record (P152.2) (grep 0), and neither does Paper 44 (the recommended remark on
+round ran the test. P47 does not record (P152.2) (grep 0), and neither does Paper 44 (the recommended remark on
 Dictionary B.1 is also absent).
 
 **Clause validity.**
 
 * **(a) Definability ⟹ excluded by T3 + `thm:finmod`: AMEND (A19).**
   - *Non-sequitur.* "Defined by the same formulas" transfers a **proof**, not a **truth**. This is exactly the
-    error P46 Restatement 12.4a corrected in phase 135 (main.md:3020–3040, "uniformity of a *definition* transfers a
+    error P47 Restatement 12.4a corrected in phase 135 (main.md:3020–3040, "uniformity of a *definition* transfers a
     *proof*, not the *truth* of a conclusion"). A uniformly defined `𝓔` can be `⪰ 0` for ζ and indefinite for other
     members. The valid criterion is about **derivations**: if `𝓔 ⪰ 0` is derived using only data and properties
     common to a class `𝒞` of weight functions that contains Λ, is closed under one-term amplification, and on which
     the identity `𝓔_a = W_T(a)` holds, then by `cor:void` + `thm:finmod`(ii) the derivation proves a false statement.
     That is PROVED and unconditional.
-  - *T3 needs a bridge.* T3 (P46 Rem 27.16, l.11881 ff.) forbids deriving (ZFS_δ) from BE1–BE8. To use it, one
+  - *T3 needs a bridge.* T3 (P47 Rem 27.16, l.11881 ff.) forbids deriving (ZFS_δ) from BE1–BE8. To use it, one
     needs "`𝓔_𝒫 ⪰ 0 ⟹ ζ_𝒫` has no zeros with `β > 1 − δ`" for Beurling `𝒫`. A Weil-type criterion is not available
     for the DMV system, which continues only to `Re s > θ` and has no functional equation. Without the bridge, T3
     does not apply. With it, T3 is `METHOD-CONSTRAINT` modulo the `CITED (secondary source)` import. So `cor:void`
@@ -233,16 +233,16 @@ Dictionary B.1 is also absent).
   `𝓔_∞ + Σ_{v∈S}𝓔_v` for a finite `S`, it is excluded by `prop:finsupp`/`thm:SC` (PROVED), with NG-E1 as
   corroboration (computed at `p ≤ 7`).* This is R152_002's gate (g3): the construction must name what supplies the
   assembly.
-* **(c) Defined and `⪰ 0` for `Ξ_a` ⟹ excluded by P46 Thm 12.4: AMEND (A21).** Thm 12.4 (main.md:3006–3017) is
+* **(c) Defined and `⪰ 0` for `Ξ_a` ⟹ excluded by P47 Thm 12.4: AMEND (A21).** Thm 12.4 (main.md:3006–3017) is
   about `h⁰_a` satisfying (a), (b′), (c) in the intersection frame, not about energies. The fact needed is that
-  `Ξ_a`'s Weil-type form is negative on some primitive test: P46 Prop 12.4B (main.md:2899) with Hardy (X16), i.e.
+  `Ξ_a`'s Weil-type form is negative on some primitive test: P47 Prop 12.4B (main.md:2899) with Hardy (X16), i.e.
   Thm 12.4's argument. The criterion is again a schema (Restatement 12.4a). If `𝓔_Z ⪰ 0` **and** the identity
   `𝓔_Z = W_Z` are both derived model-uniformly over a class containing `Ξ_a`, contradiction. An unconditional
   `𝓔_{Ξ_a} ⪰ 0` (for instance a tree energy of negative type, R152_002:189–191) only shows that the identity fails
   for `Ξ_a`. That kills the candidate only if the identity for ζ is proved model-uniformly.
 * **Missing clause (d) (A22).** The lemma lists `𝒫` of type (iv) (number fields) but tests nothing for it, and it
   omits R152_002's gate (g2) (Epstein, `Ξ_Q`). Add: **(d)** if the positivity derivation uses only A1–A6, A2⁺ and the
-  data `𝔇`, it is excluded by P46 Thm 18.16 (T2, falsifier `Ξ_Q` PROVED). If it is field-uniform over
+  data `𝔇`, it is excluded by P47 Thm 18.16 (T2, falsifier `Ξ_Q` PROVED). If it is field-uniform over
   `M(O_K)`, T1 requires it to prove GRH for all `K`, which is a standard to meet, not an exclusion. The **Pass**
   clause must also require that A3 and one of A7/A8/A9 be invoked (T2).
 * **Expected outcome (A23).** The memo expects (a) to pass because "a Beurling system has no such ring". This
@@ -286,7 +286,7 @@ cluster (M6)**, not excluded, unbuilt, with no formulated object and no one-roun
 invent the candidate") applies to it as it does to rows 27 and 30. The honest §6 sentence is: "one formulated
 candidate and one unbuilt programme cluster are not excluded". It is not "exactly one".
 
-**Cleared for Paper 47 (not applied; decision pending; checked against P47's own definitions per the
+**Cleared for Paper 46 (not applied; decision pending; checked against P46's own definitions per the
 rule).**
 
 (i) *Optional remark after `cor:margin2`, cleared:*
@@ -307,7 +307,7 @@ rule).**
 > every $T$; if RH fails, $\{T:\lamW=0\}$ is a nonempty compact interval, at which every solution of
 > $\mathrm{KEP}(T)$, if one exists, is atomic and carried by the real zeros of a minimiser's transform.
 
-Adding (ii) requires reconciling it with P47 l.3103 ("no continuity in $T$ is claimed"), for instance "no continuity
+Adding (ii) requires reconciling it with P46 l.3103 ("no continuity in $T$ is claimed"), for instance "no continuity
 is claimed for the sub-classes; for $\lamW$ itself it is \cite[Thm.~5]{Bombieri2000}". Lemma C may be added as a
 proof if a citation is not preferred.
 

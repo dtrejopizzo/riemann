@@ -20,10 +20,10 @@ Rounds: report ×3 (R135_001, R135_004, R135_006), audit ×2 (R135_002, R135_005
 
 ## 2. Decision
 
-    ROW D: NO LABEL. Phase 135 is closed. Paper 46 Part II (§§11–16) is accepted
+    ROW D: NO LABEL. Phase 135 is closed. Paper 47 Part II (§§11–16) is accepted
            as a REDUCTION with no sign, fit per R135_005 after the round-3 erratum.
 
-What is now proved in the repository (labels as recorded in Paper 46):
+What is now proved in the repository (labels as recorded in Paper 47):
 
 1. **The Weil completion `D^W`** (Def 11.1): `C²`, decay `e^{−(1+ε)|t|}`; the explicit formula and the comparison identity (9.9) extend to it with absolutely convergent zero sum (Thms 11.3, 11.5; `I_∞` by polarization, Lemma 11.4a). Not the colimit of Paper 43 (Thm 14.3).
 2. **The canonical class** `K` = Pólya's kernel, `Φ_K = ξ`, `K > 0` (elementary), `M(K) = (½,½)`, `I_∞(F,K) = ½ deg F` for every `F ∈ D^W`, `I_∞(K,K) = ½`; `2K` is a degree form and an ample class inside `D^W` (Thms 11.7, 11.8, 11.14(iii)). The blueprint's `A = e_+ + e_-` is not a class; `2K` replaces it.

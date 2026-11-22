@@ -5,7 +5,7 @@ Setting of 018: comb ν = Σ_j ν_jδ_{u_j} ≥ 0 on [0,2T), density g(u) = 2κe
 Pointwise positivity (PP_T): σ^ν ≥ 0 on ℝ. L2_BUILD_018 is not edited (under referee review).
 
 ## Corpus check
-Paper 47 subsec:band (negative set U_T of ζ's symbol), prop:wit-sens, rem:wit-cheb (mean-square/large sieve insufficient for (N)),
+Paper 46 subsec:band (negative set U_T of ζ's symbol), prop:wit-sens, rem:wit-cheb (mean-square/large sieve insufficient for (N)),
 N_BUILD_011 (κ*), N_BUILD_013 (packet limits exactly critical at every γ: lim = m^♯(γ)), R167_103 (W-sieve), R186_052 (sinc
 smoothings). grep "Fejér / mean square of the comb / resonance method / Σν_j²": rem:wit-cheb and phase-167 use large-sieve
 mean squares for (N); no memo bounds sup Re E from below for pointwise positivity. §1–§3 new; §4 is a corrected reading.
@@ -38,7 +38,7 @@ quantification not attempted here.
 ## 4. What this means for the ℤ-comb (corrected reading; PROVED with CITED inputs)
 (a) For ζ, (PP_T) fails for a reason independent of resolution: κ = 1 < κ* (N_BUILD_011), so g_1(0) = C₀ + 4 < 0 (N_BUILD_001 (B)),
 and at low frequency E is small (PNT-scale fluctuation, weighted): the symbol is negative near τ = 0 — consistent with the non-empty
-negative set U_T of Paper 47 subsec:band (CITED). The failure is a DENSITY deficit at low frequency, not an aliasing failure.
+negative set U_T of Paper 46 subsec:band (CITED). The failure is a DENSITY deficit at low frequency, not an aliasing failure.
 (b) At the integer resolution frequency Ω ≈ e^{2T}: Σ_n v_n² = Σ 4Λ(n)²/n ≈ 2(2T)² = 8T² (Mertens-type, CITED), so by §1 the RMS of
 Re S over |τ| ≲ e^{2T} is ≥ 2T(1 − o(1)), while g_1(Ω) ≈ log(Ω/2π) ≈ 2T. The oscillation of ζ's comb and the archimedean symbol
 are of the SAME size at the integer resolution scale: exactly critical, in the mean-square sense — the frequency-space counterpart
@@ -55,4 +55,4 @@ equals the symbol up to lower-order terms. How much of the band (b) must be hand
 - §3 is the classical resonance identity (Soundararajan-type, CITED idea); correct as an inequality; not quantified.
 - §4(a) corrects the framing: integer positions are not where ζ's pointwise positivity fails first; the density deficit κ = 1 < κ* already
   breaks it at low frequency. §4(b) uses a standard Mertens-type estimate (CITED) and is a mean-square statement only.
-- No sign certified; no negative value of 𝔞_T for ζ (symbol negativity is not form negativity, Paper 47 thm:nolocal).
+- No sign certified; no negative value of 𝔞_T for ζ (symbol negativity is not form negativity, Paper 46 thm:nolocal).

@@ -70,7 +70,7 @@ channel `mathcal M,K,{X,E}`. Hence, on the core,
   -JH_{a,c}-H_{a,c}\mathscr F.}                           \tag{1.3}
 \]
 
-For `(a,c)=(Lambda,1)` one recovers Paper 47. Positivity of
+For `(a,c)=(Lambda,1)` one recovers Paper 46. Positivity of
 `a` is not used.
 
 ## 2. Interior and tail

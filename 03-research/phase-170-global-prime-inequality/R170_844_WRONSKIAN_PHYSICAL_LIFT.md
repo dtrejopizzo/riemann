@@ -1,7 +1,7 @@
 # R170_844 — Physical lift of the Wronskian: full expansion, Fredholm obstruction and minimal covariant derivative
 
 Continuation of R161_026, R161_028--029,
-R161_069--070 and R170_841--843. Paper 47 is not modified.
+R161_069--070 and R170_841--843. Paper 46 is not modified.
 
 ## 0. Verdict
 

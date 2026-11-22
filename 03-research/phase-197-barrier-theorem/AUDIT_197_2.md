@@ -1,14 +1,14 @@
 # AUDIT_197_2 — audit of BARRIER_D1_001 and BARRIER_D2_001 (phase 197)
 
-Checked against Paper 47 main.tex (l.3093 v_n(a)=2a(n)/√n; eq:Aform l.402; lem:degen
+Checked against Paper 46 main.tex (l.3093 v_n(a)=2a(n)/√n; eq:Aform l.402; lem:degen
 l.3249; lem:contA l.575; cor:margin1 l.3516; thm:log5A l.4627; prop:wit-sens l.7087; sec:spec l.8942), AUDIT_197_HOSTILE, and the
 index (N_010 §3 / 06_ R4, R162_2801, R163_1001c, INV_P/INV_Q, AUDIT_193 #101, ES-18, P34-2/5, L20).
 
 ## 0. Global normalisation error (both memos; inherited from BARRIER_001 §1)
-Paper 47 uses **v_n(a)=2a(n)/√n** (l.3093; prop:wit-sens). BARRIER_001, D1, D2 use a(n)/√n. Hence the correct objects are
+Paper 46 uses **v_n(a)=2a(n)/√n** (l.3093; prop:wit-sens). BARRIER_001, D1, D2 use a(n)/√n. Hence the correct objects are
 w_T=(2c_{F⋆}(log n)/√n)_n and d_v(a,b)=Σ 2|a(n)−b(n)|/√n (Lipschitz constant 2 in the a(n)/√n metric). Every qualitative statement
 survives; every explicit constant changes (Cor 3: W_p doubles, the sup doubles; D2 Thm 2(ii): transferred margin is
-λ_A(a_0) − 2Σ|a_0(n)−Λ(n)|/√n). FIX REQUIRED before any integration in Paper 47.
+λ_A(a_0) − 2Σ|a_0(n)−Λ(n)|/√n). FIX REQUIRED before any integration in Paper 46.
 
 ## 1. BARRIER_D1_001
 - **Prop 1** — PROVED given Hamburger (CITED), with hypotheses to be stated: absolute convergence in some half-plane, (s−1)D(s)
@@ -33,7 +33,7 @@ survives; every explicit constant changes (Cor 3: W_p doubles, the sup doubles; 
 - Separation of cΛ, Beurling, Ξ_Q: ARGUED, as labelled. §7(2) tail-inf on E_N: PROVED (each factor ≥1).
 
 ## 2. BARRIER_D2_001
-- **Lipschitz lemma** — PROVED (= prop:wit-sens first sentence, which already exists in Paper 47: CITED, not new), constant 2 per §0.
+- **Lipschitz lemma** — PROVED (= prop:wit-sens first sentence, which already exists in Paper 46: CITED, not new), constant 2 per §0.
   Concavity of a↦λ_A = lem:degen (CITED).
 - **Thm 1** — (a),(b),(c) PROVED; (b) sufficiency correct (CΔ ≥ (d_v−μ)_+ ≥ d_v−μ). Reading "defect contributes no sign" correct.
 - **Thm 2** — (i),(iii),(iv) PROVED. (ii) bound PROVED; **sharpness proof wrong as written**: g(x)=min_s[φ(s)+d_v(x,a_s)] has

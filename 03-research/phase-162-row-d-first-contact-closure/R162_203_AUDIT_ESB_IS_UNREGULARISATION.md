@@ -56,7 +56,7 @@ target should be stated directly as:
 > zeros, i.e. K_F(ρ−½)=0,
 
 with (3.1) as one possible quantitative route. Test for any candidate derivation: it must fail if ζ_P
-is replaced by the partial products of a finite modification a of Λ (thm:finmod of Paper 47), and it
+is replaced by the partial products of a finite modification a of Λ (thm:finmod of Paper 46), and it
 must not apply to Davenport–Heilbronn (R162_102 Prop 2.1).
 
 Status: R162_201 Thm 2.1 PROVED; R162_202 Thm 3.1 PROVED; ESB ⟺ F=0 within the first-contact class

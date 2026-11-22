@@ -4,7 +4,7 @@
 
 **Object.** `R156_001_CONVERSE.md` (373 lines as delivered) and `scripts/r156/` (README and 8 scripts).
 
-**Reference texts read (the paper's own definitions, rule `feedback-check-against-paper-definitions`).** Paper 47
+**Reference texts read (the paper's own definitions, rule `feedback-check-against-paper-definitions`).** Paper 46
 `main.tex`:
 * l.114–150: `eq:symbol`, `eq:form`, Tate moments, `\PT`, `eq:W`, `\lamA`, `\lamW`, the intro positivity sentence;
 * l.268–312: related work, "What is not claimed";
@@ -52,18 +52,18 @@ citation slip of doubt 6 is **confirmed**, and the precise ruling is below.
 
 ## Per-claim findings
 
-### (i) Definitions against Paper 47 — PASS
+### (i) Definitions against Paper 46 — PASS
 `eq:W` (l.134–136) is `W_T = 𝔞_T + 2Re(AB̄)`. `def:W` (l.1152) is the weight class `𝒲_T`, so doubt 9 is confirmed and
 every integration must cite `eq:W`. `\lamW ≤ \lamP ≤ \lamA` holds (`rem:Kprim` together with `thm:A`). Its
-`𝒜_∞` equals P47 `\Ainf` (l.2358–2362). `RD_T(a)` is as at l.3210–3214.
+`𝒜_∞` equals P46 `\Ainf` (l.2358–2362). `RD_T(a)` is as at l.3210–3214.
 
-P47 defines **no** complete form `W_T(a)` for a general comb. Its `λ^W_T(a)` is therefore a new definition,
+P46 defines **no** complete form `W_T(a)` for a general comb. Its `λ^W_T(a)` is therefore a new definition,
 `W_T(a) := 𝔞^{(v(a))}_T + 2Re(AB̄)`, which must be stated. This is part of A7.
 
 ### (ii) Lemma 1.0 (parity splitting) — PASS
 Put `c = ⟨F,cosh(t/2)⟩` and `s = ⟨F,sinh(t/2)⟩`. Then `A = c + s` and `B = c − s`, since
 `e^{±t/2} = cosh(t/2) ± sinh(t/2)`. So `2AB = 2c² − 2s²`, and `c` (resp. `s`) vanishes on odd (resp. even) `F`. The cross
-term is `c(F_e)(−s(F_o)) + c(F_e)s(F_o) = 0`. This checks against the P47 parity paragraph (before `lem:strict`):
+term is `c(F_e)(−s(F_o)) + c(F_e)s(F_o) = 0`. This checks against the P46 parity paragraph (before `lem:strict`):
 `A = B = c` for even `F`, and `A = −B = s` for odd `F`.
 
 ### (iii) Doubt 3: the sign `2AB = −2s²` for odd `F` — PASS (derived, and checked independently)
@@ -79,7 +79,7 @@ An independent check bypasses the Lévy representation entirely. `audit_r156_wit
 ### (iv) Theorem 1.1(a) and doubt 1 (Lax–Milgram/Kato) — PASS; AMEND A1 (self-contained step, no restriction)
 Its appeal to "Kato VI plus the spectral gap" is correct but compressed. A1 replaces it with a complete
 argument, which I checked.
-1. `𝔞_T = Γ_T + Π_T` with `‖Π_T‖ ≤ 𝐀` (P47, after `cor:Tarch`). So `𝔞_T` is closed, bounded below, and has the form
+1. `𝔞_T = Γ_T + Π_T` with `‖Π_T‖ ≤ 𝐀` (P46, after `cor:Tarch`). So `𝔞_T` is closed, bounded below, and has the form
    domain of `Γ_T`, which embeds compactly (proof of `prop:nodes`(i)).
 2. `Q = P^{par}` is form-closed. It is also dense in `ker ℓ ∩ L²_{par}`, by the one-line argument in A1. So `𝔞|Q` is a
    closed semibounded form with compact resolvent in that Hilbert space.
@@ -132,7 +132,7 @@ A3 makes two corrections to the wording.
   forces the range condition. `⟸`: (a3) and (b).
 
 Doubt 8 is correct: `S_T` (D.47's Green matrix, hyperbolic when `n_-(𝔞_T) = 1`) and `G_T = S_T + J` are different
-matrices. No statement in P47, `R155_*` or `R156_*` conflates them. (Grep found no "Green matrix"/`G_T` usage in P47
+matrices. No statement in P46, `R155_*` or `R156_*` conflates them. (Grep found no "Green matrix"/`G_T` usage in P46
 other than the unrelated `G_T(t) = g(t/T)` of `prop:finsupp`, for which see A15.)
 
 ### (viii) Remark 1.2 and Prop 2.1 — PASS
@@ -171,10 +171,10 @@ parity. Prop 2.1 is (a4) scaled; for `x = 0` the infimum over `P` is `0`, attain
 * **Conclusion.** `\laminf(T) < 0` for every `T ≥ 0.4608` (`prop:arch`(i): `\Ainf` is `T`-free and the feasible sets
   grow). So **`T^*_∞ ≤ 0.4608`, PROVED.** Its "`= −3.6·10^{-5}`" should read `−3.59·10^{-5}`.
 
-**Wording (the requested check).** A PROVED `0.461` is *numerically weaker* than P47's DIAGNOSTIC
-`0.3716`, but it is a proof. The right comparison is with P47's *proved* bound, `T^*_∞ ≤ T^*_{∞,P} ≤ 0.60`
+**Wording (the requested check).** A PROVED `0.461` is *numerically weaker* than P46's DIAGNOSTIC
+`0.3716`, but it is a proof. The right comparison is with P46's *proved* bound, `T^*_∞ ≤ T^*_{∞,P} ≤ 0.60`
 (`prop:arch`(iv), `cor:Tarch`). Thm 3.1 improves that to `0.4608`. Its real content is the certified strict separation
-`T^*_∞ ≤ 0.4608 < 0.58 ≤ T^*_{∞,P}`. Its sentence ("where P47 records only the DIAGNOSTIC `≤ 0.3716`") is
+`T^*_∞ ≤ 0.4608 < 0.58 ≤ T^*_{∞,P}`. Its sentence ("where P46 records only the DIAGNOSTIC `≤ 0.3716`") is
 true but invites the misreading "improving 0.3716". A5 fixes it.
 
 ### (xi) Corollary 3.2 (deletion model) — PASS; AMEND A7 (scope and definition), A8 (odd-sector sentence)
@@ -199,7 +199,7 @@ The counter-model refutes the **comb-level implication** `RD_T(a) ⟹ λ^W_T(a) 
 the sense in which `cor:void` refutes comb-level derivations of `RD_T`. That is what Cor 3.4 uses, and it is sound.
 A7 makes this explicit, together with the definition of `W_T(a)`.
 
-**Novelty.** For the empty comb the failure *is* `T^*_∞ < T^*_{∞,P}`. P47 shows this DIAGNOSTICALLY after `cor:Tarch`
+**Novelty.** For the empty comb the failure *is* `T^*_∞ < T^*_{∞,P}`. P46 shows this DIAGNOSTICALLY after `cor:Tarch`
 (`0.3716` vs `0.5958`). The new content is the proof, and A7(iv) says so.
 
 **A8.** On `(T^*_{∞,P}, log 2]`, `RD_T(a)` fails (`λ_ev < 0` from `0.60`), so the full converse is vacuous there. Only
@@ -212,7 +212,7 @@ the odd-sector implication is refuted on `[0.461, log 2]`. The sentence is rewor
   hence **concave** on `ℝ`.
 * At `θ = 0` it is `\laminfP(½log 3) > 0` (`cor:Tarch`, PROVED machine-verified).
 * At `θ = 1` it is the true primitive bottom `λ^A_{½log3} ≥ λ^P ≥ 8.8577·10^{-5}` (`thm:C`). `thm:C` is stated for
-  `σ_T` with the actual comb `v_2` at `T = ½log 3` (P47 l.955–972), so it is the primitive form with the true comb.
+  `σ_T` with the actual comb `v_2` at `T = ½log 3` (P46 l.955–972), so it is the primitive form with the true comb.
 * A concave function is `≥` the minimum of its endpoint values on `[0,1]`. PASS.
 
 **(ii)** `audit_r156_theta_quintic.py` uses exact rationals `b_3, b_5`, exact sympy polynomials, and interval
@@ -246,7 +246,7 @@ states the right closure: lowering one term within `[0, Λ(n)]`. `𝒞_BT`, `�
 
 ### (xiv) The archimedean analogue paragraph — PASS; AMEND A10 (label source)
 The failure on `[0.4608, 0.58]` is PROVED. The extension to `(T^*_∞, T^*_{∞,P})` uses the strict decrease of
-`\laminf`. P47 asserts this in the unnumbered paragraph after `lem:strict`, with its argument: test against `G_0` with
+`\laminf`. P46 asserts this in the unnumbered paragraph after `lem:strict`, with its argument: test against `G_0` with
 vanishing moments, so the pole term drops out. The `R155_061` closing note confirms that it holds on `L²`. So it is
 not an "unproved remark". It is a proved but unnumbered statement, and it needs a number before any paper cites it.
 Its label row is otherwise correct.
@@ -262,10 +262,10 @@ Its label row is otherwise correct.
 
 ### (xvi) §5 (reduction chain) — §5.1 **FAIL as stated** (A12); §5.2–5.4 PASS; §5.5 AMEND A13
 * **§5.1.** "[∃ flat-top certificate] ⟺ [KEP(T) indeterminate] ⟺ [RD_T strictly ∧ G_T ≻ 0]" is not proved.
-  `thm:Al`(b) gives `∃ Al_T(w) ⟺ λ^W > 0`. `thm:KEP3`(a) gives only `λ^W > 0 ⟹ indeterminate ⟹ λ^W ≥ 0`, and P47
+  `thm:Al`(b) gives `∃ Al_T(w) ⟺ λ^W > 0`. `thm:KEP3`(a) gives only `λ^W > 0 ⟹ indeterminate ⟹ λ^W ≥ 0`, and P46
   itself says the two notions coincide "except on `{T: λ^W = 0}`". The corrected chain is applied in place.
 * **§5.2** follows from Thm 1.1(c). **§5.3** is correct (`λ^W ≤ λ^P`). **§5.4:** P45 `thm:sufficiency` exists, and
-  P47 cites it as [Paper45, Thm 10.4]; the statement is correct.
+  P46 cites it as [Paper45, Thm 10.4]; the statement is correct.
 * **§5.5.** For `max(T,T') ≥ ½log 5` the model must be `Λ1_{n≥N}` with `N ≥ e^{2max(T,T')}`. Stated precisely, the
   shift must satisfy `T' ≥ T^*_{∞,P}`, and `≥ 0.58` is PROVED.
 
@@ -285,7 +285,7 @@ equation model (Epstein/Dedekind) was not attempted, and this stays an open rema
 ### (xix) Doubt 7 (`S_T` vs `G_T`) — PASS (see (vii))
 
 ### (xx) Doubt 8/9 (`def:W` vs `eq:W`) — PASS; AMEND A15 (notation clash for integration)
-P47 already uses:
+P46 already uses:
 * `G_T(t) = g(t/T)` and `F_T` (`prop:finsupp`);
 * `S_{T,τ_1}` and `S_c` (time–band limiting);
 * `Γ_T` (the pole-free archimedean form);
@@ -298,7 +298,7 @@ Keep `κ_±`, which is safe because it is subscripted.
 
 ## Citation ruling (doubt 5, item 6 of the report)
 
-**Confirmed slip.** P47 `prop:arch`(iii) (l.2375–2377) reads: "`\laminf(T) ≥ 0` by the known positivity of `W_T` for
+**Confirmed slip.** P46 `prop:arch`(iii) (l.2375–2377) reads: "`\laminf(T) ≥ 0` by the known positivity of `W_T` for
 `T ≤ log 2` [Paper42, Yoshida1992, Bombieri2000]". The citations do not support that sentence.
 
 1. **Paper 42.** `thm:certifiedendpoints` (l.4164–4172) and `cor:certifiedinitialinterval` (l.4355–4360) prove
@@ -306,8 +306,8 @@ Keep `κ_±`, which is safe because it is subscripted.
    contacts included, not the complete Weil form. The ranges are `0 < T ≤ ½log 3`, `T = log 2`, and then
    `0 < T ≤ log 2` by nesting. **Primitive only.** It says nothing about `W_T` on `L²(I_T)`.
 2. **Yoshida 1992.** Thm 1 is strict positivity on `K(a)` at `a = ½log 2`, i.e. autocorrelation support `log 2`, i.e.
-   `T = ½log 2` in P47's notation. The comb is empty there. Lemma 2 is qualitative for small windows. The primary text
-   is not in `00-references` (`R154_013` l.20), and P47 l.274 calls the computation "approximate finite-matrix".
+   `T = ½log 2` in P46's notation. The comb is empty there. Lemma 2 is qualitative for small windows. The primary text
+   is not in `00-references` (`R154_013` l.20), and P46 l.274 calls the computation "approximate finite-matrix".
 3. **Bombieri 2000 Thm 12.** Quantitative for `|I| < log 2`, the prime-free range, i.e. `T < ½log 2`.
 
 **What is known for the complete form `W_T` (i.e. `λ^W ≥ 0`), exactly:**
@@ -321,7 +321,7 @@ Keep `κ_±`, which is safe because it is subscripted.
 
 **What is known for the primitive form (`λ^A`):**
 * `0 < T ≤ log 2`: P42 `cor:certifiedinitialinterval` (Arb-certified, in-programme).
-* `T = ½log 3`: independently by P47 `thm:C` (`λ^A ≥ λ^P ≥ 8.8577·10^{-5}`).
+* `T = ½log 3`: independently by P46 `thm:C` (`λ^A ≥ λ^P ≥ 8.8577·10^{-5}`).
 * `T ≤ 0.8`: through Zhu, since `λ^A ≥ λ^W`.
 
 **The standing phrase "no sign beyond `T ≤ log 2`"** is correct only as a statement about the **primitive form**
@@ -331,15 +331,15 @@ claims nothing and only cites Zhu. For the **complete form** `\lamW`, the progra
 "`T ≤ ½log 2` (classical), `T ≤ 0.8` (Zhu, cited)".
 
 **Where the slip occurs:**
-* P47 l.2377 (`prop:arch`(iii));
-* P47 l.308 ("Positivity at `T ≤ log 2` is known [Paper42, Yoshida1992, Bombieri2000]", with the form unspecified);
+* P46 l.2377 (`prop:arch`(iii));
+* P46 l.308 ("Positivity at `T ≤ log 2` is known [Paper42, Yoshida1992, Bombieri2000]", with the form unspecified);
 * `R155_031` l.51 and `R155_023` l.87, 328.
 
-P47 l.148–150 (intro) is **correct** as worded: P42 for `T ≤ log 2`, Yoshida/Bombieri "for the complete form at
+P46 l.148–150 (intro) is **correct** as worded: P42 for `T ≤ log 2`, Yoshida/Bombieri "for the complete form at
 autocorrelation support `log 2`", Zhu at `1.6`. The blueprint phrase quoted by the report was not found verbatim in
 `R156_000` or the plan file.
 
-**Consequence for P47's mathematics: none.** `prop:arch`(iii) needs only `2T < log 2`, which Yoshida, Bombieri and
+**Consequence for P46's mathematics: none.** `prop:arch`(iii) needs only `2T < log 2`, which Yoshida, Bombieri and
 Zhu cover. `thm:finmod`(i) uses it in the same range. `cor:KEP08` already rests on Zhu, correctly.
 
 **Paper fix, for the editor, not applied here.** In `prop:arch`(iii), replace "`W_T` for `T ≤ log 2`
@@ -354,7 +354,7 @@ Bombieri2000] and `T ≤ 0.8` [Zhu2026]".
 
 | statement (`R156_001`) | verdict | label after audit |
 |---|---|---|
-| Definitions vs P47 (`eq:W`, `𝔞_T`, `P_T`, `\lamA`, `\lamP`, `\lamW`, `\Ainf`, `RD_T`) | PASS (A7: define `W_T(a)`) | — |
+| Definitions vs P46 (`eq:W`, `𝔞_T`, `P_T`, `\lamA`, `\lamP`, `\lamW`, `\Ainf`, `RD_T`) | PASS (A7: define `W_T(a)`) | — |
 | L1.0 parity splitting `W = (𝔞+2c²) ⊕ (𝔞−2s²)` | PASS | PROVED |
 | T1.1(a) nondegenerate: `D = P ⊕ span(h_±)`, `𝔞`- and `W`-orthogonal; `In(W) = In(𝔞|P) + In(G_T)` | PASS (A1: self-contained proof; no restriction) | PROVED |
 | T1.1(a4) `g = min{W : ℓ = 1}` | PASS | PROVED |
@@ -372,12 +372,12 @@ Bombieri2000] and `T ≤ 0.8` [Zhu2026]".
 | T3.3(iii) failure set `[0,θ_*)`, `0.8148 < θ_* < 1` | PASS | PROVED (Zhu cited for `θ_* < 1`) |
 | T3.3 `θ_* ≈ 0.99991`, window `≈ 10^{-4}` | PASS as labelled (A16) | DIAGNOSTIC |
 | **C3.4** method constraint | **AMEND** (A9: class hypothesis of the `½log3` clause; one-sided precision) | PROVED (method constraint) |
-| §3 archimedean analogue on `(T^*_∞, T^*_{∞,P})` | PASS (A10) | PROVED on `[0.4608,0.58]`; the rest rests on P47's unnumbered strict-decrease paragraph |
+| §3 archimedean analogue on `(T^*_∞, T^*_{∞,P})` | PASS (A10) | PROVED on `[0.4608,0.58]`; the rest rests on P46's unnumbered strict-decrease paragraph |
 | P4.1(i)–(iv) | PASS (A11: Yoshida caveat; A11b "exactly" dropped) | PROVED resting on imports / Zhu (cited) |
 | **§5.1** "certificate ⟺ KEP indeterminate ⟺ …" | **FAIL as stated** → corrected chain (A12) | PROVED as corrected |
 | §5.2–5.4 | PASS | PROVED |
 | §5.5 window shift | **AMEND** (A13: `N` depends on `T,T'`) | PROVED / OPEN (ζ) |
-| §6 novelty | PASS with A7(iv) (empty-comb failure = `T^*_∞ < T^*_{∞,P}`, diagnostic in P47; new is the proof) | — |
+| §6 novelty | PASS with A7(iv) (empty-comb failure = `T^*_∞ < T^*_{∞,P}`, diagnostic in P46; new is the proof) | — |
 | §7 diagnostics | PASS (A16) | DIAGNOSTIC |
 | §9 item 6 citation slip | **CONFIRMED** (A14; ruling above) | — |
 | OPEN items (`RD_T ⟹ λ^P ≥ 0`; effective shift for ζ; converse for ζ at `T > 0.8` ⟺ `RD_T ⟹ G_T ⪰ 0 (+range)`) | PASS | OPEN |
@@ -418,7 +418,7 @@ No paper and no other README was touched.
 
 ---
 
-## What is cleared for Paper 47 §10.6 (`subsec:alignineq`, the OPEN paragraph at l.3549–3552), with one item for §9.1
+## What is cleared for Paper 46 §10.6 (`subsec:alignineq`, the OPEN paragraph at l.3549–3552), with one item for §9.1
 
 These are cleared with the proposed labels. Use the renamed notation (A15), and check every sentence against `eq:W`,
 `\PT`, `\lamA`, `\lamW`, `\Ainf` and `RD_T(a)` as printed.

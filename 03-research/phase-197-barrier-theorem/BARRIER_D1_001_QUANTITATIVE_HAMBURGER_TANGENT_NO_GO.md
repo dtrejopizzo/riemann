@@ -5,7 +5,7 @@ positivity of 𝔞_T on P_T assumed true; this memo builds/tests the tool asked 
 
 ## 0. Corpus check and new reason (routes-tried rule)
 
-Read: BARRIER_001 (Thm 5, §6), Paper 47 `lem:degen`, `prop:shape-eulerdel`; index entries G5G-R162_2601c (Hamburger in the
+Read: BARRIER_001 (Thm 5, §6), Paper 46 `lem:degen`, `prop:shape-eulerdel`; index entries G5G-R162_2601c (Hamburger in the
 atomic class, tool, no sign), G4F-R162_2801 (quantitative Hamburger for off-line quartets, zero side, DEAD on Beurling),
 G5F-R163_1001c (window Hamburger, pinning, REF-D), R163_1001 Thm O, INV_A_001 (rigidity 𝔐={ζ} = retry), N_009/010
 (Φ fixed point, CONDITIONAL Hamburger), INV_L_001 (local FE O_6-stable), INV_P_001/INV_Q_001 (D_{S_N}, band defect), phases
@@ -19,7 +19,7 @@ half-space H_T of BARRIER_001 Thm 5. This was never asked; the answer is a NO-GO
 
 Comb a, f_a(s)=exp(Σ_{n≥2} a(n)n^{-s}/log n) = Σ b_n(a) n^{-s}, ξ_a(s)=Γ_ℝ(s)s(s−1)f_a(s). Window coordinates of a and of b
 correspond by a triangular polynomial diffeomorphism (b_n depends on a(m), m|… , m≤n), so window statements may be made in
-either. From lem:degen (PROVED in P47): for every a, λ_A(T;a) ≤ λ_A(T;Λ) − ⟨π_N(a−Λ), w_T⟩.
+either. From lem:degen (PROVED in P46): for every a, λ_A(T;a) ≤ λ_A(T;Λ) − ⟨π_N(a−Λ), w_T⟩.
 An **FE-defect atom** is S_ε={a : Δ(a) ≤ ε}, Δ ≥ 0, Δ(Λ)=0, Δ built from ξ_a(s) − ξ_a(1−s).
 
 ## 2. First order: the tangent space is {0} (PROVED, from CITED Hamburger)

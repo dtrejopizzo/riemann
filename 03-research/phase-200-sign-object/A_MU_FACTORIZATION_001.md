@@ -24,7 +24,7 @@ functional equation and gives the null symbol (REF-D). The content thus lives in
 ## 0. Corpus and index check; why this is not a retry
 
 - **Read:** AUDIT_200_SPEC_003 §6–7 (R-Q6, "what to change"); SPEC_002 (T.1, T.2, T.3, SQ.0–SQ.1, Q1 §5: predicted death of
-  SQ); Q2_LADDER_001 (Lemma R; 𝔊_{YY′} ≡ W_T(g); W_T(g) = 𝒲[0/1 μ-rough comb]); MORI15_EXTREMAL_001 §1–2; Paper 47 §22
+  SQ); Q2_LADDER_001 (Lemma R; 𝔊_{YY′} ≡ W_T(g); W_T(g) = 𝒲[0/1 μ-rough comb]); MORI15_EXTREMAL_001 §1–2; Paper 46 §22
   (thm:ext-half, rem:ext-killing, prop:ext-gauge, prob:ext-L, prop:ext-consol, prop:ext-grouped, prop:ext-latred).
 - **Index:** searched for "factoriz", "SOS", "square", "Cholesky", "Schur", "Fejér", "Z_log", "log ξ", "n^ε", "three lines",
   "Doetsch", and "Hardy convex".

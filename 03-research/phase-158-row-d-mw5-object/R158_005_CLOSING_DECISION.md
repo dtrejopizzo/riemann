@@ -11,7 +11,7 @@ Inputs: R158_001 + R158_003 (MW-5 specification sheet), R158_002 + R158_004 (the
 | 18 published frameworks: first failure OT-1 (9), OT-2 (7), OT-3 (1), OT-5′ (1) | CITED (4 entries at abstract level) |
 | Residual MW-5, route by route: OPEN, RH-strength | ANALYSIS |
 | Adèle class space `X = A_Q/Q^×`: every positivity structure examined is a restatement (of RH, or RH ∧ simple zeros), a compression, zero-blind, false (`B_1`), or void; `X` fails OT-2 (Connes' Hilbert realisation) or OT-5′ (Meyer–CCM nuclear `H¹`) | RESTATEMENT (on X); exhaustiveness ANALYSIS |
-| CCM trace form = `W_T` under `F(t) = e^{t/2}g(e^t)`; CCM Prop 7.2 over Q = E1 per test; P46 (18.2) is its weaker form | PROVED (matching) |
+| CCM trace form = `W_T` under `F(t) = e^{t/2}g(e^t)`; CCM Prop 7.2 over Q = E1 per test; P47 (18.2) is its weaker form | PROVED (matching) |
 | Any definite Θ-compatible hermitian form ⟹ RH ∧ simple zeros | PROVED, CLASSICAL (Serre; Connes 1999) |
 | Multiplier of any definite polarization has infinite exponential type (Prop H) | PROVED |
 | Canonical residue polarization indefinite, unconditionally | PROVED |
@@ -19,7 +19,7 @@ Inputs: R158_001 + R158_003 (MW-5 specification sheet), R158_002 + R158_004 (the
 | Phase-63 "no J-linear Frobenius": scoped to that `J` (scope notes in MAP_3, R151_001, CORPUS_CHECK_R145) | CORRECTION |
 
 ## 2. What an MW-5 object would have to add (N-a, N-b, N-c, as amended)
-* N-a: definiteness for a reason that precedes the spectrum. The object must deliver the count, never the positivity (P46 §21.7).
+* N-a: definiteness for a reason that precedes the spectrum. The object must deliver the count, never the positivity (P47 §21.7).
 * N-b: for the definite/unitary route only, a non-cyclic `H¹` (HEURISTIC: a correspondence algebra with `+`).
 * N-c: for the Riemann–Roch route, a two-variable effective cone strictly larger than `𝓔` that carries information outside the
   frame's invariants. Its constructive clause is RH-strength.
@@ -31,5 +31,5 @@ None exists in the literature surveyed.
     the last chapter; or continue by constructing an object with N-a–N-c, which is a research programme beyond this
     corpus and not a round.
 (b) Optional O0: verify the K-version of Meyer's Laplace-range theorem (upgrades the `S₃` falsifier).
-(c) Commit phases 157–158 and the P46/P47 edits (held by prior decision).
+(c) Commit phases 157–158 and the P47/P46 edits (held by prior decision).
 Row-D label unchanged. No sign.

@@ -1,5 +1,5 @@
 # CA_B_001 — Review
-Checked vs P47 prop:boundary (m = −2Re ζ′/ζ(½+iτ)), rem:fe, eq:symbol, prob:region(4),(9),(11); EI_002/EI_003 and their reviews.
+Checked vs P46 prop:boundary (m = −2Re ζ′/ζ(½+iτ)), rem:fe, eq:symbol, prob:region(4),(9),(11); EI_002/EI_003 and their reviews.
 
 ## Verdict
 **EXCLUDED (O10, O11, O12 survive; (R)(4); (R)(9) in the symmetrized form). Identities CONFIRMED PROVED. Sign content REF-D: J′(½) given the symbol is the window-form piece itself.**

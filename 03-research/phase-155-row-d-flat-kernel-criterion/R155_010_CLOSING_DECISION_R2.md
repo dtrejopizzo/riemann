@@ -17,8 +17,8 @@ ES-2); no sign for ζ beyond `T ≤ log 2`; no statement about zeros.
 | `Ceil(24, 0.68) < 0`, `Ceil(24, log2) < 0` | **DIAGNOSTIC, sign robust, digits spurious** (`−2.28e−7` → `−7.51e−6` on refinement) | R-3. Enclosure would be a theorem; margin ~1e−5, easier than estimated. |
 | "the M-sweep must start at `M ≥ 64`"; "Ceil at β=(2,0) ≈ 1e−9 at every two-prime window" | **WITHDRAWN** | R-4, R-5 (contradicted by the memo's own logs) |
 | **Theorem Z numerically verified** on both sides, eight regimes, `2.6e−7…2.8e−6` (GL 800); first check of (7.2) in the corpus (`phase-118 W5` is the primal identity) | **DIAGNOSTIC (verification)** | R155_006 1, 10; R155_009 |
-| **Smoothness / far-zero lemma**: `w ∈ W_T ∩ C^k_c` across the edge ⇒ `ŵ = O(|t|^{−k−2})` ⇒ far-zero residual `≍ Γ^{−k−1} log Γ` (`k ≥ 0`); an off-line zero above Γ contributes at most `e^{U/2}` times an on-line one; extends Thm Z(ii) from `C_c^∞` to `C_c^k` | **PROVED (to be written for Paper 47)** | R155_006 2 |
-| **Bernstein grid lemma**: `min_ℝ f ≥ min_grid f − ½U²‖f‖_∞δ²` for `f` band-limited to `[−U,U]`; turns Paper 47 §5's grid warning into a theorem | **PROVED (to be written)** | R155_006 4 |
+| **Smoothness / far-zero lemma**: `w ∈ W_T ∩ C^k_c` across the edge ⇒ `ŵ = O(|t|^{−k−2})` ⇒ far-zero residual `≍ Γ^{−k−1} log Γ` (`k ≥ 0`); an off-line zero above Γ contributes at most `e^{U/2}` times an on-line one; extends Thm Z(ii) from `C_c^∞` to `C_c^k` | **PROVED (to be written for Paper 46)** | R155_006 2 |
+| **Bernstein grid lemma**: `min_ℝ f ≥ min_grid f − ½U²‖f‖_∞δ²` for `f` band-limited to `[−U,U]`; turns Paper 46 §5's grid warning into a theorem | **PROVED (to be written)** | R155_006 4 |
 | **Lemma R**: even `w ∈ L¹`, continuous, `w ≡ 1` on `[−2T,2T]`, `ŵ ≥ 0` ⇒ `w ≡ 1`. Consequence (a): `f_w ≥ 0` is never termwise in the zeros. Consequence (b) "no finite zero universe admits a flat-top certificate": only for compactly supported `w` | **PROVED**; (b) **restricted** | R155_009 |
 | (E) `A_T` jumps by `v_n` at `½log n`, `τ_env^{mf} = 2πe^{A_T}` multiplied by `e^{v_n}`; (D) `τ_env^{mf}/2πe^{2T} = e^{A_T−2T}`; (M) `λ^W` non-increasing (restates Cor mono) | **PROVED (elementary)** | R155_009. Repairs: `N_T` convention `log n < 2T` makes `A_T` left-continuous (one-sided limits); `τ_env^{mf}` is Prop env's multiplier-free part only. |
 | (C) `f_w(τ)` continuous in `T` across prime entries for a fixed shape family and fixed domain | **PROVED (as stated)**; "λ^W continuous" and "R155_005's step function was a moving-domain artefact" **NOT established** (domain frozen at τ≤60 on both sides; at the one moving-domain entry the value jumps 3.2×) | R155_009 |
@@ -54,7 +54,7 @@ Row-D label unchanged. Endpoint of record unchanged: `λ_min(A_{½log3}) ≥ 8.8
  consequence (b); withdraw "the domain is the whole of it" and §5.3's Prop-env threshold (with
  `‖ν_w‖_TV ≈ 48.7` it is `~2.4e22`); add the missing conditioning test; `A_T` one-sided limits.
 
-## 4. Paper 47 changes ordered
+## 4. Paper 46 changes ordered
 
 1. §8 (`main.tex:1269–1272`): replace the parenthesis by **Theorem N** with Theorem B and its
  Lemma (≈1 page), scope `M ≤ 8`, tolerance stated; fix "step ≥ 2T/8" at `main.tex:1270`.

@@ -94,7 +94,7 @@ positivity of the dual cone (thm:Z/thm:O) as data. TRANSFER, OPEN.
 trivial bound already gives some κ. The reason not to raise it:
 - the gradual converse PROVED turns each κ < κ_triv into a band of width O(κ) on the spectral side of thm:Z, which is a
   problem of uniform bounds in T;
-- W-fam (P47 thm:famblind) excludes bounded-rank functionals;
+- W-fam (P46 thm:famblind) excludes bounded-rank functionals;
 - lem:shape-est closes the shape estimates.
 
 There is no 𝒯 whose hypothesis is anything other than a savings bound on the fluctuation of Λ in the window. TRANSFER
@@ -169,7 +169,7 @@ rigidity". **It does not survive**, for three independent reasons.
    it from the class: the datum that enters is still the same functional of h*. An exact rigidity would only dodge 𝒦_H if it
    used information about Λ that does not pass through h*, and E.1 does not name one.
 2. **E.1's "input for D" is empty.** TRACT_E says that, if E.1 goes through, "it reduces D to the contact instants (discrete
-   set {½log n})". But lem:monoT (P47; N_012 §1(a) reuses it for general combs) already gives that T ↦ λ_A(T) is
+   set {½log n})". But lem:monoT (P46; N_012 §1(a) reuses it for general combs) already gives that T ↦ λ_A(T) is
    **non-increasing** by extension by zero. Then D (∀T) is equivalent, without any lemma, to λ_A(T_n) ≥ 0 over *any*
    sequence T_n → ∞. Reducing to a discrete set gains nothing.
 3. **Cor 2′ and the margin scale.** In the first interval (½log5, ½log7) the margin is already tiny: CA_R4_001 shows
@@ -181,7 +181,7 @@ rigidity". **It does not survive**, for three independent reasons.
 
 ### 2.2 K11 — **agrees with POLAR_CAP_001: TRANSFER (goal) / NO-GO (route)**
 
-Verified against the definition (thm:parityschur(a) and prop:polarcap, P47 l.4176/4316):
+Verified against the definition (thm:parityschur(a) and prop:polarcap, P46 l.4176/4316):
 - 𝔤_par = 𝔞_T(H₀) − ⟨𝔞_T(H₀,·), (𝔞_T|𝒬^par)^{-1}𝔞_T(H₀,·)⟩ + 2ε_par is a bordered Schur complement: it inverts the primitive
   part;
 - the definition only consumes non-degeneracy, but every property connecting 𝔤 with W_T ≥ 0 consumes λ_A^par > 0 ((a3),

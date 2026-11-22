@@ -1,6 +1,6 @@
 # A local inequality on the primes equivalent to the criterion of 039
 
-Direct antecedent: [039, barrier and interpolation](ROUND_039_A.md). There one interpolates between contiguous samples and needs an accumulated sum or an infinite tail. Here one subtracts the homogeneous interpolation between two samples at macroscopic logarithmic distance. The subtraction annihilates both exteriors exactly and is inverted by comparison at the integer indices. The final equivalence with P47 uses the analytic bridge of 038–039.
+Direct antecedent: [039, barrier and interpolation](ROUND_039_A.md). There one interpolates between contiguous samples and needs an accumulated sum or an infinite tail. Here one subtracts the homogeneous interpolation between two samples at macroscopic logarithmic distance. The subtraction annihilates both exteriors exactly and is inverted by comparison at the integer indices. The final equivalence with P46 uses the analytic bridge of 038–039.
 
 For j≥2 let i=floor(j/2), m=2j, l=4 log i, r=4 log j, u=4 log m and b=3/2. Put
 A=sinh(b(u−r))/sinh(b(u−l)), B=sinh(b(r−l))/sinh(b(u−l)). Define a weight w on [i⁴,m⁴] by
@@ -35,7 +35,7 @@ f(t)=Σ_{m≥1} μ(m)W(mt) by finite inversion at each t>0. For each prime p, at
 
 If Df≤W, the continuous difference then has an interval [a,b]⊂(0,∞) on which it is at least η>0. The primes in [ax,bx] cost, in the normalisation of 044, at least η(θ(bx)−θ(ax))/√x up to endpoints, of order √x by the prime number theorem. Even if minoration is required only at the prime samples of all large even j, the same theorem and continuity imply global minoration. The constant is not uniform over profiles. Outside this discard remain scale-dependent profiles and methods that evaluate the signed remainder.
 
-Targeted cross-check with 040, P47 thm:band (moving band necessary), phase 200 SPEC_SIGN_OBJECT_003 (annihilators of the sum via Mellin) and POWER_INTERIOR_SCALE_030 (singularities under Möbius dilation). The proof specific to the band uses the collision of its three corners and divisibility by 4.
+Targeted cross-check with 040, P46 thm:band (moving band necessary), phase 200 SPEC_SIGN_OBJECT_003 (annihilators of the sum via Mellin) and POWER_INTERIOR_SCALE_030 (singularities under Möbius dilation). The proof specific to the band uses the collision of its three corners and divisibility by 4.
 
 For fixed supports [a,b] with a>0 there is, moreover, an *integral* loss uniform in f. Denote by g the inverse of W above, and choose I=[l,h]⊂(0,a) with ∫_I|g|>0, possible by the corners and continuity. For V=W−Df≥0, B=max(b,16), the inversion of V on I equals g and only sums m≤B/l. By change of variable and positivity,
     

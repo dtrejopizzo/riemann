@@ -1,16 +1,16 @@
 # CA_I_001 — Markov structure of the window form, Krein–Rutman, and the "Markov for all T" rigidity theorem (seeds I1, I2, I3, I10)
 
 Phase 193. Pen and paper; **no numerics**.
-NO-GO / REF-D. **No sign contact. No negative value for ζ.** Checked against P47 eq:form, def:quartetmodel, prop:quartetmodel,
+NO-GO / REF-D. **No sign contact. No negative value for ζ.** Checked against P46 eq:form, def:quartetmodel, prop:quartetmodel,
 lem:shape-quartet, def:shape-ops.
 
 ## 0. Setting
-I_T = [−T,T]; F ∈ L²(I_T) real, extended by 0; c_F(u) = ∫F(t)F(t+u)dt; 𝒩_T = {n ≥ 2 : log n < 2T}; v_n = 2Λ(n)n^{−½} (P47 normalization).
+I_T = [−T,T]; F ∈ L²(I_T) real, extended by 0; c_F(u) = ∫F(t)F(t+u)dt; 𝒩_T = {n ≥ 2 : log n < 2T}; v_n = 2Λ(n)n^{−½} (P46 normalization).
 **Lévy–Khintchine form of the archimedean symbol (CITED: phase-60 H1_PROOF Lemma A, "Ω CND", P60-1 of the index).** m(τ) = m(0) + 2∫_0^∞(1 − cos τu)ν(u)du
 with ν(u) = κ·e^{−u/2}/(1 − e^{−2u}) > 0 for all u > 0 (κ > 0 a normalization constant; ν(u) ~ κ/(2u) at 0, ν(u) ≤ Cκe^{−u/2} at ∞; ν decreasing).
 Since (1/2π)∫(1 − cos τu)|F̂|² = ‖F‖² − c_F(u) = ½∫(F(t) − F(t+u))²dt, the window form on L²(I_T) is
   **𝔞_T(F) = m(0)‖F‖² + ∫_0^∞ ν(u)∫_ℝ(F(t) − F(t+u))²dt du − Σ_{n∈𝒩_T} v_n c_F(log n)**,   (0.1)
-the polar term vanishing on 𝒫_T = {∫Fe^{±t/2} = 0} (P47). Domain 𝒟_T = {F : arch part finite} (log-Sobolev); compact resolvent (P47).
+the polar term vanishing on 𝒫_T = {∫Fe^{±t/2} = 0} (P46). Domain 𝒟_T = {F : arch part finite} (log-Sobolev); compact resolvent (P46).
 λ₀(T) := min 𝔞_T on L²(I_T) (unconstrained), λ_A(T) := min 𝔞_T on 𝒫_T, h₀, h* unit minimizers.
 
 ## 1. Theorem 1 (Markov structure; PROVED from the CITED Lévy–Khintchine form)
@@ -31,7 +31,7 @@ This re-derives P60-1 (simplicity) in the window normalization; P60-1 recorded a
 positive regime: h* = R(λ_A)(β·φ) with R(λ_A) not positivity preserving. (c) The constrained operator P_TA_TP_T is not Markov: P_T is not
 positivity preserving (it maps φ₊ + φ₋ ≥ 0 to 0 and maps positive bumps near the edge to sign-changing functions).
 *Proof.* (a) standard: R(μ) = ∫_0^∞e^{μs}e^{−sA}ds. (b) Thm 1(iii). (c) direct. ∎
-**Reading.** The Weinstein–Aronszajn count n₋(A|𝒫) = n₋(A) − n₋(𝔊(0)) (A invertible) is the polar-capacity restatement 𝔊_T of P47
+**Reading.** The Weinstein–Aronszajn count n₋(A|𝒫) = n₋(A) − n₋(𝔊(0)) (A invertible) is the polar-capacity restatement 𝔊_T of P46
 (retry, REF-D). Krein–Rutman sign information lives below λ₀ < λ_A and does not transfer.
 
 **Proposition 1.2 (comparison, seed I10; PROVED).** (a) For combs a ≤ a′ pointwise (both ≥ 0), λ₀(T;a′) ≤ λ₀(T;a): the minimum is attained
@@ -41,7 +41,7 @@ F ↦ c_F(log n) has both signs with infinite multiplicity on every subspace of 
 (b) is the concavity of CA_B_008 (retry); recorded only because it makes {a : λ_A(T;a) ≥ 0} convex.
 
 ## 2. Theorem 2 (the Markov class proves nothing; NO-GO, PROVED)
-Let 𝒦_M be the deduction class (P47 def:shape-class) whose properties are any of: positivity preservation / Beurling–Deny (i), irreducibility,
+Let 𝒦_M be the deduction class (P46 def:shape-class) whose properties are any of: positivity preservation / Beurling–Deny (i), irreducibility,
 Perron–Frobenius ground state, nonlocal maximum principle (A − μ ≥ 0 on positive cone for μ < λ₀), domination comparisons, parity
 invariance, the Tate constraint data, and every class-generic minimizer property of CA_I_000 I0(a) (simplicity, real-rootedness of ĥ*,
 ≥ 2 sign changes (§4), node continuity, Hadamard edge principle). Then 𝒦_M is closed under O2 with c > 0 at a prime power n₀ (and under
@@ -59,7 +59,7 @@ positive comb mass only strengthens it while destroying the sign. The qualitativ
 ## 3. Theorem 3 (rigidity: "Markov for all T" separates ζ from O7 and O9; PROVED, one CITED input)
 Let E be a nonconstant real rational function with E(s) = E(1 − s) such that ξE is entire. The window form of ξE is
 𝔞^E_T(F) = 𝔞_T(F) + ∫_ℝ c_F(u)K_E(u)du, K_E(u) := Σ_ρ m_ρ e^{(ρ−½)u} (ρ over zeros and poles of E, m_ρ = ± multiplicity)
-(the quartet case E = [((s−½)² − z²)((s−½)² − z̄²)]^k gives K_E = kβ_z, P47 def:quartetmodel; general E: same explicit-formula bookkeeping,
+(the quartet case E = [((s−½)² − z²)((s−½)² − z̄²)]^k gives K_E = kβ_z, P46 def:quartetmodel; general E: same explicit-formula bookkeeping,
 K_E bounded on [−2T,2T] so 𝔞^E_T is a bounded perturbation, closed with compact resolvent). Then:
 **there is T_E < ∞ such that for every T ≥ T_E the form 𝔞^E_T violates the Beurling–Deny criterion (its semigroup is not positivity preserving).**
 In particular every quartet model ξ_{z,k} (k ≥ 1, any z) and every FE-preserving entire polynomial or zero-removing twist of O9 is non-Markov at
@@ -129,9 +129,9 @@ additive/analytic half (a.c. kernel = ν), so 𝖯⋆ uses + and · side by side
 | Cor 6 | new | (1)(10)(11) met as separation | P2 ✗ (no inequality) | all but O13/O14 | — | — | — | — | **yes** | — | side by side |
 
 ## 8. Self-review
-1. *Is (0.1) P47's form?* The Lévy representation of m is CITED from phase 60 (with its κ); only the sign of ν and its decay to 0 are used, so κ and
+1. *Is (0.1) P46's form?* The Lévy representation of m is CITED from phase 60 (with its κ); only the sign of ν and its decay to 0 are used, so κ and
    the exact constant m(0) are irrelevant. The polar term is absent on 𝒫_T but present on L²(I_T); Thm 1 is about the form on L²(I_T) without the
-   polar term. If P47's form on L²(I_T) includes the rank-2 polar term, it adds −|∫Fe^{t/2}|·|∫Fe^{−t/2}|-type terms with positive kernel
+   polar term. If P46's form on L²(I_T) includes the rank-2 polar term, it adds −|∫Fe^{t/2}|·|∫Fe^{−t/2}|-type terms with positive kernel
    e^{(t+s)/2}...: its off-diagonal kernel is a positive rank-2 kernel and would break Beurling–Deny. Hence Thm 1 is stated for the form **without**
    the polar term, which agrees with 𝔞_T on 𝒫_T (and Prop 1.1 treats the constraint separately). MAJOR caveat recorded, not an error.
 2. *Thm 3 uses ξ(σ) > 0 on ℝ.* This is zero information of the most classical kind (no real zeros); it is used only to exclude net real poles of E,

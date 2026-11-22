@@ -1,6 +1,6 @@
 # L2_BUILD_018 — Review
 
-Reviewed with pen and paper against Paper 47 §2–3, N_BUILD_001 (A), and N_BUILD_011 plus its review.
+Reviewed with pen and paper against Paper 46 §2–3, N_BUILD_001 (A), and N_BUILD_011 plus its review.
 
 ## 1. Reduction (★): CONFIRMED, with one FIX in the conventions
 - N_BUILD_011 defines 𝔞^λ_T = 𝔞_∞ − ∫_{(0,2T)} Re c_F dλ and 𝔞^{ρ_κ}_T = (1/2π)∫g_κ|F̂|² on P_T ∩ D_T (via N_BUILD_001 (A): ∫₀^{2T}2κe^{u/2}Re c_F = −κ𝔭). Write ν = ρ_κ + (ν − ρ_κ). Then Re c_F(u) = (1/2π)∫cos(τu)|F̂|² and Fubini give 𝔞^ν_T = (1/2π)∫[g_κ − Re E]|F̂|², with E = ∫e^{iτu}d(ν−ρ_κ) on the window. The factor is right, and the cos convention matches Re of exp. No boundary or polar term is missing: the polar term is already inside g_κ via (A), and that step uses the P_T constraint. A pointwise bound Re E ≤ g_κ − η is sufficient.

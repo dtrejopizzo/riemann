@@ -41,7 +41,7 @@ Grep of `05-meta-and-planning/ROUTES-TRIED-INDEX/README.md`, done in this sessio
 | "Kronecker" | l.61, 249, 263, 286 | "no measure on log ℚ gives 𝔞_T" (INV_C Thm 4); measure concentrated on the Kronecker line ι(ℝ), without Schur factorization (PROVED); "Kronecker minus Haar on the solenoid"; "monoid symmetries do not preserve the Kronecker line; additive/multiplicative frustration" |
 | "Weyl" | l.391, 536 | Weil character (INV_D); N2 functionals of g* = Theorem X |
 | "Bohr" | l.422 | BARRIER_D1 (Hamburger with sign) |
-| "m≈kn", "coincidence" | l.78, 120, 161, 390, 540, 541 | near-coincidence part of [Ξ(log(m/k))] (Paper 47 problem (S)); phase 190, near-coincidence matrix experiment; R11_1_CUTS: "Λ∗1=log, r(p)r(q)=r(pq), support on p^k … are equalities between DATA" |
+| "m≈kn", "coincidence" | l.78, 120, 161, 390, 540, 541 | near-coincidence part of [Ξ(log(m/k))] (Paper 46 problem (S)); phase 190, near-coincidence matrix experiment; R11_1_CUTS: "Λ∗1=log, r(p)r(q)=r(pq), support on p^k … are equalities between DATA" |
 | "Theorem X", "W-pat" | l.536, l.50 | walls W-lin…W-pat; N2 = Theorem X / restr. 11 |
 | "Λ∗1" | l.149, 541 | "the comb only enters via Λ∗1=log linear (W7)" |
 | "−ζ′" | l.527 (Z_CARRIER_001) | "Z_log = −ζ′" |
@@ -145,7 +145,7 @@ So on P_T, neither Poisson nor the origin distinguishes a_P from ζ. The questio
 a_P(s) := ζ(s)·∏_{p∈P}(1 − p^{−s}). Then −a_P′/a_P = −ζ′/ζ − Σ_{p∈P} Σ_{k≥1} (log p) p^{−ks}, i.e.
 Λ_{a_P} = Λ·1[n is not a power of a p ∈ P].
 
-**Lemma B.1 (PROVED, linearity; def:W convention of Paper 47).** Let 𝔞^{L}(g) be the window form with fixed archimedean
+**Lemma B.1 (PROVED, linearity; def:W convention of Paper 46).** Let 𝔞^{L}(g) be the window form with fixed archimedean
 term and fixed polar term and the comb subtracted with a minus sign. For g ∈ P_T (A = B = 0), the polar term vanishes
 (C-pol), and
 
@@ -157,7 +157,7 @@ must be verified against the paper's definition (see the risk). ∎
 
 *Normalization risk.* If prop:shape-eulerdel includes, in 𝔞^{a_P}, the "trivial zeros" of (1 − p^{−s}) on Re s = 0
 as an additional term, the identity gains an explicit diagonal term per prime. This must be checked against def:W/eq:nuw
-before integrating it into Paper 47 (rule).
+before integrating it into Paper 46 (rule).
 
 **Lemma B.2 (PROVED, elementary).** Let p be prime and T > ½ log p + η, η > 0. The Hermitian form g ↦ 𝔠_p(g) is indefinite
 on P_T: there exist g_± ∈ P_T with ±𝔠_p(g_±) > 0.
@@ -224,7 +224,7 @@ C-MvN, and the 201 rule (channel + falsifier).
 **Object.** 𝔐_T := the matrix (or graph) of pairs (m, n) in the support of ν with |log m − log n| < π/T and m, n ≤ e^{2T}.
 Its spectrum or its number of components is proposed as the sign.
 **Λ channel.** Only the positions (support), (I)+(III).
-**Index.** l.78 (Paper 47 problem (S)), l.120 (phase 190 R9: near-coincidence matrix experiment).
+**Index.** l.78 (Paper 46 problem (S)), l.120 (phase 190 R9: near-coincidence matrix experiment).
 **Proposed new reason.** Use the *generator support* instead of all of ℕ.
 **Filter.**
 - C-data: it is a datum without a free variable ⇒ branch 5.
@@ -311,7 +311,7 @@ l.281: no ±1 gauge makes 𝔸_M ferromagnetic.)
 ### C6 — First exact lemma (to fix and audit)
 
 **Lemma C-emb.1 = Lemma B.1 + Lemma B.2.** First, the identity 𝔞^{a_P} = 𝔞^ζ + Σ_{p∈P}𝔠_p on P_T, checked against
-def:W/eq:nuw of Paper 47. Second, the indefiniteness of each 𝔠_p on P_T for T > ½log p. Audit requested: (i) that the
+def:W/eq:nuw of Paper 46. Second, the indefiniteness of each 𝔠_p on P_T for T > ½log p. Audit requested: (i) that the
 archimedean term of prop:shape-eulerdel is that of ζ; (ii) that the construction of Lemma B.2 respects A = B = 0 in a
 tight window (T just above ½ log p). Risk: low on (ii), medium on (i), due to normalization.
 

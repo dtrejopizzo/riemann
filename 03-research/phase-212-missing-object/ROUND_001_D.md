@@ -17,7 +17,7 @@ Sources consulted: IDX `06_OPEN_RESIDUES_DEAD_SUBROUTES.md` R7; IDX `README.md` 
 SPEC_B; semiring principle); IDX `04_PHASES_100-189.md` (rows localized N′, R185-circ,
 G3A-R166_802); GRID §8 entries 28 and 30 of the phase 186 register; CW §3.3 (closure), §4.2 (U1), §5 and
 later appendix; P48 "Statements weaker in appearance", "The live gate", tab:signobject (hierarchical
-contact ladder); P47 lem:shape-ident, thm:shape, cor:void, prop:wit-sens, lem:degen,
+contact ladder); P46 lem:shape-ident, thm:shape, cor:void, prop:wit-sens, lem:degen,
 thm:geo-split, thm:X, thm:noimport, rem:conjunctions, rem:spec-scope; `phase-186-toolbox/R186_005`
 (with the correction of `R186_092`); `phase-185-*/R185_004`; 211 `SQUARE_COMPLETENESS_OBSTRUCTION.md` §§1–2,
 `POWER_CORPUS_OPPORTUNITY_AUDIT.md` (row "Partial completeness outside a window"), `LEDGER.md` C43,
@@ -30,7 +30,7 @@ C45, C47, `POWER_DESCENT_016.md` §2, `POWER_RECURRENCE_BOUNDARY_036.md` §7.
   total completeness identifies) and §5: "only partial completeness beyond X survives …
   OPEN; there is no candidate". The note of `R186_092` corrects item (ii) of that theorem.
 - `phase-185-*/R185_004`, Theorem U3 (deletion or identification) and Lemma 3 (exact completeness).
-- P47 thm:geo-split: positivity on a class containing Λ splits into the sign at Λ plus a
+- P46 thm:geo-split: positivity on a class containing Λ splits into the sign at Λ plus a
   rigidity property without sign.
 - 211 `SQUARE_COMPLETENESS_OBSTRUCTION.md`: a concrete family of partial completeness (perfect
   powers) contains a negative member.
@@ -227,10 +227,10 @@ alternative remains identification or polytope.
 
 **Status of case (iv)/(c).** CONDITIONAL NO-GO. By Theorem B(iv), (MS) forces
 s|W[δ](F)| ≤ a_T(F) on all of P_T. If there exists a real unit minimizer F_⋆ of a_T on P_T with
-W[δ](F_⋆) ≠ 0 and λ_A(T) < s |W[δ](F_⋆)|, (MS) is false; by P47 cor:margin1 (CITED) it suffices, for T ≥ 1,
+W[δ](F_⋆) ≠ 0 and λ_A(T) < s |W[δ](F_⋆)|, (MS) is false; by P46 cor:margin1 (CITED) it suffices, for T ≥ 1,
 s|W[δ](F_⋆)| > 4·10⁹ T e^{−15.449T}. It is the same unverified hypothesis that makes
-P47 thm:shape (A′) conditional for the amplification of one term. Without it, (MS) remains an OPEN statement
-strictly stronger than (★) at T, and by P47 thm:geo-split (CITED) its sign content is the sign
+P46 thm:shape (A′) conditional for the amplification of one term. Without it, (MS) remains an OPEN statement
+strictly stronger than (★) at T, and by P46 thm:geo-split (CITED) its sign content is the sign
 at Λ: the added part is rigidity, not mechanism.
 
 **Conclusion of §3. NO-GO (class), PROVED in cases (ii)/(a) and (iii)/(b), CONDITIONAL in (iv)/(c).**
@@ -285,7 +285,7 @@ matrices (reformulation)" in `RULES_AVOID.md` §C. It is not retried.
 | Compensation between scales without per-atom positivity; telescoping without a new bound on the remainder (memory in the project rules; 211 `POWER_DESCENT_016` §§2–4, `POWER_RECURRENCE_BOUNDARY_036` §§5–7) | No | The increment between scales is −W[Λ_≥], an indefinite form (Lemma 1); (I2) rewrites it without signing it. There is no new bound on the remainder. |
 | "There is no upward induction in T, there is no Grönwall" (CW I15, I16) | No | Positivity at T_0 does not control a_T^{Λ_<} outside the functions supported in I_{T_0}; the recursion X → X² is an upward induction. |
 | SPEC_A, exact induction by contacts (IDX README, phase 191) | No | The step X → N inherits the full margin of the window N; Theorem B(iv) further shows that any relaxation of the step to a class larger than {Λ} asks for margin, which is what SPEC_A lacked. |
-| P47 thm:geo-split and defect/continuation barrier (phase 197) | No | Theorem B(i),(iv) is an instance: positivity on Π = sign at Λ + rigidity h_Π without sign. |
+| P46 thm:geo-split and defect/continuation barrier (phase 197) | No | Theorem B(i),(iv) is an instance: positivity on Π = sign at Λ + rigidity h_Π without sign. |
 | Hierarchical contact ladder (P48 tab:signobject: generic in the comb) | No | (I2) is generic by Lemma S0. |
 | Circularity PROVED for single tests and families of powers (IDX 06 R7) | Different scope, does not avoid it | §3 treats inequalities of arbitrary degree, but only those derivable from linear partial completeness plus K; it does not extend the recorded theorem to every non-linear B. |
 | 211 LEDGER C45/C47 (ℕ at the right edge of the positive segment; no variational leverage) | No | Consistent with Theorem B(iv): a polytope Π with Λ in its relative interior asks for positivity on both sides of Λ. |
@@ -354,5 +354,5 @@ beyond X" is classified (this file, §3) and that the live residue of R7 is (P1)
 close case (iv): prove or refute, for the tower segment of Corollary C(c) with p = 2, that there exists
 F ∈ P_T with a_T(F) < 2 log 2 · |2^{−a/2} c_F(a log 2) − 2^{−(a+1)/2} c_F((a+1) log 2)|; it is a question
 about an explicit two-atom form. (3) For (P1), the only piece of the record that couples weights and
-vector in a single step is the finite Poisson–Chebyshev identity (P47 thm:PCfinite), which corresponds to
+vector in a single step is the finite Poisson–Chebyshev identity (P46 thm:PCfinite), which corresponds to
 candidate K1; K4 does not provide an object independent of it.

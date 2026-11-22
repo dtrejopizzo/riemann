@@ -18,4 +18,4 @@
 
 ## Pending for round 2
 - Verify that the architect withdraws L205.★, adopts (R1), corrects typos, prioritizes P1.c.
-- Review P2a G_kl (k≠l) against independent quadrature if it enters P47.
+- Review P2a G_kl (k≠l) against independent quadrature if it enters P46.

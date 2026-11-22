@@ -1,5 +1,5 @@
 # CA_A_005 — Review
-O-labels are Paper 47's (def. at l. 8331–8345): O2 amplification, O6 a_P, O7 quartets, O8 f_t, O9 ζR, O10 Epstein, O11 Beurling, O12 ζ_K.
+O-labels are Paper 46's (def. at l. 8331–8345): O2 amplification, O6 a_P, O7 quartets, O8 f_t, O9 ζR, O10 Epstein, O11 Beurling, O12 ζ_K.
 
 ## Verdict
 **EXCLUDED (comb-blind and test-generic: O1–O8, O11, O15 leave the inequality unchanged; (B″)); continuation to ½ is (S) — REF-D. Props 1–3 CONFIRMED; Prop 4 ARGUED. Memo's NO-GO endorsed.**

@@ -5,7 +5,7 @@ C₀δ₀ + (1−cos)-renormalized K, minus the comb Σ_{n∈N_T} v_n(δ_{log n}
 μ^{form}_T = Σ_i A_i^*A_i + Π + β₀cosh(u/2) + β₁u sinh(u/2) on (−2T, 2T), Π positive-definite.
 
 ## Corpus check
-Paper 47 def:PD (primal (P) / dual (D): certificates are EXTERIOR measures ν, supp ν ⊂ {|u| ≥ 2T}, with σ_T + ν̂ + β·ĝ ≥ c pointwise),
+Paper 46 def:PD (primal (P) / dual (D): certificates are EXTERIOR measures ν, supp ν ⊂ {|u| ≥ 2T}, with σ_T + ν̂ + β·ĝ ≥ c pointwise),
 prop:weak, thm:D1 (strong duality D_T = λ_P, finitely atomic exterior sequences), thm:Z (dual variable = explicit formula on flat-top
 tests), prop:TK + thm:N/N′/R (lattice ceilings), Theorem C (½log3). Phase 155 (TK, N, N′, "lattice never the deficit" AL′), R186_052
 Thm 3.3 (Kreĭn, CONDITIONAL). New: Prop 1 (SOS ⊂ dual class), Theorem 2 (pure-arithmetic SOS dead), §3 (the ½log3 check by hand).
@@ -18,7 +18,7 @@ Let Π̃ := Σ_iA_i^*A_i + Π, a positive-definite measure on ℝ (each A_i^*A_i
 i.e. (−ν, β) is a certificate of value 0 in the sense of def:PD (σ_T is the transform of the window measure, the exterior-supported −ν is an
 admissible dual variable). Conversely a certificate of value c ≥ 0 gives Π̃ := μ^{form} + exterior part with transform ≥ c ≥ 0 (p.d.), i.e. an
 SOS certificate with one "square". ∎
-So: **SOS certificates with a free p.d. part = the dual class (D) of Paper 47** (with Tate multipliers). By thm:D1 this class is lossless in the
+So: **SOS certificates with a free p.d. part = the dual class (D) of Paper 46** (with Tate multipliers). By thm:D1 this class is lossless in the
 limit (D_T = λ_P); no new content. Lattice ceilings (prop:TK, thm:N, N′) apply to the subclass whose exterior part is supported on a lattice
 jd; arithmetic squares produce exterior atoms at |log(n/m)| ≥ 2T — only if the A_i extend beyond the window (n or m ≥ N); with A_i supported
 on {log n : n < N} all lags |log(n/m)| < 2T are interior, the exterior part comes only from Π.
@@ -31,7 +31,7 @@ atoms at log of non-prime-power rationals cancel), for some m ≥ 0 (the δ₀-m
 Kronecker on the finitely many log p, lem:mbounds(iii)).
 (ii) The remainder μ^{form} − 𝔐 = (archimedean measure) − mδ₀ must be (p.d. continuous) + Tate on the window, so the archimedean form minus
 m‖F‖² is ≥ 0 on P_T: λ_{∞,P}(T) ≥ m ≥ A_T.
-(iii) Hand bound. prop:arch(ii) (PROVED in Paper 47 without computation) gives λ_{∞,P}(T) ≤ C₀ + φ((3π/2T)²), φ(x) = Σ_{k≥0}
+(iii) Hand bound. prop:arch(ii) (PROVED in Paper 46 without computation) gives λ_{∞,P}(T) ≤ C₀ + φ((3π/2T)²), φ(x) = Σ_{k≥0}
 x/(a_k(x+4a_k²)), a_k = k + ¼. For T ≥ ½log 3: N_T ∋ 2, so A_T ≥ v₂ = 2log2/√2 = 0.980 (the contact 3 enters only for T > ½log3, then A_T ≥ 2.248), and (3π/log3)² = 73.6, φ(73.6) ≤ 5.70 (hand
 summation: 3.99, 0.737, 0.349, 0.195, 0.119, 0.076, 0.052, 0.037, 0.027, 0.021, 0.016, tail ≤ 0.083), so λ_{∞,P}(½log3) ≤ 0.33 < 0.980 ≤ A_T.
 For T ≥ ½log 3 the comparison only improves (λ_{∞,P} nonincreasing, A_T nondecreasing).

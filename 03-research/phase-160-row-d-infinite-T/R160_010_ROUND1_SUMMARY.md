@@ -29,7 +29,7 @@ memo was accepted as complete. The highest score was 3/10 (C3).
 
 ## Structural lesson of round 1
 The panel's most frequent objection: **every identity holds verbatim for Λχ₂, Ξ_a, DH or the comb models.** The
-routes that failed never contained a line that uses a ζ-specific datum (P46 T2: A3 together with A7/A8/A9;
+routes that failed never contained a line that uses a ζ-specific datum (P47 T2: A3 together with A7/A8/A9;
 unimodularity; the exact Λ(2)).
 
 On the object side, two theorems pin down what a future carrier must violate:
@@ -45,5 +45,5 @@ positivity**. Neither class has a candidate on record.
 | D1 | construct a Torelli-failing Hodge-preserving lamination (the first non-excluded carrier), or prove the lamination Teichmüller lemma that closes the Deninger–Singhof L² route | C1 OS-1, PA lead 1 |
 | D2 | construct a NON-homogeneous positive structure on Meyer's H¹ (the exact hypothesis Thm H says an object must violate), with the transfer clause to W_T | C3 Thm H, PA lead 2 |
 | D3 | the exact per-window converse for ζ at T > 0.8: under RD_T, W_*(Y_1) ≥ ⟨(𝔞_T\|P_T)^{-1}b_T, b_T⟩, radical-based | M4 O-2, PC lead 1 |
-| D4 | a separating-datum mechanism: a positivity statement whose load-bearing line provably fails for Λχ₂, Ξ_a, DH and the comb models at once (P46 T2: A3 + A7/A8/A9, unimodularity, exact Λ(2)) | the structural lesson above |
+| D4 | a separating-datum mechanism: a positivity statement whose load-bearing line provably fails for Λχ₂, Ξ_a, DH and the comb models at once (P47 T2: A3 + A7/A8/A9, unimodularity, exact Λ(2)) | the structural lesson above |
 | D5 | the spectral picture of A_T on L²(I_T): λ₀ = −(1+o(1))e^T, F*_T → φ_ev (pole/Perron direction); then the second eigenvalue on the complement, where the sign lives | PB lead 3 |

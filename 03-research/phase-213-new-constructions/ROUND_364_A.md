@@ -15,4 +15,4 @@ Take a fixed height T with 1+a(1/4−T²)/2≤1/2, avoiding ordinates of poles o
 
 **Proved range.** For β∈[1/2,1], Re Φ_a(β+iγ)≤1+a(1/4−γ²)/2. When a≥1/(G²−1/4), every ordinate above G is below the threshold and there are no zeros off the line up to G. For the family a→0, each zero with β>1/2 would end up violating the condition because Re Φ_a(ρ)→β.
 
-**Antecedent and limit.** 142 already studies the pole rates with variance proportional to log x. Here the prime cut depends on x and the estimate and its inverse are uniform in the corridor of the full product of 360. The verified branch uses a previously known height; it enlarges neither that height nor the support window of paper 47.
+**Antecedent and limit.** 142 already studies the pole rates with variance proportional to log x. Here the prime cut depends on x and the estimate and its inverse are uniform in the corridor of the full product of 360. The verified branch uses a previously known height; it enlarges neither that height nor the support window of paper 46.

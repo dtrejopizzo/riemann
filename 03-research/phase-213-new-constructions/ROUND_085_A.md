@@ -12,7 +12,7 @@ The full comb and the polar term are kept. There is no prior filter on the numer
 
 Take σ=128. Then each x_j=σ/v_j≤1/4 and Σx_j≤1/4. Since log((1+x)/(1−x))≤2x/(1−(1/4)²), the product has square ≤exp(16/15)<3. This step allows many poles without the cost depending on their number.
 
-**L≥1/64.** One has ||g||²≥1−3 exp(−2σL)≥1−3e^(−4). By Cauchy, ||g||₁²≤3/(2σ); thus the Fourier mass in |ξ|≤32 is ≤(32/π)3/256=3/(8π). P47 lem:mbounds and monotonicity give m(0)>−6 and m(32)>3/2 (the lower digamma bound there is log(32/(2π))−1/32−1/(2·32²)). Hence Arch(g)≥(3/2)||g||²−(15/2)3/(8π). The two polar moments have product of modulus ≤3/√((2σ)²−1) by weighted Cauchy. For u≥0, |c_g(u)|≤√3 exp(−σu) by Cauchy on the shifted tail and ||g||≤1. The absolute cost of the comb is ≤2√3 Σ_{n≥2}(log n)n^(−128.5)<1/1000 (use log n≤n and integral comparison from 2). Altogether W(g)>0.48 in this normalization and hence W(g)>||g||²/4.
+**L≥1/64.** One has ||g||²≥1−3 exp(−2σL)≥1−3e^(−4). By Cauchy, ||g||₁²≤3/(2σ); thus the Fourier mass in |ξ|≤32 is ≤(32/π)3/256=3/(8π). P46 lem:mbounds and monotonicity give m(0)>−6 and m(32)>3/2 (the lower digamma bound there is log(32/(2π))−1/32−1/(2·32²)). Hence Arch(g)≥(3/2)||g||²−(15/2)3/(8π). The two polar moments have product of modulus ≤3/√((2σ)²−1) by weighted Cauchy. For u≥0, |c_g(u)|≤√3 exp(−σu) by Cauchy on the shifted tail and ||g||≤1. The absolute cost of the comb is ≤2√3 Σ_{n≥2}(log n)n^(−128.5)<1/1000 (use log n≤n and integral comparison from 2). Altogether W(g)>0.48 in this normalization and hence W(g)>||g||²/4.
 
 **0<L<1/64.** Here there are no prime contacts. Independently of the rates, ||g||₁²≤L||g||², and the low mass is ≤32L||g||²/π. The polar term costs at most 2L exp(L/2)||g||². Hence
     

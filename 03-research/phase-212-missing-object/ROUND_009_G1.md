@@ -2,13 +2,13 @@
 
 Phase notation: a_T(F) = Arch(F) − Σ_n v_n c_F(log n), v_n = 2Λ(n)/√n, F real, supp F ⊂ [−T,T], F ∈ P_T.
 N_T: negative subspace of Arch on P_T (does not depend on the weight), non-trivial for T above the archimedean
-threshold (Paper 47 cor:Tarch; threshold in [0.58, 0.60]).
+threshold (Paper 46 cor:Tarch; threshold in [0.58, 0.60]).
 
 ## 0. Preliminary cross-check (in primary sources and in the index)
 
 What the corpus already has on N_T and on the contacts as a source:
 
-- Paper 47 cor:Tarch and Theorem P (n₋ ≤ 5/7/8): N_T exists and its dimension is bounded at the first
+- Paper 46 cor:Tarch and Theorem P (n₋ ≤ 5/7/8): N_T exists and its dimension is bounded at the first
   thresholds; the integer invariants (Pontryagin index) are closed (BARRIER_W_001; index 05b).
 - phase-155 R155_029 («the primes are necessary» past ≈0.596), R155_026/032 (Schur reduction), R155_044
   (nodal explanation of the 2/3 cancellation): they describe N_T; they give no sign.
@@ -20,7 +20,7 @@ What the corpus already has on N_T and on the contacts as a source:
   the mean density of the contacts **contributes +𝔭(F) ≥ 0**: the symbol passes from m to m^♯ = m + 1/(¼+τ²). It is
   exactly «arithmetic (its main term) is a source of positivity on the negative directions
   of Arch». N_BUILD_011 Theorem 1: ρ_κ ∈ Pos ⟺ κ ≥ κ*, with κ* ≥ |C₀|/4 ≈ 1.343 > 1. The mean density alone
-  (κ = 1) does not suffice (index 06, «pointwise symbol positivity (κ=1<κ*)», NO-GO; Paper 47 thm:nolocal, W-loc;
+  (κ = 1) does not suffice (index 06, «pointwise symbol positivity (κ=1<κ*)», NO-GO; Paper 46 thm:nolocal, W-loc;
   thm:ceiling for integer densities).
 - **phase-188 L2_BUILD_017:** identity Λ = μ∗log in translation operators,
   a_T(F) = 𝔞_∞(F) − 2Re⟨U_μF, U_logF⟩ (N_BUILD_002 §1, N_BUILD_005 §1), and AM-GM-type partition certificates

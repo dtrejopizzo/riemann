@@ -1,10 +1,10 @@
 # Phase 162 — Row D: the first-contact closure
 
-at the request, after the readability revision of Paper 47.
+at the request, after the readability revision of Paper 46.
 
 ## Target (reformulation)
 
-Gate 0 (first contact). Remove the continuity hypothesis of Paper 47 lem:firstcontact.
+Gate 0 (first contact). Remove the continuity hypothesis of Paper 46 lem:firstcontact.
 Gate 1 (arithmetic). For a primitive parity first-contact vector F (H_{T_*}F=0 at the first window
 T_* where λ_A vanishes), prove directly from (PC-ren)
 
@@ -13,7 +13,7 @@ T_* where λ_A vanishes), prove directly from (PC-ren)
 using essentially: (i) minimality of T_*; (ii) the causal Poisson–Tate orientation; (iii) Λ*1=log
 at the step that forces vanishing; (iv) all collars, polar terms and Tate endpoints.
 
-Known equivalences (Paper 47 §firstcontact): R_LF=0 ⟺ ⟨F,Δ_{N,L}F⟩≤0 ⟺ Q_{N,L}(F)≥0 on the radical;
+Known equivalences (Paper 46 §firstcontact): R_LF=0 ⟺ ⟨F,Δ_{N,L}F⟩≤0 ⟺ Q_{N,L}(F)≥0 on the radical;
 the two-channel inequality ‖x‖²≤Re⟨x,j⟩ ⟺ x=0. The contraction q_0<0.236 is not a closing mechanism.
 
 ## Mandatory falsifier tests for any Gate 1 argument
@@ -22,13 +22,13 @@ the two-channel inequality ‖x‖²≤Re⟨x,j⟩ ⟺ x=0. The contraction q_0<
   λ=0 and the minimality of T_* non-perturbatively proves a falsehood.
 - F2 (orientation). The square of (PC) is invariant under A_M→−A_M (R161_099 §2); no quadratic
   estimate of (PC) alone orients the sign.
-- F3 (arithmetic). The step forcing vanishing must fail for a≠Λ with Λ*1≠log (Paper 47 thm:finmod)
+- F3 (arithmetic). The step forcing vanishing must fail for a≠Λ with Λ*1≠log (Paper 46 thm:finmod)
   and for Epstein/Davenport–Heilbronn data (functional equation, no Euler product).
 - F4 (linear limit). A linear (PC-ren) graph limit cannot prove port vanishing (R161_018).
 
 ## Files
 
-- R162_001 — continuity of λ_A (Gate 0): PROVED (R162_190), integrated in Paper 47 as lem:contA.
+- R162_001 — continuity of λ_A (Gate 0): PROVED (R162_190), integrated in Paper 46 as lem:contA.
 - R162_101–103 — round 1 fronts: three NO-GOs. R162_199 — synthesis. Gate 1 OPEN.
 - R162_201 — round 2: a new sufficient criterion for the global Sonin range. Uniform boundedness of
   the finite Euler-stripped ports `A_Y e^{Tz}G_+^0` in `H2(C_+)` forces every critical jet, hence the
@@ -117,7 +117,7 @@ the two-channel inequality ‖x‖²≤Re⟨x,j⟩ ⟺ x=0. The contraction q_0<
   ℤ from Beurling and 1 from χ₂, not unipotent-invariant.
 - R162_990 audit R7–R8: 703 L2.1, Thm 2.2 (add f(0)≠0), 802 Thm 2.1 CORRECT; 703 Prop 4.1 WRONG as iff (only ⟹);
   802 "RH ⟺ two limits" WRONG (⇐ assumes ι≡0) — label withdrawn; 803 Thm G CORRECT WITH FIXES (c=1, comb +ζ′/ζ);
-  Thm H s>½ trivial; 801 L4 monotonicity WRONG (concavity OK). Paper 47 thm:parityschur(b) wording to fix.
+  Thm H s>½ trivial; 801 L4 monotonicity WRONG (concavity OK). Paper 46 thm:parityschur(b) wording to fix.
 - Round 10: R162_1002 quasicrystal NO-GO: rigidity theorems presuppose real zeros; window form local (P1); supp log ℕ +
   Λ*1=log is a one-member class (P2); no local uniqueness (P3). Separating functional must be uniform on a family
   where ζ is not isolated.

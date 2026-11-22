@@ -4,10 +4,10 @@
 (9 s, README in `scripts/r8d/`). Labels: PROVED / DIAGNOSTIC / HEURISTIC / OPEN. Pure mathematics; the script
 checks constants only.*
 
-**Notation (Paper 47 §1, kept exactly).** `I_T = (−T,T)`, `F̂(τ) = ∫F e^{iτt}`, `c_F` the autocorrelation,
+**Notation (Paper 46 §1, kept exactly).** `I_T = (−T,T)`, `F̂(τ) = ∫F e^{iτt}`, `c_F` the autocorrelation,
 `m(τ) = Re ψ(¼+iτ/2) − log π`, `σ_T = m − Σ_{n∈N_T} v_n cos(τ log n)`, `v_n = 2Λ(n)/√n`, `N_T = {n ≥ 2 : log n < 2T}`,
 `𝔞_T(F) = (1/2π)∫σ_T|F̂|²`, `A(F) = ∫F e^{t/2}`, `B(F) = ∫F e^{−t/2}`, `P_T = {A = B = 0}`,
-`W_T(F) = 𝔞_T(F) + 2Re(A B̄)`, `Φ_F(s) = ∫F(t)e^{(s−½)t}dt`. Paper 47 writes **`λ^A(T)`** for the bottom of `𝔞_T` on
+`W_T(F) = 𝔞_T(F) + 2Re(A B̄)`, `Φ_F(s) = ∫F(t)e^{(s−½)t}dt`. Paper 46 writes **`λ^A(T)`** for the bottom of `𝔞_T` on
 the unit sphere of `P_T` (the quantity the orders call `λ^P(T)`), `λ^P ≤ λ^A` for the bottom over the larger class
 `𝒦_prim` (`thm:A`), and `λ^W ≤ λ^P` for the complete form on `L²(I_T)` (`rem:Kprim`). **Every upper bound below is
 proved for `λ^A` by an explicit `F ∈ P_T` and therefore holds for all three: `λ^W(T) ≤ λ^P(T) ≤ λ^A(T) ≤ 𝔞_T(F)/‖F‖²`.**
@@ -22,20 +22,20 @@ proved for `λ^A` by an explicit `F ∈ P_T` and therefore holds for all three: 
 * `R155_053` Prop. 4.1 (PROVED): `RH ⟺ lim_{T→∞} λ^W_T ≥ 0`; **`λ^W ↓ 0` is there labelled HEURISTIC (Zhu's law).**
  Theorem 1 below upgrades that HEURISTIC to PROVED, with a rate, and adds the unconditional `limsup ≤ 0`.
  `R155_053` Prop. 4.3 (`limsup λ^A ≤ C₀ − A_S` for *finitely supported* combs) is a different object (a fake comb).
-* Paper 47 `cor:mono`: `λ^P` nonincreasing at fixed contact set; upper bound `C₀ + A_T + φ((3π/2T)²)`, positive
+* Paper 46 `cor:mono`: `λ^P` nonincreasing at fixed contact set; upper bound `C₀ + A_T + φ((3π/2T)²)`, positive
  (`1.291`, `2.327`) and growing like `4e^T` — useless for decay. `main.tex:2735` (Zhu's Landau–Widom conjecture
  `−log λ ≍ e^{2T}`), `§9.3` item 4 (non-induction in `T`), `rem:galerkin` (no value at `log 2`). `R155_047`,
  `00-references/PROLATE-REFERENCES.md`: Landau–Widom only as a cited asymptotic, never used in a proof.
 * Paper 45 Thm 9.4 (explicit formula, `PROVED` there for real `F ∈ C_c^∞`), Thm 10.4 (sufficiency of primitive
- tests; if RH fails some compactly supported primitive `F` has negative Weil form). Paper 46 import (X19).
+ tests; if RH fails some compactly supported primitive `F` has negative Weil form). Paper 47 import (X19).
 
 ## 1. Imports (all labelled; nothing about zeros is asserted otherwise)
 
-* **(X19)** [Paper 46 §12 table; Rosser–Yohe–Schoenfeld 1968; Platt–Trudgian 2021]: `ρ₁ = ½ + iγ₁`,
+* **(X19)** [Paper 47 §12 table; Rosser–Yohe–Schoenfeld 1968; Platt–Trudgian 2021]: `ρ₁ = ½ + iγ₁`,
  `γ₁ = 14.134725141734…`, is a simple zero on the line; `ξ` has no zero `ρ ≠ ρ₁, ρ̄₁` with `|Im ρ| ≤ 21`. Only
  `γ₁ ∈ [14.13, 14.14]` and the gap `(γ₁, 21]` are used from this clause.
 * **(X19′)** [same source, D. J. Platt and T. S. Trudgian, *The Riemann hypothesis is true up to `3·10¹²`*, Bull.
- LMS 53 (2021), 792–797; **a clause Paper 46 did not import, recorded here as a separate import of record**]:
+ LMS 53 (2021), 792–797; **a clause Paper 47 did not import, recorded here as a separate import of record**]:
  every zero with `|Im ρ| ≤ H₀ := 3·10¹²` lies on the critical line. Used in step (4) of Theorem 1 only; it
  affects the bound by a factor `1 + 10^{−70}` (the `e^{T}` price of an off-line zero starts at height `H₀`).
 * **(X-N)** [J. B. Rosser, *Explicit bounds for some functions of prime numbers*, Amer. J. Math. 63 (1941),
@@ -48,7 +48,7 @@ proved for `λ^A` by an explicit `F ∈ P_T` and therefore holds for all three: 
  `0.45166 − 0.137/t − 0.443/(t log t) > 0`). ∎ (Script (A): Rosser's upper bound at `t = 21` is `4.06`, Trudgian's
  `4.73`, against `(21/2π)log 21 = 10.18`; slack `6.11` resp. `5.45`.)
 * **(EF)** Paper 45 Thm 9.4: for real `F ∈ C_c^∞`, `supp F ⊆ [−T,T]`, `Σ_ρ Φ_F(ρ)Φ_F(1−ρ) = 2Φ_F(0)Φ_F(1) + 𝔞_T(F)`
- in symmetric order (Paper 47 `eq:W`: `W_T(F) = Σ_ρ Φ_F(ρ)Φ_F(1−ρ)`).
+ in symmetric order (Paper 46 `eq:W`: `W_T(F) = Σ_ρ Φ_F(ρ)Φ_F(1−ρ)`).
 * **(SUF)** Paper 45 Thm 10.4, used only in Corollary 2(iii).
 
 ## 2. Lemmas
@@ -58,7 +58,7 @@ proved for `λ^A` by an explicit `F ∈ P_T` and therefore holds for all three: 
 *Proof.* For `T < T′` and `F ∈ L²(I_T)`, extend by zero: `F ∈ L²(I_{T′})`, the Tate moments are unchanged, and
 `𝔞_{T′}(F) − 𝔞_T(F) = −Σ_{n∈N_{T′}∖N_T} v_n c_F(log n) = 0` because `c_F` is supported in `[−2T,2T]` and `log n ≥ 2T`
 for the new contacts. Hence `P_T ⊂ P_{T′}` isometrically with the same form values. Same for `𝒦_prim` (`c_F`
-unchanged) and for `W_T` (`A, B` unchanged). ∎ (Paper 47 `cor:mono` states this at fixed contact set; `§9.2` end
+unchanged) and for `W_T` (`A, B` unchanged). ∎ (Paper 46 `cor:mono` states this at fixed contact set; `§9.2` end
 states it for `λ^W` on the dual side.)
 
 **Lemma 2 (explicit formula for rough tests; PROVED).** Let `F ∈ L²(I_T)` be real with
@@ -154,7 +154,7 @@ to `2·21/e`. (b) The exponent is set by the *gap edge* `H` beyond the last kill
 
 Script (B), exact `min_{k≥5} B(T,k)` of (3.1):
 
-| `T` | `k_opt` | `21T/e` | **PROVED bound on `λ^A(T)` (hence `λ^P`, `λ^W`)** | Paper 47 `cor:mono` bound | consistency |
+| `T` | `k_opt` | `21T/e` | **PROVED bound on `λ^A(T)` (hence `λ^P`, `λ^W`)** | Paper 46 `cor:mono` bound | consistency |
 |---|---|---|---|---|---|
 | `½ log 3 = 0.5493` | 5 | 4.24 | `4.75·10⁴` | `1.291` | `≥ 8.8577·10⁻⁵` (Thm C) ✓ (vacuous) |
 | `log 2 = 0.6931` | 6 | 5.35 | `3.13·10³` | `2.327` | vacuous |
@@ -173,7 +173,7 @@ Crossings: `B = 1` at `T = 1.226`; `B = 8.8577·10⁻⁵` at `T = 1.852`; `B = 1
 
 ### 3.3 Where Theorem 1 sits
 
-* **Trivial half of Zhu.** Zhu's Conj. 12.1 (arXiv:2608.24827; Paper 47 `main.tex:2735`) is `−log λ ≍ e^{2T}`.
+* **Trivial half of Zhu.** Zhu's Conj. 12.1 (arXiv:2608.24827; Paper 46 `main.tex:2735`) is `−log λ ≍ e^{2T}`.
  Theorem 1 gives `−log λ^A ≥ 15.449T − log(4·10⁹T)`: **linear, not exponential, in `T`** — exponentially weaker than
  the conjectured law; it is the direction that does not need the zeros' positions beyond height `21`. It is *not*
  evidence for the law; it only shows the margin is not bounded below.
@@ -230,7 +230,7 @@ which **tends to `+∞`**: Route A yields an upper bound of the shape `C₀ + O(
 than `cor:mono` for large `T` and never `→ 0`. With only `|comb| ≤ A_T` and exact `m`, the best Route-A bound is
 `inf_{P_T}(1/2π)∫(m + A_T)|F̂|² = λ^{∞,P}_{min}(T) + A_T → C₀ + A_T ∼ 4e^{T}` (`R155_023` Thm 1), also `→ +∞`. Any
 prime-side proof that `λ^A(T) → 0` must therefore bound `∫e^{−u/2}c_F\,dE` by `o(‖F‖²)` for some `F ∈ P_T`, which by
-Lemma 2 is a statement about `Σ_ρ Φ_F(ρ)Φ_F(1−ρ)` — Paper 47 `§9.3` item 5 in the present setting. **Route A is
+Lemma 2 is a statement about `Σ_ρ Φ_F(ρ)Φ_F(1−ρ)` — Paper 46 `§9.3` item 5 in the present setting. **Route A is
 closed; Route B is the only route, and Theorem 1 is its output.**
 
 ## 5. Consequences
@@ -250,7 +250,7 @@ gives a compactly supported primitive `F`, `supp F ⊆ [−T₀,T₀]`, with `�
 it is `0` under RH with the explicit rate (3.2) — the HEURISTIC `λ^W ↓ 0` of `R155_053` is now PROVED —
 and unconditionally `limsup ≤ 0`. Whether `L^A = −∞` when RH fails (Bombieri-type amplification of an off-line
 zero) is not on record: `OPEN` (the corpus's converse is non-effective, `R155_053 §3`).
-(iv) *Certificates must be exponentially precise.* By weak duality every dual feasible point `(ν, β)` of Paper 47 at
+(iv) *Certificates must be exponentially precise.* By weak duality every dual feasible point `(ν, β)` of Paper 46 at
 window `T` has `inf_τ f ≤ λ^P(T) ≤ B(T,k)`; every flat-top certificate of `thm:Z` has `inf_τ Σ_ρ ŵ(τ−γ_ρ) ≤ B(T,k)`.
 At `T = 3` this is `2.7·10⁻¹²`, while the certificate must stay `≥ 0` on `[0, 2πe^{A_T}]`, `A_3 ≈ 80`. This is the
 quantitative form of `§9.3` item 4 (*not an induction upward in `T`*): the target at `T′ > T` is not "the same
@@ -258,7 +258,7 @@ inequality with more contacts" but an inequality whose admissible slack has shru
 and by `exp(−c(e^{2T′} − e^{2T}))` if Zhu is right. A `T`-uniform argument can only be an argument for `≥ 0` with no
 room, i.e. an argument that is *exact* in the limit — consistent with `§9.3` item 1 (*not an identity*) only if the
 approximation error itself is controlled by the same decaying scale.
-(v) *For the reverse track.* Combined with Thm finZ (Paper 47 §7): no finite zero set carries a certificate, and now
+(v) *For the reverse track.* Combined with Thm finZ (Paper 46 §7): no finite zero set carries a certificate, and now
 no certificate at any window carries a margin larger than `B(T,k)` — the two ends of the same fact, that positivity
 of `W` is a property of the *infinite* zero measure with *no slack*.
 
@@ -301,7 +301,7 @@ half of Zhu's law in a window, and it is `OPEN`.
 1. **Lemma 2 (mollification of Thm 9.4).** Relies on Paper 45 Thm 9.4 being valid at window `T+ε` for `F_ε` with
  the prime sum over `n < e^{2T+2ε}`; and on `|Φ_{η_ε}(s)| ≤ e^{ε/2}` in the strip (`|Re s − ½| < ½`). Check that
  Thm 9.4's sum is over *all* nontrivial zeros with multiplicity (yes, `Lemma 9.2` contour) and that the
- `2Φ_F(0)Φ_F(1)` convention matches Paper 47 `eq:W` (`A B̄` with `A = Φ_F(1)`, `B = Φ_F(0)`). The DIAGNOSTIC
+ `2Φ_F(0)Φ_F(1)` convention matches Paper 46 `eq:W` (`A B̄` with `A = Φ_F(1)`, `B = Φ_F(0)`). The DIAGNOSTIC
  zero-sum check (§3.4) agrees to `10⁻⁵`, so the normalisation is right numerically.
 2. **Step (5), off-line zeros.** Uses `|β| < ½` (the critical strip; `E2`-type import that no zero has `Re ρ ∉ (0,1)`
  is standard and is already in Paper 45's import list) and `H₀` from (X19′). The term is `< 10⁻⁷⁰` relative, so any
@@ -342,7 +342,7 @@ half of Zhu's law in a window, and it is `OPEN`.
 **Labels.** Lemmas 1–5, Theorem 1, Corollaries 1–2(i)–(iv): PROVED (under the labelled imports (X19), (X19′), (X-N),
 (EF), (SUF)). §3.3 ceiling, §6 heuristic: HEURISTIC. §3.4 and the last column: DIAGNOSTIC. `L^A = −∞` under ¬RH, the
 Nyquist-range unconditional theorem of §6: OPEN. Row-D label unchanged; endpoint of record unchanged
-(`8.8577·10⁻⁵` at `½log3`); no sign for `ζ` at any new window; Paper 47 untouched (proposed additions: Lemma 1 as a
+(`8.8577·10⁻⁵` at `½log3`); no sign for `ζ` at any new window; Paper 46 untouched (proposed additions: Lemma 1 as a
 remark after `cor:mono`; Theorem 1 + Corollary 2(i)–(iii) as a new subsection of `§9`, replacing the HEURISTIC clause of
 `R155_053` Prop. 4.1; Lemma 5 as a remark in `§9.3` item 5).
 
@@ -364,7 +364,7 @@ audit `R155_059_AUDIT_R8D.md` applied in place; no new claims. Changes:
 4. **DIAGNOSTIC table.** `T = 2` entry flagged `≈ 8·10⁻¹⁵ (±10 %, roundoff-limited)` with the audit's panel-refinement
  scatter; the previously omitted `T = 2` zero-sum cross-check discrepancy `2.1·10⁻³` recorded in §3.4 and §8.
 5. **Import ledger.** The clause "every zero with `|Im ρ| ≤ 3·10¹²` is on the line" (Platt–Trudgian) is recorded as
- **(X19′)**, distinct from Paper 46's (X19) (which imports only `ρ₁` simple, `γ₁`, and the gap to `21`); Theorem 1
+ **(X19′)**, distinct from Paper 47's (X19) (which imports only `ρ₁` simple, `γ₁`, and the gap to `21`); Theorem 1
  steps (4)–(5) and §7 item 2 now cite (X19′).
 6. **Script/README.** Docstring "eq. (1.7)" → "(3.1)"; runtime harmonised to the measured value (README).
 

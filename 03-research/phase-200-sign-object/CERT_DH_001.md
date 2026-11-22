@@ -1,6 +1,6 @@
 # CERT_DH_001: interval certificate for a negative witness of the window form of F_DH (phase 200, round 17C)
 
-**Verifier.** Goal: upgrade the Davenport–Heilbronn falsifier from UNVERIFIED (P47 rem:FDH, "Ziad") to an
+**Verifier.** Goal: upgrade the Davenport–Heilbronn falsifier from UNVERIFIED (P46 rem:FDH, "Ziad") to an
 interval-arithmetic certificate. F_DH appears only as a
 falsifier of window-form positivity (CITED: it has zeros off the line, Davenport–Heilbronn 1936).
 Labels: everything computed is NUMERICAL except the §4 certificates, which are PROVED (arb balls, rigorous rounding).
@@ -25,7 +25,7 @@ Control: with the same template for L(s,χ₋₄) there is no negative eigenvalu
 - Index (`05-meta-and-planning/ROUTES-TRIED-INDEX/`): DH appears only as a CITED/UNVERIFIED falsifier. No
   entry contains a DH certificate. This is not a route toward D but the verification of an already-
   registered falsifier, so the no-retry rule does not apply.
-- P47 rem:FDH (l. 8334): Ziad, odd test orthogonal to sinh(x/2), support on (−9/5, 9/5), ratio −6.169·10⁻⁹ with ball
+- P46 rem:FDH (l. 8334): Ziad, odd test orthogonal to sinh(x/2), support on (−9/5, 9/5), ratio −6.169·10⁻⁹ with ball
   arithmetic, "plausible, unverified."
 - DH_TRANSFER_001 §1.3–1.4 (data and parametric form; (F-DH-ex) ARGUED with T_DH unquantified).
 - LEMMA_E_EPSTEIN_001 and its `cert_epstein.py`, and phase-198 `cert_falsifiers.py`: the pipeline whose template is reused.
@@ -153,7 +153,7 @@ N = 200 we get −6.24·10⁻⁹, very close to theirs. Ziad speaks of support o
 is on the closed window T = 9/5, and by lem:monoT it holds for every T ≥ 9/5. For T < 9/5 the question remains open (§3).
 
 **What depends on what.** The certificate is PROVED for the form defined in §2. That this form is the "window form of
-F_DH" in the sense of P47 rests on the DH_TRANSFER §1.3 verification against lem:K / eq:m / eq:Aform, which is not
+F_DH" in the sense of P46 rests on the DH_TRANSFER §1.3 verification against lem:K / eq:m / eq:Aform, which is not
 redone here. The χ₋₄ control is NUMERICAL evidence that the template is correct.
 
 ## 5. Entries for the editor
@@ -169,7 +169,7 @@ redone here. The χ₋₄ control is NUMERICAL evidence that the template is cor
 > Dirichlet series with bounded real coefficients (DH_TRANSFER's theory 𝔗₁) does not prove window positivity at any
 > T ≥ 9/5. Lower bound on T_DH: open (numerically the threshold lies in [1.6, 1.8]).
 
-**Note for P47 rem:FDH (English, to replace "we have not reproduced it; we label it plausible, unverified"):**
+**Note for P46 rem:FDH (English, to replace "we have not reproduced it; we label it plausible, unverified"):**
 > We have reproduced and certified it: in the odd sector orthogonal to $\sinh(t/2)$ at $T=\frac95$, an explicit
 > polynomial test of degree $\le259$ in $t/T$ with dyadic Legendre coefficients gives
 > $\mathfrak a^{\mathrm{DH}}_{9/5}(F)/\|F\|^2\in-7.05197470947908\cdot10^{-9}\pm4\cdot10^{-25}$ (arb ball arithmetic), and

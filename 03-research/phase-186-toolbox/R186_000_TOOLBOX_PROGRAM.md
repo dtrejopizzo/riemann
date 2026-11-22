@@ -10,7 +10,7 @@ tools that prove it. The equivalences that appear below are **equivalences betwe
 two targets are the same target and are used to choose the most constructive form.
 
 Sources: ROW-D-REDUCED-STATEMENT (§1–§4); CROSSWORD-TO-D (§1.2, §2, §3.1–3.3, Addendum);
-Paper 47 `main.tex` (thm:Z, thm:Zexh, prop:finite, prop:uniform, prop:band, prop:align, thm:P, thm:index, thm:arena,
+Paper 46 `main.tex` (thm:Z, thm:Zexh, prop:finite, prop:uniform, prop:band, prop:align, thm:P, thm:index, thm:arena,
 thm:parityschur, prop:polarcap, thm:KEP3, thm:finZ, thm:margin, cor:margin2, cor:mono, lem:monoT); Paper 48
 §sec:spec (S1–S12); R183_024, R183_028, R183_033; R185_005 (theorem BR), R185_006, R185_008; R169_101; G2_B5_R1
 (phase 159, canonical window system); R162_2701 (Tate system); grid R162_2300 §3, §5, §7.
@@ -38,7 +38,7 @@ thm:parityschur, prop:polarcap, thm:KEP3, thm:finZ, thm:margin, cor:margin2, cor
 
 ## 1. Inventory of forms of D
 
-Conventions: v_n = 2Λ(n)/√n; W_T is the full form (eq:W of P47); 𝔞_T is the primitive form on 𝒫_T;
+Conventions: v_n = 2Λ(n)/√n; W_T is the full form (eq:W of P46); 𝔞_T is the primitive form on 𝒫_T;
 λ^W_T and λ^A_T are their minima; N(T) = n₋(W_T | C_c^∞ ∩ 𝒫_T).
 
 "Method walls" lists only statements of the type **"every proof in class 𝒞 fails, because falsifier X satisfies
@@ -203,9 +203,9 @@ Hermite–Biehler.
  class "positivity of the de Branges structure of ξ via the de Branges condition" (CITED from memory; verify).
 - Missing: TB-1.
 
-**D-Hodge (P46 §5, the Hodge index in the adelic square).**
+**D-Hodge (P47 §5, the Hodge index in the adelic square).**
 - Walls: W9 (T1/T2/T5); W10 (no h⁰ with the three properties; falsifier Ξ_a); the frame-defect theorem
- (P46 Thm 19.25 and Cor 19.25b).
+ (P47 Thm 19.25 and Cor 19.25b).
 - Missing: a carrier with h⁰. Classified as the most distant.
 
 **D-qE (q_E = 0, the canonical exchange, R163_001).**
@@ -226,7 +226,7 @@ Hermite–Biehler.
 
 ### 1.4 Arithmetic forms
 
-**D-ψ (P46 W4 + thm:Z).** ψ(x) − x ≪ x^{½+ε}. This is an equivalence between forms of D, recorded in
+**D-ψ (P47 W4 + thm:Z).** ψ(x) − x ≪ x^{½+ε}. This is an equivalence between forms of D, recorded in
 ROW-D-REDUCED §1.
 - Walls:
  - I6: upper sieve, large sieve and uniform BV hold in Beurling DMV/Zhang (falsifier).
@@ -550,7 +550,7 @@ closed by theorem and the program must move up to degree ≥ 3 or non-polynomial
 | TB-3− | direct extension of R166_802 (crossword priority 2) | — | — |
 | TB-3+ | registered square (O166.802.1); **no prior candidate** | the R169 chain (A1) | Degree 2 + two scales + completeness atoms; escape I13, which is PROVED only in the single-test and power-family cases |
 | A3 (crystals with Γ background) | **new** as a formulation; Thm R (R164_401) is its closest relative | — | Use the integrality of the log ℕ support and the values log p, because DH/Epstein have integer, discrete μ |
-| 𝒱_∞ and the monotone projection | the projection is lem:monoT rewritten (not new); the object 𝒱_∞ as an inverse limit is not in P47 | — | — |
+| 𝒱_∞ and the monotone projection | the projection is lem:monoT rewritten (not new); the object 𝒱_∞ as an inverse limit is not in P46 | — | — |
 
 **Declared risks.**
 - (1) TB-1b may die from M_m on the first proof. That is desirable, because it is fast and decidable.

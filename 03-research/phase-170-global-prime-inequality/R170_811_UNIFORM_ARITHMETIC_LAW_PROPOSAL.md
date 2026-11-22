@@ -5,7 +5,7 @@ theorem and does not prove RH.
 
 **Audit update:** definition (1) contains an adjoint
 mismatch at the Tate port and the indicated regularization is
-redundant under the Paper 47 definitions. See
+redundant under the Paper 46 definitions. See
 [R170_812](R170_812_FIDC_AUDIT.md). The revised definition is in
 [R170_813](R170_813_FIDC_REVISED.md); neither sign has been proved.
 This original proposal is kept for traceability.
@@ -14,7 +14,7 @@ This original proposal is kept for traceability.
 
 A single new law is proposed: an **oriented divisor–collar incidence
 flow law** (FIDC). Its support is the finite Poisson–Chebyshev
-identity of Paper 47,
+identity of Paper 46,
 
     S_N A_M 𝓕 = {X,E_N} − L_M*E_N − JH_{M,N} − H_{M,N}𝓕,       (PC)
 
@@ -31,7 +31,7 @@ under `A_M↦−A_M`.
 ## 1. Object and exact interface
 
 Fix `T>0`, `X_T=e^(2T)` and a real vector `F`, extended by zero outside
-`I_T=(-T,T)`. Let `𝓕,J,S_N,L_M,A_M,E_N,H_{M,N}` be the Paper 47
+`I_T=(-T,T)`. Let `𝓕,J,S_N,L_M,A_M,E_N,H_{M,N}` be the Paper 46
 operators, *A sum--product identity* section. Fix `δ>0` and
 
     a_j=2j+1/2,
@@ -55,7 +55,7 @@ Here `r_F` is the unique Tate vector satisfying
 when `F` is in the primitive radical; outside the radical (1) is not
 part of the law. The second term is the crossed Tate port. In the
 expansion of (1), the parts of the translations that leave `I_T` are
-kept as the exact collars `𝓔_N` of Paper 47; they are not replaced by
+kept as the exact collars `𝓔_N` of Paper 46; they are not replaced by
 full moments. The **FIDC flux** is
 
     𝔉_{M,N,L}(F)=lim_{ε↓0}𝔉_{M,N,L}^{ε}(F),               (3)
@@ -108,7 +108,7 @@ realizes `(FIDC−)`.
 
 The quantifiers are essential. The claim is not for every `F`, nor for
 every positive eigenvector: only for a radical vector at the first
-failure scale. Paper 47 proves that an analogous sign for every
+failure scale. Paper 46 proves that an analogous sign for every
 eigenvector would be false. `L(T)` may grow; a uniform gap in `T` is
 not postulated.
 
@@ -124,16 +124,16 @@ Conditionally on (3), `(FIDC+)` and `(FIDC−)` being proved:
 
 2. The choice of `L` injective on the radical implies `F=0`, a
    contradiction. The existence of some `L(T)<∞` is already proved in
-   Paper 47 by the finiteness of `ker H_T` and the fidelity of all
+   Paper 46 by the finiteness of `ker H_T` and the fidelity of all
    Gamma moments.
 
-3. There is no primitive first contact. By the Paper 47 first-contact
+3. There is no primitive first contact. By the Paper 46 first-contact
    reduction, `𝔞_T≥0` on the primitive space for every `T`.
 
 4. The bridge between the primitive form and the full row D must then
    be cited exactly in the applicable version of the manuscript. If the
    first contact of the complete form is used instead, (1) must be
-   redone for the kernel of the polar Schur complement. Paper 47 warns
+   redone for the kernel of the polar Schur complement. Paper 46 warns
    that the complete null vector need not be primitive. **This bridge
    is a separate pending item**; FIDC, as formulated, closes the
    primitive annihilation problem, it does not resolve it by decree.
@@ -203,7 +203,7 @@ frequency, or window-based selection of `γ_q` is invoked.
    orientation. If the final expression is invariant, the forbidden
    square was reintroduced and FIDC is rejected.
 
-3. **Eigenvectors with `λ>0`.** Evaluate the flux on the Paper 47
+3. **Eigenvectors with `λ>0`.** Evaluate the flux on the Paper 46
    Galerkin data. `(FIDC+)` must not automatically extend to them; the
    identity `Q_{N,L}=-2Σ(d_{m,N}+λ)|(R_LF)_m|²` provides the sign test.
 

@@ -4,7 +4,7 @@ Pen and paper. F₀ ∈ P_{T₀} real, ‖F₀‖ = 1, c₀ = c_{F₀}; Ξ(d) = 
 IMS/Gabor is NOT attempted (closed: 106_47, 106_59, L2_BUILD_004).
 
 ## Corpus check
-Paper 47 cor:void (classes C_PNT, C_zeros, C_BT for WINDOW statements), thm:finmod, rem:wit-cheb; N_BUILD_014; phase-106 IMS closure.
+Paper 46 cor:void (classes C_PNT, C_zeros, C_BT for WINDOW statements), thm:finmod, rem:wit-cheb; N_BUILD_014; phase-106 IMS closure.
 grep "Landau|oscillation theorem|Ω±|Laplace transform.*nonnegative|abscissa": Landau's theorem appears in the corpus only as a
 citation for Ω-results of ψ(x) − x (phase 160 survey); never applied to a Tate-annihilated window fluctuation. New: §1–§3.
 

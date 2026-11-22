@@ -32,7 +32,7 @@ needed 80 digits.
 |---|---|---|---|---|---|
 | ½log3 | 40 | 1.058·10⁻³ | even | Theorem C lower bound 8.86·10⁻⁵ | 14 s + 3 s |
 | ½log3 | 80 | 1.008·10⁻³ | even | same | 45 s + 17 s |
-| log 2 | 80 | 1.1137·10⁻⁷ | even | 1.1·10⁻⁷ (Paper 47 App. C) | 44 s + 21 s |
+| log 2 | 80 | 1.1137·10⁻⁷ | even | 1.1·10⁻⁷ (Paper 46 App. C) | 44 s + 21 s |
 | ½log5 + 10⁻³ | 80 | 3.088·10⁻¹² | even | 3.1·10⁻¹² (ROUND_005_B) | 44 s + 24 s |
 | 0.9 | 80 | 6.03·10⁻¹⁷ | even | 4.5·10⁻¹⁵ (ROUND_005_B, double) | 45 s + 23 s |
 

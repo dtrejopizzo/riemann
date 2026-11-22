@@ -65,7 +65,7 @@ L(m) = min_th max_k |cos(th + 2 pi k/m)| = cos(pi/m) (m even >=4), cos(pi/2m) (m
        argmin d/2;  numerics agree to <= 1.1e-16       [round 1's "cos(pi/m) throughout" was wrong for odd m]
 
 S(gamma_1, pi/2, m) = 1  exactly when 4 | m
-       -- NOT a new value: s(gamma,0) = 1 for every gamma, and max_th s = 1 is Paper 46 (19.2).
+       -- NOT a new value: s(gamma,0) = 1 for every gamma, and max_th s = 1 is Paper 47 (19.2).
           For 4|m the mu_m-orbit of pi/2 meets pi Z.  Nothing ever binding is lifted.
 chi = 1 SLOT of the cone = E^inf exactly (f_1 = sum_g f >= 0)  ->  S(gamma,theta,1) = s(gamma,theta)
        -- Theorem D.55.9', exact, not computed: the phase's result.
@@ -85,7 +85,7 @@ model:  s_Frob = 2/3,  s_AutFrob = cos(pi/4) = 1/sqrt2,  s_End = 2/sqrt5   (all 
   `I^{[χ]} ≤ 0` on a χ-effective cone **is GRH for `L(s,χ)`** and is never asserted; the bigness clause
   for `𝓒` **would be** GRH by an analogue of `R145` Prop. D.42.5 that is **not built**.
 * **FATAL rule** — raised in round 2, and **cleared in round 3 on the correct ground**: the value `1` at
-  `θ = π/2` for `4 ∣ m` is Paper 46 (19.2)'s value, carries no new inferential power, produces no `h⁰`,
+  `θ = π/2` for `4 ∣ m` is Paper 47 (19.2)'s value, carries no new inferential power, produces no `h⁰`,
   and makes no transfer theorem run. Round 2's "first support function in row D to reach `1`" is
   **withdrawn**.
 * **No label anywhere else in the corpus is changed.** One repair issued to R145 Prop. D.41.12′
@@ -100,7 +100,7 @@ model:  s_Frob = 2/3,  s_AutFrob = cos(pi/4) = 1/sqrt2,  s_End = 2/sqrt5   (all 
 **Explicitly open:**
 * **O-47.7** — the `χ ≠ 1` sectors. A `ζ_F`-frame theorem consumes **all** zeros of `ξ_L = ∏_χ Λ(s,χ)`,
   so the enlarged constants at `L`-zeros **would** matter to it; rounds 2–3 show only that they are
-  irrelevant at the zeros of `ζ_F`. Includes: build the direction-`θ` witness family `F_θ` (Paper 46's
+  irrelevant at the zeros of `ζ_F`. Includes: build the direction-`θ` witness family `F_θ` (Paper 47's
   `F_0` is **odd** and tied to `θ = π/2`), and state an analogue of Def. 19.19 / Thm 19.23 for
   `Λ(·,χ)` — **no such theorem exists**.
 * **O-47.8** — non-abelian `L/F`: isotypic components of dimension `χ(1) > 1`, `Γ_σ` acting by a matrix

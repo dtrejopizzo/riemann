@@ -3,7 +3,7 @@
 *[amended per R155_050]*
 
 *Phase 155. Executes `TEX_HOSTILE_REVIEW_R2` Finding 1 (FATAL on `thm:AL`,
-`main.tex:2930–2959`). Inherits Paper 47 `def:PD` (§3), `def:W`/`eq:nuw`, `thm:Z`, `thm:Dtail` (§7),
+`main.tex:2930–2959`). Inherits Paper 46 `def:PD` (§3), `def:W`/`eq:nuw`, `thm:Z`, `thm:Dtail` (§7),
 `lem:F1`, `lem:mbounds`, `lem:gbounds`, `prop:weak`, `prop:TK`, and `R155_033 §2`, `R155_037 §1`.
 `main.tex` is NOT touched; §4 below is the exact replacement text. Scripts: `scripts/r49/` (one
 10-second `DIAGNOSTIC` check of a proved constant).*
@@ -215,12 +215,12 @@ weight `d cosh T` at `±2T` (admissible in `(D)`) improves the constant by the f
  cap and the "`w` must go negative outside the window" factors `2.307 / 2.576`, the trivial-
  certificate deficit `5.45 / 5.22`, §2.4 (the spectral-gap-not-smoothness reading), §2.5's
  `Ceil_∞` diagnostics and the `T`-independence of the gap, §2.6, and §3 (Prop NC). Only §2.3 and
- the sentence of §0.1(β) that rests on it change. Paper 47's `thm:Z`, `thm:Dtail`, `thm:O`,
+ the sentence of §0.1(β) that rests on it change. Paper 46's `thm:Z`, `thm:Dtail`, `thm:O`,
  `thm:E`, `lem:F1`, `prop:TK` are untouched and were used, not modified.
 
 ---
 
-## §4 Exact replacement text for Paper 47 `subsec:lat` (not applied; `main.tex` not touched)
+## §4 Exact replacement text for Paper 46 `subsec:lat` (not applied; `main.tex` not touched)
 
 Replace `main.tex:2925–2968` (the paragraph, `thm:AL`, its proof and `cor:ALdef`) by:
 

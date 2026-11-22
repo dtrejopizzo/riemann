@@ -4,7 +4,7 @@ Phase 199, ,
 and
 Sources checked: AUDIT_L_SHARP_2 §7 ((★★_u), (★★_EM), (★★_St), constraints 1–11); F_001 (Thm F.2); J_001 (Thm J.3, §4.1);
 A_001 (Thm 1.1); PATTERN_001 §2 (Mori V κ table); ROUTES-TRIED-INDEX/AUDIT_ZENODO_FRONTIER §B1 (Mori VIII margin);
-Paper 47 (no statement of P47 is touched by K or P, so there is nothing to integrate). Prolate facts (CITED): Slepian–Pollak 1961,
+Paper 46 (no statement of P46 is touched by K or P, so there is nothing to integrate). Prolate facts (CITED): Slepian–Pollak 1961,
 Slepian 1965 (Hermite limit), Fuchs 1964 (1−λ_n(c) ≈ √π 2^{3n+2}c^{n+½}e^{−2c}/n!), and Slepian's identity
 ∂_cλ_n = (2/c)λ_nψ_n(1)² (normalisation ∫_{−1}^{1}ψ_n² = 1). Recomputations were done in a scratchpad and are not stored in the repo.
 

@@ -16,7 +16,7 @@ of the window form.
   CROSSWORD-TO-D-*: no hit beyond the rows above).
 
 ## 1. The block form, exactly (PROVED, bookkeeping)
-Notation of P47: profile F₀ supported in I_{T₀}, 2T₀ < log 2 (prop:AM); 𝖡(d) = 𝔞(F₀, V_dF₀), real, even, continuous;
+Notation of P46: profile F₀ supported in I_{T₀}, 2T₀ < log 2 (prop:AM); 𝖡(d) = 𝔞(F₀, V_dF₀), real, even, continuous;
 φ(q) = 𝖡(log q) on G = ℚ_{>0}^×. Target (thm:oneprofile, prop:AM(i)): φ PD on G. Separability (CA_E_001 Thm 1): ⟺ for every finite S and
 every product vector s = ⊗_{p∈S} c_p (c_p finitely supported on ℕ₀),
   Q_S(c) := Σ_{x,y∈ℕ₀^S} Π_p c_p(x_p) \overline{c_p(y_p)} · 𝖡(Σ_p (x_p − y_p) log p) ≥ 0.
@@ -34,9 +34,9 @@ mixed product box does not fit; the admissible Euler-product vectors with P = {2
 are what the window log 2 actually sees. The obstruction below lives on a one-prime face, hence at T = log 2.
 
 ## 2. Decision: p_𝖡 is NOT real stable (Theorem M1, PROVED; one input CITED)
-**Lemma M0 (strict 2×2; CITED via P47).** For 2T₀ small and T = log 2, b₀ > |b₁| and b₀ > |b₂|.
+**Lemma M0 (strict 2×2; CITED via P46).** For 2T₀ small and T = log 2, b₀ > |b₁| and b₀ > |b₂|.
 *Proof.* thm:band with D = log 2 (resp. log 3) and T ≥ T₀ + D/2: 𝔞_T on span{V_{−D/2}F₀, V_{D/2}F₀} is the matrix [[b₀, b_D],[b_D, b₀]]
-(the Gram of two shifts). λ_A(T) > 0 strictly for T ≤ 0.8 (P47 cites [Zhu2026, Thm 1.2]); log 2 ≤ 0.8 and T₀ + ½log 3 ≤ 0.8 for small
+(the Gram of two shifts). λ_A(T) > 0 strictly for T ≤ 0.8 (P46 cites [Zhu2026, Thm 1.2]); log 2 ≤ 0.8 and T₀ + ½log 3 ≤ 0.8 for small
 T₀. Hence both 2×2 matrices are positive definite. ∎
 
 **Theorem M1 (non-stability; PROVED given M0).** p_𝖡 is not real stable. Explicit witness: put
@@ -95,7 +95,7 @@ Net: no sign step; NO-GO for the class "real-stability / Gårding / interlacing-
 
 ## 7. Labels
 - Block form §1: PROVED. Window note: PROVED.
-- M0: CITED (P47 thm:band + Zhu strict bound T ≤ 0.8).
+- M0: CITED (P46 thm:band + Zhu strict bound T ≤ 0.8).
 - M1, M2: PROVED (given M0; M2 unconditional on any strict face).
 - §3 Gårding: (a) CITED, (b) REF-D, (c) ARGUED (class transfer).
 - §4 MSS: PROVED (quantifier mismatch).

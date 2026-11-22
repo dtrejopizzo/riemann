@@ -4,7 +4,7 @@ Global label: **NUMERICAL**. Continues 212-27 (ROUND_027_A/B/C). No paper nor th
 
 ## 1. Method
 - Form `a^w_T(F) = C_0‖F‖² + ∫_0^∞(c_F(0) − c_F(u))K(u)du − Σ w_n c_F(log n)` on `P_T`
-  (P47 eq:Aform, lem:K; tail `G(s) = ∫_s^∞K = log coth(s/4) + π − 2 arctan e^{s/2}`, which at `s = 2T`
+  (P46 eq:Aform, lem:K; tail `G(s) = ∫_s^∞K = log coth(s/4) + π − 2 arctan e^{s/2}`, which at `s = 2T`
   gives the formula of thm:S(iii)). Only `n` with `Λ(n) > 0`, `log n < 2T` enter.
 - Basis: orthonormal Legendre of degree `p − 1` per element, discontinuous (conforming: the form is finite
   for piecewise functions, since `c_F(0) − c_F(u) = O(u)`), mesh with uniform interior of step `≤ H`

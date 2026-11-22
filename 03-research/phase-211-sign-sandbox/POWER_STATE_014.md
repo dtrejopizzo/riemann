@@ -36,4 +36,4 @@ A geometric expansion and the behaviour of iterations that add zeros at s=0 are 
 
 ## Goal audit
 
-Three case: resolved and extended up to eight. Bridge in form norm: resolved, now for a single confluent rate. Extension to ALL orders: open. Closure of the sign of Paper47: open. Goal neither completed nor blocked; authorised mathematical work remains.
+Three case: resolved and extended up to eight. Bridge in form norm: resolved, now for a single confluent rate. Extension to ALL orders: open. Closure of the sign of Paper46: open. Goal neither completed nor blocked; authorised mathematical work remains.

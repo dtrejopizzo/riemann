@@ -165,7 +165,7 @@ If `RT1--RT3` are proved before the spectrum, Theorem 1 gives
 \]
 
 and the already-proved fidelity of \(R_L\) on the radical excludes first
-contact. Then Paper 47 delivers \(W_T\ge0\) for every \(T\).
+contact. Then Paper 46 delivers \(W_T\ge0\) for every \(T\).
 
 ## 5. First local ansatz and its consistency condition — `NO-GO`
 

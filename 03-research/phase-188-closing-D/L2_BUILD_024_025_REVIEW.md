@@ -1,6 +1,6 @@
 # L2_BUILD_024 + L2_BUILD_025 (Theorem S, Lemma I, Proposition H) — Review (pen and paper)
 
-Checked against Paper 47 (F̂(τ) = ∫F e^{iτt}; A = ∫Fe^{t/2}, B = ∫Fe^{−t/2}; thm:nyq-cone P_T = (¼−∂²)H²_0(I_T), F̂ = (τ²+¼)Ĝ; eq:Aform;
+Checked against Paper 46 (F̂(τ) = ∫F e^{iτt}; A = ∫Fe^{t/2}, B = ∫Fe^{−t/2}; thm:nyq-cone P_T = (¼−∂²)H²_0(I_T), F̂ = (τ²+¼)Ĝ; eq:Aform;
 lem:contA; cor:void). or mentioned.
 
 ## 1. The profile (024 §2, 025 §1) — CONFIRMED with one FIX

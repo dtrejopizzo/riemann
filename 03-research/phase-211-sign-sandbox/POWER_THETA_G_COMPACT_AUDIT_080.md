@@ -43,4 +43,4 @@ The history is kept: the first remainder enclosures by interval jets failed beca
 
 Splicing this certificate with 078 one obtains g''<0 for all u>=1/2. BASE073 and 079 give the complete kernel positive definite for three distinct nodes ui>1/2, that is, three arbitrary powers ai=ui+1/2>1. Repeated nodes are grouped: strict positivity for the nonzero represented function. The congruence with W is that of CONE001 and keeps ARCH, polar and ALL contacts; it is not positivity of an isolated component.
 
-This extends triples to small and mixed exponents, beyond the region rates>=31.5 of 053. It does NOT prove four nor all orders, nor a new time window nor the global objective of Paper 47. 081/082 and the recursive obligations remain separate. Papers untouched.
+This extends triples to small and mixed exponents, beyond the region rates>=31.5 of 053. It does NOT prove four nor all orders, nor a new time window nor the global objective of Paper 46. 081/082 and the recursive obligations remain separate. Papers untouched.

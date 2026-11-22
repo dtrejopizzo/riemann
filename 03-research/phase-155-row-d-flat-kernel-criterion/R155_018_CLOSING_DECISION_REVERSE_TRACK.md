@@ -6,7 +6,7 @@ the row D that with rows A/B/C gives "RH for the universe of the first 1000 zero
 
 ## 1. Answer of record to the end goal
 
-**Delivered, PROVED, in Paper 47 §7 (Prop. 7.12 prop:finuniv, Thm 7.9 thm:finZ, Cor. 7.11 cor:infinite):**
+**Delivered, PROVED, in Paper 46 §7 (Prop. 7.12 prop:finuniv, Thm 7.9 thm:finZ, Cor. 7.11 cor:infinite):**
 
 1. *Row D for Z_1000 exists, is unique among symmetric measures, and is the zero measure itself.*
  W_N(F⋆F̃) = Σ_{j≤N}|F̂(γ_j)|² ≥ 0; the dual certificate in the sense of programme (D) is
@@ -60,7 +60,7 @@ Row-D label unchanged. Endpoint of record unchanged: λ_min(A_{½log3}) ≥ 8.85
 
 The reverse-engineering track has reached its end goal in the only form in which it is a theorem
 (§1) and has exhausted its constructive side (bounded profile, comb-vanishing: negative on ℝ). It is
-CLOSED as a constructive route to a new endpoint. Its proved by-products are in Paper 47.
+CLOSED as a constructive route to a new endpoint. Its proved by-products are in Paper 46.
 Remaining pure-math items go to round 3 of the phase: (i) a Toeplitz-type ceiling for
 min_{τ≤10} f_w over the compactly supported flat-top class (would close that class by proof);
 (ii) the graded/decay hybrid; (iii) enclosures of Ceil(24,0.68) < 0, Ceil(24,log2) < 0;

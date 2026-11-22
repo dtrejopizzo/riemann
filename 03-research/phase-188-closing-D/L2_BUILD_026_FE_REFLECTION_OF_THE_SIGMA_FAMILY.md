@@ -5,7 +5,7 @@ half-plane) — recorded as CITED-known, not new. Any σ-transport must be check
 criticality), and must act on the comb at window level, not through zero location. 024/025 not edited (under referee review).
 
 ## Corpus check
-025 §3 (D_σ, Prop H), 010 (2Re(−ζ′/ζ)(½+iτ) = m − 2ΣRe 1/(s−ρ), centre criticality), N_BUILD_013 (packet limits critical at every γ), Paper 47
+025 §3 (D_σ, Prop H), 010 (2Re(−ζ′/ζ)(½+iτ) = m − 2ΣRe 1/(s−ρ), centre criticality), N_BUILD_013 (packet limits critical at every γ), Paper 46
 cor:void, crossword I1 (Herglotz of ξ′/ξ listed among REF-D structures). New: §1 identity, §2 window-level family and its limit lemma, §3 verdict.
 
 ## 1. The spectral reflection is exactly antisymmetric (PROVED)

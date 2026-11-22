@@ -16,7 +16,7 @@ Three builders and one review.
    compressed to the geometric layer.
 3. **Semilocal form in the ξ metric** (030): c_h = (¼−∂²)c_ξ, with no
    cross terms; an interlacing lemma on arenas.
-4. **Gap in the full form up to ½log5** (030 Prop 3.1, given Paper 47's
+4. **Gap in the full form up to ½log5** (030 Prop 3.1, given Paper 46's
    thm:log5A, normalization verified): E ≥ 6.25e-13‖ξ‖² on primitives;
    with S = S(T) there is no negative direction in that window, and the
    rank-one correction is unnecessary (a = 0).
@@ -55,7 +55,7 @@ Three builders and one review.
 ```text
 Son_S − Son_∞ = prime term + ∫c_h ε'_p + ∫|φ|² r_p   PROVED (029 + 025)
 (M) ⟹ R'_S Hilbert–Schmidt (018's NO-GO does not apply)  PROVED; (M) OPEN
-full form S(T): gap up to ½log5                          PROVED (Paper 47)
+full form S(T): gap up to ½log5                          PROVED (Paper 46)
 n₋ = 0 for S(T) up to 0.80; superexponential gap          NUMERICAL
 one aligned direction ∀T                                  DOES NOT EXIST (030 §7)
 zero directions ∀T                                        ⟺ D (restatement)

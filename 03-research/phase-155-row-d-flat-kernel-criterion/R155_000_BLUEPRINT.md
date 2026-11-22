@@ -6,7 +6,7 @@ B&B, no sweep on the local machine (compute, if any, is the off-machine package
 one report plus one independent audit per round; FATAL rule (no sign for ζ beyond `T ≤ log 2`, no statement about
 zeros) in force.*
 
-## 0. What this phase inherits (Paper 47, `04-papers/47-row-d-dual-certificates/main.tex`)
+## 0. What this phase inherits (Paper 46, `04-papers/46-row-d-dual-certificates/main.tex`)
 
 Standing theorems (labels of record R154_012/021/023/030, all `PROVED` unless stated):
 Theorem A (form = Lévy energy − prime evaluations; `λ^prim_T = C₀ − Λ_T`); Structure (complete
@@ -17,7 +17,7 @@ cover); Identity M; Lemma W (moment interior); Lemma V′ (`Θ(log R)` exchange 
 Prop. env (verification threshold `2πe^{A_T}` cannot be lowered by pointwise envelopes; `A_T ~ 4e^T`);
 Theorem C(½log3) `PROVED (machine-verified)` at `8.8577·10⁻⁵`.
 
-**New in Paper 47 §7 (corpus-checked independently: not in the 154 phases; the
+**New in Paper 46 §7 (corpus-checked independently: not in the 154 phases; the
 adjacent object is our own D1/C):**
 
 > **Theorem Z.** For even `w ≡ 1` on `[−2T,2T]` with `|w| ≤ Ce^{−(½+δ)|u|}` outside, the finite measure
@@ -33,7 +33,7 @@ adjacent object is our own D1/C):**
 > on the zeros. The "certificate at infinity" (`w → 1`) is the primes outside the window; its transform
 > is the zero measure.
 
-Paper 47 §8 states the two programmes: **Problem A** (class-dependent value bound — this phase) and
+Paper 46 §8 states the two programmes: **Problem A** (class-dependent value bound — this phase) and
 **Problem B** (arithmetic certificate — RH-hard by Theorem Z; recorded, not attacked).
 
 ## 1. The problem of this phase
@@ -43,7 +43,7 @@ Paper 47 §8 states the two programmes: **Problem A** (class-dependent value bou
 > best certificate value. Find an explicit `D(T,d,U) → 0` (as `d → 0`, `U → ∞`) with
 > **`c(T,d,U) ≥ λ^prim_T − D(T,d,U)`.**
 
-Equivalent form (Paper 47 §8.4, from `λ^prim − c = ∫(f − c)dμ⋆`, `μ⋆ = |F̂⋆|²dτ/2π` the primal
+Equivalent form (Paper 46 §8.4, from `λ^prim − c = ∫(f − c)dμ⋆`, `μ⋆ = |F̂⋆|²dτ/2π` the primal
 minimiser): a quantitative one-sided approximation theorem — approximate `−σ_T − β·ĝ + λ^prim` from
 below on `[0, τ_env]` by `P`-periodic trigonometric polynomials with vanishing low modes `|j| < M`
 (mean zero included), in the norm `L¹(μ⋆)`. Only where `|F̂⋆|²` lives does the slack cost.
@@ -76,7 +76,7 @@ kernels with gap).]
 
 L3. **Theorem Z as a guide for the ansatz.** The near-optimal certificate is `f_w` for a flat-top
 `w`; on the lattice class this suggests `a_j ≈ ½·d·[½(1−w)K + 2w cosh](u_j)` sampled — a
-*closed-form profile* candidate (Paper 47 open item (4)). Test on paper against the archived 437 atoms
+*closed-form profile* candidate (Paper 46 open item (4)). Test on paper against the archived 437 atoms
 (sign alternation at 70% says the sampled smooth profile is *not* what the LP found; the LP exploits
 aliasing of the lattice). [Diagnostic only unless a theorem comes out.]
 
@@ -103,5 +103,5 @@ with the off-machine sweep E1.
 
 ## 4. FATAL rule and labels
 No sign for ζ beyond `T ≤ log 2`; no statements about zeros; Theorem Z's corollaries are equivalences.
-Labels as in Paper 47 (`PROVED` / `PROVED (machine-verified)` / `DIAGNOSTIC`); every numeric is
+Labels as in Paper 46 (`PROVED` / `PROVED (machine-verified)` / `DIAGNOSTIC`); every numeric is
 DIAGNOSTIC.

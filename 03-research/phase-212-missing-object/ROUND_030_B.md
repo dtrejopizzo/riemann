@@ -1,7 +1,7 @@
 # Round 030 B — Divisor chains, low-frequency spectral mass and primitivity in (PBP_T)
 
 Object: `𝔈(Φ) = C_0 + ∫_0^∞ (1 − Φ)K` over positive-definite `Φ`, `Φ(0) = 1`, `supp Φ ⊂ [−2T, 2T]`,
-`Φ(log n) = 0` (`2 ≤ n < e^{2T}`), with the two conditions of `eq:Kprim` (P47, l. 453–476, cross-checked:
+`Φ(log n) = 0` (`2 ≤ n < e^{2T}`), with the two conditions of `eq:Kprim` (P46, l. 453–476, cross-checked:
 `∫Φ cosh(u/2) = 0`, `∫Φ u sinh(u/2) = 0`). With `Φ = μ̂`, `μ ≥ 0` of mass 1: `𝔈 = ∫ m dμ`,
 `m(τ) = Re ψ(¼ + iτ/2) − log π` (identity checked at `τ = 3` to 1e−13; script below).
 
@@ -10,7 +10,7 @@ Object: `𝔈(Φ) = C_0 + ∫_0^∞ (1 − Φ)K` over positive-definite `Φ`, `�
 1. **Closest antecedent.** ROUND_026_B §§2–4 (Kreĭn + gaps; ceiling 3.0–3.4; §4 "Controls" already
    records the orthogonality `ξ_{log m} ⊥ ξ_{log n}` if `n | m` as "not exploited, shared by every Beurling
    system"); R160_M2_R1 D4–D5, Thm 4.1 (duality: the dual of `Z^prim_T` is the free-weight problem
-   `K_T`); R155_033 §2.2 ("τ = 0 cap"); P47 `rem:Kprim` (primitivity in terms of `Φ̂(±i/2)`); 212-26-A.
+   `K_T`); R155_033 §2.2 ("τ = 0 cap"); P46 `rem:Kprim` (primitivity in terms of `Φ̂(±i/2)`); 212-26-A.
 2. **What would be new.** (i) To see whether divisibility chains give constraints *beyond* the linear ones
    `Φ(log n) = 0`; (ii) an explicit bound on the mass of `μ` in `|τ| ≤ τ_0` and on `𝔈` by pushforward to the circle;
    (iii) the reading of primitivity on `μ`.
@@ -23,7 +23,7 @@ Object: `𝔈(Φ) = C_0 + ∫_0^∞ (1 − Φ)K` over positive-definite `Φ`, `�
 Prior grep ("divisib", "chain", "orthonormal", "Selberg", "pushforward") in the index: only NG-110, P74–P75,
 INV_H_001, the projection `Π_m` (Part V, 2026-11-07) and the note of ROUND_026_B; none is this computation.
 Conclusion in advance: (i) is an exact repetition of the linear dual (§1); (ii) is new as a count and gives a
-PROVED but negative bound with a PROVED ceiling (§2); (iii) is already in P47 (§3).
+PROVED but negative bound with a PROVED ceiling (§2); (iii) is already in P46 (§3).
 
 ## 1. Divisor chains add no constraints (PROVED)
 
@@ -71,11 +71,11 @@ interaction of distinct generators, which is the full linear problem `K_T` (§1)
 ## 3. Primitivity on μ
 
 `μ` has density `μ′ = Φ̂/2π`, entire of type `2T`. The two conditions are
-`Re Φ̂(i/2) = 0` and `Re[i(Φ̂′(i/2) − Φ̂′(−i/2))] = 0` (P47, l. 472–476, CITED; with `F ∈ P_T`, `Φ̂` vanishes to
+`Re Φ̂(i/2) = 0` and `Re[i(Φ̂′(i/2) − Φ̂′(−i/2))] = 0` (P46, l. 472–476, CITED; with `F ∈ P_T`, `Φ̂` vanishes to
 order 2 at `±i/2`). They are not functionals `∫ g dμ` with bounded `g`: they act on the analytic continuation of
 the density and only make sense together with the type constraint (support `[−2T, 2T]`). The bound of §2.2 uses
 neither the type nor primitivity; the example of §2.3 satisfies them only if a correction is added (the
-uniform measure is not of finite type). In the dual, both are the pole terms of P47 `thm:A`/`eq:Kprim`: already
+uniform measure is not of finite type). In the dual, both are the pole terms of P46 `thm:A`/`eq:Kprim`: already
 present (repetition). I did not find how to turn them into a bound on low-frequency mass: OPEN.
 
 ## 4. Test bench (extremal state of ROUND_028_A)
@@ -100,7 +100,7 @@ vanishing on a simple arithmetic lattice.
 ## Result
 
 **Small PROVED piece + selection NO-GO.** (a) divisor chains are exactly linear constraints
-already contained in the free-weight dual (R160 Thm 4.1): repetition. (b) primitivity = P47
+already contained in the free-weight dual (R160 Thm 4.1): repetition. (b) primitivity = P46
 `rem:Kprim`, not turned into a mass bound: OPEN. New bound: `𝔈 ≥ −1.4979 − 5.0434/(J+1)` with `J` the number
 of powers of 2 in the window, optimal for one-generator data (ceiling `−1.4979`).
 

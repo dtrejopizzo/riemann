@@ -82,7 +82,7 @@ Sources: L2_BUILD_001–019, N_BUILD_001–015, N_BUILD_011_REVIEW, L2_BUILD_018
 ## 4. Current frontier (precise)
 1. (N) / (N_loc): Σ v_n Re c_F(log n) ≤ 𝔞_∞(F) on P_T, equivalently 𝓕_T(F) ≤ 𝔞^♯(F) — OPEN. Every class tested is
    listed in §2. A proof must use the exact vector (Λ(n))_{n<e^{2T}} (cor:void, W-tail, prop:wit-sens) and work by correlation inside P_T
-   (pointwise symbol positivity fails for κ = 1: L2_019 §4, Paper 47 thm:nolocal).
+   (pointwise symbol positivity fails for κ = 1: L2_019 §4, Paper 46 thm:nolocal).
 2. (Ω_{t₀}): sup_{T,F}(𝓕_T − 𝔞^♯)₊/G_κ < ∞ — strictly weaker than D (N_012); not separable from D on packets (N_013) nor on
    translation/modulation families (N_014, ARGUED). Open: families with non-convergent spectral measures not of that form.
 3. (Ξ) for a fixed profile: limsup_d Ξ_{F₀}(d) ≤ 2𝔞(F₀) (needed by D), ≥ 0 (Theorem L). Further refinement stopped (N_015).
@@ -101,7 +101,7 @@ Next construction suggested by both tracks: a correlation (anti-alignment) inequ
 | 39 | N_016 | three-vector Gram identity: comb = −‖F‖²∂_s log‖U_sF‖² (ℤ-additive centre) + 2Re⟨a⊥,c⊥⟩ (μ*1 = δ, μ*log = Λ) | PROVED; C–S loss ARGUED | new |
 | 40 | N_017 | centre = ‖F‖²(4T − ⟨1/(¼+τ²)⟩) + O(Te^{−T}): positive, size 4T (main term survives in the quadratic norm) | PROVED (uniformity in T ARGUED); NO-GO as slack | new |
 | 41 | N_018 | linear-centre split = N_006 §2 ((Ω_μ)); meta-theorem: shift-multiplier calculus = 𝔄_T-linear identities + Bochner/Cauchy–Schwarz | PROVED / NO-GO | new (classificatory) |
-| 42 | N_019 | SOS with free p.d. part = Paper 47 dual class (D); pure-arithmetic SOS empty for every T ≥ ½log3 (hand bound λ_{∞,P}(½log3) ≤ 0.33 < 0.980 ≤ A_T) | PROVED / NO-GO; (½log2, ½log3) OPEN | new |
+| 42 | N_019 | SOS with free p.d. part = Paper 46 dual class (D); pure-arithmetic SOS empty for every T ≥ ½log3 (hand bound λ_{∞,P}(½log3) ≤ 0.33 < 0.980 ≤ A_T) | PROVED / NO-GO; (½log2, ½log3) OPEN | new |
 | 43 | N_020 | Poisson-dual exterior = integer-log positions; prescribed coefficients = thm:Z flat-top prime part; exterior support beyond large U ⇒ negative value (via W-tail); free-coefficient ceiling = constrained window forms | PROVED (one correction ARGUED) / NO-GO / OPEN | partly corpus (thm:Z) |
 | 44 | L2_020 | integer near-triples exact at resolution Ω ≥ N³; natural resonance gives O(1); integer resonator identity | PROVED (§2b ARGUED) | new |
 | 45 | L2_021 (+reviewed) | Poisson random combs on clamped modes: exact mean/variance, CLT; Prop 4: no nonnegative log ℕ comb with residue r > 1 is in Pos (Theorem D of G2_B1_R5 + κ*) | PROVED **conditional on record item Q′** (reviewed); "positive only through P_T-correlation" DOWNGRADED to HEURISTIC; wording FIX ("log ℕ too coarse to buy density") | new (combination) |
@@ -120,7 +120,7 @@ Each line: the construction, the reduction, and where it is proved.
 **Dual side (certificates).**
 - Operator splits of the comb (Gram, Möbius–log, linear centre): linear identities + Bochner/C–S only; C–S loses — N_016–018, L2_017.
 - Interior SOS: free p.d. part = dual class (D); pure arithmetic empty for T ≥ ½log3 — N_019.
-- Exterior choices: lattice (ceilings → λ_P, Paper 47 thm:R), flat-top = explicit formula (thm:Z), far exterior negative (N_020 Thm 2),
+- Exterior choices: lattice (ceilings → λ_P, Paper 46 thm:R), flat-top = explicit formula (thm:Z), far exterior negative (N_020 Thm 2),
   free integer-log coefficients = constrained window forms (N_020 Prop 3).
 - Orders on 𝔄_T: cone order (resolvent indefinite, N_007), relative order (W-lin, N_008), Euler cone (L2_013).
 **Input side (properties of Λ).** Input map L2_011; W-tail N_003; Euler structure N_005; density ceiling r ≤ 1 < κ* (L2_021 Prop 4, conditional
@@ -129,14 +129,14 @@ on Q′); random-comb comparison (L2_021–023: Poisson combs fail positivity wi
 function or one family of window forms, and the dual side to the dual class (D) whose content is the target. No reduction yields a strictly
 weaker provable statement beyond ½log5. D: OPEN; no certified negative value; no sign contact for ζ.
 
-## Update 3: Paper 47 integration and review
+## Update 3: Paper 46 integration and review
 - **N_020 Theorem 2 → OPEN.** The "routine correction" fails: dilated W-tail tests have window-T moment pairings ≈ 4 sinh T·‖G‖², not o(1).
   Only the weak-duality reduction (exterior mass far from the window certifies at most what the truncated comb certifies at window U/2) is PROVED
-  (Paper 47 rem:farext).
-- **L2_021 Prop 4 → PROVED unconditionally (Q′ removed).** Reformulated as Paper 47 thm:ceiling: for a ≥ 0 positive at every window,
+  (Paper 46 rem:farext).
+- **L2_021 Prop 4 → PROVED unconditionally (Q′ removed).** Reformulated as Paper 46 thm:ceiling: for a ≥ 0 positive at every window,
   liminf S(x)/log x ≤ 1, S(x) = Σ_{n≤x} a(n)/n; density/residue forms follow (partial summation; Hardy–Littlewood–Karamata CITED). Phase-159
   Theorem D is re-proved in full in the paper (lem:reson). The "Input side" line above ("conditional on Q′") is superseded.
-- **Paper 47 integration** (146 pp; INTEGRATION_188.md): new §sec:combs (polar-free form, positive combs smooth and atomic, integer density ceiling,
+- **Paper 46 integration** (146 pp; INTEGRATION_188.md): new §sec:combs (polar-free form, positive combs smooth and atomic, integer density ceiling,
   positivity on resonators, two-sided band, Poisson combs, one-profile theorem, integer-lattice matrices Arch−Div−Near), new §subsec:bar-arith
   (W-tail/Euler, progressions, KLMN, operator calculus, arithmetic squares, Möbius resolvent, FE antisymmetry), Open problem (S) near-coincidence
   matrix. Review: all items CONFIRMED; one wording fix (lower logarithmic density). D OPEN.

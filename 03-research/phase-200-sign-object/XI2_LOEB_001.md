@@ -17,7 +17,7 @@ and that is why it fails (F9). **Ξ2: NO-GO. Φ.13: PROVED.**
 ## 0. Corpus and index
 
 Prior reading: SPEC_SIGN_OBJECT_006 §B (Φ.13, l. 211–217), §C row 3 and §D Ξ2 (l. 352–380); K3_GAMMA_001 §1–2
-(Γ-limit renormalized by leakage, comb-generic); PI_MU_001 (𝒬_μ = L²/𝒢̄_T with norm ℓ/2); Paper 47
+(Γ-limit renormalized by leakage, comb-generic); PI_MU_001 (𝒬_μ = L²/𝒢̄_T with norm ℓ/2); Paper 46
 prop:ext-gauge (ℓ(g) = 2 dist²(r_f, 𝒢̄_T), gauge = radical of 𝒲, given Guo L4.4 CITED); K1_OSG_001 l. 15
 (exterior datum c_N, FF.0).
 

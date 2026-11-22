@@ -1,6 +1,6 @@
 # POWER_PARTICULAR_TAIL_095 — Analytic tail of the particular Wronskian
 
-Status: **PROVED by the following analytic estimates; independent audit approved.** See `POWER_PARTICULAR_TAIL_AUDIT_095.md`. No new theta evaluation, compact certificate, explored parameter or grid. Papers untouched. The required sign of the PARTICULAR Wronskian is proved for all t>=64, not for all t>0 nor for a new window T of Paper47.
+Status: **PROVED by the following analytic estimates; independent audit approved.** See `POWER_PARTICULAR_TAIL_AUDIT_095.md`. No new theta evaluation, compact certificate, explored parameter or grid. Papers untouched. The required sign of the PARTICULAR Wronskian is proved for all t>=64, not for all t>0 nor for a new window T of Paper46.
 
 ## 1. Data, consultation and difference from088/092
 

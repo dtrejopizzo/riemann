@@ -246,7 +246,7 @@ representative pair on the WHOLE primitive carrier, with controlled slack and in
 ν|(−2T,2T) = ν_Λ, at T = 3/5 (contacts 2, 3). Label: PROVED. Rigidity lemma: if η = μ − (q_T+ε)dτ
 is an even compact measure, η = 0. Falsifier: q_T(0) < −15/2, hence there is no fixed-tail pair with
 compact correction and ε ≤ 15/2. Noncompact subcase (r even tempered, exterior remainder an even finite measure)
-coincides EXACTLY with a certificate of the dual program (D) of Paper 47. Reopening: noncompact
+coincides EXACTLY with a certificate of the dual program (D) of Paper 46. Reopening: noncompact
 corrections outside that subcase (singular measures, distributions). Contact 4 is not added as a
 compact repair.
 

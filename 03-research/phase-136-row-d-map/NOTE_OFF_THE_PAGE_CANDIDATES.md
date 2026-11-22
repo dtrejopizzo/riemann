@@ -4,12 +4,12 @@ Status: hypotheses for the plan, not claims.
 
 ## 0. The wall, stated as a growth rate
 
-Row D is now one function `h⁰` with (a),(b′),(c) (Paper 46 Thm 12.3). Requirement (c) at
+Row D is now one function `h⁰` with (a),(b′),(c) (Paper 47 Thm 12.3). Requirement (c) at
 `E = mK` forces `h⁰(mK) ≥ ¼m² + O(m)`. Every count the corpus or Connes–Consani can
 define grows **logarithmically or linearly** in the degree:
 * CC on the curve `Spec Z̄`: `dim_S H⁰(D) = ⌈(deg D + log 2)/log 3⌉` — **linear** in `deg`
   (a genuine curve behaviour: `h⁰(D) ~ deg D`).
-* Paper 46 §13 on the square, one-parameter lattice of translates of `ΠK`: `O_Q(log m)`.
+* Paper 47 §13 on the square, one-parameter lattice of translates of `ΠK`: `O_Q(log m)`.
 So the wall is: **where does the second factor of `m` come from?** In geometry
 `h⁰(nD) ~ n²D²/2` on a surface because sections of a line bundle on a surface restricted to
 a moving curve give rank `~ n` on each of `~ n` independent fibres. In Arakelov geometry the
@@ -63,8 +63,8 @@ Replace `dim_S` by `h⁰_θ(E) := log Σ_{v ∈ Λ_E} e^{−π‖v‖²_E}` over
 on the square the Poisson mechanism *is* the explicit formula (Paper 45 Thm 9.4), which would
 turn (c) into an identity rather than an inequality. Its risk: real-valued "dimensions" (CC's
 objection, NO-GO R16) — but Thm 12.3 needs only `h⁰ ≥ 0`, not integrality. **This candidate
-survives R16 as restated in Paper 46.** Kill test: the lattice `Λ_E` on the square must have
-rank growing linearly in `m` for `E = mK`; the Paper 46 §13 lattice does not.
+survives R16 as restated in Paper 47.** Kill test: the lattice `Λ_E` on the square must have
+rank growing linearly in `m` for `E = mK`; the Paper 47 §13 lattice does not.
 
 ## 3. Candidate D-K (Krein index / definitizability) — a reformulation, not a construction
 
@@ -79,4 +79,4 @@ theorems** (e.g. a definitizing polynomial). Low priority; record.
 Any candidate whose definition is model-uniform in `Z` (Restatement 12.4a): convex-set
 dimensions, Galerkin counts, Gram determinants, entropies of the form alone. Any candidate that
 needs `Σ_ρ |Φ(ρ)|²` or the symbol's sign (P122 §1). Any candidate on the colimit rather than the
-Weil completion (Paper 46 Thm 14.3).
+Weil completion (Paper 47 Thm 14.3).
