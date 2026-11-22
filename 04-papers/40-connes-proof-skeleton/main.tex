@@ -48,43 +48,56 @@ We organize the Connes--Consani--Moscovici and Suzuki operator programs as
 a single route from finite semilocal models to the global Weil criterion.
 The first part develops a joint prime--Gamma finite-source refinement.  It
 keeps the ordinary von Mangoldt channels, the archimedean channel, the
-scalar threshold and the exact radical in one Hermitian system.  Loewner
-monotonicity, Haynsworth additivity, scalar Schur innovations, adaptive
-Krylov recovery and a heat-core exhaustion remove the finite-selection,
-tail and form-core losses.  An endpoint-corrected prolate ladder proves
-\(\lvert\mathscr R_L^+\rvert\ll\lambda^7d_4\), while a dyadic divisor
-estimate gives
-\(\|b_L^+\|\ll\lambda^4\sqrt{(1+L)d_4}\to0\).  The remaining sign in
-that realization is the strict physical source surplus over the
-anti-shorted deficit.
+scalar threshold and the exact radical in one Hermitian system.
+Haynsworth additivity, scalar Schur innovations, adaptive
+Krylov recovery and a heat-core exhaustion reduce the remaining sign, on
+every finite row, to one finite inequality (the strict source surplus),
+which is not proved; the passage from the finite rows to the Weil form
+uses a ground-state identity that is stated as a hypothesis.  For an endpoint-corrected six-mode prolate
+source, assuming quoted fixed-order prolate asymptotics, radial
+estimates, a lower bound for the interior vector and an extension of the
+explicit formula, we bound the Weil form of its exterior co-Poisson
+residual by
+\(O(\lambda^7d_4)\), and the associated cross functional by
+\(O(\lambda^4\sqrt{(1+L)d_4})\), where
+\(d_4\asymp\lambda^9e^{-4\pi\lambda^2}\).
 
 The second part constructs the local geometric data that this surplus was
 trying to express.  A cyclic root Laplacian has pseudodeterminant \(N^2\);
-the determinant increment from \(mp^{k-1}\) to \(mp^k\) is \(\log p\),
+the half-logarithmic determinant increment
+\(\tfrac12\log(\det'\Delta_{mp^k}/\det'\Delta_{mp^{k-1}})\) is \(\log p\),
 and its normalized root-stratum incidence is \(p^{-k/2}\).  Their product
 is exactly \(\Lambda(p^k)/\sqrt{p^k}\).  At the infinite place, a positive
 Gamma spin operator and a two-dimensional polar plane give, by zeta
 determinants, the complete factor
 \(\frac12s(s-1)\pi^{-s/2}\Gamma(s/2)\).  A shared Tate--Gamma boundary,
-matched Abel finite part and covariant charge mixing assemble these data
+matched Abel finite part and covariant charge mixing, with respect to an
+explicitly defined source metric, assemble these data
 without discarding prime--prime phases.  All these constructions are
 source-defined and use neither zeros nor the Weil sign.
 
 We then determine the precise limitation of the ordinary Hilbert
 completion.  The complete charged pushout has absolutely continuous scale
-spectrum.  An operator-valued dense-range theorem shows that its Gamma
-compliance and unitary charge mixing cannot create point spectrum.
-Consequently every equivariant map from the resonant CCM degree one into
-this completion annihilates the critical-line eigenclasses.  Thus the
+spectrum.  The Gamma compliance has dense range by an operator-valued criterion,
+and the spectral measures of the source vectors are absolutely
+continuous, so the completion has no point spectrum.
+Assuming that CCM degree one contains a nonzero eigenclass for each
+critical-line zero, every equivariant map from it into this completion
+annihilates those classes.  Thus the
 local polarization is valid, but this global completion cannot be the
 missing polarization of CCM degree one.
 
 Finally, we synthesize six terminal formulations reached by the route---a
 signed limit, a Schur surplus, a Rosati factorization, an equivariant
 Hilbert majorant, closure-faithful descent, and a positive global
-polarization.  Each contains the complete Weil sign.  Their common
+polarization.  For the first, second and last of them the implication to Weil
+positivity is proved here (the second only on even tests and under the
+ground-state identity, the last under a hypothesis on CCM degree one); the third is a restatement and the fourth and fifth are only
+formulated.  In each case the unproved assertion is the terminal
+statement itself.  Their common
 endpoint is analyzed by two complementary obstructions.  Four forgetful
-functors are divisor-blind under explicit deformations, while the ordinary
+functors are divisor-blind under explicit deformations (for one of them,
+the cyclic Chern character, this is stated, not proved here), while the ordinary
 Hilbert pushout fails separately by point-versus-continuous spectral type.
 We formulate both mechanisms and isolate two open programs.  One
 is geometric: construct an arithmetic intersection product and Hodge-index
@@ -115,7 +128,7 @@ formula distribution, normalized by
  -\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}f(-\log n)\\
 &-(\log 4\pi+\gamma)f(0)
  -\int_0^\infty
- \frac{f(x)+f(-x)-2e^{-x/2}f(0)}{e^{x/2}-e^{-x/2}}\,\dd x .
+ \bigl(f(x)+f(-x)-2e^{-x/2}f(0)\bigr)\frac{e^{x/2}}{e^{x}-e^{-x}}\,\dd x .
 \end{aligned}
 \tag{1.1}
 \]
@@ -137,12 +150,13 @@ The Riemann Hypothesis is equivalent to
 \end{theorem}
 
 \begin{remark}
-The proof skeleton below is therefore not seeking a new final criterion.
+The route described below does not seek a new final criterion.
 The final criterion is (1.3).  Connes' route is a way of constructing
 (1.3) as the limit of finite or localized self-adjoint models.
 \end{remark}
 
 \begin{remark}[Attribution and novelty boundary]
+\label{rem:attribution}
 The terminal positivity criterion is Weil's criterion, in the
 noncommutative-geometric form developed by Connes.  The Hilbert-space
 background around Sonin spaces, co-Poisson summation and radical-type
@@ -158,7 +172,7 @@ problem: finite-source Schur inertia, prime-by-prime innovation,
 observability staircases, adaptive Krylov recovery, the six-mode prolate
 residual estimates, and the heat/hybrid form-core exhaustion.  Classical
 linear-algebraic devices used below, such as shorted operators,
-Haynsworth inertia additivity, Loewner order and total positivity, are
+Haynsworth inertia additivity, Loewner order and Andreief's identity, are
 cited at their first structural use.
 \end{remark}
 
@@ -172,8 +186,7 @@ to a finite Fourier space
 \]
 Let \(W_{L,N}\) be the corresponding finite Weil matrix.  It contains the
 polar, archimedean and prime-power terms of the semilocal trace formula.
-The central finite structural facts used by the proof skeleton are those
-of the CCM/Connes and Connes--van Suijlekom finite programs
+The finite structural facts used below are those of the CCM/Connes and Connes--van Suijlekom finite programs
 \cite{CCM2025,Connes2026,CvS2025}.
 
 \begin{definition}[Finite CCM package]
@@ -199,30 +212,35 @@ Connes--Consani--Moscovici identify the finite commutator structure,
 construct the quotient operator, and obtain self-adjoint finite spectral
 data after shifting and quotienting~\cite{CCM2025}.  Connes' 2026
 extremal construction
-adds the prolate model \(k_L\), whose transform approximates \(\XiR\).
-The component used in the closure theorem is the following finite spectral
-statement.
+adds the prolate model \(k_L\), whose transform is proposed there as an approximation of \(\XiR\) (see Remark~\ref{rem:prolate-limit}).
+The finite spectral statements used below are the following.
 
 \begin{theorem}[Finite critical-line CCM--Connes model~\cite{CCM2025,Connes2026,CvS2025}]
 \label{thm:ccm-input}
-For each finite level where the radical quotient is defined, the quotient
-operator is self-adjoint in the positive quotient metric.  Its finite
-spectral divisor is located on the critical line.  Moreover there is an
-explicit prolate model \(k_L\) such that
+For each finite level \((L,N)\) at which the lowest eigenvalue of
+\(W_{L,N}\) is simple with even eigenvector, the quotient operator
+\(S_{L,N}\) is self-adjoint in the positive quotient metric, and the
+zeros of the Fourier transform of the corresponding finite ground vector
+are real, that is, its finite spectral divisor lies on the critical line.
+\end{theorem}
+
+\begin{remark}
+\label{rem:prolate-limit}
+Theorem~\ref{thm:ccm-input} is quoted from the cited works and is not
+reproved here; we do not attach statement numbers to it, and the reader
+should consult \cite{CCM2025,CvS2025} for the precise hypotheses under
+which the reality of the finite zeros is established.  In addition,
+Connes~\cite{Connes2026} describes an explicit prolate model \(k_L\)
+and discusses the approximation
 \[
  \widehat k_L(z)\longrightarrow \XiR(z)
 \tag{2.4}
 \]
 locally uniformly on compact subsets of the open strip
-\(|\operatorname{Im}z|<1/2\).
-\end{theorem}
-
-\begin{remark}
-Theorem~\ref{thm:ccm-input} is the strong finite achievement: the finite
-models have real spectral parameters, and the model transform tends to the
-right entire function in the interior strip.  What it does not by itself
-give is lower-semicontinuity of the indefinite Weil form in the global
-limit.
+\(|\operatorname{Im}z|<1/2\).  We do not use (2.4) as an established
+input: every statement below that involves it says ``assume (2.4)''.
+What these finite statements do not give is lower-semicontinuity of the
+indefinite Weil form in the global limit.
 \end{remark}
 
 \section{Localized operator realization}
@@ -237,14 +255,16 @@ interpretation of the finite intervals.
 \begin{theorem}[Localized self-adjoint Suzuki realization~\cite{Suzuki2025,SuzukiScrew}]
 \label{thm:suzuki-input}
 For each finite interval \((-a,a)\), the localized Weil quadratic form has
-a self-adjoint operator realization \(A_a\).  The construction is
-unconditional.  Suzuki's limiting conjecture states that the imaginary
-parts of the nontrivial zeros arise from the strong-resolvent limit of
-these finite-interval nonlocal realizations as \(a\to\infty\).
+a self-adjoint operator realization \(A_a\), as constructed in
+\cite{Suzuki2025,SuzukiScrew}; see there for the range of \(a\) and the
+hypotheses.
 \end{theorem}
 
 \begin{remark}
-This theorem supplies the correct analytic language for convergence: strong
+Suzuki's limiting conjecture states that the imaginary parts of the
+nontrivial zeros arise from the strong-resolvent limit of these
+finite-interval nonlocal realizations as \(a\to\infty\).
+Theorem~\ref{thm:suzuki-input} supplies the correct analytic language for convergence: strong
 resolvent convergence of finite-interval operators.  It does not prove the
 limit that would put the full zero divisor on the line.
 \end{remark}
@@ -254,9 +274,12 @@ limit that would put the full zero divisor on the line.
 There are two different statements which must not be identified.
 
 \begin{definition}[Divisor convergence]
-Let \(\phi_L\) be the actual selected continuum ground branch obtained from
-the finite radical quotients after \(N\to\infty\) at fixed \(L\).  Divisor
-convergence means that, locally uniformly away from zeros,
+Let \(\phi_L\) be the selected continuum ground branch obtained from
+the finite radical quotients after \(N\to\infty\) at fixed \(L\),
+whenever this limit exists.  Divisor convergence means that each
+\(\widehat\phi_L\) is holomorphic and has only real zeros in the strip
+\(|\operatorname{Im}z|<1/2\), and that, locally uniformly on compact
+subsets of that strip avoiding the zeros of \(\XiR\),
 \[
  \partial_z^2\log \widehat\phi_L(z)
  \longrightarrow
@@ -277,24 +300,23 @@ in a topology strong enough for the explicit formula, and
  \QW(v,v)
  \ge
  \limsup_{L\to\infty}\limsup_{N\to\infty}
- \Bigl\langle T_{L,N}v_{L,N},v_{L,N}\Bigr\rangle
- -
- o(1).
+ \Bigl\langle T_{L,N}v_{L,N},v_{L,N}\Bigr\rangle .
 \tag{4.3}
 \]
 \end{definition}
 
 The finite forms on the right side are nonnegative after shift and
 quotient.  Thus positive-form convergence immediately implies Weil
-positivity.  Divisor convergence implies the same conclusion if it is
-proved with enough control to exclude loss of spectral mass and branch
-switching.
+positivity.  Divisor convergence also implies RH, by the argument in
+the proof of Theorem~\ref{thm:closure}.
 
 \begin{lemma}[Logarithmic-curvature branch form]
 \label{lem:branch}
-Let \(k_L\) be Connes' prolate model and \(\phi_L\) the actual selected
-ground branch.  Since \(\widehat k_L\to\XiR\), divisor convergence is
-equivalent, on every simply connected compact set avoiding zeros, to
+Assume (2.4).  Let \(k_L\) be Connes' prolate model and \(\phi_L\) the
+selected ground branch.  Then the convergence (4.1) is equivalent, on
+every simply connected compact subset of the strip
+\(|\operatorname{Im}z|<1/2\) avoiding the zeros of \(\XiR\) and of the
+\(\widehat k_L\), to
 \[
  \boxed{
  \partial_z^2\log
@@ -320,11 +342,10 @@ estimates.  This proves the equivalence.
 
 \section{Conditional closure of the CCM route}
 
-\begin{theorem}[Connes closure theorem]
+\begin{theorem}[Conditional closure of the CCM route]
 \label{thm:closure}
-Assume the finite CCM package and Suzuki's localized self-adjoint
-realization.  If either positive-form convergence or divisor convergence
-with no branch loss holds, then RH follows.
+Assume the finite CCM package.  If either positive-form convergence or
+divisor convergence holds, then RH follows.
 \end{theorem}
 
 \begin{proof}
@@ -343,16 +364,28 @@ Given \(v\in C_c^\infty(\R)\), choose approximants \(v_{L,N}\) as in
 \]
 By Theorem~\ref{thm:weil}, RH follows.
 
-Under divisor convergence with no branch loss, the limiting spectral
-divisor of the selected self-adjoint finite operators is the divisor of
-\(\XiR\).  Since every finite spectral parameter is real, the limiting
-zeros are of the form \(1/2+it\).  Hence all zeros of \(\xi\) lie on the
-critical line.  This is RH.
+Under divisor convergence, recall that every zero of \(\XiR\) lies in
+the strip \(|\operatorname{Im}z|<1/2\), since \(\zeta\) has no zeros on
+\(\operatorname{Re}s=0,1\).  Suppose \(z_0\) is a zero of \(\XiR\) of
+order \(m\ge1\) with \(\operatorname{Im}z_0\ne0\).  Choose
+\(0<r<|\operatorname{Im}z_0|\) so that the closed disc
+\(\overline D=\{|z-z_0|\le r\}\) lies in the strip and contains no other
+zero of \(\XiR\).  Since the zeros of \(\widehat\phi_L\) in the strip
+are real, \(F_L=\partial_z^2\log\widehat\phi_L\) is holomorphic on a
+neighbourhood of \(\overline D\).  By (4.1), \(F_L\) converges uniformly
+on the annulus \(A=\{r/2\le|z-z_0|\le r\}\).  By the maximum principle,
+\((F_L)\) is uniformly Cauchy on \(\overline D\), hence converges
+uniformly there to a holomorphic function \(F\).  On \(A\),
+\(F=\partial_z^2\log\XiR\), so by the identity theorem
+\(\partial_z^2\log\XiR\) extends holomorphically to \(z_0\).  But
+\(\partial_z^2\log\XiR(z)=-m(z-z_0)^{-2}+O(1)\) near \(z_0\), a
+contradiction.  Hence every zero of \(\XiR\) is real, that is, all
+zeros of \(\xi\) lie on the critical line.  This is RH.
 \end{proof}
 
 \begin{remark}
-This theorem is the mathematical shape of the Connes proof.  Everything
-finite is self-adjoint and critical-line.  The only possible failure is at
+Theorem~\ref{thm:closure} is conditional: neither form of convergence is
+proved here.  Everything finite is self-adjoint and critical-line.  The only possible failure is at
 the infinite passage: positivity or spectral reality may be lost if the
 finite branch does not converge to the correct global branch with sign.
 \end{remark}
@@ -374,26 +407,31 @@ in strong resolvent sense, with
 including multiplicities.
 
 \begin{proposition}[Suzuki-to-Connes transfer]
-If the CCM quotient operators and the Suzuki finite-interval operators are
-identified by a common core and their resolvents differ by \(o(1)\) strongly
-on that core, then Suzuki's strong-resolvent limit implies the divisor
-convergence needed in Theorem~\ref{thm:closure}.
+Suppose that (i) there are isometries \(J_L\) of the CCM quotient spaces
+into one Hilbert space \(\mathcal H\) such that
+\(J_LS_LJ_L^*\to A_\infty\) in the strong resolvent sense, where
+\(S_L\) denotes the quotient operators along a cofinal diagonal and
+\(A_\infty\) is a densely defined operator as in (6.1); and (ii)
+\(\Spec(A_\infty)\), with multiplicities, is
+\(\{\gamma:\xi(1/2+i\gamma)=0\}\) as in (6.2).  Then all zeros of
+\(\xi\) lie on the critical line.
 \end{proposition}
 
 \begin{proof}
-Strong resolvent convergence determines spectral projections at continuity
-sets of the limiting spectral measure.  The common-core identification
-transfers those projections to the CCM branch.  Since the finite CCM
-operators are self-adjoint, the limiting spectral measure is real.  If its
-spectral determinant is the zeta-regularized determinant of \(\XiR\), then
-the divisor of \(\XiR\) is supported on the real spectral line.
+A strong resolvent limit of self-adjoint operators which is a densely
+defined operator is self-adjoint, so its spectrum is real.  By (ii) every
+\(\gamma\) with \(\xi(1/2+i\gamma)=0\) is real.
 \end{proof}
 
 \begin{remark}
-This proposition isolates a second version of the same branch-selection step:
-one
-can prove it as branch convergence of transforms, as form convergence, or
-as strong-resolvent convergence plus determinant identification.
+Hypothesis (ii), for any self-adjoint \(A_\infty\) (for instance the
+Suzuki limit (6.1), if it exists), already gives RH; hypothesis (i) is
+used only to make \(A_\infty\) self-adjoint.  The proposition therefore
+only records where the identification of the limiting spectrum with the
+zero divisor enters; it does not yield the divisor convergence (4.1) for
+the CCM branch \(\phi_L\).  The branch-selection step can thus be posed
+as branch convergence of transforms, as form convergence, or as
+strong-resolvent convergence together with spectral identification.
 \end{remark}
 
 \section{Branch selection as a finite source theorem}
@@ -401,12 +439,14 @@ as strong-resolvent convergence plus determinant identification.
 The finite critical-line property and the prolate approximation do not
 alone prove RH.  The branch-selection assertion is a signed convergence
 theorem.  In
-the notation above it can be stated in three equivalent operational forms.
+the notation above it can be stated in three sufficient operational forms.
 
 \begin{problem}[Branch selector]
 \label{prob:branch}
-Let \(\phi_L\) be the actual ground branch selected by the finite CCM
-radical quotient after \(N\to\infty\).  Prove that
+Assume (2.4).  Let \(\phi_L\) be the ground branch selected by the
+finite CCM radical quotient after \(N\to\infty\), and assume that it
+exists and that \(\widehat\phi_L\) is holomorphic with only real zeros
+in \(|\operatorname{Im}z|<1/2\).  Prove that
 \[
  \partial_z^2\log
  \frac{\widehat\phi_L(z)}{\widehat k_L(z)}
@@ -436,15 +476,21 @@ side is nonnegative.
 
 \begin{problem}[All-source sharp Doob floor]
 \label{prob:doob}
-Let \(K>0\) be Riemann's full kernel, normalized by
-\(\widehat K=\XiR\), and set
+Let \(K\) be Riemann's full kernel, normalized by
+\(\widehat K=\XiR\); it is even and strictly positive
+(P\'olya~\cite{Polya1926}).  Set
 \[
  d\mu_K(x)=2\cosh(x/2)K(x)\,\dd x .
 \tag{7.3}
 \]
-Let \(\mathscr E_K\) be the complete jump energy containing all ordinary
-von Mangoldt atoms and the archimedean Gamma jump measure.  Prove, directly
-from the literal sources, the sharp inequality
+For even compactly supported smooth \(r\) define the jump energy
+\[
+ \mathscr E_K(r)=\QW(Kr,Kr)+\frac12\Var_{\mu_K}(r),
+\]
+so that \(\mathscr E_K(r)-\frac12\Var_{\mu_K}(r)=\QW(Kr,Kr)\) holds by
+definition.  Prove, directly from the explicit formula (1.1), that is,
+from the von Mangoldt atoms, the archimedean term and the pole, the sharp
+inequality
 \[
  \boxed{
  \mathscr E_K(r)\ge\frac12\Var_{\mu_K}(r)}
@@ -453,29 +499,43 @@ from the literal sources, the sharp inequality
 for every even compactly supported smooth \(r\).
 \end{problem}
 
-\begin{proposition}[Equivalence of the three gates]
-Each of Problems~\ref{prob:branch}, \ref{prob:transfer}, and
-\ref{prob:doob}, together with the already established finite CCM--Suzuki
-components, implies RH.  Conversely, RH implies each gate in the expected
-limiting sense.
+\begin{proposition}[What each gate gives]
+Each of Problems~\ref{prob:branch} (under its stated assumptions) and
+\ref{prob:transfer} implies RH.  Problem~\ref{prob:doob} is equivalent to
+Weil positivity on even tests; together with the corresponding inequality
+for odd tests it gives (1.3), hence RH.
 \end{proposition}
 
 \begin{proof}
-Problem~\ref{prob:branch} gives divisor convergence by
-Lemma~\ref{lem:branch}, hence RH by Theorem~\ref{thm:closure}.
+Problem~\ref{prob:branch} gives (4.1) by Lemma~\ref{lem:branch}; with
+the assumed existence and real-zero property of \(\phi_L\) this is
+divisor convergence, hence RH by Theorem~\ref{thm:closure}.
 Problem~\ref{prob:transfer} gives Weil positivity directly, hence RH by
-Theorem~\ref{thm:weil}.  Problem~\ref{prob:doob} is the exact ground-state
-form of Weil positivity:
+Theorem~\ref{thm:weil}.  For Problem~\ref{prob:doob}, the definition of
+\(\mathscr E_K\) gives
 \[
  \QW(Kr,Kr)=\mathscr E_K(r)-\frac12\Var_{\mu_K}(r).
 \tag{7.5}
 \]
-Since every even compactly supported test has the form \(Kr\), this proves
-the even Weil criterion, which is equivalent to RH.  Under RH, Weil
-positivity holds; the finite critical-line branches then have no off-line
-divisor to converge to, and the same identities give the three gates in
-their limiting form.
+Since \(K>0\), every even compactly supported smooth test has the form
+\(Kr\) with \(r\) even, compactly supported and smooth.  Hence (7.4)
+is the Weil criterion (1.3) restricted to even tests.  Since \(W\) is
+even, \(\QW(v,v)=\QW(v_e,v_e)+\QW(v_o,v_o)\) for the even and odd parts
+\(v_e,v_o\) of \(v\), so positivity on odd tests in addition gives (1.3)
+for all tests, hence RH by Theorem~\ref{thm:weil}.  Whether even
+positivity alone implies RH is not decided here.  (Under RH, Weil
+positivity holds and (7.4) follows from (7.5); the converse for the other
+two gates is not claimed here.)
 \end{proof}
+
+\begin{remark}
+With the definition above, Problem~\ref{prob:doob} is a restatement of
+even Weil positivity.  Its intended content is that \(\mathscr E_K(r)\)
+be expanded, by a ground-state transform based on
+\(\XiR(\pm i/2)=\tfrac12\) and \(\int d\mu_K=1\), as a manifest jump form over
+the von Mangoldt atoms and the archimedean jump density; such an
+expansion is not derived in this paper.
+\end{remark}
 
 \section{Finite branch-selection refinement}
 
@@ -530,30 +590,32 @@ Here \(\mathfrak D^{\rm mesh}\) is Fourier discretization,
 \(\mathfrak D^{\Gamma}\), \(\mathfrak D^p\), and
 \(\mathfrak D^{\rm pole}\) are the literal Gamma, von Mangoldt and polar
 source differences, and \(\mathfrak D^{\rm br}\) is the finite radical
-branch correction.
+branch correction.  These six terms are not given by separate formulas
+here: (8.3) is a bookkeeping convention, and the terms are fixed only up
+to the constraint that they sum to (8.2).
 \end{definition}
 
-\begin{proposition}[Known analytic part of the transfer]
+\begin{proposition}[Analytic part of the transfer, conditional]
 \label{prop:known-transfer}
-For each fixed \(v\in C_c^\infty(\R)\) there is a cofinal diagonal
-\(N=N(L)\), with \(N(L)/L^2\to\infty\), such that
+Fix \(v\in C_c^\infty(\R)\) and assume that the decomposition (8.3)
+has been fixed so that
+\(|\mathfrak D^{\rm ext}_{L,N}(v)|\le C_vL^2/N\) and
+\(\mathfrak D^{\rm mesh}_{L,N}(v)\to0\) as \(N\to\infty\) at fixed
+\(L\).  Then there is a cofinal diagonal \(N=N(L)\), with
+\(N(L)/L^2\to\infty\), such that
 \[
  \mathfrak D^{\rm mesh}_{L,N(L)}(v)
  +\mathfrak D^{\rm ext}_{L,N(L)}(v)
  \longrightarrow0 .
 \tag{8.4}
 \]
-The assertion uses only Fourier approximation, the exterior-lattice
-curvature bound, and the fixed-\(L\) cofinal summability already available
-in the CCM quotient calculation.
 \end{proposition}
 
 \begin{proof}
-The Fourier sampling of a fixed compactly supported smooth test converges
-rapidly on every fixed physical interval.  The exterior determinant
-curvature is \(O_K(L^2/N)\) on compact spectral sets; the assumed diagonal
-therefore removes it.  Fixed-\(L\) cofinal summability supplies the
-remaining quotient-to-continuum passage before \(L\to\infty\).
+For each \(L\) choose \(N(L)\ge L^3+L^2\) so large that
+\(|\mathfrak D^{\rm mesh}_{L,N(L)}(v)|\le1/L\).  Then
+\(N(L)/L^2\to\infty\) and
+\(|\mathfrak D^{\rm ext}_{L,N(L)}(v)|\le C_vL^2/N(L)\to0\).
 \end{proof}
 
 \begin{problem}[Source-side Mosco lower bound]
@@ -573,9 +635,11 @@ diagonal of Proposition~\ref{prop:known-transfer} so that
 \]
 \end{problem}
 
-\begin{theorem}[Mosco lower transfer closes the Connes route]
+\begin{theorem}[Mosco lower transfer implies RH]
 \label{thm:mosco-transfer}
-If Problem~\ref{prob:source-mosco} holds, then the positive finite CCM
+Assume the hypotheses of Proposition~\ref{prop:known-transfer} for every
+\(v\in C_c^\infty(\R)\).  If Problem~\ref{prob:source-mosco} holds,
+then the positive finite CCM
 forms transfer to the completed Weil form.  Consequently RH follows.
 \end{theorem}
 
@@ -601,27 +665,25 @@ RH.
 \end{proof}
 
 \begin{remark}
-Problem~\ref{prob:source-mosco} is the next target in the Connes path.  It
-is not the classical full-kernel inequality (7.4).  It is a finite-source
-statement: the Gamma term, the literal von Mangoldt atoms, the pole and the
-radical branch correction must be kept together until after the lower
-limit is taken.  Separating them reproduces the previously encountered
-sign obstructions.
+Problem~\ref{prob:source-mosco} is not the full-kernel inequality (7.4)
+but a finite-source statement: the Gamma term, the von Mangoldt atoms,
+the pole and the radical correction are kept together until after the
+lower limit.  Bounding them separately does not give a sign.
 \end{remark}
 
 \begin{remark}[Joint-source rule]
-The source-side lower bound is pursued below through the complete finite
+The source-side lower bound is studied below through the complete finite
 prime--Gamma form and its radical anti-short.  The archimedean, polar,
 ordinary-prime and radical contributions may exchange mass, so no
-separate lower bound is imposed on any one of them.  The active finite
-statement is the joint inertia/gain inequality developed in
+separate lower bound is imposed on any one of them.  The finite
+statement used is the joint inertia/gain inequality of
 Section~\ref{sec:cofinal-inertia}.
 \end{remark}
 
 \subsection{Controlled exterior and cross residuals}
 
-We now specify the moving vector used in the closure package and discharge
-the even Rayleigh residual.  This specification is essential: a trial
+We now specify the moving vector and bound its even Rayleigh residual.
+This specification is essential: a trial
 vector satisfying only the two co-Poisson moment conditions may retain a
 nonzero endpoint value and hence a literal \(t^{-1}\) exterior carrier.
 The following fixed six-mode construction also removes the first two
@@ -641,6 +703,65 @@ spheroidal wave functions in the Fourier \(+1\) sector.  Write
 \]
 where \(\chi_j\) is the corresponding finite Fourier eigenvalue, and let
 \(\mu_j\) be the separation constant in the prolate differential equation.
+Here \(\mathcal F f(t)=\int_\R f(x)e^{-2\pi ixt}\,\dd x\);
+\(\psi_{j,\lambda}\) is the \(j\)-th eigenfunction of
+\(P_\lambda\mathcal F P_\lambda\) on \(L^2(-\lambda,\lambda)\), of unit
+norm there and extended by zero, with
+\(P_\lambda\mathcal F\psi_{j,\lambda}=\chi_j\psi_{j,\lambda}\) and
+\(0<\chi_j<1\) for \(j\equiv0\bmod4\) (\(P_\lambda\) is defined below);
+it satisfies
+\(((\lambda^2-t^2)\psi')'-(2\pi\lambda t)^2\psi+\mu_j\psi=0\) on
+\((-\lambda,\lambda)\).  Throughout, \(\widehat f=\mathcal F f\).
+
+\emph{Co-Poisson vectors.}  Let \(P_\lambda\) be multiplication by
+\(1_{[-\lambda,\lambda]}\).  For \(f=\sum_{j\in J_6}c_j\psi_{j,\lambda}\) put
+\(G_f(v)=v^{1/2}\sum_{n\ge1}\widehat f(nv)\) for \(v>0\), and, for
+\(v\ge\lambda\), \(H_f(v)=v^{1/2}\sum_{n\ge1}((1-P_\lambda)\widehat f)(nv)\),
+which equals \(G_f(v)\) there.  In the variable \(x=\log v\), with
+\(I_L=[-L/2,L/2]\) and \(\lambda=e^{L/2}\), set
+\[
+\begin{gathered}
+ V_f^+(x)=\frac{g(x)+g(-x)}{\sqrt2},\quad g=G_f(e^x)1_{I_L}(x);\\
+ R_f^+(x)=\frac{h(x)+h(-x)}{\sqrt2},\quad h=H_f(e^x)1_{[L/2,\infty)}(x).
+\end{gathered}
+\]
+Thus \(V_f^+\in L^2(I_L)_{\rm even}\) is the interior co-Poisson vector
+and \(R_f^+\), supported in \(\R\setminus(-L/2,L/2)\), is the exterior
+residual.  For even functions \(u\) we write
+\(\widehat u(w)=\int_\R u(x)e^{-wx}\,dx\) for the Mellin coordinate
+wherever the integral converges.
+
+\emph{Standing assumptions.}  The estimates of this subsection are
+derived under the following inputs, which are quoted from the prolate
+literature or assumed, and are not proved here.
+\begin{itemize}
+\item[(P1)] The fixed-order prolate asymptotics (8.8h)--(8.8i) and
+(8.8au) (Fuchs~\cite{Fuchs1964}, Slepian~\cite{Slepian1965}: for fixed
+\(n\) and \(c=2\pi\lambda^2\to\infty\), one has
+\(1-\chi_n^2\sim\pi^{1/2}2^{3n+2}c^{n+1/2}e^{-2c}/n!\)), together with
+\(e_j^2\asymp\lambda d_j\) for \(j\in J_6\).
+\item[(P2)] The radial estimates (8.8n), (8.8q)--(8.8r) (with
+\(U_{0,\lambda},U_{1,\lambda}\) independent of \(j\)) and (8.8v), for the
+ranges \(1\le x\le2\), \(2\le x\le c\) and \(x\ge c\) respectively,
+as derived from the expansions of Dunster~\cite{DunsterPSWF}.
+\item[(P3)] The lower bound (8.8e) for the interior vector.
+\item[(P4)] The explicit formula (1.1)--(1.2) extends, with absolute
+convergence and symmetric summation over zeros, to even, piecewise
+\(C^1\) functions \(u\) with finitely many jumps and
+\(|u(x)|+|u'(x)|\ll e^{-(1/2+\delta)|x|}\) for some \(\delta>0\), in the form \(\QW(u,u)=\sum_\rho\widehat u(\rho-\tfrac12)
+\overline{\widehat u(\bar\rho-\tfrac12)}\), and to the sesquilinear
+pairing of such a \(u\) with \(g\in L^2(I_L)\).
+\end{itemize}
+For the vector \(f_\lambda^{\rm ep}\) of
+Definition~\ref{def:endpoint-corrected-source} we write
+\(V_\lambda^+,R_\lambda^+\) for \(V_f^+,R_f^+\), and we define the
+even Rayleigh residual and the cross functional by
+\[
+ \mathscr R_L^+=\frac{\QW(R_\lambda^+,R_\lambda^+)}{\|V_\lambda^+\|^2},
+ \qquad
+ \|b_L^+\|=\sup\Bigl\{\Bigl|\QW\Bigl(\frac{R_\lambda^+}{\|V_\lambda^+\|},g\Bigr)\Bigr|:
+ g\in L^2(I_L)_{\rm even},\ \|g\|=1,\ g\perp V_\lambda^+\Bigr\}.
+\]
 
 \begin{definition}[Endpoint-corrected moving source]
 \label{def:endpoint-corrected-source}
@@ -654,11 +775,13 @@ Set
  \right\}.
 \tag{8.8b}
 \]
+Here \(f(\lambda),f'(\lambda)\) are the limits from inside
+\((-\lambda,\lambda)\).
 Let \(f_\lambda^{\rm ep}\) be a normalized first generalized eigenvector
-of \(\sum d_j|c_j|^2\) on this space.  Apply the co-Poisson construction
-and positive-parity projection of Section~8 to \(f_\lambda^{\rm ep}\), and
-denote the resulting interior and exterior vectors by
-\(V_\lambda^+\) and \(R_\lambda^+\).  Henceforth the moving vector is
+of \(\sum d_j|c_j|^2\) relative to \(\sum|c_j|^2\) on this space, and let
+\(V_\lambda^+=V^+_{f_\lambda^{\rm ep}}\) and
+\(R_\lambda^+=R^+_{f_\lambda^{\rm ep}}\) be its interior and exterior
+co-Poisson vectors.  Henceforth the moving vector is
 \[
  q_L^+=\frac{V_\lambda^+}{\|V_\lambda^+\|}.
 \tag{8.8c}
@@ -669,7 +792,8 @@ Theorem~\ref{thm:cross-residual-vanishing}.
 
 \begin{lemma}[The endpoint constraints preserve the angle ladder]
 \label{lem:endpoint-angle-ladder}
-For all sufficiently large \(\lambda\), the four constraints in
+Assume (P1).  For all sufficiently large \(\lambda\), the four
+constraints in
 (8.8b) are independent.  If
 \(\delta_{0,\lambda}^{\rm ep}\le
 \delta_{1,\lambda}^{\rm ep}\) are the generalized eigenvalues of
@@ -681,12 +805,13 @@ For all sufficiently large \(\lambda\), the four constraints in
  \delta_{1,\lambda}^{\rm ep}\asymp d_8.
 \tag{8.8d}
 \]
-Moreover
+The lower bound
 \[
- \|V_\lambda^+\|\ge c_V>0
+ \|V_\lambda^+\|\ge c_V>0,
 \tag{8.8e}
 \]
-with \(c_V\) independent of \(\lambda\).
+with \(c_V\) independent of \(\lambda\), is not proved here; it is the
+standing assumption (P3).
 \end{lemma}
 
 \begin{proof}
@@ -702,7 +827,7 @@ After imposing \(f(\lambda)=0\), the four constraint rows are therefore
 \tag{8.8g}
 \]
 For \(j=4r\), \(0\le r\le5\), the fixed-order prolate-to-Hermite and
-endpoint asymptotics give
+endpoint asymptotics of (P1) give
 \[
  |a_{4r}|\asymp1,\qquad
  |e_{4r}|\asymp\lambda^{1/2}q_{4r}^{1/2},\qquad
@@ -714,35 +839,62 @@ where \(M_1\ne0\), together with
  q_{4(r+1)}/q_{4r}\asymp\lambda^8.
 \tag{8.8i}
 \]
-After multiplication by uniformly invertible diagonal row and column
-scalings, and with \(y=\lambda^4\), the constraint matrix is a uniform
-perturbation of
+Put \(y=\lambda^4\) and use the unknowns \(w_r=c_{4r}e_{4r}\).  Since
+\(\chi_j\to1\), \(q_j\le d_j\le2q_j\), and (8.8h)--(8.8i) give
+\(q_{4r}\asymp q_0y^{2r}\).  Subtracting \(\lambda^2M_0\) times the third
+row from the fourth and dividing by \(\lambda^2M_1\), the constraints
+become \(Mw=0\) with
 \[
- \begin{pmatrix}
- 1&1&1&1&1&1\\
- 1&y^2&y^4&y^6&y^8&y^{10}\\
- 1&y&y^2&y^3&y^4&y^5\\
- 0&y&2y^2&3y^3&4y^4&5y^5
- \end{pmatrix}.
+ M=\begin{pmatrix}
+ \beta_0&\beta_1y^{-1}&\beta_2y^{-2}&\cdots&\beta_5y^{-5}\\
+ \gamma_0&\gamma_1y&\gamma_2y^2&\cdots&\gamma_5y^5\\
+ 1&1&1&\cdots&1\\
+ \epsilon_0&1+\epsilon_1&2+\epsilon_2&\cdots&5+\epsilon_5
+ \end{pmatrix},
 \tag{8.8j}
 \]
-Its consecutive four-column minors are nonzero.  Elimination gives two
-kernel profiles, up to uniformly bounded nonzero factors,
+where \(|\beta_r|\asymp|\gamma_r|\asymp1\) uniformly (after dividing the
+first two rows by \(|a_0/e_0|\) and \(|q_0a_0/e_0|\)) and
+\(\epsilon_r=O(\lambda^{-2})\).  Write \(\|w\|=\max_r|w_r|\).  Every
+\(w\in\ker M\) satisfies, from the first two rows,
 \[
- \begin{aligned}
- v^{(0)}&=(1,-1,2y^{-1},-y^{-2},y^{-4},0)+O(y^{-2}),\\
- v^{(1)}&=(0,1,-1,2y^{-1},-y^{-2},y^{-4})+O(y^{-2}).
- \end{aligned}
+ |w_0|\ll y^{-1}\|w\|,\qquad |w_5|\ll y^{-1}\|w\|.
 \tag{8.8k}
 \]
-Since \(d_{4r}\asymp d_4y^{2(r-1)}\), the quotient of the first
-profile is \(\asymp d_4\).  After removing that direction, the quotient
-of the second is \(\asymp d_8\).  The pivot equations and
-Cauchy--Schwarz give the matching lower bounds; the perturbation in
-(8.8j) is absorbed by the min--max principle.  This proves (8.8d).
-Finally, the first profile has the same nonzero \(0/4\) Hermite limit as
-the original moving vector.  Positive-parity co-Poisson projection is
-continuous on this fixed-mode limit, which proves (8.8e).
+
+\emph{Independence.}  If \(\dim\ker M\ge3\), it contains \(w\ne0\) with
+\(w_1=w_2=0\).  The last two rows then give
+\(w_3+w_4=O(y^{-1}\|w\|)\) and
+\(3w_3+4w_4=O((y^{-1}+\lambda^{-2})\|w\|)\), so
+\(\|w\|\ll(y^{-1}+\lambda^{-2})\|w\|\), impossible for large \(\lambda\).
+Hence \(M\) has rank four and \(\ker M\) is two-dimensional.
+
+\emph{The quotient.}  Since \(e_{4r}^2\asymp\lambda d_{4r}\) and
+\(d_{4r}\asymp d_4y^{2(r-1)}\), for \(w\in\ker M\)
+\[
+ \frac{\sum_jd_j|c_j|^2}{\sum_j|c_j|^2}
+ \asymp\frac{\sum_r|w_r|^2}{\sum_r|w_r|^2/d_{4r}} .
+\]
+By (8.8k), \(|w_0|^2/d_0\ll\|w\|^2/d_4\), and
+\(|w_r|^2/d_{4r}\le\|w\|^2/d_4\) for \(r\ge1\); hence every kernel vector
+has quotient \(\gg d_4\), so \(\delta_{0,\lambda}^{\rm ep}\gg d_4\).
+Conversely, take \(w\in\ker M\setminus\{0\}\) with \(w_5=0\).  If
+\(|w_1|\le\eta\|w\|\) with \(\eta\) small, the second row gives
+\(|w_4|\ll y^{-1}\|w\|\), and then the last two rows force
+\(|w_2|+|w_3|\ll(\eta+y^{-1}+\lambda^{-2})\|w\|\), a contradiction.  So
+\(|w_1|\gg\|w\|\), the denominator is \(\gg\|w\|^2/d_4\), and the
+quotient is \(\ll d_4\).  Thus \(\delta_{0,\lambda}^{\rm ep}\asymp d_4\).
+
+Since \(\ker M\) is two-dimensional, \(\delta_{1,\lambda}^{\rm ep}\) is
+the maximum of the quotient on \(\ker M\).  For any kernel vector, if
+\(\max_{r\le2}|w_r|\le\eta\|w\|\), then \(|w_5|\ll y^{-1}\|w\|\) and the
+last two rows force \(|w_3|+|w_4|\ll(\eta+y^{-1}+\lambda^{-2})\|w\|\), a
+contradiction; hence \(\max_{r\le2}|w_r|\gg\|w\|\), the denominator is
+\(\gg\|w\|^2/d_8\), and the quotient is \(\ll d_8\).  Conversely, take
+\(w\in\ker M\setminus\{0\}\) with \(w_0=0\).  The first row gives
+\(|w_1|\ll y^{-1}\|w\|\), so \(|w_1|^2/d_4\ll\|w\|^2/d_8\), while
+\(|w_r|^2/d_{4r}\le\|w\|^2/d_8\) for \(r\ge2\); the quotient is
+\(\gg d_8\).  This proves (8.8d).
 \end{proof}
 
 Put
@@ -753,7 +905,7 @@ Put
 
 \begin{lemma}[Uniform exterior two-jet estimate]
 \label{lem:uniform-exterior-two-jet}
-Uniformly for \(t\ge\lambda\),
+Assume (P1) and (P2).  Uniformly for \(t\ge\lambda\),
 \[
  \boxed{
  |\ell_\lambda(t)|+
@@ -765,12 +917,13 @@ Uniformly for \(t\ge\lambda\),
 
 \begin{proof}
 Put \(c=2\pi\lambda^2\) and \(x=t/\lambda\).  The Fourier continuation
-of each fixed prolate mode is its radial PSWF.  We apply the uniform Bessel
-and Liouville--Green expansions of Dunster~\cite{DunsterPSWF}, including
-their differentiated error bounds.
+of each fixed prolate mode is its radial PSWF.  The estimates (8.8n),
+(8.8q)--(8.8r) and (8.8v) below are those of assumption (P2); they are
+what the uniform Bessel and Liouville--Green expansions of
+Dunster~\cite{DunsterPSWF}, with their differentiated error bounds, are
+expected to give, but the specialization is not carried out here.
 
-For \(1\le x\le2\), the uniform Bessel expansion and
-Lemma~\ref{lem:endpoint-angle-ladder} give
+For \(1\le x\le2\), (P2) gives
 \[
  |\ell_\lambda(\lambda x)|+
  \lambda^{-1}|\ell_\lambda'(\lambda x)|
@@ -786,9 +939,11 @@ For \(2\le x\le c\), specialize Dunster's expansion to fixed order
 \tag{8.8o}
 \]
 All indices are congruent modulo four, so the term \(-j\pi/2\) has the
-same outgoing orientation.  The Liouville phase has the expansion
+same outgoing orientation.  Dunster's Liouville variable, denoted here
+\(\zeta_D(\sigma,x)+J(\sigma)\) in the notation of \cite{DunsterPSWF},
+has the expansion
 \[
- \xi(\sigma,x)+J(\sigma)
+ \zeta_D(\sigma,x)+J(\sigma)
  =\sqrt{x^2-1}
  +\sigma^2\left(\frac\pi4-\frac12\operatorname {arcsec}x\right)
  +O\!\left(\sigma^4(1+x^{-1})\right).
@@ -801,7 +956,7 @@ Consequently the radial expansion through order \(c^{-1}\) can be written
  +E_{j,\lambda}(x),
 \tag{8.8q}
 \]
-where the two \(U\)'s are independent of \(j\), and the uniform Olver
+where, by (P2), the two \(U\)'s are independent of \(j\), and the Olver
 remainder, also after one derivative, is
 \[
  |E_{j,\lambda}(x)|+
@@ -809,23 +964,25 @@ remainder, also after one derivative, is
  \ll |e_j|\bigl(x^{-3}+c^{-2}x^{-1}\bigr).
 \tag{8.8r}
 \]
-Indeed, (8.8p) makes the mode-dependent phase
+Heuristically, (8.8p) makes the mode-dependent phase
 \((2j+1)/(2x)+O_j(x^{-3}+c^{-1}x^{-1})\), while the radial amplitude is
 \(x^{-1}(1+O_j(x^{-2}+c^{-1}))\).  Thus its constant and affine terms in
-\(2j+1\) are precisely the two symbols in (8.8q).  They cancel because
+\(2j+1\) correspond to the two symbols in (8.8q).  These symbols
+cancel because
 \[
  \sum_jc_je_j=0,
  \qquad
  \sum_jc_j\mu_je_j=0
 \tag{8.8s}
 \]
-by the endpoint constraints.  Since
-\(\sum_j|c_je_j|\ll\lambda^{1/2}\sqrt{d_4}\) and
+by the endpoint constraints.  Since \(e_j^2\asymp\lambda d_j\) by
+(P1), Cauchy--Schwarz over the six indices and
+\(\sum_jd_j|c_j|^2\asymp d_4\sum_j|c_j|^2=d_4\) (by (8.8d)) give
+\(\sum_j|c_je_j|\ll\lambda^{1/2}\sqrt{d_4}\); together with
 \(c^{-2}x^{-1}\le x^{-3}\) for \(x\le c\), summing (8.8q)--(8.8r)
 proves (8.8m) throughout this region.
 
-For completeness, the same cancellation controls the range \(x\ge c\)
-without extrapolating the middle expansion.  If the outgoing solution is
+For the range \(x\ge c\) we indicate where (8.8v) comes from.  If the outgoing solution is
 written
 \[
  y_j(t)=e^{2\pi i\lambda t}
@@ -848,7 +1005,8 @@ The first two combined coefficients vanish by (8.8s), and
    \sum_jc_j\mu_j^2a_{0,j}.
 \tag{8.8u}
 \]
-The resulting Volterra majorant, using \(|\mu_j|\ll\lambda^2\), gives
+A Volterra majorant for the remaining coefficients, using
+\(|\mu_j|\ll\lambda^2\), is expected to give the bound assumed in (P2),
 \[
  |\ell_\lambda(t)|+\lambda^{-1}|\ell_\lambda'(t)|
  \ll\lambda^{5/2}\sqrt{d_4}\,t^{-3},
@@ -861,13 +1019,12 @@ which is stronger than (8.8m).  The three regions cover
 
 \begin{theorem}[Even Rayleigh residual]
 \label{thm:even-rayleigh-residual}
-For the endpoint-corrected moving vector of
+Assume (P1)--(P4).  For the endpoint-corrected moving vector of
 Definition~\ref{def:endpoint-corrected-source},
 \[
  \boxed{|\mathscr R_L^+|\ll\lambda^7d_4.}
 \tag{8.8w}
 \]
-Thus the first residual exponent is \(p_R=7<8\).
 \end{theorem}
 
 \begin{proof}
@@ -907,29 +1064,32 @@ for large ordinate yield, uniformly in the strip,
           {1+|\Im w|}.
 \tag{8.8ab}
 \]
-The exact positive-parity Mellin coordinate is
+Since \(R_\lambda^+(x)=(h(x)+h(-x))/\sqrt2\) with
+\(h(x)=H_\lambda(e^x)1_{[L/2,\infty)}(x)\), its Mellin coordinate is
 \[
  b_\lambda(w)=
- \frac{A_\lambda(w)+A_\lambda(-w)}{\sqrt2},
+ \frac{A_\lambda(w)+A_\lambda(-w)}{\sqrt2}.
 \tag{8.8ac}
 \]
-and the zero-side explicit formula gives
+By (8.8y), \(R_\lambda^+\) and its derivative decay like
+\(e^{-3|x|/2}\), so (P4) applies; as \(R_\lambda^+\) is real and even and
+the zeros are symmetric under \(\rho\mapsto\bar\rho\), it gives
 \[
- QW(R_\lambda^+,R_\lambda^+)
+ \QW(R_\lambda^+,R_\lambda^+)
  =\sum_\rho b_\lambda(\rho-\tfrac12)^2.
 \tag{8.8ad}
 \]
-The local zero-count estimate \(N(T+1)-N(T)\ll\log(2+T)\), together
+The local zero-count estimate \(N(T+1)-N(T)\ll\log(3+T)\), together
 with (8.8ab), makes this series absolutely convergent and gives
 \[
- |QW(R_\lambda^+,R_\lambda^+)|
+ |\QW(R_\lambda^+,R_\lambda^+)|
  \ll\lambda^7d_4.
 \tag{8.8ae}
 \]
-Finally, the exact normalized residual identity and (8.8e) give
+Finally, the definition of \(\mathscr R_L^+\) and (8.8e) give
 \[
  |\mathscr R_L^+|
- =\frac{|QW(R_\lambda^+,R_\lambda^+)|}
+ =\frac{|\QW(R_\lambda^+,R_\lambda^+)|}
         {\|V_\lambda^+\|^2}
  \ll\lambda^7d_4,
 \]
@@ -1024,9 +1184,9 @@ The same summable majorant makes the symmetric partial sums Cauchy in
 \(L^2(I_L)\), proving the lemma.
 \end{proof}
 
-\begin{theorem}[Cross residual for the direct branch selector]
+\begin{theorem}[Cross residual of the endpoint-corrected source]
 \label{thm:cross-residual-vanishing}
-For the endpoint-corrected moving vector of
+Assume (P1)--(P4).  For the endpoint-corrected moving vector of
 Definition~\ref{def:endpoint-corrected-source},
 \[
  \boxed{
@@ -1043,12 +1203,13 @@ Put
  e_L^+=\frac{R_\lambda^+}{\|V_\lambda^+\|}.
 \tag{8.8ap}
 \]
-The exact moving-radical identity gives, for every even core vector
-\(g\perp q_L^+\),
+Define the functional \(b_L^+\) on even \(g\in L^2(I_L)\) with
+\(g\perp q_L^+\) by
 \[
  \langle b_L^+,g\rangle=-\QW(e_L^+,g).
 \tag{8.8aq}
 \]
+Thus \(\|b_L^+\|\) is the norm of this functional, as defined above.
 If \(z_\rho=\rho-1/2\), the positive-parity Mellin coordinate is
 \[
  \widehat {R_\lambda^+}(z_\rho)
@@ -1057,8 +1218,8 @@ If \(z_\rho=\rho-1/2\), the positive-parity Mellin coordinate is
  b_\lambda(w)=\frac{A_\lambda(w)+A_\lambda(-w)}{\sqrt2}.
 \tag{8.8ar}
 \]
-Equations (8.8ab), (8.8e), and \(0<\Re\rho<1\) therefore give the
-complete-divisor representation
+Equations (8.8ab), (8.8e), \(0<\Re\rho<1\) and (P4) for the pairing
+therefore give the complete-divisor representation
 \[
  \QW(e_L^+,g)
  =\sum_\rho c_{\rho,\lambda}\widehat g(z_\rho),
@@ -1092,9 +1253,9 @@ implies
 \]
 \end{proof}
 
-Theorem~\ref{thm:cross-residual-vanishing} closes the cross residual
-required by the direct asymptotic-inertia criterion.  Together with
-Theorem~\ref{thm:even-rayleigh-residual}, it gives
+Theorem~\ref{thm:cross-residual-vanishing} gives the cross-residual
+bound used in Section~\ref{sec:cofinal-inertia}.  Together with
+Theorem~\ref{thm:even-rayleigh-residual}, it gives, under (P1)--(P4),
 \[
  |\mathscr R_L^+|+\|b_L^+\|\longrightarrow0.
 \tag{8.8aw}
@@ -1103,7 +1264,7 @@ Theorem~\ref{thm:even-rayleigh-residual}, it gives
 \section{Cofinal prime--Gamma inertia matching}
 \label{sec:cofinal-inertia}
 
-The preceding moving-source analysis proves the two residual estimates.
+The preceding moving-source analysis gives the two residual estimates under the standing assumptions (P1)--(P4).
 The individual source components can exchange mass.  We therefore keep
 all sources in one finite Hermitian form.
 
@@ -1111,7 +1272,7 @@ all sources in one finite Hermitian form.
 
 On the centered real-even space
 \[
- \mathcal H_0=\left\{q\in L^2(\mu_K):\int q\,\dd\mu_K=0\right\},
+ \mathcal H_0=\left\{q\in L^2_{\rm even}(\mu_K):\int q\,\dd\mu_K=0\right\},
 \tag{9.1}
 \]
 define the polarized displacement atom
@@ -1124,7 +1285,15 @@ define the polarized displacement atom
 \end{aligned}
 \tag{9.2}
 \]
-For \(X\ge2\), put
+The archimedean jump form is
+\[
+ \mathscr E_\Gamma(q,s)=\int_0^\infty g_\Gamma(u)\,\mathcal J_u(q,s)\,\dd u,
+ \qquad
+ g_\Gamma(u)=\frac{e^{u/2}}{e^{u}-e^{-u}} ,
+\]
+so that \(g_\Gamma(u)=\frac1{2u}+\frac14+O(u)\) as \(u\downarrow0\); relative to the
+prime atoms below it carries the archimedean weight of the explicit
+formula (1.1).  For \(X\ge2\), put
 \[
 \begin{aligned}
  \mathcal A_X(q,s)
@@ -1147,6 +1316,18 @@ The complete form is
         \mathcal T_X\succeq0.}
 \tag{9.4}
 \]
+Here, and throughout this section, \(\mathscr E_K\) denotes the jump form
+\(\mathscr E_\Gamma+\sum_{n}\frac{\Lambda(n)}{\sqrt n}\mathcal J_{\log n}\)
+(its closure is constructed in Subsection~\ref{subsec:heat-core}).  Its
+agreement on even \(r\in C_c^\infty(\mathbb R)\) with the jump energy of
+Problem~\ref{prob:doob}, namely the ground-state identity
+\[
+ \mathscr E_\Gamma(r,r)+\sum_n\frac{\Lambda(n)}{\sqrt n}
+ \mathcal J_{\log n}(r,r)
+ =\QW(Kr,Kr)+\frac12\Var_{\mu_K}(r),
+\]
+is not proved in this paper; it is stated as a hypothesis wherever it is
+used.
 Thus the finite heads increase in Loewner order toward the complete form.
 
 Let \(V_M\subset\mathcal H_0\) be a nested finite-dimensional mode space
@@ -1157,7 +1338,16 @@ generated by centered projections of
 \tag{9.5}
 \]
 for complete zero orbits \(z\) in a growing spectral rectangle, with all
-multiplicity jets retained.  Let \(Z_M:\mathbb C^{d_M}\to V_M\) be the
+multiplicity jets retained.  For a zero \(z\) of \(\XiR\) one has
+\(\int\chi_z\,\dd\mu_K=2\int\cos(zx)K(x)\,\dd x=2\XiR(z)=0\), and
+similarly for the multiplicity jets \(\partial_z^m\chi_z\) at a zero of
+order \(>m\); so these modes are already centered.  Likewise, for the
+functions \(r_j\) of (9.14) below, integration by parts gives
+\(\langle\chi_z,r_j\rangle_{\mu_K}=2((-1)^jz^{2j}-4^{-j})\XiR(z)=0\).
+Every element of
+\(V_M\) is a finite combination of them, hence tends to zero at
+\(\pm\infty\) because \(\lvert\operatorname{Im}z\rvert<\frac12\).
+Let \(Z_M:\mathbb C^{d_M}\to V_M\) be the
 synthesis map, and write
 \[
  \mathbf N_M=Z_M^*Z_M,\qquad
@@ -1290,7 +1480,7 @@ one eliminates an indefinite or constrained block through the extremal
 shorted/compressed operator before reading the remaining Schur complement
 \cite{Krein1947,Anderson1971,AndersonTrapp1975}.  The radical itself is
 part of the Sonin/co-Poisson and Weil-distribution Hilbert-space
-background cited in Remark~1.2; the explicit finite coordinate
+background cited in Remark~\ref{rem:attribution}; the explicit finite coordinate
 \(r_j=K^{(2j)}/K-4^{-j}\) is the coordinate used here for the completed
 radical.
 
@@ -1301,12 +1491,29 @@ Use a distinct symbol for the exact completed radical:
  \mathfrak R_J=\operatorname{span}\{r_1,\dots,r_J\}.
 \tag{9.14}
 \]
-Polarization of the radical identity gives
+Each \(r_j\) satisfies \(\int r_j\,\dd\mu_K=0\), since integrating by parts gives
+\[
+ \int\cosh(x/2)K^{(2j)}(x)\,\dd x=4^{-j}\int\cosh(x/2)K(x)\,\dd x .
+\]
+Moreover \(Kr_j=K^{(2j)}-4^{-j}K\) has Fourier transform
+\(((-1)^jz^{2j}-4^{-j})\XiR(z)\), which vanishes at every zero of
+\(\XiR\) and at \(z=\pm i/2\).  Assume the ground-state identity stated
+after (9.4), and let \(f\) be even in \(C_c^\infty(\mathbb R)\).  The
+explicit formula \(W(\phi)=\sum_\gamma\widehat\phi(\gamma)\), applied to
+\(\phi=Kr_j*\widetilde{Kf}\), which is smooth and decays like
+\(\exp(-\pi e^{2|x|})\) so that the formula applies, gives
+\(\QW(Kr_j,Kf)=0\).  Polarizing the ground-state identity (extended to
+\(r_j\) by the cutoff approximation of Subsection~\ref{subsec:heat-core},
+under which both sides are continuous) and using \(\int r_j\,\dd\mu_K=0\)
+gives \(\mathscr E_K(r_j,f)=\frac12\langle r_j,f\rangle_{\mu_K}\), i.e.
 \[
  \mathcal A_\infty(r,f)=0
- \qquad(r\in\overline{\cup_J\mathfrak R_J}).
+ \qquad(r\in\bigcup_J\mathfrak R_J,\ f\in C_{c,\rm even}^\infty(\mathbb R)),
 \tag{9.15}
 \]
+and by continuity in the closed form norm for every \(f\) in the form
+domain of Subsection~\ref{subsec:heat-core}.  Thus (9.15), and every
+statement below that uses it, is conditional on the ground-state identity.
 In bases of \(V_M\) and \(\mathfrak R_J\), write the omitted-tail blocks
 as \(\mathbf T^{VV},\mathbf T^{VR},\mathbf T^{RR}\).  The radical block is
 strictly positive:
@@ -1374,7 +1581,7 @@ Define the excess negative index and its frontier by
 \tag{9.21}
 \]
 Loewner monotonicity and interlacing give
-\cite{Loewner1934,Bhatia1997}
+\cite{Bhatia1997}
 \[
 \begin{array}{c|c}
 \text{parameter increased}&\text{effect on }\kappa\\ \hline
@@ -1386,13 +1593,25 @@ J&\text{nonincreasing}.
 \]
 Thus \(X_*(M+1,J)\ge X_*(M,J)\), whereas
 \(X_*(M,J+1)\le X_*(M,J)\).  This is the exact mode--prime--radical
-staircase: a head ending at \(7\) can close one row and fail when the next
-mode is admitted.
+staircase: a head that closes a row with cutoff \(X\) may fail when the
+next mode is admitted.
 
 \subsection{Geometry of a large-prime channel}
 
-The staircase has a literal signal-processing interpretation.  For
-\(\chi_z\) in (9.5), uniformly on fixed compact \(z,w\)-blocks,
+The staircase has a literal signal-processing interpretation.  Recall
+that \(K\) is normalized by \(\int K(x)e^{izx}\,\dd x=\XiR(z)\), so that
+\[
+ K(x)=2\sum_{n\ge1}\bigl(2\pi^2n^4e^{9x/2}-3\pi n^2e^{5x/2}\bigr)
+ e^{-\pi n^2e^{2x}},
+ \qquad
+ K(x)=4\pi^2e^{9x/2}e^{-\pi e^{2x}}\bigl(1+O(e^{-2x})\bigr)
+\]
+as \(x\to+\infty\), and put \(C_\Xi=2\).
+
+\begin{proposition}[Large-prime channel asymptotics]
+For
+\(\chi_z\) in (9.5), uniformly on fixed compact \(z,w\)-blocks with
+\(\lvert\operatorname{Im}z\rvert,\lvert\operatorname{Im}w\rvert<\frac12\),
 \[
  \boxed{
  \frac{\log p}{\sqrt p}\mathcal J_{\log p}(\chi_z,\chi_w)
@@ -1418,13 +1637,58 @@ and
  \qquad b=\max(|\operatorname{Im}z|,|\operatorname{Im}w|)<\frac12.
 \tag{9.25}
 \]
-The proof is Laplace's method at the midpoint \(x=\frac12\log p\):
-\(K(x)K(x-\log p)\) has aperture \(p^{-1/2}\), and the first odd Taylor
-coefficient of \(\chi_z\) is exactly \(A_p(z)\).  Hence one large prime is
-an approximate rank-one derivative sensor.  In its asymptotic regime,
-\(d\) newly exposed independent directions require at least \(d\)
-independent prime channels.  This proves the moving-bank geometry but not,
-by itself, the uniform lower frame bound in (9.20).
+\end{proposition}
+
+\begin{proof}
+Put \(a=\frac12\log p\) and \(x=a+t\).  Since \(K\) and \(\chi_z\) are
+even, \(K(x)K(x-\log p)=K(a+t)K(a-t)\) and
+\(\chi_z(x)-\chi_z(x-\log p)=\chi_z(a+t)-\chi_z(a-t)\).  For
+\(\lvert t\rvert\le\frac14\log p\) the asymptotics of \(K\) give
+\[
+ K(a+t)K(a-t)=16\pi^4p^{9/2}e^{-2\pi p\cosh 2t}
+ \bigl(1+O(p^{-1}\cosh 2t)\bigr),
+\]
+because \(e^{9(a+t)/2}e^{9(a-t)/2}=p^{9/2}\) and
+\(e^{2(a+t)}+e^{2(a-t)}=2p\cosh2t\); the terms \(n\ge2\) of the theta
+series are smaller by a factor \(O(e^{-3\pi\sqrt p})\) on this range.  On
+\(\lvert t\rvert\ge p^{-1/2+\epsilon}\) (in particular on
+\(\lvert t\rvert>\frac14\log p\), where \(e^{2|t|}\ge p^{1/2}\)) the
+factor \(e^{-2\pi p(\cosh2t-1)}\le e^{-4\pi pt^2}\) makes the
+contribution smaller than any power of \(p\) relative to the main term,
+since \(\chi_z\) grows at most like \(e^{b|x|}\).  The weight is even
+in \(t\), and
+\(\chi_z(a+t)-\chi_z(a-t)=2t\chi_z'(a)+O(p^{b/2-1/4}\lvert t\rvert^3)\)
+with
+\[
+ \chi_z'(a)=-\frac{z\sin(za)+\frac12\tanh(a/2)\cos(za)}{\cosh(a/2)}
+ =-\frac{A_p(z)}{p^{1/4}(1+p^{-1/2})},
+\]
+because \(\cosh(a/2)=\frac12p^{1/4}(1+p^{-1/2})\).  Using
+\(e^{-2\pi p\cosh2t}=e^{-2\pi p}e^{-4\pi pt^2}(1+O(pt^4))\) and
+\(\int_{\mathbb R}4t^2e^{-4\pi pt^2}\,\dd t=\frac1{4\pi p^{3/2}}\), the
+main term is
+\[
+ 16\pi^4p^{9/2}e^{-2\pi p}\,\frac{\overline{A_p(z)}A_p(w)}
+ {p^{1/2}(1+p^{-1/2})^2}\cdot\frac1{4\pi p^{3/2}}
+ =4\pi^3p^{5/2}e^{-2\pi p}\frac{\overline{A_p(z)}A_p(w)}{(1+p^{-1/2})^2},
+\]
+and multiplication by \((\log p)/\sqrt p\) gives
+\(\beta_p\overline{A_p(z)}A_p(w)\) with \(C_\Xi^2=4\).  On the
+effective range \(t=O(p^{-1/2+\epsilon})\), the cubic Taylor remainder
+(relative size \(t^2\)), the quartic term of \(\cosh2t\) (relative size
+\(pt^4\)) and the correction factor of \(K\) (relative size \(p^{-1}\))
+are each \(O(p^{-1+4\epsilon})\) relative to a quantity bounded by
+\(\beta_pp^{b}\); here \(|\chi_z'(a)|,|\chi_z'''(a)|\ll p^{b/2-1/4}\) on
+the compact block.  Taking the Gaussian moments exactly instead of
+estimating them removes the \(\epsilon\), and gives (9.25).
+\end{proof}
+
+Numerically, the ratio of the left side of (9.23) to
+\(\beta_p\overline{A_p(z)}A_p(w)\) is approximately \(0.867\),
+\(0.953\), \(0.985\) at \(p=11,29,101\) for \(z=w=3\), consistent with
+(9.23)--(9.25).
+Heuristically, each large prime contributes approximately one derivative
+direction; this is not used below.
 
 \subsection{Finite observability and the exact gain budget}
 
@@ -1447,8 +1711,9 @@ normalized least eigenvalue is bounded away from zero uniformly when
 The real theta kernel is strictly positive.  Therefore
 \(\mathcal J_u(q,q)=0\) would imply
 \(q(x)=q(x-u)\) for almost every \(x\), and analyticity extends the equality
-to the real line.  Every finite linear combination of the modes (9.5),
-including confluent multiplicity jets, tends to zero at both ends because
+to the real line.  As noted after (9.5), every element of \(V_M\) is a
+finite combination of the centered modes \(\chi_z\) and their
+multiplicity jets, and tends to zero at both ends because
 \(\lvert\operatorname {Im}z\rvert<1/2\).  A periodic function with this
 decay is zero.  This proves strict positivity.  Continuity in \(u\) and
 compactness of the normalized unit sphere give the uniform assertion.
@@ -1482,8 +1747,8 @@ decrease on the positive-deficit sector.  Norm convergence gives
  \vartheta_{M,\infty}<1.}
 \tag{9.25d}
 \]
-Thus aliasing, finite rank and lack of sampling are no longer possible
-obstructions.  The strict inequality in (9.25d) is the gain question; it
+Thus finiteness of \(X_*(M)\) is equivalent to the strict inequality in
+(9.25d).  The strict inequality in (9.25d) is the gain question; it
 cannot be replaced by the sum of the individual least atom eigenvalues,
 because that replacement discards the cross-prime alignment.
 
@@ -1547,7 +1812,7 @@ precisely when all literal innovations (9.25h) are positive.  This scalar
 criterion is an exact unshorted precursor: it keeps Gamma, the threshold,
 all ordinary von Mangoldt weights and their directional alignment in one
 number for each newly admitted mode.  The active shortened target is
-identified below by \(\mathfrak g_{M,J,X}>\delta_{M,J,X}\).
+identified below by \(\mathfrak g_{M,J,X}>\delta^{\flat}_{M,J,X}\).
 
 The moving-filter interpretation also has an exact update law.  Suppose
 the preceding-mode block \(A\) is positive before the atom
@@ -1611,24 +1876,23 @@ prime sensors.  It gives a finite interval-certifiable crossing criterion:
 partition the unused prime powers into finitely many blocks and verify that
 the sum of their lower bounds exceeds the current negative pivot.
 
-\begin{remark}[Why discrete Fermi levels do not force a crossing]
-The crossing still requires the physical theta features in (9.25i).  An
-exact three-state reversible countermodel shows why.  Let \(G\) be the
-path Laplacian on three vertices with both edge weights \(1/8\), and let
-\(\Pi\) project onto the centered plane.  Its centered eigenvalues are
-\(1/8,3/8\).  Choose positive numbers \(a_n\), indexed by prime powers,
-with \(\sum a_n=1/8\), and factor
-\(a_n\Pi=(\Lambda(n)/\sqrt n)D_n^*D_n\).  Every channel is then strictly
-observable and every finite head has discrete spectrum, while the
-completed eigenvalues are
+\begin{remark}[Positive weights alone do not force a crossing]
+Positive weights, strict observability and norm convergence alone do not
+force the strict inequality in (9.25d).  In a three-dimensional model,
+let \(G\) be \(\frac18\) times the path Laplacian on three vertices
+(centered eigenvalues \(\frac18,\frac38\)), let \(\Pi\) project onto the
+centered plane, and choose positive numbers \(a_n\), indexed by prime
+powers, with \(\sum a_n=\frac18\); each channel \(a_n\Pi\) is strictly
+positive on the centered plane.  The completed energies of
+\(G+\sum_na_n\Pi\) are
 \[
- 0,\qquad\frac14,\qquad\frac12.
+ 0,\qquad\frac14,\qquad\frac12,
 \tag{9.25n}
 \]
-The last vector is an exact threshold radical, but the \(1/4\) bound state
-never crosses.  Thus reversibility, discreteness, literal positive weights,
-strict observability and norm convergence do not imply frontier finiteness;
-the missing estimate must use the actual ordinary-prime theta geometry.
+so the analogue of \(\mathcal A_\infty\), the energy minus
+\(\frac12\), has the eigenvalue \(-\frac14\) on the centered plane.  Any
+proof of (9.25d) must therefore use the specific theta geometry of
+(9.25i).
 \end{remark}
 
 \subsection{Local detection and cumulative adaptive gain}
@@ -1640,15 +1904,15 @@ define
 \begin{aligned}
  \mathcal J_{u,\eta}(q,s)
  :=\int_{-\eta}^{\eta}&K(t+y)K(t-y)
- \{q(t+y)-q(t-y)\}\\
- &\times\overline{\{s(t+y)-s(t-y)\}}\,\dd y .
+ \overline{\{q(t+y)-q(t-y)\}}\\
+ &\times\{s(t+y)-s(t-y)\}\,\dd y .
 \end{aligned}
 \tag{9.25o}
 \]
 Let \(\mathbf C_M^{\rm loc}(u,\eta)\) be its Gram matrix in
 \((\phi_1,\ldots,\phi_M)\).
 
-\begin{proposition}[Local Christoffel detection~\cite{Karlin1968,Ismail2005}]
+\begin{proposition}[Local Christoffel detection~\cite{Bhatia1997}]
 \label{prop:local-christoffel}
 For every \(u,\eta>0\),
 \[
@@ -1673,9 +1937,9 @@ prime power \(n=p^k\) gives the adaptive lower bound
 If the local integral vanishes, strict positivity of \(K\) gives
 \(q(t+y)=q(t-y)\) on an interval.  Analytic continuation makes \(q\)
 invariant under reflection about \(t\).  Since \(q\) is even, composition
-with reflection about zero makes it \(u\)-periodic.  Every vector in the
-finite elementary zero-mode and confluent-jet space tends to zero at
-\(+\infty\); therefore \(q=0\).  The local Gram is positive definite.
+with reflection about zero makes it \(u\)-periodic.  By the remark after
+(9.5), every vector of \(V_M\) tends to zero at \(+\infty\); a
+\(u\)-periodic function with this property vanishes, so \(q=0\).  The local Gram is positive definite.
 Minimizing its quadratic polynomial over the coefficient of
 \(V_{M-1}\) gives the last Schur complement, which is the determinant
 ratio in (9.25p).  Restricting the literal atom to the midpoint aperture
@@ -1777,9 +2041,13 @@ Assume \(\widehat A\succ0\), and define
  q_{M,J,X}^*=\phi_M-\Phi\widehat a,\qquad
  \widehat\sigma_{M,J,X}
  =\widehat h-\widehat c^*\widehat A^{-1}\widehat c
- =-\delta_{M,J,X}<0.
+ =:-\delta^{\flat}_{M,J,X}.
 \tag{9.25x}
 \]
+The row is called negative if \(\delta^{\flat}_{M,J,X}>0\).  (The
+symbol \(\delta^\flat\) is distinct from \(\delta_M\) of (9.11), which
+has the opposite sign convention.)  The identities (9.25aa)--(9.25al)
+below hold for either sign of \(\delta^{\flat}_{M,J,X}\).
 The stationary radical coefficient and full saddle residual are
 \[
  \zeta_{M,J,X}^*=-(W_J^*W_J)^{-1}W_J^*\mathcal V_Xq_{M,J,X}^*,
@@ -1796,7 +2064,7 @@ In particular,
 
 \begin{theorem}[Exact radical-conditioned adaptive gain]
 \label{thm:radical-conditioned-gain}
-Set
+For a row with \(\widehat A\succ0\), set
 \[
  z_{M,J,X}=\Pi_{J,X}\mathcal V_Xq_{M,J,X}^*,
  \qquad \overline U=\Pi_{J,X}U.
@@ -1804,7 +2072,7 @@ Set
 Then the completed last pivot is
 \[
  \boxed{
- \sigma_{M,\infty}=-\delta_{M,J,X}+\mathfrak g_{M,J,X},
+ \sigma_{M,\infty}=-\delta^{\flat}_{M,J,X}+\mathfrak g_{M,J,X},
  \qquad
  \mathfrak g_{M,J,X}
  =\left\langle z_{M,J,X},
@@ -1827,7 +2095,7 @@ Thus
 \[
  \boxed{\sigma_{M,\infty}>0
  \quad\Longleftrightarrow\quad
- \mathfrak g_{M,J,X}>\delta_{M,J,X}.}
+ \mathfrak g_{M,J,X}>\delta^{\flat}_{M,J,X}.}
 \tag{9.25ac}
 \]
 \end{theorem}
@@ -1915,7 +2183,7 @@ deleting the last row and column.
 
 \begin{theorem}[Augmented finite determinant exhaustion]
 \label{thm:augmented-exhaustion}
-For every \(Y\) containing at least one omitted prime power,
+For a row with \(\widehat A\succ0\) and every \(Y\) containing at least one omitted prime power,
 \[
  \boxed{
  \mathfrak C_{M,J;X,Y}
@@ -1942,7 +2210,7 @@ Consequently
  \boxed{
  \sigma_{M,\infty}>0
  \quad\Longleftrightarrow\quad
- \mathfrak C_{M,J;X,Y}>\delta_{M,J,X}
+ \mathfrak C_{M,J;X,Y}>\delta^{\flat}_{M,J,X}
  \text{ for some finite }Y.}
 \tag{9.25al}
 \]
@@ -1969,14 +2237,14 @@ The fixed-space theta-overlap estimate bounds the remaining Gram tail by
 \(CQ(Y)e^{-cY}\); compactness of the minimizers gives (9.25ak).
 Finally combine (9.25aa) and (9.25aj): a positive limiting margin is
 eventually larger than the vanishing tail loss, while a finite crossing
-implies \(\mathfrak g_{M,J,X}>\delta_{M,J,X}\).  This proves (9.25al).
+implies \(\mathfrak g_{M,J,X}>\delta^{\flat}_{M,J,X}\).  This proves (9.25al).
 \end{proof}
 
 The finite source equation eliminates the abstract deficit.  Namely,
 \[
 \boxed{
 \begin{aligned}
- \delta_{M,J,X}={}&\frac12\|\widetilde q_{M,J,X}^*\|_{\mu_K}^2
+ \delta^{\flat}_{M,J,X}={}&\frac12\|\widetilde q_{M,J,X}^*\|_{\mu_K}^2
  -\mathscr E_\Gamma(\widetilde q_{M,J,X}^*)\\
  &-\sum_{p^k\le X}\frac{\log p}{p^{k/2}}
  \mathcal J_{k\log p}(\widetilde q_{M,J,X}^*,
@@ -1995,15 +2263,15 @@ Radical invariance of the complete form, (9.25z), and
 \(\mathcal A_X=\mathcal A_\infty-\mathcal T_X\) give
 \[
  \boxed{
- R_{M,J,X}-\delta_{M,J,X}
+ R_{M,J,X}-\delta^{\flat}_{M,J,X}
  =\mathcal A_\infty(q_{M,J,X}^*,q_{M,J,X}^*),
  \qquad
- \mathfrak g_{M,J,X}-\delta_{M,J,X}
+ \mathfrak g_{M,J,X}-\delta^{\flat}_{M,J,X}
  =\mathcal A_\infty(q_{M,J,X}^*,q_{M,J,X}^*)
   -\mathfrak l_{M,J,X}.}
 \tag{9.25an}
 \]
-Thus even the prerequisite \(R_{M,J,X}>\delta_{M,J,X}\) is already
+Thus even the prerequisite \(R_{M,J,X}>\delta^{\flat}_{M,J,X}\) is already
 positivity of the completed form on the current residual.  Bounds which
 first dominate the raw response and then pay a positive regression penalty
 are strictly stronger than the required statement.  The augmented
@@ -2019,7 +2287,7 @@ let \(e_*\) denote the last coordinate vector, and set
 \[
  \mathbb P_{M,J;X,Y}
  =\mathbb C_{M,J;X,Y}
-  -\delta_{M,J,X}e_*e_*^*.
+  -\delta^{\flat}_{M,J,X}e_*e_*^*.
 \]
 Taking the Schur complement of the preceding principal block gives the
 exact identity
@@ -2027,13 +2295,13 @@ exact identity
  \boxed{
  \det\mathbb P_{M,J;X,Y}
  =\tau_d(Y)\{
-   \mathfrak C_{M,J;X,Y}-\delta_{M,J,X}\}
- =\tau_{d+1}(Y)-\delta_{M,J,X}\tau_d(Y).}
+   \mathfrak C_{M,J;X,Y}-\delta^{\flat}_{M,J,X}\}
+ =\tau_{d+1}(Y)-\delta^{\flat}_{M,J,X}\tau_d(Y).}
 \]
 Since \(\tau_d(Y)>0\), finite crossing is therefore precisely the strict
 minor domination
 \[
- \boxed{\tau_{d+1}(Y)>\delta_{M,J,X}\tau_d(Y).}
+ \boxed{\tau_{d+1}(Y)>\delta^{\flat}_{M,J,X}\tau_d(Y).}
 \]
 This recoding introduces neither a localization loss nor a separate
 effective-resistance estimate.
@@ -2116,34 +2384,40 @@ The finite adaptive gain is then
 
 \begin{theorem}[Exact signed amplitude transfer]
 \label{thm:signed-amplitude-transfer}
+Consider a negative row with \(\widehat A\succ0\).
 Let \(\psi\in\ker W^*\) and
 \(\beta_\psi=\langle\psi,v\rangle\ne0\).  Define
 \[
  g_\psi=(-A^{-1/2}U^*\psi,\psi),
  \qquad
- h_\psi=\frac{(-1)^d\sqrt{\delta_{M,J,X}}}
+ h_\psi=\frac{(-1)^d\sqrt{\delta^{\flat}_{M,J,X}}}
           {\overline{\beta_\psi}}\,g_\psi .
 \tag{9.25as}
 \]
-If \(\Delta_d\) and \(\Delta_{d+1}\) are the nuisance and augmented
-Andreief amplitudes of the column system
+For columns \(c_1,\dots,c_r\in\mathcal H_Y\) put
+\(\Delta_r(\omega_1,\dots,\omega_r)=\det[c_j(\omega_i)]_{i,j\le r}\).
+Let \(\Delta_d\) use the \(d\) nuisance columns
 \[
- (A^{1/2}e_i,Ue_i),\qquad (0,We_a),\qquad (0,v),
+ (A^{1/2}e_i,Ue_i)\ (i\le M-1),\qquad (0,We_a)\ (a\le J),
 \]
-then
+and let \(\Delta_{d+1}\) append the column \((0,v)\), with the integrated
+variable \(\omega\) in the first row.  By Andreief's identity
+\cite{Andreief1886}, \(\|\Delta_r\|_{[r]}^2\) is the Gram determinant of
+\(c_1,\dots,c_r\); thus \(\|\Delta_d\|_{[d]}^2=\tau_d(Y)\) and
+\(\|\Delta_{d+1}\|_{[d+1]}^2=\tau_{d+1}(Y)\).  Then
 \[
  \boxed{
  \int\overline{h_\psi(\omega)}
  \Delta_{d+1}(\omega,\boldsymbol\omega)\,
  \dd\widetilde\nu_Y(\omega)
- =\sqrt{\delta_{M,J,X}}\Delta_d(\boldsymbol\omega).}
+ =\sqrt{\delta^{\flat}_{M,J,X}}\Delta_d(\boldsymbol\omega).}
 \tag{9.25at}
 \]
 The associated exterior interior-product operator has norm
 \[
  \boxed{
  \|T_{h_\psi}\|_{\rm op}^2
- =\delta_{M,J,X}
+ =\delta^{\flat}_{M,J,X}
  \frac{\|\psi\|^2+\|A^{-1/2}U^*\psi\|^2}
   {|\langle\psi,v\rangle|^2}.}
 \tag{9.25au}
@@ -2151,15 +2425,18 @@ The associated exterior interior-product operator has norm
 \end{theorem}
 
 \begin{proof}
-The first component of \(g_\psi\) cancels every old-mode column, while
-\(W^*\psi=0\) cancels every radical column.  Only the new-mode cofactor
-survives the Laplace expansion, giving (9.25at).  Contraction by a
+Expand \(\Delta_{d+1}\) along its first row and integrate against
+\(\overline{g_\psi}\).  The pairing of \(g_\psi\) with an old-mode column
+is \(-\langle U^*\psi,e_i\rangle+\langle U^*\psi,e_i\rangle=0\), with a
+radical column it is \(\langle W^*\psi,e_a\rangle=0\), and with \((0,v)\)
+it is \(\beta_\psi\).  Only the cofactor of the last column survives,
+which is \((-1)^d\Delta_d\); multiplying by the factor in (9.25as) gives
+(9.25at).  Contraction by a
 one-particle vector on an exterior power has norm \(\|h_\psi\|\), which
 gives (9.25au).
 \end{proof}
 
-If \(z=0\), set \(G_Y=Q_k=0\) for all \(k\); no negative pivot can
-cross at this cutoff.  Assume henceforth that \(z\ne0\).  The choice
+By (9.25ai) and (9.25ar), \(G_Y>0\), so \(z\ne0\).  The choice
 \(\psi=z\) gives the matched-filter certificate
 \[
  Q_1=\frac{m_0^2}{m_0+m_1},
@@ -2241,14 +2518,14 @@ Equivalently,
  D_2=\|(I+B)^{1/2}z\wedge(I+B)^{1/2}Bz\|^2 .
 \tag{9.25bb}
 \]
-Thus, when \(Q_1<\delta_{M,J,X}\),
+Thus, when \(Q_1<\delta^{\flat}_{M,J,X}\),
 \[
  \boxed{
  N_2^2>
- (\delta_{M,J,X}-Q_1)(m_0+m_1)D_2}
+ (\delta^{\flat}_{M,J,X}-Q_1)(m_0+m_1)D_2}
 \tag{9.25bc}
 \]
-is exactly equivalent to \(Q_2>\delta_{M,J,X}\).
+is exactly equivalent to \(Q_2>\delta^{\flat}_{M,J,X}\).
 
 For any two orthonormal observation packets \(\phi_0,\phi_1\), put
 \[
@@ -2263,7 +2540,7 @@ Since \(D_2\le(1+\|B\|)^2N_2\), the signed two-packet condition
 \[
  \boxed{
  |a_0b_1-a_1b_0|^2>
- (\delta_{M,J,X}-Q_1)(m_0+m_1)(1+\|B\|)^2}
+ (\delta^{\flat}_{M,J,X}-Q_1)(m_0+m_1)(1+\|B\|)^2}
 \tag{9.25be}
 \]
 implies the finite crossing.
@@ -2289,7 +2566,7 @@ Then
 \[
  \boxed{
  N_2=\frac12
- \sum_{\substack{n=p^k,\ \ell=q^a\\X<n,\ell\le Y}}\iint
+ \sum_{\substack{n=p^k,\ \ell=r^a\\X<n,\ell\le Y}}\iint
  \left|x_n(s)(F_\ell\xi)(t)
  -(F_n\xi)(s)x_\ell(t)\right|^2\,\dd s\,\dd t.}
 \tag{9.25bg}
@@ -2299,13 +2576,13 @@ the final modulus square.
 
 \begin{corollary}[Exact hierarchy formulation of the frontier]
 \label{cor:krylov-frontier}
-For every fixed negative anti-shorted row,
+For every fixed negative anti-shorted row with \(\widehat A\succ0\),
 \[
  \boxed{
- \mathfrak g_{M,J,X}>\delta_{M,J,X}
+ \mathfrak g_{M,J,X}>\delta^{\flat}_{M,J,X}
  \Longleftrightarrow
  \exists\,Y<\infty,\ \exists\,k<\infty:
- Q_k(Y)>\delta_{M,J,X}.}
+ Q_k(Y)>\delta^{\flat}_{M,J,X}.}
 \tag{9.25bh}
 \]
 \end{corollary}
@@ -2319,7 +2596,7 @@ followed by finite Krylov exactness.  Conversely,
 \begin{remark}[Level two is a sufficient gate]
 The depth in Corollary~\ref{cor:krylov-frontier} may depend on the finite
 row.  The dispersion inequality (9.25bc) is the first explicit
-strengthening of MF, not a replacement for the exact surplus.  For
+strengthening of the matched-filter certificate \(Q_1\), not a replacement for the exact surplus.  For
 example,
 \[
  B=\operatorname{diag}(1,2,3),\qquad
@@ -2334,33 +2611,19 @@ crossing.
 
 \begin{problem}[Physical strict surplus]
 \label{prob:physical-strict-surplus}
-For every negative anti-shorted row required in the cofinal exhaustion,
+For every negative anti-shorted row with \(\widehat A\succ0\) required in the cofinal exhaustion,
 prove, with the literal theta translations and ordinary von Mangoldt
 weights,
 \[
- \boxed{\mathfrak g_{M,J,X}>\delta_{M,J,X}.}
+ \boxed{\mathfrak g_{M,J,X}>\delta^{\flat}_{M,J,X}.}
 \tag{9.25bi}
 \]
 By Theorem~\ref{thm:augmented-exhaustion}, this is equivalent to one
 finite inequality (9.25ao), and by
 Corollary~\ref{cor:krylov-frontier} to one finite Krylov certificate of
-row-dependent depth.  No localization, atomwise minimization, or
-infinite-selection loss remains in this formulation.
+row-dependent depth.  By (9.25an) it is equivalent to
+\(\mathcal A_\infty(q^*_{M,J,X},q^*_{M,J,X})>\mathfrak l_{M,J,X}\).
 \end{problem}
-
-The mean-periodic constraint must be applied before the finite radical
-correction.  Indeed, if
-\(q\in(\mathbf1\oplus\mathcal R)^\perp\) and
-\(r\in\mathfrak R_J\), then
-\[
- (h(q+r))*K=0
- \quad\Longleftrightarrow\quad r=0,
-\]
-because the mean-periodic complement intersects the complete radical only
-at zero.  Thus \(q_{M,J,X}^*+d\) is mean-periodic for
-\(d\in V_{M-1}\), whereas a joint saddle vector with a nonzero radical
-correction is not.  The correction must remain in the determinant, but the
-convolution equation may not be imposed on it.
 
 \subsection{Heat-core exhaustion of the radical complement}
 \label{subsec:heat-core}
@@ -2371,20 +2634,20 @@ topology is a separate spectral-synthesis statement.  It is not needed for
 the global passage.  We now construct a form core directly from the closed
 ordinary-prime--Gamma form.
 
-Let
+Let \(\mathcal R:=\overline{\bigcup_J\mathfrak R_J}^{L^2(\mu_K)}\) and
 \[
  \mathscr C=(\mathbf1\oplus\mathcal R)^\perp,
  \qquad
  \mathcal Q_{\mathscr C}=D(\mathscr E_K)\cap\mathscr C.
 \tag{9.25bj}
 \]
-The complete form is closed.  Indeed, on its maximal domain it is the
-squared norm of the difference operator
+Here \(\mathscr E_K\) is the closed form constructed as follows.  The
+jump form is the squared norm of the difference operator
 \[
 \begin{aligned}
  \mathcal Dq={}&
  \left(
- \sqrt{g(u)K(x)K(x-u)}\{q(x)-q(x-u)\}
+ \sqrt{g_\Gamma(u)K(x)K(x-u)}\{q(x)-q(x-u)\}
  \right)_{(u,x)\in(0,\infty)\times\mathbb R}
  \\
  &\oplus
@@ -2402,22 +2665,38 @@ a strictly positive density.  Fubini gives simultaneous convergence at
 \(x-u\), and an almost-everywhere subsequence in the disjoint-union output
 space identifies \(Y=\mathcal Dq\).  Thus \(\mathcal D\) is closed.
 Moreover \(C_{c,\rm even}^\infty(\mathbb R)\subset D(\mathcal D)\): near
-\(u=0\), \(g(u)=(2u)^{-1}+O(1)\) and the squared difference is \(O(u^2)\),
+\(u=0\), \(g_\Gamma(u)=O(u^{-1})\) and the squared difference is \(O(u^2)\),
 while for large \(u\) the theta overlap is \(O_q(e^{-c_qe^{2u}})\).
 At \(u=\log n\) this is summable against
-\(\Lambda(n)/\sqrt n\).  Hence the form is densely defined and closed.
-Let \(L\ge0\) be its associated self-adjoint operator.
+\(\Lambda(n)/\sqrt n\).  The restriction of the closed operator
+\(\mathcal D\) to \(C_{c,\rm even}^\infty(\mathbb R)\) is therefore
+closable; let \(\mathscr E_K(q,s)=\langle\mathcal Dq,\mathcal Ds\rangle\)
+on the domain \(D(\mathscr E_K)\) of its closure.  This is a densely
+defined closed form; let \(L\ge0\) be its associated self-adjoint
+operator.  The functions \(\mathbf1\), \(r_j\) and \(\chi_z\) (with
+\(\lvert\operatorname{Im}z\rvert<\frac12\)) lie in \(D(\mathscr E_K)\):
+for a cutoff \(\varphi_R(x)=\varphi(x/R)\) with \(\varphi\in
+C_{c,\rm even}^\infty\) equal to \(1\) near \(0\), the functions
+\(\varphi_Rq\) converge to \(q\) in \(L^2(\mu_K)\) and
+\(\mathcal D(\varphi_Rq)\to\mathcal Dq\) by dominated convergence,
+since \(q\) and \(q'\) grow at most exponentially while
+\(K(x)\ll e^{5|x|}e^{-\pi e^{2|x|}}\).
 
-Equation (9.15), interpreted by the representation theorem, gives the
-strong domain identities
+Equation (9.15), extended by continuity from
+\(f\in C_{c,\rm even}^\infty\) to \(f\in D(\mathscr E_K)\), and
+\(\mathcal D\mathbf1=0\) give, by the representation theorem, the strong
+domain identities (conditional on the ground-state identity, as is
+(9.15))
 \[
  L\mathbf1=0,
  \qquad
- r_j\in D(L),\qquad Lr_j=\frac12r_j.
+ r_j\in D(L),\qquad Lr_j=\frac12r_j,
 \tag{9.25bl}
 \]
-Therefore \(\mathbf1\oplus\mathcal R\) and \(\mathscr C\) reduce \(L\).
-Put
+hence also \(Lr=\frac12r\) for \(r\in\mathcal R\).  Therefore \(\mathbf1\oplus\mathcal R\) and \(\mathscr C\) reduce \(L\).
+From here to the end of this section the ground-state identity stated
+after (9.4) is assumed; it is used through (9.25bl) to make
+\(\mathscr C\) a reducing subspace of \(L\).  Put
 \[
  S_{\mathscr C}=L|_{\mathscr C}+\frac12I\ge\frac12I.
 \tag{9.25bm}
@@ -2433,7 +2712,7 @@ is Hilbert-dense and define
 
 \begin{theorem}[Heat-core Galerkin exhaustion]
 \label{thm:heat-core}
-The spaces \(V_M^{\rm heat}\) are nested finite-dimensional subspaces of
+Assume the ground-state identity.  The spaces \(V_M^{\rm heat}\) are nested finite-dimensional subspaces of
 \(\mathcal Q_{\mathscr C}\), every one of their vectors belongs to
 \(\cap_{m\ge0}D(S_{\mathscr C}^m)\), and
 \[
@@ -2542,113 +2821,76 @@ Equivalently,
 \]
 On the canonical zero-mode summand the cutoff part of (9.28) has the
 explicit bound \(C_Me^{-cX(M)}\mathbf N_M\).  On every heat or hybrid row,
-Theorem~\ref{thm:heat-core} gives the qualitative bound needed for the
-diagonal schedule: after the finite row is fixed, \(X(M)\) may be enlarged
-until the normalized tail is at most \(\varepsilon_M\).  The remaining
-content is the joint signed prime--Gamma floor.
+Theorem~\ref{thm:heat-core} gives the qualitative bound: after the finite
+row is fixed, \(X(M)\) may be enlarged until the normalized tail is at most
+\(\varepsilon_M\).  What remains is the inequality (9.28) itself.
 
 \begin{theorem}[Cofinal inertia closure]
 \label{thm:cofinal-inertia-closure}
-Let \(V_M\) be either the heat spaces (9.25bn) or the hybrid spaces
-(9.25bs), and assume that (9.27) holds.
-Then
+Assume the ground-state identity stated after (9.4).  Let \(V_M\) be (9.25bn) or (9.25bs), with \(\mathbf N_M\),
+\(\mathbf H_M\) and \(\mathbf A_{M,J,X}\) defined by (9.6) and (9.17)
+for this \(V_M\), and assume (9.27) for some \((J(M),X(M),\varepsilon_M)\)
+with \(\varepsilon_M\to0\).  Then
 \[
  \mathcal A_\infty(q,q)\ge0
 \tag{9.29}
 \]
-on that complement.  Under the moving/model identification this gives
-the source-side Mosco lower bound, and hence RH.
+for every \(q\in\mathcal Q_{\mathscr C}\), hence on
+\(D(\mathscr E_K)\cap\mathcal H_0\); by (7.5) this is Weil positivity on
+even tests, which gives RH together with the corresponding inequality for
+odd tests (Theorem~\ref{thm:weil}).
 \end{theorem}
 
 \begin{proof}
-First synchronize the inertia and tail cutoffs.  If (9.27) holds at
-\(\widehat X(M)\), replace it by any
-\[
- X(M)\ge\max\{\widehat X(M),X_{\rm tail}(M,J(M),\varepsilon_M)\}.
-\]
-Increasing the cutoff adds a positive Gram matrix, so the negative index
-cannot increase.  It cannot fall below \(J(M)\), because the shifted form
-on every nonzero \(r\in\mathfrak R_{J(M)}\) is
-\[
- \mathcal A_{X(M)}(r,r)=-\mathcal T_{X(M)}(r,r)<0;
-\]
-the remaining tail contains two distinct primes and
-Theorem~\ref{thm:heat-core} applies.  Thus (9.27) persists at the
-synchronized cutoff.
+By (9.19), with \(\mathbf H_M\) replaced by
+\(\mathbf H_M+\varepsilon_M\mathbf N_M\), (9.27) is equivalent to
+(9.28).  The tail Schur complement
+\(\mathbf T^{VV}-\mathbf T^{VR}(\mathbf T^{RR})^{-1}\mathbf T^{RV}\) is
+positive semidefinite, being a Schur complement of the positive
+semidefinite tail Gram matrix; hence (9.28) gives
+\(\mathbf H_M\succeq-\varepsilon_M\mathbf N_M\).
 
-Now fix \(q\in V_m\).  For every \(M\ge m\), (9.27), the Schur-complement
-formula, and the inclusion of \(q\) in the larger mode block give
+Now fix \(q\in V_m\).  For every \(M\ge m\), \(q\in V_M\), and the
+previous inequality gives
 \[
  \mathcal A_\infty(q,q)
  \ge-\varepsilon_M\|q\|_{\mu_K}^2.
 \]
-Let \(M\to\infty\).  Then \(\varepsilon_M\to0\), so
-\(\mathcal A_\infty(q,q)\ge0\) on \(\cup_MV_M\).
-Theorem~\ref{thm:heat-core} and continuity in the closed form norm extend
-the inequality to the complete centered radical complement.  The radical
-has value zero by (9.15), while constants have zero value in
-\(\mathscr E_K-\frac12\operatorname{Var}_{\mu_K}\).  Hence the complete
-centered, equivalently constant-quotiented, Weil form is nonnegative.
-Theorem~\ref{thm:weil} gives RH.  Equivalently, in the CCM
-branch coordinate, Theorems~\ref{thm:even-rayleigh-residual} and
-\ref{thm:cross-residual-vanishing} remove the already controlled residual
-pieces and (9.27) supplies the source liminf in
-Problem~\ref{prob:source-mosco}.
+Letting \(M\to\infty\) gives \(\mathcal A_\infty(q,q)\ge0\) on
+\(\cup_MV_M\).  Since \(\mathcal A_\infty\) is continuous in the closed
+form norm, (9.25bo) (for the hybrid spaces, the same density together
+with \(V_M^{\rm heat}\subset V_M^{\rm hyb}\subset\mathcal Q_{\mathscr C}\))
+extends the inequality to \(\mathcal Q_{\mathscr C}\).
+
+By (9.15) and (9.25bl),
+\(\mathcal A_\infty\) vanishes on \(\mathcal R\) and
+\(\mathcal A_\infty(r,f)=0\) for \(r\in\mathcal R\) and \(f\) in the form
+domain, so \(\mathcal A_\infty\ge0\) on
+\(D(\mathscr E_K)\cap\mathcal H_0=\mathcal Q_{\mathscr C}\oplus
+\mathcal R\).  For even \(\rho\in C_c^\infty(\mathbb R)\), put
+\(\rho_0=\rho-\int\rho\,\dd\mu_K\in D(\mathscr E_K)\cap\mathcal H_0\); since
+\(\mathcal D\) annihilates constants, (7.5) and the ground-state identity
+give \(\QW(K\rho,K\rho)=\mathcal A_\infty(\rho_0,\rho_0)\ge0\).  This is even Weil
+positivity; as in the proof of the gate proposition in Section~7, it gives
+RH by Theorem~\ref{thm:weil} together with the inequality for odd tests.
 \end{proof}
 
-\begin{center}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.34\textwidth}
-                >{\raggedright\arraybackslash}p{0.47\textwidth}}
-\toprule
-Component & Status in this proof chain\\
-\midrule
-CCM finite self-adjoint quotient & Published finite package.\\
-Connes prolate critical-line model & Published finite/model package.\\
-Suzuki localized operator & Published localized realization.\\
-Even Rayleigh residual & Proved:
-\(\lvert\mathscr R_L^+\rvert\ll\lambda^7d_4\).\\
-Direct cross residual & Proved:
-\(\|b_L^+\|\ll\lambda^4\sqrt{(1+L)d_4}\to0\).\\
-Literal Euler-head approximation & Explicit canonical rate proved by
-(9.7)--(9.8); qualitative normalized convergence on every heat/hybrid row
-proved by Theorem~\ref{thm:heat-core}.\\
-Finite radical inertia algebra & Proved by (9.16)--(9.22).\\
-Large-prime channel geometry & Proved by (9.23)--(9.25).\\
-Finite one-channel observability & Proved on the canonical zero-mode rows by
-Theorem~\ref{thm:one-channel-observability}; finite rank and aliasing are
-removed there.  General heat rows use two-prime blocks.\\
-Completed scalar innovation & Exact recursion proved by
-Theorem~\ref{thm:scalar-innovation}.\\
-Prime-by-prime staircase update & Exact positive Kalman--Schur increment
-proved in (9.25j)--(9.25k), with the literal \(\Lambda(p^k)\) weights.\\
-Local and cumulative gain & Midpoint Christoffel detection and the exact
-block telescope are proved in Proposition~\ref{prop:local-christoffel}
-and Proposition~\ref{prop:cumulative-gain}.\\
-Radical-conditioned gain & The exact projected residual, resolvent gain,
-and matched-filter criterion are proved in
-Theorem~\ref{thm:radical-conditioned-gain}.\\
-Augmented finite determinant & Strict positivity, determinant formula,
-monotone exhaustion, and finite selection are proved in
-Theorem~\ref{thm:augmented-exhaustion}.\\
-Signed amplitude transfer & The exact exterior interior-product identity
-and its norm
-are proved in Theorem~\ref{thm:signed-amplitude-transfer}.\\
-Adaptive Krylov recovery & Monotonicity and finite-row exactness are
-proved in Theorem~\ref{thm:adaptive-krylov}.\\
-Second-level dispersion gate & Formula (9.25az), its spectral wedge
-identity, and the sufficient test (9.25bc) are proved; the test is not
-asserted uniformly for every physical row.\\
-Physical strict surplus (9.25bi) & Remaining force-bearing arithmetic
-inequality; it must hold on the heat or hybrid form-core rows, with no
-localization or infinite-selection loss.\\
-Joint compensated frontier (9.27) & Follows row by row from the strict
-surplus; its vanishing-tolerance form permits threshold equality.\\
-Prime--Gamma form-core exhaustion & Proved by
-Theorem~\ref{thm:heat-core}; canonical zero-mode-only synthesis is not
-asserted or required.\\
-\bottomrule
-\end{tabular}
-\end{center}
+This section proves the identities (9.19), (9.25g), (9.25aa),
+(9.25ai), (9.25ax) and Theorem~\ref{thm:adaptive-krylov}; (9.15),
+(9.25bl), Theorem~\ref{thm:heat-core} and
+Theorem~\ref{thm:cofinal-inertia-closure} are conditional on the
+ground-state identity.  The inequality (9.25bi) is not proved; by
+(9.25an) it is equivalent to
+\(\mathcal A_\infty(q^*_{M,J,X},q^*_{M,J,X})>\mathfrak l_{M,J,X}\), a
+positivity statement for the completed form itself.  If (9.25bi) holds
+on every negative row (with \(X\) large enough that
+\(\widehat A\succ0\)), then, since \(\mathfrak g_{M,J,X}>0\) by
+(9.25ad) and the last assertion of Theorem~\ref{thm:heat-core} (the
+infimum in (9.25ad) is attained at a nonzero vector, on which the omitted
+tail is strictly positive), the completed last pivot (9.25aa) is positive on every row, so
+by induction on \(M\) and (9.25g) \(\mathbf H_M\succ0\) on each \(V_M\);
+by (9.25bp) and \(\mathbf T^{RR}\succ0\) there is \(X(M)\) for which
+(9.28) holds with \(\varepsilon_M=0\), hence (9.27).
 
 \begin{remark}[Strict and compensated targets]
 The strict statement requested by the finite-energy-level picture is
@@ -2656,15 +2898,18 @@ The strict statement requested by the finite-energy-level picture is
  \boxed{X_*(M,J(M))<\infty\quad\text{for every }M.}
 \tag{9.30}
 \]
-By Theorem~\ref{thm:exact-finite-repair}, its force-bearing content is a
-strict completed finite-mode gap.  The compensated statement (9.27) is
-the threshold-stable version needed for RH.  A proof of (9.30) on a
+By the argument of Theorem~\ref{thm:exact-finite-repair}, applied to the
+shorted tail
+\(\mathbf T^{VV}-\mathbf T^{VR}(\mathbf T^{RR})^{-1}\mathbf T^{RV}\)
+(strictly positive on \(V_M\) and tending to \(0\)), it is equivalent to
+\(\mathbf H_M\succ0\).  The compensated statement (9.27) is
+the threshold-stable version used in Theorem~\ref{thm:cofinal-inertia-closure}.  A proof of (9.30) on a
 form-core exhaustion proves (9.27) immediately; a proof of (9.27) need
 not exclude additional threshold null states at finite \(M\).
 \end{remark}
 
-\section{Tate boundary geometry and the global polarization audit}
-\label{sec:polarization-audit}
+\section{Tate boundary geometry and global polarization}
+\label{sec:polarization-geometry}
 
 The finite-inertia analysis above isolates the missing sign but does not
 explain where that sign could come from.  This section records a second,
@@ -2672,7 +2917,7 @@ source-level construction.  It starts from finite root graphs at the
 ordinary primes, constructs the Gamma and polar determinant at infinity,
 and joins them before completion.  The construction produces the correct
 local masses, parity, boundary cancellation and scale covariance.  It also
-permits a decisive audit of the ordinary Hilbert completion.
+determines the spectral type of the ordinary Hilbert completion.
 
 The distinction maintained throughout is
 \[
@@ -2798,11 +3043,14 @@ Let \(A_{p,\theta}\) be the nonnegative Laplacian on the circle of length
  K_{p,\theta,t}(x,y)
  =\frac1{\sqrt{4\pi t}}
   \sum_{k\in\mathbb Z}
-  e^{-(x-y+k\ell_p)^2/(4t)}e^{ik\theta}.
+  e^{-(x-y+k\ell_p)^2/(4t)}e^{-ik\theta}.
 \tag{10.8c}
 \]
 It satisfies the exact heat composition law before any winding sector is
-removed.  Integrating its trace against (10.9) yields
+removed.  Let \(A_p=\int^\oplus A_{p,\theta}\,\dd\mu_{p^{-1/2}}(\theta)\) and
+\(\tau_p(T)=\int\Tr(T_\theta)\,\dd\mu_{p^{-1/2}}(\theta)\) for decomposable
+\(T=\int^\oplus T_\theta\).  Integrating the trace of (10.8c) against
+\(\dd\mu_{p^{-1/2}}\) in (10.8a) yields
 \[
  \boxed{
  \tau_p(e^{-tA_p})
@@ -2833,7 +3081,7 @@ local Laplacians are unitarily equivalent.  The prime changes the normal
 weight used to read the heat diagonal; it does not create a new local
 spectrum.  Moreover the winding-zero sector cannot be deleted while
 preserving composition, because two nonzero windings can add to zero.
-Thus the finite quantity in (10.13) is a relative semifinite trace, not the
+Thus the finite quantity in (10.8e) is a relative semifinite trace, not the
 ordinary trace of a reduced semigroup.
 
 There is an equivalent precision-space formulation.  On
@@ -2859,9 +3107,10 @@ Direct triangular inversion gives
 \tag{10.8h}
 \]
 Thus the Poisson coefficient is also the Green kernel of a positive local
-first-order arithmetic connection.  The local positivity is exact, while
-\(\sum_p p^{-1}=\infty\) prevents the infinite product of these changes of
-coordinates from being a bounded perturbation of a reference product.
+first-order arithmetic connection.  The local positivity is exact.  Heuristically, since
+\(\sum_p p^{-1}=\infty\), one does not expect the infinite product of these
+changes of coordinates to be a bounded perturbation of a reference product;
+this is not proved here.
 The matched Gamma--Euler boundary must therefore be formed before the
 global norm or trace is taken.
 
@@ -2925,14 +3174,14 @@ of \(N_\Gamma^{1/2}\), with metric and complex structure
 \tag{10.13}
 \]
 The polar plane remains in degrees zero and two.  It is not inserted as a
-positive degree-one summand.  This preserves the Lefschetz parity
-\(H^0-H^1+H^2\), which is responsible for the sign of the prime terms in
-the explicit formula and is central to the geometric interpretation in
+positive degree-one summand.  This keeps the parity \(H^0-H^1+H^2\) that, in the
+function-field analogy, accounts for the sign of the prime terms in the
+explicit formula; this heuristic is central to the geometric interpretation in
 \S\ref{subsec:open-programs}.
 
 \subsection{Matched boundary cancellation and the full finite part}
 
-Let \(\mathscr K\) denote the common Cauchy coefficient space.  For each
+Let \(\mathscr K\) be a fixed separable Hilbert space (in (10.20) it is realized as \(\mathscr K_C\)).  For each
 prime power set
 \[
  w_{p,k}=\frac{\log p}{p^k}.
@@ -2949,11 +3198,17 @@ Thus the local row is \(F_{p,k}=F+r_{p,k}\).  For \(s>1/2\), put
 \[
  C_s=\sum_p(\log p)p^{-2s},
  \qquad
- \kappa_\infty=\gamma+\sum_p\sum_{k\ge2}w_{p,k}.
+ \kappa_\infty=\gamma_E+\sum_p\sum_{k\ge2}w_{p,k}.
  \tag{10.16}
 \]
-The ordinary prime number theorem, in its logarithmic-derivative form at
-the pole, gives the normalized finite-part identity
+The Laurent expansion \(-\zeta'(\sigma)/\zeta(\sigma)=(\sigma-1)^{-1}-\gamma_E+O(\sigma-1)\)
+(\(\gamma_E\) is Euler's constant)
+at \(\sigma=2s\to1\), after subtraction of the terms \(k\ge2\), which
+converge absolutely and uniformly near \(\sigma=1\), gives
+\(C_s=(2s-1)^{-1}-\kappa_\infty+o(1)\) as \(s\downarrow1/2\).  Writing
+\(\operatorname{FP}_{s\downarrow1/2}\) for the constant term in this
+expansion (in the variable \(2s-1\)), we obtain
+(numerically \(\kappa_\infty\approx1.3326\))
 \[
  \operatorname{FP}_{s\downarrow1/2}C_s=-\kappa_\infty.
  \tag{10.17}
@@ -2965,7 +3220,7 @@ For \(x=(F,r)\), \(y=(G,z)\), consider the jointly regularized form
  \mathfrak Q_s(x,y)
  &=\sum_p(\log p)p^{-2s}
    \langle F+r_{p,1},G+z_{p,1}\rangle\\
- &\quad+\gamma\langle F,G\rangle
+ &\quad+\gamma_E\langle F,G\rangle
  +\sum_p\sum_{k\ge2}w_{p,k}
    \langle F+r_{p,k},G+z_{p,k}\rangle.
  \end{aligned}
@@ -3034,13 +3289,22 @@ group and
  \tag{10.22}
 \]
 
-For \(I_X=\{(p,k):p^k\le X\}\), put
+For \(I_X=\{(p,k):p^k\le X\}\), let
+\(\mathscr S_X=\bigoplus_{(p,k)\in I_X}(\mathscr K_C\oplus\mathscr K_C)\),
+with vectors \(v=(x_{p,k},y_{p,k})_{(p,k)\in I_X}\).  Put
 \[
  c_p=\frac{2\pi}{\log p},
  \qquad
  \alpha_{p,k}=\sqrt{\frac{\log p}{c_p}}p^{-k/2}.
  \tag{10.23}
 \]
+Equip \(\mathscr S_X\) with the metric
+\(g_X(v,w)=\sum_{(p,k)\in I_X}\bigl(c_p\langle x_{p,k},x'_{p,k}\rangle
++c_p^{-1}\langle y_{p,k},y'_{p,k}\rangle\bigr)\) for \(w=(x',y')\), the
+complex structure \(J_X(x,y)_{p,k}=(-c_p^{-1}y_{p,k},\,c_px_{p,k})\) (so
+\(J_X^2=-I\) and \(J_X\) is \(g_X\)-orthogonal), and the scale action
+\(U^X_t\) acting on the summand \((p,k)\) by
+\(e^{it(A-\ell_{p,k})}\) in both components.
 The covariant Tate boundary is
 \[
  \begin{aligned}
@@ -3052,17 +3316,27 @@ The covariant Tate boundary is
  \tag{10.24}
 \]
 It intertwines every charged source action with the one action generated
-by \(A\).  Its adjoint generic plane has Gram mass
+by \(A\): \(R_X^{\rm cov}U^X_t=e^{itA}R_X^{\rm cov}\) by (10.22).  Since
+each \(S_\ell\) is unitary, with adjoints taken for \(g_X\),
 \[
- C_XI,
+ R_X^{\rm cov}(R_X^{\rm cov})^*
+ =R_X^{\rm cov}J_X(R_X^{\rm cov}J_X)^*
+ =C_XI,
  \qquad
  C_X=\sum_{p^k\le X}\frac{\log p}{p^k}.
  \tag{10.25}
 \]
 
-Let the complete Gamma compliance be
+For definiteness let the Gamma compliance symbol be
 \[
- K_\Gamma=\kappa_\infty I+m_\Gamma(A)succeq\kappa_\infty I.
+ m_\Gamma(\gamma)=\Re\psi\Bigl(\frac14+\frac{i\gamma}2\Bigr)-\psi\Bigl(\frac14\Bigr)
+ =\sum_{n\ge0}\Bigl(\frac1{n+1/4}-\frac{n+1/4}{(n+1/4)^2+\gamma^2/4}\Bigr),
+\]
+where \(\psi=\Gamma'/\Gamma\).  Each summand is nonnegative and vanishes
+only at \(\gamma=0\), so \(m_\Gamma\) is real-analytic, nonnegative, and
+its zero set is \(\{0\}\).  Let the complete Gamma compliance be
+\[
+ K_\Gamma=\kappa_\infty I+m_\Gamma(A)\succeq\kappa_\infty I.
  \tag{10.26}
 \]
 Shorting only the common archimedean boundary gives the positive metric
@@ -3089,20 +3363,44 @@ while two different rows retain the cross compliance
  \tag{10.29}
 \]
 Thus all prime rows use one common regression and all off-diagonal phases
-survive.  Equations (10.19) and (10.22) show that the matched finite-part
-identity is unchanged in the decharged frame.
+survive.  Since each \(S_{\ell_{p,k}}\) is unitary, the diagonal terms
+\(\langle F+r_{p,k},G+z_{p,k}\rangle\) of (10.18) are unchanged when both
+arguments of the row \((p,k)\) are transported by \(S_{\ell_{p,k}}\); hence
+(10.19) holds verbatim for the transported rows.  Cross terms between rows
+of different charges are not of this form and do change.
+
+Because \(K_\Gamma^{-1}\preceq\kappa_\infty^{-1}I\) and \(R_X^{\rm cov}\) is
+bounded, \(g_X^{\rm cov}\) is equivalent to \(g_X\), and \(U^X_t\) is
+\(g_X^{\rm cov}\)-unitary since \(K_\Gamma\) commutes with \(e^{itA}\).  For
+\(X\le X'\) the inclusion \(\mathscr S_X\subset\mathscr S_{X'}\) is isometric
+for \(g^{\rm cov}\), because \(R_{X'}^{\rm cov}\) restricts to
+\(R_X^{\rm cov}\).  We write \(\mathscr P_\infty^{\rm cov}\) for the Hilbert
+completion of \(\bigcup_X\mathscr S_X\) under \(g^{\rm cov}\), with the
+unitary group \(U^{\rm cov}_t\) extending the \(U^X_t\).
 
 \subsection{The global polarization target}
 
-Let \(H^1_{\rm CCM}\) denote the separated resonant degree one supplied by
-the CCM cyclic construction, with weight-one scale action
-\(\vartheta_t\) and descended alternating form \(\Omega\).  The missing
+Let \(H^1_{\rm CCM}\) denote the separated resonant degree one suggested by
+the CCM cyclic construction~\cite{CCM2025}, with weight-one scale action
+\(\vartheta_t\) and descended alternating form \(\Omega\).  The properties
+of this space that are used below are not proved here; we isolate them.
+
+\medskip\noindent\textbf{Hypothesis (R).} \(H^1_{\rm CCM}\) is a
+complex vector space with a linear action \(\vartheta_t\), \(t\in\R\), such
+that for every nontrivial zero \(\rho\) of \(\zeta\) there is
+\(u_\rho\neq0\) with \(\vartheta_tu_\rho=e^{t\rho}u_\rho\) for all \(t\).
+\emph{Hypothesis (R) for critical-line zeros} is the same statement
+restricted to zeros with \(\Re\rho=1/2\).  The eigenclasses \(u_\rho\)
+are assumed to lie in every scale-invariant subspace used below.
+
+\medskip\noindent The missing
 global object can now be stated independently of the finite matrix model.
 
 \begin{definition}[Global CCM polarization]
 \label{def:global-polarization}
-A global polarization is a real-linear operator \(J\) on a dense
-scale-invariant core of \(H^1_{\rm CCM}\) such that
+A global polarization is a real-linear operator \(J\) on a complex
+\(\vartheta_t\)-invariant subspace \(\mathcal C\subset H^1_{\rm CCM}\)
+containing all classes \(u_\rho\) of Hypothesis (R) such that
 \[
  J^2=-I,
  \qquad
@@ -3111,7 +3409,8 @@ scale-invariant core of \(H^1_{\rm CCM}\) such that
  g(u,v):=\Omega(u,Jv)
  \tag{10.30}
 \]
-extends to a faithful positive Hilbert metric.  The normalized action
+is a positive definite real inner product on \(\mathcal C\), where
+\(\Omega\) is a real-bilinear alternating form on \(\mathcal C\).  The normalized action
 \(U_t=e^{-t/2}\vartheta_t\) must extend unitarily to its completion.
 \end{definition}
 
@@ -3124,20 +3423,28 @@ weight-one template~\cite{Deninger1998}.
 
 \begin{proposition}[Exact force of the polarization]
 \label{prop:polarization-rh}
-A global CCM polarization in the sense of
+Under Hypothesis (R), a global CCM polarization in the sense of
 Definition~\ref{def:global-polarization} implies RH.
 \end{proposition}
 
 \begin{proof}
-If a resonant class \(u_\rho\ne0\) has
-\(\vartheta_tu_\rho=e^{t\rho}u_\rho\), then
+Let \(\rho\) be a nontrivial zero.  By Hypothesis (R) there is a class
+\(u_\rho\ne0\) with
+\(\vartheta_tu_\rho=e^{t\rho}u_\rho\); then \(u_\rho\in\mathcal C\) and
+\(g(u_\rho,u_\rho)>0\), so \(u_\rho\) is a nonzero vector of the completion.  Then
 \[
  U_tu_\rho=e^{t(\rho-1/2)}u_\rho.
 \]
-Unitarity for every real \(t\) forces
-\(e^{t(\Re\rho-1/2)}=1\), hence \(\Re\rho=1/2\).  The CCM resonant
-divisor is the nontrivial zero divisor of the completed zeta function, so
-all its points lie on the critical line.
+Write \(\rho-1/2=\sigma+i\tau\).  Then
+\(U_tu_\rho=e^{t\sigma}(\cos(t\tau)u_\rho+\sin(t\tau)\,iu_\rho)\).  The
+vectors \(u_\rho\) and \(iu_\rho\) are \(\mathbb R\)-linearly independent,
+so on the real plane they span the norm \(\|\cdot\|_g\) is bounded above and
+below on the compact curve \(\cos\phi\,u_\rho+\sin\phi\,iu_\rho\) by
+constants \(0<c_1\le c_2\).  Since \(g(U_tu_\rho,U_tu_\rho)=g(u_\rho,u_\rho)\)
+for all real \(t\), we get
+\(c_1e^{t\sigma}\le\|u_\rho\|_g\le c_2e^{t\sigma}\) for all \(t\), hence
+\(\sigma=0\), i.e.\ \(\Re\rho=1/2\).  Since
+\(\rho\) was an arbitrary nontrivial zero, RH follows.
 \end{proof}
 
 Proposition~\ref{prop:polarization-rh} explains why positivity of the local
@@ -3148,8 +3455,9 @@ contains the full missing sign.
 
 The covariant system (10.20)--(10.29) has an ordinary Hilbert direct-limit
 completion.  It is natural, positive and source-defined, but it has the
-wrong spectral type.  The following operator-valued statement gives the
-precise obstruction.
+wrong spectral type.  The following operator-valued statement shows that the
+Gamma compliance has dense range, so it creates no cokernel; the spectral
+obstruction itself is Theorem~\ref{thm:ac-no-go}.
 
 \begin{lemma}[Operator-valued dense-range criterion]
 \label{lem:operator-dense-range}
@@ -3181,24 +3489,26 @@ which proves (10.31).  The lower-bound assertion is the closed-range
 theorem applied fiberwise and then integrated.
 \end{proof}
 
-Apply the lemma to the charged Gamma operator
+For a countable set \(Q\) of prime powers, apply the lemma to the charged
+Gamma operator on \(\bigoplus_{q\in Q}\mathscr K_C\),
 \[
  K_{\Gamma,Q}
  =\kappa_\infty I+\bigoplus_{q\in Q}m_\Gamma(A-\log q).
  \tag{10.32}
 \]
 It is uniformly bounded below by \(\kappa_\infty I\).  If the scalar term
-is omitted, the fiber kernels are supported on at most a countable set and
-the range is still dense.  Unitary charge transports cannot change kernels
+is omitted, the summand \(q\) is multiplication by \(m_\Gamma(\gamma-\log q)\),
+which vanishes only at the null set \(\{\log q\}\); hence its adjoint has
+zero kernel and, by (10.31), the range is still dense.  Unitary charge transports cannot change kernels
 of adjoints or closure of ranges.
 
 \begin{theorem}[Absolutely continuous completion no-go]
 \label{thm:ac-no-go}
-The cofinal Hilbert completion generated from the Cauchy coefficient
-module, shifted prime-power generators, Gamma graphs, covariant charge
-mixing and isometric direct limits has absolutely continuous normalized
-scale spectrum and no point spectrum.  Consequently every equivariant
-linear map whose range vectors belong to this Hilbert target,
+The Hilbert completion \(\mathscr P_\infty^{\rm cov}\) of the covariant
+system (10.20)--(10.29), with its unitary group \(U^{\rm cov}_t\), has
+purely absolutely continuous spectrum and no point spectrum.  Consequently,
+under Hypothesis (R) for critical-line zeros, every linear map
+intertwining \(U_t=e^{-t/2}\vartheta_t\) with \(U^{\rm cov}_t\),
 \[
  D:H^1_{\rm CCM}\longrightarrow\mathscr P_\infty^{\rm cov}
  \tag{10.33}
@@ -3209,15 +3519,28 @@ Definition~\ref{def:global-polarization}.
 \end{theorem}
 
 \begin{proof}
-The measure in (10.20) is equivalent to Lebesgue measure.  Countable
-orthogonal sums, shifts of the generator, unitary conjugacy, invariant
-closed subspaces, equivariant graph embeddings and isometric direct limits
-preserve absolute continuity.  These are exactly the operations used in
-(10.20)--(10.29); hence the target has no eigenvectors.
+The measure in (10.20) is equivalent to Lebesgue measure.  Each source
+summand of \(\mathscr S_X\) is a copy of \(\mathscr K_C\) with generator
+\(A-\ell\), unitarily equivalent to multiplication by \(\gamma-\ell\) on
+\(L^2(\R,w_C\,\dd\gamma)\).  For \(v\in\mathscr S_X\),
+\[
+\begin{aligned}
+ g^{\rm cov}(U^{\rm cov}_tv,v)
+ &=g_X(U^X_tv,v)\\
+ &\quad+\langle e^{itA}K_\Gamma^{-1/2}R_X^{\rm cov}J_Xv,K_\Gamma^{-1/2}R_X^{\rm cov}J_Xv\rangle\\
+ &\quad+\langle e^{itA}K_\Gamma^{-1/2}R_X^{\rm cov}v,K_\Gamma^{-1/2}R_X^{\rm cov}v\rangle,
+\end{aligned}
+\]
+using the intertwining relation after (10.24) and \([K_\Gamma,A]=0\).  Each
+term is the Fourier transform of a measure absolutely continuous with
+respect to Lebesgue measure, so the spectral measure of \(v\) is absolutely
+continuous.  Thus \(\bigcup_X\mathscr S_X\) lies in the absolutely continuous
+subspace, which is closed; since the union is dense, the whole space is
+absolutely continuous, and there are no eigenvectors.
 
-For every critical-line zero
-\(\rho=1/2+i\gamma\), the CCM degree one has a nonzero class satisfying
-\(U_t^{\rm CCM}u_\rho=e^{it\gamma}u_\rho\).  Equivariance of (10.33)
+Under Hypothesis (R) for critical-line zeros, for every such zero
+\(\rho=1/2+i\gamma\) there is \(u_\rho\ne0\) with
+\(U_tu_\rho=e^{it\gamma}u_\rho\).  Equivariance of (10.33)
 would make \(Du_\rho\) an eigenvector with the same character.  Since the
 target has no point spectrum, \(Du_\rho=0\).  Infinitely many such zeros
 exist unconditionally by Hardy's theorem~\cite{Hardy1914}.
@@ -3235,20 +3558,23 @@ construction must therefore retain evaluation vectors and jets in
 completion.
 \end{remark}
 
-The theorem proves a family-level statement with an explicit scope.  It
-applies to decomposable absolutely continuous coefficient completions and
-to the operations listed in its proof.  It does not assert that every
-conceivable Hilbert space is absolutely continuous.  Its conclusion is the
-relevant dichotomy: retaining transverse charge fibers creates a spurious
-continuous cokernel, while removing them leaves dense range and zero
-reduced cokernel.  Neither is the discrete resonant CCM degree one.
+The theorem concerns the single completion \(\mathscr P_\infty^{\rm cov}\).
+It does not assert that every conceivable Hilbert completion is absolutely
+continuous.  The same argument applies to any completion whose vectors
+have absolutely continuous spectral measures on a dense invariant
+subspace.
 
 \subsection{Six terminal formulations and their common content}
 \label{subsec:six-terminal}
 
-The development reaches the same force-bearing sign through six distinct
-constructions.  Their mathematical forms are different, but each becomes
-a proof of Weil positivity precisely when its final gate is supplied:
+The same sign can be stated in six forms.  For the first two and the last,
+the implication to Weil positivity or RH is proved in this paper: the first
+by Theorem~\ref{thm:mosco-transfer}, the second by
+Theorem~\ref{thm:cofinal-inertia-closure} under the ground-state identity
+(on even tests),
+the last under Hypothesis (R) by Proposition~\ref{prop:polarization-rh}; the third is
+the GNS restatement of positivity of the Weil form; the fourth and fifth
+are stated as formulations only and are not developed here:
 \begin{center}
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular}{>{\raggedright\arraybackslash}p{0.27\textwidth}
@@ -3260,7 +3586,7 @@ Localized signed forms & Lower semicontinuity of the indefinite Weil form
 under the global exhaustion, not merely Mosco convergence of its positive
 shift.\\
 Finite inertia/Schur analysis & The physical prime--Gamma gain exceeds the
-anti-shorted deficit, \(\mathfrak g_{M,J,X}>\delta_{M,J,X}\), on a
+anti-shorted deficit, \(\mathfrak g_{M,J,X}>\delta^{\flat}_{M,J,X}\), on a
 form-core exhaustion.\\
 Fixed Rosati realization & A faithful factorization
 \(\tau(f*g^\sharp)=\langle D[f],D[g]\rangle\); by GNS, its existence is
@@ -3279,9 +3605,8 @@ Geometric degree one & A positive global polarization
 The first two rows localize the sign in finite matrices.  The third states
 the sign as a factorization.  The fourth and fifth try to construct a new
 positive metric before comparison with Rosati.  The last states the desired
-geometric structure directly.  None of the implications from its terminal
-statement to RH is missing; the missing assertion in each row is the same
-global sign in the corresponding category.
+geometric structure directly.  In each row the unproved
+assertion is the terminal statement itself.
 
 This repeated endpoint admits a general formulation.
 
@@ -3336,12 +3661,12 @@ Cyclic Chern character
 semilocal Weil operator
 & The path from an unshifted finite Weil matrix to its lower-edge-shifted
 nonnegative matrix preserves the character, while the lower edge and the
-negative eigenvalue count can change.\\
+negative eigenvalue count can change (stated, not proved here).\\
 Curvature of a positive determinant-line metric
 & Motion of a section divisor with the Hermitian line and its metric fixed
 & On a disk, \(s_a(z)=z-a\) and \(s_b(z)=z-b\) have different divisors,
 but the same curvature \(\partial\bar\partial\phi\) for
-\(\|1\|^2=e^{-\phi}\).  Poincare--Lelong records the moved divisor but
+\(\|1\|^2=e^{-\phi}\).  Poincar\'e--Lelong records the moved divisor but
 metric positivity does not localize it.\\
 \bottomrule
 \end{tabular}
@@ -3349,15 +3674,16 @@ metric positivity does not localize it.\\
 
 Theorem~\ref{thm:ac-no-go} is deliberately not a fifth row of this table.
 Its proof does not require a deformation witness.  It is a spectral-type
-obstruction: the source has point-spectrum eigenclasses, the Hilbert target
+obstruction: under Hypothesis (R) the source has point-spectrum eigenclasses, the Hilbert target
 has purely absolutely continuous spectrum, and equivariance forces every
 such class to map to zero.
 
 The conclusion is not that every analytic limit is signature-blind.
 Spectral flow, for example, can retain an index when a gap and a continuous
 Fredholm path are supplied.  The conclusion is narrower and operational:
-none of the four functors in the table can recover the off-line index
-because it factors through an equivalence relation under which that index
+for the witnesses listed in the table (the cyclic Chern character row is
+stated, not proved here), none of the functors can recover the off-line
+index because it factors through an equivalence relation under which that index
 can change; and the absolutely continuous Hilbert completion fails for the
 independent point-versus-continuous spectral reason.
 
@@ -3439,7 +3765,7 @@ both positivity theorems remain open.
 
 \section{Conclusion}
 
-The Connes proof of RH, in its current mathematical form, has the following
+The Connes--CCM route to RH, as analysed here, has the following conditional
 shape:
 \[
 \boxed{
@@ -3453,15 +3779,22 @@ shape:
 \end{gathered}}
 \tag{11.1}
 \]
-The first three blocks are supplied by the published
-CCM/Connes/Suzuki programs in the precise sense stated in
-\S\S2--7.  The finite analysis of \S\S8--9 proves that approximation,
+The first three blocks are quoted from the
+CCM/Connes/Suzuki programs only in the restricted sense stated in
+\S\S2--7: self-adjointness and real finite zeros under the hypothesis of
+Theorem~\ref{thm:ccm-input}, the localized realization of
+Theorem~\ref{thm:suzuki-input}, while the prolate limit (2.4) and the
+spectral identification of the limit are used only as explicit
+assumptions.  The finite analysis of \S\S8--9 proves that approximation,
 tail control, radical shorting, prime sampling, adaptive gain recovery and
-form-core exhaustion create no additional sign loss.  In that realization
+form-core exhaustion reduce the sign on each heat or hybrid row to one
+finite inequality, which is not proved; the Section~8 bounds hold under
+the standing assumptions (P1)--(P4), and the passage to the Weil form
+uses the ground-state identity as a hypothesis.  In that realization
 the terminal assertion is the physical surplus
-\(\mathfrak g_{M,J,X}>\delta_{M,J,X}\) on the heat or hybrid rows.
+\(\mathfrak g_{M,J,X}>\delta^{\flat}_{M,J,X}\) on the heat or hybrid rows.
 
-Section~\ref{sec:polarization-audit} then reconstructs the source geometry
+Section~\ref{sec:polarization-geometry} then reconstructs the source geometry
 behind the same assertion.  At every finite prime, a positive cyclic-root
 Laplacian produces the relative torsion \(\log p\) and the incidence
 \(p^{-k/2}\), hence the exact coefficient
@@ -3469,24 +3802,27 @@ Laplacian produces the relative torsion \(\log p\) and the incidence
 polar plane reproduce the completed archimedean determinant.  The common
 boundary has an exact matched finite part, and the charge translations
 assemble all prime powers equivariantly without removing cross phases.
-These statements are unconditional and source-defined.
+Theorems~\ref{thm:root-torsion}, \ref{thm:gamma-polar-det} and
+\ref{thm:matched-finite-part} are unconditional.
 
 They do not complete (11.1).  Theorem~\ref{thm:ac-no-go} proves that the
 ordinary absolutely continuous Hilbert completion of this source object
-has no point spectrum and therefore cannot receive the resonant CCM degree
-one faithfully.  Thus the finite and local polarizations are valid, while
+has no point spectrum and therefore, under Hypothesis (R) for
+critical-line zeros, cannot receive the resonant CCM degree one faithfully.  Thus the finite and local polarizations are valid, while
 the attempted global descent is not.  This separates a successful local
 construction from the still missing global Hodge/Rosati positivity.
 
 The six terminal formulations in \S\ref{subsec:six-terminal} are not six independent missing
-lemmas.  They are six categorical expressions of the complete Weil sign.
+lemmas.  They are six formulations of the same missing sign.
 Proposition~\ref{prop:deformation-blindness} identifies their recurring
-deformation failure: scalar determinants, homotopy classes and curvature
+deformation failure: the half-plane sign class, scalar determinants, homotopy classes and curvature
 factor through relations which forget the position or signature of the
 resonant divisor.  The absolutely continuous Hilbert pushout fails for the
 independent spectral reason of Theorem~\ref{thm:ac-no-go}.  Together these
-results explain why further repackaging by the same operations cannot
-create the missing polarization.
+results show, for the witnesses listed in the table (the cyclic Chern
+character row being stated, not proved here), that the functors there and the absolutely
+continuous completion of Theorem~\ref{thm:ac-no-go} cannot recover the
+off-line index.
 
 Two routes remain open.  The geometric route asks for an arithmetic
 intersection product and a primitive Hodge-index theorem whose local
@@ -3499,9 +3835,22 @@ the fourth block of (11.1).  Neither construction, nor RH, is proved here.
 
 \begin{thebibliography}{99}
 
+\bibitem{Polya1926}
+G.~P\'olya, Bemerkung \"uber die Integraldarstellung der Riemannschen
+\(\xi\)-Funktion, \emph{Acta Math.} \textbf{48} (1926), 305--317.
+
+\bibitem{Fuchs1964}
+W.~H.~J. Fuchs, On the eigenvalues of an integral equation arising in the
+theory of band-limited signals, \emph{J. Math. Anal. Appl.} \textbf{9}
+(1964), 317--330.
+
+\bibitem{Slepian1965}
+D.~Slepian, Some asymptotic expansions for prolate spheroidal wave
+functions, \emph{J. Math. and Phys.} \textbf{44} (1965), 99--140.
+
 \bibitem{Weil1952}
 A.~Weil,
-\emph{Sur les ``formules explicites'' de la theorie des nombres premiers},
+\emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
 Comm. Sem. Math. Univ. Lund (1952), 252--265.
 
 \bibitem{Connes1999}
@@ -3625,26 +3974,16 @@ F.~R. Gantmacher,
 \emph{The Theory of Matrices},
 Chelsea, New York, 1959.
 
-\bibitem{Loewner1934}
-K.~Loewner,
-\emph{\"Uber monotone Matrixfunktionen},
-Math. Z. \textbf{38} (1934), 177--216.
+\bibitem{Andreief1886}
+C.~Andr\'eief,
+\emph{Note sur une relation entre les int\'egrales d\'efinies des produits
+des fonctions},
+M\'em. Soc. Sci. Phys. Nat. Bordeaux (3) \textbf{2} (1886), 1--14.
 
 \bibitem{Bhatia1997}
 R.~Bhatia,
 \emph{Matrix Analysis},
 Graduate Texts in Mathematics, vol.~169, Springer, 1997.
-
-\bibitem{Karlin1968}
-S.~Karlin,
-\emph{Total Positivity, Vol.~I},
-Stanford University Press, 1968.
-
-\bibitem{Ismail2005}
-M.~E.~H. Ismail,
-\emph{Classical and Quantum Orthogonal Polynomials in One Variable},
-Encyclopedia of Mathematics and its Applications, vol.~98, Cambridge
-University Press, 2005.
 
 \bibitem{Mosco1969}
 U.~Mosco,
