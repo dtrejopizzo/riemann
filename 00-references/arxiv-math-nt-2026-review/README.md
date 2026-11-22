@@ -1,4 +1,4 @@
-# arXiv readings for Paper 47
+# arXiv readings for Paper 46
 
 Reading order fixed at the outset:
 
@@ -64,7 +64,7 @@ uniformity the text leaves open.
 | Medium, arithmetic | [Maynard–Pandey–Radziwiłł, 2608.14777](https://arxiv.org/abs/2608.14777) | New bound for prime sums with additive phase. Do not replace e(nα) by n^{iγ} without estimating the cost of the reduction; a power saving does not prove a sign without margin. |
 | Medium, inverse structure | [Dong–Wang–Wang–Zhang, 2608.31060](https://arxiv.org/abs/2608.31060) | Large values of sums of n^{it} force nearby zeros. A different direction from the required one-sided bound; examine a possible incompatibility with minimality, do not assume it. |
 | Medium, tools | [Ramaré, 2609.25879](https://arxiv.org/abs/2609.25879) and [2609.25885](https://arxiv.org/abs/2609.25885) | Parseval, regularity and weighted sieve. Smaller loss in inequalities, but control of the selected witness is missing. |
-| Already incorporated | [Groskin, 2607.02828](https://arxiv.org/abs/2607.02828) and [Zhu, 2608.24827](https://arxiv.org/abs/2608.24827) | Paper 47 already cites and discusses them. Not to be counted as new. Revisions/certificates may help implementation. |
+| Already incorporated | [Groskin, 2607.02828](https://arxiv.org/abs/2607.02828) and [Zhu, 2608.24827](https://arxiv.org/abs/2608.24827) | Paper 46 already cites and discusses them. Not to be counted as new. Revisions/certificates may help implementation. |
 | Separate audit | [Desogus, 2609.20367](https://arxiv.org/abs/2609.20367) | The manuscript claims RH via Schur induction with inherited response and polar debit. Not validated here. Audit the conservation of budgets before the common infimum and the induction, without adopting its conclusion. |
 
 The Carleson candidate is a math.CA cross-list in math.NT: it is kept because the
@@ -92,5 +92,5 @@ search includes cross-listed categories, not only the primary one.
 For each tool, record: domain, weight, type of phase, quantifiers, constants,
 type of averaging and any RH/GRH or correlation hypothesis. An adaptation must
 keep the polar part and the infinite complement and produce a new inequality, not
-only an identity. Up to this search, no law closing the global sign of Paper 47
+only an identity. Up to this search, no law closing the global sign of Paper 46
 has been identified.

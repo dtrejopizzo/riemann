@@ -9,7 +9,7 @@ produced the numerical certificates.
 
 Weil proved the Riemann hypothesis for a curve over a finite field in four steps: a ring of
 correspondences with a trace, the Frobenius correspondences inside it, a fixed-point formula for
-the trace, and the Hodge-index inequality on classes of bidegree zero. Papers 43, 44, 45 and 47
+the trace, and the Hodge-index inequality on classes of bidegree zero. Papers 43, 44, 45 and 46
 carry out the same four steps for $\mathrm{Spec}\,\mathbb Z$, on the idele class group of
 $\mathbb Q$.
 
@@ -18,9 +18,9 @@ $\mathbb Q$.
 | A | Correspondences, involution, trace, bidegree | [43](04-papers/43-row-a-torsion-theory/) | A convolution algebra of semilocal idele class correspondences with its involution and trace; the two Tate characters give the bidegree and define the primitive subspace. |
 | B | Frobenius | [44](04-papers/44-row-b-arithmetic-family/) | A Frobenius measure for every positive integer with prime divisors in $S$; its contact with the diagonal has weight $\Lambda(n)/\sqrt n$, supported on prime powers. |
 | C | Fixed-point (explicit) formula | [45](04-papers/45-row-c-explicit-formula/) | Weil's explicit formula for the radial trace: the self-intersection of a radial class equals its two Tate moments minus a sum over the nontrivial zeros of $\zeta$; if $\zeta$ had a zero off the critical line, a real primitive test function of compact support would detect it. |
-| D | Intersection inequality (the sign) | [47](04-papers/47-row-d-dual-certificates/) | The sign of the radial intersection form $W_T$ on functions supported in $(-T,T)$: see below. |
+| D | Intersection inequality (the sign) | [46](04-papers/46-row-d-dual-certificates/) | The sign of the radial intersection form $W_T$ on functions supported in $(-T,T)$: see below. |
 
-### What Paper 47 establishes
+### What Paper 46 establishes
 
 - **Equivalence theorem.** The following are equivalent: (1) the Riemann hypothesis for $\zeta$;
   (2) $W_T(F)\ge 0$ for every $T>0$ and every $F$ in the form domain; (3) $\lambda_A(T)\ge 0$ for
@@ -38,7 +38,7 @@ $\mathbb Q$.
   on the entire form domain for every $T>0$, the primitive self-intersection is $\le 0$, and the
   matrices of the finite reduction are Gram matrices in every degree.
 
-**Status of the all-window sign.** In Paper 47 the sign for every window is proved under the
+**Status of the all-window sign.** In Paper 46 the sign for every window is proved under the
 half-plane nonvanishing hypothesis above; for modulus one that hypothesis is the statement that
 $\zeta$ has no zero to the right of the critical line. Unconditionally the paper proves the sign
 on bounded windows (up to $T=2.8022$) and the equivalence theorem. The papers therefore establish
@@ -52,8 +52,8 @@ hypothesis.
 | [43](04-papers/43-row-a-torsion-theory/) | A Correspondence Algebra and the Weil Distribution on Semilocal Idele Class Groups | Row A. |
 | [44](04-papers/44-row-b-arithmetic-family/) | An Arithmetic Frobenius Family on Semilocal Idele Class Groups | Row B. |
 | [45](04-papers/45-row-c-explicit-formula/) | An Explicit Formula for the Trace on Semilocal Idele Class Groups | Row C. |
-| [46](04-papers/46-intersection-frame-defect/) | An Intersection Frame for the Explicit Formula: Hodge-Index Transfer, a Frame Defect Theorem and a Function-Field Model | Structural theorems on the extended Weil form; no sign claimed. |
-| [47](04-papers/47-row-d-dual-certificates/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D. |
+| [46](04-papers/46-row-d-dual-certificates/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D. |
+| [47](04-papers/47-intersection-frame-defect/) | An Intersection Frame for the Explicit Formula: Hodge-Index Transfer, a Frame Defect Theorem and a Function-Field Model | Structural theorems on the extended Weil form; no sign claimed. |
 | [48](04-papers/48-row-d-route-map/) | Routes to Weil positivity on finite intervals: a cartography of attempts, barriers and open problems | Survey of the routes attempted toward the sign, in twenty-six families, with the mechanism of failure and the status of each, proved barriers and the map of what is open. |
 
 The full catalogue of papers 01–48 is in [`04-papers/README.md`](04-papers/README.md).

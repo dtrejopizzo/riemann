@@ -3,8 +3,8 @@
 Catalogue of the papers of the program. No paper claims a proof of the
 Riemann hypothesis. Folder names carry the paper number as a prefix. Papers 01–42 are the earlier arcs
 (ω-classes, inverse operators, the Weil form and its realizations, the Pick architecture, the first
-arithmetic Lefschetz construction). Papers 43–48 are the current programme: rows A–C (closed on the
-declared carrier), row D (open) and the map of routes.
+arithmetic Lefschetz construction). Papers 43–48 are the current programme: rows A–C (Papers 43–45, closed on the
+declared carrier), row D (Paper 46, open), the intersection frame (Paper 47) and the map of routes (Paper 48).
 
 | # | Title | Content | Type / status |
 |---|---|---|---|
@@ -53,12 +53,13 @@ declared carrier), row D (open) and the map of routes.
 | [43](43-row-a-torsion-theory/) | A Correspondence Algebra and the Weil Distribution on Semilocal Idele Class Groups | Row A: a convolution algebra of semilocal idele class correspondences, its involution and canonical trace; the two Tate characters give the bidegree and define the primitive subspace of the intersection form. | Row A closed on the declared carrier |
 | [44](44-row-b-arithmetic-family/) | An Arithmetic Frobenius Family on Semilocal Idele Class Groups | Row B: a Frobenius correspondence for each positive integer, with contact with the diagonal of weight $\Lambda(n)/\sqrt n$ on prime powers, and an integral model relating it to cyclotomic values. | Row B closed on the declared carrier |
 | [45](45-row-c-explicit-formula/) | An Explicit Formula for the Trace on Semilocal Idele Class Groups | Row C: Weil's explicit formula for the self-intersection of a radial class via its two Tate moments and the zeros; if $\zeta$ had a zero off the critical line, a real primitive test function of compact support would detect it. | Row C closed on the declared carrier |
-| [46](46-intersection-frame-defect/) | An Intersection Frame for the Explicit Formula: Hodge-Index Transfer, a Frame Defect Theorem and a Function-Field Model | The Pólya class, radical and polar plane of the extended Weil form; a conditional Hodge-index transfer; the frame defect theorem; the same defect on a curve over a finite field. The earlier row D text is archived in the folder. | Structural theorems |
-| [47](47-row-d-dual-certificates/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D: lower bounds for the Weil form on finite support intervals and a reduction of nonnegativity on arbitrary intervals to a sequence of matrix inequalities. | Row D OPEN |
+| [46](46-row-d-dual-certificates/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D: lower bounds for the Weil form on finite support intervals and a reduction of nonnegativity on arbitrary intervals to a sequence of matrix inequalities. | Row D OPEN |
+| [47](47-intersection-frame-defect/) | An Intersection Frame for the Explicit Formula: Hodge-Index Transfer, a Frame Defect Theorem and a Function-Field Model | The Pólya class, radical and polar plane of the extended Weil form; a conditional Hodge-index transfer; the frame defect theorem; the same defect on a curve over a finite field. The earlier row D text is archived in the folder. | Structural theorems |
 | [48](48-row-d-route-map/) | Routes to Weil positivity on finite intervals: a cartography of attempts, barriers and open problems | A survey mapping the routes tried toward nonnegativity of the truncated Weil form on primitive functions and toward related positivity criteria, in the literature and in Papers 01–46: twenty-six families, each with its idea, what was obtained, the mechanism of failure and its status (closed by a theorem for a stated class, closed as attempted, or open), the constraints on any proof and the map of what is open. Proves no new sign. | Survey of routes |
 
 ## Notes
 
 - Papers 01, 27, 29 and 34 are surveys; 36 is a ledger of obstructions with a Pick reformulation of RH; 42 is a programme paper.
-- Papers 43–45 supersede the row constructions of Paper 42. Paper 47 is the single paper of record for row D.
+- Papers 43–45 supersede the row constructions of Paper 42. Paper 46 is the single paper of record for row D.
+- Papers 43–46 carry rows A–D in order. The papers on the sign (row D) and on the intersection frame exchanged numbers: in working notes under `../03-research/` and `../05-meta-and-planning/` written before the exchange, "Paper 47" is the paper on the sign (now 46) and "Paper 46" is the intersection frame (now 47).
 - The earlier version of this index, with dependencies and the publication flow, is in `../05-meta-and-planning/archive-top-level/04-papers-README.md`.

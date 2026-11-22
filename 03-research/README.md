@@ -231,8 +231,8 @@ The results distilled from these phases are in [`../04-papers/`](../04-papers/)
 | [phase-208-node-scope-audit](phase-208-node-scope-audit/) | Audit of the node's scope |
 | [phase-209-nonlocal-kernel](phase-209-nonlocal-kernel/) | A genuine two-variable kernel (program O1); nonlocal kernel |
 | [phase-210-qrh-four-fifths](phase-210-qrh-four-fifths/) | Quasi-RH exponent study, from 7/8 to 4/5 (zero-free half-plane Re s > 4/5); independent of row D |
-| [phase-211-sign-sandbox](phase-211-sign-sandbox/) | The sign of the Paper 47 window form, treated as an isolated problem |
+| [phase-211-sign-sandbox](phase-211-sign-sandbox/) | The sign of the Paper 46 window form, treated as an isolated problem |
 | [phase-212-missing-object](phase-212-missing-object/) | Construction of the object that carries the sign |
-| [phase-213-new-constructions](phase-213-new-constructions/) | New constructions for the global positivity of the Paper 47 form |
+| [phase-213-new-constructions](phase-213-new-constructions/) | New constructions for the global positivity of the Paper 46 form |
 
 *Two `phase-44-*` and two `phase-147-*` folders exist (parallel threads under those numbers). The hidden folder `.phase-102-discard/` holds discarded phase-102 material.*

@@ -6,7 +6,7 @@ A survey. For T > 0 the truncated Weil quadratic form on test functions supporte
 archimedean form and a finite prime form. The "window problem" asks that it be nonnegative on primitive functions
 (both Tate moments zero). By Weil's criterion, the window problem for every T is equivalent to the Riemann hypothesis.
 The paper maps the routes tried toward this problem and toward related positivity criteria (Li–Keiper, Herglotz–Pick,
-de Branges, Kreĭn spaces, Hodge-index transfers), both in the literature and in Papers 01–46 of the series. It groups
+de Branges, Kreĭn spaces, Hodge-index transfers), both in the literature and in Papers 01–45 and 47 of the series. It groups
 them into twenty-six families. For each family it gives the idea, what was obtained, the mechanism of failure, and
 whether the route is closed by a theorem (and for which class of arguments), closed as attempted, or open. The paper
 proves no new sign and claims no progress toward the Riemann hypothesis. It defines everything it uses.
@@ -35,7 +35,7 @@ Full proofs are given for the following.
 ## Cited, conditional, heuristic, numerical, announced
 
 - Cited: positivity on primitive functions for 0 < T ≤ log 2 (Paper 42, Theorem 9.18 and Corollary 9.20), with the explicit margin λ(T) ≥ 1.1599·10⁻⁴ for T ≤ ½ log 3 (Paper 42, Theorem 9.18); Yoshida's
-  theorem; Haynsworth inertia additivity (Prop. 13.1, cited; the form version is the completion of squares of Prop. 2.8); Weil's and Li's criteria; results of Papers 08, 10, 18, 25, 36, 37, 38, 39, 45 and 46 with statement
+  theorem; Haynsworth inertia additivity (Prop. 13.1, cited; the form version is the completion of squares of Prop. 2.8); Weil's and Li's criteria; results of Papers 08, 10, 18, 25, 36, 37, 38, 39, 45 and 47 with statement
   numbers; the de Bruijn–Newman, Jensen-polynomial and Beurling literature.
 - Conditional: statements proved under a hypothesis written into them. Examples are the Kreĭn-space count of
   Paper 18 under a finite-quartet hypothesis, and the coercivity hypothesis of Paper 08, a lower bound on the on-line
