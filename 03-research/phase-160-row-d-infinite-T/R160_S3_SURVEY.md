@@ -439,7 +439,7 @@ principal new mathematical contribution of phases 130–132"); C.7 PROVED, no si
   and an equality theorem; or (3) prove a new Hodge–Rosati theorem intrinsically before comparing with `B_nuc`.
 
 ### 4.8 Record inconsistencies found (not edited; reported for the record)
-1. `04-papers/43-row-a-torsion-theory/README.md` still says "label withdrawn" (phase-128 banner); `main.md` and
+1. `04-papers/43-row-a-correspondence-algebra/README.md` still says "label withdrawn" (phase-128 banner); `main.md` and
    R130.005 grant the label. The README is stale.
 2. `04-papers/44-row-b-arithmetic-family/README.md`: its first status block still reads "conditional on the
    acceptance of the B.4 amendment"; the round-3 block records the acceptance, and B.7's amendment
@@ -531,7 +531,7 @@ Each item states the wall it must still pass (from §2). None is known to avoid 
 > `λ_∓(F) = ∫_{C_S}F(u)|u|_S^{∓1/2}d^*u`, continuous and surjective onto `B_T = C²` with the hyperbolic form
 > `β_T(z,w) = z_−\overline{w_+} + z_+\overline{w_−}` (Theorem 9.1)."
 
-**D-trace (Paper 43 Def 8.6, `04-papers/43-row-a-torsion-theory/main.md` l. 1116–1145).**
+**D-trace (Paper 43 Def 8.6, `04-papers/43-row-a-correspondence-algebra/main.md` l. 1116–1145).**
 > "`T(F) := Σ_{v∈S} W_v(F) + c·F(1), F ∈ D_A,` (8.4) where, at a finite place, … `W_p(F) = ∫_{v_p(x)≠0} a(x) τ_p(x)
 > d^*x + (log p) ∫_{Z_p^×} (a(u)−a(1)) / |1−u|_p du, a := F∘j_p`, … `d^*x` giving each shell `p^kZ_p^×` the volume
 > `log p`, (8.5) … at the real place … `W_∞(F) = (γ+log 4π) b(1) + ∫_0^∞ K(t)[ b(t)+b(−t) − 2b(1)e^{−t/2} ] dt,
@@ -582,7 +582,7 @@ Each item states the wall it must still pass (from §2). None is known to avoid 
 > "(H_L) there is a primitive `g_* ∈ C_c^∞([L/2,L];C)` — i.e. `ĝ_*(0) = ĝ_*(1) = 0` — with `Q(g_*) < 0` and
 > `R(L) := (L e^{−L/4}‖g_*‖_∞‖g_*‖_{C^1} + L e^{−L/2}‖g_*‖_{C^1}²)/|Q(g_*)|`." (8bis.14d)
 
-**D-Paper 47 forms (`04-papers/46-row-d-dual-certificates/main.tex`).**
+**D-Paper 47 forms (`04-papers/46-row-d-sign-radial-intersection-form/main.tex`).**
 * l. 119–122 (`eq:symbol`): `m(τ) = Re ψ(¼ + iτ/2) − log π`, `S_T(τ) = m(τ) − Σ_{n∈N_T} v_n cos(τ log n)`,
   `v_n = 2Λ(n)/√n`, `N_T = {n ≥ 2 : log n < 2T}`.
 * l. 125–127 (`eq:form`): `𝔞_T(F) = (1/2π)∫_R S_T(τ)|F̂(τ)|² dτ`, `F̂(τ) = ∫F(t)e^{iτt}dt`, `F ∈ L²(I_T)`,

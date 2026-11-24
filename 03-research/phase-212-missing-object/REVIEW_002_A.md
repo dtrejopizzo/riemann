@@ -1,7 +1,7 @@
 # REVIEW_002_A — Critical review of ROUND_002_A (exterior tail of the hyperbola as a sum of squares)
 
 Scope: line-by-line reading of the memo; independent derivation of identity (1), of the Lemma and of
-Observation (2) against P46 §sec:firstcontact (`04-papers/46-row-d-dual-certificates/main.tex`,
+Observation (2) against P46 §sec:firstcontact (`04-papers/46-row-d-sign-radial-intersection-form/main.tex`,
 l. 6625–6946: operators on the line, thm:PCfinite, eq:Gammaenergy, eq:collar, eq:Qbalance,
 eq:Qrecombine, eq:Qspectral, prop:GEgap, eq:equivgate, rem:returnremarks); opening of the
 cited antecedents (`R170_816`, `819`–`821`, `835`, `837`, `841`, `870`; `R161_030`–`039`, `071`,

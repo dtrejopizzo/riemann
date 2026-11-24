@@ -1,7 +1,7 @@
 # Row D — the reduced statement
 
 Status: **synthesis of record after phases 134–156. No new theorem, no label change.** Every line cites a labelled
-statement of Paper 47 (`04-papers/47-intersection-frame-defect/archive/main.md`), Paper 46 (`04-papers/46-row-d-dual-certificates/main.tex`,
+statement of Paper 47 (`04-papers/47-intersection-frame-defect/archive/main.md`), Paper 46 (`04-papers/46-row-d-sign-radial-intersection-form/main.tex`,
 84 pp.) or a phase file. Row D has no label. No sign is proved for ζ at any window beyond those listed in §3.
 
 ---

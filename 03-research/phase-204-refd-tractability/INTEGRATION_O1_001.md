@@ -1,6 +1,6 @@
 # INTEGRATION_O1_001 — Integration of O1 into Paper 46 (phase 204p, editor)
 
-Backup: `04-papers/46-row-d-dual-certificates/main_pre_o1.tex`.
+Backup: `04-papers/46-row-d-sign-radial-intersection-form/main_pre_o1.tex`.
 
 ## 1. Verification against P46's definitions
 

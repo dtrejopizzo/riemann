@@ -1,6 +1,6 @@
 # R129.001 — row A rebuild: report
 
-Target: Paper 43 (`04-papers/43-row-a-torsion-theory/`),
+Target: Paper 43 (`04-papers/43-row-a-correspondence-algebra/`),
 `main.md` and `appendix.md`.  Input: `D128.001` (findings A1–A12 accepted,
 R1 rejected), `D128.004`, `P123_A_ACCEPTANCE_SPECIFICATION`.
 

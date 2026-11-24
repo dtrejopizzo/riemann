@@ -1,7 +1,7 @@
 # Review 009: rounds 010_A, 011_A, 011_C, 012_A, 012_B, 013_A against Paper 46 §sec:ext and prolate theory
 
 Scope. ROUND_010_A, ROUND_011_A, ROUND_011_C, ROUND_012_A, ROUND_012_B, ROUND_013_A, checked against Paper 46
-(04-papers/46-row-d-dual-certificates/main.tex: eq:symbol and eq:W at L.110–124, lem:mbounds L.505–515, def:W/thm:Z
+(04-papers/46-row-d-sign-radial-intersection-form/main.tex: eq:symbol and eq:W at L.110–124, lem:mbounds L.505–515, def:W/thm:Z
 L.1225–1260, §sec:ext L.9856–10045: def:ext, lem:ext-mob, thm:ext-half, prop:ext-gauge, lem:ext-ellbound, prob:ext-L,
 prop:ext-consol, lem:ext-hf) and against the classical prolate theory (Slepian–Pollak; double orthogonality; the
 whole-line finite Fourier eigen-equation). Verdict per PROVED claim: CONFIRMED / REFUTED / DOWNGRADE. Line numbers are

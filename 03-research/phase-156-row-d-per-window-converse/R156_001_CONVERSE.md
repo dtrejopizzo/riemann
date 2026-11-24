@@ -24,7 +24,7 @@ are in `scripts/r156/` (README there), each < 60 s, run one at a time. No paper 
 
 ---
 
-## 0. The paper's definitions (verbatim sources, `04-papers/46-row-d-dual-certificates/main.tex`)
+## 0. The paper's definitions (verbatim sources, `04-papers/46-row-d-sign-radial-intersection-form/main.tex`)
 
 * `eq:symbol`, `eq:form` (l.119–128): `σ_T = m − Σ_{n∈N_T} v_n cos(τ log n)`, `𝔞_T(F) = (2π)^{-1}∫σ_T|F̂|²`, on the form
   domain `D_T = {F ∈ L²(I_T): ∫log(2+|τ|)|F̂|² < ∞}`; `A_T` is the operator of `𝔞_T`.

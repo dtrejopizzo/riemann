@@ -14,5 +14,5 @@ following its consequences.
 | [B126.003](B126_003_PRIMITIVE_EXTRACTION_IS_NOT_MONOIDAL.md) | refutation of a standing requirement, and the corrected structure |
 | [B126.004](B126_004_LEDGER.md) | clause ledger, reclassified open items, and the obligation handed to row C |
 
-Row A is [Paper 43](../../04-papers/43-row-a-torsion-theory/main.tex) and phase
+Row A is [Paper 43](../../04-papers/43-row-a-correspondence-algebra/main.tex) and phase
 125.  Row B adds no external citation.

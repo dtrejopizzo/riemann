@@ -17,7 +17,7 @@ Contents: Part A, exact facts. Part B, attempts of phases 191–204. Part C, att
 
 ## Dossier: the term Near_M of 𝔸_M
 
-P46 = `04-papers/46-row-d-dual-certificates/main.tex`. Memo paths relative to `03-research/`.
+P46 = `04-papers/46-row-d-sign-radial-intersection-form/main.tex`. Memo paths relative to `03-research/`.
 Where a source reasons from the zeros side it is marked [H].
 
 ## 1. Exact definitions

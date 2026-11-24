@@ -47,7 +47,7 @@ Quantity: eigenvalues (second even, first odd) of the complete form `QW` on `[�
 directly. Own label: unconditional. Remark B4 of (S1) states that the test space
 `span{v₀, v₂}` contains a vector with `ℓ_ev = 0`, which transfers the bound to `λ^A`.
 
-**(S5) Paper 46, thm:margin and cor:margin1** (`04-papers/46-row-d-dual-certificates/main.tex`, l.3530–3580):
+**(S5) Paper 46, thm:margin and cor:margin1** (`04-papers/46-row-d-sign-radial-intersection-form/main.tex`, l.3530–3580):
 
 > «For every `T ≥ 1`, `λ_W ≤ λ_P ≤ λ_A ≤ 4·10⁹ T e^{−15.449 T}`.»
 
@@ -56,7 +56,7 @@ with a test vector that annihilates only the first zero; footnote: «a property 
 rate»). rem:moriceiling (l.3582–3591): cites a bound `exp(−4π e^{2T})` of Mori **for `λ_W`**, «plausible,
 unverified»; «It bounds `λ_W ≤ λ_A` and so does not replace Corollary cor:margin1 as a bound on `λ_A`.»
 
-**(S6) Paper 48 §subsec:margin** (`04-papers/48-row-d-route-map/main.tex`, l.265–276):
+**(S6) Paper 48 §subsec:margin** (`04-papers/48-routes-to-weil-positivity/main.tex`, l.265–276):
 
 > «A doubly exponential upper bound `exp(−e^{(2−ε)T})` for `λ_A` is *not* proved; earlier versions of this
 > map stated it as a theorem, and that statement is withdrawn.»

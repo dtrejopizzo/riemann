@@ -528,7 +528,7 @@ Each item says what exists, why it stopped, and what would be new. None carries 
 
 ## §6 Definitions a memo needs verbatim (file and line)
 
-### 6.1 Paper 46 (`04-papers/46-row-d-dual-certificates/main.tex`)
+### 6.1 Paper 46 (`04-papers/46-row-d-sign-radial-intersection-form/main.tex`)
 
 **Symbol, form, complete form, `P_T`** (l.114–138):
 ```latex

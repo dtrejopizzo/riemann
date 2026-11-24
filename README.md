@@ -62,10 +62,10 @@ ROW D  The sign of the radial intersection form                      [Paper 46]
 
 | Row | Step in Weil's proof | Paper | What it contains |
 |---|---|---|---|
-| A | Correspondences, involution, trace, bidegree | [43](04-papers/43-row-a-torsion-theory/) | A convolution algebra of semilocal idele class correspondences with its involution and trace; the two Tate characters give the bidegree and define the primitive subspace. |
+| A | Correspondences, involution, trace, bidegree | [43](04-papers/43-row-a-correspondence-algebra/) | A convolution algebra of semilocal idele class correspondences with its involution and trace; the two Tate characters give the bidegree and define the primitive subspace. |
 | B | Frobenius | [44](04-papers/44-row-b-arithmetic-family/) | A Frobenius measure for every positive integer with prime divisors in $S$; its contact with the diagonal has weight $\Lambda(n)/\sqrt n$, supported on prime powers. |
 | C | Fixed-point (explicit) formula | [45](04-papers/45-row-c-explicit-formula/) | Weil's explicit formula for the radial trace: the self-intersection of a radial class equals its two Tate moments minus a sum over the nontrivial zeros of $\zeta$. |
-| D | Intersection inequality (the sign) | [46](04-papers/46-row-d-dual-certificates/) | *The sign of the radial intersection form on the idele class group*, with its annex *Column packages for character families*: $W_T\ge 0$ on every window, and the Riemann hypothesis. |
+| D | Intersection inequality (the sign) | [46](04-papers/46-row-d-sign-radial-intersection-form/) | *The sign of the radial intersection form on the idele class group*, with its annex *Column packages for character families*: $W_T\ge 0$ on every window, and the Riemann hypothesis. |
 
 ### Who did what
 
@@ -99,7 +99,7 @@ formalization: <https://alpo.ge/remark.pdf>.
 - [`06-alpoge-verification/`](06-alpoge-verification/): an independent compilation of Alpoge's
   archive, with the build log, the axiom check of the main theorem and the dependency report.
   They will be placed there when the run finishes.
-- A Colab notebook in the [Paper 46 folder](04-papers/46-row-d-dual-certificates/), to be uploaded
+- A Colab notebook in the [Paper 46 folder](04-papers/46-row-d-sign-radial-intersection-form/), to be uploaded
   shortly. It reproduces with interval arithmetic the rigorous certificate of $W_T\ge 0$ on
   bounded windows (up to $T=2.8022$ in the paper) and lets you try the same method for a $T$ of
   your choice; and it computes the prime sum $G(x)$ directly from the primes, with no zeros of
@@ -122,12 +122,12 @@ Jean-François Burnol, John Tate, and the many others cited in the papers.
 
 | Paper | Title | Content |
 |---|---|---|
-| [43](04-papers/43-row-a-torsion-theory/) | A Correspondence Algebra and the Weil Distribution on Semilocal Idele Class Groups | Row A. |
+| [43](04-papers/43-row-a-correspondence-algebra/) | A Correspondence Algebra and the Weil Distribution on Semilocal Idele Class Groups | Row A. |
 | [44](04-papers/44-row-b-arithmetic-family/) | An Arithmetic Frobenius Family on Semilocal Idele Class Groups | Row B. |
 | [45](04-papers/45-row-c-explicit-formula/) | An Explicit Formula for the Trace on Semilocal Idele Class Groups | Row C. |
-| [46](04-papers/46-row-d-dual-certificates/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D, with the annex *Column packages for character families: the arithmetic inputs for the sign of the radial intersection form*. |
+| [46](04-papers/46-row-d-sign-radial-intersection-form/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D, with the annex *Column packages for character families: the arithmetic inputs for the sign of the radial intersection form*. |
 | [47](04-papers/47-intersection-frame-defect/) | An Intersection Frame for the Explicit Formula: Hodge-Index Transfer, a Frame Defect Theorem and a Function-Field Model | Structural theorems on the extended Weil form; no sign claimed. |
-| [48](04-papers/48-row-d-route-map/) | Routes to Weil positivity on finite intervals: a cartography of attempts, barriers and open problems | Survey of the routes attempted toward the sign before step (5) was available: twenty-six families, with the mechanism of failure and the status of each, and the proved barriers. |
+| [48](04-papers/48-routes-to-weil-positivity/) | Routes to Weil positivity on finite intervals: a cartography of attempts, barriers and open problems | Survey of the routes attempted toward the sign before step (5) was available: twenty-six families, with the mechanism of failure and the status of each, and the proved barriers. |
 
 The full catalogue of papers 01–48 is in [`04-papers/README.md`](04-papers/README.md).
 

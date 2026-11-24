@@ -2,7 +2,7 @@
 
 Track K.
 
-Notation: Paper 46 (04-papers/46-row-d-dual-certificates/main.tex) and INV_H_001 §3 (s_φ, Q_φ, a_φ, N = e^{2T}), INV_J_001 (O_6, a_P, J4).
+Notation: Paper 46 (04-papers/46-row-d-sign-radial-intersection-form/main.tex) and INV_H_001 §3 (s_φ, Q_φ, a_φ, N = e^{2T}), INV_J_001 (O_6, a_P, J4).
 No numerics used.
 
 ## 0. Corpus / index check

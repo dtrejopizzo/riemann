@@ -46,7 +46,7 @@ App. B (all labelled statements), Paper 47 `main.md` §§0–1, 11.1, 11.7, 12.3
 | 155 flat-kernel criterion | 8 rounds + reverse track: TK/N/N′ class ceilings, B, SC, R, Lemma R, finZ, Theorem D (decay tail), archimedean thresholds, Schur reduction, `W_{log2}[F*]`, E₇ nest, Li dictionary, Kreĭn = RH, Thm J, arena, Thm P, AL retracted → AL′, P6 = equivalence, D-HS killed, margin decays, **(H1) proved at log 2**; PATH-TO-D synthesis | `phase-155-…/README.md` and `R155_003/010/018/029/038/043/046/051/060`; `R155_031` = `ABCD/PATH-TO-D.md` |
 | 156 per-window converse | parity–Schur identity, polar capacity `𝔊_T`; converse fails in comb models; `T*_∞ ≤ 0.4608`; residual R1 of frame defect closed (Cor 19.25b) | `phase-156-…/R156_005_CLOSING_DECISION.md` |
 | **Paper 47** | Row D: the sign, Parts I–IV (§§0–28): frame, transfer theorems, T1/T2/T5, frame defect, classification, wall §28.2, reopening clauses §28.4; §§28.3a/b add phases 157–158 | `04-papers/47-intersection-frame-defect/archive/main.md` (12 687 lines) |
-| **Paper 46** | Dual theory of Weil positivity at finite support (84 pp.): §§2–11 + App. A–C | `04-papers/46-row-d-dual-certificates/main.tex` (5 182 lines) |
+| **Paper 46** | Dual theory of Weil positivity at finite support (84 pp.): §§2–11 + App. A–C | `04-papers/46-row-d-sign-radial-intersection-form/main.tex` (5 182 lines) |
 | ABCD plan files | PLAN.md (history →09-22), PLAN_PRIORITARIO (09-08), FIRST_CAMPAIGN, CORPUS_COVERAGE, CORPUS_CHECK_ROW_D_PLAN (8 inputs vs phases 0–138), ROW-D-COMPLETION-PLAN (139–143), ROW-D-MAP-b (ASCII), ROW-D-SYNTHESIS-135-144, HANDOFF-149, ROW-D-CLOSURE-PLAN-09-19 (Laumon/FUP/Mayer, 57-route catalogue §7), PATH-TO-D-09-22, **ROW-D-REDUCED-STATEMENT-09-23** | `05-meta-and-planning/ABCD-CLOSURE-PLAN/` |
 
 ---
@@ -313,7 +313,7 @@ Frame / geometric side (P47 §§23.4, 28.3):
 ## §4 State of the rows
 
 ### Rows A, B, C (as far as the scope informs)
-* **Row A** (Paper 43, `04-papers/43-row-a-torsion-theory/`): `WEIL-STRENGTH-COMPLETE` on the declared carrier (R130.005;
+* **Row A** (Paper 43, `04-papers/43-row-a-correspondence-algebra/`): `WEIL-STRENGTH-COMPLETE` on the declared carrier (R130.005;
   A.8 amended, accepted phase 133) — `PATH-TO-D` §1.1. **Caveat of record:** clause A.5 "blindness of the Hochschild
   shadow" is **CONDITIONAL** on the continuity of the crossed-product Hochschild decomposition (Hypothesis 5.9 of LaTeX **[Update : Hypothesis 5.9 is proved (Paper 43 `prop:crossed`); A.5 is PROVED.]**
   Paper 43), not proved anywhere in the corpus; load-bearing clauses for B–D unaffected —
@@ -419,7 +419,7 @@ Frame / geometric side (P47 §§23.4, 28.3):
 
 ## §6 Definitions a memo needs verbatim
 
-### Paper 46 (`04-papers/46-row-d-dual-certificates/main.tex`)
+### Paper 46 (`04-papers/46-row-d-sign-radial-intersection-form/main.tex`)
 
 **Symbol, contacts, comb mass** (`main.tex:115–124`):
 > "`T>0`, `I_T=(-T,T)`, … `F̂(τ)=∫F(t)e^{iτt}dt` and `c_F(u)=∫F(t)\overline{F(t-u)}dt` … `m(τ)=Re ψ(¼+iτ/2)−log π`,

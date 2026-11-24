@@ -2,7 +2,7 @@
 
 ## 0. Four-point filter
 
-1. **Closest antecedent (read in primary sources).** Paper 46 (`04-papers/46-row-d-dual-certificates/main.tex`):
+1. **Closest antecedent (read in primary sources).** Paper 46 (`04-papers/46-row-d-sign-radial-intersection-form/main.tex`):
    thm:index (l. 2518, exact index on (0, 0.90]), subsec:negindex (l. 2630): prop:NC (l. 2638), cor:P3,
    rem:P4, thm:J (l. 2694), **cor:nasym (l. 2722)**, cor:H1; Paper 48 thm:archcount (l. 182);
    master index, Part VII §1.2 («archimedean negative count n_−(m_T) ≥ N(T) ≈ 4T», PROVED) and entry

@@ -4,7 +4,7 @@ Status: **research plan; no row is closed by this document**.
 
 **Update 2026-09-12.** Rows A and B are closed at Weil-strength
 over the graph sector, in
-[paper 43](../../04-papers/43-row-a-torsion-theory/main.md) (phase 125) and
+[paper 43](../../04-papers/43-row-a-correspondence-algebra/main.md) (phase 125) and
 [paper 44](../../04-papers/44-row-b-arithmetic-family/main.md) (phase 126).
 The blockage of B (§6, "test that can quickly discard the candidate", and
 P123.060) is resolved by coprime support: the two contacts live in `V(n)` and
@@ -33,7 +33,7 @@ primitive tests ⟹ RH. D inherits a Hodge-index statement.
 chart system and colimit as additional structure, invertible sector),
 with A.6 under the amendment accepted by the author and A.8 with target
 `Pic_b(B_T)` forced by Theorem 10.8 of
-[paper 43](../../04-papers/43-row-a-torsion-theory/main.md). Record audit decision
+[paper 43](../../04-papers/43-row-a-correspondence-algebra/main.md). Record audit decision
 in
 [R130.005](../../03-research/phase-130-row-a-closure/R130_005_FINAL_AUDIT_AND_LABEL.md);
 the adversarial check's dissent on A.8 recorded. B and C keep their
@@ -915,7 +915,7 @@ Phase 154 → Paper 46 (author's order: (1) Paper 46 after reading Zhu/Groskin/S
 reading (all five primary texts; Zhu uses literally our symbol Ψ_L and certifies support 1.6 by envelope+Cholesky, Thm 1.4 doubly
 exponential barrier; Bombieri Thm 3 = primal attained ↔ our O dual never attained; Yoshida = prime-free window; Suzuki: Kreĭn rep of
 the ZERO measure, not of the archimedean multiplier → our CBF/Lévy claim stands). **Paper 46 written in LaTeX**
-(`04-papers/46-row-d-dual-certificates/main.tex`, 22 pp.): §2 Lévy form (A, S), §3 D1/O/W/P, §4 tails F1/T/Hybrid/E/Identity M/F3,
+(`04-papers/46-row-d-sign-radial-intersection-form/main.tex`, 22 pp.): §2 Lévy form (A, S), §3 D1/O/W/P, §4 tails F1/T/Hybrid/E/Identity M/F3,
 §5 Theorem C, §6 Lemma W/V′/envelope threshold + honest two-prime state, **§7 NEW Theorem Z: the dual certificate = Weil explicit
 formula on w(u)cos(τu), value = flat-top smoothing Σ_ρ ŵ(τ−γ_ρ) of the zero measure; exhaustion sup_w inf f_w = λ^W; RH ⟺ ∀T a
 flat-top one-sided smoothing exists; certificates are unconditional zero inequalities; β₀→2 explained; certificate at infinity = primes

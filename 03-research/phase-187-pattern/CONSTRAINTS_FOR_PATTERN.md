@@ -8,7 +8,7 @@ pattern, with a label and source per row, so that pattern extraction does not vi
 λ_W ≤ λ_P ≤ λ_A (Paper 46 thm:A, rem:Kprim). T* := 2πe^{2T}; N(T*) := #{γ ≤ T*} (Riemann–von Mangoldt, real zeros,
 CITED); N_Sh := 2T·|{σ_T<0}|/π (Shannon number of the negative set of the symbol).
 
-Main sources: `04-papers/46-row-d-dual-certificates/main.tex` (P46), `04-papers/48-row-d-route-map/main.tex` (P48),
+Main sources: `04-papers/46-row-d-sign-radial-intersection-form/main.tex` (P46), `04-papers/48-routes-to-weil-positivity/main.tex` (P48),
 `03-research/phase-165-critical-interlacing/R165_202_NODE_FLOW.md`, `03-research/phase-163-integrality-defect/R163_901_INTEGER_ZERO_CONFIGS.md`,
 `03-research/phase-162-row-d-first-contact-closure/grid/R162_2300_MASTER_GRID.md` (grid), `03-research/phase-186-*/R186_{022,023,028,034,036,039,040,103,110,112}*.md`,
 `03-research/phase-155-row-d-flat-kernel-criterion/R155_001_ROUND1.md`, `03-research/phase-183-*/R183_030_*.md`,

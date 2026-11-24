@@ -37,7 +37,7 @@ Paper 44 Remark 6.5a′ is untouched.  The labels
 |---|---|
 | `03-research/phase-123-weil-strength-abc/P123_A_ACCEPTANCE_SPECIFICATION.md` | A.8 clause text kept; amendment record + acceptance added; §3 table row A.8 regraded; new §7 "Phase-133 amendment" |
 | `05-meta-and-planning/ABCD-CLOSURE-PLAN/PLAN.md` | §6: Spanish rendering of the B.7 text and acceptance, grading `REFUTADO TAL COMO ESTÁ ESCRITO + PROBADO COMO ENMENDADO`; new "Actualización (fase 133, enmiendas A.8 y B.7 aceptadas)" paragraph |
-| `04-papers/43-row-a-torsion-theory/main.md` | header decision line; §10.3.3 `[phase 133]` sentence → decided; §10.3.3 decision paragraph; §14.0b clause block A.8 row and decision line |
+| `04-papers/43-row-a-correspondence-algebra/main.md` | header decision line; §10.3.3 `[phase 133]` sentence → decided; §10.3.3 decision paragraph; §14.0b clause block A.8 row and decision line |
 | `04-papers/44-row-b-arithmetic-family/main.md` | header note; §10 table B.7 row regraded (old verdict + dissent kept verbatim); §10.4 decision block |
 | `03-research/phase-130-row-a-closure/R130_005_FINAL_AUDIT_AND_LABEL.md` | addendum |
 | `03-research/phase-131-row-b-closure/R131_019_FINAL_AUDIT_AND_LABEL.md` | addendum |
@@ -63,7 +63,7 @@ $ grep -n "Enmienda al punto 7\|fase 133, enmiendas" 05-meta-and-planning/ABCD-C
 254:**Amendment to item 7 — ACCEPTED; text proposed in phase 133 (PANEL_SYNTHESIS §4.2):** `[phase 133, amendment accepted ]` Item
 
 ### 3. Paper 43
-$ grep -n "amendment accepted \|A.8 amended (\|REFUTED AS STATED" 04-papers/43-row-a-torsion-theory/main.md
+$ grep -n "amendment accepted \|A.8 amended (\|REFUTED AS STATED" 04-papers/43-row-a-correspondence-algebra/main.md
 8:)**: `REFUTED AS STATED (scalar extension) + PROVED AS AMENDED`, the
 10:target, which is Theorem 10.8. **[phase 133, amendment accepted :
 3927:amendment accepted : it was accepted
@@ -75,7 +75,7 @@ $ grep -n "amendment accepted \|A.8 amended (\|REFUTED AS STATED" 04-papers/43-r
 5046: ) [phase 133, amendment accepted; this line
 5081:| ~~R-A6~~ | **DECIDED** | amendment accepted |
 
-$ grep -n "decision on an amendment is" 04-papers/43-row-a-torsion-theory/main.md
+$ grep -n "decision on an amendment is" 04-papers/43-row-a-correspondence-algebra/main.md
 3926:decision on an amendment is decided: amendment accepted.]**  **[phase 133,
 
 ### 4. Paper 44

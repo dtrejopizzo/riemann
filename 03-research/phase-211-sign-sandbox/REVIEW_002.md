@@ -1,7 +1,7 @@
 # Review 002: the four round-1 memos (A, B, C, D), line by line
 
 Scope. Every claim labelled PROVED in ROUND_001_A.md, ROUND_001_B.md, ROUND_001_C.md and ROUND_001_D.md has been
-checked against the definitions of STATEMENT_001.md and against Paper 46 (04-papers/46-row-d-dual-certificates/main.tex:
+checked against the definitions of STATEMENT_001.md and against Paper 46 (04-papers/46-row-d-sign-radial-intersection-form/main.tex:
 thm:oneprofile 7773, prop:AM 7811, def:ext 9867, thm:ext-half 9913, lem:ext-cell 10270, thm:ext-cell, cor:ext-cellpos
 10357, cor:ext-cfals 10365, thm:ext-lattice 10568, prop:nyq-LK 6182, thm:nyq-schur 6367). Verdicts: CONFIRMED (proof
 checked, the key step named), REFUTED (counter-argument given), DOWNGRADE (to ARGUED or CONDITIONAL, with what is

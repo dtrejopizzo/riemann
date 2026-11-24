@@ -2,7 +2,7 @@
 
 Scope. ROUND_014_A, ROUND_015_A, ROUND_015_B, ROUND_015_C, ROUND_016_A, ROUND_016_B, ROUND_017_A, ROUND_017_B, ROUND_017_C,
 ROUND_018_A, ROUND_018_B, ROUND_019_A, ROUND_019_B, ROUND_020_A, ROUND_021_A, ROUND_022_A, ROUND_023_A, ROUND_024_A. Every claim
-labelled PROVED is checked against its written proof and against Paper 46 (04-papers/46-row-d-dual-certificates/main.tex:
+labelled PROVED is checked against its written proof and against Paper 46 (04-papers/46-row-d-sign-radial-intersection-form/main.tex:
 def:W and eq:nuw L.1225–1235, form-core argument L.1825–1838, prop:arch L.2323–2345, def:ext L.9867–9897, lem:ext-mob,
 thm:ext-half L.9913–9936, prop:ext-gauge, prob:ext-L, prop:ext-consol L.9972–10000). Verdicts: CONFIRMED / REFUTED /
 DOWNGRADE. Line numbers are memo line numbers. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.

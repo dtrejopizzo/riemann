@@ -1,7 +1,7 @@
 # SHAPE_THEOREM — What any proof of row D must be: one statement, the proved barriers as its lemmas (reviewed and corrected the same day, see §0 and SHAPE_THEOREM_REVIEW.md)
 
 Pen and paper. Row D (λ_A(T) ≥ 0 on P_T for every T > 0, declared carrier, Paper 46 eq:target). Labels:
-PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMÉRICO. "P46" = 04-papers/46-row-d-dual-certificates/main.tex;
+PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMÉRICO. "P46" = 04-papers/46-row-d-sign-radial-intersection-form/main.tex;
 "188/" = phase-188-closing-D; "189/" = phase-189-new-theory; "186/" = phase-186-toolbox; index = 05-meta-and-planning/ROUTES-TRIED-INDEX.
 
 Corpus check : index README, 04_ Part I-a/b/c, 06_ barrier key; P46 sec:barriers, sec:negative,

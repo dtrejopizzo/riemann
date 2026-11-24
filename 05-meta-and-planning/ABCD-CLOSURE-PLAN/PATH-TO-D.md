@@ -15,7 +15,7 @@ Copy of record: `05-meta-and-planning/ABCD-CLOSURE-PLAN/PATH-TO-D.md`.
 Weil's 1948 method for curves over finite fields has four rows. The programme built them over
 `Spec Z` (Paper 42 = Arc C, phases 107–119; rebuilt on the true carrier in phases 129–132).
 
-* **Row A — the correspondence algebra.** `04-papers/43-row-a-torsion-theory/main.md` (phase 130).
+* **Row A — the correspondence algebra.** `04-papers/43-row-a-correspondence-algebra/main.md` (phase 130).
   A determinant Banach algebra `𝓐_tr` with a canonical trace on the idele class group, `𝓝 = 0`,
   rulings existing in the completion and splitting canonically, a Mittag-Leffler symbol with a
   universal Tate residue, and Mertens giving the global hyperbolic ruling pairing.
@@ -71,7 +71,7 @@ by certified matrix computation, at support `1.6` (Zhu, arXiv:2608.24827). **Not
 | 155 r3 | **Two archimedean thresholds** (Prop arch): `A_∞` alone becomes indefinite; `T*_∞ ≤ 0.3716` (L²), `T*_{∞,P} ≤ 0.5958` (on `P_T`) — **below `T*_{∞,P}` primes are a COST, above it primes are NECESSARY**; **Theorem N′** (no lattice class `M ≤ 24` certifies at `0.68` or `log 2`, 32 interval enclosures); **Theorem 3.3ᴾ** (concentration radius); **Schur reduction + parity splitting** (Prop 3c.1); **Theorem 3c.3**: `W_{log2}[F*] ∈ [0.0342113430, 0.0342182500]` for one archived even degree-17 direction — *one direction, not a sign*. **The obstruction at log 2 lives in the even Schur complement near the 3rd archimedean eigenvector, and is pure cancellation.** | `R155_029` |
 
 Files: `04-papers/47-intersection-frame-defect/archive/main.md` (Parts I–IV, §28 = the wall),
-`04-papers/46-row-d-dual-certificates/main.tex` (36 pp.),
+`04-papers/46-row-d-sign-radial-intersection-form/main.tex` (36 pp.),
 `03-research/phase-13x…15x-row-d-*/R*_LEAD_CLOSING_DECISION*.md` (documents of record).
 
 ---

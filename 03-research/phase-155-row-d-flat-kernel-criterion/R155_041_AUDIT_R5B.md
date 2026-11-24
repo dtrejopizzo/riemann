@@ -1,7 +1,7 @@
 # R155_041 — Audit of R155_040 (round 5b, Kreĭn extension)
 
 Target: `R155_040_ROUND5B_KREIN.md`. Sources checked line by line: Paper 46
-`04-papers/46-row-d-dual-certificates/main.tex` §1 (l. 118–150, 180–215, 265–290), §2 (l. 294 `eq:g`),
+`04-papers/46-row-d-sign-radial-intersection-form/main.tex` §1 (l. 118–150, 180–215, 265–290), §2 (l. 294 `eq:g`),
 §3 (l. 430–470 `def:PD`, `prop:weak`, `prop:P` l. 604 ff.), §5 (l. 880–900 `thm:C`), §5.x (l. 985–1005
 `subsec:compare`), §7 (l. 1120 `def:W`, l. 1135 `thm:Z`, l. 1176 `thm:Zexh`, l. 1206 `cor:RH`,
 l. 1224 `cor:zeros`, l. 1350 `thm:finZ`, l. 1453 `prop:finuniv`, l. 1538 `rem:RHcert`, l. 1554

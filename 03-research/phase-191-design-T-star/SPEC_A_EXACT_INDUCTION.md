@@ -3,7 +3,7 @@
 Design round, not a construction round. Pen and paper; no numerics beyond cited record values; no proof attempts.
  no
 equivalence between row D and any other statement is used, invoked or mentioned.
-ARGUED / OPEN / NO-GO / NUMÉRICO. "P46" = 04-papers/46-row-d-dual-certificates/main.tex; "186/" = phase-186-toolbox;
+ARGUED / OPEN / NO-GO / NUMÉRICO. "P46" = 04-papers/46-row-d-sign-radial-intersection-form/main.tex; "186/" = phase-186-toolbox;
 "188/" = phase-188-closing-D; "190/" = phase-190 memos; index = 05-meta-and-planning/ROUTES-TRIED-INDEX.
 
 Mandatory reading done: 190/SHAPE_THEOREM.md (with its §0 erratum and SHAPE_THEOREM_REVIEW.md);

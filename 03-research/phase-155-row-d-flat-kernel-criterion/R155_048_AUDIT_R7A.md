@@ -48,7 +48,7 @@ Runtime **6.4 s + 2 s**, not the `~50 s + ~5 s` of `scripts/r7a/README.md:5–6`
 
 **ERRATUM 1 (numerical, must fix).** `R155_047:27` — the `0.80` row of the §0.2 table gives
 "diagnostic prolate count **5**"; the true value at the optimal `τ₁ = 6.3576` is **6** (§2 table, l.94,
-and the rerun agree). The same `4,5,5` triple is carried in `04-papers/46-row-d-dual-certificates/main.tex:3157`
+and the rerun agree). The same `4,5,5` triple is carried in `04-papers/46-row-d-sign-radial-intersection-form/main.tex:3157`
 and should be re-checked (`4,5,6` at the optimal `τ₁`) if that line is touched.
 
 **Minor (scripts).** `r7a_02_closedform.py:15` overflows for `τ₁` large (`c ≳ 100`, `c^{159}`), so those

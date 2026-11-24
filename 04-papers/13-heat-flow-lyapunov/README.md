@@ -2,7 +2,7 @@
 
 The paper studies the zero dynamics of the backward heat flow $\partial_t p=-\partial_{zz}p$, which defines the
 de Bruijn–Newman deformation $H_t$ of the Riemann $\xi$-function. It records an identity for the off-line mass
-$\mathcal L=\sum_j(\operatorname{Im} z_j)^2$ and computes backward-collision times for a few windows of zeta zeros.
+$\mathcal L=\sum_j(\mathrm{Im}\, z_j)^2$ and computes backward-collision times for a few windows of zeta zeros.
 
 ## Contents
 

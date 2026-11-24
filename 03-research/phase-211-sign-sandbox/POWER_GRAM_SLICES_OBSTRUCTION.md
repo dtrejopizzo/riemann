@@ -2104,7 +2104,7 @@ contradicting any delta>0. This holds even for sigma<0, when the moment of the n
 
 ### 18.9. Equivalence of the target for all windows and exact primitive constraints
 
-**PROVED as scope, not as sign.** joint_sign_fresh_review, independent verification global_restart_checked; audit arithmetic_fresh_candidate PASS and second review PASS. Reread the project rules, the three indices, the definitions eq:form, eq:W and eq:target of [Paper46](../../04-papers/46-row-d-dual-certificates/main.tex), [BRIDGE002](POWER_BRIDGE_002.md), [CONFLUENT_BRIDGE014§3](POWER_CONFLUENT_BRIDGE_014.md) and the lemma ALREADY proved in [GLOBAL, Primitive comparisons](POWER_GLOBAL_ROUTE_REVIEW.md). The new scope is applying that lemma to D=M_Phi itself and verifying the step from the primitive windows to their causal mixtures; no new analytic principle nor a positivity proof is presented.
+**PROVED as scope, not as sign.** joint_sign_fresh_review, independent verification global_restart_checked; audit arithmetic_fresh_candidate PASS and second review PASS. Reread the project rules, the three indices, the definitions eq:form, eq:W and eq:target of [Paper46](../../04-papers/46-row-d-sign-radial-intersection-form/main.tex), [BRIDGE002](POWER_BRIDGE_002.md), [CONFLUENT_BRIDGE014§3](POWER_CONFLUENT_BRIDGE_014.md) and the lemma ALREADY proved in [GLOBAL, Primitive comparisons](POWER_GLOBAL_ROUTE_REVIEW.md). The new scope is applying that lemma to D=M_Phi itself and verifying the step from the primitive windows to their causal mixtures; no new analytic principle nor a positivity proof is presented.
 
 The following global targets are equivalent:
 

@@ -419,7 +419,7 @@ formula" ≈ row C, G2 ≈ row D:
 
 ## §6 Definitions a memo needs verbatim
 
-**Paper 46** (`04-papers/46-row-d-dual-certificates/main.tex`):
+**Paper 46** (`04-papers/46-row-d-sign-radial-intersection-form/main.tex`):
 
 * lines 119–124 (`eq:symbol`):
   ```

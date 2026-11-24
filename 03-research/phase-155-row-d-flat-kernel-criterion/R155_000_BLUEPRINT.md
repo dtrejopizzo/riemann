@@ -6,7 +6,7 @@ B&B, no sweep on the local machine (compute, if any, is the off-machine package
 one report plus one independent audit per round; FATAL rule (no sign for ζ beyond `T ≤ log 2`, no statement about
 zeros) in force.*
 
-## 0. What this phase inherits (Paper 46, `04-papers/46-row-d-dual-certificates/main.tex`)
+## 0. What this phase inherits (Paper 46, `04-papers/46-row-d-sign-radial-intersection-form/main.tex`)
 
 Standing theorems (labels of record R154_012/021/023/030, all `PROVED` unless stated):
 Theorem A (form = Lévy energy − prime evaluations; `λ^prim_T = C₀ − Λ_T`); Structure (complete

@@ -55,7 +55,7 @@ code is `scripts/r3b/`.*
 
 | idea used below | grep hits (file:line) | pre-existing? | status here |
 |---|---|---|---|
-| Theorem TK at a single `(τ₀,φ)`; `c ≤ a + b·β` | `R155_001 §4.3`; `04-papers/46-row-d-dual-certificates/main.tex:1237` (`prop:TK`); `R155_004 §2.2` | yes | reused verbatim; only the window `T` and the contact set change |
+| Theorem TK at a single `(τ₀,φ)`; `c ≤ a + b·β` | `R155_001 §4.3`; `04-papers/46-row-d-sign-radial-intersection-form/main.tex:1237` (`prop:TK`); `R155_004 §2.2` | yes | reused verbatim; only the window `T` and the contact set change |
 | interval enclosure of a `β`-uniform ceiling | `R155_004 §2` (`Ceil(8,½log3) ≤ −5.6974·10⁻³`), `scripts/r2_a_enclosure.py` | yes, at **one** window and one `M` | §2 is the same argument at `T = 0.68, log2` and 23 values of `M`; the quadrature is new (§2.3) |
 | Lemma 2.2 (convex midpoint bracket of the `ψ`-tail), `C₀` Gauss digamma, `∫φ = P‖q‖²`, Bernstein bounds | `R155_004 §2.3`, audited `R155_007 §1.2` | yes | reused verbatim, extended from order `4` to order `2p` |
 | Gauss–Legendre panels in this programme | `R153_007:137`, `R153_019:99`, `R155_002:7` (the audit's independent check), `phase-113/113_09:286` | the *rule* yes, never inside an **interval** enclosure | the rigorous panel remainder `H^{2p+1}(p!)⁴/((2p+1)((2p)!)³)\sup|f^{(2p)}|` with the corpus's own derivative bounds is new here |

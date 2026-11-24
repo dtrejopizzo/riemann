@@ -3,7 +3,7 @@
 Object: `R157_002_MECHANISM_SEARCH.md`, against the blueprint
 `R157_000_BLUEPRINT.md` (F1–F5) and R157_003 (T3 = `METHOD-CONSTRAINT` modulo the `CITED (secondary source)`
 import (H-DMV′)). Pure mathematics; the only computations are two scalar evaluations of closed-form bounds
-(§1.1, §1.2), done in the scratchpad, not archived. `P46` = `04-papers/46-row-d-dual-certificates/main.tex`,
+(§1.1, §1.2), done in the scratchpad, not archived. `P46` = `04-papers/46-row-d-sign-radial-intersection-form/main.tex`,
 `P47` = `04-papers/47-intersection-frame-defect/archive/main.md`. I opened every label I cite at the line given. Amendments are applied
 in place in R157_002, each marked "[amended per R157_004, Ak]". No paper, README or blueprint was edited.
 

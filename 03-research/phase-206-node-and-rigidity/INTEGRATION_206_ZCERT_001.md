@@ -1,6 +1,6 @@
 # INTEGRATION_206_ZCERT_001 — integration of rem:zcert into Paper 46 (phase 206)
 
-Inputs: AUDIT_206_ZCERT_001.md (§8), ZCERT_001.md + data. Backup: `04-papers/46-row-d-dual-certificates/main_pre_zcert.tex`.
+Inputs: AUDIT_206_ZCERT_001.md (§8), ZCERT_001.md + data. Backup: `04-papers/46-row-d-sign-radial-intersection-form/main_pre_zcert.tex`.
 
 ## 1. Verification against the paper's definitions
 

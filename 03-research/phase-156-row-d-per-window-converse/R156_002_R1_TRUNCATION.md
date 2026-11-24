@@ -24,7 +24,7 @@ arbitrary witness is proved; it is governed by the unknown `s_*` of P47 §19.9 a
   scan windows (`R143_002:193,314`, `R143_000:38`). The only statements of the residual are `R155_054:50-56` and
   `R155_057:59-67`, and both are sketches labelled `OPEN`. P47 has a compactly supported witness only for `Ξ_a`
   (Theorem 19.15).
-* Paper 46 `lem:roughEF` (`04-papers/46-row-d-dual-certificates/main.tex:690`) goes the **other** way: it mollifies a
+* Paper 46 `lem:roughEF` (`04-papers/46-row-d-sign-radial-intersection-form/main.tex:690`) goes the **other** way: it mollifies a
   rough test **into** `C_c^∞` so that Paper 45 Thm 9.4 applies. It is not needed here. Every functional below is already
   defined, with its explicit formula, on all of `D^W`: Theorem 11.3 for the explicit formula, Theorem 11.5 for the
   comparison identity (11.6), and Theorem 11.14 for `w_F` and `C_F`. `F_0` and its truncation both lie in `D^W`. **No

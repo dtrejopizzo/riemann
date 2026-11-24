@@ -192,7 +192,7 @@ of section 4 are unchanged.
 
 The phase-125 grant of section 5 was withdrawn by the phase-128 audit.  After
 the phase-129 rebuild and the phase-130 closure of
-[Paper 43](../../04-papers/43-row-a-torsion-theory/main.md) (construction/audit
+[Paper 43](../../04-papers/43-row-a-correspondence-algebra/main.md) (construction/audit
 loop, `R130.000`–`R130.005`), the adversarial audit of record
 ([R130.005](../phase-130-row-a-closure/R130_005_FINAL_AUDIT_AND_LABEL.md))
 finds A.1–A.10 proved on the declared carrier — a fixed finite chart `S`

@@ -26,7 +26,7 @@ REVIEW_004, ROUND_004_E, ROUND_003_8 of this folder; `phase-211/STATEMENT_001.md
 `phase-194-invention/INV_F_001`, `INV_A_001`, `INV_I_001`, `AUDIT_194.md`; `phase-65-signature-continuity/README.md`,
 `M3`, `D7`, `D10`; `phase-137/R137_005_ROUND3.md` §1; `phase-159/G2_B8_R1.md`, `G2_B8_R5.md` (and R3/R4 by grep);
 `phase-104/104_21`, `104_83` §2; `phase-60-discriminant/H1_PROOF.md`; `phase-155/R155_046` (table N3);
-`phase-211/POWER_FOUR_TURAN_084.md`; `04-papers/46-row-d-dual-certificates/main.tex` (rem:PF2, prop:spec (6),
+`phase-211/POWER_FOUR_TURAN_084.md`; `04-papers/46-row-d-sign-radial-intersection-form/main.tex` (rem:PF2, prop:spec (6),
 inertia and interlacing passages); `phase-195/INV_M_001`; `phase-193/CA_J_002`; `phase-201/FAMILIES_A_001`,
 `FAMILIES_B_001` (by sections); `phase-200/SPEC_SIGN_OBJECT_011` (by sections);
 `phase-116/previous-phase-114/114_d_99`; `phase-162/R162_1602`; `phase-197/BARRIER_W_001`;

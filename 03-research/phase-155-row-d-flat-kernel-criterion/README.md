@@ -1,7 +1,7 @@
 # Phase 155 — Row D: class-dependent value bounds, and the flat-kernel criterion (opened)
 
 Decisions (c) of `phase-154/R154_030`. Pure mathematics only. Inherits Paper 46
-(`04-papers/46-row-d-dual-certificates/`), whose §7 (Theorem Z: the dual certificate is the explicit
+(`04-papers/46-row-d-sign-radial-intersection-form/`), whose §7 (Theorem Z: the dual certificate is the explicit
 formula on `w(u)cos(τu)`; RH ⟺ flat-top one-sided smoothings of the zero measure exist for every
 window) and §8 (Problems A, B) define this phase.
 

@@ -2,7 +2,7 @@
 
 `C_S` is the quotient of the semilocal idele group of `Q` by the positive `S`-units, with the
 convolution algebra, involution and functional `T` (the sum of Weil's local terms) of
-[Paper 43](../43-row-a-torsion-theory/).
+[Paper 43](../43-row-a-correspondence-algebra/).
 
 For each positive integer `n` whose prime divisors lie in `S`, the paper defines a probability
 measure `Frob_n` on `C_S`: the Haar measure of a coset of a compact subgroup. It proves that

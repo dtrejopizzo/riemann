@@ -23,7 +23,7 @@ proof of RH; the panel must treat it with that level of scrutiny. Failure is rep
 `05-meta-and-planning/ABCD-CLOSURE-PLAN/ROW-D-REDUCED-STATEMENT.md` (§1–§8);
 `03-research/phase-158-row-d-mw5-object/R158_001_SPEC_SHEET.md` (G1: OT list, C1–C27);
 `03-research/phase-157-row-d-mechanism-search/R157_000_BLUEPRINT.md` (F1–F5) and `R157_002` (the 61-row table: do not
-resubmit an excluded or equivalent candidate without saying what is different); Paper 46 `04-papers/46-row-d-dual-certificates/main.tex`
+resubmit an excluded or equivalent candidate without saying what is different); Paper 46 `04-papers/46-row-d-sign-radial-intersection-form/main.tex`
 (eq:W, P_T, thm:Z, thm:finZ, thm:SC, cor:void, rem:resweights, thm:margin, thm:arena, thm:parityschur, cor:convfail, lem:Rrig);
 Paper 47 `04-papers/47-intersection-frame-defect/archive/main.md` (Thm 19.25, Cor 19.25b, §21.7, T1 = Thm 18.1 + Rem 18.1a, T2 = Thm 18.16, §28.3a–b, §28.4).
 

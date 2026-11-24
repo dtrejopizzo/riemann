@@ -60,7 +60,7 @@ hypothesis-free form, along with the elementary propositions listed above.
 ## Files
 
 - `main.tex`: the source (a single file, bibliography included).
-- `row-d-route-map.pdf`: the compiled paper, 98 pages.
+- `routes-to-weil-positivity.pdf`: the compiled paper, 98 pages.
 - `README.md`: this file.
 
-Build: `pdflatex -interaction=nonstopmode -halt-on-error -jobname=row-d-route-map main.tex`, run three times.
+Build: `pdflatex -interaction=nonstopmode -halt-on-error -jobname=routes-to-weil-positivity main.tex`, run three times.

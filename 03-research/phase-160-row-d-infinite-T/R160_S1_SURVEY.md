@@ -495,7 +495,7 @@ Each is a potential ingredient, tagged with the memo(s) it concerns. None is a p
 ## §6 Definitions a memo needs, verbatim (file:line)
 
 **D1. Symbol, contacts, truncated form, Tate moments, primitive subspace, complete form, bottoms** —
-`04-papers/46-row-d-dual-certificates/main.tex:115–147`:
+`04-papers/46-row-d-sign-radial-intersection-form/main.tex:115–147`:
 > Throughout, $T>0$, $\IT=(-T,T)$, and for $F\in L^2(\IT)$ (extended by zero) we write
 > $\Fh(\tau)=\int F(t)e^{i\tau t}\,dt$ and $\cF(u)=\int F(t)\overline{F(t-u)}\,dt$ for the autocorrelation […]
 > $m(\tau)=\Rel\psi\!\left(\tfrac14+\tfrac{i\tau}{2}\right)-\log\pi,\qquad

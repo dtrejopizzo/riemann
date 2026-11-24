@@ -6909,8 +6909,8 @@ Reference note. Consolidates, without new mathematics, what this portion of the 
 form `a_T` on `P_T` (row D). Labels are copied from the source without raising them. When the source uses an external
 equivalence as a family label (e.g. «E1», «⟺ RH»), here **REF** is written (it ends in a reformulation of the
 goal) and the original identifier is kept in quotes so that it is searchable; no reasoning is done from that
-equivalence. Source abbreviations: **P48** = `04-papers/48-row-d-route-map/main.tex`; **P46** =
-`04-papers/46-row-d-dual-certificates/main.tex`; **GRID** = `03-research/phase-162-row-d-first-contact-closure/grid/R162_2300_MASTER_GRID.md`;
+equivalence. Source abbreviations: **P48** = `04-papers/48-routes-to-weil-positivity/main.tex`; **P46** =
+`04-papers/46-row-d-sign-radial-intersection-form/main.tex`; **GRID** = `03-research/phase-162-row-d-first-contact-closure/grid/R162_2300_MASTER_GRID.md`;
 **CW** = `05-meta-and-planning/ABCD-CLOSURE-PLAN/CROSSWORD-TO-D.md`; **ABCD/** = that folder.
 
 Result mapping: NO-GO(class) = NO-GO with class PROVED; FALS = FALSIFIED; CIRC = CIRCULAR; REF; NUM; PARTIAL;
@@ -12832,7 +12832,7 @@ Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / FALSIFIED / NUMER
 Sources: README "Live residues"; 01–05; SYNTHESIS_188 (Updates 1–3); NT_SYNTHESIS; adversarial reviews 188 (N_011, L2_018, L2_021, L2_023,
 L2_024_025) and 189 (NT_001_004, NT_005_007, NT_008_010, NT_011_014); Paper 46 §sec:open; master grid R162_2300 (live cells = rows tagged
 OPEN-RESIDUE in 04_, 93 rows).
-Abbreviations: P46 = 04-papers/46-row-d-dual-certificates/main.tex; 188/ = 03-research/phase-188-closing-D/; 189/ = 03-research/phase-189-new-theory/;
+Abbreviations: P46 = 04-papers/46-row-d-sign-radial-intersection-form/main.tex; 188/ = 03-research/phase-188-closing-D/; 189/ = 03-research/phase-189-new-theory/;
 186/ = 03-research/phase-186-toolbox/.
 
 **Barriers that every residue must escape.** Each admissible direction below lists the ones it must escape.
@@ -32910,7 +32910,7 @@ This allows applying the already existing Schur reduction to V and its complemen
 
 ### 212-92 — Correction of the quantitative bounds of the Schur complement of Paper46
 
-Status: audit PROVED, independently reviewed. Source: `04-papers/46-row-d-dual-certificates/main.tex`, theorem `thm:coer-schur`, equation `eq:coer-sandwich` and its proof. The paper is not modified. The exact identity of completion of squares and the sign equivalences are kept; the quantitative sandwich as written must not be used without the following correction. This audit does not prove global positivity nor does it by itself invalidate independent certificates.
+Status: audit PROVED, independently reviewed. Source: `04-papers/46-row-d-sign-radial-intersection-form/main.tex`, theorem `thm:coer-schur`, equation `eq:coer-sandwich` and its proof. The paper is not modified. The exact identity of completion of squares and the sign equivalences are kept; the quantitative sandwich as written must not be used without the following correction. This audit does not prove global positivity nor does it by itself invalidate independent certificates.
 
 **Localized problem.** In the orthogonal decomposition F=v+e, with v in the coercive complement and e in the finite space, the proved identity is
 

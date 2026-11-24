@@ -2,7 +2,7 @@
 
 Repair record for phase 133.  Every finding of PANEL_1, PANEL_2 and PANEL_3
 that does **not** require a pending decision is repaired in
-`04-papers/43-row-a-torsion-theory/main.md`, `04-papers/44-row-b-arithmetic-family/main.md`,
+`04-papers/43-row-a-correspondence-algebra/main.md`, `04-papers/44-row-b-arithmetic-family/main.md`,
 `04-papers/45-row-c-explicit-formula/main.md` (plus two phase-130/131 record files).
 Every edit is marked `[phase 133]`.  **No clause grading, no label, and no
 decision block was changed**; A.8 and B.7 are untouched except for the one
@@ -20,26 +20,26 @@ it carries that meaning, in all three papers.  `D_A^0` now means only Definition
 ```console
 $ grep -c 'D_A\^{off}' 04-papers/4[345]*/main.md
 04-papers/45-row-c-explicit-formula/main.md:4
-04-papers/43-row-a-torsion-theory/main.md:22
+04-papers/43-row-a-correspondence-algebra/main.md:22
 04-papers/44-row-b-arithmetic-family/main.md:8
 ```
 
 ```console
 $ grep -n 'D_A\^0' 04-papers/4[345]*/main.md | grep -v 'phase 133' | grep -v 'off-identity' | sed 's/\(.\{125\}\).*/\1…/'
-04-papers/43-row-a-torsion-theory/main.md:1084:with Definition 9.10's `D_A^0 = ker λ_− ∩ ker λ_+` (the **primitive** sector).…
-04-papers/43-row-a-torsion-theory/main.md:1087:`D_A^0` now always means the primitive sector of Definition 9.10.]**
-04-papers/43-row-a-torsion-theory/main.md:1175:false as written while `D_A^{off}` was named `D_A^0`, because on the
-04-papers/43-row-a-torsion-theory/main.md:1176:**primitive** sector `D_A^0 = ker λ_− ∩ ker λ_+` of Definition 9.10 the
-04-papers/43-row-a-torsion-theory/main.md:2922:zero).**  `𝓝_W = 𝓝 ∩ D_A^0`, it is a closed two-sided `⋆`-ideal stable under
-04-papers/43-row-a-torsion-theory/main.md:2925:*Proof.*  *`𝓝_W = 𝓝 ∩ D_A^0`.*  If `F∈𝓝_W`, the first component gives
-04-papers/43-row-a-torsion-theory/main.md:2928:i.e. `F∈D_A^0`.  The converse is immediate.  This is P123.017 Prop. 2.1.
-04-papers/43-row-a-torsion-theory/main.md:2929:*Closed `†`-ideal.*  `𝓝` has these properties by Theorem 9.4.  `D_A^0` is
-04-papers/43-row-a-torsion-theory/main.md:2940:    D_A^{prim} := D_A^0 , N_A = D_A , B_T = C² with β_T = [[0,1],[1,0]],  (9.1…
-04-papers/43-row-a-torsion-theory/main.md:2958:  (i) `Φ ∈ D_A^0`.  Theorem 9.5 proves `λ_−(F)=λ_−(F')` and
-04-papers/43-row-a-torsion-theory/main.md:2973:*Nondegeneracy on the kernel.*  Let `Φ ∈ D_A^0` satisfy `I_A(Φ,G)=0` for every…
-04-papers/43-row-a-torsion-theory/main.md:2974:`G ∈ D_A^0`.  The conjugate-linear functional `G ↦ I_A(Φ,G)` vanishes on the
-04-papers/43-row-a-torsion-theory/main.md:2975:subspace `D_A^0 = ker λ_−∩ker λ_+` of codimension two, hence equals
-04-papers/43-row-a-torsion-theory/main.md:3035:`D_A^0 = ker λ_− ∩ ker λ_+`, hence equals
+04-papers/43-row-a-correspondence-algebra/main.md:1084:with Definition 9.10's `D_A^0 = ker λ_− ∩ ker λ_+` (the **primitive** sector).…
+04-papers/43-row-a-correspondence-algebra/main.md:1087:`D_A^0` now always means the primitive sector of Definition 9.10.]**
+04-papers/43-row-a-correspondence-algebra/main.md:1175:false as written while `D_A^{off}` was named `D_A^0`, because on the
+04-papers/43-row-a-correspondence-algebra/main.md:1176:**primitive** sector `D_A^0 = ker λ_− ∩ ker λ_+` of Definition 9.10 the
+04-papers/43-row-a-correspondence-algebra/main.md:2922:zero).**  `𝓝_W = 𝓝 ∩ D_A^0`, it is a closed two-sided `⋆`-ideal stable under
+04-papers/43-row-a-correspondence-algebra/main.md:2925:*Proof.*  *`𝓝_W = 𝓝 ∩ D_A^0`.*  If `F∈𝓝_W`, the first component gives
+04-papers/43-row-a-correspondence-algebra/main.md:2928:i.e. `F∈D_A^0`.  The converse is immediate.  This is P123.017 Prop. 2.1.
+04-papers/43-row-a-correspondence-algebra/main.md:2929:*Closed `†`-ideal.*  `𝓝` has these properties by Theorem 9.4.  `D_A^0` is
+04-papers/43-row-a-correspondence-algebra/main.md:2940:    D_A^{prim} := D_A^0 , N_A = D_A , B_T = C² with β_T = [[0,1],[1,0]],  (9.1…
+04-papers/43-row-a-correspondence-algebra/main.md:2958:  (i) `Φ ∈ D_A^0`.  Theorem 9.5 proves `λ_−(F)=λ_−(F')` and
+04-papers/43-row-a-correspondence-algebra/main.md:2973:*Nondegeneracy on the kernel.*  Let `Φ ∈ D_A^0` satisfy `I_A(Φ,G)=0` for every…
+04-papers/43-row-a-correspondence-algebra/main.md:2974:`G ∈ D_A^0`.  The conjugate-linear functional `G ↦ I_A(Φ,G)` vanishes on the
+04-papers/43-row-a-correspondence-algebra/main.md:2975:subspace `D_A^0 = ker λ_−∩ker λ_+` of codimension two, hence equals
+04-papers/43-row-a-correspondence-algebra/main.md:3035:`D_A^0 = ker λ_− ∩ ker λ_+`, hence equals
 04-papers/44-row-b-arithmetic-family/main.md:415:| **B.4** | The derived contact of `Γ_n` computed in the declared category; …
 04-papers/44-row-b-arithmetic-family/main.md:2296:> `ω_{fin}` representing `T` on the radial sector `D_A^{rad} ∩ D_A^0`**
 ```
@@ -50,7 +50,7 @@ therefore not edited; a `[phase 133]` note immediately after it says which set
 is meant.
 
 ```console
-$ sed -n '1082,1090p;1170,1180p' 04-papers/43-row-a-torsion-theory/main.md
+$ sed -n '1082,1090p;1170,1180p' 04-papers/43-row-a-correspondence-algebra/main.md
 
 Write `D_A^{off} := {F ∈ D_A : F ≡ 0 on a neighbourhood of the identity class}`.  **[phase 133: this set was called `D_A^0` through phase 132, colliding
 with Definition 9.10's `D_A^0 = ker λ_− ∩ ker λ_+` (the **primitive** sector).
@@ -110,7 +110,7 @@ same estimate runs with the sign reversed.  No `F̂` is compactly supported
 anywhere.  The conclusions (a),(b),(c),(d) are unchanged.
 
 ```console
-$ sed -n '5075,5090p' 04-papers/43-row-a-torsion-theory/main.md
+$ sed -n '5075,5090p' 04-papers/43-row-a-correspondence-algebra/main.md
       every component, so `{T̂+c < −K}` contains a nonempty open set for every
       `K`, and tests whose symbols **concentrate** in a sequence of such sets
       span an infinite-dimensional negative-definite subspace.
@@ -130,7 +130,7 @@ $ sed -n '5075,5090p' 04-papers/43-row-a-torsion-theory/main.md
 ```
 
 ```console
-$ sed -n '5108,5125p' 04-papers/43-row-a-torsion-theory/main.md
+$ sed -n '5108,5125p' 04-papers/43-row-a-correspondence-algebra/main.md
 Two operations stay inside `C_c^∞(R)` and act on `φ̂` by the two motions we
 need: `φ(t) ↦ e^{iat}φ(t)` translates `φ̂` by `a`, and `φ(t) ↦ φ(t/δ)`
 dilates it, `φ̂ ↦ δ·φ̂(δ·)`.  Fix once and for all `φ_0 ∈ C_c^∞(R)` with
@@ -159,12 +159,12 @@ checked for `U` and the one that is **not** (freeness of the lattice action on
 the open stratum).  Clause gradings in §14.0b are **not** touched — that decision stands as recorded; the §12 row and Remark 3.6 record `PROVED modulo (Tr)`.
 
 ```console
-$ grep -n 'Tr | ' 04-papers/43-row-a-torsion-theory/main.md | cut -c1-400
+$ grep -n 'Tr | ' 04-papers/43-row-a-correspondence-algebra/main.md | cut -c1-400
 4645:| Tr | **[phase 133, PANEL_1 finding A3.]**  **Transfer of P123.082 (3.3)** — `Hom_{U-U}(E_a,E_b) = C·U_γ` for `a = γb`, `0` otherwise — **from the algebra of P123.082 to the algebra `U` of (2.4)**.  `IMPORTED (transfer)`: the *arguments* apply verbatim, the *conclusion* rests on freeness of the lattice action on the open stratum, which is proved for P123.082's coefficient algebra and 
 ```
 
 ```console
-$ sed -n '/I use (3.3) for/,/lattice$/p' 04-papers/43-row-a-torsion-theory/main.md | head -16
+$ sed -n '/I use (3.3) for/,/lattice$/p' 04-papers/43-row-a-correspondence-algebra/main.md | head -16
 algebra, and is proved in P123.082 for its own algebra.  I use (3.3) for `U`
 and record this as a transfer, not as a citation of an identical statement.
 **[phase 133, PANEL_1 finding A3: this transfer now carries a status label and
@@ -180,7 +180,7 @@ in P123.082's own algebra.  (3.3) is used in Proposition 3.2(iv) (clause
 ```
 
 ```console
-$ grep -n 'phase 133: four' -A5 04-papers/43-row-a-torsion-theory/main.md
+$ grep -n 'phase 133: four' -A5 04-papers/43-row-a-correspondence-algebra/main.md
 4653:**Count.**  Three, not one, and their load has changed.  **[phase 133: four
 4654-rows now stand in the table — `M`, `W`, `C`, `RR` — plus the transfer `Tr`
 4655-added by PANEL_1 finding A3.  `Tr` is the only import that a clause graded
@@ -216,7 +216,7 @@ $ sed -n '/In clauses B.1–B.9/,/recorded in Paper 43 §12./p' 04-papers/44-row
 ## PANEL_1 A4 — Theorem 9.12 / Theorem 9.13(b): the swapped exponents
 
 ```console
-$ grep -n 'a|w|_S\^' 04-papers/43-row-a-torsion-theory/main.md
+$ grep -n 'a|w|_S\^' 04-papers/43-row-a-correspondence-algebra/main.md
 2991: = a|w|_S^{−1/2}\overline{λ_−(G)} + b|w|_S^{1/2}\overline{λ_+(G)}`, using
 3041:`a|w|_S^{−1/2}\overline{λ_−(G)} + b|w|_S^{1/2}\overline{λ_+(G)}`, unbounded as
 ```
@@ -224,7 +224,7 @@ $ grep -n 'a|w|_S\^' 04-papers/43-row-a-torsion-theory/main.md
 ## PANEL_1 A5 — Theorem 9.8: `T̂(𝔠,·)` → `T̂(𝔠,·)+c`
 
 ```console
-$ grep -n 'zeros of `T̂' -A3 04-papers/43-row-a-torsion-theory/main.md
+$ grep -n 'zeros of `T̂' -A3 04-papers/43-row-a-correspondence-algebra/main.md
 2887:`m = 0` almost everywhere.  By Theorem 9.7(c) the zeros of `T̂(𝔠,·)+c` are
 2888-isolated **[phase 133, PANEL_1 finding A5: read "`T̂(𝔠,·)`"; the object named
 2889-two sentences earlier, and the one that must have isolated zeros, is
@@ -234,7 +234,7 @@ $ grep -n 'zeros of `T̂' -A3 04-papers/43-row-a-torsion-theory/main.md
 ## PANEL_1 A6 — Theorem 9.14a: `ψ ≥ 0` added to the hypothesis
 
 ```console
-$ grep -n 'with \*\*`ψ ≥ 0`\*\*' -A6 04-papers/43-row-a-torsion-theory/main.md
+$ grep -n 'with \*\*`ψ ≥ 0`\*\*' -A6 04-papers/43-row-a-correspondence-algebra/main.md
 3144:`ψ ∈ C_c^∞((0,∞))` with **`ψ ≥ 0`**, `∫_R ψ(s)ds = 1` and `supp ψ ⊆ [a,b]`,
 3145-`0<a<b<∞`.  **[phase 133, PANEL_1 finding A6: `ψ ≥ 0` was used implicitly in
 3146-(a) — the strict inequalities `0 < λ_−(F_n)`, `0 < λ_+(G_n)` need it — and
@@ -247,7 +247,7 @@ $ grep -n 'with \*\*`ψ ≥ 0`\*\*' -A6 04-papers/43-row-a-torsion-theory/main.m
 ## PANEL_1 A7 — Theorem 9.7(b): the parity bound is `π/2`, not `π`
 
 ```console
-$ grep -n 'parity term' -B2 -A3 04-papers/43-row-a-torsion-theory/main.md
+$ grep -n 'parity term' -B2 -A3 04-papers/43-row-a-correspondence-algebra/main.md
 2616-
 2617-For `ε=1` the same two displays bound `Ŵ_∞(1,·)` above by
 2618:`max_τ Ŵ_∞(0,τ) + π/2`, the parity term `(−1)^ε·\tfrac12·π/\cosh(πτ)` being
@@ -273,7 +273,7 @@ $ grep -n 'Möbius total cofiber' -A7 04-papers/44-row-b-arithmetic-family/main.
 ## PANEL_1 C1 — the place-wise Plancherel identity is now Paper 43 Theorem 9.7(d′), and Paper 45 Lemma 5.1a cites it
 
 ```console
-$ grep -n "9.13′" -B8 -A4 04-papers/43-row-a-torsion-theory/main.md
+$ grep -n "9.13′" -B8 -A4 04-papers/43-row-a-correspondence-algebra/main.md
 2525-      convergent.
 2526-
 2527-  (d′) *Place-wise form.*  **[phase 133, PANEL_1 finding C1: this was
@@ -466,19 +466,19 @@ $ grep -n 'G_rad' -B6 -A4 04-papers/44-row-b-arithmetic-family/main.md
 ## PANEL_2 MINOR-2 — Paper 43 §13.8 and §14.2 still assigned `𝓝_∞ = 0` to row C
 
 ```console
-$ grep -n 'declined by row C' 04-papers/43-row-a-torsion-theory/main.md
+$ grep -n 'declined by row C' 04-papers/43-row-a-correspondence-algebra/main.md
 4887:A**.  It is therefore recorded here as `CLASSICAL`, **declined by row C**
 4890:The phase-132 edit corrected the §14.0 obstacle row to "declined by row C …
 5366:> `𝓝_∞ = 0` for the colimit (§13.8, `CLASSICAL`, **declined by row C and
 ```
 
 ```console
-$ grep -n 'belonging to row C' 04-papers/43-row-a-torsion-theory/main.md
+$ grep -n 'belonging to row C' 04-papers/43-row-a-correspondence-algebra/main.md
 4889:this paper.  **[phase 133, PANEL_2 MINOR-2: this read "**belonging to row C**".
 ```
 
 ```console
-$ sed -n '/recorded here as `CLASSICAL`, \*\*declined/,+6p' 04-papers/43-row-a-torsion-theory/main.md
+$ sed -n '/recorded here as `CLASSICAL`, \*\*declined/,+6p' 04-papers/43-row-a-correspondence-algebra/main.md
 A**.  It is therefore recorded here as `CLASSICAL`, **declined by row C**
 (Paper 45 §0.2, §14.3) **and claimed by no row**, and it is used nowhere in
 this paper.  **[phase 133, PANEL_2 MINOR-2: this read "**belonging to row C**".
@@ -572,7 +572,7 @@ $ grep -n -B3 -A17 'for the passage to the primitive class' 04-papers/44-row-b-a
 ```console
 $ grep -n 'Paper 45: \[Paper 45\]' -B4 -A7 04-papers/44-row-b-arithmetic-family/main.md
 5637-Thms. 9.1, 9.3, 9.4, 9.5, Remark 9.6) and its
-5638-[appendix](../43-row-a-torsion-theory/appendix.md).
+5638-[appendix](../43-row-a-correspondence-algebra/appendix.md).
 5639-**[phase 133, PANEL_2 MAJOR-1: "Remark 9.5" does not exist in Paper 43;
 5640-corrected to Theorem 9.5 and Remark 9.6, which are what is meant.]**
 5641:Paper 45: [Paper 45](../45-row-c-explicit-formula/main.md) — Thm. 5.1,
@@ -592,7 +592,7 @@ $ grep -n 'Paper 45: \[Paper 45\]' -B4 -A7 04-papers/44-row-b-arithmetic-family/
 the same class.  The reconciliation is stated once, at (8.5).
 
 ```console
-$ grep -n 'MINOR-8' -A14 04-papers/43-row-a-torsion-theory/main.md
+$ grep -n 'MINOR-8' -A14 04-papers/43-row-a-correspondence-algebra/main.md
 1110:**[phase 133, PANEL_2 MINOR-8: the reconciliation of the two written forms of
 1111-`j_p`, stated here once and for all.  The **normalized** form is **(9.5b)**,
 1112-`j_p(p^kw) = (p^{−k}` at `∞`, `w` at `p`, `p^{−k}` at every other place of
@@ -619,7 +619,7 @@ and D must take from this"), Paper 44 §8bis.4 (immediately before item (vi)) an
 ```console
 $ grep -rn "ROW D'S TARGET: I_∂" 04-papers/4[345]*/main.md | cut -c1-95
 04-papers/45-row-c-explicit-formula/main.md:2271:> **ROW D'S TARGET: I_∂ ≤ 0 on every primi
-04-papers/43-row-a-torsion-theory/main.md:5179:> **ROW D'S TARGET: I_∂ ≤ 0 on every primiti
+04-papers/43-row-a-correspondence-algebra/main.md:5179:> **ROW D'S TARGET: I_∂ ≤ 0 on every primiti
 04-papers/44-row-b-arithmetic-family/main.md:3834:> **ROW D'S TARGET: I_∂ ≤ 0 on every prim
 04-papers/44-row-b-arithmetic-family/main.md:5575:> **ROW D'S TARGET: I_∂ ≤ 0 on every prim
 ```
@@ -629,7 +629,7 @@ $ grep -rhn "ROW D'S TARGET: I_∂" 04-papers/4[345]*/main.md | cut -d: -f2- | s
 5d37c98affa68ae70aca7c18c0c351ea  -
 04-papers/45-row-c-explicit-formula/main.md:1
 04-papers/44-row-b-arithmetic-family/main.md:2
-04-papers/43-row-a-torsion-theory/main.md:1
+04-papers/43-row-a-correspondence-algebra/main.md:1
 ```
 
 ```console
@@ -648,12 +648,12 @@ A.8 and B.7 gradings, and every decision block, are **unchanged**.
 
 ```console
 $ grep -rn 'review panel (PANEL_3 §3) sides with the dissent' 04-papers/4[345]*/main.md | cut -c1-260
-04-papers/43-row-a-torsion-theory/main.md:3920:**[phase 133: the review panel (PANEL_3 §3) sides with the dissent; the final
+04-papers/43-row-a-correspondence-algebra/main.md:3920:**[phase 133: the review panel (PANEL_3 §3) sides with the dissent; the final
 04-papers/44-row-b-arithmetic-family/main.md:5507:| B.7 discriminating test `p`, `p²`; mechanism located | **`PROVED` (the test and, per the lead's ruling, the mechanism on the carrier); the map to the `Z`-model `REFUTED`, not open.**  **[REBUILT, phase 131, 
 ```
 
 ```console
-$ grep -n '#### 10.3.3' -A4 04-papers/43-row-a-torsion-theory/main.md
+$ grep -n '#### 10.3.3' -A4 04-papers/43-row-a-correspondence-algebra/main.md
 3918:#### 10.3.3 Theorem 10.7 — clause A.8
 3919-
 3920-**[phase 133: the review panel (PANEL_3 §3) sides with the dissent; the final

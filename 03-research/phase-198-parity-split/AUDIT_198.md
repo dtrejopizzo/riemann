@@ -1,7 +1,7 @@
 # AUDIT_198 — audit of phase 198 (AA, CERT, BB, CC) and phase 197 tracks Y, Z
 
 Every check below was made against
-Paper 46 (`04-papers/46-row-d-dual-certificates/main.tex`): eq:Aform (l.402), C_0 = ψ(¼) − log π = −γ − π/2 − 3log2 − logπ,
+Paper 46 (`04-papers/46-row-d-sign-radial-intersection-form/main.tex`): eq:Aform (l.402), C_0 = ψ(¼) − log π = −γ − π/2 − 3log2 − logπ,
 K = ½/sinh(u/2) + ½/cosh(u/2), thm:S(iii), v_n = 2a(n)/√n, lem:degen (l.3249), lem:transfer (l.7647), thm:log5A,
 the Liu citation (complete form, T ≤ 1 and T ≤ 17/16, preprint, CITED), subsec:shape-geom and sec:spec. Row D: **OPEN**.
 

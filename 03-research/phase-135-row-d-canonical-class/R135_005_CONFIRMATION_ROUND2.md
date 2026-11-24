@@ -3,7 +3,7 @@
 Object: `04-papers/47-intersection-frame-defect/archive/main.md` lines 1856–3748 (Part II after the
 round-2 repairs of `R135_004`), the two `[phase 135]` remarks in
 `04-papers/45-row-c-explicit-formula/main.md` (Remark 12.4a, line ~1923) and
-`04-papers/43-row-a-torsion-theory/main.md` (Remark 14.1a, line ~5125), against
+`04-papers/43-row-a-correspondence-algebra/main.md` (Remark 14.1a, line ~5125), against
 `R135_002` (M1–M17), `R135_003` §2/§4 (LF1–LF7 and the ruling), `R135_004`
 (claimed repairs), Paper 45 Theorem 10.4 (lines 1680–1758) and the repository
 construction `106_11` ((14)–(16), (27)–(30)).

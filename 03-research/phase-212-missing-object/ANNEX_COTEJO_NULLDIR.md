@@ -4,7 +4,7 @@ Cross-check prior to any construction. Nothing new is derived or computed; what 
 contains is located and reported with its label. Notation of `ROUND_006_WINDOW_SPLIT_NUMERIC.md`: a_T = Arch − Π,
 Π(F) = Σ v_n c_F(log n), a_T^{(c)} = Arch − cΠ, Φ_T(c) = ground value of a_T^{(c)} on the unit sphere of P_T.
 Paths relative to the repository root; "211/" = `03-research/phase-211-sign-sandbox/`, "P46" =
-`04-papers/46-row-d-dual-certificates/main.tex`, "P48" = `04-papers/48-row-d-route-map/main.tex`, "IDX" =
+`04-papers/46-row-d-sign-radial-intersection-form/main.tex`, "P48" = `04-papers/48-routes-to-weil-positivity/main.tex`, "IDX" =
 `05-meta-and-planning/ROUTES-TRIED-INDEX/`.
 
 **Pivot cross-checked.** Take as object the near-null directions of a_T on P_T (the cluster of tiny

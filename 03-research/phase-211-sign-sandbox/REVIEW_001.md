@@ -1,6 +1,6 @@
 # Review of STATEMENT_001 and DOSSIER_001 against Paper 46
 
-References P46:n are to lines of 04-papers/46-row-d-dual-certificates/main.tex; P48:n to 04-papers/48-row-d-route-map/main.tex.
+References P46:n are to lines of 04-papers/46-row-d-sign-radial-intersection-form/main.tex; P48:n to 04-papers/48-routes-to-weil-positivity/main.tex.
 Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 
 ## Part 1. STATEMENT_001

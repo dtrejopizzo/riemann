@@ -4,7 +4,7 @@
 Weil positivity on the declared carrier: λ_A(T) ≥ 0 for the window form 𝔞_T on the primitive
 space P_T = {F ∈ L²(−T,T): ∫F e^{t/2} = ∫F e^{−t/2} = 0}, for every T > 0. The form is
 archimedean term (Γ_ℝ Lévy kernel) minus the prime comb Σ v_n c_F(log n), v_n = 2Λ(n)/√n,
-c_F the autocorrelation of F. Definitions: 04-papers/46-row-d-dual-certificates/main.tex.
+c_F the autocorrelation of F. Definitions: 04-papers/46-row-d-sign-radial-intersection-form/main.tex.
 Known: certified to ½log5 (Paper 46), Liu (unrefereed) to 17/16.
 
 ## What we already know (read before searching)

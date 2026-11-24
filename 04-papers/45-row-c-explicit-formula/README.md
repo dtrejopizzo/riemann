@@ -1,6 +1,6 @@
 # An explicit formula for the trace on semilocal idele class groups
 
-The paper evaluates the functional `T` of [Paper 43](../43-row-a-torsion-theory/) on the radial
+The paper evaluates the functional `T` of [Paper 43](../43-row-a-correspondence-algebra/) on the radial
 functions `Γ_h(w) = h(−log|w|_S)`, using the radial family of
 [Paper 44](../44-row-b-arithmetic-family/). For the limit `T_lim` of `T` over `S` it proves
 

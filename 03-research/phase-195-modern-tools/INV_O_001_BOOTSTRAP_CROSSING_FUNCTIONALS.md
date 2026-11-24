@@ -1,6 +1,6 @@
 # INV_O_001 — Modular/conformal bootstrap as a clause-5 object (track O)
 
-Notation: Paper 46 (04-papers/46-row-d-dual-certificates/main.tex): s_T, v_n, N_T, 𝔞_T (eq:form), P_T, W_T, def:W, ν_w, f_w,
+Notation: Paper 46 (04-papers/46-row-d-sign-radial-intersection-form/main.tex): s_T, v_n, N_T, 𝔞_T (eq:form), P_T, W_T, def:W, ν_w, f_w,
 thm:Z, thm:D1, thm:O, def:shape-ops (O_1–O_15), thm:shape, cor:shape. Spec clauses (1)–(6): ROUTES-TRIED-INDEX/README.md.
 Pure math; no numerics.
 

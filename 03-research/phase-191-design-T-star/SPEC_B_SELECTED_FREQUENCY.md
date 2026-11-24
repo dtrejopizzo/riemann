@@ -2,7 +2,7 @@
 
 Design round, no construction. no
 equivalence between row D and any other statement is used, invoked or mentioned.
-NO-GO / NUMÉRICO. P46 = 04-papers/46-row-d-dual-certificates/main.tex; 188/ = phase-188-closing-D; 190/ = phase-190-near-coincidence-experiment;
+NO-GO / NUMÉRICO. P46 = 04-papers/46-row-d-sign-radial-intersection-form/main.tex; 188/ = phase-188-closing-D; 190/ = phase-190-near-coincidence-experiment;
 SHAPE = 190/memos/SHAPE_THEOREM.md (operations O1–O15, clauses A1–A17, B1–B8, admissible region §3(e)); crossword = CROSSWORD-TO-D §3.2–3.3
 ((α)–(θ), (ι)–(μ)); index = ROUTES-TRIED-INDEX (README, 04_ Part I, 06_ R1/R5/R9/R10).
 

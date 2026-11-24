@@ -2,7 +2,7 @@
 
 Track J.
 
-Notation of Paper 46 (04-papers/46-row-d-dual-certificates/main.tex): v_n = 2Λ(n)n^{−1/2}, N_T = {n ≥ 2: log n < 2T},
+Notation of Paper 46 (04-papers/46-row-d-sign-radial-intersection-form/main.tex): v_n = 2Λ(n)n^{−1/2}, N_T = {n ≥ 2: log n < 2T},
 c_F autocorrelation, 𝔞_T(F) = C_0‖F‖² + Lev(c_F) − Σ_{n∈N_T} v_n Re c_F(log n) =: Arch_T(F) − Π_T(F) (main.tex l.403),
 modifications O_1–O_15 (def:shape-ops), thm:shape, lem:shape-scale, lem:shape-tail (O_3), prop:shape-eulerdel (O_6).
 

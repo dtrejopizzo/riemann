@@ -2,7 +2,7 @@
 
 Selection memo, not a construction memo. Goal (★): λ_A(T) ≥ 0 for every T, with the definitions of
 `../phase-211-sign-sandbox/STATEMENT_001.md`; N ≥ e^{2T}, M ≥ N. Notation of P46 §sec:firstcontact
-(`04-papers/46-row-d-dual-certificates/main.tex`: S_N, S′_N, L_M, A_M = 𝓜 − L_M − L_M*, E_N = S_N𝓕 − JS_N,
+(`04-papers/46-row-d-sign-radial-intersection-form/main.tex`: S_N, S′_N, L_M, A_M = 𝓜 − L_M − L_M*, E_N = S_N𝓕 − JS_N,
 H_{M,N} = L_MS_N − S′_N, thm:PCfinite). Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO /
 NUMERICAL.
 

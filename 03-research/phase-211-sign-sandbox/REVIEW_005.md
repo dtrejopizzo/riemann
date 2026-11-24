@@ -1,6 +1,6 @@
 # Review 005: rounds 005_D, 006_B, 006_C, 007_B, 007_C, 007_D, 008_D against Paper 46 and STATEMENT_001
 
-Scope. ROUND_005_D, ROUND_006_B, ROUND_006_C, ROUND_007_B, ROUND_007_C, ROUND_007_D, ROUND_008_D, checked against Paper 46 (04-papers/46-row-d-dual-certificates/main.tex:
+Scope. ROUND_005_D, ROUND_006_B, ROUND_006_C, ROUND_007_B, ROUND_007_C, ROUND_007_D, ROUND_008_D, checked against Paper 46 (04-papers/46-row-d-sign-radial-intersection-form/main.tex:
 lem:K, thm:A, prop:nodes, lem:parity, prop:archneg, thm:parityschur, prop:polarcap, prop:sharp, lem:polarelim, lem:monoT) and STATEMENT_001. No equivalence of the
 window statement (★) with any other statement is invoked. Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO /
 NUMERICAL. Verdicts on PROVED claims: CONFIRMED (key step named) / REFUTED / DOWNGRADE. "L.n" = line n of the memo under review.

@@ -1,7 +1,7 @@
 # Review 004 — independent check of ROUND_005_C, ROUND_005_A, ROUND_005_E, ROUND_006_A
 
 Reference objects: STATEMENT_001.md (window form a_T, P_T, Lévy form), OBJECT_SPEC_001.md (R1–R5), Paper 46
-(04-papers/46-row-d-dual-certificates/main.tex). No equivalence of (★) with any other statement is used.
+(04-papers/46-row-d-sign-radial-intersection-form/main.tex). No equivalence of (★) with any other statement is used.
 Verdicts: CONFIRMED (key step) / REFUTED / DOWNGRADE. Line numbers refer to the memo under review.
 
 ---------------------------------------------------------------------------------------------------

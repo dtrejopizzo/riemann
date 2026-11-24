@@ -77,7 +77,7 @@ must come from the interaction of the two, never from either alone.
 
 ## Erratum (independent review of SHAPE_THEOREM)
 - Row 13: "f_t primitive witness CONDITIONAL (R186_114 §2.4)" is superseded. Paper 46 prop:ftprim constructs the primitive witness
-  directly (comb-level, no (Z-strip)); independently re-derived and CONFIRMED in 04-papers/46-row-d-dual-certificates/SECONDARY_ITEMS.md
+  directly (comb-level, no (Z-strip)); independently re-derived and CONFIRMED in 04-papers/46-row-d-sign-radial-intersection-form/SECONDARY_ITEMS.md
   (review item 4). Row 13 reads: KILLED (M_m PROVED; f_t PROVED).
 - §2(a): rows 13 and 21 keep the functional equation (M_m = ξ·polynomial, f_t self-dual); what they break is the Euler product over ℕ
   (M_m: polynomial factor whose logarithmic derivative is not a Dirichlet series over ℕ; f_t: frequencies m/√M ∉ ℕ). They belong to the

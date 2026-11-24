@@ -50,7 +50,7 @@ obstacle.
 
 ## Verifiable adjustments to the paper text
 
-References: `04-papers/46-row-d-dual-certificates/main.tex`, stable labels.
+References: `04-papers/46-row-d-sign-radial-intersection-form/main.tex`, stable labels.
 
 - Before the concentration (approx. line 714), "The program (P) has no
   minimizer (Theorem O)" contradicts the proof of O and the OvsB

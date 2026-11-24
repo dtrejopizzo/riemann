@@ -2,7 +2,7 @@
 
 Reference target (★): λ_A(T) ≥ 0 for every T > 0, with the definitions of
 `../phase-211-sign-sandbox/STATEMENT_001.md`. Each proof was redone and cross-checked against
-P46 (`04-papers/46-row-d-dual-certificates/main.tex`: sec:firstcontact, thm:PCfinite, prop:GEgap,
+P46 (`04-papers/46-row-d-sign-radial-intersection-form/main.tex`: sec:firstcontact, thm:PCfinite, prop:GEgap,
 prob:annihilate, prop:annihilate-equiv, rem:returnremarks, prop:opcalc, thm:sos, rem:sosatoms,
 prop:nearfree, rem:boxes, thm:oneprofile, prop:AM, lem:shape-scale, thm:geo-split), against 211/LEDGER
 (C6, C7, C9, C33b, C49), against `phase-186-toolbox/R186_005` and `R186_092`, against the routes index and against

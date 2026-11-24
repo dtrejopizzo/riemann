@@ -2,7 +2,7 @@
 
 Selection memo, not a construction memo. Target (★): λ_A(T) ≥ 0 for all T, with the definitions of
 `../phase-211-sign-sandbox/STATEMENT_001.md`. Notation from P46 §sec:firstcontact
-(`04-papers/46-row-d-dual-certificates/main.tex`, l. 6625–6700): V_{−log n}F(t) = F(t + log n), S_N, S′_N,
+(`04-papers/46-row-d-sign-radial-intersection-form/main.tex`, l. 6625–6700): V_{−log n}F(t) = F(t + log n), S_N, S′_N,
 L_M = Σ_{d≤M}Λ(d)d^{−1/2}V_{−log d}, A_M = 𝓜 − L_M − L_M*, 𝓜 = m(D). Object examined: the remainder R(F) of
 `ROUND_003_6.md` (4.2). Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL.
 

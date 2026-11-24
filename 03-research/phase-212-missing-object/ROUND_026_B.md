@@ -1,6 +1,6 @@
 # Round 026 B — (PBP_T) as an exact extremal problem; Kreĭn and density argument; four-point gate
 
-Object: the form `a^w_T` on `P_T` (Paper 46, `04-papers/46-row-d-dual-certificates/main.tex`). No long
+Object: the form `a^w_T` on `P_T` (Paper 46, `04-papers/46-row-d-sign-radial-intersection-form/main.tex`). No long
 derivations. Opened: R160_M2_R1 complete; G2_B9_R3 §3; P46 `eq:m`, `eq:Aform`, `eq:Kprim`, `prop:finite`, `lem:degen`,
 `rem:resweights`; R155_033 §0, §2.1–2.3; index, entry 212-25; ROUND_025_A (grep). Not opened: R155_023/024/027
 (thresholds and Theorem N′, only via their summary in the README of phase 155), R155_049, ROUND_025_B, G2_B6_R2.

@@ -1,7 +1,7 @@
 # EI_001 — The exterior field of the window minimizer: an exact three-term identity, and what it does to C*_A
 
 Construction round (phase 192). Pen and paper; no numerics.
-P46 = 04-papers/46-row-d-dual-certificates/main.tex. SPEC_A = phase-191/SPEC_A_EXACT_INDUCTION.md.
+P46 = 04-papers/46-row-d-sign-radial-intersection-form/main.tex. SPEC_A = phase-191/SPEC_A_EXACT_INDUCTION.md.
 **No sign is certified here; no negative value of 𝔞_T for ζ is found or claimed.**
 
 ## 0. Corpus check — why this is not a retry

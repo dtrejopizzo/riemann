@@ -1,6 +1,6 @@
 # Review 006: rounds 008_E and 008_C against Paper 46 and standard prolate theory
 
-Scope. ROUND_008_E and ROUND_008_C, checked against Paper 46 (04-papers/46-row-d-dual-certificates/main.tex: eq:symbol, eq:W,
+Scope. ROUND_008_E and ROUND_008_C, checked against Paper 46 (04-papers/46-row-d-sign-radial-intersection-form/main.tex: eq:symbol, eq:W,
 the definitions of λ_A and λ_W on 𝒟_T, def:ext, lem:ext-mob, thm:ext-half, prop:ext-gauge, prob:ext-L, prop:ext-consol,
 thm:ext-margin, lem:ext-hf, lem:monoT, lem:contA, lem:compact) and against the standard theory of the prolate spheroidal
 functions (Slepian–Pollak, Landau–Widom, Fuchs). No equivalence of the window statement (★) with any other statement is

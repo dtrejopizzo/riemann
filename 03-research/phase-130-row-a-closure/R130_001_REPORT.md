@@ -1,7 +1,7 @@
 # R130.001 — Report, phase 130 (row A closure)
 
 Status: `REPORT`.
-Target edited: `04-papers/43-row-a-torsion-theory/main.md` (4547 → 4590 lines;
+Target edited: `04-papers/43-row-a-correspondence-algebra/main.md` (4547 → 4590 lines;
 42 passages marked `[REBUILT, phase 130]`).  Every new statement carries a
 complete proof in the paper; nothing is asserted "by the blueprint".
 

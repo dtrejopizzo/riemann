@@ -1,6 +1,6 @@
 # Paper 46 — The sign of the radial intersection form on the idele class group
 
-Row D of the Weil-type route over $\operatorname{Spec}\mathbb Z$: the intersection inequality.
+Row D of the Weil-type route over $\mathrm{Spec}\,\mathbb Z$: the intersection inequality.
 Papers 43, 44 and 45 give rows A, B and C (correspondences, Frobenius, explicit formula); this
 paper determines the sign.
 
@@ -30,7 +30,7 @@ nontrivial zeros of $\zeta$. The paper does three things.
 3. **Conclusion.** The existence of such families is a theorem of L. Alpoge. With it the paper
    obtains the Riemann hypothesis (Theorem `thm:RH`) and, as a corollary, $W_T\ge 0$ on every
    window (Corollary `cor:all-windows`): the sign in Weil's programme over
-   $\operatorname{Spec}\mathbb Z$.
+   $\mathrm{Spec}\,\mathbb Z$.
 
 The paper also contains the theory that does not depend on that theorem: duality and
 certificates, the explicit formula on flat-top weights, the reduction of the sign on all windows

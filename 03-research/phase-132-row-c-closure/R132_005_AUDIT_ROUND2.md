@@ -6,7 +6,7 @@ round 2 — all **25** `[REBUILT, phase 132, round 2]` passages read and
 re-derived — plus [README.md](../../04-papers/45-row-c-explicit-formula/README.md),
 `scripts/verify_132_explicit_formula.py` (**re-run: 26/26 pass**), and the
 five `[phase 132]` cross-paper edits in
-[Paper 43](../../04-papers/43-row-a-torsion-theory/main.md) and
+[Paper 43](../../04-papers/43-row-a-correspondence-algebra/main.md) and
 [Paper 44](../../04-papers/44-row-b-arithmetic-family/main.md).
 Inputs: my [R132.002](R132_002_AUDIT_ROUND1.md) (`M1`–`M4`, `m1`–`m7`,
 `n1`–`n6`), [R132.003](R132_003_AUDIT_ROUND1.md) (`LF1`–`LF5`),

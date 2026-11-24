@@ -1,7 +1,7 @@
 # Reverse-engineering dossier of the window-positivity sign (Papers 43–48)
 
-Source files (read-only): `04-papers/46-row-d-dual-certificates/main.tex` (cited as P46:line),
-`04-papers/48-row-d-route-map/main.tex` (P48:line), READMEs/section lists of Papers 43–46.
+Source files (read-only): `04-papers/46-row-d-sign-radial-intersection-form/main.tex` (cited as P46:line),
+`04-papers/48-routes-to-weil-positivity/main.tex` (P48:line), READMEs/section lists of Papers 43–46.
 Labels: PROVED / CITED / CONDITIONAL / ARGUED / OPEN / NO-GO / NUMERICAL. Every new idea in this file is OPEN.
 Convention: window positivity is treated as a standalone statement about an explicit quadratic form. Zeros of
 zeta appear only where a paper's *tool* is an explicit-formula identity; no equivalence with any other statement is used.

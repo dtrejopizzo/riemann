@@ -121,6 +121,6 @@ Local references:
 - [R167_101](../phase-167-witness-weighted-sieve/R167_101_QUANTITATIVE_TARGET.md).
 - [R169_000 v2](../phase-169-input-architecture/R169_000_INPUT_ARCHITECTURE.md).
 - [R169_190](../phase-169-input-architecture/R169_190_AUDIT.md).
-- [Paper 46](../../04-papers/46-row-d-dual-certificates/main.tex).
-- [Paper 48](../../04-papers/48-row-d-route-map/main.tex).
+- [Paper 46](../../04-papers/46-row-d-sign-radial-intersection-form/main.tex).
+- [Paper 48](../../04-papers/48-routes-to-weil-positivity/main.tex).
 </content>

@@ -1,7 +1,7 @@
 # R155_058 — Audit of R155_053 (round 8B, P6 alignment)
 
 **Object.** `R155_053_ROUND8B_P6_ALIGNMENT.md` (426 lines), checked against Paper 46
-(`04-papers/46-row-d-dual-certificates/main.tex`) and Paper 47 (`04-papers/47-intersection-frame-defect/archive/main.md`)
+(`04-papers/46-row-d-sign-radial-intersection-form/main.tex`) and Paper 47 (`04-papers/47-intersection-frame-defect/archive/main.md`)
 at the lines the memo cites, plus the phase-155 record. One check script (`scratchpad/chk.py`, 2 s,
 mpmath digamma + numpy grid, not committed) was used only to reproduce the memo's constants.
 Rule applied (memory `feedback-check-against-paper-definitions`): every integration is checked against

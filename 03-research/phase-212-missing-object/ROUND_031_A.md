@@ -10,7 +10,7 @@ Bound from above `μ(|τ| < 6.29)` (or `∫m dμ` from below) for `μ = Σ|F̂_i
 
 ## 1. What was opened
 
-- Paper 46 (`04-papers/46-row-d-dual-certificates/main.tex`): thm:A and its proof (l.444–477), rem:Kprim (l.479),
+- Paper 46 (`04-papers/46-row-d-sign-radial-intersection-form/main.tex`): thm:A and its proof (l.444–477), rem:Kprim (l.479),
   prop:arch (l.2323–2350), thm:index and its proof (l.2518–2560), prop:NC, cor:P3, rem:P4, thm:J and the observation
   that follows (l.2638–2780), thm:nyq-cone with proof and rem:nyq-dual (l.6320–6360). By grep: lem:polarelim,
   prop:sharp (l.7330–7361), prop:haynsworth (l.10992), lem:KyFan (l.10802).

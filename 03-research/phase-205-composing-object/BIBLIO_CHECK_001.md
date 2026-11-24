@@ -1,7 +1,7 @@
 # BIBLIO_CHECK_001 — bibliographic verification, phases 200–205 and Paper 46
 
 Sources: memos from `03-research/phase-200-sign-object/`, `phase-201-untried-families/`,
-`phase-204-refd-tractability/`, `phase-205-composing-object/` and `04-papers/46-row-d-dual-certificates/main.tex`.
+`phase-204-refd-tractability/`, `phase-205-composing-object/` and `04-papers/46-row-d-sign-radial-intersection-form/main.tex`.
 Method: web search (arXiv, Project Euclid, Wiley, Springer, EUDML, Zenodo API, author pages). When possible I downloaded the
 PDF and read the statement: Karnik–Romberg–Davenport (arXiv 2006.00427), Eberwein (Zenodo 23177438), the "two thirds"
 preprint, and the Zenodo API for Ziad.

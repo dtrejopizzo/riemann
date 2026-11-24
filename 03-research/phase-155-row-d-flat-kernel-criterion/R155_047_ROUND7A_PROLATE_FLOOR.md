@@ -32,7 +32,7 @@ otherwise stand.
  | `0.80` | `3` | **`7`** | `8` | `54` | `6` | `1` |
 
  **[amended per R155_048, Erratum 1]** the `0.80` diagnostic prolate count is `6`, not `5`
- (`4, 5, 6` at the optimal `τ₁`, not `4, 5, 5`); `04-papers/46-row-d-dual-certificates/main.tex:3157`
+ (`4, 5, 6` at the optimal `τ₁`, not `4, 5, 5`); `04-papers/46-row-d-sign-radial-intersection-form/main.tex:3157`
  carries the same erratum and should be re-checked if that line is touched.
 
  A factor `≈ 7–8` gain over Prop NC, and within one of the `DIAGNOSTIC` count that `R155_033 §3.4`

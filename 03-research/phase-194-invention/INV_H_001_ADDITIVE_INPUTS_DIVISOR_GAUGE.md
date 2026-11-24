@@ -2,7 +2,7 @@
 
 Track H.
  Notation of Paper 46
-(04-papers/46-row-d-dual-certificates/main.tex): m(τ)=Re ψ(¼+iτ/2)−log π (eq:m), v_n=2Λ(n)n^{−1/2}, 𝔞_T=m_T+Π_T on 𝒫_T,
+(04-papers/46-row-d-sign-radial-intersection-form/main.tex): m(τ)=Re ψ(¼+iτ/2)−log π (eq:m), v_n=2Λ(n)n^{−1/2}, 𝔞_T=m_T+Π_T on 𝒫_T,
 N:=e^{2T}, combs and 𝔠⁺ (def:comb), ρ_κ, g_κ (thm:kappa), polar elimination (lem:polarelim), thm:shape, cor:shape.
 
 ## 0. Corpus / index check (done before building)

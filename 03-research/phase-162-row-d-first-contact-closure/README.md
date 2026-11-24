@@ -228,7 +228,7 @@ the two-channel inequality ‖x‖²≤Re⟨x,j⟩ ⟺ x=0. The contraction q_0<
   (Akhiezer) ⇒ w_x≥0 is just W≥0. 6C → ◩, residual = type >2T_c, i.e. contacts n∈[e^{T_c},e^{2T_c}) = O2202.2.
 - R162_2290 audit R22: both NO-GOs stand; 2201 N1(a) factor 2, N1(b) only ⟹, Thm N3 WRONG as a theorem (downgrade to
   proposition on three routes); 2202 NI correct (only n<e^{T_c}), Prop T example false (1+2^{iz}), ND needs ι-invariance.
-- Paper 48 (04-papers/48-row-d-route-map, 16 pp) written; TikZ row-label bug fixed.
+- Paper 48 (04-papers/48-routes-to-weil-positivity, 16 pp) written; TikZ row-label bug fixed.
 - CONVERGENCE: R162_2202 and R162_2301 independently isolate the same residual — the contacts n∈[e^{T_c},e^{2T_c})
   invisible to node quadrature (O2202.2). Candidate target for round 24.
 - R162_2302 cell 5F NO-GO: Thm N (weak limit ≡0 for every primitive source via ζ(1−ρ)=0; restores W6 for this

@@ -1,6 +1,6 @@
 # Review 003 — ROUND_002_D, ROUND_002_E, ROUND_002_A, ROUND_002_B, ROUND_003_B
 
-Reference objects: STATEMENT_001.md and Paper 46 (04-papers/46-row-d-dual-certificates/main.tex). The statement (★) is
+Reference objects: STATEMENT_001.md and Paper 46 (04-papers/46-row-d-sign-radial-intersection-form/main.tex). The statement (★) is
 treated only through the definitions of STATEMENT_001 and its internal rewritings (§5 there); no equivalence with any other
 statement is used. Verdicts: CONFIRMED (key step named) / REFUTED / DOWNGRADE. Line numbers refer to the memo under review.
 
