@@ -604,7 +604,10 @@ p_{l,m}(f):=\max_{m'\le m}\,\sup_{x_{\infty}\in\R^{\times}}e^{l|t|}\,|D^{m'}f|<\
 \]
 Thus $E_{\R}$ is the direct sum of two copies, one for each sign of
 $x_{\infty}$, of the algebra of smooth functions of $t\in\R$ all of whose
-derivatives decay faster than every exponential.
+derivatives decay faster than every exponential.  By the Leibniz rule
+$p_{l,m}(fg)\le2^{m}p_{l,m}(f)\,p_{l,m}(g)$, so the product of $E_{\R}$ is jointly
+continuous, although $p_{l,m}$ is not submultiplicative for $m\ge1$; this joint
+continuity is all that is used of the product of $E_{\R}$ and of $E_P$.
 
 \subsubsection*{The action of the ideles}
 For $a\in A_S^{\times}$ and a function $f$ of $x\in A_S$ put
@@ -712,9 +715,12 @@ $U_{\gamma}U_{\delta}=U_{\gamma\delta}$ and
 $U_{\gamma}aU_{\gamma}^{-1}=\alpha_{\gamma}(a)$.  The action is \emph{tempered}
 if for every continuous seminorm $\nu$ there are a continuous seminorm $\nu'$
 and constants $C$, $M$ with $\nu(\alpha_{\gamma}f)\le C\,H(\gamma)^{M}\nu'(f)$
-for all $\gamma$ and $f$.  Temperedness and the submultiplicativity of $H$
-make the product of the rapid crossed product continuous, so that it is a
-Fr\'echet algebra.
+for all $\gamma$ and $f$.  Here a Fr\'echet algebra is a Fr\'echet space
+with a jointly continuous product: for every continuous seminorm $\nu$ there is
+a continuous seminorm $\nu'$ with $\nu(xy)\le\nu'(x)\nu'(y)$; the seminorms need
+not be submultiplicative.  Temperedness and the submultiplicativity of $H$
+make the product of the rapid crossed product jointly continuous in this sense,
+so that it is a Fr\'echet algebra.
 
 The action of $\Gamma_S$ on $E_P$ is tempered.  At a finite place $p$ the
 automorphism $\alpha_{\gamma}$ shifts the shell index by $v_p(\gamma)$ and
@@ -2575,7 +2581,13 @@ $\langle x\rangle\le e^{|t|}\le2\langle x\rangle$.  By induction on $m$,
 $(\langle x\rangle\partial_x)^{m}=\sum_{k\le m}c_{m,k}\partial_x^{k}$ and
 $\partial_x^{m}=\sum_{k\le m}c'_{m,k}(\langle x\rangle\partial_x)^{k}$ with smooth
 coefficients satisfying $|\partial_x^{i}c_{m,k}|\le C\langle x\rangle^{m-i}$ and
-$|\partial_x^{i}c'_{m,k}|\le C\langle x\rangle^{-i}$.  So the seminorms
+$|\partial_x^{i}c'_{m,k}|\le C\langle x\rangle^{-i}$.  For the second family,
+$\partial_x^{m+1}=\langle x\rangle^{-1}D\,\partial_x^{m}$ with
+$D:=\langle x\rangle\partial_x$, so that
+$c'_{m+1,k}=\langle x\rangle^{-1}(Dc'_{m,k}+c'_{m,k-1})$; since
+$D^{i}(\langle x\rangle^{-1})=O(\langle x\rangle^{-1})$ and the bound on
+$c'_{m,k}$ is equivalent to $D^{i}c'_{m,k}=O(1)$ for all $i$, the bound passes
+from $m$ to $m+1$.  So the seminorms
 $\sup e^{l|t|}|D^{m}f|$ of $E_{\R}$ are equivalent to the Schwartz seminorms
 $\sup\langle x\rangle^{l}|\partial_x^{k}f|$, and $E_{\R}=\mathcal S(\mathbb L)$,
 the Schwartz functions on the two lines, with pointwise product.  Since
@@ -2707,9 +2719,19 @@ coset of $G_m$ replaces a word by an average of words obtained by multiplying
 its characters by elements of $\widehat G_m$, and the insertion of the indicator
 of the coset of $y_r$ replaces $(\dots,\kappa_r,\dots)$ by the average of
 $(\dots,\kappa_r\lambda,\lambda^{-1},\dots)$ over $\lambda\in\widehat G_m$.  For
-$m\le M$ all characters that occur have conductor exponent $\le M$.  So
-$\mathsf SQw$ is a combination of words in $\widehat G_M^{\,n+2}$ with sum of absolute
-values of the coefficients at most $16nM$, and
+$m\le M$ all characters that occur have conductor exponent $\le M$.  Each of
+these indicator functions is an average of words, so the sum of absolute values
+of its coefficients is $1$.  For $m\le M$ and $r\le n-1$ the term of
+$s^{(m)}(Qw)_m$ indexed by $r$ is the product of $Qw$ (two words with
+coefficients $\pm1$), of $\mathbf 1[m(y)=m]$, the difference of the indicators
+of the $(m-1)$-diagonal and of the $m$-diagonal points (sum of absolute values
+of the coefficients $\le2$), of the indicator in brackets, likewise a difference
+of two coset indicators ($\le2$), and of the inserted coset indicator ($1$).
+Summing over $r$ and $m$, $\mathsf SQw$ is a combination of words in
+$\widehat G_M^{\,n+2}$, all of whose characters have conductor exponent
+$\le M$, with sum of absolute values of the coefficients at most
+$8nM\le16nM$.  Each factor $(1+\cond_p)^{N}$ is therefore at most
+$(1+M)^{N}$, and
 \[
 v_{l,N}^{\otimes(n+2)}(\mathsf SQw)\le16n\,M\,p^{l|j|(n+2)}(1+M)^{N(n+2)}
 \le16n\,v_{2l,N'}^{\otimes(n+1)}(w),\qquad N':=N(n+2)+1 .
@@ -4211,7 +4233,7 @@ step is metrizable, so $B$ is relatively compact in it, hence in $\DA$.
 (c)  The space $\DA$ is an inductive limit of Fr\'echet spaces, hence
 barrelled.  With (b), its bounded subsets are relatively compact, and a
 barrelled space with this property is reflexive
-\cite[Ch.~IV, Theorem~5.6]{Schaefer}: every continuous linear functional on the
+\cite[Ch.~IV, \S5]{Schaefer}: every continuous linear functional on the
 strong dual of $\DA$ is the evaluation at a unique element of $\DA$.
 Transporting this by the homeomorphism $\ell\mapsto\ell(\overline{\,\cdot\,})$
 gives (c).
@@ -4753,7 +4775,15 @@ that $I_A(F,F)=W_{\infty}(F\star F^{\dagger})$.  By the comparison of
 $W_{\infty}$ with the distribution $W_{\R}$ of \cite{CCWeilArch} made after
 Convention~\ref{conv:Winf}, this number is $\le0$: this is Weil's inequality
 at the archimedean place, in the form stated in
-\cite[Introduction]{CCWeilArch}, where it is written for $-W_{\R}$.  It
+\cite[Introduction]{CCWeilArch}, where it is written for $-W_{\R}$.  There
+the test function itself is supported in $[2^{-1/2},2^{1/2}]$, whereas here only
+$F\star F^{\dagger}$ is localised; the condition here implies the one there after a
+translation, since by Titchmarsh's convolution theorem the support of $F$ then
+lies in an interval of logarithmic length $<\log2$, so that a translate $F_w$ is
+supported in $\{2^{-1/2}<|v|_S<2^{1/2}\}$, while
+$F_w\star F_w^{\dagger}=F\star F^{\dagger}$, hence
+$W_{\infty}(F_w\star F_w^{\dagger})=W_{\infty}(F\star F^{\dagger})$, and
+$F_w$ is primitive by \eqref{eq:translate}.  It
 follows from \cite[Theorem~1]{Yoshida}, whose proof reduces it to an explicit
 computation which is in part numerical, and \cite[Theorem~1]{CCWeilArch}
 gives an operator-theoretic proof under the additional condition that the

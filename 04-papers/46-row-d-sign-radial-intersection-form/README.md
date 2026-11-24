@@ -9,7 +9,7 @@ paper determines the sign.
 | File | What it is |
 |---|---|
 | `main.tex` | Source of the paper. |
-| `sign-radial-intersection-form-idele-class-group.pdf` | The paper (48 pages). |
+| `sign-radial-intersection-form-idele-class-group.pdf` | The paper (52 pages). |
 | `annex.tex` | Source of the annex. |
 | `column-packages-character-families.pdf` | The annex, *Column packages for character families: the arithmetic inputs for the sign of the radial intersection form* (302 pages). |
 | `positivity-radial-intersection-form.ipynb` | Colab notebook: certificates of $W_T\ge 0$ on bounded windows and the prime sum behind global positivity. |
@@ -33,12 +33,14 @@ nontrivial zeros of $\zeta$. The paper does three things.
    $\mathrm{Spec}\,\mathbb Z$.
 
 The paper also contains the theory that does not depend on that theorem: duality and
-certificates, the explicit formula on flat-top weights, the reduction of the sign on all windows
-to positive semidefiniteness in every degree of one sequence of explicit matrices, and
+certificates, the explicit formula on flat-top weights, the equivalence of the sign on all windows
+with positive semidefiniteness in every degree of one sequence of explicit matrices, and
 quantitative bounds on bounded windows. For $T\le\tfrac12\log 5$ the lower bounds on unit vectors
-are $10^{-18}$ for the complete form and $2.5\cdot10^{-12}$ for its primitive restriction, and a
-certificate using finite-height zero data gives an explicit positive lower bound up to
-$T=2.8022$.
+are $10^{-18}$ for the complete form and $2.5\cdot10^{-12}$ for its primitive restriction; they are
+unconditional and computer-assisted (interval arithmetic). For $T\le 2.8022$ Theorem 9.12 proves
+$W_T(F)\ge e^{-120110026807}\|F\|^2$, assuming three published facts about the zeros of $\zeta$,
+among them the numerical verification that the zeros up to height $3\cdot10^{12}$ lie on the
+critical line; its finite computations are done in exact integer and interval arithmetic.
 
 **On what the proof rests.** Alpoge's theorem on families of column packages rests on his Lean
 formalisation and has not yet been written out on paper in full. The paper states this in the
@@ -88,8 +90,8 @@ arithmetic, so every `PASS` is a proved inequality and not a floating-point obse
   bounds of the paper and pushes the same method to $T=0.85$. You can try your own $T$. The cost
   grows doubly exponentially in $T$, so this route cannot reach large windows; when the problem
   is too large the notebook says so instead of guessing.
-- *Up to $T=2.8022$.* A different certificate, on the zero side of the explicit formula, with 17
-  numerical checks. It is conditional on three published facts about zeros in a bounded range
+- *Up to $T=2.8022$.* The finite inequalities of Theorem 9.12 of the paper (17 numerical checks,
+  among them the Schur comparison on 2048 cells). It is conditional on three published facts about zeros in a bounded range
   (Section 9 of the paper), among them the verification that all zeros up to height
   $3\cdot10^{12}$ lie on the critical line. These parameters stop just below $T=2.80227$.
 

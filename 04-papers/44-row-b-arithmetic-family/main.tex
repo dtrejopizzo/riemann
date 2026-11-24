@@ -202,8 +202,9 @@ $\Frob_m\star\Frob_n=\Frob_{mn}$ is shared with the isometries $\mu_n$ of
 the algebra of Bost and Connes \cite{BostConnes}; there
 $\mu_n^*\mu_n=1$ and $\mu_n\mu_n^*$ is a projection which depends on $n$,
 whereas $\Frob_n$ is normal and $\Frob_n\star\Frob_n^\dagger$ depends only
-on $P(n)$, so no map compatible with products and adjoints carries one family
-onto the other. The convolution
+on $P(n)$, so no unital map compatible with products and adjoints carries one
+family onto the other: it would send $1=\mu_n^*\mu_n$ to
+$\Frob_n^\dagger\star\Frob_n=\Frob_n\star\Frob_n^\dagger\ne\Delta$ for $n\ge2$, where $\Delta=\Frob_1$, the point mass at the identity, is the unit. The convolution
 of $\Frob_n$ with the Haar measure $\Delta^{\mathrm{rad}}$ of the maximal
 compact subgroup of $C_S$ is the Haar probability measure
 $\Gamma_n^{\mathrm{rad}}$ of the level set $\{|x|_S=1/n\}$
@@ -211,7 +212,8 @@ $\Gamma_n^{\mathrm{rad}}$ of the level set $\{|x|_S=1/n\}$
 defined for every real $r>0$ in place of $n$, and
 $r\mapsto\Gamma_r^{\mathrm{rad}}$ is an injective weakly continuous
 homomorphism of semigroups, which sends $1$ to the idempotent
-$\Delta^{\mathrm{rad}}$ (Lemma~\ref{lem:notideal}).
+$\Delta^{\mathrm{rad}}$; it is an isomorphism of $(\R_{>0},\times)$ onto a
+group whose identity is $\Delta^{\mathrm{rad}}$, not the unit $\Delta$ (Lemma~\ref{lem:notideal}).
 Section~\ref{sec:radial} treats this radial family. For
 $h\in C_c^\infty(\R)$, a function of the additive variable $-\log|x|_S$, put
 $\Gamma_h(x)=h(-\log|x|_S)$. If $0\notin\supp h$, the trace is
@@ -799,7 +801,10 @@ $\Gamma^{\mathrm{rad}}_{(s)}\star\Gamma^{\mathrm{rad}}_{(t)}
 $r\mapsto\Gamma_r^{\mathrm{rad}}$ is an injective weakly continuous
 homomorphism of semigroups from $(\R_{>0},\times)$ to the probability
 measures on $C_S$ under $\star$; it sends $1$ to the idempotent
-$\Delta^{\mathrm{rad}}\ne\Delta$.
+$\Delta^{\mathrm{rad}}\ne\Delta$. In fact it is an isomorphism of groups
+onto its image, a group under $\star$ whose identity element is
+$\Delta^{\mathrm{rad}}$ and in which the inverse of
+$\Gamma_r^{\mathrm{rad}}$ is $\Gamma_{1/r}^{\mathrm{rad}}$.
 \end{lemma}
 
 \begin{proof}
@@ -1534,10 +1539,13 @@ $(h_\varepsilon)$, $(h'_\varepsilon)$ of non-negative functions satisfying
 $\Frob_n^{[h_\varepsilon,N],\flat}\,d^*w$ and
 $\Frob_n^{[h'_\varepsilon,N],\flat}\,d^*w$ converge weakly to $\Frob_n$ as
 $(\varepsilon,N)\to(0,\infty)$ by Lemma~\ref{lem:smearedfrobinDA}, such that
-for all small $\varepsilon$ and all $N$ with $2^N\ge n$
+for all small $\varepsilon$ and all $N\ge1$
 \begin{align*}
-  \sum_{q\in S_f}W_q\bigl(\Frob_n^{[h_\varepsilon,N],\flat}\bigr)&=0,\qquad
-  0\le T\bigl(\Frob_n^{[h_\varepsilon,N],\flat}\bigr)\le\frac{2n^{1/2}}{n-1},\\
+  \sum_{q\in S_f}W_q\bigl(\Frob_n^{[h_\varepsilon,N],\flat}\bigr)&=0,\\
+  0\le T\bigl(\Frob_n^{[h_\varepsilon,N],\flat}\bigr)&\le\frac{2n^{1/2}}{n-1}
+  \quad\text{if }S_f=\{p\},\\
+  T\bigl(\Frob_n^{[h_\varepsilon,N],\flat}\bigr)&=0
+  \quad\text{if }S_f\ne\{p\}\text{ and }2^N\ge n,\\
   T\bigl(\Frob_n^{[h'_\varepsilon,N],\flat}\bigr)
    &\ge\sum_{q\in S_f}W_q\bigl(\Frob_n^{[h'_\varepsilon,N],\flat}\bigr)
    \ge\frac{(\log p)\,p^{-k/2}}{\varepsilon}.
@@ -1554,7 +1562,11 @@ $\Frob_n^{[h,N],\flat}$.
 \end{corollary}
 
 \begin{proof}
-(i) The first assertion is \eqref{eq:frobcontacteq}; a Radon measure on $I_n$
+(i) Every $h\in C_c^\infty(I_n)$ satisfies \eqref{eq:hsupport} for some
+$\varepsilon<\log n$, because its support is a compact subset of
+$(n^{-2},1)=(n^{-1}e^{-\log n},n^{-1}e^{\log n})$; so
+Theorem~\ref{thm:frobcontact} applies, and the first assertion is
+\eqref{eq:frobcontacteq}; a Radon measure on $I_n$
 is determined by its integrals against $C_c^\infty(I_n)$. Formula
 \eqref{eq:frobvolume} restates the computation in the proof of
 Theorem~\ref{thm:frobcontact}, with Lemma~\ref{lem:frobsupport}.
@@ -2534,9 +2546,10 @@ and on each of them it has the same density in $\tau$, concentrated at
 $|\tau|$ of order $1/\varepsilon$. The term $-\log(1/\varepsilon)$ then
 corresponds to
 $\widehat W_\infty(\theta,\tau)=-\log|\tau|+O(1)$ \cite[(46)]{Companion}.
-The sum over $s$ is the mean of the ramified values
-$\widehat W_s(\chi)=-\operatorname{cond}(\kappa_s)\log s$, $\kappa_s\ne1$, of
-\cite[(45)]{Companion}, where $\operatorname{cond}(\kappa_s)$ is the least
+The sum over $s$ is the mean, over all characters $\kappa_s$ of
+$\Z_s^\times/U_s$, of the values equal to the ramified values
+$\widehat W_s(\chi)=-\operatorname{cond}(\kappa_s)\log s$ of
+\cite[(45)]{Companion} for $\kappa_s\ne1$ and to $0$ for $\kappa_s=1$, where $\operatorname{cond}(\kappa_s)$ is the least
 $j\ge0$ such that $\kappa_s$ is trivial on $1+s^j\Z_s$, with
 $1+s^0\Z_s:=\Z_s^\times$: among the $(s-1)s^{N-1}$ characters of
 $\Z_s^\times/U_s$ there are $s-2$ with $\operatorname{cond}=1$ and

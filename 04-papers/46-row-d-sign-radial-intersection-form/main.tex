@@ -81,13 +81,17 @@ packages is due to L.~Alpoge and rests on his Lean formalisation; it has not
 yet been written out on paper in full. A companion paper gives a first
 written account of it: it proves the reductions, identifies which steps are
 known theorems re-proved in the formalisation, and states exactly the new
-statements taken from it. We also reduce the sign on all windows to positive
-semidefiniteness in every degree of a single sequence of explicit matrices,
-and on bounded windows we obtain quantitative estimates: for
-$T\le\tfrac12\log5$ the lower bounds on unit vectors are $10^{-18}$ for the
-complete form and $2.5\cdot10^{-12}$ for its primitive restriction, and a
-certificate using finite-height zero data gives an explicit positive lower
-bound up to $T=2.8022$.
+statements taken from it. We also show that the sign on all windows is
+equivalent to positive semidefiniteness in every degree of a single sequence
+of explicit matrices, and on bounded windows we obtain quantitative
+estimates: for $T\le\tfrac12\log5$ the lower bounds on unit vectors are
+$10^{-18}$ for the complete form and $2.5\cdot10^{-12}$ for its primitive
+restriction, unconditionally, by a computer-assisted proof in interval
+arithmetic; and for $T\le2.8022$ we prove the lower bound
+$e^{-120110026807}$ for the complete form, assuming the numerical
+verification that the zeros of $\zeta$ up to height $3\cdot10^{12}$ lie on
+the critical line and an explicit zero count, with the finite computations
+done in exact integer and interval arithmetic.
 \end{abstract}
 \maketitle
 \setcounter{tocdepth}{1}\tableofcontents
@@ -140,7 +144,15 @@ nontrivial zero on that line, and the zero expansion of Row~C gives
 a sum of absolute squares for every compactly supported smooth test.
 The quantitative Fourier estimates on
 fixed supports and the matrix criterion for arbitrary supports give
-two further descriptions of the same sign.
+two further descriptions of the same sign. On the windows
+$T\le\frac12\log5$ the lower bounds (Theorem~\ref{thm:log5W}) are
+unconditional and computer-assisted, the finite computations being done
+in interval arithmetic. On the windows $T\le2.8022$ we prove
+$W_T(F)\ge e^{-120110026807}\|F\|_2^2$ (Theorem~\ref{thm:power-window});
+this bound depends on three facts about the zeros of $\zeta$, among them
+the numerical verification that the zeros up to height $3\cdot10^{12}$ lie
+on the critical line, and its finite computations are done in
+exact integer and interval arithmetic.
 
 The estimates required by the criterion are supplied by a theorem of
 L.~Alpoge on the existence of families of column packages with uniform
@@ -665,7 +677,8 @@ if moreover $F$ is real and $\sum_\rho|\Phi_F(\rho)\Phi_F(1-\rho)|<\infty$ (in p
 $F\in C_c^\infty(\IT)$ is real), then $W_T(F)=\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$
 (Lemma~\ref{lem:roughEF} below).
 Consequently a certificate with $(\beta_0,\beta_1)=(2,0)$ and value $c$ proves $W_T\ge c$ on all
-of $L^2(\IT)$, and $\beta_0=2$ is the unique value of $\beta_0$ with this property.
+of $L^2(\IT)$; and $\beta_0=2$ is the only value for which
+$\frac1{2\pi}\int(\sT+\beta_0\gh0)|\Fh|^2=W_T(F)$ for every $F$ in the form domain.
 \end{proposition}
 \begin{proof}
 $\frac1{2\pi}\int\gh0|\Fh|^2=\int g_0\cF=\iint\cosh\frac{t-s}2F(t)\overline{F(s)}$ and
@@ -674,9 +687,10 @@ The identification of $W_T$ with the zero sum is the explicit formula for the au
 $\cF$, \cite{Weil52,Bombieri2000}, \cite[Theorem~3.3]{Paper45}, whose polar term is
 $2\Phi_F(0)\Phi_F(1)=2\Rel(A\bar B)$ for the real forms considered here. Uniqueness: for
 $\beta_0\ne2$, $\frac1{2\pi}\int(\sT+\beta_0\gh0)|\Fh|^2=W_T(F)+(\beta_0-2)\Rel(A\bar B)$, and
-$\Rel(A\bar B)$ takes both signs on the unit sphere of $L^2(\IT)$ (Lemma~\ref{lem:W}, witnesses
-$(1,\pm1,0,0)$), so no lower bound of the left side bounds $W_T$; the same argument with
-$\Rel(A'\bar B-A\bar B')$ forces $\beta_1=0$.
+$\Rel(A\bar B)$ is not identically zero on the form domain (it takes both signs on the unit sphere,
+Lemma~\ref{lem:W}, witnesses $(1,\pm1,0,0)$), so the identity fails; in the same way a term
+$\beta_1\gh1$ adds a multiple of $\Rel(A'\bar B-A\bar B')$, which is not identically zero, so the identity
+also forces $\beta_1=0$.
 \end{proof}
 
 \cite[Theorem~3.3]{Paper45} is stated for real $F\in C_c^\infty$. The first equality of
@@ -1132,7 +1146,11 @@ and the three-dimensional trial space of Corollary~\ref{cor:mono}
 gives (ii) with the prime comb omitted. Its upper bound tends to $C_0$.
 There are no prime contacts below $\tfrac12\log2$; strict positivity
 at that radius \cite{Yoshida1992} and (ii) give (iii)--(iv).
-See also \cite{Bombieri2000,ConnesConsani2021,Zhu2026}.
+Connes and Consani \cite{ConnesConsani2021} prove the positivity of the
+Weil functional on $g*g^*$ for test functions $g$ supported in
+$[2^{-1/2},2^{1/2}]$ whose Fourier transform vanishes at $i/2$ and at $0$;
+in the additive variable this is the window $T=\frac12\log2$.
+See also \cite{Bombieri2000,Zhu2026}.
 \end{proof}
 
 \begin{proposition}[nodal structure of $\PT$]\label{prop:nodes}
@@ -1465,7 +1483,7 @@ real minimizers have one strict sign. Apply (iii) and (ii).
 \section{Lower bounds on finite windows}\label{sec:log5}
 
 Let $T_5=\tfrac12\log5$. For $\tfrac12\log4<T\le T_5$ the
-contacts are $2,3,4$ and $\Aconst=2.94186\ldots$.
+contacts are $2,3,4$ and $\Aconst=2.94197\ldots$.
 For related radii and margins see \cite[Thm.~1.2]{Zhu2026}
 and \cite[Thms.~A, B]{Liu2026}.
 
@@ -1474,7 +1492,9 @@ At $T_5$ the even and odd primitive minima are at least
 $2.5\cdot10^{-12}$ and $3.0\cdot10^{-10}$ respectively.
 The complete even and odd minima are at least $10^{-18}$ and
 $10^{-16}$. For $0<T\le T_5$ one has $\lamA\ge2.5\cdot10^{-12}$,
-$\lamW\ge10^{-18}$ and $\mathfrak G_T\succ0$.
+$\lamW\ge10^{-18}$ and $\mathfrak G_T\succ0$. These bounds are
+unconditional; their proof is computer-assisted, the finite computations
+of \S\ref{subsec:encllog5} being done in interval (ball) arithmetic.
 \end{theorem}
 \begin{proof}
 In Proposition~\ref{prop:lowercert} use $c=0$ on the primitive spaces
@@ -1629,9 +1649,9 @@ complement by interval Cholesky. Inertia additivity gives one negative
 eigenvalue \cite{Haynsworth1968}.
 
 \emph{Data.} $T=\frac12\log5$, $\tau_N=240$, $c_*=193.13$, $k_1=280$, $k_2=330$ ($\dim E=140$ in each parity).
-From $m(\tau_N)=3.64276\ldots$: $s_\infty=0.700787608\ldots$, $\omega_+=9.0150$, $\omega_-=5.8839$,
-$\Lambda^*_{k_1}(c_*)\le4.4\cdot10^{-20}$, $\Lambda^*_{k_2}(c_*)\le3.9\cdot10^{-70}$, $q_Y\ge0.70079$, tail
-box $(\omega_++\omega_-)\Lambda^*_{k_2}(c_*)^{1/2}\le2.9\cdot10^{-34}$; the entry radii of $\mathsf R$ are at
+From $m(\tau_N)=3.64276\ldots$: $s_\infty=0.700787608\ldots$, $\omega_+=9.0150$, $\omega_-=5.8840$,
+$\Lambda^*_{k_1}(c_*)\le4.41\cdot10^{-20}$, $\Lambda^*_{k_2}(c_*)\le3.87\cdot10^{-70}$, $q_Y\ge0.70078$, tail
+box $(\omega_++\omega_-)\Lambda^*_{k_2}(c_*)^{1/2}\le2.94\cdot10^{-34}$; the entry radii of $\mathsf R$ are at
 most $4.4\cdot10^{-41}$. The verified cases are:
 \begin{center}\small
 \begin{tabular}{@{}llccc@{}}
@@ -1648,8 +1668,7 @@ $W_T$ ($c=\frac12$) & odd & $10^{-16}$ & $8.14\cdot10^{-14}$ & $10^{-14}$\\
 \subsection{The margin decays}\label{subsec:margin}
 An upper bound related to Zhu's conjectural law $-\log\lamW\asymp e^{2T}$ \cite[Conj.~12.1]{Zhu2026}, namely that
 the margin tends to $0$ at an explicit rate, can be proved from three facts about the zeros of $\zeta$.
-These are also the zero inputs of the subsequent window computation cited in
-\S\ref{subsec:power-window}.
+These are also the zero inputs of Theorem~\ref{thm:power-window}.
 \begin{itemize}
 \item[(Z1)] $\rho_1=\frac12+i\gamma_1$, $\gamma_1=14.134725141734\ldots$, is a simple zero on the critical line,
 and $\zeta$ has no non-trivial zero $\rho\ne\rho_1,\bar\rho_1$ with $|\Iml\rho|\le21$
@@ -1777,21 +1796,317 @@ $L^{\rm W}\le L^{\rm prim}\le L^{\rm A}$ in $[-\infty,0]$, since
 \eqref{eq:closedmargin} tends to zero. In particular \eqref{eq:target}
 is equivalent to $L^{\rm A}=0$.
 
-\subsection{A reported larger window and its inputs}\label{subsec:power-window}
-The extended window certificate gives, using (Z1)--(Z3) of \S\ref{subsec:margin},
+\subsection{The window $T\le2.8022$}\label{subsec:power-window}
+In this subsection we prove a lower bound on the window $T\le\frac{14011}{5000}$. Unlike
+Theorem~\ref{thm:log5W} it uses information about the zeros of $\zeta$, namely (Z1)--(Z3) of
+\S\ref{subsec:margin}, and in particular the numerical verification (Z2) that the zeros up to height
+$H_{\mathrm{PT}}=3\cdot10^{12}$ lie on the critical line. The idea is to apply the arithmetic expression
+of the form to a filtered copy of the test, whose transform is concentrated where the archimedean
+multiplier dominates the prime operator, and the zero expression to the remainder. Throughout,
+\[
+\begin{gathered}
+T_1=\tfrac{14011}{5000},\quad U=\tfrac{57}{20},\quad R=2014985964,\quad H=2673507086718,\quad b=13,\\
+M=9115062736,\quad d=M/2,\quad n_\chi=120122483651,\quad D=120110026806 .
+\end{gathered}
+\]
+The finite computations used below (the Schur comparison of Lemma~\ref{lem:pw-schur} and the scalar
+inequalities marked \emph{(computation)}) are reproduced in the notebook
+\texttt{positivity-radial-intersection-form.ipynb} accompanying the paper: the Schur comparison in exact
+integer arithmetic, the scalar inequalities in $192$-bit Arb ball arithmetic
+\cite{Johansson2017} with python-flint~0.9.0.
+
+\begin{theorem}[the window $T\le2.8022$]\label{thm:power-window}
+Assume (Z1)--(Z3). Then for every $0<T\le T_1=2.8022$ and every $F\in\mathcal D_T$,
 \begin{equation}\label{eq:power-window}
- W_T(F)\ge e^{-120110026807}\|F\|_2^2,
- \qquad 0<T\le\frac{14011}{5000}=2.8022,
+ W_T(F)\ge e^{-120110026807}\|F\|_2^2 .
 \end{equation}
-on the complete form domain with $\supp F\subset[-T,T]$.
-The polar term vanishes on $\PT$, giving the same bound for $\lamA$.
-The compact spectral filter isolates the first zero pair using (Z1),
-uses (Z2) to height $3\cdot10^{12}$, and bounds the tail by (Z3).
-With $U=57/20$, $H=2673507086718$, $R=2014985964$, $m=9115062736$,
-$b=13$, and filter order $120122483651$, the $17$ checks include the
-support, $2048$ continuous Schur rows, the mask and both correction tails.
-They were reproduced in $192$-bit Arb arithmetic with python-flint~0.9.0.
-Extension by zero gives the smaller radii.
+Consequently $\lamW\ge e^{-120110026807}$, and $\lamA\ge e^{-120110026807}$, for $0<T\le2.8022$.
+\end{theorem}
+
+(Z2) enters through the vanishing of the corrector of Lemma~\ref{lem:pw-zero} below for zeros of height at
+most $H_{\mathrm{PT}}$, and (Z1), (Z3) through the local count of Lemma~\ref{lem:pw-count}. The
+statement for $\lamA$ follows from that for $\lamW$ since $\lamW\le\lamA$.
+
+\begin{lemma}[a local zero count]\label{lem:pw-count}
+Assume (Z1) and (Z3). For every integer $j$ the number of non-trivial zeros $\rho$, counted with
+multiplicity, with $j\le\Iml\rho<j+1$ is at most $100\log(3+|j|)$.
+\end{lemma}
+\begin{proof}
+Put $N(t)=0$ for $t\le0$. We show $N(y+1)-N(y-1)\le100\log(3+y)$ for $y\ge0$. If $y+1<14.13$ the left
+side is $0$ by (Z1). Otherwise $y-1\ge12$, and (Z3) applies at $y\pm1$. With
+$f(t)=\frac t{2\pi}\log\frac t{2\pi e}$, $f'(t)=\frac1{2\pi}\log\frac t{2\pi}$ is increasing, so
+$f(y+1)-f(y-1)\le2f'(y+1)\le\frac1\pi\log(y+1)$, and the error term of (Z3) is increasing in $t\ge2$. Hence
+$N(y+1)-N(y-1)\le(\frac1\pi+0.274)\log(y+1)+0.886\log\log(y+1)+3.176\le100\log(3+y)$. For $j\ge0$ the
+interval $[j,j+1)$ lies in $(j-1,j+1]$; for $j<0$, conjugation maps the zeros with ordinate in $[j,j+1)$
+to those with ordinate in $(|j|-1,|j|]\subset(|j|-1,|j|+1]$, with multiplicities; there is no zero with
+ordinate $0$, by (Z1).
+\end{proof}
+
+\begin{lemma}[the zero side with a cutoff]\label{lem:pw-zero}
+Assume (Z1)--(Z3). Let $\nu_h$ be the uniform probability measure on $[-h,h]$ and
+$\chi=\mathbf 1_{[-8,8]}*\nu_{1/4}*\nu_{1/4}*\nu_{1/n_\chi}^{*n_\chi}$. For a non-trivial zero
+$\rho=\frac12+\delta+i\gamma$ put
+\[
+k_\rho(\tau)=\int_\R\chi(t)\big(\cosh(\delta t)-1\big)e^{i(\gamma-\tau)t}\,dt,\qquad
+\mathcal C(\tau)=\frac1{2\pi}\sum_\rho k_\rho(\tau).
+\]
+\emph{(i)} $k_\rho$ is real, $k_\rho=0$ when $\delta=0$, in particular when $|\gamma|\le H_{\mathrm{PT}}$, and the series
+defining $\mathcal C$ converges absolutely with $|\mathcal C(\tau)|\le10^9\log(3+|\tau|)$.
+\emph{(ii)} If $|\tau|\le H$, then $|\mathcal C(\tau)|<e^{-D-2}$.
+\emph{(iii)} For every real $F\in C_c^\infty(I_U)$,
+\[
+W_U(F)=\sum_\rho|\Fh(\gamma_\rho)|^2+\int_\R|\Fh(\tau)|^2\,\mathcal C(\tau)\,d\tau ,
+\]
+where $\gamma_\rho=\Iml\rho$ and the zero sum converges absolutely.
+\end{lemma}
+\begin{proof}
+The function $\chi$ is supported in $[-9.5,9.5]$, and $\chi=1$ on $[-6.5,6.5]\supset[-2U,2U]$. Its
+transform $\widehat\chi(z)=\int\chi(t)e^{izt}dt$ is the entire function
+\[
+\widehat\chi(z)=\frac{2\sin 8z}{z}\Big(\frac{\sin(z/4)}{z/4}\Big)^2\Big(\frac{\sin(z/n_\chi)}{z/n_\chi}\Big)^{n_\chi},
+\]
+and $k_\rho(\tau)=\frac12\big(\widehat\chi(s-i\delta)+\widehat\chi(s+i\delta)\big)-\widehat\chi(s)$ with $s=\gamma-\tau$;
+$k_\rho$ is real because $\chi$ and $\cosh(\delta t)-1$ are even. Since $0<\Rel\rho<1$, $|\delta|<\frac12$. For
+$z=x+iy$ one has $|\sin(hz)/(hz)|=|\frac12\int_{-1}^1e^{ihzw}dw|\le e^{h|y|}$, and also
+$|\sin(hz)/(hz)|\le e^{h|y|}/(h|x|)$; likewise $|2\sin(8z)/z|\le16e^{8|y|}$. For $|y|\le\frac12$ the
+exponents add up to at most $9.5/2$, and $\min(1,4/|x|)^2\le25(1+|x|)^{-2}$, so
+$|\widehat\chi(x+iy)|\le400\,e^{4.75}(1+|x|)^{-2}\min(1,n_\chi/|x|)^{n_\chi}$. Hence
+\[
+\frac{|k_\rho(\tau)|}{2\pi}\le10^5\,(1+|s|)^{-2}\min(1,n_\chi/|s|)^{n_\chi},\qquad s=\gamma-\tau,
+\]
+since $800e^{4.75}/(2\pi)<1.48\cdot10^4$. The zeros with $k\le|\gamma-\tau|<k+1$ ($k\ge0$ an integer) have
+ordinates in two intervals of length one, each meeting at most two intervals $[j,j+1)$ with
+$|j|\le|\tau|+k+1$; by Lemma~\ref{lem:pw-count} there are at most $400\log(4+|\tau|+k)$ of them. Therefore
+\begin{equation}\label{eq:pw-Csum}
+|\mathcal C(\tau)|\le\sum_\rho\frac{|k_\rho(\tau)|}{2\pi}\le4\cdot10^7\sum_{k\ge0}\frac{\log(4+|\tau|+k)}{(1+k)^2}\min\Big(1,\frac{n_\chi}k\Big)^{n_\chi}.
+\end{equation}
+(i) Bound the minimum by $1$ and use $\log(4+|\tau|+k)\le\log(3+|\tau|)+\log(2+k)$,
+$\sum_k(1+k)^{-2}<1.645$, $\sum_k\log(2+k)(1+k)^{-2}<1.801$ and $\log(3+|\tau|)\ge\log3$: the right side of
+\eqref{eq:pw-Csum} is at most $4\cdot10^7(1.645+1.801/\log3)\log(3+|\tau|)<1.4\cdot10^8\log(3+|\tau|)$. If
+$\delta=0$ the integrand of $k_\rho$ vanishes; by (Z2) this is the case for $|\gamma|\le H_{\mathrm{PT}}$.
+
+(ii) Let $|\tau|\le H$ and $\Delta=H_{\mathrm{PT}}-H$. Only zeros with $|\gamma|>H_{\mathrm{PT}}$ contribute, and
+for them $|\gamma-\tau|>\Delta$, so only $k\ge\Delta-1$ occurs in \eqref{eq:pw-Csum}. \emph{(Computation:)}
+$\Delta-1-2.718\,n_\chi>2717$. For $k\ge\Delta-1$ one has $4+H+k\le(3+H_{\mathrm{PT}})\,k/(\Delta-1)$ (equality at
+$k=\Delta-1$, and the right side grows faster), and $\log(XY)\le Y\log X$ for $X\ge e$, $Y\ge1$; so
+$\log(4+|\tau|+k)\le\log(3+H_{\mathrm{PT}})\,k/(\Delta-1)$. Also
+$(n_\chi/k)^{n_\chi}\le2.718^{-n_\chi}((\Delta-1)/k)^{n_\chi}$ and $(k/(\Delta-1))((\Delta-1)/k)^{n_\chi}\le1$.
+Summing $(1+k)^{-2}$ over $k\ge\Delta-1$ gives at most $1$, so
+$|\mathcal C(\tau)|\le4\cdot10^7\log(3+H_{\mathrm{PT}})\,2.718^{-n_\chi}$, and \emph{(computation)}
+$10^9\log(3+H_{\mathrm{PT}})\,2.718^{-n_\chi}<e^{-D-2}$.
+
+(iii) By Proposition~\ref{prop:P} and Lemma~\ref{lem:roughEF}, $W_U(F)=\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$,
+absolutely convergent; for real $F$, $\Phi_F(\rho)\Phi_F(1-\rho)=\int\cF(t)e^{(\delta+i\gamma)t}dt$. The
+multiset of zeros is invariant under $\rho\mapsto1-\bar\rho$ (functional equation and conjugation), which changes $\delta$ to $-\delta$ and fixes
+$\gamma$; averaging the two absolutely convergent expressions gives
+$W_U(F)=\sum_\rho\int\cF(t)e^{i\gamma t}\cosh(\delta t)\,dt$. As $\supp\cF\subset[-2U,2U]$ and $\chi=1$ there,
+\[
+\int\cF(t)e^{i\gamma t}\cosh(\delta t)\,dt=\int\cF(t)e^{i\gamma t}dt+\int\cF(t)e^{i\gamma t}\chi(t)\big(\cosh(\delta t)-1\big)dt
+=|\Fh(\gamma)|^2+\frac1{2\pi}\int|\Fh(\tau)|^2k_\rho(\tau)\,d\tau ,
+\]
+by $\cF(t)=\frac1{2\pi}\int|\Fh(\tau)|^2e^{-i\tau t}d\tau$ and Fubini. The sum $\sum_\rho|\Fh(\gamma)|^2$ converges
+since $\Fh$ decays rapidly on $\R$ and $N(t)=O(t\log t)$; by (i) and $\int\log(3+|\tau|)|\Fh|^2<\infty$, summation
+over $\rho$ and integration in $\tau$ may be interchanged.
+\end{proof}
+
+\begin{lemma}[Fourier leakage]\label{lem:pw-leak}
+Let $F\in L^2(\IT)$ and $\Omega>0$. Then
+\[
+\int_{|\tau|>\Omega}|\Fh|^2\,d\tau\ \ge\ \eta(T,\Omega)\int_\R|\Fh|^2\,d\tau,\qquad
+\eta(T,\Omega)=\frac1{1+(1+T\Omega)e^{2T\Omega+2}} .
+\]
+\end{lemma}
+\begin{proof}
+Put $l=1/T$, $A=\Omega+l$, $E_{\rm in}=\int_{|\tau|\le\Omega}|\Fh|^2$, $E_{\rm out}=\int_{|\tau|>\Omega}|\Fh|^2$,
+$\Fh^\#(z)=\overline{\Fh(\bar z)}$ and $K(z)=\int_{-l}^{l}\Fh(z+s)\Fh^\#(z+s)\,ds$. Since $F\in L^1$ is supported
+in $[-T,T]$, $K$ is entire and $|K(z)|\le2l\|F\|_1^2e^{2T|\Iml z|}$. For real $x$,
+$K(x)=\int_{x-l}^{x+l}|\Fh|^2\ge0$, and $K(x)\le E_{\rm out}$ if $|x|\ge A$. On the strip $|\Rel\theta|\le\frac\pi2$
+put $\phi(\theta)=K(A\sin\theta)e^{-2TA\cos\theta}$. With $\theta=\alpha+i\beta$,
+$\Rel\cos\theta=\cos\alpha\cosh\beta\ge|\cos\alpha\sinh\beta|=|\Iml\sin\theta|$, so $\phi$ is bounded; on the
+boundary lines $\sin\theta=\pm\cosh\beta$ is real of modulus at least $1$ and $\cos\theta$ is imaginary, so
+$|\phi|\le E_{\rm out}$ there. By the three lines theorem $|\phi|\le E_{\rm out}$ on the strip, hence
+$K(x)\le e^{2TA}E_{\rm out}$ for $|x|<A$. Each $\tau$ with $|\tau|\le\Omega$ lies in $[x-l,x+l]$ for all $x$ of
+an interval of length $2l$ inside $[-A,A]$, so
+$2lE_{\rm in}\le\int_{-A}^AK(x)\,dx\le2Ae^{2TA}E_{\rm out}$, i.e.\ $E_{\rm in}\le(1+T\Omega)e^{2T\Omega+2}E_{\rm out}$.
+\end{proof}
+
+\emph{The filter.} Put $v=\tau/H$, $r=R/H$ and
+\[
+u(\tau)=1-\Big(\frac{\sin v}{v}\Big)^2\Big(\frac{\cosh(b\sqrt{1-v^2})}{\cosh b}\Big)^2,\qquad
+a=r^2\Big(\frac13+\frac{2b}{1+\sqrt{1-r^2}}\Big),
+\]
+where $\cosh(b\sqrt{1-v^2})=\sum_k b^{2k}(1-v^2)^k/(2k)!$ is entire, so $u$ is an even entire function, real
+on $\R$. \emph{(Computation:)} $0.0000075739<a<0.0000075740$. Let $C_d$ be the Chebyshev polynomial,
+$C_d(\cos\theta)=\cos d\theta$, so $|C_d|\le1$ on $[-1,1]$ and $|C_d(x)|=\cosh(d\operatorname{arcosh}|x|)$ for
+$|x|\ge1$ ($d$ is even). Put
+\[
+h(s)=\frac{C_d(2s/a-1)}{C_d(2/a-1)},\qquad \kappa=C_d(2/a-1)^{-2}.
+\]
+The zeros $s_1,\dots,s_d$ of $h$ lie in $(0,a)$ and $h(1)=1$, so $h(s)=\prod_i(s-s_i)/(1-s_i)$ and, for
+$0\le y<1-\max_is_i$,
+\[
+\frac1{h(1-y)}=\prod_{i=1}^d\Big(1-\frac y{1-s_i}\Big)^{-1}=\sum_{j\ge0}c_jy^j,\qquad
+0\le c_j\le\binom{d+j-1}j(1-a)^{-j}\le\Big(\frac d{1-a}\Big)^j\le M^j ,
+\]
+by comparison with $(1-y/(1-a))^{-d}$; $c_0=1$. Put
+\[
+p(s)=h(s)\sum_{j=0}^{24}c_j(1-s)^j,\qquad \Theta(\tau)=p(u(\tau))^2,\qquad \mathsf J=25(2M)^{24},\qquad
+z=M\operatorname{sech}^2b .
+\]
+
+\begin{lemma}[the filter]\label{lem:pw-filter}
+\emph{(i)} $0\le u\le1$ on $\R$; $u\le a$ for $|\tau|\le R$; $u\ge\frac72a$ for $|\tau|\ge2R$; and
+$-\frac{b+2}{2H^2}\le u(\frac i2)\le0$.
+\emph{(ii)} $0\le\Theta\le1$ on $\R$, and $\Theta\le\kappa\mathsf J^2<1$ for $|\tau|\le R$.
+\emph{(iii)} $\Theta(\tau)\ge\frac\kappa4e^{M\operatorname{arcosh}6}$ for $|\tau|\ge2R$.
+\emph{(iv)} $z<1$, and $0\le1-\Theta(\tau)\le\frac{2z^{25}}{1-z}(H/|\tau|)^{50}$ for $|\tau|\ge H$.
+\emph{(v)} $p(u(\frac i2))^2\le\kappa\mathsf J^2\exp\big(M\operatorname{arcosh}\big(1+\frac{b+2}{H^2a}\big)\big)$.
+\emph{(vi)} If $F\in L^2(I_{T_1})$ and $F_1\in L^2(\R)$ is defined by $\widehat{F_1}=p(u)\Fh$, then
+$\widehat{F_1}(\tau)=p(u(\tau))\Fh(\tau)$, $\tau\in\C$, is entire and $\supp F_1\subset[-T_1-\sigma,T_1+\sigma]\subset I_U$, with
+$\sigma=(b+1)(M+48)/H$.
+\end{lemma}
+\begin{proof}
+(i) For $|v|\le1$ both factors of the product lie in $[0,1]$; for $|v|>1$,
+$\cosh(b\sqrt{1-v^2})=\cos(b\sqrt{v^2-1})$, so the product lies in $[0,\operatorname{sech}^2b/v^2]$. Hence
+$0\le u\le1$. For $X,Y\in[0,1]$, $1-XY\le(1-X)+(1-Y)$; here $1-(\sin v/v)^2\le v^2/3$ and, as
+$|(\log\cosh)'|\le1$, $1-Y\le-\log Y\le2b(1-\sqrt{1-v^2})=2bv^2/(1+\sqrt{1-v^2})$. Both bounds increase with
+$|v|$, so $u\le a$ for $|v|\le r$. On $2r\le|v|\le1$ the two unsquared factors are positive and decreasing in
+$|v|$, so $u$ increases, and \emph{(computation)} $u(2R)>\frac72a$; for $|v|\ge1$,
+$u\ge1-\operatorname{sech}^2b>\frac72a$. At $\tau=\frac i2$, $v=iy$ with $y=1/(2H)$, and
+$u(\frac i2)=1-(\sinh y/y)^2(\cosh(b\sqrt{1+y^2})/\cosh b)^2\le0$; as $\sinh y/y\le e^{y^2/6}$ and
+$\log\cosh(b\sqrt{1+y^2})-\log\cosh b\le b(\sqrt{1+y^2}-1)\le by^2/2$, $|u(\frac i2)|\le e^{(b+1)y^2}-1\le
+2(b+1)y^2\le\frac{b+2}{2H^2}$.
+
+(ii) For $0\le s\le a$, $|h(s)|\le\kappa^{1/2}$ and $|\sum_{j\le24}c_j(1-s)^j|\le\sum_{j\le24}M^j\le\mathsf J$, so
+$p(s)^2\le\kappa\mathsf J^2$, and $\kappa\le4e^{-M\operatorname{arcosh}(2/a-1)}$ gives $\kappa\mathsf J^2<1$ by
+(vii) below. For $a\le s\le1$, $y=1-s\in[0,1-a]$, $h(s)>0$, and $h(s)\sum_{j\ge0}c_jy^j=1$; as $c_j\ge0$ and
+$c_0=1$, $h(s)\le p(s)\le1$. With (i) this gives $0\le\Theta\le1$, and $\Theta\le\kappa\mathsf J^2$ where
+$u\le a$.
+
+(iii) For $|\tau|\ge2R$, $x=2u/a-1\ge6$, so $\Theta\ge h(u)^2=\kappa\cosh^2(d\operatorname{arcosh}x)\ge
+\frac\kappa4e^{2d\operatorname{arcosh}6}$.
+
+(iv) \emph{(Computation:)} $z<1$. For $|\tau|\ge H$, $u\ge a$ and $y=1-u\le\operatorname{sech}^2b/v^2$, so
+$My\le z/v^2<1$ and $1-p(u)=h(u)\sum_{j\ge25}c_jy^j\le\sum_{j\ge25}(My)^j\le\frac{z^{25}}{1-z}v^{-50}$; and
+$1-p^2\le2(1-p)$ for $0\le p\le1$.
+
+(v) Let $s_0=u(\frac i2)$. By (i), $2s_0/a-1\in[-1-\frac{b+2}{H^2a},-1]$, so
+$h(s_0)^2\le\kappa\cosh^2\big(d\operatorname{arcosh}(1+\frac{b+2}{H^2a})\big)\le\kappa
+e^{M\operatorname{arcosh}(1+\frac{b+2}{H^2a})}$; and $|1-s_0|\le2$ gives
+$|\sum_{j\le24}c_j(1-s_0)^j|\le\sum_{j\le24}(2M)^j\le\mathsf J$.
+
+(vi) For $\Iml v=y$, $|\sin v/v|\le e^{|y|}$, and if $w=\sqrt{1-v^2}$ then
+$(\Rel w)^2=\frac12\big(\Rel(1-v^2)+|1-v^2|\big)\le\frac12\big(1-(\Rel v)^2+y^2+1+|v|^2\big)=1+y^2$,
+so $|\cosh(bw)/\cosh b|\le2e^{b(\sqrt{1+y^2}-1)}\le2e^{b|y|}$. Hence
+$|u(\tau)|\le5e^{2(b+1)|\Iml\tau|/H}$, and since $p$ is a polynomial of degree $d+24$,
+$|p(u(\tau))|\le C_pe^{\sigma|\Iml\tau|}$. Also $|\Fh(\tau)|\le\|F\|_1e^{T_1|\Iml\tau|}$. So $\widehat{F_1}$ is entire
+of exponential type at most $T_1+\sigma$ and square integrable on $\R$ ($|p(u)|\le1$ there), and the
+Paley--Wiener theorem gives the support. \emph{(Computation:)} $T_1+\sigma=2.84993164043\ldots<U$.
+
+(vii) \emph{(Computation:)} $M\operatorname{arcosh}(2/a-1)=120110016805.59\ldots<D$, and $2\log\mathsf J<1141$.
+\end{proof}
+
+The radius enters only through (vi): with these parameters the support condition is
+$T<U-\sigma=\frac{74918843181703}{26735070867180}=2.80226835\ldots$, and $T_1$ is chosen below this value.
+
+\begin{lemma}[the prime operator]\label{lem:pw-schur}
+Let $\mathsf\Pi_U=Q_U\sum_{\log n<2U}\frac{\Lambda(n)}{\sqrt n}(V_{\log n}+V_{-\log n})Q_U$ on $L^2(I_U)$, so that the prime form at the window $U$ is
+$\Pi_U(G)=-\langle\mathsf\Pi_UG,G\rangle$ for $G\in L^2(I_U)$. Then $\|\mathsf\Pi_U\|<19.486$.
+\end{lemma}
+\begin{proof}
+Indeed $\langle V_{\log n}G,G\rangle+\langle V_{-\log n}G,G\rangle=2\Rel c_G(\log n)$, which gives the first
+statement. Divide $[-U,U]$ into $2048$ equal cells, numbered $0,\dots,2047$ from the left. For each prime
+power $q=\ell^k$ with $\log q<2U$ (so $q\le293$; there are $79$ of them) put
+\[
+o_q=\Big\lfloor\frac{2048\log q}{2U}\Big\rfloor,\qquad b_q=\Big\lceil10^8\frac{\log\ell}{\sqrt q}\Big\rceil .
+\]
+For positive weights $w_0,\dots,w_{2047}$ with $w_i=w_{2047-i}$, extended by $w_i=0$ for $i\ge2048$, put
+\[
+V_i=\sum_qb_q\max(w_{i+o_q},w_{i+o_q+1}),\qquad Y_i=V_i+V_{2047-i}.
+\]
+A point of cell $i$ translated by $\log q$ lies in cell $i+o_q$ or $i+o_q+1$, or outside $[-U,U]$;
+translations by $-\log q$ are reduced to these by the reflection $t\mapsto-t$, which maps cell $i$ to cell
+$2047-i$ and preserves the weights. Hence, for the step function $w$ equal to $w_i$ on cell $i$, the
+positive operator $\mathsf\Pi'_U$ obtained from $\mathsf\Pi_U$ by replacing $\Lambda(q)/\sqrt q$ with $10^{-8}b_q$
+satisfies $\mathsf\Pi'_Uw\le\max_i\frac{Y_i}{10^8w_i}\,w$ pointwise. By the Schur test, whose usual proof applies verbatim to a symmetric
+positive combination of translations, $\|\mathsf\Pi_U\|\le\|\mathsf\Pi'_U\|\le\max_iY_i/(10^8w_i)$. The weights
+are obtained from $w_i=10^7$ by seventy applications of
+\[
+v_i=18\cdot10^8w_i+Y_i,\qquad w_i\leftarrow1+\big\lfloor10^7v_i/\max_jv_j\big\rfloor,
+\]
+which preserve the symmetry. \emph{(Computation:)} with the final weights,
+$1000\,Y_i<19486\cdot10^8w_i$ for $0\le i<2048$; the largest quotient is $19.4853834\ldots$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:power-window}]
+\emph{Reductions.} By Lemma~\ref{lem:monoT} it suffices to take $T=T_1$. For real $F_r,F_i\in\mathcal D_{T_1}$
+the polarization of $W_{T_1}$ at $(F_r,F_i)$ is real and symmetric (the symbol $\sT$ is even, and the polar
+part polarizes to $A(F_r)B(F_i)+B(F_r)A(F_i)$), so $W_{T_1}(F_r+iF_i)=W_{T_1}(F_r)+W_{T_1}(F_i)$, while
+$\|F_r+iF_i\|^2=\|F_r\|^2+\|F_i\|^2$. By Lemma~\ref{lem:form-density} it therefore suffices to prove
+$W_{T_1}(F)\ge e^{-D}$ for real $F\in C_c^\infty(I_{T_1})$ with $\|F\|=1$, i.e.\
+$\frac1{2\pi}\int|\Fh|^2=1$. Define $F_1$ by $\widehat{F_1}=p(u)\Fh$. By Lemma~\ref{lem:pw-filter}(vi),(ii),
+$F_1$ is supported in $I_U$ and $|\widehat{F_1}|\le|\Fh|$ on $\R$; since $p$ has real coefficients and $u$ is
+real and even on $\R$, $\widehat{F_1}(-\tau)=\overline{\widehat{F_1}(\tau)}$; and $\Fh$ decays faster than any power on $\R$. So
+$F_1\in C_c^\infty(I_U)$ is real, and $|\widehat{F_1}|^2=\Theta|\Fh|^2$.
+
+\emph{The archimedean margin.} By Lemma~\ref{lem:mbounds}, $m(\tau)\ge m_{\rm lo}(R)$ for $|\tau|\ge R$ and
+$m\ge C_0$ on $\R$; \emph{(computation)} $m_{\rm lo}(R)-19.486>0.10000099$ and $C_0-19.486>-26$. Hence
+\begin{equation}\label{eq:pw-margin}
+m(\tau)-19.486\ \ge\ \tfrac1{10}\ \ (|\tau|\ge R),\qquad m(\tau)-19.486\ \ge\ -26\ \ (\tau\in\R).
+\end{equation}
+
+\emph{A lower bound for $W_U(F_1)$.} By Lemma~\ref{lem:pw-schur}, $\Pi_U(F_1)\ge-19.486\|F_1\|^2$, so
+\[
+\mathfrak a_U(F_1)\ge\frac1{2\pi}\int(m-19.486)\Theta|\Fh|^2 .
+\]
+Split the margin $\frac1{10}$ on $|\tau|\ge R$ into two halves; use one half on $|\tau|>H$ and the other on
+$|\tau|\ge2R$ (note $H>2R$), drop the nonnegative remainder on $R\le|\tau|<2R$, and use
+\eqref{eq:pw-margin} and Lemma~\ref{lem:pw-filter}(ii) on $|\tau|<R$. With
+Lemma~\ref{lem:pw-filter}(iii) and Lemma~\ref{lem:pw-leak} for $\Omega=2R$, $\eta=\eta(T_1,2R)$,
+\[
+\mathfrak a_U(F_1)\ge\frac1{40\pi}\int_{|\tau|>H}\Theta|\Fh|^2+\kappa\Big[\frac{\eta\,e^{M\operatorname{arcosh}6}}{80}-26\mathsf J^2\Big].
+\]
+The factor $80$ is $20\cdot4$: the half margin $\frac1{20}$ and the factor $\frac14$ of
+Lemma~\ref{lem:pw-filter}(iii). For the polar term, $A(F_1)=\widehat{F_1}(-\frac i2)$ and $B(F_1)=\widehat{F_1}(\frac i2)$,
+and $u$ is even, so $A(F_1)=p(u(\frac i2))A(F)$, $B(F_1)=p(u(\frac i2))B(F)$ with $p(u(\frac i2))$ real; and
+$|A(F)|^2,|B(F)|^2\le\int_{-T_1}^{T_1}e^{\pm t}dt\le e^{T_1}$ by Cauchy--Schwarz. By
+Lemma~\ref{lem:pw-filter}(v),
+\[
+2A(F_1)B(F_1)\ge-2e^{T_1}p(u(\tfrac i2))^2\ge-\kappa\,\mathsf K_{\rm pol},\qquad
+\mathsf K_{\rm pol}=4e^{T_1}\mathsf J^2\exp\Big(M\operatorname{arcosh}\Big(1+\frac{b+2}{H^2a}\Big)\Big).
+\]
+\emph{(Computation:)} $\log(\eta e^{M\operatorname{arcosh}6}/80)>536525$ (it suffices to bound $-\log\eta$ by
+$\log(2(1+2RT_1))+4RT_1+2$), $\log\mathsf K_{\rm pol}<1152$ and $2\log\mathsf J<1141$. Hence
+\begin{equation}\label{eq:pw-FW}
+W_U(F_1)\ge2\kappa+\frac1{40\pi}\int_{|\tau|>H}\Theta|\Fh|^2 .
+\end{equation}
+
+\emph{From $F_1$ to $F$.} Extension by zero changes neither the norm, the Tate moments nor the
+autocorrelation, and at the new contacts the autocorrelation vanishes (proof of Lemma~\ref{lem:monoT});
+hence $W_{T_1}(F)=W_U(F)$. Apply Lemma~\ref{lem:pw-zero}(iii) to $F$
+and to $F_1$, with $|\widehat{F_1}|^2=\Theta|\Fh|^2$, and subtract:
+\begin{equation}\label{eq:pw-identity}
+W_{T_1}(F)=W_U(F_1)+\sum_\rho\big(1-\Theta(\gamma_\rho)\big)|\Fh(\gamma_\rho)|^2+\int_\R\big(1-\Theta(\tau)\big)|\Fh(\tau)|^2\,\mathcal C(\tau)\,d\tau .
+\end{equation}
+The zero sum is nonnegative by Lemma~\ref{lem:pw-filter}(ii). On $|\tau|\le H$, $0\le1-\Theta\le1$ and
+Lemma~\ref{lem:pw-zero}(ii) bound the integrand below by $-e^{-D-2}|\Fh|^2$, so this part is at least
+$-2\pi e^{-D-2}$. On $|\tau|>H$, Lemma~\ref{lem:pw-filter}(iv) and Lemma~\ref{lem:pw-zero}(i) give
+\[
+(1-\Theta)|\mathcal C|\le\frac{2z^{25}}{1-z}\Big(\frac H{|\tau|}\Big)^{50}10^9\log(3+|\tau|)
+\le\frac{2z^{25}}{1-z}10^9\log(3+H_{\mathrm{PT}})<4.01\cdot10^{-8},
+\]
+since $t^{-50}\log(3+t)$ decreases for $t\ge H$ and \emph{(computation)} the last inequality holds. By
+Lemma~\ref{lem:pw-filter}(iv) also $1-\Theta<\frac12$ there, so $\frac1{40\pi}\Theta\ge\frac1{80\pi}>\frac1{1000}>4.01\cdot10^{-8}$ there, and the
+second term of \eqref{eq:pw-FW} absorbs this part of the integral. By \eqref{eq:pw-identity} and
+\eqref{eq:pw-FW},
+\[
+W_{T_1}(F)\ge2\kappa-2\pi e^{-D-2}.
+\]
+
+\emph{The count.} $\kappa=\cosh^{-2}(d\operatorname{arcosh}(2/a-1))\ge e^{-M\operatorname{arcosh}(2/a-1)}>e^{-D}$ by
+Lemma~\ref{lem:pw-filter}(vii), and $2\pi e^{-2}<1$. Hence $W_{T_1}(F)>2\kappa-e^{-D}>\kappa>e^{-D}$, which
+is stronger than \eqref{eq:power-window}.
+\end{proof}
 
 \section{Reduction to piecewise exponentials}\label{sec:coer}
 
@@ -2178,8 +2493,10 @@ These bounds also prove (iii).
 If $S_{T,k}$ is nonsingular, the change of variables in
 \eqref{eq:coer-schur} splits the primitive form into its coercive block
 and $S_{T,k}$. Thus its negative index is $n_-(S_{T,k})$ and its radical
-is zero. Compact resolvent excludes zero from the spectrum of either
-parity sector, so Theorem~\ref{thm:parityschur} gives
+is zero. The spectrum of $H_T$ is discrete (Lemma~\ref{lem:compact}), so
+zero could lie in it only as an eigenvalue, whose eigenvectors would lie in
+the radical; hence zero is not in the spectrum of either parity sector,
+and Theorem~\ref{thm:parityschur} gives
 $n_-(W_T)=n_-(S_{T,k})+n_-(\mathfrak G_T)$ and
 $n_0(W_T)=n_0(\mathfrak G_T)$. The size $2k-2$ counts blocks;
 crossing a contact varies the entries continuously at fixed $k$.
@@ -2266,21 +2583,55 @@ to complex tests by polarization of the real symmetric form, and to the
 form domain by core density (Lemma~\ref{lem:form-density}).
 \end{proof}
 
-The accompanying finite-order estimates give the following comparisons. For up to four distinct real exponents $a>1$ the matrix $K$ is positive
-definite. For up to thirteen real poles of rates
-$a-1/2\ge63/2$ the complete form exceeds $\|h\|_2^2/4000$ on nonzero
-rational Laplace data with proper numerator, including repeated poles. Proposition~\ref{ladder} requires the sign also
-when the degree grows without bound.
+The hypothesis of Proposition~\ref{ladder} concerns matrices of every
+size. Conversely, the sign on all windows forces the sign of all these
+matrices.
+
+\begin{proposition}[the converse]\label{prop:ladder-converse}
+If $W_T\ge0$ on $\mathcal D_T$ for every $T>0$, then for every $d\ge1$ and
+all $a_1,\dots,a_d>1$ the matrix $[K(a_j,a_k)]_{j,k=1}^d$ is positive
+semidefinite. In particular the matrices of Proposition~\ref{ladder} are
+positive semidefinite in every degree.
+\end{proposition}
+\begin{proof}
+The matrix is real and symmetric, so it suffices to show
+$\sum_{j,k}x_jx_kK(a_j,a_k)=\mathcal W[h]\ge0$ for real $x_j$ and
+$h=\sum_jx_jh_{a_j}$. Put $\alpha=\min_j a_j-\frac12>\frac12$, so
+$|h(y)|\le Ce^{-\alpha y}$ for $y>0$. For $R>0$ let $h_R=h\mathbf 1_{(0,R)}$,
+and let $F_R(t)=h_R(t+R/2)$, supported in $[-R/2,R/2]\subset I_T$ for
+$T=R/2+1$. The function $F_R$ is bounded with two jumps, so
+$|\widehat{F_R}(\tau)|=O(1/(1+|\tau|))$ and $F_R\in\mathcal D_T$. Translation
+by $R/2$ does not change $|\widehat{F_R}|$ or the autocorrelation, and
+multiplies $A$ and $B$ by $e^{-R/4}$ and $e^{R/4}$, so it does not change
+$A\bar B$; and $c_{F_R}(\log n)=0$ for $\log n\ge R$, so the contacts of $W_T$
+with $\log n\ge R$ and the prime powers outside $\NT$ contribute nothing.
+Hence $\mathcal W[h_R]=W_T(F_R)\ge0$. We let $R\to\infty$.
+(i) $h-h_R=\sum_jx_je^{-(a_j-1/2)R}h_{a_j}(\cdot-R)$, and each $h_{a}$ has
+$\int\log(2+|\tau|)|\widehat{h_a}|^2<\infty$ since
+$\widehat{h_a}(\tau)=(a-\frac12-i\tau)^{-1}$; as $|m(\tau)|\le C+\log(2+|\tau|)$,
+the archimedean term of $h_R$ tends to that of $h$.
+(ii) $A(h_{a}(\cdot-R))=e^{R/2}/(a-1)$ and $B(h_a(\cdot-R))=e^{-R/2}/a$, so
+$A(h-h_R)=O(e^{-(\min_ja_j-1)R})$ and $B(h-h_R)=O(e^{-\alpha R})$; the moments
+converge because every $a_j>1$.
+(iii) $|c_{h_R}(u)|\le\int_{y>|u|}C^2e^{-\alpha y}e^{-\alpha(y-|u|)}dy\le
+\frac{C^2}{2\alpha}e^{-\alpha|u|}$, and $c_{h_R}(u)\to c_h(u)$; since
+$\sum_nv_ne^{-\alpha\log n}=2\sum_n\Lambda(n)n^{-\min_ja_j}<\infty$, dominated
+convergence gives the convergence of the prime series.
+Hence $\mathcal W[h]=\lim_R\mathcal W[h_R]\ge0$.
+\end{proof}
+
 
 \begin{proposition}[the matrices in every degree]\label{prop:all-degree-gram}
-With the arithmetic input \eqref{eq:dirichlet-input}, let $a_j>1$
+Assume \eqref{eq:dirichlet-input}, that is, that $\zeta$ has no zero with
+$\Re s>\frac12$ (so that, by the functional equation, every nontrivial zero
+lies on the critical line). Let $a_j>1$
 and $u_j=a_j-\tfrac12$, $1\le j\le d$. Then, for $c_j\in\mathbb C$,
 \[
  \sum_{j,k=1}^d c_j\overline{c_k}K(a_j,a_k)
  =\sum_{\gamma}\left|\sum_{j=1}^d\frac{c_j}{u_j-i\gamma}\right|^2 .
 \]
 Here $\tfrac12+i\gamma$ ranges over the nontrivial zeros with multiplicity.
-In particular the hypothesis of Proposition~\ref{ladder} holds in every degree.
+In particular, under this assumption the hypothesis of Proposition~\ref{ladder} holds in every degree.
 \end{proposition}
 \begin{proof}
 By evenness the order-one Hadamard product pairs the zeros at $\pm i\gamma$
@@ -3282,8 +3633,10 @@ $x$ is \emph{large} if
  \log x\le u,\qquad 200(1+K)^2(1+c_{HH})(1+e_K)\le u .
 \end{equation}
 Finally the package is \emph{read from the host} $(D,N,\ell,T,a,w)$ along $\operatorname{tr}:U_0\to A$
-if $a_t$ and $w_{\omega,j,\rho}=w_{\operatorname{tr}\omega,j}(\rho)$ are the host
-values, $\gamma=\gamma_E$, $B=B_{\chi_d}$, and
+if the top index set is identified with $T$ (so $r=|T|$), $f=|\Phi|$ and a
+bijection $\{1,\dots,f\}\simeq\Phi$ is fixed, $a_t$ and
+$w_{\omega,j,\rho}=w_{\operatorname{tr}\omega,j}(\rho)$ (with $\rho\in\Phi$ through that
+bijection) are the host values, $\gamma=\gamma_E$, $B=B_{\chi_d}$, and
 $P_*(\omega)=\sum_{t\in T}\sum_jP(a_t,t,w_{\operatorname{tr}\omega,j})$.
 \end{definition}
 
@@ -3294,14 +3647,16 @@ separate argument: Input~A is the frame slope inequality
 proved in \cite{Annex}.
 
 \begin{definition}[Input A: frame slope inequality]\label{inp:F}
-For every $\omega$, all $0\le\delta<1$, $\eta\ge0$, $0\le e\le1/4$ and
-$H>0$ with $s_\omega-\mu^\vee_{\min}\le H$,
+For every $\omega$, with the package values $\delta=\delta_0(\omega)$,
+$\eta=\eta(\omega)$, $e=e(\omega)$ and $H=H(\omega)$,
 \[
  s_\omega-\log|I_\omega|-(1-\delta)^{-1}
  \Bigl(4\bar u_\omega\log\Bigl(1+\frac H{\bar u_\omega}\Bigr)+(\eta+4\sqrt e)H\Bigr)\le\mu^\vee ,
 \]
-with $\delta=\delta_0(\omega)$, $\eta=\eta(\omega)$, $e=e(\omega)$, $H=H(\omega)$
-in the package.
+where $\bar u_\omega\log(1+H/\bar u_\omega)$ is read as $0$ if $\bar u_\omega=0$.
+These values are admissible for Theorem~\ref{thm:frameF}: by (P0) and (P10),
+$0\le\delta<1$, $\eta\ge0$ and $0\le e\le1/4$, and by (P9), $H>0$ and
+$s_\omega-\mu^\vee_{\min}\le H$.
 \end{definition}
 
 \begin{definition}[Input B: loss bound]\label{inp:loss}
@@ -3446,8 +3801,7 @@ where $M_{\rm Lo}=c_{\rm sl1}\mathrm{LoP}+c_{\rm sl1}rm(a/k+b')c_{\rm count}mL+c
 \begin{proof}
 \emph{Step 1 (the gain).} By Lemma~\ref{lem:key-identity},
 $K_5=M_*+K_0$ with $K_0=Ac_{\rm count}(L_a+m^2L_a/k)+E_{\rm div}+mc_EB_0+c_{\rm slope}raL_a(1+m/k)$.
-By (P10), (P9) and (P0) the hypotheses of Input~A hold with the package values
-of $\delta_0,\eta,e,H$, so
+By (P8) (Input~A, at the package values of $\delta_0,\eta,e,H$),
 $s\le\log|I|+\mu^\vee+(1-\delta_0)^{-1}(4\bar u\log(1+H/\bar u)+(\eta+4\sqrt e)H)$.
 Combining with Lemma~\ref{lem:s-lower},
 \[
@@ -3755,8 +4109,10 @@ Section E: the definition of ``chain-tied''
 the families constructed there are chain-tied is the core link
 \cite[Proposition~\ref{A-i4:Lprop-fam}(c)]{Annex}, which is formally verified
 and not proved in writing (\S\ref{inp:ssec-status}(c)). The conditions
-(P0), (P2), (P3), (P5), (P6), (P9), (P10), and the verification that the
-data satisfy (P8), are part of that statement. Second, the condition
+(P0), (P2), (P3), (P5), (P6), (P9), (P10) are part of that statement. The
+frame bound $\mathrm{FrameF}(C_H)$ for the columns, from which (P8) is obtained,
+is one of the items of \cite[Proposition~\ref{A-i4:Lprop-fam}(b)]{Annex},
+also formally verified, and enters the core link as a hypothesis. Second, the condition
 labels (P1)--(P11), (M1)--(M7) and so on that occur inside individual
 proofs of \cite{Annex} are local lists and have nothing to do with
 Definition~\ref{def:package}.
@@ -5146,9 +5502,10 @@ $F\in\mathcal D_T$,
 \]
 so $0\le\lambda^{\rm W}_T\le\lambda_{\rm A}(T)$ for every $T>0$, and
 $I_\infty(\Gamma_F,\Gamma_F)\le0$ for smooth primitive tests of arbitrary
-support. In particular the positivity established numerically in
-Section~\ref{sec:log5} for $T\le2.8022$ holds, in the form
-$\lambda^{\rm W}_T\ge0$, on every window $(-T,T)$.
+support. In particular the positivity proved in Theorem~\ref{thm:log5W}
+for $T\le\frac12\log5$, and in Theorem~\ref{thm:power-window} for
+$T\le2.8022$ under (Z1)--(Z3), holds, in the form $\lambda^{\rm W}_T\ge0$,
+on every window $(-T,T)$.
 \end{corollary}
 \begin{proof}
 Corollary~\ref{cor:obligation} gives, for every $1/2<\theta<1$, a constant

@@ -290,7 +290,9 @@ sum over the zeros is evaluated as $-4m_0+O(4^{-N})$, where $m_0$ is the
 multiplicity of $\rho_0$; we make no claim that these points are new.  The
 functions $F_\pm$ necessarily have large support: if $F$ is primitive and
 $F\star F^\dagger$ vanishes outside $(-\log2,\log2)$, then
-$\Il(\Gamma_F,\Gamma_F)\le0$ unconditionally (Remark~\ref{rem:support}).
+$\Il(\Gamma_F,\Gamma_F)\le0$, without any hypothesis on the zeros, by
+\cite[Theorem~1]{Yoshida}, whose proof is in part numerical
+(Remark~\ref{rem:support}).
 
 \begin{theorem}[Theorems~\ref{thm:radical} and~\ref{thm:radicallim},
 Proposition~\ref{prop:radicallim}]
@@ -1217,7 +1219,9 @@ $\mp i(|S_f|+1)$ in the variable $\tau$; this is
 \end{equation}
 The poles of $A$ are $s=0$ and $s=1$, which are simple with residue $1$, and
 the zeros $\rho$ of $\xi$, which are simple poles of $A$ with residue
-$-m_\rho$, where $m_\rho$ is the multiplicity of $\rho$.
+$-m_\rho$, where $m_\rho$ is the multiplicity of $\rho$.  In particular
+$A$ is holomorphic at $s=-2,-4,\dots$: there the residue $+1$ of $a$ cancels
+the residue $-1$ of $-\zeta'/\zeta$ at the trivial zeros of $\zeta$.
 \item[(ii)] Let $h\in C_c^\infty(\R)$ be even.  For every chart $S$ and every
 $b>0$,
 \begin{equation}
@@ -1748,7 +1752,9 @@ $k(0)$ are unchanged when $k$ is replaced by $k^-$.  So
 $I^{(c)}_{\lim}(\Gamma_{h^-},\Gamma_g)=I^{(c)}_{\lim}(\Gamma_h,\Gamma_{g^-})=0$.
 Since $\Phi_{h^-}(s)=\Phi_h(1-s)$ by Lemma~\ref{lem:testfn}(ii), Step~3 for
 $h^-$ gives $\Phi_h(1)=0$, and $\Phi_h(\rho)=0$ for every zero $\rho$ with
-$\Rel\rho>0$.  Finally let $\rho$ be a zero with $\Rel\rho=0$.  Then
+$\Rel\rho>0$.  Finally let $\rho$ be a zero with $\Rel\rho=0$; there is no such zero,
+since $\zeta$ does not vanish on $\Rel s=1$, but the case is treated so
+that the argument does not depend on this fact.  Then
 $1-\rho$ is a zero with $\Rel(1-\rho)=1>0$, and Step~3 for $h$, applied to
 the zero $1-\rho$, gives $\Phi_h(\rho)=0$.
 \end{proof}
