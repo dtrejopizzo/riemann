@@ -7,7 +7,7 @@ Weil form and combining it with prime-side moments. A corpus search found that
 the first half is already done, and better, and that the second half runs into
 one of our own recorded no-gos:
 
-- **`04-papers/18-localized-weil-krein-index/`** already proves the signature
+- **`04-papers/18-localized-weil-form-even-test-functions/`** already proves the signature
   reading — off-line zeros contribute a Lorentzian `u^2-v^2` through an off-axis
   evaluation functional, on-line zeros the nonnegative square `fhat(gamma)^2` —
   and goes further, to the **exact count** `kappa = 2m` via de Branges'
@@ -57,7 +57,7 @@ written down.
 ## Step 1 — inventory what is already proved (no new mathematics)
 
 Before anything else, read and summarise in one document:
-`04-papers/18-localized-weil-krein-index/` (the signature reading, `kappa = 2m`,
+`04-papers/18-localized-weil-form-even-test-functions/` (the signature reading, `kappa = 2m`,
 the three obstruction theorems), `phase-44/131,132` (the MW walls; `K_off`
 Witt-trivial), `phase-51/160,161` (canonical metrics carry zeta),
 `phase-52/162` (secondary homotopy inertia; zeta re-enters via the carrier
@@ -114,7 +114,7 @@ Three outcomes:
   ceiling permanently, and its candid scope is unconditional zero counting. That
   belongs in the ledger beside the scalar no-go, `c_N < 1`, and MW-1.
 
-Existing starting points: `04-papers/04-davenport-heilbronn-null/` and
+Existing starting points: `04-papers/04-davenport-heilbronn-partial-sums/` and
 `phase-47/146` (which already asked whether DH's off-line zeros are fat or
 sub-resolution).
 

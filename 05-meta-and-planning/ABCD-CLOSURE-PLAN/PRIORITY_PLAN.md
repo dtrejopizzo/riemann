@@ -27,7 +27,7 @@ Working sources the executor should load, without re-reading the whole corpus:
 | Duality and contacts | [A_DUALITY_WORK.md](../../03-research/phase-123-weil-strength-abc/A_DUALITY_WORK.md): read the relevant headers and the later corrections. Contains derived contacts, transport of the unit, strong-dual obstruction, and profiles. |
 | Metric | [A_MIXED_METRIC_WORK.md](../../03-research/phase-123-weil-strength-abc/A_MIXED_METRIC_WORK.md): analytic determinants available; the geometric map and the comparison with rulings are missing. |
 | Sign law | [Closure 120](../../03-research/phase-120-global-polarization/PHASE_120_CLOSURE.md), [P122.008](../../03-research/phase-122-row-d-integrity-and-construction/P122_008_PHASE121_LOAD_BEARING_AUDIT.md), [P122.028](../../03-research/phase-122-row-d-integrity-and-construction/P122_028_TWO_PRIME_FINITE_GREEN_COMPLEX.md): signed identity, detectors, and an arrow that is still open. |
-| Li alternative | [Restart frontier](../RH-MASTER-CONTEXT/LIVE_FRONTIER_AND_RESTART_PLAN.md), papers [37](../../04-papers/37-death-of-the-positivity-family/main.tex) and [38](../../04-papers/38-li-fir-stability/main.tex): one-sided target and the limits of the filters. |
+| Li alternative | [Restart frontier](../RH-MASTER-CONTEXT/LIVE_FRONTIER_AND_RESTART_PLAN.md), papers [37](../../04-papers/37-limits-of-the-positivity-family/main.tex) and [38](../../04-papers/38-li-fir-stability/main.tex): one-sided target and the limits of the filters. |
 
 The old indexes guide searches; a later specific correction prevails over their labels. Do not repeat the existing certificates or contact computations unless their entries, their category, or the hypothesis intended for use change.
 

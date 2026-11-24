@@ -32,4 +32,4 @@ on zero-side attacks.
 `phase-5-structural` (Route B, milestones M1–M5) builds directly on this phase's Kreĭn template and
 no-go theorem, comparing it to the Connes–Consani and de Branges frameworks. The folder name
 `phase-4-handoff` is historical. The results are written up in Paper 08
-([`../../04-papers/08-weil-krein-realization/`](../../04-papers/08-weil-krein-realization/)).
+([`../../04-papers/08-krein-space-weil-form/`](../../04-papers/08-krein-space-weil-form/)).

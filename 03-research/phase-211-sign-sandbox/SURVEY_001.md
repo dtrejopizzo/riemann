@@ -303,31 +303,31 @@ Arakelov, Deligne, Laumon, F₁, arithmetic site" family. Nothing new for a_T.
 
 ## Top 10 reusable items for the sign problem (ranked)
 
-1. **Paper 26, `04-papers/26-weil-toeplitz-logistic-criterion/main.tex`** — the Weil–Toeplitz
+1. **Paper 26, `04-papers/26-weil-toeplitz-algebra-logistic-identity/main.tex`** — the Weil–Toeplitz
    C*-algebra / corona symbol apparatus (bounded field over ℕ, ideal J≅c₀, corona W/J, symbol σ(Q),
    Cesàro-vs-norm states; `cor:master-quantifier`, `thm:fat`/`thm:thin`/`thm:strict`). Directly on
    point for the Toeplitz-in-log(m/k) matrix of problem (S); never used in Papers 46–48.
 2. **Paper 38, `38-li-fir-stability/main.tex`** — the adjacent-window coercivity inequality
    |H_L|²+|H_{L+1}|² ≥ ½|z|^{2L} and the "no blind spot" bank construction. A concrete model for an
    adjacent-(T,k)-pair coercivity argument on S_{T,k}, S_{T,k+1}, not attempted in Paper 46.
-3. **Paper 39, `39-cofinal-weil-summability/main.tex`** — the exact fixed-cutoff transport-defect
+3. **Paper 39, `39-cofinal-weil-quotients/main.tex`** — the exact fixed-cutoff transport-defect
    formula (two rank-one channels + double-operator-integral correction) and the Cauchy-transform
    formula for the second-resolvent trace between successive quotients. A candidate exact tool for the
    S_{T,k} → S_{T,k+1} transfer that Paper 46 currently only bounds abstractly (‖K‖ not controlled
    uniformly in T).
-4. **Paper 07, `07-localized-weil-detector/main.tex`**, `thm:trunc` — unconditional PNT-only bound
+4. **Paper 07, `07-localized-weil-form-hermite-gauss/main.tex`**, `thm:trunc` — unconditional PNT-only bound
    η(X) ≤ A·exp(−α(log X)²) on the error of truncating the prime sum at X. Usable as an explicit margin
    estimate for passing between contacts in S_{T,k(T)}.
-5. **Paper 22, `22-moment-rigidity-criterion/main.tex`** — the Carleman-determinacy moment-rigidity
+5. **Paper 22, `22-moment-rigidity-meixner-pollaczek/main.tex`** — the Carleman-determinacy moment-rigidity
    argument (triangularity + Carleman's condition + Hardy's theorem) applied to an explicit nonnegative
    measure ν. A genuinely different machine from Schur/SOS/flat-top certificates; untried on the
    measure attached to s_T or to Near_M of problem (S).
-6. **Paper 15, `15-finite-to-full-uniformity/main.tex`**, `thm:crit` — criterion for when eventual
+6. **Paper 15, `15-eventual-versus-uniform-positivity/main.tex`**, `thm:crit` — criterion for when eventual
    (finite-order) positivity upgrades to uniform (all-order) positivity, via finite-type or
    bounded-threshold hierarchies. Never checked against the T-indexed tower S_{T,k}; could in
    principle show (L2) at increasing T is of bounded-threshold type, bypassing a window-by-window
    argument.
-7. **Paper 24, `24-trace-measure-criterion/main.tex`** — the dominance-measure construction
+7. **Paper 24, `24-trace-measure-reformulations/main.tex`** — the dominance-measure construction
    R(s)=|ζ/ζ_on|²≥1 and its eight equivalent reformulations; structurally parallel to the
    Arch_M − Div_M − Near_M decomposition of (S) (difference of two nonnegative objects, trivial
    nonnegativity, hard part is completeness/correlation). Analogy only, not a ready tool.

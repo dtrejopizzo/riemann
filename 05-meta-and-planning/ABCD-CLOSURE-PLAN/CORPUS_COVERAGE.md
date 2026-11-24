@@ -37,43 +37,43 @@ The assigned functions are planning decisions based on indices and excerpts, not
 | [01-critical-line-survey](../../04-papers/01-critical-line-survey/main.tex) | 1245 | Historical bibliographic map; verify dates and sources before reuse. | `b94222f7f1c3b81d` |
 | [02-omega-class-decomposition](../../04-papers/02-omega-class-decomposition/main.tex) | 1073 | Omega decomposition; side resource, no automatic bridge to D. | `bdf6445d69f012f2` |
 | [03-sign-interclass-interference](../../04-papers/03-sign-interclass-interference/main.tex) | 351 | Sign correction in interference; control discipline. | `5531de3b7822f524` |
-| [04-davenport-heilbronn-null](../../04-papers/04-davenport-heilbronn-null/main.tex) | 1198 | Davenport–Heilbronn control and finite observation limits. | `0af3a3ad82321c33` |
-| [05-omega-hierarchy-chaos](../../04-papers/05-omega-hierarchy-chaos/main.tex) | 491 | Chaos/omega dictionary; independent resource, not a closure premise. | `f20a9c6938f60a84` |
-| [06-why-rh-resists](../../04-papers/06-why-rh-resists/main.tex) | 335 | Mechanism classifier; use as heuristic, not a universal veto. | `b9662b45ae5ec64b` |
-| [07-localized-weil-detector](../../04-papers/07-localized-weil-detector/main.tex) | 522 | Localized detector and truncation; audit before reuse in C/D. | `f9ac5ced085f1a47` |
-| [08-weil-krein-realization](../../04-papers/08-weil-krein-realization/main.tex) | 628 | Krein realization; check semiboundedness hypotheses and domains. | `3bef955560eee14e` |
+| [04-davenport-heilbronn-partial-sums](../../04-papers/04-davenport-heilbronn-partial-sums/main.tex) | 1198 | Davenport–Heilbronn control and finite observation limits. | `0af3a3ad82321c33` |
+| [05-omega-hierarchy-zeta-function](../../04-papers/05-omega-hierarchy-zeta-function/main.tex) | 491 | Chaos/omega dictionary; independent resource, not a closure premise. | `f20a9c6938f60a84` |
+| [06-positivity-formulations-function-field-analogy](../../04-papers/06-positivity-formulations-function-field-analogy/main.tex) | 335 | Mechanism classifier; use as heuristic, not a universal veto. | `b9662b45ae5ec64b` |
+| [07-localized-weil-form-hermite-gauss](../../04-papers/07-localized-weil-form-hermite-gauss/main.tex) | 522 | Localized detector and truncation; audit before reuse in C/D. | `f9ac5ced085f1a47` |
+| [08-krein-space-weil-form](../../04-papers/08-krein-space-weil-form/main.tex) | 628 | Krein realization; check semiboundedness hypotheses and domains. | `3bef955560eee14e` |
 | [09-stable-arithmetic-fingerprints](../../04-papers/09-stable-arithmetic-fingerprints/main.tex) | 226 | Stability of local data; useful for errors and controls. | `6d194087696b6924` |
-| [10-anatomy-local-invariant](../../04-papers/10-anatomy-local-invariant/main.tex) | 500 | Recoverable arithmetic information; possible fidelity control in B/C. | `379f2d4d9502c7d1` |
-| [11-pontryagin-index-finite-defect](../../04-papers/11-pontryagin-index-finite-defect/main.tex) | 205 | Finite defect; archive of limits of this strategy. | `da93c84eda388333` |
+| [10-localized-weil-anatomy-l-functions](../../04-papers/10-localized-weil-anatomy-l-functions/main.tex) | 500 | Recoverable arithmetic information; possible fidelity control in B/C. | `379f2d4d9502c7d1` |
+| [11-offline-zeros-pontryagin-index](../../04-papers/11-offline-zeros-pontryagin-index/main.tex) | 205 | Finite defect; archive of limits of this strategy. | `da93c84eda388333` |
 | [12-band-limited-weil-carleson](../../04-papers/12-band-limited-weil-carleson/main.tex) | 318 | Finite–global bridge and saturation; quantifier control in D. | `d74d4064491811c5` |
-| [13-heat-flow-lyapunov](../../04-papers/13-heat-flow-lyapunov/main.tex) | 247 | Heat flow; do not import monotonicity as an initial sign. | `5c0da9f55c2039d4` |
-| [14-modern-routes-wrong-sign](../../04-papers/14-modern-routes-wrong-sign/main.tex) | 252 | Hodge/hyperbolicity reformulations; review exact scope. | `26c117fef0b0eacb` |
-| [15-finite-to-full-uniformity](../../04-papers/15-finite-to-full-uniformity/main.tex) | 383 | Tower uniformity; candidate tools for limits, under hypotheses. | `5898b0f6da7b0ad4` |
-| [16-unconditional-finite-bottom](../../04-papers/16-unconditional-finite-bottom/main.tex) | 369 | Unconditional partial bounds; do not replace the sign of D. | `54adc4cfea9416b4` |
-| [17-lefschetz-dichotomy](../../04-papers/17-lefschetz-dichotomy/main.tex) | 482 | Lefschetz obstruction in the declared class; check before the classical control. | `de5bb79557f29e55` |
-| [18-localized-weil-krein-index](../../04-papers/18-localized-weil-krein-index/main.tex) | 794 | Krein index and detectors; resource for D diagnosis. | `e5c7e11fb42314b0` |
+| [13-offline-mass-de-bruijn-newman-flow](../../04-papers/13-offline-mass-de-bruijn-newman-flow/main.tex) | 247 | Heat flow; do not import monotonicity as an initial sign. | `5c0da9f55c2039d4` |
+| [14-hodge-index-hyperbolicity-reformulations](../../04-papers/14-hodge-index-hyperbolicity-reformulations/main.tex) | 252 | Hodge/hyperbolicity reformulations; review exact scope. | `26c117fef0b0eacb` |
+| [15-eventual-versus-uniform-positivity](../../04-papers/15-eventual-versus-uniform-positivity/main.tex) | 383 | Tower uniformity; candidate tools for limits, under hypotheses. | `5898b0f6da7b0ad4` |
+| [16-second-moment-identity-zero-sums](../../04-papers/16-second-moment-identity-zero-sums/main.tex) | 369 | Unconditional partial bounds; do not replace the sign of D. | `54adc4cfea9416b4` |
+| [17-sl2-triple-hard-lefschetz-analogy](../../04-papers/17-sl2-triple-hard-lefschetz-analogy/main.tex) | 482 | Lefschetz obstruction in the declared class; check before the classical control. | `de5bb79557f29e55` |
+| [18-localized-weil-form-even-test-functions](../../04-papers/18-localized-weil-form-even-test-functions/main.tex) | 794 | Krein index and detectors; resource for D diagnosis. | `e5c7e11fb42314b0` |
 | [19-arithmetic-defect-offline-zeros](../../04-papers/19-arithmetic-defect-offline-zeros/main.tex) | 515 | Inertia and off-line defect; keep quadruple normalization. | `f0fcd9cc8f949fe2` |
 | [20-herglotz-criterion](../../04-papers/20-herglotz-criterion/main.tex) | 267 | Herglotz criterion; alternative target, not a positivity theorem. | `1e8864ee41f45273` |
-| [21-omega-information-barrier](../../04-papers/21-omega-information-barrier/main.tex) | 530 | Omega information barrier; do not confuse statistics and sign. | `096243c5fb3d6b73` |
-| [22-moment-rigidity-criterion](../../04-papers/22-moment-rigidity-criterion/main.tex) | 753 | Moment rigidity; alternative criterion subject to hypotheses. | `57fb968fc6e801ae` |
-| [23-ccm-jacobi-incidence-equivalence](../../04-papers/23-ccm-jacobi-incidence-equivalence/main.tex) | 471 | Incidence/Jacobi; realization resource, requires correct identification. | `95e65e08cffbb03d` |
-| [24-trace-measure-criterion](../../04-papers/24-trace-measure-criterion/main.tex) | 359 | Measure/trace; review which statements are criteria and which are proofs. | `981064569bfcc267` |
-| [25-bridge-theorem](../../04-papers/25-bridge-theorem/main.tex) | 558 | Bridge between indices; import only after revalidating domains. | `1bd61b908ef83350` |
-| [26-weil-toeplitz-logistic-criterion](../../04-papers/26-weil-toeplitz-logistic-criterion/main.tex) | 1715 | Weil–Toeplitz geometry; review the directions of the equivalences. | `5c77f78b97a1dcef` |
-| [27-exhaustion-1d-propagation](../../04-papers/27-exhaustion-1d-propagation/main.tex) | 544 | One-dimensional propagation; no-go limited in scope to its mechanisms. | `241b63d011ae726d` |
-| [28-amplification-survivor](../../04-papers/28-amplification-survivor/main.tex) | 541 | Amplification; archive of routes and their pending estimates. | `89b18d73b4b4a304` |
-| [29-master-quantifier](../../04-papers/29-master-quantifier/main.tex) | 451 | Average/uniform quantifiers; permanent closure control. | `b8585cfb13c8709f` |
-| [30-two-lemma-architecture](../../04-papers/30-two-lemma-architecture/main.tex) | 438 | Finiteness plus rigidity; alternative, not a mandatory A–D dependency. | `02085b96bfd65d86` |
-| [31-curvature-lp-synthesis](../../04-papers/31-curvature-lp-synthesis/main.tex) | 570 | Curvature/LP; other coordinates of the sign. | `ab747ebbca01fee5` |
-| [32-stepanov-band](../../04-papers/32-stepanov-band/main.tex) | 527 | Stepanov result; do not extend to the single-line version without proof. | `f601e6a54d634fc0` |
+| [21-logarithmic-sums-q-omega](../../04-papers/21-logarithmic-sums-q-omega/main.tex) | 530 | Omega information barrier; do not confuse statistics and sign. | `096243c5fb3d6b73` |
+| [22-moment-rigidity-meixner-pollaczek](../../04-papers/22-moment-rigidity-meixner-pollaczek/main.tex) | 753 | Moment rigidity; alternative criterion subject to hypotheses. | `57fb968fc6e801ae` |
+| [23-jacobi-operators-prime-sum-potential](../../04-papers/23-jacobi-operators-prime-sum-potential/main.tex) | 471 | Incidence/Jacobi; realization resource, requires correct identification. | `95e65e08cffbb03d` |
+| [24-trace-measure-reformulations](../../04-papers/24-trace-measure-reformulations/main.tex) | 359 | Measure/trace; review which statements are criteria and which are proofs. | `981064569bfcc267` |
+| [25-weil-form-scaling-operator](../../04-papers/25-weil-form-scaling-operator/main.tex) | 558 | Bridge between indices; import only after revalidating domains. | `1bd61b908ef83350` |
+| [26-weil-toeplitz-algebra-logistic-identity](../../04-papers/26-weil-toeplitz-algebra-logistic-identity/main.tex) | 1715 | Weil–Toeplitz geometry; review the directions of the equivalences. | `5c77f78b97a1dcef` |
+| [27-one-dimensional-propagation](../../04-papers/27-one-dimensional-propagation/main.tex) | 544 | One-dimensional propagation; no-go limited in scope to its mechanisms. | `241b63d011ae726d` |
+| [28-tensor-amplification-weil-index](../../04-papers/28-tensor-amplification-weil-index/main.tex) | 541 | Amplification; archive of routes and their pending estimates. | `89b18d73b4b4a304` |
+| [29-one-wall-master-quantifier](../../04-papers/29-one-wall-master-quantifier/main.tex) | 451 | Average/uniform quantifiers; permanent closure control. | `b8585cfb13c8709f` |
+| [30-finiteness-offline-zeros-self-approximation](../../04-papers/30-finiteness-offline-zeros-self-approximation/main.tex) | 438 | Finiteness plus rigidity; alternative, not a mandatory A–D dependency. | `02085b96bfd65d86` |
+| [31-second-sigma-derivative-log-xi](../../04-papers/31-second-sigma-derivative-log-xi/main.tex) | 570 | Curvature/LP; other coordinates of the sign. | `ab747ebbca01fee5` |
+| [32-stepanov-almost-periodicity](../../04-papers/32-stepanov-almost-periodicity/main.tex) | 527 | Stepanov result; do not extend to the single-line version without proof. | `f601e6a54d634fc0` |
 | [33-energy-decomposition](../../04-papers/33-energy-decomposition/main.tex) | 1077 | Off-line energy; partial alternative, no bridge built to A. | `c3ba9e2189751b73` |
-| [34-architecture-of-obstruction](../../04-papers/34-architecture-of-obstruction/main.tex) | 1476 | Historical map of obstructions; contrast with later corrections. | `7ccb775a7ecf59df` |
+| [34-obstructions-heuristic-survey](../../04-papers/34-obstructions-heuristic-survey/main.tex) | 1476 | Historical map of obstructions; contrast with later corrections. | `7ccb775a7ecf59df` |
 | [35-colligation-route](../../04-papers/35-colligation-route/main.tex) | 527 | Colligation and Doob; distinguish local curvature from global constant. | `886bc32b19b3dab7` |
 | [36-obstruction-ledger](../../04-papers/36-obstruction-ledger/main.tex) | 11996 | Li–Keiper/Pick; signed proof reserve and obstruction ledger. | `5bd49289e2ec42ac` |
-| [37-death-of-the-positivity-family](../../04-papers/37-death-of-the-positivity-family/main.tex) | 3812 | Falsifiers of positive transfers; keep the cutoff correction. | `a6ae79080e4a8854` |
+| [37-limits-of-the-positivity-family](../../04-papers/37-limits-of-the-positivity-family/main.tex) | 3812 | Falsifiers of positive transfers; keep the cutoff correction. | `a6ae79080e4a8854` |
 | [38-li-fir-stability](../../04-papers/38-li-fir-stability/main.tex) | 1131 | FIR filters and Li; alternative target, not mandatory in addition to D. | `f3934f5dcf8a33f8` |
-| [39-cofinal-weil-summability](../../04-papers/39-cofinal-weil-summability/main.tex) | 3156 | Summability and transport defects; possible C/D infrastructure. | `f7263cafdce1310e` |
-| [40-connes-proof-skeleton](../../04-papers/40-connes-proof-skeleton/main.tex) | 3674 | Prime–Gamma and inertia sources; reuse verified identities. | `bddf2b4e6861eed4` |
+| [39-cofinal-weil-quotients](../../04-papers/39-cofinal-weil-quotients/main.tex) | 3156 | Summability and transport defects; possible C/D infrastructure. | `f7263cafdce1310e` |
+| [40-branch-selection-connes-ccm-route](../../04-papers/40-branch-selection-connes-ccm-route/main.tex) | 3674 | Prime–Gamma and inertia sources; reuse verified identities. | `bddf2b4e6861eed4` |
 | [41-obstruction-catalogue](../../04-papers/41-obstruction-catalogue/main.tex) | 1490 | Catalogue of 31 mechanisms; classify no-go, falsifier and counter-model. | `cf15e600e3affc9d` |
 | [42-arithmetic-lefschetz-programme](../../04-papers/42-arithmetic-lefschetz-programme/main.tex) | 7270 | Main A/B/C/D programme; restricted contract subject to P122 and P123.018. | `c12c1584e68245f1` |
 

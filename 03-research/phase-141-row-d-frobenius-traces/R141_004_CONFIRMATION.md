@@ -58,7 +58,7 @@ MAJOR completion of the diagnosis (which changes what phase 142 must do).**
 | H8 | CLOSED | **CONFIRMED** (ll. 145–160): multiset convention, hypothesis class (`θ < ∞` + rapid decay, `A = A_0(𝒦)`), half-plane `\mathrm{Re}\,w > 1+θ`. |
 | H9 | CLOSED | **CONFIRMED**: "four interpolation conditions" replaced by one complex condition; the modulus-domination sentence for the wrong-sign tail added at *Tail domination*. |
 | H10 | CLOSED | **CONFIRMED**: `𝓝_∞ ⊕ Λ_ξ` deleted; only Thm 11.10(c) used. |
-| H11 | CLOSED | **CONFIRMED**: the matched string and path are printed (`04-papers/32-stepanov-band/main.tex:33`). |
+| H11 | CLOSED | **CONFIRMED**: the matched string and path are printed (`04-papers/32-stepanov-almost-periodicity/main.tex:33`). |
 | H12 | CLOSED | **CONFIRMED**: `§ Label` rewritten; every row of the audit's table applied. |
 | H13 | CLOSED | **CONFIRMED**: Addendum D.27.6a; optimality at `½K` recomputed here (`1/16 − 2/16 + 4/16 = 3/16` ✓); `h⁰_{\deg}(−K) = ¼ > 0` with `\deg(−K) < 0`; the `3/16` vs `1/8` box is correct. |
 | H14 | CLOSED | **CONFIRMED** (l. 91): `T` depends on a choice quantified over `Z(ξ)`; `g` re-chosen per model; D.26.11 read as "the same construction performed separately in each model". |

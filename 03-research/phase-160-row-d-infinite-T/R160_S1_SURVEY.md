@@ -34,7 +34,7 @@ uncertified)**, whatever the environment says:
 * Paper 12 `thm:saturation` ("`C(d,T_0)=1` exactly once `2d/\log T_0 \gtrsim 0.85`", and its first clause
   "`C(d,T_0)\le1` for all `d,T_0`" — the latter is RH-strength and cannot be a theorem);
   `04-papers/12-band-limited-weil-carleson/main.tex:143`.
-* Paper 14 `thm:reggap` (the law `λ_min(G)=\frac{π^2}{6}β_{min}^2`), `04-papers/14-modern-routes-wrong-sign/main.tex:112`
+* Paper 14 `thm:reggap` (the law `λ_min(G)=\frac{π^2}{6}β_{min}^2`), `04-papers/14-hodge-index-hyperbolicity-reformulations/main.tex:112`
   (a fit from `phase-10-hodge-envelope-degeneration/DEEPRUN-analysis-M10.1-M10.3.md`).
 * Paper 13 `t_c/s^2≈−0.02`; Paper 11 Observations `obs:c1`, `obs:c2`; phase 18 "Case A"; phase 10 frame-gap
   stability tables.
@@ -63,7 +63,7 @@ uncertified)**, whatever the environment says:
   phase-16-surf-witness-variety memos write "`κ=\#`off-line zeros", which is off by a factor 2. Moreover every "`κ=2m<∞`" in phases
   26–40 is **conditional** on a Pontryagin realization / Hypothesis D (`PHASES_026_050_AUDIT.md`, critical finding 2).
 * Memos in phases 15–40 cite papers as `P7, P8, P21, P35, P39–P44` in the *old* `06-papers/` numbering. P7 = 07,
-  P8 = 08, but e.g. "P21 (Lefschetz dichotomy)" is `04-papers/17-lefschetz-dichotomy`, "P41–P44" are roughly
+  P8 = 08, but e.g. "P21 (Lefschetz dichotomy)" is `04-papers/17-sl2-triple-hard-lefschetz-analogy`, "P41–P44" are roughly
   `04-papers/27–30`. Resolve every P-number by title before citing.
 
 ---
@@ -177,7 +177,7 @@ Grouped by mechanism. Each item: the attempt → the killing theorem/counterexam
 ### 2.2 Zero-side and Pontryagin/index attacks (relevant to all)
 8. **Bounding the angular operator from the zero side.** Paper 08 `thm:C`: the depths `b_ρ` enter `\|K\|` only
    through `\mathfrak t` itself; sign-agnostic bounds give `\|K\|^2\gtrsim e^d` (wrong side). PROVED no-go.
-   `04-papers/08-weil-krein-realization/main.tex:126`; `phase-4-handoff/PAPER-A.md` §8.
+   `04-papers/08-krein-space-weil-form/main.tex:126`; `phase-4-handoff/PAPER-A.md` §8.
 9. **Magnitude bounds (RFB / Carleson / sampling / density).** They give `|\mathfrak t_-|\le C\mathfrak t_+` with
    `C\ge e^d>1`; lowering `C` below 1 *is* RH. Point-to-point routes (Schur/Gram/Jaffard) pay `P=ρ\ell\to∞`
    (NG-E4); global Cauchy–Schwarz vacuous (NG-E3). `phase-4-handoff/RH-ENDGAME.md` §2; `proofs/00-PROOF-LOG.md`
@@ -207,7 +207,7 @@ Grouped by mechanism. Each item: the attempt → the killing theorem/counterexam
 ### 2.3 Finitization and uniformity (relevant to B14, B15, B19)
 15. **Finite-dimensional (Frobenius-periodic) model of ζ's positivity.** Under LI of the ordinates there is no
     period `τ` and finite `\{β_j\}` with `\{γ_n\}\subseteq\{β_j+kτ\}`. PROVED (conditional on LI).
-    `04-papers/06-why-rh-resists/main.tex:257` (`thm:LI`).
+    `04-papers/06-positivity-formulations-function-field-analogy/main.tex:257` (`thm:LI`).
 16. **Finite-order positivity → full order.** In all four families (Hodge, Hankel, PF, combinatorial Hodge) each
     finite order is unconditional and the full order is RH; thresholds `T_0(k)\to∞`. `06/main.tex:200`
     (`thm:gap`, proof sketch — HEURISTIC in its "no general theorem bridges" clause); `15/main.tex:93` (`thm:crit`,
@@ -541,14 +541,14 @@ Each is a potential ingredient, tagged with the memo(s) it concerns. None is a p
 > $\eta>0$, $T_0$ such that for all $T\ge T_0$ and every interval $I$ of length $1/d$ centred at height $T$,
 > $\#\{\rho:\ |b_\rho|<\delta,\ t_\rho\in I\}\ \ge\ \eta\,\rho(T)\,|I|$.
 
-**D8. Uniform transfer (the "single missing inequality" of Paper 07)** — `04-papers/07-localized-weil-detector/main.tex:411–413`:
+**D8. Uniform transfer (the "single missing inequality" of Paper 07)** — `04-papers/07-localized-weil-form-hermite-gauss/main.tex:411–413`:
 > $\sup_{X\ge X_0}\bigl|\lmin(Q_X)-\lmin(Q_\infty)\bigr|\ \le\ \varepsilon(X_0)\xrightarrow[X_0\to\infty]{}0$.
 
 **D9. Band-limited Weil–Carleson constant** — `04-papers/12-band-limited-weil-carleson/main.tex:124`
 (read with §0.2: polar term dropped):
 > $\Cband(d,T_0)\;:=\;\lambda_{\max}\!\big(\Pf,\Aphi\big),\qquad \mathrm{RH}\iff \Cband(d,T_0)\le 1\ \ \forall d,T_0.$
 
-**D10. Prime-tail relative form bound** — `04-papers/11-pontryagin-index-finite-defect/main.tex:94–100`:
+**D10. Prime-tail relative form bound** — `04-papers/11-offline-zeros-pontryagin-index/main.tex:94–100`:
 > If for some $X$ the tail satisfies the relative form bound
 > $\bigl|\fp_{>X}[g]\bigr|\le a\,\fa[g]+C\|g\|^2,\qquad a<1,$ (RFB$_X$) then $\ft$ has finitely many negative
 > squares, $\kappa<\infty$.
@@ -583,7 +583,7 @@ Each is a potential ingredient, tagged with the memo(s) it concerns. None is a p
 > $\psi^{\boxtimes k} \in \mathcal{F}$ for all $k \geq 1$: $\kappa(\psi) = 0$.
 > [(a) $\kappa(\psi^{\boxtimes k})\ge k\kappa(\psi)$; (b) $\kappa(\psi^{\boxtimes k})\le f(k)$, $f(k)/k\to0$; `106:17–21`.]
 
-**D15. HR tower and HR stability** — `04-papers/15-finite-to-full-uniformity/main.tex:191–215`:
+**D15. HR tower and HR stability** — `04-papers/15-eventual-versus-uniform-positivity/main.tex:191–215`:
 > A \emph{Hodge--Riemann tower} is a sequence $(V_m,L_m,Q_m)$ […] with the Hodge--Riemann property
 > $(-1)^jQ_m|_{P_m^j}>0$. Set the \emph{HR gap} $\delta_m=\inf_{j}\inf_{\|v\|=1,\,v\in P_m^j}(-1)^jQ_m(v,v)$ […]
 > \textbf{Theorem (HR stability).} […] If $\delta_\infty>0$ […] the tower has \emph{uniform Hodge--Riemann} […]
