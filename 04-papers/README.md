@@ -1,10 +1,17 @@
 # Papers
 
-Catalogue of the papers of the program. No paper claims a proof of the
-Riemann hypothesis. Folder names carry the paper number as a prefix. Papers 01–42 are the earlier arcs
-(ω-classes, inverse operators, the Weil form and its realizations, the Pick architecture, the first
-arithmetic Lefschetz construction). Papers 43–48 are the current programme: rows A–C (Papers 43–45, closed on the
-declared carrier), row D (Paper 46, open), the intersection frame (Paper 47) and the map of routes (Paper 48).
+Catalogue of the papers of the program. Folder names carry the paper number as a prefix. Papers
+01–42 are the earlier arcs (ω-classes, inverse operators, the Weil form and its realizations, the
+Pick architecture, the first arithmetic Lefschetz construction); none of them claims a proof of
+the Riemann hypothesis. Papers 43–46 carry the four rows of Weil's proof over
+$\mathrm{Spec}\,\mathbb Z$: rows A–C (Papers 43–45) and row D (Paper 46, *The sign of the radial
+intersection form on the idele class group*, with its annex *Column packages for character
+families*). Paper 46 obtains $W_T\ge 0$ on every window and the Riemann hypothesis from a theorem
+of Levent Alpoge on families of characters carrying a column package, which rests on his Lean 4
+formalization (<https://alpo.ge/remark.pdf>) and has not yet been written out on paper in full;
+his proof of the Riemann hypothesis is self-contained and does not need these papers. Paper 47 is
+the intersection frame and Paper 48 the map of the routes attempted before that theorem was
+available. None of this has been refereed.
 
 | # | Title | Content | Type / status |
 |---|---|---|---|
@@ -53,9 +60,9 @@ declared carrier), row D (Paper 46, open), the intersection frame (Paper 47) and
 | [43](43-row-a-torsion-theory/) | A Correspondence Algebra and the Weil Distribution on Semilocal Idele Class Groups | Row A: a convolution algebra of semilocal idele class correspondences, its involution and canonical trace; the two Tate characters give the bidegree and define the primitive subspace of the intersection form. | Row A closed on the declared carrier |
 | [44](44-row-b-arithmetic-family/) | An Arithmetic Frobenius Family on Semilocal Idele Class Groups | Row B: a Frobenius correspondence for each positive integer, with contact with the diagonal of weight $\Lambda(n)/\sqrt n$ on prime powers, and an integral model relating it to cyclotomic values. | Row B closed on the declared carrier |
 | [45](45-row-c-explicit-formula/) | An Explicit Formula for the Trace on Semilocal Idele Class Groups | Row C: Weil's explicit formula for the self-intersection of a radial class via its two Tate moments and the zeros; if $\zeta$ had a zero off the critical line, a real primitive test function of compact support would detect it. | Row C closed on the declared carrier |
-| [46](46-row-d-dual-certificates/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D: lower bounds for the Weil form on finite support intervals and a reduction of nonnegativity on arbitrary intervals to a sequence of matrix inequalities. | Row D OPEN |
+| [46](46-row-d-dual-certificates/) | The Sign of the Radial Intersection Form on the Idele Class Group (with the annex: Column Packages for Character Families: the Arithmetic Inputs for the Sign of the Radial Intersection Form) | Row D. (1) $W_T\ge 0$ on every window is equivalent to the Riemann hypothesis; (2) it suffices that $G(x)\le Cx^\theta$ on arbitrarily large windows $[Y,Y^{3/2}]$ for every $\theta>1/2$; (3) that bound follows from a mean estimate at a single point; (4) the mean estimate follows from a slope inequality for Hermitian lattices and a column package; (5) families carrying a column package with uniform constants exist, by a theorem of L. Alpoge. Conclusion: the Riemann hypothesis and $W_T\ge 0$ on every window. Also explicit lower bounds on bounded windows up to $T=2.8022$. The annex (302 pages) gives a first written account of step (5). | Row D closed: steps (1)–(4) proved in the paper; step (5) is Alpoge's theorem (Lean 4 formalization, not yet written out on paper in full). Not refereed. |
 | [47](47-intersection-frame-defect/) | An Intersection Frame for the Explicit Formula: Hodge-Index Transfer, a Frame Defect Theorem and a Function-Field Model | The Pólya class, radical and polar plane of the extended Weil form; a conditional Hodge-index transfer; the frame defect theorem; the same defect on a curve over a finite field. The earlier row D text is archived in the folder. | Structural theorems |
-| [48](48-row-d-route-map/) | Routes to Weil positivity on finite intervals: a cartography of attempts, barriers and open problems | A survey mapping the routes tried toward nonnegativity of the truncated Weil form on primitive functions and toward related positivity criteria, in the literature and in Papers 01–46: twenty-six families, each with its idea, what was obtained, the mechanism of failure and its status (closed by a theorem for a stated class, closed as attempted, or open), the constraints on any proof and the map of what is open. Proves no new sign. | Survey of routes |
+| [48](48-row-d-route-map/) | Routes to Weil positivity on finite intervals: a cartography of attempts, barriers and open problems | A survey mapping the routes tried toward nonnegativity of the truncated Weil form on primitive functions and toward related positivity criteria, in the literature and in Papers 01–45 and 47, before the theorem used in Paper 46 was available: twenty-six families, each with its idea, what was obtained, the mechanism of failure and its status (closed by a theorem for a stated class, closed as attempted, or open), the constraints on any proof and the map of what is open. Proves no new sign. | Survey of routes |
 
 ## Notes
 

@@ -1,49 +1,122 @@
 # The Riemann Program
 
-An independent research program on the Riemann zeta function, built around Weil's explicit
-formula and the sign of the Weil quadratic form. This repository contains the papers, the
-complete research record (memos, proofs, audits, retractions, certificates) and the code that
-produced the numerical certificates.
+An independent research program, a little over eleven years long, on one question: can Weil's
+proof of the Riemann hypothesis for curves over finite fields be carried out, row by row, over
+$\mathrm{Spec}\,\mathbb Z$?
 
-## The route: Weil's proof, transplanted to the idele class group
+Papers 43, 44, 45 and 46 are the answer given here: one paper for each of the four rows of Weil's
+proof, on the idele class group of $\mathbb Q$. The last step, the sign on every window, is closed
+by a theorem of **Levent Alpoge**. This repository contains the papers, the complete research
+record (memos, proofs, audits, retractions, certificates) and the code behind the numerical
+certificates, in Markdown and LaTeX, so that anyone can read it, check it, break it or reuse it.
+
+## The route: Weil's proof over Spec Z
 
 Weil proved the Riemann hypothesis for a curve over a finite field in four steps: a ring of
 correspondences with a trace, the Frobenius correspondences inside it, a fixed-point formula for
-the trace, and the Hodge-index inequality on classes of bidegree zero. Papers 43, 44, 45 and 46
-carry out the same four steps for $\mathrm{Spec}\,\mathbb Z$, on the idele class group of
-$\mathbb Q$.
+the trace, and the Hodge-index inequality on classes of bidegree zero (*Sur les courbes
+algébriques et les variétés qui s'en déduisent*, 1948). The map below shows the same four steps
+over $\mathrm{Spec}\,\mathbb Z$, what each paper contributes, and on whose work it is built.
 
-| Row | Step in Weil's proof | Paper | What is proved |
+```
+ROW A  A correspondence algebra and the Weil distribution            [Paper 43]
+  |    graph bimodules and their Hochschild complexes, the trace T,
+  |    the form T(F * G†), the Tate characters in the place of the rulings
+  |    builds on: Weil (correspondences on curves; explicit formulas),
+  |    Tate (thesis), Connes (trace formula, 1999), Meyer, Burnol,
+  |    Connes–Consani–Marcolli (the Weil proof and the adele class space),
+  |    Wodzicki, Brylinski, Nistor, Getzler–Jones (excision, crossed
+  |    products), Bombieri, Yoshida
+  v
+ROW B  An arithmetic Frobenius family                                [Paper 44]
+  |    measures with Frob_m * Frob_n = Frob_mn; the finite local terms
+  |    sum to Λ(n) n^(-1/2) h(1/n)
+  |    builds on: Weil, Tate, Connes, Connes–Consani (the arithmetic site),
+  |    Connes–Consani–Marcolli, Bost–Connes, Burnol
+  v
+ROW C  An explicit formula for the trace                             [Paper 45]
+  |    T_lim(Γ_h) = Φ_h(0) + Φ_h(1) − Σ_ρ Φ_h(ρ); the Tate functionals
+  |    are the residues at s = 0 and s = 1; Weil's criterion in this setting
+  |    builds on: Weil (explicit formula), Connes, Connes–Consani
+  |    (Weil positivity), Meyer, Yoshida, Bombieri, Burnol, Barner,
+  |    Suzuki (the screw function)
+  v
+ROW D  The sign of the radial intersection form                      [Paper 46]
+       W_T(F) = Σ_ρ |Φ_F(ρ)|²  for F supported in (−T, T)
+
+       (1) W_T ≥ 0 for every T  <=>  RH                    [this paper]
+       (2) enough: G(x) ≤ C x^θ on arbitrarily large
+           windows [Y, Y^(3/2)], for every θ > 1/2           [this paper;
+                                                              Landau's method]
+       (3) that bound follows from a mean estimate
+           at a single point                                 [this paper]
+       (4) the mean estimate follows from a slope inequality
+           for Hermitian lattices (Harder–Narasimhan, Stuhler,
+           Grayson, Bost) plus a "column package"            [this paper]
+       (5) families carrying a column package with uniform
+           constants exist                                   [Levent Alpoge]
+              |
+              v
+       RH, and W_T ≥ 0 on every window
+```
+
+| Row | Step in Weil's proof | Paper | What it contains |
 |---|---|---|---|
 | A | Correspondences, involution, trace, bidegree | [43](04-papers/43-row-a-torsion-theory/) | A convolution algebra of semilocal idele class correspondences with its involution and trace; the two Tate characters give the bidegree and define the primitive subspace. |
 | B | Frobenius | [44](04-papers/44-row-b-arithmetic-family/) | A Frobenius measure for every positive integer with prime divisors in $S$; its contact with the diagonal has weight $\Lambda(n)/\sqrt n$, supported on prime powers. |
-| C | Fixed-point (explicit) formula | [45](04-papers/45-row-c-explicit-formula/) | Weil's explicit formula for the radial trace: the self-intersection of a radial class equals its two Tate moments minus a sum over the nontrivial zeros of $\zeta$; if $\zeta$ had a zero off the critical line, a real primitive test function of compact support would detect it. |
-| D | Intersection inequality (the sign) | [46](04-papers/46-row-d-dual-certificates/) | The sign of the radial intersection form $W_T$ on functions supported in $(-T,T)$: see below. |
+| C | Fixed-point (explicit) formula | [45](04-papers/45-row-c-explicit-formula/) | Weil's explicit formula for the radial trace: the self-intersection of a radial class equals its two Tate moments minus a sum over the nontrivial zeros of $\zeta$. |
+| D | Intersection inequality (the sign) | [46](04-papers/46-row-d-dual-certificates/) | *The sign of the radial intersection form on the idele class group*, with its annex *Column packages for character families*: $W_T\ge 0$ on every window, and the Riemann hypothesis. |
 
-### What Paper 46 establishes
+### Who did what
 
-- **Equivalence theorem.** The following are equivalent: (1) the Riemann hypothesis for $\zeta$;
-  (2) $W_T(F)\ge 0$ for every $T>0$ and every $F$ in the form domain; (3) $\lambda_A(T)\ge 0$ for
-  every $T>0$ (the primitive restriction). Together with Papers 43–45 this completes the
-  equivalence between the intersection inequality for every compact support and the classical
-  Riemann hypothesis.
-- **Bounded windows, unconditionally.** For $T\le\tfrac12\log 5$ the lower bounds on unit vectors
-  are $10^{-18}$ for the complete form and $2.5\cdot10^{-12}$ for its primitive restriction; a
-  certificate using finite-height zero data gives an explicit positive lower bound up to
-  $T=2.8022$.
-- **Finite reduction.** On the arithmetic side the all-window inequality is reduced to positive
-  semidefiniteness, in every degree, of a single sequence of explicit matrices.
-- **All windows, under half-plane nonvanishing.** Assume $L(s,\chi)\ne 0$ for $\Re s>1/2$ for
-  every Dirichlet character $\chi$ (the pole of a principal character excluded). Then $W_T\ge 0$
-  on the entire form domain for every $T>0$, the primitive self-intersection is $\le 0$, and the
-  matrices of the finite reduction are Gram matrices in every degree.
+Rows A, B and C are built entirely on the work of the mathematicians listed next to them; what is
+done here is to carry the constructions through in one setting and write down every proof. In
+row D, steps (1)–(4) belong to Paper 46, on top of classical tools. For years the sign was known
+here only on a bounded range, certified up to $T=2.8022$. The missing piece was step (5), global
+positivity.
 
-**Status of the all-window sign.** In Paper 46 the sign for every window is proved under the
-half-plane nonvanishing hypothesis above; for modulus one that hypothesis is the statement that
-$\zeta$ has no zero to the right of the critical line. Unconditionally the paper proves the sign
-on bounded windows (up to $T=2.8022$) and the equivalence theorem. The papers therefore establish
-the complete Weil-type route and the exact equivalence of its last step with the Riemann
-hypothesis.
+Step (5) is Levent Alpoge's. It comes from his character-family argument, released as a Lean 4
+formalization: <https://alpo.ge/remark.pdf>.
+
+### What is and is not claimed
+
+- **Alpoge's formalization proves RH on its own.** His proof is self-contained and does not need
+  these papers. Row D is not an independent proof: it takes step (5) from his development and
+  shows that this is exactly the positivity that Weil's programme over $\mathrm{Spec}\,\mathbb Z$
+  was missing. The deduction of RH in Paper 46 uses only that paper; rows A–C enter in the
+  structural statement, $W_T\ge 0$ on every window. So: Alpoge proves RH, and these four papers
+  are the same statement reached along Weil's four components.
+- **Step (5) rests on his Lean development.** It has not yet been written out on paper in full.
+  The annex to Paper 46 is a first attempt at a readable version: it proves the reductions,
+  identifies which steps are known mathematics that the formalization re-proves (Siegel–Weil,
+  Borel–Harish-Chandra, discrete series, base change, zero-density estimates, and more), and
+  states exactly the new statements it takes from the formalization.
+- **None of this has been refereed.** There may be mistakes. Corrections, questions and attempts
+  to break any step are very welcome.
+
+### Checks in preparation
+
+- [`06-alpoge-verification/`](06-alpoge-verification/): an independent compilation of Alpoge's
+  archive, with the build log, the axiom check of the main theorem and the dependency report.
+  They will be placed there when the run finishes.
+- A Colab notebook in the [Paper 46 folder](04-papers/46-row-d-dual-certificates/), to be uploaded
+  shortly. It reproduces with interval arithmetic the rigorous certificate of $W_T\ge 0$ on
+  bounded windows (up to $T=2.8022$ in the paper) and lets you try the same method for a $T$ of
+  your choice; and it computes the prime sum $G(x)$ directly from the primes, with no zeros of
+  zeta involved, and compares it with the bound given by Alpoge's theorem. The notebook does not
+  prove global positivity, and no computation can: it shows the two pieces at work as far as a
+  machine reaches, and where the proof takes over.
+
+## Acknowledgements
+
+To **Levent Alpoge**, first of all. His work proves the Riemann hypothesis completely, and it also
+supplies the component with which the proof along Weil's route over $\mathrm{Spec}\,\mathbb Z$ is
+closed here: the existence of families carrying a column package with uniform constants. That is
+the decisive input, and the whole mathematical community owes that step to his work.
+
+To the mathematicians whose lifelong dedication made it possible even to attempt this: André Weil,
+Alain Connes, Caterina Consani, Masatoshi Suzuki, Enrico Bombieri, Hiroyuki Yoshida, Ralf Meyer,
+Jean-François Burnol, John Tate, and the many others cited in the papers.
 
 ## Papers 43–48
 
@@ -52,9 +125,9 @@ hypothesis.
 | [43](04-papers/43-row-a-torsion-theory/) | A Correspondence Algebra and the Weil Distribution on Semilocal Idele Class Groups | Row A. |
 | [44](04-papers/44-row-b-arithmetic-family/) | An Arithmetic Frobenius Family on Semilocal Idele Class Groups | Row B. |
 | [45](04-papers/45-row-c-explicit-formula/) | An Explicit Formula for the Trace on Semilocal Idele Class Groups | Row C. |
-| [46](04-papers/46-row-d-dual-certificates/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D. |
+| [46](04-papers/46-row-d-dual-certificates/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D, with the annex *Column packages for character families: the arithmetic inputs for the sign of the radial intersection form*. |
 | [47](04-papers/47-intersection-frame-defect/) | An Intersection Frame for the Explicit Formula: Hodge-Index Transfer, a Frame Defect Theorem and a Function-Field Model | Structural theorems on the extended Weil form; no sign claimed. |
-| [48](04-papers/48-row-d-route-map/) | Routes to Weil positivity on finite intervals: a cartography of attempts, barriers and open problems | Survey of the routes attempted toward the sign, in twenty-six families, with the mechanism of failure and the status of each, proved barriers and the map of what is open. |
+| [48](04-papers/48-row-d-route-map/) | Routes to Weil positivity on finite intervals: a cartography of attempts, barriers and open problems | Survey of the routes attempted toward the sign before step (5) was available: twenty-six families, with the mechanism of failure and the status of each, and the proved barriers. |
 
 The full catalogue of papers 01–48 is in [`04-papers/README.md`](04-papers/README.md).
 
@@ -68,11 +141,12 @@ The full catalogue of papers 01–48 is in [`04-papers/README.md`](04-papers/REA
 | [`03-research/`](03-research/) | The research record, organised in numbered phases (0–213): memos, proofs, audits and certificates. Indexed in [`03-research/README.md`](03-research/README.md). |
 | [`04-papers/`](04-papers/) | Papers 01–48. |
 | [`05-meta-and-planning/`](05-meta-and-planning/) | Plans, audits and the master index of all routes attempted for the sign ([`ROUTES-MASTER-INDEX.md`](05-meta-and-planning/ROUTES-MASTER-INDEX.md)). |
+| [`06-alpoge-verification/`](06-alpoge-verification/) | Independent compilation and axiom check of Alpoge's Lean archive (in preparation). |
 
 ## Building the papers
 
 Each paper folder in `04-papers/` contains a self-contained LaTeX source `main.tex` and the compiled
-PDF. To rebuild, run `pdflatex main.tex` three times inside the folder (so that references and the
+PDF. Paper 46 has in addition `annex.tex`; its README gives the build commands. To rebuild, run `pdflatex main.tex` three times inside the folder (so that references and the
 table of contents settle); some folders give a `-jobname` in their own README so that the PDF
 carries a descriptive name. The numerical certificates are reproduced by the scripts kept beside
 each paper or in the phase folders cited in it; the computational core they rely on is described
@@ -93,7 +167,8 @@ Every result in the papers and in the research record carries one of the followi
 | OPEN | Not established. |
 
 A label is changed only on a written proof or a recorded retraction; retractions are recorded in the phase folder
-where they occurred. No paper claims a proof of the Riemann hypothesis.
+where they occurred. Papers 01–45, 47 and 48 claim no proof of the Riemann hypothesis; Paper 46
+obtains it from Alpoge's theorem, as described above.
 
 ## Language
 
