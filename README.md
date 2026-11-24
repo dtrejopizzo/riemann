@@ -94,18 +94,19 @@ formalization: <https://alpo.ge/remark.pdf>.
 - **None of this has been refereed.** There may be mistakes. Corrections, questions and attempts
   to break any step are very welcome.
 
-### Checks in preparation
+### Checks
 
 - [`06-alpoge-verification/`](06-alpoge-verification/): an independent compilation of Alpoge's
   archive, with the build log, the axiom check of the main theorem and the dependency report.
   They will be placed there when the run finishes.
-- A Colab notebook in the [Paper 46 folder](04-papers/46-row-d-sign-radial-intersection-form/), to be uploaded
-  shortly. It reproduces with interval arithmetic the rigorous certificate of $W_T\ge 0$ on
-  bounded windows (up to $T=2.8022$ in the paper) and lets you try the same method for a $T$ of
-  your choice; and it computes the prime sum $G(x)$ directly from the primes, with no zeros of
-  zeta involved, and compares it with the bound given by Alpoge's theorem. The notebook does not
-  prove global positivity, and no computation can: it shows the two pieces at work as far as a
-  machine reaches, and where the proof takes over.
+- A Colab notebook,
+  [`positivity-radial-intersection-form.ipynb`](04-papers/46-row-d-sign-radial-intersection-form/positivity-radial-intersection-form.ipynb),
+  in the Paper 46 folder. It reproduces with interval arithmetic the rigorous certificates of
+  $W_T\ge 0$ on bounded windows (up to $T=2.8022$ in the paper) and lets you try the method for a
+  $T$ of your choice; and it computes the prime sum $G(x)$ directly from the primes, with no zeros
+  of zeta involved, and compares it with the bound given by Alpoge's theorem. The notebook does
+  not prove global positivity, and no computation can: it shows the two pieces at work as far as
+  a machine reaches, and where the proof takes over.
 
 ## Acknowledgements
 

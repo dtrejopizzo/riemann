@@ -12,7 +12,7 @@ paper determines the sign.
 | `sign-radial-intersection-form-idele-class-group.pdf` | The paper (48 pages). |
 | `annex.tex` | Source of the annex. |
 | `column-packages-character-families.pdf` | The annex, *Column packages for character families: the arithmetic inputs for the sign of the radial intersection form* (302 pages). |
-| `version-2026-11-23/`, `version-2026-10-19/`, `main.before-final-redaction.tex` | Earlier versions of the paper, kept for reference. They are superseded by `main.tex`. |
+| `positivity-radial-intersection-form.ipynb` | Colab notebook: certificates of $W_T\ge 0$ on bounded windows and the prime sum behind global positivity. |
 
 ## The paper
 
@@ -78,60 +78,36 @@ done
 
 ## Notebook: positivity of the radial intersection form
 
-`positivity-radial-intersection-form.ipynb` (coming shortly)
+`positivity-radial-intersection-form.ipynb` lets you run, in Google Colab, the computations that
+sit on either side of the proof, and see where the proof itself is needed.
 
-This notebook will accompany the paper and its annex. It will let anyone run, in Google Colab,
-the two computations that sit on either side of the proof, and see where the proof itself is
-needed.
+**Part 1. Certificates on bounded windows.** Two rigorous certificates in ball (interval)
+arithmetic, so every `PASS` is a proved inequality and not a floating-point observation.
 
-The object is the Hermitian form $W_T(F)=\sum_\rho|\Phi_F(\rho)|^2$ on functions $F$ supported
-in $(-T,T)$, where $\rho$ runs over the zeros of the completed zeta function. The paper shows
-that $W_T\ge 0$ for every $T$ is equivalent to the Riemann hypothesis.
+- *Up to $T=\tfrac12\log 5\approx 0.80$, using no zeros of zeta.* The notebook reproduces the four
+  bounds of the paper and pushes the same method to $T=0.85$. You can try your own $T$. The cost
+  grows doubly exponentially in $T$, so this route cannot reach large windows; when the problem
+  is too large the notebook says so instead of guessing.
+- *Up to $T=2.8022$.* A different certificate, on the zero side of the explicit formula, with 17
+  numerical checks. It is conditional on three published facts about zeros in a bounded range
+  (Section 9 of the paper), among them the verification that all zeros up to height
+  $3\cdot10^{12}$ lie on the critical line. These parameters stop just below $T=2.80227$.
 
-### What the notebook will contain
+**Part 2. The prime sum behind global positivity.** Positivity on every window does not come from
+pushing Part 1 further. It comes from a bound on a smoothed sum over primes, $G(x)$, on
+arbitrarily large windows; that such a bound holds is the step due to Levent Alpoge. This part
+computes $G(x)$ directly from the primes, with no zeros of zeta involved, up to about
+$3\cdot10^{8}$, and compares it with the bound from the theorem. In the windows computed,
+$G(x)/\sqrt x$ stays below $0.025$ where the theorem allows more than $100$. This part is an
+illustration, not a certificate.
 
-**Part 1. The certificate on bounded windows.** This part will reproduce, in ball (interval)
-arithmetic, the rigorous lower bound for $W_T$ that the paper establishes on bounded windows, up
-to $T=2.8022$. Every truncation and rounding error will be bounded, so a `PASS` will mean a
-proved inequality, not a floating-point observation.
+**Part 3.** The chain of the paper in five lines and a summary of the run: what was certified,
+what was observed, and what only the proof supplies.
 
-You will be able to choose your own $T$ and run the same method. If the method yields a certified
-bound at that $T$, the notebook will print it. If it does not, the notebook will say so and
-report which quantity failed. It will never print `PASS` without a rigorous bound behind it.
+**What it does not do.** It does not show that $W_T\ge 0$ for every $T$, and no computation
+could: global positivity follows from the bound holding on infinitely many growing windows, far
+beyond the reach of any machine. That is what the proof is for.
 
-**Part 2. The prime sum behind global positivity.** Positivity on *every* window does not come
-from pushing Part 1 further. It comes from a different quantity: a smoothed sum over primes,
-$G(x)$. The paper shows that a bound $G(x)\le C\,x^\theta$ on arbitrarily large windows
-$[Y,Y^{3/2}]$, for every $\theta>1/2$, excludes zeros with real part greater than $\theta$. That
-such a bound holds is the step due to Levent Alpoge.
-
-This part will compute $G(x)$ directly from the primes. No zeros of zeta will be used anywhere,
-so nothing is circular. It will evaluate $G$ on windows as large as Colab can handle, plot
-$G(x)/\sqrt x$, and compare it with the bound given by the theorem and with $C\,x^\theta$ for a
-$\theta$ of your choice.
-
-This part will be an illustration, not a certificate.
-
-**Part 3. Putting the two together.** A short closing section will state the chain of the paper
-in five lines and summarise the run: what was certified rigorously in Part 1, what was observed
-numerically in Part 2, and what only the proof can supply.
-
-### What the notebook will and will not show
-
-It will show:
-
-- a rigorous, reproducible certificate of $W_T\ge 0$ on the bounded windows you run;
-- the prime-sum bound holding, from the primes alone, on the windows you can compute.
-
-It will not show that $W_T\ge 0$ for every $T$, and no computation could. The theorem that makes
-positivity global is an existence statement that holds on windows beyond thresholds far outside
-the reach of any machine, and global positivity follows from the bound holding on infinitely many
-growing windows. That is what the proof is for. The notebook will show the two pieces at work as
-far as a computer reaches, and where the proof takes over.
-
-### Running it
-
-Open the notebook in Google Colab and run the cells in order. The only dependency beyond the
-standard scientific Python stack will be `python-flint`, installed by the first cell. Expected
-runtimes and the largest windows reached in testing will be listed here once the notebook is
-uploaded.
+**Running it.** Open the notebook in Google Colab and run all cells in order. The first cell
+installs `python-flint`; nothing else is needed. A full run takes about 8 minutes on a laptop
+core, somewhat longer on Colab; almost all of that time is the $T=0.85$ certificate.
