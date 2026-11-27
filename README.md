@@ -139,7 +139,7 @@ The full catalogue of papers 01–48 is in [`04-papers/README.md`](04-papers/REA
 | [`00-references/`](00-references/) | External literature used by the program. |
 | [`01-context/`](01-context/) | Research programs RH2017–RH2025: the early computational investigations. Raw notebooks and outputs. |
 | [`02-foundations/`](02-foundations/) | The validated computational core: engine, zero data, precision checks. |
-| [`03-research/`](03-research/) | The research record, organised in numbered phases (0–213): memos, proofs, audits and certificates. Indexed in [`03-research/README.md`](03-research/README.md). |
+| [`03-research/`](03-research/) | The research record, organised in numbered phases (0–214): memos, proofs, audits and certificates. Indexed in [`03-research/README.md`](03-research/README.md). |
 | [`04-papers/`](04-papers/) | Papers 01–48. |
 | [`05-meta-and-planning/`](05-meta-and-planning/) | Plans, audits and the master index of all routes attempted for the sign ([`ROUTES-MASTER-INDEX.md`](05-meta-and-planning/ROUTES-MASTER-INDEX.md)). |
 | [`06-alpoge-verification/`](06-alpoge-verification/) | Independent compilation and axiom check of Alpoge's Lean archive (in preparation). |

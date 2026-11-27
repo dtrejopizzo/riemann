@@ -1,4 +1,4 @@
-# The research record (phases 0–213)
+# The research record (phases 0–214)
 
 This folder is the core of the project: a single continuous research programme, organised as a
 sequence of numbered phases. It follows nine early exploratory computational programmes,
@@ -242,6 +242,7 @@ and labels.
 | [phase-211-sign-sandbox](phase-211-sign-sandbox/) | The sign of the Paper 46 window form, treated as an isolated problem | (★) PROVED for T ≤ ½log5, global sign OPEN |
 | [phase-212-missing-object](phase-212-missing-object/) | Construction of the object that carries the sign | No construction meets OBJECT_SPEC; OPEN |
 | [phase-213-new-constructions](phase-213-new-constructions/) | New constructions for the global positivity of the Paper 46 form | Global positivity OPEN; rounds with stated labels |
+| [phase-214](phase-214/) | An explicit lower bound W_T(f) ≥ exp(−K)‖f‖₂² on every window, from the positive representation; reconstruction notes on the arithmetic inputs of Paper 46 | Bound PROVED conditional on the spectral conclusion of Paper 46; target theorem of the reconstruction not proved |
 
 Notes. There are no folders for phases 1 and 2. Two `phase-44-*` and two `phase-147-*` folders exist
 (parallel threads under the same number). The hidden folder
