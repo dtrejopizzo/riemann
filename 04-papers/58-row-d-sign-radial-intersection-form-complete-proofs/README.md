@@ -1,4 +1,4 @@
-# Paper 49 — The sign of the radial intersection form on the idele class group: row D in full
+# Paper 58 — The sign of the radial intersection form on the idele class group: row D in full
 
 Row D of the Weil-type route over $\mathrm{Spec}\,\mathbb Z$, with the whole chain of proof inside
 one paper. It carries the same title as [Paper 46](../46-row-d-sign-radial-intersection-form/)
@@ -81,7 +81,7 @@ which statements were tested and which were not.
 
 ## Relation to Paper 46
 
-| | Paper 46 | Paper 49 |
+| | Paper 46 | Paper 58 |
 |---|---|---|
 | Theory of the form $W_T$, bounds on bounded windows | yes | yes |
 | Route to the zero-free half-plane | bound for a smoothed prime sum $G(x)$ on growing windows, from a slope inequality and a column package | one-sided bound for the prime sum $R_q(x)$, from Theorems A, B and C |
