@@ -1,0 +1,9 @@
+Step5Statement.lean:19:0: warning: Definition `lit` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+Step5.families : UpperTheory.Top.FamilyClassConnected fun {eps} =>
+  (UpperTheory.Top.GChi Formalism.HC.PChar.one).cls (3 / 2)
+'Step5.families' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Step5.topG' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Step5.vwin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Step5.hosts' depends on axioms: [propext, Classical.choice, Quot.sound]

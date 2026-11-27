@@ -97,8 +97,9 @@ formalization: <https://alpo.ge/remark.pdf>.
 ### Checks
 
 - [`06-alpoge-verification/`](06-alpoge-verification/): an independent compilation of Alpoge's
-  archive, with the build log, the axiom check of the main theorem and the dependency report.
-  They will be placed there when the run finishes.
+  archive: it compiles in full (183,903 jobs, no error, no `sorry`) and its main theorems depend
+  only on the three standard axioms of Lean. The folder holds the build logs, the axiom check,
+  the checksums and the scripts.
 - A Colab notebook,
   [`positivity-radial-intersection-form.ipynb`](04-papers/46-row-d-sign-radial-intersection-form/positivity-radial-intersection-form.ipynb),
   in the Paper 46 folder. It reproduces with interval arithmetic the rigorous certificates of
@@ -119,7 +120,7 @@ To the mathematicians whose lifelong dedication made it possible even to attempt
 Alain Connes, Caterina Consani, Masatoshi Suzuki, Enrico Bombieri, Hiroyuki Yoshida, Ralf Meyer,
 Jean-François Burnol, John Tate, and the many others cited in the papers.
 
-## Papers 43–48
+## Papers 43–49
 
 | Paper | Title | Content |
 |---|---|---|
@@ -129,8 +130,9 @@ Jean-François Burnol, John Tate, and the many others cited in the papers.
 | [46](04-papers/46-row-d-sign-radial-intersection-form/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D, with the annex *Column packages for character families: the arithmetic inputs for the sign of the radial intersection form*. |
 | [47](04-papers/47-intersection-frame-defect/) | An Intersection Frame for the Explicit Formula: Hodge-Index Transfer, a Frame Defect Theorem and a Function-Field Model | Structural theorems on the extended Weil form; no sign claimed. |
 | [48](04-papers/48-routes-to-weil-positivity/) | Routes to Weil positivity on finite intervals: a cartography of attempts, barriers and open problems | Survey of the routes attempted toward the sign before step (5) was available: twenty-six families, with the mechanism of failure and the status of each, and the proved barriers. |
+| [49](04-papers/49-row-d-sign-radial-intersection-form-complete-proofs/) | The Sign of the Radial Intersection Form on the Idele Class Group (row D in full) | Row D with the whole chain of proof written out on paper (659 pages): a one-sided criterion, admissible data, Theorems A, B and C on integral modular forms on unitary groups, and the main inequality; with a notebook of numerical checks and falsification attempts. |
 
-The full catalogue of papers 01–48 is in [`04-papers/README.md`](04-papers/README.md).
+The full catalogue of papers 01–49 is in [`04-papers/README.md`](04-papers/README.md).
 
 ## How the repository is organised
 
@@ -140,9 +142,9 @@ The full catalogue of papers 01–48 is in [`04-papers/README.md`](04-papers/REA
 | [`01-context/`](01-context/) | Research programs RH2017–RH2025: the early computational investigations. Raw notebooks and outputs. |
 | [`02-foundations/`](02-foundations/) | The validated computational core: engine, zero data, precision checks. |
 | [`03-research/`](03-research/) | The research record, organised in numbered phases (0–214): memos, proofs, audits and certificates. Indexed in [`03-research/README.md`](03-research/README.md). |
-| [`04-papers/`](04-papers/) | Papers 01–48. |
+| [`04-papers/`](04-papers/) | Papers 01–49. |
 | [`05-meta-and-planning/`](05-meta-and-planning/) | Plans, audits and the master index of all routes attempted for the sign ([`ROUTES-MASTER-INDEX.md`](05-meta-and-planning/ROUTES-MASTER-INDEX.md)). |
-| [`06-alpoge-verification/`](06-alpoge-verification/) | Independent compilation and axiom check of Alpoge's Lean archive (in preparation). |
+| [`06-alpoge-verification/`](06-alpoge-verification/) | Independent compilation and axiom check of Alpoge's Lean archive: build logs, axiom check, checksums and scripts. |
 
 ## Building the papers
 
@@ -169,7 +171,8 @@ Every result in the papers and in the research record carries one of the followi
 
 A label is changed only on a written proof or a recorded retraction; retractions are recorded in the phase folder
 where they occurred. Papers 01–45, 47 and 48 claim no proof of the Riemann hypothesis; Paper 46
-obtains it from Alpoge's theorem, as described above.
+obtains it from Alpoge's theorem, as described above, and Paper 49 writes the whole chain out on
+paper.
 
 ## Language
 
