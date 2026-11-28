@@ -274,7 +274,7 @@ absolute convergence with multiplicities. The primitive inequality is $I_\infty\
 On real tests the moment map $M=(A,B)$ has pairing
 $H((a,b),(a',b'))=ab'+ba'$. This is the symmetric bilinear form whose
 quadratic form $2A(F)B(F)$ is the polar term of \eqref{comparison}; for
-complex tests the hermitian form is $2\Rel(a\bar b')$, as in \eqref{eq:W}.
+complex tests the hermitian form is $a\bar b'+b\bar a'$, whose diagonal is the term $2\Rel(a\bar b)$ of \eqref{eq:W}.
 An even nonnegative bump of positive mass translated by $r$ has moment
 vector proportional to $(e^{r/2},e^{-r/2})$, with proportionality
 constant independent of $r$. Two distinct small translates have
@@ -1895,7 +1895,7 @@ for $k\ge8$. The bound for the $H_{\mathrm{PT}}$-term is at most $10\,e^T(21/H_{
 $21/H_{\mathrm{PT}}=7\cdot10^{-12}$ and $2k-9\ge15.449\,T-9$, hence less than $10^{-70}$ of it for $T\ge1$.
 Finally $\varepsilon_k(Y)\le0.01567$ for all $T\ge1$: for fixed $k$, $\varepsilon_k$ decreases in $T$, so it
 suffices to evaluate it at the left end of each $k$-range, namely $T=1$ for $k=8$ ($\varepsilon_8=0.0060$)
-and $T=(k-1)e/21$ for $k\ge9$, where the largest value is $\varepsilon_9=0.015661\ldots$ at $T=8e/21$, the values
+and $T=(k-1)e/21$ for $k\ge9$, where the largest value is $\varepsilon_9=0.015661\ldots$ at $T=8e/21$ (computed with $\gamma_1\ge14.1347$ of (Z1); the bound $\gamma_1\ge14.13$ alone gives $0.01576$, which is also less than $0.016=\frac12-0.484$), the values
 decreasing thereafter. So $\frac12-\varepsilon_k\ge0.484$, and
 $\mathcal B(T,k)\le\frac{2\cdot1.0012\cdot0.5798\cdot21^9e^{0.259}}{(14.13^4/64)\cdot0.484}\,T\,e^{-15.4494\,T}(1+10^{-70})
 \le3.97\cdot10^9\,T\,e^{-15.4494\,T}$.
@@ -2090,8 +2090,10 @@ exponential type $\le1$ and in $L^2(\R)$, so $H(s):=\widehat G(s)/(s^2+a)$ is en
 ($s^2+a\ge a>0$ on $\R$); by the Paley--Wiener theorem $H=\widehat h$ with $h\in L^2(\R)$, $\supp h\subset[-1,1]$, and
 $G=-h''+ah$, so $h''\in L^2$. Then
 $1=\|G\|^2=\frac1{2\pi}\int(s^2+a)^2|H|^2=\|h''\|^2+2a\|h'\|^2+a^2\|h\|^2\ge\|h''\|^2\ge\frac{\pi^4}4\|h\|^2$
-(Lemma~\ref{lem:coer-poinc}). On the other hand $(1-\frac{s^2}{R^2})^+(s^2+a)^2\le M_R:=\frac{4(R^2+a)^3}{27R^2}$ (the
-maximum of $(1-x/R^2)(x+a)^2$ on $0\le x\le R^2$ is at $x=(2R^2-a)/3$), so
+(Lemma~\ref{lem:coer-poinc}). On the other hand $(1-\frac{s^2}{R^2})^+(s^2+a)^2\le M_R:=\frac{4(R^2+a)^3}{27R^2}$ (with
+$y=x+a$ the function $(1-x/R^2)(x+a)^2$ is $y^2(R^2+a-y)/R^2$, and $y\cdot y\cdot2(R^2+a-y)\le\bigl(\tfrac{2(R^2+a)}3\bigr)^3$ for
+$0\le y\le R^2+a$ by the inequality of the arithmetic and geometric means; the maximum on $0\le x\le R^2$ is attained at
+$x=(2R^2-a)/3$ when $R^2\ge a/2$, and is smaller than $M_R$ otherwise), so
 $\frac1{2\pi}\int(1-s^2/R^2)^+|\widehat G|^2\le M_R\|h\|^2\le\frac{4M_R}{\pi^4}$. Collecting terms gives \eqref{eq:coer-A}. For
 $R=2$ and $a\le\frac1{400}$ the bracket (decreasing in $a$) is $\ge0.90248$ and $\mathsf w(2)\cdot0.90248\ge1.89926$; with
 $C_0+\log2+\frac\pi2=-3.108239\ldots\ge-3.10824$ this gives $\log\frac1r-1.20898-r\ge\log\frac1r-1.209-r$.

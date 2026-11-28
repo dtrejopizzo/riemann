@@ -2249,8 +2249,8 @@ $\pcxstr_{\pcxH\oplus W}(\nu;z')=\pcxstr_{Y'}(\nu;z')=C'C\ne0$.
 
 \subsubsection{Convergence}\label{pcx:ss-conv}
 
-For a space $S_1$ of rank $n_1$, a space $S_2$ of rank $n_2$ and a set $P$ of primes of $E$ with
-$P\cap\bar P=\emptyset$, consider data $[y,\Phi]_P$ of $\auHom(S_1,S_2)$, $\Phi$ locally constant
+For a space $S_1$ of rank $n_1$, a space $S_2$ of rank $n_2$ and a non-empty set $P$ of primes of $E$ with
+$P\cap\bar P=\emptyset$ (the proof of Proposition~\ref{pcx:decay} uses a place of $P$; for $P=\emptyset$ the statement fails, the datum being then the vacuum at all finite places), consider data $[y,\Phi]_P$ of $\auHom(S_1,S_2)$, $\Phi$ locally constant
 with compact support on $\pcMat_{n_2\times n_1}(F_P)$. Write $\mathrm{ht}$ for the height on the
 adelic unitary groups ({\cite[\S14.2]{P46}}).
 
@@ -2637,7 +2637,7 @@ injectivity.
 
 
 \begin{corollary}[Absolute convergence in the exchange identity]\label{pcx:conv}
-Assume Proposition~\ref{pcx:decay}. \textup{(i)} If $\Phi$ on $\pcMat_{r\times N}(F_S)$ is supported
+Assume Proposition~\ref{pcx:decay} and $S\ne\emptyset$ (as is the case for the set of primes of a non-trivial modulus). \textup{(i)} If $\Phi$ on $\pcMat_{r\times N}(F_S)$ is supported
 on matrices of rank $r$ (at every place of $S$) then $h\mapsto\theta^{W,V}_{\alpha,\beta}(g,h;[v,\Phi]_S)$
 is integrable on $[\auU(V)]$, uniformly for $g$ in compact sets, and the integral has moderate
 growth in $g$. \textup{(ii)} The same holds for $h'\mapsto\theta^{V',W}_{\alpha,\beta}(h',g;[v,\Psi]_S)$
@@ -3346,19 +3346,38 @@ $\alpha,\beta$, write $\vartheta^{\alpha,\beta}_{F,x,(g,h)}(\phi)=\theta\bigl(\p
 
 \begin{lemma}[Product formula]\label{pcu:product}
 For a finite datum $f$ of $(W_0,U)$, a datum $F$ of $(W_0,W_0)$, real vectors $\phi$, $v_1$ and
-characters $\alpha,\beta$,
+characters $\alpha,\alpha',\beta$,
 \[
-\vartheta^{\alpha,\alpha\beta}_{f\boxtimes F,(x;0),(g,y\oplus l)}(\phi\boxtimes v_1)=
-\vartheta^{\alpha,\beta}_{f,x,(g,y)}(\phi)\;\theta^{W_0,W_0}_{\alpha,\alpha}(g,l;v_1\otimes F).
+\vartheta^{\alpha\alpha',\beta}_{f\boxtimes F,(x;0),(g,y\oplus l)}(\phi\boxtimes v_1)=
+\vartheta^{\alpha',\beta}_{f,x,(g,y)}(\phi)\;\theta^{W_0,W_0}_{\alpha,\beta}(g,l;v_1\otimes F).
 \]
 \end{lemma}
 \begin{proof}
-$\auHom(W_0,U\oplus W_0)=\auHom(W_0,U)\oplus\auHom(W_0,W_0)$ orthogonally; the Weil representation,
-the Heisenberg operators and $\theta$ are tensor products along this decomposition (the character
-$\alpha\beta$ on $\auU(U\oplus W_0)$ restricted to $\auU(U)\times\auU(W_0)$ is $\alpha\beta\otimes
-\alpha\beta$, and the factor $\beta$ is assigned to the first factor, $\alpha$ to the second, by the
-convention \eqref{pcx:eq-twist}), and the translation is $0$ on the second factor.
+$\auHom(W_0,U\oplus W_0)=\auHom(W_0,U)\oplus\auHom(W_0,W_0)$ orthogonally; the Weil representation
+$\omega_{\auHom(W_0,U\oplus W_0)}(g,y\oplus l)$, the Heisenberg operators and $\theta$ are tensor products
+along this decomposition, and the translation is $0$ on the second factor. It remains to compare the
+characters of the determinants. The target character $\beta$ of $\auU(U\oplus W_0)$ restricted to
+$\auU(U)\times\auU(W_0)$ is $\beta\otimes\beta$, since $\det(y\oplus l)=\det y\,\det l$; the source
+character enters through $(\alpha\alpha')(\det g)^{-1}=\alpha'(\det g)^{-1}\alpha(\det g)^{-1}$. So the
+scalar on the left is
+\[
+(\alpha\alpha')(\det g)^{-1}\beta(\det y)\beta(\det l)=\bigl[\alpha'(\det g)^{-1}\beta(\det y)\bigr]\,
+\bigl[\alpha(\det g)^{-1}\beta(\det l)\bigr],
+\]
+the product of the scalars of $\omega_{\alpha',\beta}(g,y)$ and $\omega_{\alpha,\beta}(g,l)$ on the right
+(the definition of \S\ref{pcx:ss-statement}).
 \end{proof}
+
+The formula is used with one target character on both blocks and with the source character
+divided between the two factors. In the unfolding of $\Theta^{\mathrm L}_{X,T}$ the representation is
+$\omega_{\gamma_X,\gamma_X}$ with $\gamma_X=\gamma\upsilon^b$ ($\gamma=\nu^{-1}\upsilon^j$, the character attached to the rank $n=2j$ of $W_0$), and by (U2) the functional $\vartheta$ of
+the pair $(W_0,T)$ has the characters $(\gamma\upsilon^b,\gamma)$; the lemma is applied with
+$\alpha=\beta=\gamma$ and $\alpha'=\upsilon^b$, so that the factor of $(W_0,W_0)$ is
+$\theta^{W_0,W_0}_{\gamma,\gamma}$, the kernel of $\Theta^{\mathrm L}_{W_0,W_0}$, and the factor of
+$(W_0,U)$ has the characters $(\upsilon^b,\gamma)$. In the unfolding of $\Theta^{\mathrm S}_{X,U}$ the
+functional $\vartheta$ of the pair $(W_0,U)$ has the characters $(\upsilon^b,\nu\upsilon^j)$, by (U2)
+again: the source characters of the two sides agree, and the target characters $\gamma=\nu^{-1}\upsilon^j$
+and $\nu\upsilon^j$ of $\auU(U)$ differ by $\nu^2$.
 
 Let $\gamma=\nu^{-1}\upsilon^{j}$ (the character of \S\ref{pcx:ss-arch} for the rank $n$ of $W_0$),
 $I_0(\nu)=\Theta^{\mathrm L}_{W_0,W_0}(z,\Psi^{\mathrm{col}}_1)(1)$, and for $h\in\auU(T)_\R$ let
@@ -3368,12 +3387,12 @@ places and $1$ at the finite ones, and $\mathrm N(\zeta)=\prod_\tau|\zeta_\tau|^
 
 \begin{lemma}[Identity of periods]\label{pcu:period}
 For every $h\in\auU(T)_\R$ there is $p\in\auU(U)_\R\times\auU(W_0)_\R$ such that for all
-$B\in\auGL_b(\auA_E)$, characters $\beta$, finite data $f$ of $(W_0,U)$, adelic $x$, and $g$, $y$,
+$B\in\auGL_b(\auA_E)$, finite data $f$ of $(W_0,U)$, adelic $x$, and $g$, $y$,
 \[
-\int_{[\auU(W_0)]}\vartheta^{\gamma,\gamma\beta}_{f\boxtimes F_1,(x;0),(g,y\oplus u)}
+\int_{[\auU(W_0)]}\vartheta^{\gamma\upsilon^b,\gamma}_{f\boxtimes F_1,(x;0),(g,y\oplus u)}
 \Bigl(\omega^\flat(1,ph)\,\mathrm{sl}_D\bigl((ph)^{-1}(B;0)\bigr)\Phi\Bigr)du
 =\frac{\rho(h)\,I_0(\nu)}{\nu_{\mathrm{bc}}(\zeta_B)\,\mathrm N(\zeta_B)^{j}}\;
-\vartheta^{\gamma,\beta}_{f,x,(g,y)}\bigl(\mathrm{sl}_D(B)\Lambda\bigr),
+\vartheta^{\upsilon^b,\gamma}_{f,x,(g,y)}\bigl(\mathrm{sl}_D(B)\Lambda\bigr),
 \]
 where $F_1$ is the finite datum $\Psi^{\mathrm{col}}_1=\chi_S^{-1}\circ\det$ at $S$ and the vacuum
 elsewhere, and $\nu_{\mathrm{bc}}(t)=\nu(t/\bar t)$.
@@ -3404,8 +3423,8 @@ slice is $\pcuS(y,x_1C)$. It remains to treat this last case, $\sigma(y)\sigma((
 \,(w\boxtimes z),
 \]
 the operators $\omega^\flat(1,ph)$ and $\omega^\flat(1,k\circ y)$ cancelling. By
-Lemma~\ref{pcu:product} with $\alpha=\gamma$, the integrand is this scalar times
-$\vartheta^{\gamma,\beta}_{f,x,(g,y)}(w)\,\theta^{W_0,W_0}_{\gamma,\gamma}(g,u;z\otimes F_1)$; the integral
+Lemma~\ref{pcu:product} with $\alpha=\beta=\gamma$ and $\alpha'=\upsilon^b$, the integrand is this scalar times
+$\vartheta^{\upsilon^b,\gamma}_{f,x,(g,y)}(w)\,\theta^{W_0,W_0}_{\gamma,\gamma}(g,u;z\otimes F_1)$; the integral
 over $u$ of the last factor is $\Theta^{\mathrm L}_{W_0,W_0}(z,\Psi^{\mathrm{col}}_1)(g)=I_0(\nu)$ by
 Lemma~\ref{pcx:const}. On the right, $\mathrm{sl}_D(B)\Lambda=\sigma((B;0))|\prod\det B_\tau^{j+\mu_\tau}|^2
 \kappa w$. It remains to see $\prod_\tau\bar\zeta_\tau^{2\mu_\tau}=|\prod_\tau\zeta_\tau^{j+\mu_\tau}|^2/
@@ -3609,7 +3628,7 @@ $k'\in H$ with
 \rho'(g')\,\kappa_0\,\epsilon\,\nu_{\mathrm{bc}}(d_0)\,I_0(\nu)\int_{\auU(U)(\auA)}
 \mathrm{term}^{\mathrm S}_1(p,y)dy,
 \]
-with $d_0=\det(s_0x_U)$, $\kappa_0=\varepsilon_T\varepsilon_U^{-1}\mathrm N((d_0)_\infty)^{j}$ (with $\mathrm N$ as defined before Lemma~\ref{pcu:period}, applied to the archimedean components), and $\epsilon$ the
+with $d_0=\det(s_0x_U)$, $\kappa_0=\varepsilon_T\varepsilon_U^{-1}|d_0|_{\auA_E}^{j}$ (the adelic modulus of the idele $d_0$, a positive constant fixed with the frames and $s_0$, before $\nu$ is chosen), and $\epsilon$ the
 constant of modulus $1$ with $\Phi^{\mathrm{row}}_{z_0}=\epsilon\cdot(\text{standard datum of the frame
 of }D)$. If $u_f\notin H_fK_f$, then $(y,y')g'$ has finite part in $(y_f,y'_f)u_f\notin H_fK_f$, so the
 term vanishes by Lemma~\ref{pcu:finslice}(b), and both sides are $0$ ($k'=1$). If $u_f=(u_1,u_2)\kappa$ with $\kappa\in K_f$, let $(\delta_1,\delta_2)=p$ be the element
@@ -3619,9 +3638,11 @@ $B=y^{-1}Y$, $x_f$ its finite part. By Lemma~\ref{pcu:finslice}(c) on the large 
 on the small side), both terms vanish unless $x_f$ is integral, and then $\det x_f$ is a unit and the large finite
 slice is $\epsilon\chi_S^{-1}(\det x_f)$ times the vacuum of $(W_0,U)$ tensored with $F_1$; on the small side the constant $\chi_S^{-1}(\det\bar x_f)$ times
 the vacuum. The archimedean point $\delta h_\infty$ is moved into the real slice by (M3), and the
-integral over $[\auU(W_0)]$ is the left side of Lemma~\ref{pcu:period}; replacing it by the right side
-and comparing scalars gives the claim. The scalar comparison uses: $\det B=\zeta_B\cdot\det x_f$ with
-$|\det y_\tau|=1$ at every infinite place and $\det x_f$ a unit, so $\mathrm N(\zeta_B)=\prod_\tau|\det Y_\tau|^2$; $\chi_S^{-1}(\bar\epsilon')=
+integral over $[\auU(W_0)]$ is the left side of Lemma~\ref{pcu:period} (the functional $\vartheta$ of the
+large term has the characters $(\gamma_X,\gamma_X\upsilon^{-b})=(\gamma\upsilon^b,\gamma)$ by (U2)); replacing it by the right side,
+whose functional has the characters $(\upsilon^b,\gamma)$, and comparing with the small term, whose functional has the
+characters $(\upsilon^b,\nu\upsilon^j)$ by (U2), gives the claim. The scalar comparison uses: $\det B=\zeta_B\cdot\det x_f$ with
+$|\det y_\tau|=1$ at every infinite place and $\det x_f$ a unit, so $\mathrm N(\zeta_B)=\prod_\tau|\det Y_\tau|^2$; the moduli $|\det q|^{(b+n)/2}$ and $|\det q|^{b/2}$ of the two terms in (U2) have the quotient $|\det q|_{\auA_E}^{j}=|d_0|_{\auA_E}^{j}\,|\det Y|_{\auA_E}^{j}$, and $|\det Y|_{\auA_E}=\mathrm N(\zeta_B)$ because the finite part $\det Y_f=\det y_f\det x_f$ has modulus $1$ ($\det y_f$ lies in $\auU(1)(\auA_{E^+,f})$ and $\det x_f$ is a unit), so that the quotient of the moduli by the factor $\mathrm N(\zeta_B)^{j}$ of the period is $|d_0|_{\auA_E}^{j}$; $\chi_S^{-1}(\bar\epsilon')=
 \chi_S^{-1}(\epsilon')\nu_{\mathrm{bc}}(\epsilon')$ for units $\epsilon'$ at $S$ (definition of
 $\chi_S$); and the factor $\nu(\det y)^2$ between the characters $\nu\upsilon^j$ and $\nu^{-1}
 \upsilon^j$ of $\auU(U)$ on the two sides; $j=n/2$ makes the powers of $\upsilon$ agree.
@@ -4407,8 +4428,9 @@ Write the real Fock spaces as $\mathcal F'$ (of $\auHom(X,T)_\R\cong\C^{\iota'}$
 $\auHom(X_1,T)_\R\cong\C^{\iota}$), with moments $\|v\|_N=\int(1+|y|)^N|v(y)|dy$, Heisenberg operators
 $\psrho$ and vacua $e$. The mixed model of $D$ is characterised by: there are linear maps $L,K\colon
 \C^p\to\C^{\iota'}$, $I\colon\C^\iota\to\C^{\iota'}$ (here $p$ is the complex dimension of
-$\auHom(\ell,T)_\R$) with $\C^{\iota'}=L\C^p\oplus I\C^\iota\oplus K\C^p$, and bounded maps
-$\mathrm{sl}(x)\colon\mathcal F'\to\mathcal F$, such that
+$\auHom(\ell,T)_\R$) with $\C^{\iota'}=L\C^p\oplus I\C^\iota\oplus K\C^p$, and linear maps
+$\mathrm{sl}(x)$ from the vectors of $\mathcal F'$ with finite moment $\|v\|_0$ to $\mathcal F$ (the values at $x$ in the mixed model; they are
+continuous for the moment norms, by Lemma~\ref{pcu:slicedecay}, and not for the Hilbert norms, an evaluation at a point not being bounded on $L^2$), such that
 \begin{equation}\label{pcu:eq-mixed}
 \mathrm{sl}(x)\,\psrho(La'+Iw+Kb)v=\beta(2x+a',b)\,\psrho(w)\,\mathrm{sl}(x+a')v,\qquad
 \mathrm{sl}(x)e=e^{-|x|^2}e,
@@ -4426,7 +4448,9 @@ For $v=\psrho(y)e$, \eqref{pcu:eq-mixed} gives $\mathrm{sl}(x)v=(\text{phase})\,
 From $1+|x|\le(1+|x+Ay|)(1+|Ay|)$ and $(1+t)^Me^{-t^2}\le e^{M^2}$,
 $(1+|x|)^Me^{-|x+Ay|^2}\le e^{M^2}(1+\|A\||y|)^M$; and $\|\psrho(w)e\|_N\le(1+|w|)^N\|e\|_N$ (translate
 the weight). Hence $(1+|x|)^M\|\mathrm{sl}(x)\psrho(y)e\|_N\le C(1+|y|)^{N+M}$, and
-Lemma~\ref{pcx:superpos} ($v=\int v(y)\psrho(y)e\,dy$, $\mathrm{sl}(x)$ bounded) gives the bound. The
+Lemma~\ref{pcx:superpos} ($v=\int v(y)\psrho(y)e\,dy$) gives the bound: by the estimate for coherent states the integral
+$\int v(y)\,\mathrm{sl}(x)\psrho(y)e\,dy$ converges absolutely in the norm $\|\cdot\|_N$, locally uniformly in $x$, as soon as $\|v\|_{N}<\infty$; it is the value at $x$
+of the continuous function which represents $v$ in the mixed model, and this is $\mathrm{sl}(x)v$. The
 second statement follows with $M=2p+1$, since $\int(1+|x|)^{-2p-1}dx<\infty$ on $\C^p=\R^{2p}$.
 \end{proof}
 This is the estimate used in (M2): the integral $\int\mathrm{sl}_D(x)\Lambda\,dx$ converges
@@ -13738,10 +13762,10 @@ For $g\in H_\tau$ and real $s\ge16n^2$, $\int_{G_\tau}\|g(r\oplus1)\|^{-s}dr\le2
 The continuous function $r\mapsto\|g(r\oplus1)\|\ge\|r\|/\|g^{-1}\|$ tends to infinity, so it attains
 its minimum $t_0$ at some $r_0$. For every $r$,
 \[
-\|rr_0^{-1}\|=\|(rr_0^{-1})\oplus1\|=\bigl\|(g(r_0\oplus1))^{-1}g(r\oplus1)\bigr\|\le t_0\,\|g(r\oplus1)\|
+\|r_0^{-1}r\|=\|(r_0^{-1}r)\oplus1\|=\bigl\|(g(r_0\oplus1))^{-1}g(r\oplus1)\bigr\|\le t_0\,\|g(r\oplus1)\|
 \le\|g(r\oplus1)\|^2 .
 \]
-Hence $\|g(r\oplus1)\|^{-s}\le\|rr_0^{-1}\|^{-s/2}$; integrate, use right invariance and
+Hence $\|g(r\oplus1)\|^{-s}\le\|r_0^{-1}r\|^{-s/2}$; integrate, use left invariance and
 Lemma~\ref{pgq:balls} with $s/2$.
 \end{proof}
 
@@ -14545,8 +14569,10 @@ $\langle v,w\rangle\in E\cap\widehat\auO_E=\auO_E$. At $\tau$, $|\tau\langle v,w
 has $\prod_{\tau\in\auPl}|\tau(a)|^2=|\mathrm N_{E/\Q}(a)|\ge1$, so $\max_\tau|\tau(a)|\ge1$.
 (b) Otherwise $|v|_x|y_j|_x<1$ for all $j$, so $v$ is orthogonal to all $y_j$ by (a), hence to $V$, and
 $v=0$ as the form is non-degenerate.
-(c) $L_V(x)=E^n\cap x_f\widehat\auO_E^{\,n}$. Since $x_f$ preserves the unimodular form,
-$\det x_f$ is a unit at every finite place, so $x_f\widehat\auO_E^{\,n}$ and $\widehat\auO_E^{\,n}$ have the same
+(c) $L_V(x)=E^n\cap x_f\widehat\auO_E^{\,n}$. Since $x_f$ preserves the form,
+$\det x_f\cdot\overline{\det x_f}=1$. At a finite place of $E^+$ inert in $E$ this makes $\det x_f$ a unit; at a place $v=w\bar w$ split in $E$
+the components at $w$ and $\bar w$ are $t$ and $t^{-1}$ ($t\in E_w^\times=E^+_v{}^{\times}$, not necessarily a unit), whose absolute values multiply to $1$. So the
+module of $x_f$ on $\auA_{E,f}^n$, the product of $|\det x_w|_w$ over the finite places $w$ of $E$, is $1$, and $x_f\widehat\auO_E^{\,n}$ and $\widehat\auO_E^{\,n}$ have the same
 volume in $\auA_{E,f}^n$; hence the covolumes of $L_V(x)$ and of $\auO_E^n$ in $E_\infty^n$ (embedded by
 $v\mapsto(\tau(v))_\tau$) agree, both being the covolume of $E^n$ in $\auA_E^n$ divided by that volume. The latter is $(2^{-f}
 |D_E|^{1/2})^n$ ({\cite[Lemma~8.32]{P51}}; see also \cite[Chapter~I, (5.1) and Proposition~(5.2)]{Neukirch}). The archimedean coordinate map is $v\mapsto(\mathsf
@@ -16938,7 +16964,7 @@ P(F)$ with $(x^{-1}\gamma x)_f\in\Omega_f$.
 N(F)\,x\,(Z_\delta\times K')$ with $\delta=C\beta(a)^{-1}$, where $Z_\delta=\{z\in G_\infty:
 \|z_\tau-1\|\le\delta\text{ for all }\tau\}$.
 \item[(c)] Let $B'>n^2$ and $M_{B'}(y)=\pmP(y_\infty)^{-B'}1_{\Omega_f}(y_f)$. There is $C$ such that
-$\sum_{\gamma\in\pmGa}M_{B'}(g^{-1}\gamma x)\le C\|a\|^{2fn^2}$ for all $g\in G(\auA_F)$. For $x$ in a compact subset of $G(\auA_F)$, not necessarily in $\pmS$, the series converges
+$\sum_{\gamma\in\pmGa}M_{B'}(g^{-1}\gamma x)\le C\|a\|^{2fn^2}$ for all $g\in G(\auA_F)$. For $g$ and $x$ in compact subsets of $G(\auA_F)$, $x$ not necessarily in $\pmS$, the series converges
 uniformly in $(g,x)$.
 \end{enumerate}
 \end{quotedthm}

@@ -2242,14 +2242,13 @@ Write $\pi=\pi_\lambda$, $c=c_\lambda$, $e=e_\lambda=d\bar c$ with $d=d_\lambda$
 
 \emph{Step 1: $F(g)=d\int_GF(x)\,c(x^{-1}g)\,dx$.} By Proposition~\ref{pco:rigid}, $F=R(e)F$ in
 $L^2$. Since $F$ is bounded and continuous and $e\in L^1$, $g\mapsto\int e(h)F(gh)\,dh$ is
-continuous (dominated convergence), so $F(g)=\int e(h)F(gh)\,dh$ for every $g$. Insert
-$\overline{c(h)}=\|F\|^{-2}\overline{\langle F,R(h)F\rangle}=\|F\|^{-2}\int F(x)\overline{F(xh)}\,
-dx$; the double integral converges absolutely (it is bounded by $\|F\|_\infty\|F\|_1^2$), and by
-Fubini
+continuous (dominated convergence), so $F(g)=\int e(h)F(gh)\,dh$ for every $g$. Substitute $x=gh$
+(the Haar measure is left invariant) and use $e(h)=d\,\overline{c(h)}=d\,c(h^{-1})$, which holds
+because $c(h)=\langle v,\pi(h)v\rangle$ is a diagonal coefficient of a unitary representation:
 \[
-F(g)=\frac d{\|F\|^2}\int F(x)\int\overline{F(xh)}F(gh)\,dh\,dx=\frac d{\|F\|^2}\int F(x)\langle R(x)F,
-R(g)F\rangle\,dx=d\int F(x)\,c(x^{-1}g)\,dx .
+F(g)=\int e(g^{-1}x)F(x)\,dx=d\int F(x)\,c(x^{-1}g)\,dx ,
 \]
+the integral converging absolutely since $F\in L^1$ and $|c|\le1$.
 
 \emph{Step 2: $F(g)=\langle w,\pi(g)v\rangle$ with $w=d\int_G\overline{F(x)}\,\pi(x)v\,dx$.} The
 integral converges in norm since $F\in L^1$, and $c(x^{-1}g)=\langle\pi(x)v,\pi(g)v\rangle$, with inner
@@ -5468,10 +5467,9 @@ $g\in\auU(W)(\auA_f)$ the linear operator $\mathsf D=\omega(g)^{-1}\Lambda_\sigm
 \C^\times\psrho_f(y)$ for all $y$ by (W1) ($\mathsf B$ is a scalar and commutes with $g$); by the
 irreducibility of the Heisenberg representation, $\mathsf D=\mathsf c_g\psrho_f(y_g)$ for some
 $y_g$. Thus $\Lambda_\sigma\omega(g)\psvac^\circ=\mathsf c_g\,\omega(g)\psrho_f(y_g)\Lambda_\sigma
-\psvac^\circ$, and $|\mathsf c_g|=1$: by (W4), $\omega(g)\psvac_L=\delta_g\sum_r\zeta_r\psrho^\circ(r)
-\psvac_L$, a sum over the $\mathsf I_g=[gL:L\cap gL]$ classes $r$, where $\delta_g$ is a root of
-unity times $\mathsf I_g^{-1/2}$ times a value of $\upsilon^{\pm1}$ on finite ideles, all of whose
-conjugates have absolute value $1$; so $|\sigma\delta_g|=|\delta_g|=\mathsf I_g^{-1/2}$, the left
+\psvac^\circ$, and $|\mathsf c_g|=1$: by Lemma~\ref{pf:delta}, $\omega(g)\psvac_L=\delta_g\sum_r\zeta_r\psrho^\circ(r)
+\psvac_L$, a sum over the $\mathsf I_g=[gL:L\cap gL]$ classes $r$, with roots of unity $\zeta_r$ and
+$|\sigma\delta_g|=|\delta_g|=\mathsf I_g^{-1/2}$ (part (i) of the lemma); so the left
 side is a sum of $\mathsf I_g$ orthogonal vectors of norm $\mathsf I_g^{-1/2}\|\Lambda_\sigma
 \psvac^\circ\|$, and the right side has norm $|\mathsf c_g|\,\|\Lambda_\sigma\psvac^\circ\|$.
 
@@ -5566,12 +5564,10 @@ $E^{\mathsf C}$ with multiplicities $q_1$.
 \end{proposition}
 \begin{proof}
 (S1). By (W1), $\omega(g)\psrho^\circ(x)\psvac^\circ$ is a root of unity times $\psrho^\circ(gx)
-\omega(g)\psvac^\circ$, and $\aubar{\pi_M}gx$ is integral above $\ell$. By (W4),
+\omega(g)\psvac^\circ$, and $\aubar{\pi_M}gx$ is integral above $\ell$. By Lemma~\ref{pf:delta},
 $\omega(g)\psvac_L=\delta_g\sum_{r\in gL/(L\cap gL)}\zeta_r\psrho^\circ(r)\psvac_L$ with roots of
-unity $\zeta_r$, where $\delta_g$ is a root of unity times $[gL:L\cap gL]^{-1/2}$ times the value
-of $\upsilon^{\pm1}$ at an idele $\det\mathsf u$ with $\mathsf uL=L\cap g^{-1}L$. This idele is a
-unit above $\ell$; so the index is prime to $\ell$, the value of the algebraic Hecke character
-$\upsilon$ is a unit at $\ell$, and the $r$ can be taken integral above $\ell$.
+unity $\zeta_r$, and, since $g$ stabilises $L$ at the places above $\ell$, $\delta_g$ is a unit above
+$\ell$ and the $r$ can be taken integral above $\ell$ (part (ii) of the lemma).
 
 (S2), (S3). By \eqref{pk:eq-vac} and \eqref{pk:eq-transl}, and since a translation by $x$ agrees
 up to a root of unity with the translation by a rational $\gamma$ close to $x$, $f$ is a
@@ -7350,13 +7346,10 @@ $\delta x$ integral at the places above $\ell$ (that is, $\delta x_w\in L_w$ for
 standard data of \S\ref{pk:ss-kernel} are those of level $\aubar{\pi_M}$. \emph{If $g\in\auU(W)(\auA_f)$ is integral with integral inverse at the places above $\ell$, then
 $\omega(g)$ preserves the standard data of level $\delta$ at $\ell$, for every $\delta$ and every $\ell$.}
 Indeed, by (W1), $\omega(g)\psrho^\circ(x)\psvac^\circ$ is a root of unity times $\psrho^\circ(gx)\,
-\omega(g)\psvac^\circ$, and $\delta gx$ is integral above $\ell$ when $\delta x$ is. By (W4),
+\omega(g)\psvac^\circ$, and $\delta gx$ is integral above $\ell$ when $\delta x$ is. By Lemma~\ref{pf:delta},
 $\omega(g)\psvac_L=\delta_g\sum_{r\in gL/(L\cap gL)}\zeta_r\psrho^\circ(r)\psvac_L$ with roots of unity
-$\zeta_r$, where $\delta_g$ is a root of unity times $[gL:L\cap gL]^{-1/2}$ times the value of
-$\upsilon^{\pm1}$ at an idele $\det\mathsf u$ with $\mathsf uL=L\cap g^{-1}L$. As $g_w L_w=L_w$ for $w\mid\ell$,
-the index is prime to $\ell$, $\mathsf u$ may be taken to be $1$ above $\ell$ (so the value of the
-algebraic Hecke character $\upsilon$ is a unit at $\ell$), and the $r$ may be taken in $L_w$ above
-$\ell$, so that $\delta r$ is integral there ($\delta\in\auO_K$). This is the proof of
+$\zeta_r$; as $g_w L_w=L_w$ for $w\mid\ell$, the coefficient $\delta_g$ is a unit above $\ell$ and the $r$ may be taken in $L_w$ above
+$\ell$ (part (ii) of the lemma), so that $\delta r$ is integral there ($\delta\in\auO_K$). This is the proof of
 Proposition~\ref{pk:std}(S1), which does not use the level.
 
 \begin{theorem}[Standard data at every prime]\label{pf:std}
@@ -7692,6 +7685,92 @@ the Weil representation.
 \providecommand{\psHS}{\mathcal H}
 \providecommand{\psrho}{\varrho}
 \providecommand{\pzF}{\mathfrak F}
+
+\emph{The coefficient $\delta_g$.} The following lemma is used in the proofs of Propositions~\ref{pk:conj} and~\ref{pk:std}; it rests on (W1), (W4), the local form of (W2$'$) recalled in \S\ref{pf:ss-flip}, and the Cartan decomposition.
+
+\begin{lemma}[The coefficient of a translate of the vacuum]\label{pf:delta}
+Let $L\subset W(\auA_f)$ be a self-dual lattice, $K_L$ its stabiliser, $g\in\auU(W)(\auA_f)$ and
+$\mathsf I_g=[gL:L\cap gL]$. Then
+\[
+\omega(g)\psvac_L=\delta_g\sum_{r\in gL/(L\cap gL)}\zeta_r\,\psrho^\circ(r)\psvac_L ,
+\]
+with roots of unity $\zeta_r$, $\zeta_0=1$, and
+\[
+\delta_g=\mathsf I_g^{-1/2}\,\upsilon(\mathsf d_g)^{-1}
+\]
+for a finite idele $\mathsf d_g$ of $E$ whose component is $1$ at every place $w$ with $g_wL_w=L_w$.
+Consequently: \textup{(i)} $\delta_g$ is algebraic and $|\sigma\delta_g|=\mathsf I_g^{-1/2}$ for every
+automorphism $\sigma$ of $\C$; \textup{(ii)} if $g_wL_w=L_w$ at the places $w$ above a prime $\ell$, then
+$\delta_g$ is a unit at every place above $\ell$, and the representatives $r$ can be taken in $L_w$ at
+the places $w$ above $\ell$.
+\end{lemma}
+\begin{proof}
+\emph{The expansion.} By (W1) and (W4), $\psrho(x)\omega(g)\psvac_L=\epsilon_L(g^{-1}x)\,\omega(g)\psvac_L$ for
+$x\in gL$. Write $\omega(g)\psvac_L=\sum_xc_x\psrho^\circ(x)\psvac_L$ in the basis of (W4), $x\in W(\auA_f)/L$.
+For $l\in L\cap gL$, $\psrho(l)\psrho^\circ(x)\psvac_L=[l,x]\epsilon_L(l)\psrho^\circ(x)\psvac_L$, so
+$c_x\ne0$ implies $[l,x]=\epsilon_L(g^{-1}l)\epsilon_L(l)^{-1}$ for all $l\in L\cap gL$. By the proof of
+Lemma~\ref{pf:eps}, $\epsilon_L(l)$ depends only on $\langle l,l\rangle$, which $g$ preserves; so
+$[l,x]=1$ for all $l\in L\cap gL$, that is, $x$ lies in the dual $L+gL$ of $L\cap gL$. Thus the sum is over
+$(L+gL)/L=gL/(L\cap gL)$. For $r\in gL$ the operator $\psrho(r)$ maps the line of
+$\psrho^\circ(x)\psvac_L$ to that of $\psrho^\circ(x+r)\psvac_L$, multiplying the basis vectors by roots of
+unity (values of $\epsilon$ and $\beta$), and it multiplies $\omega(g)\psvac_L$ by $\epsilon_L(g^{-1}r)=\pm1$;
+comparing the components, $c_r$ is a root of unity times $c_0$. This is the expansion, with
+$\delta_g=c_0$. The $\mathsf I_g$ vectors $\psrho^\circ(r)\psvac_L$ are orthogonal of norm $\|\psvac_L\|$
+and $\omega(g)$ is unitary, so $|\delta_g|=\mathsf I_g^{-1/2}$.
+
+\emph{Reductions.} For $k\in K_L$, $\omega(k)\psvac_L=\psvac_L$ (W4), so $\delta_{gk}=\delta_g$; and
+$\omega(k)\psrho^\circ(r)\psvac_L$ is a root of unity times $\psrho^\circ(kr)\psvac_L$ (W1), with the class
+of $0$ fixed, so $\delta_{kg}=\delta_g$; also $\mathsf I_{kgk'}=\mathsf I_g$. If $g$ and $g'$ are supported at
+disjoint sets of places, then $\omega(gg')\psvac_L=\delta_{g'}\sum_{r'}\zeta_{r'}\,\omega(g)\psrho^\circ(r')
+\psvac_L$ and $\omega(g)\psrho^\circ(r')\psvac_L$ is a root of unity times $\psrho^\circ(r')\omega(g)\psvac_L$
+($gr'=r'$); expanding $\omega(g)\psvac_L$ and noting that $r+r'\in L$ only if $r,r'\in L$, the coefficient of
+$\psvac_L$ is $\delta_g\delta_{g'}$. So $\delta_{gg'}=\delta_g\delta_{g'}$ and $\mathsf I_{gg'}=\mathsf I_g
+\mathsf I_{g'}$, and it suffices to treat $g\in\auU(W)(E^+_v)$ for one finite place $v$.
+
+\emph{The Cartan decomposition.} As in the proof of Proposition~\ref{pf:flip}, $L_v=(I_L\oplus I_L^*)\perp
+L_0$ with $I_L$ a maximal totally isotropic direct summand, $I_L^*$ totally isotropic, in duality with
+$I_L$, and $L_0$ of rank $\le1$ (if $v$ splits into $w,\aubar w$, then $I_L=L_w$, $I_L^*=L_{\aubar w}$,
+$L_0=0$). Put $I=E_vI_L$, $I^*=E_vI_L^*$. Since $E/E^+$ is unramified at $v$, $K_{L,v}$ is hyperspecial,
+and by the Cartan decomposition \cite[\S3.3.3]{TitsCorvallis} every element of $\auU(W)(E^+_v)$ is in
+$K_{L,v}\,a\,K_{L,v}$ for an $a$ that is diagonal, with entries powers of a uniformiser, in a basis of
+$I_L$, acts on $I^*$ by the inverse of the adjoint, and is $1$ on $E_vL_0$ (at a split place this is the
+theorem of elementary divisors for $\auGL(L_w)$). By the reductions we may take $g=a$. Then
+$aL_v=aI_L\oplus aI_L^*\oplus L_0$.
+
+\emph{The zero term.} Let $\psZ_I$ be the local zero term (\S\ref{pf:ss-flip}). Since $a\in P_I(E^+_v)$
+acts trivially on $I^\perp/I$,
+\[
+\psZ_I\,\omega(a)\psvac_L=\chi_I(a)\,\psZ_I\psvac_L,\qquad\chi_I(a)=\upsilon_v(\det a|_I)^{-1}\,|\det a|_I|^{1/2}.
+\]
+On the other side take representatives $r=i+u$ with $i\in aI_L$, $u\in aI_L^*$. For $l\in I_L$ we have
+$\psZ_I\psrho(l)=\psZ_I$ ($l\in I$) and $\psrho(l)\psvac_L=\epsilon_L(l)\psvac_L=\psvac_L$ ($l$ is isotropic,
+Lemma~\ref{pf:eps}), so $\psZ_I\psrho(r)\psvac_L=\psZ_I\psrho(r)\psrho(l)\psvac_L=[r,l]\,\psZ_I\psrho(l)
+\psrho(r)\psvac_L=[u,l]\,\psZ_I\psrho(r)\psvac_L$ (as $[i,l]=1$). If $u\notin I_L^*$ there is $l\in I_L$ with
+$[u,l]\ne1$ ($I_L^*$ is the dual of $I_L$ in $I^*$), and the term vanishes. If $u\in I_L^*$ the class of
+$r$ is that of $i\in aI_L$; then $\psrho(i)\omega(a)\psvac_L=\epsilon_L(a^{-1}i)\omega(a)\psvac_L=\omega(a)
+\psvac_L$, and comparing the components on the line of $\psrho(i)\psvac_L$ gives $\zeta_i\psrho^\circ(i)
+\psvac_L=\psrho(i)\psvac_L$, whence $\psZ_I(\zeta_i\psrho^\circ(i)\psvac_L)=\psZ_I\psvac_L$. Therefore
+\[
+\chi_I(a)\,\psZ_I\psvac_L=\delta_a\,\mathsf N\,\psZ_I\psvac_L,\qquad\mathsf N=[aI_L:I_L\cap aI_L].
+\]
+Finally $\psZ_I\psvac_L\ne0$: in the local mixed model $\psZ_I\psrho(u)F$, $u\in I^*$, is, up to a factor of absolute value $1$, the value $F(u)$ ($I^*$ acts by translation of the variable); by the computation just made (with $i=0$) $\psZ_I\psrho(u)\psvac_L$ is $0$ for
+$u\notin I_L^*$ and $\psZ_I\psvac_L$ for $u\in I_L^*$; so $\psZ_I\psvac_L=0$ would give $\psvac_L=0$. Hence
+$\delta_a=\upsilon_v(\det a|_I)^{-1}\,|\det a|_I|^{1/2}\,\mathsf N^{-1}$, and since $|\delta_a|=\mathsf I_a^{-1/2}$ and $|\upsilon_v|=1$, the
+positive number $|\det a|_I|^{1/2}\mathsf N^{-1}$ is $\mathsf I_a^{-1/2}$. This is the formula, with
+$\mathsf d_g$ the idele whose component at $v$ is $\det a|_I$ (at a split place, $\det a|_{L_w}$ at $w$ and
+$1$ at $\aubar w$), which is $1$ when $g_v\in K_{L,v}$.
+
+\emph{Consequences.} Let $\mathsf d$ be a finite idele and $h$ the class number of $E$; then
+$\mathsf d^h=zu$ with $z\in E^\times$ and $u$ a unit idele, and as $\upsilon$ is unramified and trivial on
+$E^\times$, $\upsilon(\mathsf d)^h=\upsilon_\infty(z)^{-1}=\prod_{\tau}|\tau(z)|/\tau(z)=\mathrm N_{E/\Q}(z)^{1/2}\big/\prod_{\tau\in\Phi}\tau(z)$, the product over the
+embeddings of $E$ fixed in \S\ref{ps:ss-weil}, which form a CM type $\Phi$. This is an algebraic number. An automorphism $\sigma$ of $\C$ carries $\Phi$
+to a CM type $\sigma\Phi$ ($E$ is a CM field) and $\mathrm N_{E/\Q}(z)^{1/2}$ to $\pm\mathrm N_{E/\Q}(z)^{1/2}$,
+and $|\prod_{\tau\in\Phi'}\tau(z)|^2=\mathrm N_{E/\Q}(z)$ for every CM type $\Phi'$; so every conjugate of $\upsilon(\mathsf d)$ has absolute
+value $1$, which with $\sigma(\mathsf I_g^{-1/2})=\pm\mathsf I_g^{-1/2}$ gives (i). For (ii): $\mathsf I_g$ is a
+product of local indices at places not above $\ell$, hence prime to $\ell$; $\mathsf d_g$ is $1$ above
+$\ell$, so $z$ is a unit above $\ell$ and $\upsilon(\mathsf d_g)^h$, a quotient of two numbers that are
+units above $\ell$, is a unit above $\ell$; and $(gL/(L\cap gL))_w=0$ for $w\mid\ell$.
+\end{proof}
 
 \section{Archimedean types, constants and levels}\label{pz:sec}
 
@@ -8991,7 +9070,7 @@ $\psi_v^{q_2}=1$. This is the property used in (F2) of {\cite[Lemma~4.15]{P54}} 
 \item[(T4)] The character $\chi_0$ of {\cite[\S2.7]{P54}} is $\chi_M$, with tame part $\omega$ trivial off $\mathsf M$ and of order
 $>8m$ at $\mathsf M$; the tame part of $\mu^0_j$ is $\omega^j$. The characters $\nu_\ast=\mu^0_j\upsilon^{n'}$, $\nu_\pm$,
 $\chi'=\chi_M^j\vartheta$, $\nu''_\vartheta$ of {\cite[\S2.7]{P54}}, {\cite[\S3.2.6]{P54}} have the weights and tame parts stated there,
-and $\nu^\flat=\nu''_\vartheta\upsilon^m/\chi'=\mu^\flat\upsilon^{-j\Delta+j+\lfloor(t+k-1)/2\rfloor+m}$ is independent of $\vartheta$ with trivial tame part. At every
+and $\nu^\flat=\nu''_\vartheta/\chi'=\mu^\flat\upsilon^{-j\Delta+j+\lfloor(t+k-1)/2\rfloor}$ is independent of $\vartheta$ with trivial tame part. At every
 prime of $\pfqm$ the tame parts of $\nu''_\vartheta$ and $\chi'$ coincide ($\omega^j_w$ at $\mathsf M$, $\psi_w$ at $Q_\vartheta$).
 \end{enumerate}
 \end{quotedthm}

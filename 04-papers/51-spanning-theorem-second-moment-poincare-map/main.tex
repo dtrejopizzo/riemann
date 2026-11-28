@@ -4449,7 +4449,7 @@ P(F)$ with $(x^{-1}\gamma x)_f\in\Omega_f$.
 N(F)\,x\,(Z_\delta\times K')$ with $\delta=C\beta(a)^{-1}$, where $Z_\delta=\{z\in G_\infty:
 \|z_\tau-1\|\le\delta\text{ for all }\tau\}$.
 \item[(c)] Let $B'>n^2$ and $M_{B'}(y)=\pmP(y_\infty)^{-B'}1_{\Omega_f}(y_f)$. There is $C$ such that
-$\sum_{\gamma\in\pmGa}M_{B'}(g^{-1}\gamma x)\le C\|a\|^{2fn^2}$ for all $g\in G(\auA_F)$. For $x$ in a compact subset of $G(\auA_F)$, not necessarily in $\pmS$, the series converges
+$\sum_{\gamma\in\pmGa}M_{B'}(g^{-1}\gamma x)\le C\|a\|^{2fn^2}$ for all $g\in G(\auA_F)$. For $g$ and $x$ in compact subsets of $G(\auA_F)$, $x$ not necessarily in $\pmS$, the series converges
 uniformly in $(g,x)$.
 \end{enumerate}
 \end{lemma}
@@ -4507,9 +4507,15 @@ $u\in U_x$, we get $M_{B'}(y)\le2^{fB'}M'(yu)$ with $M'=\pmP^{-B'}\otimes1_{\Ome
 xu)\,du\le\frac{2^{fB'}}{\pmvol(U_x)}\int_{G(\auA_F)}M'.
 \]
 The integral is finite by Lemma~\ref{pm:kernel}(c), and $\pmvol(U_x)\ge c(r_0\|a\|^{-2})^{fn^2}$,
-since $\dim G_\infty=fn^2$. The same computation, with $U_x$ replaced by a fixed small neighbourhood of $1$ and for the sum
-over the complement of a finite set of $\gamma$, shows that the series converges uniformly for
-$g\in G(\auA_F)$ and $x$ in any compact subset of $G(\auA_F)$.
+since $\dim G_\infty=fn^2$. For the uniform convergence let $g$ and $x$ run through compact sets $\Omega_1$, $\Omega_2$ and let $U$ be a fixed compact
+neighbourhood of $1$ so small that for every $x\in\Omega_2$ the sets $\gamma xU$ ($\gamma\in\pmGa$) are disjoint (as above, $xUU^{-1}x^{-1}$
+shrinks to $\{1\}$ uniformly on $\Omega_2$). The same computation, with $U_x$ replaced by $U$ and for the sum over the
+complement of a finite set $\Sigma$ of $\gamma$, bounds that sum by a constant times the integral of $M'$ over
+$\bigcup_{\gamma\notin\Sigma}\Omega_1^{-1}\gamma\Omega_2U$. Since $\pmGa$ is discrete, every compact subset of $G(\auA_F)$ meets
+$\Omega_1^{-1}\gamma\Omega_2U$ for finitely many $\gamma$ only, so this integral tends to $0$ as $\Sigma$ grows, $M'$ being
+integrable. (The convergence is not uniform for $g$ in all of $G(\auA_F)$: the sum is invariant under $g\mapsto\gamma_0g$,
+which permutes its terms. Only the bound of the total sum is uniform in $g$; the continuity of the sum in $g$, which is
+what is used below, follows from the uniformity on compact sets.)
 \end{proof}
 
 \begin{lemma}[Decay in a cusp]\label{pm:decay}
@@ -10496,11 +10502,11 @@ $u_qu_{q'}$ has parameters $\beta+\beta'$ and $A=A(u)+A(u')-\beta\beta'^*$; henc
 blocks of $u-1$, $N(u)\le\max(\|u-1\|^2,\|u-1\|)\le(\|u\|+1)^2$; and $\|u\|\le1+2\|\beta\|+\|A\|\le(1+\sqrt{N(u)})^2$.
 Conjugation by the element $a_t$ of $G$ with $a_t\tilde e_a=t\tilde e_a$, $a_t\tilde e^*_a=t^{-1}\tilde e^*_a$, fixing
 $x_i,\tilde z$, maps $u_{(\beta,\sigma)}$ to $u_{(t\beta,t^2\sigma)}$; it multiplies $N$ by $t^2$ and $du^0$ by $t^Q$,
-$Q=2\varrho k+\varrho^2$ (real dimension of the parameters). So the balls $B(\rho)=\{N\le\rho\}$ satisfy
+$Q=2\varrho k+2\varrho^2$ (the homogeneous dimension: the $2\varrho k$ real coordinates of $\beta$ have weight $1$ and the $\varrho^2$ real coordinates of $\sigma$ have weight $2$). So the balls $B(\rho)=\{N\le\rho\}$ satisfy
 $\pbvol B(\rho')=(\rho'/\rho)^{Q/2}\pbvol B(\rho)$, and they are compact with non-empty interior.
 
 \emph{The tube.} Let $\rho=Q^2(T^2+1)^2$, $\Omega_0=B(\rho)$, $A=\Omega_0\cdot\{y:\|y\|\le T\}$, compact. On $A$,
-$\|vy\|\le(1+\sqrt\rho)^2T\le(1+Q(T^2+1))^2T\le T^9\le T^{10}$, using $Q\le r^2/2\le T^2/128$. Fix $y$ and $v_0$ with
+$\|vy\|\le(1+\sqrt\rho)^2T\le(1+Q(T^2+1))^2T\le T^9\le T^{10}$, using $Q=2\varrho(k+\varrho)\le(k+2\varrho+1)^2/2=r^2/2\le T^2/128$. Fix $y$ and $v_0$ with
 $v_0y=v_1y_1\in A$ ($v_1\in\Omega_0$, $\|y_1\|\le T$); if also $vy=v_2y_2\in A$, then $w:=v_2^{-1}vv_0^{-1}v_1=y_2y_1^{-1}$
 lies in $\pboU$ and has $\|w\|\le T^2$, so $\sqrt{N(w)}\le T^2+1$, and $\sqrt{N(vv_0^{-1}v_1)}=\sqrt{N(v_2w)}\le\sqrt\rho+
 T^2+1$. Thus $\{v:vy\in A\}\subseteq B(\rho')g^{-1}$ with $g=v_0^{-1}v_1$, $\sqrt{\rho'}=\sqrt\rho+T^2+1$. By right

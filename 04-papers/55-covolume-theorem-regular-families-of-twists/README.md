@@ -7,7 +7,7 @@ Seventh companion of row D. It proves that the twists needed in the Covolume The
 | File | What it is |
 |---|---|
 | `main.tex` | Source of the paper (a single file). |
-| `covolume-theorem-regular-families-twists-selmer-ribet.pdf` | The paper (78 pages). |
+| `covolume-theorem-regular-families-twists-selmer-ribet.pdf` | The paper (79 pages). |
 
 ## The paper
 

@@ -11,7 +11,7 @@ from published theorems to the Riemann hypothesis, is in one document.
 | File | What it is |
 |---|---|
 | `main.tex` | Source of the paper (a single file). |
-| `sign-radial-intersection-form-idele-class-group-complete-proofs.pdf` | The paper (659 pages). |
+| `sign-radial-intersection-form-idele-class-group-complete-proofs.pdf` | The paper (661 pages). |
 | `verification/row-d-verification.ipynb` | Colab notebook: the numerical checks and the falsification attempts applied to the statements of the chain, with their outputs. |
 | `verification/README.md` | How to open and run the notebook. |
 
@@ -87,7 +87,7 @@ which statements were tested and which were not.
 | Criterion, admissible data, main inequality | Paper 46 | here |
 | The three theorems | stated and deduced in Paper 46; called Short Forms, Spanning, Covolume | stated and deduced here; called Theorems A, B, C |
 | Proofs of the propositions behind them | Papers 49–56, each readable on its own | Sections 15–80 |
-| Length | 54 pages and eight companions (677 pages) | 659 pages |
+| Length | 54 pages and eight companions (681 pages) | 661 pages |
 
 The two presentations were edited separately; where they differ in wording, the series
 (Papers 46 and 49–56) is the later text. [Paper 57](../57-riemann-hypothesis-along-the-rows-of-weils-proof/)

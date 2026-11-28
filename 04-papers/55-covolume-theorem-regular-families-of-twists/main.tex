@@ -880,12 +880,12 @@ quotient of two of them has $\ell$-power order, so they are pairwise incongruent
 maximal ideal. Lemma~\ref{pg:burnside} gives (M4) with $g=\phi^r$,
 $\pgcyc(g)=p_i^{\,r}$. For (M3): the places above $p_0p_1$ are the chosen places and their conjugates. At a chosen
 $v\nmid\ell$ the eigenvalues of $R(\gamma_v)$ are, by (G4), the images of the roots of the
-rescaled label: roots of unity $\omega\ne1$ of order dividing $p_i^r-1$ (not $1$ because the
+rescaled label: roots of unity $\omega\ne1$ of order dividing $p_i^{d}-1$, where $d\le r$ is the degree of the irreducible factor of the label having that root ($d$ need not divide $r$) (not $1$ because the
 rescaled labels do not have the root $1$: this follows from the definition of a good family alone, by the computation in part (c) of the proof of Theorem~\ref{pg:main}, which uses neither that theorem nor the present one). By (M1),
 $R(g^c)$ is conjugate to $\chi(g)^{t-1}\,{}^{\mathrm t}R(g)^{-1}$, so $R(\gamma_v^{-c})$ has the
 same eigenvalues as $R(\gamma_v)$; this treats the conjugate places. If
 $\pgv(\omega-1)>0$ then $\omega$ has order a power $\ell^a>1$ of $\ell$, so
-$\pgv(\omega-1)\le1/(\ell-1)\le1$ and $\ell\mid p_i^r-1\mid\pgNch$. Hence
+$\pgv(\omega-1)\le1/(\ell-1)\le1$ and $\ell\mid p_i^d-1$, which divides $\#\auGL_{rt}(\auF_w)$ (as $d\le r\le rt$) and hence $\pgNch$. Hence
 $\pgv(\det(R(\gamma)-1))\le r\le r\,\pgv(\pgNch)$ if some eigenvalue is not a unit, and it is $0$
 otherwise.
 
@@ -2259,15 +2259,15 @@ Theorem~\ref{pll:exponent} proved in {\cite[\S2.3]{P56}}.
 
 \begin{proposition}[Base level of a label]\label{pri:BL}
 Let $c$ be in lift setting for an auxiliary $\vartheta$. There are Hodge--Tate data $J'$ and a
-space of forms of ``base level'' (the space $\mathcal F(O)$ of Definition~\ref{prm:def-level}: level
-$J_O$ and character $\chi_O$; these forms are of principal level at the chosen places) with: (a) $e_c\mathcal F(O)$ consists of forms of base level; (b) if
+space of forms of ``base level'' (the part $e_c\mathcal F(O)$, fixed by the idempotent $e_c$ of the labels, of the space $\mathcal F(O)$ of Definition~\ref{prm:def-level}: level
+$J_O$ and character $\chi_O$; these forms are of principal level at the chosen places; ``occurring in base level with principal level at $U$'' means occurring in the part fixed by $e_c$ of the forms of level $J_O$ made principal at $U$) with: (a) $e_c\mathcal F(O)\subseteq\mathcal F(O)$, and the Hecke operators and the translations at places off the chosen places preserve it; (b) if
 $y$ is integral at $\iota$, so is $N\,e_cy$; (c) for every finite set $U$ of places off
 $\pgS(\ell)\cup Q\cup\overline Q$ and every system $x$ of Hecke eigenvalues occurring in base level
 with principal level at $U$, the normalised Galois representation $\rho_x=S_x\otimes\eta_O$ is
 conjugate self-dual with string length $t'$, has Hodge--Tate data $J'$, is unramified outside $\ell
 p_0p_1$, $Q\cup\overline Q$, $U\cup\overline U$, inertia at a chosen $w\nmid\ell$ acts through the roots of
 the rescaled label times $(X-1)^{t'}$ and semisimply (the monodromy of $\operatorname{rec}(\Pi_w)$
-is $0$), so that $o_w(\rho_x(s))(\rho_x(s)-1)=0$ for $s\in I_w$, $o_w$ the monic polynomial whose
+is $0$), so that $o_w(\rho_x(s))(\rho_x(s)-1)=0$ for $s=\gamma_w$, the generator of tame inertia fixed in the conventions (for another $s\in I_w$, $\rho_x(s)$ is still semisimple of finite order, with eigenvalues the corresponding powers of these roots, and $1$), $o_w$ the monic polynomial whose
 roots are the (images of the) roots of the rescaled label, and $(\rho_x(s)-\psi(s))(\rho_x(s)-1)=0$
 for $s$ in inertia above $Q\cup\overline Q$.
 \end{proposition}
@@ -2291,14 +2291,15 @@ hypotheses used (semisimplicity of the $\rho_x$, spanning (M4) of the $u'_x$) ar
 \begin{lemma}[Inputs on forms]\label{pri:forms}
 (a) (Higman operators; freeness of the level.) For a finite set of places $w_j$ off the base level,
 with $\Gamma=\prod_j\auGL_n(\auF_{w_j})$ acting on the forms of principal level at the $w_j$, and for
-every subgroup $\Gamma'$ of a factor, there is an integral operator $\Psi$ with
+every subgroup $\Gamma'$ of a factor, there is an integral operator $\Psi$, commuting with the action $\varrho$ of the
+group $G_c$ at the chosen places and hence with $e_c$, with
 $\sum_{k\in\Gamma'}k^{-1}\Psi k=c_0$, where $c_0$ is a fixed common multiple of the orders of the
-stabilisers of the base level, a divisor of $N$; for $\Gamma'=\Gamma$ this says that $c_0y$ is a norm
+stabilisers of the level $J_O$, a divisor of $N$; for $\Gamma'=\Gamma$ this says that $c_0y$ is a norm
 $\sum_{k\in\Gamma}k\Psi y$ for $y$ of base level. (b) (Pairings.) If $y'$ is integral at every
 isomorphism and $y''$ is integral at $\iota$ then $N\langle y',y''\rangle\in\pgZb$.
 \end{lemma}
-\noindent Proved in \S\ref{pax:ss-forms} (with $c_0=\#(J_O/J_0)$, $J_0$ the free sublevel of the
-base level $J_O$, a divisor of $N$) and \S\ref{pax:ss-pairing}.\par\smallskip
+\noindent Proved in \S\ref{pax:ss-forms} (with $c_0=\prod_{w\ \mathrm{chosen}}\#\auGL_n(\auF_w)$, a multiple of $\#(J_O/J_0)$, $J_0$ the free sublevel of the
+level $J_O$, and a divisor of $N$) and \S\ref{pax:ss-pairing}.\par\smallskip
 
 \begin{lemma}[Chain lemma]\label{pri:chain}
 Let $y$ be an eigenform in base level whose normalised Galois representation has the eigenvalue
@@ -3099,7 +3100,7 @@ coefficients). Then every base system with $A\delta_0\ne0$ is a
 weak lift congruent to $x_0$, so has the root chain at each $w_j$ with $H_j=e_j$.
 
 Now that the $w_j$ are fixed, replace $Y$ by the finite set of systems of eigenvalues of $\priT$
-occurring in base level with principal level at the $w_j$; it contains $\priX$ (forms of base level
+occurring in base level with principal level at the $w_j$ (that is, in the part fixed by $e_c$ of the forms of level $J_O^{(1)}$, the type $e_c$ being part of the definition of the base level, \S\ref{pax:ss-BL}; this part is stable under $\priT$, under the groups at the $w_j$ and under the operators $\Psi$ of Lemma~\ref{pri:forms}(a)); it contains $\priX$ (forms of base level
 are of principal level at the $w_j$), and Proposition~\ref{pri:BL}(c) with $U=\{w_j\}$ applies to it,
 as Proposition~\ref{pri:columns} requires. Each $x\in Y$ is a ring map $\priT\to\overline{\Q}_\ell$
 (through $\iota$). Let $S$ be the image of $\priT[X_J]$ under $\epsilon\colon\priT[X_J]\to
@@ -3942,11 +3943,11 @@ place, $w\mid p$, $v$ the place of $E^+$ below.
 \item[(G4)] If $y$ is fixed by the principal congruence subgroup at $w$ and lies in the
 $\sigma_c$-isotypic part for a label $c$, then $S_y|_{I_w}$ is tame and, if $w\nmid\ell$, of finite
 order, semisimple, with the eigenvalues $\omega(\xi^{\epsilon})$, $\xi$ running over the roots of
-$c$, on a generator $s$ of tame inertia with $\theta_n(s)$ a generator; if $w\mid\ell$, $S_y$ is
+$c$, on a topological generator $s$ of tame inertia; if $w\mid\ell$, $S_y$ is
 potentially crystalline at $w$, crystalline over $E_w(\varpi^{1/(q^d-1)})$, $d=\operatorname{lcm}_k(d_k)$,
-with this inertial type. (Lemma~\ref{pga:depth0} is phrased with $\theta_d(s)$; since the norm
-$\auF_{q^n}^\times\to\auF_{q^d}^\times$ is surjective, $\theta_n(s)$ a generator implies
-$\theta_d(s)$ a generator.)
+with this inertial type. (Lemma~\ref{pga:depth0} is phrased with $\theta_d(s)$ a generator of $\auF_{q^d}^\times$; the image of a topological generator of tame inertia
+under the tame character of every level is a generator, so this holds for $s$, and $\theta_{d_k}(s)$ is the norm of $\theta_d(s)$ for every $k$. It is not enough that $\theta_n(s)$ be a generator:
+$d$ need not divide $n$, as for the degrees $2$ and $3$, where $n=5$ and $d=6$.)
 \item[(G5)] If $w\nmid\ell$ and $y$ is an eigenvector of the parahoric $\mathcal P$ of type
 $(n_W,t)$ with character $\psi_{\mathcal P}$, $\psi=\psi_w\ne1$, then $(S_y(s)-\psi_w(s)^{
 \epsilon})(S_y(s)-1)=0$ for $s\in I_w$, $\psi_w$ being viewed on $I_w$ through $\mathrm{Art}_w$.
@@ -6096,14 +6097,16 @@ $(\iota,g\tilde k)$ equals that at $(\iota,g)$.
 \cap gJ_0g^{-1}=1$ ({\cite[Lemma~14.5]{P46}}). So $\#\mathrm{Stab}_g$ divides $\#H$, and $\#H$ divides
 $\prod_{w\ \mathrm{chosen}}\#\auGL_n(\auF_w)$, which divides $N=\pgNch=\prod_{w\ \mathrm{chosen}}
 \#\auGL_{rt}(\auF_w)$ since $n=r'+t'\le r+t=6r\le5r^2=rt$ ($r'\le r$, $t'\le t=5r$, $r\ge2$) and $\auGL_n(\auF_w)$ embeds in $\auGL_{rt}(\auF_w)$
-(Lagrange). We take $c_0=\#H$: a common multiple of the orders of the stabilisers of the base level,
-dividing $N$.
+(Lagrange). Let $D=\prod_{w\ \mathrm{chosen}}\auGL_n(\auF_w)\supseteq H$. We take $c_0=\#D$: a common multiple of the orders of the stabilisers of the level $J_O$
+(they divide $\#H$, which divides $\#D$), dividing $N$.
 
 \begin{proof}[Proof of Lemma~\ref{pri:forms}]
-(a) Let $J_O^{(1)}=J_O\cap J_1$ be the base level with principal level at the $w_j$; the forms of
+(a) Let $J_O^{(1)}=\{k\in J_O:\ k_{w_j}\equiv1\bmod w_j\text{ for every }j\}$ be the base level with principal
+level at the $w_j$. The $w_j$ are not chosen places, so $J_1=J_O^{(1)}\cap J_0$; it is normal in $J_O^{(1)}$, and
+$J_O^{(1)}/J_1\simeq J_O/J_0=H$. The forms of
 principal level at the $w_j$ are $\mathcal A_\lambda(J_O^{(1)},\chi_O)\subseteq\mathcal A_\lambda(J_1,\chi)$.
 We first build an integral operator $\Psi_1$ on $\mathcal A_\lambda(J_1,\chi)$ with $\sum_{k\in\Gamma'}
-k^{-1}\Psi_1k=1$, and then average over $H$. Let $\Gamma'\subseteq\Gamma$
+k^{-1}\Psi_1k=1$, and then average its conjugates over $D$. Let $\Gamma'\subseteq\Gamma$
 be a subgroup (in particular a subgroup of a factor, or $\Gamma$ itself), and $S\subseteq\Gamma$ a set
 of representatives of the left cosets $k\Gamma'$. In the model of Lemma~\ref{pax:free} let $\Psi$ be
 multiplication by the indicator function of $\{\text{representatives}\}\times S$:
@@ -6115,22 +6118,28 @@ Lemma~\ref{pax:free}. For $h\in\Gamma'$, $(h^{-1}\Psi h\varphi)(g,k)=(\Psi h\var
 \varphi(g,k)=\#(S\cap k\Gamma')\,\varphi(g,k)=\varphi(g,k).
 \]
 Call this operator $\Psi_1$ (it is the $\Psi$ just defined, on $\mathcal A_\lambda(J_1,\chi)$). Now let
-$e_H=\sum_{h\in H}R(\tilde h)$, $(R(\tilde h)\varphi)(g)=\varphi(g\tilde h)$, with $\tilde h\in J_O$ a lift
-of $h$ with components $1$ outside the chosen places (well defined on $\mathcal A_\lambda(J_1,\chi)$ since
-$J_0$ is normal in $J_O$ and $\chi_O$ is trivial at the chosen places). Each $R(\tilde h)$ is integral:
-$\tilde h$ has integral components with integral inverses at places not above $\ell$, so (G2) of
-{\cite[\S6.1]{P49}} applies as in the proof of Lemma~\ref{pax:free}. The $R(\tilde h)$ commute with the
-action of $\Gamma$ (translations at disjoint sets of places), and on $\mathcal A_\lambda(J_O^{(1)},\chi_O)$
-each acts by $\chi_O(\tilde h)=1$, so $e_H$ acts there by $\#H$; moreover $e_H$ maps
-$\mathcal A_\lambda(J_1,\chi)$ into $\mathcal A_\lambda(J_O^{(1)},\chi_O)$. Put $\Psi=e_H\Psi_1$, restricted
-to $\mathcal A_\lambda(J_O^{(1)},\chi_O)$: an integral operator on the forms of principal level at the
-$w_j$, and
+$D=\prod_{w\ \mathrm{chosen}}\auGL_n(\auF_w)$ act on $\mathcal A_\lambda(J_1,\chi)$ by
+$(R(d)\varphi)(g)=\varphi(g\tilde d)$, with $\tilde d\in\prod_{w\ \mathrm{chosen}}\auGL_n(\auO_w)$ a lift
+of $d$ with components $1$ outside the chosen places (well defined, and an action, since $J_1$ is principal at the chosen
+places, so that $\tilde d$ normalises $J_1$ and is determined modulo $J_1$, and $\chi$ is trivial at the chosen places and
+is not changed by the conjugation by $\tilde d$, whose components at the places of $Q$ are $1$). Each $R(d)$ is integral with integral inverse:
+$\tilde d$ has integral components with integral inverses at places not above $\ell$, so (G2) of
+{\cite[\S6.1]{P49}} applies as in the proof of Lemma~\ref{pax:free}. The $R(d)$ commute with the
+action of $\Gamma$ (translations at disjoint sets of places). Put
 \[
-\sum_{k\in\Gamma'}k^{-1}\Psi k=e_H\sum_{k\in\Gamma'}k^{-1}\Psi_1k=e_H=\#H=c_0
-\quad\text{on }\mathcal A_\lambda(J_O^{(1)},\chi_O).
+\Psi=\sum_{d\in D}R(d)^{-1}\,\Psi_1\,R(d),
 \]
-For $\Gamma'=\Gamma$ and $y$ of base level (i.e.\ fixed by $\Gamma$), $c_0y=\sum_{k}k^{-1}\Psi ky=
-\sum_kk^{-1}\Psi y$, a norm $\sum_{k\in\Gamma}k\,(\Psi y)$.
+an integral operator on $\mathcal A_\lambda(J_1,\chi)$ which commutes with every $R(d)$, $d\in D$. Three consequences.
+First, $H\subseteq D$ and $\mathcal A_\lambda(J_O^{(1)},\chi_O)$ is the subspace of $\mathcal A_\lambda(J_1,\chi)$
+fixed by $R(H)$ ($\chi_O$ is trivial at the chosen places), so $\Psi$ preserves $\mathcal A_\lambda(J_O^{(1)},\chi_O)$,
+the forms of principal level at the $w_j$. Second, the action $\varrho$ of $G_c$ of Definition~\ref{prm:def-level} is
+$R$ of the elements $\mathrm{diag}(u_w,1_{t'})$ of $D$ multiplied by scalars, so $\Psi$ commutes with $\varrho(G_c)$, hence
+with $e_c\in\C[G_c]$: it preserves the part fixed by $e_c$, and no projection by $e_c$, which would cost a denominator, is applied. Third,
+\[
+\sum_{k\in\Gamma'}k^{-1}\Psi k=\sum_{d\in D}R(d)^{-1}\Bigl(\sum_{k\in\Gamma'}k^{-1}\Psi_1k\Bigr)R(d)=\#D=c_0 .
+\]
+For $\Gamma'=\Gamma$ and $y$ of base level (i.e.\ fixed by $\Gamma$ and by $e_c$), $c_0y=\sum_{k}k^{-1}\Psi ky=
+\sum_kk^{-1}\Psi y$, a norm $\sum_{k\in\Gamma}k\,(\Psi y)$ of a form $\Psi y$ fixed by $e_c$.
 
 (b) Let $y'$ be integral at every isomorphism and $y''$ integral at $\iota$; both are forms of level
 $J_O$. The pairing of {\cite[\S14.3]{P46}} at level $J_O$ is
@@ -6155,7 +6164,7 @@ $\mathsf G$ on two integral vectors.
 \begin{remark}\label{pax:rem-forms}
 At the free sublevel $J_0$ all stabilisers are trivial and the operator $\Psi_1$ gives the
 constant $1$; at the base level $J_O$ the stabilisers $\Gamma_{\mathrm{gl}}\cap gJ_Og^{-1}$ may be
-nontrivial (they embed in $H$), and averaging over $H$ gives $c_0=\#H$. All uses of $c_0$ in
+nontrivial (they embed in $H$); the average of the conjugates of $\Psi_1$ over $D\supseteq H$ preserves the level $J_O$ and the type $e_c$ and gives $c_0=\#D$. All uses of $c_0$ in
 \S\ref{pri:ss-norm} only need $c_0\mid N$. Likewise the pairing at level $J_O$ is not the pairing
 at $J_0$ (for $J'\subseteq J$ one has $\langle\,,\rangle_{J'}=[J:J']\langle\,,\rangle_J$), which is why
 (b) is proved directly at level $J_O$ with the factor $N$. The invariance of the Gram matrix
@@ -6439,7 +6448,7 @@ the tame part at $w$), and $e_c\in\C[G_c]$ the central idempotent of the irreduc
 by the labels.
 
 \begin{proof}[Proof of Proposition~\ref{pri:BL}]
-(a) holds by definition.
+(a) holds by definition; the Hecke operators and the translations at places off the chosen places commute with $\varrho(G_c)$, which is supported at the chosen places, hence with $e_c$.
 
 (b) $e_c=\sum_{g\in G_c}a_gg$ with $a_g=\dim(\sigma)\,\overline{\operatorname{ch}_\sigma(g)}/\#G_c$
 (the central idempotent of the irreducible character $\sigma$), so $\#G_c\cdot a_g$ is an algebraic
@@ -6562,10 +6571,10 @@ assertion of Proposition~\ref{pga:G123} (which rests on the identity of (GR) inc
 $S_x|_{I_w}$ is the restriction to $I_w$ of the Weil group representation underlying this
 Weil--Deligne representation, which is trivial on an open subgroup of $I_w$; so $S_x(s)$ has finite
 order and is semisimple for $s\in I_w$, and so is $\rho_x(s)$ ($\eta_O$ is unramified at $w$). By the
-previous paragraph its eigenvalues are roots of $o_w(X)(X-1)$, where $o_w(X)=\prod_\xi(X-\omega(\xi)^
-\epsilon)$, $\xi$ running over the roots of $\tilde c_w$; hence
+previous paragraph the eigenvalues of $\rho_x(\gamma_w)$, $\gamma_w$ the topological generator of tame inertia fixed in the conventions, are roots of $o_w(X)(X-1)$, where $o_w(X)=\prod_\xi(X-\omega(\xi)^
+\epsilon)$, $\xi$ running over the roots of $\tilde c_w$ (for another $s\in I_w$ the eigenvalues of $\rho_x(s)$ are the corresponding powers); hence
 \[
-o_w(\rho_x(s))\,(\rho_x(s)-1)=0\qquad(s\in I_w).
+o_w(\rho_x(\gamma_w))\,(\rho_x(\gamma_w)-1)=0 .
 \]
 \emph{Inertia above $Q\cup\overline Q$.} At $w\in Q$ the form $y$ is an eigenvector of the parahoric
 of type $(n_W,t')$ with the character $\psi_{\mathcal P}$, $\psi=\psi_w\ne1$; by (G5)
@@ -7536,7 +7545,7 @@ blocks of sizes $(r',t')$. Its \emph{level character} is $\chi_O(k)=\prod_{w\in 
 k_w^{(11)}\bmod w\bigr)^{-1}$, $\psi_w$ the tame part of $\mu$ at $w$; it is a character because the
 reductions at $w\in Q$ are block lower triangular, so the upper left block of a product is the product
 of the upper left blocks. $\mathcal F(O)$ is the space of algebraic modular forms $y$ on $\auU(V)$ of
-the weight of $O$ with $y(hk)=\chi_O(k)y(h)$ for $k\in J_O$ (the \emph{forms of base level}). For
+the weight of $O$ with $y(hk)=\chi_O(k)y(h)$ for $k\in J_O$ (the \emph{forms of level $J_O$}; the \emph{forms of base level} of Proposition~\ref{pri:BL} are those of them fixed by the idempotent $e_c$ of the labels for the action $\varrho$ defined next). For
 $u=(u_w)\in\auG_O$ choose $k'_u\in\prod_vK_v$ reducing to $\mathrm{diag}(u_w,1_{t'})$ at each chosen
 $w$ and to $1$ at the places of $Q$, and put $\varrho(u)y=\prod_{w\ \mathrm{chosen}}\psi_w(\det u_w)\,
 y(\,\cdot\,k'_u)$.
@@ -7583,7 +7592,7 @@ $\varrho(u)(\Theta F)=\Theta(F(\,\cdot\,k_u))$; this does not depend on the choi
 
 So the space of forms produced by the lift is contained in $\mathcal F(O)$ of
 Definition~\ref{prm:def-level}, and $e_c$ is the central idempotent of the family of labels $c$ for
-$\varrho$; this is the precise form of the ``base level'' of Proposition~\ref{pri:BL} and of
+$\varrho$; the part $e_c\mathcal F(O)$ is the precise form of the ``base level'' of Proposition~\ref{pri:BL} and of
 \S\ref{pax:ss-BL}.
 
 \emph{Twisted labels.} Let $w$ be chosen, $\auF_w=\auF_q$, and $c$ a label of degree $r'$ over

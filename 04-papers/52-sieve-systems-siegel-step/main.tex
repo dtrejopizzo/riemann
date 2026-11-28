@@ -1807,7 +1807,8 @@ group $\pfrU_{(<l)}$, so $\delta_\nu*\pfsA_l=\pfsA_l*\delta_\nu=\pfsA_l$ for $\n
 \S\ref{pfr:ss-floors}, $\delta_\sigma*\pfsA_l=\pfsA_l*\delta_\sigma$ for $\sigma\in\pfrG^{(l)}$; and
 $\pfsA_{l+1}=\pfsA_l*\eta_l=\eta_l*\pfsA_l$ (associativity, and (N3) for $\eta_l$, which is carried by
 $\pfrN_l\subseteq\pfrG^{(l)}$).
-\item[(iii)] The facts on $\pfrU_{(<l)}$ used in \S\ref{pfr:ss-floors}: it fixes the $e_b$, $b<l$; it acts on
+\item[(iii)] The facts on $\pfrU_{(<l)}$ used in \S\ref{pfr:ss-floors}: it preserves the flag of the spans $\langle e_0,\dots,e_b\rangle$, $b<l$, and acts on it
+unitriangularly, $e_b\mapsto e_b+\sum_{c<b}\mu_{cb}e_c$ (it need not fix $e_b$ for $b\ge1$: $\pfrN_0$ moves $e_1$ by a multiple of $e_0$); it acts on
 $V_l$ by $v\mapsto v+\sum_{b<l}\lambda_b(v)e_b$ (each $\pfrN_b$, $b<l$, acts on $V_{b+1}\supseteq V_l$ by
 $v\mapsto v-h(v,\omega)e_b$ and fixes the $e_c$, $c\le b$, and moves the $e_c$, $c>b$, by multiples of $e_b$);
 it is normalised by $\pfrG^{(l)}$; and $\pfrR^{(l)}=\pfrG^{(l)}\pfrU_{(<l)}$, by (N1) applied on each floor
@@ -4357,11 +4358,12 @@ the data (as in \S\ref{pff:ss-large}).
 \emph{The density at $T$.} For $\Psi\ge0$ locally constant with compact support,
 $\bigl|\int\!\int\Psi(y)\psi_T(\tau b(y^*y-\alpha))\,dy\,db\bigr|\le\int\Psi\,d\nu_{\alpha,T}$. Indeed, if the
 outer integral does not converge absolutely the left side is $0$ by convention. Otherwise, cut the
-frequency to $b\in u\aubar u\,\mathcal O$ for a unit $u$ ($\mathcal O$ the skew integers): by orthogonality of
+frequency to $b\in u\aubar u\,\mathcal O$ for an invertible $u$ ($\mathcal O$ the skew integers): by orthogonality of
 characters the cut integral equals $\pbvol(u\aubar u\mathcal O)$ times the mass, for $dy$, of the slab
 $\{y:y^*y-\alpha\in(u\aubar u)^{-1}\mathcal O_{E^+,T}\}$ weighted by $\Psi$, where $\mathcal O_{E^+,T}$ is the lattice of self-adjoint integers, dual to $\mathcal O$ under
 $(b,X)\mapsto\psi_T(\tau bX)$ since $E/E^+$ is unramified (so the two volumes multiply to $1$); this mass, by the disintegration, is the
-mean of $\int\Psi\,d\nu_{\alpha+\beta,T}$ over $\beta$ in that slab. As $u\to0$ the cut integrals tend
+mean of $\int\Psi\,d\nu_{\alpha+\beta,T}$ over $\beta$ in that slab. As $u^{-1}\to0$ (at every place of $T$) the lattices $u\aubar u\,\mathcal O$ increase and exhaust the skew elements, while the
+dual lattices $(u\aubar u)^{-1}\mathcal O_{E^+,T}$ shrink to $0$; so the cut integrals tend
 to the full integral (dominated convergence) and the means tend to $\int\Psi\,d\nu_{\alpha,T}$
 (continuity of $\beta\mapsto\int\Psi\,d\nu_{\beta,T}$, Lemma~\ref{pff:fibre}(a)); so the integral equals
 $\int\Psi\,d\nu_{\alpha,T}\ge0$.

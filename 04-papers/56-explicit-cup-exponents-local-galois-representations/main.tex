@@ -8191,15 +8191,15 @@ $u_x|_{D_v}$ and the restrictions of the $t'+1$ summands $L$ of $u_\pi$, with
 
 \begin{quotedthm}{\cite[Proposition~4.6]{P55}}{ (Base level of a label)}
 Let $c$ be in lift setting for an auxiliary $\vartheta$. There are Hodge--Tate data $J'$ and a
-space of forms of ``base level'' (the space $\mathcal F(O)$ of {\cite[Definition~8.42]{P55}}: level
-$J_O$ and character $\chi_O$; these forms are of principal level at the chosen places) with: (a) $e_c\mathcal F(O)$ consists of forms of base level; (b) if
+space of forms of ``base level'' (the part $e_c\mathcal F(O)$, fixed by the idempotent $e_c$ of the labels, of the space $\mathcal F(O)$ of {\cite[Definition~8.42]{P55}}: level
+$J_O$ and character $\chi_O$; these forms are of principal level at the chosen places; ``occurring in base level with principal level at $U$'' means occurring in the part fixed by $e_c$ of the forms of level $J_O$ made principal at $U$) with: (a) $e_c\mathcal F(O)\subseteq\mathcal F(O)$, and the Hecke operators and the translations at places off the chosen places preserve it; (b) if
 $y$ is integral at $\iota$, so is $N\,e_cy$; (c) for every finite set $U$ of places off
 $\pgS(\ell)\cup Q\cup\overline Q$ and every system $x$ of Hecke eigenvalues occurring in base level
 with principal level at $U$, the normalised Galois representation $\rho_x=S_x\otimes\eta_O$ is
 conjugate self-dual with string length $t'$, has Hodge--Tate data $J'$, is unramified outside $\ell
 p_0p_1$, $Q\cup\overline Q$, $U\cup\overline U$, inertia at a chosen $w\nmid\ell$ acts through the roots of
 the rescaled label times $(X-1)^{t'}$ and semisimply (the monodromy of $\operatorname{rec}(\Pi_w)$
-is $0$), so that $o_w(\rho_x(s))(\rho_x(s)-1)=0$ for $s\in I_w$, $o_w$ the monic polynomial whose
+is $0$), so that $o_w(\rho_x(s))(\rho_x(s)-1)=0$ for $s=\gamma_w$, the generator of tame inertia fixed in the conventions (for another $s\in I_w$, $\rho_x(s)$ is still semisimple of finite order, with eigenvalues the corresponding powers of these roots, and $1$), $o_w$ the monic polynomial whose
 roots are the (images of the) roots of the rescaled label, and $(\rho_x(s)-\psi(s))(\rho_x(s)-1)=0$
 for $s$ in inertia above $Q\cup\overline Q$.
 \end{quotedthm}
@@ -8326,11 +8326,11 @@ place, $w\mid p$, $v$ the place of $E^+$ below.
 \item[(G4)] If $y$ is fixed by the principal congruence subgroup at $w$ and lies in the
 $\sigma_c$-isotypic part for a label $c$, then $S_y|_{I_w}$ is tame and, if $w\nmid\ell$, of finite
 order, semisimple, with the eigenvalues $\omega(\xi^{\epsilon})$, $\xi$ running over the roots of
-$c$, on a generator $s$ of tame inertia with $\theta_n(s)$ a generator; if $w\mid\ell$, $S_y$ is
+$c$, on a topological generator $s$ of tame inertia; if $w\mid\ell$, $S_y$ is
 potentially crystalline at $w$, crystalline over $E_w(\varpi^{1/(q^d-1)})$, $d=\operatorname{lcm}_k(d_k)$,
-with this inertial type. ({\cite[Lemma~6.4]{P55}} is phrased with $\theta_d(s)$; since the norm
-$\auF_{q^n}^\times\to\auF_{q^d}^\times$ is surjective, $\theta_n(s)$ a generator implies
-$\theta_d(s)$ a generator.)
+with this inertial type. ({\cite[Lemma~6.4]{P55}} is phrased with $\theta_d(s)$ a generator of $\auF_{q^d}^\times$; the image of a topological generator of tame inertia
+under the tame character of every level is a generator, so this holds for $s$, and $\theta_{d_k}(s)$ is the norm of $\theta_d(s)$ for every $k$. It is not enough that $\theta_n(s)$ be a generator:
+$d$ need not divide $n$, as for the degrees $2$ and $3$, where $n=5$ and $d=6$.)
 \item[(G5)] If $w\nmid\ell$ and $y$ is an eigenvector of the parahoric $\mathcal P$ of type
 $(n_W,t)$ with character $\psi_{\mathcal P}$, $\psi=\psi_w\ne1$, then $(S_y(s)-\psi_w(s)^{
 \epsilon})(S_y(s)-1)=0$ for $s\in I_w$, $\psi_w$ being viewed on $I_w$ through $\mathrm{Art}_w$.

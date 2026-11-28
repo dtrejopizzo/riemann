@@ -7,7 +7,7 @@ First companion of row D, and the one that the other companions build on. It pro
 | File | What it is |
 |---|---|
 | `main.tex` | Source of the paper (a single file). |
-| `short-forms-theorem-theta-lifts-complex-multiplication-divisibility.pdf` | The paper (86 pages). |
+| `short-forms-theorem-theta-lifts-complex-multiplication-divisibility.pdf` | The paper (87 pages). |
 
 ## The paper
 

@@ -2283,7 +2283,8 @@ may fix $\beta$; we keep it general in the notation.
 \emph{Step 1: the two functionals.} Fix $\alpha,\Phi,\Psi$ and $g$. For a Fock vector $w$ of
 $\auHom(W,I_a)\otimes\R$ with finite moments and $y\in\auU(W)(E^+\otimes\R)$ put $L_y(w)=\int_{[\auU(I_a)]}
 \theta^{W,I_a}_{\beta,\alpha}(gy,h;[w,\Phi])\,dh$; $[\auU(I_a)]$ is compact and the kernel depends
-continuously on $w$, uniformly on compacta, so $L_y$ is a continuous linear form. For a polynomial
+continuously on $w$ for the moment norms, uniformly on compacta, so $L_y$ is a continuous linear form on the space of vectors with finite moments,
+with the topology of the moment norms ({\cite[Lemma~3.107]{P53}}); it is not continuous for the Hilbert norm. For a polynomial
 $Q$ on $\auHom(V',W)\otimes\R$ put $\ell'(Q)=\int_{[\auU(V')]}\theta^{V',W}_{\alpha,\alpha\beta^{-1}}
 (x,g;[Q,\Psi])\,dx$, which converges absolutely ({\cite[Corollary~3.34]{P53}}: $\Psi$ is supported on
 left-invertible matrices) and is linear in $Q$. Write $\omega_\infty$ for the archimedean Weil
@@ -2309,15 +2310,16 @@ $u\in\auU(I_a)_\infty$.
 \emph{Step 3: a circle mean.} For $z\in\C$, $|z|=1$, let $t_z\in\prod_\tau\auU(m)$ be diagonal with
 entries $z^{-2}$ at the first $p$ positive indices and $z^{-1}$ at the last $a$, and put
 $\Omega_z(w)=z^{-aN_\iota}\omega_\infty(t_z,z^{-1}1_a)w$, $N_\iota=\sum_\tau\#\iota(\tau)$. We claim:
-there is $\kappa\in\C$ (depending on $x_0$) such that for every continuous linear form $\ell$ on the
-Fock space with $\ell\circ\omega_\infty(1,u)=\ell$ for all $u\in\auU(I_a)_\infty$,
+there is $\kappa\in\C$ (depending on $x_0$) such that for every linear form $\ell$ on the
+space of vectors with finite moments, continuous for the moment norms, with $\ell\circ\omega_\infty(1,u)=\ell$ for all $u\in\auU(I_a)_\infty$,
 \begin{equation}\label{pte:eq-circle}
 \kappa\,\ell\bigl(\pteSD(\eta^0)\bigr)=\frac1{2\pi}\int_0^{2\pi}\ell\bigl(\Omega_{e^{i\vartheta}}(x_0)
 \bigr)\,d\vartheta .
 \end{equation}
-The right side is continuous in $x_0$ (uniformly over $\ell$ in bounded sets) and the set of
-functions $\ell\mapsto\kappa\,\ell(\pteSD(\eta^0))$, $\kappa\in\C$, is a closed line; polynomial vectors are
-dense in the Fock space; so it suffices to prove the claim for $x_0$ a polynomial $P$ in the
+For each such $\ell$ the right side is continuous in $x_0$ for the moment norms (the operators $\Omega_z$, $|z|=1$, are equicontinuous for
+these norms, {\cite[Lemma~3.108(i)]{P53}}), and the set of
+functions $\ell\mapsto\kappa\,\ell(\pteSD(\eta^0))$, $\kappa\in\C$, is a line, closed for pointwise convergence in $\ell$; polynomial vectors are
+dense in the space of vectors with finite moments for the moment norms ({\cite[Lemma~3.107(b)]{P53}}; density in the Hilbert norm would not suffice, since the forms $L_y$ of Step~1 are continuous only for the moment norms); so it suffices to prove the claim for $x_0$ a polynomial $P$ in the
 entries of $x$. By Corollary~\ref{ptf:SDlaw}(c), $\Omega_z$ acts on polynomials by the substitution that multiplies every
 variable outside the block $x^\flat$ (the last $a$ positive columns) by $z$ and fixes the entries of
 $x^\flat$ (the scalar $z^{-aN_\iota}$ cancels the vacuum character). Hence $\ell(\Omega_z P)=F(z)$ for
@@ -2678,9 +2680,10 @@ integral $Y$ with $Y^*Y=1$ lies in $K_V$. So only the coset $K_V$ contributes in
 with $\Lambda\ne0$ by Steps~5 and~6 and $|\zeta|=1$. As $u_0$ is an isomorphism $V\to\ell'$, $C\circ u_0$ runs
 over all of $\mathsf W_0(\auA)=\mathsf W_I(\auA)$ when $C$ runs over $\auHom(\ell',S_0)(\auA)$. If
 $\varphi^\circ=0$, then $\varphi^\circ_1=0$ and $\theta_{\mathsf W_I}(\psrho_{\mathsf W_I}(w)\Lambda)=0$ for
-all $w\in\mathsf W_I(\auA)$, so $\Lambda$ lies in the kernel of $F\mapsto\theta_{\mathsf W_I}(\psrho(\cdot)F)$,
-a proper closed invariant subspace of the irreducible representation $\psHS(\mathsf W_I)$, hence $\Lambda=0$
-(as in the proof of {\cite[Lemma~5.26]{P49}}; compare Proposition~\ref{pst:I4}). This contradiction proves
+all $w\in\mathsf W_I(\auA)$. But $\int_{\mathsf W_I(E^+)\backslash\mathsf W_I(\auA)}|\theta_{\mathsf W_I}(\psrho(w)\Lambda)|^2dw$
+is a positive multiple of $\|\Lambda\|^2$ (Lemma~\ref{psq:thetanorm}; $\Lambda$ is a Schwartz vector, the tensor product of a
+slice of a polynomial Fock vector and a vacuum), hence $\Lambda=0$
+(compare the proof of {\cite[Lemma~5.26]{P49}} and Proposition~\ref{pst:I4}). This contradiction proves
 $\varphi^\circ_1\ne0$, so $\varphi^\circ\ne0$.\par}
 \end{proof}
 
@@ -2692,7 +2695,7 @@ of rank $N''$ with $l=(m-j)+j=m$ negative signs; $\mathsf W=I_{3m}\oplus W'$; $V
 \S\ref{po:ss-glue}). For a twist $\vartheta$ let $\pcm^{(2)}_\vartheta:=\pi_M^2\prod_{w\in Q_\vartheta}w$ (it has the same primes as the squarefree modulus $\pcm_\vartheta$ of {\cite[\S2.3]{P53}}, so $L_*(\pcm^{(2)}_\vartheta,\cdot,\cdot)=L_*(\pcm_\vartheta,\cdot,\cdot)$ by {\cite[(11)]{P53}}), $\chi'=
 \chi_0^j\vartheta$ (weight $0$, residue character $\chi'_\vartheta$ on $\pcR_{\pcm^{(2)}_\vartheta}^\times$: $\omega^j$ at
 $\mathsf M$, $\psi_w$ at $Q_\vartheta$), $\nu''_\vartheta=\mu_j^0\vartheta\,\upsilon^{j+\lfloor(t+k-1)/2\rfloor}$ (the
-character of the lift on $V''$) and $\nu^\flat=\nu''_\vartheta\upsilon^m/\chi'$, a character independent of
+character of the lift on $V''$) and $\nu^\flat=\nu''_\vartheta/\chi'$, a character independent of
 $\vartheta$ with trivial tame part. The \emph{choices} are $i=(\Lambda_i,h^\flat_i,\varrho_i)$: a matrix
 $\Lambda_i\in\pcMat_{3m\times N''}(\auO_E/\pi_M^2)$, a class $h^\flat_i$ of $\auU(W^\flat)$ at level $\pi_M^2$, and
 for each $\tau$ a family of $2m$-row selections of a fixed basis of short vectors of the lattice at
@@ -4214,9 +4217,14 @@ is the projection of the Fock space onto its $\rho_{\lambda_V}^\vee$-isotypic su
 $\omega(1,\cdot)$ (the integral over $h_\infty$ of $\omega(1,h_\infty)v$ against the coefficient
 $\aubar{c_{\xi_0}\Xi}$ only sees this component). (d) By the theory of joint harmonics of
 Kashiwara--Vergne and Howe (\cite[Ch.~III, Lemma~5.3 and Corollary~5.4]{KashiwaraVergne}; \cite[Proposition~3.1, (3.10)(b)]{HoweJAMS}), the polynomial vectors of that isotypic subspace are
-$U(\mathfrak g_{W,\C})\cdot\{\pop_\xi:\xi\in W_{\lambda_V}\}$: the space of joint harmonics of
-type $\lambda_V$ is $\{\pop_\xi\}$ (this is the choice of $\pop_\xi$ in \S\ref{po:ss-set}, see
-Lemma~\ref{plf:harm}), and the isotypic component of the polynomial Fock space is generated by
+$U(\mathfrak g_{W,\C})\cdot\{\pop_\xi:\xi\in W_{\lambda_V}\}$. Indeed, the $\pop_\xi$ are joint harmonics of
+type $\lambda_V$ (this is the choice of $\pop_\xi$ in \S\ref{po:ss-set}, see
+Lemma~\ref{plf:harm}), and they are not all zero. The space of joint harmonics of type $\lambda_V$ is irreducible
+under $\auU(V)(\R)\times K_W$, $K_W$ the maximal compact subgroup of $\auU(W)(E^+\otimes\R)$ (\cite[(3.9)(a)]{HoweJAMS}); it need not be
+$\{\pop_\xi\}$ itself, since the type of $K_W$ in it need not be one-dimensional. The span of the $K_W$-translates of
+the $\pop_\xi$ is stable under both groups (the two actions commute and $\xi\mapsto\pop_\xi$ is equivariant for
+$\auU(V)(\R)$), so it is the whole space of joint harmonics of type $\lambda_V$; as $K_W$ is connected and the
+$\pop_\xi$ are $K_W$-finite, it is contained in $U(\mathfrak g_{W,\C})\cdot\{\pop_\xi\}$. Finally the isotypic component of the polynomial Fock space is generated by
 its harmonics under $U(\mathfrak g_{W,\C})$. By (a), (b), (c), $L(v)=0$ for every polynomial $v$.
 \end{proof}
 
@@ -4264,10 +4272,10 @@ of cosets for large $i$). Fix $z$.
 \emph{Case A: $z_u$ has an integral block ratio at every $u\in\mathsf S_\vartheta$.} Let $A\in
 \auU(W)(\auA_f)$ be $1$ outside $\mathsf S_\vartheta\cup\aubar{\mathsf S_\vartheta}$ with
 $A_u=(z_u')^{-1}$ ($u\in\mathsf S_\vartheta$), and $\Psi_0(T)=\Phi_\vartheta(TA)$, so that
-$f(v,\Psi_0)$ is a non-zero multiple of $\omega(A^{-1},1)f(v,\Phi_\vartheta)$ (by \eqref{po:eq-w5}
+$f(v,\Psi_0)$ is a non-zero multiple of $\omega(A,1)f(v,\Phi_\vartheta)$ (by \eqref{po:eq-w5}
 at $\mathsf S_\vartheta$; at $\aubar{\mathsf S_\vartheta}$ the component of $A$ is determined by
 unitarity and acts on the vacuum of the conjugate place by a scalar). Hence $L_\Xi(f(v,\Psi_0))(g)$
-is a multiple of $L_\Xi(f(v,\Phi_\vartheta))(gA^{-1})=0$ by Lemma~\ref{ppe:harm} and
+is a multiple of $L_\Xi(f(v,\Phi_\vartheta))(gA)=0$ (Lemma~\ref{ppe:harm} gives the vanishing at every point) by
 \eqref{po:eq-equiv}. Now $z_uA_u=\binom{1}{z''_u z_u'^{-1}}$ is integral, $\equiv\iota_0\bmod u$ at
 $\mathsf M$, and has upper block $1$ at $\mathsf Q$; so $\Psi_0(z)=1$, and since $\Psi_0$ is
 locally constant, $\Psi_0\equiv1$ on $C$ for $i$ large. The support of $\Psi_0$ is one orbit of
@@ -4306,7 +4314,7 @@ such $\kappa$ without character), and $R_{k_s}\Xi=R_{\tilde s'}\Xi=\psi_u(\det s
 \#\ppeN_{\bar\lambda}\cdot L_\Xi(f(v,\plone_C))=L_{\varrho_V(\eta_{\psi_u,\bar\lambda})\Xi}
 (f(v,\plone_C))=0
 \]
-by (F2) and linearity of $\Xi\mapsto L_\Xi$. If $u\in\mathsf Q$, then $\bar\lambda'=0$, $k_s\equiv
+by (F2) and the additivity of $\Xi\mapsto L_\Xi$ (the map is conjugate-linear; the coefficients $\psi_u(\det s)^{-1}$ stay inside the argument, so no conjugation occurs). If $u\in\mathsf Q$, then $\bar\lambda'=0$, $k_s\equiv
 \operatorname{diag}(s,1)$ lies in $K_\vartheta$, and $R_{k_s}\Xi=\chi_\vartheta(k_s)^{-1}\Xi$ with
 $\chi_\vartheta(k_s)=\psi_u(\det s)^{\pm1}$ (by \eqref{po:eq-w5} and the factor $\psi_u(\det T')$
 of the datum); summing over $s$ gives $\#\ppeN_{\bar\lambda}L_\Xi=(\sum_s\psi_u(\det s)^{\pm1})
@@ -6800,9 +6808,11 @@ For the last assertion fix $g\in\auU(W)(\auA)$ and $h^\circ$. By the definition 
 $x\in\auU(W)_\infty$, $\langle u^\circ,K^\circ(gx,h^\circ)\rangle=\theta^\circ\bigl(\omega^\circ(g,h^\circ)(\Omega(x)
 \pop^\circ_{u^\circ}\otimes\Psi^\circ)\bigr)=\Lambda(\Omega(x)\pop^\circ_{u^\circ})$ with $\Lambda(w)=\theta^\circ(\omega^\circ(g,h^\circ)
 (w\otimes\Psi^\circ))$. As in the proof of Proposition~\ref{pss:carrier}, $\Lambda$ is a continuous linear form on
-the smooth vectors (smooth vectors are Schwartz functions in a Schr\"odinger model,
-Lemma~\ref{psp:prodtheta}, on which $\omega^\circ(g,h^\circ)$ and the theta functional are continuous).
-Corollary~\ref{pss:coefs}(a) shows that $x\mapsto\langle u^\circ,K^\circ(gx,h^\circ)\rangle$ is holomorphic of weight
+the Schwartz space $\mathcal S$ of a Schr\"odinger model
+(Lemma~\ref{psp:prodtheta}; $\omega^\circ(g,h^\circ)$ and the theta functional are continuous on it), and
+$x\mapsto\Omega(x)\pop^\circ_{u^\circ}$ is $C^\infty$ into $\mathcal S$ with derivative $\Omega(x)d\Omega(X)\pop^\circ_{u^\circ}$, by the argument given there for $\Omega'$
+(the smooth vectors of the restriction of the Weil representation to a subgroup need not be Schwartz functions, and this is not used).
+Corollary~\ref{pss:coefs}(a), in its general form with $\mathcal E=\mathcal S$, shows that $x\mapsto\langle u^\circ,K^\circ(gx,h^\circ)\rangle$ is holomorphic of weight
 $u^\circ$. Taking $u^\circ$ in a basis of $W^\circ$ gives the coordinates of $K^\circ(\cdot,h^\circ)$ (up to complex
 conjugation of the coefficients of the basis change, which does not affect holomorphy).
 \end{proof}
@@ -6965,8 +6975,8 @@ $o$), so it kills each product; and $\sum_rz_{rc}\partial_{rc}$ multiplies each 
 ($c$ in the fixed numbering), which is the length $\ell^+_c$ of the row number $c$ of $\mu^+_\tau$. So $\pop''_{u''}$ is a
 holomorphic vector of weight $u''$ for $\Omega''=\omega''_\infty(\cdot,1)$ (at each place, hence for the product, as
 in the proof of Theorem~\ref{psv:c}). For $x\in\auU(W)_\infty$, $\theta''_{1,\Lambda_i}(gx,h;u'')=\Lambda(\Omega''(x)\pop''_{u''})$
-with $\Lambda(w)=\theta''(\omega''(g,h)(w\otimes\Psi''_{1,\Lambda_i}))$ continuous on smooth vectors (as in the proof of
-Theorem~\ref{psv:c}), and Corollary~\ref{pss:coefs}(a) gives the holomorphy.
+with $\Lambda(w)=\theta''(\omega''(g,h)(w\otimes\Psi''_{1,\Lambda_i}))$ continuous on the Schwartz space $\mathcal S$ of a Schr\"odinger model, into which $x\mapsto\Omega''(x)\pop''_{u''}$ is $C^\infty$ (as in the proof of
+Theorem~\ref{psv:c}), and Corollary~\ref{pss:coefs}(a) with $\mathcal E=\mathcal S$ gives the holomorphy.
 
 \emph{The identity $u''+u^\circ=u$.} Positive $a$: by Lemma~\ref{psv:rows} and Lemma~\ref{psv:char},
 $u''_a+u^\circ_a=-\ell^+_a-(a''+a^\circ)=-\varsigma_\tau(a)-\kappa_j+\frac{t-1}2+(r_+-a)-\frac n2+\kappa_j=-\varsigma_\tau(a)-\frac{r+1}2+r_+-a$,
@@ -7581,7 +7591,7 @@ $\psi_v^{q_2}=1$. This is the property used in (F2) of Lemma~\ref{ppe:three} (Re
 \item[(T4)] The character $\chi_0$ of \S\ref{po:ss-hecke} is $\chi_M$, with tame part $\omega$ trivial off $\mathsf M$ and of order
 $>8m$ at $\mathsf M$; the tame part of $\mu^0_j$ is $\omega^j$. The characters $\nu_\ast=\mu^0_j\upsilon^{n'}$, $\nu_\pm$,
 $\chi'=\chi_M^j\vartheta$, $\nu''_\vartheta$ of \S\ref{po:ss-hecke}, \S\ref{pte:ss-third} have the weights and tame parts stated there,
-and $\nu^\flat=\nu''_\vartheta\upsilon^m/\chi'=\mu^\flat\upsilon^{-j\Delta+j+\lfloor(t+k-1)/2\rfloor+m}$ is independent of $\vartheta$ with trivial tame part. At every
+and $\nu^\flat=\nu''_\vartheta/\chi'=\mu^\flat\upsilon^{-j\Delta+j+\lfloor(t+k-1)/2\rfloor}$ is independent of $\vartheta$ with trivial tame part. At every
 prime of $\pfqm$ the tame parts of $\nu''_\vartheta$ and $\chi'$ coincide ($\omega^j_w$ at $\mathsf M$, $\psi_w$ at $Q_\vartheta$).
 \end{enumerate}
 \end{proposition}

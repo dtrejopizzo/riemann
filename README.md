@@ -152,7 +152,7 @@ Jean-François Burnol, John Tate, and the many others cited in the papers.
 | [55](04-papers/55-covolume-theorem-regular-families-of-twists/) | The Covolume Theorem: Regular Families of Twists, Selmer Groups and Ribet's Method | Companion of row D: existence of the twists, by Selmer groups and Ribet's method. |
 | [56](04-papers/56-explicit-cup-exponents-local-galois-representations/) | Explicit Cup Exponents for Local Galois Representations beyond the Fontaine–Laffaille Range | Companion of row D: the local input at every prime for Paper 55. |
 | [57](04-papers/57-riemann-hypothesis-along-the-rows-of-weils-proof/) | The Riemann Hypothesis along the Rows of Weil's Proof: a Guide to the Series | The map of rows A, B, C and D: the logical path of the proof in ten pages. |
-| [58](04-papers/58-row-d-sign-radial-intersection-form-complete-proofs/) | The Sign of the Radial Intersection Form on the Idele Class Group (row D, complete) | Row D complete in one document (659 pages), with everything needed to close GRH and RH; formally divided in the series between Paper 46 and its inputs, Papers 49–56. With a notebook of numerical checks and falsification attempts. |
+| [58](04-papers/58-row-d-sign-radial-intersection-form-complete-proofs/) | The Sign of the Radial Intersection Form on the Idele Class Group (row D, complete) | Row D complete in one document (661 pages), with everything needed to close GRH and RH; formally divided in the series between Paper 46 and its inputs, Papers 49–56. With a notebook of numerical checks and falsification attempts. |
 
 The full catalogue of papers 01–58 is in [`04-papers/README.md`](04-papers/README.md).
 

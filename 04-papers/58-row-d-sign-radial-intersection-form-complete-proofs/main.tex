@@ -263,7 +263,7 @@ absolute convergence with multiplicities. The primitive inequality is $I_\infty\
 On real tests the moment map $M=(A,B)$ has pairing
 $H((a,b),(a',b'))=ab'+ba'$. This is the symmetric bilinear form whose
 quadratic form $2A(F)B(F)$ is the polar term of \eqref{comparison}; for
-complex tests the hermitian form is $2\Rel(a\bar b')$, as in \eqref{eq:W}.
+complex tests the hermitian form is $a\bar b'+b\bar a'$, whose diagonal is the term $2\Rel(a\bar b)$ of \eqref{eq:W}.
 An even nonnegative bump of positive mass translated by $r$ has moment
 vector proportional to $(e^{r/2},e^{-r/2})$, with proportionality
 constant independent of $r$. Two distinct small translates have
@@ -1884,7 +1884,7 @@ for $k\ge8$. The bound for the $H_{\mathrm{PT}}$-term is at most $10\,e^T(21/H_{
 $21/H_{\mathrm{PT}}=7\cdot10^{-12}$ and $2k-9\ge15.449\,T-9$, hence less than $10^{-70}$ of it for $T\ge1$.
 Finally $\varepsilon_k(Y)\le0.01567$ for all $T\ge1$: for fixed $k$, $\varepsilon_k$ decreases in $T$, so it
 suffices to evaluate it at the left end of each $k$-range, namely $T=1$ for $k=8$ ($\varepsilon_8=0.0060$)
-and $T=(k-1)e/21$ for $k\ge9$, where the largest value is $\varepsilon_9=0.015661\ldots$ at $T=8e/21$, the values
+and $T=(k-1)e/21$ for $k\ge9$, where the largest value is $\varepsilon_9=0.015661\ldots$ at $T=8e/21$ (computed with $\gamma_1\ge14.1347$ of (Z1); the bound $\gamma_1\ge14.13$ alone gives $0.01576$, which is also less than $0.016=\frac12-0.484$), the values
 decreasing thereafter. So $\frac12-\varepsilon_k\ge0.484$, and
 $\mathcal B(T,k)\le\frac{2\cdot1.0012\cdot0.5798\cdot21^9e^{0.259}}{(14.13^4/64)\cdot0.484}\,T\,e^{-15.4494\,T}(1+10^{-70})
 \le3.97\cdot10^9\,T\,e^{-15.4494\,T}$.
@@ -2079,8 +2079,10 @@ exponential type $\le1$ and in $L^2(\R)$, so $H(s):=\widehat G(s)/(s^2+a)$ is en
 ($s^2+a\ge a>0$ on $\R$); by the Paley--Wiener theorem $H=\widehat h$ with $h\in L^2(\R)$, $\supp h\subset[-1,1]$, and
 $G=-h''+ah$, so $h''\in L^2$. Then
 $1=\|G\|^2=\frac1{2\pi}\int(s^2+a)^2|H|^2=\|h''\|^2+2a\|h'\|^2+a^2\|h\|^2\ge\|h''\|^2\ge\frac{\pi^4}4\|h\|^2$
-(Lemma~\ref{lem:coer-poinc}). On the other hand $(1-\frac{s^2}{R^2})^+(s^2+a)^2\le M_R:=\frac{4(R^2+a)^3}{27R^2}$ (the
-maximum of $(1-x/R^2)(x+a)^2$ on $0\le x\le R^2$ is at $x=(2R^2-a)/3$), so
+(Lemma~\ref{lem:coer-poinc}). On the other hand $(1-\frac{s^2}{R^2})^+(s^2+a)^2\le M_R:=\frac{4(R^2+a)^3}{27R^2}$ (with
+$y=x+a$ the function $(1-x/R^2)(x+a)^2$ is $y^2(R^2+a-y)/R^2$, and $y\cdot y\cdot2(R^2+a-y)\le\bigl(\tfrac{2(R^2+a)}3\bigr)^3$ for
+$0\le y\le R^2+a$ by the inequality of the arithmetic and geometric means; the maximum on $0\le x\le R^2$ is attained at
+$x=(2R^2-a)/3$ when $R^2\ge a/2$, and is smaller than $M_R$ otherwise), so
 $\frac1{2\pi}\int(1-s^2/R^2)^+|\widehat G|^2\le M_R\|h\|^2\le\frac{4M_R}{\pi^4}$. Collecting terms gives \eqref{eq:coer-A}. For
 $R=2$ and $a\le\frac1{400}$ the bracket (decreasing in $a$) is $\ge0.90248$ and $\mathsf w(2)\cdot0.90248\ge1.89926$; with
 $C_0+\log2+\frac\pi2=-3.108239\ldots\ge-3.10824$ this gives $\log\frac1r-1.20898-r\ge\log\frac1r-1.209-r$.
@@ -8158,10 +8160,9 @@ $g\in\auU(W)(\auA_f)$ the linear operator $\mathsf D=\omega(g)^{-1}\Lambda_\sigm
 \C^\times\psrho_f(y)$ for all $y$ by (W1) ($\mathsf B$ is a scalar and commutes with $g$); by the
 irreducibility of the Heisenberg representation, $\mathsf D=\mathsf c_g\psrho_f(y_g)$ for some
 $y_g$. Thus $\Lambda_\sigma\omega(g)\psvac^\circ=\mathsf c_g\,\omega(g)\psrho_f(y_g)\Lambda_\sigma
-\psvac^\circ$, and $|\mathsf c_g|=1$: by (W4), $\omega(g)\psvac_L=\delta_g\sum_r\zeta_r\psrho^\circ(r)
-\psvac_L$, a sum over the $\mathsf I_g=[gL:L\cap gL]$ classes $r$, where $\delta_g$ is a root of
-unity times $\mathsf I_g^{-1/2}$ times a value of $\upsilon^{\pm1}$ on finite ideles, all of whose
-conjugates have absolute value $1$; so $|\sigma\delta_g|=|\delta_g|=\mathsf I_g^{-1/2}$, the left
+\psvac^\circ$, and $|\mathsf c_g|=1$: by Lemma~\ref{pf:delta}, $\omega(g)\psvac_L=\delta_g\sum_r\zeta_r\psrho^\circ(r)
+\psvac_L$, a sum over the $\mathsf I_g=[gL:L\cap gL]$ classes $r$, with roots of unity $\zeta_r$ and
+$|\sigma\delta_g|=|\delta_g|=\mathsf I_g^{-1/2}$ (part (i) of the lemma); so the left
 side is a sum of $\mathsf I_g$ orthogonal vectors of norm $\mathsf I_g^{-1/2}\|\Lambda_\sigma
 \psvac^\circ\|$, and the right side has norm $|\mathsf c_g|\,\|\Lambda_\sigma\psvac^\circ\|$.
 
@@ -8256,12 +8257,10 @@ $E^{\mathsf C}$ with multiplicities $q_1$.
 \end{proposition}
 \begin{proof}
 (S1). By (W1), $\omega(g)\psrho^\circ(x)\psvac^\circ$ is a root of unity times $\psrho^\circ(gx)
-\omega(g)\psvac^\circ$, and $\aubar{\pi_M}gx$ is integral above $\ell$. By (W4),
+\omega(g)\psvac^\circ$, and $\aubar{\pi_M}gx$ is integral above $\ell$. By Lemma~\ref{pf:delta},
 $\omega(g)\psvac_L=\delta_g\sum_{r\in gL/(L\cap gL)}\zeta_r\psrho^\circ(r)\psvac_L$ with roots of
-unity $\zeta_r$, where $\delta_g$ is a root of unity times $[gL:L\cap gL]^{-1/2}$ times the value
-of $\upsilon^{\pm1}$ at an idele $\det\mathsf u$ with $\mathsf uL=L\cap g^{-1}L$. This idele is a
-unit above $\ell$; so the index is prime to $\ell$, the value of the algebraic Hecke character
-$\upsilon$ is a unit at $\ell$, and the $r$ can be taken integral above $\ell$.
+unity $\zeta_r$, and, since $g$ stabilises $L$ at the places above $\ell$, $\delta_g$ is a unit above
+$\ell$ and the $r$ can be taken integral above $\ell$ (part (ii) of the lemma).
 
 (S2), (S3). By \eqref{pk:eq-vac} and \eqref{pk:eq-transl}, and since a translation by $x$ agrees
 up to a root of unity with the translation by a rational $\gamma$ close to $x$, $f$ is a
@@ -11279,13 +11278,10 @@ $\delta x$ integral at the places above $\ell$ (that is, $\delta x_w\in L_w$ for
 standard data of \S\ref{pk:ss-kernel} are those of level $\aubar{\pi_M}$. \emph{If $g\in\auU(W)(\auA_f)$ is integral with integral inverse at the places above $\ell$, then
 $\omega(g)$ preserves the standard data of level $\delta$ at $\ell$, for every $\delta$ and every $\ell$.}
 Indeed, by (W1), $\omega(g)\psrho^\circ(x)\psvac^\circ$ is a root of unity times $\psrho^\circ(gx)\,
-\omega(g)\psvac^\circ$, and $\delta gx$ is integral above $\ell$ when $\delta x$ is. By (W4),
+\omega(g)\psvac^\circ$, and $\delta gx$ is integral above $\ell$ when $\delta x$ is. By Lemma~\ref{pf:delta},
 $\omega(g)\psvac_L=\delta_g\sum_{r\in gL/(L\cap gL)}\zeta_r\psrho^\circ(r)\psvac_L$ with roots of unity
-$\zeta_r$, where $\delta_g$ is a root of unity times $[gL:L\cap gL]^{-1/2}$ times the value of
-$\upsilon^{\pm1}$ at an idele $\det\mathsf u$ with $\mathsf uL=L\cap g^{-1}L$. As $g_w L_w=L_w$ for $w\mid\ell$,
-the index is prime to $\ell$, $\mathsf u$ may be taken to be $1$ above $\ell$ (so the value of the
-algebraic Hecke character $\upsilon$ is a unit at $\ell$), and the $r$ may be taken in $L_w$ above
-$\ell$, so that $\delta r$ is integral there ($\delta\in\auO_K$). This is the proof of
+$\zeta_r$; as $g_w L_w=L_w$ for $w\mid\ell$, the coefficient $\delta_g$ is a unit above $\ell$ and the $r$ may be taken in $L_w$ above
+$\ell$ (part (ii) of the lemma), so that $\delta r$ is integral there ($\delta\in\auO_K$). This is the proof of
 Proposition~\ref{pk:std}(S1), which does not use the level.
 
 \begin{theorem}[Standard data at every prime]\label{pf:std}
@@ -11453,6 +11449,90 @@ $\kappa_0=1$. The last assertions are those of \S\ref{pk:ss-conv}: $\langle w_1^
 The hypothesis on $L$ holds for all spaces $\auHom(V,V')$ to which (W6) is applied (all spaces of
 \S\ref{ss:au-spaces} carry unimodular lattices $\psM$, and $\alpha\auHom(\psM,\psM')$ is
 self-dual).
+
+\begin{lemma}[The coefficient of a translate of the vacuum]\label{pf:delta}
+Let $L\subset W(\auA_f)$ be a self-dual lattice, $K_L$ its stabiliser, $g\in\auU(W)(\auA_f)$ and
+$\mathsf I_g=[gL:L\cap gL]$. Then
+\[
+\omega(g)\psvac_L=\delta_g\sum_{r\in gL/(L\cap gL)}\zeta_r\,\psrho^\circ(r)\psvac_L ,
+\]
+with roots of unity $\zeta_r$, $\zeta_0=1$, and
+\[
+\delta_g=\mathsf I_g^{-1/2}\,\upsilon(\mathsf d_g)^{-1}
+\]
+for a finite idele $\mathsf d_g$ of $E$ whose component is $1$ at every place $w$ with $g_wL_w=L_w$.
+Consequently: \textup{(i)} $\delta_g$ is algebraic and $|\sigma\delta_g|=\mathsf I_g^{-1/2}$ for every
+automorphism $\sigma$ of $\C$; \textup{(ii)} if $g_wL_w=L_w$ at the places $w$ above a prime $\ell$, then
+$\delta_g$ is a unit at every place above $\ell$, and the representatives $r$ can be taken in $L_w$ at
+the places $w$ above $\ell$.
+\end{lemma}
+\begin{proof}
+\emph{The expansion.} By (W1) and (W4), $\psrho(x)\omega(g)\psvac_L=\epsilon_L(g^{-1}x)\,\omega(g)\psvac_L$ for
+$x\in gL$. Write $\omega(g)\psvac_L=\sum_xc_x\psrho^\circ(x)\psvac_L$ in the basis of (W4), $x\in W(\auA_f)/L$.
+For $l\in L\cap gL$, $\psrho(l)\psrho^\circ(x)\psvac_L=[l,x]\epsilon_L(l)\psrho^\circ(x)\psvac_L$, so
+$c_x\ne0$ implies $[l,x]=\epsilon_L(g^{-1}l)\epsilon_L(l)^{-1}$ for all $l\in L\cap gL$. By the proof of
+Lemma~\ref{pf:eps}, $\epsilon_L(l)$ depends only on $\langle l,l\rangle$, which $g$ preserves; so
+$[l,x]=1$ for all $l\in L\cap gL$, that is, $x$ lies in the dual $L+gL$ of $L\cap gL$. Thus the sum is over
+$(L+gL)/L=gL/(L\cap gL)$. For $r\in gL$ the operator $\psrho(r)$ maps the line of
+$\psrho^\circ(x)\psvac_L$ to that of $\psrho^\circ(x+r)\psvac_L$, multiplying the basis vectors by roots of
+unity (values of $\epsilon$ and $\beta$), and it multiplies $\omega(g)\psvac_L$ by $\epsilon_L(g^{-1}r)=\pm1$;
+comparing the components, $c_r$ is a root of unity times $c_0$. This is the expansion, with
+$\delta_g=c_0$. The $\mathsf I_g$ vectors $\psrho^\circ(r)\psvac_L$ are orthogonal of norm $\|\psvac_L\|$
+and $\omega(g)$ is unitary, so $|\delta_g|=\mathsf I_g^{-1/2}$.
+
+\emph{Reductions.} For $k\in K_L$, $\omega(k)\psvac_L=\psvac_L$ (W4), so $\delta_{gk}=\delta_g$; and
+$\omega(k)\psrho^\circ(r)\psvac_L$ is a root of unity times $\psrho^\circ(kr)\psvac_L$ (W1), with the class
+of $0$ fixed, so $\delta_{kg}=\delta_g$; also $\mathsf I_{kgk'}=\mathsf I_g$. If $g$ and $g'$ are supported at
+disjoint sets of places, then $\omega(gg')\psvac_L=\delta_{g'}\sum_{r'}\zeta_{r'}\,\omega(g)\psrho^\circ(r')
+\psvac_L$ and $\omega(g)\psrho^\circ(r')\psvac_L$ is a root of unity times $\psrho^\circ(r')\omega(g)\psvac_L$
+($gr'=r'$); expanding $\omega(g)\psvac_L$ and noting that $r+r'\in L$ only if $r,r'\in L$, the coefficient of
+$\psvac_L$ is $\delta_g\delta_{g'}$. So $\delta_{gg'}=\delta_g\delta_{g'}$ and $\mathsf I_{gg'}=\mathsf I_g
+\mathsf I_{g'}$, and it suffices to treat $g\in\auU(W)(E^+_v)$ for one finite place $v$.
+
+\emph{The Cartan decomposition.} As in the proof of Proposition~\ref{pf:flip}, $L_v=(I_L\oplus I_L^*)\perp
+L_0$ with $I_L$ a maximal totally isotropic direct summand, $I_L^*$ totally isotropic, in duality with
+$I_L$, and $L_0$ of rank $\le1$ (if $v$ splits into $w,\aubar w$, then $I_L=L_w$, $I_L^*=L_{\aubar w}$,
+$L_0=0$). Put $I=E_vI_L$, $I^*=E_vI_L^*$. Since $E/E^+$ is unramified at $v$, $K_{L,v}$ is hyperspecial,
+and by the Cartan decomposition \cite[\S3.3.3]{TitsCorvallis} every element of $\auU(W)(E^+_v)$ is in
+$K_{L,v}\,a\,K_{L,v}$ for an $a$ that is diagonal, with entries powers of a uniformiser, in a basis of
+$I_L$, acts on $I^*$ by the inverse of the adjoint, and is $1$ on $E_vL_0$ (at a split place this is the
+theorem of elementary divisors for $\auGL(L_w)$). By the reductions we may take $g=a$. Then
+$aL_v=aI_L\oplus aI_L^*\oplus L_0$.
+
+\emph{The zero term.} Let $\psZ_I$ be the local zero term (\S\ref{pf:ss-flip}). Since $a\in P_I(E^+_v)$
+acts trivially on $I^\perp/I$,
+\[
+\psZ_I\,\omega(a)\psvac_L=\chi_I(a)\,\psZ_I\psvac_L,\qquad\chi_I(a)=\upsilon_v(\det a|_I)^{-1}\,|\det a|_I|^{1/2}.
+\]
+On the other side take representatives $r=i+u$ with $i\in aI_L$, $u\in aI_L^*$. For $l\in I_L$ we have
+$\psZ_I\psrho(l)=\psZ_I$ ($l\in I$) and $\psrho(l)\psvac_L=\epsilon_L(l)\psvac_L=\psvac_L$ ($l$ is isotropic,
+Lemma~\ref{pf:eps}), so $\psZ_I\psrho(r)\psvac_L=\psZ_I\psrho(r)\psrho(l)\psvac_L=[r,l]\,\psZ_I\psrho(l)
+\psrho(r)\psvac_L=[u,l]\,\psZ_I\psrho(r)\psvac_L$ (as $[i,l]=1$). If $u\notin I_L^*$ there is $l\in I_L$ with
+$[u,l]\ne1$ ($I_L^*$ is the dual of $I_L$ in $I^*$), and the term vanishes. If $u\in I_L^*$ the class of
+$r$ is that of $i\in aI_L$; then $\psrho(i)\omega(a)\psvac_L=\epsilon_L(a^{-1}i)\omega(a)\psvac_L=\omega(a)
+\psvac_L$, and comparing the components on the line of $\psrho(i)\psvac_L$ gives $\zeta_i\psrho^\circ(i)
+\psvac_L=\psrho(i)\psvac_L$, whence $\psZ_I(\zeta_i\psrho^\circ(i)\psvac_L)=\psZ_I\psvac_L$. Therefore
+\[
+\chi_I(a)\,\psZ_I\psvac_L=\delta_a\,\mathsf N\,\psZ_I\psvac_L,\qquad\mathsf N=[aI_L:I_L\cap aI_L].
+\]
+Finally $\psZ_I\psvac_L\ne0$: in the local mixed model $\psZ_I\psrho(u)F$, $u\in I^*$, is, up to a factor of absolute value $1$, the value $F(u)$ ($I^*$ acts by translation of the variable); by the computation just made (with $i=0$) $\psZ_I\psrho(u)\psvac_L$ is $0$ for
+$u\notin I_L^*$ and $\psZ_I\psvac_L$ for $u\in I_L^*$; so $\psZ_I\psvac_L=0$ would give $\psvac_L=0$. Hence
+$\delta_a=\upsilon_v(\det a|_I)^{-1}\,|\det a|_I|^{1/2}\,\mathsf N^{-1}$, and since $|\delta_a|=\mathsf I_a^{-1/2}$ and $|\upsilon_v|=1$, the
+positive number $|\det a|_I|^{1/2}\mathsf N^{-1}$ is $\mathsf I_a^{-1/2}$. This is the formula, with
+$\mathsf d_g$ the idele whose component at $v$ is $\det a|_I$ (at a split place, $\det a|_{L_w}$ at $w$ and
+$1$ at $\aubar w$), which is $1$ when $g_v\in K_{L,v}$.
+
+\emph{Consequences.} Let $\mathsf d$ be a finite idele and $h$ the class number of $E$; then
+$\mathsf d^h=zu$ with $z\in E^\times$ and $u$ a unit idele, and as $\upsilon$ is unramified and trivial on
+$E^\times$, $\upsilon(\mathsf d)^h=\upsilon_\infty(z)^{-1}=\prod_{\tau}|\tau(z)|/\tau(z)=\mathrm N_{E/\Q}(z)^{1/2}\big/\prod_{\tau\in\Phi}\tau(z)$, the product over the
+embeddings of $E$ fixed in \S\ref{ps:ss-weil}, which form a CM type $\Phi$. This is an algebraic number. An automorphism $\sigma$ of $\C$ carries $\Phi$
+to a CM type $\sigma\Phi$ ($E$ is a CM field) and $\mathrm N_{E/\Q}(z)^{1/2}$ to $\pm\mathrm N_{E/\Q}(z)^{1/2}$,
+and $|\prod_{\tau\in\Phi'}\tau(z)|^2=\mathrm N_{E/\Q}(z)$ for every CM type $\Phi'$; so every conjugate of $\upsilon(\mathsf d)$ has absolute
+value $1$, which with $\sigma(\mathsf I_g^{-1/2})=\pm\mathsf I_g^{-1/2}$ gives (i). For (ii): $\mathsf I_g$ is a
+product of local indices at places not above $\ell$, hence prime to $\ell$; $\mathsf d_g$ is $1$ above
+$\ell$, so $z$ is a unit above $\ell$ and $\upsilon(\mathsf d_g)^h$, a quotient of two numbers that are
+units above $\ell$, is a unit above $\ell$; and $(gL/(L\cap gL))_w=0$ for $w\mid\ell$.
+\end{proof}
 
 \begin{remark}[The lattice preserved by the flip]\label{pf:rem-flip-lattice}
 The proof shows that $\mathrm{Fl}$ carries the vacuum of $L$ to a multiple of the vacuum of the
@@ -13149,14 +13229,13 @@ Write $\pi=\pi_\lambda$, $c=c_\lambda$, $e=e_\lambda=d\bar c$ with $d=d_\lambda$
 
 \emph{Step 1: $F(g)=d\int_GF(x)\,c(x^{-1}g)\,dx$.} By Proposition~\ref{pco:rigid}, $F=R(e)F$ in
 $L^2$. Since $F$ is bounded and continuous and $e\in L^1$, $g\mapsto\int e(h)F(gh)\,dh$ is
-continuous (dominated convergence), so $F(g)=\int e(h)F(gh)\,dh$ for every $g$. Insert
-$\overline{c(h)}=\|F\|^{-2}\overline{\langle F,R(h)F\rangle}=\|F\|^{-2}\int F(x)\overline{F(xh)}\,
-dx$; the double integral converges absolutely (it is bounded by $\|F\|_\infty\|F\|_1^2$), and by
-Fubini
+continuous (dominated convergence), so $F(g)=\int e(h)F(gh)\,dh$ for every $g$. Substitute $x=gh$
+(the Haar measure is left invariant) and use $e(h)=d\,\overline{c(h)}=d\,c(h^{-1})$, which holds
+because $c(h)=\langle v,\pi(h)v\rangle$ is a diagonal coefficient of a unitary representation:
 \[
-F(g)=\frac d{\|F\|^2}\int F(x)\int\overline{F(xh)}F(gh)\,dh\,dx=\frac d{\|F\|^2}\int F(x)\langle R(x)F,
-R(g)F\rangle\,dx=d\int F(x)\,c(x^{-1}g)\,dx .
+F(g)=\int e(g^{-1}x)F(x)\,dx=d\int F(x)\,c(x^{-1}g)\,dx ,
 \]
+the integral converging absolutely since $F\in L^1$ and $|c|\le1$.
 
 \emph{Step 2: $F(g)=\langle w,\pi(g)v\rangle$ with $w=d\int_G\overline{F(x)}\,\pi(x)v\,dx$.} The
 integral converges in norm since $F\in L^1$, and $c(x^{-1}g)=\langle\pi(x)v,\pi(g)v\rangle$, with inner
@@ -18252,7 +18331,7 @@ P(F)$ with $(x^{-1}\gamma x)_f\in\Omega_f$.
 N(F)\,x\,(Z_\delta\times K')$ with $\delta=C\beta(a)^{-1}$, where $Z_\delta=\{z\in G_\infty:
 \|z_\tau-1\|\le\delta\text{ for all }\tau\}$.
 \item[(c)] Let $B'>n^2$ and $M_{B'}(y)=\pmP(y_\infty)^{-B'}1_{\Omega_f}(y_f)$. There is $C$ such that
-$\sum_{\gamma\in\pmGa}M_{B'}(g^{-1}\gamma x)\le C\|a\|^{2fn^2}$ for all $g\in G(\auA_F)$. For $x$ in a compact subset of $G(\auA_F)$, not necessarily in $\pmS$, the series converges
+$\sum_{\gamma\in\pmGa}M_{B'}(g^{-1}\gamma x)\le C\|a\|^{2fn^2}$ for all $g\in G(\auA_F)$. For $g$ and $x$ in compact subsets of $G(\auA_F)$, $x$ not necessarily in $\pmS$, the series converges
 uniformly in $(g,x)$.
 \end{enumerate}
 \end{lemma}
@@ -18310,9 +18389,15 @@ $u\in U_x$, we get $M_{B'}(y)\le2^{fB'}M'(yu)$ with $M'=\pmP^{-B'}\otimes1_{\Ome
 xu)\,du\le\frac{2^{fB'}}{\pmvol(U_x)}\int_{G(\auA_F)}M'.
 \]
 The integral is finite by Lemma~\ref{pm:kernel}(c), and $\pmvol(U_x)\ge c(r_0\|a\|^{-2})^{fn^2}$,
-since $\dim G_\infty=fn^2$. The same computation, with $U_x$ replaced by a fixed small neighbourhood of $1$ and for the sum
-over the complement of a finite set of $\gamma$, shows that the series converges uniformly for
-$g\in G(\auA_F)$ and $x$ in any compact subset of $G(\auA_F)$.
+since $\dim G_\infty=fn^2$. For the uniform convergence let $g$ and $x$ run through compact sets $\Omega_1$, $\Omega_2$ and let $U$ be a fixed compact
+neighbourhood of $1$ so small that for every $x\in\Omega_2$ the sets $\gamma xU$ ($\gamma\in\pmGa$) are disjoint (as above, $xUU^{-1}x^{-1}$
+shrinks to $\{1\}$ uniformly on $\Omega_2$). The same computation, with $U_x$ replaced by $U$ and for the sum over the
+complement of a finite set $\Sigma$ of $\gamma$, bounds that sum by a constant times the integral of $M'$ over
+$\bigcup_{\gamma\notin\Sigma}\Omega_1^{-1}\gamma\Omega_2U$. Since $\pmGa$ is discrete, every compact subset of $G(\auA_F)$ meets
+$\Omega_1^{-1}\gamma\Omega_2U$ for finitely many $\gamma$ only, so this integral tends to $0$ as $\Sigma$ grows, $M'$ being
+integrable. (The convergence is not uniform for $g$ in all of $G(\auA_F)$: the sum is invariant under $g\mapsto\gamma_0g$,
+which permutes its terms. Only the bound of the total sum is uniform in $g$; the continuity of the sum in $g$, which is
+what is used below, follows from the uniformity on compact sets.)
 \end{proof}
 
 \begin{lemma}[Decay in a cusp]\label{pm:decay}
@@ -22843,12 +22928,12 @@ quotient of two of them has $\ell$-power order, so they are pairwise incongruent
 maximal ideal. Lemma~\ref{pg:burnside} gives (M4) with $g=\phi^r$,
 $\pgcyc(g)=p_i^{\,r}$. For (M3): the places above $p_0p_1$ are the chosen places and their conjugates. At a chosen
 $v\nmid\ell$ the eigenvalues of $R(\gamma_v)$ are, by (G4), the images of the roots of the
-rescaled label: roots of unity $\omega\ne1$ of order dividing $p_i^r-1$ (not $1$ because the
+rescaled label: roots of unity $\omega\ne1$ of order dividing $p_i^{d}-1$, where $d\le r$ is the degree of the irreducible factor of the label having that root ($d$ need not divide $r$) (not $1$ because the
 rescaled labels do not have the root $1$: this follows from the definition of a good family alone, by the computation in part (c) of the proof of Theorem~\ref{pg:main}, which uses neither that theorem nor the present one). By (M1),
 $R(g^c)$ is conjugate to $\chi(g)^{t-1}\,{}^{\mathrm t}R(g)^{-1}$, so $R(\gamma_v^{-c})$ has the
 same eigenvalues as $R(\gamma_v)$; this treats the conjugate places. If
 $\pgv(\omega-1)>0$ then $\omega$ has order a power $\ell^a>1$ of $\ell$, so
-$\pgv(\omega-1)\le1/(\ell-1)\le1$ and $\ell\mid p_i^r-1\mid\pgNch$. Hence
+$\pgv(\omega-1)\le1/(\ell-1)\le1$ and $\ell\mid p_i^d-1$, which divides $\#\auGL_{rt}(\auF_w)$ (as $d\le r\le rt$) and hence $\pgNch$. Hence
 $\pgv(\det(R(\gamma)-1))\le r\le r\,\pgv(\pgNch)$ if some eigenvalue is not a unit, and it is $0$
 otherwise.
 
@@ -24220,15 +24305,15 @@ Theorem~\ref{pll:exponent} proved in \S\ref{pki:ss-deduce}.
 
 \begin{proposition}[Base level of a label]\label{pri:BL}
 Let $c$ be in lift setting for an auxiliary $\vartheta$. There are Hodge--Tate data $J'$ and a
-space of forms of ``base level'' (the space $\mathcal F(O)$ of Definition~\ref{prm:def-level}: level
-$J_O$ and character $\chi_O$; these forms are of principal level at the chosen places) with: (a) $e_c\mathcal F(O)$ consists of forms of base level; (b) if
+space of forms of ``base level'' (the part $e_c\mathcal F(O)$, fixed by the idempotent $e_c$ of the labels, of the space $\mathcal F(O)$ of Definition~\ref{prm:def-level}: level
+$J_O$ and character $\chi_O$; these forms are of principal level at the chosen places; ``occurring in base level with principal level at $U$'' means occurring in the part fixed by $e_c$ of the forms of level $J_O$ made principal at $U$) with: (a) $e_c\mathcal F(O)\subseteq\mathcal F(O)$, and the Hecke operators and the translations at places off the chosen places preserve it; (b) if
 $y$ is integral at $\iota$, so is $N\,e_cy$; (c) for every finite set $U$ of places off
 $\pgS(\ell)\cup Q\cup\overline Q$ and every system $x$ of Hecke eigenvalues occurring in base level
 with principal level at $U$, the normalised Galois representation $\rho_x=S_x\otimes\eta_O$ is
 conjugate self-dual with string length $t'$, has Hodge--Tate data $J'$, is unramified outside $\ell
 p_0p_1$, $Q\cup\overline Q$, $U\cup\overline U$, inertia at a chosen $w\nmid\ell$ acts through the roots of
 the rescaled label times $(X-1)^{t'}$ and semisimply (the monodromy of $\operatorname{rec}(\Pi_w)$
-is $0$), so that $o_w(\rho_x(s))(\rho_x(s)-1)=0$ for $s\in I_w$, $o_w$ the monic polynomial whose
+is $0$), so that $o_w(\rho_x(s))(\rho_x(s)-1)=0$ for $s=\gamma_w$, the generator of tame inertia fixed in the conventions (for another $s\in I_w$, $\rho_x(s)$ is still semisimple of finite order, with eigenvalues the corresponding powers of these roots, and $1$), $o_w$ the monic polynomial whose
 roots are the (images of the) roots of the rescaled label, and $(\rho_x(s)-\psi(s))(\rho_x(s)-1)=0$
 for $s$ in inertia above $Q\cup\overline Q$.
 \end{proposition}
@@ -24252,14 +24337,15 @@ hypotheses used (semisimplicity of the $\rho_x$, spanning (M4) of the $u'_x$) ar
 \begin{lemma}[Inputs on forms]\label{pri:forms}
 (a) (Higman operators; freeness of the level.) For a finite set of places $w_j$ off the base level,
 with $\Gamma=\prod_j\auGL_n(\auF_{w_j})$ acting on the forms of principal level at the $w_j$, and for
-every subgroup $\Gamma'$ of a factor, there is an integral operator $\Psi$ with
+every subgroup $\Gamma'$ of a factor, there is an integral operator $\Psi$, commuting with the action $\varrho$ of the
+group $G_c$ at the chosen places and hence with $e_c$, with
 $\sum_{k\in\Gamma'}k^{-1}\Psi k=c_0$, where $c_0$ is a fixed common multiple of the orders of the
-stabilisers of the base level, a divisor of $N$; for $\Gamma'=\Gamma$ this says that $c_0y$ is a norm
+stabilisers of the level $J_O$, a divisor of $N$; for $\Gamma'=\Gamma$ this says that $c_0y$ is a norm
 $\sum_{k\in\Gamma}k\Psi y$ for $y$ of base level. (b) (Pairings.) If $y'$ is integral at every
 isomorphism and $y''$ is integral at $\iota$ then $N\langle y',y''\rangle\in\pgZb$.
 \end{lemma}
-\noindent Proved in \S\ref{pax:ss-forms} (with $c_0=\#(J_O/J_0)$, $J_0$ the free sublevel of the
-base level $J_O$, a divisor of $N$) and \S\ref{pax:ss-pairing}.\par\smallskip
+\noindent Proved in \S\ref{pax:ss-forms} (with $c_0=\prod_{w\ \mathrm{chosen}}\#\auGL_n(\auF_w)$, a multiple of $\#(J_O/J_0)$, $J_0$ the free sublevel of the
+level $J_O$, and a divisor of $N$) and \S\ref{pax:ss-pairing}.\par\smallskip
 
 \begin{lemma}[Chain lemma]\label{pri:chain}
 Let $y$ be an eigenform in base level whose normalised Galois representation has the eigenvalue
@@ -25060,7 +25146,7 @@ coefficients). Then every base system with $A\delta_0\ne0$ is a
 weak lift congruent to $x_0$, so has the root chain at each $w_j$ with $H_j=e_j$.
 
 Now that the $w_j$ are fixed, replace $Y$ by the finite set of systems of eigenvalues of $\priT$
-occurring in base level with principal level at the $w_j$; it contains $\priX$ (forms of base level
+occurring in base level with principal level at the $w_j$ (that is, in the part fixed by $e_c$ of the forms of level $J_O^{(1)}$, the type $e_c$ being part of the definition of the base level, \S\ref{pax:ss-BL}; this part is stable under $\priT$, under the groups at the $w_j$ and under the operators $\Psi$ of Lemma~\ref{pri:forms}(a)); it contains $\priX$ (forms of base level
 are of principal level at the $w_j$), and Proposition~\ref{pri:BL}(c) with $U=\{w_j\}$ applies to it,
 as Proposition~\ref{pri:columns} requires. Each $x\in Y$ is a ring map $\priT\to\overline{\Q}_\ell$
 (through $\iota$). Let $S$ be the image of $\priT[X_J]$ under $\epsilon\colon\priT[X_J]\to
@@ -25900,11 +25986,11 @@ place, $w\mid p$, $v$ the place of $E^+$ below.
 \item[(G4)] If $y$ is fixed by the principal congruence subgroup at $w$ and lies in the
 $\sigma_c$-isotypic part for a label $c$, then $S_y|_{I_w}$ is tame and, if $w\nmid\ell$, of finite
 order, semisimple, with the eigenvalues $\omega(\xi^{\epsilon})$, $\xi$ running over the roots of
-$c$, on a generator $s$ of tame inertia with $\theta_n(s)$ a generator; if $w\mid\ell$, $S_y$ is
+$c$, on a topological generator $s$ of tame inertia; if $w\mid\ell$, $S_y$ is
 potentially crystalline at $w$, crystalline over $E_w(\varpi^{1/(q^d-1)})$, $d=\operatorname{lcm}_k(d_k)$,
-with this inertial type. (Lemma~\ref{pga:depth0} is phrased with $\theta_d(s)$; since the norm
-$\auF_{q^n}^\times\to\auF_{q^d}^\times$ is surjective, $\theta_n(s)$ a generator implies
-$\theta_d(s)$ a generator.)
+with this inertial type. (Lemma~\ref{pga:depth0} is phrased with $\theta_d(s)$ a generator of $\auF_{q^d}^\times$; the image of a topological generator of tame inertia
+under the tame character of every level is a generator, so this holds for $s$, and $\theta_{d_k}(s)$ is the norm of $\theta_d(s)$ for every $k$. It is not enough that $\theta_n(s)$ be a generator:
+$d$ need not divide $n$, as for the degrees $2$ and $3$, where $n=5$ and $d=6$.)
 \item[(G5)] If $w\nmid\ell$ and $y$ is an eigenvector of the parahoric $\mathcal P$ of type
 $(n_W,t)$ with character $\psi_{\mathcal P}$, $\psi=\psi_w\ne1$, then $(S_y(s)-\psi_w(s)^{
 \epsilon})(S_y(s)-1)=0$ for $s\in I_w$, $\psi_w$ being viewed on $I_w$ through $\mathrm{Art}_w$.
@@ -30905,11 +30991,11 @@ $u_qu_{q'}$ has parameters $\beta+\beta'$ and $A=A(u)+A(u')-\beta\beta'^*$; henc
 blocks of $u-1$, $N(u)\le\max(\|u-1\|^2,\|u-1\|)\le(\|u\|+1)^2$; and $\|u\|\le1+2\|\beta\|+\|A\|\le(1+\sqrt{N(u)})^2$.
 Conjugation by the element $a_t$ of $G$ with $a_t\tilde e_a=t\tilde e_a$, $a_t\tilde e^*_a=t^{-1}\tilde e^*_a$, fixing
 $x_i,\tilde z$, maps $u_{(\beta,\sigma)}$ to $u_{(t\beta,t^2\sigma)}$; it multiplies $N$ by $t^2$ and $du^0$ by $t^Q$,
-$Q=2\varrho k+\varrho^2$ (real dimension of the parameters). So the balls $B(\rho)=\{N\le\rho\}$ satisfy
+$Q=2\varrho k+2\varrho^2$ (the homogeneous dimension: the $2\varrho k$ real coordinates of $\beta$ have weight $1$ and the $\varrho^2$ real coordinates of $\sigma$ have weight $2$). So the balls $B(\rho)=\{N\le\rho\}$ satisfy
 $\pbvol B(\rho')=(\rho'/\rho)^{Q/2}\pbvol B(\rho)$, and they are compact with non-empty interior.
 
 \emph{The tube.} Let $\rho=Q^2(T^2+1)^2$, $\Omega_0=B(\rho)$, $A=\Omega_0\cdot\{y:\|y\|\le T\}$, compact. On $A$,
-$\|vy\|\le(1+\sqrt\rho)^2T\le(1+Q(T^2+1))^2T\le T^9\le T^{10}$, using $Q\le r^2/2\le T^2/128$. Fix $y$ and $v_0$ with
+$\|vy\|\le(1+\sqrt\rho)^2T\le(1+Q(T^2+1))^2T\le T^9\le T^{10}$, using $Q=2\varrho(k+\varrho)\le(k+2\varrho+1)^2/2=r^2/2\le T^2/128$. Fix $y$ and $v_0$ with
 $v_0y=v_1y_1\in A$ ($v_1\in\Omega_0$, $\|y_1\|\le T$); if also $vy=v_2y_2\in A$, then $w:=v_2^{-1}vv_0^{-1}v_1=y_2y_1^{-1}$
 lies in $\pboU$ and has $\|w\|\le T^2$, so $\sqrt{N(w)}\le T^2+1$, and $\sqrt{N(vv_0^{-1}v_1)}=\sqrt{N(v_2w)}\le\sqrt\rho+
 T^2+1$. Thus $\{v:vy\in A\}\subseteq B(\rho')g^{-1}$ with $g=v_0^{-1}v_1$, $\sqrt{\rho'}=\sqrt\rho+T^2+1$. By right
@@ -32649,7 +32735,8 @@ group $\pfrU_{(<l)}$, so $\delta_\nu*\pfsA_l=\pfsA_l*\delta_\nu=\pfsA_l$ for $\n
 \S\ref{pfr:ss-floors}, $\delta_\sigma*\pfsA_l=\pfsA_l*\delta_\sigma$ for $\sigma\in\pfrG^{(l)}$; and
 $\pfsA_{l+1}=\pfsA_l*\eta_l=\eta_l*\pfsA_l$ (associativity, and (N3) for $\eta_l$, which is carried by
 $\pfrN_l\subseteq\pfrG^{(l)}$).
-\item[(iii)] The facts on $\pfrU_{(<l)}$ used in \S\ref{pfr:ss-floors}: it fixes the $e_b$, $b<l$; it acts on
+\item[(iii)] The facts on $\pfrU_{(<l)}$ used in \S\ref{pfr:ss-floors}: it preserves the flag of the spans $\langle e_0,\dots,e_b\rangle$, $b<l$, and acts on it
+unitriangularly, $e_b\mapsto e_b+\sum_{c<b}\mu_{cb}e_c$ (it need not fix $e_b$ for $b\ge1$: $\pfrN_0$ moves $e_1$ by a multiple of $e_0$); it acts on
 $V_l$ by $v\mapsto v+\sum_{b<l}\lambda_b(v)e_b$ (each $\pfrN_b$, $b<l$, acts on $V_{b+1}\supseteq V_l$ by
 $v\mapsto v-h(v,\omega)e_b$ and fixes the $e_c$, $c\le b$, and moves the $e_c$, $c>b$, by multiples of $e_b$);
 it is normalised by $\pfrG^{(l)}$; and $\pfrR^{(l)}=\pfrG^{(l)}\pfrU_{(<l)}$, by (N1) applied on each floor
@@ -35197,11 +35284,12 @@ the data (as in \S\ref{pff:ss-large}).
 \emph{The density at $T$.} For $\Psi\ge0$ locally constant with compact support,
 $\bigl|\int\!\int\Psi(y)\psi_T(\tau b(y^*y-\alpha))\,dy\,db\bigr|\le\int\Psi\,d\nu_{\alpha,T}$. Indeed, if the
 outer integral does not converge absolutely the left side is $0$ by convention. Otherwise, cut the
-frequency to $b\in u\aubar u\,\mathcal O$ for a unit $u$ ($\mathcal O$ the skew integers): by orthogonality of
+frequency to $b\in u\aubar u\,\mathcal O$ for an invertible $u$ ($\mathcal O$ the skew integers): by orthogonality of
 characters the cut integral equals $\pbvol(u\aubar u\mathcal O)$ times the mass, for $dy$, of the slab
 $\{y:y^*y-\alpha\in(u\aubar u)^{-1}\mathcal O_{E^+,T}\}$ weighted by $\Psi$, where $\mathcal O_{E^+,T}$ is the lattice of self-adjoint integers, dual to $\mathcal O$ under
 $(b,X)\mapsto\psi_T(\tau bX)$ since $E/E^+$ is unramified (so the two volumes multiply to $1$); this mass, by the disintegration, is the
-mean of $\int\Psi\,d\nu_{\alpha+\beta,T}$ over $\beta$ in that slab. As $u\to0$ the cut integrals tend
+mean of $\int\Psi\,d\nu_{\alpha+\beta,T}$ over $\beta$ in that slab. As $u^{-1}\to0$ (at every place of $T$) the lattices $u\aubar u\,\mathcal O$ increase and exhaust the skew elements, while the
+dual lattices $(u\aubar u)^{-1}\mathcal O_{E^+,T}$ shrink to $0$; so the cut integrals tend
 to the full integral (dominated convergence) and the means tend to $\int\Psi\,d\nu_{\alpha,T}$
 (continuity of $\beta\mapsto\int\Psi\,d\nu_{\beta,T}$, Lemma~\ref{pff:fibre}(a)); so the integral equals
 $\int\Psi\,d\nu_{\alpha,T}\ge0$.
@@ -36892,8 +36980,8 @@ $\pcxstr_{\pcxH\oplus W}(\nu;z')=\pcxstr_{Y'}(\nu;z')=C'C\ne0$.
 
 \subsection{Convergence}\label{pcx:ss-conv}
 
-For a space $S_1$ of rank $n_1$, a space $S_2$ of rank $n_2$ and a set $P$ of primes of $E$ with
-$P\cap\bar P=\emptyset$, consider data $[y,\Phi]_P$ of $\auHom(S_1,S_2)$, $\Phi$ locally constant
+For a space $S_1$ of rank $n_1$, a space $S_2$ of rank $n_2$ and a non-empty set $P$ of primes of $E$ with
+$P\cap\bar P=\emptyset$ (the proof of Proposition~\ref{pcx:decay} uses a place of $P$; for $P=\emptyset$ the statement fails, the datum being then the vacuum at all finite places), consider data $[y,\Phi]_P$ of $\auHom(S_1,S_2)$, $\Phi$ locally constant
 with compact support on $\pcMat_{n_2\times n_1}(F_P)$. Write $\mathrm{ht}$ for the height on the
 adelic unitary groups (\S\ref{ss:au-heights}).
 
@@ -37280,7 +37368,7 @@ injectivity.
 
 
 \begin{corollary}[Absolute convergence in the exchange identity]\label{pcx:conv}
-Assume Proposition~\ref{pcx:decay}. \textup{(i)} If $\Phi$ on $\pcMat_{r\times N}(F_S)$ is supported
+Assume Proposition~\ref{pcx:decay} and $S\ne\emptyset$ (as is the case for the set of primes of a non-trivial modulus). \textup{(i)} If $\Phi$ on $\pcMat_{r\times N}(F_S)$ is supported
 on matrices of rank $r$ (at every place of $S$) then $h\mapsto\theta^{W,V}_{\alpha,\beta}(g,h;[v,\Phi]_S)$
 is integrable on $[\auU(V)]$, uniformly for $g$ in compact sets, and the integral has moderate
 growth in $g$. \textup{(ii)} The same holds for $h'\mapsto\theta^{V',W}_{\alpha,\beta}(h',g;[v,\Psi]_S)$
@@ -37988,19 +38076,38 @@ $\alpha,\beta$, write $\vartheta^{\alpha,\beta}_{F,x,(g,h)}(\phi)=\theta\bigl(\p
 
 \begin{lemma}[Product formula]\label{pcu:product}
 For a finite datum $f$ of $(W_0,U)$, a datum $F$ of $(W_0,W_0)$, real vectors $\phi$, $v_1$ and
-characters $\alpha,\beta$,
+characters $\alpha,\alpha',\beta$,
 \[
-\vartheta^{\alpha,\alpha\beta}_{f\boxtimes F,(x;0),(g,y\oplus l)}(\phi\boxtimes v_1)=
-\vartheta^{\alpha,\beta}_{f,x,(g,y)}(\phi)\;\theta^{W_0,W_0}_{\alpha,\alpha}(g,l;v_1\otimes F).
+\vartheta^{\alpha\alpha',\beta}_{f\boxtimes F,(x;0),(g,y\oplus l)}(\phi\boxtimes v_1)=
+\vartheta^{\alpha',\beta}_{f,x,(g,y)}(\phi)\;\theta^{W_0,W_0}_{\alpha,\beta}(g,l;v_1\otimes F).
 \]
 \end{lemma}
 \begin{proof}
-$\auHom(W_0,U\oplus W_0)=\auHom(W_0,U)\oplus\auHom(W_0,W_0)$ orthogonally; the Weil representation,
-the Heisenberg operators and $\theta$ are tensor products along this decomposition (the character
-$\alpha\beta$ on $\auU(U\oplus W_0)$ restricted to $\auU(U)\times\auU(W_0)$ is $\alpha\beta\otimes
-\alpha\beta$, and the factor $\beta$ is assigned to the first factor, $\alpha$ to the second, by the
-convention \eqref{pcx:eq-twist}), and the translation is $0$ on the second factor.
+$\auHom(W_0,U\oplus W_0)=\auHom(W_0,U)\oplus\auHom(W_0,W_0)$ orthogonally; the Weil representation
+$\omega_{\auHom(W_0,U\oplus W_0)}(g,y\oplus l)$, the Heisenberg operators and $\theta$ are tensor products
+along this decomposition, and the translation is $0$ on the second factor. It remains to compare the
+characters of the determinants. The target character $\beta$ of $\auU(U\oplus W_0)$ restricted to
+$\auU(U)\times\auU(W_0)$ is $\beta\otimes\beta$, since $\det(y\oplus l)=\det y\,\det l$; the source
+character enters through $(\alpha\alpha')(\det g)^{-1}=\alpha'(\det g)^{-1}\alpha(\det g)^{-1}$. So the
+scalar on the left is
+\[
+(\alpha\alpha')(\det g)^{-1}\beta(\det y)\beta(\det l)=\bigl[\alpha'(\det g)^{-1}\beta(\det y)\bigr]\,
+\bigl[\alpha(\det g)^{-1}\beta(\det l)\bigr],
+\]
+the product of the scalars of $\omega_{\alpha',\beta}(g,y)$ and $\omega_{\alpha,\beta}(g,l)$ on the right
+(the definition of \S\ref{pcx:ss-statement}).
 \end{proof}
+
+The formula is used with one target character on both blocks and with the source character
+divided between the two factors. In the unfolding of $\Theta^{\mathrm L}_{X,T}$ the representation is
+$\omega_{\gamma_X,\gamma_X}$ with $\gamma_X=\gamma\upsilon^b$ ($\gamma=\nu^{-1}\upsilon^j$, the character attached to the rank $n=2j$ of $W_0$), and by (U2) the functional $\vartheta$ of
+the pair $(W_0,T)$ has the characters $(\gamma\upsilon^b,\gamma)$; the lemma is applied with
+$\alpha=\beta=\gamma$ and $\alpha'=\upsilon^b$, so that the factor of $(W_0,W_0)$ is
+$\theta^{W_0,W_0}_{\gamma,\gamma}$, the kernel of $\Theta^{\mathrm L}_{W_0,W_0}$, and the factor of
+$(W_0,U)$ has the characters $(\upsilon^b,\gamma)$. In the unfolding of $\Theta^{\mathrm S}_{X,U}$ the
+functional $\vartheta$ of the pair $(W_0,U)$ has the characters $(\upsilon^b,\nu\upsilon^j)$, by (U2)
+again: the source characters of the two sides agree, and the target characters $\gamma=\nu^{-1}\upsilon^j$
+and $\nu\upsilon^j$ of $\auU(U)$ differ by $\nu^2$.
 
 Let $\gamma=\nu^{-1}\upsilon^{j}$ (the character of \S\ref{pcx:ss-arch} for the rank $n$ of $W_0$),
 $I_0(\nu)=\Theta^{\mathrm L}_{W_0,W_0}(z,\Psi^{\mathrm{col}}_1)(1)$, and for $h\in\auU(T)_\R$ let
@@ -38010,12 +38117,12 @@ places and $1$ at the finite ones, and $\mathrm N(\zeta)=\prod_\tau|\zeta_\tau|^
 
 \begin{lemma}[Identity of periods]\label{pcu:period}
 For every $h\in\auU(T)_\R$ there is $p\in\auU(U)_\R\times\auU(W_0)_\R$ such that for all
-$B\in\auGL_b(\auA_E)$, characters $\beta$, finite data $f$ of $(W_0,U)$, adelic $x$, and $g$, $y$,
+$B\in\auGL_b(\auA_E)$, finite data $f$ of $(W_0,U)$, adelic $x$, and $g$, $y$,
 \[
-\int_{[\auU(W_0)]}\vartheta^{\gamma,\gamma\beta}_{f\boxtimes F_1,(x;0),(g,y\oplus u)}
+\int_{[\auU(W_0)]}\vartheta^{\gamma\upsilon^b,\gamma}_{f\boxtimes F_1,(x;0),(g,y\oplus u)}
 \Bigl(\omega^\flat(1,ph)\,\mathrm{sl}_D\bigl((ph)^{-1}(B;0)\bigr)\Phi\Bigr)du
 =\frac{\rho(h)\,I_0(\nu)}{\nu_{\mathrm{bc}}(\zeta_B)\,\mathrm N(\zeta_B)^{j}}\;
-\vartheta^{\gamma,\beta}_{f,x,(g,y)}\bigl(\mathrm{sl}_D(B)\Lambda\bigr),
+\vartheta^{\upsilon^b,\gamma}_{f,x,(g,y)}\bigl(\mathrm{sl}_D(B)\Lambda\bigr),
 \]
 where $F_1$ is the finite datum $\Psi^{\mathrm{col}}_1=\chi_S^{-1}\circ\det$ at $S$ and the vacuum
 elsewhere, and $\nu_{\mathrm{bc}}(t)=\nu(t/\bar t)$.
@@ -38046,8 +38153,8 @@ slice is $\pcuS(y,x_1C)$. It remains to treat this last case, $\sigma(y)\sigma((
 \,(w\boxtimes z),
 \]
 the operators $\omega^\flat(1,ph)$ and $\omega^\flat(1,k\circ y)$ cancelling. By
-Lemma~\ref{pcu:product} with $\alpha=\gamma$, the integrand is this scalar times
-$\vartheta^{\gamma,\beta}_{f,x,(g,y)}(w)\,\theta^{W_0,W_0}_{\gamma,\gamma}(g,u;z\otimes F_1)$; the integral
+Lemma~\ref{pcu:product} with $\alpha=\beta=\gamma$ and $\alpha'=\upsilon^b$, the integrand is this scalar times
+$\vartheta^{\upsilon^b,\gamma}_{f,x,(g,y)}(w)\,\theta^{W_0,W_0}_{\gamma,\gamma}(g,u;z\otimes F_1)$; the integral
 over $u$ of the last factor is $\Theta^{\mathrm L}_{W_0,W_0}(z,\Psi^{\mathrm{col}}_1)(g)=I_0(\nu)$ by
 Lemma~\ref{pcx:const}. On the right, $\mathrm{sl}_D(B)\Lambda=\sigma((B;0))|\prod\det B_\tau^{j+\mu_\tau}|^2
 \kappa w$. It remains to see $\prod_\tau\bar\zeta_\tau^{2\mu_\tau}=|\prod_\tau\zeta_\tau^{j+\mu_\tau}|^2/
@@ -38251,7 +38358,7 @@ $k'\in H$ with
 \rho'(g')\,\kappa_0\,\epsilon\,\nu_{\mathrm{bc}}(d_0)\,I_0(\nu)\int_{\auU(U)(\auA)}
 \mathrm{term}^{\mathrm S}_1(p,y)dy,
 \]
-with $d_0=\det(s_0x_U)$, $\kappa_0=\varepsilon_T\varepsilon_U^{-1}\mathrm N((d_0)_\infty)^{j}$ (with $\mathrm N$ as defined before Lemma~\ref{pcu:period}, applied to the archimedean components), and $\epsilon$ the
+with $d_0=\det(s_0x_U)$, $\kappa_0=\varepsilon_T\varepsilon_U^{-1}|d_0|_{\auA_E}^{j}$ (the adelic modulus of the idele $d_0$, a positive constant fixed with the frames and $s_0$, before $\nu$ is chosen), and $\epsilon$ the
 constant of modulus $1$ with $\Phi^{\mathrm{row}}_{z_0}=\epsilon\cdot(\text{standard datum of the frame
 of }D)$. If $u_f\notin H_fK_f$, then $(y,y')g'$ has finite part in $(y_f,y'_f)u_f\notin H_fK_f$, so the
 term vanishes by Lemma~\ref{pcu:finslice}(b), and both sides are $0$ ($k'=1$). If $u_f=(u_1,u_2)\kappa$ with $\kappa\in K_f$, let $(\delta_1,\delta_2)=p$ be the element
@@ -38261,9 +38368,11 @@ $B=y^{-1}Y$, $x_f$ its finite part. By Lemma~\ref{pcu:finslice}(c) on the large 
 on the small side), both terms vanish unless $x_f$ is integral, and then $\det x_f$ is a unit and the large finite
 slice is $\epsilon\chi_S^{-1}(\det x_f)$ times the vacuum of $(W_0,U)$ tensored with $F_1$; on the small side the constant $\chi_S^{-1}(\det\bar x_f)$ times
 the vacuum. The archimedean point $\delta h_\infty$ is moved into the real slice by (M3), and the
-integral over $[\auU(W_0)]$ is the left side of Lemma~\ref{pcu:period}; replacing it by the right side
-and comparing scalars gives the claim. The scalar comparison uses: $\det B=\zeta_B\cdot\det x_f$ with
-$|\det y_\tau|=1$ at every infinite place and $\det x_f$ a unit, so $\mathrm N(\zeta_B)=\prod_\tau|\det Y_\tau|^2$; $\chi_S^{-1}(\bar\epsilon')=
+integral over $[\auU(W_0)]$ is the left side of Lemma~\ref{pcu:period} (the functional $\vartheta$ of the
+large term has the characters $(\gamma_X,\gamma_X\upsilon^{-b})=(\gamma\upsilon^b,\gamma)$ by (U2)); replacing it by the right side,
+whose functional has the characters $(\upsilon^b,\gamma)$, and comparing with the small term, whose functional has the
+characters $(\upsilon^b,\nu\upsilon^j)$ by (U2), gives the claim. The scalar comparison uses: $\det B=\zeta_B\cdot\det x_f$ with
+$|\det y_\tau|=1$ at every infinite place and $\det x_f$ a unit, so $\mathrm N(\zeta_B)=\prod_\tau|\det Y_\tau|^2$; the moduli $|\det q|^{(b+n)/2}$ and $|\det q|^{b/2}$ of the two terms in (U2) have the quotient $|\det q|_{\auA_E}^{j}=|d_0|_{\auA_E}^{j}\,|\det Y|_{\auA_E}^{j}$, and $|\det Y|_{\auA_E}=\mathrm N(\zeta_B)$ because the finite part $\det Y_f=\det y_f\det x_f$ has modulus $1$ ($\det y_f$ lies in $\auU(1)(\auA_{E^+,f})$ and $\det x_f$ is a unit), so that the quotient of the moduli by the factor $\mathrm N(\zeta_B)^{j}$ of the period is $|d_0|_{\auA_E}^{j}$; $\chi_S^{-1}(\bar\epsilon')=
 \chi_S^{-1}(\epsilon')\nu_{\mathrm{bc}}(\epsilon')$ for units $\epsilon'$ at $S$ (definition of
 $\chi_S$); and the factor $\nu(\det y)^2$ between the characters $\nu\upsilon^j$ and $\nu^{-1}
 \upsilon^j$ of $\auU(U)$ on the two sides; $j=n/2$ makes the powers of $\upsilon$ agree.
@@ -39049,8 +39158,9 @@ Write the real Fock spaces as $\mathcal F'$ (of $\auHom(X,T)_\R\cong\C^{\iota'}$
 $\auHom(X_1,T)_\R\cong\C^{\iota}$), with moments $\|v\|_N=\int(1+|y|)^N|v(y)|dy$, Heisenberg operators
 $\psrho$ and vacua $e$. The mixed model of $D$ is characterised by: there are linear maps $L,K\colon
 \C^p\to\C^{\iota'}$, $I\colon\C^\iota\to\C^{\iota'}$ (here $p$ is the complex dimension of
-$\auHom(\ell,T)_\R$) with $\C^{\iota'}=L\C^p\oplus I\C^\iota\oplus K\C^p$, and bounded maps
-$\mathrm{sl}(x)\colon\mathcal F'\to\mathcal F$, such that
+$\auHom(\ell,T)_\R$) with $\C^{\iota'}=L\C^p\oplus I\C^\iota\oplus K\C^p$, and linear maps
+$\mathrm{sl}(x)$ from the vectors of $\mathcal F'$ with finite moment $\|v\|_0$ to $\mathcal F$ (the values at $x$ in the mixed model; they are
+continuous for the moment norms, by Lemma~\ref{pcu:slicedecay}, and not for the Hilbert norms, an evaluation at a point not being bounded on $L^2$), such that
 \begin{equation}\label{pcu:eq-mixed}
 \mathrm{sl}(x)\,\psrho(La'+Iw+Kb)v=\beta(2x+a',b)\,\psrho(w)\,\mathrm{sl}(x+a')v,\qquad
 \mathrm{sl}(x)e=e^{-|x|^2}e,
@@ -39068,7 +39178,9 @@ For $v=\psrho(y)e$, \eqref{pcu:eq-mixed} gives $\mathrm{sl}(x)v=(\text{phase})\,
 From $1+|x|\le(1+|x+Ay|)(1+|Ay|)$ and $(1+t)^Me^{-t^2}\le e^{M^2}$,
 $(1+|x|)^Me^{-|x+Ay|^2}\le e^{M^2}(1+\|A\||y|)^M$; and $\|\psrho(w)e\|_N\le(1+|w|)^N\|e\|_N$ (translate
 the weight). Hence $(1+|x|)^M\|\mathrm{sl}(x)\psrho(y)e\|_N\le C(1+|y|)^{N+M}$, and
-Lemma~\ref{pcx:superpos} ($v=\int v(y)\psrho(y)e\,dy$, $\mathrm{sl}(x)$ bounded) gives the bound. The
+Lemma~\ref{pcx:superpos} ($v=\int v(y)\psrho(y)e\,dy$) gives the bound: by the estimate for coherent states the integral
+$\int v(y)\,\mathrm{sl}(x)\psrho(y)e\,dy$ converges absolutely in the norm $\|\cdot\|_N$, locally uniformly in $x$, as soon as $\|v\|_{N}<\infty$; it is the value at $x$
+of the continuous function which represents $v$ in the mixed model, and this is $\mathrm{sl}(x)v$. The
 second statement follows with $M=2p+1$, since $\int(1+|x|)^{-2p-1}dx<\infty$ on $\C^p=\R^{2p}$.
 \end{proof}
 This is the estimate used in (M2): the integral $\int\mathrm{sl}_D(x)\Lambda\,dx$ converges
@@ -48364,10 +48476,10 @@ For $g\in H_\tau$ and real $s\ge16n^2$, $\int_{G_\tau}\|g(r\oplus1)\|^{-s}dr\le2
 The continuous function $r\mapsto\|g(r\oplus1)\|\ge\|r\|/\|g^{-1}\|$ tends to infinity, so it attains
 its minimum $t_0$ at some $r_0$. For every $r$,
 \[
-\|rr_0^{-1}\|=\|(rr_0^{-1})\oplus1\|=\bigl\|(g(r_0\oplus1))^{-1}g(r\oplus1)\bigr\|\le t_0\,\|g(r\oplus1)\|
+\|r_0^{-1}r\|=\|(r_0^{-1}r)\oplus1\|=\bigl\|(g(r_0\oplus1))^{-1}g(r\oplus1)\bigr\|\le t_0\,\|g(r\oplus1)\|
 \le\|g(r\oplus1)\|^2 .
 \]
-Hence $\|g(r\oplus1)\|^{-s}\le\|rr_0^{-1}\|^{-s/2}$; integrate, use right invariance and
+Hence $\|g(r\oplus1)\|^{-s}\le\|r_0^{-1}r\|^{-s/2}$; integrate, use left invariance and
 Lemma~\ref{pgq:balls} with $s/2$.
 \end{proof}
 
@@ -49169,8 +49281,10 @@ $\langle v,w\rangle\in E\cap\widehat\auO_E=\auO_E$. At $\tau$, $|\tau\langle v,w
 has $\prod_{\tau\in\auPl}|\tau(a)|^2=|\mathrm N_{E/\Q}(a)|\ge1$, so $\max_\tau|\tau(a)|\ge1$.
 (b) Otherwise $|v|_x|y_j|_x<1$ for all $j$, so $v$ is orthogonal to all $y_j$ by (a), hence to $V$, and
 $v=0$ as the form is non-degenerate.
-(c) $L_V(x)=E^n\cap x_f\widehat\auO_E^{\,n}$. Since $x_f$ preserves the unimodular form,
-$\det x_f$ is a unit at every finite place, so $x_f\widehat\auO_E^{\,n}$ and $\widehat\auO_E^{\,n}$ have the same
+(c) $L_V(x)=E^n\cap x_f\widehat\auO_E^{\,n}$. Since $x_f$ preserves the form,
+$\det x_f\cdot\overline{\det x_f}=1$. At a finite place of $E^+$ inert in $E$ this makes $\det x_f$ a unit; at a place $v=w\bar w$ split in $E$
+the components at $w$ and $\bar w$ are $t$ and $t^{-1}$ ($t\in E_w^\times=E^+_v{}^{\times}$, not necessarily a unit), whose absolute values multiply to $1$. So the
+module of $x_f$ on $\auA_{E,f}^n$, the product of $|\det x_w|_w$ over the finite places $w$ of $E$, is $1$, and $x_f\widehat\auO_E^{\,n}$ and $\widehat\auO_E^{\,n}$ have the same
 volume in $\auA_{E,f}^n$; hence the covolumes of $L_V(x)$ and of $\auO_E^n$ in $E_\infty^n$ (embedded by
 $v\mapsto(\tau(v))_\tau$) agree, both being the covolume of $E^n$ in $\auA_E^n$ divided by that volume. The latter is $(2^{-f}
 |D_E|^{1/2})^n$ (Lemma~\ref{pbc:tb-covol}; see also \cite[Chapter~I, (5.1) and Proposition~(5.2)]{Neukirch}). The archimedean coordinate map is $v\mapsto(\mathsf
@@ -50824,7 +50938,8 @@ may fix $\beta$; we keep it general in the notation.
 \emph{Step 1: the two functionals.} Fix $\alpha,\Phi,\Psi$ and $g$. For a Fock vector $w$ of
 $\auHom(W,I_a)\otimes\R$ with finite moments and $y\in\auU(W)(E^+\otimes\R)$ put $L_y(w)=\int_{[\auU(I_a)]}
 \theta^{W,I_a}_{\beta,\alpha}(gy,h;[w,\Phi])\,dh$; $[\auU(I_a)]$ is compact and the kernel depends
-continuously on $w$, uniformly on compacta, so $L_y$ is a continuous linear form. For a polynomial
+continuously on $w$ for the moment norms, uniformly on compacta, so $L_y$ is a continuous linear form on the space of vectors with finite moments,
+with the topology of the moment norms (Lemma~\ref{pcn:smooth}); it is not continuous for the Hilbert norm. For a polynomial
 $Q$ on $\auHom(V',W)\otimes\R$ put $\ell'(Q)=\int_{[\auU(V')]}\theta^{V',W}_{\alpha,\alpha\beta^{-1}}
 (x,g;[Q,\Psi])\,dx$, which converges absolutely (Corollary~\ref{pcx:conv}: $\Psi$ is supported on
 left-invertible matrices) and is linear in $Q$. Write $\omega_\infty$ for the archimedean Weil
@@ -50850,15 +50965,16 @@ $u\in\auU(I_a)_\infty$.
 \emph{Step 3: a circle mean.} For $z\in\C$, $|z|=1$, let $t_z\in\prod_\tau\auU(m)$ be diagonal with
 entries $z^{-2}$ at the first $p$ positive indices and $z^{-1}$ at the last $a$, and put
 $\Omega_z(w)=z^{-aN_\iota}\omega_\infty(t_z,z^{-1}1_a)w$, $N_\iota=\sum_\tau\#\iota(\tau)$. We claim:
-there is $\kappa\in\C$ (depending on $x_0$) such that for every continuous linear form $\ell$ on the
-Fock space with $\ell\circ\omega_\infty(1,u)=\ell$ for all $u\in\auU(I_a)_\infty$,
+there is $\kappa\in\C$ (depending on $x_0$) such that for every linear form $\ell$ on the
+space of vectors with finite moments, continuous for the moment norms, with $\ell\circ\omega_\infty(1,u)=\ell$ for all $u\in\auU(I_a)_\infty$,
 \begin{equation}\label{pte:eq-circle}
 \kappa\,\ell\bigl(\pteSD(\eta^0)\bigr)=\frac1{2\pi}\int_0^{2\pi}\ell\bigl(\Omega_{e^{i\vartheta}}(x_0)
 \bigr)\,d\vartheta .
 \end{equation}
-The right side is continuous in $x_0$ (uniformly over $\ell$ in bounded sets) and the set of
-functions $\ell\mapsto\kappa\,\ell(\pteSD(\eta^0))$, $\kappa\in\C$, is a closed line; polynomial vectors are
-dense in the Fock space; so it suffices to prove the claim for $x_0$ a polynomial $P$ in the
+For each such $\ell$ the right side is continuous in $x_0$ for the moment norms (the operators $\Omega_z$, $|z|=1$, are equicontinuous for
+these norms, Lemma~\ref{pcn:smoothaction}(i)), and the set of
+functions $\ell\mapsto\kappa\,\ell(\pteSD(\eta^0))$, $\kappa\in\C$, is a line, closed for pointwise convergence in $\ell$; polynomial vectors are
+dense in the space of vectors with finite moments for the moment norms (Lemma~\ref{pcn:smooth}(b); density in the Hilbert norm would not suffice, since the forms $L_y$ of Step~1 are continuous only for the moment norms); so it suffices to prove the claim for $x_0$ a polynomial $P$ in the
 entries of $x$. By Corollary~\ref{ptf:SDlaw}(c), $\Omega_z$ acts on polynomials by the substitution that multiplies every
 variable outside the block $x^\flat$ (the last $a$ positive columns) by $z$ and fixes the entries of
 $x^\flat$ (the scalar $z^{-aN_\iota}$ cancels the vacuum character). Hence $\ell(\Omega_z P)=F(z)$ for
@@ -51219,9 +51335,10 @@ integral $Y$ with $Y^*Y=1$ lies in $K_V$. So only the coset $K_V$ contributes in
 with $\Lambda\ne0$ by Steps~5 and~6 and $|\zeta|=1$. As $u_0$ is an isomorphism $V\to\ell'$, $C\circ u_0$ runs
 over all of $\mathsf W_0(\auA)=\mathsf W_I(\auA)$ when $C$ runs over $\auHom(\ell',S_0)(\auA)$. If
 $\varphi^\circ=0$, then $\varphi^\circ_1=0$ and $\theta_{\mathsf W_I}(\psrho_{\mathsf W_I}(w)\Lambda)=0$ for
-all $w\in\mathsf W_I(\auA)$, so $\Lambda$ lies in the kernel of $F\mapsto\theta_{\mathsf W_I}(\psrho(\cdot)F)$,
-a proper closed invariant subspace of the irreducible representation $\psHS(\mathsf W_I)$, hence $\Lambda=0$
-(as in the proof of Lemma~\ref{pk:dict}; compare Proposition~\ref{pst:I4}). This contradiction proves
+all $w\in\mathsf W_I(\auA)$. But $\int_{\mathsf W_I(E^+)\backslash\mathsf W_I(\auA)}|\theta_{\mathsf W_I}(\psrho(w)\Lambda)|^2dw$
+is a positive multiple of $\|\Lambda\|^2$ (Lemma~\ref{psq:thetanorm}; $\Lambda$ is a Schwartz vector, the tensor product of a
+slice of a polynomial Fock vector and a vacuum), hence $\Lambda=0$
+(compare the proof of Lemma~\ref{pk:dict} and Proposition~\ref{pst:I4}). This contradiction proves
 $\varphi^\circ_1\ne0$, so $\varphi^\circ\ne0$.\par}
 \end{proof}
 
@@ -51233,7 +51350,7 @@ of rank $N''$ with $l=(m-j)+j=m$ negative signs; $\mathsf W=I_{3m}\oplus W'$; $V
 \S\ref{po:ss-glue}). For a twist $\vartheta$ let $\pcm^{(2)}_\vartheta:=\pi_M^2\prod_{w\in Q_\vartheta}w$ (it has the same primes as the squarefree modulus $\pcm_\vartheta$ of \S\ref{pc:ss-data}, so $L_*(\pcm^{(2)}_\vartheta,\cdot,\cdot)=L_*(\pcm_\vartheta,\cdot,\cdot)$ by \eqref{pcx:eq-Lstar}), $\chi'=
 \chi_0^j\vartheta$ (weight $0$, residue character $\chi'_\vartheta$ on $\pcR_{\pcm^{(2)}_\vartheta}^\times$: $\omega^j$ at
 $\mathsf M$, $\psi_w$ at $Q_\vartheta$), $\nu''_\vartheta=\mu_j^0\vartheta\,\upsilon^{j+\lfloor(t+k-1)/2\rfloor}$ (the
-character of the lift on $V''$) and $\nu^\flat=\nu''_\vartheta\upsilon^m/\chi'$, a character independent of
+character of the lift on $V''$) and $\nu^\flat=\nu''_\vartheta/\chi'$, a character independent of
 $\vartheta$ with trivial tame part. The \emph{choices} are $i=(\Lambda_i,h^\flat_i,\varrho_i)$: a matrix
 $\Lambda_i\in\pcMat_{3m\times N''}(\auO_E/\pi_M^2)$, a class $h^\flat_i$ of $\auU(W^\flat)$ at level $\pi_M^2$, and
 for each $\tau$ a family of $2m$-row selections of a fixed basis of short vectors of the lattice at
@@ -52751,9 +52868,14 @@ is the projection of the Fock space onto its $\rho_{\lambda_V}^\vee$-isotypic su
 $\omega(1,\cdot)$ (the integral over $h_\infty$ of $\omega(1,h_\infty)v$ against the coefficient
 $\aubar{c_{\xi_0}\Xi}$ only sees this component). (d) By the theory of joint harmonics of
 Kashiwara--Vergne and Howe (\cite[Ch.~III, Lemma~5.3 and Corollary~5.4]{KashiwaraVergne}; \cite[Proposition~3.1, (3.10)(b)]{HoweJAMS}), the polynomial vectors of that isotypic subspace are
-$U(\mathfrak g_{W,\C})\cdot\{\pop_\xi:\xi\in W_{\lambda_V}\}$: the space of joint harmonics of
-type $\lambda_V$ is $\{\pop_\xi\}$ (this is the choice of $\pop_\xi$ in \S\ref{po:ss-set}, see
-Lemma~\ref{plf:harm}), and the isotypic component of the polynomial Fock space is generated by
+$U(\mathfrak g_{W,\C})\cdot\{\pop_\xi:\xi\in W_{\lambda_V}\}$. Indeed, the $\pop_\xi$ are joint harmonics of
+type $\lambda_V$ (this is the choice of $\pop_\xi$ in \S\ref{po:ss-set}, see
+Lemma~\ref{plf:harm}), and they are not all zero. The space of joint harmonics of type $\lambda_V$ is irreducible
+under $\auU(V)(\R)\times K_W$, $K_W$ the maximal compact subgroup of $\auU(W)(E^+\otimes\R)$ (\cite[(3.9)(a)]{HoweJAMS}); it need not be
+$\{\pop_\xi\}$ itself, since the type of $K_W$ in it need not be one-dimensional. The span of the $K_W$-translates of
+the $\pop_\xi$ is stable under both groups (the two actions commute and $\xi\mapsto\pop_\xi$ is equivariant for
+$\auU(V)(\R)$), so it is the whole space of joint harmonics of type $\lambda_V$; as $K_W$ is connected and the
+$\pop_\xi$ are $K_W$-finite, it is contained in $U(\mathfrak g_{W,\C})\cdot\{\pop_\xi\}$. Finally the isotypic component of the polynomial Fock space is generated by
 its harmonics under $U(\mathfrak g_{W,\C})$. By (a), (b), (c), $L(v)=0$ for every polynomial $v$.
 \end{proof}
 
@@ -52801,10 +52923,10 @@ of cosets for large $i$). Fix $z$.
 \emph{Case A: $z_u$ has an integral block ratio at every $u\in\mathsf S_\vartheta$.} Let $A\in
 \auU(W)(\auA_f)$ be $1$ outside $\mathsf S_\vartheta\cup\aubar{\mathsf S_\vartheta}$ with
 $A_u=(z_u')^{-1}$ ($u\in\mathsf S_\vartheta$), and $\Psi_0(T)=\Phi_\vartheta(TA)$, so that
-$f(v,\Psi_0)$ is a non-zero multiple of $\omega(A^{-1},1)f(v,\Phi_\vartheta)$ (by \eqref{po:eq-w5}
+$f(v,\Psi_0)$ is a non-zero multiple of $\omega(A,1)f(v,\Phi_\vartheta)$ (by \eqref{po:eq-w5}
 at $\mathsf S_\vartheta$; at $\aubar{\mathsf S_\vartheta}$ the component of $A$ is determined by
 unitarity and acts on the vacuum of the conjugate place by a scalar). Hence $L_\Xi(f(v,\Psi_0))(g)$
-is a multiple of $L_\Xi(f(v,\Phi_\vartheta))(gA^{-1})=0$ by Lemma~\ref{ppe:harm} and
+is a multiple of $L_\Xi(f(v,\Phi_\vartheta))(gA)=0$ (Lemma~\ref{ppe:harm} gives the vanishing at every point) by
 \eqref{po:eq-equiv}. Now $z_uA_u=\binom{1}{z''_u z_u'^{-1}}$ is integral, $\equiv\iota_0\bmod u$ at
 $\mathsf M$, and has upper block $1$ at $\mathsf Q$; so $\Psi_0(z)=1$, and since $\Psi_0$ is
 locally constant, $\Psi_0\equiv1$ on $C$ for $i$ large. The support of $\Psi_0$ is one orbit of
@@ -52843,7 +52965,7 @@ such $\kappa$ without character), and $R_{k_s}\Xi=R_{\tilde s'}\Xi=\psi_u(\det s
 \#\ppeN_{\bar\lambda}\cdot L_\Xi(f(v,\plone_C))=L_{\varrho_V(\eta_{\psi_u,\bar\lambda})\Xi}
 (f(v,\plone_C))=0
 \]
-by (F2) and linearity of $\Xi\mapsto L_\Xi$. If $u\in\mathsf Q$, then $\bar\lambda'=0$, $k_s\equiv
+by (F2) and the additivity of $\Xi\mapsto L_\Xi$ (the map is conjugate-linear; the coefficients $\psi_u(\det s)^{-1}$ stay inside the argument, so no conjugation occurs). If $u\in\mathsf Q$, then $\bar\lambda'=0$, $k_s\equiv
 \operatorname{diag}(s,1)$ lies in $K_\vartheta$, and $R_{k_s}\Xi=\chi_\vartheta(k_s)^{-1}\Xi$ with
 $\chi_\vartheta(k_s)=\psi_u(\det s)^{\pm1}$ (by \eqref{po:eq-w5} and the factor $\psi_u(\det T')$
 of the datum); summing over $s$ gives $\#\ppeN_{\bar\lambda}L_\Xi=(\sum_s\psi_u(\det s)^{\pm1})
@@ -55332,9 +55454,11 @@ For the last assertion fix $g\in\auU(W)(\auA)$ and $h^\circ$. By the definition 
 $x\in\auU(W)_\infty$, $\langle u^\circ,K^\circ(gx,h^\circ)\rangle=\theta^\circ\bigl(\omega^\circ(g,h^\circ)(\Omega(x)
 \pop^\circ_{u^\circ}\otimes\Psi^\circ)\bigr)=\Lambda(\Omega(x)\pop^\circ_{u^\circ})$ with $\Lambda(w)=\theta^\circ(\omega^\circ(g,h^\circ)
 (w\otimes\Psi^\circ))$. As in the proof of Proposition~\ref{pss:carrier}, $\Lambda$ is a continuous linear form on
-the smooth vectors (smooth vectors are Schwartz functions in a Schr\"odinger model,
-Lemma~\ref{psp:prodtheta}, on which $\omega^\circ(g,h^\circ)$ and the theta functional are continuous).
-Corollary~\ref{pss:coefs}(a) shows that $x\mapsto\langle u^\circ,K^\circ(gx,h^\circ)\rangle$ is holomorphic of weight
+the Schwartz space $\mathcal S$ of a Schr\"odinger model
+(Lemma~\ref{psp:prodtheta}; $\omega^\circ(g,h^\circ)$ and the theta functional are continuous on it), and
+$x\mapsto\Omega(x)\pop^\circ_{u^\circ}$ is $C^\infty$ into $\mathcal S$ with derivative $\Omega(x)d\Omega(X)\pop^\circ_{u^\circ}$, by the argument given there for $\Omega'$
+(the smooth vectors of the restriction of the Weil representation to a subgroup need not be Schwartz functions, and this is not used).
+Corollary~\ref{pss:coefs}(a), in its general form with $\mathcal E=\mathcal S$, shows that $x\mapsto\langle u^\circ,K^\circ(gx,h^\circ)\rangle$ is holomorphic of weight
 $u^\circ$. Taking $u^\circ$ in a basis of $W^\circ$ gives the coordinates of $K^\circ(\cdot,h^\circ)$ (up to complex
 conjugation of the coefficients of the basis change, which does not affect holomorphy).
 \end{proof}
@@ -55497,8 +55621,8 @@ $o$), so it kills each product; and $\sum_rz_{rc}\partial_{rc}$ multiplies each 
 ($c$ in the fixed numbering), which is the length $\ell^+_c$ of the row number $c$ of $\mu^+_\tau$. So $\pop''_{u''}$ is a
 holomorphic vector of weight $u''$ for $\Omega''=\omega''_\infty(\cdot,1)$ (at each place, hence for the product, as
 in the proof of Theorem~\ref{psv:c}). For $x\in\auU(W)_\infty$, $\theta''_{1,\Lambda_i}(gx,h;u'')=\Lambda(\Omega''(x)\pop''_{u''})$
-with $\Lambda(w)=\theta''(\omega''(g,h)(w\otimes\Psi''_{1,\Lambda_i}))$ continuous on smooth vectors (as in the proof of
-Theorem~\ref{psv:c}), and Corollary~\ref{pss:coefs}(a) gives the holomorphy.
+with $\Lambda(w)=\theta''(\omega''(g,h)(w\otimes\Psi''_{1,\Lambda_i}))$ continuous on the Schwartz space $\mathcal S$ of a Schr\"odinger model, into which $x\mapsto\Omega''(x)\pop''_{u''}$ is $C^\infty$ (as in the proof of
+Theorem~\ref{psv:c}), and Corollary~\ref{pss:coefs}(a) with $\mathcal E=\mathcal S$ gives the holomorphy.
 
 \emph{The identity $u''+u^\circ=u$.} Positive $a$: by Lemma~\ref{psv:rows} and Lemma~\ref{psv:char},
 $u''_a+u^\circ_a=-\ell^+_a-(a''+a^\circ)=-\varsigma_\tau(a)-\kappa_j+\frac{t-1}2+(r_+-a)-\frac n2+\kappa_j=-\varsigma_\tau(a)-\frac{r+1}2+r_+-a$,
@@ -56112,7 +56236,7 @@ $\psi_v^{q_2}=1$. This is the property used in (F2) of Lemma~\ref{ppe:three} (Re
 \item[(T4)] The character $\chi_0$ of \S\ref{po:ss-hecke} is $\chi_M$, with tame part $\omega$ trivial off $\mathsf M$ and of order
 $>8m$ at $\mathsf M$; the tame part of $\mu^0_j$ is $\omega^j$. The characters $\nu_\ast=\mu^0_j\upsilon^{n'}$, $\nu_\pm$,
 $\chi'=\chi_M^j\vartheta$, $\nu''_\vartheta$ of \S\ref{po:ss-hecke}, \S\ref{pte:ss-third} have the weights and tame parts stated there,
-and $\nu^\flat=\nu''_\vartheta\upsilon^m/\chi'=\mu^\flat\upsilon^{-j\Delta+j+\lfloor(t+k-1)/2\rfloor+m}$ is independent of $\vartheta$ with trivial tame part. At every
+and $\nu^\flat=\nu''_\vartheta/\chi'=\mu^\flat\upsilon^{-j\Delta+j+\lfloor(t+k-1)/2\rfloor}$ is independent of $\vartheta$ with trivial tame part. At every
 prime of $\pfqm$ the tame parts of $\nu''_\vartheta$ and $\chi'$ coincide ($\omega^j_w$ at $\mathsf M$, $\psi_w$ at $Q_\vartheta$).
 \end{enumerate}
 \end{proposition}
@@ -67879,14 +68003,16 @@ $(\iota,g\tilde k)$ equals that at $(\iota,g)$.
 \cap gJ_0g^{-1}=1$ (Lemma~\ref{au:free}). So $\#\mathrm{Stab}_g$ divides $\#H$, and $\#H$ divides
 $\prod_{w\ \mathrm{chosen}}\#\auGL_n(\auF_w)$, which divides $N=\pgNch=\prod_{w\ \mathrm{chosen}}
 \#\auGL_{rt}(\auF_w)$ since $n=r'+t'\le r+t=6r\le5r^2=rt$ ($r'\le r$, $t'\le t=5r$, $r\ge2$) and $\auGL_n(\auF_w)$ embeds in $\auGL_{rt}(\auF_w)$
-(Lagrange). We take $c_0=\#H$: a common multiple of the orders of the stabilisers of the base level,
-dividing $N$.
+(Lagrange). Let $D=\prod_{w\ \mathrm{chosen}}\auGL_n(\auF_w)\supseteq H$. We take $c_0=\#D$: a common multiple of the orders of the stabilisers of the level $J_O$
+(they divide $\#H$, which divides $\#D$), dividing $N$.
 
 \begin{proof}[Proof of Lemma~\ref{pri:forms}]
-(a) Let $J_O^{(1)}=J_O\cap J_1$ be the base level with principal level at the $w_j$; the forms of
+(a) Let $J_O^{(1)}=\{k\in J_O:\ k_{w_j}\equiv1\bmod w_j\text{ for every }j\}$ be the base level with principal
+level at the $w_j$. The $w_j$ are not chosen places, so $J_1=J_O^{(1)}\cap J_0$; it is normal in $J_O^{(1)}$, and
+$J_O^{(1)}/J_1\simeq J_O/J_0=H$. The forms of
 principal level at the $w_j$ are $\mathcal A_\lambda(J_O^{(1)},\chi_O)\subseteq\mathcal A_\lambda(J_1,\chi)$.
 We first build an integral operator $\Psi_1$ on $\mathcal A_\lambda(J_1,\chi)$ with $\sum_{k\in\Gamma'}
-k^{-1}\Psi_1k=1$, and then average over $H$. Let $\Gamma'\subseteq\Gamma$
+k^{-1}\Psi_1k=1$, and then average its conjugates over $D$. Let $\Gamma'\subseteq\Gamma$
 be a subgroup (in particular a subgroup of a factor, or $\Gamma$ itself), and $S\subseteq\Gamma$ a set
 of representatives of the left cosets $k\Gamma'$. In the model of Lemma~\ref{pax:free} let $\Psi$ be
 multiplication by the indicator function of $\{\text{representatives}\}\times S$:
@@ -67898,22 +68024,28 @@ Lemma~\ref{pax:free}. For $h\in\Gamma'$, $(h^{-1}\Psi h\varphi)(g,k)=(\Psi h\var
 \varphi(g,k)=\#(S\cap k\Gamma')\,\varphi(g,k)=\varphi(g,k).
 \]
 Call this operator $\Psi_1$ (it is the $\Psi$ just defined, on $\mathcal A_\lambda(J_1,\chi)$). Now let
-$e_H=\sum_{h\in H}R(\tilde h)$, $(R(\tilde h)\varphi)(g)=\varphi(g\tilde h)$, with $\tilde h\in J_O$ a lift
-of $h$ with components $1$ outside the chosen places (well defined on $\mathcal A_\lambda(J_1,\chi)$ since
-$J_0$ is normal in $J_O$ and $\chi_O$ is trivial at the chosen places). Each $R(\tilde h)$ is integral:
-$\tilde h$ has integral components with integral inverses at places not above $\ell$, so (G2) of
-\S\ref{pl:ss-norm} applies as in the proof of Lemma~\ref{pax:free}. The $R(\tilde h)$ commute with the
-action of $\Gamma$ (translations at disjoint sets of places), and on $\mathcal A_\lambda(J_O^{(1)},\chi_O)$
-each acts by $\chi_O(\tilde h)=1$, so $e_H$ acts there by $\#H$; moreover $e_H$ maps
-$\mathcal A_\lambda(J_1,\chi)$ into $\mathcal A_\lambda(J_O^{(1)},\chi_O)$. Put $\Psi=e_H\Psi_1$, restricted
-to $\mathcal A_\lambda(J_O^{(1)},\chi_O)$: an integral operator on the forms of principal level at the
-$w_j$, and
+$D=\prod_{w\ \mathrm{chosen}}\auGL_n(\auF_w)$ act on $\mathcal A_\lambda(J_1,\chi)$ by
+$(R(d)\varphi)(g)=\varphi(g\tilde d)$, with $\tilde d\in\prod_{w\ \mathrm{chosen}}\auGL_n(\auO_w)$ a lift
+of $d$ with components $1$ outside the chosen places (well defined, and an action, since $J_1$ is principal at the chosen
+places, so that $\tilde d$ normalises $J_1$ and is determined modulo $J_1$, and $\chi$ is trivial at the chosen places and
+is not changed by the conjugation by $\tilde d$, whose components at the places of $Q$ are $1$). Each $R(d)$ is integral with integral inverse:
+$\tilde d$ has integral components with integral inverses at places not above $\ell$, so (G2) of
+\S\ref{pl:ss-norm} applies as in the proof of Lemma~\ref{pax:free}. The $R(d)$ commute with the
+action of $\Gamma$ (translations at disjoint sets of places). Put
 \[
-\sum_{k\in\Gamma'}k^{-1}\Psi k=e_H\sum_{k\in\Gamma'}k^{-1}\Psi_1k=e_H=\#H=c_0
-\quad\text{on }\mathcal A_\lambda(J_O^{(1)},\chi_O).
+\Psi=\sum_{d\in D}R(d)^{-1}\,\Psi_1\,R(d),
 \]
-For $\Gamma'=\Gamma$ and $y$ of base level (i.e.\ fixed by $\Gamma$), $c_0y=\sum_{k}k^{-1}\Psi ky=
-\sum_kk^{-1}\Psi y$, a norm $\sum_{k\in\Gamma}k\,(\Psi y)$.
+an integral operator on $\mathcal A_\lambda(J_1,\chi)$ which commutes with every $R(d)$, $d\in D$. Three consequences.
+First, $H\subseteq D$ and $\mathcal A_\lambda(J_O^{(1)},\chi_O)$ is the subspace of $\mathcal A_\lambda(J_1,\chi)$
+fixed by $R(H)$ ($\chi_O$ is trivial at the chosen places), so $\Psi$ preserves $\mathcal A_\lambda(J_O^{(1)},\chi_O)$,
+the forms of principal level at the $w_j$. Second, the action $\varrho$ of $G_c$ of Definition~\ref{prm:def-level} is
+$R$ of the elements $\mathrm{diag}(u_w,1_{t'})$ of $D$ multiplied by scalars, so $\Psi$ commutes with $\varrho(G_c)$, hence
+with $e_c\in\C[G_c]$: it preserves the part fixed by $e_c$, and no projection by $e_c$, which would cost a denominator, is applied. Third,
+\[
+\sum_{k\in\Gamma'}k^{-1}\Psi k=\sum_{d\in D}R(d)^{-1}\Bigl(\sum_{k\in\Gamma'}k^{-1}\Psi_1k\Bigr)R(d)=\#D=c_0 .
+\]
+For $\Gamma'=\Gamma$ and $y$ of base level (i.e.\ fixed by $\Gamma$ and by $e_c$), $c_0y=\sum_{k}k^{-1}\Psi ky=
+\sum_kk^{-1}\Psi y$, a norm $\sum_{k\in\Gamma}k\,(\Psi y)$ of a form $\Psi y$ fixed by $e_c$.
 
 (b) Let $y'$ be integral at every isomorphism and $y''$ integral at $\iota$; both are forms of level
 $J_O$. The pairing of \S\ref{ss:au-spaces} at level $J_O$ is
@@ -67938,7 +68070,7 @@ $\mathsf G$ on two integral vectors.
 \begin{remark}\label{pax:rem-forms}
 At the free sublevel $J_0$ all stabilisers are trivial and the operator $\Psi_1$ gives the
 constant $1$; at the base level $J_O$ the stabilisers $\Gamma_{\mathrm{gl}}\cap gJ_Og^{-1}$ may be
-nontrivial (they embed in $H$), and averaging over $H$ gives $c_0=\#H$. All uses of $c_0$ in
+nontrivial (they embed in $H$); the average of the conjugates of $\Psi_1$ over $D\supseteq H$ preserves the level $J_O$ and the type $e_c$ and gives $c_0=\#D$. All uses of $c_0$ in
 \S\ref{pri:ss-norm} only need $c_0\mid N$. Likewise the pairing at level $J_O$ is not the pairing
 at $J_0$ (for $J'\subseteq J$ one has $\langle\,,\rangle_{J'}=[J:J']\langle\,,\rangle_J$), which is why
 (b) is proved directly at level $J_O$ with the factor $N$. The invariance of the Gram matrix
@@ -68222,7 +68354,7 @@ the tame part at $w$), and $e_c\in\C[G_c]$ the central idempotent of the irreduc
 by the labels.
 
 \begin{proof}[Proof of Proposition~\ref{pri:BL}]
-(a) holds by definition.
+(a) holds by definition; the Hecke operators and the translations at places off the chosen places commute with $\varrho(G_c)$, which is supported at the chosen places, hence with $e_c$.
 
 (b) $e_c=\sum_{g\in G_c}a_gg$ with $a_g=\dim(\sigma)\,\overline{\operatorname{ch}_\sigma(g)}/\#G_c$
 (the central idempotent of the irreducible character $\sigma$), so $\#G_c\cdot a_g$ is an algebraic
@@ -68345,10 +68477,10 @@ assertion of Proposition~\ref{pga:G123} (which rests on the identity of (GR) inc
 $S_x|_{I_w}$ is the restriction to $I_w$ of the Weil group representation underlying this
 Weil--Deligne representation, which is trivial on an open subgroup of $I_w$; so $S_x(s)$ has finite
 order and is semisimple for $s\in I_w$, and so is $\rho_x(s)$ ($\eta_O$ is unramified at $w$). By the
-previous paragraph its eigenvalues are roots of $o_w(X)(X-1)$, where $o_w(X)=\prod_\xi(X-\omega(\xi)^
-\epsilon)$, $\xi$ running over the roots of $\tilde c_w$; hence
+previous paragraph the eigenvalues of $\rho_x(\gamma_w)$, $\gamma_w$ the topological generator of tame inertia fixed in the conventions, are roots of $o_w(X)(X-1)$, where $o_w(X)=\prod_\xi(X-\omega(\xi)^
+\epsilon)$, $\xi$ running over the roots of $\tilde c_w$ (for another $s\in I_w$ the eigenvalues of $\rho_x(s)$ are the corresponding powers); hence
 \[
-o_w(\rho_x(s))\,(\rho_x(s)-1)=0\qquad(s\in I_w).
+o_w(\rho_x(\gamma_w))\,(\rho_x(\gamma_w)-1)=0 .
 \]
 \emph{Inertia above $Q\cup\overline Q$.} At $w\in Q$ the form $y$ is an eigenvector of the parahoric
 of type $(n_W,t')$ with the character $\psi_{\mathcal P}$, $\psi=\psi_w\ne1$; by (G5)
@@ -69317,7 +69449,7 @@ blocks of sizes $(r',t')$. Its \emph{level character} is $\chi_O(k)=\prod_{w\in 
 k_w^{(11)}\bmod w\bigr)^{-1}$, $\psi_w$ the tame part of $\mu$ at $w$; it is a character because the
 reductions at $w\in Q$ are block lower triangular, so the upper left block of a product is the product
 of the upper left blocks. $\mathcal F(O)$ is the space of algebraic modular forms $y$ on $\auU(V)$ of
-the weight of $O$ with $y(hk)=\chi_O(k)y(h)$ for $k\in J_O$ (the \emph{forms of base level}). For
+the weight of $O$ with $y(hk)=\chi_O(k)y(h)$ for $k\in J_O$ (the \emph{forms of level $J_O$}; the \emph{forms of base level} of Proposition~\ref{pri:BL} are those of them fixed by the idempotent $e_c$ of the labels for the action $\varrho$ defined next). For
 $u=(u_w)\in\auG_O$ choose $k'_u\in\prod_vK_v$ reducing to $\mathrm{diag}(u_w,1_{t'})$ at each chosen
 $w$ and to $1$ at the places of $Q$, and put $\varrho(u)y=\prod_{w\ \mathrm{chosen}}\psi_w(\det u_w)\,
 y(\,\cdot\,k'_u)$.
@@ -69364,7 +69496,7 @@ $\varrho(u)(\Theta F)=\Theta(F(\,\cdot\,k_u))$; this does not depend on the choi
 
 So the space of forms produced by the lift is contained in $\mathcal F(O)$ of
 Definition~\ref{prm:def-level}, and $e_c$ is the central idempotent of the family of labels $c$ for
-$\varrho$; this is the precise form of the ``base level'' of Proposition~\ref{pri:BL} and of
+$\varrho$; the part $e_c\mathcal F(O)$ is the precise form of the ``base level'' of Proposition~\ref{pri:BL} and of
 \S\ref{pax:ss-BL}.
 
 \emph{Twisted labels.} Let $w$ be chosen, $\auF_w=\auF_q$, and $c$ a label of degree $r'$ over

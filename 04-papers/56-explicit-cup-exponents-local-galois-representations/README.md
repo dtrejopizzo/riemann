@@ -7,7 +7,7 @@ Eighth companion of row D. A paper of integral $p$-adic Hodge theory; its bounds
 | File | What it is |
 |---|---|
 | `main.tex` | Source of the paper (a single file). |
-| `explicit-cup-exponents-local-galois-representations.pdf` | The paper (75 pages). |
+| `explicit-cup-exponents-local-galois-representations.pdf` | The paper (76 pages). |
 
 ## The paper
 
