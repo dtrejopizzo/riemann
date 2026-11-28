@@ -86,9 +86,6 @@ propositions whose proofs are given in eight companion papers.
 \end{abstract}
 \maketitle
 \setcounter{tocdepth}{1}\tableofcontents
-% intro-new.tex -- Introduction of the paper, rewritten for the new second part.
-% Paragraphs 1--3 are those of paper46-original.tex, unchanged.  Paragraphs 4--8 are new.
-% References to Theorems A, B, C go through \anThmA, \anThmB, \anThmC (see sec-analytic.tex).
 \providecommand{\anThmA}{\ref{thm:A}}
 \providecommand{\anThmB}{\ref{thm:B}}
 \providecommand{\anThmC}{\ref{thm:C}}
@@ -2430,7 +2427,6 @@ $[(u-i\gamma)^{-1}+(v+i\gamma)^{-1}]/(u+v)
 =[(u-i\gamma)(v+i\gamma)]^{-1}$. Summing gives the identity.
 \end{proof}
 
-% sec-analytic.tex: analytic part.  Labels an:...; macros \an...
 \providecommand{\anThmA}{\ref{thm:A}}
 \providecommand{\anThmB}{\ref{thm:B}}
 \providecommand{\anThmC}{\ref{thm:C}}
@@ -3275,9 +3271,6 @@ theorem of Siegel and Walfisz. This does not affect what follows.
 \end{remark}
 
 
-% sec-automorphic.tex
-% Macros of this section (prefix \au). Only amsmath/amssymb/amsthm are used.
-% Reference to the definition of admissible data in the analytic section (one place to change).
 \providecommand{\auDataRef}{\ref{an:data}}
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auI}{\mathcal I}
@@ -5440,16 +5433,6 @@ $\log x\ge10^{14}\anCP$.
 
 
 
-% conclusion-new.tex -- Conclusion of the paper, adapted to the new second part.
-% Labels kept: sec:conclusion, thm:RH, thm:all-support, cor:all-windows.
-% Changes with respect to paper46-original.tex:
-%  - proof of thm:RH: now from Theorem thm:GRH-half (Corollary an:cor-zeta);
-%  - thm:all-support: the hypothesis on the prime sum G (which no longer exists) is
-%    replaced by the zero condition (eq:dirichlet-input); the first paragraph of the
-%    proof and the sentence on J_theta = 3/2 are deleted; the rest is verbatim;
-%  - cor:all-windows: "Assume Theorem thm:alpoge-families" becomes "Assume Theorems A, B, C";
-%  - the two closing subsections are rewritten.
-% The closing paragraphs follow sec-automorphic.tex, \S ss:au-remains, as of 26 Nov 2026.
 \providecommand{\anThmA}{\ref{thm:A}}
 \providecommand{\anThmB}{\ref{thm:B}}
 \providecommand{\anThmC}{\ref{thm:C}}
@@ -5584,14 +5567,14 @@ class groups}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/
 \emph{An arithmetic Frobenius family on semilocal idele class groups},
 preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/44-row-b-arithmetic-family}.
 \bibitem[Row C]{Paper45} D.~A.~Trejo Pizzo, \emph{An explicit formula for the trace on semilocal idele class groups}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/45-row-c-explicit-formula}.
-\bibitem[Theta]{P49} D.~A.~Trejo Pizzo, \emph{The Short Forms Theorem: theta lifts, complex multiplication and divisibility}, preprint, 2026. % LINK-PLACEHOLDER
-\bibitem[Hecke]{P50} D.~A.~Trejo Pizzo, \emph{Elementary divisors of an edge Hecke operator on a Frobenius cycle}, preprint, 2026. % LINK-PLACEHOLDER
-\bibitem[Moment]{P51} D.~A.~Trejo Pizzo, \emph{The Spanning Theorem: the second moment of a Poincar\'e map}, preprint, 2026. % LINK-PLACEHOLDER
-\bibitem[Frames]{P52} D.~A.~Trejo Pizzo, \emph{The Spanning Theorem: sieve systems at the real and finite places and Siegel's step}, preprint, 2026. % LINK-PLACEHOLDER
-\bibitem[Exchange]{P53} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: exchange identities and the determinant of a chain of theta lifts}, preprint, 2026. % LINK-PLACEHOLDER
-\bibitem[L-values]{P54} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: one theta lift, Hecke $L$-values and test forms of least valuation}, preprint, 2026. % LINK-PLACEHOLDER
-\bibitem[Galois]{P55} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: regular families of twists, Selmer groups and Ribet's method}, preprint, 2026. % LINK-PLACEHOLDER
-\bibitem[Hodge]{P56} D.~A.~Trejo Pizzo, \emph{Explicit cup exponents for local Galois representations beyond the Fontaine--Laffaille range}, preprint, 2026. % LINK-PLACEHOLDER
+\bibitem[Theta]{P49} D.~A.~Trejo Pizzo, \emph{The Short Forms Theorem: theta lifts, complex multiplication and divisibility}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/49-short-forms-theorem-theta-lifts-complex-multiplication}.
+\bibitem[Hecke]{P50} D.~A.~Trejo Pizzo, \emph{Elementary divisors of an edge Hecke operator on a Frobenius cycle}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/50-elementary-divisors-edge-hecke-operator}.
+\bibitem[Moment]{P51} D.~A.~Trejo Pizzo, \emph{The Spanning Theorem: the second moment of a Poincar\'e map}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/51-spanning-theorem-second-moment-poincare-map}.
+\bibitem[Frames]{P52} D.~A.~Trejo Pizzo, \emph{The Spanning Theorem: sieve systems at the real and finite places and Siegel's step}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/52-sieve-systems-siegel-step}.
+\bibitem[Exchange]{P53} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: exchange identities and the determinant of a chain of theta lifts}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/53-covolume-theorem-exchange-identities-chain-determinant}.
+\bibitem[L-values]{P54} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: one theta lift, Hecke $L$-values and test forms of least valuation}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/54-covolume-theorem-one-theta-lift-hecke-l-values}.
+\bibitem[Galois]{P55} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: regular families of twists, Selmer groups and Ribet's method}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/55-covolume-theorem-regular-families-of-twists}.
+\bibitem[Hodge]{P56} D.~A.~Trejo Pizzo, \emph{Explicit cup exponents for local Galois representations beyond the Fontaine--Laffaille range}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/56-explicit-cup-exponents-local-galois-representations}.
 \bibitem{CharacterFamily} L.~Alpoge, Lean~4 formalisation of the character-family argument
 for Dirichlet $L$-functions, source archive in fourteen parts, November 2026,
 \url{https://alpo.ge/lean.tar.gz.part01} (first part).

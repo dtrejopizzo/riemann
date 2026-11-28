@@ -54,8 +54,6 @@
 \newcommand{\laminfP}{\lambda^{\infty,\mathrm P}_{\min}}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
-% macros of the series: every macro has in all nine papers the meaning it had in the single
-% paper; the definitions needed before their place in the source files are collected here
 \providecommand{\anCP}{C_P}
 \providecommand{\anPa}{\Phi_a}
 \providecommand{\anPb}{\Phi_b}
@@ -82,7 +80,6 @@
 \providecommand{\pllperp}{\perp}
 \providecommand{\prics}{\mathrm{cs}}
 \providecommand{\prirl}{\operatorname{rl}}
-% statements quoted from the other papers of the series (generated appendix)
 \newenvironment{quotedthm}[2]{\par\medskip\noindent\begingroup
   \textbf{#1}#2.\ \itshape\ignorespaces}{\endgroup\par\medskip}
 \newenvironment{quoteddef}[2]{\par\medskip\noindent\begingroup
@@ -306,16 +303,12 @@ chart for the data of~\cite{P46}, Section~\ref{C4:g7} proves the four core propo
 Section~\ref{pkw:sec} treats tame charts.
 
 
-% ===== C-kisin.tex =====
-% proofs/C-kisin.tex
-% The explicit cup exponents: Theorem pll:exponent. Labels start with pki:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pglen}{\operatorname{len}}
 \providecommand{\pllZf}{Z_f}
 \providecommand{\pllrk}{\operatorname{rk}}
 \providecommand{\plldef}{\delta^{\vee}}
-% macros of this file (prefix \pki)
 \providecommand{\pkiWin}{\operatorname{Win}}
 \providecommand{\pkiC}{\mathcal C}
 \providecommand{\pkilog}{\operatorname{lg}}
@@ -652,14 +645,9 @@ $u_x$, whose restrictions to $D_v$ lie in $\mathcal C_v$ by {\cite[Proposition~4
 
 
 \section{Kummer charts, the pairing lemma and the walk}\label{C4:g2}
-% ===== C-kisin-pairing.tex =====
-% proofs/C-kisin-pairing.tex
-% The engine for Theorem pll:exponent: Kummer charts, letters, safe moves and the pairing lemma.
-% Labels start with pkp:. Conventions and macros as in proofs/C-kisin.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\panot}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
-% macros of this file (prefix \pkp)
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
 \providecommand{\pkpW}{W(C^\flat)}
 \providecommand{\pkpm}{W(\mathfrak m^\flat)}
@@ -1204,10 +1192,6 @@ stops at the required depth, and the cokernel killers, are the case-specific inp
 
 
 
-% ===== C-kisin-modules.tex =====
-% proofs/C-kisin-modules.tex
-% Global walk, stops at plain cuts, improved orders and the cokernel killers, on top of
-% proofs/C-kisin-pairing.tex. Labels start with pkm:. Conventions and macros as in C-kisin-pairing.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
@@ -1216,7 +1200,6 @@ stops at the required depth, and the cokernel killers, are the case-specific inp
 \providecommand{\pkpM}{M_m}
 \providecommand{\pkpsm}{\mathrm{Sm}_m}
 \providecommand{\pkpAmb}{\mathbb A}
-% macros of this file (prefix \pkm)
 \providecommand{\pkmJ}[3]{J^{#1}_{#2}(#3)}
 \providecommand{\pkmI}[2]{I_{#1}(#2)}
 \providecommand{\pkmv}{v_\ell}
@@ -1796,10 +1779,6 @@ Lemma~\ref{pkp:tau}(i), (iv), (v) are Proposition~\ref{pkt:tau-i}, Lemmas~\ref{p
 
 
 \section{The modules $\mathcal N$, frames and the period rings}\label{C4:g3}
-% ===== C-kisin-inputs.tex =====
-% proofs/C-kisin-inputs.tex
-% Inputs of the theory of the modules N for proofs/C-kisin-modules.tex. Labels start with pkn:.
-% Conventions and macros as in C-kisin-pairing.tex and C-kisin-modules.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\panot}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
@@ -1807,7 +1786,6 @@ Lemma~\ref{pkp:tau}(i), (iv), (v) are Proposition~\ref{pkt:tau-i}, Lemmas~\ref{p
 \providecommand{\pkpW}{W(C^\flat)}
 \providecommand{\pkpm}{W(\mathfrak m^\flat)}
 \providecommand{\pkpAmb}{\mathbb A}
-% macros of this file (prefix \pkn)
 \providecommand{\pknMinf}{\mathfrak M_{\mathrm{inf}}}
 \providecommand{\pknK}{\mathcal K_0}
 \providecommand{\pknBp}{B^+_{\mathrm{dR}}}
@@ -2235,10 +2213,6 @@ Proposition~\ref{pki:chart} in \S\ref{pkj:sec}.
 
 
 
-% ===== C-kisin-frame.tex =====
-% proofs/C-kisin-frame.tex
-% Existence of a frame (Definition pkn:def-frame) for every lattice with jump sets.
-% Labels start with pkf:. Conventions and macros as in C-kisin-pairing.tex, C-kisin-inputs.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
@@ -2246,7 +2220,6 @@ Proposition~\ref{pki:chart} in \S\ref{pkj:sec}.
 \providecommand{\pkpAmb}{\mathbb A}
 \providecommand{\pknBp}{B^+_{\mathrm{dR}}}
 \providecommand{\pknB}{B_{\mathrm{dR}}}
-% macros of this file (prefix \pkf)
 \providecommand{\pkfAm}{A_{\max}}
 \providecommand{\pkfAo}{A_{\max}^{\circ}}
 \providecommand{\pkfBp}{B^+}
@@ -2917,10 +2890,6 @@ $\varphi(Q)=v^aQB$ and $\ell\nmid\det B$, and the Galois relation $g(Z)=ZG_g$. T
 
 
 
-% ===== C-kisin-rings.tex =====
-% proofs/C-kisin-rings.tex
-% Proofs of the ring inputs (A1)--(A8) and of (P4).
-% Labels start with pkr:. Conventions and macros as in C-kisin-frame.tex, C-kisin-inputs.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
@@ -2931,7 +2900,6 @@ $\varphi(Q)=v^aQB$ and $\ell\nmid\det B$, and the Galois relation $g(Z)=ZG_g$. T
 \providecommand{\pkfBp}{B^+}
 \providecommand{\pkfBm}{B_{\max}}
 \providecommand{\pkfSB}{\mathfrak S_B}
-% macros of this file (prefix \pkr)
 \providecommand{\pkrI}{(\ell,E)}
 \providecommand{\pkrm}{\mathfrak n}
 
@@ -3452,10 +3420,6 @@ statement (P4) are proved; the existence of frames (Theorem~\ref{pkf:main}) ther
 
 
 \section{Lattices with orders}\label{C4:g4}
-% ===== C-kisin-lattices.tex =====
-% proofs/C-kisin-lattices.tex
-% The remaining items of Lemma pkm:inputs: (H) (second and third assertions), (F), (D),
-% (C)(d), (R), (G). Labels start with pkl:. Conventions and macros as in C-kisin-inputs.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
@@ -3468,7 +3432,6 @@ statement (P4) are proved; the existence of frames (Theorem~\ref{pkf:main}) ther
 \providecommand{\pkfBp}{B^+}
 \providecommand{\pkfBm}{B_{\max}}
 \providecommand{\pkfSB}{\mathfrak S_B}
-% macros of this file (prefix \pkl)
 \providecommand{\pklAN}{\pkpA\mathcal N}
 \providecommand{\pklL}{\pkpA\otimes L}
 \providecommand{\pklstd}{\mathrm{std}}
@@ -4035,10 +3998,6 @@ $E^{4a}s_j$ in $\pkfBp$. By Lemma~\ref{pkl:cancel}, $s_j=z\tau s'_j$ with $s'_j\
 
 
 
-% ===== C-kisin-tau.tex =====
-% proofs/C-kisin-tau.tex
-% Orders add; Lemma pkp:tau (i),(iv),(v); the case inputs (I1) and (I3).
-% Labels start with pkt:. Conventions and macros as in proofs/C-kisin-pairing.tex and C-kisin-inputs.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
@@ -4053,7 +4012,6 @@ $E^{4a}s_j$ in $\pkfBp$. By Lemma~\ref{pkl:cancel}, $s_j=z\tau s'_j$ with $s'_j\
 \providecommand{\pknK}{\mathcal K_0}
 \providecommand{\pkcPt}{\mathrm{Pt}}
 \providecommand{\pkcsh}{\mathrm{sh}}
-% macros of this file (prefix \pkt)
 \providecommand{\pktV}{V_{\mathrm{dR}}}
 \providecommand{\pktFr}{\mathrm{Fr}}
 
@@ -4499,10 +4457,6 @@ Theorem~\ref{pkj:chart}.
 
 
 \section{Costs, the long gap and the colength of the deep constants}\label{C4:g5}
-% ===== C-kisin-deep.tex =====
-% proofs/C-kisin-deep.tex
-% Deepening with costs: the case input (I2); the value fields K_a; the depth step at level a.
-% Labels start with pke:. Conventions and macros as in proofs/C-kisin-tau.tex and C-kisin-lattices.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\panot}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
@@ -4517,7 +4471,6 @@ Theorem~\ref{pkj:chart}.
 \providecommand{\pkfSB}{\mathfrak S_B}
 \providecommand{\pkcPt}{\mathrm{Pt}}
 \providecommand{\pkcimp}{\mathrm{imp}}
-% macros of this file (prefix \pke)
 \providecommand{\pkeK}[1]{\mathcal K_{#1}}
 \providecommand{\pkeAN}{\pkpA\mathcal N}
 \providecommand{\pkecost}{\mathrm{cost}}
@@ -4900,10 +4853,6 @@ is Theorem~\ref{pkg:I5}; Proposition~\ref{pki:chart} is Theorem~\ref{pkj:chart}.
 
 
 
-% ===== C-kisin-gap.tex =====
-% proofs/C-kisin-gap.tex
-% The long gap (I5): constants modulo E^A, the radius lemma for frames, expansion in powers of E.
-% Labels start with pkg:. Conventions and macros as in proofs/C-kisin-deep.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\panot}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
@@ -4919,7 +4868,6 @@ is Theorem~\ref{pkg:I5}; Proposition~\ref{pki:chart} is Theorem~\ref{pkj:chart}.
 \providecommand{\pkfBp}{B^+}
 \providecommand{\pkfSB}{\mathfrak S_B}
 \providecommand{\pkcPt}{\mathrm{Pt}}
-% macros of this file (prefix \pkg)
 \providecommand{\pkgAN}{\pkpA\mathcal N}
 \providecommand{\pkgP}{\mathcal P}
 \providecommand{\pkgC}{\mathcal C}
@@ -5291,11 +5239,6 @@ Theorem~\ref{pkj:chart}.
 
 
 
-% ===== C-kisin-colength.tex =====
-% proofs/C-kisin-colength.tex
-% The input (I4): colength of the deep constants (few low jumps).
-% Labels start with pkh:. Conventions and macros as in proofs/C-kisin-deep.tex, C-kisin-tau.tex,
-% C-kisin-cases.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
@@ -5314,7 +5257,6 @@ Theorem~\ref{pkj:chart}.
 \providecommand{\pglen}{\operatorname{len}}
 \providecommand{\pkecost}{\mathrm{cost}}
 \providecommand{\pkeDp}{\mathrm{Dp}}
-% macros of this file (prefix \pkh)
 \providecommand{\pkhD}{\mathcal D}
 \providecommand{\pkhK}{\mathrm{Const}}
 \providecommand{\pkhX}{\mathcal X}
@@ -5873,14 +5815,9 @@ hypothesis $\eta\ge1$ is not used.
 
 
 
-% ===== C-kisin-chart.tex =====
-% proofs/C-kisin-chart.tex
-% Proof of Proposition pki:chart (the letters read thickness for the data). Labels start with pkj:.
-% Conventions and macros as in proofs/C-kisin.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkilog}{\operatorname{lg}}
-% macros of this file (prefix \pkj)
 \providecommand{\pkjG}{G_{\Q_\ell}}
 \providecommand{\pkjcl}{\operatorname{cl}}
 \providecommand{\pkjPl}{\mathsf P}
@@ -6206,12 +6143,6 @@ convention of $L_{\mathrm{main}}$ adopt, as long as the two agree; both use (R$^
 
 
 \section{The four cases}\label{C4:g7}
-% ===== C-kisin-cases.tex =====
-% proofs/C-kisin-cases.tex
-% The four cases of the local-loss engine: Propositions pki:generic, pki:tame, pki:sparse, pki:any,
-% and the remaining assertions of pki:data. Labels start with pkc:.
-% Conventions and macros as in proofs/C-kisin.tex, proofs/C-kisin-pairing.tex,
-% proofs/C-kisin-modules.tex, proofs/C-kisin-inputs.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pllZf}{Z_f}
@@ -6223,7 +6154,6 @@ convention of $L_{\mathrm{main}}$ adopt, as long as the two agree; both use (R$^
 \providecommand{\pkilog}{\operatorname{lg}}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
 \providecommand{\pkpAmb}{\mathbb A}
-% macros of this file (prefix \pkc)
 \providecommand{\pkcPt}{\mathrm{Pt}}
 \providecommand{\pkcimp}{\mathrm{imp}}
 \providecommand{\pkcpd}{\mathrm{pd}}
@@ -6766,10 +6696,6 @@ Proposition~\ref{pki:any} is proved in \S\ref{pkd:ss-any} (Theorem~\ref{pkd:any}
 
 
 
-% ===== C-kisin-cases2.tex =====
-% proofs/C-kisin-cases2.tex
-% Propositions pki:sparse and pki:any (the cases with cuts), and the status of pki:data.
-% Labels start with pkd:. Conventions and macros as in proofs/C-kisin-cases.tex (pkc:).
 \providecommand{\auO}{\mathcal O}
 \providecommand{\panot}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
 \providecommand{\pllZf}{Z_f}
@@ -6783,7 +6709,6 @@ Proposition~\ref{pki:any} is proved in \S\ref{pkd:ss-any} (Theorem~\ref{pkd:any}
 \providecommand{\pkcpd}{\mathrm{pd}}
 \providecommand{\pkcdep}{\mathrm{dep}}
 \providecommand{\pkcsh}{\mathrm{sh}}
-% macros of this file (prefix \pkd)
 \providecommand{\pkdco}{\mathrm{co}}
 \providecommand{\pkdlg}{\mathrm{gd}}
 \providecommand{\pkdstop}{\mathrm{stop}}
@@ -7369,11 +7294,6 @@ inputs (I1)--(I6), (T1)--(T4), all proved in \S\S\ref{pkt:sec}--\ref{pkw:sec}.
 
 
 
-% ===== C-kisin-tame.tex =====
-% proofs/C-kisin-tame.tex
-% Tame charts, inertia on D_pcris, and the tame inputs (T1)--(T4), (I6) of the local-loss engine.
-% Labels start with pkw:. Conventions and macros as in proofs/C-kisin-pairing.tex,
-% proofs/C-kisin-modules.tex, proofs/C-kisin-inputs.tex, proofs/C-kisin-cases.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
@@ -7382,7 +7302,6 @@ inputs (I1)--(I6), (T1)--(T4), all proved in \S\S\ref{pkt:sec}--\ref{pkw:sec}.
 \providecommand{\pkmJ}[3]{J^{#1}_{#2}(#3)}
 \providecommand{\pkmI}[2]{I_{#1}(#2)}
 \providecommand{\pkiC}{\mathcal C}
-% macros of this file (prefix \pkw)
 \providecommand{\pkwB}{B_{\mathrm{cris}}}
 \providecommand{\pkwD}{D_{\mathrm{pcris}}}
 \providecommand{\pkwur}{\Q_\ell^{\mathrm{ur}}}
@@ -8428,7 +8347,7 @@ place $w\nmid\ell$; in particular at the places of $Q\cup\overline Q$, at the pl
 
 \begin{thebibliography}{L-values}
 \bibitem[Row D]{P46} D.~A.~Trejo Pizzo, \emph{The sign of the radial intersection form on the idele class group}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/46-row-d-sign-radial-intersection-form}.
-\bibitem[Galois]{P55} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: regular families of twists, Selmer groups and Ribet's method}, preprint, 2026. % LINK-PLACEHOLDER
+\bibitem[Galois]{P55} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: regular families of twists, Selmer groups and Ribet's method}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/55-covolume-theorem-regular-families-of-twists}.
 \bibitem{Washington} L.~C.~Washington, \emph{Introduction to Cyclotomic Fields}, 2nd ed.,
 Graduate Texts in Mathematics \textbf{83}, Springer, New York, 1997.
 \bibitem{SerreLF} J.-P.~Serre, \emph{Local Fields}, Graduate Texts in Mathematics 67, Springer,
@@ -8446,26 +8365,15 @@ repr\'esentations $p$-adiques}, Ann.\ Sci.\ \'Ecole Norm.\ Sup.\ (4) \textbf{15}
 \bibitem{pkfAx70} J.~Ax, \emph{Zeros of polynomials over local fields---the Galois action},
 J.\ Algebra \textbf{15} (1970), 417--428, DOI 10.1016/0021-8693(70)90069-4.
 
-% New bibliography items for proofs/C-kisin-rings.tex: none (the file cites only items of refs-C-kisin-frame.tex).
 \bibitem{pklTate67} J.~Tate, \emph{$p$-divisible groups}, in: Proc.\ Conf.\ Local Fields (Driebergen, 1966), Springer, 1967, 158--183.
 
-% No new bibliography items: the published facts used are cited through (P2), (P3) of C-kisin-frame.tex.
 
-% refs-C-kisin-deep.tex: no new bibitems (Tate is cited through Lemma pkm:BdR).
 
-% refs-C-kisin-gap.tex: no new bibitems
 
-% refs-C-kisin-colength.tex: no new bibitems
 
-% New bibitems of proofs/C-kisin-chart.tex: none. The file cites \cite{SerreLF} and \cite{Washington},
-% which are already in the bibliography of main.tex (the test wrapper defines them locally).
 
-% New bibitems of proofs/C-kisin-cases.tex: none.
 
-% New bibitems of proofs/C-kisin-cases2.tex: none.
 
-% New bibitems of proofs/C-kisin-tame.tex (duplicates of pkfFontaine94 and SerreLF under the prefix pkw;
-% merge with those keys when assembling the bibliography).
 \end{thebibliography}
 
 \end{document}

@@ -54,8 +54,6 @@
 \newcommand{\laminfP}{\lambda^{\infty,\mathrm P}_{\min}}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
-% macros of the series: every macro has in all nine papers the meaning it had in the single
-% paper; the definitions needed before their place in the source files are collected here
 \providecommand{\anPa}{\Phi_a}
 \providecommand{\anPb}{\Phi_b}
 \providecommand{\auP}{\mathcal P}
@@ -98,7 +96,6 @@
 \providecommand{\pwfM}{\mathsf M}
 \providecommand{\pwfev}{\operatorname{ev}_0}
 \providecommand{\pzF}{\mathfrak F}
-% statements quoted from the other papers of the series (generated appendix)
 \newenvironment{quotedthm}[2]{\par\medskip\noindent\begingroup
   \textbf{#1}#2.\ \itshape\ignorespaces}{\endgroup\par\medskip}
 \newenvironment{quoteddef}[2]{\par\medskip\noindent\begingroup
@@ -326,11 +323,6 @@ pairing and the coefficient lemmas (Section~\ref{C1:g7}). Section~\ref{pcj:sec} 
 conjugation of the lifts of characters.
 
 
-% ===== C-determinant.tex =====
-% proofs/C-determinant.tex
-% The determinant part of Theorem C: deduction of Theorem C from its inputs, the triangle of lifts,
-% the factorisation of the chain determinant (au:factor), injectivity (au:inj), auxiliary forms
-% (au:aux). Labels of this file start with pc:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
@@ -359,7 +351,6 @@ conjugation of the lifts of characters.
 \providecommand{\psrho}{\varrho}
 \providecommand{\psvac}{\mathbf v}
 \providecommand{\psZ}{Z}
-% macros of this file
 \providecommand{\pcF}{\mathcal F}
 \providecommand{\pcG}{\mathsf G}
 \providecommand{\pcm}{\mathfrak m}
@@ -1719,12 +1710,6 @@ Proposition~\ref{pc:tri-inj}, without any information on the constants of the sq
 
 
 \section{The exchange identity}\label{C1:g2}
-% ===== C-exchange.tex =====
-% proofs/C-exchange.tex
-% The exchange identity (Theorem pc:X of C-determinant.tex): statement in the convention of
-% \S pc:ss-data, dictionary of splittings, non-vanishing of the constant, architecture of the proof,
-% and its proof. Labels of this file start with pcx:.
-% Macros: those of C-determinant.tex (\auU, \auA, \auNm, \pcm, \pcR, \pcMat, \psvac, ...).
 \providecommand{\pcxH}{\mathbb H}
 \providecommand{\pcxstr}{\mathrm{r}}
 \providecommand{\pcxc}{\mathfrak c}
@@ -3064,11 +3049,6 @@ dependencies of Theorem~\ref{pcx:X} is \S\ref{pcu:ss-final}.
 
 
 
-% ===== C-exchange-top.tex =====
-% proofs/C-exchange-top.tex
-% Continuation of C-exchange.tex: real vectors with prescribed zero term (Proposition pcx:P-slice),
-% the large triple (Proposition pcx:P-top), the deduction of pcx:P-std, and the list of what
-% Theorem pcx:X depends on. Labels of this file start with pcu:. Macros: those of C-exchange.tex.
 \providecommand{\pcuS}{\mathsf S}
 \providecommand{\pcuF}{\mathcal F}
 
@@ -4620,11 +4600,6 @@ the published results listed in \S\S\ref{pct:ss-status}, \ref{pcn:ss-dep}.
 
 
 
-% ===== C-exchange-tower.tex =====
-% proofs/C-exchange-tower.tex
-% The plane constant term of theta integrals on standard data and what rests on it:
-% Lemma pcx:const, Propositions pcx:P-plane, pcx:P-descent, pcx:P-nonvan of C-exchange.tex.
-% Labels of this file start with pct:. Macros: those of C-exchange.tex and C-determinant.tex.
 \providecommand{\pctN}{\mathsf N}
 \providecommand{\pctP}{\mathsf P}
 \providecommand{\pctL}{\mathcal L}
@@ -5705,12 +5680,6 @@ mixed model on smooth vectors, invariant distributions and adapted charts are pr
 
 
 
-% ===== C-exchange-neg.tex =====
-% proofs/C-exchange-neg.tex
-% Proof of Lemma pct:negcoeff of C-exchange-tower.tex: centre coefficients of the theta integral
-% vanish at indices that are not negative definite at some real place.
-% Labels of this file start with pcn:. Macros: those of C-exchange.tex, C-exchange-top.tex and
-% C-exchange-tower.tex.
 \providecommand{\pcnK}{\mathsf K}
 \providecommand{\pcnC}{\mathsf C}
 \providecommand{\pcnS}{\mathsf S}
@@ -6401,11 +6370,6 @@ listed in \S\ref{pct:ss-status}, and the ones just listed).
 
 
 \section{The triangle of lifts}\label{C1:g3}
-% ===== C-triangle.tex =====
-% proofs/C-triangle.tex
-% Archimedean types at the nodes of the triangle (Lemma pc:arch for the pairs of the triangle) and
-% the analytic steps (ii), (iii) of Theorem pc:tri. Labels of this file start with ptr:.
-% Only amsmath/amssymb/amsthm are used. Conventions and macros: proofs/C-determinant.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auPl}{\Phi}
 \providecommand{\auHom}{\operatorname{Hom}}
@@ -7120,11 +7084,6 @@ by (F) (Theorem~\ref{ptq:F}). So $\langle\Phi,\mathsf P\Phi\rangle=d_\lambda\int
 
 
 
-% ===== C-triangle2.tex =====
-% proofs/C-triangle2.tex
-% Continuation of proofs/C-triangle.tex (labels ptr:): the positivity (F) of Fock coefficients and
-% the smoothing lemma (H) (Howe's argument). Labels of this file start with ptq:.
-% Only amsmath/amssymb/amsthm are used. Conventions and macros: proofs/C-triangle.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auHom}{\operatorname{Hom}}
 \providecommand{\pzF}{\mathfrak F}
@@ -7652,13 +7611,6 @@ and the published results (D1)--(D5), (W1$_\infty$), (W2$_\infty$), (M), (S).
 
 
 
-% ===== C-triangle3.tex =====
-% proofs/C-triangle3.tex
-% Continuation of proofs/C-triangle.tex (ptr:) and proofs/C-triangle2.tex (ptq:): the embedding of
-% F_s in the Fock space, the characters of the descents, the reduction of the adjoint law
-% (Theorem pc:tri(c)) to the square law of the reversed squares, and the final check of
-% Lemma pc:arch and Theorem pc:tri. Labels of this file start with ptv:.
-% Only amsmath/amssymb/amsthm are used. Conventions and macros: proofs/C-triangle.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auHom}{\operatorname{Hom}}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -8348,14 +8300,6 @@ $[x,a']^-=\aubar{[x,a']}$; elsewhere it maps the vacuum to a multiple of the vac
 
 
 
-% ===== C-triangle4.tex =====
-% proofs/C-triangle4.tex
-% Continuation of proofs/C-triangle.tex (ptr:), C-triangle2.tex (ptq:), C-triangle3.tex (ptv:):
-% Howe's argument with rows and columns exchanged, the smoothing lemma (H) for the reversed pairs,
-% the characters of the reversed kernels, and the reversed square law (RS) of \S\ref{ptv:ss-RS};
-% then the edge hypothesis (E1) for the grid squares and the check of (A2) for the pairs (W_j,V_j).
-% Labels of this file start with ptw:. Only amsmath/amssymb/amsthm are used.
-% Conventions and macros: proofs/C-triangle.tex, C-triangle3.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auHom}{\operatorname{Hom}}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -9087,12 +9031,6 @@ forms of this section are not needed.
 
 
 \section{Lifts through the second grid}\label{C1:g4}
-% ===== C-grid.tex =====
-% proofs/C-grid.tex
-% Theorem pc:auxcore (integral and short lifts through the second grid): architecture, the
-% combinatorics of paths through two grids, transfer of periods along turns, and the deduction of
-% pc:auxcore (a), (b), (c) from the intermediate propositions. Labels start with pgr:.
-% Conventions and macros: those of proofs/C-determinant.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auAut}{\operatorname{Aut}}
 \providecommand{\auNm}{\operatorname{Nm}}
@@ -9794,11 +9732,6 @@ and the published results named in \S\S\ref{ptr:sec}--\ref{ptw:sec} and \S\S\ref
 
 
 
-% ===== C-grid2.tex =====
-% proofs/C-grid2.tex
-% Continuation of proofs/C-grid.tex (labels pgr:): proofs of the open propositions pgr:delta and
-% pgr:short (= pc:auxcore(c)). Labels start with pgs:. Conventions and macros: those of
-% proofs/C-grid.tex and proofs/C-determinant.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auAut}{\operatorname{Aut}}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -10177,11 +10110,6 @@ $\tilde\lambda$ at each place we use the explicit bound $x^{19}b$ (Lemma~\ref{pg
 
 
 
-% ===== C-grid3.tex =====
-% proofs/C-grid3.tex
-% Continuation of proofs/C-grid.tex (pgr:) and proofs/C-grid2.tex (pgs:): the turn on the
-% diagonal, Proposition pgr:turndiag. Labels start with pgu:. Conventions and macros: those of
-% proofs/C-grid.tex and proofs/C-determinant.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auU}{\mathrm U}
@@ -10778,11 +10706,6 @@ does not depend on $x$. By Lemma~\ref{pgu:see1} applied to $\Xi/c_{jj}$, $\Psi'\
 
 
 \section{The grids and the first path}\label{C1:g5}
-% ===== C-grid4.tex =====
-% proofs/C-grid4.tex
-% Continuation of proofs/C-grid.tex (pgr:), C-grid2.tex (pgs:), C-grid3.tex (pgu:): the complete
-% definition of the two grids, the facts (G1)--(G4) of \S pgu:ss-data, and Proposition pgr:square.
-% Labels start with pgv:. Conventions and macros: those of proofs/C-grid.tex and C-determinant.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auU}{\mathrm U}
@@ -11549,11 +11472,6 @@ Proposition~\ref{pgv:match}.
 
 
 
-% ===== C-grid5.tex =====
-% proofs/C-grid5.tex
-% Continuation of proofs/C-grid.tex (pgr:), C-grid2.tex (pgs:), C-grid3.tex (pgu:), C-grid4.tex
-% (pgv:): the first path (Proposition pgr:first) and the last path (Proposition pgr:last).
-% Labels start with pgw:. Conventions and macros: those of proofs/C-grid.tex and C-determinant.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auU}{\mathrm U}
@@ -12123,11 +12041,6 @@ the representation of the type at $(z,a,m)$, but this is not needed.)
 
 
 
-% ===== C-grid6.tex =====
-% proofs/C-grid6.tex
-% Continuation of proofs/C-grid.tex (pgr:), C-grid2.tex (pgs:), C-grid3.tex (pgu:), C-grid4.tex
-% (pgv:): the line reversal without the unit assumption on alpha, the caveat on (G1), and
-% Proposition pgr:den. Labels start with pgx:. Conventions and macros: those of proofs/C-grid3.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auU}{\mathrm U}
@@ -12668,10 +12581,6 @@ Proposition~\ref{pgv:G1}.
 
 
 
-% ===== C-grid7.tex =====
-% proofs/C-grid7.tex
-% Continuation of proofs/C-grid.tex ... C-grid6.tex: the inputs (I) and (P) of Theorem pgw:first.
-% Labels start with pgy:. Conventions and macros: those of proofs/C-grid5.tex and C-determinant.tex.
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auO}{\mathcal O}
@@ -13108,11 +13017,6 @@ $\pcm$; both are cases of Proposition~\ref{pgy:P}.
 
 
 \section{The last path}\label{C1:g6}
-% ===== C-grid8.tex =====
-% proofs/C-grid8.tex
-% Continuation of proofs/C-grid.tex (pgr:), C-grid2.tex (pgs:), C-grid4.tex (pgv:), C-grid5.tex
-% (pgw:), C-grid6.tex (pgx:): Proposition pgr:den (denominators and conjugates on the last path).
-% Labels start with pgz:. Conventions and macros: those of proofs/C-grid5.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auU}{\mathrm U}
@@ -13662,10 +13566,6 @@ $x^{28}b^2+x^{20}b^2+x^{100}b^2\le x^{200}b^2$.
 
 
 
-% ===== C-grid9.tex =====
-% proofs/C-grid9.tex
-% Input (V) of proofs/C-grid5.tex (deep-level vanishing by Poincare series).
-% Labels start with pgq:. Conventions and macros: those of proofs/C-grid5.tex and C-grid4.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auA}{\mathbb A}
@@ -14109,10 +14009,6 @@ $\lambda(x)<\theta$ and by Lemma~\ref{pgq:bulk} otherwise. Hence $S\le S/2$, $S=
 
 
 
-% ===== C-grid10.tex =====
-% proofs/C-grid10.tex
-% Continuation of proofs/C-grid8.tex (pgz:): the size bounds (B1)--(B3) of \S\ref{pgz:ss-b}.
-% Labels start with pgt:. Conventions and macros: those of proofs/C-grid8.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auU}{\mathrm U}
@@ -14495,10 +14391,6 @@ their sum $e$; a sharper bound, with $\sum l\log l$ in place of $e\log e$, follo
 
 
 \section{Kernel forms, the restriction pairing and the coefficient lemmas}\label{C1:g7}
-% ===== C-grid11.tex =====
-% proofs/C-grid11.tex
-% Inputs (C) and (Q) of proofs/C-grid9.tex (Section pgq:ss-inputs). Labels start with pgk:.
-% Conventions and macros: those of proofs/C-grid9.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auA}{\mathbb A}
@@ -14859,10 +14751,6 @@ irreducible unitary and admissible ({\cite[Remark~4.3(1)]{P51}},(3)).
 
 
 
-% ===== C-grid12.tex =====
-% proofs/C-grid12.tex
-% Input (S) of proofs/C-grid9.tex (the restriction pairing), proved by Laplace's method.
-% Labels start with pgl:. Conventions and macros: those of proofs/C-grid9.tex and B-period.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\aubar}[1]{\overline{#1}}
 \providecommand{\pgqvol}{\operatorname{vol}}
@@ -15158,11 +15046,6 @@ $V<\infty$, $V_\tau\le V\le16\beta^{16D^2}I\le\beta^{20D^2}I=\beta_{\mathsf S}^{
 
 
 
-% ===== C-grid13.tex =====
-% proofs/C-grid13.tex
-% The coefficient lemmas of B-period.tex / B-discrete-series.tex in arbitrary rank, as used by
-% proofs/C-grid12.tex (pgl:), and the two coordinate facts taken from pgq:steep.
-% Labels start with pgm:. Conventions and macros: those of proofs/C-grid12.tex and B-period.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\aubar}[1]{\overline{#1}}
 \providecommand{\pdsK}{\mathbf K}
@@ -15546,12 +15429,6 @@ Theorem~\ref{pgl:S} holds as stated, with $\beta_{\mathsf S}=b^{3m}$ and $N_{\ma
 
 
 
-% ===== C-conj.tex =====
-% proofs/C-conj.tex
-% The law of Galois conjugation (CL) of the norms of the lifts of characters, used in the proof of
-% Theorem psu:arch (= Proposition po:arch). To be \input after C-onelift, C-small, C-small2,
-% C-exchanges3, C-periods, C-small3. Labels of this file start with pcj:.
-% Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auHom}{\operatorname{Hom}}
@@ -15566,7 +15443,6 @@ Theorem~\ref{pgl:S} holds as stated, with $\beta_{\mathsf S}=b^{3m}$ and $N_{\ma
 \providecommand{\psHS}{\mathcal H}
 \providecommand{\poA}{\mathcal A}
 \providecommand{\pop}{\mathsf p}
-% macros of this file (prefix \pcj)
 \providecommand{\pcjT}{\operatorname{T}}
 \providecommand{\pcjJ}{\mathrm J}
 \providecommand{\pcjB}{\mathsf B}
@@ -17400,11 +17276,11 @@ Moreover the lift is $\auG_O$-equivariant as in {\cite[Proposition~14.27]{P46}}.
 
 \begin{thebibliography}{L-values}
 \bibitem[Row D]{P46} D.~A.~Trejo Pizzo, \emph{The sign of the radial intersection form on the idele class group}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/46-row-d-sign-radial-intersection-form}.
-\bibitem[Theta]{P49} D.~A.~Trejo Pizzo, \emph{The Short Forms Theorem: theta lifts, complex multiplication and divisibility}, preprint, 2026. % LINK-PLACEHOLDER
-\bibitem[Moment]{P51} D.~A.~Trejo Pizzo, \emph{The Spanning Theorem: the second moment of a Poincar\'e map}, preprint, 2026. % LINK-PLACEHOLDER
-\bibitem[L-values]{P54} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: one theta lift, Hecke $L$-values and test forms of least valuation}, preprint, 2026. % LINK-PLACEHOLDER
-\bibitem[Galois]{P55} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: regular families of twists, Selmer groups and Ribet's method}, preprint, 2026. % LINK-PLACEHOLDER
-\bibitem[Hodge]{P56} D.~A.~Trejo Pizzo, \emph{Explicit cup exponents for local Galois representations beyond the Fontaine--Laffaille range}, preprint, 2026. % LINK-PLACEHOLDER
+\bibitem[Theta]{P49} D.~A.~Trejo Pizzo, \emph{The Short Forms Theorem: theta lifts, complex multiplication and divisibility}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/49-short-forms-theorem-theta-lifts-complex-multiplication}.
+\bibitem[Moment]{P51} D.~A.~Trejo Pizzo, \emph{The Spanning Theorem: the second moment of a Poincar\'e map}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/51-spanning-theorem-second-moment-poincare-map}.
+\bibitem[L-values]{P54} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: one theta lift, Hecke $L$-values and test forms of least valuation}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/54-covolume-theorem-one-theta-lift-hecke-l-values}.
+\bibitem[Galois]{P55} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: regular families of twists, Selmer groups and Ribet's method}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/55-covolume-theorem-regular-families-of-twists}.
+\bibitem[Hodge]{P56} D.~A.~Trejo Pizzo, \emph{Explicit cup exponents for local Galois representations beyond the Fontaine--Laffaille range}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/56-explicit-cup-exponents-local-galois-representations}.
 \bibitem{HoweTheta} R.~Howe, \emph{$\theta$-series and invariant theory}, in: Automorphic Forms,
 Representations and $L$-functions, Proc.\ Sympos.\ Pure Math.\ \textbf{33}, Part~1, Amer.\ Math.\
 Soc., 1979, 275--285.
@@ -17445,40 +17321,23 @@ classiques}, Acta Math.\ \textbf{113} (1965), 1--87.
 der mathematischen Wissenschaften 99, Springer, Berlin, 1959.
 \bibitem{HenkMinima} M.~Henk, \emph{Successive minima and lattice points}, Rend.\ Circ.\ Mat.\ Palermo (2) Suppl.\ \textbf{70} (2002), 377--384; arXiv:math/0204158.
 
-% refs-B-size.tex: new references cited by proofs/B-size.tex.
-% None: the Ostrowski--Taussky inequality and Hua's integral are proved in the text.
 \bibitem{ReedSimonI} M.~Reed and B.~Simon, \emph{Methods of Modern Mathematical Physics I: Functional
 Analysis}, revised ed., Academic Press, 1980.
 
 
-% new bibitems for C-triangle (Knapp already cited elsewhere in the paper)
 
-% New bibitems for C-triangle2.tex (the others already exist: FollandPS in refs-A-coefficient,
-% Schmid75 in refs-A-archimedean, HarishChandraAF in refs-A-closure). None new.
 
-% New bibitems for C-triangle3.tex: none (no new reference is cited).
 
-% New bibitems for C-triangle4.tex: none (no new reference is cited).
 
-% refs-C-grid.tex: no new bibitems.
 
-% refs-C-grid2.tex: no new bibitems (pk:hook, pk:eq-dual, au:shortbasis are cited by label).
 
-% refs-C-grid3.tex: no new bibliography items (all citations are internal labels).
 
-% refs-C-grid4.tex: no new bibliography items (all citations are internal labels).
 
-% New bibitems of C-grid5: none.
 
-% refs-C-grid6.tex: no new bibliography items (all citations are internal labels).
 
-% no new references
 
-% refs-C-grid8.tex: no new bibliography items (PlatonovRapinchuk is already in the bibliography of the paper).
 
-% refs-C-grid9.tex: no new bibliography items (C-grid9 cites only labels of the paper).
 
-% refs-C-grid10.tex: no new bibliography items (GoodmanWallach is already in the paper).
 \end{thebibliography}
 
 \end{document}

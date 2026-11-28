@@ -87,7 +87,7 @@ which statements were tested and which were not.
 | Criterion, admissible data, main inequality | Paper 46 | here |
 | The three theorems | stated and deduced in Paper 46; called Short Forms, Spanning, Covolume | stated and deduced here; called Theorems A, B, C |
 | Proofs of the propositions behind them | Papers 49–56, each readable on its own | Sections 15–80 |
-| Length | 55 pages and eight companions (679 pages) | 659 pages |
+| Length | 55 pages and eight companions (680 pages) | 659 pages |
 
 The two presentations were edited separately; where they differ in wording, the series
 (Papers 46 and 49–56) is the later text. [Paper 57](../57-riemann-hypothesis-along-the-rows-of-weils-proof/)

@@ -54,8 +54,6 @@
 \newcommand{\laminfP}{\lambda^{\infty,\mathrm P}_{\min}}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
-% macros of the series: every macro has in all nine papers the meaning it had in the single
-% paper; the definitions needed before their place in the source files are collected here
 \providecommand{\anCP}{C_P}
 \providecommand{\anPa}{\Phi_a}
 \providecommand{\anPb}{\Phi_b}
@@ -91,7 +89,6 @@
 \providecommand{\psHS}{\mathcal H}
 \providecommand{\psM}{\mathsf M}
 \providecommand{\psvac}{\mathbf v}
-% statements quoted from the other papers of the series (generated appendix)
 \newenvironment{quotedthm}[2]{\par\medskip\noindent\begingroup
   \textbf{#1}#2.\ \itshape\ignorespaces}{\endgroup\par\medskip}
 \newenvironment{quoteddef}[2]{\par\medskip\noindent\begingroup
@@ -324,11 +321,6 @@ places. Section~\ref{C2:g6} proves the sharpness of the count, constructs the te
 valuation, and bounds the untwisted norm.
 
 
-% ===== C-onelift.tex =====
-% proofs/C-onelift.tex
-% Propositions au:onelift and au:hecke of sec-automorphic.tex: the comparison operator, false lifts,
-% Hecke values. To be \input after the A-files (it uses pl:ss-norm, pl:ss-wa, pl:ss-transfer,
-% pk:ss-branch). Labels of this file start with po:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auU}{\mathrm U}
@@ -354,7 +346,6 @@ valuation, and bounds the untwisted norm.
 \providecommand{\pao}{\mathfrak o}
 \providecommand{\plone}{\mathbf 1}
 \providecommand{\plgb}[2]{\|#2\|_{#1}}
-% macros of this file (prefix \po)
 \providecommand{\poA}{\mathcal A}
 \providecommand{\poZ}{\mathcal Z}
 \providecommand{\poT}{\mathbb T}
@@ -1518,11 +1509,6 @@ Lemma~\ref{po:naut}.
 
 
 \section{The norm of the lift of a character and the three exchanges}\label{C2:g2}
-% ===== C-exchanges3.tex =====
-% proofs/C-exchanges3.tex
-% Proposition po:rallis (the norm of the lift of a character from U(1) to U(2z) is an L-value, for
-% every tame character of modulus Q), statement (IM) of C-selmer.tex for z >= 2 and for z = 1. To be \input after C-determinant.tex,
-% C-exchange.tex and C-onelift.tex. Labels of this file start with pex:. Only amsmath/amssymb/amsthm.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -1540,7 +1526,6 @@ Lemma~\ref{po:naut}.
 \providecommand{\psHS}{\mathcal S}
 \providecommand{\pao}{\mathfrak o}
 \providecommand{\psvac}{{\phi^{\mathrm{vac}}}}
-% macros of this file (prefix \pex)
 \providecommand{\pexK}{K^{(z)}}
 \providecommand{\pexmc}{\mathfrak c}
 \providecommand{\pexMat}{\mathrm M}
@@ -2097,13 +2082,6 @@ splitting part cancels), $|a|=1$. Hence $|\Lambda(\vartheta')|^2=|1-aq_v^{-1}|^2
 
 
 
-% ===== C-threeex.tex =====
-% proofs/C-threeex.tex
-% Proposition po:exchange of C-onelift.tex (three exchanges): the exchange identity with explicit
-% determinant data (a corollary of Theorem pcx:X), one exchange summed over classes, the carrier,
-% the third exchange, its left side as the theta series of the first factors, and the proof of
-% po:exchange. To be \input after C-exchange.tex, C-onelift.tex and C-exchanges3.tex.
-% Labels of this file start with pte:. Only amsmath/amssymb/amsthm.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -2124,7 +2102,6 @@ splitting part cancels), $|a|=1$. Hence $|\Lambda(\vartheta')|^2=|1-aq_v^{-1}|^2
 \providecommand{\psHS}{\mathcal H}
 \providecommand{\poA}{\mathcal A}
 \providecommand{\pog}{\mathsf g}
-% macros of this file (prefix \pte)
 \providecommand{\pteSD}{\mathrm{SD}}
 \providecommand{\pteMP}{\mathrm{MP}}
 \providecommand{\pteCS}{\mathop{\textstyle\sum^{\mathrm{cl}}}}
@@ -2865,12 +2842,6 @@ matrices $s_i$ of \S\ref{po:ss-glue} are the $\Lambda_i$.
 
 
 
-% ===== C-threeex2.tex =====
-% proofs/C-threeex2.tex
-% Complete proofs of the steps of proofs/C-threeex.tex (labels pte:) that were only sketched there:
-% the negation lemma, the archimedean action formulas of the explicit exchange, the first factors and
-% the character bookkeeping on V''. To be \input after C-threeex.tex. Labels start with ptf:.
-% Only amsmath/amssymb/amsthm.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -3484,12 +3455,6 @@ definition of \S\ref{po:ss-glue} unchanged.
 
 
 \section{Classes, first factors and periods of false lifts}\label{C2:g3}
-% ===== C-lifts.tex =====
-% proofs/C-lifts.tex
-% Statements of the one-lift block of Theorem C (proofs/C-onelift.tex, labels po:):
-% Lemma po:classes, statement (L4); Lemmas plf:KS, plf:I used in C-firstfactors.tex.
-% Propositions po:periods and po:span are NOT treated in this file (see the last section).
-% To be \input after C-onelift.tex. Labels of this file start with plf:. Only amsmath/amssymb/amsthm.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -3974,11 +3939,6 @@ integrality and size (Lemma~\ref{po:ff}) are proved in \S\ref{pfq:sec} (Theorem~
 
 
 
-% ===== C-periods.tex =====
-% proofs/C-periods.tex
-% Proposition po:periods of proofs/C-onelift.tex: periods of false lifts vanish.
-% To be \input after C-onelift.tex and C-lifts.tex. Labels of this file start with ppe:.
-% Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -3994,7 +3954,6 @@ integrality and size (Lemma~\ref{po:ff}) are proved in \S\ref{pfq:sec} (Theorem~
 \providecommand{\poZ}{\mathcal Z}
 \providecommand{\pop}{\mathsf p}
 \providecommand{\pog}{\mathsf g}
-% macros of this file (prefix \ppe)
 \providecommand{\ppeD}{\mathcal D}
 \providecommand{\ppeVan}{\mathrm{Van}}
 \providecommand{\ppeS}{\mathcal S}
@@ -4693,9 +4652,6 @@ replaced by step (3).
 
 
 \section{Products span}\label{C2:g4}
-% ===== C-span.tex =====
-% proofs/C-span.tex
-% Proposition po:span (products span). Labels of this file start with psp:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -4706,7 +4662,6 @@ replaced by step (3).
 \providecommand{\poA}{\mathcal A}
 \providecommand{\pcMat}{\mathrm M}
 \providecommand{\psvac}{{\phi^{\mathrm{vac}}}}
-% macros of this file (prefix \psp)
 \providecommand{\pspF}{\mathfrak F}
 \providecommand{\pspl}{\lambda}
 \providecommand{\pspn}{n_*}
@@ -5307,10 +5262,6 @@ the injectivity of $\Theta^\circ$ in (G2) of Proposition~\ref{po:glue} holds (Re
 
 
 
-% ===== C-span2.tex =====
-% proofs/C-span2.tex
-% Inputs of Proposition psp:inputs (C-span.tex). To be \input after C-span.tex.
-% Labels of this file start with psq:. Only amsmath/amssymb/amsthm.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -5320,7 +5271,6 @@ the injectivity of $\Theta^\circ$ in (G2) of Proposition~\ref{po:glue} holds (Re
 \providecommand{\pspl}{\lambda}
 \providecommand{\pspG}{G_\infty}
 \providecommand{\pspip}[2]{\langle #1,#2\rangle}
-% macros of this file (prefix \psq)
 \providecommand{\psqH}{\mathfrak H}
 
 \subsection{Inputs for products span}\label{psq:sec}
@@ -5773,11 +5723,6 @@ Fubini, $\int\phi\aubar{\mathsf m_u}=\int\psi\,\aubar{\mathsf m_u}=\phi(1)\int|\
 
 
 
-% ===== C-span3.tex =====
-% proofs/C-span3.tex
-% Input (R) of Proposition psp:inputs (C-span.tex): the stable-range reproducing formula.
-% To be \input after C-span.tex and C-span2.tex. Labels of this file start with psr:.
-% Only amsmath/amssymb/amsthm.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -5788,7 +5733,6 @@ Fubini, $\int\phi\aubar{\mathsf m_u}=\int\psi\,\aubar{\mathsf m_u}=\phi(1)\int|\
 \providecommand{\pcMat}{\mathrm M}
 \providecommand{\psvac}{{\phi^{\mathrm{vac}}}}
 \providecommand{\psZ}{Z}
-% macros of this file (prefix \psr)
 \providecommand{\psrR}{\mathcal R}
 \providecommand{\psrmc}{\mathsf{mc}}
 \providecommand{\psrm}{\mathfrak m}
@@ -6281,11 +6225,6 @@ through Corollary~\ref{psr:vanish}; the constant $A$ is not computed.
 
 
 
-% ===== C-span4.tex =====
-% proofs/C-span4.tex
-% Holomorphic polynomial Fock vectors; the inputs (H5), part of (H4), and the hypotheses (a), (b)
-% of Theorem psr:R in its applications. To be \input after C-span.tex, C-span2.tex, C-span3.tex.
-% Labels of this file start with pss:. Only amsmath/amssymb/amsthm.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auHom}{\operatorname{Hom}}
@@ -6294,7 +6233,6 @@ through Corollary~\ref{psr:vanish}; the constant $A$ is not computed.
 \providecommand{\pspG}{G_\infty}
 \providecommand{\pspm}{\mathsf m}
 \providecommand{\pcMat}{\mathrm M}
-% macros of this file (prefix \pss)
 \providecommand{\pssg}{\mathfrak g}
 \providecommand{\pop}{\mathsf p}
 
@@ -6635,13 +6573,6 @@ thereby proved (Theorem~\ref{psv:main}).
 
 
 
-% ===== C-span5.tex =====
-% proofs/C-span5.tex
-% The remaining inputs of products span: hypothesis (c) and the datum of K° for Theorem psr:R,
-% the input (H4) for conj(y) and the F_i with the bounds on the weights, the character split in
-% Lemma psp:step1, and the conclusion psp:main = po:span. To be \input after C-span.tex,
-% C-span2.tex, C-span3.tex, C-span4.tex. Labels of this file start with psv:.
-% Only amsmath/amssymb/amsthm.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auHom}{\operatorname{Hom}}
@@ -6654,7 +6585,6 @@ thereby proved (Theorem~\ref{psv:main}).
 \providecommand{\pcMat}{\mathrm M}
 \providecommand{\pop}{\mathsf p}
 \providecommand{\pssg}{\mathfrak g}
-% macros of this file (prefix \psv)
 \providecommand{\psvmu}{\mu}
 \providecommand{\pcm}{\mathfrak m}
 \providecommand{\auO}{\mathcal O}
@@ -7179,13 +7109,6 @@ Lemma~\ref{po:Hpos} (absolute convergence for $z\ge2$, Hecke's theorem on the li
 
 
 
-% ===== C-firstfactors.tex =====
-% proofs/C-firstfactors.tex
-% The first factors of the one-lift group: integrality (I1) and size (I2) for the first factors for
-% which the exchange identity is proved; and the tame parts at the chosen places (the characters
-% omega, chi_M, mu^flat, mu_j^0), with the strengthened existence lemma for characters of U(1).
-% To be \input after C-onelift.tex, C-lifts.tex, C-threeex.tex, C-threeex2.tex.
-% Labels start with pfq:. Only amsmath/amssymb/amsthm.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -7690,12 +7613,6 @@ trivial on $\mu_E$ ({\cite[\S14.3]{P46}}) is Lemma~\ref{pfq:mu} with $c_\tau=0$ 
 
 
 \section{The test form of least valuation}\label{C2:g6}
-% ===== C-small.tex =====
-% proofs/C-small.tex
-% Proposition po:small of proofs/C-onelift.tex (a test form whose pairing has least valuation):
-% the exact statement, its use in po:mainheight and au:hecke, and the proof of its core, the
-% sharpness of the count (part (i) of the note to po:small). To be \input after A-divisibility,
-% A-final and C-onelift. Labels of this file start with psm:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auAut}{\operatorname{Aut}}
@@ -7716,7 +7633,6 @@ trivial on $\mu_E$ ({\cite[\S14.3]{P46}}) is Lemma~\ref{pfq:mu} with $c_\tau=0$ 
 \providecommand{\psvac}{\mathbf v}
 \providecommand{\psrho}{\varrho}
 \providecommand{\ancl}{\operatorname{cl}}
-% macros of this file (prefix \psm)
 \providecommand{\psmval}{\operatorname{val}}
 \providecommand{\psmR}{R}
 \providecommand{\psmns}{n_\sharp}
@@ -8387,11 +8303,6 @@ first term of the bound $\exp(fmb/k+3x^{35})$.
 
 
 
-% ===== C-small2.tex =====
-% proofs/C-small2.tex
-% Continuation of proofs/C-small.tex: proof of the four inputs (I1)--(I4) of the block
-% Section C-small2.
-% A-closure and C-small. Labels of this file start with pst:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auA}{\mathbb A}
 \providecommand{\auPl}{\Phi}
@@ -8728,11 +8639,6 @@ Theorem~\ref{psm:attained} holds unconditionally.
 
 
 
-% ===== C-small3.tex =====
-% proofs/C-small3.tex
-% Parts (ii)--(iv) of Proposition po:small (the test form) and Proposition po:arch (the untwisted
-% norm at all conjugates). To be \input after C-onelift, C-small, C-small2, C-exchanges3, C-periods.
-% Labels of this file start with psu:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -8755,7 +8661,6 @@ Theorem~\ref{psm:attained} holds unconditionally.
 \providecommand{\pop}{\mathsf p}
 \providecommand{\pog}{\mathsf g}
 \providecommand{\pexK}{K^{(z)}}
-% macros of this file (prefix \psu)
 \providecommand{\psuC}{\mathcal C}
 \providecommand{\psuT}{\mathsf T}
 \providecommand{\psuN}{\mathsf N}
@@ -10620,10 +10525,10 @@ where $\pgpr$ is the orthogonal projection to the line $\C L_{\nu,z}(\tau^j)$.
 
 \begin{thebibliography}{L-values}
 \bibitem[Row D]{P46} D.~A.~Trejo Pizzo, \emph{The sign of the radial intersection form on the idele class group}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/46-row-d-sign-radial-intersection-form}.
-\bibitem[Theta]{P49} D.~A.~Trejo Pizzo, \emph{The Short Forms Theorem: theta lifts, complex multiplication and divisibility}, preprint, 2026. % LINK-PLACEHOLDER
-\bibitem[Moment]{P51} D.~A.~Trejo Pizzo, \emph{The Spanning Theorem: the second moment of a Poincar\'e map}, preprint, 2026. % LINK-PLACEHOLDER
-\bibitem[Exchange]{P53} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: exchange identities and the determinant of a chain of theta lifts}, preprint, 2026. % LINK-PLACEHOLDER
-\bibitem[Galois]{P55} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: regular families of twists, Selmer groups and Ribet's method}, preprint, 2026. % LINK-PLACEHOLDER
+\bibitem[Theta]{P49} D.~A.~Trejo Pizzo, \emph{The Short Forms Theorem: theta lifts, complex multiplication and divisibility}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/49-short-forms-theorem-theta-lifts-complex-multiplication}.
+\bibitem[Moment]{P51} D.~A.~Trejo Pizzo, \emph{The Spanning Theorem: the second moment of a Poincar\'e map}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/51-spanning-theorem-second-moment-poincare-map}.
+\bibitem[Exchange]{P53} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: exchange identities and the determinant of a chain of theta lifts}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/53-covolume-theorem-exchange-identities-chain-determinant}.
+\bibitem[Galois]{P55} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: regular families of twists, Selmer groups and Ribet's method}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/55-covolume-theorem-regular-families-of-twists}.
 \bibitem{MV} H.~L.~Montgomery and R.~C.~Vaughan, \emph{Multiplicative Number Theory I.
 Classical Theory}, Cambridge Studies in Advanced Mathematics \textbf{97}, Cambridge
 Univ.~Press, 2007.
@@ -10667,40 +10572,24 @@ classiques}, Acta Math.\ \textbf{113} (1965), 1--87.
 Analysis}, revised ed., Academic Press, 1980.
 
 
-% new bibitems for C-triangle (Knapp already cited elsewhere in the paper)
 
-% New bibitems for C-triangle2.tex (the others already exist: FollandPS in refs-A-coefficient,
-% Schmid75 in refs-A-archimedean, HarishChandraAF in refs-A-closure). None new.
 
-% New bibitems for C-triangle3.tex: none (no new reference is cited).
 
-% New bibitems for C-triangle4.tex: none (no new reference is cited).
 
-% refs-C-grid.tex: no new bibitems.
 
-% refs-C-grid2.tex: no new bibitems (pk:hook, pk:eq-dual, au:shortbasis are cited by label).
 
-% refs-C-grid3.tex: no new bibliography items (all citations are internal labels).
 
-% refs-C-grid4.tex: no new bibliography items (all citations are internal labels).
 
-% New bibitems of C-grid5: none.
 
-% refs-C-grid6.tex: no new bibliography items (all citations are internal labels).
 
-% no new references
 
-% refs-C-grid8.tex: no new bibliography items (PlatonovRapinchuk is already in the bibliography of the paper).
 
-% refs-C-grid9.tex: no new bibliography items (C-grid9 cites only labels of the paper).
 
-% refs-C-grid10.tex: no new bibliography items (GoodmanWallach is already in the paper).
 \bibitem{ZelevinskyLNM} A.~V.~Zelevinsky, \emph{Representations of finite classical groups. A Hopf
 algebra approach}, Lecture Notes in Math.\ 869, Springer, Berlin, 1981.
 \bibitem{PoorYuen} C.~Poor and D.~S.~Yuen, \emph{Linear dependence among Siegel modular forms},
 Math.\ Ann.\ \textbf{318} (2000), 205--234.
 
-% New references of C-span2.tex: none.
 \end{thebibliography}
 
 \end{document}

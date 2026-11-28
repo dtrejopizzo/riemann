@@ -87,9 +87,6 @@ the prime sum required by the criterion. Complete proofs are given.
 \end{abstract}
 \maketitle
 \setcounter{tocdepth}{1}\tableofcontents
-% intro-new.tex -- Introduction of the paper, rewritten for the new second part.
-% Paragraphs 1--3 are those of paper46-original.tex, unchanged.  Paragraphs 4--8 are new.
-% References to Theorems A, B, C go through \anThmA, \anThmB, \anThmC (see sec-analytic.tex).
 \providecommand{\anThmA}{\ref{thm:A}}
 \providecommand{\anThmB}{\ref{thm:B}}
 \providecommand{\anThmC}{\ref{thm:C}}
@@ -168,10 +165,10 @@ $m\approx\sqrt x$, a CM field $E=K(\zeta_{q_1})$ with
 $x^{11}\le f=[E:K]\le x^{12}$,
 a sparse set of its infinite places, weights, and three primes.
 (iii)~For such data, three theorems on a space of automorphic forms on a
-unitary group with integral structures at all primes: Theorem~\anThmA\
-(integral forms with short images span), Theorem~\anThmB\ (few translates of
-these images span almost everything) and Theorem~\anThmC\ (a lower bound for
-covolume plus index).
+unitary group with integral structures at all primes: the Short Forms Theorem
+(Theorem~\anThmA: integral forms with short images span), the Spanning Theorem
+(Theorem~\anThmB: few translates of these images span almost everything) and the
+Covolume Theorem (Theorem~\anThmC: a lower bound for covolume plus index).
 (iv)~Their combination, the main inequality
 $m\cdot\mathrm{rem}\le f\,a\,(\log b)^5$ with $a=xb$
 (Theorem~\ref{an:thm-main}), in which
@@ -2420,7 +2417,6 @@ $[(u-i\gamma)^{-1}+(v+i\gamma)^{-1}]/(u+v)
 =[(u-i\gamma)(v+i\gamma)]^{-1}$. Summing gives the identity.
 \end{proof}
 
-% sec-analytic.tex: analytic part.  Labels an:...; macros \an...
 \providecommand{\anThmA}{\ref{thm:A}}
 \providecommand{\anThmB}{\ref{thm:B}}
 \providecommand{\anThmC}{\ref{thm:C}}
@@ -3265,9 +3261,6 @@ theorem of Siegel and Walfisz. This does not affect what follows.
 \end{remark}
 
 
-% sec-automorphic.tex
-% Macros of this section (prefix \au). Only amsmath/amssymb/amsthm are used.
-% Reference to the definition of admissible data in the analytic section (one place to change).
 \providecommand{\auDataRef}{\ref{an:data}}
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auI}{\mathcal I}
@@ -3319,9 +3312,10 @@ This section states and proves the three theorems on automorphic forms
 from which the one-sided bound for the prime sum is deduced in the analytic section. The objects
 are algebraic modular forms on definite unitary groups over a CM field $E$ of large degree, a
 chain of $m$ theta lifts, and the lattice of forms all of whose lifts have integral values. The
-three theorems say that this lattice contains many short vectors (Theorems~\ref{thm:srcA}
+three theorems say that this lattice contains many short vectors (the Short Forms Theorem and the
+Spanning Theorem, Theorems~\ref{thm:srcA}
 and~\ref{thm:srcB}) and that it has no short vectors beyond what its covolume allows
-(Theorem~\ref{thm:srcC}); the two amounts differ by the prime sum.
+(the Covolume Theorem, Theorem~\ref{thm:srcC}); the two amounts differ by the prime sum.
 
 \emph{Where the proofs are.} Each statement of this section is either proved where it stands or
 followed by a short proof naming the results from which it follows and the sections in which these
@@ -3985,7 +3979,7 @@ directions at every place $\sigma$ (counted as $k$).
 Let $\mathcal N$ be the set of primes $p<x_1$ not split in $K$. For $s\in\auG$ and a linear map
 $\aupp\colon\auSram\to\auT$ write $s\aupp=\varrho(s)\circ\aupp$.
 
-\begin{theorem}[Theorem A: short integral forms]\label{thm:srcA}
+\begin{theorem}[the Short Forms Theorem]\label{thm:srcA}
 There are $c_{\mathrm{ss}}\in\C^\times$ and a positive rational number $\aucB$, a product of
 powers of the primes in $\mathcal N\cup\{N\}$, such that the map
 \[
@@ -4004,7 +3998,7 @@ index at most $\#\mathsf t\cdot\dim\auSram\cdot2\aueu$ in $\auLat_D$.
 \end{enumerate}
 \end{theorem}
 
-\begin{theorem}[Theorem B: enough forms]\label{thm:srcB}
+\begin{theorem}[the Spanning Theorem]\label{thm:srcB}
 $\audT>0$, and there is a finite set $\mathsf t\subseteq\auG$ with
 \[
 \#\mathsf t\cdot\dim\auSram\le5\,\audT\log(1+2b^2)\qquad\text{and}\qquad
@@ -4012,7 +4006,7 @@ $\audT>0$, and there is a finite set $\mathsf t\subseteq\auG$ with
 \]
 \end{theorem}
 
-\begin{theorem}[Theorem C: integral forms are long]\label{thm:srcC}
+\begin{theorem}[the Covolume Theorem]\label{thm:srcC}
 Let $y_1,\dots,y_n\in\auT$ be linearly independent with $n\ge(1-4/b^2)\audT$, of index at most
 $\delta$ and covolume at most $c$ in $\auLat_D$. Then
 \[
@@ -4055,8 +4049,8 @@ $c\le n(\auhmain-m\cdot\aurem+fa\log^4b)$ and $\delta\le10\,\audT\log(1+2b^2)\,\
 language of slopes: the adelic hermitian lattice of integral target forms is semistable up to
 $O(fa\log^5b)$ per dimension, with slope $\auhmain$, and it contains a sublattice of almost full
 rank and slope at most $\auhmain-m\cdot\aurem$. We keep three theorems because their proofs are
-independent and of different nature: an upper bound for a period (A), a second moment (B), and a
-congruence statement (C).
+independent and of different nature: an upper bound for a period (the Short Forms Theorem), a second moment (the Spanning
+Theorem), and a congruence statement (the Covolume Theorem).
 \end{remark}
 
 \subsection{The mechanism}\label{ss:au-mechanism}
@@ -4067,7 +4061,7 @@ the archimedean size is at least the sum of the $\ell$-adic divisibilities.
 Theorem~\ref{au:twistprime} is this statement for the Gram determinant of the lifts of a basis of
 $\auT$. Its two sides are computed by two different means.
 
-\emph{Upper side (Theorem A).} A target form of the shape $\auP_s\varphi$ can be lifted in a second
+\emph{Upper side (the Short Forms Theorem).} A target form of the shape $\auP_s\varphi$ can be lifted in a second
 way. By the seesaw identity (Proposition~\ref{au:seesaw}) its image under the lower chain is the
 restriction to $\auU(Y_m)$ of the image of $\varphi$ under the upper chain
 $\auU(X_0)\to\dots\to\auU(X_m)$, all of whose groups are compact at infinity. The upper chain is
@@ -4091,7 +4085,7 @@ $m\,\#\auPa\,\ausinf(a)$; the difference is a multiple of $a$ by \eqref{eq:au-ex
 removed by the factor $\prod_\tau\tau(\aubar{\pi_N})^{-n_\tau}$ in the restriction to $Y_m$, which
 is why the level is $N\approx(\bar\kappa M\aurd/2\pi)^m$.
 
-\emph{Lower side (Theorem C).} The Gram determinant of the lifts of a basis is
+\emph{Lower side (the Covolume Theorem).} The Gram determinant of the lifts of a basis is
 $Z(\vartheta)\cdot\det\auGram(\text{basis})$, and $Z(\vartheta)$ is computed by a Rallis inner
 product formula for each of the $m$ lifts: $Z$ factors as a product of determinants $Z_j$ of
 single lifts $W_j\to V_j$ (Proposition~\ref{au:factor}), and each $Z_j(\vartheta)$ is, up to a
@@ -4105,7 +4099,7 @@ and~\ref{au:hecke}). Thus $Z(1)/Z(\theta_\ell)$ has height at most $-\audT\,m\,k
 -\audT\auhmain$, and Theorem~\ref{au:twistprime} gives covolume $+\,2\cdot$index
 $\ge\audT\auhmain$ for every almost full family.
 
-\emph{Comparison.} The family of Theorems A and B has $c+2\delta\le n(\auhmain-m\aurem)+$errors.
+\emph{Comparison.} The family of the Short Forms and Spanning Theorems has $c+2\delta\le n(\auhmain-m\aurem)+$errors.
 Hence $n\,m\,\aurem\le\audT\cdot$errors: \emph{a positive remainder would produce integral
 vectors shorter than the product formula allows.} A negative remainder produces no contradiction,
 which is why the result is one-sided.
@@ -4144,7 +4138,7 @@ beyond what the generalised Riemann hypothesis gives; as explained in \S\ref{an:
 force a systematic vanishing of the twisted $L$-functions at the centre, which is not expected. The
 argument does contain errors that grow faster than linearly in $m$. There are two, both quadratic, one on each side.
 
-\emph{(1) The level prime, in Theorem A.} By \eqref{eq:au-excess} the level must satisfy
+\emph{(1) The level prime, in the Short Forms Theorem.} By \eqref{eq:au-excess} the level must satisfy
 $\log N\approx m\log(\bar\kappa M\aurd/2\pi)\in[m\log b,25m\log b]$: each lift exceeds the expected
 size by $a\log(\bar\kappa M\aurd/2\pi)$ at each $a$-place, and $a\log N$ pays for all $m$ lifts.
 At the prime $N$ itself nothing is gained, and each of the $m$ lifts may lose up to $fb$ powers of
@@ -4155,7 +4149,7 @@ $N$ (Proposition~\ref{au:divis}(iii)). The cost is
 to be compared with the error unit $\aueu=f\,a\log^3b=x\,f\,b\log^3b$. It fits if and only if
 $m^2\ll x\log^2b$ (Lemma~\ref{au:errsum}).
 
-\emph{(2) The comparison operators, in Theorem C.} For each lift the determinant $Z_j(\vartheta)$
+\emph{(2) The comparison operators, in the Covolume Theorem.} For each lift the determinant $Z_j(\vartheta)$
 is related to $L$-values through an operator whose determinant at the trivial twist has all
 conjugates at most $\exp(3\,\audT\,f\,m\,b\log^2b)$ (Proposition~\ref{au:onelift}). Over $m$ lifts this
 is $3\,m^2f\,b\log^2b$ per dimension, against the allowance $f\,a\log^4b=x\,f\,b\log^4b$; again
@@ -4182,7 +4176,7 @@ inequality $3fmb(\log b)^2+10mx_1\le k\,\aubud(\log b-8)$ in the cost of one lif
 Proposition~\ref{au:Zj}).
 \end{remark}
 
-\subsection{Deduction of Theorems A and B}\label{ss:au-proofAB}
+\subsection{Deduction of the Short Forms and Spanning Theorems}\label{ss:au-proofAB}
 
 We first fix the two constants of Theorem~\ref{thm:srcA}. For a commutative ring $\auO$, modules
 $S\subseteq M$ and $z\in\auO$ we write $\aucol(M,S)\mid z$ if for every finite family
@@ -4302,7 +4296,7 @@ b^{-8}\cdot5\,\audT\log(1+2b^2)\le2\audT/b^2$, by (I6). Finally
 $s\aupp(\auSram)=\auP_s(\auSram)$, the scalars being non-zero.
 \end{proof}
 
-\subsection{The inputs of Theorem A}\label{ss:au-inputsA}
+\subsection{The inputs of the Short Forms Theorem}\label{ss:au-inputsA}
 
 \subsubsection*{The seesaw identity}
 
@@ -4609,7 +4603,7 @@ value of $\sigma(\iota_1z')$ has norm at most $(\#\auG)^2e^{B/2}$, and $\|\cdot\
 sum over at most $\exp(x^{30})$ classes; $\log\#\auG\le2f\,r^2\log p_1\le x^{24}$.
 \end{proof}
 
-\subsection{The inputs of Theorem B}\label{ss:au-inputsB}
+\subsection{The inputs of the Spanning Theorem}\label{ss:au-inputsB}
 
 \begin{lemma}[Count of the ramified forms]\label{au:ramcount}
 $\dim\auSram\ge\bigl(1-f/(N-1)\bigr)\auDX\ge(1-b^{-8})\auDX$.
@@ -4778,12 +4772,12 @@ $s\in\auG$ with $\dim\auP_s^{-1}(F)\le\bigl(\tfrac12(1+\alpha)+\tfrac32(8b^2)^{-
 \begin{proof}
 Apply Lemma~\ref{au:onetranslate} to $T=\auAz$, $T_0=\auT$, $\mathrm{pr}_0=\varrho(e_0)$ (an
 orthogonal projection commuting with $\auG$, as $e_0$ is a central idempotent and $\varrho$ is
-unitary), $B=P$ and $\varepsilon=(8b^2)^{-1}$. (H1) is (ii), as $5b^{-4}\le\varepsilon$. (H2)
-follows from (i) and (iii), as $9b^{-4}\le\varepsilon$. The maps $\mathrm{pr}_0\varrho(s)P$ and
+unitary), $B=P$ and $\varepsilon=(8b^2)^{-1}$. (H1) is part (ii) of Proposition~\ref{au:moment}, as $5b^{-4}\le\varepsilon$. (H2)
+follows from parts (i) and (iii) of that proposition, as $9b^{-4}\le\varepsilon$. The maps $\mathrm{pr}_0\varrho(s)P$ and
 $\auP_s$ differ by a non-zero scalar and have the same preimages.
 \end{proof}
 
-\subsection{Theorem C}\label{ss:au-proofC}
+\subsection{The Covolume Theorem}\label{ss:au-proofC}
 
 \subsubsection*{The inputs}
 
@@ -5088,12 +5082,8 @@ the exchange identity is proved (Theorem~\ref{pfq:ff}, Proposition~\ref{pfq:exch
 parts of the characters $\mu_j^0$ at the chosen places (Definition~\ref{pfq:def-chars},
 Proposition~\ref{pfq:tame}, Lemma~\ref{pz:mu}).
 
-\section{Proofs of the statements used for Theorems A, B and C}\label{sec:proofsA}
+\section{Proofs of the statements used for the Short Forms, Spanning and Covolume Theorems}\label{sec:proofsA}
 
-%% ===== proofs/A-divisibility.tex =====
-% proofs/A-divisibility.tex
-% Proofs of Propositions au:count and au:divis (to be \input after the statement of Theorem A).
-% Uses only amsmath/amssymb/amsthm and the theorem environments of the paper.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auPl}{\Phi}
 \providecommand{\auPa}{\Phi_a}
@@ -5111,7 +5101,6 @@ Proposition~\ref{pfq:tame}, Lemma~\ref{pz:mu}).
 \providecommand{\aucol}{\operatorname{col}}
 \providecommand{\aubar}[1]{\overline{#1}}
 \providecommand{\auf}[1]{\texttt{#1}}
-% macros of this file (prefix \pa)
 \providecommand{\pao}{\mathfrak o}
 \providecommand{\pam}{\mathfrak m}
 \providecommand{\paCp}{\C_p}
@@ -5865,7 +5854,7 @@ $\aucol\bigl(\auS_\iota,\,Y_{\mathfrak l}\auS_\iota+p^{j_0}\auS_\iota\bigr)\mid 
 \noindent Proved in \S\ref{ph:ss-ded}, from Theorem~\ref{ph:thm}; the three inputs of that theorem
 (Propositions~\ref{ph:root}, \ref{ph:count}, \ref{ph:av}) are proved in \S\ref{pe:sec}, the
 normalisation used is justified in Remark~\ref{pl:N}, and weak approximation is
-Corollary~\ref{pl:wacor}.
+Corollary~\ref{pl:wacor}. Nothing used in that proof depends on the present lemma, which enters only case (iv) of the theorem below.
 
 \subsubsection*{The level prime}
 \begin{lemma}[The prime $N$]\label{pa:level}
@@ -5949,8 +5938,8 @@ $\aucol(\auS_\iota,S_0)\mid\ell^{\,i}$ carries it into $S_0$ and, $\auSram$ bein
 $S_0\cap\auSram$.
 \end{proof}
 
-\begin{remark}[Use in Theorem~\ref{thm:srcA}]
-The deduction of Theorem~\ref{thm:srcA} in \S\ref{ss:au-proofAB} uses Proposition~\ref{au:divis} only
+\begin{remark}[Use in the Short Forms Theorem]
+The deduction of the Short Forms Theorem (Theorem~\ref{thm:srcA}) in \S\ref{ss:au-proofAB} uses Proposition~\ref{au:divis} only
 through input (I2), which is the last statement of Theorem~\ref{pa:divis}; so it goes through
 unchanged. Compared with the items of Proposition~\ref{au:divis}: in (iv) the module is
 $(Y_\Lambda^{\,m}\auS_\iota+p^{j_p}\auS_\iota)\cap\auSram$ rather than a sum of submodules of
@@ -5964,10 +5953,6 @@ Corollary~\ref{pf:K1} (the integrality of the jets in (K1) at the primes $\ell\m
 \end{remark}
 
 
-%% ===== proofs/A-seesaw-size.tex =====
-% proofs/A-seesaw-size.tex
-% Proofs of au:seesaw, au:kernel, au:restrict, au:expansion, au:equiv and of the constant in
-% au:shortbasis. Labels of this file start with ps:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -6531,7 +6516,7 @@ $\mathrm{br}=c_{\mathrm{br}}\,i^*$ with $c_{\mathrm{br}}=\prod_\tau H_{\lambda^{
 the product of the hook numbers (Lemma~\ref{pk:hook}) of the diagrams $\lambda^\circ_\tau$ without
 their first $k-1$ rows.
 \end{proof}
-\noindent Part (c) is Proposition~\ref{pk:branching}.
+\noindent Part (c) is Proposition~\ref{pk:branching}. Parts (a) and (b) have just been proved without it, from Lemma~\ref{pk:hook}, whose proof does not use the present lemma; the proof of part (c) then starts from the vector $v$ constructed here.
 
 \begin{proof}[Proof of Proposition~\ref{au:restrict}, given Lemma~\ref{ps:branching}]
 The restriction is $(\operatorname{res}\psi)(y)=\prod_\tau\tau(\aubar{\pi_N})^{-n_\tau}\cdot
@@ -7072,12 +7057,6 @@ and $\Psi=0$.
 \end{proof}
 
 
-%% ===== proofs/A-seesaw-complete.tex =====
-% proofs/A-seesaw-complete.tex
-% Complements to proofs/A-seesaw-size.tex and proofs/A-divisibility.tex: proofs of ps:definite,
-% of chi_0 = 1 (ps:chi0), of the steps of ps:onestep, of ps:branching(c), of ps:conj and of
-% pa:kernel, as far as stated in \S pk:sec. Labels of this file start with pk:.
-% Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -8302,8 +8281,8 @@ $\theta_u(\mu)=\theta_u(0)\,\theta(\mu)\,\Gamma_u(y(\mu))$ with $\theta_u(0)\in\
 $\Gamma_u\in\pao[[Y]]$. If $u\in t+\Lambda$, then $\theta_u$ is a constant multiple of $\theta_t$
 and $(\theta_t/\theta)^2$ is $\Lambda$-periodic with divisor $2[P_0]-2[O]$, hence equal to $\mathsf
 c_tx$; as $x=y^2\mathsf e(y)$ with $\mathsf e\in1+y\pao[[y]]$, $\theta_t=\mathsf c_t^{1/2}\,\theta
-\cdot y\,\mathsf e(y)^{1/2}$, and $\mathsf c_t^{1/2}=\theta_t'(0)$ is a unit (proof of
-Corollary~\ref{pf:K1}(c)). In both cases $\theta_u(\mu)=\theta(\mu)\cdot\Gamma(y(\mu))$ with
+\cdot y\,\mathsf e(y)^{1/2}$, and $\mathsf c_t^{1/2}=\theta_t'(0)$ is a unit (this is shown in the proof of
+Corollary~\ref{pf:K1}(c) from Lemma~\ref{pf:chi}(c) and Proposition~\ref{pf:values} alone, without the present proposition). In both cases $\theta_u(\mu)=\theta(\mu)\cdot\Gamma(y(\mu))$ with
 $\Gamma\in\pao[[Y]]$. Hence $\Theta_{\psrho_f(\gamma)F_0}(\pi_Ms_0z)=\prod_{i,k}\theta(\mu_{k,i}(z))^{
 q_1}\cdot G_\gamma(z)$ with $G_\gamma$ an integral power series in the $y(\mu_{k,i}(z))$; the first
 factor does not depend on $\gamma$, so the same holds for $f$, with $G=\sum_\gamma c_\gamma
@@ -8424,9 +8403,6 @@ the translates $\theta_u$ with $u\in t+E_1$ are $\partial$-integral as well (Rem
 Lemmas~\ref{pk:E1}, \ref{pk:formal} and Proposition~\ref{pk:K1N} are not used in the sequel.
 
 
-%% ===== proofs/A-hecke-eldiv.tex =====
-% proofs/A-hecke-eldiv.tex
-% Lemmas pa:hecke and pa:eldiv of proofs/A-divisibility.tex (to be \input after that file).
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auPl}{\Phi}
 \providecommand{\auPa}{\Phi_a}
@@ -8440,7 +8416,6 @@ Lemmas~\ref{pk:E1}, \ref{pk:formal} and Proposition~\ref{pk:K1N} are not used in
 \providecommand{\auf}[1]{\texttt{#1}}
 \providecommand{\pao}{\mathfrak o}
 \providecommand{\pam}{\mathfrak m}
-% macros of this file (prefix \ph)
 \providecommand{\phB}{\mathfrak B}
 \providecommand{\phA}{\mathfrak A}
 \providecommand{\phk}{\boldsymbol k}
@@ -8987,9 +8962,6 @@ statement that implies Theorem~\ref{ph:thm}.
 \end{remark}
 
 
-%% ===== proofs/A-eldiv-inputs.tex =====
-% proofs/A-eldiv-inputs.tex
-% Proofs of Propositions ph:root, ph:count, ph:av of proofs/A-hecke-eldiv.tex (to be \input after it).
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auF}{\mathbb F}
 \providecommand{\aucol}{\operatorname{col}}
@@ -9001,7 +8973,6 @@ statement that implies Theorem~\ref{ph:thm}.
 \providecommand{\phdep}{\operatorname{dp}}
 \providecommand{\phdef}{\operatorname{def}}
 \providecommand{\phcd}{c_{\mathrm{div}}}
-% macros of this file (prefix \pe)
 \providecommand{\peX}{\mathbf X}
 \providecommand{\peG}{\mathbf G}
 \providecommand{\peS}{\mathbf S}
@@ -9672,11 +9643,6 @@ hypotheses of Theorem~\ref{ph:thm}. Besides these, Lemma~\ref{pa:eldiv} uses the
 \end{remark}
 
 
-%% ===== proofs/A-hecke-level.tex =====
-% proofs/A-hecke-level.tex
-% Lemmas pa:hecke and pa:level of proofs/A-divisibility.tex, the normalisation (N) of
-% proofs/A-hecke-eldiv.tex, and weak approximation. To be \input after A-divisibility.tex,
-% A-seesaw-size.tex and A-hecke-eldiv.tex. Labels of this file start with pl:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auPl}{\Phi}
 \providecommand{\auPa}{\Phi_a}
@@ -9703,7 +9669,6 @@ hypotheses of Theorem~\ref{ph:thm}. Besides these, Lemma~\ref{pa:eldiv} uses the
 \providecommand{\paded}{\operatorname{ded}}
 \providecommand{\paPred}{\operatorname{Pred}}
 \providecommand{\paloss}{\operatorname{loss}}
-% macros of this file (prefix \pl)
 \providecommand{\plone}{\mathbf 1}
 \providecommand{\plD}{\mathsf D}
 \providecommand{\pld}{\mathsf d}
@@ -10719,12 +10684,6 @@ Lemma~\ref{pl:level}, from Lemma~\ref{pl:kernelN} and the same facts.
 \end{remark}
 
 
-%% ===== proofs/A-final.tex =====
-% proofs/A-final.tex
-% The statements of Theorem A left open by proofs/A-seesaw-complete.tex: pk:curve(C3)(ii), the
-% integrality (K1) at all primes (including 2, the primes of q_1, p_0, p_1 and N), (W6), the orbit
-% classification of ps:support, the Chowla--Selberg unit at 2, the number of classes.
-% Labels of this file start with pf:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -10748,7 +10707,7 @@ Lemma~\ref{pl:level}, from Lemma~\ref{pl:kernelN} and the same facts.
 \providecommand{\pfv}{\operatorname{ord}}
 \providecommand{\pfbr}[1]{\theta[#1]}
 
-\subsection{The last statements of Theorem~A}\label{pf:sec}
+\subsection{The last statements of the Short Forms Theorem}\label{pf:sec}
 
 This subsection follows \S\ref{pk:sec} and uses its notation and that of \S\ref{pa:ss-curve}. It
 proves the following statements used there: Proposition~\ref{pk:curve}(C3)(ii)
@@ -10885,7 +10844,7 @@ including $2$.
 \end{corollary}
 \begin{proof}
 (C1): the point $t^\sigma$ constructed there is admissible, by Lemma~\ref{pf:transport}(a) below
-(the bijection $S_\sigma$ is $\auO_K$-linear and maps $t$ to $t^\sigma$). The proof of (C2) uses
+(the bijection $S_\sigma$ is $\auO_K$-linear and maps $t$ to $t^\sigma$; part (a) of that lemma is proved from the construction of the conjugate curve alone and does not use (C1), which enters the lemma only in part (b)). The proof of (C2) uses
 only that $a_1$ is an algebraic integer and that torsion points of order prime to $\ell$ have
 integral coordinates; it is valid for $\ell=2$. In the proof of (C4), with the lattices
 $(\Lambda_i,t_i,a_{1,i})$ normalised in the present sense (this fixes $\mu_i^{12}$), the only
@@ -11068,7 +11027,7 @@ the endomorphism of $\mathcal E$ induced by $z\mapsto az$; it is characterised b
 a\varpi$ for the invariant differential $\varpi=dx/(2y+a_1x)=dz$. The conjugate endomorphism
 $\sigma[a]$ of $\mathcal E^\sigma$ satisfies $(\sigma[a])^*\varpi^\sigma=\sigma(a)\varpi^\sigma=
 a\varpi^\sigma$, so it is $[a]$ on $\mathcal E^\sigma$, and $S_\sigma(az)=aS_\sigma(z)$.
-(b) By (C1) the series of $x^\sigma,y^\sigma,\theta^\sigma$ are the conjugates of those of
+(b) By (C1), in the form of Corollary~\ref{pf:CS} (whose proof of it uses only part (a) above), the series of $x^\sigma,y^\sigma,\theta^\sigma$ are the conjugates of those of
 $x,y,\theta$. The last assertion holds because an entire function is determined by its Taylor
 series. (c) If $z\notin t+\Lambda$, then $P^\sigma(Q^\sigma(z'))=\sigma(P(Q(z)))$ and
 $\mu=\theta^\sigma(z')/\sigma(\theta(z))$. If $z\in t+\Lambda$, let $\mathsf t=x/y$, a function
@@ -11617,7 +11576,7 @@ elements.
 
 \emph{Sizes.} By \eqref{eq:au-sizes} and the definitions, $f\le x^{12}$, $n\le n_m\le40x^6$, and
 $6q_1d(fk)^2\le x^{100}$ (the inequality used in the proof of Proposition~\ref{au:short}), and
-$C_{\mathrm{sb}}=6q_1d(fn)^2\le x^{102}$ (Lemma~\ref{pz:sizes}(b)), $\mathsf B_0\le C_{\mathrm{sb}}$, $n\le
+$C_{\mathrm{sb}}=6q_1d(fn)^2\le x^{102}$ (Lemma~\ref{pz:sizes}(b), a numerical inequality proved there from Lemma~\ref{an:lem-sizes} without the present proposition, which only the last sentence of that lemma applies), $\mathsf B_0\le C_{\mathrm{sb}}$, $n\le
 C_{\mathrm{sb}}$ and $2\mathsf B+1\le C_{\mathrm{sb}}^6$; hence $4fn^2\log(2\mathsf B+1)\le4\cdot
 x^{12}\cdot1600x^{12}\cdot612\log x\le x^{26}$. Also $\log(MN)\le22\log b+30m\log b\le x$ by
 \eqref{eq:au-scales}, so $2fn^2\log(MN)\le3200x^{25}\le x^{26}$. The levels named contain $K(MN)$:
@@ -11639,13 +11598,6 @@ the Weil representation.
 
 
 
-%% ===== proofs/A-closure.tex =====
-% proofs/A-closure.tex
-% Closing statements for Theorem A: the archimedean types of the lower chain (the assumption made
-% in ps:ss-Y), the constant C_0 and the definition of admissible data, the levels of the upper
-% chain and the sizes used for the number of classes, the estimate left open in the proof of
-% au:short, and the list of what Theorem A depends on.
-% Labels of this file start with pz:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -11669,9 +11621,9 @@ the Weil representation.
 \providecommand{\psrho}{\varrho}
 \providecommand{\pzF}{\mathfrak F}
 
-\subsection{Types, constants and levels for Theorem~A}\label{pz:sec}
+\subsection{Types, constants and levels for the Short Forms Theorem}\label{pz:sec}
 
-This subsection proves the remaining inputs of Theorem~\ref{thm:srcA} not treated in
+This subsection proves the remaining inputs of the Short Forms Theorem (Theorem~\ref{thm:srcA}) not treated in
 \S\S\ref{pa:sec}--\ref{pf:sec}. (1) In \S\ref{ps:ss-Y} it was taken ``as part of the definition of the lower
 chain'' that the lifts $\Theta^Y_{j,\vartheta}$ and their transposes preserve the archimedean type
 and that the forms concerned are cusp forms. In \S\ref{pz:ss-types} the types are defined, and the
@@ -12260,7 +12212,7 @@ With $C=C_{\mathrm{sb}}=6q_1d(fk)^2\ge k$ this is the estimate needed: $4^fC_{\m
 }^{\,5fa}\le\exp(f\log4+500fa\log x)\le e^{\aueu}$ by Lemma~\ref{pz:sizes}(b), since
 $\aueu=fa(\log b)^3$ and $\log x\le\log b$.
 
-\subsubsection{The inputs of Theorem~A}\label{pz:ss-audit}
+\subsubsection{The inputs of the Short Forms Theorem}\label{pz:ss-audit}
 
 We list the statements used in the proof of Theorem~\ref{thm:srcA}, from the top, with the place of
 the written proof. ``Published'' means that the proof quotes results from the literature, named at
@@ -12310,10 +12262,6 @@ written proof, complete modulo the published results named in them. The explicit
 (Lemma~\ref{pz:absgrowth}).
 
 
-%% ===== proofs/A-archimedean.tex =====
-% proofs/A-archimedean.tex
-% The archimedean statements (A1), (A2), (A3) of \S pz:ss-types.
-% Labels of this file start with par:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auPl}{\Phi}
 \providecommand{\auHom}{\operatorname{Hom}}
@@ -12780,11 +12728,6 @@ definite case \eqref{pk:eq-schuract}, where $h$ acts on covectors $A$ by $A\maps
 \end{remark}
 
 
-%% ===== proofs/A-coefficient.tex =====
-% proofs/A-coefficient.tex
-% Proof of the integral formula pds:eq-FJ for the lowest-K-type coefficient, and of the
-% normalisation (V) of Lemma par:vac. Labels of this file start with pco:.
-% Only amsmath/amssymb/amsthm are used.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auHom}{\operatorname{Hom}}
 \providecommand{\pcom}{\mathsf m}
@@ -13356,13 +13299,6 @@ in (M) do not matter, because $\pcotr_\R(X_0|_I)=0$.
 \end{remark}
 
 
-%% ===== proofs/A-weil-foundations.tex =====
-% proofs/A-weil-foundations.tex
-% Foundations of the Weil representation used in Lemma ps:weil: the global invariance of theta
-% under rational points (M4), the mixed model and the zero term (W2), (W3) (M3), the model at
-% split places (W5) (M2), the formal degree of Proposition pds:haar (M6), and the archimedean
-% compact scalar of C-threeex2 (two proofs of e_+=0). Labels of this file start with pwf:.
-% Only amsmath/amssymb/amsthm are used.
 \providecommand{\auA}{\mathbb A}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -13379,8 +13315,8 @@ in (M) do not matter, because $\pcotr_\R(X_0|_I)=0$.
 
 \subsection{Foundations of the Weil representation}\label{pwf:sec}
 
-Lemma~\ref{ps:weil} collects the properties of the Weil representation on which Theorems A, B, C
-rest. For several of them the works cited there do not contain the statement: the invariance of
+Lemma~\ref{ps:weil} collects the properties of the Weil representation on which the Short Forms, Spanning and
+Covolume Theorems rest. For several of them the works cited there do not contain the statement: the invariance of
 $\theta$ under the rational points for the splitting by characters (the cited works on the
 splitting are local), the mixed model attached to a non-Lagrangian isotropic subspace, and the model
 at places of $E^+$ split in $E$. This subsection proves these statements from the definition of
@@ -14260,10 +14196,6 @@ and in \S\ref{ps:ss-weil} (where a positive definite space carries no scalar on 
 \end{remark}
 
 
-%% ===== proofs/B-second-moment.tex =====
-% proofs/B-second-moment.tex
-% The second moment of the Poincare map: Proposition au:moment and Theorem B of
-% sec-automorphic.tex. Labels of this file start with pb:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auPl}{\Phi}
 \providecommand{\auPa}{\Phi_a}
@@ -14284,7 +14216,6 @@ and in \S\ref{ps:ss-weil} (where a positive definite space carries no scalar on 
 \providecommand{\aurd}{\mathrm{rd}_E}
 \providecommand{\aubar}[1]{\overline{#1}}
 \providecommand{\auf}[1]{\texttt{#1}}
-% macros of this file (prefix \pb)
 \providecommand{\pbR}{\overline R_0}
 \providecommand{\pbUb}{\overline U}
 \providecommand{\pbHb}{\overline H}
@@ -14308,7 +14239,7 @@ and in \S\ref{ps:ss-weil} (where a positive definite space carries no scalar on 
 \section{The second moment of the Poincar\'e map}\label{pb:sec}
 
 This section concerns Proposition~\ref{au:moment} (the second moment of the Poincar\'e map) and,
-through it, Theorem~\ref{thm:srcB}. We use the notation of \S\S\ref{ss:au-notation}--\ref{ss:au-spaces}.
+through it, the Spanning Theorem (Theorem~\ref{thm:srcB}). We use the notation of \S\S\ref{ss:au-notation}--\ref{ss:au-spaces}.
 
 \emph{Structure of the proof.} The proof has three layers.
 \begin{itemize}
@@ -14763,7 +14694,7 @@ $\pbrpsi(t)$ is unitary,
 \[
 P_{ts}=(\varrho(t^{-1})P)^*\varrho(s)P=(P\pbrpsi(t^{-1}))^*\varrho(s)P=\pbrpsi(t)P_s .
 \] (b) For $s\in\pbR$, by (a) and \eqref{pb:eq-rext}, $P_s-\pbrpsi(s)=(P^*P
--1)\pbrpsi(s)$, which has the norm of $P^*P-1$. As $\pbR\subseteq\Omega_0$, (E1) gives $\#\pbR
+-1)\pbrpsi(s)$, which has the norm of $P^*P-1$. As $\pbR\subseteq\Omega_0$, (E1) (proved in Proposition~\ref{pb:reduction} before the present lemma is applied there) gives $\#\pbR
 \cdot\pbHS{P^*P-1}^2\le b^{-12}\#\pbR\cdot\auDX$. Then
 $\pbHS{P^*P}\le\pbHS{P^*P-1}+\pbHS1\le(b^{-6}+1)\sqrt{\auDX}$. (c) Let $u_a=\varrho(a)PP^*\varrho(a)^{-1}$, in the space of endomorphisms of
 $\auAz$ with the Hilbert--Schmidt inner product. Then
@@ -14869,7 +14800,7 @@ U}(P^*P-1)\bigr)\ge\dim\mathsf U-\sqrt{\dim\mathsf U}\,\pbHS{P^*P-1}\ge\dim\math
 Lemma~\ref{pb:basic}(b). For $\mathsf U=\auS$ this gives $\varrho(e_0)P\ne0$, so $\auT\ne0$.
 \end{proof}
 
-\subsection{The dimension of the target, and Theorem B}\label{pb:ss-thmB}
+\subsection{The dimension of the target, and the Spanning Theorem}\label{pb:ss-thmB}
 
 \begin{proposition}[Proposition~\ref{au:moment}(i)]\label{pb:i}
 If Proposition~\ref{au:mult} holds for $j=m$, then $\audT\le\#\auG\cdot\pbdeg\cdot\pbmass_r$.
@@ -15370,7 +15301,7 @@ kf}\Bigl(\frac M{b^6}\Bigr)^{kf}\pbDid=b^{-3kf}\pbDid\le b^{-30}\pbDid .
 By (X), $\sqrt{\mathsf E(\Omega_i)}\le2b^{-15}\sqrt{\pbDid}$, so $\mathsf E(\Omega_i)\le4b^{-30}\pbDid
 \le b^{-12}\pbDid$.
 
-In particular Lemma~\ref{pb:basic} applies: $\beta(s)=\pbHS{P_s}^2\le2\auDX$ for all $s$.
+In particular Lemma~\ref{pb:basic} applies, since its proof uses, of the three inequalities to be proved, only (E1), which is now established: $\beta(s)=\pbHS{P_s}^2\le2\auDX$ for all $s$.
 
 (E3) Let $\Omega=\{s\in\pbFix(\mathsf A,\mathsf d):s\text{ open}\}$ and $\mathsf T=b^{-6k\#\mathsf
 A}\pbDmain$. By Lemma~\ref{pb:elem}(c), $\Omega$ meets no scalar coset; in particular $\Omega\cap\pbR
@@ -15422,10 +15353,6 @@ and Yu~\cite[Propositions~4.4--4.5]{GHY}, and Lemma~\ref{pb:bad} on Green's desc
 the characters of $\auGL_r(\auF_q)$.
 
 
-%% ===== proofs/B-covolume.tex =====
-% proofs/B-covolume.tex
-% The covolume of the unipotent congruence groups (Lemma pb:covol), and the completion of
-% some short steps of Theorem B. Labels of this file start with pbv:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auPl}{\Phi}
 \providecommand{\auU}{\mathrm U}
@@ -15442,7 +15369,6 @@ the characters of $\auGL_r(\auF_q)$.
 \providecommand{\pfrN}{\mathsf N}
 \providecommand{\pgnD}{\mathfrak d}
 \providecommand{\pgnd}{\operatorname{d}}
-% macros of this file (prefix \pbv)
 \providecommand{\pbvO}{\widehat{\auO}}
 \providecommand{\pbvL}{\mathsf L}
 \providecommand{\pbvcov}{\operatorname{covol}}
@@ -15463,7 +15389,7 @@ lattices of linear forms on the spaces $Y_a$ (one for each floor of the tower of
 of $U$), and $\varrho$ copies, rescaled, of the lattice of skew-hermitian integers of $E$
 (Lemmas~\ref{pbv:vol-a}, \ref{pbv:vol-skew}). In \S\ref{pbv:ss-uses} we check that the three forms
 of the constant used in the text are the same number. In \S\ref{pbv:ss-weak} we write out in detail four short
-steps of Theorem~\ref{thm:srcB}.
+steps of the Spanning Theorem (Theorem~\ref{thm:srcB}).
 
 \emph{What is proved.} Lemma~\ref{pb:covol} is proved in full (Theorem~\ref{pbv:covol}), using two
 classical facts quoted with their hypotheses: Minkowski's formula for the covolume of the ring of
@@ -15930,7 +15856,7 @@ $s_{\tau,\varrho}^{2k}$ of $\tilde z$ left over in $\Lambda$ (the factor $N^f$ o
 primes above $N$ cancels the scale $s_{\tau,\varrho}^2$ of $\tilde z$ in each row), $\pbvol(\pbvO)^{-\varrho(\varrho+k)}$
 from the $\sum_am_a$ coordinates in $E$, and $|D_E|^{\varrho/4}$ from the $\varrho$ skew coordinates.
 
-\subsection{Four short steps of Theorem~\ref{thm:srcB}}\label{pbv:ss-weak}
+\subsection{Four short steps of the Spanning Theorem}\label{pbv:ss-weak}
 
 \subsubsection*{(i) The rearrangement of the Heisenberg measures (Lemma~\ref{pfr:rearr})}
 The last step of the proof of Lemma~\ref{pfr:rearr} is the identity
@@ -16000,11 +15926,6 @@ and $\auNm c=\auNm\aubar c$ (the lemma is applied with $c=N\in\Z$). Hence every 
 being about lattices, indices and absolute norms, holds verbatim for $h$ in convention (Cv1).
 
 
-%% ===== proofs/B-bessel-expansion.tex =====
-% proofs/B-bessel-expansion.tex
-% Bessel functions, the Poincare series, and the expansion of the squares:
-% Hypothesis pb:bessel and Theorem pb:amp (X), (L1) of proofs/B-second-moment.tex.
-% Labels of this file start with pbe:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auPl}{\Phi}
 \providecommand{\auPa}{\Phi_a}
@@ -16036,7 +15957,6 @@ being about lattices, indices and absolute norms, holds verbatim for $h$ in conv
 \providecommand{\pbone}{\mathbf 1}
 \providecommand{\pbHS}[1]{\|#1\|}
 \providecommand{\pbip}[2]{\langle#1,#2\rangle}
-% macros of this file (prefix \pbe)
 \providecommand{\pbel}{\ell}
 \providecommand{\pbels}{\tilde\ell}
 \providecommand{\pbeL}{\mathsf L}
@@ -16939,10 +16859,6 @@ solutions of \eqref{pbe:eq-repro} (\S\ref{ss:au-spaces}).
 \end{enumerate}
 
 
-%% ===== proofs/B-main-term.tex =====
-% proofs/B-main-term.tex
-% The induced character (Theorem pb:est (E4)) and the main term (Theorem pb:amp (L2)).
-% Labels of this file start with pbm:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auPl}{\Phi}
 \providecommand{\auS}{\mathcal S}
@@ -16970,7 +16886,6 @@ solutions of \eqref{pbe:eq-repro} (\S\ref{ss:au-spaces}).
 \providecommand{\pbLM}{\mathrm{LM}}
 \providecommand{\pbnat}{\natural}
 \providecommand{\pbip}[2]{\langle#1,#2\rangle}
-% macros of this file (prefix \pbm)
 \providecommand{\pbmD}{\mathsf D}
 \providecommand{\pbmPhi}{\varphi}
 \providecommand{\pbmGf}{G^{\flat}}
@@ -16994,7 +16909,7 @@ solutions of \eqref{pbe:eq-repro} (\S\ref{ss:au-spaces}).
 
 \section{The induced character and the main term}\label{pbm:sec}
 
-This section concerns two of the statements to which \S\ref{pb:sec} reduced Theorem~\ref{thm:srcB}:
+This section concerns two of the statements to which \S\ref{pb:sec} reduced the Spanning Theorem (Theorem~\ref{thm:srcB}):
 the inequality \textup{(E4)} of Theorem~\ref{pb:est}, and the statement \textup{(L2)} of
 Theorem~\ref{pb:amp}. We use the notation of \S\ref{pb:ss-setting}.
 
@@ -17810,7 +17725,7 @@ $h_{c_j}^{-1}\sigma_jh_{c_j'}$ stabilises the lattice at every finite place outs
 Theorem~\ref{pbe:bessel}. \textup{(R)} is Theorem~\ref{pfr:R}, proved in \S\S\ref{pfr:sec},
 \ref{pfs:sec}, \ref{prp:sec} (its hypotheses (H0)--(H5) are checked for the Bessel functions of
 Theorem~\ref{pbe:bessel} in \S\ref{prp:sec}); \textup{(F)} and \textup{(S)} are Theorems~\ref{pff:F}
-and~\ref{pff:S}, proved in \S\S\ref{pff:sec}, \ref{pfg:sec}. \S\ref{pbm:ss-remains} describes the forms.\par\smallskip
+and~\ref{pff:S}, proved in \S\S\ref{pff:sec}, \ref{pfg:sec}. \S\ref{pbm:ss-remains} describes the forms. The proofs of these three theorems use nothing that depends on the present theorem, which serves only for the main term below.\par\smallskip
 
 \subsection{The constant of the main term}\label{pbm:ss-const}
 
@@ -17982,10 +17897,6 @@ Proposition~\ref{pfg:siegel}.
 \end{enumerate}
 
 
-%% ===== proofs/B-multiplicities.tex =====
-% proofs/B-multiplicities.tex
-% Equality of multiplicities: Proposition au:mult of sec-automorphic.tex.
-% Labels of this file start with pm:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auPl}{\Phi}
 \providecommand{\auT}{\mathcal T}
@@ -17998,7 +17909,6 @@ Proposition~\ref{pfg:siegel}.
 \providecommand{\auF}{\mathbb F}
 \providecommand{\aubar}[1]{\overline{#1}}
 \providecommand{\auf}[1]{\texttt{#1}}
-% macros of this file (prefix \pm)
 \providecommand{\pmA}{\mathcal A}
 \providecommand{\pmtr}{\operatorname{tr}}
 \providecommand{\pmvol}{\operatorname{vol}}
@@ -18117,7 +18027,7 @@ $\lambda_i>\lambda_j$, $v$ is a unit highest weight vector of its lowest $K_s$-t
 $\Lambda=\lambda+\rho_{\mathrm n}-\rho_{\mathrm c}$, and inner products are linear in the first
 variable, so that $c$ is the function $c_\lambda$ of \S\ref{pco:sec} (written there with the
 opposite convention); if $q=0$ it is the representation with character $\chi_\lambda$.
-\emph{Proof.} (a) is Remark~\ref{pm:rem-other}(1) (Theorem~\ref{pco:FJ} and Lemma~\ref{pco:decay}).
+\emph{Proof.} (a) is proved in item (1) of Remark~\ref{pm:rem-other} from Theorem~\ref{pco:FJ} and Lemma~\ref{pco:decay}, which do not depend on the present theorem; items (2) and (3) of that remark are comments made under the theorem and are not used in its proof.
 (b) is Theorem~\ref{pbr:main}, which proves it, together with the unstable form
 $d_\pi\int_{G_s}c(x^{-1}tx)\,dx=(-1)^{pq}\sum_{w\in S_p\times S_q}\operatorname{sgn}(w)t^{\kappa\circ w}
 /\prod_{\lambda_a>\lambda_b}(t_a-t_b)$, $\kappa=\lambda+\frac{n-1}2\mathbf 1$, from
@@ -18249,7 +18159,7 @@ left-invariant differential operator $D$.
 The same holds for $e$ on $G_\infty$ with $\alpha=\bigotimes\alpha_\tau$, with $\pmP(g)^{-B}$ in place
 of $\|g\|^{-B}$.
 \end{lemma}
-\begin{proof}
+\begin{proof} We begin with (c). It concerns the group alone: its proof uses neither $e_\tau$ nor Theorem~\ref{pm:arch}, and it is this part, and no other, that enters the proof of Lemma~\ref{pco:decay}, on which Theorem~\ref{pm:arch}(a) rests. Parts (a) and (b) then use Theorem~\ref{pm:arch}.
 (c) In the decomposition $G_s=K_sA^+K_s$, with $A\cong\R^{\min(p,q)}$ and coordinates
 $t_1\ge\dots\ge t_{\min(p,q)}\ge0$ on $A^+$, one has $\|kak'\|=e^{t_1}$ and the Haar measure is
 $\delta(a)\,dk\,da\,dk'$ with $\delta(a)\le e^{2\rho(\log a)}\le e^{n(n-1)t_1}$
@@ -18922,17 +18832,11 @@ split places, where $\mathcal H^M$ is commutative.) This is the form of Proposit
 \end{remark}
 
 
-%% ===== proofs/B-orbital.tex =====
-% proofs/B-orbital.tex
-% Proof of Theorem pm:arch(b) of proofs/B-multiplicities.tex: the stable sum of the elliptic
-% orbital integrals of the lowest-K-type coefficient of a discrete series of U(p,q).
-% Labels of this file start with pbr:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\aubar}[1]{\overline{#1}}
 \providecommand{\pcom}{\mathsf m}
 \providecommand{\pcoD}{\mathsf D}
 \providecommand{\pcoH}{\mathsf H}
-% macros of this file (prefix \pbr)
 \providecommand{\pbrB}{\mathsf B}
 \providecommand{\pbrN}{\mathsf N}
 \providecommand{\pbrn}{\mathfrak n}
@@ -19741,11 +19645,6 @@ noncompact roots; this is what makes $\Lambda+\pbrdc$ the leading exponent of th
 \end{remark}
 
 
-%% ===== proofs/C-determinant.tex =====
-% proofs/C-determinant.tex
-% The determinant part of Theorem C: deduction of Theorem C from its inputs, the triangle of lifts,
-% the factorisation of the chain determinant (au:factor), injectivity (au:inj), auxiliary forms
-% (au:aux). Labels of this file start with pc:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
@@ -19774,7 +19673,6 @@ noncompact roots; this is what makes $\Lambda+\pbrdc$ the leading exponent of th
 \providecommand{\psrho}{\varrho}
 \providecommand{\psvac}{\mathbf v}
 \providecommand{\psZ}{Z}
-% macros of this file
 \providecommand{\pcF}{\mathcal F}
 \providecommand{\pcG}{\mathsf G}
 \providecommand{\pcm}{\mathfrak m}
@@ -19790,9 +19688,9 @@ noncompact roots; this is what makes $\Lambda+\pbrdc$ the leading exponent of th
 \providecommand{\pcFF}{\mathfrak F}
 \providecommand{\pop}{\mathsf p}
 
-\section{The determinant of the chain of lifts: proofs for Theorem C}\label{pc:sec}
+\section{The determinant of the chain of lifts: proofs for the Covolume Theorem}\label{pc:sec}
 
-This section treats the part of Theorem~\ref{thm:srcC} that does not concern a single lift
+This section treats the part of the Covolume Theorem (Theorem~\ref{thm:srcC}) that does not concern a single lift
 $W_j\to V_j$: the deduction of the theorem from its inputs, the injectivity of the lower chain
 (Proposition~\ref{au:inj}), the factorisation of the chain determinant
 (Proposition~\ref{au:factor}) and the auxiliary forms (Proposition~\ref{au:aux}). The notation is
@@ -19825,7 +19723,7 @@ spherical Hecke algebra away from $M$).
 \S\ref{pc:ss-remains} lists where the inputs are proved and the published results on which they
 rest.
 
-\subsection{Theorem C from its inputs}\label{pc:ss-thmC}
+\subsection{The Covolume Theorem from its inputs}\label{pc:ss-thmC}
 
 We recall the rules for heights of \S\ref{ss:au-heights} in the form used.
 
@@ -19859,7 +19757,7 @@ $a$ has height at most $ntx_1$. By (R1), $\ell(\iota)\nmid\auNm Q_{\theta_\iota}
 with the exponent $-e/2$.
 \end{proof}
 
-\begin{proposition}[Theorem C from its inputs]\label{pc:C}
+\begin{proposition}[the Covolume Theorem from its inputs]\label{pc:C}
 Assume Propositions~\ref{au:inj}, \ref{au:aux}, \ref{au:factor}, \ref{au:regular}
 and~\ref{au:Zj}. Then Theorem~\ref{thm:srcC} holds: if $y_1,\dots,y_n\in\auT$ are linearly independent
 with $n\ge(1-4/b^2)\audT$, of index at most $\delta$ and covolume at most $c$ in $\auLat_D$, then
@@ -20379,7 +20277,7 @@ invariance of $\theta$ under rational points. In Weil's notation (the hermitian 
 $n$ the rank of $S$, $r$ the Witt index of $T$): Th\'eor\`eme~5 assumes condition (B) of~\cite[no.~38]{WeilSiegel},
 $m>2n+4\varepsilon-2$, i.e.\ $M'>2n$, and the absolute convergence of the theta integral; it also assumes a place $v$ with $U(0)_v\ne\emptyset$ ($U(0)$ is the set of elements of maximal rank whose associated form vanishes) and a subgroup $G'_v$ transitive on each $U(i)_v$; we take $G'=G$, which is transitive on each non-empty $U(i)$ by~\cite[no.~22, Proposition~3]{WeilSiegel}, and $v$ a place of $E^+$ split in $E$, where $T_v$ has Witt index $\lfloor M'/2\rfloor\ge n$, so that a map of rank $n$ onto a totally isotropic subspace exists; the Eisenstein series then converges
 absolutely by~\cite[Th\'eor\`eme~1]{WeilSiegel}, and the theta integral converges absolutely when $r=0$ or
-$m-r>n+2\varepsilon-1$, i.e.\ $M'-r_T>n$~\cite[Proposition~8]{WeilSiegel}, which follows from $M'>2n$ since $r_T\le M'/2$. Weil's theorems give convergence uniformly on compact sets only; the bounds by a power of the height are proved as follows. For the Eisenstein series it is Lemma~\ref{psr:Egrowth}, which needs only $M'>2n$. For anisotropic $T$, Lemma~\ref{pcx:thetagrowth} for the pair $(\pcW,T)$, with $\mathrm{ht}(h)$ bounded on a compact set of representatives of $[\auU(T)]$, gives the bound for $\int|\theta(\omega(g,h)\Phi)|\,dh$. For the product integral and any $T$ as in (SW): by the Cauchy--Schwarz inequality in $h$ it suffices to bound $\int|\theta(\omega_{\alpha,\beta}(g,h)F)|^2\,dh$ by $C\,\mathrm{ht}(g)^A$. Put $G=\omega_{\alpha,\beta}(g,1)F$; then $\omega_{\alpha,\beta}(g,h)F=\omega_{\alpha,\beta}(1,h)G$ differs from $\omega_{\auHom(S,T)}(1,h)G$ by a character of $h$ of absolute value $1$, and by (W7) and the factorisation $\theta\otimes\theta^-$ of the theta functional of $\auHom(\pcW,T)$ on pure tensors ((W1)), $\theta(\omega(1,h)\Phi_g)=|\theta(\omega_{\auHom(S,T)}(1,h)G)|^2$ for $\Phi_g=G\otimes\mathsf CG$. So $\int|\theta(\omega_{\alpha,\beta}(g,h)F)|^2\,dh=\int\theta(\omega(1,h)\Phi_g)\,dh$, an integral of a non-negative function, which converges under (i) and equals $\pcvol([\auU(T)])\sum_L\psZ_L(\Phi_g)$ by the identity. Up to a factor of absolute value $1$ (the splitting characters and the character $\lambda$ of (W7) are unitary), $\Phi_g=\omega((g,g),1)\Phi_1$ with $\Phi_1=F\otimes\mathsf CF$ and $(g,g)\in\auU(S)\times\auU(S^-)\subseteq\auU(\pcW)$. Hence the integral is at most $\pcvol([\auU(T)])\sum_L|\psZ_L(\omega((g,g),1)\Phi_1)|\le C\,\mathrm{ht}(g,g)^A=C\,\mathrm{ht}(g)^A$, by Lemma~\ref{psr:Egrowth} and the comparison of heights in the comments to Lemma~\ref{psr:SW}. (This is all that Proposition~\ref{pc:rallis} uses for isotropic $T$: absolute convergence of the theta integral, Weil's identity, the bound for $\sum_L|\psZ_L|$ in Step~1 and for the product integral in the Fubini argument of Step~2; no bound for $\int|\theta(\omega(g,h)\Phi)|\,dh$ at a general $g\in\auU(\pcW)(\auA)$ is used.) The statement is used in
+$m-r>n+2\varepsilon-1$, i.e.\ $M'-r_T>n$~\cite[Proposition~8]{WeilSiegel}, which follows from $M'>2n$ since $r_T\le M'/2$. Weil's theorems give convergence uniformly on compact sets only; the bounds by a power of the height are proved as follows. For the Eisenstein series it is Lemma~\ref{psr:Egrowth}, which needs only $M'>2n$; its proof uses of the present comments only what precedes this point, namely the translation of Weil's statements and the indexing of the terms by the Lagrangians, which rest on~\cite{WeilSiegel} and (W2) alone, so that the bounds may be deduced from it. For anisotropic $T$, Lemma~\ref{pcx:thetagrowth} for the pair $(\pcW,T)$, with $\mathrm{ht}(h)$ bounded on a compact set of representatives of $[\auU(T)]$, gives the bound for $\int|\theta(\omega(g,h)\Phi)|\,dh$. For the product integral and any $T$ as in (SW): by the Cauchy--Schwarz inequality in $h$ it suffices to bound $\int|\theta(\omega_{\alpha,\beta}(g,h)F)|^2\,dh$ by $C\,\mathrm{ht}(g)^A$. Put $G=\omega_{\alpha,\beta}(g,1)F$; then $\omega_{\alpha,\beta}(g,h)F=\omega_{\alpha,\beta}(1,h)G$ differs from $\omega_{\auHom(S,T)}(1,h)G$ by a character of $h$ of absolute value $1$, and by (W7) and the factorisation $\theta\otimes\theta^-$ of the theta functional of $\auHom(\pcW,T)$ on pure tensors ((W1)), $\theta(\omega(1,h)\Phi_g)=|\theta(\omega_{\auHom(S,T)}(1,h)G)|^2$ for $\Phi_g=G\otimes\mathsf CG$. So $\int|\theta(\omega_{\alpha,\beta}(g,h)F)|^2\,dh=\int\theta(\omega(1,h)\Phi_g)\,dh$, an integral of a non-negative function, which converges under (i) and equals $\pcvol([\auU(T)])\sum_L\psZ_L(\Phi_g)$ by the identity. Up to a factor of absolute value $1$ (the splitting characters and the character $\lambda$ of (W7) are unitary), $\Phi_g=\omega((g,g),1)\Phi_1$ with $\Phi_1=F\otimes\mathsf CF$ and $(g,g)\in\auU(S)\times\auU(S^-)\subseteq\auU(\pcW)$. Hence the integral is at most $\pcvol([\auU(T)])\sum_L|\psZ_L(\omega((g,g),1)\Phi_1)|\le C\,\mathrm{ht}(g,g)^A=C\,\mathrm{ht}(g)^A$, by Lemma~\ref{psr:Egrowth} and the comparison of heights in the last paragraph of the comments to Lemma~\ref{psr:SW}, an elementary computation with frames that does not use (SW). (This is all that Proposition~\ref{pc:rallis} uses for isotropic $T$: absolute convergence of the theta integral, Weil's identity, the bound for $\sum_L|\psZ_L|$ in Step~1 and for the product integral in the Fubini argument of Step~2; no bound for $\int|\theta(\omega(g,h)\Phi)|\,dh$ at a general $g\in\auU(\pcW)(\auA)$ is used.) The statement is used in
 this section with $M'=6n$ (Proposition~\ref{pc:rallis}) and elsewhere with a definite $T$ of rank
 $M'>2n$ (Lemma~\ref{psr:SW}, Proposition~\ref{pex:rallis}, \S\ref{pgy:sec}).
 \end{proof}
@@ -20420,7 +20318,7 @@ Then $\int_C\psrho(i_z)\Phi\,dz=0$ (a finite sum), and $\psZ_L(\Phi)=\pcvol(C)^{
 
 (b) For $\Delta=L_1=\{(s,-s)\}$, $I_\Delta(\auA)$ consists of the maps $(s,s')\mapsto x(s+s')$,
 that is, of the pairs $(x,x)$, and the Heisenberg operator of $(x,x)$ on the tensor product is
-$\psrho(x)\otimes\psrho^-(x)$. So by (W2) and (W7),
+$\psrho(x)\otimes\psrho^-(x)$. So by (W2) and by (W7) of Lemma~\ref{pc:SW},
 $\psZ_\Delta(\psrho(x)F\otimes\mathsf C\psrho(x)F')=\psZ_\Delta(F\otimes\mathsf CF')$ for all $x$:
 the sesquilinear form $(F',F)\mapsto\psZ_\Delta(F\otimes\mathsf CF')$ is invariant under the
 Heisenberg group. As the Heisenberg representation is irreducible, it is a multiple $c'$ of the
@@ -20460,7 +20358,7 @@ matrices: if $\Psi(\bar x)\ne0$ then $A\bar x$ is invertible. So is the componen
 $\omega_\alpha(g)F$ for every $g\in\auU(S)(\auA)$, since by (W5) $\omega_\alpha(g)$ acts at $v$
 through $x\mapsto xg_v$ up to a scalar, and $xg_v$ is injective when $x$ is. The theta functional of
 $\auHom(\pcW,T)$ is $\theta\otimes\theta^-$ on pure tensors (it is invariant under the rational
-vectors; (W1)). For $g,g'\in\auU(S)(\auA)$ and $h\in\auU(T)(\auA)$, by (W7) and since
+vectors; (W1)). For $g,g'\in\auU(S)(\auA)$ and $h\in\auU(T)(\auA)$, by (W7) of Lemma~\ref{pc:SW} and since
 $|\beta(\det h)|=1$,
 \[
 \theta(\omega_{\alpha,\beta}(g,h)F)\,\aubar{\theta(\omega_{\alpha,\beta}(g',h)F)}=\theta_{\auHom(\pcW,
@@ -21108,7 +21006,7 @@ all spaces are definite, the lifts are algebraic lifts by jets, whose kernels ar
 bounded denominator, which gives (a); the size bounds give (b). Pairing with delta forms reads the
 values (Proposition~\ref{pgr:delta}).
 
-\subsection{Where the inputs of Theorem~C are proved}\label{pc:ss-remains}
+\subsection{Where the inputs of the Covolume Theorem are proved}\label{pc:ss-remains}
 
 Proposition~\ref{pc:C} deduces Theorem~\ref{thm:srcC} from Propositions~\ref{au:inj}, \ref{au:aux},
 \ref{au:factor}, \ref{au:regular} and~\ref{au:Zj}. In this section, Proposition~\ref{au:inj} is proved from
@@ -21137,11 +21035,6 @@ identity, and the injectivity of the chain follows from the commutation relation
 Proposition~\ref{pc:tri-inj}, without any information on the constants of the squares.
 
 
-%% ===== proofs/C-onelift.tex =====
-% proofs/C-onelift.tex
-% Propositions au:onelift and au:hecke of sec-automorphic.tex: the comparison operator, false lifts,
-% Hecke values. To be \input after the A-files (it uses pl:ss-norm, pl:ss-wa, pl:ss-transfer,
-% pk:ss-branch). Labels of this file start with po:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auU}{\mathrm U}
@@ -21167,7 +21060,6 @@ Proposition~\ref{pc:tri-inj}, without any information on the constants of the sq
 \providecommand{\pao}{\mathfrak o}
 \providecommand{\plone}{\mathbf 1}
 \providecommand{\plgb}[2]{\|#2\|_{#1}}
-% macros of this file (prefix \po)
 \providecommand{\poA}{\mathcal A}
 \providecommand{\poZ}{\mathcal Z}
 \providecommand{\poT}{\mathbb T}
@@ -21216,7 +21108,7 @@ Two definitions of \S\ref{ss:au-proofC} have to be made precise for the statemen
 meaning (false lifts; the clause of (R3) on main pairs); this is done in
 Definitions~\ref{po:false}, \ref{po:denom} and~\ref{po:R3}. With these, Propositions~\ref{au:onelift}
 and~\ref{au:hecke} hold as stated, and the
-proofs of Proposition~\ref{au:Zj} and of Theorem~\ref{thm:srcC} are unchanged.
+proofs of Proposition~\ref{au:Zj} and of the Covolume Theorem (Theorem~\ref{thm:srcC}) are unchanged.
 
 \subsubsection{The lift $W\to V$: definitions and standing facts}\label{po:ss-set}
 
@@ -22331,10 +22223,6 @@ The operator is bounded directly from \eqref{po:eq-rankone}, and $n_{\mathrm{Aut
 Lemma~\ref{po:naut}.
 
 
-%% ===== proofs/C-congruences.tex =====
-% proofs/C-congruences.tex
-% Regular families of twists: Proposition au:regular.
-% Labels of this file start with pg:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
@@ -22353,7 +22241,6 @@ Lemma~\ref{po:naut}.
 \providecommand{\aubud}{\mathrm{bud}}
 \providecommand{\aubar}[1]{\overline{#1}}
 \providecommand{\auf}[1]{\texttt{#1}}
-% macros of this file (prefix \pg)
 \providecommand{\pgZb}{\overline{\Z}_\ell}
 \providecommand{\pgv}{v}
 \providecommand{\pgNch}{N_{\mathrm{ch}}}
@@ -22957,7 +22844,7 @@ maximal ideal. Lemma~\ref{pg:burnside} gives (M4) with $g=\phi^r$,
 $\pgcyc(g)=p_i^{\,r}$. For (M3): the places above $p_0p_1$ are the chosen places and their conjugates. At a chosen
 $v\nmid\ell$ the eigenvalues of $R(\gamma_v)$ are, by (G4), the images of the roots of the
 rescaled label: roots of unity $\omega\ne1$ of order dividing $p_i^r-1$ (not $1$ because the
-rescaled labels do not have the root $1$; see the proof of Theorem~\ref{pg:main}). By (M1),
+rescaled labels do not have the root $1$: this follows from the definition of a good family alone, by the computation in part (c) of the proof of Theorem~\ref{pg:main}, which uses neither that theorem nor the present one). By (M1),
 $R(g^c)$ is conjugate to $\chi(g)^{t-1}\,{}^{\mathrm t}R(g)^{-1}$, so $R(\gamma_v^{-c})$ has the
 same eigenvalues as $R(\gamma_v)$; this treats the conjugate places. If
 $\pgv(\omega-1)>0$ then $\omega$ has order a power $\ell^a>1$ of $\ell$, so
@@ -23553,11 +23440,6 @@ Proposition~\ref{pg:odd} (Proposition~\ref{pod:odd}); see \S\ref{pri:ss-summary}
 
 
 
-%% ===== proofs/C-selmer.tex =====
-% proofs/C-selmer.tex
-% Completion of the twisting theorem (Theorem pg:II): the dual of a tied
-% Selmer group, the step of the descent, the auxiliary primes, and the systems of the L-values.
-% Labels of this file start with pse:. Macros as in Section pg (prefix \pg, \au).
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auNm}{\operatorname{Nm}}
 \providecommand{\auU}{\mathrm U}
@@ -23575,7 +23457,6 @@ Proposition~\ref{pg:odd} (Proposition~\ref{pod:odd}); see \S\ref{pri:ss-summary}
 \providecommand{\pgHom}{\operatorname{Hom}}
 \providecommand{\pgS}{S_{\mathrm{bad}}}
 \providecommand{\pgcyc}{\varepsilon_\ell}
-% macros of this file (prefix \pse)
 \providecommand{\pseinv}{\operatorname{inv}}
 \providecommand{\pseev}{\operatorname{ev}}
 \providecommand{\pseCl}{\mathrm{Cl}}
@@ -24174,11 +24055,6 @@ is Proposition~\ref{pse:A}.
 
 
 
-%% ===== proofs/C-ribet.tex =====
-% proofs/C-ribet.tex
-% From Selmer bounds to denominators: Theorem pg:III, except the local loss (Proposition pg:loss,
-% used as stated in Proposition pri:loss below).
-% Labels of this file start with pri:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -24200,7 +24076,6 @@ is Proposition~\ref{pse:A}.
 \providecommand{\pgpr}{\operatorname{pr}}
 \providecommand{\pgcyc}{\varepsilon_\ell}
 \providecommand{\pgS}{S_{\mathrm{bad}}}
-% macros of this file (prefix \pri)
 \providecommand{\priFitt}{\operatorname{Fitt}}
 \providecommand{\prilen}{\operatorname{len}}
 \providecommand{\prirl}{\operatorname{rl}}
@@ -24753,8 +24628,8 @@ $w=-(g-1)\in\priAug$ (computed through the coordinates $z$), so $f$ is a common 
 \end{proof}
 
 \begin{remark}
-The paragraphs ``The characters'' and ``Gluing'' are written in full in \S\ref{prm:ss-chars}
-(Lemmas~\ref{prm:tied}--\ref{prm:coeff}, Propositions~\ref{prm:block}, \ref{prm:chars}). The passage
+The proof is written in two places, in this order. The paragraphs ``Generators'' and ``The block'' are given above in full. The paragraphs ``The characters'' and ``Gluing'' are given above in outline and are written in full in \S\ref{prm:ss-chars}
+(Lemmas~\ref{prm:tied}--\ref{prm:coeff}, Propositions~\ref{prm:block}, \ref{prm:chars}); that text takes from the present proof the notation of ``Generators'', the matrix $B_0$ of ``The block'' and the identity $\det(1-u_x(g))=\det u_x(w)$ of the last sentence, and nothing from the two paragraphs that it replaces. The passage
 from coefficients modulo $\ell^M$ to $K/\auO$ in (5) is Lemma~\ref{pri:divisible}.
 \end{remark}
 
@@ -25253,9 +25128,6 @@ and Lemma~\ref{pri:amitsur} as Proposition~\ref{pax:amitsur}.
 
 
 
-%% ===== proofs/C-localloss.tex =====
-% proofs/C-localloss.tex
-% The local loss: Proposition pg:loss. Labels of this file start with pll:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\panot}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
@@ -25264,7 +25136,6 @@ and Lemma~\ref{pri:amitsur} as Proposition~\ref{pax:amitsur}.
 \providecommand{\pgcyc}{\varepsilon_\ell}
 \providecommand{\pglen}{\operatorname{len}}
 \providecommand{\pgHom}{\operatorname{Hom}}
-% macros of this file (prefix \pll)
 \providecommand{\pllZf}{Z_f}
 \providecommand{\pllperp}{\perp}
 \providecommand{\pllrk}{\operatorname{rk}}
@@ -25594,7 +25465,7 @@ $\mu=\lfloor\pllrk(L_c)m/(kx_c)\rfloor$.
 Theorem~\ref{pll:exponent} is proved in \S\ref{pki:ss-deduce} (proof following
 Theorem~\ref{pki:crys}) from Propositions~\ref{pki:generic}--\ref{pki:data}, which are proved in
 \S\S\ref{pkc:sec}, \ref{pkd:sec} and \ref{pkj:sec} from \S\S\ref{pkp:sec}--\ref{pkw:sec}; the
-dependency chain is recorded at the end of \S\ref{pki:ss-arch}. No published theorem is used in
+dependency chain is recorded at the end of \S\ref{pki:ss-arch}. What that proof takes from \S\ref{pg:sec} and from the present section (the definitions, Lemma~\ref{pll:exp}, and the description of the summands and of the classes $\mathcal C_v$) does not depend on the theorem. No published theorem is used in
 place of this argument (Remark~\ref{pki:rem-published}).
 
 \begin{remark}[Proof of \eqref{pll:eq-place} from Theorem~\ref{pll:exponent}]\label{pll:status}
@@ -25627,11 +25498,6 @@ r'+1\le2r'$. Hence the double sum is at most $2f\cdot2r'\cdot\pllD_\ell=r'\cdot4
 
 
 
-%% ===== proofs/C-galois.tex =====
-% proofs/C-galois.tex
-% The inputs of Theorem pg:I (main summands exist): the properties (G1)--(G5) of Galois
-% representations, statements (L) and (C) on theta lifts, condition (M5), the two normalisations.
-% Labels of this file start with pga:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\auG}{\overline G}
@@ -25647,7 +25513,6 @@ r'+1\le2r'$. Hence the double sum is at most $2f\cdot2r'\cdot\pllD_\ell=r'\cdot4
 \providecommand{\pgFrob}{\operatorname{Frob}}
 \providecommand{\pgcyc}{\varepsilon_\ell}
 \providecommand{\pgNch}{N_{\mathrm{ch}}}
-% macros of this file (prefix \pga)
 \providecommand{\pgarec}{\operatorname{rec}}
 \providecommand{\pgaWD}{\operatorname{WD}}
 \providecommand{\pgaInd}{\operatorname{Ind}}
@@ -26395,11 +26260,6 @@ in Theorem~\ref{pg:I}. Proposition~\ref{au:mult} is used in the proof of Theorem
 not in Theorem~\ref{pg:I}.
 
 
-%% ===== proofs/B-discrete-series.tex =====
-% proofs/B-discrete-series.tex
-% The discrete series coefficient at a real place: Theorem pbe:ds of proofs/B-bessel-expansion.tex,
-% the chamber of the discrete series, the bound for kappa_tau, and the two definitions of A_0.
-% Labels of this file start with pds:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auPl}{\Phi}
 \providecommand{\auAz}{\mathcal A_0}
@@ -26414,7 +26274,6 @@ not in Theorem~\ref{pg:I}.
 \providecommand{\pbeq}{\mathsf q}
 \providecommand{\pbW}{\mathbb W}
 \providecommand{\pbel}{\ell}
-% macros of this file (prefix \pds)
 \providecommand{\pdsK}{\mathbf K}
 \providecommand{\pdsg}{\mathfrak g}
 \providecommand{\pdsk}{\mathfrak k}
@@ -26882,10 +26741,6 @@ from Corollary~\ref{pbr:degree} \textup{(}Proposition~\ref{pds:haar}, Propositio
 Theorem~\ref{pco:FJ}. Published results used: Schur orthogonality and the value of the Casimir operator on a discrete series.
 
 
-%% ===== proofs/B-pillars.tex =====
-% proofs/B-pillars.tex
-% Theorem pbe:pillars of proofs/B-bessel-expansion.tex: cell ranks (R), size (S), gain (G),
-% count (C). Labels of this file start with ppi:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auNm}{\operatorname{Nm}}
 \providecommand{\auA}{\mathbb A}
@@ -26903,7 +26758,6 @@ Theorem~\ref{pco:FJ}. Published results used: Schur orthogonality and the value 
 \providecommand{\pbeGs}{\Gamma^*}
 \providecommand{\pbeAp}{A^{+}}
 \providecommand{\pbeCL}{\mathrm{CL}}
-% macros of this file (prefix \ppi)
 \providecommand{\ppiF}{\mathsf F}
 \providecommand{\ppiLc}{\Lambda^{X}_{c}}
 \providecommand{\ppidisc}{\operatorname{disc}}
@@ -27248,10 +27102,6 @@ over an agreeing block, as required by (G) and (C), and the sum in (S) runs over
 \end{proof}
 
 
-%% ===== proofs/B-period.tex =====
-% proofs/B-period.tex
-% Proof of (DS4) of Theorem pbe:ds: the lower bound for the local Bessel period of the discrete
-% series coefficient at a stationary point. Labels of this file start with pbp:.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\aubar}[1]{\overline{#1}}
 \providecommand{\pbvol}{\operatorname{vol}}
@@ -27264,7 +27114,6 @@ over an agreeing block, as required by (G) and (C), and the sum in (S) runs over
 \providecommand{\pdsm}{m}
 \providecommand{\pdsHS}[1]{\|#1\|_{2}}
 \providecommand{\pcoD}{\mathsf D}
-% macros of this file (prefix \pbp)
 \providecommand{\pbpF}[1]{\|#1\|_{\mathrm F}}
 \providecommand{\pbptr}{\operatorname{tr}}
 \providecommand{\pbpct}{\operatorname{ct}}
@@ -28148,10 +27997,6 @@ Lemma~\ref{pbp:W}. Published results used: Schwarz's lemma (Witt's theorem is pr
 the rest is proved here or in \S\S\ref{pco:sec}, \ref{pds:sec}.
 
 
-%% ===== proofs/B-gain.tex =====
-% proofs/B-gain.tex
-% Statement (G') of proofs/B-pillars.tex (Proposition ppi:G): torsion index times discriminant of
-% the common parts. Labels of this file start with pbg:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auNm}{\operatorname{Nm}}
 \providecommand{\auA}{\mathbb A}
@@ -28161,7 +28006,6 @@ the rest is proved here or in \S\S\ref{pco:sec}, \ref{pds:sec}.
 \providecommand{\pbeCL}{\mathrm{CL}}
 \providecommand{\ppiLc}{\Lambda^{X}_{c}}
 \providecommand{\ppidisc}{\operatorname{disc}}
-% macros of this file (prefix \pgn)
 \providecommand{\pgnD}{\mathfrak d}
 \providecommand{\pgnd}{\operatorname{d}}
 \providecommand{\pgnN}{\mathrm N}
@@ -28769,10 +28613,6 @@ so $\gamma A=h_ck_\gamma A$ and $\gamma(h_cL\cap A)=h_ck_\gamma(L\cap A)$.
 \end{proof}
 
 
-%% ===== proofs/B-count.tex =====
-% proofs/B-count.tex
-% Statements (C1) and (C2) of Proposition ppi:C (proofs/B-pillars.tex): the count of near terms over
-% one lattice, and the sum over the lattices of a given corank. Labels of this file start with pbc:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auNm}{\operatorname{Nm}}
 \providecommand{\auA}{\mathbb A}
@@ -28785,7 +28625,6 @@ so $\gamma A=h_ck_\gamma A$ and $\gamma(h_cL\cap A)=h_ck_\gamma(L\cap A)$.
 \providecommand{\pbel}{\ell}
 \providecommand{\ppiLc}{\Lambda^{X}_{c}}
 \providecommand{\ppidisc}{\operatorname{disc}}
-% macros of this file (prefix \pbc)
 \providecommand{\pbcD}{\mathfrak D}
 \providecommand{\pbcB}{\mathcal B}
 \providecommand{\pbcadj}{\operatorname{adj}}
@@ -29394,10 +29233,6 @@ number of places $\tau$, as in the rest of the paper.)
 \end{remark}
 
 
-%% ===== proofs/B-size.tex =====
-% proofs/B-size.tex
-% Statement (S) (size) of Theorem ppi:pillars of proofs/B-pillars.tex: the bound of one block of
-% amplitudes by the sizes of its near orbits. Labels of this file start with pbs:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auNm}{\operatorname{Nm}}
 \providecommand{\auA}{\mathbb A}
@@ -29418,7 +29253,6 @@ number of places $\tau$, as in the rest of the paper.)
 \providecommand{\pbeAp}{A^{+}}
 \providecommand{\pbel}{\ell}
 \providecommand{\pbeL}{\mathsf L}
-% macros of this file (prefix \pbs)
 \providecommand{\pbsv}{\mathsf v}
 \providecommand{\pbsK}{\mathsf K}
 \providecommand{\pbsF}{\mathcal F}
@@ -30486,10 +30320,6 @@ of $\pbeN(c,c')\cap T\cap\Gamma_{c,s,c'}$ (they lie in $\pbeGs$, are near and ch
 $\mathsf S_{j(\gamma)}(\mathsf G_{j(\gamma)}(\gamma))=\pbesz(\gamma)$ by \S\ref{pbs:ss-statement}. \qed
 
 
-%% ===== proofs/B-opencell.tex =====
-% proofs/B-opencell.tex
-% Statement (O1) of proofs/B-size.tex (the open-cell pairing bound for the cut Bessel functions).
-% Labels of this file start with pbo:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\aubar}[1]{\overline{#1}}
 \providecommand{\pbeq}{\mathsf q}
@@ -30501,7 +30331,6 @@ $\mathsf S_{j(\gamma)}(\mathsf G_{j(\gamma)}(\gamma))=\pbesz(\gamma)$ by \S\ref{
 \providecommand{\pbsth}{\theta_\square}
 \providecommand{\pbsK}{\mathsf K}
 \providecommand{\pbsp}{\mathsf p}
-% macros of this file (prefix \pbo)
 \providecommand{\pboZ}{\mathsf Z}
 \providecommand{\pboF}{\mathsf F}
 \providecommand{\pboFd}{\mathsf F'}
@@ -30881,8 +30710,8 @@ the columns $\tilde e_a,x_i$ (orthonormal, $h$-orthogonal to $\pboF$), are exact
 \mathsf J_1X=\pboF^*\mathsf J_1(\tilde e^*_a)$; writing such a tuple as $u_q(\tilde e^*+\tilde e\,T/2)$
 with $T$ its Gram matrix, Lebesgue measure is $dp=2^{-\varrho}dT\,dq$ (translate the $\tilde e$-part
 by the $q$-dependent quadratic term and split a complex matrix into hermitian and skew-hermitian parts,
-which costs $2^{-\varrho}$ in the diagonal; this is the computation \eqref{pbo:eq-dual} below with
-$k=0$). So (a) applies with $\nu=2^{-\varrho}du^0$. For the last $k$ vectors the stabiliser is $H$,
+which costs $2^{-\varrho}$ in the diagonal; this proves the formula, which is quoted from here in \eqref{pbo:eq-dual} below for the
+first $\varrho$ vectors). So (a) applies with $\nu=2^{-\varrho}du^0$. For the last $k$ vectors the stabiliser is $H$,
 and the image of $\frac{\pboV(k)}{2^k}dh$ under $h\mapsto(hx_i)$ is the fibre measure of $X\mapsto
 (X^*X)$ on $k$-tuples of $X_0$ over $1$ (\textup{(GF)} for $\mathrm U(k)$); tuples of $Y_\tau$
 orthogonal to the first $2\varrho+1$ vectors are tuples in $X_0$, and the linear part of the map costs
@@ -30926,7 +30755,7 @@ dp=2^{-\varrho}\,\mathsf m_k(1+T'_{\varrho\varrho})\,dT'\,ds,\qquad\mathsf m_k(t
 \end{equation}
 where $\mathsf m_k(t)$ is the mass of the sphere $\{\|x\|^2=t\}$ of $\C^k$ for $dx/d\|x\|^2$ (polar
 coordinates: $dx=\mathsf m_k(t)\,dt\,dh$ with $dh$ of mass one), and the factor $2^{-\varrho}$ comes from
-the first $\varrho$ vectors. The substitution $E=E'Z$ multiplies $dp$ by $|\det Z|^{2(\varrho+k)}$ and
+the first $\varrho$ vectors, by the formula $dp=2^{-\varrho}dT\,dq$ established in the proof of Lemma~\ref{pbo:append}(b). The substitution $E=E'Z$ multiplies $dp$ by $|\det Z|^{2(\varrho+k)}$ and
 $T=Z^*T'Z$ multiplies $dT'$ by $|\det Z|^{-2n}$; so on the tuples over $Z$,
 \[
 dp_E=|\det Z|^{2(k-1)}2^{-\varrho}\mathsf m_k\bigl(1+((Z^{-1})^*TZ^{-1})_{\varrho\varrho}\bigr)\,dT\,ds .
@@ -31324,16 +31153,10 @@ the numbers $-\kappa(\tau)-a\Delta$ with $|\kappa(\tau)|\le b$, $1\le a\le m\le2
 \end{itemize}
 
 
-%% ===== proofs/B-frames-real.tex =====
-% proofs/B-frames-real.tex
-% The local theory of two frames (shared by the real and the finite places) and the sieve system at
-% a real place: Theorem pbm:inputs (R).
-% Labels of this file start with pfr:.
 \providecommand{\panot}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
 \providecommand{\pbdeg}{\operatorname{deg}}
 \providecommand{\pbvol}{\operatorname{vol}}
 \providecommand{\pbmTh}{\Theta}
-% macros of this file (prefix \pfr)
 \providecommand{\pfrG}{\mathsf G}
 \providecommand{\pfrH}{\mathsf H}
 \providecommand{\pfrU}{\mathsf U}
@@ -32759,11 +32582,6 @@ definition.
 \end{proof}
 
 
-%% ===== proofs/B-frames-shared.tex =====
-% proofs/B-frames-shared.tex
-% The shared estimates of the local theory of two frames: the one-frame bound (Theorem pfr:oneframe)
-% and the gains from a frequency and from two heads (Theorems pfr:gain-char, pfr:gain-heads).
-% Labels of this file start with pfs:. It continues proofs/B-frames-real.tex (labels pfr:).
 \providecommand{\panot}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
 \providecommand{\pbvol}{\operatorname{vol}}
 \providecommand{\pfrG}{\mathsf G}
@@ -32783,7 +32601,6 @@ definition.
 \providecommand{\pfrkap}{\kappa}
 \providecommand{\pfrN}{\mathsf N}
 \providecommand{\pfrip}[2]{\langle#1,#2\rangle}
-% macros of this file (prefix \pfs)
 \providecommand{\pfsA}{\mathsf A}
 \providecommand{\pfsBall}{\mathcal B}
 \providecommand{\pfscm}{\operatorname{cm}}
@@ -33612,11 +33429,6 @@ K\,\mathsf Q(x)$.
 
 
 
-%% ===== proofs/B-frames-realplace.tex =====
-% proofs/B-frames-realplace.tex
-% The seven real-place statements of B-frames-real (pfr:haar, pfr:realgauge, pfr:conv, pfr:top,
-% pfr:formbound, pfr:remote, pfr:deepreal), and the check of the hypotheses (H1)--(H5).
-% Labels of this file start with prp:.
 \providecommand{\panot}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
 \providecommand{\pbdeg}{\operatorname{deg}}
 \providecommand{\pbvol}{\operatorname{vol}}
@@ -33639,7 +33451,6 @@ K\,\mathsf Q(x)$.
 \providecommand{\pfrX}{\Xi}
 \providecommand{\pfrip}[2]{\langle#1,#2\rangle}
 \providecommand{\pfrell}{\ell}
-% macros of this file (prefix \prp)
 \providecommand{\prpD}{\mathsf D}
 \providecommand{\prpvolU}[1]{\pbvol\auU(#1)}
 \providecommand{\prpdens}{\mathsf h}
@@ -34308,10 +34119,6 @@ Theorem~\ref{pbe:ds}, with \textup{(DS4)} = Theorem~\ref{pbp:main}), the Schur r
 used as standard facts.
 
 
-%% ===== proofs/B-frames-finite.tex =====
-% proofs/B-frames-finite.tex
-% The local systems at the finite places and Siegel's step: parts (F) and (S) of
-% Theorem pbm:inputs. Labels of this file start with pff:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auPl}{\Phi}
 \providecommand{\auU}{\mathrm U}
@@ -34340,7 +34147,6 @@ used as standard facts.
 \providecommand{\pbmaS}{\mathsf a_*}
 \providecommand{\pbmrS}{\mathsf r_*}
 \providecommand{\pbmcG}{c_G}
-% macros of this file (prefix \pff)
 \providecommand{\pffET}{E_T}
 \providecommand{\pffOT}{\auO_T}
 \providecommand{\pfgOh}{\auO_{\mathrm h}}
@@ -35598,10 +35404,6 @@ theorem (Proposition~\ref{pfg:siegel}). The published results used are Theorem~\
 (in the form of Lemma~\ref{pbp:tb-witt}) and the Smith normal form.
 
 
-%% ===== proofs/B-frames-finite2.tex =====
-% proofs/B-frames-finite2.tex
-% The finite places, second part: the open points of B-frames-finite (two gauges, the counts (G4),
-% (G5), the fibre measures and the step function, Siegel's formula). Labels of this file start with pfg:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auA}{\mathbb A}
 \providecommand{\auU}{\mathrm U}
@@ -35629,7 +35431,6 @@ theorem (Proposition~\ref{pfg:siegel}). The published results used are Theorem~\
 \providecommand{\pfrdep}{\operatorname{dp}}
 \providecommand{\pfrip}[2]{\langle#1,#2\rangle}
 \providecommand{\pbmXp}{X^{+}}
-% macros of this file (prefix \pfg)
 \providecommand{\pfgH}{\mathrm{Herm}_T}
 \providecommand{\pfgS}{\mathrm{Skew}_T}
 \providecommand{\pfgOh}{\auO_{\mathrm h}}
@@ -36553,12 +36354,6 @@ through Lemma~\ref{pb:massratio} and \cite{GHY} in \S\ref{pff:ss-siegel} is not 
 \end{remark}
 
 
-%% ===== proofs/C-exchange.tex =====
-% proofs/C-exchange.tex
-% The exchange identity (Theorem pc:X of C-determinant.tex): statement in the convention of
-% \S pc:ss-data, dictionary of splittings, non-vanishing of the constant, architecture of the proof,
-% and its proof. Labels of this file start with pcx:.
-% Macros: those of C-determinant.tex (\auU, \auA, \auNm, \pcm, \pcR, \pcMat, \psvac, ...).
 \providecommand{\pcxH}{\mathbb H}
 \providecommand{\pcxstr}{\mathrm{r}}
 \providecommand{\pcxc}{\mathfrak c}
@@ -37897,11 +37692,6 @@ Lemma~\ref{pcx:const} and Propositions~\ref{pcx:P-descent}, \ref{pcx:P-plane}, \
 dependencies of Theorem~\ref{pcx:X} is \S\ref{pcu:ss-final}.
 
 
-%% ===== proofs/C-exchange-top.tex =====
-% proofs/C-exchange-top.tex
-% Continuation of C-exchange.tex: real vectors with prescribed zero term (Proposition pcx:P-slice),
-% the large triple (Proposition pcx:P-top), the deduction of pcx:P-std, and the list of what
-% Theorem pcx:X depends on. Labels of this file start with pcu:. Macros: those of C-exchange.tex.
 \providecommand{\pcuS}{\mathsf S}
 \providecommand{\pcuF}{\mathcal F}
 
@@ -39452,11 +39242,6 @@ Thus Theorem~\ref{pcx:X}, with absolutely convergent integrals, rests on the pro
 the published results listed in \S\S\ref{pct:ss-status}, \ref{pcn:ss-dep}.
 
 
-%% ===== proofs/C-exchange-tower.tex =====
-% proofs/C-exchange-tower.tex
-% The plane constant term of theta integrals on standard data and what rests on it:
-% Lemma pcx:const, Propositions pcx:P-plane, pcx:P-descent, pcx:P-nonvan of C-exchange.tex.
-% Labels of this file start with pct:. Macros: those of C-exchange.tex and C-determinant.tex.
 \providecommand{\pctN}{\mathsf N}
 \providecommand{\pctP}{\mathsf P}
 \providecommand{\pctL}{\mathcal L}
@@ -40536,12 +40321,6 @@ mixed model on smooth vectors, invariant distributions and adapted charts are pr
 \ref{pcn:local}; see also Reed--Simon~\cite[Appendix to \S V.3, Lemma~2 and Thm.~V.13]{ReedSimonI} for Hermite expansions).
 
 
-%% ===== proofs/C-exchange-neg.tex =====
-% proofs/C-exchange-neg.tex
-% Proof of Lemma pct:negcoeff of C-exchange-tower.tex: centre coefficients of the theta integral
-% vanish at indices that are not negative definite at some real place.
-% Labels of this file start with pcn:. Macros: those of C-exchange.tex, C-exchange-top.tex and
-% C-exchange-tower.tex.
 \providecommand{\pcnK}{\mathsf K}
 \providecommand{\pcnC}{\mathsf C}
 \providecommand{\pcnS}{\mathsf S}
@@ -41231,11 +41010,6 @@ one-parameter unitary groups; the inverse function theorem; reduction theory (R1
 listed in \S\ref{pct:ss-status}, and the ones just listed).
 
 
-%% ===== proofs/C-triangle.tex =====
-% proofs/C-triangle.tex
-% Archimedean types at the nodes of the triangle (Lemma pc:arch for the pairs of the triangle) and
-% the analytic steps (ii), (iii) of Theorem pc:tri. Labels of this file start with ptr:.
-% Only amsmath/amssymb/amsthm are used. Conventions and macros: proofs/C-determinant.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auPl}{\Phi}
 \providecommand{\auHom}{\operatorname{Hom}}
@@ -41561,9 +41335,9 @@ $e_S=\overline{e_{i+1,n}}$, $e_T=\overline{e_{i,n+1}}$, so it maps forms of type
 $\overline{e_T}=e_{i,n+1}$ to forms of type $\overline{e_S}=e_{i+1,n}$. Rapid decay in (A1) of
 Lemma~\ref{pc:arch} is (c), and in the form used below it reads: on a Siegel set
 $\mathfrak S_\infty\mathsf cK'$ every such form is bounded by $C_N\|g_\infty\|^{-N}$ for every $N$.
-(The steps of the proofs of Theorem~\ref{par:A3} and Proposition~\ref{pz:types} referred to in (a)--(d)
-are gone through one by one, for an arbitrary pair of standard spaces satisfying the block rule, in
-Steps 0--4 of the proof of Theorem~\ref{pgv:G3}; for the present pairs the excess is $t$ and the
+This completes the proof. (The steps of the proofs of Theorem~\ref{par:A3} and Proposition~\ref{pz:types} referred to in (a)--(d)
+are also written out one by one, for an arbitrary pair of standard spaces satisfying the block rule, in
+Steps 0--4 of the proof of Theorem~\ref{pgv:G3}, which use neither the present theorem nor anything deduced from it; for the present pairs the excess is $t$ and the
 properties used there are Proposition~\ref{ptr:match} and Lemma~\ref{ptr:gap}.)
 \end{proof}
 
@@ -41950,11 +41724,6 @@ by (F) (Theorem~\ref{ptq:F}). So $\langle\Phi,\mathsf P\Phi\rangle=d_\lambda\int
 
 
 
-%% ===== proofs/C-triangle2.tex =====
-% proofs/C-triangle2.tex
-% Continuation of proofs/C-triangle.tex (labels ptr:): the positivity (F) of Fock coefficients and
-% the smoothing lemma (H) (Howe's argument). Labels of this file start with ptq:.
-% Only amsmath/amssymb/amsthm are used. Conventions and macros: proofs/C-triangle.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auHom}{\operatorname{Hom}}
 \providecommand{\pzF}{\mathfrak F}
@@ -42481,13 +42250,6 @@ and the published results (D1)--(D5), (W1$_\infty$), (W2$_\infty$), (M), (S).
 
 
 
-%% ===== proofs/C-triangle3.tex =====
-% proofs/C-triangle3.tex
-% Continuation of proofs/C-triangle.tex (ptr:) and proofs/C-triangle2.tex (ptq:): the embedding of
-% F_s in the Fock space, the characters of the descents, the reduction of the adjoint law
-% (Theorem pc:tri(c)) to the square law of the reversed squares, and the final check of
-% Lemma pc:arch and Theorem pc:tri. Labels of this file start with ptv:.
-% Only amsmath/amssymb/amsthm are used. Conventions and macros: proofs/C-triangle.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auHom}{\operatorname{Hom}}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -43176,14 +42938,6 @@ $[x,a']^-=\aubar{[x,a']}$; elsewhere it maps the vacuum to a multiple of the vac
 
 
 
-%% ===== proofs/C-triangle4.tex =====
-% proofs/C-triangle4.tex
-% Continuation of proofs/C-triangle.tex (ptr:), C-triangle2.tex (ptq:), C-triangle3.tex (ptv:):
-% Howe's argument with rows and columns exchanged, the smoothing lemma (H) for the reversed pairs,
-% the characters of the reversed kernels, and the reversed square law (RS) of \S\ref{ptv:ss-RS};
-% then the edge hypothesis (E1) for the grid squares and the check of (A2) for the pairs (W_j,V_j).
-% Labels of this file start with ptw:. Only amsmath/amssymb/amsthm are used.
-% Conventions and macros: proofs/C-triangle.tex, C-triangle3.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auHom}{\operatorname{Hom}}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -43881,7 +43635,7 @@ $\langle u,\int e_{\rho_j}(x)\rho_j(x)\hat P\,dx\rangle=d\int\aubar{\langle\hat 
 \langle u,\rho_j(x)\hat P\rangle\,dx=\langle u,\hat P\rangle$; both vectors lie in the space of $\rho_j$, so
 they are equal.
 
-(c) Convergence, boundedness and invariance are shown in Proposition~\ref{ptv:arch}. With $L_h$ as
+(c) Convergence, boundedness and invariance are shown in the proof of Proposition~\ref{ptv:arch}, which uses of the present proposition only parts (a) and (b), proved above without it. With $L_h$ as
 in the proof of Lemma~\ref{ptr:conv-lift} ($L_h$ continuous on $\pzF_s$,
 $L_h(\sigma'(x)\Psi)=L_{hx}(\Psi)$), $R(e_{\rho_j})F(h)=\int e_{\rho_j}(x)L_h(\sigma'(x)P_j)\,dx=
 L_h(\int e_{\rho_j}(x)\sigma'(x)P_j\,dx)=L_h(P_j)=F(h)$ by (b). The last assertion: if $R(e_\pi)F=F$ for
@@ -43913,12 +43667,6 @@ Theorem~\ref{pgv:G3}(d), so Theorems~\ref{ptr:edge} and~\ref{ptq:H} suffice ther
 forms of this section are not needed.
 
 
-%% ===== proofs/C-grid.tex =====
-% proofs/C-grid.tex
-% Theorem pc:auxcore (integral and short lifts through the second grid): architecture, the
-% combinatorics of paths through two grids, transfer of periods along turns, and the deduction of
-% pc:auxcore (a), (b), (c) from the intermediate propositions. Labels start with pgr:.
-% Conventions and macros: those of proofs/C-determinant.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auAut}{\operatorname{Aut}}
 \providecommand{\auNm}{\operatorname{Nm}}
@@ -44619,11 +44367,6 @@ and the published results named in \S\S\ref{ptr:sec}--\ref{ptw:sec} and \S\S\ref
 
 
 
-%% ===== proofs/C-grid2.tex =====
-% proofs/C-grid2.tex
-% Continuation of proofs/C-grid.tex (labels pgr:): proofs of the open propositions pgr:delta and
-% pgr:short (= pc:auxcore(c)). Labels start with pgs:. Conventions and macros: those of
-% proofs/C-grid.tex and proofs/C-determinant.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auAut}{\operatorname{Aut}}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -45001,11 +44744,6 @@ $\tilde\lambda$ at each place we use the explicit bound $x^{19}b$ (Lemma~\ref{pg
 
 
 
-%% ===== proofs/C-grid3.tex =====
-% proofs/C-grid3.tex
-% Continuation of proofs/C-grid.tex (pgr:) and proofs/C-grid2.tex (pgs:): the turn on the
-% diagonal, Proposition pgr:turndiag. Labels start with pgu:. Conventions and macros: those of
-% proofs/C-grid.tex and proofs/C-determinant.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auU}{\mathrm U}
@@ -45600,11 +45338,6 @@ does not depend on $x$. By Lemma~\ref{pgu:see1} applied to $\Xi/c_{jj}$, $\Psi'\
 
 
 
-%% ===== proofs/C-grid4.tex =====
-% proofs/C-grid4.tex
-% Continuation of proofs/C-grid.tex (pgr:), C-grid2.tex (pgs:), C-grid3.tex (pgu:): the complete
-% definition of the two grids, the facts (G1)--(G4) of \S pgu:ss-data, and Proposition pgr:square.
-% Labels start with pgv:. Conventions and macros: those of proofs/C-grid.tex and C-determinant.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auU}{\mathrm U}
@@ -45750,7 +45483,7 @@ of type }e_q\}\quad\text{if }(p,q)\text{ is a right edge},
 T_X=\Theta^{\mathsf t}_{\alpha_{pq},\beta_{pq}}(P_{pq},\delta_X)\colon\{\text{forms of type }e_q\}\to
 \{\text{forms of type }e_p\}\quad\text{if }(p,q)\text{ is an up edge}.
 \]
-That these maps are defined and take values as stated is Theorem~\ref{pgv:G3}(d).
+That these maps are defined and take values as stated is Theorem~\ref{pgv:G3}(d). The definition is thus made in two stages. The characters and the kernels are defined here outright, and the proof of Theorem~\ref{pgv:G3} uses nothing else of this definition; the polynomial $P_{pq}$ and the moves are defined once parts (a) and (d) of that theorem are proved, and they are not used before.
 \end{definition}
 
 \noindent So $\pgvwt\alpha_{pq}=-\kappa_{l+1}+\lfloor\frac{N_q+1-c}2\rfloor$ and $\pgvwt\beta_{pq}=
@@ -46127,9 +45860,9 @@ parameters at $\tau$ fixed before Proposition~\ref{pgv:match}; $e_S$, $e_T$ are 
 \S\ref{ptr:ss-edge} ($e_S=e_p$, $e_T=e_q$ for a right edge, $e_S=\overline{e_p}$, $e_T=\overline{e_q}$
 for an up edge: in both cases the conjugate of $e_S$ has parameter $\lambda$ and $e_T$ has parameter
 $\lambda'$), and $\sigma=\omega_{\alpha,\beta,\infty}(\cdot,1)$, $\sigma'=\omega_{\alpha,\beta,\infty}(1,\cdot)$
-at $\tau$. The proof follows that of Theorem~\ref{ptr:edge}, which is the proof of
-Theorem~\ref{par:A3} and of Proposition~\ref{pz:types} for the pair $(Y_j,Y_{j+1})$; we go through its
-steps and say for each what it uses.
+at $\tau$. The argument is parallel to that of Theorem~\ref{ptr:edge}: both carry over the proofs of
+Theorem~\ref{par:A3} and of Proposition~\ref{pz:types} for the pair $(Y_j,Y_{j+1})$. It is given here in full and does not use Theorem~\ref{ptr:edge}: we go through the
+steps of those two proofs and say for each what it uses.
 
 \emph{Step 0: the derived action.} Theorem~\ref{pco:V} is stated for $W=\auHom(Y_j,Y_{j+1})$ at $\tau$,
 but Steps 1--3 of its proof concern $W=\auHom(V,V')$ for arbitrary nondegenerate hermitian spaces
@@ -46371,11 +46104,6 @@ Proposition~\ref{pgv:match}.
 
 
 
-%% ===== proofs/C-grid5.tex =====
-% proofs/C-grid5.tex
-% Continuation of proofs/C-grid.tex (pgr:), C-grid2.tex (pgs:), C-grid3.tex (pgu:), C-grid4.tex
-% (pgv:): the first path (Proposition pgr:first) and the last path (Proposition pgr:last).
-% Labels start with pgw:. Conventions and macros: those of proofs/C-grid.tex and C-determinant.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auU}{\mathrm U}
@@ -46944,11 +46672,6 @@ the representation of the type at $(z,a,m)$, but this is not needed.)
 
 
 
-%% ===== proofs/C-grid6.tex =====
-% proofs/C-grid6.tex
-% Continuation of proofs/C-grid.tex (pgr:), C-grid2.tex (pgs:), C-grid3.tex (pgu:), C-grid4.tex
-% (pgv:): the line reversal without the unit assumption on alpha, the caveat on (G1), and
-% Proposition pgr:den. Labels start with pgx:. Conventions and macros: those of proofs/C-grid3.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auU}{\mathrm U}
@@ -47042,7 +46765,7 @@ measures product measures.
 The idele $\alpha$ enters the data at a split place in three ways: through the frames (coordinates
 $x$), through the coordinates $T$ of (N5) (\S\ref{pl:ss-norm}), and through the coordinates $a^{-1}x$
 of Definition~\ref{pgx:conv}. The following lemma fixes one coordinate and gives the dictionary; all
-data at split places in the proof of Theorem~C are written in it.
+data at split places in the proof of the Covolume Theorem are written in it.
 
 \begin{lemma}[The normalised coordinates]\label{pgx:dict}
 Let $a$ be the idele of \S\ref{ps:ss-weil}, $S,T$ spaces of ranks $N,N'$, $v=w\aubar w$ a place of
@@ -47385,7 +47108,7 @@ $\alpha$ at the primes of $\pcm$.
 Definition~\ref{pgx:conv} changes the data only at primes $w\mid\pcm$ with $\alpha_w$ not a unit; by
 Proposition~\ref{pgv:alpha} these lie above $q_1$, and they occur only for moduli containing primes of
 $Q_\vartheta$ above $q_1$ (the moduli of the grids, and $\pcm_\vartheta$ of \S\ref{pc:ss-data}). We
-list the places where the proof of Theorem~C uses the data at such primes.
+list the places where the proof of the Covolume Theorem uses the data at such primes.
 \begin{enumerate}
 \item \S\ref{pc:ss-data}, definition of $\Psi^\natural$ and of the norm: this is
 Definition~\ref{pgx:conv}. With data supported on the integral matrices the identity $\mathbf
@@ -47433,7 +47156,7 @@ explained in \S\ref{pcx:ss-flip}. These statements hold with the data of Definit
 Proposition~\ref{pgv:alpha}: the data are those of Definition~\ref{pgx:conv}, and the diagonal period is
 that of Definition~\ref{pgv:def-period}.
 \end{enumerate}
-No other step of the proof of Theorem~C uses the integral matrices at a prime of a modulus as a vacuum
+No other step of the proof of the Covolume Theorem uses the integral matrices at a prime of a modulus as a vacuum
 lattice.
 
 \subsection{The identification (G1) in the seesaw steps}\label{pgx:ss-G1}
@@ -47488,10 +47211,6 @@ Proposition~\ref{pgv:G1}.
 
 
 
-%% ===== proofs/C-grid7.tex =====
-% proofs/C-grid7.tex
-% Continuation of proofs/C-grid.tex ... C-grid6.tex: the inputs (I) and (P) of Theorem pgw:first.
-% Labels start with pgy:. Conventions and macros: those of proofs/C-grid5.tex and C-determinant.tex.
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auO}{\mathcal O}
@@ -47926,11 +47645,6 @@ $\pcm$; both are cases of Proposition~\ref{pgy:P}.
 
 
 
-%% ===== proofs/C-grid8.tex =====
-% proofs/C-grid8.tex
-% Continuation of proofs/C-grid.tex (pgr:), C-grid2.tex (pgs:), C-grid4.tex (pgv:), C-grid5.tex
-% (pgw:), C-grid6.tex (pgx:): Proposition pgr:den (denominators and conjugates on the last path).
-% Labels start with pgz:. Conventions and macros: those of proofs/C-grid5.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auU}{\mathrm U}
@@ -48479,10 +48193,6 @@ $x^{28}b^2+x^{20}b^2+x^{100}b^2\le x^{200}b^2$.
 
 
 
-%% ===== proofs/C-grid9.tex =====
-% proofs/C-grid9.tex
-% Input (V) of proofs/C-grid5.tex (deep-level vanishing by Poincare series).
-% Labels start with pgq:. Conventions and macros: those of proofs/C-grid5.tex and C-grid4.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auA}{\mathbb A}
@@ -48925,10 +48635,6 @@ $\lambda(x)<\theta$ and by Lemma~\ref{pgq:bulk} otherwise. Hence $S\le S/2$, $S=
 
 
 
-%% ===== proofs/C-grid10.tex =====
-% proofs/C-grid10.tex
-% Continuation of proofs/C-grid8.tex (pgz:): the size bounds (B1)--(B3) of \S\ref{pgz:ss-b}.
-% Labels start with pgt:. Conventions and macros: those of proofs/C-grid8.tex.
 \providecommand{\auI}{\mathcal I}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auU}{\mathrm U}
@@ -49310,10 +49016,6 @@ Lemma~\ref{ps:monomial} as in Step~3 of the proof of Proposition~\ref{au:kernel}
 
 
 
-%% ===== proofs/C-grid11.tex =====
-% proofs/C-grid11.tex
-% Inputs (C) and (Q) of proofs/C-grid9.tex (Section pgq:ss-inputs). Labels start with pgk:.
-% Conventions and macros: those of proofs/C-grid9.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auA}{\mathbb A}
@@ -49673,10 +49375,6 @@ irreducible unitary and admissible (Remark~\ref{pm:rem-other}(1),(3)).
 
 
 
-%% ===== proofs/C-grid12.tex =====
-% proofs/C-grid12.tex
-% Input (S) of proofs/C-grid9.tex (the restriction pairing), proved by Laplace's method.
-% Labels start with pgl:. Conventions and macros: those of proofs/C-grid9.tex and B-period.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\aubar}[1]{\overline{#1}}
 \providecommand{\pgqvol}{\operatorname{vol}}
@@ -49971,11 +49669,6 @@ $V<\infty$, $V_\tau\le V\le16\beta^{16D^2}I\le\beta^{20D^2}I=\beta_{\mathsf S}^{
 
 
 
-%% ===== proofs/C-grid13.tex =====
-% proofs/C-grid13.tex
-% The coefficient lemmas of B-period.tex / B-discrete-series.tex in arbitrary rank, as used by
-% proofs/C-grid12.tex (pgl:), and the two coordinate facts taken from pgq:steep.
-% Labels start with pgm:. Conventions and macros: those of proofs/C-grid12.tex and B-period.tex.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\aubar}[1]{\overline{#1}}
 \providecommand{\pdsK}{\mathbf K}
@@ -50359,11 +50052,6 @@ Theorem~\ref{pgl:S} holds as stated, with $\beta_{\mathsf S}=b^{3m}$ and $N_{\ma
 
 
 
-%% ===== proofs/C-exchanges3.tex =====
-% proofs/C-exchanges3.tex
-% Proposition po:rallis (the norm of the lift of a character from U(1) to U(2z) is an L-value, for
-% every tame character of modulus Q), statement (IM) of C-selmer.tex for z >= 2 and for z = 1. To be \input after C-determinant.tex,
-% C-exchange.tex and C-onelift.tex. Labels of this file start with pex:. Only amsmath/amssymb/amsthm.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -50381,7 +50069,6 @@ Theorem~\ref{pgl:S} holds as stated, with $\beta_{\mathsf S}=b^{3m}$ and $N_{\ma
 \providecommand{\psHS}{\mathcal S}
 \providecommand{\pao}{\mathfrak o}
 \providecommand{\psvac}{{\phi^{\mathrm{vac}}}}
-% macros of this file (prefix \pex)
 \providecommand{\pexK}{K^{(z)}}
 \providecommand{\pexmc}{\mathfrak c}
 \providecommand{\pexMat}{\mathrm M}
@@ -50937,13 +50624,6 @@ splitting part cancels), $|a|=1$. Hence $|\Lambda(\vartheta')|^2=|1-aq_v^{-1}|^2
 
 
 
-%% ===== proofs/C-threeex.tex =====
-% proofs/C-threeex.tex
-% Proposition po:exchange of C-onelift.tex (three exchanges): the exchange identity with explicit
-% determinant data (a corollary of Theorem pcx:X), one exchange summed over classes, the carrier,
-% the third exchange, its left side as the theta series of the first factors, and the proof of
-% po:exchange. To be \input after C-exchange.tex, C-onelift.tex and C-exchanges3.tex.
-% Labels of this file start with pte:. Only amsmath/amssymb/amsthm.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -50964,7 +50644,6 @@ splitting part cancels), $|a|=1$. Hence $|\Lambda(\vartheta')|^2=|1-aq_v^{-1}|^2
 \providecommand{\psHS}{\mathcal H}
 \providecommand{\poA}{\mathcal A}
 \providecommand{\pog}{\mathsf g}
-% macros of this file (prefix \pte)
 \providecommand{\pteSD}{\mathrm{SD}}
 \providecommand{\pteMP}{\mathrm{MP}}
 \providecommand{\pteCS}{\mathop{\textstyle\sum^{\mathrm{cl}}}}
@@ -51704,12 +51383,6 @@ matrices $s_i$ of \S\ref{po:ss-glue} are the $\Lambda_i$.
 \end{remark}
 
 
-%% ===== proofs/C-threeex2.tex =====
-% proofs/C-threeex2.tex
-% Complete proofs of the steps of proofs/C-threeex.tex (labels pte:) that were only sketched there:
-% the negation lemma, the archimedean action formulas of the explicit exchange, the first factors and
-% the character bookkeeping on V''. To be \input after C-threeex.tex. Labels start with ptf:.
-% Only amsmath/amssymb/amsthm.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -52321,12 +51994,6 @@ to $J'_{\vartheta,i}$ is the character of Proposition~\ref{ptf:ff}(b), and Propo
 definition of \S\ref{po:ss-glue} unchanged.
 
 
-%% ===== proofs/C-lifts.tex =====
-% proofs/C-lifts.tex
-% Statements of the one-lift block of Theorem C (proofs/C-onelift.tex, labels po:):
-% Lemma po:classes, statement (L4); Lemmas plf:KS, plf:I used in C-firstfactors.tex.
-% Propositions po:periods and po:span are NOT treated in this file (see the last subsection).
-% To be \input after C-onelift.tex. Labels of this file start with plf:. Only amsmath/amssymb/amsthm.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -52810,11 +52477,6 @@ integrality and size (Lemma~\ref{po:ff}) are proved in \S\ref{pfq:sec} (Theorem~
 
 
 
-%% ===== proofs/C-periods.tex =====
-% proofs/C-periods.tex
-% Proposition po:periods of proofs/C-onelift.tex: periods of false lifts vanish.
-% To be \input after C-onelift.tex and C-lifts.tex. Labels of this file start with ppe:.
-% Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -52830,7 +52492,6 @@ integrality and size (Lemma~\ref{po:ff}) are proved in \S\ref{pfq:sec} (Theorem~
 \providecommand{\poZ}{\mathcal Z}
 \providecommand{\pop}{\mathsf p}
 \providecommand{\pog}{\mathsf g}
-% macros of this file (prefix \ppe)
 \providecommand{\ppeD}{\mathcal D}
 \providecommand{\ppeVan}{\mathrm{Van}}
 \providecommand{\ppeS}{\mathcal S}
@@ -53528,9 +53189,6 @@ replaced by step (3).
 \end{remark}
 
 
-%% ===== proofs/C-span.tex =====
-% proofs/C-span.tex
-% Proposition po:span (products span). Labels of this file start with psp:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -53541,7 +53199,6 @@ replaced by step (3).
 \providecommand{\poA}{\mathcal A}
 \providecommand{\pcMat}{\mathrm M}
 \providecommand{\psvac}{{\phi^{\mathrm{vac}}}}
-% macros of this file (prefix \psp)
 \providecommand{\pspF}{\mathfrak F}
 \providecommand{\pspl}{\lambda}
 \providecommand{\pspn}{n_*}
@@ -54114,7 +53771,7 @@ Lemma~\ref{psp:int} gives
 \subsubsection{Proof of Proposition~\ref{psp:main}}\label{psp:ss-proof}
 
 Suppose $y\ne0$ and let $\Phi=\aubar y$, a bounded continuous non-zero function on $\auU(W)(\auA)$
-(cuspidal, hence bounded), holomorphic of the weight $u$ of (H4). It is right invariant under the
+(cuspidal, hence bounded), holomorphic of the weight $u$ of (H4); here and below (P), (H1)--(H5) and (R) are the inputs listed in Proposition~\ref{psp:inputs}. It is right invariant under the
 principal congruence subgroup of level $\pi_M$ (the level of $\poA(W_j)$, \S\ref{po:ss-set}), which
 contains that of level $p=\pm M\sqrt{-d}$ (sign as in Remark~\ref{psq:Papp}); $\aubar p=-p$ and $0<\Iml\tau(p)=M\sqrt d\le b^{22}x^{12}\le
 b^{23}$ ((S5)). By (P) with $A=5b$, $A'=b^{23}$, every peak $x$ of $\Phi$ has $\pspl(W,x)\ge
@@ -54141,10 +53798,6 @@ Proposition~\ref{psp:inputs}, proved in \S\ref{psq:sec}--\S\ref{psv:sec} (Theore
 the injectivity of $\Theta^\circ$ in (G2) of Proposition~\ref{po:glue} holds (Remark~\ref{psv:G2}).
 
 
-%% ===== proofs/C-span2.tex =====
-% proofs/C-span2.tex
-% Inputs of Proposition psp:inputs (C-span.tex). To be \input after C-span.tex.
-% Labels of this file start with psq:. Only amsmath/amssymb/amsthm.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -54154,7 +53807,6 @@ the injectivity of $\Theta^\circ$ in (G2) of Proposition~\ref{po:glue} holds (Re
 \providecommand{\pspl}{\lambda}
 \providecommand{\pspG}{G_\infty}
 \providecommand{\pspip}[2]{\langle #1,#2\rangle}
-% macros of this file (prefix \psq)
 \providecommand{\psqH}{\mathfrak H}
 
 \subsection{Inputs for products span}\label{psq:sec}
@@ -54606,11 +54258,6 @@ Fubini, $\int\phi\aubar{\mathsf m_u}=\int\psi\,\aubar{\mathsf m_u}=\phi(1)\int|\
 
 
 
-%% ===== proofs/C-span3.tex =====
-% proofs/C-span3.tex
-% Input (R) of Proposition psp:inputs (C-span.tex): the stable-range reproducing formula.
-% To be \input after C-span.tex and C-span2.tex. Labels of this file start with psr:.
-% Only amsmath/amssymb/amsthm.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -54621,7 +54268,6 @@ Fubini, $\int\phi\aubar{\mathsf m_u}=\int\psi\,\aubar{\mathsf m_u}=\phi(1)\int|\
 \providecommand{\pcMat}{\mathrm M}
 \providecommand{\psvac}{{\phi^{\mathrm{vac}}}}
 \providecommand{\psZ}{Z}
-% macros of this file (prefix \psr)
 \providecommand{\psrR}{\mathcal R}
 \providecommand{\psrmc}{\mathsf{mc}}
 \providecommand{\psrm}{\mathfrak m}
@@ -54888,7 +54534,7 @@ because $|\theta(\omega(g,h)\Phi)|$ is, uniformly for $h$ in a compact set of re
 growth of theta functions, Lemma~\ref{pcx:thetagrowth}). (ii): the Eisenstein series at the point attached to $M'$ converges
 absolutely for $M'>2n$~\cite[Th\'eor\`eme~1]{WeilSiegel}, and $\sum_L|\psZ_L(\omega(g,1)\Phi)|$ is bounded by a
 power of the height of $g$ by Lemma~\ref{psr:Egrowth} below. The identification of the terms
-with the Lagrangians is as in the comments on Lemma~\ref{pc:SW}.
+with the Lagrangians is as in the comments on Lemma~\ref{pc:SW}; that part of the comments rests on~\cite{WeilSiegel} alone and comes before the bounds by powers of the height, which are deduced there from Lemma~\ref{psr:Egrowth}.
 
 What the applications use is only this: in Step~1 of Proposition~\ref{psr:rallis} (and of
 Proposition~\ref{pc:rallis}), the bound of $\sum_\delta|k(g'^{-1}\delta g)|$ by a power of the heights of
@@ -55113,11 +54759,6 @@ through Corollary~\ref{psr:vanish}; the constant $A$ is not computed.
 
 
 
-%% ===== proofs/C-span4.tex =====
-% proofs/C-span4.tex
-% Holomorphic polynomial Fock vectors; the inputs (H5), part of (H4), and the hypotheses (a), (b)
-% of Theorem psr:R in its applications. To be \input after C-span.tex, C-span2.tex, C-span3.tex.
-% Labels of this file start with pss:. Only amsmath/amssymb/amsthm.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auHom}{\operatorname{Hom}}
@@ -55126,7 +54767,6 @@ through Corollary~\ref{psr:vanish}; the constant $A$ is not computed.
 \providecommand{\pspG}{G_\infty}
 \providecommand{\pspm}{\mathsf m}
 \providecommand{\pcMat}{\mathrm M}
-% macros of this file (prefix \pss)
 \providecommand{\pssg}{\mathfrak g}
 \providecommand{\pop}{\mathsf p}
 
@@ -55466,13 +55106,6 @@ point datum of Theorem~\ref{psr:R} (Proposition~\ref{psv:datum}). All inputs of 
 thereby proved (Theorem~\ref{psv:main}).
 
 
-%% ===== proofs/C-span5.tex =====
-% proofs/C-span5.tex
-% The remaining inputs of products span: hypothesis (c) and the datum of K° for Theorem psr:R,
-% the input (H4) for conj(y) and the F_i with the bounds on the weights, the character split in
-% Lemma psp:step1, and the conclusion psp:main = po:span. To be \input after C-span.tex,
-% C-span2.tex, C-span3.tex, C-span4.tex. Labels of this file start with psv:.
-% Only amsmath/amssymb/amsthm.
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auHom}{\operatorname{Hom}}
@@ -55485,7 +55118,6 @@ thereby proved (Theorem~\ref{psv:main}).
 \providecommand{\pcMat}{\mathrm M}
 \providecommand{\pop}{\mathsf p}
 \providecommand{\pssg}{\mathfrak g}
-% macros of this file (prefix \psv)
 \providecommand{\psvmu}{\mu}
 \providecommand{\pcm}{\mathfrak m}
 \providecommand{\auO}{\mathcal O}
@@ -56009,13 +55641,6 @@ Lemma~\ref{po:Hpos} (absolute convergence for $z\ge2$, Hecke's theorem on the li
 \end{remark}
 
 
-%% ===== proofs/C-firstfactors.tex =====
-% proofs/C-firstfactors.tex
-% The first factors of the one-lift group: integrality (I1) and size (I2) for the first factors for
-% which the exchange identity is proved; and the tame parts at the chosen places (the characters
-% omega, chi_M, mu^flat, mu_j^0), with the strengthened existence lemma for characters of U(1).
-% To be \input after C-onelift.tex, C-lifts.tex, C-threeex.tex, C-threeex2.tex.
-% Labels start with pfq:. Only amsmath/amssymb/amsthm.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -56518,12 +56143,6 @@ trivial on $\mu_E$ (\S\ref{ss:au-spaces}) is Lemma~\ref{pfq:mu} with $c_\tau=0$ 
 \end{remark}
 
 
-%% ===== proofs/C-small.tex =====
-% proofs/C-small.tex
-% Proposition po:small of proofs/C-onelift.tex (a test form whose pairing has least valuation):
-% the exact statement, its use in po:mainheight and au:hecke, and the proof of its core, the
-% sharpness of the count (part (i) of the note to po:small). To be \input after A-divisibility,
-% A-final and C-onelift. Labels of this file start with psm:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auAut}{\operatorname{Aut}}
@@ -56544,7 +56163,6 @@ trivial on $\mu_E$ (\S\ref{ss:au-spaces}) is Lemma~\ref{pfq:mu} with $c_\tau=0$ 
 \providecommand{\psvac}{\mathbf v}
 \providecommand{\psrho}{\varrho}
 \providecommand{\ancl}{\operatorname{cl}}
-% macros of this file (prefix \psm)
 \providecommand{\psmval}{\operatorname{val}}
 \providecommand{\psmR}{R}
 \providecommand{\psmns}{n_\sharp}
@@ -57214,11 +56832,6 @@ first term of the bound $\exp(fmb/k+3x^{35})$.
 
 
 
-%% ===== proofs/C-small2.tex =====
-% proofs/C-small2.tex
-% Continuation of proofs/C-small.tex: proof of the four inputs (I1)--(I4) of the block
-% Section C-small2.
-% A-closure and C-small. Labels of this file start with pst:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auA}{\mathbb A}
 \providecommand{\auPl}{\Phi}
@@ -57554,11 +57167,6 @@ Theorem~\ref{psm:attained} holds unconditionally.
 
 
 
-%% ===== proofs/C-small3.tex =====
-% proofs/C-small3.tex
-% Parts (ii)--(iv) of Proposition po:small (the test form) and Proposition po:arch (the untwisted
-% norm at all conjugates). To be \input after C-onelift, C-small, C-small2, C-exchanges3, C-periods.
-% Labels of this file start with psu:. Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -57581,7 +57189,6 @@ Theorem~\ref{psm:attained} holds unconditionally.
 \providecommand{\pop}{\mathsf p}
 \providecommand{\pog}{\mathsf g}
 \providecommand{\pexK}{K^{(z)}}
-% macros of this file (prefix \psu)
 \providecommand{\psuC}{\mathcal C}
 \providecommand{\psuT}{\mathsf T}
 \providecommand{\psuN}{\mathsf N}
@@ -58172,12 +57779,6 @@ Lemma~\ref{psu:sizes}. Hence the family has height at most $\alpha$.
 
 
 
-%% ===== proofs/C-conj.tex =====
-% proofs/C-conj.tex
-% The law of Galois conjugation (CL) of the norms of the lifts of characters, used in the proof of
-% Theorem psu:arch (= Proposition po:arch). To be \input after C-onelift, C-small, C-small2,
-% C-exchanges3, C-periods, C-small3. Labels of this file start with pcj:.
-% Only amsmath/amssymb/amsthm are used.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auU}{\mathrm U}
 \providecommand{\auHom}{\operatorname{Hom}}
@@ -58192,7 +57793,6 @@ Lemma~\ref{psu:sizes}. Hence the family has height at most $\alpha$.
 \providecommand{\psHS}{\mathcal H}
 \providecommand{\poA}{\mathcal A}
 \providecommand{\pop}{\mathsf p}
-% macros of this file (prefix \pcj)
 \providecommand{\pcjT}{\operatorname{T}}
 \providecommand{\pcjJ}{\mathrm J}
 \providecommand{\pcjB}{\mathsf B}
@@ -58819,16 +58419,12 @@ the multiplier of the Weil representation on scalars, which would need the expli
 
 
 
-%% ===== proofs/C-kisin.tex =====
-% proofs/C-kisin.tex
-% The explicit cup exponents: Theorem pll:exponent. Labels start with pki:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pglen}{\operatorname{len}}
 \providecommand{\pllZf}{Z_f}
 \providecommand{\pllrk}{\operatorname{rk}}
 \providecommand{\plldef}{\delta^{\vee}}
-% macros of this file (prefix \pki)
 \providecommand{\pkiWin}{\operatorname{Win}}
 \providecommand{\pkiC}{\mathcal C}
 \providecommand{\pkilog}{\operatorname{lg}}
@@ -59164,14 +58760,9 @@ $u_x$, whose restrictions to $D_v$ lie in $\mathcal C_v$ by Proposition~\ref{pri
 \end{remark}
 
 
-%% ===== proofs/C-kisin-pairing.tex =====
-% proofs/C-kisin-pairing.tex
-% The engine for Theorem pll:exponent: Kummer charts, letters, safe moves and the pairing lemma.
-% Labels start with pkp:. Conventions and macros as in proofs/C-kisin.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\panot}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
-% macros of this file (prefix \pkp)
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
 \providecommand{\pkpW}{W(C^\flat)}
 \providecommand{\pkpm}{W(\mathfrak m^\flat)}
@@ -59418,7 +59009,7 @@ residue field of $K$). Conversely an element fixing $\Lambda$ and $\pi$ fixes $K
 $\pi$, hence $K=K_0(\pi)$ ($K/K_0$ is totally ramified, generated by $\pi$). Write $\pi^e=-\ell v$ with
 $v\in O_K^\times$; $\theta$ maps $\mathfrak S$ onto $O_K$ ($\Lambda\to W(\mathbb F_{\ell^f})$, $z\mapsto\pi$),
 so choose $A\in\mathfrak S$ with $\theta(A)=v^{-1}$; $A$ is a unit of the local ring $\mathfrak S$, and
-$\theta(z^eA+\ell)=0$. That $E=z^eA+\ell$ generates $\ker\theta$ is Corollary~\ref{pkn:E-gen}.
+$\theta(z^eA+\ell)=0$. That $E=z^eA+\ell$ generates $\ker\theta$ is Corollary~\ref{pkn:E-gen}, whose proof uses of the present one only the equality $\theta(E)=0$ just obtained.
 If $e=1$ and $\pi=-\ell$, $v=1$ and we may take $A=1$, $E=z+\ell$.
 
 The last property. Fix $l\ge0$ and $\zeta_{\ell^n}$ with $\varepsilon=(\zeta_{\ell^n}\bmod\ell)_n$.
@@ -59715,10 +59306,6 @@ stops at the required depth, and the cokernel killers, are the case-specific inp
 \end{remark}
 
 
-%% ===== proofs/C-kisin-modules.tex =====
-% proofs/C-kisin-modules.tex
-% Global walk, stops at plain cuts, improved orders and the cokernel killers, on top of
-% proofs/C-kisin-pairing.tex. Labels start with pkm:. Conventions and macros as in C-kisin-pairing.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
@@ -59727,7 +59314,6 @@ stops at the required depth, and the cokernel killers, are the case-specific inp
 \providecommand{\pkpM}{M_m}
 \providecommand{\pkpsm}{\mathrm{Sm}_m}
 \providecommand{\pkpAmb}{\mathbb A}
-% macros of this file (prefix \pkm)
 \providecommand{\pkmJ}[3]{J^{#1}_{#2}(#3)}
 \providecommand{\pkmI}[2]{I_{#1}(#2)}
 \providecommand{\pkmv}{v_\ell}
@@ -60305,10 +59891,6 @@ Lemma~\ref{pkp:tau}(i), (iv), (v) are Proposition~\ref{pkt:tau-i}, Lemmas~\ref{p
 \ref{pkt:tau-v}.
 
 
-%% ===== proofs/C-kisin-inputs.tex =====
-% proofs/C-kisin-inputs.tex
-% Inputs of the theory of the modules N for proofs/C-kisin-modules.tex. Labels start with pkn:.
-% Conventions and macros as in C-kisin-pairing.tex and C-kisin-modules.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\panot}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
@@ -60316,7 +59898,6 @@ Lemma~\ref{pkp:tau}(i), (iv), (v) are Proposition~\ref{pkt:tau-i}, Lemmas~\ref{p
 \providecommand{\pkpW}{W(C^\flat)}
 \providecommand{\pkpm}{W(\mathfrak m^\flat)}
 \providecommand{\pkpAmb}{\mathbb A}
-% macros of this file (prefix \pkn)
 \providecommand{\pknMinf}{\mathfrak M_{\mathrm{inf}}}
 \providecommand{\pknK}{\mathcal K_0}
 \providecommand{\pknBp}{B^+_{\mathrm{dR}}}
@@ -60743,10 +60324,6 @@ and (H) (in the form stated in \S\ref{pkl:sec}), (F), (R), (D), (C)(d), (G$_0$) 
 Proposition~\ref{pki:chart} in \S\ref{pkj:sec}.
 
 
-%% ===== proofs/C-kisin-frame.tex =====
-% proofs/C-kisin-frame.tex
-% Existence of a frame (Definition pkn:def-frame) for every lattice with jump sets.
-% Labels start with pkf:. Conventions and macros as in C-kisin-pairing.tex, C-kisin-inputs.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
@@ -60754,7 +60331,6 @@ Proposition~\ref{pki:chart} in \S\ref{pkj:sec}.
 \providecommand{\pkpAmb}{\mathbb A}
 \providecommand{\pknBp}{B^+_{\mathrm{dR}}}
 \providecommand{\pknB}{B_{\mathrm{dR}}}
-% macros of this file (prefix \pkf)
 \providecommand{\pkfAm}{A_{\max}}
 \providecommand{\pkfAo}{A_{\max}^{\circ}}
 \providecommand{\pkfBp}{B^+}
@@ -61424,10 +61000,6 @@ $\varphi(Q)=v^aQB$ and $\ell\nmid\det B$, and the Galois relation $g(Z)=ZG_g$. T
 \end{remark}
 
 
-%% ===== proofs/C-kisin-rings.tex =====
-% proofs/C-kisin-rings.tex
-% Proofs of the ring inputs (A1)--(A8) and of (P4).
-% Labels start with pkr:. Conventions and macros as in C-kisin-frame.tex, C-kisin-inputs.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
@@ -61438,7 +61010,6 @@ $\varphi(Q)=v^aQB$ and $\ell\nmid\det B$, and the Galois relation $g(Z)=ZG_g$. T
 \providecommand{\pkfBp}{B^+}
 \providecommand{\pkfBm}{B_{\max}}
 \providecommand{\pkfSB}{\mathfrak S_B}
-% macros of this file (prefix \pkr)
 \providecommand{\pkrI}{(\ell,E)}
 \providecommand{\pkrm}{\mathfrak n}
 
@@ -61957,10 +61528,6 @@ statement (P4) are proved; the existence of frames (Theorem~\ref{pkf:main}) ther
 (P1)--(P3), (P5), (P6) and the standard facts (W1)--(W4).
 
 
-%% ===== proofs/C-kisin-lattices.tex =====
-% proofs/C-kisin-lattices.tex
-% The remaining items of Lemma pkm:inputs: (H) (second and third assertions), (F), (D),
-% (C)(d), (R), (G). Labels start with pkl:. Conventions and macros as in C-kisin-inputs.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
@@ -61973,7 +61540,6 @@ statement (P4) are proved; the existence of frames (Theorem~\ref{pkf:main}) ther
 \providecommand{\pkfBp}{B^+}
 \providecommand{\pkfBm}{B_{\max}}
 \providecommand{\pkfSB}{\mathfrak S_B}
-% macros of this file (prefix \pkl)
 \providecommand{\pklAN}{\pkpA\mathcal N}
 \providecommand{\pklL}{\pkpA\otimes L}
 \providecommand{\pklstd}{\mathrm{std}}
@@ -62539,10 +62105,6 @@ $E^{4a}s_j$ in $\pkfBp$. By Lemma~\ref{pkl:cancel}, $s_j=z\tau s'_j$ with $s'_j\
 \end{proof}
 
 
-%% ===== proofs/C-kisin-tau.tex =====
-% proofs/C-kisin-tau.tex
-% Orders add; Lemma pkp:tau (i),(iv),(v); the case inputs (I1) and (I3).
-% Labels start with pkt:. Conventions and macros as in proofs/C-kisin-pairing.tex and C-kisin-inputs.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
@@ -62557,7 +62119,6 @@ $E^{4a}s_j$ in $\pkfBp$. By Lemma~\ref{pkl:cancel}, $s_j=z\tau s'_j$ with $s'_j\
 \providecommand{\pknK}{\mathcal K_0}
 \providecommand{\pkcPt}{\mathrm{Pt}}
 \providecommand{\pkcsh}{\mathrm{sh}}
-% macros of this file (prefix \pkt)
 \providecommand{\pktV}{V_{\mathrm{dR}}}
 \providecommand{\pktFr}{\mathrm{Fr}}
 
@@ -63001,10 +62562,6 @@ Theorem~\ref{pkh:I4}, (I5) is Theorem~\ref{pkg:I5}, and Proposition~\ref{pki:cha
 Theorem~\ref{pkj:chart}.
 
 
-%% ===== proofs/C-kisin-deep.tex =====
-% proofs/C-kisin-deep.tex
-% Deepening with costs: the case input (I2); the value fields K_a; the depth step at level a.
-% Labels start with pke:. Conventions and macros as in proofs/C-kisin-tau.tex and C-kisin-lattices.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\panot}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
@@ -63019,7 +62576,6 @@ Theorem~\ref{pkj:chart}.
 \providecommand{\pkfSB}{\mathfrak S_B}
 \providecommand{\pkcPt}{\mathrm{Pt}}
 \providecommand{\pkcimp}{\mathrm{imp}}
-% macros of this file (prefix \pke)
 \providecommand{\pkeK}[1]{\mathcal K_{#1}}
 \providecommand{\pkeAN}{\pkpA\mathcal N}
 \providecommand{\pkecost}{\mathrm{cost}}
@@ -63401,10 +62957,6 @@ The input (I4) of \S\ref{pkc:ss-inputs} is Theorem~\ref{pkh:I4}; the input (I5) 
 is Theorem~\ref{pkg:I5}; Proposition~\ref{pki:chart} is Theorem~\ref{pkj:chart}.
 
 
-%% ===== proofs/C-kisin-gap.tex =====
-% proofs/C-kisin-gap.tex
-% The long gap (I5): constants modulo E^A, the radius lemma for frames, expansion in powers of E.
-% Labels start with pkg:. Conventions and macros as in proofs/C-kisin-deep.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\panot}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
@@ -63420,7 +62972,6 @@ is Theorem~\ref{pkg:I5}; Proposition~\ref{pki:chart} is Theorem~\ref{pkj:chart}.
 \providecommand{\pkfBp}{B^+}
 \providecommand{\pkfSB}{\mathfrak S_B}
 \providecommand{\pkcPt}{\mathrm{Pt}}
-% macros of this file (prefix \pkg)
 \providecommand{\pkgAN}{\pkpA\mathcal N}
 \providecommand{\pkgP}{\mathcal P}
 \providecommand{\pkgC}{\mathcal C}
@@ -63791,11 +63342,6 @@ The input (I4) of \S\ref{pkc:ss-inputs} is Theorem~\ref{pkh:I4}; Proposition~\re
 Theorem~\ref{pkj:chart}.
 
 
-%% ===== proofs/C-kisin-colength.tex =====
-% proofs/C-kisin-colength.tex
-% The input (I4): colength of the deep constants (few low jumps).
-% Labels start with pkh:. Conventions and macros as in proofs/C-kisin-deep.tex, C-kisin-tau.tex,
-% C-kisin-cases.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
@@ -63814,7 +63360,6 @@ Theorem~\ref{pkj:chart}.
 \providecommand{\pglen}{\operatorname{len}}
 \providecommand{\pkecost}{\mathrm{cost}}
 \providecommand{\pkeDp}{\mathrm{Dp}}
-% macros of this file (prefix \pkh)
 \providecommand{\pkhD}{\mathcal D}
 \providecommand{\pkhK}{\mathrm{Const}}
 \providecommand{\pkhX}{\mathcal X}
@@ -64372,14 +63917,9 @@ hypothesis $\eta\ge1$ is not used.
 \end{remark}
 
 
-%% ===== proofs/C-kisin-chart.tex =====
-% proofs/C-kisin-chart.tex
-% Proof of Proposition pki:chart (the letters read thickness for the data). Labels start with pkj:.
-% Conventions and macros as in proofs/C-kisin.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkilog}{\operatorname{lg}}
-% macros of this file (prefix \pkj)
 \providecommand{\pkjG}{G_{\Q_\ell}}
 \providecommand{\pkjcl}{\operatorname{cl}}
 \providecommand{\pkjPl}{\mathsf P}
@@ -64534,7 +64074,7 @@ $X^{\ell^f-1}-1$, i.e.\ all of $\mu_{\ell^f-1}$. A cyclic group is generated by 
 order.
 
 (iv) Since $d\equiv7\pmod8$, $d\equiv3\pmod4$ and $\sqrt{-d}\in\Q(\mu_d)$ (quadratic Gauss sum: for the odd quadratic character $\chi$ of conductor $d$,
-$\tau(\chi)^2=\chi(-1)|\tau(\chi)|^2=-d$ by \cite[Lemmas~4.7 and~4.8, p.~36]{Washington}); so $E=K(\zeta_{q_1})\subseteq\Q(\mu_{N_E})$, and
+$\tau(\chi)^2=\chi(-1)|\tau(\chi)|^2=-d$ by \cite[Lemmas~4.7 and~4.8]{Washington}); so $E=K(\zeta_{q_1})\subseteq\Q(\mu_{N_E})$, and
 $E_v\subseteq\Q_\ell(\mu_{N_E})$ (with $\mu_{N_E}\subset\auQlb$). For $\ell\nmid N_E$ the extension
 $\Q_\ell(\mu_{N_E})/\Q_\ell$ is unramified \cite[IV, \S4, Proposition~16, p.~77]{SerreLF}, hence so is
 $E_v$: $e=1$ and $[E_v:\Q_\ell]=f$. By (iii), $F_0=\Q_\ell(\mu_{\ell^f-1})\subseteq E_v$. By (i) the
@@ -64703,12 +64243,6 @@ convention of $L_{\mathrm{main}}$ adopt, as long as the two agree; both use (R$^
 \end{remark}
 
 
-%% ===== proofs/C-kisin-cases.tex =====
-% proofs/C-kisin-cases.tex
-% The four cases of the local-loss engine: Propositions pki:generic, pki:tame, pki:sparse, pki:any,
-% and the remaining assertions of pki:data. Labels start with pkc:.
-% Conventions and macros as in proofs/C-kisin.tex, proofs/C-kisin-pairing.tex,
-% proofs/C-kisin-modules.tex, proofs/C-kisin-inputs.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pllZf}{Z_f}
@@ -64720,7 +64254,6 @@ convention of $L_{\mathrm{main}}$ adopt, as long as the two agree; both use (R$^
 \providecommand{\pkilog}{\operatorname{lg}}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
 \providecommand{\pkpAmb}{\mathbb A}
-% macros of this file (prefix \pkc)
 \providecommand{\pkcPt}{\mathrm{Pt}}
 \providecommand{\pkcimp}{\mathrm{imp}}
 \providecommand{\pkcpd}{\mathrm{pd}}
@@ -65262,10 +64795,6 @@ Proposition~\ref{pki:any} is proved in \S\ref{pkd:ss-any} (Theorem~\ref{pkd:any}
 
 
 
-%% ===== proofs/C-kisin-cases2.tex =====
-% proofs/C-kisin-cases2.tex
-% Propositions pki:sparse and pki:any (the cases with cuts), and the status of pki:data.
-% Labels start with pkd:. Conventions and macros as in proofs/C-kisin-cases.tex (pkc:).
 \providecommand{\auO}{\mathcal O}
 \providecommand{\panot}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
 \providecommand{\pllZf}{Z_f}
@@ -65279,7 +64808,6 @@ Proposition~\ref{pki:any} is proved in \S\ref{pkd:ss-any} (Theorem~\ref{pkd:any}
 \providecommand{\pkcpd}{\mathrm{pd}}
 \providecommand{\pkcdep}{\mathrm{dep}}
 \providecommand{\pkcsh}{\mathrm{sh}}
-% macros of this file (prefix \pkd)
 \providecommand{\pkdco}{\mathrm{co}}
 \providecommand{\pkdlg}{\mathrm{gd}}
 \providecommand{\pkdstop}{\mathrm{stop}}
@@ -65864,11 +65392,6 @@ inputs (I1)--(I6), (T1)--(T4), all proved in \S\S\ref{pkt:sec}--\ref{pkw:sec}.
 \end{remark}
 
 
-%% ===== proofs/C-kisin-tame.tex =====
-% proofs/C-kisin-tame.tex
-% Tame charts, inertia on D_pcris, and the tame inputs (T1)--(T4), (I6) of the local-loss engine.
-% Labels start with pkw:. Conventions and macros as in proofs/C-kisin-pairing.tex,
-% proofs/C-kisin-modules.tex, proofs/C-kisin-inputs.tex, proofs/C-kisin-cases.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\pkpA}{A_{\mathrm{inf}}}
@@ -65877,7 +65400,6 @@ inputs (I1)--(I6), (T1)--(T4), all proved in \S\S\ref{pkt:sec}--\ref{pkw:sec}.
 \providecommand{\pkmJ}[3]{J^{#1}_{#2}(#3)}
 \providecommand{\pkmI}[2]{I_{#1}(#2)}
 \providecommand{\pkiC}{\mathcal C}
-% macros of this file (prefix \pkw)
 \providecommand{\pkwB}{B_{\mathrm{cris}}}
 \providecommand{\pkwD}{D_{\mathrm{pcris}}}
 \providecommand{\pkwur}{\Q_\ell^{\mathrm{ur}}}
@@ -66539,7 +66061,7 @@ Lemma~\ref{pkw:beta}(ii) (and the evident compatibility of $\beta_s$ with finite
 The definition of $\mathcal C(U,\mathrm{tame})$ before
 Proposition~\ref{pll:main} needs, for Proposition~\ref{pki:tame} and Theorem~\ref{pkd:data}(iv), a set $K(s)$ of
 polynomials that depends on $s$ only. (G4) (Proposition~\ref{pga:G45}, with Lemma~\ref{pga:depth0}) gives this, with the sizes read off from the
-composition of $\mathcal C_v$ in the paper. By Proposition~\ref{pg:loss} and Proposition~\ref{pri:loss}(b), at
+composition of $\mathcal C_v$ in the paper. The statements of Proposition~\ref{pg:loss} and Proposition~\ref{pri:loss}(b) say to which lattices the class is applied, and only this is taken from them here (their conclusions, which rest on Theorem~\ref{pll:exponent}, are not used): at
 $\ell=p_i$ the members of $\mathcal C_v$ are the restrictions to $D_v$ of the lattices $u_x$ in the representations
 $\rho_x$ of Proposition~\ref{pri:BL}(c) and of the $t'+1$ summands of $u_\pi=T\oplus\bigoplus_{e<t'}\auO(-e)$; and
 at a chosen place $w\nmid\ell$ Proposition~\ref{pri:BL}(c) says that inertia acts on $\rho_x$ ``through the roots of the
@@ -66568,17 +66090,12 @@ $L_c^*\in\pkiC(U',K^{-1})$ follows from Lemma~\ref{pkw:dual} (input (I6)) and Pr
 \end{remark}
 
 
-%% ===== proofs/C-odd.tex =====
-% proofs/C-odd.tex
-% The odd classes: proof of Proposition pri:odd of proofs/C-ribet.tex.
-% Labels of this file start with pod:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\pgcodd}{c_{\mathrm{odd}}}
 \providecommand{\pgG}{G_E}
 \providecommand{\pgcyc}{\varepsilon_\ell}
 \providecommand{\prilen}{\operatorname{len}}
 \providecommand{\prival}{\operatorname{val}}
-% macros of this file (prefix \pod)
 \providecommand{\anrd}{\mathrm{rd}}
 \providecommand{\panotodd}[1]{\par\smallskip{\raggedright\noindent\textbf{[Not proved here:} #1\textbf{]}\par}\smallskip}
 \providecommand{\podSha}{\mathrm{Sha}^-}
@@ -66968,7 +66485,7 @@ write $\chi=\chi_0\chi_f$ with $\chi_f$ primitive of conductor $f$; then $L(\chi
 zeros lie on $\Rel s=0$). For primitive $\chi_f$, the functional equation relates $L(\chi_f,-e)$ to
 $L(\overline{\chi_f},1+e)\ne0$ times a ratio of Gamma factors, which vanishes exactly when $-e$ is a
 pole of $\Gamma\bigl((s+\kappa)/2\bigr)$, $\kappa\in\{0,1\}$ the parity of $\chi_f$, i.e.\ when
-$e\equiv\kappa\pmod2$ (see the functional equation in \cite[Chapter~4, p.~29]{Washington}). For $\chi_f=1$ ($\zeta$) the same holds since $e\ge1$.
+$e\equiv\kappa\pmod2$ (see the functional equation in \cite[Chapter~4]{Washington}). For $\chi_f=1$ ($\zeta$) the same holds since $e\ge1$.
 \end{proof}
 
 \begin{lemma}\label{pod:X}
@@ -67532,11 +67049,6 @@ Therefore $\log\pgcodd\le x^{406}+x^{26}\le x^{407}\le x^{800}$. (If $N\le x^{13
 \end{remark}
 
 
-%% ===== proofs/C-kummer.tex =====
-% proofs/C-kummer.tex
-% Kummer maps: proof of Proposition pri:kummer(a),(b) of proofs/C-ribet.tex, and the details of
-% the proof of Proposition pri:triangle.
-% Labels of this file start with pku:. Conventions of proofs/C-odd.tex.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auNm}{\operatorname{Nm}}
 \providecommand{\pgG}{G_E}
@@ -67544,7 +67056,6 @@ Therefore $\log\pgcodd\le x^{406}+x^{26}\le x^{407}\le x^{800}$. (If $N\le x^{13
 \providecommand{\prilen}{\operatorname{len}}
 \providecommand{\prival}{\operatorname{val}}
 \providecommand{\prity}{\mathrm{ty}}
-% macros of this file (prefix \pku)
 \providecommand{\pkuinv}{\operatorname{inv}}
 \providecommand{\pkuHom}{\operatorname{Hom}}
 \providecommand{\pkuGal}{\operatorname{Gal}}
@@ -68095,11 +67606,6 @@ when $\ell\le h^2$, the case $h_0=0$ being trivial.
 \end{remark}
 
 
-%% ===== proofs/C-aux.tex =====
-% proofs/C-aux.tex
-% Auxiliary statements of Theorem C used in Section pri: Amitsur's formula (used in
-% Lemma pri:amitsur), the chain lemma pri:chain, the inputs on forms pri:forms, the block-diagonal
-% lattices pri:block. Labels of this file start with pax:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auQlb}{\overline{\Q}_\ell}
 \providecommand{\auGL}{\mathrm{GL}}
@@ -68115,7 +67621,6 @@ when $\ell\le h^2$, the case $h_0=0$ being trivial.
 \providecommand{\pgNch}{N_{\mathrm{ch}}}
 \providecommand{\pgaWD}{\operatorname{WD}}
 \providecommand{\auf}[1]{\texttt{#1}}
-% macros of this file (prefix \pax)
 \providecommand{\paxch}{\operatorname{ch}}
 \providecommand{\paxL}{\mathcal L}
 
@@ -68903,7 +68408,7 @@ parameters of $\operatorname{Speh}(\sigma,m)_v\otimes|\det|^{(1-n)/2}$ are those
 choice of $s$; $|\cdot|^{e}$ corresponds under $\operatorname{rec}$ to $\varepsilon_\ell^{e}$ (geometric
 Frobenius, $\varepsilon_\ell(\pgFrob_w)=\auNm w^{-1}$). So the summand $r_\iota(\Sigma)\varepsilon_\ell
 ^{e_a}$ has the local parameters of $\operatorname{Speh}(\sigma,m)$, and the rest of the proof of
-Proposition~\ref{pga:G123} applies verbatim; in particular the ramified local--global
+Proposition~\ref{pga:G123} applies verbatim (that proof takes from the present one only what has been shown up to this point, namely the algebraicity, the polarisation and the local parameters, none of which uses it); in particular the ramified local--global
 compatibility including the monodromy operator, used in (F2) of \S\ref{pax:ss-dict}, holds for the
 polarised pair $(\Sigma,|\cdot|^{2s})$ by \cite{BLGGT}, as recalled in (GR), and does not require
 $\Sigma$ to be conjugate self-dual. (The choice $s=\frac{m-1}2$
@@ -68951,12 +68456,6 @@ contragredient at every place and $\varsigma$ would become $-w_0\varsigma$ unifo
 $n=1$; the relative sign would be unchanged.)
 
 
-%% ===== proofs/C-aux2.tex =====
-% proofs/C-aux2.tex
-% Further auxiliary statements for Ribet's method (continuation of Section pax): the spherical
-% chain lemma proved directly (no classification of the unitary dual), hence Lemma pax:toproot
-% (closing Proposition pri:dict(d)) and Lemma pax:tadic without Tadic's classification; the two facts
-% of Remark pax:rem-BL. Labels of this file start with pay:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auF}{\mathbb F}
@@ -68964,7 +68463,6 @@ $n=1$; the relative sign would be unchanged.)
 \providecommand{\auNm}{\operatorname{Nm}}
 \providecommand{\pgtr}{\operatorname{tr}}
 \providecommand{\pgFrob}{\operatorname{Frob}}
-% macros of this file (prefix \pay)
 \providecommand{\payL}{\Lambda}
 \providecommand{\payM}{\mathsf M}
 \providecommand{\payU}{\mathbf U}
@@ -69445,12 +68943,6 @@ Lemma~\ref{prm:label}; see Corollary~\ref{prm:inertia}.
 \end{remark}
 
 
-%% ===== proofs/C-ribet2.tex =====
-% proofs/C-ribet2.tex
-% Completion of Section pri:sec: the paragraph "The characters" of
-% Proposition pri:ribet, the induction in Proposition pri:norm(b), the base level at the chosen
-% places (Remark pay:rem-level), and where the remaining inputs are proved.
-% Labels of this file start with prm:.
 \providecommand{\auO}{\mathcal O}
 \providecommand{\auGL}{\mathrm{GL}}
 \providecommand{\auF}{\mathbb F}
@@ -69467,7 +68959,6 @@ Lemma~\ref{prm:label}; see Corollary~\ref{prm:inertia}.
 \providecommand{\priN}{\mathcal N}
 \providecommand{\prity}{\mathrm{ty}}
 \providecommand{\plone}{\mathbf 1}
-% macros of this file (prefix \prm)
 \providecommand{\prmL}{\Lambda}
 \providecommand{\prmT}{\mathfrak T}
 \providecommand{\prmK}{\mathfrak K}
@@ -69709,7 +69200,7 @@ $d=C\,c_{\mathrm{ch}}^{t'}\det\rho_\pi(B_0)|_{X_J=0}\prod_e\Gamma_e(0)\in\auO$. 
 \prival(C)\bigr),
 \]
 which is the bound of Proposition~\ref{pri:ribet}, as $\sum_e\#\{\prity=e\}=\#J$. The last sentence of
-the proof of Proposition~\ref{pri:ribet} shows that $f$ is a common Ribet element.
+the proof of Proposition~\ref{pri:ribet}, the identity $\det(1-u_x(g))=\det u_x(w)$ for $w=-(g-1)\in\priAug$, which does not involve the two paragraphs proved here, shows that $f$ is a common Ribet element.
 \end{proof}
 
 \begin{remark}\label{prm:rem-chars}
@@ -70121,7 +69612,7 @@ forms; $\mathfrak p\colon\mathcal S^{\mathrm{ram}}\to\mathcal T$ is the
 linear map of Theorem~\anThmA, and $s\mathfrak p$, $s\in\overline G$, are its
 translates. The three theorems state the following.
 \begin{itemize}
-\item[(A)] (Theorem~\anThmA.) (a) $\mathcal S^{\mathrm{ram}}$ is spanned by
+\item[(SF)] (The Short Forms Theorem, Theorem~\anThmA.) (a) $\mathcal S^{\mathrm{ram}}$ is spanned by
 the set $\mathcal S_0$ of the
 $\varphi\in\mathcal S^{\mathrm{ram}}_{\mathrm{int}}$ with
 $\|\Theta_1(s\mathfrak p\,\varphi)\|_\sigma^2\le\exp\bigl(\anhm-m\cdot\anrem+f\,a\,(\log b)^{4}\bigr)$
@@ -70131,11 +69622,11 @@ of target forms each of which lies in
 $s\mathfrak p(\mathcal S^{\mathrm{ram}}_{\mathrm{int}})$ for some
 $s\in\mathsf t$ has index at most
 $\#\mathsf t\cdot\dim\mathcal S^{\mathrm{ram}}\cdot2\,f\,a\,(\log b)^{3}$.
-\item[(B)] (Theorem~\anThmB.) $\andT>0$, and there is a finite set
+\item[(Sp)] (The Spanning Theorem, Theorem~\anThmB.) $\andT>0$, and there is a finite set
 $\mathsf t\subseteq\overline G$ with
 $\#\mathsf t\cdot\dim\mathcal S^{\mathrm{ram}}\le5\,\andT\log(1+2b^{2})$ and
 $\dim\sum_{s\in\mathsf t}s\mathfrak p(\mathcal S^{\mathrm{ram}})\ge(1-4/b^{2})\,\andT$.
-\item[(C)] (Theorem~\anThmC.) If $y_1,\dots,y_n\in\mathcal T$ are linearly
+\item[(Cv)] (The Covolume Theorem, Theorem~\anThmC.) If $y_1,\dots,y_n\in\mathcal T$ are linearly
 independent, $n\ge(1-4/b^{2})\,\andT$, with covolume at most $c$ and index at
 most $\delta$, then $\andT\bigl(\anhm-3\,f\,a\,(\log b)^{4}\bigr)\le c+2\delta$.
 \end{itemize}
@@ -70152,15 +69643,13 @@ For all parameters $(q_0,d)$ and all admissible data $D$,
 \end{theorem}
 \begin{proof}
 Put $\ell=f\,a\,(\log b)^{4}$ and $e=f\,a\,(\log b)^{3}$. Let $\mathsf t$ be
-as in (B) and
+as in (Sp) and
 $V=\sum_{s\in\mathsf t}s\mathfrak p(\mathcal S^{\mathrm{ram}})$, $n=\dim V$.
-By (A)(a) the set $\bigcup_{s\in\mathsf t}s\mathfrak p(\mathcal S_0)$ spans
+By (SF)(a) the set $\bigcup_{s\in\mathsf t}s\mathfrak p(\mathcal S_0)$ spans
 $V$; choose a basis $y_1,\dots,y_n$ of $V$ in it. Then
-$(1-4/b^{2})\andT\le n\le\andT$. By (A)(a) and Hadamard's inequality the
-family has covolume at most $n(\anhm-m\cdot\anrem+\ell)$, and by (A)(b) and
-(B) it has index at most
+$(1-4/b^{2})\andT\le n\le\andT$. By (SF)(a) and Hadamard's inequality the family has covolume at most $n(\anhm-m\cdot\anrem+\ell)$, and by (SF)(b) and (Sp) it has index at most
 $\#\mathsf t\dim\mathcal S^{\mathrm{ram}}\cdot2e\le10\,\andT\log(1+2b^{2})\,e$.
-By (C),
+By (Cv),
 \[
  \andT\,(\anhm-3\ell)\le n\,(\anhm-m\cdot\anrem+\ell)+20\,\andT\log(1+2b^{2})\,e .
 \]
@@ -70241,8 +69730,8 @@ it can be expected to hold.
 The place where the restriction $m\ll\sqrt x$ is used is not visible from
 the statements \textup{(A)}, \textup{(B)}, \textup{(C)}. It is located in
 \S\ref{ss:au-mechanism}: two errors of the automorphic part are quadratic in
-$m$, namely the loss at the level prime $N$ in Theorem~\anThmA\ and the
-comparison operators in Theorem~\anThmC. The first has size $m^{2}f\,b\,\log b$
+$m$, namely the loss at the level prime $N$ in the Short Forms Theorem and the
+comparison operators in the Covolume Theorem. The first has size $m^{2}f\,b\,\log b$
 up to constants (Lemma~\ref{au:errsum}: $2mfb\log N\le60\,m^{2}fb\log b$), and
 it is below the allowance $f\,a\,(\log b)^{4}=x\,f\,b\,(\log b)^{4}$ when
 $m^{2}\ll x(\log b)^{3}$.
@@ -70363,16 +69852,6 @@ $\log x\ge10^{14}\anCP$.
 
 
 
-% conclusion-new.tex -- Conclusion of the paper, adapted to the new second part.
-% Labels kept: sec:conclusion, thm:RH, thm:all-support, cor:all-windows.
-% Changes with respect to paper46-original.tex:
-%  - proof of thm:RH: now from Theorem thm:GRH-half (Corollary an:cor-zeta);
-%  - thm:all-support: the hypothesis on the prime sum G (which no longer exists) is
-%    replaced by the zero condition (eq:dirichlet-input); the first paragraph of the
-%    proof and the sentence on J_theta = 3/2 are deleted; the rest is verbatim;
-%  - cor:all-windows: "Assume Theorem thm:alpoge-families" becomes "Assume Theorems A, B, C";
-%  - the two closing subsections are rewritten.
-% The closing paragraphs follow sec-automorphic.tex, \S ss:au-remains, as of 26 Nov 2026.
 \providecommand{\anThmA}{\ref{thm:A}}
 \providecommand{\anThmB}{\ref{thm:B}}
 \providecommand{\anThmC}{\ref{thm:C}}
@@ -70596,7 +70075,6 @@ Univ.~Press, 2007.
 \bibitem{Washington} L.~C.~Washington, \emph{Introduction to Cyclotomic Fields}, 2nd ed.,
 Graduate Texts in Mathematics \textbf{83}, Springer, New York, 1997.
 
-% refs-automorphic.tex: \bibitem lines for sec-automorphic.tex
 \bibitem{Banaszczyk} W.~Banaszczyk, \emph{New bounds in some transference theorems in the geometry
 of numbers}, Math.\ Ann.\ \textbf{296} (1993), 625--635.
 \bibitem{BannaiKobayashi} K.~Bannai and S.~Kobayashi, \emph{Algebraic theta functions and the
@@ -70639,8 +70117,6 @@ Weil representations}, Compositio Math.\ \textbf{52} (1984), 139--169.
 \bibitem{Ribet1976} K.~A.~Ribet, \emph{A modular construction of unramified $p$-extensions of
 $\mathbb Q(\mu_p)$}, Invent.\ Math.\ \textbf{34} (1976), 151--162.
 
-% References used only by proofs/A-divisibility.tex. (BannaiKobayashi and KatzDivisibilities are
-% already in refs-automorphic.tex.)
 \bibitem{BLR} S.~Bosch, W.~L\"utkebohmert and M.~Raynaud, \emph{N\'eron Models}, Ergebnisse der
 Mathematik und ihrer Grenzgebiete (3) \textbf{21}, Springer, 1990.
 \bibitem{DEP} C.~De~Concini, D.~Eisenbud and C.~Procesi, \emph{Young diagrams and determinantal
@@ -70654,9 +70130,6 @@ Texts in Mathematics \textbf{106}, Springer, 2009.
 \bibitem{SilvermanAT} J.~H.~Silverman, \emph{Advanced Topics in the Arithmetic of Elliptic Curves},
 Graduate Texts in Mathematics \textbf{151}, Springer, 1994.
 
-% refs-A-seesaw-size.tex: \bibitem lines used by A-seesaw-size.tex.
-% Already in refs-automorphic.tex (not repeated in the assembled paper): Banaszczyk,
-% BannaiKobayashi, ChowlaSelberg, GomezZhu, HoweTheta, KashiwaraVergne.
 \bibitem{HKS} M.~Harris, S.~S.~Kudla and W.~J.~Sweet, \emph{Theta dichotomy for unitary groups},
 J.\ Amer.\ Math.\ Soc.\ \textbf{9} (1996), 941--1004.
 \bibitem{KudlaSplitting} S.~S.~Kudla, \emph{Splitting metaplectic covers of dual reductive pairs},
@@ -70664,11 +70137,6 @@ Israel J.\ Math.\ \textbf{87} (1994), 361--401.
 \bibitem{WeilActa} A.~Weil, \emph{Sur certains groupes d'op\'erateurs unitaires}, Acta Math.\
 \textbf{111} (1964), 143--211.
 
-% refs-A-seesaw-complete.tex: \bibitem lines used by A-seesaw-complete.tex.
-% Already present elsewhere (not to be repeated in the assembled paper):
-%   refs-automorphic.tex: ChowlaSelberg, HoweTheta, KashiwaraVergne;
-%   refs-A-seesaw-size.tex: HKS, KudlaSplitting, WeilActa;
-%   refs-A-divisibility.tex: BLR, DEP, LangEF, SilvermanAEC.
 \bibitem{FultonYT} W.~Fulton, \emph{Young Tableaux}, London Mathematical Society Student Texts
 \textbf{35}, Cambridge University Press, 1997.
 \bibitem{GoodmanWallach} R.~Goodman and N.~R.~Wallach, \emph{Symmetry, Representations, and
@@ -70683,13 +70151,11 @@ Theory}, Pure and Applied Mathematics \textbf{139}, Academic Press, 1994.
 Representations and $L$-Functions (Corvallis, 1977), Proc.\ Sympos.\ Pure Math.\ \textbf{33},
 Part~1, Amer.\ Math.\ Soc., 1979, pp.~29--69.
 
-% References used only by proofs/A-hecke-eldiv.tex.
 \bibitem{LTXZ} R.~Liu, N.~X.~Truong, L.~Xiao and B.~Zhao, \emph{Slopes of modular forms and
 geometry of eigencurves}, preprint, arXiv:2302.07697 (2023).
 \bibitem{RallisFunctoriality} S.~Rallis, \emph{Langlands' functoriality and the Weil
 representation}, Amer.\ J.\ Math.\ \textbf{104} (1982), 469--515.
 
-% References used only by proofs/A-eldiv-inputs.tex.
 \bibitem{AndrewsPartitions} G.~E.~Andrews, \emph{The Theory of Partitions}, Encyclopedia of
 Mathematics and its Applications \textbf{2}, Addison--Wesley, 1976.
 \bibitem{StanleyEC2} R.~P.~Stanley, \emph{Enumerative Combinatorics}, vol.~2, Cambridge Studies in
@@ -70697,19 +70163,11 @@ Advanced Mathematics \textbf{62}, Cambridge University Press, 1999.
 \bibitem{pe-DLMF17} NIST Digital Library of Mathematical Functions, Chapter~17 ($q$-hypergeometric
 and related functions), \url{https://dlmf.nist.gov/17}.
 
-% refs-A-hecke-level.tex: references cited by proofs/A-hecke-level.tex.
-% All three are already present in the bibliography of the assembled paper
-% (HKS and KudlaSplitting in refs-A-seesaw-size.tex, RallisFunctoriality in
-% refs-A-hecke-eldiv.tex); they are repeated here, commented out, so that this file is
-% self-describing and no \bibitem is duplicated when the files are assembled.
-%
 \bibitem{CoxPrimes} D.~A.~Cox, \emph{Primes of the Form $x^2+ny^2$: Fermat, Class Field Theory, and
 Complex Multiplication}, Wiley, New York, 1989.
 \bibitem{SerreLF} J.-P.~Serre, \emph{Local Fields}, Graduate Texts in Mathematics 67, Springer,
 New York, 1979.
 
-% refs-A-closure.tex: \bibitem lines used by A-closure.tex and not present in the other refs-*.tex files.
-% (Also cited there, from the other files: WeilActa, KashiwaraVergne, BorelHC1962.)
 \bibitem{HarishChandraAF} Harish-Chandra, \emph{Automorphic Forms on Semisimple Lie Groups}, Lecture
 Notes in Mathematics 62, Springer, Berlin, 1968.
 \bibitem{BorelJacquet} A.~Borel and H.~Jacquet, \emph{Automorphic forms and automorphic
@@ -70718,7 +70176,6 @@ Math.\ \textbf{33}, Part~1, Amer.\ Math.\ Soc., 1979, 189--202.
 \bibitem{HoweJAMS} R.~Howe, \emph{Transcending classical invariant theory}, J.\ Amer.\ Math.\ Soc.\
 \textbf{2} (1989), 535--552.
 
-% References for proofs/A-archimedean.tex (cite keys shared with the paper where they exist)
 \bibitem{FJ} M.~Flensted-Jensen, Discrete series for semisimple symmetric spaces, Ann. of Math. (2) 111 (1980), 253--311.
 \bibitem{Knapp} A.~W.~Knapp, Representation Theory of Semisimple Groups: An Overview Based on Examples, Princeton Univ. Press, 1986.
 \bibitem{Parthasarathy72} R.~Parthasarathy, Dirac operator and the discrete series, Ann. of Math. (2) 96 (1972), 1--30.
@@ -70727,7 +70184,6 @@ Math.\ \textbf{33}, Part~1, Amer.\ Math.\ Soc., 1979, 189--202.
 \bibitem{Dixmier} J.~Dixmier, $C^*$-algebras, North-Holland, 1977.
 \bibitem{VoganZuckerman} D.~A.~Vogan, Jr. and G.~J.~Zuckerman, Unitary representations with non-zero cohomology, Compositio Math. 53 (1984), 51--90.
 
-% References for proofs/A-coefficient.tex (cite keys shared with the paper where they exist)
 \bibitem{KnappBeyond} A.~W.~Knapp, Lie Groups Beyond an Introduction, 2nd ed., Birkh\"auser, 2002.
 \bibitem{FollandAHA} G.~B.~Folland, A Course in Abstract Harmonic Analysis, CRC Press, 1995.
 \bibitem{FollandPS} G.~B.~Folland, Harmonic Analysis in Phase Space, Ann. of Math. Stud. 122, Princeton Univ. Press, 1989.
@@ -70737,7 +70193,6 @@ Duke Math.\ J.\ \textbf{107} (2001), 103--133.
 Oxford University Press, 1995.
 
 
-% refs-B-bessel-expansion.tex: references cited by proofs/B-bessel-expansion.tex.
 \bibitem{BZ76} I.~N.~Bernstein and A.~V.~Zelevinsky, \emph{Representations of the group
 $GL(n,F)$ where $F$ is a non-archimedean local field}, Russian Math.\ Surveys \textbf{31}:3
 (1976), 1--68.
@@ -70762,28 +70217,15 @@ Series}, Cambridge Tracts in Math.\ \textbf{113}, Cambridge University Press, 19
 \bibitem{Scharlau} W.~Scharlau, \emph{Quadratic and Hermitian Forms}, Grundlehren Math.\ Wiss.\
 \textbf{270}, Springer, 1985.
 
-% refs-B-orbital.tex: new references of proofs/B-orbital.tex.
-% None: HC66, Knapp (refs-B-multiplicities), KnappBeyond (refs-A-coefficient), Schmid75
-% (refs-A-archimedean) and HornJohnson (refs-B-discrete-series) are already in the bibliography.
 
-% refs-C-determinant.tex: \bibitem lines used by C-determinant.tex.
-% Already present elsewhere (not to be repeated in the assembled paper):
-%   refs-automorphic.tex: GQT, KashiwaraVergne;
-%   refs-A-seesaw-size.tex: KudlaSplitting, WeilActa, HKS.
 \bibitem{IchinoSW} A.~Ichino, \emph{A regularized Siegel--Weil formula for unitary groups}, Math.\
 Z.\ \textbf{247} (2004), 241--277.
 \bibitem{WeilSiegel} A.~Weil, \emph{Sur la formule de Siegel dans la th\'eorie des groupes
 classiques}, Acta Math.\ \textbf{113} (1965), 1--87.
 
-% refs-C-onelift.tex: \bibitem lines used by C-onelift.tex.
-% Already present elsewhere (not to be repeated in the assembled paper):
-%   refs-automorphic.tex: KashiwaraVergne, RallisInjectivity;
-%   refs-A-seesaw-size.tex: KudlaSplitting.
 \bibitem{Hecke1920} E.~Hecke, \emph{Eine neue Art von Zetafunktionen und ihre Beziehungen zur Verteilung der Primzahlen. (Zweite Mitteilung)}, Math.\ Z.\ \textbf{6} (1920), 11--51.
 \bibitem{FiteSatoTate} F.~Fit\'e, \emph{Equidistribution, $L$-functions, and Sato--Tate groups}, preprint, arXiv:1405.5162 (2014).
 
-% refs-C-congruences.tex: references cited by proofs/C-congruences.tex.
-% Labesse and Ribet1976 are already in refs-automorphic.tex and are not repeated here.
 \bibitem{BLGGT} T.~Barnet-Lamb, T.~Gee, D.~Geraghty and R.~Taylor, \emph{Potential automorphy and
 change of weight}, Ann.\ of Math.\ (2) \textbf{179} (2014), 501--609.
 \bibitem{BlochKato} S.~Bloch and K.~Kato, \emph{$L$-functions and Tamagawa numbers of motives},
@@ -70796,22 +70238,16 @@ ed., Grundlehren Math.\ Wiss.\ \textbf{323}, Springer, 2008.
 \bibitem{WilesFLT} A.~Wiles, \emph{Modular elliptic curves and Fermat's last theorem}, Ann.\ of
 Math.\ (2) \textbf{141} (1995), 443--551.
 
-% refs-C-selmer.tex: references cited by proofs/C-selmer.tex and not present in the other refs-*.tex
-% files. SerreLF is in refs-A-final.tex; NSW is in refs-C-congruences.tex.
 \bibitem{MilneADT} J.~S.~Milne, \emph{Arithmetic Duality Theorems}, Academic Press, Boston, 1986 (1st ed.; all numbers cited refer to this edition), \url{https://www.jmilne.org/math/Books/adt1.pdf}.
 
-% refs-C-ribet.tex: new references cited by proofs/C-ribet.tex (NSW is in refs-C-congruences.tex).
 \bibitem{Amitsur} S.~A.~Amitsur, \emph{On the characteristic polynomial of a sum of matrices},
 Linear and Multilinear Algebra \textbf{8} (1979/80), 177--182.
 \bibitem{LangCyclo} S.~Lang, \emph{Cyclotomic fields I and II}, combined 2nd ed., with an appendix
 by K.~Rubin, Grad.\ Texts in Math.\ \textbf{121}, Springer, 1990.
 
-% New bibliography items for proofs/C-localloss.tex
 \bibitem{RubinES} K.~Rubin, \emph{Euler systems}, Annals of Mathematics Studies \textbf{147},
 Princeton University Press, 2000.
 
-% refs-C-galois.tex: references cited by proofs/C-galois.tex and not already in refs-automorphic.tex
-% (Labesse) or refs-C-congruences.tex (BLGGT). All cited from memory; volume/page data to be checked.
 \bibitem{HarrisTaylor} M.~Harris and R.~Taylor, \emph{The geometry and cohomology of some simple
 Shimura varieties}, Ann.\ of Math.\ Stud.\ \textbf{151}, Princeton Univ.\ Press, 2001.
 \bibitem{Shin} S.~W.~Shin, \emph{Galois representations arising from some compact Shimura
@@ -70842,94 +70278,55 @@ correspondence}, arXiv:1103.5316v2 (published in Mem.\ Amer.\ Math.\ Soc.).
 \bibitem{CasselmanNotes} W.~Casselman, \emph{Introduction to the theory of admissible
 representations of $p$-adic reductive groups}, unpublished notes (1974/1995).
 
-% refs-B-discrete-series.tex: new references cited by proofs/B-discrete-series.tex
-% (FJ is in refs-B-bessel-expansion.tex; HC66, Knapp, BorelHC1962 elsewhere in the bibliography).
 \bibitem{HornJohnson} R.~A.~Horn and C.~R.~Johnson, \emph{Matrix analysis}, 2nd ed., Cambridge University
 Press, 2013.
 \bibitem{WallachCT} N.~R.~Wallach, \emph{On the constant term of a square integrable automorphic
 form}, in: Operator algebras and group representations, Vol.~II (Neptun, 1980), Monogr.\ Stud.\
 Math.~18, Pitman, 1984, 227--237.
 
-% refs-B-pillars.tex: new references cited by proofs/B-pillars.tex.
-% None: the only citation, BombieriVaaler, is already in refs-B-bessel-expansion.tex.
 
-% refs-B-period.tex: new references cited by proofs/B-period.tex.
-% None: \cite{Scharlau} (Witt's theorem for hermitian forms) is in refs-B-multiplicities.tex.
 
-% refs-B-gain.tex: new references cited by proofs/B-gain.tex.
-% None.
 
-% refs-B-count.tex: new references cited by proofs/B-count.tex.
 \bibitem{Cassels} J.~W.~S.~Cassels, \emph{An Introduction to the Geometry of Numbers}, Grundlehren
 der mathematischen Wissenschaften 99, Springer, Berlin, 1959.
 \bibitem{HenkMinima} M.~Henk, \emph{Successive minima and lattice points}, Rend.\ Circ.\ Mat.\ Palermo (2) Suppl.\ \textbf{70} (2002), 377--384; arXiv:math/0204158.
 
-% refs-B-size.tex: new references cited by proofs/B-size.tex.
-% None: the Ostrowski--Taussky inequality and Hua's integral are proved in the text.
 
-% New bibitems for proofs/B-opencell.tex
 \bibitem{WallachRRG1} N.~R.~Wallach, \emph{Real Reductive Groups I}, Pure and Applied Mathematics 132, Academic Press, 1988.
 \bibitem{HechtSchmid75} H.~Hecht and W.~Schmid, \emph{A proof of Blattner's conjecture}, Invent.\ Math.\ \textbf{31} (1975), 129--154.
 
-% refs-B-frames-real.tex: no new bibitems so far.
 
-% refs-B-frames-shared.tex: new bibitems (cited by author and title in the text of B-frames-shared.tex).
 
-% refs-B-frames-realplace.tex: no new bibitems.
 
-% New bibitems for B-frames-finite.
 \bibitem{pff-Siegel35} C. L. Siegel, \emph{\"Uber die analytische Theorie der quadratischen Formen}, Ann.\ of Math.\ (2) \textbf{36} (1935), 527--606.
 \bibitem{pff-Braun41} H. Braun, \emph{Zur Theorie der hermitischen Formen}, Abh.\ Math.\ Sem.\ Hansischen Univ.\ \textbf{14} (1941), 61--150.
 
-% New bibitems for B-frames-finite2 (WeilSiegel, GHY, IchinoSW, Scharlau are elsewhere in the bibliography).
 
-% refs-C-exchange.tex: new \bibitem lines used by C-exchange.tex (none so far).
-% Lang, Algebraic Number Theory, is cited in the text by name; add a \bibitem when the chapter
-% number of Hecke's non-vanishing on Re s = 1 is located.
 \bibitem{ReedSimonI} M.~Reed and B.~Simon, \emph{Methods of Modern Mathematical Physics I: Functional
 Analysis}, revised ed., Academic Press, 1980.
 
 
-% new bibitems for C-triangle (Knapp already cited elsewhere in the paper)
 
-% New bibitems for C-triangle2.tex (the others already exist: FollandPS in refs-A-coefficient,
-% Schmid75 in refs-A-archimedean, HarishChandraAF in refs-A-closure). None new.
 
-% New bibitems for C-triangle3.tex: none (no new reference is cited).
 
-% New bibitems for C-triangle4.tex: none (no new reference is cited).
 
-% refs-C-grid.tex: no new bibitems.
 
-% refs-C-grid2.tex: no new bibitems (pk:hook, pk:eq-dual, au:shortbasis are cited by label).
 
-% refs-C-grid3.tex: no new bibliography items (all citations are internal labels).
 
-% refs-C-grid4.tex: no new bibliography items (all citations are internal labels).
 
-% New bibitems of C-grid5: none.
 
-% refs-C-grid6.tex: no new bibliography items (all citations are internal labels).
 
-% no new references
 
-% refs-C-grid8.tex: no new bibliography items (PlatonovRapinchuk is already in the bibliography of the paper).
 
-% refs-C-grid9.tex: no new bibliography items (C-grid9 cites only labels of the paper).
 
-% refs-C-grid10.tex: no new bibliography items (GoodmanWallach is already in the paper).
 
-% refs-C-grid11.tex: no new bibitems (Cassels and Neukirch are in refs-B-count.tex).
 \bibitem{ZelevinskyLNM} A.~V.~Zelevinsky, \emph{Representations of finite classical groups. A Hopf
 algebra approach}, Lecture Notes in Math.\ 869, Springer, Berlin, 1981.
 
-% New references of C-span.tex (Li1992, Banaszczyk, Knapp are already in the paper).
 \bibitem{PoorYuen} C.~Poor and D.~S.~Yuen, \emph{Linear dependence among Siegel modular forms},
 Math.\ Ann.\ \textbf{318} (2000), 205--234.
 
-% New references of C-span2.tex: none.
 
-% New references of C-span3.tex: none.
 \bibitem{pkfColmez98} P.~Colmez, \emph{Th\'eorie d'Iwasawa des repr\'esentations de de Rham d'un corps local}, Ann. of Math. (2) \textbf{148} (1998), 485--571.
 \bibitem{pkfFontaineII} J.-M.~Fontaine, \emph{Le corps des p\'eriodes $p$-adiques}, expos\'e~II in: P\'eriodes $p$-adiques, Ast\'erisque \textbf{223} (1994), 59--101 (numbers cited are those of the expos\'e).
 \bibitem{pkfFontaineIII} J.-M.~Fontaine, \emph{Repr\'esentations $p$-adiques semi-stables}, expos\'e~III in: P\'eriodes $p$-adiques, Ast\'erisque \textbf{223} (1994), 113--184 (numbers cited are those of the expos\'e).
@@ -70938,40 +70335,24 @@ Math.\ Ann.\ \textbf{318} (2000), 205--234.
 \bibitem{pkfAx70} J.~Ax, \emph{Zeros of polynomials over local fields---the Galois action},
 J.\ Algebra \textbf{15} (1970), 417--428, DOI 10.1016/0021-8693(70)90069-4.
 
-% New bibliography items for proofs/C-kisin-rings.tex: none (the file cites only items of refs-C-kisin-frame.tex).
 
-% New bibitems of proofs/C-kisin-lattices.tex.
 \bibitem{pklTate67} J.~Tate, \emph{$p$-divisible groups}, in: Proc.\ Conf.\ Local Fields (Driebergen, 1966), Springer, 1967, 158--183.
 
-% No new bibliography items: the published facts used are cited through (P2), (P3) of C-kisin-frame.tex.
 
-% refs-C-kisin-deep.tex: no new bibitems (Tate is cited through Lemma pkm:BdR).
 
-% refs-C-kisin-gap.tex: no new bibitems
 
-% refs-C-kisin-colength.tex: no new bibitems
 
-% New bibitems of proofs/C-kisin-chart.tex: none. The file cites \cite{SerreLF} and \cite{Washington},
-% which are already in the bibliography of main.tex (the test wrapper defines them locally).
 
-% New bibitems of proofs/C-kisin-cases.tex: none.
 
-% New bibitems of proofs/C-kisin-cases2.tex: none.
 
-% New bibitems of proofs/C-kisin-tame.tex (duplicates of pkfFontaine94 and SerreLF under the prefix pkw;
-% merge with those keys when assembling the bibliography).
 
-% refs-C-odd.tex: new references cited by proofs/C-odd.tex (Washington, Neukirch, NSW exist elsewhere).
 \bibitem{RubinTexel} K.~Rubin, \emph{Kolyvagin's system of Gauss sums}, in: Arithmetic Algebraic
 Geometry (Texel, 1989), Progr.\ Math.\ \textbf{89}, Birkh\"auser, 1991, 309--324.
 
-% refs-C-kummer.tex: new references cited by proofs/C-kummer.tex (NSW, MilneADT, SerreLF, WilesFLT
-% are in other refs files).
 \bibitem{DDT} H.~Darmon, F.~Diamond and R.~Taylor, \emph{Fermat's Last Theorem}, in: Elliptic
 curves, modular forms \& Fermat's last theorem (Hong Kong, 1993), International Press, Cambridge,
 MA, 1997, 2--140.
 
-% refs-C-aux.tex: new references cited by proofs/C-aux.tex (Amitsur is in refs-C-ribet.tex).
 \bibitem{ReutenauerSchutzenberger} C.~Reutenauer and M.-P.~Sch\"utzenberger, \emph{A formula for the
 determinant of a sum of matrices}, Lett.\ Math.\ Phys.\ \textbf{13} (1987), 299--302.
 \bibitem{TadicENS} M.~Tadi\'c, \emph{Classification of unitary representations in irreducible
@@ -70980,9 +70361,7 @@ representations of general linear group (non-Archimedean case)}, Ann.\ Sci.\ \'E
 \bibitem{CurtisReiner} C.~W.~Curtis and I.~Reiner, \emph{Representation theory of finite groups and
 associative algebras}, Interscience, 1962.
 
-% refs-C-aux2.tex: no new bibliography items (the proofs of proofs/C-aux2.tex are self-contained).
 
-% refs-C-ribet2.tex: new references cited by proofs/C-ribet2.tex.
 \bibitem{DigneMichel} F.~Digne and J.~Michel, \emph{Representations of finite groups of Lie type},
 London Math.\ Soc.\ Student Texts \textbf{21}, Cambridge University Press, 1991.
 \end{thebibliography}
