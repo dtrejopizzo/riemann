@@ -1,0 +1,1644 @@
+\documentclass[10pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage[a4paper,hmargin=0.76in,vmargin=0.60in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage[hypertexnames=false]{hyperref}
+\hypersetup{hidelinks}
+\usepackage[final,expansion=false]{microtype}
+\usepackage{url}
+\emergencystretch=2.5em
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Rel}{\operatorname{Re}}
+\newcommand{\Iml}{\operatorname{Im}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\TV}{\operatorname{TV}}
+\newcommand{\Kp}{\mathcal K^{\mathrm{prim}}_{2T}}
+\newcommand{\Kw}{\mathcal K_{2T}}
+\newcommand{\PT}{\mathcal P_T}
+\newcommand{\IT}{I_T}
+\newcommand{\lamP}{\lambda^{\mathrm{prim}}_T}
+\newcommand{\lamW}{\lambda^{\mathrm W}_T}
+\newcommand{\lamA}{\lambda_{\mathrm A}(T)}
+\newcommand{\sT}{\sigma_T}
+\newcommand{\gh}[1]{\widehat g_{#1}}
+\newcommand{\nuh}{\widehat\nu}
+\newcommand{\wh}{\widehat w}
+\newcommand{\Fh}{\widehat F}
+\newcommand{\cF}{c_F}
+\newcommand{\Lev}{\mathfrak E}
+\newcommand{\Wcl}{\mathcal W_T}
+\newcommand{\NT}{\mathcal N_T}
+\newcommand{\Aconst}{\mathsf A_T}
+\newcommand{\Ainf}{\mathcal A_\infty}
+\newcommand{\PiT}{\Pi_T}
+\newcommand{\mT}{\mathfrak m_T}
+\newcommand{\laminf}{\lambda^{\infty}_{\min}}
+\newcommand{\laminfP}{\lambda^{\infty,\mathrm P}_{\min}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% macros of the series: every macro has in all nine papers the meaning it had in the single
+% paper; the definitions needed before their place in the source files are collected here
+\providecommand{\auDX}{D_X}
+\providecommand{\auF}{\mathbb F}
+\providecommand{\auGL}{\mathrm{GL}}
+\providecommand{\auNm}{\operatorname{Nm}}
+\providecommand{\auPa}{\Phi_a}
+\providecommand{\auS}{\mathcal S}
+\providecommand{\auSram}{\mathcal S^{\mathrm{ram}}}
+\providecommand{\aubar}[1]{\overline{#1}}
+\providecommand{\aucol}{\operatorname{col}}
+\providecommand{\auerr}{\operatorname{err}}
+\providecommand{\augain}{\operatorname{gain}}
+\providecommand{\paI}{I_p^{\circ}}
+\providecommand{\paloss}{\operatorname{loss}}
+\providecommand{\pam}{\mathfrak m}
+\providecommand{\pao}{\mathfrak o}
+\providecommand{\phA}{\mathfrak A}
+\providecommand{\phB}{\mathfrak B}
+\providecommand{\phcd}{c_{\mathrm{div}}}
+\providecommand{\phdef}{\operatorname{def}}
+\providecommand{\phdep}{\operatorname{dp}}
+\providecommand{\phk}{\boldsymbol k}
+% statements quoted from the other papers of the series (generated appendix)
+\newenvironment{quotedthm}[2]{\par\medskip\noindent\begingroup
+  \textbf{#1}#2.\ \itshape\ignorespaces}{\endgroup\par\medskip}
+\newenvironment{quoteddef}[2]{\par\medskip\noindent\begingroup
+  \textbf{#1}#2.\ \ignorespaces}{\endgroup\par\medskip}
+\begin{document}
+\addtolength{\abovedisplayskip}{-3.4pt}
+\addtolength{\belowdisplayskip}{-3.4pt}
+\addtolength{\belowdisplayshortskip}{-2pt}
+\title[Elementary divisors of an edge Hecke operator]{Elementary divisors of an edge Hecke operator on a Frobenius cycle}
+\author{David Alejandro Trejo Pizzo}
+\date{}
+\begin{abstract}
+On the lattice of integral algebraic modular forms of large weight on a definite unitary group,
+a Hecke operator at a prime $p$ has denominators, and becomes integral after multiplication by a
+power of $p$. We prove that at suitable primes which are inert in an imaginary quadratic field the
+operator scaled in this way is nearly unimodular: the mean exponent of its elementary divisors is
+a small fraction of the exponent of the scaling. The statement is one of linear algebra over a
+valuation ring, for an operator attached to a graph of Hecke neighbours and to polynomial forms
+in several groups of variables, on which a general linear group acts through embeddings linked in
+a cycle by Frobenius. The proof factorises the operator through lattices placed halfway along the
+edges of the graph, and rests on a count of zeros with multiplicity, a lemma on the monomials of
+forms with divisible translates, a count of lattice points and an averaging construction. The
+result is used in the proof of the Short Forms Theorem of this series.
+\end{abstract}
+\maketitle
+\setcounter{tocdepth}{1}\tableofcontents
+
+\section{Introduction}\label{A2:intro}
+
+The main paper~\cite{P46} of this series deduces the Riemann hypothesis for Dirichlet
+$L$-functions from three theorems on integral algebraic modular forms on a chain of theta lifts
+between unitary groups over a CM field~$E$. The first of them, the Short Forms Theorem, requires
+that a composite of $m$ theta lifts, applied to integral forms in a space $\auS$ of algebraic
+modular forms on a definite unitary group of rank $k$, be divisible by an explicit power of
+every prime; this is {\cite[Theorem~4.21]{P49}}. At most primes the
+required divisibility holds for the lifts of all integral forms. Apart from the prime of the
+level, which is treated in~\cite{P49}, the exception is a set of primes
+$p$, called exceptional, which are inert in the imaginary quadratic subfield $K$ of $E$: there the
+divisibility is proved only for the forms in the image of $Y_\Lambda^{\,m}$, where $Y_\Lambda$ is
+a product of operators $Y_{\mathfrak l}=p^{A_{\mathfrak l}}\,T_{\mathfrak l}$, one for each prime
+$\mathfrak l$ in a set $\Lambda$ of primes of $E$ above $p$ ({\cite[Lemma~4.18]{P49}}). Here
+$T_{\mathfrak l}$ is the Hecke operator of the diagonal matrix with $r$ entries $p$ and $k-r$
+entries $1$ at $\mathfrak l$, with $r=\lceil\log_pm\rceil$, and $A_{\mathfrak l}$ is a multiple of
+the weight $a$ of the forms. To make use of this one has to know that the image of
+$Y_{\mathfrak l}$ is large. Let $\auS_\iota$ be the module of the forms in $\auS$ that are
+integral at a given embedding $\iota$ of the algebraic numbers into $\C_p$, let $\auDX=\dim\auS$,
+and for modules $M'\subseteq M$ over the valuation ring write $\aucol(M,M')\mid z$ if every finite
+family in $M$ is carried into $M'$ by a square matrix whose determinant divides $z$; for finitely
+generated modules over a discrete valuation ring this says that the length of $M/M'$ is at most
+that of the ring modulo $z$. The statement needed is the following ({\cite[Lemma~4.19]{P49}}): for an
+exceptional prime $p$ and $\mathfrak l\in\Lambda$ one has $Y_{\mathfrak l}\auS_\iota\subseteq
+\auS_\iota$, and for every integer $j_0\ge0$
+\begin{equation}\label{A2:eq-lemma}
+\aucol\bigl(\auS_\iota,\ Y_{\mathfrak l}\auS_\iota+p^{\,j_0}\auS_\iota\bigr)\ \Big|\ p^{\,i}\qquad
+\text{for some integer}\quad i\le\Bigl(\frac{12A_{\mathfrak l}}{m\,p}+\frac{j_0}{m^2f}\Bigr)\auDX ,
+\end{equation}
+where $f=[E:K]$. The purpose of this paper is to prove \eqref{A2:eq-lemma}.
+
+The bound is much smaller than the scaling suggests. The forms of $\auS$ have their values in a
+tensor product, over a set $\auPa$ of infinite places of $E$, of spaces of forms of degree $a$ in
+$k$ variables. For an exceptional prime, the places of $\auPa$ that induce the prime $\mathfrak l$
+or its conjugate $\aubar{\mathfrak l}$ form one cycle under complex conjugation composed with a
+power of the Frobenius at $p$, in which the two kinds alternate; if $N$ is the length of the
+cycle, there are $N/2$ places of each kind, and $A_{\mathfrak l}=aN/2$. The diagonal matrix of $T_{\mathfrak l}$ acts
+on the factors of the first kind with denominators up to $p^a$, on those of the second kind
+integrally, and $p^{A_{\mathfrak l}}$ is the power of $p$ that clears the denominators. After the
+scaling, the contribution of each Hecke neighbour is a matrix with integral entries which, in a
+basis adapted to the neighbour, is diagonal with entries $p^{\,\delta}$, where $\delta$ runs from
+$0$ to $2A_{\mathfrak l}$ and has mean $A_{\mathfrak l}$. If the elementary divisors of the sum
+$Y_{\mathfrak l}$ had exponents of this size, the colength in \eqref{A2:eq-lemma} would be about
+$p^{A_{\mathfrak l}\auDX}$. The assertion is that their mean exponent is smaller by the factor
+$mp/12$, apart from a proportion $1/(m^2f)$ of them about which nothing is said and which are cut
+off by $p^{\,j_0}$. In this sense $Y_{\mathfrak l}$ is nearly unimodular on $\auS_\iota$. This is
+what the proof of the Short Forms Theorem can afford: there the colength of the image of
+$Y_\Lambda^{\,m}$, a product of $m\cdot\#\Lambda$ operators $Y_{\mathfrak l}$, enlarged by a
+multiple of $\auS_\iota$, must divide $p^{\,i}$ with $i\le f(\log b)^2(a/p)\,\auDX$, where $b$ is
+a parameter of~\cite{P46} with $\log b$ small against~$m$.
+
+The statement \eqref{A2:eq-lemma} is a special case of a theorem in which modular forms no longer
+appear. Let $\pao$ be a valuation domain of characteristic $0$ with maximal ideal $\pam$ and
+residue field $\phk$, let $p$ be a prime that is not a unit of $\pao$, and let $w\in\pao$ with
+$w^2=p$. Let $W$ be a local ring with residue field $\auF_q$. A \emph{Frobenius cycle} consists of
+an even integer $N\ge2$, a power $P=p^e\ge5$ of $p$ with $q=P^N$, and ring homomorphisms
+$\iota_s\colon W\to\pao$, $s\in\Z/N$, such that
+\[
+\iota_{s+1}(y)\equiv\iota_s(y)^P\pmod{p\,\pao}\qquad(y\in W).
+\]
+Let $k\ge2$ and $n\ge1$. The group $G=\auGL_k(W)$ acts on the polynomials over $\pao$ in the
+variables $x_{b,s}$, $1\le b\le k$, $s\in\Z/N$, by linear substitutions in each of the $N$ groups
+of variables: through $\iota_s(g)$ on the variables with $s$ even and through
+$\iota_s({}^tg^{-1})$ on those with $s$ odd. Let $\phB$ be the set of the monomials that have
+degree $n$ in each group, and $\rho(g)$ the matrix of $g$ on the coefficient vectors, in
+$\pao^\phB$, of the forms spanned by these monomials. Fix an integer $r$ with $0<2r\le k$. A
+variable $x_{b,s}$ is \emph{deep} if $s$ is even and $b>r$, or $s$ is odd and $b\le r$; the depth
+$\phdep(\beta)$ of a monomial is its degree in the deep variables, and
+$\Delta=\operatorname{diag}(w^{\phdep\beta})$, so that $\Delta^2$ is the diagonal matrix with the
+entries $p^{\phdep\beta}$. Let $K_r\subset G$ be the group of the matrices whose upper right block
+of size $r\times(k-r)$ has entries in the maximal ideal of $W$; the quotient $G/K_r$ is in
+bijection with the set of the subspaces of dimension $r$ of $\auF_q^k$. Finally let $X$ and $H$ be
+finite sets. The set of \emph{edges} is $\mathcal E=X\times G/K_r$, and we suppose given an origin
+$o(e)\in X$, an element $\gamma(e)\in G$ and a matrix $u(e)\in\auGL_H(\pao)$ for every edge $e$,
+and an element $t(\varkappa)\in G$ with $t(\varkappa)^{-1}K_r=\varkappa$ for every class
+$\varkappa\in G/K_r$, subject to a condition \eqref{ph:eq-free} which separates the edges with a
+common origin. The \emph{edge Hecke operator} on the module $\mathcal F_X$ of the functions
+$F\colon X\to\pao^H\otimes\pao^\phB$ is
+\[
+(AF)(x)=\sum_{\varkappa\in G/K_r}\Bigl(u(e)\otimes{}^t\bigl(\rho(\gamma(e))\,\Delta^2\,
+\rho(t(\varkappa))\bigr)\Bigr)F(o(e)),\qquad e=(x,\varkappa).
+\]
+Our main result is Theorem~\ref{ph:thm}: \emph{let $0<\theta\le1$ and assume
+\[
+n^4\le q,\qquad\bigl(Nk\log q/\theta\bigr)^5P^{3r}\le n .
+\]
+Let $f\colon\mathcal F_X\to M$ be an $\pao$-linear map and $Y$ an endomorphism of $M$ with
+$Yf=fA$, and put $\Lambda=f(\mathcal F_X)$. Then $Y\Lambda\subseteq\Lambda$, and for every integer
+$j\ge0$}
+\[
+\aucol\bigl(\Lambda,\ Y\Lambda+p^{\,j}\Lambda\bigr)\ \Big|\ p^{\,l}\qquad\text{\emph{for some
+integer}}\quad l\le\bigl(3\phcd+\theta j\bigr)\,|X|\,|H|\,|\phB|,\qquad
+\phcd=Nn\Bigl(\frac1{P^{2r}}+\frac{r^2}{kP}\Bigr).
+\]
+The exponents of $\Delta^2$ lie between $0$ and $nN$ and have mean $nN/2$; the theorem says that,
+up to a proportion $\theta$, the elementary divisors of $Y$ on $\Lambda$ have mean exponent at
+most $3\phcd$. The hypotheses ask that the residue field be large against the degree $n$, and
+that $n$ be large against the other parameters.
+
+The mechanism of the proof is that the scaling $\Delta^2$ can be shared equally between the two ends of every
+edge, and that at each end half of the scaling is almost invisible. For $n<q$ there is a
+diagonal matrix $\mathsf b$, with entries dividing $p^{Nc_0}$ for an integer $c_0\le2k^2\log q$,
+such that $\mathsf b\,\rho({}^tg)={}^t\rho(g)\,\mathsf b$ for all $g\in G$, and
+then (Lemma~\ref{ph:fact})
+\[
+A\,(1\otimes\mathsf b)={}^t\operatorname{Res}'\circ(\mathsf u\otimes\mathsf b)\circ
+\operatorname{Res},
+\]
+where the \emph{restriction} $\operatorname{Res}$ sends a function $\varphi$ on $X$ to the
+function on the edges whose value at $e$ is $\Delta\rho(g_e)$ applied to the value of $\varphi$
+at the origin of $e$, that is, the form at the origin written in coordinates adapted to the edge
+and measured in the lattice placed halfway along it; $\operatorname{Res}'$ is the same map for the
+reversed edges, and $\mathsf u$ is given by the matrices $u(e)$. The map $\operatorname{Res}$ is
+injective, and we show first that its image has small colength in its saturation
+(Proposition~\ref{ph:ends}): an elementary divisor of $\operatorname{Res}$ that does not divide
+$w^{\delta}$ yields a non-zero form over the residue field $\phk$ all of whose translates under
+$G$ consist of monomials of depth greater than $\delta$, and the forms with this property are few.
+Precisely, if $D_\delta$ denotes the space of these forms for the depth $\delta$, then
+$\sum_{\delta\ge1}\dim D_\delta\le\phcd\,|\phB|$ (Proposition~\ref{ph:depth}). This is proved by a
+count of zeros with multiplicity (Lemma~\ref{ph:null}): a form in $D_\delta$, regarded as a
+polynomial in the deep variables, vanishes to order $\delta$ at a set of points indexed by a
+unipotent subgroup of $\auGL_k(\auF_q)$, and the relations between the embeddings of the cycle
+express suitable powers of the coordinates of these points, with exponent $P^{2r}$ or $P$, by
+polynomials of lower weighted degree; it follows that the form contains a monomial whose degrees
+in the deep variables, weighted by $P^{-2r}$ or $P^{-1}$, add up to at least $\delta$. This step
+accounts for the term $\phcd$.
+
+It remains to treat the map $Z$ induced by ${}^t\operatorname{Res}'\circ(\mathsf u\otimes
+\mathsf b)$ between the two saturations, and to show that its image contains $p^{2Nc_0}$ times
+the whole module, up to at most $\theta\,|X||H||\phB|$ further generators. Here the difficulty is that the saturations are not explicit. What we
+know is that their elements take values, at every edge, in the module $\phA$ of the forms that
+lie halfway along all the edges from a vertex, and that such forms satisfy congruences: their
+coefficients at the monomials of large \emph{defect} are divisible by high powers of $w$
+(Lemma~\ref{ph:AinC}). The defect of a monomial $x^\alpha$ at the index $i$ is
+\[
+\phdef_i(\alpha)=\alpha(Y_i)+\frac1{q-1}\sum_{s\in\Z/N}P^{[s-i]}\bigl(\alpha(Y_s)-\alpha(X_s)
+\bigr),\qquad[s-i]\in\{0,\dots,N-1\},
+\]
+where, in each group $s$ of variables, $X_s$ and $Y_s$ are the two variables of indices $r$ and
+$r+1$, $Y_s$ being the deep one; up to normalisation the sum is the weight of the monomial for the
+torus of the corresponding root, read through the cycle. Three statements on forms, stated in
+\S\ref{ph:ss-inputs} and proved in Section~\ref{pe:sec}, make this usable. The \emph{root lemma}
+(Proposition~\ref{ph:root}) is the source of the congruences: if all translates of a polynomial
+under the copy of $\mathrm{SL}_2(W)$ attached to a root have their coefficients divisible by
+powers of $w$ prescribed by a weight, and a monomial occurs in it with the least divisibility
+allowed, then all the defects of that monomial are at most~$0$. Its proof, like that of the depth count,
+uses the congruences between the $\iota_s$ in an essential way. The \emph{count} (Proposition~\ref{ph:count}) bounds the dimension
+of the space of the forms over $\phk$ whose translates under the block diagonal subgroup of $K_r$
+contain no monomial of large defect: multiplied by the index of $K_r$, the number of edges at a
+vertex, it is at most $(1+\theta)|\phB|$. Its proof compares the number of the monomials in a
+cone cut out by the defects with a volume. The \emph{averaging map}
+(Proposition~\ref{ph:av}) is a matrix $\mathrm{Av}$ over $\pao$ whose image satisfies the
+congruences and which, paired with the elements of $\phA$, is congruent to multiplication by a
+fixed power of $p$; it is built from linear forms on polynomials in a generic matrix that are
+invariant under conjugation by the block diagonal group. The averaging map provides an
+approximate right inverse of ${}^t\operatorname{Res}'\circ(\mathsf u\otimes\mathsf b)$ whose
+values satisfy the congruences, the count shows that the functions on the edges with such values
+have, modulo $\pam$, at most $1+\theta$ times the rank of $\mathcal F_X$, and an argument with
+Nakayama's lemma (Lemma~\ref{ph:near}) then shows that $Z$ is onto up to $p^{2Nc_0}$ and up to
+$\theta\,|X||H||\phB|$ generators. Putting the three factors together gives the theorem
+(\S\ref{ph:ss-proof}).
+
+In \S\ref{ph:ss-ded} we deduce \eqref{A2:eq-lemma}. The ring $W$ is the localisation of the
+integers of $E$ at $\mathfrak l$, the $\iota_s$ are the restrictions to $W$ of the places of
+$\auPa$ that induce $\mathfrak l$, and of the conjugates of those that induce
+$\aubar{\mathfrak l}$, in their cyclic order; the set $X$ is the set of classes of the level of
+$\auS$, the edges are the Hecke neighbours, $H$ indexes a basis of the factors of the weight at
+the remaining places, $n=a$ and $\theta=1/(m^2f)$. Here $P=p^{o_0}$, where $o_0$ is the order of $-p$ modulo an integer $q_0$ of~\cite{P46}, and
+for an exceptional prime $o_0\le r=\lceil\log_pm\rceil$. Then $P^{2r}\ge mp$ and
+$r^2/(kP)\le1/(mp)$, so that $3\phcd\le12A_{\mathfrak l}/(mp)$, and the hypotheses of the theorem
+follow from the inequalities between the parameters of~\cite{P46}. This
+deduction uses, from~\cite{P49}, the normalisation of the weight modules and of the Hecke
+operators ({\cite[\S6.1]{P49}} with {\cite[Remark~6.2]{P49}}), weak approximation for the unitary group, by which the classes
+have representatives that are integral above $p$ ({\cite[Proposition~6.3]{P49}} and
+{\cite[Corollary~6.4]{P49}}), the existence of a full mark ({\cite[Lemma~4.17]{P49}}), and the congruence between the places of $E$ under the Frobenius
+({\cite[Lemma~4.11]{P49}}). None of these statements depends on \eqref{A2:eq-lemma}, which is stated in~\cite{P49} as {\cite[Lemma~4.19]{P49}}, is proved here, and
+enters~\cite{P49} only in the proof of the divisibility at the exceptional primes
+({\cite[Theorem~4.21(iv)]{P49}}). So the order is: the statements just listed, then \eqref{A2:eq-lemma}, then that theorem; the two papers do not form a circle. The statements quoted from
+the other papers of the series are reproduced in Appendix~\ref{A2:quoted}. Theorem~\ref{ph:thm}
+and its proof are independent of the other papers of the series, apart from one elementary lemma
+on linear forms over a valuation domain ({\cite[Lemma~4.2]{P49}}). Besides Nakayama's lemma and Kummer's theorem on the divisibility of binomial
+coefficients they use the exponential formula for permutations~\cite{StanleyEC2}, Euler's product
+identity~\cite{AndrewsPartitions}, \cite{Macdonald}, and the convergence of counts of lattice
+points to volumes for compact convex sets. Results on the slopes of Hecke operators on forms of
+large weight, of a related nature, are in~\cite{LTXZ}; we do not know a published statement that
+implies Theorem~\ref{ph:thm}.
+
+Section~\ref{ph:sec} states the theorem, develops the linear algebra over a valuation domain,
+factorises the operator through the restrictions, proves that few forms are deep for all edges,
+states the three inputs on forms, proves Theorem~\ref{ph:thm} from them and deduces
+\eqref{A2:eq-lemma}. Section~\ref{pe:sec} proves the three inputs, the root lemma, the count of
+the forms of bounded defect and the averaging map, and writes out the comparisons of sizes used
+in the proof of the theorem and in the application.
+
+
+% ===== A-hecke-eldiv.tex =====
+% proofs/A-hecke-eldiv.tex
+% Lemmas pa:hecke and pa:eldiv of proofs/A-divisibility.tex (to be \input after that file).
+\providecommand{\auO}{\mathcal O}
+\providecommand{\auPl}{\Phi}
+\providecommand{\auPa}{\Phi_a}
+\providecommand{\auS}{\mathcal S}
+\providecommand{\auDX}{D_X}
+\providecommand{\auGL}{\mathrm{GL}}
+\providecommand{\auU}{\mathrm U}
+\providecommand{\auF}{\mathbb F}
+\providecommand{\aucol}{\operatorname{col}}
+\providecommand{\aubar}[1]{\overline{#1}}
+\providecommand{\auf}[1]{\texttt{#1}}
+\providecommand{\pao}{\mathfrak o}
+\providecommand{\pam}{\mathfrak m}
+% macros of this file (prefix \ph)
+\providecommand{\phB}{\mathfrak B}
+\providecommand{\phA}{\mathfrak A}
+\providecommand{\phk}{\boldsymbol k}
+\providecommand{\phdep}{\operatorname{dp}}
+\providecommand{\phdef}{\operatorname{def}}
+\providecommand{\phim}{\operatorname{im}}
+\providecommand{\phcd}{c_{\mathrm{div}}}
+
+\section{Elementary divisors of a scaled Hecke operator}\label{ph:sec}
+
+This section concerns the two lemmas on which case (iv) of {\cite[Theorem~4.21]{P49}} rests. The
+first, {\cite[Lemma~4.19]{P49}}, is a special case of a theorem on a
+local ring with a cycle of Frobenius-linked embeddings (Theorem~\ref{ph:thm}), which has nothing to
+do with theta lifts. We give the reduction of {\cite[Lemma~4.19]{P49}} to Theorem~\ref{ph:thm}
+(\S\ref{ph:ss-ded}, using the normalisation of {\cite[\S6.1]{P49}}) and the proof of Theorem~\ref{ph:thm}
+(\S\S\ref{ph:ss-la}--\ref{ph:ss-proof}). That proof uses three statements on forms in
+$N$ groups of $k$ variables, Propositions~\ref{ph:root}, \ref{ph:count} and~\ref{ph:av}, which are
+stated here and proved in \S\ref{pe:sec}. The second, {\cite[Lemma~4.18]{P49}}, is proved in {\cite[\S6.6]{P49}}.
+
+\subsection{The setting and the theorem}\label{ph:ss-set}
+Let $\pao$ be a valuation domain of characteristic $0$ with maximal ideal $\pam$ and residue field
+$\phk$, $p$ a prime that is not a unit of $\pao$, and $w\in\pao$ with $w^2=p$. Let $W$ be a local
+ring with residue field $\auF_q$. A \emph{Frobenius cycle} consists of an even integer $N\ge2$, an
+integer $e\ge1$ with $P=p^e\ge5$ and $q=P^N$, ring homomorphisms $\iota_s\colon W\to\pao$
+$(s\in\Z/N)$ with
+\[
+\iota_{s+1}(y)\equiv\iota_s(y)^P\pmod{p\pao}\qquad(y\in W),
+\]
+and a parity on $\Z/N$ (the residue of $s$ modulo $2$). Then $\iota_s(y)\equiv\iota_s(y)^q$, so for
+$y\in\pam_W$ the element $p$ divides $\iota_s(y)\,\iota_s(1-y^{q-1})$, whose second factor is a
+unit:
+\begin{equation}\label{ph:eq-max}
+\iota_s(\pam_W)\subseteq p\pao .
+\end{equation}
+Hence $\bar\iota_s=\iota_s\bmod\pam$ is an embedding $\auF_q\to\phk$ and
+$\bar\iota_{s+1}=\bar\iota_s^{\,P}$.
+
+Let $k\ge2$, $n\ge1$, $G=\auGL_k(W)$. For $g\in G$ put $g_s=\iota_s(g)$ if $s$ is even and
+$g_s=\iota_s({}^tg^{-1})$ if $s$ is odd. The \emph{variables} are $x_{b,s}$ $(1\le b\le k,\
+s\in\Z/N)$; $s$ is the \emph{letter}. $G$ acts on polynomials over $\pao$ by the substitution
+$x_{c,s}\mapsto\sum_b(g_s)_{bc}x_{b,s}$. Let $\phB$ be the set of exponents $\beta$ of degree $n$
+in each letter, and $\rho(g)\in\auGL_\phB(\pao)$ the matrix of $g$ on coefficient vectors of forms
+$\sum_\beta h_\beta x^\beta$. Fix $r$ with $0<2r\le k$. The variable $x_{b,s}$ is \emph{deep} if
+$s$ is even and $b>r$, or $s$ is odd and $b\le r$; $\phdep(\beta)$ is the degree of $x^\beta$ in
+the deep variables, and $\Delta=\operatorname{diag}(w^{\phdep\beta})$. Let $K_r\subset G$ be the
+subgroup of the $g$ with $g_{ij}\in\pam_W$ for $i\le r<j$, and $L\subset K_r$ the block diagonal
+subgroup $\auGL_r(W)\times\auGL_{k-r}(W)$. The index of $K_r$ is the number of $r$-dimensional
+subspaces of $\auF_q^k$.
+
+\begin{lemma}\label{ph:para}
+For $u\in K_r$ the matrix $\Delta\rho(u)\Delta^{-1}$ has entries in $\pao$; for $u\in L$ it equals
+$\rho(u)$.
+\end{lemma}
+\begin{proof}
+$\Delta\rho(u)\Delta^{-1}$ is the matrix of the substitution $x_{c,s}\mapsto\sum_bw^{\epsilon(b,s)
+-\epsilon(c,s)}(u_s)_{bc}x_{b,s}$, with $\epsilon$ the indicator of the deep variables. If
+$x_{c,s}$ is deep and $x_{b,s}$ is not, then $(u_s)_{bc}$ is $\iota_s(u_{bc})$ with $b\le r<c$ ($s$
+even) or $\iota_s((u^{-1})_{cb})$ with $c\le r<b$ ($s$ odd), and is divisible by $p=w^2$ by
+\eqref{ph:eq-max}; for $u\in L$ it is zero, and so are the entries with $x_{b,s}$ deep and
+$x_{c,s}$ not.
+\end{proof}
+
+\emph{Edges and the operator.} Let $X$ and $H$ be finite sets; put $\mathcal E=X\times G/K_r$ (the
+\emph{edges}; $e=(x,\varkappa)$ is an edge \emph{into} $x$). Let there be given maps
+\[
+o\colon\mathcal E\to X,\qquad\gamma\colon\mathcal E\to G,\qquad t\colon G/K_r\to G\ \text{with }
+t(\varkappa)^{-1}K_r=\varkappa,\qquad u\colon\mathcal E\to\auGL_H(\pao),
+\]
+such that
+\begin{equation}\label{ph:eq-free}
+o(e)=o(e')\ \text{and}\ {}^t\gamma(e)\,{}^t\gamma(e')^{-1}\in K_r\ \Longrightarrow\ e=e'.
+\end{equation}
+The \emph{edge Hecke operator} on $\mathcal F_X=\{F\colon X\to\pao^H\otimes\pao^\phB\}$ is
+\begin{equation}\label{ph:eq-A}
+(AF)(x)=\sum_{\varkappa\in G/K_r}\Bigl(u(e)\otimes{}^t\bigl(\rho(\gamma(e))\,\Delta^2\,\rho(t(
+\varkappa))\bigr)\Bigr)F(o(e)),\qquad e=(x,\varkappa).
+\end{equation}
+For submodules $M,M'$ of an $\pao$-module and $z\in\pao$ we write $\aucol(M,M')\mid z$ if for every
+finite family $\varphi=(\varphi_1,\dots,\varphi_\nu)$ in $M$ there is $\mu\in M_\nu(\pao)$ with
+$\det\mu\mid z$ and all $\sum_j\mu_{ij}\varphi_j\in M'$ (this is the notion used in
+{\cite[Theorem~4.21]{P49}}).
+
+\begin{theorem}[Elementary divisors of an edge Hecke operator]\label{ph:thm}
+Assume Propositions~\ref{ph:root}, \ref{ph:count} and~\ref{ph:av}. Let $0<\theta\le1$ and
+\begin{equation}\label{ph:eq-large}
+n^4\le q,\qquad\bigl(Nk\log q/\theta\bigr)^5P^{3r}\le n .
+\end{equation}
+Let $A$ be as in \eqref{ph:eq-A}, let $f\colon\mathcal F_X\to M$ be an $\pao$-linear map and $Y$
+an endomorphism of $M$ with $Yf=fA$, and $\Lambda=f(\mathcal F_X)$. Then $Y\Lambda\subseteq
+\Lambda$, and for every integer $j\ge0$ there is an integer
+\[
+l\le\bigl(3\phcd+\theta j\bigr)\,|X|\,|H|\,|\phB|,\qquad\phcd=Nn\Bigl(\frac1{P^{2r}}+\frac{r^2}{kP}
+\Bigr),\qquad\text{with}\quad\aucol(\Lambda,\,Y\Lambda+p^j\Lambda)\mid p^{\,l}.
+\]
+\end{theorem}
+
+Thus, up to a share $\theta$, the elementary divisors of $Y$ on $\Lambda$ have mean exponent at
+most $3\phcd$, to be compared with the exponent $nN/2$ of the scaling. The proof occupies
+\S\S\ref{ph:ss-la}--\ref{ph:ss-proof}. Its plan: with a pairing for which $\rho(g)$ and
+$\rho({}^tg)$ are adjoint, $A$ is the composite of a restriction of functions on $X$ to functions
+on edges with values in a lattice ``halfway'' along the edge, and of the transpose of the same
+restriction for the reversed edges (\S\ref{ph:ss-edges}). Each restriction has small colength in
+its saturation, because few forms modulo $\pam$ have all their translates divisible by $w$ halfway
+along every edge (\S\ref{ph:ss-depth}; a count of zeros with multiplicity). Between the two
+saturations the composite is nearly onto, up to few generators, because the values of the saturated
+functions satisfy congruences that cut the dimension by the number of edges at a vertex, and an
+approximate inverse with values satisfying the same congruences exists (\S\ref{ph:ss-inputs}).
+
+\subsection{Linear algebra over a valuation domain}\label{ph:ss-la}
+Every matrix over $\pao$ is $U\,D\,V$ with $U,V$ invertible and $D$ diagonal (choose an entry
+dividing all others, clear its row and column, and repeat). The following rules are immediate
+from the definition: (C1) if $\aucol(M,M')\mid z$ and $\aucol(M',M'')\mid z'$ then
+$\aucol(M,M'')\mid zz'$; (C2) if $\aucol(M,M')\mid z$ and $\phi$ is linear with
+$M_1\subseteq\phi(M)+M_1'$ and $\phi(M')\subseteq M_1'$, then $\aucol(M_1,M_1')\mid z$.
+
+\begin{lemma}\label{ph:col}
+Let $\nu\ge1$. {\rm(a)} For $B\in M_\nu(\pao)$, $\aucol(\pao^\nu,B\pao^\nu)\mid\det B$.
+{\rm(b)} If $M'\subseteq\pao^\nu$ is a submodule, $s$ a finite subset and $z\in\pao$, then
+$\aucol(M'+\langle s\rangle,\,M'+z\pao^\nu)\mid z^{|s|}$.
+{\rm(c)} Let $Z,d,d'\in M_\nu(\pao)$, $a,z\in\pao$ and $s\subset\pao^\nu$ finite with
+$a\pao^\nu\subseteq Z\pao^\nu+\langle s\rangle$. Then
+$\aucol\bigl(\pao^\nu,\ d'Zd\,\pao^\nu+z\pao^\nu\bigr)\mid\det d'\cdot a^\nu\cdot\det d\cdot
+z^{|s|}$.
+\end{lemma}
+\begin{proof}
+(a) Write $B=UDV$, $D=\operatorname{diag}(t_i)$. A family $\varphi$ has coordinates
+$c_j=U^{-1}\varphi_j$, and a combination $\sum_j\mu_{ij}\varphi_j$ lies in $B\pao^\nu=UD\pao^\nu$ if
+and only if $t_h$ divides $\sum_j\mu_{ij}c_{j,h}$ for every $h$. By {\cite[Lemma~4.2]{P49}}, applied to
+these $\nu$ linear forms in the row of $\mu$, there is $\mu$ with $\det\mu\mid\prod t_h$. (b) Write
+$\varphi_j=m_j+\sum_{\sigma\in s}c_{j\sigma}\sigma$ and apply {\cite[Lemma~4.2]{P49}} to the $|s|$
+forms $\sum_j\mu_{ij}c_{j\sigma}$ with moduli $z$. (c) By (a) for $a\cdot1$ and the hypothesis,
+$\aucol(\pao^\nu,Z\pao^\nu+\langle s\rangle)\mid a^\nu$. By (a) for $d$ and (C2) with $\phi=Z$,
+$\aucol(Z\pao^\nu+\langle s\rangle,Zd\pao^\nu+\langle s\rangle)\mid\det d$. By (b),
+$\aucol(Zd\pao^\nu+\langle s\rangle,Zd\pao^\nu+z\pao^\nu)\mid z^{|s|}$. Chain these by (C1), apply
+(C2) with $\phi=d'$, and chain with (a) for $d'$.
+\end{proof}
+
+\begin{lemma}[Near inverse]\label{ph:near}
+Let $\mathcal X,I,\mathcal J$ be finite sets, $Q\colon\pao^{\mathcal J}\to\pao^{\mathcal X\times
+I}$ with a left inverse $R$, $\mathcal A\colon\pao^{\mathcal X\times I}\to\pao^{\mathcal J}$ and
+$\mathcal B\colon\pao^{\mathcal J}\to\pao^{\mathcal X\times I}$ linear, and $a,u\in\pao$,
+$\varpi\in\pam$ with $a\varpi\mid u$ and $\mathcal A\mathcal B\equiv a\pmod u$. Let
+$C\subseteq\pao^I$ be a submodule such that all $\psi$ in the images of $Q$ and of $\mathcal B$
+have $\psi(x,\cdot)\in C$ for all $x\in\mathcal X$, and $S\subseteq\phk^I$ a subspace containing
+$h\bmod\pam$ whenever $uh\in C$. Then there is a set $s\subset\pao^{\mathcal J}$ with
+\[
+|\mathcal J|+|s|\le|\mathcal X|\dim S,\qquad a\,\pao^{\mathcal J}\subseteq\mathcal AQ\,
+\pao^{\mathcal J}+\langle s\rangle .
+\]
+\end{lemma}
+\begin{proof}
+Put $\pi=QR$, a projection onto $\phim Q$. The square matrix $(1-\pi)\mathcal BR$ has the image
+$(1-\pi)\phim\mathcal B$; write it as $U\operatorname{diag}(t_j)V$. With $U_j$ the columns of $U$,
+\[
+\phim Q+\phim\mathcal B=\phim Q+\langle t_jU_j\rangle_j,\qquad RU_j=0\ \text{if }t_j\ne0 .
+\]
+Let $J=\{j:t_j\ne0,\ t_j\mid u\}$; for $j\notin J$, $u\mid t_j$. For $j\in J$, $uU_j=(u/t_j)t_jU_j$
+lies in $\phim Q+\phim\mathcal B$, so its blocks lie in $C$ and those of $U_j$ reduce into $S$; the
+same holds for the columns $Q_i$ of $Q$. These $|\mathcal J|+|J|$ vectors are independent modulo
+$\pam$: applying $R$ to a relation kills the coefficients of the $Q_i$, and $U$ is invertible. They
+lie in $S^{\mathcal X}$ modulo $\pam$, which gives the count for $s=\{\mathcal AU_j:j\in J\}$. Now
+$\mathcal A(\phim Q+\phim\mathcal B)\subseteq\mathcal G+u\pao^{\mathcal J}$ with $\mathcal
+G=\phim\mathcal AQ+\langle s\rangle$, and $a\eta=\mathcal A\mathcal B\eta-u\eta'$; so
+$a\pao^{\mathcal J}\subseteq\mathcal G+\varpi\,a\pao^{\mathcal J}$, and Nakayama's lemma for the
+finitely generated module $(a\pao^{\mathcal J}+\mathcal G)/\mathcal G$ gives the claim.
+\end{proof}
+
+\subsection{Edges, halfway lattices, and the factorisation of $A$}\label{ph:ss-edges}
+\emph{Restrictions.} Let $\mathsf E$ be a finite set with maps $\sigma\colon\mathsf E\to X$,
+$g\colon\mathsf E\to G$ such that $e\mapsto(\sigma(e),g_e^{-1}K_r)$ is a bijection onto
+$X\times G/K_r$. The \emph{restriction} is
+\[
+\operatorname{Res}=\operatorname{Res}_{\sigma,g}\colon\mathcal F_X\to\mathcal F_{\mathsf E}
+=\{\psi\colon\mathsf E\to\pao^H\otimes\pao^\phB\},\qquad(\operatorname{Res}\varphi)(e)=
+\bigl(1\otimes\Delta\rho(g_e)\bigr)\varphi(\sigma(e)),
+\]
+and its \emph{saturation} is $\operatorname{Sat}=\{\psi:w^\mu\psi\in\phim\operatorname{Res}\text{
+for some }\mu\}$. (The form $\rho(g_e)\varphi$ is $\varphi$ in a basis adapted to the edge; the
+vectors $\Delta h$, $h\in\pao^\phB$, are the coefficients, in the normalised monomials
+$w^{-\phdep\beta}x^\beta$, of the integral forms.) Let
+\[
+\phA=\bigl\{v\in\pao^\phB:\ \exists\,\mu\ge0,\ h\in\pao^\phB\ \text{with}\ w^\mu v=\Delta h\
+\text{and}\ w^\mu\mid\Delta\rho(g)h\ \text{for all }g\in G\bigr\},
+\]
+the forms lying halfway along \emph{all} edges from a vertex.
+
+\begin{lemma}\label{ph:sat}
+{\rm(a)} If $z\in\pao$ divides $\operatorname{Res}\varphi$, then $z$ divides $(1\otimes\Delta
+\rho(g))\varphi(y)$ for all $y\in X$, $g\in G$. {\rm(b)} For $\psi\in\operatorname{Sat}$ and
+$e\in\mathsf E$, $\psi(e)\in\pao^H\otimes\phA$.
+\end{lemma}
+\begin{proof}
+(a) There is $e$ with $\sigma(e)=y$ and $g_e^{-1}K_r=g^{-1}K_r$, so $g=ug_e$ with $u\in K_r$ and
+$\Delta\rho(g)\varphi(y)=(\Delta\rho(u)\Delta^{-1})\,(\operatorname{Res}\varphi)(e)$; use
+Lemma~\ref{ph:para}. (b) If $w^\mu\psi=\operatorname{Res}\varphi$, take
+$h=\rho(g_e)\varphi(\sigma(e))$ (componentwise in $\pao^H$) and apply (a) with $z=w^\mu$ to
+$\Delta\rho(g)h=\Delta\rho(gg_e)\varphi(\sigma(e))$.
+\end{proof}
+
+\emph{The pairing.} Since $n<q=p^{eN}$, the multinomial coefficient $\binom n{\beta_s}$ of each
+$\beta_s$ divides $p^{c_0}$, $c_0=k^2eN$ (it is a product of $k-1$ binomial coefficients with upper
+index $<p^{eN}$, each of $p$-adic valuation $\le eN$ by Kummer's theorem). Put
+\[
+b_\beta=p^{Nc_0}\prod_s\binom n{\beta_s}^{-1},\qquad b'_\beta=\prod_s\binom n{\beta_s},\qquad
+b_\beta b'_\beta=p^{Nc_0},\qquad\mathsf b=\operatorname{diag}(b_\beta).
+\]
+On forms of degree $n$ in $k$ variables the bilinear form with $\langle x^\alpha,x^\beta\rangle=
+\delta_{\alpha\beta}\binom n\alpha^{-1}$ satisfies $\langle f(x\,M),f'\rangle=\langle f,f'(x\,{}^tM)
+\rangle$ for every matrix $M$ (it suffices to check it on powers of linear forms, where
+$\langle(x\cdot\xi)^n,(x\cdot\eta)^n\rangle=(\xi\cdot\eta)^n$). As $({}^tg)_s={}^t(g_s)$ for both
+parities,
+\begin{equation}\label{ph:eq-adj}
+\mathsf b\,\rho({}^tg)={}^t\rho(g)\,\mathsf b\qquad(g\in G).
+\end{equation}
+
+\emph{The two sets of edges.} On $\mathsf E=\mathcal E$ consider $(\sigma,g)=(o,{}^t\gamma)$ and
+$(\sigma',g')=(\mathrm{pr}_X,\ t\circ\mathrm{pr}_{G/K_r})$. The map $e\mapsto(\sigma'(e),
+g_e'^{-1}K_r)$ is the identity. The map $e\mapsto(o(e),{}^t\gamma(e)^{-1}K_r)$ is injective by
+\eqref{ph:eq-free}, hence bijective, the set being finite. Let $\operatorname{Res}$,
+$\operatorname{Res}'$ be the two restrictions and $\mathsf u=\bigoplus_eu(e)$ on
+$\mathcal F_{\mathcal E}$.
+
+\begin{lemma}[Factorisation]\label{ph:fact}
+$A\,(1\otimes\mathsf b)={}^t\operatorname{Res}'\circ(\mathsf u\otimes\mathsf b)\circ
+\operatorname{Res}$. In particular $A$ has entries in $\pao$.
+\end{lemma}
+\begin{proof}
+At $x$ the right side is $\sum_\varkappa u(e)\otimes{}^t(\Delta\rho(t(\varkappa)))\,\mathsf b\,
+\Delta\rho({}^t\gamma(e))$ applied to $F(o(e))$. As $\mathsf b$ and $\Delta$ are diagonal,
+\eqref{ph:eq-adj} gives ${}^t\rho(t)\Delta\,\mathsf b\,\Delta\rho({}^t\gamma)={}^t\rho(t)\Delta^2\,
+{}^t\rho(\gamma)\,\mathsf b={}^t(\rho(\gamma)\Delta^2\rho(t))\,\mathsf b$. The entries of $A$ are
+those of the matrices in \eqref{ph:eq-A}.
+\end{proof}
+
+\subsection{Few forms are deep for all edges}\label{ph:ss-depth}
+Over $\phk$ the group $G$ acts on forms through the $\bar\iota_s$; write $\bar\rho$. For
+$\delta\ge1$ let $D_\delta\subseteq\phk^\phB$ be the space of the forms $F$ such that, for every
+$g\in G$, all monomials of $\bar\rho(g)F$ have depth at least $\delta$.
+
+\begin{lemma}[Zeros with multiplicity]\label{ph:null}
+Let $\mathsf K$ be a field, $\mathsf I$ a finite set of variables with integers $\kappa_v\ge1$; the
+\emph{cost} of a monomial $X^\alpha$ is $\sum_v\alpha_v/\kappa_v$. Let $Z\subset\mathsf K^{\mathsf
+I}$ be a set of at least $\prod_v\kappa_v$ points such that, for each $v$, there is a polynomial
+$g_v$ all of whose monomials have cost $<1$ with $g_v(z)=z_v^{\kappa_v}$ for all $z\in Z$. If
+$f\ne0$ vanishes to order at least $\delta$ at every point of $Z$, then $f$ has a monomial of cost
+at least $\delta$.
+\end{lemma}
+\begin{proof}
+Put $\psi_v=X_v^{\kappa_v}-g_v$ and $b(\alpha,\gamma)=X^\alpha\psi^\gamma$; call it \emph{reduced}
+if $\alpha_v<\kappa_v$ for all $v$. \emph{Claim:} every $b(\alpha,\gamma)$ is a combination of
+reduced $b(\alpha',\gamma')$ with $|\gamma'|+\operatorname{cost}(\alpha')\le|\gamma|+
+\operatorname{cost}(\alpha)$. Indeed, if $\alpha_v\ge\kappa_v$ and $\alpha=\alpha_0+\kappa_ve_v$,
+then $b(\alpha,\gamma)=b(\alpha_0,\gamma+e_v)+g_v\,b(\alpha_0,\gamma)$, and the terms on the right
+have $\alpha$ of cost smaller by $1$, respectively smaller, with $|\gamma|$ larger by $1$,
+respectively equal; costs lie in a discrete set, so induction on $\operatorname{cost}(\alpha)$
+applies. Let $\mathcal J\colon\mathsf K[X]\to\prod_{z\in Z}\mathsf K[X]/\mathfrak m_z^\delta$ be
+the jet map; it is onto by the Chinese remainder theorem, its target has dimension
+$|Z|\cdot\#\{\gamma:|\gamma|<\delta\}$, and it kills $b(\alpha,\gamma)$ when $|\gamma|\ge\delta$,
+because $\psi_v\in\mathfrak m_z$. By the claim the images of the reduced $b(\alpha,\gamma)$ with
+$|\gamma|<\delta$ span the target; there are $\prod\kappa_v\cdot\#\{\gamma\}\le\dim$ of them, so
+they are independent modulo $\ker\mathcal J$. If all monomials $X^\alpha=b(\alpha,0)$ of $f$ had
+cost $<\delta$, then by the claim $f$ would be a combination of these, and $\mathcal J(f)=0$ would
+give $f=0$.
+\end{proof}
+
+\begin{proposition}[Depth count]\label{ph:depth}
+$\displaystyle\sum_{\delta\ge1}\dim_{\phk} D_\delta\le\phcd\,|\phB|$.
+\end{proposition}
+\begin{proof}
+Give a deep variable $v=x_{b,s}$ the number $\kappa_v=P^{2r}$ if $b>2r$ and $\kappa_v=P$ if
+$b\le2r$. We show that a non-zero $F\in D_\delta$ has a monomial $\beta$ with
+$\operatorname{wt}(\beta):=\sum_{v\text{ deep}}\beta_v/\kappa_v\ge\delta$. Then the projection of
+$D_\delta$ to the coordinates $\beta$ with $\operatorname{wt}(\beta)\ge\delta$ is injective, and
+\[
+\sum_\delta\dim D_\delta\le\sum_\beta\operatorname{wt}(\beta)=|\phB|\,\frac nk\sum_{v\text{ deep}}
+\frac1{\kappa_v}\le|\phB|\,\frac nk\cdot\frac N2\Bigl(\frac{k}{P^{2r}}+\frac{2r}P\Bigr)\le\phcd
+|\phB|,
+\]
+because the mean of $\beta_v$ over $\phB$ is $n/k$ by symmetry and each index $b$ is deep in $N/2$
+letters.
+
+Let $\mathcal P$ be the set of the positions $(a,a+r)$, $a\le r$, and $(a,c)$, $a\le r<2r<c\le k$;
+$|\mathcal P|=r(k-2r+1)$. For $y\in\auF_q^{\mathcal P}$ let $\mathsf A\in M_k(W)$ have entries
+lifting $y$ at $\mathcal P$ and $0$ elsewhere; $\mathsf A^2=0$, $g=1+\mathsf A\in G$,
+$g^{-1}=1-\mathsf A$. The substitution of $g^{-1}$ fixes the variables that are not deep and sends
+a deep variable $X_v$ to $X_v-z_v(y)$, where
+\[
+z_{(c,s)}(y)=\sum_{a:(a,c)\in\mathcal P}\bar\iota_s(y_{ac})\,x_{a,s}\ \ (s\text{ even},\ c>r),\qquad
+z_{(a,s)}(y)=-\sum_{c:(a,c)\in\mathcal P}\bar\iota_s(y_{ac})\,x_{c,s}\ \ (s\text{ odd},\ a\le r)
+\]
+are linear forms in variables that are not deep. Let $\mathsf K$ be the field of rational
+functions over $\phk$ in the variables that are not deep, and $f\in\mathsf K[X_v:v\text{ deep}]$
+the polynomial $F$; $f\ne0$. As $F=\bar\rho(g)^{-1}(\bar\rho(g)F)$ and the monomials of
+$\bar\rho(g)F$ have depth $\ge\delta$, $f$ vanishes to order $\ge\delta$ at the point $z(y)$. We
+apply Lemma~\ref{ph:null} to $Z=\{z(y)\}$; note $\prod_v\kappa_v=P^{\frac N2(2r(k-2r)+2r)}
+=q^{|\mathcal P|}$.
+
+For a letter $i$ let $\Lambda_i$ be the $\mathsf K$-span of the functions $y\mapsto z_v(y)^{P^j}$
+with $v=(b,s)$ deep, $s+j=i$ and $P^j<\kappa_v$. Since $\bar\iota_s^{\,P^j}=\bar\iota_{s+j}$,
+$z_v(y)^{P^j}$ is the linear form in the $\bar\iota_i(y_t)$ whose coefficients are the $P^j$-th
+powers of those of $z_v$. \emph{Every function $y\mapsto\bar\iota_i(y_t)$, $t\in\mathcal P$, lies
+in $\Lambda_i$.} For $t=(a_0,c)$ with $c>2r$: the $r$ integers $j\in[0,2r)$ with $i-j$ even give
+the forms $z_{(c,i-j)}^{P^j}=\sum_{a\le r}\bar\iota_i(y_{ac})\,x_{a,i-j}^{\,P^j}$, and the
+determinant of $(x_{a,i-j}^{\,P^j})_{j,a}$ is a signed sum of $r!$ distinct monomials, hence not
+zero. For $t=(a,a+r)$: if $i$ is even, $z_{(a+r,i)}=\bar\iota_i(y_{a,a+r})x_{a,i}$; if $i$ is odd,
+$z_{(a,i)}=-\bar\iota_i(y_{a,a+r})x_{a+r,i}-\sum_{c>2r}\bar\iota_i(y_{ac})x_{c,i}$ and the last
+terms are in $\Lambda_i$. This proves the statement. Consequently $y\mapsto z(y)$ is injective, so
+$|Z|=q^{|\mathcal P|}$; and $z_v(y)^{\kappa_v}$, a linear form in the $\bar\iota_{s+j_0}(y_t)$
+($\kappa_v=P^{j_0}$), equals $g_v(z(y))$ for a combination $g_v$ of monomials $X_{v'}^{P^j}$ of cost
+$P^j/\kappa_{v'}<1$. Lemma~\ref{ph:null} gives a monomial of $f$ of cost $\ge\delta$; it is the
+deep part of a monomial $\beta$ of $F$, and its cost is $\operatorname{wt}(\beta)$.
+\end{proof}
+
+\begin{proposition}[The ends]\label{ph:ends}
+Let $\operatorname{Res}=\operatorname{Res}_{\sigma,g}$ be a restriction and $\nu=|X||H||\phB|$.
+There are $Q\colon\pao^\nu\to\mathcal F_{\mathsf E}$ with a left inverse and $d\in M_\nu(\pao)$
+with $\operatorname{Res}=Qd$, $\phim Q=\operatorname{Sat}$ and $\det d\mid w^{\,\lambda}$,
+$\lambda\le\phcd\,\nu$.
+\end{proposition}
+\begin{proof}
+Write $\operatorname{Res}=U\binom D0V$ with $U,V$ invertible, $D=\operatorname{diag}(t_i)$; let $Q$
+consist of the first $\nu$ columns of $U$ and $d=DV$. $\operatorname{Res}$ is injective, so
+$t_i\ne0$; if $w^\mu\psi=Qd\varphi$ then $\psi=QR\psi$ for the left inverse $R$, so
+$\operatorname{Sat}\subseteq\phim Q$. Let $\varphi_i=V^{-1}e_i$; then $\operatorname{Res}\varphi_i=
+t_iQe_i$, and by Lemma~\ref{ph:sat}(a) $t_i$ divides $w^{\phdep\beta}(\rho(g)\varphi_i(y))_\beta$
+for all $g,y,\beta$ (and all components in $\pao^H$). With $g=1$: $t_i$ divides $w^{nN}$ times
+every entry of $\varphi_i$, one of which is a unit; so $t_i\mid w^{nN}$ and $\phim
+Q\subseteq\operatorname{Sat}$. If $t_i\nmid w^\delta$, then $t_i\in w^\delta\pam$ and the entries
+of $\rho(g)\varphi_i(y)$ at the $\beta$ of depth $\le\delta$ lie in $\pam$: the reductions of the
+$\varphi_i(y)$ lie in $\phk^H\otimes D_{\delta+1}$. The $\varphi_i$ are independent modulo $\pam$,
+so $\#\{i:t_i\nmid w^\delta\}\le|X||H|\dim D_{\delta+1}$. Finally $\prod_it_i$ divides
+$w^\lambda$ with $\lambda=\sum_{\delta\ge0}\#\{i:t_i\nmid w^\delta\}$ (each $t_i$ divides $w$ to
+the number of $\delta$ with $t_i\nmid w^\delta$), and Proposition~\ref{ph:depth} bounds $\lambda$.
+\end{proof}
+
+\subsection{The three inputs on forms}\label{ph:ss-inputs}
+Let $1\le a\ne a'\le k$. In the letter $s$ put $(X_s,Y_s)=(x_{a,s},x_{a',s})$ if $s$ is even and
+$(x_{a',s},x_{a,s})$ if $s$ is odd. The \emph{defect} of an exponent $\alpha$ at the letter $i$
+along $(a,a')$ is
+\[
+\phdef_i^{a,a'}(\alpha)=\alpha(Y_i)+\frac1{q-1}\sum_{s\in\Z/N}P^{[s-i]}\bigl(\alpha(Y_s)-\alpha(X_s)
+\bigr),\qquad[s-i]\in\{0,\dots,N-1\}.
+\]
+(The sum is the weight of $x^\alpha$, modulo $q-1$ and up to the factor $P^{-i}$, for the torus of
+the root.) Let $\mathrm{SL}_2^{a,a'}(W)\subseteq G$ be the copy of $\mathrm{SL}_2(W)$ in the rows
+and columns $a,a'$.
+
+\begin{proposition}[Root lemma]\label{ph:root}
+Let $R$ be $\pao$ or $\phk$ (with $w=0$ in $\phk$), let $c$ be real weights of the variables with
+$c(Y_s)-c(X_s)\in[\tfrac12,1]$ for all $s$, $f$ a polynomial over $R$, $\alpha$ an exponent and
+$\lambda\ge0$ an integer. Suppose that for every $g\in\mathrm{SL}_2^{a,a'}(W)$ and every monomial
+$\beta$, the coefficient of $x^\beta$ in $g\cdot f$ is divisible by $w^{\lceil\lambda+c\cdot\alpha
+-c\cdot\beta\rceil^+}$, and that $w^{\lambda+1}$ does not divide the coefficient of $x^\alpha$ in
+$f$. Then $\phdef_i^{a,a'}(\alpha)\le0$ for every letter $i$.
+\end{proposition}
+\noindent Proved in \S\ref{pe:ss-root} (Proposition~\ref{pe:root}).
+
+Now let $(a,a')=(r,r+1)$ and write $\phdef_i=\phdef_i^{r,r+1}$; so $Y_s$ is the deep one of the two
+variables. For an integer $c\ge1$ put $c^*=3kc$ and
+\begin{align*}
+C_c&=\bigl\{v\in\pao^\phB:\ w^c\mid(\rho(g)v)_\beta\ \text{for all }g\in L\text{ and all }\beta
+\text{ with }\max_i\phdef_i(\beta)>3c^*\bigr\},\\
+S_c&=\bigl\{v\in\phk^\phB:\ (\bar\rho(g)v)_\beta=0\ \text{for all }g\in L\text{ and all }\beta
+\text{ with }\max_i\phdef_i(\beta)>3c^*\bigr\}.
+\end{align*}
+Clearly $w^c\pao^\phB\subseteq C_c$, and if $w^{c-1}h\in C_c$ then $h\bmod\pam\in S_c$.
+
+\begin{lemma}\label{ph:AinC}
+$\phA\subseteq C_c$ for every $c$; more precisely, for
+$v\in\phA$, $g\in L$ and $\phdef_i(\beta)\ge3j$, $w^j$ divides $(\rho(g)v)_\beta$.
+\end{lemma}
+\noindent Proved in \S\ref{pe:sec} (Lemma~\ref{pe:AinC}).
+
+\begin{proposition}[Count of the forms of bounded defect]\label{ph:count}
+Let $c\ge1$, $0<\theta\le1$ and $24\,Nk^2c\,P^{2r}\le\theta n$. Then
+$[G:K_r]\cdot\dim_{\phk} S_c\le(1+\theta)|\phB|$.
+\end{proposition}
+\noindent Proved in \S\ref{pe:ss-count} (Proposition~\ref{pe:count}), from the exponential formula
+for permutations~\cite[Cor.~5.1.9]{StanleyEC2}, Euler's product identity~\cite{AndrewsPartitions}, \cite[Ch.~I, \S2, Example~4]{Macdonald}
+and the convergence of lattice point counts to the volume for compact convex sets; the hypothesis
+is derived there, see \eqref{pe:eq-hyp}.
+
+\begin{proposition}[Averaging]\label{ph:av}
+Let $N=2\ell$ and $Nk(\ell+2)n+n+k<P^\ell$, and $c_0=k^2eN$. For every $c\ge1$ there is
+$\mathrm{Av}\in M_\phB(\pao)$ such that $\mathrm{Av}\,h\in C_c$ for all $h\in\pao^\phB$, and
+\[
+{}^th'\,\mathsf b\,\mathrm{Av}\,h\equiv p^{Nc_0}\;{}^th'\,\mathsf b\,h\pmod{w^c}\qquad(h\in
+\pao^\phB,\ h'\in\phA).
+\]
+\end{proposition}
+\noindent Proved in \S\ref{pe:ss-av} (Proposition~\ref{pe:av}).
+
+\subsection{Proof of Theorem~\ref{ph:thm}}\label{ph:ss-proof}
+First $Y\Lambda=fA\mathcal F_X\subseteq\Lambda$. By (C2) with $\phi=f$ it suffices to prove
+$\aucol(\mathcal F_X,A\mathcal F_X+p^j\mathcal F_X)\mid p^l$, and since
+$A(1\otimes\mathsf b)\mathcal F_X\subseteq A\mathcal F_X$ it suffices to prove it for
+$A'=A(1\otimes\mathsf b)$. Let $\nu=|X||H||\phB|$.
+
+\emph{Sizes.} From \eqref{ph:eq-large}: $k\ge2$, $N\ge2$, $\log q\ge1$, so $n\ge(Nk)^5\ge4^5$,
+$n<q$, $q\ge n^4$ gives $\log q\ge27$ and $P^{\ell}=\sqrt q\ge n^2>Nk(\ell+2)n+n+k$ for $\ell=N/2$
+(as $n\ge(Nk)^5$ and $\ell+2\le N+1$). With $c_0=k^2eN\le\tfrac32k^2\log q$ and $c=5Nc_0$: $Nc_0
+\ge2$; $Nc_0\le Nn/P^{2r}\le\phcd$; and $24Nk^2cP^{2r}\le180\,N^2k^4\log q\cdot P^{2r}\le\theta^5(Nk\log q/\theta)^5P^{3r}
+\le\theta n$. So
+Propositions~\ref{ph:count} and~\ref{ph:av} apply with this $c$, and $n<q$ gives the pairing of
+\S\ref{ph:ss-edges}.
+
+\emph{Factorisation.} By Proposition~\ref{ph:ends} for the two restrictions,
+$\operatorname{Res}=Qd$, $\operatorname{Res}'=Q'd'$, and by Lemma~\ref{ph:fact}
+\[
+A'={}^td'\,Z\,d,\qquad Z=\mathcal AQ,\qquad\mathcal A={}^tQ'(\mathsf u\otimes\mathsf b)\colon
+\mathcal F_{\mathcal E}\to\pao^\nu .
+\]
+
+\emph{The middle.} Let $R'$ be a left inverse of $Q'$ and $\mathcal B=(\mathsf u^{-1}\otimes
+\mathrm{Av}\,\mathsf b')\,{}^tR'$, with $\mathsf b'=\operatorname{diag}(b'_\beta)$. Then
+$\mathcal A\mathcal B={}^tQ'(1\otimes\mathsf b\,\mathrm{Av}\,\mathsf b')\,{}^tR'$. The columns of
+$Q'$ have their values in $\pao^H\otimes\phA$ (Lemma~\ref{ph:sat}(b)), so by
+Proposition~\ref{ph:av} and $\mathsf b\mathsf b'=p^{Nc_0}$, ${}^tQ'R'^{\,t}=1$,
+\[
+\mathcal A\mathcal B\equiv p^{Nc_0}\;{}^tQ'(1\otimes\mathsf b\mathsf b')\,{}^tR'=p^{2Nc_0}
+\pmod{w^c}.
+\]
+We apply Lemma~\ref{ph:near} with $\mathcal X=\mathcal E\times H$, $I=\phB$, $a=p^{2Nc_0}=w^{4Nc_0}$,
+$u=w^{c-1}$ (so $aw\mid u$, as $c-1\ge4Nc_0+1$), $C=C_c$ and $S=S_c$: the values of the columns of
+$Q$ lie in $\phA\subseteq C_c$ (Lemmas~\ref{ph:sat}, \ref{ph:AinC}), those of $\mathcal B$ lie in
+$C_c$ by Proposition~\ref{ph:av} ($C_c$ is a module and $\mathsf u^{-1}$ acts on the factor
+$\pao^H$), and the condition on $S$ was noted after the definition. By
+Proposition~\ref{ph:count}, $|\mathcal X|\dim S=|X||H|[G:K_r]\dim S_c\le(1+\theta)\nu$. Hence there
+is $s$ with $|s|\le\theta\nu$ and $p^{2Nc_0}\pao^\nu\subseteq Z\pao^\nu+\langle s\rangle$.
+
+\emph{Conclusion.} By Lemma~\ref{ph:col}(c) with $z=p^j$,
+$\aucol(\pao^\nu,A'\pao^\nu+p^j\pao^\nu)$ divides $\det d'\cdot p^{2Nc_0\nu}\cdot\det d\cdot
+p^{j|s|}$, where $\det d\mid w^\lambda$, $\det d'\mid w^{\lambda'}$ with integers $\lambda,\lambda'\le\phcd
+\nu$. This divides $p^l$ with $l=\max(\lambda,\lambda')+2Nc_0\nu+j|s|\le(3\phcd+\theta j)\nu$.
+\qed
+
+\subsection{Deduction of \texorpdfstring{{\cite[Lemma~4.19]{P49}}}{[Theta, Lemma~4.19]}}\label{ph:ss-ded}
+Let $p$ be exceptional, $\Lambda$ a full mark, $\mathfrak l\in\Lambda$, and write
+$\mathfrak r=\mathfrak r_p$, $\pao=\auO_\iota$. We use the normalisation (N1)--(N3) of {\cite[\S6.1]{P49}}, which for $\lambda^X$ reads
+({\cite[Remark~6.2]{P49}}):
+\begin{itemize}
+\item[(N)] $W_{\lambda^X}=\bigotimes_{\tau\in\auPa}V_\tau$, where $V_\tau$ has the basis
+$(e_\beta)$ indexed by the monomials of degree $a$ in $k$ variables, there is no power of the
+determinant, and $\gamma\in\auGL_k(E)$ acts on $V_\tau$ by the transpose of the matrix, in the
+monomial basis, of the substitution $x\mapsto x\cdot{}^t\tau(\aubar\gamma)$ on forms of degree
+$a$. The Hecke operator is $(T_{\mathfrak l}\varphi)(g)=\sum_{h}\varphi(gh)$, $h$ running over
+$K^\circ_{\mathfrak l}\,\mathsf d\,K^\circ_{\mathfrak l}/K^\circ_{\mathfrak l}$,
+$\mathsf d=\operatorname{diag}(p1_{\mathfrak r},1_{k-\mathfrak r})$, in the identification of
+$\auU(X_0)$ at the place below $\mathfrak l$ with $\auGL_k(E_{\mathfrak l})$ by the coordinates at
+$\mathfrak l$.
+\end{itemize}
+For $\gamma$ unitary, ${}^t\tau(\aubar\gamma)=\tau(\gamma)^{-1}$.
+
+\emph{The cycle.} $p$ is inert in $K$, so $p\ge13$ (the primes below $13$ divide $q_0$ and split).
+Let $\varphi$ be the Frobenius of $p$ in $\operatorname{Gal}(E/\Q)$, which generates the
+decomposition group of every prime above $p$. For $\tau\in\auPl$ and $\nu\in(\Z/q_1)^\times$ the
+place $u(\nu)\tau=\tau\circ\sigma_\nu$ induces $\mathfrak l_\tau$ if and only if $\sigma_\nu\in
+\langle\varphi\rangle$, and $\aubar{\mathfrak l_\tau}$ if and only if $c\sigma_\nu\in\langle
+\varphi\rangle$; as in the proof of {\cite[Lemma~4.17]{P49}}, these are the classes $p^{i}$, $i$ even,
+and $-p^{i}$, $i$ odd, that is, together the group $\langle-p\rangle$. Let $o$ be the order of
+$-p$ modulo $q_1$ and $o_0$ its order modulo $q_0$, odd and $\le\mathfrak r$ by hypothesis. Fix
+$\tau_0\in\auPa$ with $\mathfrak l_{\tau_0}=\mathfrak l$. The $a$-places inducing $\mathfrak l$ or
+$\aubar{\mathfrak l}$ are the $\tau_s=u((-p)^{o_0s})\tau_0=u(-p^{o_0})^s\tau_0$, $s\in\Z/N$,
+$N=o/o_0$; $\tau_s$ induces $\mathfrak l$ exactly for even $s$. Since $-p\not\equiv1\pmod m$ and
+$m\mid q_1$ is a power of $2$, $o$ is even, hence so is $N$; and the residue field of $\mathfrak
+l$ has $p^{\operatorname{ord}\varphi}=p^{o}$ elements, because $\operatorname{ord}\varphi=2
+\operatorname{ord}(p^2)=o$. Let $W$ be the localisation of $\auO_E$ at $\mathfrak l$, and
+$\iota_s=\tau_s|_W$ for even $s$, $\iota_s=(\tau_s\circ c)|_W$ for odd $s$; both map $W$ to
+$\pao$. By {\cite[Lemma~4.11]{P49}} with $e=o_0$, $\tau_{s+1}(y)\equiv\tau_s(\aubar y)^{P}$ modulo
+$p$ for $y\in\auO_E$, $P=p^{o_0}$; this is $\iota_{s+1}\equiv\iota_s^P$ for both parities, and it
+extends to $W$. So we have a Frobenius cycle with $q=P^N=p^o$, $P\ge13$, and $A_{\mathfrak
+l}=aN/2$.
+
+\emph{The edges.} Let $G_f,\Gamma,J=J_X$ be as in {\cite[\S14.3]{P46}}; $J$ is free and is the
+full group $\auGL_k(\auO_{E_{\mathfrak l}})$ at $\mathfrak l$. Choose representatives $x$ of
+$X=\Gamma\backslash G_f/J$ whose components at all primes above $p$ are integral; this is possible by {\cite[Corollary~6.4(a)]{P49}}. Let $v_0$ be the place of $E^+$ below
+$\mathfrak l$. We may moreover take $x_{v_0}=1$ for every representative: given an integral
+representative $x$, the set of $y\in\prod_{v\mid p}\auU(X_0)(E^+_v)$ with $y_{v_0}x_{v_0}\in J_{v_0}$ and
+$y_vx_v$ integral for the other $v\mid p$ is open and contains $(x_v^{-1})_{v\mid p}$, so by
+{\cite[Proposition~6.3]{P49}} it contains some $\gamma\in\Gamma$; then $\gamma x$ represents the same
+class, is integral above $p$, and $\gamma x\,j$ with $j\in J$ equal to $(\gamma x_{v_0})^{-1}$ at
+$v_0$ and to $1$ elsewhere represents it as well, is integral above $p$ and has component $1$ at
+$v_0$. Then $\varphi\in\auS$ is integral at $\iota$ if and only
+if all $\varphi(x)$ have coordinates in $\pao$ ({\cite[Corollary~6.4(b)]{P49}}), and $\varphi\mapsto(\varphi(x))_x$ identifies
+$\auS_\iota$ with the image of $f\colon\mathcal F_X\to\auS$, where
+$\phB\times H$ indexes the basis of $W_{\lambda^X}$: $\phB$ for the factors at
+$\tau_s$, $s\in\Z/N$, and $H$ for the other $a$-places. One has
+$K^\circ_{\mathfrak l}\mathsf dK^\circ_{\mathfrak l}=\bigsqcup_{\varkappa}\beta_\varkappa\mathsf
+dK^\circ_{\mathfrak l}$, $\varkappa=\beta_\varkappa K_{\mathfrak r}\in G/K_{\mathfrak r}$,
+$\beta_\varkappa\in G=\auGL_k(W)$, because $\mathsf d^{-1}\beta\mathsf d$ is integral exactly for
+$\beta\in K_{\mathfrak r}$. For an edge $e=(x,\varkappa)$ write
+\[
+x\,\beta_\varkappa\mathsf d=\gamma_e\cdot o(e)\cdot j_e,\qquad\gamma_e\in\Gamma,\ o(e)\in X,\
+j_e\in J;\qquad\gamma(e):=\gamma_e^{-1}\beta_\varkappa\mathsf d\in\auGL_k(E),\qquad
+t(\varkappa)=\beta_\varkappa^{-1}.
+\]
+At $v_0$ both $x$ and $o(e)$ have component $1$, so $\beta_\varkappa\mathsf d=\gamma_e\,j_{e,v_0}$
+and $\gamma(e)=j_{e,v_0}$ is integral with integral inverse at $\mathfrak l$, so $\gamma(e)\in G$, and $\gamma_e=\beta_\varkappa\mathsf d\gamma(e)^{-1}$. Then
+$(T_{\mathfrak l}\varphi)(x)=\sum_\varkappa\gamma_e\cdot\varphi(o(e))$. By (N), $\gamma_e$ acts on
+$V_{\tau_s}$ through the substitution by $\tau_s(\gamma_e)^{-1}=\iota_s(\gamma(e)\mathsf d^{-1}
+\beta_\varkappa^{-1})$ for even $s$, and by ${}^t(\tau_sc)(\gamma_e)=\iota_s({}^t\gamma(e)^{-1}
+\mathsf d\,{}^t\beta_\varkappa)$ for odd $s$. Now $p\,\mathsf d^{-1}$ and $\mathsf d$ are the
+diagonal matrices with $p$ at the deep variables of an even, respectively odd, letter (for
+$r=\mathfrak r$). Hence $p^{aN/2}$ times the matrix of the substitution of $\gamma_e$ on
+$\bigotimes_sV_{\tau_s}$ is $\rho(\gamma(e))\Delta^2\rho(t(\varkappa))$, and $\gamma_e$ acts by
+its transpose. At an $a$-place $\tau$ not among the $\tau_s$ the primes $\mathfrak
+l_\tau,\aubar{\mathfrak l_\tau}$ differ from $\mathfrak l,\aubar{\mathfrak l}$, and there
+$\gamma_e=x\,j_e^{-1}o(e)^{-1}$ is integral with integral inverse; so $\gamma_e$ acts on
+$\bigotimes_{\tau\ne\tau_s}V_\tau$ by a matrix $u(e)\in\auGL_H(\pao)$. Therefore
+$p^{A_{\mathfrak l}}T_{\mathfrak l}\circ f=f\circ A$ with $A$ as in \eqref{ph:eq-A}.
+
+\emph{Condition \eqref{ph:eq-free}.} Let $o(e)=o(e')=y$ and ${}^t\gamma(e)\,{}^t\gamma(e')^{-1}\in
+K_{\mathfrak r}$, that is, $v=\gamma(e)^{-1}\gamma(e')$ has its lower left block in $\pam_W$. Then
+$\eta=\gamma_e\gamma_{e'}^{-1}=\beta_\varkappa\mathsf dv\mathsf d^{-1}\beta_{\varkappa'}^{-1}\in
+G$. The element $x^{-1}\eta x'=\beta_\varkappa\mathsf dj_e^{-1}j_{e'}\mathsf d^{-1}
+\beta_{\varkappa'}^{-1}$ of $G_f$ (its component at $v_0$, where $x_{v_0}=x'_{v_0}=1$) agrees
+with $j_e^{-1}j_{e'}$ away from $v_0$ and equals $\eta\in G$ at $v_0$, hence is integral with
+integral inverse there; so it lies in $J$, $x=x'$, and
+$\eta\in\Gamma\cap xJx^{-1}=1$. Then $\beta_\varkappa^{-1}\beta_{\varkappa'}=\mathsf dv\mathsf
+d^{-1}$ is integral with upper right block in $\pam_W$, so $\varkappa=\varkappa'$.
+
+\emph{Sizes.} Take $r=\mathfrak r$, $n=a$, $\theta=1/(m^2f)$. Then $0<2r\le k$ since
+$\mathfrak r\le1+\log_2m$; $N\le f$; $o\ge m$, because an element of $(\Z/2^{j'})^\times$ that is
+not $\pm1$ modulo $m=2^{j}$ has order at least $2^{j'-j}$, and $2^{j'}\mid q_1$ for $2^{j'}=16\,m^{22}$ by the
+definition of the data; so
+$q=p^o\ge13^m\ge a^4$ by {\cite[(36)]{P46}}. Further $P^{3r}\le p^{3\mathfrak r^2}\le(pm)^{3
+\mathfrak r}\le b^{1/2}$, as $p<x_1$ and $(\log x_1)^6\le\log b$; and, using $f\le x^{12}$,
+$k\le3x^5$, $m\le2\sqrt x$ and $\log q\le f\log x_1$, $(Nk\log q/\theta)^5\le b^{1/2}$. With
+$q\ge a^4$ these give \eqref{ph:eq-large}; the computation is written out in
+\S\ref{pe:ss-sizes}, items (a)--(e). Finally $P^{2r}\ge p^{\mathfrak r}\cdot p\ge mp$ and $r^2/(kP)\le1/(mp)$, so
+$3\phcd\le6Na/(mp)=12A_{\mathfrak l}/(mp)$. Theorem~\ref{ph:thm} with $j=j_0$,
+$|X||H||\phB|=\auDX$, gives {\cite[Lemma~4.19]{P49}}: $Y_{\mathfrak l}\auS_\iota\subseteq\auS_\iota$
+and $\aucol(\auS_\iota,Y_{\mathfrak l}\auS_\iota+p^{j_0}\auS_\iota)\mid p^i$ with
+$i\le(12A_{\mathfrak l}/(mp)+j_0/(m^2f))\auDX$. \qed
+
+\begin{remark}\label{ph:status-eldiv}
+Thus {\cite[Lemma~4.19]{P49}}, as stated in {\cite[\S4.5]{P49}} and used in the proof of
+{\cite[Theorem~4.21(iv)]{P49}}, follows from Propositions~\ref{ph:root}, \ref{ph:count}, \ref{ph:av}
+(proved in \S\ref{pe:sec}); the normalisation (N) and weak approximation are {\cite[\S\S6.1 and~6.2]{P49}}. Related results on
+slopes of Hecke operators on forms of large weight are in \cite{LTXZ}; we know no published
+statement that implies Theorem~\ref{ph:thm}.
+\end{remark}
+
+
+
+% ===== A-eldiv-inputs.tex =====
+% proofs/A-eldiv-inputs.tex
+% Proofs of Propositions ph:root, ph:count, ph:av of proofs/A-hecke-eldiv.tex (to be \input after it).
+\providecommand{\auGL}{\mathrm{GL}}
+\providecommand{\auF}{\mathbb F}
+\providecommand{\aucol}{\operatorname{col}}
+\providecommand{\pao}{\mathfrak o}
+\providecommand{\pam}{\mathfrak m}
+\providecommand{\phB}{\mathfrak B}
+\providecommand{\phA}{\mathfrak A}
+\providecommand{\phk}{\boldsymbol k}
+\providecommand{\phdep}{\operatorname{dp}}
+\providecommand{\phdef}{\operatorname{def}}
+\providecommand{\phcd}{c_{\mathrm{div}}}
+% macros of this file (prefix \pe)
+\providecommand{\peX}{\mathbf X}
+\providecommand{\peG}{\mathbf G}
+\providecommand{\peS}{\mathbf S}
+\providecommand{\peht}{\operatorname{ht}}
+\providecommand{\perw}{\operatorname{rw}}
+\providecommand{\pecw}{\operatorname{cw}}
+\providecommand{\pevol}{\operatorname{vol}}
+\providecommand{\petr}{\operatorname{tr}}
+\providecommand{\pesgn}{\operatorname{sgn}}
+\providecommand{\peC}{\mathcal C}
+\providecommand{\pecl}[1]{\lceil #1\rceil^{+}}
+\providecommand{\pesh}{\sharp}
+
+\section{The three inputs on forms}\label{pe:sec}
+
+We keep the setting and the notation of \S\ref{ph:ss-set} and \S\ref{ph:ss-inputs}. This section
+proves Propositions~\ref{ph:root}, \ref{ph:count}, \ref{ph:av} and
+Lemma~\ref{ph:AinC} (Lemma~\ref{pe:AinC}), derives the hypothesis of Proposition~\ref{ph:count} (it comes
+out as stated, see \eqref{pe:eq-hyp}), and writes out the comparisons of sizes
+(\S\ref{pe:ss-sizes}). The results used without proof are: Kummer's theorem on binomial
+coefficients, Nakayama's lemma, the exponential formula for permutations, Euler's product identity
+\eqref{pe:eq-euler}, and the convergence of lattice point counts to the volume for compact convex
+sets.
+
+Throughout, $R$ is $\pao$ or $\phk$, with $w=0$ and $p=0$ in $\phk$; over $\phk$ the group
+$G$ acts through the $\bar\iota_s$, and $\bar\iota_{s+1}=\bar\iota_s^{\,P}$. For $x\in\R$,
+$\pecl x=\max(\lceil x\rceil,0)$; one has $\pecl{x+y}\le\pecl x+\pecl y$. For $j\in\Z/N$, $[j]\in
+\{0,\dots,N-1\}$ is its representative. Recall $P\ge5$, $q=P^N$, $N$ even.
+
+\subsection{Levels}\label{pe:ss-lev}
+Let $Z$ be a finite set of variables with real weights $c\colon Z\to\R$ (negative weights are
+allowed), and $c\cdot\mu=\sum_zc(z)\mu_z$ for an exponent $\mu$. A polynomial $f=\sum_\mu f_\mu
+z^\mu\in R[Z]$ has \emph{level at least $b$} (for $c$), $b\in\R$, if $w^{\pecl{b-c\cdot\mu}}$
+divides $f_\mu$ for every $\mu$. Over $\phk$ this says that every monomial of $f$ has weight at
+least $b$.
+
+\begin{lemma}\label{pe:lev}
+{\rm(a)} If $f$, $f'$ have levels at least $b$, $b'$, then $ff'$ has level at least $b+b'$; sums of
+polynomials of level at least $b$ have level at least $b$. {\rm(b)} Let $(Z',c')$ be a second set
+of weighted variables, $\chi,\chi'\colon R[Z]\to R[Z']$ homomorphisms of $R$-algebras and
+$\delta\ge0$, such that for every $z\in Z$ the polynomial $\chi(z)$ has level at least $c(z)$ and
+$\chi'(z)-\chi(z)$ has level at least $c(z)+\delta$. If $f$ has level at least $b$, then $\chi(f)$
+and $\chi'(f)$ have level at least $b$ and $\chi'(f)-\chi(f)$ has level at least $b+\delta$.
+\end{lemma}
+\begin{proof}
+(a) A coefficient of $ff'$ is a sum of products $f_\mu f'_{\mu'}$, and
+$\pecl{b+b'-c\cdot(\mu+\mu')}\le\pecl{b-c\cdot\mu}+\pecl{b'-c\cdot\mu'}$. (b) It suffices to treat
+$f=f_\mu z^\mu$; the constant $f_\mu$ has level at least $b-c\cdot\mu$. By (a), $\chi(z^\mu)$ has
+level at least $c\cdot\mu$, and so has $\chi'(z^\mu)$ because $\chi'(z)=\chi(z)+(\chi'(z)-\chi(z))$
+has level at least $c(z)$. Finally $u_1\cdots u_n-v_1\cdots v_n=\sum_ju_1\cdots u_{j-1}(u_j-v_j)
+v_{j+1}\cdots v_n$ shows that $\chi'(z^\mu)-\chi(z^\mu)$ has level at least $c\cdot\mu+\delta$.
+\end{proof}
+
+\subsection{The root lemma}\label{pe:ss-root}
+
+\begin{proposition}[Root lemma; Proposition~\ref{ph:root}]\label{pe:root}
+Let $R$ be $\pao$ or $\phk$ (with $w=0$ in $\phk$), let $c$ be real weights of the variables with
+$c(Y_s)-c(X_s)\in[\tfrac12,1]$ for all $s$, $f$ a polynomial over $R$, $\alpha$ an exponent and
+$\lambda\ge0$ an integer. Suppose that for every $g\in\mathrm{SL}_2^{a,a'}(W)$ and every monomial
+$\beta$, the coefficient of $x^\beta$ in $g\cdot f$ is divisible by $w^{\lceil\lambda+c\cdot\alpha
+-c\cdot\beta\rceil^+}$, and that $w^{\lambda+1}$ does not divide the coefficient of $x^\alpha$ in
+$f$. Then $\phdef_i^{a,a'}(\alpha)\le0$ for every letter $i$.
+\end{proposition}
+\begin{proof}
+The hypothesis says that every $g\cdot f$ has level at least $b:=\lambda+c\cdot\alpha$ for $c$. Fix
+$i$ and put $P_s=P^{[s-i]}$, so $P_i=1$ and $5\le P_s\le q/5$ for $s\ne i$; let $\epsilon_s=-1$ if
+$s\equiv i\pmod2$ and $\epsilon_s=1$ otherwise. With
+\[
+\nu=q\,\alpha(Y_i)+\sum_{s\ne i}P_s\,\alpha(Y_s),\qquad\nu'=\sum_{s}P_s\,\alpha(X_s),\qquad
+\text{one has}\quad\phdef_i^{a,a'}(\alpha)=\frac{\nu-\nu'}{q-1},
+\]
+and we have to show $\nu\le\nu'$.
+
+\emph{The elements $g_r$.} For $r\in W$ let $g_r\in\mathrm{SL}_2^{a,a'}(W)$ have the block
+$\bigl(\begin{smallmatrix}0&1\\-1&x\end{smallmatrix}\bigr)$ in the rows and columns $a,a'$, with
+$x=-r$ if $i$ is even and $x=r$ if $i$ is odd. The inverse transpose of this block is
+$\bigl(\begin{smallmatrix}x&1\\-1&0\end{smallmatrix}\bigr)$. Reading the columns of $(g_r)_s$ for
+the two parities of $s$ one finds, for every letter $s$,
+\begin{equation}\label{pe:eq-gr}
+g_r\cdot X_s=\pm Y_s,\qquad g_r\cdot Y_s=\pm\bigl(X_s+\epsilon_s\,\iota_s(r)\,Y_s\bigr),
+\end{equation}
+the sign being $-$ for the variables of index $a$ and $+$ for those of index $a'$; the other
+variables are fixed.
+
+\emph{The substitution.} Let $t$ be a new variable and $\chi,\chi_0\colon R[x]\to R[t][x]$ the
+homomorphisms of $R$-algebras that fix the variables $x_{b,s}$ with $b\ne a,a'$ and are given by
+\begin{align*}
+\chi_0&\colon& Y_i&\mapsto X_i,& X_s&\mapsto t^{qP_s}X_s\ \ (\text{all }s),& Y_s&\mapsto Y_s\ \
+(s\ne i);\\
+\chi&\colon& Y_i&\mapsto X_i,\quad X_i\mapsto t^{q}X_i,& X_s&\mapsto t^{qP_s}X_s-\epsilon_st^{P_s}
+Y_s,& Y_s&\mapsto Y_s-\epsilon_sX_s\ \ (s\ne i).
+\end{align*}
+Let $\tau_r$ be the shift $t\mapsto t+\iota_i(r)$ and $e_j(t)=(t+\iota_i(r))^{P^j}-t^{P^j}-
+\iota_{i+j}(r)$. Since $(u+v)^{P}\equiv u^P+v^P$ and $\iota_{s+1}\equiv\iota_s^P$ modulo $p$, and
+since $u\equiv v$ implies $u^P\equiv v^P$ modulo $p$, we have $e_j\in pR[t]=w^2R[t]$. From
+\eqref{pe:eq-gr}, with $d=[s-i]$, so that $\iota_{i+d}=\iota_{i+N+d}=\iota_s$:
+\begin{equation}\label{pe:eq-key}
+\begin{aligned}
+\tau_r\chi(g_r\cdot X_i)&=\pm X_i,\qquad\tau_r\chi(g_r\cdot X_s)=\pm(Y_s-\epsilon_sX_s)\quad(s\ne
+i),\\
+\tau_r\chi(g_r\cdot Y_i)&=\pm\bigl((t+\iota_i(r))^q-\iota_i(r)\bigr)X_i=\pm\bigl(t^q+e_N\bigr)X_i,\\
+\tau_r\chi(g_r\cdot Y_s)&=\pm\bigl((t^{qP_s}+e_{N+d})X_s-\epsilon_s(t^{P_s}+e_d)Y_s\bigr)\quad(s\ne
+i).
+\end{aligned}
+\end{equation}
+(For the last line, $\chi(X_s+\epsilon_s\iota_s(r)Y_s)=(t^{qP_s}-\iota_s(r))X_s-\epsilon_s(t^{P_s}-
+\iota_s(r))Y_s$, as $\epsilon_s^2=1$.)
+
+\emph{Two systems of weights.} Let $\kappa=(c(Y_i)-c(X_i))/q$; so $\tfrac12\le q\kappa\le1$,
+$P_s\kappa\le\tfrac15$, and $qP_s\kappa\ge\tfrac52$ for $s\ne i$. On the variables $t$ and
+$x_{b,s}$ define $c^\infty$ and $c^0$ as $c$, except that
+\begin{align*}
+c^\infty(t)&=-\kappa,& c^\infty(X_s)&=c(X_s)+qP_s\kappa\ \ (\text{all }s);\\
+c^0(t)&=\kappa,& c^0(Y_i)&=c(X_i),\qquad c^0(Y_s)=c(Y_s)-P_s\kappa\ \ (s\ne i).
+\end{align*}
+(i) \emph{For $c^\infty$, each $\chi_0(z)$ has level at least $c(z)$ and $\chi(z)-\chi_0(z)$ has
+level at least $c(z)+\tfrac3{10}$.} Indeed $c^\infty(X_i)=c(Y_i)$ and $c^\infty(t^{qP_s}X_s)=
+c(X_s)$; the differences are $-\epsilon_st^{P_s}Y_s$ for $z=X_s$, of weight $c(Y_s)-P_s\kappa\ge
+c(X_s)+\tfrac12-\tfrac15$, and $-\epsilon_sX_s$ for $z=Y_s$, of weight $c(X_s)+qP_s\kappa\ge
+c(X_s)+\tfrac52\ge c(Y_s)+\tfrac32$ $(s\ne i)$.
+
+(ii) \emph{For $c^0$, each $\tau_r\chi(g_r\cdot z)$ has level at least $c(z)$.} We go through
+\eqref{pe:eq-key}. $c^0(X_i)=c(X_i)$; $c^0(Y_s)\ge c(X_s)+\tfrac3{10}$ and $c^0(X_s)=c(X_s)$;
+$c^0(t^qX_i)=q\kappa+c(X_i)=c(Y_i)$; $c^0(t^{qP_s}X_s)\ge c(X_s)+\tfrac52\ge c(Y_s)$;
+$c^0(t^{P_s}Y_s)=c(Y_s)$. The polynomials $e_j$ are divisible by $w^2$ and $c^0(t)\ge0$, so they
+have level at least $2$; and $2+c^0(X_s)\ge c(Y_s)$, $2+c^0(Y_s)\ge c(Y_s)$.
+
+\emph{The auxiliary polynomial.} Put $\mathsf p=\chi(f)\in R[t][x]$. As $f$ has level at least
+$b$, Lemma~\ref{pe:lev}(b) and (i) give: $\mathsf p$ has level at least $b$ and $\mathsf p-\chi_0(f)$
+has level at least $b+\tfrac3{10}$, for $c^\infty$. As $f'=g_r^{-1}\cdot f$ has level at least $b$
+and $h\mapsto\tau_r\chi(g_r\cdot h)$ is a homomorphism of $R$-algebras, Lemma~\ref{pe:lev}(b) and
+(ii) give: $\tau_r\mathsf p=\tau_r\chi(g_r\cdot f')$ has level at least $b$ for $c^0$. Let
+$\bar\alpha$ be the exponent of the monomial obtained from $x^\alpha$ by writing $X_i$ for $Y_i$,
+and $\Phi\in R[t]$ the coefficient of $x^{\bar\alpha}$ in $\mathsf p$. Then
+\[
+c^\infty\cdot\bar\alpha=c\cdot\alpha+q\nu'\kappa,\qquad c^0\cdot\bar\alpha=c\cdot\alpha-\nu\kappa,
+\]
+because $c^\infty(X_i)=c(Y_i)$, $c^0(X_i)=c^0(Y_i)$. Hence the coefficient of $t^j$ in $\Phi$ is
+divisible by $w^{\pecl{\lambda+(j-q\nu')\kappa}}$, so by $w^{\lambda+1}$ if $j>q\nu'$; and the
+coefficient of $t^j$ in $\Phi(t+\iota_i(r))$ is divisible by $w^{\pecl{\lambda+(\nu-j)\kappa}}$,
+so by $w^{\lambda+1}$ if $j<\nu$. Moreover the coefficients of $t^{q\nu'}x^{\bar\alpha}$ in
+$\mathsf p$ and in $\chi_0(f)$ differ by a multiple of $w^{\pecl{\lambda+3/10}}=w^{\lambda+1}$.
+Now $\chi_0(x^\beta)=t^{q\sum_sP_s\beta(X_s)}x^{\bar\beta}$, and $\bar\beta=\bar\alpha$ with
+$\sum_sP_s\beta(X_s)=\nu'$ forces $\beta=\alpha$ (the two exponents agree outside $X_i,Y_i$, then
+$\beta(X_i)=\alpha(X_i)$ as $P_i=1$). So that coefficient of $\chi_0(f)$ is $f_\alpha$.
+
+Let $\bar R=R/w^{\lambda+1}R$ and $\bar\Phi\in\bar R[t]$ the image of $\Phi$. We have shown:
+$\deg\bar\Phi=q\nu'$, with leading coefficient the class of $f_\alpha$, which is not zero; and
+$(t-a_r)^\nu$ divides $\bar\Phi$ for every $r\in W$, $a_r$ the class of $\iota_i(r)$. Let $r$ run
+through representatives of the $q$ residue classes of $W$. The differences $a_r-a_{r'}$ are images
+of units, so the ideals $((t-a_r)^\nu)$ are pairwise comaximal and the monic polynomial
+$\prod_r(t-a_r)^\nu$, of degree $q\nu$, divides $\bar\Phi\ne0$. Therefore $q\nu\le q\nu'$.
+\end{proof}
+
+\begin{lemma}[Lemma~\ref{ph:AinC}]\label{pe:AinC}
+$\phA\subseteq C_c$ for every $c$; more precisely, for $v\in\phA$, $g\in L$ and
+$\phdef_i(\beta)\ge3j$, $w^j$ divides $(\rho(g)v)_\beta$.
+\end{lemma}
+\begin{proof}
+Let $w^\mu v=\Delta h$ as in the definition of
+$\phA$, $F=\sum h_\beta x^\beta$, and $\omega=\phdep-\tfrac13\phdef_i$, a weight of the variables
+with $\omega(Y_s)-\omega(X_s)=1-\tfrac13\bigl(\mathbf 1_{s=i}+2P^{[s-i]}/(q-1)\bigr)\in[\tfrac12,1]$
+(the bracket lies in $[0,\tfrac32]$ because $5P^{[s-i]}\le q$ for $s\ne i$ and $q\ge5$). By the
+definition of $\phA$, every $g\cdot F$, $g\in G$, has level at least $\mu$ for $\phdep$. We claim
+that it has level at least $\mu$ for $\omega$. Let $\mathcal T$ be the set of pairs
+$(\beta,\lambda)$, $\lambda\ge0$ an integer, with $\lambda+\omega\cdot\beta<\mu$, for which some
+$g\in G$ has $w^{\lambda+1}\nmid(g\cdot F)_\beta$. It is finite, since $\beta$ has the degrees of
+$F$ and $\lambda<\mu-\omega\cdot\beta$. If the claim fails, $\mathcal T\ne\emptyset$ (take
+$\lambda=\pecl{\mu-\omega\cdot\beta}-1$); choose $(\alpha,\lambda)\in\mathcal T$ with
+$\lambda+\omega\cdot\alpha$ least, and $g_0$ with $w^{\lambda+1}\nmid(g_0\cdot F)_\alpha$. Every
+$g\cdot F$ has level at least $\lambda+\omega\cdot\alpha$ for $\omega$: if $w^e\nmid(g\cdot
+F)_\beta$ with $e=\pecl{\lambda+\omega\cdot\alpha-\omega\cdot\beta}$, then $e\ge1$ and
+$(\beta,e-1)\in\mathcal T$ with $e-1+\omega\cdot\beta<\lambda+\omega\cdot\alpha$, against the
+choice. So Proposition~\ref{pe:root} applies to $f=g_0\cdot F$, $c=\omega$, and gives
+$\phdef_i(\alpha)\le0$. Then $\lambda+\phdep(\alpha)\le\lambda+\omega\cdot\alpha<\mu$, both sides
+are integers, and $w^{\mu-\phdep\alpha}$, which divides $(g_0\cdot F)_\alpha$, is a multiple of
+$w^{\lambda+1}$: a contradiction. Now let $g\in L$ and $\phdef_i(\beta)\ge3j$. By
+Lemma~\ref{ph:para}, $w^\mu\rho(g)v=\Delta\rho(g)h$, so $w^\mu(\rho(g)v)_\beta=w^{\phdep\beta}
+(g\cdot F)_\beta$, and by the claim $(g\cdot F)_\beta$ is divisible by $w^{\pecl{\mu-\phdep\beta
++j}}$. In both cases, $\mu-\phdep\beta+j\ge0$ and $\mu-\phdep\beta+j<0$, cancelling $w^\mu$ in the
+domain $\pao$ shows $w^j\mid(\rho(g)v)_\beta$ (in the second case $(\rho(g)v)_\beta$ is even
+divisible by $w^{\phdep\beta-\mu}$, and $\phdep\beta-\mu>j$).
+\end{proof}
+
+\subsection{The count of the forms of bounded defect}\label{pe:ss-count}
+In this paragraph everything is over $\phk$. For $\beta\in\R^{[k]\times\Z/N}$ the defects
+$\phdef^{b,b'}_i(\beta)$ are defined by the same formula, and $|\beta_s|=\sum_b\beta_{b,s}$ is the
+degree in the letter $s$. As $N$ is even, $(-1)^s$ makes sense for $s\in\Z/N$. For
+$\sigma=(\sigma_s)_{s\in\Z/N}\in\mathfrak S_k^N$ let $\mathsf S_\sigma$ be the linear map of
+$\R^{[k]\times\Z/N}$
+\[
+(\mathsf S_\sigma\nu)_{b,s}=(-1)^s\bigl(P\,\nu_{b,s+1}-\nu_{\sigma_s(b),s}\bigr),\qquad\mathsf
+S=\mathsf S_1,\qquad\bar\sigma=\sigma_0\sigma_1\cdots\sigma_{N-1}.
+\]
+Let
+\[
+\peC=\bigl\{\beta:\phdef_i^{b,b+1}(\beta)\le0\ \text{for all }i\text{ and }1\le b<k\bigr\},\qquad
+\Sigma_D=\bigl\{\beta\ge0:\ D_s-1\le|\beta_s|\le D_s\ \text{for all }s\bigr\}
+\]
+for $D\in\R^{\Z/N}$.
+
+\begin{lemma}\label{pe:coord}
+{\rm(a)} For $a\ne a'$, a letter $i$ and $\nu\in\R^{[k]\times\Z/N}$:
+$\phdef_i^{a,a'}(\mathsf S\nu)=(\mathsf S\nu)(Y_i)-(\nu_{a,i}-\nu_{a',i})$. Hence $\mathsf S\nu\in
+\peC$ if and only if, for all $b<k$: $P\nu_{b+1,i+1}\le\nu_{b,i}$ for even $i$, and
+$\nu_{b+1,i}\le P\nu_{b,i+1}$ for odd $i$.
+{\rm(b)} $|\det\mathsf S_\sigma|=P^{kN}\Delta(\bar\sigma)$, where $\Delta(\tau)=\prod_{\gamma}(1-
+q^{-|\gamma|})$, the product over the cycles $\gamma$ of $\tau\in\mathfrak S_k$.
+{\rm(c)} For $\beta\ge0$ with $|\beta_s|\le d$ for all $s$, $|\phdef_i^{a,a'}(\beta)|\le2d$.
+{\rm(d)} There is $\varsigma\in\Z_{\ge0}^{[k]\times\Z/N}$ with $|\varsigma_s|\le P^{2r}-1$,
+$\phdef_i^{r,r+1}(\varsigma)\le-1$ and $\phdef_i^{b,b+1}(\varsigma)\le0$ for all $i$ and $b\ne r$.
+\end{lemma}
+\begin{proof}
+(a) Let $\beta=\mathsf S\nu$ and $d_s=\nu_{a,s}-\nu_{a',s}$. For both parities of $s$ one finds
+$\beta(Y_s)-\beta(X_s)=d_s-Pd_{s+1}$. Hence $\sum_sP^{[s-i]}(\beta(Y_s)-\beta(X_s))=\sum_{j=0}^{N-1}
+(P^jd_{i+j}-P^{j+1}d_{i+j+1})=(1-q)d_i$. The second statement follows: $Y_i=x_{b+1,i}$ for even
+and $x_{b,i}$ for odd $i$.
+
+(b) Write $\mathsf S_\sigma=\mathsf E\cdot P\,\mathsf{Sh}\cdot(1-\mathsf T)$ with $\mathsf E$ the
+diagonal matrix of the signs, $(\mathsf{Sh}\,\nu)_{b,s}=\nu_{b,s+1}$ and $(\mathsf T\nu)_{b,s}=
+P^{-1}\nu_{\sigma_{s-1}(b),s-1}$. The map $\mathsf T$ sends the coordinates of the letter $s-1$ to
+those of the letter $s$, and $(\mathsf T^N\nu)_{b,0}=q^{-1}\nu_{\bar\sigma(b),0}$. If $\zeta$ is a
+primitive $N$-th root of unity and $\mathsf D$ multiplies the letter $s$ by $\zeta^s$, then
+$\mathsf D\mathsf T\mathsf D^{-1}=\zeta\mathsf T$; so for a variable $z$,
+$\det(1-z\mathsf T)^N=\prod_j\det(1-\zeta^jz\mathsf T)=\det(1-z^N\mathsf T^N)=\det(1-z^N\mathsf
+M)^N$, where $\mathsf M=\mathsf T^N$ on the letter $0$ (the restrictions of $\mathsf T^N$ to the
+letters are products of the same $N$ maps in cyclically permuted order and have the same
+characteristic polynomial). Two polynomials with constant term $1$ and equal $N$-th powers are
+equal; at $z=1$, $\det(1-\mathsf T)=\det(1-\mathsf M)=\prod_\gamma(1-q^{-|\gamma|})$, the product
+over the cycles of $\bar\sigma$.
+
+(c) $|\phdef_i^{a,a'}(\beta)|\le d+\frac d{q-1}\sum_{j<N}P^j=d+\frac d{P-1}$.
+
+(d) Let $\mu_b=P^{2(r-b)}$ for $b\le r$ and $\mu_b=0$ for $b>r$, so $\mu_b=P^2\mu_{b+1}+\mathbf
+1_{b=r}$; let $\nu_{b,s}=\mu_b$ for even and $P\mu_b$ for odd $s$, and $\varsigma=\mathsf S\nu$.
+Then $\varsigma_{b,s}=(P^2-1)\mu_b$ for even $s$ and $0$ for odd $s$, with $|\varsigma_s|\le
+P^{2r}-1$. By (a), $\phdef_i^{b,b+1}(\varsigma)=P^2\mu_{b+1}-\mu_b=-\mathbf 1_{b=r}$ for even $i$,
+and $=-P(\mu_b-\mu_{b+1})\le-\mathbf 1_{b=r}$ for odd $i$.
+\end{proof}
+
+\begin{lemma}[Interlacing]\label{pe:inter}
+Let $x_1\ge\dots\ge x_k$ and $y_1\ge\dots\ge y_k$ be real. The determinant of the matrix
+$(\mathbf 1_{y_c<x_b})_{b,c}$ is $1$ if $x_1>y_1\ge x_2>y_2\ge\dots\ge x_k>y_k$, and $0$ otherwise.
+\end{lemma}
+\begin{proof}
+Induction on $k$. If $y_1<x_b$ for some $b\ge2$, the rows $1$ and $b$ consist of ones, the
+determinant is $0$, and $y_1\ge x_2$ fails. Otherwise the first column is $(\mathbf
+1_{y_1<x_1},0,\dots,0)$; expand along it.
+\end{proof}
+
+\begin{lemma}[The share of the cone]\label{pe:vol}
+For every $D$, $\displaystyle\pevol(\peC\cap\Sigma_D)=\prod_{l=1}^{k}\frac{q-1}{q^l-1}\cdot
+\pevol(\Sigma_D)$.
+\end{lemma}
+\begin{proof}
+Let $\nu$ lie outside the finitely many hyperplanes $\nu_{b,s}=\nu_{b',s}$ $(b\ne b')$ and
+$P\nu_{b,s+1}=\nu_{b',s}$, let $\tau_s\in\mathfrak S_k$ be the permutation with $\nu'_{b,s}:=
+\nu_{\tau_s(b),s}$ decreasing in $b$. \emph{Claim:}
+\begin{equation}\label{pe:eq-point}
+\sum_{\sigma\in\mathfrak S_k^N}\pesgn(\bar\sigma)\,\mathbf 1\bigl[\mathsf S_\sigma\nu>0\bigr]=
+\mathbf 1\bigl[\mathsf S\nu'>0\ \text{and}\ \mathsf S\nu'\in\peC\bigr],
+\end{equation}
+where $>0$ is meant in every coordinate. The left side is $\prod_s\det\mathsf M_s$ for the
+matrices $\mathsf M_s(b',b)=\mathbf 1[(-1)^s(P\nu_{b,s+1}-\nu_{b',s})>0]$, because
+$\pesgn\bar\sigma=\prod_s\pesgn\sigma_s$ and $\mathbf 1[\mathsf S_\sigma\nu>0]=\prod_s\prod_b
+\mathsf M_s(\sigma_s(b),b)$. Permuting the rows by $\tau_s$ and the columns by $\tau_{s+1}$
+replaces $\nu$ by $\nu'$ in $\mathsf M_s$ and multiplies the determinant by
+$\pesgn\tau_s\pesgn\tau_{s+1}$; these signs cancel in the product over $s\in\Z/N$. For even $s$ the
+new matrix is the transpose of the matrix of Lemma~\ref{pe:inter} for $x=P\nu'_{\cdot,s+1}$,
+$y=\nu'_{\cdot,s}$, and its determinant is $1$ exactly if $P\nu'_{b,s+1}>\nu'_{b,s}\ge
+P\nu'_{b+1,s+1}$ for all $b$; for odd $s$ it is that matrix for $x=\nu'_{\cdot,s}$,
+$y=P\nu'_{\cdot,s+1}$, with determinant $1$ exactly if $\nu'_{b,s}>P\nu'_{b,s+1}\ge\nu'_{b+1,s}$.
+In both cases the strict inequalities say $(\mathsf S\nu')_{\cdot,s}>0$ and the others are the
+conditions of Lemma~\ref{pe:coord}(a) at the letter $s$. This proves \eqref{pe:eq-point}.
+
+Integrate \eqref{pe:eq-point} over the set of the $\nu$ for which the degrees of $\mathsf S\nu$ lie
+in $[D_s-1,D_s]$; $\mathsf S_\sigma\nu$ and $\mathsf S\nu'$ have the same degrees as $\mathsf
+S\nu$. On the left, the term of $\sigma$ is $\pesgn(\bar\sigma)$ times the volume of $\mathsf
+S_\sigma^{-1}(\Sigma_D\cap\{\beta>0\})$, which is $\pevol(\Sigma_D)/(P^{kN}\Delta(\bar\sigma))$ by
+Lemma~\ref{pe:coord}(b); each $\tau\in\mathfrak S_k$ is $\bar\sigma$ for $(k!)^{N-1}$ families
+$\sigma$. On the right, let $\mathcal U=\mathsf S^{-1}(\peC\cap\Sigma_D\cap\{\beta>0\})$. For
+$\nu\in\mathcal U$ each $\nu_{\cdot,s}$ is strictly decreasing, because $\nu_{b,s}-\nu_{b+1,s}\ge
+(\mathsf S\nu)(Y_s)>0$ by Lemma~\ref{pe:coord}(a). So the $(k!)^N$ images of $\mathcal U$ under
+permutations of the indices in each letter are disjoint, and the right side of
+\eqref{pe:eq-point} is the indicator of their union. Hence
+\[
+(k!)^N\,\frac{\pevol(\peC\cap\Sigma_D)}{P^{kN}\Delta(1)}=(k!)^{N-1}\,\frac{\pevol(\Sigma_D)}{P^{kN}}
+\sum_{\tau\in\mathfrak S_k}\frac{\pesgn\tau}{\Delta(\tau)} .
+\]
+By the exponential formula for permutations~\cite[Cor.~5.1.9]{StanleyEC2}, as an $l$-cycle has sign
+$(-1)^{l-1}$,
+\begin{equation}\label{pe:eq-euler}
+\sum_{k\ge0}\frac{z^k}{k!}\sum_{\tau\in\mathfrak S_k}\frac{\pesgn\tau}{\Delta(\tau)}
+=\exp\Bigl(\sum_{l\ge1}\frac{(-1)^{l-1}z^l}{l\,(1-q^{-l})}\Bigr)=\prod_{j\ge0}(1+q^{-j}z)
+=\sum_{k\ge0}\frac{q^{-k(k-1)/2}\,z^k}{\prod_{l=1}^k(1-q^{-l})},
+\end{equation}
+the second equality by $(1-q^{-l})^{-1}=\sum_jq^{-jl}$ and the third being Euler's
+identity~\cite{AndrewsPartitions}, \cite[Ch.~I, \S2, Example~4]{Macdonald} with $q$ replaced by $q^{-1}$; see also \cite[(17.5.1)]{pe-DLMF17} with $z\mapsto -z$. With $\Delta(1)=(1-q^{-1})^k$ this gives the
+share $(1-q^{-1})^kq^{-k(k-1)/2}\prod_l(1-q^{-l})^{-1}=\prod_l(q-1)/(q^l-1)$.
+\end{proof}
+
+Let $I\subseteq G$ be the subgroup of the matrices with $g_{bc}\in\pam_W$ for $b<c$. The
+\emph{height} of $x_{b,s}$ is $b$ for even and $-b$ for odd $s$, and $\peht(\beta)$ is the height
+of $x^\beta$.
+
+\begin{lemma}[Flags and volume]\label{pe:flag}
+Let $c\ge1$, $c^*=3kc$, $\varsigma$ as in Lemma~\ref{pe:coord}(d) and $D_s=n+k+1+4c^*|\varsigma_s|$.
+Then $\dim_{\phk}S_c\le[L:L\cap I]\cdot\pevol(\peC\cap\Sigma_D)$.
+\end{lemma}
+\begin{proof}
+Let $m=q^j$, $j\ge1$, and $[m]=\{0,\dots,m-1\}$. \emph{Packing.} For $u\in[m]^{[k]\times\Z/N}$ let
+$\gamma_u$ be $u$ with $m(k-\lfloor|u_s|/m\rfloor)$ added at the index $(1,s)$, for each $s$; so
+$\gamma_u\equiv u$ modulo $m$ and $mk\le|\gamma_{u,s}|\le mk+m$. To a family $(F_u)_u$ of elements
+of $S_c$ attach
+\[
+\mathbb F=\sum_uF_u(x^m)\,x^{\gamma_u}\in\phk[x] .
+\]
+The coefficient of $\mathbb F$ at $m\delta+\gamma_u$ is that of $F_u$ at $\delta$, as the class
+modulo $m$ of an exponent determines $u$; so $(F_u)\mapsto\mathbb F$ is injective. The elements
+of $\bar\iota_s(\auF_q)$ are fixed by the $m$-th power, which is additive; hence
+$g\cdot(F(x^m))=(g\cdot F)(x^m)$ and $g\cdot\mathbb F=\sum_u(g\cdot F_u)(x^m)\,(g\cdot
+x^{\gamma_u})$ for $g\in G$. The action preserves the degree in each letter. Therefore every
+monomial $\alpha$ of $g\cdot\mathbb F$ is $m\delta+\varepsilon$, with $\delta$ a monomial of some
+$g\cdot F_u$ and $mk\le|\varepsilon_s|\le mk+m$; in particular $m(n+k)\le|\alpha_s|\le m(n+k+1)$.
+If $g\in L$, then $\phdef_i(\delta)\le3c^*$ by the definition of $S_c$, and with
+Lemma~\ref{pe:coord}(c)
+\begin{equation}\label{pe:eq-a}
+\phdef_i^{r,r+1}(\alpha)\le m\,(3c^*+2k+2)\le4mc^*\qquad\text{for all }i,
+\end{equation}
+since $c^*\ge3k\ge2k+2$.
+
+\emph{Least height.} Let $y\in I$. Over $\phk$ the matrix $y_s$ is lower triangular for even $s$
+and upper triangular for odd $s$, so $y\cdot x_{c,s}$ is a non-zero multiple of $x_{c,s}$ plus a
+combination of variables $x_{b,s}$ of greater height. Thus $y\cdot x^\beta$ is a non-zero multiple
+of $x^\beta$ plus terms of greater height. Let $\mathcal R\subseteq L$ represent the cosets
+$(L\cap I)\backslash L$, and let $\mathbb F\ne0$. Among the monomials of all $g\cdot\mathbb F$,
+$g\in L$ (finitely many exponents), let $\alpha$ have least height, in $g\cdot\mathbb F$ say, and
+write $g=yx$, $y\in L\cap I$, $x\in\mathcal R$. No monomial of $x\cdot\mathbb F$ is lower than
+$\alpha$, so the coefficient of $x^\alpha$ in $y\cdot(x\cdot\mathbb F)$ is a non-zero multiple of
+that in $x\cdot\mathbb F$: \emph{$\alpha$ is a monomial of $x\cdot\mathbb F$}. Let $b\ne r$, $b<k$.
+Then $\mathrm{SL}_2^{b,b+1}(W)\subseteq L$, the height rises by $1$ from $X_s$ to $Y_s$ for the
+root $(b,b+1)$, and all monomials of the translates of $f=x\cdot\mathbb F$ by this group have
+height at least $\peht(\alpha)$. Proposition~\ref{pe:root} with $R=\phk$, $c=\peht$, $\lambda=0$
+gives
+\begin{equation}\label{pe:eq-b}
+\phdef_i^{b,b+1}(\alpha)\le0\qquad\text{for all }i\text{ and all }b\ne r .
+\end{equation}
+
+\emph{The count.} By \eqref{pe:eq-a}, \eqref{pe:eq-b} and Lemma~\ref{pe:coord}(d), the point
+$y=\alpha/m+4c^*\varsigma$ lies in $\Lambda_m:=\peC\cap\Sigma_D\cap m^{-1}\Z^{[k]\times\Z/N}$.
+Consequently the linear map
+\[
+S_c^{\,[m]^{[k]\times\Z/N}}\to\phk^{\mathcal R\times\Lambda_m},\qquad(F_u)\mapsto\bigl(\text{the
+coefficient of }x\cdot\mathbb F\text{ at the exponent }m(y-4c^*\varsigma)\bigr)_{x,y}
+\]
+(zero if this is not an exponent) is injective, and $m^{kN}\dim S_c\le[L:L\cap I]\cdot\#\Lambda_m$.
+The set $\peC\cap\Sigma_D$ is compact and convex, hence Jordan measurable, and
+$\#\Lambda_m/m^{kN}$ tends to its volume as $j\to\infty$.
+\end{proof}
+
+\begin{proposition}[Proposition~\ref{ph:count}]\label{pe:count}
+Let $c\ge1$, $0<\theta\le1$ and $24\,Nk^2c\,P^{2r}\le\theta n$. Then
+$[G:K_r]\cdot\dim_{\phk} S_c\le(1+\theta)|\phB|$.
+\end{proposition}
+\begin{proof}
+Reduction modulo $\pam_W$ maps $G$ onto $\auGL_k(\auF_q)$ and $I$ is the preimage of the lower
+triangular group, so $[G:I]=\prod_{l=1}^k(q^l-1)/(q-1)$. As $I\subseteq K_r$ and $L\subseteq K_r$,
+$[G:K_r]\,[L:L\cap I]\le[G:K_r]\,[K_r:I]=[G:I]$. With Lemmas~\ref{pe:flag} and~\ref{pe:vol},
+$[G:K_r]\dim S_c\le\pevol(\Sigma_D)$. The set $\{y\in\R_{\ge0}^k:d-1\le\sum y_b\le d\}$ has volume
+$(d^k-\max(d-1,0)^k)/k!\le d^{k-1}/(k-1)!$, and $|\phB|=\binom{n+k-1}{k-1}^N\ge(n^{k-1}/(k-1)!)^N$.
+Put $E=4c^*P^{2r}=12kc\,P^{2r}$; then $D_s\le n+k+1+4c^*(P^{2r}-1)\le n+E$, and
+\[
+\pevol(\Sigma_D)\le\prod_s\frac{D_s^{k-1}}{(k-1)!}\le|\phB|\Bigl(1+\frac En\Bigr)^{N(k-1)}\le|\phB|
+\,e^{x},\qquad x=\frac{N(k-1)E}{n} .
+\]
+The hypothesis is
+\begin{equation}\label{pe:eq-hyp}
+2NkE=24\,Nk^2c\,P^{2r}\le\theta n ,
+\end{equation}
+so $x\le\theta/2\le\tfrac12$ and $e^x\le1+x+x^2\le1+2x\le1+\theta$.
+\end{proof}
+
+\subsection{The averaging map}\label{pe:ss-av}
+\emph{An invariant form on polynomials in a matrix.} Let $\iota$ be one of the $\iota_j$, $\peX=
+(X_{bc})$ a generic $k\times k$ matrix, and $\pao[\peX]_d$ the forms of degree $d$. For $a\in L$
+put $A=\iota(a)$ and $c_A\psi=\psi(A^{-1}\peX A)$. Fix $\varrho\in\Z^k$; the \emph{row weight} and
+the \emph{column weight} of $X^\alpha$ are $\perw(\alpha)=\sum\alpha_{bc}\varrho_b$ and
+$\pecw(\alpha)=\sum\alpha_{bc}\varrho_c$. Recall $c_0=k^2eN$ and $q=p^{eN}$.
+
+\begin{lemma}[Average]\label{pe:avg}
+Let $t\in\Z$ and $D\ge0$ with $D+k\le q$. There is an $\pao$-linear form $\mathsf I$ on $\pao[\peX]$
+such that: {\rm(I1)} $\mathsf I(c_A\psi)=\mathsf I(\psi)$ for all $a\in L$; {\rm(I2)} $\mathsf
+I(X^\alpha)=0$ if $\perw(\alpha)>t$; {\rm(I3)} if $\deg\psi\le D$ and $\mathfrak a\subseteq\pao$ is an ideal
+containing the coefficient of $X^\alpha$ in $c_A\psi$ for all $a\in L$ and all $\alpha$ with
+$\perw(\alpha)>t$, then $\mathsf I(\psi)\equiv p^{c_0}\psi(1)\pmod{\mathfrak a}$. Moreover {\rm(I4)} every
+$\pao$-linear form with {\rm(I1)} vanishes on the $X^\alpha$ with $\perw(\alpha)\ne\pecw(\alpha)$.
+\end{lemma}
+\begin{proof}
+(I4) Let $u=1+p\in W^\times$ and $a=\operatorname{diag}(u^{\varrho_b})\in L$. Then
+$c_AX^\alpha=(1+p)^{\pecw(\alpha)-\perw(\alpha)}X^\alpha$, and $(1+p)^e\ne1$ in $\pao$ for
+$e\ne0$.
+
+\emph{The algebra $\mathcal S_d$.} Fix $d\le D$. Let $U=(\pao^k)^{\otimes d}$ with the basis
+$e_j=e_{j_1}\otimes\dots\otimes e_{j_d}$, $j\in[k]^d$, of weight $\sum_\pi\varrho_{j_\pi}$. Let
+$\peG\in M_k(\pao[\peX])$ have the entry $X_{cb}$ at $(b,c)$ if $b$ and $c$ lie in the same block
+of $L$, and $0$ otherwise; so $\peG(B)={}^t(B^L)$ for a matrix $B$ with block diagonal part $B^L$.
+For a linear form $l$ on $\pao[\peX]_d$ let $\Theta(l)=l(\peG^{\otimes d})\in\operatorname{End}
+(U)$, $l$ being applied to the entries $\prod_\pi\peG_{i_\pi j_\pi}$, and $\mathcal S_d=\{\Theta(l)\}$. For the evaluation $\mathrm{ev}_B$ at $B\in M_k(\pao)$, $\Theta(\mathrm{ev}_B)=({}^t
+B^L)^{\otimes d}$.
+
+\emph{{\rm(S1)} $\mathcal S_d$ is the $\pao$-span of the $\iota(a)^{\otimes d}$, $a\in L$; in
+particular it is a ring.} It suffices that the vectors $(B^\alpha)_{|\alpha|=d}$, for $B\in M_k(W)$
+with $\det B^L\in W^\times$, span the $W$-module of all vectors indexed by the monomials of degree
+$d$: then every $l$ is a combination of evaluations at such $\iota(B)$, and ${}^t(B^L)\in L$. If
+they did not, by Nakayama's lemma their reductions would lie in a hyperplane, that is, a non-zero
+form $F$ of degree $d$ with coefficients in $\phk$ would vanish at all points $\bar\iota(\bar B)$,
+$\bar B\in M_k(\auF_q)$ with $\det\bar B^L\ne0$ (each lifts to $W$); here $\bar\iota$ is the
+reduction of $\iota$ and $\bar\iota(\auF_q)\subset\phk$ is a subfield with $q$ elements. Then $F\cdot\det\peX^L$ is a non-zero form of degree $d+k\le q$
+vanishing on $\bar\iota(\auF_q)^{k^2}$. This is impossible: reducing a form of degree at most $q$ modulo the
+$X_v^q-X_v$ only replaces its monomials $X_v^q$ by $X_v$, which creates no cancellation (the form is homogeneous of degree $d+k\ge2$, so it contains no
+monomial of degree $1$, distinct $X_v^q$ go to distinct $X_v$, and the monomials $X_v^q$ are the
+only ones with an exponent $\ge q$),
+and a non-zero polynomial of degree $<q$ in each variable does not vanish identically on $\bar\iota(\auF_q)^{k^2}$.
+
+\emph{The operator $\psi^\pesh$.} For $|\alpha|=d$ the multinomial coefficient $\binom d\alpha$ is
+a product of $k^2-1$ binomial coefficients with upper index at most $d<p^{eN}$, so it divides
+$p^{c_0}$ in $\pao$ (Kummer; integers prime to $p$ are units of $\pao$); put $\eta_\alpha=p^{c_0}
+\binom d\alpha^{-1}$ and $\langle X^\alpha,X^\beta\rangle=\delta_{\alpha\beta}\eta_\alpha$ on
+$\pao[\peX]_d$. As in \S\ref{ph:ss-edges}, $\langle\psi\circ T,\varphi\rangle=\langle\psi,\varphi
+\circ{}^tT\rangle$ for every linear map $T$ of the space $M_k$ of the variables, ${}^tT$ being the
+transpose in the basis of the elementary matrices. For $\psi\in\pao[\peX]$ with component $\psi_d$
+of degree $d$ let $\psi^\pesh=\Theta(\langle\psi_d,\cdot\rangle)\in\mathcal S_d$. Then:
+
+{\rm(S2)} $(c_A\psi)^\pesh=A^{\otimes d}\,\psi^\pesh\,(A^{-1})^{\otimes d}$ for $a\in L$. Indeed the
+transpose of $\peX\mapsto A^{-1}\peX A$ is $\peX\mapsto{}^tA^{-1}\peX\,{}^tA$, and $\peG({}^tA^{-1}
+\peX\,{}^tA)=A\,\peG\,A^{-1}$ because $A$ is block diagonal.
+
+{\rm(S3)} $\petr(\psi^\pesh)=p^{c_0}\psi_d(1)$: $\petr\peG^{\otimes d}=(\sum_bX_{bb})^d=\sum\binom
+d\alpha X^\alpha$ over the monomials in the diagonal variables, and $\psi_d(1)$ is the sum of the
+coefficients of $\psi$ at these.
+
+{\rm(S4)} $(X^\alpha)^\pesh e_j=0$ unless $e_j$ has weight $\perw(\alpha)$: the entry $(i,j)$ of
+$(X^\alpha)^\pesh$ is $\eta_\alpha$ times the coefficient of $X^\alpha$ in $\prod_\pi\peG_{i_\pi j_\pi}$,
+which vanishes unless $X^\alpha=\prod_\pi X_{j_\pi i_\pi}$.
+
+\emph{The form.} Let $U^+=\sum\mathcal S_d\,e_j$ over the $j$ of weight $>t$. By (S1) it is stable
+under $\mathcal S_d$ and spanned by the $A^{\otimes d}e_j$ ($a\in L$, $e_j$ of weight $>t$). It is
+a finitely generated submodule of $U$, hence free (\S\ref{ph:ss-la}). Put
+\[
+\mathsf I_d(\psi)=\petr(\psi^\pesh\mid U)-\petr(\psi^\pesh\mid U^+),\qquad\mathsf I=\sum_{d\le
+D}\mathsf I_d .
+\]
+(I1) follows from (S2), as $A^{\otimes d}$ and its inverse lie in $\mathcal S_d$ and preserve
+$U^+$. (I2): if $\perw(\alpha)>t$, then $(X^\alpha)^\pesh U\subseteq U^+$ by (S4), and an
+endomorphism of $U$ with image in $U^+$ has the same trace on $U$ and on $U^+$. (I3): by (S3),
+$\mathsf I(\psi)-p^{c_0}\psi(1)=-\sum_{d\le D}\petr(\psi^\pesh\mid U^+)$, and it suffices to show
+$\psi^\pesh U^+\subseteq\mathfrak aU^+$ (then the trace on $U^+$ lies in $\mathfrak a$, and $A^{\otimes d}\mathfrak aU^+\subseteq\mathfrak aU^+$). By (S2) for $a^{-1}$, $\psi^\pesh A^{\otimes d}e_j=A^{\otimes d}
+(c_{A^{-1}}\psi)^\pesh e_j$, and for $e_j$ of weight $>t$ the vector $(c_{A^{-1}}\psi)^\pesh e_j$ is
+the sum over $\alpha$ of the coefficient of $X^\alpha$ in $c_{A^{-1}}\psi$ times $(X^\alpha)^\pesh
+e_j\in U^+$; by (S4) only $\alpha$ with $\perw(\alpha)>t$ contribute, and their coefficients lie in
+$\mathfrak a$.
+\end{proof}
+
+\emph{The substitution of Frobenius factors.} Let $N=2\ell$. Take generic matrices $\peX_j$,
+$j\in\Z/N$ (the \emph{copies}), and $\pao[\peX]=\bigotimes_j\pao[\peX_j]$. For $M\in M_k$ let
+$\operatorname{Sym}^n(M)$ be the matrix, on coefficient vectors of forms of degree $n$, of the
+substitution $x_c\mapsto\sum_bM_{bc}x_b$; it is multiplicative in $M$, $\rho(g)=\bigotimes_s
+\operatorname{Sym}^n(g_s)$, and each term of an entry in the row $\beta$ of
+$\operatorname{Sym}^n(M)$ is a product of entries of $M$, $\beta_b$ of them from the row $b$. For a
+letter $s$ put $M^\natural=M$ if $s$ is even and $M^\natural={}^t\!\operatorname{adj}(M)$, the
+matrix of cofactors, if $s$ is odd. For $h\in L$, $d\ge0$ and $m\ge0$ let
+\[
+\Psi^h_{s,d}=\iota_s(h)\,\bigl(\iota_{s-d}(h)^{-1}\peX_{s-d}\,\iota_{s-d}(h)\bigr)^{(P^d)}\,\iota_s
+(h)^{-1},\qquad\Pi^h_{s,m}=\Psi^h_{s,m-1}\cdots\Psi^h_{s,1}\Psi^h_{s,0},
+\]
+where $M^{(P^d)}$ is the matrix of the $P^d$-th powers of the entries. Let $\peS^h_s$ be the matrix
+whose row $b$ is the row $b$ of $(\Pi^h_{s,\ell+1})^\natural$ if $x_{b,s}$ is deep and of
+$(\Pi^h_{s,\ell})^\natural$ if not, and
+\[
+\peS^h=\bigotimes_{s\in\Z/N}\operatorname{Sym}^n(\peS^h_s)\in M_\phB(\pao[\peX]),\qquad\peS=\peS^1.
+\]
+Let $c_h$ be the automorphism of $\pao[\peX]$ with $\peX_j\mapsto\iota_j(h)^{-1}\peX_j\iota_j(h)$
+for all $j$.
+
+\begin{lemma}\label{pe:subst}
+Let $h\in L$. {\rm(a)} $\peS=1$ at $\peX_j=1$ for all $j$. {\rm(b)} $c_h(\peS)=\rho(h)^{-1}\,
+\peS^h\,\rho(h)$. {\rm(c)} $\Psi^h_{s,d}\equiv\peX_{s-d}^{(P^d)}$ modulo $p\,\pao[\peX]$, and the
+entries of $\Psi^h_{s,d}$ are forms of degree $P^d$ in $\peX_{s-d}$. {\rm(d)} Every monomial of an
+entry of $\peS$ has degree at most $Nnk\,P^\ell$ in each copy.
+\end{lemma}
+\begin{proof}
+(a) is clear. (b) $c_h(\Psi^1_{s,d})=\iota_s(h)^{-1}\Psi^h_{s,d}\iota_s(h)$, hence
+$c_h(\Pi^1_{s,m})=\iota_s(h)^{-1}\Pi^h_{s,m}\iota_s(h)$ and, for both parities,
+$c_h(\Pi^1_{s,m})^\natural=h_s^{-1}(\Pi^h_{s,m})^\natural h_s$ (for odd $s$,
+${}^t\!\operatorname{adj}(B^{-1}MB)={}^tB\;{}^t\!\operatorname{adj}(M)\,{}^tB^{-1}$ and
+$h_s={}^t\iota_s(h)^{-1}$). The matrix $h_s^{-1}$ is block diagonal, and the number of factors,
+$\ell+1$ or $\ell$, is the same for all rows of a block; so the row $b$ of $h_s^{-1}(\Pi^h_{s,m_b}
+)^\natural$ is the row $b$ of $h_s^{-1}\peS^h_s$, and $c_h(\peS^1_s)=h_s^{-1}\peS^h_sh_s$. Apply
+$\bigotimes_s\operatorname{Sym}^n$. (c) Modulo $p$ the $P^d$-th power is a ring homomorphism
+$\phi$ with $\phi\circ\iota_{s-d}\equiv\iota_s$, so $(\iota_{s-d}(h)^{-1}\peX_{s-d}\iota_{s-d}(h)
+)^{(P^d)}\equiv\iota_s(h)^{-1}\peX_{s-d}^{(P^d)}\iota_s(h)$. (d) The copy $j$ occurs in the letter
+$s$ only in the factor $d=[s-j]$, if $d\le\ell$ (as $\ell<N$), with degree $P^d\le P^\ell$; a
+cofactor has degree at most $(k-1)P^\ell$ in it, an entry of $\operatorname{Sym}^n$ at most
+$n(k-1)P^\ell$, and there are $N$ letters.
+\end{proof}
+
+Now let $\varrho=e_{r+1}-e_r\in\Z^k$, and fix a copy $i$. Give the variable $X_{j;bc}$ (the entry
+$(b,c)$ of $\peX_j$) the weight
+\[
+\omega_i(X_{i;bc})=\frac{\varrho_b}{P^\ell},\qquad\omega_i(X_{j;bc})=\frac{P^{[j-i]}}{q}\cdot
+\frac{\varrho_b-\varrho_c}{P^\ell}\quad(j\ne i);\qquad|\omega_i|\le\frac2{P^\ell}.
+\]
+So for a monomial $\nu=(\nu_j)_j$, $\omega_i\cdot\nu=P^{-\ell}\bigl(\perw(\nu_i)+\sum_{j\ne
+i}P^{[j-i]}q^{-1}(\perw(\nu_j)-\pecw(\nu_j))\bigr)$.
+
+\begin{lemma}[Weight and defect]\label{pe:wd}
+Let $Nnk(\ell+2)\le P^\ell$, $h\in L$, $c\ge1$, and let $\nu$ be a monomial whose coefficient in
+some entry of the row $\beta$ of $\peS^h$ is not divisible by $w^c$. Then $|\phdef_{i+\ell}(\beta)
+-\omega_i\cdot\nu|\le2c$.
+\end{lemma}
+\begin{proof}
+Let $\varepsilon=\pm\tfrac12$; levels are taken for the weights $\varepsilon\omega_i$ on
+$\pao[\peX]$, of size at most $P^{-\ell}$. Put $u=\tfrac12P^{-\ell}$ and define the
+\emph{potentials}
+\[
+\alpha_{s,d}(b)=\varepsilon\,\frac{\varrho_b}{P^\ell}\cdot\frac{P^{\,d+[s-d-i]}}{q}\qquad(s\in\Z/N,\
+d\ge0,\ 1\le b\le k);\qquad\sum_b\alpha_{s,d}(b)=0,\quad|\alpha_{s,0}(b)|\le u .
+\]
+\emph{Step 1: for $d\le\ell$ the entry $(b,c)$ of $\Psi^h_{s,d}$ has level at least
+$\alpha_{s,d+1}(b)-\alpha_{s,d}(c)-u$.} Let $\vartheta=\varepsilon P^d\omega_i(X_{s-d;bc})$, the
+weight of $X_{s-d;bc}^{P^d}$; $|\vartheta|\le1$. By Lemma~\ref{pe:subst}(c) the entry is
+$X_{s-d;bc}^{P^d}$ plus a multiple of $w^2$ all of whose monomials have degree $P^d$, hence weight
+at least $-1$; as $\pecl{\vartheta+1}\le2$, the entry has level at least $\vartheta$. If $s-d\ne
+i$, then $[s-d-1-i]=[s-d-i]-1$ and $\vartheta=\alpha_{s,d+1}(b)-\alpha_{s,d}(c)$. If $s-d=i$, then
+$\vartheta=\varepsilon\varrho_bP^{d-\ell}=\alpha_{s,d+1}(b)$ and $|\alpha_{s,d}(c)|\le\tfrac12
+P^{d-\ell}q^{-1}\le u$.
+
+\emph{Step 2.} By Lemma~\ref{pe:lev}(a) the potentials telescope: for $m\le\ell+1$ the entry
+$(b,c)$ of $\Pi^h_{s,m}$ has level at least $\alpha_{s,m}(b)-\alpha_{s,0}(c)-mu\ge\alpha_{s,m}(b)-
+(\ell+2)u$. A cofactor in the row $b$ is a signed sum of products of entries, one from each other
+row; as $\sum_{b'}\alpha_{s,m}(b')=0$, it has level at least $-\alpha_{s,m}(b)-(k-1)(\ell+2)u$. So
+the entries of the row $b$ of $\peS^h_s$ have level at least $(-1)^s\alpha_{s,m_b}(b)-k(\ell+2)u$,
+$m_b=\ell+1$ or $\ell$ as $x_{b,s}$ is deep or not, and the entries of the row $\beta$ of $\peS^h$
+have level at least $\sum_{b,s}\beta_{b,s}(-1)^s\alpha_{s,m_b}(b)-Nnk(\ell+2)u$.
+
+\emph{Step 3: $(-1)^s\alpha_{s,m_b}(b)$ is $\varepsilon(1-q^{-1})$ times the defect weight of
+$x_{b,s}$ at the letter $i'=i+\ell$ along $(r,r+1)$.} That weight, times $1-q^{-1}$, is
+$P^{1+[s-1-i']}/q$ at $Y_s$, $-P^{[s-i']}/q$ at $X_s$, and $0$ elsewhere. For even $s$:
+$Y_s=x_{r+1,s}$ is deep and $\varrho_{r+1}=1$, so $\alpha_{s,\ell+1}(r+1)=\varepsilon
+P^{1+[s-1-i']}/q$; $X_s=x_{r,s}$ is not deep and $\alpha_{s,\ell}(r)=-\varepsilon P^{[s-i']}/q$.
+For odd $s$ the variables $Y_s=x_{r,s}$ (deep) and $X_s=x_{r+1,s}$ exchange their roles and the
+sign $(-1)^s$ compensates $\varrho_r=-1$.
+
+Let $\Delta=\phdef_{i+\ell}(\beta)$. By Steps 2 and 3 the coefficient of $\nu$ is divisible by
+$w^{\pecl y}$ with $y=\varepsilon((1-q^{-1})\Delta-\omega_i\cdot\nu)-\tfrac12Nnk(\ell+2)P^{-\ell}$;
+so $y\le c-1$, and for the two signs of $\varepsilon$, $|(1-q^{-1})\Delta-\omega_i\cdot\nu|\le
+2c-1$. Finally $|\Delta|\le2n\le q$ (Lemma~\ref{pe:coord}(c), and $6n\le Nnk(\ell+2)\le
+P^\ell=\sqrt q$ since $N=2\ell\ge2$), so $|\Delta-\omega_i\cdot\nu|\le2c-1+|\Delta|/q\le2c$.
+\end{proof}
+
+\begin{proposition}[Averaging; Proposition~\ref{ph:av}]\label{pe:av}
+Let $N=2\ell$ and $Nk(\ell+2)n+n+k<P^\ell$, and $c_0=k^2eN$. For every $c\ge1$ there is
+$\mathrm{Av}\in M_\phB(\pao)$ such that $\mathrm{Av}\,h\in C_c$ for all $h\in\pao^\phB$, and
+\[
+{}^th'\,\mathsf b\,\mathrm{Av}\,h\equiv p^{Nc_0}\;{}^th'\,\mathsf b\,h\pmod{w^c}\qquad(h\in
+\pao^\phB,\ h'\in\phA).
+\]
+\end{proposition}
+\begin{proof}
+Put $c^*=3kc$, $t=2c^*P^\ell$ and $D=Nnk(\ell+2)P^\ell$. Then $D+k<(Nk(\ell+2)n+1)P^\ell\le
+P^{2\ell}=q$. For each $j$ let $\mathsf I_j$ be a form as in Lemma~\ref{pe:avg} for $\iota=
+\iota_j$, $\varrho=e_{r+1}-e_r$, $t$ and $D$, and $\mathsf e=p^{c_0}\mathrm{ev}_1$; $\mathsf e$
+also satisfies (I1). For a family $l=(l_j)_{j\in\Z/N}$ of linear forms on the $\pao[\peX_j]$ write
+$l^\otimes=\bigotimes_jl_j$ on $\pao[\peX]$, and for $J\subseteq\Z/N$ let $l^J_j=\mathsf I_j$ for
+$j\in J$ and $l^J_j=\mathsf e$ otherwise. Define
+\[
+\mathrm{Av}_l=l^\otimes(\peS)\in M_\phB(\pao),\qquad\mathrm{Av}_J=\mathrm{Av}_{l^J},\qquad
+\mathrm{Av}=\mathrm{Av}_{\Z/N};\qquad\mathrm{Av}_\emptyset=p^{Nc_0}
+\]
+by Lemma~\ref{pe:subst}(a).
+
+\emph{Frames.} Let $g\in L$, let $l$ be a family and $l'_j=l_j\circ c_{\iota_j(g)}$. Then
+$l'^{\otimes}=l^\otimes\circ c_g$, and Lemma~\ref{pe:subst}(b) gives
+\begin{equation}\label{pe:eq-frame}
+\rho(g)\,\mathrm{Av}_{l'}=l^\otimes(\peS^g)\,\rho(g).
+\end{equation}
+Fix a copy $i$, a family $l$ all of whose members satisfy (I1), and $v\in\pao^\phB$. For $g\in L$
+and $\beta\in\phB$ let
+\[
+F^g_\beta=\sum_{\gamma}(\rho(g)v)_\gamma\cdot\Bigl(\bigotimes_{j\ne i}l_j\Bigr)\bigl(\peS^g_{\beta
+\gamma}\bigr)\in\pao[\peX_i],
+\]
+the forms $l_j$, $j\ne i$, being applied in the copies $j\ne i$. By \eqref{pe:eq-frame}, applied
+to the family $l$ with $l_i$ replaced by a linear form $\mathsf m$, and (I1) for the $l_j$:
+\begin{equation}\label{pe:eq-m}
+\mathsf m(F^g_\beta)=\bigl(\rho(g)\,\mathrm{Av}_{l[i:\,\mathsf m\circ c_{\iota_i(g)}]}\,v\bigr)_\beta,
+\qquad\text{hence}\qquad c_{\iota_i(g)}F^1_\gamma=\sum_\beta\rho(g^{-1})_{\gamma\beta}\,F^g_\beta ,
+\end{equation}
+the second identity because both sides have the same image under every $\mathsf m$ (take $g=1$ on
+the left). By Lemma~\ref{pe:subst}(d), $\deg F^1_\beta\le D$.
+
+\emph{Weight and defect in one copy.} Suppose that the coefficient of $X^\alpha$ in $F^g_\beta$ is
+not divisible by $w^c$. Then there are $\gamma$ and a monomial $\nu$ of $\pao[\peX]$ with
+$\nu_i=\alpha$, with coefficient in $\peS^g_{\beta\gamma}$ not divisible by $w^c$, and with
+$l_j(\peX_j^{\nu_j})\ne0$ for all $j\ne i$. By (I4), $\perw(\nu_j)=\pecw(\nu_j)$ for $j\ne i$, so
+$\omega_i\cdot\nu=\perw(\alpha)/P^\ell$, and Lemma~\ref{pe:wd} gives (as $2c\le c^*$)
+\begin{equation}\label{pe:eq-AB}
+\phdef_{i+\ell}(\beta)>3c^*\ \Rightarrow\ \perw(\alpha)>t;\qquad\perw(\alpha)>t\ \Rightarrow\
+\phdef_{i+\ell}(\beta)>c^* .
+\end{equation}
+
+\emph{$\mathrm{Av}\,v\in C_c$.} Let $l=l^{\Z/N}$, $g\in L$, and $\beta$ with $\phdef_{i'}(\beta)>
+3c^*$; write $i'=i+\ell$. By \eqref{pe:eq-m} with $\mathsf m=\mathsf I_i$, which is invariant,
+$(\rho(g)\mathrm{Av}\,v)_\beta=\mathsf I_i(F^g_\beta)$. By \eqref{pe:eq-AB} every monomial
+$X^\alpha$ of $F^g_\beta$ with coefficient not divisible by $w^c$ has $\perw(\alpha)>t$, and
+$\mathsf I_i$ vanishes on it by (I2). So $w^c\mid(\rho(g)\mathrm{Av}\,v)_\beta$.
+
+\emph{The pairing.} It suffices to show, for $i\notin J$ and $h'\in\phA$, that ${}^th'\mathsf b\,
+\mathrm{Av}_{J\cup\{i\}}v\equiv{}^th'\mathsf b\,\mathrm{Av}_Jv$ modulo $w^c$; adding these along a
+chain from $\emptyset$ to $\Z/N$ gives the statement. Let $l=l^J$ and $\psi=\sum_\beta h'_\beta
+b_\beta F^1_\beta$. By \eqref{pe:eq-m} with $g=1$, the two sides are $\mathsf I_i(\psi)$ and
+$\mathsf e(\psi)=p^{c_0}\psi(1)$, and $\deg\psi\le D$. By (I3) with $\mathfrak a=w^c\pao$ it suffices that
+for $g\in L$ and $\perw(\alpha)>t$ the coefficient of $X^\alpha$ in $c_{\iota_i(g)}\psi$ is
+divisible by $w^c$. By \eqref{pe:eq-m} this coefficient is
+\[
+\sum_\beta\bigl(\text{coefficient of }X^\alpha\text{ in }F^g_\beta\bigr)\cdot\bigl({}^th'\,\mathsf
+b\,\rho(g^{-1})\bigr)_\beta,\qquad\bigl({}^th'\,\mathsf b\,\rho(g^{-1})\bigr)_\beta=b_\beta\,\bigl(
+\rho({}^tg^{-1})h'\bigr)_\beta
+\]
+by \eqref{ph:eq-adj}. If the first factor is not divisible by $w^c$, then $\phdef_{i+\ell}(\beta)>
+c^*\ge3c$ by \eqref{pe:eq-AB}, and $w^c$ divides the second factor by Lemma~\ref{pe:AinC}, as
+${}^tg^{-1}\in L$.
+\end{proof}
+
+\subsection{Sizes}\label{pe:ss-sizes}
+\emph{In the proof of Theorem~\ref{ph:thm}.} Assume \eqref{ph:eq-large}; put $\Lambda_q=\log q$.
+As $P\ge5$ and $N,k\ge2$, we have $q\ge25$ and $\Lambda_q>3$; so $n\ge(Nk\Lambda_q)^5\ge12^5$,
+and then $\Lambda_q\ge4\log n\ge49$ by $q\ge n^4$.
+(1) $P^\ell=\sqrt q\ge n^2$, and $Nk(\ell+2)n+n+k\le(Nk(N+1)+2)\,n\le(Nk)^5n<n^2$; so
+Proposition~\ref{ph:av} applies, and $n<q$. (2) $eN=\Lambda_q/\log p\le\tfrac32\Lambda_q$, so
+$c_0=k^2eN\le\tfrac32k^2\Lambda_q$, and with $c=5Nc_0$:
+\[
+24\,Nk^2c\,P^{2r}\le180\,N^2k^4\Lambda_q\,P^{2r}\le(Nk\Lambda_q)^5P^{3r}\le\theta^5n\le\theta n,
+\]
+because $180\le N^3k\Lambda_q^4$; this is \eqref{pe:eq-hyp}. (3) $Nc_0\le\tfrac32Nk^2\Lambda_q\le
+N(Nk\Lambda_q)^5\le Nn/P^{3r}\le\phcd$ and $Nc_0\ge2$, so $c-1\ge4Nc_0+1$. (4) In the conclusion,
+$\det d'\det d\mid w^{\lambda+\lambda'}\mid p^{\max(\lambda,\lambda')}$, whence $l\le\phcd\nu+2Nc_0
+\nu+j\theta\nu\le(3\phcd+\theta j)\nu$.
+
+\emph{In \S\ref{ph:ss-ded}.} There $p$ is exceptional, $13\le p<x_1$, $\mathfrak r=\lceil\log_p
+m\rceil$, $P=p^{o_0}$ with $1\le o_0\le\mathfrak r$, $q=p^o$ with $m\le o\le f$, $N=o/o_0\le f$,
+$n=a=xb$, $r=\mathfrak r$ and $\theta=1/(m^2f)$; we use {\cite[(36)]{P46}}, $\sqrt x\le m\le
+2\sqrt x$, $x^5-2\sqrt x\le k\le3x^5$ and $f\le x^{12}$ {\cite[(38)]{P46}}. (a) $p^{\mathfrak r-1}<m$ gives
+$\mathfrak r\le1+\log_2m\le\log x$ ($x$ is large), so $0<2\mathfrak r\le k$. (b) $q\ge13^m$ and $m\ge(\log
+b)^{50}\ge4\log b$, so $q\ge b^{8}\ge a^4$. (c) $P^{3\mathfrak r}\le p^{3\mathfrak r^2}\le(pm)^{3
+\mathfrak r}\le x_1^{6\log x}$, and $6\log x\log x_1\le(\log x_1)^2\le\tfrac12\log b$; so
+$P^{3\mathfrak r}\le b^{1/2}$. (d) $\log q=o\log p\le f\log x_1$, so $Nk\log q/\theta\le x^{12}
+\cdot3x^5\cdot x^{12}\log x_1\cdot4x^{13}\le x_1$ and $(Nk\log q/\theta)^5\le x_1^5\le b^{1/2}$.
+By (c) and (d), $(Nk\log q/\theta)^5P^{3\mathfrak r}\le b\le a$, which with (b) is
+\eqref{ph:eq-large}. (e) $P^{2\mathfrak r}\ge p^{2\mathfrak r}\ge mp$ and $\mathfrak r^2/(kP)\le
+(\log x)^2/(kp)\le1/(mp)$, so $\phcd\le2Na/(mp)$.
+
+\begin{remark}\label{pe:status}
+Propositions~\ref{pe:root}, \ref{pe:count}, \ref{pe:av} and Lemma~\ref{pe:AinC} remove the
+hypotheses of Theorem~\ref{ph:thm}. Besides these, {\cite[Lemma~4.19]{P49}} uses the normalisation
+{\rm(N)} and weak approximation for the unitary group.
+\end{remark}
+
+
+\appendix
+
+\section{Statements used from \texorpdfstring{\cite{P49}}{[Theta]}}\label{A2:quoted}
+
+For the convenience of the reader we reproduce here, without proofs, the statements of other papers that are used in this one, in the notation of the paper quoted. Each is headed by its place in that paper.
+
+\begin{quotedthm}{\cite[Lemma~4.2]{P49}}{ (Elimination)}
+Let $h\ge1$, let $\ell_1,\dots,\ell_s\colon\pao^h\to\pao$ be linear forms and
+$\alpha_1,\dots,\alpha_s\in\pao$. There is $g\in M_h(\pao)$ with $\det g\mid\alpha_1\cdots\alpha_s$
+such that $\alpha_i\mid\ell_i(r)$ for every row $r$ of $g$ and every $i$.
+\end{quotedthm}
+
+\begin{quotedthm}{\cite[Lemma~4.11]{P49}}{ (Powers and partners)}
+Let $e\in\paI$ and let $a\in E$ be integral at all primes above $p$. For $\tau\in\auPl$ and
+$\tau'=u(-p^e)\tau$,
+\[
+\bigl(\aubar{\tau(a)}\bigr)^{p^e}\equiv\tau'(a)\pmod{\pi\pao}.
+\]
+\end{quotedthm}
+
+\begin{quotedthm}{\cite[Lemma~4.17]{P49}}{}
+A full mark exists.
+\end{quotedthm}
+
+\begin{quotedthm}{\cite[Lemma~4.18]{P49}}{ (Valuation on the image of the Hecke operators)}
+Let $p$ be exceptional, $\Lambda$ a full mark, $\vartheta$ a twist with $p\nmid\auNm Q_\vartheta$
+and $\Psi$ a chain datum. For every $\phi\in\auS_\iota$ the form
+$B_{\vartheta,\Psi}(Y_\Lambda^{\,m}\phi)$ has gauge at most $p^{\,2\paloss_p-\augain_p}$.
+\end{quotedthm}
+
+\begin{quotedthm}{\cite[Lemma~4.19]{P49}}{ (Elementary divisors)}
+Let $p$ be exceptional, $\Lambda$ a full mark and $\mathfrak l\in\Lambda$. Then
+$Y_{\mathfrak l}\auS_\iota\subseteq\auS_\iota$, and for every integer $j_0\ge0$ there is an integer
+$i\le\bigl(12A_{\mathfrak l}/(mp)+j_0/(m^2f)\bigr)\auDX$ with
+$\aucol\bigl(\auS_\iota,\,Y_{\mathfrak l}\auS_\iota+p^{j_0}\auS_\iota\bigr)\mid p^{\,i}$.
+\end{quotedthm}
+
+\begin{quotedthm}{\cite[Theorem~4.21]{P49}}{ ({\cite[Proposition~14.20]{P46}})}
+(The statements used in the proof, {\cite[Lemma~4.13]{P49}} including (K1$_N$),
+{\cite[Lemma~5.6(c)]{P49}} and {\cite[Proposition~14.25]{P46}}, are proved in {\cite[\S5.2.9]{P49}}
+and {\cite[Corollary~7.16]{P49}}, in {\cite[Proposition~5.24]{P49}} and in {\cite[\S5.1.6]{P49}}.) Let $\ell$ be a prime with a
+homomorphism $\C\to\C_\ell$, and let $\auS_\iota$ be the module of source forms integral there.
+\begin{enumerate}
+\item[(i)] If $\ell\ne N$ and $\ell\notin\mathcal N$, then for every twist $\vartheta$ with
+$\ell\nmid\auNm Q_\vartheta$, every chain datum $\Psi$ and every $\phi\in\auS_\iota$ the form
+$B_{\vartheta,\Psi}\phi$ is integral.
+\item[(ii)] If $\ell=p\in\mathcal N$ is not exceptional, then under the same conditions
+$B_{\vartheta,\Psi}\phi$ has gauge at most $p^{\,2\paloss_p-\augain_p}$.
+\item[(iii)] If $\ell=N$, let $\mathcal A'$ be as in {\cite[Lemma~6.21]{P49}}; then $S_0=\mathcal A'\cap\auS_\iota$ has
+$\aucol(\auS_\iota,S_0)\mid N^{\,i}$ with $i\le mfb\,\auDX$, and $B_{\vartheta,\Psi}\phi$ has gauge
+at most $N^{2mfb}$ for $\phi\in S_0\cap\auSram$.
+\item[(iv)] If $\ell=p\in\mathcal N$ is exceptional, let $\Lambda$ be a full mark and $j_p=\lceil2mfa/p\rceil$. Then
+$S_0=Y_\Lambda^{\,m}\auS_\iota+p^{j_p}\auS_\iota$ is contained in $\auS_\iota$,
+$\aucol(\auS_\iota,S_0)\mid p^{\,i}$ with $i\le\paloss_p\auDX$, and $B_{\vartheta,\Psi}\phi$ has
+gauge at most $p^{\,2\paloss_p-\augain_p}$ for $\phi\in S_0$.
+\end{enumerate}
+Consequently, in each case, with $S_0=\auS_\iota$ in cases (i), (ii), the module
+$S=S_0\cap\auSram$ and the number $i$ satisfy the first assertion of
+{\cite[Proposition~14.20]{P46}}: $S\subseteq\auS_\iota\cap\auSram$, $i\le\auerr_\ell\auDX$,
+$\aucol(\auS_\iota\cap\auSram,S)\mid\ell^{\,i}$, and $B_{\vartheta,\Psi}\phi$ has gauge at most
+$\ell^{\,\auerr_\ell-\augain_\ell}$ for $\phi\in S$.
+\end{quotedthm}
+
+\begin{quotedthm}{\cite[Proposition~6.3]{P49}}{}
+Let $F$ be a number field, $E/F$ a quadratic extension with conjugation $c$, $V$ a non-degenerate
+hermitian space over $E$, $G=\auU(V)$ and $\mathsf T$ a finite set of places of $F$. Then $G(F)$ is
+dense in $\prod_{v\in\mathsf T}G(F_v)$.
+\end{quotedthm}
+
+\begin{quotedthm}{\cite[Corollary~6.4]{P49}}{}
+Let $X$ be a standard space, $G=\auU(X)$, $\ell$ a prime.
+{\rm(a)} For $g,d\in G_f$ there is $\gamma\in\Gamma$ such that $\gamma g$ and $d\,\gamma g\,d^{-1}$
+are integral above $\ell$. In particular every class of $\Gamma\backslash G_f/J$ has a
+representative that is integral above $\ell$.
+{\rm(b)} If $\varphi$ is a form of level $J\subseteq K^\circ$ and $(x)$ a system of representatives
+that are integral above $\ell$, and if $J$ is the full group $\auGL_n(\auO_w)$ at the places above
+$\ell$, then $\varphi$ is integral at $\iota$ if and only if all $\iota(\varphi(x))$ have
+coordinates in $\pao$.
+\end{quotedthm}
+
+\begin{thebibliography}{L-values}
+\bibitem[Row D]{P46} D.~A.~Trejo Pizzo, \emph{The sign of the radial intersection form on the idele class group}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/46-row-d-sign-radial-intersection-form}.
+\bibitem[Theta]{P49} D.~A.~Trejo Pizzo, \emph{The Short Forms Theorem: theta lifts, complex multiplication and divisibility}, preprint, 2026. % LINK-PLACEHOLDER
+\bibitem{LTXZ} R.~Liu, N.~X.~Truong, L.~Xiao and B.~Zhao, \emph{Slopes of modular forms and
+geometry of eigencurves}, preprint, arXiv:2302.07697 (2023).
+\bibitem{AndrewsPartitions} G.~E.~Andrews, \emph{The Theory of Partitions}, Encyclopedia of
+Mathematics and its Applications \textbf{2}, Addison--Wesley, 1976.
+\bibitem{StanleyEC2} R.~P.~Stanley, \emph{Enumerative Combinatorics}, vol.~2, Cambridge Studies in
+Advanced Mathematics \textbf{62}, Cambridge University Press, 1999.
+\bibitem{pe-DLMF17} NIST Digital Library of Mathematical Functions, Chapter~17 ($q$-hypergeometric
+and related functions), \url{https://dlmf.nist.gov/17}.
+\bibitem{Macdonald} I.~G.~Macdonald, \emph{Symmetric functions and Hall polynomials}, 2nd ed.,
+Oxford University Press, 1995.
+\end{thebibliography}
+
+\end{document}

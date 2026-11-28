@@ -1,11 +1,10 @@
 # Paper 58 — The sign of the radial intersection form on the idele class group: row D in full
 
-Row D of the Weil-type route over $\mathrm{Spec}\,\mathbb Z$, with the whole chain of proof inside
-one paper. It carries the same title as [Paper 46](../46-row-d-sign-radial-intersection-form/)
-and the same study of the form $W_T$. The difference is the arithmetic input: Paper 46 takes the
-existence of families of characters carrying a column package from a theorem of L. Alpoge, which
-rests on his Lean 4 formalization; here the argument that leads to the Riemann hypothesis is
-written out on paper, with proofs, from published theorems.
+Row D of the Weil-type route over $\mathrm{Spec}\,\mathbb Z$ in a single volume. It carries the
+same title as [Paper 46](../46-row-d-sign-radial-intersection-form/) and the same study of the
+form $W_T$. In the series the argument is divided: Paper 46 states the three theorems and deduces
+them from propositions proved in the eight companion papers (Papers 49–56). Here the whole chain,
+from published theorems to the Riemann hypothesis, is in one document.
 
 ## Contents of the folder
 
@@ -43,7 +42,8 @@ vanishes in $\Re s>1/2$ (Theorem `thm:GRH-half`). The chain has four links.
 3. **Three theorems on integral algebraic modular forms** on a chain of theta lifts between
    definite unitary groups over $E$: Theorem A (integral forms with short images span),
    Theorem B (few translates of these images span almost everything) and Theorem C (a lower bound
-   for covolume plus index). They carry the weight of the argument. They are deduced from a list
+   for covolume plus index). In the series they are called the Short Forms Theorem, the Spanning
+   Theorem and the Covolume Theorem. They carry the weight of the argument. They are deduced from a list
    of propositions on the theta lifts, their divisibility at every prime, their archimedean size,
    the second moment of a Poincaré map, the determinant of the chain of lifts and the existence
    of regular families of twists; the proofs of these propositions are the larger part of the
@@ -79,21 +79,27 @@ independent compilation of his archive is recorded in
 **Status.** The paper has not been refereed. There may be mistakes; the notebook below records
 which statements were tested and which were not.
 
-## Relation to Paper 46
+## Relation to the series
 
-| | Paper 46 | Paper 58 |
+| | Papers 46 and 49–56 | Paper 58 |
 |---|---|---|
-| Theory of the form $W_T$, bounds on bounded windows | yes | yes |
-| Route to the zero-free half-plane | bound for a smoothed prime sum $G(x)$ on growing windows, from a slope inequality and a column package | one-sided bound for the prime sum $R_q(x)$, from Theorems A, B and C |
-| Arithmetic input | Alpoge's theorem on families, taken from the Lean formalization; a first written account in the annex (302 pages) | proved in the paper from published theorems |
-| Scope | $\zeta$ | all Dirichlet $L$-functions |
-| Length | 52 pages and the annex | 659 pages |
+| Theory of the form $W_T$, bounds on bounded windows | Paper 46 | here |
+| Criterion, admissible data, main inequality | Paper 46 | here |
+| The three theorems | stated and deduced in Paper 46; called Short Forms, Spanning, Covolume | stated and deduced here; called Theorems A, B, C |
+| Proofs of the propositions behind them | Papers 49–56, each readable on its own | Sections 15–80 |
+| Length | 55 pages and eight companions (679 pages) | 659 pages |
+
+The two presentations were edited separately; where they differ in wording, the series
+(Papers 46 and 49–56) is the later text. [Paper 57](../57-riemann-hypothesis-along-the-rows-of-weils-proof/)
+is a guide to the chain.
 
 ## Notebook: stress tests of the proof chain
 
 [`verification/row-d-verification.ipynb`](verification/row-d-verification.ipynb) documents the
 numerical consistency checks and the falsification attempts applied to individual statements of
-the chain "Theorems A, B, C ⇒ main inequality ⇒ one-sided bound ⇒ criterion ⇒ GRH ⇒ RH". Each
+the chain "three theorems ⇒ main inequality ⇒ one-sided bound ⇒ criterion ⇒ GRH ⇒ RH". The
+notebook names the three theorems as in the series (Short Forms, Spanning, Covolume) and refers
+to statements by their labels, which are the same in this paper and in Papers 46 and 49–56. Each
 test states the statement tested and the outcome that would have refuted it; then the script is
 written to disk, run, and its output checked by assertions.
 
@@ -115,7 +121,7 @@ written to disk, run, and its output checked by assertions.
 **What it does not do.** It proves nothing. Every test checks a statement in a few small
 instances, far below the range in which the theorems are asserted (ranks of order $x^5$, moduli
 larger than $b^{20}$). Several statements that carry weight have no numerical test at all, among
-them the seesaw identity (N2), Theorem B itself (N4) and the determinant of the comparison
+them the seesaw identity (N2), the Spanning Theorem itself (N4) and the determinant of the comparison
 operator (N6); the notebook lists them in its last section.
 
 **Running it.** Open the notebook in Google Colab and run all cells. It needs `numpy`, `sympy`

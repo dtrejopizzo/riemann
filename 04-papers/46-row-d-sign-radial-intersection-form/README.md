@@ -1,115 +1,108 @@
 # Paper 46 — The sign of the radial intersection form on the idele class group
 
-Row D of the Weil-type route over $\mathrm{Spec}\,\mathbb Z$: the intersection inequality.
-Papers 43, 44 and 45 give rows A, B and C (correspondences, Frobenius, explicit formula); this
-paper determines the sign.
+Row D of the Weil-type route over $\mathrm{Spec}\,\mathbb Z$: the index inequality. Papers 43, 44
+and 45 give rows A, B and C (correspondences, Frobenius, explicit formula); this paper determines
+the sign. It is the main paper of the series: it proves that no Dirichlet $L$-function vanishes
+in $\Re s>1/2$, and with it the Riemann hypothesis, from three theorems on integral algebraic
+modular forms whose inputs are proved in eight companion papers (Papers 49–56).
 
 ## Contents of the folder
 
 | File | What it is |
 |---|---|
-| `main.tex` | Source of the paper. |
-| `sign-radial-intersection-form-idele-class-group.pdf` | The paper (52 pages). |
-| `annex.tex` | Source of the annex. |
-| `column-packages-character-families.pdf` | The annex, *Column packages for character families: the arithmetic inputs for the sign of the radial intersection form* (302 pages). |
-| `positivity-radial-intersection-form.ipynb` | Colab notebook: certificates of $W_T\ge 0$ on bounded windows and the prime sum behind global positivity. |
+| `main.tex` | Source of the paper (a single file). |
+| `sign-radial-intersection-form-idele-class-group.pdf` | The paper (55 pages). |
 
 ## The paper
 
 The radial trace on the idele class group of $\mathbb Q$ defines a Hermitian form $W_T$ on
 functions supported in $(-T,T)$; on smooth tests it equals $\sum_\rho|\Phi_F(\rho)|^2$ over the
-nontrivial zeros of $\zeta$. The paper does three things.
+nontrivial zeros of $\zeta$.
 
-1. **Equivalence.** $W_T\ge 0$ on the entire form domain for every $T>0$ is equivalent to the
-   Riemann hypothesis.
-2. **Reduction.** For every $1/2<\theta<1$, a bound $G(x)\le C_\theta x^\theta$ for the smoothed
-   prime sum on arbitrarily large intervals $[Y,Y^{J_\theta}]$ excludes zeros in $\Re s>\theta$.
-   These bounds are reduced to an upper estimate for a finite mean difference, and that estimate
-   is proved from a slope inequality for Hermitian lattices, given a family of characters carrying
-   a column package with uniform constants.
-3. **Conclusion.** The existence of such families is a theorem of L. Alpoge. With it the paper
-   obtains the Riemann hypothesis (Theorem `thm:RH`) and, as a corollary, $W_T\ge 0$ on every
-   window (Corollary `cor:all-windows`): the sign in Weil's programme over
-   $\mathrm{Spec}\,\mathbb Z$.
+**The form (Sections 2–11).** The archimedean multiplier, duality and certificates, the explicit
+formula on flat-top weights, the two Tate directions, the equivalence of the sign on all windows
+with positive semidefiniteness in every degree of one sequence of explicit matrices, and lower
+bounds on bounded windows. $W_T\ge 0$ on every window is equivalent to the Riemann hypothesis.
+For $T\le\tfrac12\log 5$ the lower bounds on unit vectors are $10^{-18}$ for the complete form
+and $2.5\cdot10^{-12}$ for its primitive restriction; a certificate using finite-height zero data
+gives an explicit positive lower bound up to $T=2.8022$. This part uses no hypothesis beyond
+those stated with each bound.
 
-The paper also contains the theory that does not depend on that theorem: duality and
-certificates, the explicit formula on flat-top weights, the equivalence of the sign on all windows
-with positive semidefiniteness in every degree of one sequence of explicit matrices, and
-quantitative bounds on bounded windows. For $T\le\tfrac12\log 5$ the lower bounds on unit vectors
-are $10^{-18}$ for the complete form and $2.5\cdot10^{-12}$ for its primitive restriction; they are
-unconditional and computer-assisted (interval arithmetic). For $T\le 2.8022$ Theorem 9.12 proves
-$W_T(F)\ge e^{-120110026807}\|F\|^2$, assuming three published facts about the zeros of $\zeta$,
-among them the numerical verification that the zeros up to height $3\cdot10^{12}$ lie on the
-critical line; its finite computations are done in exact integer and interval arithmetic.
+**The zero-free half-plane (Sections 12–15).** No Dirichlet $L$-function vanishes in
+$\Re s>1/2$ (Theorem `thm:GRH-half`). The chain has four links.
 
-**On what the proof rests.** Alpoge's theorem on families of column packages rests on his Lean
-formalisation and has not yet been written out on paper in full. The paper states this in the
-abstract, in the introduction and in its last section, and the annex is a first written account.
+1. **A one-sided criterion of Landau type** (Theorem `an:thm-criterion`). For a modulus $q$ and
+   an imaginary quadratic field $K=\mathbb Q(\sqrt{-d})$, let $R_q(x)$ be the prime sum over
+   $n\equiv 1\pmod q$ weighted by $(1-\chi_K(n))(1/n-1/x)$, minus its main term. If
+   $R_q(x)\le x^{\beta-1}$ for all large $x$ and every prime $d$ in a residue class, then no
+   $L(s,\psi)$ with $\psi$ modulo $q$ vanishes in $\Re s>\beta$. Proved here, with Landau's lemma
+   and Heath-Brown's large sieve for real characters.
+2. **Admissible data** (Theorem `an:thm-data`): for every large $x$, scales, a CM field
+   $E=K(\zeta_{q_1})$ of degree between $x^{11}$ and $x^{12}$ over $K$, a sparse set of its
+   infinite places, weights and three primes. Proved here.
+3. **Three theorems** on a lattice of integral algebraic modular forms on a chain of theta lifts
+   between unitary groups over $E$:
+   - the **Short Forms Theorem**: the lattice contains explicit forms that are integral up to a
+     controlled index and short at every conjugate;
+   - the **Spanning Theorem**: few translates of them span almost the whole space;
+   - the **Covolume Theorem**: no family of almost full rank has covolume plus twice its index
+     below a stated bound.
 
-## The annex
+   The paper states them and deduces them from a list of propositions. A table at the end of
+   the automorphic section names, for each proposition, the companion paper and the place of
+   its proof, and the published results on which it rests.
+4. **The main inequality** (Theorem `an:thm-main`), which combines the three theorems and gives
+   $R_{q_0}(y)\le y^{-1/2+\varepsilon}$, the hypothesis of the criterion for every
+   $\beta>\tfrac12$. Proved here.
 
-The annex supports one step only: the existence of the families with a column package. It derives
-that theorem from five arithmetic inputs, one per section:
+**Conclusion (Section 16).** The Riemann hypothesis (Theorem `thm:RH`) is the case of the trivial
+character, and with it $W_T(F)=\sum_\rho|\Phi_F(\rho)|^2\ge 0$ on every window
+(Corollary `cor:all-windows`): the sign in Weil's programme over $\mathrm{Spec}\,\mathbb Z$.
 
-| Section | Input |
-|---|---|
-| A | the loss bound |
-| B | the divisor bound |
-| C | level counts and almost orthogonality |
-| D | the windowed bound for Selmer groups |
-| E | existence of families with uniform constants |
+## The companion papers
 
-Every step is marked as one of three kinds: proved in the annex; a published theorem, quoted with
-its statement; or a new statement taken from the Lean formalisation, stated exactly and with an
-outline of its formal proof. It is a first written exposition of a result that does not yet exist
-complete on paper.
+| Theorem | Paper | What it proves |
+|---|---|---|
+| Short Forms | [49](../49-short-forms-theorem-theta-lifts-complex-multiplication/) | The seesaw identity, the bound at every conjugate for CM theta derivatives, their divisibility at every prime; the foundations used in the series. |
+| Short Forms | [50](../50-elementary-divisors-edge-hecke-operator/) | Elementary divisors of a scaled Hecke operator at inert primes. |
+| Spanning | [51](../51-spanning-theorem-second-moment-poincare-map/) | The second moment of the Poincaré map; equality of multiplicities. |
+| Spanning | [52](../52-sieve-systems-siegel-step/) | Sieve systems at the real and finite places; Siegel's step. |
+| Covolume | [53](../53-covolume-theorem-exchange-identities-chain-determinant/) | The exchange identity and the determinant of the chain of lifts. |
+| Covolume | [54](../54-covolume-theorem-one-theta-lift-hecke-l-values/) | One lift, Hecke $L$-values, test forms of least valuation. |
+| Covolume | [55](../55-covolume-theorem-regular-families-of-twists/) | Regular families of twists, Selmer groups, Ribet's method. |
+| Covolume | [56](../56-explicit-cup-exponents-local-galois-representations/) | Explicit cup exponents for local Galois representations. |
+
+[Paper 57](../57-riemann-hypothesis-along-the-rows-of-weils-proof/) is a guide to the whole
+series. [Paper 58](../58-row-d-sign-radial-intersection-form-complete-proofs/) gives row D with
+the whole chain in a single volume, and has a notebook of numerical checks and falsification
+attempts on the statements of the chain.
+
+## On what the proof rests
+
+The proof of Theorem `thm:GRH-half`, and so of the Riemann hypothesis, is contained in this paper
+and Papers 49–56, which rest on published theorems, cited where they are needed. Papers 43, 44
+and 45 are not used in that proof; they enter in the reading of the result as an index
+inequality.
+
+**Credit.** The mathematics behind the three theorems, and the way from them to the zero-free
+half-plane, come from the work of Levent Alpoge (Lean 4 formalization,
+<https://alpo.ge/remark.pdf>), which is by itself a complete route to the Riemann hypothesis and
+does not depend on this series. The division of the argument into these three theorems, and
+their proofs as written in this series, are the series' way of organising it as mathematics on
+paper. The independent compilation of his archive is recorded in
+[`../../06-alpoge-verification/`](../../06-alpoge-verification/).
+
+**Status.** Not refereed. There may be mistakes.
+
+**Earlier version.** This folder previously held a version of the paper that took the
+arithmetic input directly from the Lean formalization, with an annex (*Column packages for
+character families*) and a notebook on bounded windows. They remain in the history of the
+repository.
 
 ## Building
 
-The two documents refer to each other's labels, so they are compiled under the names of their
-PDFs and in alternation:
-
 ```
-M=sign-radial-intersection-form-idele-class-group
-A=column-packages-character-families
-for i in 1 2 3 4; do
-  pdflatex -jobname=$M main.tex
-  pdflatex -jobname=$A annex.tex
-done
+pdflatex -jobname=sign-radial-intersection-form-idele-class-group main.tex
 ```
 
-## Notebook: positivity of the radial intersection form
-
-`positivity-radial-intersection-form.ipynb` lets you run, in Google Colab, the computations that
-sit on either side of the proof, and see where the proof itself is needed.
-
-**Part 1. Certificates on bounded windows.** Two rigorous certificates in ball (interval)
-arithmetic, so every `PASS` is a proved inequality and not a floating-point observation.
-
-- *Up to $T=\tfrac12\log 5\approx 0.80$, using no zeros of zeta.* The notebook reproduces the four
-  bounds of the paper and pushes the same method to $T=0.85$. You can try your own $T$. The cost
-  grows doubly exponentially in $T$, so this route cannot reach large windows; when the problem
-  is too large the notebook says so instead of guessing.
-- *Up to $T=2.8022$.* The finite inequalities of Theorem 9.12 of the paper (17 numerical checks,
-  among them the Schur comparison on 2048 cells). It is conditional on three published facts about zeros in a bounded range
-  (Section 9 of the paper), among them the verification that all zeros up to height
-  $3\cdot10^{12}$ lie on the critical line. These parameters stop just below $T=2.80227$.
-
-**Part 2. The prime sum behind global positivity.** Positivity on every window does not come from
-pushing Part 1 further. It comes from a bound on a smoothed sum over primes, $G(x)$, on
-arbitrarily large windows; that such a bound holds is the step due to Levent Alpoge. This part
-computes $G(x)$ directly from the primes, with no zeros of zeta involved, up to about
-$3\cdot10^{8}$, and compares it with the bound from the theorem. In the windows computed,
-$G(x)/\sqrt x$ stays below $0.025$ where the theorem allows more than $100$. This part is an
-illustration, not a certificate.
-
-**Part 3.** The chain of the paper in five lines and a summary of the run: what was certified,
-what was observed, and what only the proof supplies.
-
-**What it does not do.** It does not show that $W_T\ge 0$ for every $T$, and no computation
-could: global positivity follows from the bound holding on infinitely many growing windows, far
-beyond the reach of any machine. That is what the proof is for.
-
-**Running it.** Open the notebook in Google Colab and run all cells in order. The first cell
-installs `python-flint`; nothing else is needed. A full run takes about 8 minutes on a laptop
-core, somewhat longer on Colab; almost all of that time is the $T=0.85$ certificate.
+three times.

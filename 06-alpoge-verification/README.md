@@ -1,8 +1,9 @@
 # Verification of Alpoge's Lean archive
 
-Step (5) of Paper 46 (the existence of families of characters carrying a column package with
-uniform constants) is a theorem of Levent Alpoge, released as a Lean 4 formalization
-(<https://alpo.ge/remark.pdf>). His development proves the Riemann hypothesis on its own.
+The argument that closes row D (Paper 46 and its companions, Papers 49–56) is the work of Levent
+Alpoge, released as a Lean 4 formalization (<https://alpo.ge/remark.pdf>). In the first version
+of Paper 46 it entered as one statement, called step (5) there: the existence of families of
+characters carrying a column package with uniform constants. His development proves the Riemann hypothesis on its own.
 
 This folder is the record of an independent compilation of his archive: the build logs, the axiom
 check of the main theorems, the checksums of everything that was compiled, and the scripts that
@@ -72,7 +73,7 @@ in the logs as produced.
 
 ## Step (5) as a single Lean statement
 
-In the archive, step (5) of Paper 46 is not a named theorem: it is assembled inside the final
+In the archive, step (5) of the first version of Paper 46 is not a named theorem: it is assembled inside the final
 chain. [`scripts/Step5Statement.lean`](scripts/Step5Statement.lean) gives it a name,
 `Step5.families`, using the same proof terms as the archive, for the trivial character and windows
 of exponent 3/2. Lean accepts it, with the same three axioms
@@ -95,7 +96,9 @@ on which this statement depends: 1,264,752 declarations, of which 1,074,616 are 
 ## Relation to the rest of the repository
 
 - [`../04-papers/46-row-d-sign-radial-intersection-form/`](../04-papers/46-row-d-sign-radial-intersection-form/):
-  Paper 46 and its annex, where step (5) is used and its hypotheses are stated.
+  Paper 46, the main paper of row D; Papers 49–56 write the argument out on paper as three
+  theorems. The first version of Paper 46, where step (5) is used, is in the history of the
+  repository.
 - [`../03-research/phase-214/`](../03-research/phase-214/): notes that rewrite the arithmetic
   inputs of step (5) on paper.
 - [`../README.md`](../README.md): the place of this check in the whole project.
