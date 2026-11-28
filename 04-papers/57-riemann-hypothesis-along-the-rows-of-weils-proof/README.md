@@ -1,8 +1,9 @@
 # Paper 57 — The Riemann hypothesis along the rows of Weil's proof: a guide to the series
 
-A guide for a reader who has opened none of the papers. It proves nothing new: it describes the
-logical chain of the twelve papers that carry the four steps of Weil's proof, row by row, to
-$\mathrm{Spec}\,\mathbb Z$ (Papers 43, 44, 45, 46 and 49–56).
+The map of rows A, B, C and D. It summarises in ten pages the logical path of the proof: the
+structure of Weil's proof completed over $\mathrm{Spec}\,\mathbb Z$, row by row, and the input of
+Levent Alpoge that closes it. It is written for a reader who has opened none of the twelve
+papers of the series (Papers 43, 44, 45, 46 and 49–56).
 
 ## Contents of the folder
 

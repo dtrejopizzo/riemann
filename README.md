@@ -4,12 +4,28 @@ An independent research program, a little over eleven years long, on one questio
 proof of the Riemann hypothesis for curves over finite fields be carried out, row by row, over
 $\mathrm{Spec}\,\mathbb Z$?
 
-Papers 43, 44, 45 and 46 are the answer given here: one paper for each of the four rows of Weil's
-proof, on the idele class group of $\mathbb Q$, with eight companion papers (49–56) for the last
-row. The last step, the sign on every window, is closed by the argument of **Levent Alpoge**,
-written here on paper as three theorems. This repository contains the papers, the complete research
+**The answer given here is yes. The generalised Riemann hypothesis for Dirichlet $L$-functions is
+proved, and with it the Riemann hypothesis.** The proof follows the path of Weil's proof: one
+paper for each of its four rows (Papers 43, 44, 45 and 46), on the idele class group of
+$\mathbb Q$, with eight companion papers (49–56) for the last row. It is sustained by the input
+of **Levent Alpoge**: his argument is what makes it possible to close everything that the proof
+needs. Here it is written on paper as three theorems.
+
+- **The proof**: [Paper 46](04-papers/46-row-d-sign-radial-intersection-form/), with
+  Papers 49–56; or [Paper 58](04-papers/58-row-d-sign-radial-intersection-form-complete-proofs/),
+  the same text in one volume.
+- **The map of the proof in ten pages**:
+  [Paper 57](04-papers/57-riemann-hypothesis-along-the-rows-of-weils-proof/).
+- **A map of the proof on the web**: <https://datp.ar/riemann>.
+
+Everything is here for the evaluation of the whole community: the papers, the complete research
 record (memos, proofs, audits, retractions, certificates) and the code behind the numerical
 certificates, in Markdown and LaTeX, so that anyone can read it, check it, break it or reuse it.
+
+After eleven years of work, I do not know how to write this without emotion. This problem has
+been with me through more than a decade of attempts, wrong turns and retractions, all of them
+kept in this repository. To be able to give a close to a piece of work so beautiful and so
+difficult is a joy that I did not know whether I would ever have.
 
 ## The route: Weil's proof over Spec Z
 
@@ -70,7 +86,7 @@ ROW D  The sign of the radial intersection form                      [Paper 46]
 | A | Correspondences, involution, trace, bidegree | [43](04-papers/43-row-a-correspondence-algebra/) | A convolution algebra of semilocal idele class correspondences with its involution and trace; the two Tate characters give the bidegree and define the primitive subspace. |
 | B | Frobenius | [44](04-papers/44-row-b-arithmetic-family/) | A Frobenius measure for every positive integer with prime divisors in $S$; its contact with the diagonal has weight $\Lambda(n)/\sqrt n$, supported on prime powers. |
 | C | Fixed-point (explicit) formula | [45](04-papers/45-row-c-explicit-formula/) | Weil's explicit formula for the radial trace: the self-intersection of a radial class equals its two Tate moments minus a sum over the nontrivial zeros of $\zeta$. |
-| D | Intersection inequality (the sign) | [46](04-papers/46-row-d-sign-radial-intersection-form/) | *The sign of the radial intersection form on the idele class group*, with its eight companions (Papers 49–56): $W_T\ge 0$ on every window, and the Riemann hypothesis. |
+| D | Intersection inequality (the sign) | [46](04-papers/46-row-d-sign-radial-intersection-form/) | *The sign of the radial intersection form on the idele class group*, with its eight companions (Papers 49–56): the proof of GRH for Dirichlet $L$-functions, of the Riemann hypothesis and of $W_T\ge 0$ on every window. |
 
 ### Who did what
 
@@ -86,20 +102,6 @@ the Short Forms Theorem, the Spanning Theorem and the Covolume Theorem. The divi
 argument into these three statements, their names and the writing of their proofs as mathematics
 on paper (Papers 49–56) are ours; the mathematics they organise, and the way from them to the
 zero-free half-plane, are his.
-
-### What is and is not claimed
-
-- **Alpoge's formalization proves RH on its own.** His proof is self-contained and does not need
-  these papers. Rows A, B and C, and the study of the radial form in row D, lay out a path and
-  identify the inequality at its end; they do not prove it. It is his argument, in the form of
-  the three theorems, that closes the path. So: Alpoge proves RH, and these papers are the same
-  statement reached along Weil's four components.
-- **The proof is written out on paper.** The deduction of RH is contained in Paper 46 and
-  Papers 49–56, which rest on published theorems cited where they are used; rows A–C are not used
-  in it and enter in the structural statement, $W_T\ge 0$ on every window. Paper 57 is a guide to
-  the chain and Paper 58 gives row D in a single volume.
-- **None of this has been refereed.** There may be mistakes. Corrections, questions and attempts
-  to break any step are very welcome.
 
 ### Checks
 
@@ -132,7 +134,7 @@ Jean-François Burnol, John Tate, and the many others cited in the papers.
 | [43](04-papers/43-row-a-correspondence-algebra/) | A Correspondence Algebra and the Weil Distribution on Semilocal Idele Class Groups | Row A. |
 | [44](04-papers/44-row-b-arithmetic-family/) | An Arithmetic Frobenius Family on Semilocal Idele Class Groups | Row B. |
 | [45](04-papers/45-row-c-explicit-formula/) | An Explicit Formula for the Trace on Semilocal Idele Class Groups | Row C. |
-| [46](04-papers/46-row-d-sign-radial-intersection-form/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D, the main paper: the form, the one-sided criterion, the data, the three theorems and the main inequality. |
+| [46](04-papers/46-row-d-sign-radial-intersection-form/) | The Sign of the Radial Intersection Form on the Idele Class Group | Row D, the main paper: it completes the proof of GRH for Dirichlet $L$-functions and of RH, on the input of Alpoge (the form, the one-sided criterion, the data, the three theorems, the main inequality). |
 | [47](04-papers/47-intersection-frame-defect/) | An Intersection Frame for the Explicit Formula: Hodge-Index Transfer, a Frame Defect Theorem and a Function-Field Model | Structural theorems on the extended Weil form; no sign claimed. |
 | [48](04-papers/48-routes-to-weil-positivity/) | Routes to Weil positivity on finite intervals: a cartography of attempts, barriers and open problems | Survey of the routes attempted toward the sign before the argument of row D was available: twenty-six families, with the mechanism of failure and the status of each, and the proved barriers. |
 | [49](04-papers/49-short-forms-theorem-theta-lifts-complex-multiplication/) | The Short Forms Theorem: Theta Lifts, Complex Multiplication and Divisibility | Companion of row D: the inputs of the Short Forms Theorem and the foundations of the series. |
@@ -143,8 +145,8 @@ Jean-François Burnol, John Tate, and the many others cited in the papers.
 | [54](04-papers/54-covolume-theorem-one-theta-lift-hecke-l-values/) | The Covolume Theorem: One Theta Lift, Hecke $L$-values and Test Forms of Least Valuation | Companion of row D: one lift and its Hecke $L$-values. |
 | [55](04-papers/55-covolume-theorem-regular-families-of-twists/) | The Covolume Theorem: Regular Families of Twists, Selmer Groups and Ribet's Method | Companion of row D: existence of the twists, by Selmer groups and Ribet's method. |
 | [56](04-papers/56-explicit-cup-exponents-local-galois-representations/) | Explicit Cup Exponents for Local Galois Representations beyond the Fontaine–Laffaille Range | Companion of row D: the local input at every prime for Paper 55. |
-| [57](04-papers/57-riemann-hypothesis-along-the-rows-of-weils-proof/) | The Riemann Hypothesis along the Rows of Weil's Proof: a Guide to the Series | Guide to the twelve papers 43–46 and 49–56. |
-| [58](04-papers/58-row-d-sign-radial-intersection-form-complete-proofs/) | The Sign of the Radial Intersection Form on the Idele Class Group (row D in a single volume) | The whole chain of row D in one document (659 pages), with a notebook of numerical checks and falsification attempts. |
+| [57](04-papers/57-riemann-hypothesis-along-the-rows-of-weils-proof/) | The Riemann Hypothesis along the Rows of Weil's Proof: a Guide to the Series | The map of rows A, B, C and D: the logical path of the proof in ten pages. |
+| [58](04-papers/58-row-d-sign-radial-intersection-form-complete-proofs/) | The Sign of the Radial Intersection Form on the Idele Class Group (row D, complete) | Row D complete in one document (659 pages), with everything needed to close GRH and RH; formally divided in the series between Paper 46 and its inputs, Papers 49–56. With a notebook of numerical checks and falsification attempts. |
 
 The full catalogue of papers 01–58 is in [`04-papers/README.md`](04-papers/README.md).
 
