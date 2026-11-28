@@ -7,7 +7,7 @@ Sixth companion of row D. It treats a single theta lift in Weil's range, one of 
 | File | What it is |
 |---|---|
 | `main.tex` | Source of the paper (a single file). |
-| `covolume-theorem-one-theta-lift-hecke-l-values.pdf` | The paper (100 pages). |
+| `covolume-theorem-one-theta-lift-hecke-l-values.pdf` | The paper (99 pages). |
 
 ## The paper
 

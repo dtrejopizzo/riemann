@@ -11,7 +11,7 @@ modular forms whose inputs are proved in eight companion papers (Papers 49–56)
 | File | What it is |
 |---|---|
 | `main.tex` | Source of the paper (a single file). |
-| `sign-radial-intersection-form-idele-class-group.pdf` | The paper (55 pages). |
+| `sign-radial-intersection-form-idele-class-group.pdf` | The paper (54 pages). |
 
 ## The paper
 

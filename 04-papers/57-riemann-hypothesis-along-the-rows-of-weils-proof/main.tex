@@ -46,6 +46,7 @@
 \newcommand{\Gbar}{\overline G}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
+\usepackage{xurl}
 \begin{document}
 \addtolength{\abovedisplayskip}{-2pt}
 \addtolength{\belowdisplayskip}{-2pt}
@@ -771,14 +772,14 @@ the identity \eqref{eq:comparison} and the criterion.
   box/.style={draw,rounded corners=2pt,align=center,inner sep=3pt,minimum height=5.2mm},
   res/.style={draw,align=center,inner sep=3pt,minimum height=5.2mm,fill=black!6},
   >={Stealth[length=1.6mm]}]
-\node[box] (A) at (0.9,0) {[Row A]\\ algebra, trace, form};
-\node[box] (B) at (4.9,0) {[Row B]\\ Frobenius family};
-\node[box] (C) at (8.6,0) {[Row C]\\ explicit formula};
+\node[box] (A) at (0.9,0) {[P43]\\ algebra, trace, form};
+\node[box] (B) at (4.9,0) {[P44]\\ Frobenius family};
+\node[box] (C) at (8.6,0) {[P45]\\ explicit formula};
 \node[res] (F) at (13.0,0) {index inequality on every window\\ $\Leftrightarrow$ Riemann hypothesis};
 \draw[->] (A)--(B); \draw[->] (B)--(C); \draw[->] (C)--(F);
-\node[box] (th) at (0.9,-2.0) {[Theta], [Hecke]};
-\node[box] (mo) at (0.9,-3.1) {[Moment], [Frames]};
-\node[box] (ex) at (0.9,-4.3) {[Exchange], [L-values],\\ {}[Galois], [Hodge]};
+\node[box] (th) at (0.9,-2.0) {[P49], [P50]};
+\node[box] (mo) at (0.9,-3.1) {[P51], [P52]};
+\node[box] (ex) at (0.9,-4.3) {[P53], [P54],\\ {}[P55], [P56]};
 \node[res] (SF) at (5.0,-2.0) {Short Forms Theorem};
 \node[res] (Sp) at (5.0,-3.1) {Spanning Theorem};
 \node[res] (Cv) at (5.0,-4.3) {Covolume Theorem};
@@ -795,7 +796,7 @@ the identity \eqref{eq:comparison} and the criterion.
 \draw[->] (cr.north)--(cr.north |- G.south);
 \draw[->] (G)--(F);
 \node[draw,dashed,rounded corners=3pt,inner sep=6pt,fit=(SF)(Cv)(MI)(OS)(da)(cr)(G)] (D) {};
-\node[anchor=north east,font=\scriptsize] at (D.south east) {[Row D]};
+\node[anchor=north east,font=\scriptsize] at (D.south east) {[P46]};
 \end{tikzpicture}
 \caption{Dependencies. Rounded boxes are papers or constructions, shaded boxes are statements.
 The dashed frame encloses what is proved in \cite{P46}, given the propositions proved in the
@@ -842,23 +843,23 @@ half-plane, are his. Rows~A, B and~C, and the study of the radial form in Row~D,
 path and identify the inequality at its end; they do not prove it. It is his argument, in the
 form of these three theorems, that closes the path. I record this debt with gratitude.
 
-\begin{thebibliography}{L-values}
-\bibitem[Row A]{P43} D.~A.~Trejo Pizzo,
+\begin{thebibliography}{P46}
+\bibitem[P43]{P43} D.~A.~Trejo Pizzo,
 \emph{A correspondence algebra and the Weil distribution on semilocal idele
 class groups}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/43-row-a-correspondence-algebra}.
-\bibitem[Row B]{P44} D.~A.~Trejo Pizzo,
+\bibitem[P44]{P44} D.~A.~Trejo Pizzo,
 \emph{An arithmetic Frobenius family on semilocal idele class groups},
 preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/44-row-b-arithmetic-family}.
-\bibitem[Row C]{Paper45} D.~A.~Trejo Pizzo, \emph{An explicit formula for the trace on semilocal idele class groups}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/45-row-c-explicit-formula}.
-\bibitem[Row D]{P46} D.~A.~Trejo Pizzo, \emph{The sign of the radial intersection form on the idele class group}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/46-row-d-sign-radial-intersection-form}.
-\bibitem[Theta]{P49} D.~A.~Trejo Pizzo, \emph{The Short Forms Theorem: theta lifts, complex multiplication and divisibility}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/49-short-forms-theorem-theta-lifts-complex-multiplication}.
-\bibitem[Hecke]{P50} D.~A.~Trejo Pizzo, \emph{Elementary divisors of an edge Hecke operator on a Frobenius cycle}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/50-elementary-divisors-edge-hecke-operator}.
-\bibitem[Moment]{P51} D.~A.~Trejo Pizzo, \emph{The Spanning Theorem: the second moment of a Poincar\'e map}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/51-spanning-theorem-second-moment-poincare-map}.
-\bibitem[Frames]{P52} D.~A.~Trejo Pizzo, \emph{The Spanning Theorem: sieve systems at the real and finite places and Siegel's step}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/52-sieve-systems-siegel-step}.
-\bibitem[Exchange]{P53} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: exchange identities and the determinant of a chain of theta lifts}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/53-covolume-theorem-exchange-identities-chain-determinant}.
-\bibitem[L-values]{P54} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: one theta lift, Hecke $L$-values and test forms of least valuation}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/54-covolume-theorem-one-theta-lift-hecke-l-values}.
-\bibitem[Galois]{P55} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: regular families of twists, Selmer groups and Ribet's method}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/55-covolume-theorem-regular-families-of-twists}.
-\bibitem[Hodge]{P56} D.~A.~Trejo Pizzo, \emph{Explicit cup exponents for local Galois representations beyond the Fontaine--Laffaille range}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/56-explicit-cup-exponents-local-galois-representations}.
+\bibitem[P45]{Paper45} D.~A.~Trejo Pizzo, \emph{An explicit formula for the trace on semilocal idele class groups}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/45-row-c-explicit-formula}.
+\bibitem[P46]{P46} D.~A.~Trejo Pizzo, \emph{The sign of the radial intersection form on the idele class group}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/46-row-d-sign-radial-intersection-form}.
+\bibitem[P49]{P49} D.~A.~Trejo Pizzo, \emph{The Short Forms Theorem: theta lifts, complex multiplication and divisibility}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/49-short-forms-theorem-theta-lifts-complex-multiplication}.
+\bibitem[P50]{P50} D.~A.~Trejo Pizzo, \emph{Elementary divisors of an edge Hecke operator on a Frobenius cycle}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/50-elementary-divisors-edge-hecke-operator}.
+\bibitem[P51]{P51} D.~A.~Trejo Pizzo, \emph{The Spanning Theorem: the second moment of a Poincar\'e map}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/51-spanning-theorem-second-moment-poincare-map}.
+\bibitem[P52]{P52} D.~A.~Trejo Pizzo, \emph{The Spanning Theorem: sieve systems at the real and finite places and Siegel's step}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/52-sieve-systems-siegel-step}.
+\bibitem[P53]{P53} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: exchange identities and the determinant of a chain of theta lifts}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/53-covolume-theorem-exchange-identities-chain-determinant}.
+\bibitem[P54]{P54} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: one theta lift, Hecke $L$-values and test forms of least valuation}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/54-covolume-theorem-one-theta-lift-hecke-l-values}.
+\bibitem[P55]{P55} D.~A.~Trejo Pizzo, \emph{The Covolume Theorem: regular families of twists, Selmer groups and Ribet's method}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/55-covolume-theorem-regular-families-of-twists}.
+\bibitem[P56]{P56} D.~A.~Trejo Pizzo, \emph{Explicit cup exponents for local Galois representations beyond the Fontaine--Laffaille range}, preprint, 2026, \url{https://github.com/dtrejopizzo/riemann/tree/main/04-papers/56-explicit-cup-exponents-local-galois-representations}.
 \bibitem{CharacterFamily} L.~Alpoge, Lean~4 formalisation of the character-family argument
 for Dirichlet $L$-functions, source archive in fourteen parts, November 2026,
 \url{https://alpo.ge/lean.tar.gz.part01} (first part).
