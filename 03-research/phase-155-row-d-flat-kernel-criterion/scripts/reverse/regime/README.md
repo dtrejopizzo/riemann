@@ -2,7 +2,7 @@
 
 Companion code for `03-research/phase-155-row-d-flat-kernel-criterion/R155_008_REGIME_LAW_100_WINDOWS.md`.
 Everything here is **DIAGNOSTIC**: the LP is trained on Odlyzko's table of zeros, which is
-circular as a tool (`phase-4-handoff/proofs/00-PROOF-LOG.md:168`, `phase-136-row-d-map/MAP_1:141`
+circular as a tool (`phase-4-krein-space-realization/proofs/00-PROOF-LOG.md:168`, `phase-136-row-d-map/MAP_1:141`
 ES-2). No statement about RH and no sign claim for any `T > log 2` is made or implied.
 
 ## what is fixed across all windows

@@ -31,7 +31,7 @@
 | 41 `phase-41-build-G2` | `125-construction-of-the-intersection-form`, `126-hodge-index-on-the-square-attainable` | INCOMPLETE; circularity diagnosed |
 | 42 `phase-42-hodge-dynamics` | `127-dynamical-hodge-theory-as-a-framework`, `128-deninger-s-program-is-this-the-missing` | REFUTED as a non-circular route |
 | 43 `phase-43-hodge-foliated-specZ` | `129-does-the-foliated-space-of-spec-admit`, `130-circularity-to-destruction-test-of-deninger-s` | CONDITIONAL / INCOMPLETE |
-| 44A `phase-44-creative-breakthrough` | `131-phase-44-hodge-witt-and-visible-inertia` | CONDITIONAL; new proposal |
+| 44A `phase-44-new-mathematics/hodge-witt-and-visible-inertia` | `131-phase-44-hodge-witt-and-visible-inertia` | CONDITIONAL; new proposal |
 | 44B `phase-44-new-mathematics` | `131-algebra-of-arithmetic-correspondences-the-category`, `132-defect-theory-the-category-ol-of-defective`, `133-design-by-negation-the-objects-that-violate` | Abstract internal PROVED + INCOMPLETE for ζ |
 | 45 `phase-45-fredholm` | `134-weil-toeplitz-algebra-symbol-compact-ideal`, `135-two-prime-theorem-positivity-for-pure`, `136-problem-133-a-the-realizability-of-under` | INCOMPLETE; Fredholm hypothesis not established |
 | 46 `phase-46-audit-and-attacks` | `137-adversarial-audit-of-the-local-purity-theorem` … `143-attack-on-problem-136-a-quantitative-localized` | REFUTED/conditioned; route audit |

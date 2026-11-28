@@ -10816,7 +10816,7 @@ PROVED, source POWER_GRAM_SLICES_OBSTRUCTION §15; positive_identity_attempt, re
 
 **Additional scope §16.5, same entry (PROVED).** global_restart_checked, independent audit arithmetic_fresh_candidate PASS and PASS; targeted cross-check without literal antecedent located. Fix FIRST y∈(0,pi/4) and THEN k->infinity, l=k+1. Complete theta tail uniform in r>=0 and Laplace at the endpoint give Akl/(Phi_k conjugate(Phi_l))=(x_k+x_l)/[2pi(epsilon(k+l)+i sigma(k-l))](1+O_y(1/k)); hence |C_y(k,k+1)|->1 for C_y normalized by the diagonal. Since rho(k,k+1)=0, the block rho is I2 and eigenmin C_y=1-|corr|->0. There is no c_y>0 with C_y>=c_y rho uniformly in integer blocks, even with c_y depending on y; nor uniform approximation o(1) to rho (sup error>=1 for each y). Only this comparator/normalization; not A negative nor other weights/models. Without joint regime epsilon, k, new route, W/T, computations or papers; global sign OPEN.
 
-Sources: [GRAM §16 and band §4.1](../../03-research/phase-211-sign-sandbox/POWER_GRAM_SLICES_OBSTRUCTION.md), [phase209 CONSTRUCTOR_005](../../03-research/phase-209-nonlocal-kernel/CONSTRUCTOR_005.md) and [AUDIT_005](../../03-research/phase-209-nonlocal-kernel/AUDIT_005.md).
+Sources: [GRAM §16 and band §4.1](../03-research/phase-211-sign-sandbox/POWER_GRAM_SLICES_OBSTRUCTION.md), [phase209 CONSTRUCTOR_005](../03-research/phase-209-nonlocal-kernel/CONSTRUCTOR_005.md) and [AUDIT_005](../03-research/phase-209-nonlocal-kernel/AUDIT_005.md).
 
 PROVED, source POWER_GRAM_SLICES_OBSTRUCTION §16; construction joint_sign_fresh_review, independent verification global_restart_checked, audit arithmetic_fresh_candidate PASS. Targeted cross-check without literal antecedent located for this link with A; phase209 CONSTRUCTOR_005/AUDIT_005 are antecedents of the arithmetic Gram, and GRAM §4.1 of the band average. For FIXED positive integers k, l, z_k=.5logk+iy, epsilon=cos2y and L=log(1/epsilon), A(z_k,bar z_l)=[105/(512sqrt2)]rho(k,l)epsilon^(-9/2)L²+O_(k,l)(epsilon^(-9/2)L). If k=d a², l=d b² with the same squarefree part, rho=gcd(a,b)/sqrt(ab); otherwise, rho=0. Exact resonances by Gaussian Riemann; near resonances, including quadratic approximations, by elementary separation of residues and Gaussian sum S_delta<=C_(k,l)delta^-4log(2+1/delta), ALL delta>0. Dyadic IBP over ALL t>=1 gives non-resonant remainder O_(k,l)(epsilon^-4L); lower terms pay by absolute bounds and Cauchy–Schwarz. The classical gcd identity with totients proves rho SPD for each fixed list of DISTINCT integers; then its COMPLEX block A is SPD eventually, with threshold depending on the list. No new classical Gram nor identification with norm 209; no uniformity in dimension/integers, real window, CPD/H, relative comparison of all orders nor global sign. Without computations, campaigns, new W/T nor papers modified.
 
@@ -10831,14 +10831,14 @@ PROVED, source POWER_GRAM_SLICES_OBSTRUCTION §16; construction joint_sign_fresh
 
 **Uniform refinement §17.5, same entry (PROVED).** joint_sign_fresh_review, verification global_restart_checked; audit arithmetic_fresh_candidate PASS. D_q>=c_*I_q for all d, q>=1 and 0<epsilon<=1, c_*=(log2/3)(4pi-3)²e^-6pi/[(4pi+3)²+(4pi-3)²e^-6pi]. For dq>=2, log(dq)Iq serves; for d=q=1, N!<=N^N2^-floor(N/2) gives gap log2/3 when X>=2. With X=sqrtu, the bracket of DIAG is >=log2/3 at u>=2 (at 2<=u<4 the sum is empty). Core[1,2]<=pi²sqrt2(4pi+3)² and tail[2,3]>=pi²sqrt2(4pi-3)²e^-6pi pay a uniform fraction of I1. Thus R_res>=c_*E_y, E_y=sum_d sqrt(d)sum_q I_(dq²)|f_(d,q)|². Uniformity only in that exact divisorial energy, with I depending on epsilon/indices; NOT uniform Euclidean margin, NOT complete A nor off-frequency, W/T or global closure. The eventual positivity of the COMPLETE integer A is indeed transferred to the real one by §18; this resonant bound alone does not prove it. Without new route, computations nor papers.
 
-Source: [GRAM §17](../../03-research/phase-211-sign-sandbox/POWER_GRAM_SLICES_OBSTRUCTION.md). Antecedents: [SIGNED_MEAN_019](../../03-research/phase-211-sign-sandbox/POWER_SIGNED_MEAN_019.md), [CONSTRUCTOR_005](../../03-research/phase-209-nonlocal-kernel/CONSTRUCTOR_005.md) and [AUDIT_005](../../03-research/phase-209-nonlocal-kernel/AUDIT_005.md).
+Source: [GRAM §17](../03-research/phase-211-sign-sandbox/POWER_GRAM_SLICES_OBSTRUCTION.md). Antecedents: [SIGNED_MEAN_019](../03-research/phase-211-sign-sandbox/POWER_SIGNED_MEAN_019.md), [CONSTRUCTOR_005](../03-research/phase-209-nonlocal-kernel/CONSTRUCTOR_005.md) and [AUDIT_005](../03-research/phase-209-nonlocal-kernel/AUDIT_005.md).
 
 PROVED, construction joint_sign_fresh_review, independent verification global_restart_checked; audit arithmetic_fresh_candidate PASS, including SOS and strict positivity. Cross-check all3/019/209 with no literal identity located. R_res keeps ALL the pairs kn²=lm² of the exact A and its integral t>=1. Each frequency can be indefinite: nodes 1,4 and lambda 4 give det=-2(log2)²I_4²<0. But for each group k=d a² and c_a finite, f_q=sum_(a|q)sqrt(a)c_a, I_q=I_(dq²), J_q=J_(dq²), the exact identity is R_res[c]/sqrt(d)=sum_q D_q|f_q|²+sum_q sum_(m|q,m>=2)Lambda(m)I_q|f_q-f_(q/m)|², D_q=J_q+(logd+logq)I_q-sum_(m>=2)Lambda(m)I_(qm)>0. The change u=lambda t converts D_q into a positive integral: sum_(m<=X)Lambda(m)/m<2logX by the factorial identity and floor(X/m)>=X/(2m). Absolute Gaussian summability and bounded f justify everything; the least a with c_a!=0 proves strict definiteness. Thus R_res is PD in ALL orders on distinct positive integers k for EACH |y|<pi/4, including y 0. Classical factorial tool, without Möbius inversion; distinct frequencies are coupled, not PSD slices nor substitute Gram 209. NOT complete A, NOT all real nodes, NOT non-resonant control, new W/T or global closure. Update §18: for COMPLETE A, all integer blocks and all real nodes are equivalent; R_res is not transferred separately. Without campaigns, numerical data nor papers.
 
 
 ##### Phase 211 — The complete integer A is equivalent to A on all real nodes (2026-11-06)
 
-Source: [GRAM §18](../../03-research/phase-211-sign-sandbox/POWER_GRAM_SLICES_OBSTRUCTION.md). **PROVED**, independent construction joint_sign_fresh_review, verification global_restart_checked; audit arithmetic_fresh_candidate PASS. all3 and corpus consulted, no literal match located. Define P_kappa=kappa^(5/4)sum_n n²e^(-pi kappa n²t), T=pi t^(5/4)(-2tD-3), LgP=integral_0^infinity[e^-pi r P(t)-P(t+r)]dr/r and G=.5T LgP-C TP. Frullani and sum_(m|n)Lambda(m)=logn give TP_kappa=Theta_kappa and G(P_kappa)=.5logkappa Theta_kappa. The complete form A is integral[logt|F|²+2Re(GbarF)]dt/(2t). For each finite list of positive scales one chooses a<pi min(1,kappa_min), gamma<2a; the norm B_a² controls (F,G) simultaneously in exponential H_gamma. The targets have weighted jets tending to 0: cutoff, C2 approximation in e^-pi t and absolute Möbius inversion e^-pi kt=k^-5/4 sum_n mu(n)/sqrt(n)P_kn² approximate by integer scales in that norm. Density of compacts for all of B_a² is NOT claimed, nor is only density of F used. Continuity of the form transfers PSD of ALL integer blocks to ALL real nodes; the converse is restriction. Antecedents BRIDGE002 §3, CONFLUENT_BRIDGE014, SCALAR_BRIDGE017 and GRAM §17.7: previous density tools, other families or norm without this complete graph. No new abstract tool nor proved sign: R_res positive alone is not enough; the complete joint balance remains OPEN. Only the additional transfer gate of the COMPLETE A is eliminated; the equivalence with the objective lambda_A(T)>=0 for ALL T is verified afterwards in §18.9, without identifying minima at fixed T. Without computations, new W/T or changes in papers.
+Source: [GRAM §18](../03-research/phase-211-sign-sandbox/POWER_GRAM_SLICES_OBSTRUCTION.md). **PROVED**, independent construction joint_sign_fresh_review, verification global_restart_checked; audit arithmetic_fresh_candidate PASS. all3 and corpus consulted, no literal match located. Define P_kappa=kappa^(5/4)sum_n n²e^(-pi kappa n²t), T=pi t^(5/4)(-2tD-3), LgP=integral_0^infinity[e^-pi r P(t)-P(t+r)]dr/r and G=.5T LgP-C TP. Frullani and sum_(m|n)Lambda(m)=logn give TP_kappa=Theta_kappa and G(P_kappa)=.5logkappa Theta_kappa. The complete form A is integral[logt|F|²+2Re(GbarF)]dt/(2t). For each finite list of positive scales one chooses a<pi min(1,kappa_min), gamma<2a; the norm B_a² controls (F,G) simultaneously in exponential H_gamma. The targets have weighted jets tending to 0: cutoff, C2 approximation in e^-pi t and absolute Möbius inversion e^-pi kt=k^-5/4 sum_n mu(n)/sqrt(n)P_kn² approximate by integer scales in that norm. Density of compacts for all of B_a² is NOT claimed, nor is only density of F used. Continuity of the form transfers PSD of ALL integer blocks to ALL real nodes; the converse is restriction. Antecedents BRIDGE002 §3, CONFLUENT_BRIDGE014, SCALAR_BRIDGE017 and GRAM §17.7: previous density tools, other families or norm without this complete graph. No new abstract tool nor proved sign: R_res positive alone is not enough; the complete joint balance remains OPEN. Only the additional transfer gate of the COMPLETE A is eliminated; the equivalence with the objective lambda_A(T)>=0 for ALL T is verified afterwards in §18.9, without identifying minima at fixed T. Without computations, new W/T or changes in papers.
 
 
 **Scope §18.5, same entry (PROVED).** joint_sign_fresh_review, verification global_restart_checked; audit arithmetic_fresh_candidate PASS. B=Lg-2sum_(m>=2)Lambda(m)m²D_(m²), p=P1, Bp=0, has positive rates before T on P=pf. But the integral tail of TU_rT^-1 induces in T Lg T^-1 the off-diagonal kernel K(t,v)=t^-1/4v^-3/4-t5/4v^-5/4/(v-t), with respect to dv. K>0 for 2<v/t<3. TBT^-1=T LgT^-1-2C; choosing t0=2 and F>=0 nonzero, compact support in (9/2,11/2), gives CF(2)=F(2)=0 and TBT^-1F(2)>0. Refutes only the representation JF=integral[F(t)-F(v)]nu_t(dv)+V(t)F(t), nu_t>=0, even with local killing or subsequent conjugation by positive Theta1. Separated supports justify absolute interchanges without diagonal renormalization nor loss of edge 1. Antecedents 106_31, ROUND005D and L2_BUILD008 are other forms/metrics, without this T/K; targeted cross-check without literal match. NOT Q/A negative, NOT a general discard of Doob nor of the joint method; complete sign OPEN. Without new route, files, computations, W/T or papers.
@@ -10858,7 +10858,7 @@ Source: [GRAM §18](../../03-research/phase-211-sign-sandbox/POWER_GRAM_SLICES_O
 
 ##### Phase 211 — Complete sign of the first primitive polynomial in t=exp(2r) (2026-11-06)
 
-Source: [GRAM §19](../../03-research/phase-211-sign-sandbox/POWER_GRAM_SLICES_OBSTRUCTION.md). **PROVED for the first vector; later two-dimensional extension in §19.9**, construction fresh_global; audit arithmetic_fresh_candidate FULLPASS, PASS and independent literal reading global_restart_checked PASS. With p=P1=sum_n n²exp(-pi n²t), S_j=sum_n n^-j exp(-pi n²), a=1+(2/pi)S4/S2 and P=p(t)(t-1)(t-a), one has EXACTLY P(1)=integral_1^infinityP=0, therefore both Tate moments of F=TP vanish. Q(P)=Q_log+Q_B, Q_log>=0 and Q_B>1/1200-1/40000-1/4500-1/30000=199/360000>1/2000. The proof retains p exact; principal (1,1) only as a reference with bound, correction of exact a, crossings (1,2)/(2,1) and ALL remainder of the double theta/prime series with explicit Gaussian tails and exhaustive partition. No quadrature/campaign nor truncation without error. Cross-check all3/corpus 101/195/199/209/211 with no literal family located; antecedent E101_061 interpolates nodes, the previous gamma/Laguerre families are in another variable. Elementary instruments, no world priority. This elementary proof signs THIS first primitive vector; it does not inherit other degrees/crossings or recurrence. The independent extension §19.9 signs the plane E1, E2; later degrees, all orders, new window W/T and global sign remain open. The sufficient core property is proved separately in §19.8 and does not contribute those signs. Papers intact; no new files.
+Source: [GRAM §19](../03-research/phase-211-sign-sandbox/POWER_GRAM_SLICES_OBSTRUCTION.md). **PROVED for the first vector; later two-dimensional extension in §19.9**, construction fresh_global; audit arithmetic_fresh_candidate FULLPASS, PASS and independent literal reading global_restart_checked PASS. With p=P1=sum_n n²exp(-pi n²t), S_j=sum_n n^-j exp(-pi n²), a=1+(2/pi)S4/S2 and P=p(t)(t-1)(t-a), one has EXACTLY P(1)=integral_1^infinityP=0, therefore both Tate moments of F=TP vanish. Q(P)=Q_log+Q_B, Q_log>=0 and Q_B>1/1200-1/40000-1/4500-1/30000=199/360000>1/2000. The proof retains p exact; principal (1,1) only as a reference with bound, correction of exact a, crossings (1,2)/(2,1) and ALL remainder of the double theta/prime series with explicit Gaussian tails and exhaustive partition. No quadrature/campaign nor truncation without error. Cross-check all3/corpus 101/195/199/209/211 with no literal family located; antecedent E101_061 interpolates nodes, the previous gamma/Laguerre families are in another variable. Elementary instruments, no world priority. This elementary proof signs THIS first primitive vector; it does not inherit other degrees/crossings or recurrence. The independent extension §19.9 signs the plane E1, E2; later degrees, all orders, new window W/T and global sign remain open. The sufficient core property is proved separately in §19.8 and does not contribute those signs. Papers intact; no new files.
 
 
 **Sufficient core §19.8, same entry (PROVED as scope).** Independent constructions fresh_global, audit global_restart_checked PASS; cross-check all3/BRIDGE002 §3/CONFLUENT_BRIDGE014/DESCENT_AUDIT016 §§8–9/18 with no literal family/core. In B_a², a<pi, V=closure of span{pt^j}; H(z)=p e^zt has Taylor in norm with ||p e^(z0t)t^j/j!||<=C_(z0)(1+b)²b^-j, b=pi-a-Re z0>0. Finite differences and overlapping discs negative give p e^-nu t in V for all nu>0 without Hahn–Banach. C² in x=e^-t for Q=P_c/(px) approximates compacts; cutoff only of targets with weighted jets→0, NOT all B_a². Convergence B_a² controls graph (F,G)/Q. Correcting errors (P(1),integralP) by means of p, tp has determinant p(1)integral(t-1)p>0 and coefficients→0. Primitives are E_j=p(t)(t-1)q_j(t), j>=1, q_j orthogonal monic for w=(t-1)p; E1 is the signed vector, degree 2 of R. PSD of ALL Gram matrices Gamma_ij=Q(E_i,E_j) is equivalent to the objective lambda_A(T)>=0 for ALL T: physical f compact primitive->F(t)=f(.5logt)->P=T^-1F compact and primitive, core+repair signs W and domain of each window; converse TPpoly superdecay is cut at ∞ and corrects Tate in H_eta 014 before passing to the limit. Causal edge/jump 0 allowed is preserved, without imposing P'(1)=0. No minima at fixed T nor new W/T. The plane E1, E2 has PROVED sign by the later certificate §19.9; degrees/crossings outside it and global remain OPEN. The core uses no numerical results; papers intact.
@@ -11416,7 +11416,7 @@ frames, Fourier interpolation.
 | NG-E7 | L_DH as quantitative benchmark | STAT | NO-GO-LIST:183 | DEAD | Not reproducible from public definitions |
 | N6 | Heat flow alone (monotonicity theorem) to force the sign | HEAT | phase-8-heat-flow-monotonicity, phase-9-unconditional-universality (verdict N6) | NO-GO | Monotonicity holds but cannot fix the terminal parameter |
 | N7 | Multiplicative-chaos capstone escape | ERG/STAT | phase-12-meta-obstruction-moment-problem | PARTIAL | Capstone escaped only in ω-class exponents, no sign |
-| P8-ThmC | Zero-side attack: off-line depths b_ρ control ‖K‖ | KREIN | phase-4-handoff/PAPER-A.md §8 | NO-GO (proved) | Depths enter ‖K‖ only through 𝔱 itself |
+| P8-ThmC | Zero-side attack: off-line depths b_ρ control ‖K‖ | KREIN | phase-4-krein-space-realization/PAPER-A.md §8 | NO-GO (proved) | Depths enter ‖K‖ only through 𝔱 itself |
 | NG-F0 | "Phase-60 duality" H1 minimizer uniqueness via 3 axes | KREIN | phase-60; NO-GO-LIST:332 | DEAD (withdrawn, non-reproducible) | Engine absent, false convexity step; only H1⟺‖A^{-½}BA^{-½}‖<1 survives |
 | NG-F1 | Multiplicativity (not zero location) controls the Weil sign; Carleson-constant discriminant | STAT/EF | phase-60-discriminant; NO-GO-LIST:323 | FALSIFIED (numerical, controlled) | Smooth non-multiplicative controls not separated; fixed-A relative discriminant retained |
 | N5 | ε_loc(ζ)→0 at o(λ^{-1/2}) via Loewner matrix + prolate + relative stability | CCM/FRED | phase-60/N5-analytic-loewner.md | PARTIAL | Loewner structure, relative stability proved; core rate lemma [!] RH-hard, open |
@@ -13070,7 +13070,7 @@ of a *first theorem*, not of closing D.
 Method. Step 1: read README (closed families, phases 190–194, specification, guiding principle incl. correction M),
 05/05b (L01–L85), keyword-grepped 01–04, 06, audits for each field below. Step 2/3 below.
 
-> **Consultation update (2026-11-05): historical inventory, not a current list of unattempted routes.** Seeds B1–B5 received later work: B1 in [INV_M_001](../../03-research/phase-195-modern-tools/INV_M_001_REAL_STABILITY_GARDING_MSS_NO_GO.md), B2 in [INV_N_001](../../03-research/phase-195-modern-tools/INV_N_001_BAKRY_EMERY_GAMMA2_GAP_CEILING_NO_GO.md), B3 in [INV_O_001](../../03-research/phase-195-modern-tools/INV_O_001_BOOTSTRAP_CROSSING_FUNCTIONALS.md), B4 in [BARRIER_EST_001](../../03-research/phase-197-barrier-theorem/BARRIER_EST_001_ESTIMATE_CLASS_NO_GO.md) and its [check](../../03-research/phase-197-barrier-theorem/REVIEW_BARRIER_EST_001.md), B5 in [INV_S_001](../../03-research/phase-195-modern-tools/INV_S_001_RESURGENCE_STOKES_PLACE_ADDITIVE_NO_GO.md). Also consult the corrections and scope notes of their entries in the README. The scores and first tests below are kept as history, not as authorization to repeat them.
+> **Consultation update (2026-11-05): historical inventory, not a current list of unattempted routes.** Seeds B1–B5 received later work: B1 in [INV_M_001](../03-research/phase-195-modern-tools/INV_M_001_REAL_STABILITY_GARDING_MSS_NO_GO.md), B2 in [INV_N_001](../03-research/phase-195-modern-tools/INV_N_001_BAKRY_EMERY_GAMMA2_GAP_CEILING_NO_GO.md), B3 in [INV_O_001](../03-research/phase-195-modern-tools/INV_O_001_BOOTSTRAP_CROSSING_FUNCTIONALS.md), B4 in [BARRIER_EST_001](../03-research/phase-197-barrier-theorem/BARRIER_EST_001_ESTIMATE_CLASS_NO_GO.md) and its [check](../03-research/phase-197-barrier-theorem/REVIEW_BARRIER_EST_001.md), B5 in [INV_S_001](../03-research/phase-195-modern-tools/INV_S_001_RESURGENCE_STOKES_PLACE_ADDITIVE_NO_GO.md). Also consult the corrections and scope notes of their entries in the README. The scores and first tests below are kept as history, not as authorization to repeat them.
 >
 > In particular, the first test of B1 is already decided: the proposed polarized multi-affine symbol has a two-variable face that is not stable, even though it comes from a strictly positive Gram block (INV_M_001 §§1–2, audited in AUDIT_195_3). This rules out that symbol, not every different object related to real stability. B2 also has a follow-up in ROUND_005_D of phase211. A reopening requires stating which object or hypothesis changes and why it avoids the concrete obstruction; a reformulation is not by itself a general impossibility.
 
@@ -18379,7 +18379,7 @@ How the table is counted: a file can generate a row of (c), (d) or (e) in additi
 - There may be minor results in those bodies that do not appear in the final tables.
 - I did not check Part VI of the index (it grows as I work).
 
-## VI — Section 20_03 — 03-research/phase-143-row-d-trace-positive-cone, 03-research/phase-144-row-d-fixed-index, 03-research/phase-145-row-d-function-field-model, 03-research/phase-146-row-d-coupled-pairing, 03-research/phase-147-row-d-galois-ring, 03-research/phase-147-row-d-single-prime-tower, 03-research/phase-148-row-d-mixed-effectivity, 03-research/phase-149-row-d-additive-pencil (52 files: R143_002_AUDIT.md … R149_003_REPAIRS.md)
+## VI — Section 20_03 — 03-research/phase-143-row-d-trace-positive-cone, 03-research/phase-144-row-d-fixed-index, 03-research/phase-145-row-d-function-field-model, 03-research/phase-146-row-d-coupled-pairing, 03-research/phase-147-row-d-galois-ring, 03-research/phase-147-row-d-galois-ring/single-prime-tower-corpus-check, 03-research/phase-148-row-d-mixed-effectivity, 03-research/phase-149-row-d-additive-pencil (52 files: R143_002_AUDIT.md … R149_003_REPAIRS.md)
 
 ### G2_20_03 — Verification of the master index against the memos (phases 143–149)
 
@@ -18396,7 +18396,7 @@ Files in the list: 52. Digest entries read: 52 (full digest, lines 1–3943). Or
 | phase-145-row-d-function-field-model | 8 | 1 | 7 | 0 | 3 | 4 | 0 | 1* | 0 | 1 |
 | phase-146-row-d-coupled-pairing | 9 | 2 | 7 | 0 | 1 | 2 | 1 | 1 | 3 | 2 |
 | phase-147-row-d-galois-ring | 11 | 0 | 11 | 0 | 3 | 6 | 0 | 1* | 1 | 1 |
-| phase-147-row-d-single-prime-tower | 2 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 2 |
+| phase-147-row-d-galois-ring/single-prime-tower-corpus-check | 2 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 2 |
 | phase-148-row-d-mixed-effectivity | 7 | 0 | 7 | 0 | 4 | 3 | 0 | 0* | 0 | 0 |
 | phase-149-row-d-additive-pencil | 4 | 0 | 4 | 0 | 1 | 1 | 0 | 1 | 1 | 0 |
 
@@ -24156,7 +24156,7 @@ All digest entries were read. For the 57 DIGEST entries, only the lines that the
 Convention: «[H]» replaces the classical statement when the memo names it. The cited lines are from `05-meta-and-planning/ROUTES-MASTER-INDEX.md`. A1 = signed compact core −n + ∫_1^{e^{T(n)}}(ψ(y)−y) f'_{n,0}(y) dy ≥ −¾λ_n^arch (n ≥ 8). A0 = uniform Laguerre tail.
 
 Structural finding, checked with cmp and diff:
-- The folder `.phase-102-discard/phase-102-omega7-closure/` is an early draft of `03-research/phase-102-omega7-closure-campaign/`.
+- The folder `.phase-102-discard/phase-102-omega7-closure/` is an early draft of `03-research/phase-102-omega7-closure-campaign/`. The folder has since been removed from `03-research/`; every file in it has a counterpart of the same name in the campaign folder, and the draft remains in the git history. Later mentions of `.phase-102-discard` in this index refer to that removed draft.
 - Six 102_* memos are byte-identical to those of the live campaign: A0_TARGET, BOUNDARY, LI_ASSEMBLY, RDI_TRIAGE, RDI_MINIMAL_BRIDGE and SCALE.
 - Four others differ only in wording: A0_THEOREM (here B_n is still an external datum), A1_SIGNED_CORE_TARGET, A1_ZERO_SIDE_DISCRIMINANT and A1_SIGNED_COMPENSATION_CANDIDATES. The latter is the earlier version of `102_A1_SIGNED_COMPENSATION_MECHANISMS.md`; only «Candidate» becomes «Route» and «candidate» becomes «mechanism».
 - PLAN, LEDGER and README are earlier and shorter versions of the live files.
@@ -26770,7 +26770,7 @@ None strict. Note: l.11542 «P72 … PARTIAL (conditional thm) | HF, LF, BFW unp
 
 All 71 digest entries were read. The full originals of the DIGESTs were not opened except the 4 cited; E72.79, E72.179, E72.195, E72.210–E72.233 cited by the memos (outside the range) were not checked. The cited .py scripts were not reviewed.
 
-## VI — Range 02_01 — 03-research/phase-35-five-fronts, 03-research/phase-36-ABC-forms, 03-research/phase-37-physics, 03-research/phase-38-final-audit, 03-research/phase-39-G1G2-interface, 03-research/phase-40-close-G1, 03-research/phase-41-build-G2, 03-research/phase-42-hodge-dynamics, 03-research/phase-43-hodge-foliated-specZ, 03-research/phase-44-creative-breakthrough, 03-research/phase-44-new-mathematics (45 files: 100-maslov-semilocal.md … 131-algebra-of-arithmetic-correspondences-the-category.md)
+## VI — Range 02_01 — 03-research/phase-35-five-fronts, 03-research/phase-36-ABC-forms, 03-research/phase-37-physics, 03-research/phase-38-final-audit, 03-research/phase-39-G1G2-interface, 03-research/phase-40-close-G1, 03-research/phase-41-build-G2, 03-research/phase-42-hodge-dynamics, 03-research/phase-43-hodge-foliated-specZ, 03-research/phase-44-new-mathematics/hodge-witt-and-visible-inertia, 03-research/phase-44-new-mathematics (45 files: 100-maslov-semilocal.md … 131-algebra-of-arithmetic-correspondences-the-category.md)
 
 ### G2_02_01 — Cross-check of phases 35–44 against ROUTES-MASTER-INDEX.md
 
@@ -26789,7 +26789,7 @@ List: `sub_02_01.list` (45 files). Digest `sub_02_01.digest` read in full (lines
 | phase-41-build-G2 | 3 | 1 | 2 | 0 | 2 | 0 | 0 | 0 | 0 | 1 |
 | phase-42-hodge-dynamics | 3 | 1 | 2 | 0 | 2 | 0 | 0 | 0 | 0 | 1 |
 | phase-43-hodge-foliated-specZ | 3 | 1 | 2 | 0 | 2 | 0 | 0 | 0 | 1 (130) | 1 |
-| phase-44-creative-breakthrough | 2 | 1 | 1 | 0 | 1 | 0 | 0 | 0 | 1 (131c) | 1 |
+| phase-44-new-mathematics/hodge-witt-and-visible-inertia | 2 | 1 | 1 | 0 | 1 | 0 | 0 | 0 | 1 (131c) | 1 |
 | phase-44-new-mathematics | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 1 (131n) | 0 | 0 |
 
 Totals: 45 files; 45 digest entries read; 5 originals opened. A file may appear in (a) and also in (c)/(d)/(e) for a sub-result.
@@ -27755,7 +27755,7 @@ phase-66-rank-one-escape:
 - The full bodies of D1–D9 were not opened beyond the digest; their classification (b) rests on the sections «What Dn establishes».
 - Files cited but outside the stretch (CANONICAL-FOUNDATION, CURVATURE-computation, AUDIT-structure-function-death, CONSTRUCTION-*, FACE-C-compactness of phase 64): not checked here.
 
-## VI — Stretch 01_01 — 03-research/phase-0-foundations, 03-research/phase-10-hodge-envelope-degeneration, 03-research/phase-3-uniform-inequality, 03-research/phase-4-handoff, 03-research/phase-5-structural, 03-research/phase-6-osterwalder-schrader-reflection, 03-research/phase-7-weil-carleson-sine-kernel, 03-research/phase-8-heat-flow-monotonicity, 03-research/phase-9-unconditional-universality (79 files: 0A1-weil-guinand-translation.md … REPORT-M10.1-to-M10.3-cohomological-turn.md)
+## VI — Stretch 01_01 — 03-research/phase-0-foundations, 03-research/phase-10-hodge-envelope-degeneration, 03-research/phase-3-uniform-inequality, 03-research/phase-4-krein-space-realization, 03-research/phase-5-structural, 03-research/phase-6-osterwalder-schrader-reflection, 03-research/phase-7-weil-carleson-sine-kernel, 03-research/phase-8-heat-flow-monotonicity, 03-research/phase-9-unconditional-universality (79 files: 0A1-weil-guinand-translation.md … REPORT-M10.1-to-M10.3-cohomological-turn.md)
 
 ### G2_01_01 — Verification of the stretch sub_01_01 (phases 0, 3, 4, 5, 6, 7, 8, 9, 10) against ROUTES-MASTER-INDEX.md
 
@@ -27763,14 +27763,14 @@ Convention: «[H]» replaces every mention of the classical statement that the m
 
 #### §1 Coverage table by folder
 
-Files in the stretch: 79. Digest entries read: 79 (all, from beginning to end). Originals opened: 1 (`phase-4-handoff/proofs/00-PROOF-LOG.md`, only «Day-N headline» headlines and headings, by grep; 2914 lines).
+Files in the stretch: 79. Digest entries read: 79 (all, from beginning to end). Originals opened: 1 (`phase-4-krein-space-realization/proofs/00-PROOF-LOG.md`, only «Day-N headline» headlines and headings, by grep; 2914 lines).
 
 | Folder | no. | whole (FULL) | header/tail/verdicts | unread | (a) | (b) | (c) | (d) | (e) | (f) |
 |---|---|---|---|---|---|---|---|---|---|---|
 | phase-0-foundations | 6 | 1 | 5 | 0 | 4 | 0 | 0 | 0 | 0 | 2 |
 | phase-3-uniform-inequality | 3 | 1 | 2 | 0 | 1 | 1 | 0 | 0 | 0 | 1 |
-| phase-4-handoff (top level) | 6 | 1 | 5 | 0 | 4 | 1 | 0 | 0 | 0 | 1 |
-| phase-4-handoff/proofs (+latex) | 25 | 1 | 24 | 0 | 4 | 8 | 8 | 3 | 1 | 2 (+1 duplicate) |
+| phase-4-krein-space-realization (top level) | 6 | 1 | 5 | 0 | 4 | 1 | 0 | 0 | 0 | 1 |
+| phase-4-krein-space-realization/proofs (+latex) | 25 | 1 | 24 | 0 | 4 | 8 | 8 | 3 | 1 | 2 (+1 duplicate) |
 | phase-5-structural (+experiments) | 11 | 1 | 10 | 0 | 6 | 0 | 2 | 2 | 0 | 1 |
 | phase-6-osterwalder-schrader-reflection | 5 | 1 | 4 | 0 | 3 | 1 | 0 | 0 | 0 | 1 |
 | phase-7-weil-carleson-sine-kernel | 4 | 1 | 3 | 0 | 1 | 1 | 0 | 0 | 1 | 1 |
@@ -27782,7 +27782,7 @@ Files in the stretch: 79. Digest entries read: 79 (all, from beginning to end). 
 
 #### §2 ABSENT ROUTES (c)
 
-##### phase-4-handoff/proofs — The archimedean de Branges space H(E_γ) as home of the semibounded realization (Days 1–10)
+##### phase-4-krein-space-realization/proofs — The archimedean de Branges space H(E_γ) as home of the semibounded realization (Days 1–10)
 - Files: `B2-semiboundedness.md`, `B2.4a-de-branges-norm.md`, `B2.4a-closability.md`, `B2.4a-break-attempt.md`, `EF-identity-audit.md`, `closure-in-HEgamma.md`, `CLOS1-audit-and-RFB.md`, `space-correction-strip-hardy.md`, `Day10-kernel-audit.md`.
 - What was attempted: to realize the Weil form 𝔱 in the de Branges space of the Gamma factor H(E_γ) (DB.1: Ω = 2 Re γ′/γ; DB.3 bounded evaluations off the axis), to prove closability (CLOS.1 by Kato's monotone convergence; CLOS.2 «[H] ⇒ 𝔱 closable»; CLOS.3 = (RFB)), and to reduce B‑2 to the de Branges chain condition.
 - Result according to the memos: CLOS.1 PROVED (existence) with «closure = 𝔱_+» RETRACTED (Day 8, form core OPEN); Day 9: «H(E_γ) is trace-class — hence trivial — for the Weil form» (𝔱 bounded ⇒ CLOS correct but empty); Day 10: the trivialization depends on the normalization of E_γ, «neither Gamma normalization is Goldilocks … Gamma–de-Branges is wrong home ✅ both normalizations fail». EF‑id: «unconditional on the dense core»; survival under closure in H(E_γ) «OPEN». B2.3 («naive KLMN fails», Day 0) retracted on Day 5 for the same hard-cutoff error as BR.1.
@@ -27790,7 +27790,7 @@ Files in the stretch: 79. Digest entries read: 79 (all, from beginning to end). 
 - Reopening condition: «exact weight (flat vs log) … resolve via Bombieri/Lagarias» (Day 10, open); the home passes to the oversampled band Hardy space.
 - Closest in the index: l.2996 (self-adjoint realization, EF‑id, R=Kρ, P=ρℓ, oversampled Hardy: PROVED); l.2147 (Fock retracted, truncation artifact); l.2142 (de Branges/structure function, Conrey–Li). No line records the trivialization of H(E_γ) or the exclusion of the Gamma normalizations.
 
-##### phase-4-handoff/proofs — Reduction «A.2 ⟸ lower frame bound» in the critical space (triviality T2) and R/P conflation error
+##### phase-4-krein-space-realization/proofs — Reduction «A.2 ⟸ lower frame bound» in the critical space (triviality T2) and R/P conflation error
 - Files: `Day14-reduction-audit.md`, `Day15-K5-audit.md`.
 - What was attempted: to treat the form core A.2 by means of the sampling lower bound in the critical space K≍1/ρ.
 - Result: Day 14 «second triviality (T2): the Weil form is bounded there, so B‑2 is vacuous»; restriction K5; Day 15 corrects: K5 «downgraded ◆» (Carleson depends on P=ρℓ, not on R=Kρ), T2 «likely collapses to T1»; oversampling «forced».
@@ -27798,7 +27798,7 @@ Files in the stretch: 79. Digest entries read: 79 (all, from beginning to end). 
 - Reopening: none written.
 - Closest: l.2996 (invariants R, P, forced oversampling) — covers the final conclusion but not the discarded T2/K5 route.
 
-##### phase-4-handoff/proofs — Reformulation by quadrature as a possible equivalent of [H] (Days 18–20)
+##### phase-4-krein-space-realization/proofs — Reformulation by quadrature as a possible equivalent of [H] (Days 18–20)
 - Files: `Day18-quadrature.md`, `Day19-pair-correlation-input.md`, `Day20-threshold-correction.md`.
 - What was attempted: to reduce (RFB) to a fixed-band quadrature and to a second moment V(d,T) of pair correlation.
 - Result: Day 18 «most probably … a new equivalent of [H]» (conditional Montgomery-type input); Day 19 «decisive question» open; Day 20: the global Cauchy–Schwarz is «VACUOUS», Montgomery's requirement is an artifact; local bound IBP+Bernstein+Selberg gives E_g=O(𝔱_+).
@@ -27820,18 +27820,18 @@ Files in the stretch: 79. Digest entries read: 79 (all, from beginning to end). 
 
 #### §3 ABSENT POSITIVE RESULTS (d)
 
-##### phase-4-handoff/proofs — List of constraints K1–K4 and scaling law DENS.1
+##### phase-4-krein-space-realization/proofs — List of constraints K1–K4 and scaling law DENS.1
 - Files: `Day11-theorem-audit.md`, `Day12-density-scaling-law.md`, `Day13-DENS1-audit.md`, `Day10-kernel-audit.md`.
 - Statements: Day 10/11: «inf_t K(t,t)>0 ⟹ S_off=∞» (✅) and density-adapted theorem (✅/◆, hypotheses (i)–(iii)); «explicit constraint list K1–K4» (✅). Day 12–13: «FAITHFUL ⟺ Kρ∉L¹» conditioned on K regularly varying (Proposition Day 13, ✅); «critical scaling law K≍1/ρ survives unconditionally».
 - Later retraction within the stretch: Day 14–15 qualify the interpretation of the critical space (empty), not the propositions.
 - Closest: l.2996 (R=Kρ, P=ρℓ) without K1–K4 or DENS.1.
 
-##### phase-4-handoff/proofs — Day 16 conditional theorem and Schur bound
+##### phase-4-krein-space-realization/proofs — Day 16 conditional theorem and Schur bound
 - File: `Day16-carleson-and-RFB.md`.
 - Statement: «P≲1 + separation ⇒ Carleson» (✅ Schur); «Theorem (Day 16, conditional): regular sampling of the zeros ⇒ RFB ⇒ Weil semibounded» (✅ conditional); the equivalence P bounded ⟺ Carleson is false.
 - Closest: l.2997 (RFB by pointwise routes DEAD). The conditional theorem does not appear.
 
-##### phase-4-handoff/proofs — Day 22: D⁻=∞ insufficient and separation by depth
+##### phase-4-krein-space-realization/proofs — Day 22: D⁻=∞ insufficient and separation by depth
 - File: `Day22-coercivity.md`.
 - Statement: «D⁻=∞ does NOT give the lower frame bound ✅ (rigorous negative)»; deep/shallow partition ◆; B‑2 ⟸ uniform density on short intervals.
 - Closest: l.2999 (coercivity, Beurling block; rest = uniform density) — covers the rest; the negative D⁻=∞ and the partition are not named (almost (b)).
@@ -27851,7 +27851,7 @@ Files in the stretch: 79. Digest entries read: 79 (all, from beginning to end). 
 1. `phase-7-weil-carleson-sine-kernel/P7-OPEN-CORE-carleson-saturation.md`: «C≡1 saturated at the natural scale … ✅ measured (N3)»; README: «NUMERICAL». Index l.2090: «Band Carleson constant C(d,T₀) | N3; PL05; PL06 | PROVED (C≡1)». Index stronger.
 2. `phase-10-hodge-envelope-degeneration/DEEPRUN-analysis-M10.1-M10.3.md`: «λ_min(G)=π²/6 β_min² — ✅ established (deep run, corrected M10.3)» (numerical fit, «3 points»/deep run); the phase README calls it «PROVED (identity)». Index l.2154: «PROVED identity / REF»; l.2708 «measured». Internal inconsistency of the index and between memo and README; the originating memo is numerical.
 3. `phase-9-unconditional-universality/T9cal-DELIVERABLE-exchange-rate.md`: «α_req ≍ N^{1/3} … ✅ derived (bridge rigorous up to O(1); GUE scaling)»; README «PROVED (derivation) / CALIBRATION». Index l.2707: «exchange rate (009) | NUMERICAL». Index weaker and without the statement A↔A³.
-4. `phase-4-handoff/proofs/A1-operator-and-compression.md`: «A.3 compression identity (⋆) (as a generalized/Galerkin eigenproblem) ✅»; «Problem A is essentially proved». Index l.2995: «Compression question 0A2 (Q = P_J T P_J faithful) | NUMERICAL». The index does not distinguish the algebraic identity (proved) from the spectral fidelity (open, l.12235).
+4. `phase-4-krein-space-realization/proofs/A1-operator-and-compression.md`: «A.3 compression identity (⋆) (as a generalized/Galerkin eigenproblem) ✅»; «Problem A is essentially proved». Index l.2995: «Compression question 0A2 (Q = P_J T P_J faithful) | NUMERICAL». The index does not distinguish the algebraic identity (proved) from the spectral fidelity (open, l.12235).
 
 #### §5 Compact list (a)/(b)/(f)
 
@@ -27910,9 +27910,9 @@ Files in the stretch: 79. Digest entries read: 79 (all, from beginning to end). 
 #### §6 What could not be read or checked
 
 - All digest entries were read. The parts omitted by the digest in long files were not opened, except 00-PROOF-LOG.md (headlines only). In particular:
-  - `phase-4-handoff/proofs/00-PROOF-LOG.md` lines 74–2795 (results ledger and Days 0–50): only the «Day‑N headline» headlines were read, by grep. It contains summaries of phases 11–16 (MSS/interlacing, ω/N7 chaos, N8, «anchor» as a Landau singularity, Pontryagin P15/P16, fronts P18–P20 —HR stability in towers, recovery of Satake GL(n), finite background modulo log^c—, Anatomy–Kreĭn–Hodge program M1–M3 with 8 attempts, SURF specification). It was verified by keyword that most of it has a row in the index (l.2709, l.2223–2226, l.1580, l.3004, l.2734, l.3041–3042); it was not verified entry by entry. «Anchor = Landau singularity» (Days 35–36) does not appear under that name in the index (but «anchor framework» does, l.11436). The GL(n)/Rankin–Selberg recovery of P19 (Days 43–45) was not found by grep.
-  - `phase-4-handoff/proofs/latex/PROOF-LOG.tex` (3654 lines): not opened; treated as a duplicate.
-  - `phase-4-handoff/PAPER-A.md` lines 188–557 and `PHASE4-WORK-PROGRAM.md` body: not opened.
+  - `phase-4-krein-space-realization/proofs/00-PROOF-LOG.md` lines 74–2795 (results ledger and Days 0–50): only the «Day‑N headline» headlines were read, by grep. It contains summaries of phases 11–16 (MSS/interlacing, ω/N7 chaos, N8, «anchor» as a Landau singularity, Pontryagin P15/P16, fronts P18–P20 —HR stability in towers, recovery of Satake GL(n), finite background modulo log^c—, Anatomy–Kreĭn–Hodge program M1–M3 with 8 attempts, SURF specification). It was verified by keyword that most of it has a row in the index (l.2709, l.2223–2226, l.1580, l.3004, l.2734, l.3041–3042); it was not verified entry by entry. «Anchor = Landau singularity» (Days 35–36) does not appear under that name in the index (but «anchor framework» does, l.11436). The GL(n)/Rankin–Selberg recovery of P19 (Days 43–45) was not found by grep.
+  - `phase-4-krein-space-realization/proofs/latex/PROOF-LOG.tex` (3654 lines): not opened; treated as a duplicate.
+  - `phase-4-krein-space-realization/PAPER-A.md` lines 188–557 and `PHASE4-WORK-PROGRAM.md` body: not opened.
 
 ## VI — Stretch 01_03 — 03-research/phase-22-pontryagin-finite-defect, 03-research/phase-23-two-scale-defect-structure, 03-research/phase-24-lower-bounds-bj, 03-research/phase-25-lower-bounds-bj-audit, 03-research/phase-26-krein-connes-bridge, 03-research/phase-27-adelic-rigidity, 03-research/phase-28-four-fronts, 03-research/phase-29-zeta-spectral-triples (61 files: 03-spectral-rigidity.md … 24-derivative-at-zeros.md)
 

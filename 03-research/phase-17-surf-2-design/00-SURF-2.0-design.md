@@ -326,6 +326,6 @@ publishable structural negative — consistent with the standing CAP/SURF map.
 ---
 
 *Cross-refs:* `phase-16-surf-witness-variety/00-SURF-SPEC-SHEET.md` (Pillars/filters), `phase-15-arithmetic-hodge-index/...` (Lefschetz
-dichotomy P21), `phase-4-handoff/proofs/00-PROOF-LOG.md` (de Branges / archimedean `Γ`-factor
+dichotomy P21), `phase-4-krein-space-realization/proofs/00-PROOF-LOG.md` (de Branges / archimedean `Γ`-factor
 geometry, the EF-identity guard-rail), `06-papers/P25,P26,P27,P28` (the chain this refines).
 *Memory:* `[[project-rh-current-direction]]`, `[[riemann-key-contradiction]]`.

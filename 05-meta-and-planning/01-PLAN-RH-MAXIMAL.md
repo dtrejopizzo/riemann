@@ -403,6 +403,6 @@ $$\text{RH} \iff \kappa(Q) = 0 \iff \mathrm{neg.ind}(H_C) = 0 \iff Q \ge 0 \iff 
 
 ### 9.8 Papers P33–P35 — status
 
-- **P33** ([`06-papers/P33-arithmetic-defect/main.tex`](06-papers/P33-arithmetic-defect/main.tex)): 14 pages, compiles clean. ✅
-- **P34** ([`06-papers/P34-two-scale-structure/main.tex`](06-papers/P34-two-scale-structure/main.tex)): 8 pages, compiles clean (3 cosmetic overfull warnings). ✅
-- **P35** ([`06-papers/P35-bridge-theorem/main.tex`](06-papers/P35-bridge-theorem/main.tex)): 9 pages, compiles clean. ✅ — Bridge conjecture κ(Q) = neg.ind(H_C), verification program V.1–V.4, Phase 27 direction.
+- **P33** (draft `P33-arithmetic-defect`, no longer kept in the repository): 14 pages, compiles clean. ✅
+- **P34** (draft `P34-two-scale-structure`, no longer kept in the repository): 8 pages, compiles clean (3 cosmetic overfull warnings). ✅
+- **P35** (draft `P35-bridge-theorem`, no longer kept in the repository): 9 pages, compiles clean. ✅ — Bridge conjecture κ(Q) = neg.ind(H_C), verification program V.1–V.4, Phase 27 direction.

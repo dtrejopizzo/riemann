@@ -145,7 +145,7 @@ candor that made P8's Theorem C the most valuable output of the zero-side line.
 2. **M2 (B3.2/B3.3):** the de Branges structure-function / Hilbert–Pólya identification or obstruction.
 3. **M3 (B2.1):** the residual-positivity question stated exactly; the $PW_d$/Slepian angle assessed.
 4. **M4 (B1.3):** attempt a structural no-go for the admissible square; if it lands, **route B closes**.
-5. **Each milestone** updates `00-MAP.md` (route-B branch) and `phase-4-handoff/proofs/00-PROOF-LOG.md`
+5. **Each milestone** updates `00-MAP.md` (route-B branch) and `phase-4-krein-space-realization/proofs/00-PROOF-LOG.md`
    (or a new `phase-5-structural/` log), and the project notes.
 
 ---

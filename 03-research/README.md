@@ -1,4 +1,4 @@
-# The research record (phases 0–215)
+# The research record (phases 0–216)
 
 This folder is the core of the project: a single continuous research programme, organised as a
 sequence of numbered phases. It follows nine early exploratory computational programmes,
@@ -19,8 +19,10 @@ other phases.
 - Phase 215 closes the private mathematical review of the GRH/RH chain reconstructed with
   explicit supplements. Its favourable verdict has the scope stated in its final memo, not
   an automatic approval of every manuscript version or a formal Lean certificate.
-- Phase 216 is planned for integral compatibility of twists, CM weight kernels and cup products;
-  it has not started. Historical OPEN labels below describe the outcome of their own phases.
+- Phase 216 starts a new line of research after that closure: integral compatibility of twists,
+  higher CM observables and crystalline extension costs. Its first round records proved pilot
+  examples and candidate programmes, with priority not established. Historical OPEN labels below describe the outcome of their
+  own phases.
 
 ## How the phases connect to the papers
 
@@ -36,8 +38,10 @@ and labels.
 | Phase | Topic | Outcome |
 |---|---|---|
 | [phase-0-foundations](phase-0-foundations/) | The Weil form Q in Weil–Guinand language; normalization pinned | Normalization fixed; classical formula translated (CITED) |
+| phase 1 (no folder) | The truncation theorem: an explicit truncation estimate for the localized Weil detector (phase 1 of the original plan) | Carried out as Python computations only; no research folder was kept |
+| phase 2 (no folder) | The contradiction architecture: RH from the phase-1 theorems plus an unconditional lower bound, and the empirical floor law (phase 2 of the original plan) | Carried out as Python computations only; no research folder was kept |
 | [phase-3-uniform-inequality](phase-3-uniform-inequality/) | Stability geometry of the localized Weil quadratic form | Uniform positivity limit identified as equivalent to RH; forced negativity under an off-line zero; no reduction |
-| [phase-4-handoff](phase-4-handoff/) | Faithful semibounded Kreĭn realization of the Weil functional (Theorem B-2) | Theorem B-2 PROVED modulo one hypothesis (H) strictly weaker than RH |
+| [phase-4-krein-space-realization](phase-4-krein-space-realization/) | Faithful semibounded Kreĭn-space realization of the Weil functional (Theorem B-2) | Theorem B-2 PROVED modulo one hypothesis (H) strictly weaker than RH |
 | [phase-5-structural](phase-5-structural/) | The semi-local Connes residual; PW_d ↔ prolate question | The P8 no-go does not transport to the Connes residual; question left OPEN |
 | [phase-6-osterwalder-schrader-reflection](phase-6-osterwalder-schrader-reflection/) | The Weil form as an Osterwalder–Schrader reflection-positive form (per-place positivity fails) | Faithful OS recasting PROVED; per-place positivity fails (NO-GO); one variant retracted |
 | [phase-7-weil-carleson-sine-kernel](phase-7-weil-carleson-sine-kernel/) | Second order: Weil–Carleson form = sine-kernel determinantal process | Exact Carleson identity PROVED; sine-kernel structure NUMERICAL |
@@ -77,8 +81,7 @@ and labels.
 | [phase-41-build-G2](phase-41-build-G2/) | The intersection form on the square of the scaling site | Toy Gram matrix of signature (1,2) computed; G2 OPEN |
 | [phase-42-hodge-dynamics](phase-42-hodge-dynamics/) | Dynamical Hodge theory as a foliated Kähler-package framework (Deninger) | Source of positivity not external: circular (NO-GO) |
 | [phase-43-hodge-foliated-specZ](phase-43-hodge-foliated-specZ/) | Does the foliated Spec ℤ admit a polarizable Hodge structure? | No polarizable Hodge structure on Morishita's space (NO-GO) |
-| [phase-44-creative-breakthrough](phase-44-creative-breakthrough/) | Hodge–Witt and visible inertia | Lemmas internal to a new framework; bridge to RH CONDITIONAL |
-| [phase-44-new-mathematics](phase-44-new-mathematics/) | The algebra of arithmetic correspondences: the category 𝒜rith | Category constructed; connection to RH declared, not proved |
+| [phase-44-new-mathematics](phase-44-new-mathematics/) | Two threads: the category 𝒜rith of arithmetic correspondences and defect theory; Hodge–Witt and visible inertia ([subfolder](phase-44-new-mathematics/hodge-witt-and-visible-inertia/)) | Categories constructed, connection to RH declared, not proved; Hodge–Witt lemmas internal to a new framework, bridge to RH CONDITIONAL |
 | [phase-45-fredholm](phase-45-fredholm/) | The Weil–Toeplitz algebra: symbol, compact ideal, two-prime theorem | Strict essential positivity ⇒ finite defect PROVED |
 | [phase-46-audit-and-attacks](phase-46-audit-and-attacks/) | Adversarial audit of the local-purity theorem; semilocal attacks | Audits of the local-purity and two-prime theorems |
 | [phase-47-live-fronts](phase-47-live-fronts/) | Attack on the Paley–Wiener finiteness pivot (LP-141) | LP-141 refuted by a Hadamard counterexample (NO-GO) |
@@ -181,8 +184,7 @@ and labels.
 | [phase-144-row-d-fixed-index](phase-144-row-d-fixed-index/) | Row D: the fixed-index inequality | Fixed-index inequality studied |
 | [phase-145-row-d-function-field-model](phase-145-row-d-function-field-model/) | Row D: the function-field model of the frame | Frame defect holds in the function-field model; prediction refuted |
 | [phase-146-row-d-coupled-pairing](phase-146-row-d-coupled-pairing/) | Row D: the degree form on `Z[Frob]` with a count interpretation | Count interpretation (Q0, Q1) |
-| [phase-147-row-d-galois-ring](phase-147-row-d-galois-ring/) | Row D: the Galois group ring `Z[Gal(L/F)]` as the missing `+` | Group ring supplies a partial answer; no sign |
-| [phase-147-row-d-single-prime-tower](phase-147-row-d-single-prime-tower/) | Single-prime Frobenius towers and Frob ⋆ Δ^rad (corpus check only) | Corpus check only |
+| [phase-147-row-d-galois-ring](phase-147-row-d-galois-ring/) | Row D: the Galois group ring `Z[Gal(L/F)]` as the missing `+`; with a corpus check on single-prime Frobenius towers ([subfolder](phase-147-row-d-galois-ring/single-prime-tower-corpus-check/)) | Group ring supplies a partial answer; no sign; the tower thread is a corpus check only |
 | [phase-148-row-d-mixed-effectivity](phase-148-row-d-mixed-effectivity/) | Row D: mixed effectivity on the full square | Kill test outcome (i); no sign |
 | [phase-149-row-d-additive-pencil](phase-149-row-d-additive-pencil/) | The additive pencil of `Spec Z` and the Deligne extraction | Extraction theorem D.59 PROVED; rationality wall |
 | [phase-150-row-d-method-theorems](phase-150-row-d-method-theorems/) | Method theorems T3, T4, T5 (row D) | T5 PROVED, T4 reduced, T3 conditional; CLOSED, no sign |
@@ -249,12 +251,14 @@ and labels.
 | [phase-211-sign-sandbox](phase-211-sign-sandbox/) | The sign of the Paper 46 window form, treated as an isolated problem | (★) PROVED for T ≤ ½log5, global sign OPEN |
 | [phase-212-missing-object](phase-212-missing-object/) | Construction of the object that carries the sign | No construction meets OBJECT_SPEC; OPEN |
 | [phase-213-new-constructions](phase-213-new-constructions/) | New constructions for the global positivity of the Paper 46 form | Global positivity OPEN; rounds with stated labels |
-| [phase-214-cotas-explicitas-y-reconstruccion](phase-214-cotas-explicitas-y-reconstruccion/README.md) | Explicit window lower bounds, filters and reconstruction of Paper46 inputs | CLOSED; bound CONDITIONAL on the spectral conclusion; proof, Arb script and reconstruction notes preserved |
-| [phase-215-certificacion-privada-grh-rh-con-suplementos](phase-215-certificacion-privada-grh-rh-con-suplementos/README.md) | Review of papers43–46,49–56 and58: proofs, junctions, corrections and new connections | CLOSED; favourable private mathematical verdict on the GRH/RH chain reconstructed with explicit supplements; exact scope in final memo |
+| [phase-214-explicit-bounds-and-reconstruction](phase-214-explicit-bounds-and-reconstruction/) | Explicit window lower bounds, filters and reconstruction of the inputs of Paper 46 | CLOSED; bound CONDITIONAL on the spectral conclusion; proof, Arb script and reconstruction notes kept |
+| [phase-215-private-certification-grh-rh-with-supplements](phase-215-private-certification-grh-rh-with-supplements/) | Review of Papers 43–46, 49–56 and 58: proofs, junctions, corrections and new connections | CLOSED; favourable private mathematical verdict on the GRH/RH chain reconstructed with explicit supplements; exact scope in its final memo |
+| ━━━━━━━━━━━━━━━━━━━━ | **━━━━━ Close of the research of phases 0–215 · a new line of research starts below ━━━━━** | ━━━━━━━━━━━━━━━━━━━━ |
+| [phase-216-new-arithmetic-connections](phase-216-new-arithmetic-connections/) | Higher CM observables, integral compatibility of diagrams, and crystalline extension costs, as autonomous mathematics | OPEN; rounds 001–003: CM/Hodge examples, exact crystalline costs, Iwasawa/logarithm antecedents; originality and exhaustive coverage pending |
 
-Notes. There are no folders for phases 1 and 2. Two `phase-44-*` and two `phase-147-*` folders exist
-(parallel threads under the same number). The hidden folder
-[`.phase-102-discard/`](.phase-102-discard/) holds discarded phase-102 material. The folder name
-`phase-4-handoff` is historical; the phase is the Kreĭn-space realization described in its README.
-
-**Continuidad tras el cierre de214 y215:** fase216 prevista para compatibilidad integral entre twists, núcleos de pesos CM y cup products; todavía no iniciada. Véase el [traspaso](phase-215-certificacion-privada-grh-rh-con-suplementos/MEMO-FINAL.md).
+Notes. Every phase has exactly one folder, named `phase-<number>-<topic>`, with its own README.
+Phases 1 and 2 have no folder: in the original plan
+([`01-PLAN-RH-MAXIMAL.md`](../05-meta-and-planning/01-PLAN-RH-MAXIMAL.md)) they were the truncation
+theorem and the contradiction architecture; they consisted only of Python computations, which were
+discarded as being of no value for the research record. Phases 44 and 147 each had two threads; the second
+thread is kept in a subfolder of the phase. 

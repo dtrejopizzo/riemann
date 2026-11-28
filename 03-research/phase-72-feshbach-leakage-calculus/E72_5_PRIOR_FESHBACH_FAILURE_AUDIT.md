@@ -15,7 +15,7 @@ Main sources:
 - `phase-60-discriminant/III-ruta-correcta.md`
 - `phase-60-discriminant/attack-gap-i-improved-hardy.tex`
 - `00-MAP.md`
-- `phase-4-handoff/proofs/00-PROOF-LOG.md`
+- `phase-4-krein-space-realization/proofs/00-PROOF-LOG.md`
 
 Also searched the repo for `Feshbach`, `Schur`, `shorting`, `Haynsworth`, `Feshbach inverse`,
 `graph norm`, and `coboundary`.

@@ -85,7 +85,7 @@ Each row records presence and count. The link leads to the directory; the strate
 |---|---:|---:|
 | [phase-0-foundations](../../03-research/phase-0-foundations/) | 5 | 5 |
 | [phase-3-uniform-inequality](../../03-research/phase-3-uniform-inequality/) | 2 | 2 |
-| [phase-4-handoff](../../03-research/phase-4-handoff/) | 30 | 32 |
+| [phase-4-krein-space-realization](../../03-research/phase-4-krein-space-realization/) | 30 | 32 |
 | [phase-5-structural](../../03-research/phase-5-structural/) | 10 | 16 |
 | [phase-6-osterwalder-schrader-reflection](../../03-research/phase-6-osterwalder-schrader-reflection/) | 4 | 4 |
 | [phase-7-weil-carleson-sine-kernel](../../03-research/phase-7-weil-carleson-sine-kernel/) | 3 | 7 |
@@ -125,7 +125,7 @@ Each row records presence and count. The link leads to the directory; the strate
 | [phase-41-build-G2](../../03-research/phase-41-build-G2/) | 2 | 2 |
 | [phase-42-hodge-dynamics](../../03-research/phase-42-hodge-dynamics/) | 2 | 2 |
 | [phase-43-hodge-foliated-specZ](../../03-research/phase-43-hodge-foliated-specZ/) | 2 | 2 |
-| [phase-44-creative-breakthrough](../../03-research/phase-44-creative-breakthrough/) | 1 | 1 |
+| [phase-44-new-mathematics/hodge-witt-and-visible-inertia](../../03-research/phase-44-new-mathematics/hodge-witt-and-visible-inertia/) | 1 | 1 |
 | [phase-44-new-mathematics](../../03-research/phase-44-new-mathematics/) | 3 | 3 |
 | [phase-45-fredholm](../../03-research/phase-45-fredholm/) | 3 | 3 |
 | [phase-46-audit-and-attacks](../../03-research/phase-46-audit-and-attacks/) | 7 | 7 |

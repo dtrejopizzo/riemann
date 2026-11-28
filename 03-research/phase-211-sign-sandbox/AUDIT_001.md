@@ -33,7 +33,7 @@ or zero-free) and finds none that survive close reading.
 - **Phase 3** (`phase-3-uniform-inequality`): stability geometry of a *localized* Weil form, aimed at
   "detecting a fixed zero" (P3-1, PARTIAL). Entirely zero-detection framed; the localization is in the zero
   variable, not in $T$. No hit.
-- **Phase 4** (`phase-4-handoff`): the deepest technical phase here. B2-THEOREM / PAPER-A.md build a faithful
+- **Phase 4** (`phase-4-krein-space-realization`): the deepest technical phase here. B2-THEOREM / PAPER-A.md build a faithful
   semibounded Kreĭn realization $\mathfrak t=E^*JE$ and attack coercivity §2½ as **pure sampling theory**
   (`proofs/Day22-coercivity.md`): "does $\mathfrak t_+=\sum_\gamma|F(\gamma)|^2\ge c\rho\|F\|^2$ follow from
   $D^-=\infty$, or is a gap condition needed?" They use "Nyquist" in the Beurling–Landau sampling sense (a gap

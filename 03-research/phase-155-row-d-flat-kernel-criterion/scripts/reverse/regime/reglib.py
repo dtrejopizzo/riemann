@@ -15,7 +15,7 @@ we additionally report the true norms ||w||_inf and int|w|.
 
 Everything here is DIAGNOSTIC (double precision, finite tau-grid, truncated zero
 table, LP trained on a table of zeros -> circular as a tool,
-phase-4-handoff/proofs/00-PROOF-LOG.md:168, phase-136 MAP_1 ES-2).
+phase-4-krein-space-realization/proofs/00-PROOF-LOG.md:168, phase-136 MAP_1 ES-2).
 """
 import os, sys, numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))

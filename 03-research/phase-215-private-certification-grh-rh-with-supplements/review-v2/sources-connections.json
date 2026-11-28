@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-28",
+  "exhaustive_priority_search": false,
+  "sources": [
+    {
+      "url": "https://alpo.ge/remark.pdf",
+      "scope_consulted": "Primary note, four pages; motivation and attribution, not formal verification"
+    },
+    {
+      "url": "https://www.numdam.org/article/SB_1972-1973__15__234_0.pdf",
+      "scope_consulted": "Primary text, Bombieri: mechanism of multiplicity and counting"
+    },
+    {
+      "url": "https://ems.press/books/standalone/21/408",
+      "scope_consulted": "Publisher's record and scope; not the full chapter"
+    },
+    {
+      "url": "https://arxiv.org/abs/1512.08946",
+      "scope_consulted": "Primary abstract, Bost; antecedent for theta and arithmetic geometry"
+    },
+    {
+      "url": "https://arxiv.org/abs/math/0610163",
+      "scope_consulted": "Primary abstract, Bannai–Kobayashi; CM and p-adic properties"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/0022314X9090110D",
+      "scope_consulted": "Publisher's abstract, Chellali; supersingular congruences"
+    },
+    {
+      "url": "https://arxiv.org/abs/1207.4709",
+      "scope_consulted": "Primary abstract, Gan–Qiu–Takeda; scope of Rallis"
+    },
+    {
+      "url": "https://arxiv.org/abs/0805.4227",
+      "scope_consulted": "Primary abstract, Caruso–Liu; ramification bounds, an object different from cup products"
+    },
+    {
+      "url": "https://arxiv.org/abs/math/9811068",
+      "scope_consulted": "Primary abstract, Connes; antecedent for the explicit formula and trace"
+    }
+  ]
+}

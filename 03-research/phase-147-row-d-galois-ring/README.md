@@ -40,6 +40,7 @@ automorphism graph `Γ_i = ½Γ_π − ½Δ − F₁ + F₂` is an irreducible c
 |---|---|
 | `R147_000_BLUEPRINT.md` | blueprint: D.50–D.54; warnings W-a (no trace-form positivity), W-c (falsifiers by structure) |
 | `CORPUS_CHECK_R147b.md` | pre-phase corpus check |
+| [`single-prime-tower-corpus-check/`](single-prime-tower-corpus-check/) | second thread of the phase: corpus check for single-prime Frobenius towers and `Frob ⋆ Δ^rad` (no construction; own README) |
 | `R147_001_ROUND1.md` | round 1 (D.50–D.54). **Ends with `Corrections of record` C1–C19 — read that first**; body not rewritten |
 | `R147_002_AUDIT.md` | audit 1: ACCEPT WITH REPAIRS (0 FATAL, 6 MAJOR, 11 MINOR) |
 | `R147_003_ROUND2.md` | round 2. Part A: all of audit 1 discharged. Part B (§D.55): the χ-graded carrier. **Ends with `Corrections of record` D1–D20 — read that first**; body not rewritten |

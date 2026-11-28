@@ -31,7 +31,7 @@ only as a name in a classification argument.
   > "**Epstein zeta functions** `Z_Q(s)` do have a simple pole, a functional equation and, for
   > class number `> 1`, **proven off-line zeros** (Davenport–Heilbronn) — but they have no Euler
   > product, so `−Z_Q'/Z_Q`..." [excluded from the falsifier class G4 needs].
-- `03-research/phase-4-handoff/proofs/00-PROOF-LOG.md:1446`: "Epstein (lattice) zetas
+- `03-research/phase-4-krein-space-realization/proofs/00-PROOF-LOG.md:1446`: "Epstein (lattice) zetas
   **generically violate RH**" (same conclusion, independent phase).
 - `NO-GO-LIST.md:638`: records that "Epstein zetas have off-line zeros but no Euler product" as
   part of the reason a Dedekind/Epstein falsifier search came back empty for a specific chain

@@ -123,6 +123,6 @@ pair-correlation wall again. The candid move is to bank the portrait (P29) and o
 ---
 
 *Cross-refs:* `01-negative-directions-portrait.md`, `experiments/camino2_explicit_formula_coupling.py`,
-`../phase-4-handoff/proofs/00-PROOF-LOG.md` (RFB = uniform pair correlation, the wall),
+`../phase-4-krein-space-realization/proofs/00-PROOF-LOG.md` (RFB = uniform pair correlation, the wall),
 `../phase-17-surf-2-design/04-SURF-B-resolvent.md` (symmetry vs positivity). *Memory:*
 `[[project-rh-current-direction]]`, `[[riemann-key-contradiction]]`.

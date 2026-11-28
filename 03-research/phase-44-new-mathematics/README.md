@@ -1,6 +1,6 @@
 # Phase 44 — New Mathematics
 
-A parallel creative track to phase-44-creative-breakthrough, built under an explicit "freedom in definitions, discipline in theorems" contract. It invents a category $\mathcal Arith$ of arithmetic correspondences to host the two-variable Weil functional and the tropical intersection form in one algebraic structure, a "defect theory" category $\mathcal Pol_\delta$ of polarized spaces whose polarization is allowed to fail (turning RH into "the defect of the $\zeta$-object is 0" rather than "the polarized space exists"), and a design-by-negation exercise that treats prior impossibility theorems as blueprints for new objects.
+The phase has two threads, kept in one folder. The main thread, in this folder, is built under an explicit "freedom in definitions, discipline in theorems" contract. It invents a category $\mathcal Arith$ of arithmetic correspondences to host the two-variable Weil functional and the tropical intersection form in one algebraic structure, a "defect theory" category $\mathcal Pol_\delta$ of polarized spaces whose polarization is allowed to fail (turning RH into "the defect of the $\zeta$-object is 0" rather than "the polarized space exists"), and a design-by-negation exercise that treats prior impossibility theorems as blueprints for new objects.
 
 ## Results
 - Category $\mathcal Arith$ of arithmetic correspondences: constructed as a home for the two-variable Weil functional (Doc 107) and the square's intersection form (Doc 125); internal theorems proved within the new category. (PROVED, as internal category theory; connection to RH is a declared [BRIDGE], not closed)
@@ -11,6 +11,9 @@ A parallel creative track to phase-44-creative-breakthrough, built under an expl
 - `131-algebra-of-arithmetic-correspondences-the-category.md`: the category $\mathcal Arith$ and its internal theorems.
 - `132-defect-theory-the-category-ol-of-defective.md`: the category $\mathcal Pol_\delta$ of defective polarized spaces; inversion of Doc 130's circularity finding into a defect invariant.
 - `133-design-by-negation-the-objects-that-violate.md`: explicit objects built to violate the program's catalogued no-go theorems.
+
+## Second thread: Hodge–Witt and visible inertia
+The subfolder [`hodge-witt-and-visible-inertia/`](hodge-witt-and-visible-inertia/) holds the second thread of the phase, with its own README: an exploratory framework "prior to positivity" (a Hodge–Witt / profinite-boundary complex over Morishita's profinite transversal) with four lemmas internal to its definitions; its bridge to RH is CONDITIONAL on a polarization that is not constructed (OPEN).
 
 ## Relation to other phases
 Responds directly to the circularity verdict of Phase 43 (Doc 130) and reuses the Weil functional of Phase 36 (Doc 107) and the intersection form of Phase 41 (Doc 125). The Fredholm-operator ideas sketched here (idea B.4 of Doc 132) are carried forward and developed fully in Phase 45.

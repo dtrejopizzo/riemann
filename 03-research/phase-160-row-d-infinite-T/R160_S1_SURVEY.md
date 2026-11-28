@@ -16,7 +16,7 @@ objects are height-localized Gram matrices, Paley–Wiener realizations, CCM tra
 **Scope read.** Root: `00-MAP.md` (Parts 1–10 in full; 11–15 skimmed as context), `MASTER-PLAN.md`,
 `NO-GO-LIST.md` (in full), `COMPLETE-PROGRAM-SUMMARY.md` (in full), `EXPLANATION.md`, `OPTIONS.md`,
 `03-research/THE_BACKWARD_MAP.md`, `03-research/AUDIT_CONSOLIDATED.md`, `03-research/AUDIT_A_CATEGORY_CHANGES.md`.
-Phases: every Markdown file in `phase-0-foundations`, `phase-3-uniform-inequality`, `phase-4-handoff` (+ `proofs/`
+Phases: every Markdown file in `phase-0-foundations`, `phase-3-uniform-inequality`, `phase-4-krein-space-realization` (+ `proofs/`
 ledger), `phase-5-structural`, `phase-6-osterwalder-schrader-reflection` … `phase-31-selberg-moments-c-infinity`, `phase-32-ccm`, `phase-33-dbn`, `phase-34-new-directions` …
 `phase-40-close-G1` was opened (head + verdict/synthesis); the memos carrying labelled theorems were read in the
 theorem sections (list in §1). Papers `04-papers/01`–`15`: abstract + every theorem/proposition environment of
@@ -59,7 +59,7 @@ uncertified)**, whatever the environment says:
 
 ### 0.3 Index conventions and paper numbers
 * `κ` = negative index of the Weil form. Phase 21 proves `κ=2m`, `m` = number of off-line quadruples (each quartet
-  gives two `J`-swap pairs of signature (1,1), `phase-4-handoff/B3-KREIN-STRUCTURE.md` §2 C2). Papers 08/11 and
+  gives two `J`-swap pairs of signature (1,1), `phase-4-krein-space-realization/B3-KREIN-STRUCTURE.md` §2 C2). Papers 08/11 and
   phase-16-surf-witness-variety memos write "`κ=\#`off-line zeros", which is off by a factor 2. Moreover every "`κ=2m<∞`" in phases
   26–40 is **conditional** on a Pontryagin realization / Hypothesis D (`PHASES_026_050_AUDIT.md`, critical finding 2).
 * Memos in phases 15–40 cite papers as `P7, P8, P21, P35, P39–P44` in the *old* `06-papers/` numbering. P7 = 07,
@@ -88,7 +88,7 @@ uncertified)**, whatever the environment says:
 |---|---|
 | `phase-0-foundations` (`0A1`,`0A2`,`0A3`,`0B`,`phase0-plan`) | `Q` identified as the Hermite–Gauss Gram of the Weil functional; the compression question 0A2 (faithfulness ≠ positivity); de Branges chain + Conrey–Li guard; truncation lemma technical, (LB) = RH. |
 | `phase-3-uniform-inequality` (`phase3-plan`, `engine-spec`) | (LB) = uniform limit positivity = RH; Flanks I (Connes trace) and II (de Branges chain) planned; engine specification. |
-| `phase-4-handoff` (`B2-THEOREM`, `B3-KREIN-STRUCTURE`, `PAPER-A`, `RH-ENDGAME`, `proofs/00-PROOF-LOG` + 23 day-memos) | 22-day operator programme: EF-identity on a dense core, Lemmas A–D, semibounded realization modulo (H), Kreĭn identity `\mathfrak t=E^*JE`, angular operator, zero-side no-go (= Paper 08); endgame: the only sign route is "`\mathcal T=A^*A`". |
+| `phase-4-krein-space-realization` (`B2-THEOREM`, `B3-KREIN-STRUCTURE`, `PAPER-A`, `RH-ENDGAME`, `proofs/00-PROOF-LOG` + 23 day-memos) | 22-day operator programme: EF-identity on a dense core, Lemmas A–D, semibounded realization modulo (H), Kreĭn identity `\mathfrak t=E^*JE`, angular operator, zero-side no-go (= Paper 08); endgame: the only sign route is "`\mathcal T=A^*A`". |
 | `phase-5-structural` | CC semilocal residual `Id−K_{CC}` (prolate bridge real only for localized P7), Kreĭn template shared by P8/CC/de Branges (no identification), classification programme M5 (T1 anti-tautology, T2 forced transition), anatomy identity T3, `R_p≈a_pW(\log p)`, T4 Bessel/Carleson + concavity; engine-gate failures in `experiments/`. |
 | `phase-6-osterwalder-schrader-reflection` | Osterwalder–Schrader moonshot: S1 recasting correct; S2 per-place prime form `G_p` indefinite (REFUTED mechanism); S2-followup "envelope ≥ comb pointwise" retracted (comb distributional). |
 | `phase-7-weil-carleson-sine-kernel` | Band-limited Weil–Carleson constant `C≡1` (saturation, numerical); second order = sine kernel; Connes core "same wall, multiplicatively dressed". |
@@ -177,10 +177,10 @@ Grouped by mechanism. Each item: the attempt → the killing theorem/counterexam
 ### 2.2 Zero-side and Pontryagin/index attacks (relevant to all)
 8. **Bounding the angular operator from the zero side.** Paper 08 `thm:C`: the depths `b_ρ` enter `\|K\|` only
    through `\mathfrak t` itself; sign-agnostic bounds give `\|K\|^2\gtrsim e^d` (wrong side). PROVED no-go.
-   `04-papers/08-krein-space-weil-form/main.tex:126`; `phase-4-handoff/PAPER-A.md` §8.
+   `04-papers/08-krein-space-weil-form/main.tex:126`; `phase-4-krein-space-realization/PAPER-A.md` §8.
 9. **Magnitude bounds (RFB / Carleson / sampling / density).** They give `|\mathfrak t_-|\le C\mathfrak t_+` with
    `C\ge e^d>1`; lowering `C` below 1 *is* RH. Point-to-point routes (Schur/Gram/Jaffard) pay `P=ρ\ell\to∞`
-   (NG-E4); global Cauchy–Schwarz vacuous (NG-E3). `phase-4-handoff/RH-ENDGAME.md` §2; `proofs/00-PROOF-LOG.md`
+   (NG-E4); global Cauchy–Schwarz vacuous (NG-E3). `phase-4-krein-space-realization/RH-ENDGAME.md` §2; `proofs/00-PROOF-LOG.md`
    ledger (rows "over-sampling FORCED", "❌ global V vacuous").
 10. **Eigenvectors `x^{b_j+iγ_j}` of `H_C` / bridge `κ=\mathrm{neg.ind}(H_C)`.** Not in `L^2(C_{\mathbb Q})`
     (`\int x^{2b−1}dx=∞`); Kreĭn–Langer gives only "at most". REFUTED as stated; V.2 ≡ non-unitary characters
@@ -322,7 +322,7 @@ Grouped by mechanism. Each item: the attempt → the killing theorem/counterexam
 | 3 | Truncation floor `η(X)\le Ae^{−α(\log X)^2}`, `α\approx σ^2/8`, PNT only; local-arithmetic stability of `Q(L)`, `λ_{min}`. | PROVED | [other: localized Gram] | `07/main.tex:305`; `09/main.tex:147` |
 | 4 | Detector theorem (fixed off-line zero detected unconditionally beyond `X_{min}`). | PROVED | [other: localized] | `07/main.tex:347` |
 | 5 | Uniform transfer `\sup_{X\ge X_0}|λ_{min}(Q_X)−λ_{min}(Q_∞)|\to0` ⟺ RH. | EQUIV | [other: localized → compl] | `07/main.tex:402–433` |
-| 6 | `\mathfrak t=E^*JE`, `(Jc)_ρ=c_{1−\barρ}`, `J=J^*`, `J^2=I`; negative directions of `J` = off-line swap pairs; exact split `\mathfrak t=\|P_+EF\|^2−\|P_−EF\|^2`. | PROVED (unconditional) | [compl] via zero side, `T=d>\frac12` | `phase-4-handoff/B3-KREIN-STRUCTURE.md` §§1–3; `08/main.tex:116` |
+| 6 | `\mathfrak t=E^*JE`, `(Jc)_ρ=c_{1−\barρ}`, `J=J^*`, `J^2=I`; negative directions of `J` = off-line swap pairs; exact split `\mathfrak t=\|P_+EF\|^2−\|P_−EF\|^2`. | PROVED (unconditional) | [compl] via zero side, `T=d>\frac12` | `phase-4-krein-space-realization/B3-KREIN-STRUCTURE.md` §§1–3; `08/main.tex:116` |
 | 7 | `\|K\|\le1` ⟺ RH. | EQUIV | [compl] | `08/main.tex:116` |
 | 8 | Zero-side no-go (Theorem C). | PROVED | [compl] | `08/main.tex:126` |
 | 9 | Semibounded self-adjoint realization in the `\mathfrak t_+` norm, `\inf\mathrm{spec}\ge1−4C`. | PROVED modulo (H) (CONDITIONAL) | [compl], `\mathfrak t_+`-norm | `08/main.tex:109`; `B2-THEOREM.md` §5 |
@@ -361,7 +361,7 @@ Grouped by mechanism. Each item: the attempt → the killing theorem/counterexam
 ### 3b Open leads never closed negatively (in scope)
 | lead | statement | status | file |
 |---|---|---|---|
-| (H) | uniform local sparsity of deep off-line zeros in every Nyquist cell | OPEN, ≪ RH, not known unconditionally | `phase-4-handoff/PAPER-A.md:281` |
+| (H) | uniform local sparsity of deep off-line zeros in every Nyquist cell | OPEN, ≪ RH, not known unconditionally | `phase-4-krein-space-realization/PAPER-A.md:281` |
 | Diana L8 | any unconditional bound `m\le C` | OPEN ("unreachable with catalogued techniques", not proved impossible) | `phase-37-physics/111-…` |
 | Lemma 108 | `κ_W(Q_2)\le C\,n_W` | OPEN, explicitly not RH-equivalent | `phase-36-ABC-forms/108-…` §8.1 |
 | C_B / EX / D-109 | `m<∞⇒m=0` | OPEN | `phase-34-new-directions/94-…` §11; `phase-21-negative-directions-geometry/02-…`; `phase-37-physics/109-…` §4 |
@@ -527,16 +527,16 @@ Each is a potential ingredient, tagged with the memo(s) it concerns. None is a p
 > $d\nu_w=\Big[\tfrac12\big(1-w(u)\big)K(|u|)+2w(u)\cosh\tfrac u2\Big]\mathbf 1_{|u|\ge2T}\,du
 > -\sum_{n\notin\NT}\tfrac{v_n}2\,w(\log n)\,\big(\delta_{\log n}+\delta_{-\log n}\big)$, and $f_w:=\sT+\nuh_w+2\gh0$.
 
-**D5. On/off decomposition of the Weil form on `PW_d`** — `03-research/phase-4-handoff/B2-THEOREM.md:31–34`:
+**D5. On/off decomposition of the Weil form on `PW_d`** — `03-research/phase-4-krein-space-realization/B2-THEOREM.md:31–34`:
 > Writing $b_\rho=\beta_\rho-\tfrac12$,
 > $\mathfrak t(F)=\underbrace{\sum_{\beta_\rho=1/2}|F(\gamma_\rho)|^2}_{\mathfrak t_+(F)\ \ge0}\ +\ \underbrace{\sum_{\text{off-line quartets}}4\,\mathrm{Re}\big[F(t_\rho-ib_\rho)^2\big]}_{\mathfrak t_-(F)\ \text{indefinite}}$.
 
-**D6. Kreĭn fundamental symmetry** — `03-research/phase-4-handoff/B3-KREIN-STRUCTURE.md:22–31`:
+**D6. Kreĭn fundamental symmetry** — `03-research/phase-4-krein-space-realization/B3-KREIN-STRUCTURE.md:22–31`:
 > The correct object is the **linear involution** induced by the partner map $\sigma$:
 > $(Jc)_\rho:=c_{\sigma(\rho)},\qquad \sigma(\rho)=1-\bar\rho$. Then $J^2=I$, $J=J^*$ […]
 > $\langle EF,\,JEF\rangle=\sum_\rho F(t_\rho+ib_\rho)\,\overline{F(t_\rho-ib_\rho)}=\mathfrak t(F)$.
 
-**D7. Hypothesis (H)** — `03-research/phase-4-handoff/PAPER-A.md:281–286`:
+**D7. Hypothesis (H)** — `03-research/phase-4-krein-space-realization/PAPER-A.md:281–286`:
 > **Definition 4.2 — Hypothesis (H) (uniform local sparsity of deep off-line zeros).** There exist $\delta>0$,
 > $\eta>0$, $T_0$ such that for all $T\ge T_0$ and every interval $I$ of length $1/d$ centred at height $T$,
 > $\#\{\rho:\ |b_\rho|<\delta,\ t_\rho\in I\}\ \ge\ \eta\,\rho(T)\,|I|$.
@@ -619,7 +619,7 @@ Each is a potential ingredient, tagged with the memo(s) it concerns. None is a p
 | B9 Sarnak / B10 Iwaniec | `phase-16-surf-witness-variety/02-…`–`06-…`; §5 I10 |
 | B11 Tao (dBN) | Paper 13; `phase-8-heat-flow-monotonicity/*`; `phase-9-unconditional-universality/M9.1-…`; `phase-25-lower-bounds-bj-audit/02-…`; §5 I9, I17 |
 | B12 Tao (Schur/Hadamard) | `106-…` §3.1 (tensor index), `107-…`; Paper 10 `thm:concave`; §5 I7, I16 |
-| B13 Maynard | `108-…`; `phase-9-unconditional-universality/T9A-…`; Paper 11 remark after `prop:red`; `phase-4-handoff/proofs/Day19–22`; §5 I6 |
+| B13 Maynard | `108-…`; `phase-9-unconditional-universality/T9A-…`; Paper 11 remark after `prop:red`; `phase-4-krein-space-realization/proofs/Day19–22`; §5 I6 |
 | B14 Ono | `phase-11-hyperbolicity-total-positivity/*`; Papers 06, 14, 15; §5 I5, I12 |
 | B15 Green | Paper 15 `thm:hr`; Paper 11; `phase-18-negative-directions-portrait/02-…`; `108` Thm 3.3; `112-…`; §5 I5, I6, I13, I18 |
 | B16 Villani | `phase-28-four-fronts/05-…`, `06-…`; `phase-34-…/93-…`, `95-…`, `97-…`; `phase-35-…/98-…`; `phase-33-dbn/86-…` |

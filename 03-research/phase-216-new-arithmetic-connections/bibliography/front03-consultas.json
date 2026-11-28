@@ -1,0 +1,57 @@
+{
+  "cutoff": "2026-11-28",
+  "method": "Web search with explicit arXiv queries; primary arXiv abstracts inspected. Not a complete literature review.",
+  "queries": [
+    "site:arxiv.org triple Massey products Galois cohomology vanishing Minac Tan Hopkins Wickelgren",
+    "site:arxiv.org crystalline deformation Massey products integral Galois representations obstructions",
+    "site:arxiv.org Massey products modulo prime powers Galois cohomology",
+    "site:arxiv.org \"Massey\" \"crystalline\"",
+    "site:arxiv.org \"Massey\" \"Selmer\"",
+    "site:arxiv.org \"Galois\" \"prime powers\" \"Massey\"",
+    "site:arxiv.org \"derived Galois deformation\"",
+    "\"Massey products\" \"crystalline\"",
+    "\"Massey products\" \"Selmer groups\"",
+    "\"Massey products\" \"Z/p\" Galois n",
+    "\"Massey products\" \"deformation\" \"Wake\"",
+    "site:arxiv.org \"integral\" \"Massey products\" \"crystalline\"",
+    "site:arxiv.org \"Massey\" \"denominators\"",
+    "site:arxiv.org \"crystalline\" \"unipotent\" \"integral\" extensions",
+    "site:arxiv.org \"Massey products\" \"integral\" \"torsion\"",
+    "site:arxiv.org \"Massey\" \"Hodge\" \"integral\"",
+    "site:arxiv.org \"crystalline extensions\" \"denominators\""
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/1412.7611",
+      "authors": "Minač–Tân",
+      "title": "Triple Massey products vanish over all fields",
+      "inspection": "Primary abstract and metadata, not full proof."
+    },
+    {
+      "url": "https://arxiv.org/abs/2508.17156v2",
+      "authors": "Ray–Sujatha",
+      "title": "Massey products and the Iwasawa theory of fine Selmer groups",
+      "inspection": "Primary abstract and metadata, not full proof."
+    },
+    {
+      "url": "https://arxiv.org/abs/1608.07236",
+      "authors": "Galatius–Venkatesh",
+      "title": "Derived Galois deformation rings",
+      "inspection": "Primary abstract and metadata, not full proof."
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.17169",
+      "authors": "Ruth Wild",
+      "title": "p-adic Hodge theory of unipotent completions revisited",
+      "inspection": "Primary abstract and metadata, not full proof."
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.28988",
+      "authors": "Douglas Molin",
+      "title": "On derived Galois deformation rings in characteristic 0 and a conjecture of Venkatesh",
+      "inspection": "Primary abstract and metadata, not full proof."
+    }
+  ],
+  "negative_result_limit": "Final batch of queries 15–17 returned no results. This does not establish absence or priority; terminology and indexing differ.",
+  "novelty_conclusion": "Broad connections already known. The proposed precise integral cost remains a candidate; priority not established."
+}

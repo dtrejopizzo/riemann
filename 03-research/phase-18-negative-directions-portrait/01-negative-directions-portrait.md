@@ -155,6 +155,6 @@ question about the object Phase 17 identified as irreducible.
 
 *Cross-refs:* `../06-papers/P25` (the localization and the off-axis functional), `../06-papers/P7`
 (the `δ²` law), `../06-papers/P26` (independence of off-axis evaluations),
-`../phase-4-handoff/proofs/00-PROOF-LOG.md` (off-axis evaluation unbounded in `L²`),
+`../phase-4-krein-space-realization/proofs/00-PROOF-LOG.md` (off-axis evaluation unbounded in `L²`),
 `../phase-17-surf-2-design/04-SURF-B-resolvent.md` (symmetry vs positivity — why this is the remaining target).
 *Memory:* `[[project-rh-current-direction]]`, `[[riemann-key-contradiction]]`.

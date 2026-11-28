@@ -1,0 +1,131 @@
+{
+  "scope": "Finite exact algebra checks; general proof in FRONT-03; no arithmetic realization.",
+  "cases": [
+    {
+      "prime": 2,
+      "N": 1,
+      "minimal_simultaneous_scale": 1,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 2,
+      "N": 2,
+      "minimal_simultaneous_scale": 1,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 2,
+      "N": 3,
+      "minimal_simultaneous_scale": 1,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 2,
+      "N": 4,
+      "minimal_simultaneous_scale": 2,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 2,
+      "N": 5,
+      "minimal_simultaneous_scale": 2,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 2,
+      "N": 6,
+      "minimal_simultaneous_scale": 2,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 3,
+      "N": 1,
+      "minimal_simultaneous_scale": 1,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 3,
+      "N": 2,
+      "minimal_simultaneous_scale": 1,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 3,
+      "N": 3,
+      "minimal_simultaneous_scale": 1,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 3,
+      "N": 4,
+      "minimal_simultaneous_scale": 2,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 3,
+      "N": 5,
+      "minimal_simultaneous_scale": 2,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 3,
+      "N": 6,
+      "minimal_simultaneous_scale": 2,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 5,
+      "N": 1,
+      "minimal_simultaneous_scale": 1,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 5,
+      "N": 2,
+      "minimal_simultaneous_scale": 1,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 5,
+      "N": 3,
+      "minimal_simultaneous_scale": 1,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 5,
+      "N": 4,
+      "minimal_simultaneous_scale": 2,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 5,
+      "N": 5,
+      "minimal_simultaneous_scale": 2,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    },
+    {
+      "prime": 5,
+      "N": 6,
+      "minimal_simultaneous_scale": 2,
+      "d_squared_basis_checks": 16,
+      "leibniz_basis_pair_checks": 256
+    }
+  ]
+}

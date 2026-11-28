@@ -283,7 +283,7 @@ completeness — and the first genuine crack in it.
 
 ### Appendix — file map of the record
 - Papers: `06-papers/P1…P13/`.
-- Proof log (Days 0–29): `phase-4-handoff/proofs/00-PROOF-LOG.md`.
+- Proof log (Days 0–29): `phase-4-krein-space-realization/proofs/00-PROOF-LOG.md`.
 - No-gos & verdicts: `phase-6-osterwalder-schrader-reflection/` (N1, N2), `phase-7-weil-carleson-sine-kernel/` (N3, B1, N4), `phase-8-heat-flow-monotonicity/` (N5, Lyapunov, exchange-rate),
   `phase-9-unconditional-universality/` (N6, T9-A, T9-cal), `phase-10-hodge-envelope-degeneration/` (Hodge degeneration, regularized gap, $S(T)$, deep run),
   `phase-11-hyperbolicity-total-positivity/` (hyperbolicity, interlacing, dBN moments, Hermite-form capstone test),

@@ -31,4 +31,4 @@ local prime form explicitly to test the mechanism.
 ## Relation to other phases
 The no-go on per-place positivity is consistent with, and reproduces in a new language, the
 cross-place (archimedean vs. prime) obstruction identified independently in the Kreĭn-space program of
-`phase-4-handoff`/`phase-5-structural` (route B, P8's Theorem C).
+`phase-4-krein-space-realization`/`phase-5-structural` (route B, P8's Theorem C).

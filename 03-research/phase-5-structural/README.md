@@ -42,5 +42,5 @@ that separates RH-consistent from RH-violating L-functions, independent of zero 
 - `experiments/` — numerical engines and results (`M4-D2-results.md`, `Phase3-results.md`) probing the margin and anatomy profile.
 
 ## Relation to other phases
-Builds directly on `phase-4-handoff` (the Kreĭn template, P8/Thm C no-go, P7 localized detector);
+Builds directly on `phase-4-krein-space-realization` (the Kreĭn template, P8/Thm C no-go, P7 localized detector);
 feeds the classification program (M5) that continues in later phases.

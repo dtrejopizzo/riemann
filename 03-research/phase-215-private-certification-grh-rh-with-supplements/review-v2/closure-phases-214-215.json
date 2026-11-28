@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-28",
+  "renames": {
+    "03-research/phase-214": "03-research/phase-214-explicit-bounds-and-reconstruction",
+    "03-research/phase-215-reporte-final": "03-research/phase-215-private-certification-grh-rh-with-supplements",
+    "03-research-phase-215-reporte-final": "03-research/phase-215-private-certification-grh-rh-with-supplements"
+  },
+  "phase_214": "closed; conditional result retained",
+  "phase_215": "closed; private certification of the chain reconstructed with supplements",
+  "phase_216": "planned; not started",
+  "active_paths_updated": [
+    "review-v2/report-manifest.json",
+    "evidence/check_theta_refs.py",
+    "evidence/compare_appendices_spanning.py",
+    "evidence/compare_theta_quotes.py",
+    "evidence/audit_appendices_selmer_hodge.py"
+  ],
+  "hashes_214_before_closure": {
+    "README.md": "3d38c3f0f0cdac4917ca51990d056dcb7e95cb6012e08dd9d6453910c67ad8d6",
+    "reconstruction.md": "b34293bfa383f66c6391db8ec111d5d84b576d1dfa513d5a71aff8e00a57ef11",
+    "verify_bounds.py": "78c59eabc12055239bcf7b26df12c78d22f5da4e7bed7b22f001b1d36241a9c0"
+  }
+}

@@ -7,7 +7,7 @@
 Core files:
 
 - `00-MAP.md`
-- `phase-4-handoff/proofs/00-PROOF-LOG.md`
+- `phase-4-krein-space-realization/proofs/00-PROOF-LOG.md`
 - `phase-60-discriminant/00-PLAN.md`
 - Phase 32 Docs 59--64:
   - `59-bridge-between-the-ccm-program.md`

@@ -265,7 +265,7 @@ the safe claim and "the Nyquist reading does not survive" is one step further th
 | §12(ii) warning on the `0 ≤ w ≤ 1` conjecture | **yes**, quoted and sharpened (`:509–515`) |
 
 Labelling: `DIAGNOSTIC` on every zero-derived number, in the file, in both READMEs and in every script
-docstring; circularity no-go cited (`phase-4-handoff/proofs/00-PROOF-LOG.md:168`, `phase-136 MAP_1:141`);
+docstring; circularity no-go cited (`phase-4-krein-space-realization/proofs/00-PROOF-LOG.md:168`, `phase-136 MAP_1:141`);
 no sign claim for `T > log 2`; endpoint of record unchanged (`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`);
 Paper 46 Thm. C used as the honest comparison. **ACCEPT, no label change.**
 

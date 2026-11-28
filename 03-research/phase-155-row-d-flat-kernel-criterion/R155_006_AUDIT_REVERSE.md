@@ -214,10 +214,10 @@ correct), and every row of the §6.2 table. No sign is claimed for any `T > log 
 record is restated correctly (`λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵`, Thm. C). The zero table is used only
 as training data and never as a hypothesis. §3.2's observation that bounding the far-zero remainder
 requires excluding off-line zeros above `Γ` — which is the conclusion — is correct and is the right
-place to put the no-go. The cited no-goes exist and say what is claimed: `phase-4-handoff/proofs/
+place to put the no-go. The cited no-goes exist and say what is claimed: `phase-4-krein-space-realization/proofs/
 00-PROOF-LOG.md:168` ("Zero-side `K` presupposes the unknown zeros (circular as tool)", `✅ proved`)
 and `phase-136-row-d-map/MAP_1_WALLS_AND_MASTER_DOCS.md:141` (ES-2). *Path nit*: the deliverable
-writes `phase-4/00-PROOF-LOG:168`; the file is at `phase-4-handoff/proofs/`.
+writes `phase-4/00-PROOF-LOG:168`; the file is at `phase-4-krein-space-realization/proofs/`.
 One residual risk to police: §0.5 and §6.2 contain quasi-positive readings ("the zeros alone bring
 `c` to within `10⁻⁶` of zero") that a reader could mistake for a near-certificate. With §3–§4 those
 readings are void; they must go.

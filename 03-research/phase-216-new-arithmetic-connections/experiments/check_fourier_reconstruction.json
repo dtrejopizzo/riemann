@@ -1,0 +1,23 @@
+[
+  {
+    "G": "C2^2",
+    "CM_types_checked": 4,
+    "full_odd_support_types": 0,
+    "distinct_four_point_profiles": 0,
+    "result": "PASS"
+  },
+  {
+    "G": "C2^3",
+    "CM_types_checked": 16,
+    "full_odd_support_types": 8,
+    "distinct_four_point_profiles": 1,
+    "result": "PASS"
+  },
+  {
+    "G": "C2^4",
+    "CM_types_checked": 256,
+    "full_odd_support_types": 128,
+    "distinct_four_point_profiles": 8,
+    "result": "PASS"
+  }
+]

@@ -52,7 +52,7 @@ with the explicit non-Euler RH-violator L_DH (Davenport–Heilbronn).
 - `engine/`, `experiments/`, `results/` — the numerical CCM/Weil-form engine and its experiment scripts (E1–E96-range scripts referenced by the documents above).
 
 ## Relation to other phases
-Builds on the Kreĭn-space/no-go results of `phase-4-handoff`/`phase-5-structural` and the per-place
+Builds on the Kreĭn-space/no-go results of `phase-4-krein-space-realization`/`phase-5-structural` and the per-place
 positivity refutation of `phase-6-osterwalder-schrader-reflection`; the NO-GO multiplicativity finding
 is recorded in the program's shared routes-tried index and should not be retried without a new,
 explicitly different hypothesis.

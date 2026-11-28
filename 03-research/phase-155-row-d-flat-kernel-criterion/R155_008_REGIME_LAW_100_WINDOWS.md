@@ -62,7 +62,7 @@ any `T > log 2`.**
 | `jump law`, `extrapolación entre regímenes` | none | new |
 | `shoulder` | `R155_005`, `R155_006`, `PLAN.md` | the shape reading is `R155_005`'s; its **universality in `T`** is new here |
 | `Krein`, `Suzuki` | `04-papers/47/main.tex:242–243, 1366–1370` (screw-function programme, related work) | the §7bis toy-universe statement is a remark on that literature, not a new theorem |
-| circularity no-go | `phase-4-handoff/proofs/00-PROOF-LOG.md:168` ("Zero-side `K` presupposes the unknown zeros (circular as tool)"), `phase-136-row-d-map/MAP_1_WALLS_AND_MASTER_DOCS.md:141` (ES-2) | respected by labelling throughout; see §8 |
+| circularity no-go | `phase-4-krein-space-realization/proofs/00-PROOF-LOG.md:168` ("Zero-side `K` presupposes the unknown zeros (circular as tool)"), `phase-136-row-d-map/MAP_1_WALLS_AND_MASTER_DOCS.md:141` (ES-2) | respected by labelling throughout; see §8 |
 
 Conclusion: the entry law, the closed form for the difficulty index, the continuity proposition, the
 rigidity lemma and the per-regime fits are not in the corpus. The `w`-side LP machinery is
@@ -481,7 +481,7 @@ explicit formula are *not* recoverable from `D_Z`, because `D_Z` determines only
 (or `10^5`) fix no prime; the prime comb of ζ is determined by the *whole* zero set through the
 explicit formula, and every finite truncation of it is compatible with infinitely many different
 prime combs. **Hence no pattern read off a toy universe can be extrapolated to ζ**, which is the
-same wall as the circularity no-go (`phase-4-handoff/proofs/00-PROOF-LOG.md:168`, ES-2), seen from the
+same wall as the circularity no-go (`phase-4-krein-space-realization/proofs/00-PROOF-LOG.md:168`, ES-2), seen from the
 other side.
 
 ### (4) The cancellation budget: how many zeros a certificate needs
@@ -516,7 +516,7 @@ irrelevant to this window, which is the same fact as §2.3 (`Γ = 800` suffices)
 |---|---|
 | Propositions **E**, **D**, **C** (+ corollary), **M**, and Lemma **R** (§7, §7bis) | `PROVED` — elementary, no zeros, no numerics |
 | Lemma **S** (smoothness ⇒ far-zero decay) and the Bernstein grid lemma | as in `R155_006 §11(a)`: `PROVED` modulo being written up; used here as tools |
-| the 103-window table, all values `c_LP`, `c_fine`, `c_cert`, all profile statistics, all fits, the extrapolation test, the domain probe, the cancellation budget | `DIAGNOSTIC` — the LP is trained on a table of zeros (circular as a tool, `phase-4-handoff/proofs/00-PROOF-LOG.md:168`, `phase-136/MAP_1:141` ES-2); double precision; finite grids; `τ` capped at `60` at 82 of 103 windows [amended per
+| the 103-window table, all values `c_LP`, `c_fine`, `c_cert`, all profile statistics, all fits, the extrapolation test, the domain probe, the cancellation budget | `DIAGNOSTIC` — the LP is trained on a table of zeros (circular as a tool, `phase-4-krein-space-realization/proofs/00-PROOF-LOG.md:168`, `phase-136/MAP_1:141` ES-2); double precision; finite grids; `τ` capped at `60` at 82 of 103 windows [amended per
 R155_010: corrects `79` — R155_009]; no interval arithmetic |
 | the numerical verification of Theorem Z across eight regimes (§2.4) | `DIAGNOSTIC` verification of a `PROVED` statement; value is as a regression test |
 | row D label | **unchanged.** No sign is claimed for any `T > log 2`. Endpoint of record unchanged: `λ_min(A_{½log3}) \ge 8.8577·10⁻⁵` (Paper 46 Thm. C) |

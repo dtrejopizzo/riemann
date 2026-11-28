@@ -6,7 +6,7 @@ Purpose: pre-phase-147(b) corpus check. Question: is the missing ring of corresp
 automorphisms `σ ∈ Gal(K/Q)` acting as genuine endomorphisms of `Spec O_K`, with degrees =
 fixed-point counts and Frobenius elements `Frob_p ∈ Gal(K/Q)` living inside this ring?
 
-Note: there is already a file at `03-research/phase-147-row-d-single-prime-tower/CORPUS_CHECK_R147.md`
+Note: there is already a file at `03-research/phase-147-row-d-galois-ring/single-prime-tower-corpus-check/CORPUS_CHECK_R147.md`
 — that is a **different** phase-147 sub-question (single-prime towers `{Frob_{p^k}}_k` and
 `Frob⋆Δ^rad`, i.e. Paper 44 §8bis + Docs 131/135). This file is the corpus check for the **Galois
 group-ring** idea, filed as `R147b` to avoid collision.

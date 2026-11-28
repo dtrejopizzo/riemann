@@ -3,7 +3,7 @@
 repairs in `R146_001_ROUND1.md`, the rewritten `README.md`, and `scripts/tower_gram.py`.
 Checked against: Paper 44 §8bis (Thm 8bis.1 + §12 K1, Thm 8bis.1b, Cor 8bis.1b′, Rem 8bis.1c,
 Cor 8bis.1d, Thm 8bis.1e, Thm 8bis.2, (8bis.0)), `R145_001` §§D.41–D.42, Paper 47 §§11/14,
-and — read in full, and the decisive document of this round — `03-research/phase-147-row-d-single-prime-tower/CORPUS_CHECK_R147.md`.
+and — read in full, and the decisive document of this round — `03-research/phase-147-row-d-galois-ring/single-prime-tower-corpus-check/CORPUS_CHECK_R147.md`.
 Method unchanged: every claim assumed false; every number recomputed independently of the scripts.*
 
 **FATAL screen: PASSES, but not comfortably.** Nothing in round 2 claims positivity. However **C-A below

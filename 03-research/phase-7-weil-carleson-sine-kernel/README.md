@@ -43,5 +43,5 @@ Connes–Consani's multiplicative (adelic) organization of Weil positivity.
 ## Relation to other phases
 Follows directly from the refutation in `phase-6-osterwalder-schrader-reflection` (avoids its
 distributional pitfall by band-limiting); its finding that the obstruction is the same wall as
-Connes–Consani's and as P8's Theorem C (from `phase-4-handoff`) cross-confirms the cross-place nature
+Connes–Consani's and as P8's Theorem C (from `phase-4-krein-space-realization`) cross-confirms the cross-place nature
 of the obstruction across independent frameworks.
