@@ -1,0 +1,1311 @@
+[
+  {
+    "dest": "51",
+    "line": 2954,
+    "source": "46",
+    "number": "13.3",
+    "label": "an:def-data",
+    "type": "definition",
+    "source_line": 2954,
+    "dest_line": 10753,
+    "equal_normalized": true,
+    "src": 46,
+    "source_body": "\\label{an:data}\nLet $(q_0,d)$ be parameters. \\emph{Admissible data} $D$ for $(q_0,d)$ consist\nof the following objects, subject to the conditions \\textup{(D1)--(D8)}.\n\\begin{enumerate}\n\\item[(D1)] Integers $1\\le x\\le x_1\\le b$, the \\emph{scales}.\n\\item[(D2)] They satisfy\n\\begin{gather*}\n 10^{12}\\,\\anCP\\le\\log\\log b,\\qquad 100\\log\\log b\\le\\log x,\\qquad 10^{6}\\log x\\le\\log x_1,\\\\\n 10^{6}\\log x_1\\le\\log b,\\qquad 6\\log\\log x_1\\le\\log\\log b .\n\\end{gather*}\n\\item[(D3)] Integers $m$, $r$, $s$: $m$ is a power of $2$ with\n$\\sqrt x\\le m\\le2\\sqrt x$; $r$ is a power of $3$ with $x^{5}\\le r\\le3x^{5}$;\n$2^{s}=m^{22}$; and $s\\le32\\log x$. The field of the data is $E=E_s$, with\n$q_1=q_1(s)$, $q_2=q_2(s)$, $f=[E:K]$, $\\anPl=\\anPl_s$.\n\\item[(D4)] $q_1x_1$ divides $b$.\n\\item[(D5)] A set $\\anPb\\subseteq\\anPl$ (the \\emph{$b$-places}) with\n$\\ancl_{q_0}(\\sigma)=-1$ for all $\\sigma\\in\\anPb$, with\n$T(s)\\le\\#\\anPb\\cdot\\log b$, and sparse for the primes up to $5r(r+1-m)$.\n\\item[(D6)] The weight $\\kappa\\colon\\anPl\\to\\mathbb N$: $\\kappa(\\tau)=b$ for\n$\\tau\\in\\anPb$ and $\\kappa(\\tau)=xb/x_1$ otherwise.\n\\item[(D7)] Two distinct primes $p_0,p_1\\equiv1\\pmod{q_2^{2}}$ in the interval\n$[b^{10},b^{11}]$ and an integer $\\pi_M$ of $K$ with\n$\\pi_M\\overline{\\pi_M}=p_0p_1=:M$.\n\\item[(D8)] A prime $N\\equiv1\\pmod{q_2^{2}}$ with\n\\[\n \\log N_-\\le\\log N\\le\\log N_-+\\sqrt{\\log b},\\qquad\n \\log N_-:=\\frac mf\\sum_{\\tau\\in\\anPl}\\log\\kappa(\\tau)+(m-1)\\log\\frac{M\\,\\anrd_E}{2\\pi}-\\frac{15}2\\log b ,\n\\]\nwhere $\\anrd_E=|\\operatorname{disc}E|^{1/[E:\\mathbb Q]}$ is the root\ndiscriminant, and an integer $\\pi_N$ of $E$ with $\\pi_N\\pi_N^{*}=N$.\n\\end{enumerate}\nWe write $a=xb$ and $k=r+1-m$; the sets $\\anPa$ and $\\anPb$ are disjoint.",
+    "quoted_body": "Let $(q_0,d)$ be parameters. \\emph{Admissible data} $D$ for $(q_0,d)$ consist\nof the following objects, subject to the conditions \\textup{(D1)--(D8)}.\n\\begin{enumerate}\n\\item[(D1)] Integers $1\\le x\\le x_1\\le b$, the \\emph{scales}.\n\\item[(D2)] They satisfy\n\\begin{gather*}\n 10^{12}\\,\\anCP\\le\\log\\log b,\\qquad 100\\log\\log b\\le\\log x,\\qquad 10^{6}\\log x\\le\\log x_1,\\\\\n 10^{6}\\log x_1\\le\\log b,\\qquad 6\\log\\log x_1\\le\\log\\log b .\n\\end{gather*}\n\\item[(D3)] Integers $m$, $r$, $s$: $m$ is a power of $2$ with\n$\\sqrt x\\le m\\le2\\sqrt x$; $r$ is a power of $3$ with $x^{5}\\le r\\le3x^{5}$;\n$2^{s}=m^{22}$; and $s\\le32\\log x$. The field of the data is $E=E_s$, with\n$q_1=q_1(s)$, $q_2=q_2(s)$, $f=[E:K]$, $\\anPl=\\anPl_s$.\n\\item[(D4)] $q_1x_1$ divides $b$.\n\\item[(D5)] A set $\\anPb\\subseteq\\anPl$ (the \\emph{$b$-places}) with\n$\\ancl_{q_0}(\\sigma)=-1$ for all $\\sigma\\in\\anPb$, with\n$T(s)\\le\\#\\anPb\\cdot\\log b$, and sparse for the primes up to $5r(r+1-m)$.\n\\item[(D6)] The weight $\\kappa\\colon\\anPl\\to\\mathbb N$: $\\kappa(\\tau)=b$ for\n$\\tau\\in\\anPb$ and $\\kappa(\\tau)=xb/x_1$ otherwise.\n\\item[(D7)] Two distinct primes $p_0,p_1\\equiv1\\pmod{q_2^{2}}$ in the interval\n$[b^{10},b^{11}]$ and an integer $\\pi_M$ of $K$ with\n$\\pi_M\\overline{\\pi_M}=p_0p_1=:M$.\n\\item[(D8)] A prime $N\\equiv1\\pmod{q_2^{2}}$ with\n\\[\n \\log N_-\\le\\log N\\le\\log N_-+\\sqrt{\\log b},\\qquad\n \\log N_-:=\\frac mf\\sum_{\\tau\\in\\anPl}\\log\\kappa(\\tau)+(m-1)\\log\\frac{M\\,\\anrd_E}{2\\pi}-\\frac{15}2\\log b ,\n\\]\nwhere $\\anrd_E=|\\operatorname{disc}E|^{1/[E:\\mathbb Q]}$ is the root\ndiscriminant, and an integer $\\pi_N$ of $E$ with $\\pi_N\\pi_N^{*}=N$.\n\\end{enumerate}\nWe write $a=xb$ and $k=r+1-m$; the sets $\\anPa$ and $\\anPb$ are disjoint.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 2989,
+    "source": "46",
+    "number": "13.4",
+    "label": "an:lem-sizes",
+    "type": "lemma",
+    "source_line": 2989,
+    "dest_line": 10787,
+    "equal_normalized": false,
+    "src": 46,
+    "source_body": "For admissible data the following hold.\n\\begin{enumerate}\n\\item[(S1)] $x^{10^{6}}\\le x_1$, $x_1^{10^{6}}\\le b$,\n$4\\log x_1\\le(\\log x_1)^{6}\\le\\log b$,\n$(\\log b)^{100}\\le x$, $\\log b\\ge128$, and\n$\\log x\\ge10^{14}(q_0+2d+|\\aneu|)$.\n\\item[(S2)] $x^{11}\\le2^{s}\\le2^{22}x^{11}$; $l_0(s)\\le2592\\log x$;\n$2m\\le r$, so $r/2\\le k\\le r$.\n\\item[(S3)] $x^{11}\\le T(s)=\\#\\anPa\\le f\\le q_1\\le x^{12}$, and\n$f=\\varphi(q_0)\\,\\#\\anPa$; moreover $1\\le\\#\\anPa/\\#\\anPb\\le\\log b$.\n\\item[(S4)] $\\anrd_E=\\sqrt d\\;q_1\\prod_{p\\mid q_0}p^{-1/(p-1)}$, and\n$x^{10}\\le\\anrd_E\\le x^{12}$.\n\\item[(S5)] $1\\le xb/x_1\\le\\kappa(\\tau)\\le b\\le a\\le b^{2}$ for all $\\tau$;\n$b^{20}\\le M\\le b^{22}$;\n$20\\log b\\le\\log(M\\anrd_E/2\\pi)\\le23\\log b$; and\n$m\\log b\\le\\log N\\le25\\,m\\log b$.\n\\item[(S6)] With $\\Omega:=e^{\\aneu}\\cdot2\\pi/\\anrd_E$: $0<\\Omega\\le1$ and\n$20\\log b\\le\\log(M/\\Omega)\\le23\\log b$.\n\\item[(S7)] With $n=m/2$ and $\\varrho=n-1$ (so that $r=k+2\\varrho+1$): $r$ is odd; every prime\ndividing $q_1$ divides $q_0$; $q_0^{\\,q_0}\\le x$; $\\varrho\\ge10^{5}$;\n$k\\ge512000\\,n^{9}$ and $k\\ge1000\\,(2\\varrho+2)^{9}$; $k\\ge2\\varrho^{2}+3$; $18\\varrho f\\le b^{8}$;\n$f\\le b/1000$; $\\anrd_E\\le b$; and $N\\le b^{60n}$. Moreover, with $\\Delta=2r^{8}$:\n\\begin{itemize}\n\\item[(a)] $\\varrho\\ge10^{8}$ (so $n\\ge100$); $n^{7}\\le k$; $12n^{3}+500\\le k$; $k-3n-6>10^{9}n^{3}$;\n\\item[(b)] $r\\ge100$ (so $2r^{8}\\ge500r^{3}+10r^{5}$); $3r^{3}f\\le r^{7}$; $8nr\\le b$; $kf\\ge40$; $f\\ge4000\\,n$;\n\\item[(c)] $2f\\le2^{2\\varrho}$ and $2^{-\\varrho}\\le b^{-6}$;\n\\item[(d)] $(200\\,f\\,k\\,\\anrd_E)^{1000}\\le b$ and $(25\\,n^{3}f\\,\\anrd_E)^{1000}\\le b$;\n\\item[(e)] $\\sqrt d\\le\\anrd_E$, and $n,r,f,\\sqrt d\\le b$; $M\\le b^{23}$;\n\\item[(f)] $\\binom{a+k-1}{k-1}^{f}\\le b^{2kf}$ (this bounds the dimension $d_\\infty=\\dim W_{\\lambda^X}$ of\n\\S\\ref{ss:au-spaces}, a product of at most $f$ such binomial coefficients);\n\\item[(g)] $m\\Delta+r\\le\\kappa(\\tau)$ for all $\\tau$; $k+2b+2m\\Delta\\le b^{2}$ (this bounds every\nentry of $2\\varsigma_\\tau$, so that $L_\\tau:=\\max_i|2\\varsigma_{\\tau,i}|\\le b^{2}$); and\n$(r+1)^{4}(b^{2}+r+1+2n^{2})\\le b^{5}$.\n\\end{itemize}\n\\end{enumerate}",
+    "quoted_body": "For admissible data the following hold.\n\\begin{enumerate}\n\\item[(S1)] $x^{10^{6}}\\le x_1$, $x_1^{10^{6}}\\le b$,\n$4\\log x_1\\le(\\log x_1)^{6}\\le\\log b$,\n$(\\log b)^{100}\\le x$, $\\log b\\ge128$, and\n$\\log x\\ge10^{14}(q_0+2d+|\\aneu|)$.\n\\item[(S2)] $x^{11}\\le2^{s}\\le2^{22}x^{11}$; $l_0(s)\\le2592\\log x$;\n$2m\\le r$, so $r/2\\le k\\le r$.\n\\item[(S3)] $x^{11}\\le T(s)=\\#\\anPa\\le f\\le q_1\\le x^{12}$, and\n$f=\\varphi(q_0)\\,\\#\\anPa$; moreover $1\\le\\#\\anPa/\\#\\anPb\\le\\log b$.\n\\item[(S4)] $\\anrd_E=\\sqrt d\\;q_1\\prod_{p\\mid q_0}p^{-1/(p-1)}$, and\n$x^{10}\\le\\anrd_E\\le x^{12}$.\n\\item[(S5)] $1\\le xb/x_1\\le\\kappa(\\tau)\\le b\\le a\\le b^{2}$ for all $\\tau$;\n$b^{20}\\le M\\le b^{22}$;\n$20\\log b\\le\\log(M\\anrd_E/2\\pi)\\le23\\log b$; and\n$m\\log b\\le\\log N\\le25\\,m\\log b$.\n\\item[(S6)] With $\\Omega:=e^{\\aneu}\\cdot2\\pi/\\anrd_E$: $0<\\Omega\\le1$ and\n$20\\log b\\le\\log(M/\\Omega)\\le23\\log b$.\n\\item[(S7)] With $n=m/2$ and $\\varrho=n-1$ (so that $r=k+2\\varrho+1$): $r$ is odd; every prime\ndividing $q_1$ divides $q_0$; $q_0^{\\,q_0}\\le x$; $\\varrho\\ge10^{5}$;\n$k\\ge512000\\,n^{9}$ and $k\\ge1000\\,(2\\varrho+2)^{9}$; $k\\ge2\\varrho^{2}+3$; $18\\varrho f\\le b^{8}$;\n$f\\le b/1000$; $\\anrd_E\\le b$; and $N\\le b^{60n}$. Moreover, with $\\Delta=2r^{8}$:\n\\begin{itemize}\n\\item[(a)] $\\varrho\\ge10^{8}$ (so $n\\ge100$); $n^{7}\\le k$; $12n^{3}+500\\le k$; $k-3n-6>10^{9}n^{3}$;\n\\item[(b)] $r\\ge100$ (so $2r^{8}\\ge500r^{3}+10r^{5}$); $3r^{3}f\\le r^{7}$; $8nr\\le b$; $kf\\ge40$; $f\\ge4000\\,n$;\n\\item[(c)] $2f\\le2^{2\\varrho}$ and $2^{-\\varrho}\\le b^{-6}$;\n\\item[(d)] $(200\\,f\\,k\\,\\anrd_E)^{1000}\\le b$ and $(25\\,n^{3}f\\,\\anrd_E)^{1000}\\le b$;\n\\item[(e)] $\\sqrt d\\le\\anrd_E$, and $n,r,f,\\sqrt d\\le b$; $M\\le b^{23}$;\n\\item[(f)] $\\binom{a+k-1}{k-1}^{f}\\le b^{2kf}$ (this bounds the dimension $d_\\infty=\\dim W_{\\lambda^X}$ of\n{\\cite[\\S14.3]{P46}}, a product of at most $f$ such binomial coefficients);\n\\item[(g)] $m\\Delta+r\\le\\kappa(\\tau)$ for all $\\tau$; $k+2b+2m\\Delta\\le b^{2}$ (this bounds every\nentry of $2\\varsigma_\\tau$, so that $L_\\tau:=\\max_i|2\\varsigma_{\\tau,i}|\\le b^{2}$); and\n$(r+1)^{4}(b^{2}+r+1+2n^{2})\\le b^{5}$.\n\\end{itemize}\n\\end{enumerate}",
+    "references_source": [
+      [
+        46,
+        "14.3"
+      ]
+    ],
+    "references_quote": [
+      [
+        46,
+        "14.3"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 3598,
+    "source": "46",
+    "number": "14.5",
+    "label": "au:free",
+    "type": "lemma",
+    "source_line": 3598,
+    "dest_line": 10825,
+    "equal_normalized": true,
+    "src": 46,
+    "source_body": "Let $n\\le2n_m$ and let $J\\subseteq K^\\circ$ consist of elements congruent to $1$ modulo every\nchosen place. Then $\\Gamma\\cap gJg^{-1}=1$ for all $g\\in G_f$.",
+    "quoted_body": "Let $n\\le2n_m$ and let $J\\subseteq K^\\circ$ consist of elements congruent to $1$ modulo every\nchosen place. Then $\\Gamma\\cap gJg^{-1}=1$ for all $g\\in G_f$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 4012,
+    "source": "46",
+    "number": "14.14",
+    "label": "thm:srcB",
+    "type": "theorem",
+    "source_line": 4012,
+    "dest_line": 10830,
+    "equal_normalized": true,
+    "src": 46,
+    "source_body": "$\\audT>0$, and there is a finite set $\\mathsf t\\subseteq\\auG$ with\n\\[\n\\#\\mathsf t\\cdot\\dim\\auSram\\le5\\,\\audT\\log(1+2b^2)\\qquad\\text{and}\\qquad\n\\dim\\sum_{s\\in\\mathsf t}s\\aupp(\\auSram)\\ \\ge\\ \\Bigl(1-\\frac4{b^2}\\Bigr)\\audT .\n\\]",
+    "quoted_body": "$\\audT>0$, and there is a finite set $\\mathsf t\\subseteq\\auG$ with\n\\[\n\\#\\mathsf t\\cdot\\dim\\auSram\\le5\\,\\audT\\log(1+2b^2)\\qquad\\text{and}\\qquad\n\\dim\\sum_{s\\in\\mathsf t}s\\aupp(\\auSram)\\ \\ge\\ \\Bigl(1-\\frac4{b^2}\\Bigr)\\audT .\n\\]",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 4619,
+    "source": "46",
+    "number": "14.29",
+    "label": "au:ramcount",
+    "type": "lemma",
+    "source_line": 4619,
+    "dest_line": 10838,
+    "equal_normalized": true,
+    "src": 46,
+    "source_body": "$\\dim\\auSram\\ge\\bigl(1-f/(N-1)\\bigr)\\auDX\\ge(1-b^{-8})\\auDX$.",
+    "quoted_body": "$\\dim\\auSram\\ge\\bigl(1-f/(N-1)\\bigr)\\auDX\\ge(1-b^{-8})\\auDX$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 4637,
+    "source": "46",
+    "number": "14.30",
+    "label": "au:onetranslate",
+    "type": "lemma",
+    "source_line": 4637,
+    "dest_line": 10842,
+    "equal_normalized": true,
+    "src": 46,
+    "source_body": "Let a finite group $\\auG$ act unitarily on $T$, let $T_0\\subseteq T$ be a stable subspace with\nprojection $\\mathrm{pr}_0$, let $B\\colon S\\to T$ be linear and $\\varepsilon\\ge0$. Suppose\n\\begin{enumerate}\n\\item[(H1)] $\\|\\mathrm{pr}_0B\\,\\mathrm{pr}_U\\|^2\\ge\\dim U-\\varepsilon\\dim S$ for every subspace\n$U\\subseteq S$;\n\\item[(H2)] $\\dim T_0\\cdot\\sum_{s\\in\\auG}\\|B^*sB\\|^2\\le\\#\\auG\\,(1+\\varepsilon)(\\dim S)^2$.\n\\end{enumerate}\nThen for every subspace $F\\subseteq T_0$, with $\\alpha=\\dim F/\\dim T_0$, there is $s\\in\\auG$ with\n$\\dim(\\mathrm{pr}_0sB)^{-1}(F)\\le\\bigl(\\tfrac12(1+\\alpha)+\\tfrac32\\varepsilon\\bigr)\\dim S$.",
+    "quoted_body": "Let a finite group $\\auG$ act unitarily on $T$, let $T_0\\subseteq T$ be a stable subspace with\nprojection $\\mathrm{pr}_0$, let $B\\colon S\\to T$ be linear and $\\varepsilon\\ge0$. Suppose\n\\begin{enumerate}\n\\item[(H1)] $\\|\\mathrm{pr}_0B\\,\\mathrm{pr}_U\\|^2\\ge\\dim U-\\varepsilon\\dim S$ for every subspace\n$U\\subseteq S$;\n\\item[(H2)] $\\dim T_0\\cdot\\sum_{s\\in\\auG}\\|B^*sB\\|^2\\le\\#\\auG\\,(1+\\varepsilon)(\\dim S)^2$.\n\\end{enumerate}\nThen for every subspace $F\\subseteq T_0$, with $\\alpha=\\dim F/\\dim T_0$, there is $s\\in\\auG$ with\n$\\dim(\\mathrm{pr}_0sB)^{-1}(F)\\le\\bigl(\\tfrac12(1+\\alpha)+\\tfrac32\\varepsilon\\bigr)\\dim S$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 4666,
+    "source": "46",
+    "number": "14.31",
+    "label": "au:few",
+    "type": "lemma",
+    "source_line": 4666,
+    "dest_line": 10854,
+    "equal_normalized": true,
+    "src": 46,
+    "source_body": "Let $B_s\\colon V\\to W$, $s\\in\\Sigma$, be linear maps with $V\\ne0$, $\\dim W>0$, and\n$0<\\varepsilon<\\tfrac1{16}$. Suppose the $B_s$ \\emph{spread with error $\\tfrac32\\varepsilon$}: for\nevery subspace $F\\subseteq W$, with $\\alpha=\\dim F/\\dim W$, some $s$ has\n$\\dim B_s^{-1}(F)\\le(\\tfrac12(1+\\alpha)+\\tfrac32\\varepsilon)\\dim V$. Then there is a finite\n$\\mathsf t\\subseteq\\Sigma$ with\n\\[\n\\#\\mathsf t\\cdot\\dim V\\le\\tfrac52\\bigl(1+\\log\\tfrac1{16\\varepsilon}\\bigr)\\dim W,\\qquad\n\\dim\\sum_{s\\in\\mathsf t}B_s(V)\\ge(1-16\\varepsilon)\\dim W .\n\\]\nMoreover, for a subspace $U\\subseteq V$,\n$\\dim\\sum_{s\\in\\mathsf t}B_s(V)\\le\\dim\\sum_{s\\in\\mathsf t}B_s(U)+\\#\\mathsf t(\\dim V-\\dim U)$.",
+    "quoted_body": "Let $B_s\\colon V\\to W$, $s\\in\\Sigma$, be linear maps with $V\\ne0$, $\\dim W>0$, and\n$0<\\varepsilon<\\tfrac1{16}$. Suppose the $B_s$ \\emph{spread with error $\\tfrac32\\varepsilon$}: for\nevery subspace $F\\subseteq W$, with $\\alpha=\\dim F/\\dim W$, some $s$ has\n$\\dim B_s^{-1}(F)\\le(\\tfrac12(1+\\alpha)+\\tfrac32\\varepsilon)\\dim V$. Then there is a finite\n$\\mathsf t\\subseteq\\Sigma$ with\n\\[\n\\#\\mathsf t\\cdot\\dim V\\le\\tfrac52\\bigl(1+\\log\\tfrac1{16\\varepsilon}\\bigr)\\dim W,\\qquad\n\\dim\\sum_{s\\in\\mathsf t}B_s(V)\\ge(1-16\\varepsilon)\\dim W .\n\\]\nMoreover, for a subspace $U\\subseteq V$,\n$\\dim\\sum_{s\\in\\mathsf t}B_s(V)\\le\\dim\\sum_{s\\in\\mathsf t}B_s(U)+\\#\\mathsf t(\\dim V-\\dim U)$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 4692,
+    "source": "46",
+    "number": "14.32",
+    "label": "au:moment",
+    "type": "proposition",
+    "source_line": 4692,
+    "dest_line": 10868,
+    "equal_normalized": true,
+    "src": 46,
+    "source_body": "Let $\\deg$ be the product over $\\tau\\in\\auPl$ of the formal degrees of the discrete series\n$\\varsigma_\\tau$, and $\\mathrm{mass}_r$ the mass of the genus of the standard hermitian lattice of\nrank $r$. There are an inner product on $\\auS$ and a scalar $c_P>0$ such that $P=c_P\\auP$\nsatisfies:\n\\begin{enumerate}\n\\item[(i)] $0<\\audT\\le\\#\\auG\\cdot\\deg\\cdot\\mathrm{mass}_r$;\n\\item[(ii)] $\\|\\varrho(e_0)P\\,\\mathrm{pr}_U\\|^2\\ge\\dim U-5b^{-4}\\auDX$ for every subspace\n$U\\subseteq\\auS$;\n\\item[(iii)] $\\sum_{s\\in\\auG}\\|P^*\\varrho(s)P\\|^2\\le(1+9b^{-4})\\,\\auDX^2/(\\deg\\cdot\n\\mathrm{mass}_r)$.\n\\end{enumerate}",
+    "quoted_body": "Let $\\deg$ be the product over $\\tau\\in\\auPl$ of the formal degrees of the discrete series\n$\\varsigma_\\tau$, and $\\mathrm{mass}_r$ the mass of the genus of the standard hermitian lattice of\nrank $r$. There are an inner product on $\\auS$ and a scalar $c_P>0$ such that $P=c_P\\auP$\nsatisfies:\n\\begin{enumerate}\n\\item[(i)] $0<\\audT\\le\\#\\auG\\cdot\\deg\\cdot\\mathrm{mass}_r$;\n\\item[(ii)] $\\|\\varrho(e_0)P\\,\\mathrm{pr}_U\\|^2\\ge\\dim U-5b^{-4}\\auDX$ for every subspace\n$U\\subseteq\\auS$;\n\\item[(iii)] $\\sum_{s\\in\\auG}\\|P^*\\varrho(s)P\\|^2\\le(1+9b^{-4})\\,\\auDX^2/(\\deg\\cdot\n\\mathrm{mass}_r)$.\n\\end{enumerate}",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 4778,
+    "source": "46",
+    "number": "14.34",
+    "label": "au:spread",
+    "type": "proposition",
+    "source_line": 4778,
+    "dest_line": 10882,
+    "equal_normalized": true,
+    "src": 46,
+    "source_body": "$\\audT>0$, and for every subspace $F\\subseteq\\auT$, with $\\alpha=\\dim F/\\audT$, there is\n$s\\in\\auG$ with $\\dim\\auP_s^{-1}(F)\\le\\bigl(\\tfrac12(1+\\alpha)+\\tfrac32(8b^2)^{-1}\\bigr)\\auDX$.",
+    "quoted_body": "$\\audT>0$, and for every subspace $F\\subseteq\\auT$, with $\\alpha=\\dim F/\\audT$, there is\n$s\\in\\auG$ with $\\dim\\auP_s^{-1}(F)\\le\\bigl(\\tfrac12(1+\\alpha)+\\tfrac32(8b^2)^{-1}\\bigr)\\auDX$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 4812,
+    "source": "46",
+    "number": "14.36",
+    "label": "au:mult",
+    "type": "proposition",
+    "source_line": 4812,
+    "dest_line": 10887,
+    "equal_normalized": false,
+    "src": 46,
+    "source_body": "For $1\\le j\\le m$ and every element $h$ of the spherical Hecke algebra away from $M$ (the\ncompactly supported functions on the finite adelic group outside the chosen places that are\nbi-invariant under the stabiliser of the lattice, at all places, split or not),\n$\\operatorname{tr}(h\\,|\\,e_0\\mathcal A(W_j))=\\operatorname{tr}(h\\,|\\,\\auT)$. In particular\n$\\dim e_0\\mathcal A(W_j)=\\audT$, and each system of eigenvalues of the Hecke operators at the split\nplaces prime to $M$ has the same multiplicity in $e_0\\mathcal A(W_j)$ and in $\\auT$. (The\nhypothesis of {\\cite[Proposition~4.6]{P51}} holds for the data: at every $\\tau$, two entries of\n$\\varsigma_\\tau$ on coordinates of different signs {\\cite[(43)]{P51}} differ by at least\n$\\Delta=2r^8\\ge500r^3+10r^5$.)",
+    "quoted_body": "For $1\\le j\\le m$ and every element $h$ of the spherical Hecke algebra away from $M$ (the\ncompactly supported functions on the finite adelic group outside the chosen places that are\nbi-invariant under the stabiliser of the lattice, at all places, split or not),\n$\\operatorname{tr}(h\\,|\\,e_0\\mathcal A(W_j))=\\operatorname{tr}(h\\,|\\,\\auT)$. In particular\n$\\dim e_0\\mathcal A(W_j)=\\audT$, and each system of eigenvalues of the Hecke operators at the split\nplaces prime to $M$ has the same multiplicity in $e_0\\mathcal A(W_j)$ and in $\\auT$. (The\nhypothesis of Proposition~\\ref{pm:mult} holds for the data: at every $\\tau$, two entries of\n$\\varsigma_\\tau$ on coordinates of different signs \\eqref{pm:eq-signs} differ by at least\n$\\Delta=2r^8\\ge500r^3+10r^5$.)",
+    "references_source": [
+      [
+        51,
+        "4.6"
+      ],
+      [
+        51,
+        "43"
+      ]
+    ],
+    "references_quote": [
+      [
+        51,
+        "4.6"
+      ],
+      [
+        51,
+        "43"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 1137,
+    "source": "49",
+    "number": "2.19",
+    "label": "pwf:haar",
+    "type": "proposition",
+    "source_line": 1137,
+    "dest_line": 10899,
+    "equal_normalized": false,
+    "src": 49,
+    "source_body": "{\\cite[Proposition~5.2]{P51}} holds, with the same statement, for every parameter to which it is\napplied in the paper. More precisely: for $(\\lambda,s)$ satisfying the gap condition\n{\\cite[(49)]{P51}} and $dg$ the Haar measure compatible with the Haar measure of mass $1$ on\n$\\auU(N)$, $\\int_G|c|^2dg=\\bigl(\\prod_{i<j}(\\lambda_i-\\lambda_j)/(j-i)\\bigr)^{-1}$ for the coefficient\n$c$ of a unit vector of the lowest $K$-type; and the parameters of {\\cite[\\S5]{P51}} satisfy\n{\\cite[(49)]{P51}}.",
+    "quoted_body": "Proposition~\\ref{pds:haar} holds, with the same statement, for every parameter to which it is\napplied in the paper. More precisely: for $(\\lambda,s)$ satisfying the gap condition\n\\eqref{pbr:eq-gap} and $dg$ the Haar measure compatible with the Haar measure of mass $1$ on\n$\\auU(N)$, $\\int_G|c|^2dg=\\bigl(\\prod_{i<j}(\\lambda_i-\\lambda_j)/(j-i)\\bigr)^{-1}$ for the coefficient\n$c$ of a unit vector of the lowest $K$-type; and the parameters of \\S\\ref{pds:sec} satisfy\n\\eqref{pbr:eq-gap}.",
+    "references_source": [
+      [
+        51,
+        "5.2"
+      ],
+      [
+        51,
+        "49"
+      ],
+      [
+        51,
+        "5"
+      ],
+      [
+        51,
+        "49"
+      ]
+    ],
+    "references_quote": [
+      [
+        51,
+        "5.2"
+      ],
+      [
+        51,
+        "49"
+      ],
+      [
+        51,
+        "5"
+      ],
+      [
+        51,
+        "49"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 1876,
+    "source": "49",
+    "number": "3.17",
+    "label": "pco:FJ",
+    "type": "theorem",
+    "source_line": 1876,
+    "dest_line": 10908,
+    "equal_normalized": false,
+    "src": 49,
+    "source_body": "Assume $h\\ge n^2+1$. Then $F=c_\\lambda$ on $G$; that is, {\\cite[(59)]{P51}} holds.",
+    "quoted_body": "Assume $h\\ge n^2+1$. Then $F=c_\\lambda$ on $G$; that is, \\eqref{pds:eq-FJ} holds.",
+    "references_source": [
+      [
+        51,
+        "59"
+      ]
+    ],
+    "references_quote": [
+      [
+        51,
+        "59"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 1898,
+    "source": "49",
+    "number": "3.18",
+    "label": "pco:minors",
+    "type": "lemma",
+    "source_line": 1898,
+    "dest_line": 10912,
+    "equal_normalized": true,
+    "src": 49,
+    "source_body": "Let $w\\in\\Z^n$ and let $x$ be invertible.\n\\begin{enumerate}\n\\item[(a)] $\\pcom_{-w}(x)=\\pcom_w(x^{-1})$, and $\\overline{\\pcom_w(x)}=\\pcom_w(x^*)$.\n\\item[(b)] Let $b$ be invertible, with $\\Delta_S(b)=\\prod_{a\\in S}b_{aa}$ for every $S$. If\n$b_{ab}=0$ whenever $w_a<w_b$, then $\\pcom_w(xb)=b^w\\pcom_w(x)$. If $b_{ab}=0$ whenever\n$w_b<w_a$, then $\\pcom_w(bx)=b^w\\pcom_w(x)$. The condition on the minors holds for diagonal $b$,\nfor $b=1+sE_{ab}$ \\textup($a\\ne b$, $s\\in\\C$\\textup), and for $b\\in\\pcoB\\cup\\pcoB^-$.\n\\item[(c)] If $\\varepsilon_a=\\varepsilon_b$ and $\\lambda_a>\\lambda_b$, then $\\Lambda_a\\ge\\Lambda_b$.\nFor all $a,b$: $\\mu_a>\\mu_b$ if and only if $\\lambda_a>\\lambda_b$.\n\\item[(d)] If $Z$ is accretive and $y$ invertible, then $y^*Zy$ and $Z^{-1}$ are accretive, and\nevery principal minor of $Z$ is nonzero; so $\\pcom_w(Z)$ is defined and nonzero.\n\\end{enumerate}",
+    "quoted_body": "Let $w\\in\\Z^n$ and let $x$ be invertible.\n\\begin{enumerate}\n\\item[(a)] $\\pcom_{-w}(x)=\\pcom_w(x^{-1})$, and $\\overline{\\pcom_w(x)}=\\pcom_w(x^*)$.\n\\item[(b)] Let $b$ be invertible, with $\\Delta_S(b)=\\prod_{a\\in S}b_{aa}$ for every $S$. If\n$b_{ab}=0$ whenever $w_a<w_b$, then $\\pcom_w(xb)=b^w\\pcom_w(x)$. If $b_{ab}=0$ whenever\n$w_b<w_a$, then $\\pcom_w(bx)=b^w\\pcom_w(x)$. The condition on the minors holds for diagonal $b$,\nfor $b=1+sE_{ab}$ \\textup($a\\ne b$, $s\\in\\C$\\textup), and for $b\\in\\pcoB\\cup\\pcoB^-$.\n\\item[(c)] If $\\varepsilon_a=\\varepsilon_b$ and $\\lambda_a>\\lambda_b$, then $\\Lambda_a\\ge\\Lambda_b$.\nFor all $a,b$: $\\mu_a>\\mu_b$ if and only if $\\lambda_a>\\lambda_b$.\n\\item[(d)] If $Z$ is accretive and $y$ invertible, then $y^*Zy$ and $Z^{-1}$ are accretive, and\nevery principal minor of $Z$ is nonzero; so $\\pcom_w(Z)$ is defined and nonzero.\n\\end{enumerate}",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 1938,
+    "source": "49",
+    "number": "3.19",
+    "label": "pco:equiv",
+    "type": "corollary",
+    "source_line": 1938,
+    "dest_line": 10927,
+    "equal_normalized": true,
+    "src": 49,
+    "source_body": "Let $Y$ be invertible.\n\\begin{enumerate}\n\\item[(a)] For $b\\in\\pcoB$: $\\pcom_\\Lambda(Yb)=b^\\Lambda\\pcom_\\Lambda(Y)$, $\\pcom_\\mu(Yb)=\nb^\\mu\\pcom_\\mu(Y)$, $\\pcom_\\Lambda(b^*Y)=\\overline{b^\\Lambda}\\pcom_\\Lambda(Y)$ and $\\pcom_\\mu(b^*Y)\n=\\overline{b^\\mu}\\pcom_\\mu(Y)$.\n\\item[(b)] If $\\varepsilon_a=\\varepsilon_b$ and $\\lambda_a>\\lambda_b$, then $\\pcom_\\Lambda(Y(1+sE_{ab}))\n=\\pcom_\\Lambda(Y)=\\pcom_\\Lambda((1+sE_{ba})Y)$ for $s\\in\\C$. For $t$ diagonal,\n$\\pcom_\\Lambda(Yt)=t^\\Lambda\\pcom_\\Lambda(Y)=\\pcom_\\Lambda(tY)$.\n\\item[(c)] Put $\\psi(Y)=\\pcom_{-\\mu}(Y)^{-1}$ where $\\pcom_{-\\mu}(Y)\\ne0$. If $\\lambda_a<\\lambda_b$\n\\textup(any signs\\textup), $\\psi(Y(1+sE_{ab}))=\\psi(Y)$; for $t$ diagonal, $\\psi(Yt)=t^\\mu\\psi(Y)$.\n\\end{enumerate}",
+    "quoted_body": "Let $Y$ be invertible.\n\\begin{enumerate}\n\\item[(a)] For $b\\in\\pcoB$: $\\pcom_\\Lambda(Yb)=b^\\Lambda\\pcom_\\Lambda(Y)$, $\\pcom_\\mu(Yb)=\nb^\\mu\\pcom_\\mu(Y)$, $\\pcom_\\Lambda(b^*Y)=\\overline{b^\\Lambda}\\pcom_\\Lambda(Y)$ and $\\pcom_\\mu(b^*Y)\n=\\overline{b^\\mu}\\pcom_\\mu(Y)$.\n\\item[(b)] If $\\varepsilon_a=\\varepsilon_b$ and $\\lambda_a>\\lambda_b$, then $\\pcom_\\Lambda(Y(1+sE_{ab}))\n=\\pcom_\\Lambda(Y)=\\pcom_\\Lambda((1+sE_{ba})Y)$ for $s\\in\\C$. For $t$ diagonal,\n$\\pcom_\\Lambda(Yt)=t^\\Lambda\\pcom_\\Lambda(Y)=\\pcom_\\Lambda(tY)$.\n\\item[(c)] Put $\\psi(Y)=\\pcom_{-\\mu}(Y)^{-1}$ where $\\pcom_{-\\mu}(Y)\\ne0$. If $\\lambda_a<\\lambda_b$\n\\textup(any signs\\textup), $\\psi(Y(1+sE_{ab}))=\\psi(Y)$; for $t$ diagonal, $\\psi(Yt)=t^\\mu\\psi(Y)$.\n\\end{enumerate}",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 2029,
+    "source": "49",
+    "number": "3.21",
+    "label": "pco:indep",
+    "type": "proposition",
+    "source_line": 2029,
+    "dest_line": 10941,
+    "equal_normalized": true,
+    "src": 49,
+    "source_body": "For every $x\\in\\mathrm{GL}_n(\\C)$, $a\\mapsto I(x;a)$ is constant on $A_x$. Moreover the function\n$\\mathcal J(p,r)$ defined in the proof is locally constant on the open set $U_x$ defined there; in\nparticular $\\mathcal J(p,r)=\\mathcal J(1,1)$ whenever $(p,r)$ is joined to $(1,1)$ by a path in $U_x$.",
+    "quoted_body": "For every $x\\in\\mathrm{GL}_n(\\C)$, $a\\mapsto I(x;a)$ is constant on $A_x$. Moreover the function\n$\\mathcal J(p,r)$ defined in the proof is locally constant on the open set $U_x$ defined there; in\nparticular $\\mathcal J(p,r)=\\mathcal J(1,1)$ whenever $(p,r)$ is joined to $(1,1)$ by a path in $U_x$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 2097,
+    "source": "49",
+    "number": "3.23",
+    "label": "pco:K",
+    "type": "lemma",
+    "source_line": 2097,
+    "dest_line": 10947,
+    "equal_normalized": false,
+    "src": 49,
+    "source_body": "Let $x\\in G$, $a\\in A_x$ and $k_1\\in K$. Then\n\\begin{align}\nF(xk_1)&=d_\\Lambda\\int_K\\frac{\\pcom_\\Lambda(au)\\,\\pcom_\\Lambda(u^*k_1)}{\\pcom_{-\\mu}(u^{-1}a^{-1}xu)}\\,du,\n\\label{pco:eq-right}\\\\\nF(k_1x)&=d_\\Lambda\\int_K\\frac{\\pcom_\\Lambda(k_1au)\\,\\overline{\\pcom_\\Lambda(u)}}{\\pcom_{-\\mu}(u^{-1}a^{-1}xu)}\n\\,du.\\label{pco:eq-left}\n\\end{align}\nConsequently $F(xt)=t^\\Lambda F(x)=F(tx)$ for $t\\in T$, and if $\\varepsilon_a=\\varepsilon_b$,\n$\\lambda_a>\\lambda_b$, then $R(E_{ab})F=0$.",
+    "quoted_body": "Let $x\\in G$, $a\\in A_x$ and $k_1\\in K$. Then\n\\begin{align*}\nF(xk_1)&=d_\\Lambda\\int_K\\frac{\\pcom_\\Lambda(au)\\,\\pcom_\\Lambda(u^*k_1)}{\\pcom_{-\\mu}(u^{-1}a^{-1}xu)}\\,du,\n\\tag*{{\\cite[(16)]{P49}}}\\\\\nF(k_1x)&=d_\\Lambda\\int_K\\frac{\\pcom_\\Lambda(k_1au)\\,\\overline{\\pcom_\\Lambda(u)}}{\\pcom_{-\\mu}(u^{-1}a^{-1}xu)}\n\\,du.\\tag*{{\\cite[(17)]{P49}}}\n\\end{align*}\nConsequently $F(xt)=t^\\Lambda F(x)=F(tx)$ for $t\\in T$, and if $\\varepsilon_a=\\varepsilon_b$,\n$\\lambda_a>\\lambda_b$, then $R(E_{ab})F=0$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 2148,
+    "source": "49",
+    "number": "3.25",
+    "label": "pco:decay",
+    "type": "lemma",
+    "source_line": 2148,
+    "dest_line": 10959,
+    "equal_normalized": true,
+    "src": 49,
+    "source_body": "For every integer $0\\le c\\le h$ and $g\\in G$, $|F(g)|\\le(2/\\|g\\|)^c$. If $h\\ge n^2+1$, then $F\\in\nL^1(G)\\cap L^2(G)\\cap L^\\infty(G)$.",
+    "quoted_body": "For every integer $0\\le c\\le h$ and $g\\in G$, $|F(g)|\\le(2/\\|g\\|)^c$. If $h\\ge n^2+1$, then $F\\in\nL^1(G)\\cap L^2(G)\\cap L^\\infty(G)$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 7759,
+    "source": "49",
+    "number": "8.1",
+    "label": "pz:def-type",
+    "type": "definition",
+    "source_line": 7759,
+    "dest_line": 10964,
+    "equal_normalized": true,
+    "src": 49,
+    "source_body": "Let $e=e_j$ or $\\overline{e_j}$. For a function $F$ on $G_j(\\auA)$ put $(R(e)F)(g)=\n\\int_{G_{j,\\infty}}e(x)F(gx)\\,dx$ when the integral converges absolutely. A \\emph{form of type $e$}\non $G_j$ is a bounded continuous function $y$ on $G_j(\\auA)$, left invariant under $G_j(E^+)$, right\ninvariant under an open subgroup of $G_j(\\auA_f)$ (a \\emph{level}), with $R(e)y=y$. The\n\\emph{forms of the archimedean type of the chain} on $G_j$ are the forms of type $e_j$; their\ncomplex conjugates are the forms of type $\\overline{e_j}$. The space $\\auAz$ of\n{\\cite[\\S14.3]{P46}} is the space of the forms of type $e_0$ and level $J_M$; this is the precise\nmeaning of ``the fixed vector of the discrete series with parameter $\\varsigma_\\tau$''. For $j=m$\nthe forms of type $e_m$ are the functions $g\\mapsto l\\bigl(g_\\infty^{-1}\\varphi(g_f)\\bigr)$ with\n$\\varphi$ an algebraic modular form of weight $\\lambda^\\circ$ and $l$ the linear form given by\n$v_m$ (Peter--Weyl); in this way the last lift has values in algebraic modular forms.",
+    "quoted_body": "Let $e=e_j$ or $\\overline{e_j}$. For a function $F$ on $G_j(\\auA)$ put $(R(e)F)(g)=\n\\int_{G_{j,\\infty}}e(x)F(gx)\\,dx$ when the integral converges absolutely. A \\emph{form of type $e$}\non $G_j$ is a bounded continuous function $y$ on $G_j(\\auA)$, left invariant under $G_j(E^+)$, right\ninvariant under an open subgroup of $G_j(\\auA_f)$ (a \\emph{level}), with $R(e)y=y$. The\n\\emph{forms of the archimedean type of the chain} on $G_j$ are the forms of type $e_j$; their\ncomplex conjugates are the forms of type $\\overline{e_j}$. The space $\\auAz$ of\n{\\cite[\\S14.3]{P46}} is the space of the forms of type $e_0$ and level $J_M$; this is the precise\nmeaning of ``the fixed vector of the discrete series with parameter $\\varsigma_\\tau$''. For $j=m$\nthe forms of type $e_m$ are the functions $g\\mapsto l\\bigl(g_\\infty^{-1}\\varphi(g_f)\\bigr)$ with\n$\\varphi$ an algebraic modular form of weight $\\lambda^\\circ$ and $l$ the linear form given by\n$v_m$ (Peter--Weyl); in this way the last lift has values in algebraic modular forms.",
+    "references_source": [
+      [
+        46,
+        "14.3"
+      ]
+    ],
+    "references_quote": [
+      [
+        46,
+        "14.3"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 8021,
+    "source": "49",
+    "number": "8.4",
+    "label": "pz:types",
+    "type": "proposition",
+    "source_line": 8021,
+    "dest_line": 10978,
+    "equal_normalized": false,
+    "src": 49,
+    "source_body": "Assume {\\rm(A1)--(A3)}. Let $0\\le j\\le m$.\n\\begin{enumerate}\n\\item[(a)] Every form $y$ of type $e_j$ or $\\overline{e_j}$ on $G_j$ is smooth, $K_{j,\\infty}$-finite\nand finite under the centre of the enveloping algebra; it is a cusp form; it is rapidly\ndecreasing on Siegel sets, in the form: for every Siegel set $\\mathfrak S_\\infty\\subset G_{j,\\infty}$, finite set $\\mathsf c\\subset G_j(\\auA_f)$, open subgroup $K'$ of $G_j(\\auA_f)$ and $N\\ge0$ there is $C_N$ with $|y(g)|\\le C_N\\|g_\\infty\\|^{-N}$ for $g\\in\\mathfrak S_\\infty\\mathsf cK'$; and the forms of a given level form a finite-dimensional space.\n\\item[(b)] Let $j<m$, $f\\in\\psHS_f(W)$ and let $y$ be a form of type $e_j$ on $G_j$. Then the\nintegral $F(h)=\\int_{[G_j]}\\theta\\bigl(\\omega_{\\mu_{j+1}}(g,h)(\\Phi_j\\otimes f)\\bigr)y(g)\\,dg$ converges\nabsolutely and $F$ is a form of type $e_{j+1}$ on $G_{j+1}$.\n\\item[(c)] Let $j<m$, $f\\in\\psHS_f(W)$ and let $z$ be a form of type $\\overline{e_{j+1}}$ on\n$G_{j+1}$. Then $F^*(g)=\\int_{[G_{j+1}]}\\theta\\bigl(\\omega_{\\mu_{j+1}}(g,h)(\\Phi_j\\otimes f)\\bigr)z(h)\n\\,dh$ converges absolutely and $F^*$ is a form of type $\\overline{e_j}$ on $G_j$.\n\\item[(d)] The space $\\auAz$ is finite-dimensional and stable under the right translations by\nthe stabiliser of the lattice at the chosen places, so $\\auG$ acts on it; the Poincar\\'e map\n$\\auP$ of {\\cite[\\S14.3]{P46}} is well defined; and $\\iota_\\vartheta$ maps $\\auAz$ to algebraic\nmodular forms of weight $\\lambda^\\circ$ on $\\auU(Y_m)$.\n\\end{enumerate}\nIn particular the assumption made in \\S\\ref{ps:ss-Y} holds: the lifts $\\Theta^Y_{j,\\vartheta}$ and\ntheir transposes $\\Theta^{Y,*}_{j,\\vartheta}$ preserve the types, and all the forms concerned are\ncusp forms and rapidly decreasing.",
+    "quoted_body": "Assume {\\rm(A1)--(A3)}. Let $0\\le j\\le m$.\n\\begin{enumerate}\n\\item[(a)] Every form $y$ of type $e_j$ or $\\overline{e_j}$ on $G_j$ is smooth, $K_{j,\\infty}$-finite\nand finite under the centre of the enveloping algebra; it is a cusp form; it is rapidly\ndecreasing on Siegel sets, in the form: for every Siegel set $\\mathfrak S_\\infty\\subset G_{j,\\infty}$, finite set $\\mathsf c\\subset G_j(\\auA_f)$, open subgroup $K'$ of $G_j(\\auA_f)$ and $N\\ge0$ there is $C_N$ with $|y(g)|\\le C_N\\|g_\\infty\\|^{-N}$ for $g\\in\\mathfrak S_\\infty\\mathsf cK'$; and the forms of a given level form a finite-dimensional space.\n\\item[(b)] Let $j<m$, $f\\in\\psHS_f(W)$ and let $y$ be a form of type $e_j$ on $G_j$. Then the\nintegral $F(h)=\\int_{[G_j]}\\theta\\bigl(\\omega_{\\mu_{j+1}}(g,h)(\\Phi_j\\otimes f)\\bigr)y(g)\\,dg$ converges\nabsolutely and $F$ is a form of type $e_{j+1}$ on $G_{j+1}$.\n\\item[(c)] Let $j<m$, $f\\in\\psHS_f(W)$ and let $z$ be a form of type $\\overline{e_{j+1}}$ on\n$G_{j+1}$. Then $F^*(g)=\\int_{[G_{j+1}]}\\theta\\bigl(\\omega_{\\mu_{j+1}}(g,h)(\\Phi_j\\otimes f)\\bigr)z(h)\n\\,dh$ converges absolutely and $F^*$ is a form of type $\\overline{e_j}$ on $G_j$.\n\\item[(d)] The space $\\auAz$ is finite-dimensional and stable under the right translations by\nthe stabiliser of the lattice at the chosen places, so $\\auG$ acts on it; the Poincar\\'e map\n$\\auP$ of {\\cite[\\S14.3]{P46}} is well defined; and $\\iota_\\vartheta$ maps $\\auAz$ to algebraic\nmodular forms of weight $\\lambda^\\circ$ on $\\auU(Y_m)$.\n\\end{enumerate}\nIn particular the assumption made in {\\cite[\\S5.1.3]{P49}} holds: the lifts $\\Theta^Y_{j,\\vartheta}$ and\ntheir transposes $\\Theta^{Y,*}_{j,\\vartheta}$ preserve the types, and all the forms concerned are\ncusp forms and rapidly decreasing.",
+    "references_source": [
+      [
+        46,
+        "14.3"
+      ],
+      [
+        49,
+        "5.1.3"
+      ]
+    ],
+    "references_quote": [
+      [
+        46,
+        "14.3"
+      ],
+      [
+        49,
+        "5.1.3"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 926,
+    "source": "52",
+    "number": "2.17",
+    "label": "pfr:R",
+    "type": "theorem",
+    "source_line": 926,
+    "dest_line": 11000,
+    "equal_normalized": false,
+    "src": 52,
+    "source_body": "Assume \\textup{(H0)}--\\textup{(H5)}. There are functions $J_i=J^\\tau_i$, $0\\le i\\le n$, on pairs of\nsequences of non-zero complex numbers such that:\n\\begin{enumerate}\n\\item[(R-a)] $(J_i)_{0\\le i\\le n}$ is a sieve system ({\\cite[Definition~3.44]{P51}}) at the place\n$(\\C,\\text{Lebesgue},c\\mapsto e^{c-\\bar c},w\\mapsto w^{-1})$ with mass $(1+b^{-10})/\\pbdeg_\\tau$,\nweights $\\Lambda^\\infty_i$ and decay $\\beta^\\infty$ of {\\cite[(38)]{P51}}:\n\\[\n\\Lambda^\\infty_i(p)=\\prod_{l=1}^i\\bigl[|\\delta_l|\\le b^{60n^2}\\bigr]\\max(1,|\\delta_l|^{-1})^{n^6},\\quad\n\\delta_l=p_0\\cdots p_{l-1};\\qquad\\beta^\\infty(\\xi)=\\pbmTh\\,b^{2000n^9}\\,\\pfrell_{k-n^7}(|\\xi|^{-1}),\n\\]\n$\\pfrell_K(t)=t^K\\min(1,t)^6$;\n\\item[(R-b)] $J_n(x,x')=\\pfrip{\\pfrX(x)}{\\pfrX(x')}$; and for every $\\sigma\\in\\pfrG^{(\\varrho)}$ and all $x,x'$\nwith $x_\\varrho=x'_\\varrho=h(\\sigma z,z)$, $J_n(x,x')=\\pfrip{\\pfrN_\\sigma(x)}{\\pfrN_\\sigma(x')}$.\n\\end{enumerate}",
+    "quoted_body": "Assume \\textup{(H0)}--\\textup{(H5)}. There are functions $J_i=J^\\tau_i$, $0\\le i\\le n$, on pairs of\nsequences of non-zero complex numbers such that:\n\\begin{enumerate}\n\\item[(R-a)] $(J_i)_{0\\le i\\le n}$ is a sieve system (Definition~\\ref{pbm:system}) at the place\n$(\\C,\\text{Lebesgue},c\\mapsto e^{c-\\bar c},w\\mapsto w^{-1})$ with mass $(1+b^{-10})/\\pbdeg_\\tau$,\nweights $\\Lambda^\\infty_i$ and decay $\\beta^\\infty$ of \\eqref{pbm:eq-beta}:\n\\[\n\\Lambda^\\infty_i(p)=\\prod_{l=1}^i\\bigl[|\\delta_l|\\le b^{60n^2}\\bigr]\\max(1,|\\delta_l|^{-1})^{n^6},\\quad\n\\delta_l=p_0\\cdots p_{l-1};\\qquad\\beta^\\infty(\\xi)=\\pbmTh\\,b^{2000n^9}\\,\\pfrell_{k-n^7}(|\\xi|^{-1}),\n\\]\n$\\pfrell_K(t)=t^K\\min(1,t)^6$;\n\\item[(R-b)] $J_n(x,x')=\\pfrip{\\pfrX(x)}{\\pfrX(x')}$; and for every $\\sigma\\in\\pfrG^{(\\varrho)}$ and all $x,x'$\nwith $x_\\varrho=x'_\\varrho=h(\\sigma z,z)$, $J_n(x,x')=\\pfrip{\\pfrN_\\sigma(x)}{\\pfrN_\\sigma(x')}$.\n\\end{enumerate}",
+    "references_source": [
+      [
+        51,
+        "3.44"
+      ],
+      [
+        51,
+        "38"
+      ]
+    ],
+    "references_quote": [
+      [
+        51,
+        "3.44"
+      ],
+      [
+        51,
+        "38"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 1001,
+    "source": "52",
+    "number": "2.19",
+    "label": "pfr:haar",
+    "type": "lemma",
+    "source_line": 1001,
+    "dest_line": 11017,
+    "equal_normalized": true,
+    "src": 52,
+    "source_body": "The group measure $\\pfrM$ of the place datum at $\\tau$ is $\\lambda$ times the Haar measure $dx$ of\n$\\pfrG$ for a number $0<\\lambda<\\infty$ with $\\lambda\\,\\pbvol\\auU(k)/\\pbvol\\auU(r)\\le1$; and for every\nmeasurable $\\phi\\ge0$ on $\\pfrG$ invariant under left translation by $\\pfrU$,\n$\\int\\phi\\,d\\theta_{\\ge0}=\\lambda\\int_{\\pfrU\\backslash\\pfrG}\\phi$.",
+    "quoted_body": "The group measure $\\pfrM$ of the place datum at $\\tau$ is $\\lambda$ times the Haar measure $dx$ of\n$\\pfrG$ for a number $0<\\lambda<\\infty$ with $\\lambda\\,\\pbvol\\auU(k)/\\pbvol\\auU(r)\\le1$; and for every\nmeasurable $\\phi\\ge0$ on $\\pfrG$ invariant under left translation by $\\pfrU$,\n$\\int\\phi\\,d\\theta_{\\ge0}=\\lambda\\int_{\\pfrU\\backslash\\pfrG}\\phi$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 1472,
+    "source": "52",
+    "number": "2.41",
+    "label": "pfr:rearr",
+    "type": "lemma",
+    "source_line": 1472,
+    "dest_line": 11024,
+    "equal_normalized": true,
+    "src": 52,
+    "source_body": "$\\pfrm_j=(\\eta_0*\\dots*\\eta_{j-1})*\\theta_{[0,j)}$.",
+    "quoted_body": "$\\pfrm_j=(\\eta_0*\\dots*\\eta_{j-1})*\\theta_{[0,j)}$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 2665,
+    "source": "52",
+    "number": "4.1",
+    "label": "prp:heis",
+    "type": "lemma",
+    "source_line": 2665,
+    "dest_line": 11028,
+    "equal_normalized": true,
+    "src": 52,
+    "source_body": "\\textup{(a)} For $\\nu\\in\\pfrU_{(<a)}$, $a<\\varrho$, and $n=n(v,it)\\in\\pfrN_a$:\n$G_{a+1}(\\nu n)=e^{-\\pi(|v|^2+t^2)}\\,G_a(\\nu)$.\n\\textup{(b)} $\\int G_\\varrho\\,d\\eta_\\pfrU=1$.\n\\textup{(c)} The map $(n_0,\\dots,n_{\\varrho-1})\\mapsto n_0\\cdots n_{\\varrho-1}$ is a homeomorphism of\n$\\pfrN_0\\times\\dots\\times\\pfrN_{\\varrho-1}$ onto $\\pfrU$, and $\\eta_\\pfrU$ is a Haar measure of $\\pfrU$.",
+    "quoted_body": "\\textup{(a)} For $\\nu\\in\\pfrU_{(<a)}$, $a<\\varrho$, and $n=n(v,it)\\in\\pfrN_a$:\n$G_{a+1}(\\nu n)=e^{-\\pi(|v|^2+t^2)}\\,G_a(\\nu)$.\n\\textup{(b)} $\\int G_\\varrho\\,d\\eta_\\pfrU=1$.\n\\textup{(c)} The map $(n_0,\\dots,n_{\\varrho-1})\\mapsto n_0\\cdots n_{\\varrho-1}$ is a homeomorphism of\n$\\pfrN_0\\times\\dots\\times\\pfrN_{\\varrho-1}$ onto $\\pfrU$, and $\\eta_\\pfrU$ is a Haar measure of $\\pfrU$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 3725,
+    "source": "52",
+    "number": "5.12",
+    "label": "pff:massK",
+    "type": "corollary",
+    "source_line": 3725,
+    "dest_line": 11036,
+    "equal_normalized": true,
+    "src": 52,
+    "source_body": "If $b\\ge1000$ and $2^{-\\varrho}\\le b^{-6}$, then $\\pffm(\\pffK)\\le(1+b^{-6})\\,\\pbvol(\\pffK)\\,\n\\pbvol(\\pffKM)$.",
+    "quoted_body": "If $b\\ge1000$ and $2^{-\\varrho}\\le b^{-6}$, then $\\pffm(\\pffK)\\le(1+b^{-6})\\,\\pbvol(\\pffK)\\,\n\\pbvol(\\pffKM)$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 3741,
+    "source": "52",
+    "number": "5.13",
+    "label": "pff:L1",
+    "type": "lemma",
+    "source_line": 3741,
+    "dest_line": 11041,
+    "equal_normalized": true,
+    "src": 52,
+    "source_body": "For the data, $L_T$ has a basis as in \\textup{(L1)}, consisting of integral vectors with integral\ndual basis.",
+    "quoted_body": "For the data, $L_T$ has a basis as in \\textup{(L1)}, consisting of integral vectors with integral\ndual basis.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 4104,
+    "source": "52",
+    "number": "5.24",
+    "label": "pff:fixed",
+    "type": "theorem",
+    "source_line": 4104,
+    "dest_line": 11046,
+    "equal_normalized": true,
+    "src": 52,
+    "source_body": "Assume (L1)--(L3) at $T$ and at its subsets stable under conjugation, $b\\ge1000$, $4f\\le b$,\n$k\\ge3\\cdot10^{10}n^4$, and that $T$ contains the places above $M$. For every set $\\mathsf A$ of\nchosen places above $p_0$ and every family $\\mathsf d$ of frame vectors there is an intermediate\ngroup $\\pffZ=\\pffZ(\\mathsf A,\\mathsf d)$ such that\n\\begin{enumerate}\n\\item[(a)] $\\pffZ$ contains the component at $T$ of every $\\kappa\\in K^{\\mathrm{ad}}$ with\n$\\mathrm{red}(\\kappa)\\in\\pbFix(\\mathsf A,\\mathsf d)$;\n\\item[(b)] $\\pffm(\\pffZ)\\,\\pbvol(\\pffK)\\,b^{6k\\#\\mathsf A}\\le\\pffm(\\pffK)\\,\\pbvol(\\pffZ)$.\n\\end{enumerate}",
+    "quoted_body": "Assume (L1)--(L3) at $T$ and at its subsets stable under conjugation, $b\\ge1000$, $4f\\le b$,\n$k\\ge3\\cdot10^{10}n^4$, and that $T$ contains the places above $M$. For every set $\\mathsf A$ of\nchosen places above $p_0$ and every family $\\mathsf d$ of frame vectors there is an intermediate\ngroup $\\pffZ=\\pffZ(\\mathsf A,\\mathsf d)$ such that\n\\begin{enumerate}\n\\item[(a)] $\\pffZ$ contains the component at $T$ of every $\\kappa\\in K^{\\mathrm{ad}}$ with\n$\\mathrm{red}(\\kappa)\\in\\pbFix(\\mathsf A,\\mathsf d)$;\n\\item[(b)] $\\pffm(\\pffZ)\\,\\pbvol(\\pffK)\\,b^{6k\\#\\mathsf A}\\le\\pffm(\\pffK)\\,\\pbvol(\\pffZ)$.\n\\end{enumerate}",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 4192,
+    "source": "52",
+    "number": "5.28",
+    "label": "pff:F",
+    "type": "theorem",
+    "source_line": 4192,
+    "dest_line": 11058,
+    "equal_normalized": false,
+    "src": 52,
+    "source_body": "Assume the hypotheses on the data of {\\cite[Theorem~3.53]{P51}}. Let $T$ be a finite set of finite places\nof $E$, stable under conjugation, containing the places above $MN$. Let $\\mathsf A$ be a set of\nchosen places above $p_0$ and $\\mathsf d$ a family of frame vectors, and let $\\pffZ=\\pffZ(\\mathsf A,\n\\mathsf d)$ be the intermediate group of Theorem~\\ref{pff:fixed}. Then the forms\n\\eqref{pff:eq-forms} for $\\pffZ$ satisfy:\n\\begin{enumerate}\n\\item[(a)] $\\pffZ$ contains the component at $T$ of every $\\kappa\\in K^{\\mathrm{ad}}$ with\n$\\mathrm{red}(\\kappa)\\in\\pbFix(\\mathsf A,\\mathsf d)$;\n\\item[(b)] $(J^T_i)_{0\\le i\\le n}$ is a sieve system at $\\mathfrak P_T$\n({\\cite[Definition~3.44]{P51}}) with mass $(1+b^{-6})\\,b^{-6k\\#\\mathsf A}$, weights $\\Lambda^T$ and\ndecay $\\beta^T$.\n\\end{enumerate}",
+    "quoted_body": "Assume the hypotheses on the data of Theorem~\\ref{pbm:L2}. Let $T$ be a finite set of finite places\nof $E$, stable under conjugation, containing the places above $MN$. Let $\\mathsf A$ be a set of\nchosen places above $p_0$ and $\\mathsf d$ a family of frame vectors, and let $\\pffZ=\\pffZ(\\mathsf A,\n\\mathsf d)$ be the intermediate group of {\\cite[Theorem~5.24]{P52}}. Then the forms\n{\\cite[(12)]{P52}} for $\\pffZ$ satisfy:\n\\begin{enumerate}\n\\item[(a)] $\\pffZ$ contains the component at $T$ of every $\\kappa\\in K^{\\mathrm{ad}}$ with\n$\\mathrm{red}(\\kappa)\\in\\pbFix(\\mathsf A,\\mathsf d)$;\n\\item[(b)] $(J^T_i)_{0\\le i\\le n}$ is a sieve system at $\\mathfrak P_T$\n(Definition~\\ref{pbm:system}) with mass $(1+b^{-6})\\,b^{-6k\\#\\mathsf A}$, weights $\\Lambda^T$ and\ndecay $\\beta^T$.\n\\end{enumerate}",
+    "references_source": [
+      [
+        51,
+        "3.53"
+      ],
+      [
+        52,
+        "5.24"
+      ],
+      [
+        52,
+        "12"
+      ],
+      [
+        51,
+        "3.44"
+      ]
+    ],
+    "references_quote": [
+      [
+        51,
+        "3.53"
+      ],
+      [
+        52,
+        "5.24"
+      ],
+      [
+        52,
+        "12"
+      ],
+      [
+        51,
+        "3.44"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 4223,
+    "source": "52",
+    "number": "5.29",
+    "label": "pff:S",
+    "type": "theorem",
+    "source_line": 4223,
+    "dest_line": 11073,
+    "equal_normalized": false,
+    "src": 52,
+    "source_body": "Assume the hypotheses of Theorem~\\ref{pff:F}, and in addition that $T$ contains the places at which\nan element of the set $\\mathsf B$ of {\\cite[\\S3.3.2]{P51}} is not a unit. Let $J^\\tau_n$ be the top\nforms at the real places of Theorem~\\ref{pfr:R}. Let $(c_j,c'_j,s_j,\\sigma_j)_{j\\in\\mathsf I}$ be a\nfinite family of pairwise distinct quadruples of classes $c_j,c'_j$, elements $s_j\\in\\pbFix(\\mathsf\nA,\\mathsf d)$ and $\\sigma_j\\in\\pbmGf(E^+)$ such that $t_j=t(\\sigma_j)\\in\\pbmT$, $|\\tau(t_j)|>N$\nfor all $\\tau$, and $h_{c_j}^{-1}\\sigma_jh_{c'_j}$ stabilises the lattice at every finite place\noutside $T$. Then\n\\[\n\\pbmrS^{\\,2}\\sum_{j\\in\\mathsf I}\\Bigl\\|\\sum_{p\\in\\pbmT^\\varrho}\\pbmOrb_{c_j,s_j,c'_j}(w_p\\sigma_j)\n\\Bigr\\|^2\\le(1+b^{-6})\\,\\pbmaS\\,\\Rel\\sum_{t\\in\\{t_j\\}}\\ \\sum_{p,q\\in\\pbmT^\\varrho}\\prod_\\tau J^\\tau_n\n\\bigl([p,t]_\\tau,[q,t]_\\tau\\bigr)\\,J^T_n\\bigl((p,t),(q,t)\\bigr),\n\\]\nwith $J^T_n$ the top form \\eqref{pff:eq-forms} for the group $\\pffZ(\\mathsf A,\\mathsf d)$ of\nTheorem~\\ref{pff:F}.",
+    "quoted_body": "Assume the hypotheses of {\\cite[Theorem~5.28]{P52}}, and in addition that $T$ contains the places at which\nan element of the set $\\mathsf B$ of \\S\\ref{pbm:ss-cell} is not a unit. Let $J^\\tau_n$ be the top\nforms at the real places of {\\cite[Theorem~2.17]{P52}}. Let $(c_j,c'_j,s_j,\\sigma_j)_{j\\in\\mathsf I}$ be a\nfinite family of pairwise distinct quadruples of classes $c_j,c'_j$, elements $s_j\\in\\pbFix(\\mathsf\nA,\\mathsf d)$ and $\\sigma_j\\in\\pbmGf(E^+)$ such that $t_j=t(\\sigma_j)\\in\\pbmT$, $|\\tau(t_j)|>N$\nfor all $\\tau$, and $h_{c_j}^{-1}\\sigma_jh_{c'_j}$ stabilises the lattice at every finite place\noutside $T$. Then\n\\[\n\\pbmrS^{\\,2}\\sum_{j\\in\\mathsf I}\\Bigl\\|\\sum_{p\\in\\pbmT^\\varrho}\\pbmOrb_{c_j,s_j,c'_j}(w_p\\sigma_j)\n\\Bigr\\|^2\\le(1+b^{-6})\\,\\pbmaS\\,\\Rel\\sum_{t\\in\\{t_j\\}}\\ \\sum_{p,q\\in\\pbmT^\\varrho}\\prod_\\tau J^\\tau_n\n\\bigl([p,t]_\\tau,[q,t]_\\tau\\bigr)\\,J^T_n\\bigl((p,t),(q,t)\\bigr),\n\\]\nwith $J^T_n$ the top form {\\cite[(12)]{P52}} for the group $\\pffZ(\\mathsf A,\\mathsf d)$ of\n{\\cite[Theorem~5.28]{P52}}.",
+    "references_source": [
+      [
+        52,
+        "5.28"
+      ],
+      [
+        51,
+        "3.3.2"
+      ],
+      [
+        52,
+        "2.17"
+      ],
+      [
+        52,
+        "12"
+      ],
+      [
+        52,
+        "5.28"
+      ]
+    ],
+    "references_quote": [
+      [
+        52,
+        "5.28"
+      ],
+      [
+        51,
+        "3.3.2"
+      ],
+      [
+        52,
+        "2.17"
+      ],
+      [
+        52,
+        "12"
+      ],
+      [
+        52,
+        "5.28"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "51",
+    "line": 5462,
+    "source": "52",
+    "number": "6.35",
+    "label": "pfg:siegel",
+    "type": "proposition",
+    "source_line": 5462,
+    "dest_line": 11090,
+    "equal_normalized": false,
+    "src": 52,
+    "source_body": "Theorem~\\ref{pff:siegelformula} holds as stated, with the measures and the normalisation of \\S\\ref{pff:ss-siegel}; moreover\nthe $z$-integral defining $\\delta(\\Phi,\\alpha)$ converges absolutely.",
+    "quoted_body": "{\\cite[Theorem~5.31]{P52}} holds as stated, with the measures and the normalisation of {\\cite[\\S5.7]{P52}}; moreover\nthe $z$-integral defining $\\delta(\\Phi,\\alpha)$ converges absolutely.",
+    "references_source": [
+      [
+        52,
+        "5.31"
+      ],
+      [
+        52,
+        "5.7"
+      ]
+    ],
+    "references_quote": [
+      [
+        52,
+        "5.31"
+      ],
+      [
+        52,
+        "5.7"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 2989,
+    "source": "46",
+    "number": "13.4",
+    "label": "an:lem-sizes",
+    "type": "lemma",
+    "source_line": 2989,
+    "dest_line": 5524,
+    "equal_normalized": false,
+    "src": 46,
+    "source_body": "For admissible data the following hold.\n\\begin{enumerate}\n\\item[(S1)] $x^{10^{6}}\\le x_1$, $x_1^{10^{6}}\\le b$,\n$4\\log x_1\\le(\\log x_1)^{6}\\le\\log b$,\n$(\\log b)^{100}\\le x$, $\\log b\\ge128$, and\n$\\log x\\ge10^{14}(q_0+2d+|\\aneu|)$.\n\\item[(S2)] $x^{11}\\le2^{s}\\le2^{22}x^{11}$; $l_0(s)\\le2592\\log x$;\n$2m\\le r$, so $r/2\\le k\\le r$.\n\\item[(S3)] $x^{11}\\le T(s)=\\#\\anPa\\le f\\le q_1\\le x^{12}$, and\n$f=\\varphi(q_0)\\,\\#\\anPa$; moreover $1\\le\\#\\anPa/\\#\\anPb\\le\\log b$.\n\\item[(S4)] $\\anrd_E=\\sqrt d\\;q_1\\prod_{p\\mid q_0}p^{-1/(p-1)}$, and\n$x^{10}\\le\\anrd_E\\le x^{12}$.\n\\item[(S5)] $1\\le xb/x_1\\le\\kappa(\\tau)\\le b\\le a\\le b^{2}$ for all $\\tau$;\n$b^{20}\\le M\\le b^{22}$;\n$20\\log b\\le\\log(M\\anrd_E/2\\pi)\\le23\\log b$; and\n$m\\log b\\le\\log N\\le25\\,m\\log b$.\n\\item[(S6)] With $\\Omega:=e^{\\aneu}\\cdot2\\pi/\\anrd_E$: $0<\\Omega\\le1$ and\n$20\\log b\\le\\log(M/\\Omega)\\le23\\log b$.\n\\item[(S7)] With $n=m/2$ and $\\varrho=n-1$ (so that $r=k+2\\varrho+1$): $r$ is odd; every prime\ndividing $q_1$ divides $q_0$; $q_0^{\\,q_0}\\le x$; $\\varrho\\ge10^{5}$;\n$k\\ge512000\\,n^{9}$ and $k\\ge1000\\,(2\\varrho+2)^{9}$; $k\\ge2\\varrho^{2}+3$; $18\\varrho f\\le b^{8}$;\n$f\\le b/1000$; $\\anrd_E\\le b$; and $N\\le b^{60n}$. Moreover, with $\\Delta=2r^{8}$:\n\\begin{itemize}\n\\item[(a)] $\\varrho\\ge10^{8}$ (so $n\\ge100$); $n^{7}\\le k$; $12n^{3}+500\\le k$; $k-3n-6>10^{9}n^{3}$;\n\\item[(b)] $r\\ge100$ (so $2r^{8}\\ge500r^{3}+10r^{5}$); $3r^{3}f\\le r^{7}$; $8nr\\le b$; $kf\\ge40$; $f\\ge4000\\,n$;\n\\item[(c)] $2f\\le2^{2\\varrho}$ and $2^{-\\varrho}\\le b^{-6}$;\n\\item[(d)] $(200\\,f\\,k\\,\\anrd_E)^{1000}\\le b$ and $(25\\,n^{3}f\\,\\anrd_E)^{1000}\\le b$;\n\\item[(e)] $\\sqrt d\\le\\anrd_E$, and $n,r,f,\\sqrt d\\le b$; $M\\le b^{23}$;\n\\item[(f)] $\\binom{a+k-1}{k-1}^{f}\\le b^{2kf}$ (this bounds the dimension $d_\\infty=\\dim W_{\\lambda^X}$ of\n\\S\\ref{ss:au-spaces}, a product of at most $f$ such binomial coefficients);\n\\item[(g)] $m\\Delta+r\\le\\kappa(\\tau)$ for all $\\tau$; $k+2b+2m\\Delta\\le b^{2}$ (this bounds every\nentry of $2\\varsigma_\\tau$, so that $L_\\tau:=\\max_i|2\\varsigma_{\\tau,i}|\\le b^{2}$); and\n$(r+1)^{4}(b^{2}+r+1+2n^{2})\\le b^{5}$.\n\\end{itemize}\n\\end{enumerate}",
+    "quoted_body": "For admissible data the following hold.\n\\begin{enumerate}\n\\item[(S1)] $x^{10^{6}}\\le x_1$, $x_1^{10^{6}}\\le b$,\n$4\\log x_1\\le(\\log x_1)^{6}\\le\\log b$,\n$(\\log b)^{100}\\le x$, $\\log b\\ge128$, and\n$\\log x\\ge10^{14}(q_0+2d+|\\aneu|)$.\n\\item[(S2)] $x^{11}\\le2^{s}\\le2^{22}x^{11}$; $l_0(s)\\le2592\\log x$;\n$2m\\le r$, so $r/2\\le k\\le r$.\n\\item[(S3)] $x^{11}\\le T(s)=\\#\\anPa\\le f\\le q_1\\le x^{12}$, and\n$f=\\varphi(q_0)\\,\\#\\anPa$; moreover $1\\le\\#\\anPa/\\#\\anPb\\le\\log b$.\n\\item[(S4)] $\\anrd_E=\\sqrt d\\;q_1\\prod_{p\\mid q_0}p^{-1/(p-1)}$, and\n$x^{10}\\le\\anrd_E\\le x^{12}$.\n\\item[(S5)] $1\\le xb/x_1\\le\\kappa(\\tau)\\le b\\le a\\le b^{2}$ for all $\\tau$;\n$b^{20}\\le M\\le b^{22}$;\n$20\\log b\\le\\log(M\\anrd_E/2\\pi)\\le23\\log b$; and\n$m\\log b\\le\\log N\\le25\\,m\\log b$.\n\\item[(S6)] With $\\Omega:=e^{\\aneu}\\cdot2\\pi/\\anrd_E$: $0<\\Omega\\le1$ and\n$20\\log b\\le\\log(M/\\Omega)\\le23\\log b$.\n\\item[(S7)] With $n=m/2$ and $\\varrho=n-1$ (so that $r=k+2\\varrho+1$): $r$ is odd; every prime\ndividing $q_1$ divides $q_0$; $q_0^{\\,q_0}\\le x$; $\\varrho\\ge10^{5}$;\n$k\\ge512000\\,n^{9}$ and $k\\ge1000\\,(2\\varrho+2)^{9}$; $k\\ge2\\varrho^{2}+3$; $18\\varrho f\\le b^{8}$;\n$f\\le b/1000$; $\\anrd_E\\le b$; and $N\\le b^{60n}$. Moreover, with $\\Delta=2r^{8}$:\n\\begin{itemize}\n\\item[(a)] $\\varrho\\ge10^{8}$ (so $n\\ge100$); $n^{7}\\le k$; $12n^{3}+500\\le k$; $k-3n-6>10^{9}n^{3}$;\n\\item[(b)] $r\\ge100$ (so $2r^{8}\\ge500r^{3}+10r^{5}$); $3r^{3}f\\le r^{7}$; $8nr\\le b$; $kf\\ge40$; $f\\ge4000\\,n$;\n\\item[(c)] $2f\\le2^{2\\varrho}$ and $2^{-\\varrho}\\le b^{-6}$;\n\\item[(d)] $(200\\,f\\,k\\,\\anrd_E)^{1000}\\le b$ and $(25\\,n^{3}f\\,\\anrd_E)^{1000}\\le b$;\n\\item[(e)] $\\sqrt d\\le\\anrd_E$, and $n,r,f,\\sqrt d\\le b$; $M\\le b^{23}$;\n\\item[(f)] $\\binom{a+k-1}{k-1}^{f}\\le b^{2kf}$ (this bounds the dimension $d_\\infty=\\dim W_{\\lambda^X}$ of\n{\\cite[\\S14.3]{P46}}, a product of at most $f$ such binomial coefficients);\n\\item[(g)] $m\\Delta+r\\le\\kappa(\\tau)$ for all $\\tau$; $k+2b+2m\\Delta\\le b^{2}$ (this bounds every\nentry of $2\\varsigma_\\tau$, so that $L_\\tau:=\\max_i|2\\varsigma_{\\tau,i}|\\le b^{2}$); and\n$(r+1)^{4}(b^{2}+r+1+2n^{2})\\le b^{5}$.\n\\end{itemize}\n\\end{enumerate}",
+    "references_source": [
+      [
+        46,
+        "14.3"
+      ]
+    ],
+    "references_quote": [
+      [
+        46,
+        "14.3"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 3598,
+    "source": "46",
+    "number": "14.5",
+    "label": "au:free",
+    "type": "lemma",
+    "source_line": 3598,
+    "dest_line": 5562,
+    "equal_normalized": true,
+    "src": 46,
+    "source_body": "Let $n\\le2n_m$ and let $J\\subseteq K^\\circ$ consist of elements congruent to $1$ modulo every\nchosen place. Then $\\Gamma\\cap gJg^{-1}=1$ for all $g\\in G_f$.",
+    "quoted_body": "Let $n\\le2n_m$ and let $J\\subseteq K^\\circ$ consist of elements congruent to $1$ modulo every\nchosen place. Then $\\Gamma\\cap gJg^{-1}=1$ for all $g\\in G_f$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 554,
+    "source": "51",
+    "number": "2.1",
+    "label": "pb:KR",
+    "type": "lemma",
+    "source_line": 554,
+    "dest_line": 5567,
+    "equal_normalized": true,
+    "src": 51,
+    "source_body": "$K_R=K_U\\rtimes K_H$. The group $K_H$ consists of the elements of the stabiliser $K^\\circ$ of\n$\\auO_E^k$ in $H(\\auA_{E^+,f})$ whose last row is $\\equiv(0,\\dots,0,1)$ modulo $\\pi_N$, and\n$K_H\\cap J=J_X$.",
+    "quoted_body": "$K_R=K_U\\rtimes K_H$. The group $K_H$ consists of the elements of the stabiliser $K^\\circ$ of\n$\\auO_E^k$ in $H(\\auA_{E^+,f})$ whose last row is $\\equiv(0,\\dots,0,1)$ modulo $\\pi_N$, and\n$K_H\\cap J=J_X$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 1152,
+    "source": "51",
+    "number": "2.16",
+    "label": "pb:bessel",
+    "type": "definition",
+    "source_line": 1152,
+    "dest_line": 5573,
+    "equal_normalized": false,
+    "src": 51,
+    "source_body": "We say that \\emph{Bessel functions exist} for the data if there are a point $g_0\\in G_\\infty$, a\nlinear form $\\mathsf t$ on $W_{\\lambda^X}$, a constant $c_W>0$ and continuous functions\n$W_\\tau,W_\\tau^\\flat\\colon G_\\tau\\to\\pbW_\\tau$ $(\\tau\\in\\auPl)$ with the following properties, where\n$W(y)=\\bigotimes_\\tau W_\\tau(y_\\tau)$ and $W^\\flat(y)=\\bigotimes_\\tau W^\\flat_\\tau(y_\\tau)$ for\n$y\\in G_\\infty$.\n\\begin{enumerate}\n\\item[(B1)] $W_\\tau(uhy)=\\psi_\\tau(u)\\,\\tau_\\tau(h)\\,W_\\tau(y)$ for $u\\in U_\\tau$, $h\\in H_\\tau$,\nwhere $\\psi_\\tau$ is the component of $\\psi_\\infty$; and the same for $W_\\tau^\\flat$.\n\\item[(B2)] $\\|W_\\tau\\|$ is integrable and square-integrable on $U_\\tau\\backslash G_\\tau$, and\n$\\int_{U_\\tau\\backslash G_\\tau}\\|W_\\tau\\|^2=\\dim\\pbW_\\tau$.\n\\item[(B3)] For every class $c$ and $i\\in I$ the series $\\sum_{\\gamma\\in U_c\\backslash\\Gamma}\n\\bigl|W_i(\\gamma_\\infty g_\\infty)\\bigr|\\,\\pbone_{h_cJ}(\\gamma g_f)$ is bounded on $G(\\auA)$, where\n$U_c=U(E^+)\\cap h_cJh_c^{-1}$; and the function $P_{c,i}(g)=\\sum_{\\gamma\\in U_c\\backslash\\Gamma}W_i(\n\\gamma_\\infty g_\\infty)\\pbone_{h_cJ}(\\gamma g_f)$ belongs to $\\auAz$.\n\\item[(B4)] For every $\\varphi\\in\\auS$, as functions on $G(\\auA)$,\n\\[\n\\auP\\varphi(g)=c_W\\sum_{c\\in\\mathcal C}\\ \\sum_{\\gamma\\in U_c\\backslash\\Gamma}\\pbip{W(\\gamma_\\infty\ng_\\infty)}{\\varphi(h_c)}\\,\\pbone_{h_cJ}(\\gamma g_f),\n\\]\nwhere $\\auP$ is defined by $g_0$, $\\mathsf t$ and \\eqref{pb:eq-psi}. (Replacing $\\varphi(h_c)$ by\nthe value at $h_c$ of the translate of $\\varphi$ by a fixed central element of $H(\\auA_f)$ composes\n$\\auP$ with a unitary automorphism of $\\auS$ that commutes with $\\pbrpsi$, and changes nothing below.)\n\\item[(B5)] $W^\\flat_\\tau=\\chi_\\tau W_\\tau$ with\n$\\chi_\\tau(y)=\\max\\bigl(0,\\min(1,2-2\\ell_\\tau(y)/b^{6n+2})\\bigr)$, where\n$\\ell_\\tau(y)=\\inf_{s\\in R_\\tau}(\\|sy\\|_\\tau+1)$ and $\\|\\cdot\\|_\\tau$ is the operator norm of\nDefinition~\\ref{pbe:length}. So $\\chi_\\tau=1$ where $\\ell_\\tau\\le\\frac12b^{6n+2}$, $\\chi_\\tau=0$\nwhere $\\ell_\\tau\\ge b^{6n+2}$, and $\\chi_\\tau$ is continuous, $0\\le\\chi_\\tau\\le1$, and left\ninvariant under $R_\\tau$; in particular the support of $W^\\flat_\\tau$ is compact modulo $R_\\tau$.\n\\item[(B5$'$)] For each $\\tau$ there is a compact set $C_\\tau\\subset G_\\tau$ with\n$\\operatorname{supp}W^\\flat_\\tau\\subseteq U_\\tau C_\\tau$. (This follows from (B5): $\\chi_\\tau(y)\\ne0$ gives\n$s=uh\\in R_\\tau$ with $\\|sy\\|_\\tau<b^{6n+2}$, so $y\\in h^{-1}u^{-1}B=u'h^{-1}B$ with $u'=h^{-1}u^{-1}h\\in\nU_\\tau$ and $B$ the closed ball of radius $b^{6n+2}$ in $G_\\tau$; take $C_\\tau=H_\\tau B$, compact as\n$H_\\tau$ is compact.)\n\\end{enumerate}",
+    "quoted_body": "We say that \\emph{Bessel functions exist} for the data if there are a point $g_0\\in G_\\infty$, a\nlinear form $\\mathsf t$ on $W_{\\lambda^X}$, a constant $c_W>0$ and continuous functions\n$W_\\tau,W_\\tau^\\flat\\colon G_\\tau\\to\\pbW_\\tau$ $(\\tau\\in\\auPl)$ with the following properties, where\n$W(y)=\\bigotimes_\\tau W_\\tau(y_\\tau)$ and $W^\\flat(y)=\\bigotimes_\\tau W^\\flat_\\tau(y_\\tau)$ for\n$y\\in G_\\infty$.\n\\begin{enumerate}\n\\item[(B1)] $W_\\tau(uhy)=\\psi_\\tau(u)\\,\\tau_\\tau(h)\\,W_\\tau(y)$ for $u\\in U_\\tau$, $h\\in H_\\tau$,\nwhere $\\psi_\\tau$ is the component of $\\psi_\\infty$; and the same for $W_\\tau^\\flat$.\n\\item[(B2)] $\\|W_\\tau\\|$ is integrable and square-integrable on $U_\\tau\\backslash G_\\tau$, and\n$\\int_{U_\\tau\\backslash G_\\tau}\\|W_\\tau\\|^2=\\dim\\pbW_\\tau$.\n\\item[(B3)] For every class $c$ and $i\\in I$ the series $\\sum_{\\gamma\\in U_c\\backslash\\Gamma}\n\\bigl|W_i(\\gamma_\\infty g_\\infty)\\bigr|\\,\\pbone_{h_cJ}(\\gamma g_f)$ is bounded on $G(\\auA)$, where\n$U_c=U(E^+)\\cap h_cJh_c^{-1}$; and the function $P_{c,i}(g)=\\sum_{\\gamma\\in U_c\\backslash\\Gamma}W_i(\n\\gamma_\\infty g_\\infty)\\pbone_{h_cJ}(\\gamma g_f)$ belongs to $\\auAz$.\n\\item[(B4)] For every $\\varphi\\in\\auS$, as functions on $G(\\auA)$,\n\\[\n\\auP\\varphi(g)=c_W\\sum_{c\\in\\mathcal C}\\ \\sum_{\\gamma\\in U_c\\backslash\\Gamma}\\pbip{W(\\gamma_\\infty\ng_\\infty)}{\\varphi(h_c)}\\,\\pbone_{h_cJ}(\\gamma g_f),\n\\]\nwhere $\\auP$ is defined by $g_0$, $\\mathsf t$ and {\\cite[(4)]{P51}}. (Replacing $\\varphi(h_c)$ by\nthe value at $h_c$ of the translate of $\\varphi$ by a fixed central element of $H(\\auA_f)$ composes\n$\\auP$ with a unitary automorphism of $\\auS$ that commutes with $\\pbrpsi$, and changes nothing below.)\n\\item[(B5)] $W^\\flat_\\tau=\\chi_\\tau W_\\tau$ with\n$\\chi_\\tau(y)=\\max\\bigl(0,\\min(1,2-2\\ell_\\tau(y)/b^{6n+2})\\bigr)$, where\n$\\ell_\\tau(y)=\\inf_{s\\in R_\\tau}(\\|sy\\|_\\tau+1)$ and $\\|\\cdot\\|_\\tau$ is the operator norm of\n{\\cite[Definition~3.14]{P51}}. So $\\chi_\\tau=1$ where $\\ell_\\tau\\le\\frac12b^{6n+2}$, $\\chi_\\tau=0$\nwhere $\\ell_\\tau\\ge b^{6n+2}$, and $\\chi_\\tau$ is continuous, $0\\le\\chi_\\tau\\le1$, and left\ninvariant under $R_\\tau$; in particular the support of $W^\\flat_\\tau$ is compact modulo $R_\\tau$.\n\\item[(B5$'$)] For each $\\tau$ there is a compact set $C_\\tau\\subset G_\\tau$ with\n$\\operatorname{supp}W^\\flat_\\tau\\subseteq U_\\tau C_\\tau$. (This follows from (B5): $\\chi_\\tau(y)\\ne0$ gives\n$s=uh\\in R_\\tau$ with $\\|sy\\|_\\tau<b^{6n+2}$, so $y\\in h^{-1}u^{-1}B=u'h^{-1}B$ with $u'=h^{-1}u^{-1}h\\in\nU_\\tau$ and $B$ the closed ball of radius $b^{6n+2}$ in $G_\\tau$; take $C_\\tau=H_\\tau B$, compact as\n$H_\\tau$ is compact.)\n\\end{enumerate}",
+    "references_source": [
+      [
+        51,
+        "4"
+      ],
+      [
+        51,
+        "3.14"
+      ]
+    ],
+    "references_quote": [
+      [
+        51,
+        "4"
+      ],
+      [
+        51,
+        "3.14"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 1336,
+    "source": "51",
+    "number": "2.21",
+    "label": "pb:massratio",
+    "type": "lemma",
+    "source_line": 1336,
+    "dest_line": 5610,
+    "equal_normalized": true,
+    "src": 51,
+    "source_body": "For $l\\ge1$,\n\\[\n\\frac{\\pbmass_{l+1}}{\\pbmass_l}=\\Bigl(\\frac{\\aurd^{\\,l+1/2}\\;l!}{(2\\pi)^{l+1}}\\Bigr)^{f}\\cdot L\\bigl(\nl+1,\\chi_{E/E^+}^{\\,l+1}\\bigr),\n\\]\nwhere $\\chi_{E/E^+}$ is the quadratic character of $E/E^+$ and $L(s,\\chi^j_{E/E^+})$ means\n$\\zeta_{E^+}(s)$ for even $j$. In particular $\\bigl|\\log L(l+1,\\cdot)\\bigr|\\le f\\,2^{1-l}$ for\n$l\\ge2$.",
+    "quoted_body": "For $l\\ge1$,\n\\[\n\\frac{\\pbmass_{l+1}}{\\pbmass_l}=\\Bigl(\\frac{\\aurd^{\\,l+1/2}\\;l!}{(2\\pi)^{l+1}}\\Bigr)^{f}\\cdot L\\bigl(\nl+1,\\chi_{E/E^+}^{\\,l+1}\\bigr),\n\\]\nwhere $\\chi_{E/E^+}$ is the quadratic character of $E/E^+$ and $L(s,\\chi^j_{E/E^+})$ means\n$\\zeta_{E^+}(s)$ for even $j$. In particular $\\bigl|\\log L(l+1,\\cdot)\\bigr|\\le f\\,2^{1-l}$ for\n$l\\ge2$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 1777,
+    "source": "51",
+    "number": "3.6",
+    "label": "pbv:haar",
+    "type": "lemma",
+    "source_line": 1777,
+    "dest_line": 5621,
+    "equal_normalized": false,
+    "src": 51,
+    "source_body": "For every $\\tau$ and every $x\\in U_\\tau$ the left translation $u\\mapsto xu$ preserves $du_\\tau$. So $du_\\tau$\nis a Haar measure of $U_\\tau$ (a nilpotent Lie group, hence unimodular), and it is the Haar measure of\n{\\cite[Lemma~4.1]{P52}}\\,\\textup{(c)}: the two descriptions of $du_\\tau$ in \\textup{(Cv3)} agree.",
+    "quoted_body": "For every $\\tau$ and every $x\\in U_\\tau$ the left translation $u\\mapsto xu$ preserves $du_\\tau$. So $du_\\tau$\nis a Haar measure of $U_\\tau$ (a nilpotent Lie group, hence unimodular), and it is the Haar measure of\nLemma~\\ref{prp:heis}\\,\\textup{(c)}: the two descriptions of $du_\\tau$ in \\textup{(Cv3)} agree.",
+    "references_source": [
+      [
+        52,
+        "4.1"
+      ]
+    ],
+    "references_quote": [
+      [
+        52,
+        "4.1"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 2331,
+    "source": "51",
+    "number": "3.16",
+    "label": "pbe:ds",
+    "type": "theorem",
+    "source_line": 2331,
+    "dest_line": 5627,
+    "equal_normalized": true,
+    "src": 51,
+    "source_body": "For every $\\tau\\in\\auPl$:\n\\begin{enumerate}\n\\item[(DS1)] \\textup{(i)} $c_\\tau$ is continuous, $c_\\tau(g^{-1})=\\aubar{c_\\tau(g)}$ and $|c_\\tau|\n\\le1$. \\textup{(ii)} If $c_\\tau$ is integrable, then $\\int_{G_\\tau}e_\\tau(a)\\,c_\\tau(ga)\\,da=c_\\tau(g)$\nfor all $g\\in G_\\tau$, for the Haar measure $da$ for which $\\int_{G_\\tau}|c_\\tau|^2=\\pbdeg_\\tau^{-1}$.\n\\textup{(iii)} This Haar measure is the one that corresponds to the measure of mass $1$ on the\ncompact form $\\auU(r)$.\n\\item[(DS2)] $|c_\\tau(g)|\\le\\bigl(2/\\|g\\|\\bigr)^{\\,j+\\pbeq}$ for all $g\\in G_\\tau$ and all integers\n$0\\le j\\le r^7$.\n\\item[(DS3)] $\\pbdeg_\\tau\\cdot\\int_{G_\\tau}\\bigl(32/\\|g\\|\\bigr)^{\\pbeq}\\,dg\\le b^{99r^2}$.\n\\item[(DS4)] There are a point $x_\\tau\\in G_\\tau$ with $\\pbel_\\tau(x_\\tau)\\le b^{5n}$ and a unit\nvector $v_\\tau\\in\\pbW_\\tau$ such that\n\\[\n\\Bigl|\\int_{R_\\tau}c_\\tau(x_\\tau^{-1}s\\,x_\\tau)\\,\\pbip{v_\\tau}{\\pi_R(s)^{-1}v_\\tau}\\,ds\\Bigr|\\ \\ge\\\nb^{-60(r+k)^2}\\,\\pbvol(\\pbeB_{x_\\tau}).\n\\]\n\\end{enumerate}",
+    "quoted_body": "For every $\\tau\\in\\auPl$:\n\\begin{enumerate}\n\\item[(DS1)] \\textup{(i)} $c_\\tau$ is continuous, $c_\\tau(g^{-1})=\\aubar{c_\\tau(g)}$ and $|c_\\tau|\n\\le1$. \\textup{(ii)} If $c_\\tau$ is integrable, then $\\int_{G_\\tau}e_\\tau(a)\\,c_\\tau(ga)\\,da=c_\\tau(g)$\nfor all $g\\in G_\\tau$, for the Haar measure $da$ for which $\\int_{G_\\tau}|c_\\tau|^2=\\pbdeg_\\tau^{-1}$.\n\\textup{(iii)} This Haar measure is the one that corresponds to the measure of mass $1$ on the\ncompact form $\\auU(r)$.\n\\item[(DS2)] $|c_\\tau(g)|\\le\\bigl(2/\\|g\\|\\bigr)^{\\,j+\\pbeq}$ for all $g\\in G_\\tau$ and all integers\n$0\\le j\\le r^7$.\n\\item[(DS3)] $\\pbdeg_\\tau\\cdot\\int_{G_\\tau}\\bigl(32/\\|g\\|\\bigr)^{\\pbeq}\\,dg\\le b^{99r^2}$.\n\\item[(DS4)] There are a point $x_\\tau\\in G_\\tau$ with $\\pbel_\\tau(x_\\tau)\\le b^{5n}$ and a unit\nvector $v_\\tau\\in\\pbW_\\tau$ such that\n\\[\n\\Bigl|\\int_{R_\\tau}c_\\tau(x_\\tau^{-1}s\\,x_\\tau)\\,\\pbip{v_\\tau}{\\pi_R(s)^{-1}v_\\tau}\\,ds\\Bigr|\\ \\ge\\\nb^{-60(r+k)^2}\\,\\pbvol(\\pbeB_{x_\\tau}).\n\\]\n\\end{enumerate}",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 2376,
+    "source": "51",
+    "number": "3.18",
+    "label": "pbe:local",
+    "type": "proposition",
+    "source_line": 2376,
+    "dest_line": 5647,
+    "equal_normalized": false,
+    "src": 51,
+    "source_body": "Assume Theorem~\\ref{pbe:ds}. For $y\\in G_\\tau$ the integral\n\\[\nW^\\circ(y)=\\int_{R_\\tau}c_\\tau(x^{-1}sy)\\,\\pi_R(s)^{-1}v\\,ds\\ \\in\\pbW_\\tau\n\\]\nconverges absolutely, and:\n\\begin{enumerate}\n\\item[(a)] $W^\\circ$ is continuous, $\\|W^\\circ(y)\\|\\le16^{\\pbeq}\\pbvol(\\pbeB_x)$, and $W^\\circ(sy)=\n\\pi_R(s)W^\\circ(y)$ for $s\\in R_\\tau$.\n\\item[(b)] $c_\\tau$ is integrable on $G_\\tau$, $\\int_{G_\\tau}e_\\tau(a)W^\\circ(ya)\\,da=W^\\circ(y)$ for\nall $y$, and $\\int_{U_\\tau\\backslash G_\\tau}\\|W^\\circ\\|\\le\\int_{G_\\tau}|c_\\tau|$.\n\\item[(c)] \\emph{(The norm is a period.)} $\\displaystyle\\pbdeg_\\tau\\int_{U_\\tau\\backslash G_\\tau}\\|W^\n\\circ(y)\\|^2dy=\\pbip v{W^\\circ(x)}=\\int_{R_\\tau}c_\\tau(x^{-1}sx)\\pbip v{\\pi_R(s)^{-1}v}\\,ds$. In\nparticular this number is real and, by \\textup{(DS4)}, at least $b^{-60(r+k)^2}\\pbvol(\\pbeB_x)>0$.\n\\end{enumerate}\nLet $c_0>0$ be such that $W_\\tau:=c_0W^\\circ$ has $\\int_{U_\\tau\\backslash G_\\tau}\\|W_\\tau\\|^2=d_\\tau$,\nand $W_\\tau^\\flat:=\\chi_\\tau W_\\tau$ with $\\chi_\\tau$ as in \\eqref{pbe:eq-chi}. Put\n$\\mathsf A_\\tau(y)=c_0\\int_{R_\\tau}(2/\\|x^{-1}sy\\|)^{\\pbeq}ds$ and $\\mathsf a_\\tau=c_0\\,16^{\\pbeq}\\pbvol(\n\\pbeB_x)$. Then:\n\\begin{enumerate}\n\\item[(d)] $\\mathsf A_\\tau$ is continuous and left invariant under $R_\\tau$, $\\mathsf A_\\tau\\le\\mathsf\na_\\tau$, and\n\\[\n\\pbels_\\tau(y)^{3r^3f}\\,\\|W_\\tau(y)\\|\\le\\mathsf A_\\tau(y)\\quad(y\\in G_\\tau),\\qquad\\mathsf a_\\tau\\int_{\nU_\\tau\\backslash G_\\tau}\\mathsf A_\\tau\\le b^{400r^2}\\,d_\\tau .\n\\]\n\\item[(e)] $\\|W^\\flat_\\tau\\|\\le\\|W_\\tau\\|$, $W^\\flat_\\tau(y)=0$ unless $\\pbel_\\tau(y)\\le b^{6n+2}$, and\n$\\displaystyle\\int_{U_\\tau\\backslash G_\\tau}\\|W_\\tau^\\flat-W_\\tau\\|^2\\le b^{-2r^3f}\\,d_\\tau$.\n\\end{enumerate}",
+    "quoted_body": "Assume {\\cite[Theorem~3.16]{P51}}. For $y\\in G_\\tau$ the integral\n\\[\nW^\\circ(y)=\\int_{R_\\tau}c_\\tau(x^{-1}sy)\\,\\pi_R(s)^{-1}v\\,ds\\ \\in\\pbW_\\tau\n\\]\nconverges absolutely, and:\n\\begin{enumerate}\n\\item[(a)] $W^\\circ$ is continuous, $\\|W^\\circ(y)\\|\\le16^{\\pbeq}\\pbvol(\\pbeB_x)$, and $W^\\circ(sy)=\n\\pi_R(s)W^\\circ(y)$ for $s\\in R_\\tau$.\n\\item[(b)] $c_\\tau$ is integrable on $G_\\tau$, $\\int_{G_\\tau}e_\\tau(a)W^\\circ(ya)\\,da=W^\\circ(y)$ for\nall $y$, and $\\int_{U_\\tau\\backslash G_\\tau}\\|W^\\circ\\|\\le\\int_{G_\\tau}|c_\\tau|$.\n\\item[(c)] \\emph{(The norm is a period.)} $\\displaystyle\\pbdeg_\\tau\\int_{U_\\tau\\backslash G_\\tau}\\|W^\n\\circ(y)\\|^2dy=\\pbip v{W^\\circ(x)}=\\int_{R_\\tau}c_\\tau(x^{-1}sx)\\pbip v{\\pi_R(s)^{-1}v}\\,ds$. In\nparticular this number is real and, by \\textup{(DS4)}, at least $b^{-60(r+k)^2}\\pbvol(\\pbeB_x)>0$.\n\\end{enumerate}\nLet $c_0>0$ be such that $W_\\tau:=c_0W^\\circ$ has $\\int_{U_\\tau\\backslash G_\\tau}\\|W_\\tau\\|^2=d_\\tau$,\nand $W_\\tau^\\flat:=\\chi_\\tau W_\\tau$ with $\\chi_\\tau$ as in {\\cite[(23)]{P51}}. Put\n$\\mathsf A_\\tau(y)=c_0\\int_{R_\\tau}(2/\\|x^{-1}sy\\|)^{\\pbeq}ds$ and $\\mathsf a_\\tau=c_0\\,16^{\\pbeq}\\pbvol(\n\\pbeB_x)$. Then:\n\\begin{enumerate}\n\\item[(d)] $\\mathsf A_\\tau$ is continuous and left invariant under $R_\\tau$, $\\mathsf A_\\tau\\le\\mathsf\na_\\tau$, and\n\\[\n\\pbels_\\tau(y)^{3r^3f}\\,\\|W_\\tau(y)\\|\\le\\mathsf A_\\tau(y)\\quad(y\\in G_\\tau),\\qquad\\mathsf a_\\tau\\int_{\nU_\\tau\\backslash G_\\tau}\\mathsf A_\\tau\\le b^{400r^2}\\,d_\\tau .\n\\]\n\\item[(e)] $\\|W^\\flat_\\tau\\|\\le\\|W_\\tau\\|$, $W^\\flat_\\tau(y)=0$ unless $\\pbel_\\tau(y)\\le b^{6n+2}$, and\n$\\displaystyle\\int_{U_\\tau\\backslash G_\\tau}\\|W_\\tau^\\flat-W_\\tau\\|^2\\le b^{-2r^3f}\\,d_\\tau$.\n\\end{enumerate}",
+    "references_source": [
+      [
+        51,
+        "3.16"
+      ],
+      [
+        51,
+        "23"
+      ]
+    ],
+    "references_quote": [
+      [
+        51,
+        "3.16"
+      ],
+      [
+        51,
+        "23"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 2622,
+    "source": "51",
+    "number": "3.22",
+    "label": "pbe:bessel",
+    "type": "theorem",
+    "source_line": 2622,
+    "dest_line": 5678,
+    "equal_normalized": false,
+    "src": 51,
+    "source_body": "Assume Theorem~\\ref{pbe:ds}. Let $g_0=(x_\\tau)_\\tau$, let $\\mathsf t=\\bigotimes_\\tau v_\\tau\\in\\pbW$,\nregarded as a linear form on $W_{\\lambda^X}$, and let $W_\\tau$, $W_\\tau^\\flat$, $\\chi_\\tau$ be as in\nProposition~\\ref{pbe:local}. Then \\textup{(B1)--(B4)} of Definition~\\ref{pb:bessel} hold, with\n\\[\nc_W=\\frac{\\pbvol(R_0(\\auA_f)\\cap J)}{\\pbvol(J)}\\prod_\\tau\\frac{\\pbdeg_\\tau}{c_{0,\\tau}}>0,\n\\]\nand \\textup{(B5)} holds in the following exact form:\n\\begin{enumerate}\n\\item[(B5)] $W_\\tau^\\flat=\\chi_\\tau W_\\tau$, where $\\chi_\\tau(y)=\\max\\bigl(0,\\min(1,2-2\\pbel_\\tau(y)/\nb^{6n+2})\\bigr)$ and $\\pbel_\\tau(y)=\\inf_{s\\in R_\\tau}(\\|sy\\|_\\tau+1)$ is the length of\nDefinition~\\ref{pbe:length}.\n\\end{enumerate}\nMoreover:\n\\begin{enumerate}\n\\item[(B6)] \\emph{(Decay.)} \\eqref{pbe:eq-decay} holds, with $\\mathsf A$ continuous and left\ninvariant under $R_\\infty$.\n\\item[(B7)] \\emph{(Reproduction.)} $\\int_{G_\\tau}e_\\tau(a)W_\\tau(ya)\\,da=W_\\tau(y)$ for all $\\tau$\nand $y\\in G_\\tau$.\n\\end{enumerate}",
+    "quoted_body": "Assume {\\cite[Theorem~3.16]{P51}}. Let $g_0=(x_\\tau)_\\tau$, let $\\mathsf t=\\bigotimes_\\tau v_\\tau\\in\\pbW$,\nregarded as a linear form on $W_{\\lambda^X}$, and let $W_\\tau$, $W_\\tau^\\flat$, $\\chi_\\tau$ be as in\n{\\cite[Proposition~3.18]{P51}}. Then \\textup{(B1)--(B4)} of {\\cite[Definition~2.16]{P51}} hold, with\n\\[\nc_W=\\frac{\\pbvol(R_0(\\auA_f)\\cap J)}{\\pbvol(J)}\\prod_\\tau\\frac{\\pbdeg_\\tau}{c_{0,\\tau}}>0,\n\\]\nand \\textup{(B5)} holds in the following exact form:\n\\begin{enumerate}\n\\item[(B5)] $W_\\tau^\\flat=\\chi_\\tau W_\\tau$, where $\\chi_\\tau(y)=\\max\\bigl(0,\\min(1,2-2\\pbel_\\tau(y)/\nb^{6n+2})\\bigr)$ and $\\pbel_\\tau(y)=\\inf_{s\\in R_\\tau}(\\|sy\\|_\\tau+1)$ is the length of\n{\\cite[Definition~3.14]{P51}}.\n\\end{enumerate}\nMoreover:\n\\begin{enumerate}\n\\item[(B6)] \\emph{(Decay.)} {\\cite[(25)]{P51}} holds, with $\\mathsf A$ continuous and left\ninvariant under $R_\\infty$.\n\\item[(B7)] \\emph{(Reproduction.)} $\\int_{G_\\tau}e_\\tau(a)W_\\tau(ya)\\,da=W_\\tau(y)$ for all $\\tau$\nand $y\\in G_\\tau$.\n\\end{enumerate}",
+    "references_source": [
+      [
+        51,
+        "3.16"
+      ],
+      [
+        51,
+        "3.18"
+      ],
+      [
+        51,
+        "2.16"
+      ],
+      [
+        51,
+        "3.14"
+      ],
+      [
+        51,
+        "25"
+      ]
+    ],
+    "references_quote": [
+      [
+        51,
+        "3.16"
+      ],
+      [
+        51,
+        "3.18"
+      ],
+      [
+        51,
+        "2.16"
+      ],
+      [
+        51,
+        "3.14"
+      ],
+      [
+        51,
+        "25"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 3168,
+    "source": "51",
+    "number": "3.33",
+    "label": "pbm:pos",
+    "type": "lemma",
+    "source_line": 3168,
+    "dest_line": 5700,
+    "equal_normalized": false,
+    "src": 51,
+    "source_body": "Let $\\pbmD$ be a chain datum, $U=U_\\pbmD$, $\\psi=\\psi_\\pbmD$, $f=f_\\pbmD$ and $\\mathsf G=\\auGL(V)$.\n\\begin{enumerate}\n\\item[(a)] $f(h)$ is $\\#(U\\cap h^{-1}Uh)$ or $0$; in particular $f\\ge0$. Moreover $f(uhu')=f(h)$\nfor $u,u'\\in U$ and $f(h^{-1})=f(h)$.\n\\item[(b)] $f$ is of positive type on $\\mathsf G$ (in the sense of \\S\\ref{pb:ss-finite}).\n\\item[(c)] Let $\\tilde\\psi$ be $\\psi$ on $U$ and $0$ on $\\mathsf G\\smallsetminus U$, and\n$\\psi^{\\pbnat}(s)=(\\#\\mathsf G)^{-1}\\sum_{g\\in\\mathsf G}\\tilde\\psi(gsg^{-1})$. Then\n$\\sum_{s\\in\\mathsf G}|\\psi^{\\pbnat}(s)|^2=\\pbmPhi(\\pbmD)$.\n\\end{enumerate}",
+    "quoted_body": "Let $\\pbmD$ be a chain datum, $U=U_\\pbmD$, $\\psi=\\psi_\\pbmD$, $f=f_\\pbmD$ and $\\mathsf G=\\auGL(V)$.\n\\begin{enumerate}\n\\item[(a)] $f(h)$ is $\\#(U\\cap h^{-1}Uh)$ or $0$; in particular $f\\ge0$. Moreover $f(uhu')=f(h)$\nfor $u,u'\\in U$ and $f(h^{-1})=f(h)$.\n\\item[(b)] $f$ is of positive type on $\\mathsf G$ (in the sense of {\\cite[\\S2.3]{P51}}).\n\\item[(c)] Let $\\tilde\\psi$ be $\\psi$ on $U$ and $0$ on $\\mathsf G\\smallsetminus U$, and\n$\\psi^{\\pbnat}(s)=(\\#\\mathsf G)^{-1}\\sum_{g\\in\\mathsf G}\\tilde\\psi(gsg^{-1})$. Then\n$\\sum_{s\\in\\mathsf G}|\\psi^{\\pbnat}(s)|^2=\\pbmPhi(\\pbmD)$.\n\\end{enumerate}",
+    "references_source": [
+      [
+        51,
+        "2.3"
+      ]
+    ],
+    "references_quote": [
+      [
+        51,
+        "2.3"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 3396,
+    "source": "51",
+    "number": "3.39",
+    "label": "pbm:E4",
+    "type": "theorem",
+    "source_line": 3396,
+    "dest_line": 5712,
+    "equal_normalized": false,
+    "src": 51,
+    "source_body": "Assume $b\\ge3$, $k\\ge2\\varrho^2+3$, $\\auNm w\\ge b^{10}$ for the chosen places $w$, and $18\\,\\varrho f\\le b^8$\n(these hold for the data of \\S\\ref{pb:ss-setting}: $\\varrho<2\\sqrt x$, $k\\ge x^5/2$, $f\\le x^{12}$, $p_i\\ge b^{10}$, and $b\\ge1000$ by {\\cite[Lemma~13.4(S1)]{P46}}). Then\n$\\sum_{s\\in\\auG}|\\psi^{\\pbnat}(s)|^2\\le2$.",
+    "quoted_body": "Assume $b\\ge3$, $k\\ge2\\varrho^2+3$, $\\auNm w\\ge b^{10}$ for the chosen places $w$, and $18\\,\\varrho f\\le b^8$\n(these hold for the data of {\\cite[\\S2.1]{P51}}: $\\varrho<2\\sqrt x$, $k\\ge x^5/2$, $f\\le x^{12}$, $p_i\\ge b^{10}$, and $b\\ge1000$ by {\\cite[Lemma~13.4(S1)]{P46}}). Then\n$\\sum_{s\\in\\auG}|\\psi^{\\pbnat}(s)|^2\\le2$.",
+    "references_source": [
+      [
+        51,
+        "2.1"
+      ],
+      [
+        46,
+        "13.4"
+      ]
+    ],
+    "references_quote": [
+      [
+        51,
+        "2.1"
+      ],
+      [
+        46,
+        "13.4"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 3450,
+    "source": "51",
+    "number": "3.41",
+    "label": "pbm:cell",
+    "type": "proposition",
+    "source_line": 3450,
+    "dest_line": 5718,
+    "equal_normalized": true,
+    "src": 51,
+    "source_body": "Let $\\gamma$ be a point of $G$ with values in $E^+$ or in a completion $E^+_v$; its matrix has\nentries in $F=E$ or $F=E\\otimes_{E^+}E^+_v$. Suppose that $\\delta_l(\\gamma)$ is invertible in $F$ for\n$1\\le l\\le\\varrho$. Then there are unique $u,u'\\in U$, a\nhead $p$ and $\\sigma\\in\\pbmGf$ with $\\gamma=u\\,w_p\\,\\sigma\\,u'$; moreover $p_a=\\delta_{a+1}(\\gamma)/\n\\delta_a(\\gamma)$ and $t(\\sigma)=\\delta_n(\\gamma)/\\delta_\\varrho(\\gamma)$. In particular $U\\cap\\gamma\nU\\gamma^{-1}=1$. The maps $\\gamma\\mapsto u,u',p,\\sigma$ are continuous on the open set where the\n$\\delta_l$, $l\\le\\varrho$, are invertible. If $v$ is a finite place, $\\gamma$ stabilises the lattice\nof $Y_0$ at $v$ and the $\\delta_l(\\gamma)$, $l\\le\\varrho$, are units at $v$, then $u$, $u'$,\n$\\sigma$ stabilise the lattice at $v$.",
+    "quoted_body": "Let $\\gamma$ be a point of $G$ with values in $E^+$ or in a completion $E^+_v$; its matrix has\nentries in $F=E$ or $F=E\\otimes_{E^+}E^+_v$. Suppose that $\\delta_l(\\gamma)$ is invertible in $F$ for\n$1\\le l\\le\\varrho$. Then there are unique $u,u'\\in U$, a\nhead $p$ and $\\sigma\\in\\pbmGf$ with $\\gamma=u\\,w_p\\,\\sigma\\,u'$; moreover $p_a=\\delta_{a+1}(\\gamma)/\n\\delta_a(\\gamma)$ and $t(\\sigma)=\\delta_n(\\gamma)/\\delta_\\varrho(\\gamma)$. In particular $U\\cap\\gamma\nU\\gamma^{-1}=1$. The maps $\\gamma\\mapsto u,u',p,\\sigma$ are continuous on the open set where the\n$\\delta_l$, $l\\le\\varrho$, are invertible. If $v$ is a finite place, $\\gamma$ stabilises the lattice\nof $Y_0$ at $v$ and the $\\delta_l(\\gamma)$, $l\\le\\varrho$, are units at $v$, then $u$, $u'$,\n$\\sigma$ stabilise the lattice at $v$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 3525,
+    "source": "51",
+    "number": "3.42",
+    "label": "pbm:orbit",
+    "type": "proposition",
+    "source_line": 3525,
+    "dest_line": 5730,
+    "equal_normalized": true,
+    "src": 51,
+    "source_body": "Let $\\gamma_0$ be in the big cell and\n\\[\n\\pbmKl_{c,s,c'}(\\gamma_0)=\\sum_{\\substack{u\\in U(E^+)/U_c,\\ u'\\in U(E^+)/U_{c'}\\\\ u^{-1}\\gamma_0u'\\in\\Gamma_{c,s,\nc'}}}\\psi_f(u)\\,\\aubar{\\psi_f(u')} .\n\\]\nIf $O(\\gamma_0)\\ne0$ the sum is finite and $\\pbmOrb_{c,s,c'}(\\gamma_0)=\\pbmKl_{c,s,c'}(\\gamma_0)\\cdot\nO(\\gamma_0)$; if $O(\\gamma_0)=0$ then $\\pbmOrb_{c,s,c'}(\\gamma_0)=0$.",
+    "quoted_body": "Let $\\gamma_0$ be in the big cell and\n\\[\n\\pbmKl_{c,s,c'}(\\gamma_0)=\\sum_{\\substack{u\\in U(E^+)/U_c,\\ u'\\in U(E^+)/U_{c'}\\\\ u^{-1}\\gamma_0u'\\in\\Gamma_{c,s,\nc'}}}\\psi_f(u)\\,\\aubar{\\psi_f(u')} .\n\\]\nIf $O(\\gamma_0)\\ne0$ the sum is finite and $\\pbmOrb_{c,s,c'}(\\gamma_0)=\\pbmKl_{c,s,c'}(\\gamma_0)\\cdot\nO(\\gamma_0)$; if $O(\\gamma_0)=0$ then $\\pbmOrb_{c,s,c'}(\\gamma_0)=0$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 3617,
+    "source": "51",
+    "number": "3.44",
+    "label": "pbm:system",
+    "type": "definition",
+    "source_line": 3617,
+    "dest_line": 5740,
+    "equal_normalized": true,
+    "src": 51,
+    "source_body": "Let $\\mathfrak P$ be a place, $\\pbmE\\ge0$, $\\beta\\colon C^\\times\\to[0,\\infty)$ and $\\Lambda_i\\colon\n(C^\\times)^i\\to[0,\\infty)$ for $0\\le i\\le\\varrho$. A \\emph{sieve system} at $\\mathfrak P$ with mass\n$\\pbmE$, weights $\\Lambda$ and decay $\\beta$ is a family of functions $J_i\\colon(C^\\times)^i\\times\n(C^\\times)^i\\to\\C$, $0\\le i\\le n=\\varrho+1$, such that:\n\\begin{enumerate}\n\\item[(S1)] for $0\\le i\\le\\varrho$, heads $p,q$ of length $i$ and $\\xi\\in C$, the function $c\\mapsto\n\\chi(\\xi c)J_{i+1}((p,c),(q,c))$ is integrable on $C$; $\\int_CJ_{i+1}((p,c),(q,c))\\,dc=J_i(p,q)$; and\n$\\bigl|\\int_C\\chi(\\xi c)J_{i+1}((p,c),(q,c))\\,dc\\bigr|\\le\\beta(\\xi)\\Lambda_i(p)\\Lambda_i(q)$ for\n$\\xi\\in C^\\times$;\n\\item[(S2)] for heads $p^{(1)},\\dots,p^{(\\kappa)}$ of length $\\varrho$ and $t\\in C^\\times$ the matrix\n$\\bigl(J_n((p^{(a)},t),(p^{(b)},t))\\bigr)_{a,b}$ is hermitian and positive semidefinite;\n\\item[(S3)] $J_n$ is continuous;\n\\item[(S4)] $|J_0|\\le\\pbmE$;\n\\item[(S5)] for $1\\le i\\le\\varrho$ and heads $p,q$ of length $i$ such that $\\xi=\\iota(p_{i-1})-\\iota(\nq_{i-1})$ is a unit, $|J_i(p,q)|\\le\\beta(\\xi)\\Lambda_i(p)\\Lambda_i(q)$.\n\\end{enumerate}",
+    "quoted_body": "Let $\\mathfrak P$ be a place, $\\pbmE\\ge0$, $\\beta\\colon C^\\times\\to[0,\\infty)$ and $\\Lambda_i\\colon\n(C^\\times)^i\\to[0,\\infty)$ for $0\\le i\\le\\varrho$. A \\emph{sieve system} at $\\mathfrak P$ with mass\n$\\pbmE$, weights $\\Lambda$ and decay $\\beta$ is a family of functions $J_i\\colon(C^\\times)^i\\times\n(C^\\times)^i\\to\\C$, $0\\le i\\le n=\\varrho+1$, such that:\n\\begin{enumerate}\n\\item[(S1)] for $0\\le i\\le\\varrho$, heads $p,q$ of length $i$ and $\\xi\\in C$, the function $c\\mapsto\n\\chi(\\xi c)J_{i+1}((p,c),(q,c))$ is integrable on $C$; $\\int_CJ_{i+1}((p,c),(q,c))\\,dc=J_i(p,q)$; and\n$\\bigl|\\int_C\\chi(\\xi c)J_{i+1}((p,c),(q,c))\\,dc\\bigr|\\le\\beta(\\xi)\\Lambda_i(p)\\Lambda_i(q)$ for\n$\\xi\\in C^\\times$;\n\\item[(S2)] for heads $p^{(1)},\\dots,p^{(\\kappa)}$ of length $\\varrho$ and $t\\in C^\\times$ the matrix\n$\\bigl(J_n((p^{(a)},t),(p^{(b)},t))\\bigr)_{a,b}$ is hermitian and positive semidefinite;\n\\item[(S3)] $J_n$ is continuous;\n\\item[(S4)] $|J_0|\\le\\pbmE$;\n\\item[(S5)] for $1\\le i\\le\\varrho$ and heads $p,q$ of length $i$ such that $\\xi=\\iota(p_{i-1})-\\iota(\nq_{i-1})$ is a unit, $|J_i(p,q)|\\le\\beta(\\xi)\\Lambda_i(p)\\Lambda_i(q)$.\n\\end{enumerate}",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 3813,
+    "source": "51",
+    "number": "3.50",
+    "label": "pbm:sieve",
+    "type": "theorem",
+    "source_line": 3813,
+    "dest_line": 5759,
+    "equal_normalized": false,
+    "src": 51,
+    "source_body": "Assume $n\\ge3$, $b\\ge1000$, $2n\\le b$, $1\\le|\\kappa_\\tau|\\le b^{23}$ for all $\\tau$, $N\\le b^{60n}$\nand $\\aurd\\le b$. Let $T$ and $\\pbmT$ be as in Theorem~\\ref{pbm:abstract}, with $M^{-1}\\in\\pbmRT$. For\neach $\\tau\\in\\auPl$ let $(J^\\tau_i)$ be a sieve system at $(\\C,\\text{Lebesgue},e^{c-\\aubar c},w\\mapsto\nw^{-1})$ with mass $\\pbmE_\\tau$, weights $\\Lambda^\\infty$ and decay $\\beta^\\infty$, and let $(J^T_i)$\nbe a sieve system at $(E_T,dx,\\psi_T,w\\mapsto M^{-1}w^{-1})$ with mass $\\pbmE_T$, weights $\\Lambda^T$\nand decay $\\beta^T$. Then for every $\\mathsf U\\subseteq\\pbmT$\n\\[\n\\sum_{t\\in\\mathsf U}\\ \\sum_{p,q\\in\\pbmT^\\varrho}\\Rel\\Bigl(\\prod_\\tau J^\\tau_n\\bigl([p,t]_\\tau,[q,t]_\\tau\n\\bigr)\\cdot J^T_n\\bigl((p,t),(q,t)\\bigr)\\Bigr)\\le\\prod_{a=0}^{\\varrho}c_a\\cdot\\Bigl(\\prod_\\tau\\pbmE_\\tau\n\\cdot\\pbmE_T+b^{2403\\,n^9f}\\,\\pbmdec\\Bigr).\n\\]",
+    "quoted_body": "Assume $n\\ge3$, $b\\ge1000$, $2n\\le b$, $1\\le|\\kappa_\\tau|\\le b^{23}$ for all $\\tau$, $N\\le b^{60n}$\nand $\\aurd\\le b$. Let $T$ and $\\pbmT$ be as in {\\cite[Theorem~3.48]{P51}}, with $M^{-1}\\in\\pbmRT$. For\neach $\\tau\\in\\auPl$ let $(J^\\tau_i)$ be a sieve system at $(\\C,\\text{Lebesgue},e^{c-\\aubar c},w\\mapsto\nw^{-1})$ with mass $\\pbmE_\\tau$, weights $\\Lambda^\\infty$ and decay $\\beta^\\infty$, and let $(J^T_i)$\nbe a sieve system at $(E_T,dx,\\psi_T,w\\mapsto M^{-1}w^{-1})$ with mass $\\pbmE_T$, weights $\\Lambda^T$\nand decay $\\beta^T$. Then for every $\\mathsf U\\subseteq\\pbmT$\n\\[\n\\sum_{t\\in\\mathsf U}\\ \\sum_{p,q\\in\\pbmT^\\varrho}\\Rel\\Bigl(\\prod_\\tau J^\\tau_n\\bigl([p,t]_\\tau,[q,t]_\\tau\n\\bigr)\\cdot J^T_n\\bigl((p,t),(q,t)\\bigr)\\Bigr)\\le\\prod_{a=0}^{\\varrho}c_a\\cdot\\Bigl(\\prod_\\tau\\pbmE_\\tau\n\\cdot\\pbmE_T+b^{2403\\,n^9f}\\,\\pbmdec\\Bigr).\n\\]",
+    "references_source": [
+      [
+        51,
+        "3.48"
+      ]
+    ],
+    "references_quote": [
+      [
+        51,
+        "3.48"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 3890,
+    "source": "51",
+    "number": "3.51",
+    "label": "pbm:inputs",
+    "type": "theorem",
+    "source_line": 3890,
+    "dest_line": 5773,
+    "equal_normalized": false,
+    "src": 51,
+    "source_body": "Bessel functions exist for the data (Definition~\\ref{pb:bessel}), with \\textup{(B5$'$)}, and they\ncan be chosen, together with functions $J^\\tau_i$ $(\\tau\\in\\auPl)$ and $J^T_i$ $(0\\le i\\le n$; the\n$J^T_i$ depend on $T$, $\\mathsf A$, $\\mathsf d$ as in \\textup{(F)}$)$, such that the following\nholds, for the entry set $\\pbmT$ of \\S\\ref{pbm:ss-cell}.\n\\begin{enumerate}\n\\item[(R)] \\emph{(Real places.)} For every $\\tau\\in\\auPl$, $(J^\\tau_i)_{0\\le i\n\\le n}$ is a sieve system at the place $(\\C,\\text{Lebesgue},e^{c-\\aubar c},w\\mapsto w^{-1})$ with mass $(1+b^{-10})/\n\\pbdeg_\\tau$, weights $\\Lambda^\\infty$ and decay $\\beta^\\infty$; and its top form is the Gram form\n$J^\\tau_n(x,x')=\\langle\\mathsf N(x),\\mathsf N(x')\\rangle$ of the normalised orbital integrals of\n\\S\\ref{pbm:ss-remains} ({\\cite[Theorem~2.17\\,(R-b)]{P52}}).\n\\item[(F)] \\emph{(Finite places.)} Let $T$ be a finite set of finite places of $E$, stable under\nconjugation, that contains the places above $MN$ and those at which some element of the set\n$\\mathsf B$ of \\S\\ref{pbm:ss-cell} is not a unit. For every set $\\mathsf A$ of chosen places above\n$p_0$ and every family $\\mathsf d$ of frame vectors, $(J^{T}_i)_{0\\le i\\le\nn}$ is a sieve system at the place $(E_T,dx,\\psi_T,w\\mapsto M^{-1}w^{-1})$ with mass $(1+b^{-6})\\,b^{-6k\\#\\mathsf A}$,\nweights $\\Lambda^T$ and decay $\\beta^T$.\n\\item[(S)] \\emph{(Siegel's step.)} Let $T$, $\\mathsf A$, $\\mathsf d$ be as in \\textup{(F)}, and let $J^T_n$\nbe the top form of \\textup{(F)} for the same $T$, $\\mathsf A$, $\\mathsf d$ (it is built from a group\n$\\mathsf Z(\\mathsf A,\\mathsf d)$ that contains the components at $T$ of the integral elements whose\nreductions lie in $\\pbFix(\\mathsf A,\\mathsf d)$; see {\\cite[Theorem~5.28]{P52}}). Let\n$(c_j,c_j',s_j,\\sigma_j)_{j\\in\\mathsf I}$ be a finite family of pairwise distinct quadruples of\nclasses $c_j,c_j'$, elements $s_j\\in\\pbFix(\\mathsf A,\\mathsf d)$ and $\\sigma_j\\in\\pbmGf(E^+)$ such\nthat the last entry $t_j=t(\\sigma_j)$ lies in $\\pbmT$, $|\\tau(t_j)|>N$ for all $\\tau$, and\n$h_{c_j}^{-1}\\sigma_jh_{c_j'}$ stabilises the lattice at every finite place outside $T$. Then\n\\[\n\\pbmrS^{\\,2}\\sum_{j\\in\\mathsf I}\\Bigl\\|\\sum_{p\\in\\pbmT^\\varrho}\\pbmOrb_{c_j,s_j,c_j'}(w_p\\sigma_j)\\Bigr\\|^2\\le\n(1+b^{-6})\\,\\pbmaS\\sum_{t\\in\\{t_j\\}}\\ \\sum_{p,q\\in\\pbmT^\\varrho}\\Rel\\Bigl(\\prod_\\tau J^\\tau_n\\bigl([p,t]_\\tau,\n[q,t]_\\tau\\bigr)\\,J^T_n\\bigl((p,t),(q,t)\\bigr)\\Bigr).\n\\]\n\\end{enumerate}",
+    "quoted_body": "Bessel functions exist for the data ({\\cite[Definition~2.16]{P51}}), with \\textup{(B5$'$)}, and they\ncan be chosen, together with functions $J^\\tau_i$ $(\\tau\\in\\auPl)$ and $J^T_i$ $(0\\le i\\le n$; the\n$J^T_i$ depend on $T$, $\\mathsf A$, $\\mathsf d$ as in \\textup{(F)}$)$, such that the following\nholds, for the entry set $\\pbmT$ of {\\cite[\\S3.3.2]{P51}}.\n\\begin{enumerate}\n\\item[(R)] \\emph{(Real places.)} For every $\\tau\\in\\auPl$, $(J^\\tau_i)_{0\\le i\n\\le n}$ is a sieve system at the place $(\\C,\\text{Lebesgue},e^{c-\\aubar c},w\\mapsto w^{-1})$ with mass $(1+b^{-10})/\n\\pbdeg_\\tau$, weights $\\Lambda^\\infty$ and decay $\\beta^\\infty$; and its top form is the Gram form\n$J^\\tau_n(x,x')=\\langle\\mathsf N(x),\\mathsf N(x')\\rangle$ of the normalised orbital integrals of\n{\\cite[\\S3.3.7]{P51}} (Theorem~\\ref{pfr:R}\\,(R-b)).\n\\item[(F)] \\emph{(Finite places.)} Let $T$ be a finite set of finite places of $E$, stable under\nconjugation, that contains the places above $MN$ and those at which some element of the set\n$\\mathsf B$ of {\\cite[\\S3.3.2]{P51}} is not a unit. For every set $\\mathsf A$ of chosen places above\n$p_0$ and every family $\\mathsf d$ of frame vectors, $(J^{T}_i)_{0\\le i\\le\nn}$ is a sieve system at the place $(E_T,dx,\\psi_T,w\\mapsto M^{-1}w^{-1})$ with mass $(1+b^{-6})\\,b^{-6k\\#\\mathsf A}$,\nweights $\\Lambda^T$ and decay $\\beta^T$.\n\\item[(S)] \\emph{(Siegel's step.)} Let $T$, $\\mathsf A$, $\\mathsf d$ be as in \\textup{(F)}, and let $J^T_n$\nbe the top form of \\textup{(F)} for the same $T$, $\\mathsf A$, $\\mathsf d$ (it is built from a group\n$\\mathsf Z(\\mathsf A,\\mathsf d)$ that contains the components at $T$ of the integral elements whose\nreductions lie in $\\pbFix(\\mathsf A,\\mathsf d)$; see Theorem~\\ref{pff:F}). Let\n$(c_j,c_j',s_j,\\sigma_j)_{j\\in\\mathsf I}$ be a finite family of pairwise distinct quadruples of\nclasses $c_j,c_j'$, elements $s_j\\in\\pbFix(\\mathsf A,\\mathsf d)$ and $\\sigma_j\\in\\pbmGf(E^+)$ such\nthat the last entry $t_j=t(\\sigma_j)$ lies in $\\pbmT$, $|\\tau(t_j)|>N$ for all $\\tau$, and\n$h_{c_j}^{-1}\\sigma_jh_{c_j'}$ stabilises the lattice at every finite place outside $T$. Then\n\\[\n\\pbmrS^{\\,2}\\sum_{j\\in\\mathsf I}\\Bigl\\|\\sum_{p\\in\\pbmT^\\varrho}\\pbmOrb_{c_j,s_j,c_j'}(w_p\\sigma_j)\\Bigr\\|^2\\le\n(1+b^{-6})\\,\\pbmaS\\sum_{t\\in\\{t_j\\}}\\ \\sum_{p,q\\in\\pbmT^\\varrho}\\Rel\\Bigl(\\prod_\\tau J^\\tau_n\\bigl([p,t]_\\tau,\n[q,t]_\\tau\\bigr)\\,J^T_n\\bigl((p,t),(q,t)\\bigr)\\Bigr).\n\\]\n\\end{enumerate}",
+    "references_source": [
+      [
+        51,
+        "2.16"
+      ],
+      [
+        51,
+        "3.3.2"
+      ],
+      [
+        51,
+        "3.3.7"
+      ],
+      [
+        52,
+        "2.17"
+      ],
+      [
+        51,
+        "3.3.2"
+      ],
+      [
+        52,
+        "5.28"
+      ]
+    ],
+    "references_quote": [
+      [
+        51,
+        "2.16"
+      ],
+      [
+        51,
+        "3.3.2"
+      ],
+      [
+        51,
+        "3.3.7"
+      ],
+      [
+        52,
+        "2.17"
+      ],
+      [
+        51,
+        "3.3.2"
+      ],
+      [
+        52,
+        "5.28"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 3928,
+    "source": "51",
+    "number": "3.52",
+    "label": "pbm:const",
+    "type": "lemma",
+    "source_line": 3928,
+    "dest_line": 5806,
+    "equal_normalized": true,
+    "src": 51,
+    "source_body": "Assume $k\\ge512000\\,n^9$, $n\\ge100$, $b\\ge1000$, $f\\le b/1000$, $1\\le|\\kappa_\\tau|$ for all\n$\\tau$, $M\\le b^{23}$, $N\\le b^{60n}$, $d\\le b^{2kf}$ and $\\prod_\\tau|\\kappa_\\tau|=(M\\aurd/2\\pi)^f$.\nThen:\n\\begin{enumerate}\n\\item[(C0)] $\\displaystyle\\pbmaS\\prod_{a=0}^{\\varrho}c_a\\le(1+b^{-9})\\,\\pbmrS^{\\,2}\\,\\pbdeg\\cdot\\pbDmain\\,\n\\pbmnuS^{\\,2}$;\n\\item[(C1)] $\\displaystyle\\pbmaS\\prod_{a=0}^{\\varrho}c_a\\cdot b^{2403\\,n^9f}\\,\\pbmdec\\le b^{-10}\\,b^{-6kf}\\,\n\\pbmrS^{\\,2}\\,\\pbDmain\\,\\pbmnuS^{\\,2}$.\n\\end{enumerate}",
+    "quoted_body": "Assume $k\\ge512000\\,n^9$, $n\\ge100$, $b\\ge1000$, $f\\le b/1000$, $1\\le|\\kappa_\\tau|$ for all\n$\\tau$, $M\\le b^{23}$, $N\\le b^{60n}$, $d\\le b^{2kf}$ and $\\prod_\\tau|\\kappa_\\tau|=(M\\aurd/2\\pi)^f$.\nThen:\n\\begin{enumerate}\n\\item[(C0)] $\\displaystyle\\pbmaS\\prod_{a=0}^{\\varrho}c_a\\le(1+b^{-9})\\,\\pbmrS^{\\,2}\\,\\pbdeg\\cdot\\pbDmain\\,\n\\pbmnuS^{\\,2}$;\n\\item[(C1)] $\\displaystyle\\pbmaS\\prod_{a=0}^{\\varrho}c_a\\cdot b^{2403\\,n^9f}\\,\\pbmdec\\le b^{-10}\\,b^{-6kf}\\,\n\\pbmrS^{\\,2}\\,\\pbDmain\\,\\pbmnuS^{\\,2}$.\n\\end{enumerate}",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 3994,
+    "source": "51",
+    "number": "3.53",
+    "label": "pbm:L2",
+    "type": "theorem",
+    "source_line": 3994,
+    "dest_line": 5818,
+    "equal_normalized": false,
+    "src": 51,
+    "source_body": "Assume Theorem~\\ref{pbm:inputs} and the inequalities on the data listed in Theorem~\\ref{pbm:sieve}\nand Lemma~\\ref{pbm:const}. Then, for the Bessel functions of Theorem~\\ref{pbm:inputs}, every set\n$\\mathsf A$ of chosen places above $p_0$ and every family $\\mathsf d$ of frame vectors,\n\\[\n\\pbLM\\bigl(\\{s\\in\\pbFix(\\mathsf A,\\mathsf d):s\\text{ open}\\}\\bigr)\\le(1+b^{-4})\\,b^{-6k\\#\\mathsf A}\\,\\pbDmain\n\\,\\nu^2 .\n\\]",
+    "quoted_body": "Assume {\\cite[Theorem~3.51]{P51}} and the inequalities on the data listed in {\\cite[Theorem~3.50]{P51}}\nand {\\cite[Lemma~3.52]{P51}}. Then, for the Bessel functions of {\\cite[Theorem~3.51]{P51}}, every set\n$\\mathsf A$ of chosen places above $p_0$ and every family $\\mathsf d$ of frame vectors,\n\\[\n\\pbLM\\bigl(\\{s\\in\\pbFix(\\mathsf A,\\mathsf d):s\\text{ open}\\}\\bigr)\\le(1+b^{-4})\\,b^{-6k\\#\\mathsf A}\\,\\pbDmain\n\\,\\nu^2 .\n\\]",
+    "references_source": [
+      [
+        51,
+        "3.51"
+      ],
+      [
+        51,
+        "3.50"
+      ],
+      [
+        51,
+        "3.52"
+      ],
+      [
+        51,
+        "3.51"
+      ]
+    ],
+    "references_quote": [
+      [
+        51,
+        "3.51"
+      ],
+      [
+        51,
+        "3.50"
+      ],
+      [
+        51,
+        "3.52"
+      ],
+      [
+        51,
+        "3.51"
+      ]
+    ],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 6801,
+    "source": "51",
+    "number": "7.2",
+    "label": "pbp:main",
+    "type": "theorem",
+    "source_line": 6801,
+    "dest_line": 5828,
+    "equal_normalized": true,
+    "src": 51,
+    "source_body": "There are $x_\\tau\\in G_\\tau$ with $\\pbel_\\tau(x_\\tau)\\le b^{5n}$ and a unit vector $v_\\tau\\in\n\\pbW_\\tau$ such that\n\\[\n\\pbvol(\\pbeB_{x_\\tau})\\le b^{60(r+k)^2}\\,\\Bigl|\\int_{R_\\tau}c_\\tau(x_\\tau^{-1}s\\,x_\\tau)\\,\n\\pbip{v_\\tau}{\\pi_R(s)^{-1}v_\\tau}\\,ds\\Bigr| .\n\\]",
+    "quoted_body": "There are $x_\\tau\\in G_\\tau$ with $\\pbel_\\tau(x_\\tau)\\le b^{5n}$ and a unit vector $v_\\tau\\in\n\\pbW_\\tau$ such that\n\\[\n\\pbvol(\\pbeB_{x_\\tau})\\le b^{60(r+k)^2}\\,\\Bigl|\\int_{R_\\tau}c_\\tau(x_\\tau^{-1}s\\,x_\\tau)\\,\n\\pbip{v_\\tau}{\\pi_R(s)^{-1}v_\\tau}\\,ds\\Bigr| .\n\\]",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 7062,
+    "source": "51",
+    "number": "7.12",
+    "label": "pbp:tb-witt",
+    "type": "lemma",
+    "source_line": 7062,
+    "dest_line": 5837,
+    "equal_normalized": true,
+    "src": 51,
+    "source_body": "Let $F$ be a field of characteristic $\\ne2$ with an involution $a\\mapsto\\aubar a$ \\textup(possibly\ntrivial\\textup), $F_0$ its fixed field, and $V,V'$ finite-dimensional $F$-spaces with non-degenerate\nhermitian forms $h,h'$ \\textup(linear in the first variable\\textup) that are isometric.\n\\textup{(a)} If $e\\in V$, $e'\\in V$ and $h(e,e)=h(e',e')\\ne0$, some isometry $g$ of $V$ has $ge=e'$.\n\\textup{(b)} Every injective linear isometry $\\phi\\colon S\\to V'$ from a subspace $S\\subseteq V$ extends to\na bijective isometry $V\\to V'$.",
+    "quoted_body": "Let $F$ be a field of characteristic $\\ne2$ with an involution $a\\mapsto\\aubar a$ \\textup(possibly\ntrivial\\textup), $F_0$ its fixed field, and $V,V'$ finite-dimensional $F$-spaces with non-degenerate\nhermitian forms $h,h'$ \\textup(linear in the first variable\\textup) that are isometric.\n\\textup{(a)} If $e\\in V$, $e'\\in V$ and $h(e,e)=h(e',e')\\ne0$, some isometry $g$ of $V$ has $ge=e'$.\n\\textup{(b)} Every injective linear isometry $\\phi\\colon S\\to V'$ from a subspace $S\\subseteq V$ extends to\na bijective isometry $V\\to V'$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 10235,
+    "source": "51",
+    "number": "8.80",
+    "label": "pbo:GF",
+    "type": "lemma",
+    "source_line": 10235,
+    "dest_line": 5846,
+    "equal_normalized": true,
+    "src": 51,
+    "source_body": "Let $dg$ be the Haar measure of \\textup{(DS1)(iii)} and $\\sigma$ a real-analytic section of $\\Phi$ near\n$\\mathsf J_1$ with $\\sigma(\\mathsf J_1)=1$ and invertible values (e.g.\\ $\\sigma(T)=(\\mathsf J_1T)^{1/2}$, the\npower series square root near $1$). Then $(g,T)\\mapsto g\\sigma(T)$ carries $\\frac{\\pboV(r)}{2^r}\\,dg\\,dT$ to\nLebesgue measure $dY$ on a neighbourhood of $G=\\{\\Phi=\\mathsf J_1\\}$. Consequently every measure\n$\\mu\\preceq\\lambda_1$ satisfies $\\mu\\le\\frac{\\pboV(r)}{2^r}dg$.",
+    "quoted_body": "Let $dg$ be the Haar measure of \\textup{(DS1)(iii)} and $\\sigma$ a real-analytic section of $\\Phi$ near\n$\\mathsf J_1$ with $\\sigma(\\mathsf J_1)=1$ and invertible values (e.g.\\ $\\sigma(T)=(\\mathsf J_1T)^{1/2}$, the\npower series square root near $1$). Then $(g,T)\\mapsto g\\sigma(T)$ carries $\\frac{\\pboV(r)}{2^r}\\,dg\\,dT$ to\nLebesgue measure $dY$ on a neighbourhood of $G=\\{\\Phi=\\mathsf J_1\\}$. Consequently every measure\n$\\mu\\preceq\\lambda_1$ satisfies $\\mu\\le\\frac{\\pboV(r)}{2^r}dg$.",
+    "references_source": [],
+    "references_quote": [],
+    "references_equal": true
+  },
+  {
+    "dest": "52",
+    "line": 10280,
+    "source": "51",
+    "number": "8.81",
+    "label": "pbo:append",
+    "type": "lemma",
+    "source_line": 10280,
+    "dest_line": 5854,
+    "equal_normalized": false,
+    "src": 51,
+    "source_body": "\\begin{enumerate}\n\\item[(a)] Let $E=(E_1|E_2)$ be a tuple split into two parts, let $\\mu\\preceq\\lambda_{E_1}$, and let\n$\\nu$ be a measure on the stabiliser $G_{E_1}$ of $E_1$ such that the image of $\\nu$ under $u\\mapsto\nuE_2$ is at most the fibre measure, over $(E_1^*\\mathsf J_1E_2,\\Phi(E_2))$, of the map $X\\mapsto(E_1^*\n\\mathsf J_1X,\\Phi(X))$ on tuples $X$ of the size of $E_2$. Then $\\mu*\\nu\\preceq\\lambda_E$.\n\\item[(b)] Let $\\mu\\preceq\\lambda_{\\pboF}$ and let $ds=du^0\\,dh$ be the measure on $\\pboR$, $du^0$ the\nHaar measure on $\\pboU$ that is the image of Lebesgue measure on the parameters $q=(\\beta,\\sigma)$\n($\\beta\\in M_{\\varrho\\times k}(\\C)$, $\\sigma$ real skew-hermitian coordinates)  $q$ of\n$u_q$ in \\eqref{pbo:eq-uq} below, and $dh$ of mass one. Then $\\mu*ds\\le\\frac{\\pboV(r)}{2^{\\varrho+1}\\pboV(k)}\\,dg$.\n\\end{enumerate}",
+    "quoted_body": "\\begin{enumerate}\n\\item[(a)] Let $E=(E_1|E_2)$ be a tuple split into two parts, let $\\mu\\preceq\\lambda_{E_1}$, and let\n$\\nu$ be a measure on the stabiliser $G_{E_1}$ of $E_1$ such that the image of $\\nu$ under $u\\mapsto\nuE_2$ is at most the fibre measure, over $(E_1^*\\mathsf J_1E_2,\\Phi(E_2))$, of the map $X\\mapsto(E_1^*\n\\mathsf J_1X,\\Phi(X))$ on tuples $X$ of the size of $E_2$. Then $\\mu*\\nu\\preceq\\lambda_E$.\n\\item[(b)] Let $\\mu\\preceq\\lambda_{\\pboF}$ and let $ds=du^0\\,dh$ be the measure on $\\pboR$, $du^0$ the\nHaar measure on $\\pboU$ that is the image of Lebesgue measure on the parameters $q=(\\beta,\\sigma)$\n($\\beta\\in M_{\\varrho\\times k}(\\C)$, $\\sigma$ real skew-hermitian coordinates)  $q$ of\n$u_q$ in {\\cite[(81)]{P51}} below, and $dh$ of mass one. Then $\\mu*ds\\le\\frac{\\pboV(r)}{2^{\\varrho+1}\\pboV(k)}\\,dg$.\n\\end{enumerate}",
+    "references_source": [
+      [
+        51,
+        "81"
+      ]
+    ],
+    "references_quote": [
+      [
+        51,
+        "81"
+      ]
+    ],
+    "references_equal": true
+  }
+]

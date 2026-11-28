@@ -1,0 +1,355 @@
+[2] 46->49
+ SOURCE \ref{ss:au-spaces}
+ QUOTE  \cite[\S14.3]{P46}
+
+[6] 46->49
+ SOURCE 
+ QUOTE  \cite[(42)]{P46} ; \cite[(43)]{P46}
+
+[7] 46->49
+ SOURCE \cite[Proposition~4.1]{P49} ; \cite[Lemma~4.4]{P49} ; \cite[Proposition~4.1]{P49}
+ QUOTE  \ref{pa:count} ; \ref{pa:schur} ; \ref{pa:count}
+
+[11] 46->49
+ SOURCE \eqref{eq:au-err} ; \cite[(68)]{P49} ; \cite[\S6.7]{P49} ; \cite[Lemma~6.21]{P49} ; \cite[\S4.5]{P49} ; \cite[Theorem~4.21(iv)]{P49}
+ QUOTE  \cite[(45)]{P46} ; \eqref{pl:eq-U} ; \ref{pl:ss-level} ; \ref{pl:level} ; \ref{pa:ss-divis} ; \ref{pa:divis}
+
+[22] 50->49
+ SOURCE \ref{ph:root} ; \ref{ph:count} ; \ref{ph:av} ; \eqref{ph:eq-A}
+ QUOTE  \cite[Propositions~2.10, 2.12 and~2.13]{P50} ; \cite[(5)]{P50} ; \cite[(4)]{P50}
+
+[28] 51->49
+ SOURCE \eqref{pm:eq-e}
+ QUOTE  \cite[(42)]{P51}
+
+[30] 51->49
+ SOURCE \eqref{pbr:eq-gap}
+ QUOTE  \cite[(49)]{P51}
+
+[34] 51->49
+ SOURCE \eqref{pds:eq-FJ} ; \cite[Theorem~3.17]{P49} ; \ref{pbe:ss-real}
+ QUOTE  \cite[(59)]{P51} ; \ref{pco:FJ} ; \cite[\S3.2.1]{P51}
+
+[39] 53->49
+ SOURCE \cite[\S5.1.4]{P54} ; \cite[Lemma~8.2]{P49} ; \cite[(41)]{P49} ; \cite[(41)]{P49}
+ QUOTE  \cite[\S5.1.4]{P54} ; \ref{pz:growth} ; \eqref{pk:eq-fock} ; \eqref{pk:eq-fock}
+
+[40] 53->49
+ SOURCE \ref{ptr:ss-chars} ; \ref{pcx:decay} ; \ref{pc:ss-exchange}
+ QUOTE  \cite[\S4.1.3]{P53} ; \cite[Proposition~3.26]{P53} ; \cite[\S2.6]{P53}
+
+[42] 53->49
+ SOURCE \ref{pgx:line}
+ QUOTE  \cite[Lemma~6.33]{P53}
+
+[45] 53->49
+ SOURCE \cite[\S5.1.1]{P49} ; \ref{pc:ss-data}
+ QUOTE  \ref{ps:ss-weil} ; \cite[\S2.3]{P53}
+
+[46] 53->49
+ SOURCE \cite[\S5.1.1]{P49} ; \ref{pgx:conv} ; \cite[\S5.1.3]{P49} ; \cite[\S\S2.5, 3.2 and~4.1.3]{P54}
+ QUOTE  \ref{ps:ss-weil} ; \cite[Definition~6.31]{P53} ; \ref{ps:ss-Y} ; \cite[\S\S2.5, 3.2 and~4.1.3]{P54}
+
+[47] 54->49
+ SOURCE \ref{pfq:roots} ; \ref{pfq:mu} ; \eqref{pfq:eq-compat} ; \ref{pfq:roots} ; \ref{pfq:mu} ; \eqref{pfq:eq-compat} ; \ref{pfq:roots}
+ QUOTE  \cite[Lemma~6.12(d)]{P54} ; \cite[Lemma~6.13]{P54} ; \cite[(39)]{P54} ; \cite[Lemma~6.12(d)]{P54} ; \cite[Lemma~6.13]{P54} ; \cite[(39)]{P54} ; \cite[Lemma~6.12(c)]{P54}
+
+[48] 54->49
+ SOURCE \cite[\S14.3]{P46} ; \ref{pfq:mu} ; \eqref{pfq:eq-compat} ; \ref{ppe:three} ; \ref{ppe:rem-T} ; \ref{po:ss-hecke} ; \ref{po:ss-hecke} ; \ref{pte:ss-third}
+ QUOTE  \cite[\S14.3]{P46} ; \cite[Lemma~6.13]{P54} ; \cite[(39)]{P54} ; \cite[Lemma~4.15]{P54} ; \cite[Remark~4.16]{P54} ; \cite[\S2.7]{P54} ; \cite[\S2.7]{P54} ; \cite[\S3.2.6]{P54}
+
+[54] 49->50
+ SOURCE \ref{pa:kernel} ; \ref{ps:branching} ; \cite[Proposition~14.25]{P46} ; \ref{pk:ss-kernel} ; \ref{pf:K1} ; \ref{pk:branching} ; \ref{ps:ss-glue} ; \ref{pl:level} ; \cite[Proposition~14.20]{P46}
+ QUOTE  \cite[Lemma~4.13]{P49} ; \cite[Lemma~5.6(c)]{P49} ; \cite[Proposition~14.25]{P46} ; \cite[\S5.2.9]{P49} ; \cite[Corollary~7.16]{P49} ; \cite[Proposition~5.24]{P49} ; \cite[\S5.1.6]{P49} ; \cite[Lemma~6.21]{P49} ; \cite[Proposition~14.20]{P46}
+
+[57] 46->53
+ SOURCE \ref{ss:au-spaces}
+ QUOTE  \cite[\S14.3]{P46}
+
+[59] 46->53
+ SOURCE 
+ QUOTE  \cite[(39)]{P46}
+
+[71] 46->53
+ SOURCE \cite[\S2.4]{P53} ; \cite[(9)]{P53}
+ QUOTE  \ref{pc:ss-rallis} ; \eqref{pc:eq-rho}
+
+[78] 49->53
+ SOURCE \ref{pwf:indep} ; \ref{pwf:indep} ; \cite[(4.1)--(4.5), Proposition~4.1]{KudlaSplitting} ; \ref{ps:ss-weil}
+ QUOTE  \cite[Lemma~2.2]{P49} ; \cite[Lemma~2.2]{P49} ; \cite[(4.1)--(4.5), Proposition~4.1]{KudlaSplitting} ; \cite[\S5.1.1]{P49}
+
+[82] 49->53
+ SOURCE \eqref{pl:eq-w5}
+ QUOTE  \cite[(62)]{P49}
+
+[87] 49->53
+ SOURCE \eqref{par:eq-osc} ; \ref{ps:ss-weil}
+ QUOTE  \cite[(12)]{P49} ; \cite[\S5.1.1]{P49}
+
+[88, 104] 49->53
+ SOURCE \ref{par:vac}
+ QUOTE  \cite[Lemma~3.6]{P49}
+
+[95] 49->53
+ SOURCE \ref{par:vac} ; \ref{par:A1}
+ QUOTE  \cite[Lemma~3.6]{P49} ; \cite[Theorem~3.2]{P49}
+
+[102] 49->53
+ SOURCE 
+ QUOTE  \cite[(16)]{P49} ; \cite[(17)]{P49}
+
+[105] 49->53
+ SOURCE \eqref{pl:eq-w5} ; \ref{pwf:W5} ; \ref{pk:ss-conv} ; \ref{pf:rem-flip-lattice}
+ QUOTE  \cite[(62)]{P49} ; \cite[Proposition~2.17]{P49} ; \cite[\S5.2.1]{P49} ; \cite[Remark~7.18]{P49}
+
+[112] 49->53
+ SOURCE \ref{ps:branching}
+ QUOTE  \cite[Lemma~5.6]{P49}
+
+[114] 49->53
+ SOURCE \ref{ps:conj}
+ QUOTE  \cite[Lemma~5.7]{P49}
+
+[115] 49->53
+ SOURCE \ref{pa:kernel} ; \ref{pf:std}
+ QUOTE  \cite[Lemma~4.13]{P49} ; \cite[Theorem~7.15]{P49}
+
+[119] 49->53
+ SOURCE 
+ QUOTE  \cite[(73)]{P49}
+
+[121] 49->53
+ SOURCE \ref{pk:ss-conv}
+ QUOTE  \cite[\S5.2.1]{P49}
+
+[126] 49->53
+ SOURCE \cite[\S14.3]{P46} ; \ref{ps:ss-Y}
+ QUOTE  \cite[\S14.3]{P46} ; \cite[\S5.1.3]{P49}
+
+[128] 49->53
+ SOURCE \ref{pk:conj} ; \ref{ps:conj} ; \cite[(35)]{P46} ; \cite[Definition~13.3]{P46}
+ QUOTE  \cite[Proposition~5.27]{P49} ; \cite[Lemma~5.7{\rm(ii)}]{P49} ; \cite[(35)]{P46} ; \cite[Definition~13.3]{P46}
+
+[129] 49->53
+ SOURCE \ref{pf:classes}
+ QUOTE  \cite[Proposition~7.20]{P49}
+
+[130] 51->53
+ SOURCE \ref{pm:arch} ; \ref{pm:ss-mult} ; \eqref{pm:eq-signs}
+ QUOTE  \cite[Theorem~4.1]{P51} ; \cite[\S4.1.8]{P51} ; \cite[(43)]{P51}
+
+[131] 51->53
+ SOURCE \eqref{pm:eq-e}
+ QUOTE  \cite[(42)]{P51}
+
+[136] 51->53
+ SOURCE \eqref{pm:eq-signs}
+ QUOTE  \cite[(43)]{P51}
+
+[140] 51->53
+ SOURCE \eqref{pds:eq-FJ} ; \cite[Theorem~3.17]{P49} ; \ref{pbe:ss-real}
+ QUOTE  \cite[(59)]{P51} ; \cite[Theorem~3.17]{P49} ; \cite[\S3.2.1]{P51}
+
+[145] 51->53
+ SOURCE \ref{pbp:third}
+ QUOTE  \cite[Lemma~7.16]{P51}
+
+[148] 51->53
+ SOURCE \ref{pbp:minorconj}
+ QUOTE  \cite[Proposition~7.19]{P51}
+
+[161] 54->53
+ SOURCE \eqref{po:eq-w5}
+ QUOTE  \cite[(1)]{P54}
+
+[162] 54->53
+ SOURCE \eqref{po:eq-H}
+ QUOTE  \cite[(11)]{P54}
+
+[164] 54->53
+ SOURCE \cite[\S2.3]{P53} ; \ref{po:ss-hecke}
+ QUOTE  \ref{pc:ss-data} ; \cite[\S2.7]{P54}
+
+[165] 54->53
+ SOURCE \cite[Proposition~2.16]{P53}
+ QUOTE  \ref{pc:rallis}
+
+[166] 54->53
+ SOURCE \cite[Lemma~2.14(b)]{P53}
+ QUOTE  \ref{pc:clean}
+
+[168] 54->53
+ SOURCE \cite[Proposition~3.11]{P49} ; \ref{plf:match}
+ QUOTE  \cite[Proposition~3.11]{P49} ; \cite[Lemma~4.5]{P54}
+
+[169] 54->53
+ SOURCE \ref{po:ss-set}
+ QUOTE  \cite[\S2.1]{P54}
+
+[172] 54->53
+ SOURCE \cite[Lemma~2.13]{P53} ; \cite[Lemma~2.13]{P53}
+ QUOTE  \ref{pc:SW} ; \ref{pc:SW}
+
+[174] 54->53
+ SOURCE \ref{psu:def-flat} ; \ref{pex:ss-set}
+ QUOTE  \cite[Definition~7.26]{P54} ; \cite[\S3.1.1]{P54}
+
+[176] 55->53
+ SOURCE \eqref{pg:eq-liftpoly} ; \cite[Proposition~14.27]{P46}
+ QUOTE  \cite[(10)]{P55} ; \cite[(1)]{P55} ; \cite[Proposition~14.27]{P46}
+
+[180] 46->54
+ SOURCE \ref{ss:au-spaces}
+ QUOTE  \cite[\S14.3]{P46}
+
+[185] 46->54
+ SOURCE 
+ QUOTE  \cite[(42)]{P46} ; \cite[(43)]{P46}
+
+[191] 46->54
+ SOURCE \cite[Definition~2.8]{P54} ; \cite[Definition~2.6]{P54} ; \cite[Lemma~2.2(L3)]{P54} ; \cite[Definition~2.19]{P54} ; \cite[Definition~2.22]{P54}
+ QUOTE  \ref{po:denom} ; \ref{po:false} ; \ref{po:facts} ; \ref{po:main} ; \ref{po:R3}
+
+[192] 46->54
+ SOURCE \cite[(11)]{P54} ; \cite[\S2.7]{P54}
+ QUOTE  \eqref{po:eq-H} ; \ref{po:ss-hecke}
+
+[195] 49->54
+ SOURCE \ref{ps:ss-weil}
+ QUOTE  \cite[\S5.1.1]{P49}
+
+[196] 49->54
+ SOURCE \cite[(30)]{P54}
+ QUOTE  \eqref{ptf:eq-compact}
+
+[197] 49->54
+ SOURCE \ref{pwf:delta-red} ; \cite[(30)]{P54}
+ QUOTE  \cite[Lemma~2.20]{P49} ; \eqref{ptf:eq-compact}
+
+[201] 49->54
+ SOURCE \eqref{par:eq-osc} ; \ref{ps:ss-weil}
+ QUOTE  \cite[(12)]{P49} ; \cite[\S5.1.1]{P49}
+
+[206] 49->54
+ SOURCE \ref{par:vac} ; \ref{par:A1}
+ QUOTE  \cite[Lemma~3.6]{P49} ; \cite[Theorem~3.2]{P49}
+
+[208] 49->54
+ SOURCE \ref{par:vac}
+ QUOTE  \cite[Lemma~3.6]{P49}
+
+[212] 49->54
+ SOURCE \ref{pa:param}
+ QUOTE  \cite[Lemma~4.6(b)]{P49}
+
+[213] 49->54
+ SOURCE \eqref{pa:eq-nf} ; \ref{pa:param}
+ QUOTE  \cite[(20)]{P49} ; \cite[Lemma~4.6(b)]{P49}
+
+[214] 49->54
+ SOURCE \cite[Proposition~14.25]{P46} ; \cite[\S14.8]{P46} ; \ref{pl:ss-norm} ; \ref{pk:K12} ; \ref{pf:K1} ; \ref{pa:product} ; \ref{pl:kernelN}
+ QUOTE  \cite[Proposition~14.25]{P46} ; \cite[\S14.8]{P46} ; \cite[\S6.1]{P49} ; \cite[Proposition~5.30]{P49} ; \cite[Corollary~7.16(a)]{P49} ; \cite[Proposition~4.12]{P49} ; \cite[Lemma~6.20]{P49}
+
+[215] 49->54
+ SOURCE \eqref{pl:eq-w5} ; \ref{pwf:W5} ; \ref{pk:ss-conv} ; \ref{pf:rem-flip-lattice}
+ QUOTE  \cite[(62)]{P49} ; \cite[Proposition~2.17]{P49} ; \cite[\S5.2.1]{P49} ; \cite[Remark~7.18]{P49}
+
+[218] 49->54
+ SOURCE \ref{pf:values}
+ QUOTE  \cite[Proposition~7.5]{P49}
+
+[220] 49->54
+ SOURCE \ref{ps:conj}
+ QUOTE  \cite[Lemma~5.7]{P49}
+
+[221] 49->54
+ SOURCE \ref{pa:kernel} ; \ref{pf:std}
+ QUOTE  \cite[Lemma~4.13]{P49} ; \cite[Theorem~7.15]{P49}
+
+[224] 49->54
+ SOURCE \ref{pl:vac}
+ QUOTE  \cite[Lemma~6.8]{P49}
+
+[225] 49->54
+ SOURCE \eqref{pa:eq-theta}
+ QUOTE  \cite[(27)]{P49}
+
+[228] 49->54
+ SOURCE \eqref{pf:eq-eps}
+ QUOTE  \cite[(70)]{P49}
+
+[234] 49->54
+ SOURCE 
+ QUOTE  \cite[(73)]{P49}
+
+[237] 49->54
+ SOURCE \ref{pa:kernel} ; \ref{pl:kernelN} ; \ref{pk:std} ; \ref{pa:kernel} ; \cite{KubertLang}
+ QUOTE  \cite[Lemma~4.13{\rm(K1)}]{P49} ; \cite[Lemma~6.20]{P49} ; \cite[Proposition~5.29{\rm(S3)}]{P49} ; \cite[Lemma~4.13{\rm(K2)}]{P49} ; \cite{KubertLang}
+
+[241] 49->54
+ SOURCE \cite[\S14.3]{P46} ; \ref{ps:ss-Y}
+ QUOTE  \cite[\S14.3]{P46} ; \cite[\S5.1.3]{P49}
+
+[242] 49->54
+ SOURCE \cite[\S14.3]{P46} ; \cite[Definition~6.14]{P54} ; \cite[Proposition~6.15]{P54}
+ QUOTE  \cite[\S14.3]{P46} ; \ref{pfq:def-chars} ; \ref{pfq:tame}
+
+[243] 49->54
+ SOURCE \ref{pk:conj} ; \ref{ps:conj} ; \cite[(35)]{P46} ; \cite[Definition~13.3]{P46}
+ QUOTE  \cite[Proposition~5.27]{P49} ; \cite[Lemma~5.7{\rm(ii)}]{P49} ; \cite[(35)]{P46} ; \cite[Definition~13.3]{P46}
+
+[244] 51->54
+ SOURCE \eqref{pm:eq-e}
+ QUOTE  \cite[(42)]{P51}
+
+[245] 51->54
+ SOURCE \eqref{pds:eq-FJ} ; \cite[Theorem~3.17]{P49} ; \ref{pbe:ss-real}
+ QUOTE  \cite[(59)]{P51} ; \cite[Theorem~3.17]{P49} ; \cite[\S3.2.1]{P51}
+
+[249] 53->54
+ SOURCE \ref{pc:ss-triangle}
+ QUOTE  \cite[\S2.5]{P53}
+
+[254] 53->54
+ SOURCE \ref{pc:arch}
+ QUOTE  \cite[Lemma~2.10]{P53}
+
+[257] 53->54
+ SOURCE \ref{pc:ss-data}
+ QUOTE  \cite[(12)]{P53} ; \cite[\S2.3]{P53}
+
+[258] 53->54
+ SOURCE \ref{pcx:X}
+ QUOTE  \cite[Theorem~3.2]{P53}
+
+[259] 53->54
+ SOURCE \ref{pc:ss-data}
+ QUOTE  \cite[\S2.3]{P53}
+
+[264] 53->54
+ SOURCE \cite[\S5.1.4]{P54} ; \cite[Lemma~8.2]{P49} ; \cite[(41)]{P49} ; \cite[(41)]{P49}
+ QUOTE  \ref{psp:ss-fock} ; \cite[Lemma~8.2]{P49} ; \cite[(41)]{P49} ; \cite[(41)]{P49}
+
+[265] 53->54
+ SOURCE \ref{pcx:superpos}
+ QUOTE  \cite[Lemma~3.30(b)]{P53}
+
+[266] 53->54
+ SOURCE \ref{pcx:decay} ; \eqref{pcx:eq-X}
+ QUOTE  \cite[Proposition~3.26]{P53} ; \cite[(12)]{P53}
+
+[267] 53->54
+ SOURCE \eqref{pcu:eq-psibeta}
+ QUOTE  \cite[(18)]{P53}
+
+[268] 53->54
+ SOURCE \ref{ptq:ss-coef}
+ QUOTE  \cite[\S4.2.1]{P53}
+
+[271] 53->54
+ SOURCE \cite[\S5.1.1]{P49} ; \ref{pc:ss-data}
+ QUOTE  \cite[\S5.1.1]{P49} ; \cite[\S2.3]{P53}
+
+[272] 53->54
+ SOURCE \cite[\S5.1.1]{P49} ; \ref{pgx:conv} ; \cite[\S5.1.3]{P49} ; \cite[\S\S2.5, 3.2 and~4.1.3]{P54}
+ QUOTE  \cite[\S5.1.1]{P49} ; \cite[Definition~6.31]{P53} ; \cite[\S5.1.3]{P49} ; \ref{po:ss-glue} ; \ref{pte:sec} ; \ref{plf:ss-KS}

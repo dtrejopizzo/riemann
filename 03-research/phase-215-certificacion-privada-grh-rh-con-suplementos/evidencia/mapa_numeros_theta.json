@@ -1,0 +1,7156 @@
+{
+  "55": {
+    "2.1": {
+      "label": "pg:def-den",
+      "line": 394,
+      "type": "definition"
+    },
+    "2.2": {
+      "label": "pg:main",
+      "line": 440,
+      "type": "theorem"
+    },
+    "2.3": {
+      "label": "pg:rem-R3",
+      "line": 462,
+      "type": "remark"
+    },
+    "2.4": {
+      "label": "pg:rem-primes",
+      "line": 474,
+      "type": "remark"
+    },
+    "2.5": {
+      "label": "pg:sums",
+      "line": 493,
+      "type": "lemma"
+    },
+    "2.6": {
+      "label": "pg:def-summand",
+      "line": 563,
+      "type": "definition"
+    },
+    "2.7": {
+      "label": "pg:def-sel",
+      "line": 591,
+      "type": "definition"
+    },
+    "2.8": {
+      "label": "pg:I",
+      "line": 611,
+      "type": "theorem"
+    },
+    "2.9": {
+      "label": "pg:II",
+      "line": 632,
+      "type": "theorem"
+    },
+    "2.10": {
+      "label": "pg:III",
+      "line": 648,
+      "type": "theorem"
+    },
+    "2.11": {
+      "label": "pg:line",
+      "line": 660,
+      "type": "lemma"
+    },
+    "2.12": {
+      "label": "pg:cyclic",
+      "line": 790,
+      "type": "lemma"
+    },
+    "2.13": {
+      "label": "pg:burnside",
+      "line": 805,
+      "type": "lemma"
+    },
+    "2.14": {
+      "label": "pg:roots1",
+      "line": 922,
+      "type": "lemma"
+    },
+    "2.15": {
+      "label": "pg:roots",
+      "line": 952,
+      "type": "proposition"
+    },
+    "2.16": {
+      "label": "pg:def-datum",
+      "line": 989,
+      "type": "definition"
+    },
+    "2.17": {
+      "label": "pg:beta",
+      "line": 1006,
+      "type": "lemma"
+    },
+    "2.18": {
+      "label": "pg:minor",
+      "line": 1060,
+      "type": "lemma"
+    },
+    "2.19": {
+      "label": "pg:tame",
+      "line": 1091,
+      "type": "lemma"
+    },
+    "2.20": {
+      "label": "pg:count",
+      "line": 1134,
+      "type": "lemma"
+    },
+    "2.21": {
+      "label": "pg:mirror",
+      "line": 1175,
+      "type": "proposition"
+    },
+    "2.22": {
+      "label": "pg:step",
+      "line": 1185,
+      "type": "proposition"
+    },
+    "2.23": {
+      "label": "pg:poly",
+      "line": 1195,
+      "type": "proposition"
+    },
+    "2.24": {
+      "label": "pg:stick",
+      "line": 1261,
+      "type": "proposition"
+    },
+    "2.25": {
+      "label": "pg:ribet",
+      "line": 1339,
+      "type": "proposition"
+    },
+    "2.26": {
+      "label": "pg:triangle",
+      "line": 1359,
+      "type": "proposition"
+    },
+    "2.27": {
+      "label": "pg:odd",
+      "line": 1373,
+      "type": "proposition"
+    },
+    "2.28": {
+      "label": "pg:loss",
+      "line": 1383,
+      "type": "proposition"
+    },
+    "2.29": {
+      "label": "pg:norm",
+      "line": 1408,
+      "type": "proposition"
+    },
+    "3.1": {
+      "label": "pse:conjgen",
+      "line": 1536,
+      "type": "lemma"
+    },
+    "3.2": {
+      "label": "pse:kpower",
+      "line": 1547,
+      "type": "lemma"
+    },
+    "3.3": {
+      "label": "pse:pairing",
+      "line": 1562,
+      "type": "lemma"
+    },
+    "3.4": {
+      "label": "pse:A",
+      "line": 1593,
+      "type": "proposition"
+    },
+    "3.5": {
+      "label": "pse:near",
+      "line": 1680,
+      "type": "lemma"
+    },
+    "3.6": {
+      "label": "pse:restrict",
+      "line": 1720,
+      "type": "lemma"
+    },
+    "3.7": {
+      "label": "pse:reciprocity",
+      "line": 1741,
+      "type": "lemma"
+    },
+    "3.8": {
+      "label": "pse:span",
+      "line": 1769,
+      "type": "lemma"
+    },
+    "3.9": {
+      "label": "pse:mirror",
+      "line": 1780,
+      "type": "proposition"
+    },
+    "3.10": {
+      "label": "pse:tilting",
+      "line": 1844,
+      "type": "lemma"
+    },
+    "3.11": {
+      "label": "pse:step",
+      "line": 1872,
+      "type": "proposition"
+    },
+    "3.12": {
+      "label": "pse:rem-poly",
+      "line": 1904,
+      "type": "remark"
+    },
+    "3.13": {
+      "label": "pse:eulerpoly",
+      "line": 2005,
+      "type": "lemma"
+    },
+    "3.14": {
+      "label": "pse:line",
+      "line": 2016,
+      "type": "lemma"
+    },
+    "3.15": {
+      "label": "pse:stick",
+      "line": 2051,
+      "type": "proposition"
+    },
+    "3.16": {
+      "label": "pse:rem-constants",
+      "line": 2078,
+      "type": "remark"
+    },
+    "4.1": {
+      "label": "pri:def-aux",
+      "line": 2164,
+      "type": "definition"
+    },
+    "4.2": {
+      "label": "pri:def-gen",
+      "line": 2179,
+      "type": "definition"
+    },
+    "4.3": {
+      "label": "pri:III",
+      "line": 2190,
+      "type": "theorem"
+    },
+    "4.4": {
+      "label": "pri:rem-compare",
+      "line": 2204,
+      "type": "remark"
+    },
+    "4.5": {
+      "label": "pri:loss",
+      "line": 2223,
+      "type": "proposition"
+    },
+    "4.6": {
+      "label": "pri:BL",
+      "line": 2260,
+      "type": "proposition"
+    },
+    "4.7": {
+      "label": "pri:block",
+      "line": 2281,
+      "type": "lemma"
+    },
+    "4.8": {
+      "label": "pri:forms",
+      "line": 2291,
+      "type": "lemma"
+    },
+    "4.9": {
+      "label": "pri:chain",
+      "line": 2303,
+      "type": "lemma"
+    },
+    "4.10": {
+      "label": "pri:odd",
+      "line": 2313,
+      "type": "proposition"
+    },
+    "4.11": {
+      "label": "pri:kummer",
+      "line": 2328,
+      "type": "proposition"
+    },
+    "4.12": {
+      "label": "pri:dict",
+      "line": 2358,
+      "type": "proposition"
+    },
+    "4.13": {
+      "label": "pri:fitt-basic",
+      "line": 2395,
+      "type": "lemma"
+    },
+    "4.14": {
+      "label": "pri:fitt-cost",
+      "line": 2412,
+      "type": "lemma"
+    },
+    "4.15": {
+      "label": "pri:def-cost",
+      "line": 2431,
+      "type": "definition"
+    },
+    "4.16": {
+      "label": "pri:fitt-triangle",
+      "line": 2442,
+      "type": "proposition"
+    },
+    "4.17": {
+      "label": "pri:amitsur",
+      "line": 2482,
+      "type": "lemma"
+    },
+    "4.18": {
+      "label": "pri:ribet-poly",
+      "line": 2498,
+      "type": "lemma"
+    },
+    "4.19": {
+      "label": "pri:ribet-elt",
+      "line": 2518,
+      "type": "proposition"
+    },
+    "4.20": {
+      "label": "pri:ribet",
+      "line": 2565,
+      "type": "proposition"
+    },
+    "4.21": {
+      "label": "(sin label)",
+      "line": 2669,
+      "type": "remark"
+    },
+    "4.22": {
+      "label": "pri:divisible",
+      "line": 2675,
+      "type": "lemma"
+    },
+    "4.23": {
+      "label": "pri:def-tri",
+      "line": 2695,
+      "type": "definition"
+    },
+    "4.24": {
+      "label": "pri:triangle",
+      "line": 2707,
+      "type": "proposition"
+    },
+    "4.25": {
+      "label": "(sin label)",
+      "line": 2782,
+      "type": "remark"
+    },
+    "4.26": {
+      "label": "pri:cost",
+      "line": 2789,
+      "type": "lemma"
+    },
+    "4.27": {
+      "label": "pri:columns",
+      "line": 2824,
+      "type": "proposition"
+    },
+    "4.28": {
+      "label": "pri:oneplace",
+      "line": 2900,
+      "type": "lemma"
+    },
+    "4.29": {
+      "label": "pri:norm",
+      "line": 2977,
+      "type": "proposition"
+    },
+    "4.30": {
+      "label": "pri:weak",
+      "line": 3040,
+      "type": "lemma"
+    },
+    "4.31": {
+      "label": "pri:TW",
+      "line": 3059,
+      "type": "lemma"
+    },
+    "5.1": {
+      "label": "pll:def",
+      "line": 3213,
+      "type": "definition"
+    },
+    "5.2": {
+      "label": "pll:main",
+      "line": 3268,
+      "type": "proposition"
+    },
+    "5.3": {
+      "label": "pll:D2",
+      "line": 3314,
+      "type": "lemma"
+    },
+    "5.4": {
+      "label": "pll:dual",
+      "line": 3354,
+      "type": "proposition"
+    },
+    "5.5": {
+      "label": "pll:ribet",
+      "line": 3408,
+      "type": "lemma"
+    },
+    "5.6": {
+      "label": "pll:exp",
+      "line": 3448,
+      "type": "lemma"
+    },
+    "5.7": {
+      "label": "pll:FL",
+      "line": 3470,
+      "type": "remark"
+    },
+    "5.8": {
+      "label": "pll:exponent",
+      "line": 3487,
+      "type": "theorem"
+    },
+    "5.9": {
+      "label": "pll:status",
+      "line": 3511,
+      "type": "remark"
+    },
+    "5.10": {
+      "label": "pll:sum",
+      "line": 3528,
+      "type": "lemma"
+    },
+    "6.1": {
+      "label": "pga:lit",
+      "line": 3618,
+      "type": "theorem"
+    },
+    "6.2": {
+      "label": "pga:G123",
+      "line": 3677,
+      "type": "proposition"
+    },
+    "6.3": {
+      "label": "pga:sign",
+      "line": 3742,
+      "type": "remark"
+    },
+    "6.4": {
+      "label": "pga:depth0",
+      "line": 3763,
+      "type": "lemma"
+    },
+    "6.5": {
+      "label": "pga:parahoric",
+      "line": 3881,
+      "type": "lemma"
+    },
+    "6.6": {
+      "label": "pga:G45",
+      "line": 3938,
+      "type": "proposition"
+    },
+    "6.7": {
+      "label": "pga:L",
+      "line": 4010,
+      "type": "proposition"
+    },
+    "6.8": {
+      "label": "pga:C",
+      "line": 4106,
+      "type": "proposition"
+    },
+    "6.9": {
+      "label": "pga:q2",
+      "line": 4175,
+      "type": "lemma"
+    },
+    "6.10": {
+      "label": "pga:M5",
+      "line": 4184,
+      "type": "proposition"
+    },
+    "6.11": {
+      "label": "pga:trace",
+      "line": 4217,
+      "type": "proposition"
+    },
+    "6.12": {
+      "label": "pga:weights",
+      "line": 4244,
+      "type": "proposition"
+    },
+    "7.1": {
+      "label": "pod:def-sha",
+      "line": 4371,
+      "type": "definition"
+    },
+    "7.2": {
+      "label": "pod:odd",
+      "line": 4382,
+      "type": "proposition"
+    },
+    "7.3": {
+      "label": "pod:rem-two",
+      "line": 4403,
+      "type": "remark"
+    },
+    "7.4": {
+      "label": "pod:coc",
+      "line": 4417,
+      "type": "lemma"
+    },
+    "7.5": {
+      "label": "pod:length",
+      "line": 4442,
+      "type": "lemma"
+    },
+    "7.6": {
+      "label": "pod:cft",
+      "line": 4459,
+      "type": "lemma"
+    },
+    "7.7": {
+      "label": "pod:hK",
+      "line": 4498,
+      "type": "lemma"
+    },
+    "7.8": {
+      "label": "pod:detect",
+      "line": 4511,
+      "type": "lemma"
+    },
+    "7.9": {
+      "label": "pod:kummer-b",
+      "line": 4542,
+      "type": "corollary"
+    },
+    "7.10": {
+      "label": "pod:rem-kummer-b",
+      "line": 4555,
+      "type": "remark"
+    },
+    "7.11": {
+      "label": "pod:rem-kummer-a",
+      "line": 4563,
+      "type": "remark"
+    },
+    "7.12": {
+      "label": "pod:e0",
+      "line": 4572,
+      "type": "lemma"
+    },
+    "7.13": {
+      "label": "pod:def-comp",
+      "line": 4584,
+      "type": "definition"
+    },
+    "7.14": {
+      "label": "pod:split",
+      "line": 4592,
+      "type": "lemma"
+    },
+    "7.15": {
+      "label": "pod:def-stick",
+      "line": 4642,
+      "type": "definition"
+    },
+    "7.16": {
+      "label": "pod:powersum",
+      "line": 4656,
+      "type": "lemma"
+    },
+    "7.17": {
+      "label": "pod:voronoi",
+      "line": 4669,
+      "type": "lemma"
+    },
+    "7.18": {
+      "label": "pod:L",
+      "line": 4689,
+      "type": "lemma"
+    },
+    "7.19": {
+      "label": "pod:X",
+      "line": 4705,
+      "type": "lemma"
+    },
+    "7.20": {
+      "label": "pod:hermite",
+      "line": 4740,
+      "type": "lemma"
+    },
+    "7.21": {
+      "label": "pod:stick",
+      "line": 4758,
+      "type": "lemma"
+    },
+    "7.22": {
+      "label": "pod:J",
+      "line": 4772,
+      "type": "lemma"
+    },
+    "7.23": {
+      "label": "pod:locals",
+      "line": 4804,
+      "type": "lemma"
+    },
+    "7.24": {
+      "label": "pod:artin",
+      "line": 4825,
+      "type": "lemma"
+    },
+    "7.25": {
+      "label": "pod:thetadiv",
+      "line": 4860,
+      "type": "lemma"
+    },
+    "7.26": {
+      "label": "pod:annih",
+      "line": 4879,
+      "type": "proposition"
+    },
+    "7.27": {
+      "label": "pod:kill",
+      "line": 4903,
+      "type": "corollary"
+    },
+    "7.28": {
+      "label": "pod:def-KS",
+      "line": 4921,
+      "type": "definition"
+    },
+    "7.29": {
+      "label": "pod:KS",
+      "line": 4930,
+      "type": "proposition"
+    },
+    "7.30": {
+      "label": "pod:equiv",
+      "line": 4961,
+      "type": "lemma"
+    },
+    "7.31": {
+      "label": "pod:shift",
+      "line": 4974,
+      "type": "lemma"
+    },
+    "7.32": {
+      "label": "pod:trivabove",
+      "line": 5090,
+      "type": "lemma"
+    },
+    "7.33": {
+      "label": "pod:recl",
+      "line": 5102,
+      "type": "lemma"
+    },
+    "7.34": {
+      "label": "pod:def-tight",
+      "line": 5136,
+      "type": "definition"
+    },
+    "7.35": {
+      "label": "pod:tight",
+      "line": 5141,
+      "type": "lemma"
+    },
+    "7.36": {
+      "label": "pod:finite",
+      "line": 5154,
+      "type": "lemma"
+    },
+    "7.37": {
+      "label": "pod:koly",
+      "line": 5176,
+      "type": "proposition"
+    },
+    "7.38": {
+      "label": "pod:rem-size",
+      "line": 5247,
+      "type": "remark"
+    },
+    "7.39": {
+      "label": "pku:basic",
+      "line": 5321,
+      "type": "lemma"
+    },
+    "7.40": {
+      "label": "pku:def-kummer",
+      "line": 5361,
+      "type": "definition"
+    },
+    "7.41": {
+      "label": "pku:rem-def",
+      "line": 5389,
+      "type": "remark"
+    },
+    "7.42": {
+      "label": "pku:main",
+      "line": 5399,
+      "type": "proposition"
+    },
+    "7.43": {
+      "label": "pku:pairing",
+      "line": 5447,
+      "type": "lemma"
+    },
+    "7.44": {
+      "label": "pku:def-sel",
+      "line": 5481,
+      "type": "definition"
+    },
+    "7.45": {
+      "label": "pku:local",
+      "line": 5505,
+      "type": "lemma"
+    },
+    "7.46": {
+      "label": "pku:relation",
+      "line": 5545,
+      "type": "lemma"
+    },
+    "7.47": {
+      "label": "pku:image",
+      "line": 5584,
+      "type": "lemma"
+    },
+    "7.48": {
+      "label": "pku:torsion",
+      "line": 5616,
+      "type": "lemma"
+    },
+    "7.49": {
+      "label": "pku:rem-source",
+      "line": 5697,
+      "type": "remark"
+    },
+    "7.50": {
+      "label": "pku:b",
+      "line": 5710,
+      "type": "proposition"
+    },
+    "7.51": {
+      "label": "pku:triangle",
+      "line": 5727,
+      "type": "proposition"
+    },
+    "7.52": {
+      "label": "pku:rem-tri-source",
+      "line": 5817,
+      "type": "remark"
+    },
+    "8.1": {
+      "label": "pax:amitsur",
+      "line": 5865,
+      "type": "proposition"
+    },
+    "8.2": {
+      "label": "pax:rem-amitsur",
+      "line": 5909,
+      "type": "remark"
+    },
+    "8.3": {
+      "label": "pax:tadic",
+      "line": 5947,
+      "type": "lemma"
+    },
+    "8.4": {
+      "label": "pax:rem-tadic",
+      "line": 5995,
+      "type": "remark"
+    },
+    "8.5": {
+      "label": "pax:rem-chain-sign",
+      "line": 6035,
+      "type": "remark"
+    },
+    "8.6": {
+      "label": "pax:free",
+      "line": 6070,
+      "type": "lemma"
+    },
+    "8.7": {
+      "label": "pax:rem-forms",
+      "line": 6155,
+      "type": "remark"
+    },
+    "8.8": {
+      "label": "pax:block",
+      "line": 6180,
+      "type": "lemma"
+    },
+    "8.9": {
+      "label": "pax:rem-block",
+      "line": 6210,
+      "type": "remark"
+    },
+    "8.10": {
+      "label": "pax:gram",
+      "line": 6231,
+      "type": "lemma"
+    },
+    "8.11": {
+      "label": "pax:pairing",
+      "line": 6248,
+      "type": "proposition"
+    },
+    "8.12": {
+      "label": "pax:Ueig",
+      "line": 6317,
+      "type": "lemma"
+    },
+    "8.13": {
+      "label": "pax:toproot",
+      "line": 6405,
+      "type": "lemma"
+    },
+    "8.14": {
+      "label": "pax:rem-BL",
+      "line": 6576,
+      "type": "remark"
+    },
+    "8.15": {
+      "label": "pax:sign",
+      "line": 6594,
+      "type": "proposition"
+    },
+    "8.16": {
+      "label": "pax:conv",
+      "line": 6642,
+      "type": "lemma"
+    },
+    "8.17": {
+      "label": "pay:lat",
+      "line": 6737,
+      "type": "lemma"
+    },
+    "8.18": {
+      "label": "pay:count",
+      "line": 6767,
+      "type": "lemma"
+    },
+    "8.19": {
+      "label": "pay:dual",
+      "line": 6806,
+      "type": "lemma"
+    },
+    "8.20": {
+      "label": "pay:UU",
+      "line": 6840,
+      "type": "lemma"
+    },
+    "8.21": {
+      "label": "pay:rec",
+      "line": 6852,
+      "type": "proposition"
+    },
+    "8.22": {
+      "label": "pay:rem-rec",
+      "line": 6888,
+      "type": "remark"
+    },
+    "8.23": {
+      "label": "pay:lin",
+      "line": 6903,
+      "type": "proposition"
+    },
+    "8.24": {
+      "label": "pay:chain",
+      "line": 6991,
+      "type": "theorem"
+    },
+    "8.25": {
+      "label": "pay:sym",
+      "line": 7020,
+      "type": "lemma"
+    },
+    "8.26": {
+      "label": "pay:roots",
+      "line": 7046,
+      "type": "corollary"
+    },
+    "8.27": {
+      "label": "pay:eta",
+      "line": 7092,
+      "type": "lemma"
+    },
+    "8.28": {
+      "label": "pay:product",
+      "line": 7126,
+      "type": "lemma"
+    },
+    "8.29": {
+      "label": "pay:rem-level",
+      "line": 7155,
+      "type": "remark"
+    },
+    "8.30": {
+      "label": "prm:tied",
+      "line": 7218,
+      "type": "lemma"
+    },
+    "8.31": {
+      "label": "prm:forms",
+      "line": 7247,
+      "type": "lemma"
+    },
+    "8.32": {
+      "label": "prm:unit",
+      "line": 7266,
+      "type": "lemma"
+    },
+    "8.33": {
+      "label": "prm:fittsum",
+      "line": 7299,
+      "type": "lemma"
+    },
+    "8.34": {
+      "label": "prm:block",
+      "line": 7309,
+      "type": "proposition"
+    },
+    "8.35": {
+      "label": "prm:chars",
+      "line": 7332,
+      "type": "proposition"
+    },
+    "8.36": {
+      "label": "prm:sep",
+      "line": 7371,
+      "type": "lemma"
+    },
+    "8.37": {
+      "label": "prm:coeff",
+      "line": 7380,
+      "type": "lemma"
+    },
+    "8.38": {
+      "label": "prm:rem-chars",
+      "line": 7425,
+      "type": "remark"
+    },
+    "8.39": {
+      "label": "prm:invariant",
+      "line": 7457,
+      "type": "lemma"
+    },
+    "8.40": {
+      "label": "prm:normb",
+      "line": 7472,
+      "type": "proposition"
+    },
+    "8.41": {
+      "label": "prm:rem-norm",
+      "line": 7507,
+      "type": "remark"
+    },
+    "8.42": {
+      "label": "prm:def-level",
+      "line": 7527,
+      "type": "definition"
+    },
+    "8.43": {
+      "label": "prm:level",
+      "line": 7545,
+      "type": "lemma"
+    },
+    "8.44": {
+      "label": "prm:label",
+      "line": 7606,
+      "type": "lemma"
+    },
+    "8.45": {
+      "label": "prm:inertia",
+      "line": 7662,
+      "type": "corollary"
+    },
+    "8.46": {
+      "label": "prm:rem-level",
+      "line": 7683,
+      "type": "remark"
+    }
+  },
+  "50": {
+    "2.1": {
+      "label": "ph:para",
+      "line": 363,
+      "type": "lemma"
+    },
+    "2.2": {
+      "label": "ph:thm",
+      "line": 396,
+      "type": "theorem"
+    },
+    "2.3": {
+      "label": "ph:col",
+      "line": 429,
+      "type": "lemma"
+    },
+    "2.4": {
+      "label": "ph:near",
+      "line": 451,
+      "type": "lemma"
+    },
+    "2.5": {
+      "label": "ph:sat",
+      "line": 500,
+      "type": "lemma"
+    },
+    "2.6": {
+      "label": "ph:fact",
+      "line": 536,
+      "type": "lemma"
+    },
+    "2.7": {
+      "label": "ph:null",
+      "line": 553,
+      "type": "lemma"
+    },
+    "2.8": {
+      "label": "ph:depth",
+      "line": 579,
+      "type": "proposition"
+    },
+    "2.9": {
+      "label": "ph:ends",
+      "line": 627,
+      "type": "proposition"
+    },
+    "2.10": {
+      "label": "ph:root",
+      "line": 661,
+      "type": "proposition"
+    },
+    "2.11": {
+      "label": "ph:AinC",
+      "line": 681,
+      "type": "lemma"
+    },
+    "2.12": {
+      "label": "ph:count",
+      "line": 687,
+      "type": "proposition"
+    },
+    "2.13": {
+      "label": "ph:av",
+      "line": 696,
+      "type": "proposition"
+    },
+    "2.14": {
+      "label": "ph:status-eldiv",
+      "line": 849,
+      "type": "remark"
+    },
+    "3.1": {
+      "label": "pe:lev",
+      "line": 906,
+      "type": "lemma"
+    },
+    "3.2": {
+      "label": "pe:root",
+      "line": 925,
+      "type": "proposition"
+    },
+    "3.3": {
+      "label": "pe:AinC",
+      "line": 1024,
+      "type": "lemma"
+    },
+    "3.4": {
+      "label": "pe:coord",
+      "line": 1071,
+      "type": "lemma"
+    },
+    "3.5": {
+      "label": "pe:inter",
+      "line": 1110,
+      "type": "lemma"
+    },
+    "3.6": {
+      "label": "pe:vol",
+      "line": 1120,
+      "type": "lemma"
+    },
+    "3.7": {
+      "label": "pe:flag",
+      "line": 1175,
+      "type": "lemma"
+    },
+    "3.8": {
+      "label": "pe:count",
+      "line": 1230,
+      "type": "proposition"
+    },
+    "3.9": {
+      "label": "pe:avg",
+      "line": 1259,
+      "type": "lemma"
+    },
+    "3.10": {
+      "label": "pe:subst",
+      "line": 1354,
+      "type": "lemma"
+    },
+    "3.11": {
+      "label": "pe:wd",
+      "line": 1385,
+      "type": "lemma"
+    },
+    "3.12": {
+      "label": "pe:av",
+      "line": 1430,
+      "type": "proposition"
+    },
+    "3.13": {
+      "label": "pe:status",
+      "line": 1532,
+      "type": "remark"
+    }
+  },
+  "54": {
+    "2.1": {
+      "label": "po:naut",
+      "line": 478,
+      "type": "lemma"
+    },
+    "2.2": {
+      "label": "po:facts",
+      "line": 544,
+      "type": "lemma"
+    },
+    "2.3": {
+      "label": "po:det",
+      "line": 587,
+      "type": "lemma"
+    },
+    "2.4": {
+      "label": "po:eig",
+      "line": 597,
+      "type": "lemma"
+    },
+    "2.5": {
+      "label": "po:adj",
+      "line": 628,
+      "type": "lemma"
+    },
+    "2.6": {
+      "label": "po:false",
+      "line": 667,
+      "type": "definition"
+    },
+    "2.7": {
+      "label": "po:proj",
+      "line": 682,
+      "type": "proposition"
+    },
+    "2.8": {
+      "label": "po:denom",
+      "line": 706,
+      "type": "definition"
+    },
+    "2.9": {
+      "label": "po:frame",
+      "line": 719,
+      "type": "lemma"
+    },
+    "2.10": {
+      "label": "po:prod",
+      "line": 754,
+      "type": "lemma"
+    },
+    "2.11": {
+      "label": "po:lattice",
+      "line": 807,
+      "type": "lemma"
+    },
+    "2.12": {
+      "label": "po:slice",
+      "line": 923,
+      "type": "lemma"
+    },
+    "2.13": {
+      "label": "po:ff",
+      "line": 973,
+      "type": "lemma"
+    },
+    "2.14": {
+      "label": "po:classes",
+      "line": 987,
+      "type": "lemma"
+    },
+    "2.15": {
+      "label": "po:exchange",
+      "line": 995,
+      "type": "proposition"
+    },
+    "2.16": {
+      "label": "po:span",
+      "line": 1019,
+      "type": "proposition"
+    },
+    "2.17": {
+      "label": "po:periods",
+      "line": 1027,
+      "type": "proposition"
+    },
+    "2.18": {
+      "label": "po:glue",
+      "line": 1061,
+      "type": "proposition"
+    },
+    "2.19": {
+      "label": "po:main",
+      "line": 1260,
+      "type": "definition"
+    },
+    "2.20": {
+      "label": "po:Hratio",
+      "line": 1266,
+      "type": "lemma"
+    },
+    "2.21": {
+      "label": "po:Hpos",
+      "line": 1286,
+      "type": "lemma"
+    },
+    "2.22": {
+      "label": "po:R3",
+      "line": 1379,
+      "type": "definition"
+    },
+    "2.23": {
+      "label": "po:rallis",
+      "line": 1395,
+      "type": "proposition"
+    },
+    "2.24": {
+      "label": "po:arch",
+      "line": 1411,
+      "type": "proposition"
+    },
+    "2.25": {
+      "label": "po:small",
+      "line": 1421,
+      "type": "proposition"
+    },
+    "2.26": {
+      "label": "po:mainheight",
+      "line": 1442,
+      "type": "proposition"
+    },
+    "3.1": {
+      "label": "pex:sharp",
+      "line": 1610,
+      "type": "lemma"
+    },
+    "3.2": {
+      "label": "pex:vac",
+      "line": 1639,
+      "type": "lemma"
+    },
+    "3.3": {
+      "label": "pex:arch",
+      "line": 1688,
+      "type": "lemma"
+    },
+    "3.4": {
+      "label": "pex:rallis",
+      "line": 1713,
+      "type": "proposition"
+    },
+    "3.5": {
+      "label": "pex:rem-rallis",
+      "line": 1786,
+      "type": "remark"
+    },
+    "3.6": {
+      "label": "pex:dint",
+      "line": 1827,
+      "type": "lemma"
+    },
+    "3.7": {
+      "label": "pex:points",
+      "line": 1866,
+      "type": "lemma"
+    },
+    "3.8": {
+      "label": "pex:IM",
+      "line": 1898,
+      "type": "proposition"
+    },
+    "3.9": {
+      "label": "pex:rem-IM",
+      "line": 1946,
+      "type": "remark"
+    },
+    "3.10": {
+      "label": "pex:iso",
+      "line": 1978,
+      "type": "lemma"
+    },
+    "3.11": {
+      "label": "pex:E1",
+      "line": 1991,
+      "type": "proposition"
+    },
+    "3.12": {
+      "label": "pex:IM1",
+      "line": 2038,
+      "type": "proposition"
+    },
+    "3.13": {
+      "label": "pte:average",
+      "line": 2178,
+      "type": "lemma"
+    },
+    "3.14": {
+      "label": "pte:polar",
+      "line": 2197,
+      "type": "lemma"
+    },
+    "3.15": {
+      "label": "pte:stackeval",
+      "line": 2224,
+      "type": "lemma"
+    },
+    "3.16": {
+      "label": "pte:explicit",
+      "line": 2238,
+      "type": "corollary"
+    },
+    "3.17": {
+      "label": "pte:rem-explicit",
+      "line": 2375,
+      "type": "remark"
+    },
+    "3.18": {
+      "label": "pte:matched",
+      "line": 2386,
+      "type": "lemma"
+    },
+    "3.19": {
+      "label": "pte:one",
+      "line": 2407,
+      "type": "lemma"
+    },
+    "3.20": {
+      "label": "pte:translates",
+      "line": 2440,
+      "type": "lemma"
+    },
+    "3.21": {
+      "label": "pte:conj",
+      "line": 2473,
+      "type": "lemma"
+    },
+    "3.22": {
+      "label": "pte:carrier",
+      "line": 2486,
+      "type": "proposition"
+    },
+    "3.23": {
+      "label": "pte:carrierprop",
+      "line": 2528,
+      "type": "lemma"
+    },
+    "3.24": {
+      "label": "pte:carriernz",
+      "line": 2544,
+      "type": "lemma"
+    },
+    "3.25": {
+      "label": "pte:third",
+      "line": 2715,
+      "type": "proposition"
+    },
+    "3.26": {
+      "label": "pte:column",
+      "line": 2760,
+      "type": "lemma"
+    },
+    "3.27": {
+      "label": "pte:rowstab",
+      "line": 2775,
+      "type": "lemma"
+    },
+    "3.28": {
+      "label": "pte:def-ff",
+      "line": 2797,
+      "type": "definition"
+    },
+    "3.29": {
+      "label": "pte:leftside",
+      "line": 2807,
+      "type": "proposition"
+    },
+    "3.30": {
+      "label": "pte:rem-final",
+      "line": 2835,
+      "type": "remark"
+    },
+    "3.31": {
+      "label": "ptf:theta",
+      "line": 2954,
+      "type": "lemma"
+    },
+    "3.32": {
+      "label": "ptf:weil",
+      "line": 2969,
+      "type": "lemma"
+    },
+    "3.33": {
+      "label": "ptf:rem-weil",
+      "line": 3020,
+      "type": "remark"
+    },
+    "3.34": {
+      "label": "ptf:conj",
+      "line": 3028,
+      "type": "lemma"
+    },
+    "3.35": {
+      "label": "ptf:rem-conj",
+      "line": 3062,
+      "type": "remark"
+    },
+    "3.36": {
+      "label": "ptf:fock",
+      "line": 3106,
+      "type": "lemma"
+    },
+    "3.37": {
+      "label": "ptf:SDlaw",
+      "line": 3141,
+      "type": "corollary"
+    },
+    "3.38": {
+      "label": "ptf:rem-fock",
+      "line": 3183,
+      "type": "remark"
+    },
+    "3.39": {
+      "label": "ptf:laplace",
+      "line": 3221,
+      "type": "lemma"
+    },
+    "3.40": {
+      "label": "ptf:sum",
+      "line": 3258,
+      "type": "lemma"
+    },
+    "3.41": {
+      "label": "ptf:def-ff",
+      "line": 3277,
+      "type": "definition"
+    },
+    "3.42": {
+      "label": "ptf:ff",
+      "line": 3292,
+      "type": "proposition"
+    },
+    "3.43": {
+      "label": "ptf:leftside",
+      "line": 3355,
+      "type": "proposition"
+    },
+    "3.44": {
+      "label": "ptf:H",
+      "line": 3398,
+      "type": "lemma"
+    },
+    "3.45": {
+      "label": "ptf:chi",
+      "line": 3424,
+      "type": "lemma"
+    },
+    "4.1": {
+      "label": "plf:classes",
+      "line": 3496,
+      "type": "lemma"
+    },
+    "4.2": {
+      "label": "plf:rem-classes",
+      "line": 3521,
+      "type": "remark"
+    },
+    "4.3": {
+      "label": "plf:A12",
+      "line": 3554,
+      "type": "lemma"
+    },
+    "4.4": {
+      "label": "plf:const",
+      "line": 3576,
+      "type": "lemma"
+    },
+    "4.5": {
+      "label": "plf:match",
+      "line": 3599,
+      "type": "lemma"
+    },
+    "4.6": {
+      "label": "plf:rem-mu",
+      "line": 3661,
+      "type": "remark"
+    },
+    "4.7": {
+      "label": "plf:harm",
+      "line": 3685,
+      "type": "lemma"
+    },
+    "4.8": {
+      "label": "plf:L4",
+      "line": 3700,
+      "type": "proposition"
+    },
+    "4.9": {
+      "label": "plf:rem-L4",
+      "line": 3754,
+      "type": "remark"
+    },
+    "4.10": {
+      "label": "plf:KS",
+      "line": 3792,
+      "type": "lemma"
+    },
+    "4.11": {
+      "label": "plf:rem-KS",
+      "line": 3903,
+      "type": "remark"
+    },
+    "4.12": {
+      "label": "plf:I",
+      "line": 3925,
+      "type": "lemma"
+    },
+    "4.13": {
+      "label": "ppe:main",
+      "line": 4027,
+      "type": "theorem"
+    },
+    "4.14": {
+      "label": "ppe:green",
+      "line": 4063,
+      "type": "lemma"
+    },
+    "4.15": {
+      "label": "ppe:three",
+      "line": 4099,
+      "type": "lemma"
+    },
+    "4.16": {
+      "label": "ppe:rem-T",
+      "line": 4124,
+      "type": "remark"
+    },
+    "4.17": {
+      "label": "ppe:normal",
+      "line": 4132,
+      "type": "lemma"
+    },
+    "4.18": {
+      "label": "ppe:special",
+      "line": 4176,
+      "type": "lemma"
+    },
+    "4.19": {
+      "label": "ppe:harm",
+      "line": 4198,
+      "type": "lemma"
+    },
+    "4.20": {
+      "label": "ppe:def-ratio",
+      "line": 4223,
+      "type": "definition"
+    },
+    "4.21": {
+      "label": "ppe:row",
+      "line": 4231,
+      "type": "lemma"
+    },
+    "4.22": {
+      "label": "ppe:bottom",
+      "line": 4245,
+      "type": "proposition"
+    },
+    "4.23": {
+      "label": "ppe:small",
+      "line": 4324,
+      "type": "lemma"
+    },
+    "4.24": {
+      "label": "ppe:transfer",
+      "line": 4337,
+      "type": "lemma"
+    },
+    "4.25": {
+      "label": "ppe:zero",
+      "line": 4364,
+      "type": "lemma"
+    },
+    "4.26": {
+      "label": "ppe:bdd",
+      "line": 4383,
+      "type": "lemma"
+    },
+    "4.27": {
+      "label": "ppe:tower",
+      "line": 4412,
+      "type": "proposition"
+    },
+    "4.28": {
+      "label": "ppe:rallis",
+      "line": 4439,
+      "type": "proposition"
+    },
+    "4.29": {
+      "label": "ppe:rem-used",
+      "line": 4556,
+      "type": "remark"
+    },
+    "4.30": {
+      "label": "ppe:rem-rankone",
+      "line": 4565,
+      "type": "remark"
+    },
+    "5.1": {
+      "label": "psp:main",
+      "line": 4697,
+      "type": "proposition"
+    },
+    "5.2": {
+      "label": "psp:sizes",
+      "line": 4737,
+      "type": "lemma"
+    },
+    "5.3": {
+      "label": "psp:inputs",
+      "line": 4764,
+      "type": "proposition"
+    },
+    "5.4": {
+      "label": "psp:int",
+      "line": 4831,
+      "type": "lemma"
+    },
+    "5.5": {
+      "label": "psp:geom",
+      "line": 4868,
+      "type": "lemma"
+    },
+    "5.6": {
+      "label": "psp:decay",
+      "line": 4892,
+      "type": "lemma"
+    },
+    "5.7": {
+      "label": "psp:pack",
+      "line": 4922,
+      "type": "lemma"
+    },
+    "5.8": {
+      "label": "psp:hom",
+      "line": 4947,
+      "type": "lemma"
+    },
+    "5.9": {
+      "label": "psp:prodtheta",
+      "line": 4968,
+      "type": "lemma"
+    },
+    "5.10": {
+      "label": "psp:avg",
+      "line": 4998,
+      "type": "lemma"
+    },
+    "5.11": {
+      "label": "psp:sparse",
+      "line": 5031,
+      "type": "proposition"
+    },
+    "5.12": {
+      "label": "psp:sparse2",
+      "line": 5072,
+      "type": "corollary"
+    },
+    "5.13": {
+      "label": "psp:isol",
+      "line": 5091,
+      "type": "proposition"
+    },
+    "5.14": {
+      "label": "psp:weights",
+      "line": 5137,
+      "type": "lemma"
+    },
+    "5.15": {
+      "label": "psp:step1",
+      "line": 5150,
+      "type": "lemma"
+    },
+    "5.16": {
+      "label": "psp:step2",
+      "line": 5175,
+      "type": "lemma"
+    },
+    "5.17": {
+      "label": "psp:approx",
+      "line": 5188,
+      "type": "proposition"
+    },
+    "5.18": {
+      "label": "psq:H12",
+      "line": 5302,
+      "type": "lemma"
+    },
+    "5.19": {
+      "label": "psq:transv",
+      "line": 5322,
+      "type": "lemma"
+    },
+    "5.20": {
+      "label": "psq:factor",
+      "line": 5334,
+      "type": "lemma"
+    },
+    "5.21": {
+      "label": "psq:bound",
+      "line": 5354,
+      "type": "lemma"
+    },
+    "5.22": {
+      "label": "psq:schwarz",
+      "line": 5391,
+      "type": "lemma"
+    },
+    "5.23": {
+      "label": "psq:analytic",
+      "line": 5401,
+      "type": "lemma"
+    },
+    "5.24": {
+      "label": "psq:peaks",
+      "line": 5425,
+      "type": "theorem"
+    },
+    "5.25": {
+      "label": "psq:Papp",
+      "line": 5463,
+      "type": "remark"
+    },
+    "5.26": {
+      "label": "psq:thetanorm",
+      "line": 5476,
+      "type": "lemma"
+    },
+    "5.27": {
+      "label": "psq:level",
+      "line": 5514,
+      "type": "remark"
+    },
+    "5.28": {
+      "label": "psq:degree",
+      "line": 5526,
+      "type": "lemma"
+    },
+    "5.29": {
+      "label": "psq:unitvac",
+      "line": 5561,
+      "type": "lemma"
+    },
+    "5.30": {
+      "label": "psq:param",
+      "line": 5603,
+      "type": "lemma"
+    },
+    "5.31": {
+      "label": "psq:GB",
+      "line": 5631,
+      "type": "lemma"
+    },
+    "5.32": {
+      "label": "psq:unique",
+      "line": 5650,
+      "type": "proposition"
+    },
+    "5.33": {
+      "label": "psq:mhol",
+      "line": 5668,
+      "type": "proposition"
+    },
+    "5.34": {
+      "label": "psq:H123",
+      "line": 5699,
+      "type": "theorem"
+    },
+    "5.35": {
+      "label": "psr:def-hol",
+      "line": 5784,
+      "type": "definition"
+    },
+    "5.36": {
+      "label": "psr:coef",
+      "line": 5797,
+      "type": "lemma"
+    },
+    "5.37": {
+      "label": "psr:neigh",
+      "line": 5843,
+      "type": "lemma"
+    },
+    "5.38": {
+      "label": "psr:local",
+      "line": 5908,
+      "type": "lemma"
+    },
+    "5.39": {
+      "label": "psr:series",
+      "line": 5943,
+      "type": "proposition"
+    },
+    "5.40": {
+      "label": "psr:SW",
+      "line": 5987,
+      "type": "lemma"
+    },
+    "5.41": {
+      "label": "psr:Egrowth",
+      "line": 6017,
+      "type": "lemma"
+    },
+    "5.42": {
+      "label": "psr:rallis",
+      "line": 6064,
+      "type": "proposition"
+    },
+    "5.43": {
+      "label": "psr:vanish",
+      "line": 6120,
+      "type": "corollary"
+    },
+    "5.44": {
+      "label": "psr:R",
+      "line": 6145,
+      "type": "theorem"
+    },
+    "5.45": {
+      "label": "psr:rem",
+      "line": 6214,
+      "type": "remark"
+    },
+    "5.46": {
+      "label": "pss:weyl",
+      "line": 6276,
+      "type": "lemma"
+    },
+    "5.47": {
+      "label": "pss:torus",
+      "line": 6305,
+      "type": "lemma"
+    },
+    "5.48": {
+      "label": "pss:cpt",
+      "line": 6327,
+      "type": "lemma"
+    },
+    "5.49": {
+      "label": "pss:ext",
+      "line": 6347,
+      "type": "lemma"
+    },
+    "5.50": {
+      "label": "pss:coefs",
+      "line": 6364,
+      "type": "corollary"
+    },
+    "5.51": {
+      "label": "pss:hol",
+      "line": 6390,
+      "type": "proposition"
+    },
+    "5.52": {
+      "label": "pss:minors",
+      "line": 6423,
+      "type": "corollary"
+    },
+    "5.53": {
+      "label": "pss:H5",
+      "line": 6439,
+      "type": "theorem"
+    },
+    "5.54": {
+      "label": "pss:b",
+      "line": 6493,
+      "type": "theorem"
+    },
+    "5.55": {
+      "label": "pss:bcor",
+      "line": 6511,
+      "type": "corollary"
+    },
+    "5.56": {
+      "label": "pss:carrier",
+      "line": 6524,
+      "type": "proposition"
+    },
+    "5.57": {
+      "label": "pss:a",
+      "line": 6548,
+      "type": "theorem"
+    },
+    "5.58": {
+      "label": "pss:status",
+      "line": 6561,
+      "type": "proposition"
+    },
+    "5.59": {
+      "label": "psv:order",
+      "line": 6619,
+      "type": "definition"
+    },
+    "5.60": {
+      "label": "psv:rows",
+      "line": 6637,
+      "type": "lemma"
+    },
+    "5.61": {
+      "label": "psv:hol4",
+      "line": 6660,
+      "type": "proposition"
+    },
+    "5.62": {
+      "label": "psv:minors",
+      "line": 6691,
+      "type": "corollary"
+    },
+    "5.63": {
+      "label": "psv:char",
+      "line": 6718,
+      "type": "lemma"
+    },
+    "5.64": {
+      "label": "psv:coords",
+      "line": 6745,
+      "type": "lemma"
+    },
+    "5.65": {
+      "label": "psv:c",
+      "line": 6773,
+      "type": "theorem"
+    },
+    "5.66": {
+      "label": "psv:datum",
+      "line": 6815,
+      "type": "proposition"
+    },
+    "5.67": {
+      "label": "psv:v",
+      "line": 6869,
+      "type": "lemma"
+    },
+    "5.68": {
+      "label": "psv:ybar",
+      "line": 6898,
+      "type": "theorem"
+    },
+    "5.69": {
+      "label": "psv:F",
+      "line": 6943,
+      "type": "theorem"
+    },
+    "5.70": {
+      "label": "psv:bounds",
+      "line": 6978,
+      "type": "proposition"
+    },
+    "5.71": {
+      "label": "psv:H4",
+      "line": 6997,
+      "type": "theorem"
+    },
+    "5.72": {
+      "label": "psv:split",
+      "line": 7010,
+      "type": "lemma"
+    },
+    "5.73": {
+      "label": "psv:main",
+      "line": 7049,
+      "type": "theorem"
+    },
+    "5.74": {
+      "label": "psv:G2",
+      "line": 7099,
+      "type": "remark"
+    },
+    "6.1": {
+      "label": "pfq:hook",
+      "line": 7199,
+      "type": "lemma"
+    },
+    "6.2": {
+      "label": "pfq:Q",
+      "line": 7247,
+      "type": "lemma"
+    },
+    "6.3": {
+      "label": "pfq:factor",
+      "line": 7287,
+      "type": "lemma"
+    },
+    "6.4": {
+      "label": "pfq:move",
+      "line": 7316,
+      "type": "lemma"
+    },
+    "6.5": {
+      "label": "pfq:proj",
+      "line": 7336,
+      "type": "lemma"
+    },
+    "6.6": {
+      "label": "pfq:rem-linear",
+      "line": 7358,
+      "type": "remark"
+    },
+    "6.7": {
+      "label": "pfq:rem-classes",
+      "line": 7371,
+      "type": "remark"
+    },
+    "6.8": {
+      "label": "pfq:def-ff",
+      "line": 7391,
+      "type": "definition"
+    },
+    "6.9": {
+      "label": "pfq:exchange",
+      "line": 7396,
+      "type": "proposition"
+    },
+    "6.10": {
+      "label": "pfq:ff",
+      "line": 7408,
+      "type": "theorem"
+    },
+    "6.11": {
+      "label": "pfq:rem-uses",
+      "line": 7490,
+      "type": "remark"
+    },
+    "6.12": {
+      "label": "pfq:roots",
+      "line": 7507,
+      "type": "lemma"
+    },
+    "6.13": {
+      "label": "pfq:mu",
+      "line": 7530,
+      "type": "lemma"
+    },
+    "6.14": {
+      "label": "pfq:def-chars",
+      "line": 7558,
+      "type": "definition"
+    },
+    "6.15": {
+      "label": "pfq:tame",
+      "line": 7571,
+      "type": "proposition"
+    },
+    "6.16": {
+      "label": "pfq:rem-pzmu",
+      "line": 7604,
+      "type": "remark"
+    },
+    "7.1": {
+      "label": "psm:small",
+      "line": 7668,
+      "type": "proposition"
+    },
+    "7.2": {
+      "label": "psm:def-val",
+      "line": 7755,
+      "type": "definition"
+    },
+    "7.3": {
+      "label": "psm:rules",
+      "line": 7766,
+      "type": "lemma"
+    },
+    "7.4": {
+      "label": "psm:units",
+      "line": 7800,
+      "type": "lemma"
+    },
+    "7.5": {
+      "label": "psm:six",
+      "line": 7826,
+      "type": "lemma"
+    },
+    "7.6": {
+      "label": "psm:param",
+      "line": 7851,
+      "type": "lemma"
+    },
+    "7.7": {
+      "label": "psm:katz",
+      "line": 7878,
+      "type": "lemma"
+    },
+    "7.8": {
+      "label": "psm:unitform",
+      "line": 7905,
+      "type": "lemma"
+    },
+    "7.9": {
+      "label": "psm:lambda",
+      "line": 7927,
+      "type": "lemma"
+    },
+    "7.10": {
+      "label": "psm:def-family",
+      "line": 7969,
+      "type": "definition"
+    },
+    "7.11": {
+      "label": "psm:coupling",
+      "line": 7981,
+      "type": "proposition"
+    },
+    "7.12": {
+      "label": "psm:nonsplit",
+      "line": 8063,
+      "type": "lemma"
+    },
+    "7.13": {
+      "label": "psm:sizes",
+      "line": 8087,
+      "type": "lemma"
+    },
+    "7.14": {
+      "label": "psm:near",
+      "line": 8107,
+      "type": "lemma"
+    },
+    "7.15": {
+      "label": "psm:twelve",
+      "line": 8133,
+      "type": "theorem"
+    },
+    "7.16": {
+      "label": "(sin label)",
+      "line": 8207,
+      "type": "remark"
+    },
+    "7.17": {
+      "label": "psm:attained",
+      "line": 8249,
+      "type": "theorem"
+    },
+    "7.18": {
+      "label": "pst:hsize",
+      "line": 8338,
+      "type": "lemma"
+    },
+    "7.19": {
+      "label": "pst:I1",
+      "line": 8371,
+      "type": "proposition"
+    },
+    "7.20": {
+      "label": "pst:torsion",
+      "line": 8409,
+      "type": "lemma"
+    },
+    "7.21": {
+      "label": "pst:iso",
+      "line": 8448,
+      "type": "lemma"
+    },
+    "7.22": {
+      "label": "pst:I2",
+      "line": 8459,
+      "type": "proposition"
+    },
+    "7.23": {
+      "label": "pst:I3",
+      "line": 8517,
+      "type": "proposition"
+    },
+    "7.24": {
+      "label": "pst:I4",
+      "line": 8584,
+      "type": "proposition"
+    },
+    "7.25": {
+      "label": "pst:attained",
+      "line": 8636,
+      "type": "corollary"
+    },
+    "7.26": {
+      "label": "psu:def-flat",
+      "line": 8700,
+      "type": "definition"
+    },
+    "7.27": {
+      "label": "psu:flat",
+      "line": 8714,
+      "type": "lemma"
+    },
+    "7.28": {
+      "label": "psu:def-I",
+      "line": 8757,
+      "type": "definition"
+    },
+    "7.29": {
+      "label": "psu:I",
+      "line": 8764,
+      "type": "lemma"
+    },
+    "7.30": {
+      "label": "psu:sizes",
+      "line": 8824,
+      "type": "lemma"
+    },
+    "7.31": {
+      "label": "psu:orth",
+      "line": 8841,
+      "type": "lemma"
+    },
+    "7.32": {
+      "label": "psu:pigeon",
+      "line": 8852,
+      "type": "lemma"
+    },
+    "7.33": {
+      "label": "psu:mean",
+      "line": 8862,
+      "type": "lemma"
+    },
+    "7.34": {
+      "label": "psu:vector",
+      "line": 8922,
+      "type": "lemma"
+    },
+    "7.35": {
+      "label": "psu:factor",
+      "line": 8941,
+      "type": "lemma"
+    },
+    "7.36": {
+      "label": "psu:integral",
+      "line": 9005,
+      "type": "lemma"
+    },
+    "7.37": {
+      "label": "psu:periods",
+      "line": 9018,
+      "type": "proposition"
+    },
+    "7.38": {
+      "label": "psu:orthfalse",
+      "line": 9070,
+      "type": "lemma"
+    },
+    "7.39": {
+      "label": "psu:pairing",
+      "line": 9089,
+      "type": "proposition"
+    },
+    "7.40": {
+      "label": "psu:small",
+      "line": 9118,
+      "type": "theorem"
+    },
+    "7.41": {
+      "label": "psu:normL",
+      "line": 9175,
+      "type": "lemma"
+    },
+    "7.42": {
+      "label": "psu:euler",
+      "line": 9197,
+      "type": "lemma"
+    },
+    "7.43": {
+      "label": "psu:arch",
+      "line": 9217,
+      "type": "theorem"
+    }
+  },
+  "53": {
+    "2.1": {
+      "label": "pc:heights",
+      "line": 407,
+      "type": "lemma"
+    },
+    "2.2": {
+      "label": "pc:C",
+      "line": 437,
+      "type": "proposition"
+    },
+    "2.3": {
+      "label": "pc:vol",
+      "line": 493,
+      "type": "lemma"
+    },
+    "2.4": {
+      "label": "pc:modulus",
+      "line": 502,
+      "type": "definition"
+    },
+    "2.5": {
+      "label": "pc:mod",
+      "line": 508,
+      "type": "lemma"
+    },
+    "2.6": {
+      "label": "pc:triangle",
+      "line": 522,
+      "type": "definition"
+    },
+    "2.7": {
+      "label": "pc:tri-inj",
+      "line": 557,
+      "type": "proposition"
+    },
+    "2.8": {
+      "label": "pc:tri-gram",
+      "line": 582,
+      "type": "proposition"
+    },
+    "2.9": {
+      "label": "pc:level",
+      "line": 705,
+      "type": "lemma"
+    },
+    "2.10": {
+      "label": "pc:arch",
+      "line": 749,
+      "type": "lemma"
+    },
+    "2.11": {
+      "label": "pc:series",
+      "line": 780,
+      "type": "lemma"
+    },
+    "2.12": {
+      "label": "pc:heckeclosure",
+      "line": 876,
+      "type": "lemma"
+    },
+    "2.13": {
+      "label": "pc:SW",
+      "line": 897,
+      "type": "lemma"
+    },
+    "2.14": {
+      "label": "pc:clean",
+      "line": 961,
+      "type": "lemma"
+    },
+    "2.15": {
+      "label": "pc:sharp",
+      "line": 1007,
+      "type": "definition"
+    },
+    "2.16": {
+      "label": "pc:rallis",
+      "line": 1017,
+      "type": "proposition"
+    },
+    "2.17": {
+      "label": "pc:rem-norm",
+      "line": 1108,
+      "type": "remark"
+    },
+    "2.18": {
+      "label": "pc:algpet",
+      "line": 1128,
+      "type": "lemma"
+    },
+    "2.19": {
+      "label": "pc:single",
+      "line": 1144,
+      "type": "proposition"
+    },
+    "2.20": {
+      "label": "pc:detcompare",
+      "line": 1188,
+      "type": "lemma"
+    },
+    "2.21": {
+      "label": "pc:tri",
+      "line": 1248,
+      "type": "theorem"
+    },
+    "2.22": {
+      "label": "pc:first",
+      "line": 1270,
+      "type": "proposition"
+    },
+    "2.23": {
+      "label": "pc:istriangle",
+      "line": 1297,
+      "type": "corollary"
+    },
+    "2.24": {
+      "label": "pc:index",
+      "line": 1335,
+      "type": "lemma"
+    },
+    "2.25": {
+      "label": "pc:pointlaw",
+      "line": 1439,
+      "type": "lemma"
+    },
+    "2.26": {
+      "label": "pc:next",
+      "line": 1481,
+      "type": "lemma"
+    },
+    "2.27": {
+      "label": "pc:X",
+      "line": 1511,
+      "type": "theorem"
+    },
+    "2.28": {
+      "label": "pc:auxcore",
+      "line": 1616,
+      "type": "theorem"
+    },
+    "3.1": {
+      "label": "pcx:def-matched",
+      "line": 1757,
+      "type": "definition"
+    },
+    "3.2": {
+      "label": "pcx:X",
+      "line": 1767,
+      "type": "theorem"
+    },
+    "3.3": {
+      "label": "pcx:Lpos",
+      "line": 1829,
+      "type": "lemma"
+    },
+    "3.4": {
+      "label": "pcx:cne0",
+      "line": 1843,
+      "type": "corollary"
+    },
+    "3.5": {
+      "label": "pcx:rem-e",
+      "line": 1851,
+      "type": "remark"
+    },
+    "3.6": {
+      "label": "pcx:def-large",
+      "line": 1879,
+      "type": "definition"
+    },
+    "3.7": {
+      "label": "pcx:def-std",
+      "line": 1892,
+      "type": "definition"
+    },
+    "3.8": {
+      "label": "pcx:def-ratio",
+      "line": 1903,
+      "type": "definition"
+    },
+    "3.9": {
+      "label": "pcx:def-RC",
+      "line": 1913,
+      "type": "definition"
+    },
+    "3.10": {
+      "label": "pcx:P-std",
+      "line": 1928,
+      "type": "proposition"
+    },
+    "3.11": {
+      "label": "pcx:P-top",
+      "line": 1937,
+      "type": "proposition"
+    },
+    "3.12": {
+      "label": "pcx:P-slice",
+      "line": 1945,
+      "type": "proposition"
+    },
+    "3.13": {
+      "label": "pcx:P-descent",
+      "line": 1951,
+      "type": "proposition"
+    },
+    "3.14": {
+      "label": "pcx:P-match",
+      "line": 1964,
+      "type": "proposition"
+    },
+    "3.15": {
+      "label": "pcx:P-flip",
+      "line": 1972,
+      "type": "proposition"
+    },
+    "3.16": {
+      "label": "pcx:P-equal",
+      "line": 1984,
+      "type": "proposition"
+    },
+    "3.17": {
+      "label": "pcx:P-nonvan",
+      "line": 1992,
+      "type": "proposition"
+    },
+    "3.18": {
+      "label": "pcx:P-plane",
+      "line": 1997,
+      "type": "proposition"
+    },
+    "3.19": {
+      "label": "pcx:P-signs",
+      "line": 2003,
+      "type": "proposition"
+    },
+    "3.20": {
+      "label": "pcx:P-matches",
+      "line": 2012,
+      "type": "proposition"
+    },
+    "3.21": {
+      "label": "pcx:adapted",
+      "line": 2035,
+      "type": "lemma"
+    },
+    "3.22": {
+      "label": "pcx:landherr",
+      "line": 2052,
+      "type": "lemma"
+    },
+    "3.23": {
+      "label": "pcx:std-matched",
+      "line": 2074,
+      "type": "lemma"
+    },
+    "3.24": {
+      "label": "pcx:mod",
+      "line": 2098,
+      "type": "lemma"
+    },
+    "3.25": {
+      "label": "pcx:twice",
+      "line": 2191,
+      "type": "lemma"
+    },
+    "3.26": {
+      "label": "pcx:decay",
+      "line": 2257,
+      "type": "proposition"
+    },
+    "3.27": {
+      "label": "pcx:def-ht",
+      "line": 2272,
+      "type": "definition"
+    },
+    "3.28": {
+      "label": "pcx:reduce",
+      "line": 2320,
+      "type": "lemma"
+    },
+    "3.29": {
+      "label": "pcx:thetagrowth",
+      "line": 2368,
+      "type": "lemma"
+    },
+    "3.30": {
+      "label": "pcx:superpos",
+      "line": 2408,
+      "type": "lemma"
+    },
+    "3.31": {
+      "label": "pcx:diffgain",
+      "line": 2469,
+      "type": "lemma"
+    },
+    "3.32": {
+      "label": "pcx:mean",
+      "line": 2521,
+      "type": "lemma"
+    },
+    "3.33": {
+      "label": "pcx:meanzero",
+      "line": 2579,
+      "type": "lemma"
+    },
+    "3.34": {
+      "label": "pcx:conv",
+      "line": 2639,
+      "type": "corollary"
+    },
+    "3.35": {
+      "label": "pcx:rem-conv",
+      "line": 2656,
+      "type": "remark"
+    },
+    "3.36": {
+      "label": "pcx:cosets",
+      "line": 2681,
+      "type": "lemma"
+    },
+    "3.37": {
+      "label": "pcx:rightinv",
+      "line": 2697,
+      "type": "lemma"
+    },
+    "3.38": {
+      "label": "pcx:def-section",
+      "line": 2716,
+      "type": "definition"
+    },
+    "3.39": {
+      "label": "pcx:section-laws",
+      "line": 2730,
+      "type": "lemma"
+    },
+    "3.40": {
+      "label": "pcx:linfactor",
+      "line": 2757,
+      "type": "lemma"
+    },
+    "3.41": {
+      "label": "pcx:generate",
+      "line": 2787,
+      "type": "lemma"
+    },
+    "3.42": {
+      "label": "pcx:Sact",
+      "line": 2814,
+      "type": "lemma"
+    },
+    "3.43": {
+      "label": "(sin label)",
+      "line": 2980,
+      "type": "remark"
+    },
+    "3.44": {
+      "label": "pcx:move",
+      "line": 2986,
+      "type": "lemma"
+    },
+    "3.45": {
+      "label": "pcx:const",
+      "line": 3008,
+      "type": "lemma"
+    },
+    "3.46": {
+      "label": "pcu:mixedmodel",
+      "line": 3114,
+      "type": "lemma"
+    },
+    "3.47": {
+      "label": "pcu:bump",
+      "line": 3166,
+      "type": "lemma"
+    },
+    "3.48": {
+      "label": "(sin label)",
+      "line": 3184,
+      "type": "remark"
+    },
+    "3.49": {
+      "label": "pcu:witt",
+      "line": 3257,
+      "type": "lemma"
+    },
+    "3.50": {
+      "label": "pcu:wittbump",
+      "line": 3275,
+      "type": "lemma"
+    },
+    "3.51": {
+      "label": "pcu:frame",
+      "line": 3296,
+      "type": "lemma"
+    },
+    "3.52": {
+      "label": "pcu:support",
+      "line": 3335,
+      "type": "lemma"
+    },
+    "3.53": {
+      "label": "pcu:product",
+      "line": 3347,
+      "type": "lemma"
+    },
+    "3.54": {
+      "label": "pcu:period",
+      "line": 3369,
+      "type": "lemma"
+    },
+    "3.55": {
+      "label": "pcu:W5slice",
+      "line": 3464,
+      "type": "lemma"
+    },
+    "3.56": {
+      "label": "pcu:finslice",
+      "line": 3501,
+      "type": "lemma"
+    },
+    "3.57": {
+      "label": "pcu:coeff",
+      "line": 3576,
+      "type": "lemma"
+    },
+    "3.58": {
+      "label": "pcu:selfdual",
+      "line": 3649,
+      "type": "proposition"
+    },
+    "3.59": {
+      "label": "pcu:gauss",
+      "line": 3680,
+      "type": "lemma"
+    },
+    "3.60": {
+      "label": "pcu:unimod",
+      "line": 3725,
+      "type": "lemma"
+    },
+    "3.61": {
+      "label": "pcu:rem-top",
+      "line": 3747,
+      "type": "remark"
+    },
+    "3.62": {
+      "label": "pcu:laws",
+      "line": 3766,
+      "type": "lemma"
+    },
+    "3.63": {
+      "label": "pcu:laws-local",
+      "line": 3825,
+      "type": "corollary"
+    },
+    "3.64": {
+      "label": "pcu:rowsurj",
+      "line": 3840,
+      "type": "lemma"
+    },
+    "3.65": {
+      "label": "pcu:rem-U1",
+      "line": 3938,
+      "type": "remark"
+    },
+    "3.66": {
+      "label": "pcu:orbitvol",
+      "line": 3950,
+      "type": "lemma"
+    },
+    "3.67": {
+      "label": "pcu:section",
+      "line": 3983,
+      "type": "lemma"
+    },
+    "3.68": {
+      "label": "pcu:moments",
+      "line": 4000,
+      "type": "lemma"
+    },
+    "3.69": {
+      "label": "pcu:integrable",
+      "line": 4048,
+      "type": "lemma"
+    },
+    "3.70": {
+      "label": "pcu:pm",
+      "line": 4172,
+      "type": "lemma"
+    },
+    "3.71": {
+      "label": "pcu:sing",
+      "line": 4201,
+      "type": "lemma"
+    },
+    "3.72": {
+      "label": "pcu:def-straight",
+      "line": 4256,
+      "type": "definition"
+    },
+    "3.73": {
+      "label": "pcu:bracket-int",
+      "line": 4265,
+      "type": "lemma"
+    },
+    "3.74": {
+      "label": "pcu:iwasawa",
+      "line": 4287,
+      "type": "lemma"
+    },
+    "3.75": {
+      "label": "pcu:straighten",
+      "line": 4316,
+      "type": "lemma"
+    },
+    "3.76": {
+      "label": "pcu:index",
+      "line": 4330,
+      "type": "lemma"
+    },
+    "3.77": {
+      "label": "pcu:slicedecay",
+      "line": 4420,
+      "type": "lemma"
+    },
+    "3.78": {
+      "label": "pcu:rem-descent",
+      "line": 4534,
+      "type": "remark"
+    },
+    "3.79": {
+      "label": "pct:def-line",
+      "line": 4696,
+      "type": "definition"
+    },
+    "3.80": {
+      "label": "pct:poisson",
+      "line": 4716,
+      "type": "lemma"
+    },
+    "3.81": {
+      "label": "pct:levi",
+      "line": 4730,
+      "type": "lemma"
+    },
+    "3.82": {
+      "label": "(sin label)",
+      "line": 4780,
+      "type": "remark"
+    },
+    "3.83": {
+      "label": "pct:slicedecay",
+      "line": 4794,
+      "type": "lemma"
+    },
+    "3.84": {
+      "label": "pct:def-cone",
+      "line": 4820,
+      "type": "definition"
+    },
+    "3.85": {
+      "label": "pct:plane",
+      "line": 4850,
+      "type": "theorem"
+    },
+    "3.86": {
+      "label": "pct:expand",
+      "line": 4894,
+      "type": "lemma"
+    },
+    "3.87": {
+      "label": "pct:unfold",
+      "line": 4933,
+      "type": "lemma"
+    },
+    "3.88": {
+      "label": "pct:gauss",
+      "line": 5002,
+      "type": "lemma"
+    },
+    "3.89": {
+      "label": "pct:factor",
+      "line": 5020,
+      "type": "lemma"
+    },
+    "3.90": {
+      "label": "pct:fintate",
+      "line": 5103,
+      "type": "lemma"
+    },
+    "3.91": {
+      "label": "pct:mellin",
+      "line": 5114,
+      "type": "lemma"
+    },
+    "3.92": {
+      "label": "pct:poisson-a",
+      "line": 5126,
+      "type": "lemma"
+    },
+    "3.93": {
+      "label": "pct:qref",
+      "line": 5211,
+      "type": "lemma"
+    },
+    "3.94": {
+      "label": "pct:SA",
+      "line": 5238,
+      "type": "lemma"
+    },
+    "3.95": {
+      "label": "pct:realmixed",
+      "line": 5338,
+      "type": "lemma"
+    },
+    "3.96": {
+      "label": "pct:zeroterm-equiv",
+      "line": 5369,
+      "type": "lemma"
+    },
+    "3.97": {
+      "label": "pct:smoothwitt",
+      "line": 5386,
+      "type": "lemma"
+    },
+    "3.98": {
+      "label": "pct:coneimage",
+      "line": 5399,
+      "type": "proposition"
+    },
+    "3.99": {
+      "label": "pct:descent",
+      "line": 5465,
+      "type": "proposition"
+    },
+    "3.100": {
+      "label": "pct:small",
+      "line": 5480,
+      "type": "lemma"
+    },
+    "3.101": {
+      "label": "pct:rem-orient",
+      "line": 5533,
+      "type": "remark"
+    },
+    "3.102": {
+      "label": "pct:vandesc",
+      "line": 5550,
+      "type": "proposition"
+    },
+    "3.103": {
+      "label": "pct:vantop",
+      "line": 5577,
+      "type": "proposition"
+    },
+    "3.104": {
+      "label": "pct:negcoeff",
+      "line": 5590,
+      "type": "lemma"
+    },
+    "3.105": {
+      "label": "pcn:negcoeff",
+      "line": 5719,
+      "type": "theorem"
+    },
+    "3.106": {
+      "label": "pcn:slicechar",
+      "line": 5737,
+      "type": "lemma"
+    },
+    "3.107": {
+      "label": "pcn:smooth",
+      "line": 5803,
+      "type": "lemma"
+    },
+    "3.108": {
+      "label": "pcn:smoothaction",
+      "line": 5869,
+      "type": "lemma"
+    },
+    "3.109": {
+      "label": "pcn:Kaction",
+      "line": 5944,
+      "type": "lemma"
+    },
+    "3.110": {
+      "label": "pcn:witt",
+      "line": 5991,
+      "type": "lemma"
+    },
+    "3.111": {
+      "label": "pcn:line",
+      "line": 6002,
+      "type": "lemma"
+    },
+    "3.112": {
+      "label": "pcn:rot",
+      "line": 6016,
+      "type": "lemma"
+    },
+    "3.113": {
+      "label": "pcn:fixed",
+      "line": 6045,
+      "type": "lemma"
+    },
+    "3.114": {
+      "label": "pcn:nofix",
+      "line": 6059,
+      "type": "lemma"
+    },
+    "3.115": {
+      "label": "pcn:nofunct",
+      "line": 6071,
+      "type": "lemma"
+    },
+    "3.116": {
+      "label": "pcn:mixed",
+      "line": 6132,
+      "type": "lemma"
+    },
+    "3.117": {
+      "label": "pcn:local",
+      "line": 6171,
+      "type": "lemma"
+    },
+    "3.118": {
+      "label": "pcn:rem",
+      "line": 6350,
+      "type": "remark"
+    },
+    "4.1": {
+      "label": "ptr:cons",
+      "line": 6445,
+      "type": "lemma"
+    },
+    "4.2": {
+      "label": "ptr:const",
+      "line": 6475,
+      "type": "lemma"
+    },
+    "4.3": {
+      "label": "ptr:desc-char",
+      "line": 6523,
+      "type": "definition"
+    },
+    "4.4": {
+      "label": "ptr:match",
+      "line": 6534,
+      "type": "proposition"
+    },
+    "4.5": {
+      "label": "ptr:rem-desc",
+      "line": 6605,
+      "type": "remark"
+    },
+    "4.6": {
+      "label": "ptr:gap",
+      "line": 6615,
+      "type": "lemma"
+    },
+    "4.7": {
+      "label": "ptr:edge",
+      "line": 6647,
+      "type": "theorem"
+    },
+    "4.8": {
+      "label": "ptr:rem-prev",
+      "line": 6704,
+      "type": "remark"
+    },
+    "4.9": {
+      "label": "ptr:chars",
+      "line": 6734,
+      "type": "lemma"
+    },
+    "4.10": {
+      "label": "ptr:conv",
+      "line": 6761,
+      "type": "proposition"
+    },
+    "4.11": {
+      "label": "ptr:conv-lift",
+      "line": 6829,
+      "type": "lemma"
+    },
+    "4.12": {
+      "label": "ptr:avg",
+      "line": 6842,
+      "type": "lemma"
+    },
+    "4.13": {
+      "label": "ptr:dense",
+      "line": 6859,
+      "type": "lemma"
+    },
+    "4.14": {
+      "label": "ptr:def-square",
+      "line": 6882,
+      "type": "definition"
+    },
+    "4.15": {
+      "label": "ptr:square",
+      "line": 6913,
+      "type": "theorem"
+    },
+    "4.16": {
+      "label": "ptr:tri-b",
+      "line": 6980,
+      "type": "corollary"
+    },
+    "4.17": {
+      "label": "ptr:rem-grid",
+      "line": 7005,
+      "type": "remark"
+    },
+    "4.18": {
+      "label": "ptr:Z",
+      "line": 7033,
+      "type": "proposition"
+    },
+    "4.19": {
+      "label": "ptq:ladder",
+      "line": 7137,
+      "type": "lemma"
+    },
+    "4.20": {
+      "label": "ptq:pderiv",
+      "line": 7170,
+      "type": "lemma"
+    },
+    "4.21": {
+      "label": "ptq:induct",
+      "line": 7197,
+      "type": "lemma"
+    },
+    "4.22": {
+      "label": "ptq:coef",
+      "line": 7217,
+      "type": "proposition"
+    },
+    "4.23": {
+      "label": "ptq:rem-conv",
+      "line": 7245,
+      "type": "remark"
+    },
+    "4.24": {
+      "label": "ptq:vac",
+      "line": 7256,
+      "type": "lemma"
+    },
+    "4.25": {
+      "label": "ptq:F",
+      "line": 7301,
+      "type": "theorem"
+    },
+    "4.26": {
+      "label": "ptq:rem-F",
+      "line": 7344,
+      "type": "remark"
+    },
+    "4.27": {
+      "label": "ptq:P",
+      "line": 7383,
+      "type": "lemma"
+    },
+    "4.28": {
+      "label": "ptq:fischer",
+      "line": 7470,
+      "type": "lemma"
+    },
+    "4.29": {
+      "label": "ptq:tensor",
+      "line": 7488,
+      "type": "lemma"
+    },
+    "4.30": {
+      "label": "ptq:howe",
+      "line": 7507,
+      "type": "proposition"
+    },
+    "4.31": {
+      "label": "ptq:H",
+      "line": 7554,
+      "type": "theorem"
+    },
+    "4.32": {
+      "label": "ptq:rem-H",
+      "line": 7590,
+      "type": "remark"
+    },
+    "4.33": {
+      "label": "ptv:embed",
+      "line": 7670,
+      "type": "lemma"
+    },
+    "4.34": {
+      "label": "ptv:rem-embed",
+      "line": 7697,
+      "type": "remark"
+    },
+    "4.35": {
+      "label": "ptv:chars",
+      "line": 7735,
+      "type": "proposition"
+    },
+    "4.36": {
+      "label": "ptv:rem-chars",
+      "line": 7788,
+      "type": "remark"
+    },
+    "4.37": {
+      "label": "ptv:adj",
+      "line": 7808,
+      "type": "lemma"
+    },
+    "4.38": {
+      "label": "ptv:central",
+      "line": 7831,
+      "type": "lemma"
+    },
+    "4.39": {
+      "label": "ptv:pairing",
+      "line": 7858,
+      "type": "lemma"
+    },
+    "4.40": {
+      "label": "ptv:rev",
+      "line": 7908,
+      "type": "proposition"
+    },
+    "4.41": {
+      "label": "ptv:desc-adj",
+      "line": 8016,
+      "type": "corollary"
+    },
+    "4.42": {
+      "label": "ptv:gauss",
+      "line": 8045,
+      "type": "lemma"
+    },
+    "4.43": {
+      "label": "ptv:F-ext",
+      "line": 8076,
+      "type": "lemma"
+    },
+    "4.44": {
+      "label": "ptv:fourier",
+      "line": 8101,
+      "type": "proposition"
+    },
+    "4.45": {
+      "label": "ptv:adjoint",
+      "line": 8193,
+      "type": "theorem"
+    },
+    "4.46": {
+      "label": "ptv:arch",
+      "line": 8244,
+      "type": "proposition"
+    },
+    "4.47": {
+      "label": "ptv:tri",
+      "line": 8279,
+      "type": "proposition"
+    },
+    "4.48": {
+      "label": "ptw:polar",
+      "line": 8393,
+      "type": "lemma"
+    },
+    "4.49": {
+      "label": "ptw:relw",
+      "line": 8405,
+      "type": "lemma"
+    },
+    "4.50": {
+      "label": "ptw:B",
+      "line": 8414,
+      "type": "lemma"
+    },
+    "4.51": {
+      "label": "ptw:unique",
+      "line": 8431,
+      "type": "proposition"
+    },
+    "4.52": {
+      "label": "ptw:howe",
+      "line": 8487,
+      "type": "proposition"
+    },
+    "4.53": {
+      "label": "ptw:rem-howe",
+      "line": 8541,
+      "type": "remark"
+    },
+    "4.54": {
+      "label": "ptw:P",
+      "line": 8561,
+      "type": "lemma"
+    },
+    "4.55": {
+      "label": "ptw:Hc",
+      "line": 8597,
+      "type": "theorem"
+    },
+    "4.56": {
+      "label": "ptw:J",
+      "line": 8652,
+      "type": "lemma"
+    },
+    "4.57": {
+      "label": "ptw:poly",
+      "line": 8683,
+      "type": "lemma"
+    },
+    "4.58": {
+      "label": "ptw:W7",
+      "line": 8715,
+      "type": "lemma"
+    },
+    "4.59": {
+      "label": "ptw:rem-W7",
+      "line": 8755,
+      "type": "remark"
+    },
+    "4.60": {
+      "label": "ptw:revedge",
+      "line": 8776,
+      "type": "proposition"
+    },
+    "4.61": {
+      "label": "ptw:split",
+      "line": 8838,
+      "type": "lemma"
+    },
+    "4.62": {
+      "label": "ptw:RS",
+      "line": 8857,
+      "type": "theorem"
+    },
+    "4.63": {
+      "label": "ptw:adjoint",
+      "line": 8947,
+      "type": "corollary"
+    },
+    "4.64": {
+      "label": "ptw:A2",
+      "line": 8973,
+      "type": "proposition"
+    },
+    "4.65": {
+      "label": "ptw:rem-A2",
+      "line": 9010,
+      "type": "remark"
+    },
+    "5.1": {
+      "label": "pgr:def-datum",
+      "line": 9133,
+      "type": "definition"
+    },
+    "5.2": {
+      "label": "pgr:def-transfer",
+      "line": 9157,
+      "type": "definition"
+    },
+    "5.3": {
+      "label": "pgr:first",
+      "line": 9181,
+      "type": "proposition"
+    },
+    "5.4": {
+      "label": "pgr:turn",
+      "line": 9201,
+      "type": "proposition"
+    },
+    "5.5": {
+      "label": "pgr:last",
+      "line": 9211,
+      "type": "proposition"
+    },
+    "5.6": {
+      "label": "pgr:den",
+      "line": 9223,
+      "type": "proposition"
+    },
+    "5.7": {
+      "label": "pgr:delta",
+      "line": 9244,
+      "type": "proposition"
+    },
+    "5.8": {
+      "label": "pgr:short",
+      "line": 9264,
+      "type": "proposition"
+    },
+    "5.9": {
+      "label": "pgr:sqturn",
+      "line": 9280,
+      "type": "lemma"
+    },
+    "5.10": {
+      "label": "pgr:exturn",
+      "line": 9313,
+      "type": "lemma"
+    },
+    "5.11": {
+      "label": "pgr:induction",
+      "line": 9326,
+      "type": "proposition"
+    },
+    "5.12": {
+      "label": "pgr:transfer-alg",
+      "line": 9344,
+      "type": "lemma"
+    },
+    "5.13": {
+      "label": "pgr:firstlast",
+      "line": 9362,
+      "type": "proposition"
+    },
+    "5.14": {
+      "label": "pgr:jcirc",
+      "line": 9384,
+      "type": "lemma"
+    },
+    "5.15": {
+      "label": "pgr:lastchain",
+      "line": 9426,
+      "type": "proposition"
+    },
+    "5.16": {
+      "label": "pgr:extend",
+      "line": 9514,
+      "type": "lemma"
+    },
+    "5.17": {
+      "label": "pgr:match",
+      "line": 9526,
+      "type": "lemma"
+    },
+    "5.18": {
+      "label": "pgr:compl",
+      "line": 9554,
+      "type": "lemma"
+    },
+    "5.19": {
+      "label": "pgr:turned",
+      "line": 9591,
+      "type": "proposition"
+    },
+    "5.20": {
+      "label": "pgr:sumturn",
+      "line": 9632,
+      "type": "lemma"
+    },
+    "5.21": {
+      "label": "pgr:square",
+      "line": 9661,
+      "type": "proposition"
+    },
+    "5.22": {
+      "label": "pgr:turnoff",
+      "line": 9672,
+      "type": "proposition"
+    },
+    "5.23": {
+      "label": "pgr:turndiag",
+      "line": 9700,
+      "type": "proposition"
+    },
+    "5.24": {
+      "label": "pgs:gram",
+      "line": 9793,
+      "type": "lemma"
+    },
+    "5.25": {
+      "label": "pgs:star",
+      "line": 9805,
+      "type": "lemma"
+    },
+    "5.26": {
+      "label": "pgs:pairing",
+      "line": 9837,
+      "type": "lemma"
+    },
+    "5.27": {
+      "label": "(sin label)",
+      "line": 9876,
+      "type": "remark"
+    },
+    "5.28": {
+      "label": "pgs:hooksize",
+      "line": 9910,
+      "type": "lemma"
+    },
+    "5.29": {
+      "label": "pgs:delta",
+      "line": 9921,
+      "type": "proposition"
+    },
+    "5.30": {
+      "label": "(sin label)",
+      "line": 9974,
+      "type": "remark"
+    },
+    "5.31": {
+      "label": "pgs:boxes",
+      "line": 9997,
+      "type": "lemma"
+    },
+    "5.32": {
+      "label": "pgs:shortspan",
+      "line": 10028,
+      "type": "lemma"
+    },
+    "5.33": {
+      "label": "pgs:short",
+      "line": 10087,
+      "type": "proposition"
+    },
+    "5.34": {
+      "label": "(sin label)",
+      "line": 10105,
+      "type": "remark"
+    },
+    "5.35": {
+      "label": "pgu:sum",
+      "line": 10230,
+      "type": "lemma"
+    },
+    "5.36": {
+      "label": "pgu:split",
+      "line": 10258,
+      "type": "corollary"
+    },
+    "5.37": {
+      "label": "pgu:line",
+      "line": 10296,
+      "type": "lemma"
+    },
+    "5.38": {
+      "label": "pgu:seesaw",
+      "line": 10429,
+      "type": "lemma"
+    },
+    "5.39": {
+      "label": "pgu:turned",
+      "line": 10513,
+      "type": "proposition"
+    },
+    "5.40": {
+      "label": "pgu:sumturn",
+      "line": 10571,
+      "type": "lemma"
+    },
+    "5.41": {
+      "label": "pgu:see1",
+      "line": 10623,
+      "type": "lemma"
+    },
+    "5.42": {
+      "label": "pgu:see2",
+      "line": 10641,
+      "type": "lemma"
+    },
+    "5.43": {
+      "label": "pgu:turndiag",
+      "line": 10657,
+      "type": "theorem"
+    },
+    "6.1": {
+      "label": "pgv:def-spaces",
+      "line": 10779,
+      "type": "definition"
+    },
+    "6.2": {
+      "label": "pgv:rem-index",
+      "line": 10796,
+      "type": "remark"
+    },
+    "6.3": {
+      "label": "pgv:def-edges",
+      "line": 10830,
+      "type": "definition"
+    },
+    "6.4": {
+      "label": "pgv:def-period",
+      "line": 10879,
+      "type": "definition"
+    },
+    "6.5": {
+      "label": "pgv:count",
+      "line": 10899,
+      "type": "lemma"
+    },
+    "6.6": {
+      "label": "pgv:G1",
+      "line": 10926,
+      "type": "proposition"
+    },
+    "6.7": {
+      "label": "pgv:G2",
+      "line": 10945,
+      "type": "proposition"
+    },
+    "6.8": {
+      "label": "pgv:G4",
+      "line": 10989,
+      "type": "proposition"
+    },
+    "6.9": {
+      "label": "pgv:alpha",
+      "line": 11015,
+      "type": "proposition"
+    },
+    "6.10": {
+      "label": "pgv:rule",
+      "line": 11067,
+      "type": "lemma"
+    },
+    "6.11": {
+      "label": "pgv:match",
+      "line": 11104,
+      "type": "proposition"
+    },
+    "6.12": {
+      "label": "pgv:gap",
+      "line": 11171,
+      "type": "lemma"
+    },
+    "6.13": {
+      "label": "pgv:G3",
+      "line": 11205,
+      "type": "theorem"
+    },
+    "6.14": {
+      "label": "pgv:E1g",
+      "line": 11333,
+      "type": "lemma"
+    },
+    "6.15": {
+      "label": "pgv:esq",
+      "line": 11373,
+      "type": "lemma"
+    },
+    "6.16": {
+      "label": "pgv:square",
+      "line": 11411,
+      "type": "theorem"
+    },
+    "6.17": {
+      "label": "pgv:rem-E1",
+      "line": 11464,
+      "type": "remark"
+    },
+    "6.18": {
+      "label": "pgw:onto",
+      "line": 11582,
+      "type": "lemma"
+    },
+    "6.19": {
+      "label": "pgw:res",
+      "line": 11594,
+      "type": "lemma"
+    },
+    "6.20": {
+      "label": "pgw:chain",
+      "line": 11623,
+      "type": "lemma"
+    },
+    "6.21": {
+      "label": "pgw:datum",
+      "line": 11651,
+      "type": "lemma"
+    },
+    "6.22": {
+      "label": "pgw:transl",
+      "line": 11681,
+      "type": "lemma"
+    },
+    "6.23": {
+      "label": "pgw:first",
+      "line": 11703,
+      "type": "theorem"
+    },
+    "6.24": {
+      "label": "pgw:vec",
+      "line": 11786,
+      "type": "lemma"
+    },
+    "6.25": {
+      "label": "pgw:howe",
+      "line": 11826,
+      "type": "lemma"
+    },
+    "6.26": {
+      "label": "pgw:one",
+      "line": 11844,
+      "type": "lemma"
+    },
+    "6.27": {
+      "label": "pgw:rem-jets",
+      "line": 11913,
+      "type": "remark"
+    },
+    "6.28": {
+      "label": "pgw:branch",
+      "line": 11929,
+      "type": "lemma"
+    },
+    "6.29": {
+      "label": "pgw:last",
+      "line": 11998,
+      "type": "theorem"
+    },
+    "6.30": {
+      "label": "pgx:vac",
+      "line": 12086,
+      "type": "lemma"
+    },
+    "6.31": {
+      "label": "pgx:conv",
+      "line": 12106,
+      "type": "definition"
+    },
+    "6.32": {
+      "label": "pgx:dict",
+      "line": 12140,
+      "type": "lemma"
+    },
+    "6.33": {
+      "label": "pgx:line",
+      "line": 12248,
+      "type": "lemma"
+    },
+    "6.34": {
+      "label": "pgx:rem-line",
+      "line": 12421,
+      "type": "remark"
+    },
+    "6.35": {
+      "label": "pgx:G1",
+      "line": 12534,
+      "type": "proposition"
+    },
+    "6.36": {
+      "label": "pgy:match",
+      "line": 12697,
+      "type": "lemma"
+    },
+    "6.37": {
+      "label": "pgy:gap",
+      "line": 12746,
+      "type": "lemma"
+    },
+    "6.38": {
+      "label": "pgy:edge",
+      "line": 12767,
+      "type": "proposition"
+    },
+    "6.39": {
+      "label": "pgy:chars",
+      "line": 12816,
+      "type": "lemma"
+    },
+    "6.40": {
+      "label": "pgy:T1",
+      "line": 12846,
+      "type": "proposition"
+    },
+    "6.41": {
+      "label": "pgy:T2",
+      "line": 12877,
+      "type": "lemma"
+    },
+    "6.42": {
+      "label": "pgy:series",
+      "line": 12897,
+      "type": "lemma"
+    },
+    "6.43": {
+      "label": "pgy:first",
+      "line": 12917,
+      "type": "proposition"
+    },
+    "6.44": {
+      "label": "pgy:T3",
+      "line": 12944,
+      "type": "lemma"
+    },
+    "6.45": {
+      "label": "pgy:I",
+      "line": 12956,
+      "type": "theorem"
+    },
+    "6.46": {
+      "label": "pgy:rem-I",
+      "line": 12969,
+      "type": "remark"
+    },
+    "6.47": {
+      "label": "pgy:P",
+      "line": 12984,
+      "type": "proposition"
+    },
+    "6.48": {
+      "label": "pgy:rem-P",
+      "line": 13007,
+      "type": "remark"
+    },
+    "7.1": {
+      "label": "pgz:def-choice",
+      "line": 13113,
+      "type": "definition"
+    },
+    "7.2": {
+      "label": "pgz:deg",
+      "line": 13152,
+      "type": "lemma"
+    },
+    "7.3": {
+      "label": "pgz:free",
+      "line": 13174,
+      "type": "lemma"
+    },
+    "7.4": {
+      "label": "pgz:move",
+      "line": 13199,
+      "type": "lemma"
+    },
+    "7.5": {
+      "label": "pgz:expand",
+      "line": 13226,
+      "type": "proposition"
+    },
+    "7.6": {
+      "label": "pgz:rem-den",
+      "line": 13285,
+      "type": "remark"
+    },
+    "7.7": {
+      "label": "pgz:count",
+      "line": 13295,
+      "type": "lemma"
+    },
+    "7.8": {
+      "label": "pgz:std",
+      "line": 13314,
+      "type": "lemma"
+    },
+    "7.9": {
+      "label": "pgz:kernel",
+      "line": 13360,
+      "type": "lemma"
+    },
+    "7.10": {
+      "label": "pgz:reach",
+      "line": 13400,
+      "type": "corollary"
+    },
+    "7.11": {
+      "label": "pgz:flip",
+      "line": 13413,
+      "type": "lemma"
+    },
+    "7.12": {
+      "label": "pgz:char",
+      "line": 13434,
+      "type": "lemma"
+    },
+    "7.13": {
+      "label": "pgz:pair",
+      "line": 13465,
+      "type": "lemma"
+    },
+    "7.14": {
+      "label": "pgz:a",
+      "line": 13488,
+      "type": "theorem"
+    },
+    "7.15": {
+      "label": "pgz:b",
+      "line": 13540,
+      "type": "theorem"
+    },
+    "7.16": {
+      "label": "pgq:V",
+      "line": 13639,
+      "type": "theorem"
+    },
+    "7.17": {
+      "label": "pgq:steep",
+      "line": 13672,
+      "type": "lemma"
+    },
+    "7.18": {
+      "label": "pgq:local",
+      "line": 13702,
+      "type": "lemma"
+    },
+    "7.19": {
+      "label": "pgq:balls",
+      "line": 13720,
+      "type": "lemma"
+    },
+    "7.20": {
+      "label": "pgq:slice",
+      "line": 13734,
+      "type": "lemma"
+    },
+    "7.21": {
+      "label": "pgq:schur",
+      "line": 13748,
+      "type": "lemma"
+    },
+    "7.22": {
+      "label": "pgq:var",
+      "line": 13767,
+      "type": "lemma"
+    },
+    "7.23": {
+      "label": "pgq:sizes",
+      "line": 13796,
+      "type": "lemma"
+    },
+    "7.24": {
+      "label": "pgq:slicecoef",
+      "line": 13835,
+      "type": "lemma"
+    },
+    "7.25": {
+      "label": "pgq:cusp",
+      "line": 13851,
+      "type": "lemma"
+    },
+    "7.26": {
+      "label": "pgq:cols",
+      "line": 13873,
+      "type": "lemma"
+    },
+    "7.27": {
+      "label": "pgq:unfold",
+      "line": 13907,
+      "type": "lemma"
+    },
+    "7.28": {
+      "label": "pgq:zero",
+      "line": 13950,
+      "type": "lemma"
+    },
+    "7.29": {
+      "label": "pgq:bulk",
+      "line": 13966,
+      "type": "lemma"
+    },
+    "7.30": {
+      "label": "pgt:classes",
+      "line": 14041,
+      "type": "proposition"
+    },
+    "7.31": {
+      "label": "pgt:B3",
+      "line": 14088,
+      "type": "corollary"
+    },
+    "7.32": {
+      "label": "pgt:rem-B3",
+      "line": 14108,
+      "type": "remark"
+    },
+    "7.33": {
+      "label": "pgt:br",
+      "line": 14141,
+      "type": "lemma"
+    },
+    "7.34": {
+      "label": "pgt:B2",
+      "line": 14211,
+      "type": "proposition"
+    },
+    "7.35": {
+      "label": "pgt:rem-B2",
+      "line": 14260,
+      "type": "remark"
+    },
+    "7.36": {
+      "label": "pgt:jet",
+      "line": 14275,
+      "type": "lemma"
+    },
+    "7.37": {
+      "label": "pgt:B1",
+      "line": 14320,
+      "type": "proposition"
+    },
+    "7.38": {
+      "label": "pgt:rem-B1",
+      "line": 14383,
+      "type": "remark"
+    },
+    "8.1": {
+      "label": "pgk:rem-Q",
+      "line": 14420,
+      "type": "remark"
+    },
+    "8.2": {
+      "label": "pgk:sum",
+      "line": 14442,
+      "type": "lemma"
+    },
+    "8.3": {
+      "label": "pgk:Q",
+      "line": 14469,
+      "type": "theorem"
+    },
+    "8.4": {
+      "label": "pgk:lat",
+      "line": 14530,
+      "type": "lemma"
+    },
+    "8.5": {
+      "label": "pgk:round",
+      "line": 14559,
+      "type": "lemma"
+    },
+    "8.6": {
+      "label": "pgk:mink",
+      "line": 14577,
+      "type": "lemma"
+    },
+    "8.7": {
+      "label": "pgk:frame",
+      "line": 14598,
+      "type": "lemma"
+    },
+    "8.8": {
+      "label": "pgk:param",
+      "line": 14635,
+      "type": "lemma"
+    },
+    "8.9": {
+      "label": "pgk:cover",
+      "line": 14672,
+      "type": "proposition"
+    },
+    "8.10": {
+      "label": "pgk:C",
+      "line": 14712,
+      "type": "theorem"
+    },
+    "8.11": {
+      "label": "pgl:S",
+      "line": 14784,
+      "type": "theorem"
+    },
+    "8.12": {
+      "label": "pgl:neg",
+      "line": 14810,
+      "type": "lemma"
+    },
+    "8.13": {
+      "label": "pgl:gram",
+      "line": 14845,
+      "type": "lemma"
+    },
+    "8.14": {
+      "label": "pgl:stat",
+      "line": 14866,
+      "type": "proposition"
+    },
+    "8.15": {
+      "label": "pgl:group",
+      "line": 14886,
+      "type": "lemma"
+    },
+    "8.16": {
+      "label": "pgl:sizes",
+      "line": 14920,
+      "type": "lemma"
+    },
+    "8.17": {
+      "label": "pgl:transfer",
+      "line": 14935,
+      "type": "lemma"
+    },
+    "8.18": {
+      "label": "pgl:rows",
+      "line": 14972,
+      "type": "lemma"
+    },
+    "8.19": {
+      "label": "pgl:loc",
+      "line": 14987,
+      "type": "lemma"
+    },
+    "8.20": {
+      "label": "pgl:cone",
+      "line": 15003,
+      "type": "proposition"
+    },
+    "8.21": {
+      "label": "pgl:cover",
+      "line": 15023,
+      "type": "lemma"
+    },
+    "8.22": {
+      "label": "pgm:general",
+      "line": 15096,
+      "type": "lemma"
+    },
+    "8.23": {
+      "label": "pgm:decay",
+      "line": 15118,
+      "type": "lemma"
+    },
+    "8.24": {
+      "label": "pgm:reduced",
+      "line": 15143,
+      "type": "lemma"
+    },
+    "8.25": {
+      "label": "pgm:dLambda",
+      "line": 15171,
+      "type": "lemma"
+    },
+    "8.26": {
+      "label": "pgm:gauss",
+      "line": 15192,
+      "type": "proposition"
+    },
+    "8.27": {
+      "label": "pgm:leftX",
+      "line": 15229,
+      "type": "lemma"
+    },
+    "8.28": {
+      "label": "pgm:lip",
+      "line": 15241,
+      "type": "lemma"
+    },
+    "8.29": {
+      "label": "pgm:residue",
+      "line": 15272,
+      "type": "lemma"
+    },
+    "8.30": {
+      "label": "pgm:conearith",
+      "line": 15282,
+      "type": "lemma"
+    },
+    "8.31": {
+      "label": "pgm:cover",
+      "line": 15292,
+      "type": "lemma"
+    },
+    "8.32": {
+      "label": "pgm:rem-apply",
+      "line": 15314,
+      "type": "remark"
+    },
+    "8.33": {
+      "label": "pgm:coords",
+      "line": 15340,
+      "type": "lemma"
+    },
+    "9.1": {
+      "label": "pcj:CL",
+      "line": 15463,
+      "type": "theorem"
+    },
+    "9.2": {
+      "label": "pcj:def-image",
+      "line": 15541,
+      "type": "definition"
+    },
+    "9.3": {
+      "label": "pcj:loc",
+      "line": 15552,
+      "type": "lemma"
+    },
+    "9.4": {
+      "label": "pcj:transl",
+      "line": 15566,
+      "type": "lemma"
+    },
+    "9.5": {
+      "label": "pcj:jets",
+      "line": 15604,
+      "type": "lemma"
+    },
+    "9.6": {
+      "label": "pcj:close",
+      "line": 15630,
+      "type": "lemma"
+    },
+    "9.7": {
+      "label": "pcj:def",
+      "line": 15650,
+      "type": "lemma"
+    },
+    "9.8": {
+      "label": "pcj:char",
+      "line": 15664,
+      "type": "lemma"
+    },
+    "9.9": {
+      "label": "pcj:Lambda",
+      "line": 15690,
+      "type": "proposition"
+    },
+    "9.10": {
+      "label": "pcj:rem-pk",
+      "line": 15722,
+      "type": "remark"
+    },
+    "9.11": {
+      "label": "pcj:split",
+      "line": 15733,
+      "type": "lemma"
+    },
+    "9.12": {
+      "label": "pcj:vac",
+      "line": 15762,
+      "type": "lemma"
+    },
+    "9.13": {
+      "label": "pcj:datum",
+      "line": 15831,
+      "type": "lemma"
+    },
+    "9.14": {
+      "label": "pcj:lift",
+      "line": 15882,
+      "type": "lemma"
+    },
+    "9.15": {
+      "label": "pcj:nusigma",
+      "line": 15916,
+      "type": "lemma"
+    },
+    "9.16": {
+      "label": "pcj:kernel",
+      "line": 15948,
+      "type": "lemma"
+    },
+    "9.17": {
+      "label": "pcj:rho",
+      "line": 15966,
+      "type": "lemma"
+    },
+    "9.18": {
+      "label": "pcj:def-psigma",
+      "line": 15997,
+      "type": "definition"
+    },
+    "9.19": {
+      "label": "pcj:coord",
+      "line": 16006,
+      "type": "proposition"
+    },
+    "9.20": {
+      "label": "pcj:rem-use",
+      "line": 16063,
+      "type": "remark"
+    }
+  },
+  "49": {
+    "2.1": {
+      "label": "pwf:def",
+      "line": 589,
+      "type": "definition"
+    },
+    "2.2": {
+      "label": "pwf:indep",
+      "line": 628,
+      "type": "lemma"
+    },
+    "2.3": {
+      "label": "pwf:dist",
+      "line": 650,
+      "type": "lemma"
+    },
+    "2.4": {
+      "label": "pwf:siegel",
+      "line": 690,
+      "type": "lemma"
+    },
+    "2.5": {
+      "label": "pwf:sum",
+      "line": 740,
+      "type": "lemma"
+    },
+    "2.6": {
+      "label": "pwf:unique",
+      "line": 796,
+      "type": "lemma"
+    },
+    "2.7": {
+      "label": "pwf:gen",
+      "line": 832,
+      "type": "lemma"
+    },
+    "2.8": {
+      "label": "pwf:inv",
+      "line": 872,
+      "type": "theorem"
+    },
+    "2.9": {
+      "label": "pwf:rem-inv",
+      "line": 913,
+      "type": "remark"
+    },
+    "2.10": {
+      "label": "pwf:rk",
+      "line": 922,
+      "type": "corollary"
+    },
+    "2.11": {
+      "label": "pwf:levi",
+      "line": 951,
+      "type": "lemma"
+    },
+    "2.12": {
+      "label": "pwf:defZ",
+      "line": 981,
+      "type": "definition"
+    },
+    "2.13": {
+      "label": "pwf:Zunique",
+      "line": 986,
+      "type": "lemma"
+    },
+    "2.14": {
+      "label": "pwf:W2",
+      "line": 1003,
+      "type": "proposition"
+    },
+    "2.15": {
+      "label": "pwf:W3",
+      "line": 1072,
+      "type": "proposition"
+    },
+    "2.16": {
+      "label": "pwf:rem-W3",
+      "line": 1084,
+      "type": "remark"
+    },
+    "2.17": {
+      "label": "pwf:W5",
+      "line": 1101,
+      "type": "proposition"
+    },
+    "2.18": {
+      "label": "pwf:rem-W5",
+      "line": 1128,
+      "type": "remark"
+    },
+    "2.19": {
+      "label": "pwf:haar",
+      "line": 1137,
+      "type": "proposition"
+    },
+    "2.20": {
+      "label": "pwf:delta-red",
+      "line": 1206,
+      "type": "lemma"
+    },
+    "2.21": {
+      "label": "pwf:eplus",
+      "line": 1229,
+      "type": "proposition"
+    },
+    "2.22": {
+      "label": "pwf:delta-open",
+      "line": 1347,
+      "type": "remark"
+    },
+    "3.1": {
+      "label": "par:FJ",
+      "line": 1407,
+      "type": "remark"
+    },
+    "3.2": {
+      "label": "par:A1",
+      "line": 1421,
+      "type": "theorem"
+    },
+    "3.3": {
+      "label": "par:A2",
+      "line": 1444,
+      "type": "corollary"
+    },
+    "3.4": {
+      "label": "par:D3",
+      "line": 1491,
+      "type": "lemma"
+    },
+    "3.5": {
+      "label": "par:rigid",
+      "line": 1516,
+      "type": "lemma"
+    },
+    "3.6": {
+      "label": "par:vac",
+      "line": 1564,
+      "type": "lemma"
+    },
+    "3.7": {
+      "label": "par:match",
+      "line": 1613,
+      "type": "lemma"
+    },
+    "3.8": {
+      "label": "par:rem-match",
+      "line": 1629,
+      "type": "remark"
+    },
+    "3.9": {
+      "label": "par:def-harm",
+      "line": 1642,
+      "type": "definition"
+    },
+    "3.10": {
+      "label": "par:relw",
+      "line": 1654,
+      "type": "lemma"
+    },
+    "3.11": {
+      "label": "par:exist",
+      "line": 1680,
+      "type": "proposition"
+    },
+    "3.12": {
+      "label": "par:polar",
+      "line": 1711,
+      "type": "lemma"
+    },
+    "3.13": {
+      "label": "par:unique",
+      "line": 1730,
+      "type": "proposition"
+    },
+    "3.14": {
+      "label": "par:casimir",
+      "line": 1753,
+      "type": "lemma"
+    },
+    "3.15": {
+      "label": "par:A3",
+      "line": 1776,
+      "type": "theorem"
+    },
+    "3.16": {
+      "label": "par:Ym",
+      "line": 1811,
+      "type": "remark"
+    },
+    "3.17": {
+      "label": "pco:FJ",
+      "line": 1876,
+      "type": "theorem"
+    },
+    "3.18": {
+      "label": "pco:minors",
+      "line": 1898,
+      "type": "lemma"
+    },
+    "3.19": {
+      "label": "pco:equiv",
+      "line": 1938,
+      "type": "corollary"
+    },
+    "3.20": {
+      "label": "pco:density",
+      "line": 1968,
+      "type": "lemma"
+    },
+    "3.21": {
+      "label": "pco:indep",
+      "line": 2029,
+      "type": "proposition"
+    },
+    "3.22": {
+      "label": "pco:local",
+      "line": 2084,
+      "type": "lemma"
+    },
+    "3.23": {
+      "label": "pco:K",
+      "line": 2097,
+      "type": "lemma"
+    },
+    "3.24": {
+      "label": "pco:casimir",
+      "line": 2119,
+      "type": "proposition"
+    },
+    "3.25": {
+      "label": "pco:decay",
+      "line": 2148,
+      "type": "lemma"
+    },
+    "3.26": {
+      "label": "pco:Kfin",
+      "line": 2181,
+      "type": "lemma"
+    },
+    "3.27": {
+      "label": "pco:rigid",
+      "line": 2202,
+      "type": "proposition"
+    },
+    "3.28": {
+      "label": "pco:rem-FJ",
+      "line": 2272,
+      "type": "remark"
+    },
+    "3.29": {
+      "label": "pco:V",
+      "line": 2337,
+      "type": "theorem"
+    },
+    "3.30": {
+      "label": "pco:rem-V",
+      "line": 2368,
+      "type": "remark"
+    },
+    "4.1": {
+      "label": "pa:count",
+      "line": 2522,
+      "type": "proposition"
+    },
+    "4.2": {
+      "label": "pa:elim",
+      "line": 2538,
+      "type": "lemma"
+    },
+    "4.3": {
+      "label": "pa:charges",
+      "line": 2640,
+      "type": "remark"
+    },
+    "4.4": {
+      "label": "pa:schur",
+      "line": 2673,
+      "type": "lemma"
+    },
+    "4.5": {
+      "label": "pa:model",
+      "line": 2705,
+      "type": "lemma"
+    },
+    "4.6": {
+      "label": "pa:param",
+      "line": 2743,
+      "type": "lemma"
+    },
+    "4.7": {
+      "label": "pa:units",
+      "line": 2809,
+      "type": "lemma"
+    },
+    "4.8": {
+      "label": "pa:frob",
+      "line": 2846,
+      "type": "proposition"
+    },
+    "4.9": {
+      "label": "pa:onecurve",
+      "line": 2861,
+      "type": "theorem"
+    },
+    "4.10": {
+      "label": "(sin label)",
+      "line": 2915,
+      "type": "remark"
+    },
+    "4.11": {
+      "label": "pa:partner",
+      "line": 2927,
+      "type": "lemma"
+    },
+    "4.12": {
+      "label": "pa:product",
+      "line": 2953,
+      "type": "proposition"
+    },
+    "4.13": {
+      "label": "pa:kernel",
+      "line": 3006,
+      "type": "lemma"
+    },
+    "4.14": {
+      "label": "pa:chain",
+      "line": 3042,
+      "type": "lemma"
+    },
+    "4.15": {
+      "label": "pa:gain",
+      "line": 3061,
+      "type": "lemma"
+    },
+    "4.16": {
+      "label": "pa:coll",
+      "line": 3099,
+      "type": "lemma"
+    },
+    "4.17": {
+      "label": "pa:mark",
+      "line": 3123,
+      "type": "lemma"
+    },
+    "4.18": {
+      "label": "pa:hecke",
+      "line": 3149,
+      "type": "lemma"
+    },
+    "4.19": {
+      "label": "pa:eldiv",
+      "line": 3156,
+      "type": "lemma"
+    },
+    "4.20": {
+      "label": "pa:level",
+      "line": 3168,
+      "type": "lemma"
+    },
+    "4.21": {
+      "label": "pa:divis",
+      "line": 3184,
+      "type": "theorem"
+    },
+    "4.22": {
+      "label": "(sin label)",
+      "line": 3249,
+      "type": "remark"
+    },
+    "5.1": {
+      "label": "ps:upsilon",
+      "line": 3344,
+      "type": "lemma"
+    },
+    "5.2": {
+      "label": "ps:weil",
+      "line": 3428,
+      "type": "lemma"
+    },
+    "5.3": {
+      "label": "ps:definite",
+      "line": 3571,
+      "type": "lemma"
+    },
+    "5.4": {
+      "label": "ps:transfer",
+      "line": 3589,
+      "type": "lemma"
+    },
+    "5.5": {
+      "label": "ps:level",
+      "line": 3730,
+      "type": "lemma"
+    },
+    "5.6": {
+      "label": "ps:branching",
+      "line": 3803,
+      "type": "lemma"
+    },
+    "5.7": {
+      "label": "ps:conj",
+      "line": 3845,
+      "type": "lemma"
+    },
+    "5.8": {
+      "label": "ps:monomial",
+      "line": 3862,
+      "type": "lemma"
+    },
+    "5.9": {
+      "label": "ps:onestep",
+      "line": 3984,
+      "type": "proposition"
+    },
+    "5.10": {
+      "label": "ps:double",
+      "line": 4062,
+      "type": "lemma"
+    },
+    "5.11": {
+      "label": "ps:chi0",
+      "line": 4125,
+      "type": "remark"
+    },
+    "5.12": {
+      "label": "ps:support",
+      "line": 4130,
+      "type": "lemma"
+    },
+    "5.13": {
+      "label": "ps:fin",
+      "line": 4178,
+      "type": "lemma"
+    },
+    "5.14": {
+      "label": "pk:cauchy",
+      "line": 4557,
+      "type": "lemma"
+    },
+    "5.15": {
+      "label": "pk:single",
+      "line": 4573,
+      "type": "lemma"
+    },
+    "5.16": {
+      "label": "pk:definite",
+      "line": 4611,
+      "type": "proposition"
+    },
+    "5.17": {
+      "label": "pk:chi0",
+      "line": 4639,
+      "type": "lemma"
+    },
+    "5.18": {
+      "label": "pk:char",
+      "line": 4747,
+      "type": "lemma"
+    },
+    "5.19": {
+      "label": "pk:vanish",
+      "line": 4776,
+      "type": "lemma"
+    },
+    "5.20": {
+      "label": "pk:coarse",
+      "line": 4803,
+      "type": "lemma"
+    },
+    "5.21": {
+      "label": "pk:fine",
+      "line": 4849,
+      "type": "lemma"
+    },
+    "5.22": {
+      "label": "pk:hook",
+      "line": 5085,
+      "type": "lemma"
+    },
+    "5.23": {
+      "label": "pk:leading",
+      "line": 5101,
+      "type": "lemma"
+    },
+    "5.24": {
+      "label": "pk:branching",
+      "line": 5131,
+      "type": "proposition"
+    },
+    "5.25": {
+      "label": "pk:curve",
+      "line": 5215,
+      "type": "proposition"
+    },
+    "5.26": {
+      "label": "pk:dict",
+      "line": 5354,
+      "type": "lemma"
+    },
+    "5.27": {
+      "label": "pk:conj",
+      "line": 5433,
+      "type": "proposition"
+    },
+    "5.28": {
+      "label": "pk:K0",
+      "line": 5531,
+      "type": "proposition"
+    },
+    "5.29": {
+      "label": "pk:std",
+      "line": 5552,
+      "type": "proposition"
+    },
+    "5.30": {
+      "label": "pk:K12",
+      "line": 5606,
+      "type": "proposition"
+    },
+    "5.31": {
+      "label": "pk:E1",
+      "line": 5646,
+      "type": "lemma"
+    },
+    "5.32": {
+      "label": "pk:formal",
+      "line": 5670,
+      "type": "lemma"
+    },
+    "5.33": {
+      "label": "pk:K1N",
+      "line": 5688,
+      "type": "proposition"
+    },
+    "6.1": {
+      "label": "pl:sum",
+      "line": 5856,
+      "type": "lemma"
+    },
+    "6.2": {
+      "label": "pl:N",
+      "line": 5911,
+      "type": "remark"
+    },
+    "6.3": {
+      "label": "pl:wa",
+      "line": 5932,
+      "type": "proposition"
+    },
+    "6.4": {
+      "label": "pl:wacor",
+      "line": 5953,
+      "type": "corollary"
+    },
+    "6.5": {
+      "label": "pl:char",
+      "line": 5971,
+      "type": "lemma"
+    },
+    "6.6": {
+      "label": "pl:charges",
+      "line": 5998,
+      "type": "proposition"
+    },
+    "6.7": {
+      "label": "pl:gain",
+      "line": 6059,
+      "type": "lemma"
+    },
+    "6.8": {
+      "label": "pl:vac",
+      "line": 6092,
+      "type": "lemma"
+    },
+    "6.9": {
+      "label": "pl:onelift",
+      "line": 6123,
+      "type": "proposition"
+    },
+    "6.10": {
+      "label": "pl:balance",
+      "line": 6162,
+      "type": "lemma"
+    },
+    "6.11": {
+      "label": "pl:chainT",
+      "line": 6176,
+      "type": "corollary"
+    },
+    "6.12": {
+      "label": "pl:neigh",
+      "line": 6214,
+      "type": "lemma"
+    },
+    "6.13": {
+      "label": "pl:arith",
+      "line": 6289,
+      "type": "lemma"
+    },
+    "6.14": {
+      "label": "pl:mir",
+      "line": 6395,
+      "type": "lemma"
+    },
+    "6.15": {
+      "label": "pl:Uprop",
+      "line": 6441,
+      "type": "lemma"
+    },
+    "6.16": {
+      "label": "pl:law",
+      "line": 6476,
+      "type": "lemma"
+    },
+    "6.17": {
+      "label": "pl:calc",
+      "line": 6502,
+      "type": "lemma"
+    },
+    "6.18": {
+      "label": "pl:glue",
+      "line": 6552,
+      "type": "lemma"
+    },
+    "6.19": {
+      "label": "pl:direct",
+      "line": 6585,
+      "type": "proposition"
+    },
+    "6.20": {
+      "label": "pl:kernelN",
+      "line": 6617,
+      "type": "lemma"
+    },
+    "6.21": {
+      "label": "pl:level",
+      "line": 6627,
+      "type": "lemma"
+    },
+    "6.22": {
+      "label": "pl:status",
+      "line": 6744,
+      "type": "remark"
+    },
+    "7.1": {
+      "label": "pf:chi",
+      "line": 6815,
+      "type": "lemma"
+    },
+    "7.2": {
+      "label": "pf:two",
+      "line": 6848,
+      "type": "lemma"
+    },
+    "7.3": {
+      "label": "pf:CS",
+      "line": 6911,
+      "type": "corollary"
+    },
+    "7.4": {
+      "label": "pf:eps",
+      "line": 6941,
+      "type": "lemma"
+    },
+    "7.5": {
+      "label": "pf:values",
+      "line": 6985,
+      "type": "proposition"
+    },
+    "7.6": {
+      "label": "pf:pull",
+      "line": 7023,
+      "type": "proposition"
+    },
+    "7.7": {
+      "label": "pf:gen",
+      "line": 7058,
+      "type": "remark"
+    },
+    "7.8": {
+      "label": "pf:transport",
+      "line": 7078,
+      "type": "lemma"
+    },
+    "7.9": {
+      "label": "pf:recip",
+      "line": 7111,
+      "type": "theorem"
+    },
+    "7.10": {
+      "label": "pf:conj",
+      "line": 7183,
+      "type": "corollary"
+    },
+    "7.11": {
+      "label": "pf:frame",
+      "line": 7210,
+      "type": "lemma"
+    },
+    "7.12": {
+      "label": "pf:scale",
+      "line": 7250,
+      "type": "lemma"
+    },
+    "7.13": {
+      "label": "pf:semi",
+      "line": 7284,
+      "type": "lemma"
+    },
+    "7.14": {
+      "label": "pf:fourier",
+      "line": 7314,
+      "type": "lemma"
+    },
+    "7.15": {
+      "label": "pf:std",
+      "line": 7362,
+      "type": "theorem"
+    },
+    "7.16": {
+      "label": "pf:K1",
+      "line": 7404,
+      "type": "corollary"
+    },
+    "7.17": {
+      "label": "pf:flip",
+      "line": 7455,
+      "type": "proposition"
+    },
+    "7.18": {
+      "label": "pf:rem-flip-lattice",
+      "line": 7528,
+      "type": "remark"
+    },
+    "7.19": {
+      "label": "pf:orbits",
+      "line": 7551,
+      "type": "lemma"
+    },
+    "7.20": {
+      "label": "pf:classes",
+      "line": 7605,
+      "type": "proposition"
+    },
+    "8.1": {
+      "label": "pz:def-type",
+      "line": 7759,
+      "type": "definition"
+    },
+    "8.2": {
+      "label": "pz:growth",
+      "line": 7791,
+      "type": "lemma"
+    },
+    "8.3": {
+      "label": "pz:absgrowth",
+      "line": 7850,
+      "type": "lemma"
+    },
+    "8.4": {
+      "label": "pz:types",
+      "line": 8021,
+      "type": "proposition"
+    },
+    "8.5": {
+      "label": "pz:lastlevel",
+      "line": 8124,
+      "type": "lemma"
+    },
+    "8.6": {
+      "label": "pz:mu",
+      "line": 8144,
+      "type": "lemma"
+    },
+    "8.7": {
+      "label": "pz:C0",
+      "line": 8191,
+      "type": "lemma"
+    },
+    "8.8": {
+      "label": "pz:sizes",
+      "line": 8235,
+      "type": "lemma"
+    },
+    "8.9": {
+      "label": "pz:short",
+      "line": 8259,
+      "type": "lemma"
+    }
+  },
+  "51": {
+    "2.1": {
+      "label": "pb:KR",
+      "line": 554,
+      "type": "lemma"
+    },
+    "2.2": {
+      "label": "pb:equiv",
+      "line": 621,
+      "type": "lemma"
+    },
+    "2.3": {
+      "label": "pb:trace",
+      "line": 644,
+      "type": "lemma"
+    },
+    "2.4": {
+      "label": "pb:est",
+      "line": 709,
+      "type": "theorem"
+    },
+    "2.5": {
+      "label": "pb:rem-E4",
+      "line": 735,
+      "type": "remark"
+    },
+    "2.6": {
+      "label": "pb:central",
+      "line": 745,
+      "type": "lemma"
+    },
+    "2.7": {
+      "label": "pb:singular",
+      "line": 771,
+      "type": "lemma"
+    },
+    "2.8": {
+      "label": "pb:bad",
+      "line": 837,
+      "type": "lemma"
+    },
+    "2.9": {
+      "label": "pb:basic",
+      "line": 877,
+      "type": "lemma"
+    },
+    "2.10": {
+      "label": "pb:iii",
+      "line": 903,
+      "type": "proposition"
+    },
+    "2.11": {
+      "label": "pb:oneprime",
+      "line": 946,
+      "type": "lemma"
+    },
+    "2.12": {
+      "label": "pb:ii",
+      "line": 979,
+      "type": "proposition"
+    },
+    "2.13": {
+      "label": "pb:i",
+      "line": 1000,
+      "type": "proposition"
+    },
+    "2.14": {
+      "label": "pb:lattice",
+      "line": 1027,
+      "type": "lemma"
+    },
+    "2.15": {
+      "label": "pb:thmB",
+      "line": 1112,
+      "type": "theorem"
+    },
+    "2.16": {
+      "label": "pb:bessel",
+      "line": 1152,
+      "type": "definition"
+    },
+    "2.17": {
+      "label": "pb:ortho",
+      "line": 1201,
+      "type": "lemma"
+    },
+    "2.18": {
+      "label": "pb:covol",
+      "line": 1228,
+      "type": "lemma"
+    },
+    "2.19": {
+      "label": "pb:unfold",
+      "line": 1256,
+      "type": "proposition"
+    },
+    "2.20": {
+      "label": "pb:besselterms",
+      "line": 1294,
+      "type": "proposition"
+    },
+    "2.21": {
+      "label": "pb:massratio",
+      "line": 1336,
+      "type": "lemma"
+    },
+    "2.22": {
+      "label": "pb:sizes",
+      "line": 1359,
+      "type": "lemma"
+    },
+    "2.23": {
+      "label": "pb:amp",
+      "line": 1435,
+      "type": "theorem"
+    },
+    "2.24": {
+      "label": "pb:elem",
+      "line": 1458,
+      "type": "lemma"
+    },
+    "2.25": {
+      "label": "pb:reduction",
+      "line": 1483,
+      "type": "proposition"
+    },
+    "3.1": {
+      "label": "pbv:rows",
+      "line": 1658,
+      "type": "lemma"
+    },
+    "3.2": {
+      "label": "pbv:add",
+      "line": 1690,
+      "type": "lemma"
+    },
+    "3.3": {
+      "label": "pbv:eichler",
+      "line": 1707,
+      "type": "lemma"
+    },
+    "3.4": {
+      "label": "pbv:box",
+      "line": 1737,
+      "type": "lemma"
+    },
+    "3.5": {
+      "label": "pbv:bij",
+      "line": 1763,
+      "type": "corollary"
+    },
+    "3.6": {
+      "label": "pbv:haar",
+      "line": 1777,
+      "type": "lemma"
+    },
+    "3.7": {
+      "label": "pbv:Uc",
+      "line": 1844,
+      "type": "lemma"
+    },
+    "3.8": {
+      "label": "pbv:latt",
+      "line": 1860,
+      "type": "lemma"
+    },
+    "3.9": {
+      "label": "pbv:adelic",
+      "line": 1906,
+      "type": "lemma"
+    },
+    "3.10": {
+      "label": "pbv:vol-a",
+      "line": 1926,
+      "type": "lemma"
+    },
+    "3.11": {
+      "label": "pbv:vol-skew",
+      "line": 1949,
+      "type": "lemma"
+    },
+    "3.12": {
+      "label": "pbv:covol",
+      "line": 1967,
+      "type": "theorem"
+    },
+    "3.13": {
+      "label": "pbv:rem-tower",
+      "line": 2012,
+      "type": "remark"
+    },
+    "3.14": {
+      "label": "pbe:length",
+      "line": 2259,
+      "type": "definition"
+    },
+    "3.15": {
+      "label": "pbe:len",
+      "line": 2270,
+      "type": "lemma"
+    },
+    "3.16": {
+      "label": "pbe:ds",
+      "line": 2331,
+      "type": "theorem"
+    },
+    "3.17": {
+      "label": "pbe:cover",
+      "line": 2352,
+      "type": "lemma"
+    },
+    "3.18": {
+      "label": "pbe:local",
+      "line": 2376,
+      "type": "proposition"
+    },
+    "3.19": {
+      "label": "pbe:rem-local",
+      "line": 2466,
+      "type": "remark"
+    },
+    "3.20": {
+      "label": "pbe:eichler",
+      "line": 2499,
+      "type": "lemma"
+    },
+    "3.21": {
+      "label": "pbe:count",
+      "line": 2529,
+      "type": "proposition"
+    },
+    "3.22": {
+      "label": "pbe:bessel",
+      "line": 2622,
+      "type": "theorem"
+    },
+    "3.23": {
+      "label": "pbe:vanish",
+      "line": 2702,
+      "type": "lemma"
+    },
+    "3.24": {
+      "label": "pbe:scalar",
+      "line": 2725,
+      "type": "lemma"
+    },
+    "3.25": {
+      "label": "pbe:star",
+      "line": 2781,
+      "type": "corollary"
+    },
+    "3.26": {
+      "label": "pbe:cut",
+      "line": 2797,
+      "type": "proposition"
+    },
+    "3.27": {
+      "label": "pbe:link",
+      "line": 2838,
+      "type": "lemma"
+    },
+    "3.28": {
+      "label": "pbe:pillars",
+      "line": 2905,
+      "type": "theorem"
+    },
+    "3.29": {
+      "label": "pbe:rank",
+      "line": 2941,
+      "type": "lemma"
+    },
+    "3.30": {
+      "label": "pbe:pairs",
+      "line": 2958,
+      "type": "lemma"
+    },
+    "3.31": {
+      "label": "pbe:two",
+      "line": 2976,
+      "type": "proposition"
+    },
+    "3.32": {
+      "label": "pbe:XL1",
+      "line": 3006,
+      "type": "theorem"
+    },
+    "3.33": {
+      "label": "pbm:pos",
+      "line": 3168,
+      "type": "lemma"
+    },
+    "3.34": {
+      "label": "pbm:pair",
+      "line": 3200,
+      "type": "lemma"
+    },
+    "3.35": {
+      "label": "pbm:first",
+      "line": 3241,
+      "type": "lemma"
+    },
+    "3.36": {
+      "label": "pbm:crude",
+      "line": 3275,
+      "type": "lemma"
+    },
+    "3.37": {
+      "label": "pbm:Phi",
+      "line": 3305,
+      "type": "proposition"
+    },
+    "3.38": {
+      "label": "pbm:chain",
+      "line": 3365,
+      "type": "lemma"
+    },
+    "3.39": {
+      "label": "pbm:E4",
+      "line": 3396,
+      "type": "theorem"
+    },
+    "3.40": {
+      "label": "pbm:rem-E4",
+      "line": 3414,
+      "type": "remark"
+    },
+    "3.41": {
+      "label": "pbm:cell",
+      "line": 3450,
+      "type": "proposition"
+    },
+    "3.42": {
+      "label": "pbm:orbit",
+      "line": 3525,
+      "type": "proposition"
+    },
+    "3.43": {
+      "label": "pbm:classsum",
+      "line": 3566,
+      "type": "proposition"
+    },
+    "3.44": {
+      "label": "pbm:system",
+      "line": 3617,
+      "type": "definition"
+    },
+    "3.45": {
+      "label": "pbm:sysprop",
+      "line": 3636,
+      "type": "lemma"
+    },
+    "3.46": {
+      "label": "pbm:poisson",
+      "line": 3661,
+      "type": "lemma"
+    },
+    "3.47": {
+      "label": "pbm:poissonT",
+      "line": 3707,
+      "type": "lemma"
+    },
+    "3.48": {
+      "label": "pbm:abstract",
+      "line": 3738,
+      "type": "theorem"
+    },
+    "3.49": {
+      "label": "pbm:freq",
+      "line": 3797,
+      "type": "lemma"
+    },
+    "3.50": {
+      "label": "pbm:sieve",
+      "line": 3813,
+      "type": "theorem"
+    },
+    "3.51": {
+      "label": "pbm:inputs",
+      "line": 3890,
+      "type": "theorem"
+    },
+    "3.52": {
+      "label": "pbm:const",
+      "line": 3928,
+      "type": "lemma"
+    },
+    "3.53": {
+      "label": "pbm:L2",
+      "line": 3994,
+      "type": "theorem"
+    },
+    "4.1": {
+      "label": "pm:arch",
+      "line": 4206,
+      "type": "theorem"
+    },
+    "4.2": {
+      "label": "pm:rem-arch",
+      "line": 4235,
+      "type": "remark"
+    },
+    "4.3": {
+      "label": "pm:rem-other",
+      "line": 4247,
+      "type": "remark"
+    },
+    "4.4": {
+      "label": "pm:def-forms",
+      "line": 4272,
+      "type": "definition"
+    },
+    "4.5": {
+      "label": "pm:main",
+      "line": 4299,
+      "type": "theorem"
+    },
+    "4.6": {
+      "label": "pm:mult",
+      "line": 4331,
+      "type": "proposition"
+    },
+    "4.7": {
+      "label": "pm:kernel",
+      "line": 4346,
+      "type": "lemma"
+    },
+    "4.8": {
+      "label": "pm:cusp",
+      "line": 4377,
+      "type": "lemma"
+    },
+    "4.9": {
+      "label": "pm:siegel",
+      "line": 4442,
+      "type": "lemma"
+    },
+    "4.10": {
+      "label": "pm:decay",
+      "line": 4515,
+      "type": "lemma"
+    },
+    "4.11": {
+      "label": "pm:bound",
+      "line": 4562,
+      "type": "proposition"
+    },
+    "4.12": {
+      "label": "pm:trace",
+      "line": 4596,
+      "type": "proposition"
+    },
+    "4.13": {
+      "label": "pm:red",
+      "line": 4643,
+      "type": "proposition"
+    },
+    "4.14": {
+      "label": "pm:classes",
+      "line": 4729,
+      "type": "lemma"
+    },
+    "4.15": {
+      "label": "pm:selberg",
+      "line": 4773,
+      "type": "lemma"
+    },
+    "4.16": {
+      "label": "pm:ell",
+      "line": 4804,
+      "type": "proposition"
+    },
+    "4.17": {
+      "label": "pm:rem-even",
+      "line": 4840,
+      "type": "remark"
+    },
+    "4.18": {
+      "label": "pm:simple",
+      "line": 4849,
+      "type": "corollary"
+    },
+    "4.19": {
+      "label": "pm:line",
+      "line": 4862,
+      "type": "lemma"
+    },
+    "4.20": {
+      "label": "pm:hecke",
+      "line": 4884,
+      "type": "lemma"
+    },
+    "4.21": {
+      "label": "pm:supercusp",
+      "line": 4970,
+      "type": "lemma"
+    },
+    "4.22": {
+      "label": "pm:rem-full",
+      "line": 5021,
+      "type": "remark"
+    },
+    "4.23": {
+      "label": "pbr:main",
+      "line": 5122,
+      "type": "theorem"
+    },
+    "4.24": {
+      "label": "pbr:rem-conv",
+      "line": 5139,
+      "type": "remark"
+    },
+    "4.25": {
+      "label": "pbr:basic",
+      "line": 5230,
+      "type": "lemma"
+    },
+    "4.26": {
+      "label": "pbr:top",
+      "line": 5274,
+      "type": "lemma"
+    },
+    "4.27": {
+      "label": "pbr:tau",
+      "line": 5297,
+      "type": "lemma"
+    },
+    "4.28": {
+      "label": "pbr:minor",
+      "line": 5318,
+      "type": "lemma"
+    },
+    "4.29": {
+      "label": "pbr:int",
+      "line": 5338,
+      "type": "proposition"
+    },
+    "4.30": {
+      "label": "pbr:mult",
+      "line": 5360,
+      "type": "lemma"
+    },
+    "4.31": {
+      "label": "pbr:laurent",
+      "line": 5387,
+      "type": "proposition"
+    },
+    "4.32": {
+      "label": "pbr:jac",
+      "line": 5470,
+      "type": "lemma"
+    },
+    "4.33": {
+      "label": "pbr:flag",
+      "line": 5491,
+      "type": "proposition"
+    },
+    "4.34": {
+      "label": "pbr:flagG",
+      "line": 5547,
+      "type": "corollary"
+    },
+    "4.35": {
+      "label": "pbr:FA",
+      "line": 5575,
+      "type": "lemma"
+    },
+    "4.36": {
+      "label": "pbr:hw",
+      "line": 5594,
+      "type": "lemma"
+    },
+    "4.37": {
+      "label": "pbr:Un",
+      "line": 5626,
+      "type": "lemma"
+    },
+    "4.38": {
+      "label": "pbr:orbit",
+      "line": 5645,
+      "type": "proposition"
+    },
+    "4.39": {
+      "label": "pbr:gain",
+      "line": 5670,
+      "type": "lemma"
+    },
+    "4.40": {
+      "label": "pbr:compact",
+      "line": 5700,
+      "type": "lemma"
+    },
+    "4.41": {
+      "label": "pbr:Ebound",
+      "line": 5712,
+      "type": "proposition"
+    },
+    "4.42": {
+      "label": "pbr:low",
+      "line": 5733,
+      "type": "lemma"
+    },
+    "4.43": {
+      "label": "pbr:degree",
+      "line": 5823,
+      "type": "corollary"
+    },
+    "4.44": {
+      "label": "pbr:rem-used",
+      "line": 5835,
+      "type": "remark"
+    },
+    "5.1": {
+      "label": "pds:chamber",
+      "line": 5983,
+      "type": "lemma"
+    },
+    "5.2": {
+      "label": "pds:haar",
+      "line": 6029,
+      "type": "proposition"
+    },
+    "5.3": {
+      "label": "pds:cayley",
+      "line": 6043,
+      "type": "remark"
+    },
+    "5.4": {
+      "label": "pds:blockdet",
+      "line": 6056,
+      "type": "lemma"
+    },
+    "5.5": {
+      "label": "pds:fischer",
+      "line": 6070,
+      "type": "lemma"
+    },
+    "5.6": {
+      "label": "pds:decay",
+      "line": 6102,
+      "type": "theorem"
+    },
+    "5.7": {
+      "label": "pds:lip",
+      "line": 6138,
+      "type": "lemma"
+    },
+    "5.8": {
+      "label": "pds:balls",
+      "line": 6169,
+      "type": "lemma"
+    },
+    "5.9": {
+      "label": "pds:tail",
+      "line": 6185,
+      "type": "theorem"
+    },
+    "5.10": {
+      "label": "pds:kappa",
+      "line": 6219,
+      "type": "lemma"
+    },
+    "5.11": {
+      "label": "pds:A0",
+      "line": 6300,
+      "type": "proposition"
+    },
+    "5.12": {
+      "label": "pds:rem-A0",
+      "line": 6311,
+      "type": "remark"
+    },
+    "6.1": {
+      "label": "ppi:def-cell",
+      "line": 6386,
+      "type": "definition"
+    },
+    "6.2": {
+      "label": "ppi:def-N",
+      "line": 6436,
+      "type": "definition"
+    },
+    "6.3": {
+      "label": "ppi:pillars",
+      "line": 6445,
+      "type": "theorem"
+    },
+    "6.4": {
+      "label": "ppi:rem-sizes",
+      "line": 6468,
+      "type": "remark"
+    },
+    "6.5": {
+      "label": "ppi:eichler",
+      "line": 6491,
+      "type": "lemma"
+    },
+    "6.6": {
+      "label": "ppi:climb",
+      "line": 6513,
+      "type": "lemma"
+    },
+    "6.7": {
+      "label": "ppi:cell",
+      "line": 6539,
+      "type": "proposition"
+    },
+    "6.8": {
+      "label": "ppi:gauge",
+      "line": 6579,
+      "type": "lemma"
+    },
+    "6.9": {
+      "label": "ppi:G",
+      "line": 6606,
+      "type": "proposition"
+    },
+    "6.10": {
+      "label": "ppi:C",
+      "line": 6632,
+      "type": "proposition"
+    },
+    "6.11": {
+      "label": "ppi:check",
+      "line": 6669,
+      "type": "proposition"
+    },
+    "7.1": {
+      "label": "pbp:sizes",
+      "line": 6781,
+      "type": "lemma"
+    },
+    "7.2": {
+      "label": "pbp:main",
+      "line": 6801,
+      "type": "theorem"
+    },
+    "7.3": {
+      "label": "pbp:R",
+      "line": 6821,
+      "type": "lemma"
+    },
+    "7.4": {
+      "label": "pbp:psi",
+      "line": 6848,
+      "type": "lemma"
+    },
+    "7.5": {
+      "label": "pbp:sign",
+      "line": 6872,
+      "type": "lemma"
+    },
+    "7.6": {
+      "label": "pbp:W",
+      "line": 6892,
+      "type": "lemma"
+    },
+    "7.7": {
+      "label": "pbp:rem-doubts",
+      "line": 6918,
+      "type": "remark"
+    },
+    "7.8": {
+      "label": "pbp:def-pos",
+      "line": 6946,
+      "type": "definition"
+    },
+    "7.9": {
+      "label": "pbp:traces",
+      "line": 6966,
+      "type": "lemma"
+    },
+    "7.10": {
+      "label": "pbp:residue",
+      "line": 7035,
+      "type": "lemma"
+    },
+    "7.11": {
+      "label": "pbp:gram",
+      "line": 7047,
+      "type": "lemma"
+    },
+    "7.12": {
+      "label": "pbp:tb-witt",
+      "line": 7062,
+      "type": "lemma"
+    },
+    "7.13": {
+      "label": "pbp:stationary",
+      "line": 7098,
+      "type": "proposition"
+    },
+    "7.14": {
+      "label": "pbp:frame",
+      "line": 7129,
+      "type": "lemma"
+    },
+    "7.15": {
+      "label": "pbp:point",
+      "line": 7141,
+      "type": "proposition"
+    },
+    "7.16": {
+      "label": "pbp:third",
+      "line": 7199,
+      "type": "lemma"
+    },
+    "7.17": {
+      "label": "pbp:second",
+      "line": 7229,
+      "type": "proposition"
+    },
+    "7.18": {
+      "label": "pbp:minorsize",
+      "line": 7254,
+      "type": "lemma"
+    },
+    "7.19": {
+      "label": "pbp:minorconj",
+      "line": 7266,
+      "type": "proposition"
+    },
+    "7.20": {
+      "label": "pbp:reduced",
+      "line": 7320,
+      "type": "lemma"
+    },
+    "7.21": {
+      "label": "pbp:dLambda",
+      "line": 7349,
+      "type": "lemma"
+    },
+    "7.22": {
+      "label": "pbp:gauss",
+      "line": 7367,
+      "type": "proposition"
+    },
+    "7.23": {
+      "label": "pbp:compact",
+      "line": 7398,
+      "type": "lemma"
+    },
+    "7.24": {
+      "label": "pbp:phaselog",
+      "line": 7418,
+      "type": "lemma"
+    },
+    "7.25": {
+      "label": "pbp:rows",
+      "line": 7430,
+      "type": "lemma"
+    },
+    "7.26": {
+      "label": "pbp:leftX",
+      "line": 7451,
+      "type": "lemma"
+    },
+    "7.27": {
+      "label": "pbp:far",
+      "line": 7463,
+      "type": "lemma"
+    },
+    "7.28": {
+      "label": "pbp:localise",
+      "line": 7472,
+      "type": "lemma"
+    },
+    "7.29": {
+      "label": "pbp:cone",
+      "line": 7492,
+      "type": "proposition"
+    },
+    "7.30": {
+      "label": "pbp:cover1",
+      "line": 7525,
+      "type": "lemma"
+    },
+    "7.31": {
+      "label": "pbp:cover2",
+      "line": 7535,
+      "type": "lemma"
+    },
+    "8.1": {
+      "label": "pbg:basic",
+      "line": 7648,
+      "type": "lemma"
+    },
+    "8.2": {
+      "label": "pbg:jacobi",
+      "line": 7690,
+      "type": "lemma"
+    },
+    "8.3": {
+      "label": "pbg:indexmap",
+      "line": 7726,
+      "type": "lemma"
+    },
+    "8.4": {
+      "label": "pbg:shared",
+      "line": 7753,
+      "type": "lemma"
+    },
+    "8.5": {
+      "label": "pbg:subframe",
+      "line": 7787,
+      "type": "lemma"
+    },
+    "8.6": {
+      "label": "pbg:rem-gauge",
+      "line": 7801,
+      "type": "remark"
+    },
+    "8.7": {
+      "label": "pbg:linkforms",
+      "line": 7824,
+      "type": "lemma"
+    },
+    "8.8": {
+      "label": "pbg:L1",
+      "line": 7866,
+      "type": "proposition"
+    },
+    "8.9": {
+      "label": "pbg:Lplus",
+      "line": 7920,
+      "type": "proposition"
+    },
+    "8.10": {
+      "label": "pbg:linkvec",
+      "line": 7938,
+      "type": "lemma"
+    },
+    "8.11": {
+      "label": "pbg:climbp",
+      "line": 7968,
+      "type": "lemma"
+    },
+    "8.12": {
+      "label": "pbg:meet",
+      "line": 8030,
+      "type": "lemma"
+    },
+    "8.13": {
+      "label": "pbg:cut",
+      "line": 8048,
+      "type": "proposition"
+    },
+    "8.14": {
+      "label": "pbg:congr",
+      "line": 8111,
+      "type": "proposition"
+    },
+    "8.15": {
+      "label": "pbg:index",
+      "line": 8143,
+      "type": "proposition"
+    },
+    "8.16": {
+      "label": "pbg:main",
+      "line": 8176,
+      "type": "theorem"
+    },
+    "8.17": {
+      "label": "pbc:domain",
+      "line": 8271,
+      "type": "lemma"
+    },
+    "8.18": {
+      "label": "pbc:def-reduced",
+      "line": 8285,
+      "type": "definition"
+    },
+    "8.19": {
+      "label": "pbc:box",
+      "line": 8298,
+      "type": "lemma"
+    },
+    "8.20": {
+      "label": "pbc:rem-box",
+      "line": 8309,
+      "type": "remark"
+    },
+    "8.21": {
+      "label": "pbc:disc",
+      "line": 8323,
+      "type": "lemma"
+    },
+    "8.22": {
+      "label": "pbc:pack",
+      "line": 8356,
+      "type": "lemma"
+    },
+    "8.23": {
+      "label": "pbc:moves",
+      "line": 8375,
+      "type": "lemma"
+    },
+    "8.24": {
+      "label": "pbc:indep",
+      "line": 8417,
+      "type": "lemma"
+    },
+    "8.25": {
+      "label": "pbc:shared",
+      "line": 8440,
+      "type": "lemma"
+    },
+    "8.26": {
+      "label": "pbc:C1",
+      "line": 8468,
+      "type": "theorem"
+    },
+    "8.27": {
+      "label": "pbc:rem-C1",
+      "line": 8608,
+      "type": "remark"
+    },
+    "8.28": {
+      "label": "pbc:average",
+      "line": 8622,
+      "type": "lemma"
+    },
+    "8.29": {
+      "label": "pbc:index",
+      "line": 8640,
+      "type": "lemma"
+    },
+    "8.30": {
+      "label": "pbc:forms",
+      "line": 8655,
+      "type": "lemma"
+    },
+    "8.31": {
+      "label": "pbc:zeta",
+      "line": 8668,
+      "type": "lemma"
+    },
+    "8.32": {
+      "label": "pbc:tb-covol",
+      "line": 8695,
+      "type": "lemma"
+    },
+    "8.33": {
+      "label": "pbc:covol",
+      "line": 8712,
+      "type": "lemma"
+    },
+    "8.34": {
+      "label": "pbc:siegel",
+      "line": 8727,
+      "type": "lemma"
+    },
+    "8.35": {
+      "label": "pbc:height",
+      "line": 8751,
+      "type": "lemma"
+    },
+    "8.36": {
+      "label": "pbc:C2",
+      "line": 8769,
+      "type": "theorem"
+    },
+    "8.37": {
+      "label": "pbc:rem-sizes",
+      "line": 8810,
+      "type": "remark"
+    },
+    "8.38": {
+      "label": "pbs:S",
+      "line": 8926,
+      "type": "theorem"
+    },
+    "8.39": {
+      "label": "pbs:reduced",
+      "line": 8968,
+      "type": "lemma"
+    },
+    "8.40": {
+      "label": "pbs:rem-nu",
+      "line": 9007,
+      "type": "remark"
+    },
+    "8.41": {
+      "label": "pbs:weight",
+      "line": 9028,
+      "type": "lemma"
+    },
+    "8.42": {
+      "label": "pbs:agree",
+      "line": 9068,
+      "type": "lemma"
+    },
+    "8.43": {
+      "label": "pbs:cells",
+      "line": 9106,
+      "type": "lemma"
+    },
+    "8.44": {
+      "label": "pbs:near",
+      "line": 9127,
+      "type": "lemma"
+    },
+    "8.45": {
+      "label": "pbs:orbit",
+      "line": 9142,
+      "type": "theorem"
+    },
+    "8.46": {
+      "label": "pbs:open-block",
+      "line": 9153,
+      "type": "proposition"
+    },
+    "8.47": {
+      "label": "pbs:rank",
+      "line": 9159,
+      "type": "proposition"
+    },
+    "8.48": {
+      "label": "pbs:proj",
+      "line": 9193,
+      "type": "lemma"
+    },
+    "8.49": {
+      "label": "pbs:def-v",
+      "line": 9201,
+      "type": "definition"
+    },
+    "8.50": {
+      "label": "pbs:v-props",
+      "line": 9207,
+      "type": "lemma"
+    },
+    "8.51": {
+      "label": "pbs:cs",
+      "line": 9231,
+      "type": "lemma"
+    },
+    "8.52": {
+      "label": "pbs:stages",
+      "line": 9246,
+      "type": "lemma"
+    },
+    "8.53": {
+      "label": "pbs:common",
+      "line": 9299,
+      "type": "lemma"
+    },
+    "8.54": {
+      "label": "pbs:mod",
+      "line": 9326,
+      "type": "lemma"
+    },
+    "8.55": {
+      "label": "pbs:tri",
+      "line": 9349,
+      "type": "lemma"
+    },
+    "8.56": {
+      "label": "pbs:OT",
+      "line": 9411,
+      "type": "lemma"
+    },
+    "8.57": {
+      "label": "pbs:hua",
+      "line": 9422,
+      "type": "lemma"
+    },
+    "8.58": {
+      "label": "pbs:oneplace",
+      "line": 9446,
+      "type": "theorem"
+    },
+    "8.59": {
+      "label": "pbs:indep",
+      "line": 9492,
+      "type": "lemma"
+    },
+    "8.60": {
+      "label": "pbs:move",
+      "line": 9508,
+      "type": "lemma"
+    },
+    "8.61": {
+      "label": "pbs:colour",
+      "line": 9529,
+      "type": "lemma"
+    },
+    "8.62": {
+      "label": "pbs:col",
+      "line": 9560,
+      "type": "lemma"
+    },
+    "8.63": {
+      "label": "pbs:shifted",
+      "line": 9576,
+      "type": "lemma"
+    },
+    "8.64": {
+      "label": "pbs:packing",
+      "line": 9594,
+      "type": "lemma"
+    },
+    "8.65": {
+      "label": "pbs:kernel",
+      "line": 9622,
+      "type": "lemma"
+    },
+    "8.66": {
+      "label": "pbs:orbit-sum",
+      "line": 9644,
+      "type": "proposition"
+    },
+    "8.67": {
+      "label": "pbs:O2",
+      "line": 9742,
+      "type": "lemma"
+    },
+    "8.68": {
+      "label": "pbs:open-arith",
+      "line": 9791,
+      "type": "lemma"
+    },
+    "8.69": {
+      "label": "pbs:stab",
+      "line": 9839,
+      "type": "lemma"
+    },
+    "8.70": {
+      "label": "pbo:O1",
+      "line": 9991,
+      "type": "theorem"
+    },
+    "8.71": {
+      "label": "pbo:rem-O1",
+      "line": 10007,
+      "type": "remark"
+    },
+    "8.72": {
+      "label": "pbo:def-system",
+      "line": 10043,
+      "type": "definition"
+    },
+    "8.73": {
+      "label": "pbo:system",
+      "line": 10062,
+      "type": "theorem"
+    },
+    "8.74": {
+      "label": "pbo:local",
+      "line": 10071,
+      "type": "proposition"
+    },
+    "8.75": {
+      "label": "pbo:def-section",
+      "line": 10091,
+      "type": "definition"
+    },
+    "8.76": {
+      "label": "pbo:section",
+      "line": 10101,
+      "type": "lemma"
+    },
+    "8.77": {
+      "label": "pbo:witt",
+      "line": 10131,
+      "type": "lemma"
+    },
+    "8.78": {
+      "label": "pbo:sizes",
+      "line": 10148,
+      "type": "lemma"
+    },
+    "8.79": {
+      "label": "pbo:norm-z",
+      "line": 10197,
+      "type": "lemma"
+    },
+    "8.80": {
+      "label": "pbo:GF",
+      "line": 10235,
+      "type": "lemma"
+    },
+    "8.81": {
+      "label": "pbo:append",
+      "line": 10280,
+      "type": "lemma"
+    },
+    "8.82": {
+      "label": "pbo:meanvalue",
+      "line": 10327,
+      "type": "proposition"
+    },
+    "8.83": {
+      "label": "pbo:unfold",
+      "line": 10372,
+      "type": "lemma"
+    },
+    "8.84": {
+      "label": "pbo:section-int",
+      "line": 10396,
+      "type": "lemma"
+    },
+    "8.85": {
+      "label": "pbo:sobolev",
+      "line": 10415,
+      "type": "lemma"
+    },
+    "8.86": {
+      "label": "pbo:schur-section",
+      "line": 10445,
+      "type": "theorem"
+    },
+    "8.87": {
+      "label": "pbo:tube",
+      "line": 10486,
+      "type": "lemma"
+    },
+    "8.88": {
+      "label": "pbo:K",
+      "line": 10602,
+      "type": "lemma"
+    },
+    "8.89": {
+      "label": "pbo:translates",
+      "line": 10657,
+      "type": "lemma"
+    }
+  },
+  "46": {
+    "3.1": {
+      "label": "lem:K",
+      "line": 337,
+      "type": "lemma"
+    },
+    "3.2": {
+      "label": "thm:S",
+      "line": 360,
+      "type": "theorem"
+    },
+    "3.3": {
+      "label": "thm:A",
+      "line": 381,
+      "type": "theorem"
+    },
+    "3.4": {
+      "label": "rem:Kprim",
+      "line": 411,
+      "type": "remark"
+    },
+    "3.5": {
+      "label": "cor:mono",
+      "line": 420,
+      "type": "corollary"
+    },
+    "3.6": {
+      "label": "lem:mbounds",
+      "line": 435,
+      "type": "lemma"
+    },
+    "3.7": {
+      "label": "lem:form-density",
+      "line": 457,
+      "type": "lemma"
+    },
+    "3.8": {
+      "label": "lem:monoT",
+      "line": 489,
+      "type": "lemma"
+    },
+    "3.9": {
+      "label": "lem:compact",
+      "line": 503,
+      "type": "lemma"
+    },
+    "3.10": {
+      "label": "lem:contT",
+      "line": 530,
+      "type": "lemma"
+    },
+    "4.1": {
+      "label": "def:PD",
+      "line": 564,
+      "type": "definition"
+    },
+    "4.2": {
+      "label": "prop:weak",
+      "line": 574,
+      "type": "proposition"
+    },
+    "4.3": {
+      "label": "lem:gbounds",
+      "line": 590,
+      "type": "lemma"
+    },
+    "4.4": {
+      "label": "thm:D1",
+      "line": 612,
+      "type": "theorem"
+    },
+    "4.5": {
+      "label": "cor:D1W",
+      "line": 657,
+      "type": "corollary"
+    },
+    "4.6": {
+      "label": "thm:O",
+      "line": 674,
+      "type": "theorem"
+    },
+    "4.7": {
+      "label": "thm:W",
+      "line": 709,
+      "type": "theorem"
+    },
+    "4.8": {
+      "label": "lem:W",
+      "line": 738,
+      "type": "lemma"
+    },
+    "4.9": {
+      "label": "prop:P",
+      "line": 763,
+      "type": "proposition"
+    },
+    "4.10": {
+      "label": "lem:roughEF",
+      "line": 791,
+      "type": "lemma"
+    },
+    "5.1": {
+      "label": "lem:F1",
+      "line": 843,
+      "type": "lemma"
+    },
+    "5.2": {
+      "label": "prop:T0",
+      "line": 869,
+      "type": "proposition"
+    },
+    "5.3": {
+      "label": "lem:T",
+      "line": 882,
+      "type": "lemma"
+    },
+    "5.4": {
+      "label": "cor:T2",
+      "line": 897,
+      "type": "corollary"
+    },
+    "5.5": {
+      "label": "lem:hybrid",
+      "line": 910,
+      "type": "lemma"
+    },
+    "5.6": {
+      "label": "thm:E",
+      "line": 924,
+      "type": "theorem"
+    },
+    "5.7": {
+      "label": "prop:M",
+      "line": 948,
+      "type": "proposition"
+    },
+    "5.8": {
+      "label": "prop:TAY",
+      "line": 971,
+      "type": "proposition"
+    },
+    "5.9": {
+      "label": "(sin label)",
+      "line": 998,
+      "type": "remark"
+    },
+    "6.1": {
+      "label": "def:W",
+      "line": 1026,
+      "type": "definition"
+    },
+    "6.2": {
+      "label": "thm:Z",
+      "line": 1041,
+      "type": "theorem"
+    },
+    "6.3": {
+      "label": "cor:zeros",
+      "line": 1077,
+      "type": "corollary"
+    },
+    "6.4": {
+      "label": "thm:Zexh",
+      "line": 1083,
+      "type": "theorem"
+    },
+    "6.5": {
+      "label": "thm:finZ",
+      "line": 1115,
+      "type": "theorem"
+    },
+    "6.6": {
+      "label": "def:KEP",
+      "line": 1154,
+      "type": "definition"
+    },
+    "6.7": {
+      "label": "lem:polar",
+      "line": 1170,
+      "type": "lemma"
+    },
+    "6.8": {
+      "label": "thm:KEP1",
+      "line": 1180,
+      "type": "theorem"
+    },
+    "6.9": {
+      "label": "thm:KEP2",
+      "line": 1200,
+      "type": "theorem"
+    },
+    "6.10": {
+      "label": "thm:KEPdich",
+      "line": 1212,
+      "type": "theorem"
+    },
+    "7.1": {
+      "label": "prop:arch",
+      "line": 1237,
+      "type": "proposition"
+    },
+    "7.2": {
+      "label": "prop:nodes",
+      "line": 1262,
+      "type": "proposition"
+    },
+    "7.3": {
+      "label": "lem:parity",
+      "line": 1292,
+      "type": "lemma"
+    },
+    "7.4": {
+      "label": "lem:zeroext",
+      "line": 1302,
+      "type": "lemma"
+    },
+    "7.5": {
+      "label": "lem:strict",
+      "line": 1311,
+      "type": "lemma"
+    },
+    "8.1": {
+      "label": "lem:Onat",
+      "line": 1354,
+      "type": "lemma"
+    },
+    "8.2": {
+      "label": "thm:Al",
+      "line": 1368,
+      "type": "theorem"
+    },
+    "8.3": {
+      "label": "def:Al",
+      "line": 1382,
+      "type": "definition"
+    },
+    "8.4": {
+      "label": "lem:Alband",
+      "line": 1392,
+      "type": "lemma"
+    },
+    "8.5": {
+      "label": "rem:Cheb",
+      "line": 1408,
+      "type": "remark"
+    },
+    "8.6": {
+      "label": "thm:parityschur",
+      "line": 1433,
+      "type": "theorem"
+    },
+    "8.7": {
+      "label": "prop:polarcap",
+      "line": 1491,
+      "type": "proposition"
+    },
+    "8.8": {
+      "label": "thm:mult",
+      "line": 1528,
+      "type": "theorem"
+    },
+    "9.1": {
+      "label": "thm:log5W",
+      "line": 1606,
+      "type": "theorem"
+    },
+    "9.2": {
+      "label": "cor:KEPlog5",
+      "line": 1623,
+      "type": "corollary"
+    },
+    "9.3": {
+      "label": "lem:KyFan",
+      "line": 1633,
+      "type": "lemma"
+    },
+    "9.4": {
+      "label": "cor:P1",
+      "line": 1657,
+      "type": "corollary"
+    },
+    "9.5": {
+      "label": "lem:border",
+      "line": 1664,
+      "type": "lemma"
+    },
+    "9.6": {
+      "label": "prop:lowercert",
+      "line": 1695,
+      "type": "proposition"
+    },
+    "9.7": {
+      "label": "lem:Ncount",
+      "line": 1798,
+      "type": "lemma"
+    },
+    "9.8": {
+      "label": "lem:zerosum",
+      "line": 1808,
+      "type": "lemma"
+    },
+    "9.9": {
+      "label": "lem:testfam",
+      "line": 1821,
+      "type": "lemma"
+    },
+    "9.10": {
+      "label": "thm:margin",
+      "line": 1852,
+      "type": "theorem"
+    },
+    "9.11": {
+      "label": "cor:margin1",
+      "line": 1883,
+      "type": "corollary"
+    },
+    "10.1": {
+      "label": "def:coer-V",
+      "line": 1936,
+      "type": "definition"
+    },
+    "10.2": {
+      "label": "lem:coer-decomp",
+      "line": 1947,
+      "type": "lemma"
+    },
+    "10.3": {
+      "label": "lem:coer-K1",
+      "line": 1975,
+      "type": "lemma"
+    },
+    "10.4": {
+      "label": "lem:coer-sector",
+      "line": 1999,
+      "type": "lemma"
+    },
+    "10.5": {
+      "label": "lem:coer-K",
+      "line": 2022,
+      "type": "lemma"
+    },
+    "10.6": {
+      "label": "lem:coer-tail",
+      "line": 2032,
+      "type": "lemma"
+    },
+    "10.7": {
+      "label": "lem:coer-w",
+      "line": 2040,
+      "type": "lemma"
+    },
+    "10.8": {
+      "label": "lem:coer-poinc",
+      "line": 2050,
+      "type": "lemma"
+    },
+    "10.9": {
+      "label": "thm:coer-A",
+      "line": 2068,
+      "type": "theorem"
+    },
+    "10.10": {
+      "label": "lem:coer-lowpass",
+      "line": 2114,
+      "type": "lemma"
+    },
+    "10.11": {
+      "label": "thm:coer-B",
+      "line": 2137,
+      "type": "theorem"
+    },
+    "10.12": {
+      "label": "prop:coer-prime",
+      "line": 2193,
+      "type": "proposition"
+    },
+    "10.13": {
+      "label": "cor:coer-L1",
+      "line": 2223,
+      "type": "corollary"
+    },
+    "10.14": {
+      "label": "thm:coer-schur",
+      "line": 2261,
+      "type": "theorem"
+    },
+    "10.15": {
+      "label": "rem:inertiatower",
+      "line": 2312,
+      "type": "remark"
+    },
+    "10.16": {
+      "label": "rem:coer-nogo",
+      "line": 2331,
+      "type": "remark"
+    },
+    "10.17": {
+      "label": "lem:firstcontact",
+      "line": 2350,
+      "type": "lemma"
+    },
+    "11.1": {
+      "label": "ladder",
+      "line": 2385,
+      "type": "proposition"
+    },
+    "11.2": {
+      "label": "prop:all-degree-gram",
+      "line": 2411,
+      "type": "proposition"
+    },
+    "12.1": {
+      "label": "an:def-R",
+      "line": 2526,
+      "type": "definition"
+    },
+    "12.2": {
+      "label": "an:lem-R",
+      "line": 2543,
+      "type": "lemma"
+    },
+    "12.3": {
+      "label": "an:prop-pnt",
+      "line": 2594,
+      "type": "proposition"
+    },
+    "12.4": {
+      "label": "an:lem-landau",
+      "line": 2636,
+      "type": "lemma"
+    },
+    "12.5": {
+      "label": "an:thm-HB",
+      "line": 2690,
+      "type": "theorem"
+    },
+    "12.6": {
+      "label": "an:prop-density",
+      "line": 2707,
+      "type": "proposition"
+    },
+    "12.7": {
+      "label": "an:cor-choice",
+      "line": 2810,
+      "type": "corollary"
+    },
+    "12.8": {
+      "label": "an:rem-choice",
+      "line": 2827,
+      "type": "remark"
+    },
+    "12.9": {
+      "label": "an:thm-criterion",
+      "line": 2842,
+      "type": "theorem"
+    },
+    "13.1": {
+      "label": "an:def-param",
+      "line": 2886,
+      "type": "definition"
+    },
+    "13.2": {
+      "label": "an:def-sparse",
+      "line": 2930,
+      "type": "definition"
+    },
+    "13.3": {
+      "label": "an:def-data",
+      "line": 2954,
+      "type": "definition"
+    },
+    "13.4": {
+      "label": "an:lem-sizes",
+      "line": 2989,
+      "type": "lemma"
+    },
+    "13.5": {
+      "label": "an:rem-sizes",
+      "line": 3089,
+      "type": "remark"
+    },
+    "13.6": {
+      "label": "an:lem-behrend",
+      "line": 3108,
+      "type": "lemma"
+    },
+    "13.7": {
+      "label": "an:prop-sparse",
+      "line": 3132,
+      "type": "proposition"
+    },
+    "13.8": {
+      "label": "an:lem-windows",
+      "line": 3180,
+      "type": "lemma"
+    },
+    "13.9": {
+      "label": "an:thm-data",
+      "line": 3198,
+      "type": "theorem"
+    },
+    "13.10": {
+      "label": "an:rem-ineff",
+      "line": 3269,
+      "type": "remark"
+    },
+    "14.1": {
+      "label": "def:au-height",
+      "line": 3394,
+      "type": "definition"
+    },
+    "14.2": {
+      "label": "au:product",
+      "line": 3408,
+      "type": "proposition"
+    },
+    "14.3": {
+      "label": "def:au-lattice",
+      "line": 3425,
+      "type": "definition"
+    },
+    "14.4": {
+      "label": "au:twistprime",
+      "line": 3461,
+      "type": "theorem"
+    },
+    "14.5": {
+      "label": "au:free",
+      "line": 3598,
+      "type": "lemma"
+    },
+    "14.6": {
+      "label": "def:au-target",
+      "line": 3674,
+      "type": "definition"
+    },
+    "14.7": {
+      "label": "def:au-targetlattice",
+      "line": 3723,
+      "type": "definition"
+    },
+    "14.8": {
+      "label": "def:au-hmain",
+      "line": 3804,
+      "type": "definition"
+    },
+    "14.9": {
+      "label": "au:gains",
+      "line": 3833,
+      "type": "lemma"
+    },
+    "14.10": {
+      "label": "au:count",
+      "line": 3900,
+      "type": "proposition"
+    },
+    "14.11": {
+      "label": "au:local",
+      "line": 3923,
+      "type": "proposition"
+    },
+    "14.12": {
+      "label": "au:local-remark",
+      "line": 3958,
+      "type": "remark"
+    },
+    "14.13": {
+      "label": "thm:srcA",
+      "line": 3993,
+      "type": "theorem"
+    },
+    "14.14": {
+      "label": "thm:srcB",
+      "line": 4012,
+      "type": "theorem"
+    },
+    "14.15": {
+      "label": "thm:srcC",
+      "line": 4020,
+      "type": "theorem"
+    },
+    "14.16": {
+      "label": "au:merged",
+      "line": 4055,
+      "type": "remark"
+    },
+    "14.17": {
+      "label": "au:barrier-remark",
+      "line": 4181,
+      "type": "remark"
+    },
+    "14.18": {
+      "label": "au:errsum",
+      "line": 4213,
+      "type": "lemma"
+    },
+    "14.19": {
+      "label": "au:seesaw",
+      "line": 4314,
+      "type": "proposition"
+    },
+    "14.20": {
+      "label": "au:divis",
+      "line": 4368,
+      "type": "proposition"
+    },
+    "14.21": {
+      "label": "au:shortbasis",
+      "line": 4427,
+      "type": "lemma"
+    },
+    "14.22": {
+      "label": "au:short",
+      "line": 4438,
+      "type": "proposition"
+    },
+    "14.23": {
+      "label": "au:kernel",
+      "line": 4497,
+      "type": "proposition"
+    },
+    "14.24": {
+      "label": "au:restrict",
+      "line": 4516,
+      "type": "proposition"
+    },
+    "14.25": {
+      "label": "au:expansion",
+      "line": 4532,
+      "type": "proposition"
+    },
+    "14.26": {
+      "label": "au:size",
+      "line": 4544,
+      "type": "proposition"
+    },
+    "14.27": {
+      "label": "au:equiv",
+      "line": 4584,
+      "type": "proposition"
+    },
+    "14.28": {
+      "label": "au:good",
+      "line": 4597,
+      "type": "proposition"
+    },
+    "14.29": {
+      "label": "au:ramcount",
+      "line": 4619,
+      "type": "lemma"
+    },
+    "14.30": {
+      "label": "au:onetranslate",
+      "line": 4637,
+      "type": "lemma"
+    },
+    "14.31": {
+      "label": "au:few",
+      "line": 4666,
+      "type": "lemma"
+    },
+    "14.32": {
+      "label": "au:moment",
+      "line": 4692,
+      "type": "proposition"
+    },
+    "14.33": {
+      "label": "au:two-lattices",
+      "line": 4717,
+      "type": "remark"
+    },
+    "14.34": {
+      "label": "au:spread",
+      "line": 4778,
+      "type": "proposition"
+    },
+    "14.35": {
+      "label": "au:inj",
+      "line": 4794,
+      "type": "proposition"
+    },
+    "14.36": {
+      "label": "au:mult",
+      "line": 4812,
+      "type": "proposition"
+    },
+    "14.37": {
+      "label": "au:factor",
+      "line": 4850,
+      "type": "proposition"
+    },
+    "14.38": {
+      "label": "au:aux",
+      "line": 4878,
+      "type": "proposition"
+    },
+    "14.39": {
+      "label": "def:au-regular",
+      "line": 4895,
+      "type": "definition"
+    },
+    "14.40": {
+      "label": "au:regular",
+      "line": 4921,
+      "type": "proposition"
+    },
+    "14.41": {
+      "label": "au:onelift",
+      "line": 4965,
+      "type": "proposition"
+    },
+    "14.42": {
+      "label": "au:hecke",
+      "line": 4992,
+      "type": "proposition"
+    },
+    "14.43": {
+      "label": "au:Zj",
+      "line": 5013,
+      "type": "proposition"
+    },
+    "15.1": {
+      "label": "an:lem-rem",
+      "line": 5126,
+      "type": "lemma"
+    },
+    "15.2": {
+      "label": "an:lem-hmain",
+      "line": 5169,
+      "type": "lemma"
+    },
+    "15.3": {
+      "label": "an:thm-main",
+      "line": 5221,
+      "type": "theorem"
+    },
+    "15.4": {
+      "label": "an:thm-onesided",
+      "line": 5327,
+      "type": "theorem"
+    },
+    "15.5": {
+      "label": "thm:GRH-half",
+      "line": 5368,
+      "type": "theorem"
+    },
+    "15.6": {
+      "label": "an:cor-GRH",
+      "line": 5390,
+      "type": "corollary"
+    },
+    "15.7": {
+      "label": "an:cor-zeta",
+      "line": 5403,
+      "type": "corollary"
+    },
+    "15.8": {
+      "label": "an:rem-status",
+      "line": 5411,
+      "type": "remark"
+    },
+    "16.1": {
+      "label": "thm:RH",
+      "line": 5441,
+      "type": "theorem"
+    },
+    "16.2": {
+      "label": "thm:all-support",
+      "line": 5460,
+      "type": "theorem"
+    },
+    "16.3": {
+      "label": "cor:all-windows",
+      "line": 5505,
+      "type": "corollary"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "fecha": "2026-11-28",
+  "busqueda_exhaustiva_prioridad": false,
+  "fuentes": [
+    {
+      "url": "https://alpo.ge/remark.pdf",
+      "alcance_consulta": "Nota primaria, cuatro páginas; motivación y atribución, no verificación formal"
+    },
+    {
+      "url": "https://www.numdam.org/article/SB_1972-1973__15__234_0.pdf",
+      "alcance_consulta": "Texto primario Bombieri: mecanismo de multiplicidad y conteo"
+    },
+    {
+      "url": "https://ems.press/books/standalone/21/408",
+      "alcance_consulta": "Ficha editorial y alcance; no capítulo íntegro"
+    },
+    {
+      "url": "https://arxiv.org/abs/1512.08946",
+      "alcance_consulta": "Resumen primario Bost; antecedente theta y geometría aritmética"
+    },
+    {
+      "url": "https://arxiv.org/abs/math/0610163",
+      "alcance_consulta": "Resumen primario Bannai–Kobayashi; CM y propiedades p-ádicas"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/0022314X9090110D",
+      "alcance_consulta": "Resumen editorial Chellali; congruencias supersingulares"
+    },
+    {
+      "url": "https://arxiv.org/abs/1207.4709",
+      "alcance_consulta": "Resumen primario Gan–Qiu–Takeda; alcance Rallis"
+    },
+    {
+      "url": "https://arxiv.org/abs/0805.4227",
+      "alcance_consulta": "Resumen primario Caruso–Liu; cotas ramificación, objeto distinto de cup products"
+    },
+    {
+      "url": "https://arxiv.org/abs/math/9811068",
+      "alcance_consulta": "Resumen primario Connes; antecedente fórmula explícita y traza"
+    }
+  ]
+}

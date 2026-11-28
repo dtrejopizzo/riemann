@@ -1,0 +1,23 @@
+{
+  "fecha": "2026-11-28",
+  "renombres": {
+    "03-research/phase-214": "03-research/phase-214-cotas-explicitas-y-reconstruccion",
+    "03-research/phase-215-reporte-final": "03-research/phase-215-certificacion-privada-grh-rh-con-suplementos",
+    "03-research-phase-215-reporte-final": "03-research/phase-215-certificacion-privada-grh-rh-con-suplementos"
+  },
+  "phase_214": "cerrada; resultado condicional conservado",
+  "phase_215": "cerrada; certificacion privada de la cadena reconstruida con suplementos",
+  "phase_216": "prevista; no iniciada",
+  "rutas_activas_actualizadas": [
+    "revision-v2/manifest-reporte.json",
+    "evidencia/check_theta_refs.py",
+    "evidencia/comparar_apendices_spanning.py",
+    "evidencia/compare_theta_quotes.py",
+    "evidencia/auditar_apendices_selmer_hodge.py"
+  ],
+  "hashes_214_antes_cierre": {
+    "README.md": "3d38c3f0f0cdac4917ca51990d056dcb7e95cb6012e08dd9d6453910c67ad8d6",
+    "reconstruccion.md": "b34293bfa383f66c6391db8ec111d5d84b576d1dfa513d5a71aff8e00a57ef11",
+    "verify_bounds.py": "78c59eabc12055239bcf7b26df12c78d22f5da4e7bed7b22f001b1d36241a9c0"
+  }
+}

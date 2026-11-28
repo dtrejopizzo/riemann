@@ -1,0 +1,822 @@
+{
+  "2.1": {
+    "label": "pfr:floorquad",
+    "line": 502,
+    "type": "lemma"
+  },
+  "2.2": {
+    "label": "pfr:L1",
+    "line": 596,
+    "type": "lemma"
+  },
+  "2.3": {
+    "label": "pfr:descent",
+    "line": 708,
+    "type": "lemma"
+  },
+  "2.4": {
+    "label": "pfr:oneframe",
+    "line": 719,
+    "type": "theorem"
+  },
+  "2.5": {
+    "label": "pfr:nogain",
+    "line": 728,
+    "type": "theorem"
+  },
+  "2.6": {
+    "label": "pfr:deep",
+    "line": 733,
+    "type": "theorem"
+  },
+  "2.7": {
+    "label": "pfr:gain-char",
+    "line": 741,
+    "type": "theorem"
+  },
+  "2.8": {
+    "label": "pfr:gain-heads",
+    "line": 750,
+    "type": "theorem"
+  },
+  "2.9": {
+    "label": "pfr:depth-rare",
+    "line": 757,
+    "type": "lemma"
+  },
+  "2.10": {
+    "label": "pfr:chart",
+    "line": 763,
+    "type": "lemma"
+  },
+  "2.11": {
+    "label": "pfr:quadricX",
+    "line": 772,
+    "type": "lemma"
+  },
+  "2.12": {
+    "label": "pfr:shell",
+    "line": 794,
+    "type": "definition"
+  },
+  "2.13": {
+    "label": "pfr:oneshell",
+    "line": 806,
+    "type": "lemma"
+  },
+  "2.14": {
+    "label": "pfr:remoteshell",
+    "line": 823,
+    "type": "lemma"
+  },
+  "2.15": {
+    "label": "pfr:payheight",
+    "line": 837,
+    "type": "lemma"
+  },
+  "2.16": {
+    "label": "pfr:shells",
+    "line": 863,
+    "type": "theorem"
+  },
+  "2.17": {
+    "label": "pfr:R",
+    "line": 926,
+    "type": "theorem"
+  },
+  "2.18": {
+    "label": "pfr:rem-match",
+    "line": 943,
+    "type": "remark"
+  },
+  "2.19": {
+    "label": "pfr:haar",
+    "line": 1001,
+    "type": "lemma"
+  },
+  "2.20": {
+    "label": "pfr:realgauge",
+    "line": 1009,
+    "type": "lemma"
+  },
+  "2.21": {
+    "label": "pfr:conv",
+    "line": 1027,
+    "type": "proposition"
+  },
+  "2.22": {
+    "label": "pfr:top",
+    "line": 1033,
+    "type": "proposition"
+  },
+  "2.23": {
+    "label": "pfr:formbound",
+    "line": 1042,
+    "type": "proposition"
+  },
+  "2.24": {
+    "label": "pfr:remote",
+    "line": 1053,
+    "type": "proposition"
+  },
+  "2.25": {
+    "label": "pfr:deepreal",
+    "line": 1063,
+    "type": "lemma"
+  },
+  "2.26": {
+    "label": "pfr:mass",
+    "line": 1072,
+    "type": "proposition"
+  },
+  "2.27": {
+    "label": "pfr:F0",
+    "line": 1079,
+    "type": "lemma"
+  },
+  "2.28": {
+    "label": "pfr:coeffdiff",
+    "line": 1094,
+    "type": "lemma"
+  },
+  "2.29": {
+    "label": "pfr:ballnorm",
+    "line": 1104,
+    "type": "lemma"
+  },
+  "2.30": {
+    "label": "pfr:weylinv",
+    "line": 1188,
+    "type": "lemma"
+  },
+  "2.31": {
+    "label": "pfr:invweight",
+    "line": 1193,
+    "type": "lemma"
+  },
+  "2.32": {
+    "label": "pfr:floorsq",
+    "line": 1229,
+    "type": "lemma"
+  },
+  "2.33": {
+    "label": "pfr:separate",
+    "line": 1245,
+    "type": "lemma"
+  },
+  "2.34": {
+    "label": "pfr:cut",
+    "line": 1290,
+    "type": "lemma"
+  },
+  "2.35": {
+    "label": "pfr:invweight-floors",
+    "line": 1310,
+    "type": "lemma"
+  },
+  "2.36": {
+    "label": "pfr:pivotdeep",
+    "line": 1322,
+    "type": "lemma"
+  },
+  "2.37": {
+    "label": "pfr:upperinv",
+    "line": 1364,
+    "type": "lemma"
+  },
+  "2.38": {
+    "label": "pfr:section",
+    "line": 1369,
+    "type": "lemma"
+  },
+  "2.39": {
+    "label": "pfr:nearsize",
+    "line": 1377,
+    "type": "lemma"
+  },
+  "2.40": {
+    "label": "pfr:floorright",
+    "line": 1436,
+    "type": "lemma"
+  },
+  "2.41": {
+    "label": "pfr:rearr",
+    "line": 1472,
+    "type": "lemma"
+  },
+  "2.42": {
+    "label": "pfr:block",
+    "line": 1533,
+    "type": "lemma"
+  },
+  "2.43": {
+    "label": "pfr:skew",
+    "line": 1594,
+    "type": "lemma"
+  },
+  "2.44": {
+    "label": "pfr:heis",
+    "line": 1605,
+    "type": "lemma"
+  },
+  "2.45": {
+    "label": "pfr:sectionint",
+    "line": 1627,
+    "type": "lemma"
+  },
+  "2.46": {
+    "label": "pfr:headentries",
+    "line": 1640,
+    "type": "lemma"
+  },
+  "3.1": {
+    "label": "pfs:kernels",
+    "line": 1838,
+    "type": "lemma"
+  },
+  "3.2": {
+    "label": "pfs:rem-corr",
+    "line": 1887,
+    "type": "remark"
+  },
+  "3.3": {
+    "label": "pfs:skewhaar",
+    "line": 1899,
+    "type": "lemma"
+  },
+  "3.4": {
+    "label": "pfs:section",
+    "line": 1918,
+    "type": "lemma"
+  },
+  "3.5": {
+    "label": "pfs:witt",
+    "line": 1941,
+    "type": "remark"
+  },
+  "3.6": {
+    "label": "pfs:planch",
+    "line": 1966,
+    "type": "proposition"
+  },
+  "3.7": {
+    "label": "pfs:quadplanch",
+    "line": 1999,
+    "type": "proposition"
+  },
+  "3.8": {
+    "label": "pfs:nearsize",
+    "line": 2047,
+    "type": "lemma"
+  },
+  "3.9": {
+    "label": "pfs:corrplanch",
+    "line": 2058,
+    "type": "proposition"
+  },
+  "3.10": {
+    "label": "pfs:heiscorr",
+    "line": 2087,
+    "type": "lemma"
+  },
+  "3.11": {
+    "label": "pfs:parseval",
+    "line": 2106,
+    "type": "proposition"
+  },
+  "3.12": {
+    "label": "pfs:twopos",
+    "line": 2166,
+    "type": "lemma"
+  },
+  "3.13": {
+    "label": "pfs:lift",
+    "line": 2175,
+    "type": "lemma"
+  },
+  "3.14": {
+    "label": "pfs:heisid",
+    "line": 2188,
+    "type": "lemma"
+  },
+  "3.15": {
+    "label": "pfs:invdepthN",
+    "line": 2198,
+    "type": "lemma"
+  },
+  "3.16": {
+    "label": "pfs:depthweight",
+    "line": 2227,
+    "type": "lemma"
+  },
+  "3.17": {
+    "label": "pfs:cmrules",
+    "line": 2274,
+    "type": "lemma"
+  },
+  "3.18": {
+    "label": "pfs:factor",
+    "line": 2283,
+    "type": "lemma"
+  },
+  "3.19": {
+    "label": "pfs:climb",
+    "line": 2305,
+    "type": "lemma"
+  },
+  "3.20": {
+    "label": "pfs:allfloors",
+    "line": 2344,
+    "type": "lemma"
+  },
+  "3.21": {
+    "label": "pfs:pivot",
+    "line": 2364,
+    "type": "proposition"
+  },
+  "3.22": {
+    "label": "pfs:frame",
+    "line": 2385,
+    "type": "proposition"
+  },
+  "3.23": {
+    "label": "pfs:weylratio",
+    "line": 2396,
+    "type": "lemma"
+  },
+  "3.24": {
+    "label": "pfs:unisize",
+    "line": 2445,
+    "type": "lemma"
+  },
+  "3.25": {
+    "label": "pfs:twosizes",
+    "line": 2461,
+    "type": "lemma"
+  },
+  "3.26": {
+    "label": "pfs:col",
+    "line": 2512,
+    "type": "lemma"
+  },
+  "3.27": {
+    "label": "pfs:secbound",
+    "line": 2521,
+    "type": "lemma"
+  },
+  "4.1": {
+    "label": "prp:heis",
+    "line": 2665,
+    "type": "lemma"
+  },
+  "4.2": {
+    "label": "prp:fibre",
+    "line": 2706,
+    "type": "lemma"
+  },
+  "4.3": {
+    "label": "prp:disc",
+    "line": 2790,
+    "type": "lemma"
+  },
+  "4.4": {
+    "label": "prp:planch",
+    "line": 2868,
+    "type": "lemma"
+  },
+  "4.5": {
+    "label": "prp:minor",
+    "line": 2893,
+    "type": "lemma"
+  },
+  "4.6": {
+    "label": "prp:headsupport",
+    "line": 2907,
+    "type": "lemma"
+  },
+  "4.7": {
+    "label": "prp:exgauge",
+    "line": 2924,
+    "type": "lemma"
+  },
+  "4.8": {
+    "label": "prp:schur",
+    "line": 2936,
+    "type": "lemma"
+  },
+  "4.9": {
+    "label": "prp:normW",
+    "line": 2951,
+    "type": "lemma"
+  },
+  "4.10": {
+    "label": "prp:unip",
+    "line": 2978,
+    "type": "lemma"
+  },
+  "4.11": {
+    "label": "prp:dyadic",
+    "line": 3039,
+    "type": "lemma"
+  },
+  "4.12": {
+    "label": "prp:sum",
+    "line": 3063,
+    "type": "proposition"
+  },
+  "4.13": {
+    "label": "prp:arith",
+    "line": 3084,
+    "type": "lemma"
+  },
+  "4.14": {
+    "label": "prp:support",
+    "line": 3145,
+    "type": "lemma"
+  },
+  "4.15": {
+    "label": "prp:topdescent",
+    "line": 3162,
+    "type": "lemma"
+  },
+  "5.1": {
+    "label": "pff:unfold",
+    "line": 3456,
+    "type": "lemma"
+  },
+  "5.2": {
+    "label": "pff:k0",
+    "line": 3485,
+    "type": "corollary"
+  },
+  "5.3": {
+    "label": "pff:inKM",
+    "line": 3506,
+    "type": "lemma"
+  },
+  "5.4": {
+    "label": "pff:vol",
+    "line": 3515,
+    "type": "lemma"
+  },
+  "5.5": {
+    "label": "pff:gauge",
+    "line": 3602,
+    "type": "lemma"
+  },
+  "5.6": {
+    "label": "pff:dideal",
+    "line": 3615,
+    "type": "lemma"
+  },
+  "5.7": {
+    "label": "pff:twogauges",
+    "line": 3640,
+    "type": "lemma"
+  },
+  "5.8": {
+    "label": "pff:dyadic",
+    "line": 3650,
+    "type": "lemma"
+  },
+  "5.9": {
+    "label": "pff:deep",
+    "line": 3672,
+    "type": "lemma"
+  },
+  "5.10": {
+    "label": "pff:outside",
+    "line": 3686,
+    "type": "proposition"
+  },
+  "5.11": {
+    "label": "pff:massZ",
+    "line": 3712,
+    "type": "theorem"
+  },
+  "5.12": {
+    "label": "pff:massK",
+    "line": 3725,
+    "type": "corollary"
+  },
+  "5.13": {
+    "label": "pff:L1",
+    "line": 3741,
+    "type": "lemma"
+  },
+  "5.14": {
+    "label": "pff:floormass",
+    "line": 3767,
+    "type": "lemma"
+  },
+  "5.15": {
+    "label": "pff:lastentry",
+    "line": 3841,
+    "type": "definition"
+  },
+  "5.16": {
+    "label": "pff:fibre",
+    "line": 3856,
+    "type": "lemma"
+  },
+  "5.17": {
+    "label": "pff:top",
+    "line": 3874,
+    "type": "proposition"
+  },
+  "5.18": {
+    "label": "pff:heads",
+    "line": 3942,
+    "type": "lemma"
+  },
+  "5.19": {
+    "label": "pff:decay",
+    "line": 3962,
+    "type": "theorem"
+  },
+  "5.20": {
+    "label": "pff:nonunits",
+    "line": 4018,
+    "type": "lemma"
+  },
+  "5.21": {
+    "label": "pff:index",
+    "line": 4030,
+    "type": "lemma"
+  },
+  "5.22": {
+    "label": "pff:oneplace",
+    "line": 4042,
+    "type": "proposition"
+  },
+  "5.23": {
+    "label": "pff:products",
+    "line": 4087,
+    "type": "lemma"
+  },
+  "5.24": {
+    "label": "pff:fixed",
+    "line": 4104,
+    "type": "theorem"
+  },
+  "5.25": {
+    "label": "pff:J0",
+    "line": 4149,
+    "type": "lemma"
+  },
+  "5.26": {
+    "label": "pff:mass",
+    "line": 4160,
+    "type": "theorem"
+  },
+  "5.27": {
+    "label": "pff:rem-E4",
+    "line": 4175,
+    "type": "remark"
+  },
+  "5.28": {
+    "label": "pff:F",
+    "line": 4192,
+    "type": "theorem"
+  },
+  "5.29": {
+    "label": "pff:S",
+    "line": 4223,
+    "type": "theorem"
+  },
+  "5.30": {
+    "label": "pff:rem-L2",
+    "line": 4240,
+    "type": "remark"
+  },
+  "5.31": {
+    "label": "pff:siegelformula",
+    "line": 4300,
+    "type": "theorem"
+  },
+  "5.32": {
+    "label": "pff:offT",
+    "line": 4315,
+    "type": "lemma"
+  },
+  "5.33": {
+    "label": "pff:siegelsum",
+    "line": 4372,
+    "type": "proposition"
+  },
+  "5.34": {
+    "label": "pff:topreal",
+    "line": 4400,
+    "type": "lemma"
+  },
+  "5.35": {
+    "label": "pff:locKl",
+    "line": 4414,
+    "type": "lemma"
+  },
+  "5.36": {
+    "label": "pff:headsum",
+    "line": 4443,
+    "type": "lemma"
+  },
+  "5.37": {
+    "label": "pff:sep",
+    "line": 4464,
+    "type": "lemma"
+  },
+  "5.38": {
+    "label": "pff:fibresum",
+    "line": 4477,
+    "type": "lemma"
+  },
+  "5.39": {
+    "label": "pff:rhoD",
+    "line": 4494,
+    "type": "lemma"
+  },
+  "5.40": {
+    "label": "pff:weights",
+    "line": 4505,
+    "type": "lemma"
+  },
+  "6.1": {
+    "label": "pfg:def",
+    "line": 4677,
+    "type": "definition"
+  },
+  "6.2": {
+    "label": "pfg:pairing",
+    "line": 4693,
+    "type": "lemma"
+  },
+  "6.3": {
+    "label": "pfg:step",
+    "line": 4706,
+    "type": "lemma"
+  },
+  "6.4": {
+    "label": "pfg:whole",
+    "line": 4741,
+    "type": "corollary"
+  },
+  "6.5": {
+    "label": "pfg:matrix",
+    "line": 4750,
+    "type": "lemma"
+  },
+  "6.6": {
+    "label": "pfg:top",
+    "line": 4762,
+    "type": "lemma"
+  },
+  "6.7": {
+    "label": "pfg:lift",
+    "line": 4777,
+    "type": "lemma"
+  },
+  "6.8": {
+    "label": "pfg:dualunit",
+    "line": 4785,
+    "type": "lemma"
+  },
+  "6.9": {
+    "label": "pfg:cramer",
+    "line": 4797,
+    "type": "lemma"
+  },
+  "6.10": {
+    "label": "pfg:headunits",
+    "line": 4814,
+    "type": "lemma"
+  },
+  "6.11": {
+    "label": "pfg:twogauges",
+    "line": 4830,
+    "type": "theorem"
+  },
+  "6.12": {
+    "label": "pfg:twogaugesT",
+    "line": 4852,
+    "type": "corollary"
+  },
+  "6.13": {
+    "label": "pfg:unipinv",
+    "line": 4869,
+    "type": "lemma"
+  },
+  "6.14": {
+    "label": "pfg:sizehead",
+    "line": 4883,
+    "type": "corollary"
+  },
+  "6.15": {
+    "label": "pfg:psi",
+    "line": 4900,
+    "type": "lemma"
+  },
+  "6.16": {
+    "label": "pfg:duality",
+    "line": 4930,
+    "type": "lemma"
+  },
+  "6.17": {
+    "label": "pfg:orth",
+    "line": 4964,
+    "type": "lemma"
+  },
+  "6.18": {
+    "label": "pfg:gauss",
+    "line": 4987,
+    "type": "lemma"
+  },
+  "6.19": {
+    "label": "pfg:fibres",
+    "line": 5024,
+    "type": "proposition"
+  },
+  "6.20": {
+    "label": "pfg:rem-fibres",
+    "line": 5082,
+    "type": "remark"
+  },
+  "6.21": {
+    "label": "pfg:Dint",
+    "line": 5101,
+    "type": "lemma"
+  },
+  "6.22": {
+    "label": "pfg:common",
+    "line": 5111,
+    "type": "lemma"
+  },
+  "6.23": {
+    "label": "pfg:content",
+    "line": 5135,
+    "type": "lemma"
+  },
+  "6.24": {
+    "label": "pfg:gauge",
+    "line": 5155,
+    "type": "lemma"
+  },
+  "6.25": {
+    "label": "pfg:coarea",
+    "line": 5228,
+    "type": "lemma"
+  },
+  "6.26": {
+    "label": "pfg:orbit",
+    "line": 5254,
+    "type": "lemma"
+  },
+  "6.27": {
+    "label": "pfg:headgauge",
+    "line": 5287,
+    "type": "lemma"
+  },
+  "6.28": {
+    "label": "pfg:Op",
+    "line": 5298,
+    "type": "lemma"
+  },
+  "6.29": {
+    "label": "pfg:fibrepairing",
+    "line": 5322,
+    "type": "proposition"
+  },
+  "6.30": {
+    "label": "pfg:rem-top",
+    "line": 5364,
+    "type": "remark"
+  },
+  "6.31": {
+    "label": "pfg:P",
+    "line": 5374,
+    "type": "lemma"
+  },
+  "6.32": {
+    "label": "pfg:rem-conv",
+    "line": 5388,
+    "type": "remark"
+  },
+  "6.33": {
+    "label": "pfg:weil",
+    "line": 5427,
+    "type": "theorem"
+  },
+  "6.34": {
+    "label": "pfg:tamagawa",
+    "line": 5442,
+    "type": "lemma"
+  },
+  "6.35": {
+    "label": "pfg:siegel",
+    "line": 5462,
+    "type": "proposition"
+  },
+  "6.36": {
+    "label": "pfg:rem-siegel",
+    "line": 5510,
+    "type": "remark"
+  }
+}

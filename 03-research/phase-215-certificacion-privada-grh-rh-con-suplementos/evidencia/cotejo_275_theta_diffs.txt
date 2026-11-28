@@ -1,0 +1,2113 @@
+
+==== 2 P46 13.4 an:lem-sizes -> P49:8383 ====
+--- source
+
++++ quote
+
+@@ -165,9 +165,7 @@
+
+ $d_\infty=\dim
+ W_{\lambda^X}$
+ of
+-\S
+-REFERENCE
+-,
++REFERENCE,
+ a
+ product
+ of
+
+==== 6 P46 14.9 au:gains -> P49:8456 ====
+--- source
+
++++ quote
+
+@@ -46,23 +46,23 @@
+
+ \ausfin(\kappa(\sigma),\sigma),
+ \]
+ and
+-\begin{equation}
++\begin{equation*}
+ \auhmain-m\cdot\aurem+2\sum_{p\in\mathcal
+ N}\augain_p\log
+ p=m\,k\sum_{\sigma\in\auPl}\ausinf
+ (\kappa(\sigma))+m\cdot\#\auPa\cdot\ausmain
+ .
+-\end{equation}
++\end{equation*}
+ \item[(c)]
+ $\ausinf(a)-\ausmain\le
+ a\bigl(\tfrac1f\sum_\tau\log\kappa(\tau)+\log\frac{M\aurd}
+ {2\pi}\bigr)+1+\tfrac12\log
+ a$,
+ and
+-\begin{equation}
++\begin{equation*}
+ m\bigl(\ausinf(a)-\ausmain\bigr)-a\log
+ N\le32\,a\log
+ b
+ .
+-\end{equation}
++\end{equation*}
+ \end{enumerate}
+
+==== 7 P46 14.10 au:count -> P49:8479 ====
+--- source
+
++++ quote
+
+@@ -77,7 +77,9 @@
+
+ column),
+ as
+ in
+-REFERENCE,
++Proposition~
++REFERENCE
++,
+ or
+ an
+ entry
+@@ -89,7 +91,9 @@
+
+ with
+ $T'$
+ standard
+-(REFERENCE).
++(Lemma~
++REFERENCE
++).
+ Then
+ the
+ jet
+@@ -123,7 +127,9 @@
+
+ $\mathrm{ded}_0$
+ as
+ in
+-REFERENCE,
++Proposition~
++REFERENCE
++,
+ which
+ is
+ the
+
+==== 11 P46 14.20 au:divis -> P49:8533 ====
+--- source
+
++++ quote
+
+@@ -49,8 +49,7 @@
+
+ $\auerr$
+ as
+ in
+-REFERENCE
+-.
++REFERENCE.
+ More
+ precisely:
+ \begin{enumerate}
+@@ -142,7 +141,9 @@
+
+ are
+ defined
+ in
+-REFERENCE,
++\S
++REFERENCE
++,
+ at
+ the
+ primes
+@@ -156,7 +157,9 @@
+
+ induced
+ by
+ $j$
+-(REFERENCE);
++(Lemma~
++REFERENCE
++);
+ \item[(iv)]
+ if
+ $\ell\in\mathcal
+@@ -195,8 +198,12 @@
+
+ $E$
+ above
+ $\ell$
+-(REFERENCE,
+-REFERENCE);
++(\S
++REFERENCE
++,
++Theorem~
++REFERENCE
++(iv));
+ the
+ operators
+ $Y_{\mathfrak
+
+==== 22 P50 2.2 ph:thm -> P49:8639 ====
+--- source
+
++++ quote
+
+@@ -1,28 +1,21 @@
+
+ Assume
+-Propositions~
+-REFERENCE
+-,
+-REFERENCE
+-and~
+-REFERENCE
+-.
++REFERENCE.
+ Let
+ $0<\theta\le1$
+ and
+-\begin{equation}
++\begin{equation*}
+ n^4\le
+ q,\qquad\bigl(Nk\log
+ q/\theta\bigr)^5P^{3r}\le
+ n
+ .
+-\end{equation}
++\end{equation*}
+ Let
+ $A$
+ be
+ as
+ in
+-REFERENCE
+-,
++REFERENCE,
+ let
+ $f\colon\mathcal
+ F_X\to
+
+==== 28 P51 4.7 pm:kernel -> P49:8719 ====
+--- source
+
++++ quote
+
+@@ -3,8 +3,7 @@
+
+ be
+ as
+ in
+-REFERENCE
+-,
++REFERENCE,
+ on
+ $G_\tau\cong
+ G_s$.
+
+==== 30 P51 4.43 pbr:degree -> P49:8738 ====
+--- source
+
++++ quote
+
+@@ -1,6 +1,5 @@
+
+ Under
+-REFERENCE
+-,
++REFERENCE,
+ $d=\dim
+ V_\sigma=\prod_{i<j}(\lambda_i-\lambda_j)/(j-i)$
+ (entries
+
+==== 34 P51 5.6 pds:decay -> P49:8759 ====
+--- source
+
++++ quote
+
+@@ -12,7 +12,9 @@
+
+ REFERENCE
+ holds
+ by
+-REFERENCE),
++Theorem~
++REFERENCE
++),
+ \[
+ |c_\tau(g)|\le|\det
+ a(g)|^{-c/2}\le\bigl(2/\|g\|\bigr)^c
+@@ -34,6 +36,4 @@
+
+ the
+ norm
+ of
+-\S
+-REFERENCE
+-.
++REFERENCE.
+
+==== 39 P53 3.30 pcx:superpos -> P49:8809 ====
+--- source
+
++++ quote
+
+@@ -75,6 +75,7 @@
+
+ Banach
+ space
+ of
++Lemma~
+ REFERENCE
+ (with
+ $D=m$),
+@@ -122,7 +123,8 @@
+
+ (in
+ the
+ model
+-REFERENCE,
++REFERENCE
++,
+ $\kappa(w,y)=2i\Iml\operatorname{tr}(y^*w)$
+ by
+ the
+
+==== 40 P53 4.10 ptr:conv -> P49:8835 ====
+--- source
+
++++ quote
+
+@@ -4,9 +4,7 @@
+
+ be
+ as
+ in
+-\S
+-REFERENCE
+-,
++REFERENCE,
+ $\pcm=\pcm_\vartheta$,
+ $y_1$
+ a
+@@ -125,9 +123,7 @@
+
+ the
+ moment
+ of
+-Proposition~
+-REFERENCE
+-.)
++REFERENCE.)
+ In
+ particular
+ all
+@@ -138,7 +134,6 @@
+
+ (i),
+ (iii)
+ of
+-\S
+ REFERENCE
+ converge
+ absolutely
+
+==== 42 P53 5.37 pgu:line -> P49:8871 ====
+--- source
+
++++ quote
+
+@@ -127,6 +127,4 @@
+
+ is
+ treated
+ by
+-Lemma~
+-REFERENCE
+-.
++REFERENCE.
+
+==== 45 P53 6.31 pgx:conv -> P49:8908 ====
+--- source
+
++++ quote
+
+@@ -12,6 +12,7 @@
+
+ $\alpha_w\auO_w$
+ fixed
+ in
++\S
+ REFERENCE
+ ($a_w=\alpha_w$
+ if
+@@ -90,6 +91,4 @@
+
+ the
+ formulas
+ of
+-\S
+-REFERENCE
+-.
++REFERENCE.
+
+==== 46 P53 6.32 pgx:dict -> P49:8919 ====
+--- source
+
++++ quote
+
+@@ -4,7 +4,9 @@
+
+ the
+ idele
+ of
+-REFERENCE,
++\S
++REFERENCE
++,
+ $S,T$
+ spaces
+ of
+@@ -242,7 +244,6 @@
+
+ coordinate
+ $a_w^{-1}x$
+ of
+-Definition~
+ REFERENCE
+ are
+ both
+@@ -270,6 +271,7 @@
+
+ the
+ datum
+ of
++\S
+ REFERENCE
+ at
+ a
+
+==== 47 P54 6.14 pfq:def-chars -> P49:8968 ====
+--- source
+
++++ quote
+
+@@ -18,9 +18,7 @@
+
+ (it
+ exists
+ by
+-Lemma~
+-REFERENCE
+-(d));
++REFERENCE);
+ for
+ the
+ other
+@@ -44,7 +42,6 @@
+
+ tame
+ part
+ $\omega$:
+-Lemma~
+ REFERENCE
+ with
+ $S$
+@@ -53,7 +50,6 @@
+
+ places,
+ $c_\tau=0$,
+ $\psi_w=\omega_w$.
+-Condition
+ REFERENCE
+ holds
+ factor
+@@ -68,9 +64,7 @@
+
+ a
+ $q_2$-th
+ power
+-(Lemma~
+-REFERENCE
+-(d))
++(REFERENCE)
+ and
+ $\omega_w^{q_2}=1$.
+ We
+@@ -95,16 +89,13 @@
+
+ all
+ finite
+ places:
+-Lemma~
+ REFERENCE
+ with
+ $S=\emptyset$,
+ $c_\tau=-\kappa(\tau)-r^8$;
+ REFERENCE
+ is
+-Lemma~
+-REFERENCE
+-(c).
++REFERENCE.
+ \item[(iv)]
+ $\mu^0_j=\mu^\flat\,(\upsilon^{-\Delta}\chi_M)^j$
+ for
+
+==== 48 P54 6.15 pfq:tame -> P49:8981 ====
+--- source
+
++++ quote
+
+@@ -44,7 +44,6 @@
+
+ unramified
+ everywhere,
+ from
+-Lemma~
+ REFERENCE
+ with
+ $c_\tau=-\kappa_j(\tau)$
+@@ -105,17 +104,13 @@
+
+ in
+ (F2)
+ of
+-Lemma~
+ REFERENCE
+-(Remark~
+-REFERENCE
+-).
++(REFERENCE).
+ \item[(T4)]
+ The
+ character
+ $\chi_0$
+ of
+-\S
+ REFERENCE
+ is
+ $\chi_M$,
+@@ -148,10 +143,7 @@
+
+ $\chi'=\chi_M^j\vartheta$,
+ $\nu''_\vartheta$
+ of
+-\S
+-REFERENCE
+-,
+-\S
++REFERENCE,
+ REFERENCE
+ have
+ the
+
+==== 54 P49 4.21 pa:divis -> P50:1576 ====
+--- source
+
++++ quote
+
+@@ -4,32 +4,23 @@
+
+ in
+ the
+ proof,
+-Lemma~
+ REFERENCE
+ including
+ (K1$_N$),
+-Lemma~
+ REFERENCE
+-(c)
+ and
+ REFERENCE,
+ are
+ proved
+ in
+-\S
+ REFERENCE
+ and
+-Corollary~
+-REFERENCE
+-,
++REFERENCE,
+ in
+-Proposition~
+ REFERENCE
+ and
+ in
+-\S
+-REFERENCE
+-.)
++REFERENCE.)
+ Let
+ $\ell$
+ be
+@@ -105,9 +96,7 @@
+
+ be
+ as
+ in
+-Lemma~
+-REFERENCE
+-;
++REFERENCE;
+ then
+ $S_0=\mathcal
+ A'\cap\auS_\iota$
+
+==== 57 P46 13.4 an:lem-sizes -> P53:16079 ====
+--- source
+
++++ quote
+
+@@ -165,9 +165,7 @@
+
+ $d_\infty=\dim
+ W_{\lambda^X}$
+ of
+-\S
+-REFERENCE
+-,
++REFERENCE,
+ a
+ product
+ of
+
+==== 59 P46 14.3 def:au-lattice -> P53:16124 ====
+--- source
+
++++ quote
+
+@@ -89,7 +89,7 @@
+
+ The
+ condition
+ is
+-\begin{equation}
++\begin{equation*}
+ \langle\varphi,\varphi'\rangle\in\auO_\iota\qquad\text{for
+ }\varphi\in\Lambda_{\xi,\aubar\iota},\
+ \varphi'\in\Lambda_{\xi,\iota},\
+@@ -97,7 +97,7 @@
+
+ allowed
+ at
+ }\ell(\iota).
+-\end{equation}
++\end{equation*}
+ \begin{enumerate}
+ \item[(a)]
+ The
+
+==== 71 P46 14.37 au:factor -> P53:16260 ====
+--- source
+
++++ quote
+
+@@ -30,6 +30,7 @@
+
+ normalised
+ as
+ in
++\S
+ REFERENCE
+ (joint
+ harmonic
+@@ -75,7 +76,8 @@
+
+ $0<i<j\le
+ m$,
+ of
+-REFERENCE,
++REFERENCE
++,
+ such
+ that
+ for
+
+==== 78 P49 2.1 pwf:def -> P53:16335 ====
+--- source
+
++++ quote
+
+@@ -50,7 +50,6 @@
+
+ $Y\subset
+ W_v$
+ (by
+-Lemma~
+ REFERENCE
+ it
+ does
+@@ -92,9 +91,7 @@
+
+ of
+ the
+ Lagrangian
+-(Lemma~
+-REFERENCE
+-).
++(REFERENCE).
+ Since
+ $(g,1)$
+ fixes
+@@ -217,7 +214,6 @@
+
+ $\psHS(W)=\bigotimes'_v\psHS_v(W)$,
+ as
+ in
+-\S
+ REFERENCE
+ and
+ (W4).
+
+==== 82 P49 2.17 pwf:W5 -> P53:16385 ====
+--- source
+
++++ quote
+
+@@ -43,5 +43,4 @@
+
+ z)$;
+ this
+ is
+-REFERENCE
+-.
++REFERENCE.
+
+==== 87 P49 3.6 par:vac -> P53:16425 ====
+--- source
+
++++ quote
+
+@@ -19,8 +19,7 @@
+
+ polynomial
+ vectors
+ are
+-REFERENCE
+-,
++REFERENCE,
+ with
+ \[
+ \gamma=\tau_0+\tfrac{n'}2,\quad\gamma'=\tau'_0+\tfrac
+@@ -41,7 +40,6 @@
+
+ operator
+ $\omega_{\auHom(Y_j,Y_{j+1})}(g,h)$
+ of
+-\S
+ REFERENCE
+ is
+ the
+
+==== 88 P49 3.7 par:match -> P53:16440 ====
+--- source
+
++++ quote
+
+@@ -1,6 +1,4 @@
+
+ Under
+-Lemma~
+-REFERENCE
+-,
++REFERENCE,
+ $(-\Lambda^{(j)}_\tau,\Lambda^{(j+1)}_\tau)$
+ match.
+
+==== 95 P49 3.15 par:A3 -> P53:16488 ====
+--- source
+
++++ quote
+
+@@ -1,5 +1,4 @@
+
+ Assume
+-Lemma~
+ REFERENCE
+ (that
+ is,
+@@ -7,9 +6,7 @@
+
+ the
+ conclusion
+ of
+-Theorem~
+-REFERENCE
+-,
++REFERENCE,
+ and
+ \textup{(D1)--(D3)}.
+ Let
+
+==== 102 P49 3.23 pco:K -> P53:16549 ====
+--- source
+
++++ quote
+
+@@ -7,12 +7,11 @@
+
+ $k_1\in
+ K$.
+ Then
+-\begin{align}
++\begin{align*}
+ F(xk_1)&=d_\Lambda\int_K\frac{\pcom_\Lambda(au)\,\pcom_\Lambda(u^*k_1)}{\pcom_{-\mu}(u^{-1}a^{-1}xu)}\,du,
+-\\
+ F(k_1x)&=d_\Lambda\int_K\frac{\pcom_\Lambda(k_1au)\,\overline{\pcom_\Lambda(u)}}{\pcom_{-\mu}(u^{-1}a^{-1}xu)}
+ \,du.
+-\end{align}
++\end{align*}
+ Consequently
+ $F(xt)=t^\Lambda
+ F(x)=F(tx)$
+
+==== 104 P49 3.29 pco:V -> P53:16566 ====
+--- source
+
++++ quote
+
+@@ -37,7 +37,6 @@
+
+ is,
+ \textup{(V)}
+ of
+-Lemma~
+ REFERENCE
+ holds
+ at
+
+==== 105 P49 5.2 ps:weil -> P53:16573 ====
+--- source
+
++++ quote
+
+@@ -276,8 +276,7 @@
+
+ is
+ given
+ by
+-REFERENCE
+-:
++REFERENCE:
+ the
+ factor
+ is
+@@ -305,9 +304,7 @@
+
+ g_w)^{n'}|\det
+ h_w|_w^{-n/2}|\det
+ g_w|_w^{n'/2}\Psi(h_w^{-1}xg_w)\]
+-(Proposition~
+-REFERENCE
+-),
++(REFERENCE),
+ so
+ that
+ all
+@@ -350,9 +347,7 @@
+
+ in
+ full
+ in
+-\S
+-REFERENCE
+-.
++REFERENCE.
+ (W0):
+ $\theta$
+ is
+@@ -415,7 +410,5 @@
+
+ places
+ above
+ $q_1$
+-(Remark~
+-REFERENCE
+-).
++(REFERENCE).
+ \end{enumerate}
+
+==== 112 P49 5.24 pk:branching -> P53:16672 ====
+--- source
+
++++ quote
+
+@@ -25,7 +25,6 @@
+
+ (b),
+ (c)}
+ of
+-Lemma~
+ REFERENCE
+ hold,
+ and
+
+==== 114 P49 5.27 pk:conj -> P53:16691 ====
+--- source
+
++++ quote
+
+@@ -1,4 +1,3 @@
+
+-Lemma~
+ REFERENCE
+ holds,
+ with
+
+==== 115 P49 5.30 pk:K12 -> P53:16697 ====
+--- source
+
++++ quote
+
+@@ -2,7 +2,6 @@
+
+ and
+ {\rm(K2)}
+ of
+-Lemma~
+ REFERENCE
+ hold.
+ The
+@@ -20,6 +19,4 @@
+
+ by
+ (S2)
+ and
+-Theorem~
+-REFERENCE
+-.
++REFERENCE.
+
+==== 119 P49 7.13 pf:semi -> P53:16733 ====
+--- source
+
++++ quote
+
+@@ -14,7 +14,7 @@
+
+ for
+ $\gamma\in
+ W(E)$
+-\begin{equation}
++\begin{equation*}
+ \Theta_{\psrho_f(\gamma)F^v}(z)=\zeta_\gamma\prod_{i,\mathsf
+ c}\theta_{\mathsf
+ x_{i,\mathsf
+@@ -26,7 +26,7 @@
+
+ c}=-\pfT_{E/K}(
+ \aubar{u_i}\gamma_{\mathsf
+ c}),
+-\end{equation}
++\end{equation*}
+ with
+ a
+ root
+
+==== 121 P49 7.17 pf:flip -> P53:16758 ====
+--- source
+
++++ quote
+
+@@ -99,6 +99,4 @@
+
+ is
+ {\rm(W6)}
+ of
+-\S
+-REFERENCE
+-.
++REFERENCE.
+
+==== 126 P49 8.4 pz:types -> P53:16843 ====
+--- source
+
++++ quote
+
+@@ -202,7 +202,6 @@
+
+ assumption
+ made
+ in
+-\S
+ REFERENCE
+ holds:
+ the
+
+==== 128 P49 8.7 pz:C0 -> P53:16875 ====
+--- source
+
++++ quote
+
+@@ -37,13 +37,10 @@
+
+ constant
+ $C_0$
+ of
+-Proposition~
+ REFERENCE
+ and
+ of
+-Lemma~
+-REFERENCE
+-{\rm(ii)}.
++REFERENCE.
+ \item[(c)]
+ With
+ the
+
+==== 129 P49 8.8 pz:sizes -> P53:16887 ====
+--- source
+
++++ quote
+
+@@ -46,7 +46,6 @@
+
+ the
+ hypotheses
+ of
+-Proposition~
+ REFERENCE
+ hold
+ for
+
+==== 130 P51 4.6 pm:mult -> P53:16899 ====
+--- source
+
++++ quote
+
+@@ -1,14 +1,11 @@
+
+ Assume
+-Theorem~
+ REFERENCE
+ and
+ the
+ property
+ \textup{(G)}
+ of
+-\S
+-REFERENCE
+-.
++REFERENCE.
+ Assume
+ that
+ $f$
+
+==== 131 P51 4.7 pm:kernel -> P53:16912 ====
+--- source
+
++++ quote
+
+@@ -3,8 +3,7 @@
+
+ be
+ as
+ in
+-REFERENCE
+-,
++REFERENCE,
+ on
+ $G_\tau\cong
+ G_s$.
+
+==== 140 P51 5.6 pds:decay -> P53:16993 ====
+--- source
+
++++ quote
+
+@@ -34,6 +34,4 @@
+
+ the
+ norm
+ of
+-\S
+-REFERENCE
+-.
++REFERENCE.
+
+==== 145 P51 7.17 pbp:second -> P53:17029 ====
+--- source
+
++++ quote
+
+@@ -7,7 +7,6 @@
+
+ the
+ identity
+ of
+-Lemma~
+ REFERENCE
+ holds
+ with
+
+==== 148 P51 7.20 pbp:reduced -> P53:17052 ====
+--- source
+
++++ quote
+
+@@ -11,7 +11,6 @@
+
+ be
+ as
+ in
+-Proposition~
+ REFERENCE
+ for
+ $o=\lambda$.
+
+==== 161 P54 2.2 po:facts -> P53:17123 ====
+--- source
+
++++ quote
+
+@@ -41,8 +41,7 @@
+
+ at
+ $w$
+ (by
+-REFERENCE
+-,
++REFERENCE,
+ $\alpha_w=\eta_w(1,d_1)$
+ does
+ not
+
+==== 164 P54 3.2 pex:vac -> P53:17153 ====
+--- source
+
++++ quote
+
+@@ -7,6 +7,7 @@
+
+ the
+ vacuum
+ of
++\S
+ REFERENCE
+ for
+ $n=1$,
+@@ -53,7 +54,6 @@
+
+ is
+ as
+ in
+-\S
+ REFERENCE
+ and
+ $\zeta^{\mathsf
+
+==== 165 P54 3.3 pex:arch -> P53:17166 ====
+--- source
+
++++ quote
+
+@@ -3,6 +3,7 @@
+
+ $\omega_{\alpha,\beta,\infty}(g,1)P=P$.
+ Hence,
+ in
++Proposition~
+ REFERENCE
+ for
+ the
+
+==== 166 P54 3.4 pex:rallis -> P53:17173 ====
+--- source
+
++++ quote
+
+@@ -50,7 +50,9 @@
+
+ the
+ constant
+ of
++Lemma~
+ REFERENCE
++(b)
+ (all
+ factors
+ of
+
+==== 168 P54 4.7 plf:harm -> P53:17197 ====
+--- source
+
++++ quote
+
+@@ -17,6 +17,4 @@
+
+ pair
+ $(\lambda,\lambda')$
+ of
+-Lemma~
+-REFERENCE
+-.
++REFERENCE.
+
+==== 169 P54 4.8 plf:L4 -> P53:17202 ====
+--- source
+
++++ quote
+
+@@ -18,7 +18,6 @@
+
+ statement
+ {\rm(L4)}
+ of
+-\S
+ REFERENCE
+ holds:
+ if
+
+==== 172 P54 5.40 psr:SW -> P53:17233 ====
+--- source
+
++++ quote
+
+@@ -2,7 +2,9 @@
+
+ statement
+ \textup{(SW)}
+ of
+-REFERENCE,
++Lemma~
++REFERENCE
++,
+ including
+ the
+ absolute
+@@ -38,4 +40,6 @@
+
+ (i),
+ (ii)
+ of
+-REFERENCE.
++Lemma~
++REFERENCE
++.
+
+==== 174 P54 7.27 psu:flat -> P53:17245 ====
+--- source
+
++++ quote
+
+@@ -2,9 +2,7 @@
+
+ $q=q(\psi,z')$
+ as
+ in
+-Definition~
+-REFERENCE
+-.
++REFERENCE.
+ \begin{enumerate}
+ \item[(a)]
+ $q$
+@@ -26,7 +24,6 @@
+
+ the
+ notation
+ of
+-\S
+ REFERENCE
+ the
+ character
+
+==== 176 P55 6.7 pga:L -> P53:17264 ====
+--- source
+
++++ quote
+
+@@ -53,11 +53,11 @@
+
+ at
+ $w$
+ and
+-\begin{equation}
++\begin{equation*}
+ P_w^V(X)\,y=\prod_{l=0}^{t-1}(1-q^l\alpha_wX)\cdot
+ p\bigl(q^t\alpha_w\beta_w^{-1}X\bigr)\,y
+ .
+-\end{equation}
++\end{equation*}
+ Equivalently,
+ if
+ $y\ne0$
+
+==== 180 P46 13.4 an:lem-sizes -> P54:9312 ====
+--- source
+
++++ quote
+
+@@ -165,9 +165,7 @@
+
+ $d_\infty=\dim
+ W_{\lambda^X}$
+ of
+-\S
+-REFERENCE
+-,
++REFERENCE,
+ a
+ product
+ of
+
+==== 185 P46 14.9 au:gains -> P54:9388 ====
+--- source
+
++++ quote
+
+@@ -46,23 +46,23 @@
+
+ \ausfin(\kappa(\sigma),\sigma),
+ \]
+ and
+-\begin{equation}
++\begin{equation*}
+ \auhmain-m\cdot\aurem+2\sum_{p\in\mathcal
+ N}\augain_p\log
+ p=m\,k\sum_{\sigma\in\auPl}\ausinf
+ (\kappa(\sigma))+m\cdot\#\auPa\cdot\ausmain
+ .
+-\end{equation}
++\end{equation*}
+ \item[(c)]
+ $\ausinf(a)-\ausmain\le
+ a\bigl(\tfrac1f\sum_\tau\log\kappa(\tau)+\log\frac{M\aurd}
+ {2\pi}\bigr)+1+\tfrac12\log
+ a$,
+ and
+-\begin{equation}
++\begin{equation*}
+ m\bigl(\ausinf(a)-\ausmain\bigr)-a\log
+ N\le32\,a\log
+ b
+ .
+-\end{equation}
++\end{equation*}
+ \end{enumerate}
+
+==== 191 P46 14.39 def:au-regular -> P54:9468 ====
+--- source
+
++++ quote
+
+@@ -79,6 +79,7 @@
+
+ the
+ sense
+ of
++Definition~
+ REFERENCE
+ (the
+ false
+@@ -86,7 +87,9 @@
+
+ being
+ those
+ of
+-REFERENCE:
++Definition~
++REFERENCE
++:
+ the
+ forms
+ in
+@@ -109,7 +112,9 @@
+
+ polynomial
+ $P_w(X_w)$
+ of
++Lemma~
+ REFERENCE
++(L3)
+ at
+ one
+ split
+@@ -143,7 +148,9 @@
+
+ $p$
+ for
+ $j$
+-(REFERENCE)
++(Definition~
++REFERENCE
++)
+ and
+ all
+ test
+@@ -153,7 +160,9 @@
+
+ $\ell$
+ for
+ $(p,\theta_\iota^{\,j})$
+-(REFERENCE),
++(Definition~
++REFERENCE
++),
+ the
+ inner
+ product
+
+==== 192 P46 14.41 au:onelift -> P54:9489 ====
+--- source
+
++++ quote
+
+@@ -36,7 +36,8 @@
+
+ number
+ $H_j(\vartheta)$
+ of
+-REFERENCE:
++REFERENCE
++:
+ for
+ the
+ three
+@@ -44,6 +45,7 @@
+
+ pairs
+ $(\nu_i,z_i)$
+ of
++\S
+ REFERENCE
+ it
+ is
+
+==== 195 P49 2.14 pwf:W2 -> P54:9515 ====
+--- source
+
++++ quote
+
+@@ -2,7 +2,6 @@
+
+ $\theta_W,\theta_{W_I}$
+ as
+ in
+-\S
+ REFERENCE
+ and
+ $di$
+
+==== 197 P49 2.21 pwf:eplus -> P54:9540 ====
+--- source
+
++++ quote
+
+@@ -32,8 +32,8 @@
+
+ $e_+=0$,
+ $e_-=-1$
+ in
+-Lemma~
+ REFERENCE
+-and~REFERENCE
++and~
++REFERENCE
+ holds:
+ $\Delta(\gamma)=\aubar{\det\gamma^-}$.
+
+==== 201 P49 3.6 par:vac -> P54:9570 ====
+--- source
+
++++ quote
+
+@@ -19,8 +19,7 @@
+
+ polynomial
+ vectors
+ are
+-REFERENCE
+-,
++REFERENCE,
+ with
+ \[
+ \gamma=\tau_0+\tfrac{n'}2,\quad\gamma'=\tau'_0+\tfrac
+@@ -41,7 +40,6 @@
+
+ operator
+ $\omega_{\auHom(Y_j,Y_{j+1})}(g,h)$
+ of
+-\S
+ REFERENCE
+ is
+ the
+
+==== 206 P49 3.15 par:A3 -> P54:9617 ====
+--- source
+
++++ quote
+
+@@ -1,5 +1,4 @@
+
+ Assume
+-Lemma~
+ REFERENCE
+ (that
+ is,
+@@ -7,9 +6,7 @@
+
+ the
+ conclusion
+ of
+-Theorem~
+-REFERENCE
+-,
++REFERENCE,
+ and
+ \textup{(D1)--(D3)}.
+ Let
+
+==== 208 P49 3.29 pco:V -> P54:9631 ====
+--- source
+
++++ quote
+
+@@ -37,7 +37,6 @@
+
+ is,
+ \textup{(V)}
+ of
+-Lemma~
+ REFERENCE
+ holds
+ at
+
+==== 212 P49 4.9 pa:onecurve -> P54:9667 ====
+--- source
+
++++ quote
+
+@@ -3,9 +3,7 @@
+
+ be
+ as
+ in
+-Lemma~
+ REFERENCE
+-(b)
+ and
+ $c_\pavp=\pavp^{p+1}/p$.
+ There
+
+==== 213 P49 4.12 pa:product -> P54:9678 ====
+--- source
+
++++ quote
+
+@@ -46,15 +46,12 @@
+
+ the
+ normal
+ form
+-REFERENCE
+-,
++REFERENCE,
+ with
+ $\pavp$
+ as
+ in
+-Lemma~
+-REFERENCE
+-(b),
++REFERENCE,
+ the
+ index
+ set
+
+==== 214 P49 4.13 pa:kernel -> P54:9689 ====
+--- source
+
++++ quote
+
+@@ -96,7 +96,6 @@
+
+ bases
+ $(e_T)$
+ of
+-\S
+ REFERENCE
+ is,
+ up
+@@ -134,13 +133,10 @@
+
+ $Q\in\auO_{\C_\ell}[z]$
+ are
+ integral
+-(Proposition~
++(REFERENCE
++for
++$\ell\nmid2q_1M$;
+ REFERENCE
+-for
+-$\ell\nmid2q_1M$;
+-Corollary~
+-REFERENCE
+-(a)
+ for
+ all
+ $\ell\ne
+@@ -157,9 +153,7 @@
+
+ the
+ series
+ of
+-Proposition~
+-REFERENCE
+-,
++REFERENCE,
+ for
+ $\mathsf
+ C=[n_{j+1}]\times[n_j]$,
+@@ -237,7 +231,5 @@
+
+ $\auO_\iota$.
+ (This
+ is
+-Lemma~
+-REFERENCE
+-.)
++REFERENCE.)
+ \end{enumerate}
+
+==== 215 P49 5.2 ps:weil -> P54:9721 ====
+--- source
+
++++ quote
+
+@@ -276,8 +276,7 @@
+
+ is
+ given
+ by
+-REFERENCE
+-:
++REFERENCE:
+ the
+ factor
+ is
+@@ -305,9 +304,7 @@
+
+ g_w)^{n'}|\det
+ h_w|_w^{-n/2}|\det
+ g_w|_w^{n'/2}\Psi(h_w^{-1}xg_w)\]
+-(Proposition~
+-REFERENCE
+-),
++(REFERENCE),
+ so
+ that
+ all
+@@ -350,9 +347,7 @@
+
+ in
+ full
+ in
+-\S
+-REFERENCE
+-.
++REFERENCE.
+ (W0):
+ $\theta$
+ is
+@@ -415,7 +410,5 @@
+
+ places
+ above
+ $q_1$
+-(Remark~
+-REFERENCE
+-).
++(REFERENCE).
+ \end{enumerate}
+
+==== 218 P49 5.25 pk:curve -> P54:9792 ====
+--- source
+
++++ quote
+
+@@ -90,9 +90,7 @@
+
+ at
+ every
+ prime,
+-Proposition~
+-REFERENCE
+-)
++REFERENCE)
+ and
+ $\theta_u(z)=\theta_u(0)\,\theta(z)\,\mathsf
+ G_u(z)$
+
+==== 220 P49 5.27 pk:conj -> P54:9832 ====
+--- source
+
++++ quote
+
+@@ -1,4 +1,3 @@
+
+-Lemma~
+ REFERENCE
+ holds,
+ with
+
+==== 221 P49 5.30 pk:K12 -> P54:9838 ====
+--- source
+
++++ quote
+
+@@ -2,7 +2,6 @@
+
+ and
+ {\rm(K2)}
+ of
+-Lemma~
+ REFERENCE
+ hold.
+ The
+@@ -20,6 +19,4 @@
+
+ by
+ (S2)
+ and
+-Theorem~
+-REFERENCE
+-.
++REFERENCE.
+
+==== 224 P49 6.9 pl:onelift -> P54:9863 ====
+--- source
+
++++ quote
+
+@@ -37,9 +37,7 @@
+
+ $\alpha$
+ as
+ in
+-Lemma~
+-REFERENCE
+-,
++REFERENCE,
+ \[
+ P_{\mathfrak
+ l}(X)\,\Theta^X_j(\Phi)\varphi=\prod_{l<t+1}(1-q^l\alpha
+
+==== 225 P49 7.1 pf:chi -> P54:9873 ====
+--- source
+
++++ quote
+
+@@ -9,8 +9,7 @@
+
+ the
+ function
+ of
+-REFERENCE
+-.
++REFERENCE.
+ \begin{enumerate}
+ \item[(a)]
+ For
+
+==== 228 P49 7.4 pf:eps -> P54:9903 ====
+--- source
+
++++ quote
+
+@@ -14,8 +14,7 @@
+
+ $\epsilon_L$,
+ defined
+ by
+-REFERENCE
+-,
++REFERENCE,
+ has
+ values
+ $\pm1$.
+
+==== 234 P49 7.13 pf:semi -> P54:9959 ====
+--- source
+
++++ quote
+
+@@ -14,7 +14,7 @@
+
+ for
+ $\gamma\in
+ W(E)$
+-\begin{equation}
++\begin{equation*}
+ \Theta_{\psrho_f(\gamma)F^v}(z)=\zeta_\gamma\prod_{i,\mathsf
+ c}\theta_{\mathsf
+ x_{i,\mathsf
+@@ -26,7 +26,7 @@
+
+ c}=-\pfT_{E/K}(
+ \aubar{u_i}\gamma_{\mathsf
+ c}),
+-\end{equation}
++\end{equation*}
+ with
+ a
+ root
+
+==== 237 P49 7.16 pf:K1 -> P54:9992 ====
+--- source
+
++++ quote
+
+@@ -4,9 +4,7 @@
+
+ integrality
+ assertion
+ of
+-Lemma~
+ REFERENCE
+-{\rm(K1)}
+ holds
+ for
+ every
+@@ -29,7 +27,6 @@
+
+ for
+ $p_0,p_1$.
+ \item[(b)]
+-Lemma~
+ REFERENCE
+ $(=$
+ {\rm(K1$_N$)}$)$
+@@ -41,13 +38,9 @@
+
+ condition
+ {\rm(Gen)}.
+ \item[(c)]
+-Proposition~
+-REFERENCE
+-{\rm(S3)},
++REFERENCE,
+ hence
+-Lemma~
+-REFERENCE
+-{\rm(K2)},
++REFERENCE,
+ holds
+ without
+ appeal
+
+==== 241 P49 8.4 pz:types -> P54:10045 ====
+--- source
+
++++ quote
+
+@@ -202,7 +202,6 @@
+
+ assumption
+ made
+ in
+-\S
+ REFERENCE
+ holds:
+ the
+
+==== 242 P49 8.6 pz:mu -> P54:10067 ====
+--- source
+
++++ quote
+
+@@ -121,5 +121,9 @@
+
+ of
+ REFERENCE
+ exist
+-(REFERENCE,
+-REFERENCE).
++(Definition~
++REFERENCE
++,
++Proposition~
++REFERENCE
++).
+
+==== 243 P49 8.7 pz:C0 -> P54:10080 ====
+--- source
+
++++ quote
+
+@@ -37,13 +37,10 @@
+
+ constant
+ $C_0$
+ of
+-Proposition~
+ REFERENCE
+ and
+ of
+-Lemma~
+-REFERENCE
+-{\rm(ii)}.
++REFERENCE.
+ \item[(c)]
+ With
+ the
+
+==== 244 P51 4.7 pm:kernel -> P54:10092 ====
+--- source
+
++++ quote
+
+@@ -3,8 +3,7 @@
+
+ be
+ as
+ in
+-REFERENCE
+-,
++REFERENCE,
+ on
+ $G_\tau\cong
+ G_s$.
+
+==== 245 P51 5.6 pds:decay -> P54:10106 ====
+--- source
+
++++ quote
+
+@@ -34,6 +34,4 @@
+
+ the
+ norm
+ of
+-\S
+-REFERENCE
+-.
++REFERENCE.
+
+==== 249 P53 2.10 pc:arch -> P54:10142 ====
+--- source
+
++++ quote
+
+@@ -18,9 +18,7 @@
+
+ $0\le
+ i<m$,
+ of
+-\S
+-REFERENCE
+-,
++REFERENCE,
+ with
+ the
+ types
+
+==== 254 P53 2.16 pc:rallis -> P54:10242 ====
+--- source
+
++++ quote
+
+@@ -18,7 +18,6 @@
+
+ which
+ \textup{(A1)--(A3)}
+ of
+-Lemma~
+ REFERENCE
+ hold.
+ Let
+
+==== 257 P53 3.2 pcx:X -> P54:10273 ====
+--- source
+
++++ quote
+
+@@ -122,11 +122,11 @@
+
+ and
+ all
+ $g\in\auU(W)(\auA)$,
+-\begin{equation}
++\begin{equation*}
+ \int_{[\auU(V)]}\theta^{W,V}_{\alpha,\gamma}(g,h;x,\Phi)\,dh=c\int_{[\auU(V')]}
+ \theta^{V',W}_{\gamma,\alpha'}(h',g;v,\Psi)\,dh'
+ .
+-\end{equation}
++\end{equation*}
+ Here
+ $\theta(\cdot\,;x,\Phi)$
+ is
+@@ -137,7 +137,6 @@
+
+ datum
+ $[x,\Phi]$
+ of
+-\S
+ REFERENCE
+ (matrices
+ in
+
+==== 258 P53 3.4 pcx:cne0 -> P54:10297 ====
+--- source
+
++++ quote
+
+@@ -1,7 +1,5 @@
+
+ In
+-Theorem~
+-REFERENCE
+-,
++REFERENCE,
+ $c\ne0$
+ for
+ every
+
+==== 259 P53 3.24 pcx:mod -> P54:10301 ====
+--- source
+
++++ quote
+
+@@ -70,6 +70,4 @@
+
+ the
+ data
+ of
+-\S
+-REFERENCE
+-).
++REFERENCE).
+
+==== 264 P53 3.30 pcx:superpos -> P54:10350 ====
+--- source
+
++++ quote
+
+@@ -17,6 +17,7 @@
+
+ realised
+ as
+ in
++\S
+ REFERENCE
+ as
+ the
+
+==== 265 P53 3.32 pcx:mean -> P54:10376 ====
+--- source
+
++++ quote
+
+@@ -118,9 +118,7 @@
+
+ (Here
+ $v\in\pzF_s$
+ by
+-Lemma~\textup{
+-REFERENCE
+-(b)},
++Lemma~\textup{REFERENCE},
+ so
+ $v\otimes
+ f_0$
+
+==== 266 P53 3.34 pcx:conv -> P54:10392 ====
+--- source
+
++++ quote
+
+@@ -1,7 +1,5 @@
+
+ Assume
+-Proposition~
+-REFERENCE
+-.
++REFERENCE.
+ \textup{(i)}
+ If
+ $\Phi$
+
+==== 267 P53 3.62 pcu:laws -> P54:10402 ====
+--- source
+
++++ quote
+
+@@ -20,5 +20,4 @@
+
+ $\psi_\beta$
+ as
+ in
+-REFERENCE
+-.
++REFERENCE.
+
+==== 268 P53 4.24 ptq:vac -> P54:10413 ====
+--- source
+
++++ quote
+
+@@ -2,9 +2,7 @@
+
+ the
+ setting
+ of
+-\S
+-REFERENCE
+-,
++REFERENCE,
+ let
+ $u\in\auU(\eta)$
+ be
+
+==== 271 P53 6.31 pgx:conv -> P54:10436 ====
+--- source
+
++++ quote
+
+@@ -90,6 +90,4 @@
+
+ the
+ formulas
+ of
+-\S
+-REFERENCE
+-.
++REFERENCE.
+
+==== 272 P53 6.32 pgx:dict -> P54:10447 ====
+--- source
+
++++ quote
+
+@@ -242,7 +242,6 @@
+
+ coordinate
+ $a_w^{-1}x$
+ of
+-Definition~
+ REFERENCE
+ are
+ both
+@@ -288,7 +287,13 @@
+
+ (N5)
+ (as
+ in
+-REFERENCE)
++\S\S
++REFERENCE
++,
++REFERENCE
++and~
++REFERENCE
++)
+ is
+ the
+ same

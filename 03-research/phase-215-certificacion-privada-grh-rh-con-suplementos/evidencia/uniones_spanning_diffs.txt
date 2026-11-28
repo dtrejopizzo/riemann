@@ -1,0 +1,408 @@
+
+### 51:10787 <- 46:13.4 an:lem-sizes
+--- source
++++ quote
+@@ -1,4 +1,4 @@
+-\label{an:lem-sizes}
++
+ For admissible data the following hold.
+ \begin{enumerate}
+ \item[(S1)] $x^{10^{6}}\le x_1$, $x_1^{10^{6}}\le b$,
+@@ -28,7 +28,7 @@
+ \item[(d)] $(200\,f\,k\,\anrd_E)^{1000}\le b$ and $(25\,n^{3}f\,\anrd_E)^{1000}\le b$;
+ \item[(e)] $\sqrt d\le\anrd_E$, and $n,r,f,\sqrt d\le b$; $M\le b^{23}$;
+ \item[(f)] $\binom{a+k-1}{k-1}^{f}\le b^{2kf}$ (this bounds the dimension $d_\infty=\dim W_{\lambda^X}$ of
+-\S\ref{ss:au-spaces}, a product of at most $f$ such binomial coefficients);
++{\cite[\S14.3]{P46}}, a product of at most $f$ such binomial coefficients);
+ \item[(g)] $m\Delta+r\le\kappa(\tau)$ for all $\tau$; $k+2b+2m\Delta\le b^{2}$ (this bounds every
+ entry of $2\varsigma_\tau$, so that $L_\tau:=\max_i|2\varsigma_{\tau,i}|\le b^{2}$); and
+ $(r+1)^{4}(b^{2}+r+1+2n^{2})\le b^{5}$.
+
+
+### 51:10887 <- 46:14.36 au:mult
+--- source
++++ quote
+@@ -1,10 +1,10 @@
+-\label{au:mult}
++
+ For $1\le j\le m$ and every element $h$ of the spherical Hecke algebra away from $M$ (the
+ compactly supported functions on the finite adelic group outside the chosen places that are
+ bi-invariant under the stabiliser of the lattice, at all places, split or not),
+ $\operatorname{tr}(h\,|\,e_0\mathcal A(W_j))=\operatorname{tr}(h\,|\,\auT)$. In particular
+ $\dim e_0\mathcal A(W_j)=\audT$, and each system of eigenvalues of the Hecke operators at the split
+ places prime to $M$ has the same multiplicity in $e_0\mathcal A(W_j)$ and in $\auT$. (The
+-hypothesis of {\cite[Proposition~4.6]{P51}} holds for the data: at every $\tau$, two entries of
+-$\varsigma_\tau$ on coordinates of different signs {\cite[(43)]{P51}} differ by at least
++hypothesis of Proposition~\ref{pm:mult} holds for the data: at every $\tau$, two entries of
++$\varsigma_\tau$ on coordinates of different signs \eqref{pm:eq-signs} differ by at least
+ $\Delta=2r^8\ge500r^3+10r^5$.)
+
+
+### 51:10899 <- 49:2.19 pwf:haar
+--- source
++++ quote
+@@ -1,7 +1,7 @@
+-\label{pwf:haar}
+-{\cite[Proposition~5.2]{P51}} holds, with the same statement, for every parameter to which it is
++
++Proposition~\ref{pds:haar} holds, with the same statement, for every parameter to which it is
+ applied in the paper. More precisely: for $(\lambda,s)$ satisfying the gap condition
+-{\cite[(49)]{P51}} and $dg$ the Haar measure compatible with the Haar measure of mass $1$ on
++\eqref{pbr:eq-gap} and $dg$ the Haar measure compatible with the Haar measure of mass $1$ on
+ $\auU(N)$, $\int_G|c|^2dg=\bigl(\prod_{i<j}(\lambda_i-\lambda_j)/(j-i)\bigr)^{-1}$ for the coefficient
+-$c$ of a unit vector of the lowest $K$-type; and the parameters of {\cite[\S5]{P51}} satisfy
+-{\cite[(49)]{P51}}.
++$c$ of a unit vector of the lowest $K$-type; and the parameters of \S\ref{pds:sec} satisfy
++\eqref{pbr:eq-gap}.
+
+
+### 51:10908 <- 49:3.17 pco:FJ
+--- source
++++ quote
+@@ -1,2 +1,2 @@
+-\label{pco:FJ}
+-Assume $h\ge n^2+1$. Then $F=c_\lambda$ on $G$; that is, {\cite[(59)]{P51}} holds.
++
++Assume $h\ge n^2+1$. Then $F=c_\lambda$ on $G$; that is, \eqref{pds:eq-FJ} holds.
+
+
+### 51:10947 <- 49:3.23 pco:K
+--- source
++++ quote
+@@ -1,10 +1,10 @@
+-\label{pco:K}
++
+ Let $x\in G$, $a\in A_x$ and $k_1\in K$. Then
+-\begin{align}
++\begin{align*}
+ F(xk_1)&=d_\Lambda\int_K\frac{\pcom_\Lambda(au)\,\pcom_\Lambda(u^*k_1)}{\pcom_{-\mu}(u^{-1}a^{-1}xu)}\,du,
+-\label{pco:eq-right}\\
++\tag*{{\cite[(16)]{P49}}}\\
+ F(k_1x)&=d_\Lambda\int_K\frac{\pcom_\Lambda(k_1au)\,\overline{\pcom_\Lambda(u)}}{\pcom_{-\mu}(u^{-1}a^{-1}xu)}
+-\,du.\label{pco:eq-left}
+-\end{align}
++\,du.\tag*{{\cite[(17)]{P49}}}
++\end{align*}
+ Consequently $F(xt)=t^\Lambda F(x)=F(tx)$ for $t\in T$, and if $\varepsilon_a=\varepsilon_b$,
+ $\lambda_a>\lambda_b$, then $R(E_{ab})F=0$.
+
+
+### 51:10978 <- 49:8.4 pz:types
+--- source
++++ quote
+@@ -1,4 +1,4 @@
+-\label{pz:types}
++
+ Assume {\rm(A1)--(A3)}. Let $0\le j\le m$.
+ \begin{enumerate}
+ \item[(a)] Every form $y$ of type $e_j$ or $\overline{e_j}$ on $G_j$ is smooth, $K_{j,\infty}$-finite
+@@ -15,6 +15,6 @@
+ $\auP$ of {\cite[\S14.3]{P46}} is well defined; and $\iota_\vartheta$ maps $\auAz$ to algebraic
+ modular forms of weight $\lambda^\circ$ on $\auU(Y_m)$.
+ \end{enumerate}
+-In particular the assumption made in \S\ref{ps:ss-Y} holds: the lifts $\Theta^Y_{j,\vartheta}$ and
++In particular the assumption made in {\cite[\S5.1.3]{P49}} holds: the lifts $\Theta^Y_{j,\vartheta}$ and
+ their transposes $\Theta^{Y,*}_{j,\vartheta}$ preserve the types, and all the forms concerned are
+ cusp forms and rapidly decreasing.
+
+
+### 51:11000 <- 52:2.17 pfr:R
+--- source
++++ quote
+@@ -1,10 +1,10 @@
+-{P51}}\,\textup{(R)}]\label{pfr:R}
++
+ Assume \textup{(H0)}--\textup{(H5)}. There are functions $J_i=J^\tau_i$, $0\le i\le n$, on pairs of
+ sequences of non-zero complex numbers such that:
+ \begin{enumerate}
+-\item[(R-a)] $(J_i)_{0\le i\le n}$ is a sieve system ({\cite[Definition~3.44]{P51}}) at the place
++\item[(R-a)] $(J_i)_{0\le i\le n}$ is a sieve system (Definition~\ref{pbm:system}) at the place
+ $(\C,\text{Lebesgue},c\mapsto e^{c-\bar c},w\mapsto w^{-1})$ with mass $(1+b^{-10})/\pbdeg_\tau$,
+-weights $\Lambda^\infty_i$ and decay $\beta^\infty$ of {\cite[(38)]{P51}}:
++weights $\Lambda^\infty_i$ and decay $\beta^\infty$ of \eqref{pbm:eq-beta}:
+ \[
+ \Lambda^\infty_i(p)=\prod_{l=1}^i\bigl[|\delta_l|\le b^{60n^2}\bigr]\max(1,|\delta_l|^{-1})^{n^6},\quad
+ \delta_l=p_0\cdots p_{l-1};\qquad\beta^\infty(\xi)=\pbmTh\,b^{2000n^9}\,\pfrell_{k-n^7}(|\xi|^{-1}),
+
+
+### 51:11058 <- 52:5.28 pff:F
+--- source
++++ quote
+@@ -1,13 +1,13 @@
+-{P51}}\,\textup{(F)}]\label{pff:F}
+-Assume the hypotheses on the data of {\cite[Theorem~3.53]{P51}}. Let $T$ be a finite set of finite places
++
++Assume the hypotheses on the data of Theorem~\ref{pbm:L2}. Let $T$ be a finite set of finite places
+ of $E$, stable under conjugation, containing the places above $MN$. Let $\mathsf A$ be a set of
+ chosen places above $p_0$ and $\mathsf d$ a family of frame vectors, and let $\pffZ=\pffZ(\mathsf A,
+-\mathsf d)$ be the intermediate group of Theorem~\ref{pff:fixed}. Then the forms
+-\eqref{pff:eq-forms} for $\pffZ$ satisfy:
++\mathsf d)$ be the intermediate group of {\cite[Theorem~5.24]{P52}}. Then the forms
++{\cite[(12)]{P52}} for $\pffZ$ satisfy:
+ \begin{enumerate}
+ \item[(a)] $\pffZ$ contains the component at $T$ of every $\kappa\in K^{\mathrm{ad}}$ with
+ $\mathrm{red}(\kappa)\in\pbFix(\mathsf A,\mathsf d)$;
+ \item[(b)] $(J^T_i)_{0\le i\le n}$ is a sieve system at $\mathfrak P_T$
+-({\cite[Definition~3.44]{P51}}) with mass $(1+b^{-6})\,b^{-6k\#\mathsf A}$, weights $\Lambda^T$ and
++(Definition~\ref{pbm:system}) with mass $(1+b^{-6})\,b^{-6k\#\mathsf A}$, weights $\Lambda^T$ and
+ decay $\beta^T$.
+ \end{enumerate}
+
+
+### 51:11073 <- 52:5.29 pff:S
+--- source
++++ quote
+@@ -1,7 +1,7 @@
+-{P51}}\,\textup{(S)}]\label{pff:S}
+-Assume the hypotheses of Theorem~\ref{pff:F}, and in addition that $T$ contains the places at which
+-an element of the set $\mathsf B$ of {\cite[\S3.3.2]{P51}} is not a unit. Let $J^\tau_n$ be the top
+-forms at the real places of Theorem~\ref{pfr:R}. Let $(c_j,c'_j,s_j,\sigma_j)_{j\in\mathsf I}$ be a
++
++Assume the hypotheses of {\cite[Theorem~5.28]{P52}}, and in addition that $T$ contains the places at which
++an element of the set $\mathsf B$ of \S\ref{pbm:ss-cell} is not a unit. Let $J^\tau_n$ be the top
++forms at the real places of {\cite[Theorem~2.17]{P52}}. Let $(c_j,c'_j,s_j,\sigma_j)_{j\in\mathsf I}$ be a
+ finite family of pairwise distinct quadruples of classes $c_j,c'_j$, elements $s_j\in\pbFix(\mathsf
+ A,\mathsf d)$ and $\sigma_j\in\pbmGf(E^+)$ such that $t_j=t(\sigma_j)\in\pbmT$, $|\tau(t_j)|>N$
+ for all $\tau$, and $h_{c_j}^{-1}\sigma_jh_{c'_j}$ stabilises the lattice at every finite place
+@@ -11,5 +11,5 @@
+ \Bigr\|^2\le(1+b^{-6})\,\pbmaS\,\Rel\sum_{t\in\{t_j\}}\ \sum_{p,q\in\pbmT^\varrho}\prod_\tau J^\tau_n
+ \bigl([p,t]_\tau,[q,t]_\tau\bigr)\,J^T_n\bigl((p,t),(q,t)\bigr),
+ \]
+-with $J^T_n$ the top form \eqref{pff:eq-forms} for the group $\pffZ(\mathsf A,\mathsf d)$ of
+-Theorem~\ref{pff:F}.
++with $J^T_n$ the top form {\cite[(12)]{P52}} for the group $\pffZ(\mathsf A,\mathsf d)$ of
++{\cite[Theorem~5.28]{P52}}.
+
+
+### 51:11090 <- 52:6.35 pfg:siegel
+--- source
++++ quote
+@@ -1,3 +1,3 @@
+-\label{pfg:siegel}
+-Theorem~\ref{pff:siegelformula} holds as stated, with the measures and the normalisation of \S\ref{pff:ss-siegel}; moreover
++
++{\cite[Theorem~5.31]{P52}} holds as stated, with the measures and the normalisation of {\cite[\S5.7]{P52}}; moreover
+ the $z$-integral defining $\delta(\Phi,\alpha)$ converges absolutely.
+
+
+### 52:5524 <- 46:13.4 an:lem-sizes
+--- source
++++ quote
+@@ -1,4 +1,4 @@
+-\label{an:lem-sizes}
++
+ For admissible data the following hold.
+ \begin{enumerate}
+ \item[(S1)] $x^{10^{6}}\le x_1$, $x_1^{10^{6}}\le b$,
+@@ -28,7 +28,7 @@
+ \item[(d)] $(200\,f\,k\,\anrd_E)^{1000}\le b$ and $(25\,n^{3}f\,\anrd_E)^{1000}\le b$;
+ \item[(e)] $\sqrt d\le\anrd_E$, and $n,r,f,\sqrt d\le b$; $M\le b^{23}$;
+ \item[(f)] $\binom{a+k-1}{k-1}^{f}\le b^{2kf}$ (this bounds the dimension $d_\infty=\dim W_{\lambda^X}$ of
+-\S\ref{ss:au-spaces}, a product of at most $f$ such binomial coefficients);
++{\cite[\S14.3]{P46}}, a product of at most $f$ such binomial coefficients);
+ \item[(g)] $m\Delta+r\le\kappa(\tau)$ for all $\tau$; $k+2b+2m\Delta\le b^{2}$ (this bounds every
+ entry of $2\varsigma_\tau$, so that $L_\tau:=\max_i|2\varsigma_{\tau,i}|\le b^{2}$); and
+ $(r+1)^{4}(b^{2}+r+1+2n^{2})\le b^{5}$.
+
+
+### 52:5573 <- 51:2.16 pb:bessel
+--- source
++++ quote
+@@ -1,4 +1,4 @@
+-\label{pb:bessel}
++
+ We say that \emph{Bessel functions exist} for the data if there are a point $g_0\in G_\infty$, a
+ linear form $\mathsf t$ on $W_{\lambda^X}$, a constant $c_W>0$ and continuous functions
+ $W_\tau,W_\tau^\flat\colon G_\tau\to\pbW_\tau$ $(\tau\in\auPl)$ with the following properties, where
+@@ -18,13 +18,13 @@
+ \auP\varphi(g)=c_W\sum_{c\in\mathcal C}\ \sum_{\gamma\in U_c\backslash\Gamma}\pbip{W(\gamma_\infty
+ g_\infty)}{\varphi(h_c)}\,\pbone_{h_cJ}(\gamma g_f),
+ \]
+-where $\auP$ is defined by $g_0$, $\mathsf t$ and \eqref{pb:eq-psi}. (Replacing $\varphi(h_c)$ by
++where $\auP$ is defined by $g_0$, $\mathsf t$ and {\cite[(4)]{P51}}. (Replacing $\varphi(h_c)$ by
+ the value at $h_c$ of the translate of $\varphi$ by a fixed central element of $H(\auA_f)$ composes
+ $\auP$ with a unitary automorphism of $\auS$ that commutes with $\pbrpsi$, and changes nothing below.)
+ \item[(B5)] $W^\flat_\tau=\chi_\tau W_\tau$ with
+ $\chi_\tau(y)=\max\bigl(0,\min(1,2-2\ell_\tau(y)/b^{6n+2})\bigr)$, where
+ $\ell_\tau(y)=\inf_{s\in R_\tau}(\|sy\|_\tau+1)$ and $\|\cdot\|_\tau$ is the operator norm of
+-Definition~\ref{pbe:length}. So $\chi_\tau=1$ where $\ell_\tau\le\frac12b^{6n+2}$, $\chi_\tau=0$
++{\cite[Definition~3.14]{P51}}. So $\chi_\tau=1$ where $\ell_\tau\le\frac12b^{6n+2}$, $\chi_\tau=0$
+ where $\ell_\tau\ge b^{6n+2}$, and $\chi_\tau$ is continuous, $0\le\chi_\tau\le1$, and left
+ invariant under $R_\tau$; in particular the support of $W^\flat_\tau$ is compact modulo $R_\tau$.
+ \item[(B5$'$)] For each $\tau$ there is a compact set $C_\tau\subset G_\tau$ with
+
+
+### 52:5621 <- 51:3.6 pbv:haar
+--- source
++++ quote
+@@ -1,4 +1,4 @@
+-\label{pbv:haar}
++
+ For every $\tau$ and every $x\in U_\tau$ the left translation $u\mapsto xu$ preserves $du_\tau$. So $du_\tau$
+ is a Haar measure of $U_\tau$ (a nilpotent Lie group, hence unimodular), and it is the Haar measure of
+-{\cite[Lemma~4.1]{P52}}\,\textup{(c)}: the two descriptions of $du_\tau$ in \textup{(Cv3)} agree.
++Lemma~\ref{prp:heis}\,\textup{(c)}: the two descriptions of $du_\tau$ in \textup{(Cv3)} agree.
+
+
+### 52:5647 <- 51:3.18 pbe:local
+--- source
++++ quote
+@@ -1,5 +1,5 @@
+-\label{pbe:local}
+-Assume Theorem~\ref{pbe:ds}. For $y\in G_\tau$ the integral
++
++Assume {\cite[Theorem~3.16]{P51}}. For $y\in G_\tau$ the integral
+ \[
+ W^\circ(y)=\int_{R_\tau}c_\tau(x^{-1}sy)\,\pi_R(s)^{-1}v\,ds\ \in\pbW_\tau
+ \]
+@@ -14,7 +14,7 @@
+ particular this number is real and, by \textup{(DS4)}, at least $b^{-60(r+k)^2}\pbvol(\pbeB_x)>0$.
+ \end{enumerate}
+ Let $c_0>0$ be such that $W_\tau:=c_0W^\circ$ has $\int_{U_\tau\backslash G_\tau}\|W_\tau\|^2=d_\tau$,
+-and $W_\tau^\flat:=\chi_\tau W_\tau$ with $\chi_\tau$ as in \eqref{pbe:eq-chi}. Put
++and $W_\tau^\flat:=\chi_\tau W_\tau$ with $\chi_\tau$ as in {\cite[(23)]{P51}}. Put
+ $\mathsf A_\tau(y)=c_0\int_{R_\tau}(2/\|x^{-1}sy\|)^{\pbeq}ds$ and $\mathsf a_\tau=c_0\,16^{\pbeq}\pbvol(
+ \pbeB_x)$. Then:
+ \begin{enumerate}
+
+
+### 52:5678 <- 51:3.22 pbe:bessel
+--- source
++++ quote
+@@ -1,7 +1,7 @@
+-\label{pbe:bessel}
+-Assume Theorem~\ref{pbe:ds}. Let $g_0=(x_\tau)_\tau$, let $\mathsf t=\bigotimes_\tau v_\tau\in\pbW$,
++
++Assume {\cite[Theorem~3.16]{P51}}. Let $g_0=(x_\tau)_\tau$, let $\mathsf t=\bigotimes_\tau v_\tau\in\pbW$,
+ regarded as a linear form on $W_{\lambda^X}$, and let $W_\tau$, $W_\tau^\flat$, $\chi_\tau$ be as in
+-Proposition~\ref{pbe:local}. Then \textup{(B1)--(B4)} of Definition~\ref{pb:bessel} hold, with
++{\cite[Proposition~3.18]{P51}}. Then \textup{(B1)--(B4)} of {\cite[Definition~2.16]{P51}} hold, with
+ \[
+ c_W=\frac{\pbvol(R_0(\auA_f)\cap J)}{\pbvol(J)}\prod_\tau\frac{\pbdeg_\tau}{c_{0,\tau}}>0,
+ \]
+@@ -9,11 +9,11 @@
+ \begin{enumerate}
+ \item[(B5)] $W_\tau^\flat=\chi_\tau W_\tau$, where $\chi_\tau(y)=\max\bigl(0,\min(1,2-2\pbel_\tau(y)/
+ b^{6n+2})\bigr)$ and $\pbel_\tau(y)=\inf_{s\in R_\tau}(\|sy\|_\tau+1)$ is the length of
+-Definition~\ref{pbe:length}.
++{\cite[Definition~3.14]{P51}}.
+ \end{enumerate}
+ Moreover:
+ \begin{enumerate}
+-\item[(B6)] \emph{(Decay.)} \eqref{pbe:eq-decay} holds, with $\mathsf A$ continuous and left
++\item[(B6)] \emph{(Decay.)} {\cite[(25)]{P51}} holds, with $\mathsf A$ continuous and left
+ invariant under $R_\infty$.
+ \item[(B7)] \emph{(Reproduction.)} $\int_{G_\tau}e_\tau(a)W_\tau(ya)\,da=W_\tau(y)$ for all $\tau$
+ and $y\in G_\tau$.
+
+
+### 52:5700 <- 51:3.33 pbm:pos
+--- source
++++ quote
+@@ -1,9 +1,9 @@
+-\label{pbm:pos}
++
+ Let $\pbmD$ be a chain datum, $U=U_\pbmD$, $\psi=\psi_\pbmD$, $f=f_\pbmD$ and $\mathsf G=\auGL(V)$.
+ \begin{enumerate}
+ \item[(a)] $f(h)$ is $\#(U\cap h^{-1}Uh)$ or $0$; in particular $f\ge0$. Moreover $f(uhu')=f(h)$
+ for $u,u'\in U$ and $f(h^{-1})=f(h)$.
+-\item[(b)] $f$ is of positive type on $\mathsf G$ (in the sense of \S\ref{pb:ss-finite}).
++\item[(b)] $f$ is of positive type on $\mathsf G$ (in the sense of {\cite[\S2.3]{P51}}).
+ \item[(c)] Let $\tilde\psi$ be $\psi$ on $U$ and $0$ on $\mathsf G\smallsetminus U$, and
+ $\psi^{\pbnat}(s)=(\#\mathsf G)^{-1}\sum_{g\in\mathsf G}\tilde\psi(gsg^{-1})$. Then
+ $\sum_{s\in\mathsf G}|\psi^{\pbnat}(s)|^2=\pbmPhi(\pbmD)$.
+
+
+### 52:5712 <- 51:3.39 pbm:E4
+--- source
++++ quote
+@@ -1,4 +1,4 @@
+-\label{pbm:E4}
++
+ Assume $b\ge3$, $k\ge2\varrho^2+3$, $\auNm w\ge b^{10}$ for the chosen places $w$, and $18\,\varrho f\le b^8$
+-(these hold for the data of \S\ref{pb:ss-setting}: $\varrho<2\sqrt x$, $k\ge x^5/2$, $f\le x^{12}$, $p_i\ge b^{10}$, and $b\ge1000$ by {\cite[Lemma~13.4(S1)]{P46}}). Then
++(these hold for the data of {\cite[\S2.1]{P51}}: $\varrho<2\sqrt x$, $k\ge x^5/2$, $f\le x^{12}$, $p_i\ge b^{10}$, and $b\ge1000$ by {\cite[Lemma~13.4(S1)]{P46}}). Then
+ $\sum_{s\in\auG}|\psi^{\pbnat}(s)|^2\le2$.
+
+
+### 52:5759 <- 51:3.50 pbm:sieve
+--- source
++++ quote
+@@ -1,6 +1,6 @@
+-\label{pbm:sieve}
++
+ Assume $n\ge3$, $b\ge1000$, $2n\le b$, $1\le|\kappa_\tau|\le b^{23}$ for all $\tau$, $N\le b^{60n}$
+-and $\aurd\le b$. Let $T$ and $\pbmT$ be as in Theorem~\ref{pbm:abstract}, with $M^{-1}\in\pbmRT$. For
++and $\aurd\le b$. Let $T$ and $\pbmT$ be as in {\cite[Theorem~3.48]{P51}}, with $M^{-1}\in\pbmRT$. For
+ each $\tau\in\auPl$ let $(J^\tau_i)$ be a sieve system at $(\C,\text{Lebesgue},e^{c-\aubar c},w\mapsto
+ w^{-1})$ with mass $\pbmE_\tau$, weights $\Lambda^\infty$ and decay $\beta^\infty$, and let $(J^T_i)$
+ be a sieve system at $(E_T,dx,\psi_T,w\mapsto M^{-1}w^{-1})$ with mass $\pbmE_T$, weights $\Lambda^T$
+
+
+### 52:5773 <- 51:3.51 pbm:inputs
+--- source
++++ quote
+@@ -1,24 +1,24 @@
+-\label{pbm:inputs}
+-Bessel functions exist for the data (Definition~\ref{pb:bessel}), with \textup{(B5$'$)}, and they
++
++Bessel functions exist for the data ({\cite[Definition~2.16]{P51}}), with \textup{(B5$'$)}, and they
+ can be chosen, together with functions $J^\tau_i$ $(\tau\in\auPl)$ and $J^T_i$ $(0\le i\le n$; the
+ $J^T_i$ depend on $T$, $\mathsf A$, $\mathsf d$ as in \textup{(F)}$)$, such that the following
+-holds, for the entry set $\pbmT$ of \S\ref{pbm:ss-cell}.
++holds, for the entry set $\pbmT$ of {\cite[\S3.3.2]{P51}}.
+ \begin{enumerate}
+ \item[(R)] \emph{(Real places.)} For every $\tau\in\auPl$, $(J^\tau_i)_{0\le i
+ \le n}$ is a sieve system at the place $(\C,\text{Lebesgue},e^{c-\aubar c},w\mapsto w^{-1})$ with mass $(1+b^{-10})/
+ \pbdeg_\tau$, weights $\Lambda^\infty$ and decay $\beta^\infty$; and its top form is the Gram form
+ $J^\tau_n(x,x')=\langle\mathsf N(x),\mathsf N(x')\rangle$ of the normalised orbital integrals of
+-\S\ref{pbm:ss-remains} ({\cite[Theorem~2.17\,(R-b)]{P52}}).
++{\cite[\S3.3.7]{P51}} (Theorem~\ref{pfr:R}\,(R-b)).
+ \item[(F)] \emph{(Finite places.)} Let $T$ be a finite set of finite places of $E$, stable under
+ conjugation, that contains the places above $MN$ and those at which some element of the set
+-$\mathsf B$ of \S\ref{pbm:ss-cell} is not a unit. For every set $\mathsf A$ of chosen places above
++$\mathsf B$ of {\cite[\S3.3.2]{P51}} is not a unit. For every set $\mathsf A$ of chosen places above
+ $p_0$ and every family $\mathsf d$ of frame vectors, $(J^{T}_i)_{0\le i\le
+ n}$ is a sieve system at the place $(E_T,dx,\psi_T,w\mapsto M^{-1}w^{-1})$ with mass $(1+b^{-6})\,b^{-6k\#\mathsf A}$,
+ weights $\Lambda^T$ and decay $\beta^T$.
+ \item[(S)] \emph{(Siegel's step.)} Let $T$, $\mathsf A$, $\mathsf d$ be as in \textup{(F)}, and let $J^T_n$
+ be the top form of \textup{(F)} for the same $T$, $\mathsf A$, $\mathsf d$ (it is built from a group
+ $\mathsf Z(\mathsf A,\mathsf d)$ that contains the components at $T$ of the integral elements whose
+-reductions lie in $\pbFix(\mathsf A,\mathsf d)$; see {\cite[Theorem~5.28]{P52}}). Let
++reductions lie in $\pbFix(\mathsf A,\mathsf d)$; see Theorem~\ref{pff:F}). Let
+ $(c_j,c_j',s_j,\sigma_j)_{j\in\mathsf I}$ be a finite family of pairwise distinct quadruples of
+ classes $c_j,c_j'$, elements $s_j\in\pbFix(\mathsf A,\mathsf d)$ and $\sigma_j\in\pbmGf(E^+)$ such
+ that the last entry $t_j=t(\sigma_j)$ lies in $\pbmT$, $|\tau(t_j)|>N$ for all $\tau$, and
+
+
+### 52:5818 <- 51:3.53 pbm:L2
+--- source
++++ quote
+@@ -1,6 +1,6 @@
+-\label{pbm:L2}
+-Assume Theorem~\ref{pbm:inputs} and the inequalities on the data listed in Theorem~\ref{pbm:sieve}
+-and Lemma~\ref{pbm:const}. Then, for the Bessel functions of Theorem~\ref{pbm:inputs}, every set
++
++Assume {\cite[Theorem~3.51]{P51}} and the inequalities on the data listed in {\cite[Theorem~3.50]{P51}}
++and {\cite[Lemma~3.52]{P51}}. Then, for the Bessel functions of {\cite[Theorem~3.51]{P51}}, every set
+ $\mathsf A$ of chosen places above $p_0$ and every family $\mathsf d$ of frame vectors,
+ \[
+ \pbLM\bigl(\{s\in\pbFix(\mathsf A,\mathsf d):s\text{ open}\}\bigr)\le(1+b^{-4})\,b^{-6k\#\mathsf A}\,\pbDmain
+
+
+### 52:5854 <- 51:8.81 pbo:append
+--- source
++++ quote
+@@ -1,4 +1,4 @@
+-\label{pbo:append}
++
+ \begin{enumerate}
+ \item[(a)] Let $E=(E_1|E_2)$ be a tuple split into two parts, let $\mu\preceq\lambda_{E_1}$, and let
+ $\nu$ be a measure on the stabiliser $G_{E_1}$ of $E_1$ such that the image of $\nu$ under $u\mapsto
+@@ -7,5 +7,5 @@
+ \item[(b)] Let $\mu\preceq\lambda_{\pboF}$ and let $ds=du^0\,dh$ be the measure on $\pboR$, $du^0$ the
+ Haar measure on $\pboU$ that is the image of Lebesgue measure on the parameters $q=(\beta,\sigma)$
+ ($\beta\in M_{\varrho\times k}(\C)$, $\sigma$ real skew-hermitian coordinates)  $q$ of
+-$u_q$ in \eqref{pbo:eq-uq} below, and $dh$ of mass one. Then $\mu*ds\le\frac{\pboV(r)}{2^{\varrho+1}\pboV(k)}\,dg$.
++$u_q$ in {\cite[(81)]{P51}} below, and $dh$ of mass one. Then $\mu*ds\le\frac{\pboV(r)}{2^{\varrho+1}\pboV(k)}\,dg$.
+ \end{enumerate}

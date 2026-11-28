@@ -1,0 +1,1365 @@
+                                   ICE
+
+Chowla-Selberg and other formulas
+  useful for zeta regularization
+
+               E MILIO E LIZALDE
+         ICE/CSIC & IEEC, UAB, Barcelona
+
+
+    Mathematical Structures in Quantum Systems
+                  and applications
+            Benasque, July 8-14, 2012
+
+                                        E Elizalde, MSQSA Benasque, July 11, 2012 – p. 1/2
+                    Outline
+
+The Riemann zeta function as a regularization tool.
+General scheme for Linear and Quadratic cases.
+Truncations.
+Spectrum only known Implicitly.
+The Chowla-Selberg formula in Number Theory.
+The Chowla-Selberg series formula (CS). Nontrivial
+Extensions (ECS).
+Operator Zeta Functions: ζA for A a ΨDO, Det’s.
+Dixmier trace, Wodzicki Residue.
+Multiplicative Anomaly or Defect.
+
+
+
+                                         E Elizalde, MSQSA Benasque, July 11, 2012 – p. 2/2
+            s                   111111111111111111
+                                000000000000000000
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+            a.c.                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                                   1
+                                          ζ (s) = Σ−−
+                                000000000000000000
+                                111111111111111111   s
+                                000000000000000000
+                                111111111111111111 n
+                                000000000000000000
+                                111111111111111111
+ζ(s)                            000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                            pole111111111111111111
+                                000000000000000000
+  01                 1
+                     0          000000000000000000
+                                111111111111111111
+                                      1
+                                      0     01
+                                000000000000000000
+                                111111111111111111
+ −4    −3       −2   −1   0     000000000000000000
+                                111111111111111111
+                                1   2   3     4    5
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                                000000000000000000
+                                111111111111111111
+                  Basic strategies
+   Jacobi’s identity for the θ−function
+                       P ∞ n2
+   θ3 (z, τ ) := 1 + 2 n=1 q cos(2nz),          q := eiπτ , τ ∈ C
+                  1    z 2 /iπτ    z  −1
+                                         
+   θ3 (z, τ ) = √−iτ e          θ3 τ | τ              equivalently:
+  ∞                 r ∞
+ X              2       π   X π 2 n2
+       e−(n+z) t =               e− t cos(2πnz), z, t ∈ C, Ret > 0
+n=−∞
+                         t n=0
+
+  Higher dimensions: Poisson summ formula (Riemann)
+               X           X
+                  f (~n) =   fe(m)
+                                ~
+                  n∈Zp
+                  ~            m∈Z
+                               ~   p
+                                        fe Fourier transform
+  [Gelbart + Miller, BAMS ’03, Iwaniec, Morgan, ICM ’06]
+
+  Truncated sums
+                         −→ asymptotic series
+                                                  E Elizalde, MSQSA Benasque, July 11, 2012 – p. 3/2
+The Chowla-Selberg Formula (CS)
+M. Lerch, Sur quelques formules relatives du nombre des classes, Bull. Sci.
+Math. 21 (1897) 290-304
+
+
+
+
+                                                         E Elizalde, MSQSA Benasque, July 11, 2012 – p. 4/2
+The Chowla-Selberg Formula (CS)
+M. Lerch, Sur quelques formules relatives du nombre des classes, Bull. Sci.
+Math. 21 (1897) 290-304
+
+A. Selberg and S. Chowla, On Epstein’s Zeta function (I), Proc. Nat. Acad.
+Sci. 35 (1949) 371-74
+
+
+
+
+                                                          E Elizalde, MSQSA Benasque, July 11, 2012 – p. 4/2
+The Chowla-Selberg Formula (CS)
+M. Lerch, Sur quelques formules relatives du nombre des classes, Bull. Sci.
+Math. 21 (1897) 290-304
+
+A. Selberg and S. Chowla, On Epstein’s Zeta function (I), Proc. Nat. Acad.
+Sci. 35 (1949) 371-74
+
+S. Chowla and A. Selberg, On Epstein’s Zeta function, J. reine angew. Math.
+(Crelle’s J.) 227 (1967) 86-110
+
+
+
+
+                                                          E Elizalde, MSQSA Benasque, July 11, 2012 – p. 4/2
+The Chowla-Selberg Formula (CS)
+M. Lerch, Sur quelques formules relatives du nombre des classes, Bull. Sci.
+Math. 21 (1897) 290-304
+
+A. Selberg and S. Chowla, On Epstein’s Zeta function (I), Proc. Nat. Acad.
+Sci. 35 (1949) 371-74
+
+S. Chowla and A. Selberg, On Epstein’s Zeta function, J. reine angew. Math.
+(Crelle’s J.) 227 (1967) 86-110
+
+K. Ramachandra, Some applications of Kronecker’s limit formulas, Ann. Math.
+80 (1964) 104-148
+
+
+
+
+                                                          E Elizalde, MSQSA Benasque, July 11, 2012 – p. 4/2
+The Chowla-Selberg Formula (CS)
+M. Lerch, Sur quelques formules relatives du nombre des classes, Bull. Sci.
+Math. 21 (1897) 290-304
+
+A. Selberg and S. Chowla, On Epstein’s Zeta function (I), Proc. Nat. Acad.
+Sci. 35 (1949) 371-74
+
+S. Chowla and A. Selberg, On Epstein’s Zeta function, J. reine angew. Math.
+(Crelle’s J.) 227 (1967) 86-110
+
+K. Ramachandra, Some applications of Kronecker’s limit formulas, Ann. Math.
+80 (1964) 104-148
+
+A. Weil, Elliptic functions according to Eisenstein and Kronecker (Springer,
+Berlin, 1976)
+
+
+
+
+                                                           E Elizalde, MSQSA Benasque, July 11, 2012 – p. 4/2
+The Chowla-Selberg Formula (CS)
+M. Lerch, Sur quelques formules relatives du nombre des classes, Bull. Sci.
+Math. 21 (1897) 290-304
+
+A. Selberg and S. Chowla, On Epstein’s Zeta function (I), Proc. Nat. Acad.
+Sci. 35 (1949) 371-74
+
+S. Chowla and A. Selberg, On Epstein’s Zeta function, J. reine angew. Math.
+(Crelle’s J.) 227 (1967) 86-110
+
+K. Ramachandra, Some applications of Kronecker’s limit formulas, Ann. Math.
+80 (1964) 104-148
+
+A. Weil, Elliptic functions according to Eisenstein and Kronecker (Springer,
+Berlin, 1976)
+
+S. Iyanaga and Y. Kawada, Eds., Encyclopedic Dictionary of Mathematics, Vol.
+II (The MIT Press, Cambridge, 1977), pp. 1378-79
+
+
+
+
+                                                           E Elizalde, MSQSA Benasque, July 11, 2012 – p. 4/2
+The Chowla-Selberg Formula (CS)
+M. Lerch, Sur quelques formules relatives du nombre des classes, Bull. Sci.
+Math. 21 (1897) 290-304
+
+A. Selberg and S. Chowla, On Epstein’s Zeta function (I), Proc. Nat. Acad.
+Sci. 35 (1949) 371-74
+
+S. Chowla and A. Selberg, On Epstein’s Zeta function, J. reine angew. Math.
+(Crelle’s J.) 227 (1967) 86-110
+
+K. Ramachandra, Some applications of Kronecker’s limit formulas, Ann. Math.
+80 (1964) 104-148
+
+A. Weil, Elliptic functions according to Eisenstein and Kronecker (Springer,
+Berlin, 1976)
+
+S. Iyanaga and Y. Kawada, Eds., Encyclopedic Dictionary of Mathematics, Vol.
+II (The MIT Press, Cambridge, 1977), pp. 1378-79
+
+B.H. Gross, On the periods of abelian integrals and a formula of Chowla and
+Selberg, Inv. Math. 45 (1978) 193-211
+
+
+
+                                                           E Elizalde, MSQSA Benasque, July 11, 2012 – p. 4/2
+The Chowla-Selberg Formula (CS)
+M. Lerch, Sur quelques formules relatives du nombre des classes, Bull. Sci.
+Math. 21 (1897) 290-304
+
+A. Selberg and S. Chowla, On Epstein’s Zeta function (I), Proc. Nat. Acad.
+Sci. 35 (1949) 371-74
+
+S. Chowla and A. Selberg, On Epstein’s Zeta function, J. reine angew. Math.
+(Crelle’s J.) 227 (1967) 86-110
+
+K. Ramachandra, Some applications of Kronecker’s limit formulas, Ann. Math.
+80 (1964) 104-148
+
+A. Weil, Elliptic functions according to Eisenstein and Kronecker (Springer,
+Berlin, 1976)
+
+S. Iyanaga and Y. Kawada, Eds., Encyclopedic Dictionary of Mathematics, Vol.
+II (The MIT Press, Cambridge, 1977), pp. 1378-79
+
+B.H. Gross, On the periods of abelian integrals and a formula of Chowla and
+Selberg, Inv. Math. 45 (1978) 193-211
+
+P. Deligne, Valeurs de fonctions L et periodes d’integrales, PSPM 33 (1979)
+313-346
+                                                           E Elizalde, MSQSA Benasque, July 11, 2012 – p. 4/2
+                            History
+Lerch (1897):
+  |D|                    
+  X    D                λ                    h          X
+            log Γ               = h log |D| − log(2π) −   log a
+        λ               D                    3
+  λ=1                                                          (a,b,c)
+                                        2 X     ′       ′
+                                                                
+                                      +     log θ1 (0|α)θ1 (0|β)
+                                        3
+D discriminant,     θ1′ ∼ η 3            (a,b,c)
+
+h class number of binary quadratic forms (a, b, c)
+
+
+
+
+                                                   E Elizalde, MSQSA Benasque, July 11, 2012 – p. 5/2
+                             History
+Lerch (1897):
+  |D|                     
+  X    D                 λ                    h          X
+             log Γ               = h log |D| − log(2π) −   log a
+        λ                D                    3
+  λ=1                                                              (a,b,c)
+                                         2 X     ′       ′
+                                                                 
+                                       +     log θ1 (0|α)θ1 (0|β)
+                                         3
+D discriminant,      θ1′ ∼ η 3               (a,b,c)
+
+h class number of binary quadratic forms (a, b, c)
+
+Eta evaluations Dedekind eta function for Im (τ ) > 0
+                         1/24
+                              Q∞          n ),        2πiτ
+               η(τ ) = q       n=1 (1 − q      q := e
+It is a 24-th root of the discriminant func ∆(τ ) of an elliptic
+curve C/L from a lattice L = {aτ + b | a, b ∈ Z}
+                                     ∞
+                                     Y
+                    ∆(τ ) = (2π)12 q    (1 − q n )24
+                                       n=1
+
+                                                       E Elizalde, MSQSA Benasque, July 11, 2012 – p. 5/2
+        Properties & Recent Results
+=⇒ The C-S formula gives the value of a product of eta functions
+
+
+
+
+                                                       E Elizalde, MSQSA Benasque, July 11, 2012 – p. 6/2
+         Properties & Recent Results
+=⇒ The C-S formula gives the value of a product of eta functions
+
+=⇒ If there is only one form in the class, it yields the value of a single eta
+   function in terms of gamma functions
+
+
+
+
+                                                            E Elizalde, MSQSA Benasque, July 11, 2012 – p. 6/2
+         Properties & Recent Results
+=⇒ The C-S formula gives the value of a product of eta functions
+
+=⇒ If there is only one form in the class, it yields the value of a single eta
+   function in terms of gamma functions
+
+=⇒ Long series of improvements: Kaneko (90),
+   Nakajima and Taguchi (91), Williams et al. (95)
+
+
+
+
+                                                            E Elizalde, MSQSA Benasque, July 11, 2012 – p. 6/2
+         Properties & Recent Results
+=⇒ The C-S formula gives the value of a product of eta functions
+
+=⇒ If there is only one form in the class, it yields the value of a single eta
+   function in terms of gamma functions
+
+=⇒ Long series of improvements: Kaneko (90),
+   Nakajima and Taguchi (91), Williams et al. (95)
+
+=⇒ In the last years the C-S formula has been ‘broken’ to isolate the eta
+   functions:
+   Williams, van Poorten, Chapman, Hart
+
+
+
+
+                                                            E Elizalde, MSQSA Benasque, July 11, 2012 – p. 6/2
+         Properties & Recent Results
+=⇒ The C-S formula gives the value of a product of eta functions
+
+=⇒ If there is only one form in the class, it yields the value of a single eta
+   function in terms of gamma functions
+
+=⇒ Long series of improvements: Kaneko (90),
+   Nakajima and Taguchi (91), Williams et al. (95)
+
+=⇒ In the last years the C-S formula has been ‘broken’ to isolate the eta
+   functions:
+   Williams, van Poorten, Chapman, Hart
+     R. Chapman and W.B. Hart, Evaluation of the Dedekind eta function,
+     Can. Math. Bull. (2005)
+
+
+
+
+                                                            E Elizalde, MSQSA Benasque, July 11, 2012 – p. 6/2
+         Properties & Recent Results
+=⇒ The C-S formula gives the value of a product of eta functions
+
+=⇒ If there is only one form in the class, it yields the value of a single eta
+   function in terms of gamma functions
+
+=⇒ Long series of improvements: Kaneko (90),
+   Nakajima and Taguchi (91), Williams et al. (95)
+
+=⇒ In the last years the C-S formula has been ‘broken’ to isolate the eta
+   functions:
+   Williams, van Poorten, Chapman, Hart
+     R. Chapman and W.B. Hart, Evaluation of the Dedekind eta function,
+     Can. Math. Bull. (2005)
+     W.B. Hart, PhD Thesis, 2004 (Macquarie U., Sidney)
+
+
+
+
+                                                            E Elizalde, MSQSA Benasque, July 11, 2012 – p. 6/2
+         Properties & Recent Results
+=⇒ The C-S formula gives the value of a product of eta functions
+
+=⇒ If there is only one form in the class, it yields the value of a single eta
+   function in terms of gamma functions
+
+=⇒ Long series of improvements: Kaneko (90),
+   Nakajima and Taguchi (91), Williams et al. (95)
+
+=⇒ In the last years the C-S formula has been ‘broken’ to isolate the eta
+   functions:
+   Williams, van Poorten, Chapman, Hart
+     R. Chapman and W.B. Hart, Evaluation of the Dedekind eta function,
+     Can. Math. Bull. (2005)
+     W.B. Hart, PhD Thesis, 2004 (Macquarie U., Sidney)
+     M. Suzuki, An analogue of the Chowla-Selberg formula for several
+     automorphic L-functions, arXiv:math/0606096 (2006)
+
+
+
+                                                            E Elizalde, MSQSA Benasque, July 11, 2012 – p. 6/2
+         Properties & Recent Results
+=⇒ The C-S formula gives the value of a product of eta functions
+
+=⇒ If there is only one form in the class, it yields the value of a single eta
+   function in terms of gamma functions
+
+=⇒ Long series of improvements: Kaneko (90),
+   Nakajima and Taguchi (91), Williams et al. (95)
+
+=⇒ In the last years the C-S formula has been ‘broken’ to isolate the eta
+   functions:
+   Williams, van Poorten, Chapman, Hart
+     R. Chapman and W.B. Hart, Evaluation of the Dedekind eta function,
+     Can. Math. Bull. (2005)
+     W.B. Hart, PhD Thesis, 2004 (Macquarie U., Sidney)
+     M. Suzuki, An analogue of the Chowla-Selberg formula for several
+     automorphic L-functions, arXiv:math/0606096 (2006)
+     T. Yang, The Chowla-Selberg formula and the Colmez conjecture,
+     Canad. J. Math. 62 (2010), pp. 456-472
+                                                            E Elizalde, MSQSA Benasque, July 11, 2012 – p. 6/2
+Extended CS Series Formulas (ECS)
+ Consider the zeta function (Res > p/2, A > 0, Req > 0)
+               X ′ 1          T
+                                                −s   X′                  −s
+ ζA,~c,q (s) =        (~n + ~c) A (~n + ~c) + q     =    [Q (~n + ~c) + q]
+                p
+                    2                                  p
+             ~
+             n∈Z                                      ~
+                                                      n∈Z
+
+ prime: point ~n = ~0 to be excluded from the sum
+        (inescapable condition when c1 = · · · = cp = q = 0)
+               Q (~n + ~c) + q = Q(~n) + L(~n) + q̄
+
+
+
+
+                                                            E Elizalde, MSQSA Benasque, July 11, 2012 – p. 7/2
+Extended CS Series Formulas (ECS)
+  Consider the zeta function (Res > p/2, A > 0, Req > 0)
+                X ′ 1          T
+                                                 −s   X′                  −s
+  ζA,~c,q (s) =        (~n + ~c) A (~n + ~c) + q     =    [Q (~n + ~c) + q]
+                 p
+                     2                                  p
+              ~
+              n∈Z                                      ~
+                                                       n∈Z
+
+  prime: point ~n = ~0 to be excluded from the sum
+         (inescapable condition when c1 = · · · = cp = q = 0)
+                Q (~n + ~c) + q = Q(~n) + L(~n) + q̄
+
+  Case q 6= 0 (Req > 0)
+                  (2π)p/2 q p/2−s Γ(s − p/2) 2s/2+p/4+2 π s q −s/2+p/4
+ζA,~c,q (s) =        √                         +     √
+                        det A        Γ(s)             det A Γ(s)
+     X                                               p                 
+          ′                            s/2−p/4
+×           cos(2π m       ~ T A−1 m
+                   ~ · ~c) m       ~           Kp/2−s 2π 2q m  ~ T A−1 m
+                                                                       ~
+      p
+  m∈Z
+  ~   1/2                              EE JPA34 (2001) 3025                          [ECS1]
+
+
+
+
+                                                             E Elizalde, MSQSA Benasque, July 11, 2012 – p. 7/2
+Extended CS Series Formulas (ECS)
+  Consider the zeta function (Res > p/2, A > 0, Req > 0)
+                X ′ 1          T
+                                                 −s   X′                  −s
+  ζA,~c,q (s) =        (~n + ~c) A (~n + ~c) + q     =    [Q (~n + ~c) + q]
+                 p
+                     2                                  p
+              ~
+              n∈Z                                      ~
+                                                       n∈Z
+
+  prime: point ~n = ~0 to be excluded from the sum
+         (inescapable condition when c1 = · · · = cp = q = 0)
+                Q (~n + ~c) + q = Q(~n) + L(~n) + q̄
+
+  Case q 6= 0 (Req > 0)
+                  (2π)p/2 q p/2−s Γ(s − p/2) 2s/2+p/4+2 π s q −s/2+p/4
+ζA,~c,q (s) =        √                         +     √
+                        det A        Γ(s)             det A Γ(s)
+     X                                               p                 
+          ′                            s/2−p/4
+×           cos(2π m       ~ T A−1 m
+                   ~ · ~c) m       ~           Kp/2−s 2π 2q m  ~ T A−1 m
+                                                                       ~
+      p
+  m∈Z
+  ~   1/2                              EE JPA34 (2001) 3025                          [ECS1]
+  Pole:     s = p/2        Residue:
+                                                  (2π)p/2
+                           Ress=p/2 ζA,~c,q (s) =         (det A)−1/2
+                                                  Γ(p/2)
+                                                             E Elizalde, MSQSA Benasque, July 11, 2012 – p. 7/2
+Gives (analytic cont of) multidimensional zeta function in terms of an
+exponentially convergent multiseries, valid in the whole complex plane
+
+
+
+
+                                                    E Elizalde, MSQSA Benasque, July 11, 2012 – p. 8/2
+Gives (analytic cont of) multidimensional zeta function in terms of an
+exponentially convergent multiseries, valid in the whole complex plane
+
+Exhibits singularities (simple poles) of the meromorphic continuation
+—with the corresponding residua— explicitly
+
+
+
+
+                                                    E Elizalde, MSQSA Benasque, July 11, 2012 – p. 8/2
+Gives (analytic cont of) multidimensional zeta function in terms of an
+exponentially convergent multiseries, valid in the whole complex plane
+
+Exhibits singularities (simple poles) of the meromorphic continuation
+—with the corresponding residua— explicitly
+
+Only condition on matrix A: corresponds to (non negative) quadratic
+form, Q. Vector ~c arbitrary, while q is (to start) a non-neg constant
+
+
+
+
+                                                     E Elizalde, MSQSA Benasque, July 11, 2012 – p. 8/2
+Gives (analytic cont of) multidimensional zeta function in terms of an
+exponentially convergent multiseries, valid in the whole complex plane
+
+Exhibits singularities (simple poles) of the meromorphic continuation
+—with the corresponding residua— explicitly
+
+Only condition on matrix A: corresponds to (non negative) quadratic
+form, Q. Vector ~c arbitrary, while q is (to start) a non-neg constant
+
+Kν modified Bessel function of the second kind and the subindex 1/2
+in Zp1/2 means that only half of the vectors m
+                                             ~ ∈ Zp participate in the
+                         ~ ∈ Zp we must then exclude −m
+sum. E.g., if we take an m                                 ~
+[simple criterion: one may select those vectors in Zp \{~0} whose
+first non-zero component is positive]
+
+
+
+
+                                                     E Elizalde, MSQSA Benasque, July 11, 2012 – p. 8/2
+      Gives (analytic cont of) multidimensional zeta function in terms of an
+      exponentially convergent multiseries, valid in the whole complex plane
+
+      Exhibits singularities (simple poles) of the meromorphic continuation
+      —with the corresponding residua— explicitly
+
+      Only condition on matrix A: corresponds to (non negative) quadratic
+      form, Q. Vector ~c arbitrary, while q is (to start) a non-neg constant
+
+      Kν modified Bessel function of the second kind and the subindex 1/2
+      in Zp1/2 means that only half of the vectors m
+                                                   ~ ∈ Zp participate in the
+                               ~ ∈ Zp we must then exclude −m
+      sum. E.g., if we take an m                                 ~
+      [simple criterion: one may select those vectors in Zp \{~0} whose
+      first non-zero component is positive]
+       Case c1 = · · · = cp = q = 0 [true extens of CS, diag subcase]
+                 p−1
+             1+s X                  h                         
+           2                   −1/2   j/2 j/2−s        j
+ζAp (s) =            (det Aj )      π ap−j Γ s −         ζR (2s−j) +
+           Γ(s) j=0                                    2
+          ∞                                         q                 
+     j  s X X                        s/2−j/4
+  s 4−2         ′ j/2−s    t −1
+4π ap−j          n       m
+                         ~ j Aj m ~j                         ~ tj A−1
+                                             Kj/2−s 2πn ap−j m     j m~j
+         n=1m
+            ~ j ∈Zj                                                          [ECS3d]
+                                                           E Elizalde, MSQSA Benasque, July 11, 2012 – p. 8/2
+QFT in s-t with non-comm toroidal part
+                                                 N
+   D−dim non-commut manifold: M = R        1,d
+                                                Tpθ , D = d + p + 1
+   Tpθ a p−dim non-commutative torus: [xj , xk ] = iθσjk
+   σjk a real, nonsingular, antisymmetric matrix of ±1 entries
+   θ the non-commutative parameter.                   [Quresh’s talk]
+
+
+
+
+                                                     E Elizalde, MSQSA Benasque, July 11, 2012 – p. 9/2
+QFT in s-t with non-comm toroidal part
+                                                 N
+   D−dim non-commut manifold: M = R        1,d
+                                                Tpθ , D = d + p + 1
+   Tpθ a p−dim non-commutative torus: [xj , xk ] = iθσjk
+   σjk a real, nonsingular, antisymmetric matrix of ±1 entries
+   θ the non-commutative parameter.                   [Quresh’s talk]
+
+   Interest recently, in connection with M −theory & string theory
+   [Connes,Douglas,Seiberg,Cheung,Chu,Chomerus,Ardalan, . . . ]
+
+
+
+
+                                                     E Elizalde, MSQSA Benasque, July 11, 2012 – p. 9/2
+QFT in s-t with non-comm toroidal part
+                                                      N
+       D−dim non-commut manifold: M = R         1,d
+                                                    Tpθ , D = d + p + 1
+       Tpθ a p−dim non-commutative torus: [xj , xk ] = iθσjk
+       σjk a real, nonsingular, antisymmetric matrix of ±1 entries
+       θ the non-commutative parameter.                   [Quresh’s talk]
+
+       Interest recently, in connection with M −theory & string theory
+       [Connes,Douglas,Seiberg,Cheung,Chu,Chomerus,Ardalan, . . . ]
+
+        Unified treatment: only one zeta function, nature of field
+        (bosonic, fermionic) as a parameter, together with # of
+        compact, noncompact, and noncommutative dimensions
+          V Γ(s − (d + 1)/2) X ′       (d+1)/2−s
+                                                     2−2α
+                                                                  
+                                                                −α (d+1)/2−s
+ ζα (s) =        (d+1)/2
+                                  Q(~n)          1+Λθ      Q(~n)
+            (4π)         Γ(s)   p
+                            ~
+                            n∈Z
+   α = 2 bos, α = 3 ferm,         V = Vol (Rd+1 ) of non-compact part
+       Pp                                        −1/2
+Q(~n) = j=1 aj n2j a diag quadratic form, Rj = aj     compactific radii
+
+                                                          E Elizalde, MSQSA Benasque, July 11, 2012 – p. 9/2
+                         X∞                                      p−1
+                                                                 X
+             2s−d V             Γ(s + l − (d + 1)/2)    α 2−2α l            − 12
+ζα (s) =     (d+1)/2
+                                                     (−2 Λθ    )    (detAj )
+         (2π)        Γ(s)l=0 l! Γ(s + αl − (d + 1)/2)            j=0
+     h
+           −s−αl+(d+j+1)/2
+  × π j/2 ap−j             Γ(s + αl − (d + j + 1)/2)ζR (2s + 2αl − d − j − 1)
+                                               ∞ X
+                                               X
+                           −(s+αl)/2−(d+j+1)/4     ′
+        + 4π s+αl−(d+1)/2 ap−j                                 n(d+j+1)/2−s−αl
+                                                n=1 m
+                                                    ~ j ∈Zj
+                 (s+αl)/2−(d+j+1)/4                           q                 
+    ~ tj A−1
+  × m     j m~j                         K(d+j+1)/2−s−αl                ~ tj A−1
+                                                              2πn ap−j m     j m~j
+
+
+
+
+                                                                 E Elizalde, MSQSA Benasque, July 11, 2012 – p. 10/2
+                         X∞                                      p−1
+                                                                 X
+             2s−d V             Γ(s + l − (d + 1)/2)    α 2−2α l            − 12
+ζα (s) =     (d+1)/2
+                                                     (−2 Λθ    )    (detAj )
+         (2π)        Γ(s)l=0 l! Γ(s + αl − (d + 1)/2)            j=0
+     h
+           −s−αl+(d+j+1)/2
+  × π j/2 ap−j             Γ(s + αl − (d + j + 1)/2)ζR (2s + 2αl − d − j − 1)
+                                                 ∞ X
+                                                 X
+                             −(s+αl)/2−(d+j+1)/4     ′
+         + 4π s+αl−(d+1)/2 ap−j                                     n(d+j+1)/2−s−αl
+                                                      n=1 m
+                                                          ~ j ∈Zj
+                 (s+αl)/2−(d+j+1)/4                               q                 
+    ~ tj A−1
+  × m     j m~j                          K(d+j+1)/2−s−αl                   ~ tj A−1
+                                                                  2πn ap−j m     j m~j
+
+
+  p \ D                      even                                           odd
+   odd            (1a) pole / finite (l ≥ l1 )                  (2a) pole / pole
+   even      (1b) double pole / pole (l ≥ l1 , l2 )    (2b)    pole / double pole (l ≥ l2 )
+
+ − General pole structure of ζα (s), for the possible values of D and p
+   being odd or even. Magenta, type of behavior corresponding to
+   lower values of l; behavior in blue corresponds to larger values of l
+                                                                      E Elizalde, MSQSA Benasque, July 11, 2012 – p. 10/2
+       After some calculations,
+                           ∞
+                  V        X Γ(s + l − d+1 )2             2−2α l                d+1
+ ζα (s) =                                        (−Λθ          ) ζQ,~0,0 (s+αl−     )
+             (4π)(d+1)/2   l=0
+                                  l! Γ(s)                                        2
+                                                          Pp   2,
+           for all radii equal to R, with I(~n) =             n
+                                                           j=1 j
+
+                                 ∞
+                      V          X Γ(s + l − d+1 )                                                   d+1
+ζα (s) =                                              2
+                                                          (−Λθ2−2α )l ζE (s+αl−                          )
+           (4π)(d+1)/2 Rd+1−2s l=0          l! Γ(s)                                                   2
+
+        where we use the notation ζE (s) := ζI,~0,0 (s)
+       e.g., the Epstein zeta function for the standard quadratic form
+
+
+
+
+                                                                    E Elizalde, MSQSA Benasque, July 11, 2012 – p. 11/2
+       After some calculations,
+                           ∞
+                  V        X Γ(s + l − d+1 )2             2−2α l                d+1
+ ζα (s) =                                        (−Λθ          ) ζQ,~0,0 (s+αl−     )
+             (4π)(d+1)/2   l=0
+                                  l! Γ(s)                                        2
+                                                          Pp   2,
+           for all radii equal to R, with I(~n) =             n
+                                                           j=1 j
+
+                                 ∞
+                      V          X Γ(s + l − d+1 )                                                   d+1
+ζα (s) =                                              2
+                                                          (−Λθ2−2α )l ζE (s+αl−                          )
+           (4π)(d+1)/2 Rd+1−2s l=0          l! Γ(s)                                                   2
+
+        where we use the notation ζE (s) := ζI,~0,0 (s)
+       e.g., the Epstein zeta function for the standard quadratic form
+
+       Rich pole structure: pole of Epstein zf at
+       s = p/2 − αk + (d + 1)/2 = D/2 − αk, combined with
+       poles of Γ, yields a rich pattern of singul for ζα (s)
+
+
+
+
+                                                                    E Elizalde, MSQSA Benasque, July 11, 2012 – p. 11/2
+       After some calculations,
+                           ∞
+                  V        X Γ(s + l − d+1 )2             2−2α l                d+1
+ ζα (s) =                                        (−Λθ          ) ζQ,~0,0 (s+αl−     )
+             (4π)(d+1)/2   l=0
+                                  l! Γ(s)                                        2
+                                                          Pp   2,
+           for all radii equal to R, with I(~n) =             n
+                                                           j=1 j
+
+                                 ∞
+                      V          X Γ(s + l − d+1 )                                                   d+1
+ζα (s) =                                              2
+                                                          (−Λθ2−2α )l ζE (s+αl−                          )
+           (4π)(d+1)/2 Rd+1−2s l=0          l! Γ(s)                                                   2
+
+        where we use the notation ζE (s) := ζI,~0,0 (s)
+       e.g., the Epstein zeta function for the standard quadratic form
+
+       Rich pole structure: pole of Epstein zf at
+       s = p/2 − αk + (d + 1)/2 = D/2 − αk, combined with
+       poles of Γ, yields a rich pattern of singul for ζα (s)
+
+       Classify the different possible cases according to the
+       values of d and D = d + p + 1. We obtain, at s = 0:
+                                                                    E Elizalde, MSQSA Benasque, July 11, 2012 – p. 11/2
+                          
+                                     ˙ =⇒
+                           if D 6= 2α      ζα (0) = 0
+         For d = 2k
+                           if D = 2α˙ =⇒ ζ (0) = finite
+                                           α
+
+                                               
+                 
+                             finite, for l ≤ k 
+                 
+                          ˙
+                 
+                  if D 6
+                        = 2α                               =⇒ ζα (0) = finite
+                 
+                             0,      for l > k 
+                 
+                 
+For d = 2k − 1
+                 
+                                                
+                 
+                              pole, for l ≤ k 
+                 
+                 
+                 
+                  if D = 2αl                       =⇒                    ζα (0) = pole
+                 
+                              finite, for l > k 
+
+− Pole structure of the zeta function ζα (s), at s = 0, according to the
+  different possible values of d and D (2α ˙ means multiple of 2α)
+
+
+
+
+                                                        E Elizalde, MSQSA Benasque, July 11, 2012 – p. 12/2
+                          
+                                     ˙ =⇒
+                           if D 6= 2α      ζα (0) = 0
+         For d = 2k
+                           if D = 2α˙ =⇒ ζ (0) = finite
+                                           α
+
+                                               
+                 
+                             finite, for l ≤ k 
+                 
+                          ˙
+                 
+                  if D 6
+                        = 2α                               =⇒ ζα (0) = finite
+                 
+                             0,      for l > k 
+                 
+                 
+For d = 2k − 1
+                 
+                                                
+                 
+                              pole, for l ≤ k 
+                 
+                 
+                 
+                  if D = 2αl                       =⇒                    ζα (0) = pole
+                 
+                              finite, for l > k 
+
+− Pole structure of the zeta function ζα (s), at s = 0, according to the
+  different possible values of d and D (2α ˙ means multiple of 2α)
+
+   =⇒ Explicit analytic continuation of ζα (s), α = 2, 3,
+       & specific pole structure
+                                                        E Elizalde, MSQSA Benasque, July 11, 2012 – p. 12/2
+Pseudodifferential Operator (ΨDO)
+ A ΨDO of order m              Mn manifold
+
+ Symbol of A: a(x, ξ) ∈ S m (Rn × Rn ) ⊂ C ∞ functions such that
+ for any pair of multi-indices α, β there exists a constant Cα,β so
+ that
+                 ∂ξα ∂xβ a(x, ξ) ≤ Cα,β (1 + |ξ|)m−|α|
+
+
+
+
+                                                    E Elizalde, MSQSA Benasque, July 11, 2012 – p. 13/2
+Pseudodifferential Operator (ΨDO)
+    A ΨDO of order m               Mn manifold
+
+    Symbol of A: a(x, ξ) ∈ S m (Rn × Rn ) ⊂ C ∞ functions such that
+    for any pair of multi-indices α, β there exists a constant Cα,β so
+    that
+                     ∂ξα ∂xβ a(x, ξ) ≤ Cα,β (1 + |ξ|)m−|α|
+
+Definition of A (in the distribution sense)
+                                  Z
+               Af (x) = (2π)−n ei<x,ξ> a(x, ξ)fˆ(ξ) dξ
+
+    f is a smooth function
+                
+         f ∈ S = f ∈ C ∞ (Rn ); supx |xβ ∂ α f (x)| < ∞, ∀α, β ∈ Nn }
+
+    S ′ space of tempered distributions
+
+    fˆ is the Fourier transform of f
+                                                        E Elizalde, MSQSA Benasque, July 11, 2012 – p. 13/2
+                 ΨDOs are useful tools
+The symbol of a ΨDO has the form:
+    a(x, ξ) = am (x, ξ) + am−1 (x, ξ) + · · · + am−j (x, ξ) + · · ·
+                                                     being ak (x, ξ) = bk (x) ξ k
+a(x, ξ) is said to be elliptic if it is invertible for large |ξ| and if there exists a
+constant C such that |a(x, ξ)−1 | ≤ C(1 + |ξ|)−m , for |ξ| ≥ C
+                                − An elliptic ΨDO is one with an elliptic symbol
+
+
+
+
+                                                                E Elizalde, MSQSA Benasque, July 11, 2012 – p. 14/2
+                 ΨDOs are useful tools
+The symbol of a ΨDO has the form:
+    a(x, ξ) = am (x, ξ) + am−1 (x, ξ) + · · · + am−j (x, ξ) + · · ·
+                                                     being ak (x, ξ) = bk (x) ξ k
+a(x, ξ) is said to be elliptic if it is invertible for large |ξ| and if there exists a
+constant C such that |a(x, ξ)−1 | ≤ C(1 + |ξ|)−m , for |ξ| ≥ C
+                                − An elliptic ΨDO is one with an elliptic symbol
+    −− ΨDOs are basic tools both in Mathematics & in Physics −−
+1. Proof of uniqueness of Cauchy problem [Calderón-Zygmund]
+2. Proof of the Atiyah-Singer index formula
+3. In QFT they appear in any analytical continuation process —as complex
+powers of differential operators, like the Laplacian [Seeley, Gilkey, ...]
+4. Basic starting point of any rigorous formulation of QFT & gravitational
+interactions through µlocalization (the most important step towards the
+understanding of linear PDEs since the invention of distributions)
+       [K Fredenhagen, R Brunetti, . . . R Wald ’06, R Haag EPJH35 ’10]
+                                                                E Elizalde, MSQSA Benasque, July 11, 2012 – p. 14/2
+        Existence of ζA for A a ΨDO
+1. A a positive-definite elliptic ΨDO of positive order m ∈ R+
+2. A acts on the space of smooth sections of
+3. E, n-dim vector bundle over
+4. M closed n-dim manifold
+
+
+
+
+                                                         E Elizalde, MSQSA Benasque, July 11, 2012 – p. 15/2
+           Existence of ζA for A a ΨDO
+   1. A a positive-definite elliptic ΨDO of positive order m ∈ R+
+   2. A acts on the space of smooth sections of
+   3. E, n-dim vector bundle over
+   4. M closed n-dim manifold
+(a) The zeta function is defined as:
+                                         P
+                        ζA (s) = tr A−s = j λ−s
+                                             j ,
+                                                           n
+                                                    Re s > m := s0
+   {λj } ordered spect of A, s0 = dim M/ord A abscissa of converg of ζA (s)
+
+
+
+
+                                                            E Elizalde, MSQSA Benasque, July 11, 2012 – p. 15/2
+           Existence of ζA for A a ΨDO
+   1. A a positive-definite elliptic ΨDO of positive order m ∈ R+
+   2. A acts on the space of smooth sections of
+   3. E, n-dim vector bundle over
+   4. M closed n-dim manifold
+(a) The zeta function is defined as:
+                                         P
+                        ζA (s) = tr A−s = j λ−s
+                                             j ,
+                                                           n
+                                                    Re s > m := s0
+   {λj } ordered spect of A, s0 = dim M/ord A abscissa of converg of ζA (s)
+(b) ζA (s) has a meromorphic continuation to the whole complex plane C
+   (regular at s = 0), provided the principal symbol of A, am (x, ξ), admits a
+   spectral cut: Lθ = {λ ∈ C; Arg λ = θ, θ1 < θ < θ2 }, Spec A ∩ Lθ = ∅
+   (the Agmon-Nirenberg condition)
+
+
+
+
+                                                            E Elizalde, MSQSA Benasque, July 11, 2012 – p. 15/2
+           Existence of ζA for A a ΨDO
+   1. A a positive-definite elliptic ΨDO of positive order m ∈ R+
+   2. A acts on the space of smooth sections of
+   3. E, n-dim vector bundle over
+   4. M closed n-dim manifold
+(a) The zeta function is defined as:
+                                         P
+                        ζA (s) = tr A−s = j λ−s
+                                             j ,
+                                                           n
+                                                    Re s > m := s0
+   {λj } ordered spect of A, s0 = dim M/ord A abscissa of converg of ζA (s)
+(b) ζA (s) has a meromorphic continuation to the whole complex plane C
+   (regular at s = 0), provided the principal symbol of A, am (x, ξ), admits a
+   spectral cut: Lθ = {λ ∈ C; Arg λ = θ, θ1 < θ < θ2 }, Spec A ∩ Lθ = ∅
+   (the Agmon-Nirenberg condition)
+(c) The definition of ζA (s) depends on the position of the cut Lθ
+
+
+
+                                                            E Elizalde, MSQSA Benasque, July 11, 2012 – p. 15/2
+             Existence of ζA for A a ΨDO
+   1. A a positive-definite elliptic ΨDO of positive order m ∈ R+
+   2. A acts on the space of smooth sections of
+   3. E, n-dim vector bundle over
+   4. M closed n-dim manifold
+(a) The zeta function is defined as:
+                                         P
+                        ζA (s) = tr A−s = j λ−s
+                                             j ,
+                                                                   n
+                                                            Re s > m := s0
+   {λj } ordered spect of A, s0 = dim M/ord A abscissa of converg of ζA (s)
+(b) ζA (s) has a meromorphic continuation to the whole complex plane C
+   (regular at s = 0), provided the principal symbol of A, am (x, ξ), admits a
+   spectral cut: Lθ = {λ ∈ C; Arg λ = θ, θ1 < θ < θ2 }, Spec A ∩ Lθ = ∅
+   (the Agmon-Nirenberg condition)
+(c) The definition of ζA (s) depends on the position of the cut Lθ
+(d) The only possible singularities of ζA (s) are poles at
+                sj = (n − j)/m,        j = 0, 1, 2, . . . , n − 1, n + 1, . . .
+                                                                     E Elizalde, MSQSA Benasque, July 11, 2012 – p. 15/2
+     Definition of Determinant
+H   ΨDO operator   {ϕi , λi } spectral decomposition
+
+
+
+
+                                      E Elizalde, MSQSA Benasque, July 11, 2012 – p. 16/2
+     Definition of Determinant
+H   ΨDO operator   {ϕi , λi } spectral decomposition
+     Q                   Q          P
+       i∈I λi ?!     ln i∈I λi =       i∈I ln λi
+
+
+
+
+                                      E Elizalde, MSQSA Benasque, July 11, 2012 – p. 16/2
+          Definition of Determinant
+   H    ΨDO operator              {ϕi , λi } spectral decomposition
+         Q                              Q          P
+           i∈I λi ?!                ln i∈I λi =       i∈I ln λi
+                               P∞     −s , Re s > 1 (& analytic cont)
+Riemann zeta func: ζ(s) =        n=1 n
+                                                  P        −s        −s
+Definition: zeta function of H         ζH (s) =          λ
+                                                      i∈I i   = tr H
+                               1
+                                     R∞
+As Mellin transform: ζH (s) = Γ(s)     0   dt ts−1 tr e−tH , Res > s0
+               ′ (0) = −
+                           P
+Derivative:   ζH           i∈I ln λi
+
+
+
+
+                                                          E Elizalde, MSQSA Benasque, July 11, 2012 – p. 16/2
+          Definition of Determinant
+   H    ΨDO operator              {ϕi , λi } spectral decomposition
+         Q                              Q          P
+           i∈I λi ?!                ln i∈I λi =       i∈I ln λi
+                                P∞    −s , Re s > 1 (& analytic cont)
+Riemann zeta func: ζ(s) =        n=1 n
+                                                   P        −s        −s
+Definition: zeta function of H          ζH (s) =          λ
+                                                       i∈I i   = tr H
+                               1
+                                     R∞
+As Mellin transform: ζH (s) = Γ(s)      0   dt ts−1 tr e−tH , Res > s0
+                ′ (0) = −
+                            P
+Derivative:    ζH           i∈I ln λi
+
+
+Determinant:     Ray & Singer, ’67                          ′ (0)]
+                                            detζ H = exp [−ζH
+
+
+
+
+                                                           E Elizalde, MSQSA Benasque, July 11, 2012 – p. 16/2
+          Definition of Determinant
+   H    ΨDO operator              {ϕi , λi } spectral decomposition
+         Q                              Q          P
+           i∈I λi ?!                ln i∈I λi =       i∈I ln λi
+                                P∞    −s , Re s > 1 (& analytic cont)
+Riemann zeta func: ζ(s) =        n=1 n
+                                                   P        −s        −s
+Definition: zeta function of H          ζH (s) =          λ
+                                                       i∈I i   = tr H
+                               1
+                                     R∞
+As Mellin transform: ζH (s) = Γ(s)      0   dt ts−1 tr e−tH , Res > s0
+                ′ (0) = −
+                            P
+Derivative:    ζH           i∈I ln λi
+
+
+Determinant:     Ray & Singer, ’67                          ′ (0)]
+                                            detζ H = exp [−ζH
+
+Weierstrass def: subtract leading behavior of λi in i, as i → ∞,
+            P
+until series i∈I ln λi converges     =⇒ non-local counterterms !!
+
+
+                                                           E Elizalde, MSQSA Benasque, July 11, 2012 – p. 16/2
+             Definition of Determinant
+      H    ΨDO operator              {ϕi , λi } spectral decomposition
+            Q                              Q          P
+              i∈I λi ?!                ln i∈I λi =       i∈I ln λi
+                                   P∞    −s , Re s > 1 (& analytic cont)
+   Riemann zeta func: ζ(s) =        n=1 n
+                                                      P        −s        −s
+   Definition: zeta function of H          ζH (s) =          λ
+                                                          i∈I i   = tr H
+                                  1
+                                        R∞
+   As Mellin transform: ζH (s) = Γ(s)      0   dt ts−1 tr e−tH , Res > s0
+                   ′ (0) = −
+                               P
+   Derivative:    ζH           i∈I ln λi
+
+
+   Determinant:     Ray & Singer, ’67                          ′ (0)]
+                                               detζ H = exp [−ζH
+
+   Weierstrass def: subtract leading behavior of λi in i, as i → ∞,
+               P
+   until series i∈I ln λi converges     =⇒ non-local counterterms !!
+C. Soulé et al, Lectures on Arakelov Geometry, CUP 1992; A. Voros,...
+                                                              E Elizalde, MSQSA Benasque, July 11, 2012 – p. 16/2
+                        Properties
+The definition of the determinant detζ A only depends on the
+homotopy class of the cut
+
+A zeta function (and corresponding determinant) with the same
+meromorphic structure in the complex s-plane and extending the
+ordinary definition to operators of complex order m ∈ C\Z (they do not
+admit spectral cuts), has been obtained [Kontsevich and Vishik]
+
+Asymptotic expansion for the heat kernel:
+      −tA
+           P′
+  tr e    = λ∈Spec A e−tλ
+                     P                    P
+          ∼ αn (A) + n6=j≥0 αj (A)t −sj
+                                        + k≥1 βk (A)tk ln t, t ↓ 0
+  αn (A) = ζA (0),    αj (A) = Γ(sj ) Ress=sj ζA (s), sj ∈
+                                                         / −N
+          (−1)k
+  αj (A) = k! [PP ζA (−k) + ψ(k + 1) Ress=−k ζA (s)] ,
+                                                                 sj = −k, k ∈ N
+           (−1)k+1
+  βk (A) =   k!    Ress=−k ζA (s),       k ∈ N\{0}
+                                     h                       i
+                                               Ress=p φ(s)
+                     PP φ := lims→p φ(s) −           s−p
+                                                           E Elizalde, MSQSA Benasque, July 11, 2012 – p. 17/2
+             The Dixmier Trace
+In order to write down an action in operator language one needs a
+functional that replaces integration
+
+
+
+
+                                                  E Elizalde, MSQSA Benasque, July 11, 2012 – p. 18/2
+              The Dixmier Trace
+In order to write down an action in operator language one needs a
+functional that replaces integration
+
+For the Yang-Mills theory this is the Dixmier trace
+
+
+
+
+                                                      E Elizalde, MSQSA Benasque, July 11, 2012 – p. 18/2
+              The Dixmier Trace
+In order to write down an action in operator language one needs a
+functional that replaces integration
+
+For the Yang-Mills theory this is the Dixmier trace
+
+It is the unique extension of the usual trace to the ideal L(1,∞) of the
+compact operators T such that the partial sums of its spectrum
+diverge logarithmically as the number of terms in the sum:
+                      PN −1
+            σN (T ) := j=0 µj = O(log N ),        µ0 ≥ µ1 ≥ · · ·
+
+
+
+
+                                                      E Elizalde, MSQSA Benasque, July 11, 2012 – p. 18/2
+              The Dixmier Trace
+In order to write down an action in operator language one needs a
+functional that replaces integration
+
+For the Yang-Mills theory this is the Dixmier trace
+
+It is the unique extension of the usual trace to the ideal L(1,∞) of the
+compact operators T such that the partial sums of its spectrum
+diverge logarithmically as the number of terms in the sum:
+                      PN −1
+            σN (T ) := j=0 µj = O(log N ),        µ0 ≥ µ1 ≥ · · ·
+
+Definition of the Dixmier trace of T :
+                                   Dtr T = limN →∞ log1 N σN (T )
+provided that the Cesaro means M (σ)(N ) of the sequence in N are
+                                                   Rλ
+convergent as N → ∞ [remember: M (f )(λ) = ln λ 1 f (u) du
+                                                 1
+                                                           u ]
+
+
+
+
+                                                      E Elizalde, MSQSA Benasque, July 11, 2012 – p. 18/2
+              The Dixmier Trace
+In order to write down an action in operator language one needs a
+functional that replaces integration
+
+For the Yang-Mills theory this is the Dixmier trace
+
+It is the unique extension of the usual trace to the ideal L(1,∞) of the
+compact operators T such that the partial sums of its spectrum
+diverge logarithmically as the number of terms in the sum:
+                      PN −1
+            σN (T ) := j=0 µj = O(log N ),        µ0 ≥ µ1 ≥ · · ·
+
+Definition of the Dixmier trace of T :
+                                   Dtr T = limN →∞ log1 N σN (T )
+provided that the Cesaro means M (σ)(N ) of the sequence in N are
+                                                   Rλ
+convergent as N → ∞ [remember: M (f )(λ) = ln λ 1 f (u) du
+                                                 1
+                                                           u ]
+
+The Hardy-Littlewood theorem can be stated in a way that connects
+the Dixmier trace with the residue of the zeta function of the operator
+T −1 at s = 1 [Connes]
+                            Dtr T = lims→1+ (s − 1)ζT −1 (s)
+                                                      E Elizalde, MSQSA Benasque, July 11, 2012 – p. 18/2
+          The Wodzicki Residue
+The Wodzicki (or noncommutative) residue is the only extension of the
+Dixmier trace to ΨDOs which are not in L(1,∞)
+
+Only trace one can define in the algebra of ΨDOs (up to multipl const)
+
+Definition: res A = 2 Ress=0 tr (A∆−s ), ∆ Laplacian
+
+Satisfies the trace condition: res (AB) = res (BA)
+
+Important!: it can be expressed as an integral (local form)
+                       R
+               res A = S ∗ M tr a−n (x, ξ) dξ
+with S ∗ M ⊂ T ∗ M the co-sphere bundle on M (some authors put a
+coefficient in front of the integral: Adler-Manin residue)
+
+If dim M = n = − ord A (M compact Riemann, A elliptic, n ∈ N)
+it coincides with the Dixmier trace, and Ress=1 ζA (s) = n1 res A−1
+
+The Wodzicki residue makes sense for ΨDOs of arbitrary order.
+Even if the symbols aj (x, ξ), j < m, are not coordinate invariant,
+the integral is, and defines a trace
+                                                     E Elizalde, MSQSA Benasque, July 11, 2012 – p. 19/2
+                Singularities of ζA
+A complete determination of the meromorphic structure of some zeta
+functions in the complex plane can be also obtained by means of the
+Dixmier trace and the Wodzicki residue
+
+Missing for full descript of the singularities: residua of all poles
+
+As for the regular part of the analytic continuation: specific methods
+have to be used (see later)
+
+Proposition. Under the conditions of existence of the zeta function of
+A, given above, and being the symbol a(x, ξ) of the operator A
+analytic in ξ −1 at ξ −1 = 0:
+                                   R
+                   1
+Ress=sk ζA (s) = m res A   −sk
+                               = m S ∗ M tr a−s
+                                 1
+                                             −n (x, ξ) d
+                                                k        n−1
+                                                             ξ
+
+Proof. The homog component of degree −n of the corresp power of
+the principal symbol of A is obtained by the appropriate derivative of
+a power of the symbol with respect to ξ −1 at ξ −1 = 0 :
+                        k                       
+        −sk            ∂        n−k (k−n)/m
+       a−n (x, ξ) = ∂ξ−1      ξ    a        (x, ξ)       ξ −n
+                                                     ξ −1 =0
+                                                        E Elizalde, MSQSA Benasque, July 11, 2012 – p. 20/2
+Multipl or N-Comm Anomaly, or Defect
+   Given A, B, and AB ψDOs, even if ζA , ζB , and ζAB exist,
+   it turns out that, in general,
+
+                         detζ (AB) 6= detζ A detζ B
+
+
+
+
+                                              E Elizalde, MSQSA Benasque, July 11, 2012 – p. 21/2
+Multipl or N-Comm Anomaly, or Defect
+   Given A, B, and AB ψDOs, even if ζA , ζB , and ζAB exist,
+   it turns out that, in general,
+
+                           detζ (AB) 6= detζ A detζ B
+
+   The multiplicative (or noncommutative) anomaly (defect)
+   is defined as
+                                 
+                      detζ (AB)         ′
+     δ(A, B) = ln                   = −ζAB (0) + ζA′ (0) + ζB′ (0)
+                    detζ A detζ B
+
+
+
+
+                                                  E Elizalde, MSQSA Benasque, July 11, 2012 – p. 21/2
+Multipl or N-Comm Anomaly, or Defect
+   Given A, B, and AB ψDOs, even if ζA , ζB , and ζAB exist,
+   it turns out that, in general,
+
+                           detζ (AB) 6= detζ A detζ B
+
+   The multiplicative (or noncommutative) anomaly (defect)
+   is defined as
+                                 
+                      detζ (AB)         ′
+     δ(A, B) = ln                   = −ζAB (0) + ζA′ (0) + ζB′ (0)
+                    detζ A detζ B
+
+   Wodzicki formula                             2
+                                 res [ln σ(A, B)]
+                 δ(A, B) =
+                           2 ord A ord B (ord A + ord B)
+
+   where       σ(A, B) = Aord B B −ord A
+                                                  E Elizalde, MSQSA Benasque, July 11, 2012 – p. 21/2
+Consequences of the Multipl Anomaly
+  In the path integral formulation
+          Z             Z        h                            i
+                                           
+             [dΦ] exp − dD x Φ† (x)         Φ(x) + · · ·
+                                                       ±
+              Gaussian integration: −→ det
+                                        
+                 A A2                  A
+                1               −→      
+                 A3 A4                   B
+
+                 det(AB)        or      det A · det B            ?
+  In a situation where a superselection rule exists, AB has no
+  sense (much less its determinant): =⇒ det A · det B
+
+  But if diagonal form obtained after change of basis (diag.
+  process), the preserved quantity is: =⇒ det(AB)
+                                                  E Elizalde, MSQSA Benasque, July 11, 2012 – p. 22/2
+

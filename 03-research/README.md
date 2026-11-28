@@ -1,4 +1,4 @@
-# The research record (phases 0–214)
+# The research record (phases 0–215)
 
 This folder is the core of the project: a single continuous research programme, organised as a
 sequence of numbered phases. It follows nine early exploratory computational programmes,
@@ -12,8 +12,15 @@ other phases.
 - Phases 0–107 build the Weil-form framework and map its obstructions.
 - Phases 108–133 construct rows A, B and C and close them on the declared carrier
   (Papers 43–45).
-- Phases 134 onward work on row D, the sign of the window form (Paper 46), which remains OPEN;
-  structural results of this work are in Paper 47, and the routes tried are surveyed in Paper 48.
+- Phases 134–213 record the work on row D, the sign of the window form (Paper 46),
+  with the status reached in each phase; structural results are in Paper 47 and routes in Paper 48.
+- Phase 214 closes the explicit window bounds conditional on the spectral conclusion and
+  preserves the reconstruction notes with their stated obligations.
+- Phase 215 closes the private mathematical review of the GRH/RH chain reconstructed with
+  explicit supplements. Its favourable verdict has the scope stated in its final memo, not
+  an automatic approval of every manuscript version or a formal Lean certificate.
+- Phase 216 is planned for integral compatibility of twists, CM weight kernels and cup products;
+  it has not started. Historical OPEN labels below describe the outcome of their own phases.
 
 ## How the phases connect to the papers
 
@@ -242,9 +249,12 @@ and labels.
 | [phase-211-sign-sandbox](phase-211-sign-sandbox/) | The sign of the Paper 46 window form, treated as an isolated problem | (★) PROVED for T ≤ ½log5, global sign OPEN |
 | [phase-212-missing-object](phase-212-missing-object/) | Construction of the object that carries the sign | No construction meets OBJECT_SPEC; OPEN |
 | [phase-213-new-constructions](phase-213-new-constructions/) | New constructions for the global positivity of the Paper 46 form | Global positivity OPEN; rounds with stated labels |
-| [phase-214](phase-214/) | An explicit lower bound W_T(f) ≥ exp(−K)‖f‖₂² on every window, from the positive representation; reconstruction notes on the arithmetic inputs of Paper 46 | Bound PROVED conditional on the spectral conclusion of Paper 46; target theorem of the reconstruction not proved |
+| [phase-214-cotas-explicitas-y-reconstruccion](phase-214-cotas-explicitas-y-reconstruccion/README.md) | Explicit window lower bounds, filters and reconstruction of Paper46 inputs | CLOSED; bound CONDITIONAL on the spectral conclusion; proof, Arb script and reconstruction notes preserved |
+| [phase-215-certificacion-privada-grh-rh-con-suplementos](phase-215-certificacion-privada-grh-rh-con-suplementos/README.md) | Review of papers43–46,49–56 and58: proofs, junctions, corrections and new connections | CLOSED; favourable private mathematical verdict on the GRH/RH chain reconstructed with explicit supplements; exact scope in final memo |
 
 Notes. There are no folders for phases 1 and 2. Two `phase-44-*` and two `phase-147-*` folders exist
 (parallel threads under the same number). The hidden folder
 [`.phase-102-discard/`](.phase-102-discard/) holds discarded phase-102 material. The folder name
 `phase-4-handoff` is historical; the phase is the Kreĭn-space realization described in its README.
+
+**Continuidad tras el cierre de214 y215:** fase216 prevista para compatibilidad integral entre twists, núcleos de pesos CM y cup products; todavía no iniciada. Véase el [traspaso](phase-215-certificacion-privada-grh-rh-con-suplementos/MEMO-FINAL.md).

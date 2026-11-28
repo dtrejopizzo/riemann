@@ -1,0 +1,86 @@
+[
+  {
+    "paper": 43,
+    "path": "04-papers/43-row-a-correspondence-algebra/main.tex",
+    "sha256": "03831f9157a86053c3cc893dfe40efcd8c9f6369b14a0908abce8fefd9c0cf1f",
+    "lines": 5884
+  },
+  {
+    "paper": 44,
+    "path": "04-papers/44-row-b-arithmetic-family/main.tex",
+    "sha256": "ec6e34b01bd0c69394ae6abd96ad7da57c2beb45d86e6f363855236f56b5a722",
+    "lines": 2915
+  },
+  {
+    "paper": 45,
+    "path": "04-papers/45-row-c-explicit-formula/main.tex",
+    "sha256": "64489a931e4d7d472b7646965e775c901151ddcc259acccf5dfcf34820b8bcdd",
+    "lines": 1966
+  },
+  {
+    "paper": 46,
+    "path": "04-papers/46-row-d-sign-radial-intersection-form/main.tex",
+    "sha256": "957acb6593e093d97ae268b17c3a934190b7839dfb22abc49538a4d81e6aac3b",
+    "lines": 5687
+  },
+  {
+    "paper": 49,
+    "path": "04-papers/49-short-forms-theorem-theta-lifts-complex-multiplication/main.tex",
+    "sha256": "f55a95bf3d2989f84ccee2251dfa035000a98b0dfe466797242d0a85ad4e7c25",
+    "lines": 9093
+  },
+  {
+    "paper": 50,
+    "path": "04-papers/50-elementary-divisors-edge-hecke-operator/main.tex",
+    "sha256": "4d388b5c6cb1f9a0f80790454dba272936b8d11e29b8e996abf4d437bd02db02",
+    "lines": 1634
+  },
+  {
+    "paper": 51,
+    "path": "04-papers/51-spanning-theorem-second-moment-poincare-map/main.tex",
+    "sha256": "4484d4adb25917fa9a1efe1105539ab912056df0fff98c6da303ae5389da35e4",
+    "lines": 11163
+  },
+  {
+    "paper": 52,
+    "path": "04-papers/52-sieve-systems-siegel-step/main.tex",
+    "sha256": "3aa02284588cc0ac81195d286ebb29f4cb1bd7bf45fe46a028d3ccb3a0a41a77",
+    "lines": 5884
+  },
+  {
+    "paper": 53,
+    "path": "04-papers/53-covolume-theorem-exchange-identities-chain-determinant/main.tex",
+    "sha256": "22156eeba1661fbdfe95421059f072482097de488c1c56899d80e960ef0d3b80",
+    "lines": 17344
+  },
+  {
+    "paper": 54,
+    "path": "04-papers/54-covolume-theorem-one-theta-lift-hecke-l-values/main.tex",
+    "sha256": "9ee5040c7ad4323f6d078424e4f3b566c2626bb2e304a16ec087efbffb54b7f3",
+    "lines": 10596
+  },
+  {
+    "paper": 55,
+    "path": "04-papers/55-covolume-theorem-regular-families-of-twists/main.tex",
+    "sha256": "98c55c434a4926de47a6e3e79dabc2581fc95cfd4654eb64e3c9831d26e7c86c",
+    "lines": 8200
+  },
+  {
+    "paper": 56,
+    "path": "04-papers/56-explicit-cup-exponents-local-galois-representations/main.tex",
+    "sha256": "4de01932eb9e6e3a8b3c25edae93a52f16a9039c4739aa64043770a72bf58682",
+    "lines": 8380
+  },
+  {
+    "paper": 57,
+    "path": "04-papers/57-riemann-hypothesis-along-the-rows-of-weils-proof/main.tex",
+    "sha256": "8585418dbc11d40d1baa722c265d528a23a438a8454ce1b66bd484de75b2553b",
+    "lines": 899
+  },
+  {
+    "paper": 58,
+    "path": "04-papers/58-row-d-sign-radial-intersection-form-complete-proofs/main.tex",
+    "sha256": "e8e2676e7c088c2ebb715ac633d99b7e07647b265d99bce2a6b28293a4355fb6",
+    "lines": 70368
+  }
+]

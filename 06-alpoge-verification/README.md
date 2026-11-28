@@ -99,7 +99,7 @@ on which this statement depends: 1,264,752 declarations, of which 1,074,616 are 
   Paper 46, the main paper of row D; Papers 49–56 write the argument out on paper as three
   theorems. The first version of Paper 46, where step (5) is used, is in the history of the
   repository.
-- [`../03-research/phase-214/`](../03-research/phase-214/): notes that rewrite the arithmetic
+- [`../03-research/phase-214-cotas-explicitas-y-reconstruccion/`](../03-research/phase-214-cotas-explicitas-y-reconstruccion/): notes that rewrite the arithmetic
   inputs of step (5) on paper.
 - [`../README.md`](../README.md): the place of this check in the whole project.
 
