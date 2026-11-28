@@ -11,8 +11,15 @@ crossword, the plans and context folders of `05-meta-and-planning/`, the literat
 exchanged numbers, and this file uses the current ones. File names of memos that contain `P47` or `PAPER47`
 keep their names and refer to the paper on the sign.
 
-**Active phase: 213**, by the project rules. New constructions are stored in
-`03-research/phase-213-new-constructions/`; earlier phases keep their results.
+**State of the problem.** The sign on every window is obtained in Paper 46 by a route that is not one of
+those indexed here: a one-sided criterion for Dirichlet L-functions and three theorems on integral algebraic
+modular forms, on the input of Alpoge (Papers 46 and 49–56; reviewed in phase 215). This index records the
+attempts made within the explicit formula up to phase 213, and their verdicts are those of the time: where an
+entry says that the sign is open, it means that the route in question did not give it. The closing entry is
+at the end of Part V. Paper 48 is the survey of this record for outside readers.
+
+**Phases.** Phases 0–215 are closed. New constructions on the sign of the form itself, if any, are stored in
+a new phase folder; earlier phases keep their results.
 Failed paths are not repeated and the discard catalogue is not reset when the phase changes.
 
 1. **Before proposing or launching any construction** the idea is searched for in this file (by object, by
@@ -36380,3 +36387,27 @@ Extension 213-073-A. PROVED, independently reviewed: in all critical rows, the s
 - Audit of the POWER objective: 080 records triples for all admissible rates, 002 §§1–4 density of the ladder 32+n and continuity of the complete form on the data PW_N, 014 an alternative confluent bridge and 017 §2 sufficiency of all atoms (N,k). The limit only requires and transfers nonnegativity. None of those densities supplies the uniform sign in the sense of covering all orders; a uniform coercive constant is not required.
 
 - [Fractional weight of the trivial character](../03-research/phase-213-new-constructions/CHEBYSHEV_TRIVIAL_CHARACTER_MELLIN.md). The cut to primes larger than √N preserves exactly the Mellin residue at every possible right exterior zero. The reduction by itself does not provide the one-sided bound.
+
+### 214 / 215 — Closure of the record
+
+- Phase 214 (`03-research/phase-214-explicit-bounds-and-reconstruction/`). Explicit lower bound
+  `W_T(f) ≥ exp(−K)‖f‖₂²` on each window by a contractive filter that annihilates the two Tate moments, with
+  explicit parameters and an Arb script for the size of `K`. CONDITIONAL: the spectral comparison of the filter
+  uses the location of the zeros, so the bound is a consequence of the sign and not a route to it. Recorded here
+  so that the filter is not retried as a proof of the sign.
+- Phase 215 (`03-research/phase-215-private-certification-grh-rh-with-supplements/`). Review of the chain of
+  Papers 46 and 49–56: Short Forms, Spanning and Covolume theorems → main inequality → one-sided bound for the
+  prime sum weighted by `1 − χ_K` → no zero of a Dirichlet L-function in `Re s > 1/2` → sign on every window
+  (Paper 46, Theorems 12.9, 15.3–15.5, 16.1 and Corollary 16.3). Favourable verdict on the chain with the
+  supplements listed there; the supplements were afterwards incorporated into the papers.
+- Relation to this index. The successful route is not an instance of any closed entry. In particular it is
+  not the "family of Dirichlet characters / family average" route (Part III, closed): that route averaged the
+  Weil form over characters, which carries no sign, whereas the proof uses each quadratic character `χ_K`
+  through a one-sided criterion and obtains the bound from the integrality of automorphic objects. The entries
+  of Part V on one-sided ceilings with characters (trivial-character removal, the autoconvolution for a
+  character mod 3, the quotient `L/ζ`, ceilings on a mesh) are its nearest antecedents here; in all of them
+  the missing piece was the bound itself, which analytic estimates of prime sums do not give.
+- What stays open in the terms of this index: every reformulation recorded as an exact restatement is now a
+  true statement without a proof in its own terms; the quantitative questions (two-sided law for the bottom,
+  rate of decay of the margin); the rigidity of the set of nonnegative weights admissible in every window
+  (212-25, 212-53); the existence of an identity exhibiting the sign (Part II). See Paper 48, Sections 10–11.

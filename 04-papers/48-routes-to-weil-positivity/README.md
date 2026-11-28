@@ -1,66 +1,55 @@
-# Paper 48: Routes to Weil positivity on finite intervals — a cartography of attempts, barriers and open problems
+# Paper 48: Routes to Weil positivity on finite intervals
 
 ## What the paper studies
 
-A survey. For T > 0 the truncated Weil quadratic form on test functions supported in (−T, T) is the difference of an
-archimedean form and a finite prime form. The "window problem" asks that it be nonnegative on primitive functions
-(both Tate moments zero). By Weil's criterion, the window problem for every T is equivalent to the Riemann hypothesis.
-The paper maps the routes tried toward this problem and toward related positivity criteria (Li–Keiper, Herglotz–Pick,
-de Branges, Kreĭn spaces, Hodge-index transfers), both in the literature and in Papers 01–45 and 47 of the series. It groups
-them into twenty-six families. For each family it gives the idea, what was obtained, the mechanism of failure, and
-whether the route is closed by a theorem (and for which class of arguments), closed as attempted, or open. The paper
-proves no new sign and claims no progress toward the Riemann hypothesis. It defines everything it uses.
+A survey. For T > 0 the truncated Weil quadratic form on functions supported in (−T, T) is the difference of an
+archimedean form and a finite sum over the prime powers below e^{2T}. The window problem asks that it be
+nonnegative on primitive functions, those orthogonal to the two polar directions. By Weil's criterion, the window
+problem for every T is equivalent to the Riemann hypothesis. The paper describes the attempts to prove this
+nonnegativity by working with the form itself, in the literature and in earlier papers of the series: what each
+approach obtains and why it stops where it does. The sign has since been proved by a different route (Paper 46,
+through a one-sided criterion for Dirichlet L-functions, on the input of Alpoge); the last section relates that
+proof to the obstructions described and lists the questions about the form that remain open.
 
 ## What is proved in the paper
 
-Full proofs are given for the following.
-- The explicit formula on (−T, T) in the paper's normalization (Theorem 2.1). Elementary properties, the polar-block
-  equivalence and convexity in the weights (Propositions 2.7–2.9).
-- The structure of the window problem: the Lévy–Khintchine form of the archimedean symbol (Prop. 3.1); a lower bound
-  (2t₀/π)T − 3 for the archimedean negative index on primitive functions (Theorem 3.2); interlacing, sign changes
-  and monotonicity of λ(T) in T (Props. 3.4–3.7). Also concavity in the weights (Prop. 6.1) and the falsifier
-  principle (Prop. 7.2).
-- Barriers: the isolation lemma (Lemma 8.1); archimedean indefiniteness (Prop. 8.2); indefiniteness of every finite
-  prime part (B6, 8.3); identities valid for all multiples cΛ carry no sign for T > ½ log 2 (B1, 8.4); conditions
-  stable under a large change of one coefficient cannot decide windows T > ½ log q, for any integer q ≥ 2 and either sign of the change (B11, 8.5); sublevel criteria
-  cannot certify nonnegativity (B4, 8.6).
-- Elementary propositions in the family sections. Among them: the polarization statement (Prop. 9.3), weak duality
-  (Prop. 12.2), flat-top weights vanishing at infinity are never positive definite (Prop. 12.5), the
-  even sector and one negative direction (Prop. 13.2), the negativity of the window symbol near 0
-  (Prop. 13.3), the finite-modification barrier for prime-side estimates (Prop. 19.1), a Landau-type one-sided
-  criterion (Prop. 19.2), the rationality obstruction (Prop. 21.3), the window transport identity (Prop. 22.3), the
-  absence of T-uniform coercivity (Prop. 22.4), the bound κ* ≥ −C₀/4 ≈ 1.343 (Prop. 23.1), and the polar–prime
-  inequality as an exact restatement of the even window problem (Prop. 25.2).
+- The explicit formula on (−T, T) in the paper's normalisation (Theorem 2.1), Weil's criterion in the form used
+  (Theorem 2.3), and the elementary properties of the form and of its least eigenvalue λ(T) on primitive functions.
+- The archimedean form has at least (2t₀/π)T − 3 negative directions on primitive functions (Theorem 3.2); λ(T) is
+  nonincreasing in T (Proposition 3.7).
+- Theorems that exclude classes of arguments (Section 4): every nonzero finite prime part is indefinite on
+  primitive functions (Theorem 4.5); identities valid for all multiples cΛ carry no sign for T > ½ log 2
+  (Theorem 4.6); conditions stable under a change of one coefficient cannot decide windows T > ½ log q
+  (Theorem 4.7); criteria on the low part of the symbol cannot certify nonnegativity (Theorem 4.8).
+- Elementary propositions in the sections on the approaches, among them weak duality (Proposition 6.2), the
+  failure of positive definiteness for flat-top weights vanishing at infinity (Proposition 6.5), a barrier for
+  estimates of prime sums (Proposition 8.1), a one-sided criterion of Landau type (Proposition 8.2), and the
+  absence of a coercivity constant independent of T (Proposition 9.8).
+- The density of the primes does not suffice: with the prime form replaced by its main term, the form is negative
+  on primitive functions for large T (Proposition 10.1).
 
-## Cited, conditional, heuristic, numerical, announced
+Explicit bounds on bounded windows and the results on dual certificates and finite reductions are quoted from
+Papers 42 and 46 with their statement numbers. Numerical statements are identified as such in the text.
 
-- Cited: positivity on primitive functions for 0 < T ≤ log 2 (Paper 42, Theorem 9.18 and Corollary 9.20), with the explicit margin λ(T) ≥ 1.1599·10⁻⁴ for T ≤ ½ log 3 (Paper 42, Theorem 9.18); Yoshida's
-  theorem; Haynsworth inertia additivity (Prop. 13.1, cited; the form version is the completion of squares of Prop. 2.8); Weil's and Li's criteria; results of Papers 08, 10, 18, 25, 36, 37, 38, 39, 45 and 47 with statement
-  numbers; the de Bruijn–Newman, Jensen-polynomial and Beurling literature.
-- Conditional: statements proved under a hypothesis written into them. Examples are the Kreĭn-space count of
-  Paper 18 under a finite-quartet hypothesis, and the coercivity hypothesis of Paper 08, a lower bound on the on-line
-  sampling norm that is not known to follow from or to imply the Riemann hypothesis.
-- Heuristic: general claims about whole families of routes, for example that every square route quadratic in the
-  weight can be rewritten through a polar decomposition, and that a useful transport must be nonlinear.
-- Numerical: values such as κ* ≈ 7.431 at τ ≈ 3.777, the threshold of archimedean indefiniteness (about 0.58–0.60),
-  and margin estimates. Values taken from unpublished computations are flagged as not reproducible from the paper.
-- Announced (proofs not in the paper or in published sources; never premises of a proved statement): certified
-  positivity beyond log 2; the matching upper bound for the archimedean count; the exponential bounds on the margin;
-  barriers B2, B3, B5, B7–B10 (announced, in part only argued) and B12 (argued); the no-go for arithmetic sums of squares at T ≥ ½ log 3. Some external
-  certificates (up to ½ log 15) could not be located in refereed form and are described as such.
-- Open: the window problem and its exact restatements; the gap (½ log 2, ½ log 3) for arithmetic sums of squares;
-  the Beurling frontier for remainder exponents θ ≤ 1/3; the families never carried out; the residues listed in §25.
+## Structure
 
-## Known versus new
+1. Introduction
+2. The Weil form on a finite interval
+3. The window problem: what is known
+4. Test weights and barrier theorems
+5. Squares, local decompositions and imported positivity
+6. Duality, Schur complements and kernel positivity
+7. Operator-theoretic and function-theoretic criteria
+8. Arithmetic approaches: prime sums, Euler products and Beurling systems
+9. Geometric approaches and deformations
+10. What a proof of the sign must use
+11. Conclusion
 
-The setting, the criteria and most cited theorems are classical. What is new is the classification: each closure is
-stated relative to an explicitly declared class of arguments. Barriers B1, B4, B6 and B11 are proved here in
-hypothesis-free form, along with the elementary propositions listed above.
+Appendix: the approaches at a glance (a table with the place where each is discussed).
 
 ## Files
 
-- `main.tex`: the source (a single file, bibliography included).
-- `routes-to-weil-positivity.pdf`: the compiled paper, 98 pages.
-- `README.md`: this file.
-
-Build: `pdflatex -interaction=nonstopmode -halt-on-error -jobname=routes-to-weil-positivity main.tex`, run three times.
+| File | Content |
+|---|---|
+| `main.tex` | LaTeX source. |
+| `routes-to-weil-positivity.pdf` | The paper (79 pages). |
