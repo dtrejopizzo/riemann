@@ -24,8 +24,14 @@ certificates, in Markdown and LaTeX, so that anyone can read it, check it, break
 
 After eleven years of work, I do not know how to write this without emotion. This problem has
 been with me through more than a decade of attempts, wrong turns and retractions, all of them
-kept in this repository. To be able to give a close to a piece of work so beautiful and so
-difficult is a joy that I did not know whether I would ever have.
+kept in this repository. As I read the papers of the best mathematicians in the world, who
+worked on this and found no solution, I never gave up the hope of finding an insight that would
+close that long-sought global positivity. It may sound strange, perhaps even unreal to many
+people, but to see within my lifetime the close of a problem open for more than 160 years, one
+that hundreds of mathematicians could not celebrate before they left us, fills me with joy and
+with hope for everything we will be able to achieve in the near future. To be able to give a
+close to a piece of work so beautiful and so difficult is a joy that I did not know whether I
+would ever have.
 
 ## The route: Weil's proof over Spec Z
 
